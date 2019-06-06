@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: ca8b554e03c4e8339922ca99619245a45bd08e1d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dda00760399572d714300f1487391212c6fa0998
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61286685"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740858"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -46,15 +46,15 @@ Android 개발자 사이트와 같은 주요 Wear Api에 대 한 자세한 정�
 
 ## <a name="samples"></a>샘플
 
-숫자를 찾을 수 있습니다 [샘플](https://developer.xamarin.com/samples/android/Android%20Wear/) Android Wear를 사용 하 여 (하거나 직접 이동할 [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)). 
+숫자를 찾을 수 있습니다 [샘플](https://developer.xamarin.com/samples/android/Android%20Wear/) Android Wear를 사용 하 여 (하거나 직접 이동할 [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
 |샘플|설명|스크린 샷|
 |--- |--- |--- |
-|[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|간단한 예 GridViewPager 및 대화형 알림을 비롯 한 착용 식 프로젝트의 기본 사항입니다.|![Skeletonwear 스크린샷](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|화면 셰이프를 검색 하 고 올바른 레이아웃을 자동으로 로드 WatchViewStub 컨트롤의 간단한 데모입니다.  WatchViewStub 작동 하는 방식을 확인 합니다 **Resources/layout/main_activity.xml** 레이아웃 합니다.|![WatchViewStub 스크린샷](images/watchview.png)|
-|[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|작성법 단계의 형태로 Wear 알림 페이지의 데모입니다. 알림은 RecipeService.cs에 생성 됩니다.|![RecipeAssistant 스크린샷](images/recipeassist.png)|
-|[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|"개인 비서" 상호 작용의 재미 있게 샘플 Eliza, 미리 준비 된 응답을 사용 하 여 대화를 만드는 Wear 대화형 알림을 사용 하 여 호출 됩니다.|![ElizaChat 스크린샷](images/eliza.png)|
-|[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|GridViewPager 여기서 사용자 천공 기와 세로로 2D 탐색 패턴을 구현 하 고 옵션 및 콘텐츠 탐색을 가로로 합니다.|![GridViewPager 스크린샷](images/gridviewpager.png)|
+|[SkeletonWear](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)|간단한 예 GridViewPager 및 대화형 알림을 비롯 한 착용 식 프로젝트의 기본 사항입니다.|![Skeletonwear 스크린샷](images/skeleton.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/)|화면 셰이프를 검색 하 고 올바른 레이아웃을 자동으로 로드 WatchViewStub 컨트롤의 간단한 데모입니다. WatchViewStub 작동 하는 방식을 확인 합니다 **Resources/layout/main_activity.xml** 레이아웃 합니다.|![WatchViewStub 스크린샷](images/watchview.png)|
+|[RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/)|작성법 단계의 형태로 Wear 알림 페이지의 데모입니다. 알림은 RecipeService.cs에 생성 됩니다.|![RecipeAssistant 스크린샷](images/recipeassist.png)|
+|[ElizaChat](https://developer.xamarin.com/samples/monodroid/wear/ElizaChat/)|"개인 비서" 상호 작용의 재미 있게 샘플 Eliza, 미리 준비 된 응답을 사용 하 여 대화를 만드는 Wear 대화형 알림을 사용 하 여 호출 됩니다.|![ElizaChat 스크린샷](images/eliza.png)|
+|[GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)|GridViewPager 여기서 사용자 천공 기와 세로로 2D 탐색 패턴을 구현 하 고 옵션 및 콘텐츠 탐색을 가로로 합니다.|![GridViewPager 스크린샷](images/gridviewpager.png)|
 |[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace는 아날로그 방식의 시간, 분 및 두 번째 실습을 사용 하 여 사용자 지정 시계 모드 이며 이 샘플 현재 그리는 조사식 얼굴 서비스를 만드는 방법과 핸들 앰비언트 모드 및 표시 유형 변경 이벤트를 보여 줍니다. 표준 시간대 변경 내용을 수신 대기 하 고 자동으로 적절 하 게 시간을 업데이트 하는 브로드캐스트 수신기가 포함 됩니다.|![WatchFace 스크린샷](images/gridviewpager.png)|
 
 

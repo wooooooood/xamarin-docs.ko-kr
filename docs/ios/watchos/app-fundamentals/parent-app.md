@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61409867"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740954"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>WatchOS에서 Xamarin 부모 응용 프로그램 사용
 
@@ -35,7 +35,7 @@ Watch 앱 및 번들로 제공 되는 iOS 앱 간에 통신 하는 방법은 여
 
 ## <a name="run-code"></a>코드를 실행 합니다.
 
-에 설명 된 부모 iPhone 앱 및 watch 확장 간의 통신을 [GpsWatch 샘플](https://developer.xamarin.com/samples/GpsWatch)합니다.
+에 설명 된 부모 iPhone 앱 및 watch 확장 간의 통신을 [GpsWatch 샘플](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/)합니다.
 조사식 확장 상위 iOS 앱을 사용 하 여 해당 대신 일부 처리를 요청할 수는 `OpenParentApplication` 메서드.
 
 IOS 앱 작업 (포함 하 여 네트워크 요청)-부모만을 장기 실행 활용할 수 있습니다 이러한 작업을 완료 하 고 조사식 확장에 액세스할 수 있는 위치에서 검색된 된 데이터를 저장 하기 위해 백그라운드 처리에 대 한 특히 유용 합니다.

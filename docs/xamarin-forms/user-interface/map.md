@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: ddc9d18b57eac099331f0814b5963fb207840380
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 166927f2168015cb4786502d841e01b2faeb0c51
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169593"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741009"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/WorkingWithMaps/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 
 _Xamarin.Forms는 각 플랫폼에서 기본 지도 Api를 사용합니다._
 
 Xamarin.Forms.Maps 각 플랫폼에 기본 지도 Api를 사용합니다. 이 사용자에 대 한 지도 신속 하 고 친숙 한 환경을 제공 하지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 함을 의미 합니다.
 한 번 구성 하면는 `Map` 공용 코드의 다른 모든 Xamarin.Forms 요소 처럼 작동을 제어 합니다.
 
-지도 컨트롤에서 사용 된 합니다 [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) 아래 나와 있는 샘플입니다.
+지도 컨트롤에서 사용 된 합니다 [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) 아래 나와 있는 샘플입니다.
 
  [![MobileCRM 예제의 maps](map-images/maps-zoom-sml.png "지도 컨트롤 예제")](map-images/maps-zoom.png#lightbox "지도 컨트롤 예제")
 
@@ -298,6 +298,6 @@ MyMap.MoveToRegion(
 
 ## <a name="related-links"></a>관련 링크
 
-- [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)
+- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 - [맵 사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: e88f6e24cbf4c8b2f0c0486c6408e234e87066cc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3d4c29a7d206b826046fd1f79e0513e85ea57898
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61228596"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740665"
 ---
 # <a name="android-speech"></a>Android 음성
 
@@ -39,7 +39,7 @@ Google 장치 "음성 인식" (예: for the blind 설계 된 소프트웨어)의
 
 이해에 대 한 간단한 정의 언급 되는 내용을 의미 톤 및 컨텍스트를 확인할 수 있다는 것입니다. 방금 해석에 단어를 다른 형식으로 출력을 의미 합니다.
 
-일상적인 대화에 사용 되는 다음 간단한 예제를 살펴보세요. 
+일상적인 대화에 사용 되는 다음 간단한 예제를 살펴보세요.
 
 <kbd>안녕하세요, 어떻게 지내세요?</kbd>
 
@@ -161,7 +161,8 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
-이 코드는 호출 [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) 로캘의 언어 패키지를 장치에 이미 있으면 테스트 합니다. 이 메서드가 반환 된 [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), 전달 된 로캘에 대 한 언어를 사용할 수 있는지 여부를 나타냅니다. 하는 경우 `LanguageAvailableResult` 언어 임을 나타냅니다 `NotSupported`, 음성 패키지가 없는 다운로드할 수 있습니다 (도)은 해당 언어에 대 한 합니다. 하는 경우 `LanguageAvailableResult` 로 설정 되어 `MissingData`, 4 단계에서에서 아래 설명 된 대로 새 언어 패키지를 다운로드 하는 것이 가능 합니다.
+이 코드는 호출 [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) 로캘의 언어 패키지를 장치에 이미 있으면 테스트 합니다.
+이 메서드가 반환 된 [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), 전달 된 로캘에 대 한 언어를 사용할 수 있는지 여부를 나타냅니다. 하는 경우 `LanguageAvailableResult` 언어 임을 나타냅니다 `NotSupported`, 음성 패키지가 없는 다운로드할 수 있습니다 (도)은 해당 언어에 대 한 합니다. 하는 경우 `LanguageAvailableResult` 로 설정 되어 `MissingData`, 4 단계에서에서 아래 설명 된 대로 새 언어 패키지를 다운로드 하는 것이 가능 합니다.
 
 ### <a name="step-3---setting-the-speed-and-pitch"></a>3 단계-빠르고 피치를 설정 합니다.
 
@@ -233,7 +234,7 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [텍스트를 음성 (샘플)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
 - [음성을 텍스트로 (샘플)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
 - [Android.Speech 네임 스페이스](https://developer.xamarin.com/api/namespace/Android.Speech/)

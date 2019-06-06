@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3592a3027469cb9997d973db53d636ddea9e679d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 48ff30397b2592dd2c4dbd445987392d78ced6f3
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61024313"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740772"
 ---
 # <a name="activity-lifecycle"></a>활동 수명 주기
 
@@ -62,12 +62,12 @@ Android OS 상태에 따라 작업을 조정 합니다. 이렇게 하면 더 이
 
 더욱 복잡을 Android 구성 변경 내용을 호출 목록에서 하나의 자세한 렌치를 throw 합니다. 구성 변경 사항은 신속 하 게 활동 소멸/다시 creation 주기 장치가 같은 활동의 구성을 변경 될 때 발생 하는 [회전](~/android/app-fundamentals/handling-rotation.md) (가로 또는 세로 모드에서 다시 빌드되지 해야 하는 작업 및 모드) 키보드 표시 됩니다 (및 활동 자체 크기를 조정할 수 있도록 표시 됩니다), dock, 특히 장치를 배치 하면 또는 합니다.
 
-구성 변경을 중지 하 고 작업을 다시 시작 하는 동안 발생 하는 동일한 작업 상태 변경 내용을 유발 합니다. 그러나 응용 프로그램 응답성이 뛰어난 느낌 하 고 구성 변경 하는 동안에 수행 했는지, 하기 위해 것이 중요 최대한 신속 하 게 처리할 수 있습니다. 이 인해 Android 구성 변경 하는 동안 상태를 유지 하기 위해 사용할 수 있는 특정 API에 있습니다.
+구성 변경을 중지 하 고 작업을 다시 시작 하는 동안 발생 하는 동일한 작업 상태 변경 내용을 유발 합니다. 그러나를 응용 프로그램 응답성이 뛰어난 느낌 하 고 구성 변경 하는 동안에 수행 하려면 반드시 최대한 신속 하 게 처리 되도록 합니다. 이 인해 Android 구성 변경 하는 동안 상태를 유지 하기 위해 사용할 수 있는 특정 API에 있습니다.
 이 나중에 다룰 것은 [the 주기 전체에서 상태 관리](~/android/app-fundamentals/activity-lifecycle/index.md#Managing_State_Throughout_the_Lifecycle) 섹션입니다.
 
 ### <a name="activity-lifecycle-methods"></a>활동 수명 주기 메서드
 
-Android SDK 및 확장을 통해 Xamarin.Android 프레임 워크는 응용 프로그램 내에서 활동의 상태를 관리 하기 위한 강력한 모델을 제공 합니다. 활동의 상태를 변경할 때 해당 작업에서 특정 메서드를 호출 하는 OS로 하 여 활동에 알립니다. 다음 다이어그램에서는 이러한 메서드를 내에서 관계 작업 수명 주기를 보여 줍니다.
+Android SDK 및 확장을 통해 Xamarin.Android 프레임 워크는 응용 프로그램 내에서 활동의 상태를 관리 하기 위한 강력한 모델을 제공 합니다. 활동의 상태를 변경할 때 해당 작업에서 특정 메서드를 호출 하는 OS로 하 여 활동에 알립니다. 다음 다이어그램은 작업 수명 주기를 기준으로 이러한 메서드를 보여 줍니다.
 
 [![활동 수명 주기 순서도](images/image2-sml.png)](images/image2.png#lightbox)
 
@@ -117,7 +117,7 @@ protected override void OnCreate(Bundle bundle)
 시스템 호출 [OnResume](https://developer.xamarin.com/api/member/Android.App.Activity.OnResume/) 작업이 사용자 상호 작용을 시작할 준비가 됩니다.
 활동와 같은 작업을 수행 하려면이 메서드를 재정의 해야 합니다.
 
--  프레임 속도 (게임 건물에서 일반적인 작업)를 늘려
+-  프레임 속도 (게임 개발의 일반적인 작업)를 늘려
 -  시작 애니메이션
 -  GPS 업데이트에 대 한 수신 대기
 -  관련 경고 또는 대화 상자를 표시 합니다.

@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 12e7e31cda9818a3cb2e2efc331a0be5d0c334e5
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61285287"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740856"
 ---
 # <a name="gridviewpager"></a>GridViewPager
 
-합니다 [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) 샘플 Android Wear 용 2D 선택기 탐색 패턴을 구현 하는 방법을 보여 줍니다.
+합니다 [GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) 샘플 Android Wear 용 2D 선택기 탐색 패턴을 구현 하는 방법을 보여 줍니다.
 
 ![정사각형 화면 GridViewPager의 예에서는 스크린 샷](gridviewpager-images/gridviewpager.png)
 
@@ -49,4 +49,4 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 - [Google의 2D 선택기 문서](https://developer.android.com/training/wearables/ui/2d-picker.html)
 - [android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [GridViewPager (샘플)](https://developer.xamarin.com/samples/GridViewPager/)
+- [GridViewPager (샘플)](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)
