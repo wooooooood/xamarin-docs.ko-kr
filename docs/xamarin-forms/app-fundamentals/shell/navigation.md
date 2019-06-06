@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: 9f48659a8af7bb74cc33ec0929f41b2a881e1978
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005173"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469514"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
@@ -38,9 +38,9 @@ Xamarin.Forms Shell에는 세트 탐색 계층 구조를 따르지 않고도 애
 
 이동할 URI를 지정하여 셸 애플리케이션에서 탐색을 수행합니다. 탐색 URI에는 세 가지 구성 요소가 포함될 수 있습니다.
 
-- 경로 - 셸 시각적 계층 구조의 일부로 존재하는 콘텐츠의 경로를 정의합니다.
-- 페이지. 셸 시각적 계층 구조에 없는 페이지는 셸 애플리케이션 내의 어디에서나 탐색 스택으로 푸시할 수 있습니다. 예를 들어 항목 세부 정보 페이지는 셸 시각적 계층 구조에서 정의되지 않지만, 필요에 따라 탐색 스택으로 푸시할 수 있습니다.
-- 하나 이상의 쿼리 매개 변수. 쿼리 매개 변수는 탐색하는 동안 대상 페이지에 전달할 수 있는 매개 변수입니다.
+- 경로 - 셸 시각적 계층 구조의 일부로 존재하는 콘텐츠의 경로를 정의합니다. 
+- 페이지.  셸 시각적 계층 구조에 없는 페이지는 셸 애플리케이션 내의 어디에서나 탐색 스택으로 푸시할 수 있습니다. 예를 들어 항목 세부 정보 페이지는 셸 시각적 계층 구조에서 정의되지 않지만, 필요에 따라 탐색 스택으로 푸시할 수 있습니다.
+- 하나 이상의 쿼리 매개 변수.  쿼리 매개 변수는 탐색하는 동안 대상 페이지에 전달할 수 있는 매개 변수입니다.
 
 탐색 URI에 세 가지 구성 요소가 모두 포함되는 경우 구조체는 //route/page?queryParameters입니다.
 
@@ -105,7 +105,7 @@ Routing.RegisterRoute("dogdetails", typeof(DogDetailPage));
 Routing.RegisterRoute("elephantdetails", typeof(ElephantDetailPage));
 ```
 
-이 예제에서는 셸 서브클래스에 정의되지 않은 항목 세부 정보 페이지를 경로로 등록합니다. 그런 다음, 애플리케이션 내의 어디에서나 URI 기반 탐색을 사용하여 이 페이지로 이동할 수 있습니다. 해당 페이지의 경로를 전역 경로라고 합니다.
+이 예제에서는 셸 서브클래스에 정의되지 않은 항목 세부 정보 페이지를 경로로 등록합니다. 그런 다음, 애플리케이션 내의 어디에서나 URI 기반 탐색을 사용하여 이 페이지로 이동할 수 있습니다. 해당 페이지의 경로를 전역 경로라고 합니다. 
 
 > [!NOTE]
 > `Routing.RegisterRoute` 메서드를 사용하여 경로가 등록된 페이지는 필요한 경우 `Routing.UnRegisterRoute` 메서드를 사용하여 등록 취소할 수 있습니다.
@@ -213,11 +213,11 @@ bears
 
 | 속성 | 형식 | 설명 |
 |---|---|---|
-| 현재 | `ShellNavigationState` | 현재 페이지의 URI입니다. |
-| 소스 | `ShellNavigationSource` | 발생한 탐색의 형식입니다. |
-| Target | `ShellNavigationState`  | 탐색의 목적지를 나타내는 URI입니다. |
-| CanCancel  | `bool` | 탐색을 취소할 수 있는지 여부를 나타내는 값입니다. |
-| 취소됨  | `bool` | 탐색이 취소되었는지 여부를 나타내는 값입니다. |
+| `Current` | `ShellNavigationState` | 현재 페이지의 URI입니다. |
+| `Source` | `ShellNavigationSource` | 발생한 탐색의 형식입니다. |
+| `Target` | `ShellNavigationState`  | 탐색의 목적지를 나타내는 URI입니다. |
+| `CanCancel`  | `bool` | 탐색을 취소할 수 있는지 여부를 나타내는 값입니다. |
+| `Cancelled`  | `bool` | 탐색이 취소되었는지 여부를 나타내는 값입니다. |
 
 또한 `ShellNavigatingEventArgs` 클래스는 탐색을 취소하는 데 사용될 수 있는 `Cancel` 메서드를 제공합니다.
 
@@ -228,9 +228,9 @@ bears
 
 | 속성 | 형식 | 설명 |
 |---|---|---|
-| 현재 | `ShellNavigationState` | 현재 페이지의 URI입니다. |
-| 이전| `ShellNavigationState` | 이전 페이지의 URI입니다. |
-| 소스  | `ShellNavigationSource` | 발생한 탐색의 형식입니다. |
+| `Current` | `ShellNavigationState` | 현재 페이지의 URI입니다. |
+| `Previous`| `ShellNavigationState` | 이전 페이지의 URI입니다. |
+| `Source`  | `ShellNavigationSource` | 발생한 탐색의 형식입니다. |
 
 > [!NOTE]
 > `Navigating` 이벤트는 `Shell` 클래스에서 재정의 가능한 `OnNavigated` 메서드를 통해 실행됩니다.
