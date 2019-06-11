@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 5d1bb5ab636cd7527a560332a9890e9907fac454
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 35bac91e54181753bd1f3fd8b4cf0b851bfa1882
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61295892"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827499"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>IOS 6에에서 StoreKit 변경
 
@@ -522,7 +522,7 @@ Apple iCloud 백업 지침은 사용자가 아닌 콘텐츠 서버에서 쉽게 
 
 ## <a name="related-links"></a>관련 링크
 
-- [StoreKit (샘플)](https://developer.xamarin.com/samples/StoreKit/)
+- [StoreKit (샘플)](https://developer.xamarin.com/samples/monotouch/StoreKit/)
 - [앱에서 바로 구매](~/ios/platform/in-app-purchasing/index.md)
 - [StoreKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [SKStoreProductViewController 클래스 참조](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

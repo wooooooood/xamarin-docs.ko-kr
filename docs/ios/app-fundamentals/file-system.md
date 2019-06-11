@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 11/12/2018
-ms.openlocfilehash: 09e05fcfe10a994e14aa605b203ea67efae80d62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10f4f53e71a47521076538bf9eb12b86c1e478a6
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61393677"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827508"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Xamarin.iOS에서 파일 시스템 액세스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/)
 
 Xamarin.iOS를 사용할 수 있습니다 및 `System.IO` 의 클래스를 *.NET 클래스 라이브러리 (BCL (기본)* iOS 파일 시스템에 액세스할 수 있습니다. `File` 클래스를 사용하여 파일을 만들고, 삭제하고, 삭제할 수 있으며, `Directory` 클래스를 사용하여 디렉터리의 콘텐츠를 만들거나, 삭제하거나, 열거할 수 있습니다. 사용할 수도 있습니다 `Stream` 뛰어난 파일 작업 (예: 파일 내의 압축 또는 위치 검색)에 대 한 제어를 제공할 수 있는 하위 클래스입니다.
 
@@ -356,6 +356,6 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 
 ## <a name="related-links"></a>관련 링크
 
-- [파일 시스템 샘플 코드](https://developer.xamarin.com/samples/FileSystemSampleCode/)
+- [파일 시스템 샘플 코드](https://developer.xamarin.com/samples/monotouch/FileSystemSampleCode/)
 - [파일 시스템 프로그래밍 가이드](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [사용자 앱에서 지 원하는 형식 파일을 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

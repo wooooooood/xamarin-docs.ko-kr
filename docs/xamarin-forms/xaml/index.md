@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
-ms.openlocfilehash: 073bfc27b45a802fd5d6062d4750cc3e20a065e6
-ms.sourcegitcommit: 0d2f708f6d581e94302f26d4670458837dfaa31c
+ms.openlocfilehash: b032785bd18e785831122edf17bede6648e985d2
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64992348"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827867"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>XAML(eXtensible Application Markup Language)
 
@@ -34,7 +34,7 @@ XAML을 통해 개발자는 Xamarin.Forms 응용 프로그램에서 사용자 �
 
 ## <a name="xaml-compilationxamlcmd"></a>[XAML 컴파일](xamlc.md)
 
-필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다. 이 문서에서는 XAMLC와 그 혜택을 사용하는 방법을 설명합니다.
+필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다. 이 문서에서는 XAMLC, 및 그 혜택을 사용 하는 방법을 설명 합니다.
 
 ## <a name="xaml-previewerxaml-previewerindexmd"></a>[XAML 미리 보기](xaml-previewer/index.md)
 

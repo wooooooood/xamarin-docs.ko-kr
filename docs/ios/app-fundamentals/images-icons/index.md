@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f359da6b8744e03cfcbd77d48f5f77f216e828f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a837d680a21b9cdbc39e42f5fa3520622e0b49aa
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250653"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827192"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>이미지 및 Xamarin.iOS에서 아이콘
 
@@ -64,6 +64,6 @@ Xamarin.iOS 앱에 사용자 지정 문서 형식 아이콘으로 사용할 이�
 
 ## <a name="related-links"></a>관련 링크
 
-- [이미지 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/WorkingWithImages/)
+- [이미지 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/monotouch/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [사용자 지정 아이콘 및 이미지 생성 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

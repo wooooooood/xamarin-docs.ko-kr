@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 05a2187a5e8dc010f04e89757b566eaf44cb5fd6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 76f98f1e660f22ec25c48407f2e87cec60ff12ef
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61181295"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827688"
 ---
 # <a name="location-services"></a>위치 서비스
 
@@ -355,8 +355,8 @@ else
 
 ## <a name="related-links"></a>관련 링크
 
-- [위치 (샘플)](https://developer.xamarin.com/samples/Location/)
-- [FusedLocationProvider (샘플)](https://developer.xamarin.com/samples/FusedLocationProvider/)
+- [위치 (샘플)](https://developer.xamarin.com/samples/monodroid/Location/)
+- [FusedLocationProvider (샘플)](https://developer.xamarin.com/samples/monodroid/FusedLocationProvider/)
 - [Google Play 서비스](https://developer.android.com/google/play-services/index.html)
 - [기준 클래스](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
 - [LocationManager 클래스](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)

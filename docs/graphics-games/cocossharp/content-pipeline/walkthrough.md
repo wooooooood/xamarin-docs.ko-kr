@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2227e2f56071b92c209c5d9fda994faa5a97a03d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371326"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827777"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>MonoGame 파이프라인 도구를 사용 하 여
 
@@ -243,5 +243,5 @@ public override void ApplicationDidFinishLaunching (CCApplication applicati
 
 - [MonoGame 다운로드](http://www.monogame.net/downloads/)
 - [MonoGame 파이프라인 설명서](http://www.monogame.net/documentation/?page=Pipeline)
-- [Android (샘플)에 대 한 BouncingGame 프로젝트 시작](https://developer.xamarin.com/samples/BouncingGameCompleteAndroid/)
+- [Android (샘플)에 대 한 BouncingGame 프로젝트 시작](https://developer.xamarin.com/samples/monodroid/BouncingGameCompleteAndroid/)
 - [ball.png 그래픽 (샘플)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true)

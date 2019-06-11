@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: d71f14c26865b71eca991910df4a68f2540f9715
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b58cf2244d16e154cf0a979bc509e7356a75bdb2
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085574"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827844"
 ---
 # <a name="core-image-in-xamarinios"></a>Xamarin.iOS에서 core 이미지
 
@@ -224,7 +224,7 @@ foreach (var filter in filters){
 
 ## <a name="related-links"></a>관련 링크
 
-- [Core 이미지 (샘플)](https://developer.xamarin.com/samples/CoreImage/)
+- [Core 이미지 (샘플)](https://developer.xamarin.com/samples/monotouch/CoreImage/)
 - [계약과 이미지 작성법의 밝기를 조정 합니다.](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Core 이미지 필터를 사용 하 여](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [CIFilter 클래스 참조](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

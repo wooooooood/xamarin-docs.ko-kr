@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61079447"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827350"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.iOS에서 컬렉션 뷰
 
@@ -1299,6 +1299,6 @@ Xamarin.iOS 앱을 다시 실행 하는 경우 컬렉션 뷰는 이제 다음과
 
 - [iOS 9 샘플](https://developer.xamarin.com/samples/ios/iOS9/)
 - [컬렉션 뷰 샘플](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (샘플)](https://developer.xamarin.com/samples/SimpleCollectionView/)
+- [SimpleCollectionView (샘플)](https://developer.xamarin.com/samples/monotouch/SimpleCollectionView/)
 - [이벤트, 프로토콜 및 대리자](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md)

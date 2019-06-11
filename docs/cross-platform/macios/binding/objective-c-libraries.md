@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 3b81ba51a0fbdf4c684ca602cb083f8da08c7d6a
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977994"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827488"
 ---
 # <a name="binding-objective-c-libraries"></a>Objective-c 라이브러리 바인딩
 
@@ -44,7 +44,7 @@ IOS 및 Mac 라이브러리 바인딩을 빌드할 수 있습니다.
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 바인딩을 만들 수는 가장 쉬운 방법은 Xamarin.iOS 바인딩 프로젝트를 만드는 경우
-프로젝트 형식을 선택 하 여 Windows의 Visual Studio에서 이렇게 하려면 **시각적 C# > iOS > 바인딩 라이브러리 (iOS)**:
+프로젝트 형식을 선택 하 여 Windows의 Visual Studio에서 이렇게 하려면 **시각적 C# > iOS > 바인딩 라이브러리 (iOS)** :
 
 [![](objective-c-libraries-images/00vs-sml.png "iOS 바인딩 라이브러리 iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -1403,4 +1403,4 @@ Xamarin.iOS v3.2 기준으로 사용 하 여 표시 된 프로토콜에서 상�
 
 ## <a name="related-links"></a>관련 링크
 
-- [바인딩 샘플](https://developer.xamarin.com/samples/BindingSample/)
+- [바인딩 샘플](https://developer.xamarin.com/samples/monotouch/BindingSample/)

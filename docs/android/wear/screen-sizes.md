@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 9fc22a3c08b60a8474b006f1c9225155b9705507
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a9b71fb069a428d9bec03481c986f4deb4c904ea
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61285819"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827728"
 ---
 # <a name="working-with-screen-sizes"></a>화면 크기를 사용 하 여 작업
 
@@ -27,7 +27,7 @@ Wear 지원 라이브러리는 도움이 되는 일부 컨트롤 검색 및와 �
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
-참조를 [WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/) 샘플을 화면 종류를 검색 하 여 각 형식에 대 한 다른 레이아웃을 표시 하는 방법을 참조 하십시오.
+참조를 [WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/) 샘플을 화면 종류를 검색 하 여 각 형식에 대 한 다른 레이아웃을 표시 하는 방법을 참조 하십시오.
 
 기본 레이아웃 파일에 포함 되어는 `android.support.wearable.view.WatchViewStub` 를 사용 하 여 사각형 및 둥근 화면에 대 한 다른 레이아웃을 참조 하는 합니다 `app:rectLayout` 및 `app:roundLayout` 특성:
 

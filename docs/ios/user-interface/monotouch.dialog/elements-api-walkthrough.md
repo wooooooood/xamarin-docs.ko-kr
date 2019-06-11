@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 14711f9cc2c34d72765e28db158379bc2a26849b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9331c7e6920f94d2ff0dddc50eb8f1ff9817d982
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61201090"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827846"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>요소 API를 사용 하 여 Xamarin.iOS 응용 프로그램 만들기
 
@@ -146,9 +146,7 @@ public class Task
 
 ## <a name="related-links"></a>관련 링크
 
-- [MTDWalkthrough (샘플)](https://developer.xamarin.com/samples/MTDWalkthrough/)
-- [스크린 캐스트-Miguel de Icaza는 MonoTouch.Dialog를 사용 하 여는 iOS 로그인 화면을 만듭니다.](http://youtu.be/3butqB1EG0c)
-- [스크린 캐스트-MonoTouch.Dialog를 사용 하 여 iOS 사용자 인터페이스를 쉽게 만들기](http://youtu.be/j7OC5r8ZkYg)
+- [MTDWalkthrough (샘플)](https://developer.xamarin.com/samples/monotouch/MTDWalkthrough/)
 - [MonoTouch.Dialog 소개](~/ios/user-interface/monotouch.dialog/index.md)
 - [리플렉션 API 연습](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [JSON 요소 연습](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
