@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7b66005ff64763d68dc6101985e514fa56cf896d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61029977"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827369"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>슬라이더, 스위치 및 Xamarin.iOS에서 분할 된 컨트롤
 
@@ -95,5 +95,5 @@ iOS7, 분할 된 컨트롤 스타일에 되지 않으며 따라서 iOS7 응용 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://developer.xamarin.com/samples/Controls/)
+- [컨트롤 (샘플)](https://developer.xamarin.com/samples/monotouch/Controls/)
 - [경고 컨트롤러](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)
