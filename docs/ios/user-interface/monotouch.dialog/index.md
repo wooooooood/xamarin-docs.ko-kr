@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 982f19eef7b98a05535298430bdfdbe6e54bac10
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 6e64f9c7d0fcebbbc92171f92a5e0ac2f18ce451
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827451"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039709"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>MonoTouch.Dialog Xamarin.iOS에 대 한 소개
 
@@ -120,16 +120,16 @@ RootElement 섹션/요소 값을 사용 하 여 초기화 되 면이 값은 자�
 
 ```csharp
 var root = new RootElement ("Meals") {
-    new Section ("Dinner"){
-            new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
-                new Section () {
-                    new RadioElement ("Ice Cream", "dessert"),
-                    new RadioElement ("Milkshake", "dessert"),
-                    new RadioElement ("Chocolate Cake", "dessert")
-                }
+    new Section ("Dinner") {
+        new RootElement ("Dessert", new RadioGroup ("dessert", 2)) {
+            new Section () {
+                new RadioElement ("Ice Cream", "dessert"),
+                new RadioElement ("Milkshake", "dessert"),
+                new RadioElement ("Chocolate Cake", "dessert")
             }
         }
     }
+};
 ```
 
 위의 예제에서는 사용자가 "후 식"를 누를 때 MonoTouch.Dialog 새 페이지를 만들고 "후 식" 되 고 세 개의 값을 사용 하 여 라디오 그룹을 유지 하는 루트로 이동 하 합니다.
@@ -151,14 +151,14 @@ RootElements 섹션에 포함 된 새로운 더 깊은 수준으로 이동 하�
 일반적으로 사용 된 문자열에 있지만 사용자 지정 Ui를 만드는 모든 UIView 머리글 또는 바닥글으로 사용할 수 있습니다. 다음과 같이 만들려는 하거나 문자열을 사용할 수 있습니다.
 
 ```csharp
-var section = new Section ("Header", "Footer")
+var section = new Section ("Header", "Footer");
 ```
 
 뷰를 사용 하려면 생성자에 뷰를 전달 하기만 합니다.
 
 ```csharp
 var header = new UIImageView (Image.FromFile ("sample.png"));
-var section = new Section (header)
+var section = new Section (header);
 ```
 
 ### <a name="getting-notified"></a>알림 받기
@@ -170,8 +170,7 @@ var section = new Section (header)
 
 ```csharp
 new Section () {
-        new StringElement ("Demo Callback", 
-                delegate { Console.WriteLine ("Handled"); })
+    new StringElement ("Demo Callback", delegate { Console.WriteLine ("Handled"); })
 }
 ```
 
@@ -180,18 +179,14 @@ new Section () {
 와 결합 합니다 `Element.Value` 속성 콜백에 다른 요소에 설정 된 값을 검색할 수 있습니다. 예를 들어, 다음 코드를 고려하세요.
 
 ```csharp
-var element = new EntryElement (task.Name, "Enter task description",
-        task.Description);
+var element = new EntryElement (task.Name, "Enter task description", task.Description);
                 
-var taskElement = new RootElement (task.Name){
-        new Section () { element },
-        new Section () { 
-                new DateElement ("Due Date", task.DueDate)
-        },
-        new Section ("Demo Retrieving Element Value") {
-                new StringElement ("Output Task Description", 
-                        delegate { Console.WriteLine (element.Value); })
-        }
+var taskElement = new RootElement (task.Name) {
+    new Section () { element },
+    new Section () { new DateElement ("Due Date", task.DueDate) },
+    new Section ("Demo Retrieving Element Value") {
+        new StringElement ("Output Task Description", delegate { Console.WriteLine (element.Value); })
+    }
 };
 ```
 
@@ -223,10 +218,9 @@ html 이미지 등 다양 한 데이터 형식을 지원 하기 위해 좀 더 �
 사용 하는 `StringElement` 을 button으로 대리자를 제공 합니다.
 
 ```csharp
-new StringElement (
-        "Click me",
-        () => { new UIAlertView("Tapped", "String Element Tapped"
-, null, "ok", null).Show(); })
+new StringElement ("Click me", () => { 
+    new UIAlertView("Tapped", "String Element Tapped", null, "ok", null).Show();
+});
 ```
 
  [![](images/image8.png "StringElement 단추를 사용 하려면 대리자를 제공 합니다.")](images/image8.png#lightbox)
@@ -281,7 +275,7 @@ new StringElement (
 A `RadioElement` 필요를 `RadioGroup` 지정 되어야 합니다 `RootElement`합니다.
 
 ```csharp
-mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
+mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 ```
 
  [![](images/image14.png "RadioElement는 RootElement에 지정할 RadioGroup 필요")](images/image14.png#lightbox)
@@ -289,7 +283,7 @@ mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0))
  `RootElements` 라디오 요소를 조정 하도 사용 됩니다. `RadioElement` 멤버에는 여러 섹션 (예: 비슷하게 링 톤 선택기와 별도 사용자 지정 벨소리 시스템 벨 소리에서 구현) 걸쳐 있을 수 있습니다. 요약 뷰에서 현재 선택 된 라디오 요소를 표시 됩니다. 이 사용 하려면 만들기를 `RootElement` 같이 그룹 생성자를 사용 하 여:
 
 ```csharp
-var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
+var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
 ```
 
 그룹의 이름을 `RadioGroup` (있는 경우)를 포함 하는 페이지에서 선택한 값이 0이 경우에 값 이며 처음 선택된 된 항목의 인덱스를 표시 하는 데 사용 됩니다.
@@ -359,16 +353,13 @@ var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0))
 
 ```csharp
 public class SampleOwnerDrawnElement : OwnerDrawnElement
- {
+{
     public SampleOwnerDrawnElement (string text) : base(UITableViewCellStyle.Default, "sampleOwnerDrawnElement")
     {
         this.Text = text;
     }
 
-    public string Text
-    {
-        get;set;    
-    }
+    public string Text { get; set; }
 
     public override void Draw (RectangleF bounds, CGContext context, UIView view)
     {
@@ -383,7 +374,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
     {
         return 44.0f;
     }
- }
+}
 ```
 
 ### <a name="json-element"></a>JSON 요소
@@ -453,9 +444,9 @@ MonoTouch.Dialog 통합 합니다 [TweetStation](https://github.com/migueldeicaz
 string uriString = "http://some-server.com/some image url";
 
 var rootElement = new RootElement("Image Loader") {
-        new Section(){
-                new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
-        }
+    new Section() {
+        new BadgeElement( ImageLoader.DefaultRequestImage( new Uri(uriString), this), "Xamarin")
+    }
 };
 ```
 
@@ -467,12 +458,11 @@ Clever LINQ 및 C#의 초기화 구문 사용을 통해 LINQ 요소 계층을 �
 
 ```csharp
 var rootElement = new RootElement ("LINQ root element") {
-from x in new string [] { "one", "two", "three" }
-select new Section (x) {
-from y in "Hello:World".Split (':')
-select (Element) new StringElement (y,
-delegate { Debug.WriteLine("cell tapped"); })
-}
+    from x in new string [] { "one", "two", "three" }
+    select new Section (x) {
+        from y in "Hello:World".Split (':')
+        select (Element) new StringElement (y, delegate { Debug.WriteLine("cell tapped"); })
+    }
 };
 ```
 
@@ -488,38 +478,40 @@ delegate { Debug.WriteLine("cell tapped"); })
 
 ```csharp
 // To release any heavy resources that you might have
-    void Dispose (bool disposing);
+void Dispose (bool disposing);
 
-    // To retrieve the UITableViewCell for your element
-    // you would need to prepare the cell to be reused, in the
-    // same way that UITableView expects reusable cells to work
-    UITableViewCell GetCell (UITableView tv)
+// To retrieve the UITableViewCell for your element
+// you would need to prepare the cell to be reused, in the
+// same way that UITableView expects reusable cells to work
+UITableViewCell GetCell (UITableView tv);
 
-    // To retrieve a "summary" that can be used with
-    // a root element to render a summary one level up.  
-    string Summary ()
-    // To detect when the user has tapped on the cell
-    void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path)
-    // If you support search, to probe if the cell matches the user input
-    bool Matches (string text)
+// To retrieve a "summary" that can be used with
+// a root element to render a summary one level up.  
+string Summary ();
+
+// To detect when the user has tapped on the cell
+void Selected (DialogViewController dvc, UITableView tableView, NSIndexPath path);
+
+// If you support search, to probe if the cell matches the user input
+bool Matches (string text);
 ```
 
 구현 해야 하는 요소는 변수 크기 수 있으면는 `IElementSizing` 메서드 하나를 포함 하는 인터페이스:
 
 ```csharp
 // Returns the height for the cell at indexPath.Section, indexPath.Row
-    float GetHeight (UITableView tableView, NSIndexPath indexPath);
+float GetHeight (UITableView tableView, NSIndexPath indexPath);
 ```
 
 구현 하려는 경우에 `GetCell` 메서드를 호출 `base.GetCell(tv)` 반환된 된 셀을 사용자 지정도 재정의 해야 하 고는 `CellKey` 같이 요소를 고유 하 게 표시 되는 키를 반환할 속성:
 
 ```csharp
 static NSString MyKey = new NSString ("MyKey");
-    protected override NSString CellKey {
-        get {
-            return MyKey;
-        }
+protected override NSString CellKey {
+    get {
+        return MyKey;
     }
+}
 ```
 
 대부분의 요소에 대 한 작동 합니다 `StringElement` 고 `StyledStringElement` 다양 한 렌더링 시나리오에 대 한 고유한 키 집합을 사용 하는 것입니다. 이러한 클래스의 코드를 복제 해야 합니다.
@@ -533,9 +525,9 @@ static NSString MyKey = new NSString ("MyKey");
 예를 들어, 되려면 목록 스타일을 변경 하려는 경우 `Grouped` 또는 `Plain`, 다음과 같은 컨트롤러를 만들 때 속성을 변경 하 여이 값을 설정할 수 있습니다.
 
 ```csharp
-var myController = new DialogViewController (root, true){
-        Style = UITableViewStyle.Grouped;
-    }
+var myController = new DialogViewController (root, true) {
+    Style = UITableViewStyle.Grouped;
+}
 ```
 
 고급 사용자 지정을 `DialogViewController`, 배경, 설정 하는 등 경우 서브 클래스 하 고 적절 한 재정의 메서드를 아래 예와에서 같이:

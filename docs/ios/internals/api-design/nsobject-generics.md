@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 512280e9c298cfbcea6f693b0691236fd1cf5a5f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: becdd842f46cc7100bd7d9a6fd7347b541685c35
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036484"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039626"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Xamarin.iOS에서 NSObject의 제네릭 서브 클래스
 
@@ -107,7 +107,7 @@ Objective-c에서 제네릭 형식의 인스턴스화 허용 되지 않습니다
 
 이 클래스 정의 사용 하는 생성자를 노출 하는 것이 좋습니다는 `IntPtr` (Xamarin.iOS 방식의 생성 된 C# 네이티브 Objective-c 인스턴스에서 개체):
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}
@@ -121,7 +121,7 @@ class Generic<T> : NSObject where T : NSObject
 
 제네릭 형식의 특수화 된 서브 클래스를 만들어이 문제를 해결할 수 있습니다.   예를 들어:
     
-```
+```csharp
 class Generic<T> : NSObject where T : NSObject
 {
     public Generic () {}

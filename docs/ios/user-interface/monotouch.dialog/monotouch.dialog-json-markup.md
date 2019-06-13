@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc6842871a2f59c9851e90adbc6609707a7ecd1f
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395153"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039651"
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -20,58 +20,58 @@ ms.locfileid: "61395153"
 
 예를 들어 시작 하겠습니다. 다음은 JsonElement에 전달할 수 있는 완전 한 Json 파일입니다.
 
-```csharp
+```json
 {     
-  "title": "Json Sample",
-  "sections": [ 
-      {
-          "header": "Booleans",
-          "footer": "Slider or image-based",
-          "id": "first-section",
-          "elements": [
-              { 
-                  "type" : "boolean",
-                  "caption" : "Demo of a Boolean",
-                  "value"   : true
-              }, {
-                  "type": "boolean",
-                  "caption" : "Boolean using images",
-                  "value"   : false,
-                  "on"      : "favorite.png",
-                  "off"     : "~/favorited.png"
-              }, {
-                      "type": "root",
-                      "title": "Tap for nested controller",
-                      "sections": [ {
-                         "header": "Nested view!",
-                         "elements": [
-                           {
-                             "type": "boolean",
-                             "caption": "Just a boolean",
-                             "id": "the-boolean",
-                             "value": false
-                           },
-                           {
-                             "type": "string",
-                             "caption": "Welcome to the nested controller"
-                           }
-                         ]
-                       }
-                     ]
-                   }
-          ]
-      }, {
-          "header": "Entries",
-          "elements" : [
-              {
-                  "type": "entry",
-                  "caption": "Username",
-                  "value": "",
-                  "placeholder": "Your account username"
-              }
-          ]
-      }
-  ]
+    "title": "Json Sample",
+    "sections": [ 
+        {
+            "header": "Booleans",
+            "footer": "Slider or image-based",
+            "id": "first-section",
+            "elements": [
+                { 
+                    "type": "boolean",
+                    "caption": "Demo of a Boolean",
+                    "value": true
+                }, {
+                    "type": "boolean",
+                    "caption": "Boolean using images",
+                    "value": false,
+                    "on": "favorite.png",
+                    "off": "~/favorited.png"
+                }, {
+                    "type": "root",
+                    "title": "Tap for nested controller",
+                    "sections": [
+                        {
+                            "header": "Nested view!",
+                            "elements": [
+                                {
+                                    "type": "boolean",
+                                    "caption": "Just a boolean",
+                                    "id": "the-boolean",
+                                    "value": false
+                                }, {
+                                    "type": "string",
+                                    "caption": "Welcome to the nested controller"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "header": "Entries",
+            "elements" : [
+                {
+                    "type": "entry",
+                    "caption": "Username",
+                    "value": "",
+                    "placeholder": "Your account username"
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -86,7 +86,7 @@ var jsonElement = JsonElement.FromFile ("demo.json");
 
 var firstSection = jsonElement ["first-section"] as Section;
 
-var theBoolean = jsonElement ["the-boolean"] as BooleanElement
+var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 ```
 
  <a name="Root_Element_Syntax" />
@@ -192,38 +192,38 @@ RootElement에 사용 되는 제목이 있는 경우 됩니다.
 
 렌더링 요소를 기반으로 C# StringElement StyledStringElement 않으며 다양 한 방법으로 정보를 렌더링할 수 및 다양 한 방법으로를 렌더링 하는 것이 가능 합니다. 다음과 같은 간단한 요소를 만들 수 있습니다.
 
-```csharp
+```json
 {
-        "type": "string",
-        "caption": "Json Serializer",
+    "type": "string",
+    "caption": "Json Serializer"
 }
 ```
 
 모든 기본값을 사용 하 여 간단한 문자열로 표시 됩니다: 글꼴, 배경, 텍스트 색 및 장식 합니다. 이러한 요소에 작업 연결을 설정 하 여 단추 처럼 동작할 수 있도록 하는 것이 가능 합니다 `"ontap"` 속성 또는 `"onaccessorytap"` 속성:
 
-```csharp
+```json
 {
-    "type":    "string",
-        "caption": "View Photos",
-        "ontap:    "Acme.PhotoLibrary.ShowPhotos"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos"
 }
 ```
 
 위의 "Acme.PhotoLibrary" 클래스에서 "ShowPhotos" 메서드를 호출 합니다. `"onaccessorytap"` 는 유사 하지만 사용자가 셀을 탭 하는 대신 액세서리를 누를 경우에 호출 됩니다. 이 기능을 사용 하려면 또한 접근자를 설정 해야 합니다.
 
-```csharp
+```json
 {
-    "type":     "string",
-        "caption":  "View Photos",
-        "ontap:     "Acme.PhotoLibrary.ShowPhotos",
-        "accessory: "detail-disclosure",
-        "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos",
+    "accessory": "detail-disclosure",
+    "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
 }
 ```
 
 요소 렌더링 두 문자열을 한 번에 표시할 수 있습니다, 하나는 캡션이 이며 다른 값입니다. 스타일에 따라 달라 집니다을 사용 하 여 설정할 수 있습니다 이러한 문자열은 렌더링 하는 방법의 `"style"` 속성입니다. 기본 왼쪽 및 오른쪽에 있는 값에 캡션이 표시 됩니다. 자세한 스타일에는 섹션을 참조 하세요. 색은 빨간색, 녹색, 파란색 및 아마도 알파 값에 대 한 값을 나타내는 16 진수 숫자가 뒤에 '#' 기호를 사용 하 여 인코딩됩니다. RGBA 또는 RGB 값을 나타내는 약식 표현 (자리 16 진수 3 또는 4)에서 콘텐츠를 인코딩할 수 있습니다. 또는 RGB 또는 RGBA 값 표시 하는 긴 형식 (6 개월 또는 8 자리). 짧은 버전은 동일한 16 진수를 두 번 작성 하는 줄임. "#1bc" 상수에 빨간색으로 좋아요 이므로 0x11, 녹색 = = 0xbb 파란색 0xcc =. 알파 값이 없는 경우에 색이 불투명 합니다. 몇 가지 예:
 
-```csharp
+```json
 "background": "#f00"
 "background": "#fa08f880"
 ```
@@ -364,19 +364,19 @@ class Foo {
 
 부울 요소 형식을 설정 해야 `"bool"`에 포함 될 수 있습니다를 `"caption"` 표시할 및 `"value"` true 또는 false로 설정 됩니다. 경우는 `"on"` 고 `"off"` 속성 설정, 이미지 수로 간주 됩니다. 이미지는 응용 프로그램에서 현재 작업 디렉터리를 기준으로 확인 됩니다. 번들에 상대적인 파일을 참조 하려는 경우 사용할 수 있습니다는 `"~"` 간단 하 게 응용 프로그램 번들 디렉터리를 나타냅니다. 예를 들어 `"~/favorite.png"` 번들 파일에 포함 된 favorite.png 됩니다. 예를 들어:
 
-```csharp
+```json
 { 
-    "type" : "boolean",
-    "caption" : "Demo of a Boolean",
-    "value"   : true
+    "type": "boolean",
+    "caption": "Demo of a Boolean",
+    "value": true
 },
 
 {
     "type": "boolean",
-    "caption" : "Boolean using images",
-    "value"   : false,
-    "on"      : "favorite.png",
-    "off"     : "~/favorited.png"
+    "caption": "Boolean using images",
+    "value": false,
+    "on": "favorite.png",
+    "off": "~/favorited.png"
 }
 ```
 
@@ -394,30 +394,30 @@ class Foo {
 
 항목 요소를 사용 하 여 사용자 데이터를 입력할 수 있도록 합니다. 항목 요소에 대 한 형식은 `"entry"` 또는 `"password"`합니다. 합니다 `"caption"` 오른쪽에 표시할 텍스트 속성은 및 `"value"` 의 항목 설정 하려면 초기 값으로 설정 됩니다. `"placeholder"` (그림 회색) 빈 항목에 대 한 사용자에 게 힌트를 표시 하는 데 사용 됩니다. 다음은 몇 가지 예입니다.
 
-```csharp
+```json
 {
-        "type": "entry",
-        "caption": "Username",
-        "value": "",
-        "placeholder": "Your account username"
+    "type": "entry",
+    "caption": "Username",
+    "value": "",
+    "placeholder": "Your account username"
 }, {
-        "type": "password",
-        "caption": "Password",
-        "value": "",
-        "placeholder": "You password"
+    "type": "password",
+    "caption": "Password",
+    "value": "",
+    "placeholder": "You password"
 }, {
-        "type": "entry",
-        "caption": "Zip Code",
-        "value": "01010",
-        "placeholder": "your zip code",
-        "keyboard": "numbers"
+    "type": "entry",
+    "caption": "Zip Code",
+    "value": "01010",
+    "placeholder": "your zip code",
+    "keyboard": "numbers"
 }, {
-        "type": "entry",
-        "return-key": "route",
-        "caption": "Entry with 'route'",
-        "placeholder": "captialization all + no corrections",
-        "capitalization": "all",
-        "autocorrect": "no"
+    "type": "entry",
+    "return-key": "route",
+    "caption": "Entry with 'route'",
+    "placeholder": "captialization all + no corrections",
+    "capitalization": "all",
+    "autocorrect": "no"
 }
 ```
 
@@ -515,22 +515,22 @@ Return 키에 사용 되는 레이블. 가능한 값은 다음과 같습니다.
 
 요소 형식은 `"datetime"`, `"date"` 및 `"time"` 렌더링 시간을 사용 하 여 날짜, 날짜 또는 시간 하는 데 사용 됩니다. 이러한 요소는 캡션 및 값 매개 변수로 합니다. .NET DateTime.Parse 함수에서 지 원하는 모든 형식의 값을 작성할 수 있습니다. 예제:
 
-```csharp
+```json
 "header": "Dates and Times",
 "elements": [
-        {
-                "type": "datetime",
-                "caption": "Date and Time",
-                "value": "Sat, 01 Nov 2008 19:35:00 GMT"
-        }, {
-                "type": "date",
-                "caption": "Date",
-                "value": "10/10"
-        }, {
-                "type": "time",
-                "caption": "Time",
-                "value": "11:23"
-                }                       
+    {
+        "type": "datetime",
+        "caption": "Date and Time",
+        "value": "Sat, 01 Nov 2008 19:35:00 GMT"
+    }, {
+        "type": "date",
+        "caption": "Date",
+        "value": "10/10"
+    }, {
+        "type": "time",
+        "caption": "Time",
+        "value": "11:23"
+    }                       
 ]
 ```
 
@@ -541,10 +541,10 @@ Return 키에 사용 되는 레이블. 가능한 값은 다음과 같습니다.
 
 만들 수 있습니다 셀 탭 할 때 지정된 된 URL의 콘텐츠를 렌더링 하는 UIWebView를 포함 하는 사용 하 여 로컬 또는 원격는 `"html"` 형식입니다. 이 요소에 대 한 두 개의 속성은 `"caption"` 고 `"url"`:
 
-```csharp
+```json
 {
-        "type": "html",
-        "caption": "Miguel's blog",
-        "url": "https://tirania.org/blog" 
+    "type": "html",
+    "caption": "Miguel's blog",
+    "url": "https://tirania.org/blog" 
 }
 ```

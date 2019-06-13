@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 9331c7e6920f94d2ff0dddc50eb8f1ff9817d982
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 1b4263e37e6d95c03e88905319cfe0ee167cb30b
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827846"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039699"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>요소 API를 사용 하 여 Xamarin.iOS 응용 프로그램 만들기
 
@@ -47,21 +47,20 @@ MonoTouch.Dialog를 사용 하 여 다중 화면 응용 프로그램을 만들�
 탐색 스타일 응용 프로그램을 만들려면 생성 해야는 `UINavigationController`로 추가한를 `RootViewController` 에 `FinishedLaunching` 메서드의 `AppDelegate`합니다. 있도록를 `UINavigationController` MonoTouch.Dialog, 추가 사용을 `DialogViewController` 에 `UINavigationController` 아래와 같이:
 
 ```csharp
-public override bool FinishedLaunching (UIApplication app, 
-        NSDictionary options)
+public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {
-        _window = new UIWindow (UIScreen.MainScreen.Bounds);
+    _window = new UIWindow (UIScreen.MainScreen.Bounds);
             
-        _rootElement = new RootElement ("To Do List"){new Section ()};
+    _rootElement = new RootElement ("To Do List"){new Section ()};
 
-        // code to create screens with MT.D will go here …
+    // code to create screens with MT.D will go here …
 
-        _rootVC = new DialogViewController (_rootElement);
-        _nav = new UINavigationController (_rootVC);
-        _window.RootViewController = _nav;
-        _window.MakeKeyAndVisible ();
+    _rootVC = new DialogViewController (_rootElement);
+    _nav = new UINavigationController (_rootVC);
+    _window.RootViewController = _nav;
+    _window.MakeKeyAndVisible ();
             
-        return true;
+    return true;
 }
 ```
 
@@ -88,22 +87,20 @@ _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 만들 때 합니다 `RootElement` 이전에 전달 하는 단일 `Section` 요소를 추가할 수 있도록 인스턴스를 <span class="ui"> + </span> 사용자가 단추를 탭 할 합니다. 에서는 단추에 대 한 처리기를 수행 하려면 다음 코드를 따르면 됩니다.
 
 ```csharp
-_addButton.Clicked += (sender, e) => {
+_addButton.Clicked += (sender, e) => {                
+    ++n;
                 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
                 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
-                
-        var taskElement = new RootElement (task.Name){
-                new Section () {
-                        new EntryElement (task.Name, 
-                                "Enter task description", task.Description)
-                },
-                new Section () {
-                        new DateElement ("Due Date", task.DueDate)
-                }
-        };
-        _rootElement [0].Add (taskElement);
+    var taskElement = new RootElement (task.Name) {
+        new Section () {
+            new EntryElement (task.Name, "Enter task description", task.Description)
+        },
+        new Section () {
+            new DateElement ("Due Date", task.DueDate)
+        }
+    };
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -112,15 +109,15 @@ _addButton.Clicked += (sender, e) => {
 ```csharp
 public class Task
 {   
-        public Task ()
-        {
-        }
+    public Task ()
+    {
+    }
+      
+    public string Name { get; set; }
         
-        public string Name { get; set; }
-        
-        public string Description { get; set; }
+    public string Description { get; set; }
 
-        public DateTime DueDate { get; set; }
+    public DateTime DueDate { get; set; }
 }
 ```
 
