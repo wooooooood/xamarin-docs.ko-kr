@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 6b1df62aec12c1c34d49bd6dfa16368a6b0092f9
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: b6e68f6b99803edd8d50a172d598a3410aa1bbf4
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574730"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740756"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/UsingMessagingCenter)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
 
 _Xamarin.Forms에는 메시지를 보내거나 받을 수 있는 간단한 메시징 서비스가 포함되어 있습니다._
 
@@ -113,6 +113,6 @@ MessagingCenter는 특히 보기 모델 간의 결합을 줄일 수 있는 간�
 
 ## <a name="related-links"></a>관련 링크
 
-- [MessagingCenterSample](https://developer.xamarin.com/samples/UsingMessagingCenter)
+- [MessagingCenterSample](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
 - [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
 - [느슨하게 결합된 구성 요소 간 통신](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)

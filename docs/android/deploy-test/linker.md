@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 07f1fbae6c4fbfcfad45fc96970339e34b5de040
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3f22556948fc87dc604870f5a8625b80a4a0b29d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102843"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827205"
 ---
 # <a name="linking-on-android"></a>Android의 연결
 
-Xamarin.Android 응용 프로그램은 *링커*를 사용하여 응용 프로그램의 크기를 줄일 수 있습니다. 링커는 응용 프로그램의 정적 분석을 통해 실제로 사용되는 어셈블리, 형식 및 멤버를 확인합니다. 그런 다음, *가비지 수집기*로 작동하여 참조되는 어셈블리, 형식 및 멤버의 의 완전한 클로저가 발견될 때까지, 참조되는 어셈블리, 형식 및 멤버를 계속 찾습니다. 그런 다음, 이 클로저 외부의 모든 것은 *삭제*됩니다.
+Xamarin.Android 애플리케이션은 *링커*를 사용하여 애플리케이션의 크기를 줄일 수 있습니다. 링커는 애플리케이션의 정적 분석을 통해 실제로 사용되는 어셈블리, 형식 및 멤버를 확인합니다. 그런 다음, *가비지 수집기*로 작동하여 참조되는 어셈블리, 형식 및 멤버의 의 완전한 클로저가 발견될 때까지, 참조되는 어셈블리, 형식 및 멤버를 계속 찾습니다. 그런 다음, 이 클로저 외부의 모든 것은 *삭제*됩니다.
 
-예를 들어 [Hello, Android](https://developer.xamarin.com/samples/HelloM4A/) 샘플은 다음과 같습니다.
+예를 들어 [Hello, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/) 샘플은 다음과 같습니다.
 
 |구성|1.2.0 크기|4.0.1 크기|
 |---|---|---|
@@ -28,7 +28,7 @@ Xamarin.Android 응용 프로그램은 *링커*를 사용하여 응용 프로그
 
 
 
-## <a name="control"></a>Control
+## <a name="control"></a>컨트롤
 
 연결은 *정적 분석*을 기반으로 합니다. 따라서 런타임 환경에 종속된 모든 것은 검색되지 않습니다.
 
@@ -60,7 +60,7 @@ public class MyActivity {
 1.  **모든 어셈블리 연결**(*SDK 및 사용자 어셈블리*)
 
 
-**연결하지 않음** 옵션은 링커를 해제합니다. 위의 "연결 없이 릴리스" 응용 프로그램 크기 예제에서는 이 동작을 사용했습니다. 이는 런타임 오류를 해결할 때 링커가 원인인지 파악하는 데 유용합니다. 이 설정은 일반적으로 프로덕션 빌드에 권장되지 않습니다.
+**연결하지 않음** 옵션은 링커를 해제합니다. 위의 "연결 없이 릴리스" 애플리케이션 크기 예제에서는 이 동작을 사용했습니다. 이는 런타임 오류를 해결할 때 링커가 원인인지 파악하는 데 유용합니다. 이 설정은 일반적으로 프로덕션 빌드에 권장되지 않습니다.
 
 **SDK 어셈블리 연결** 옵션은 [Xamarin.Android와 함께 제공되는 어셈블리](~/cross-platform/internals/available-assemblies.md)만 연결합니다.
 다른 모든 어셈블리(예: 코드)는 연결되지 않습니다.
@@ -98,7 +98,7 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 -   XML 직렬화를 사용하는 경우에 형식의 속성을 유지하는 것이 좋습니다.
 
-이러한 경우 [Android.Runtime.Preserve](https://developer.xamarin.com/api/type/Android.Runtime.PreserveAttribute/) 특성을 사용할 수 있습니다. 응용 프로그램에 의해 정적으로 연결되지 않은 모든 멤버는 제거될 수 있으므로, 이 특성을 사용하여 정적으로 참조되지 않았지만 여전히 응용 프로그램에 필요한 멤버를 표시할 수 있습니다. 형식의 모든 멤버 또는 형식 자체에 이 특성을 적용할 수 있습니다.
+이러한 경우 [Android.Runtime.Preserve](https://developer.xamarin.com/api/type/Android.Runtime.PreserveAttribute/) 특성을 사용할 수 있습니다. 애플리케이션에 의해 정적으로 연결되지 않은 모든 멤버는 제거될 수 있으므로, 이 특성을 사용하여 정적으로 참조되지 않았지만 여전히 애플리케이션에 필요한 멤버를 표시할 수 있습니다. 형식의 모든 멤버 또는 형식 자체에 이 특성을 적용할 수 있습니다.
 
 다음 예에서는 이 특성을 사용하여 `Example` 클래스의 생성자를 유지합니다.
 

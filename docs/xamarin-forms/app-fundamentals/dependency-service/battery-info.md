@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 08278c2bc380892706320dbd0e69642257b73005
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 2c9fae211e6a88944c94ca265409865b3252a10a
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233785"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740924"
 ---
 # <a name="checking-battery-status"></a>배터리 상태 확인
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/DependencyService)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 
 이 문서는 배터리 상태를 확인하는 애플리케이션의 만들기를 안내합니다. 이 문서는 James Montemagno의 배터리 플러그 인을 기반으로 합니다. 자세한 내용은 [GitHub 리포지토리](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery)를 참조하세요.
 
@@ -478,6 +478,6 @@ iOS, Android 또는 UWP에서 이 애플리케이션을 실행하고 단추를 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [DependencyService(샘플)](https://developer.xamarin.com/samples/DependencyService)
-- [DependencyService 사용(샘플)](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [DependencyService(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
+- [DependencyService 사용(샘플)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)

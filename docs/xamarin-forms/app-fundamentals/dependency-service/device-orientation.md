@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: a63d0d4c90bff36e55d98b731217133fe5958c1f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: d8763c6fe8e330181c836bc8d10923ea676a07c1
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051473"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740942"
 ---
 # <a name="checking-device-orientation"></a>디바이스 방향 확인
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/UsingDependencyService)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 이 문서에서는 각 플랫폼에서 기본 API를 사용하여 공유 코드에서 디바이스 방향을 확인하기 위해 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하는 방법을 안내합니다. 이 연습은 Ali Özgür별 기존 `DeviceOrientation` 플러그 인을 따릅니다. 자세한 내용은 [GitHub 리포지토리](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation)를 참조하세요.
 
@@ -224,6 +224,6 @@ iOS, Android 또는 Windows 플랫폼에서 이 애플리케이션을 실행하�
 
 ## <a name="related-links"></a>관련 링크
 
-- [DependencyService(샘플) 사용](https://developer.xamarin.com/samples/UsingDependencyService)
-- [DependencyService(샘플)](https://developer.xamarin.com/samples/DependencyService/DependencyServiceSample/)
+- [DependencyService(샘플) 사용](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [DependencyService(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 - [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
