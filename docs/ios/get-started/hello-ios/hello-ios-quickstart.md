@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0b063619387d9984e24f6987234605b626289e2d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 5fbe711cb8ad4902da047a2027fc05e9956de863
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978294"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039725"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
@@ -257,7 +257,7 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
     ![](hello-ios-quickstart-images/image27.png "시뮬레이터를 선택하고 시작을 누릅니다.")
 
     > [!NOTE]
-    > 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 ‘서명 ID’가 필요할 수 있습니다. 이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+    > 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하는 데 개발 인증서 또는 ‘서명 ID’가 필요할 수 있습니다.  이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 28. 그러면 iOS 시뮬레이터 내에서 애플리케이션이 시작됩니다.
 
@@ -283,7 +283,7 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
     ![](hello-ios-quickstart-images/image001-.png "시작 화면")
 
-    **파일 > 새로 만들기 > 프로젝트... > Visual C# > iPhone 및 iPad > iOS 앱(Xamari**을 선택하여 새로운 Xamarin.iOS 솔루션을 만듭니다.
+    **파일 > 새로 만들기 > 프로젝트... > Visual C# > iPhone 및 iPad > iOS 앱(Xamarin)** 을 선택하여 새로운 Xamarin.iOS 솔루션을 만듭니다.
 
     ![iOS 앱(Xamarin) 프로젝트 형식 선택](hello-ios-quickstart-images/image002.w157.png "iOS 앱(Xamarin) 프로젝트 형식 선택")
 
