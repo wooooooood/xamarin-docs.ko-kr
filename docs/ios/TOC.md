@@ -240,7 +240,8 @@
 ### [진동](~/essentials/vibrate.md?context=xamarin/ios)
 ### [문제 해결](~/essentials/troubleshooting.md?context=xamarin/ios)
 
-## [데이터 및 클라우드 서비스](data-cloud/index.md)
+## 데이터 및 Cloud Services
+### [개요](data-cloud/index.md)
 ### [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios)
 #### [시작](~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios)
 ##### [1단계. 레지스터](~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios)
@@ -258,7 +259,8 @@
 ### [CloudKit](data-cloud/intro-to-cloudkit.md)
 
 ### [웹 서비스 소개](~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios)
-## [배포 및 테스트](deploy-test/index.md)
+## 배포 및 테스트
+### [개요](deploy-test/index.md)
 ### [앱 배포](deploy-test/app-distribution/index.md)
 #### [App Store 배포](deploy-test/app-distribution/app-store-distribution/index.md)
 ##### [iTunes Connect에서 앱 구성](deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
@@ -292,7 +294,8 @@
 ### [연습: Apple의 계측 도구 사용](deploy-test/walkthrough-apples-instrument.md)
 ### [성능](deploy-test/performance.md)
 ### [문제 해결](deploy-test/troubleshooting.md)
-## [Apple 플랫폼](~/cross-platform/macios/index.md?context=xamarin/ios)
+## Apple 플랫폼
+### [iOS 및 macOS 개요](~/cross-platform/macios/index.md?context=xamarin/ios)
 ### [Apple 계정 관리](~/cross-platform/macios/apple-account-management.md?context=xamarin/ios)
 ### [Unified API](~/cross-platform/macios/unified/index.md?context=xamarin/ios)
 #### [개요](~/cross-platform/macios/unified/overview.md?context=xamarin/ios)
@@ -326,7 +329,8 @@
 ### [플랫폼 간 앱에서의 네이티브 형식 작업](~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios)
 ### [HttpClient 및 SSL/TLS 구현 선택기](~/cross-platform/macios/http-stack.md?context=xamarin/ios)
 ### [빌드 최적화](~/cross-platform/macios/optimizations.md?context=xamarin/ios)
-## [고급 개념 및 내부 요소](internals/index.md)
+## 고급 개념 및 내부 요소
+### [개요](internals/index.md)
 ### [API](internals/api.md)
 ### [API 디자인](internals/api-design/index.md)
 #### [NSString](internals/api-design/nsstring.md)
@@ -339,8 +343,10 @@
 ### [새 RefCount](internals/newrefcount.md)
 ### [Objective-C 선택기](internals/objective-c-selectors.md)
 ### [Registrar](internals/registrar.md)
-## [문제 해결](troubleshooting/index.md)
+## 문제 해결
+### [개요](troubleshooting/index.md)
 ### [문제 해결 팁](troubleshooting/troubleshooting.md)
+### [Xcode 11 미리 보기](~/ios/platform/ios13/troubleshooting/index.md)
 ### [Xamarin.iOS 분석 규칙](troubleshooting/xamarin-ios-analysis.md)
 ### [오류 메시지(mtouch)](troubleshooting/mtouch-errors.md)
 ### [질문과 대답](troubleshooting/questions/index.md)
@@ -368,7 +374,8 @@
 #### [System.Exception AMDeviceNotificationSubscribe가 반환되었습니다...](troubleshooting/questions/exception-amddevicenotificationsubscribe.md)
 #### [MDocArchiveToMsxDocConverter.exe not found rver.BaseCommand.OnRequest](troubleshooting/questions/mdocarchivetomsxdocconverter-not-found.md)
 #### [Xamarin Studio에서 iOS 프로젝트에 대한 Mono 런타임 환경 변수를 설정하려면 어떻게 해야 하나요?](troubleshooting/questions/xs-mono-runtime.md)
-## [watchOS](watchos/index.md)
+## watchOS
+### [개요](watchos/index.md)
 ### [시작](watchos/get-started/index.md)
 #### [watchOS 소개](watchos/get-started/intro-to-watchos.md)
 #### [설정 및 설치](watchos/get-started/installation.md)
@@ -405,7 +412,8 @@
 #### [Apple Watch](watchos/deploy-test/device.md)
 #### [App Store](watchos/deploy-test/appstore.md)
 ### [문제 해결](watchos/troubleshooting.md)
-## [tvOS](tvos/index.md)
+## tvOS
+### [개요](tvos/index.md)
 ### [시작](tvos/get-started/index.md)
 #### [tvOS 지원 설치](tvos/get-started/installation.md)
 #### [Hello, tvOS 빠른 시작 가이드 시작](tvos/get-started/hello-tvos.md)
