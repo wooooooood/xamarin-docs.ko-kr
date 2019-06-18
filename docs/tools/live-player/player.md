@@ -5,22 +5,23 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2017
-ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: fce0eeae4ef5776842ea1b45c36163118042dc49
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279415"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157725"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 앱
 
 ![미리 보기 기능](~/media/shared/preview.png)
 
-> [!NOTE]
-> 실시간 플레이어 미리 보기에만 Visual Studio 2017에서 제공 됩니다.
+> [!WARNING]
+> Xamarin Live Player 미리 보기를 마쳤습니다. 앱을 사용할 수 없습니다. 아래 지침에 따라 고객은 미리 보기를 사용 하 여 Visual Studio 2017을 사용 하 여 계속 제공 됩니다.
 
-휴대폰에서 앱을 설치한 후에 따라를 [설치 지침](~/tools/live-player/install.md) 컴퓨터에 연결 합니다. 중 하나를 시도 합니다 [샘플 앱](~/tools/live-player/samples.md) 작동 시켜야 합니다.
+> [!TIP]
+> 사용할 수는 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer/index.md) 편집 하는 동안 화면 디자인을 보려면 Visual Studio 2019 또는 Mac 용 Visual Studio에서.
 
 시작 시에 Xamarin Live Player 앱은 다음과 같습니다.
 
@@ -56,7 +57,7 @@ ms.locfileid: "61279415"
 
 처음으로 장치를 연결할의 지침을 따릅니다 [요구 사항 및 설치](~/tools/live-player/install.md)합니다. 여러 장치를 연결 하 고 IDE를 통해 관리할 수 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
 Visual studio에서 **도구 > Xamarin Live Player > 장치를 관리 하는 중...**
 
@@ -95,4 +96,4 @@ Mac 용 Visual studio **도구 > 장치를 관리 하는 (Xamarin Live Player)..
 ## <a name="related-links"></a>관련 링크
 
 - [문제 해결](~/tools/live-player/troubleshooting.md)
-- [Live Player를 사용 하는 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+

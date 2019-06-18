@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: becdd842f46cc7100bd7d9a6fd7347b541685c35
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: 4d2ab7a546925e92bb59f626279dcbf9c3c4ab4f
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039626"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157706"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Xamarin.iOS에서 NSObject의 제네릭 서브 클래스
 
 ## <a name="using-generics-with-nsobjects"></a>NSObjects 제네릭 사용
 
-제네릭의 서브 클래스에서 사용할 수 7.2.1 Xamarin.iOS를 사용 하 여 시작 `NSObject` (예를 들어 [UIView](xref:UIKit.UIView)합니다.
-
-이제 다음과 같은 제네릭 클래스를 만들 수 있습니다.
+제네릭의 서브 클래스에서 사용 하는 것이 불가능 `NSObject`예를 들면 [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
@@ -36,7 +34,7 @@ class Foo<T> : UIView {
     
 ## <a name="considerations-for-generic-subclasses-of-nsobject"></a>NSObject의 제네릭 서브 클래스에 대 한 고려 사항
 
-이 문서에서는 자세히 설명의 제네릭 서브 클래스에 대 한 제한 된 지원의 제한 사항이 `NSObjects` 7.2.1 Xamarin.iOS를 사용 하 여 도입 합니다.
+이 문서에서는 자세히 설명의 제네릭 서브 클래스에 대 한 제한 된 지원의 제한 사항이 `NSObjects`합니다.
     
 ### <a name="generic-type-arguments-in-member-signatures"></a>멤버 시그니처에 제네릭 형식 인수
 
@@ -103,7 +101,7 @@ class Generic<T, U> : NSObject where T: NSObject
     
 ### <a name="instantiations-of-generic-types-from-objective-c"></a>Objective-c에서 제네릭 형식의 인스턴스화
 
-Objective-c에서 제네릭 형식의 인스턴스화 허용 되지 않습니다. 이 문제는 일반적으로 관리 되는 형식 xib에 사용 된 경우 발생 합니다.
+Objective-c에서 제네릭 형식의 인스턴스화 허용 되지 않습니다. 이 문제는 일반적으로 관리 되는 형식 xib 또는 스토리 보드에서 사용 될 때 발생 합니다.
 
 이 클래스 정의 사용 하는 생성자를 노출 하는 것이 좋습니다는 `IntPtr` (Xamarin.iOS 방식의 생성 된 C# 네이티브 Objective-c 인스턴스에서 개체):
     
@@ -119,7 +117,7 @@ class Generic<T> : NSObject where T : NSObject
 
 이 제네릭 형식의 개념이 Objective-c 및 만들 정확한 제네릭 형식을 지정할 수 없습니다 때문에 발생 합니다.
 
-제네릭 형식의 특수화 된 서브 클래스를 만들어이 문제를 해결할 수 있습니다.   예를 들어:
+제네릭 형식의 특수화 된 서브 클래스를 만들어이 문제를 해결할 수 있습니다. 예를 들어:
     
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -133,7 +131,7 @@ class GenericUIView : Generic<UIView>
 }
 ```
 
-모호성이 없습니다 더 이상 클래스는 이제 `GenericUIView` xib에 사용할 수 있습니다.
+모호성이 없습니다 더 이상 클래스는 이제 `GenericUIView` xib 또는 스토리 보드에서 사용할 수 있습니다.
 
 ## <a name="no-support-for-generic-methods"></a>제네릭 메서드에 대 한 지원 되지 않습니다
 
@@ -188,11 +186,11 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**원인:** 제네릭 메서드의 경우와 마찬가지로 Xamarin.iOS 런타임은 T.는 제네릭 형식 인수에 사용할 유형을 알 수 해야
+**원인:** 제네릭 메서드의 경우와 마찬가지로 Xamarin.iOS 런타임은 제네릭 형식 인수에 사용할 유형을 알 수 해야 `T`합니다.
 
-자체 인스턴스를 사용 하는 멤버 예를 들어 (될 수 없으므로 제네릭 인스턴스 때문<T>, 해당 값은 항상 일반<SomeSpecificClass>), 했지만 정적 멤버에 대 한이 정보를 제공 합니다.
+자체 인스턴스를 사용 하는 멤버 예를 들어 (될 수 없으므로 인스턴스 때문 `Generic<T>`, 해당 값은 항상 `Generic<SomeSpecificClass>`), 했지만 정적 멤버에 대 한이 정보를 제공 합니다.
 
-문제의 멤버 어떤 방식으로든에서 T 형식 인수를 사용 하지 않는 경우에 적용이 note 합니다.
+해당 멤버 형식 인수를 사용 하지 않는 경우에 적용이 `T` 어떤 방식으로든에서 합니다.
 
 이 경우 대신 특수화 된 서브 클래스를 만들 때:
 
@@ -206,7 +204,7 @@ class GenericUIView : Generic<UIView>
     }
 
     [Export ("myProperty")]
-    public static UIView MyUIVIewProperty {
+    public static UIView MyUIViewProperty {
         get { return MyProperty; }
         set { MyProperty = value; }
     }
@@ -219,12 +217,6 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-### <a name="requires-new-static-registrar"></a>새 정적 등록 필요
-
-제네릭 지원 하려면 새로운 [등록 시스템](~/ios/internals/registrar.md)입니다.
-
-이전에 사용 하려는 경우 레거시 등록 시스템 제네릭 형식 (정의 되지 않은 동작이 발생 하는 올바른 코드를 생성 하지 않도록 추가)를 발견할 때 경고를 표시 합니다.
-    
 ## <a name="performance"></a>성능
 
 와 마찬가지로 일반적으로 정적 등록 기관은 빌드 타임에 제네릭 형식에 내보낸된 멤버를 확인할 수 없습니다, 그리고이를 런타임에 조회할 수 있습니다. 이 제네릭이 아닌 클래스에서 멤버를 호출 하는 보다 조금 느리기는 Objective C에서 이러한 메서드를 호출을 의미 합니다.

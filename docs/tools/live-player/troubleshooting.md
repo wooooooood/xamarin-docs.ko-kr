@@ -5,20 +5,23 @@ ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2018
-ms.openlocfilehash: 5eb0dcead230e0bb2e7d99241e5d8e5a4115f838
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: bf0186b55b14d9797397b98390f4d825d669d0f4
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61175398"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157687"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>Xamarin Live Player를 문제 해결
 
 ![미리 보기 기능](~/media/shared/preview.png)
 
-> [!NOTE]
-> 실시간 플레이어 미리 보기에만 Visual Studio 2017에서 제공 됩니다.
+> [!WARNING]
+> Xamarin Live Player 미리 보기를 마쳤습니다. 앱을 사용할 수 없습니다. 아래 지침에 따라 고객은 미리 보기를 사용 하 여 Visual Studio 2017을 사용 하 여 계속 제공 됩니다...
+
+> [!TIP]
+> 사용할 수는 [XAML 미리 보기](~/xamarin-forms/xaml/xaml-previewer/index.md) 편집 하는 동안 화면 디자인을 보려면 Visual Studio 2019 또는 Mac 용 Visual Studio에서.
 
 이 문서에서는 Live Player 및 단계를 사용 하 여 몇 가지 일반적인 문제를 수정 하 여 제한인을 설명 합니다.
 
@@ -163,4 +166,3 @@ Xamarin.Forms Android 프로젝트 관련 레이아웃 파일의 이름에 "Tool
 ## <a name="related-links"></a>관련 링크
 
 - [설정](~/tools/live-player/install.md)
-- [Live Player를 사용 하는 샘플](https://developer.xamarin.com/samples/xamarin-live-player/all/)
