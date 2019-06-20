@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557212"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194933"
 ---
 # <a name="contributing"></a>참여
 
@@ -70,13 +70,13 @@ Xamarin 팀은 PR을 검토하고 승인하기 위해 변경 내용이 적합하
 .NET 설명서에 기여할 때 염두해야 하는 지침 규칙의 짧은 목록은 다음과 같습니다.
 
 - **금지** 대규모 끌어오기 요청을 제공합니다. 대신, 많은 시간을 투자하기 전에 방향에 동의할 수 있도록 문제를 저장하고 토론을 시작합니다.
-- **권고** [스타일 가이드](../contributing-guidelines/template.md) 및 [어투 및 어조](../contributing-guidelines/voice-tone.md) 지침을 참고합니다.
-- **권고** [템플릿](../contributing-guidelines/template.md) 파일을 작업의 시작점으로 사용합니다.
+- **권고** [스타일 가이드](contributing-guidelines/template.md) 및 [어투 및 어조](contributing-guidelines/voice-tone.md) 지침을 참고합니다.
+- **권고** [템플릿](contributing-guidelines/template.md) 파일을 작업의 시작점으로 사용합니다.
 - **권고** 문서에서 작업하기 전에 포크의 별도 분기를 만듭니다.
 - **권고** [GitHub 흐름 워크플로](https://guides.github.com/introduction/flow/)를 수행합니다.
 - **권고** 기여에 대해 자주 블로깅하고 트윗(무엇이든)합니다.
 
 > [!NOTE]
-> 현재 일부 항목이 여기 및 [스타일 가이드](./contributing-guidelines/template.md)에 지정된 모든 지침에 따르지 않는다는 점을 확인할 수 있습니다. 사이트 전체에서 일관성을 달성하기 위해 노력하고 있습니다. 
+> 현재 일부 항목이 여기 및 [스타일 가이드](contributing-guidelines/template.md)에 지정된 모든 지침에 따르지 않는다는 점을 확인할 수 있습니다. 사이트 전체에서 일관성을 달성하기 위해 노력하고 있습니다. 
 
 
