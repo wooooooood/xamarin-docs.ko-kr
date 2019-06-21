@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2018
-ms.openlocfilehash: 77589d0d644c366fc0feacd874929c7456b4ae30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 71799e4299f01a881c6bc265baa7ad721ec5fc79
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398800"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268878"
 ---
 # <a name="get-started-with-ios-12-tvos-12-and-watchos-5"></a>IOS 12, 12, tvOS 및 watchOS 5 시작
 
@@ -26,7 +26,7 @@ ms.locfileid: "61398800"
 
 3. **Mac 및 Visual Studio 2017 용 Visual Studio 업데이트** – Xamarin의 안정적인 최신 버전을 했는지 확인 합니다.
 
-4. _(선택 사항)_  **IOS 장치에서 iOS 12 설치** –
+4. _(선택 사항) _ **IOS 장치에서 iOS 12 설치** –
 
    등록 된 Apple 개발자 Xcode 10을 사용 하 여 도입 된 Api를 사용 하는 앱의 장치 테스트를 할 수 있습니다 [다운로드](https://developer.apple.com/download) 하 고 장치의 운영 체제를 설치 합니다.
 
@@ -40,4 +40,4 @@ ms.locfileid: "61398800"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xcode 10 다운로드](https://developer.apple.com/download/)
+- [Xcode를 다운로드 합니다.](https://developer.apple.com/download/)

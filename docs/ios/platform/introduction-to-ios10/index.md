@@ -7,18 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e84f5acdd1660633521d1a99325155b614b87e1b
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402405"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268911"
 ---
 # <a name="introduction-to-ios-10"></a>iOS 10 소개
-
-_이 문서에서는 Xamarin.iOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 iOS 10에서에서 사용할 수 있는 기능을 소개합니다._
-
-## <a name="introducing-ios-10"></a>IOS 10 소개
 
 새 iOS 10 SDK, Apple 새 Api 및 개발자가 앱 및 기능의 새 범주를 만들 수 있도록 하는 서비스 포함 했습니다. 이제 iOS 앱 이전에 사용할 수 없는 최종 사용자에 게 풍부 하 고 매력적인 기능을 제공 하도록 메시지, Siri, Phone 및 맵 앱을 확장할 수 있습니다.
 
@@ -27,7 +23,6 @@ IOS 10에 대 한 자세한 내용은 Apple의를 참조 하세요 [iOS 앱 +](h
 ## <a name="whats-new-in-ios-10"></a>IOS 10에서 새 란
 
 Apple이 Api 및 서비스에 대 한 몇 가지 새 기존 기능을 비롯 한 향상 된 기능와 함께 iOS 10에에서 추가 합니다.
-
 
 ## <a name="adapting-to-the-true-tone-display"></a>True 성조 표시에 적응할 수
 
@@ -40,8 +35,6 @@ Apple의 True 성조 표시 기술은 색 및 현재 조명 조건과 일치 하
 - `UIWhitePointAdaptivityStyleGame` -게임 중심 앱에 대 한 사용 됩니다.
 - `UIWhitePointAdaptivityStyleVideo` -비디오 중심 앱에 대 한 사용 됩니다.
 - `UIWhitePointAdaptivityStylePhoto` 사용 되는 사진 중심 앱에 대 한 색상 충실도 떨어집니다 환경 흰색 지점 조정 보다 더 중요 한 인 합니다.
-
-<a name="app-extensions" />
 
 ## <a name="app-extensions"></a>앱 확장
 
@@ -87,13 +80,12 @@ PassKit framework 외부에서 Apple Pay를 지원 하도록 확장 되었습니
 
 Apple이 앱을 해당 아이콘을 관리 하는 iOS 10.3 몇 가지 향상 된 기능 추가.
 
- - `ApplicationIconBadgeNumber` -앱 아이콘 배지를 Springboard에서 설정 하거나 가져옵니다.
- - `SupportsAlternateIcons` - `true` 앱 아이콘 집합을 대체 했습니다.
- - `AlternateIconName` -현재 선택한 대체 아이콘의 이름을 반환 합니다. 또는 `null` 기본 아이콘을 사용 하는 경우.
- - `SetAlternameIconName` -지정 된 대체 아이콘 앱 아이콘을 전환 하려면이 메서드를 사용 합니다.
+- `ApplicationIconBadgeNumber` -앱 아이콘 배지를 Springboard에서 설정 하거나 가져옵니다.
+- `SupportsAlternateIcons` - `true` 앱 아이콘 집합을 대체 했습니다.
+- `AlternateIconName` -현재 선택한 대체 아이콘의 이름을 반환 합니다. 또는 `null` 기본 아이콘을 사용 하는 경우.
+- `SetAlternameIconName` -지정 된 대체 아이콘 앱 아이콘을 전환 하려면이 메서드를 사용 합니다.
 
 자세한 내용을 참조 하세요 우리의 [대체 앱 아이콘](~/ios/app-fundamentals/images-icons/alternate-app-icons.md) 가이드입니다.
-
 
 ## <a name="introduction-to-callkit"></a>CallKit 소개
 
@@ -133,7 +125,7 @@ iOS 10 시스템 사전에 존재 하는 유용한 정보를 자동으로 사용
 - CarPlay
 - 맵
 - Siri 상호 작용
-- QuickType 제안 
+- QuickType 제안
 
 앱과 같은 기술의 모음을 사용 하 여 시스템에이 기능을 노출 [NSUserActivity](xref:Foundation.NSUserActivity), 핵심 스포트라이트, MapKit, Media Player 및 UIKit 웹 태그입니다.
 
@@ -228,7 +220,7 @@ IOS 10에서에서 다음 Api가 사용 되지 않습니다.
 
 - `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` 고 `CKFetchRecordChangesOperation` 클래스에서에서 사용 되지 CloudKit iOS 10에 대 한 합니다. 사용 된 [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) 및 [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) 클래스 (레코드 공유를 지) 대신 합니다.
 - 몇 가지 [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) Api (예: 영역 및 쿼리 기반 구독)가 사용 되지 않습니다. 사용 된 [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) 하 고 [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) Api 대신 합니다.
-- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) 유비쿼터스 콘텐츠와 관련 된 기호 사용 되지 않습니다.
+- [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) 유비쿼터스 콘텐츠와 관련 된 기호 사용 되지 않습니다.
 - `ADBannerView`를 `ADInterstitialAd` 과의 기호를 [UIViewController](xref:UIKit.UIViewController) 클래스 사용 되지 않습니다.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) 부동 소수점 값에 관련 된 기호 사용 되지 않습니다.
 - `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`를 `UIUserNotificationCategory` 및 `UIUserNotificationSettings` UIKit의 클래스 사용 되지 않습니다. 사용 된 [사용자 알림](#user-notifications) framework 대신 합니다.
@@ -238,9 +230,6 @@ IOS 10에서에서 다음 Api가 사용 되지 않습니다.
 
 Apple의를 참조 하세요 [iOS 10.0 API 차이점을 iOS 9.3](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) 결함의 전체 목록에 대 한 설명서입니다.
 
-
-
 ## <a name="related-links"></a>관련 링크
 
 - [iOS 10 샘플](https://developer.xamarin.com/samples/ios/iOS10/)
-- [IOS 10의에서 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)

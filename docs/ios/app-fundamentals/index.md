@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 120bbfe0d5fa91e632fc56ee05431f5555653360
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61248519"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268598"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Xamarin.iOS 응용 프로그램 기본 사항
 
@@ -33,6 +33,10 @@ ms.locfileid: "61248519"
 ## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[코드에서 iOS 응용 프로그램 만들기](~/ios/app-fundamentals/ios-code-only.md)
 
 이 기사에서는 mac 용 Visual Studio 및 Visual Studio를 사용 하 여 코드에서 완전히 iOS 응용 프로그램을 만드는 방법 검토 화면을 빌드하는 응용 프로그램 컨트롤러의 UIKit의 계층 뷰를 만들어 빈 프로젝트 템플릿에서 시작 하는 방법을 보여 줍니다. 그런 다음 컨트롤러에서 로드할 수 있는 사용자 지정 보기를 만드는 방법에 설명 합니다.
+
+## <a name="exception-marshalingiosplatformexception-marshalingmd"></a>[예외 마샬링](~/ios/platform/exception-marshaling.md)
+
+Objective-c와 관리 되는 예외 네이티브 및 관리 되는 프레임 간에 마샬링되는 방법을 설명 합니다.
 
 ## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[이벤트, 프로토콜 및 대리자](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 

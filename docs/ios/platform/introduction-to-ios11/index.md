@@ -7,19 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 5e75a7872081d82c289db0312bbc7d84bce77b4e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1542ae5d7dbdf008dd5b300dfb5820c3f04ae682
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171408"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268898"
 ---
 # <a name="introduction-to-ios-11"></a>iOS 11 소개
-
-_새 iOS 11 시도 Xamarin 사용 하 여 Api._
-
-> [!NOTE]
-> 시작 하기 전에 검토 합니다 [시작](get-started.md) Xcode 9를 설치 하는 방법에 대 한 지침은 페이지입니다.
 
 ![ARKit 예제](images/arkit.png) ![AR 배치 개체](images/arkit2.png) ![CoreML 예제](images/coreml.png) ![MapKit 예제](images/mapkit.png) ![비전 사각형 예제](images/vision1.png) ![비전 얼굴 예제](images/vision2.png) ![끌어서 놓기 예제](images/drag-drop.png) ![끌어서 놓기 예제](images/drag-drop2.png) ![SiriKit 예제](images/sirikit.png)
 
@@ -86,12 +81,6 @@ C#의 여러 [샘플](https://developer.xamarin.com/samples/ios/iOS11/) 시작 �
 * [PDKFit 위젯 샘플](https://developer.xamarin.com/samples/monotouch/ios11/PDFAnnotationWidgetsAdvanced)
 * [PDFKit 워터 마크 샘플](https://developer.xamarin.com/samples/monotouch/ios11/PDFDocumentWatermark)
 
-## <a name="more-information"></a>추가 정보
-
-IOS 11에 대 한 자세한 내용은 Apple의 방문 [iOS 11의에서 새로운](https://developer.apple.com/ios/) 설명서.
-
-
 ## <a name="related-links"></a>관련 링크
 
-- [새로운 iOS 11 (Apple)의 기능](https://developer.apple.com/ios/)
 - [Xamarin iOS 11 샘플](https://developer.xamarin.com/samples/ios/iOS11/)

@@ -1,5 +1,5 @@
 ---
-title: iOS 11의 웹 변경 내용
+title: IOS 11에서에서 WebKit 및 Safari 변경
 description: 이 문서는 WebKit 및 iOS 11의에서 Safari 서비스 프레임 워크 변경 내용을 설명 합니다. 필요한 SFSafariViewController의 업데이트 및 WKWebView의 새로운 기능 스타일 지정을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/12/2017
-ms.openlocfilehash: ba691a6605dcf7e86a76ed13d4c8ef5f0984ff6e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ced73b1f3f5b8207ae1258dcb01a78c94df217d
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399736"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268923"
 ---
-# <a name="web-changes-in-ios-11"></a>iOS 11의 웹 변경 내용
+# <a name="webkit-and-safari-changes-in-ios-11"></a>IOS 11에서에서 WebKit 및 Safari 변경
 
 iOS 11 WebKit 및 SafariServices 변경 내용을 포함 하는 Safari 웹 브라우저-Safari 11.0 –의 새 버전을 소개 합니다. 이 가이드에서는 이러한 변경 내용을 살펴봅니다.
 

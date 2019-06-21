@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/08/2018
-ms.openlocfilehash: 99f2b98614c2b8d558dd8744b31a62b787fc955c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ac19571bc1f1163539a48ea2689c743445d8047
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035993"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268870"
 ---
 # <a name="introduction-to-ios-12"></a>iOS 12 소개
 
@@ -42,7 +42,7 @@ Ios 12에서 그룹화 된 알림 수 있도록 앱 또는 스레드 관련 그�
 
 자연 언어 프레임 워크에는 응용 프로그램을을 다양 한 유형의 언어 분석을 수행할 수 있습니다. 예를 들어 수 요소를 식별 하 고 텍스트 블록을 나타내는 언어를 결정 합니다.
 
-## <a name="vision-framework"></a>비전 프레임 워크
+## <a name="vision-frameworkiosplatformintroduction-to-ios11visionmd"></a>[Vision framework](~/ios/platform/introduction-to-ios11/vision.md)
 
 비전 프레임 워크에 다양 한 방향에서 얼굴을 검색할 수 있는 향상 된 얼굴 탐지기를 포함 합니다. 또한 요청 수정 특정 비전 framework 알고리즘 수정 버전을 선택할 수 있습니다.
 
@@ -81,7 +81,3 @@ IOS 12 사용 하 여 Apple에 사용 되지 않습니다.
 
 - OpenGL ES [개발자 들에 게](https://developer.apple.com/ios/whats-new/) 체제 미 설치 컴퓨터를 채택 해야 합니다.
 - [`UIWebView`](xref:UIKit.UIWebView)하십시오 [기준 `WKWebView` ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc)합니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [IOS (Apple) 12에 대 한 준비](https://developer.apple.com/ios/)
