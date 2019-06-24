@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60add066d581afffeaa200769efcdff9e0644535
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407656"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309492"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-또한 `OnPlatform` 및 `On` 클래스를 사용하여 XAML에서 비슷한 작업을 할 수도 있습니다. 먼저 페이지의 상단 근처의 `Padding` 속성을 위해 다음과 같이 속성 요소를 추가합니다.
+XAML 사용 하 여 비슷한 수행할 수도 있습니다는 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 하 고 [ `On` ](xref:Xamarin.Forms.On) 클래스입니다. 먼저 페이지의 상단 근처의 `Padding` 속성을 위해 다음과 같이 속성 요소를 추가합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -523,11 +523,12 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 </ContentPage>
 ```
 
+> [!NOTE]
+> `OnPlatform` 태그 확장 사용할 수도 있습니다 XAML에서 플랫폼별 기준 UI 모양을 사용자 지정할 수 있습니다. 동일한 기능을 제공 합니다 `OnPlatform` 및 `On` 클래스 하지만 보다 간결 하 게 표현 합니다. 자세한 내용은 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)합니다.
+
 ## <a name="summary"></a>요약
 
 속성 요소 및 연결 속성을 사용하여 상당 부분의 기본 XAML 구문을 설정하였습니다. 그러나 때로는 리소스 사전과 같은 간접 방식으로 개체 속성을 설정해야 합니다. 해당 접근 방식은 다음 부분인 [3부.  XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)에서 다룹니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

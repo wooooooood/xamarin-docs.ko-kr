@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 4a24c8dbb9ab4e23afa03de4ae2dbc55ddfb5fa4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171821"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309527"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
@@ -253,6 +253,9 @@ XamlSamples 프로젝트에는 `NamedColor`라는 클래스가 포함되어 있�
     </ListView.ItemTemplate>
 </ListView>
 ```
+
+> [!NOTE]
+> 셀, 셀의 자식에 대 한 바인딩 소스는는 `ListView.ItemsSource` 컬렉션입니다.
 
 `Label` 요소는 `ViewCell`의 `View` 속성으로 설정됩니다. (`ViewCell.View` 태그는 `View` 속성이 `ViewCell`의 콘텐츠 속성이므로 필요하지 않습니다.) 해당 태그는 다음과 같이 각 `NamedColor` 개체의 `FriendlyName` 속성을 표시합니다.
 

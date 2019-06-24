@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 56f8632c9cc7d170b4c6594fd51e6aa3e92ad02b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 53d2a0aae3398ea31676fbc3dab95d500dfe2104
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61191239"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309498"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 응용 프로그램 스타일
 
@@ -120,7 +120,7 @@ ms.locfileid: "61191239"
 
     변경 내용을 저장 **NotesPage.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
 
-5. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+5. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -222,7 +222,7 @@ ms.locfileid: "61191239"
 
     변경 내용을 저장 **App.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
 
-3. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NotesPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+3. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NotesPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -261,7 +261,7 @@ ms.locfileid: "61191239"
 
     변경 내용을 저장 **NotesPage.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
 
-5. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+5. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
