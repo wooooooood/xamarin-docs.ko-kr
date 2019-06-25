@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: a4c842ea7fd37ade9be0a9cb3e3ff7e50a6d1491
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 163b82590e95a1587836502883cd5f9f2afbe19c
+ms.sourcegitcommit: 6e04246207aa743820029e8c217a43cfdd24f991
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61328192"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67352118"
 ---
 # <a name="consuming-web-services"></a>웹 서비스 사용
 
-(_T) 가이드에 제공 하는 다른 웹 서비스와 통신 하는 방법을 보여 줍니다. 만들기, 읽기, 업데이트 및 삭제 (CRUD) Xamarin.Forms 응용 프로그램에는 기능입니다. 다룹니다 ASMX 서비스, WCF 서비스, REST 서비스 및 Azure Mobile Apps를 사용 하 여 통신 합니다.
+_이 가이드에 제공 하는 다른 웹 서비스와 통신 하는 방법을 보여 줍니다. 만들기, 읽기, 업데이트 및 삭제 (CRUD) Xamarin.Forms 응용 프로그램에는 기능입니다. 다룹니다 ASMX 서비스, WCF 서비스, REST 서비스 및 Azure Mobile Apps를 사용 하 여 통신 합니다._
 
 ## <a name="consuming-an-aspnet-web-service-asmxxamarin-formsdata-cloudconsumingasmxmd"></a>[ASP.NET 웹 서비스 (ASMX) 사용](~/xamarin-forms/data-cloud/consuming/asmx.md)
 
