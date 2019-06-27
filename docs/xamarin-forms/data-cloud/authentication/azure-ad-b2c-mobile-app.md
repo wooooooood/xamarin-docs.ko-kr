@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2019
-ms.openlocfilehash: 4c3cc489f7c65636ad9f2b5541e552665b10980e
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: 2f9cfceee4765dea946dfdac974ac2d56595ef94
+ms.sourcegitcommit: 9aaae4f0af096cd136b3dcfbb9af591ba307dc25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557359"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398691"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>Azure Mobile Apps와 Azure Active Directory B2C 통합
 
@@ -115,9 +115,9 @@ public async Task<bool> LoginAsync(bool useSilent = false)
     ...
 
     var payload = new JObject();
-    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.IdToken))
+    if (authenticationResult != null && !string.IsNullOrWhiteSpace(authenticationResult.AccessToken))
     {
-        payload["access_token"] = authenticationResult.IdToken;
+        payload["access_token"] = authenticationResult.AccessToken;
     }
 
     User = await TodoItemManager.DefaultManager.CurrentClient.LoginAsync(
@@ -131,9 +131,9 @@ public async Task<bool> LoginAsync(bool useSilent = false)
 
 Microsoft 인증 라이브러리 (MSAL)는 Azure Active Directory B2C 테 넌 트를 사용 하 여 인증 하는 워크플로 시작 하는 데 사용 됩니다. 합니다 `AcquireTokenAsync` 장치의 웹 브라우저를 시작 하 고 참조를 통해 정책에 의해 지정 된 Azure Active Directory B2C 정책에 정의 된 인증 옵션을 표시 하는 메서드를 `Constants.AuthoritySignin` 상수입니다. 이 정책은 사용자의 로그인 및 등록 환경 및 응용 프로그램 인증이 성공 하면 수신 클레임을 정의 합니다.
 
-결과 `AcquireTokenAsync` 메서드 호출을 `AuthenticationResult` 인스턴스. 인증이 성공 하는 경우는 `AuthenticationResult` 인스턴스에 로컬로 캐시 하는 id 토큰에 포함 됩니다. 인증이 성공한 경우의 `AuthenticationResult` 인스턴스 인증에 실패 한 이유를 나타내는 데이터를 포함 됩니다. MSAL을 사용 하 여 Azure Active Directory B2C 테 넌 트를 사용 하 여 통신 하는 방법에 대 한 자세한 내용은 [Azure Active Directory B2C를 사용 하 여 사용자 인증](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md)합니다.
+결과 `AcquireTokenAsync` 메서드 호출을 `AuthenticationResult` 인스턴스. 인증이 성공 하는 경우는 `AuthenticationResult` 인스턴스에 로컬로 캐시 하는 액세스 토큰을 포함 됩니다. 인증이 성공한 경우의 `AuthenticationResult` 인스턴스 인증에 실패 한 이유를 나타내는 데이터를 포함 됩니다. MSAL을 사용 하 여 Azure Active Directory B2C 테 넌 트를 사용 하 여 통신 하는 방법에 대 한 자세한 내용은 [Azure Active Directory B2C를 사용 하 여 사용자 인증](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md)합니다.
 
-경우는 `CurrentClient.LoginAsync` 메서드가 호출 되 면 Azure Mobile Apps 인스턴스에 수신에 래핑된 id 토큰을 `JObject`합니다. Azure Mobile Apps 인스턴스 자체 OAuth 2.0 인증 흐름을 시작 하지 않아도는 유효한 토큰 방법의 존재 합니다. 대신를 `CurrentClient.LoginAsync` 메서드가 반환 되는 `MobileServiceUser` 에 저장 되는 인스턴스는 `MobileServiceClient.CurrentUser` 속성. 이 속성은 제공 `UserId` 고 `MobileServiceAuthenticationToken` 속성입니다. 이러한 인증 된 사용자 및 만료 될 때까지 사용할 수 있는 토큰을 나타냅니다. Xamarin.Forms 응용 프로그램을 인증 된 사용자 권한이 필요한 작업을 수행할 수 있도록 Azure Mobile Apps 인스턴스에 대 한 모든 요청에서 인증 토큰이 포함 됩니다.
+경우는 `CurrentClient.LoginAsync` 메서드가 호출 되 면 Azure Mobile Apps 인스턴스 래핑됩니다 액세스 토큰을 받습니다는 `JObject`합니다. Azure Mobile Apps 인스턴스 자체 OAuth 2.0 인증 흐름을 시작 하지 않아도는 유효한 토큰 방법의 존재 합니다. 대신를 `CurrentClient.LoginAsync` 메서드가 반환 되는 `MobileServiceUser` 에 저장 되는 인스턴스는 `MobileServiceClient.CurrentUser` 속성. 이 속성은 제공 `UserId` 고 `MobileServiceAuthenticationToken` 속성입니다. 이러한 인증 된 사용자 및 만료 될 때까지 사용할 수 있는 토큰을 나타냅니다. Xamarin.Forms 응용 프로그램을 인증 된 사용자 권한이 필요한 작업을 수행할 수 있도록 Azure Mobile Apps 인스턴스에 대 한 모든 요청에서 인증 토큰이 포함 됩니다.
 
 ### <a name="signing-out"></a>로그 아웃
 
