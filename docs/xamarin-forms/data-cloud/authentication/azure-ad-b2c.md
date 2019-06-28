@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: db44e09e9caa5c35a5e107cfed80d1d30fd7eb7d
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 06f5716c8decb21de39fd46abe734b5fdcd6bd43
+ms.sourcegitcommit: 0f78ec17210b915b43ddab75937de8063e472c70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347125"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67417943"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C 사용 하 여 사용자 인증
 
@@ -103,19 +103,26 @@ public static class Constants
 
 ## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Microsoft 인증 라이브러리 (MSAL)를 사용 하 여 인증
 
-Microsoft 인증 라이브러리 (MSAL) NuGet 패키지 공유,.NET Standard 프로젝트 및 Xamarin.Forms 솔루션에 플랫폼 프로젝트에 추가 되어야 합니다. MSAL 제공을 `PublicClientApplication` Azure Active Directory B2C를 사용 하 여 인증을 간편 하 게 합니다. 샘플 프로젝트에 대 한 코드 숨김에 **App.xaml** 정적 속성을 정의 `AuthenticationClient` 와 `UiParent` 인스턴스화합니다는 `AuthenticationClient` 생성자에서. 에 제공 된 두 번째 매개 변수를 `PublicClientApplication` 기본값인 **기관**, 또는 사용자를 인증 하는 데 사용할 수 있는 정책입니다. 다음 예제에서는 인스턴스화하는 방법을 보여 줍니다는 `PublicClientApplication`:
+Microsoft 인증 라이브러리 (MSAL) NuGet 패키지 공유,.NET Standard 프로젝트 및 Xamarin.Forms 솔루션에 플랫폼 프로젝트에 추가 되어야 합니다. MSAL 포함을 `PublicClientApplicationBuilder` 준수 하는 개체를 생성 하는 클래스는 `IPublicClientApplication` 인터페이스입니다. MSAL 활용 `With` 절 생성자 및 인증 방법 추가 매개 변수를 제공 합니다.
+
+샘플 프로젝트에 대 한 코드 숨김에 **App.xaml** 라는 정적 속성을 정의 `AuthenticationClient` 및 `UIParent`, 인스턴스화합니다를 `AuthenticationClient` 생성자에는 개체입니다. `WithIosKeychainSecurityGroup` 절에는 iOS 응용 프로그램 보안 그룹 이름을 제공 합니다. `WithB2CAuthority` 절은 기본 제공 **기관**, 또는 사용자를 인증 하는 데 사용할 수 있는 정책입니다. 다음 예제에서는 인스턴스화하는 방법을 보여 줍니다는 `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
 {
-    public static PublicClientApplication AuthenticationClient { get; private set; }
+    public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-    public static UIParent UiParent { get; set; } = null;
+    public static object UIParent { get; set; } = null;
 
     public App()
     {
         InitializeComponent();
-        AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+
+        AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+            .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+            .WithB2CAuthority(Constants.AuthoritySignin)
+            .Build();
+
         MainPage = new NavigationPage(new LoginPage());
     }
 
@@ -133,11 +140,13 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            // Look for existing account
             IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
 
-            AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
-                Constants.Scopes,
-                accounts.FirstOrDefault());
+            AuthenticationResult result = await App.AuthenticationClient
+                .AcquireTokenSilent(Constants.Scopes, accounts.FirstOrDefault())
+                .ExecuteAsync();
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch
@@ -163,12 +172,12 @@ public partial class LoginPage : ContentPage
         AuthenticationResult result;
         try
         {
-            result = await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                App.UiParent);
+            result = await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .ExecuteAsync();
+    
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)
@@ -199,15 +208,12 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            return await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                null,
-                Constants.AuthorityPasswordReset,
-                App.UiParent
-                );
+            return await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .WithB2CAuthority(Constants.AuthorityPasswordReset)
+                .ExecuteAsync();
         }
         catch (MsalException)
         {
@@ -290,7 +296,7 @@ Android에서 Azure Active Directory B2C를 사용 하 여 등록 된 사용자 
 </manifest>
 ```
 
-`MainActivity` 클래스를 제공 하도록 수정 해야 합니다 `UiParent` 하는 동안 응용 프로그램에는 `OnCreate` 호출 합니다. 권한 부여 요청을 완료 하는 Azure Active Directory B2C의 등록 URL 구성표 리디렉션합니다 합니다 **AndroidManifest.xml**합니다. 등록 된 URI 체계 Android 호출으로 인해 `OnActivityResult` 에서 처리 되는 시작 매개 변수로 URL로는 `SetAuthenticationContinuationEventArgs`합니다.
+`MainActivity` 클래스를 제공 하도록 수정 해야 합니다 `UIParent` 하는 동안 응용 프로그램에는 개체를 `OnCreate` 호출. 권한 부여 요청을 완료 하는 Azure Active Directory B2C의 등록 URL 구성표 리디렉션합니다 합니다 **AndroidManifest.xml**합니다. 등록 된 URI 체계 Android 호출의 결과 `OnActivityResult` 에서 처리 되는 시작 매개 변수로 URL 사용 하 여 메서드를 `SetAuthenticationContinuationEventArgs` 메서드.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -304,7 +310,7 @@ public class MainActivity : FormsAppCompatActivity
 
         Forms.Init(this, bundle);
         LoadApplication(new App());
-        App.UiParent = new UIParent(this);
+        App.UIParent = this;
     }
 
     protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
