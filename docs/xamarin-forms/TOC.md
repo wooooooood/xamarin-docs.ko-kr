@@ -336,6 +336,7 @@
 #### [Azure Search](data-cloud/search/azure-search.md)
 ### [서버리스 애플리케이션](data-cloud/serverless/index.md)
 #### [Azure 기능](data-cloud/serverless/azure-functions.md)
+#### [Xamarin.Forms와 Azure SignalR Service](data-cloud/serverless/azure-signalr.md)
 ### [문서 데이터베이스에 데이터 저장](data-cloud/cosmosdb/index.md)
 #### [Azure Cosmos DB 문서 데이터베이스 사용](data-cloud/cosmosdb/consuming.md)
 #### [Azure Cosmos DB 문서 데이터베이스를 사용하는 사용자 인증](data-cloud/cosmosdb/authentication.md)
