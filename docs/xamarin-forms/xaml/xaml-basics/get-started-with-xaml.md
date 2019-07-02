@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 855bbc61fb5e4e653dbd39ddf05fac3e2fb42d8c
+ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61344865"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67493354"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1장. XAML 시작하기
 
@@ -28,7 +28,7 @@ _Xamarin.Forms 응용 프로그램에서 XAML은 주로 페이지의 시각적 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Windows에서는 Visual Studio를 사용하여 메뉴에서  **파일 > 새로 만들기 > 프로젝트** 를 선택합니다.  **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C# > Cross-Platform** 을 선택한 다음 가운데 있는 목록에서  **모바일 앱(Xamarin.Forms)** 을 선택합니다.
+Windows에서는 Visual Studio를 사용하여 메뉴에서  **파일 > 새로 만들기 > 프로젝트** 를 선택합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C# > Cross-Platform** 을 선택한 다음 가운데 있는 목록에서  **모바일 앱(Xamarin.Forms)** 을 선택합니다.
 
 ![](get-started-with-xaml-images/win/newprojectdialog.w157.png "새 프로젝트 대화 상자")
 
@@ -44,7 +44,7 @@ Windows에서는 Visual Studio를 사용하여 메뉴에서  **파일 > 새로 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다.  **새 프로젝트**  대화 상자에서 왼쪽의 **다중 플랫폼 > 앱** 및 템플릿 목록에서 **빈 Forms 앱** (*Forms 앱*이 **아님** ) 을 선택합니다.
+Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다. **새 프로젝트**  대화 상자에서 왼쪽의 **다중 플랫폼 > 앱** 및 템플릿 목록에서 **빈 Forms 앱** (*Forms 앱*이 **아님** ) 을 선택합니다.
 
 ![](get-started-with-xaml-images/mac/newprojectdialog1.png "새 프로젝트 대화 상자 1")
 
@@ -79,7 +79,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다.  **�
 
 코드 숨김 파일을 보려면 **App.xaml** 옆에 있는 화살표를 클릭해야 합니다.
 
-**App.xaml** 및 **App.xaml.cs** 모두 `Application`에서 파생된 `App`이라는 클래스와 관련됩니다. XAML 파일과 함께 있는 대부분의 다른 클래스는  `ContentPage`에서 파생된 클래스와 관련됩니다. 해당 파일들은 전체 페이지의 시각적 내용을 정의하기 위해 XAML을 사용합니다.  다음은 **XamlSamples** 프로젝트에 있는 실제적으로 다른 두 파일입니다.
+**App.xaml** 및 **App.xaml.cs** 모두 `Application`에서 파생된 `App`이라는 클래스와 관련됩니다. XAML 파일과 함께 있는 대부분의 다른 클래스는  `ContentPage`에서 파생된 클래스와 관련됩니다. 해당 파일들은 전체 페이지의 시각적 내용을 정의하기 위해 XAML을 사용합니다. 다음은 **XamlSamples** 프로젝트에 있는 실제적으로 다른 두 파일입니다.
 
 - **MainPage.xaml**: XAML 파일
 - **MainPage.xaml.cs**: C# 코드 숨김 파일
@@ -102,7 +102,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다.  **�
 </ContentPage>
 ```
 
-URI를 참조하는 두 개의 XML 네임 스페이스(`xmlns`) 선언 중 첫 번째는 Xamarin 그리고 두 번째는 Microsoft의 웹 사이트로 보입니다. 궁금증에 해당 Uri 지점을 확인 합니다. 아무 것도 없는 합니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
+두 XML 네임 스페이스 (`xmlns`) 선언 Xamarin 웹 사이트에서 보이는 첫 번째 및 microsoft의 두 번째 Uri 참조입니다. 궁금증에 해당 Uri 지점을 확인 합니다. 아무 것도 없는 합니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
 
 첫 번째 XML 네임 스페이스 선언은 Xamarin.Forms에서 접두사가 없는 클래스 참조를 갖는 XAML 파일 내의 정의된 태그, 예를 들면 `ContentPage`와 같은 태그를 의미합니다. 두 번째 네임 스페이스 선언은 `x`의 접두사를 정의합니다. 이는 XAML 자체에 내장된 몇 가지 요소와 특성 및 XAML의 다른 구현이 지원되는 곳에서 사용됩니다. 그러나 이러한 요소와 특성은 URI에 포함된 연도에 따라 약간 다릅니다. Xamarin.Forms는 전체가 아니라 2009 XAML 사양을 지원합니다.
 
@@ -133,7 +133,7 @@ namespace XamlSamples
 
 `MainPage` 클래스는 `ContentPage`에서 파생되지만 `partial` 클래스 정의를 주목하십시오. 이는 `MainPage`에 대해 다른 partial 클래스 정의가 있을 것이라는 것을 암시하지만, 어디에 있을까요? 그리고 `InitializeComponent` 메서드는 무엇일까요?
 
-Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일로 생성하도록 변환합니다.  **XamlSamples\XamlSamples\obj\Debug** 디렉터리를 보면 **XamlSamples.MainPage.xaml.g.cs**라는 파일을 찾을 수 있습니다. 'g'는 생성(generated)을 의미합니다. 이것이 `MainPage` 생성자에서 호출되는 `InitializeComponent` 메서드 정의를 포함하는`MainPage` 의 다른 partial 클래스 정의입니다. 이러한 두 개의 partial `MainPage` 클래스 정의는 함께 컴파일될 수 있습니다.  XAML이 컴파일 될지 여부에 따라 XAML 파일 또는 XAML 파일의 이진 형식 중 하나가 실행 파일에 포함됩니다.
+Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일로 생성하도록 변환합니다. **XamlSamples\XamlSamples\obj\Debug** 디렉터리를 보면 **XamlSamples.MainPage.xaml.g.cs**라는 파일을 찾을 수 있습니다. 'g'는 생성(generated)을 의미합니다. 이것이 `MainPage` 생성자에서 호출되는 `InitializeComponent` 메서드 정의를 포함하는`MainPage` 의 다른 partial 클래스 정의입니다. 이러한 두 개의 partial `MainPage` 클래스 정의는 함께 컴파일될 수 있습니다. XAML이 컴파일 될지 여부에 따라 XAML 파일 또는 XAML 파일의 이진 형식 중 하나가 실행 파일에 포함됩니다.
 
 런타임 시 특정 플랫폼 프로젝트의 코드는 .NET Standard 라이브러리의 `App` 클래스 인스턴스를 전달하는 `LoadApplication`  메서드를 호출합니다. `App` 클래스 생성자는 `MainPage`를 인스턴스화합니다. `MainPage` 클래스의 생성자는 `InitializeComponent`를 호출하고, 그러면 .NET Standard 라이브러리에서 XAML 파일(또는 해당 컴파일된 이진 파일)을 추출하는`LoadFromXaml` 메서드를 호출합니다. `LoadFromXaml`은 XAML 파일에 정의된 모든 개체를 초기화하고, 부모-자식 관계로 개체를 모두 함께 연결하고, 코드에 정의된 이벤트 처리기를 XAML 파일의 이벤트 설정에 연결하고, 개체의 결과 트리를 페이지의 내용으로 설정합니다.
 
@@ -149,7 +149,7 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-프로젝트에 다른 XAML 기반 `ContentPage` 를 추가하려면 **XamlSamples** .NET Standard 라이브러리 프로젝트를 선택하고 **프로젝트 > 새 항목 추가** 메뉴 항목을 실행합니다.  **새 항목 추가** 대화 상자에서 왼쪽에 있는 **Visual C#**  및 **Xamarin.Forms**를 선택합니다. 목록에서 **콘텐츠 페이지**(코드 전용 페이지를 생성하는  **콘텐츠 페이지 (C#)** 또는 페이지가 아닌**콘텐츠 뷰**가 아님)를 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage.xaml**로 입력합니다.
+프로젝트에 다른 XAML 기반 `ContentPage` 를 추가하려면 **XamlSamples** .NET Standard 라이브러리 프로젝트를 선택하고 **프로젝트 > 새 항목 추가** 메뉴 항목을 실행합니다. **새 항목 추가** 대화 상자에서 왼쪽에 있는 **Visual C#**  및 **Xamarin.Forms**를 선택합니다. 목록에서 **콘텐츠 페이지**(코드 전용 페이지를 생성하는  **콘텐츠 페이지 (C#)** 또는 페이지가 아닌**콘텐츠 뷰**가 아님)를 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage.xaml**로 입력합니다.
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "새 항목 추가 대화 상자")
 
@@ -292,7 +292,7 @@ iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상
 
 ## <a name="xaml-and-code-interactions"></a>XAML 및 코드 상호 작용
 
-**HelloXamlPage** 샘플은 페이지에 단일 `Label`만 포함했지만 아주 일반적인 것은 아닙니다.  대부분의 `ContentPage` 상속은 `StackLayout`과 같은 일종의 레이아웃으로 `Content` 속성을 설정합니다. `StackLayout`의 `Children` 속성은 `IList<View>` 형식이 되도록 정의되지만 그것은 `ElementCollection<View>` 형식의 실제 개체이며, 해당 컬랙션은 여러 뷰 또는 다른 레이아웃으로 채울 수 있습니다.  XAML에서 해당 부모-자식 관계는 일반 XML 계층 구조를 사용하여 설정됩니다. **XamlPlusCodePage**라는 이름의 새 페이지에 대한 XAML 파일은 다음과 같습니다.
+**HelloXamlPage** 샘플은 페이지에 단일 `Label`만 포함했지만 아주 일반적인 것은 아닙니다. 대부분의 `ContentPage` 상속은 `StackLayout`과 같은 일종의 레이아웃으로 `Content` 속성을 설정합니다. `StackLayout`의 `Children` 속성은 `IList<View>` 형식이 되도록 정의되지만 그것은 `ElementCollection<View>` 형식의 실제 개체이며, 해당 컬랙션은 여러 뷰 또는 다른 레이아웃으로 채울 수 있습니다. XAML에서 해당 부모-자식 관계는 일반 XML 계층 구조를 사용하여 설정됩니다. **XamlPlusCodePage**라는 이름의 새 페이지에 대한 XAML 파일은 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
