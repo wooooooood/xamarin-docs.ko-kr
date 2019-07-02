@@ -1,14 +1,16 @@
 ---
-ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66193783"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277360"
 ---
 Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 묻는 모달 팝업(경고라고도 함)이 있습니다. 이 연습에서는 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 사용하여 사용자에게 경고를 표시하고 간단한 질문을 묻습니다.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+이 자습서를 완료하려면 **.NET을 사용한 모바일 개발** 워크로드가 설치된 Visual Studio 2019(최신 릴리스)가 있어야 합니다. 또한 iOS에서 자습서 애플리케이션을 빌드하려면 페어링된 Mac이 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
 
 1. Visual Studio를 실행하고 **PopupsTutorial**이라는 비어 있는 새 Xamarin.Forms 앱을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지를 확인합니다.
 
@@ -70,6 +72,8 @@ Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 �
     경고를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 가이드에서 [경고 표시](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert)를 참조하세요.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+
+이 자습서를 완료하려면 iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)가 있어야 합니다. 또한 Xcode(최신 릴리스)도 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
 1. Mac용 Visual Studio를 실행하고 **PopupsTutorial**이라는 새 Xamarin.Forms 앱을 만듭니다. 앱이 공유 코드 메커니즘으로 .NET 표준을 사용하는지를 확인합니다.
 

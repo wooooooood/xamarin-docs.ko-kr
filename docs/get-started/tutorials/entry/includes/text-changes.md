@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 846ff203a26f38fdaabe5a5dd6eff1c6a6b39b08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3130c20d39e0140695eed92ffa4941d6bafe796e
+ms.sourcegitcommit: b4c9c574b771ae0265171ca5e938aed1c5e35028
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343467"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67394547"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -18,7 +18,7 @@ ms.locfileid: "61343467"
 
     이 코드는 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 이벤트를 `OnEntryTextChanged`라는 이벤트 처리기로 설정하고, [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트를 `OnEntryCompleted`라는 이벤트 처리기로 설정합니다. 두 가지 이벤트 처리기는 다음 단계에서 생성됩니다.
 
-1. **솔루션 탐색기**의 **LabelTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 `OnEntryTextChanged` 및 `OnEntryCompleted` 이벤트 처리기를 클래스에 추가합니다.
+1. **솔루션 탐색기**의 **EntryTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 `OnEntryTextChanged` 및 `OnEntryCompleted` 이벤트 처리기를 클래스에 추가합니다.
 
     ```csharp
     void OnEntryTextChanged(object sender, TextChangedEventArgs e)
@@ -60,7 +60,7 @@ ms.locfileid: "61343467"
 
     이 코드는 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 이벤트를 `OnEntryTextChanged`라는 이벤트 처리기로 설정하고, [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트를 `OnEntryCompleted`라는 이벤트 처리기로 설정합니다. 두 가지 이벤트 처리기는 다음 단계에서 생성됩니다.
 
-1. **Solution Pad**의 **LabelTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 `OnEntryTextChanged` 및 `OnEntryCompleted` 이벤트 처리기를 클래스에 추가합니다.
+1. **Solution Pad**의 **EntryTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 `OnEntryTextChanged` 및 `OnEntryCompleted` 이벤트 처리기를 클래스에 추가합니다.
 
     ```csharp
     void OnEntryTextChanged(object sender, TextChangedEventArgs e)
