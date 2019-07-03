@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/12/2019
+ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359884"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512870"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
@@ -20,13 +20,11 @@ ms.locfileid: "61359884"
 
 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 클래스 속성 및 레이아웃 및 플랫폼별으로 기능을 사용자 지정 하는 개발자가 하는 방법의 수를 포함 합니다.
 
-메서드 및 속성을 특정 하드웨어 유형 및 크기에서 대상 코드 외에도 합니다 `Device` 클래스를 포함 합니다 [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) 에서 컨트롤을 UI 상호 작용할 때 사용 해야 하는 메서드 백그라운드 스레드입니다.
-
-<a name="providing-platform-values" />
+특정 하드웨어 유형 및 크기에서 대상 코드에 메서드와 속성 외에도 `Device` 클래스는 백그라운드 스레드에서 UI 컨트롤과 상호 작용에 사용할 수 있는 메서드를 포함 합니다. 자세한 내용은 [백그라운드 스레드에서 UI와 상호 작용](#interact-with-the-ui-from-background-threads)합니다.
 
 ## <a name="providing-platform-specific-values"></a>플랫폼 특정 값을 제공합니다.
 
-2.3.4 Xamarin.Forms 하기 전에 응용 프로그램에서 실행 되는 플랫폼 검사 하 여 가져올 수 없습니다는 [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)하십시오 [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), 및 [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드를 사용 하 여 컨트롤에 플랫폼 특정 값을 제공할 수 있습니다.
+2\.3.4 Xamarin.Forms 하기 전에 응용 프로그램에서 실행 되는 플랫폼 검사 하 여 가져올 수 없습니다는 [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)하십시오 [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), 및 [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드를 사용 하 여 컨트롤에 플랫폼 특정 값을 제공할 수 있습니다.
 
 그러나 이후 Xamarin.Forms 2.3.4 이러한 Api가 더 이상 사용 되지 되어 대체 합니다. 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 플랫폼을 식별 하는 공용 문자열 상수를 이제 포함 하는 클래스 [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)를 [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( 사용 되지 않음), `Device.WinRT` (사용 되지 않음), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), 및 [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)합니다. 마찬가지로, 합니다 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드로 대체 되었습니다 합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 및 [ `On` ](xref:Xamarin.Forms.On) Api.
 
@@ -68,8 +66,6 @@ layout.Margin = new Thickness(5, top, 5, 0);
 > 잘못 된 제공 `Platform` 특성 값을 `On` 클래스 오류가 발생 하지 것입니다. 대신 코드 적용 되는 플랫폼 특정 값 없이 실행 됩니다.
 
 또는 `OnPlatform` 태그 확장 수 XAML에서 플랫폼별 기준 UI 모양을 사용자 지정 합니다. 자세한 내용은 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)합니다.
-
-<a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
@@ -135,8 +131,6 @@ this.FlowDirection = Device.FlowDirection;
 
 흐름 방향에 대 한 자세한 내용은 참조 하세요. [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)합니다.
 
-<a name="Device_Styles" />
-
 ## <a name="devicestyles"></a>Device.Styles
 
 합니다 [ `Styles` 속성](~/xamarin-forms/user-interface/styles/index.md) 일부 컨트롤에 적용할 수 있는 기본 제공 스타일 정의가 포함 되어 있습니다 (같은 `Label`) `Style` 속성입니다. 사용 가능한 스타일 다음과 같습니다.
@@ -147,8 +141,6 @@ this.FlowDirection = Device.FlowDirection;
 * ListItemTextStyle
 * SubtitleStyle
 * TitleStyle
-
-<a name="Device_GetNamedSize" />
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
@@ -163,8 +155,6 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-<a name="Device_OpenUri" />
-
 ## <a name="deviceopenuri"></a>Device.OpenUri
 
 합니다 `OpenUri` 메서드를 사용 하 여 기본 웹 브라우저에서 url 열기 등 기본 플랫폼에서 작업을 트리거할 수 있습니다 (**Safari** iOS에서 나 **인터넷** Android에서).
@@ -176,8 +166,6 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 합니다 [WebView 샘플](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) 사용 하는 예제를 포함 `OpenUri` Url을 열고 전화 통화를 트리거할 수도 있습니다.
 
 합니다 [지도 샘플](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) 도 사용 `Device.OpenUri` 맵과 네이티브를 사용 하 여 지침을 표시할 **매핑합니다** iOS 및 Android에서 앱.
-
-<a name="Device_StartTimer" />
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
@@ -192,26 +180,31 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 타이머 내의 코드는 사용자 인터페이스와 상호 작용 하는 경우 (의 텍스트를 설정 하는 등을 `Label` 경고를 표시 하거나) 내에서 수행 해야는 `BeginInvokeOnMainThread` 식 (아래 참조).
 
-<a name="Device_BeginInvokeOnMainThread" />
+## <a name="interact-with-the-ui-from-background-threads"></a>백그라운드 스레드에서 UI와 상호 작용
 
-## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
+IOS, Android 및 유니버설 Windows 플랫폼을 비롯 한 대부분의 운영 체제 사용자 인터페이스와 관련 된 코드에 대 한 단일 스레딩 모델을 사용 합니다. 이 스레드가 라고 합니다 *주 스레드에서* 또는 *UI 스레드*합니다. 이 모델의 결과 사용자 인터페이스 요소에 액세스 하는 모든 코드는 응용 프로그램의 주 스레드에서 실행 해야 합니다.
 
-사용자 인터페이스 요소는 타이머 또는 웹 요청와 같은 비동기 작업 완료 처리기에서 실행 되는 코드와 같은 백그라운드 스레드에서 액세스 되어서는 안 됩니다. 사용자 인터페이스를 업데이트 해야 하는 모든 백그라운드 코드 내에서 래핑되어야 [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action))합니다. 에 해당 하는 이것이 `InvokeOnMainThread` ios의 경우 `RunOnUiThread` android에서 및 `Dispatcher.RunAsync` 유니버설 Windows 플랫폼에서 합니다.
+경우에 따라 응용 프로그램 웹 서비스에서 데이터를 검색 하는 등의 장기 실행 가능성이 있는 작업을 수행할 백그라운드 스레드를 사용 합니다. 백그라운드 스레드에서 실행 되는 코드를 사용자 인터페이스 요소에 액세스 해야 하는 경우 주 스레드에서 코드를 실행 해야 합니다.
 
-Xamarin.Forms 코드는 다음과 같습니다.
+합니다 `Device` 다음을 포함 하는 클래스 `static` 사용자와 상호 작용 하는 메서드가 인터페이스 배경 스레드에서 요소:
+
+| 메서드 | 인수 | 반환 값 | 용도 |
+|---|---|---|---|
+| `BeginInvokeOnMainThread` | `Action` | `void` | 호출 하는 `Action` 주 스레드에서 완료할 때까지 대기 하지 않습니다. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 호출 하는 `Func<T>` 주 스레드를 완료할 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | 호출 하는 `Action` 주 스레드를 완료할 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | 호출 하는 `Func<Task<T>>` 주 스레드를 완료할 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | 호출 하는 `Func<Task>` 주 스레드를 완료할 때까지 기다립니다. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | 반환 된 `SynchronizationContext` 주 스레드에 대 한 합니다. |
+
+다음 코드를 사용 하 여 예제를 `BeginInvokeOnMainThread` 메서드:
 
 ```csharp
-Device.BeginInvokeOnMainThread ( () => {
-  // interact with UI elements
+Device.BeginInvokeOnMainThread (() =>
+{
+    // interact with UI elements
 });
 ```
-
-참고를 사용 하 여 해당 메서드 `async/await` 를 사용 하지 않아도 `BeginInvokeOnMainThread` 주 UI 스레드에서 실행 중인 경우.
-
-## <a name="summary"></a>요약
-
-Xamarin.Forms `Device` 클래스에는 기능 및 레이아웃 플랫폼별 기준 세부적으로 제어할 수 있습니다.-도 공통 코드 (.NET Standard 라이브러리 프로젝트 또는 공유 프로젝트).
-
 
 ## <a name="related-links"></a>관련 링크
 
