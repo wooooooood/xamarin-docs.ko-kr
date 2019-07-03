@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 9628821be5a979777614eb4f7ad8605087093ed3
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 6703e922a628504e0afdcf56533d74741131581a
+ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268844"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67540154"
 ---
 # <a name="ios-platform-features-overview"></a>iOS 플랫폼 기능 개요
 
@@ -22,8 +22,9 @@ ms.locfileid: "67268844"
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [iOS 12 소개](~/ios/platform/introduction-to-ios12/index.md) | 이 문서에서는 iOS 12 설명에 대 한 사용 가능한 기능을 사용 하 여 때 buildingXamarin.iOS 응용 프로그램입니다.|
-| [iOS 11 소개](~/ios/platform/introduction-to-ios11/index.md) | 이 문서에서는 iOS 11 및 ARKit, 핵심 ML, Core NFC, 끌어서 놓기, MapKit, PDFKit, SiriKit을 및 비전 같은 Xcode 9의 새롭고 업데이트 된 기능을 설명 합니다. 이러한 featureswith Xamarin.iOS를 사용 하는 방법에 설명 하는 지침에 연결 합니다. |
+| [IOS 13 소개 미리 보기](~/ios/platform/ios13/index.md) | 이 문서에서는 Xamarin.iOS 13 미리 보기를 설명 합니다.|
+| [iOS 12 소개](~/ios/platform/introduction-to-ios12/index.md) | 이 문서 Xamarin.iOS 응용 프로그램을 빌드할 때 사용 하 여 사용할 수 있는 iOS 12 기능을 설명 합니다.|
+| [iOS 11 소개](~/ios/platform/introduction-to-ios11/index.md) | 이 문서에서는 iOS 11 및 ARKit, 핵심 ML, Core NFC, 끌어서 놓기, MapKit, PDFKit, SiriKit을 및 비전 같은 Xcode 9의 새롭고 업데이트 된 기능을 설명 합니다. Xamarin.iOS를 사용 하 여 이러한 기능을 사용 하는 방법에 설명 하는 지침에 연결 합니다. |
 | [iOS 10 소개](~/ios/platform/introduction-to-ios10/index.md) | Api 및 새로운 특징과 기능을 사용 하 여 앱을 개발할 수 있도록 서비스에 대 한 몇 가지 새 iOS 10에 포함 되어 있습니다. IOS 10 사용 하 여 앱에는 맵, 메시지, 전화 번호, Siri를 확장 하는 등 새 기능에 있습니다. 이 섹션에서는 Xamarin.iOS 앱에서 이러한 기능을 활용 하는 시기를 보여 줍니다. |
 | [iOS 9 소개](~/ios/platform/introduction-to-ios9/index.md)   | 이 섹션에는 iOS 8 및 Xamarin.iOS 앱에서 이러한 기능을 사용 하는 방법에서 업그레이드 하는 경우 iOS 9에서에서 변경한 내용을 정의 합니다. |
 | [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)         | iOS 7에서에서 운영 체제에 많은 수의 변경 내용 수행 하는 iOS 8입니다. 여기에서 정의 및 사용 하는 방법을 보여 줍니다. |

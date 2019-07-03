@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9848d2b832990032bc7eb7f2e3a93c896457134c
+ms.sourcegitcommit: e95296f9e516975f5f32d822c323a71fd84007b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61381879"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538691"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>느슨하게 결합된 구성 요소 간 통신
 
@@ -43,7 +43,7 @@ EShopOnContainers 모바일 앱에서는 합니다 [ `MessagingCenter` ](xref:Xa
 > [!NOTE]
 > 하지만 합니다 [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) 느슨하게 결합 된 클래스 간의 통신을 허용 하는 클래스만 아키텍처이 문제를 해결 하려면이 제공 하지 않습니다. 예를 들어 바인딩 엔진에서 속성 변경 알림을 통해 뷰와 뷰 모델 간의 통신 구현할 수도 있습니다. 또한 두 가지 보기 모델 간의 통신 탐색 하는 동안 데이터를 전달 하 여 가능 합니다.
 
-EShopOnContainers의 모바일 앱에서[ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) 다른 클래스에서 발생 하는 작업에 대 한 응답에서 UI를 업데이트 하는 데 사용 됩니다. 따라서 메시지는 UI 스레드에서 동일한 스레드에서 메시지를 받는 구독자를 사용 하 여 게시 됩니다.
+EShopOnContainers의 모바일 앱에서 [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) 다른 클래스에서 발생 하는 작업에 대 한 응답에서 UI를 업데이트 하는 데 사용 됩니다. 따라서 메시지는 UI 스레드에서 동일한 스레드에서 메시지를 받는 구독자를 사용 하 여 게시 됩니다.
 
 > [!TIP]
 > 업데이트 UI를 수행 하는 경우 UI 스레드로 마샬링하십시오. UI를 업데이트 하는 데 필요한 백그라운드 스레드에서 전송 되는 메시지의 경우 호출 하 여 구독자에서 UI 스레드에서 메시지를 처리 합니다 [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) 메서드.
