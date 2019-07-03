@@ -7,12 +7,12 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 56c4345dffe71f79e9d89c64478a9c6c38fc1d84
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 313348952b87d94db63d1682f8e1b9413d56714d
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61335280"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513023"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 21 장입니다. 변형
 
@@ -39,7 +39,7 @@ Xamarin.forms에 크기 조정은 등방성; 영향을 너비와 높이 균일 �
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-이러한 모든 속성은 바인딩 가능한 속성으로 지원 됩니다. 데이터 바인딩의 대상 수 있으며 스타일입니다. [**22 장입니다. 애니메이션** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) 어떻게 이러한 속성 애니메이션을 적용할 수를 보여 줍니다.이 챕터에 몇 가지 샘플 Xamarin.Forms를 사용 하 여 애니메이트할 수 있습니다 하는 방법을 보여 줍니다. 그러나 [타이머](~/xamarin-forms/platform/device.md#Device_StartTimer)합니다.
+이러한 모든 속성은 바인딩 가능한 속성으로 지원 됩니다. 데이터 바인딩의 대상 수 있으며 스타일입니다. [**22 장입니다. 애니메이션** ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md) 어떻게 이러한 속성 애니메이션을 적용할 수를 보여 줍니다.이 챕터에 몇 가지 샘플 Xamarin.Forms를 사용 하 여 애니메이트할 수 있습니다 하는 방법을 보여 줍니다. 그러나 [타이머](~/xamarin-forms/platform/device.md#devicestarttimer)합니다.
 
 요소를 렌더링 하 고 수행 하는 방법에 속성에 영향을 변환 *되지* 레이아웃에서 요소는 인식 하는 방법에 영향을 줍니다.
 

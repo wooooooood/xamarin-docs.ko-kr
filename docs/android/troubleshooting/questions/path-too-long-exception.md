@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
-ms.openlocfilehash: 4cb3e13ebbe3d9e8aed153528a35ab16c92e2145
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 443c3cc742ceb919e64a781e18c5a97c342abb44
+ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153331"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522928"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>PathTooLongException 오류를 해결 하는 방법
 
@@ -28,12 +28,12 @@ Windows에서 (여기서는 경로 대 한 최대 길이 [260 자](https://msdn.
 
 ## <a name="fix"></a>문제 해결
 
-Xamarin.Android 8.0부터는 `UseShortFileNames` 이 오류를 뚫을 수 있는 MSBuild 속성을 설정할 수 있습니다. 이 속성 설정 된 경우 `True` (기본값은 `False`), 빌드 프로세스 더 짧은 경로 이름을 사용 하 여 생성 가능성을 줄일를 **PathTooLongException**합니다.
+합니다 `UseShortFileNames` MSBuild 속성 `True` 기본적으로이 오류를 방지 하기. 이 속성 설정 된 경우 `True`, 빌드 프로세스 더 짧은 경로 이름을 사용 하 여 생성 가능성을 줄일를 **PathTooLongException**합니다.
 예를 들어, `UseShortFileNames` 로 설정 된 `True`, 위의 경로 다음과 비슷한 경로를 단축 됩니다.
 
 **C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\lp\\1\\jl\\assets**
 
-이 속성을 설정 하려면 다음 MSBuild 속성을 프로젝트에 추가 **.csproj** 파일:
+이 속성을 수동으로 설정 하려면 다음 MSBuild 속성을 프로젝트에 추가 **.csproj** 파일:
 
 ```xml
 <PropertyGroup>

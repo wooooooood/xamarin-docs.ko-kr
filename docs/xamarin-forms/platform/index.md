@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 3f0156926f8d7a31e2e80318d7b05a909f158653
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cc19e2a4ea85391f585120f85b222b95ef63543f
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359174"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512844"
 ---
 # <a name="xamarinforms-platform-features"></a>Xamarin.Forms 플랫폼 기능
 
@@ -24,7 +24,7 @@ Xamarin.Forms는 확장이 용이하고,  [Effects](~/xamarin-forms/app-fundamen
 
 ## <a name="device-classdevicemd"></a>[장치 클래스](device.md)
 
-`Device` 클래스로 플랫폼에 따른 행동을 공유된 코드에서 구현하는 방법과 XAML을 사용한 유저 인터페이스를 만드는 방법을 소개합니다. 또한, 백그라운드 스레드에서 UI 컨트롤을 수정할 때 중요한 `BeginInvokeOnMainThread`에 대해서도 다룹니다.
+이 가이드에 사용 하는 방법에 설명 합니다 `Device` 공유 코드 (XAML을 사용 하 여 포함), 사용자 인터페이스 및 백그라운드 스레드에서 UI 컨트롤과 상호 작용 하는 방법에 플랫폼 특정 동작을 만드는 클래스입니다.
 
 ## <a name="iosiosindexmd"></a>[iOS](ios/index.md)
 

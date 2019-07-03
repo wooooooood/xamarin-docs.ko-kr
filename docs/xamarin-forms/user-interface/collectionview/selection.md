@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b026bd181571d689d3e19f2a815a52406f6f9da4
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: dc01cf6bea9fe614cbfb53dcc4417ffb0e602c6f
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005293"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512763"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Xamarin.Forms CollectionView 선택
 
@@ -23,8 +23,8 @@ ms.locfileid: "66005293"
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목 선택을 제어 하는 다음 속성을 정의 합니다.
 
 - [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)를 형식 [ `SelectionMode` ](xref:Xamarin.Forms.SelectionMode), 선택 모드입니다.
-- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)형식의 `object`, 목록에서 선택한 항목입니다. 이 속성에는 `null` 선택 된 항목이 값입니다.
-- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems)형식의 `IList<object>`, 목록에서 항목을 선택 합니다. 이 속성은 읽기 전용, 있고는 `null` 항목이 선택 되 면 값입니다.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)형식의 `object`, 목록에서 선택한 항목입니다. 이 속성은의 기본 바인딩 모드를 `TwoWay`, 있고는 `null` 선택 된 항목이 값입니다.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems)형식의 `IList<object>`, 목록에서 항목을 선택 합니다. 이 속성은의 기본 바인딩 모드를 `OneWay`, 있고는 `null` 항목이 선택 되 면 값입니다.
 - [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand)형식의 `ICommand`, 선택한 항목이 변경 될 때 실행 되는 합니다.
 - [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter)를 형식 `object`에 전달 되는 매개 변수는 `SelectionChangedCommand`합니다.
 
@@ -134,7 +134,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
                 SelectionMode="Single"
-                SelectedItem="{Binding SelectedMonkey, Mode=TwoWay}">
+                SelectedItem="{Binding SelectedMonkey}">
     ...
 </CollectionView>
 ```
@@ -147,10 +147,13 @@ CollectionView collectionView = new CollectionView
     SelectionMode = SelectionMode.Single
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMonkey", BindingMode.TwoWay);
+collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMonkey");
 ```
 
-합니다 [ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성 데이터를 바인딩하는 `SelectedMonkey` 형식인 연결 된 뷰 모델의 속성 `Monkey`합니다. A `TwoWay` 경우 사용자는 선택한 항목의 값을 변경 하도록 바인딩을 사용 합니다 `SelectedMonkey` 속성이 설정 됩니다 하 여 선택한 `Monkey` 개체입니다. 합니다 `SelectedMonkey` 속성에 정의 된 합니다 `MonkeysViewModel` 클래스와의 네 번째 항목으로 설정 됩니다는 `Monkeys` 컬렉션:
+> [!NOTE]
+> 합니다 [ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성이의 기본 바인딩 모드를 `TwoWay`입니다.
+
+합니다 [ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성 데이터를 바인딩하는 `SelectedMonkey` 형식인 연결 된 뷰 모델의 속성 `Monkey`합니다. 기본적으로 `TwoWay` 경우 사용자는 선택한 항목의 값을 변경 하도록 바인딩을 사용 합니다 `SelectedMonkey` 속성이 설정 됩니다 하 여 선택한 `Monkey` 개체입니다. 합니다 `SelectedMonkey` 속성에 정의 된 합니다 `MonkeysViewModel` 클래스와의 네 번째 항목으로 설정 됩니다는 `Monkeys` 컬렉션:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -194,7 +197,8 @@ public class MonkeysViewModel : INotifyPropertyChanged
 ```xaml
 <CollectionView x:Name="collectionView"
                 ItemsSource="{Binding Monkeys}"
-                SelectionMode="Multiple">
+                SelectionMode="Multiple"
+                SelectedItems="{Binding SelectedMonkeys}">
     ...
 </CollectionView>
 ```
@@ -207,22 +211,56 @@ CollectionView collectionView = new CollectionView
     SelectionMode = SelectionMode.Multiple
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
-```
-
-여러 항목을 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 추가 하 여 미리 선택할 수 있습니다 합니다 [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성:
-
-```csharp
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(1).FirstOrDefault());
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(3).FirstOrDefault());
-collectionView.SelectedItems.Add(viewModel.Monkeys.Skip(4).FirstOrDefault());
+collectionView.SetBinding(SelectableItemsView.SelectedItemsProperty, "SelectedMonkeys");
 ```
 
 > [!NOTE]
-> 합니다 [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성은 읽기 전용 이므로 하므로 양방향 데이터 항목을 미리 선택할 바인딩을 사용할 수 있습니다.
+> 합니다 [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성이의 기본 바인딩 모드를 `OneWay`입니다.
+
+합니다 [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성 데이터를 바인딩하는 `SelectedMonkeys` 형식인 연결 된 뷰 모델의 속성 `ObservableCollection<object>`합니다. `SelectedMonkeys` 속성에 정의 된를 `MonkeysViewModel` 클래스 및 두 번째, 네 번째 및 다섯 번째로 항목을 `Monkeys` 컬렉션:
+
+```csharp
+namespace CollectionViewDemos.ViewModels
+{
+    public class MonkeysViewModel : INotifyPropertyChanged
+    {
+        ...
+        ObservableCollection<object> selectedMonkeys;
+        public ObservableCollection<object> SelectedMonkeys
+        {
+            get
+            {
+                return selectedMonkeys;
+            }
+            set
+            {
+                if (selectedMonkeys != value)
+                {
+                    selectedMonkeys = value;
+                }
+            }
+        }
+
+        public MonkeysViewModel()
+        {
+            ...
+            SelectedMonkeys = new ObservableCollection<object>()
+            {
+                Monkeys[1], Monkeys[3], Monkeys[4]
+            };
+        }
+        ...
+    }
+}
+```
 
 따라서 경우 합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 나타납니다, 두 번째, 네 번째, 다섯 번째 항목 목록에서 미리 선택 되며:
 
 [![IOS 및 Android에서 다중 사전 항목 선택 CollectionView 세로 목록 스크린샷](selection-images/multiple-pre-selection.png "사전 여러 선택 영역을 사용 하 여 세로 목록 CollectionView")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView 세로 여러 사전 선택 목록")
+
+## <a name="clearing-selections"></a>선택 항목 지우기
+
+[ `SelectedItem` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 하 고 [ `SelectedItems` ](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성을 또는으로 바인딩 개체를 설정 하 여 지울 수 있습니다 `null`합니다.
 
 ## <a name="change-selected-item-color"></a>선택한 항목 색 변경
 

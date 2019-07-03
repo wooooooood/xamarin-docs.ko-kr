@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: cf6ab8266b0798ccbf29078313bbc7454125a1af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a626532ac507185b6c01abb5327efa7015c787f5
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026795"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512903"
 ---
 # <a name="xamarinforms-material-visual"></a>Xamarin.Forms 자료 Visual
 
@@ -35,6 +35,7 @@ Xamarin.Forms 자료 Visual 사용할 수 있습니다 Xamarin.Forms 응용 프�
 재료 렌더러는 현재에 포함 된 [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) 다음 뷰에 대 한 NuGet 패키지:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- `CheckBox`
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
@@ -77,7 +78,7 @@ FormsMaterial.Init(this, savedInstanceState);
 </ContentPage>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 ContentPage contentPage = new ContentPage();
@@ -111,6 +112,7 @@ contentPage.Visual = VisualMarker.Material;
 재질 렌더러 필요에 따라 사용자 지정할 수 있습니다, 기본 렌더러의 경우 다음 기본 클래스를 통해 마찬가지로:
 
 - `MaterialButtonRenderer`
+- `MaterialCheckBoxRenderer`
 - `MaterialEntryRenderer`
 - `MaterialFrameRenderer`
 - `MaterialProgressBarRenderer`

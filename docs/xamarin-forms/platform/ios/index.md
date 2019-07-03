@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/22/2019
-ms.openlocfilehash: f77b2346808f78e182edc59f9ea92d0a8a99344f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7aa9d298c2219dff60ca8ca1f917c72194ad21ca
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971015"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512681"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>Xamarin.Forms의 iOS 플랫폼 기능
 
@@ -56,6 +56,7 @@ IOS에서 Xamarin.Forms 레이아웃에 대해 다음 플랫폼 특정 기능을
 
 Xamarin.Forms에 대 한 다음과 같은 플랫폼별 기능 제공 됩니다 [ `Application` ](xref:Xamarin.Forms.Application) iOS 클래스:
 
+- 명명 된 글꼴 크기에 대 한 크기 조정 하는 내게 필요한 옵션을 사용 하지 않도록 설정 합니다. 자세한 내용은 [iOS에서 명명 된 글꼴 크기에 대 한 내게 필요한 옵션 확장](named-font-size-scaling.md)합니다.
 - 컨트롤 레이아웃을 사용 하도록 설정 하 고 주 스레드에서 수행할 업데이트를 렌더링 합니다. 자세한 내용은 [iOS에서 주 스레드 컨트롤 업데이트](main-thread-updates-ui.md)합니다.
 - 사용을 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰에서 수집 하 고 스크롤 뷰를 사용 하 여 pan 제스처를 공유 합니다. 자세한 내용은 [iOS에서 동시 팬 제스처 인식](application-pan-gesture.md)합니다.
 

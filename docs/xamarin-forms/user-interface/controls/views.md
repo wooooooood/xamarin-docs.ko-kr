@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/21/2019
-ms.openlocfilehash: 258468b836a4c1243b9123022ebbf1d55430321e
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 06/11/2019
+ms.openlocfilehash: 6fbe1104d238929d0c6c6978a9145cd51d52cb6c
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740964"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513080"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -90,6 +90,13 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 |     |     |
 
 ## <a name="views-for-setting-values"></a>값을 설정 하는 것에 대 한 보기
+
+### <a name="checkbox"></a>CheckBox
+
+|     |     |
+| --- | --- |
+| `CheckBox` 사용자를가 확인할 수 있습니다 하거나 또는 빈는 단추의 형식을 사용 하는 부울 값을 선택할 수 있습니다. `IsChecked` 속성의 상태가 `CheckBox`, 및 `CheckedChanged` 상태가 변경 될 때 이벤트가 발생 합니다.<br /><br />API 설명서 / [가이드](~/xamarin-forms/user-interface/checkbox.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CheckBoxDemos) | [![확인란 예제](views-images/CheckBox.png "확인란 예제")](views-images/CheckBox-Large.png#lightbox "확인란 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+|     |     |
 
 ### <a name="slider"></a>슬라이더
 

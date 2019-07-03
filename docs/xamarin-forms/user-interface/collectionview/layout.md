@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a64a54d763edc4f02383af686fc8e9386daad572
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 07/01/2019
+ms.openlocfilehash: 786cea04718022847bba2ecffed8f377dd49bd8b
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005234"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512823"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.Forms CollectionView 레이아웃
 
@@ -47,9 +47,15 @@ ms.locfileid: "66005234"
 - `Vertical` 나타내는 합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 항목 추가 됨에 따라 세로로 확장 됩니다.
 - `Horizontal` 나타내는 합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 항목 추가 됨에 따라 가로로 확장 됩니다.
 
-합니다 [ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) 클래스에서 상속 합니다 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) 클래스 및 정적 정의 `VerticalList` 및 `HorizontalList` 멤버입니다. 이러한 멤버는 각각 세로 또는 가로 목록를 만드는 데 사용할 수 있습니다. 또는 `ListItemsLayout` 개체를 만들 수를 지정 하는 [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) 인수로 열거형 멤버입니다.
+[ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) 클래스에서 상속 합니다 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) 클래스를 정의 `ItemSpacing` 형식의 속성 `double`, 각 항목 둘레 빈 공간을 나타내는입니다. 이 속성의 기본값은 0 및 0 보다 크거나 같은 경우에 해당 값은 항상 이어야 합니다. 합니다 `ListItemsLayout` 클래스에는 또한 정적 정의 `Vertical` 및 `Horizontal` 멤버입니다. 이러한 멤버는 각각 세로 또는 가로 목록를 만드는 데 사용할 수 있습니다. 또는 `ListItemsLayout` 개체를 만들 수를 지정 하는 [ `ItemsLayoutOrientation` ](xref:Xamarin.Forms.ItemsLayoutOrientation) 인수로 열거형 멤버입니다.
 
-합니다 [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) 클래스에서 상속 합니다 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) 클래스를 정의 `Span` 형식의 속성 `int`, 열 또는 표시할 행의 수를 나타내는 표에서 합니다. 기본값은 `Span` 속성은 1이 고 1 보다 크거나 같은 경우에 해당 값은 항상 이어야 합니다.
+합니다 [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) 클래스에서 상속 합니다 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsLayout) 클래스 및 다음 속성을 정의 합니다.
+
+- `VerticalItemSpacing`형식의 `double`, 각 항목 둘레 세로 빈 공간을 나타내는입니다. 이 속성의 기본값은 0 및 0 보다 크거나 같은 경우에 해당 값은 항상 이어야 합니다.
+- `HorizontalItemSpacing`형식의 `double`, 각 항목 둘레 가로 빈 공간을 나타내는입니다. 이 속성의 기본값은 0 및 0 보다 크거나 같은 경우에 해당 값은 항상 이어야 합니다.
+- `Span`형식의 `int`, 열 또는 모눈에 표시할 행의 수를 나타내는입니다. 이 속성의 기본값은 1이 하 고 1 보다 크거나 같은 경우에 해당 값은 항상 이어야 합니다.
+
+이러한 속성에 의해 지원 됩니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 속성을 데이터 바인딩의 대상 수 있음을 의미 합니다.
 
 > [!NOTE]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) 기본 레이아웃 엔진을 레이아웃 하는 데 사용 합니다.
@@ -90,11 +96,11 @@ ms.locfileid: "66005234"
 </CollectionView>
 ```
 
-완성도 위해을 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 세로 목록에 항목을 설정 하 여 표시 설정할 수 있는 해당 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) 정적 속성 `ListItemsLayout.VerticalList` 멤버:
+완성도 위해을 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 설정 하 여 세로 목록에 항목을 표시 설정할 수 있는 해당 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 `VerticalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
-                ItemsLayout="{x:Static ListItemsLayout.VerticalList}">
+                ItemsLayout="VerticalList">
     ...
 </CollectionView>
 ```
@@ -120,7 +126,7 @@ ms.locfileid: "66005234"
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.VerticalList
+    ItemsLayout = ListItemsLayout.Vertical
 };
 ```
 
@@ -130,11 +136,11 @@ CollectionView collectionView = new CollectionView
 
 ## <a name="horizontal-list"></a>가로 목록
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 설정 하 여 가로 목록에서 해당 항목을 표시할 수 해당 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 정적 `ListItemsLayout.HorizontalList` 멤버:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 설정 하 여 가로 목록에서 해당 항목을 표시할 수 해당 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 `HorizontalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
-                ItemsLayout="{x:Static ListItemsLayout.HorizontalList}">
+                ItemsLayout="HorizontalList">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -188,7 +194,7 @@ CollectionView collectionView = new CollectionView
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.HorizontalList
+    ItemsLayout = ListItemsLayout.Horizontal
 };
 ```
 
@@ -308,6 +314,80 @@ CollectionView collectionView = new CollectionView
 
 [![IOS 및 Android에서 CollectionView 가로 격자 레이아웃의 스크린 샷](layout-images/horizontal-grid.png "CollectionView 가로 격자 레이아웃")](layout-images/horizontal-grid-large.png#lightbox "CollectionView 가로 격자 레이아웃")
 
+## <a name="item-spacing"></a>항목 간격
+
+기본적으로 각 항목에 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 묶어 빈 공간에 없습니다. 사용 하는 항목 레이아웃의 속성을 설정 하 여이 동작을 변경할 수 있습니다는 `CollectionView`합니다.
+
+경우는 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 설정 해당 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을을 [ `ListItemsLayout` ](xref:Xamarin.Forms.ListItemsLayout) 개체를 `ListItemsLayout.ItemSpacing` 속성 설정할 수 있습니다는 `double` 각 항목 둘레 빈 공간을 나타내는 값:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+        <ListItemsLayout ItemSpacing="20">
+            <x:Arguments>
+                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
+            </x:Arguments>
+        </ListItemsLayout>
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
+> [!NOTE]
+> `ListItemsLayout.ItemSpacing` 속성이 속성의 값은 0 보다 크거나 같은 경우 항상 보장 하는 유효성 검사 콜백 집합입니다.
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ...
+    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    {
+        ItemSpacing = 20
+    }
+};
+```
+
+이 코드는 각 항목 둘레 20의 간격이 있는 세로 단일 열 목록에 발생 합니다.
+
+[![IOS 및 Android에서 항목 간격을 사용 하 여 CollectionView 스크린샷](layout-images/vertical-list-spacing.png "CollectionView 항목 간격")](layout-images/vertical-list-spacing-large.png#lightbox "CollectionView 항목 간격")
+
+경우는 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 설정 해당 [ `ItemsLayout` ](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을을 [ `GridItemsLayout` ](xref:Xamarin.Forms.GridItemsLayout) 개체를 `GridItemsLayout.VerticalItemSpacing` 및 `GridItemsLayout.HorizontalItemSpacing` 속성 수 로 `double` 값 각 항목 둘레 가로 및 세로로 빈 공간을 나타냅니다.
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Vertical"
+                        Span="2"
+                        VerticalItemSpacing="20"
+                        HorizontalItemSpacing="30" />
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
+> [!NOTE]
+> 합니다 `GridItemsLayout.VerticalItemSpacing` 및 `GridItemsLayout.HorizontalItemSpacing` 속성에는 유효성 검사 콜백은 속성의 값은 0 보다 크거나 같은 경우 항상 확인 하는 설정입니다.
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ...
+    ItemsLayout = new GridItemsLayout(2, ItemsLayoutOrientation.Vertical)
+    {
+        VerticalItemSpacing = 20,
+        HorizontalItemSpacing = 30
+    }
+};
+```
+
+이 코드는 세로 2 열 그리드에 있는 각 항목 둘레 20 세로 간격 및 각 항목 둘레 30 가로 간격에서 발생 합니다.
+
+[![IOS 및 Android에서 항목 간격을 사용 하 여 CollectionView 스크린샷](layout-images/vertical-grid-spacing.png "CollectionView 항목 간격")](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView 항목 간격")
+
 ## <a name="item-sizing"></a>항목 크기 조정
 
 기본적으로 각 항목에 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 는 개별적으로 측정 및 크기에 UI 요소를 제공 합니다 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 고정된 크기를 지정 하지. 변경 될 수 있는이 동작을 지정 합니다 [ `CollectionView.ItemSizingStrategy` ](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy) 속성 값입니다. 이 속성 값 중 하나로 설정할 수 있습니다 합니다 [ `ItemSizingStrategy` ](xref:Xamarin.Forms.ItemSizingStrategy) 열거형 멤버:
@@ -336,9 +416,6 @@ CollectionView collectionView = new CollectionView
     ItemSizingStrategy = ItemSizingStrategy.MeasureFirstItem
 };
 ```
-
-> [!NOTE]
-> 전략을 크기 조정 항목이 현재 구현된에서 iOS에만 표시 됩니다.
 
 ## <a name="dynamic-resizing-of-items"></a>항목의 동적 크기 조정
 

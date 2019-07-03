@@ -6,13 +6,13 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/04/2019
-ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/28/2019
+ms.openlocfilehash: de77be818abbe1250946ee2ce1599235b79d8c01
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61093708"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512982"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -50,18 +50,7 @@ var about = new Label {
 label.FontSize = 24;
 ```
 
-사용할 수도 있습니다는 `NamedSize` 네 가지 기본 제공 옵션; 있는 열거형 Xamarin.Forms는 각 플랫폼에 대 한 최적의 크기를 선택합니다.
-
--  **Micro**
--  **작은**
--  **보통**
--  **큰**
-
-`NamedSize` 열거형 일 수 있습니다 아무 곳에 나 사용을 `FontSize` 를 사용 하 여 지정할 수 있습니다 합니다 `Device.GetNamedSize` 값으로 변환 하는 방법을 `double`:
-
-```csharp
-label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
-```
+Xamarin.Forms의 필드 정의 [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형입니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 참조 하세요. [명명 된 글꼴 크기](#named-font-sizes)합니다.
 
 <a name="FontAttributes" />
 
@@ -111,7 +100,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) 데도 사용할 수 있습니다 XAML에서 각 플랫폼에서 다른 글꼴을 렌더링 합니다. 아래 예제에서는 사용자 지정 글꼴을 사용 하 여 iOS에서 (<span style="font-family:MarkerFelt-Thin">MarkerFelt 씬</span>) 다른 플랫폼에만 크기/특성을 지정 합니다.
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) 데도 사용할 수 있습니다 XAML에서 각 플랫폼에서 다른 글꼴을 렌더링 합니다. 아래 예제에서는 사용자 지정 글꼴을 사용 하 여 iOS에서 (<span style="font-family:MarkerFelt-Thin">MarkerFelt 씬</span>) 다른 플랫폼에만 크기/특성을 지정 합니다.
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -126,6 +115,32 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 ```
 
 사용자 지정 글꼴을 지정할 때 항상 사용 하는 것이 좋습니다 `OnPlatform`처럼 모든 플랫폼에서 사용할 수 있는 글꼴을 찾을 하기가 어렵습니다.
+
+## <a name="named-font-sizes"></a>명명 된 글꼴 크기
+
+Xamarin.Forms에서 필드를 정의 합니다 [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형입니다. 다음 표는 `NamedSize` 멤버 및 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기:
+
+| 멤버 | iOS | Android | UWP |
+| --- | --- | --- | --- |
+| `Default` | 16 | 14 | 14 |
+| `Micro` | 11 | 10 | 15.667 |
+| `Small` | 13 | 14 | 18.667 |
+| `Medium` | 16 | 17 | 22.667 |
+| `Large` | 20 | 22 | 32 |
+| `Body` | 17 | 16 | 14 |
+| `Header` | 17 | 96 | 46 |
+| `Title` | 28 | 24 | 24 |
+| `Subtitle` | 22 | 16 | 20 |
+| `Caption` | 12 | 12 | 12 |
+
+XAML 및 코드를 통해 명명 된 글꼴 크기를 설정할 수 있습니다. 또한 합니다 `Device.GetNamedSize` 반환할 메서드를 호출할 수는 `double` 명명 된 글꼴 크기를 나타내는:
+
+```csharp
+label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
+```
+
+> [!NOTE]
+> IOS 및 Android에서 명명 된 글꼴 크기는 운영 체제의 내게 필요한 옵션에 따라 자동 크기 조정이 됩니다. 플랫폼 전용을 사용 하 여 iOS에서이 동작을 비활성화할 수 있습니다. 자세한 내용은 [iOS에서 명명 된 글꼴 크기에 대 한 내게 필요한 옵션 확장](~/xamarin-forms/platform/ios/named-font-size-scaling.md)합니다.
 
 <a name="Using_a_Custom_Font" />
 
@@ -185,7 +200,7 @@ new Label
 
 ### <a name="xaml"></a>XAML
 
-사용할 수도 있습니다 [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#providing-platform-values) 사용자 지정 글꼴을 렌더링 하는 XAML에서:
+사용할 수도 있습니다 [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) 사용자 지정 글꼴을 렌더링 하는 XAML에서:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -225,7 +240,7 @@ new Label
 </Image>
 ```
 
-이 코드에서 Ionicons 글꼴 패밀리에서 XBox 아이콘 표시는 [ `Image` ](xref:Xamarin.Forms.Image) 보기. 유니코드 하는 동안이 아이콘에 대 한 문자는 `\uf30c`, XAML에서 이스케이프 해야 하 고 따라서 됩니다 `&#xf30c;`합니다. 해당 하는 C# 코드가입니다.
+이 코드에서 Ionicons 글꼴 패밀리에서 XBox 아이콘 표시는 [ `Image` ](xref:Xamarin.Forms.Image) 보기. 유니코드 하는 동안이 아이콘에 대 한 문자는 `\uf30c`, XAML에서 이스케이프 해야 하 고 따라서 됩니다 `&#xf30c;`합니다. 해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };
