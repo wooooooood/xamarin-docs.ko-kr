@@ -1,18 +1,18 @@
 ---
 title: IOS 13, iPadOS 13, 13, tvOS 및 watchOS 6 시작
-description: 이 문서에는 최대 빌드 iOS 13, iPadOS 13, 13, tvOS 및 Xamarin 사용 하 여 6 watchOS 앱을 설정 하는 방법을 설명 합니다. Xcode 11을 다운로드 하 고 Mac 및 Visual Studio 2019 용 Visual Studio를 업데이트 하는 방법을 설명 합니다.
+description: 이 문서에는 최대 빌드 iOS 13, iPadOS 13, 13, tvOS 및 Xamarin 사용 하 여 6 watchOS 앱을 설정 하는 방법을 설명 합니다. Xcode 11을 다운로드 하 고 mac 용 Visual Studio를 업데이트 하는 방법에 설명
 ms.prod: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: d2bb69394d8e9bfeb949a734291179a3e6f5a495
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: 554cddf5717401f912cab38c78a6af17659a0cf7
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540439"
+ms.locfileid: "67558689"
 ---
 # <a name="get-started-with-ios-13"></a>13 iOS 시작
 
@@ -44,3 +44,4 @@ ms.locfileid: "67540439"
 ## <a name="related-links"></a>관련 링크
 
 - [Xcode를 다운로드 합니다.](https://developer.apple.com/download/)
+- [Xamarin.iOS 미리 보기 릴리스 정보](/xamarin/ios/release-notes/12/12.99)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: ab50bfb2b3f46a6fac37fced5004e2c530d3343c
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: eaa479f220c9cd0115fd2d4496fbfb1202fb3aa0
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540429"
+ms.locfileid: "67558709"
 ---
 # <a name="introduction-to-ios-13"></a>IOS 13 소개
 
@@ -45,3 +45,7 @@ IPadOS를 사용 하 여 PencilKit를 사용 하 여 새 제스처를 사용 하
 ## <a name="privacy-and-security"></a>개인 정보 보호 및 보안
 
 로그인을 사용 하 여 자신의 개인 정보가 되지 않는 더 효과적으로 유지할 수 있도록 Apple 장치를 사용 하 여 앱에 로그인 하는 것에 대 한 새 기능을 제공 하는 iOS 13 도난당 하거나 제공 2FA 활용 하 고 제한 된 집합을 수행 하 여 어떤 방식으로든에서 수집 정보입니다.
+
+## <a name="related-links"></a>관련 링크
+
+- [Xamarin.iOS 미리 보기 릴리스 정보](/xamarin/ios/release-notes/12/12.99)
