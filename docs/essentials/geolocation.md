@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 93abf62e5d0b1df48606e4515fca6747146c7777
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 4ac6344165730bc8c348c16fe8f3a932d4ac3548
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175358"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268624"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
@@ -54,13 +54,13 @@ Coarse 및 Fine Location 권한이 필요하며 Android 프로젝트에서 구�
 
 디바이스 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
 
-plist 편집기를 열고, **개인 정보 - 위치 사용 시 사용 설명** 속성을 추가하고, 사용자에게 표시할 값을 입력합니다.
+plist 편집기를 연 다음, **개인 정보 - 위치 사용 시 사용 설명** 속성을 추가하고 사용자에게 표시할 값을 입력합니다.
 
-또는 수동으로 파일을 편집하고 다음을 추가합니다.
+또는 수동으로 파일을 편집하여 다음을 추가하고 이유를 업데이트합니다.
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>Fill in a reason why your app needs access to location.</string>
 ```
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
@@ -206,7 +206,7 @@ if (location != null)
 
 ## <a name="distance-between-two-locations"></a>두 위치 간 거리
 
-[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다.
+[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다. 
 
 예를 들면 다음과 같습니다.
 
