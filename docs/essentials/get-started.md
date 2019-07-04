@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
-ms.openlocfilehash: d8562cd74b661b5f72f373151b9aa0acc36f8477
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 7aa918a1aa70910cd05b17916e060e65ca5404bd
+ms.sourcegitcommit: 17376f0e54467d826b8928a11965fd0c879704f2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58869756"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131975"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 
@@ -35,7 +35,7 @@ Xamarin.Essentials는 Visual Studio를 사용하여 기존 프로젝트나 새 �
 
 2. 기존 프로젝트를 열거나, **Visual Studio C#** 아래의 비어 있는 앱 템플릿(Android, iPhone 및 iPad, 플랫폼 간)을 사용하여 새 프로젝트를 만듭니다. **중요**: UWP 프로젝트에 추가하려면 프로젝트 속성에 빌드 16299 이상이 설정되었는지 확인합니다.
 
-3. 각 프로젝트에 **Xamarin.Essentials** NuGet 패키지를 추가합니다.
+3. 각 프로젝트에 [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) NuGet 패키지를 추가합니다.
 
     # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

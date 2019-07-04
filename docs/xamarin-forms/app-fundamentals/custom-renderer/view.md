@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 88be56cae52e881792ec7a187ef7e158790e8a1b
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 8f5c440784205fa0e7e2001c981e37eab8646f24
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926602"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268937"
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
@@ -138,22 +138,24 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 이 컨트롤만 구성해야 합니다. 마찬가지로, 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 성능이 뛰어난 사용자 지정 렌더러를 만드는 데 도움이 됩니다.
+`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 또한 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우에만 컨트롤을 만들어서 구성하고 이벤트 처리기를 구독해야 합니다. 마찬가지로, 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 성능이 뛰어난 사용자 지정 렌더러를 만드는 데 도움이 됩니다.
+
+> [!IMPORTANT]
+> `e.NewElement`가 `null`이 아닌 경우에만 `SetNativeControl` 메서드를 호출해야 합니다.
 
 각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
@@ -175,15 +177,15 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
-                SetNativeControl (uiCameraPreview);
-            }
             if (e.OldElement != null) {
                 // Unsubscribe
                 uiCameraPreview.Tapped -= OnCameraPreviewTapped;
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                  uiCameraPreview = new UICameraPreview (e.NewElement.Camera);
+                  SetNativeControl (uiCameraPreview);
+                }
                 // Subscribe
                 uiCameraPreview.Tapped += OnCameraPreviewTapped;
             }
@@ -226,12 +228,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                cameraPreview = new CameraPreview(Context);
-                SetNativeControl(cameraPreview);
-            }
-
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -239,6 +235,11 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  cameraPreview = new CameraPreview(Context);
+                  SetNativeControl(cameraPreview);
+                }
                 Control.Preview = Camera.Open((int)e.NewElement.Camera);
 
                 // Subscribe
@@ -284,15 +285,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                ...
-                _captureElement = new CaptureElement();
-                _captureElement.Stretch = Stretch.UniformToFill;
-
-                SetupCamera();
-                SetNativeControl(_captureElement);
-            }
             if (e.OldElement != null)
             {
                 // Unsubscribe
@@ -301,6 +293,15 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                  ...
+                  _captureElement = new CaptureElement();
+                  _captureElement.Stretch = Stretch.UniformToFill;
+
+                  SetupCamera();
+                  SetNativeControl(_captureElement);
+                }
                 // Subscribe
                 Tapped += OnCameraPreviewTapped;
             }

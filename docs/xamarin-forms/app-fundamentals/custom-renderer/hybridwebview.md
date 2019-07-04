@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 625a860469c82da6e6986b03b8c3e55503433e67
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d09188373d11b33f3b3d78b92faa46bf754797f6
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926683"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268991"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
@@ -172,22 +172,24 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control and assign it to the Control property with
-    // the SetNativeControl method
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control and assign it to the Control property with
+      // the SetNativeControl method
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 이 컨트롤만 구성해야 합니다. 마찬가지로, 사용자 지정 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 성능이 뛰어난 사용자 지정 렌더러를 만드는 데 도움이 됩니다.
+`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다.  또한 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우에만 컨트롤을 만들어서 구성하고 이벤트 처리기를 구독해야 합니다. 마찬가지로, 사용자 지정 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 성능이 뛰어난 사용자 지정 렌더러를 만드는 데 도움이 됩니다.
+
+> [!IMPORTANT]
+> `e.NewElement`가 `null`이 아닌 경우에만 `SetNativeControl` 메서드를 호출해야 합니다.
 
 각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
@@ -271,16 +273,6 @@ namespace CustomRenderer.iOS
         {
             base.OnElementChanged (e);
 
-            if (Control == null) {
-                userController = new WKUserContentController ();
-                var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
-                userController.AddUserScript (script);
-                userController.AddScriptMessageHandler (this, "invokeAction");
-
-                var config = new WKWebViewConfiguration { UserContentController = userController };
-                var webView = new WKWebView (Frame, config);
-                SetNativeControl (webView);
-            }
             if (e.OldElement != null) {
                 userController.RemoveAllUserScripts ();
                 userController.RemoveScriptMessageHandler ("invokeAction");
@@ -288,6 +280,16 @@ namespace CustomRenderer.iOS
                 hybridWebView.Cleanup ();
             }
             if (e.NewElement != null) {
+                if (Control == null) {
+                    userController = new WKUserContentController ();
+                    var script = new WKUserScript (new NSString (JavaScriptFunction), WKUserScriptInjectionTime.AtDocumentEnd, false);
+                    userController.AddUserScript (script);
+                    userController.AddScriptMessageHandler (this, "invokeAction");
+
+                    var config = new WKWebViewConfiguration { UserContentController = userController };
+                    var webView = new WKWebView (Frame, config);
+                    SetNativeControl (webView);
+                }
                 string fileName = Path.Combine (NSBundle.MainBundle.BundlePath, string.Format ("Content/{0}", Element.Uri));
                 Control.LoadRequest (new NSUrlRequest (new NSUrl (fileName, false)));
             }
@@ -305,14 +307,14 @@ namespace CustomRenderer.iOS
 
 이 기능을 얻는 방법은 다음과 같습니다.
 
-- `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
-  - 웹 페이지에 메시지를 게시하고 사용자 스크립트를 삽입하는 것을 허용하는 [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스가 만들어집니다.
-  - 웹 페이지가 로드된 후 `invokeCSharpAction` JavaScript 함수를 웹 페이지에 삽입하는 [`WKUserScript`](xref:WebKit.WKUserScript) 인스턴스가 만들어집니다.
-  - [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) 메서드는 콘텐츠 컨트롤러에 [`WKUserScript`](xref:WebKit.WKUserScript) 인스턴스를 추가합니다.
-  - [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) 메서드는 [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스에 `invokeAction`이라는 스크립트 메시지 처리기를 추가합니다. 그러면 `WKUserContentController` 인스턴스를 사용할 모든 웹 보기의 모든 프레임에서 JavaScript 함수 `window.webkit.messageHandlers.invokeAction.postMessage(data)`가 정의됩니다.
-  - [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration) 인스턴스가 만들어지고, [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스가 콘텐츠 컨트롤러로 설정됩니다.
-  - [`WKWebView`](xref:WebKit.WKWebView) 컨트롤이 인스턴스화되고, `WKWebView` 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
+  - `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
+    - 웹 페이지에 메시지를 게시하고 사용자 스크립트를 삽입하는 것을 허용하는 [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스가 만들어집니다.
+    - 웹 페이지가 로드된 후 `invokeCSharpAction` JavaScript 함수를 웹 페이지에 삽입하는 [`WKUserScript`](xref:WebKit.WKUserScript) 인스턴스가 만들어집니다.
+    - [`WKUserContentController.AddUserScript`](xref:WebKit.WKUserContentController.AddUserScript(WebKit.WKUserScript)) 메서드는 콘텐츠 컨트롤러에 [`WKUserScript`](xref:WebKit.WKUserScript) 인스턴스를 추가합니다.
+    - [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) 메서드는 [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스에 `invokeAction`이라는 스크립트 메시지 처리기를 추가합니다. 그러면 `WKUserContentController` 인스턴스를 사용할 모든 웹 보기의 모든 프레임에서 JavaScript 함수 `window.webkit.messageHandlers.invokeAction.postMessage(data)`가 정의됩니다.
+    - [`WKWebViewConfiguration`](xref:WebKit.WKWebViewConfiguration) 인스턴스가 만들어지고, [`WKUserContentController`](xref:WebKit.WKUserContentController) 인스턴스가 콘텐츠 컨트롤러로 설정됩니다.
+    - [`WKWebView`](xref:WebKit.WKWebView) 컨트롤이 인스턴스화되고, `WKWebView` 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
   - [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다. 웹 페이지가 표시되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
 - 렌더러가 연결된 요소가 변경되면:
   - 리소스가 해제됩니다.
@@ -352,13 +354,6 @@ namespace CustomRenderer.Droid
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                var webView = new Android.Webkit.WebView(_context);
-                webView.Settings.JavaScriptEnabled = true;
-                webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
-                SetNativeControl(webView);
-            }
             if (e.OldElement != null)
             {
                 Control.RemoveJavascriptInterface("jsBridge");
@@ -367,6 +362,13 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    var webView = new Android.Webkit.WebView(_context);
+                    webView.Settings.JavaScriptEnabled = true;
+                    webView.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                    SetNativeControl(webView);
+                }
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{Element.Uri}");
             }
@@ -397,10 +399,10 @@ public class JavascriptWebViewClient : WebViewClient
 
 사용자가 이름을 입력하고 HTML `button` 요소를 클릭하면 `invokeCSharpAction` JavaScript 함수가 실행됩니다. 이 기능을 얻는 방법은 다음과 같습니다.
 
-- `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
-  - 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 인스턴스가 만들어지고, 컨트롤에서 JavaScript를 사용하도록 설정되고, `WebViewClient`의 구현으로 `JavascriptWebViewClient` 인스턴스가 설정됩니다.
-  - 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
+  - `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
+    - 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 인스턴스가 만들어지고, 컨트롤에서 JavaScript를 사용하도록 설정되고, `WebViewClient`의 구현으로 `JavascriptWebViewClient` 인스턴스가 설정됩니다.
+    - 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
   - [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) 메서드는 WebView의 JavaScript 컨텍스트 주 프레임에 새 `JSBridge` 인스턴스를 삽입하고 이름을 `jsBridge`로 지정합니다. 이렇게 하면 `JSBridge` 클래스의 메서드를 JavaScript에서 액세스할 수 있습니다.
   - [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다.
   - `JavascriptWebViewClient` 클래스에서 페이지 로드가 완료되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
@@ -456,10 +458,6 @@ namespace CustomRenderer.UWP
         {
             base.OnElementChanged(e);
 
-            if (Control == null)
-            {
-                SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
-            }
             if (e.OldElement != null)
             {
                 Control.NavigationCompleted -= OnWebViewNavigationCompleted;
@@ -467,6 +465,10 @@ namespace CustomRenderer.UWP
             }
             if (e.NewElement != null)
             {
+                if (Control == null)
+                {
+                    SetNativeControl(new Windows.UI.Xaml.Controls.WebView());
+                }
                 Control.NavigationCompleted += OnWebViewNavigationCompleted;
                 Control.ScriptNotify += OnWebViewScriptNotify;
                 Control.Source = new Uri(string.Format("ms-appx-web:///Content//{0}", Element.Uri));
@@ -494,9 +496,9 @@ namespace CustomRenderer.UWP
 
 이 기능을 얻는 방법은 다음과 같습니다.
 
-- `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
-  - `SetNativeControl` 메서드가 호출되어 새 네이티브 `WebView` 컨트롤을 인스턴스화하고 `Control` 속성에 대한 참조를 할당합니다.
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
+  - `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
+    - `SetNativeControl` 메서드가 호출되어 새 네이티브 `WebView` 컨트롤을 인스턴스화하고 `Control` 속성에 대한 참조를 할당합니다.
   - `NavigationCompleted` 및 `ScriptNotify` 이벤트에 대한 이벤트 처리기가 등록됩니다. 네이티브 `WebView` 컨트롤이 현재 콘텐츠를 완전히 로드하거나 탐색이 실패하면 `NavigationCompleted` 이벤트가 발생합니다. 네이티브 `WebView` 컨트롤의 콘텐츠가 JavaScript를 사용하여 애플리케이션에 문자열을 전달하면 `ScriptNotify` 이벤트가 발생합니다. 웹 페이지는 `string` 매개 변수를 전달하는 동안 `window.external.notify`를 호출하여 `ScriptNotify` 이벤트를 발생시킵니다.
   - `WebView.Source` 속성은 `HybridWebView.Uri` 속성에 지정된 HTML 파일의 URI로 설정됩니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되는 것으로 가정합니다. 웹 페이지가 표시되면 `NavigationCompleted` 이벤트가 발생하고 `OnWebViewNavigationCompleted` 메서드가 호출됩니다. 탐색이 성공적으로 완료되면 `WebView.InvokeScriptAsync` 메서드를 통해 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
 - 렌더러가 연결된 요소가 변경되면:

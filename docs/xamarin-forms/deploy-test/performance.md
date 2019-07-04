@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 347d0eebf7340bb8dc7234275d0f58acf7ab16c6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b445c1f8d3d440ecf609d5f3c1b7cc7147343fe0
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061033"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268612"
 ---
 # <a name="xamarinforms-performance"></a>Xamarin.Forms 성능
 
@@ -151,7 +151,7 @@ XAMLC는 이전 버전과의 호환성을 위해 기본적으로 비활성화됩
 
 ## <a name="enable-layout-compression"></a>레이아웃 압축 활성화
 
-레이아웃 압축은 페이지 렌더링 성능을 개선하기 위해 시각적 트리에서 지정된 레이아웃을 제거합니다. 이로 인해 얻을 수 있는 성능 이점은 페이지의 복잡성, 사용 중인 운영 체제의 버전, 그리고 애플리케이션이 실행 중인 장치에 따라 다릅니다. 하지만 가장 큰 성능 이점은 이전 버전의 디바이스에서 볼 수 있습니다. 자세한 내용은 [레이아웃 압축](~/xamarin-forms/user-interface/layouts/layout-compression.md)을 참조하세요.
+레이아웃 압축은 페이지 렌더링 성능을 개선하기 위해 시각적 트리에서 지정된 레이아웃을 제거합니다. 이로 인해 얻을 수 있는 성능 이점은 페이지의 복잡성, 사용 중인 운영 체제의 버전, 그리고 응용 프로그램이 실행 중인 디바이스에 따라 다릅니다. 하지만 가장 큰 성능 이점은 이전 버전의 디바이스에서 볼 수 있습니다. 자세한 내용은 [레이아웃 압축](~/xamarin-forms/user-interface/layouts/layout-compression.md)을 참조하세요.
 
 <a name="fastrenderers" />
 
@@ -300,21 +300,23 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 {
   base.OnElementChanged (e);
 
-  if (Control == null) {
-    // Instantiate the native control
-  }
-
   if (e.OldElement != null) {
     // Unsubscribe from event handlers and cleanup any resources
   }
 
   if (e.NewElement != null) {
+    if (Control == null) {
+      // Instantiate the native control
+    }
     // Configure the control and subscribe to event handlers
   }
 }
 ```
 
-`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 이 컨트롤만 구성해야 합니다. 마찬가지로, 요소 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야만 합니다. 이러한 방식을 도입하면 메모리 누수의 영향을 받지 않으며 효율적으로 작동하는 사용자 지정 렌더러를 만들 수 있습니다.
+`Control` 속성이 `null`일 경우 새 네이티브 컨트롤은 한 번만 인스턴스화되어야 합니다. 또한 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우에만 컨트롤을 만들어서 구성하고 이벤트 처리기를 구독해야 합니다. 마찬가지로, 요소 렌더러가 변경된 항목에 연결된 경우 구독 대상 이벤트 처리기의 구독이 취소되어야만 합니다. 이러한 방식을 도입하면 메모리 누수의 영향을 받지 않으며 효율적으로 작동하는 사용자 지정 렌더러를 만들 수 있습니다.
+
+> [!IMPORTANT]
+> `e.NewElement`가 `null`이 아닌 경우에만 `SetNativeControl` 메서드를 호출해야 합니다.
 
 사용자 지정 렌더러에 대한 자세한 내용은 [각 플랫폼에서 컨트롤 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)을 참조하세요.
 
