@@ -231,6 +231,7 @@
 #### [WebView 확대/축소](platform/android/webview-zoom-controls.md)
 ### [디바이스 클래스](platform/device.md)
 ### [iOS](platform/ios/index.md)
+#### [명명된 글꼴 크기에 대한 접근성 크기 조정](platform/ios/named-font-size-scaling.md)
 #### [셀 배경색](platform/ios/cell-background-color.md)
 #### [항목 커서 색](platform/ios/entry-cursor-color.md)
 #### [항목 글꼴 크기](platform/ios/entry-font-size.md)

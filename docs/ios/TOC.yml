@@ -244,6 +244,14 @@
       items:
         - name: 개요
           href: platform/index.md
+        - name: iOS 13 미리 보기
+          items:
+            - name: iOS 13 소개
+              href: platform/ios13/index.md
+            - name: 시작
+              href: platform/ios13/get-started.md
+            - name: 문제 해결
+              href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
           items:
             - name: iOS 12 소개
@@ -776,8 +784,6 @@
           href: troubleshooting/index.md
         - name: 문제 해결 팁
           href: troubleshooting/troubleshooting.md
-        - name: Xcode 11 미리 보기
-          href: ~/ios/platform/ios13/troubleshooting/index.md
         - name: Xamarin.iOS 분석 규칙
           href: troubleshooting/xamarin-ios-analysis.md
         - name: 오류 메시지(mtouch)

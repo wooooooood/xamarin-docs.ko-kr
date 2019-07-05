@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a7c2aa15521b89e4930746dc5421ce67fa26b2b9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5a464196c08220158432219d96bf82578789d8e5
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382581"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67560010"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -47,3 +47,8 @@ ms.locfileid: "61382581"
     [![iOS 및 Android에서 StackLayout의 가로 방향 자식 뷰 스크린샷](../images/orientation.png "수평 방향의 레이블 인스턴스를 포함한 StackLayout")](../images/orientation-large.png#lightbox "수평 방향의 레이블 인스턴스를 포함한 StackLayout")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스는 이제 세로가 아닌 가로로 정렬됩니다.
+
+-----
+
+> [!div class="nextstepaction"]
+> [이슈가 발생했습니다.](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+2+Feedback&template=tutorial_template.md)

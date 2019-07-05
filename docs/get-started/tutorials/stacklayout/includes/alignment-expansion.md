@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382569"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67560011"
 ---
 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내에 자식 뷰의 크기와 위치는 자식 뷰의 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성 값과 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성 값에 따라 달라집니다.
 
@@ -124,3 +124,8 @@ ms.locfileid: "61382569"
     > [`StackLayout`](xref:Xamarin.Forms.StackLayout)의 모든 공간을 사용할 때 확장 기본 설정은 아무런 영향을 미치지 않습니다.
 
     맞춤 및 확장에 대한 자세한 내용은 [xamarin.Forms의 레이아웃 옵션](~/xamarin-forms/user-interface/layouts/layout-options.md)을 참조하세요.
+
+-----
+
+> [!div class="nextstepaction"]
+> [이슈가 발생했습니다.](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+3+Feedback&template=tutorial_template.md)
