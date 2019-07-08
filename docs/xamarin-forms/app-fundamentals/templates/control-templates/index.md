@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: a667f952eead5bed8305f4c9f4201fd6235b883a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ee8d6966b9eac2dad6a36c215bf7aa5bdf79a867
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239973"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512985"
 ---
 # <a name="xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
 
@@ -20,9 +20,9 @@ _컨트롤 템플릿은 페이지의 모양과 콘텐츠를 명확하게 분리�
 
 ## <a name="introductionintroductionmd"></a>[소개](introduction.md)
 
-Xamarin.Forms 컨트롤 템플릿은 런타임에 애플리케이션 페이지에 쉽게 테마를 적용하고 다시 테마를 적용하는 기능을 제공합니다. 이 문서에는 컨트롤 템플릿에 대한 소개가 제공됩니다.
+Xamarin.Forms 컨트롤 템플릿은 런타임 시 애플리케이션 페이지에 쉽게 테마를 적용하고 다시 테마를 적용하는 기능을 제공합니다. 이 문서에는 컨트롤 템플릿에 대한 소개를 제공합니다.
 
-## <a name="creating-a-controltemplatecreatingmd"></a>[ControlTemplate 만들기](creating.md)
+## <a name="create-a-controltemplatecreatingmd"></a>[ControlTemplate 만들기](creating.md)
 
 컨트롤 템플릿은 애플리케이션 수준 또는 페이지 수준에서 정의할 수 있습니다. 이 문서에서는 컨트롤 템플릿을 만들고 사용하는 방법을 보여줍니다.
 
