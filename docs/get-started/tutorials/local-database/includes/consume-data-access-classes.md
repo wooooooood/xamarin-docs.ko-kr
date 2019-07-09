@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7fbd2a81c30726bc6c38586186e9334ddd4ea282
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193263"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659858"
 ---
 이 연습에서는 이전에 만든 데이터 액세스 클래스를 사용하는 사용자 인터페이스를 만듭니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "61193263"
 
     [![iOS 및 Android에서 로컬 SQLite.NET 데이터베이스 데이터 지속성의 스크린샷](../images/consume-data-access-classes.png "로컬 데이터베이스 데이터 지속성")](../images/consume-data-access-classes-large.png#lightbox "로컬 데이터베이스 데이터 지속성")
 
-    Xamarin.Forms에서 로컬 데이터베이스에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스(가이드)](~/xamarin-forms/app-fundamentals/databases.md)를 참조하세요.
+    Xamarin.Forms에서 로컬 데이터베이스에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스(가이드)](~/xamarin-forms/data-cloud/data/databases.md)를 참조하세요.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -146,4 +146,4 @@ ms.locfileid: "61193263"
 
     [![iOS 및 Android에서 로컬 SQLite.NET 데이터베이스 데이터 지속성의 스크린샷](../images/consume-data-access-classes.png "로컬 데이터베이스 데이터 지속성")](../images/consume-data-access-classes-large.png#lightbox "로컬 데이터베이스 데이터 지속성")
 
-    Xamarin.Forms에서 로컬 데이터베이스에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스(가이드)](~/xamarin-forms/app-fundamentals/databases.md)를 참조하세요.
+    Xamarin.Forms에서 로컬 데이터베이스에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스(가이드)](~/xamarin-forms/data-cloud/data/databases.md)를 참조하세요.
