@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333717"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650460"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
 
@@ -83,7 +83,7 @@ Xamarin.iOS 및 Xamarin.Android 라이브러리에는 Xamarin에 명시적으로
 즉, 사용 해야 합니다 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (먼저 나오는 [ **9 장에서 합니다. 플랫폼별 API 호출** ](chapter09.md) 파일 I/O를 구현 합니다.
 
 > [!NOTE]
-> .NET Standard 2.0 지원 및.NET Standard 2.0 라이브러리를 사용 하 여 이식 가능한 클래스 Libaries 바뀌었습니다 [ `System.IO` ](xref:System.IO) 모든 Xamarin.Forms 플랫폼에 대 한 형식입니다. 더 이상 사용 하는 데 필요한 것을 `DependencyService` 대부분 파일 I/O 작업에 대 한 합니다. 참조 [Xamarin.Forms 파일 처리](~/xamarin-forms/app-fundamentals/files.md) 파일 I/O에는 최신 방법에 대 한 합니다.
+> .NET Standard 2.0 지원 및.NET Standard 2.0 라이브러리를 사용 하 여 이식 가능한 클래스 Libaries 바뀌었습니다 [ `System.IO` ](xref:System.IO) 모든 Xamarin.Forms 플랫폼에 대 한 형식입니다. 더 이상 사용 하는 데 필요한 것을 `DependencyService` 대부분 파일 I/O 작업에 대 한 합니다. 참조 [Xamarin.Forms 파일 처리](~/xamarin-forms/data-cloud/data/files.md) 파일 I/O에는 최신 방법에 대 한 합니다.
 
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>플랫폼 간 파일 I/O에 첫 번째 샷
 
@@ -173,4 +173,4 @@ Windows 런타임에서 실행 되는 프로그램의 클래스를 사용 합니
 
 - [20 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
 - [20 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
-- [파일 작업](~/xamarin-forms/app-fundamentals/files.md)
+- [파일 작업](~/xamarin-forms/data-cloud/data/files.md)

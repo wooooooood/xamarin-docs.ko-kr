@@ -1,5 +1,5 @@
 ---
-title: RESTful 웹 서비스를 인증합니다.
+title: RESTful 웹 서비스를 인증 합니다.
 description: 기본 인증 자격 증명이 있는 클라이언트만를 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: d3f07a72ee26d6be4fafa72137dc9b6c3a724e00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61330659"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650396"
 ---
-# <a name="authenticating-a-restful-web-service"></a>RESTful 웹 서비스를 인증합니다.
+# <a name="authenticate-a-restful-web-service"></a>RESTful 웹 서비스를 인증 합니다.
 
 _HTTP은 리소스에 대 한 액세스를 제어 하는 몇 가지 인증 메커니즘 사용을 지원 합니다. 기본 인증 자격 증명이 있는 클라이언트만를 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법에 설명 합니다._
 
@@ -86,5 +86,5 @@ IIS에서 사용 하는 기본 인증 모듈에서 사용자는 Windows 자격 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

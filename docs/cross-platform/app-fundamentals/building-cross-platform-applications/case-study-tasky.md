@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 23deddae61452d532a87c51cc1ec3bc53eb91c9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 15b4154ad6e95aabb5e88784660a93bb53c0b252
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279118"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650202"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -123,7 +123,7 @@ Tasky는 (Frank Kreuger에서 게시) Sqlite net nuget 패키지를 데이터베
 
 #### <a name="sqlite-on-windows-phone"></a>Windows Phone SQLite
 
-IOS 및 운영 체제의 일부로 SQLite 사용 하 여 Android 모두 제공 하는 동안 Windows Phone는 호환 되는 데이터베이스 엔진을 포함 하지 않습니다. 세 플랫폼 모두에서 코드를 공유 하는 Windows phone 전용 SQLite의 버전이 필요 합니다. 참조 [로컬 데이터베이스를 사용 하 여 작업](~/xamarin-forms/app-fundamentals/databases.md) Sqlite에 대 한 Windows Phone 프로젝트를 설정 하는 방법에 대 한 자세한 내용은 합니다.
+IOS 및 운영 체제의 일부로 SQLite 사용 하 여 Android 모두 제공 하는 동안 Windows Phone는 호환 되는 데이터베이스 엔진을 포함 하지 않습니다. 세 플랫폼 모두에서 코드를 공유 하는 Windows phone 전용 SQLite의 버전이 필요 합니다. 참조 [로컬 데이터베이스를 사용 하 여 작업](~/xamarin-forms/data-cloud/data/databases.md) Sqlite에 대 한 Windows Phone 프로젝트를 설정 하는 방법에 대 한 자세한 내용은 합니다.
 
  <a name="Using_an_Interface_to_Generalize_Data_Access" />
 

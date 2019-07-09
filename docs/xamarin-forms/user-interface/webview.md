@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 658ce23b0aaced8e195461a485f3e846900c2026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61389144"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649630"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -109,6 +109,9 @@ browser.Source = htmlSource;
 
 위의 코드에서 `@` HTML을 리터럴, 모든 일반적인 이스케이프 문자는 무시 되는 문자열로 표시 하는 데 사용 됩니다.
 
+> [!NOTE]
+> 설정 해야 할 수도 있습니다는 `WidthRequest` 및 `HeightRequest` 의 속성을 [ `WebView` ](xref:Xamarin.Forms.WebView) 레이아웃에 따라 HTML 콘텐츠를 보려면를 `WebView` 의 자식인. 예를 들어이 반드시에 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)합니다.
+
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
 WebView에서 HTML, CSS 콘텐츠를 표시할 수 및 앱 내에서 Javascript를 포함 합니다. 예를 들어 다음과 같습니다.
@@ -140,7 +143,7 @@ body,p,h1 {
 
 참고 일부 플랫폼에 동일한 글꼴 위의 CSS에 지정 된 글꼴 각 플랫폼에 대해 사용자 지정 해야 합니다.
 
-로 표시 로컬 콘텐츠를 `WebView`를 HTML 파일을 연 다음에 문자열 내용을 로드 해야는 `Html` 의 속성은 `HtmlWebViewSource`합니다. 파일 열기에 대 한 자세한 내용은 참조 하세요. [파일로 작업할](~/xamarin-forms/app-fundamentals/files.md)합니다.
+로 표시 로컬 콘텐츠를 `WebView`를 HTML 파일을 연 다음에 문자열 내용을 로드 해야는 `Html` 의 속성은 `HtmlWebViewSource`합니다. 파일 열기에 대 한 자세한 내용은 참조 하세요. [파일로 작업할](~/xamarin-forms/data-cloud/data/files.md)합니다.
 
 다음 스크린샷에서 각 플랫폼에서 로컬 콘텐츠를 표시 하는 결과 보여 줍니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: afebe7f491855844e18bf054d665cf8d54e8f353
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b8edc0141807ead60170ec78b3f6348723ab8e18
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61183897"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650133"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -19,7 +19,7 @@ _이 가이드에는 다른 웹 서비스 기술을 사용 하는 방법을 보�
 
 제대로 작동 하려면 많은 모바일 응용 프로그램 클라우드에 종속 되어 있으므로 모바일 응용 프로그램에 웹 서비스를 통합 하는 것은 일반적인 시나리오. Xamarin 플랫폼을 다른 웹 서비스 기술 사용을 지원 하며 RESTful, ASMX, 및 Windows Communication Foundation (WCF) 서비스를 사용 하기 위한 기본 제공 및 타사 지원 합니다.
 
-Xamarin.Forms를 사용 하 여 고객에 게는 이러한 기술이 각각 사용 하 여 전체 예제는 [Xamarin.Forms 웹 서비스](~/xamarin-forms/data-cloud/index.md) 설명서.
+Xamarin.Forms를 사용 하 여 고객에 게는 이러한 기술이 각각 사용 하 여 전체 예제는 [Xamarin.Forms 웹 서비스](~/xamarin-forms/data-cloud/index.yml) 설명서.
 
 > [!IMPORTANT]
 > IOS 9 앱 전송 보안 ATS ()는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간에 보안 연결 하므로 중요 한 정보가 실수로 유출 방지 적용 합니다.
@@ -47,7 +47,7 @@ REST의 단순성 모바일 응용 프로그램에서 웹 서비스에 액세스
 
 ## <a name="consuming-rest-services"></a>REST 서비스를 사용합니다.
 
-다양 한 라이브러리 및 REST 서비스를 사용 하는 데 사용할 수 있는 클래스 및 다음 하위 섹션에 설명 합니다. REST 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/consuming/rest.md)합니다.
+다양 한 라이브러리 및 REST 서비스를 사용 하는 데 사용할 수 있는 클래스 및 다음 하위 섹션에 설명 합니다. REST 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)합니다.
 
 ### <a name="httpclient"></a>HttpClient
 
@@ -55,7 +55,7 @@ REST의 단순성 모바일 응용 프로그램에서 웹 서비스에 액세스
 
 `HttpResponseMessage` 클래스는 HTTP 요청을 생성 된 후 웹 서비스에서 받은 HTTP 응답 메시지를 나타냅니다. 상태 코드, 헤더 및 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. 사용 하 여 콘텐츠를 읽을 수 있습니다 합니다 `ReadAs` 메서드를 같은 `ReadAsStringAsync` 및 `ReadAsByteArrayAsync`데이터의 형식에 따라 합니다.
 
-에 대 한 자세한 내용은 합니다 `HttpClient` 클래스를 참조 하십시오 [HTTPClient 개체를 만드는](~/xamarin-forms/data-cloud/consuming/rest.md)합니다.
+에 대 한 자세한 내용은 합니다 `HttpClient` 클래스를 참조 하십시오 [HTTPClient 개체를 만드는](~/xamarin-forms/data-cloud/web-services/rest.md)합니다.
 
 <a name="Using_HTTPWebRequest" />
 
@@ -329,7 +329,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 APM에 대 한 자세한 내용은 참조 하세요. [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 하 고 [TPL 및 일반적인.NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) MSDN에서.
 
-ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [ASP.NET 웹 서비스 (ASMX) 소비](~/xamarin-forms/data-cloud/consuming/asmx.md)합니다.
+ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [ASP.NET 웹 서비스 (ASMX) 소비](~/xamarin-forms/data-cloud/web-services/asmx.md)합니다.
 
 <a name="wcf" />
 
@@ -407,7 +407,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 
 APM에 대 한 자세한 내용은 참조 하세요. [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 하 고 [TPL 및 일반적인.NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) MSDN에서.
 
-WCF 서비스 사용에 대 한 자세한 내용은 참조 하세요. [Windows Communication Foundation (WCF) 웹 서비스 사용](~/xamarin-forms/data-cloud/consuming/wcf.md)합니다.
+WCF 서비스 사용에 대 한 자세한 내용은 참조 하세요. [Windows Communication Foundation (WCF) 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/wcf.md)합니다.
 
 <a name="Calling_a_WCF_Service_with_Transport_Security" />
 
@@ -445,6 +445,6 @@ HTTP 기본 인증에 대 한 자세한 내용은 참조에 있지만 컨텍스�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms에서 웹 서비스](~/xamarin-forms/data-cloud/index.md)
+- [Xamarin.Forms에서 웹 서비스](~/xamarin-forms/data-cloud/index.yml)
 - [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

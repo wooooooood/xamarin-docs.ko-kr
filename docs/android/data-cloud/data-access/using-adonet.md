@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 7ecf7244fb2ccbe0e4163c89941f9de5138ba713
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10b5a1696b0416bfda115627f7c7b8c2fbd20fcb
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018543"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649580"
 ---
 # <a name="using-adonet-with-android"></a>ADO.NET을 사용 하 여 android
 
@@ -220,4 +220,4 @@ using (var contents = connection.CreateCommand ()) {
 - [DataAccess Basic (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 고급 (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Android 데이터 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: c98e1cd9f4095e8310150ceeebd994af2c9b7f87
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512921"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649575"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
@@ -99,6 +99,10 @@ Xamarin.Forms는 스크롤 행의 데이터를 표시할 목록 뷰 컨트롤을
 ## <a name="stylesstylesindexmd"></a>[스타일](styles/index.md)
 
 컨트롤, 레이아웃 또는 ResourceDictionaries를 사용 하 여 전체 응용 프로그램 간에 공유할 수 있는 스타일에 글꼴, 색 및 기타 특성을 그룹화 할 수 있습니다.
+
+## <a name="switchswitchmd"></a>[스위치](switch.md)
+
+`Switch` 켜고 상태 간에 전환할 수 있는 단추 형식입니다.
 
 ## <a name="tableviewtableviewmd"></a>[TableView](tableview.md)
 

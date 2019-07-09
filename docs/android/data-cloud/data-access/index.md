@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08720734de73af12d8a7383fa7d523dc350c4462
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6858e290d93007d6054ba0ef63dce86e6e2e53e3
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61011357"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649626"
 ---
 # <a name="xamarinandroid-data-access"></a>Xamarin.Android Data Access
 
@@ -35,7 +35,7 @@ Xamarin.Android는와 같은 데이터베이스 액세스 Api를 지원 합니�
 
 샘플 솔루션을 모두 iOS 및 Android 샘플 응용 프로그램 프로젝트를 포함 합니다.
 
-Xamarin.Forms 응용 프로그램에 대 한 읽을 [데이터베이스 작업](~/xamarin-forms/app-fundamentals/databases.md) Xamarin.Forms 사용 하 여 PCL 라이브러리에 SQLite를 사용 하는 방법을 설명 합니다.
+Xamarin.Forms 응용 프로그램에 대 한 읽을 [데이터베이스 작업](~/xamarin-forms/data-cloud/data/databases.md) Xamarin.Forms 사용 하 여 PCL 라이브러리에 SQLite를 사용 하는 방법을 설명 합니다.
 
 이 섹션의에서 항목에서는 SQLite를 사용 하 여 데이터베이스 엔진으로 Xamarin.Android에서 데이터 액세스에 설명 합니다. ADO.NET 구문을 사용 하 여 "직접" 데이터베이스에 액세스할 수 있습니다 또는 SQLite.NET ORM을 포함 하 고 C#에서 데이터 작업을 수행할 수 있습니다.
 
@@ -49,4 +49,4 @@ Xamarin.Forms 응용 프로그램에 대 한 읽을 [데이터베이스 작업](
 - [DataAccess Basic (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 고급 (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Android 데이터 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)

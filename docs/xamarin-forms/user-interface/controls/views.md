@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 6fbe1104d238929d0c6c6978a9145cd51d52cb6c
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 4d0fc5c4ee3947de74a62e8c42fedb8aeedbfdd9
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513080"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650623"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -116,7 +116,7 @@ _Xamarin.Forms 뷰는 플랫폼 간 모바일 사용자 인터페이스의 구�
 
 |     |     |
 | --- | --- |
-| [`Switch`](xref:Xamarin.Forms.Switch) 부울 값을 선택할 수 있도록 설정/해제 스위치의 형식을 사용 합니다. 합니다 [ `IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) 속성은 스위치의 상태 및 [ `Toggled` ](xref:Xamarin.Forms.Switch.Toggled) 상태가 변경 될 때 이벤트가 발생 합니다.<br /><br />[API 문서](xref:Xamarin.Forms.Switch) | [![전환 예제](views-images/Switch.png "예제에서는 전환")](views-images/Switch-Large.png#lightbox "전환 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
+| [`Switch`](xref:Xamarin.Forms.Switch) 부울 값을 선택할 수 있도록 설정/해제 스위치의 형식을 사용 합니다. 합니다 [ `IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) 속성은 스위치의 상태 및 [ `Toggled` ](xref:Xamarin.Forms.Switch.Toggled) 상태가 변경 될 때 이벤트가 발생 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Switch) / [가이드](~/xamarin-forms/user-interface/switch.md) / [샘플](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SwitchDemos) | [![전환 예제](views-images/Switch.png "예제에서는 전환")](views-images/Switch-Large.png#lightbox "전환 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
 |     |     |
 
 ### <a name="datepicker"></a>DatePicker

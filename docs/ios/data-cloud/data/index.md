@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
-ms.openlocfilehash: 8d2513ba1c2ae2769e81659c98f3897f33d83fbf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 420f52a055dc1c03a017723ab34c2fc3b5363656
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218040"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650224"
 ---
 # <a name="xamarinios-data-access"></a>Xamarin.iOS 데이터 액세스
 
@@ -30,7 +30,7 @@ Xamarin.iOS와 같은 데이터베이스 액세스 Api를 지원합니다.
 
 샘플 솔루션을 모두 iOS 및 Android 샘플 응용 프로그램 프로젝트를 포함 합니다.
 
-Xamarin.Forms 응용 프로그램에 대 한 읽을 [데이터베이스 작업](~/xamarin-forms/app-fundamentals/databases.md) Xamarin.Forms 사용 하 여 PCL 라이브러리에 SQLite를 사용 하는 방법을 설명 합니다.
+Xamarin.Forms 응용 프로그램에 대 한 읽을 [데이터베이스 작업](~/xamarin-forms/data-cloud/data/databases.md) Xamarin.Forms 사용 하 여 PCL 라이브러리에 SQLite를 사용 하는 방법을 설명 합니다.
 
 ## <a name="sections"></a>섹션
 
@@ -53,4 +53,4 @@ Xamarin.Forms 응용 프로그램에 대 한 읽을 [데이터베이스 작업](
 - [DataAccess Basic (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 고급 (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS 데이터 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)

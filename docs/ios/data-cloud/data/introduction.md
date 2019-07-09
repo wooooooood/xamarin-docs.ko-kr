@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/11/2016
-ms.openlocfilehash: 06fd77293302a3d6d5d44def9d0a83e3f1a57ede
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5df001926512b182c19ccfcf896057e88f5a597a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61217754"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650239"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Xamarin.iOS 앱의 데이터 저장소 소개
 
@@ -73,4 +73,4 @@ SQLite 사용할 수도 있습니다 Windows 플랫폼에서 있지만 이러한
 - [DataAccess Basic (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess 고급 (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS 데이터 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)

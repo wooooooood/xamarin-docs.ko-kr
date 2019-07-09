@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: bf7a1461a26a860c77a913edabb94d76b4ca2a6a
-ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
+ms.openlocfilehash: 97bb5ec954f36e48d8ae115baf8738862e5a8358
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493338"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649541"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -264,7 +264,7 @@ XAML:
 
 ### <a name="completed"></a>완료
 
-합니다 `Completed` 이벤트와의 상호 작용을 완료 하 react를 사용 하는 `Editor`합니다. `Completed` 키보드에서 return 키를 입력 하 여 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
+합니다 `Completed` 이벤트와의 상호 작용을 완료 하 react를 사용 하는 `Editor`합니다. `Completed` 키보드에서 return 키를 입력 하 여 (또는 UWP에서 Tab 키를 눌러) 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)

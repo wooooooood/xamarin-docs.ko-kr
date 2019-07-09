@@ -1,5 +1,5 @@
 ---
-title: Id 공급자를 사용 하 여 사용자 인증
+title: Id 공급자를 사용 하 여 AuthenticateUsers
 description: 이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 786f1503fcc0cc07f76a7cdc55731d341607429f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331119"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650411"
 ---
-# <a name="authenticating-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
+# <a name="authenticate-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
