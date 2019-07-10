@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bcbab6deddf5e1a4782cd382623f22281a0823e6
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036546"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674861"
 ---
 # <a name="auto-complete"></a>자동 완성
 
@@ -203,7 +203,7 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 -   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
 -   [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 
-*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다* 
- [ *Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/) *. 이 자습서는 기반으로 합니다* 
- [ *Android 자동 완성 자습서*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다*
+[*Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/) *. 이 자습서는 기반으로 합니다*
+[*Android 자동 완성 자습서*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
 *합니다.*

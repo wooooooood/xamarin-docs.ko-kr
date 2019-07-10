@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: ed2d41ea2d9add658d9f07469568a298cdf8de59
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 22a17f9a916d94a3a0f44a451512de43c943e95a
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649696"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675036"
 ---
 # <a name="xamarinforms-switch"></a>Xamarin.Forms Switch
 
@@ -27,7 +27,7 @@ Xamarin.Forms [ `Switch` ](xref:Xamarin.Forms.Switch) 사이 전환 하려면 �
 `Switch` 컨트롤 두 속성을 정의 합니다.
 
 * [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) `Color` 에 영향을 주는 하는 방법을 `Switch` 가 전환 된 렌더링 또는 **에**, 상태입니다.
-* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) `boolean` 나타내는 값 여부를를 `Switch` 는 **에서**합니다.
+* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) `boolean` 나타내는 값 여부를 `Switch` 은 **에서**합니다.
 
 이러한 속성에 의해 지원 됩니다는 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체를는 `Switch` 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
 
@@ -41,7 +41,7 @@ Xamarin.Forms [ `Switch` ](xref:Xamarin.Forms.Switch) 사이 전환 하려면 �
 <Switch IsToggled="true"/>
 ```
 
-' 코드에서 스위치를 만들 수도 있습니다.
+`Switch` 코드에서 만들 수도 있습니다.
 
 ```csharp
 Switch switch = new Switch { IsToggled = true };

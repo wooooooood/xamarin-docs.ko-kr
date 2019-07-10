@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: faa52c80fdb776f2c6c7320874b0d08720b4e4ec
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218869"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675239"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -29,7 +29,7 @@ WatchOS 앱 솔루션에 3 프로젝트:
 
 WatchOS 1 앱에서 iPhone에서 실행 되는 확장의 코드 – Apple Watch 효과적으로 외장 디스플레이입니다. watchOS 2 및 3 앱 Apple Watch 완전히 실행합니다. 이러한 차이 아래 다이어그램에 표시 됩니다.
 
-[ ![](intro-to-watchos-images/arch-sml.png "WatchOS 1 및 watchOS 2 (이상) 간의 차이이 다이어그램에 표시 됩니다.")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "WatchOS 1 및 watchOS 2 (이상) 간의 차이이 다이어그램에 표시 됩니다.")](intro-to-watchos-images/arch.png#lightbox)
 
 WatchOS 버전을 대상으로 하는 것에 관계 없이 Solution Pad Mac 용 Visual Studio에서 완벽 한 솔루션을는 다음과 비슷합니다.
 

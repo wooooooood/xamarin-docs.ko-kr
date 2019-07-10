@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: 474398922bf00e3a430166d8b2e073d200e6ed6e
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: fb2f108ba115690ca181738486fd8310f26bb909
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659330"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674523"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용 하 여 푸시 알림을 보내고 받도록
 
@@ -538,7 +538,7 @@ public static class DispatcherConstants
 }
 ```
 
-구성 해야 합니다 **DispatcherConstants.cs** 에 맞게 Azure 알림 허브 구성과 일치 합니다. 값을 `SubscriptionTags` 속성에는 클라이언트 앱에서 사용 되는 값과 일치 해야 합니다. `NotificationHubName` 속성은 Azure 알림 허브 인스턴스의 이름입니다. 합니다 `FullAccessConnectionString` 속성은 알림 허브에 대 한 액세스 키 **액세스 정책**합니다. 다음 스크린샷은의 위치를 `NotificationHubName` 및 `FullAccessConnectionString` Azure 포털의 속성:
+구성 해야 합니다 **DispatcherConstants.cs** Azure 알림 허브 구성과 일치 하도록 합니다. 값을 `SubscriptionTags` 속성에는 클라이언트 앱에서 사용 되는 값과 일치 해야 합니다. `NotificationHubName` 속성은 Azure 알림 허브 인스턴스의 이름입니다. 합니다 `FullAccessConnectionString` 속성은 알림 허브에 대 한 액세스 키 **액세스 정책**합니다. 다음 스크린샷은의 위치를 `NotificationHubName` 및 `FullAccessConnectionString` Azure 포털의 속성:
 
 ![Azure 알림 허브 이름 및 FullAccessConnectionString 스크린 샷](azure-notification-hub-images/notification-hub-full-access-policy.png "Azure 알림 허브 이름과 FullAccessConnectionString")
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5417050daa84197dd7dc2a270ae054a3a73fd3bc
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037497"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675073"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.iOS API 디자인
 
@@ -113,7 +113,7 @@ Xamarin.iOS는 보여주기 위한 것입니다. 클래스의 계층 구조를 C
 
 Mono는 모든 개체를 가비지 수집을 제공 하는 동안 합니다 `Foundation.NSObject` 구현 합니다 [System.IDisposable](xref:System.IDisposable) 인터페이스입니다. 즉, 시작 하는 기능에 가비지 수집기를 기다릴 필요 없이 지정 된 모든 NSObject의 리소스를 명시적으로 해제할 수 있습니다. 이것이 중요 한 많은 NSObjects, 데이터의 큰 블록에 대 한 포인터를 보유 하는 예를 들어 UIImages를 사용 하는 경우입니다.
 
-형식이 명확한 종료를 수행 하는 경우 재정의 [NSObject.Dispose(bool) 메서드](xref:Foundation.NSObject.Dispose(System.Boolean)) Dispose의 매개 변수는 "bool disposing", 경우 설정이 true로 의미 때문에 Dispose 메서드가 호출 되는 사용자 개체에 명시적으로 호출된 Dispose ()입니다. 값이 false 인 경우 종료자 스레드에서 Dispose (bool disposing) 메서드는 종료자에서 호출 되는 것을 의미 합니다. []()
+형식이 명확한 종료를 수행 하는 경우 재정의 [NSObject.Dispose(bool) 메서드](xref:Foundation.NSObject.Dispose(System.Boolean)) Dispose의 매개 변수는 "bool disposing", 경우 설정이 true로 의미 때문에 Dispose 메서드가 호출 되는 사용자 개체에 명시적으로 호출된 Dispose ()입니다. 값이 false 인 경우 종료자 스레드에서 Dispose (bool disposing) 메서드는 종료자에서 호출 되는 것을 의미 합니다.
 
 
 ##### <a name="categories"></a>범주

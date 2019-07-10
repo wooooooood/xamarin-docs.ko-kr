@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 16d3dfaa0169e3a02fcdee0318dc150994c7e59b
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 576de9a46fc89fe01c564c05568d4331a32dbd96
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827881"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674404"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Xamarin.iOS에서 경고를 표시합니다.
 
@@ -60,7 +60,7 @@ okayButton.TouchUpInside += (sender, e) => {
 
 비슷한 방식으로 이루어집니다 여러 옵션을 사용 하 여 경고를 표시 하지만 두 작업을 추가 합니다. 예를 들어 다음 스크린샷은 두 개의 단추를 사용 하 여 경고를 보여 줍니다.
 
- ![ 두 개의 단추를 사용 하 여 경으십시오](alerts-images/alert2.png)
+ ![두 개의 단추를 사용 하 여 경으십시오](alerts-images/alert2.png)
 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {

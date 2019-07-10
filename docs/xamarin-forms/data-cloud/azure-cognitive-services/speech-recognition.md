@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 3eaf1fc95cceaa60e4b39839252dfe4c3c1cfe7f
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: f854ac363fe3e5b9dc3df046c9fab592b97bc962
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659250"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675254"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Microsoft Speech API를 사용 하 여 음성 인식
 
@@ -114,7 +114,7 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-수행한 기본 구성의 `GenerateRequestUri` 방법은 오디오 콘텐츠는의 로캘을 설정 하는 것입니다. 지원 되는 목록에 대해서 [지원 되는 언어 ](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/)합니다.
+수행한 기본 구성의 `GenerateRequestUri` 방법은 오디오 콘텐츠는의 로캘을 설정 하는 것입니다. 지원 되는 목록에 대해서 [지원 되는 언어](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/)합니다.
 
 ### <a name="sending-the-request"></a>요청을 보내기
 

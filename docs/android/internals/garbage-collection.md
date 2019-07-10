@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: c5a4247b2e10706014c9f92a487803e4a718c1a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 09466cc9eed4899ef0aa1198ff0aee5cd420e110
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953747"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674629"
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
 
@@ -21,7 +21,7 @@ Mono를 사용 하는 Xamarin.Android [간단한 세대 가비지 수집기](htt
 -   주요 컬렉션 (Gen1 수집 하 고 큰 개체 공간 힙)입니다. 
 
 > [!NOTE]
-> 통해 명시적 컬렉션을 없으면 [GC 합니다. Collect ()](xref:System.GC.Collect) 컬렉션이 *주문형*힙 할당에 따라, 합니다. *시스템을 계산 하는 참조가 아닙니다.*; 개체 *미해결 참조가 없으면 즉시 수집 되지 것입니다.*, 범위 않았거나 종료 하는 경우. GC는 부 힙이 새 할당을 위해 메모리에서 실행 될 때 실행 됩니다. 할당이 없는 경우 실행 되지 않습니다.
+> 통해 명시적 컬렉션을 없으면 [GC 합니다. Collect ()](xref:System.GC.Collect) 컬렉션이 *주문형*힙 할당에 따라, 합니다. *시스템을 계산 하는 참조가 아닙니다.* ; 개체 *미해결 참조가 없으면 즉시 수집 되지 것입니다.* , 범위 않았거나 종료 하는 경우. GC는 부 힙이 새 할당을 위해 메모리에서 실행 될 때 실행 됩니다. 할당이 없는 경우 실행 되지 않습니다.
 
 
 부 컬렉션 저렴 하 고, 자주 수행 되며 최근에 할당 되 고 비활성 개체를 수집 하는 데 사용 됩니다. 부 컬렉션은 할당 된 개체의 모든 몇 MB 후 수행 됩니다. 부 컬렉션을 호출 하 여 수동으로 수행할 수 있습니다 [GC 합니다. (0)를 수집 합니다.](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 

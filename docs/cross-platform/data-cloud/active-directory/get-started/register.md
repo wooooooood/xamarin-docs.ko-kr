@@ -6,12 +6,12 @@ ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7f1e743eea81edc0aa45b49f6acb6a9fd461bc80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fd3cb0e8201a6e84c726b211852013bd5f35fba1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188252"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675120"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>1단계: Azure Active Directory를 사용 하도록 앱 등록
 
@@ -19,11 +19,11 @@ ms.locfileid: "61188252"
 
 2. 로그인 한 후로 이동 합니다 **Active Directory** (1) 섹션 (2) 응용 프로그램을 등록 하려는 디렉터리를 선택 합니다.
 
-  [ ![](register-images/01.-active-directory-in-azure-portal-sml.jpg "섹션 및 응용 프로그램을 등록 하려는 디렉터리를 선택 합니다.")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
+  [![](register-images/01.-active-directory-in-azure-portal-sml.jpg "섹션 및 응용 프로그램을 등록 하려는 디렉터리를 선택 합니다.")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
 3. 클릭 **추가** 새 응용 프로그램을 만들려면 선택한 **내 조직에서 개발 중인 응용 프로그램 추가**
 
-  [ ![](register-images/02.-add-new-application-sml.jpg "내 조직에서 개발 중인 응용 프로그램 추가")](register-images/02.-add-new-application.jpg#lightbox)
+  [![](register-images/02.-add-new-application-sml.jpg "내 조직에서 개발 중인 응용 프로그램 추가")](register-images/02.-add-new-application.jpg#lightbox)
 
 4. 다음 화면에서 앱 이름을 지정 (예: XAM-DEMO).
   선택 했는지 **네이티브 클라이언트 응용 프로그램** 응용 프로그램의 형식으로 합니다.

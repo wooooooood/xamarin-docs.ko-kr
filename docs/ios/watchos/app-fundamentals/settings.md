@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8fe2c2765676db52c23fd7c475f218f14697caf
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61413064"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675237"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Watchos에서 Xamarin 설정 작업
 
@@ -36,7 +36,7 @@ Apple Watch 앱은 iOS 앱으로 동일한 설정 기능을 사용할 수-사용
 
 3. 새 키를 추가 `ApplicationGroupContainerIdentifier` 에 **Root.plist** 에 구성한 경우 (예: 앱 그룹에 설정 된 값을 사용 하 여 `group.com.xamarin.WatchSettings` 예제의):
 
-   [ ![](settings-images/settings-appgroup-sml.png "root.plist ApplicationGroupContainerIdentifier 키를 추가 합니다.")](settings-images/settings-appgroup.png#lightbox)
+   [![](settings-images/settings-appgroup-sml.png "root.plist ApplicationGroupContainerIdentifier 키를 추가 합니다.")](settings-images/settings-appgroup.png#lightbox)
 
 4. 편집 된 **Settings-Watch.bundle/Root.plist** -사용 하려는 옵션을 포함 하도록 템플릿 파일 그룹을 포함 합니다.
   텍스트 필드, 토글 스위치 및 슬라이더 기본적으로 (삭제 하 고 사용자 고유의 설정으로 대체):

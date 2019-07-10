@@ -6,12 +6,12 @@ ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a900d427ad6ac2a0e211ef4f00d2f014b13e5d1c
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61197947"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674413"
 ---
 # <a name="interactive-workbooks"></a>대화형 Workbooks
 
@@ -27,7 +27,7 @@ Workbooks 앱 이미 실행 중인 경우으로 이동 하 여 새 문서를 만
 
 코드 편집기의 창 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄 문 지원에 제공 합니다.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "코드 편집기의 창 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄 문 지원 제공")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "코드 편집기의 창 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄 문 지원 제공")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Xamarin Workbooks에 저장 됩니다는 `.workbook` 파일 맨 위에 있는 일부 메타 데이터를 사용 하 여 CommonMark 파일인 (참조 [통합 문서 파일 형식](#workbooks-files-types) 통합 문서를 저장할 수 있습니다 하는 방법에 대 한 자세한 내용은).
 
@@ -136,7 +136,7 @@ Mac의 찾기 및 Xamarin Workbooks 열기 대화 상자 및 최근 파일 메�
 
 통합 문서 패키지 디렉터리 되는 인터넷을 통해 쉽게 배포할 어려울 수 있습니다. 솔루션은 통합 문서 보관 합니다. 통합 문서 보관은 이라는 통합 문서가 zip 압축 된 패키지에는 `.workbook` 확장 합니다.
 
-통합 패키지를 저장 하는 경우 통합 문서 1.1부터 저장 대화 상자는 선택으로 저장 하는 대신 제공 합니다. 1.0 통합 문서에 만들거나 보관 파일을 저장 하는 기본 제공 방법이 없었습니다.
+통합 패키지를 저장 하는 경우 통합 문서 1.1부터 저장 대화 상자는 선택으로 저장 하는 대신 제공 합니다. 1\.0 통합 문서에 만들거나 보관 파일을 저장 하는 기본 제공 방법이 없었습니다.
 
 통합 문서 보관 파일을 열 때 통합 문서 패키지로 투명 하 게 변환 된 통합 문서 1.0 및 zip 파일이 손실 되었습니다. 통합 문서 1.1에서는 zip 파일 유지 됩니다. 사용자는 보관 파일을 저장 하는 경우 새 zip 파일을 사용 하 여 대체 됩니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: 2117eb91f25f2fb890b419fa7c4235b8f646729d
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354066"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675019"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>3 부-Xamarin 플랫폼 간 솔루션 설정
 
@@ -104,7 +104,7 @@ ms.locfileid: "66354066"
 
 이 다이어그램에서 응용 프로그램 아키텍처를 보여 줍니다.
 
- [ ![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "이 다이어그램에서 응용 프로그램 아키텍처를 보여 줍니다.")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "이 다이어그램에서 응용 프로그램 아키텍처를 보여 줍니다.")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 이 스크린샷은 공유 Core 프로젝트, iOS 및 Android 응용 프로그램 프로젝트를 사용 하 여 솔루션 설치를 보여 줍니다. 공유 프로젝트에는 각 아키텍처 계층 (비즈니스, 서비스, 데이터 및 데이터 액세스 코드)와 관련 된 코드가 포함 됩니다.
 

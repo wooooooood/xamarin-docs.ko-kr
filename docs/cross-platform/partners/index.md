@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: ddf80fb650127b91bef89792fc622267ad1ed0d4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b990d1f44780fd95c0f538550f06989ef41ccd84
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211602"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675168"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공할 컨설팅 파트너가 인증
 
@@ -50,7 +50,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[시스템을 목표로 함](http://www.aspiresys.com/)| 오크 결합 합니다, IL|세계에서 가장 혁신적인 기업과 기술 및 전문 지식이 특정 분야에서 아웃소싱을 활용 하는 독립 소프트웨어 공급 업체의 일부를 사용 하 여 시스템 작동을 목표로 합니다. |
 |[오 라 혁신](https://aurainnovates.com/)|인디애나폴리스, IN|이 빌드 + 서비스 접근 방식을 통해 클라우드 및 모바일에 대 한 혁신적인 사용자 지정된 응용 프로그램 개발|
 |[Avanade](http://www.avanade.com/en/home)|애틀랜타, GA; 보스턴, MA; 샬 럿, NC; 시카고, IL; 댈러스, 텍사스; 덴버, CO; El Segundo, CA; 텍사스 휴스턴에; 이끌고, MN; 뉴욕, NY; 피닉스, AZ; 샌프란시스코, CA; 산호세, 캘리포니아; 시애틀, WA; 런던, 영국; 싱가포르|사용자를 배치 하 여 Avanade 방법은 엔터프라이즈 응용 프로그램 개발에는 프런트 엔드 및 center 발생 합니다.|
-|[Azuris CloudSystem](http://www.azuris.us)|Curitiba, Parana, 브라질; 올랜도, FL|Azuris는 강력한 앱 개발 경험을 softrware 개발 회사|
+|[Azuris CloudSystem](http://www.azuris.us)|Curitiba, Parana, 브라질; 올랜도, FL|Azuris는 강력한 앱 개발 경험을 사용 하 여 소프트웨어 개발 회사|
 |[Bernstein-Rein](http://www.b-r.com)|캔자스 시티, MO|Bernstein-여지가 상당히 제한 되어 광범위 한 웹 개발 및 마케팅 서비스를 제공 합니다.|
 |[비트 마법사](http://bitwizards.com)|Atlanta, GA, USA; Fort Walton Beach, FL, USA; Memphis, TN, USA; Austin, TX, USA|IOS, Android 및 Windows에 대 한 전체 모바일 환경 전반에서 경험이 멋진 모바일 되었으며 전에 모바일 응용 프로그램 들은에서는 플랫폼입니다.|
 |[파란색 칩 컨설팅 그룹](https://www.bluechip-llc.com)|개가, OH|효율적으로 해당 클라이언트의 비즈니스 목표를 전략적으로 정렬 하는 사용자 지정, 기술 솔루션을 제공 하는 정보 기술 서비스 회사 파란색 칩 컨설팅 그룹|
@@ -70,7 +70,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[인식 기술 솔루션](http://www.cognizant.com)|부에노스아이레스, 아르헨티나; 오클랜드, 뉴질랜드; 멜버른, 오스트레일리아; 오스트레일리아 시드니; 브리즈번, 오스트레일리아; 브뤼셀, 벨기에; San 파울로, 브라질; 토론토, 캐나다; 중국 상하이; Heredia, 코스타리카; Jersey City, NJ, 미국. 샌프란시스코, CA, 미국. Teaneck, NJ, 미국|Cognizant은 클라이언트 만족도, 기술 혁신, 심층 산업 및 비즈니스 프로세스 관련 전문 지식 및 작업의 미래를 구현 하는 전역, 공동 작업자를 실행 하는 것에 대 한 열정이 결합|
 |[일관 된 솔루션, Inc.](http://www.coherentsolutions.com)|뉴욕, NY; 보스턴, MA; 민스크, 벨로루시|일관 된 솔루션은 컨설팅 및 전역 전문 지식, 혁신과 창의성을 결합 하 여 고객 비즈니스 문제를 해결 하는 회사를 아웃소싱 소프트웨어 개발|
 |[Cruxlab](https://cruxlab.com/)|로스앤젤레스, 미국|최종 사용자와 기업 모두에 대 한 신생 기업과 대 한 사용자 지정 디지털 제품 만듭니다.|
-|[CTI 컨설팅 ](http://cticonsulting.net/)|요새 포트 로더데일, FL|CTI 제공 bleeding edge 모바일 개발 사용자의 culture에 맞는 솔루션도으로 직원|
+|[CTI 컨설팅](http://cticonsulting.net/)|요새 포트 로더데일, FL|CTI 제공 bleeding edge 모바일 개발 사용자의 culture에 맞는 솔루션도으로 직원|
 |[Cygnet Infotech LLC](http://www.cygnet-infotech.com)|프린스턴 뉴어크 |Cygnet은 업무상 중요 한 솔루션을 전달 하 고 실행 구상이부터 복잡 한 비즈니스 문제 해결 하 여 엔터프라이즈용 '는 게임 체인저' 기술 혁신을 구현합니다. |
 |[DEG](http://www.degdigital.com)|Overland Park, 미국|도가 만듭니다 스마트 디지털 마케팅, 상업 및 공동 작업 하는 전략의 경쟁 우위를 확대 하 고 해당 목표를 달성 하려면 조직을 지원합니다|
 |[DevRabbit](http://www.devrabbit.com)|San Ramon, 미국|DevRabbit은 미국 기반 기술 컨설팅 업체인는 Enterprise Mobility, 웹 응용 프로그램 개발 및 클라우드 Consulting의 최신 솔루션을 제공 합니다.|
@@ -114,7 +114,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[iTexico](http://www.itexico.com)|오스틴, 텍사스, 미국|iTexico에 nearshore 아웃소싱 통해 프로젝트의 수명 주기 동안 모바일 개발을 사용 하 여는 데 집중 하는 글로벌 소프트웨어 기술 회사입니다.|
 |[JBS](https://www.jbssolutions.com)|Pennsylvania, USA|JBS는 사용자 지정 소프트웨어 솔루션 공급자입니다.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, USA; Chicago, IL, USA; Toledo, OH, USA; Seongnam-si, Gyeonggi-do, South Korea|Kaonsoft는 enterprise mobility 응용 프로그램을 만드는 대 한 플랫폼 간 완전 한 종단 간 솔루션을 제공 하는 혁신적인 소프트웨어 회사입니다.|
-|[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, IL, USA; Atlanta, GA, USA; Mumbai, Maharashtra, India; Hyderabad, Telangana, India; Pune, Maharashtra, India|Katalyst에서 기술을 실제로 조력자 수 하는 것이 믿습니다. 에 선행 회사 뿐 아니라를 신뢰 하는 이유를 제공 하는 제품 및 서비스, 하지만 자신의 핵심 업무 엔터프라이즈에 걸쳐 있는 사용자 지정, 강력한 솔루션을 통해 작동 하는 방식 변경.|
+|[Katalyst Technologies Inc.](http://www.katalysttech.com )|Evanston, IL, USA; Atlanta, GA, USA; Mumbai, Maharashtra, India; Hyderabad, Telangana, India; Pune, Maharashtra, India|Katalyst에서 기술을 실제로 조력자 수 하는 것이 믿습니다. 에 선행 회사 뿐 아니라를 신뢰 하는 이유를 제공 하는 제품 및 서비스, 하지만 자신의 핵심 업무 엔터프라이즈에 걸쳐 있는 사용자 지정, 강력한 솔루션을 통해 작동 하는 방식 변경.|
 |[Kleio Technology LLC](http://kleiotechnology.com)|Royal Palm Beach, FL|일반적으로 교육, 브랜드, Id 및 협력 했습니다. 클라이언트의 비즈니스 문제를 연구 했습니다 디자인, UX 및 콘텐츠 전략의 주소입니다. 클라이언트 요구 사항에 도달 하 고 수익성에 bussiness 도울|
 |[LEAP](http://www.leapagency.com/our-work)|루이빌, KY|영상을 몰입 형 환경을 spark 사용자와 브랜드 간의 화학 하도록 설계 되었습니다. 하기 위해 최선을 다하고, 참여 및 영광는 환경입니다. 관계를 구축 하는 환경입니다. 환경 영향을 줍니다.|
 |[Leaware](http://www.leaware.com)|Elmhurst, IL; Monheim 저는 Rhein, 독일; 바르샤바, 폴란드|Leaware는 소프트웨어 집, 회사 및 개발 업체인-다중 플랫폼, 네이티브 모바일 응용 프로그램을 전문적으로 다루는 및 웹 응용 프로그램 디자인입니다. 이 고유한 기술, 역량, blend 및 경험을 만들기 가장 신뢰할 수 있는, 고급 솔루션 시장에서 현재는 데 도움이 됩니다.|
@@ -128,12 +128,12 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 |[장점이 Solutions i n c.](http://meritsolutions.com)|Wheaton, IL |전 세계 몇 가지 Microsoft 파트너 사이에서 장점이 솔루션은 사이 종단 간 디지털 변환-Azure 관리 되는 서비스, 사물 인터넷 (IoT)에 모바일 응용 프로그램 및 모든 Microsoft Dynamics 365을 제공할 수 있습니다.|
 |[Mesh Systems LLC](http://www.mesh-systems.com )|카멜, IN |메시 시스템에는 컴퓨터 데이터의 가치를 드러내 변환 사람, 프로세스 및 컴퓨터 간의 관계를 사용 하는 방법을 알고 있습니다. |
 |[MetroStar 시스템](http://www.metrostarsystems.com/)|스톤, 버지니아|디지털 변환 투자를 강화 하 고 환경에서 성공 하는 데 제공 합니다.|
-|[MiC 소프트웨어 ](http://mic-software.net/)|Fresno, CA, USA|직접 고객의 개별 요구 사항에 맞게 완벽 하 게 맞춤형된 서비스를 제공 함으로써 pride 했습니다.|
+|[MiC 소프트웨어](http://mic-software.net/)|Fresno, CA, USA|직접 고객의 개별 요구 사항에 맞게 완벽 하 게 맞춤형된 서비스를 제공 함으로써 pride 했습니다.|
 |[Mindtree](http://www.mindtree.com)|Warren 뉴어크|Mindtree 디지털 변환 및 기술 서비스 제공 구상이에서 실행을 경쟁 업체 보다 성능이 뛰어나지만 Global 2000 클라이언트를 사용 하도록 설정|
 |[모바일 작성기](http://www.mcomposer.com/)|Minneapolis, MN|AMobile 작성기 enterprise 실제 비즈니스 문제를 해결 하는 모바일 솔루션 만들기에 포커스가 있습니다. SaaS 회사에 작성기 Mobile 플랫폼은 enterprise 네이티브 모바일 응용 프로그램에 대 한 모범 사례를 신속 하 게 조합 하는 모듈 집합을 제공 합니다.|
 |[Mooseworks 소프트웨어](http://mooseworkssoftware.com/)|더블린, NH |Mooseworks 소프트웨어 2003에서 시작 되었습니다. 모바일에서 특수화에서는 모바일 전에 출시 된 쿨 합니다. 해당 시간 내에 수천 명의 최종 사용자가 수백 개의 응용 프로그램을 만든 개발자에 게 컨트롤 판매한 했습니다. W|
 |[컨설팅 Motis](http://www.motisconsulting.com/)|Dubuque, 아이오와|Motis 컨설팅 도움이 됩니다. 모바일 또는 데스크톱 소프트웨어 응용 프로그램과 관련 된 제품 전략, 아키텍처 또는 개발 요구에 대 한 도움말 우리 Motis 솔루션 및 연락처에 자세히 읽어보세요.|
-|[Nebbia Technology ](http://www.nebbiatech.com/)|플로리다|우리는 클라우드 우선 소프트웨어 회사의 Microsoft 기술에 중점을 둡니다. Devops에서 모범 사례를 적용 하는 동안 Azure를 활용 하는 놀라운 제품 빌드합니다. 클라우드 우선 중점을 두고 있고 클라우드로 이동 및 클라우드 투자를 최대한 활용 하도록 도와주는 클라이언트와 파트너 관계입니다.|
+|[Nebbia 기술](http://www.nebbiatech.com/)|플로리다|우리는 클라우드 우선 소프트웨어 회사의 Microsoft 기술에 중점을 둡니다. Devops에서 모범 사례를 적용 하는 동안 Azure를 활용 하는 놀라운 제품 빌드합니다. 클라우드 우선 중점을 두고 있고 클라우드로 이동 및 클라우드 투자를 최대한 활용 하도록 도와주는 클라이언트와 파트너 관계입니다.|
 |[특성](http://www.ness.com/)|산호세, CA, 미국|디지털 변환 및 사용자 지정 소프트웨어 제품 엔지니어링 조직 구상, 빌드 및 신규 시장에 진입 하는 디지털 플랫폼을 지속적으로 진화 하는 데 서비스 캡처 운영 알아보고 새로운 수익 Ness 디지털 엔지니어링 제공 효율성입니다. |
 |[Neudesic](http://www.neudesic.com)|Irvine, CA; 애틀랜타, GA; 오스틴, 텍사스; 시카고, IL; 댈러스, 텍사스; 덴버, CO; 텍사스 휴스턴에; 로스앤젤레스, CA; 뉴욕, NY; 필라델피아, PA; 피닉스, AZ; 포틀랜드, OR; 시애틀, 워싱턴|Neudesic의 선행 National 시스템 통합 업체 및 신뢰할 수 있는 Microsoft 파트너, 기능 및 Microsoft 기술 관련 전문 대 한 독립 연구 회사에서 인식 됩니다. 또한 Theobald, AWS, Dell, Xamarin, metalogix의 Nintex 등과 같은 기타 업계 선두 업체와의 전략적 제휴 유지합니다. 우리의 제휴와 밀접 하에서 작업 하 여 &ndash; 도구 및 기술 전문성을 혼합 &ndash; neudesic의 모든 비즈니스 문제에 가장 적합 한 해결책을 전달할 수 있습니다.|
 |[NIIT Technologies](http://www.niit-tech.com)|애틀랜타, GA, 미국. 노 이다, 인도, Uttar 프라 데 시; 런던, 영국; 마드리드, 스페인; 싱가포르|NIIT Technologies는 미국, 유럽, 아시아 및 오스트레일리아에서 클라이언트의 요구 사항을 해결 하는 글로벌 IT 솔루션 조직입니다. NIIT Technologies는 다양 한 서비스를 제공 하는 여행 및 운송, 은행 및 금융 서비스, 보험, 제조 및 미디어 버티 컬에서 클라이언트를 서비스 합니다. 디지털 서비스에 집중, 민첩 하 고 확장 가능한 비즈니스 디자인 및 디지털 운영 모델 회사는 지원 됩니다.  광범위 한 최고의에서 솔루션 및 환경, 분석 및 통합을 포함 하 여 디지털 서비스 값 체인 전체에 분산 되어 있는 효율적인 서비스 제공 합니다.|
@@ -515,7 +515,7 @@ _기본 위치 나열 된 많은 파트너 테두리에서 서비스를 제공 �
 
 | 파트너 | 위치 | 설명 |
 | --- | --- | --- |
-|[Agile Technologies ](http://www.agiletz.com)|두바이, 아랍에미리트; 쿠웨이트; 오만; 바레인; 카타르; 카이로, 이집트|Agile Technologies는 엔터프라이즈 IT 컨설팅, 교육 및 서비스를 개발, DevOps 및 서비스를 테스트 제공 하는 솔루션 공급자입니다.|
+|[Agile Technologies](http://www.agiletz.com)|두바이, 아랍에미리트; 쿠웨이트; 오만; 바레인; 카타르; 카이로, 이집트|Agile Technologies는 엔터프라이즈 IT 컨설팅, 교육 및 서비스를 개발, DevOps 및 서비스를 테스트 제공 하는 솔루션 공급자입니다.|
 |[CodeValue](http://www.codevalue.net)|Herzliya, Israel; Yokne'am Illit, Israel|CodeValue는 전체 스펙트럼의 고객은 자신의 핵심 비즈니스 활동에 초점을 맞출 수 있도록 하는 소프트웨어 서비스를 제공 하는 선행 소프트웨어 회사|
 |[DCube](http://www.dcube.me/)|Riyadh, Saudi Arabia|DCube 전자 미디어 및 광고 아랍 인터넷 세계 제조 및 전자 콘텐츠 최상의 환경을 제공 하는 업무를 사용 하 여 개발을 전문적으로 다루는|
 |[DigiPresence](http://www.digipresence.net)|Dubai, United Arab Emirates|Digi 현재 상태를 제공, 설치 및 일반 Directorate 거주 외래 affairs 두바이 및 해당 외래 센터에 기술 지원 및 유지 관리 서비스를 제공 합니다.|

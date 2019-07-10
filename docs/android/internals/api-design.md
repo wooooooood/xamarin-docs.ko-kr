@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: e762a286069d5ef1db90f3c45808eee0a7a04a7f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c10935f4623fd4455ec5cf8a80c6473c0f69d9b9
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60954287"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674685"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API Design Principles
 
@@ -240,7 +240,7 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 
 예를 들어 합니다 [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 인터페이스입니다.
 합니다 *Parcelable* 인터페이스 메서드 및 중첩된 형식 상수를 포함 합니다. 합니다 *Parcelable* 인터페이스 메서드는 배치 합니다 [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) 인터페이스입니다.
-합니다 *Parcelable* 인터페이스 상수에 배치 되는 [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) 형식입니다. 중첩 [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) 하 고 [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) 유형은 현재 없습니다 제네릭 지원과;의 제한으로 인해 바인딩된 으로 표시 됩니다, 지원 된 경우에 *Android.OS.IParcelableClassLoaderCreator* 하 고 *Android.OS.IParcelableCreator* 인터페이스입니다. 예를 들어 중첩 [android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) 인터페이스로 바인딩되어 합니다 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) 인터페이스입니다.
+합니다 *Parcelable* 인터페이스 상수에 배치 되는 [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) 형식입니다. 중첩 [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) 하 고 [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) 유형은 현재 없습니다 제네릭 지원과;의 제한으로 인해 바인딩된 으로 표시 됩니다, 지원 된 경우에 *Android.OS.IParcelableClassLoaderCreator* 하 고 *Android.OS.IParcelableCreator* 인터페이스입니다. 예를 들어 중첩 [android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) 인터페이스로 바인딩되어 합니다 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) 인터페이스입니다.
 
 
 > [!NOTE]
@@ -260,7 +260,7 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
 에 대 한 합니다 *android.os.Parcelable* 인터페이스, 즉, 이제 것을 [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 상수를 포함 하는 형식입니다. 예를 들어 합니다 [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) 상수로 바인딩될 합니다 [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) 상수를 대신 합니다  *ParcelableConsts.ContentsFileDescriptor* 상수입니다.
 
 포함 된 다른 인터페이스를 구현 하는 상수 아직 자세한 상수를 포함 하는 인터페이스에 대 한 모든 상수 합한 이제 생성 됩니다. 예를 들어 합니다 [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) 구현 인터페이스는 [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) 인터페이스입니다. 그러나 1.9를 이전 합니다 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) 형식에 대해 선언 된 상수에 액세스 하는 방법은 없습니다 [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/)합니다.
-결과적으로 Java 표현식 *MediaStore.Video.VideoColumns.TITLE* C# 식에 바인딩해야 *MediaStore.Video.MediaColumnsConsts.Title* 읽지도 않고 검색 하기 어려운는 Java 설명서 다양 합니다. 1.9에 해당 하는 C# 식 됩니다 [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/)합니다.
+결과적으로 Java 표현식 *MediaStore.Video.VideoColumns.TITLE* C# 식에 바인딩해야 *MediaStore.Video.MediaColumnsConsts.Title* 읽지도 않고 검색 하기 어려운는 Java 설명서 다양 합니다. 1\.9에 해당 하는 C# 식 됩니다 [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/)합니다.
 
 또한 고려해 야 합니다 [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) Java를 구현 하는 형식 *Parcelable* 인터페이스입니다. 예를 들어 해당 인터페이스의 모든 상수는 "통해" 번들 형식에 액세스할 수 있는 인터페이스를 구현 하기 때문 *Bundle.CONTENTS_FILE_DESCRIPTOR* 완벽 하 게 유효한 Java 식입니다.
 이전에이 식을 포트를 C# 연결 된 모든 인터페이스는 형식에서 참조 하기 위해 구현 되는 확인 해야 합니다 *CONTENTS_FILE_DESCRIPTOR* 에서 제공 합니다. Xamarin.Android 1.9부터 상수를 포함 하는 Java 인터페이스를 구현 하는 클래스 해야 중첩 *InterfaceConsts* 모든 상속 된 인터페이스 상수를 포함 하는 형식입니다. 그러면 변환 *Bundle.CONTENTS_FILE_DESCRIPTOR* 하 [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/)합니다.

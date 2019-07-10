@@ -6,12 +6,12 @@ ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f5008d4986baa0575030e077b66b69ec0a4fad00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c7c0f582ac4a7dc8571fbc607dba9b0ad97d49e1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61275619"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674841"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>파트 1-Xamarin Mobile Platform 이해
 
@@ -116,7 +116,7 @@ Xamarin을 사용 하는 주요 이점은 응용 프로그램 사용자 인터�
 
 이러한 스크린샷은 각 플랫폼에서 사용할 수 있는 시각적 화면 디자이너를 표시합니다.
 
- [ ![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "이러한 스크린샷은 각 플랫폼에서 사용할 수 있는 시각적 화면 디자이너를 보여 줍니다.")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "이러한 스크린샷은 각 플랫폼에서 사용할 수 있는 시각적 화면 디자이너를 보여 줍니다.")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
 모든 경우에는 만든 요소를 시각적으로 코드에서 참조할 수 있습니다.
 

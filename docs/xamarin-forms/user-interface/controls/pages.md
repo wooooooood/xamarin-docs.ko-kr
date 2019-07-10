@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 42cbc6f50da34cbbc594dfef1dec49619202c191
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 7b99e876c666160bdfd4392915901ea6535e68e1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741075"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674835"
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.Forms 페이지
 
@@ -22,7 +22,7 @@ _Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면�
 
 Xamarin.Forms에서 아래에 나와 있는 모든 페이지 유형 파생 [ `Page` ](xref:Xamarin.Forms.Page) 클래스입니다. 이러한 시각적 요소는 모든 또는 대부분의 화면을 차지합니다. A `Page` 개체가 나타내는 `ViewController` ios에서 및 `Page` 유니버설 Windows 플랫폼에서 합니다. Android에서 각 페이지와 같은 화면을 차지를 `Activity`, Xamarin.Forms 페이지 되지만 *없습니다* `Activity` 개체입니다.
 
-[ ![](pages-images/pages-sml.png "Xamarin.Forms 페이지 형식")](pages-images/pages.png#lightbox "Xamarin.Forms 페이지 형식")
+[![](pages-images/pages-sml.png "Xamarin.Forms 페이지 형식")](pages-images/pages.png#lightbox "Xamarin.Forms 페이지 형식")
 
 ## <a name="pages"></a>인쇄할 페이지
 

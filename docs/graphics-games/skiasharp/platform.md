@@ -7,16 +7,16 @@ ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 5d6cf6b36d4f454d3124a33ab9cb289e40e0e1ed
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed80a423506f96972ddf80075379ed6e6dccd0a1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160617"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675123"
 ---
 # <a name="skiasharp-platform-specific-notes"></a>SkiaSharp 플랫폼 관련 정보
 
-아래 예제 이미지 버퍼를 수동으로 할당, 플랫폼에서 제공 하는 기존 RBGA 버퍼에 그리기 하는 일반적인 플랫폼 패턴을 설명 하기 위해 이렇게 합니다.
+아래 예제 이미지 버퍼를 수동으로 할당, 플랫폼에서 제공 하는 기존 RGBA 버퍼에 그리기 하는 일반적인 플랫폼 패턴을 설명 하기 위해 이렇게 합니다.
 
 원하지 않는 경우이 관용구를 사용할 필요가 없습니다.  오버 로드를 만들고 이미지에 대 한 백업 저장소를 관리 하는 경우
 

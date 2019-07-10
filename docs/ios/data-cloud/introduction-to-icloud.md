@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 009e061726f655999c08192b5839a5c962d35e24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30b5d0b3a02223a8808e57f5d0cdc5e7000e156
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091493"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674876"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.iOS와 iCloud를 사용 하 여
 
@@ -55,7 +55,7 @@ ICloud에 액세스 하려면 응용 프로그램을 올바르게 구성 합니�
 
 - **Entitlements.plist에 컨테이너 식별자를 추가** -컨테이너 식별자 형식은 `TeamID.BundleID`합니다. 자세한 내용은 참조는 [자격](~/ios/deploy-test/provisioning/entitlements.md) 가이드입니다.
 
-- **프로젝트 속성 구성** -Info.plist 파일 확인에 **번들 식별자** 일치 하는 **번들 ID** 인 경우에 설정 [앱 ID 만들기 ](~/ios/deploy-test/provisioning/capabilities/index.md); IOS 번들 서명 사용 하는 **프로 비전 프로필** 와 iCloud 앱 서비스 앱 ID를 포함 하는 및 **사용자 지정 자격** 파일을 선택 합니다. 이 모두에서 수행할 수 있습니다 Visual Studio에서 프로젝트 속성 창.
+- **프로젝트 속성 구성** -Info.plist 파일 확인에 **번들 식별자** 일치 하는 **번들 ID** 인 경우에 설정 [앱 ID 만들기](~/ios/deploy-test/provisioning/capabilities/index.md); IOS 번들 서명 사용 하는 **프로 비전 프로필** 와 iCloud 앱 서비스 앱 ID를 포함 하는 및 **사용자 지정 자격** 파일을 선택 합니다. 이 모두에서 수행할 수 있습니다 Visual Studio에서 프로젝트 속성 창.
 
 - **장치에서 iCloud를 사용 하도록 설정** 로 이동- **설정 > iCloud** 장치 로그인을 확인 합니다.
 선택 하 고 설정 합니다 **문서 및 데이터** 옵션입니다.

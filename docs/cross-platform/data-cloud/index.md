@@ -6,16 +6,16 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 25eec247a0cb664897541a0e6e818a77018fda43
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187785"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674986"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure 및 Xamarin
 
-[ ![](images/evolve-mikej-azure-sml.png "Azure App Services 기능은 클라우드 데이터 저장소 및 플랫폼 간 푸시 알림을 포함 하 여 Xamarin 앱을 쉽게 추가할 수")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services 기능은 클라우드 데이터 저장소 및 플랫폼 간 푸시 알림을 포함 하 여 Xamarin 앱을 쉽게 추가할 수")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 [Evolve 2016: Azure 및 Xamarin을 사용 하 여 연결 된 앱 개발](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -28,7 +28,7 @@ ms.locfileid: "61187785"
 컬렉션이 있기 [Azure Mobile Apps 설명서](~/cross-platform/data-cloud/mobile-apps.md) 구현 하는 과정 안내 하는 [Azure 모바일 클라이언트](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)합니다.
 Xamarin에 대 한 Azure 메시징 NuGet 패키지도 제공 [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) 하 고 [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) 플랫폼에서 푸시 알림을 구현할 수 있도록 합니다.
 
-앱을 구성 합니다 [Azure App Services 포털](https://portal.azure.com/) Mobile Apps, Web Api, 저장소 및 등을 액세스 하 합니다. 에 대 한 자세한 [앱 서비스는 다른 방법을](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) 의 기능과 [Microsoft에서 이러한 비디오](http://azure.microsoft.com/campaigns/azure-march-announcement/)합니다.
+앱을 구성 합니다 [Azure App Services 포털](https://portal.azure.com/) Mobile Apps, Web Api, 저장소 및 등을 액세스 하 합니다. 에 대 한 자세한 [앱 서비스는 다른 방법을](https://azure.microsoft.com/updates/whats-new-with-azure-app-service/) 의 기능과 [Microsoft에서 이러한 비디오](https://azure.microsoft.com/campaigns/azure-march-announcement/)합니다.
 
 ## <a name="active-directory-authentication"></a>Active Directory 인증
 
@@ -61,5 +61,5 @@ Microsoft의 웹 API에는 Xamarin 응용 프로그램에서 쉽게 사용할 �
 ## <a name="related-links"></a>관련 링크
 
 - [Azure PCL 예제 (여 @paulbatum) (샘플)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Azure portal](http://azure.microsoft.com/)
+- [Azure portal](https://azure.microsoft.com/)
 - [Xamarin (NuGet)에 대 한 모바일 클라이언트](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
