@@ -1,19 +1,24 @@
 ---
 title: iOS 6 소개
-description: '이 문서는 iOS 6에서에서 도입 된 기능을 설명 하는 지침에 연결 합니다. 컬렉션 뷰, PassKit 소셜 프레임 워크를 StoreKit 변경 내용 모두 설명 합니다.'
+description: 이 문서는 iOS 6에서에서 도입 된 기능을 설명 하는 지침에 연결 합니다. 컬렉션 뷰, PassKit 소셜 프레임 워크를 StoreKit 변경 내용 모두 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
+ms.openlocfilehash: be017103c5a3a2c890f49e4a510d20fcd0c03094
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675098"
 ---
-
 # <a name="introduction-to-ios-6"></a>iOS 6 소개
 
 _iOS 6에는 다양 한 Xamarin.iOS 6에는 앱 개발을 위한 새로운 기술 포함 되어 있습니다. C# 개발자입니다._
 
-[ ![](images/ios6-large.jpg "IOS 6 로고")](images/ios6-large.jpg#lightbox)
+[![](images/ios6-large.jpg "IOS 6 로고")](images/ios6-large.jpg#lightbox)
 
 IOS 6 및 Xamarin.iOS 6을 사용 하 여 개발자는 이제 iOS 응용 프로그램을 비롯 하 여 해당 대상 iPhone 5 만들 마음 다양 한 기능이 있습니다.
 이 문서는 사용 가능한 더 흥미로운 새 기능 및 각 항목에 대 한 문서 링크를 보여 줍니다. 또한 개발자가 iOS 6 및 iPhone 5의 새로운 해상도를 이동할 때 중요 하 게 몇 가지 변경 내용에 살펴봅니다.
