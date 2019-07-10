@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe38e13ff4b6c89905769d5ef0e5163a538e1e86
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61388891"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659860"
 ---
 이 연습에서는 `RestService` 클래스를 사용하는 사용자 인터페이스를 만듭니다. 그러면 [OpenWeatherMap](https://openweathermap.org/) 웹 API에서 데이터를 검색하게 됩니다.
 
@@ -191,7 +191,7 @@ ms.locfileid: "61388891"
 
     또한 [`Entry`](xref:Xamarin.Forms.Entry)에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 개체에 액세스할 수 있습니다.
 
-    Xamarin.Forms에서 REST 기반 웹 서비스를 사용하는 방법에 대한 자세한 내용은 [RESTful 웹 서비스 사용(가이드)](~/xamarin-forms/data-cloud/consuming/rest.md)을 참조하세요.
+    Xamarin.Forms에서 REST 기반 웹 서비스를 사용하는 방법에 대한 자세한 내용은 [RESTful Web Service 사용(가이드)](~/xamarin-forms/data-cloud/web-services/rest.md)을 참조하세요.
 
 1. **Solution Pad**의 **WebServiceTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -250,4 +250,4 @@ ms.locfileid: "61388891"
     > [!IMPORTANT]
     > 개인 OpenWeatherMap API 키는 `Constants` 클래스의 `OpenWeatherMapAPIKey` 상수 값으로 설정되어야 합니다.
 
-    Xamarin.Forms에서 REST 기반 웹 서비스를 사용하는 방법에 대한 자세한 내용은 [RESTful 웹 서비스 사용(가이드)](~/xamarin-forms/data-cloud/consuming/rest.md)을 참조하세요.
+    Xamarin.Forms에서 REST 기반 웹 서비스를 사용하는 방법에 대한 자세한 내용은 [RESTful Web Service 사용(가이드)](~/xamarin-forms/data-cloud/web-services/rest.md)을 참조하세요.

@@ -1,0 +1,171 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: 데이터 및 Azure Cloud Services
+metadata:
+  title: 데이터 및 Azure Cloud Services
+  description: Azure 클라우드 서비스로 데이터를 저장하고 연결된 Xamarin.Forms 애플리케이션을 빌드하는 방법을 알아봅니다.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 06/28/2019
+abstract:
+  description: Azure 클라우드 서비스로 데이터를 저장하고 연결된 Xamarin.Forms 애플리케이션을 빌드하는 방법을 알아봅니다.
+sections:
+  - title: 로컬 데이터 스토리지
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: data/files.md
+            html: Xamarin.Forms 애플리케이션의 공유 코드에서 파일을 처리하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+              href: data/files.md
+            title: 파일 처리
+          - href: data/databases.md
+            html: Xamarin.Forms 애플리케이션이 SQLite.Net을 사용하여 데이터를 읽고 로컬 SQLite 데이터베이스에 데이터를 기록하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_common-data-service.svg'
+              href: data/databases.md
+            title: 로컬 데이터베이스
+  - title: Azure 서비스
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: azure-services/azure-cosmosdb.md
+            html: Azure Cosmos DB 문서 데이터베이스에 데이터를 저장하고 Xamarin.Forms 애플리케이션에서 해당 데이터에 액세스하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
+              href: azure-services/azure-cosmosdb.md
+            title: Azure Cosmos DB 문서 데이터베이스
+          - href: azure-services/azure-notification-hub.md
+            html: Azure Notification Hubs를 사용하여 Xamarin.Forms 애플리케이션에 푸시 알림 배포를 관리하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_push-notification.svg'
+              href: azure-services/azure-notification-hub.md
+            title: Azure Notification Hubs
+          - href: azure-services/azure-storage.md
+            html: Azure Storage에 텍스트 및 이진 데이터를 저장하는 방법과 Xamarin.Forms 애플리케이션에서 해당 데이터에 액세스하는 방법을 알아봅니다.
+            image:
+              src: ~/media/icons/i_data-cloud.svg
+              href: azure-services/azure-storage.md
+            title: Azure Storage
+          - href: azure-services/azure-search.md
+            html: Azure Search를 Xamarin.Forms 애플리케이션에 통합하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_search.svg'
+              href: azure-services/azure-search.md
+            title: Azure Search
+          - href: azure-services/azure-functions.md
+            html: Xamarin.Forms 애플리케이션과 상호 작용하는 Azure Function을 빌드하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_method.svg'
+              href: azure-services/azure-functions.md
+            title: Azure Functions
+          - href: azure-services/azure-signalr.md
+            html: Azure SignalR Service와 Azure Functions를 Xamarin.Forms와 결합하여 연결된 클라이언트에게 메시지를 전달하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
+              href: azure-services/azure-signalr.md
+            title: Azure SignalR Service
+  - title: Azure Cognitive Services
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: azure-cognitive-services/introduction.md
+            html: Azure Cognitive Service API를 호출하는 방법을 보여주는 샘플 Xamarin.Forms 애플리케이션에 대해 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-apps.svg'
+              href: azure-cognitive-services/index.md
+            title: 소개
+          - href: azure-cognitive-services/speech-recognition.md
+            html: Microsoft Speech Recognition REST API를 사용하여 오디오를 Xamarin.Forms 애플리케이션의 텍스트로 변환하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_blog.svg'
+              href: azure-cognitive-services/speech-recognition.md
+            title: 음성 인식
+          - href: azure-cognitive-services/spell-check.md
+            html: Bing Spell Check REST API를 사용하여 Xamarin.Forms 애플리케이션의 맞춤법 오류를 해결하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: azure-cognitive-services/spell-check.md
+            title: 맞춤법 검사
+          - href: azure-cognitive-services/text-translation.md
+            html: Microsoft Translator Text API를 사용하여 Xamarin.Forms 애플리케이션의 한 언어에서 다른 언어로 텍스트를 번역하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
+              href: azure-cognitive-services/text-translation.md
+            title: 텍스트 번역
+          - href: azure-cognitive-services/emotion-recognition.md
+            html: Face API를 사용하여 Xamarin.Forms 애플리케이션에서 감정을 인식하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
+              href: azure-cognitive-services/emotion-recognition.md
+            title: 감정 인식
+  - title: 웹 서비스
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: web-services/introduction.md
+            html: 다른 웹 서비스와 통신하는 방법을 보여주는 샘플 Xamarin.Forms 애플리케이션에 대해 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-apps.svg'
+              href: web-services/introduction.md
+            title: 소개
+          - href: web-services/asmx.md
+            html: Xamarin.Forms 애플리케이션에서 ASMX SOAP 서비스를 사용하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
+              href: web-services/asmx.md
+            title: ASMX
+          - href: web-services/wcf.md
+            html: Xamarin.Forms 애플리케이션에서 WCF SOAP 서비스를 사용하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
+              href: web-services/wcf.md
+            title: WCF
+          - href: web-services/rest.md
+            html: Xamarin.Forms 애플리케이션에서 REST 서비스를 사용하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
+              href: web-services/rest.md
+            title: REST
+  - title: 인증
+    items:
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: authentication/rest.md
+            html: 기본 인증을 사용하여 REST 기반 리소스에 대한 액세스를 보호하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_network-protection.svg'
+              href: authentication/rest.md
+            title: REST
+          - href: authentication/oauth.md
+            html: Xamarin.Auth를 사용하여 Xamarin.Forms 애플리케이션에서 ID 공급자로 인증하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_identity-protection.svg'
+              href: authentication/oauth.md
+            title: ID 공급자
+          - href: authentication/azure-ad-b2c.md
+            html: Azure Active Directory B2C를 사용하여 Xamarin.Forms 애플리케이션에 ID 관리를 통합하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_security-management.svg'
+              href: authentication/azure-ad-b2c.md
+            title: Azure Active Directory B2C
+          - href: authentication/azure-cosmosdb-auth.md
+            html: Xamarin.Forms 애플리케이션에서 특정 Cosmos DB 문서 데이터에 대한 사용자 액세스를 제한하는 방법을 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_information-protection.svg'
+              href: authentication/azure-cosmosdb-auth.md
+            title: Azure Cosmos DB 문서 데이터베이스 인증

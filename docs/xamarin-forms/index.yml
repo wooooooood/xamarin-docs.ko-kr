@@ -87,11 +87,11 @@ sections:
               href: ~/essentials/index.md?context=xamarin/xamarin-forms
             title: Xamarin.Essentials
           - href: ~/xamarin-forms/data-cloud/
-            html: 로컬 및 원격 데이터 저장과 검색 및 기타 클라우드 기반 서비스입니다.
+            html: 로컬 및 원격 데이터 스토리지와 검색 및 기타 Azure 클라우드 기반 서비스입니다.
             image:
               src: ~/media/icons/i_data-cloud.svg
               href: ~/xamarin-forms/data-cloud/
-            title: 데이터 및 클라우드 서비스
+            title: 데이터 및 Azure Cloud Services
           - href: ~/xamarin-forms/deploy-test/
             html: 앱을 빌드하고 배포하는 방법 및 해당 앱을 미리 테스트하는 데 유용한 팁입니다!
             image:

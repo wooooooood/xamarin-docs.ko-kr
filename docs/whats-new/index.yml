@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: 2019-07.md
+            html: '2019년 7월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.1 릴리스, 데이터 및 클라우드 서비스 업데이트 및 기타 업데이트.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-06.md
+            title: 2019년 7월
           - href: 2019-06.md
             html: '2019년 6월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.0 릴리스, 데이터 및 클라우드 서비스 업데이트, API 문서는 지금 docs.microsoft.com에 있습니다.'
             image:
