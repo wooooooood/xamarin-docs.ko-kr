@@ -1,22 +1,22 @@
 ---
 title: Xamarin.iOS에서 Apple Pay 기능
-description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Apple Pay 기능에 필요한 설정을 설명합니다.
+description: 애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Apple Pay 기능에 필요한 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b9a5b70b46447ab6eb7143322dd0d2e5dc55200d
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112353"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675137"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay 기능
 
-_응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Apple Pay 기능에 필요한 설정을 설명합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Apple Pay 기능에 필요한 설정을 설명합니다._
 
 Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품을 구입할 수 있습니다. 이 섹션에서는 Apple Developer Center에서 Apple Pay에 필요한 모든 구성 요소를 생성하는 방법을 설명합니다.
 
@@ -62,7 +62,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
 
 3.  앱 ID의 이름을 입력하고 Explicit App ID(명시적 앱 ID)를 지정합니다.    
    
-    ![앱 ID 세부 정보 화면 ](apple-pay-capabilities-images/image35.png)
+    ![앱 ID 세부 정보 화면](apple-pay-capabilities-images/image35.png)
 
 4.  App Services 아래에서 Apple Pay를 선택합니다.    
   
@@ -118,7 +118,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
     > [!IMPORTANT]
     > JudoPay 또는 Stripe와 같은 Apple Pay에 제공되는 결제 서비스 업체를 사용하는 경우, 해당 업체가 이 시점에서 사용할 수 있는 올바른 형식의 CSR을 제공할 수 있습니다. 요청에 대한 자세한 내용은 [JudoPay](https://www.judopay.com/docs/version-52/apple-pay/getting-started/#create-an-apple-pay-certificate) 및 [Stripe](https://stripe.com/docs/apple-pay/apps#csr) 사이트를 참조하세요. 자체 CSR을 만들려면 아래 5-8단계를 수행합니다. CSR이 있으면 9단계로 이동합니다.
 
-5.  Keychain Access(키 집합 액세스) 응용 프로그램을 열고 **Keychain Access(키 집합 액세스) > Certificate Assistant(인증서 도우미) > Request a Certificate from a Certificate Authority(인증 기관의 인증서 요청)** 으로 이동합니다. 
+5.  Keychain Access(키 집합 액세스) 애플리케이션을 열고 **Keychain Access(키 집합 액세스) &gt; Certificate Assistant(인증서 도우미) &gt; Request a Certificate from a Certificate Authority(인증 기관의 인증서 요청)** 으로 이동합니다. 
 
      ![Mac에서 키 집합을 사용하여 CSR 만들기](apple-pay-capabilities-images/image46.png)
 

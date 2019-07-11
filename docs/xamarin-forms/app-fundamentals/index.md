@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
-ms.openlocfilehash: 1e40b0a71317d8c9cb3de391a0b941a5bb081956
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 61d9c5b1c7b81bfc8a20932ce1d188cd0cb0f980
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048155"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650441"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Xamarin.Forms 애플리케이션 기본 사항
 
@@ -52,10 +52,6 @@ Xamarin.Forms로 액세스 가능한 기능(예: 화면 판독 도구 지원)을
 
 효과를 사용하면 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있습니다. 효과는 일반적으로 작은 스타일 지정 변경에 사용됩니다.
 
-## <a name="filesfilesmd"></a>[파일](files.md)
-
-Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함된 리소스를 사용하여 수행할 수 있습니다.
-
 ## <a name="gesturesgesturesindexmd"></a>[제스처](gestures/index.md)
 
 Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래스는 사용자 인터페이스 컨트롤에 탭하기, 손가락 모으기 및 이동 제스처를 지원합니다.
@@ -63,10 +59,6 @@ Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래
 ## <a name="localizationlocalizationindexmd"></a>[지역화](localization/index.md)
 
 기본 제공되는 .NET 지역화 프레임워크는 Xamarin.Forms로 플랫폼 간 다국어 애플리케이션을 작성하는 데 사용할 수 있습니다.
-
-## <a name="local-databasesdatabasesmd"></a>[로컬 데이터베이스](databases.md)
-
-Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다.
 
 ## <a name="messaging-centermessaging-centermd"></a>[메시징 센터](messaging-center.md)
 

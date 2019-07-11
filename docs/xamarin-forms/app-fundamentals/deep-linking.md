@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: e7b8ae57f127b4c9397ab4e5f7e097fa330e827a
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925576"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650654"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
@@ -34,7 +34,7 @@ Xamarin.Forms 애플리케이션 인덱싱 및 딥 링크 설정은 사용자가
 
 사용자가 만든 각 `TodoItem` 인스턴스는 인덱싱됩니다. 그런 다음, 플랫폼별 검색을 사용하여 애플리케이션에서 인덱싱된 데이터를 찾을 수 있습니다. 사용자 애플리케이션에 대한 검색 결과 항목을 누르면 애플리케이션이 시작되고 `TodoItemPage`가 탐색되고, 딥 링크에서 참조되는 `TodoItem`이 표시됩니다.
 
-SQLite 데이터베이스 사용에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스](~/xamarin-forms/app-fundamentals/databases.md)를 참조하세요.
+SQLite 데이터베이스 사용에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스](~/xamarin-forms/data-cloud/data/databases.md)를 참조하세요.
 
 > [!NOTE]
 > Xamarin.Forms 애플리케이션 인덱싱 및 딥 링크 기능은 iOS 및 Android 플랫폼에서만 사용할 수 있으며 각각 최소 iOS 9 및 API 23이 필요합니다.

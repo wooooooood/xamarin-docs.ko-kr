@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c81c84b8b32bdde6949918f3a31f171983007f39
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855161"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675216"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
