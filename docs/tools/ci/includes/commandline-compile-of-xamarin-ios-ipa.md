@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ef16224b9ef060ff8643211b8e1f0c767c518bdf
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61047861"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67841601"
 ---
 
 솔루션의 릴리스 빌드를 지정 하려면 다음 명령줄 **SOLUTION_FILE.sln** iPhone 용입니다. IPA 위치를 지정 하 여 설정할 수는 `IpaPackageDir` 명령줄에서 속성:
 
- - Mac에서 사용 하 여 **xbuild**:
+- Mac에서 사용 하 여 **xbuild**:
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
@@ -18,7 +18,7 @@ ms.locfileid: "61047861"
 
 합니다 **xbuild** 명령은 일반적으로 디렉터리에 있습니다 **/Library/Frameworks/Mono.framework/Commands**합니다.
 
- - Windows를 사용 하 여 온 **msbuild**:
+- Windows를 사용 하 여 온 **msbuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 
