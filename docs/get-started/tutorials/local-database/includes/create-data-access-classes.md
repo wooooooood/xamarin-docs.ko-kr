@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 83e28796a2c387927dddd708da3ee6623f800a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193251"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67841509"
 ---
 이 연습에서는 데이터 액세스 클래스를 **LocalDatabaseTutorial** 프로젝트에 추가합니다. 이 프로젝트는 여러 사람에 대한 데이터를 데이터베이스에 보존하는 데 사용됩니다.
 
@@ -69,9 +69,7 @@ ms.locfileid: "61193251"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace LocalDatabaseTutorial
     {
         public partial class App : Application
@@ -117,7 +115,8 @@ ms.locfileid: "61193251"
 
     이 코드는 새로운 `Database` 인스턴스를 싱글톤으로 생성하는 `Database` 속성을 정의합니다. 데이터베이스를 저장할 위치를 나타내는 로컬 파일 경로와 파일 이름이 인수로 `Database` 클래스 생성자에 전달됩니다.
 
-    > [!중요] 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로, 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
+    > [!IMPORTANT]
+    > 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
 
 1. 오류가 없는지 확인하기 위해 솔루션을 빌드합니다.
 
@@ -182,9 +181,7 @@ ms.locfileid: "61193251"
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace LocalDatabaseTutorial
     {
         public partial class App : Application
@@ -230,6 +227,7 @@ ms.locfileid: "61193251"
 
     이 코드는 새로운 `Database` 인스턴스를 싱글톤으로 생성하는 `Database` 속성을 정의합니다. 데이터베이스를 저장할 위치를 나타내는 로컬 파일 경로와 파일 이름이 인수로 `Database` 클래스 생성자에 전달됩니다.
 
-    > [!중요] 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로, 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
-    
+    > [!IMPORTANT]
+    > 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
+
 1. 오류가 없는지 확인하기 위해 솔루션을 빌드합니다.

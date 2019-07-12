@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 3d8e69af7f790415343abf464ea2bb22e879e025
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 089ada051b6780a15acfcdd7f9e32ddda1384d05
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170773"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832044"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Xamarin.iOS에서 프로그래밍 레이아웃 제약 조건
 
@@ -95,7 +95,7 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 ### <a name="layout-constraints"></a>레이아웃 제약 조건
 
-직접 생성 하 여 자동 레이아웃 제약을 수동으로 추가할 수 있습니다는 `NSLayoutConstraint` 에서 C# 코드입니다. 레이아웃 앵커를 사용 하 여 달리 정의 되는 제약 조건에 영향을 주지는 해당 하는 경우에 모든 매개 변수에 대해 값을 지정 해야 합니다. 결과적으로, 하면 결국 상당한 읽기가 상용구 코드를 생성 합니다. 예를 들어:
+직접 생성 하 여 자동 레이아웃 제약을 수동으로 추가할 수 있습니다는 `NSLayoutConstraint` 에서 C# 코드입니다. 레이아웃 앵커를 사용 하 여 달리 정의 되는 제약 조건에 영향을 주지는 해당 하는 경우에 모든 매개 변수에 대해 값을 지정 해야 합니다. 결과적으로, 하면 결국 상당한 읽기가 상용구 코드를 생성 합니다. 예:
 
 ```csharp
 //// Pin the leading edge of the view to the margin
@@ -119,10 +119,10 @@ NSLayoutConstraint.Create (OrangeView, NSLayoutAttribute.Height, NSLayoutRelatio
 Visual 형식의 언어를 사용 하면 ASCII 아트가 만들어지는 제약 조건의 시각적 표현을 제공 하는 문자열 등을 사용 하 여 제약 조건을 정의할 수 있습니다. 여기에 다음과 같은 장점 및 단점이 있습니다.
 
 - 시각적 언어 형식을 유효한 제약 조건만 만들을 적용합니다.
- - 자동 레이아웃 제약 조건에 디버그 메시지는 코드와 유사 합니다 제약 조건을 만드는 데 Visual 언어 형식을 사용 하 여 콘솔에 출력 합니다.
- - Visual 형식의 언어를 사용 하면 매우 간단한 식 사용 하 여 동시에 여러 제약 조건을 만들 수 있습니다.
- - 시각적 형식 언어 문자열에 대 한 컴파일 쪽 유효성 이므로 문제 런타임에 검색할 수 있습니다.
- - 시각적 언어 형식을 완결성을 통해 시각화 강조 되므로 (예: 비율) 된 일부 제약 조건 형식에 만들 수 없습니다.
+- 자동 레이아웃 제약 조건에 디버그 메시지는 코드와 유사 합니다 제약 조건을 만드는 데 Visual 언어 형식을 사용 하 여 콘솔에 출력 합니다.
+- Visual 형식의 언어를 사용 하면 매우 간단한 식 사용 하 여 동시에 여러 제약 조건을 만들 수 있습니다.
+- 시각적 형식 언어 문자열에 대 한 컴파일 쪽 유효성 이므로 문제 런타임에 검색할 수 있습니다.
+- 시각적 언어 형식을 완결성을 통해 시각화 강조 되므로 (예: 비율) 된 일부 제약 조건 형식에 만들 수 없습니다.
 
 제약 조건을 만들려면 비주얼 형식 언어를 사용 하는 경우에 다음 단계를 수행 합니다.
 
