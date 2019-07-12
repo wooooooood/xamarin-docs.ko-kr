@@ -6,12 +6,12 @@ ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 471029375d8a61a6c48d94a66d7836807e0da22f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a028da577a4c49e18cccb681351d7614bb196b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386321"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832651"
 ---
 # <a name="urhosharp-windows-support"></a>UrhoSharp Windows 지원
 
@@ -97,33 +97,33 @@ UWP 프로젝트를 만들고 Urho NuGet 참조 찾을 수 있는지 자산 (데
 서브 클래스를 만든 `Window` 및 다음과 같은 자산을 구성 합니다.
 
 ```csharp
-{
-            InitializeComponent();
-            GameTypes = typeof(Sample).GetTypeInfo().Assembly.GetTypes()
-                .Where(t => t.GetTypeInfo().IsSubclassOf(typeof(Application)) && t != typeof(Sample))
-                .Select((t, i) => new TypeInfo(t, $"{i + 1}. {t.Name}", ""))
-                .ToArray();
-            DataContext = this;
-            Loaded += (s, e) => RunGame (new MyGame ());
-        }
-
-        public void RunGame(TypeInfo value)
-        {
-            //at this moment, UWP supports assets only in pak files (see PackageTool)
-            currentApplication = UrhoSurface.Run(value.Type, "Data.pak");
-        }
+    {
+        InitializeComponent();
+        GameTypes = typeof(Sample).GetTypeInfo().Assembly.GetTypes()
+            .Where(t => t.GetTypeInfo().IsSubclassOf(typeof(Application)) && t != typeof(Sample))
+            .Select((t, i) => new TypeInfo(t, $"{i + 1}. {t.Name}", ""))
+            .ToArray();
+        DataContext = this;
+        Loaded += (s, e) => RunGame (new MyGame ());
     }
+
+    public void RunGame(TypeInfo value)
+    {
+        //at this moment, UWP supports assets only in pak files (see PackageTool)
+        currentApplication = UrhoSurface.Run(value.Type, "Data.pak");
+    }
+}
 ```
 
 ### <a name="example"></a>예제
 
 [전체 예제](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-## <a name="integrated-with-windowsforms"></a>Windows.Forms와 통합
+## <a name="integrated-with-windows-forms"></a>Windows Forms를 사용 하 여 통합
 
 ### <a name="creating-a-project"></a>프로젝트 만들기
 
-Windows.Forms 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있습니다 자산 (데이터 디렉터리를 포함 하는 디렉터리) 있는지 확인 합니다.
+Windows Forms 프로젝트를 만들고 Urho NuGet 참조를 찾을 수 있습니다 자산 (데이터 디렉터리를 포함 하는 디렉터리) 있는지 확인 합니다.
 
 ### <a name="configuring-and-launching-urho-from-windowsforms"></a>구성 및 Urho Windows.Forms에서 시작
 

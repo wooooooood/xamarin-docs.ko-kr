@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2a9baab9215ae2d30e4daf6800a116c95165da42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6135740095395d5cd7bde9abc1cbbab1e1072161
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61188307"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832246"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>2단계. 모바일 응용 프로그램에 대 한 서비스 액세스를 구성 합니다.
 
@@ -21,7 +21,7 @@ ms.locfileid: "61188307"
 
   ![](configure-images/2.1-configure.png "구성 탭에서 권한을 다른 응용 프로그램 섹션을 찾습니다")
 
-2.  클릭할 **응용 프로그램을 추가** 단추입니다. 다음 화면 팝업에서 Azure Active Directory로 보호 되는 모든 응용 프로그램 목록이 표시 됩니다. 모바일 응용 프로그램에서 액세스 해야 하는 응용 프로그램을 선택 합니다.
+2. 클릭할 **응용 프로그램을 추가** 단추입니다. 다음 화면 팝업에서 Azure Active Directory로 보호 되는 모든 응용 프로그램 목록이 표시 됩니다. 모바일 응용 프로그램에서 액세스 해야 하는 응용 프로그램을 선택 합니다.
 
   ![](configure-images/2.2-add-application.png "모바일 응용 프로그램에서 액세스 해야 하는 응용 프로그램 선택")
 

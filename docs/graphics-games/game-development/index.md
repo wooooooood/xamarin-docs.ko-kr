@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 314bedcb6bb2d7ebf9d8f98428b6a7cad059f73b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0fa4dbbf256e005fe17841f06acf1338197784b0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382061"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832282"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Xamarin 사용한 게임 개발 소개
 
@@ -55,9 +55,9 @@ ms.locfileid: "61382061"
 
 수동으로 로드 및 언로드 (또는 삭제) 콘텐츠 개발에서 사용 하는 기술에 따라 필요할 수 있습니다. 수동으로 로드 / 언로드 자산에 대 한 여러 가지 이유로 필요할 수 있습니다.
 
- - 자산에는 단일 프레임의 길이 기준으로 로드 하는 데 시간이 오래 걸릴 수 있습니다. 도 일부 자산에는 심각 하 게 방해가 되는 환경을 mid 게임 플레이 로드 하는 경우를 로드 하려면 초 정도 걸릴 수 있습니다. 애니메이션을 표시 하려는 로드 하는 시간 (예: 2 초 이상 또는 두) 특히 시간이 오래 걸리는 경우 화면 또는 진행률 표시줄을 로드 합니다.
- - 자산에는 게임의 대상 플랫폼에서 제공 하는 내에 맞게 로드 되는 항목의 현재 관리가 필요한 RAM 많이 사용할 수 있습니다.
- - 게임을 RAM에 들어가는 개수 보다 자세한 자산을 표시 해야 합니다. "World open" 게임에는 플레이어를 원활 하 게 탐색할 수 없는 로드 화면입니다 – 대규모 환경의 포함 되는 많습니다. 이 경우에 스트리밍 콘텐츠에 대 한 사용자 지정 시스템을 만들고 관리 메모리 사용 해야 합니다.
+- 자산에는 단일 프레임의 길이 기준으로 로드 하는 데 시간이 오래 걸릴 수 있습니다. 도 일부 자산에는 심각 하 게 방해가 되는 환경을 mid 게임 플레이 로드 하는 경우를 로드 하려면 초 정도 걸릴 수 있습니다. 애니메이션을 표시 하려는 로드 하는 시간 (예: 2 초 이상 또는 두) 특히 시간이 오래 걸리는 경우 화면 또는 진행률 표시줄을 로드 합니다.
+- 자산에는 게임의 대상 플랫폼에서 제공 하는 내에 맞게 로드 되는 항목의 현재 관리가 필요한 RAM 많이 사용할 수 있습니다.
+- 게임을 RAM에 들어가는 개수 보다 자세한 자산을 표시 해야 합니다. "World open" 게임에는 플레이어를 원활 하 게 탐색할 수 없는 로드 화면입니다 – 대규모 환경의 포함 되는 많습니다. 이 경우에 스트리밍 콘텐츠에 대 한 사용자 지정 시스템을 만들고 관리 메모리 사용 해야 합니다.
 
 사용자 지정 파일 형식을 사용자 지정 로딩 코드를 요구 하는 로드 시간에 처리를 해야 합니다.
 
@@ -109,25 +109,11 @@ ms.locfileid: "61382061"
 
 Xamarin.iOS 및 Xamarin.Android를 사용 하는 개발자가 다양 한 게임 개발에 도움이 되 게 제공 되는 기술입니다. 이 섹션에서는 가장 인기 있는 플랫폼 간 솔루션의 일부를 설명 합니다.
 
-### <a name="cocossharp"></a>CocosSharp
-
-CocosSharp는 Cocos 2D 게임 엔진의 오픈 소스, 플랫폼 간 버전입니다. 엔진은 Android, iOS, Mac OS X, Windows Desktop, Windows RT 및 Windows Phone 액세스할 수 있습니다.
-
-CocosSharp 2D 게임 개발에 대 한 간단한 프로그래머가 API에 중점을 둡니다. Reignite 취미 및 상용 프로젝트 모두에 대 한 CocosSharp 안 될 실용적인 기술로 만드는 2D 게임 개발의 인기도를 모바일 장치에서 게임의 증가 사용 하는 데 도움이 되었습니다. 소스 코드 또는.dll 파일 (NuGet을 통해 얻을 수 있습니다)으로 제공 됩니다 있지만; 시각적 편집기를 제공 하지 않습니다. 따라서 CocosSharp 엔진과 상호 작용이 프로그래밍에 대 한 지식이 필요합니다.
-
-CocosSharp 사용을 시작 하려면 체크 아웃 우리의 [CocosSharp 가이드](~/graphics-games/cocossharp/index.md)합니다.
-
-게임 화난 Ninjas CocosSharp를 사용 하 여 만들어지고 여러 플랫폼에 대해 이미 실행 중인 게임을 원하는 경우에 좋은 시작 지점이 될 수 있습니다.
-
-![](images/image3.png "게임 화난 Ninjas CocosSharp를 사용 하 여 만든")
-
-다운로드 하 고 자세한 정보를 받을 수는 [AngryNinjas Github 페이지](https://github.com/xamarin/AngryNinjas)합니다.
-
 ### <a name="monogame"></a>MonoGame
 
 MonoGame 오픈 소스, 크로스 플랫폼 버전의 Microsoft XNA API가 있습니다. IOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One 및 스위치에 대 한 게임을 만드는 MonoGame는 사용할 수 있습니다.
 
-CocosSharp를 달리 MonoGame 기술적 하지는 게임 엔진을 하지만 게임 개발 API 대신 됩니다. MonoGame 사용 하 여 작업 직접 게임 개체를 관리, 수동으로 개체를 그리기 및 카메라와 같은 일반적인 개체를 구현 해야 한다는 의미이 고 *장면 그래프* (게임 개체 간의 부모 자식 계층). 차이 이해 하려면 CocosSharp MonoGame는 기반으로 하는 것이 좋습니다. MonoGame 일반화 CocosSharp를 구성 하 고 게임 논리를 구현 하는 코드를 제공 하는 동안 플랫폼 특정 기술, 오디오, 그래픽 및 렌더링 등의 일부입니다.
+MonoGame는 기술적으로 하지는 게임 엔진을 하지만 게임 개발 API 대신 합니다. MonoGame 사용 하 여 작업 직접 게임 개체를 관리, 수동으로 개체를 그리기 및 카메라와 같은 일반적인 개체를 구현 해야 한다는 의미이 고 *장면 그래프* (게임 개체 간의 부모 자식 계층).
 
 MonoGame는 MonoGame 통한 작업 프로그래밍 기술 필요 하므로 표준 시각적 개발 환경을 제공 하지 않습니다.
 
@@ -161,6 +147,5 @@ UrhoSharp는 플랫폼 간 높은 수준의 3D 및 2D 엔진입니다 애니메�
 
 ## <a name="related-links"></a>관련 링크
 
-- [CocosSharp 가이드](~/graphics-games/cocossharp/index.md)
 - [MonoGame 가이드](~/graphics-games/monogame/index.md)
 - [UrhoSharp 가이드](~/graphics-games/urhosharp/index.md)

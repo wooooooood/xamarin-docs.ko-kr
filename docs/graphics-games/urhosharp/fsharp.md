@@ -6,12 +6,12 @@ ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99e8f8bf04465d0d61086139ba9889eae141207e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6269a7f2fa097136f492657d0ba7c6a1f056c38c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160598"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832327"
 ---
 # <a name="programming-urhosharp-with-f"></a>으로 UrhoSharp 프로그래밍F#
 
@@ -97,20 +97,13 @@ type AppDelegate () =
         true
 ```
 
-`ApplicationOptions.Default` 를 가로 모드로 응용 프로그램에 대 한 기본 옵션을 제공 합니다. 전달 `ApplicationOptions` 에 대 한 기본 생성자에 `Application` 하위 클래스입니다 (정의할 때 사용자에 게 유의 합니다 `HelloWorld` 클래스에서 줄 `inherit Application(o)` 기본 클래스 생성자를 호출). 
+`ApplicationOptions.Default` 를 가로 모드로 응용 프로그램에 대 한 기본 옵션을 제공 합니다. 전달 `ApplicationOptions` 에 대 한 기본 생성자에 `Application` 하위 클래스입니다 (정의할 때 사용자에 게 유의 합니다 `HelloWorld` 클래스에서 줄 `inherit Application(o)` 기본 클래스 생성자를 호출).
 
-`Run` 메서드의 여 `Application` 프로그램을 시작 합니다. 반환으로 정의 되어는 `int`에 파이프 될 수 있는 `ignore`합니다. 
+`Run` 메서드의 여 `Application` 프로그램을 시작 합니다. 반환으로 정의 되어는 `int`에 파이프 될 수 있는 `ignore`합니다.
 
-결과 프로그램이 같습니다.
+결과 프로그램은이 스크린샷과 같이 표시 됩니다.
 
-![](fsharp-images/helloworldfsharp.png "프로그램 결과와 같아야 합니다.")
-
-
-
-
-
-
-
+![결과 프로그램의 스크린 샷](fsharp-images/helloworldfsharp.png)
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e3256787c0bc0852275f663772b8a91a6825a0dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250711"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832434"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -51,7 +51,8 @@ Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트�
 </Application>
 ```
 
-**중요:** 단계를 따라야 [(아래) 테마 어셈블리를 로드](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
+> [!IMPORTANT]
+> 단계를 따라야 [(아래) 테마 어셈블리를 로드](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. XAML 페이지 추가
@@ -98,7 +99,8 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 삭제를 `Content` 요소로 바꿉니다는 `p:ListDataPage.DataSource` 데이터를 사용 하 여 페이지를 채우려면. 원격 Json 아래 예제에서는 데이터 파일 URL에서 로드 되 고 있습니다.
 
-**참고:** 미리 보기 *필요* 는 `StyleClass` 특성을 데이터 원본에 대 한 렌더링 힌트를 제공 합니다. 합니다 `StyleClass="Events"` 미리 보기에 사전 정의 된 스타일을 포함 하는 레이아웃을 가리킵니다 *하드 코드 된* 사용 하 고 JSON 데이터 원본과 일치 하도록 합니다.
+> [!NOTE]
+> 미리 보기 *필요* 는 `StyleClass` 특성을 데이터 원본에 대 한 렌더링 힌트를 제공 합니다. 합니다 `StyleClass="Events"` 미리 보기에 사전 정의 된 스타일을 포함 하는 레이아웃을 가리킵니다 *하드 코드 된* 사용 하 고 JSON 데이터 원본과 일치 하도록 합니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>

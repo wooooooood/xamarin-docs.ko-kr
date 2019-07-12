@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60951777"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832475"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Tvos 빠른 시작 가이드
 
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-사용 해야 `ViewDidLoad `와 같은 다른 메서드 대신 `Initialize`이므로 `ViewDidLoad ` 라고 *후* OS가 로드 하 고에서 사용자 인터페이스를 인스턴스화를 `.storyboard` 파일입니다. 전에 레이블 컨트롤에 액세스 하려고 할 경우는 `.storyboard` 얻게, 파일이 완전히 로드 되어 인스턴스화된는 `NullReferenceException` 오류 하면 레이블 컨트롤이 아직 만들 수는 없으므로 합니다.
+사용 해야 `ViewDidLoad`와 같은 다른 메서드 대신 `Initialize`이므로 `ViewDidLoad` 라고 *후* OS가 로드 하 고에서 사용자 인터페이스를 인스턴스화를 `.storyboard` 파일입니다. 전에 레이블 컨트롤에 액세스 하려고 할 경우는 `.storyboard` 얻게, 파일이 완전히 로드 되어 인스턴스화된는 `NullReferenceException` 오류 하면 레이블 컨트롤이 아직 만들 수는 없으므로 합니다.
 
 그런 다음 단추를 클릭 하면 사용자에 게 응답 하는 코드를 추가 해야 합니다. 다음 부분을 추가 클래스를 만들었습니다.
 

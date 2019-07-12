@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abd9fe85be412539fd51d0e6164c79ce346377a7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279257"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832099"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.iOS에서 3D 터치 소개
 
@@ -105,7 +105,7 @@ public override void TraitCollectionDidChange(UITraitCollection previousTraitCol
 
 ### <a name="handling-peek-and-pop"></a>처리 미리 보기 및 Pop
 
-3D 터치를 처리할 수 있는 iOS 장치에서 인스턴스에 사용할 수 있습니다는 `UIViewControllerPreviewingDelegate` 표시를 처리 하는 클래스 **피킹** 하 고 **Pop** 항목 세부 정보. 예를 들어 있으면 테이블 뷰 컨트롤러 호출 `MasterViewController ` 지원 하기 위해 다음 코드를 사용할 수 있습니다 **피킹** 하 고 **Pop**:
+3D 터치를 처리할 수 있는 iOS 장치에서 인스턴스에 사용할 수 있습니다는 `UIViewControllerPreviewingDelegate` 표시를 처리 하는 클래스 **피킹** 하 고 **Pop** 항목 세부 정보. 예를 들어 있으면 테이블 뷰 컨트롤러 호출 `MasterViewController` 지원 하기 위해 다음 코드를 사용할 수 있습니다 **피킹** 하 고 **Pop**:
 
 ```csharp
 using System;

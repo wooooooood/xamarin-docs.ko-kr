@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 327070f723aabf8d5d07f4f86580b69ffb5917a7
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: d80363cd339d5d3177ae063df2a20d7938f59169
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675279"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832396"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -67,7 +67,7 @@ Xamarin Profiler 응용 프로그램에서 프로 파일링 하는 방법을 개
 
 Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 사용할 수 있습니다.
 
- - (엔터프라이즈 라이선스를 사용 하 여 macOS) Mac 용 visual Studio
+- (엔터프라이즈 라이선스를 사용 하 여 macOS) Mac 용 visual Studio
     - Android
         - 장치 및 에뮬레이터
     - iOS
@@ -76,7 +76,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 사용할 수 있�
         - 장치 및 시뮬레이터
     - Mac
 
- - Visual Studio (만 **Enterprise** 버전)
+- Visual Studio (만 **Enterprise** 버전)
     - Android
         - 장치 및 에뮬레이터
     - iOS [실험적]
@@ -94,7 +94,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 사용할 수 있�
 
 앱을 성공적으로 프로 파일링 하기 전에 앱의 프로젝트 옵션에서 프로 파일링을 허용 해야 합니다.
 
- - iOS:
+- iOS:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -110,7 +110,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 사용할 수 있�
 
 -----
 
- - Android:
+- Android:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -216,7 +216,7 @@ Xamarin Profiler 아래 그림과 같이 5 개 섹션으로 구성 됩니다.
 
 개발자가 해당 응용 프로그램은 사용 하 여 하 고 메모리를 해제 하는 방법을 분석을 허용 하는 할당 방법의 다른 데이터 뷰 있습니다. 이러한 뷰는 다음과 같습니다.
 
- -   **할당** – 모든 할당의 목록이 표시 되며, 클래스 이름으로 그룹화 합니다. 클래스 및 메서드를 사용 하 고, 사용 빈도 및 사용 하는 클래스의 전체 크기의 훌륭한 개요를 제공 합니다. 클래스에 두 번 클릭 하면 할당 된 메모리가 표시 됩니다. 
+- **할당** – 모든 할당의 목록이 표시 되며, 클래스 이름으로 그룹화 합니다. 클래스 및 메서드를 사용 하 고, 사용 빈도 및 사용 하는 클래스의 전체 크기의 훌륭한 개요를 제공 합니다. 클래스에 두 번 클릭 하면 할당 된 메모리가 표시 됩니다. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -230,7 +230,7 @@ Xamarin Profiler 아래 그림과 같이 5 개 섹션으로 구성 됩니다.
 
 검사기 보기 할당에 대 한 루트에 스택 추적 및 경로 대 한 필터링 및 그룹화 개체, 할당 된 메모리에서 통계를 제공 및 상위 할당에 대 한 옵션 및 뷰를 제공 합니다.
 
- -   **호출 트리** –이 응용 프로그램에서 모든 스레드의 전체 호출 트리를 표시 하 고 각 노드에 할당 된 메모리에 대 한 정보를 포함 합니다. 요소는 목록에서 옵션을 선택 하면 모든 형제 노드 나타납니다 회색입니다. 트리를 확장 하거나를 드릴 다운 하려면 요소를 두 번 클릭 수 있습니다. 이 데이터 뷰를 표시할 때 표시 되는 방식을 변경 하려면 디스플레이 설정 검사기 보기를 사용할 수 있습니다. 현재 두 가지 옵션이 있습니다.
+- **호출 트리** –이 응용 프로그램에서 모든 스레드의 전체 호출 트리를 표시 하 고 각 노드에 할당 된 메모리에 대 한 정보를 포함 합니다. 요소는 목록에서 옵션을 선택 하면 모든 형제 노드 나타납니다 회색입니다. 트리를 확장 하거나를 드릴 다운 하려면 요소를 두 번 클릭 수 있습니다. 이 데이터 뷰를 표시할 때 표시 되는 방식을 변경 하려면 디스플레이 설정 검사기 보기를 사용할 수 있습니다. 현재 두 가지 옵션이 있습니다.
     1.  **호출 트리 반전** –이 위쪽에서 아래쪽 스택 추적을 고려 합니다. 이 편리 하 게 보기 옵션을 최하위 메서드를 나타냅니다. 여기서는 CPU가 된 시간을 할애 합니다.
     2.  **별도 스레드에서** –이 옵션은 스레드에 의해 호출 트리를 구성 합니다.
 
@@ -244,7 +244,7 @@ Xamarin Profiler 아래 그림과 같이 5 개 섹션으로 구성 됩니다.
 
 -----
 
- -   **스냅숏** – 메모리 스냅숏에 대 한 내용은이 창에 표시 됩니다. 라이브 응용 프로그램을 프로 파일링 하는 동안 이러한를 생성 하려면 클릭 합니다 _카메라_ 메모리 유지 하 고 출시를 참조 하려는 각 시점에서 도구 모음 단추입니다. 내부에서 발생 하는 상황을 탐색 하려면 각 스냅숏을 클릭할 수 있습니다. 앱을 프로 파일링 라이브 상태일 때 스냅숏을 수행할만 있습니다 note 합니다. 
+- **스냅숏** – 메모리 스냅숏에 대 한 내용은이 창에 표시 됩니다. 라이브 응용 프로그램을 프로 파일링 하는 동안 이러한를 생성 하려면 클릭 합니다 _카메라_ 메모리 유지 하 고 출시를 참조 하려는 각 시점에서 도구 모음 단추입니다. 내부에서 발생 하는 상황을 탐색 하려면 각 스냅숏을 클릭할 수 있습니다. 앱을 프로 파일링 라이브 상태일 때 스냅숏을 수행할만 있습니다 note 합니다. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

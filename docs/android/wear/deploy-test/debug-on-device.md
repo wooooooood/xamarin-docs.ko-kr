@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 232fcd1d369eba1daad170986f2e2c4c913a3649
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 816ec5c861b5889e1735eab6293ed10318c53644
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61307865"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831873"
 ---
 # <a name="debug-on-a-wear-device"></a>Wear 디바이스에서 디버그
 
@@ -77,7 +77,8 @@ Wear 장치에 Bluetooth 연결에 대 한 휴대폰을 준비 하려면 다음 
 
     4444 포트를 사용할 수 없는 경우 액세스 권한이 있는 다른 모든 사용 가능한 포트를 사용할 수 있습니다. 
 
-    **참고**: Mac 용 Visual Studio 또는 Visual Studio 다시 시작, 다시 Wear 장치로 연결을 설정 하려면 다음이 명령을 실행 해야 합니다.
+    > [!NOTE]
+    > Mac 용 Visual Studio 또는 Visual Studio 다시 시작, 다시 Wear 장치로 연결을 설정 하려면 다음이 명령을 실행 해야 합니다.
 
 5.  Wear 장치 메시지를 표시 하면 허용 하는지 확인 **ADB 디버깅**합니다. Android Wear 앱에서 변경 상태를 표시 됩니다.
 

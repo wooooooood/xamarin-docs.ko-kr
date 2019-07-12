@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 490331663d94a1e3130fc794a11a52acdacca014
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013394"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829753"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Xamarin.Android에 바인딩된 서비스
 
@@ -230,7 +230,7 @@ Android 바인딩 프로세스의 일부로 호출 합니다 `OnServiceConnected
 
 ## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>시작 하 고 명시적 의도 사용 하 여 서비스에 바인딩
 
-바인딩된 서비스를 사용 하는 클라이언트 (예: 활동) 구현 하는 개체 인스턴스화해야 `Android.Content.IServiceConnection` 호출을 `BindService` 메서드.` BindService` 돌아갑니다 `true` 서비스에 바인딩된 경우 `false` 없는 경우. `BindService` 메서드는 다음 세 개의 매개 변수를 사용합니다.
+바인딩된 서비스를 사용 하는 클라이언트 (예: 활동) 구현 하는 개체 인스턴스화해야 `Android.Content.IServiceConnection` 호출을 `BindService` 메서드. `BindService` 돌아갑니다 `true` 서비스에 바인딩된 경우 `false` 없는 경우. `BindService` 메서드는 다음 세 개의 매개 변수를 사용합니다.
 
 * **`Intent`**  &ndash; 의 의도에 연결 하는 서비스를 명시적으로 식별 해야 합니다.
 * **`IServiceConnection` 개체** &ndash; 이 개체가 바인딩된 서비스 시작 및 중지 하는 경우 클라이언트에 알리기 위해 콜백 메서드를 제공 하는 중개자입니다.

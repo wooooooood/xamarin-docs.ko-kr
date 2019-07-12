@@ -7,16 +7,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7e31f9ad46a04b648a6a1f24c075426f7d98a663
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: db0cb221ee18998fbb98449ae03c442c84bcfcd7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61228265"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829708"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가되었나요?
 
-**참고:** 이 가이드는 Android L 미리 보기에 대 한 원래 작성 되었습니다.
+> [!NOTE]
+> 이 가이드는 Android L 미리 보기에 대 한 원래 작성 되었습니다.
 
 -   [Xamarin.Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) Android L 미리 보기 지원이 추가 되었습니다.
 -   [Xamarin.Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) Android Lollipop 지원이 추가 되었습니다.

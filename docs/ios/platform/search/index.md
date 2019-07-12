@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87f7689a082c891bc199f4221e68ed7ab19adf85
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075666"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832715"
 ---
 # <a name="search-apis-in-xamarinios"></a>Xamarin.iOS의 검색 Api
 
@@ -55,9 +55,9 @@ _이 문서에서는 사용자가 정보 및 Xamarin.iOS 앱 내 기능을 검�
 
 Apple에 앱에 대 한 검색 인덱스를 제공 하는 콘텐츠 및 작업에 대 한 다음 제안 사항을 제공 합니다.
 
- - 모든 콘텐츠 표시, 생성 또는 사용자가 앱 내에서 큐 레이트 합니다.
- - 탐색 지점 및 앱 내 기능입니다.
- - 새 메시지, 콘텐츠 또는 다른 유형의 최근에 장치에 다운로드 된 앱에서 표시 되는 항목 등입니다.
+- 모든 콘텐츠 표시, 생성 또는 사용자가 앱 내에서 큐 레이트 합니다.
+- 탐색 지점 및 앱 내 기능입니다.
+- 새 메시지, 콘텐츠 또는 다른 유형의 최근에 장치에 다운로드 된 앱에서 표시 되는 항목 등입니다.
 
 ## <a name="app-search-enhancements"></a>앱 검색 기능 향상
 
@@ -78,7 +78,7 @@ iOS 10 시스템 사전에 존재 하는 유용한 정보를 자동으로 사용
 - 응용 프로그램 전환기
 - 잠금 화면
 - CarPlay
-- 맵
+- 지도
 - Siri 상호 작용
 - QuickType 제안 
 

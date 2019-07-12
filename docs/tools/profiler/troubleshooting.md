@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4a4376291ff56433c8cd9785989af2983a80c1c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160569"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832158"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 문제 해결
 
@@ -56,7 +56,7 @@ Windows에서에 저장 된 이러한 `%appdata%Local//Xamarin/Log/Xamarin.Profi
 아래 목록에는 일반적인 문제, 해결 방법 및 위한 팁과 요령을 Profiler를 사용 하 여 보여 줍니다.
 
 > [!NOTE]
-> **참고**: Visual Studio 해야 **Enterprise** mac 용 Windows 하거나 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
+> Visual Studio 해야 **Enterprise** mac 용 Windows 하거나 Visual Studio Enterprise 또는 Visual Studio에서이 기능을 잠금 해제를 위해 구독자
 
 #### <a name="i-cant-see-the-ios-profiler-option-or-it-is-greyed-out-visual-studio-and-visual-studio-for-mac"></a>IOS 프로파일러 옵션을 볼 수 없는 또는 그는 회색으로 [Visual Studio 및 Mac 용 Visual Studio]
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3a8872ae54d7b1efb55ee71286ca5ea479616e0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357044"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830161"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.iOS에서 NSUserActivity 사용 하 여 검색
 
@@ -27,14 +27,14 @@ IOS 9 접하는 `NSUserActivity` (공개적으로 및 개인적으로) 인덱싱
 
 다음 속성을 `NSUserActivity` 앱 검색을 지 원하는 데 사용 됩니다.
 
- - `EligibleForHandoff` - `true`를 핸드 오프 작업에서이 작업을 사용할 수 있습니다.
- - `EligibleForSearch` - `true`,이 작업을 장치에서 인덱스에 추가 하 고 검색 결과에 표시 합니다.
- - `EligibleForPublicIndexing` - `true`,이 작업을 Apple의 클라우드 기반 인덱스를 추가 하 고 iOS 장치에서 앱을 이미 설치 되지 않은 (검색)를 통해 사용자에 게 표시 합니다. 참조 된 [공용 검색 인덱싱](#public-search-indexing) 대 한 자세한 내용은 아래 섹션입니다.
- - `Title` – 작업에 대 한 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자 자체 제목 텍스트를 검색할 수도 있습니다.
- - `Keywords` -인덱싱된 되며 최종 사용자가 검색을 수행 하는 작업에 설명 하는 데 사용 하는 문자열의 배열이입니다.
- - `ContentAttributeSet` -입니다는 `CSSearchableItemAttributeSet` 추가 세부 정보에서 작업을 설명 하 고 검색 결과에 서식 있는 콘텐츠를 제공 하는 데 사용 합니다.
- - `ExpirationDate` –만 지정 된 날짜로 표시 됩니다 하기 위한 작업을 하려는 경우에 해당 날짜를 제공할 수 있습니다.
- - `WebpageURL` – 웹에서 활동을 볼 수 있습니다 하거나 앱 지 원하는 경우 Safari의 딥 링크를 보려면 이곳을 방문에 대 한 링크를 설정할 수 있습니다.
+- `EligibleForHandoff` - `true`를 핸드 오프 작업에서이 작업을 사용할 수 있습니다.
+- `EligibleForSearch` - `true`,이 작업을 장치에서 인덱스에 추가 하 고 검색 결과에 표시 합니다.
+- `EligibleForPublicIndexing` - `true`,이 작업을 Apple의 클라우드 기반 인덱스를 추가 하 고 iOS 장치에서 앱을 이미 설치 되지 않은 (검색)를 통해 사용자에 게 표시 합니다. 참조 된 [공용 검색 인덱싱](#public-search-indexing) 대 한 자세한 내용은 아래 섹션입니다.
+- `Title` – 작업에 대 한 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자 자체 제목 텍스트를 검색할 수도 있습니다.
+- `Keywords` -인덱싱된 되며 최종 사용자가 검색을 수행 하는 작업에 설명 하는 데 사용 하는 문자열의 배열이입니다.
+- `ContentAttributeSet` -입니다는 `CSSearchableItemAttributeSet` 추가 세부 정보에서 작업을 설명 하 고 검색 결과에 서식 있는 콘텐츠를 제공 하는 데 사용 합니다.
+- `ExpirationDate` –만 지정 된 날짜로 표시 됩니다 하기 위한 작업을 하려는 경우에 해당 날짜를 제공할 수 있습니다.
+- `WebpageURL` – 웹에서 활동을 볼 수 있습니다 하거나 앱 지 원하는 경우 Safari의 딥 링크를 보려면 이곳을 방문에 대 한 링크를 설정할 수 있습니다.
 
 ## <a name="nsuseractivity-quickstart"></a>NSUserActivity 빠른 시작
 

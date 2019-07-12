@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
-ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8ef12c8b0822f3d0486f584878f572a266b0d44e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61165592"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831870"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.iOS에서 CloudKit
 
@@ -114,7 +114,7 @@ iCloud.com.company-name.application-name
 
 컨테이너는, 기본적으로 바인딩된 일대일로 지정된 된 응용 프로그램, 응용 프로그램 간에 공유할 수 있습니다. 따라서 여러 응용 프로그램이 단일 컨테이너에 대해 조정할 수 있습니다. 단일 응용 프로그램을 여러 컨테이너도 통신할 수 있습니다.
 
-### <a name="databases"></a>Databases
+### <a name="databases"></a>데이터베이스
 
 ICloud 서버까지 모델 응용 프로그램의 데이터 모델 및 복제를 수행할 방법은 CloudKit의 주요 기능 중 하나입니다. 일부 정보는 만든 사용자를 위한, 다른 정보는 사용자 (예: 음식점 리뷰의 경우) 공개적으로 사용 하 여 생성 될 수 있는 공용 데이터 또는 정보를 개발자가 응용 프로그램에 대 한 게시 수 있습니다. 두 경우 모두 대상은 단일 사용자 없습니다 있지만 사람들의 커뮤니티 있습니다.
 
@@ -153,7 +153,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 |**데이터 형식**|공유 데이터|현재 사용자의 데이터|
 |**Quota**|개발자의 할당량에 대 한 고려|사용자의 할당량에 대 한 고려|
 |**기본 권한**|읽을 수 있는 전 세계|읽을 수 있는 사용자|
-|**사용 권한 편집**|레코드 클래스 수준을 통해 iCloud 대시보드 역할|N/A|
+|**사용 권한 편집**|레코드 클래스 수준을 통해 iCloud 대시보드 역할|해당 사항 없음|
 
 ### <a name="records"></a>레코드
 
@@ -227,7 +227,7 @@ await CloudManager.SaveAsync (newRecord);
 var recordID =  new CKRecordID("My Record");
 ```
 
-### <a name="references"></a>참조
+### <a name="references"></a>참조 항목
 
 참조는 지정된 된 데이터베이스 내에서 관련된 레코드 간의 관계를 제공합니다.
 
@@ -501,7 +501,7 @@ CloudKit 지원 다음과 같은 유형의 `NSPredicates` 쿼리로 작업 하�
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
     
- 6. CloudKit 지원 복합 사용 하 여 조인 조건자는 `AND` 연산자입니다.
+6. CloudKit 지원 복합 사용 하 여 조인 조건자는 `AND` 연산자입니다.
     
     ```
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
@@ -552,7 +552,7 @@ ThisApp.PublicDatabase.PerformQuery(query, CKRecordZone.DefaultRecordZone().Zone
 -  응용 프로그램 데이터베이스를 폴링하는 빈도에서 보는 정보는 제한 되어 있으므로 사용자 환경에 대 한 잘못 된 됩니다. 현재 사용자를 변경 하면 푸시 알림을 기대 합니다.
 
 
-### <a name="subscriptions"></a>알림 신청
+### <a name="subscriptions"></a>구독
 
 대규모의 대부분 정적 데이터 집합을 처리할 때 쿼리 클라이언트 장치에서 수행 해야, 클라이언트 대신 서버에서 실행 해야 합니다. 쿼리는 백그라운드에서 실행 해야 하 고 현재 장치 또는 동일한 데이터베이스를 변경 하는 다른 장치에서 모든 단일 레코드를 저장 한 후 실행 합니다.
 
@@ -731,7 +731,7 @@ PublicDatabase.FetchRecord(UserID, (record ,er) => {
 
 위의 코드에서는 위의 액세스 하는 ID 인 사용자에 대 한 사용자 레코드를 반환할 공용 데이터베이스를 묻습니다. 이 정보를 icloud와 서버에서에서 들어오는 이후 호출이 비동기 인지 및 오류 해결이 필요 합니다.
 
-#### <a name="privacy"></a>개인 정보 보호
+#### <a name="privacy"></a>개인 정보 취급 방침
 
 CloudKit 기본적으로 현재 로그온된 한 사용자의 개인 정보를 보호 하기 위해 디자인 되었습니다. 기본적으로 사용자에 대 한 개인 식별 정보가 없습니다 노출 됩니다. 응용 프로그램 사용자에 대 한 정보를 제한 해야 하는 경우도 있습니다.
 

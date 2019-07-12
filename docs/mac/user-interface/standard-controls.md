@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 4e236f2517482665406008d0b86af487e2d799dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61212506"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831903"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.Mac의 표준 컨트롤
 
@@ -93,7 +93,7 @@ Interface Builder에서 사용자 인터페이스를 만드는 방법에 대 한
 
 [![](standard-controls-images/edit04.png "제약 조건 설정")](standard-controls-images/edit04.png#lightbox)
 
-사용 하 여는 **빨간색 I-빔** 바깥쪽 둘레를 **Autoresizing** 상자 _스틱_ (x, y) 지정된 된 위치에 컨트롤입니다. 예를 들어: 
+사용 하 여는 **빨간색 I-빔** 바깥쪽 둘레를 **Autoresizing** 상자 _스틱_ (x, y) 지정된 된 위치에 컨트롤입니다. 예: 
 
 [![](standard-controls-images/edit05.png "제약 조건 편집")](standard-controls-images/edit05.png#lightbox)
 
@@ -257,7 +257,7 @@ AppKit.NSSplitView SplitView { get; set; }
 @property (nonatomic, retain) IBOutlet NSSplitView *SplitView;
 ```
 
-Mac 용 Visual Studio 변경 내용을 수신 대기 하는 알 수 있듯이 합니다 `.h` 파일을 선택한 후에 해당 변경 사항을 자동으로 동기화 `.designer.cs` 파일을 응용 프로그램에 노출 합니다. 또한 알 수 있습니다 `SplitViewController.designer.cs` Mac 용 Visual Studio를 수정 하지 않아도 되도록 부분 클래스는 `SplitViewController.cs ` 에서는 클래스에 대 한 모든 변경 내용을 덮어쓰는 것입니다.
+Mac 용 Visual Studio 변경 내용을 수신 대기 하는 알 수 있듯이 합니다 `.h` 파일을 선택한 후에 해당 변경 사항을 자동으로 동기화 `.designer.cs` 파일을 응용 프로그램에 노출 합니다. 또한 알 수 있습니다 `SplitViewController.designer.cs` Mac 용 Visual Studio를 수정 하지 않아도 되도록 부분 클래스는 `SplitViewController.cs` 에서는 클래스에 대 한 모든 변경 내용을 덮어쓰는 것입니다.
 
 일반적으로 필요가 엽니다는 `SplitViewController.designer.cs` 직접 보여드린 것 여기 교육 목적에 대 한 합니다.
 
@@ -483,7 +483,7 @@ AppKit 여러 유형의 사용자 인터페이스 디자인에 사용할 수 있
 
 [![](standard-controls-images/select01.png "선택 컨트롤 예")](standard-controls-images/select01.png#lightbox)
 
-선택 컨트롤으로 노출 하 여 사용자 상호 작용에 추적 하는 방법은 두 가지는 **동작**합니다. 예를 들어:
+선택 컨트롤으로 노출 하 여 사용자 상호 작용에 추적 하는 방법은 두 가지는 **동작**합니다. 예:
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
@@ -491,7 +491,7 @@ partial void SegmentButtonPressed (Foundation.NSObject sender) {
 }
 ```
 
-또는 연결 하 여는 **대리자** 에 `Activated` 이벤트입니다. 예를 들어:
+또는 연결 하 여는 **대리자** 에 `Activated` 이벤트입니다. 예:
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
@@ -536,13 +536,13 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-읽거나 표시기 컨트롤의 값을 설정 하려면 사용 된 `DoubleValue` 속성입니다. 예를 들어:
+읽거나 표시기 컨트롤의 값을 설정 하려면 사용 된 `DoubleValue` 속성입니다. 예:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-비활성 및 비동기 진행률 표시기를 애니메이션 효과 적용할 때 표시 합니다. 사용 된 `StartAnimation` 표시 될 때 애니메이션을 시작 하는 방법입니다. 예를 들어:
+비활성 및 비동기 진행률 표시기를 애니메이션 효과 적용할 때 표시 합니다. 사용 된 `StartAnimation` 표시 될 때 애니메이션을 시작 하는 방법입니다. 예:
 
 ```csharp
 Indeterminate.StartAnimation (this);
@@ -571,7 +571,7 @@ AppKit 여러 유형의 사용자 인터페이스 디자인에 사용할 수 있
 FeedbackLabel.StringValue = string.Format("User ID: {0}",UserField.StringValue);
 ```
 
-표시 하거나 숫자 값을 편집 하는 필드를 사용할 수 있습니다는 `IntValue` 속성입니다. 예를 들어:
+표시 하거나 숫자 값을 편집 하는 필드를 사용할 수 있습니다는 `IntValue` 속성입니다. 예:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61429251"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831694"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
@@ -68,7 +68,7 @@ A *Segue*, 또는 *Segue 개체*, 장면 사이 전환을 나타내는 데 iOS �
 
 -  **표시 / 푸시** – 푸시 segue를 탐색 스택으로 뷰 컨트롤러를 추가 합니다. 푸시를 시작 하 여 뷰 컨트롤러 스택에 추가 되는 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 가정 합니다. 와 동일한 작업을 수행이 `pushViewController` , 화면에서 데이터 간의 관계를 일부 경우에 일반적으로 사용 됩니다. Segue는 푸시를 사용 하 여 luxury 드릴 다운 보기 계층 구조를 탐색할 수 있도록 스택의 각 뷰에 추가한 제목 및 뒤로 단추를 사용 하 여 탐색 모음을 제공 합니다.
 -  **모달** – 모달 segue 표시 되는 애니메이션 전환 옵션을 사용 하 여 프로젝트에서 모든 두 뷰 컨트롤러 간의 관계를 만듭니다. 자식 뷰 컨트롤러 뷰로 상태로 전환 될 때 부모 뷰 컨트롤러를 완전히 숨기 됩니다. Segue는 푸시와 달리, 뒤로 단추를 추가 하는 segue는 모달을 사용 하 여 경우 `DismissViewController` 이전 뷰 컨트롤러를 반환 하기 위해 사용 해야 합니다.
--  **사용자 지정** – 모든 사용자 지정의 서브 클래스로 segue를 만들 수 있습니다 ` UIStoryboardSegue`합니다.
+-  **사용자 지정** – 모든 사용자 지정의 서브 클래스로 segue를 만들 수 있습니다 `UIStoryboardSegue`합니다.
 -  **해제** – 해제 segue 모달 또는 푸시를 통해 다시 이동할 수 segue – 예를 들어 모달 형식으로 표시 하는 뷰 컨트롤러를 해제 하 여 합니다. 이 외에도 하나 뿐 아니라를 통해 해제할 수 있습니다 하지만 일련의 푸시 및 모달 segue 돌아가서 단일 탐색 계층의 여러 단계 작업을 해제 합니다. 읽기 ios에서 segue 해제를 사용 하는 방법을 알아야 합니다 [Segue 해제 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) 작성법 합니다.
 -  **원본** – 원본 없는 segue는 초기 뷰 컨트롤러를 포함 하는 장면을 나타내며 하므로 먼저 표시 됩니다 사용자 뷰. Segue 아래 표시 된 것으로 표시 됩니다.  
 
@@ -82,7 +82,7 @@ Size 클래스를 사용 하 여 모든 응용 프로그램을 새 사용할지�
 
 [![](images/adaptivesegue.png "적응 Segue 드롭다운")](images/adaptivesegue.png#lightbox)
 
-|Segue|설명|
+|Segue|Description|
 |--- |--- |
 |표시|이 매우 비슷합니다 푸시 segue 있지만 화면의 콘텐츠를 고려 합니다.|
 |세부 정보를 표시 합니다.|앱 (예: iPad에서 분할 뷰 컨트롤러)에서 마스터 / 세부 뷰를 표시 하는 경우 콘텐츠 세부 정보 뷰에서 바뀝니다. 앱에서 마스터 또는 세부 정보를 표시 하는 경우 콘텐츠 보기 컨트롤러 스택의 최상위를를 바뀝니다.|

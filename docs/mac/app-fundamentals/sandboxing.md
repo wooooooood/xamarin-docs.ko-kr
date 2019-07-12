@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61237105"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830666"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.Mac 앱 샌드 박싱
 
@@ -460,7 +460,7 @@ Apple 서명된 된 버전의 Xamarin.Mac 앱이 실행 되도록 허용 하려�
 
 1. 터미널 앱을 열고 (에서 `/Applications/Utilities`).
 2. Apple 서명된 된 버전의 Xamarin.Mac 앱을 Finder 창을 엽니다.
-3. 형식 `asctl container acl add -file ` 터미널 창에서.
+3. 형식 `asctl container acl add -file` 터미널 창에서.
 4. Finder 창에서 Xamarin.Mac 앱의 아이콘을 끌어서 터미널 창에 놓습니다.
 5. 파일의 전체 경로 터미널에서 명령에 추가 됩니다.
 6. 키를 눌러 **Enter** 명령을 실행 합니다.

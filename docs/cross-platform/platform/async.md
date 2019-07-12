@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0a72dead1b6c001f1514f1a089df9b407eb90644
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cca147f0c5dd1a217f464ffbed2a1ad2618c9b80
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037378"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830190"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -23,7 +23,7 @@ Xamarin의 비동기 지원의 Mono 3.0을 기반으로 빌드되고 API 프로�
 
 이 문서는 새 비동기를 소개 하 고 await 키워드를 Xamarin.iOS 및 Xamarin.Android에서 비동기 메서드를 구현 하는 몇 가지 간단한 예제를 안내 합니다.
 
-자세한 설명은의 새로운 비동기 기능에 대 한 C# MSDN 설명서를 참조 하세요 (샘플 및 다른 사용 시나리오에 대 한 많은 포함)는 5 [Async 및 Await를 사용한 비동기 프로그래밍](https://msdn.microsoft.com/library/vstudio/hh191443.aspx)합니다.
+자세한 설명은의 새로운 비동기 기능에 대 한 C# 5 (샘플 및 다른 사용 시나리오에 대 한 많은 포함) 문서를 참조 [비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async)합니다.
 
 샘플 응용 프로그램 (주 스레드를 차단) 없이 간단한 비동기 웹 요청을 다운로드 한 html 및 문자 수를 사용 하 여 UI를 업데이트 합니다.
 
@@ -69,7 +69,7 @@ Await를 사용 하 여 호출자의 스레드 – 차단 하지 않습니다 �
 
 작업이 완료 되 면 코드에서 동일한 시점에 실행 메서드를 다시 시작 합니다. 여기에 (있는 경우)는 try – catch – finally 블록의 try 범위를 반환 합니다. await finally 블록 또는 catch에서 사용할 수 없습니다.
 
-에 대해 자세히 알아보세요 [MSDN의 await](https://msdn.microsoft.com/library/vstudio/hh156528.aspx)합니다.
+에 대해 자세히 알아보세요 [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) Microsoft Docs에서.
 
 ## <a name="exception-handling"></a>예외 처리
 
@@ -85,7 +85,7 @@ Await를 사용 하 여 호출자의 스레드 – 차단 하지 않습니다 �
 
 다음 태스크는 자체를 취소 하 고 취소를 승인.
 
-취소에 대 한 자세한 내용은 참조 하세요. [비동기 작업을 취소 하는 방법을](https://msdn.microsoft.com/library/vstudio/jj155761.aspx) MSDN에 있습니다.
+취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)을 참조하세요.
 
 ## <a name="example"></a>예제
 
@@ -146,7 +146,7 @@ GetButton.Click += async (sender, e) => {
 };
 ```
 
-메모:
+참고:
 
 -  익명 대리자가 async 키워드 접두사입니다.
 -  작업을 반환 하는 비동기 메서드 DownloadHomepage <int> sizeTask 변수에 저장 된 합니다.
@@ -201,10 +201,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 - [데이터 (iOS) (샘플)](https://developer.xamarin.com/samples/monotouch/Data/)
 - [HttpClient (iOS) (샘플)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) (샘플)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [웹 세미나: C#비동기 iOS 및 Android (비디오)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [비동기 비동기를 사용 하 여 프로그래밍 및 Await (MSDN)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx)
-- [(MSDN) 비동기 응용 프로그램 미세 조정](https://msdn.microsoft.com/library/vstudio/jj155761.aspx)
-- [Await, UI 및 교착 상태 및! 아 내! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
-- [(MSDN) 완료 될 때마다 작업을 처리 합니다.](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
+- [비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async)
+- [Async 애플리케이션 미세 조정(C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
+- [Await, UI 및 교착 상태 및! 아 내!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
+- [완료 될 때마다 작업을 처리)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [TAP(작업 기반 비동기 패턴)](https://msdn.microsoft.com/library/hh873175.aspx)
 - [에 비동기 C# 키워드를 도입 하는 방법에 대 한 5 (Eric Lippert의 블로그)-](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

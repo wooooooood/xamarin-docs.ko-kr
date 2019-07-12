@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: c900ab714fed2bb1e02367ba39ad3c5a0a76121e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60eaad98e2d5469e9c43e6b4ad889080e1aa63ba
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408351"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832059"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>watchOS에서 Xamarin 프로젝트 참조
 
@@ -26,16 +26,16 @@ WatchOS 솔루션의 세 프로젝트가 *자동으로 구성 된* 빌드하고 
 
 - **iPhone 앱** 참조가 **Watch 앱**
 
-![](project-references-images/catalog-reference1.png "iPhone 앱 Watch 앱 참조")
+  ![](project-references-images/catalog-reference1.png "iPhone 앱 Watch 앱 참조")
 
 - **앱을 시청** 참조가 **Watch 앱 확장**
 
-![](project-references-images/catalog-reference2.png "iPhone 앱 Watch 앱 참조")
+  ![](project-references-images/catalog-reference2.png "iPhone 앱 Watch 앱 참조")
 
 
- - 합니다 **Watch 앱 확장** 다른 프로젝트 중 하나를 참조 하지 않습니다
+- 합니다 **Watch 앱 확장** 다른 프로젝트 중 하나를 참조 하지 않습니다
 
-![](project-references-images/catalog-reference3.png "Watch 앱 확장 다른 프로젝트를 참조 하지 않습니다.")
+  ![](project-references-images/catalog-reference3.png "Watch 앱 확장 다른 프로젝트를 참조 하지 않습니다.")
 
 
 
@@ -44,17 +44,17 @@ WatchOS 솔루션의 세 프로젝트가 *자동으로 구성 된* 빌드하고 
 확인 해야 하면 **번들 식별자** 올바른지 합니다.
 세 프로젝트 모두 있어야 합니다 *동일한* 확장의 미리 정의 된 것 두 조사식 프로젝트 식별자 접두사 `watchkitextension` 및 `watchkitapp`같이 (에 대 한를 **WatchKitCatalog** 예):
 
- - Xamarin.iOS 통합 프로젝트 `com.xamarin.WatchKitCatalog`
+- Xamarin.iOS 통합 프로젝트 `com.xamarin.WatchKitCatalog`
 
- - WatchKit 확장 프로젝트 `com.xamarin.WatchKitCatalog.watchkitextension`
+- WatchKit 확장 프로젝트 `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Watch 앱 프로젝트 `com.xamarin.WatchKitCatalog.watchkitapp`
+- Watch 앱 프로젝트 `com.xamarin.WatchKitCatalog.watchkitapp`
 
 해야 이러한 **Info.plist** 설정이 올바릅니다.
 
- - Watch 앱 프로젝트의 `WKCompanionAppBundleIdentifier` 부모/컨테이너 앱의 번들 ID와 일치 (ie. iPhone에서 실행 되는 것);
+- Watch 앱 프로젝트의 `WKCompanionAppBundleIdentifier` 부모/컨테이너 앱의 번들 ID와 일치 (ie. iPhone에서 실행 되는 것);
 
- - 조사식 키트 확장 프로젝트의 **WKApp 번들 ID** Watch 앱 프로젝트의 번들 ID와 일치
+- 조사식 키트 확장 프로젝트의 **WKApp 번들 ID** Watch 앱 프로젝트의 번들 ID와 일치
 
 두 번 클릭 하 여 식별자를 편집할 수 있습니다 합니다 **Info.plist** 각 프로젝트에는 파일입니다.
 

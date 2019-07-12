@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: dfe1918d271946eb96d1f57d32c533a075f6d0bd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3dbb4d9132d5d94e4533704730e95002b5aec0be
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421959"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832266"
 ---
 # <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>다음 메시지가 표시되며 내 iOS 9 앱이 실패한 이유는 무엇인가요? System.Exception: Objective-C 개체를 마샬링하지 못했습니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "61421959"
 
 IOS 9에서에서 API 변경 필요 이제 기본 API로 관리 되지 않는 코드를 호출 하는 경우 콜백 생성자를 사용는 필요 합니다. 콜백 생성자 클래스를 추가 하려면 다음 줄을 사용 합니다. 
 
-`public foo (IntPtr handle) : base (handle) ` 
+`public foo (IntPtr handle) : base (handle)` 
 
 ### <a name="next-steps"></a>다음 단계
 

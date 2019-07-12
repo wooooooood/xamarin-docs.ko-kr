@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 362041efc5a19dfb70430054f3e4636d4fdfbd7e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c36b31e28011bea287903ee0681a316209abd22d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61021954"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829988"
 ---
 <a name="compatibility"></a>
 
@@ -84,7 +84,8 @@ Android는 알림을 정렬 하 고 지능적으로 표시 될 수 있도록 알
 
 -   **범주** &ndash; 시스템에 장치가 표시 되는 경우와 같은 다양 한 상황에서 알림 메시지를 처리 하는 방법에 알립니다 *방해 금지* 모드입니다.
 
-**참고:** **표시 유형** 하 고 **범주** 이전 버전의 Android에서 사용할 수 없는 되며 Android 5.0에서 도입 되었습니다. Android 8.0부터 [알림 채널](#notif-chan) 알림을 사용자에 게 표시 되는 방식을 제어 하는 데 사용 됩니다.
+> [!NOTE]
+> **표시 유형** 하 고 **범주** 이전 버전의 Android에서 사용할 수 없는 되며 Android 5.0에서 도입 되었습니다. Android 8.0부터 [알림 채널](#notif-chan) 알림을 사용자에 게 표시 되는 방식을 제어 하는 데 사용 됩니다.
 
 
 ### <a name="expanded-layouts"></a>확장 된 레이아웃
@@ -483,7 +484,7 @@ builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable
 
 이 확장 된 레이아웃 형식에는 요약 텍스트 알림의 맨 아래에 포함 됩니다. 최대 높이 *큰 텍스트* 알림은 256 dp 합니다.
 
-만들려면를 *큰 텍스트* 인스턴스화할 알림을 `NotificationCompat.Builder` 개체를 이전 처럼 로컬 폴더를 인스턴스화하고 추가 [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) 개체는 `NotificationCompat.Builder` 개체. 예를 들면 다음과 같습니다.
+만들려면를 *큰 텍스트* 인스턴스화할 알림을 `NotificationCompat.Builder` 개체를 이전 처럼 로컬 폴더를 인스턴스화하고 추가 [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) 개체는 `NotificationCompat.Builder` 개체. 다음 예를 참조하세요.
 
 ```csharp
 // Instantiate the Big Text style:
@@ -581,7 +582,7 @@ builder.SetStyle (picStyle);
 
 ![확장 예제 수신함 알림](local-notifications-images/21-inbox-expanded.png)
 
-만들려면를 *수신함* 인스턴스화할 알림을 `NotificationCompat.Builder` 이전 처럼 개체를 추가 [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) 개체는 `NotificationCompat.Builder`. 예를 들면 다음과 같습니다.
+만들려면를 *수신함* 인스턴스화할 알림을 `NotificationCompat.Builder` 이전 처럼 개체를 추가 [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) 개체는 `NotificationCompat.Builder`. 다음 예를 참조하세요.
 
 ```csharp
 // Instantiate the Inbox style:

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 52f4e33e051c99b7002120c055c79036828d60dd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 6e55b3b9b0f204992de684ba09f3d9ff2552ce00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658870"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832357"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스 및 Xamarin.Forms를 사용 하 여 사용자 인증
 
@@ -96,9 +96,9 @@ Azure App Service에서 리소스 토큰 broker를 호스트 하기 위한 프�
 1. Facebook 앱을 만듭니다. 자세한 내용은 [등록 및 앱 구성](https://developers.facebook.com/docs/apps/register) Facebook 개발자 센터에서.
 1. 앱에 Facebook 로그인 제품을 추가 합니다. 자세한 내용은 [응용 프로그램 또는 웹 사이트를 Facebook 로그인 추가](https://developers.facebook.com/docs/facebook-login) Facebook 개발자 센터에서.
 1. Facebook 로그인을 다음과 같이 구성 합니다.
-  - 클라이언트 OAuth 로그인을 사용 하도록 설정 합니다.
-  - 웹 OAuth 로그인을 사용 하도록 설정 합니다.
-  - 유효한 OAuth 리디렉션 URI는 App Service 웹 앱의 URI 사용 하 여 설정 `/.auth/login/facebook/callback` 추가 합니다.
+   - 클라이언트 OAuth 로그인을 사용 하도록 설정 합니다.
+   - 웹 OAuth 로그인을 사용 하도록 설정 합니다.
+   - 유효한 OAuth 리디렉션 URI는 App Service 웹 앱의 URI 사용 하 여 설정 `/.auth/login/facebook/callback` 추가 합니다.
 
   다음 스크린샷은 이러한 구성을 보여 줍니다.
 
@@ -114,12 +114,12 @@ App Service 간편한 인증을 구성 하기 위한 프로세스는 다음과 �
 
 1. Azure Portal의 App Service 웹 앱으로 이동 합니다.
 1. Azure Portal을 열고 인증 / 권한 부여 블레이드 다음 구성을 수행 합니다.
-  - App Service 인증 켜야 합니다.
-  - 요청이 인증 되지 않으면 수행할 동작을 설정 해야 **Facebook 로그인**합니다.
+    - App Service 인증 켜야 합니다.
+    - 요청이 인증 되지 않으면 수행할 동작을 설정 해야 **Facebook 로그인**합니다.
 
-  다음 스크린샷은 이러한 구성을 보여 줍니다.
+    다음 스크린샷은 이러한 구성을 보여 줍니다.
 
-  [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service 웹 앱 인증 설정")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service 웹 앱 인증 설정")
+    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service 웹 앱 인증 설정")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service 웹 앱 인증 설정")
 
 App Service 웹 앱 인증 흐름을 사용 하도록 설정 하려면 Facebook 응용 프로그램을 사용 하 여 통신에 구성 되어야 합니다. Facebook id 공급자를 선택 하 고 입력 하 여이 작업을 수행할 수 있습니다는 **앱 ID** 하 고 **App Secret** Facebook 개발자 센터에서 Facebook 앱 설정 값입니다. 자세한 내용은 [응용 프로그램에 추가 Facebook 정보](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)합니다.
 
@@ -131,10 +131,10 @@ Xamarin.Forms 샘플 응용 프로그램을 구성 하기 위한 프로세스는
 
 1. Xamarin.Forms 솔루션을 엽니다.
 1. 열기 `Constants.cs` 다음 상수 중 값을 업데이트 합니다.
-  - `EndpointUri` – 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 계정 URL 이어야 합니다.
-  - `DatabaseName` – 값에는 문서 데이터베이스의 이름 이어야 합니다.
-  - `CollectionName` – 값에는 문서 데이터베이스 컬렉션의 이름 이어야 합니다 (이 예제의 경우 `UserItems`).
-  - `ResourceTokenBrokerUrl` – 값은 App Service 계정의 [개요] 블레이드에서 리소스 토큰 broker 웹 앱의 URL 이어야 합니다.
+    - `EndpointUri` – 값은 Cosmos DB 계정의 키 블레이드에서 Cosmos DB 계정 URL 이어야 합니다.
+    - `DatabaseName` – 값에는 문서 데이터베이스의 이름 이어야 합니다.
+    - `CollectionName` – 값에는 문서 데이터베이스 컬렉션의 이름 이어야 합니다 (이 예제의 경우 `UserItems`).
+    - `ResourceTokenBrokerUrl` – 값은 App Service 계정의 [개요] 블레이드에서 리소스 토큰 broker 웹 앱의 URL 이어야 합니다.
 
 ## <a name="initiating-login"></a>시작 로그인
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 02aeedd5498c47950e2fbc0d218de05bc0bb3204
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298984"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831091"
 ---
 # <a name="unit-testing-enterprise-apps"></a>엔터프라이즈 앱을 테스트 하는 단위
 
@@ -170,7 +170,8 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 
 이 단위 테스트 하기 때문에 예외를 throw 합니다는 [ `ListView` ](xref:Xamarin.Forms.ListView) 컨트롤에 라는 이벤트가 없는 `OnItemTapped`합니다. 합니다 `Assert.Throws<T>` 메서드는 제네릭 메서드가 있는 `T` 예상 되는 예외의 형식입니다. 전달 된 인수를 `Assert.Throws<T>` 메서드는 예외를 throw 하는 람다 식입니다. 람다 식에서 발생 된 단위 테스트는 성공 하는 따라서는 `ArgumentException`합니다.
 
->💡 **팁**: 예외 메시지 문자열을 검사 하는 단위 테스트를 작성 하지 마세요. 예외 메시지 문자열은 시간이 지남에 따라 변경 될 수 있습니다 및 현재 상태에 의존 하는 단위 테스트 불안정으로 간주 하므로 합니다.
+> [!TIP]
+> 예외 메시지 문자열을 검사 하는 단위 테스트를 작성 하지 마세요. 예외 메시지 문자열은 시간이 지남에 따라 변경 될 수 있습니다 및 현재 상태에 의존 하는 단위 테스트 불안정으로 간주 하므로 합니다.
 
 ### <a name="testing-validation"></a>유효성 검사 테스트
 

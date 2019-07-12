@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 890c11908b11b18d6ca626820f1a835d817870da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827350"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829870"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.iOS에서 컬렉션 뷰
 
@@ -453,7 +453,7 @@ Ios 9, 컬렉션 보기 (`UICollectionView`) 지 원하는 새 기본 제스처 
 
 Ios 9에서 컬렉션 뷰를 다시 정렬를 추가 하는 가장 빠른 방법은 사용 하는 것을 `UICollectionViewController`입니다.
 컬렉션 뷰 컨트롤러를 얻었습니다를 `InstallsStandardGestureForInteractiveMovement` 표준에 추가 하는 속성인 *제스처 인식기* 지 원하는 컬렉션의 항목 순서를 변경 하려면 끌기.
-기본값 이므로 `true`를 구현 해야 합니다 `MoveItem` 메서드의 `UICollectionViewDataSource` 끌어서-순서 재지정을 지원 하기 위해 클래스. 예를 들어:
+기본값 이므로 `true`를 구현 해야 합니다 `MoveItem` 메서드의 `UICollectionViewDataSource` 끌어서-순서 재지정을 지원 하기 위해 클래스. 예:
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -739,10 +739,10 @@ public override void ViewDidLoad ()
 
 여기서 구현 하 고 끌기 작업을 제어 컬렉션 뷰에 추가 하는 몇 가지 새로운 메서드를 사용 하는 것:
 
- - `BeginInteractiveMovementForItem` -이동 작업의 시작을 표시 합니다.
- - `UpdateInteractiveMovementTargetPosition` -항목의 위치를 업데이트할 때 전송 됩니다.
- - `EndInteractiveMovement` -이동 하는 항목의 끝을 표시 합니다.
- - `CancelInteractiveMovement` -이동 작업을 취소 하는 사용자를 표시 합니다.
+- `BeginInteractiveMovementForItem` -이동 작업의 시작을 표시 합니다.
+- `UpdateInteractiveMovementTargetPosition` -항목의 위치를 업데이트할 때 전송 됩니다.
+- `EndInteractiveMovement` -이동 하는 항목의 끝을 표시 합니다.
+- `CancelInteractiveMovement` -이동 작업을 취소 하는 사용자를 표시 합니다.
 
 응용 프로그램을 실행 하는 경우에 끌기 작업의 기본 컬렉션 뷰를 사용 하 여 제공 되는 제스처 인식기를 끌어 처럼 정확 하 게 작동 합니다.
 
@@ -1217,78 +1217,78 @@ Xamarin.iOS 앱을 다시 실행 하는 경우 컬렉션 뷰는 이제 다음과
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionView` iOS 9에 대 한 클래스:
 
- - `BeginInteractiveMovementForItem` -끌기 작업의 시작을 표시 합니다.
- - `CancelInteractiveMovement` -컬렉션 알립니다 보기는 사용자가 끌기 작업을 취소 했습니다.
- - `EndInteractiveMovement` -컬렉션 알립니다 끌기 작업을 사용자가 보기.
- - `GetIndexPathsForVisibleSupplementaryElements` -반환 된 `indexPath` 머리글 또는 바닥글에서 컬렉션 보기 섹션의 합니다.
- - `GetSupplementaryView` – 지정 된 머리글 또는 바닥글을 반환합니다.
- - `GetVisibleSupplementaryViews` -모든 표시는 머리글 및 바닥글의 목록을 반환합니다.
- - `UpdateInteractiveMovementTargetPosition` -컬렉션 알립니다 보기는 사용자 이동 되었습니다는 이동 항목 끌기 작업 중입니다.
+- `BeginInteractiveMovementForItem` -끌기 작업의 시작을 표시 합니다.
+- `CancelInteractiveMovement` -컬렉션 알립니다 보기는 사용자가 끌기 작업을 취소 했습니다.
+- `EndInteractiveMovement` -컬렉션 알립니다 끌기 작업을 사용자가 보기.
+- `GetIndexPathsForVisibleSupplementaryElements` -반환 된 `indexPath` 머리글 또는 바닥글에서 컬렉션 보기 섹션의 합니다.
+- `GetSupplementaryView` – 지정 된 머리글 또는 바닥글을 반환합니다.
+- `GetVisibleSupplementaryViews` -모든 표시는 머리글 및 바닥글의 목록을 반환합니다.
+- `UpdateInteractiveMovementTargetPosition` -컬렉션 알립니다 보기는 사용자 이동 되었습니다는 이동 항목 끌기 작업 중입니다.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewController` iOS 9 클래스:
 
- - `InstallsStandardGestureForInteractiveMovement` - `true` 자동으로 다시 정렬 하려면 끌어서 지 원하는 새로운 제스처 인식기 사용 됩니다.
- - `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있으면 컬렉션 뷰에 알립니다.
- - `GetTargetContentOffset` – 지정 된 컬렉션 보기 항목의 오프셋을 가져오는 데 사용 합니다.
- - `GetTargetIndexPathForMove` – 가져옵니다는 `indexPath` 끌기 작업에 대 한 지정된 된 항목의 합니다.
- - `MoveItem` – 목록에서 지정된 된 항목의 순서를 이동 합니다.
+- `InstallsStandardGestureForInteractiveMovement` - `true` 자동으로 다시 정렬 하려면 끌어서 지 원하는 새로운 제스처 인식기 사용 됩니다.
+- `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있으면 컬렉션 뷰에 알립니다.
+- `GetTargetContentOffset` – 지정 된 컬렉션 보기 항목의 오프셋을 가져오는 데 사용 합니다.
+- `GetTargetIndexPathForMove` – 가져옵니다는 `indexPath` 끌기 작업에 대 한 지정된 된 항목의 합니다.
+- `MoveItem` – 목록에서 지정된 된 항목의 순서를 이동 합니다.
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewDataSource` iOS 9 클래스:
 
- - `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있으면 컬렉션 뷰에 알립니다.
- - `MoveItem` – 목록에서 지정된 된 항목의 순서를 이동 합니다.
+- `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있으면 컬렉션 뷰에 알립니다.
+- `MoveItem` – 목록에서 지정된 된 항목의 순서를 이동 합니다.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewDelegate` iOS 9 클래스:
 
- - `GetTargetContentOffset` – 지정 된 컬렉션 보기 항목의 오프셋을 가져오는 데 사용 합니다.
- - `GetTargetIndexPathForMove` – 가져옵니다는 `indexPath` 끌기 작업에 대 한 지정된 된 항목의 합니다.
+- `GetTargetContentOffset` – 지정 된 컬렉션 보기 항목의 오프셋을 가져오는 데 사용 합니다.
+- `GetTargetIndexPathForMove` – 가져옵니다는 `indexPath` 끌기 작업에 대 한 지정된 된 항목의 합니다.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewFlowLayout` iOS 9 클래스:
 
- - `SectionFootersPinToVisibleBounds` – 섹션 바닥글 표시 컬렉션 보기 경계에 부착 합니다.
- - `SectionHeadersPinToVisibleBounds` – 섹션 헤더 표시 컬렉션 보기 범위를 부착 합니다.
+- `SectionFootersPinToVisibleBounds` – 섹션 바닥글 표시 컬렉션 보기 경계에 부착 합니다.
+- `SectionHeadersPinToVisibleBounds` – 섹션 헤더 표시 컬렉션 보기 범위를 부착 합니다.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewLayout` iOS 9 클래스:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` – 끌기 완료 또는 취소 하는 경우 끌기 작업이 끝날 때 무효화 컨텍스트를 반환 합니다.
- - `GetInvalidationContextForInteractivelyMovingItems` -끌기 작업의 시작 부분에 무효화 컨텍스트를 반환합니다.
- - `GetLayoutAttributesForInteractivelyMovingItem` – 지정된 된 항목에 대 한 항목을 끄는 동안 레이아웃 특성을 가져옵니다.
- - `GetTargetIndexPathForInteractivelyMovingItem` -반환 된 `indexPath` 항목을 끌어 올 때 주어진된 지점에 있는 항목의 합니다.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` – 끌기 완료 또는 취소 하는 경우 끌기 작업이 끝날 때 무효화 컨텍스트를 반환 합니다.
+- `GetInvalidationContextForInteractivelyMovingItems` -끌기 작업의 시작 부분에 무효화 컨텍스트를 반환합니다.
+- `GetLayoutAttributesForInteractivelyMovingItem` – 지정된 된 항목에 대 한 항목을 끄는 동안 레이아웃 특성을 가져옵니다.
+- `GetTargetIndexPathForInteractivelyMovingItem` -반환 된 `indexPath` 항목을 끌어 올 때 주어진된 지점에 있는 항목의 합니다.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewLayoutAttributes` iOS 9 클래스:
 
- - `CollisionBoundingPath` -끌기 작업 중 두 항목의 충돌 경로 반환 합니다.
- - `CollisionBoundsType` – 충돌의 형식을 반환 합니다. (으로 `UIDynamicItemCollisionBoundsType`)는 끌기 작업 중 발생 합니다.
+- `CollisionBoundingPath` -끌기 작업 중 두 항목의 충돌 경로 반환 합니다.
+- `CollisionBoundsType` – 충돌의 형식을 반환 합니다. (으로 `UIDynamicItemCollisionBoundsType`)는 끌기 작업 중 발생 합니다.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewLayoutInvalidationContext` iOS 9 클래스:
 
- - `InteractiveMovementTarget` -끌기 작업의 대상 항목을 반환합니다.
- - `PreviousIndexPathsForInteractivelyMovingItems` – 반환 된 `indexPaths` 작업 순서를 변경 하려면 끌기에 관련 된 다른 항목의 합니다.
- - `TargetIndexPathsForInteractivelyMovingItems` -반환 된 `indexPaths` 항목 다시 정렬 하려면 끌기 작업의 결과로 다시 정렬 됩니다.
+- `InteractiveMovementTarget` -끌기 작업의 대상 항목을 반환합니다.
+- `PreviousIndexPathsForInteractivelyMovingItems` – 반환 된 `indexPaths` 작업 순서를 변경 하려면 끌기에 관련 된 다른 항목의 합니다.
+- `TargetIndexPathsForInteractivelyMovingItems` -반환 된 `indexPaths` 항목 다시 정렬 하려면 끌기 작업의 결과로 다시 정렬 됩니다.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 다음과 같이 변경 또는 추가 관리자에 게는 `UICollectionViewSource` iOS 9 클래스:
 
- - `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있으면 컬렉션 뷰에 알립니다.
- - `GetTargetContentOffset` – 다시 정렬 하려면 끌기 작업을 통해 이동할 항목의 오프셋을 반환 합니다.
- - `GetTargetIndexPathForMove` -반환 된 `indexPath` 다시 정렬 하려면 끌기 작업 중 이동할 항목의 합니다.
- - `MoveItem` – 목록에서 지정된 된 항목의 순서를 이동 합니다.
+- `CanMoveItem` – 지정 된 항목을 끌어서 다시 정렬할 수 있으면 컬렉션 뷰에 알립니다.
+- `GetTargetContentOffset` – 다시 정렬 하려면 끌기 작업을 통해 이동할 항목의 오프셋을 반환 합니다.
+- `GetTargetIndexPathForMove` -반환 된 `indexPath` 다시 정렬 하려면 끌기 작업 중 이동할 항목의 합니다.
+- `MoveItem` – 목록에서 지정된 된 항목의 순서를 이동 합니다.
 
 ## <a name="summary"></a>요약
 

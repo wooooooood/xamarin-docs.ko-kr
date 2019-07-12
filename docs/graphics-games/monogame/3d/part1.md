@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: d9c73dfcee6321ecb314ca229db407c6d0438977
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4a72effc85657b4722b17eae486e81db5992a1da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342594"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832251"
 ---
 # <a name="using-the-model-class"></a>모델 클래스를 사용 하 여
 
@@ -44,7 +44,7 @@ MonoGame API를 포함 한 `Model` 렌더링을 수행 하는 콘텐츠 파일�
 
 .Xnb 파일 형식으로 작성된 된 콘텐츠에 대 한 표준 확장명입니다 (하 여 만든 콘텐츠를 [MonoGame 파이프라인 도구](http://www.monogame.net/documentation/?page=Pipeline)). 모든 기본 제공된 콘텐츠는 소스 파일 (.fbx 파일이 모델의 경우) 및 대상 파일 (.xnb 파일)에 있습니다. .Fbx 형식은 같은 응용 프로그램에서 만들 수 있는 일반적인 3D 모델 형식을 [Maya](http://www.autodesk.com/products/maya/overview) 하 고 [Blender](http://www.blender.org/)합니다. 
 
-`Model` 3D 기 하 도형 데이터가 포함 된 디스크에서.xnb 파일을 로드 하 여 클래스를 생성할 수 있습니다.   이.xnb 파일 콘텐츠는 프로젝트를 통해 생성 됩니다. Monogame 템플릿 우리의 콘텐츠 폴더 (사용 하 여 확장.mgcp) 콘텐츠 프로젝트를 자동으로 포함 합니다. MonoGame 파이프라인 도구에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](~/graphics-games/cocossharp/content-pipeline/index.md)합니다.
+`Model` 3D 기 하 도형 데이터가 포함 된 디스크에서.xnb 파일을 로드 하 여 클래스를 생성할 수 있습니다.   이.xnb 파일 콘텐츠는 프로젝트를 통해 생성 됩니다. Monogame 템플릿 우리의 콘텐츠 폴더 (사용 하 여 확장.mgcp) 콘텐츠 프로젝트를 자동으로 포함 합니다. MonoGame 파이프라인 도구에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)합니다.
 
 MonoGame 파이프라인을 사용 하 여 생략 하겠습니다이 가이드에 대 한 도구를 사용 합니다. 여기에 포함 된 XNB 파일입니다. 유의 합니다. XNB 파일 플랫폼 마다 다를 사용 하는 어떤 플랫폼에 대 한 올바른 XNB 파일 집합을 사용 해야 합니다.
 

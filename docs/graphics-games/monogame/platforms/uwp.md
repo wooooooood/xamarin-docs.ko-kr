@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7db73759cb4a1b1a8d7fe40426b03a163c3ebdc4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161255"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831057"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>MonoGame UWP 프로젝트 만들기
 
@@ -90,9 +90,9 @@ MonoGame Xbox One에 대 한 안전 영역 고려 템플릿과 흰색 테두리�
 
 ## <a name="referencing-content-in-uwp-projects"></a>UWP 프로젝트의 참조 콘텐츠
 
-파일에서 직접 또는 MonoGame 프로젝트에서 콘텐츠를 참조할 수 있습니다 합니다 [MonoGame 콘텐츠 파이프라인](~/graphics-games/cocossharp/content-pipeline/index.md)합니다. 작은 게임 프로젝트 파일에서 로드 하는 단순성에서 이점을 얻을 수 있습니다. 대규모 프로젝트를 콘텐츠 파이프라인을 사용 하 여 콘텐츠 크기를 줄이고 로드 시간이 최적화를 활용 합니다. Xbox 360에서 XNA와 달리는 `System.IO.File` 클래스는 Xbox One UWP 앱에서 사용할 수 있습니다.
+파일에서 직접 또는 MonoGame 프로젝트에서 콘텐츠를 참조할 수 있습니다 합니다 [MonoGame 콘텐츠 파이프라인](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)합니다. 작은 게임 프로젝트 파일에서 로드 하는 단순성에서 이점을 얻을 수 있습니다. 대규모 프로젝트를 콘텐츠 파이프라인을 사용 하 여 콘텐츠 크기를 줄이고 로드 시간이 최적화를 활용 합니다. Xbox 360에서 XNA와 달리는 `System.IO.File` 클래스는 Xbox One UWP 앱에서 사용할 수 있습니다.
 
-콘텐츠 파이프라인을 사용 하 여 콘텐츠를 로드에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](~/graphics-games/cocossharp/content-pipeline/index.md)합니다.
+콘텐츠 파이프라인을 사용 하 여 콘텐츠를 로드에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)합니다.
 
 ### <a name="loading-content-from-file"></a>파일에서 콘텐츠를 로드합니다.
 

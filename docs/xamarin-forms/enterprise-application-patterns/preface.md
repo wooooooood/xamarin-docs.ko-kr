@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 82f1455ff5e5ac06b50664e1d4d533d4964b7a0e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298886"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831123"
 ---
 # <a name="preface-to-enterprise-app-development"></a>엔터프라이즈 앱 개발에는 접두사
 
@@ -26,7 +26,7 @@ ms.locfileid: "61298886"
 
 이 가이드의 목적은 Xamarin.Forms를 사용 하 여 이미 익숙한 독자를 하는 것입니다. Xamarin.Forms에 대 한 자세한 소개를 참조 하세요. 합니다 [Xamarin.Forms 설명서](~/xamarin-forms/index.yml), 및 [Creating Mobile Apps with Xamarin.Forms](https://aka.ms/xamebook)합니다.
 
-이 가이드는 보완 [.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처](https://aka.ms/microservicesebook), 개발 및 컨테이너 화 된 마이크로 서비스 배포에 대해 중점적으로 설명 합니다. 다른 가이드를 읽어 볼 가치가 [Architecting 및 최신 웹 응용 프로그램 개발 ASP.NET Core 및 Microsoft Azure를 사용 하 여](http://aka.ms/WebAppEbook), [컨테이너 화 된 Docker 응용 프로그램 수명 주기를 Microsoft 플랫폼 및 도구](http://aka.ms/dockerlifecycleebook), 및 [모바일 앱 개발을 위한 Microsoft 플랫폼 및 도구](http://aka.ms/MobAppDev/StndPDF)합니다.
+이 가이드는 보완 [.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처](https://aka.ms/microservicesebook), 개발 및 컨테이너 화 된 마이크로 서비스 배포에 대해 중점적으로 설명 합니다. 다른 가이드를 읽어 볼 가치가 [Architecting 및 최신 웹 응용 프로그램 개발 ASP.NET Core 및 Microsoft Azure를 사용 하 여](https://aka.ms/WebAppEbook), [컨테이너 화 된 Docker 응용 프로그램 수명 주기를 Microsoft 플랫폼 및 도구](https://aka.ms/dockerlifecycleebook), 및 [모바일 앱 개발을 위한 Microsoft 플랫폼 및 도구](https://aka.ms/MobAppDev/StndPDF)합니다.
 
 ## <a name="who-should-use-this-guide"></a>누가이 가이드를 사용 해야 합니까
 

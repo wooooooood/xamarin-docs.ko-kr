@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d5c16b034b07d3e9875412f041c16b293557438a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 36a4c6b66f7f724bfccc3c2a3b81c17f1d34a9c5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211868"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829729"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>기존 Xamarin.Forms 앱 업데이트
 
@@ -30,7 +30,7 @@ _기존 Xamarin.Forms 앱에 통합 API를 사용 및 업데이트 버전 1.3.1 
 
 2. Xamarin.Forms 버전 1.3 전체 솔루션을 업데이트 합니다.
 
-    1. 1.3.1 Xamarin.Forms NuGet 패키지를 설치 합니다.
+    1. 1\.3.1 Xamarin.Forms NuGet 패키지를 설치 합니다.
 
     2. 업데이트 된 `App` 공유 코드에는 클래스입니다.
 
@@ -52,10 +52,10 @@ IOS 프로젝트에는 클릭을 선택 하면 선택한 **프로젝트 > Xamari
 
 이 자동으로:
 
- - 프로젝트 유형을 변경 하 여 통합 64 비트 API를 지원 합니다.
- - 프레임 워크를 변경할 **Xamarin.iOS** (이전 교체 **monotouch** 참조).
- - 네임 스페이스 참조를 제거 하는 코드에서 변경 된 `MonoTouch` 접두사입니다.
- - 업데이트를 **csproj** Unified API에 대 한 올바른 빌드 대상을 사용 하는 파일입니다.
+- 프로젝트 유형을 변경 하 여 통합 64 비트 API를 지원 합니다.
+- 프레임 워크를 변경할 **Xamarin.iOS** (이전 교체 **monotouch** 참조).
+- 네임 스페이스 참조를 제거 하는 코드에서 변경 된 `MonoTouch` 접두사입니다.
+- 업데이트를 **csproj** Unified API에 대 한 올바른 빌드 대상을 사용 하는 파일입니다.
 
 **정리** 하 고 **빌드** 프로젝트 문제를 해결 하려면 다른 오류가 없는지 확인 합니다. 추가 작업이 없으므로 해야 합니다. 이러한 단계에 자세히 설명 되어는 [Unified API 문서](~/cross-platform/macios/unified/updating-ios-apps.md)합니다.
 
@@ -65,30 +65,31 @@ IOS 프로젝트에는 클릭을 선택 하면 선택한 **프로젝트 > Xamari
 
 ## <a name="2-xamarinforms-131-update"></a>2. Xamarin.Forms 1.3.1 업데이트
 
-IOS 앱을 통합 API로 업데이트 후 솔루션의 나머지 부분에서는 Xamarin.Forms 버전 1.3.1 업데이트할 해야 합니다. 여기에는 다음이 포함됩니다.
+IOS 앱을 통합 API로 업데이트 후 솔루션의 나머지 부분에서는 Xamarin.Forms 버전 1.3.1 업데이트할 해야 합니다. 다음을 포함합니다.
 
- - 각 프로젝트에 Xamarin.Forms NuGet 패키지를 업데이트 합니다.
- - 새 Xamarin.Forms를 사용 하도록 코드를 변경 `Application`, `FormsApplicationDelegate` (iOS) `FormsApplicationActivity` (Android) 및 `FormsApplicationPage` (Windows Phone) 클래스입니다.
+- 각 프로젝트에 Xamarin.Forms NuGet 패키지를 업데이트 합니다.
+- 새 Xamarin.Forms를 사용 하도록 코드를 변경 `Application`, `FormsApplicationDelegate` (iOS) `FormsApplicationActivity` (Android) 및 `FormsApplicationPage` (Windows Phone) 클래스입니다.
 
 이러한 단계는 아래 설명 되어 있습니다.
 
 ### <a name="21-update-nuget-in-all-projects"></a>2.1 모든 프로젝트에서 NuGet을 업데이트
 
-1.3.1 Xamarin.Forms 업데이트 솔루션의 모든 프로젝트에 대 한 NuGet 패키지 관리자를 사용 하 여 시험판: PCL (있는 경우), iOS, Android 및 Windows Phone 것이 좋습니다 했는지 **삭제 하 고 다시 추가** Xamarin.Forms NuGet 패키지를 버전 1.3으로 업데이트 합니다.
+1\.3.1 Xamarin.Forms 업데이트 솔루션의 모든 프로젝트에 대 한 NuGet 패키지 관리자를 사용 하 여 시험판: PCL (있는 경우), iOS, Android 및 Windows Phone 것이 좋습니다 했는지 **삭제 하 고 다시 추가** Xamarin.Forms NuGet 패키지를 버전 1.3으로 업데이트 합니다.
 
-**참고:** 현재는 Xamarin.Forms 버전 1.3.1 *시험판*합니다. 즉, 선택 해야 합니다 **시험판** 최신 시험판 버전을 보려면 (눈금 상자를 Mac 용 Visual Studio에서) 또는 드롭 다운-목록 Visual Studio에서 NuGet 옵션.
+> [!NOTE]
+> 현재는 Xamarin.Forms 버전 1.3.1 *시험판*합니다. 즉, 선택 해야 합니다 **시험판** 최신 시험판 버전을 보려면 (눈금 상자를 Mac 용 Visual Studio에서) 또는 드롭 다운-목록 Visual Studio에서 NuGet 옵션.
 
 > [!IMPORTANT]
 > Visual Studio를 사용 하는 최신 버전의 NuGet 패키지 관리자를 설치 했는지 확인 합니다. 이전 버전의 Visual Studio에서 NuGet 통합 버전 1.3.1 Xamarin.Forms에 올바르게 설치 되지 않습니다. 로 **도구 > 확장 및 업데이트 하는 중...**  를 클릭 합니다 **설치 됨** 있는지 여부를 확인 하려면 목록을 **Visual Studio 용 NuGet 패키지 관리자** 이상이 2.8.5 버전. 이전 인 경우 클릭 합니다 **업데이트** 최신 버전을 다운로드 하는 목록입니다.
 
-1.3.1 Xamarin.Forms에 NuGet 패키지를 업데이트 한 후 새 업그레이드할 각 프로젝트에서 다음과 같이 변경할 `Xamarin.Forms.Application` 클래스입니다.
+1\.3.1 Xamarin.Forms에 NuGet 패키지를 업데이트 한 후 새 업그레이드할 각 프로젝트에서 다음과 같이 변경할 `Xamarin.Forms.Application` 클래스입니다.
 
 ### <a name="22-portable-class-library-or-shared-project"></a>2.2 이식 가능한 클래스 라이브러리 (또는 공유 프로젝트)
 
 변경 된 **App.cs** 파일 되도록 합니다.
 
- - 합니다 `App` 클래스에서 이제 상속 `Application`합니다.
- - `MainPage` 속성을 표시 하려는 첫 번째 콘텐츠 페이지로 설정 합니다.
+- 합니다 `App` 클래스에서 이제 상속 `Application`합니다.
+- `MainPage` 속성을 표시 하려는 첫 번째 콘텐츠 페이지로 설정 합니다.
 
 ```csharp
 public class App : Application // superclass new in 1.3
@@ -110,8 +111,8 @@ public class App : Application // superclass new in 1.3
 
 변경 된 **AppDelegate.cs** 파일 되도록 합니다.
 
- - 클래스에서 상속 `FormsApplicationDelegate` (대신 `UIApplicationDelegate` 이전).
- - `LoadApplication` 새 인스턴스를 사용 하 여 라고 `App`합니다.
+- 클래스에서 상속 `FormsApplicationDelegate` (대신 `UIApplicationDelegate` 이전).
+- `LoadApplication` 새 인스턴스를 사용 하 여 라고 `App`합니다.
 
 ```csharp
 [Register ("AppDelegate")]
@@ -133,8 +134,8 @@ public partial class AppDelegate :
 
 변경 된 **MainActivity.cs** 파일 되도록 합니다.
 
- - 클래스에서 상속 `FormsApplicationActivity` (대신 `FormsActivity` 이전).
- - `LoadApplication` 새 인스턴스를 사용 하 여 호출 됩니다. `App`
+- 클래스에서 상속 `FormsApplicationActivity` (대신 `FormsActivity` 이전).
+- `LoadApplication` 새 인스턴스를 사용 하 여 호출 됩니다. `App`
 
 ```csharp
 [Activity (Label = "YOURAPPNAM", Icon = "@drawable/icon", MainLauncher = true,
@@ -159,8 +160,8 @@ public class MainActivity :
 
 변경 된 **MainPage.xaml** 파일 되도록 합니다.
 
- - 루트 XAML 요소 여야 `winPhone:FormsApplicationPage`합니다.
- - 합니다 `xmlns:phone` 특성이 *변경* 를 `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- 루트 XAML 요소 여야 `winPhone:FormsApplicationPage`합니다.
+- 합니다 `xmlns:phone` 특성이 *변경* 를 `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 업데이트 된 예는 아래-(특성의 나머지는 동일 함) 이러한 작업을 편집만 있어야 합니다.
 
@@ -174,8 +175,8 @@ public class MainActivity :
 
 변경 된 **MainPage.xaml.cs** 파일 되도록 합니다.
 
- - 클래스에서 상속 `FormsApplicationPage` (대신 `PhoneApplicationPage` 이전).
- - `LoadApplication` Xamarin.Forms의 새 인스턴스를 사용 하 여 라고 `App` 클래스입니다. Windows Phone 있으므로이 참조를 정규화 해야 자신의 `App` 이미 정의 된 클래스입니다.
+- 클래스에서 상속 `FormsApplicationPage` (대신 `PhoneApplicationPage` 이전).
+- `LoadApplication` Xamarin.Forms의 새 인스턴스를 사용 하 여 라고 `App` 클래스입니다. Windows Phone 있으므로이 참조를 정규화 해야 자신의 `App` 이미 정의 된 클래스입니다.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
@@ -195,7 +196,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 경우에 따라 Xamarin.Forms NuGet 패키지를 업데이트 한 후 다음과 유사한 오류가 표시 됩니다. NuGet 업데이트 프로그램에서 이전 버전에 대 한 참조를 완전히 제거 하지 않습니다 하는 경우 발생 하 **csproj** 파일입니다.
 
->YOUR\_PROJECT.csproj: 오류: 이 프로젝트는이 컴퓨터에 누락 된 NuGet 패키지를 참조 합니다. 다운로드 하려면 NuGet 패키지 복원 사용 하도록 설정 합니다.  자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105을 참조하세요. 누락 된 파일은... /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets 합니다. (사용자\_프로젝트)
+>YOUR\_PROJECT.csproj: 오류: 이 프로젝트는이 컴퓨터에 누락 된 NuGet 패키지를 참조 합니다. 다운로드 하려면 NuGet 패키지 복원 사용 하도록 설정 합니다.  자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105 을 참조하세요. 누락 된 파일은... /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets 합니다. (사용자\_프로젝트)
 
 이러한 오류를 해결 하려면 엽니다는 **csproj** 텍스트 편집기에서 파일을 검색할 `<Target` 아래에 표시 된 요소와 같은 이전 버전에서는 Xamarin.Forms의를 참조 하는 요소입니다. 이 전체 요소를 수동으로 삭제 해야 합니다 **csproj** 파일 및 변경 내용을 저장 합니다.
 

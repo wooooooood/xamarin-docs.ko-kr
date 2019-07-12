@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: d59cac9403a244ce553d84e0590b8a9c3d4d2f30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 78646a0a420820218a8c61ea34ecc5db4438a91d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365875"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832731"
 ---
 # <a name="photokit-in-xamarinios"></a>Xamarin.iOS에서 PhotoKit
 
@@ -71,9 +71,9 @@ PhotoKit 쉽게 모델 데이터를 쿼리 하는 다양 한 인출 메서드를
     
 쓸 실제로 변경 내용을 다시 응용 프로그램에서 변경 요청을 만들 수 있습니다. 각 모델 클래스는 연결 된 변경 요청 클래스를 있습니다. 예를 들어를 PHAsset를 변경 하려면 PHAssetChangeRequest를 만듭니다. 사진 라이브러리에 다시 작성 되 고 위의 그림과 같이 관찰자에 게 전송 하는 변경을 수행 하는 단계는.
 
--   편집 작업을 수행 합니다.
--   PHContentEditingOutput 인스턴스로 필터링 된 이미지 데이터를 저장 합니다.
--   변경 양식을 편집 출력을 게시 하는 변경 요청을 확인 합니다.
+- 편집 작업을 수행 합니다.
+- PHContentEditingOutput 인스턴스로 필터링 된 이미지 데이터를 저장 합니다.
+- 변경 양식을 편집 출력을 게시 하는 변경 요청을 확인 합니다.
 
 Core 이미지 noir 필터를 적용 하는 이미지를 다시 변경 내용을 기록 하는 예제는 다음과 같습니다.
 

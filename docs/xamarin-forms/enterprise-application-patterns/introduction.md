@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 9deb685c92092ceb0e1c775a1e53ac1bce5a4a57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fbb4047b95fd70f829cd79e4ea26b2958273297
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61299994"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831176"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
 
@@ -34,7 +34,7 @@ ms.locfileid: "61299994"
 -   다시 사용 하 고 인증 및 데이터 액세스와 같은 앱의 가로 기능 사이의 세로 기능도 앱 특정 비즈니스 기능 문제를 깔끔하게 분리 승격 합니다. 따라서, 종속성 및 보다 쉽게 관리 하도록 앱 구성 요소 간의 상호 작용 합니다.
 -   서로 다른 개인 또는 팀에 특정 작업 또는 전문 지식을 따라 기능 부분에 집중할 수 있도록 하 여 역할 분리를 유지할 수 있습니다. 특히 사용자 인터페이스와 앱의 비즈니스 논리 간의 명확한 분리를 제공합니다.
 
-그러나 불연속, 느슨하게 결합 된 구성 요소를 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 여기에는 다음이 포함됩니다.
+그러나 불연속, 느슨하게 결합 된 구성 요소를 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 이러한 개체는 다음과 같습니다.
 
 -   사용자 인터페이스 컨트롤 사이의 논리는 문제를 깔끔하게 분리를 제공 하는 방법을 결정 합니다. 사용자 인터페이스 컨트롤 및 해당 하는 논리, 앱 자세히 간에 문제를 깔끔하게 분리를 만들려면 비즈니스 논리 코드 숨김 파일에 배치할 것인지 여부는 Xamarin.Forms 엔터프라이즈 앱을 만들 때 가장 중요 한 결정 중 하나 관리 하 고 테스트할 수 있습니다. 자세한 내용은 [-Model-view-viewmodel](~/xamarin-forms/enterprise-application-patterns/mvvm.md)합니다.
 -   종속성 주입 컨테이너를 사용할지 여부를 결정 합니다. 종속성 주입 컨테이너 종속성 주입에서 해당 종속성을 사용 하 여 클래스의 인스턴스를 생성 하는 기능을 제공 하 여 개체 간의 결합을 줄이고 컨테이너의 구성에 따라 해당 수명을 관리 합니다. 자세한 내용은 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)합니다.
@@ -72,7 +72,7 @@ ms.locfileid: "61299994"
 -   단일 페이지 응용 프로그램 (SPA) Typescript 및 Angular 2를 사용 하 여 개발 합니다. 이 방법은 웹 응용 프로그램에 대 한 각 작업을 사용 하 여 서버에 대 한 왕복 작업이 수행 피할 수 있습니다.
 -   IOS, Android 및 Windows 플랫폼 (UWP (유니버설)을 지 원하는 Xamarin.Forms를 사용 하 여 모바일 앱을 개발 합니다.
 
-웹 응용 프로그램에 대 한 정보를 참조 하세요 [Architecting 및 최신 웹 응용 프로그램 개발 ASP.NET Core 및 Microsoft Azure를 사용 하 여](http://aka.ms/WebAppEbook)입니다.
+웹 응용 프로그램에 대 한 정보를 참조 하세요 [Architecting 및 최신 웹 응용 프로그램 개발 ASP.NET Core 및 Microsoft Azure를 사용 하 여](https://aka.ms/WebAppEbook)입니다.
 
 샘플 응용 프로그램에 다음 백 엔드 서비스에 포함 됩니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "61299994"
 
 EShopOnContainers 모바일 앱 솔루션에 프로젝트 소스 코드 및 기타 리소스를 구성합니다. 프로젝트의 모든 범주도 소스 코드 및 기타 리소스를 구성 하는 폴더를 사용 합니다. 다음 표에서 eShopOnContainers 모바일 앱을 구성 하는 프로젝트를 설명 합니다.
 
-|프로젝트|설명|
+|Project|Description|
 |--- |--- |
 |eShopOnContainers.Core|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 이식 가능한 클래스 라이브러리 (PCL) 프로젝트.|
 |eShopOnContainers.Droid|이 프로젝트는 Android 관련 코드를 보유 하 고 Android 앱에 대 한 진입점입니다.|
@@ -152,7 +152,7 @@ EShopOnContainers.Core PCL 프로젝트에는 다음 폴더가 포함 되어 있
 |트리거|포함 된 `BeginAnimation` XAML의 애니메이션을 호출 하는 데 사용 되는 트리거.|
 |유효성 검사|데이터 입력 유효성 검사에 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
-|보기|앱에 대 한 페이지를 포함합니다.|
+|뷰|앱에 대 한 페이지를 포함합니다.|
 
 ##### <a name="platform-projects"></a>플랫폼 프로젝트
 

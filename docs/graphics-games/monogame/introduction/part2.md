@@ -6,18 +6,18 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 941b88f9109cf2f3a3485311c52b1250bd08e53f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9e0cf2f29d304f042bc56ee91029adadcaba570
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162220"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832498"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Part 2-Walkinggame 구현
 
 _이 연습에서는 게임 논리 및 콘텐츠를 데모로 이동 하는 애니메이션된 스프라이트를 만드는 빈 MonoGame 프로젝트를 터치 입력을 추가 하는 방법을 보여 줍니다._
 
-이 연습의 이전 부분에는 빈 MonoGame 프로젝트를 만드는 방법을 보여 주었습니다. 간단한 게임 데모를 만들어 이러한 이전 부분에서 빌드합니다. 이 자료에는 다음과 같은 섹션이 포함되어 있습니다.
+이 연습의 이전 부분에는 빈 MonoGame 프로젝트를 만드는 방법을 보여 주었습니다. 간단한 게임 데모를 만들어 이러한 이전 부분에서 빌드합니다. 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.
 
 - 게임 콘텐츠 압축을 풀기
 - MonoGame 클래스 개요
@@ -53,7 +53,7 @@ _이 연습에서는 게임 논리 및 콘텐츠를 데모로 이동 하는 애�
 
 ### <a name="creating-a-texture2d"></a>Texture2D 만들기
 
-만들어야는 `Texture2D` 우리의 스프라이트를 렌더링할 때 사용할 인스턴스. 모든 게임 콘텐츠 라는 폴더 안에 궁극적 **콘텐츠를** 플랫폼별 프로젝트에 있는 합니다. 콘텐츠 플랫폼 빌드 작업을 사용 해야 하는 대로 공유 MonoGame 프로젝트 콘텐츠를 포함할 수 없습니다. CocosSharp 개발자 콘텐츠 폴더 익숙한 개념을 찾을 수-CocosSharp 프로젝트와 MonoGame 프로젝트 모두에서 같은 위치에 있습니다. IOS 프로젝트에 Android 프로젝트에서 자산 폴더 안에 콘텐츠 폴더를 찾을 수 있습니다.
+만들어야는 `Texture2D` 우리의 스프라이트를 렌더링할 때 사용할 인스턴스. 모든 게임 콘텐츠 라는 폴더 안에 궁극적 **콘텐츠를** 플랫폼별 프로젝트에 있는 합니다. 콘텐츠 플랫폼 빌드 작업을 사용 해야 하는 대로 공유 MonoGame 프로젝트 콘텐츠를 포함할 수 없습니다. IOS 프로젝트에 Android 프로젝트에서 자산 폴더 안에 콘텐츠 폴더를 찾을 수 있습니다.
 
 여기서 다루는 게임의 콘텐츠를 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 **콘텐츠** 선택한 폴더 **추가 > 파일 추가...** Content.zip 파일을 추출한 위치를 찾아서 선택 합니다 **charactersheet.png** 파일입니다. 폴더에 파일을 추가 하는 방법에 대 한 요청 되 면 선택 해야 합니다 **복사** 옵션:
 
@@ -376,7 +376,7 @@ namespace WalkingGame
 
 `frames` 멤버는이 애니메이션에 대 한 데이터를 저장 하는 항목입니다. 애니메이션을 인스턴스화하는 코드를 추가 합니다 `AnimationFrame` 인스턴스를 합니다 `frames` 를 통해 목록는 `AddFrame` 메서드. 더 완전 한 구현을 제공할 수 있습니다 `public` 메서드 또는 속성을 수정 하기 위한 `frames`, 하지만이 연습에 대 한 프레임을 추가 하는 기능 제한 됩니다.
 
-### <a name="duration"></a>기간
+### <a name="duration"></a>Duration
 
 총 기간을 반환 하는 기간을 `Animation,` 포함 된 모든 기간을 추가 하 여 얻을 수 있는 `AnimationFrame` 인스턴스. 하는 경우이 값을 캐시할 수 `AnimationFrame` 변경할 수 없는 개체 있었지만 AnimationFrame 애니메이션에 추가 된 후 변경 될 수 있는 클래스로 구현에서는 있으므로 속성에 액세스할 때마다이 값을 계산 해야 합니다.
 
@@ -548,7 +548,7 @@ Vector2 GetDesiredVelocityFromInput()
         desiredVelocity.Y = touchCollection [0].Position.Y - this.Y;
 ```
 
-뒤에 오는 수학 같은 속도로 이동 된 문자를 유지 하는 많은 경우 을이 중요 한 이유는 보여 주기 위해 사용자의 문자 위치에서 화면 500 픽셀에 접촉 되어 있는 경우를 생각해 보겠습니다. 첫 번째 줄 위치 `desiredVelocity.X` 는 집합의 값이 500 할당 합니다. 그러나 사용자는 문자, 100 명의 단위의 거리 여 화면을 터치 된 경우 해당 `desiredVelocity.X `100으로 설정 됩니다. 결과 문자의 이동 속도 응답 방법 멀리 터치 포인트에서 문자는 것입니다. 항상 같은 속도로 이동 하는 문자, 것 이므로 desiredVelocity 수정 해야 합니다.
+뒤에 오는 수학 같은 속도로 이동 된 문자를 유지 하는 많은 경우 을이 중요 한 이유는 보여 주기 위해 사용자의 문자 위치에서 화면 500 픽셀에 접촉 되어 있는 경우를 생각해 보겠습니다. 첫 번째 줄 위치 `desiredVelocity.X` 는 집합의 값이 500 할당 합니다. 그러나 사용자는 문자, 100 명의 단위의 거리 여 화면을 터치 된 경우 해당 `desiredVelocity.X` 100으로 설정 됩니다. 결과 문자의 이동 속도 응답 방법 멀리 터치 포인트에서 문자는 것입니다. 항상 같은 속도로 이동 하는 문자, 것 이므로 desiredVelocity 수정 해야 합니다.
 
 `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` 사용자 문자의 현재 위치와 동일한 위치를 건드리지 않고는 있는지 검사 하는 경우 속도 비-0 – 즉 문을 확인 합니다. 그렇지 않으면 다음 필요한 경우 터치 문자 속도 멀리 떨어진 곳에 관계 없이 상수를 설정 됩니다. 길이는 1 중에 발생 하는 속도 벡터를 정규화 하 여이 작업을 수행할 것입니다. 1 이면 문자에 초당 1 픽셀씩 이동 하는 개발 속도 벡터입니다. 에서는에서는 속도 200 원하는 속도 따라 값을 곱하여 합니다.
 

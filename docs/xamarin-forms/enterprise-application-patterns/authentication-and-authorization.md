@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: edab6b7edd5ca95cb5abe5fc2caccb5714efda56
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: efaea24e559aa2f3bdfd87c1c083ce1d777dbb3f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540403"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832161"
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -97,7 +97,8 @@ public void ConfigureServices(IServiceCollection services)
 -   요청 토큰에 연결 하는 클라이언트입니다.
 -   ASP.NET Core Id입니다.
 
->💡 **팁**: IdentityServer 4 구성을 동적으로 로드 합니다. IdentityServer 4 Api IdentityServer 구성 개체의 메모리 내 목록에서 구성할 수 있습니다. EShopOnContainers 참조 응용 프로그램을 이러한 메모리 내 컬렉션에 응용 프로그램에 하드 코딩 됩니다. 그러나 프로덕션 시나리오에는 로드할 수 동적으로 데이터베이스 또는 구성 파일에서 합니다.
+> [!TIP]
+> IdentityServer 4 구성을 동적으로 로드 합니다. IdentityServer 4 Api IdentityServer 구성 개체의 메모리 내 목록에서 구성할 수 있습니다. EShopOnContainers 참조 응용 프로그램을 이러한 메모리 내 컬렉션에 응용 프로그램에 하드 코딩 됩니다. 그러나 프로덕션 시나리오에는 로드할 수 동적으로 데이터베이스 또는 구성 파일에서 합니다.
 
 IdentityServer ASP.NET Core Id를 사용 하도록 구성 하는 방법에 대 한 내용은 [ASP.NET Core Id를 사용 하 여](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) IdentityServer 설명서에서.
 
@@ -317,7 +318,8 @@ private async Task NavigateAsync(string url)
 
 이 메서드가 반환 된 URI에 포함 된 인증 응답을 구문 분석 및 IdentityServer의 요청을 하면 유효한 권한 부여 코드를가 있는 제공한 [토큰 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), 권한 부여 코드를 전달 합니다 PKCE 비밀 검증 도구 및 기타 매개 변수가 필요합니다. 토큰 끝점은 `/connect/token` 에 5105 사용자 설정으로 노출 된 기본 끝점의 포트입니다. 사용자 설정에 대 한 자세한 내용은 참조 하세요. [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)합니다.
 
->💡 **팁**: 반환 된 Uri의 유효성을 검사 합니다. EShopOnContainers 모바일 앱 반환 URI의 유효성을 검사 하지 않습니다, 하지만 오픈 리디렉션 공격 방지 하기 위해 알려진 위치로 반환 하는 URI 참조는 유효성을 검사 하는 것이 좋습니다.
+> [!TIP]
+> 반환 된 Uri의 유효성을 검사 합니다. EShopOnContainers 모바일 앱 반환 URI의 유효성을 검사 하지 않습니다, 하지만 오픈 리디렉션 공격 방지 하기 위해 알려진 위치로 반환 하는 URI 참조는 유효성을 검사 하는 것이 좋습니다.
 
 토큰 끝점 PKCE 비밀 검증 도구를 유효한 권한 부여 코드를 수신 하는 경우는 액세스 토큰, id 토큰 및 새로 고침 토큰을 사용 하 여 응답 합니다. 액세스 토큰 (API 리소스에 액세스할 수 있음) 및 id 토큰은 응용 프로그램 설정으로 저장 됩니다 하 고 페이지 탐색 수행 됩니다. 따라서 eShopOnContainers 모바일 앱에서이 따라 이것이:으로 탐색 되는 사용자가 성공적으로 IdentityServer를 사용 하 여 인증할 수에 합니다 `MainView` , 즉 페이지를 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) 표시 하는 `CatalogView` 선택한 탭으로 합니다.
 
@@ -387,7 +389,7 @@ private async Task NavigateAsync(string url)
 
 <a name="authorization" />
 
-## <a name="authorization"></a>권한 부여
+## <a name="authorization"></a>Authorization
 
 ASP.NET Core web Api는 자주 액세스 권한을 부여 해야 인증 후 일부 인증 된 사용자가 사용할 수 있지만 전체가 아닌 서비스를 api를 수 있습니다.
 

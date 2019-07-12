@@ -7,12 +7,12 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e389bc33538ec3c3d36eb749c746f5a4723aab3c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61341323"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830362"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그는 어디에서 확인할 수 있나요?
 
@@ -31,7 +31,7 @@ ms.locfileid: "61341323"
         - Visual Studio 시작, 자세한 정보 표시 로그
     - [Mac 로그](#mac-logs)
         - 빌드 호스트
-    - Visual Studio for Mac
+    - Mac용 Visual Studio
         - Xamarin Studio
         - Xamarin 설치 관리자
 - [자세한 빌드 출력](#verbose-build-output-logs)
@@ -56,7 +56,7 @@ ms.locfileid: "61341323"
 
 ### <a name="a-idmac-version-information-namemac-version-information-mac-version-information"></a><a id="mac-version-information" name="mac-version-information" />Mac 버전 정보
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **Visual Studio > Visual Studio 정보 > 자세한 정보 표시 > 복사본 정보 [단추]**
 
@@ -64,7 +64,7 @@ ms.locfileid: "61341323"
 
 Android SDK Manager를 열고 위쪽의 스크린샷의 찍을 **도구** 섹션입니다.
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **도구 > Android SDK Manager 열기**
 
@@ -150,7 +150,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Xamarin.iOS 및 Xamarin.Android 앱에 대 한 로그 디버그
 
-### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **보기 > 패드 > 응용 프로그램 출력**
 
@@ -173,7 +173,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 3. 문제를 재현 합니다.
 4. 로그를 출력 합니다. `adb logcat -vtime -d > "%USERPROFILE%\Desktop\android_logcat.txt"`
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 1. **도구 > Android SDK 명령 프롬프트 열기**
 2. 로그를 정리 합니다. `adb logcat -c`
@@ -188,7 +188,7 @@ devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 
 ### <a name="a-idios-device-logs-nameios-device-logs-ios-device-logs-on-mac"></a><a id="ios-device-logs" name="ios-device-logs" />iOS 장치 로그온 (Mac)
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **보기 > 패드 > iOS 장치 로그**
 

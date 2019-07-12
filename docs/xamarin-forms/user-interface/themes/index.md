@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 1c5b2635dca6aa74fd0dfb92d7e62e6da3140538
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9a34cfab0c3ed045968f48ac6c67b2f4b66990cc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60902836"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832448"
 ---
 # <a name="xamarinforms-themes"></a>Xamarin.Forms 테마
 
@@ -26,7 +26,8 @@ Xamarin.Forms 테마 진화 2016에서 발표 된 및을 사용해 보고 피드
 
 참조를 [밝은 테마](light.md) 및 [어두운 테마](dark.md) 페이지를 앱에 추가 하거나 확인 하는 방법에 대 한 지침은 합니다 [예제 사용자 지정 테마](custom.md)합니다.
 
-**중요:** 단계를 따라야 [(아래) 테마 어셈블리를 로드](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
+> [!IMPORTANT]
+> 단계를 따라야 [(아래) 테마 어셈블리를 로드](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
 
 
 ## <a name="control-appearance"></a>모양 제어

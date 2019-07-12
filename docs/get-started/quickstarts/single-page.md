@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 83c71962ceb4a30c2e05d44fffe4d64b54e4883d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61194488"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832006"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 응용 프로그램 만들기
 
@@ -32,13 +32,13 @@ ms.locfileid: "61194488"
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 - Visual Studio 2019 (최신 릴리스)를 사용 하 여는 **.NET을 사용한 모바일 개발** 워크 로드가 설치 합니다.
 - 기술 자료의 C#입니다.
 - (선택 사항) IOS에서 응용 프로그램을 빌드하려면 페어링된 Mac.
 
-이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/get-started/installation/index.md)합니다. Visual Studio 2019 Mac 빌드 호스트에 연결 하는 방법에 대 한 내용은 [Xamarin.iOS 개발을 위한 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)합니다.
+이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/get-started/installation/index.md)합니다. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
 
 ## <a name="get-started-with-visual-studio-2019"></a>Visual Studio 2019 시작
 
@@ -65,7 +65,7 @@ ms.locfileid: "61194488"
 
 5. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "MainPage.xaml 열기")
+    ![](single-page-images/vs/open-mainpage-xaml-2019.png "MainPage.xaml 열기")
 
 6. **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -102,7 +102,7 @@ ms.locfileid: "61194488"
 
 7. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다.
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "MainPage.xaml.cs 열기")
+    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "MainPage.xaml.cs 열기")
 
 8. **MainPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -192,7 +192,7 @@ ms.locfileid: "61194488"
 - 기술 자료의 C#입니다.
 - (선택 사항) IOS에서 응용 프로그램을 빌드하려면 페어링된 Mac.
 
-이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/get-started/installation/index.md)합니다. Visual Studio 2019 Mac 빌드 호스트에 연결 하는 방법에 대 한 내용은 [Xamarin.iOS 개발을 위한 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)합니다.
+이러한 필수 구성이 요소에 대 한 자세한 내용은 참조 하세요. [Xamarin 설치](~/get-started/installation/index.md)합니다. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
 
 ## <a name="get-started-with-visual-studio-2017"></a>Visual Studio 2017 시작
 

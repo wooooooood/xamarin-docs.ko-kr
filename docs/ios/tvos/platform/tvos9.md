@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: dda197f71b2a2ab3e0d61a838ab85d79b7a078c7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c4aea5a35fd5db46c9e7ca245b852c988e82f53e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270352"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830500"
 ---
 # <a name="introduction-to-tvos-9"></a>tvOS 9 소개
 
@@ -32,28 +32,28 @@ Xamarin.iOS 개발에 익숙한 경우에 tvOS 전환을 매우 간단한 찾아
 
 Apple TV에서 실행 중인 tvOS 앱 다음 지원 되는 기능 및 특징:
 
- - 앱 그룹
- - 백그라운드 모드
- - 데이터 보호
- - Game Center
- - 게임 컨트롤러
- - iCloud
- - 앱에서 바로 구매
- - 키 집합 공유
+- 앱 그룹
+- 백그라운드 모드
+- 데이터 보호
+- Game Center
+- 게임 컨트롤러
+- iCloud
+- 앱에서 바로 구매
+- 키 집합 공유
 
 다음 기능 및 기능 지원 되지 않습니다.
 
- - Apple Pay
- - 앱 샌드박스
- - 연결된 도메인
- - HealthKit
- - HomeKit
- - 내부 앱 오디오
- - 맵
- - 개인 VPN
- - 푸시 알림
- - Wallet
- - 무선 액세서리 구성
+- Apple Pay
+- 앱 샌드박스
+- 연결된 도메인
+- HealthKit
+- HomeKit
+- 내부 앱 오디오
+- 지도
+- 개인 VPN
+- 푸시 알림
+- Wallet
+- 무선 액세서리 구성
 
 참조 하세요 우리의 [지원 되는 어셈블리](~/ios/tvos/internals/assemblies.md) 하 고 [프레임 워크 지원](~/ios/tvos/internals/frameworks.md) 자세한 설명서.
 
@@ -63,15 +63,15 @@ Apple TV에서 실행 중인 tvOS 앱 다음 지원 되는 기능 및 특징:
 
 새 Apple TV에 다음의 하드웨어 사양이 있습니다.
 
- - 64 비트 A8 프로세서
- - 32GB 또는 64GB 저장소
- - 2GB의 RAM
- - 10/100Mbps 이더넷
- - WiFi 802.11a/b/g/n/ac
- - 해상도 1080p
- - HDMI
- - USB C 포트 (개발자 및 진단 사용에만)
- - 새 Siri 원격 또는 Apple TV 원격 (지역에 따라)
+- 64 비트 A8 프로세서
+- 32GB 또는 64GB 저장소
+- 2GB의 RAM
+- 10/100Mbps 이더넷
+- WiFi 802.11a/b/g/n/ac
+- 해상도 1080p
+- HDMI
+- USB C 포트 (개발자 및 진단 사용에만)
+- 새 Siri 원격 또는 Apple TV 원격 (지역에 따라)
 
 ### <a name="siri-remote"></a>Siri 원격
 
@@ -79,14 +79,14 @@ Apple TV에서 실행 중인 tvOS 앱 다음 지원 되는 기능 및 특징:
 
 Siri 원격은 현재 다음 국가의
 
- - 오스트레일리아
- - 캐나다
- - 프랑스
- - 독일
- - 일본
- - 스페인
- - 영국
- - 미국
+- 오스트레일리아
+- 캐나다
+- 프랑스
+- 독일
+- 일본
+- 스페인
+- 영국
+- 미국
 
 다른 모든 국가 Apple TV 원격 검색에 대 한 텍스트 입력을 사용 하 여 기본 검색 화면을 표시 하는 검색 단추를 사용 하 여 Siri 단추를 대체 하는 표시 됩니다.
 

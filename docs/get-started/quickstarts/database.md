@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ebf0f21ed57b7d436721018abb2dca329b56baa4
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: e9aed82ef0db9de35bd4cffe7daebcaa9389e42e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194967"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832131"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에서 데이터를 저장 합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "67194967"
 [![](database-images/screenshots1-sml.png "페이지 정보")](database-images/screenshots1.png#lightbox "노트가")
 [![](database-images/screenshots2-sml.png "항목 페이지를 참고")](database-images/screenshots2.png#lightbox "참고 항목 페이지")
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 성공적으로 완료 해야 합니다 [이전 빠른 시작](multi-page.md) 이 빠른 시작을 시도 하기 전에 합니다. 또는 다운로드 합니다 [이전 빠른 시작 샘플](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/) 이 빠른 시작에 대 한 시작 점으로 사용 합니다.
 
@@ -177,7 +177,21 @@ ms.locfileid: "67194967"
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            //...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```
@@ -380,7 +394,21 @@ ms.locfileid: "67194967"
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6bad05f62fa9168818aa9a2e73cc1e2830af03b3
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269329"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830030"
 ---
 # <a name="introduction-to-tvos-10"></a>tvOS 10 소개
 
@@ -56,10 +56,10 @@ tvOS 10 확장 범위 픽셀 형식 및 AVFoundation 핵심 그래픽, Core 이�
 
 Apple에서는 다양 한 색을 사용 하 여 작업 하는 경우 다음 모범 사례를 제공 합니다.
 
- - `UIColor` 사용 하는 sRGB 색 공간을 더 이상 고정 값을 이제는 `0.0` 에 `1.0` 범위입니다. 앱을 이전 하는 제한 동작에 의존 하는 경우 10 tvOS에 대 한 수정 해야 합니다.
- - 앱의 사용자 지정 렌더링을 수행 하는 경우 `UIImages`를 사용 하 여 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 확장 범위 또는 표준 범위 형식의 사용을 지정 하는 클래스입니다.
- - 핵심 그래픽 또는 체제 미 설치 컴퓨터와 같은 하위 수준 API를 사용 하 여 이미지 처리를 앱을 확장된 범위 색 공간과 픽셀 지 원하는 형식으로 16 비트 부동 소수점 값을 사용 해야 합니다. 필요한 경우 앱을 수동으로 색 구성 요소 값을 고정 해야 합니다.
- - 핵심 그래픽, Core 이미지 및 체제 미 설치 컴퓨터 성능 셰이더 모든 두 색 공간 변환 하기 위한 새 메서드를 제공 합니다.
+- `UIColor` 사용 하는 sRGB 색 공간을 더 이상 고정 값을 이제는 `0.0` 에 `1.0` 범위입니다. 앱을 이전 하는 제한 동작에 의존 하는 경우 10 tvOS에 대 한 수정 해야 합니다.
+- 앱의 사용자 지정 렌더링을 수행 하는 경우 `UIImages`를 사용 하 여 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 확장 범위 또는 표준 범위 형식의 사용을 지정 하는 클래스입니다.
+- 핵심 그래픽 또는 체제 미 설치 컴퓨터와 같은 하위 수준 API를 사용 하 여 이미지 처리를 앱을 확장된 범위 색 공간과 픽셀 지 원하는 형식으로 16 비트 부동 소수점 값을 사용 해야 합니다. 필요한 경우 앱을 수동으로 색 구성 요소 값을 고정 해야 합니다.
+- 핵심 그래픽, Core 이미지 및 체제 미 설치 컴퓨터 성능 셰이더 모든 두 색 공간 변환 하기 위한 새 메서드를 제공 합니다.
 
 자세한 내용을 참조 하세요 우리의 [와이드 컬러 소개](~/ios/platform/wide-color.md) 가이드입니다.
 
@@ -67,12 +67,12 @@ Apple에서는 다양 한 색을 사용 하 여 작업 하는 경우 다음 모�
 
 IOS (및 tvOS 없습니다)에서 사용할 수 있었던 여러 프레임 워크 사용할 수 있게 된 tvOS 10에 대 한 예:
 
- - ExternalAccessory
- - HomeKit
- - MultipeerConnectivity
- - 사진
- - ReplayKit
- - UserNotification
+- ExternalAccessory
+- HomeKit
+- MultipeerConnectivity
+- 사진
+- ReplayKit
+- UserNotification
 
 ## <a name="additional-framework-changes"></a>프레임 워크 추가 변경 내용
 

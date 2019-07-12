@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364331"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831217"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>추가 iOS 10 프레임 워크 변경
 
@@ -132,10 +132,10 @@ IOS 10에서에서 금속 프레임 워크 같이 향상 되었습니다.:
 
 IOS 10에서에서 ModelIO 프레임 워크 같이 향상 되었습니다.:
 
- - USD 파일 형식은 이제 지원 됩니다.
- - 서명 지원이 추가 되었습니다 거리 필드를 [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) 클래스입니다.
- - 새 `MDLLightProbeIrradianceDataSource` Light 프로브 배치 하는 데 도움이 되는 클래스입니다.
- - 새 `MDLMaterialPropertyGraph` 클래스를 쉽게 런타임에서 지 원하는 모델을 변경 합니다.
+- USD 파일 형식은 이제 지원 됩니다.
+- 서명 지원이 추가 되었습니다 거리 필드를 [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) 클래스입니다.
+- 새 `MDLLightProbeIrradianceDataSource` Light 프로브 배치 하는 데 도움이 되는 클래스입니다.
+- 새 `MDLMaterialPropertyGraph` 클래스를 쉽게 런타임에서 지 원하는 모델을 변경 합니다.
 
 ## <a name="photos-enhancements"></a>사진 향상 된 기능
 

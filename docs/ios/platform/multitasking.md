@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 6a9c66720aeb97c5b894cbea42c6cc0c5285c67d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 888e00fbdbf30b5b2842bc30822a55f57372eb34
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978622"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831820"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.iOS 방향의 iPad 용 멀티태스킹
 
@@ -48,10 +48,10 @@ iOS 9 iPad 특정 하드웨어에서 동시에 두 개의 앱을 실행 하기 �
 
 지원 하기 위해 **슬라이드를 통해** 또는 **분할 보기** 앱에는 다음을 수행 해야 합니다.
 
- - IOS 9 이상에 대해 빌드됩니다.
- - 스토리 보드를 사용 하 여 시작 화면에 대 한 (및 이미지 자산 없습니다).
- - 자동 레이아웃 및 Size 클래스를 사용 하 여 해당 UI에 대 한 스토리 보드를 사용 합니다.
- - 모든 4 개의 iOS 장치 방향 (세로, 거꾸로 세로, 가로 왼쪽 및 오른쪽 가로 방향)을 지원 합니다.
+- IOS 9 이상에 대해 빌드됩니다.
+- 스토리 보드를 사용 하 여 시작 화면에 대 한 (및 이미지 자산 없습니다).
+- 자동 레이아웃 및 Size 클래스를 사용 하 여 해당 UI에 대 한 스토리 보드를 사용 합니다.
+- 모든 4 개의 iOS 장치 방향 (세로, 거꾸로 세로, 가로 왼쪽 및 오른쪽 가로 방향)을 지원 합니다.
 
 <a name="Multitasking" />
 
@@ -242,9 +242,9 @@ Apple의를 참조 하세요 [iOS 앱에 대 한 에너지 효율성 가이드](
 
 PIP 비디오 재생을 옵트아웃 하려면 앱에서 다음을 수행 합니다.
 
- - 사용 중인 경우는 `AVPlayerViewController` 비디오를 표시 하려면 설정 합니다 `AllowsPictureInPicturePlayback` 속성을 `false`입니다.
- - 사용 중인 경우는 `AVPlayerLayer` 비디오를 표시 하려면 인스턴스화하지 마세요는 `AVPictureInPictureController`합니다.
- - 사용 중인 경우는 `WKWebView` 비디오를 표시 하려면 설정 합니다 `AllowsPictureInPictureMediaPlayback` 속성을 `false`입니다.
+- 사용 중인 경우는 `AVPlayerViewController` 비디오를 표시 하려면 설정 합니다 `AllowsPictureInPicturePlayback` 속성을 `false`입니다.
+- 사용 중인 경우는 `AVPlayerLayer` 비디오를 표시 하려면 인스턴스화하지 마세요는 `AVPictureInPictureController`합니다.
+- 사용 중인 경우는 `WKWebView` 비디오를 표시 하려면 설정 합니다 `AllowsPictureInPictureMediaPlayback` 속성을 `false`입니다.
 
 <a name="Summary" />
 

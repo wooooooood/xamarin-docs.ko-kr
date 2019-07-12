@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62ef02d276e9c98e07f5e0d1b9ddec1b0874a99a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211822"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829623"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>코드를 Unified API로 업데이트하는 팁
 
@@ -74,23 +74,24 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
     public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
     ```
 
- * 무손실 변환 하지 않기 때문에 통합 API NSDate 및.NET DateTime 간에 암시적 변환이 발생을 제공 하지 않습니다. 와 관련 된 오류를 방지 하기 위해 `DateTimeKind.Unspecified` .NET 변환 `DateTime` 으로 로컬 또는 UTC로 캐스팅 하기 전에 `NSDate`입니다.
+* 무손실 변환 하지 않기 때문에 통합 API NSDate 및.NET DateTime 간에 암시적 변환이 발생을 제공 하지 않습니다. 와 관련 된 오류를 방지 하기 위해 `DateTimeKind.Unspecified` .NET 변환 `DateTime` 으로 로컬 또는 UTC로 캐스팅 하기 전에 `NSDate`입니다.
 
- * Objective C 범주 메서드는 이제 통합 API의 확장 메서드로 생성 됩니다. 예를 들어 코드에 사용 했던 `UIView.DrawString` 이제 참조 `NSString.DrawString` Unified API에서 합니다.
+* Objective C 범주 메서드는 이제 통합 API의 확장 메서드로 생성 됩니다. 예를 들어 코드에 사용 했던 `UIView.DrawString` 이제 참조 `NSString.DrawString` Unified API에서 합니다.
 
- * AVFoundation 클래스를 사용 하는 코드 `VideoSettings` 사용으로 변경 해야 합니다 `WeakVideoSettings` 속성입니다. 이 위해서는 `Dictionary`를 사용할 수 있는 설정 클래스에서 속성으로 예를 들어:
+* AVFoundation 클래스를 사용 하는 코드 `VideoSettings` 사용으로 변경 해야 합니다 `WeakVideoSettings` 속성입니다. 이 위해서는 `Dictionary`를 사용할 수 있는 설정 클래스에서 속성으로 예를 들어:
 
     ```csharp
     vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
     ```
 
- * NSObject `.ctor(IntPtr)` 생성자에서 변경 된 public 보호 ([부적절 한 사용을 방지 하기 위해](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
+* NSObject `.ctor(IntPtr)` 생성자에서 변경 된 public 보호 ([부적절 한 사용을 방지 하기 위해](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
- * `NSAction` 되었습니다 [대체](~/cross-platform/macios/unified/overview.md#NSAction) starndard.NET을 사용 하 여 `Action`입니다. 또한 몇 가지 간단한 단일 매개 변수인 대리자로 대체 되었습니다 `Action<T>`합니다.
+* `NSAction` 되었습니다 [대체](~/cross-platform/macios/unified/overview.md#NSAction) 표준.NET을 사용 하 여 `Action`입니다. 또한 몇 가지 간단한 단일 매개 변수인 대리자로 대체 되었습니다 `Action<T>`합니다.
 
 마지막으로, 참조를 [클래식 v Unified API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) Api 코드에서 변경 내용을 조회 하 합니다. 검색 [이 페이지](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) 클래식 Api에 대 한 새로운 했습니다 된 업데이트를 찾을 수 있도록 도와줍니다.
 
-**참고:** 는 `MonoTouch.Dialog` 네임 스페이스 마이그레이션 후 동일 하 게 유지 합니다. 코드를 사용 하는 경우 **MonoTouch.Dialog** 네임 스페이스를 사용 하 여 수행 해야 할 *되지* 변경 `MonoTouch.Dialog` 에 `Dialog`!
+> [!NOTE]
+> `MonoTouch.Dialog` 네임 스페이스 마이그레이션 후 동일 하 게 유지 합니다. 코드를 사용 하는 경우 **MonoTouch.Dialog** 네임 스페이스를 사용 하 여 수행 해야 할 *되지* 변경 `MonoTouch.Dialog` 에 `Dialog`!
 
 ## <a name="common-compiler-errors"></a>일반적인 컴파일러 오류
 
@@ -136,7 +137,7 @@ grphc.SetLineDash (0, new nfloat[] { 0, 3 * (nfloat)Math.PI });
 public override nint RowsInSection (UITableView tableview, nint section) {
 ```
 
-**오류 CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)'**
+**오류 CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)`: 반환 형식이 재정의 된 멤버와 일치 하려면 ' System.nint' 여야 합니다. `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)`**
 
 해결 방법: 반환 형식이 변경 되 면 `nint`를 반환 값을 캐스팅 `nint`합니다.
 

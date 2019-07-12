@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
-ms.openlocfilehash: 9a18c97ba227615ae42529424b5c22b5e144f5e5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e7a383f899fab0400104493fa89b125788d610aa
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357864"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831331"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>디버거에 필요한 프로젝트 설정은 무엇인가요?
 
@@ -26,10 +26,10 @@ ms.locfileid: "61357864"
    - 로 이동 **Android 옵션 > 디버깅 옵션**합니다. 눈금은 **개발자 계측을 사용 하도록 설정** 상자입니다.
    - 로 이동 **iOS 디버그 > 디버깅 및 계측**합니다. 눈금은 **디버깅 사용** 상자입니다.
 
-## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 1. 프로젝트 옵션을 열려면
 2. 로 이동 **빌드 > 컴파일러 > 일반 옵션**합니다. 디버그 정보로 **전체**
 3. 각 플랫폼에 대 한 설정은 다음과 같습니다.
-  - 로 이동 **빌드 > Android 빌드 > 디버깅 옵션**합니다. 눈금은 **개발자 계측을 사용 하도록 설정** 상자입니다.
-  - 로 이동 **빌드 > iOS 디버그**합니다. 눈금은 **디버깅 사용** 상자입니다.
+    - 로 이동 **빌드 > Android 빌드 > 디버깅 옵션**합니다. 눈금은 **개발자 계측을 사용 하도록 설정** 상자입니다.
+    - 로 이동 **빌드 > iOS 디버그**합니다. 눈금은 **디버깅 사용** 상자입니다.
 

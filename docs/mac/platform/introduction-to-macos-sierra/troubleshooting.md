@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/22/2016
-ms.openlocfilehash: 1b379bef98e498df4c58ba7209aa46b0b2542fe1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 322acff3279d0513266c7d9883726cac726334f7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031423"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830548"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac - macOS Sierra Troubleshooting
 
@@ -52,7 +52,7 @@ Apple Pay까지 새 결제 카드를 추가 하는 경우를 잘못 된 만료 �
 알려진 문제:
 
 - 호출 `NSObject.ValueForKey` 는 `null` 키 예외가 발생 합니다.
-- 둘 다 `NSURLSession` 고 NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://' Url입니다.
+- 둘 다 `NSURLSession` 하 고 `NSURLConnection` 에 대 한 TLS 핸드셰이크 중 더 이상 RC4 암호 그룹 `http://` Url입니다.
 - 앱을 뷰의 요소의 기 하 도형 중 하나를 수정 하더라도 중지 될 수는 `ViewWillLayoutSubviews` 또는 `LayoutSubviews` 메서드.
 - 모든 SSL/TLS 연결에 대해 RC4 대칭 암호화는 이제 기본적으로 비활성화 됩니다. 또한 보안 전송 API SSLv3을 더 이상 지원 및 앱 sha-1 및 3DES 암호화를 사용 하 여 가능한 한 빨리 중지 하는 것이 좋습니다.
 

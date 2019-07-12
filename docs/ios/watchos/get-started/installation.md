@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb8aabb3649da3818c1b020508b78a03f513963b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218492"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830678"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>설치 및 watchOS에서 Xamarin 사용
 
@@ -144,7 +144,7 @@ Studio (Mac 빌드 호스트에서 시작) Visual 또는 Mac 용 Visual Studio�
 
 WatchKit 앱을 시작 하는 것에 대 한 두 가지 모드를 가지 있습니다.
 
- - 일반 앱 모드 (기본값) 및
+- 일반 앱 모드 (기본값) 및
 - [알림](~/ios/watchos/platform/notifications.md) (JSON 형식으로 테스트 알림 페이로드가 필요).
 
 ### <a name="xcode-8-support"></a>Xcode 8 지원
@@ -178,8 +178,9 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 Xcode 6을 사용 하는 경우 iPhone 5, iPhone 5, 6, iPhone 및 iPhone 6 Plus에 대 한 외부 디스플레이 활성화할 수 있습니다 **Apple Watch-(38mm** 하거나 **Apple Watch-42 mm** watch 응용 프로그램 될 위치 표시 됩니다.
 
-**참고:** Xcode 6을 사용 하는 경우 watch 화면이 iOS 시뮬레이터에서에서 자동으로 표시 되지 않으면 해야 합니다.
-사용 된 **하드웨어 > 외부 표시** watch 화면에 표시할 메뉴.
+> [!NOTE]
+> Xcode 6을 사용 하는 경우 watch 화면이 iOS 시뮬레이터에서에서 자동으로 표시 되지 않으면 해야 합니다.
+> 사용 된 **하드웨어 > 외부 표시** watch 화면에 표시할 메뉴.
 
 <a name="custommodes" />
 
@@ -213,7 +214,7 @@ Mac 용 Visual Studio 및 Visual Studio에서 디버깅이 지원 됩니다.
 ![](installation-images/debug-sml.png "Watch 앱에 도달 하는 디버그 중단점을 보여 주는이 스크린샷")
 
 시작 지침을 따른 후 결국 watch 앱을 실행 합니다 **iOS 시뮬레이터 (감시)** 합니다.
-알림 모드를 선택할 수 있습니다 **디버그 > 시스템 로그 열기** (**CMD + /**)를 사용 하 고 `Console.WriteLine` 코드에서.
+알림 모드를 선택할 수 있습니다 **디버그 > 시스템 로그 열기** (**CMD + /** )를 사용 하 고 `Console.WriteLine` 코드에서.
 
 ### <a name="debugging-lifecycle-event-handlers"></a>수명 주기 이벤트 처리기를 디버깅합니다.
 

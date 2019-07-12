@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: cc5052c8988a27605cf7680a3853f80e7afd38b7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fc4ef6eb16893cc1df0d980d27af8589a280e933
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171170"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832421"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.iOS에서 대체 앱 아이콘
 
@@ -20,10 +20,10 @@ _이 문서에서는 Xamarin.iOS에서 대체 앱 아이콘을 사용 하 여 �
 
 Apple이 앱을 해당 아이콘을 관리 하는 iOS 10.3 몇 가지 향상 된 기능 추가.
 
- - `ApplicationIconBadgeNumber` -앱 아이콘 배지를 Springboard에서 설정 하거나 가져옵니다.
- - `SupportsAlternateIcons` - `true` 앱 아이콘 집합을 대체 했습니다.
- - `AlternateIconName` -현재 선택한 대체 아이콘의 이름을 반환 합니다. 또는 `null` 기본 아이콘을 사용 하는 경우.
- - `SetAlternameIconName` -지정 된 대체 아이콘 앱 아이콘을 전환 하려면이 메서드를 사용 합니다.
+- `ApplicationIconBadgeNumber` -앱 아이콘 배지를 Springboard에서 설정 하거나 가져옵니다.
+- `SupportsAlternateIcons` - `true` 앱 아이콘 집합을 대체 했습니다.
+- `AlternateIconName` -현재 선택한 대체 아이콘의 이름을 반환 합니다. 또는 `null` 기본 아이콘을 사용 하는 경우.
+- `SetAlternameIconName` -지정 된 대체 아이콘 앱 아이콘을 전환 하려면이 메서드를 사용 합니다.
 
 ![](alternate-app-icons-images/icons04.png "샘플 경고를 앱 아이콘을 변경 하는 경우")
 
@@ -126,7 +126,7 @@ AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateI
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 1;
 ```
 
-합니다 `AlternateIconName` 의 속성을 `UIApplication` 클래스를 사용 하면 개발자가 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 없거나이 반환 `null` 앱에 기본 아이콘을 사용 하는 경우. 예를 들어:
+합니다 `AlternateIconName` 의 속성을 `UIApplication` 클래스를 사용 하면 개발자가 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 없거나이 반환 `null` 앱에 기본 아이콘을 사용 하는 경우. 예:
 
 ```csharp
 // Get the name of the currently selected alternate

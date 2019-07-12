@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371544"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831539"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.iOS에서 HomeKit
 
@@ -285,7 +285,7 @@ Xamarin.iOS 앱을 호출할 수 있습니다 기본 홈 정의 되었거나 홈
 
 [![](homekit-images/accessory01.png "새 보조 찾기")](homekit-images/accessory01.png#lightbox)
 
-호출 된 `AddAccessory` 선택한 액세서리 홈의 컬렉션에 추가 하는 방법입니다. 예를 들어:
+호출 된 `AddAccessory` 선택한 액세서리 홈의 컬렉션에 추가 하는 방법입니다. 예:
 
 ```csharp
 // Add the requested accessory to the home
@@ -318,7 +318,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다 
 
 이 예제의 경우에서는 됩니다 수 유지 작업 간단 하 고 방 또는 영역 구조로 구성 하는 대신 집의 보조 프로그램을 직접 작동 합니다.
 
-합니다 `HMHome` 개체에 할당 된 액세서리 사용자에 게 표시할 수 있는 목록이 해당 `Accessories` 속성입니다. 예를 들어:
+합니다 `HMHome` 개체에 할당 된 액세서리 사용자에 게 표시할 수 있는 목록이 해당 `Accessories` 속성입니다. 예:
 
 [![](homekit-images/accessory04.png "예제에서는 보조 프로그램")](homekit-images/accessory04.png#lightbox)
 
@@ -384,77 +384,77 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다 
 
 `HMCharacteristicType` 열거형 정의 하거나 다음과 같이 수정할 수 있는 특성 메타 데이터 값의 집합을 제공 합니다.
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - 밝기
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactState
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - CurrentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - 색상
- - Identify
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - 로그
- - 제조업체
- - 모델
- - MotionDetected
- - 이름
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - 채도
- - SerialNumber
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - 버전
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- 밝기
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactState
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- CurrentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- 색상
+- Identify
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- 로그
+- 제조업체
+- Model
+- MotionDetected
+- 이름
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- 채도
+- SerialNumber
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- 버전
 
 ### <a name="working-with-a-characteristics-value"></a>특성의 값을 사용 하 여 작업
 
@@ -677,9 +677,9 @@ HomeKit 액세서리 시뮬레이터에서 광원의 상태를 변경 해야 합
 
 ITunes 앱 스토어에에서 릴리스할 iTunes Connect에 설정 된 Xamarin.iOS 앱을 HomeKit를 제출 하기 전에 HomeKit 사용 앱에 대 한 Apple의 지침을 따르는 확인 합니다.
 
- - 앱의 주 목적은 _해야_ HomeKit 프레임 워크를 사용 하는 경우 홈 자동화 되어야 합니다.
- - 앱 마케팅 텍스트 HomeKit 사용 되 고 개인 정보 취급 방침을 제공 해야 합니다는 사용자에 알려야 합니다.
- - 사용자 정보를 수집 하거나 HomeKit를 사용 하 여 광고를 위해 엄격 하 게 사용할 수 없습니다.
+- 앱의 주 목적은 _해야_ HomeKit 프레임 워크를 사용 하는 경우 홈 자동화 되어야 합니다.
+- 앱 마케팅 텍스트 HomeKit 사용 되 고 개인 정보 취급 방침을 제공 해야 합니다는 사용자에 알려야 합니다.
+- 사용자 정보를 수집 하거나 HomeKit를 사용 하 여 광고를 위해 엄격 하 게 사용할 수 없습니다.
 
 전체에 대 한 지침을 검토, Apple의를 참조 하세요 [앱 스토어 검토 지침](https://developer.apple.com/app-store/review/guidelines/)합니다.
 

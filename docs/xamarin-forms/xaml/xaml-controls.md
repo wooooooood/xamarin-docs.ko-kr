@@ -7,13 +7,13 @@ ms.assetid: 639BD392-1496-41BB-BB09-7652273AC9D8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/03/2019
-ms.openlocfilehash: 8217c6436cc8cfe8f4b9c6cc3445157319e8c0bf
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 07/10/2019
+ms.openlocfilehash: dc903cf4ff8eaced18df3271e5e4dbdde6845b6a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741109"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832631"
 ---
 # <a name="xaml-controls"></a>XAML 컨트롤
 
@@ -30,7 +30,7 @@ ms.locfileid: "66741109"
 | <h3>BoxView</h3>특정 색의 사각형을 표시합니다.<p align="center">![BoxView 스크린샷](xaml-controls-images/BoxView.png "BoxView")</p>[API](xref:Xamarin.Forms.BoxView) / [Guide](https://developer.xamarin.com/guides/xamarin-forms/user-interface/boxview/) | <pre valign="center">&lt;BoxView Color="Accent"<br />         WidthRequest="150"<br />         HeightRequest="150"<br />         HorizontalOptions="Center"&gt;</pre></p> |
 | <h3>이미지</h3>비트맵을 표시합니다.<p align="center">![이미지의 스크린 샷](xaml-controls-images/Image.png "이미지")</p>[API](xref:Xamarin.Forms.Image) / [Guide](~/xamarin-forms/user-interface/images.md) | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
 | <h3>레이블</h3>하나 이상의 텍스트 줄을 표시합니다.<p align="center">![레이블의 스크린 샷](xaml-controls-images/Label.png "레이블")</p>[API](xref:Xamarin.Forms.Label) / [Guide](~/xamarin-forms/user-interface/text/label.md) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
-| <h3>맵</h3>지도 표시합니다.<p align="center">![맵의 스크린 샷](xaml-controls-images/Map.png "맵")</p>[API](xref:Xamarin.Forms.Maps.Map) / [Guide](~/xamarin-forms/user-interface/map.md) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
+| <h3>지도</h3>지도 표시합니다.<p align="center">![맵의 스크린 샷](xaml-controls-images/Map.png "맵")</p>[API](xref:Xamarin.Forms.Maps.Map) / [Guide](~/xamarin-forms/user-interface/map.md) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
 | <h3>WebView</h3>웹 페이지 또는 HTML 콘텐츠를 표시합니다.<p align="center">![WebView의 스크린 샷](xaml-controls-images/WebView.png "WebView")</p>[API](xref:Xamarin.Forms.WebView) / [Guide](~/xamarin-forms/user-interface/webview.md) | <p valign="center"><pre>&lt;WebView Source="https://docs.microsoft.com/xamarin/"<br/>         VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
 
@@ -47,9 +47,10 @@ ms.locfileid: "66741109"
 
 |     |     |
 | --- | --- |
+| <h3>CheckBox</h3>선택할 수 있습니다는 `boolean` 값입니다.<p align="center">![확인란 스크린샷](xaml-controls-images/CheckBox.png "확인란")</p> [가이드](~/xamarin-forms/user-interface/checkbox.md) | <p valign="center"><pre>&lt;CheckBox IsChecked="true"<br />          HorizontalOptions="Center"<br />          VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>슬라이더</h3>선택할 수 있습니다는 `double` 연속 범위 값입니다.<p align="center">![슬라이더의 스크린 샷](xaml-controls-images/Slider.png "슬라이더")</p>[API](xref:Xamarin.Forms.Slider) / [Guide](~/xamarin-forms/user-interface/slider.md) | <p valign="center"><pre>&lt;Slider Minimum="0"<br />        Maximum="100"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>Stepper</h3>선택할 수 있습니다는 `double` 증분 범위에서 값입니다.<p align="center">![스텝 스크린샷](xaml-controls-images/Stepper.png "스텝 퍼")</p>[API](xref:Xamarin.Forms.Stepper) / [Guide](~/xamarin-forms/user-interface/stepper.md) | <p valign="center"><pre>&lt;Stepper Minimum="0"<br />         Maximum="10"<br />         Increment="0.1"<br />         HorizontalOptions="Center"<br />         VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>전환</h3>선택할 수 있습니다는 `boolean` 값입니다.<p align="center">![스위치의 스크린 샷](xaml-controls-images/Switch.png "스위치")</p>[API](xref:Xamarin.Forms.Switch) | <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>스위치</h3>선택할 수 있습니다는 `boolean` 값입니다.<p align="center">![스위치의 스크린 샷](xaml-controls-images/Switch.png "스위치")</p>[API](xref:Xamarin.Forms.Switch) / [Guide](~/xamarin-forms/user-interface/switch.md)| <p valign="center"><pre>&lt;Switch IsToggled="false"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>DatePicker</h3>날짜를 선택할 수 있습니다.<p align="center">![DatePicker 스크린샷](xaml-controls-images/DatePicker.png "DatePicker")</p>[API](xref:Xamarin.Forms.DatePicker) / [Guide](~/xamarin-forms/user-interface/datepicker.md) | <p valign="center"><pre>&lt;DatePicker Format="D"<br/>            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 | <h3>TimePicker</h3>시간을 선택할 수 있습니다.<p align="center">![TimePicker 스크린샷](xaml-controls-images/TimePicker.png "TimePicker")</p>[API](xref:Xamarin.Forms.TimePicker) / [Guide](~/xamarin-forms/user-interface/timepicker.md) | <p valign="center"><pre>&lt;TimePicker Format="T"<br />            VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 |     |     |

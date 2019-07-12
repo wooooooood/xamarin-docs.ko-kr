@@ -8,18 +8,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: e6e3a989db922dc2941cca4c888c862ffe159241
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d7684df771f24ecf9126f472e7d799eea4a5431
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61422054"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832696"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.iOS 오류
 
 ## <a name="mt0xxx-mtouch-error-messages"></a>MT0xxx: mtouch 오류 메시지
 
-예: 매개 변수, 환경, 도구 누락입니다.
+예를 들어 매개 변수, 환경, 도구 누락입니다.
 
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
@@ -388,7 +388,7 @@ Xamarin.iOS는만 포함 된 프레임 워크를 지원 통합 API를 사용 하
 
 Xamarin.iOS 배포 대상 이므로 8.0 이상 (이전 버전 iOS에서는 포함 된 프레임 워크를 지원 하지 않음) 하는 경우에 포함 된 프레임 워크를 지원 합니다.
 
-8.0 이상으로 배포 대상이 프로젝트 Info.plist 업데이트 하십시오.
+8\.0 이상으로 배포 대상이 프로젝트 Info.plist 업데이트 하십시오.
 
 <a name="MT0066" />
 
@@ -557,7 +557,7 @@ Xamarin.iOS 응용 프로그램을 빌드하는 오류 메시지에서 지정 �
 
 <a name="MT0099" />
 
-### <a name="mt0099-internal-error--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0099: 내부 오류 * 합니다. 테스트 사례를 사용 하 여 버그 보고서를 제출 하세요 (http://bugzilla.xamarin.com)합니다.
+### <a name="mt0099-internal-error--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0099: 내부 오류 * 합니다. 테스트 사례를 사용 하 여 버그 보고서를 제출 하세요 (http://bugzilla.xamarin.com) 합니다.
 
 Xamarin.iOS에는 내부 일관성 검사가 실패 하면이 오류 메시지가 보고 됩니다.
 
@@ -565,7 +565,7 @@ Xamarin.iOS;에 버그가이 버그 보고서를 제출 하세요 [ http://bugzi
 
 <a name="MT0100" />
 
-### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0100: 잘못 된 어셈블리 빌드 대상: ' *'. 테스트 사례를 사용 하 여 버그 보고서를 제출 하세요 (http://bugzilla.xamarin.com)합니다.
+### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0100: 잘못 된 어셈블리 빌드 대상: ' *'. 테스트 사례를 사용 하 여 버그 보고서를 제출 하세요 (http://bugzilla.xamarin.com) 합니다.
 
 Xamarin.iOS에는 내부 일관성 검사가 실패 하면이 오류 메시지가 보고 됩니다.
 
@@ -583,7 +583,7 @@ Xamarin.iOS에는 내부 일관성 검사가 실패 하면이 오류 메시지�
 
 오류 메시지에 언급 된 어셈블리를 빌드 대상을 충돌 하는 경우
 
-예를 들어:
+예:
 
     --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
 
@@ -595,7 +595,7 @@ Xamarin.iOS에는 내부 일관성 검사가 실패 하면이 오류 메시지�
 
 오류 메시지에 언급 된 어셈블리는 모두 단일 정적 개체가 컴파일됩니다. 이 허용 되지, 다른 정적 개체에 모든 어셈블리를 컴파일해야 합니다.
 
-예를 들어:
+예:
 
     --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
 
@@ -838,7 +838,7 @@ class Program {
 
 파일 (부분 빌드 제대로 수행 되었는지 확인 하는 실행)을 터치 하는 오류가 발생 했습니다.
 
-이 경고는 대개 무시; 문제 발생 시 버그 (https://bugzilla.xamarin.com] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) 조사 됩니다.
+이 경고는 대개 무시; 문제 발생 시 버그 (https://bugzilla.xamarin.com ] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) 조사 됩니다.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: 프로젝트 관련된 오류 메시지
 
@@ -1033,7 +1033,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 ### <a name="mt1027-cant-use-xcode-7-to-launch-applications-on-devices-with-ios--xcode-7-only-supports-ios-6"></a>MT1027: Xcode 7 +를 사용 하 여 ios 장치에서 응용 프로그램을 시작할 수 없습니다 * (Xcode 7은 iOS 6 이상만 지원).
 
-6.0 이전 iOS 버전을 사용 하 여 장치에서 응용 프로그램을 시작 하려면 Xcode 7 +를 사용 하는 것이 불가능 합니다.
+6\.0 이전 iOS 버전을 사용 하 여 장치에서 응용 프로그램을 시작 하려면 Xcode 7 +를 사용 하는 것이 불가능 합니다.
 
 Xcode의 이전 버전을 사용 하거나 응용 프로그램을 시작 하려면 수동으로 앱을 탭 하세요.
 
@@ -1283,7 +1283,7 @@ Zip' 네이티브' 명령에서이 오류에 대 한 자세한 내용은 bulid �
 
 <a name="MT1305" />
 
-### <a name="mt1305-the-binding-library--contains-a-user-framework--but-embedded-user-frameworks-require-ios-80-the-current-deployment-target-is--please-set-the-deployment-target-in-the-infoplist-file-to-at-least-80"></a>MT1305: 바인딩 라이브러리 '\*' 사용자 프레임 워크를 포함 (\*), 포함 된 사용자 프레임 워크에는 iOS 8.0 필요 하지만 (현재 배포 대상이 *). 8.0 이상 Info.plist 파일의 배포 대상을 설정 하세요.
+### <a name="mt1305-the-binding-library--contains-a-user-framework--but-embedded-user-frameworks-require-ios-80-the-current-deployment-target-is--please-set-the-deployment-target-in-the-infoplist-file-to-at-least-80"></a>MT1305: 바인딩 라이브러리 '\*' 사용자 프레임 워크를 포함 (\*), 포함 된 사용자 프레임 워크에는 iOS 8.0 필요 하지만 (현재 배포 대상이 *). 8\.0 이상 Info.plist 파일의 배포 대상을 설정 하세요.
 
 지정 된 바인딩 라이브러리에 포함 된 프레임 워크를 포함 하지만 Xamarin.iOS iOS 8.0 이상에 포함 된 프레임 워크를 지원 합니다.
 
@@ -1578,7 +1578,7 @@ Parameter name: instruction
 
 사용자 리소스를 제거 하려고 할 때 예기치 않은 문제가 발생 했습니다. 오류 메시지에 문제의 원인이 되는 어셈블리 이름은입니다. 어셈블리가이 문제를 해결 하려면에 제공 해야 합니다는 [버그 보고서](http://bugzilla.xamarin.com) 사용 하도록 설정 하는 세부 정보 표시를 사용 하 여 전체 빌드 로그와 함께 (즉 `-v -v -v -v` 에 **추가 mtouch 인수**).
 
-사용자 리소스는 응용 프로그램 번들을 만들려는 빌드 시 추출 해야 하는 어셈블리 (리소스로) 안에 포함 된 파일입니다. 여기에는 다음이 포함됩니다.
+사용자 리소스는 응용 프로그램 번들을 만들려는 빌드 시 추출 해야 하는 어셈블리 (리소스로) 안에 포함 된 파일입니다. 다음을 포함합니다.
 
 * `__monotouch_content_*` 및 `__monotouch_pages_*` 리소스만 및
 * 네이티브 라이브러리는 바인딩 어셈블리 내에 포함
@@ -1840,7 +1840,7 @@ Xamarin.iOS에는 해당 형식이 지원 해야 하는 것이 생각을 하는 
 
 <a name="MT4117" />
 
-### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: 등록 기관은 메서드의 서명 불일치를 찾을 수 '*.*'-선택기를 나타내는 메서드는 * 매개 변수를 관리 되는 메서드는 * 매개 변수입니다.
+### <a name="mt4117-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4117: 등록 기관은 메서드의 서명 불일치를 찾을 수 ' *.* '-선택기를 나타내는 메서드는 * 매개 변수를 관리 되는 메서드는 * 매개 변수입니다.
 
 <a name="MT4118" />
 
@@ -1934,7 +1934,7 @@ Xamarin.iOS에는 해당 형식이 지원 해야 하는 것이 생각을 하는 
 
 <a name="MT4140" />
 
-### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: 등록 기관은 메서드의 서명 불일치를 찾을 수 '*.*'-선택기 variadic 메서드를 나타냅니다 * 매개 변수를 관리 되는 메서드 동안 * 매개 변수입니다.
+### <a name="mt4140-the-registrar-found-a-signature-mismatch-in-the-method----the-selector-indicates-the-variadic-method-takes--parameters-while-the-managed-method-has--parameters"></a>MT4140: 등록 기관은 메서드의 서명 불일치를 찾을 수 ' *.* '-선택기 variadic 메서드를 나타냅니다 * 매개 변수를 관리 되는 메서드 동안 * 매개 변수입니다.
 
 <a name="MT4141" />
 
@@ -2141,7 +2141,7 @@ BindAs 특성의 형식에 연결 된 멤버의 형식과 일치 하는지 확�
 
 등록 기관에 언급 된 형식 간 변환 하는 것을 지원 하지 않습니다.
 
-해당 API Xamarin.iOS;에서 제공 하는 경우이 Xamarin.iOS의 버그 버그를 제출 하세요 [ http://bugzilla.xamarin.com ] [ 1]합니다.
+해당 API Xamarin.iOS;에서 제공 하는 경우이 Xamarin.iOS의 버그 버그를 제출 하세요 [ http://bugzilla.xamarin.com ][1]합니다.
 
 네이티브 라이브러리에 대 한 바인딩 프로젝트를 개발 하는 동안이를 실행 하는 경우 형식의 새 조합에 대 한 지원을 추가 하기 위해 열고 죄송 합니다. 이 경우 향상 된 기능 요청을 제출 하세요 ([http://bugzilla.xamarin.com][2])를 테스트 사례를에서는 평가 합니다.
 
@@ -2310,7 +2310,7 @@ BindAs 특성의 형식에 연결 된 멤버의 형식과 일치 하는지 확�
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: 네이티브 연결 실패, 기호가 정의 되지 않음: *. 이 기호가 참조 된 관리 되는 멤버 * 합니다. 필요한 모든 프레임 워크 참조와 네이티브 라이브러리 연결 되었는지 확인 하세요.
 
-이 오류는 관리 코드는 P/Invoke 존재 하지 않는 네이티브 메서드를 포함 하는 경우 보고 됩니다. 예를 들어:
+이 오류는 관리 코드는 P/Invoke 존재 하지 않는 네이티브 메서드를 포함 하는 경우 보고 됩니다. 예:
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -2322,9 +2322,9 @@ class MyImports {
 
 가능한 해결 방법을 몇 가지 있습니다.
 
-  -  소스 코드에서 P/Invoke 문제의 제거 합니다.
-  -  (이렇게 프로젝트의 iOS 빌드 옵션에서에서 "모든 어셈블리"에 "링커 동작"을 설정 하 여) 모든 어셈블리에 대 한 관리 되는 링커를 사용 하도록 설정 합니다. 모든는 P/Invoke 사용 하지 않는 앱에서 효과적으로 제거 합니다 (자동으로 대신 수동으로 등의 이전 시점). 이렇게 하면 다소 느립니다 시뮬레이터 빌드를 리플렉션을 사용 하 여는 경우 링커에 대 한 자세한 내용은 있습니다 앱을 중단할 수 있으므로 단점은 [여기](~/ios/deploy-test/linker.md) )
-  -  누락 된 네이티브 기호를 포함 하는 두 번째 네이티브 라이브러리를 만듭니다. 이 해결 방법은 단순히입니다 (해당 함수를 호출 하려는 경우, 앱 작동이 중단 됩니다).
+- 소스 코드에서 P/Invoke 문제의 제거 합니다.
+- (이렇게 프로젝트의 iOS 빌드 옵션에서에서 "모든 어셈블리"에 "링커 동작"을 설정 하 여) 모든 어셈블리에 대 한 관리 되는 링커를 사용 하도록 설정 합니다. 모든는 P/Invoke 사용 하지 않는 앱에서 효과적으로 제거 합니다 (자동으로 대신 수동으로 등의 이전 시점). 이렇게 하면 다소 느립니다 시뮬레이터 빌드를 리플렉션을 사용 하 여는 경우 링커에 대 한 자세한 내용은 있습니다 앱을 중단할 수 있으므로 단점은 [여기](~/ios/deploy-test/linker.md) )
+- 누락 된 네이티브 기호를 포함 하는 두 번째 네이티브 라이브러리를 만듭니다. 이 해결 방법은 단순히입니다 (해당 함수를 호출 하려는 경우, 앱 작동이 중단 됩니다).
 
 <a name="MT5215" />
 
@@ -2736,12 +2736,12 @@ Xamarin.iOS 프로젝트는 자주 참조 네이티브 기호 동적으로 즉, 
 여기서 * 일 수 있습니다.
 
 - string
-- array
+- 배열
 - dict
 - bool
 - REAL
-- 정수
-- date
+- integer
+- 날짜
 - 데이터
 
 <a name="MT7046" />
@@ -2919,7 +2919,7 @@ Xamarin.iOS 프로젝트는 자주 참조 네이티브 기호 동적으로 즉, 
 
 <a name="MT8009" />
 
-### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: 메서드에 대 한 변환 메서드를 대리자에 블록을 찾을 수 없습니다 *.*' s 매개 변수 # * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
+### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: 메서드에 대 한 변환 메서드를 대리자에 블록을 찾을 수 없습니다 *.* ' s 매개 변수 # * 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이 API는 올바르게 바인딩되어 되지 않은 것을 나타냅니다. 우리의 bugzilla에서 버그를 보내주세요 Xamarin에서 노출 되는 API 인 경우 ([http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) 타사 바인딩 경우 공급 업체에 문의 하세요.
 
@@ -2939,7 +2939,7 @@ Xamarin.iOS (변환할 대리자 블록) 런타임에 필요한 메서드를 찾
 
 <a name="MT8012" />
 
-### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.*: DelegateType null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
+### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.* : DelegateType null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
@@ -2947,7 +2947,7 @@ Xamarin.iOS (변환할 대리자 블록) 런타임에 필요한 메서드를 찾
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.*: DelegateType ({2}) 'Handler' 필드가 없으면 형식을 지정 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.* : DelegateType ({2}) 'Handler' 필드가 없으면 형식을 지정 합니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
@@ -2955,7 +2955,7 @@ Xamarin.iOS (변환할 대리자 블록) 런타임에 필요한 메서드를 찾
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.*: DelegateType의 ({2}) 'Handler' 필드는 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.* : DelegateType의 ({2}) 'Handler' 필드는 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 
@@ -2963,7 +2963,7 @@ Xamarin.iOS (변환할 대리자 블록) 런타임에 필요한 메서드를 찾
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.*: DelegateType의 ({2}) 'Handler' 필드 대리자가 아니거나, 것을 *. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드에 대 한 반환 값에 잘못 된 DelegateProxyAttribute *.* : DelegateType의 ({2}) 'Handler' 필드 대리자가 아니거나, 것을 *. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 올바르지 않습니다.
 

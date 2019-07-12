@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f6a7f8859340dcc8e48b6a4e6f56847168f4b71e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019234"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829755"
 ---
 # <a name="android-localization"></a>Android 지역화
 
@@ -252,7 +252,9 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>장치 테스트
 
 장치를 테스트 하려면에서 언어를 변경 합니다 **설정을** 앱.
-**팁:** 원래 설정으로 언어를 되돌릴 수 있도록 기록해 아이콘 및 메뉴 항목의 위치를 확인 합니다.
+
+> [!TIP]
+> 원래 설정으로 언어를 되돌릴 수 있도록 기록해 아이콘 및 메뉴 항목의 위치를 확인 합니다.
 
 
 ## <a name="summary"></a>요약

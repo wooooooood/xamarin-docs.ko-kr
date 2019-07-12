@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2def0a01bdd28af5eefb76afc19a0e49fd1df355
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60948157"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831561"
 ---
 # <a name="inspecting-live-applications"></a>라이브 애플리케이션 검사
 
@@ -44,10 +44,10 @@ ms.locfileid: "60948157"
 
 라이브 시각적 트리도 매우 유용 합니다. 뷰 계층의 현재 스냅숏을 나타냅니다. 행 집합을 선택할 수 있습니다 `selectedView` REPL 및 보기의 속성 값을 참조 하세요. Mac에서 계층화 된 뷰의 쪼개진된 3D 시각화를 조작할 수 있습니다. Windows에서 보기의 속성 값을 시각적으로 편집할 수 있습니다.
 
-## <a name="known-limitations"></a>알려진된 제한 사항
+## <a name="known-limitations"></a>알려진 제한 사항
 
- - 뷰 선택은 기본 디스플레이에 지원 됩니다.
- - 속성 표에서 편집 Mac을 사용할 수 없는 하 고 Windows에서 몇 가지 데이터 형식으로 제한 됩니다. 더 강력한 편집에 대 한 REPL을 사용 합니다.
- - 검사기 추가 기능을 확장을 설치 및 IDE에서 사용 하도록 설정 하기만 디버그 모드에서 시작 될 때마다 앱에 코드를 삽입는 했습니다. 앱에서 이상 현상을 표시 하는 경우에 해제 또는 검사기 추가 기능/확장을 제거 하 고, IDE를 다시 시작 하 고 재확인 하세요. 보시고 [버그](~/tools/inspector/install.md#reporting-bugs) 알려주세요!
- - 그래도 변경으로 인해 UI 요소를 검사, 하세요 [알려주세요](~/tools/inspector/install.md#reporting-bugs)처럼이 버그를 나타낼 수 있습니다.
+- 뷰 선택은 기본 디스플레이에 지원 됩니다.
+- 속성 표에서 편집 Mac을 사용할 수 없는 하 고 Windows에서 몇 가지 데이터 형식으로 제한 됩니다. 더 강력한 편집에 대 한 REPL을 사용 합니다.
+- 검사기 추가 기능을 확장을 설치 및 IDE에서 사용 하도록 설정 하기만 디버그 모드에서 시작 될 때마다 앱에 코드를 삽입는 했습니다. 앱에서 이상 현상을 표시 하는 경우에 해제 또는 검사기 추가 기능/확장을 제거 하 고, IDE를 다시 시작 하 고 재확인 하세요. 보시고 [버그](~/tools/inspector/install.md#reporting-bugs) 알려주세요!
+- 그래도 변경으로 인해 UI 요소를 검사, 하세요 [알려주세요](~/tools/inspector/install.md#reporting-bugs)처럼이 버그를 나타낼 수 있습니다.
 

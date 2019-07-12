@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: b971029ff3b2b1e8f5e63233d1d754c44b0e3309
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7f1851b6a7dec10580c9feea590cf25be30b4aa1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346976"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832083"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay
 
@@ -26,10 +26,10 @@ Apple Pay 내 iOS 8 이상에 사용할 수 고만 하므로 Xcode 6 개 있습�
 
 다음 항목은 앱에 Apple Pay를 통합 하는 데 필요한도:
 
- - 결제 프로세서 플랫폼
- - 판매자 식별자
- - Apple Pay 인증서를
- - Apple Pay 자격
+- 결제 프로세서 플랫폼
+- 판매자 식별자
+- Apple Pay 인증서를
+- Apple Pay 자격
 
 이 문서에서는 이러한 항목을 자세히 살펴봅니다.
 

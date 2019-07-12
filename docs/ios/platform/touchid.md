@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 25ace6d7febe495164378b3633f06371806e2f82
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087856"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832313"
 ---
 # <a name="touch-id-in-xamarinios"></a>Xamarin.iOS에서 touch ID
 
@@ -81,10 +81,10 @@ Local Authentication 인증을 위해 새 표준 사용자 인터페이스를 �
 
 여러 가지 방법으로 키 집합을 사용 하 여 ACL을 사용 하는 경우 염두 해야 했습니다 하 고 그 중 일부는 다음과 같습니다.
 
--   만 사용 하 여 포그라운드 응용 프로그램을 사용 하 여 키 집합 작업 호출이 실패 하는 백그라운드 스레드에서 호출 하는 경우.
--   추가 하 고 키 집합 항목을 업데이트 하는 인증이 필요할 수 있습니다.
--   키 집합에 여러 일치 하는 항목을 반환 하는 요청을 인증 해야 합니다.
--   보호 된 항목 ACL 장치 전용 및 따라서 동기화 않거나 백업 됩니다.
+- 만 사용 하 여 포그라운드 응용 프로그램을 사용 하 여 키 집합 작업 호출이 실패 하는 백그라운드 스레드에서 호출 하는 경우.
+- 추가 하 고 키 집합 항목을 업데이트 하는 인증이 필요할 수 있습니다.
+- 키 집합에 여러 일치 하는 항목을 반환 하는 요청을 인증 해야 합니다.
+- 보호 된 항목 ACL 장치 전용 및 따라서 동기화 않거나 백업 됩니다.
 
 ### <a name="using-local-authentication-without-keychain-services"></a>키 집합 서비스 없이 로컬 인증을 사용 하 여
 

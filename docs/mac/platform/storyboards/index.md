@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031486"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832295"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.Mac의 스토리 보드 소개
 
@@ -56,9 +56,9 @@ _이 문서에서는 Xamarin.Mac 앱에서 스토리 보드를 작업을 소개 
 
 지정 된 한 장면에 일반적으로 처리 하 던 개별적으로는 모두 수행할 수 있습니다 `.xib` 파일: 
 
- - 장소와 subviews (예: 단추 및 텍스트 상자)을 제어 합니다.
- - 요소 위치 및 자동 레이아웃 제약 조건을 정의 합니다.
- - 연결 작업 및 출 선을 코드에 UI 요소를 노출 합니다.
+- 장소와 subviews (예: 단추 및 텍스트 상자)을 제어 합니다.
+- 요소 위치 및 자동 레이아웃 제약 조건을 정의 합니다.
+- 연결 작업 및 출 선을 코드에 UI 요소를 노출 합니다.
 
 <a name="Working-with-Segues" />
 

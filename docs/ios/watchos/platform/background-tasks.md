@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/13/2017
-ms.openlocfilehash: 45886d787ecc40c9e11ce0c713ffa22819e29db2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e28ba19fdc972b962f0dcd2757f1ba9087ac5c27
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61227487"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831773"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>watchOS에서 Xamarin 백그라운드 작업
 
@@ -54,7 +54,7 @@ Watchos 3 가지는 watch 앱 수 해당 정보가 최신 상태로 유지 하�
 
 Apple 앱 자체 업데이트 프로세스가 완료 될 때까지 일단 보유 하 여이 작업의 최대한 (앱에 사용 하는 제한 된 리소스 이므로)을 제안 합니다.
 
-시스템이 제공 하는 이러한 작업은 새 호출 하 여 `HandleBackgroundTasks` 메서드는 `WKExtensionDelegate` 위임 합니다. 예를 들어:
+시스템이 제공 하는 이러한 작업은 새 호출 하 여 `HandleBackgroundTasks` 메서드는 `WKExtensionDelegate` 위임 합니다. 예:
 
 ```csharp
 using System;
@@ -141,7 +141,7 @@ WatchOS 3에에서 Apple 도킹 스테이션 사용자가 즐겨 찾는 앱을 �
 앱 표시 하는 경우는 `WKSnapshotRefreshBackgroundTask` 완료 되 면 시스템은 자동으로 스냅숏을 앱 UI의 합니다.
 
 > [!IMPORTANT]
-> 항상 예약 해야는 ` WKSnapshotRefreshBackgroundTask` 앱 새 데이터를 수신 하는 사용자 인터페이스를 업데이트 하거나 사용자 수정된 된 정보를 표시 되지 것입니다.
+> 항상 예약 해야는 `WKSnapshotRefreshBackgroundTask` 앱 새 데이터를 수신 하는 사용자 인터페이스를 업데이트 하거나 사용자 수정된 된 정보를 표시 되지 것입니다.
 
 
 
@@ -642,7 +642,7 @@ WatchOS 3에에서 Apple 도킹 스테이션 사용자가 즐겨 찾는 앱을 �
 
 <a name="Best-Practices" />
 
-## <a name="best-practices"></a>모범 사례 
+## <a name="best-practices"></a>최선의 구현 방법 
 
 Apple는 백그라운드 작업과 함께 작업 하는 경우 다음 모범 사례를 제안 합니다.
 

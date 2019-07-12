@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a0efc30fd9814e4da858c4e3e4e99990eccf102e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7ac4d0effc1067b065bad114160dc8648e998dad
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61164296"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830788"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>TvOS Xamarin에 탭 표시줄 컨트롤러 작업
 
@@ -111,7 +111,7 @@ Xamarin.tvOS 앱에서 탭 표시줄을 사용 하는 가장 쉬운 방법은 iO
 -----
 
 > [!IMPORTANT]
-> 와 같은 이벤트를 할당할 수 있지만 `TouchUpInside` UI 요소에 (같은 `UIButton`) ios 디자이너에서이 호출 되지 것입니다 Apple TV 화면 또는 터치 이벤트를 지 원하는 터치 없기 때문입니다. 항상 사용 해야 하는 `Primary Action ` 이벤트 사용자 인터페이스 요소 tvOS에 대 한 이벤트 처리기를 만들 때.
+> 와 같은 이벤트를 할당할 수 있지만 `TouchUpInside` UI 요소에 (같은 `UIButton`) ios 디자이너에서이 호출 되지 것입니다 Apple TV 화면 또는 터치 이벤트를 지 원하는 터치 없기 때문입니다. 항상 사용 해야 하는 `Primary Action` 이벤트 사용자 인터페이스 요소 tvOS에 대 한 이벤트 처리기를 만들 때.
 
 스토리 보드를 사용 하 여 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [Tvos 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)합니다. 
 

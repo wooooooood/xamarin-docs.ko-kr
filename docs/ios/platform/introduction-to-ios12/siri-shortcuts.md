@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62b577393a498587ee2e2e899d20bfeec7988c4e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034787"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832371"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.iOS에서 Siri 바로 가기
 
@@ -218,7 +218,7 @@ Siri를 호출 하 고이 구를 사용 하 여 열립니다 Soup Chef 메뉴 �
 - 응답의 **속성** 다시 사용자에 게 전달 하는 메시지를 사용자 지정에 사용할 수 있습니다. 합니다 **OrderSoup** 의도 응답 **soup** 하 고 **waitTime** 속성입니다.
 - 합니다 **응답 템플릿** 의도 작업 완료 상태를 나타내기 위해 사용할 수 있는 다양 한 성공 및 실패 메시지를 지정 합니다.
 - 합니다 **성공** 성공을 나타내는 응답에 대 한 확인란을 선택 해야 합니다.
- - **OrderSoupIntent** 성공 응답을 사용 합니다 **soup** 및 **waitTime** soup 주문 수를 설명 하는 친숙 하 고 유용한 메시지를 제공 하는 속성입니다.
+- **OrderSoupIntent** 성공 응답을 사용 합니다 **soup** 및 **waitTime** soup 주문 수를 설명 하는 친숙 하 고 유용한 메시지를 제공 하는 속성입니다.
 
 ### <a name="generating-code-for-the-custom-intent"></a>사용자 지정 의도 대 한 코드를 생성합니다.
 

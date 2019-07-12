@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61283463"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832515"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Xamarin.Mac의 대화 상자
 
@@ -413,7 +413,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 ## <a name="creating-a-preferences-dialog"></a>기본 설정 대화 상자 만들기
 
-Interface Builder의 기본 설정 보기 레이아웃에서는 전에 기본 전환이 처리 하는 사용자 지정 segue 형식 추가 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 호출 `ReplaceViewSeque `합니다. 클래스를 편집 하 고 다음과 같이 표시 되도록 합니다.
+Interface Builder의 기본 설정 보기 레이아웃에서는 전에 기본 전환이 처리 하는 사용자 지정 segue 형식 추가 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 호출 `ReplaceViewSeque`합니다. 클래스를 편집 하 고 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using System;

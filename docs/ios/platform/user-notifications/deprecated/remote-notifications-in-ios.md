@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 22ac6a3776e5fa5de2fc238efe90c435190e8005
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087049"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832080"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
 
@@ -67,7 +67,7 @@ Apple APNS의 두 가지 환경 유지 관리:는 *샌드박스* 와 *프로덕�
 
     [![](remote-notifications-in-ios-images/image10new.png "앱 ID에 대 한 인증서 만들기")](remote-notifications-in-ios-images/image8.png#lightbox)
 
-4.  개발 또는 프로덕션 인증서를 사용 하려는 지 여부를 선택 합니다.
+4. 개발 또는 프로덕션 인증서를 사용 하려는 지 여부를 선택 합니다.
 
     [![](remote-notifications-in-ios-images/image11new.png "개발 또는 프로덕션 인증서를 선택 합니다.")](remote-notifications-in-ios-images/image11new.png#lightbox)
 

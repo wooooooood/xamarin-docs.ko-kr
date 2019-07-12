@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d145a8a3cd8bc321f0fce76a8831fca681ad29a0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61077980"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830585"
 ---
 # <a name="cardview"></a>CardView
 
@@ -174,8 +174,8 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 �
 
 
 #### <a name="padding"></a>안쪽 여백
-`
-CardView` 카드 내에서 콘텐츠를 배치 하도록 5 안쪽 여백 특성을 제공 합니다. XML 레이아웃에서 설정할 수 있습니다 또는 유사한 메서드가 코드에서 호출할 수 있습니다.
+
+`CardView` 카드 내에서 콘텐츠를 배치 하도록 5 안쪽 여백 특성을 제공 합니다. XML 레이아웃에서 설정할 수 있습니다 또는 유사한 메서드가 코드에서 호출할 수 있습니다.
 
 [![안쪽 여백 특성 CardView 다이어그램](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: df0b0e8dd57129917f2d8dab07115551ca675acf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8dcb478b303c4c73f7e73dc018ad56b1301389c8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61163318"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830040"
 ---
 # <a name="healthkit-in-xamarinios"></a>Xamarin.iOS에서 HealthKit
 
@@ -142,7 +142,7 @@ IOS 앱 프로 비전 하는 방법에 대 한 자세한 내용을 알아보려�
 
 상태 키트 데이터 저장소는 앱 간에 공유 되는 개인, 사용자 고유의 데이터 저장소입니다. 따라서 중요 한 상태 정보 이기 때문에 사용자 데이터 액세스를 허용 하는 양의 단계를 수행 해야 합니다. 이 액세스 partial 일 수 있습니다 (쓰기 읽기를 제외한 다른 것을 제외한 데이터의 일부 형식에 대 한 액세스 등) 및 언제 든 지 취소할 수 있습니다. 상태 키트 응용 프로그램은 많은 사용자가 해당 상태 관련 정보를 저장 하는 방법에 대 한 망설 되도록 이해 방어적에 작성 되어야 합니다.
 
-상태 키트 데이터가 제한 사과 유형을 지정 합니다. 이러한 형식이 엄격 하 게 정의 된: 혈 형식과 같은 일부 경우에 제공 되는 Apple 열거형의 특정 값으로 제한 (예: 그램, 칼로리, 리터)는 측정 단위는 크기가 결합할 다른 합니다. 호환 되는 측정 단위를 공유 하는 데이터도 구분 됩니다 해당 `HKObjectType`; 예를 들어, 형식 시스템 스토어로 잘못 된 시도 catch 합니다는 `HKQuantityTypeIdentifier.NumberOfTimesFallen` 예상 필드 값을 `HKQuantityTypeIdentifier.FlightsClimbed` 둘 다 사용 하는 경우에는` HKUnit.Count` 측정 단위입니다.
+상태 키트 데이터가 제한 사과 유형을 지정 합니다. 이러한 형식이 엄격 하 게 정의 된: 혈 형식과 같은 일부 경우에 제공 되는 Apple 열거형의 특정 값으로 제한 (예: 그램, 칼로리, 리터)는 측정 단위는 크기가 결합할 다른 합니다. 호환 되는 측정 단위를 공유 하는 데이터도 구분 됩니다 해당 `HKObjectType`; 예를 들어, 형식 시스템 스토어로 잘못 된 시도 catch 합니다는 `HKQuantityTypeIdentifier.NumberOfTimesFallen` 예상 필드 값을 `HKQuantityTypeIdentifier.FlightsClimbed` 둘 다 사용 하는 경우에는 `HKUnit.Count` 측정 단위입니다.
 
 상태 키트 데이터 저장소에 저장할 유형은의 모든 서브 `HKObjectType`합니다. `HKCharacteristicType` 개체는 생물학적 성별, 혈 형식 및 날짜의 생년월일을 저장합니다. 보다 일반적 그러나는 `HKSampleType` 을 특정 시간이 나 시간 동안의 샘플링 되는 데이터를 나타내는 개체입니다. 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a9cf3dab9c112bf7ff99cbc0dd9541c3c1e35142
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076623"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830135"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Xamarin.iOS에서 웹 태그로 검색
 
@@ -63,7 +63,7 @@ Apple 앱의 웹 사이트를 찾을 필요가 쉬운 것으로 사용 합니다
 
 ## <a name="using-twitter-cards"></a>Twitter 카드를 사용 하 여
 
-딥 링크를 Twitter 카드를 사용 하 여 앱의 콘텐츠를 제공할 수 있습니다. 예를 들어:
+딥 링크를 Twitter 카드를 사용 하 여 앱의 콘텐츠를 제공할 수 있습니다. 예:
 
 ```xml
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -121,7 +121,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 다양 한 결과가 더 많은 참여 되 고 향상 시킬 수 있습니다 프로그램 순위 클라우드에서 더 많은 사용자 상호 작용을 유인 하 여 검색 인덱스를 기반 합니다.
 
-구조화 된 데이터 태그를 제공 하는 한 가지 옵션을 오픈 그래프를 사용 합니다. 예를 들어:
+구조화 된 데이터 태그를 제공 하는 한 가지 옵션을 오픈 그래프를 사용 합니다. 예:
 
 ```xml
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -158,14 +158,14 @@ Schema.org의 LD JSON 형식으로 동일한 정보를 나타낼 수 있습니�
 
 Apple에는 현재 schema.org에서 다음과 같은 스키마 형식을 지원합니다.
 
- - AggregateRating
- - ImageObject
- - InteractionCount
- - 제품
- - 조직
- - PriceRange
- - 레시피
- - SearchAction
+- AggregateRating
+- ImageObject
+- InteractionCount
+- 제품
+- 조직
+- PriceRange
+- 레시피
+- SearchAction
 
 이러한 스키마 유형에 대 한 자세한 내용은 참조 하십시오 [schema.org](http://schema.org)합니다.
 
@@ -173,9 +173,9 @@ Apple에는 현재 schema.org에서 다음과 같은 스키마 형식을 지원�
 
 특정 유형의 구조화 된 데이터를 사용 하면 검색 결과 최종 사용자가 가능 해야 합니다. 현재 다음 작업이 지원 됩니다.
 
- - 전화 번호를 전화를 걸고 있습니다.
- - 지정 된 주소의 지도 방향을 가져옵니다.
- - 오디오 또는 비디오 파일을 재생 합니다.
+- 전화 번호를 전화를 걸고 있습니다.
+- 지정 된 주소의 지도 방향을 가져옵니다.
+- 오디오 또는 비디오 파일을 재생 합니다.
 
 예를 들어, 다음과 같은 전화 번호로 전화를 하는 작업 정의 표시 될 수 있습니다.
 

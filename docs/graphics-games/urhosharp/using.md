@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7307f7dcfcc6b5e2576ce4b425879ae05c5a6056
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61352120"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832667"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>3D 게임을 제작 하 UrhoSharp 사용
 
@@ -21,11 +21,11 @@ ms.locfileid: "61352120"
 
 ## <a name="scenes-nodes-components-and-cameras"></a>장면, 노드, 구성 요소 및 카메라
 
-구성 요소 기반 장면 그래프로 장면 모델을 설명할 수 있습니다. 장면 전체 장면에도 나타내는 루트 노드에서 시작 장면 노드 계층으로 구성 됩니다. 각 [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) 개의 3D 변환 (위치, 회전 및 배율), 이름, ID와 임의 개수의 구성 요소입니다.  구성 요소에 활기를 노드, 시각적 표시를 추가 할 수 있습니다 ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), 소리를 내보낼 수 있습니다 ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), 충돌 경계에 제공할 수 있습니다.
+구성 요소 기반 장면 그래프로 장면 모델을 설명할 수 있습니다. 장면 전체 장면에도 나타내는 루트 노드에서 시작 장면 노드 계층으로 구성 됩니다. 각 `Node` 개의 3D 변환 (위치, 회전 및 배율), 이름, ID와 임의 개수의 구성 요소입니다.  구성 요소에 활기를 노드, 시각적 표시를 추가 할 수 있습니다 (`StaticModel`), 소리를 내보낼 수 있습니다 (`SoundSource`), 충돌 경계에 제공할 수 있습니다.
 
 설정 노드를 사용 하 고 자동으로 만들 수 있습니다 합니다 [Urho 편집기](#urhoeditor), 또는 C# 코드에서 작업을 수행할 수 있습니다.  이 문서의 살펴봅니다 코드를 사용 하 여 설정 작업을으로 진행 화면에 표시 되도록 하는 데 필요한 요소를 보여 줍니다.
 
-장면에 설정 하는 것 외에도 설치 해야는 [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/),이 사용자에 게 표시 가져오기는 무엇을 결정 합니다.
+장면에 설정 하는 것 외에도 설치 해야는 `Camera`,이 사용자에 게 표시 가져오기는 무엇을 결정 합니다.
 
 ### <a name="setting-up-your-scene"></a>장면 설정
 
@@ -53,7 +53,7 @@ planeObject.SetMaterial(ResourceCache.GetMaterial("Materials/StoneTiled.xml"));
 
 ### <a name="components"></a>구성 요소
 
-3D 개체 렌더링 소리 재생, 물리 및 스크립팅된 논리 업데이트는 모두 사용 하도록 설정 호출 하 여 노드를 다른 구성 요소를 만들어 [ `CreateComponent<T>()` ](https://developer.xamarin.com/api/member/Urho.Node.CreateComponent%3CT%3E/p/Urho.CreateMode/System.UInt32/)합니다.  예를 들어, 다음과 같은 간단한 구성 요소 확인 하 고 노드 설치:
+3D 개체 렌더링 소리 재생, 물리 및 스크립팅된 논리 업데이트는 모두 사용 하도록 설정 호출 하 여 노드를 다른 구성 요소를 만들어 `CreateComponent<T>()`합니다.  예를 들어, 다음과 같은 간단한 구성 요소 확인 하 고 노드 설치:
 
 ```csharp
 // Create a directional light to the world so that we can see something. The
@@ -65,7 +65,7 @@ var lightNode = scene.CreateChild("DirectionalLight");
 lightNode.SetDirection (new Vector3(0.6f, -1.0f, 0.8f));
 ```
 
-노드 이름 사용 하 여 위에서 만든 "`DirectionalLight`" 있지만 아무에 대 한 방향을 설정 합니다.  이제 설정 하 여 위의 노드 light 내보내기 노드로 연결 하 여는 [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light/) 구성 요소를 사용 하 여 `CreateComponent`:
+노드 이름 사용 하 여 위에서 만든 "`DirectionalLight`" 있지만 아무에 대 한 방향을 설정 합니다.  이제 설정 하 여 위의 노드 light 내보내기 노드로 연결 하 여는 `Light` 구성 요소를 사용 하 여 `CreateComponent`:
 
 ```csharp
 var light = lightNode.CreateComponent<Light>();
@@ -73,22 +73,22 @@ var light = lightNode.CreateComponent<Light>();
 
 구성 요소를 생성 합니다 `Scene` 자체는 특별 한 역할이: 장면 전체 기능을 구현 하 합니다. 다른 모든 구성 요소 전에 생성 해야 하며 다음과 같습니다.
 
-* [`Octree`](https://developer.xamarin.com/api/type/Urho.Octree/): 가시성 쿼리를 가속화 및 공간 분할을 구현 합니다. 이 3D 하지 않고 개체를 렌더링할 수 있습니다.
-* [`PhysicsWorld`](https://developer.xamarin.com/api/type/Urho.Physics.PhysicsWorld/): 물리학 시뮬레이션을 구현 합니다. 구성 요소를 같은 물리학 [ `RigidBody` ](https://developer.xamarin.com/api/type/Urho.Physics.RigidBody/) 하거나 [ `CollisionShape` ](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) 이렇게 하지 않으면 제대로 작동 하지 않을 수 있습니다.
-* [`DebugRenderer`](https://developer.xamarin.com/api/type/Urho.DebugRenderer/): 구현 디버그 기 하 도형 렌더링 합니다.
+ `Octree`: 가시성 쿼리를 가속화 및 공간 분할을 구현 합니다. 이 3D 하지 않고 개체를 렌더링할 수 있습니다.
+ `PhysicsWorld`: 물리학 시뮬레이션을 구현 합니다. 구성 요소를 같은 물리학 `RigidBody` 또는 `CollisionShape` 이렇게 하지 않으면 제대로 작동 하지 않을 수 있습니다.
+ `DebugRenderer`: 구현 디버그 기 하 도형 렌더링 합니다.
 
-일반 구성 요소와 같은 [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light)하십시오 [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera) 또는 [`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)
-직접 만들 수 없습니다는 [ `Scene` ](https://developer.xamarin.com/api/type/Urho.Scene), 있지만 자식 노드를 대신 합니다.
+일반 구성 요소와 같은 `Light`, `Camera` 또는 `StaticModel`
+직접 만들 수 없습니다는 `Scene`, 있지만 자식 노드를 대신 합니다.
 
 라이브러리는 다양 한에 활기를 해당 노드에 연결할 수 있는 구성 요소가 함께: 사용자가 볼 수 요소 (모델), 소리, 엄격한 본문, 충돌 셰이프, 카메라, 광원, 파티클 송신기 및 등입니다.
 
-### <a name="shapes"></a>도형
+### <a name="shapes"></a>셰이프
 
 편의 다양 한 모양을 Urho.Shapes 네임 스페이스의 간단한 노드로 제공 됩니다.  여기에 상자, 구, 콘, 실린더 및 평면이 포함 됩니다.
 
-### <a name="camera-and-viewport"></a>Camera and 뷰포트
+### <a name="camera-and-viewport"></a>카메라 및 뷰포트
 
-카메라는 구성 요소에서 광원 마찬가지로 노드로 구성 요소를 연결 해야 하므로 이것은 다음과 같은:
+광원 마찬가지로 카메라 되므로 구성 요소 구성 요소는 아래와 같이 연결 해야 합니다.
 
 ```csharp
 var CameraNode = scene.CreateChild ("camera");
@@ -106,33 +106,33 @@ Renderer.SetViewPort (0, new Viewport (Context, scene, camera, null))
 
 ### <a name="identification-and-scene-hierarchy"></a>식별 및 장면 계층 구조
 
-노드와 달리 구성 요소 이름을 갖지 않습니다. 동일한 노드 내에서 구성 요소는 해당 유형 및 인덱스 만들기 순서 대로 채워집니다 노드 구성 요소 목록에서로 식별 되, 예를 들어, 검색할 수 있습니다 합니다 [ `Light` ](https://developer.xamarin.com/api/type/Urho.Light) 의 구성 요소는 `lightNode` 개체 위에서 다음과 같이 합니다.
+노드와 달리 구성 요소 이름을 갖지 않습니다. 동일한 노드 내에서 구성 요소는 해당 유형 및 인덱스 만들기 순서 대로 채워집니다 노드 구성 요소 목록에서로 식별 되, 예를 들어, 검색할 수 있습니다 합니다 `Light` 의 구성 요소는 `lightNode` 같이 위의 개체:
 
 ```csharp
 var myLight = lightNode.GetComponent<Light>();
 ```
 
-검색 하 여 모든 구성 요소 목록을 가져올 수도 있습니다는 [ `Components` ](https://developer.xamarin.com/api/property/Urho.Node.Components/) 반환 하는 속성을 `IList<Component>` 사용할 수 있는 합니다.
+검색 하 여 모든 구성 요소 목록을 가져올 수도 있습니다는 `Components` 반환 하는 속성을 `IList<Component>` 사용할 수 있는 합니다.
 
-를 만들면 노드 및 구성 요소를 모두 장면 전역 정수 Id를 가져옵니다. 함수를 사용 하 여 장면에서 쿼리할 수 있습니다 [ `GetNode(uint id)` ](https://developer.xamarin.com/api/member/Urho.Scene.GetNode/p/System.UInt32/) 하 고 [ `GetComponent(uint id)` ](https://developer.xamarin.com/api/member/Urho.Scene.GetComponent/p/System.UInt32/)합니다. 예를 들어 재귀적 이름 기반 장면 노드 쿼리를 수행할 때 보다 훨씬 빠릅니다.
+를 만들면 노드 및 구성 요소를 모두 장면 전역 정수 Id를 가져옵니다. 함수를 사용 하 여 장면에서 쿼리할 수 있습니다 `GetNode(uint id)` 고 `GetComponent(uint id)`입니다. 예를 들어 재귀적 이름 기반 장면 노드 쿼리를 수행할 때 보다 훨씬 빠릅니다.
 
-엔터티 또는 게임 개체;의 기본 개념은 대신 스크립팅된 논리를 배치 하는 노드 및 노드 계층 구조를 결정 하는 프로그래머의 몫 됩니다. 일반적으로 3D 세계에서 사용 가능한 이동 개체는 루트 노드의 자식으로 만들어졌습니다. 중 유무에 관계 없이 사용 하 여 이름 노드를 만들 수 있습니다 [ `CreateChild()` ](https://developer.xamarin.com/api/member/Urho.Node.CreateChild/p/System.String/Urho.CreateMode/System.UInt32/)합니다. 노드 이름의 고유성이 적용 되지 않습니다.
+엔터티 또는 게임 개체;의 기본 개념은 대신 스크립팅된 논리를 배치 하는 노드 및 노드 계층 구조를 결정 하는 프로그래머의 몫 됩니다. 일반적으로 3D 세계에서 사용 가능한 이동 개체는 루트 노드의 자식으로 만들어졌습니다. 중 유무에 관계 없이 사용 하 여 이름 노드를 만들 수 있습니다 `CreateChild`합니다. 노드 이름의 고유성이 적용 되지 않습니다.
 
 권장 되는 (및 구성 요소에 고유한 3D 변환 하지 않으므로 필요한 사실)는 일부 계층적 컴퍼지션 있을 때마다 자식 노드를 만듭니다.
 
-예를 들어 개체 문자 직접 뼈 부모가 될 수 있는 자체 노드에 있어야 문자 자신의 손에서 개체를 보유 된, (또한을 [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/)).  예외는 물리 [ `CollisionShape` ](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape), offsetted 및 노드를 기준으로 개별적으로 회전할 수 있습니다.
+예를 들어 개체 문자 직접 뼈 부모가 될 수 있는 자체 노드에 있어야 문자 자신의 손에서 개체를 보유 된, (또한을 `Node`).  예외는 물리 `CollisionShape`, offsetted 및 노드를 기준으로 개별적으로 회전할 수 있습니다.
 
-사실은 [ `Scene` ](https://developer.xamarin.com/api/type/Urho.Node/)의 파생 된 세계 변환 자식 노드를 계산할 때 최적화로 변환 의도적으로 무시 됩니다, 따라서 변경 해도 효과가 없습니다 및 (방향 회전 안 함을 원본 위치를 그대로 두어야 소유 를 크기 조정 없음.)
+`Scene`의 파생 된 세계 변환 자식 노드를 계산할 때 최적화로 변환 의도적으로 무시 됩니다, 따라서 변경 해도 효과가 없습니다 및 (원점에 없는 회전, 크기 조정 없음 위치입니다.)를 그대로 두어야 소유
 
-[`Scene`](https://developer.xamarin.com/api/type/Urho.Node/) 노드 자유롭게 부모가 재지정 될 수 있습니다. 반면 구성 요소가 항상 속한 노드를 연결 하며 노드 간에 이동할 수 있습니다. 노드 및 구성 요소를 모두 제공 된 [ `Remove()` ](https://developer.xamarin.com/api/member/Urho.Node.Remove()/) 부모를 통해 이동 하지 않고도이 작업을 수행 하는 함수입니다. 노드 제거 되 면 해당 함수를 호출한 후 작업이 없는 노드 또는 해당 구성 요소는 안전 합니다.
+`Scene` 노드 자유롭게 부모가 재지정 될 수 있습니다. 반면 구성 요소가 항상 속한 노드를 연결 하며 노드 간에 이동할 수 있습니다. 노드 및 구성 요소를 모두 제공을 `Remove` 부모를 통해 이동 하지 않고도이 작업을 수행 하는 함수입니다. 노드 제거 되 면 해당 함수를 호출한 후 작업이 없는 노드 또는 해당 구성 요소는 안전 합니다.
 
 만들 수 이기도 한 `Node` 장면에 속하지 않습니다. 이 유용한 예를 들어 때문에 저장 하거나 로드할 수 있는 장면에서 이동 카메라를 사용 하 여 다음 카메라 실제 장면 함께 저장 되지 것입니다 하 고 장면 로드 될 때 소멸 되지 것입니다. 그러나는 기 하 도형, 물리학 또는 스크립트 구성 요소에서 연결 되지 않은 노드를 만들고 다음 나중에 장면으로 이동 하면 이러한 구성 요소를 제대로 작동 하지 note 합니다.
 
 ### <a name="scene-updates"></a>장면 업데이트
 
-해당 업데이트를 사용 하는 장면 (기본값) 주 루프가 반복 될 때마다 자동으로 업데이트 됩니다.  응용 프로그램의 [ `SceneUpdate` ](https://developer.xamarin.com/api/event/Urho.Scene.SceneUpdate/) 에 이벤트 처리기가 호출 됩니다.
+해당 업데이트를 사용 하는 장면 (기본값) 주 루프가 반복 될 때마다 자동으로 업데이트 됩니다.  응용 프로그램의 `SceneUpdate` 에 이벤트 처리기가 호출 됩니다.
 
-비활성화 하 여 장면 업데이트에서 제외할 수 있습니다, 참조 노드 및 구성 요소 [ `Enabled` ](https://developer.xamarin.com/api/member/Urho.Node.Enabled)합니다.  동작은 특정 구성 요소에 따라 다르지만 예를 들어 그릴 수 있는 구성 요소를 사용 하지 않도록 설정 하기가, 보이지 않는 음을 소거 사운드 원본 구성 요소를 사용 하지 않도록 설정 하는 동안. 노드 비활성화 된 경우에 자체 활성화/비활성화 상태에 관계 없이 사용 안 함으로 처리 됩니다 모든 구성 요소.
+노드 및 구성 요소 비활성화 하 여 장면 업데이트에서 제외할 수 있습니다, 참조 `Enabled`합니다.  동작은 특정 구성 요소에 따라 다르지만 예를 들어 그릴 수 있는 구성 요소를 사용 하지 않도록 설정 하기가, 보이지 않는 음을 소거 사운드 원본 구성 요소를 사용 하지 않도록 설정 하는 동안. 노드 비활성화 된 경우에 자체 활성화/비활성화 상태에 관계 없이 사용 안 함으로 처리 됩니다 모든 구성 요소.
 
 ## <a name="adding-behavior-to-your-components"></a>구성 요소에 동작 추가
 
@@ -142,7 +142,7 @@ var myLight = lightNode.GetComponent<Light>();
 
 또는 정확 하 게 되나요 구성 요소 (프레임 기반 동작 섹션에서 설명) 각 프레임에 구성 요소 속성을 업데이트 하 여 제어할 수 있습니다.
 
-### <a name="actions"></a>작업
+### <a name="actions"></a>동작
 
 작업을 사용 하 여 쉽게 매우 노드로 동작을 추가할 수 있습니다.  작업 다양 한 노드 속성을 변경 하 고 시간 동안 실행 하거나 지정된 애니메이션 곡선을 사용 하 여 다시 시도 횟수를 반복 수 있습니다.
 
@@ -180,25 +180,25 @@ await cloud.RunActionsAsync (
 
 위의 예에서 클라우드 이동를 동시에 페이드 아웃을 적용 합니다.
 
-이러한 사용 하는 C#을 알 수 있습니다 await를 수행 하려는 동작에 대 한 선형으로 생각할 수 있습니다.
+이 사용 하는 것을 알 수 있습니다 C# `await`를 수행 하려는 동작에 대 한 선형으로 생각할 수 있습니다.
 
 ### <a name="basic-actions"></a>기본 작업
 
 다음은 UrhoSharp에서 지원 되는 작업입니다.
 
-* 노드를 이동 합니다. [ `MoveTo` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo), [ `MoveBy` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveBy), [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place)를 [ `BezierTo` ](https://developer.xamarin.com/api/type/Urho.Actions.BezierTo), [ `BezierBy` ](https://developer.xamarin.com/api/type/Urho.Actions.BezierBy) , [`JumpTo`](https://developer.xamarin.com/api/type/Urho.Actions.JumpTo), [`JumpBy`](https://developer.xamarin.com/api/type/Urho.Actions.JumpBy)
-* 노드를 회전 합니다. [ `RotateTo` ](https://developer.xamarin.com/api/type/Urho.Actions.RotateTo), [`RotateBy`](https://developer.xamarin.com/api/type/Urho.Actions.RotateBy)
-* 노드 크기를 조정 합니다. [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo), [`ScaleBy`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleBy)
-* 노드 페이딩: [ `FadeIn` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeIn)를 [ `FadeTo` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeTo)를 [ `FadeOut` ](https://developer.xamarin.com/api/type/Urho.Actions.FadeOut)를 [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [`Blink`](https://developer.xamarin.com/api/type/Urho.Actions.Blink)
-* : 색조 [ `TintTo` ](https://developer.xamarin.com/api/type/Urho.Actions.TintTo), [`TintBy`](https://developer.xamarin.com/api/type/Urho.Actions.TintBy)
-* 인스턴트: [ `Hide` ](https://developer.xamarin.com/api/type/Urho.Actions.Hide), [ `Show` ](https://developer.xamarin.com/api/type/Urho.Actions.Show)하십시오 [ `Place` ](https://developer.xamarin.com/api/type/Urho.Actions.Place)를 [ `RemoveSelf` ](https://developer.xamarin.com/api/type/Urho.Actions.RemoveSelf), [`ToggleVisibility`](https://developer.xamarin.com/api/type/Urho.Actions.ToggleVisibility)
-* : 반복 [ `Repeat` ](https://developer.xamarin.com/api/type/Urho.Actions.Repeat)하십시오 [ `RepeatForever` ](https://developer.xamarin.com/api/type/Urho.Actions.RepeatForever), [`ReverseTime`](https://developer.xamarin.com/api/type/Urho.Actions.ReverseTime)
+- 노드 이동: `MoveTo`, `MoveBy`, `Place`, `BezierTo`합니다 `BezierBy`, `JumpTo`, `JumpBy`
+- 노드를 회전: `RotateTo`, `RotateBy`
+- 노드 크기를 조정: `ScaleTo`, `ScaleBy`
+- 노드 페이딩: `FadeIn`, `FadeTo`를 `FadeOut`, `Hide`, `Blink`
+- 색조: `TintTo`, `TintBy`
+- : 인스턴트 `Hide`, `Show`를 `Place`, `RemoveSelf`, `ToggleVisibility`
+- : 반복 `Repeat`, `RepeatForever`, `ReverseTime`
 
-기타 고급 기능 조합을 포함 합니다 [ `Spawn` ](https://developer.xamarin.com/api/type/Urho.Actions.Spawn) 하 고 [ `Sequence` ](https://developer.xamarin.com/api/type/Urho.Actions.Sequence) 작업 합니다.
+기타 고급 기능 조합을 포함 합니다 `Spawn` 고 `Sequence` 작업 합니다.
 
 ### <a name="easing---controlling-the-speed-of-your-actions"></a>감속/가속-작업의 속도 제어 합니다.
 
-감속/가속 애니메이션 펼치려면 됩니다 및 수 있도록 애니메이션 손쉽게 방식을 지시 하는 방법입니다.  기본적으로 작업 해야 선형 동작을 예를 들어를 [ `MoveTo` ](https://developer.xamarin.com/api/type/Urho.Actions.MoveTo) 작업 매우 로봇 이동 해야 합니다.  사용자의 작업은 느리게 시작 이동, 가속화 및 느린 끝에 도달 하는 예를 들어 동작을 변경 하려면 감속/가속 작업을 래핑할 수 있습니다 ([`EasyInOut`](https://developer.xamarin.com/api/type/Urho.Actions.EasyInOut)).
+감속/가속 애니메이션 펼치려면 됩니다 및 수 있도록 애니메이션 손쉽게 방식을 지시 하는 방법입니다.  기본적으로 작업 해야 선형 동작을 예를 들어를 `MoveTo` 작업 매우 로봇 이동 해야 합니다.  사용자의 작업은 느리게 시작 이동, 가속화 및 느린 끝에 도달 하는 예를 들어 동작을 변경 하려면 감속/가속 작업을 래핑할 수 있습니다 (`EasyInOut`).
 
 예를 들어을 감속/가속 작업으로 기존 작업을 래핑하고이 수행 합니다.
 
@@ -214,10 +214,10 @@ await cloud.RunActionAsync (
 
 ### <a name="using-actions-and-async-code"></a>작업 및 비동기 코드를 사용 하 여
 
-사용자 [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component/) 서브 클래스에서 구성 요소 동작 준비 및 기능에 대 한 드라이브는 비동기 메서드를 도입 해야 합니다.
+사용자 `Component` 서브 클래스에서 구성 요소 동작 준비 및 기능에 대 한 드라이브는 비동기 메서드를 도입 해야 합니다.
 C#을 사용 하 여이 메서드를 호출 하는 경우 다음 `await` 프로그램의 다른 부분에서 키워드 중 하나에 `Application.Start` 메서드 또는 응용 프로그램에서 사용자 또는 스토리 지점에 대 한 응답입니다.
 
-예를 들어:
+예:
 
 ```csharp
 class Robot : Component {
@@ -269,7 +269,7 @@ class Robot : Component {
 
 ### <a name="frame-based-behavior-programming"></a>프레임 기반 동작 프로그래밍
 
-재정의 하는 것이 수행할 작업을 사용 하는 대신 프레임별으로 기준 구성 요소의 동작을 제어 하려는 경우는 [ `OnUpdate` ](https://developer.xamarin.com/api/member/Urho.Component.OnUpdate) 메서드의 하 [ `Component` ](https://developer.xamarin.com/api/type/Urho.Component) 하위 클래스입니다.  이 메서드는가 프레임 마다 한 번 호출 하 고 ReceiveSceneUpdates 속성을 true로 설정 하는 경우에 호출 됩니다.
+재정의 하는 것이 수행할 작업을 사용 하는 대신 프레임별으로 기준 구성 요소의 동작을 제어 하려는 경우는 `OnUpdate` 메서드의 여 `Component` 하위 클래스입니다.  이 메서드는가 프레임 마다 한 번 호출 하 고 ReceiveSceneUpdates 속성을 true로 설정 하는 경우에 호출 됩니다.
 
 다음 만드는 방법을 보여 줍니다는 `Rotator` 노드를 회전 하는 노드로 연결 되는 구성 요소:
 
@@ -283,9 +283,9 @@ class Rotator : Component {
     protected override void OnUpdate(float timeStep)
     {
         Node.Rotate(new Quaternion(
-            RotationSpeed.X * timeStep,
-            RotationSpeed.Y * timeStep,
-            RotationSpeed.Z * timeStep),
+            RotationSpeed.X  timeStep,
+            RotationSpeed.Y  timeStep,
+            RotationSpeed.Z  timeStep),
             TransformSpace.Local);
     }
 }
@@ -318,11 +318,11 @@ boxNode.AddComponent (rotator);
 
 ## <a name="loading-and-saving-scenes"></a>로드 하 고 자동으로 저장
 
-백그라운드에서 로드 되 고 XML 형식으로 저장 함수를 살펴봅니다 [ `LoadXml` ](https://developer.xamarin.com/api/member/Urho.Scene.LoadXml) 하 고 [ `SaveXML()` ](https://developer.xamarin.com/api/member/Urho.Scene.SaveXml)합니다. 장면 로드 되 면 모든 기존 콘텐츠 (자식 노드 및 구성 요소)를 먼저 제거 됩니다. 노드 및 사용 하 여 임시 표시 되는 구성 요소는 `Temporary` 속성 저장 되지 것입니다. 모든 기본 제공 구성 요소 및 속성을 처리 하는 serializer가 있지만 구성 요소 하위 클래스에 정의 된 필드 및 사용자 지정 속성을 처리 하지 못합니다 아닙니다. 그러나이 두 개의 가상 메서드를 제공합니다.
+백그라운드에서 로드 되 고 XML 형식으로 저장 함수를 살펴봅니다 `LoadXml` 고 `SaveXML`입니다. 장면 로드 되 면 모든 기존 콘텐츠 (자식 노드 및 구성 요소)를 먼저 제거 됩니다. 노드 및 사용 하 여 임시 표시 되는 구성 요소는 `Temporary` 속성 저장 되지 것입니다. 모든 기본 제공 구성 요소 및 속성을 처리 하는 serializer가 있지만 구성 요소 하위 클래스에 정의 된 필드 및 사용자 지정 속성을 처리 하지 못합니다 아닙니다. 그러나이 두 개의 가상 메서드를 제공합니다.
 
-* [`OnSerialize`](https://developer.xamarin.com/api/member/Urho.Component.OnSerialize) 등록할 수 있습니다 serialization에 대 한 사용자 지정 상태
+ `OnSerialize` 등록할 수 있습니다 serialization에 대 한 사용자 지정 상태
 
-* [`OnDeserialized`](https://developer.xamarin.com/api/member/Urho.Component.OnDeserialize) 위치에 저장 된 사용자 지정 상태를 가져올 수 있습니다.
+ `OnDeserialized` 위치에 저장 된 사용자 지정 상태를 가져올 수 있습니다.
 
 일반적으로 사용자 지정 구성 요소는 다음과 같이 표시 됩니다.
 
@@ -355,15 +355,15 @@ class MyComponent : Component {
 }
 ```
 
-### <a name="object-prefabs"></a>개체를 Prefabs
+### <a name="object-prefabs"></a>개체를 prefabs
 
 방금 로드 또는 전체 장면 저장 유연성은 없습니다 게임에 대 한 새 개체를 동적으로 작성 해야 하는 위치입니다. 반면에 복잡 한 개체를 만들고 코드에서 해당 속성을 설정 수도 지루한 작업입니다. 이러한 이유로 구성 요소와 특성, 자식 노드를 포함 하는 장면 노드를 저장할 수 이기도 합니다. 이러한 그룹으로 나중에 편리 하 게 로드할 수 있습니다.  이러한 저장 된 개체를 prefab은 라고도 합니다. 이렇게 하는 데는 다음과 같은 세 가지 방법이 있습니다.
 
-- 호출 하 여 코드에서 [ `Node.SaveXml` ](https://developer.xamarin.com/api/member/Urho.Node.SaveXml) 노드
+- 호출 하 여 코드에서 `Node.SaveXml` 노드
 - 편집기에서 계층 구조 창의 노드를 선택 하 여 "저장" 노드 "파일" 메뉴에서.
 - "노드" 명령을 사용 하 여 `AssetImporter`장면 노드 계층 저장 하는, 및 모든 모델 (예: 입력된 자산에 포함 된 Collada 파일)
 
-저장 된 노드는 장면을 인스턴스화할 때 호출할 [ `InstantiateXml()` ](https://developer.xamarin.com/api/member/Urho.Scene.InstantiateXml)합니다. 노드에 장면의 자식으로 만들어지지만 그 후 자유롭게 부모를 재지정할 수 있습니다. 위치 및 회전 노드를 배치 하기 위해 지정 해야 합니다. 다음 코드를 prefab을 인스턴스화하는 방법을 보여 줍니다 `Ninja.xm` 원하는 위치 및 회전을 사용 하 여 장면에:
+저장 된 노드는 장면을 인스턴스화할 때 호출 `InstantiateXml`합니다. 노드에 장면의 자식으로 만들어지지만 그 후 자유롭게 부모를 재지정할 수 있습니다. 위치 및 회전 노드를 배치 하기 위해 지정 해야 합니다. 다음 코드를 prefab을 인스턴스화하는 방법을 보여 줍니다 `Ninja.xm` 원하는 위치 및 회전을 사용 하 여 장면에:
 
 ```csharp
 var prefabPath = Path.Combine (FileSystem.ProgramDir,"Data/Objects/Ninja.xml");
@@ -449,13 +449,13 @@ protected override void OnUpdate(float timeStep)
     // Read WASD keys and move the camera scene node to the
     // corresponding direction if they are pressed
     if (input.GetKeyDown(Key.W))
-        CameraNode.Translate(Vector3.UnitY * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(Vector3.UnitY  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.S))
-        CameraNode.Translate(new Vector3(0.0f, -1.0f, 0.0f) * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(new Vector3(0.0f, -1.0f, 0.0f)  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.A))
-        CameraNode.Translate(new Vector3(-1.0f, 0.0f, 0.0f) * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(new Vector3(-1.0f, 0.0f, 0.0f)  moveSpeed  timeStep, TransformSpace.Local);
     if (input.GetKeyDown(Key.D))
-        CameraNode.Translate(Vector3.UnitX * moveSpeed * timeStep, TransformSpace.Local);
+        CameraNode.Translate(Vector3.UnitX  moveSpeed  timeStep, TransformSpace.Local);
 }
 ```
 
@@ -463,20 +463,20 @@ protected override void OnUpdate(float timeStep)
 
 리소스에서 UrhoSharp 초기화 또는 런타임 중에 대용량 저장소에서 로드 되는 대부분의 항목이 포함 됩니다.
 
-- [`Animation`](https://developer.xamarin.com/api/type/Urho.Animation/) -기본 애니메이션에 대 한 사용
-- [`Image`](https://developer.xamarin.com/api/type/Urho.Resources.Image) -다양 한 그래픽 형식에에서 저장 된 이미지를 나타냅니다.
-- [`Model`](https://developer.xamarin.com/api/type/Urho.Model/) -3D 모델
-- [`Material`](https://developer.xamarin.com/api/type/Urho.Material) -모델을 렌더링 하는 데 사용 합니다.
-- [`ParticleEffect`](https://developer.xamarin.com/api/type/Urho.ParticleEffect)- [설명](http://urho3d.github.io/documentation/1.4/_particles.html) 파티클 내보내기 작동 방식 참조 "[입자](#particles)" 아래.
-- [`Shader`](https://developer.xamarin.com/api/type/Urho.Shader) -사용자 지정 셰이더
-- [`Sound`](https://developer.xamarin.com/api/type/Urho.Audio.Sound) -소리 재생을를 참조 하세요. "[소리](#sound)" 아래.
-- [`Technique`](https://developer.xamarin.com/api/type/Urho.Technique/) -재질 렌더링 기술을
-- [`Texture2D`](https://developer.xamarin.com/api/type/Urho.Urho2D.Texture2D/) -2D 질감
-- [`Texture3D`](https://developer.xamarin.com/api/type/Urho.Texture3D/) -3D 질감
-- [`TextureCube`](https://developer.xamarin.com/api/type/Urho.TextureCube/) -정육면체 텍스처
+- `Animation` -기본 애니메이션에 대 한 사용
+- `Image` -다양 한 그래픽 형식에에서 저장 된 이미지를 나타냅니다.
+- `Model` -3D 모델
+- `Material` -모델을 렌더링 하는 데 사용 합니다.
+- `ParticleEffect`- [설명](http://urho3d.github.io/documentation/1.4/_particles.html) 파티클 내보내기 작동 방식 참조 "[입자](#particles)" 아래.
+- `Shader` -사용자 지정 셰이더
+- `Sound` -소리 재생을를 참조 하세요. "[소리](#sound)" 아래.
+- `Technique` -재질 렌더링 기술을
+- `Texture2D` -2D 질감
+- `Texture3D` -3D 질감
+- `TextureCube` -정육면체 텍스처
 - `XmlFile`
 
-관리 되 고 로드 합니다 [ `ResourceCache` ](https://developer.xamarin.com/api/type/Urho.Resources.ResourceCache/) 하위 시스템 (사용할 수 있습니다 [ `Application.ResourceCache` ](https://developer.xamarin.com/api/property/Urho.Application.ResourceCache/)).
+관리 되 고 로드 합니다 `ResourceCache` 하위 시스템 (으로 사용할 수 있는 `Application.ResourceCache`).
 
 리소스 자체는 등록 된 리소스 디렉터리 또는 패키지 파일을 기준으로 해당 파일 경로 의해 식별 됩니다. 엔진은 기본적으로 리소스 디렉터리를 등록 `Data` 하 고 `CoreData`, 또는 패키지 `Data.pak` 및 `CoreData.pak` 있을 경우.
 
@@ -494,7 +494,7 @@ healthBar.SetTexture(ResourceCache.GetTexture2D("Textures/HealthBarBorder.png"))
 
 ### <a name="bringing-3d-models-and-images"></a>3D 모델 및 이미지
 
-Urho3D 가능 하면 기존 파일 형식을 사용 하 고 모델에 대 한 같은 반드시 필요한 경우에 사용자 지정 파일 형식을 정의 하려고 합니다 (*.mdl) 및 애니메이션에 대 한 (*.ani). 이러한 유형의 자산에 대 한 Urho-변환기를 제공 [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) fbx, dae, 3ds, 및 obj 등과 같은 여러 인기 있는 3D 형식을 사용할 수는 있습니다.
+Urho3D 모델 (.mdl) 및 애니메이션 (.ani)와 같이 꼭 필요한 경우에 사용자 지정 파일 형식을 정의 하 고 가능 하면 기존 파일 형식을 사용 하려고 합니다. 이러한 유형의 자산에 대 한 Urho-변환기를 제공 [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) fbx, dae, 3ds, 및 obj 등과 같은 여러 인기 있는 3D 형식을 사용할 수는 있습니다.
 
 이기도 한 유용한 용 추가 기능에서 Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) 는 Blender 자산 Urho3D에 적합 한 형식으로 내보낼 수 있습니다.
 
@@ -502,9 +502,9 @@ Urho3D 가능 하면 기존 파일 형식을 사용 하 고 모델에 대 한 �
 
 일반적으로 중 하나를 사용 하 여 리소스를 요청 하는 경우는 `ResourceCache`의 `Get` 에서 필요한 모든 단계에 대 한 몇 가지 밀리초 소요 될 수 있는 주 스레드를 즉시 로드 된 메서드 (디스크에서 파일을 로드, 데이터를 구문 분석, 필요한 경우 GPU에 업로드 ) 따라서 framerate 삭제 발생할 수 있습니다.
 
-사전에 어떤 리소스가 필요한 경우에 호출 하 여 백그라운드 스레드에서 로드 되도록를 요청할 수 있습니다 `BackgroundLoadResource()`합니다. 사용 하 여 리소스 백그라운드 로드 이벤트를 구독할 수 있습니다는 `SubscribeToResourceBackgroundLoaded` 메서드. 성공 또는 실패를 로드 하는 실제로 된 경우이 알려줍니다. 백그라운드 스레드로 이동할 수 있습니다만 로드 프로세스의 일부 리소스에 따라을 예를 들어 완료 GPU 업로드 단계는 항상 주 스레드에서 발생 합니다. 배경 로드에 대 한 대기 중인 리소스에 대 한 메서드를 로드 하는 리소스 중 하나를 호출 하는 경우 주 스레드는 지연 로드가 완료 될 때까지 note 합니다.
+사전에 어떤 리소스가 필요한 경우에 호출 하 여 백그라운드 스레드에서 로드 되도록를 요청할 수 있습니다 `BackgroundLoadResource`합니다. 사용 하 여 리소스 백그라운드 로드 이벤트를 구독할 수 있습니다는 `SubscribeToResourceBackgroundLoaded` 메서드. 성공 또는 실패를 로드 하는 실제로 된 경우이 알려줍니다. 백그라운드 스레드로 이동할 수 있습니다만 로드 프로세스의 일부 리소스에 따라을 예를 들어 완료 GPU 업로드 단계는 항상 주 스레드에서 발생 합니다. 배경 로드에 대 한 대기 중인 리소스에 대 한 메서드를 로드 하는 리소스 중 하나를 호출 하는 경우 주 스레드는 지연 로드가 완료 될 때까지 note 합니다.
 
-기능을 로드 하는 비동기 장면 `LoadAsync()` 고 `LoadAsyncXML()` 리소스가 백그라운드 로드 하는 옵션을 먼저 전에 장면 콘텐츠를 로드 합니다. 또한 사용할 수만 지정 하 여 장면을 수정 하지 않고 리소스를 로드할 수는 `LoadMode.ResourcesOnly`합니다. 이렇게 하면 빠른 인스턴스화에 대 한 개체 또는 장면을 prefab 파일을 준비 합니다.
+기능을 로드 하는 비동기 장면 `LoadAsync` 고 `LoadAsyncXML` 리소스가 백그라운드 로드 하는 옵션을 먼저 전에 장면 콘텐츠를 로드 합니다. 또한 사용할 수만 지정 하 여 장면을 수정 하지 않고 리소스를 로드할 수는 `LoadMode.ResourcesOnly`합니다. 이렇게 하면 빠른 인스턴스화에 대 한 개체 또는 장면을 prefab 파일을 준비 합니다.
 
 최대 시간 (밀리초)에 각 프레임을 소요 하는 마지막으로 완료 배경을 설정 하 여 로드 된 리소스를 구성할 수 있습니다는 `FinishBackgroundResourcesMs` 속성에는 `ResourceCache`합니다.
 
@@ -512,8 +512,8 @@ Urho3D 가능 하면 기존 파일 형식을 사용 하 고 모델에 대 한 �
 
 ## <a name="sound"></a>소리
 
-소리 게임 플레이 중 중요 한 부분 이며 UrhoSharp 프레임 워크는 게임에서 소리를 재생 하는 방법을 제공 합니다.  연결 하 여 소리를 재생 하는 [`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource/)
-구성 요소를 [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node) 하 고 다음 리소스에서 명명된 된 파일을 재생 합니다.
+소리 게임 플레이 중 중요 한 부분 이며 UrhoSharp 프레임 워크는 게임에서 소리를 재생 하는 방법을 제공 합니다.  연결 하 여 소리를 재생 하는 `SoundSource`
+구성 요소는 `Node` 하 고 다음 리소스에서 명명된 된 파일을 재생 합니다.
 
 다음은 수행 되는 방법입니다.
 
@@ -562,11 +562,11 @@ public async void Explode (Component target)
 
 ![상자 질감으로 파티클](using-images/image-2.png "모양 딱딱한 질감을 사용 하는 경우 이것이")
 
-## <a name="multithreading-support"></a>다중 스레딩 지원
+## <a name="multi-threading-support"></a>다중 스레딩 지원
 
 UrhoSharp는 단일 스레드 라이브러리입니다.  즉, 백그라운드 스레드에서 UrhoSharp의 메서드를 호출 하지 않아야 하거나 응용 프로그램 상태를 손상 시키는 위험 및 응용 프로그램에 충돌이 발생 합니다.
 
-백그라운드에서 몇 가지 코드를 실행 한 다음 주 UI에서 Urho 구성 요소를 업데이트 하려는 경우 사용할 수는 [`Application.InvokeOnMain(Action)`](https://developer.xamarin.com/api/member/Urho.Application.InvokeOnMain)
+백그라운드에서 몇 가지 코드를 실행 한 다음 주 UI에서 Urho 구성 요소를 업데이트 하려는 경우 사용할 수는 `Application.InvokeOnMain(Action)`
 메서드를 재정의합니다.  또한, 수행할 수 있습니다 사용 하 여 C# await 및.NET 작업 Api 코드는 적절 한 스레드에서 실행 되도록 합니다.
 
 ## <a name="urhoeditor"></a>UrhoEditor

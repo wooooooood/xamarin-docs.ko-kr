@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9d98d9d3052f52dc7860ba513756e3a33d1dc58
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61430503"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831918"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.iOS에서 통합된 Storyboards
 
@@ -693,12 +693,12 @@ IPad 시뮬레이터에서에서 응용 프로그램이 실행 되 면 요소가
 
 동적 시작 화면에 다음 제한 사항 및 고려 사항
 
- - 만 사용 하 여 `UIKit` 클래스입니다.
- - 단일 루트 뷰를 사용 하는 `UIView` 또는 `UIViewController` 개체입니다.
- - 응용 프로그램의 코드에 대 한 연결을 확인 하지 않습니다 (추가 하지 마세요 **동작** 하거나 **출 선**).
- - 추가 안 함 `UIWebView` 개체입니다.
- - 모든 사용자 지정 클래스를 사용 하지 마세요.
- - 런타임 특성을 사용 하지 마세요.
+- 만 사용 하 여 `UIKit` 클래스입니다.
+- 단일 루트 뷰를 사용 하는 `UIView` 또는 `UIViewController` 개체입니다.
+- 응용 프로그램의 코드에 대 한 연결을 확인 하지 않습니다 (추가 하지 마세요 **동작** 하거나 **출 선**).
+- 추가 안 함 `UIWebView` 개체입니다.
+- 모든 사용자 지정 클래스를 사용 하지 마세요.
+- 런타임 특성을 사용 하지 마세요.
 
 염두에서 위의 지침을 살펴보겠습니다 기존 Xamarin iOS 8 프로젝트에 동적 시작 화면을 추가 합니다.
 

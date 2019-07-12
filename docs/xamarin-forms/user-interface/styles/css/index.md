@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 25410dc24d3cd0f9e31a72844052f8450177e9b4
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: c85dd8dbc654ee9c55248db1133135a2806f4bf2
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512958"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829889"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -414,7 +414,7 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
 |`transform-origin`|`VisualElement`| _이중_, _double_ \| `initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
-|`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial `|`visibility: hidden;`|
+|`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
 |`width`|`VisualElement`|_Double_ \| `initial`|`min-width: 320;`|
 
 > [!NOTE]

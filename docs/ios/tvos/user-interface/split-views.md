@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9f1bd48378faa9ae6a4853083c93377268c38f01
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 775fe01122440378f68973549d46e3010400614e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61374621"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830857"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>TvOS Xamarin에서 분할 뷰 컨트롤러를 사용 하 여 작업
 
@@ -100,7 +100,7 @@ Xamarin.tvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 �
 
 ### <a name="accessing-master-and-detail"></a>마스터 및 세부 정보에 액세스
 
-마스터 및 세부 정보 뷰 컨트롤러를 프로그래밍 방식으로 액세스 해야 할 경우 사용 된 `ViewControllers ` 분할 뷰 컨트롤러의 속성입니다. 예를 들어:
+마스터 및 세부 정보 뷰 컨트롤러를 프로그래밍 방식으로 액세스 해야 할 경우 사용 된 `ViewControllers` 분할 뷰 컨트롤러의 속성입니다. 예를 들어:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -122,7 +122,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 public DetailViewController DetailController { get; set;}
 ```
 
-분할 뷰 컨트롤러 재정의 `ViewDidLoad` 함께 뷰 두 메서드와 연결 합니다. 예를 들어:
+분할 뷰 컨트롤러 재정의 `ViewDidLoad` 함께 뷰 두 메서드와 연결 합니다. 예:
 
 ```csharp
 public override void ViewDidLoad ()

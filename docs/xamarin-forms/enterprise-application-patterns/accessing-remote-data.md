@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a4c58139b0ddbaaedf5769eeac6585bac4c013e4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277974"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832119"
 ---
 # <a name="accessing-remote-data"></a>원격 데이터에 액세스
 
@@ -154,7 +154,7 @@ public async Task<IActionResult> Items(
 
 #### <a name="making-a-post-request"></a>POST 요청
 
-`BasketService` 클래스는 데이터 검색을 관리 하 고 장바구니 마이크로 서비스를 사용 하 여 프로세스를 업데이트 하는 데 사용 됩니다. 에 `RegisterDependencies` 에서 메서드를 `ViewModelLocator` 클래스는 `BasketService` 클래스에 대 한 형식 매핑을으로 등록 됩니다는 `IBasketService` Autofac 종속성 주입 컨테이너를 사용 하 여 형식입니다. 그런 다음 인스턴스가 `BasketViewModel` 해당 생성자는 클래스를 만들는 `IBasketService` 형식으로의 인스턴스를 반환 하는 Autofac 확인 되 면를 `BasketService `클래스입니다. 종속성 주입에 대 한 자세한 내용은 참조 하세요. [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)합니다.
+`BasketService` 클래스는 데이터 검색을 관리 하 고 장바구니 마이크로 서비스를 사용 하 여 프로세스를 업데이트 하는 데 사용 됩니다. 에 `RegisterDependencies` 에서 메서드를 `ViewModelLocator` 클래스는 `BasketService` 클래스에 대 한 형식 매핑을으로 등록 됩니다는 `IBasketService` Autofac 종속성 주입 컨테이너를 사용 하 여 형식입니다. 그런 다음 인스턴스가 `BasketViewModel` 해당 생성자는 클래스를 만들는 `IBasketService` 형식으로의 인스턴스를 반환 하는 Autofac 확인 되 면를 `BasketService` 클래스입니다. 종속성 주입에 대 한 자세한 내용은 참조 하세요. [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)합니다.
 
 그림 10-2 바구니에서 표시할 데이터를 전송 하는 클래스의 상호 작용을 보여 합니다 `BasketView`, 장바구니 마이크로 서비스.
 

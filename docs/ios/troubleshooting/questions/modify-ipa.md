@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc9396a8cb667b8170c4b3511b9fe8423741e6b1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420894"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829934"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>파일을 추가 하거나 Visual Studio에서 빌드한 후 IPA 파일에서 파일을 제거 수 있나요?
 
@@ -32,7 +32,7 @@ ms.locfileid: "61420894"
 
 4.  새 `Terminal.app` 창입니다.
 
-5.  형식 `cd ` 는 Terminal.app 창 및 다음 끌어서 놓기에 `generated session id` 폴더를 `Terminal.app` 창:
+5.  형식 `cd` 는 Terminal.app 창 및 다음 끌어서 놓기에 `generated session id` 폴더를 `Terminal.app` 창:
 
     ![](modify-ipa-images/session-id-folder.png "Finder에서 생성 된 세션 id 폴더 찾기")
 
@@ -52,7 +52,7 @@ ms.locfileid: "61420894"
 
 12.  포함 하는 줄을 찾아서 `tool /usr/bin/codesign execution started with arguments: -v --force --sign`합니다.
 
-13.  형식 `/usr/bin/codesign ` 8 단계의 Terminal.app 창에 있습니다.
+13.  형식 `/usr/bin/codesign` 8 단계의 Terminal.app 창에 있습니다.
 
 14.  시작 인수를 모두 복사 `-v` 12 단계에서 줄에서 Terminal.app 창에 붙여넣습니다.
 

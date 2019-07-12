@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 60b54ffdce5f6bda2324c08bd3159eefeb5bc7f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6830df267aa0b9c4f12fbd53520206ea94fc8a38
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270252"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831886"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Xamarin에 내장 된 tvOS 앱 문제 해결
 
@@ -138,7 +138,7 @@ _"만 arm64 조각을 포함 하는 앱도 있어야"arm64"UIRequiredDeviceCapab
 
 ### <a name="invalid-bundle--an-app-that-supports-game-controllers-must-also-support-the-apple-tv-remote"></a>잘못 된 번들 – 게임 컨트롤러를 지 원하는 앱도 지원 해야 원격 Apple TV
 
-또는 
+로 구분하거나 여러 
 
 ### <a name="invalid-bundle--apple-tv-apps-with-the-gamecontroller-framework-must-include-the-gcsupportedgamecontrollers-key-in-the-apps-infoplist"></a>잘못 된 번들 – GameController 프레임 워크를 사용 하 여 Apple TV 앱에서 앱의 Info.plist GCSupportedGameControllers 키를 포함 해야 합니다.
 
@@ -151,7 +151,7 @@ _하나 이상의 "응용 프로그램 이름"에 대 한 최근 업데이트에
 
 _잘못 된 번들 – 게임 컨트롤러를 지 원하는 앱 원격 Apple TV 지원 해야 합니다._
 
-또는 
+로 구분하거나 여러 
 
 _잘못 된 번들 – GameController 프레임 워크를 사용 하 여 Apple TV 앱은 앱의 Info.plist에 GCSupportedGameControllers 키를 포함 해야 합니다._
 
@@ -184,7 +184,7 @@ Xamarin.tvOS 프로젝트에는 이식 가능한 클래스 라이브러리 (PCL)
 
 _호환 되지 않는 대상 프레임 워크:입니다. NetPortable, 버전 = v4.5 프로필 Profile78 =_
 
-이 문제를 해결 하기 위해 라는 XML 파일을 추가 ` Xamarin.TVOS.xml` 다음과 같은 내용으로:
+이 문제를 해결 하기 위해 라는 XML 파일을 추가 `Xamarin.TVOS.xml` 다음과 같은 내용으로:
 
 ```xml
 <Framework Identifier="Xamarin.TVOS" MinimumVersion="1.0" Profile="*" DisplayName="Xamarin.TVOS"/>

@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 206379b162c7778663ee2baf64dfeb1d33666ab4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827488"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831458"
 ---
 # <a name="binding-objective-c-libraries"></a>Objective-c 라이브러리 바인딩
 
@@ -267,7 +267,7 @@ string Text { get; [NullAllowed] set; }
 사용자 지정 컨트롤에 대 한 바인딩을 설정 하는 경우에 일정을 고려해 야 합니다.
 
 1. **바인딩 속성 정적 이어야** -이 속성의 바인딩을 정의 하는 경우는 [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) 특성을 사용 해야 합니다.
- 2. **속성 이름이 정확히 일치 해야** -이름 속성을 바인딩하는 데 사용자 지정 컨트롤의 속성 이름을 정확히 일치 해야 합니다.
+2. **속성 이름이 정확히 일치 해야** -이름 속성을 바인딩하는 데 사용자 지정 컨트롤의 속성 이름을 정확히 일치 해야 합니다.
 3. **속성 형식이 정확히 일치 해야** -변수 형식 속성을 바인딩하는 데 사용자 지정 컨트롤에서 속성의 형식에 정확히 일치 해야 합니다.
 4. **중단점 및 getter/setter** -중단점 배치 getter에서 또는 속성의 setter 메서드를 적중 되지 것입니다.
 5. **콜백을 관찰** -사용자 지정 컨트롤의 속성 값의 변경 내용을 알릴 관찰 콜백을 사용 해야 합니다.
@@ -479,7 +479,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>인수 목록 Objective-c 바인딩
 
-Objective-c는 variadic 인수를 지원합니다. 예를 들어:
+Objective-c는 variadic 인수를 지원합니다. 예:
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...

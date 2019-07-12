@@ -7,18 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 0fff9b7ce4b78e29409d1cc7a55e7f447baf722c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649575"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831094"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Xamarin.Forms에서 제공 하는 뷰를 사용 하는 방법_
+
+## <a name="activityindicatoractivityindicatormd"></a>[ActivityIndicator](activityindicator.md)
+
+`ActivityIndicator` 는 응용 프로그램에에서 참여 하는 시간이 오래 걸리는 작업을 진행의 표시가 전혀 제공 하지 않고도 사용자에 게 표시 하는 애니메이션 컨트롤입니다.
 
 ## <a name="animationanimationindexmd"></a>[애니메이션](animation/index.md)
 
@@ -87,6 +91,10 @@ Xamarin.Forms는 스크롤 행의 데이터를 표시할 목록 뷰 컨트롤을
 ## <a name="pickerpickerindexmd"></a>[선택기](picker/index.md)
 
 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다.
+
+## <a name="progressbarprogressbarmd"></a>[ProgressBar](progressbar.md)
+
+합니다 [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar) 를 가로 막대로 채워진 float 속성을 기준으로 진행률을 시각적으로 나타내는 컨트롤입니다.
 
 ## <a name="sliderslidermd"></a>[슬라이더](slider.md)
 

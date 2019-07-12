@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 86f41bf227b97ef24651f482ff133a065226ee14
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035882"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830395"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.iOS의 제한 사항
 
@@ -36,7 +36,7 @@ Mono [전체 AOT](https://www.mono-project.com/docs/advanced/aot/#full-aot) 기�
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>NSObjects의 제네릭 서브 클래스는 제한 됩니다.
 
-현재 Xamarin.iOS 제네릭 메서드에 대 한 지원 되지 않습니다 같은 NSObject 클래스의 제네릭 서브 클래스를 만드는 기능 지원이 제한적입니다. 7.2.1를 기준으로 NSObjects의 제네릭 서브 클래스를 사용 하 여이 이와 같은 가능 합니다.
+현재 Xamarin.iOS 제네릭 메서드에 대 한 지원 되지 않습니다 같은 NSObject 클래스의 제네릭 서브 클래스를 만드는 기능 지원이 제한적입니다. 7\.2.1를 기준으로 NSObjects의 제네릭 서브 클래스를 사용 하 여이 이와 같은 가능 합니다.
 
 ```csharp
 class Foo<T> : UIView {
@@ -53,7 +53,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>동적 코드를 생성 하지 않음
 
-IOS 커널에서 동적 코드 생성에서 응용 프로그램 방지, 때문에 Xamarin.iOS 동적 코드 생성의 모든 형태를 지원 하지 않습니다. 여기에는 다음이 포함됩니다.
+IOS 커널에서 동적 코드 생성에서 응용 프로그램 방지, 때문에 Xamarin.iOS 동적 코드 생성의 모든 형태를 지원 하지 않습니다. 이러한 개체는 다음과 같습니다.
 
 -  System.Reflection.Emit 제공 되지 않습니다.
 -  System.Runtime.Remoting 지원 되지 않습니다.
@@ -74,7 +74,8 @@ System.Reflection 부족 합니다. **내보낼** 런타임 코드 생성에 종
 -  Remoting의 TransparentProxy 또는 런타임 코드를 동적으로 생성 하는 다른 것입니다. 
 
 
- **중요:** 혼동 하지 마십시오 **Reflection.Emit** 사용 하 여 **리플렉션**합니다. Reflection.Emit 코드를 동적으로 생성 하는 방법에 대 한 이며 해당 jit 컴파일된 코드 및 네이티브 코드로 컴파일됩니다. IOS (JIT 컴파일 안 함)의 제한으로 인해이 지원 되지 않습니다.
+  > [!IMPORTANT]
+  > 혼동 하지 마십시오 **Reflection.Emit** 사용 하 여 **리플렉션**합니다. Reflection.Emit 코드를 동적으로 생성 하는 방법에 대 한 이며 해당 jit 컴파일된 코드 및 네이티브 코드로 컴파일됩니다. IOS (JIT 컴파일 안 함)의 제한으로 인해이 지원 되지 않습니다.
 
 하지만 Type.GetType ("someClass") 메서드를 나열 하는 특성 및 값을 가져오는 속성을 나열을 비롯 한 전체 리플렉션 API는 잘 작동 합니다.
 
