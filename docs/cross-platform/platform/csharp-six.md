@@ -1,22 +1,25 @@
 ---
 title: C#6 새 기능 개요
-description: 최신 버전의를 C# – 버전 6 – 언어 상용구를 덜, 향상 된 이해를 돕기 위해 자세한 일관성 있고 언어 진화 계속 합니다. 클리너 초기화 구문을 사용 하는 기능 catch/finally 블록 및 null 조건부 await? 연산자는 특히 유용 합니다.
+description: 버전 6 C# 언어 해 더 적은 상용구 코드, 향상 된 이해를 돕기 위해 자세한 일관성 있고 언어를 나갑니다. 클리너 초기화 구문을 사용 하는 기능 catch/finally 블록 및 null 조건부 await? 연산자는 특히 유용 합니다.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 1a261c009f105994ac0b9c84f3d0ac037c4a3517
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 0fd7f4e9972f7bf762a44c9edf30fa13f9d989bc
+ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978493"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67850944"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 새 기능 개요
 
-_최신 버전의를 C# – 버전 6 – 언어 상용구를 덜, 향상 된 이해를 돕기 위해 자세한 일관성 있고 언어 진화 계속 합니다. 클리너 초기화 구문을 사용 하는 기능 catch/finally 블록 및 null 조건부 await? 연산자는 특히 유용 합니다._
+_버전 6 C# 언어 해 더 적은 상용구 코드, 향상 된 이해를 돕기 위해 자세한 일관성 있고 언어를 나갑니다. 클리너 초기화 구문을 사용 하는 기능 catch/finally 블록 및 null 조건부 await? 연산자는 특히 유용 합니다._
+
+> [!NOTE]
+> 최신 버전의에 대 한 정보에 대 한는 C# -버전 7 – 언어 문서를 참조 [What's New in C# 7.0](/dotnet/csharp/whats-new/csharp-7)
 
 이 문서에서는의 새로운 기능을 소개 C# 6. Mono 컴파일러에서 완전히 지원 됩니다 및 새로운 기능을 사용 하 여 모든 Xamarin 대상 플랫폼에서 개발자가 시작할 수 있습니다.
 
@@ -152,7 +155,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 ## <a name="string-interpolation"></a>문자열 보간
 `String.Format` 함수는 일반적으로 인덱스 자리 표시자로 사용 형식 문자열의 예를 들어 `String.Format("Expected: {0} Received: {1}.", expected, received`). 물론, 새 값 추가 인수를 계산 하 고 자리 표시자를 번호 다시 매기기 인수 목록에서 올바른 시퀀스에서 새 인수 삽입 성가신 거의 작업을 관련 항상 했습니다.
 
-C#6의 새로운 특징 문자열 보간 기능을 크게 향상 `String.Format`합니다. 변수 접두사로 문자열에서 직접 이름을 지정할 수는 이제는 `$`합니다. 예를 들면 다음과 같습니다.
+C#6의 새로운 특징 문자열 보간 기능을 크게 향상 `String.Format`합니다. 변수 접두사로 문자열에서 직접 이름을 지정할 수는 이제는 `$`합니다. 말합니다.
 
 ```csharp
 $"Expected: {expected} Received: {received}."

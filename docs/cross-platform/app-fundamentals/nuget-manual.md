@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4f4ca327479a7f4eb4a7dc7feafdd71291c1b7fe
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2f66d8a3960741643013a1010162f52d283026d6
+ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61186145"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67855706"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin 용 NuGet 패키지를 수동으로 만들기
 
@@ -69,7 +69,7 @@ A **.nuspec** 이러한 모든 요소를 대상으로 하는 파일 같이 표�
 
 이 외부 [는 NuGet 대상 이름과 함께 PCL 프로필 목록을](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 도 유용한 참고 자료입니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 참조할 수 있는 몇 가지 오픈 소스 예제:
 
@@ -79,6 +79,5 @@ A **.nuspec** 이러한 모든 요소를 대상으로 하는 파일 같이 표�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Nugetizer 3000 Nuget 만들기 자동화](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
-- [64 비트 iOS에 대 한 Nuget을 업데이트 하는 중입니다.](https://blog.xamarin.com/how-to-update-nuget-packages-for-64-bit/)
+- [Nugetizer 3000 Nuget 만들기 자동화](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
 - [NuGet 프로젝트 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

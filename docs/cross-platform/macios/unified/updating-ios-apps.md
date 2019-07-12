@@ -6,12 +6,12 @@ ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4d506232903d4a94ac20a1fb9f93a39884d9099c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e471aaca2a7a5f247b21dd1c1863a01b062a716
+ms.sourcegitcommit: afe9d93373d66eb45d82cabefca83b5733969634
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61213720"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67855748"
 ---
 # <a name="updating-existing-ios-apps"></a>기존 iOS 앱 업데이트
 
@@ -115,4 +115,3 @@ Xamarin.iOS 모바일 응용 프로그램의 통합 API로 변환 된 경우 개
 - [코드를 Unified API로 업데이트하는 팁](~/cross-platform/macios/unified/updating-tips.md)
 - [플랫폼 간 앱에서의 네이티브 형식 작업](~/cross-platform/macios/native-types-cross-platform.md)
 - [클래식 vs 통합 API 차이점](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
-- [(비디오) 통합 API로 마이그레이션](http://university.xamarin.com/lightninglectures/migrating-to-the-unified-api)
