@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267819"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864702"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>기존 라이브러리 프로젝트에서 NuGet 만들기
 
@@ -21,13 +21,13 @@ ms.locfileid: "61267819"
 
 2. 로 이동 합니다 **NuGet 패키지 > 메타 데이터** 섹션 및 모든 입력는 [필요한 정보를](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 에 **일반** 탭:
 
-  [![](existing-library-images/existing-metadata-sml.png "필수 메타 데이터를 입력 합니다.")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "필수 메타 데이터를 입력 합니다.")](existing-library-images/existing-metadata.png#lightbox)
 
 3. 필요에 따라 [추가 메타 데이터 추가](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 에 **세부 정보** 탭 합니다.
 
 4. 메타 데이터를 구성한 후에 프로젝트를 마우스 오른쪽 단추로 클릭 및 선택할 수 있습니다 **NuGet 패키지 만들기** 하며 **.nupkg** NuGet 패키지 파일에 저장 됩니다는 **/bin/** 폴더 (디버그 또는 릴리스 구성에 따라).
 
-  ![](existing-library-images/create-nuget-package.png "오른쪽 클릭 메뉴에서 NuGet 패키지 만들기를 선택 합니다.")
+   ![](existing-library-images/create-nuget-package.png "오른쪽 클릭 메뉴에서 NuGet 패키지 만들기를 선택 합니다.")
 
 5. NuGet 패키지를 만들려면 _모든_ 빌드 또는 배포로 이동 합니다 **NuGet 패키지 > 빌드** 섹션과 눈금 **프로젝트를 빌드할 때 NuGet 패키지를 만듭니다**:
 

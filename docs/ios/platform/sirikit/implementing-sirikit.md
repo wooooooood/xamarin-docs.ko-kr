@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7fc675b69132ac41ffa9d87f4b3264de431b11bd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61435173"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865670"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.iOS에서 SiriKit 구현
 
@@ -43,7 +43,7 @@ MonkeyChat 사용자 친구의 연락 자체 책을 유지 하 고 각 화면 �
 
 [![](implementing-sirikit-images/elements01.png "SiriKit 다이어그램을 사용 하 여 앱 확장")](implementing-sirikit-images/elements01.png#lightbox)
 
-여기에는 다음이 포함됩니다.
+이러한 개체는 다음과 같습니다.
 
 1. **인 텐트 확장** -사용자가 응답을 확인, 요청을 처리할 수 하 고 실제로 사용자의 요청을 수행 하 고 작업을 수행 하는 앱을 확인 합니다.
 2. **인 텐트 UI 확장** - *선택적*, Siri 환경에서 응답을 사용자 지정 UI를 제공 하 고 UI 앱을 가져올 수 및 사용자의 환경을 보강 하는 Siri에 브랜딩 합니다.
@@ -181,12 +181,12 @@ SiriKit 통합을 포함 하는 Xamarin.iOS 앱을 올바른 자격을 설정 �
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 두 번 클릭 합니다 `Entitlements.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
-3. 추가 합니다 `com.apple.developer.siri` **속성**설정 합니다 **형식** 에 `Boolean` 및 **값** 를 `Yes`: 
+2. 추가 합니다 `com.apple.developer.siri` **속성**설정 합니다 **형식** 에 `Boolean` 및 **값** 를 `Yes`: 
 
     [![](implementing-sirikit-images/setup01w.png "Com.apple.developer.siri 속성 추가")](implementing-sirikit-images/setup01w.png#lightbox)
-4. 파일의 변경 내용을 저장합니다.
-5. 두 번 클릭 합니다 **프로젝트 파일** 에 **솔루션 탐색기** 을 편집용으로 엽니다.
-6. 선택 **iOS 번들 서명** 있는지 확인 합니다 `Entitlements.plist` 에서 파일을 선택 합니다 **사용자 지정 자격** 필드입니다.
+3. 파일의 변경 내용을 저장합니다.
+4. 두 번 클릭 합니다 **프로젝트 파일** 에 **솔루션 탐색기** 을 편집용으로 엽니다.
+5. 선택 **iOS 번들 서명** 있는지 확인 합니다 `Entitlements.plist` 에서 파일을 선택 합니다 **사용자 지정 자격** 필드입니다.
 
 -----
 
@@ -233,15 +233,15 @@ Mac에서 다음을 수행 합니다.
 16. 있는지 확인 합니다 **프로 비전 프로필** 만든 이상이 설치 된 Xcode 합니다.
 17. Mac 용 Visual Studio에서 SiriKit 지원을 추가 하려면 프로젝트를 엽니다
 18. 두 번 클릭 합니다 `Info.plist` 파일을 **솔루션 탐색기**합니다.
-18. 있는지 확인 합니다 **번들 식별자** 위의 Apple Developer 포털에서 만든 값과 일치 합니다. 
+19. 있는지 확인 합니다 **번들 식별자** 위의 Apple Developer 포털에서 만든 값과 일치 합니다. 
 
     [![](implementing-sirikit-images/setup06.png "번들 식별자")](implementing-sirikit-images/setup06.png#lightbox)
-18. 에 **솔루션 탐색기**를 선택 합니다 **프로젝트**합니다.
-19. 프로젝트를 마우스 오른쪽 단추로 누르고 **옵션**합니다.
-21. 선택 **iOS 번들 서명**를 선택 합니다 **서명 Id** 하 고 **프로 비전 프로필** 위에서 만든: 
+20. 에 **솔루션 탐색기**를 선택 합니다 **프로젝트**합니다.
+21. 프로젝트를 마우스 오른쪽 단추로 누르고 **옵션**합니다.
+22. 선택 **iOS 번들 서명**를 선택 합니다 **서명 Id** 하 고 **프로 비전 프로필** 위에서 만든: 
 
     [![](implementing-sirikit-images/setup07.png "서명 Id 및 프로 비전 프로필 선택")](implementing-sirikit-images/setup07.png#lightbox)
-22. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
+23. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
 > [!IMPORTANT]
 > 테스트 SiriKit 에서만 실제 iOS 10 하드웨어 장치 및 iOS 10에 없는 시뮬레이터입니다. SiriKit을 설치 하는 데 문제가 실제 하드웨어에서 Xamarin.iOS 앱을 사용 하는 경우는 필수 자격, 앱 ID, 식별자 서명 및 프로 비전 프로필 구성 되어 있는지 확인 올바르게 Apple 개발자 포털 및 Visual Studio에서 mac 용
@@ -324,7 +324,7 @@ if (language == "en-US") {
 
 사용자 지정 어휘도 등록 하는 용어를 선택할 때만 사용 약관을 선택 하는 앱에 익숙하지 않는 사람이 오해 될 수 있습니다. 되지 등록 일반적인 용어 "내 운동" 또는 "내 앨범" 등입니다. 예를 들어 MonkeyChat 앱 사용자의 주소록에 각 연락처와 연결 된 애칭 등록 됩니다.
 
-앱을 호출 하 여 사용자 특정 어휘를 제공 합니다 `SetVocabularyStrings` 메서드의 `INVocabulary` 클래스 및 전달를 `NSOrderedSet` 기본 앱에서 컬렉션. 앱 항상 호출 해야는 `RemoveAllVocabularyStrings` 메서드 첫 번째 새로 추가 하기 전에 모든 기존 조건을 제거 합니다. 예를 들어:
+앱을 호출 하 여 사용자 특정 어휘를 제공 합니다 `SetVocabularyStrings` 메서드의 `INVocabulary` 클래스 및 전달를 `NSOrderedSet` 기본 앱에서 컬렉션. 앱 항상 호출 해야는 `RemoveAllVocabularyStrings` 메서드 첫 번째 새로 추가 하기 전에 모든 기존 조건을 제거 합니다. 예:
 
 ```csharp
 using System;
@@ -629,7 +629,7 @@ SiriKit을 채택 하도록 앱 준비 되었으므로 이제는 개발자 하�
 
     [![](implementing-sirikit-images/intents05.w157-sml.png "의도 확장 선택")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. 다음 입력을 **이름을** 의도 확장을 클릭 합니다 **확인** 단추입니다.
-1. 에 **솔루션 탐색기**, 마우스 오른쪽 단추로 클릭 합니다 **참조** 은 새로 만든 인 텐트 확장의 폴더 선택한 **추가 > 참조**. (즉 앱 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 합니다 **확인** 단추:
+4. 에 **솔루션 탐색기**, 마우스 오른쪽 단추로 클릭 합니다 **참조** 은 새로 만든 인 텐트 확장의 폴더 선택한 **추가 > 참조**. (즉 앱 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 합니다 **확인** 단추:
 
     [![](implementing-sirikit-images/intents08w.png "공용 공유 코드 라이브러리 프로젝트의 이름을 선택 합니다.")](implementing-sirikit-images/intents08w.png#lightbox)
     
@@ -891,7 +891,7 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 1. 마우스 오른쪽 단추로 클릭 합니다 **솔루션 이름** 에 **솔루션 탐색기** 선택한 **추가** > **새 프로젝트 추가...**
 2. 대화 상자에서 선택 **iOS** > **확장** > **의도 UI 확장** 을 클릭 합니다 **다음** 단추입니다.
 3. 다음 입력을 **이름을** 의도 확장을 클릭 합니다 **확인** 단추입니다.
-5. 에 **솔루션 탐색기**, 마우스 오른쪽 단추로 클릭 합니다 **참조** 새로 만든된 의도 확장의 폴더입니다. (즉 앱 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 합니다 **확인** 단추입니다.
+4. 에 **솔루션 탐색기**, 마우스 오른쪽 단추로 클릭 합니다 **참조** 새로 만든된 의도 확장의 폴더입니다. (즉 앱 위에서 만든) 공용 공유 코드 라이브러리 프로젝트의 이름을 확인 하 고 클릭 합니다 **확인** 단추입니다.
     
 -----
 
@@ -935,7 +935,7 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 ### <a name="configuring-the-main-class"></a>기본 클래스를 구성합니다.
 
-Siri를 의도 UI 확장에 대 한 진입점으로 작동 하는 기본 클래스를 구성 합니다. 서브 클래스 해야 `UIViewController` 는 준수 하는 `IINUIHostedViewController` 인터페이스입니다. 예를 들어:
+Siri를 의도 UI 확장에 대 한 진입점으로 작동 하는 기본 클래스를 구성 합니다. 서브 클래스 해야 `UIViewController` 는 준수 하는 `IINUIHostedViewController` 인터페이스입니다. 예:
 
 ```csharp
 using System;

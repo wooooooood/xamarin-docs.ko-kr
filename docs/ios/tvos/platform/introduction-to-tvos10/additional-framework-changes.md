@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3eccba01f235382b7969a2f4a122c09ce9b4127b
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ab6236198d0a5826fc613d1f3839bafdb980d235
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832342"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865640"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경
 
@@ -25,7 +25,7 @@ TvOS에 주요 변경 내용 외에도 Apple가 수정 및 여러 기존 프레�
 AVFoundation 프레임 워크에는 다음과 같은 향상 기능이 포함 됩니다.
 
 - TvOS 10에서에서 앱을 더 이상 구현 다른 [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) 콘텐츠 형식을 기반으로 동작 합니다. 설정 된 `Rate` 속성과 AVFoundation 상태일 없이 재생에 사용할 수 있는 충분 한 콘텐츠는 경우 결정 됩니다.
- - 새 `AVPlayerLooper` 클래스 쉽게 재생 하는 동안 지정 된 부분 미디어를 반복 합니다.
+- 새 `AVPlayerLooper` 클래스 쉽게 재생 하는 동안 지정 된 부분 미디어를 반복 합니다.
 
 <a name="AVKit-Framework-Enhancements" />
 

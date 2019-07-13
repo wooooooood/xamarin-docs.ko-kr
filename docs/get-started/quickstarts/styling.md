@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 53d2a0aae3398ea31676fbc3dab95d500dfe2104
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: 1b68afc1f3d3c57a5c336e9d30c97ce2375acb9f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309498"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864342"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 응용 프로그램 스타일
 
@@ -29,7 +29,7 @@ ms.locfileid: "67309498"
 [![](styling-images/screenshots1-sml.png "페이지 정보")](styling-images/screenshots1.png#lightbox "노트가")
 [![](styling-images/screenshots2-sml.png "항목 페이지를 참고")](styling-images/screenshots2.png#lightbox "참고 항목 페이지")
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>필수 구성 요소
 
 성공적으로 완료 해야 합니다 [이전 빠른 시작](database.md) 이 빠른 시작을 시도 하기 전에 합니다. 또는 다운로드 합니다 [이전 빠른 시작 샘플](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/) 이 빠른 시작에 대 한 시작 점으로 사용 합니다.
 
@@ -120,7 +120,7 @@ ms.locfileid: "67309498"
 
     변경 내용을 저장 **NotesPage.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
 
-5. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+4. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -169,7 +169,7 @@ ms.locfileid: "67309498"
 
     변경 내용을 저장 **NoteEntryPage.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
 
-6. 빌드 및 각 플랫폼에서 프로젝트를 실행 합니다. 자세한 내용은 [빠른 시작을 작성](single-page.md#building-the-quickstart)합니다.
+5. 빌드 및 각 플랫폼에서 프로젝트를 실행 합니다. 자세한 내용은 [빠른 시작을 작성](single-page.md#building-the-quickstart)합니다.
 
     에 **NotesPage** 키를 누릅니다를 **+** 단추를를 **NoteEntryPage** 메모를 입력 합니다. 각 페이지에서 이전 빠른 시작에서 스타일 어떻게 변경 되었는지 확인 합니다.
 
@@ -261,7 +261,7 @@ ms.locfileid: "67309498"
 
     변경 내용을 저장 **NotesPage.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
 
-5. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+4. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -310,7 +310,7 @@ ms.locfileid: "67309498"
 
     변경 내용을 저장 **NoteEntryPage.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
 
-6. 빌드 및 각 플랫폼에서 프로젝트를 실행 합니다. 자세한 내용은 [빠른 시작을 작성](single-page.md#building-the-quickstart)합니다.
+5. 빌드 및 각 플랫폼에서 프로젝트를 실행 합니다. 자세한 내용은 [빠른 시작을 작성](single-page.md#building-the-quickstart)합니다.
 
     에 **NotesPage** 키를 누릅니다를 **+** 단추를를 **NoteEntryPage** 메모를 입력 합니다. 각 페이지에서 이전 빠른 시작에서 스타일 어떻게 변경 되었는지 확인 합니다.
 

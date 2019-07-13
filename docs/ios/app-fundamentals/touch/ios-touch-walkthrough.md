@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abcd89a6c4547680df0b96d235531312d3b21c52
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407816"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864327"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.iOS에서 터치를 사용 하 여
 
@@ -176,7 +176,7 @@ ms.locfileid: "61407816"
 
 <a name="Gesture_Recognizer_Samples" />
 
-##  <a name="gesture-recognizer-samples"></a>제스처 인식기 샘플
+## <a name="gesture-recognizer-samples"></a>제스처 인식기 샘플
 
 합니다 [이전 섹션](#Touch_Samples) 터치 이벤트를 사용 하 여 화면에서 이리저리 개체를 끌 하는 방법을 설명 합니다.
 이 섹션에서 터치 이벤트 제거 됩니다 하 고 다음 제스처 인식기를 사용 하는 방법을 보여 줍니다.

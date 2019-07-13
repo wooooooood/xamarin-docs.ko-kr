@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 65ebbddfa1a315a478ceb43162b3c80eba2d8cc1
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: a80bf876e239e1788a371a1f09d36d73247d4611
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827796"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865009"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.iOS에서 사용자 인터페이스 개체 만들기
 
@@ -88,7 +88,7 @@ Xcode에서 스토리 보드를 열려면 마우스 오른쪽 단추로 클릭 �
 
 Mac 용 Xcode의 Interface Builder Visual Studio와 통합 하는 방법에 대 한 자세한 내용은 참조는 [Xib 코드 생성](~/ios/internals/xib-code-generation.md#generated) 문서.
 
-##  <a name="using-c"></a>사용 하 여C#
+## <a name="using-c"></a>사용 하 여C#
 
 프로그래밍 방식으로 사용 하 여 사용자 인터페이스 개체를 만들기로 결정 하는 경우 C# (뷰 또는 예를 들어 뷰 컨트롤러)에서 다음이 단계를 수행 합니다.
 

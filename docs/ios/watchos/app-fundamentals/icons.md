@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/26/2018
-ms.openlocfilehash: 435af10484827826d53b767c2738e3945e0bae42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 75b5d1f941921a84d96579a4b0d0666ae0c2522d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345242"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864976"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>WatchOS에서 Xamarin 아이콘 사용
 
@@ -55,28 +55,28 @@ Watch 앱 옆에 표시 되는 문자열을 [Apple Watch 설정 앱](~/ios/watch
 
 1. Watch 앱 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **파일 > 추가 > 새 파일... > iOS > 자산 카탈로그** 프로젝트에 자산 카탈로그를 추가 합니다.
 
- ![](icons-images/newasset.png "프로젝트에 자산 카탈로그 추가")
+    ![](icons-images/newasset.png "프로젝트에 자산 카탈로그 추가")
 
 2. 두 번 클릭 합니다 **AppIcon.appiconset/Contents.json** 파일
 
-  ![](icons-images/xcassets-iconset-sml.png "AppIcon 콘텐츠")
+    ![](icons-images/xcassets-iconset-sml.png "AppIcon 콘텐츠")
 
 3. 이 스크린샷에 표시 된 대로 모든 watchOS 이미지를 추가 합니다.
 
-  [![](icons-images/appicons-sml.png "이 스크린샷에 표시 된 대로 모든 watchOS 이미지 추가")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "이 스크린샷에 표시 된 대로 모든 watchOS 이미지 추가")](icons-images/appicons.png#lightbox)
 
-  가리킵니다 [Apple 아이콘 지침](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) 필요한 크기 (화면의 크기 같습니다). 이러한 아이콘 원으로 렌더링에 자동으로 클리핑됩니다를 기억 합니다.
+    가리킵니다 [Apple 아이콘 지침](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) 필요한 크기 (화면의 크기 같습니다). 이러한 아이콘 원으로 렌더링에 자동으로 클리핑됩니다를 기억 합니다.
 
-  아이콘 목록에는 다음과 같이 표시 됩니다.
+    아이콘 목록에는 다음과 같이 표시 됩니다.
 
-  ![](icons-images/xcassets-complete-sml.png "솔루션 탐색기에서 아이콘 목록")
+    ![](icons-images/xcassets-complete-sml.png "솔루션 탐색기에서 아이콘 목록")
 
 4. 자산 카탈로그 앱에 포함 된을 보장 하려면 다음 키를 추가 하 고 값을 **Watch 앱의 Info.plist**:
 
-```xml
-<key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcon.appiconset</string>
-```
+    ```xml
+    <key>XSAppIconAssets</key>
+    <string>Images.xcassets/AppIcon.appiconset</string>
+    ```
 
 아이콘을 선택 하 여 올바른 구성 된 것을 확인할 수 있습니다 합니다 [Apple Watch 설정 앱](~/ios/watchos/app-fundamentals/settings.md) iPhone 시뮬레이터에서에서 또는 생성을 [알림](~/ios/watchos/platform/notifications.md) 알림을 표시 아이콘을 확인 하 고 화면입니다.
 

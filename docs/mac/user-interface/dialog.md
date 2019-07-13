@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f53c1afd7c3f835bff2aae507b9937067bde4bec
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832515"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865740"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Xamarin.Mac의 대화 상자
 
@@ -127,10 +127,10 @@ A _시트_ 사용자가 대화 상자를 해제 될 때까지 창을 사용 하 
 6. 만들기는 **모달 Segue** 대화 상자의 창 대화 상자에 열리는 UI 요소에서 컨트롤을 끌어 새 뷰 컨트롤러를 앱의 주 창에서. 할당 된 **식별자** `ModalSegue`: 
 
     [![](dialog-images/new06.png "모달 segue")](dialog-images/new06.png#lightbox)
-6. 모든 실시간 업 **동작** 하 고 **출 선**: 
+7. 모든 실시간 업 **동작** 하 고 **출 선**: 
 
     [![](dialog-images/new04.png "작업 구성")](dialog-images/new04.png#lightbox)
-6. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
+8. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
 
 확인 된 `CustomDialogController.cs` 다음과 같은 파일 확인:
 
@@ -265,19 +265,19 @@ A _시트_ 사용자가 대화 상자를 해제 될 때까지 창을 사용 하 
 2. 새 끌어 **뷰 컨트롤러** 디자인 화면에:
 
     [![](dialog-images/new01.png "라이브러리에서 뷰 컨트롤러를 선택 하면")](dialog-images/new01.png#lightbox)
-2. 사용자 인터페이스를 디자인 합니다.
+3. 사용자 인터페이스를 디자인 합니다.
 
     [![](dialog-images/sheet01.png "UI 디자인")](dialog-images/sheet01.png#lightbox)
-3. 만들기는 **시트 Segue** 새 보기 컨트롤러에 주 창에서: 
+4. 만들기는 **시트 Segue** 새 보기 컨트롤러에 주 창에서: 
 
     [![](dialog-images/sheet02.png "시트 segue 형식 선택")](dialog-images/sheet02.png#lightbox)
-4. 에 **검사기**에서 뷰 컨트롤러의 이름을 **클래스** `SheetViewController`: 
+5. 에 **검사기**에서 뷰 컨트롤러의 이름을 **클래스** `SheetViewController`: 
 
     [![](dialog-images/sheet03.png "클래스 이름 설정")](dialog-images/sheet03.png#lightbox)
-5. 필요한 모든 정의 **출 선** 하 고 **작업**: 
+6. 필요한 모든 정의 **출 선** 하 고 **작업**: 
 
     [![](dialog-images/sheet04.png "필요한 출 선 및 작업 정의")](dialog-images/sheet04.png#lightbox)
-6. 변경 내용을 저장 하 고 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
+7. 변경 내용을 저장 하 고 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
 
 다음에 편집을 `SheetViewController.cs` 파일을 다음과 같이 표시 되도록 합니다.
 

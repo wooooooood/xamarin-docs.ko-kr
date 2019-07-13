@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: asb3993
 ms.author: amburns
 ms.date: 04/18/2018
-ms.openlocfilehash: 70ca9a73c83bed5233b77a6f7be80a13f04f2bcb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fbef8f60a31511be926ee2adf5e239ad8955b208
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61360852"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864533"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조를 업데이트 하는 중
 
@@ -180,7 +180,7 @@ NuGet에서 사용할 수 있는 구성 요소를 확인 한 후 다음이 단�
 1. 마우스 오른쪽 단추로 클릭 합니다 **패키지** 노드를 선택 하 고 **패키지 추가...** .
 2. NuGet 대체 이름이 나 작성자를 검색 합니다.
 
-  ![](component-nuget-images/nuget-search-sml.png)
+    ![](component-nuget-images/nuget-search-sml.png)
 
 3. 키를 눌러 **패키지 추가**합니다.
 

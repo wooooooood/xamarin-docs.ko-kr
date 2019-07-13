@@ -6,12 +6,12 @@ ms.assetid: 64c24b09-2c4a-43ad-b94d-6cd05a1aee44
 author: asb3993
 ms.author: amburns
 ms.date: 03/30/2017
-ms.openlocfilehash: e81c28f0610a0df2e4fe06349685ef5e0744071a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d9cabdb22425bdc057f6d52de5aa943537dd1ca
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61159164"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864474"
 ---
 # <a name="how-do-i-collect-the-current-call-stacks-of-the-visual-studio-process"></a>Visual Studio 프로세스의 현재 호출 스택을 수집하려면 어떻게 할까요?
 
@@ -23,20 +23,20 @@ ms.locfileid: "61159164"
 
 3. **디버그 > 프로세스에 연결**을 선택합니다.
 
-  ![](vs-callstack-images/image1.png "디버그 > 프로세스에 연결")
+   ![](vs-callstack-images/image1.png "디버그 > 프로세스에 연결")
 
 4. 원래 응답 하지 않는 인스턴스를 선택 `devenv.exe` 목록에서 **사용 가능한 프로세스**합니다.
 
 5. 선택 **디버그 > 모두 중단**합니다.
 
-  ![](vs-callstack-images/image2.png "디버그 > 모두 중단")
+   ![](vs-callstack-images/image2.png "디버그 > 모두 중단")
 
 6. 선택 **디버그 > 다른 이름으로 덤프 저장**합니다.
 
-  ![](vs-callstack-images/image3.png "디버그 > 다른 이름으로 덤프 저장")
+   ![](vs-callstack-images/image3.png "디버그 > 다른 이름으로 덤프 저장")
 
 7. 변경 **형식으로 저장** 하 **미니 덤프 (\*.dmp)** 합니다. 보다 훨씬 더 작은 파일 생성 됩니다 **힙 사용 미니 덤프**, 아니며 힙 일반적으로 고정을 진단 하는 데 관련 됩니다.
 
-  ![](vs-callstack-images/image4.png "이 힙 사용 미니 덤프 보다 훨씬 더 작은 파일을 생성 및 힙 일반적으로 관련 되지가 진단에 대 한")
+   ![](vs-callstack-images/image4.png "이 힙 사용 미니 덤프 보다 훨씬 더 작은 파일을 생성 및 힙 일반적으로 관련 되지가 진단에 대 한")
 
 8. 덤프 파일을 저장 합니다. 온라인 파일을 제출 하는 경우 크기를 줄이기 위해 zip 수 있습니다.

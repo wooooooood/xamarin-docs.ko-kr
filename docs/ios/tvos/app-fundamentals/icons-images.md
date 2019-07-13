@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dab1b0f7bf7aabb4dfcfbfdcb5e202baa48e664d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61418197"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865161"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>TvOS 아이콘 및 Xamarin에서 이미지를 사용 하 여 작업
 
@@ -38,7 +38,7 @@ ms.locfileid: "61418197"
 
 시작 이미지 꾸밈 식이나 광고에 대 한 영업 기회에 앱 신속 하 게 시작 하 고 준비 하는 효과 제공 하기 위한 것만 사용 하도록 합니다.
 
-|시작 이미지 크기|노트|
+|시작 이미지 크기|참고|
 |---|---|
 |1920x1080px|비-레이어.png 파일에만|
 
@@ -181,7 +181,7 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 5. 클릭 합니다 **Apple TV 항목 x 1** 이미지 파일을 선택 합니다.
 6. 에 대해 위의 단계를 반복 합니다 `Front` 및 `Middle` 자산입니다.
 7. 다음 정의 하려면 동일한 단계를 반복 합니다 `App Icon - Large` 자산입니다.
-4. 변경 내용을 저장합니다.
+8. 변경 내용을 저장합니다.
 
 <a name="Top-Shelf-Image" />
 
@@ -193,7 +193,7 @@ Apple TV 홈 화면의 위쪽 행에 Xamarin.tvOS 앱을 배치 하는 경우 �
 
 단일 정적으로 인기 코너 이미지 제공 `.png` 하거나 `.lsr` 파일 (참조 [계층화 된 이미지 만들기](#Creating-Layered-Images))를 동적으로 만들기 런타임에 포커스 가능 항목의 단일 행으로 또는 (참조 [ 위쪽 선반 동적 콘텐츠](#Dynamic-Top-Shelf-Content) 아래).
 
-|위쪽 선반 이미지 크기|노트|
+|위쪽 선반 이미지 크기|참고|
 |---|---|
 |1920x720px|정적.png 또는 계층화 된.lsr 파일|
 
@@ -218,8 +218,8 @@ TvOS 프로젝트에 필요한 인기 코너 이미지를 설정 하려면 다�
 3. 클릭 된 `Top Shelf Image` 자산: 
 
     [![](icons-images-images/asset07.png "인기 코너 이미지 자산")](icons-images-images/asset07.png#lightbox)
-5. 클릭 합니다 **Apple TV 항목 x 1** 이미지 파일을 선택 합니다.
-6. 변경 내용을 저장합니다.
+4. 클릭 합니다 **Apple TV 항목 x 1** 이미지 파일을 선택 합니다.
+5. 변경 내용을 저장합니다.
 
 <a name="Dynamic-Top-Shelf-Content" />
 
@@ -287,11 +287,11 @@ Game Center 지원을 포함 한 Xamarin.tvOS 앱은 게임을 하는 경우에 
 
 ||도전 과제 아이콘|대시보드 아트 워크|순위표 아트 워크|
 |---|---|---|---|
-|표시 크기|200x200px|923x150px|N/A|
-|실제 크기|320x320px|N/A|659x371px|
-|안전 영역 크기|N/A|N/A|618x348px|
-|포커스가 없는 크기|N/A|N/A|548x309px|
-|포커스가 있는 크기|N/A|N/A|618x348px|
+|표시 크기|200x200px|923x150px|n/a|
+|실제 크기|320x320px|n/a|659x371px|
+|안전 영역 크기|n/a|n/a|618x348px|
+|포커스가 없는 크기|n/a|n/a|548x309px|
+|포커스가 있는 크기|n/a|n/a|618x348px|
 
 Game Center 사용에 대 한 자세한 내용은 Apple의를 참조 하세요 [Game Center 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)합니다.
 

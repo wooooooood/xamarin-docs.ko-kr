@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 979b103db478e3888d3a3c20df6afbd91d0c37d8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c0bf6058b2ec7a8e3ef606bef9f725a476abffe
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386541"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865923"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS에서 Xamarin 자동 제안
 
@@ -132,7 +132,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>복원 작업
 
-검색 결과 탭 하거나 사용자에 게 응답할 (`NSUserActivity`) 앱을 편집 합니다 **AppDelegate.cs** 파일을 재정의 `ContinueUserActivity` 메서드. 예를 들어:
+검색 결과 탭 하거나 사용자에 게 응답할 (`NSUserActivity`) 앱을 편집 합니다 **AppDelegate.cs** 파일을 재정의 `ContinueUserActivity` 메서드. 예:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -169,9 +169,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 위의 식당 검색 앱을 예로 들어보겠습니다. 가 구현 하는 경우 `NSUserActivity` 고 올바르게 채워집니다 모든 메타 데이터 및 특성, 사용자는 다음 작업을 수행할 수 있습니다.
 
 1. 친구에 게 충족 하 고 싶은 앱의 식당을 찾습니다.
-4. 맵 앱으로 전환 하는 사용자, 경우 식당의 주소를 대상으로 자동으로 제안 됩니다.
-5. 이 타사 앱에도 적합 (지 `NSUserActivity`) 식당의 주소는 자동으로 제안 있습니다 대상으로도 하 고 사용자는 공유 앱으로 전환할 수 있도록 합니다.
-6. 또한 컨텍스트를 제공 Siri 사용자는 식당 앱 내에서 Siri를 호출 하 고 요청할 수 있도록 *"Get directions..."* Siri를 사용자가 보고 식당에는 지침을 제공 합니다.
+2. 맵 앱으로 전환 하는 사용자, 경우 식당의 주소를 대상으로 자동으로 제안 됩니다.
+3. 이 타사 앱에도 적합 (지 `NSUserActivity`) 식당의 주소는 자동으로 제안 있습니다 대상으로도 하 고 사용자는 공유 앱으로 전환할 수 있도록 합니다.
+4. 또한 컨텍스트를 제공 Siri 사용자는 식당 앱 내에서 Siri를 호출 하 고 요청할 수 있도록 *"Get directions..."* Siri를 사용자가 보고 식당에는 지침을 제공 합니다.
 
 위의 기능을 모두 한 가지 공통에 제안을에서 처음 제공 되는 위치를 나타내는 모두 합니다. 위 예의 경우이 가상의 식당 검토 앱입니다.
 

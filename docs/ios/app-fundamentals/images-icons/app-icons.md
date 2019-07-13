@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 1eb3ec77dd478744906625dcfcd9fb843e74577c
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: cf2da9f7fe8d90c52517118cc3b4aa0e046d1f69
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827479"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864558"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.iOS 응용 프로그램 아이콘
 
@@ -134,16 +134,16 @@ UI 컨트롤을 문서 아이콘으로 Xamarin.iOS 앱 이미지 자산을 사�
 2. 클릭 합니다 **시각적 자산** 탭을 클릭 합니다 **자산 카탈로그 사용** 단추 **앱 아이콘**: 
 
     ![](app-icons-images/icon02w.png "시각적 자산 탭 선택")
-4. **솔루션 탐색기**를 확장 합니다 **자산 카탈로그** 폴더: 
+3. **솔루션 탐색기**를 확장 합니다 **자산 카탈로그** 폴더: 
 
     ![](app-icons-images/image009.png "자산 카탈로그 폴더를 확장 합니다.")
-5. 두 번 클릭 합니다 **미디어** 파일 편집기에서 엽니다. 
+4. 두 번 클릭 합니다 **미디어** 파일 편집기에서 엽니다. 
 
     ![](app-icons-images/image010.png "편집기에서 미디어 파일을 엽니다.")
-6. 아래는 **속성 탐색기** 개발자는 다양 한 형식 및 필요한 아이콘의 크기를 선택할 수 있습니다.
-7. 지정 된 아이콘 유형에 클릭 하 고 필요한 형식/크기에 대 한 이미지 파일을 선택 합니다.
-8. 클릭 합니다 **열려** 프로젝트에 이미지를 포함 하는 xcasset에서 설정 단추입니다.
-9. 필요한 모든 이미지에 대해 반복 합니다.
+5. 아래는 **속성 탐색기** 개발자는 다양 한 형식 및 필요한 아이콘의 크기를 선택할 수 있습니다.
+6. 지정 된 아이콘 유형에 클릭 하 고 필요한 형식/크기에 대 한 이미지 파일을 선택 합니다.
+7. 클릭 합니다 **열려** 프로젝트에 이미지를 포함 하는 xcasset에서 설정 단추입니다.
+8. 필요한 모든 이미지에 대해 반복 합니다.
 
 -----
 
@@ -203,8 +203,8 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 2. 클릭 합니다 **시각적 자산** 탭을 확장 합니다 **iTunes 아트 워크**: 
 
     ![](app-icons-images/itunes01w.png "ITunes 아트 워크 Visual Studio에서 편집")
-4. 누락 된 이미지가 편집기에서 썸네일을 클릭, 파일 열기 대화 상자에서 원하는 iTunes 아트 워크에 대 한 이미지 파일을 선택 하 고 클릭 합니다 **열고** 단추입니다.
-5. 필요한 이미지가 지정 된 앱에 대 한 모든 때까지이 단계를 반복 합니다.
+3. 누락 된 이미지가 편집기에서 썸네일을 클릭, 파일 열기 대화 상자에서 원하는 iTunes 아트 워크에 대 한 이미지 파일을 선택 하 고 클릭 합니다 **열고** 단추입니다.
+4. 필요한 이미지가 지정 된 앱에 대 한 모든 때까지이 단계를 반복 합니다.
 
 -----
 

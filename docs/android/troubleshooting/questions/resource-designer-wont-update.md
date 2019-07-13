@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: ba3c2b07e7f35bf9fd84d10b74d034a02ca6a73d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 65f7c6d8a573501ffec4aa1b8eaf28ff1e6479e8
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153290"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864231"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>내 Android Resource.designer.cs 파일이 업데이트되지 않습니다.
 
@@ -24,13 +24,13 @@ Xamarin.Studio 5.1의 버그는 이전에 부분적으로 또는 완전히.cspro
 
 ## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>프로젝트 파일을 수정 하는 다음 두 가지 가능한 방법
 
-### <a name="either"></a>다음 중 하나입니다.
+**중 하나:**
 
-1) 이전 프로젝트와 일치 프로그램 리소스, 소스 파일 등의 모든 프로젝트에 다시 추가 하는 모든 프로젝트 속성을 설정, 새로운 Xamarin.Android 응용 프로그램 프로젝트를 만듭니다.
+1. 이전 프로젝트와 일치 프로그램 리소스, 소스 파일 등의 모든 프로젝트에 다시 추가 하는 모든 프로젝트 속성을 설정, 새로운 Xamarin.Android 응용 프로그램 프로젝트를 만듭니다.
 
-### <a name="or"></a>또는
+   **OR**
 
-2) 원래 프로젝트의.csproj 파일의 백업 복사본, 텍스트 편집기에서 엽니다 및 완전히 생성 된.csproj 파일에서 누락 된 요소를 다시 추가 합니다.
+2. 원래 프로젝트의.csproj 파일의 백업 복사본, 텍스트 편집기에서 엽니다 및 완전히 생성 된.csproj 파일에서 누락 된 요소를 다시 추가 합니다.
 
 ### <a name="if-this-does-not-solve-the-problem"></a>이 문제가 해결 되지 않는 경우
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 79c1d7852cdde9b557965931706fcd24e43954f7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831694"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865211"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.iOS에서 스토리 보드 소개
 
@@ -327,7 +327,7 @@ public partial class MainViewController : UIViewController
         - 색: 빨강
         - Alignment: 가운데 맞춤
         - 줄: 2
-        - '숨겨진된' 확인란을 선택한 상태 
+        - '숨겨진된' 확인란을 선택한 상태    
         
     [![](images/passwordvc.png "Center 줄")](images/passwordvc.png#lightbox)
     
@@ -424,25 +424,25 @@ Storyboards.Conditional 솔루션에 대 한 참조를 [수동 스토리 보드 
 
     [![](images/ref08.png "새 백그라운드에서 뷰 컨트롤러에 대 한 스토리 보드 ID를 입력 합니다.")](images/ref08.png#lightbox)
     
-3. IOS 디자이너에에서 대 한 참조를 추가 하는 것은 스토리 보드를 엽니다.
+4. IOS 디자이너에에서 대 한 참조를 추가 하는 것은 스토리 보드를 엽니다.
 
-4. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **도구 상자** 디자인 화면으로: 
+5. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **도구 상자** 디자인 화면으로: 
 
     [![](images/ref03.png "스토리 보드 참조")](images/ref03.png#lightbox)
     
-5. 에 **위젯** 탭을 **속성 탐색기**의 이름을 선택 합니다 **스토리 보드** 및 **참조 ID** (스토리 보드 ID)의 위에서 만든 장면: 
+6. 에 **위젯** 탭을 **속성 탐색기**의 이름을 선택 합니다 **스토리 보드** 및 **참조 ID** (스토리 보드 ID)의 위에서 만든 장면: 
 
     [![](images/ref09.png "위젯 탭 ")](images/ref09.png#lightbox)
     
-6. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든: 
+7. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든: 
 
     [![](images/ref10.png "Segue를 만들기")](images/ref10.png#lightbox) 
     
-7. 팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
+8. 팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
 
     [![](images/ref06.png "Segue를 완료 하려면 표시를 선택 합니다.")](images/ref06.png#lightbox) 
     
-8. 스토리 보드에 변경 내용을 저장 합니다.
+9. 스토리 보드에 변경 내용을 저장 합니다.
 
 경우 앱 실행 및 사용자가 만든 Segue를 사용 하 여 장면에서 UI 요소에는 주어진 **스토리 보드 ID** 스토리 보드 참조에 지정 된 외부 스토리 보드에서 표시 됩니다.
 
@@ -462,9 +462,9 @@ Storyboards.Conditional 솔루션에 대 한 참조를 [수동 스토리 보드 
 
     [![](images/ref12.png "위젯 탭")](images/ref12.png#lightbox)
     
-3. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **도구 상자** 디자인 화면으로: 
+4. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **도구 상자** 디자인 화면으로: 
 
-    [![](images/ref03.png "스토리 보드 참조")](images/ref03.png#lightbox)
+   [![](images/ref03.png "스토리 보드 참조")](images/ref03.png#lightbox)
     
 5. 에 **위젯** 탭의 **속성 탐색기**를 선택 **참조 ID** (스토리 보드 ID) 위에서 만든 장면: 
 

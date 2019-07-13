@@ -7,29 +7,29 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: c553bd6d81e43913b6322b2ff85972a81b87f6cf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ab0a42fd717d62657e53fcc5c90669168860fdff
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945707"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865747"
 ---
 # <a name="graphics-and-animation-in-ios"></a>iOS의 그래픽 및 애니메이션
 
 ![Images/00_final_app.png](images/00-final-app.png "실행 하는 예제 앱")
 
-##  <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Core 이미지](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
+## <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Core 이미지](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 
 CoreImage는 다양 한 기본 제공 필터 및 이미지 및 얼굴 감지를 포함 하 여 비디오에 적용할 효과 제공 하는 iOS 5에에서 도입 된 새 프레임 워크입니다.
 
-##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[핵심 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
+## <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[핵심 그래픽](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
 이 문서는 하위 수준의 그리기 지원을 제공 하는 핵심 그래픽 iOS 프레임 워크를 설명 합니다. 기 하 도형, 이미지 및 Pdf 그릴 핵심 그래픽을 사용 하는 방법을 보여 줍니다.
 
-##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[핵심 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
+## <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[핵심 애니메이션](~/ios/platform/graphics-animation-ios/core-animation.md)
 
 이 아티클에서 하위 수준의 애니메이션 컨트롤에 대 한 직접 사용 하려면 고성능 UIKit, 방법과 부드러운 애니메이션을 사용 하는 방법을 보여 주는 핵심 애니메이션 프레임 워크를 살펴봅니다.
 
-##  <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[핵심 그래픽 및 핵심 애니메이션을 사용 하 여](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
+## <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[핵심 그래픽 및 핵심 애니메이션을 사용 하 여](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 
 이 문서에서는 단계별 핵심 그래픽 및 핵심 애니메이션을 사용 하는 응용 프로그램을 만드는 방법. 이미지 경로 따라 이동 애니메이션을 적용 하는 방법 뿐만 아니라 사용자 터치에 대 한 응답으로 화면에 그리는 방법을 보여 줍니다.

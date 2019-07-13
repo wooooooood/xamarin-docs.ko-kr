@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: bf86759832a1aba0ccc1c144981af6ea4eae8670
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 58e3593dc09c76439a3e128e51f354c169d7e72e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343769"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865970"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>WatchOS 앱을 앱 스토어에 배포
 
@@ -85,19 +85,19 @@ ITunes Connect에서에서 앱을 구성할 때 조사식 아이콘 및 스크�
 
 <a name="xamarin_studio" />
 
-## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 1. IOS 앱 시작 프로젝트 인지 확인 합니다. 그렇지 않은 경우에 설정 하려면 마우스 오른쪽 단추로 클릭 합니다.
 
-  ![](appstore-images/xs-startup.png "시작 프로젝트 설정")
+   ![](appstore-images/xs-startup.png "시작 프로젝트 설정")
 
 2. 선택 된 **AppStore** 빌드 구성:
 
-  ![](appstore-images/xs-appstore.png "앱 스토어 빌드 구성")
+   ![](appstore-images/xs-appstore.png "앱 스토어 빌드 구성")
 
 3. 선택 된 **빌드 > 보관** 보관 프로세스를 시작 하려면 메뉴 항목:
 
-  ![](appstore-images/xs-archive.png "빌드 메뉴")
+   ![](appstore-images/xs-archive.png "빌드 메뉴")
 
 선택할 수도 있습니다는 **보기 > 보관 하는 중...**  메뉴 항목을 이전에 생성 된 보관 파일을 참조 하세요.
 
@@ -111,21 +111,21 @@ Xcode에서 mac 용 Visual Studio에서 만든 보관을 자동으로 표시 됩
 
 1. Xcode를 시작 하 고 선택 **창 > 도우미**:
 
-  ![](appstore-images/xc-organizer.png "창 메뉴")
+   ![](appstore-images/xc-organizer.png "창 메뉴")
 
 2. 으로 전환 합니다 **보관** 탭 및 Mac 용 Visual Studio를 사용 하 여 만든 보관 선택:
 
-  ![](appstore-images/xc-archives.png "보관 파일 탭")
+   ![](appstore-images/xc-archives.png "보관 파일 탭")
 
 3. 필요에 따라 **의 유효성을 검사 하는 중...**  보관 파일을 선택한 **제출 하는 중...**  iTunes Connect에 앱을 업로드 합니다.
 
 4. (사용자가 속한 둘 이상의) 하는 경우 개발 팀을 선택 하 고 제출 확인.
 
-  ![](appstore-images/xc-submit1.png "개발 팀 섹션")
+   ![](appstore-images/xc-submit1.png "개발 팀 섹션")
 
 5. ITunes Connect 업로드 된 바이너리를 다시 방문 하세요. 앱의 구성 페이지로 이동 및 선택 **시험판** 확인 하려면 위쪽 메뉴에서를 **빌드** 목록:
 
-  [![](appstore-images/itc-prerelease-sml.png "ITunes Connect에서에서 앱 구성 페이지")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "ITunes Connect에서에서 앱 구성 페이지")](appstore-images/itc-prerelease.png#lightbox)
 
 승인에 대 한 앱에 제출할 수 있습니다 합니다 **버전** 페이지입니다. 참조 된 [iOS 앱 배포 개요](~/ios/deploy-test/app-distribution/index.md) 자세한 내용은 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 15c93126f80917df45a5b80fb84397dc6ef0d5fd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9e20b4966e9e6cb8a4ce3ad6724cf0ba2565c33
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075630"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865872"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Target Framework for Xamarin.Mac
 
@@ -44,7 +44,7 @@ Xamarin.Mac 프로젝트에 대 한 대상 프레임 워크 형식으로 변경 
 2. **솔루션 탐색기**에서 프로젝트 파일을 두 번 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다.
 3. **일반적인** 탭의 형식을 선택 합니다 **대상 프레임 워크** 는 응용 프로그램의 요구에 적합 한:
 
-  [![프로젝트 옵션 창을 사용 하 여 대상 프레임 워크를 선택할](target-framework-images/select-target-full.png "프로젝트 옵션 창을 사용 하 여 대상 프레임 워크를 선택 합니다.")](target-framework-images/select-target-full-large.png#lightbox)
+    [![프로젝트 옵션 창을 사용 하 여 대상 프레임 워크를 선택할](target-framework-images/select-target-full.png "프로젝트 옵션 창을 사용 하 여 대상 프레임 워크를 선택 합니다.")](target-framework-images/select-target-full-large.png#lightbox)
 
 4. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 

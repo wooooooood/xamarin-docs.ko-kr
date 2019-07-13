@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e24b448bedc60a537bfcd4a5bfbdbe9562163818
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61033112"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865929"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Xamarin.Mac의 스토리 보드를 사용 하 여 작업
 
@@ -82,7 +82,7 @@ controller.ShowWindow(this);
 
 <a name="Containment" />
 
-### <a name="containment"></a>포함
+### <a name="containment"></a>Containment
 
 스토리 보드의 보기 컨트롤러 (예: 분할 뷰 컨트롤러 및 탭 뷰 컨트롤러)를 구현할 수 있습니다 _포함_, "를 포함할 수 있습니다" 다른 하위 뷰 컨트롤러:
 
@@ -273,17 +273,17 @@ MacOS에 대 한 제스처 인식기 iOS에 상응 하는 거의 동일 하 고 
 
     [![](indepth-images/ref01.png "새 스토리 보드를 추가합니다.")](indepth-images/ref01.png#lightbox)
 2. 에 **솔루션 탐색기**, Xcode의 Interface Builder에서 편집을 위해 열려면 새 스토리 보드 이름을 두 번 클릭 합니다.
-2. 일반적으로 하는 변경 내용을 저장 하는 대로 새 스토리 보드의 백그라운드에서의 레이아웃을 디자인 합니다. 
+3. 일반적으로 하는 변경 내용을 저장 하는 대로 새 스토리 보드의 백그라운드에서의 레이아웃을 디자인 합니다. 
 
     [![](indepth-images/ref02.png "인터페이스 디자인")](indepth-images/ref02.png#lightbox)
-3. 인터페이스 작성기에서에 대 한 참조를 추가 하 게 되는 스토리 보드로 전환 합니다.
-4. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **라이브러리 개체** 디자인 화면으로: 
+4. 인터페이스 작성기에서에 대 한 참조를 추가 하 게 되는 스토리 보드로 전환 합니다.
+5. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **라이브러리 개체** 디자인 화면으로: 
 
     [![](indepth-images/ref03.png "라이브러리에 대 한 스토리 보드 참조 선택")](indepth-images/ref03.png#lightbox)
-5. 에 **특성 검사기**의 이름을 선택 합니다 **스토리 보드** 위에서 만든: 
+6. 에 **특성 검사기**의 이름을 선택 합니다 **스토리 보드** 위에서 만든: 
 
     [![](indepth-images/ref04.png "참조를 구성합니다.")](indepth-images/ref04.png#lightbox)
-6. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든 합니다.  팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
+7. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든 합니다.  팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
 
     [![](indepth-images/ref06.png "Segue 형식 설정")](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
@@ -304,14 +304,14 @@ MacOS에 대 한 제스처 인식기 iOS에 상응 하는 거의 동일 하 고 
 3. 에 **검사기**, 입력을 **스토리 보드 ID** 새 장면의 창 컨트롤러에 대 한: 
 
     [![](indepth-images/ref08.png "Storyboard ID를 설정합니다.")](indepth-images/ref08.png#lightbox)
-3. Interface Builder에서에 대 한 참조를 추가 하 게 하려는 스토리 보드를 엽니다.
-4. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **라이브러리 개체** 디자인 화면으로: 
+4. Interface Builder에서에 대 한 참조를 추가 하 게 하려는 스토리 보드를 엽니다.
+5. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **라이브러리 개체** 디자인 화면으로: 
 
     [![](indepth-images/ref03.png "스토리 보드 참조 라이브러리에서 선택")](indepth-images/ref03.png#lightbox)
-5. 에 **검사기**의 이름을 선택 합니다 **스토리 보드** 및 **참조 ID** (스토리 보드 ID) 위에서 만든 장면의: 
+6. 에 **검사기**의 이름을 선택 합니다 **스토리 보드** 및 **참조 ID** (스토리 보드 ID) 위에서 만든 장면의: 
 
     [![](indepth-images/ref09.png "참조 ID를 설정합니다.")](indepth-images/ref09.png#lightbox)
-6. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든 합니다. 팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
+7. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든 합니다. 팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
 
     [![](indepth-images/ref06.png "Segue 형식 설정")](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
@@ -332,7 +332,7 @@ MacOS에 대 한 제스처 인식기 iOS에 상응 하는 거의 동일 하 고 
 3. 에 **검사기**, 입력을 **스토리 보드 ID** 새 장면의 창 컨트롤러에 대 한: 
 
     [![](indepth-images/ref12.png "Storyboard ID를 설정합니다.")](indepth-images/ref12.png#lightbox)
-3. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **도구 상자** 디자인 화면으로: 
+4. 끌어서를 **참조를 스토리 보 딩** 에서 합니다 **도구 상자** 디자인 화면으로: 
 
     [![](indepth-images/ref03.png "스토리 보드 참조 라이브러리에서 선택")](indepth-images/ref03.png#lightbox)
 5. **특성 검사기**를 선택 **참조 ID** (스토리 보드 ID) 위에서 만든 장면의: 
@@ -341,8 +341,8 @@ MacOS에 대 한 제스처 인식기 iOS에 상응 하는 거의 동일 하 고 
 6. 에 새 Segue를 만들고 제어는 기존 장면에서 UI 위젯 (예: 단추)를 클릭 합니다 **스토리 보드 참조** 방금 만든 합니다. 팝업 메뉴에서 선택 **표시** Segue를 완료 하려면: 
 
     [![](indepth-images/ref06.png "Segue 형식 선택")](indepth-images/ref06.png#lightbox) 
-8. 스토리 보드에 변경 내용을 저장 합니다.
-9. 변경 내용을 동기화 하려면 Mac 용 Visual Studio로 돌아갑니다.
+7. 스토리 보드에 변경 내용을 저장 합니다.
+8. 변경 내용을 동기화 하려면 Mac 용 Visual Studio로 돌아갑니다.
 
 경우 앱 실행 및 사용자가 만든 Segue를 사용 하 여 장면에서 UI 요소에는 주어진 **스토리 보드 ID** 스토리 보드 참조에 지정 된 동일한 스토리 보드에 표시 됩니다.
 

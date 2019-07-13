@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 5a4be4ff5f8c5322db2e50ba11dd81a188fbae61
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b739b5a23653fdcc2b9324aefde03e48446bdc76
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61391470"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865535"
 ---
 # <a name="ios-backgrounding-walkthroughs"></a>iOS Backgrounding 연습
 
-##  <a name="walkthrough---using-background-locationiosapp-fundamentalsbackgroundingios-backgrounding-walkthroughslocation-walkthroughmd"></a>[연습 - 백그라운드 위치 사용](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)
+## <a name="walkthrough---using-background-locationiosapp-fundamentalsbackgroundingios-backgrounding-walkthroughslocation-walkthroughmd"></a>[연습 - 백그라운드 위치 사용](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md)
 
 이 예제에서는 iOS 위치 응용 프로그램을 구축 화면에 현재 위치-위도, 경도 및 다른 매개 변수-에 대 한 정보를 인쇄 합니다. 이 응용 프로그램에서는 응용 프로그램은 활성 또는 Backgrounded 위치 업데이트를 제대로 수행 하는 방법을 보여 줍니다.
 
-##  <a name="walkthrough---using-background-transfer-service-and-nsurlsessioniosapp-fundamentalsbackgroundingios-backgrounding-walkthroughsbackground-transfer-walkthroughmd"></a>[연습 - 백그라운드 전송 서비스 및 NSURLSession 사용](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md)
+## <a name="walkthrough---using-background-transfer-service-and-nsurlsessioniosapp-fundamentalsbackgroundingios-backgrounding-walkthroughsbackground-transfer-walkthroughmd"></a>[연습 - 백그라운드 전송 서비스 및 NSURLSession 사용](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md)
 
 이 연습에서는 백그라운드 전송 서비스를 사용 하 고 `NSURLSession` 계속 앱이 백그라운드에서 다운로드 하는 큰 이미지 다운로드를 시작 하는 API입니다.

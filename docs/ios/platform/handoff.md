@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 1a5cc9f06fdca5944a9a3201ac15d63ca7f15453
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 084b9924af467459a017413a958ec2e46ff219fc
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61385586"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865304"
 ---
 # <a name="handoff-in-xamarinios"></a>Xamarin.iOS에서 핸드 오프
 
@@ -117,20 +117,20 @@ OS X에서 합니다 `NSUserActivity` 에서 관리 하는 `AppKit` 응답기를
 
     [![](handoff-images/provision01.png "지정된 된 ID에 대 한 iCloud 서비스를 사용 하도록 설정")](handoff-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
-4. 클릭할 **프로 비전 프로필** > **개발** 를 프로 비전 프로필을 새로 개발 앱을 만듭니다.
+6. 클릭할 **프로 비전 프로필** > **개발** 를 프로 비전 프로필을 새로 개발 앱을 만듭니다.
 
     [![](handoff-images/provision02.png "새 개발 프로 비전 앱에 대 한 프로필 만들기")](handoff-images/provision02.png#lightbox)
-5. 다운로드 및 새 프로 비전 프로필을 설치 또는 Xcode를 사용 하 여 다운로드 하 고 프로필을 설치 합니다.
-6. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다.
+7. 다운로드 및 새 프로 비전 프로필을 설치 또는 Xcode를 사용 하 여 다운로드 하 고 프로필을 설치 합니다.
+8. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다.
 
     [![](handoff-images/provision03.png "방금 만든 프로 비전 프로필 선택")](handoff-images/provision03.png#lightbox)
-7. 다음으로, 편집 하 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인:
+9. 다음으로, 편집 하 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인:
 
     [![](handoff-images/provision04.png "앱 ID를 설정 합니다.")](handoff-images/provision04.png#lightbox)
-8. 스크롤하여 합니다 **백그라운드 모드** 섹션 및 다음 항목을 확인 합니다.
+10. 스크롤하여 합니다 **백그라운드 모드** 섹션 및 다음 항목을 확인 합니다.
 
     [![](handoff-images/provision05.png "필수 백그라운드 모드를 사용 하도록 설정")](handoff-images/provision05.png#lightbox)
-9. 모든 파일에 변경 내용을 저장 합니다.
+11. 모든 파일에 변경 내용을 저장 합니다.
 
 현재 위치에서 이러한 설정을 사용 하 여 응용 프로그램 전달 프레임 워크 Api에 액세스할 준비가 되었습니다. 프로 비전에 대 한 자세한 내용은 참조 하십시오 우리의 [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) 하 고 [앱 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
 
@@ -409,7 +409,7 @@ public void PerformHandoff(NSUserActivity activity) {
 completionHandler (new NSObject[]{Tab4});
 ```
 
-에 전달 하는 각 개체에 대 한 해당 `RestoreUserActivityState` 메서드가 호출 됩니다. 각 개체의 데이터를 사용할 수는 `UserInfo` 자체 상태를 복원 하는 사전입니다. 예를 들어:
+에 전달 하는 각 개체에 대 한 해당 `RestoreUserActivityState` 메서드가 호출 됩니다. 각 개체의 데이터를 사용할 수는 `UserInfo` 자체 상태를 복원 하는 사전입니다. 예:
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -427,7 +427,7 @@ public override void RestoreUserActivityState (NSUserActivity activity)
 
 핸드 오프 컬렉션 느슨하게 연결 된 iOS 및 OS X 장치 간에 정보의 전송에 의존 하므로 전송 프로세스를 따라 실패할 수 있습니다. 이러한 오류를 정상적으로 처리 하 고 발생 하는 경우 모든 사용자의 앱을 디자인 해야 합니다.
 
-오류가 발생 합니다 `DidFailToContinueUserActivitiy` 메서드는 `AppDelegate` 호출 됩니다. 예를 들어:
+오류가 발생 합니다 `DidFailToContinueUserActivitiy` 메서드는 `AppDelegate` 호출 됩니다. 예:
 
 ```csharp
 public override void DidFailToContinueUserActivitiy (UIApplication application, string userActivityType, NSError error)
@@ -464,7 +464,7 @@ JSON 파일에 폼의 앱 Id의 목록을 지정 하는 사전 `<team identifier
 }
 ```
 
-JSON 파일에 서명 (올바른 갖도록 `Content-Type` 의 `application/pkcs7-mime`)를 사용 합니다 **터미널** 앱 및 `openssl` 인증서 및 iOS에서 신뢰할 수 있는 인증 기관에서 발급 한 키를 사용 하 여 명령을 (참조 [ https://support.apple.com/kb/ht5012 ](https://support.apple.com/kb/ht5012) 목록은). 예를 들어:
+JSON 파일에 서명 (올바른 갖도록 `Content-Type` 의 `application/pkcs7-mime`)를 사용 합니다 **터미널** 앱 및 `openssl` 인증서 및 iOS에서 신뢰할 수 있는 인증 기관에서 발급 한 키를 사용 하 여 명령을 (참조 [ https://support.apple.com/kb/ht5012 ](https://support.apple.com/kb/ht5012) 목록은). 예:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",

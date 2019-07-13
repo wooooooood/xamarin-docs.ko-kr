@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 696432fb51060a236780eedee0b60661e3a86712
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831903"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865187"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.Mac의 표준 컨트롤
 
@@ -93,7 +93,7 @@ Interface Builder에서 사용자 인터페이스를 만드는 방법에 대 한
 
 [![](standard-controls-images/edit04.png "제약 조건 설정")](standard-controls-images/edit04.png#lightbox)
 
-사용 하 여는 **빨간색 I-빔** 바깥쪽 둘레를 **Autoresizing** 상자 _스틱_ (x, y) 지정된 된 위치에 컨트롤입니다. 예: 
+사용 하 여는 **빨간색 I-빔** 바깥쪽 둘레를 **Autoresizing** 상자 _스틱_ (x, y) 지정된 된 위치에 컨트롤입니다. 예를 들어: 
 
 [![](standard-controls-images/edit05.png "제약 조건 편집")](standard-controls-images/edit05.png#lightbox)
 
@@ -483,7 +483,7 @@ AppKit 여러 유형의 사용자 인터페이스 디자인에 사용할 수 있
 
 [![](standard-controls-images/select01.png "선택 컨트롤 예")](standard-controls-images/select01.png#lightbox)
 
-선택 컨트롤으로 노출 하 여 사용자 상호 작용에 추적 하는 방법은 두 가지는 **동작**합니다. 예:
+선택 컨트롤으로 노출 하 여 사용자 상호 작용에 추적 하는 방법은 두 가지는 **동작**합니다. 예를 들어:
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
@@ -491,7 +491,7 @@ partial void SegmentButtonPressed (Foundation.NSObject sender) {
 }
 ```
 
-또는 연결 하 여는 **대리자** 에 `Activated` 이벤트입니다. 예:
+또는 연결 하 여는 **대리자** 에 `Activated` 이벤트입니다. 예를 들어:
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
@@ -536,7 +536,7 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-읽거나 표시기 컨트롤의 값을 설정 하려면 사용 된 `DoubleValue` 속성입니다. 예:
+읽거나 표시기 컨트롤의 값을 설정 하려면 사용 된 `DoubleValue` 속성입니다. 예를 들어:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
@@ -603,16 +603,16 @@ AppKit 몇 가지 유형의 사용자 인터페이스 디자인에 사용할 수
 2. 끌어서를 **컨트롤러를 보려면** 에서 합니다 **라이브러리 검사기** 에 **인터페이스 편집기**: 
 
     [![](standard-controls-images/content02.png "라이브러리에서 뷰 컨트롤러를 선택 하면")](standard-controls-images/content02.png#lightbox)
-4. 크기 및 레이아웃을 정의 합니다 **사용자 지정 보기**: 
+3. 크기 및 레이아웃을 정의 합니다 **사용자 지정 보기**: 
 
     [![](standard-controls-images/content04.png "레이아웃 편집")](standard-controls-images/content04.png#lightbox)
-5. 컨트롤 클릭 하 고 팝업에 원본의 드래그 합니다 **뷰 컨트롤러**: 
+4. 컨트롤 클릭 하 고 팝업에 원본의 드래그 합니다 **뷰 컨트롤러**: 
 
     [![](standard-controls-images/content05.png "끌어서 segue를 만들기")](standard-controls-images/content05.png#lightbox)
-6. 선택 **팝 오버** 팝업 메뉴에서: 
+5. 선택 **팝 오버** 팝업 메뉴에서: 
 
     [![](standard-controls-images/content06.png "Segue 형식 설정")](standard-controls-images/content06.png#lightbox)
-7. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
+6. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
 
 <a name="Tab_Views" />
 

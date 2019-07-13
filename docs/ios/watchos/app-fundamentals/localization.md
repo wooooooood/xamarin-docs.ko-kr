@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 1362767bf9a80af1eac37d316bd99a6ab364063f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414042"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865956"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Watchos에서 Xamarin 지역화 작업
 
@@ -127,19 +127,19 @@ displayText.SetText (localizedDisplay);
 
 1. 변경할 수는 `Image` 컨트롤 값 설정 하 여 이미지의 문자열 이름에는 이미 존재 Watch 앱의 예:
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. 사용 하 여 조사식 확장에서 이미지를 이동할 수 있습니다 `FromBundle` 및 앱 사용자의 언어 선택에 대 한 올바른 이미지를 자동으로 선택 됩니다. 예제 솔루션에서은 이미지로 **language@2x.png** 각 언어의 폴더를 만들고에 표시 됩니다 `DetailController` 다음 코드를 사용 하 여:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-    displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  지정 해야 하는 참고 합니다 **@2x** 이미지의 파일 이름으로 참조 하는 경우.
+    지정 해야 하는 참고 합니다 **@2x** 이미지의 파일 이름으로 참조 하는 경우.
 
 두 번째 방법은; 보기에서 렌더링 하기 위한 원격 서버에서 이미지를 다운로드 하는 경우에 적용 됩니다. 그러나이 경우 해야 다운로드 이미지를 사용자의 기본 설정에 따라 올바르게 지역화 된는 합니다.
 

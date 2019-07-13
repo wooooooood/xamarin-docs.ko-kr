@@ -6,12 +6,12 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 62b8e82a1191f3213453e9a213ea615e476662d5
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 7730d19e4f261a0e414e4946fd0add5312f5d030
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978218"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864354"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Unified API로 기존 앱을 업데이트 하는 중입니다.
 
@@ -36,11 +36,11 @@ ms.locfileid: "64978218"
 
 Mac 용 Visual studio 빌드된 자동화 된 마이그레이션 도구를 사용 하 여 통합 API로 기존 Xamarin.iOS 앱을 업데이트할 수 있습니다. 몇 가지 추가 수정 후 필요할 수 있습니다에 설명 된 대로 [이러한 지침](~/cross-platform/macios/unified/updating-ios-apps.md) 하 고 [팁](~/cross-platform/macios/unified/updating-tips.md)합니다.
 
-###  <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
+### <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
 
 Mac 용 Visual studio 빌드된 자동화 된 마이그레이션 도구를 사용 하 여 통합 API로 기존 Xamarin.Mac 앱을 업데이트할 수 있습니다. 몇 가지 추가 수정 후 필요할 수 있습니다에 설명 된 대로 [이러한 지침](~/cross-platform/macios/unified/updating-mac-apps.md) 하 고 [팁](~/cross-platform/macios/unified/updating-tips.md)합니다.
 
-###  <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Xamarin.Forms 앱](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### <a name="xamarinforms-appscross-platformmaciosunifiedupdating-xamarin-forms-appsmd"></a>[Xamarin.Forms 앱](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
 Unified API를 사용 하는 iOS 프로젝트를 사용 하 여 기존 Xamarin.Forms 솔루션을 업데이트 하려면 다음이 지침을 따릅니다. 통합 된 API 지원은 에서만 Xamarin.Forms 1.3에서 사용할 수 있으며 나중에 있으므로 [지침](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md) 도 버전 1.3 Xamarin.Forms 앱을 업데이트 하는 방법에 설명 합니다. 이러한 [팁](~/cross-platform/macios/unified/updating-tips.md) 종속성 서비스나 사용자 지정 렌더러 모든 네이티브 iOS 코드를 업데이트 하는 데 도움이 될 수 있습니다.
 

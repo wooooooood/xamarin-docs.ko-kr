@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e38ca07aeef1cbd8e121421ebcbad2207a1bb823
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830666"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865981"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.Mac 앱 샌드 박싱
 
@@ -87,13 +87,13 @@ Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하
 8. 다음 추가 문을 사용 하 여: `using WebKit;`
 9. 확인 된 `ViewDidLoad` 다음과 같은 메서드 확인: 
 
-```csharp
-public override void AwakeFromNib ()
-{
-    base.AwakeFromNib ();
-    webView.MainFrame.LoadRequest(new NSUrlRequest(new NSUrl("http://www.apple.com")));
-}
-```
+    ```csharp
+    public override void AwakeFromNib ()
+    {
+        base.AwakeFromNib ();
+        webView.MainFrame.LoadRequest(new NSUrlRequest(new NSUrl("http://www.apple.com")));
+    }
+    ```
 
 10. 변경 내용을 저장합니다.
 
@@ -164,14 +164,14 @@ public override void AwakeFromNib ()
 3. 를 두 번 클릭 합니다 **Entitlements.plist** 파일을 확인 우리의 **iCloud 키-값 저장소** 및 **iCloud 컨테이너** 위에서 만든 앱 ID는 모두 일치 (예: `com.appracatappra.MacSandbox`): 
 
     [![Entitlements.plist 파일을 편집](sandboxing-images/sign17.png "Entitlements.plist 파일 편집")](sandboxing-images/sign17-large.png#lightbox)
-3. 변경 내용을 저장합니다.
-4. 에 **Solution Pad**, 편집을 위해 해당 옵션을 열려면 프로젝트 파일을 두 번 클릭 합니다.  
+4. 변경 내용을 저장합니다.
+5. 에 **Solution Pad**, 편집을 위해 해당 옵션을 열려면 프로젝트 파일을 두 번 클릭 합니다.  
 
     ![Editign 솔루션의 옵션](sandboxing-images/sign14.png "Editign 솔루션의 옵션")
-5. 선택 **Mac 서명**를 확인 한 다음 **응용 프로그램 번들에 서명** 하 고 **설치 관리자 패키지에 서명**합니다. 아래 **프로 비전 프로필**, 위에서 만든 것을 선택 합니다. 
+6. 선택 **Mac 서명**를 확인 한 다음 **응용 프로그램 번들에 서명** 하 고 **설치 관리자 패키지에 서명**합니다. 아래 **프로 비전 프로필**, 위에서 만든 것을 선택 합니다. 
 
     ![프로 비전 프로필 설정](sandboxing-images/sign15.png "프로 비전 프로필 설정")
-6. 클릭 합니다 **수행** 단추입니다.
+7. 클릭 합니다 **수행** 단추입니다.
 
 > [!IMPORTANT]
 > 종료 하 고 새 앱 ID 및 Xcode에서 설치 된 프로 비전 프로필을 인식 하도록 하는 Mac 용 Visual Studio를 다시 시작 해야 합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f23a506acda385b53942661244bcd7a8510c8c7f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61240841"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865993"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows in Xamarin.Mac
 
@@ -221,13 +221,13 @@ C# 코드에 UI 요소를 노출 하는 출 선 및 작업을 만들 수, Xamari
 만들고 Xamarin.Mac 응용 프로그램에서 사용 하는 모든 창에 대 한 프로세스는 기본적으로 새로운 방금 수행한 위에서 동일:
 
 1. 새 windows의 기본 프로젝트에 자동으로 추가 되지 않은 경우 새 창 정의 프로젝트에 추가 합니다. 이 아래에 자세히 설명 합니다.
-2. 두 번 클릭 합니다 `Main.storyboard` Xcode의 Interface Builder에서 편집용으로 창 디자인을 열려는 파일입니다.
-3. 사용자 인터페이스 디자인에 새 창을 끌어서 창의 주 창에 사용 하 여 연결 _고 Segues_ (자세한 내용은 참조는 [고 Segues](~/mac/platform/storyboards/indepth.md#Segues) 부분 우리의 [storyboards작업](~/mac/platform/storyboards/indepth.md) 설명서).
-3. 필수 창의 속성을 설정할 합니다 **특성 검사기** 하며 **크기 검사기**합니다.
-4. 인터페이스를 만들고 구성 하는 데 필요한 컨트롤에 끌어 합니다 **특성 검사기**합니다.
-5. 사용 하 여 합니다 **크기 검사기** 처리할 UI 요소에 대 한 크기를 조정 합니다.
-6. 창의 UI 요소를 통해 C# 코드에 노출 **출 선** 하 고 **작업**합니다.
-7. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 다시 전환 합니다.
+1. 두 번 클릭 합니다 `Main.storyboard` Xcode의 Interface Builder에서 편집용으로 창 디자인을 열려는 파일입니다.
+1. 사용자 인터페이스 디자인에 새 창을 끌어서 창의 주 창에 사용 하 여 연결 _고 Segues_ (자세한 내용은 참조는 [고 Segues](~/mac/platform/storyboards/indepth.md#Segues) 부분 우리의 [storyboards작업](~/mac/platform/storyboards/indepth.md) 설명서).
+1. 필수 창의 속성을 설정할 합니다 **특성 검사기** 하며 **크기 검사기**합니다.
+1. 인터페이스를 만들고 구성 하는 데 필요한 컨트롤에 끌어 합니다 **특성 검사기**합니다.
+1. 사용 하 여 합니다 **크기 검사기** 처리할 UI 요소에 대 한 크기를 조정 합니다.
+1. 창의 UI 요소를 통해 C# 코드에 노출 **출 선** 하 고 **작업**합니다.
+1. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 다시 전환 합니다.
 
 이제 만든 기본 창 했으므로 살펴보겠습니다 일반적인 프로세스는 Xamarin.Mac 응용 프로그램에서 windows를 사용 하 여 작업 하는 경우. 
 
@@ -259,7 +259,7 @@ public override void ViewWillAppear ()
     // Set Window Title
     this.View.Window.Title = "untitled";
 }
-``` 
+```    
 
 > [!NOTE]
 > 창의 값을 설정 하는 것 `Title` 속성에는 `ViewWillAppear` 메서드 대신는 `ViewDidLoad` 메서드 뷰를 메모리로 로드 될 수 있습니다, 있지만 하지 아직 완전히 인스턴스화된 때문에 합니다. 에 액세스 하려고 할 경우는 `Title` 속성에는 `ViewDidLoad` 얻게 되는 메서드를 `null` 창 않은 생성 하 고 했으니 속성에 아직 있으므로 예외.
@@ -711,14 +711,14 @@ void OpenDialog (NSObject sender)
 3. 에 **검사기**를 입력 `PreferencesWindow` 에 대 한 합니다 **스토리 보드 ID**: 
 
     [![](window-images/new02.png "Storyboard ID를 설정합니다.")](window-images/new02.png#lightbox)
-5. 사용자 인터페이스를 디자인 합니다. 
+4. 사용자 인터페이스를 디자인 합니다. 
 
     [![](window-images/new03.png "UI 디자인")](window-images/new03.png#lightbox)
-6. 응용 프로그램 메뉴를 열고 (`MacWindows`)을 선택 **기본 설정...** , 컨트롤을 클릭 하 고 새 창으로 끌어 옵니다. 
+5. 응용 프로그램 메뉴를 열고 (`MacWindows`)을 선택 **기본 설정...** , 컨트롤을 클릭 하 고 새 창으로 끌어 옵니다. 
 
     [![](window-images/new05.png "Segue를 만들기")](window-images/new05.png#lightbox)
-7. 선택 **표시** 팝업 메뉴에서.
-6. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
+6. 선택 **표시** 팝업 메뉴에서.
+7. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
 
 코드를 실행 하 고 선택 된 **기본 설정...**  에서 합니다 **응용 프로그램 메뉴**는 창이 표시 됩니다.
 
@@ -734,7 +734,7 @@ void OpenDialog (NSObject sender)
 
 1. 새 창 정의 프로젝트에 추가 합니다.
 2. 두 번 클릭 합니다 `.xib` Xcode의 Interface Builder에서 편집용으로 창 디자인을 열려는 파일입니다.
-2. 필수 창의 속성을 설정할 합니다 **특성 검사기** 하며 **크기 검사기**합니다.
+3. 필수 창의 속성을 설정할 합니다 **특성 검사기** 하며 **크기 검사기**합니다.
 4. 인터페이스를 만들고 구성 하는 데 필요한 컨트롤에 끌어 합니다 **특성 검사기**합니다.
 5. 사용 하 여 합니다 **크기 검사기** 처리할 UI 요소에 대 한 크기를 조정 합니다.
 6. 창의 UI 요소를 통해 C# 코드에 노출 **출 선** 하 고 **작업**합니다.
@@ -768,11 +768,11 @@ void OpenDialog (NSObject sender)
 7. 으로 전환 합니다 **검사기** 패널의 클래스 설정 하 고 `DocumentPanel`: 
 
     [![](window-images/panels03.png "패널의 클래스를 설정합니다.")](window-images/panels03.png#lightbox)
-6. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
-7. 편집 된 `DocumentPanel.cs` 파일과 클래스 정의 변경 합니다. 
+8. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
+9. 편집 된 `DocumentPanel.cs` 파일과 클래스 정의 변경 합니다. 
 
     `public partial class DocumentPanel : NSPanel`
-8. 파일의 변경 내용을 저장합니다.
+10. 파일의 변경 내용을 저장합니다.
 
 편집 합니다 `AppDelegate.cs` 파일을 확인 합니다 `DidFinishLaunching` 다음과 같은 메서드 확인:
 

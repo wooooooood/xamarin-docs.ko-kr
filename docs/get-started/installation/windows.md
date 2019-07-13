@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 5d9f91300194eb45c5f5f3c52403660cf4898a19
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 92ddbfb48131bdaf8ba12cef86e09e4c575200e9
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61271591"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865625"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 설치
 
@@ -43,9 +43,9 @@ Visual Studio 2019에 Xamarin 설치를 앱에 대 한 코드 작성을 시작�
 
 1. [Mac용 Visual Studio 설치](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Mac 빌드 호스트에 Visual Studio 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-3. [iOS 개발자 설정](~/ios/get-started/installation/device-provisioning/index.md) - 장치에서 애플리케이션을 실행하는 데 필요합니다.
-5. [원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
-6. [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
+3. [iOS 개발자 설정](~/ios/get-started/installation/device-provisioning/index.md) - 디바이스에서 응용 프로그램을 실행하는 데 필요합니다.
+4. [원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
+5. [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
 ### <a name="android"></a>Android
 

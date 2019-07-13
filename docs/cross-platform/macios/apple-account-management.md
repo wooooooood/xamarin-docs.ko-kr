@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28a7d299e78a7fa6837ba9285795d380760f13b7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61206368"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864638"
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -54,17 +54,17 @@ Apple 계정 관리에서 Mac, Visual Studio 2019 및 Visual Studio 2017 (버전
 
     ![fastlane 대화 상자입니다.](apple-account-management-images/image2.png)
 
-4. Apple ID와 암호를 입력 하 고 클릭 합니다 **로그인** 단추입니다. 이 컴퓨터에 이렇게에 자격 증명 보안 키 집합에 저장 됩니다. [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) 자격 증명을 안전 하 게 처리 하 고 Apple 개발자 포털에 전달 하는 데 사용 됩니다.
+3. Apple ID와 암호를 입력 하 고 클릭 합니다 **로그인** 단추입니다. 이 컴퓨터에 이렇게에 자격 증명 보안 키 집합에 저장 됩니다. [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) 자격 증명을 안전 하 게 처리 하 고 Apple 개발자 포털에 전달 하는 데 사용 됩니다.
  
-5. 선택 **항상 허용** 자격 증명을 사용 하도록 Visual Studio 수 있도록 경고 대화 상자에서:
+4. 선택 **항상 허용** 자격 증명을 사용 하도록 Visual Studio 수 있도록 경고 대화 상자에서:
 
     ![경고 대화 상자를 항상 허용](apple-account-management-images/image4.png)
 
-6. 계정이 성공적으로 추가 되 면 Apple ID 및 Apple ID의 일부인 모든 팀 표시 됩니다.
+5. 계정이 성공적으로 추가 되 면 Apple ID 및 Apple ID의 일부인 모든 팀 표시 됩니다.
 
     ![계정 추가 사용 하 여 Apple 개발자 계정 대화 상자](apple-account-management-images/image5.png)
 
-7. 모든 팀 및 키를 눌러 선택 된 **세부 정보 보기...** 클릭합니다. 이 모든 서명 Id 및 컴퓨터에 설치 된 프로 비전 프로필의 목록이 표시 됩니다.
+6. 모든 팀 및 키를 눌러 선택 된 **세부 정보 보기...** 단추를 선택합니다. 이 모든 서명 Id 및 컴퓨터에 설치 된 프로 비전 프로필의 목록이 표시 됩니다.
 
     ![서명 id 및 프로 비전 프로필 컴퓨터 보기 세부 정보 화면 표시](apple-account-management-images/image6.png)
 
@@ -82,7 +82,7 @@ Apple 계정 관리에서 Mac, Visual Studio 2019 및 Visual Studio 2017 (버전
 
 1. 계정이 성공적으로 추가 되 면 Apple ID 및 Apple ID의 일부인 모든 팀 표시 됩니다.
  
-1. 모든 팀 및 키를 눌러 선택 된 **세부 정보 보기...** 클릭합니다. 이 모든 서명 Id 및 컴퓨터에 설치 된 프로 비전 프로필의 목록이 표시 됩니다.
+1. 모든 팀 및 키를 눌러 선택 된 **세부 정보 보기...** 단추를 선택합니다. 이 모든 서명 Id 및 컴퓨터에 설치 된 프로 비전 프로필의 목록이 표시 됩니다.
 
     ![사용자 이름 및 암호 대화 상자](apple-account-management-images/prov2.png)
 

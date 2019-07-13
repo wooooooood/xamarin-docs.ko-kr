@@ -7,38 +7,38 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: dda00760399572d714300f1487391212c6fa0998
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: fca72291dd726d4f2a6635d26390baa103ee0d2d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740858"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864898"
 ---
 # <a name="android-wear"></a>Android Wear
 
 Android Wear 착용 식 장치 스마트 감시 등을 위해 설계 된 Android 버전이 있습니다. 이 섹션에서는 Wear 개발, 첫 번째 Wear 장치 및 사용자 고유의 작성용 Wear 앱을 참조할 수 있는 샘플 목록을 만들기 위한 단계별 연습에 필요한 도구 설치 및 구성 하는 방법에 대 한 지침을 포함 합니다.
 
-##  <a name="getting-startedandroidwearget-startedindexmd"></a>[시작](~/android/wear/get-started/index.md)
+## <a name="getting-startedandroidwearget-startedindexmd"></a>[시작](~/android/wear/get-started/index.md)
 
 Android Wear 소개, 설치 및 Wear 개발을 위해 컴퓨터를 구성 하는 방법을 설명 하 고 만들고 에뮬레이터 또는 Wear 장치에서 첫 번째 Android Wear 앱을 실행할 수 있도록 하는 단계를 제공 합니다.
 
-##  <a name="user-interfaceandroidwearuser-interfaceindexmd"></a>[사용자 인터페이스](~/android/wear/user-interface/index.md)
+## <a name="user-interfaceandroidwearuser-interfaceindexmd"></a>[사용자 인터페이스](~/android/wear/user-interface/index.md)
 
 Android Wear 관련 제어 하 고 이러한 컨트롤을 사용 하는 방법을 보여 주는 샘플에 대 한 링크를 제공에 대해 설명 합니다.
 
-##  <a name="platform-featuresandroidwearplatformindexmd"></a>[플랫폼 기능](~/android/wear/platform/index.md)
+## <a name="platform-featuresandroidwearplatformindexmd"></a>[플랫폼 기능](~/android/wear/platform/index.md)
 
 이 섹션의 문서 Android Wear 관련 된 기능을 설명합니다. 여기서는 WatchFace를 만드는 방법을 설명 하는 항목을 찾을 수 있습니다.
 
-##  <a name="screen-sizesandroidwearscreen-sizesmd"></a>[화면 크기](~/android/wear/screen-sizes.md)
+## <a name="screen-sizesandroidwearscreen-sizesmd"></a>[화면 크기](~/android/wear/screen-sizes.md)
 
 미리 보기 및 사용 가능한 화면 크기에 대 한 사용자 인터페이스를 최적화 합니다.
 
-##  <a name="deployment--testingandroidweardeploy-testindexmd"></a>[배포 및 테스트](~/android/wear/deploy-test/index.md)
+## <a name="deployment--testingandroidweardeploy-testindexmd"></a>[배포 및 테스트](~/android/wear/deploy-test/index.md)
 
 Wear에 대해 구성 하는 Android 에뮬레이터 또는 Android Wear 장치를 Android Wear 앱을 배포 하는 방법에 설명 합니다. 디버깅 팁 및 개발 컴퓨터에서 Android 장치 사이의 Bluetooth 연결을 설정 하는 방법에 대 한 정보가 포함 됩니다.
 
-##  <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Wear Api](https://developer.android.com/reference/android/support/wearable)
+## <a name="wear-apishttpsdeveloperandroidcomreferenceandroidsupportwearable"></a>[Wear Api](https://developer.android.com/reference/android/support/wearable)
 
 Android 개발자 사이트와 같은 주요 Wear Api에 대 한 자세한 정보를 제공 합니다 [착용 식 활동](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [의도](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html)를 [Authentication](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [ 복잡성](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html), [렌더링 복잡성](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [알림을](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html)를 [뷰](https://developer.android.com/reference/android/support/wearable/view/package-summary.html), 및 [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html)합니다.
 
@@ -48,7 +48,7 @@ Android 개발자 사이트와 같은 주요 Wear Api에 대 한 자세한 정�
 
 숫자를 찾을 수 있습니다 [샘플](https://developer.xamarin.com/samples/android/Android%20Wear/) Android Wear를 사용 하 여 (하거나 직접 이동할 [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
-|샘플|설명|스크린 샷|
+|예제|Description|스크린 샷|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)|간단한 예 GridViewPager 및 대화형 알림을 비롯 한 착용 식 프로젝트의 기본 사항입니다.|![Skeletonwear 스크린샷](images/skeleton.png)|
 |[WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/)|화면 셰이프를 검색 하 고 올바른 레이아웃을 자동으로 로드 WatchViewStub 컨트롤의 간단한 데모입니다. WatchViewStub 작동 하는 방식을 확인 합니다 **Resources/layout/main_activity.xml** 레이아웃 합니다.|![WatchViewStub 스크린샷](images/watchview.png)|
@@ -58,7 +58,7 @@ Android 개발자 사이트와 같은 주요 Wear Api에 대 한 자세한 정�
 |[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace는 아날로그 방식의 시간, 분 및 두 번째 실습을 사용 하 여 사용자 지정 시계 모드 이며 이 샘플 현재 그리는 조사식 얼굴 서비스를 만드는 방법과 핸들 앰비언트 모드 및 표시 유형 변경 이벤트를 보여 줍니다. 표준 시간대 변경 내용을 수신 대기 하 고 자동으로 적절 하 게 시간을 업데이트 하는 브로드캐스트 수신기가 포함 됩니다.|![WatchFace 스크린샷](images/gridviewpager.png)|
 
 
-##  <a name="videos"></a>비디오
+## <a name="videos"></a>비디오
 
 체크 아웃 하는 이러한 비디오 Wear 사용 하 여 Xamarin.Android를 설명 하는 링크는 지원:
 

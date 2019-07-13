@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: bc9396a8cb667b8170c4b3511b9fe8423741e6b1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 047ee06522d4b2c07937e0e1bd9985248a164f01
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829934"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865026"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>파일을 추가 하거나 Visual Studio에서 빌드한 후 IPA 파일에서 파일을 제거 수 있나요?
 
@@ -24,55 +24,55 @@ ms.locfileid: "67829934"
 
 이 예에서는 가정 Xamarin.iOS 프로젝트의 이름을 `iPhoneApp1` 하며 `generated session id` 는 `cc530d20d6b19da63f6f1c6f67a0a254`
 
-1.  빌드는 `.ipa` Visual Studio에서 정상적으로 파일입니다.
+1. 빌드는 `.ipa` Visual Studio에서 정상적으로 파일입니다.
 
-2.  Mac 빌드 호스트를 전환 합니다.
+2. Mac 빌드 호스트를 전환 합니다.
 
-3.  빌드 찾기는 `~/Library/Caches/Xamarin/mtbs/builds` 폴더입니다. 에이 경로 붙여 넣을 수 있습니다 **Finder > 이동 > 폴더로 이동** 파인더에서 폴더를 찾아볼 수 있습니다. 프로젝트 이름과 일치 하는 폴더를 찾습니다. 해당 폴더 내의 일치 하는 폴더를 찾습니다는 `generated session id` 빌드. 가장 최근에 수정 시간에는 하위 폴더 가능성이 됩니다.
+3. 빌드 찾기는 `~/Library/Caches/Xamarin/mtbs/builds` 폴더입니다. 에이 경로 붙여 넣을 수 있습니다 **Finder > 이동 > 폴더로 이동** 파인더에서 폴더를 찾아볼 수 있습니다. 프로젝트 이름과 일치 하는 폴더를 찾습니다. 해당 폴더 내의 일치 하는 폴더를 찾습니다는 `generated session id` 빌드. 가장 최근에 수정 시간에는 하위 폴더 가능성이 됩니다.
 
-4.  새 `Terminal.app` 창입니다.
+4. 새 `Terminal.app` 창입니다.
 
-5.  형식 `cd` 는 Terminal.app 창 및 다음 끌어서 놓기에 `generated session id` 폴더를 `Terminal.app` 창:
+5. 형식 `cd` 는 Terminal.app 창 및 다음 끌어서 놓기에 `generated session id` 폴더를 `Terminal.app` 창:
 
     ![](modify-ipa-images/session-id-folder.png "Finder에서 생성 된 세션 id 폴더 찾기")
 
-6.  디렉터리를 변경 하려면 return 키를 입력 합니다 `generated session id` 폴더입니다.
+6. 디렉터리를 변경 하려면 return 키를 입력 합니다 `generated session id` 폴더입니다.
 
-7.  압축을 풉니다 합니다 `.ipa` 파일을 임시 `old/` 다음 명령을 사용 하 여 폴더입니다. 조정 된 `Ad-Hoc` 및 `iPhoneApp1` 특정 프로젝트에 필요한 대로 이름을 지정 합니다.
+7. 압축을 풉니다 합니다 `.ipa` 파일을 임시 `old/` 다음 명령을 사용 하 여 폴더입니다. 조정 된 `Ad-Hoc` 및 `iPhoneApp1` 특정 프로젝트에 필요한 대로 이름을 지정 합니다.
 
     > 이전-xk bin/iPhone/Ad-Hoc/iPhoneApp1-1.0.ipa 같음 /
 
-8.  유지 된 `Terminal.app` 창이 열려 있습니다.
+8. 유지 된 `Terminal.app` 창이 열려 있습니다.
 
-9.  원하는 파일을 삭제 합니다 `.ipa`합니다. Finder를 사용 하 여 휴지통으로 이동 하거나 사용 하 여 명령줄에서 삭제할 `Terminal.app`합니다. 내용을 보려고 합니다 `Payload/iPhone` 파일을 컨트롤 클릭 Finder에서 파일을 선택 **패키지 내용 표시**.
+9. 원하는 파일을 삭제 합니다 `.ipa`합니다. Finder를 사용 하 여 휴지통으로 이동 하거나 사용 하 여 명령줄에서 삭제할 `Terminal.app`합니다. 내용을 보려고 합니다 `Payload/iPhone` 파일을 컨트롤 클릭 Finder에서 파일을 선택 **패키지 내용 표시**.
 
-10.  3 단계와 같이 동일한 일반적인 접근 방식을 사용 하 여 아래에 있는 로그 파일을 찾고 `~/Library/Logs/Xamarin/MonoTouchVS/` 프로젝트 이름을 가진 및 `generated session id` 이름에서: ![](modify-ipa-images/build-log.png "Finder에서 프로젝트 빌드 로그를 찾으려면")
+10. 3 단계와 같이 동일한 일반적인 접근 방식을 사용 하 여 아래에 있는 로그 파일을 찾고 `~/Library/Logs/Xamarin/MonoTouchVS/` 프로젝트 이름을 가진 및 `generated session id` 이름에서: ![](modify-ipa-images/build-log.png "Finder에서 프로젝트 빌드 로그를 찾으려면")
 
-11.  두 번 클릭 하 여 10 단계에서 빌드 로그를 예를 들어 엽니다.
+11. 두 번 클릭 하 여 10 단계에서 빌드 로그를 예를 들어 엽니다.
 
-12.  포함 하는 줄을 찾아서 `tool /usr/bin/codesign execution started with arguments: -v --force --sign`합니다.
+12. 포함 하는 줄을 찾아서 `tool /usr/bin/codesign execution started with arguments: -v --force --sign`합니다.
 
-13.  형식 `/usr/bin/codesign` 8 단계의 Terminal.app 창에 있습니다.
+13. 형식 `/usr/bin/codesign` 8 단계의 Terminal.app 창에 있습니다.
 
-14.  시작 인수를 모두 복사 `-v` 12 단계에서 줄에서 Terminal.app 창에 붙여넣습니다.
+14. 시작 인수를 모두 복사 `-v` 12 단계에서 줄에서 Terminal.app 창에 붙여넣습니다.
 
-15.  마지막 인수를 변경 합니다 `.app` 번들 내에 있는 `old/Payload/` 폴더 및 다음 명령 실행 합니다.
+15. 마지막 인수를 변경 합니다 `.app` 번들 내에 있는 `old/Payload/` 폴더 및 다음 명령 실행 합니다.
 
-```bash
-/usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
-```
+    ```bash
+    /usr/bin/codesign -v --force --sign SOME_LONG_STRING in/iPhone/Ad-Hoc/iPhoneApp1.app/ResourceRules.plist --entitlements obj/iPhone/Ad-Hoc/Entitlements.xcent old/Payload/iPhoneApp1.app
+    ```
 
-16.  변경 된 `old/` 디렉터리 터미널에서:
+16. 변경 된 `old/` 디렉터리 터미널에서:
 
-```bash
-cd old
-```
+    ```bash
+    cd old
+    ```
 
-17.  새 디렉터리의 내용을 zip `.ipa` 를 사용 하 여 파일을 `zip` 명령입니다. 변경할 수 있습니다 합니다 `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` 출력 인수를 `.ipa` 원하는 어디서 나 파일:
+17. 새 디렉터리의 내용을 zip `.ipa` 를 사용 하 여 파일을 `zip` 명령입니다. 변경할 수 있습니다 합니다 `"$HOME/Desktop/iPhoneApp1-1.0.ipa"` 출력 인수를 `.ipa` 원하는 어디서 나 파일:
 
-```bash
-zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
-```
+    ```bash
+    zip -yr "$HOME/Desktop/iPhoneApp1-1.0.ipa" *
+    ```
 
 ## <a name="common-error-messages"></a>일반적인 오류 메시지
 

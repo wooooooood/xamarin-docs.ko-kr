@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d695df9c59a5f95441092d6d7b44d5feda941bd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6371c2af15eab9c5124212eefd9cf70d07b945d4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267755"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864726"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
 
@@ -30,25 +30,25 @@ PCL을 사용 하는 다중 플랫폼 라이브러리 프로젝트 만들기 또
 
 2. 선택할 **다중 플랫폼 라이브러리** 에서 합니다 **다중 플랫폼 > 라이브러리** 섹션:
 
-  [![](single-codebase-images/mulitplatform-library-sml.png "단일 코드 베이스에 대해 다중 플랫폼 라이브러리 구성")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "단일 코드 베이스에 대해 다중 플랫폼 라이브러리 구성")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. 입력을 **이름** 하 고 **설명**를 선택한 **모든 플랫폼에 대 한 단일**:
 
-  [![](single-codebase-images/single-configure-sml.png "단일 코드 베이스에 대해 다중 플랫폼 라이브러리 구성")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "단일 코드 베이스에 대해 다중 플랫폼 라이브러리 구성")](single-codebase-images/single-configure.png#lightbox)
 
 4. 마법사를 완료합니다. 단일 라이브러리 프로젝트를 솔루션에 만들어집니다.
 
 5. 새 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택한 **옵션**합니다. **빌드 > 일반** 섹션에서는 **대상 프레임 워크** 설정할 –.NET 이식 가능한 PCL 프로필 또는.NET Standard 버전을 선택 합니다.
 
-  [![](single-codebase-images/single-choose-type-sml.png "PCL 또는.NET Standard 라이브러리 형식에 대 한 선택")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "PCL 또는.NET Standard 라이브러리 형식에 대 한 선택")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. 또한를 **프로젝트 옵션** 창을 열려면 합니다 **NuGet 패키지 > 메타 데이터** enter 섹션의 [필수 메타 데이터](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (뿐만 아니라 모든 선택적 메타 데이터):
 
-  [![](single-codebase-images/single-metadata-sml.png "필수 메타 데이터를 입력 합니다.")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "필수 메타 데이터를 입력 합니다.")](single-codebase-images/single-metadata.png#lightbox)
 
 7. 선택한 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 **NuGet 패키지 만들기** (빌드 또는 솔루션 배포) 및 **.nupkg** NuGet 패키지 파일에 저장 됩니다는 **/bin/** 폴더 (디버그 또는 릴리스 구성에 따라):
 
-  ![](single-codebase-images/create-nuget-package.png "NuGet 패키지 파일을 저장할 bin 폴더에서 디버그 또는 릴리스 구성에 따라")
+   ![](single-codebase-images/create-nuget-package.png "NuGet 패키지 파일을 저장할 bin 폴더에서 디버그 또는 릴리스 구성에 따라")
 
 
 ## <a name="verifying-the-output"></a>출력 확인

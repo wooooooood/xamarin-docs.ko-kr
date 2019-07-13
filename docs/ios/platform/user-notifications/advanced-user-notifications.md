@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 255603eefb4d7cfd3b906e1744aa19da6a77259a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61089321"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865288"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 고급 사용자 알림
 
@@ -258,11 +258,11 @@ namespace MonkeyChatNotifyExtension
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 확장의 두 번 클릭 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
-3. 확장 된 `NSExtension` 키입니다.
-4. 추가 된 `UNNotificationExtensionCategory` 형식으로 키 **문자열** 확장 속한 범주의 값을 사용 하 여 (이 예제의 ' 이벤트 초대): 
+2. 확장 된 `NSExtension` 키입니다.
+3. 추가 된 `UNNotificationExtensionCategory` 형식으로 키 **문자열** 확장 속한 범주의 값을 사용 하 여 (이 예제의 ' 이벤트 초대): 
 
     [![](advanced-user-notifications-images/customui02w.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02w.png#lightbox)
-5. 변경 내용을 저장합니다.
+4. 변경 내용을 저장합니다.
 
 -----
 
@@ -299,7 +299,7 @@ namespace MonkeyChatNotifyExtension
 > [!NOTE]
 > IOS 12 일부 터 알림 콘텐츠 확장 단추 및 텍스트 필드와 같은 대화형 컨트롤을 포함할 수 있습니다. 자세한 내용은 참조는 [iOS 12에서에서 대화형 알림을](~/ios/platform/introduction-to-ios12/notifications/interactive.md) 설명서.
 
-UI에 배치 하 고 필요한 컨트롤에 노출 되 면 C# 코드를 열고는 `NotificationViewController.cs` 편집에 대 한 수정 및는 `DidReceiveNotification` 알림을 확장할 때 UI를 채우는 방법입니다. 예를 들어:
+UI에 배치 하 고 필요한 컨트롤에 노출 되 면 C# 코드를 열고는 `NotificationViewController.cs` 편집에 대 한 수정 및는 `DidReceiveNotification` 알림을 확장할 때 UI를 채우는 방법입니다. 예:
 
 ```csharp
 using System;
@@ -361,7 +361,7 @@ namespace MonkeyChatNotifyExtension
 
 알림 콘텐츠 확장은 호출 알림 콘텐츠 영역 전 시스템 이미 실행 되 고 먼저 때문에 전체 크기 조정 및 사용자에 게 표시 될 때 요청된 된 크기까지 애니메이션 효과 줄.
 
-이 효과 제거 하려면 편집를 `Info.plist` 파일에 대 한 확장을 `UNNotificationExtensionInitialContentSizeRatio` 의 키를 `NSExtensionAttributes` 키를 입력 **수** 원하는 비율을 나타내는 값을 사용 하 여 합니다. 예를 들어:
+이 효과 제거 하려면 편집를 `Info.plist` 파일에 대 한 확장을 `UNNotificationExtensionInitialContentSizeRatio` 의 키를 `NSExtensionAttributes` 키를 입력 **수** 원하는 비율을 나타내는 값을 사용 하 여 합니다. 예:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -453,7 +453,7 @@ namespace MonkeyChatNotifyExtension
 
 알림 콘텐츠 확장 수도 사용자 사용자 지정 작업 중 하나를 호출 하는 경우 해당 UI를 업데이트 하는 기능, 사용자가 수락 하는 경우 날짜를 표시 합니다 **Accept** 사용자 지정 작업 단추입니다. 또한 알림 콘텐츠 확장 시스템 알림을 닫히기 전에 사용자가 작업의 효과 볼 수 있도록 알림 UI의 사건의 지연에 알 수 있습니다.
 
-두 번째 버전을 구현 하 여 이렇게는 `DidReceiveNotification` 는 완료 처리기를 포함 하는 메서드. 예를 들어:
+두 번째 버전을 구현 하 여 이렇게는 `DidReceiveNotification` 는 완료 처리기를 포함 하는 메서드. 예:
 
 ```csharp
 using System;

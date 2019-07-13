@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30d70d8a36c0e5a9b9ff6ddc74710dec4fb86a4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199769"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864394"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple 플랫폼 (iOS 및 Mac)
 
@@ -21,7 +21,7 @@ ms.locfileid: "61199769"
 
 일부 사용자 인터페이스 작업을 수행 하는 코드를 공유 하려는 아직 사용 해야 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md) 단일 프로젝트에서 공유을 하 게 참조 하는 경우 iOS 및 Mac을 사용 하 여 컴파일된 코드를 배치할 수 있습니다.
 
-##  <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
+## <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
 
 IOS 및 Mac 프로젝트에 대 한 통합 API는 동일한 코드 파일을 원활 하 게 코드 공유에 대 한 두 플랫폼에서 사용 될 수 있도록 프레임 워크에 대 한 동일한 네임 스페이스를 사용 합니다. 또한 모두 32 비트 및 64 비트 빌드 수 있습니다. Unified API 템플릿 기본 초기 2015 년부터 되었으며 모든 새 프로젝트-것이 좋습니다 *만* 통합 API 프로젝트는 앱 스토어에 제출할 수 있습니다.
 
@@ -47,11 +47,11 @@ Xamarin은 바인딩을 사용 하 여 앱에 네이티브 라이브러리를 �
 
 ## <a name="native-referencesnative-referencesmd"></a>[네이티브 참조](native-references.md)
 
-##  <a name="macios-native-typesnativetypesmd"></a>[Mac/iOS 네이티브 형식](nativetypes.md)
+## <a name="macios-native-typesnativetypesmd"></a>[Mac/iOS 네이티브 형식](nativetypes.md)
 
 32 비트 및 64 비트 코드에서 투명 하 게 지 원하는 C# 및 F#에 새 데이터 형식이 도입 되었습니다.   여기에서 알아보세요.
 
-##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[32 비트 및 64 비트 앱 빌드](32-and-64/index.md)
+## <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[32 비트 및 64 비트 앱 빌드](32-and-64/index.md)
 
 필요한 32 비트 및 64 비트 응용 프로그램을 지원 하기 위해 알아야 합니다.
 

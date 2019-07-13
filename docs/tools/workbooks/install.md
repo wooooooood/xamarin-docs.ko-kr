@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: a1001163d89a9a9cda16a7ee5e644307fcc9875c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb79323c416c107c35c465bc2a8815ab267cc451
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218588"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865950"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 설치 및 요구 사항
 
@@ -42,7 +42,7 @@ ms.locfileid: "61218588"
 
 #### <a name="supported-app-platforms"></a>지원 되는 앱 플랫폼
 
-|앱 플랫폼|OS 지원|노트|
+|앱 플랫폼|OS 지원|참고|
 |--- |--- |--- |
 |Mac|Mac 에서만 지원|
 |iOS|Mac 및 Windows에서 지원|Mac에서 Xamarin.iOS 11.0 및 Xcode 9.0 이상 설치 해야 합니다. 위의 모든를 실행 하는 Mac 빌드 호스트를 Windows에서 iOS 통합 문서를 실행 하려면 하며 [원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md) Windows에 설치 합니다.|
@@ -111,7 +111,7 @@ IOS 또는 Android 통합 문서 연결 문제가 있는 경우 이미 체크 �
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
 
-## <a name="uninstall"></a>제거
+## <a name="uninstall"></a>Uninstall
 
 ### <a name="windows"></a>Windows
 
@@ -149,8 +149,8 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 1. `"/Applications/Xamarin Workbooks.app"`에서 Workbooks 앱 삭제
 2. `"Applications/Xamarin Inspector.app"`에서 Inspector 앱 삭제
-2. `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 및 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"` 추가 기능 삭제
-3. `/Library/Frameworks/Xamarin.Interactive.framework` 및 `/Library/Frameworks/Xamarin.Inspector.framework`에서 Inspector 및 지원 파일 삭제
+3. `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 및 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"` 추가 기능 삭제
+4. `/Library/Frameworks/Xamarin.Interactive.framework` 및 `/Library/Frameworks/Xamarin.Inspector.framework`에서 Inspector 및 지원 파일 삭제
 
 ## <a name="downgrading"></a>다운 그레이드
 
@@ -158,7 +158,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 이전 설치 관리자의 버그 때문이 아닌 경우는 1.3.2 또는 이전 설치 관리자를 사용 하 여 1.4 이상 릴리스를 다운 그레이드할 수
 
-1.4 또는 1.3.2 최신 또는 이전 버전에서 다운 그레이드 합니다.
+1\.4 또는 1.3.2 최신 또는 이전 버전에서 다운 그레이드 합니다.
 
 1. [Workbooks 및 Inspector를 수동으로 제거](#uninstall-macos)
-2. 1.3.2 실행 이전 또는 `.pkg` 설치 관리자
+2. 1\.3.2 실행 이전 또는 `.pkg` 설치 관리자

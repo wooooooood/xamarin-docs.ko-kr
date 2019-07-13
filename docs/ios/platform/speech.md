@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: c1f488213f9b3be945fd98e09f630c243d0b0d62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8af7474036eb0fd6e2236cf52e96b8d12c8bc44e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382840"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865715"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.iOS에서 음성 인식
 
@@ -66,7 +66,7 @@ Apple (2011 년부터 수집) 다음과 같은 키보드 받아쓰기 통계를 
 
 음성 인식 API에서 제공 하는 결과 수집 하거나 모든 개인 사용자 데이터에 액세스 하지 않아도 앱 없이 개별 사용자에 게 사용자 지정 투명 하 게 됩니다.
 
-음성 인식 API를 사용자가 말하고만 텍스트 보다 변환의 결과 대 한 자세한 정보를 제공에서 호출 앱으로 다시 결과 거의 실시간으로 제공 합니다. 여기에는 다음이 포함됩니다.
+음성 인식 API를 사용자가 말하고만 텍스트 보다 변환의 결과 대 한 자세한 정보를 제공에서 호출 앱으로 다시 결과 거의 실시간으로 제공 합니다. 이러한 개체는 다음과 같습니다.
 
 - 여러 사용자가 말한 해석 합니다.
 - 개별 번역에 대 한 신뢰도 수준입니다.
@@ -105,21 +105,21 @@ Apple가 지정된 된 언어는 현재 시점에서 번역에 사용할 수 있
 2. 으로 전환 합니다 **원본** 보기: 
 
     [![](speech-images/speech02.png "소스 보기")](speech-images/speech02.png#lightbox)
-3. 클릭할 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예를 들어: 
+3. 클릭할 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예: 
 
     [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
 4. 앱은 실시간 오디오 전사를 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭할 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png#lightbox)
-4. 파일의 변경 내용을 저장합니다.
+5. 파일의 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 두 번 클릭 합니다 `Info.plist` 파일을 편집용으로 엽니다.
-3. 클릭할 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예를 들어: 
+2. 클릭할 **새 항목 추가**, 입력 `NSSpeechRecognitionUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
-4. 앱은 실시간 오디오 전사를 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭할 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예를 들어: 
+3. 앱은 실시간 오디오 전사를 처리 하는 경우 마이크 사용 설명도 필요 합니다. 클릭할 **새 항목 추가**, 입력 `NSMicrophoneUsageDescription` 에 대 한 합니다 **속성**, `String` 에 대 한 합니다 **형식** 및 **사용 설명** 로 **값**합니다. 예를 들어: 
 
     [![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.

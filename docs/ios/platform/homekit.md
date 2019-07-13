@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 9daedbe9bba5a2923a247104c4e69ae2e1b635aa
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831539"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865780"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.iOS에서 HomeKit
 
@@ -59,20 +59,20 @@ HomeKit 따른 보안 요구 사항으로 인해 HomeKit 프레임 워크를 사
 
     [![](homekit-images/provision01.png "지정된 된 ID에 대 한 HomeKit 서비스를 사용 하도록 설정")](homekit-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
-4. 클릭할 **프로 비전 프로필** > **개발** 새 개발 프로 비전 앱에 대 한 프로필을 만듭니다. 
+6. 클릭할 **프로 비전 프로필** > **개발** 새 개발 프로 비전 앱에 대 한 프로필을 만듭니다. 
 
     [![](homekit-images/provision02.png "새 개발 프로 비전 앱에 대 한 프로필 만들기")](homekit-images/provision02.png#lightbox)
-5. 다운로드 및 새 프로 비전 프로필을 설치 또는 Xcode를 사용 하 여 다운로드 하 고 프로필을 설치 합니다.
-6. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다. 
+7. 다운로드 및 새 프로 비전 프로필을 설치 또는 Xcode를 사용 하 여 다운로드 하 고 프로필을 설치 합니다.
+8. Xamarin.iOS 프로젝트 옵션을 편집 하 고 방금 만든 프로 비전 프로필을 사용 하 고 있는지 확인 합니다. 
 
     [![](homekit-images/provision03.png "방금 만든 프로 비전 프로필 선택")](homekit-images/provision03.png#lightbox)
-7. 다음으로, 편집 하 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인: 
+9. 다음으로, 편집 하 **Info.plist** 파일을 프로 비전 프로필을 만드는 데 사용 된 앱 ID를 사용 하 고 있는지 확인: 
 
     [![](homekit-images/provision04.png "앱 ID를 설정 합니다. ")](homekit-images/provision04.png#lightbox)
-8. 마지막으로 편집 하 **Entitlements.plist** 파일을 확인 합니다 **HomeKit** 자격 선정 된: 
+10. 마지막으로 편집 하 **Entitlements.plist** 파일을 확인 합니다 **HomeKit** 자격 선정 된: 
 
     [![](homekit-images/provision05.png "HomeKit 자격을 사용 하도록 설정")](homekit-images/provision05.png#lightbox)
-9. 모든 파일에 변경 내용을 저장 합니다.
+11. 모든 파일에 변경 내용을 저장 합니다.
 
 현재 위치에서 이러한 설정을 사용 하 여 응용 프로그램이 HomeKit 프레임 워크 Api에 액세스할 준비가 되었습니다. 프로 비전에 대 한 자세한 내용은 참조 하십시오 우리의 [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) 하 고 [앱 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드입니다.
 
@@ -318,7 +318,7 @@ HomeKit 액세서리 시뮬레이터가이 숫자에서 찾을 수 있습니다 
 
 이 예제의 경우에서는 됩니다 수 유지 작업 간단 하 고 방 또는 영역 구조로 구성 하는 대신 집의 보조 프로그램을 직접 작동 합니다.
 
-합니다 `HMHome` 개체에 할당 된 액세서리 사용자에 게 표시할 수 있는 목록이 해당 `Accessories` 속성입니다. 예:
+합니다 `HMHome` 개체에 할당 된 액세서리 사용자에 게 표시할 수 있는 목록이 해당 `Accessories` 속성입니다. 예를 들어:
 
 [![](homekit-images/accessory04.png "예제에서는 보조 프로그램")](homekit-images/accessory04.png#lightbox)
 
@@ -667,7 +667,7 @@ HomeKit 액세서리 시뮬레이터에서 광원의 상태를 변경 해야 합
 이 문서에서는 Xamarin.iOS 앱에 HomeKit 액세서리를 사용 하는 데 필요한 기본 기능 설명 했습니다. 그러나이 소개에서 다루지 않는 HomeKit의 몇 가지 고급 기능이 있습니다.
 
 - **대화방** -최종 사용자가 회의실에 사용 하도록 설정 하는 HomeKit 액세서리 구성 필요에 따라 수 있습니다. 이렇게 하면 쉽게 이해 하 고 사용 하 여 작업 사용자는 있는 accessories HomeKit. 만들고 방 유지 관리에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) 설명서.
-- **영역** -방 수 최종 사용자가 필요에 따라 영역으로 구성 하는 수입니다. 영역은 사용자는 하나의 단위로 처리할 수 있습니다 하는 대화방의 컬렉션을 가리킵니다. 예를 들어: Upstairs Downstairs 또는 지하실 합니다. 마찬가지로 HomeKit을 제공 하 여 최종 사용자에 게 가장 적합 한 방식으로 보조 프로그램을 사용 하 여 작업할 수 있습니다. 만들고 영역을 유지 관리에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서.
+- **영역** -방 수 최종 사용자가 필요에 따라 영역으로 구성 하는 수입니다. 영역은 사용자는 하나의 단위로 처리할 수 있습니다 하는 대화방의 컬렉션을 가리킵니다. 예: Upstairs Downstairs 또는 지하실 합니다. 마찬가지로 HomeKit을 제공 하 여 최종 사용자에 게 가장 적합 한 방식으로 보조 프로그램을 사용 하 여 작업할 수 있습니다. 만들고 영역을 유지 관리에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서.
 - **작업 및 작업 설정** -작업 액세서리 서비스 특성을 수정 하 고 집합으로 그룹화 할 수 있습니다. 작업 집합 보조 프로그램 그룹을 제어 하 고 해당 작업을 조정 하는 스크립트와 작동 합니다. 예를 들어, "조사식 TV" 스크립트를 수 있습니다는 블라인드, 조명 dim 닫고는 텔레비전과 해당 사운드 시스템을 켭니다. 만들기 및 작업 및 작업 집합을 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) 하 고 [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) 설명서.
 - **트리거** -하나 트리거를 활성화할 수 있습니다 또는 자세한 동작 설정할 때 지정된 된 조건 집합이 충족 합니다. 예를 들어 portch light 설정 하 고 외부 어두운 가져오면 모든 외부 도어가 잠금. 만들기 및 트리거를 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의을 참조 하세요 [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) 설명서.
 

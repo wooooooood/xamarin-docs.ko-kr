@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 859bbd22640ba3d09324fcd3853cda26e563a1cd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832475"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865286"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Tvos 빠른 시작 가이드
 
@@ -298,20 +298,20 @@ Xamarin.tvOS 앱의 디자인 화면에 컨트롤을 추가 하는 것은 이제
 9. 완료 되 면 제약 조건 속성 패드의 레이아웃 탭에서 유사 합니다.
 
     [![](hello-tvos-images/designer11.png "예제에서는 제약 조건")](hello-tvos-images/designer11.png#lightbox)
-8. 끌어서를 **단추** 에서 합니다 **도구 상자** 레이블 아래에 놓습니다.
-9. 클릭 합니다 **제목** 속성에는 **속성 패드** 단추의 제목을 변경 하 고 `Click Me`:
+10. 끌어서를 **단추** 에서 합니다 **도구 상자** 레이블 아래에 놓습니다.
+11. 클릭 합니다 **제목** 속성에는 **속성 패드** 단추의 제목을 변경 하 고 `Click Me`:
 
     [![](hello-tvos-images/designer12.png "Click Me 단추 제목을 변경합니다")](hello-tvos-images/designer12.png#lightbox)
-10. TvOS 창의 단추를 제한 하려면 위의 5 ~ 8 단계를 반복 합니다. 그러나 끌어오는 방법 대신 T 핸들 (예: #7 단계) 창의 맨 위에, 놓습니다 레이블 아래:
+12. TvOS 창의 단추를 제한 하려면 위의 5 ~ 8 단계를 반복 합니다. 그러나 끌어오는 방법 대신 T 핸들 (예: #7 단계) 창의 맨 위에, 놓습니다 레이블 아래:
 
     [![](hello-tvos-images/designer14.png "단추를 제한 합니다.")](hello-tvos-images/designer14.png#lightbox)
-11. 단추 아래에서 다른 레이블을 끌어, 크기 집합 및 첫 번째 레이블이와 동일한 너비가 되도록 해당 **맞춤** 하 **Center**:
+13. 단추 아래에서 다른 레이블을 끌어, 크기 집합 및 첫 번째 레이블이와 동일한 너비가 되도록 해당 **맞춤** 하 **Center**:
 
     [![](hello-tvos-images/designer15.png "단추 아래에서 다른 레이블을 끌어, 동일한 첫 번째 레이블의 너비 및 맞춤 Center로 크기 조정")](hello-tvos-images/designer15.png#lightbox)
-12. 첫 번째 레이블 및 단추와 같은 중심 및 위치와 크기에 고정이 레이블을 설정 합니다.
+14. 첫 번째 레이블 및 단추와 같은 중심 및 위치와 크기에 고정이 레이블을 설정 합니다.
 
     [![](hello-tvos-images/designer16.png "레이블 위치와 크기에 고정")](hello-tvos-images/designer16.png#lightbox)
-13. 사용자 인터페이스에 변경 내용을 저장 합니다.
+15. 사용자 인터페이스에 변경 내용을 저장 합니다.
 
 크기를 조정 하 고 관련 컨트롤을 이동 된을 알아야 했습니다는 디자이너를 사용 하면 유용한 스냅 힌트에 기반한 [Apple TV Human Interface Guidelines](https://developer.apple.com/tvos/human-interface-guidelines/)합니다. 이러한 지침을 Apple TV 사용자에 대 한 친숙 한 모양과 느낌을 갖게 되는 고품질 응용 프로그램을 만들 수 있습니다.
 

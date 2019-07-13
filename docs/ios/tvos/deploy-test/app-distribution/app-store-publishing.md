@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 73ee7fc3c28fc7a8476010e8bf7567b3e5ef590d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61416679"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865085"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV App Store에 게시
 
@@ -192,19 +192,19 @@ Apple에서 Apple TV App Store에 포함 되도록 허용할 tvOS 앱에 대해 
 
 Mac 용 Visual Studio의 보관 워크플로에서 응용 프로그램 로더 열기 자동으로 저장 한 후의 `.ipa`:
 
-2. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
+1. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
 
     [![](app-store-publishing-images/publishvs01.png "앱 배달 선택")](app-store-publishing-images/publishvs01.png#lightbox)
 
-3. 위에서 만든 zip 또는 IPA 파일을 선택하고 **확인** 단추를 클릭합니다.
-4. 애플리케이션 로더에서 파일의 유효성을 검사합니다.
+2. 위에서 만든 zip 또는 IPA 파일을 선택하고 **확인** 단추를 클릭합니다.
+3. 애플리케이션 로더에서 파일의 유효성을 검사합니다.
 
     [![](app-store-publishing-images/publishvs02.png "응용 프로그램 로더 유효성 검사 화면")](app-store-publishing-images/publishvs02.png#lightbox)
-5. *다음* 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
+4. *다음* 단추를 클릭합니다. 그러면 앱 스토어에 대한 응용 프로그램의 유효성이 검사됩니다.
 
     [![](app-store-publishing-images/publishvs03.png "앱 스토어에 대 한 유효성을 검사할 응용 프로그램")](app-store-publishing-images/publishvs03.png#lightbox)
-6. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
-7. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
+5. **보내기** 단추를 클릭하여 검토를 위해 응용 프로그램을 Apple에 보냅니다.
+6. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
 
 <a name="iTunes_Connect_Status" />
 

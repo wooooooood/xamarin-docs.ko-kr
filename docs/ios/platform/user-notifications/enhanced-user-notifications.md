@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0f77f9014cf7bfad510927f0f12a3e70b387036f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afa20a264e2509a5658cd0d8f90da3148315e803
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61424382"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865723"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 향상 된 사용자 알림
 
@@ -150,7 +150,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 // Get current notification settings
 UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
     var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
-}); 
+});    
 ``` 
 
 ### <a name="configuring-the-remote-notifications-environment"></a>원격 알림 환경 구성
@@ -176,11 +176,11 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 두 번 클릭 합니다 `Entitlements.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
-3. 클릭 합니다 **+** 단추를 새 키를 추가 합니다.
-4. 입력 `aps-environment` 에 대 한는 **속성**를 유지 합니다 **형식** 으로 `String` 하나를 입력 하 고 `development` 또는 `production` 에 대 한를 **값**: 
+2. 클릭 합니다 **+** 단추를 새 키를 추가 합니다.
+3. 입력 `aps-environment` 에 대 한는 **속성**를 유지 합니다 **형식** 으로 `String` 하나를 입력 하 고 `development` 또는 `production` 에 대 한를 **값**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "Ap 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
-5. 파일의 변경 내용을 저장합니다.
+4. 파일의 변경 내용을 저장합니다.
 
 -----
 
@@ -242,7 +242,7 @@ content.Badge = 1;
 만든 알림 콘텐츠를 사용 하 여 앱을 설정 하 여 알림을 사용자에 게 표시 하는 경우 예약 해야는 *트리거*합니다. iOS 10에는 네 개의 다른 트리거 유형을 제공합니다.
 
 - **푸시 알림** -Remote Notifications 단독으로 사용 하 고 APNs 보내는 알림 장치에서 실행 되는 앱을 패키지 하는 경우 트리거됩니다.
-- **시간 간격** -이제 및 일부 이후에 종료 간격 시작 시간을 예약 로컬 알림을 허용 합니다. 예를 들면 `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`과 같습니다.
+- **시간 간격** -이제 및 일부 이후에 종료 간격 시작 시간을 예약 로컬 알림을 허용 합니다. 예를 들면 `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
 - **날짜** -특정 날짜 및 시간을 예약 하도록 로컬 알림 허용 합니다.
 - **위치 기반** -iOS 장치 또는 특정 지리적 위치를 벗어나지 들어가거나 탐지 모든 Bluetooth 장치에 지정 된 근접 하는 경우 예약 로컬 알림을 허용 합니다.
 
@@ -442,7 +442,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-로컬 알림을 설정 합니다 `CategoryIdentifier` 의 속성을 `UNMutableNotificationContent` 개체. 예를 들어:
+로컬 알림을 설정 합니다 `CategoryIdentifier` 의 속성을 `UNMutableNotificationContent` 개체. 예:
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -458,7 +458,7 @@ content.CategoryIdentifier = "message";
 
 ### <a name="handling-dismiss-actions"></a>처리 작업을 해제
 
-위에서 설명한 대로 사용자가 알림의 닫을 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작 하지 이므로 옵션을 범주를 만들 때 설정 해야 합니다. 예를 들어:
+위에서 설명한 대로 사용자가 알림의 닫을 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작 하지 이므로 옵션을 범주를 만들 때 설정 해야 합니다. 예:
 
 ```csharp
 var categoryID = "message";
@@ -561,7 +561,7 @@ Xamarin.iOS 앱에 서비스 확장을 구현 하려면 다음을 수행 합니�
 > [!IMPORTANT]
 > 서비스 확장에 대 한 번들 식별자에는 주 응용 프로그램의 번들 식별자와 일치 해야 `.appnameserviceextension` 끝에 추가 합니다. 예를 들어, 기본 앱의 번들 식별자에 있으면 `com.xamarin.monkeynotify`, 서비스 확장의 번들 식별자 있어야 `com.xamarin.monkeynotify.monkeynotifyserviceextension`합니다. 확장 솔루션에 추가 되 면 자동으로 설정 해야 합니다. 
 
-필요한 기능을 제공 하도록 수정 해야 하는 알림 서비스 확장에서 기본 클래스를 하나 있습니다. 예를 들어:
+필요한 기능을 제공 하도록 수정 해야 하는 알림 서비스 확장에서 기본 클래스를 하나 있습니다. 예:
 
 ```csharp
 using System;

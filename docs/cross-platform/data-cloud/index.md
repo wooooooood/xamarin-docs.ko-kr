@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 723970a4ad7e2ced85147dbcc6c22f9a45519121
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674986"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864608"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure 및 Xamarin
 
@@ -41,7 +41,7 @@ Microsoft의 웹 API에는 Xamarin 응용 프로그램에서 쉽게 사용할 �
 있습니다 수 쉽게 스핀업을 [Azure 웹 사이트](https://trywebsites.azurewebsites.net/) Xamarin 앱에 연결할 WebAPI 기반 앱을 빌드하고 있습니다.
 
 
-###  <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[웹 서비스 소개](~/cross-platform/data-cloud/web-services/index.md)
+### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[웹 서비스 소개](~/cross-platform/data-cloud/web-services/index.md)
 
 이 자습서에서는 REST를 통합 하는 방법 소개 WCF SOAP 웹 서비스 기술 Xamarin 모바일 응용 프로그램을 사용 하 여 합니다. 다양 한 서비스 구현 검사, 사용 가능한 도구 및 라이브러리를 통합 하면 평가 하 고 서비스 데이터를 사용 하기 위한 샘플 패턴을 제공 합니다. 마지막으로, Xamarin 모바일 응용 프로그램을 사용 하 여 소비에 대 한 RESTful 웹 서비스를 만드는 기본 개요를 제공 합니다.
 

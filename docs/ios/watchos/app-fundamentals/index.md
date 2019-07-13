@@ -7,43 +7,43 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: d47c4d705b18a7bf295f2f88aed5a591d21b6ebd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3933c18c27f727b833a624f0d59b5ed36b0a0b76
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091797"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865631"
 ---
 # <a name="watchos-application-fundamentals"></a>watchOS 응용 프로그램 기본 사항
 
-##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[부모 응용 프로그램](~/ios/watchos/app-fundamentals/parent-app.md)
+## <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[부모 응용 프로그램](~/ios/watchos/app-fundamentals/parent-app.md)
 
 Watch 앱은 iOS에서 실행 되는 해당 부모 앱을 사용 하 여 통신할 수 있습니다.
 
-##  <a name="app-groupsioswatchosapp-fundamentalsapp-groupsmd"></a>[앱 그룹](~/ios/watchos/app-fundamentals/app-groups.md)
+## <a name="app-groupsioswatchosapp-fundamentalsapp-groupsmd"></a>[앱 그룹](~/ios/watchos/app-fundamentals/app-groups.md)
 
 설정 및 iOS와 Watch 앱 간에 데이터를 공유 합니다.
 
-##  <a name="iconsioswatchosapp-fundamentalsiconsmd"></a>[아이콘](~/ios/watchos/app-fundamentals/icons.md)
+## <a name="iconsioswatchosapp-fundamentalsiconsmd"></a>[아이콘](~/ios/watchos/app-fundamentals/icons.md)
 
 Apple Watch 앱 아이콘을 추가 하는 방법입니다.
 
-##  <a name="layoutioswatchosapp-fundamentalslayoutmd"></a>[레이아웃](~/ios/watchos/app-fundamentals/layout.md)
+## <a name="layoutioswatchosapp-fundamentalslayoutmd"></a>[레이아웃](~/ios/watchos/app-fundamentals/layout.md)
 
 Apple Watch 사용자 인터페이스를 구축 하기 위한 디자인 팁입니다.
 
-##  <a name="localizationioswatchosapp-fundamentalslocalizationmd"></a>[지역화](~/ios/watchos/app-fundamentals/localization.md)
+## <a name="localizationioswatchosapp-fundamentalslocalizationmd"></a>[지역화](~/ios/watchos/app-fundamentals/localization.md)
 
 여러 언어를 지원 하기 위해 Apple Watch 앱 콘텐츠를 변환 하는 가이드입니다.
 
-##  <a name="navigationioswatchosapp-fundamentalsnavigationmd"></a>[탐색](~/ios/watchos/app-fundamentals/navigation.md)
+## <a name="navigationioswatchosapp-fundamentalsnavigationmd"></a>[탐색](~/ios/watchos/app-fundamentals/navigation.md)
 
 Watch 앱에 사용할 수 있는 두 가지 탐색 옵션을 알아보는: 계층적 또는 페이지 기반 탐색 합니다.
 
-##  <a name="screen-sizesioswatchosapp-fundamentalsscreen-sizesmd"></a>[화면 크기](~/ios/watchos/app-fundamentals/screen-sizes.md)
+## <a name="screen-sizesioswatchosapp-fundamentalsscreen-sizesmd"></a>[화면 크기](~/ios/watchos/app-fundamentals/screen-sizes.md)
 
 미리 보기 하 고 모두 사용할 수 있는 watch 크기에 대 한 사용자 인터페이스를 최적화 합니다.
 
-##  <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[설정](~/ios/watchos/app-fundamentals/settings.md)
+## <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[설정](~/ios/watchos/app-fundamentals/settings.md)
 
 Watch 앱을 위한 설정 화면을 추가 합니다.
