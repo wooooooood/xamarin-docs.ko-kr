@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: be017103c5a3a2c890f49e4a510d20fcd0c03094
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: f0cfeaa049355c2b524ead748696eafd884a1c54
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675098"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865698"
 ---
 # <a name="introduction-to-ios-6"></a>iOS 6 소개
 
@@ -34,17 +34,17 @@ IOS 6 및 Xamarin.iOS 6을 사용 하 여 개발자는 이제 iOS 응용 프로�
 PassKit framework 응용 프로그램을에 게 Passbook 앱에 관리 되는 디지털 전달 상호 작용할 수 있습니다. 자세한 내용은 참조는 [전달 키트 가이드 소개](~/ios/platform/passkit.md)합니다.
 
 
-##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[EventKit 소개](~/ios/platform/eventkit.md)
+## <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[EventKit 소개](~/ios/platform/eventkit.md)
 
 EventKit 프레임 워크에는 달력, 달력 이벤트 및 달력 데이터베이스를 저장 하는 미리 알림 데이터를 액세스 하는 방법을 제공 합니다. 액세스 일정 및 일정에 이벤트 사용 가능한 iOS 4 이후 되었지만 iOS 6 이제 미리 알림 데이터에 대 한 액세스를 제공 합니다. 자세한 내용은 참조는 [있습니까](~/ios/platform/eventkit.md) [EventKit 소개](~/ios/platform/eventkit.md) 가이드입니다.
 
 
-##  <a name="introduction-to-the-social-frameworkiosplatformsocial-frameworkmd"></a>[소셜 프레임 워크 소개](~/ios/platform/social-framework.md)
+## <a name="introduction-to-the-social-frameworkiosplatformsocial-frameworkmd"></a>[소셜 프레임 워크 소개](~/ios/platform/social-framework.md)
 
 소셜 프레임 워크 SinaWeibo 뿐만 아니라 Twitter 및 Facebook을 포함 하 여 중국의 사용자에 대 한 소셜 네트워크와 상호 작용 하기 위한 통합된 API를 제공 합니다. 자세한 내용은 참조는 [소셜 프레임 워크 소개](~/ios/platform/social-framework.md) 가이드입니다.
 
 
-##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[StoreKit 변경 내용](changes-to-storekit.md)
+## <a name="changes-to-storekitchanges-to-storekitmd"></a>[StoreKit 변경 내용](changes-to-storekit.md)
 
 Apple 스토어 키트에서 두 가지 새로운 기능이 도입 되었습니다: 구매 iTunes App Store에서 내에서 또는 콘텐츠 앱을 다운로드 하 고 앱에서 바로 구매에 대 한 콘텐츠 파일을 호스팅. 자세한 내용은 참조는 [저장소 키트 변경](changes-to-storekit.md) 가이드입니다.
 
