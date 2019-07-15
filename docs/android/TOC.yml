@@ -380,6 +380,8 @@
       items:
         - name: 시작
           href: ~/essentials/get-started.md?context=xamarin/android
+        - name: 플랫폼 및 기능 지원
+          href: ~/essentials/platform-feature-support.md?context=xamarin/android
         - name: 가속도계
           href: ~/essentials/accelerometer.md?context=xamarin/android
         - name: 앱 정보

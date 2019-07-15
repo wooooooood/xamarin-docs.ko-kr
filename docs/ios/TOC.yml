@@ -491,6 +491,8 @@
           href: ~/essentials/index.md?context=xamarin/ios
         - name: 시작
           href: ~/essentials/get-started.md?context=xamarin/ios
+        - name: 플랫폼 및 기능 지원
+          href: ~/essentials/platform-feature-support.md?context=xamarin/ios
         - name: 가속도계
           href: ~/essentials/accelerometer.md?context=xamarin/ios
         - name: 앱 정보
@@ -912,6 +914,58 @@
               href: watchos/platform/quick-interaction-techniques.md
             - name: 운동 앱 고급 기능
               href: watchos/platform/workout-apps.md
+        - name: WatchOS용 Xamarin.Essentials
+          items:
+            - name: Xamarin.Essentials 정보
+              href: ~/essentials/index.md?context=xamarin/watchos
+            - name: 시작
+              href: ~/essentials/get-started.md?context=xamarin/watchos
+            - name: 플랫폼 및 기능 지원
+              href: ~/essentials/platform-feature-support.md?context=xamarin/watchos
+            - name: 가속도계
+              href: ~/essentials/accelerometer.md?context=xamarin/watchos
+            - name: 앱 정보
+              href: ~/essentials/app-information.md?context=xamarin/watchos
+            - name: 지표
+              href: ~/essentials/barometer.md?context=xamarin/watchos
+            - name: 배터리
+              href: ~/essentials/battery.md?context=xamarin/watchos
+            - name: 색 변환기
+              href: ~/essentials/color-converters.md?context=xamarin/watchos
+            - name: 연결
+              href: ~/essentials/connectivity.md?context=xamarin/watchos
+            - name: 흔들림 탐지
+              href: ~/essentials/detect-shake.md?context=xamarin/watchos
+            - name: 디바이스 정보
+              href: ~/essentials/device-information.md?context=xamarin/watchos
+            - name: 파일 시스템 도우미
+              href: ~/essentials/file-system-helpers.md?context=xamarin/watchos
+            - name: 지오코딩
+              href: ~/essentials/geocoding.md?context=xamarin/watchos
+            - name: 자이로스코프
+              href: ~/essentials/gyroscope.md?context=xamarin/watchos
+            - name: 지자기 센터
+              href: ~/essentials/magnetometer.md?context=xamarin/watchos
+            - name: 주 스레드
+              href: ~/essentials/main-thread.md?context=xamarin/watchos
+            - name: 맵
+              href: ~/essentials/maps.md?context=xamarin/watchos
+            - name: 방향 센서
+              href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
+            - name: '플랫폼 확장(크기, 직사각형, 점)'
+              href: ~/essentials/platform-extensions.md?context=xamarin/watchos
+            - name: 기본 설정
+              href: ~/essentials/preferences.md?context=xamarin/watchos
+            - name: 보안 스토리지
+              href: ~/essentials/secure-storage.md?context=xamarin/watchos
+            - name: 텍스트 음성 변환
+              href: ~/essentials/text-to-speech.md?context=xamarin/watchos
+            - name: 단위 변환기
+              href: ~/essentials/unit-converters.md?context=xamarin/watchos
+            - name: 버전 추적
+              href: ~/essentials/version-tracking.md?context=xamarin/watchos
+            - name: 문제 해결
+              href: ~/essentials/troubleshooting.md?context=xamarin/watchos
         - name: 배포 및 테스트
           href: watchos/deploy-test/index.md
           items:
@@ -963,6 +1017,42 @@
               href: tvos/platform/remote-bluetooth.md
             - name: 사용자 인터페이스 스타일
               href: tvos/platform/user-interface-styles.md
+        - name: tvOS용 Xamarin.Essentials
+          items:
+            - name: Xamarin.Essentials 정보
+              href: ~/essentials/index.md?context=xamarin/tvos
+            - name: 시작
+              href: ~/essentials/get-started.md?context=xamarin/tvos
+            - name: 플랫폼 및 기능 지원
+              href: ~/essentials/platform-feature-support.md?context=xamarin/tvos
+            - name: 앱 정보
+              href: ~/essentials/app-information.md?context=xamarin/tvos
+            - name: 색 변환기
+              href: ~/essentials/color-converters.md?context=xamarin/tvos
+            - name: 연결
+              href: ~/essentials/connectivity.md?context=xamarin/tvos
+            - name: 디바이스 정보
+              href: ~/essentials/device-information.md?context=xamarin/tvos
+            - name: 파일 시스템 도우미
+              href: ~/essentials/file-system-helpers.md?context=xamarin/tvos
+            - name: 지오코딩
+              href: ~/essentials/geocoding.md?context=xamarin/tvos
+            - name: 주 스레드
+              href: ~/essentials/main-thread.md?context=xamarin/tvos
+            - name: '플랫폼 확장(크기, 직사각형, 점)'
+              href: ~/essentials/platform-extensions.md?context=xamarin/tvos
+            - name: 기본 설정
+              href: ~/essentials/preferences.md?context=xamarin/tvos
+            - name: 보안 스토리지
+              href: ~/essentials/secure-storage.md?context=xamarin/tvos
+            - name: 텍스트 음성 변환
+              href: ~/essentials/text-to-speech.md?context=xamarin/tvos
+            - name: 단위 변환기
+              href: ~/essentials/unit-converters.md?context=xamarin/tvos
+            - name: 버전 추적
+              href: ~/essentials/version-tracking.md?context=xamarin/tvos
+            - name: 문제 해결
+              href: ~/essentials/troubleshooting.md?context=xamarin/tvos
         - name: 사용자 인터페이스
           href: tvos/user-interface/index.md
           items:
