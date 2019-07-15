@@ -278,6 +278,7 @@
 
 ## [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 ### [시작](~/essentials/get-started.md?context=xamarin/xamarin-forms)
+### [플랫폼 및 기능 지원](~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms)
 ### [가속도계](~/essentials/accelerometer.md?context=xamarin/xamarin-forms)
 ### [앱 정보](~/essentials/app-information.md?context=xamarin/xamarin-forms)
 ### [지표](~/essentials/barometer.md?context=xamarin/xamarin-forms)

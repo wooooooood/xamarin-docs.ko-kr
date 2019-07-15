@@ -7,26 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 5c4d43723bc23d8a16be8fec0a895a31ab8bcfdc
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 36601b02bb2984d9350166dedac0d650d9642f91
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233967"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650640"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
 
-이 문서에서는 사용자가 휴대폰의 사진 라이브러리에서 사진을 선택할 수 있는 애플리케이션 만들기를 설명합니다. Xamarin.Forms에는 이 기능이 포함되지 않으므로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 각 플랫폼에서 기본 API에 액세스해야 합니다.  이 문서에서는 이 태스크에 대한 `DependencyService`를 사용하기 위한 다음 단계를 설명합니다.
-
-- **[인터페이스 만들기](#Creating_the_Interface)** &ndash; 공유 코드에서 인터페이스를 만드는 방법을 이해합니다.
-- **[iOS 구현](#iOS_Implementation)** &ndash; iOS용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
-- **[Android 구현](#Android_Implementation)** &ndash; Android용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
-- **[유니버설 Windows 플랫폼 구현](#UWP_Implementation)** &ndash; UWP(유니버설 Windows 플랫폼)용 네이티브 코드에서 인터페이스를 구현하는 방법을 알아봅니다.
-- **[공유 코드에서 구현](#Implementing_in_Shared_Code)** &ndash; 공유 코드에서 기본 구현을 호출하기 위해 `DependencyService`를 사용하는 방법을 알아봅니다.
-
-<a name="Creating_the_Interface" />
+이 문서에서는 사용자가 휴대폰의 사진 라이브러리에서 사진을 선택할 수 있는 애플리케이션 만들기를 설명합니다. Xamarin.Forms에는 이 기능이 포함되지 않으므로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 각 플랫폼에서 기본 API에 액세스해야 합니다.
 
 ## <a name="creating-the-interface"></a>인터페이스 만들기
 
@@ -45,8 +37,6 @@ namespace DependencyServiceSample
 `GetImageStreamAsync` 메서드는 해당 메서드가 신속하게 반환해야 하므로 비동기로 정의되지만 사용자가 사진 라이브러리를 검색하여 사진 하나를 선택하기까지 선택된 사진에 대한 `Stream` 개체를 반환할 수 없습니다.
 
 이 인터페이스는 플랫폼별 코드를 사용하여 모든 플랫폼에서 구현됩니다.
-
-<a name="iOS_Implementation" />
 
 ## <a name="ios-implementation"></a>iOS 구현
 
@@ -153,9 +143,6 @@ iOS 애플리케이션에는 휴대폰의 사진 라이브러리에 액세스하
 <string>Picture Picker uses photo library</string>
 ```
 
-
-<a name="Android_Implementation" />
-
 ## <a name="android-implementation"></a>Android 구현
 
 Android 구현은 [**이미지 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)에 설명된 기술을 사용합니다. 그러나 사용자가 사진 라이브러리에서 이미지를 선택한 경우 호출되는 메서드는 `Activity`에서 파생된 클래스의 `OnActivityResult` 재정의입니다. 따라서 Android 프로젝트의 기본 [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) 클래스는 `OnActivityResult` 메서드의 필드, 속성 및 재정의를 통해 보완되었습니다.
@@ -228,8 +215,6 @@ namespace DependencyServiceSample.Droid
 
 이 메서드는 `Instance` 속성, `PickImageId` 필드, `TaskCompletionSource` 속성을 위해, `StartActivityForResult`를 호출하기 위해 등 여러 목적으로 `MainActivity` 클래스에 액세스합니다. 이 메서드는 `MainActivity`의 기본 클래스인 `FormsAppCompatActivity` 클래스에 따라 정의됩니다.
 
-<a name="UWP_Implementation" />
-
 ## <a name="uwp-implementation"></a>UWP 구현
 
 iOS 및 Android 구현과 달리 유니버설 Windows 플랫폼에 대한 사진 선택기 구현에는 `TaskCompletionSource` 클래스가 필요하지 않습니다. [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/UWP/PicturePickerImplementation.cs) 클래스는 [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) 클래스를 사용하여 사진 라이브러리에 액세스합니다. `FileOpenPicker`의 `PickSingleFileAsync` 메서드 자체는 비동기이므로 `GetImageStreamAsync` 메서드는 해당 메서드(및 다른 비동기 메서드)를 통해 `await`를 사용하고 `Stream` 개체를 반환할 수 있습니다.
@@ -270,9 +255,7 @@ namespace DependencyServiceSample.UWP
 }
 ```
 
-<a name="Implementing_in_Shared_Code" />
-
-## <a name="implementing-in-shared-code"></a>공유 코드에서의 구현
+## <a name="implementing-in-shared-code"></a>공유 코드에서 구현
 
 각 플랫폼에 대해 인터페이스를 구현했으므로 이제 .NET Standard 라이브러리의 애플리케이션은 해당 인터페이스를 활용할 수 있습니다.
 
@@ -322,7 +305,6 @@ pickPictureButton.Clicked += async (sender, e) =>
 ```
 
 `Image` 요소를 탭하면 해당 페이지가 기본으로 반환됩니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

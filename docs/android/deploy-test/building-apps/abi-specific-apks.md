@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b34ac82cf240b892e60707d76c82da64ff232a20
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 8c79075c9e01ef5da73255b152b4cbbd676b4f4e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827419"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674740"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -139,7 +139,7 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 
 ## <a name="automating-apk-creation-with-rake"></a>Rake를 사용한 APK 만들기 자동화
 
-샘플 프로젝트 [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK)는 ABI별 버전 번호를 계산하고 다음과 같은 각 ABI별로 별도의 APK 3개를 빌드하는 방법을 보여주는 간단한 Android 프로젝트입니다.
+샘플 프로젝트 [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK)는 ABI별 버전 번호를 계산하고 다음과 같은 각 ABI별로 별도의 APK 3개를 빌드하는 방법을 보여 주는 간단한 Android 프로젝트입니다.
 
 -  armeabi
 -  armeabi-v7a
@@ -174,7 +174,7 @@ Rake 작업이 완료되면 `xamarin.helloworld.apk` 파일이 있는 `bin` 폴�
 
 
 > [!NOTE]
-> 이 가이드에 설명된 빌드 프로세스는 여러 다른 빌드 시스템 중 하나에서 구현될 수 있습니다. 미리 작성된 예제는 없지만 [Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 또는 [Fake](http://fsharp.github.io/FAKE/)를 사용하면 가능합니다.
+> 이 가이드에 설명된 빌드 프로세스는 여러 다른 빌드 시스템 중 하나에서 구현될 수 있습니다. 미리 작성된 예제는 없지만 [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 또는 [Fake](http://fsharp.github.io/FAKE/)를 사용하면 가능합니다.
 
 
 ## <a name="summary"></a>요약

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9377dcca1cd72b68a0e5b6a5ac5ac4d12d25d50c
+ms.sourcegitcommit: 41b44f2e9bde3b174e7c08605bff65aff594dcd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672653"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690915"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -324,7 +324,7 @@ SGen이 가비지 수집을 시작하면 메모리를 회수하는 동안 애플
 
 ### <a name="additional-size-reduction-techniques"></a>추가 크기 감소 방법
 
-모바일 디바이스에 전원을 공급하는 다양한 CPU 아키텍처가 있습니다. 따라서 Xamarin.iOS 및 Xamarin.Android는 각 CPU 아키텍처에 대한 컴파일된 버전의 애플리케이션을 포함하는 *FAT 이진 파일*을 생성합니다. 그러면 CPU 아키텍처에 관계 없이 모바일 애플리케이션을 장치에서 실행할 수 있습니다.
+모바일 디바이스에 전원을 공급하는 다양한 CPU 아키텍처가 있습니다. 따라서 Xamarin.iOS 및 Xamarin.Android는 각 CPU 아키텍처에 대한 컴파일된 버전의 애플리케이션을 포함하는 *FAT 이진 파일*을 생성합니다. 그러면 CPU 아키텍처에 관계 없이 모바일 응용 프로그램을 디바이스에서 실행할 수 있습니다.
 
 다음 단계를 사용하여 애플리케이션 실행 파일의 크기를 더 줄일 수 있습니다.
 
