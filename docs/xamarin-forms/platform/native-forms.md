@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: f0ad4e3271ac8c1f8d30a0440b38d8a46c57783e
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: 9c427dc48f6fe19098c312bad16d9630bb480264
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687058"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290156"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
 
@@ -119,6 +119,9 @@ public void NavigateToNoteEntryPage(Note note)
 [![XAML에 정의 된 UI를 사용 하는 Xamarin.iOS 응용 프로그램의 스크린 샷](native-forms-images/ios-noteentrypage.png "XAML UI를 사용 하 여 Xamarin.iOS 앱")](native-forms-images/ios-noteentrypage-large.png#lightbox "XAML UI를 사용 하 여 Xamarin.iOS 앱")
 
 경우는 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `UIViewController` 에 대 한는 `NoteEntryPage` 에서 클래스를 `UINavigationController`, 사용자 수를 반환를 `UIViewController` 에 대 한는 `NotesPage` 클래스.
+
+> [!WARNING]
+> Popping를 `UIViewController` iOS 네이티브 탐색에서에서 스택은 자동으로 삭제할 `UIViewController`s입니다. 것은 모두 개발자의 책임 `UIViewController` 더 이상 필요 없는 해당 `Dispose()` 다른 메서드가 호출 된 `UIViewController` 및 연결 된 `Page` 분리 되 고 가비지 수집기에 의해 수집 되지 것입니다 메모리 누수가 발생 합니다.
 
 ## <a name="android"></a>Android
 
