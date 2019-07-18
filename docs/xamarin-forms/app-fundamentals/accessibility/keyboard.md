@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971269"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830340"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Xamarin.Forms에서의 키보드 접근성
 
@@ -66,10 +66,10 @@ ms.locfileid: "65971269"
 
 다음 규칙은 기본 탭 순서를 사용하거나 `TabIndex` 속성을 설정할 때 적용됩니다.
 
- - `TabIndex`가 0과 동일한 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스를 XAML 또는 자식 컬렉션의 선언 순서에 따라 탭 순서에 추가합니다.
- - `TabIndex`가 0보다 큰 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스를 해당 `TabIndex` 값에 따라 탭 순서에 추가합니다.
- - `TabIndex`가 0 미만인 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스는 탭 순서에 추가되며 모든 0값 앞에 나타납니다.
- - `TabIndex`에서의 충돌은 선언 순서에 따라 해결됩니다.
+- `TabIndex`가 0과 동일한 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스를 XAML 또는 자식 컬렉션의 선언 순서에 따라 탭 순서에 추가합니다.
+- `TabIndex`가 0보다 큰 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스를 해당 `TabIndex` 값에 따라 탭 순서에 추가합니다.
+- `TabIndex`가 0 미만인 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 인스턴스는 탭 순서에 추가되며 모든 0값 앞에 나타납니다.
+- `TabIndex`에서의 충돌은 선언 순서에 따라 해결됩니다.
 
 탭 순서를 정의한 후 Tab 키를 누르면 `TabIndex` 오름차순으로 컨트롤을 통해 포커스가 순환되며 마지막 컨트롤에 도달하면 시작 부분으로 래핑됩니다.
 

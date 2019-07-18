@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 2c05e46309fb2a38b6b3c1542051e7115a58d13c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 849c60507fe0ff7b8bf1743be5bbf89ca94b9d6f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668836"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865573"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS 멀티스크린 – 빠른 시작
 
@@ -79,7 +79,7 @@ ms.locfileid: "57668836"
 
 11. **통화 기록** 화면을 만듭니다. **도구 상자**에서 **테이블 보기 컨트롤러**를 디자인 화면으로 끕니다.
 
-   ![](hello-ios-multiscreen-quickstart-images/12new.png "테이블 보기 컨트롤러를 디자인 화면으로 끕니다.")
+    ![](hello-ios-multiscreen-quickstart-images/12new.png "테이블 보기 컨트롤러를 디자인 화면으로 끕니다.")
 
 12. 그런 다음, 장면의 아래쪽에 있는 검은색 표시줄을 클릭하여 **테이블 보기 컨트롤러**를 선택합니다. **Properties Pad**에서 **테이블 보기 컨트롤러**의 클래스를 `CallHistoryController`로 변경하고 **Enter** 키를 누릅니다.
 
@@ -262,7 +262,7 @@ ms.locfileid: "57668836"
 
     애플리케이션을 저장하고 빌드하여 오류가 없는지 확인합니다.
 
-20. **시작** 단추를 눌러 **iOS 시뮬레이터** 내에서 애플리케이션을 시작합니다.
+18. **시작** 단추를 눌러 **iOS 시뮬레이터** 내에서 애플리케이션을 시작합니다.
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "시작 단추를 눌러 iOS 시뮬레이터 내에서 애플리케이션을 시작합니다.")
 
@@ -505,7 +505,7 @@ ms.locfileid: "57668836"
 
     애플리케이션을 저장하고 빌드하여 오류가 없는지 확인합니다.
 
-20. **시작** 단추를 눌러 **iOS 시뮬레이터** 내에서 애플리케이션을 시작합니다.
+18. **시작** 단추를 눌러 **iOS 시뮬레이터** 내에서 애플리케이션을 시작합니다.
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "샘플 앱의 첫 번째 화면")
 

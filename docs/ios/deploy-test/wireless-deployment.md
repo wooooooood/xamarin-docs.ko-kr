@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854836"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865499"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
@@ -27,7 +27,7 @@ ms.locfileid: "58854836"
 
 무선 배포를 사용하려면 다음이 필요합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 - macOS 10.12.4
 - 최신 버전의 Mac용 Visual Studio
@@ -42,7 +42,7 @@ ms.locfileid: "58854836"
 Mac 빌드 호스트에 다음 구성 요소를 설치해야 합니다.
 
 - macOS 10.12.4
-- Visual Studio for Mac
+- Mac용 Visual Studio
 - Xcode 9.0 이상
 
 -----
@@ -83,9 +83,9 @@ iOS 또는 tvOS 디바이스에 배포하려면 다음 단계를 수행합니다
 
 1. 배포 컴퓨터와 대상 디바이스가 동일한 무선 네트워크에 있는지 확인합니다. 
 
-2. 대상 장치 목록에서 장치를 선택하고 애플리케이션을 실행합니다.
+2. 대상 디바이스 목록에서 디바이스를 선택하고 응용 프로그램을 실행합니다.
 
-2. 디바이스가 잠겨 있으면 디바이스의 잠금을 해제하라는 메시지가 표시됩니다. 디바이스의 잠금이 해지되면 앱이 디바이스에 배포됩니다.
+3. 디바이스가 잠겨 있으면 디바이스의 잠금을 해제하라는 메시지가 표시됩니다. 디바이스의 잠금이 해지되면 앱이 디바이스에 배포됩니다.
 
 무선 배포가 완료되면 자동으로 무선 디버깅이 사용되므로 늘 하던 것처럼 이전에 설정한 중단점을 사용하여 디버깅 워크플로를 계속 진행할 수 있습니다.
 

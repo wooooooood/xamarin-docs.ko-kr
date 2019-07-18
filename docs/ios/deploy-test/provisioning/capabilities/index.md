@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178133"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832175"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
@@ -72,7 +72,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ## <a name="using-the-ide"></a>IDE 사용
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
 
@@ -122,64 +122,64 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ### <a name="creating-an-app-id-with-an-app-service"></a>앱 서비스로 앱 ID 생성하기
 
-1.  Mac에서 [Apple Developer Center](https://developer.apple.com/account)(Windows 컴퓨터를 사용하는 경우 빌드 호스트 mac)로 이동하여 로그인합니다.
-2.  **인증서, 식별자 및 프로필**을 선택합니다.
+1. Mac에서 [Apple Developer Center](https://developer.apple.com/account)(Windows 컴퓨터를 사용하는 경우 빌드 호스트 mac)로 이동하여 로그인합니다.
+2. **인증서, 식별자 및 프로필**을 선택합니다.
 
     ![Apple Developer Center](images/image5.png)
 
-3.  **식별자** 아래에서 **앱 ID**를 선택합니다.
+3. **식별자** 아래에서 **앱 ID**를 선택합니다.
 
     ![개발자 센터에서 앱 ID 선택](images/image6.png)
 
-4.  오른쪽 위 모서리에 있는 **+** 단추를 눌러서 새 앱 ID를 만듭니다.
-5.  App ID 설명을 입력하고 Explicit App ID(명시적 앱 ID)를 선택하고 번들 ID를 `com.domain.appname` 형식으로 입력합니다. 이 번들 ID는 프로젝트의 번들 ID와 일치해야 합니다.
+4. 오른쪽 위 모서리에 있는 **+** 단추를 눌러서 새 앱 ID를 만듭니다.
+5. App ID 설명을 입력하고 Explicit App ID(명시적 앱 ID)를 선택하고 번들 ID를 `com.domain.appname` 형식으로 입력합니다. 이 번들 ID는 프로젝트의 번들 ID와 일치해야 합니다.
 
     ![앱 ID 추가 세부 정보](images/image7.png)
 
-6.  **App Services** 아래에서 앱에 필요한 서비스를 선택합니다.
+6. **App Services** 아래에서 앱에 필요한 서비스를 선택합니다.
 
     ![App Services 선택 페이지](images/image8.png)
 
-7.  **계속**을 누릅니다.
-8.  앱 ID를 확인합니다. 각 서비스는 다음 상태 중 하나에 있습니다. 아래 그림과 같이 **사용**, **사용 안 함** 또는 **구성 가능**. **사용**이면 프로비전 프로필에 사용할 준비가 된 상태입니다. **구성 가능**이면 해당 기능에 대해 추가 설정이 필요합니다. 추가 단계는 뒷부분에 나오는 섹션에 자세히 설명되어 있습니다.
+7. **계속**을 누릅니다.
+8. 앱 ID를 확인합니다. 각 서비스는 다음 상태 중 하나에 있습니다. 아래 그림과 같이 **사용**, **사용 안 함** 또는 **구성 가능**. **사용**이면 프로비전 프로필에 사용할 준비가 된 상태입니다. **구성 가능**이면 해당 기능에 대해 추가 설정이 필요합니다. 추가 단계는 뒷부분에 나오는 섹션에 자세히 설명되어 있습니다.
 
     ![앱 ID 확인](images/image9.png)
 
-9.  **등록** 및 **완료**를 차례로 클릭합니다. 새로 생성된 앱 ID가 iOS 앱 ID 목록에 표시됩니다.
+9. **등록** 및 **완료**를 차례로 클릭합니다. 새로 생성된 앱 ID가 iOS 앱 ID 목록에 표시됩니다.
 
 
 <a name="provisioningprofile" />
 
 ### <a name="creating-a-provisioning-profile"></a>프로비전 프로필 만들기
 
-이제 이 앱 ID가 포함된 프로비전 프로필을 만듭니다. 아래의 단계를 수행합니다.
+이제 이 앱 ID가 포함된 프로비전 프로필을 만듭니다. 다음 단계를 따르세요.
 
-1.  Apple Developer Center에서 **프로비전 프로필 > 모두**로 이동합니다.
+1. Apple Developer Center에서 **프로비전 프로필 > 모두**로 이동합니다.
 
     ![프로비전 프로필 섹션](images/image10.png)
 
-2.  오른쪽 위 모서리에 있는 **+** 단추를 눌러서 새 프로비전 프로필을 만듭니다.
-3.  필요한 프로비전 프로필 유형을 선택하고 **계속**을 클릭합니다.
+2. 오른쪽 위 모서리에 있는 **+** 단추를 눌러서 새 프로비전 프로필을 만듭니다.
+3. 필요한 프로비전 프로필 유형을 선택하고 **계속**을 클릭합니다.
 
     ![프로비전 프로필 선택](images/image11.png)
 
-4.  드롭다운 목록에서 위 단계에서 생성된 앱 ID를 선택하고 **계속**을 누릅니다.
+4. 드롭다운 목록에서 위 단계에서 생성된 앱 ID를 선택하고 **계속**을 누릅니다.
 
     ![앱 ID 선택](images/image12.png)
 
-5.  앱에 서명하는 데 사용되는 인증서를 선택하고 **계속**을 누릅니다.
+5. 앱에 서명하는 데 사용되는 인증서를 선택하고 **계속**을 누릅니다.
 
     ![인증서 선택](images/image13.png)
 
-6.  이 프로필에 포함할 디바이스를 선택하고 **계속**을 누릅니다.
+6. 이 프로필에 포함할 디바이스를 선택하고 **계속**을 누릅니다.
 
     ![프로비전 프로필에 대한 디바이스 선택](images/image14.png)
 
-7.  프로필을 식별할 수 있도록 이름을 지정하고 **계속**을 눌러서 프로필을 생성합니다.
+7. 프로필을 식별할 수 있도록 이름을 지정하고 **계속**을 눌러서 프로필을 생성합니다.
 
     ![프로비전 프로필 이름 지정](images/image15.png)
 
-8.  **다운로드** 단추를 눌러서 다운로드하고 파인더에서 파일을 두 번 클릭하여 프로비전 프로필을 설치합니다.
+8. **다운로드** 단추를 눌러서 다운로드하고 파인더에서 파일을 두 번 클릭하여 프로비전 프로필을 설치합니다.
 
 9. Visual Studio를 사용하는 경우 **수동 프로비전** 옵션을 선택해야 합니다.
 
@@ -205,12 +205,12 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 아래 목록에는 앱 서비스를 사용하도록 설정한 상태에서 앱을 개발할 때 장애물을 만들 수 있는 가장 일반적인 문제 중 일부가 자세히 나열되어 있습니다.
 
--   Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필) 섹션에 올바른 ID가 제대로 생성되고 등록되어 있는지 확인합니다.
--   서비스가 앱(또는 확장) ID에 추가되어 있고 Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필)에서 생성된 앱 그룹/가맹점 ID/컨테이너를 사용하도록 구성되어 있는지 확인합니다.
--   프로비전 프로필과 App ID가 설치되어 있는지, 앱의 **Info.plist**(Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
--   앱의 **Entitlements.plist** 파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
--   info.plist에 적절한 개인 키가 설정되어 있는지 확인합니다.
--   앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
+- Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필) 섹션에 올바른 ID가 제대로 생성되고 등록되어 있는지 확인합니다.
+- 서비스가 앱(또는 확장) ID에 추가되어 있고 Apple Developer 포털의 **Certificates, IDs & Profiles**(인증서, ID 및 프로필)에서 생성된 앱 그룹/가맹점 ID/컨테이너를 사용하도록 구성되어 있는지 확인합니다.
+- 프로비전 프로필과 App ID가 설치되어 있는지, 앱의 **Info.plist**(Xamarin 프로젝트)가 위에서 구성한 앱 ID 중 하나를 사용 중인지 확인합니다.
+- 앱의 **Entitlements.plist** 파일(Xamarin 프로젝트)에 올바른 서비스를 사용하도록 설정되어 있는지 확인합니다.
+- info.plist에 적절한 개인 키가 설정되어 있는지 확인합니다.
+- 앱의 **iOS 번들 서명**에서 **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이 _아닙니다_.
 
 <a name="summary" />
 

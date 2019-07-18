@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 87be250bdc425558a8e386a8209596e18f13b3ed
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120523"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865575"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
 _TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베타 테스트하는 기본 방법입니다. 이 문서에서는 앱 업로드부터 iTunes Connect 사용에 이르기까지 TestFlight 프로세스의 모든 단계를 안내합니다._
 
-베타 테스트는 소프트웨어 개발 주기의 핵심 부분이며, 이 프로세스를 간소화하기 위해 제공되는 다양한 플랫폼 간 응용 프로그램(예: [HockeyApp](http://hockeyapp.net/features/), [Applause](http://www.applause.com/mobile-app-testing) 및 Google Play의 Android 앱용 네이티브 앱 베타 테스트)이 있습니다. 이 문서는 Apple의 TestFlight에 중점을 둡니다.
+베타 테스트는 소프트웨어 개발 주기의 핵심 부분이며, 이 프로세스를 간소화하기 위해 제공되는 다양한 플랫폼 간 애플리케이션(예: [HockeyApp](http://hockeyapp.net/features/), [Applause](http://www.applause.com/mobile-app-testing) 및 Google Play의 Android 앱용 네이티브 앱 베타 테스트)이 있습니다. 이 문서는 Apple의 TestFlight에 중점을 둡니다.
 
 TestFlight는 Apple의 iOS 앱용 베타 테스트 서비스이며, [iTunes Connect](https://itunesconnect.apple.com/)를 통해서만 액세스할 수 있습니다. 현재 iOS 8.0 이상 앱에서 사용할 수 있습니다. TestFlight는 내부 및 외부 사용자 모두와 함께 베타 테스트를 수행할 수 있으며, 외부 사용자에 대한 베타 앱 검토로 인해 앱 스토어에 게시할 때 최종 검토에서 훨씬 쉽게 처리할 수 있습니다.
 
@@ -51,7 +51,7 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 다음 워크플로에서는 앱의 베타 테스트를 위해 TestFlight 사용을 시작하는 데 필요한 단계를 설명합니다.
 
 1. 새 앱의 경우 [iTunes Connect 레코드](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)를 만듭니다.
-2. 응용 프로그램을 iTunes Connect에 [보관 및 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
+2. 애플리케이션을 iTunes Connect에 [보관 및 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
 3. 베타 테스트를 관리합니다.
     - 메타데이터 추가
     - 내부 사용자 추가
@@ -77,14 +77,14 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 
 
 
-###  <a name="completing-the-new-ios-app-submission-form"></a>새 iOS 앱 제출 양식 완성
+### <a name="completing-the-new-ios-app-submission-form"></a>새 iOS 앱 제출 양식 완성
 
 양식은 아래 그림과 같이 앱의 Info.plist 파일에 있는 정보를 정확히 반영해야 합니다.
 
 [![](testflight-images/infoplist.png "앱의 Info.plist")](testflight-images/infoplist.png#lightbox)
 [ ![](testflight-images/newiosapp.png "iTunes Connect의 양식")](testflight-images/newiosapp.png#lightbox)
 
--  **이름** - 앱 번들을 설정할 때 사용되는 설명이 포함된 이름입니다. `Info.plist`의 **응용 프로그램 이름** 항목과 정확히 일치해야 합니다.
+-  **이름** - 앱 번들을 설정할 때 사용되는 설명이 포함된 이름입니다. `Info.plist`의 **애플리케이션 이름** 항목과 정확히 일치해야 합니다.
 -  **기본 언어** - 앱 내에서 사용되는 기본 언어입니다. 일반적으로 말하는 모든 언어입니다.
 -  **번들 ID** - 개발자 계정에 만들어진 모든 앱 ID를 나열하는 드롭다운 메뉴입니다.
     *   **번들 ID 접미사** - 와일드카드 번들 ID(예: 위의 예제와 같이 *로 끝남)를 선택하면 번들 ID 접미사를 묻는 추가 상자가 표시됩니다. 예제에서 **번들 ID**는 `mobi.chkn.*`이고, 접미사는 **PageView**입니다. 이러한 항목 모두는 `Info.plist`에서 **번들 식별자**를 구성합니다.
@@ -96,11 +96,11 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 
 iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있습니다. 빌드에는 새 베타 자격이 있어야 합니다.
 
-먼저 IDE에서 [최종 배포 가능한 파일](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)을 빌드한 다음, 응용 프로그램 로더 또는 Xcode의 보관 기능을 통해 [Apple에 앱을 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
+먼저 IDE에서 [최종 배포 가능한 파일](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)을 빌드한 다음, 애플리케이션 로더 또는 Xcode의 보관 기능을 통해 [Apple에 앱을 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-###  <a name="create-an-archive"></a>보관 만들기
+### <a name="create-an-archive"></a>보관 만들기
 
  Mac용 Visual Studio에서 이진 파일을 빌드하려면 _보관_ 기능을 사용해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 아래 그림과 같이 **게시를 위해 보관**을 선택합니다.
 
@@ -109,37 +109,37 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
  자세한 내용은 [배포 가능한 파일 빌드](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 가이드를 참조하세요.
 
-###  <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
+### <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
 
  보관을 만들면 **보관 보기**가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 앱에 서명하고 배포할 준비를 하려면 아래 그림과 같이 **서명 및 배포...** 를 선택합니다.
 
 [![](testflight-images/archive-view.png "보관을 만들면 자동으로 열리는 보관 보기")](testflight-images/archive-view.png#lightbox)
 
- 그러면 게시 마법사가 열립니다. **앱 스토어** 배포 채널을 선택하여 패키지를 만들고 응용 프로그램 로더를 엽니다. [프로비전 프로필] 화면에서 서명 ID 및 프로비전 프로필을 선택하거나 다른 ID로 다시 서명합니다. 패키지 세부 정보를 확인하고 **게시**를 클릭하여 `.ipa`를 저장합니다.
+ 그러면 게시 마법사가 열립니다. **앱 스토어** 배포 채널을 선택하여 패키지를 만들고 애플리케이션 로더를 엽니다. [프로비전 프로필] 화면에서 서명 ID 및 프로비전 프로필을 선택하거나 다른 ID로 다시 서명합니다. 패키지 세부 정보를 확인하고 **게시**를 클릭하여 `.ipa`를 저장합니다.
 
 [![](testflight-images/group.png "서명 ID 및 프로비전 프로필을 선택하거나 다른 ID로 다시 서명")](testflight-images/group.png#lightbox)
 
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
-###  <a name="submitting-your-build"></a>빌드 제출
- 게시 마법사에서 응용 프로그램 로더 프로그램을 열어 모든 사용자가 iTunes Connect에 빌드를 업로드합니다. **앱 배달** 옵션을 선택하고 위에서 만든 `.ipa` 파일을 업로드합니다. 응용 프로그램 로더에서 빌드의 유효성을 검사하고 이 빌드를 iTunes Connect에 업로드합니다.
+### <a name="submitting-your-build"></a>빌드 제출
+ 게시 마법사에서 애플리케이션 로더 프로그램을 열어 모든 사용자가 iTunes Connect에 빌드를 업로드합니다. **앱 배달** 옵션을 선택하고 위에서 만든 `.ipa` 파일을 업로드합니다. 애플리케이션 로더에서 빌드의 유효성을 검사하고 이 빌드를 iTunes Connect에 업로드합니다.
 
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-###  <a name="building-your-final-distributable"></a>최종 배포 가능한 파일 빌드
- Visual Studio용 Xamarin 플러그 인은 앱 스토어에 게시하기 위해 Xamarin.iOS 앱을 보관하는 것을 지원하지 않으므로, Visual Studio에서 iOS 응용 프로그램을 게시하는 두 가지 옵션이 있습니다. 이러한 항목은 다음과 같습니다.
+### <a name="building-your-final-distributable"></a>최종 배포 가능한 파일 빌드
+ Visual Studio용 Xamarin 플러그 인은 앱 스토어에 게시하기 위해 Xamarin.iOS 앱을 보관하는 것을 지원하지 않으므로, Visual Studio에서 iOS 애플리케이션을 게시하는 두 가지 옵션이 있습니다. 다음과 같습니다.
 
 1. 임시 IPA 빌드 명령을 통해 만든 IPA를 업로드합니다.
 1. 압축된 `.app` 번들을 업로드합니다.
 
  [배포 가능한 파일 빌드](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 가이드에는 이러한 두 옵션에 대한 지침이 있습니다.
 
-###  <a name="submitting-your-build"></a>빌드 제출
- 앱을 Apple에 제출하려면 빌드 호스트로 이동하고 Xcode의 일부로 설치된 응용 프로그램 로더 프로그램을 사용해야 합니다. 응용 프로그램 로더 액세스에 대한 자세한 내용은 Apple의 [응용 프로그램 로더 액세스](http://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) 가이드를 참조하세요.
+### <a name="submitting-your-build"></a>빌드 제출
+ 앱을 Apple에 제출하려면 빌드 호스트로 이동하고 Xcode의 일부로 설치된 애플리케이션 로더 프로그램을 사용해야 합니다. 애플리케이션 로더 액세스에 대한 자세한 내용은 Apple의 [애플리케이션 로더 액세스](http://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) 가이드를 참조하세요.
 
-일단 열리면 **앱 배달** 옵션을 선택하고 위에 만든 zip 또는 `.ipa` 파일을 업로드합니다. 응용 프로그램 로더에서 빌드의 유효성을 검사하고 이 빌드를 iTunes Connect에 업로드합니다.
+일단 열리면 **앱 배달** 옵션을 선택하고 위에 만든 zip 또는 `.ipa` 파일을 업로드합니다. 애플리케이션 로더에서 빌드의 유효성을 검사하고 이 빌드를 iTunes Connect에 업로드합니다.
 
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
@@ -148,7 +148,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
 [앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 가이드에서는 위의 모든 단계를 자세히 설명합니다. 앱 스토어 제출 프로세스에 대한 자세한 내용은 이 문서를 참조하세요.
 
-iTunes Connect의 **My Apps** 섹션으로 돌아가면 응용 프로그램이 성공적으로 업로드되었음을 알 수 있습니다. 이제 몇 가지 베타 테스트를 수행할 준비가 되었습니다!
+iTunes Connect의 **My Apps** 섹션으로 돌아가면 애플리케이션이 성공적으로 업로드되었음을 알 수 있습니다. 이제 몇 가지 베타 테스트를 수행할 준비가 되었습니다!
 
 ## <a name="manage-beta-testing"></a>베타 테스트 관리
 
@@ -255,7 +255,7 @@ first name, last name, email address
 
 [![](testflight-images/tester-email.png "초대 이메일 예제")](testflight-images/tester-email.png#lightbox)
 
-**TestFlight에서 열기** 단추를 클릭하면 TestFlight 응용 프로그램에서 앱이 열리거나, 아직 다운로드되지 않은 경우 앱 스토어로 이동하여 다운로드할 수 있습니다.
+**TestFlight에서 열기** 단추를 클릭하면 TestFlight 애플리케이션에서 앱이 열리거나, 아직 다운로드되지 않은 경우 앱 스토어로 이동하여 다운로드할 수 있습니다.
 
 앱이 TestFlight에서 열리면 테스트할 항목에 대한 세부 정보가 표시되고, 테스터가 iOS 8.0 이상 디바이스에 응용 프로그램을 설치하도록 요구하는 메시지가 표시됩니다.
 

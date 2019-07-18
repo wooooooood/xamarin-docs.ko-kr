@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/05/2019
-ms.openlocfilehash: a295c04d3b8819864b80ff56e215d22cc6ec0765
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: aab5f56594f9b9b81acb9c447eee238d151bd533
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658286"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832191"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.Forms DependencyService 등록 및 확인
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 
 Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 네이티브 플랫폼 기능을 호출할 때 플랫폼 구현을 호출하려면 `DependencyService`에 등록한 후 공유 코드에서 확인해야 합니다.
 
@@ -175,5 +175,5 @@ using (service as IDisposable)
 
 ## <a name="related-links"></a>관련 링크
 
-- [DependencyService 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+- [DependencyService 데모(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 - [Xamarin.Forms의 종속성 확인](~/xamarin-forms/internals/dependency-resolution.md)

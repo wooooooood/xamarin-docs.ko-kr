@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1bd61474daedd8bd330c0370948d6dee6f8ea50e
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: d533996a9c4e86efa360bf2ed71165571c7ca260
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194949"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865827"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Xamarin.iOS 앱 배포 개요
 
@@ -27,8 +27,8 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 Xamarin.iOS에서 지원하는 iOS 애플리케이션을 배포하기 위해 Apple에서 제공하는 방법은 다음과 같습니다.
 
 1. [**앱 스토어**](#App_Store_Distribution)
-2. [**사내(엔터프라이즈)**](#In-House_Distribution)
-2. [**임시**](#Ad_Hoc_Distribution)
+2. [**사내(엔터프라이즈)** ](#In-House_Distribution)
+3. [**임시**](#Ad_Hoc_Distribution)
 
 이러한 모든 시나리오에서는 적절한 *프로비전 프로필*을 사용하여 애플리케이션을 프로비전해야 합니다. 프로비전 프로필은 애플리케이션 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
 

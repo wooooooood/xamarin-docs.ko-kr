@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669643"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865603"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -25,7 +25,7 @@ iTunes Connect는 특히 앱 스토어에서 iOS 애플리케이션을 관리하
 iTunes Connect는 다음과 같은 용도로 사용할 수 있습니다.
 
 - 애플리케이션 이름을 설정합니다(앱 스토어에 표시됨).
-- 지원하는 iOS 장치에 작동 중인 애플리케이션의 스크린샷 또는 비디오를 제공합니다.
+- 지원하는 iOS 디바이스에 작동 중인 응용 프로그램의 스크린샷 또는 비디오를 제공합니다.
 - 최종 사용자에게 제공되는 기능 및 혜택을 포함하여 애플리케이션에 대한 명확하고 간결한 설명을 제공합니다.
 - 사용자가 앱 스토어에서 앱을 찾는 데 도움이 되는 범주와 하위 범주를 제공합니다.
 - 사용자가 앱을 찾는 데 도움이 될 수 있는 키워드를 제공합니다.
@@ -42,7 +42,7 @@ iTunes Connect의 **계약, 세금 및 뱅킹** 섹션은 iTunes 개발자 지�
 
 [![](itunesconnect-images/agreement01.png "계약, 세금 및 뱅킹 관리")](itunesconnect-images/agreement01.png#lightbox)
 
-여기서는 다음을 수행할 수 있습니다.
+여기에서 다음을 할 수 있습니다.
 
 - **팀 에이전트**를 제공하고 **관리자** 또는 **재무**와 같은 iTunes Connect 계정에 대한 다른 사용자 역할을 정의합니다.
 - 조직이 앱 스토어에서 애플리케이션을 배포할 수 있도록 **계약**을 등록하고 유지 관리합니다.
@@ -88,7 +88,7 @@ iOS 애플리케이션을 iTunes Connect에 추가하려면 **팀 에이전트**
 
 스크린샷을 만들 때 Apple에서 권장하는 제안 사항은 다음과 같습니다.
 
-- 애플리케이션에서 지원하는 iOS 장치에서 최상의 프레젠테이션을 제공하도록 스크린샷을 최적화하고, 콘텐츠를 읽을 수 있는지 확인합니다.
+- 응용 프로그램에서 지원하는 iOS 디바이스에서 최상의 프레젠테이션을 제공하도록 스크린샷을 최적화하고, 콘텐츠를 읽을 수 있는지 확인합니다.
 - iOS 디바이스 이미지에서 스크린샷을 프레이밍하지 않습니다.
 - 스크린샷 둘레에 그래픽이나 테두리 없이 전체 화면을 사용하여 애플리케이션의 실제 보기를 표시합니다.
 - 항상 스크린샷에서 상태 표시줄을 제거합니다. 그러면 iTunes Connect에서 해당 영역을 제외한 크기의 스크린샷이 제공됩니다.
@@ -158,7 +158,7 @@ Apple에서 애플리케이션 설명을 작성하는 데 권장하는 제안 �
 - 항목을 중요도 순으로 나열하고 변경 내용과 버그 수정을 정확히 지적합니다.
 - 변경 내용은 기술적인 전문 용어보다는 인증된 일반 언어로 나타냅니다.
 
-### <a name="keywords"></a>키워드가
+### <a name="keywords"></a>키워드
 
 애플리케이션의 기능과 관련된 신중하고 전략적인 키워드는 사용자가 앱 스토어에서 검색할 때 애플리케이션을 쉽게 찾을 수 있도록 합니다. 또한 애플리케이션에서 iAd 광고를 제공하는 경우 iAd App Network는 앱에서 대상이 되는 광고를 선택할 때 키워드를 사용합니다.
 
@@ -254,7 +254,7 @@ Apple에서는 애플리케이션에 대한 저작권 정보를 제공하도록 
 6. **등급**에서 **편집** 단추를 클릭하여 등급 정보를 설정합니다.
 
     [![](itunesconnect-images/general02.png "등급 편집")](itunesconnect-images/general02.png#lightbox)
-6. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
+7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 > [!NOTE]
 > 참고: 범주 또는 등급이 애플리케이션의 현재 기능과 일치하지 않는 경우 Apple에서는 제출을 거부합니다.
@@ -274,10 +274,10 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 3. **버전** 탭을 선택합니다.
 4. **Game Center** 섹션으로 스크롤합니다.
 5. **Game Center** 섹션에서 스위치를 **켜기** 위치로 대칭 이동합니다.
-5. 필요한 모든 정보를 입력합니다.
+6. 필요한 모든 정보를 입력합니다.
 
     [![](itunesconnect-images/gamecenter01.png "iTunes Connect에서 Game Center 정보 편집")](itunesconnect-images/gamecenter01.png#lightbox)
-6. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
+7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 **Game Center** 탭을 사용하여 Game Center를 활성화하고, 이 애플리케이션에 제공되는 **순위표** 또는 **성적**을 유지 관리합니다.
 
@@ -303,7 +303,7 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 6. 애플리케이션을 성공적으로 검토한 후 앱 스토어에 릴리스하려는 방법을 선택합니다.
 
     [![](itunesconnect-images/review02.png "iTunes Connect에서 릴리즈 정보 편집")](itunesconnect-images/review02.png#lightbox)
-6. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
+7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 
 ## <a name="maintaining-pricing-information"></a>가격 정보 유지 관리
@@ -333,9 +333,9 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
     [![](itunesconnect-images/price02.png "iTunes Connect에서 가격 정보 편집")](itunesconnect-images/price02.png#lightbox)
 4. **가용성 날짜**를 선택합니다.
 5. **가격 계층** 드롭다운 목록에서 원하는 가격을 선택합니다.
-5. 필요에 따라 **교육 할인**을 사용하도록 설정합니다.
-6. 필요에 따라 애플리케이션을 **사용자 지정 기업 간 애플리케이션**으로 정의합니다.
-6. **저장** 단추를 클릭하여 변경 내용을 저장합니다.
+6. 필요에 따라 **교육 할인**을 사용하도록 설정합니다.
+7. 필요에 따라 애플리케이션을 **사용자 지정 기업 간 애플리케이션**으로 정의합니다.
+8. **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 <a name="iap" />
 

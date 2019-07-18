@@ -1,28 +1,28 @@
 ---
 title: Xamarin.iOS에서 Wallet 기능
-description: 응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Wallet 기능에 필요한 설정을 설명합니다.
+description: 애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Wallet 기능에 필요한 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 3dc68d0879d3ce4d5dd9b658a3bce7a00c348c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0ae5dd86341912354938a8509668c843d412367b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121245"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832585"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Wallet 기능
 
-_응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Wallet 기능에 필요한 설정을 설명합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Wallet 기능에 필요한 설정을 설명합니다._
 
 Wallet은 사용자가 티켓, 탑승권 및 쿠폰을 디바이스에서 바로 표시할 수 있는 바코드 및 기타 콘텐츠를 저장하고 표시하는 앱입니다. 이 정보는 _패스_에 저장됩니다. 예를 들어, 탑승권이나 단일 티켓은 단일 패스입니다. 
 
 개발자는 다양한 방법으로 Wallet을 사용할 수 있습니다.
 
-*   패스를 만들기 위해 응용 프로그램을 빌드할 필요가 없습니다. Passfile은 JSON 파일과 선택적 메타데이터 파일을 포함하는 압축된 아카이브입니다. 이것을 준비하려면 [Pass Type ID](~/ios/platform/passkit.md)(패스 유형 ID) 및 [Pass certificate](~/ios/platform/passkit.md)(패스 인증서)가 필요합니다. 이 정보는 JSON 파일에서 선언됩니다. Passfile 프로비전에 대한 자세한 내용은 [PassKit 소개](~/ios/platform/passkit.md) 가이드를 참조하세요.
+*   패스를 만들기 위해 애플리케이션을 빌드할 필요가 없습니다. Passfile은 JSON 파일과 선택적 메타데이터 파일을 포함하는 압축된 아카이브입니다. 이것을 준비하려면 [Pass Type ID](~/ios/platform/passkit.md)(패스 유형 ID) 및 [Pass certificate](~/ios/platform/passkit.md)(패스 인증서)가 필요합니다. 이 정보는 JSON 파일에서 선언됩니다. Passfile 프로비전에 대한 자세한 내용은 [PassKit 소개](~/ios/platform/passkit.md) 가이드를 참조하세요.
 
 *   패스를 배포하도록 도우미 앱을 작성합니다. 이러한 앱에는 패스를 생성, 편집 및 업데이트한 다음, Wallet 앱에 추가하는 기능이 포함됩니다. 이런 종류의 앱의 좋은 예는 영화 앱입니다. 사용자가 앱을 통해 티켓을 구입하면 티켓을 앱에서 Wallet으로 직접 추가할 수 있습니다. 도우미 앱을 사용하려면 프로비전 프로필에 Wallet 기능이 있는 앱 ID가 포함되어야 하며, 아래 단계에 따라 설정할 수 있습니다. 또한 필요한 자격이 앱에 포함되어야 합니다.
 
@@ -32,21 +32,21 @@ Wallet은 사용자가 티켓, 탑승권 및 쿠폰을 디바이스에서 바로
 
 Wallet에 사용할 새 프로비전 프로필을 만들려면 다음을 수행합니다.
 
-1.  Apple Developer 포털의 [Certificates, Identifiers, and Profiles](https://developer.apple.com/account/ios/certificate/)(인증서, 식별자 및 프로필) 섹션으로 이동합니다.
-2.  **식별자** 아래에서 **앱 ID**로 이동합니다. 
+1. Apple Developer 포털의 [Certificates, Identifiers, and Profiles](https://developer.apple.com/account/ios/certificate/)(인증서, 식별자 및 프로필) 섹션으로 이동합니다.
+2. **식별자** 아래에서 **앱 ID**로 이동합니다. 
     
     ![앱 ID 선택](wallet-capabilities-images/image17.png)
 
-3.  페이지 오른쪽 위에서 **+** 아이콘을 클릭합니다.
-4.  새로운 앱 ID에 **이름**과 번들 식별자를 지정하여 등록합니다. (이 번들 식별자는 프로젝트의 번들 ID와 일치해야 합니다.)
+3. 페이지 오른쪽 위에서 **+** 아이콘을 클릭합니다.
+4. 새로운 앱 ID에 **이름**과 번들 식별자를 지정하여 등록합니다. (이 번들 식별자는 프로젝트의 번들 ID와 일치해야 합니다.)
    
     ![앱 ID 추가 세부 정보](wallet-capabilities-images/image18.png)
 
-5.  서비스 목록에서 **Wallet** 앱 서비스를 선택합니다.
+5. 서비스 목록에서 **Wallet** 앱 서비스를 선택합니다.
     
     ![서비스 선택 화면](wallet-capabilities-images/image19.png)
 
-6.  **계속**을 누른 다음, **등록**을 눌러서 앱 ID를 만듭니다.
+6. **계속**을 누른 다음, **등록**을 눌러서 앱 ID를 만듭니다.
 
 필요한 경우 기존 앱 ID를 편집하여 Wallet 기능을 추가할 수 있습니다.
 

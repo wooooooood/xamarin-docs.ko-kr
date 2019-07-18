@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978531"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865800"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -35,8 +35,8 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 > [!IMPORTANT]
 > 다음 문제 해결 단계는 새 시스템에서 초기 설치 중에 발생하는 문제에 주로 사용됩니다.  이전에 특정 환경에서 연결을 성공적으로 사용했는데 연결이 갑자기 또는 일시적으로 중지되는 경우 대부분은 바로 다음 방법을 사용하여 문제를 해결할 수 있습니다. 
->   * 아래의 [기존 빌드 호스트 프로세스로 인한 오류](#errors)에 설명된 대로 남은 프로세스를 종료합니다. 
->   * [브로커, IDB, 빌드 및 디자이너 에이전트 지우기](#clearing)의 설명에 따라 에이전트를 지운 후 [MacBuildHost.local에 연결할 수 없습니다. 다시 시도하세요.](#tryagain) 아래의 설명에 따라 유선 연결을 사용하여 IP 주소를 통해 직접 연결합니다.  
+> * 아래의 [기존 빌드 호스트 프로세스로 인한 오류](#errors)에 설명된 대로 남은 프로세스를 종료합니다. 
+> * [브로커, IDB, 빌드 및 디자이너 에이전트 지우기](#clearing)의 설명에 따라 에이전트를 지운 후 [MacBuildHost.local에 연결할 수 없습니다. 다시 시도하세요.](#tryagain) 아래의 설명에 따라 유선 연결을 사용하여 IP 주소를 통해 직접 연결합니다.  
 > 위의 옵션 중 어떤 것도 문제 해결에 도움이 되지 않으면 [9단계](#stepnine)의 지침에 따라 새 버그 보고서를 작성합니다.
 
 1. Mac에 호환되는 Xamarin.iOS 버전이 설치되어 있는지 확인합니다. Visual Studio 2017에서 이렇게 하려면 Mac용 Visual Studio의 **안정적인** 배포 채널에 있는지 확인합니다. Visual Studio 2015 이하인 경우 두 IDE에서 동일한 배포 채널에 있는지 확인합니다.
@@ -103,7 +103,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
     - OS X 방화벽 설정에서 연결을 허용하지 않습니다. 3단계를 다시 확인해야 합니다.
 
-        경우에 따라 시스템 환경 설정에 표시되는 설정이 실제 동작을 반영하지 않아 OS X 방화벽에 대한 앱별 구성의 상태가 올바르지 않을 수도 있습니다. 구성 파일(**/Library/Preferences/com.apple.alf.plist**)을 삭제하고 컴퓨터를 다시 부팅하면 기본 동작을 복원하는 데 도움이 될 수 있습니다. 파일을 삭제하는 한 가지 방법으로, Finder의 **이동 &gt; 폴더로 이동**에서 **/라이브러리/기본 설정**을 입력한 후 **com.apple.alf.plist** 파일을 휴지통으로 이동합니다.
+        경우에 따라 시스템 환경 설정에 표시되는 설정이 실제 동작을 반영하지 않아 OS X 방화벽에 대한 앱별 구성의 상태가 올바르지 않을 수도 있습니다. 구성 파일( **/Library/Preferences/com.apple.alf.plist**)을 삭제하고 컴퓨터를 다시 부팅하면 기본 동작을 복원하는 데 도움이 될 수 있습니다. 파일을 삭제하는 한 가지 방법으로, Finder의 **이동 &gt; 폴더로 이동**에서 **/라이브러리/기본 설정**을 입력한 후 **com.apple.alf.plist** 파일을 휴지통으로 이동합니다.
 
     - Mac 컴퓨터와 Windows 컴퓨터 사이의 라우터 중 하나의 방화벽 설정이 연결을 차단합니다.
 
@@ -162,23 +162,23 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
         [![](troubleshooting-images/troubleshooting-image18.png "터미널에서 `ls /etc/ssh/sshd_config` 및 `ls /etc/sshd_config` 실행")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
-    3. 터미널에서 `cp /etc/ssh/sshd_config "$HOME/Desktop/"` 명령을 실행하여 데스크톱으로 파일을 복사합니다.
+    2. 터미널에서 `cp /etc/ssh/sshd_config "$HOME/Desktop/"` 명령을 실행하여 데스크톱으로 파일을 복사합니다.
 
-    4. 데스크톱의 텍스트 편집기에서 파일을 엽니다. 예를 들어 터미널에서 `open -a TextEdit "$HOME/Desktop/sshd_config"` 명령을 실행할 수 있습니다.
+    3. 데스크톱의 텍스트 편집기에서 파일을 엽니다. 예를 들어 터미널에서 `open -a TextEdit "$HOME/Desktop/sshd_config"` 명령을 실행할 수 있습니다.
 
-    5. 파일 맨 아래에 다음 줄을 추가합니다.
+    4. 파일 맨 아래에 다음 줄을 추가합니다.
 
         ```
         UseDNS no
         ```
-        
-    6. 새 설정이 적용되도록 `UseDNS yes`를 표시하는 줄을 제거합니다.
 
-    7. 파일을 저장합니다.
+    5. 새 설정이 적용되도록 `UseDNS yes`를 표시하는 줄을 제거합니다.
 
-    8. 터미널에서 `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` 명령을 실행하여 편집된 파일을 원래 위치로 복사합니다. 암호를 요구하는 메시지가 표시되면 암호를 입력합니다.
+    6. 파일을 저장합니다.
 
-    9. **시스템 환경 설정 &gt; 공유 &gt; 원격 로그인**에서 **원격 로그인**을 해제했다가 다시 설정하여 SSH 서버를 다시 시작합니다.
+    7. 터미널에서 `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` 명령을 실행하여 편집된 파일을 원래 위치로 복사합니다. 암호를 요구하는 메시지가 표시되면 암호를 입력합니다.
+
+    8. **시스템 환경 설정 &gt; 공유 &gt; 원격 로그인**에서 **원격 로그인**을 해제했다가 다시 설정하여 SSH 서버를 다시 시작합니다.
 
 <a name="clearing" />
 

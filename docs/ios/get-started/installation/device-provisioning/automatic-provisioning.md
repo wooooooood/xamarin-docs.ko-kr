@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855174"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865317"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -21,7 +21,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ## <a name="requirements"></a>요구 사항
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 - Mac용 Visual Studio 7.3 이상
 - Xcode 9 이상
@@ -55,7 +55,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Mac용 Visual Studio에서 iOS 프로젝트를 엽니다.
 
@@ -67,7 +67,7 @@ IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수�
 
 4. **팀** 드롭다운에서 팀을 선택합니다.
 
-6. 몇 초 후 서명 인증서 및 프로비저닝 프로필이 생성됩니다.
+5. 몇 초 후 서명 인증서 및 프로비저닝 프로필이 생성됩니다.
 
     ![성공적으로 생성된 인증서와 프로필](automatic-provisioning-images/image5.png)
 
@@ -87,7 +87,7 @@ IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수�
 
     ![팀 선택](automatic-provisioning-images/prov3.png)
 
-4. 그러면 자동 서명 프로세스를 시작합니다. 그런 다음, Visual Studio는 서명에 이러한 아티팩트를 사용하도록 앱 ID, 프로비전 프로필 및 서명 ID를 생성하려고 합니다. 빌드 출력에서 생성 프로세스를 확인할 수 있습니다.
+5. 그러면 자동 서명 프로세스를 시작합니다. 그런 다음, Visual Studio는 서명에 이러한 아티팩트를 사용하도록 앱 ID, 프로비전 프로필 및 서명 ID를 생성하려고 합니다. 빌드 출력에서 생성 프로세스를 확인할 수 있습니다.
 
     ![아티팩트의 생성을 보여주는 빌드 출력](automatic-provisioning-images/prov5.png)
 

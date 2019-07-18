@@ -6,18 +6,18 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 8aa1062c7948a57a21d59a785d6359056351245d
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354052"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832593"
 ---
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: 흔들림 탐지
 
 **[Accelerometer](accelerometer.md)** 클래스를 사용하면 3차원 공간에서 디바이스의 가속을 나타내는 디바이스의 가속도계 센서를 모니터링할 수 있습니다. 또한 사용자가 디바이스를 흔들면 이벤트를 등록할 수 있습니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 [!include[](~/essentials/includes/get-started.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "66354052"
 using Xamarin.Essentials;
 ```
 
-디바이스의 흔들림을 탐지하려면 `Start` 및 `Stop` 메서드를 호출하여 가속도 변경 내용을 수신하고 흔들림을 탐지하는 가속도계 기능을 사용해야 합니다. 흔들림이 탐지될 때마다 `ShakeDetected ` 이벤트가 발생합니다. `SensorSpeed`에 `Game` 이상의 속도를 사용하는 것이 좋습니다. 샘플은 다음과 같이 사용합니다.
+디바이스의 흔들림을 탐지하려면 `Start` 및 `Stop` 메서드를 호출하여 가속도 변경 내용을 수신하고 흔들림을 탐지하는 가속도계 기능을 사용해야 합니다. 흔들림이 탐지될 때마다 `ShakeDetected` 이벤트가 발생합니다. `SensorSpeed`에 `Game` 이상의 속도를 사용하는 것이 좋습니다. 샘플은 다음과 같이 사용합니다.
 
 ```csharp
 
