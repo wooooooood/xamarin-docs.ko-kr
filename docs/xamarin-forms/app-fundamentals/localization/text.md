@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 31992c7d9219289847ebc3e9c8af755d54dc18ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 39e641d5e911b179ca8da9fc6c1b7685a9644364
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672718"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831490"
 ---
 # <a name="localization"></a>지역화
 
@@ -82,7 +82,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 [![](text-images/vs-resx-internal-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-internal.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
 
@@ -95,7 +95,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 [![](text-images/vs-resx-public-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-public.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
 
@@ -156,7 +156,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 일반적인 패턴은 2글자 언어 코드를 사용하는 것이지만 다른 형식을 사용하는 일부 예제(예: 중국어) 및 4글자 로캘 식별자가 필요한 다른 예제(예: 브라질 포르투갈어)도 있습니다.
 
-이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요’하지 않기’ 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
+ 이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요’하지 않기’ 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
 
 ![](text-images/appresources-langs.png "언어별 리소스 파일")
 
@@ -464,7 +464,7 @@ namespace UsingResxLocalization.iOS
 
 > [!NOTE]
 > Apple에서는 기대했던 것과 약간 다르게 포르투갈어를 처리합니다.
-> [해당 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"브라질에서 사용되는 포르투갈어에 대한 언어 ID로 pt를 사용하고 포르투갈에서 사용되는 포르투갈어에 대한 언어 ID로 pt-PT를 사용합니다"_.
+> [해당 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"브라질에서 사용되는 포르투갈어에 대한 언어 ID로 pt를 사용하고 포르투갈에서 사용되는 포르투갈어에 대한 언어 ID로 pt-PT를 사용합니다"_ .
 > 즉 포르투갈어가 비표준 로캘에서 선택되는 경우 iOS에서 대체 언어는 코드가 이 동작(예: 위의 `ToDotnetFallbackLanguage`)을 변경하도록 작성되지 않는 경우 브라질 포르투갈어입니다.
 
 iOS 지역화에 대한 자세한 내용은 [iOS 지역화](~/ios/app-fundamentals/localization/index.md)를 참조하세요.
@@ -561,12 +561,12 @@ namespace UsingResxLocalization.Android
 
 이 코드가 Android 애플리케이션 프로젝트에 추가되면 변환된 문자열이 자동으로 표시됩니다.
 
-> [!NOTE]
->️**경고:** 변환된 문자열이 Android가 빌드한 RELEASE에서는 작동하지만 디버깅 중에는 작동하지 않는 경우 **Android 프로젝트**를 마우스 오른쪽 단추로 클릭하고 **옵션 > 빌드 > Android 빌드**를 선택하고 **빠른 어셈블리 배포**가 선택되지 않도록 해야 합니다. 이 옵션은 리소스를 로드할 때 문제가 발생하므로 지역화된 애플리케이션을 테스트하는 경우 사용해서는 안 됩니다.
+> [!WARNING]
+> 변환된 문자열이 Android가 빌드한 RELEASE에서는 작동하지만 디버깅 중에는 작동하지 않는 경우 **Android 프로젝트**를 마우스 오른쪽 단추로 클릭하고 **옵션 > 빌드 > Android 빌드**를 선택하고 **빠른 어셈블리 배포**가 선택되지 않도록 해야 합니다. 이 옵션은 리소스를 로드할 때 문제가 발생하므로 지역화된 애플리케이션을 테스트하는 경우 사용해서는 안 됩니다.
 
 Android 지역화에 대한 자세한 내용은 [Android 지역화](~/android/app-fundamentals/localization.md)를 참조하세요.
 
-#### <a name="universal-windows-platform"></a>UWP
+#### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP(유니버설 Windows 플랫폼) 프로젝트에는 종속 서비스가 필요하지 않습니다. 대신 이 플랫폼에서 자동으로 리소스의 문화권을 올바르게 설정합니다.
 
@@ -580,7 +580,7 @@ UWP(유니버설 Windows 플랫폼) 프로젝트에는 종속 서비스가 필�
 
 이러면 앱의 기본 문화권에 대해 리소스 관리자에게 알리므로, 하나의 영어 로캘에서 앱을 실행하는 경우 언어 중립 RESX 파일(**AppResources.resx**)에서 정의된 문자열이 표시되는지 확인합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 위에 표시된 대로 플랫폼별 프로젝트를 업데이트하고 변환된 RESX 파일을 사용하여 앱을 다시 컴파일한 후 각 앱에서 업데이트된 변환을 사용할 수 있습니다. 중국어(간체)로 번역된 샘플 코드의 스크린샷은 다음과 같습니다.
 
@@ -691,7 +691,7 @@ namespace UsingResxLocalization
 
 Xamarin.Forms 코드로 사용자 인터페이스의 변환을 처리할 수 있지만 각 플랫폼별 프로젝트에서 수행해야 하는 몇 가지 요소가 있습니다. 이 섹션에서는 지역화 방법을 살펴봅니다.
 
-* Application Name
+* 애플리케이션 이름
 * 이미지
 
 샘플 프로젝트에는 다음과 같이 C#에서 참조하는 **flag.png**라는 지역화된 이미지가 포함됩니다.
