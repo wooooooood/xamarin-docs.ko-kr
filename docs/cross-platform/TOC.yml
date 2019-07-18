@@ -9,11 +9,11 @@
         - name: 요구 사항
           displayName: System requirements
           href: get-started/requirements.md
-        - name: 모바일 개발 소개
+        - name: Xamarin이란?
           href: get-started/introduction-to-mobile-development.md
-        - name: 모바일 SDLC 소개
+        - name: 모바일 소프트웨어 개발 수명 주기
           href: get-started/introduction-to-mobile-sdlc.md
-        - name: 플랫폼 간 애플리케이션 빌드
+        - name: 플랫폼 간 앱 빌드 연습
           href: app-fundamentals/building-cross-platform-applications/index.md
           items:
             - name: 개요
@@ -75,10 +75,10 @@
               href: platform/fsharp/overview.md
             - name: 'F# 샘플'
               href: platform/fsharp/samples.md
-        - name: Visual Basic.NET
+        - name: Visual Basic
           href: platform/visual-basic/index.md
           items:
-            - name: Xamarin iOS 및 Android
+            - name: Xamarin Android 및 iOS
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md
