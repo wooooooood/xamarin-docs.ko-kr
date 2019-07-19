@@ -44,11 +44,6 @@
           href: workbooks/workbook.md
         - name: 편집기 바로 가기 키
           href: workbooks/keybindings.md
-        - name: 샘플 Workbooks
-          href: workbooks/samples/index.md
-          items:
-            - name: TinyRenderer
-              href: workbooks/samples/tinyrenderer.md
         - name: 문제 해결
           href: workbooks/troubleshooting/index.md
           items:

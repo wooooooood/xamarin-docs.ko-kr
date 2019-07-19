@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: 9c427dc48f6fe19098c312bad16d9630bb480264
-ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
+ms.openlocfilehash: dad68f5daaf3a4c85f130ee219472b867163fd71
+ms.sourcegitcommit: 9a2a21974d35353c3765eb683ef2fd7161c1d94a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290156"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329987"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
 
@@ -49,6 +49,7 @@ public class AppDelegate : UIApplicationDelegate
 
     UIWindow _window;
     UINavigationController _navigation;
+    UIViewController _noteEntryPage;
 
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
@@ -81,7 +82,7 @@ public class AppDelegate : UIApplicationDelegate
 - Xamarin.Forms를 호출 하 여 초기화 되는 `Forms.Init` 메서드.
 - 에 대 한 참조를 `AppDelegate` 클래스에 저장 되는 `static` `Instance` 필드입니다. 다른 클래스에 정의 된 메서드를 호출 하는 메커니즘을 제공 하는 것이 `AppDelegate` 클래스입니다.
 - `UIWindow`, 네이티브 iOS 응용 프로그램에서 보기에 대 한 기본 컨테이너는 만들어집니다.
-- `FolderPath` 속성은 데이터를 저장할 장치의 경로 초기화 합니다.
+- 속성 `FolderPath` 은 메모 데이터가 저장 되는 장치의 경로로 초기화 됩니다.
 - 합니다 `NotesPage` 는 Xamarin.Forms 클래스 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 XAML에 정의 된 페이지, 생성 되 고 변환를 `UIViewController` 사용 하 여는 `CreateViewController` 확장 메서드.
 - `Title` 의 속성을 `UIViewController` 에 표시 되는 설정 되어를 `UINavigationBar`.
 - `UINavigationController` 계층적 탐색 관리에 대해 생성 됩니다. `UINavigationController` 클래스 뷰 컨트롤러의 스택을 관리 및 `UIViewController` 에 전달 된 생성자 나타납니다 처음 경우는 `UINavigationController` 로드 됩니다.
@@ -89,9 +90,9 @@ public class AppDelegate : UIApplicationDelegate
 
 한 번 합니다 `FinishedLaunching` 메서드가 실행 되었는지, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
-[![XAML에 정의 된 UI를 사용 하는 Xamarin.iOS 응용 프로그램의 스크린 샷](native-forms-images/ios-notespage.png "XAML UI를 사용 하 여 Xamarin.iOS 앱")](native-forms-images/ios-notespage-large.png#lightbox "XAML UI를 사용 하 여 Xamarin.iOS 앱")
+Xaml [ui를 사용 하(native-forms-images/ios-notespage.png "여 xaml xamarin.ios 앱") ![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷]] (native-forms-images/ios-notespage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
 
-탭 하 여 예를 들어 UI와 상호 작용 합니다 **+** [ `Button` ](xref:Xamarin.Forms.Button)의 다음 이벤트 처리기에서 하면를 `NotesPage` 코드 숨김 실행:
+UI와 상호 작용 하는 **+** [`Button`](xref:Xamarin.Forms.Button)예를 들어를 탭 하면 코드를 실행 하는 `NotesPage` 동안 다음 이벤트 처리기가 발생 합니다.
 
 ```csharp
 void OnNoteAddedClicked(object sender, EventArgs e)
@@ -105,23 +106,23 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    UIViewController noteEntryPage = new NoteEntryPage
+    _noteEntryPage = new NoteEntryPage
     {
         BindingContext = note
     }.CreateViewController();
-    noteEntryPage.Title = "Note Entry";
-    _navigation.PushViewController(noteEntryPage, true);
+    _noteEntryPage.Title = "Note Entry";
+    _navigation.PushViewController(_noteEntryPage, true);
 }
 ```
 
 `NavigateToNoteEntryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생을 `UIViewController` 사용 하 여를 `CreateViewController` 집합과 확장 메서드를를 `Title` 속성은 `UIViewController`합니다. 합니다 `UIViewController` 다음 푸시됩니다 `UINavigationController` 여는 `PushViewController` 메서드. Xamarin.Forms에 UI를 정의 하는 따라서 `NoteEntryPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
-[![XAML에 정의 된 UI를 사용 하는 Xamarin.iOS 응용 프로그램의 스크린 샷](native-forms-images/ios-noteentrypage.png "XAML UI를 사용 하 여 Xamarin.iOS 앱")](native-forms-images/ios-noteentrypage-large.png#lightbox "XAML UI를 사용 하 여 Xamarin.iOS 앱")
+Xaml [ui를 사용 하(native-forms-images/ios-noteentrypage.png "여 xaml xamarin.ios 앱") ![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷]] (native-forms-images/ios-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
 
 경우는 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `UIViewController` 에 대 한는 `NoteEntryPage` 에서 클래스를 `UINavigationController`, 사용자 수를 반환를 `UIViewController` 에 대 한는 `NotesPage` 클래스.
 
-> [!WARNING]
-> Popping를 `UIViewController` iOS 네이티브 탐색에서에서 스택은 자동으로 삭제할 `UIViewController`s입니다. 것은 모두 개발자의 책임 `UIViewController` 더 이상 필요 없는 해당 `Dispose()` 다른 메서드가 호출 된 `UIViewController` 및 연결 된 `Page` 분리 되 고 가비지 수집기에 의해 수집 되지 것입니다 메모리 누수가 발생 합니다.
+> [!IMPORTANT]
+> IOS 네이티브 `UIViewController` 탐색 스택에서를 팝 하면가 자동으로 `UIViewController`삭제 되지 않습니다. 개발자 `UIViewController` 는 더 이상 필요 `Dispose` 하지 않은 메서드를 호출 하는 것이 좋습니다. 그렇지 않으면 및 연결 `Page` 된는 `UIViewController` 분리 되며 가비지 수집기에서 수집 되지 않습니다. 이로 인해 메모리 누수가 발생 합니다.
 
 ## <a name="android"></a>Android
 
@@ -164,7 +165,7 @@ public class MainActivity : AppCompatActivity
 - 에 대 한 참조를 `MainActivity` 클래스에 저장 되는 `static` `Instance` 필드입니다. 다른 클래스에 정의 된 메서드를 호출 하는 메커니즘을 제공 하는 것이 `MainActivity` 클래스입니다.
 - `Activity` 콘텐츠 레이아웃 리소스에서 설정 됩니다. 샘플 응용 프로그램을 레이아웃으로 구성 됩니다는 `LinearLayout` 포함 하는 `Toolbar`, 및 `FrameLayout` 조각 컨테이너 역할을 합니다.
 - 합니다 `Toolbar` 를 검색 하 고 작업 표시줄에 대 한 설정의 `Activity`, 작업 표시줄 제목 설정 됩니다.
-- `FolderPath` 속성은 데이터를 저장할 장치의 경로 초기화 합니다.
+- 속성 `FolderPath` 은 메모 데이터가 저장 되는 장치의 경로로 초기화 됩니다.
 - 합니다 `NotesPage` 는 Xamarin.Forms 클래스 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 XAML에 정의 된 페이지, 생성 되 고 변환를 `Fragment` 사용 하 여는 `CreateSupportFragment` 확장 메서드.
 - `SupportFragmentManager` 클래스를 만들고를 대체 하는 트랜잭션을 커밋합니다 합니다 `FrameLayout` 인스턴스를 `Fragment` 에 대 한는 `NotesPage` 클래스입니다.
 
@@ -172,9 +173,9 @@ public class MainActivity : AppCompatActivity
 
 한 번 합니다 `OnCreate` 메서드가 실행 되었는지, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
-[![XAML에 정의 된 UI를 사용 하는 Xamarin.Android 응용 프로그램의 스크린 샷](native-forms-images/android-notespage.png "XAML UI를 사용 하 여 Xamarin.Android 앱")](native-forms-images/android-notespage-large.png#lightbox "XAML UI를 사용 하 여 Xamarin.Android 앱")
+Xaml [ui를 사용 하(native-forms-images/android-notespage.png "여 Xaml Xamarin android 앱") ![에 정의 된 UI를 사용 하는 Xamarin Android 응용 프로그램의 스크린샷]] (native-forms-images/android-notespage-large.png#lightbox "XAML UI를 사용 하는 Xamarin Android 앱")
 
-탭 하 여 예를 들어 UI와 상호 작용 합니다 **+** [ `Button` ](xref:Xamarin.Forms.Button)의 다음 이벤트 처리기에서 하면를 `NotesPage` 코드 숨김 실행:
+UI와 상호 작용 하는 **+** [`Button`](xref:Xamarin.Forms.Button)예를 들어를 탭 하면 코드를 실행 하는 `NotesPage` 동안 다음 이벤트 처리기가 발생 합니다.
 
 ```csharp
 void OnNoteAddedClicked(object sender, EventArgs e)
@@ -202,11 +203,11 @@ public void NavigateToNoteEntryPage(Note note)
 
 `NavigateToNoteEntryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생를 `Fragment` 사용 하 여를 `CreateSupportFragment` 확장 메서드를 추가 합니다 `Fragment` 조각으로 백 스택. Xamarin.Forms에 UI를 정의 하는 따라서 `NoteEntryPage` 표시할 다음 스크린샷에 표시 된 대로:
 
-[![XAML에 정의 된 UI를 사용 하는 Xamarin.Android 응용 프로그램의 스크린 샷](native-forms-images/android-noteentrypage.png "XAML UI를 사용 하 여 Xamarin.Android 앱")](native-forms-images/android-noteentrypage-large.png#lightbox "XAML UI를 사용 하 여 Xamarin.Android 앱")
+Xaml [ui를 사용 하(native-forms-images/android-noteentrypage.png "여 Xaml Xamarin android 앱") ![에 정의 된 UI를 사용 하는 Xamarin Android 응용 프로그램의 스크린샷]] (native-forms-images/android-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 Xamarin Android 앱")
 
 때를 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `Fragment` 에 대 한를 `NoteEntryPage` 조각 백 스택 으로부터 사용자를 반환 합니다 `Fragment` 에 대 한는 `NotesPage` 클래스.
 
-### <a name="enable-back-navigation-support"></a>후방 탐색 지원을 사용 하도록 설정
+### <a name="enable-back-navigation-support"></a>뒤로 탐색 지원 사용
 
 합니다 `SupportFragmentManager` 클래스에는 `BackStackChanged` 조각 백 스택의 콘텐츠가 변경 될 때마다 발생 하는 이벤트입니다. `OnCreate` 에서 메서드를 `MainActivity` 클래스는이 이벤트에 대 한 익명 이벤트 처리기를 포함 합니다.
 
@@ -236,7 +237,7 @@ public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
 
 `OnOptionsItemSelected` 재정의 옵션 메뉴에서 항목을 선택할 때마다 호출 됩니다. 이 구현은 뒤로 단추는 선택 되어 있고 하나 이상 가지 조각 백 스택에서 현재 조각 팝 `Fragment` 조각 인스턴스에서 백 스택.
 
-### <a name="multiple-activities"></a>여러 활동
+### <a name="multiple-activities"></a>여러 작업
 
 응용 프로그램은 여러 활동을 구성 하는 경우 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-각 작업에 파생 된 페이지를 포함할 수 있습니다. 이 시나리오에서는 합니다 `Forms.Init` 에서만 메서드를 호출 해야 합니다 `OnCreate` 첫 번째 재정의 `Activity` 는 Xamarin.Forms를 포함 하는 `ContentPage`합니다. 그러나,이 작업은 같은 영향을 줍니다.
 
@@ -284,14 +285,14 @@ public sealed partial class MainPage : Page
 
 - 페이지 캐싱을 사용할 수 있도록 새 `MainPage` 사용자 페이지로 이동 하면 생성 되지 않습니다.
 - 에 대 한 참조를 `MainPage` 클래스에 저장 되는 `static` `Instance` 필드입니다. 다른 클래스에 정의 된 메서드를 호출 하는 메커니즘을 제공 하는 것이 `MainPage` 클래스입니다.
-- `FolderPath` 속성은 데이터를 저장할 장치의 경로 초기화 합니다.
+- 속성 `FolderPath` 은 메모 데이터가 저장 되는 장치의 경로로 초기화 됩니다.
 - `NotesPage` 는 Xamarin.Forms 클래스 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 XAML에 정의 된 페이지, 생성 되 고 변환를 `FrameworkElement` 사용 하 여를 `CreateFrameworkElement` 확장 메서드와의 콘텐츠로 설정 합니다 `MainPage` 클래스입니다.
 
 한 번 합니다 `MainPage` 생성자가 실행, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
-[![Xamarin.Forms XAML로 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린 샷](native-forms-images/uwp-notespage.png "Xamarin.Forms XAML UI를 사용 하 여 UWP 앱")](native-forms-images/uwp-notespage-large.png#lightbox "Xamarin.Forms XAML UI를 사용 하 여 UWP 앱")
+Xamarin.ios xaml UI를 사용 하 [여 ![Xamarin. forms xaml UWP 앱에서 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-notespage.png "") ] (native-forms-images/uwp-notespage-large.png#lightbox "Xamarin FORMS XAML UI를 사용 하는 UWP 앱")
 
-탭 하 여 예를 들어 UI와 상호 작용 합니다 **+** [ `Button` ](xref:Xamarin.Forms.Button)의 다음 이벤트 처리기에서 하면를 `NotesPage` 코드 숨김 실행:
+UI와 상호 작용 하는 **+** [`Button`](xref:Xamarin.Forms.Button)예를 들어를 탭 하면 코드를 실행 하는 `NotesPage` 동안 다음 이벤트 처리기가 발생 합니다.
 
 ```csharp
 void OnNoteAddedClicked(object sender, EventArgs e)
@@ -314,11 +315,11 @@ public void NavigateToNoteEntryPage(Note note)
 
 UWP의 탐색은 일반적으로 수행 합니다 `Frame.Navigate` 메서드를 사용 하는 `Page` 인수. Xamarin.Forms 정의 `Frame.Navigate` 사용 하는 확장 메서드를 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지 인스턴스를 파생 합니다. 따라서 경우 합니다 `NavigateToNoteEntryPage` 메서드가 실행 Xamarin.Forms에 정의 된 UI `NoteEntryPage` 표시할 다음 스크린샷에 표시 된 대로:
 
-[![Xamarin.Forms XAML로 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린 샷](native-forms-images/uwp-noteentrypage.png "Xamarin.Forms XAML UI를 사용 하 여 UWP 앱")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Xamarin.Forms XAML UI를 사용 하 여 UWP 앱")
+Xamarin.ios xaml UI를 사용 하 [여 ![Xamarin. forms xaml UWP 앱에서 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-noteentrypage.png "") ] (native-forms-images/uwp-noteentrypage-large.png#lightbox "Xamarin FORMS XAML UI를 사용 하는 UWP 앱")
 
 때를 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `FrameworkElement` 에 대 한를 `NoteEntryPage` 는 앱의 백 스택 으로부터 사용자를 반환 합니다 `FrameworkElement` 에 대 한는 `NotesPage` 클래스.
 
-### <a name="enable-back-navigation-support"></a>후방 탐색 지원을 사용 하도록 설정
+### <a name="enable-back-navigation-support"></a>뒤로 탐색 지원 사용
 
 UWP에서 응용 프로그램에서 다른 장치 형식 요인과 모든 하드웨어 및 소프트웨어 뒤로 단추에 대 한 후방 탐색을 활성화 해야 합니다. 에 대 한 이벤트 처리기를 등록 하 여이 작업을 수행할 수 있습니다 합니다 `BackRequested` 에서 수행할 수 있는 이벤트를 `OnLaunched` 메서드는 네이티브에서 `App` 클래스:
 
@@ -353,9 +354,9 @@ void OnBackRequested(object sender, BackRequestedEventArgs e)
 }
 ```
 
-`OnBackRequested` 이벤트 처리기 호출을 `GoBack` 메서드 집합과 응용 프로그램의 루트 프레임에는 `BackRequestedEventArgs.Handled` 속성을 `true` 처리 이벤트를 표시 하 합니다. 무시 되 고 처리 된 것으로 이벤트를 표시 하는 오류 이벤트 발생할 수 있습니다.
+`OnBackRequested` 이벤트 처리기 호출을 `GoBack` 메서드 집합과 응용 프로그램의 루트 프레임에는 `BackRequestedEventArgs.Handled` 속성을 `true` 처리 이벤트를 표시 하 합니다. 이벤트를 처리 된 것으로 표시 하지 못하면 이벤트를 무시 하 게 됩니다.
 
-응용 프로그램 제목 표시줄의 뒤로 단추를 표시할지 여부를 선택 합니다. 설정 하 여 이렇게 합니다 `AppViewBackButtonVisibility` 속성 중 하나는 `AppViewBackButtonVisibility` 열거형 값:
+응용 프로그램은 제목 표시줄에 뒤로 단추를 표시할지 여부를 선택 합니다. 설정 하 여 이렇게 합니다 `AppViewBackButtonVisibility` 속성 중 하나는 `AppViewBackButtonVisibility` 열거형 값:
 
 ```csharp
 void OnNavigated(object sender, NavigationEventArgs e)
