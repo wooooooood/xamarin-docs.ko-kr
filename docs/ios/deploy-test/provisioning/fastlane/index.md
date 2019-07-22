@@ -1,27 +1,27 @@
 ---
 title: iOS에 대한 Fastlane 소개
-description: 이 가이드에서는 iOS 응용 프로그램 서명을 코드하는데 사용할 수 있는 다양한 fastlane 도구를 소개합니다. fastlane 도구를 업데이트, 설치 및 사용하는 방법을 설명합니다.
+description: 이 가이드에서는 iOS 애플리케이션 서명을 코드하는데 사용할 수 있는 다양한 fastlane 도구를 소개합니다. fastlane 도구를 업데이트, 설치 및 사용하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e89b8585371ab2560ae510fdb49f284e358818c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 23bf62688da4e2e82cb3e0fadc9a3b7c13ab1a7d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108914"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865520"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>iOS에 대한 Fastlane 소개
 
 fastlane는 iOS 및 Android 앱을 릴리스하는 복잡하고 종종 번거로운 프로세스를 간소화하기 위해 만든 오픈 소스 프로젝트입니다. 여러 유틸리티로 구성되며 각 유틸리티는 앱 릴리스의 다음과 같은 특정 측면을 처리합니다.
 
-- [deliver](https://github.com/fastlane/fastlane/tree/master/deliver#readme) - 스크린샷, 메타 데이터 및 응용 프로그램 번들을 관리하고 iTunes Connect로 업로드합니다.
-- [produce](https://github.com/fastlane/fastlane/tree/master/produce#readme) – iTunes Connect와 개발자 포털(AppID 라고도 함)에서 앱을 만듭니다. 또한 앱 그룹 및 응용 프로그램 서비스에 대한 지원이 포함됩니다.
+- [deliver](https://github.com/fastlane/fastlane/tree/master/deliver#readme) - 스크린샷, 메타 데이터 및 애플리케이션 번들을 관리하고 iTunes Connect로 업로드합니다.
+- [produce](https://github.com/fastlane/fastlane/tree/master/produce#readme) – iTunes Connect와 개발자 포털(AppID 라고도 함)에서 앱을 만듭니다. 또한 앱 그룹 및 애플리케이션 서비스에 대한 지원이 포함됩니다.
 - [pem](https://github.com/fastlane/fastlane/tree/master/pem#readme) – 푸시 알림 프로 비전 프로필을 생성하고 관리합니다.
-- [gym](https://github.com/fastlane/fastlane/tree/master/gym#readme) – iOS 응용 프로그램을 빌드하고 서명 하는데 사용할 수 있습니다. (Xamarin 앱은 MSBuild를 사용하여 앱을 빌드, 서명 및 보관합니다)
+- [gym](https://github.com/fastlane/fastlane/tree/master/gym#readme) – iOS 애플리케이션을 빌드하고 서명 하는데 사용할 수 있습니다. (Xamarin 앱은 MSBuild를 사용하여 앱을 빌드, 서명 및 보관합니다)
 - [cert](https://github.com/fastlane/fastlane/tree/master/cert#readme) – 인증서를 서명하는 코드를 생성하고 관리합니다. 
 - [sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme) – 프로비저닝을 생성하고 관리합니다.
 - [match](https://github.com/fastlane/fastlane/tree/master/match#readme) – 인증서와 프로필을 생성 및 유지 관리하고 git 리포지토리에 저장하여 개발 팀 전반에 동기화될 수 있도록 합니다.
@@ -50,35 +50,35 @@ fastlane은 다양한 방식으로 사용할 수 있습니다: 그러한 방식�
 3. 파일의 압축을 풀어 fastlane를 설치하고 `install` 실행 파일을 두 번 클릭합니다. 파일이 "정체불명의 개발자로부터 왔기 때문에 열 수 없다"고 통지하는 오류가 발생하면 확인을 누르고 다음 작업을 수행합니다.
     - `install` 실행 파일에서 컨트롤 +를 클릭합니다. 아래의 대화 상자를 표시합니다.
 
-      ![](images/fastlane-image12.png "설치 대화 상자")
-    
+     ![](images/fastlane-image12.png "설치 대화 상자")
+
     - Fastlane 도구 설치를 시작하려면 [확인]을 누릅니다.
 
 4. 터미널은 아래 그림과 같이 대화 상자로 묻는 메시지를 표시합니다. `y` 누르기:
 
-  ![](images/fastlane-image13.png "터미널 프롬프트")
- 
-4. 처음으로 fastlane을 사용하기 전에.`which fastlane`을 실행합니다. 경로는 다음과 같습니다. 
+   ![](images/fastlane-image13.png "터미널 프롬프트")
+
+5. 처음으로 fastlane을 사용하기 전에.`which fastlane`을 실행합니다. 경로는 다음과 같습니다. 
 
     ```bash
     /Users/[user]/.fastlane/bin
     ```
 
-5. 경로가 위와 일치하면 시작할 준비가 되었습니다.
+6. 경로가 위와 일치하면 시작할 준비가 되었습니다.
 
-     아닐 경우 다음 작업을 수행합니다: macOS에서 다음 명령을 사용하여 홈 디렉터리에 있는 숨겨진 일반 텍스트 파일인 `.bash_profile`을 엽니다.
+     아직 만들지 않은 경우는 아래 작업을 수행합니다.  macOS에서 다음 명령을 사용하여 홈 디렉터리에 있는 숨겨진 일반 텍스트 파일인 `.bash_profile`을 엽니다.
 
     ```bash
     open ~/.bash_profile
     ```
 
-6. 다음 PATH 환경 변수를 추가하고 저장합니다. 
+7. 다음 PATH 환경 변수를 추가하고 저장합니다. 
 
     ```bash
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-7.  `which fastlane`을 다시 실행하여 `/Users/[user]/.fastlane/bin`과 같이 보이는 경로를 확인합니다.
+8.  `which fastlane`을 다시 실행하여 `/Users/[user]/.fastlane/bin`과 같이 보이는 경로를 확인합니다.
 
 
 ## <a name="updating-fastlane"></a>fastlane 업데이트
@@ -107,7 +107,7 @@ cert와 sigh는 서명 인증서를 만들고 관리하며 로컬 컴퓨터에 �
 
 fastlane을 사용하여 서명 ID와 프로비전 프로필을 만들었다면 Mac용 Visual Studio에서 번들 서명 옵션을 설정하는 일은 인증서와 개인 키가 macOS 키 집합에 있고 프로비전 프로필이 폴더 `~/Library/MobileDevice/Provisioning Profiles`에 있는 경우 간단합니다.
 
-Xamarin.iOS 응용 프로그램에 대한 코드 서명 옵션을 설정하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션 > 빌드 > iOS 번들 서명**을 선택하고 아래에 설명했듯이 서명 ID와 프로비전 프로필을 명시적으로 설정합니다.
+Xamarin.iOS 애플리케이션에 대한 코드 서명 옵션을 설정하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션 &gt; 빌드 &gt; iOS 번들 서명**을 선택하고 아래에 설명했듯이 서명 ID와 프로비전 프로필을 명시적으로 설정합니다.
 
 [![](images/fastlane-image11.png "서명 ID와 프로비전 프로필을 명시적으로 설정")](images/fastlane-image11.png#lightbox)
 

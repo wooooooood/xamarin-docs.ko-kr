@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: bb1b615bc922b19c50435218dfee51f9e19d1259
-ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
+ms.openlocfilehash: 49370813f50e3b5f1a9193c542b9f5f13d65a8e1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66394720"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829951"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 디바이스 및 Xamarin.Android
 
@@ -53,13 +53,15 @@ Android에서 지원하는 각 ABI는 고유한 이름으로 식별됩니다.
 
 이는 하나 이상의 ARMv5TE 명령 집합을 지원하는 ARM 기반 CPU의 EABI 이름입니다. Android는 little-endian ARM GNU/Linux ABI를 따릅니다. 이 ABI는 하드웨어 기반 부동 소수점 계산을 지원하지 않습니다. 모든 FP 작업은 컴파일러의 `libgcc.a` 정적 라이브러리에서 제공하는 소프트웨어 도우미 함수에 의해 수행됩니다. `armeabi`는 SMP 디바이스를 지원하지 않습니다.
 
-**참고**: Xamarin.Android의 `armeabi` 코드는 스레드로부터 안전하지 않으며 다중 CPU `armeabi-v7a` 디바이스에 사용해서는 안 됩니다(아래 설명 참조). 단일 코어 `armeabi-v7a` 디바이스에서 `armeabi` 코드를 사용하는 것은 안전합니다.
+> [!IMPORTANT]
+> Xamarin.Android의 `armeabi` 코드는 스레드로부터 안전하지 않으며 다중 CPU `armeabi-v7a` 디바이스에 사용해서는 안 됩니다(아래 설명 참조). 단일 코어 `armeabi-v7a` 디바이스에서 `armeabi` 코드를 사용하는 것은 안전합니다.
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
 이는 위에 설명된 `armeabi` EABI를 확장하는 또 다른 ARM 기반 CPU 명령 집합입니다. 이 `armeabi-v7a` EABI는 하드웨어 부동 소수점 연산 및 다중 CPU(SMP) 디바이스를 지원합니다. `armeabi-v7a` EABI를 사용하는 애플리케이션은 `armeabi`를 사용하는 애플리케이션보다 상당한 성능 개선 효과를 기대할 수 있습니다.
 
-**참고:** `armeabi-v7a` 기계어 코드는 ARMv5 디바이스에서 실행되지 않습니다.
+> [!NOTE]
+> `armeabi-v7a` 기계어 코드는 ARMv5 디바이스에서 실행되지 않습니다.
 
 #### <a name="arm64-v8a"></a>arm64-v8a
 
@@ -74,7 +76,8 @@ Xamarin.Android 5.1이 이 아키텍처에 대한 지원을 도입했습니다. 
 - 보조 SSE3 확장(SSSE3).
 - SSE4 변형.
 
-**참고:** Google TV는 x86에서 실행되기는 하지만 Android의 NDK에서 지원되지 않습니다.
+> [!NOTE]
+> Google TV는 x86에서 실행되기는 하지만 Android의 NDK에서 지원되지 않습니다.
 
 #### <a name="x8664"></a>x86_64
 

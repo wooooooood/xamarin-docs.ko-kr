@@ -1,28 +1,28 @@
 ---
 title: Xamarin.iOS 앱에 대한 사내 배포
-description: 이 문서에서는 Apple Enterprise Developer Program의 구성원으로 응용 프로그램을 사내에 배포하는 방법에 대해 간략히 설명합니다.
+description: 이 문서에서는 Apple Enterprise Developer Program의 구성원으로 애플리케이션을 사내에 배포하는 방법에 대해 간략히 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c1e1b2d7bfb43c256c71abb62e7d85a05b096419
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103584"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865525"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 사내 배포
 
-_이 문서에서는 Apple Enterprise Developer Program의 구성원으로 응용 프로그램을 사내에 배포하는 방법에 대해 간략히 설명합니다._
+_이 문서에서는 Apple Enterprise Developer Program의 구성원으로 애플리케이션을 사내에 배포하는 방법에 대해 간략히 설명합니다._
 
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 사용자에게 앱을 배포하는 것입니다. 독점 앱은 **Apple Developer Enterprise Program**을 통해 *사내*(이전에 엔터프라이즈라고 함)에 배포할 수 있으며 다음과 같은 이점을 제공합니다.
 
-- Apple에서 검토를 위해 응용 프로그램을 제출할 필요가 없습니다.
+- Apple에서 검토를 위해 애플리케이션을 제출할 필요가 없습니다.
 - 응용 프로그램을 배포할 수 있는 디바이스의 수에는 제한이 없습니다
-    - Apple에서는 사내 응용 프로그램을 내부용으로만 사용해야 한다고 명확하게 언급하고 있습니다.
+    - Apple에서는 사내 애플리케이션을 내부용으로만 사용해야 한다고 명확하게 언급하고 있습니다.
 
 또한 Enterprise Program과 관련하여 주의해야 할 사항은 다음과 같습니다.
 
@@ -33,9 +33,9 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 <a name="testing" />
 
-## <a name="testing-your-application"></a>응용 프로그램 테스트
+## <a name="testing-your-application"></a>애플리케이션 테스트
 
-응용 프로그램 테스트는 임시 배포를 사용하여 수행됩니다. 테스트에 대한 자세한 내용은 [임시 배포](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드의 단계를 따릅니다. 최대 100개의 디바이스에서만 테스트할 수 있습니다.
+애플리케이션 테스트는 임시 배포를 사용하여 수행됩니다. 테스트에 대한 자세한 내용은 [임시 배포](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) 가이드의 단계를 따릅니다. 최대 100개의 디바이스에서만 테스트할 수 있습니다.
 
 <a name="setup" />
 
@@ -74,13 +74,13 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 1. 팀을 선택하고 *세부 정보 보기*를 클릭합니다.
 
-    [![](in-house-distribution-images/selectteam.png "팀 선택")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "팀 선택")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. 다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다.
 
    [![](in-house-distribution-images/selectcert.png "iOS 배포 인증서 만들기")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.
+3. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.
 
    [![](in-house-distribution-images/selectcert.png "iOS 앱 스토어 선택")](in-house-distribution-images/selectcert.png#lightbox)
 
@@ -97,7 +97,7 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 1. [Apple Developer Center](https://developer.apple.com/account/overview.action)에서 *인증서, 식별자 및 프로필* 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
 2. **+** 단추를 클릭하고 포털에서 식별할 수 있는 **이름**을 제공합니다.
-3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, **명시적 앱 ID**: com.[DomainName].[AppName], **와일드카드 앱 ID**: com.[DomainName]과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다.*
+3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, 다음과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다. **명시적 앱**: com.[DomainName].[AppName] **Wildcard**:com.[DomainName].*
 4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)를 선택합니다.
 5. **계속** 단추를 클릭하고 화면의 지시에 따라 새 앱 ID를 만듭니다.
 
@@ -115,17 +115,17 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
    [![](in-house-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](in-house-distribution-images/distribute03.png#lightbox)
 
-4. **계속** 단추를 클릭하고 응용 프로그램에 서명하는 데 필요한 배포 인증서를 선택합니다.
+4. **계속** 단추를 클릭하고 애플리케이션에 서명하는 데 필요한 배포 인증서를 선택합니다.
 
-   [![](in-house-distribution-images/distribute04.png "응용 프로그램 서명에 필요한 배포 인증서 선택")](in-house-distribution-images/distribute04.png#lightbox)
+   [![](in-house-distribution-images/distribute04.png "애플리케이션 서명에 필요한 배포 인증서 선택")](in-house-distribution-images/distribute04.png#lightbox)
 
-6. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
+5. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
    [![](in-house-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](in-house-distribution-images/distribute06.png#lightbox)
 
-7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
+6. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -139,28 +139,28 @@ Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studi
 
 ## <a name="distributing-your-app-in-house"></a>사내 앱 배포
 
-Apple Developer Enterprise Program에서 정식 사용자는 응용 프로그램을 배포하고 Apple에서 설정한 [지침](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf)을 준수해야 하는 사람입니다.
+Apple Developer Enterprise Program에서 정식 사용자는 애플리케이션을 배포하고 Apple에서 설정한 [지침](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf)을 준수해야 하는 사람입니다.
 
 앱은 다음과 같은 다양한 수단을 사용하여 안전하게 배포할 수 있습니다.
 
 - iTunes를 통해 로컬로
 - MDM 서버
 - 내부 보안 웹 서버
-- 메일
+- Email
 
 이러한 방법 중 하나를 사용하여 앱을 배포하려면 다음 섹션에서 설명하는 대로 먼저 IPA 파일을 만들어야 합니다.
 
 
 ### <a name="creating-an-ipa-for-in-house-deployment"></a>사내 배포를 위한 IPA 만들기
 
-프로비전된 응용 프로그램은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 응용 프로그램이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
+프로비전된 애플리케이션은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 애플리케이션이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
 
 IPA 만들기에 대한 자세한 내용은 [IPA 지원](~/ios/deploy-test/app-distribution/ipa-support.md) 가이드를 참조하세요.
 
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.iOS 응용 프로그램을 사내에 배포하는 방법에 대해 간략히 설명했습니다.
+이 문서에서는 Xamarin.iOS 애플리케이션을 사내에 배포하는 방법에 대해 간략히 설명했습니다.
 
 ## <a name="related-links"></a>관련 링크
 

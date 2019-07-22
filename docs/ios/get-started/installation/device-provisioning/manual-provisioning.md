@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 3f74144f85cc045b4ea9807d3d818677e33539f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123468"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865888"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
-_Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 장치를 프로비전하는 것입니다. 이 가이드에서는 수동 프로비저닝을 사용하여 개발 인증서와 프로필을 설정하는 방법을 설명합니다._
+_Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 디바이스를 프로비전하는 것입니다. 이 가이드에서는 수동 프로비저닝을 사용하여 개발 인증서와 프로필을 설정하는 방법을 설명합니다._
 
 > [!NOTE]
 > 이 페이지에서 지침은 Apple 개발자 프로그램에 대한 유료 액세스 권한을 가진 개발자와 관련이 있습니다. 무료 계정이 있는 경우 장치 테스트에 대한 자세한 내용은 [무료 프로 비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 살펴보세요.
@@ -45,7 +45,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
     [![](manual-provisioning-images/cert-first.png "인증서 유형에 iOS 앱 개발 옵션 선택")](manual-provisioning-images/cert-first.png#lightbox)
 
-3. 인증서를 수동으로 생성하기 위해 업로드할 인증서 서명 요청을 요청합니다. 이렇게 하려면 Mac에서 **Keychain Access**(키 집합 액세스)를 시작합니다. 주 메뉴로 이동하여 아래 그림과 같이 **Certificate Assistant**(인증서 도우미) 및 **Request a Certificate from a Certificate Authority...**(인증 기관의 인증서 요청)를 선택합니다.
+3. 인증서를 수동으로 생성하기 위해 업로드할 인증서 서명 요청을 요청합니다. 이렇게 하려면 Mac에서 **Keychain Access**(키 집합 액세스)를 시작합니다. 주 메뉴로 이동하여 아래 그림과 같이 **Certificate Assistant**(인증서 도우미) 및 **Request a Certificate from a Certificate Authority...** (인증 기관의 인증서 요청)를 선택합니다.
 
       [![](manual-provisioning-images/key-first.png "인증서 서명 요청 요청하기")](manual-provisioning-images/key-first.png#lightbox)
 
@@ -73,7 +73,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ### <a name="understanding-certificate-key-pairs"></a>인증서 키 쌍 이해
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 개발자 프로필에는 인증서, 이와 연결된 키, 계정과 연결된 프로비전 프로필에 포함됩니다. 실제로 개발자 프로필에는 두 가지 버전이 있습니다. 한 가지는 개발자 포털에 있고 나머지는 로컬 Mac에 있습니다. 이 두 가지의 차이점은 포함된 키의 유형입니다. _포털의 프로필에는 인증서와 연결된 모든 공개 키가 있지만 로컬 Mac의 복사본에는 모든 개인 키가 포함됩니다_. 인증서가 유효하려면 키 쌍이 일치해야 합니다. 로컬 Mac에 개발자 프로필의 백업을 유지해야 합니다. 개인 키가 손실되면 모든 인증서와 프로비전 프로필을 다시 생성해야 하기 때문입니다.
 
@@ -100,36 +100,36 @@ Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 디바�
 
 1. Xcode를 시작합니다.
 2. 프로비전할 디바이스를 제공된 USB 케이블을 사용하여 Mac에 연결합니다.
-2. **창** 메뉴에서 **장치**를 선택합니다.
+3. **창** 메뉴에서 **디바이스**를 선택합니다.
 
-  [![](manual-provisioning-images/add01.png "창 메뉴에서 장치 선택")](manual-provisioning-images/add01.png#lightbox)
+   [![](manual-provisioning-images/add01.png "창 메뉴에서 디바이스 선택")](manual-provisioning-images/add01.png#lightbox)
 
-3. 디바이스 창 왼쪽의 **디바이스** 목록에서 원하는 iOS 디바이스를 선택합니다.
-4. **식별자** 문자열을 선택하여 클립보드로 복사합니다.
+4. 디바이스 창 왼쪽의 **디바이스** 목록에서 원하는 iOS 디바이스를 선택합니다.
+5. **식별자** 문자열을 선택하여 클립보드로 복사합니다.
 
-  [![](manual-provisioning-images/add02.png "식별자 문자열 선택")](manual-provisioning-images/add02.png#lightbox)
+   [![](manual-provisioning-images/add02.png "식별자 문자열 선택")](manual-provisioning-images/add02.png#lightbox)
 
-5. Safari에서 [Apple Developer Center](https://developer.apple.com/membercenter/index.action)로 이동하여 로그인합니다.
-6. **Certificates, Identifiers & Profiles**(인증서, 식별자 및 프로필) 링크를 클릭합니다.
+6. Safari에서 [Apple Developer Center](https://developer.apple.com/membercenter/index.action)로 이동하여 로그인합니다.
+7. **Certificates, Identifiers & Profiles**(인증서, 식별자 및 프로필) 링크를 클릭합니다.
 
-  [![](manual-provisioning-images/add03.png "인증서, 식별자 및 프로필 링크 클릭")](manual-provisioning-images/add03.png#lightbox)
+   [![](manual-provisioning-images/add03.png "인증서, 식별자 및 프로필 링크 클릭")](manual-provisioning-images/add03.png#lightbox)
 
-7. **장치** 링크를 클릭합니다.
+8. **디바이스** 링크를 클릭합니다.
 
-  [![](manual-provisioning-images/add04.png "장치 링크 클릭")](manual-provisioning-images/add04.png#lightbox)
+   [![](manual-provisioning-images/add04.png "디바이스 링크 클릭")](manual-provisioning-images/add04.png#lightbox)
 
-8. **+** 단추를 클릭합니다.
+9. **+** 단추를 클릭합니다.
 
-  [![](manual-provisioning-images/add05.png "+ 단추 클릭")](manual-provisioning-images/add05.png#lightbox)
+   [![](manual-provisioning-images/add05.png "+ 단추 클릭")](manual-provisioning-images/add05.png#lightbox)
 
-9. 새 디바이스의 이름을 입력하고 위에서 복사한 디바이스 **식별자** 를 **UUID** 필드에 붙여 넣습니다.
+10. 새 디바이스의 이름을 입력하고 위에서 복사한 디바이스 **식별자** 를 **UUID** 필드에 붙여 넣습니다.
 
-  [![](manual-provisioning-images/add06.png "새 장치의 이름 및 장치 식별자 입력")](manual-provisioning-images/add06.png#lightbox)
+    [![](manual-provisioning-images/add06.png "새 디바이스의 이름 및 디바이스 식별자 입력")](manual-provisioning-images/add06.png#lightbox)
 
-10. **계속** 단추를 클릭합니다.
-11. 마지막으로, 정보를 검토하고 **등록** 단추를 클릭합니다.
+11. **계속** 단추를 클릭합니다.
+12. 마지막으로, 정보를 검토하고 **등록** 단추를 클릭합니다.
 
-  [![](manual-provisioning-images/add07.png "정보 검토")](manual-provisioning-images/add07.png#lightbox)
+    [![](manual-provisioning-images/add07.png "정보 검토")](manual-provisioning-images/add07.png#lightbox)
 
 Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용할 iOS 디바이스에 위의 단계를 반복합니다.
 
@@ -141,7 +141,7 @@ Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용
 
 개발 인증서와 마찬가지로 프로비전 프로필은 Apple Members Center의 [Certificates, Identifiers & Profiles](https://developer.apple.com/account/overview.action)(인증서, 식별자 및 프로필) 섹션을 통해 수동으로 생성할 수 있습니다.
 
-프로비전 프로필을 만들기 전에는 *앱 ID*를 만들어야 합니다. 앱 ID는 응용 프로그램을 고유하게 식별하는 역방향 DNS 스타일 문자열입니다. 아래 단계는 대부분의 응용 프로그램을 빌드하고 설치하는 데 사용할 수 있는 **와일드 카드 앱 ID**를 만드는 방법을 보여줍니다. **Explicit App ID**(명시적 앱 ID)는 응용 프로그램(일치하는 번들 ID 포함)을 하나만 설치할 수 있으며 일반적으로 Apple Pay 및 HealthKit와 같은 특정 iOS 기능에 사용됩니다. 명시적 앱 ID를 만드는 방법에 대한 자세한 내용은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드를 참조하세요.
+프로비전 프로필을 만들기 전에는 *앱 ID*를 만들어야 합니다. 앱 ID는 애플리케이션을 고유하게 식별하는 역방향 DNS 스타일 문자열입니다. 아래 단계는 대부분의 애플리케이션을 빌드하고 설치하는 데 사용할 수 있는 **와일드 카드 앱 ID**를 만드는 방법을 보여줍니다. **Explicit App ID**(명시적 앱 ID)는 애플리케이션(일치하는 번들 ID 포함)을 하나만 설치할 수 있으며 일반적으로 Apple Pay 및 HealthKit와 같은 특정 iOS 기능에 사용됩니다. 명시적 앱 ID를 만드는 방법에 대한 자세한 내용은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드를 참조하세요.
 
 ### <a name="app-id"></a>앱 ID
 
@@ -151,9 +151,9 @@ Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용
     [![](manual-provisioning-images/appid05a.png "이름 입력")](manual-provisioning-images/appid05a.png#lightbox)
 3. App 접두사를 미리 설정해야 합니다. 앱 접미사에 대한 **Wildcard App ID**(와일드카드 앱 ID)를 선택합니다. 번들 ID를 `com.[DomainName].*` 형식으로 입력합니다.
 
-  [![](manual-provisioning-images/appid05b.png "번들 ID 입력")](manual-provisioning-images/appid05b.png#lightbox)
+   [![](manual-provisioning-images/appid05b.png "번들 ID 입력")](manual-provisioning-images/appid05b.png#lightbox)
 
-3. **계속** 단추를 클릭하고 화면의 지침에 따라 새 앱 ID를 만듭니다.
+4. **계속** 단추를 클릭하고 화면의 지침에 따라 새 앱 ID를 만듭니다.
 
 ### <a name="provisioning-profile"></a>프로비전 프로필
 
@@ -174,7 +174,7 @@ Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용
     [![](manual-provisioning-images/provisioning-profile03.png "프로비전 프로필에 포함할 인증서 선택")](manual-provisioning-images/provisioning-profile03.png#lightbox)
 6. 앱을 설치할 모든 디바이스를 선택합니다.
 
-    [![](manual-provisioning-images/provisioning-profile04.png "앱을 설치할 모든 장치 선택")](manual-provisioning-images/provisioning-profile04.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile04.png "앱을 설치할 모든 디바이스 선택")](manual-provisioning-images/provisioning-profile04.png#lightbox)
 7. 프로비전 프로필에 식별 가능한 이름을 제공하고 **계속**을 눌러서 프로필을 만듭니다.
 
     [![](manual-provisioning-images/provisioning-profile05.png "프로비전 프로필에 식별 가능한 이름 입력")](manual-provisioning-images/provisioning-profile05.png#lightbox)
@@ -197,14 +197,14 @@ Apple Developer 포털에서 만든 인증서 및 프로비전 프로필은 Xcod
 2.   Xcode를 시작합니다.
 3.   **Xcode 메뉴 > 기본 설정...** 을 선택합니다.
 4.   **계정** 탭을 클릭합니다.
-5.   팀을 선택하고 **수동 프로필 다운로드** 단추를 선택합니다. [![](manual-provisioning-images/selectteam1.png "수동 프로필 다운로드")](manual-provisioning-images/selectteam1.png#lightbox)
+5.   팀을 선택하고 **수동 프로필 다운로드** 단추를 클릭합니다. [![](manual-provisioning-images/selectteam1.png "수동 프로필 다운로드")](manual-provisioning-images/selectteam1.png#lightbox)
 
 6.   Xcode를 종료합니다.
 7.  Mac용 Visual Studio 또는 Visual Studio를 시작합니다.
 
 Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 프로필이 보이고 사용할 준비가 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 > [!IMPORTANT]
 > Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Mac용 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
@@ -218,9 +218,9 @@ Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 �
 
 <a name="appservices" />
 
-## <a name="provisioning-for-application-services"></a>응용 프로그램 서비스 프로비전
+## <a name="provisioning-for-application-services"></a>애플리케이션 서비스 프로비전
 
-Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 응용 프로그램 서비스(다른 이름: 기능)를 제공합니다. 이러한 응용 프로그램 서비스는 **앱 ID**를 만들 때 iOS 프로비전 포털에서 구성하고 Xamarin.iOS 응용 프로그램 프로젝트에 속하는 **Entitlements.plist** 파일에서도 구성해야 합니다. 앱에 응용 프로그램 서비스를 추가하는 방법에 대한 자세한 내용은 [기능 소개](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드 및 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
+Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애플리케이션 서비스(다른 이름: 기능)를 제공합니다. 이러한 애플리케이션 서비스는 **앱 ID**를 만들 때 iOS 프로비전 포털에서 구성하고 Xamarin.iOS 애플리케이션 프로젝트에 속하는 **Entitlements.plist** 파일에서도 구성해야 합니다. 앱에 애플리케이션 서비스를 추가하는 방법에 대한 자세한 내용은 [기능 소개](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드 및 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
 * 필요한 앱 서비스를 포함하는 앱 ID를 만듭니다.
 * 앱 ID를 포함하는 새로운 [프로비전 프로필](#provisioningprofile)을 만듭니다.
@@ -228,9 +228,9 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 
 ## <a name="deploying-to-a-device"></a>디바이스에 배포
 
-이 시점에서 프로비전은 완료되고, 디바이스에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 아래 단계를 수행합니다.
+이 시점에서 프로비전은 완료되고, 디바이스에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 다음 단계를 수행하세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 > [!IMPORTANT]
 > 시작하기 전에 **Info.plist**에서 **수동 프로비저닝**을 선택해야 합니다.
@@ -238,13 +238,13 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 1. 디바이스를 Mac에 연결합니다.
 2. 프로젝트의 **Info.plist**에서 번들 식별자가 앱 ID와 일치하도록 합니다(앱 ID가 와일드카드인 경우 제외).
 
-  ![](manual-provisioning-images/deploydevice01xs.png "식별자 입력")
+   ![](manual-provisioning-images/deploydevice01xs.png "식별자 입력")
 
 3. 프로젝트를 마우스 오른쪽 단추로 클릭하여 프로젝트 옵션 대화 상자를 표시하고 **빌드 > iOS 번들 서명**으로 이동합니다. **서명 ID** 및 **프로비전 프로필** 옆에 있는 드롭다운 목록에서 Mac용 Visual Studio에 올바른 프로필이 표시되는지 확인하고 특정 ID와 프로필을 선택합니다.
 
-  ![](manual-provisioning-images/deploydevice02xs.png "특정 ID와 프로필 선택")
+   ![](manual-provisioning-images/deploydevice02xs.png "특정 ID와 프로필 선택")
 
-**자동**으로 설정되어 있는 경우 2단계에서 설정한 번들 ID를 기반으로 Mac용 Visual Studio에서 ID와 프로필이 선택됩니다.
+   **자동**으로 설정되어 있는 경우 2단계에서 설정한 번들 ID를 기반으로 Mac용 Visual Studio에서 ID와 프로필이 선택됩니다.
 
 4. 빌드 구성이 시뮬레이터가 아닌 **iPhone** / **iPad**로 설정되어 있는지 확인합니다.
 5. Mac용 Visual Studio에서 **실행**을 클릭하여 디바이스에서 실행되는 앱을 봅니다.
@@ -257,7 +257,7 @@ Apple은 Xamarin.iOS 응용 프로그램에 활성화할 수 있는 다양한 �
 1. 디바이스를 Mac 빌드 호스트에 플러그 인합니다.
 2. 프로젝트의 **Info.plist**에서 번들 식별자가 앱 ID와 일치하도록 합니다.
 
-  ![](manual-provisioning-images/servicevs01.png "식별자 입력")
+   ![](manual-provisioning-images/servicevs01.png "식별자 입력")
 
 3. 프로젝트를 마우스 오른쪽 단추로 클릭하여 프로젝트 옵션 대화 상자를 표시하고 **빌드 > iOS 번들 서명**으로 이동합니다. **서명 ID** 및 **프로비전 프로필** 옆에 있는 드롭다운 목록에서 Visual Studio에 올바른 프로필이 표시되는지 확인하고 특정 ID와 프로필을 선택합니다.
 

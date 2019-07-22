@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 13d0e7a70c91c6e3e422f2e91cefc403627a340c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 86b077c95bfe1cb32731c92c0c1cfec451295c12
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105521"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831344"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS에서 iCloud 기능
 
-_응용 프로그램에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 iCloud 기능에 필요한 설정을 설명합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 iCloud 기능에 필요한 설정을 설명합니다._
 
-iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 스토리지 수단을 제공할 수 있는 방법은 네 가지입니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리에 대한 스토리지를 직접 제공합니다. 자세한 내용은 [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md) 가이드를 참조하세요.
+iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 스토리지 수단을 제공할 수 있는 네 가지 방법이 있습니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리용 스토리지를 직접 제공합니다. 자세한 내용은 [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md) 가이드를 참조하세요.
 
 iCloud 기능을 애플리케이션에 추가하는 것은 _컨테이너_ 때문에 다른 App Services보다 약간 더 어렵습니다. 컨테이너는 iCloud에서 앱에 대한 정보를 저장하는 데 사용되며 단일 iCloud 계정에 포함된 모든 정보를 분리(예: 사용자 iOS 디바이스에서 샌드 박싱)할 수 있습니다. 컨테이너에 대한 자세한 내용은 [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md) 가이드를 참조하세요.
 
@@ -31,63 +31,63 @@ iCloud 기능을 애플리케이션에 추가하는 것은 _컨테이너_ 때문
 
 개발자 센터를 통해 새 앱을 프로비전할 때 수행해야 하는 단계는 두 가지입니다.
 
-1.  컨테이너를 만듭니다.
-2.  iCloud 기능으로 앱 ID를 만들어서 ID에 컨테이너를 추가합니다.
+1. 컨테이너를 만듭니다.
+2. iCloud 기능으로 앱 ID를 만들어서 ID에 컨테이너를 추가합니다.
 3. 이 앱 ID가 포함된 프로비전 프로필을 만듭니다.
 
 아래 단계는 이러한 단계를 안내합니다.
 
-1.  [Apple Developer Center](https://developer.apple.com/account/)로 이동하여 Certificates, Identifier, and Profiles(인증서, 식별자 및 프로필) 섹션으로 이동합니다. 
+1. [Apple Developer Center](https://developer.apple.com/account/)로 이동하여 Certificates, Identifier, and Profiles(인증서, 식별자 및 프로필) 섹션으로 이동합니다. 
     
      ![Apple Developer Center 기본 페이지](icloud-capabilities-images/image22.png)
 
-2.  **식별자** 아래에서 **iCloud Containers**를 선택한 다음, **+** 를 선택하여 새 컨테이너를 만듭니다.  
+2. **식별자** 아래에서 **iCloud Containers**를 선택한 다음, **+** 를 선택하여 새 컨테이너를 만듭니다.  
     
     ![iCloud Container 화면](icloud-capabilities-images/image23.png)
 
-3.  iCloud 컨테이너에 대한 **설명** 및 고유 **식별자**를 입력합니다. 
+3. iCloud 컨테이너에 대한 **설명** 및 고유 **식별자**를 입력합니다. 
     
     ![iCloud 컨테이너 등록 화면](icloud-capabilities-images/image24.png)
 
-4.  **계속**을 눌러 정보가 정확한지 확인하고 **등록**을 눌러서 iCloud Container를 만듭니다.  
+4. **계속**을 눌러 정보가 정확한지 확인하고 **등록**을 눌러서 iCloud Container를 만듭니다.  
     
     ![iCloud 컨테이너 등록 화면](icloud-capabilities-images/image25.png)
 
 새 앱 ID를 만들어서 ID에 컨테이너를 추가하려면 다음을 수행합니다.
 
-1.  [개발자 센터](https://developer.apple.com/account/)에서 **식별자** 아래 **앱 ID**를 클릭합니다. 
+1. [개발자 센터](https://developer.apple.com/account/)에서 **식별자** 아래 **앱 ID**를 클릭합니다. 
     
     ![개발자 센터의 식별자 섹션](icloud-capabilities-images/image26.png)
 
-2.  **+** 단추를 선택하여 새 앱 ID를 추가합니다. 
+2. **+** 단추를 선택하여 새 앱 ID를 추가합니다. 
     
     ![새 앱 ID 추가 단추](icloud-capabilities-images/image27.png)
 
-3.  앱 ID의 **이름**을 입력하고 **Explicit App ID**(명시적 앱 ID)를 지정합니다.
+3. 앱 ID의 **이름**을 입력하고 **Explicit App ID**(명시적 앱 ID)를 지정합니다.
     
     ![새 앱 ID 입력 세부 정보](icloud-capabilities-images/image28.png)
 
-4.  **App Services** 아래에서 **iCloud**를 선택하고 **Include CloudKit support**(CloudKit 지원 포함)를 선택합니다.
+4. **App Services** 아래에서 **iCloud**를 선택하고 **Include CloudKit support**(CloudKit 지원 포함)를 선택합니다.
     
     ![iCloud 앱 서비스 선택](icloud-capabilities-images/image29.png)
 
-5.  **계속**과 **등록**을 차례로 선택합니다. 확인 화면에 iCloud가 노란색 기호로 선택된 구성 가능과 함께 표시됩니다.   
+5. **계속**과 **등록**을 차례로 선택합니다. 확인 화면에 iCloud가 노란색 기호로 선택된 구성 가능과 함께 표시됩니다.   
     
     ![확인 화면](icloud-capabilities-images/image30.png)
 
-6.  앱 ID 목록으로 돌아가서 방금 만든 항목을 선택합니다. 
+6. 앱 ID 목록으로 돌아가서 방금 만든 항목을 선택합니다. 
     
     ![앱 ID 선택 화면](icloud-capabilities-images/image31.png)
 
-7.  펼쳐진 섹션의 맨 아래로 스크롤하여 **편집**을 클릭합니다.
+7. 펼쳐진 섹션의 맨 아래로 스크롤하여 **편집**을 클릭합니다.
     
     ![앱 ID 편집](icloud-capabilities-images/image32.png)
 
-8.  목록을 iCloud까지 아래로 스크롤하여 **편집** 단추를 클릭합니다.  
+8. 목록을 iCloud까지 아래로 스크롤하여 **편집** 단추를 클릭합니다.  
     
     ![iCloud 앱 ID 편집](icloud-capabilities-images/image33.png)
 
-9.  앱 ID와 함께 사용할 컨테이너를 선택합니다.  
+9. 앱 ID와 함께 사용할 컨테이너를 선택합니다.  
     
     ![컨테이너 선택 화면](icloud-capabilities-images/image34.png)
 

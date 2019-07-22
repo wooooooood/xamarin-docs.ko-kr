@@ -7,27 +7,27 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 36601b02bb2984d9350166dedac0d650d9642f91
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 62e825a497e6d2cb06414a2553ba1cfe2864fca1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650640"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832198"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 
 이 문서에서는 사용자가 휴대폰의 사진 라이브러리에서 사진을 선택할 수 있는 애플리케이션 만들기를 설명합니다. Xamarin.Forms에는 이 기능이 포함되지 않으므로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 각 플랫폼에서 기본 API에 액세스해야 합니다.
 
 ## <a name="creating-the-interface"></a>인터페이스 만들기
 
-먼저, 원하는 기능이 표시되는 공유 코드에서 인터페이스를 만듭니다. 사진 선택 애플리케이션의 경우 하나의 메서드만 필요합니다. 이 메서드는 샘플 코드의.NET Standard 라이브러리의 [`IPicturePicker`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) 인터페이스에서 정의됩니다.
+먼저, 원하는 기능이 표시되는 공유 코드에서 인터페이스를 만듭니다. 사진 선택 애플리케이션의 경우 하나의 메서드만 필요합니다. 이 메서드는 샘플 코드의.NET Standard 라이브러리의 [`IPhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos/Services/IPhotoPickerService.cs) 인터페이스에서 정의됩니다.
 
 ```csharp
-namespace DependencyServiceSample
+namespace DependencyServiceDemos
 {
-    public interface IPicturePicker
+    public interface IPhotoPickerService
     {
         Task<Stream> GetImageStreamAsync();
     }
@@ -40,16 +40,15 @@ namespace DependencyServiceSample
 
 ## <a name="ios-implementation"></a>iOS 구현
 
-`IPicturePicker` 인터페이스의 iOS 구현은 [**갤러리에서 사진 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)에 설명된 대로 [`UIImagePickerController`](xref:UIKit.UIImagePickerController)를 사용합니다.
+`IPhotoPickerService` 인터페이스의 iOS 구현은 [**갤러리에서 사진 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)에 설명된 대로 [`UIImagePickerController`](xref:UIKit.UIImagePickerController)를 사용합니다.
 
-iOS 구현은 샘플 코드의 iOS 프로젝트에서 [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/iOS/PicturePickerImplementation.cs) 클래스에 포함됩니다. 이 클래스를 `DependencyService` 관리자에 표시하려면 해당 클래스를 `Dependency` 유형의 [`assembly`] 특성을 사용하여 식별해야 합니다. 해당 클래스는 공개되어야 하며 명시적으로 `IPicturePicker` 인터페이스를 구현해야 합니다.
+iOS 구현은 샘플 코드의 iOS 프로젝트에서 [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.iOS/Services/PhotoPickerService.cs) 클래스에 포함됩니다. 이 클래스를 `DependencyService` 관리자에 표시하려면 해당 클래스를 `Dependency` 유형의 [`assembly`] 특성을 사용하여 식별해야 합니다. 해당 클래스는 공개되어야 하며 명시적으로 `IPhotoPickerService` 인터페이스를 구현해야 합니다.
 
 ```csharp
-[assembly: Dependency (typeof (PicturePickerImplementation))]
-
-namespace DependencyServiceSample.iOS
+[assembly: Dependency (typeof (PhotoPickerService))]
+namespace DependencyServiceDemos.iOS
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PhotoPickerService : IPhotoPickerService
     {
         TaskCompletionSource<Stream> taskCompletionSource;
         UIImagePickerController imagePicker;
@@ -89,9 +88,9 @@ namespace DependencyServiceSample.iOS
 `FinishedPickingMedia` 이벤트 처리기는 사용자가 사진을 선택한 경우 호출됩니다. 하지만 해당 처리기는 `UIImage` 개체를 제공하고 `Task`는 .NET `Stream` 개체를 반환해야 합니다. 이 반환은 두 단계로 수행됩니다. 먼저 `UIImage` 개체가 `NSData` 개체에 저장된 메모리에서 JPEG 파일로 변환된 다음, `NSData` 개체가 .NET `Stream` 개체로 변환됩니다. `TaskCompletionSource` 개체의 `SetResult` 메서드에 대한 호출은 `Stream` 개체를 제공하여 태스크를 완료합니다.
 
 ```csharp
-namespace DependencyServiceSample.iOS
+namespace DependencyServiceDemos.iOS
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PhotoPickerService : IPhotoPickerService
     {
         TaskCompletionSource<Stream> taskCompletionSource;
         UIImagePickerController imagePicker;
@@ -133,7 +132,6 @@ namespace DependencyServiceSample.iOS
         }
     }
 }
-
 ```
 
 iOS 애플리케이션에는 휴대폰의 사진 라이브러리에 액세스하려면 사용자의 권한이 필요합니다. 다음을 Info.plist 파일의 `dict` 섹션에 추가합니다.
@@ -145,7 +143,7 @@ iOS 애플리케이션에는 휴대폰의 사진 라이브러리에 액세스하
 
 ## <a name="android-implementation"></a>Android 구현
 
-Android 구현은 [**이미지 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)에 설명된 기술을 사용합니다. 그러나 사용자가 사진 라이브러리에서 이미지를 선택한 경우 호출되는 메서드는 `Activity`에서 파생된 클래스의 `OnActivityResult` 재정의입니다. 따라서 Android 프로젝트의 기본 [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/MainActivity.cs) 클래스는 `OnActivityResult` 메서드의 필드, 속성 및 재정의를 통해 보완되었습니다.
+Android 구현은 [**이미지 선택**](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image) 레시피 및 [샘플 코드](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)에 설명된 기술을 사용합니다. 그러나 사용자가 사진 라이브러리에서 이미지를 선택한 경우 호출되는 메서드는 `Activity`에서 파생된 클래스의 `OnActivityResult` 재정의입니다. 따라서 Android 프로젝트의 기본 [`MainActivity`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.Android/MainActivity.cs) 클래스는 `OnActivityResult` 메서드의 필드, 속성 및 재정의를 통해 보완되었습니다.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -177,19 +175,17 @@ public class MainActivity : FormsAppCompatActivity
         }
     }
 }
-
 ```
 
 `OnActivityResult` 재정의는 Android `Uri` 개체를 사용하여 선택한 사진 파일을 나타내지만 활동의 `ContentResolver` 속성에서 가져온 `ContentResolver` 개체의 `OpenInputStream` 메서드를 호출하여 이 파일을 .NET `Stream` 개체로 변환할 수 있습니다.
 
-iOS 구현과 같이 Android 구현은 태스크가 완료된 경우 `TaskCompletionSource`를 사용하여 신호를 보냅니다. 이 `TaskCompletionSource` 개체는 `MainActivity` 클래스의 공용 속성으로 정의됩니다. 이렇게 하면 Android 프로젝트의 [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/Droid/PicturePickerImplementation.cs) 클래스에서 속성을 참조할 수 있습니다. 이 클래스는 `GetImageStreamAsync` 메서드를 사용합니다.
+iOS 구현과 같이 Android 구현은 태스크가 완료된 경우 `TaskCompletionSource`를 사용하여 신호를 보냅니다. 이 `TaskCompletionSource` 개체는 `MainActivity` 클래스의 공용 속성으로 정의됩니다. 이렇게 하면 Android 프로젝트의 [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.Android/Services/PhotoPickerService.cs) 클래스에서 속성을 참조할 수 있습니다. 이 클래스는 `GetImageStreamAsync` 메서드를 사용합니다.
 
 ```csharp
-[assembly: Dependency(typeof(PicturePickerImplementation))]
-
-namespace DependencyServiceSample.Droid
+[assembly: Dependency(typeof(PhotoPickerService))]
+namespace DependencyServiceDemos.Droid
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PhotoPickerService : IPhotoPickerService
     {
         public Task<Stream> GetImageStreamAsync()
         {
@@ -217,15 +213,14 @@ namespace DependencyServiceSample.Droid
 
 ## <a name="uwp-implementation"></a>UWP 구현
 
-iOS 및 Android 구현과 달리 유니버설 Windows 플랫폼에 대한 사진 선택기 구현에는 `TaskCompletionSource` 클래스가 필요하지 않습니다. [`PicturePickerImplementation`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/UWP/PicturePickerImplementation.cs) 클래스는 [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) 클래스를 사용하여 사진 라이브러리에 액세스합니다. `FileOpenPicker`의 `PickSingleFileAsync` 메서드 자체는 비동기이므로 `GetImageStreamAsync` 메서드는 해당 메서드(및 다른 비동기 메서드)를 통해 `await`를 사용하고 `Stream` 개체를 반환할 수 있습니다.
+iOS 및 Android 구현과 달리 유니버설 Windows 플랫폼에 대한 사진 선택기 구현에는 `TaskCompletionSource` 클래스가 필요하지 않습니다. [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.UWP/Services/PhotoPickerService.cs) 클래스는 [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) 클래스를 사용하여 사진 라이브러리에 액세스합니다. `FileOpenPicker`의 `PickSingleFileAsync` 메서드 자체는 비동기이므로 `GetImageStreamAsync` 메서드는 해당 메서드(및 다른 비동기 메서드)를 통해 `await`를 사용하고 `Stream` 개체를 반환할 수 있습니다.
 
 
 ```csharp
-[assembly: Dependency(typeof(PicturePickerImplementation))]
-
-namespace DependencyServiceSample.UWP
+[assembly: Dependency(typeof(PhotoPickerService))]
+namespace DependencyServiceDemos.UWP
 {
-    public class PicturePickerImplementation : IPicturePicker
+    public class PhotoPickerService : IPhotoPickerService
     {
         public async Task<Stream> GetImageStreamAsync()
         {
@@ -257,57 +252,34 @@ namespace DependencyServiceSample.UWP
 
 ## <a name="implementing-in-shared-code"></a>공유 코드에서 구현
 
-각 플랫폼에 대해 인터페이스를 구현했으므로 이제 .NET Standard 라이브러리의 애플리케이션은 해당 인터페이스를 활용할 수 있습니다.
+각 플랫폼에 대해 인터페이스를 구현했으므로 이제 .NET Standard 라이브러리의 공유 코드는 해당 인터페이스를 활용할 수 있습니다.
 
-[`App`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/DependencyServiceSample.cs) 클래스는 `Button`을 만들어 사진을 선택합니다.
+UI에는 클릭하여 사진을 선택할 수 있는 [`Button`](xref:Xamarin.Forms.Button)이 포함됩니다.
 
-```csharp
-Button pickPictureButton = new Button
-{
-    Text = "Pick Photo",
-    VerticalOptions = LayoutOptions.CenterAndExpand,
-    HorizontalOptions = LayoutOptions.CenterAndExpand
-};
-stack.Children.Add(pickPictureButton);
+```xaml
+<Button Text="Pick Photo"
+        Clicked="OnPickPhotoButtonClicked" />
 ```
 
-`Clicked` 처리기는 `DependencyService` 클래스를 사용하여 `GetImageStreamAsync`를 호출합니다. 이렇게 하면 플랫폼 프로젝트에서 호출이 발생합니다. 메서드가 `Stream` 개체를 반환하는 경우 처리기는 `TapGestureRecognizer`를 통해 `Image` 요소를 만들고 `Image`로 해당 페이지의 `StackLayout`을 바꿉니다.
+`Clicked` 이벤트 처리기는 `DependencyService` 클래스를 사용하여 `GetImageStreamAsync`를 호출합니다. 이렇게 하면 플랫폼 프로젝트에서 호출이 발생합니다. 메서드가 `Stream` 개체를 반환하는 경우 처리기는 `image` 개체의 `Source` 속성을 `Stream` 데이터로 설정합니다.
 
 ```csharp
-pickPictureButton.Clicked += async (sender, e) =>
+async void OnPickPhotoButtonClicked(object sender, EventArgs e)
 {
-    pickPictureButton.IsEnabled = false;
-    Stream stream = await DependencyService.Get<IPicturePicker>().GetImageStreamAsync();
+    (sender as Button).IsEnabled = false;
 
+    Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
     if (stream != null)
     {
-        Image image = new Image
-        {
-            Source = ImageSource.FromStream(() => stream),
-            BackgroundColor = Color.Gray
-        };
-
-        TapGestureRecognizer recognizer = new TapGestureRecognizer();
-        recognizer.Tapped += (sender2, args) =>
-        {
-            (MainPage as ContentPage).Content = stack;
-            pickPictureButton.IsEnabled = true;
-        };
-        image.GestureRecognizers.Add(recognizer);
-
-        (MainPage as ContentPage).Content = image;
+        image.Source = ImageSource.FromStream(() => stream);
     }
-    else
-    {
-        pickPictureButton.IsEnabled = true;
-    }
-};
+
+    (sender as Button).IsEnabled = true;
+}
 ```
-
-`Image` 요소를 탭하면 해당 페이지가 기본으로 반환됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
+- [DependencyService(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
 - [갤러리에서 사진 선택(iOS)](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)
 - [이미지 선택(Android)](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)
-- [DependencyService(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample)

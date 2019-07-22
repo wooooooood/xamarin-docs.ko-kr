@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
-ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "55832030"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831514"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -25,13 +25,13 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 애플리케이션을 배포하는 경우와 마찬가지로 애플리케이션을 배포하려면 적절한 *프로비전 프로필*을 사용하여 애플리케이션을 프로비전해야 합니다. 프로비전 프로필은 애플리케이션 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
 
 > [!IMPORTANT]
-> iTunes Connect를 사용하는 것이 **중요**합니다. 따라서 앱 스토어에 앱을 게시하려면 사용자가 개인 또는 조직의 Apple Developer Program에 **반드시** 속해야 합니다. Apple Developer **Enterprise** Program의 구성원인 경우 이 페이지의 단계를 수행할 수 없습니다.
+> iTunes Connect를 사용하기 위해 앱 스토어에 앱을 게시하려면 사용자가 개인 또는 조직의 Apple Developer Program에 **반드시** 속해야 합니다. Apple Developer **Enterprise** Program의 구성원인 경우 이 페이지의 단계를 수행할 수 없습니다.
 
 <a name="provisioning" />
 
 ## <a name="provisioning-an-app-for-app-store-distribution"></a>앱 스토어 배포를 위한 앱 프로비전
 
-Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특정 *배포 프로비전 프로필*을 작성해야 합니다. 이 프로필을 사용하면 애플리케이션을 iOS 장치에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다. 개발 프로비전 프로필과 마찬가지로 배포 프로필에는 다음 항목이 포함됩니다.
+Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특정 *배포 프로비전 프로필*을 작성해야 합니다. 이 프로필을 사용하면 응용 프로그램을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다. 개발 프로비전 프로필과 마찬가지로 배포 프로필에는 다음 항목이 포함됩니다.
 
 - 앱 ID
 - 배포 인증서
@@ -111,7 +111,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
     [![](images/distribute04.png "애플리케이션 서명에 필요한 인증서 선택")](images/distribute04.png#lightbox)
 
-5. **계속** 단추를 클릭하고 Xamarin.iOS 애플리케이션이 실행될 수 있는 iOS 장치를 선택합니다.
+5. **계속** 단추를 클릭하고 Xamarin.iOS 응용 프로그램이 실행될 수 있는 iOS 디바이스를 선택합니다.
 
     [![](images/distribute05.png "앱이 실행될 수 있는 iOS 디바이스 선택")](images/distribute05.png#lightbox)
 
@@ -122,7 +122,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -138,7 +138,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 다음을 수행합니다.
 

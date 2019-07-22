@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dbf8f85192f9052041fc65367eb2f6c57603b440
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104845"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831419"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -27,14 +27,14 @@ Xamarin 빌드 속도는 프로세서 기능, 버스 속도, 실제 메모리의
 
 ## <a name="timing-apps"></a>타이밍 앱
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **Mac용 Visual Studio > 기본 설정...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 선택
-3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정합니다. [![](ios-build-mechanics-images/image2.png "로그 세부 정보 표시 설정")](ios-build-mechanics-images/image2.png#lightbox)
-4. **확인** 을 클릭합니다.
+3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정합니다.  [![](ios-build-mechanics-images/image2.png "로그 세부 정보 표시 설정")](ios-build-mechanics-images/image2.png#lightbox)
+4. **확인**
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드
 7. 빌드 출력 단추를 클릭하여 오류 패드 내에서 진단 출력 보기(보기 > 패드 > 오류)
@@ -46,8 +46,8 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **도구 > 옵션...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 및 솔루션 > 빌드 및 실행** 선택
-3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정합니다. [![](ios-build-mechanics-images/image2-vs.png "MSBuild 빌드 출력 세부 정보 표시 설정")](ios-build-mechanics-images/image2-vs.png#lightbox)
-4. **확인** 을 클릭합니다.
+3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정합니다.  [![](ios-build-mechanics-images/image2-vs.png "MSBuild 빌드 출력 세부 정보 표시 설정")](ios-build-mechanics-images/image2-vs.png#lightbox)
+4. **확인**
 5. 패키지를 지우고 다시 빌드합니다.
 6. 출력 패널에 진단 출력이 표시됩니다.
 
@@ -90,7 +90,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 - 빌드 시: 
   - 프로젝트 옵션에서 **PNG 이미지 최적화** 옵션의 선택을 취소합니다. 시뮬레이터에서 빌드할 때에는 이 최적화가 필요 없습니다.
   - 링커를 **연결하지 않음**로 설정합니다. 링커를 실행하면 상당한 시간이 걸리므로 사용하지 않는 것이 훨씬 빠릅니다.
-  - `--nofastsim` 플래그를 사용하여 공유 응용 프로그램 시작 관리자를 사용하지 않도록 설정하면 시뮬레이터 빌드가 훨씬 느려집니다. 이 플래그가 더 이상 필요 없으면 제거하세요.
+  - `--nofastsim` 플래그를 사용하여 공유 애플리케이션 시작 관리자를 사용하지 않도록 설정하면 시뮬레이터 빌드가 훨씬 느려집니다. 이 플래그가 더 이상 필요 없으면 제거하세요.
   - 이 경우 공유 simlauncher 주 실행 파일을 다시 사용할 수 없고 애플리케이션 관련 실행 파일을 모든 빌드에 대해 컴파일해야 하므로 네이티브 라이브러리를 사용하면 속도가 느립니다.
 - 배포 시
   - 되도록이면 시뮬레이터를 항상 실행합니다. 시뮬레이터 콜드 부팅에 최대 12초가 걸릴 수 있습니다.
@@ -111,9 +111,9 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 
 iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니다. 각 구성을 정확하게 이해하여 최적화가 필요한 시기와 이유를 알아야 합니다.
 
- - 디버그
+- 디버그
   - 앱이 개발 중일 때 사용해야 하는 기본 구성이며, 따라서 최대한 빨라야 합니다.
- - 릴리스
+- 해제
   - 릴리스 빌드는 사용자에게 제공되는 빌드이며 무엇보다도 성능에 초점을 맞춰야 합니다. 릴리스 구성을 사용할 때 LLVM 최적화 컴파일러를 사용하여 PNG 파일을 최적화할 수 있습니다.
 
  
@@ -172,7 +172,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
   - 그러나 **모두 연결**을 선택하면 애플리케이션 크래시 가능성이 있으며, 특히 외부 구성 요소가 사용되는 경우에 더욱 가능성이 높습니다. 이는 특정 형식에 리플렉션을 사용하는 일부 구성 요소 때문입니다.
   - 정적 분석과 리플렉션은 함께 작동하지 않습니다. 
 
-[`[Preserve]` 특성](~/ios/deploy-test/linker.md)을 사용하여 항목을 응용 프로그램 내부에 유지하라고 도구에 지시할 수 있습니다. 
+[`[Preserve]` 특성](~/ios/deploy-test/linker.md)을 사용하여 항목을 애플리케이션 내부에 유지하라고 도구에 지시할 수 있습니다. 
 
 소스 코드에 대한 액세스 권한이 없는 경우 또는 소스 코드가 도구에서 생성되며 소스 코드를 변경할 생각이 없는 경우 보존해야 하는 모든 형식 및 구성원에 대해 설명하는 XML 파일을 만들어서 소스 코드를 연결할 수 있습니다. 그런 후 마치 Attributes를 사용하는 것처럼 코드를 정확하게 처리하는 `--xml={file.name}.xml` 플래그를 프로젝트 옵션에 추가할 수 있습니다.
 
