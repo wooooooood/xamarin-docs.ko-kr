@@ -1,22 +1,22 @@
 ---
 title: Xamarin.iOS 앱에 대한 임시 배포
-description: 이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다.
+description: 이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 애플리케이션을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다.
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 5950143532b2d1d026f73bb254507d7d3022cbf1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: efa3c8cf4d2e64c6d8bccdfe6e6fec9602d17c73
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112301"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865848"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 임시 배포
 
-_이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 응용 프로그램을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다._
+_이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin.iOS 애플리케이션을 테스트하는 데 주로 사용되는 임시 배포 기술에 대해 간략히 설명합니다._
 
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 테스트를 위해 사용자에게 앱을 배포하는 것입니다.
 
@@ -34,7 +34,7 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
 ## <a name="setting-up-for-distribution"></a>배포 설정
 
-사내 배포를 위해 Xamarin.iOS 응용 프로그램을 릴리스하려는 경우에도 테스트용 특정 임시 배포 프로비전 프로필을 작성해야 합니다. 이 프로필을 사용하면 응용 프로그램을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다.
+사내 배포를 위해 Xamarin.iOS 애플리케이션을 릴리스하려는 경우에도 테스트용 특정 임시 배포 프로비전 프로필을 작성해야 합니다. 이 프로필을 사용하면 응용 프로그램을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다.
 
 다음 섹션에서는 배포 인증서 및 배포 프로비전 프로필을 사용하여 설정하는 방법에 대해 설명합니다.
 
@@ -51,25 +51,25 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
 4. *프로덕션* 제목 아래에서 프로그램 구성원 자격에 따라 **사내 및 임시** 또는 **앱 스토어 및 임시**를 선택합니다.
 
-  [![](ad-hoc-distribution-images/cert-first-small.png "사내 및 임시 선택 또는 앱 스토어 및 임시 선택")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
+   [![](ad-hoc-distribution-images/cert-first-small.png "사내 및 임시 선택 또는 앱 스토어 및 임시 선택")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. [계속]을 클릭하고, 지시에 따라 키 집합 액세스를 통해 CSR(인증서 서명 요청)을 만듭니다.
 
-  [![](ad-hoc-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
+   [![](ad-hoc-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. 지시한 대로 CSR을 만들었으면 [계속]을 클릭하고 CSR을 Member Center에 업로드합니다.
 
-  [![](ad-hoc-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
+   [![](ad-hoc-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. [생성]을 클릭하여 인증서를 만듭니다.
 8. 마지막으로 완성된 인증서를 다운로드하고 파일을 두 번 클릭하여 설치합니다.
 9. 이 시점에서 인증서가 시스템에 설치되지만, Xcode에서 볼 수 있도록 [프로필을 새로 고쳐야](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 할 수도 있습니다.
 
-또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
+또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
 
-1.   팀을 선택하고 **인증서 관리...** 를 클릭합니다. [![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png#lightbox)
+1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2.   다음으로 **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다. [![](ad-hoc-distribution-images/selectcert.png "iOS 앱 스토어 선택")](ad-hoc-distribution-images/selectcert.png#lightbox)
+2. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.  [![](ad-hoc-distribution-images/selectcert.png "iOS 앱 스토어 선택")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,7 +91,7 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
 배포 프로필을 만드는 데 필요한 필수 구성 요소가 있으면 아래 단계에 따라 해당 배포 프로필을 만듭니다.
 
-1. Apple 프로비전 포털로 돌아가서 **프로비전 > 배포**를 선택합니다. [![](ad-hoc-distribution-images/distribute01.png "프로비전 > 배포 선택")](ad-hoc-distribution-images/distribute01.png#lightbox)
+1. Apple 프로비전 포털로 돌아가서 **프로비전 > 배포**를 차례로 선택합니다.  [![](ad-hoc-distribution-images/distribute01.png "프로비전 > 배포 선택")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. **+** 단추를 클릭하고 만들려는 배포 프로필 유형을 **임시**로 선택합니다.
 
@@ -101,17 +101,17 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
     [![](ad-hoc-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](ad-hoc-distribution-images/distribute03.png#lightbox)
 
-4. **계속** 단추를 클릭하고 응용 프로그램에 서명하는 데 필요한 배포 인증서를 선택합니다.
+4. **계속** 단추를 클릭하고 애플리케이션에 서명하는 데 필요한 배포 인증서를 선택합니다.
 
-    [![](ad-hoc-distribution-images/distribute04.png "응용 프로그램 서명에 필요한 배포 인증서 선택")](ad-hoc-distribution-images/distribute04.png#lightbox)
+    [![](ad-hoc-distribution-images/distribute04.png "애플리케이션 서명에 필요한 배포 인증서 선택")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
-6. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
+5. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
     [![](ad-hoc-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
-7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
+6. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [Xcode에서 프로필 및 인증서 다운로드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -125,9 +125,9 @@ Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studi
 
 ## <a name="selecting-a-distribution-profile-in-a-xamarinios-project"></a>Xamarin.iOS 프로젝트에서 배포 프로필 선택
 
-Xamarin.iOS 응용 프로그램의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
+Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 다음을 수행합니다.
 
@@ -172,13 +172,13 @@ iTunes Connect가 옵션이 아닌 경우 임시 배포를 사용하면 개발�
 
 ### <a name="ipa-support-for-ad-hoc-deployment"></a>임시 배포를 위한 IPA 지원
 
-프로비전된 응용 프로그램은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 응용 프로그램이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
+프로비전된 애플리케이션은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 애플리케이션이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
 
 IPA 만들기에 대한 자세한 내용은 [IPA 지원](~/ios/deploy-test/app-distribution/ipa-support.md) 가이드를 참조하세요.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.iOS 응용 프로그램을 테스트하는 데 필요한 임시 배포 메커니즘에 대해 설명했습니다.
+이 문서에서는 Xamarin.iOS 애플리케이션을 테스트하는 데 필요한 임시 배포 메커니즘에 대해 설명했습니다.
 
 
 ## <a name="related-links"></a>관련 링크
