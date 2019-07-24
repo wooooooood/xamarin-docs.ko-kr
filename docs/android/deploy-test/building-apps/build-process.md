@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 3e660e821e54d673b5c28c611ad24dcb4eefd4bb
-ms.sourcegitcommit: 247a6d00a95fd7f4cf918d923e5f357c8db56761
+ms.openlocfilehash: 43f8b1185900ff20f8e4c53680c1adf62ac8316a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58420187"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829693"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -251,13 +251,16 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 6.1에 추가되었습니다.
 
--   **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 올바른 값은 다음과 같습니다.
+-   **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 유효한 값은 다음과 같습니다.
 
     -   **없음**: 연결을 시도하지 않습니다.
 
     -   **SdkOnly**: 연결이 기본 클래스 라이브러리에서만 수행되며, 사용자 어셈블리에서는 수행되지 않습니다.
 
-    -   **전체**: 연결이 기본 클래스 라이브러리와 사용자 어셈블리에서 수행됩니다. **참고:** `AndroidLinkMode`에 *Full* 값을 사용할 경우 앱이 손상될 수 있습니다(특히 리플렉션을 사용하는 경우). *제대로* 알지 않는 한 이 값을 사용하지 마세요.
+    -   **전체**: 연결이 기본 클래스 라이브러리와 사용자 어셈블리에서 수행됩니다.
+
+        > [!NOTE]
+        > `AndroidLinkMode`에 *Full* 값을 사용할 경우 앱이 손상될 수 있습니다(특히 리플렉션을 사용하는 경우). *제대로* 알지 않는 한 이 값을 사용하지 마세요.
 
     ```xml
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
@@ -356,7 +359,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 8.1에 추가되었습니다.
 
--   **AndroidUseSharedRuntime**&ndash; 대상 장치에서 애플리케이션을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
+-   **AndroidUseSharedRuntime**&ndash; 대상 디바이스에서 응용 프로그램을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
 
     이 속성은 디버그 빌드의 경우 `True`, 릴리스 프로젝트의 경우 `False`여야 합니다.
 
@@ -449,7 +452,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     -   **기타**: *키릴 자모(Windows)* \[CP1251\], *발트어(Windows)* \[iso-8859-4, CP1257\], *베트남어(Windows)* \[CP1258\], *키릴 자모(KOI8-R)* \[koi8-r, CP1251\], *우크라이나어(KOI8-U)* \[koi8-u, CP1251\], *발트어(ISO)* \[iso-8859-4, CP1257\], *키릴 자모(ISO)* \[iso-8859-5, CP1251\], *ISCII 데바나가리 문자* \[x-iscii-de, CP57002\], *ISCII 벵골어* \[x-iscii-be, CP57003\], *ISCII 타밀어* \[x-iscii-ta, CP57004\], *ISCII 텔루구어* \[x-iscii-te, CP57005\], *ISCII 아삼어* \[x-iscii-as, CP57006\], *ISCII 오리야어* \[x-iscii-or, CP57007\], *ISCII 칸나다어* \[x-iscii-ka, CP57008\], *ISCII 말라얄람어* \[x-iscii-ma, CP57009\], *ISCII 구자라트어* \[x-iscii-gu, CP57010\], *ISCII 펀잡어* \[x-iscii-pa, CP57011\] 및 *태국어(Windows)* \[CP874\] 같은 기타 인코딩을 포함합니다.
 
-    -   **Rare**: *IBM EBCDIC(터키어)* \[CP1026\], *IBM EBCDIC(개방형 시스템 라틴어 1)* \[CP1047\], *IBM EBCDIC(미국-캐나다와 유로)* \[CP1140\], *IBM EBCDIC(독일과 유로)* \[CP1141\], *IBM EBCDIC(덴마크/노르웨이와 유로)* \[CP1142\], *IBM EBCDIC(핀란드/스웨덴과 유로)* \[CP1143\], *IBM EBCDIC(이탈리아와 유로)* \[CP1144\], *IBM EBCDIC(라틴 아메리카/스페인과 유로)* \[CP1145\], *IBM EBCDIC(영국과 유로)* \[CP1146\], *IBM EBCDIC(프랑스와 유로)* \[CP1147\], *IBM EBCDIC(국가별 설정과 유로)* \[CP1148\], *IBM EBCDIC(아이슬란드어와 유로)* \[CP1149\], *IBM EBCDIC(독일)* \[CP20273\], *IBM EBCDIC(덴마크/노르웨이)* \[CP20277\], *IBM EBCDIC(핀란드/스웨덴)* \[CP20278\], *IBM EBCDIC(이탈리아)* \[CP20280\], *IBM EBCDIC(라틴 아메리카/스페인)* \[CP20284\], *IBM EBCDIC(영국)* \[CP20285\], *IBM EBCDIC(일본어 가타카나 확장)* \[CP20290\], *IBM EBCDIC(프랑스)* \[CP20297\], *IBM EBCDIC(아랍어)* \[CP20420\], *IBM EBCDIC(히브리어)* \[CP20424\], *IBM EBCDIC(아이슬란드어)* \[CP20871\], *IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)* \[CP21025\], *IBM EBCDIC(미국-캐나다)* \[CP37\], *IBM EBCDIC(국가별 설정)* \[CP500\], *아랍어(ASMO 708)* \[CP708\], *중앙 유럽어(DOS)* \[CP852\]*, 키릴 자모(DOS)* \[CP855\], *터키어(DOS)* \[CP857\], *서유럽어(DOS와 유로)* \[CP858\], *히브리어(DOS)* \[CP862\], *아랍어(DOS)* \[CP864\], *러시아어(DOS)* \[CP866\], *그리스어(DOS)* \[CP869\], *IBM EBCDIC(라틴어 2)* \[CP870\] 및 *IBM EBCDIC(그리스어)* \[CP875\] 같은 희귀한 인코딩을 포함합니다.
+    -   **Rare**: *IBM EBCDIC(터키어)* \[CP1026\], *IBM EBCDIC(개방형 시스템 라틴어 1)* \[CP1047\], *IBM EBCDIC(미국-캐나다와 유로)* \[CP1140\], *IBM EBCDIC(독일과 유로)* \[CP1141\], *IBM EBCDIC(덴마크/노르웨이와 유로)* \[CP1142\], *IBM EBCDIC(핀란드/스웨덴과 유로)* \[CP1143\], *IBM EBCDIC(이탈리아와 유로)* \[CP1144\], *IBM EBCDIC(라틴 아메리카/스페인과 유로)* \[CP1145\], *IBM EBCDIC(영국과 유로)* \[CP1146\], *IBM EBCDIC(프랑스와 유로)* \[CP1147\], *IBM EBCDIC(국가별 설정과 유로)* \[CP1148\], *IBM EBCDIC(아이슬란드어와 유로)* \[CP1149\], *IBM EBCDIC(독일)* \[CP20273\], *IBM EBCDIC(덴마크/노르웨이)* \[CP20277\], *IBM EBCDIC(핀란드/스웨덴)* \[CP20278\], *IBM EBCDIC(이탈리아)* \[CP20280\], *IBM EBCDIC(라틴 아메리카/스페인)* \[CP20284\], *IBM EBCDIC(영국)* \[CP20285\], *IBM EBCDIC(일본어 가타카나 확장)* \[CP20290\], *IBM EBCDIC(프랑스)* \[CP20297\], *IBM EBCDIC(아랍어)* \[CP20420\], *IBM EBCDIC(히브리어)* \[CP20424\], *IBM EBCDIC(아이슬란드어)* \[CP20871\], *IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)* \[CP21025\], *IBM EBCDIC(미국-캐나다)* \[CP37\], *IBM EBCDIC(국가별 설정)* \[CP500\], *아랍어(ASMO 708)* \[CP708\], *중앙 유럽어(DOS)* \[CP852\] *, 키릴 자모(DOS)* \[CP855\], *터키어(DOS)* \[CP857\], *서유럽어(DOS와 유로)* \[CP858\], *히브리어(DOS)* \[CP862\], *아랍어(DOS)* \[CP864\], *러시아어(DOS)* \[CP866\], *그리스어(DOS)* \[CP869\], *IBM EBCDIC(라틴어 2)* \[CP870\] 및 *IBM EBCDIC(그리스어)* \[CP875\] 같은 희귀한 인코딩을 포함합니다.
 
     -   **West**: *서유럽어(Mac)* \[macintosh, CP10000\], *아이슬란드어(Mac)* \[x-mac-icelandic, CP10079\], *중앙 유럽어(Windows)* \[iso-8859-2, CP1250\], *서유럽어(Windows)* \[iso-8859-1, CP1252\], *그리스어(Windows)* \[iso-8859-7, CP1253\], *중앙 유럽어(ISO)* \[iso-8859-2, CP28592\], *라틴어 3(ISO)* \[iso-8859-3, CP28593\], *그리스어(ISO)* \[iso-8859-7, CP28597\], *라틴어 9 (ISO)* \[iso-8859-15, CP28605\], *OEM 미국* \[CP437\], *서유럽어(DOS)* \[CP850\], *포르투갈어(DOS)* \[CP860\], *아이슬란드어(DOS)* \[CP861\], *프랑스어(캐나다)(DOS)* \[CP863\] 및 *북유럽어(DOS)* \[CP865\] 같은 서부 인코딩을 포함합니다.
 
@@ -550,7 +553,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 ### <a name="signing-properties"></a>서명 속성
 
-서명 속성은 Android 장치에 설치할 수 있도록 애플리케이션 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
+서명 속성은 Android 디바이스에 설치할 수 있도록 응용 프로그램 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
 
 기본적으로 서명 대상은 필요한 경우 새 디버그 서명 키를 생성합니다. 예를 들어 빌드 서버에서 특정 키를 사용하려는 경우 다음 MSBuild 속성을 사용할 수 있습니다.
 
@@ -713,7 +716,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 ```
 
 
-### <a name="content"></a>콘텐츠
+### <a name="content"></a>Content
 
 일반적인 `Content` 빌드 동작이 지원되지 않습니다(비용이 많이 드는 최초 실행 단계 없이 지원하는 방법을 파악하지 못했기 때문).
 
