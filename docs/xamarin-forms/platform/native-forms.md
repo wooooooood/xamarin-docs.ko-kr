@@ -90,7 +90,7 @@ public class AppDelegate : UIApplicationDelegate
 
 한 번 합니다 `FinishedLaunching` 메서드가 실행 되었는지, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
-Xaml [ui를 사용 하(native-forms-images/ios-notespage.png "여 xaml xamarin.ios 앱") ![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷]] (native-forms-images/ios-notespage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
+Xaml [![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷](native-forms-images/ios-notespage.png " ui를 사용 하 여 xaml xamarin.ios 앱")](native-forms-images/ios-notespage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
 
 UI와 상호 작용 하는 **+** [`Button`](xref:Xamarin.Forms.Button)예를 들어를 탭 하면 코드를 실행 하는 `NotesPage` 동안 다음 이벤트 처리기가 발생 합니다.
 
@@ -117,7 +117,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 `NavigateToNoteEntryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생을 `UIViewController` 사용 하 여를 `CreateViewController` 집합과 확장 메서드를를 `Title` 속성은 `UIViewController`합니다. 합니다 `UIViewController` 다음 푸시됩니다 `UINavigationController` 여는 `PushViewController` 메서드. Xamarin.Forms에 UI를 정의 하는 따라서 `NoteEntryPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
-Xaml [ui를 사용 하(native-forms-images/ios-noteentrypage.png "여 xaml xamarin.ios 앱") ![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷]] (native-forms-images/ios-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
+Xaml [![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷](native-forms-images/ios-noteentrypage.png " ui를 사용 하 여 xaml xamarin.ios 앱")](native-forms-images/ios-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
 
 경우는 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `UIViewController` 에 대 한는 `NoteEntryPage` 에서 클래스를 `UINavigationController`, 사용자 수를 반환를 `UIViewController` 에 대 한는 `NotesPage` 클래스.
 
@@ -173,7 +173,7 @@ public class MainActivity : AppCompatActivity
 
 한 번 합니다 `OnCreate` 메서드가 실행 되었는지, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
-Xaml [ui를 사용 하(native-forms-images/android-notespage.png "여 Xaml Xamarin android 앱") ![에 정의 된 UI를 사용 하는 Xamarin Android 응용 프로그램의 스크린샷]] (native-forms-images/android-notespage-large.png#lightbox "XAML UI를 사용 하는 Xamarin Android 앱")
+Xaml [![에 정의 된 UI를 사용 하는 Xamarin Android 응용 프로그램의 스크린샷](native-forms-images/android-notespage.png "ui를 사용 하 여 Xaml Xamarin android 앱")](native-forms-images/android-notespage-large.png#lightbox "XAML UI를 사용 하는 Xamarin Android 앱")
 
 UI와 상호 작용 하는 **+** [`Button`](xref:Xamarin.Forms.Button)예를 들어를 탭 하면 코드를 실행 하는 `NotesPage` 동안 다음 이벤트 처리기가 발생 합니다.
 
@@ -203,7 +203,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 `NavigateToNoteEntryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생를 `Fragment` 사용 하 여를 `CreateSupportFragment` 확장 메서드를 추가 합니다 `Fragment` 조각으로 백 스택. Xamarin.Forms에 UI를 정의 하는 따라서 `NoteEntryPage` 표시할 다음 스크린샷에 표시 된 대로:
 
-Xaml [ui를 사용 하(native-forms-images/android-noteentrypage.png "여 Xaml Xamarin android 앱") ![에 정의 된 UI를 사용 하는 Xamarin Android 응용 프로그램의 스크린샷]] (native-forms-images/android-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 Xamarin Android 앱")
+Xaml [![에 정의 된 UI를 사용 하는 Xamarin Android 응용 프로그램의 스크린샷](native-forms-images/android-noteentrypage.png "ui를 사용 하 여 Xaml Xamarin android 앱")](native-forms-images/android-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 Xamarin Android 앱")
 
 때를 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `Fragment` 에 대 한를 `NoteEntryPage` 조각 백 스택 으로부터 사용자를 반환 합니다 `Fragment` 에 대 한는 `NotesPage` 클래스.
 
@@ -290,7 +290,7 @@ public sealed partial class MainPage : Page
 
 한 번 합니다 `MainPage` 생성자가 실행, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
-Xamarin.ios xaml UI를 사용 하 [여 ![Xamarin. forms xaml UWP 앱에서 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-notespage.png "") ] (native-forms-images/uwp-notespage-large.png#lightbox "Xamarin FORMS XAML UI를 사용 하는 UWP 앱")
+Xamarin.ios xaml UI를 사용 하 여 [![Xamarin. forms xaml UWP 앱에서 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-notespage.png "")](native-forms-images/uwp-notespage-large.png#lightbox "Xamarin FORMS XAML UI를 사용 하는 UWP 앱")
 
 UI와 상호 작용 하는 **+** [`Button`](xref:Xamarin.Forms.Button)예를 들어를 탭 하면 코드를 실행 하는 `NotesPage` 동안 다음 이벤트 처리기가 발생 합니다.
 
@@ -315,7 +315,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 UWP의 탐색은 일반적으로 수행 합니다 `Frame.Navigate` 메서드를 사용 하는 `Page` 인수. Xamarin.Forms 정의 `Frame.Navigate` 사용 하는 확장 메서드를 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지 인스턴스를 파생 합니다. 따라서 경우 합니다 `NavigateToNoteEntryPage` 메서드가 실행 Xamarin.Forms에 정의 된 UI `NoteEntryPage` 표시할 다음 스크린샷에 표시 된 대로:
 
-Xamarin.ios xaml UI를 사용 하 [여 ![Xamarin. forms xaml UWP 앱에서 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-noteentrypage.png "") ] (native-forms-images/uwp-noteentrypage-large.png#lightbox "Xamarin FORMS XAML UI를 사용 하는 UWP 앱")
+Xamarin.ios xaml UI를 사용 하 여 [![Xamarin. forms xaml UWP 앱에서 정의 된 UI를 사용 하는 UWP 응용 프로그램의 스크린샷](native-forms-images/uwp-noteentrypage.png "")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Xamarin FORMS XAML UI를 사용 하는 UWP 앱")
 
 때를 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `FrameworkElement` 에 대 한를 `NoteEntryPage` 는 앱의 백 스택 으로부터 사용자를 반환 합니다 `FrameworkElement` 에 대 한는 `NotesPage` 클래스.
 
