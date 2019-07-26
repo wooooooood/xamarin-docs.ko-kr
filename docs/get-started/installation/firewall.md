@@ -39,7 +39,7 @@ Mac을 사용하고 Xamarin.Android 설치 문제가 발생하는 경우 macOS�
 
 다음 주소를 추가하여 NuGet에 액세스해야 합니다(Xamarin.Forms는 NuGet으로 패키지됨).
 
-- www.nuget.org(NuGet에 액세스)
+- ww.nuget.org (NuGet에 액세스)
 - globalcdn.nuget.org (NuGet 다운로드)
 - dl-ssl.google.com(Android 및 Xamarin.Forms용 Google 구성 요소)
 
