@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ea8af3c84bb53434489d230d159a27b6b9d500d8
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830253"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510362"
 ---
 # <a name="radiobutton"></a>RadioButton
 
-이 섹션에서는 만들게 됩니다 (사용 하도록 설정 하면 한 다른 비활성화) 두 개의 상호 배타적인 라디오 단추를 사용 하 여 [`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/)
-및 [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
-위젯입니다. 라디오 단추 중 하나를 누를 때 알림 메시지가 표시 됩니다.
+이 섹션에서는 다음을 사용 하 여 두 개의 상호 배타적인 라디오 단추를 만듭니다. 하나를 사용 하지 않도록 설정 합니다.[`RadioGroup`](xref:Android.Widget.RadioGroup)
+하거나[`RadioButton`](xref:Android.Widget.RadioButton)
+위젯. 라디오 단추 중 하나를 누르면 알림 메시지가 표시 됩니다.
 
 
-열기는 **Resources/layout/Main.axml** 파일을 두 개의 추가 [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s, 중첩을 [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) (내부를 [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+**Resources/layout/Main. axml** 파일을 열고에 중첩 된 [`RadioButton`](xref:Android.Widget.RadioButton) [`RadioGroup`](xref:Android.Widget.RadioGroup) 두 개의를 추가 합니다 [`LinearLayout`](xref:Android.Widget.LinearLayout)(내).
 
 ```xml
 <RadioGroup
@@ -38,10 +38,10 @@ ms.locfileid: "67830253"
 </RadioGroup>
 ```
 
-것이 중요 하는 [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s에서 함께 그룹화 됩니다는 [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) 요소 개 이상를 한 번에 선택할 수 있도록 합니다. 이 논리는 Android 시스템에서 자동으로 처리 됩니다. 한 경우 [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
-내에서 그룹을 선택 하면 나머지는 자동으로 선택 취소 합니다.
+는 한 번에 둘 [`RadioButton`](xref:Android.Widget.RadioButton)이상의 항목을 선택할 수 있도록 [`RadioGroup`](xref:Android.Widget.RadioGroup) 요소를 함께 그룹화 하는 것이 중요 합니다. 이 논리는 Android 시스템에서 자동으로 처리 됩니다. 하나[`RadioButton`](xref:Android.Widget.RadioButton)
+그룹 내에서 다른 모든 사용자가 자동으로 선택 취소 됩니다.
 
-작업을 수행 하는 경우 각 [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) 는 이벤트 처리기를 작성 해야 선택:
+각 [`RadioButton`](xref:Android.Widget.RadioButton) 항목을 선택 하는 경우 작업을 수행 하려면 이벤트 처리기를 작성 해야 합니다.
 
 ```csharp
 private void RadioButtonClick (object sender, EventArgs e)
@@ -51,12 +51,12 @@ private void RadioButtonClick (object sender, EventArgs e)
 }
 ```
 
-첫째, 보낸 사람에 게 전달 되는 라디오 단추에 캐스팅 됩니다.
-는 [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
-메시지는 선택된 된 라디오 단추의 텍스트를 표시합니다.
+먼저 전달 된 발신자가 RadioButton으로 캐스팅 됩니다.
+그런 다음[`Toast`](xref:Android.Widget.Toast)
+메시지 선택한 라디오 단추의 텍스트를 표시 합니다.
 
-이제 맨 아래에 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-메서드를 다음을 추가 합니다.
+이제 아래에서[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+메서드를 추가 하 고 다음을 추가 합니다.
 
 ```csharp
 RadioButton radio_red = FindViewById<RadioButton>(Resource.Id.radio_red);
@@ -66,14 +66,14 @@ radio_red.Click += RadioButtonClick;
 radio_blue.Click += RadioButtonClick;
 ```
 
-각 캡처합니다 합니다 [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)레이아웃에서 s는 새로 만든 이벤트 handlerto 각 추가 합니다.
+그러면 각 [`RadioButton`](xref:Android.Widget.RadioButton)가 레이아웃에서 캡처되고 새로 만든 이벤트 handlerto 각각에 추가 합니다.
 
 애플리케이션을 실행합니다.
 
 > [!TIP]
-> 상태를 변경 해야 할 경우 (때와 같이 저장 된 로드 [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/))를 사용 합니다 [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-> 속성 setter 또는 [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> 저장 [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)된를 로드 하는 경우와 같이 사용자가 직접 상태를 변경 해야 하는 경우 다음을 사용 합니다.[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> 속성 setter 또는[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > 메서드를 재정의합니다.
 
-*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다*
-[*Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/). 
+*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
+[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다. 

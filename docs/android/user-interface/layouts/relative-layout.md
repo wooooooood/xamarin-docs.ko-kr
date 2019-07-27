@@ -1,31 +1,31 @@
 ---
-title: Xamarin.Android에는 RelativeLayout를 사용 하 여
-description: RelativeLayout Xamarin.Android 응용 프로그램을 사용 하는 방법
+title: Xamarin Android에서 RelativeLayout 사용
+description: Xamarin Android 응용 프로그램에서 RelativeLayout를 사용 하는 방법
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: af2972ecc92435836a75013e6203ba47c2c04627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a53baed9d5f291628d7d1a8da05739e43412d473
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61303626"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509724"
 ---
-# <a name="relativelayout"></a>RelativeLayout
+# <a name="xamarinandroid-relativelayout"></a>Xamarin Android RelativeLayout
 
-[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) 자식 표시 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-상대 위치에 요소입니다. 위치를 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 등의 왼쪽에 대 한 또는 지정된 된 요소의 다음 형제 요소를 기준으로 지정할 수 있습니다 또는의 상대적인 배치를 [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
-영역 (예:으로 아래쪽으로 정렬 왼쪽 center)입니다.
+[`RelativeLayout`](xref:Android.Widget.RelativeLayout)는 자식을 표시 하는입니다. [`ViewGroup`](xref:Android.Views.ViewGroup)[`View`](xref:Android.Views.View)
+상대 위치의 요소 의 위치는 형제 [`View`](xref:Android.Views.View) 요소 (예: 지정 된 요소 왼쪽 또는 아래)를 기준으로 지정 하거나에 상대적인 위치에 지정할 수 있습니다.[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+영역 (예: 가운데 왼쪽에 맞춰진).
 
-A [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) 중첩 제거할 수 있으므로 사용자 인터페이스 디자인에 매우 강력한 유틸리티 [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s입니다. 여러 중첩을 사용 하는 경우 [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-그룹 수 있습니다 단일 바꾸려면 [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)합니다.
+는 [`RelativeLayout`](xref:Android.Widget.RelativeLayout) [중첩`ViewGroup`](xref:Android.Views.ViewGroup)된를 제거할 수 있으므로 사용자 인터페이스를 디자인 하는 매우 강력한 유틸리티입니다. 여러 중첩 된를 사용 하는 경우[`LinearLayout`](xref:Android.Widget.LinearLayout)
+그룹을 단일 [`RelativeLayout`](xref:Android.Widget.RelativeLayout)으로 바꿀 수 있습니다.
 
-명명 된 새 프로젝트를 시작 **HelloRelativeLayout**합니다.
+**HelloRelativeLayout**라는 새 프로젝트를 시작 합니다.
 
-엽니다는 **Resources/Layout/Main.axml** 파일과 다음 삽입:
+**Resources/Layout/Main. axml** 파일을 열고 다음을 삽입 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,13 +60,13 @@ A [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.Rel
 </RelativeLayout>
 ```
 
-각 확인 합니다 `android:layout_*` 같은 특성 `layout_below`, `layout_alignParentRight`, 및 `layout_toLeftOf`합니다.
-사용 하는 경우는 [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)에서 이러한 특성을 사용 하 여 각 배치 하고자 하는 방법을 설명 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)합니다. 이러한 특성의 각각 다른 종류의 상대 위치를 정의 합니다. 형제의 리소스 ID를 사용 하는 일부 특성 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 자체 상대 위치를 정의 합니다. 예를 들어, 마지막 [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) 를 왼쪽의 정렬 된-the-위쪽-의 사이에 정의 된 합니다 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) ID로 식별 `ok` (이전 는[`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)).
+각 `android:layout_*` 특성 (예 `layout_below`:, `layout_alignParentRight`및 `layout_toLeftOf`)을 확인 합니다.
+을 사용 하 [`RelativeLayout`](xref:Android.Widget.RelativeLayout)는 경우 이러한 특성을 사용 하 여 각각 [`View`](xref:Android.Views.View)의 위치를 지정할 수 있습니다. 이러한 특성 중 하나는 서로 다른 종류의 상대 위치를 정의 합니다. 일부 특성은 형제의 [`View`](xref:Android.Views.View) 리소스 ID를 사용 하 여 고유한 상대 위치를 정의 합니다. 예를 들어, 마지막 [`Button`](xref:Android.Widget.Button) 는 ID `ok` (이전 [`Button`](xref:Android.Widget.Button))로 [`View`](xref:Android.Views.View) 식별 되는의 왼쪽 및 오른쪽에 맞추어 정의 됩니다.
 
-에 정의 된 모든 사용 가능한 레이아웃 특성 [ `RelativeLayout.LayoutParams` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)합니다.
+사용 가능한 모든 레이아웃 특성은에 [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams)정의 되어 있습니다.
 
-이 레이아웃을 로드 해야 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-방법:
+다음에서이 레이아웃을 로드 해야 합니다.[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+방법이
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -76,21 +76,19 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-합니다 [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/p/System.Int32/) 에 대 한 레이아웃 파일을 로드 하는 메서드를 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)리소스 ID 기준으로 지정 된 &mdash; `Resource.Layout.Main` 가리킵니다는 **리소스/레이아웃 / Main.axml** 레이아웃 파일입니다.
+메서드 [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*) [`Activity`](xref:Android.App.Activity)는 리소스 ID&mdash;로지정 된에 대 한 레이아웃 파일을 로드 하 고 리소스 **/레이아웃/기본. axml** 레이아웃 파일을 참조 합니다. `Resource.Layout.Main`
 
-애플리케이션을 실행합니다. 다음 레이아웃을 표시 됩니다.
+애플리케이션을 실행합니다. 다음 레이아웃이 표시 됩니다.
 
-[![TextView를, EditText, 및 두 개의 단추를 사용 하 여 상대 레이아웃의 스크린 샷](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
-
+[![TextView, EditText 및 두 개의 단추가 있는 상대 레이아웃의 스크린샷](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
 ## <a name="resources"></a>자료
 
--   [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
--   [`RelativeLayout.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
--   [`EditText`](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
--   [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)
+- [`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+- [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams)
+- [`TextView`](xref:Android.Widget.TextView)
+- [`EditText`](xref:Android.Widget.EditText)
+- [`Button`](xref:Android.Widget.Button)
 
-
-*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다*
-[*Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/).
+*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
+[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.

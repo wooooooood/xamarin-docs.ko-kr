@@ -1,497 +1,496 @@
 ---
 title: 롤리팝 기능
-description: 이 문서에서는 Android 5.0 (Lollipop)에 도입 된 새로운 기능의 간략 한 개요를 제공 합니다. 이러한 기능에는 애니메이션와 보기 그림자를 그릴 수 있는 색조 새로운 지원 기능 뿐만 아니라 자료 테마 라는 새 사용자 인터페이스 스타일을 포함 합니다. Android 5.0에는 저장소, 네트워킹, 연결 및 멀티미디어 기능을 개선 하기 위해 향상 된 알림, 두 개의 새 UI 위젯, 새 작업 스케줄러를 및 몇 가지 새로운 Api도 포함 됩니다.
+description: 이 문서에서는 Android 5.0 (롤리팝)에 도입 된 새로운 기능에 대 한 개략적인 개요를 제공 합니다. 이러한 기능에는 재질 테마 라는 새로운 사용자 인터페이스 스타일 뿐만 아니라 애니메이션, 그림자, 그릴 만한 색조 등의 새로운 지원 기능도 포함 됩니다. Android 5.0에는 저장소, 네트워킹, 연결 및 멀티미디어 기능을 개선 하기 위해 향상 된 알림, 두 가지 새로운 UI 위젯, 새 작업 스케줄러 및 몇 가지 새로운 Api가 포함 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d6173e1886eaf807decd960b07acc022bb17c04d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c89b78e58918d2b561c6236ac273ffdb872211f0
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61177671"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511391"
 ---
 # <a name="lollipop-features"></a>롤리팝 기능
 
-_이 문서에서는 Android 5.0 (Lollipop)에 도입 된 새로운 기능의 간략 한 개요를 제공 합니다. 이러한 기능에는 애니메이션와 보기 그림자를 그릴 수 있는 색조 새로운 지원 기능 뿐만 아니라 자료 테마 라는 새 사용자 인터페이스 스타일을 포함 합니다. Android 5.0에는 저장소, 네트워킹, 연결 및 멀티미디어 기능을 개선 하기 위해 향상 된 알림, 두 개의 새 UI 위젯, 새 작업 스케줄러를 및 몇 가지 새로운 Api도 포함 됩니다._
+_이 문서에서는 Android 5.0 (롤리팝)에 도입 된 새로운 기능에 대 한 개략적인 개요를 제공 합니다. 이러한 기능에는 재질 테마 라는 새로운 사용자 인터페이스 스타일 뿐만 아니라 애니메이션, 그림자, 그릴 만한 색조 등의 새로운 지원 기능도 포함 됩니다. Android 5.0에는 저장소, 네트워킹, 연결 및 멀티미디어 기능을 개선 하기 위해 향상 된 알림, 두 가지 새로운 UI 위젯, 새 작업 스케줄러 및 몇 가지 새로운 Api가 포함 되어 있습니다._
 
 ## <a name="lollipop-overview"></a>롤리팝 개요
 
-Android 5.0 (Lollipop)는 새로운 디자인 언어에는 *재료 디자인*,이 사용 하 여 앱을 쉽게 하 고 보다 직관적으로 사용할 새 기능의 캐스팅을 지원 합니다. 재질 디자인을 사용 하 여 Android 5.0 뿐만 아니라 제공 Android 휴대폰 생기; 또한 Android 기반 태블릿, 데스크톱 컴퓨터, 조사식 및 스마트 Tv에 대 한 디자인 규칙의 새 집합을 제공합니다. 디자인에 주안점을 간단 하 고 미니 멀리즘 하면서 사용 하 여 친숙 한 tactile 특성 (예: 실제 화면 가장자리와 큐) 사용자를 신속 하 고 직관적으로 인터페이스를 이해 합니다.
+Android 5.0 (롤리팝)에는 새로운 디자인 언어, *자재 디자인*및 새로운 기능의 지원 캐스트를 도입 하 여 앱을 더 쉽고 직관적으로 사용할 수 있도록 하는 새로운 기능이 도입 되었습니다. 재질 디자인을 사용 하는 경우 Android 5.0는 Android 휴대폰에 facelift 수 있습니다. 또한 Android 기반 태블릿, 데스크톱 컴퓨터, 감시 및 스마트 Tv에 대 한 새로운 디자인 규칙 집합을 제공 합니다. 이러한 디자인 규칙은 사용자가 인터페이스를 빠르고 직관적으로 이해할 수 있도록 친숙 한 tactile 특성 (예: 사실적인 표면 및에 지 큐)을 활용 하는 동시에 간단 하 고 minimalism 강조 합니다.
 
-*재질 테마* 는 Android에서 이러한 UI 디자인 원칙의 전형입니다. 이 문서는 재질 테마 지원 기능을 포함 하 여 시작 합니다.
+*재질 테마* 는 Android에서 이러한 UI 디자인 원칙을 전형는 것입니다. 이 문서에서는 먼저 재질 테마의 지원 기능을 다룹니다.
 
--   **애니메이션** &ndash; *피드백 Touch* 애니메이션 *활동 전환* 애니메이션 *상태 전환 보기* 애니메이션과 *효과 표시*합니다.
+-   **애니메이션**     터치 피드백 애니메이션, 활동 전환 애니메이션, 뷰 상태 전환 애니메이션 및 표시 효과를 나타냅니다. &ndash;
 
--   **그림자 및 권한 상승 확인** &ndash; 뷰는 이제는 `elevation` 속성; 보기를 사용 하 여 더 높은 `elevation` 값 백그라운드에서 더 큰 그림자를 캐스팅 합니다.
+-   **그림자 및 권한 상승 보기** 보기에는 `elevation` 속성이 있으며, 더 `elevation` 큰 값이 있는 뷰는 배경에서 더 큰 그림자를 캐스팅 합니다. &ndash;
 
--   **기능 색** &ndash; *Drawable 색조* 해당 색을 변경 하 여 이미지 자산을 다시 사용할 수 있도록 하 고 *두드러진 색 추출* 동적으로 도움이 테마 이미지의에서 색상을 기반으로 앱 합니다.
+-   **색 기능** 그릴 수 있는 색조를 사용 하면 색을 변경 하 여 이미지 자산을 다시 사용할 수 있으며, *두드러진 색 추출을* 사용 하면 이미지의 색을 기준으로 앱에 동적으로 테마를 지정할 수 있습니다.  &ndash;
 
-많은 자료 테마 기능에 이미 작성 되어 Android 5.0 UI, 동안 될 다른 사용자가 명시적으로 추가 해야 앱. 예를 들어, 일부 표준 뷰 (예: 단추) 앱에는 대부분의 뷰 그림자 사용 하도록 설정 해야 하는 동안 이미 터치 피드백 애니메이션을 포함 합니다.
+대부분의 재질 테마 기능은 Android 5.0 UI 환경에 이미 내장 되어 있지만 앱에 명시적으로 추가 해야 하는 경우도 있습니다. 예를 들어 일부 표준 보기 (예: 단추)에는 터치 피드백 애니메이션이 이미 포함 되어 있지만 앱에서 대부분의 보기 그림자를 사용 하도록 설정 해야 합니다.
 
-재질 테마를 통해 일으킵니다 UI 개선 사항 외에도 Android 5.0이이 문서에서 다루는 다른 몇 가지 새로운 기능이 포함 합니다.
+Android 5.0에는 재질 테마를 통해 제공 되는 UI 개선 사항 외에도이 문서에서 설명 하는 여러 가지 새로운 기능이 포함 되어 있습니다.
 
--   **알림 향상** &ndash; 알림이 Android 5.0에서 새롭게, 잠금 화면 알림을 지원 하 고 새 크게 업데이트 되었습니다 *헤 즈 업* 알림 프레젠테이션 형식입니다.
+-   **향상 된 알림** Android 5.0의 알림은 새로운 디자인, 잠금 화면 알림 지원 및 새로운 준비 알림 프레젠테이션 형식으로 크게 업데이트 되었습니다.  &ndash;
 
--   **새 UI 위젯** &ndash; 새 `RecyclerView` 위젯을 쉽게 큰 데이터 집합 및 복잡 한 정보와 새 전달 하기 위해 앱 `CardView` 위젯은 텍스트를 표시 하기 위한 간소화 된 카드와 같은 프레젠테이션 형식을 제공 하 고 이미지입니다.
+-   **새 UI 위젯** 새 위젯을 사용 하면 앱이 쉽게 많은 데이터 집합 및 복잡 한 정보를 전달할 수 있으며, 새 `CardView` 위젯은 텍스트 및 이미지를 표시 하기 위한 간단한 카드 모양의 프레젠테이션 형식을 제공 합니다. `RecyclerView` &ndash;
 
--   **새 Api** &ndash; Android 5.0 Bluetooth 연결, 저장소 관리를 간소화 및 멀티미디어 플레이어 및 카메라 장치 보다 유연 하 게 제어를 향상 된 여러 네트워크 지원에 대 한 새로운 Api를 추가 합니다. 새 작업 예약 기능 이란에서 비동기적으로 작업을 실행할 수 있습니다. 예약 된 시간입니다. 이 기능을 사용 하면에서 배터리 수명을 개선 하려면 예를 들어 장치가 있는 경우 위치 및 청구를 수행 하기 위해 작업을 예약 합니다.
+-   **새 api** &ndash; Android 5.0은 여러 네트워크 지원, 향상 된 Bluetooth 연결, 더 쉬운 저장소 관리 및 멀티미디어 플레이어와 카메라 장치를 유연 하 게 제어 하기 위한 새 api를 추가 합니다. 새 작업 예약 기능을 사용 하 여 예약 된 시간에 작업을 비동기적으로 실행할 수 있습니다. 이 기능을 사용 하면 장치가 연결 되 고 충전 될 때 작업을 예약 하는 등의 방법으로 배터리 수명을 향상할 수 있습니다.
 
 
 ## <a name="requirements"></a>요구 사항
 
-다음은 Xamarin 기반 앱에서 새 Android 5.0 기능을 사용 하려면 필요 합니다.
+Xamarin 기반 앱에서 새로운 Android 5.0 기능을 사용 하려면 다음이 필요 합니다.
 
--   **Xamarin.Android** &ndash; 4.20 이상 Xamarin.Android를 설치 하 고 mac 용 Visual Studio 또는 Visual Studio를 사용 하 여 구성 해야 
+-   Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.20 이상 버전을 설치 하 고 구성 해야 합니다. 
 
--   **Android SDK** &ndash; Android 5.0 (API 21) 나중에 설치 해야 Android SDK Manager를 통해 또는 합니다.
+-   **Android SDK** &ndash; Android 5.0 (API 21) 이상을 Android SDK Manager를 통해 설치 해야 합니다.
 
--   **Java Developer Kit** &ndash; Xamarin.Android 필요 [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) API 수준 24 개발 하는 경우 이후 또는 큰 (JDK 1.8에서는 API 수준 24 롤리팝을 비롯 한 이전). 64 비트 JDK 1.8 버전이 필요한 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우입니다.
+-   **Java 개발자 키트** API 수준 24 이상에 대해 개발 하는 경우 xamarin.ios는 [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이상이 필요 합니다 (jdk 1.8은 롤리팝을 포함 하 여 24 이전 API 수준도 지원 합니다). &ndash; 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우 64 비트 버전의 JDK 1.8이 필요 합니다.
 
-계속 사용할 수 있습니다 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) API 레벨 23에 맞게 개발 이하의 경우.
+API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 을 계속 사용할 수 있습니다.
 
 
 ## <a name="setting-up-an-android-50-project"></a>Android 5.0 프로젝트 설정
 
-Android 5.0 프로젝트를 만들려면 최신 도구 및 SDK 패키지를 설치 해야 합니다. Android 5.0를 대상으로 하는 Xamarin.Android 프로젝트를 설정 하려면 다음 단계를 사용 합니다.
+Android 5.0 프로젝트를 만들려면 최신 도구 및 SDK 패키지를 설치 해야 합니다. Android 5.0를 대상으로 하는 Xamarin Android 프로젝트를 설정 하려면 다음 단계를 수행 합니다.
 
-1. Xamarin.Android 도구를 설치 하 고 Xamarin 라이선스를 활성화 합니다. 참조 [설정 및 설치](~/android/get-started/installation/index.md) Xamarin.Android를 설치 하는 방법에 대 한 자세한 내용은 합니다.
+1. Xamarin Android 도구를 설치 하 고 Xamarin 라이선스를 활성화 합니다. Xamarin을 설치 하는 방법에 대 한 자세한 내용은 [설정 및 설치](~/android/get-started/installation/index.md) 를 참조 하세요.
 
-2. Visual Studio for Mac를 사용 하는 경우에 최신 Android 5.0 업데이트를 설치 합니다.
+2. Mac용 Visual Studio를 사용 하는 경우 최신 Android 5.0 업데이트를 설치 합니다.
 
-3. Android SDK Manager 시작 (Mac 용 Visual Studio에서 사용 하 여 **도구 &gt; 열린 Android SDK Manager&hellip;**) 및 Android SDK Tools 23.0.5 설치 이상:
+3. Mac용 Visual Studio에서  **&gt; 도구 Android SDK 관리자&hellip;** 를 사용 하 여 Android SDK 관리자를 시작 하 고 Android SDK Tools 23.0.5 이상을 설치 합니다.
 
-    [![Android SDK Manager에서 Android SDK 도구 선택](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
+    [![Android SDK 관리자에서 Android SDK 도구 선택](lollipop-images/android-l-tools-sml.png)](lollipop-images/android-l-tools.png#lightbox)
 
    또한 최신 Android 5.0 SDK 패키지 (API 21 이상)를 설치 합니다.
 
-    [![Android SDK Manager에서 Android 5.0 SDK 패키지를 설치합니다.](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
+    [![Android SDK Manager에서 Android 5.0 SDK 패키지 설치](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
-   Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html)합니다.
+   Android SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html)를 참조 하세요.
 
-4. 새 Xamarin.Android 프로젝트를 만듭니다. Xamarin 사용한 Android 개발을 처음 접하는 경우 참조 [Hello, Android](~/android/get-started/hello-android/index.md) Android 프로젝트 만들기에 대해 알아보려면 합니다. Android 프로젝트를 만들면 Android 5.0 버전 설정을 구성 해야 합니다.
-   Mac 용 Visual Studio로 이동 **프로젝트 옵션 &gt; 빌드 &gt; 일반** 설정 하 고 **대상 프레임 워크** 하 **Android 5.0 (Lollipop)** 또는 나중에:
+4. 새 Xamarin Android 프로젝트를 만듭니다. Xamarin을 사용 하 여 Android를 처음 사용 하는 경우 android 프로젝트를 만드는 방법에 대해 알아보려면 [Hello, android](~/android/get-started/hello-android/index.md) 를 참조 하세요. Android 프로젝트를 만들 때 Android 5.0에 대 한 버전 설정을 구성 해야 합니다.
+   Mac용 Visual Studio에서 **프로젝트 &gt; 옵션 일반 빌드 &gt;**  로 이동 하 고 **대상 프레임 워크** 를 **Android 5.0 (롤리팝)** 이상으로 설정 합니다.
 
-    ![Android 5.0 Lollipop에 대상 Framwework 설정](lollipop-images/target-framework.png)
+    ![대상 Framwework를 Android 5.0 롤리팝으로 설정](lollipop-images/target-framework.png)
 
-   아래 **프로젝트 옵션 &gt; 빌드 &gt; Android 응용 프로그램**대상 Android 버전을 최소 설정한 **자동으로 사용 하 여 대상 프레임 워크 버전**:
+   **프로젝트 &gt; 옵션에서 android 응용 프로그램 빌드 &gt;** 를 선택 하 고 최소 및 대상 Android 버전을 **자동 사용 대상 프레임 워크 버전**으로 설정 합니다.
 
-    ![최소 및 대상 Android 버전은 자동으로 설정](lollipop-images/minimum-android-version.png)
+    ![최소 및 대상 Android 버전을 자동으로 설정](lollipop-images/minimum-android-version.png)
 
-5. 앱을 테스트 하려면 에뮬레이터 또는 Android 장치를 구성 합니다. 에뮬레이터를 사용 하는 경우 참조 [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md) 에 Xamarin Studio 또는 Visual Studio를 사용 하 여 사용 하기 위해 Android 에뮬레이터를 구성 하는 방법을 알아봅니다. Android 장치를 사용 하는 경우 참조 [the Preview SDK 설정](https://developer.android.com/preview/setup-sdk.html) Android 5.0 장치를 업데이트 하는 방법을 알아보려면. 실행 하 고 Xamarin.Android 응용 프로그램 디버깅에 대 한 Android 장치를 구성 하려면 참조 [장치 개발을 위한 설정](~/android/get-started/installation/set-up-device-for-development.md)합니다.
+5. 에뮬레이터 또는 Android 장치를 구성 하 여 앱을 테스트 합니다. 에뮬레이터를 사용 하는 경우 Xamarin Studio 또는 Visual Studio에서 사용할 Android 에뮬레이터를 구성 하는 방법을 알아보려면 [설치 Android Emulator](~/android/get-started/installation/android-emulator/index.md) 를 참조 하세요. Android 장치를 사용 하는 경우 Android 5.0에 대 한 장치를 업데이트 하는 방법을 알아보려면 [PREVIEW SDK 설정](https://developer.android.com/preview/setup-sdk.html) 을 참조 하세요. Xamarin Android 응용 프로그램을 실행 하 고 디버깅 하기 위해 Android 장치를 구성 하려면 [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조 하세요.
 
-참고: 대상 Android L 미리 보기는 기존 Android 프로젝트를 업데이트 하는 경우 업데이트 해야 합니다 **대상 프레임 워크** 하 고 **Android 버전** 위에서 설명한 값에 합니다.
+참고: Android L Preview를 대상으로 하는 기존 Android 프로젝트를 업데이트 하는 경우 **대상 프레임 워크** 및 **android 버전** 을 위에서 설명한 값으로 업데이트 해야 합니다.
 
 ## <a name="important-changes"></a>중요 한 변경 내용
 
-이전에 게시 된 Android 앱은 Android 5.0에서 변경 하 여 저하 될 수 있습니다. 특히, Android 5.0에서는 새로운 런타임 및 크게 변경 된 알림 형식에 사용합니다.
+이전에 게시 된 Android 앱은 Android 5.0 변경의 영향을 받을 수 있습니다. 특히 Android 5.0는 새로운 런타임과 상당한 변경 된 알림 형식을 사용 합니다.
 
 ### <a name="android-runtime"></a>Android 런타임
 
-Android 5.0 Dalvik 대신 기본 런타임으로 새 Android 런타임 (그림)을 사용합니다. 아트는 몇 가지 주요 새 기능을 구현합니다.
+Android 5.0에서는 새 Android Runtime (ART)을 기본 런타임으로 사용 합니다. 아트는 다음과 같은 몇 가지 주요 새로운 기능을 구현 합니다.
 
--   **미리-(AOT) 컴파일** &ndash; AOT 앱이 처음으로 시작 하기 전에 앱 코드를 컴파일하여 앱 성능을 향상 시킬 수 있습니다. 앱을 설치 하면 아트 컴파일된 앱 대상 장치에 대 한 실행 파일을 생성 합니다.
+-   **사전 (AOT) 컴파일** &ndash; AOT는 앱이 처음 시작 되기 전에 앱 코드를 컴파일하여 앱 성능을 향상 시킬 수 있습니다. 앱이 설치 되 면 ART는 대상 장치에 대 한 컴파일된 앱 실행 파일을 생성 합니다.
 
--   **GC (가비지 수집) 향상** &ndash; 아트의 GC 향상 앱 성능을 향상할 수도 있습니다. 가비지 컬렉션에는 이제 2 대신 1 GC 일시 중지를 사용 하 고 동시 GC 작업을 더 적시에 완료 합니다.
+-   **향상 된 GC (가비지 수집)** &ndash; ART의 GC 개선으로 앱 성능을 향상 시킬 수도 있습니다. 이제 가비지 컬렉션은 두 가지 대신 하나의 GC 일시 중지를 사용 하 고 동시 GC 작업을 보다 시기 적절 한 방식으로 완료 합니다.
 
--   **응용 프로그램 디버깅 개선** &ndash; 아트 예외를 분석 하 고 충돌 보고서에 자세한 진단 정보를 제공 합니다.
+-   **향상 된 앱 디버깅** &ndash; 아트는 예외 및 충돌 보고서를 분석 하는 데 도움이 되는 진단 세부 정보를 제공 합니다.
 
-기존 앱 아트에서 변경 없이 작동 해야 &ndash; 이전 Dalvik 런타임에 고유한 기법을 악용 하는 앱을 제외 하 고는 작동 하지 않을 수 아트에서 합니다. 이러한 변경에 대 한 자세한 내용은 참조 하세요. [앱 확인 동작에는 Android 런타임 (최신)](https://developer.android.com/guide/practices/verifying-apps-art.html)합니다.
+기존 앱은 아트에서 작동 하지 않을 &ndash; 수 있는 이전 dalvik 런타임에 고유한 기술을 활용 하는 앱을 제외 하 고 art에서 변경 하지 않고 작동 해야 합니다. 이러한 변경에 대 한 자세한 내용은 [Android Runtime에서 앱 동작 확인 (ART)](https://developer.android.com/guide/practices/verifying-apps-art.html)을 참조 하세요.
 
 
 ### <a name="notification-changes"></a>알림 변경
 
-알림 Android 5.0에서 크게 변경 되었습니다.
+Android 5.0에서 알림이 크게 변경 되었습니다.
 
--   **소리 및 진동 다르게 처리 됩니다** &ndash; 알림 사운드 및 진동 이제 의해 처리 됩니다 `Notification.Builder` 대신 `Ringtone`합니다 `MediaPlayer`, 및 `Vibrator`합니다.
+-   **소리와 진동은 다르게 처리 됩니다** . `Notification.Builder` `Ringtone` 알림소리나`MediaPlayer`vibrations은 이제, 및`Vibrator`대신에서 처리 됩니다. &ndash;
 
--   **새로운 색 구성표** &ndash; 재질 테마에 따라 알림을 텍스트로 렌더링 어두운 배경에 흰색이 나 매우 가볍습니다. 또한 시스템 색 구성표를 사용 하 여 조정 하는 Android에서 알림 아이콘에 알파 채널을 수정할 수 있습니다. 
+-   **새 색 구성표** &ndash; 재질 테마에 따라 알림은 흰색 또는 매우 밝은 배경의 어두운 텍스트를 사용 하 여 렌더링 됩니다. 또한 알림 아이콘의 알파 채널은 시스템 색 구성표를 사용 하 여 조정 하기 위해 Android에서 수정할 수 있습니다. 
 
--   **잠금 화면 알림을** &ndash; 알림 장치 잠금 화면에 이제 나타날 수 있습니다.
+-   **잠금 화면 알림** &ndash; 이제 알림이 장치 잠금 화면에 표시 될 수 있습니다.
 
--   **헤 즈 업** &ndash; 우선 순위가 높은 알림 (헤드업 알림)와 같은 작은 부동 창에 나타납니다 경우 장치 잠금 해제 되어 화면 켜져 있습니다.
+-   **준비** &ndash; 이제 우선 순위가 높은 알림이 장치의 잠금이 해제 되 고 화면이 켜질 때 작은 부동 창 (준비 알림)에 표시 됩니다.
 
-대부분의 경우에는 다음 단계가 필요 Android 5.0에 기존 앱 알림 기능을 이식 합니다.
+대부분의 경우 기존 앱 알림 기능을 Android 5.0로 이식 하려면 다음 단계를 수행 해야 합니다.
 
-1.  사용 하도록 코드를 변환할 `Notification.Builder` (또는 `NotificationsCompat.Builder`) 알림 만들기에 대 한 합니다. 
+1.  알림을 만들 때 (또는 `Notification.Builder` `NotificationsCompat.Builder`)를 사용 하도록 코드를 변환 합니다. 
 
-2.  기존 알림 자산 새로운 재질 테마 색 구성표에서 볼 수 있는지 확인 합니다.
+2.  기존 알림 자산이 새 재질 테마 색 구성표에 표시 되는지 확인 합니다.
 
-3.  잠금 화면에 표시 될 때 알림이 있어야 어떤 표시 여부를 결정 합니다. 알림을 public 인 경우 콘텐츠는 잠금 화면에 표시 해야?
+3.  알림이 잠금 화면에 표시 될 때 표시 되는 표시 유형을 결정 합니다. 알림이 공용이 아니면 잠금 화면에 표시 되어야 하는 콘텐츠는 무엇 인가요?
 
-4.  새 Android 5.0에서 올바르게 처리 되도록 알림의 범주를 설정 *방해 금지* 모드입니다.
+4.  새 Android 5.0 *안 함* 모드에서 올바르게 처리 되도록 알림의 범주를 설정 합니다.
 
-알림을 전송 컨트롤을 디스플레이 미디어 재생 상태를 표시를 사용 하 여 `RemoteControlClient`를 호출 하거나 `ActivityManager.GetRecentTasks`를 참조 [중요 한 동작 변경 내용](https://developer.android.com/preview/api-overview.html#Behaviors) Android에 대 한 알림을 업데이트 하는 방법에 대 한 자세한 내용은 5.0입니다.
+알림이 전송 컨트롤, 미디어 재생 상태 표시, 사용 `RemoteControlClient`또는 호출 `ActivityManager.GetRecentTasks`을 표시 하는 경우 Android 5.0에 대 한 알림 업데이트에 대 한 자세한 내용은 중요 한 [동작 변경 내용](https://developer.android.com/preview/api-overview.html#Behaviors) 을 참조 하세요.
 
-Android에서 알림을 만드는 방법에 대 한 자세한 내용은 [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md)합니다. 합니다 [호환성](~/android/app-fundamentals/notifications/local-notifications.md#compatibility) 이 문서의 섹션 아래쪽 호환 되는 알림을 만드는 방법에 설명 이전 버전의 Android 사용 하 여 합니다.
-
+Android에서 알림을 만드는 방법에 대 한 자세한 내용은 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)을 참조 하세요.
 
 ## <a name="material-theme"></a>재질 테마
 
-새 Android 5.0 재질 테마 Android UI의 모양과 느낌을 전면적으로 변화를 제공합니다. 이제 시각적 요소에 굵게 표시 된 그래픽, 입력 체계, 및 인쇄 기반 디자인의 밝은 색을 사용 하는 tactile 화면을 사용 합니다. 재질 테마의 예는 다음 스크린샷에 표시 되는
+새 Android 5.0 재질 테마는 Android UI의 모양과 느낌을 변경 합니다. 시각적 요소는 이제 인쇄 기반 디자인의 굵은 그래픽, 입력 체계 및 밝은 색을 사용 하는 tactile 표면을 사용 합니다. 재질 테마의 예는 다음 스크린샷에 나와 있습니다.
 
-[![재질 테마 홈 화면, 응용 프로그램 화면 및 설정 화면 스크린샷](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
+[![재질 테마 홈 화면, 앱 화면 및 설정 화면 스크린샷](lollipop-images/android-5-gallery-labeled-sml.png)](lollipop-images/android-5-gallery-labeled.png#lightbox)
 
-Android 5.0 왼쪽에 표시 된 홈 화면을 사용 하 여 인사말입니다. Center 스크린 샷 앱 목록의 첫 번째 화면 이며 오른쪽 스크린샷에 합니다 **설정을** 화면. Google [재질 디자인](https://material.io/guidelines/material-design/introduction.html) 사양 기본 디자인 규칙에 새 재질 테마 개념을 설명 합니다.
+Android 5.0는 왼쪽에 표시 되는 홈 화면을 인사말 합니다. 센터 스크린샷은 앱 목록의 첫 번째 화면 이며 오른쪽의 스크린샷은 **설정** 화면입니다. Google의 [재질 디자인](https://material.io/guidelines/material-design/introduction.html) 사양은 새 재질 테마 개념의 기본 디자인 규칙을 설명 합니다.
 
-재질 테마에는 앱에서 사용할 수 있는 세 가지 기본 제공 버전 포함: 합니다 `Theme.Material` 어두운 테마 (기본값)를 `Theme.Material.Light` 테마 및 `Theme.Material.Light.DarkActionBar` 테마: 
+재질 테마에는 응용 `Theme.Material` 프로그램에서 사용할 수 있는 기본 제공 기능으로는 짙은 테마 (기본값) `Theme.Material.Light` , 테마, `Theme.Material.Light.DarkActionBar` 테마 등 세 가지가 있습니다. 
 
-[![어두운 스크린샷, 조명 및 DarkActionBar 테마](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
+[![어두운, 밝은 및 DarkActionBar 테마의 스크린샷](lollipop-images/three-material-themes-sml.png)](lollipop-images/three-material-themes.png#lightbox)
 
-재질 테마 기능을 사용 하 여 Xamarin.Android 앱에 대 한 자세한 내용은 참조 하세요 [재질 테마](~/android/user-interface/material-theme.md)합니다.
+Xamarin Android 앱에서 재질 테마 기능을 사용 하는 방법에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요.
 
 
 ## <a name="animations"></a>애니메이션
 
-Android 5.0 터치 피드백 애니메이션, 작업 전환 애니메이션 및 앱 인터페이스를 사용 하는 것이 직관적 있도록 뷰 상태 전환 애니메이션을 제공 합니다. 또한 Android 5.0 앱을 사용할 수 *효과 표시* 애니메이션을 숨기 거 나 뷰를 표시 합니다. 사용할 수 있습니다 *동작 곡선* 얼마나 신속 하 게 구성 하는 설정 또는 느린 애니메이션 렌더링 됩니다.
+Android 5.0는 터치 피드백 애니메이션, 작업 전환 애니메이션 및 뷰 상태 전환 애니메이션을 제공 하 여 앱 인터페이스를 보다 직관적으로 사용할 수 있도록 합니다. 또한 Android 5.0 앱은 표시 *효과* 애니메이션을 사용 하 여 보기를 숨기 거 나 표시할 수 있습니다. *곡선 동작* 설정을 사용 하 여 속도가 빠른 애니메이션이 렌더링 되는 방식을 구성할 수 있습니다.
 
 
-### <a name="touch-feedback-animations"></a>터치 피드백이 애니메이션
+### <a name="touch-feedback-animations"></a>터치 피드백 애니메이션
 
-터치 피드백이 애니메이션 뷰일 수 된 경우 사용자에 게 시각적 피드백을 제공 합니다. 예를 들어, 단추 이제 파급 효과가 있을 때 표시 작업 &ndash; Android 5.0에서 기본 터치 피드백 애니메이션입니다. Ripple 애니메이션 새 구현 됩니다 `RippleDrawable` 클래스입니다. 보기의 범위에서 종료 또는 보기의 범위를 벗어나 확장 파급 효과가 구성할 수 있습니다. 예를 들어, 다음 일련의 스크린샷은 터치 애니메이션 하는 동안 단추의 파급 효과가 보여 줍니다.
+터치 피드백 애니메이션은 뷰가 작업 될 때 사용자에 게 시각적 피드백을 제공 합니다. 예를 들어 이제 단추가 작업 될 때 &ndash; ripple 효과를 표시 합니다 .이는 Android 5.0의 기본 터치 피드백 애니메이션입니다. Ripple 애니메이션은 새 `RippleDrawable` 클래스에 의해 구현 됩니다. Ripple 효과를 뷰의 범위에서 종료 하거나 보기 범위를 벗어나 확장 하도록 구성할 수 있습니다. 예를 들어 다음 스크린샷 시퀀스는 터치 애니메이션 중에 단추의 ripple 효과를 보여 줍니다.
 
-![단추에서 ripple 애니메이션 프레임 스크린샷에서 프레임](lollipop-images/touch-animation.png)
+![단추에 대 한 ripple 애니메이션의 프레임별 스크린샷](lollipop-images/touch-animation.png)
 
-단추를 사용 하 여 초기 터치 연락처 (왼쪽에서 오른쪽) 나머지 시퀀스를 단추 가장자리로 파급 효과가 분산 하는 방법을 보여 줍니다. 동안 왼쪽의 첫 번째 이미지에 발생 합니다. Ripple 애니메이션이 종료 될 때 원래 모양으로 뷰를 반환 합니다. 기본 ripple 애니메이션 초 미만의 시간에 수행 하지만 더 길거나 더 짧은 시간 길이 대 한 애니메이션의 길이 사용자 지정할 수 있습니다.
+왼쪽의 첫 번째 이미지에서 단추가 있는 초기 터치 접촉이 발생 하는 반면, 나머지 시퀀스 (왼쪽에서 오른쪽)는 ripple 효과가 단추 가장자리까지 어떻게 확산 되어 있음을 보여 줍니다. Ripple 애니메이션이 종료 되 면 뷰가 원래 모양으로 돌아갑니다. 기본 ripple 애니메이션은 초 단위로 발생 하지만 애니메이션의 길이는 더 길거나 짧은 시간 길이에 맞게 사용자 지정할 수 있습니다.
 
-Android 5.0에서 피드백 애니메이션, 터치 대 한 자세한 내용은 참조 [Touch 피드백을 사용자 지정](https://developer.android.com/training/material/animations.html#Touch)합니다.
+Android 5.0의 터치 피드백 애니메이션에 대 한 자세한 내용은 [터치 피드백 사용자 지정](https://developer.android.com/training/material/animations.html#Touch)을 참조 하세요.
 
 
 ### <a name="activity-transition-animations"></a>작업 전환 애니메이션
 
-작업 전환 애니메이션 하나의 활동 간에 전환 될 때 사용자의 연속성을 제공 합니다. 앱 세 가지 유형의 전환 애니메이션을 지정할 수 있습니다.
+활동 전환 애니메이션은 한 활동이 다른 활동으로 전환 될 때 사용자에 게 시각적 연속성을 제공 합니다. 앱은 다음과 같은 세 가지 유형의 전환 애니메이션을 지정할 수 있습니다.
 
--   **전환 입력** &ndash; 활동 들어가면 장면에 대 한 합니다.
+-   **전환 입력** &ndash; 작업이 장면에 들어간 경우입니다.
 
--   **전환 종료** &ndash; 활동 장면을 종료 하는 경우에 대 한 합니다.
+-   **전환 종료** &ndash; 활동에서 장면을 종료 하는 경우입니다.
 
--   **공유 요소 전환** &ndash; 다음은 첫 번째 작업 전환으로 두 작업에 공통적으로 적용 되는 뷰를 변경 하는 경우에 대 한 합니다.
+-   **공유 요소 전환** &ndash; 두 작업에 공통적으로 적용 되는 뷰가 다음으로 전환 될 때 변경 되는 경우입니다.
 
-예를 들어, 다음 일련의 스크린샷은 공유 요소 전환을 보여 줍니다.
+예를 들어 다음 스크린샷 시퀀스는 공유 요소 전환을 보여줍니다.
 
-[![공유 요소 전환 애니메이션의 프레임 스크린샷에서 프레임](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
+[![공유 요소 전환 애니메이션의 프레임별 스크린샷](lollipop-images/activity-transition-sml.png)](lollipop-images/activity-transition.png#lightbox)
 
-공유 요소 (한 애벌레 사진)을 사용 하면 첫 번째 작업;의 여러 뷰 중 하나인 이 두 번째 활동은 첫 번째 전환으로 두 번째 작업에만 뷰를 확대 합니다.
+공유 요소 (핵심 er기둥의 사진)는 첫 번째 활동의 여러 뷰 중 하나입니다. 첫 번째 활동이 두 번째 활동으로 전환 될 때 두 번째 활동에서 유일한 뷰가 되도록 확대 합니다.
 
-#### <a name="enter-transition-animation-types"></a>전환 애니메이션 형식 입력
+#### <a name="enter-transition-animation-types"></a>전환 애니메이션 유형 입력
 
-Enter 전환에 대 한 Android 5.0에는 애니메이션의 세 가지 유형을 제공합니다.
+Enter 전환의 경우 Android 5.0은 세 가지 유형의 애니메이션을 제공 합니다.
 
--   **애니메이션 explode** &ndash; 장면의 가운데에서 뷰를 확대 합니다.
+-   **애니메이션 폭발** &ndash; 장면의 가운데에서 보기를 확대 합니다.
 
--   **슬라이드 애니메이션** &ndash; 장면의 가장자리 중 보기에서 이동 합니다.
+-   **슬라이드 애니메이션** &ndash; 에서 뷰를 장면의 가장자리 중 하나에서 이동 합니다.
 
--   **애니메이션 페이드** &ndash; 장면에 대 한 보기 사라집니다.
+-   **애니메이션 페이드** &ndash; 뷰를 장면으로 페이드 인 합니다.
 
-#### <a name="exit-transition-animation-types"></a>종료 전환 애니메이션 형식
+#### <a name="exit-transition-animation-types"></a>종료 전환 애니메이션 유형
 
-종료 전환에 대 한 Android 5.0에는 애니메이션의 세 가지 유형을 제공합니다.
+종료 전환의 경우 Android 5.0은 세 가지 유형의 애니메이션을 제공 합니다.
 
--   **애니메이션 explode** &ndash; 중심 장면에 뷰를 축소 합니다.
+-   **애니메이션 폭발** &ndash; 뷰를 장면의 가운데로 축소 합니다.
 
--   **슬라이드 애니메이션** &ndash; 뷰일 장면의 가장자리 중 하나로 이동 합니다.
+-   **슬라이드 애니메이션** &ndash; 뷰를 장면의 가장자리 중 하나로 이동 합니다.
 
--   **애니메이션 페이드** &ndash; 장면은 뷰가 사라집니다.
+-   **애니메이션 페이드** &ndash; 장면에서 보기를 페이드 아웃 합니다.
 
 #### <a name="shared-element-transition-animation-types"></a>공유 요소 전환 애니메이션 형식
 
-공유 요소 전환와 같은 여러 유형의 애니메이션을 지원합니다.
+공유 요소 전환은 다음과 같은 여러 유형의 애니메이션을 지원 합니다.
 
--   뷰 레이아웃 또는 클립 범위를 변경 합니다.
+-   뷰의 레이아웃 또는 클립 범위 변경
 
--   크기 조정 및 회전 뷰의 변경 합니다.
+-   뷰의 배율 및 회전 변경
 
--   보기에 대 한 크기 조정 및 규모 형식을 변경 합니다.
+-   뷰의 크기 및 크기 조정 유형 변경
 
-Android 5.0에서 전환 애니메이션 작업에 대 한 자세한 내용은 참조 하세요 [사용자 지정 활동 전환](https://developer.android.com/training/material/animations.html#Transitions)합니다.
+Android 5.0의 작업 전환 애니메이션에 대 한 자세한 내용은 [작업 전환 사용자 지정](https://developer.android.com/training/material/animations.html#Transitions)을 참조 하세요.
 
 
 ### <a name="view-state-transition-animations"></a>뷰 상태 전환 애니메이션
 
-Android 5.0 애니메이션 뷰 상태가 변경 될 때 실행할 수 있습니다. 다음 방법 중 하나를 사용 하 여 보기 상태 전환 애니메이션을 적용할 수 있습니다.
+Android 5.0을 사용 하면 뷰 상태가 변경 될 때 애니메이션을 실행할 수 있습니다. 다음 방법 중 하나를 사용 하 여 뷰 상태 전환에 애니메이션 효과를 적용할 수 있습니다.
 
--   특정 뷰를 사용 하 여 연결 된 상태 변경에 애니메이션 효과 주기는 드로어 블을 만듭니다. 새 `AnimatedStateListDrawable` 클래스 뷰 상태 변경 간 애니메이션을 표시 하는 드로어 블을 만들 수 있습니다.
+-   특정 뷰와 연결 된 상태 변경에 애니메이션을 적용 하는 drawables을 만듭니다. 새 `AnimatedStateListDrawable` 클래스를 사용 하면 뷰 상태 변경 사이에 애니메이션을 표시 하는 drawables을 만들 수 있습니다.
 
--   뷰 상태가 변경 될 때 실행 되는 애니메이션 기능을 정의 합니다. 새 `StateListAnimator` 클래스 뷰 상태가 변경 될 때 실행 되는 애니메이터 정의할 수 있습니다.
+-   뷰의 상태가 변경 될 때 실행 되는 애니메이션 기능을 정의 합니다. 새 `StateListAnimator` 클래스를 사용 하면 뷰의 상태가 변경 될 때 실행 되는 애니메이터를 정의할 수 있습니다.
 
-Android 5.0에서 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 참조 하세요 [뷰 상태 변경에 애니메이션 효과 주기](https://developer.android.com/training/material/animations.html#ViewState)합니다.
+Android 5.0의 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 [뷰 상태 변경에 애니메이션 효과 주기](https://developer.android.com/training/material/animations.html#ViewState)를 참조 하세요.
 
 
 ### <a name="reveal-effect"></a>효과 표시
 
-합니다 *효과 표시* 클리핑 원 해당 변경 내용을 반지름을 표시 하거나 숨기는 보기입니다. 초기 및 최종 클리핑 원의 반지름을 설정 하 여이 효과 제어할 수 있습니다. 다음 일련의 스크린샷은 화면의 가운데에서 표시 효과 애니메이션을 보여 줍니다.
+표시 *효과* 는 보기를 표시 하거나 숨기도록 반경을 변경 하는 클리핑 원입니다. 클리핑 원의 초기 및 최종 반지름을 설정 하 여이 효과를 제어할 수 있습니다. 다음 스크린샷 시퀀스는 화면 중심에서 표시 효과 애니메이션을 보여 줍니다.
 
-[![프레임 스크린샷에서 표시 애니메이션 프레임](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
+[![애니메이션 나타내기의 프레임별 스크린샷](lollipop-images/reveal-center-sml.png)](lollipop-images/reveal-center.png#lightbox)
 
-다음 시퀀스에서는 화면의 왼쪽된 아래 모서리에서 발생 하는 표시 효과 애니메이션을 보여 줍니다.
+다음 시퀀스는 화면의 왼쪽 아래 모퉁이에서 발생 하는 표시 효과 애니메이션을 보여 줍니다.
 
-[![클리핑 애니메이션 프레임 스크린샷에서 프레임](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
+[![클리핑 애니메이션의 프레임별 스크린샷](lollipop-images/reveal-left-sml.png)](lollipop-images/reveal-left.png#lightbox)
 
-표시할 애니메이션을 되돌릴 수 있습니다. 즉, 클리핑 원 보기 숨기려면 축소 것이 아니라 수 보기를 표시 하려면 확대 합니다.
+표시 애니메이션은 되돌릴 수 있습니다. 즉, 보기를 표시 하기 위해 확대 하는 대신 클리핑 원을 축소 하 여 보기를 숨길 수 있습니다.
 
-Android 5.0 표시 영향에 대 한 자세한 내용은 참조 하세요. [표시 효과 사용 하 여](https://developer.android.com/training/material/animations.html#Reveal)입니다.
-
-
-### <a name="curved-motion"></a>곡선된 동작
-
-이러한 애니메이션 기능 외에도 Android 5.0 또한 애니메이션의 시간과 동작 곡선을 지정할 수 있도록 새로운 Api를 제공 합니다. Android 5.0 이러한 곡선을 사용 하 여 애니메이션 하는 동안 임시 및 공간 이동 보간합니다. 세 가지 곡선 Android 5.0에서 정의 됩니다.
-
--   **빠른\_아웃\_선형\_에서** &ndash; 신속 하 게 가속화 하 고 가속화 애니메이션의 끝까지 계속 됩니다.
-
--   **빠른\_아웃\_느린\_에서** &ndash; 애니메이션의 끝 쪽 감속 빠르고 느린 Accelerates 합니다.
-
--   **선형\_아웃\_느린\_에서** &ndash; 최고 속도 느리게 시작 애니메이션의 끝에 감속 합니다.
-
-새 따르면 `PathInterpolator` 동작 보간을 수행 하는 방법을 지정 하는 클래스입니다. `PathInterpolator` 지정 된 제어점과 동작 곡선에 따라 애니메이션 경로 통과 하는 보간이입니다. Android 5.0에서 곡선된 동작 설정을 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [사용 하 여 곡선 동작](https://developer.android.com/training/material/animations.html#CurvedMotion)합니다.
+에서 Android 5.0 표시 효과에 대 한 자세한 내용은 표시 [효과 사용](https://developer.android.com/training/material/animations.html#Reveal)을 참조 하세요.
 
 
-## <a name="view-shadows--elevation"></a>보기 그림자 & 권한 상승
+### <a name="curved-motion"></a>곡선 동작
 
-Android 5.0에서 지정할 수 있습니다는 *권한 상승이* 새 설정 하 여 뷰의 `Z` 속성입니다. 큼 `Z` 값을 float 배경 위에 더 높은 표시 보기를 만드는 백그라운드에서 더 큰 그림자에 뷰를 사용 하면 됩니다. 뷰의 초기 권한 상승을 구성 하 여 설정할 수 있습니다 해당 `elevation` 레이아웃의 특성입니다.
+이러한 애니메이션 기능 외에도 Android 5.0는 애니메이션의 시간 및 동작 곡선을 지정할 수 있는 새로운 Api를 제공 합니다. Android 5.0은 이러한 곡선을 사용 하 여 애니메이션 중에 임시 및 공간 이동을 보간합니다. Android 5.0에는 세 가지 곡선이 정의 되어 있습니다.
 
-다음 예제에서는 빈에서 캐스팅 그림자 `TextView` 해당 권한 상승 특성으로 설정 되 면 2dp, 4dp, 및 6dp를 각각 제어 합니다.
+-   **빠른 속도\_를 빠르게 가속화 하 고 애니메이션이 종료 될 때까지 계속 가속화 합니다.\_\_** &ndash;
 
-[![Progessively 큰 보기 그림자의 스크린샷](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
+-   **빠른속도\_를 빠르게 가속화 하 고 애니메이션의 끝 부분을 향해 천천히 감속 합니다.\_\_** &ndash;
 
-섀도 설정 보기 (위와 같이) 정적 수 또는 보기의 배경 위에 증가 일시적으로 표시 하는 보기를 만들 애니메이션에서 사용할 수 있습니다. 사용할 수는 `ViewPropertyAnimator` 뷰의 권한 상승에 애니메이션 효과를 클래스입니다. 뷰의 레이아웃의 합계인 `elevation` 설정 및 `translationZ` 속성을 통해 설정할 수 있는 `ViewPropertyAnimator` 메서드를 호출 합니다.
+-   **의 선형\_속도는 최고 속도로 시작 하 고 애니메이션의 끝까지 천천히 감속 합니다.\_\_** &ndash;
 
-Android 5.0에서 보기 그림자에 대 한 자세한 내용은 참조 하세요 [그림자 정의 및 클리핑 뷰](https://developer.android.com/training/material/shadows-clipping.html)합니다.
+새 `PathInterpolator` 클래스를 사용 하 여 동작 보간을 수행 하는 방법을 지정할 수 있습니다. `PathInterpolator`지정 된 제어점 및 동작 곡선에 따라 애니메이션 경로를 트래버스하는 보간 기입니다. Android 5.0에서 곡선 동작 설정을 지정 하는 방법에 대 한 자세한 내용은 [곡선 동작 사용](https://developer.android.com/training/material/animations.html#CurvedMotion)을 참조 하세요.
+
+
+## <a name="view-shadows--elevation"></a>그림자 & 권한 상승 보기
+
+Android 5.0에서는 새 `Z` 속성을 설정 하 여 뷰의 *권한 상승을* 지정할 수 있습니다. 값이 `Z` 클수록 뷰가 배경에서 더 큰 그림자를 캐스팅 하 여 뷰가 배경 위에 부동 상태로 표시 되도록 합니다. 레이아웃에서 해당 `elevation` 특성을 구성 하 여 뷰의 초기 권한 상승을 설정할 수 있습니다.
+
+다음 예제에서는 각각 권한 상승 특성이 2dp, `TextView` 4dp 및 6dp로 설정 된 경우 빈 컨트롤로 캐스트를 캐스팅 하는 방법을 보여 줍니다.
+
+[![더 큰 보기 그림자 progessively의 스크린샷](lollipop-images/view-shadows-sml.png)](lollipop-images/view-shadows.png#lightbox)
+
+보기 그림자 설정은 위에 표시 된 것과 같이 정적일 수도 있고 애니메이션에서 사용 하 여 뷰가 보기의 배경 위에 일시적으로 표시 되도록 할 수도 있습니다. 클래스를 `ViewPropertyAnimator` 사용 하 여 뷰의 상승에 애니메이션 효과를 적용할 수 있습니다. 뷰의 상승은 레이아웃 `elevation` 설정과 `translationZ` 메서드 호출을 `ViewPropertyAnimator` 통해 설정할 수 있는 속성의 합입니다.
+
+Android 5.0의 그림자 보기에 대 한 자세한 내용은 [그림자 및 클리핑 뷰 정의](https://developer.android.com/training/material/shadows-clipping.html)를 참조 하세요.
 
 
 ## <a name="color-features"></a>색 기능
 
 Android 5.0는 앱에서 색을 관리 하기 위한 두 가지 새로운 기능을 제공 합니다.
 
--   *Drawable 색조* 레이아웃 특성을 변경 하 여 이미지 자산의 색을 변경할 수 있습니다.
+-   *그릴* 수 있는 색조를 사용 하면 레이아웃 특성을 변경 하 여 이미지 자산의 색을 변경할 수 있습니다.
 
--   *주요 색상을 추출* 동적으로 표시 된 이미지의 색상표를 사용 하 여 조정 하 여 앱의 색 테마를 사용자 지정할 수 있도록 합니다.
-
-
-### <a name="drawable-tinting"></a>Drawable 색조
-
-Android 5.0 레이아웃 인식 새 `tint` 다른 색을 표시 하려면 이러한 자산의 여러 버전을 만들지 않고도 드로어 블의 색을 설정 하는 데 사용할 수 있는 특성입니다. 이 기능을 사용 하려면 알파 마스크를 사용 하 여 비트맵 정의 `tint` 자산의 색을 정의 하는 특성입니다. 이렇게 하면 자산을 한 번 만들고 테마에 맞게 레이아웃에서 색상을 수 있습니다.
-
-다음 예에서 단일 이미지 자산 &ndash; 투명 한 배경의 흰색 로고 &ndash; tint 변형을 만드는 데 사용 됩니다.
-
-![투명 한 배경의 흰색 Xamarin 로고](lollipop-images/xamarin-logo-white.png)
-
-이 로고는 다음 예와에서 같이 파란색 순환 배경 위에 표시 됩니다. 왼쪽 이미지는 로고 없이 표시 되는 방식을 `tint` 설정 합니다. 가운데 이미지에서 로고의 `tint` 특성을 진한 회색으로 설정 됩니다. 오른쪽의 그림과에서 `tint` 연한 회색으로 설정 됩니다.
-
-![다른 tint 설정 사용 하 여 위의 로고의 예](lollipop-images/drawable-tinting.png)
-
-Drawable 색조 Android 5.0에 대 한 자세한 내용은 참조 하세요 [Drawable 색조](https://developer.android.com/training/material/drawables.html#DrawableTint)합니다.
+-   *두드러진 색 추출을* 사용 하면 표시 된 이미지의 색상표와 어울리도록 앱 색 테마를 동적으로 사용자 지정할 수 있습니다.
 
 
-### <a name="prominent-color-extraction"></a>주요 색상을 추출
+### <a name="drawable-tinting"></a>그릴 때 색조
 
-새 Android 5.0 `Palette` 클래스를 사용 하면 사용자 지정 색 색상표를 동적으로 적용할 수 있도록 이미지에서 색을 추출 합니다. `Palette` 클래스 이미지에서 6 개 색을 추출 하 고 레이블 색 채도 및 밝기 상대 수준에 따라 이러한 색:
+Android 5.0 레이아웃은 다양 한 `tint` 색을 표시 하기 위해 여러 버전의 자산을 만들지 않고도 사용할 수 있는 여러 버전의를 설정 하는 데 사용할 수 있는 새 특성을 인식 합니다. 이 기능을 사용 하려면 비트맵을 알파 마스크로 정의 하 고 `tint` 특성을 사용 하 여 자산의 색을 정의 합니다. 이렇게 하면 자산을 한 번 만들고 레이아웃에 색을 지정할 수 있습니다.
 
--   활발 한
+다음 예제 &ndash; 에서는 투명 한 배경의 &ndash; 흰색 로고를 사용 하는 흰색 로고를 사용 하 여 색조 변형을 만듭니다.
 
--   활발 한 어둡게
+![투명 한 배경을 사용 하는 흰색 Xamarin 로고](lollipop-images/xamarin-logo-white.png)
 
--   활발 한 조명
+이 로고는 다음 예와 같이 파란색 원형 배경 위에 표시 됩니다. 왼쪽 이미지는 `tint` 설정 없이 로고가 표시 되는 방법입니다. 가운데 이미지에서 로고의 `tint` 특성은 진한 회색으로 설정 됩니다. 오른쪽의 이미지에서 `tint` 는 연한 회색으로 설정 됩니다.
 
--   음소거
+![다른 색조 설정이 있는 위의 로고의 예](lollipop-images/drawable-tinting.png)
 
--   음소거 어둡게
+Android 5.0의 그릴 때 색조에 대 한 자세한 내용은 [그릴 때 색조](https://developer.android.com/training/material/drawables.html#DrawableTint)를 참조 하세요.
 
--   Light 음소거
 
-예를 들어, 다음 스크린샷과 사진 보기 앱을 표시에서 이미지에서 두드러진 색을 추출 및 이미지와 일치 하는 앱의 색 구성표에 맞게 이러한 색을 사용 하 여:
+### <a name="prominent-color-extraction"></a>두드러진 색 추출
 
-[![Pink, 녹색과 파란색 테마의 스크린 샷을 색 추출](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
+새 Android 5.0 `Palette` 클래스를 사용 하면 이미지에서 색을 추출 하 여 사용자 지정 색상표에 동적으로 적용할 수 있습니다. 클래스 `Palette` 는 이미지에서 6 개의 색을 추출 하 고 색 채도 및 밝기의 상대적 수준에 따라 이러한 색에 레이블을 합니다.
 
-위의 스크린샷에서 작업 모음 추출된 "활발 한 light"로 설정 되어 색 및 배경 추출된 "활발 한 어둡게"로 설정 되어 색입니다. 위의 예제에서는 작은 색 사각형 행 이미지에서 추출 된 색상표를 보여 주기 위해 포함 됩니다.
+-   활발
 
-Android 5.0에서 색 추출에 대 한 자세한 내용은 참조 하세요 [이미지에서 추출 두드러진 색](https://developer.android.com/training/material/drawables.html#ColorExtract)합니다.
+-   생생한 어둡게
+
+-   생생한 조명
+
+-   오디오가
+
+-   음소거 됨
+
+-   음소거 됨 라이트
+
+예를 들어 다음 스크린샷에서 사진 보기 앱은 표시 되는 이미지에서 중요 한 색을 추출 하 고 이러한 색을 사용 하 여 이미지와 일치 하도록 앱의 색 구성표를 조정 합니다.
+
+[![녹색, 분홍 및 파랑 테마 색 추출의 스크린샷](lollipop-images/prominent-color-extraction-sml.png)](lollipop-images/prominent-color-extraction.png#lightbox)
+
+위의 스크린샷에서 작업 모음은 추출 된 "생생한 광원" 색으로 설정 되 고 배경은 추출 된 "생생한 짙은" 색으로 설정 됩니다. 위의 각 예에서는 이미지에서 추출 된 색상표 색을 보여 주기 위해 작은 색 사각형의 행이 포함 되어 있습니다.
+
+Android 5.0에서 색 추출에 대 한 자세한 내용은 [이미지에서 두드러진 색 추출](https://developer.android.com/training/material/drawables.html#ColorExtract)을 참조 하세요.
 
 
 ## <a name="new-ui-widgets"></a>새 UI 위젯
 
-Android 5.0에는 두 개의 새 UI 위젯:
+Android 5.0에는 두 가지 새로운 UI 위젯이 도입 되었습니다.
 
--   `RecyclerView` &ndash; 스크롤할 수 있는 항목의 목록을 표시 하는 보기 그룹입니다.
+-   `RecyclerView`&ndash; 스크롤 가능한 항목의 목록을 표시 하는 보기 그룹입니다.
 
--   `CardView` &ndash; 모퉁이가 둥근 기본 레이아웃입니다.
+-   `CardView`&ndash; 모퉁이가 둥근 기본 레이아웃입니다.
 
-두 위젯 재질 테마 기능 내재 지원이 포함 됩니다. 예를 들어 `RecyclerView` 애니메이션을 사용 하 여 추가 하 고 뷰를 제거 및 `CardView` 사용 하 여 배경 위에 float로 표시 하는 각 카드는 그림자를 확인 합니다. 이러한 새 위젯의 예는 다음 스크린샷과에서 같습니다.
+두 위젯은 모두 재질 테마 기능을 지 원하는 구운을 포함 합니다. 예를 들어 `RecyclerView` 에서는 보기를 추가 및 제거 하는 데 `CardView` 애니메이션을 사용 하 고, 그림자 보기를 사용 하 여 각 카드가 배경 위에 부동 상태로 표시 되도록 합니다. 이러한 새 위젯의 예는 다음 스크린샷에 나와 있습니다.
 
 [![RecyclerView로 빌드된 앱의 스크린샷](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
-왼쪽 스크린샷에서 예가 `RecyclerView` 에 전자 메일 앱에서 스크린샷을 사용의 예로 `CardView` 여행 예약 응용 프로그램에서 사용 합니다.
+왼쪽의 스크린샷은 전자 메일 앱에서 사용 `RecyclerView` 되는 예제 이며 오른쪽의 스크린샷은 여행 예약 앱에서 사용 되는의 `CardView` 예입니다.
 
 
 ### <a name="recyclerview"></a>RecyclerView
 
-`RecyclerView` 비슷합니다 `ListView,` 있지만 대량의 뷰나 동적으로 변경 되는 요소를 사용 하 여 목록에 더 적합 합니다. 같은 `ListView,` 기본 데이터 집합에 액세스 하려면 어댑터를 지정 합니다. 그러나와 달리 `ListView,` 사용을 *레이아웃 관리자* 위치로 내의 항목 `RecyclerView`. 레이아웃 관리자도 담당 보기 재활용; 항목 보기 더 이상 사용자에 게 표시 되지 않는의 재사용을 관리 합니다.
+`RecyclerView`는와 유사 `ListView,` 하지만 동적으로 변경 되는 요소가 포함 된 많은 뷰 또는 목록 집합에 더 적합 합니다. 기본 `ListView,` 데이터 집합에 액세스 하는 어댑터를 지정 하는 것과 같습니다. 그러나와 달리 `ListView,` *레이아웃 관리자* 를 사용 `RecyclerView`하 여에 항목을 배치 합니다. 레이아웃 관리자는 뷰 재활용도 처리 합니다. 사용자에 게 더 이상 표시 되지 않는 항목 보기의 재사용을 관리 합니다.
 
-사용 하는 경우는 `RecyclerView` 를 지정 해야 위젯에서 `LayoutManager` 및 어댑터. 이 그림에 표시 된 대로 `LayoutManager` 어댑터 간의 매개자는 및 `RecyclerView`:
+`RecyclerView` 위젯을 사용 하는 경우 `LayoutManager` 및 어댑터를 지정 해야 합니다. 이 그림 `LayoutManager` 에 표시 된 것 처럼는 어댑터와의 `RecyclerView`중간입니다.
 
-![RecyclerView LayoutManager, 어댑터 및 데이터 집합을 지 원하는 다이어그램](lollipop-images/recyclerview-diagram.png)
+![LayoutManager, 어댑터 및 데이터 집합을 지 원하는 RecyclerView 다이어그램](lollipop-images/recyclerview-diagram.png)
 
-다음 스크린샷에서 설명 된 `RecyclerView` 항목 100 개를 포함 하는 (각 항목은는 `ImageView` 및 `TextView`):
+다음 스크린샷은 100 항목을 `RecyclerView` 포함 하는을 보여 줍니다 (각 항목은 `ImageView` 및 `TextView`로 구성 됨).
 
-[![이미지를 통해 스크롤할 RecyclerView 앱의 스크린샷](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
+[![이미지를 통한 RecyclerView 앱 스크롤 스크린샷](lollipop-images/recyclerview-scroll-sml.png)](lollipop-images/recyclerview-scroll.png#lightbox)
 
-`RecyclerView` 이 큰 데이터 집합을 쉽게 처리 &ndash; 스크롤 간 목록의 시작 부분에서이 샘플에서 목록의 앱만 몇 초만에 합니다. `RecyclerView` 또한 애니메이션; 지원 사실, 항목 추가 및 제거에 대 한 애니메이션은 기본적으로 활성화 됩니다. 항목에 추가 될 때를 `RecyclerView`,이 일련의 스크린샷은 에서처럼에 페이드 아웃 합니다.
+`RecyclerView`이 샘플 앱에서 목록의 처음부터 &ndash; 시작 하 여 목록의 끝까지 쉽게 스크롤할 수 있는이 대량 데이터 집합을 처리 하는 데 몇 초 밖에 걸리지 않습니다. `RecyclerView`는 애니메이션도 지원 합니다. 실제로 항목 추가 및 제거에 대 한 애니메이션은 기본적으로 사용 하도록 설정 됩니다. 항목을에 추가 `RecyclerView`하면이 스크린샷 시퀀스와 같이 페이드 인 됩니다.
 
-[![프레임의 사진 항목 페이드의 프레임 스크린샷](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
+[![사진 항목의 프레임별 스크린샷 페이드 인](lollipop-images/recyclerview-animation-sml.png)](lollipop-images/recyclerview-animation.png#lightbox)
 
-에 대 한 자세한 `RecyclerView`를 참조 하세요 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)합니다.
+에 대 `RecyclerView`한 자세한 내용은 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)를 참조 하세요.
 
 
 ### <a name="cardview"></a>CardView
 
-`CardView` 모퉁이가 둥근 부동 카드를 시뮬레이션 하는 간단한 보기가입니다. 때문에 `CardView` 기본 제공 뷰 그림자가 앱에 시각적 깊이 추가할 수는 쉬운 방법을 제공 합니다. 다음 스크린샷은의 세 가지 텍스트 기반 예제를 보여 줍니다. `CardView`:
+`CardView`는 모퉁이가 둥근 부동 카드를 시뮬레이션 하는 간단한 뷰입니다. 에 `CardView` 는 기본 제공 보기 그림자가 있으므로 앱에 시각적 깊이를 추가 하는 쉬운 방법을 제공 합니다. 다음 스크린샷에는의 `CardView`세 가지 텍스트 지향 예제가 나와 있습니다.
 
-[![RecyclerView CardView 기반 항목을 사용 하 여 사용 하 여 앱의 예제 스크린샷](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
+[![CardView 기반 항목과 함께 RecyclerView를 사용 하는 앱의 예제 스크린샷](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
-위의 예제에서 카드의 각각 포함 하는 `TextView`; 배경색을 통해 설정 됩니다는 `cardBackgroundColor` 특성입니다.
+위의 예제에서 각 카드에는가 `TextView`포함 되어 있습니다. 배경색은 `cardBackgroundColor` 특성을 통해 설정 됩니다.
 
-에 대 한 자세한 `CardView`를 참조 하세요 [CardView](~/android/user-interface/controls/card-view.md)합니다.
+에 대 `CardView`한 자세한 내용은 [CardView](~/android/user-interface/controls/card-view.md)를 참조 하세요.
 
 
 ## <a name="enhanced-notifications"></a>향상 된 알림
 
-새 시각적 형식 및 새로운 기능을 사용 하 여 Android 5.0에서 알림 시스템 크게 업데이트 되었습니다. Android 5.0에서 알림을 새롭게 개편을 했습니다. 예를 들어, Android 5.0에서 알림을 이제는 밝은 배경의 통해 어두운 텍스트를 사용합니다.
+Android 5.0의 알림 시스템은 새 시각적 형식 및 새로운 기능을 사용 하 여 크게 업데이트 되었습니다. 알림은 Android 5.0에서 새롭게 보입니다. 예를 들어 Android 5.0의 알림은 이제 밝은 배경에 진한 텍스트를 사용 합니다.
 
-![확장된 되지 않은 Android 5.0 알림 발생의 예](lollipop-images/expanded-notification-contracted.png)
+![확장 취소 된 Android 5.0 알림의 예](lollipop-images/expanded-notification-contracted.png)
 
-큰 아이콘 (처럼 위의 예제) 알림이 표시 되 면 Android 5.0 작은 아이콘 큰 아이콘 배지를 제공 합니다. 
+위의 예제와 같이 알림에 커다란 아이콘이 표시 되 면 Android 5.0은 작은 아이콘을 크게 아이콘 위에 배지 표시 합니다. 
 
-Android 5.0에서 알림 장치 잠금 화면에 나타날 수도 있습니다.
-예를 들어, 다음은 단일 알림이 잠금 화면의 스크린 샷 예가입니다.
+Android 5.0에서는 알림이 장치 잠금 화면에도 표시 될 수 있습니다.
+예를 들어 다음은 단일 알림이 포함 된 잠금 화면 예제 스크린샷입니다.
 
-[![잠금 화면에 나타나는 알림이 스크린샷](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
+[![잠금 화면에 나타나는 알림 스크린샷](lollipop-images/lockscreen-notification-sml.png)](lollipop-images/lockscreen-notification.png#lightbox)
 
-사용자 수 두 번 눌러서 장치의 잠금을 해제 하 고 해당 알림을 발생 하는 앱으로 이동 하려면 잠금 화면에서 알림 또는 안쪽으로 살짝 밀어 알림을 해제 합니다. 알림이 있는 새 *가시성* 얼 만큼의 콘텐츠가 잠금 화면에 표시할 수 있습니다를 결정 하는 설정입니다. 잠금 화면 알림을 표시할 중요 한 콘텐츠를 허용할 것인지를 선택할 수 있습니다.
+사용자는 잠금 화면에서 알림을 두 번 탭 하 여 장치의 잠금을 해제 하 고 해당 알림을 시작한 앱으로 이동 하거나, 살짝 밀어 알림을 해제할 수 있습니다. 알림에는 잠금 화면에 표시할 수 있는 콘텐츠의 양을 결정 하는 새로운 *표시 유형* 설정이 있습니다. 사용자는 중요 한 콘텐츠가 잠금 화면 알림에 표시 되도록 허용할지 여부를 선택할 수 있습니다.
 
-Android 5.0 라는 새로운 우선 순위가 높은 알림 프레젠테이션 형식을 제공 *헤 즈 업*합니다. 헤 즈 업 알림 몇 초간 화면 맨 위에서 아래로 슬라이드 및 다음 화면 맨 위에 있는 알림 음영으로 후퇴 합니다. 헤 즈 업 알림 수 있도록 시스템 현재 실행 중인 작업을 방해 하지 않고 사용자 앞에 중요 한 정보를 배치 하는 UI에 대 한 합니다. 다음 예제에서는 앱을 기반으로 표시 하는 간단한 헤드업 알림을 보여 줍니다.
+Android 5.0에는 *준비*라는 새로운 우선 순위가 높은 알림 프레젠테이션 형식이 도입 되었습니다. 준비 알림은 몇 초 동안 화면 맨 위에서 아래로 이동 하 고 화면 맨 위에 있는 알림 음영으로 되돌아갑니다. 알림 메시지를 통해 시스템 UI는 현재 실행 중인 작업을 중단 하지 않고 사용자 앞에 중요 한 정보를 넣을 수 있습니다. 다음 예제에서는 앱 위에 표시 되는 간단한 준비 알림을 보여 줍니다.
 
-[![Heads-up 알림의 예제](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
+[![준비 알림 예](lollipop-images/heads-up-notification-sml.png)](lollipop-images/heads-up-notification.png#lightbox)
 
-헤 즈 업 알림은 다음 이벤트에 대 한 일반적으로 사용 됩니다.
+일반적으로 준비 알림은 다음 이벤트에 사용 됩니다.
 
--   다음 새 메시지
+-   새 다음 메시지
 
--   들어오는 전화 통화
+-   수신 전화 통화
 
--   배터리 표시
+-   배터리 부족 표시
 
 -   경보
 
-Android 5.0가 높거나 최대 우선 순위 설정 하는 경우에 헤 즈 업 형식에는 알림이 표시 됩니다.
+Android 5.0는 높은 또는 최대 우선 순위 설정이 있는 경우에만 준비 형식으로 알림을 표시 합니다.
 
-Android 5.0에서 Android 정렬 하 고 더 지능적으로 알림을 표시 하는 데 알림 메타 데이터를 제공할 수 있습니다. Android 5.0에는 우선 순위, 표시 유형 및 범주에 따라 알림을 구성합니다.
-알림 범주는 필터링 하는 데 장치 상태인 경우 알림을 표시 될 수 있습니다 *방해 금지* 모드입니다.
+Android 5.0에서 알림 메타 데이터를 제공 하 여 Android에서 알림을 보다 지능적으로 정렬 하 고 표시할 수 있습니다. Android 5.0는 우선 순위, 표시 유형 및 범주에 따라 알림을 구성 합니다.
+알림 범주는 장치가 *방해* 금지 모드에 있을 때 표시할 수 있는 알림을 필터링 하는 데 사용 됩니다.
 
-만들기 및 최신 Android 5.0 기능을 사용 하 여 알림을 시작 하는 방법에 대 한 자세한 내용은 참조 하세요. [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md)합니다.
+최신 Android 5.0 기능을 사용 하 여 알림을 만들고 시작 하는 방법에 대 한 자세한 내용은 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)을 참조 하세요.
 
 
 ## <a name="new-apis"></a>새로운 API
 
-Android 5.0 위에 설명 된 새 느낌 및 기능 외에도 기존 멀티미디어의 기능, 저장소 및 무선/연결 기능을 확장 하는 새로운 Api를 추가 합니다. 또한 Android 5.0 새로운 작업 스케줄러 기능에 대 한 지원을 제공 하는 새 Api를 포함 합니다.
+Android 5.0은 위에 설명 된 새로운 모양 및 느낌 기능 외에도 기존 멀티미디어, 저장소 및 무선/연결 기능의 기능을 확장 하는 새로운 Api를 추가 합니다. 또한 Android 5.0에는 새 작업 스케줄러 기능을 지 원하는 새로운 Api가 포함 되어 있습니다.
 
 ### <a name="camera"></a>카메라
 
-Android 5.0 카메라 향상 된 기능에 대 한 몇 가지 새로운 Api를 제공합니다. 새 `Android.Hardware.Camera2` 네임 스페이스는 Android 장치에 연결 된 개별 웹캠 장치 액세스에 대 한 기능이 포함 되어 있습니다. 또한 `Android.Hardware.Camera2` 파이프라인으로 각 카메라 장치 모델: 캡처 요청을 수락, 이미지를 캡처하고 다음 결과 출력 합니다. 이 방법은 앱이 카메라 장치로 여러 캡처 요청을 큐에 대 한 수 있습니다.
+Android 5.0는 향상 된 카메라 기능을 위한 몇 가지 새로운 Api를 제공 합니다. 새 `Android.Hardware.Camera2` 네임 스페이스에는 Android 장치에 연결 된 개별 카메라 장치에 액세스 하기 위한 기능이 포함 되어 있습니다. 또한은 각 카메라 장치를 파이프라인으로 모델링합니다.캡처요청을수락하고이미지를캡처한다음결과를출력합니다.`Android.Hardware.Camera2` 이 접근 방식을 사용 하면 앱이 카메라 장치에 여러 캡처 요청을 큐에 대기 시킬 수 있습니다.
 
-다음 Api 가능 이러한 새로운 기능:
+다음 Api는 이러한 새로운 기능을 가능 하 게 합니다.
 
--   `CameraManager.GetCameraIdList` &ndash; 장치 카메라를 프로그래밍 방식으로 액세스 하는 데 도움이 사용할 `CameraManager.OpenCamera` 특정 카메라 장치에 연결 합니다.
+-   `CameraManager.GetCameraIdList`&ndash; 를 사용`CameraManager.OpenCamera` 하 여 특정 카메라 장치에 연결할 때 카메라 장치에 프로그래밍 방식으로 액세스할 수 있습니다.
 
--   `CameraCaptureSession` &ndash; 캡처 또는 장치 카메라에서에서 이미지를 스트리밍합니다. 구현 하는 `CameraCaptureSession.CaptureListener` 새 이미지 캡처 이벤트를 처리 하는 인터페이스입니다.
+-   `CameraCaptureSession`&ndash; 카메라 장치에서 이미지를 캡처하거나 스트리밍합니다. 새 이미지 캡처 `CameraCaptureSession.CaptureListener` 이벤트를 처리 하는 인터페이스를 구현 합니다.
 
--   `CaptureRequest` &ndash; 캡처 매개 변수를 정의합니다.
+-   `CaptureRequest`&ndash; 캡처 매개 변수를 정의 합니다.
 
--   `CaptureResult` &ndash; 이미지 캡처 작업의 결과 제공합니다.
+-   `CaptureResult`&ndash; 이미지 캡처 작업의 결과를 제공 합니다.
 
-새 카메라 Api Android 5.0에 대 한 자세한 내용은 참조 하세요 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)합니다.
+Android 5.0의 새로운 카메라 Api에 대 한 자세한 내용은 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)를 참조 하세요.
 
 ### <a name="audio-playback"></a>오디오 재생
 
-Android 5.0 업데이트는 `AudioTrack` 더 나은 오디오 재생에 대 한 클래스:
+Android 5.0는 더 `AudioTrack` 나은 오디오 재생을 위해 클래스를 업데이트 합니다.
 
--   `ENCODING_PCM_FLOAT` &ndash; 구성 `AudioTrack` 더 나은 동적 범위, 큰 헤드룸 및 더 높은 품질로 (늘어난된 전체 자릿수) 덕분에 대 한 부동 소수점 형식에서 오디오 데이터를 허용 하도록 합니다. 또한 부동 소수점 형식을 오디오 클립을 방지할 수 있습니다.
+-   `ENCODING_PCM_FLOAT`더 나은 동적 범위, 더 큰 공간 및 고품질 (전체 자릿수 덕분)을 위해 부동 소수점 형식의 오디오 데이터를 허용 하도록를 구성 `AudioTrack` 합니다. &ndash; 또한 부동 소수점 형식은 오디오 클리핑을 방지 하는 데 도움이 됩니다.
 
--   `ByteBuffer` &ndash; 이제 오디오 데이터를 제공할 수 있습니다 `AudioTrack` 바이트 배열입니다.
+-   `ByteBuffer`이제에 오디오 데이터를 `AudioTrack` 바이트 배열로 제공할 수 있습니다. &ndash;
 
--   `WRITE_NON_BLOCKING` &ndash; 이 옵션을 버퍼링 간소화 및 일부 앱에 대 한 다중 스레딩 합니다.
+-   `WRITE_NON_BLOCKING`&ndash; 이 옵션은 일부 앱에 대해 버퍼링 및 다중 스레딩을 간소화 합니다.
 
-에 대 한 자세한 `AudioTrack` Android 5.0에서 향상 된 기능 참조 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)합니다.
+Android 5.0의 `AudioTrack` 향상 된 기능에 대 한 자세한 내용은 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)를 참조 하세요.
 
 ### <a name="media-playback-control"></a>미디어 재생 제어
 
-Android 5.0에는 새 `Android.Media.MediaController` 클래스를 대체 `RemoteControlClient`합니다. `Android.Media.MediaController` 간소화 된 전송 제어 Api를 제공 하 고 스레드로부터 안전한 재생 UI 컨텍스트 외부에서 제어를 제공 합니다. 전송 컨트롤을 처리 하는 다음과 같은 새로운 Api:
+Android 5.0는를 대체 `Android.Media.MediaController` `RemoteControlClient`하는 새 클래스를 소개 합니다. `Android.Media.MediaController`간소화 된 전송 제어 Api를 제공 하며 UI 컨텍스트 외부에서의 스레드로부터 안전한 재생 제어를 제공 합니다. 전송 제어를 처리 하는 새 Api는 다음과 같습니다.
 
--   `Android.Media.Session.MediaSession` &ndash; 미디어는 컨트롤러가 여러 개를 처리 하는 세션을 제어 합니다. 호출 `MediaSession.GetSessionToken` 세션과 상호 작용 하는 앱 토큰을 요청 합니다.
+-   `Android.Media.Session.MediaSession`&ndash; 여러 컨트롤러를 처리 하는 미디어 제어 세션. 을 호출 `MediaSession.GetSessionToken` 하 여 앱이 세션과 상호 작용 하는 데 사용 하는 토큰을 요청 합니다.
 
--   `MediaController.TransportControls` &ndash; 처리와 같은 명령 전송 **재생**를 **중지**, 및 **건너뛰기**합니다.
+-   `MediaController.TransportControls`재생, **중지**, **Skip**등의 전송 명령을 처리 합니다.  &ndash;
 
-또한 사용할 수 있습니다 새 `Android.App.Notification.MediaStyle` 풍부한 알림 콘텐츠 (예: 압축을 풀어 앨범 표지 표시)를 사용 하 여 미디어 세션을 연결 하는 클래스입니다.
+또한 새 `Android.App.Notification.MediaStyle` 클래스를 사용 하 여 미디어 세션을 다양 한 알림 콘텐츠와 연결할 수 있습니다 (예: 앨범 아트 추출 및 표시).
 
-Android 5.0의 새로운 미디어 재생 제어 기능에 대 한 자세한 내용은 참조 하세요 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)합니다.
+Android 5.0의 새로운 미디어 재생 제어 기능에 대 한 자세한 내용은 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)를 참조 하세요.
 
 ### <a name="storage"></a>스토리지
 
-Android 5.0 응용 프로그램 디렉터리 및 문서 작업을 쉽게 수행할 수 있도록 저장소 액세스 프레임 워크를 업데이트 합니다.
+Android 5.0는 응용 프로그램이 디렉터리와 문서를 쉽게 사용할 수 있도록 저장소 액세스 프레임 워크를 업데이트 합니다.
 
--   디렉터리 하위 트리를 선택 하려면 빌드을 보낼 수 있습니다는 `Android.Intent.Action.OPEN_DOCUMENT_TREE` 의도 합니다. 이 인해 시스템 하위 트리 선택;를 지 원하는 모든 공급자 인스턴스를 표시 하려면 그런 다음 사용자를 탐색 하 고 디렉터리를 선택 합니다.
+-   디렉터리 하위 트리를 선택 하기 위해 `Android.Intent.Action.OPEN_DOCUMENT_TREE` 의도를 빌드하고 보낼 수 있습니다. 이로 인해 시스템은 하위 트리 선택을 지 원하는 모든 공급자 인스턴스를 표시 합니다. 그런 다음 사용자는 디렉터리를 찾아서 선택 합니다.
 
--   를 만들고 새 문서 또는 하위 트리의 아무 곳 이나 디렉터리를 관리 하려면 새 사용할 `CreateDocument`, `RenameDocument`, 및 `DeleteDocument` 메서드의 `DocumentsContract`합니다.
+-   하위 트리 아래의 어디에서 나 새 문서 또는 디렉터리를 만들고 관리 `CreateDocument`하려면의 `DocumentsContract`새로운, `RenameDocument`및 `DeleteDocument` 메서드를 사용 합니다.
 
--   새 호출에 모든 공유 저장소 장치의 미디어 디렉터리 경로 얻으려면 `Android.Content.Context.GetExternalMediaDirs` 메서드.
+-   모든 공유 저장 장치에서 미디어 디렉터리에 대 한 경로를 가져오려면 새 `Android.Content.Context.GetExternalMediaDirs` 메서드를 호출 합니다.
 
-새 저장소 Api Android 5.0에 대 한 자세한 내용은 참조 하세요 [저장소](https://developer.android.com/preview/api-overview.html#Storage)합니다.
+Android 5.0의 새로운 저장소 Api에 대 한 자세한 내용은 [저장소](https://developer.android.com/preview/api-overview.html#Storage)를 참조 하세요.
 
-### <a name="wireless--connectivity"></a>무선 및 연결
+### <a name="wireless--connectivity"></a>무선 & 연결
 
-Android 5.0 무선 및 연결에 대 한 다음 API 향상 기능을 추가합니다.
+Android 5.0는 무선 및 연결에 대 한 다음과 같은 향상 된 API를 추가 합니다.
 
--   새 *다중 네트워크* Api 앱을 찾아 연결 하기 전에 특정 기능을 사용 하 여 네트워크를 선택할 수 있도록 합니다.
+-   응용 프로그램에서 연결을 설정 하기 전에 특정 기능을 가진 네트워크를 찾아 선택할 수 있게 해 주는 새로운 *다중 네트워크* api입니다.
 
--   역할을 Bluetooth 저 에너지 주변 장치를 Android 5.0 장치를 사용할 수 있는 Bluetooth 브로드캐스팅 기능이 있습니다.
+-   Android 5.0 장치가 저 에너지 Bluetooth 주변 장치로 작동할 수 있도록 하는 Bluetooth 브로드캐스팅 기능.
 
--   쉽게 근거리 통신 기능을 사용 하 여 다른 장치를 사용 하 여 데이터를 공유 하는 nfc 지원 향상.
+-   NFC 고급 기능을 통해 다른 장치와 데이터를 공유 하는 근거리 통신 기능을 보다 쉽게 사용할 수 있습니다.
 
-새 무선 및 Android 5.0에서 Api 연결에 대 한 자세한 내용은 참조 하세요 [무선 및 연결](https://developer.android.com/preview/api-overview.html#Wireless)합니다.
+Android 5.0의 새로운 무선 및 연결 Api에 대 한 자세한 내용은 [무선 및 연결](https://developer.android.com/preview/api-overview.html#Wireless)을 참조 하세요.
 
 ### <a name="job-scheduling"></a>작업 예약
 
-Android 5.0에는 새 `JobScheduler` 사용자를 도울 수 있는 API 장치가 연결 되어 있는 경우에 실행 하려면 특정 작업을 예약 하 고 청구 하 여 배터리가 최소화 합니다. 또한이 작업 스케줄러 기능 조건이 요금제 네트워크 대신 Wi-fi 네트워크를 통해 연결 되어 있는 경우 큰 파일을 다운로드 하는 등의 해당 작업에 더 적합 한 경우를 실행 하는 작업을 예약 하는 데 사용할 수 있습니다.
+Android 5.0에는 장치 `JobScheduler` 를 연결 하 고 충전 하는 경우에만 특정 작업을 실행 하도록 예약 하 여 배터리 소모를 최소화 하는 데 도움이 되는 새로운 API가 도입 되었습니다. 이 작업 스케줄러 기능을 사용 하 여 장치가 계량 된 네트워크 대신 Wi-fi 네트워크를 통해 연결 되어 있을 때 용량이 많은 파일을 다운로드 하는 등의 작업에 더 적합 한 경우 실행할 작업을 예약할 수도 있습니다.
 
-새 작업 예약 Android 5.0에서 Api에 대 한 자세한 내용은 참조 하세요 [예약 작업](https://developer.android.com/preview/api-overview.html#JobScheduler)합니다.
+Android 5.0의 새로운 작업 예약 Api에 대 한 자세한 내용은 [작업 예약](https://developer.android.com/preview/api-overview.html#JobScheduler)을 참조 하세요.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Android 앱 개발자를 위한 Android 5.0의 중요 한 새로운 기능 개요를 제공 합니다.
+이 문서에서는 Xamarin android 앱 개발자를 위한 Android 5.0의 중요 한 새로운 기능에 대 한 개요를 제공 했습니다.
 
 -   재질 테마
 
 -   애니메이션
 
--   보기 그림자 및 권한 상승
+-   그림자 및 권한 상승 보기
 
--   Drawable 색조 등 주요 색상 기능 추출 색
+-   그릴 때 색조 및 강조 된 색 추출을 비롯 한 색 기능
 
--   새 `RecyclerView` 고 `CardView` 위젯
+-   새 `RecyclerView` 및 위젯`CardView`
 
--   알림 향상
+-   알림 기능 향상
 
--   카메라, 오디오 재생, 미디어 제어, 저장소, 무선 연결 및 작업 예약에 대 한 새로운 Api
+-   카메라, 오디오 재생, 미디어 컨트롤, 저장소, 무선/연결 및 작업 예약을 위한 새 Api
 
-Xamarin Android 개발을 처음 접하는 경우 읽을 [설정 및 설치](~/android/get-started/installation/index.md) Xamarin.Android를 사용 하 여 시작할 수 있도록 합니다.
-[Hello, Android](~/android/get-started/hello-android/index.md) 는 Android 프로젝트를 만드는 방법에 대 한 훌륭한 소개 합니다.
+Xamarin Android 개발을 처음 접하는 경우에는 Xamarin android를 시작 하는 데 도움이 되는 [설정 및 설치](~/android/get-started/installation/index.md) 를 참조 하세요.
+[Hello, android](~/android/get-started/hello-android/index.md) 는 android 프로젝트를 만드는 방법을 배우는 데 유용한 소개입니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android L 개발자 미리 보기](https://developer.android.com/preview/index.html)
+- [Android L Developer Preview](https://developer.android.com/preview/index.html)
 - [Android SDK 가져오기](https://developer.android.com/sdk/index.html#Other)
 - [재질 디자인](https://developer.android.com/preview/material/index.html)
 - [재질 디자인 원칙](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

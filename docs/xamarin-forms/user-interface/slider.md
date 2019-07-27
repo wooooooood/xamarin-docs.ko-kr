@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 6e65124df4b20a50091ad93e18621f8e6707ebbe
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 1fa46af1ac1cf6ea49a53e3f8d3c3dca6ba83e13
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970546"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511897"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
@@ -39,7 +39,7 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) 은 선택 하는 사용�
 
 [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) 와 함께 제공 되는 개체를 `ValueChanged` 이벤트 라는 두 가지 속성이 형식 둘 다 `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) 및 [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). 시 이벤트 발생의 값 `NewValue` 동일 합니다 `Value` 의 속성은 `Slider` 개체.
 
-`Slider` 또한 정의 `DragStarted` 고 `DragCompleted` 끌기 작업의 시작과 끝에서 발생 하는 이벤트입니다. 달리 합니다 [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) 이벤트를 `DragStarted` 및 `DragCompleted` 만 이벤트가 사용자 조작을 통해는 `Slider`합니다. 경우는 `DragStarted` 이벤트가 발생 합니다 `DragStartedCommand`, 형식의 `ICommand`, 실행 됩니다. 마찬가지로,는 `DragCompleted` 이벤트가 발생 합니다 `DragCompletedCommand`, 형식의 `ICommand`, 실행 됩니다.
+`Slider`또한는 `DragStarted` 끌기 `DragCompleted` 작업의 시작과 끝에서 발생 하는 및 이벤트를 정의 합니다. 이벤트와 달리 및`DragCompleted`이벤트 는의 `Slider`사용자 조작을 통해서만 발생 합니다. `DragStarted` [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) 이벤트가 발생 `DragStartedCommand`하면 형식의`ICommand`이 실행 됩니다. `DragStarted` 마찬가지로 `DragCompleted` 이벤트가 발생 `DragCompletedCommand`하면 형식의 `ICommand`이 실행 됩니다.
 
 > [!WARNING]
 > 제약을 받지 않는 가로 레이아웃 옵션을 사용 하지 마십시오 `Center`, `Start`, 또는 `End` 사용 하 여 `Slider`입니다. Android 및 UWP, 모두는 `Slider` 길이가 0 인 및 iOS의 경우 막대에 막대에는 축소 정도로 매우 짧습니다. 기본값을 유지 `HorizontalOptions` 설정 `Fill`, 고의 너비를 사용 하지 않는 `Auto` 전환할 때 `Slider` 에 `Grid` 레이아웃 합니다.
@@ -205,7 +205,7 @@ double value = slider.Value;
 </ContentPage>
 ```
 
-`Rotation` 첫 번째 속성 `Label` 바인딩되는 `Value` 의 속성을 `Slider`는 `Text` 두 번째 속성 `Label` 사용 하 여를 `StringFormat` 사양입니다. 합니다 **기본 슬라이더 바인딩을** 페이지 함수 약간 다르게 두 이전 페이지에서: 페이지가 처음 나타날 경우, 두 번째 `Label` 값을 사용 하 여 텍스트 문자열을 표시 합니다. 데이터 바인딩을 사용 하 여이 유용 합니다. 데이터 바인딩 없이 텍스트를 표시 하려면 특히 초기화 해야는 `Text` 의 속성을 `Label` 의 발생을 시뮬레이션 하거나는 `ValueChanged` 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트.
+`Rotation` 첫 번째 속성 `Label` 바인딩되는 `Value` 의 속성을 `Slider`는 `Text` 두 번째 속성 `Label` 사용 하 여를 `StringFormat` 사양입니다. **기본 슬라이더 바인딩** 페이지는 위의 두 페이지와 약간 다르게 작동 합니다. 페이지가 처음 표시 될 때 두 번째 `Label` 는 값을 포함 하는 텍스트 문자열을 표시 합니다. 데이터 바인딩을 사용 하 여이 유용 합니다. 데이터 바인딩 없이 텍스트를 표시 하려면 특히 초기화 해야는 `Text` 의 속성을 `Label` 의 발생을 시뮬레이션 하거나는 `ValueChanged` 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트.
 
 <a name="precautions" />
 
@@ -289,11 +289,11 @@ Slider slider = new Slider
 
 ### <a name="the-android-implementation"></a>Android 구현
 
-Android 구현의 `Slider` Android 기반 [ `SeekBar` ](https://developer.xamarin.com/api/type/Android.Widget.SeekBar/) 항상 설정 합니다 [ `Max` ](https://developer.xamarin.com/api/property/Android.Widget.ProgressBar.Max/) 1000 속성입니다. 즉는 `Slider` Android에만 1,001 불연속 값입니다. 설정 하는 경우를 `Slider` 할를 `Minimum` 0 및 `Maximum` 로 서 then 5000를 `Slider` 조작 되는 `Value` 속성이 0, 5, 10, 15 및 등의 값입니다.
+Android 구현의 `Slider` Android 기반 [ `SeekBar` ](xref:Android.Widget.SeekBar) 항상 설정 합니다 [ `Max` ](xref:Android.Widget.ProgressBar.Max) 1000 속성입니다. 즉는 `Slider` Android에만 1,001 불연속 값입니다. 설정 하는 경우를 `Slider` 할를 `Minimum` 0 및 `Maximum` 로 서 then 5000를 `Slider` 조작 되는 `Value` 속성이 0, 5, 10, 15 및 등의 값입니다.
 
 ### <a name="the-uwp-implementation"></a>UWP 구현
 
-UWP 구현의 `Slider` UWP 기반 [ `Slider` ](/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 `Maximum` 및 `Minimum` 10, 하지만 1 보다 크지 않음로 나눈 값 속성입니다.
+UWP 구현의 `Slider` UWP 기반 [ `Slider` ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 `Maximum` 및 `Minimum` 10, 하지만 1 보다 크지 않음로 나눈 값 속성입니다.
 
 예를 들어, 기본 범위인 0 ~ 1에 대 한는 `StepFrequency` 속성은 0.1로 설정 합니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 명백 합니다 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 한 다음 속성은 10 이상이 `StepFrequency` 1로 설정 됩니다 및 `Value` 속성이 정수 계열 값입니다.
 

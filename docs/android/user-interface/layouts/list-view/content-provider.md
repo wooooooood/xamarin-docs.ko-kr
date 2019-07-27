@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: d1ec628de3481820f320a5a8e6ef88fcbaab75a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 142541dcc35b55e43b54eeb729c486ac9fc88b54
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61189739"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510070"
 ---
-# <a name="using-a-contentprovider"></a>ContentProvider 사용
+# <a name="using-a-contentprovider-with-xamarinandroid"></a>Xamarin Android에서 ContentProvider 사용
 
-CursorAdapters는 ContentProvider에서 데이터를 표시 하려면 데도 사용할 수 있습니다.
-ContentProviders 허용 다른 응용 프로그램에서 제공 하는 데이터에 액세스할 수 있습니다 (연락처와 같이 Android 시스템 데이터를 포함 하 여 미디어 및 일정 정보).
+CursorAdapters은 ContentProvider의 데이터를 표시 하는 데에도 사용할 수 있습니다.
+ContentProviders를 사용 하면 다른 응용 프로그램 (예: 연락처, 미디어 및 일정 정보)에서 제공 하는 데이터에 액세스할 수 있습니다.
 
-ContentProvider에 액세스 하는 기본 방법은 LoaderManager를 사용 하 여를 CursorLoader 된 합니다. LoaderManager 주 스레드나 해제 차단 작업을 이동 (API 수준 11, Honeycomb) 한 Android 3.0에서 도입 되었습니다 하 고 표시 하기 위해 ListView에 바인딩되는 스레드에서 로드 될 데이터를 허용 하는 CursorLoader를 사용 하 여 합니다.
+ContentProvider에 액세스 하는 기본 방법은 LoaderManager를 사용 하는 CursorLoader를 사용 하는 것입니다. LoaderManager는 주 스레드에서 차단 작업을 이동 하기 위해 Android 3.0 (API 수준 11, Honeycomb)에 도입 되었으며, CursorLoader를 사용 하면 데이터를 표시 하기 위해 ListView에 바인딩하기 전에 스레드에 로드할 수 있습니다.
 
-가리킵니다 [ContentProviders 소개](~/android/platform/content-providers/index.md) 자세한 내용은 합니다.
+자세한 내용은 [ContentProviders 소개](~/android/platform/content-providers/index.md) 를 참조 하세요.
 

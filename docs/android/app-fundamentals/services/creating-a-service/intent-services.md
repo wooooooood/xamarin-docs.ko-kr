@@ -1,36 +1,36 @@
 ---
-title: Xamarin.Android에서 인 텐트 서비스
+title: Xamarin Android의 의도 서비스
 ms.prod: xamarin
 ms.assetid: A5B86FE4-C8E2-4B0A-84CA-EF8F5119E31B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1301f34ad1f7a0069c542ba81bf237a673fd239d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4c868623ae08ac1366c1c9ea55c8d635f0a6a061
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013134"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509131"
 ---
-# <a name="intent-services-in-xamarinandroid"></a>Xamarin.Android에서 인 텐트 서비스
+# <a name="intent-services-in-xamarinandroid"></a>Xamarin Android의 의도 서비스
 
-## <a name="intent-services-overview"></a>인 텐트 서비스 개요
+## <a name="intent-services-overview"></a>의도 서비스 개요
 
-둘 다 시작 하 고 작업을 비동기적으로 수행할 수 해야 서비스를 유지 하기 위해 성능 부드러운 함을 의미 하는 주 스레드에서 실행 하는 서비스를 바인딩해야 합니다. 된 이러한 문제를 해결 하는 가장 간단한 방법 중 하나를 _작업자 큐 프로세서 패턴_단일 스레드 서비스를 제공 하는 큐에서 수행 되어야 하는 작업 위치, 합니다. 
+시작 된 서비스와 바인딩된 서비스는 모두 주 스레드에서 실행 됩니다. 즉, 성능을 원활 하 게 유지 하려면 서비스에서 비동기적으로 작업을 수행 해야 합니다. 이러한 문제를 해결 하는 가장 간단한 방법 중 하나는 _작업자 큐 프로세서 패턴_을 사용 하는 것입니다. 여기에서 수행할 작업은 단일 스레드가 처리 하는 큐에 배치 됩니다.
 
-합니다 [ `IntentService` ](https://developer.xamarin.com/api/type/Android.App.IntentService/) 의 서브 클래스는 `Service` 이 패턴의 Android 특정 구현을 제공 하는 클래스입니다. 작업자 스레드는 큐 서비스를 시작 하는 큐 작업을 관리할 및 끌어오기 요청을 작업자 스레드에서 실행 되도록 큐를 해제 합니다. `IntentService` 조용히 자기 자신을 중지 되 고 큐에 더 이상 작업이 있을 때 작업자 스레드를 제거 합니다.
- 
-작업을 만들어 큐로 전송 되는 `Intent` 전달 하는 `Intent` 에 `StartService` 메서드.
+는 [`IntentService`](xref:Android.App.IntentService) 이 패턴의 Android 관련 `Service` 구현을 제공 하는 클래스의 서브 클래스입니다. 큐 작업을 관리 하 고, 큐를 서비스 하는 작업자 스레드를 시작 하 고, 작업자 스레드에서 실행할 요청을 끌어오기 합니다. 는 `IntentService` 큐에 더 이상 작업이 없을 때 자동으로 중지 하 고 작업자 스레드를 제거 합니다.
 
-중지 하거나 중단할 수 없는 합니다 `OnHandleIntent` 메서드 `IntentService` 작동 하는 동안. 이 설계로 인해 프로그램 `IntentService` 상태 비저장 유지할지 &ndash; 활성 연결 또는 응용 프로그램의 나머지 부분에서 통신에 의존 하지 않아야 합니다. `IntentService` statelessly 작업 요청을 처리할 것입니다.
+작업은를 만든 `Intent` 다음 `StartService` 메서드에 `Intent` 전달 하 여 큐에 전송 됩니다.
 
-서브클래싱 하기 위한 두 가지 요구 사항이 `IntentService`:
+작업 하는 동안에는 `OnHandleIntent` 메서드 `IntentService` 를 중지 하거나 중단할 수 없습니다. 이 설계로 인해는 `IntentService` &ndash; 응용 프로그램의 나머지 부분 으로부터의 활성 연결 또는 통신을 사용 하지 않아야 합니다. 는 작업 요청을 statelessly 처리 하기 위한 것입니다.`IntentService`
 
-1. 새 형식 (하위 클래스를 만들어 `IntentService`)만 재정의 `OnHandleIntent` 메서드.
-2. 새 형식에 대 한 생성자를 사용 하려면 요청을 처리 하는 작업자 스레드 이름을 지정 하는 데 사용 되는 문자열입니다. 이 작업자 스레드의 이름은 응용 프로그램을 디버깅 하는 경우에 주로 사용 됩니다.
+서브클래싱 `IntentService`에는 두 가지 요구 사항이 있습니다.
 
-다음 코드는 `IntentService` 재정의 된 구현을 `OnHandleIntent` 메서드:
+1. 새 형식 (서브클래싱 `IntentService`으로 만듦)은 `OnHandleIntent` 메서드만 재정의 합니다.
+2. 새 형식에 대 한 생성자에는 요청을 처리 하는 작업자 스레드의 이름을 결정 하는 데 사용 되는 문자열이 필요 합니다. 이 작업자 스레드의 이름은 응용 프로그램을 디버그할 때 주로 사용 됩니다.
+
+다음 코드는 재정의 `IntentService` `OnHandleIntent` 된 메서드를 사용 하 여 구현을 보여 줍니다.
 
 ```csharp
 [Service]
@@ -39,7 +39,7 @@ public class DemoIntentService: IntentService
     public DemoIntentService () : base("DemoIntentService")
     {
     }
-    
+
     protected override void OnHandleIntent (Android.Content.Intent intent)
     {
         Console.WriteLine ("perform some long running work");
@@ -49,7 +49,7 @@ public class DemoIntentService: IntentService
 }
 ```
 
-로 작업이 전달 됩니다는 `IntentService` 인스턴스화하여를 `Intent` 호출한 합니다 [ `StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/) 매개 변수로 해당 의도 사용 하 여 메서드. 매개 변수로 서비스에 전달할는 의도 `OnHandleIntent` 메서드. 이 코드 조각은 다음과 같습니다. 의도 작업 요청을 보내기의 예 
+작업은을 `Intent` 인스턴스화한 다음 `IntentService` 해당 의도를 매개 변수로 사용 하 [`StartService`](xref:Android.Content.Context.StartService*) 여 메서드를 호출 하 여로 전송 됩니다. 의도는 `OnHandleIntent` 메서드의 매개 변수로 서비스에 전달 됩니다. 이 코드 조각은 의도 한 대로 작업 요청을 보내는 예제입니다. 
 
 ```csharp
 // This code might be called from within an Activity, for example in an event
@@ -63,19 +63,18 @@ downloadIntent.Put
 StartService(downloadIntent);
 ```
 
-`IntentService` 이 코드 조각에서 볼 수 있듯이 의도에서 값을 추출할 수 있습니다.  
+는 `IntentService` 다음 코드 조각에 나와 있는 것 처럼 의도에서 값을 추출할 수 있습니다.  
 
 ```csharp
 protected override void OnHandleIntent (Android.Content.Intent intent)
 {
     string fileToDownload = intent.GetStringExtra("file_to_download");
-    
+
     Log.Debug("DemoIntentService", $"File to download: {fileToDownload}.");
 }
 ```
 
-
 ## <a name="related-links"></a>관련 링크
 
-- [IntentService](https://developer.xamarin.com/api/type/Android.App.IntentService/)
-- [StartService](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)
+- [IntentService](xref:Android.App.IntentService)
+- [StartService](xref:Android.Content.Context.StartService*)

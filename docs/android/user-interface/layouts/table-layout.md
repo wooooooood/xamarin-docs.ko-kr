@@ -1,27 +1,27 @@
 ---
-title: TableLayout
+title: Xamarin Android TableLayout
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9a5186fe49edc81f5d6ec8ca297146a27a0274fa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61305160"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509680"
 ---
-# <a name="tablelayout"></a>TableLayout
+# <a name="xamarinandroid-tablelayout"></a>Xamarin Android TableLayout
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 가 [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
-자식 표시 [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-행 및 열에 대 한 요소입니다.
+[`TableLayout`](xref:Android.Widget.TableLayout)는입니다.[`ViewGroup`](xref:Android.Views.ViewGroup)
+자식을 표시 합니다.[`View`](xref:Android.Views.View)
+행 및 열의 요소
 
-명명 된 새 프로젝트를 시작 **HelloTableLayout**합니다.
+**HelloTableLayout**라는 새 프로젝트를 시작 합니다.
 
-엽니다는 **Resources/Layout/Main.axml** 파일과 다음 삽입:
+**Resources/Layout/Main. axml** 파일을 열고 다음을 삽입 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,13 +102,13 @@ ms.locfileid: "61305160"
 </TableLayout>
 ```
 
-어떻게 HTML 테이블의 구조와 유사 알 수 있습니다. 는 [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
-요소는 HTML과 같은 `<table>` 요소 [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/)
-비슷합니다는 `<tr>` 요소로 셀을 사용할 수 있습니다 모든 종류의 하지만 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) 요소입니다. 이 예는 [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
-각 셀에 사용 됩니다. 일부 행 사이 이기도 기본 [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/)는 가로줄을 그리기 하는 데 사용 됩니다.
+이것은 HTML 테이블의 구조와 유사 합니다. 여[`TableLayout`](xref:Android.Widget.TableLayout)
+요소가 HTML `<table>` 요소와 유사 합니다.[`TableRow`](xref:Android.Widget.TableRow)
+는 `<tr>` 요소와 유사 하지만 셀의 경우 모든 종류의 [`View`](xref:Android.Views.View) 요소를 사용할 수 있습니다. 이 예제에서는[`TextView`](xref:Android.Widget.TextView)
+각 셀에 사용 됩니다. 일부 행 사이에는 가로 선을 그리는 데 사용 되는 [`View`](xref:Android.Views.View)기본도 있습니다.
 
-있는지 확인 하 **HelloTableLayout** 활동에서이 레이아웃을 로드 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-방법:
+**HelloTableLayout** 활동이 다음에서이 레이아웃을 로드 하는지 확인 합니다.[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+방법이
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -118,21 +118,21 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-합니다 [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) 에 대 한 레이아웃 파일을 로드 하는 메서드를 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)리소스 ID 기준으로 지정 된 &mdash; `Resource.Layout.Main` 가리킵니다는 **리소스/레이아웃 / Main.axml** 레이아웃 파일입니다.
+[`Activity`](xref:Android.App.Activity) &mdash;)메서드 는 리소스 ID`Resource.Layout.Main` 로 지정 된에 대 한 레이아웃 파일을 로드 하 고 리소스 **/레이아웃/기본. axml** 레이아웃 파일을 참조 합니다. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
 
-애플리케이션을 실행합니다. 다음을 참조 해야 합니다.
+애플리케이션을 실행합니다. 다음이 표시 됩니다.
 
-[![여러 테이블 행을 표시 하는 TableLayout 앱의 스크린샷 예제](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[![여러 테이블 행을 표시 하는 TableLayout 앱의 예제 스크린샷](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 
 
 ## <a name="references"></a>참조
 
--   [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 
+-   [`TableLayout`](xref:Android.Widget.TableLayout) 
 
--   [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 
+-   [`TableRow`](xref:Android.Widget.TableRow) 
 
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
+-   [`TextView`](xref:Android.Widget.TextView) 
 
-*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다*
-[*Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/).
+*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
+[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.

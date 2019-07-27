@@ -1,5 +1,5 @@
 ---
-title: Id 공급자를 사용 하 여 AuthenticateUsers
+title: Id 공급자를 사용 하는 AuthenticateUsers
 description: 이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650411"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508257"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
 
@@ -171,7 +171,7 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
 
 #### <a name="android"></a>Android
 
-Android 사용자 지정 URL 구성표를 지정 하 여 등록은 [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 특성을 `Activity` 체계를 처리 하는. Id 공급자에는 권한 부여 요청 완료 되 면 응용 프로그램의 리디렉션 URL로 리디렉션합니다. Android 응용 프로그램을 시작 하면 사용자 지정 체계를 사용 하는 URL에 의해 처리 되는 위치는 시작 매개 변수로 URL에 전달 합니다 `OnCreate` 메서드의 `Activity` 사용자 지정 URL 체계 처리를 위해 등록 합니다. 다음 코드 예제에서는 사용자 지정 URL 체계를 처리 하는 샘플 응용 프로그램에서 클래스를 보여 줍니다.
+Android 사용자 지정 URL 구성표를 지정 하 여 등록은 [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) 특성을 `Activity` 체계를 처리 하는. Id 공급자에는 권한 부여 요청 완료 되 면 응용 프로그램의 리디렉션 URL로 리디렉션합니다. Android 응용 프로그램을 시작 하면 사용자 지정 체계를 사용 하는 URL에 의해 처리 되는 위치는 시작 매개 변수로 URL에 전달 합니다 `OnCreate` 메서드의 `Activity` 사용자 지정 URL 체계 처리를 위해 등록 합니다. 다음 코드 예제에서는 사용자 지정 URL 체계를 처리 하는 샘플 응용 프로그램에서 클래스를 보여 줍니다.
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -197,7 +197,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-`DataSchemes` 의 속성을 [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 에서 프로젝트에 Android 클라이언트 id에서 가져온 역방향된 클라이언트 식별자로 설정 되어야 합니다 [Google API 콘솔](http://console.developers.google.com)합니다.
+`DataSchemes` 의 속성을 [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) 에서 프로젝트에 Android 클라이언트 id에서 가져온 역방향된 클라이언트 식별자로 설정 되어야 합니다 [Google API 콘솔](http://console.developers.google.com)합니다.
 
 합니다 `OnCreate` 에서 받은 URL을 변환 하는 메서드는 `Android.Net.Url` .net `Uri`, 리디렉션 URL을 처리 하기 전에 `OnPageLoading` 공용 메서드의 `OAuth2Authenticator` 개체입니다. 그러면 Xamarin.Auth를 웹 브라우저 탭을 닫고 수신된 된 OAuth 데이터를 구문 분석 합니다.
 

@@ -1,24 +1,24 @@
 ---
-ms.openlocfilehash: ef16224b9ef060ff8643211b8e1f0c767c518bdf
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e383bbccd4e76be8a208f5680e5cf21e45a0dbc3
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67841601"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511939"
 ---
 
-솔루션의 릴리스 빌드를 지정 하려면 다음 명령줄 **SOLUTION_FILE.sln** iPhone 용입니다. IPA 위치를 지정 하 여 설정할 수는 `IpaPackageDir` 명령줄에서 속성:
+IPhone 용 **SOLUTION_FILE** 솔루션의 릴리스 빌드를 지정 하려면 다음 명령줄을 지정 합니다. 명령줄에서 속성을 `IpaPackageDir` 지정 하 여 IPA의 위치를 설정할 수 있습니다.
 
-- Mac에서 사용 하 여 **xbuild**:
+- Mac에서 **xbuild**를 사용 합니다.
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
            /p:IpaPackageDir="$HOME/Builds" \
            /t:Build MyProject.sln
 
-합니다 **xbuild** 명령은 일반적으로 디렉터리에 있습니다 **/Library/Frameworks/Mono.framework/Commands**합니다.
+**Xbuild** 명령은 일반적으로 **/Library/Frameworks/Mono.framework/Commands**디렉터리에 있습니다.
 
-- Windows를 사용 하 여 온 **msbuild**:
+- Windows에서 **msbuild**를 사용 합니다.
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 
@@ -27,7 +27,6 @@ ms.locfileid: "67841601"
             /t:Build MyProject.sln
 
 
-**msbuild** 자동으로 확장 되지 것입니다 `$( )` 명령줄에 의해 전달 된 식입니다. 이러한 이유로 것이 좋습니다 설정 하는 경우 전체 경로 사용 하는 `IpaPackageDir` 명령줄에서.
+**msbuild** 는 명령줄에서 전달 `$( )` 된 식을 자동으로 확장 하지 않습니다. 따라서 명령줄에서을 `IpaPackageDir` 설정할 때 전체 경로를 사용 하는 것이 좋습니다.
 
-
-참조를 [9.8 iOS에 대 한 릴리스 정보](https://developer.xamarin.com/releases/ios/xamarin.ios_9/xamarin.ios_9.8/#New_MSBuild_property_IpaPackageDir_to_customize_.ipa_output_location) 대 한 자세한 내용은 `IpaPackageDir` 속성입니다.
+`IpaPackageDir` 속성에 대 한 자세한 내용은 [iOS 9.8에 대 한 릴리스 정보](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_9/xamarin.ios_9.8.md#new-msbuild-property-ipapackagedir-to-customize-ipa-output-location) 를 참조 하세요.

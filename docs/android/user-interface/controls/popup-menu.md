@@ -1,29 +1,29 @@
 ---
 title: 팝업 메뉴
-description: 특정 보기에 고정 되는 팝업 메뉴를 추가 하는 방법.
+description: 특정 뷰에 고정 된 팝업 메뉴를 추가 하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 1e74c8b7745936f6e9a8890fd26acafe2f2fb6d5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e7665ee1d3506fb4b6a237a7c6906d9bfb3e9cb1
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61288651"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510220"
 ---
-# <a name="popup-menu"></a>팝업 메뉴
+# <a name="xamarinandroid-popup-menu"></a>Xamarin Android 팝업 메뉴
 
-합니다 [팝업 메뉴](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/) (라고도 _바로 가기 메뉴_) 특정 보기 고정 되는 메뉴입니다. 다음 예제에서는 단일 작업 단추를 포함합니다. 사용자가 단추를 누르면 항목이 세 팝업 메뉴가 표시 됩니다.
+[PopupMenu](xref:Android.Widget.PopupMenu) ( _바로 가기 메뉴_라고도 함)는 특정 뷰에 고정 된 메뉴입니다. 다음 예제에서 단일 활동에는 단추가 포함 되어 있습니다. 사용자가 단추를 누르면 세 개의 항목 팝업 메뉴가 표시 됩니다.
 
-[![단추 및 팝업 메뉴 항목이 세 개를 사용 하 여 앱의 예](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[![단추 및 3 항목 팝업 메뉴를 사용 하는 앱의 예](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
 ## <a name="creating-a-popup-menu"></a>팝업 메뉴 만들기
 
-첫 번째 단계는 메뉴의 메뉴 리소스 파일을 만들고 그 안에 배치 **리소스/메뉴**합니다. 예를 들어, 다음 XML은 이전 스크린샷에서 표시 되는 세 가지 항목 메뉴에 대 한 코드 **Resources/menu/popup_menu.xml**:
+첫 번째 단계는 메뉴에 대 한 메뉴 리소스 파일을 만들고 **리소스/메뉴**에 추가 하는 것입니다. 예를 들어 다음 XML은 이전 스크린샷 **Resources/menu/popup_menu**에 표시 된 세 항목 메뉴에 대 한 코드입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -37,9 +37,9 @@ ms.locfileid: "61288651"
 </menu>
 ```
 
-그런 다음의 인스턴스를 만듭니다 `PopupMenu` 및 해당 보기에 고정 합니다. 인스턴스를 만들면 `PopupMenu`, 생성자에 대 한 참조를 전달 합니다 `Context` 메뉴 연결 보기 및 합니다. 결과적으로, 팝업 메뉴는 생성 하는 동안이 보기에 앵커 되어 있습니다.
+그런 다음의 `PopupMenu` 인스턴스를 만들고 해당 뷰에 앵커를 고정 합니다. 의 `PopupMenu`인스턴스를 만들 때 해당 생성자에에 `Context` 대 한 참조와 메뉴가 연결 될 뷰를 전달 합니다. 결과적으로 팝업 메뉴는 생성 중에이 뷰에 고정 됩니다.
 
-다음 예제에서는 `PopupMenu` 단추의 클릭 이벤트 처리기에 만들어집니다 (이라는 `showPopupMenu`). 이 단추는 또한 뷰를는 `PopupMenu` 다음 코드 예제와 같이 고정 됩니다.
+다음 예제 `PopupMenu` 에서는 단추에 대 한 click 이벤트 처리기에가 생성 됩니다 (이름이 지정 `showPopupMenu`됨). 이 단추는 다음 코드 예제와 같이이 `PopupMenu` 앵커 되는 뷰입니다.
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -47,7 +47,7 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-마지막으로 팝업 메뉴 해야 *배포용* 앞서 만든 메뉴 리소스를 사용 하 여 합니다. 다음 예제에서는 메뉴의 호출에서에서 [Inflate](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/) 메서드가 추가 되 고 [표시](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/) 메서드를 호출 하 고 표시:
+마지막으로 팝업 메뉴는 앞에서 만든 메뉴 리소스와 *팽창* 되어야 합니다. 다음 예제에서는 메뉴의 [팽창](xref:Android.Views.LayoutInflater.Inflate*) 메서드에 대 한 호출을 추가 하 고 [표시 메서드를](xref:Android.Widget.PopupMenu.Show) 호출 하 여 표시 합니다.
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -58,9 +58,9 @@ showPopupMenu.Click += (s, arg) => {
 ```
 
 
-## <a name="handling-menu-events"></a>메뉴 이벤트를 처리합니다.
+## <a name="handling-menu-events"></a>메뉴 이벤트 처리
 
-사용자가 메뉴 항목을 선택 합니다 [MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/) 클릭 이벤트가 발생 하 고 메뉴가 해제 됩니다. 메뉴 밖 아무 곳 이나 눌러서는 단순히 알림을 해제 합니다. 두 경우 모두 메뉴가 닫힐 때 해당 [DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/) 발생 합니다. 다음 코드는 모두에 대 한 이벤트 처리기를 추가 합니다 `MenuItemClick` 고 `DismissEvent` 이벤트:
+사용자가 메뉴 항목을 선택 하면 [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) click 이벤트가 발생 하 고 메뉴가 해제 됩니다. 메뉴 외부의 아무 곳 이나 누르면 간단히 해제 됩니다. 두 경우 모두 메뉴를 해제 하면 해당 [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) 이 발생 합니다. 다음 코드는 `MenuItemClick` 및 `DismissEvent` 이벤트에 대 한 이벤트 처리기를 추가 합니다.
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {

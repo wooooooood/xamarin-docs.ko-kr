@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ae0b67de5856e6baef9a4989a93e65ead2854a62
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2718953c9e5628374c45fa3741d1ad3be3125dd9
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61310635"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510144"
 ---
-# <a name="web-view"></a>웹 보기
+# <a name="xamarinandroid-web-view"></a>Xamarin Android 웹 보기
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 웹 페이지 보기에 대 한 고유한 창을 만드는 (또는 심지어 전체 브라우저를 개발) 수 있습니다. 이 자습서에서는 간단한을 만듭니다. [`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
-볼 수 있으며 웹 페이지를 탐색 하는.
+[`WebView`](xref:Android.Webkit.WebView)웹 페이지를 볼 수 있는 고유한 창을 만들거나 완전 한 브라우저를 개발할 수 있습니다. 이 자습서에서는 간단 하 게 만들 수 있습니다.[`Activity`](xref:Android.App.Activity)
+이를 통해 웹 페이지를 보고 탐색할 수 있습니다.
 
-라는 새 프로젝트를 만듭니다 **HelloWebView**합니다.
+새 프로젝트를 **만듭니다.**
 
-오픈 **Resources/Layout/Main.axml** 하 고 다음을 삽입 합니다.
+**리소스/레이아웃/기본. axml** 을 열고 다음을 삽입 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -30,23 +30,23 @@ ms.locfileid: "61310635"
     android:layout_height="fill_parent" />
 ```
 
-이 응용 프로그램은 인터넷에 액세스 하기 때문에 적절 한 권한이 Android 매니페스트 파일 추가 해야 합니다. 응용 프로그램 작동 하는 데 필요한 사용 권한을 지정 하려면 프로젝트의 속성을 엽니다. 사용 하도록 설정 된 `INTERNET` 아래와 같이 권한:
+이 응용 프로그램은 인터넷에 액세스 하므로 Android 매니페스트 파일에 적절 한 권한을 추가 해야 합니다. 프로젝트의 속성을 열어 응용 프로그램에서 작동 하는 데 필요한 권한을 지정 합니다. 아래와 `INTERNET` 같이 사용 권한을 설정 합니다.
 
 ![Android 매니페스트에서 인터넷 권한 설정](web-view-images/01-set-internet-permissions.png)
 
-이제 열 **MainActivity.cs** 추가 하 여 및 Webkit에 대 한 지시문:
+이제 **MainActivity.cs** 을 열고 Webkit에 대 한 using 지시문을 추가 합니다.
 
 ```csharp
 using Android.Webkit;
 ```
 
-맨 위에 있는 합니다 `MainActivity` 클래스를 선언 된 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 개체:
+`MainActivity` 클래스의 맨 위에서 [`WebView`](xref:Android.Webkit.WebView) 개체를 선언 합니다.
 
 ```csharp
 WebView web_view;
 ```
 
-경우는 **WebView** 는 URL을 로드 하 라는 메시지가 표시,이 기본적으로 위임 하는 기본 브라우저에 요청 합니다. 할 합니다 **WebView** URL 대신 기본 브라우저를 로드, 서브 클래스 해야 `Android.Webkit.WebViewClient` 재정의 및는 `ShouldOverriderUrlLoading` 메서드. 이 사용자 지정 인스턴스 `WebViewClient` 에 제공 되는 `WebView`합니다. 이 작업을 수행 하려면 다음 중첩을 추가 `HelloWebViewClient` 클래스 `MainActivity`:
+**웹 보기** 에 URL을 로드 하 라는 메시지가 표시 되 면 기본적으로 기본 브라우저에 요청을 위임 합니다. **웹 보기** 에서 기본 브라우저가 아닌 URL을 로드 하도록 하려면 `Android.Webkit.WebViewClient` `ShouldOverriderUrlLoading` 메서드를 서브 클래스 하 고 재정의 해야 합니다. 이 사용자 지정 `WebViewClient` 의 인스턴스가에 제공 `WebView`됩니다. 이렇게 하려면 안에 `HelloWebViewClient` `MainActivity`다음 중첩 클래스를 추가 합니다.
 
 ```csharp
 public class HelloWebViewClient : WebViewClient
@@ -59,9 +59,9 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-때 `ShouldOverrideUrlLoading` 반환 `false`, Android에 대 한 신호를 보냅니다는 현재 `WebView` 요청을 처리 하는 인스턴스 및 추가 조치가 필요 하지 않습니다. 
+가 `ShouldOverrideUrlLoading` 반환 `false`되 면 현재 `WebView` 인스턴스가 요청을 처리 하 고 추가 작업이 필요 하지 않다는 것을 Android에 알립니다. 
 
-API 수준 24 이상을 대상으로 하는 경우의 오버 로드를 사용 하 여 `ShouldOverrideUrlLoading` 를 사용 하는 `IWebResourceRequest` 대신 두 번째 인수는 `string`:
+API 수준 24 이상을 대상으로 하는 경우 대신 `ShouldOverrideUrlLoading` `string`두 번째 인수 `IWebResourceRequest` 에 대해를 사용 하는의 오버 로드를 사용 합니다.
 
 ```csharp
 public class HelloWebViewClient : WebViewClient
@@ -75,8 +75,7 @@ public class HelloWebViewClient : WebViewClient
 }
 ```
 
-다음으로, 다음 코드를 사용 합니다 [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
-방법:
+그런 다음, 메서드에 대해 [`OnCreate()`](xref:Android.App.Activity.OnCreate*)다음 코드를 사용 합니다.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -93,20 +92,20 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-멤버 초기화 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 에서 하나를 사용 하 여 합니다 [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/) 레이아웃에 대 한 JavaScript를 사용 하도록 설정 하 고는 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 를사용하여[ `JavaScriptEnabled` ](https://developer.xamarin.com/api/property/Android.Webkit.WebSettings.JavaScriptEnabled/) 
- `= true` (참조를 [C 호출\# JavaScript에서](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) C 호출 하는 방법에 대 한 정보에 대 한 레시피\# JavaScript에서 함수). 초기 웹 페이지를 사용 하 여 로드 되는 마지막으로, [ `LoadUrl(String)` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/%2fM%2fLoadUrl)합니다.
+이렇게 하면 멤버를 [`WebView`](xref:Android.Webkit.WebView) [`Activity`](xref:Android.App.Activity) 레이아웃의 멤버로 초기화 하 고에서 [`WebView`](xref:Android.Webkit.WebView) 
+ [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled) javascript를 사용 `= true` 하도록 설정 합니다 ( [javascript에서 C\# 호출](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) 참조). JavaScript에서 C\# 함수를 호출 하는 방법에 대 한 자세한 내용은 조리법을. 마지막으로 초기 웹 페이지가와 함께 [`LoadUrl(String)`](xref:Android.Webkit.WebView)로드 됩니다.
 
-앱을 빌드하고 실행합니다. 간단한 웹 페이지 뷰어 앱을 다음 스크린샷에 표시 된 것으로 표시 됩니다.
+앱을 빌드하고 실행합니다. 다음 스크린샷에 표시 된 것 처럼 간단한 웹 페이지 뷰어 앱이 표시 됩니다.
 
 [![웹 보기를 표시 하는 앱의 예](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
-처리 하는 **다시** 키 누름 단추, 다음 추가 문을 사용 하 여:
+**뒤로** 단추 키 누름을 처리 하려면 다음 using 문을 추가 합니다.
 
 ```csharp
 using Android.Views;
 ```
 
-다음으로 내에 다음 메서드를 추가 합니다 `HelloWebView` 활동:
+그런 다음 `HelloWebView` 활동 내에 다음 메서드를 추가 합니다.
 
 ```csharp
 public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.KeyEvent e)
@@ -120,20 +119,18 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 }
 ```
 
-이 [`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
-콜백 메서드는 작업이 실행 되는 동안 단추를 누를 때마다 호출 됩니다. 조건을 사용 하 여 내부를 [ `KeyEvent` ](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) 키를 눌렀는지 여부를 확인 하는 **다시** 단추를 사용할지 여부와 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 실제로 수 다시 (있는 경우 기록)을 탐색 합니다. 둘 다 true 인 경우 해당 [ `GoBack()` ](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) 백 1 단계에서 이동 하는 메서드가 호출 되는 [ `WebView` ](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 기록 합니다. 반환 `true` 이벤트가 처리 된 것을 나타냅니다. 이 조건이 충족 되지 않으면 이벤트 시스템에 다시 전송 됩니다.
+이[`OnKeyDown(int, KeyEvent)`](xref:Android.App.Activity.OnKeyDown*)
+활동을 실행 하는 동안 단추를 누를 때마다 콜백 메서드가 호출 됩니다. 내부의 조건은를 [`KeyEvent`](xref:Android.Views.KeyEvent) 사용 하 여 누른 키가 **뒤로** [`WebView`](xref:Android.Webkit.WebView) 단추이 고가 실제로 뒤로 이동할 수 있는지 여부를 확인 합니다 (기록이 있는 경우). 둘 다 true [`GoBack()`](xref:Android.Webkit.WebView.GoBack) 이면 메서드를 호출 합니다 .이 메서드는 [`WebView`](xref:Android.Webkit.WebView) 기록에서 한 단계 뒤로 이동 합니다. 을 `true` 반환 하면 이벤트가 처리 되었음을 나타냅니다. 이 조건이 충족 되지 않으면 이벤트는 다시 시스템으로 전송 됩니다.
 
-응용 프로그램을 다시 실행합니다. 이제 링크를 따르고 페이지 기록을 탐색할 수: 있습니다.
+응용 프로그램을 다시 실행합니다. 이제 링크를 팔 로우 하 고 페이지 기록을 통해 다시 탐색할 수 있습니다.
 
-[![작업에서 뒤로 단추의 예제 스크린샷](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
+[![작업 중인 뒤로 단추의 스크린샷 예](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
-
-*이 페이지의 일부는 생성 하 고 Android Open Source Project에서 공유 된 조건에 따라 사용 되는 작업에 따라 수정 합니다*
-[*Creative Commons 2.5 Attribution License* ](http://creativecommons.org/licenses/by/2.5/).
-
+*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
+[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [JavaScript에서 C# 호출](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
-- [Android.Webkit.WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView)
-- [KeyEvent](https://developer.xamarin.com/api/type/Android.Webkit.WebView/Client)
+- [Android.Webkit.WebView](xref:Android.Webkit.WebView)
+- [KeyEvent](xref:Android.Webkit.WebView)

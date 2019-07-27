@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1d445e3ef8869c74f052eb1153774dfab51ffd45
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 78a84fd8d4f380739a9f080a1a5aad7c5942d0c9
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649592"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511875"
 ---
 # <a name="xamarinforms-grid"></a>Xamarin.Forms 표
 
@@ -54,7 +54,7 @@ ms.locfileid: "67649592"
 - **절대** &ndash; 열과 높이 및 너비 값이 특정 한 고정 된 행의 크기를 조정 합니다. 값으로 지정 하 고 `GridUnitType.Absolute` C#에서 `#` 에서 XAML을 사용 하 여 `#` 원하는 값 중.
 
 > [!NOTE]
-> 열에 대 한 너비 값으로 설정 되어 `*` Xamarin.Forms에는 기본적으로 확인 하는 열이 사용 가능한 공간을 입력 합니다. 행의 높이 값으로 설정 됩니다 `*` 기본적으로 합니다.
+> 열의 너비 값은 기본적으로 xamarin.ios에서 `*` 로 설정 되므로 열이 사용 가능한 공간을 채우도록 합니다. 또한 행의 높이 값은 기본적으로로 `*` 설정 됩니다.
 
 세 개의 행과 두 개의 열을 해야 하는 앱을 고려해 야 합니다. 맨 아래 행 높이가 200px 정확 하 게 해야 하며 맨 위 행은 가운데 행 높이가 두 배가 됩니다. 왼쪽된 열 콘텐츠에 맞게 하기에 충분 해야 하며 오른쪽 열 나머지 공간을 채우도록 합니다.
 
@@ -137,7 +137,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 위의 코드는 네 개의 레이블, 두 개의 열 및 두 개의 행을 사용 하 여 그리드를 만듭니다. 각 레이블에 들이 있는 동일한 크기 및 행 확장 되어 사용 가능한 모든 공간 사용을 참고 합니다.
 
-위의 예제에서는 보기에 추가 됩니다는 [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) 사용 하 여 컬렉션의 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) 왼쪽 및 위쪽 인수를 지정 하는 오버 로드 합니다. 사용 하는 경우는 [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) 왼쪽 지정 하는 오버 로드, 오른쪽, 위쪽 및 아래쪽 인수 동안 왼쪽 및 위쪽 인수는 항상 내의 셀으로 참조 합니다 [ `Grid` ](xref:Xamarin.Forms.Grid), 오른쪽 및 아래쪽 인수 외부에 있는 셀을 참조 하는 것 처럼는 `Grid`합니다. 오른쪽 인수 왼쪽된 인수 보다 큰지 여야 하며 아래쪽 인수 항상 커야 상위 인수 보다 때문입니다. 다음 예제에서는 둘 다를 사용 하 여 해당 코드 `Add` 오버 로드 합니다.
+위의 예제에서는 보기에 추가 됩니다는 [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) 사용 하 여 컬렉션의 [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) 왼쪽 및 위쪽 인수를 지정 하는 오버 로드 합니다. 사용 하는 경우는 [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) 왼쪽 지정 하는 오버 로드, 오른쪽, 위쪽 및 아래쪽 인수 동안 왼쪽 및 위쪽 인수는 항상 내의 셀으로 참조 합니다 [ `Grid` ](xref:Xamarin.Forms.Grid), 오른쪽 및 아래쪽 인수 외부에 있는 셀을 참조 하는 것 처럼는 `Grid`합니다. 오른쪽 인수 왼쪽된 인수 보다 큰지 여야 하며 아래쪽 인수 항상 커야 상위 인수 보다 때문입니다. 다음 예제에서는 둘 다를 사용 하 여 해당 코드 `Add` 오버 로드 합니다.
 
 ```csharp
 // left, top

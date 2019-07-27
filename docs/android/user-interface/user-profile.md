@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 0613411e5436a0ea8ed08bf4af52dae84a9a701c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed346b33ac92f6a1c73cdd3b29fb70ba17c5e91
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61307955"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509665"
 ---
 # <a name="user-profile"></a>사용자 프로필
 
-Android 열거 연락처에 지원 되는 [ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/) API Level 5 이후 공급자입니다. 예를 들어 연락처 목록 처럼 간단를 사용 하 여 [ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/) 다음 코드 예제와 같이 클래스:
+Android는 API 수준 5 이후 동료 [S계약](xref:Android.Provider.ContactsContract) 공급자와 연락처를 열거 하는 것을 지원 합니다. 예를 들어 연락처를 나열 하는 것은 다음 코드 예제와 같이 [연락처](xref:Android.Provider.ContactsContract.Contacts) 클래스를 사용 하는 것 처럼 간단 합니다.
 
 ```csharp
 // Get the URI for the user's contacts:
@@ -45,18 +45,16 @@ if (cursor != null)
 }
 ```
 
-Android 4 (API 수준 14)를 사용 하 여 시작 합니다 [ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/) 클래스를 통해 사용할 수는 `ContactsContract` 공급자입니다. `ContactsContact.Profile` 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터를 포함 하는 장치의 소유자에 대 한 개인 프로필에 대 한 액세스를 제공 합니다.
-
+Android 4 (API 수준 14)부터 [연락처](xref:Android.Provider.ContactsContract.Profile) 클래스는 `ContactsContract` 공급자를 통해 사용할 수 있습니다. 는 `ContactsContact.Profile` 장치 소유자의 개인 프로필에 대 한 액세스를 제공 합니다. 여기에는 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터가 포함 됩니다.
 
 ## <a name="required-permissions"></a>필요한 권한
 
-읽고 연락처 데이터를 작성 하려면 응용 프로그램을 요청 해야 합니다 `READ_CONTACTS` 및 `WRITE_CONTACTS` 권한이 각각.
-또한을 읽고 사용자 프로필 편집 응용 프로그램을 받아야 합니다 `READ_PROFILE` 및 `WRITE_PROFILE` 권한.
+연락처 데이터를 읽고 쓰려면 응용 프로그램은 각각 `READ_CONTACTS` 및 `WRITE_CONTACTS` 권한을 요청 해야 합니다.
+또한 사용자 프로필을 읽고 편집 하려면 응용 프로그램에서 `READ_PROFILE` 및 `WRITE_PROFILE` 권한을 요청 해야 합니다.
 
+## <a name="updating-profile-data"></a>프로필 데이터 업데이트
 
-## <a name="updating-profile-data"></a>프로필 데이터를 업데이트 하는 중
-
-이러한 사용 권한을 설정 되 면 응용 프로그램 수 기술을 사용 하 여 일반적인 Android 사용자 프로필 데이터와 상호 작용 합니다. 예를 들어, 프로필의 표시 이름을 업데이트 하려면 호출 [ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update) 사용 하 여를 `Uri` 검색할 합니다 [ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/) 속성에 표시 된 것 처럼 아래:
+이러한 권한이 설정 되 면 응용 프로그램은 일반 Android 기술을 사용 하 여 사용자 프로필의 데이터와 상호 작용할 수 있습니다. 예를 들어 프로필의 표시 이름을 업데이트 하려면 아래와 같이 [ContentRawContactsUri](xref:Android.Provider.ContactsContract.Profile.ContentRawContactsUri) 속성을 통해 `Uri` 검색 된로 [contentresolver. update를 호출 합니다.](xref:Android.Content.ContentResolver.Update*)
 
 ```csharp
 var values = new ContentValues ();
@@ -68,7 +66,7 @@ ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, 
 
 ## <a name="reading-profile-data"></a>프로필 데이터 읽기
 
-쿼리를 실행 합니다 [ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/) 읽기 프로필 데이터를 백업 합니다. 예를 들어, 다음 코드는 사용자 프로필의 표시 이름을 다음과 같습니다.
+연락처에 대 한 쿼리를 실행 하면 프로필 데이터를 [다시 읽습니다.](xref:Android.Provider.ContactsContract.Profile.ContentUri) 예를 들어, 다음 코드는 사용자 프로필의 표시 이름을 읽습니다.
 
 ```csharp
 // Read the profile
@@ -90,26 +88,24 @@ if (cursor != null)
 }
 ```
 
-## <a name="navigating-to-the-user-profile"></a>사용자 프로필 탐색
+## <a name="navigating-to-the-user-profile"></a>사용자 프로필로 이동
 
-마지막으로, 사용자 프로필으로 이동 하려면 사용 하 여 의도 만듭니다는 `ActionView` 작업 및 `ContactsContract.Profile.ContentUri` 다음에 전달 된 `StartActivity` 다음과 같이 메서드:
+마지막으로, 사용자 프로필로 이동 하려면 `ActionView` 작업 `ContactsContract.Profile.ContentUri` 을 사용 하 여 의도를 만든 `StartActivity` 후 다음과 같이 메서드로 전달 합니다.
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
-    ContactsContract.Profile.ContentUri);           
+    ContactsContract.Profile.ContentUri);
 StartActivity (intent);
 ```
 
-위의 코드를 실행 하는 경우 사용자 프로필은 다음 스크린샷에 표시 된 것과 같이 표시 됩니다.
+위의 코드를 실행 하는 경우 사용자 프로필은 다음 스크린샷에 표시 된 대로 표시 됩니다.
 
-[![John doe가 사용자 프로필을 표시 하는 프로필의 스크린샷](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[![John Doe 사용자 프로필을 표시 하는 프로필의 스크린샷](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
-사용자 프로필을 사용 하 여 작업은 Android에서 다른 데이터와 상호 작용와 장치 개인 설정의 추가 수준을 제공 합니다.
-
-
+사용자 프로필 작업은 Android에서 다른 데이터와 상호 작용 하는 것과 유사 하며 추가 수준의 장치 개인 설정을 제공 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [ContactsProviderDemo (샘플)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
-- [Ice Cream Sandwich 소개](http://www.android.com/about/ice-cream-sandwich/)
+- [연락처 Sproviderdemo (샘플)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
+- [아이스크림 및 사우스 샌드위치](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

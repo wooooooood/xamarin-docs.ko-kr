@@ -6,20 +6,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: b1cc043ac94fb48e3e7fe6b7ba647cfb19a4c7eb
-ms.sourcegitcommit: 450106d5f05b4473bf7f5b9100b2eaf18c9110de
+ms.openlocfilehash: d8230973c76aad4ae5ef4db105d2562d34c27489
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522940"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509233"
 ---
 # <a name="foreground-services"></a>포그라운드 서비스
 
-포그라운드 서비스는 특별 한 유형의 바인딩된 서비스 또는 서비스를 시작된 합니다. 경우에 따라 서비스는 사용자가 적극적으로 인식 해야 하는 작업을 수행 하는 이러한 서비스 라고 _포그라운드 서비스_합니다. 포그라운드 서비스의 예로 제공 하는 사용자 지침을 사용 하 여 운전 또는 보 행 하는 동안 앱입니다. 백그라운드에서 앱 인 경우에 서비스에 제대로 작동 하려면 충분 한 리소스가 있고 사용자가 앱에 액세스 하는 빠르고 편리한 방법을 여전히 중요 한 것입니다. 이 Android 앱에 대 한 의미 포그라운드 서비스 "일반" 서비스를 보다 높은 우선 순위를 수신 해야 하는 포그라운드 서비스를 제공 해야 합니다는 `Notification` Android는 서비스가 실행 되 고으로 표시 됩니다.
- 
-포그라운드 서비스를 시작 하려면 앱 서비스를 시작 하는 Android를 알려 주는 의도 발송 해야 합니다. 그런 다음 서비스를 Android 사용 하 여 포그라운드 서비스로 자체 등록 해야 합니다. Android 8.0 (또는 이상)에서 실행 되는 앱을 사용할지는 `Context.StartForegroundService` 이전 버전의 Android 사용 하 여 장치에서 실행 되는 앱에 사용 해야 하는 동안 서비스를 시작 하는 방법 `Context.StartService`
+포그라운드 서비스는 바운드 서비스 또는 시작 된 서비스의 특수 한 형식입니다. 서비스에서 사용자가 적극적으로 인식 해야 하는 작업을 수행 하는 경우도 있습니다. 이러한 서비스를 _포그라운드 서비스_라고 합니다. 포그라운드 서비스의 예로는 사용자에 게 구동 또는 이동 중에 대 한 지침을 제공 하는 앱이 있습니다. 앱이 백그라운드에 있더라도 서비스에서 제대로 작동 하는 데 충분 한 리소스를 보유 하 고 있으며 사용자는 빠르고 편리 하 게 앱에 액세스할 수 있어야 합니다. Android 앱의 경우 포그라운드 서비스는 "일반" 서비스 보다 높은 우선 순위를 받아야 하며 포그라운드 서비스는 서비스가 실행 되는 동안 Android에서 `Notification` 표시 하는를 제공 해야 함을 의미 합니다.
 
-이 C# 확장 메서드는 포그라운드 서비스를 시작 하는 방법의 예입니다. 사용할 Android 8.0에서 이상 합니다 `StartForegroundService` 메서드를이 고, 그렇지 이전 `StartService` 메서드가 사용 됩니다.  
+포그라운드 서비스를 시작 하려면 앱에서 서비스를 시작 하도록 Android에 지시 하는 의도를 디스패치 해야 합니다. 그런 다음 서비스는 Android를 사용 하 여 포그라운드 서비스로 등록 해야 합니다. Android 8.0 이상에서 실행 되는 앱은 `Context.StartForegroundService` 메서드를 사용 하 여 서비스를 시작 해야 하는 반면, 이전 버전의 Android를 사용 하는 장치에서 실행 되는 앱은`Context.StartService`
+
+이 C# 확장 메서드는 포그라운드 서비스를 시작 하는 방법의 예입니다. Android 8.0 이상에서는 `StartForegroundService` 메서드를 사용 합니다. 그렇지 않으면 이전 `StartService` 메서드가 사용 됩니다.
 
 ```csharp
 public static void StartForegroundServiceCompat<T>(this Context context, Bundle args = null) where T : Service
@@ -41,18 +41,18 @@ public static void StartForegroundServiceCompat<T>(this Context context, Bundle 
 }
 ```
 
-## <a name="registering-as-a-foreground-service"></a>전경 서비스로 등록합니다.
+## <a name="registering-as-a-foreground-service"></a>포그라운드 서비스로 등록
 
-전경 서비스가 시작 된 후이를 등록 해야 자체 Android 호출 하 여 합니다 [ `StartForeground` ](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)합니다. 서비스를 사용 하 여 시작 하는 경우는 `Service.StartForegroundService` 메서드 하지만 Android는 서비스를 중지 하 고 응답 하지 않는 것으로 플래그 자체를 등록 하지 않습니다.
+포그라운드 서비스가 시작 된 후에는를 [`StartForeground`](xref:Android.App.Service.StartForeground*)호출 하 여 Android에 등록 해야 합니다. 서비스가 `Service.StartForegroundService` 메서드를 사용 하 여 시작 되었지만 자체 등록 되지 않은 경우 Android는 서비스를 중지 하 고 앱에 응답 하지 않는 플래그를 지정 합니다.
 
-`StartForeground` 두 가지 필수 두 매개 변수를 사용 합니다.
- 
-* 서비스를 식별 하는 응용 프로그램 내에서 고유한 정수 값입니다.
-* `Notification` 으로 서비스가 실행 되는 Android에 대 한 상태 표시줄에 표시 되는 개체입니다.
+`StartForeground`두 매개 변수를 사용 합니다. 두 매개 변수는 모두 필수입니다.
 
-으로 서비스가 실행 되는 android에 대 한 상태 표시줄에 알림이 표시 됩니다. 최소한 알림 서비스가 실행 되는 사용자에 게 시각 신호를 제공 합니다. 이상적으로 알림을 응용 프로그램 또는 일부 실행 단추 수 있는 응용 프로그램을 제어할 바로 가기 사용 하 여 사용자를 제공 해야 합니다. 이 예는 음악 플레이어 &ndash; 표시 되는 알림 일시 중지/play 음악, 부분까지 되 감아야 이전 노래에 또는 다음 노래를 표시 하지 않으려면 단추 있을 수 있습니다. 
+- 서비스를 식별 하기 위해 응용 프로그램 내에서 고유한 정수 값입니다.
+- 서비스가 실행 되는 동안 Android가 상태 표시줄에 표시 하는 개체입니다.`Notification`
 
-이 코드 조각은 다음과 같습니다. 전경 서비스로 서비스를 등록 하는 예제   
+서비스를 실행 하는 동안에는 Android가 상태 표시줄에 알림을 표시 합니다. 알림은 최소한 서비스가 실행 중인 사용자에 게 시각적 신호를 제공 합니다. 가장 이상적으로 알림은 사용자에 게 응용 프로그램에 대 한 바로 가기를 제공 하거나 응용 프로그램을 제어 하는 몇 가지 작업 단추를 제공 해야 합니다. 이에 대 한 예는 음악 플레이어 &ndash; 입니다. 표시 되는 알림은 음악을 일시 중지/재생 하거나, 이전 곡으로 되감거나, 다음 노래를 건너뛰도록 하는 단추를 포함할 수 있습니다. 
+
+이 코드 조각은 서비스를 포그라운드 서비스로 등록 하는 예제입니다.   
 
 ```csharp
 // This is any integer value unique to the application.
@@ -62,7 +62,7 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 {
     // Code not directly related to publishing the notification has been omitted for clarity.
     // Normally, this method would hold the code to be run when the service is started.
-    
+
     var notification = new Notification.Builder(this)
         .SetContentTitle(Resources.GetString(Resource.String.app_name))
         .SetContentText(Resources.GetString(Resource.String.notification_text))
@@ -78,31 +78,31 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 }
 ```
 
-이전의 알림 다음과 유사한 상태 표시줄 알림을 표시 됩니다.
+이전 알림에는 다음과 같은 상태 표시줄 알림이 표시 됩니다.
 
-![상태 표시줄에서 알림을 보여 주는 이미지](foreground-services-images/foreground-services-01.png "상태 표시줄에서 알림을 보여 주는 이미지")
+![상태 표시줄의 알림을 보여 주는 이미지](foreground-services-images/foreground-services-01.png "상태 표시줄의 알림을 보여 주는 이미지")
 
-이 스크린샷은 사용자가 서비스를 제어 하도록 허용 하는 두 가지 작업을 사용 하 여 알림 표시줄에 확장 된 알림을 보여 줍니다.
+이 스크린샷은 사용자가 서비스를 제어할 수 있도록 하는 두 가지 작업을 포함 하는 알림 트레이의 확장 된 알림을 보여 줍니다.
 
-![확장 된 알림을 보여 주는 이미지](foreground-services-images/foreground-services-02.png "확장된 알림을 보여 주는 이미지입니다.")
+![확장 된 알림을 보여 주는 이미지](foreground-services-images/foreground-services-02.png "확장 된 알림을 표시 하는 이미지입니다.")
 
-알림에 대 한 자세한 정보는 사용할 수 있습니다는 [로컬 알림을](~/android/app-fundamentals/notifications/local-notifications.md) 섹션을 [Android 알림](~/android/app-fundamentals/notifications/index.md) 가이드입니다.
+알림에 대 한 자세한 내용은 [Android 알림](~/android/app-fundamentals/notifications/index.md) 가이드의 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md) 섹션에서 확인할 수 있습니다.
 
-## <a name="unregistering-as-a-foreground-service"></a>전경 서비스로 등록 취소
+## <a name="unregistering-as-a-foreground-service"></a>포그라운드 서비스로 등록 취소
 
-서비스 해제를 나열할 있습니다 자체 전경 서비스로 메서드를 호출 하 여 `StopForeground`입니다. `StopForeground` 서비스를 중지 되지는 않지만 알림 아이콘 및이 서비스가 필요한 경우 종료 될 수 있는 Android 신호를 제거 합니다.
+서비스는 메서드 `StopForeground`를 호출 하 여 자체 목록을 전경 서비스로 해제할 수 있습니다. `StopForeground`는 서비스를 중지 하지는 않지만 알림 아이콘을 제거 하 고 필요한 경우이 서비스를 종료할 수 있음을 Android에 알립니다.
 
-표시 되는 상태 표시줄 알림을 전달 하 여 제거할 수도 있습니다 `true` 방법: 
+표시 되는 상태 표시줄 알림은 메서드에 전달 `true` 하 여 제거할 수도 있습니다. 
 
 ```csharp
 StopForeground(true);
 ```
 
-서비스에 대 한 호출을 사용 하 여 중단 되 면 `StopSelf` 또는 `StopService`, 상태 표시줄 알림에 제거 됩니다.
+`StopSelf` 또는`StopService`에 대 한 호출을 통해 서비스가 중단 되 면 상태 표시줄 알림이 제거 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.App.Service.StartForeground](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.Service.StartForeground](xref:Android.App.Service.StartForeground*)
 - [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)
 - [ForegroundServiceDemo (샘플)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)

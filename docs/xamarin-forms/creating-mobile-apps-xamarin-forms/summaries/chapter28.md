@@ -1,18 +1,18 @@
 ---
 title: 요약 28 장입니다. 위치 및 지도
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 28 장입니다. 위치 및 지도
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 28 장입니다. 위치 및 지도'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 0abd7e6cb5b8b9650a3dc324338587ff59a80a19
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 846b7fa3c905b208771a110a013283bd77214b72
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331454"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511695"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
 
@@ -66,7 +66,7 @@ IOS 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com
 
 #### <a name="the-android-location-manager"></a>Android 위치 관리자
 
-Android 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) Android 이용 하는 클래스 [ `LocationManager` ](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/) 클래스입니다.
+Android 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) Android 이용 하는 클래스 [ `LocationManager` ](xref:Android.Locations.LocationManager) 클래스입니다.
 
 #### <a name="the-uwp-geo-locator"></a>UWP 지역 로케이터
 

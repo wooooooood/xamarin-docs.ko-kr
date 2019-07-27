@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c93441bff02322fb938a67806ba7f5163c8c969e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61088929"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511900"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-이러한 메서드는 Android 동일 [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) 하 고 [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) 메서드. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) 메서드 비슷합니다 되지만 원의 원주에 원호 제한 보다 타원을 일반화 합니다.
+이러한 메서드는 Android [`AddArc`](xref:Android.Graphics.Path.AddArc*) 및 [`ArcTo`] f: ArcTo *) 메서드와 동일 합니다. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) 메서드 비슷합니다 되지만 원의 원주에 원호 제한 보다 타원을 일반화 합니다.
 
 두 방법 모두 시작을 `SKRect` 타원의 크기와 위치를 정의 하는 값:
 
@@ -58,7 +58,7 @@ public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean fo
 
 ![](arcs-images/anglearc.png "자체적으로 각도 호")
 
-합니다 `startAngle` 또는 `sweepAngle` 인수는 음수일 수 있습니다. 양수 값에 대해 시계 방향으로 호는 `sweepAngle` 및 음수 값에 대 한 시계 반대 방향으로 합니다.
+`startAngle` 또는`sweepAngle` 인수는 음수일 수 있습니다. 호는의 `sweepAngle` 양수 값에 대해 시계 방향으로, 음수 값의 경우 시계 반대입니다.
 
 그러나 `AddArc` 않습니다 *하지* 닫힌된 윤곽선을 정의 합니다. 호출 하는 경우 `LineTo` 후 `AddArc`에서 호의 끝에서 줄이 그려집니다 합니다 `LineTo` 메서드와 동일한의 경우도 마찬가지 `ArcTo`합니다.
 
@@ -521,7 +521,7 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 ![](arcs-images/ellipticalarcellipse1.png "첫 번째 집합이 타원형 원호")
 
-이러한 두 개의 원호 다음과 같이 두 가지 방법으로 구별할 수 수 있습니다. 상위 호 아래쪽 호 보다 큰 이며 호가 왼쪽에서 오른쪽을 따라 상위 호가 시계 방향으로 아래쪽 호가 시계 반대 방향으로 하는 동안.
+이러한 두 원호는 다음과 같은 두 가지 방법으로 구분할 수 있습니다. 위쪽 원호는 아래쪽 호 보다 크고 원호를 왼쪽에서 오른쪽으로 그리면 위쪽 원호는 시계 방향으로 그려지고 아래쪽 호는 시계 반대 방향으로 그려집니다.
 
 다른 방식으로 두 점 사이의 타원을 맞출 수 이기도 합니다.
 
@@ -535,10 +535,10 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 이러한 4 개의 타원의 4 가지 조합으로 구분 됩니다는 [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) 하 고 [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) 열거형 형식 인수가 `ArcTo` 메서드:
 
-- 빨강: SKPathArcSize.Large 및 SKPathDirection.Clockwise
-- 녹색: SKPathArcSize.Small 및 SKPathDirection.Clockwise
-- 파란색: SKPathArcSize.Small 및 SKPathDirection.CounterClockwise
-- 자홍: SKPathArcSize.Large 및 SKPathDirection.CounterClockwise
+- 빨간색 컨 트 커 크기. 큰 및 고 컨 방향. 시계 방향
+- 녹색 컨 트 경로. 작은 쪽 및 역 경로 방향. 시계 방향
+- 요소의 컨 트 경로입니다. 작은 축과
+- 자홍 컨 트 커 크기. 큰 및 고 컨 방향. 반시계 방향입니다.
 
 기운된 타원 두 점 사이 맞게 충분히 큰 경우 다음은 균일 하 게 규모가 충분히 될 때까지 합니다. 두 개의 고유 원호 경우 두 요소를 연결합니다. 사용 하 여 구분할 수 있습니다 이러한 합니다 `SKPathDirection` 매개 변수입니다.
 

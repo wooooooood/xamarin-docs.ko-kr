@@ -1,40 +1,40 @@
 ---
-title: 연습-Xamarin.Android에서 로컬 알림 사용
-description: 이 연습에는 Xamarin.Android 응용 프로그램에서 로컬 알림을 사용 하는 방법을 보여 줍니다. 만들기 및 로컬 알림을 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에 알림이 두 번째 작업을 시작 합니다.
+title: 연습-Xamarin.ios에서 로컬 알림 사용
+description: 이 연습에서는 Xamarin Android 응용 프로그램에서 로컬 알림을 사용 하는 방법을 보여 줍니다. 로컬 알림 만들기 및 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에서 알림을 클릭 하면 두 번째 작업을 시작 합니다.
 ms.prod: xamarin
 ms.assetid: D8C6C9E2-3282-49D1-A2F6-78A4F3306E29
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: e60ed6cc49921fc7b6e8e2616a6b0bf6f8abb401
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fb70ea126216642af513036211f7dd2a86fd9559
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026874"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509535"
 ---
-# <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.Android에서 로컬 알림 사용
+# <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
-_이 연습에는 Xamarin.Android 응용 프로그램에서 로컬 알림을 사용 하는 방법을 보여 줍니다. 만들기 및 로컬 알림을 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에 알림이 두 번째 작업을 시작 합니다._
+_이 연습에서는 Xamarin Android 응용 프로그램에서 로컬 알림을 사용 하는 방법을 보여 줍니다. 로컬 알림 만들기 및 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에서 알림을 클릭 하면 두 번째 작업을 시작 합니다._
 
 
 ## <a name="overview"></a>개요
 
-이 연습에서는 사용자 작업에 단추를 클릭할 때 알림이 발생 하는 Android 응용 프로그램을 만듭니다. 사용자가 알림을 클릭 하면 사용자가 첫 번째 작업에서 단추를 클릭 한 횟수를 표시 하는 두 번째 작업을 시작 합니다.
+이 연습에서는 사용자가 활동의 단추를 클릭할 때 알림을 발생 시키는 Android 응용 프로그램을 만듭니다. 사용자가 알림을 클릭 하면 사용자가 첫 번째 활동에서 단추를 클릭 한 횟수를 표시 하는 두 번째 활동을 시작 합니다.
 
 다음 스크린샷은이 응용 프로그램의 몇 가지 예를 보여 줍니다.
 
-[![알림 사용 하 여 예제 스크린샷](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
+[![알림을 사용한 예제 스크린샷](local-notifications-walkthrough-images/1-overview-sml.png)](local-notifications-walkthrough-images/1-overview.png#lightbox)
 
 > [!NOTE]
-> 이 가이드에 중점을 두고 합니다 [NotificationCompat Api](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.html) 에서 합니다 [Android 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)합니다. 이러한 Api는 역호환성 최대 Android 4.0 (API 수준 14).
+> 이 가이드에서는 [Android 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)의 [notificationcompat api](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.html) 에 대해 집중적으로 설명 합니다. 이러한 Api는 Android 4.0 (API 수준 14)에 대 한 최대 이전 버전과의 호환성을 보장 합니다.
 
 ## <a name="creating-the-project"></a>프로젝트 만들기
 
-시작 하려면 만들겠습니다 사용 하 여 새 Android 프로젝트를 **Android 앱** 템플릿. 이 프로젝트를 호출 해 보겠습니다 **LocalNotifications**합니다. (Xamarin.Android 프로젝트 만들기와 잘 모르는 경우 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
+먼저 **Android 앱** 템플릿을 사용 하 여 새 android 프로젝트를 만들어 보겠습니다. **Localnotifications**프로젝트를 호출 해 보겠습니다. Xamarin Android 프로젝트를 만드는 방법을 잘 모르는 경우 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)를 참조 하세요.
 
-리소스 파일을 편집 **values/Strings.xml** 알림 채널을 만들 때 사용할 두 개의 추가 문자열 리소스 포함 되도록 합니다.
+알림 채널을 만들 때 사용 되는 두 개의 추가 문자열 리소스를 포함 하도록 리소스 파일 **값/문자열 .xml** 을 편집 합니다.
 
 
 ```xml
@@ -49,25 +49,25 @@ _이 연습에는 Xamarin.Android 응용 프로그램에서 로컬 알림을 사
 </resources>
 ```
 
-### <a name="add-the-androidsupportv4-nuget-package"></a>Android.Support.V4 NuGet 패키지 추가
+### <a name="add-the-androidsupportv4-nuget-package"></a>Android. 지원 V4 NuGet 패키지를 추가 합니다.
 
-이 연습에서는 사용 `NotificationCompat.Builder` 빌드하는 로컬 알림. 에 설명 된 대로 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)에 포함 되어야 합니다는 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 사용 하려면 프로젝트의 NuGet `NotificationCompat.Builder`.
+이 연습에서는를 사용 하 여 `NotificationCompat.Builder` 로컬 알림을 작성 합니다. [로컬 알림에](~/android/app-fundamentals/notifications/local-notifications.md)설명 된 대로 사용할 `NotificationCompat.Builder` [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) NuGet을 프로젝트에 포함 해야 합니다.
 
-다음으로, 편집할 **MainActivity.cs** 다음을 추가 합니다 `using` 문 있도록의 형식을 `Android.Support.V4.App` 코드에 사용할 수 있습니다:
+그런 다음, **MainActivity.cs** 를 편집 하 고 다음 `using` 문을 추가 하 여의 `Android.Support.V4.App` 형식을 코드에서 사용할 수 있게 합니다.
 
 ```csharp
 using Android.Support.V4.App;
 ```
 
-또한 해야 좋을까요 사용 중인 컴파일러 하려면 선택을 취소 합니다 `Android.Support.V4.App` 버전이 `TaskStackBuilder` 대신 `Android.App` 버전입니다. 다음 추가 `using` 문을 한 모호함을 해결 합니다.
+또한 `Android.Support.V4.App` 버전이`Android.App` 아닌 `TaskStackBuilder` 버전을 사용 하 고 있다는 것을 컴파일러에서 명확 하 게 지정 해야 합니다. 다음 `using` 문을 추가 하 여 모호성을 해결 합니다.
 
 ```csharp
 using TaskStackBuilder = Android.Support.V4.App.TaskStackBuilder;
 ```
 
-### <a name="create-the-notification-channel"></a>알림 채널을 만들려면
+### <a name="create-the-notification-channel"></a>알림 채널 만들기
 
-다음으로, 하는 메서드를 추가 `MainActivity` 는 (필요한 경우) 알림 채널을 만듭니다.
+다음으로, 필요한 경우 알림 `MainActivity` 채널을 만들 메서드를에 추가 합니다.
 
 ```csharp
 void CreateNotificationChannel()
@@ -92,7 +92,7 @@ void CreateNotificationChannel()
 }
 ```
 
-업데이트 된 `OnCreate` 이 새 메서드를 호출 하는 방법.
+이 새 `OnCreate` 메서드를 호출 하도록 메서드를 업데이트 합니다.
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -105,9 +105,9 @@ protected override void OnCreate(Bundle bundle)
 ```
 
 
-### <a name="define-the-notification-id"></a>알림 ID를 정의 합니다.
+### <a name="define-the-notification-id"></a>알림 ID 정의
 
-이 알림 및 알림 채널에 대 한 고유 ID를 해야 합니다. 편집할 **MainActivity.cs** 추가한 다음 정적 인스턴스 변수에 `MainActivity` 클래스:
+알림 및 알림 채널에 대 한 고유 ID가 필요 합니다. **MainActivity.cs** 를 편집 하 고 `MainActivity` 클래스에 다음 정적 인스턴스 변수를 추가 해 보겠습니다.
 
 ```csharp
 static readonly int NOTIFICATION_ID = 1000;
@@ -117,7 +117,7 @@ internal static readonly string COUNT_KEY = "count";
 
 ### <a name="add-code-to-generate-the-notification"></a>알림을 생성 하는 코드를 추가 합니다.
 
-다음으로, 단추에 대 한 새 이벤트 처리기를 생성 해야 `Click` 이벤트입니다. 다음 메서드를 추가 `MainActivity`:
+다음으로 단추 `Click` 이벤트에 대 한 새 이벤트 처리기를 만들어야 합니다. 다음 메서드를에 `MainActivity`추가 합니다.
 
 ```csharp
 void ButtonOnClick(object sender, EventArgs eventArgs)
@@ -158,7 +158,7 @@ void ButtonOnClick(object sender, EventArgs eventArgs)
 }
 ```
 
-합니다 `OnCreate` MainActivity 메서드의 호출 알림 채널을 만들고 할당 해야 합니다.는 `ButtonOnClick` 메서드를는 `Click` (대체 템플릿에서 제공 하는 대리자 이벤트 처리기) 단추의 이벤트:
+Mainactivity의 `ButtonOnClick` `Click` 메서드는 알림 채널을 만들고 메서드를 단추의 이벤트에 할당 하는 호출을 수행 해야 합니다 (템플릿에서 제공 하는 대리자 이벤트 처리기 대체). `OnCreate`
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -175,9 +175,9 @@ protected override void OnCreate(Bundle bundle)
 ```
 
 
-### <a name="create-a-second-activity"></a>두 번째 작업 만들기
+### <a name="create-a-second-activity"></a>두 번째 활동 만들기
 
-이제이 알림을 클릭 하는 경우 Android를 표시 하는 다른 활동을 작성 해야 합니다. 이라는 프로젝트에 다른 Android 활동 추가 **SecondActivity**합니다. 오픈 **SecondActivity.cs** 해당 내용을이 코드로 바꿉니다.
+이제 사용자가 알림을 클릭할 때 Android에서 표시 하는 다른 작업을 만들어야 합니다. **SecondActivity**이라는 프로젝트에 다른 Android 활동을 추가 합니다. **SecondActivity.cs** 를 열고 내용을 다음 코드로 바꿉니다.
 
 ```csharp
 using System;
@@ -212,7 +212,7 @@ namespace LocalNotifications
 }
 ```
 
-또한 리소스의 레이아웃을 만들어야 **SecondActivity**합니다. 새 **Android 레이아웃** 파일을 프로젝트 호출 **Second.axml**합니다. 편집할 **Second.axml** 다음 레이아웃 코드에 붙여 넣습니다.
+또한 **SecondActivity**에 대 한 리소스 레이아웃을 만들어야 합니다. 프로젝트에 **두 번째. axml**이라는 새 **Android 레이아웃** 파일을 추가 합니다. **두 번째. axml** 을 편집 하 여 다음 레이아웃 코드를 붙여넣습니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -232,42 +232,42 @@ namespace LocalNotifications
 ```
 
 
-### <a name="add-a-notification-icon"></a>알림 아이콘 추가
+### <a name="add-a-notification-icon"></a>알림 추가 아이콘
 
-마지막으로 알림을 시작 되 면 알림 영역에 나타나는 작은 아이콘을 추가 합니다. 복사할 수 있습니다 [이 아이콘](local-notifications-walkthrough-images/ic-stat-button-click.png) 프로젝트를 만들거나 사용자 고유의 사용자 지정 아이콘입니다. 아이콘 파일 이름을 **ic\_stat\_단추\_click.png** 복사 합니다 **리소스/drawable** 폴더입니다. 사용 하 여 **추가 > 기존 항목...**  프로젝트에서이 아이콘 파일을 포함 하도록 합니다.
+마지막으로, 알림이 시작 될 때 알림 영역에 표시 되는 작은 아이콘을 추가 합니다. [이 아이콘](local-notifications-walkthrough-images/ic-stat-button-click.png) 을 프로젝트에 복사 하거나 사용자 지정 아이콘을 직접 만들 수 있습니다. 아이콘 파일 **ic\_stat\_단추\_이름을 .png를 클릭** 하 고 **리소스/그릴** 수 있는 폴더에 복사 합니다. **> 기존 항목 추가** ...를 사용 하 여 프로젝트에이 아이콘 파일을 포함 해야 합니다.
 
 
 ### <a name="run-the-application"></a>애플리케이션 실행
 
-애플리케이션을 빌드 및 실행합니다. 다음 스크린샷과 유사 하 게 첫 번째 활동을 사용 하 여 표시 합니다.
+애플리케이션을 빌드 및 실행합니다. 다음 스크린샷 처럼 첫 번째 활동이 표시 되어야 합니다.
 
-[![첫 번째 활동 스크린 샷](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
+[![첫 번째 활동 스크린샷](local-notifications-walkthrough-images/2-start-screen-sml.png)](local-notifications-walkthrough-images/2-start-screen.png#lightbox)
 
-단추를 클릭 하면 알림에 대 한 작은 아이콘에 알림 영역에 나타나는지 유의 해야 합니다.
+단추를 클릭 하면 알림에 대 한 작은 아이콘이 알림 영역에 표시 되는 것을 알 수 있습니다.
 
 [![알림 아이콘 표시](local-notifications-walkthrough-images/3-notification-icon-sml.png)](local-notifications-walkthrough-images/3-notification-icon.png#lightbox)
 
-아래로 살짝 알림 서랍을 노출 하는 경우 알림이 표시 됩니다.
+알림 서랍을 살짝 밀어 표시 하면 다음과 같은 알림이 표시 됩니다.
 
 [![알림 메시지](local-notifications-walkthrough-images/4-notifications-sml.png)](local-notifications-walkthrough-images/4-notifications.png#lightbox)
 
-알림을 클릭 하면, 사라져야 합니다 및 다른 작업을 시작 해야 하는 경우 &ndash; 다음 스크린샷과 같이 어느 정도 확인 합니다.
+알림을 클릭 하면 해당 알림이 사라지고 다른 작업은 다음 스크린샷 처럼 시작 &ndash; 되어야 합니다.
 
-[![두 번째 활동 스크린 샷](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
+[![두 번째 활동 스크린샷](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-지금까지 이 시점에서 Android 로컬 알림 연습 완료 하 고를 참조할 수 있는 작업 예제를 사용 합니다. 알림을 자세히 여기에서 설명 했습니다 보다 자세한 정보가 필요한 경우 걸리는 살펴보겠습니다 많이 [알림에 대 한 Google 설명서](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)합니다.
+지금까지 이 시점에서 Android 로컬 알림 연습을 완료 하 고 참조할 수 있는 작업 샘플을 사용할 수 있습니다. 여기에 표시 된 것 보다 더 많은 알림이 제공 되므로 자세한 정보를 보려는 경우 [에는 Google의 알림에 대 한 설명서](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)를 살펴보세요.
 
 
 ## <a name="summary"></a>요약
 
-사용 되는이 연습에서는 `NotificationCompat.Builder` 만들고 알림을 표시 합니다. 알림 사용 하 여 사용자 상호 작용에 응답 하는 방법으로 두 번째 작업을 시작 하는 방법의 기본 예제에 알아보았습니다 및 두 번째 활동 데이터를 전송에서 첫 번째 작업을 보여 줍니다.
+이 연습은 알림을 `NotificationCompat.Builder` 만들고 표시 하는 데 사용 됩니다. 이 예에서는 알림과의 사용자 상호 작용에 응답 하는 방법으로 두 번째 작업을 시작 하는 방법에 대 한 기본 예를 보여 주고 첫 번째 작업에서 두 번째 작업으로의 데이터 전송에 대해 설명 했습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [LocalNotifications (샘플)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
 - [Android Oreo 알림 채널](https://blog.xamarin.com/android-oreo-notification-channels/)
-- [알림](https://developer.xamarin.com/api/type/Android.App.Notification/)
-- [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
+- [알림](xref:Android.App.Notification)
+- [NotificationManager](xref:Android.App.NotificationManager)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
-- [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)
+- [PendingIntent](xref:Android.App.PendingIntent)

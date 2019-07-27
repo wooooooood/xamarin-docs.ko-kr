@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 7a5c09bfe46b9e775383889e07fd93094ba9bf68
-ms.sourcegitcommit: a9c60f50b40203dd784e3e790b0d83e2bfc86129
+ms.openlocfilehash: b2e441a8e1443d1d32d553e9bbf1126fe5e380e7
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65731530"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508854"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -38,7 +38,7 @@ Xamarin.Forms XAML 파일에 대 한 기본 보기를 포함 합니다.
 1. XAML 파일의 기본 보기의 인스턴스를 만듭니다.
 
 > [!IMPORTANT]
-> 네이티브 뷰를 사용 하는 모든 XAML 페이지에 대 한 컴파일된 XAML은 사용 하지 않도록 설정 해야 합니다. 사용 하 여 XAML 페이지에 대 한 코드 숨김 클래스를 데코레이팅하여이 작업을 수행할 수 있습니다는 `[XamlCompilation(XamlCompilationOptions.Skip)]` 특성입니다. XAML 컴파일에 대 한 자세한 내용은 참조 하세요. [xamarin.forms에서 XAML 컴파일](~/xamarin-forms/xaml/xamlc.md)합니다.
+> 컴파일된 XAML은 네이티브 뷰를 사용 하는 모든 XAML 페이지에서 사용 하지 않도록 설정 해야 합니다. 이렇게 하려면 XAML 페이지에 대 한 코드 숨겨진 클래스를 `[XamlCompilation(XamlCompilationOptions.Skip)]` 특성으로 데코레이팅 하면 됩니다. XAML 컴파일에 대 한 자세한 내용은 [xamarin.ios의 Xaml 컴파일](~/xamarin-forms/xaml/xamlc.md)을 참조 하세요.
 
 코드 숨김 파일에서 네이티브 뷰를 참조 하는 공유 자산 프로젝트 (SAP)를 사용 하며 조건부 컴파일 지시문을 사용 하 여 플랫폼별 코드를 래핑합니다. 자세한 내용은 참조 [코드에서 네이티브 뷰를 참조](#native_view_code)합니다.
 
@@ -184,7 +184,7 @@ Android 위젯 생성자에는 일반적으로 Android 필요 `Context` 인수�
 
 합니다 [ `UIFont.FromName` ](xref:UIKit.UIFont.FromName*) 팩터리 메서드는 설정 하는 데 사용 되는 [ `UILabel.Font` ](xref:UIKit.UILabel.Font) 속성을 새 [ `UIFont` ](xref:UIKit.UIFont) iOS에서. 합니다 `UIFont` 자식인 메서드 인수에 의해 지정 된 이름과 크기를 `x:Arguments` 특성입니다.
 
-합니다 [ `Typeface.Create` ](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) 팩터리 메서드는 설정 하는 데 사용 되는 [ `TextView.Typeface` ](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) 속성을 새 [ `Typeface` ](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) Android에서. 합니다 `Typeface` 제품군 이름과 스타일의 자식인 메서드 인수에 의해 지정 되는 `x:Arguments` 특성입니다.
+합니다 [ `Typeface.Create` ](xref:Android.Graphics.Typeface.Create*) 팩터리 메서드는 설정 하는 데 사용 되는 [ `TextView.Typeface` ](xref:Android.Widget.TextView.Typeface) 속성을 새 [ `Typeface` ](xref:Android.Graphics.Typeface) Android에서. 합니다 `Typeface` 제품군 이름과 스타일의 자식인 메서드 인수에 의해 지정 되는 `x:Arguments` 특성입니다.
 
 합니다 [ `FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) 생성자는 설정 하는 데 사용 되는 [ `TextBlock.FontFamily` ](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) 속성을 새 `FontFamily` 유니버설 Windows 플랫폼 (UWP)에서. `FontFamily` 의 자식인 메서드 인수 이름이 지정 된 된 `x:Arguments` 특성입니다.
 
@@ -423,7 +423,7 @@ class PickerModel : UIPickerViewModel
 
 ### <a name="android"></a>Android
 
-Android 구현 서브 클래스를 [ `Spinner` ](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) XAML에서 쉽게 사용할 수 있는 이벤트 보기 및 속성을 노출 합니다.
+Android 구현 서브 클래스를 [ `Spinner` ](xref:Android.Widget.Spinner) XAML에서 쉽게 사용할 수 있는 이벤트 보기 및 속성을 노출 합니다.
 
 ```csharp
 class MySpinner : Spinner
@@ -481,7 +481,7 @@ class MySpinner : Spinner
 }
 ```
 
-`MySpinner` 클래스가 노출 `ItemsSource` 하 고 `SelectedObject` 속성 및 `ItemSelected` 이벤트입니다. 표시 된 항목을 `MySpinner` 클래스에서 제공 하는 [ `Adapter` ](https://developer.xamarin.com/api/type/Android.Widget.Adapter/) 뷰를 사용 하 여 연결 및 항목으로 채워집니다를 `Adapter` 때를 `ItemsSource` 속성이 먼저. 때마다에서 선택한 항목의 `MySpinner` 변경 내용을 클래스는 `OnBindableSpinnerItemSelected` 이벤트 처리기 업데이트는 `SelectedObject` 속성.
+`MySpinner` 클래스가 노출 `ItemsSource` 하 고 `SelectedObject` 속성 및 `ItemSelected` 이벤트입니다. 표시 된 항목을 `MySpinner` 클래스에서 제공 하는 [ `Adapter` ](xref:Android.Widget.Adapter) 뷰를 사용 하 여 연결 및 항목으로 채워집니다를 `Adapter` 때를 `ItemsSource` 속성이 먼저. 때마다에서 선택한 항목의 `MySpinner` 변경 내용을 클래스는 `OnBindableSpinnerItemSelected` 이벤트 처리기 업데이트는 `SelectedObject` 속성.
 
 ## <a name="summary"></a>요약
 
