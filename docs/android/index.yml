@@ -51,7 +51,7 @@ sections:
         className: cardsB
         items:
           - href: ~/android/get-started/index.md
-            html: Xamarin.Android로 안내하고 실행하는 자습서입니다. 모든 것이 올바르게 설치되었는지 확인하고 첫 번째 Mac 앱을 제작하세요.
+            html: Xamarin.Android로 안내하고 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 Android 앱을 빌드하세요.
             image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/android/get-started/index.md
@@ -111,8 +111,8 @@ sections:
         className: cardsD
         items:
           - title: API
-            href: 'https://developer.xamarin.com/api/root/MonoAndroid-lib/'
-            html: '<p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Android API 문서</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">기본 클래스 라이브러리</a></p>'
+            href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9'
+            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Android API 문서</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">기본 클래스 라이브러리</a></p>'
           - title: 샘플
             href: 'https://developer.xamarin.com/samples/android/all/'
             html: '<p><a href="https://developer.xamarin.com/samples/android/all/">Android 샘플</a></p>'

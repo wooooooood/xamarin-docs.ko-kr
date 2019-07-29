@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a38249236e758728452ff25fd0c486c3d03ce8fc
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 2c218b030739dee8d3e49fab4e5c2a70ff5e71e0
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970995"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511826"
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -71,7 +71,7 @@ Xamarin.Android는 방향을 지정 하기 위한 몇 가지 옵션을 지원 �
 - **가로** &ndash; 응용 프로그램 방향을 가로 방향 센서 데이터에 관계 없이 강제로 수행 합니다.
 - **세로** &ndash; 응용 프로그램 방향을 세로, 센서 데이터에 관계 없이 강제로 수행 합니다.
 - **사용자** &ndash; 응용 프로그램이 사용자의 기본 설정된 방향이 사용 하 여 표시 되도록 합니다.
-- **뒤** &ndash; 응용 프로그램의 방향을의 방향을 동일 하면 합니다 [활동](https://developer.xamarin.com/api/type/Android.App.Activity/) 원리입니다.
+- **뒤** &ndash; 응용 프로그램의 방향을의 방향을 동일 하면 합니다 [활동](xref:Android.App.Activity) 원리입니다.
 - **센서** &ndash; 사용자 자동 회전을 비활성화 하는 경우에 응용 프로그램의 방향 센서를 판단 하면 됩니다.
 - **SensorLandscape** &ndash; 가로 방향 센서 데이터를 사용 하 여 화면에 (있도록 화면 상하 대칭으로 표시 되지 않습니다) 가입과 관련 한 방향을 변경 하는 동안 사용 하 여 응용 프로그램이 있습니다.
 - **SensorPortrait** &ndash; 세로 방향 센서 데이터를 사용 하 여 화면에 (있도록 화면 상하 대칭으로 표시 되지 않습니다) 가입과 관련 한 방향을 변경 하는 동안 사용 하 여 응용 프로그램이 있습니다.

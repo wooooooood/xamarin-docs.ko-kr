@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4613eec9db017f27f6ab890522867ab4d68b4684
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ad1c033b35da548921ec47d8cc2f3a8ef87d2fa8
+ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830844"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68486062"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -120,23 +120,19 @@ ms.locfileid: "67830844"
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/single-page.md">
-                                                                        <img src="~/media/icons/i_xaml-forms.svg" alt="">
-파일 > 새 모바일 앱 </a>
+                                                                        <img src="~/media/icons/i_xaml-forms.svg" alt=""> 파일 > 새 모바일 앱 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/multi-page.md">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_class.svg" alt="">
-앱 탐색 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_class.svg" alt=""> 탐색 추가 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/database.md">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
-데이터베이스 추가 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt=""> 데이터베이스 추가 </a>
                                                                 </li>
                                                                  <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/styling.md">
-                                                                        <img src="https://docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt="">
-앱 스타일 지정 </a>
+                                                                        <img src="https://docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt=""> 앱 스타일 지정 </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -146,8 +142,7 @@ ms.locfileid: "67830844"
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/cross-platform/index.yml">
-                                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="">
-Xamarin 개발 지침</a>
+                                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt=""> Xamarin 개발 지침</a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -171,33 +166,27 @@ Xamarin 개발 지침</a>
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/stacklayout/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_dashboard.svg" alt="">
-스택 레이아웃 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_dashboard.svg" alt=""> 스택 레이아웃 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/label/index.yml">
-                                                                        <img src="~/media/icons/i_form-label.svg" alt="">
-레이블 </a>
+                                                                        <img src="~/media/icons/i_form-label.svg" alt=""> 레이블 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/button/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_button.svg" alt="">
-단추 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_button.svg" alt=""> 단추 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/entry/index.yml">
-                                                                        <img src="~/media/icons/i_form-entry.svg" alt="">
-텍스트 항목 </a>
+                                                                        <img src="~/media/icons/i_form-entry.svg" alt=""> 텍스트 항목 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/editor/index.yml">
-                                                                        <img src="~/media/icons/i_form-editor.svg" alt="">
-텍스트 편집기 </a>
+                                                                        <img src="~/media/icons/i_form-editor.svg" alt=""> 텍스트 편집기 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/image/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_account-management.svg" alt="">
-이미지 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_account-management.svg" alt=""> 이미지 </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -205,33 +194,27 @@ Xamarin 개발 지침</a>
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/grid/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_table.svg" alt="">
-그리드 레이아웃 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_table.svg" alt=""> 그리드 레이아웃 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/listview/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_sharepoint-list.svg" alt="">
-목록 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_sharepoint-list.svg" alt=""> 목록 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/pop-ups/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_alert.svg" alt="">
-팝업 항목 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_alert.svg" alt=""> 팝업 항목 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/app-lifecycle/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_agile.svg" alt="">
-앱 수명 주기 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_agile.svg" alt=""> 앱 수명 주기 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/local-database/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
-데이터베이스 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt=""> 데이터베이스 </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/web-service/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_server.svg" alt="">
-웹 서비스 </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_server.svg" alt=""> 웹 서비스 </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -256,20 +239,17 @@ Xamarin 개발 지침</a>
                                                 <ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="~/cross-platform/desktop/index.md">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="">
-.NET 데스크톱(UWP, WPF, WinForms)</a>
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt=""> .NET 데스크톱(UWP, WPF, WinForms)</a>
                                                     </li>
                                                     </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="~/android/get-started/java-developers.md">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="">
-Android 및 Java</a>
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_java.svg" alt=""> Android 및 Java</a>
                                                     </li>
                                                     </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="~/ios/get-started/objective-c-developers/index.md">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt="">
-iOS 및 Objective-C</a>
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=""> iOS 및 Objective-C</a>
                                                     </li>
                                                 </ul></td></tr></table>
                                             </div>
@@ -371,7 +351,7 @@ Xamarin.Forms는 C# 및 .NET을 사용하는 Android, iOS, Mac 및 Windows용 �
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/platform/index.md">
+                                <a href="~/xamarin-forms/platform/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -428,7 +408,7 @@ Xamarin.Forms는 C# 및 .NET을 사용하는 Android, iOS, Mac 및 Windows용 �
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/deploy-test/index.md">
+                                <a href="~/xamarin-forms/deploy-test/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -447,7 +427,7 @@ Xamarin.Forms는 C# 및 .NET을 사용하는 Android, iOS, Mac 및 Windows용 �
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/internals/index.md">
+                                <a href="~/xamarin-forms/internals/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
