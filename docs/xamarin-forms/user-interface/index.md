@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 0fff9b7ce4b78e29409d1cc7a55e7f447baf722c
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f9c7ada224cefc9bb80e0bcba370d0dee4a664c9
+ms.sourcegitcommit: 25be5acf979f6b18b6d0e64392c9ab307259c032
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831094"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68603845"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
@@ -22,7 +22,7 @@ _Xamarin.Forms에서 제공 하는 뷰를 사용 하는 방법_
 
 ## <a name="activityindicatoractivityindicatormd"></a>[ActivityIndicator](activityindicator.md)
 
-`ActivityIndicator` 는 응용 프로그램에에서 참여 하는 시간이 오래 걸리는 작업을 진행의 표시가 전혀 제공 하지 않고도 사용자에 게 표시 하는 애니메이션 컨트롤입니다.
+는 `ActivityIndicator` 진행률을 표시 하지 않고 응용 프로그램이 긴 활동에서 사용 중임을 사용자에 게 알리는 애니메이션 된 컨트롤입니다.
 
 ## <a name="animationanimationindexmd"></a>[애니메이션](animation/index.md)
 
@@ -38,11 +38,11 @@ Xamarin.Forms를 쉬우면서도 컬 복잡 한 애니메이션을 만드는 간
 
 ## <a name="checkboxcheckboxmd"></a>[CheckBox](checkbox.md)
 
-`CheckBox` 수는 단추의 형식을 선택 하거나 빈 수는 있습니다. 확인란을 선택 하면에 있는 것으로 간주 합니다. 확인란이 비어 있으면 해제 간주 합니다.
+는 `CheckBox` 선택 하거나 비워 둘 수 있는 단추의 유형입니다. 확인란을 선택 하면 설정 된 것으로 간주 됩니다. 확인란이 비어 있으면 해제 된 것으로 간주 됩니다.
 
 ## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 
-합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 레이아웃이 사양을 사용 하 여 데이터의 목록을 제공 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다.
+는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하기 위한 유연 하 고 성능이 뛰어난 뷰입니다.
 
 ## <a name="colorscolorsmd"></a>[색](colors.md)
 
@@ -62,7 +62,7 @@ DataPages 빠르고 쉽게 미리 작성된 된 보기에 데이터 소스를 �
 
 ## <a name="display-pop-upspop-upsmd"></a>[팝업 표시](pop-ups.md)
 
-Xamarin.Forms는 팝업과 같은 두 가지 사용자 인터페이스 요소인 경고와 작업 시트를 제공합니다. 사용자가 간단한 질문 하 고 작업을 통해 사용자를 안내 하는 대화 상자를 표시 하도록 이러한 인터페이스 요소를 사용할 수 있습니다.
+Xamarin.Forms는 팝업과 같은 두 가지 사용자 인터페이스 요소인 경고와 작업 시트를 제공합니다. 이러한 인터페이스 요소를 사용 하 여 사용자에 게 간단한 질문을 하 고 사용자에 게 작업을 안내 하는 대화 상자를 표시할 수 있습니다.
 
 ## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[SkiaSharp를 사용한 그래픽](graphics/skiasharp/index.md)
 
@@ -94,7 +94,11 @@ Xamarin.Forms는 스크롤 행의 데이터를 표시할 목록 뷰 컨트롤을
 
 ## <a name="progressbarprogressbarmd"></a>[ProgressBar](progressbar.md)
 
-합니다 [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar) 를 가로 막대로 채워진 float 속성을 기준으로 진행률을 시각적으로 나타내는 컨트롤입니다.
+는 [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 유동 속성을 기반으로 채워진 가로 막대로 진행률을 시각적으로 나타내는 컨트롤입니다.
+
+## <a name="searchbarsearchbarmd"></a>[SearchBar](searchbar.md)
+
+는 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 검색을 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. SearchBar 컨트롤은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다.
 
 ## <a name="sliderslidermd"></a>[슬라이더](slider.md)
 
@@ -110,7 +114,7 @@ Xamarin.Forms는 스크롤 행의 데이터를 표시할 목록 뷰 컨트롤을
 
 ## <a name="switchswitchmd"></a>[스위치](switch.md)
 
-`Switch` 켜고 상태 간에 전환할 수 있는 단추 형식입니다.
+는 `Switch` 설정/해제 상태 사이에서 전환할 수 있는 단추의 유형입니다.
 
 ## <a name="tableviewtableviewmd"></a>[TableView](tableview.md)
 
@@ -130,7 +134,7 @@ Xamarin.Forms 테마에는 표준 컨트롤에 대 한 시각적인 특정 모�
 
 ## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-Xamarin.Forms 자료 Visual iOS 및 Android에서 동일 하거나 거의 동일 보이는 Xamarin.Forms 응용 프로그램을 만드는 데 사용할 수 있습니다.
+Xamarin.ios 재질 시각적 개체는 iOS 및 Android에서 동일 하거나 거의 동일한 Xamarin Forms 응용 프로그램을 만드는 데 사용할 수 있습니다.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[시각적 상태 관리자](visual-state-manager.md)
 
