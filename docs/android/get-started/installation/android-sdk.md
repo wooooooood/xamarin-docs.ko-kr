@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: f4ff43ea51dc690daa716e69021f690511cdcc97
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 3be28815441b65df101ac9722a665e01503e1b5c
+ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854056"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68386215"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
@@ -37,7 +37,7 @@ Xamarin Android SDK Manager를 사용하려면 다음이 필요합니다.
 
 - 또는 Visual Studio 2017(Community, Professional 또는 Enterprise 버전). Visual Studio 2017 버전 15.7 이상이 필요합니다.
 
-- Visual Studio Tools for Xamarin 버전 4.10.0 이상(**.NET을 사용한 모바일 개발** 워크로드의 일부로 설치됨). 
+- Visual Studio Tools for Xamarin 버전 4.10.0 이상( **.NET을 사용한 모바일 개발** 워크로드의 일부로 설치됨). 
 
 Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치되는) Java Development Kit도 필요합니다. 여러 가지 JDK 대안 중에서 선택할 수 있습니다.
 
@@ -117,7 +117,7 @@ SDK에 다른 플랫폼을 추가하려면 확인 표시가 나타날 때까지 
 **변경 내용 적용** 단추 옆에 설치할 구성 요소 수가 표시됩니다. 앞에 표시된 대로 **변경 내용 적용** 단추를 클릭하면 **라이선스 승인** 화면이 표시됩니다.
 사용 약관에 동의하려면 **동의**를 클릭합니다. 설치할 구성 요소가 여러 개 있는 경우 이 대화 상자가 두 번 이상 표시될 수 있습니다. 창 아래쪽에 다운로드 및 설치 진행률을 나타내는 진행률 표시줄이 표시됩니다. 다운로드 및 설치 프로세스가 완료되면(다운로드해야 하는 구성 요소 수에 따라 수 분이 소요될 수 있음) 추가된 구성 요소에 확인 표시와 **설치됨**이 표시됩니다.
 
-### <a name="respository-selection"></a>리포지토리 선택 영역
+### <a name="repository-selection"></a>리포지토리 선택
 
 기본적으로 Android SDK Manager는 Microsoft 관리 리포지토리에서 플랫폼 구성 요소 및 도구를 다운로드합니다. Microsoft 리포지토리에서 아직 사용할 수 없는 실험적 알파/베타 플랫폼 및 도구에 액세스해야 하는 경우 Google의 리포지토리를 사용하도록 SDK Manager를 전환할 수 있습니다. 이렇게 전환하려면 오른쪽 아래 모서리에서 기어 아이콘을 클릭하고 **리포지토리 > Google(지원되지 않음)** 을 선택합니다.
 
@@ -210,7 +210,7 @@ SDK에 다른 플랫폼을 추가하려면 확인 표시가 나타날 때까지 
 **변경 내용 적용** 단추 옆에 설치할 구성 요소 수가 표시됩니다. 앞에 표시된 대로 **변경 내용 적용** 단추를 클릭하면 **라이선스 승인** 화면이 표시됩니다.
 사용 약관에 동의하려면 **동의**를 클릭합니다. 설치할 구성 요소가 여러 개 있는 경우 이 대화 상자가 두 번 이상 표시될 수 있습니다. 창 아래쪽에 다운로드 및 설치 진행률을 나타내는 진행률 표시줄이 표시됩니다. 다운로드 및 설치 프로세스가 완료되면(다운로드해야 하는 구성 요소 수에 따라 수 분이 소요될 수 있음) 추가된 구성 요소에 확인 표시와 **설치됨**이 표시됩니다.
 
-### <a name="respository-selection"></a>리포지토리 선택 영역
+### <a name="repository-selection"></a>리포지토리 선택
 
 기본적으로 Android SDK Manager는 Microsoft 관리 리포지토리에서 플랫폼 구성 요소 및 도구를 다운로드합니다. Microsoft 리포지토리에서 아직 사용할 수 없는 실험적 알파/베타 플랫폼 및 도구에 액세스해야 하는 경우 Google의 리포지토리를 사용하도록 SDK Manager를 전환할 수 있습니다. 이렇게 전환하려면 오른쪽 아래 모서리에서 기어 아이콘을 클릭하고 **리포지토리 > Google(지원되지 않음)** 을 선택합니다.
 

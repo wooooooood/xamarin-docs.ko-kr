@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 5ddbb6f3d1c1ebf16ca5534b7effd1993c3d8b26
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: 73c398a7dbc2b8b7b22b9b8e38177efe2ff48735
+ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804907"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388505"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: 전자 메일
 
@@ -63,22 +63,6 @@ public class EmailTest
 ```
 
 
-## <a name="platform-differences"></a>플랫폼의 차이점
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-모든 Android용 이메일 클라이언트가 `Html`을 지원하는 것은 아닙니다. 지원 여부를 확인할 방법은 없으므로 이메일을 보낼 때는 `PlainText`를 사용하는 것이 좋습니다.
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-플랫폼의 차이점이 없습니다.
-
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
-
-`PlainText`를 `Html`을 보내려는 `BodyFormat`으로 지원하면 `FeatureNotSupportedException`을 throw합니다.
-
------
-
 ## <a name="file-attachments"></a>첨부 파일
 
 ![미리 보기 기능](~/media/shared/preview.png)
@@ -108,6 +92,24 @@ message.Attachments.Add(new EmailAttachment(file));
 
 await Email.ComposeAsync(message);
 ```
+
+## <a name="platform-differences"></a>플랫폼의 차이점
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+모든 Android용 이메일 클라이언트가 `Html`을 지원하는 것은 아닙니다. 지원 여부를 확인할 방법은 없으므로 이메일을 보낼 때는 `PlainText`를 사용하는 것이 좋습니다.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+플랫폼의 차이점이 없습니다.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+`PlainText`를 `Html`을 보내려는 `BodyFormat`으로 지원하면 `FeatureNotSupportedException`을 throw합니다.
+
+일부 메일 클라이언트는 첨부 파일 보내기를 지원하지 않습니다. 자세한 내용은 [설명서](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email)를 참조하세요.
+
+-----
 
 ## <a name="api"></a>API
 

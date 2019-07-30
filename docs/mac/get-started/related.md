@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 87987e79fce2bd5277f8092d09752fe715e2f2ce
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2e4c2ebea7783fe2400298b03a54e951d89960fe
+ms.sourcegitcommit: 9a2a21974d35353c3765eb683ef2fd7161c1d94a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667655"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329939"
 ---
 # <a name="xamarinmac-related-documentation"></a>Xamarin.Mac – 관련 설명서
 
-[developer.xamarin.com](~/mac/get-started/index.md)의 Mac 섹션 외에도 Xamarin.Mac과 관련된 의문을 해결할 수 있는 세 가지 좋은 자료가 있습니다.
+[Microsoft Docs](~/mac/get-started/index.md)의 Mac 섹션 외에도 Xamarin.Mac과 관련된 의문을 해결할 수 있는 세 가지 좋은 자료가 있습니다.
 
 - [**Xamarin.iOS 설명서**](~/ios/get-started/index.md) - 여러 API(주로 AppKit/UIKit 외부의)에서 iOS와 macOS 버전이 약간 다를 뿐입니다. 특정 iOS API의 이름이 `UIFoo`인 경우 macOS에서 `NSFoo`라고 하는 이름의 비슷한 API를 찾을 수 있습니다. 이러한 예제는 일반적으로 C#에 이미 있습니다.
 
