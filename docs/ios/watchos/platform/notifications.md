@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f5961987e28c09ad703988083f1b127cd7b9dbd0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60897248"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645916"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS에서 Xamarin 알림
 
@@ -69,11 +69,11 @@ OS를 다양 한 요인 기준으로 정적 또는 동적 보기를 표시할지
 
 원격 서버에서 알림을 가져올 수 있습니다 ([Apple 푸시 알림 서비스](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), 또는 APNS) 또는 iOS 앱에서 로컬로 생성 될 수 있습니다.
 
-참조 된 [iOS 알림 연습](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) 로컬 알림을 생성 하는 방법의 예 및 [WatchNotifications 샘플](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) 작업 예제입니다.
+참조 된 [iOS 알림 연습](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) 로컬 알림을 생성 하는 방법의 예 및 [WatchNotifications 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) 작업 예제입니다.
 
 로컬 알림 있어야 합니다 `AlertTitle` Apple Watch-에 표시할 설정를 `AlertTitle` 문자열 짧은 모양을 인터페이스에 표시 됩니다. 모두를 `AlertTitle` 하 고 `AlertBody` 알림 목록에 표시 됩니다 및 `AlertBody` 장기 모양을 인터페이스에 표시 됩니다.
 
-보여 주는이 스크린샷 합니다 `AlertTitle` 알림 목록에 표시 되 및 `AlertBody` 장기 모양을 인터페이스에 표시 (사용 하 여 합니다 [샘플 코드](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
+보여 주는이 스크린샷 합니다 `AlertTitle` 알림 목록에 표시 되 및 `AlertBody` 장기 모양을 인터페이스에 표시 (사용 하 여 합니다 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
 
 ![](notifications-images/watch-notificationslist-sml.png "이 스크린샷은 알림 목록에 표시 되 고 AlertTitle") ![](notifications-images/watch-notificationcontroller-sml.png "The AlertBody 장기 모양을 인터페이스에 표시")
 
@@ -126,7 +126,7 @@ Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조
 
 ### <a name="example-notification-payload"></a>알림 페이로드 예제
 
-에 [조사식 키트 카탈로그](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) 있습니다 샘플 페이로드 JSON 파일의 예는 **NotificationPayload.json** (아래 참조).
+에 [조사식 키트 카탈로그](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 있습니다 샘플 페이로드 JSON 파일의 예는 **NotificationPayload.json** (아래 참조).
 
 ```csharp
 {
@@ -151,6 +151,6 @@ Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조
 
 ## <a name="related-links"></a>관련 링크
 
-- [(로컬 알림) WatchNotifications (샘플)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [(로컬 알림) WatchNotifications (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
+- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple Watch 키트 알림을 docs](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

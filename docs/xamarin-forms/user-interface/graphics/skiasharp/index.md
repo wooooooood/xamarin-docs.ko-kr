@@ -6,16 +6,16 @@ ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 9cd5a25c598a25500aee595439aeecd648d50526
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b85cdcd92c4680ced9f75d7b8c5a69c9512d6c4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61291162"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656145"
 ---
 # <a name="skiasharp-graphics-in-xamarinforms"></a>Xamarin.Forms의 SkiaSharp 그래픽
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Xamarin.Forms 응용 프로그램에서 2D 그래픽 SkiaSharp 사용_
 
@@ -25,7 +25,7 @@ SkiaSharp는.NET 및 Google 제품에 광범위 하 게 사용 되는 오픈 소
 
 > [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-**웹 세미나: Xamarin.Forms에 대 한 SkiaSharp**
+**웹 세미나 Xamarin.ios에 대 한 SkiaSharp**
 
 ## <a name="skiasharp-preliminaries"></a>SkiaSharp 준비
 
@@ -65,5 +65,5 @@ SkiaSharp 사용 하는 모든 C# 페이지에 포함 하려는 `using` 에 대 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [SkiaSharp Xamarin.Forms 웹 세미나 (비디오)를 사용 하 여](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

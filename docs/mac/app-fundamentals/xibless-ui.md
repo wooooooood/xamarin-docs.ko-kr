@@ -1,55 +1,55 @@
 ---
-title: xamarin.mac에서.storyboard/.xib-less 사용자 인터페이스 디자인
-description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 사용자 인터페이스를 직접 만들고 C# Interface Builder.storyboard 파일,.xib 파일 없이 코드입니다.
+title: . xib-Xamarin.ios의 less 사용자 인터페이스 디자인
+description: 이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없이 코드에서 C# 직접 xamarin.ios 응용 프로그램의 사용자 인터페이스를 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1f49f3c24bc4c89edb005206b953176639214481
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61042284"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647172"
 ---
-# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>xamarin.mac에서.storyboard/.xib-less 사용자 인터페이스 디자인
+# <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
 
-_이 문서에서는 Xamarin.Mac 응용 프로그램의 사용자 인터페이스를 직접 만들고 C# Interface Builder.storyboard 파일,.xib 파일 없이 코드입니다._
+_이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없이 코드에서 C# 직접 xamarin.ios 응용 프로그램의 사용자 인터페이스를 만드는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
-동일한 사용자 인터페이스 요소에 대 한 액세스 권한이 Xamarin.Mac 응용 프로그램에서 C# 및.NET으로 작업을 하는 경우 및 작업 하는 개발자 도구를 *Objective-C* 및 *Xcode* 않습니다. 일반적으로 Xamarin.Mac 응용 프로그램을 만들 때.storyboard 또는.xib 파일을 사용 하 여 Xcode의 Interface Builder 사용 하 여 만들고 응용 프로그램의 사용자 인터페이스 유지 관리 됩니다.
+동일한 사용자 인터페이스 요소에 대 한 액세스 권한이 Xamarin.Mac 응용 프로그램에서 C# 및.NET으로 작업을 하는 경우 및 작업 하는 개발자 도구를 *Objective-C* 및 *Xcode* 않습니다. 일반적으로 Xamarin.ios 응용 프로그램을 만들 때 storyboard 또는. xib 파일과 함께 Xcode의 Interface Builder 사용 하 여 응용 프로그램의 사용자 인터페이스를 만들고 유지 관리 합니다.
 
-Xamarin.Mac 응용 프로그램의 UI의 일부 또는 전부를 직접 만들 수 있습니다 C# 코드입니다. 이 문서에서는 사용자 인터페이스를 만들고 UI 요소에는 기본적인 다룰 것 C# 코드입니다.
+또한 코드에서 C# 직접 xamarin.ios 응용 프로그램 UI의 일부 또는 전부를 만들 수 있습니다. 이 문서에서는 코드에서 C# 사용자 인터페이스 및 UI 요소를 만드는 기본 사항을 설명 합니다.
 
-[![코드 편집기 Mac 용 Visual Studio](xibless-ui-images/intro01.png "Mac 코드 편집기에 대 한 Visual Studio")](xibless-ui-images/intro01-large.png#lightbox)
+[![Mac용 Visual Studio 코드 편집기](xibless-ui-images/intro01.png "Mac용 Visual Studio 코드 편집기")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code" />
 
-## <a name="switching-a-window-to-use-code"></a>코드를 사용 하는 창을 전환
+## <a name="switching-a-window-to-use-code"></a>코드를 사용 하도록 창 전환
 
-새 Xamarin.Mac Cocoa 응용 프로그램을 만들면 기본적으로 표준 비어 창을 가져옵니다. 이 windows에 정의 되어는 **Main.storyboard** (또는 일반적으로 **MainWindow.xib**) 프로젝트에 자동으로 포함 된 파일입니다. 또한이 **ViewController.cs** 앱의 기본 보기를 관리 하는 파일 (또는 일반적으로 다시를 **MainWindow.cs** 및 **MainWindowController.cs** 파일).
+새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 프로젝트에 자동으로 포함 되는 **기본 storyboard** (또는 일반적으로 xib) 파일에 정의 되어 있습니다 **mainwindow.xaml.** 여기에는 앱의 기본 보기 (또는 일반적으로 **MainWindow.cs** 및 **MainWindowController.cs** 파일)를 관리 하는 **ViewController.cs** 파일도 포함 됩니다.
 
 응용 프로그램에 대 한 Xibless 창으로 전환 하려면 다음을 수행 합니다.
 
-1. 사용 중지 하려는 응용 프로그램을 엽니다 `.storyboard` 또는 mac 용 Visual Studio에서 사용자 인터페이스를 정의 하려면.xib 파일
-2. 에 **Solution Pad**를 마우스 오른쪽 단추로 클릭 합니다 **Main.storyboard** 또는 **MainWindow.xib** 파일을 선택 **제거**: 
+1. 또는. xib 파일을 사용 하 여 `.storyboard` 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio에서 사용자 인터페이스를 정의 합니다.
+2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** 파일을 마우스 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다. 
 
-    ![주 스토리 보드 또는 창 제거](xibless-ui-images/switch01.png "주 스토리 보드 또는 창 제거")
-3. **제거 대화**를 클릭 합니다 **삭제** 프로젝트에서.storyboard 또는.xib을 완전히 제거 하려면 단추: 
+    ![주 storyboard 또는 창 제거](xibless-ui-images/switch01.png "주 storyboard 또는 창 제거")
+3. **제거 대화 상자**에서 **삭제** 단추를 클릭 하 여 프로젝트에서 storyboard 또는. xib을 완전히 제거 합니다. 
 
     ![삭제 확인](xibless-ui-images/switch02.png "삭제 확인")
 
-수정 해야 하는 이제 합니다 **MainWindow.cs** 창의 레이아웃을 정의 하 고 수정 하는 파일을 **ViewController.cs** 또는 **MainWindowController.cs** 파일 만들기를 인스턴스는 `MainWindow` .storyboard 또는.xib 파일을 더 이상 사용 하 고 있으므로 클래스.
+이제를 더 이상 사용 하지 않으므로 창의 레이아웃을 정의 하 고 **ViewController.cs** 또는 **MainWindowController.cs** 파일을 수정 하 여 `MainWindow` 클래스의 인스턴스를 만들도록 **MainWindow.cs** 파일을 수정 해야 합니다. 스토리 보드 또는. xib 파일.
 
-사용자 인터페이스는 자동으로 포함 되지 않을 수에 대 한 스토리 보드를 사용 하는 최신 Xamarin.Mac 앱의 **MainWindow.cs**하십시오 **ViewController.cs** 또는 **MainWindowController.cs** 파일입니다. 필요에 따라 추가 비어 있는 새 C# 클래스를 프로젝트 (**추가** > **새 파일...**   >  **일반** > **빈 클래스**) 고 누락 된 파일과 같은 이름을 지정 합니다. 
+사용자 인터페이스에 대해 Storyboard를 사용 하는 최신 Xamarin.ios 앱은 **MainWindow.cs**, **ViewController.cs** 또는 **MainWindowController.cs** 파일을 자동으로 포함 하지 않을 수 있습니다. C# 필요한 경우 프로젝트에 새 빈 클래스를 추가 하기만 하면 됩니다.**새 파일** 을**추가** > 합니다.  > 일반빈 > **클래스**)와 이름이 누락 된 파일과 동일 하 게 합니다. 
 
 
 ### <a name="defining-the-window-in-code"></a>코드에서 창 정의
 
-다음에 편집 합니다 **MainWindow.cs** 파일을 다음과 같이 표시 되도록 합니다.
+그런 다음 **MainWindow.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -122,16 +122,16 @@ namespace MacXibless
 }
 ```
 
-핵심 요소 중 일부를 살펴보겠습니다.
+몇 가지 주요 요소에 대해 설명 하겠습니다.
 
-먼저 몇 가지를 추가 했습니다 _계산 속성_ (처럼 창.storyboard 또는.xib 파일에서 만든) 출 선을 처럼 작동 하는:
+먼저, storyboard 또는 xib 파일에서 창이 생성 된 것 처럼, 다음과 같이 콘센트 처럼 동작 하는 몇 가지 _계산 된 속성_ 을 추가 했습니다.
 
 ```csharp
 public NSButton ClickMeButton { get; set;}
 public NSTextField ClickMeLabel { get ; set;}
 ```
 
-이러한 미국에 액세스할 창에 표시 하려고 하는 UI 요소입니다. 인스턴스화해야 하는 방법이 필요 창.storyboard 또는.xib 파일에서 확장 됩니다 없습니다, 이후 (나중에 볼 수 있겠지만 `MainWindowController` 클래스). 이 새 생성자 메서드가 수행 하는 것이입니다.
+이를 통해 창에 표시 되는 UI 요소에 액세스할 수 있습니다. 이 창은 storyboard 또는 xib 파일에서 팽창 되지 않으므로 `MainWindowController` 클래스를 인스턴스화하는 방법이 필요 합니다. (나중에 클래스에서 볼 것입니다.) 이 새로운 생성자 메서드는 다음과 같습니다.
 
 ```csharp
 public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
@@ -139,13 +139,13 @@ public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore buffe
 }
 ```
 
-이 여기서 창의 레이아웃을 디자인 하 고 필요한 사용자 인터페이스를 만드는 데 필요한 모든 UI 요소를 배치 합니다. 필요한 UI 요소 창에 추가할 수 있습니다, 전에 _콘텐츠 뷰_ 요소를 포함 하려면:
+여기서는 창의 레이아웃을 디자인 하 고 필요한 사용자 인터페이스를 만드는 데 필요한 모든 UI 요소를 배치 합니다. 모든 UI 요소를 창에 추가 하려면 다음 요소를 포함 하는 _콘텐츠 뷰가_ 필요 합니다.
 
 ```csharp
 ContentView = new NSView (Frame);
 ```
 
-이 창을 채울 콘텐츠 뷰를 만듭니다. 이 첫 번째 UI 요소를 추가 하는 이제는 `NSButton`, 창:
+그러면 창을 채울 콘텐츠 뷰가 생성 됩니다. 이제 창에 첫 번째 UI 요소인 `NSButton`를 추가 합니다.
 
 ```csharp
 ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
@@ -154,13 +154,13 @@ ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
 ContentView.AddSubview (ClickMeButton);
 ```
 
-여기에 가장 먼저는 iOS와 달리 macOS를 사용 하 여 수학 표기법 해당 창의 좌표 시스템 정의 됩니다. 따라서 원점을 값 오른쪽 창의 오른쪽 위 모서리 쪽으로 증가 하는 창의 왼쪽 위 모서리에 있습니다. 새를 만들 때 `NSButton`,에서는 고려해 야 화면의 해당 위치와 크기를 정의 했습니다.
+여기에서 가장 먼저 기억해 야 할 사항은 iOS와 달리 macOS는 수학 표기법을 사용 하 여 해당 창 좌표계를 정의 한다는 것입니다. 따라서 원점은 창의 왼쪽 아래 모서리에 있으며 값은 창의 오른쪽 위 모퉁이의 오른쪽 위 모퉁이에 있습니다. 새 `NSButton`를 만들 때 화면에서의 위치와 크기를 정의할 때이를 고려 합니다.
 
-`AutoresizingMask = NSViewResizingMask.MinYMargin` 속성 단추를 지시 한다고 창의 세로 크기 조정 시 창의 위쪽에서 같은 위치에 유지 되도록 합니다. 마찬가지로 때문에 이것이 필요 (0, 0) 창의 왼쪽 아래에 있습니다.
+속성 `AutoresizingMask = NSViewResizingMask.MinYMargin` 은 창의 세로 크기를 조정할 때 창 맨 위에서와 동일한 위치에 유지 하려는 단추를 알려 줍니다. 이는 (0, 0)이 창의 왼쪽 아래에 있기 때문에 필요 합니다.
 
-마지막으로 `ContentView.AddSubview (ClickMeButton)` 메서드를 추가 합니다 `NSButton` 콘텐츠 뷰에 응용 프로그램은 실행 및 표시 창 화면에 표시 됩니다 있도록.
+마지막으로 메서드 `ContentView.AddSubview (ClickMeButton)` 는 응용 프로그램이 `NSButton` 실행 되 고 창이 표시 될 때 화면에 표시 되도록 콘텐츠 뷰에를 추가 합니다.
 
-마지막 레이블을 횟수를 표시 하는 창에 추가 하는 `NSButton` 했: 
+다음으로를 클릭 한 횟수 `NSButton` 를 표시 하는 레이블이 창에 추가 됩니다. 
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -174,14 +174,14 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
 ContentView.AddSubview (ClickMeLabel);
 ``` 
 
-MacOS 특정 없기 때문 _레이블을_ UI 요소를 특수 하 게 스타일을 추가 했습니다 편집할 수 없는 `NSTextField` 레이블 역할을 합니다. (0, 0)는 창의 왼쪽 아래에서 이전에 계정에 크기와 위치는 단추 처럼 합니다. `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` 속성을 사용 하는 합니다 **또는** 연산자를 결합 하는 두 개의 `NSViewResizingMask` 기능. 창 크기를 조정할 때 세로 방향으로 창의 위쪽에서 같은 위치에 유지 하 고 축소는 창의 가로 크기를 조정할 너비에서 증가 레이블을 확인 합니다.
+Macos는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 역할을 `NSTextField` 할 수 있도록 특수 스타일이 지정 된를 추가 했습니다. 이전 단추와 마찬가지로 크기 및 위치는 (0, 0)가 창의 왼쪽 아래에 있는 것을 고려 합니다. 속성 `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` 은 **또는** 연산자를 사용 하 여 두 `NSViewResizingMask` 기능을 결합 합니다. 그러면 창의 가로 크기를 조정 하 고 창의 크기를 가로로 조정 하는 경우 창의 위쪽에서 같은 위치에 레이블을 유지 하 게 됩니다.
 
-다시는 `ContentView.AddSubview (ClickMeLabel)` 메서드를 추가 합니다 `NSTextField` 콘텐츠 뷰에 응용 프로그램이 실행 되 고 창을 열 때 화면에 표시 됩니다 있도록 합니다.
+이 메서드는 `ContentView.AddSubview (ClickMeLabel)` 응용 프로그램을 `NSTextField` 실행 하 고 창을 열 때 화면에 표시 되도록를 콘텐츠 뷰에 추가 합니다.
 
 
-### <a name="adjusting-the-window-controller"></a>창 컨트롤러를 조정합니다.
+### <a name="adjusting-the-window-controller"></a>창 컨트롤러 조정
 
-디자인 이후에 `MainWindow` 로드 되 고 더 이상 창 컨트롤러 약간 조정해 해야.storyboard 또는.xib 파일에서 합니다. 편집 된 **MainWindowController.cs** 파일을 다음과 같이 표시 되도록 합니다.
+의 `MainWindow` 디자인이 storyboard 또는 xib 파일에서 더 이상 로드 되지 않으므로 창 컨트롤러를 몇 가지 조정 해야 합니다. **MainWindowController.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -226,54 +226,54 @@ namespace MacXibless
 
 ```
 
-이 수정 작업의 주요 요소에 설명 하는 사용 수 있습니다.
+이 수정의 주요 요소에 대해 설명 하겠습니다.
 
-첫째, 정의의 새 인스턴스를 `MainWindow` 클래스 및 기본 창 컨트롤러의 할당할 `Window` 속성:
+먼저 `MainWindow` 클래스의 새 인스턴스를 정의 하 고 기본 창 컨트롤러의 `Window` 속성에 할당 합니다.
 
 ```csharp
 CGRect contentRect = new CGRect (0, 0, 1000, 500);
 base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
 ```
 
-사용 하 여 화면의 창의 위치를 정의 하는 것을 `CGRect`입니다. 창의 좌표 시스템 처럼 화면 왼쪽 아래 모서리를 (0, 0)을 정의합니다. 사용 하 여 창의 스타일 정의 다음에 **또는** 연산자를 결합 하는 두 개 이상의 `NSWindowStyle` 기능:
+를 `CGRect`사용 하 여 화면 창의 위치를 정의 합니다. 창의 좌표계와 마찬가지로 화면에서 왼쪽 아래 모서리로 (0, 0)을 정의 합니다. 다음으로 **또는** 연산자를 사용 하 여 두 개 `NSWindowStyle` 이상의 기능을 결합 하는 창의 스타일을 정의 합니다.
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
 ``` 
 
-다음 `NSWindowStyle` 기능은 사용할 수 있습니다.
+사용할 수 있는 기능은 다음과 같습니다. `NSWindowStyle`
 
-- **여백 없는** -창의 테두리가 해야 합니다.
-- **이라는** -창의 제목 표시줄을 갖습니다.
-- **Closable** -창 닫기 단추가 및 닫을 수 있습니다.
-- **Miniaturizable** -Miniaturize 단추가 창과 최소화할 수 있습니다.
-- **크기 조정 가능한** -창 크기 조정 단추 되며 크기를 조정할 수 있습니다.
-- **유틸리티** -는 유틸리티 스타일 창 (제어판)입니다.
-- **DocModal** -시스템 모달 대신 문서 모달 됩니다 창 패널 인 경우. 
-- **NonactivatingPanel** -창 패널 인 경우이 걸 수 없습니다 주 창입니다.
-- **TexturedBackground** -창 질감이 배경이 됩니다.
-- **실제 크기** -창이 확장 되지 것입니다.
-- **UnifiedTitleAndToolbar** -창의 제목 및 도구 모음 영역에 참여할 수 있습니다.
-- **Hud** -창으로 헤드업 디스플레이 패널 표시 됩니다.
-- **FullScreenWindow** -창을 전체 화면 모드를 입력할 수 있습니다.
-- **FullSizeContentView** -창의 콘텐츠 뷰는 뒤에 제목 및 도구 모음 영역입니다.
+- 테두리 **없음-창의** 테두리를 포함 하지 않습니다.
+- 제목이 **-창** 에 제목 표시줄이 표시 됩니다.
+- **Closable** -창에 닫기 단추가 있으며 닫을 수 있습니다.
+- **Miniaturizable** -창에는 Miniaturize 단추가 있으며 최소화 될 수 있습니다.
+- 크기 조정 **가능-창의** 크기 조정 단추가 있으며 크기를 조정할 수 있습니다.
+- **유틸리티** -유틸리티 스타일 창 (패널)입니다.
+- **Docmodal** -창이 패널 인 경우 시스템 모달 대신 문서 모달이 됩니다. 
+- **NonactivatingPanel** -창이 패널 인 경우 주 창이 됩니다.
+- **TexturedBackground** -창에 질감이 배경으로 포함 됩니다.
+- **크기** 를 조정 하지 않습니다. 창의 크기가 조정 되지 않습니다.
+- **UnifiedTitleAndToolbar** -창의 제목 및 도구 모음 영역이 조인 됩니다.
+- **Hud** -창이 헤드 디스플레이 패널로 표시 됩니다.
+- **Fullscreenwindow** -창이 전체 화면 모드로 전환 될 수 있습니다.
+- **FullSizeContentView** -창의 콘텐츠 뷰가 제목 및 도구 모음 영역 뒤에 있습니다.
 
-마지막 두 속성은 정의 _버퍼링 형식_ 창의 경우 창의 그리기 지연 됩니다. 에 대 한 자세한 `NSWindows`, Apple의를 참조 하세요 [Windows 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) 설명서.
+마지막 두 속성은 창의 _버퍼링 형식을_ 정의 하 고 창의 그리기가 지연 되는 경우를 정의 합니다. 에 대 `NSWindows`한 자세한 내용은 Apple의 Windows 설명서 [소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) 를 참조 하세요.
 
-마지막으로, 있으므로 창.storyboard 또는.xib 파일에서 확장 됩니다 하지, 해야 시뮬레이션에서 우리의 **MainWindowController.cs** windows를 호출 하 여 `AwakeFromNib` 메서드:
+마지막으로 storyboard 또는. xib 파일에서 창이 팽창 않으므로 windows `AwakeFromNib` 메서드를 호출 하 여 **MainWindowController.cs** 에서 시뮬레이션 해야 합니다.
 
 ```csharp
 Window.AwakeFromNib ();
 ```
 
-그러면.storyboard 또는.xib 파일에서 로드 된 표준 창 같은 창에 대 한 코드에 있습니다.
+이렇게 하면 storyboard 또는 xib 파일에서 로드 된 표준 창과 마찬가지로 창에 대해 코딩할 수 있습니다.
 
 
 ### <a name="displaying-the-window"></a>창 표시
 
-.Storyboard 또는.xib 파일을 제거 하며 **MainWindow.cs** 하 고 **MainWindowController.cs** 파일 수정 사용할 창에서 만들어진 모든 표준 창 처럼 Xcode의 Interface Builder.xib 파일을 사용 하 여 구성 합니다.
+Xib 파일을 제거 하 고 **MainWindow.cs** 및 **MainWindowController.cs** 파일을 수정한 경우 Xcode의 Interface Builder. xib 파일로 만든 표준 창과 마찬가지로 창을 사용 하 게 됩니다.
 
-다음 창 및 해당 컨트롤러의 새 인스턴스를 만들고 화면에 창을 표시 합니다.
+다음은 창 및 해당 컨트롤러의 새 인스턴스를 만들고 창을 화면에 표시 합니다.
 
 ```csharp
 private MainWindowController mainWindowController;
@@ -283,23 +283,23 @@ mainWindowController = new MainWindowController ();
 mainWindowController.Window.MakeKeyAndOrderFront (this);
 ```
 
-이 시점에서 응용 프로그램을 실행 하 고 단추를 몇 번 클릭 하는 경우 다음 표시 됩니다.
+이 시점에서 응용 프로그램을 실행 하 고 단추를 몇 번 클릭 하면 다음이 표시 됩니다.
 
-![예제 앱 실행](xibless-ui-images/run01.png "실행 하는 예제 앱")
+![예제 앱 실행](xibless-ui-images/run01.png "예제 앱 실행")
 
 
 ## <a name="adding-a-code-only-window"></a>코드 전용 창 추가
 
-기존 Xamarin.Mac 응용 프로그램 코드에만 해당, xibless 창 추가 하고자 하는 경우에 프로젝트를 클릭 합니다 **Solution Pad** 선택한 **추가** > **새 파일...** . 에 **새 파일** 대화 상자 선택 **Xamarin.Mac** > **컨트롤러를 사용 하 여 Cocoa 창을**아래 그림과 같이:
+Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해당 **Solution Pad** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다. **새 파일** 대화 상자에서 아래 > 그림과 같이**컨트롤러를 사용 하 여 xamarin.ios cocoa 창을**선택 합니다.
 
 ![새 창 컨트롤러 추가](xibless-ui-images/add01.png "새 창 컨트롤러 추가") 
 
-마찬가지로 다음 이전에 기본.storyboard 또는.xib 파일을 프로젝트에서 삭제 됩니다 (이 예제의 **SecondWindow.xib**)의 단계를 수행 하 고는 [코드를 사용 하는 창을 전환](#Switching_a_Window_to_use_Code) 를 처리 하기 위해 위의 섹션을 코드 정의 창입니다.
+이전과 마찬가지로 프로젝트에서 xib 파일 (이 경우 **SecondWindow. xib**)을 삭제 하 고 위의 [코드를 사용 하](#Switching_a_Window_to_use_Code) 여 창 전환 섹션의 단계에 따라 창의 정의를 코드에 포함 합니다.
 
 
-## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에는 UI 요소 추가
+## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에 UI 요소 추가
 
-창의 코드에서 생성 되었거나.storyboard 또는.xib 파일에서 로드를 여부를 경우가 있을 창에 코드에서 UI 요소를 추가 하려고 합니다. 예를 들어:
+코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 예를 들어:
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -308,14 +308,14 @@ var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
 MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
-위의 코드에서는 새 `NSButton` 에 추가 된 `MyWindow` 표시할 창 인스턴스. 기본적으로.storyboard 또는.xib 파일에서 Xcode의 Interface Builder에서 정의 될 수 있는 UI 요소의 코드에서 만든 고 창에 표시 될 수 있습니다.
+위의 코드는 새 `NSButton` 를 만들어 표시 하기 위해 `MyWindow` 창 인스턴스에 추가 합니다. 기본적으로 storyboard 또는 xib 파일에서 Xcode의 Interface Builder에 정의할 수 있는 모든 UI 요소는 코드에서 만들고 창에 표시할 수 있습니다.
 
 
-## <a name="defining-the-menu-bar-in-code"></a>코드에서 메뉴를 정의합니다.
+## <a name="defining-the-menu-bar-in-code"></a>코드에서 메뉴 모음 정의
 
-Xamarin.Mac의 현재 제한으로 인해이 제안 되지 않습니다 사용자가 만든 Xamarin.Mac 응용 프로그램의 메뉴 모음 –`NSMenuBar`–에서 코드 없지만 계속 사용 합니다 **Main.storyboard** 또는 **MainMenu.xib** 파일을 정의 합니다. 즉, 추가 및 메뉴 및 메뉴 항목을 제거할 수 있습니다 C# 코드입니다.
+Xamarin.ios의 현재 제한 사항 때문에 xamarin.ios 응용 프로그램의 메뉴 모음`NSMenuBar`을 만드는 것은 권장 되지 않습니다. 코드에서는 **기본 storyboard** 또는 **xib** 파일을 사용 하 여 정의 하는 것이 좋습니다. 즉, 코드에서 C# 메뉴 및 메뉴 항목을 추가 하 고 제거할 수 있습니다.
 
-예를 들어 편집 합니다 **AppDelegate.cs** 파일을 확인 합니다 `DidFinishLaunching` 다음과 같은 메서드 확인:
+예를 들어 **AppDelegate.cs** 파일을 편집 하 고 `DidFinishLaunching` 메서드를 다음과 같이 만듭니다.
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -357,18 +357,18 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-위의 상태 표시줄 메뉴에서 코드를 만들고 응용 프로그램을 시작할 때 표시 합니다. 작업 메뉴에 대 한 자세한 내용은 참조 하십시오 우리의 [메뉴](~/mac/user-interface/menu.md) 설명서.
+위에서는 코드에서 상태 표시줄 메뉴를 만들고 응용 프로그램이 시작 될 때이를 표시 합니다. 메뉴 사용에 대 한 자세한 내용은 [메뉴](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Mac 응용 프로그램의 사용자 인터페이스에서 만들기를 자세히 살펴보려면 되었고 C# Xcode의 Interface Builder를 사용 하 여.storyboard 또는.xib 파일 대신 코드입니다.
+이 문서에서는 Xcode 또는 xib 파일과 함께의 Interface Builder 사용 하는 대신 코드에서 C# xamarin.ios 응용 프로그램의 사용자 인터페이스를 만드는 방법에 대해 자세히 살펴봅니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacXibless (샘플)](https://developer.xamarin.com/samples/mac/MacXibless/)
+- [MacXibless (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macxibless)
 - [Windows](~/mac/user-interface/window.md)
 - [메뉴](~/mac/user-interface/menu.md)
 - [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1447526ef925431e3cad5f36d4ce7a528c8ab07c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386686"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653879"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView) 표시 데이터와 상호 작용을 지원 합니다.
+[`ListView`](xref:Xamarin.Forms.ListView)는 제공 하는 데이터와 상호 작용을 지원 합니다.
 
 <a name="selectiontaps" />
 
@@ -37,7 +37,7 @@ ms.locfileid: "61386686"
 두 실행은 동일한 항목을 두 번 눌러 [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트 하지만 됩니다만 화재 단일 [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트입니다.
 
 > [!NOTE]
-> [ `ItemTappedEventArgs` ](xref:Xamarin.Forms.ItemTappedEventArgs) 에 대 한 이벤트 인수를 포함 하는 클래스를 [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트에 [ `Group` ](xref:Xamarin.Forms.ItemTappedEventArgs.Group) 고 [ `Item` ](xref:Xamarin.Forms.ItemTappedEventArgs.Item) 속성 및 `ItemIndex` 값의 인덱스를 나타내는 속성을 [ `ListView` ](xref:Xamarin.Forms.ListView) 탭된 항목의 합니다. 마찬가지로, 합니다 [ `SelectedItemChangedEventArgs` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs) 에 대 한 이벤트 인수를 포함 하는 클래스를 [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트에는 [ `SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) 속성과 `SelectedItemIndex` 속성의 인덱스를 나타내는 값을 가지는 `ListView` 선택한 항목의 합니다.
+> `ItemIndex` [`ListView`](xref:Xamarin.Forms.ListView) [`Group`](xref:Xamarin.Forms.ItemTappedEventArgs.Group) [`Item`](xref:Xamarin.Forms.ItemTappedEventArgs.Item) [`ItemTappedEventArgs`](xref:Xamarin.Forms.ItemTappedEventArgs) 이벤트에 대 한 이벤트 인수를 포함 하는 클래스에는 및 속성이 있고 탭 항목의에서 인덱스를 나타내는 값을 갖는 속성이 있습니다. [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) [`SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) `ListView` `SelectedItemIndex` 마찬가지로, [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트에 대 한 이벤트 인수를 포함 하는 [클래스에는속성이있으며,해당값이선택된항목의에있는인덱스를나타내는속성이있습니다.`SelectedItemChangedEventArgs`](xref:Xamarin.Forms.SelectedItemChangedEventArgs)
 
 경우는 [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) 속성이로 설정 되어 [ `Single` ](xref:Xamarin.Forms.ListViewSelectionMode.Single), 항목를 [ `ListView` ](xref:Xamarin.Forms.ListView) 을 선택할 수는 [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) 하 고 [ `ItemTapped` ](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트가 발생 하지 것입니다, 그리고 및 [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) 속성이 선택한 항목의 값으로 설정 됩니다.
 
@@ -149,20 +149,20 @@ public void OnDelete (object sender, EventArgs e) {
 
 ## <a name="pull-to-refresh"></a>고치려면 당김
 
-사용자는 데이터 목록을 아래로 끌어서 새로 고쳐집니다 목록 예상 제대로 찾아 오셨습니다. [`ListView`](xref:Xamarin.Forms.ListView) 이-의-기본을 지원합니다. 끌어오기-새로 고침 기능을 사용 하려면 [ `IsPullToRefreshEnabled` ](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) 하려면 `true`:
+사용자는 데이터 목록을 아래로 끌어서 새로 고쳐집니다 목록 예상 제대로 찾아 오셨습니다. [`ListView`](xref:Xamarin.Forms.ListView)에서이 기능을 지원 합니다. 끌어오기-새로 고침 기능을 사용 하려면를로 [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) `true`설정 합니다.
 
 ```xaml
 <ListView ...
           IsPullToRefreshEnabled="true" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 listView.IsPullToRefreshEnabled = true;
 ```
 
-기본적으로 검정색 인 새로 고치는 동안 회전자 표시 됩니다. 그러나 설정 하 여 iOS 및 Android에서 회전자 색상에 변경할 수는 합니다 `RefreshControlColor` 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+회전자는 새로 고침 중에 표시 되며 기본적으로 검은색입니다. 그러나 `RefreshControlColor` 속성을 [`Color`](xref:Xamarin.Forms.Color)로 설정 하 여 iOS 및 Android에서 회전자 색을 변경할 수 있습니다.
 
 ```xaml
 <ListView ...
@@ -170,25 +170,25 @@ listView.IsPullToRefreshEnabled = true;
           RefreshControlColor="Red" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 listView.RefreshControlColor = Color.Red;
 ```
 
-다음 스크린샷은 사용자 끌어오는으로 끌어오기-새로 고침을 보여 줍니다.
+다음 스크린샷은 사용자가 끌어오기를 수행 하는 동안 끌어오기를 새로 고치는 방법을 보여 줍니다.
 
 ![](interactivity-images/refresh-start.png "ListView 당겨서 새로 고침 진행률의")
 
-다음 스크린샷은 사용자가 표시 되는 회전자를 사용 하 여 끌어오기, 출시 된 후 끌어오기-새로 고침을 표시 하는 동안 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 업데이트:
+다음 스크린샷은 사용자가 끌어오기를 릴리스한 후를 업데이트 하는 동안 [`ListView`](xref:Xamarin.Forms.ListView) 회전자가 표시 되도록 끌어오기를 새로 고치는 방법을 보여 줍니다.
 
-![](interactivity-images/refresh-in-progress.png "ListView 당겨서 새로 고침 완료")
+![](interactivity-images/refresh-in-progress.png "ListView 끌어오기-새로 고침 완료")
 
-[`ListView`](xref:Xamarin.Forms.ListView) 발생 합니다 [ `Refreshing` ](xref:Xamarin.Forms.ListView.Refreshing) 새로 고침을 시작 하는 이벤트와 [ `IsRefreshing` ](xref:Xamarin.Forms.ListView.IsRefreshing) 속성에 설정할 `true`합니다. 내용 새로 고침 하는 데 필요한 코드를는 `ListView` 다음에 대 한 이벤트 처리기에서 실행할지를 `Refreshing` 이벤트 또는 실행 메서드에서 [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand)합니다. 한 번를 `ListView` 는 새로 고쳐지고를 `IsRefreshing` 속성 설정 해야 `false`, 또는 [ `EndRefresh` ](xref:Xamarin.Forms.ListView.EndRefresh) 메서드를 호출 해야 새로 고침 완료 되었음을 나타냅니다.
+[`ListView`](xref:Xamarin.Forms.ListView)이벤트를 발생 하 여 새로 고침을 시작 하 [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) 고 속성이로 `true`설정 됩니다. [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) 의 `ListView` 콘텐츠를 새로 고치는 데 필요한 모든 코드는 `Refreshing` 이벤트에 대 한 이벤트 처리기 또는에서 실행 [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand)되는 메서드에 의해 실행 되어야 합니다. 를 새로 고치면 `IsRefreshing` 속성이 `false` [로`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) 설정 되거나, 새로 고침이 완료 되었음을 나타내기 위해 메서드를 호출 해야 합니다. `ListView`
 
 > [!NOTE]
-> 정의 하는 경우는 [ `RefreshCommand` ](xref:Xamarin.Forms.ListView.RefreshCommand)는 `CanExecute` 명령의 메서드 명령을 사용할지 여부를 지정할 수 있습니다.
+> [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) 를`CanExecute` 정의할 때 명령의 메서드를 지정 하 여 명령을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [ListView 대화형 작업 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [ListView 대화형 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

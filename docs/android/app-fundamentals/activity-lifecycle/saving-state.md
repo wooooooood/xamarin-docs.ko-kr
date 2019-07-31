@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e2d6c1bb462a8eee5debc139aee9f71ae8ac6a8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9fafc6965c5d2dec79f440579a5cf3746a545bae
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508779"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644390"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>연습 - 작업 상태 저장
 
@@ -20,7 +20,7 @@ _활동 수명 주기 가이드의 저장 상태에 대 한 이론적 원리를 
 
 ## <a name="activity-state-walkthrough"></a>활동 상태 연습
 
-[Activitylifecycle 주기](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) 샘플에서 **ActivityLifecycle_Start** 프로젝트를 열고 빌드하고 실행 해 보겠습니다. 이는 작업 수명 주기를 보여 주는 두 가지 작업 및 다양 한 수명 주기 방법이 호출 되는 방법을 보여 주는 매우 간단한 프로젝트입니다. 응용 프로그램을 시작 하면 다음과 같은 화면이 `MainActivity` 표시 됩니다.
+[Activitylifecycle 주기](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle) 샘플에서 **ActivityLifecycle_Start** 프로젝트를 열고 빌드하고 실행 해 보겠습니다. 이는 작업 수명 주기를 보여 주는 두 가지 작업 및 다양 한 수명 주기 방법이 호출 되는 방법을 보여 주는 매우 간단한 프로젝트입니다. 응용 프로그램을 시작 하면 다음과 같은 화면이 `MainActivity` 표시 됩니다.
 
 [![작업 화면](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
@@ -176,6 +176,6 @@ if (bundle != null)
 
 ## <a name="related-links"></a>관련 링크
 
-- [ActivityLifecycle 주기 (샘플)](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)
+- [ActivityLifecycle 주기 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/activitylifecycle)
 - [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Android 작업](xref:Android.App.Activity)

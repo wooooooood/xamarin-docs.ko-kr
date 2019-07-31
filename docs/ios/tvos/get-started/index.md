@@ -1,36 +1,36 @@
 ---
-title: Xamarin에서 tvOS를 사용 하 여 시작
-description: 이 문서에서는 Xamarin 사용 하 여 tvOS 앱 빌드를 시작 하는 방법을 설명 합니다. 설치 지침 및 빠른 시작 가이드에 연결 합니다.
+title: Xamarin에서 tvOS 시작 하기
+description: 이 문서에서는 Xamarin을 사용 하 여 tvOS apps 빌드를 시작 하는 방법을 설명 합니다. 설치 가이드 및 빠른 시작 가이드에 연결 됩니다.
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: 1d7f6f3939d79c9ad28701bb89eb75256503a977
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1cf195438132d56d194438b9c922d1079d362f5b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398702"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656018"
 ---
-# <a name="getting-started-with-tvos-in-xamarin"></a>Xamarin에서 tvOS를 사용 하 여 시작
+# <a name="getting-started-with-tvos-in-xamarin"></a>Xamarin에서 tvOS 시작 하기
 
-이 시리즈에서는 Xamarin.tvOS 개발의 기본 사항을 소개 합니다. 시작, 디자인, 코딩 및 앱을 실행 하려면 tvOS 지원 설치에서 완료 되었습니다. 이 과정에서 기술과 Xamarin.tvOS 앱에서 작동 해야 하는 도구 집합을 설명 합니다.
+이 시리즈에서는 tvOS 개발의 기본 사항을 소개 합니다. TvOS 지원을 설치 하 여 앱을 시작, 디자인, 코딩 및 실행할 수 있습니다. 이 과정에서 tvOS 앱에서 작동 하는 데 필요한 기술과 도구 집합에 대해 설명 합니다.
 
 ## <a name="installing-tvos-supportiostvosget-startedinstallationmd"></a>[tvOS 지원 설치](~/ios/tvos/get-started/installation.md)
 
-Xamarin 사용 하 여 tvOS 앱을 빌드하려면 xamarin.ios tvOS 11 및 watchOS 4 지 원하는 안정적인 최신 버전을 설치 합니다.
+Xamarin을 사용 하 여 tvOS apps를 빌드하려면 tvOS 11 및 watchOS 4를 지 원하는 최신 안정적인 Xamarin.ios 버전을 설치 합니다.
 
 ## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[tvOS 빠른 시작 가이드 시작](~/ios/tvos/get-started/hello-tvos.md)
 
-이 문서에서는 간단한 "Hello, tvOS" 앱을 만들어 tvOS에 대 한 앱을 개발 하는 빠른 시작을 제공 합니다. TvOS 장치 프로 비전, 인터페이스 만들기, tvOS에 대 한 코딩 및 tvOS 시뮬레이터 및 tvOS 실제 하드웨어에서 테스트의 기본 사항을 설명 합니다.
+이 문서에서는 간단한 "Hello, tvOS" 앱을 만들어 tvOS 용 앱을 신속 하 게 개발할 수 있습니다. TvOS 장치 프로 비전, 인터페이스 생성, tvOS에 대 한 코딩, tvOS 시뮬레이터 및 실제 tvOS 하드웨어에서의 테스트에 대 한 기본 사항을 다룹니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS 휴먼 인터페이스 지침](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [TvOS 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
-- [Xamarin (비디오)를 사용 하 여 tvOS에 대 한 앱 빌드](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)
+- [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Xamarin을 사용 하 여 tvOS 용 앱 빌드 (비디오)](https://university.xamarin.com/lightninglectures/tvos-with-xamarin)

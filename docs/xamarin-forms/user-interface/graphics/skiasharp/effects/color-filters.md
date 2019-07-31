@@ -7,16 +7,16 @@ ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/28/2018
-ms.openlocfilehash: 71c0495520a5dd596be2e9cafec6b63e316fb627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5aa8b2e85d5a7d547af5333dcaf350025b86cc26
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342458"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647692"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 색 필터 포스터화와 같은 효과 다른 색 비트맵 (또는 다른 이미지)의 색을 변환할 수 있습니다.
 
@@ -120,7 +120,7 @@ R 회색조 비트맵을 색 비트맵으로 변환 하려면 ', G', B' 결과 �
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-여기서 `matrix` 20의 배열이 `float` 값입니다. 배열을 만들 때 C#을 4 × 5 행렬 비슷합니다 있으므로 숫자 형식 지정 하기가 쉽습니다. 에 설명 되어이 **회색조 행렬** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플:
+여기서 `matrix` 20의 배열이 `float` 값입니다. 배열을 만들 때 C#을 4 × 5 행렬 비슷합니다 있으므로 숫자 형식 지정 하기가 쉽습니다. 에 설명 되어이 **회색조 행렬** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플:
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -163,7 +163,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-`DrawBitmap` 에서이 코드에 사용 하는 메서드는 합니다 **BitmapExtension.cs** 에 포함 된 파일을 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플. 
+`DrawBitmap` 에서이 코드에 사용 하는 메서드는 합니다 **BitmapExtension.cs** 에 포함 된 파일을 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플. 
 
 IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 결과 다음과 같습니다.
 
@@ -232,7 +232,7 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-배열에는 항상 256 항목 포함. 에 `CreateTable` 빨간색, 녹색 및 파랑 구성 요소에 대 한 테이블을 동일한 테이블을 사용 하 여 메서드를 사용 합니다. 간단한 조회 테이블인 경우: 소스 색 (R, G, B) 이며, 대상 색이 하는 경우 (R', G, B' '), 대상 구성 요소 인덱싱 하 여 가져온 다음 `table` 원본 구성 요소를 사용 하 여:
+배열에는 항상 256 항목 포함. 에 `CreateTable` 빨간색, 녹색 및 파랑 구성 요소에 대 한 테이블을 동일한 테이블을 사용 하 여 메서드를 사용 합니다. 간단한 조회 테이블입니다. 원본 색이 (r, G, b)이 고 대상 색이 (r ', B ', G ') 인 경우 원본 구성 요소를 사용 하 여 인덱싱을 `table` 통해 대상 구성 요소를 가져옵니다.
 
 `R' = table[R]`
 
@@ -300,4 +300,4 @@ public class PosterizeTablePage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

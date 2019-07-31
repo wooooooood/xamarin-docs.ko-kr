@@ -7,16 +7,16 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: cf31f3bd6f84a040d21420e865737417c374d947
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 50174844100eb852ac7daf5ce3f33b02b490ceb2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61078477"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646654"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 합니다 [ **만들고 그리기 SkiaSharp 비트맵** ](drawing.md) 하는 방법을 설명 하는 문서를 `SKBitmap` 개체를 전달할 수는 `SKCanvas` 생성자입니다. 비트맵에 렌더링 되는 캔버스 원인 그래픽 라는 모든 그리기 메서드. 이러한 그리기 메서드를 포함 `DrawBitmap`, 즉,이 기술은 한 비트맵의 전체 또는 일부 다른 비트맵 아마도 사용 하 여 전송 적용 되는 변환을 허용함.
 
@@ -445,7 +445,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
 ## <a name="hosting-the-photo-cropper-canvas-view"></a>사진 cropper 캔버스 뷰를 호스팅
 
-자르기 논리를 처리 하는 이러한 두 클래스를 사용 하 여는 **사진 자르기** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램에 거의 작업을 수행 합니다. XAML 파일은는 `Grid` 호스트에는 `PhotoCropperCanvasView` 와 **수행** 단추:
+자르기 논리를 처리 하는 이러한 두 클래스를 사용 하 여는 **사진 자르기** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 거의 작업을 수행 합니다. XAML 파일은는 `Grid` 호스트에는 `PhotoCropperCanvasView` 와 **수행** 단추:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -536,7 +536,7 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 책의 22 장에에서 표시 되는 유명한 Xamarin.Forms 버전 14 ~ 15 퍼즐 [ _Creating Mobile Apps with Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 로 다운로드할 수 있습니다 [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)합니다. 그러나 퍼즐 됩니다 더 재미 있게 (및 더 까다로운 종종) 자신의 사진 라이브러리에서 이미지에 기반 하는 경우.
 
-14 ~ 15 퍼즐의이 버전의 일부인 합니다 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램에는 일련의 페이지가 이라는 구성 됩니다 **사진 퍼즐**.
+14 ~ 15 퍼즐의이 버전의 일부인 합니다 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에는 일련의 페이지가 이라는 구성 됩니다 **사진 퍼즐**.
 
 합니다 **PhotoPuzzlePage1.xaml** 구성 파일을 `Button`:
 
@@ -765,4 +765,4 @@ imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

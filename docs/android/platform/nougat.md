@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 7a50488d8b18682dffd76dee582767c063920840
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: a28368e0fa4574fbb92a43dbd650a127008f5d06
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510519"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643459"
 ---
 # <a name="nougat-features"></a>Nougat 기능
 
@@ -160,7 +160,7 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-[Multiwindowwindowsample](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/) 앱에는 C# 앱과 함께 여러 창 사용자 인터페이스를 활용 하는 방법을 보여 주는 코드가 포함 되어 있습니다.
+[Multiwindowwindowsample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) 앱에는 C# 앱과 함께 여러 창 사용자 인터페이스를 활용 하는 방법을 보여 주는 코드가 포함 되어 있습니다.
 
 다중 창 모드에 대 한 자세한 내용은 [다중 창 지원](https://developer.android.com/guide/topics/ui/multi-window.html)을 참조 하세요.
 
@@ -210,7 +210,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-[메시징 서비스](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/) 샘플 앱은 C# `RemoteInput` 개체를 사용 하 여 알림을 확장 하는 방법을 보여 주는 코드를 포함 합니다. Android 7.0 이상용 앱에 인라인 회신 작업을 추가 하는 방법에 대 한 자세한 내용은 Android [알림에 회신](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) 항목을 참조 하세요.
+[메시징 서비스](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) 샘플 앱은 C# `RemoteInput` 개체를 사용 하 여 알림을 확장 하는 방법을 보여 주는 코드를 포함 합니다. Android 7.0 이상용 앱에 인라인 회신 작업을 추가 하는 방법에 대 한 자세한 내용은 Android [알림에 회신](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct) 항목을 참조 하세요.
 
 
 #### <a name="bundled-notifications"></a>번들로 제공 되는 알림
@@ -253,15 +253,15 @@ Android 7.1의 새로운 앱 바로 가기 기능에 대 한 자세한 내용은
 
 Android Nougat 기능을 활용 하는 방법을 보여 주는 몇 가지 Xamarin Android 샘플을 사용할 수 있습니다.
 
--   [Multiwindowplayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/) 는 Android에서 사용할 수 있는 다중 창 API를 사용 하는 방법을 보여 줍니다. 샘플 앱을 다중 windows 모드로 전환 하 여 앱의 수명 주기와 동작에 미치는 영향을 확인할 수 있습니다.
+-   [Multiwindowplayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground) 는 Android에서 사용할 수 있는 다중 창 API를 사용 하는 방법을 보여 줍니다. 샘플 앱을 다중 windows 모드로 전환 하 여 앱의 수명 주기와 동작에 미치는 영향을 확인할 수 있습니다.
 
--   [메시징 서비스](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/) 는를 `NotificationCompatManager`사용 하 여 알림을 보내는 간단한 서비스입니다. 또한 `RemoteInput` 개체를 사용 하 여 알림을 확장 하 여 Android Nougat 장치에서 앱을 열지 않고도 알림에서 직접 텍스트를 통해 회신할 수 있습니다.
+-   [메시징 서비스](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice) 는를 `NotificationCompatManager`사용 하 여 알림을 보내는 간단한 서비스입니다. 또한 `RemoteInput` 개체를 사용 하 여 알림을 확장 하 여 Android Nougat 장치에서 앱을 열지 않고도 알림에서 직접 텍스트를 통해 회신할 수 있습니다.
 
--   [활성 알림은](https://developer.xamarin.com/samples/monodroid/android-n/ActiveNotifications/) `NotificationManager` API를 사용 하 여 응용 프로그램에 현재 표시 되는 알림 수를 알려 주는 방법을 보여 줍니다.
+-   [활성 알림은](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications) `NotificationManager` API를 사용 하 여 응용 프로그램에 현재 표시 되는 알림 수를 알려 주는 방법을 보여 줍니다.
 
--   [범위 디렉터리 액세스](https://developer.xamarin.com/samples/monodroid/android-n/ScopedDirectoryAccess/) 범위가 지정 된 디렉터리 액세스 API를 사용 하 여 특정 디렉터리에 쉽게 액세스 하는 방법을 보여 줍니다. 이는 매니페스트에서 또는 `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` 사용 권한을 정의 하는 대신 사용 됩니다.
+-   [범위 디렉터리 액세스](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess) 범위가 지정 된 디렉터리 액세스 API를 사용 하 여 특정 디렉터리에 쉽게 액세스 하는 방법을 보여 줍니다. 이는 매니페스트에서 또는 `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` 사용 권한을 정의 하는 대신 사용 됩니다.
 
--   [직접 부팅](https://developer.xamarin.com/samples/monodroid/android-n/DirectBoot/) 장치 암호화 저장소에 데이터를 저장 하는 방법을 보여 줍니다 .이 저장소는 장치를 부팅 하는 동안 항상 사용할 수 있으며 사용자 자격 증명 (PIN/패턴/암호)을 입력 합니다.
+-   [직접 부팅](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot) 장치 암호화 저장소에 데이터를 저장 하는 방법을 보여 줍니다 .이 저장소는 장치를 부팅 하는 동안 항상 사용할 수 있으며 사용자 자격 증명 (PIN/패턴/암호)을 입력 합니다.
 
 
 ## <a name="summary"></a>요약

@@ -1,24 +1,24 @@
 ---
-title: IOS에서 ListView 구분 기호 스타일
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 ListView에 있는 셀 사이의 구분 기호는 ListView의 전체 너비를 사용 하는지 여부를 제어 하는 iOS 플랫폼 전용을 사용 하는 방법을 설명 합니다.
+title: IOS의 ListView 구분 기호 스타일
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 ListView의 셀 사이에 있는 구분 기호가 ListView의 전체 너비를 사용 하는지 여부를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A4CB45CE-9FB7-47ED-8C3D-93E39BF282E4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 2d634231c0bfca115581f51bd9eb298b9c45a7e1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 921ef905eed17b6bfe5cb2ea401f7da92ff744af
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925754"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648110"
 ---
-# <a name="listview-separator-style-on-ios"></a>IOS에서 ListView 구분 기호 스타일
+# <a name="listview-separator-style-on-ios"></a>IOS의 ListView 구분 기호 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼별 사이의 구분 기호 셀에 있는지 여부를 제어를 [ `ListView` ](xref:Xamarin.Forms.ListView) 의 전체 너비를 사용 하는 `ListView`합니다. 설정 하 여 XAML에서 사용 되는 [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) 연결 된 속성의 값에는 [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 열거형:
+이 iOS 플랫폼 특정은의 셀 [`ListView`](xref:Xamarin.Forms.ListView) 사이에 있는 구분 기호가의 전체 너비 `ListView`를 사용 하는지 여부를 제어 합니다. 설정 하 여 XAML에서 사용 되는 [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) 연결 된 속성의 값에는 [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) 열거형:
 
 ```xaml
 <ContentPage ...
@@ -55,6 +55,6 @@ listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,16 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: df45908af9e2d13dcaeff732e8e8b1b49c523934
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218238"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647646"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>SkiaSharp 순환 그라데이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 합니다 [ `SKShader` ](xref:SkiaSharp.SKShader) 클래스 네 가지 유형의 그라데이션 만드는 정적 메서드를 정의 합니다. 합니다 [ **SkiaSharp 선형 그라데이션** ](linear-gradient.md) 문서에 설명 합니다 [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) 메서드. 이 문서에는 다른 세 가지 유형의 그라데이션 원에 기반한 모두 다룹니다.
 
@@ -54,7 +54,7 @@ A [ `CreateRadialGradient` ](xref:SkiaSharp.SKShader.CreateRadialGradient(SkiaSh
 
 사용 하는 경우 `CreateRadialGradient` 원 채우기 그라데이션의 가운데 원의 반지름 그라데이션의 radius는 원의 중심을 설정할 수 있습니다. 이런 경우는 `SKShaderTileMode` 인수가 그라데이션의 렌더링에 영향을 주지 않습니다. 그라데이션의 여 채운 영역 그라데이션, 정의한 원 보다 크면 하지만 `SKShaderTileMode` 인수 원 밖 되나요에 큰 영향을 미칩니다.
 
-미치는 `SKShaderMode` 에 설명 되어 합니다 **방사형 그라데이션** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플. 이 페이지에 대 한 XAML 파일은는 `Picker` 의 세 멤버 중 하나를 선택할 수 있도록 합니다 `SKShaderTileMode` 열거형:
+미치는 `SKShaderMode` 에 설명 되어 합니다 **방사형 그라데이션** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플. 이 페이지에 대 한 XAML 파일은는 `Picker` 의 세 멤버 중 하나를 선택할 수 있도록 합니다 `SKShaderTileMode` 열거형:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ public partial class RadialGradientPage : ContentPage
 
 [![방사형 그라데이션](circular-gradients-images/RadialGradient.png "방사형 그라데이션")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-세 가지 경우 모두 그라데이션의 캔버스를 채웁니다. 왼쪽에 있는 iOS 화면에서 반지름 초과 그라데이션의 마지막 색은 흰색는 계속 됩니다. 결과 `SKShaderTileMode.Clamp`합니다. Android 화면 효과 보여 줍니다. `SKShaderTileMode.Repeat`: 센터에서 100 픽셀로 그라데이션의 검정색 인 첫 번째 색으로 다시 시작 됩니다. 그라데이션의는 반지름의 모든 100 픽셀을 반복합니다. 
+세 가지 경우 모두 그라데이션의 캔버스를 채웁니다. 왼쪽에 있는 iOS 화면에서 반지름 초과 그라데이션의 마지막 색은 흰색는 계속 됩니다. 결과 `SKShaderTileMode.Clamp`합니다. Android 화면에 표시 되는 결과 `SKShaderTileMode.Repeat`는 다음과 같습니다. 가운데에서 100 픽셀에는 첫 번째 색 (검정)으로 그라데이션이 다시 시작 됩니다. 그라데이션의는 반지름의 모든 100 픽셀을 반복합니다. 
 
 유니버설 Windows 플랫폼 화면 오른쪽에 나와 있는에 어떻게 `SKShaderTileMode.Mirror` 대체 directions 그라데이션 하면 합니다. 첫 번째 그라데이션 방법은 검정 가운데에 100 픽셀의 반지름에 흰색입니다. 다음은 200 픽셀 반지름에 검정색으로 100 픽셀 radius에서 흰색 및 다음 그라데이션 다시 반전 됩니다.
 
@@ -620,4 +620,4 @@ public class ConicalSpecularHighlightPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: aaecc0da52fe692840ed928946963a995364fa9f
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 360ea18de0c9d30988d63602ba3c17c3d00ed83a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509184"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644089"
 ---
 # <a name="running-android-services-in-remote-processes"></a>원격 프로세스에서 Android 서비스 실행
 
@@ -386,7 +386,7 @@ Android에서 제공 하는 네 가지 권한 수준은 다음과 같습니다.
 
 * **보통** &ndash; 이는 기본 권한 수준입니다. Android에서 요청 하는 클라이언트에 자동으로 부여할 수 있는 낮은 위험 권한을 식별 하는 데 사용 됩니다. 사용자는 이러한 권한을 명시적으로 부여 하지 않아도 되지만 앱 설정에서 사용 권한을 볼 수 있습니다.
 * **서명** &ndash; 이는 Android에서 동일한 인증서로 서명 된 응용 프로그램에 자동으로 부여 되는 특별 한 범주의 권한입니다. 이 사용 권한은 응용 프로그램 개발자가 사용자를 일정 하 게 승인 하기 위해 신경 하지 않고도 앱 간에 구성 요소나 데이터를 쉽게 공유할 수 있도록 설계 되었습니다.
-* **서명** 이는 위에서 설명한 서명 권한과 매우 유사 합니다.  &ndash; 동일한 인증서로 서명 된 앱에 자동으로 부여 되는 것 외에도 Android 시스템 이미지를 사용 하 여 설치 된 앱에 서명 하는 데 사용 된 것과 동일한 인증서에 서명 된 앱에도이 권한이 부여 됩니다. 이 권한은 일반적으로 Android ROM 개발자가 응용 프로그램이 타사 앱에서 작동 하도록 허용 하는 데만 사용 됩니다. 일반적으로는 공용에 대 한 일반 배포를 위한 앱에서 일반적으로 사용 되지 않습니다.
+* **서명** 이는 위에서 설명한 서명 권한과 매우 유사 합니다. &ndash; 동일한 인증서로 서명 된 앱에 자동으로 부여 되는 것 외에도 Android 시스템 이미지를 사용 하 여 설치 된 앱에 서명 하는 데 사용 된 것과 동일한 인증서에 서명 된 앱에도이 권한이 부여 됩니다. 이 권한은 일반적으로 Android ROM 개발자가 응용 프로그램이 타사 앱에서 작동 하도록 허용 하는 데만 사용 됩니다. 일반적으로는 공용에 대 한 일반 배포를 위한 앱에서 일반적으로 사용 되지 않습니다.
 * **위험** &ndash; 위험한 권한은 사용자에 게 문제가 발생할 수 있는 권한입니다. 따라서 **위험한** 사용 권한은 사용자가 명시적으로 승인 해야 합니다.
 
 Android `signature` 에서는 `normal` 설치 된 시간에 및 사용 권한이 자동으로 부여 되므로 클라이언트를 포함 하는 apk **이전** 에 서비스를 호스트 하는 apk가 설치 되어 있어야 합니다. 클라이언트를 먼저 설치한 경우 Android에서 사용 권한을 부여 하지 않습니다. 이 경우 클라이언트 APK를 제거 하 고, 서비스 APK를 설치 하 고, 클라이언트 APK를 다시 설치 해야 합니다.
@@ -488,4 +488,4 @@ Android 권한으로 서비스를 보호 하는 일반적인 방법에는 다음
 - [프로세스 및 스레드](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Android 매니페스트-사용 권한](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
 - [보안 팁](https://developer.android.com/training/articles/security-tips.html)
-- [MessengerServiceDemo (샘플)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)
+- [MessengerServiceDemo (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-messengerservicedemo)

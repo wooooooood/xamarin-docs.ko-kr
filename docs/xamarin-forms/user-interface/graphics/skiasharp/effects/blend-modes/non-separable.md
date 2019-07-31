@@ -7,16 +7,16 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 9b94db14a197ca31be42e8712c2170fd66b86579
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9054539b08da89c0f7d8a93150866fb1b41e63f1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61162574"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642784"
 ---
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 문서에서 볼 수 있듯이 [ **SkiaSharp 분리 가능한 blend 모드**](separable.md), 분리 가능한 blend 모드를 개별적으로 빨강, 녹색 및 파란색 채널에서 작업을 수행 합니다. 분리 가능한 비 blend 모드 변환 되지 않습니다. 색의 색상, 채도 및 명도 수준으로 운영 하 여 분리 되지 않은 혼합 모드 흥미로운 방식으로 색을 변경할 수 있습니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "61162574"
 
 HSL 색 모델 문서에서 설명한 [ **Xamarin.Forms를 사용 하 여 통합** ](../../basics/integration.md) 하 고 해당 문서의 예제 프로그램 HSL 색을 사용 하 여 실험을 허용 합니다. 만들 수 있습니다는 `SKColor` 색상, 채도 및 명도 값을 사용 하 여 정적을 사용 하 여 값 [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) 메서드.
 
-색조 색의 기준 파장을 나타냅니다. 색상 값 범위는 0에서 360 및 가산적 및 무언가 감 주 순환 합니다. 빨간색은 값 0, 노란색 60, 녹색은 120, 녹청 180, 파란색은 240, 자홍 300 이며 주기 360에 빨간색으로 돌아갑니다.
+색조 색의 기준 파장을 나타냅니다. 색상 값의 범위는 0에서 360 사이이 고 가감 및 subtractive 주를 순환 합니다. Red는 값 0, 노랑, 60, 녹색은 120, 사이안은 180, 파란색은 240, 자홍은 300,, 주기는 360에서 빨간색으로 돌아갑니다.
 
 주요 색상 없는 경우 &mdash; 예를 들어, 색은 흰색, 검은색 또는 회색 음영을 &mdash; 색상은 정의 되지 않은 하 고 일반적으로 0으로 설정 합니다. 
 
@@ -198,7 +198,7 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 이 혼합 모드 응용 프로그램을 곧 표시 됩니다.
 
-마지막으로, 합니다 `SKBlendModes.Luminosity` 혼합 모드의 반대는 `SKBlendModes.Color`합니다. 해당 색상 및 대상의 채도 유지 하지만 원본의 명도 사용 합니다. `Luminosity` blend 모드는 일괄 처리의 가장 알 수 없는 합니다. 색상 및 채도 슬라이더 이미지에 영향을 줍니다 하지만 보통 명도에 이미지는 고유 합니다.
+마지막으로, 합니다 `SKBlendModes.Luminosity` 혼합 모드의 반대는 `SKBlendModes.Color`합니다. 해당 색상 및 대상의 채도 유지 하지만 원본의 명도 사용 합니다. `Luminosity` Blend 모드는 일괄 처리의 가장 자세한 내용입니다. 색상 및 채도 슬라이더는 이미지에 영향을 주지만 중간 광도 에서도 이미지는 고유 하지 않습니다.
 
 [![분리 가능한 비 Blend 모드-명도](non-separable-images/NonSeparableBlendModes-Luminosity.png "명도 분리 되지 않은 혼합 모드")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
@@ -208,11 +208,11 @@ public partial class NonSeparableBlendModesPage : ContentPage
 
 ## <a name="a-matte-for-a-separable-mode"></a>분리 가능한 모드에 대 한 매트
 
-여기에 리소스로 포함 된 비트맵 중 하나인 합니다 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플입니다. 파일 이름이 **Banana.jpg**:
+여기에 리소스로 포함 된 비트맵 중 하나인 합니다 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플입니다. 파일 이름이 **Banana.jpg**:
 
 ![바나나 Monkey](non-separable-images/Banana.jpg "Banana Monkey")
 
-바나나만 포함 하는 매트를 두는 것이 가능 합니다. 리소스에도를 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플입니다. 파일 이름이 **BananaMatte.png**:
+바나나만 포함 하는 매트를 두는 것이 가능 합니다. 리소스에도를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플입니다. 파일 이름이 **BananaMatte.png**:
 
 ![바나나 매트](non-separable-images/BananaMatte.png "Banana 매트")
 
@@ -292,4 +292,4 @@ Blend 모드를 변경해 보세요 `SKBlendMode.Saturation`합니다. banana �
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

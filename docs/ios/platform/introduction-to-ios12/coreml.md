@@ -1,34 +1,34 @@
 ---
-title: Xamarin.iOS에서 ML 2 코어
-description: 이 문서에서는 iOS 12의 일부로 사용할 수 있는 기계 학습 Core에 대 한 업데이트를 설명합니다. 특히 새 일괄 처리 예측 API와 관련 된 성능 향상에 살펴봅니다.
+title: Xamarin.ios의 핵심 ML 2
+description: 이 문서에서는 iOS 12의 일부로 사용할 수 있는 코어 ML 업데이트에 대해 설명 합니다. 특히 새로운 일괄 처리 예측 API와 관련 된 성능 향상에 대해 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fc72e855101f110310a46145c577b272a647ac3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61398847"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645713"
 ---
-# <a name="core-ml-2-in-xamarinios"></a>Xamarin.iOS에서 ML 2 코어
+# <a name="core-ml-2-in-xamarinios"></a>Xamarin.ios의 핵심 ML 2
 
-코어 ML는 machine learning 기술 iOS, macOS, tvOS 및 watchOS에서 사용할 수 있습니다. 기계 학습 모델을 기반으로 예측을 수행 하는 앱 수 있습니다.
+핵심 ML은 iOS, macOS, tvOS 및 watchOS에서 사용할 수 있는 기계 학습 기술입니다. 이를 통해 앱은 기계 학습 모델을 기반으로 예측을 만들 수 있습니다.
 
-IOS 12, 핵심 ML 일괄 처리 API를 포함 합니다. 이 API는 핵심 ML이 더 효율적 하 고 모델은 예측의 시퀀스 수 있도록 사용 시나리오에서 성능 향상을 제공 합니다.
+IOS 12에서 코어 ML에는 batch 처리 API가 포함 되어 있습니다. 이 API는 코어 ML의 효율성을 향상 시키고 모델을 사용 하 여 예측 시퀀스를 만드는 시나리오에서 성능 향상을 제공 합니다.
 
 ## <a name="sample-app-marshabitatcoremltimer"></a>샘플 앱: MarsHabitatCoreMLTimer
 
-코어 ML을 사용 하 여 일괄 처리 예측을 보여 주기 위해 잠시 살펴 합니다 [MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer) 샘플 앱입니다. 이 샘플에서는 핵심 ML 모델을 habitat Mars에서 구축 비용을 예측 하도록 학습 입력을 기준으로 다양 한: 태양, greenhouses, 개수 및 acres 수 수 있습니다.
+핵심 ML을 사용한 일괄 처리 예측을 시연 하려면 [MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer) 샘플 앱을 살펴보세요. 이 샘플에서는 학습 된 핵심 기계 학습 모델을 사용 하 여 다양 한 입력 (양력인 패널 수, greenhouses 수, acres 수)을 기반으로 Mars에서 habitat를 작성 하는 비용을 예측 합니다.
 
-이 문서의 코드 조각은이 샘플에서 제공 됩니다.
+이 문서의 코드 조각은이 샘플에서 가져온 것입니다.
 
 ## <a name="generate-sample-data"></a>예제 데이터 생성
 
-`ViewController`, 샘플 앱의 `ViewDidLoad` 메서드 호출 `LoadMLModel`, 포함 된 핵심 ML 모델을 로드 하는:
+에서 `ViewController`샘플 앱의 `ViewDidLoad` 메서드는 포함 된 `LoadMLModel`코어 ML 모델을 로드 하는를 호출 합니다.
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-그런 다음 샘플 앱을 만듭니다 100,000 `MarsHabitatPricerInput` 순차 핵심 ML 예측에 대 한 입력으로 사용할 개체입니다. 각 생성 된 샘플 태양, greenhouses, 개수 및 acres 수가 수에 대해 설정 된 임의 값에 있습니다.
+그런 다음 샘플 앱은 순차 코어 `MarsHabitatPricerInput` ML 예측의 입력으로 사용할 10만 개체를 만듭니다. 생성 된 각 샘플에는 양력인 패널 수, greenhouses 수, acres 수에 대 한 임의 값이 설정 되어 있습니다.
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-예측의 두 시퀀스를 실행 하는 앱의 세 가지 단추 중 하나를 탭 합니다: 하나를 사용 하 여는 `for` 루프 및 새 일괄 처리를 사용 하 여 다른 `GetPredictions` iOS 12에에서 도입 된 메서드:
+앱의 세 단추를 누르면 `for` 루프를 사용 하는 두 가지 예측 시퀀스와 iOS 12에 도입 된 새 batch `GetPredictions` 메서드를 사용 하는 두 가지 예측 시퀀스가 실행 됩니다.
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for 루프
 
-합니다 `for` 잡이 지정된 된 수의 입력 루프 버전의 테스트를 반복 호출 [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) 각 하 고 결과 삭제 합니다. 메서드는 예측을 수행 하는 데 걸리는 시간:
+테스트 `for` naively의 루프 버전은 지정 된 수의 입력을 반복 하 여 각 [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) 에 대해를 호출 하 고 결과를 삭제 합니다. 메서드는 예측을 만드는 데 소요 되는 시간을 지정 합니다.
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -92,10 +92,10 @@ async Task FetchNonBatchResults(int num)
 }
 ```
 
-## <a name="getpredictions-new-batch-api"></a>GetPredictions (새 일괄 처리 API)
+## <a name="getpredictions-new-batch-api"></a>GetPredictions (새 batch API)
 
-테스트의 일괄 처리 버전 만듭니다는 `MLArrayBatchProvider` 입력된 배열에서 개체 (에 필요한 입력된 매개 변수 이므로 `GetPredictions` 메서드)를 만듭니다는 [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-CPU로 제한 하는 예측 계산을 방지 하 고 사용 하는 개체는 `GetPredictions` 다시 결과 삭제 하는 예측을 인출 하는 API:
+테스트의 일괄 버전은 `MLArrayBatchProvider` `GetPredictions` 메서드에 대 한 필수 입력 매개 변수 이므로 입력 배열에서 개체를 만듭니다.[`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+예측 계산이 CPU로 제한 되지 않도록 하 고 `GetPredictions` API를 사용 하 여 예측을 인출 하 고 결과를 다시 삭제 하는 개체입니다.
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,13 +118,13 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>결과
 
-시뮬레이터와 장치 모두에서 `GetPredictions` 루프 기반 핵심 ML 예측 보다 더 빨리 완료 합니다.
+시뮬레이터와 장치 `GetPredictions` 모두에서 루프 기반 코어 ML 예측 보다 더 빨리 완료 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 앱 – MarsHabitatCoreMLTimer](https://developer.xamarin.com/samples/monotouch/iOS12/MarsHabitatCoreMLTimer)
-- [코어 ML, 1 부 (WWDC 2018)의 새로운 기능](https://developer.apple.com/videos/play/wwdc2018/708/)
-- [코어 ML, 2 부 (WWDC 2018)의 새로운 기능](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Xamarin.iOS에서 ML Core 소개](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [샘플 앱-MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+- [핵심 ML의 새로운 기능, 1 부 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
+- [핵심 ML의 새로운 기능, 2 부 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
+- [Xamarin.ios의 핵심 ML 소개](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
 - [코어 ML (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
-- [코어 ML 모델을 사용 하 여 작업](https://developer.apple.com/machine-learning/build-run-models/)
+- [핵심 ML 모델 작업](https://developer.apple.com/machine-learning/build-run-models/)

@@ -7,16 +7,16 @@ ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: be2d998916c81cb2216251e2112ff8ca2af5d87a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ca6c8fafe4352bac83e5ae60b43627d4c7fdc10f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61410688"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648677"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>SkiaSharp 비트맵의 분할된 된 표시
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp `SKCanvas` 이라는 메서드를 정의 하는 개체 `DrawBitmapNinePatch` 및 이라는 두 가지 방법 `DrawBitmapLattice` 는 매우 비슷합니다. 둘 다 이러한 메서드는 대상 사각형의 크기를 비트맵을 렌더링 하지만 비트맵을 균일 하 게 확장 하는 대신 해당 픽셀 크기의 비트맵의 일부를 표시 하며 사각형 맞도록 비트맵의 다른 부분 확장:
 
@@ -44,7 +44,7 @@ canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 
 가운데 사각형 비트맵에 상대적입니다. 것을 `SKRectI` 값 (정수 버전 `SKRect`) 모든 좌표 및 크기는 픽셀 단위의입니다. 대상 사각형을 화면에 상대적입니다. `paint` 인수는 선택적 요소입니다.
 
-합니다 **9 패치 표시** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 형식의 공용 정적 속성을 만들려면 먼저 정적 생성자를 사용 `SKBitmap`:
+합니다 **9 패치 표시** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 형식의 공용 정적 속성을 만들려면 먼저 정적 생성자를 사용 `SKBitmap`:
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -228,4 +228,4 @@ IOS 및 Android 이미지 왼쪽에 있는 작은 원만 픽셀 크기로 렌더
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

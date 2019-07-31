@@ -1,108 +1,108 @@
 ---
-title: Xamarin에서 tvOS 분할 된 컨트롤을 사용 하 여 작업
-description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 앱에서 분할 된 컨트롤 tvOS를 사용 하는 방법을 설명 합니다. 세그먼트 아이콘 및 텍스트, 컨트롤의 모양 및 기타 정보를 수정 하는 이벤트에 설명 합니다.
+title: Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 앱에서 tvOS 세그먼트화 된 컨트롤을 사용 하는 방법을 설명 합니다. 세그먼트 아이콘 및 텍스트, 이벤트, 컨트롤의 모양 수정 등을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 98a770d05014e0498b805ed9ffa0c84314efc765
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f4f063cf7004d35aa93f688e71a917caa7a3e5a8
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61375041"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648940"
 ---
-# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 분할 된 컨트롤을 사용 하 여 작업
+# <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
 
-요소의 선형 아이콘 또는 텍스트를 포함할 수 있습니다 및 사용자에 게 관련 된 선택 항목 집합을 제공 하는 데 사용 되는 각 분할 된 제어를 제공 합니다.
+분할 된 컨트롤은 각각 아이콘이 나 텍스트를 포함할 수 있는 일련의 선형 요소를 제공 하며, 사용자에 게 관련 선택 항목 집합을 제공 하는 데 사용 됩니다.
 
 [![](segmented-controls-images/segment01.png "샘플 세그먼트 컨트롤")](segmented-controls-images/segment01.png#lightbox)
 
-Apple에 분할 된 컨트롤을 사용 하 여 작업 하기 위한 다음 제안에 있습니다.
+Apple에는 분할 된 컨트롤을 사용 하기 위한 다음과 같은 제안이 있습니다.
 
-- **충분 한 공간을 제공** -주의 다른 간에 충분 한 공간을 제공 하는 데 걸리는 해야 [포커스 항목](~/ios/tvos/app-fundamentals/navigation-focus.md) 및 분할 된 제어를 합니다. 개별 세그먼트를 포커스 내 (없습니다 클릭할 때) 이므로 실제로 현재 세그먼트에 포커스를 받을 수 다른 항목을 선택 하려고 할 때 사용자 세그먼트를 실수로 변경할 수 있습니다 하는 경우에 선택 됩니다.
-- **분할 뷰를 사용 하 여 콘텐츠 필터링** -분할 된 컨트롤 분할 뷰 필터와 콘텐츠 사이의 쉽게 탐색 용으로 설계 된 대로 필터링 하는 콘텐츠에 대 한 좋은 선택을 하지 않습니다.
-- **7 세그먼트 최대 제한** -8 아래 세그먼트의 최대 수 (8)으로 유지 하도록 노력 해야 이동할 소파 쉽고 대화방에서에서 구문 분석에이 더 쉽습니다.
-- **일관 된 세그먼트 콘텐츠 크기를 사용 하 여** -모든 세그먼트가 동일한 너비로 있고, 가능한 경우 동일한 크기 각 세그먼트에서 콘텐츠를 유지 하려고 해야 합니다. 이 세그먼트 컨트롤을 시각적으로 맞출 수 있습니다 뿐만 아니라 쉽게 한눈에 읽을 수 있도록 합니다.
-- **혼합 아이콘 및 텍스트 방지** -각 개별 세그먼트 아이콘 또는 텍스트 중 하나만 포함 될 수 있습니다. 아이콘과 같은 분할 된 컨트롤의 텍스트를 모두 함께 사용할 수 있지만,이 피해 야 합니다.
+- 다른 [포커스 가능 항목과](~/ios/tvos/app-fundamentals/navigation-focus.md) 분할 된 컨트롤 사이에 충분 한 공간을 제공 하려면 충분 한 **공간을 제공** 해야 합니다. 개별 세그먼트는 포커스가 있을 때 (클릭할 때가 아닌) 선택 되 고 사용자는 실제로 현재 세그먼트에서 포커스를 받을 수 있는 다른 항목을 선택 하려고 할 때 실수로 세그먼트를 변경할 수 있습니다.
+- 콘텐츠 **필터링을 위한 분할 보기 사용** 분할 된 컨트롤은 콘텐츠와 필터를 쉽게 탐색할 수 있도록 디자인 되었으므로 분할 된 컨트롤을 사용 하 여 콘텐츠 필터링을 적절 하 게 선택 하지 않습니다.
+- **최대 7 개의 세그먼트로 제한** -이는 소파에 있는 공간에서 더 쉽게 구문 분석 하 고 쉽게 탐색할 수 있으므로 최대 세그먼트 수를 8 (8) 미만으로 유지 해야 합니다.
+- **일관성 있는 세그먼트 콘텐츠 사용** -모든 세그먼트의 너비가 같으며 가능 하면 각 세그먼트의 콘텐츠를 같은 크기로 유지 해야 합니다. 이렇게 하면 세그먼트 컨트롤이 시각적으로 보기 편 수 있을 뿐 아니라 한눈에 쉽게 읽을 수 있습니다.
+- **아이콘과 텍스트를 혼합 하지 마세요** . 각 개별 세그먼트는 아이콘이 나 텍스트 중 하나만 포함할 수 있습니다. 동일한 분할 된 컨트롤에서 아이콘과 텍스트를 함께 사용할 수 있지만이는 피해 야 합니다.
 
 <a name="About-Segment-Icons" />
 
-## <a name="about-segment-icons"></a>세그먼트 아이콘에 대 한
+## <a name="about-segment-icons"></a>세그먼트 아이콘 정보
 
-Apple에서 간단 하 고 인식할 수 있는 이미지를 사용 하 여 검색을 위해 돋보기 같은 세그먼트 아이콘에 대 한 제안 합니다. 지나치게 복잡 한 아이콘은 간단한 표현에 아이콘을 제한 하는 것이 가장 좋습니다 대화방에 걸쳐 TV 화면의 인식 어렵습니다.
+Apple은 검색을 위한 돋보기와 같이 세그먼트 아이콘에 대해 간단 하 고 인식 가능한 이미지를 사용 하는 것을 제안 합니다. 너무 복잡 한 아이콘은 실내에서 TV 화면을 인식 하기 어려울 수 있으므로 아이콘을 간단한 표현으로 제한 하는 것이 가장 좋습니다.
 
-텍스트와 지정된 된 세그먼트에 있는 아이콘을 혼합할 수 없습니다 하 고 아이콘 및 단일 분할 된 컨트롤의 텍스트를 혼합 하지 마십시오. 모든 아이콘 또는 모든 텍스트 여야 합니다.
+지정 된 세그먼트에서 텍스트와 아이콘을 혼합할 수 없으며 분할 된 단일 컨트롤에서 아이콘과 텍스트를 혼합 하지 않아야 합니다. 모든 아이콘 또는 모든 텍스트 여야 합니다.
 
 <a name="Summary" />
 
 ## <a name="segment-text"></a>세그먼트 텍스트
 
-Apple에서는 세그먼트 텍스트를 사용 하 여 작업 하기 위한 다음 제안 합니다.
+Apple은 세그먼트 텍스트 작업에 대해 다음과 같은 제안을 합니다.
 
-- **짧은, 의미 있는 명사를 사용 하 여** -The 세그먼트 제목 사용자 지정된 세그먼트를 선택할 때 필요로 하는 콘텐츠 형식의 상태 명확 하 게 해야 합니다. 예를 들어: 음악 또는 비디오를 제공 합니다.
-- **첫 글자를 대문자로 대/소문자를 사용 하 여** -문서, 결합 및 전치사 보다 작은 4 개의 문자를 제외 하 고 세그먼트의 모든 단어는 대문자로 시작 해야 합니다.
-- **짧은 초점을 맞춘 제목을 사용 하 여** -단기 및 세그먼트는 선택 될 때 예상 되는 콘텐츠 형식에 포커스가 있는 제목, 유지 합니다.
+- **의미 있는 단기 명사를 사용** 합니다. 세그먼트 제목은 지정 된 세그먼트를 선택할 때 사용자가 필요로 하는 콘텐츠 형식을 명확 하 게 명시 해야 합니다. 예를 들어: 음악 또는 동영상.
+- **제목-대/소문자 표기 사용** -세그먼트 제목의 모든 단어는 4 자 미만의 접속사 및 전치사 문서를 제외 하 고 대문자로 표시 되어야 합니다.
+- **짧은 중심의 제목을 사용** 합니다. 즉, 세그먼트를 선택할 때 사용할 콘텐츠 형식에 대 한 제목을 짧게 유지 합니다.
 
-마찬가지로 텍스트와 지정된 된 세그먼트에 있는 아이콘을 혼합할 수 없습니다 및 아이콘 및 단일 분할 된 컨트롤의 텍스트를 혼합 하지 마십시오.
+또한 지정 된 세그먼트에서 텍스트와 아이콘을 혼합할 수 없으며 단일 분할 된 컨트롤에서 아이콘과 텍스트를 혼합 하지 않아야 합니다.
 
 <a name="Segment-Controls-and-Storyboards" />
 
-## <a name="segment-controls-and-storyboards"></a>컨트롤 세그먼트 및 스토리 보드
+## <a name="segment-controls-and-storyboards"></a>세그먼트 컨트롤 및 Storyboard
 
-Xamarin.tvOS 앱에서 세그먼트 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 디자이너를 사용 하 여 앱의 UI에 추가할 경우
+TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 앱의 UI에 추가 하는 것입니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. 에 **Solution Pad**를 두 번 클릭 합니다 `Main.storyboard` 파일을 편집용으로 엽니다.
-1. 끌어서를 **세그먼트 컨트롤** 에서 **도구 상자** 보기에 놓습니다. 
+1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **도구 상자** 에서 **세그먼트 컨트롤** 을 끌어 뷰에 놓습니다. 
 
     [![](segmented-controls-images/segment02.png "세그먼트 컨트롤")](segmented-controls-images/segment02.png#lightbox)
-1. 에 **위젯을 탭** 의 **속성 패드**, 같은 세그먼트 컨트롤의 여러 속성을 조정할 수 있습니다 해당 **스타일** 하 고 **상태**: 
+1. **속성 패드**의 **위젯 탭** 에서 해당 **스타일** 및 **상태**와 같은 세그먼트 컨트롤의 여러 속성을 조정할 수 있습니다. 
 
     [![](segmented-controls-images/segment03.png "위젯 탭")](segmented-controls-images/segment03.png#lightbox)
-1. 사용 된 **세그먼트** 컨트롤러에서 세그먼트의 수를 제어 하는 필드입니다.
-1. 지정된 된 세그먼트를 선택 합니다 **세그먼트 드롭다운** 와 같은 개별 속성을 조정 하 **Title** 또는 **이미지** 하는 경우 지정된 된 세그먼트의 컨트롤  **사용 하도록 설정** 나 **선택한** 컨트롤을 표시 하는 경우.
-1. 마지막으로 할당 **이름을** 컨트롤에 대응할 수 있도록 C# 코드입니다. 예를 들어: 
+1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
+1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예: 
 
-    [![](segmented-controls-images/segment04.png "이름을 할당합니다")](segmented-controls-images/segment04.png#lightbox)
+    [![](segmented-controls-images/segment04.png "이름 할당")](segmented-controls-images/segment04.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. 에 **솔루션 탐색기**를 두 번 클릭 합니다 `Main.storyboard` 파일을 편집용으로 엽니다.
-1. 끌어서를 **세그먼트 컨트롤** 에서 **도구 상자** 보기에 놓습니다. 
+1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **도구 상자** 에서 **세그먼트 컨트롤** 을 끌어 뷰에 놓습니다. 
 
     [![](segmented-controls-images/segment02-vs.png "세그먼트 컨트롤")](segmented-controls-images/segment02-vs.png#lightbox)
-1. 에 **위젯을 탭** 의 합니다 **속성 탐색기**와 같은 세그먼트 컨트롤의 여러 속성을 조정할 수 있습니다 해당 **스타일** 및 **상태**: 
+1. **속성 탐색기**의 **위젯 탭** 에서 해당 **스타일** 및 **상태**와 같은 세그먼트 컨트롤의 여러 속성을 조정할 수 있습니다. 
 
     [![](segmented-controls-images/segment03-vs.png "위젯 탭")](segmented-controls-images/segment03-vs.png#lightbox)
-1. 사용 된 **세그먼트** 컨트롤러에서 세그먼트의 수를 제어 하는 필드입니다.
-1. 지정된 된 세그먼트를 선택 합니다 **세그먼트 드롭다운** 와 같은 개별 속성을 조정 하 **Title** 또는 **이미지** 하는 경우 지정된 된 세그먼트의 컨트롤  **사용 하도록 설정** 나 **선택한** 컨트롤을 표시 하는 경우.
-1. 마지막으로 할당 **이름을** 컨트롤에 대응할 수 있도록 C# 코드입니다. 예를 들어: 
+1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
+1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예: 
 
-    [![](segmented-controls-images/segment04-vs.png "이름을 할당합니다")](segmented-controls-images/segment04-vs.png#lightbox)
+    [![](segmented-controls-images/segment04-vs.png "이름 할당")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
     
 -----
 
-스토리 보드를 사용 하 여 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [Tvos 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)합니다. 
+스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요. 
 
 <a name="Working-with-Segmented-Controls" />
 
-## <a name="working-with-segmented-controls"></a>분할 된 컨트롤 사용
+## <a name="working-with-segmented-controls"></a>분할 된 컨트롤 작업
 
-선형 요소 집합을 제공 하는 분할 된 제어 s 위에서 설명한 대로 아이콘 또는 텍스트를 포함할 수 있습니다 각 및 사용자에 게 관련 된 선택 항목 집합을 제공 하는 데 사용 됩니다.
+위에서 설명한 것 처럼 분할 된 컨트롤은 각각 아이콘이 나 텍스트를 포함할 수 있는 일련의 선형 요소를 제공 하며, 사용자에 게 관련 선택 항목 집합을 제공 하는 데 사용 됩니다.
 
-Xamarin.tvOS 앱에서 분할 된 컨트롤을 사용 하 여 사용할 수 있는 여러 가지가 있습니다.
+TvOS 앱에서 세그먼트화 된 컨트롤을 사용할 수 있는 여러 가지 방법이 있습니다.
 
 <a name="Exposed-as-Outlets-and-Actions" />
 
-## <a name="exposed-as-names-and-events"></a>이름 및 이벤트로 노출합니다.
+## <a name="exposed-as-names-and-events"></a>이름 및 이벤트로 노출 됨
 
-인터페이스 디자이너에서 세그먼트 컨트롤을 만들고 명명 된 컨트롤 및 이벤트로 노출 하는 경우 다음 코드 세그먼트 변화에 사용할 수 있습니다.
+인터페이스 디자이너에서 세그먼트 컨트롤을 만들고이를 명명 된 컨트롤 및 이벤트로 노출 한 경우 다음 코드를 사용 하 여 변경 된 세그먼트에 응답할 수 있습니다.
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
@@ -125,15 +125,15 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-위의 예에서 세그먼트 컨트롤으로 노출 된를 `PlayerCount` 이름 및 `PlayerCountChanged` 이벤트 동작 합니다. 작업 및 출 선 작업에 대 한 자세한 내용은 참조 하십시오 합니다 [출 선 및 작업을 사용 하 여 코드를 작성](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) 부분 우리의 [Tvos 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)합니다.
+위 예제의 경우 세그먼트 컨트롤이 `PlayerCount` 이름 `PlayerCountChanged` 및 이벤트 작업으로 노출 되었습니다. 작업 및 콘센트 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)의 [콘센트 및 작업을 사용 하 여 코드 작성](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) 섹션을 참조 하세요.
 
-`SelectedSegment` 속성 기반 영 (0)으로 현재 선택한 세그먼트 인덱스를 가져오거나 설정 합니다. 갖도록 5 (5) 세그먼트에 있는 경우 첫 번째 세그먼트는 영 (0) 및 마지막 인덱스의 인덱스 4 (4).
+속성 `SelectedSegment` 은 현재 선택한 세그먼트를 0부터 시작 하는 인덱스를 가져오거나 설정 합니다. 따라서 세그먼트가 5 개 있는 경우 첫 번째 세그먼트의 인덱스는 0 (0)이 고 마지막 인덱스는 4 (4)입니다.
 
 <a name="Modifying-Segments" />
 
 ## <a name="modifying-segments"></a>세그먼트 수정
 
-언제 든 지 수와 분할 된 컨트롤의 콘텐츠를 수정할 수 있습니다. 다음 코드를 사용 하 여 세그먼트를 새 아이콘을 삽입 합니다.
+언제 든 지 분할 된 컨트롤의 수와 콘텐츠를 수정할 수 있습니다. 새 아이콘 세그먼트를 삽입 하려면 다음 코드를 사용 합니다.
 
 ```csharp
 // Icon Segment
@@ -143,23 +143,23 @@ SegmentedControl.InsertSegment(UIImage.FromFile("icon.png"), 0, true);
 SegmentedControl.InsertSegment("New Segment", 0, true);
 ```
 
-두 번째 매개 변수 정의 세그먼트 될 위치 0 0 기반된 인덱스를 사용 하 여 삽입 합니다. 마지막 매개 변수인 경우 `true` 삽입 애니메이션 효과가 적용 됩니다.
+두 번째 매개 변수는 0부터 시작 하는 인덱스를 사용 하 여 세그먼트가 삽입 되는 위치를 정의 합니다. 마지막 매개 변수가 `true` 이면 삽입에 애니메이션을 적용 합니다.
 
-지정된 된 세그먼트를 제거 하려면 다음을 사용 합니다.
+지정 된 세그먼트를 제거 하려면 다음을 사용 합니다.
 
 ```csharp
 SegmentedControl.RemoveSegmentAtIndex(0, true);
 ```
 
-또는 다음 모든 세그먼트를 제거 하려면:
+모든 세그먼트를 제거 하려면 다음을 수행 합니다.
 
 ```csharp
 SegmentedControl.RemoveAllSegments();
 ```
 
-마찬가지로 마지막 매개 변수인 경우 `true`, 제거 애니메이션 효과가 적용 됩니다. 사용 된 `NumberOfSegments` 세그먼트의 현재 수를 반환 하는 속성입니다.
+마지막 매개 변수가 `true`이면 제거에 애니메이션 효과가 적용 됩니다. 현재 세그먼트 수를 반환 하려면 속성을사용합니다.`NumberOfSegments`
 
-가져오려는 합니다 **제목** 하거나 **아이콘** 지정된 된 세그먼트에 대 한 다음 사용 하 여:
+지정 된 세그먼트의 **제목** 또는 **아이콘** 을 가져오려면 다음을 사용 합니다.
 
 ```csharp
 // Get title
@@ -169,7 +169,7 @@ var title = SegmentedControl.TitleAt(0);
 var icon = SegmentedControl.ImageAt(0);
 ```
 
-변경 하는 **제목** 하거나 **아이콘**, 다음 사용 하 여:
+**제목** 또는 **아이콘**을 변경 하려면 다음을 사용 합니다.
 
 ```csharp
 // Set title
@@ -179,7 +179,7 @@ SegmentedControl.SetTitle("New Title", 0);
 SegmentedControl.SetImage(UIImage.FromFile("icon.png"), 0);
 ```
 
-지정된 된 세그먼트 인지 확인 **사용**, 다음을 사용 합니다.
+지정 된 세그먼트가 사용 되는지 확인 하려면다음을 사용 합니다.
 
 ```csharp
 if (SegmentedControl.IsEnabled(0)) {
@@ -188,7 +188,7 @@ if (SegmentedControl.IsEnabled(0)) {
 }
 ```
 
-및 **활성화/비활성화** 는 다음 사용 하 여 세그먼트를 지정 합니다.
+지정 된 세그먼트를 **설정/해제** 하려면 다음을 사용 합니다.
 
 ```csharp
 SegmentedControl.SetEnabled(false, 0);
@@ -196,48 +196,48 @@ SegmentedControl.SetEnabled(false, 0);
 
 <a name="Modifying-the-Segmented-Controls-Appearance" />
 
-## <a name="modifying-the-segmented-controls-appearance"></a>분할된 된 컨트롤의 모양 수정
+## <a name="modifying-the-segmented-controls-appearance"></a>분할 된 컨트롤의 모양 수정
 
-이미지에 지정된 된 세그먼트의 배경을 변경 하려면 다음 코드를 사용할 수 있습니다.
+다음 코드를 사용 하 여 지정 된 세그먼트의 배경을 이미지로 변경할 수 있습니다.
 
 ```csharp
 SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-여기서 `UIControlState` 으로 이미지를 설정 하는 컨트롤의 상태를 지정 합니다.
+여기서 `UIControlState` 는 이미지를 설정 하는 컨트롤의 상태를 다음과 같이 지정 합니다.
 
-- 보통
-- 강조 표시
+- 일반
+- 반전
 - 사용 안 함
-- 선택함
+- 선택
 - 포커스 있음
 
-및 `UIBarMetrics` 으로 사용 하는 메트릭을 지정 합니다.
+그리고 `UIBarMetrics` 다음과 같이 사용할 메트릭을 지정 합니다.
 
-- 기본
-- Compact
+- 기본값
+- 구문
 - DefaultPrompt
 - CompactPrompt
 
-또한 사용 하 여 세그먼트 사이의 구분선을 설정할 수 있습니다.
+또한 다음을 사용 하 여 세그먼트 간 구분선을 설정할 수 있습니다.
 
 ```csharp
 SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlState.Normal, UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-여기서 첫 번째 `UIControlState` 구분선과 두 번째 부분의 세그먼트의 상태를 지정 `UIControlState` 오른쪽 세그먼트의 상태를 지정 합니다.
+여기서 첫 `UIControlState` 번째는 분할선의 왼쪽에 있는 세그먼트의 상태를 지정 하 고 두 번째 `UIControlState` 는 세그먼트의 상태를 오른쪽으로 지정 합니다.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 디자인과 Xamarin.tvOS 앱 내에서 분할 된 제어를 사용 하 여 작업 설명 했습니다.
+이 문서에서는 tvOS 앱 내부에서 분할 된 컨트롤을 디자인 하 고 작업 하는 방법에 대해 설명 했습니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS 휴먼 인터페이스 지침](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [TvOS 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

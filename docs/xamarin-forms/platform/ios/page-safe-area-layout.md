@@ -1,24 +1,24 @@
 ---
-title: IOS에서 안전 영역 레이아웃 안내선
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 iOS 11 이상를 사용 하는 모든 장치에 대 한 안전한 화면 영역 페이지 콘텐츠가 배치 되는 플랫폼 특정 iOS를 사용 하는 방법을 설명 합니다.
+title: IOS의 안전 영역 레이아웃 가이드
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 ios 플랫폼 관련 기능을 사용 하는 방법에 대해 설명 합니다 .이 기능을 사용 하면 iOS 11 이상을 사용 하는 모든 장치에서 안전 하 게 화면 영역에 페이지 콘텐츠를 배치할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 2B6789C1-39B4-4C16-ADE1-3ED3378EAC63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: f38064027b4eb6dada2becc69b4163d6fa6082fb
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c6a2ec5a4d1466b7118e6cc7b03cc5518b27e2fb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65927009"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644538"
 ---
-# <a name="safe-area-layout-guide-on-ios"></a>IOS에서 안전 영역 레이아웃 안내선
+# <a name="safe-area-layout-guide-on-ios"></a>IOS의 안전 영역 레이아웃 가이드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼 특정 화면 iOS 11 이상를 사용 하는 모든 장치에 대 한 안전한 영역에서 페이지 콘텐츠가 배치 되는 확인 하는 데 사용 됩니다. 있는지 확인 하는 데는 특히 장치 둥근된 모서리, 홈 표시기 또는 iPhone X에서 센서 하우징 하 여 해당 콘텐츠가 클리핑 되지 않습니다. 설정 하 여 XAML에서 사용 되는 `Page.UseSafeArea` 연결 된 속성을 `boolean` 값:
+이 iOS 플랫폼 전용은 iOS 11 이상을 사용 하는 모든 장치에 안전 하 게 사용 되는 화면 영역에 페이지 콘텐츠를 배치 하는 데 사용 됩니다. 있는지 확인 하는 데는 특히 장치 둥근된 모서리, 홈 표시기 또는 iPhone X에서 센서 하우징 하 여 해당 콘텐츠가 클리핑 되지 않습니다. 설정 하 여 XAML에서 사용 되는 `Page.UseSafeArea` 연결 된 속성을 `boolean` 값:
 
 ```xaml
 <ContentPage ...
@@ -65,6 +65,6 @@ protected override void OnAppearing()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

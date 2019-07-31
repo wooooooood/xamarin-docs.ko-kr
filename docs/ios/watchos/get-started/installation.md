@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: cb8aabb3649da3818c1b020508b78a03f513963b
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5109e3a66e22d885d8dc8b685db0817057709464
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830678"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653686"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>설치 및 watchOS에서 Xamarin 사용
 
@@ -33,7 +33,7 @@ Watch 앱의 세 프로젝트로 구성 됩니다.
 
 - **Watch 앱 프로젝트** -Watch 앱에 대 한 모든 UI 리소스를 사용 하 여 사용자 인터페이스 스토리 보드 파일을 포함 합니다.
 
-합니다 [조사식 키트 Catalog 예제](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) Xamarin.Studio에서 다음과 같은 솔루션:
+합니다 [조사식 키트 Catalog 예제](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) Xamarin.Studio에서 다음과 같은 솔루션:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -45,7 +45,7 @@ Watch 앱의 세 프로젝트로 구성 됩니다.
 
 -----
 
-다운로드 및 실행 합니다 [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) 샘플으로 시작 합니다.
+다운로드 및 실행 합니다 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플으로 시작 합니다.
 샘플에서 화면에서 찾을 수 있습니다 합니다 [컨트롤](~/ios/watchos/user-interface/index.md) 페이지입니다.
 
 
@@ -179,7 +179,7 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 Xcode 6을 사용 하는 경우 iPhone 5, iPhone 5, 6, iPhone 및 iPhone 6 Plus에 대 한 외부 디스플레이 활성화할 수 있습니다 **Apple Watch-(38mm** 하거나 **Apple Watch-42 mm** watch 응용 프로그램 될 위치 표시 됩니다.
 
 > [!NOTE]
-> Xcode 6을 사용 하는 경우 watch 화면이 iOS 시뮬레이터에서에서 자동으로 표시 되지 않으면 해야 합니다.
+> Xcode 6을 사용 하는 경우에는 조사식 화면이 iOS 시뮬레이터에 자동으로 표시 되지 않습니다.
 > 사용 된 **하드웨어 > 외부 표시** watch 화면에 표시할 메뉴.
 
 <a name="custommodes" />
@@ -232,6 +232,6 @@ WatchOS 템플릿 파일 (같은 `InterfaceController`, `ExtensionDelegate`를 `
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [첫 번째 Watch 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple의 WatchKit 팁](https://developer.apple.com/watchkit/tips/)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: c1fb596abb580cf42edda21ab71f2c70de59a547
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c8be9220f17a0f0f046f09ff61ae76d1fed7e15f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924552"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644781"
 ---
 # <a name="attached-properties"></a>연결된 속성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 _연결된 된 속성은 특수 한 유형의 바인딩 가능한 속성을 하나의 클래스에 정의 되었지만 다른 개체에 연결 하 고 클래스를 포함 하는 특성으로 XAML에서 인식할 수 있는 속성 이름은 마침표로 구분 합니다. 이 문서에서는 연결 된 속성에 대해 소개 하 고 만들고이 사용 하는 방법을 보여 줍니다._
 
@@ -147,6 +147,6 @@ ShadowEffect.SetHasShadow (label, true);
 
 - [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)
 - [XAML 네임스페이스](~/xamarin-forms/xaml/namespaces.md)
-- [그림자 효과 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+- [그림자 효과 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

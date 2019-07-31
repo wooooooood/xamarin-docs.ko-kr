@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1048d954656152f47509887ed6acf21962a787b2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4ff0fa177bf28f00182c202ffba770d4be61b3c7
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510469"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643359"
 ---
 # <a name="marshmallow-features"></a>Marshmallow 기능
 
@@ -143,7 +143,7 @@ Android Marshmallow에 도입 된 변경 내용 중 상당수는 Android 사용�
 Android 사용 권한 시스템은 Android 롤리팝 이후 크게 최적화 되 고 간소화 되었습니다. Android Marshmallow에서 사용자는 설치 시가 아닌 런타임에 사례별로 사용 권한을 부여 합니다. Android Marshmallow 이상에서이 기능을 지원 하려면 런타임에 사용자에 게 권한을 부여 하 라는 메시지를 표시 하도록 앱을 디자인 합니다 (권한이 필요한 컨텍스트). 이렇게 변경 하면 앱을 설치 하 고 업그레이드 하는 프로세스를 간소화 하므로 사용자가 즉시 앱 사용을 보다 쉽게 시작할 수 있습니다. 
 
 Xamarin Android 앱에서 런타임 권한을 구현 하는 방법에 대 한 자세한 내용은 [Android Marshmallow에서 런타임 권한 요청](https://blog.xamarin.com/requesting-runtime-permissions-in-android-marshmallow/) 을 참조 하세요.
-또한 Xamarin은 Android Marshmallow (이상)에서 런타임 권한이 작동 하는 방식을 보여 주는 샘플 앱을 제공 합니다. [Runtimepermissions](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions).
+또한 Xamarin은 Android Marshmallow (이상)에서 런타임 권한이 작동 하는 방식을 보여 주는 샘플 앱을 제공 합니다. [Runtimepermissions](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
 
 이 샘플 앱은 다음을 보여 줍니다.
 
@@ -175,7 +175,7 @@ Android Marshmallow는 암호의 필요성을 제거 하는 데 도움이 되는
 지문 검사 하드웨어를 지 원하는 장치에서는 새 `FingerPrintManager` 클래스를 사용 하 여 사용자를 인증할 수 있습니다.
 Android Marshmallow의 지문 인증 기능에 대 한 자세한 내용은 [지문 인증](https://developer.android.com/preview/api-overview.html#fingerprint-authentication)을 참조 하세요.
 
-Xamarin은 등록 된 지문을 사용 하 여 앱에서 사용자를 인증 하는 방법을 보여 주는 샘플 앱을 제공 합니다. [FingerprintDialog](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog).
+Xamarin은 등록 된 지문을 사용 하 여 앱에서 사용자를 인증 하는 방법을 보여 주는 샘플 앱을 제공 합니다. [FingerprintDialog](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
 
 이 샘플 앱을 사용 하려면 다음을 수행 합니다.
 
@@ -201,7 +201,7 @@ Xamarin Android 앱에서 음성 상호 작용 API를 사용 하는 방법을 �
 Android Marshmallow의 새 *자격 증명 확인* 기능을 사용 하면 사용자가 장치를 잠금 해제 한 기간에 따라 인증 하 여 앱 별 암호를 기억할 필요 없이 비울 수 있습니다.
 이렇게 하려면 `SetUserAuthenticationValidityDurationSeconds` `KeyGenerator`의 새 메서드를 사용 합니다. `KeyGuardManager` 의`CreateConfirmDeviceCredentialIntent` 메서드를 사용 하 여 앱 내에서 사용자를 다시 인증 합니다. Android Marshmallow의이 새로운 기능에 대 한 자세한 내용은 [자격 증명 확인](https://developer.android.com/preview/api-overview.html#confirm-credential)을 참조 하세요.
 
-Xamarin은 앱에서 장치 자격 증명 (예: PIN, 패턴 또는 암호)을 사용 하는 방법을 보여 주는 샘플 앱을 제공 합니다. [ConfirmCredential](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential/)
+Xamarin은 앱에서 장치 자격 증명 (예: PIN, 패턴 또는 암호)을 사용 하는 방법을 보여 주는 샘플 앱을 제공 합니다. [ConfirmCredential](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
 
 이 샘플 앱을 사용 하려면 다음을 수행 합니다.
 
@@ -250,7 +250,7 @@ Android 롤리팝은 Android 환경을 새로 고치기 위한 새로운 디자�
 Xamarin Android 앱에서 [디자인 지원 라이브러리](https://developer.android.com/tools/support-library/features.html#design) 를 활용 하려면 Xamarin [Xamarin 지원 라이브러리 디자인](https://www.nuget.org/packages/Xamarin.Android.Support.Design/) NuGet 패키지를 다운로드 하 여 설치 합니다.
 
 Xamarin Android 앱에서 재질 디자인 지원 라이브러리를 사용 하는 방법에 대 한 자세한 내용은 [Android 지원 디자인 라이브러리를 사용 하 여 멋진 재질 디자인](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) 을 참조 하세요.
-Xamarin은 xamarin.ios &ndash; [Cheesesquare](https://developer.xamarin.com/samples/monodroid/android5.0/Cheesesquare)에서 새 android 디자인 라이브러리를 데모 하는 샘플 앱을 제공 합니다.
+Xamarin은 xamarin.ios &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare)에서 새 android 디자인 라이브러리를 데모 하는 샘플 앱을 제공 합니다.
 이 샘플은 디자인 라이브러리의 다음 기능을 보여 줍니다.
 
 
@@ -285,6 +285,6 @@ Google은 Android Marshmallow 외에도 몇 가지 핵심 Android 라이브러�
 - [Android SDK 가져오기](https://developer.android.com/sdk/index.html#Other)
 - [기능 개요](https://developer.android.com/preview/api-overview.html)
 - [릴리스 정보](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
-- [RuntimePermissions (샘플)](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions)
-- [가 나 자격 증명 (샘플)](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential)
-- [FingerprintDialog (샘플)](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog)
+- [RuntimePermissions (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
+- [가 나 자격 증명 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+- [FingerprintDialog (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)

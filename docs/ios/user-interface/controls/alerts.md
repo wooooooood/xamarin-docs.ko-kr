@@ -1,46 +1,46 @@
 ---
-title: Xamarin.iOS에서 경고를 표시합니다.
-description: 이 문서에서는 Xamarin.iOS에서 UIAlertController iOS 8에에서 도입 된 Api를 사용 하 여 경고를 표시 하는 방법을 설명 합니다.
+title: Xamarin.ios에서 경고 표시
+description: 이 문서에서는 iOS 8에 도입 된 UIAlertController Api를 사용 하 여 Xamarin.ios에서 경고를 표시 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 576de9a46fc89fe01c564c05568d4331a32dbd96
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 4c47e12468d9107cbe03d4bc45ffa77e4ad918e9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674404"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652055"
 ---
-# <a name="displaying-alerts-in-xamarinios"></a>Xamarin.iOS에서 경고를 표시합니다.
+# <a name="displaying-alerts-in-xamarinios"></a>Xamarin.ios에서 경고 표시
 
-IOS 8 부터는 UIAlertController 완료 된 대체 UIActionSheet 있으며 UIAlertView는 이제 사용 되지 않습니다.
+IOS 8부터 UIAlertController는 이제 더 이상 사용 되지 않는 Uialertcontroller 및 Uialertcontroller를 모두 완료 했습니다.
 
-UIView의 서브 클래스는 대체를 클래스와는 달리 UIAlertController UIViewController의 하위 클래스입니다.
+UIView의 서브 클래스인 대체 된 클래스와 달리 UIAlertController는 UIViewController의 서브 클래스입니다.
 
-사용 하 여 `UIAlertControllerStyle` 표시할 경고 유형을 나타냅니다. 이러한 경고 유형은 다음과 같습니다.
+표시할 `UIAlertControllerStyle` 경고 유형을 나타내는 데 사용 합니다. 이러한 경고 유형은 다음과 같습니다.
 
 - **UIAlertControllerStyleActionSheet**
-    * 사전 iOS 8 UIActionSheet 되었을이
+    * IOS 이전 8이이는 UIActionSheet.
 - **UIAlertControllerStyleAlert**
-    * 사전 iOS 8이 되었을 UIAlertView 
+    * IOS 이전 8입니다. 이것은 UIAlertView입니다. 
 
-경고 컨트롤러를 만들 때 수행 하는 데 필요한 단계를 세 가지
+경고 컨트롤러를 만들 때 수행 해야 하는 세 가지 단계가 있습니다.
 
-- A:를 사용 하 여 경고를 구성 및 만들기
-    * 제목
+- 다음을 사용 하 여 경고를 만들고 구성 합니다.
+    * title
     * message
     * preferredStyle
     
-- (선택 사항) 텍스트 필드 추가
-- 필요한 동작을 추가 합니다.
-- 뷰 컨트롤러를 제공 합니다.
+- 필드 텍스트 필드 추가
+- 필요한 작업 추가
+- 뷰 컨트롤러를 표시 합니다.
 
-이 스크린샷에 표시 된 대로 단일 단추를 포함 하는 가장 간단한 경고:
+가장 간단한 경고에는 다음 스크린샷에 표시 된 것 처럼 단일 단추가 포함 됩니다.
 
- ![단추 하나를 사용 하 여 경으십시오](alerts-images/alert1.png)
+ ![하나의 단추를 사용 하 여 경고](alerts-images/alert1.png)
 
 간단한 경고를 표시 하는 코드는 다음과 같습니다.
 
@@ -58,9 +58,9 @@ okayButton.TouchUpInside += (sender, e) => {
 };
 ```
 
-비슷한 방식으로 이루어집니다 여러 옵션을 사용 하 여 경고를 표시 하지만 두 작업을 추가 합니다. 예를 들어 다음 스크린샷은 두 개의 단추를 사용 하 여 경고를 보여 줍니다.
+여러 옵션을 사용 하 여 경고를 표시 하는 것은 비슷한 방식으로 수행 되지만 두 가지 동작을 추가 합니다. 예를 들어 다음 스크린샷은 두 개의 단추가 있는 경고를 보여 줍니다.
 
- ![두 개의 단추를 사용 하 여 경으십시오](alerts-images/alert2.png)
+ ![두 단추가 있는 경고](alerts-images/alert2.png)
 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {
@@ -77,11 +77,11 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 });
 ```
 
-경고는 아래 스크린샷과 비슷한 작업 시트를 표시할 수도 있습니다.
+경고는 다음과 같은 작업 시트를 표시할 수도 있습니다.
 
  ![작업 시트 경고](alerts-images/alert3.png)
 
-단추를 사용 하 여 경고에 추가 되는 `AddAction` 메서드:
+다음 `AddAction` 메서드를 사용 하 여 경고에 단추가 추가 됩니다.
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -111,5 +111,5 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [컨트롤 (샘플)](https://developer.xamarin.com/samples/monotouch/Controls/)
+- [컨트롤 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
 - [경고 컨트롤러](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

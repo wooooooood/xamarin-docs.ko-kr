@@ -1,22 +1,22 @@
 ---
 title: 플랫폼별
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에 사용 하 고 플랫폼별을 만드는 방법을 설명 합니다.
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 플랫폼 세부 정보를 사용 하 고 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 04cbdaac50b0ea77659d7c495dcd1a9e6d43335c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f6190b9c0d29d57d6d509bdff25e2ce3572e3a3c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926993"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646843"
 ---
-# <a name="platform-specifics"></a>플랫폼별
+# <a name="platform-specifics"></a>플랫폼 사양
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다._
 
@@ -34,11 +34,11 @@ _플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 �
 
 통해 사용 된 플랫폼별 합니다 `On<T>` 유연한 코드 API 반환 [ `IPlatformElementConfiguration` ](xref:Xamarin.Forms.IPlatformElementConfiguration`2) 개체입니다. 이렇게 하면 메서드 연계 된 동일한 개체에서 호출할 여러 플랫폼별 수 있습니다.
 
-플랫폼별 Xamarin.Forms에서 제공 하는 방법에 대 한 자세한 내용은 참조 하세요. [iOS 플랫폼별](~/xamarin-forms/platform/ios/index.md)하십시오 [Android 플랫폼별](~/xamarin-forms/platform/android/index.md), 및 [Windows 플랫폼별](~/xamarin-forms/platform/windows/index.md).
+Xamarin.ios에서 제공 하는 플랫폼 세부 정보에 대 한 자세한 내용은 [IOS 플랫폼](~/xamarin-forms/platform/ios/index.md)관련, [Android 플랫폼 세부](~/xamarin-forms/platform/android/index.md)정보 및 [Windows 플랫폼 세부](~/xamarin-forms/platform/windows/index.md)정보를 참조 하세요.
 
-## <a name="creating-platform-specifics"></a>플랫폼별 만들기
+## <a name="creating-platform-specifics"></a>플랫폼 세부 정보 만들기
 
-공급 업체는 자신의 플랫폼별 효과 사용 하 여 만들 수 있습니다. 효과가는 플랫폼별을 통해 노출 되는 특정 기능을 제공 합니다. 결과 코드를 fluent API 및 XAML을 통해 보다 쉽게 사용할 수 있는 효과입니다.
+공급 업체는 효과를 사용 하 여 고유한 플랫폼 정보를 만들 수 있습니다. 효과가는 플랫폼별을 통해 노출 되는 특정 기능을 제공 합니다. 결과 코드를 fluent API 및 XAML을 통해 보다 쉽게 사용할 수 있는 효과입니다.
 
 플랫폼 전용을 만들기 위한 프로세스는 다음과 같습니다.
 
@@ -53,11 +53,11 @@ _플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 �
 > [!NOTE]
 > 공급 업체 명의 사용 편의성을 위해 자체 플랫폼별을 만들려면이 기술은 사용할지는 예상는 것입니다. 사용자가 자신의 플랫폼별을 만들도록 선택할 수, 하는 동안 유의 만들고 효과 사용 보다 더 많은 코드가 필요 하다는 것입니다.
 
-[샘플 응용 프로그램](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) 방법을 보여 줍니다는 `Shadow` 으로 표시 되는 텍스트에 그림자를 추가 하는 플랫폼별을 [ `Label` ](xref:Xamarin.Forms.Label) 컨트롤:
+[샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 [`Label`](xref:Xamarin.Forms.Label) 컨트롤 `Shadow` 에 의해 표시 되는 텍스트에 그림자를 추가 하는 플랫폼별를 보여 줍니다.
 
 ![](images/screenshots.png "섀도 플랫폼별")
 
-[샘플 응용 프로그램](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/) 구현 된 `Shadow` 이해 하기 쉽도록 각 플랫폼에 플랫폼별입니다. 그러나 각 플랫폼별 효과 구현 외에도 섀도 클래스의 구현은 각 플랫폼에 대해 거의 동일 합니다. 따라서이 가이드 섀도 클래스와 연결 된 미치는 단일 플랫폼의 구현에 중점을 둡니다.
+이 [샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) 은 `Shadow` 이해를 용이 하 게 하기 위해 플랫폼 별로 각 플랫폼을 구현 합니다. 그러나 각 플랫폼별 효과 구현 외에도 섀도 클래스의 구현은 각 플랫폼에 대해 거의 동일 합니다. 따라서이 가이드 섀도 클래스와 연결 된 미치는 단일 플랫폼의 구현에 중점을 둡니다.
 
 효과 대 한 자세한 내용은 참조 하세요. [효과 사용 하 여 사용자 지정 컨트롤](~/xamarin-forms/app-fundamentals/effects/index.md)합니다.
 
@@ -252,7 +252,7 @@ namespace ShadowPlatformSpecific.iOS
 
 효과 만드는 방법에 대 한 자세한 내용은 참조 하세요. [효과 만드는](~/xamarin-forms/app-fundamentals/effects/creating.md) 하 고 [연결 된 속성으로 결과 매개 변수 전달](~/xamarin-forms/app-fundamentals/effects/passing-parameters/attached-properties.md)합니다.
 
-### <a name="consuming-the-platform-specific"></a>플랫폼 특정 사용
+### <a name="consuming-the-platform-specific"></a>플랫폼별 사용
 
 합니다 `Shadow` 플랫폼별으로 설정 하 여 XAML에서 사용 되는 `Shadow.IsShadowed` 연결 된 속성을 `boolean` 값:
 
@@ -277,11 +277,11 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
-- [ShadowPlatformSpecific (샘플)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
-- [플랫폼별 iOS](~/xamarin-forms/platform/ios/index.md)
-- [Android 플랫폼별](~/xamarin-forms/platform/android/index.md)
-- [Windows 플랫폼별](~/xamarin-forms/platform/windows/index.md)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [ShadowPlatformSpecific (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific)
+- [iOS 플랫폼-세부 정보](~/xamarin-forms/platform/ios/index.md)
+- [Android 플랫폼-세부 정보](~/xamarin-forms/platform/android/index.md)
+- [Windows 플랫폼-세부 정보](~/xamarin-forms/platform/windows/index.md)
 - [효과 사용 하 여 사용자 지정 컨트롤](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
 - [PlatformConfiguration API](xref:Xamarin.Forms.PlatformConfiguration)

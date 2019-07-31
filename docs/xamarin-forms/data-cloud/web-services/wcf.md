@@ -1,5 +1,5 @@
 ---
-title: Windows Communication Foundation (WCF) 웹 서비스를 사용 합니다.
+title: WCF (Windows Communication Foundation) 웹 서비스 사용
 description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 WCF 단순 개체 액세스 프로토콜 (SOAP) 서비스를 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
@@ -7,36 +7,36 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
-ms.openlocfilehash: c79dd6430d387d75acfa010e7f5ad01829f8a6f0
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: d170e37b8bf4ce880f9d8f48d30defb42ee6bba2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658940"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648005"
 ---
-# <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Windows Communication Foundation (WCF) 웹 서비스를 사용 합니다.
+# <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>WCF (Windows Communication Foundation) 웹 서비스 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 된 프레임 워크입니다. 개발자가 보안, 신뢰할 수 있는, 트랜잭션 및 상호 운용 가능한 분산된 응용 프로그램을 빌드할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 WCF 단순 개체 액세스 프로토콜 (SOAP) 서비스를 사용 하는 방법에 설명 합니다._
 
-WCF에서는 다양 한 포함 하 여 서로 다른 계약을 사용 하 여 서비스를 설명 합니다.
+WCF는 다음과 같은 다양 한 계약을 포함 하는 서비스를 설명 합니다.
 
 - **데이터 계약** – 메시지 내에서 콘텐츠에 대 한 기반을 형성 하는 데이터 구조를 정의 합니다.
 - **메시지 계약** -기존 데이터 계약에서 메시지를 작성 합니다.
 - **오류 계약** – 사용자 지정 SOAP 오류를 지정할 수 있도록 합니다.
 - **서비스 계약** – 서비스를 지 원하는 작업을 지정 하 고 각 작업을 사용 하 여 상호 작용 하는 데 필요한 메시지입니다. 이러한 각 서비스에 대 한 작업을 사용 하 여 연결할 수 있는 모든 사용자 지정 오류 동작을 지정 합니다.
 
-동일한 기능을 ASMX 제공 – HTTP 통한 SOAP 메시지는 WCF, ASP.NET 웹 서비스 (ASMX) 하며 WCF 지원 간의 차이점입니다. ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [사용 ASP.NET 웹 서비스 (ASMX)](~/xamarin-forms/data-cloud/web-services/asmx.md)합니다.
+ASMX (ASP.NET Web Services)와 WCF 간에는 차이점이 있지만 WCF는 HTTP를 통한 SOAP 메시지와 같은 기능을 지원 합니다. ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 [asmx (ASP.NET Web Services) 사용](~/xamarin-forms/data-cloud/web-services/asmx.md)을 참조 하세요.
 
 > [!IMPORTANT]
-> HTTP/HTTPS를 사용 하 여 WCF에 대 한 Xamarin 플랫폼 지원 스타일러스가 텍스트 인코딩된 SOAP 메시지의 제한 된 `BasicHttpBinding` 클래스입니다.
+> WCF에 대 한 Xamarin 플랫폼 지원은 클래스를 `BasicHttpBinding` 사용 하 여 HTTP/HTTPS를 통해 텍스트로 인코딩된 SOAP 메시지로 제한 됩니다.
 >
-> WCF 지원만 프록시를 생성 하 고 호스트를 TodoWCFService Windows 환경에서 사용할 수 있는 도구를 사용을 해야 합니다. 구축 하 고 iOS 앱을 테스트 하는 TodoWCFService Windows 컴퓨터에서 또는 Azure 웹 서비스로 배포 해야 합니다.
+> WCF 지원을 사용 하려면 프록시를 생성 하 고 TodoWCFService를 호스트 하는 Windows 환경 에서만 사용할 수 있는 도구를 사용 해야 합니다. IOS 앱을 빌드 및 테스트 하려면 Windows 컴퓨터에 TodoWCFService를 배포 하거나 Azure 웹 서비스로 배포 해야 합니다.
 >
-> Xamarin Forms 네이티브 앱은 일반적으로.NET Standard 클래스 라이브러리를 사용 하 여 코드를 공유 합니다. 그러나.NET Core 지원 하지 않습니다 현재 WCF 되므로 공유 프로젝트에는 레거시 이식 가능한 클래스 라이브러리 여야 합니다. .NET Core에서 WCF 지원에 대 한 자세한 내용은 [.NET Core와.NET Framework 서버 앱에 대해 선택할](/dotnet/standard/choosing-core-framework-server)합니다.
+> Xamarin Forms 네이티브 앱은 일반적으로 .NET Standard 클래스 라이브러리와 코드를 공유 합니다. 그러나 .NET Core는 현재 WCF를 지원 하지 않으므로 공유 프로젝트가 레거시 이식 가능한 클래스 라이브러리 여야 합니다. .NET Core의 WCF 지원에 대 한 자세한 내용은 [서버 앱에 대 한 .Net core와 .NET Framework 중에서 선택](/dotnet/standard/choosing-core-framework-server)을 참조 하세요.
 
-샘플 응용 프로그램 솔루션을 WCF 서비스를 로컬로 실행할 수 있으며 다음 스크린샷에 보이는 것 같습니다.
+샘플 응용 프로그램 솔루션에는 로컬로 실행할 수 있는 WCF 서비스가 포함 되어 있으며, 다음 스크린샷에 나와 있습니다.
 
 ![](wcf-images/portal.png "샘플 응용 프로그램")
 
@@ -182,7 +182,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 
 웹 서비스 throw를 `FaultException` 만들 수 없는 경우는 `TodoItem`, 응용 프로그램에서 처리 되는 합니다.
 
-### <a name="update-data"></a>업데이트 데이터
+### <a name="update-data"></a>데이터 업데이트
 
 합니다 `TodoServiceClient.BeginEditTodoItem` 하 고 `TodoServiceClient.EndEditTodoItem` 메서드를 호출 하는 데 사용 됩니다는 `EditTodoItem` 웹 서비스에서 제공 하는 작업입니다. 이러한 비동기 메서드에 캡슐화 되는 `Task` 와 다음 코드 예제와 같이 개체:
 
@@ -227,16 +227,16 @@ public async Task DeleteTodoItemAsync (string id)
 웹 서비스 throw를 `FaultException` 찾거나 삭제 하지 못한 경우는 `TodoItem`, 응용 프로그램에서 처리 되는 합니다.
 
 ## <a name="configure-remote-access-to-iis-express"></a>IIS Express에 대 한 원격 액세스 구성
-Visual Studio 2017 또는 Visual Studio 2019에서 추가 구성이 없는 PC에서 UWP 응용 프로그램을 테스트할 수 있어야 합니다. Android 및 iOS 클라이언트를 테스트 합니다.이 섹션의 추가 단계가 필요할 수 있습니다. 참조 [iOS 시뮬레이터 및 Android 에뮬레이터에서에서 로컬 웹 서비스에 연결](~/cross-platform/deploy-test/connect-to-local-web-services.md) 자세한 내용은 합니다.
+Visual Studio 2017 또는 Visual Studio 2019에서는 추가 구성 없이 PC에서 UWP 응용 프로그램을 테스트할 수 있습니다. Android 및 iOS 클라이언트를 테스트 하려면이 섹션의 추가 단계가 필요할 수 있습니다. 자세한 내용은 [IOS 시뮬레이터 및 Android 에뮬레이터에서 로컬 웹 서비스에 연결을](~/cross-platform/deploy-test/connect-to-local-web-services.md) 참조 하세요.
 
-기본적으로 IIS Express는 요청에 응답 하도록 `localhost`합니다. 원격 장치 (예: Android 장치, iPhone 또는 시뮬레이터에도) 로컬 WCF 서비스에 액세스할을 수 없습니다. 로컬 네트워크에서 Windows 10 워크스테이션 IP 주소를 확인 해야 합니다. 이 예에서는 사용자의 워크스테이션에 IP 주소를 가정 `192.168.1.143`합니다. 다음 단계는 원격 연결을 허용 하 고 실제 또는 가상 장치에서 서비스에 연결 하려면 Windows 10 및 IIS Express를 구성 하는 방법을 설명 합니다.
+기본적으로 IIS Express는에 대 `localhost`한 요청에만 응답 합니다. 원격 장치 (예: Android 장치, iPhone 또는 시뮬레이터)는 로컬 WCF 서비스에 액세스할 수 없습니다. 로컬 네트워크에서 Windows 10 워크스테이션 IP 주소를 알고 있어야 합니다. 이 예제의 목적에 따라 워크스테이션에 IP 주소가 `192.168.1.143`있다고 가정 합니다. 다음 단계는 원격 연결을 허용 하 고 물리적 또는 가상 장치에서 서비스에 연결 하도록 Windows 10 및 IIS Express를 구성 하는 방법을 설명 합니다.
 
-1. **Windows 방화벽 예외가 추가**합니다. 서브넷에서 응용 프로그램은 WCF 서비스와 통신 하는 데 사용할 수 있는 Windows 방화벽을 통해 포트를 열어야 합니다. 방화벽에서 포트 49393를 여는 인바운드 규칙을 만듭니다. 관리 명령 프롬프트에서이 명령을 실행 합니다.
+1. **Windows 방화벽에 예외를 추가**합니다. 서브넷의 응용 프로그램이 WCF 서비스와 통신 하는 데 사용할 수 있는 Windows 방화벽을 통해 포트를 열어야 합니다. 방화벽에서 포트 49393을 여는 인바운드 규칙을 만듭니다. 관리 명령 프롬프트에서 다음 명령을 실행 합니다.
     ```
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```
 
-1. **동의 원격 연결에 IIS Express를 구성**합니다. IIS Express에 대 한 구성 파일을 편집 하 여 IIS Express를 구성할 수 있습니다 **[솔루션 디렉터리]\.vs\config\applicationhost.config**합니다. 찾을 합니다 `site` 이름의 요소가 `TodoWCFService`합니다. 다음 XML과 유사한 같아야 합니다.
+1. **원격 연결을 허용 하도록 IIS Express를 구성**합니다. **[솔루션 디렉터리\.] vs\config\applicationhost.config**에서 IIS Express에 대 한 구성 파일을 편집 하 여 IIS Express를 구성할 수 있습니다. `site` 이름을`TodoWCFService`가진 요소를 찾습니다. 다음 XML과 유사 하 게 표시 됩니다.
 
     ```xml
     <site name="TodoWCFService" id="2">
@@ -249,14 +249,14 @@ Visual Studio 2017 또는 Visual Studio 2019에서 추가 구성이 없는 PC에
     </site>
     ```
 
-    두 개의 추가 해야 `binding` 열어야 요소 외부 트래픽 및 Android 에뮬레이터에 49393 포트입니다. 바인딩 사용을 `[IP address]:[port]:[hostname]` 어떻게 IIS Express는 요청에 응답을 지정 하는 형식입니다. 외부 요청으로 지정 해야 하는 호스트 이름을 갖습니다는 `binding`합니다. 다음 XML을 추가 하는 `bindings` 요소를 사용자 고유의 IP 주소를 사용 하 여 IP 주소를 대체 합니다.
+    포트 49393에서 외부 트래픽과 Android `binding` 에뮬레이터를 열려면 두 개의 요소를 추가 해야 합니다. 바인딩에는 IIS Express 요청 `[IP address]:[port]:[hostname]` 에 응답 하는 방법을 지정 하는 형식이 사용 됩니다. 외부 요청은로 `binding`지정 해야 하는 호스트 이름을 갖습니다. 다음 XML을 `bindings` 요소에 추가 하 여 ip 주소를 고유한 ip 주소로 바꿉니다.
 
     ```xml
     <binding protocol="http" bindingInformation="*:49393:192.168.1.143" />
     <binding protocol="http" bindingInformation="*:49393:127.0.0.1" />
     ```
 
-    변경 후는 `bindings` 요소는 다음과 같이 표시 됩니다.
+    변경한 후에는 `bindings` 요소가 다음과 같이 표시 됩니다.
 
     ```xml
     <site name="TodoWCFService" id="2">
@@ -272,19 +272,19 @@ Visual Studio 2017 또는 Visual Studio 2019에서 추가 구성이 없는 PC에
     ```
 
     >[!IMPORTANT]
-    >기본적으로 IIS Express는 보안상의 이유로 외부 원본에서 연결 허용 하지 됩니다. 원격 장치에서의 연결을 사용 하도록 설정 하려면 실행 해야 IIS Express 관리자 권한으로 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 관리자 권한으로 Visual Studio 2017을 실행 하는 것입니다. 이 시작 됩니다 IIS Express 관리자 권한으로는 TodoWCFService를 실행 하는 경우.
+    >기본적으로 IIS Express는 보안상의 이유로 외부 원본에서의 연결을 허용 하지 않습니다. 원격 장치에서 연결을 사용 하도록 설정 하려면 관리자 권한으로 IIS Express를 실행 해야 합니다. 이 작업을 수행 하는 가장 쉬운 방법은 Visual Studio 2017을 관리 권한으로 실행 하는 것입니다. TodoWCFService를 실행할 때 관리자 권한으로 IIS Express 시작 됩니다.
 
-    이 단계 전체를 사용 하 여 TodoWCFService를 실행 하 고 서브넷에서 다른 장치에서 연결 수 있어야 합니다. 응용 프로그램을 실행 하 고 방문 하 여 테스트할 수 있습니다 `http://localhost:49393/TodoService.svc`합니다. 표시 되 면를 **잘못 된 요청** 해당 URL을 방문 하는 동안 오류가 발생 했습니다. 프로그램 `bindings` (요청이 IIS Express에 도달 하지만 거부 됩니다.) IIS Express 구성에서 잘못 된 것 같습니다. 다른 오류가 발생할 경우 응용 프로그램이 실행 되지 않거나 방화벽이 잘못 구성 되어 있는지 수 있습니다.
+    이러한 단계가 완료 되 면 TodoWCFService를 실행 하 고 서브넷의 다른 장치에서 연결할 수 있어야 합니다. 응용 프로그램을 실행 하 고를 방문 `http://localhost:49393/TodoService.svc`하 여 테스트할 수 있습니다. 해당 URL을 `bindings` 방문할 때 **잘못 된 요청** 오류가 발생 하면 IIS Express 구성에서 잘못 된 것일 수 있습니다 (요청이 IIS Express에 도달 하지만 거부 됨). 다른 오류가 발생 하는 경우 응용 프로그램이 실행 되 고 있지 않거나 방화벽이 잘못 구성 된 것일 수 있습니다.
 
-    실행 및 서비스 제공을 유지 하려면 IIS Express를 허용 하려면 기능을 해제 합니다 **편집 하며 계속 하기** 옵션 **프로젝트 속성 > 웹 > 디버거**합니다.
+    IIS Express에서 서비스를 계속 실행 하 고 서비스를 제공할 수 있도록 하려면 **웹 > 디버거 > 프로젝트 속성**에서 **편집 하며 계속 하기** 옵션을 해제 합니다.
 
-1. **서비스에 액세스를 사용 하 여 장치 엔드포인트 사용자 지정**합니다. 이 단계에서는 클라이언트 응용 프로그램을 실제 또는 에뮬레이트된 장치에서 실행 중인 WCF 서비스에 액세스를 구성 합니다.
+1. **서비스에 액세스 하는 데 사용 하는 끝점 장치를 사용자 지정**합니다. 이 단계에서는 실제 또는 에뮬레이트된 장치에서 실행 되는 클라이언트 응용 프로그램을 구성 하 여 WCF 서비스에 액세스 합니다.
 
-    에뮬레이터는 호스트 컴퓨터에 직접 액세스 하지 못하도록 제한 하는 내부 프록시를 활용 하는 Android 에뮬레이터 `localhost` 주소입니다. 대신 주소 `10.0.2.2` 에뮬레이터에서 라우팅되는 `localhost` 내부 프록시를 통해 호스트 컴퓨터. 이러한 프록시 요청 해야 `127.0.0.1` 위의 단계에서이 호스트에 대 한 IIS Express 바인딩을 만든 이유는 요청 헤더에 호스트 이름으로 합니다.
+    Android 에뮬레이터는 에뮬레이터에서 호스트 컴퓨터의 `localhost` 주소에 직접 액세스할 수 없도록 하는 내부 프록시를 활용 합니다. 대신 에뮬레이터의 주소 `10.0.2.2` 는 내부 프록시를 통해 호스트 `localhost` 컴퓨터에서로 라우팅됩니다. 이러한 프록시 요청은 요청 `127.0.0.1` 헤더에 호스트 이름으로 포함 됩니다. 따라서 위의 단계에서이 호스트 이름에 대 한 IIS Express 바인딩을 만들었습니다.
 
-    Mac에서 시뮬레이터를 실행 하는 iOS 빌드 호스트를 사용 하는 경우에 합니다 [원격 iOS 시뮬레이터에 대 한 Windows](~/tools/ios-simulator/index.md)합니다. 시뮬레이터에서 네트워크 요청 호스트 이름으로 로컬 네트워크에서 워크스테이션 IP 해야 (이 예제의 있기 `192.168.1.143`, 실제 IP 주소는 다를 수 있지만). 이 때문에 위의 단계에서이 호스트에 대 한 IIS Express 바인딩을 생성 합니다.
+    IOS 시뮬레이터는 [Windows 용 원격 Ios 시뮬레이터](~/tools/ios-simulator/index.md)를 사용 하는 경우에도 Mac 빌드 호스트에서 실행 됩니다. 시뮬레이터의 네트워크 요청에는 로컬 네트워크의 워크스테이션 IP가 호스트 이름으로 포함 됩니다 (이 예제 `192.168.1.143`에서는 이지만 실제 ip 주소는 다를 수 있습니다). 위의 단계에서이 호스트 이름에 대 한 IIS Express 바인딩을 만든 이유입니다.
 
-    확인 합니다 `SoapUrl` 의 속성을 **Constants.cs** TodoWCF (이식 가능) 프로젝트 파일에에서 있는 네트워크에 대 한 올바른 값:
+    TodoWCF ( `SoapUrl` 이식 가능) 프로젝트의 **Constants.cs** 파일에 있는 속성에 네트워크에 대 한 올바른 값이 있는지 확인 합니다.
 
     ```csharp
     public static string SoapUrl
@@ -307,10 +307,10 @@ Visual Studio 2017 또는 Visual Studio 2019에서 추가 구성이 없는 PC에
     }
     ```
 
-    구성한 후 합니다 **Constants.cs** 적절 한 끝점을 사용 하 여 실제 또는 가상 장치에서 Windows 10 워크스테이션에서 실행 중인 TodoWCFService에 연결할 수 있어야 합니다.
+    적절 한 끝점을 사용 하 여 **Constants.cs** 를 구성한 후에는 물리적 또는 가상 장치에서 Windows 10 워크스테이션에서 실행 되는 TodoWCFService에 연결할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoWCF (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+- [TodoWCF (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 - [방법: Windows Communication Foundation 클라이언트 만들기](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
 - [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

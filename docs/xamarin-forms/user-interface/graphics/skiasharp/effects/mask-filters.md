@@ -7,16 +7,16 @@ ms.assetid: 940422A1-8BC0-4039-8AD7-26C61320F858
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1d85c705fb993e9b6b558b0c051de93e449b9d05
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61289145"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648728"
 ---
 # <a name="skiasharp-mask-filters"></a>SkiaSharp 마스크 필터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 마스크 필터는 기 하 도형 및 그래픽 개체의 알파 채널을 조작 하는 효과입니다. 마스크 필터를 사용 하려면 설정 합니다 [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) 중 하나를 호출 하 여 만든를 `SKMaskFilter` 정적 메서드.
 
@@ -43,7 +43,7 @@ public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 
 이러한 스타일의 효과 아래 예제에 표시 됩니다. `sigma` 흐림 효과의 범위를 지정 하는 매개 변수입니다. Skia의 이전 버전에서는 흐림 효과의 범위는 반지름 값을 사용 하 여 표시 되었습니다. 정적 반지름 값 이면 응용 프로그램에 대 한 것이 좋습니다 [ `SKMaskFilter.ConvertRadiusToSigma` ](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) 을 서로 변환할 수 있는 메서드. 메서드는 radius 0.57735 곱하고 0.5를 추가 합니다.
 
-**마스크 실험 흐리게** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플을 사용 하면 흐리게 스타일 및 시그마 값을 실험할 수 있습니다. XAML 파일은는 `Picker` 4 개를 사용 하 여 `SKBlurStyle` 열거형 멤버와 `Slider` 시그마 값을 지정 하 합니다.
+**마스크 실험 흐리게** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플을 사용 하면 흐리게 스타일 및 시그마 값을 실험할 수 있습니다. XAML 파일은는 `Picker` 4 개를 사용 하 여 `SKBlurStyle` 열거형 멤버와 `Slider` 시그마 값을 지정 하 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -180,9 +180,9 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(blurStyle, sigma);
 
 [![흐린 실험 마스크](mask-filters-images/MaskBlurExperiment.png "흐리게 실험 마스크")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-IOS 스크린 샷에 표시 된 `Solid` 스타일: 텍스트 문자 solid 검정 선으로 계속 제공 되며 흐리게 효과 이러한 텍스트 문자의 바깥쪽에 추가 됩니다. 
+IOS 스크린샷은 스타일을 `Solid` 보여 줍니다. 텍스트 문자는 여전히 검정 실선으로 표시 되 고 이러한 텍스트 문자 외부에 흐림 효과를 추가 합니다. 
 
-중간 보여 Android 스크린샷에서 `Outer` 스타일: (그대로 비트맵) 자체 문자 스트로크를 제거 하 고 흐리게 효과 텍스트 문자를 한 번만 나타나는 빈 공간을 묶습니다. 
+가운데의 Android 스크린 샷에서는 다음과 같은 `Outer` 스타일을 보여 줍니다. 문자 스트로크 자체는 비트맵 처럼 제거 되며 텍스트 문자가 한 번 나타나는 빈 공간을 둘러쌉니다. 
 
 오른쪽은 UWP 스크린샷에 `Inner` 스타일입니다. 흐리게 효과 일반적으로 텍스트 문자를 차지한 영역이 제한 됩니다.
 
@@ -274,4 +274,4 @@ paint.MaskFilter = SKMaskFilter.CreateBlur(SKBlurStyle.Normal, paint.TextSize / 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

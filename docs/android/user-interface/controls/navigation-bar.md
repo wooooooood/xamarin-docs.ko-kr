@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 70e009ed1a017b2336b6acb443a4d9cd87ff3e68
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c017ab96bdd78a41b31a3305021c5bc1f8e472d0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510260"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644919"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Xamarin Android 탐색 모음
 
@@ -69,6 +69,6 @@ tv.SystemUiVisibilityChange +=
 
 ## <a name="related-links"></a>관련 링크
 
-- [SystemUIVisibilityDemo (샘플)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
+- [SystemUIVisibilityDemo (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
 - [아이스크림 및 사우스 샌드위치](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

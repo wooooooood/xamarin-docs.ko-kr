@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2019
-ms.openlocfilehash: fd67072953f0fc4e448fee7edeec84760ebbda9a
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048327"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657275"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있도록 함으로써 XAML의 성능과 유연성 향상을 도와줍니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. XAML 태그 확장은 일반적으로 `x` 네임 스페이스 접두사를 사용하여 XAML 파일에 표시되고, 흔히 해당 접두사로 참조됩니다. 이 문서에서는 다음 태그 확장에 대해 설명합니다.
 
@@ -27,7 +27,7 @@ XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있�
 - [`x:Null`](#null) – `null` 값으로 특성을 설정합니다.
 - [`OnPlatform`](#onplatform) – 플랫폼별 기준에서 UI 모양을 사용자 지정합니다.
 - [`OnIdiom`](#onidiom) – 응용 프로그램이 실행 중인 장치의 관용구를 기반으로 UI 모양을 사용자 지정합니다.
-- [`DataTemplate`](#datatemplate-markup-extension) -형식으로 변환 된 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)합니다.
+- [`DataTemplate`](#datatemplate-markup-extension)-형식을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 변환 합니다.
 
 추가적인 XAML 태그 확장은 지금까지 다른 XAML 구현에서 지원되었으며, Xamarin.Forms에서도 지원됩니다. 해당 내용은 다음과 같이 다른 글에서 더 자세히 설명합니다.
 
@@ -44,7 +44,7 @@ XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있�
 
 `x:Static` 태그 확장은 [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) 클래스에서 지원됩니다. 이 클래스에는 공용 상수, 정적 속성, 정적 필드 또는 열거형 멤버의 이름으로 설정되는 `string` 유형의 [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member)라는 단일 속성이 있습니다.
 
-`x:Static`을 사용하는 일반적인 방법 중 하나는 [ **MarkupExtensions** ](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/) 프로그램에 있는 다음과 같은 작은 `AppConstants` 클래스처럼 몇 가지 상수 또는 정적 변수를 가진 클래스를 먼저 정의하는 것입니다.
+`x:Static`을 사용하는 일반적인 방법 중 하나는 [ **MarkupExtensions** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) 프로그램에 있는 다음과 같은 작은 `AppConstants` 클래스처럼 몇 가지 상수 또는 정적 변수를 가진 클래스를 먼저 정의하는 것입니다.
 
 ```csharp
 static class AppConstants
@@ -85,7 +85,7 @@ XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`
 </Label>
 ```
 
-더 나아가 단순화할 수 있습니다. 하지만 변경에 몇 가지 새 구문을 소개: 배치 이루어져는 `StaticExtension` 클래스와 중괄호에서 설정 멤버입니다. 결과 표현식은 다음과 같이 직접 `FontSize` 특성으로 설정됩니다.
+이 작업은 더 간단 하 게 수행할 수 있지만 변경 내용에는 몇 가지 새로운 구문이 도입 되었습니다. `StaticExtension` 클래스 및 멤버 설정을 중괄호로 묶어 구성 합니다. 결과 표현식은 다음과 같이 직접 `FontSize` 특성으로 설정됩니다.
 
 ```xaml
 <Label Text="Label No. 3"
@@ -504,7 +504,7 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="onidiom-markup-extension"></a>OnIdiom 태그 확장
 
-`OnIdiom` 태그 확장을 사용 하면 응용 프로그램에서 실행 중인 장치의 관용구를 기반으로 하는 UI 모양을 사용자 지정할 수 있습니다. 다음 속성을 정의하는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스에서 지원됩니다.
+태그 `OnIdiom` 확장을 사용 하면 응용 프로그램이 실행 되 고 있는 장치를 기준으로 UI 모양을 사용자 지정할 수 있습니다. 다음 속성을 정의하는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스에서 지원됩니다.
 
 - 장치 관용구를 나타내는 속성에 적용할 기본 값으로 설정하는 `object` 유형의 `Default`.
 - 휴대폰에 적용할 값으로 설정하는 `object` 유형의 `Phone`.
@@ -540,12 +540,12 @@ public partial class TypeDemoPage : ContentPage
 
 ## <a name="datatemplate-markup-extension"></a>DataTemplate 태그 확장
 
-합니다 `DataTemplate` 태그 확장을 사용 하면 형식으로 변환 하는 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)합니다. 지 원하는 합니다 `DataTemplateExtension` 클래스를 정의 하는 `TypeName` 형식의 속성을 `string`가 변환할 형식의 이름으로 설정를 `DataTemplate`. `TypeName` 속성은 `DataTemplateExtension`의 콘텐츠 속성입니다. 따라서 XAML 태그 식 중괄호를 사용 하 여 표현에서 제거할 수 있습니다는 `TypeName=` 식의 일부입니다.
+태그 확장을 사용 하 여 형식을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 변환할 수 있습니다. `DataTemplate` `DataTemplateExtension` 로 변환할 `TypeName` 형식의이름`string`으로 설정 된 형식의 속성을 정의 하는 클래스에서 지원 됩니다. `DataTemplate` `TypeName` 속성은 `DataTemplateExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표현 된 XAML 태그 식의 경우 식의 `TypeName=` 일부를 제거할 수 있습니다.
 
 > [!NOTE]
-> XAML 파서에서 허용 합니다 `DataTemplateExtension` 로 축약할 수 클래스 `DataTemplate`합니다.
+> XAML 파서는 `DataTemplateExtension` 클래스를 약식으로 `DataTemplate`지정할 수 있습니다.
 
-다음 예제에서 표시 된 것과 같이 셸 응용 프로그램에서이 태그 확장의 일반적인 사용이입니다.
+이 태그 확장은 다음 예제와 같이 셸 응용 프로그램에서 일반적으로 사용 됩니다.
 
 ```xaml
 <ShellContent Title="Monkeys"
@@ -553,9 +553,9 @@ public partial class TypeDemoPage : ContentPage
               ContentTemplate="{DataTemplate views:MonkeysPage}" />
 ```
 
-이 예제에서는 `MonkeysPage` 에서 변환 되는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 에 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)의 값으로 설정 된를 `ShellContent.ContentTemplate` 속성. 이렇게 하면 `MonkeysPage` 페이지 탐색을 발생 시 생성 뿐만 아니라 응용 프로그램 시작 시.
+이 예제 `MonkeysPage` 에서는 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 속성`ShellContent.ContentTemplate` 의 값으로 설정 된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에서로 변환 됩니다. 이렇게 하면 응용 `MonkeysPage` 프로그램 시작 시가 아니라 페이지 탐색이 발생 하는 경우에만이 생성 됩니다.
 
-셸 응용 프로그램에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 셸](~/xamarin-forms/app-fundamentals/shell/index.md)합니다.
+셸 응용 프로그램에 대 한 자세한 내용은 [Xamarin.ios shell](~/xamarin-forms/app-fundamentals/shell/index.md)(영문)을 참조 하세요.
 
 ## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장 정의
 
@@ -563,9 +563,9 @@ Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장이 필요하다면 [
 
 ## <a name="related-links"></a>관련 링크
 
-- [태그 확장 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [태그 확장 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Xamarin.Forms 책에서 XAML 태그 확장 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [동적 스타일](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.Forms 셸](~/xamarin-forms/app-fundamentals/shell/index.md)합니다.
+- [Xamarin.ios Shell](~/xamarin-forms/app-fundamentals/shell/index.md).

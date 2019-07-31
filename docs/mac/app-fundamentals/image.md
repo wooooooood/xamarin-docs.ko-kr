@@ -1,196 +1,196 @@
 ---
-title: Xamarin.Mac의 이미지
-description: 이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘 및 이미지를 사용 하 여 작업을 다룹니다. 만들기 및 응용 프로그램의 아이콘을 만드는 데 필요한 및 C# 코드와 Xcode의 Interface Builder에서 이미지를 사용 하 여 이미지를 유지 관리 설명 합니다.
+title: Xamarin.ios의 이미지
+description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지 및 아이콘 작업을 설명 합니다. 응용 프로그램의 아이콘을 만드는 데 필요한 이미지를 만들고 유지 관리 하는 방법 및 C# 코드와 Xcode의 Interface Builder에서 이미지를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 197600f713527ed79d9a52768d367589d9edf2fa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61078887"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646879"
 ---
-# <a name="images-in-xamarinmac"></a>Xamarin.Mac의 이미지
+# <a name="images-in-xamarinmac"></a>Xamarin.ios의 이미지
 
-_이 문서에서는 Xamarin.Mac 응용 프로그램의 아이콘 및 이미지를 사용 하 여 작업을 다룹니다. 만들기 및 응용 프로그램의 아이콘을 만드는 데 필요한 및 C# 코드와 Xcode의 Interface Builder에서 이미지를 사용 하 여 이미지를 유지 관리 설명 합니다._
+_이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지 및 아이콘 작업을 설명 합니다. 응용 프로그램의 아이콘을 만드는 데 필요한 이미지를 만들고 유지 관리 하는 방법 및 C# 코드와 Xcode의 Interface Builder에서 이미지를 사용 하는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일한 이미지에 액세스할 수 있습니다 및 아이콘 도구에서 작업을 수행할 *Objective-c* 하 고 *Xcode* 않습니다.
+Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자와 동일한 이미지 및 아이콘 도구에 액세스할 수 있습니다.
 
-여러 가지 자산을 macOS (Mac OS X 이전의 함) 응용 프로그램 내에서 사용 되는 이미지입니다. 단순히 아이콘을 제공 하기 위해 도구 모음 또는 원본 목록 항목에 같은 UI 컨트롤에 할당, 응용 프로그램의 UI의 일부로 이미지를 표시에서 Xamarin.Mac 쉽게 다음과 같은 방법으로 macOS 응용 프로그램에 유용한 아트 워크를 추가 하려면 : 
+MacOS (이전의 Mac OS X) 응용 프로그램 내에서 이미지 자산을 사용 하는 몇 가지 방법이 있습니다. 단순히 응용 프로그램 UI의 일부로 이미지를 표시 하 고 도구 모음이 나 소스 목록 항목과 같은 UI 컨트롤에 할당 하 여 아이콘을 제공 하면 Xamarin.ios를 사용 하면 다음과 같은 방식으로 macOS 응용 프로그램에 유용한 아트 워크를 쉽게 추가할 수 있습니다. : 
 
-- **UI 요소** -배경 또는 이미지 뷰에서 응용 프로그램의 일부로 이미지를 표시할 수 있습니다 (`NSImageView`).
-- **단추** -이미지를 단추에 표시할 수 있습니다 (`NSButton`).
-- **셀 이미지** -기준 테이블 컨트롤의 일부로 (`NSTableView` 하거나 `NSOutlineView`), 이미지 셀의 이미지를 사용할 수 있습니다 (`NSImageCell`).
-- **도구 모음 항목** -도구 모음에 이미지를 추가할 수 있습니다 (`NSToolbar`) 이미지 도구 모음 항목으로 (`NSToolbarItem`).
-- **원본 목록 아이콘** -원본 목록의 일부로 (특수 하 게 서식이 지정 된 `NSOutlineView`).
-- **앱 아이콘** -으로 일련의 이미지를 함께 그룹화 할 수는 `.icns` 설정 및 응용 프로그램의 아이콘으로 사용 합니다. 참조 우리의 [응용 프로그램 아이콘](~/mac/deploy-test/app-icon.md) 자세한 정보에 대 한 설명서입니다.
+- **UI 요소** -이미지는 배경으로 표시 되거나 이미지 뷰에서 응용 프로그램의 일부로 표시 될 수 있습니다 (`NSImageView`).
+- **단추** -이미지를 단추 (`NSButton`)로 표시할 수 있습니다.
+- **이미지 셀** -테이블 기반 컨트롤 (`NSTableView` 또는 `NSOutlineView`)의 일부로 이미지 셀 (`NSImageCell`)에 이미지를 사용할 수 있습니다.
+- **도구 모음 항목** -이미지를 도구 모음 항목 (`NSToolbar``NSToolbarItem`)으로 도구 모음에 추가할 수 있습니다.
+- 원본 **목록 아이콘** -원본 목록의 일부로 특수 형식이 지정 `NSOutlineView`된입니다.
+- **앱 아이콘** -일련의 이미지를 하나의 `.icns` 집합으로 그룹화 하 고 응용 프로그램의 아이콘으로 사용할 수 있습니다. 자세한 내용은 [응용 프로그램 아이콘](~/mac/deploy-test/app-icon.md) 설명서를 참조 하세요.
 
-또한 macOS 응용 프로그램 전체에서 사용할 수 있는 미리 정의 된 이미지 집합을 제공 합니다.
+또한 macOS는 응용 프로그램 전체에서 사용할 수 있는 미리 정의 된 이미지 집합을 제공 합니다.
 
-[![앱의 실행 예가](image-images/intro01.png "예제 앱 실행")](image-images/intro01-large.png#lightbox)
+[![응용 프로그램의 예제 실행](image-images/intro01.png "응용 프로그램의 예제 실행")](image-images/intro01-large.png#lightbox)
 
-이 문서에서는 Xamarin.Mac 응용 프로그램에서 이미지 및 아이콘을 사용 하 여 작업의 기본 사항을 설명 합니다. 것이 가장 좋습니다를 통해 작업 하는 합니다 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서 합니다 [Xcode 및 Interface Builder 소개](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 하 고 [출 선 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션으로 주요 개념 및이 문서를 사용 하는 기술을 설명 합니다.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지 및 아이콘을 사용 하는 기본 사항을 설명 합니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
 
 
-## <a name="adding-images-to-a-xamarinmac-project"></a>Xamarin.Mac 프로젝트에 이미지 추가
+## <a name="adding-images-to-a-xamarinmac-project"></a>Xamarin.ios 프로젝트에 이미지 추가
 
-Xamarin.Mac 응용 프로그램에서 사용 하 여 이미지를 추가 하는 경우 일부의 위치와 같은 방법으로 개발자가 프로젝트의 소스 파일 이미지를 포함할 수 있습니다.
+Xamarin.ios 응용 프로그램에서 사용할 이미지를 추가 하는 경우 개발자가 프로젝트 소스에 이미지 파일을 포함할 수 있는 몇 가지 위치와 방법이 있습니다.
 
-- **[Deprecated] 주 프로젝트 트리** -프로젝트 트리에 직접 이미지를 추가할 수 있습니다. 코드에서 기본 프로젝트 트리에서 저장 된 이미지를 호출할 때 없습니다 폴더 위치 지정 됩니다. 예: `NSImage image = NSImage.ImageNamed("tags.png");` 
-- **[Deprecated] resources 폴더** -특수 **리소스** 이미지 (다른 이미지 또는 개발자 파일에 일반, 아이콘 및 시작 화면 등 응용 프로그램에 포함 될 모든 파일 번들의 폴더입니다 하려는 추가). 에 저장 된 이미지를 호출 하는 경우는 **리소스** 코드에서 폴더를 주 프로젝트 트리에서 이미지 처럼 저장, 없습니다 폴더 위치를 지정 합니다. 예: `NSImage.ImageNamed("tags.png")`
-- **사용자 지정 폴더 또는 하위 폴더 [deprecated]** -개발자는 프로젝트 소스 트리에 사용자 지정 폴더를 추가 하 고 이미지를 저장할 수 있습니다. 추가 프로젝트 구성에 도움이 되도록 하위 폴더에 파일이 추가 되는 위치를 중첩할 수 있습니다. 예를 들어 개발자 추가 `Card` 프로젝트 폴더의 하위 폴더로 `Hearts` 해당 폴더에 이미지를 저장 한 다음 **Jack.png** 에 `Hearts` 폴더 `NSImage.ImageNamed("Card/Hearts/Jack.png")` 의 이미지를 로드 하는 런타임입니다.
-- **자산 카탈로그 이미지 집합 [기본]** OS X El Capitan에서 추가- **자산 카탈로그 이미지 집합** 모든 버전 또는 다양 한 장치를 지원 하 고에 대 한 요소를 확장 하는 데 필요한 이미지의 표현을 포함 프로그램 응용 프로그램입니다. 이미지 자산 파일 이름에 의존 하지 않고 (**@1x**하십시오 **@2x**).
+- **주 프로젝트 트리 [사용 되지 않음]** -프로젝트 트리에 직접 이미지를 추가할 수 있습니다. 코드에서 주 프로젝트 트리에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예를 들어 `NSImage image = NSImage.ImageNamed("tags.png");`을 참조하십시오. 
+- **리소스 폴더 [사용 되지 않음]** -특수 **리소스** 폴더는 아이콘, 시작 화면 또는 일반 이미지 (또는 개발자가 추가 하려는 다른 이미지 또는 파일)와 같은 응용 프로그램 번들의 일부가 될 파일에 대 한 것입니다. 주 프로젝트 트리에 저장 된 이미지와 마찬가지로 코드에서 **Resources** 폴더에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예를 들어 `NSImage.ImageNamed("tags.png")`을 참조하십시오.
+- **사용자 지정 폴더 또는 하위 폴더 [사용 되지 않음]** -개발자가 프로젝트 소스 트리에 사용자 지정 폴더를 추가 하 고 여기에 이미지를 저장할 수 있습니다. 프로젝트를 구성 하는 데 도움이 되도록 파일이 추가 된 위치를 하위 폴더에 중첩 시킬 수 있습니다. 예를 들어 `Card` 개발자가 프로젝트에 폴더를 추가 하 고 해당 폴더 `Hearts` 에 하위 폴더를 추가한 경우 이미지에 `Hearts` `NSImage.ImageNamed("Card/Hearts/Jack.png")` **.png** 이미지를 저장 하 여 런타임에 이미지를 로드 합니다.
+- **Asset Catalog 이미지 집합 [기본 설정]** -OS X El Capitan에 추가 됨, **자산 카탈로그 이미지 집합** 은 응용 프로그램에 대 한 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 이미지의 모든 버전 또는 표현을 포함 합니다. 이미지 자산 파일 이름 ( **@1x** , **@2x** )에 의존 하지 않습니다.
 
 <a name="asset-catalogs" />
 
-### <a name="adding-images-to-an-asset-catalog-image-set"></a>자산 카탈로그 이미지에 이미지 추가 설정
+### <a name="adding-images-to-an-asset-catalog-image-set"></a>자산 카탈로그 이미지 집합에 이미지 추가
 
-위에서 설명한 것 처럼를 **자산 카탈로그 이미지 집합** 모든 버전 또는 다양 한 장치를 지원 하 고 응용 프로그램에 대 한 요소를 확장 하는 데 필요한 이미지의 표현을 포함 합니다. 이미지 자산 파일 이름에 의존 하지 않고 (위 이미지 명명법 고 해상도 독립적인 이미지 참조) **이미지 집합** 자산 편집기를 사용 하 여 이미지는 장치 및/또는 해결 속한 지정 합니다.
+위에서 설명한 것 처럼 **자산 카탈로그 이미지 집합** 에는 응용 프로그램의 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 이미지의 모든 버전 또는 표현이 포함 되어 있습니다. 이미지 자산 파일 이름에 의존 하는 대신 (위의 확인 독립적 이미지 및 이미지 명명법 참조) **이미지 집합** 은 자산 편집기를 사용 하 여 장치 및/또는 해상도에 속하는 이미지를 지정 합니다.
 
-1. 에 **Solution Pad**, 두 번 클릭 합니다 **Assets.xcassets** 파일을 편집 하는 것에 대 한 열: 
+1. **Solution Pad**에서 **assets.xcassets** 파일을 두 번 클릭 하 여 편집용으로 엽니다. 
 
-    ![Assets.xcassets 선택](image-images/imageset01.png "는 Assets.xcassets 선택")
-2. 마우스 오른쪽 단추로 클릭 합니다 **자산 목록** 선택한 **새 이미지 집합**: 
+    ![Assets.xcassets 선택](image-images/imageset01.png "Assets.xcassets 선택")
+2. **자산 목록을** 마우스 오른쪽 단추로 클릭 하 고 **새 이미지 집합**을 선택 합니다. 
 
     [![새 이미지 집합 추가](image-images/imageset02.png "새 이미지 집합 추가")](image-images/imageset02-large.png#lightbox)
-3. 새 이미지 집합을 선택 하 고 편집기를 표시 됩니다. 
+3. 새 이미지 집합을 선택 하면 편집기가 표시 됩니다. 
 
-    [![새 이미지 집합을 선택 하면](image-images/imageset03.png "새 이미지 집합 선택")](image-images/imageset03-large.png#lightbox)
-4. 여기에서 다양 한 장치 및 필요한 해결 방법은 각 이미지에서 끌 수 있습니다. 
-5. 새 이미지 집합을 두 번 클릭 **이름을** 에 **자산 목록** 편집 하려면: 
+    [![새 이미지 집합 선택](image-images/imageset03.png "새 이미지 집합 선택")](image-images/imageset03-large.png#lightbox)
+4. 여기에서 필요한 각각의 서로 다른 장치 및 해상도에 대 한 이미지를 끌어올 수 있습니다. 
+5. **자산 목록** 에서 새 이미지 집합의 **이름을** 두 번 클릭 하 여 편집 합니다. 
 
-    [![이름을 설정 이미지 편집](image-images/imageset04.png "이름을 설정 이미지 편집")](image-images/imageset04-large.png#lightbox)
+    [![이미지 집합 이름 편집](image-images/imageset04.png "이미지 집합 이름 편집")](image-images/imageset04-large.png#lightbox)
     
-특수 **벡터** 클래스에 추가 되었습니다 **이미지 집합** 포함 하는 _PDF_ 대신에 개별 비트맵 파일을 포함 하 여 casset 벡터 이미지 형식 다른 해상도입니다. 에 대 한 단일 벡터 파일을 제공 하이 메서드를 사용 하는 **@1x** 해상도 (벡터 PDF 파일 형식) 및 **@2x** 고 **@3x** 파일의 버전 컴파일 타임에 생성 되며 응용 프로그램의 번들에 포함 합니다.
+다른 해상도의 개별 비트맵 파일을 포함 하는 대신 casset에 _PDF_ 형식의 벡터 이미지를 포함할 수 있도록 하는 **이미지 집합** 에 추가 된 특수 **vector** 클래스입니다. 이 메서드를 사용 하 여 **@1x** 해상도에 대 한 단일 벡터 파일 (벡터 PDF 파일로 서식 지정)을 제공 하면 및 **@3x** 파일의 버전은 **@2x** 컴파일 시간에 생성 되 고 응용 프로그램의 번들에 포함 됩니다.
 
-[![이미지 편집기 인터페이스를 설정](image-images/imageset05.png "이미지 편집기 인터페이스를 설정 합니다.")](image-images/imageset05-large.png#lightbox)
+[![이미지 집합 편집기 인터페이스](image-images/imageset05.png "이미지 집합 편집기 인터페이스")](image-images/imageset05-large.png#lightbox)
 
-예를 들어, 포함 하는 경우는 `MonkeyIcon.pdf` 150px x 150px 컴파일할 때 자산 최종 앱 번들에 포함 되어 다음과 같은 비트맵의 해상도로 자산 카탈로그의 벡터 파일:
+예를 들어 150px x 150px의 `MonkeyIcon.pdf` 해상도를 사용 하 여 자산 카탈로그의 벡터로 파일을 포함 하는 경우 컴파일할 때 다음 비트맵 자산이 최종 앱 번들에 포함 됩니다.
 
-1. **MonkeyIcon@1x.png** -150px x 150px 확인 합니다.
-2. **MonkeyIcon@2x.png** -300px x 300px 확인 합니다.
-3. **MonkeyIcon@3x.png** -450px x 450px 확인 합니다.
+1. **MonkeyIcon@1x.png** -150px x 150px resolution.
+2. **MonkeyIcon@2x.png** -300px x 300px 해상도입니다.
+3. **MonkeyIcon@3x.png** -450px x 450px resolution.
 
-다음은 고려해 야 자산 카탈로그에서 PDF 벡터 이미지를 사용 하는 경우:
+자산 카탈로그에서 PDF 벡터 이미지를 사용 하는 경우 다음 사항을 고려해 야 합니다.
 
-- PDF는 컴파일 시간 및 최종 응용 프로그램에서 제공 하는 비트맵 비트맵 래스터화된 있을 전체 벡터 지원 되지 않습니다.
-- 자산 카탈로그에 설정한 후에 이미지의 크기를 조정할 수 없습니다. (또는 코드에서 자동 레이아웃 및 Size 클래스를 사용 하 여) 이미지 크기를 조정 하려는 경우 다른 비트맵 마찬가지로 이미지 왜곡 됩니다.
+- PDF는 컴파일 시간에 비트맵으로 래스터화됩니다. 최종 응용 프로그램에서 제공 되는 비트맵으로 래스터화됩니다.
+- 자산 카탈로그에 설정 된 이미지의 크기는 조정할 수 없습니다. 코드에서 또는 자동 레이아웃 및 크기 클래스를 사용 하 여 이미지의 크기를 조정 하려고 하면 다른 비트맵과 마찬가지로 이미지가 왜곡 됩니다.
 
-사용 하는 경우는 **집합 이미지** Xcode의 Interface Builder에서 단순히 이름을 선택할 수 있습니다 설정의 드롭다운 목록에서 합니다 **특성 검사기**:
+Xcode의 Interface Builder에서 **이미지 집합** 을 사용 하는 경우 **특성 검사자**의 드롭다운 목록에서 집합의 이름을 선택 하면 됩니다.
 
-![Xcode의 Interface Builder에서 집합 이미지를 선택할](image-images/imageset06.png "Xcode의 Interface Builder에서 이미지를 선택 하면 설정")
+![Xcode의 Interface Builder에서 이미지 집합 선택](image-images/imageset06.png "Xcode의 Interface Builder에서 이미지 집합 선택")
 
 <a name="Adding-new-Assets-Collections"/>
 
 ### <a name="adding-new-assets-collections"></a>새 자산 컬렉션 추가
 
-자산 카탈로그의 이미지를 사용 하 여 작업할 때 경우도 모든 이미지를 추가 하는 대신 새 컬렉션을 만들려는 경우 합니다 **Assets.xcassets** 컬렉션입니다. 예를 들어, 주문형 리소스를 디자인할 때.
+자산 카탈로그에서 이미지를 사용 하는 경우 **assets.xcassets** 컬렉션에 모든 이미지를 추가 하는 대신 새 컬렉션을 만들 수 있습니다. 예를 들어 주문형 리소스를 디자인할 때입니다.
 
-프로젝트에 새 자산 카탈로그 추가:
+프로젝트에 새 자산 카탈로그를 추가 하려면 다음을 수행 합니다.
 
-1. 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 **Solution Pad** 선택한 **추가** > **새 파일...**
-2. 선택 **Mac** > **자산 카탈로그**, 입력을 **이름** 컬렉션을 클릭 합니다 **새** 단추: 
+1. **Solution Pad** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.
+2. **Mac**자산 카탈로그를 선택 하 고, 컬렉션의 이름을 입력 하 고, 새로 만들기 단추를 클릭 합니다. >  
 
-    ![새 자산 카탈로그를 추가](image-images/asset01.png "새 자산 카탈로그 추가")
+    ![새 자산 카탈로그 추가](image-images/asset01.png "새 자산 카탈로그 추가")
 
-여기에서 작업할 수 있습니다 컬렉션 기본적으로 동일한 방식에서 **Assets.xcassets** 프로젝트에 자동으로 포함 하는 컬렉션입니다.
+여기에서 기본 **assets.xcassets** 컬렉션이 프로젝트에 자동으로 포함 되는 것과 동일한 방식으로 컬렉션을 사용할 수 있습니다.
 
 
 ### <a name="adding-images-to-resources"></a>리소스에 이미지 추가
 
 > [!IMPORTANT]
-> Apple에서 macOS 앱의 이미지를 사용 하는이 메서드는 사용 되지 않습니다. 기능을 사용할지 [자산 카탈로그 이미지 집합](#asset-catalogs) 관리자에 게 앱의 이미지 대신 합니다.
+> MacOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 대신 [자산 카탈로그 이미지 집합](#asset-catalogs) 을 사용 하 여 앱의 이미지를 관리 해야 합니다.
 
-프로젝트의 포함 하는 데 필요한 이미지 파일 (또는 C# 코드에서 Interface Builder에서) Xamarin.Mac 응용 프로그램에서 사용 하기 전에 **리소스** 폴더를 **번들 리소스**합니다. 파일을 프로젝트에 추가 하려면 다음을 수행 합니다.
+Xamarin.ios 응용 프로그램 ( C# 코드 또는 Interface Builder)에서 이미지 파일을 사용 하려면 먼저 프로젝트의 **Resources** 폴더에 **번들 리소스로**포함 해야 합니다. 프로젝트에 파일을 추가 하려면 다음을 수행 합니다.
 
-1. 마우스 오른쪽 단추로 클릭 합니다 **리소스** 에서 프로젝트의 폴더를 **Solution Pad** 선택한 **추가** > **파일 추가...** : 
+1. **Solution Pad** 에서 프로젝트의 **Resources** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **파일**추가 ...를 선택 합니다. 
 
-    ![파일을 추가](image-images/add01.png "파일 추가")
-2. **파일 추가** 대화 상자에서 프로젝트에 추가할 이미지 파일 선택 `BundleResource` 에 대 한를 **빌드 작업 재정의** 클릭 합니다 **열기** 단추:
+    ![파일 추가](image-images/add01.png "파일 추가")
+2. **파일 추가** 대화 상자에서 프로젝트에 추가할 이미지 파일을 선택 하 고 **빌드 재정의 작업** 에 `BundleResource` 대해를 선택한 후 **열기** 단추를 클릭 합니다.
 
-    [![추가할 파일 선택](image-images/add02.png "추가할 파일을 선택 합니다.")](image-images/add02-large.png#lightbox)
-3. 파일이 없는 경우에 **리소스** 폴더에 메시지가 표시 됩니다 하려는 경우 **복사본**를 **이동** 또는 **링크** 파일입니다. 모든 짝패가 선택 되는 일반적으로 요구 **복사**:
+    [![추가할 파일 선택](image-images/add02.png "추가할 파일 선택")](image-images/add02-large.png#lightbox)
+3. 파일이 **Resources** 폴더에 아직 없는 경우 파일을 **복사**, **이동** 또는 **연결할** 것인지 묻는 메시지가 표시 됩니다. 일반적으로 **복사**되는 요구 사항에 맞는 모든 것을 선택 합니다.
 
-    ![추가 동작을 선택 하면](image-images/add04.png "추가 동작을 선택 하면")
-4. 새 파일을 프로젝트에 포함 되며 사용에 대 한 읽기: 
+    ![추가 작업 선택](image-images/add04.png "추가 작업 선택")
+4. 새 파일이 프로젝트에 포함 되 고 사용 하기 위해 읽혀집니다. 
 
     ![Solution Pad에 추가 된 새 이미지 파일](image-images/add03.png "Solution Pad에 추가 된 새 이미지 파일")
-5. 필요한 모든 이미지 파일에 대 한 프로세스를 반복 합니다.
+5. 필요한 모든 이미지 파일에 대해이 프로세스를 반복 합니다.
 
-Xamarin.Mac 응용 프로그램에서 원본 이미지로 나 png, jpg, pdf 파일을 사용할 수 있습니다. 다음 섹션에서는 이미지의 고해상도 버전 추가 살펴보겠습니다 및 아이콘 레 티 나 지원 하도록 Mac을 기반으로 합니다.
+Xamarin.ios 응용 프로그램의 원본 이미지로 png, jpg 또는 pdf 파일을 사용할 수 있습니다. 다음 섹션에서는 레 티 나 기반 Mac을 지원 하기 위해 이미지 및 아이콘의 고해상도 버전을 추가 하는 방법을 살펴보겠습니다.
 
 > [!IMPORTANT]
-> 이미지를 추가 하는 경우는 **리소스** 폴더를 그대로 둘 수 있습니다 합니다 **빌드 작업 재정의** 로 설정 **기본**입니다. 기본값이이 폴더에 대 한 빌드 작업은 `BundleResource`합니다.
+> **리소스** 폴더에 이미지를 추가 하는 경우 **빌드 재정의 작업** 을 **기본값으로**설정 된 상태로 둘 수 있습니다. 이 폴더의 기본 빌드 작업은 `BundleResource`입니다.
 
 ## <a name="provide-high-resolution-versions-of-all-app-graphics-resources"></a>모든 앱 그래픽 리소스의 고해상도 버전 제공
 
-그래픽 자산 (아이콘, 사용자 지정 컨트롤, 사용자 지정 커서, 사용자 지정 아트 워크, 등) Xamarin.Mac 응용 프로그램에 추가한 해당 표준 해상도 버전 외에도 고해상도 버전 해야 합니다. 응용 프로그램 실행 레 티 나 디스플레이에서 Mac 컴퓨터를 장착 하는 경우 가장 잘 보입니다 있도록이 작업이 필요 합니다.
+Xamarin.ios 응용 프로그램 (아이콘, 사용자 지정 컨트롤, 사용자 지정 커서, 사용자 지정 아트 워크 등)에 추가 하는 모든 그래픽 자산은 표준 해상도 버전 외에도 고해상도 버전이 있어야 합니다. 이는 응용 프로그램이 레 티 나 Display 장착 된 Mac 컴퓨터에서 실행 될 때 가장 적합 한 것을 확인 하는 데 필요 합니다.
 
 
-### <a name="adopt-the-2x-naming-convention"></a>채택 된 @2x 명명 규칙
+### <a name="adopt-the-2x-naming-convention"></a>@2x 명명 규칙 채택
 
 > [!IMPORTANT]
-> Apple에서 macOS 앱의 이미지를 사용 하는이 메서드는 사용 되지 않습니다. 기능을 사용할지 [자산 카탈로그 이미지 집합](#asset-catalogs) 관리자에 게 앱의 이미지 대신 합니다.
+> MacOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 대신 [자산 카탈로그 이미지 집합](#asset-catalogs) 을 사용 하 여 앱의 이미지를 관리 해야 합니다.
 
-표준 작업 버전과 고해상도 이미지를 만들 때 Xamarin.Mac 프로젝트에 포함 하는 경우 이미지 쌍에 대 한 명명 규칙을 따릅니다.
+표준 및 고해상도 버전의 이미지를 만들 때 Xamarin.ios 프로젝트에 포함할 때 이미지 쌍에 대해이 명명 규칙을 따릅니다.
 
-- **표준 해상도**  - **ImageName.filename-확장명** (예: **tags.png**)
-- **고해상도**   -  **ImageName@2x.filename-extension** (예: **tags@2x.png**)
+- **표준 해상도**  - **ImageName. 파일 이름-확장명** (예: **태그도 .png**)
+- **고해상도** (예: **)tags@2x.png**   -  **ImageName@2x.filename-extension**
 
-프로젝트에 추가 하는 경우 다음과 같이 표시 됩니다.
+프로젝트에 추가 되 면 다음과 같이 표시 됩니다.
 
 ![Solution Pad의 이미지 파일](image-images/add03.png "Solution Pad의 이미지 파일")
 
-파일을 선택 하기만 하면 됩니다 이미지로 Interface Builder에서 UI 요소에 할당 되 면 합니다 _ImageName_**.** _파일 이름 확장명_ 형식 (예: **tags.png**). 파일을 선택 하겠습니다 마찬가지로 C# 코드에서 이미지를 사용 하 여 _ImageName_**.** _파일 이름-확장명_ 형식입니다.
+이미지가 Interface Builder의 UI 요소에 할당 되 면 _ImageName_에서 파일을 선택 하기만 하면 됩니다 **.** _파일 이름-확장명_ 형식 (예: **tags .png**) 코드에서 C# 이미지를 사용 하는 경우와 마찬가지로 ImageName에서 파일을 선택 합니다 **.** _파일 이름-확장명_ 형식입니다.
 
-Xamarin.Mac 응용 프로그램을 Mac에서 실행 되 면 합니다 _ImageName_**.** _파일 이름 확장명_ 표준 확인 표시에 사용할 형식 이미지를 **ImageName@2x.filename-extension** 이미지 자동으로 선택 됩니다 레 티 나 디스플레이 기반 Mac.
+Xamarin.ios 응용 프로그램이 Mac에서 실행 되는 경우 _ImageName_ **.** _파일 이름-확장_ 형식 이미지는 표준 해상도 디스플레이에서 사용 되며, **ImageName@2x.filename-extension** 레 티 나 디스플레이 기반 mac에서 이미지가 자동으로 선택 됩니다.
 
 
 ## <a name="using-images-in-interface-builder"></a>Interface Builder에서 이미지 사용
 
-모든 이미지 리소스를 추가한 합니다 **리소스** 폴더에 xamarin.mac에서 프로젝트 및 빌드 작업 설정한 **BundleResource** 수 및 Interface Builder에서 자동으로 표시 됩니다 (이미지를 처리) 하는 경우 UI 요소의 일부로 선택 합니다.
+Xamarin.ios 프로젝트의 **Resources** 폴더에 추가한 모든 이미지 리소스를 설정 하 고, 빌드 작업을 **BundleResource** 에 자동으로 Interface Builder 표시 하 고,이를 처리 하는 경우 UI 요소의 일부로 선택할 수 있습니다. 이미지).
 
-인터페이스 작성기에서 이미지를 사용 하려면 다음을 수행 합니다.
+Interface builder에서 이미지를 사용 하려면 다음을 수행 합니다.
 
-1. 이미지를 추가 합니다 **리소스** 폴더를 **빌드 동작** 의 `BundleResource`: 
+1. 의 빌드`BundleResource` **작업** 을 사용 하 여 리소스 폴더에 이미지를 추가 합니다. 
 
-     ![Solution Pad에서 이미지 리소스](image-images/ib00.png "Solution Pad에서 이미지 리소스")
-2. 두 번 클릭 합니다 **Main.storyboard** Interface Builder에서 편집 하기 위해 열려는 파일: 
+     ![Solution Pad의 이미지 리소스](image-images/ib00.png "Solution Pad의 이미지 리소스")
+2. **주 storyboard** 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 
 
-     [![주 스토리 보드를 편집](image-images/ib01.png "주 스토리 보드를 편집 합니다.")](image-images/ib01-large.png#lightbox)
-3. 디자인 화면에 이미지를 사용 하는 UI 요소를 끌어 옵니다 (예를 들어, 한 **이미지 도구 모음 항목**): 
+     [![주 스토리 보드 편집](image-images/ib01.png "주 스토리 보드 편집")](image-images/ib01-large.png#lightbox)
+3. 이미지를 사용 하는 UI 요소를 디자인 화면 (예: **이미지 도구 모음 항목**)으로 끌어 옵니다. 
 
-     ![도구 모음 항목 편집](image-images/ib02.png "도구 모음 항목을 편집 합니다.")
-4. 추가할 이미지를 선택 합니다 **리소스** 폴더에는 **이미지 이름** 드롭다운: 
+     ![도구 모음 항목 편집](image-images/ib02.png "도구 모음 항목 편집")
+4. **이미지 이름** 드롭다운에서 **Resources** 폴더에 추가한 이미지를 선택 합니다. 
 
-     [![도구 모음 항목에 대 한 이미지를 선택 하](image-images/ib03.png "도구 모음 항목에 대 한 이미지를 선택 합니다.")](image-images/ib03-large.png#lightbox)
+     [![도구 모음 항목의 이미지 선택](image-images/ib03.png "도구 모음 항목의 이미지 선택")](image-images/ib03-large.png#lightbox)
 5. 선택한 이미지가 디자인 화면에 표시 됩니다. 
 
      ![도구 모음 편집기에 표시 되는 이미지](image-images/ib04.png "도구 모음 편집기에 표시 되는 이미지")
-6. 변경 내용을 저장 하 고 Xcode와 동기화 하는 Mac 용 Visual Studio로 돌아갑니다.
+6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-해당 이미지 속성에서 설정할 수 있는 UI 요소에 대해 위의 단계를 작업 합니다 **특성 검사기**합니다. 마찬가지로 포함 된 경우는 **@2x** 이미지 파일의 버전을 자동으로 사용 됩니다에서 레 티 나 디스플레이 기반 Mac.
+위의 단계는 **특성 검사자**에서 이미지 속성을 설정할 수 있도록 하는 모든 UI 요소에 대해 작동 합니다. 이미지 파일의 **@2x** 버전을 포함 한 경우에는 레 티 나 표시 기반 mac에서 자동으로 사용 됩니다.
 
 > [!IMPORTANT]
-> 이미지에서 사용할 수 없는 경우는 **이미지 이름을** 드롭다운에서.storyboard 프로젝트를 닫은 다음 Xcode에서 mac 용 Visual Studio를 닫았다가 이미지를 여전히 사용할 수 없는 경우 해당 **빌드 작업** 됩니다 `BundleResource` 및 이미지에 추가 된를 **리소스** 폴더.
+> 이미지 **이름** 드롭다운에서 이미지를 사용할 수 없는 경우 Xcode에서 storyboard 프로젝트를 닫고 Mac용 Visual Studio에서 다시 엽니다. 이미지를 아직 사용할 수 없는 경우 해당 **빌드 작업이** 이 `BundleResource` 고 이미지가 **Resources** 폴더에 추가 되었는지 확인 합니다.
 
-## <a name="using-images-in-c-code"></a>이미지를 사용 하 여 C# 코드
+## <a name="using-images-in-c-code"></a>코드에서 C# 이미지 사용
 
-C# 코드를 사용 하 여 Xamarin.Mac 응용 프로그램에서 메모리에 이미지를 로드할 때 이미지에 저장 됩니다는 `NSImage` 개체입니다. 이미지 파일 (리소스 포함) Xamarin.Mac 응용 프로그램 번들에 포함 되어 있습니다, 이미지를 로드 하려면 다음 코드를 사용 합니다.
+Xamarin.ios 응용 프로그램의 코드를 사용 C# 하 여 메모리에 이미지를 로드할 때 이미지는 `NSImage` 개체에 저장 됩니다. 이미지 파일이 Xamarin.ios 응용 프로그램 번들에 포함 된 경우 (리소스에 포함) 다음 코드를 사용 하 여 이미지를 로드 합니다.
 
 ```csharp
 NSImage image = NSImage.ImageNamed("tags.png");
 ```
 
-위의 코드에서는 정적 `ImageNamed("...")` 메서드를 `NSImage` 클래스에서 메모리에 지정된 된 이미지를 로드 하는 **리소스** 폴더에서 이미지를 찾을 수 없는 경우 `null` 반환 됩니다. Interface Builder에서 할당 된 이미지와 같은 포함 하는 경우는 **@2x** 이미지 파일의 버전을 자동으로 사용 됩니다에서 레 티 나 디스플레이 기반 Mac.
+위의 코드에서는 `NSImage` 클래스의 정적 `ImageNamed("...")` 메서드를 사용 하 여 **리소스** 폴더에서 지정 된 이미지를 메모리로 로드 합니다. 이미지를 찾을 `null` 수 없는 경우이 반환 됩니다. Interface Builder에서 할당 된 이미지와 마찬가지로, 이미지 파일의 **@2x** 버전을 포함 한 경우 레 티 나 표시 기반 mac에서 자동으로 사용 됩니다.
 
-응용 프로그램의 번들 (Mac 파일 시스템)에서 외부에 있는 이미지를 로드 하려면 다음 코드를 사용 합니다.
+Mac 파일 시스템에서 응용 프로그램 번들 외부에 이미지를 로드 하려면 다음 코드를 사용 합니다.
 
 ```csharp
 NSImage image = new NSImage("/Users/KMullins/Documents/photo.jpg")
@@ -198,17 +198,17 @@ NSImage image = new NSImage("/Users/KMullins/Documents/photo.jpg")
 
 <a name="Working-with-Template-Images"/>
 
-## <a name="working-with-template-images"></a>템플릿 이미지를 사용 하 여 작업
+## <a name="working-with-template-images"></a>템플릿 이미지 작업
 
-MacOS 앱의 디자인에 따라 경우도 아이콘 또는 이미지 (예: 사용자 기본 설정에 따라) 색 구성표 변경에 맞게 사용자 인터페이스 내에서 사용자 지정 하는 경우가 있습니다.
+MacOS 앱의 디자인에 따라 색 구성표의 변경 (예: 사용자 기본 설정에 따라)과 일치 하도록 사용자 인터페이스 내에서 아이콘이 나 이미지를 사용자 지정 해야 하는 경우가 있을 수 있습니다.
 
-이 위해서는 전환 합니다 _렌더링 모드_ 에 이미지 자산의 **템플릿 이미지**:
+이 효과를 얻으려면 이미지 자산의 _렌더링 모드_ 를 **템플릿 이미지로**전환 합니다.
 
-[![템플릿 이미지를 설정](image-images/templateimage01.png "템플릿 이미지를 설정 합니다.")](image-images/templateimage01-large.png#lightbox)
+[![템플릿 이미지 설정](image-images/templateimage01.png "템플릿 이미지 설정")](image-images/templateimage01-large.png#lightbox)
 
-Xcode의 Interface Builder에서 이미지 자산 UI 컨트롤에 할당 합니다.
+Xcode의 Interface Builder에서 UI 컨트롤에 이미지 자산을 할당 합니다.
 
-![Xcode의 Interface Builder에서 이미지를 선택](image-images/templateimage02.png "Xcode의 Interface Builder에서 이미지 선택")
+![Xcode의 Interface Builder에서 이미지 선택](image-images/templateimage02.png "Xcode의 Interface Builder에서 이미지 선택")
 
 또는 필요에 따라 코드에서 이미지 소스를 설정 합니다.
 
@@ -216,7 +216,7 @@ Xcode의 Interface Builder에서 이미지 자산 UI 컨트롤에 할당 합니�
 MyIcon.Image = NSImage.ImageNamed ("MessageIcon");
 ```
 
-뷰 컨트롤러에 다음 공용 함수를 추가 합니다.
+다음 공용 함수를 뷰 컨트롤러에 추가 합니다.
 
 ```csharp
 public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
@@ -233,11 +233,11 @@ public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
 ```
 
 > [!IMPORTANT]
-> 특히 도입 되면서 어두운 모드 Mojave macOS에서, 것이 중요 하지 않으려면 합니다 `LockFocus` reating 사용자 지정 렌더링 될 때 API `NSImage` 개체입니다. 이러한 이미지는 정적 해지고 모양이 나 표시 밀도 변경에 대 한 계정에 자동으로 업데이트 되지 않습니다.
+> 특히 macos mojave에서 어두운 모드를 사용 하는 경우 사용자 지정 렌더링 `LockFocus` `NSImage` 된 개체를 다시 지정 하는 경우 API를 사용 하지 않는 것이 중요 합니다. 이러한 이미지는 정적이 되며 모양이 나 디스플레이 밀도 변경을 고려 하도록 자동으로 업데이트 되지 않습니다.
 >
-> 위의 처리기 기반 메커니즘을 사용 하 여 동적인 조건에 대 한 렌더링 다시 자동으로 발생 경우 합니다 `NSImage` 에서 호스팅되는, 예를 들어는 `NSImageView`합니다.
+> 위의 처리기 기반 메커니즘을 `NSImage` 사용 하는 경우와 같이가 호스팅될 `NSImageView`때 동적 조건을 다시 렌더링 하면 자동으로 발생 합니다.
 
-마지막으로 템플릿 이미지를 색칠 할 색을 지정 하려면 이미지에 대해이 함수를 호출 합니다.
+마지막으로 템플릿 이미지의 농도를 검사 하려면 이미지에 대해이 함수를 색으로 호출 합니다.
 
 ```csharp
 MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
@@ -245,9 +245,9 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 <a name="Using_Images_with_Table_Views" />
 
-## <a name="using-images-with-table-views"></a>테이블 뷰를 사용 하 여 이미지를 사용 하 여
+## <a name="using-images-with-table-views"></a>테이블 뷰에서 이미지 사용
 
-셀의 일부로 이미지를 포함 하는 `NSTableView`에서 테이블 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetViewForItem` 메서드를 사용 하 여를 `NSTableCellView` 대신 일반적인 `NSTextField`합니다. 예를 들어:
+에 `NSTableView`있는 셀의 일부로 이미지를 포함 하려면 테이블 `NSTableViewDelegate's` `GetViewForItem` 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 일반적인 `NSTextField`대신를 `NSTableCellView` 사용 해야 합니다. 예:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -306,7 +306,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 }
 ```
 
-몇 가지 흥미로운 몇 줄 있습니다. 먼저 이미지를 포함 하려는 열에 대 한 것을 새로 만듭니다 `NSImageView` 필요한 크기와 위치를 만듭니다 새 `NSTextField` 이미지로 사용 여부에 따라 기본 위치로 배치:
+여기에는 몇 줄의 관심이 있습니다. 첫째, 이미지를 포함 하려는 열에 대해 필요한 크기와 위치를 새로 `NSImageView` 만들고, 이미지를 사용 하 고 있는지 여부에 따라 새 `NSTextField` 을 만들고 기본 위치를 배치 합니다.
 
 ```csharp
 if (tableColumn.Title == "Product") {
@@ -318,7 +318,7 @@ if (tableColumn.Title == "Product") {
 }
 ```
 
-둘째, 부모에 새 이미지 뷰 및 텍스트 필드를 포함 해야 `NSTableCellView`:
+두 번째로, 부모 `NSTableCellView`에 새 이미지 뷰와 텍스트 필드를 포함 해야 합니다.
 
 ```csharp
 view.AddSubview (view.ImageView);
@@ -329,7 +329,7 @@ view.AddSubview (view.TextField);
 
 ```
 
-마지막으로, 축소 및 테이블 뷰 셀을 사용 하 여 증가 수는 텍스트 필드를 지시 해야 합니다.
+마지막으로 테이블 뷰 셀을 사용 하 여 축소 하 고 확장할 수 있는 텍스트 필드에 지시 해야 합니다.
 
 ```csharp
 view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
@@ -337,15 +337,15 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 예제 출력:
 
-[![앱에서 이미지를 표시 하는 예로](image-images/tables01.png "앱에서 이미지를 표시 하는 예제")](image-images/tables01-large.png#lightbox)
+[![앱에서 이미지를 표시] 하는 예제 (image-images/tables01.png "앱에서 이미지를 표시") 하는 예제](image-images/tables01-large.png#lightbox)
 
-테이블 뷰를 사용 하 여 작업에 대 한 자세한 내용은 참조 하십시오 우리의 [테이블 뷰](~/mac/user-interface/table-view.md) 설명서.
+테이블 뷰 작업에 대 한 자세한 내용은 [테이블 뷰](~/mac/user-interface/table-view.md) 설명서를 참조 하세요.
 
 <a name="Using_Images_with_Outline_Views" />
 
-## <a name="using-images-with-outline-views"></a>개요 보기를 사용 하 여 이미지를 사용 하 여
+## <a name="using-images-with-outline-views"></a>개요 보기가 포함 된 이미지 사용
 
-셀의 일부로 이미지를 포함 하는 `NSOutlineView`, 개요 보기의 데이터가 반환 되는 방식을 변경 해야 `NSTableViewDelegate's` `GetView` 메서드를 사용 하 여를 `NSTableCellView` 일반적인 대신 `NSTextField`합니다. 예를 들어:
+`NSOutlineView`에서 셀의 일부로 이미지를 포함 하려면 개요 `NSTableViewDelegate's` `GetView` 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 일반적인 `NSTextField`대신를 `NSTableCellView` 사용 해야 합니다. 예를 들어:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -409,7 +409,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-몇 가지 흥미로운 몇 줄 있습니다. 먼저 이미지를 포함 하려는 열에 대 한 것을 새로 만듭니다 `NSImageView` 필요한 크기와 위치를 만듭니다 새 `NSTextField` 이미지로 사용 여부에 따라 기본 위치로 배치:
+여기에는 몇 줄의 관심이 있습니다. 첫째, 이미지를 포함 하려는 열에 대해 필요한 크기와 위치를 새로 `NSImageView` 만들고, 이미지를 사용 하 고 있는지 여부에 따라 새 `NSTextField` 을 만들고 기본 위치를 배치 합니다.
 
 ```csharp
 if (tableColumn.Title == "Product") {
@@ -421,7 +421,7 @@ if (tableColumn.Title == "Product") {
 }
 ```
 
-둘째, 부모에 새 이미지 뷰 및 텍스트 필드를 포함 해야 `NSTableCellView`:
+두 번째로, 부모 `NSTableCellView`에 새 이미지 뷰와 텍스트 필드를 포함 해야 합니다.
 
 ```csharp
 view.AddSubview (view.ImageView);
@@ -432,7 +432,7 @@ view.AddSubview (view.TextField);
 
 ```
 
-마지막으로, 축소 및 테이블 뷰 셀을 사용 하 여 증가 수는 텍스트 필드를 지시 해야 합니다.
+마지막으로 테이블 뷰 셀을 사용 하 여 축소 하 고 확장할 수 있는 텍스트 필드에 지시 해야 합니다.
 
 ```csharp
 view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
@@ -440,22 +440,22 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 예제 출력:
 
-[![개요 뷰에서 표시 되는 이미지의 예로](image-images/outline01.png "개요 보기에서 표시 되는 이미지의 예")](image-images/outline01-large.png#lightbox)
+[![개요 뷰에 표시 되는 이미지의 예](image-images/outline01.png "개요 뷰에 표시 되는 이미지의 예")](image-images/outline01-large.png#lightbox)
 
-작업 개요 보기에 대 한 자세한 내용은 참조 하십시오 우리의 [개요 보기](~/mac/user-interface/outline-view.md) 설명서.
+개요 보기를 사용 하는 방법에 대 한 자세한 내용은 [개요 보기](~/mac/user-interface/outline-view.md) 설명서를 참조 하세요.
 
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Mac 응용 프로그램에서 이미지 및 아이콘을 사용 하 여 작업을 자세히 살펴보려면을 걸렸습니다. 다양 한 종류를 확인 하 고 이미지, Xcode의 Interface Builder에서 이미지 및 아이콘을 사용 하는 방법 및 C# 코드에서 이미지 및 아이콘을 사용 하 여 작업 하는 방법을 사용 합니다.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지 및 아이콘을 사용 하는 방법에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 이미지와 아이콘을 사용 하는 방법 및 코드에서 C# 이미지와 아이콘을 사용 하는 방법에 대 한 다양 한 형식 및 사용 방법을 살펴보았습니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacImages(샘플)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages(샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [테이블 뷰](~/mac/user-interface/table-view.md)
+- [테이블 보기](~/mac/user-interface/table-view.md)
 - [개요 보기](~/mac/user-interface/outline-view.md)
 - [macOS X 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
 - [OS X용 고해상도 정보](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)

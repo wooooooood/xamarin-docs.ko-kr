@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290783"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647311"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _다른 스트로크 단면 있는 선을 그리려면 SkiaSharp 사용 방법 알아보기_
 
@@ -30,7 +30,7 @@ SkiaSharp, 전혀 렌더링에서는 일련의 연결 된 직선 렌더링에서
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 하지만 또 다른 문제를 발생 시키는 많은 두께의 그리기 줄을 시작 하면: 시작 되 고 이러한 두꺼운 선 끝 렌더링 되는 방식을?
+기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 하지만 조정 가능한 두께의 선 그리기를 시작 하면 다른 문제가 발생 합니다. 이러한 굵은 선의 시작과 끝을 렌더링 하는 방법은 무엇입니까?
 
 작업이 시작 되 고 줄 끝 모양을 라고는 *선 끝 모양을* 또는 Skia는 *스트로크 단면*합니다. "이 컨텍스트에서" cap 라는 단어는 hat의 종류를 의미 &mdash; 줄의 끝에 위치 하는 것입니다. 설정한 합니다 [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) 의 속성을 `SKPaint` 개체의 다음 멤버 중 하나를 [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) 열거형:
 
@@ -38,7 +38,7 @@ canvas.DrawLine (x0, y0, x1, y1, paint);
 - `Square`
 - `Round`
 
-이러한 샘플 프로그램을 통해 잘 설명 됩니다. **SkiaSharp 선 및 경로** 섹션을 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 라는 제목의 페이지를 사용 하 여 프로그램 시작 **스트로크 단면** 기반으로 [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) 클래스입니다. 이 페이지에서는 정의 `PaintSurface` 의 세 멤버를 반복 하는 이벤트 처리기는 `SKStrokeCap` 열거형 멤버의 이름을 둘 다를 표시 하 고 해당 스트로크 단면을 사용 하는 선을 그리기 열거형:
+이러한 샘플 프로그램을 통해 잘 설명 됩니다. **SkiaSharp 선 및 경로** 섹션을 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 라는 제목의 페이지를 사용 하 여 프로그램 시작 **스트로크 단면** 기반으로 [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) 클래스입니다. 이 페이지에서는 정의 `PaintSurface` 의 세 멤버를 반복 하는 이벤트 처리기는 `SKStrokeCap` 열거형 멤버의 이름을 둘 다를 표시 하 고 해당 스트로크 단면을 사용 하는 선을 그리기 열거형:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -242,4 +242,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

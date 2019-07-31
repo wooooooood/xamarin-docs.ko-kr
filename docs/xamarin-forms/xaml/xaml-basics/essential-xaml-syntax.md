@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 60add066d581afffeaa200769efcdff9e0644535
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309492"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646567"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML은 주로 인스턴스화 및 초기화 개체에 대 한 설계 되었습니다. 하지만 종종 속성을 XML 문자열로 쉽게 표현할 수 없는 복잡한 개체 속성으로 설정해야 하고 하나의 클래스에 의해 정의된 속성을 자식 클래스에 설정해야 하는 경우가 있습니다. 따라서 속성 요소 및 연결 속성이라는 필수 XAML 구문 기능이 필요합니다._
 
@@ -143,7 +143,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </Label>
 ```
 
-다른 예제입니다. 합니다 `Grid` 라는 두 속성이 `RowDefinitions` 고 `ColumnDefinitions`합니다. 해당 두 속성은 `RowDefinitionCollection`및 `ColumnDefinitionCollection` 형식이며, 이들은 `RowDefinition` 및 `ColumnDefinition` 개체의 컬렉션입니다. 이러한 컬렉션을 설정하려면 속성 요소 구문을 사용해야 합니다.
+또 다른 예는 다음과 같습니다. 에 `Grid` 는 `RowDefinitions` 및`ColumnDefinitions`라는 두 개의 속성이 있습니다. 해당 두 속성은 `RowDefinitionCollection`및 `ColumnDefinitionCollection` 형식이며, 이들은 `RowDefinition` 및 `ColumnDefinition` 개체의 컬렉션입니다. 이러한 컬렉션을 설정하려면 속성 요소 구문을 사용해야 합니다.
 
 다음은 `GridDemoPage` 클래스에 대한 XAML 파일의 시작 부분으로, `RowDefinitions` 및 `ColumnDefinitions` 컬렉션에 대한 속성 요소 태그를 보여줍니다.
 
@@ -351,7 +351,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 </ContentPage>
 ```
 
-현실적인 질문 다음과 같습니다. 이러한 속성 요소 이유는 무엇 인가요 *되지* 는 XAML 파일에 필요한?
+실제 질문은 다음과 같습니다. 이러한 속성 요소가 XAML 파일에 필요 *하지* 않은 이유는 무엇 인가요?
 
 XAML에서 사용하기 위해 Xamarin.Forms에 정의된 요소는 클래스의 `ContentProperty` 특성에 플래그가 지정된 하나의 속성을 가질 수 있습니다. 온라인 Xamarin.Forms 문서에서 `ContentPage` 클래스를 검색하면 해당 특성을 볼 수 있습니다.
 
@@ -384,7 +384,7 @@ if (Device.RuntimePlatform == Device.iOS)
 }
 ```
 
-XAML 사용 하 여 비슷한 수행할 수도 있습니다는 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 하 고 [ `On` ](xref:Xamarin.Forms.On) 클래스입니다. 먼저 페이지의 상단 근처의 `Padding` 속성을 위해 다음과 같이 속성 요소를 추가합니다.
+[`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) [및`On`](xref:Xamarin.Forms.On) 클래스를 사용 하 여 XAML에서 유사한 작업을 수행할 수도 있습니다. 먼저 페이지의 상단 근처의 `Padding` 속성을 위해 다음과 같이 속성 요소를 추가합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -524,7 +524,7 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 ```
 
 > [!NOTE]
-> `OnPlatform` 태그 확장 사용할 수도 있습니다 XAML에서 플랫폼별 기준 UI 모양을 사용자 지정할 수 있습니다. 동일한 기능을 제공 합니다 `OnPlatform` 및 `On` 클래스 하지만 보다 간결 하 게 표현 합니다. 자세한 내용은 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)합니다.
+> `OnPlatform` 태그 확장을 XAML에서 사용 하 여 플랫폼 별로 UI 모양을 사용자 지정할 수도 있습니다. 이 클래스는 `OnPlatform` 및 `On` 클래스와 같은 기능을 제공 하지만 좀 더 간결 하 게 표현 합니다. 자세한 내용은 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)합니다.
 
 ## <a name="summary"></a>요약
 
@@ -532,7 +532,7 @@ Android 및 UWP의 `Padding`은 기본값으로 설정되어 있으므로, 다�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

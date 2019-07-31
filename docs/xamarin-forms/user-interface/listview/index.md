@@ -7,21 +7,21 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: f9a3f6301005210d221f3223607e82adc0971a32
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 4aae2a206f07ea6caa7fc0d7530fb9fec05ce5f0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741025"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648425"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
 
-[`ListView`](xref:Xamarin.Forms.ListView) 스크롤이 필요한 긴 목록 특히 데이터의 목록을 제공 하기 위한 뷰입니다.
+[`ListView`](xref:Xamarin.Forms.ListView)는 스크롤을 필요로 하는 데이터 목록, 특히 긴 목록을 제공 하는 뷰입니다.
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) 데이터의 목록을 표시 하는 것에 대 한 뷰를 다른 레이아웃 사양을 사용 합니다. 보다 유연한 제공 하려고 하 고에 효율적인 대안 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)합니다.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)는 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하는 뷰입니다. 보다 유연 하 고 성능이 뛰어난 대안 [`ListView`](xref:Xamarin.Forms.ListView)을 제공 하는 것을 목표로 합니다. 자세한 내용은 [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)를 참조 하세요.
 
 ## <a name="use-cases"></a>사용 사례
 
@@ -62,10 +62,10 @@ ListView의 대화형 기능에 대 한 자세한 내용은 참조 하세요 [Li
 
 ## <a name="related-links"></a>관련 링크
 
-- [ListView와 작업 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListview)
-- [양방향 바인딩을 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
-- [셀의 기본 제공 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [사용자 지정 셀 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [그룹화 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [사용자 지정 렌더러 보기 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/WorkingWithListviewNative)
-- [ListView 대화형 작업 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [ListView와 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)
+- [양방향 바인딩을 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+- [셀의 기본 제공 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [사용자 지정 셀 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [그룹화 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [사용자 지정 렌더러 보기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative/)
+- [ListView 대화형 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

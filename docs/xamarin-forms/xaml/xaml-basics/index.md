@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: e85eb64099ba60a2b3663730a6fb058efdac6c60
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d46744c20874dd122b63e56ec92c7aa5ae6562e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211271"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656997"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
-XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (Model View ViewModel) 응용 프로그램 아키텍처를 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
+XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 태그를 사용하여 Xamarin.Forms 응용 프로그램의 사용자 인터페이스를 정의할 수 있도록 해줍니다. XAML은 Xamarin.Forms 프로그램에서 반드시 필요한 것은 아니지만 종종 동일한 코드보다 더 간결하고 시각적으로 더 일관되는 경향이 있습니다. XAML은 인기 있는 MVVM (모델-뷰-ViewModel) 응용 프로그램 아키텍처와 함께 사용 하는 데 특히 적합 합니다. XAML은 XAML 기반의 데이터 바인딩을 통해 ViewModel 코드에 연결된 뷰를 정의할 수 있습니다.
 
 ## <a name="xaml-basics-contents"></a>XAML 기본 콘텐츠
 
@@ -107,6 +107,6 @@ Xamarin.Forms 및 XML에 익숙한 경우, [1장. XAML 시작하기](~/xamarin-f
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [모바일 앱 책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)

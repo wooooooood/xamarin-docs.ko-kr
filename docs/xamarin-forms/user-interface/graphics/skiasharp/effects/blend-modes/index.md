@@ -7,16 +7,16 @@ ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 3ea05563ecbca95d26d692d5424c30e961229ac5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8071f310e899575699e1d0b925541f2863b00676
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61021214"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645182"
 ---
 # <a name="skiasharp-blend-modes"></a>SkiaSharp blend 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 이러한 문서에 집중 합니다 [ `BlendMode` ](xref:SkiaSharp.SKPaint.BlendMode) 속성을 [ `SKPaint` ](xref:SkiaSharp.SKPaint)합니다. 합니다 `BlendMode` 형식의 속성은 [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode), 29 멤버로 구성 된 열거형입니다.
 
@@ -46,13 +46,13 @@ SkiaSharp blend 모드는 W3C에서 설명 하는 것을 정확 하 게 일치 [
 
 이러한 세 가지 범주의 이름이 나오는 토론에서 더 많은 의미 수행 합니다. 멤버 여기 나열 된 순서와 동일의 정의 `SKBlendMode` 열거형입니다. 첫 번째 열에서 13 열거형 멤버는 0 ~ 12 정수 값을 갖습니다. 두 번째 열은 정수 13 ~ 24에 해당 하는 열거형 멤버 있고 세 번째 열에 있는 멤버 25 ~ 28의 값입니다.
 
-이러한 혼합 모드에 대해서는 설명 _약_ 과 동일한 순서로 W3C **합성 하 고 수준 1 혼합** 문서는 몇 가지 차이점이 있지만: 합니다 `Src` 모드 라고 _복사_ W3C 문서의 및 `Plus` 라고 _밝은_합니다. W3C 문서 정의 _정규_ 에 포함 되지 않은 혼합 모드 `SKBlendModes` 것이 동일 하기 때문에 `SrcOver`입니다. `Modulate` 혼합 모드 (첫 번째 열의 맨 위에 있음) W3C 문서와의 토론에 포함 되지 합니다 `Multiply` 모드 앞에 오는 `Screen`합니다.
+이러한 blend 모드는 W3C **합성 및 혼합 수준 1** 문서에서 _거의_ 동일한 순서로 설명 되지만 몇 가지 차이점이 있습니다. W3C 문서에서이 `Plus` 모드를복사라고하며,이는더가벼운이라고`Src` 합니다. W3C 문서 정의 _정규_ 에 포함 되지 않은 혼합 모드 `SKBlendModes` 것이 동일 하기 때문에 `SrcOver`입니다. `Modulate` 혼합 모드 (첫 번째 열의 맨 위에 있음) W3C 문서와의 토론에 포함 되지 합니다 `Multiply` 모드 앞에 오는 `Screen`합니다.
 
 때문에 `Modulate` blend 모드가 Skia에 고유한, 추가 Porter 임신 모드를와 분리 가능 모드를 설명 합니다.
 
 ## <a name="the-importance-of-transparency"></a>투명도의 중요성
 
-합성 개념이와 함께에서 지금까지 개발한 합니다 _알파 채널_합니다. 표시에서 화면 같은 `SKCanvas` 각 픽셀 4 바이트로 이루어져 전체 색 비트맵 및 개체: 1 바이트 각 빨강, 녹색 및 파랑 구성 요소 및 투명도 대 한 추가 바이트입니다. 이 알파 구성 요소에는 완전 한 투명성에 대 한 0에서 0xFF 투명도 값 간의 차이 사용 하 여 전체 불투명도 합니다.
+합성 개념이와 함께에서 지금까지 개발한 합니다 _알파 채널_합니다. `SKCanvas` 개체 및 전체 색 비트맵과 같은 표시 표면에서 각 픽셀은 4 바이트로 구성 됩니다. 빨강, 녹색 및 파랑 구성 요소 각각에 대해 1 바이트, 투명성에 대 한 추가 바이트 이 알파 구성 요소에는 완전 한 투명성에 대 한 0에서 0xFF 투명도 값 간의 차이 사용 하 여 전체 불투명도 합니다.
 
 다양 한 혼합 모드 투명도에 의존합니다. 일반적으로 경우는 `SKCanvas` 에 처음으로 가져올를 `PaintSurface` 처리기 때나는 `SKCanvas` 만들어집니다 비트맵에 그릴 첫 번째 단계는이 호출:
 
@@ -93,4 +93,4 @@ SkiaSharp 그래픽 뒤 빨간색 배경이이 자체는 SkiaSharp 캔버스 이
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

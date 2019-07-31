@@ -7,28 +7,28 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: d32ef0176f0eff5981720d9e83568a7a40d0a396
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: 8c55fecc8605b8bb7312e658e5edf46008f6b6ce
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687149"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651346"
 ---
 # <a name="xamarinforms-button"></a>Xamarin.Forms 단추
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _단추를 탭 하거나 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다._
 
 합니다 [ `Button` ](xref:Xamarin.Forms.Button) 모든 Xamarin.Forms의 가장 기본적인 대화형 컨트롤입니다. `Button` 명령 하지만 나타내는 짧은 텍스트 문자열 수도 표시 비트맵 이미지를 또는 텍스트의 조합 및 이미지를 표시 하는 일반적으로 합니다. 사용자가 `Button` 손가락을 사용 하 여 명령을 시작 하려면 마우스로 클릭 하거나 탭 할 합니다.
 
-아래 설명 된 항목의 대부분의 페이지에 해당 합니다 [ **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) 샘플입니다.
+아래 설명 된 항목의 대부분의 페이지에 해당 합니다 [ **ButtonDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플입니다.
 
 ## <a name="handling-button-clicks"></a>클릭할 단추 처리
 
 `Button` 정의 된 [ `Clicked` ](xref:Xamarin.Forms.Button.Clicked) 사용자가 누를 때 실행 되는 이벤트를 `Button` 손가락이 나 마우스 포인터를 사용 하 여 합니다. 이벤트의 화면에서 손가락이 나 마우스 단추를 놓으면 발생 합니다 `Button`합니다. `Button` 있어야 해당 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 속성이로 설정 `true` 탭에 응답 해야 합니다.
 
-**기본 단추 클릭** 페이지를 [ **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) 샘플을 인스턴스화하는 방법을 보여 줍니다를 `Button` XAML 핸들에 해당 `Clicked` 이벤트. **BasicButtonClickPage.xaml** 파일에는 `StackLayout` 둘 다를 사용 하 여를 `Label` 및 `Button`:
+**기본 단추 클릭** 페이지를 [ **ButtonDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플을 인스턴스화하는 방법을 보여 줍니다를 `Button` XAML 핸들에 해당 `Clicked` 이벤트. **BasicButtonClickPage.xaml** 파일에는 `StackLayout` 둘 다를 사용 하 여를 `Label` 및 `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -138,7 +138,7 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>단추를 사용 하지 않도록 설정
 
-경우에 따라 응용 프로그램은 특정 상태의 경우 특정 `Button` 클릭은 올바른 작업이 아닙니다. 이러한 경우에는 `Button` 해야 사용할 수 없게 설정 하 여 해당 `IsEnabled` 속성을 `false`입니다. 전형적인 예는 `Entry` 열려 있는 파일-동반 파일 이름에 대 한 제어 `Button`: 합니다 `Button` 에 일부 텍스트를 입력 하는 경우에 사용 해야는 `Entry`합니다.
+경우에 따라 응용 프로그램은 특정 상태의 경우 특정 `Button` 클릭은 올바른 작업이 아닙니다. 이러한 경우에는 `Button` 해야 사용할 수 없게 설정 하 여 해당 `IsEnabled` 속성을 `false`입니다. 클래식 예제는 파일 열기 `Entry` `Button`와 함께 파일 이름에 대 한 컨트롤입니다. 는 일부 텍스트를에 `Entry`입력 한 경우에만 사용할 수 있습니다. `Button`
 사용할 수는 `DataTrigger` 에 표시 된 대로이 태스크에 대 한는 [ **데이터 트리거** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) 문서.
 
 ## <a name="using-the-command-interface"></a>인터페이스를 사용 하 여
@@ -152,7 +152,7 @@ button.Clicked += OnButtonClicked;
 
 MVVM 응용 프로그램에서는 ViewModel 형식의 속성을 정의 `ICommand` 는 XAML에 연결 되어 있는 `Button` 데이터 바인딩 사용 하 여 요소입니다. Xamarin.Forms 정의 [ `Command` ]((xref:Xamarin.Forms.Command)) 하 고 [ `Command<T>` ](xref:Xamarin.Forms.Command`1) 구현 하는 클래스는 `ICommand` 인터페이스 및 형식의 속성정의ViewModel을지원하는`ICommand`.
 
-문서에 자세히 설명 되어 명령 [ **The 명령 인터페이스** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 되지만 **기본 단추 명령** 페이지에 [  **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) 샘플에는 기본적인 방법을 보여 줍니다.
+문서에 자세히 설명 되어 명령 [ **The 명령 인터페이스** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 되지만 **기본 단추 명령** 페이지에 [  **ButtonDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플에는 기본적인 방법을 보여 줍니다.
 
 합니다 `CommandDemoViewModel` 클래스는 형식의 속성을 정의 하는 매우 간단한 ViewModel `double` 라는 `Number`, 및 형식의 두 가지 속성 `ICommand` 라는 `MultiplyBy2Command` 및 `DivideBy2Command`:
 
@@ -268,7 +268,7 @@ class CommandDemoViewModel : INotifyPropertyChanged
 
 두 개 이상에 대 한 있기 `Button` 요소를 동일 하 게 바인딩할 수 `ICommand` 속성입니다. 합니다 `Button` 요소를 사용 하 여 구분할 수는 [ `CommandParameter` ](xref:Xamarin.Forms.Button.CommandParameter) 속성의 `Button`합니다. 이 예에서는 사용 하려는 제네릭 [ `Command<T>` ](xref:Xamarin.Forms.Command`1) 클래스입니다. 합니다 `CommandParameter` 개체를 인수로 전달 되는 `execute` 및 `canExecute` 메서드. 이 기술은에 자세히 표시 됩니다는 [ **기본 명령** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) 섹션의 [ **명령 인터페이스** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) 문서.
 
-합니다 [ **ButtonDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) 샘플에서이 기술을 사용 하 여 해당 `MainPage` 클래스입니다. **MainPage.xaml** 파일 포함을 `Button` 샘플의 각 페이지에 대 한 합니다.
+합니다 [ **ButtonDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) 샘플에서이 기술을 사용 하 여 해당 `MainPage` 클래스입니다. **MainPage.xaml** 파일 포함을 `Button` 샘플의 각 페이지에 대 한 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -409,7 +409,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
 [![단추를 눌렀다](button-images/PressAndReleaseButton.png "누른 단추")](button-images/PressAndReleaseButton-Large.png)
 
-이러한 유형의 동작이 게임에 대 한 응용 프로그램에 있습니다. 보유 한 손가락을 `Button` on 화면 개체가 특정 방향으로 이동 해야 합니다.
+이러한 종류의 동작에는 게임 응용 프로그램이 있습니다. 에 있는 손가락이 `Button` 화면 개체를 특정 방향으로 이동할 수 있습니다.
 
 <a name="button-appearance" />
 
@@ -582,7 +582,7 @@ UWP에서 선택 하는 `CornerRadius` 높이의 절반을 초과 하는 `Button
 
 ## <a name="creating-a-toggle-button"></a>설정/해제 단추 만들기
 
-서브 클래스 수 `Button` 켜기 / 끄기 스위치를 같은 작동 되도록 합니다. 설정/해제 단추를 해제 하기 위해 다시 탭 한 번만 단추를 누릅니다.
+온-오프 스위치와 `Button` 같이 작동 하도록 서브 클래스를 사용할 수 있습니다. 단추를 한 번 누르고 단추를 다시 탭 하 여 설정/해제 합니다.
 
 다음 `ToggleButton` 클래스에서 파생 되며 `Button` 라는 새 이벤트를 정의 하 고 `Toggled` 및 라는 부울 속성이 `IsToggled`합니다. 다음은 Xamarin.Forms를 정의한 동일한 두 개의 속성 [ `Switch` ](xref:Xamarin.Forms.Switch):
 
@@ -750,7 +750,7 @@ IOS, Android 및 UWP에서 실행 중인 프로그램이 다음과 같습니다.
 
 `Button` 클래스 정의 [ `ImageSource` ](xref:Xamarin.Forms.Button.Image) 에서 비트맵 이미지를 표시할 수 있는 속성을 `Button`, 단독으로 또는 텍스트와 함께에서 합니다. 텍스트 및 이미지 정렬 방식을 지정할 수 있습니다.
 
-합니다 `ImageSource` 형식의 속성은 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), 즉, 파일, 포함된 리소스, URI 또는 스트림에서 비트맵을 로드할 수 있습니다.
+속성은 형식 [`ImageSource`](xref:Xamarin.Forms.ImageSource)입니다. 즉, 파일, 포함 된 리소스, URI 또는 스트림에서 비트맵을 로드할 수 있습니다. `ImageSource`
 
 Xamarin.Forms에서 지 원하는 각 플랫폼 이미지를 응용 프로그램에서 실행 될 수 있는 다양 한 장치의 다른 픽셀 해상도 대해 다양 한 크기에 저장할 수 있습니다. 여러 비트맵은 명명 된 또는 저장 장치의 비디오에 대 한 운영 체제 가장 일치 하는 중 선택할 수는 방식으로 디스플레이 해상도입니다.
 
@@ -887,5 +887,5 @@ UWP 비트맵은 프로젝트의 루트 디렉터리에 저장 되 면이 태그
 
 ## <a name="related-links"></a>관련 링크
 
-- [ButtonDemos 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos)
+- [ButtonDemos 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 - [단추 API](xref:Xamarin.Forms.Button)

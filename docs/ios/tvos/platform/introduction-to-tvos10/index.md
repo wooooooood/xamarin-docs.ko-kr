@@ -1,71 +1,71 @@
 ---
 title: tvOS 10 소개
-description: 이 아티클에서 Xamarin.tvOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 tvOS 10에서에서 사용할 수 있는 기능을 소개합니다.
+description: 이 문서에서는 tvOS 개발자를 위해 tvOS 10에서 제공 되는 새로운 Api 및 수정 된 Api 및 기능을 모두 소개 합니다.
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 6bad05f62fa9168818aa9a2e73cc1e2830af03b3
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 1b362d91e14d85499099a0fed3637fb128474ef9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830030"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657417"
 ---
 # <a name="introduction-to-tvos-10"></a>tvOS 10 소개
 
-_이 아티클에서 Xamarin.tvOS 개발자를 위한 모든 새로운 기능과 수정 된 Api 및 tvOS 10에서에서 사용할 수 있는 기능을 소개합니다._
+_이 문서에서는 tvOS 개발자를 위해 tvOS 10에서 제공 되는 새로운 Api 및 수정 된 Api 및 기능을 모두 소개 합니다._
 
-새 tvOS를 사용 하 여 새 Api 및 서비스 개발자가 앱 및 기능의 새 범주를 만들 수 있도록 10 SDK Apple가 포함 됩니다. 
+새 tvOS 10 SDK Apple에는 개발자가 새로운 범주의 앱 및 기능을 만들 수 있도록 하는 새로운 Api 및 서비스가 포함 되었습니다. 
 
-TvOS 10에 대 한 자세한 내용은 Apple의를 참조 하세요 [tvOS 앱 +](https://developer.apple.com/tvos/) 설명서.
+TvOS 10에 대 한 자세한 내용은 Apple의 [tvOS + Apps](https://developer.apple.com/tvos/) 설명서를 참조 하세요.
 
-## <a name="whats-new-in-tvos-10"></a>TvOS 10에서 새 란
+## <a name="whats-new-in-tvos-10"></a>TvOS 10의 새로운 기능
 
-Apple이 Api 및 서비스에 대 한 몇 가지 새 tvOS 10 함께 기존 기능을 비롯 한 향상 된 기능에에서 추가 합니다.
+Apple은 다음을 비롯 한 기존 기능에 대 한 여러 향상 된 기능을 통해 tvOS 10에 몇 가지 새로운 Api 및 서비스를 추가 했습니다.
 
-## <a name="new-user-interface-styles"></a>새로운 사용자 인터페이스 스타일
+## <a name="new-user-interface-styles"></a>새 사용자 인터페이스 스타일
 
-tvOS 10 지원은 자동으로 컨트롤에 UIKit의 모든 어둡게 및 밝게 사용자 인터페이스 테마에 맞게, 이제 사용자의 기본 설정을 기반으로 합니다.
+이제 tvOS 10은 사용자의 기본 설정에 따라 모든 기본 UIKit 컨트롤이 자동으로 조정 되는 짙은 사용자 인터페이스 테마를 모두 지원 합니다.
 
-개발자를 만들고 새 사용자 지정 UI 컨트롤을 구현 하는 경우 사용 해야 합니다 [UITraitCollection](https://developer.apple.com/reference/uikit/uitraitcollection) 사용자의 선택한 테마에 맞게 클래스입니다.
+새 사용자 지정 UI 컨트롤을 만들고 구현할 때 개발자는 [Uitraitcollection](https://developer.apple.com/reference/uikit/uitraitcollection) 클래스를 사용 하 여 사용자가 선택한 테마에 맞게 조정 해야 합니다.
 
-자세한 내용은 참조 하십시오 우리의 [새 사용자 인터페이스 스타일](~/ios/tvos/platform/user-interface-styles.md) 설명서.
+자세한 내용은 [새로운 사용자 인터페이스 스타일](~/ios/tvos/platform/user-interface-styles.md) 설명서를 참조 하세요.
 
-## <a name="security-and-privacy-enhancements"></a>보안 및 개인 정보 보호 향상
+## <a name="security-and-privacy-enhancements"></a>보안 및 개인 정보 향상
 
-Apple은 보안 및 개인 정보 보호 개발자가 앱의 보안을 강화 하 고 최종 사용자의 개인 정보 보호에 도움이 되는 tvOS 10에에서 모두 몇 가지 향상 되었습니다.
+Apple은 tvOS 10의 보안 및 개인 정보 모두에 대해 몇 가지 향상 된 기능을 통해 개발자가 앱의 보안을 개선 하 고 최종 사용자의 개인 정보를 확인 하는 데 도움이 됩니다.
 
-WatchOS 3 (이상)에서 실행 중인 앱에서 하나 이상의 개인 특정 키를 입력 하 여 특정 기능 또는 사용자 정보에 액세스 하려면 의도 해야 정적으로 선언 하는 결과적으로, 해당 `Info.plist` 앱에 액세스 하려는 이유는 사용자에 게 설명 하는 파일입니다.
+따라서 watchOS 3 이상에서 실행 되는 앱은 해당 `Info.plist` 파일에 하나 이상의 개인 정보 키를 입력 하 여 특정 기능 또는 사용자 정보에 액세스할 수 있도록 정적으로 선언 해야 합니다.
 
-TvOS 10 iOS 10 사용 하 여 이러한 변경 내용을 공유 하므로 iOS 10을 참조 하세요 [보안 및 개인 정보 보호 향상](~/ios/app-fundamentals/security-privacy.md) 자세한 가이드입니다.
+TvOS 10은 이러한 변경 내용을 iOS 10과 공유 하므로 iOS 10 [보안 및 개인 정보 향상](~/ios/app-fundamentals/security-privacy.md) 가이드를 참조 하 여 자세한 내용을 확인 하세요.
 
 ## <a name="video-subscriber-account"></a>비디오 구독자 계정
 
-새 tvOS 10에 대 한 비디오 구독자 계정 프레임 워크 앱 허용 스트리밍 인증 지원 또는 주문형 비디오는 단일 로그인 환경을 사용 하 여 최종 사용자에 게 해당 케이블 또는 위성 TV 공급자를 사용 하 여 인증 하는 합니다.
+TvOS 10의 새로운 기능으로, 비디오 구독자 계정 프레임 워크는 인증 된 스트리밍 또는 주문형 비디오를 지 원하는 앱이 최종 사용자에 게 Single Sign-on 환경을 사용 하 여 케이블 또는 위성 TV 공급자를 인증 하도록 허용 합니다.
 
 <!--To find out more, please see our [Video Subscriber Account](~/ios/platform-features/introduction-to-ios10/video-subscriber-account/) guide.-->
 
 ## <a name="wide-color"></a>와이드 컬러
 
-tvOS 10 확장 범위 픽셀 형식 및 AVFoundation 핵심 그래픽, Core 이미지, 금속 등 프레임 워크를 비롯 한 시스템 전체에서 광범위 한 색상 공간에 대 한 지원도 확장 되었습니다. 와이드 컬러 디스플레이 사용 하 여 장치에 대 한 지원은 전체 그래픽 스택 전체에서이 동작을 제공 하 여 용이 추가 됩니다.
+tvOS 10은 핵심 그래픽, 핵심 이미지, 금속 및 AVFoundation과 같은 프레임 워크를 포함 하 여 시스템 전체의 확장 범위 픽셀 형식 및 넓은 색 영역 색 공간에 대 한 지원을 확장 합니다. 넓은 색 표시를 사용 하는 장치에 대 한 지원은 전체 그래픽 스택에이 동작을 제공 하 여 추가로 줄어들 됩니다.
 
-또한 `UIKit` 수정 된 새 작업을 확장 **sRGB** 색상 공간을 간편 하 게 중요 한 성능 손실 없이 광범위 한 색 색상의 색을 혼합 합니다.
+또한는 새로운 확장 된 sRGB colorspace에서 작동 하도록 수정 되어 상당한 성능 손실 없이 광범위 한 색 gamuts 색을 더 쉽게 혼합할 수 있게 되었습니다. `UIKit`
 
-Apple에서는 다양 한 색을 사용 하 여 작업 하는 경우 다음 모범 사례를 제공 합니다.
+Apple은 넓은 색으로 작업할 때 다음과 같은 모범 사례를 제공 합니다.
 
-- `UIColor` 사용 하는 sRGB 색 공간을 더 이상 고정 값을 이제는 `0.0` 에 `1.0` 범위입니다. 앱을 이전 하는 제한 동작에 의존 하는 경우 10 tvOS에 대 한 수정 해야 합니다.
-- 앱의 사용자 지정 렌더링을 수행 하는 경우 `UIImages`를 사용 하 여 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 확장 범위 또는 표준 범위 형식의 사용을 지정 하는 클래스입니다.
-- 핵심 그래픽 또는 체제 미 설치 컴퓨터와 같은 하위 수준 API를 사용 하 여 이미지 처리를 앱을 확장된 범위 색 공간과 픽셀 지 원하는 형식으로 16 비트 부동 소수점 값을 사용 해야 합니다. 필요한 경우 앱을 수동으로 색 구성 요소 값을 고정 해야 합니다.
-- 핵심 그래픽, Core 이미지 및 체제 미 설치 컴퓨터 성능 셰이더 모든 두 색 공간 변환 하기 위한 새 메서드를 제공 합니다.
+- `UIColor`이제는 sRGB 색 공간을 사용 하며이 값은 더 이상 `0.0` to `1.0` 범위로 값을 클램프 하지 않습니다. 앱이 이전 클램프 동작에 의존 하는 경우에는 tvOS 10에 대해 수정 해야 합니다.
+- 앱이의 `UIImages`사용자 지정 렌더링을 수행 하는 경우 새 [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) 클래스를 사용 하 여 확장 범위 또는 표준 범위 형식의 사용을 지정 합니다.
+- 핵심 그래픽 또는 금속과 같은 하위 수준 API를 사용 하 여 이미지 처리를 제공 하는 경우 앱은 16 비트 부동 소수점 값을 지 원하는 확장 된 범위 색 공간과 픽셀 형식을 사용 해야 합니다. 필요한 경우 앱은 색 구성 요소 값을 수동으로 클램프 해야 합니다.
+- 핵심 그래픽, 핵심 이미지 및 금속 성능 셰이더는 모두 두 색상 공간 간을 변환 하기 위한 새로운 방법을 제공 합니다.
 
-자세한 내용을 참조 하세요 우리의 [와이드 컬러 소개](~/ios/platform/wide-color.md) 가이드입니다.
+자세히 알아보려면 [Wide Color 소개](~/ios/platform/wide-color.md) 가이드를 참조 하세요.
 
 ## <a name="newly-available-existing-frameworks"></a>새로 사용 가능한 기존 프레임 워크
 
-IOS (및 tvOS 없습니다)에서 사용할 수 있었던 여러 프레임 워크 사용할 수 있게 된 tvOS 10에 대 한 예:
+IOS에서 사용할 수 있는 몇 가지 프레임 워크 (tvOS 아님)는 tvOS 10 (예:)에서 사용할 수 있었습니다.
 
 - ExternalAccessory
 - HomeKit
@@ -74,19 +74,19 @@ IOS (및 tvOS 없습니다)에서 사용할 수 있었던 여러 프레임 워�
 - ReplayKit
 - UserNotification
 
-## <a name="additional-framework-changes"></a>프레임 워크 추가 변경 내용
+## <a name="additional-framework-changes"></a>추가 프레임 워크 변경
 
-주요 프레임 워크 변경 내용 및 위에 나열 된 추가 외에 Apple tvOS 10에서에서 많은 사소한 추가 프레임 워크 변경을 했습니다.
+Apple은 위에 나열 된 주요 프레임 워크 변경 및 추가 사항 외에도 tvOS 10에서 추가 사소한 프레임 워크 변경을 많이 수행 했습니다.
 
-자세한 내용을 참조 하세요 우리의 [추가 프레임 워크 변경 내용](~/ios/tvos/platform/introduction-to-tvos10/additional-framework-changes.md) 가이드입니다.
+자세히 알아보려면 [추가 프레임 워크 변경](~/ios/tvos/platform/introduction-to-tvos10/additional-framework-changes.md) 가이드를 참조 하세요.
 
 ## <a name="deprecated-apis"></a>사용되지 않는 API
 
-Api 또는 프레임 워크 없습니다 된 tvOS 10에서 사용 되지 않습니다. Apple의를 참조 하세요 [tvOS 10 API 차이점](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) API 수정 목록은 설명서.
+Api 또는 프레임 워크는 tvOS 10에서 더 이상 사용 되지 않습니다. API 수정의 전체 목록은 Apple의 [tvOS 10 Api 차이점](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) 설명서를 참조 하세요.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://developer.xamarin.com/samples/tvos/all/)
-- [TvOS 10의에서 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)
+- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [TvOS 10의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

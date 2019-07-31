@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 512aa2b54ec22acf8308b3452bfeee2318097b57
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 187befd88c115133a92aa90a711438e7754518d5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978141"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648800"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>Xamarin.Forms FlexLayout
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _스택 또는 자식 뷰의 컬렉션을 래핑 FlexLayout를 사용 합니다._
 
@@ -27,13 +27,13 @@ Xamarin.Forms [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout) Xamarin.Forms 버�
 
 `FlexLayout` 파생 [ `Layout<View>` ](xref:Xamarin.Forms.Layout`1) 상속 된 [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) 형식의 속성 `IList<View>`합니다.
 
-`FlexLayout` 6 개의 바인딩 가능한 속성을 공개 하 고 크기, 방향 및 해당 자식 요소의 맞춤에 영향을 주는 5 개의 연결 된 바인딩 가능한 속성을 정의 합니다. (연결 된 바인딩 가능한 속성을 사용 하 여 잘 모르는 경우 문서를 참조  **[연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)**.) 이러한 속성은 아래 섹션에서 자세히 설명 **[세부 정보에 바인딩 가능한 속성](#bindable-properties)** 하 고  **[세부정보에서연결된된바인딩가능한속성](#attached-properties)**. 이 문서에서는 일부에 대 한 섹션이 시작 하는 반면 **[일반적인 사용 시나리오](#common-scenarios)** 의 `FlexLayout` 설명 하는 이러한 속성 중 상당수 보다 쉽게 이야기 합니다. 이 문서 끝부분 결합 하는 방법을 살펴보겠습니다 `FlexLayout` 사용 하 여 [CSS 스타일 시트](~/xamarin-forms/user-interface/styles/css/index.md)합니다.
+`FlexLayout` 6 개의 바인딩 가능한 속성을 공개 하 고 크기, 방향 및 해당 자식 요소의 맞춤에 영향을 주는 5 개의 연결 된 바인딩 가능한 속성을 정의 합니다. (연결 된 바인딩 가능한 속성을 사용 하 여 잘 모르는 경우 문서를 참조  **[연결 된 속성](~/xamarin-forms/xaml/attached-properties.md)** .) 이러한 속성은 아래 섹션에서 자세히 설명 **[세부 정보에 바인딩 가능한 속성](#bindable-properties)** 하 고  **[세부정보에서연결된된바인딩가능한속성](#attached-properties)** . 이 문서에서는 일부에 대 한 섹션이 시작 하는 반면 **[일반적인 사용 시나리오](#common-scenarios)** 의 `FlexLayout` 설명 하는 이러한 속성 중 상당수 보다 쉽게 이야기 합니다. 이 문서 끝부분 결합 하는 방법을 살펴보겠습니다 `FlexLayout` 사용 하 여 [CSS 스타일 시트](~/xamarin-forms/user-interface/styles/css/index.md)합니다.
 
 <a name="common-scenarios" />
 
 ## <a name="common-usage-scenarios"></a>일반적인 사용 시나리오
 
-합니다 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 의 몇 가지 일반적인 용도 보여 주는 여러 페이지를 포함 하는 샘플 프로그램 `FlexLayout` 해당 속성을 사용 하 여 실험할 수 있습니다.
+합니다 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 의 몇 가지 일반적인 용도 보여 주는 여러 페이지를 포함 하는 샘플 프로그램 `FlexLayout` 해당 속성을 사용 하 여 실험할 수 있습니다.
 
 ### <a name="using-flexlayout-for-a-simple-stack"></a>FlexLayout를 사용 하 여 간단한 스택
 
@@ -92,7 +92,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 페이지는
 
 ### <a name="using-flexlayout-for-wrapping-items"></a>항목의 FlexLayout를 사용 하 여
 
-**사진 래핑** 페이지를 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플과 어떻게 `FlexLayout` 자식을 추가 행 또는 열을 래핑할 수 있습니다. XAML 파일은는 `FlexLayout` 의 두 가지 속성을 할당 합니다.
+**사진 래핑** 페이지를 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 샘플과 어떻게 `FlexLayout` 자식을 추가 행 또는 열을 래핑할 수 있습니다. XAML 파일은는 `FlexLayout` 의 두 가지 속성을 할당 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -192,7 +192,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 웹 디자인 호출 중인 표준 레이아웃 합니다 [ _인프라도_ ](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) 매우 효과적 이지만 자주 한가요 구현 하기가 레이아웃 형식 이므로 합니다. 레이아웃은 페이지의 맨 위에 있는 헤더 및 바닥글 페이지의 전체 너비로 확장 맨 아래에 구성 됩니다. 기본 콘텐츠를 콘텐츠 및 보조 정보를 왼쪽에 열 메뉴를 사용 하 여 않지만 종종가 차지 하는 페이지의 가운데 (라고도 _따로_ 영역) 오른쪽에 있는 합니다. [CSS 유연한 상자 레이아웃 사양의 단원 5.4.1](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) flex 상자를 사용 하 여 인프라도 레이아웃을 실현할 수 있습니다 하는 방법에 대해 설명 합니다.
 
-**인프라도 레이아웃** 페이지의 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플 하나를 사용 하 여이 레이아웃의 간단한 구현을 보여 줍니다. `FlexLayout` 다른 중첩 합니다. 이 페이지를 세로 모드로 휴대폰에 대 한 디자인 된 수 있으므로 콘텐츠 영역의 오른쪽 및 왼쪽 영역만 50 픽셀입니다.
+**인프라도 레이아웃** 페이지의 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 샘플 하나를 사용 하 여이 레이아웃의 간단한 구현을 보여 줍니다. `FlexLayout` 다른 중첩 합니다. 이 페이지를 세로 모드로 휴대폰에 대 한 디자인 된 수 있으므로 콘텐츠 영역의 오른쪽 및 왼쪽 영역만 50 픽셀입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -261,7 +261,7 @@ public partial class PhotoWrappingPage : ContentPage
 
 ### <a name="catalog-items-with-flexlayout"></a>FlexLayout 사용 하 여 카탈로그 항목
 
-**카탈로그 항목** 페이지에 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플 비슷합니다 [CSSFlex레이아웃상자사양의섹션1.1의예제1](http://www.w3.org/TR/css-flexbox-1/#overview)표시 된다는 점을 제외를 가로로 스크롤할 수 있는 일련의 사진 및 세 가지 원숭이 설명은:
+**카탈로그 항목** 페이지에 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 샘플 비슷합니다 [CSSFlex레이아웃상자사양의섹션1.1의예제1](http://www.w3.org/TR/css-flexbox-1/#overview)표시 된다는 점을 제외를 가로로 스크롤할 수 있는 일련의 사진 및 세 가지 원숭이 설명은:
 
 [![카탈로그 항목 페이지](flex-layout-images/CatalogItems.png "카탈로그 항목 페이지")](flex-layout-images/CatalogItems-Large.png#lightbox)
 
@@ -384,11 +384,11 @@ public partial class PhotoWrappingPage : ContentPage
 지금까지 살펴본 몇 가지 일반적인 응용 프로그램의 했으므로 `FlexLayout`, 속성을 `FlexLayout` 자세히 탐색할 수 있습니다.
 `FlexLayout` 에 설정 하는 6 개의 바인딩 가능한 속성 정의 `FlexLayout` 코드 또는 컨트롤 방향 및 맞춤을 XAML 자체입니다. (이러한 속성 중 하나 [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position),이 문서에서는 다루지 않습니다.)
 
-다섯 가지 나머지 바인딩 가능한 속성을 사용 하 여 실험할 수 있습니다 합니다 **실험** 페이지의 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플. 이 페이지에서는 추가 하거나에서 자식을 제거할 수 있습니다는 `FlexLayout` 및 5 바인딩 가능한 속성 조합을 설정 합니다. 모든 자식을 `FlexLayout` 는 `Label` 다양 한 색과 크기의 뷰 사용 하 여는 `Text` 숫자에 해당 하는 해당 위치를 설정 하는 속성을 `Children` 컬렉션.
+다섯 가지 나머지 바인딩 가능한 속성을 사용 하 여 실험할 수 있습니다 합니다 **실험** 페이지의 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 샘플. 이 페이지에서는 추가 하거나에서 자식을 제거할 수 있습니다는 `FlexLayout` 및 5 바인딩 가능한 속성 조합을 설정 합니다. 모든 자식을 `FlexLayout` 는 `Label` 다양 한 색과 크기의 뷰 사용 하 여는 `Text` 숫자에 해당 하는 해당 위치를 설정 하는 속성을 `Children` 컬렉션.
 
 시작 될 때 프로그램을 5 `Picker` 이러한 5 개 기본 값을 표시 하는 뷰 `FlexLayout` 속성입니다. `FlexLayout` 화면 아래쪽에 세 명의 자식을 포함 합니다.
 
-[![실험 페이지: 기본](flex-layout-images/ExperimentDefault.png "실험 페이지-기본")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
+[![실험 페이지: 기본](flex-layout-images/ExperimentDefault.png "실험 페이지-기본값")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 각 합니다 `Label` 보기에는 할당 된 공간을 보여 주는 회색 배경이 `Label` 내는 `FlexLayout`합니다. 배경색을 `FlexLayout` 자체는 연한 청회색 합니다. 왼쪽 및 오른쪽에 작은 여백을 제외 하 고 페이지의 전체 아래쪽 영역을 차지 합니다.
 
@@ -407,7 +407,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 같습니다.는 **실험** (왼쪽에서 오른쪽)으로 표시 하는 페이지의 `Row` 방향 `Column` 방향 및 `ColumnReverse` 방향:
 
-[![실험 페이지: 방향](flex-layout-images/ExperimentDirection.png "방향 실험 페이지")](flex-layout-images/ExperimentDirection-Large.png#lightbox)
+[![실험 페이지: ](flex-layout-images/ExperimentDirection.png "실험 페이지") 방향 방향](flex-layout-images/ExperimentDirection-Large.png#lightbox)
 
 대 여 `Reverse` 오른쪽 또는 아래쪽에서 옵션을 항목의 시작 합니다.
 
@@ -423,7 +423,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 이 화면 왼쪽에서 오른쪽으로 표시 합니다 `NoWrap`하십시오 `Wrap` 및 `Reverse` 12 자식에 대 한 옵션:
 
-[![실험 페이지: 줄 바꿈](flex-layout-images/ExperimentWrap.png "실험 페이지-줄 바꿈")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
+[![실험 페이지: ](flex-layout-images/ExperimentWrap.png "실험 페이지 래핑-줄 바꿈")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
 경우는 `Wrap` 속성이 `NoWrap` 주 축 (예:이 프로그램)에 제한 되 고 기본 축이 전각 또는 모든 자식에 맞게 충분히 긴는 `FlexLayout` iOS 스크린 샷으로 더 작은 항목을 확인 하려고 합니다. 방법을 보여 줍니다. 가진 품목의 shrinkness를 제어할 수 있습니다.는 [ `Shrink` ](#shrink) 바인딩 가능 속성을 연결 합니다.
 
@@ -442,7 +442,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 이 속성에 지정 하는 방법 항목 정도 까우 며이 예제에서 가로 축에는 기본 축의 합니다.
 
-[![실험 페이지: 콘텐츠 맞춤](flex-layout-images/ExperimentJustifyContent.png "실험 페이지-콘텐츠 맞춤")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
+[![실험 페이지: 콘텐츠]양쪽 맞춤(flex-layout-images/ExperimentJustifyContent.png "실험 페이지-콘텐츠 맞춤")](flex-layout-images/ExperimentJustifyContent-Large.png#lightbox)
 
 모든 스크린샷 세 개에 `Wrap` 속성이 `Wrap`합니다. `Start` 기본 이전 Android 스크린샷에 표시 됩니다. IOS 다음 스크린샷에서 `Center` 옵션: 모든 항목 센터로 이동 됩니다. 세 가지 다른 옵션으로 시작 `Space` 항목 차지 하지 않는 추가 공간을 할당 합니다. `SpaceBetween` 할당 된 항목 동일 하 게 사이의 공간 `SpaceAround` puts 같은 각 항목 둘레의 공간 동안 `SpaceEvenly` puts 공간 각 항목 사이 및 첫 번째 항목 전후 행에서 마지막 항목 동일 합니다.
 
@@ -459,7 +459,7 @@ XAML, 소문자, 대문자, 열거형 멤버 이름을 사용 하 여이 속성�
 
 이 두 속성 중 하나입니다 (다른 되 고 [ `AlignContent` ](#align-content)) 자식 교차 축에 정렬 되는 방법을 나타내는입니다. 각 행 내에서 자식 (이전 스크린샷에 표시 된)으로 확장 기능은 다음 세 가지 스크린샷에서 표시 된 것 처럼 시작, 가운데 또는 각 항목의 끝에 정렬 합니다.
 
-[![실험 페이지: 항목 정렬](flex-layout-images/ExperimentAlignItems.png "실험 페이지-항목 정렬")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
+[![실험 페이지: 항목]맞춤(flex-layout-images/ExperimentAlignItems.png "실험 페이지에서 항목 맞춤")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
 
 IOS 스크린샷에서 모든 자식의 위쪽을 맞춥니다. Android 스크린샷에서 항목은 세로로 가운데에 가장 높은 자식 기반 합니다. UWP 스크린샷에 있는 모든 항목의 아래쪽 정렬 됩니다.
 
@@ -481,11 +481,11 @@ IOS 스크린샷에서 모든 자식의 위쪽을 맞춥니다. Android 스크�
 
 와 같은 `AlignItems`, `AlignContent` 속성 교차 축에 정렬 되지만 전체 행 또는 열에 영향을 줍니다.
 
-[![실험 페이지: 콘텐츠 맞춤](flex-layout-images/ExperimentAlignContent.png "실험 페이지-콘텐츠 맞춤")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
+[![실험 페이지: 내용]맞추기(flex-layout-images/ExperimentAlignContent.png "실험 페이지에") 콘텐츠 맞춤](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
 IOS 스크린샷에서; 맨 위에 있는 두 행은 Android 스크린 샷 있을 때에 센터; 그리고 UWP 스크린샷에서 맨 아래에서. 행은 다양 한 방법으로 간격이 수 있습니다.
 
-[![실험 페이지:  콘텐츠 2 align](flex-layout-images/ExperimentAlignContent2.png "실험 페이지-정렬 콘텐츠 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![실험 페이지:  내용 맞춤 2](flex-layout-images/ExperimentAlignContent2.png "실험 페이지-내용 맞춤 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 `AlignContent` 행 또는 열이 하나만 있으면 효과가 없습니다.
 
@@ -571,11 +571,11 @@ XAML, 장치 독립적 단위에서 크기에 대 한 숫자를 사용할 수 �
 <Label ... FlexLayout.Basis="25%" ... />
 ```
 
-**별로 실험** 페이지를 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플을 사용 하면 실험할 수 있습니다는 `Basis` 속성입니다. 페이지 5 래핑된 열이 표시 됩니다 `Label` 배경색 및 전경색을 교대로 반복 되는 요소입니다. 두 개의 `Slider` 요소에 지정할 수 있습니다 `Basis` 두 번째 및 네 번째 값 `Label`:
+**별로 실험** 페이지를 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 샘플을 사용 하면 실험할 수 있습니다는 `Basis` 속성입니다. 페이지 5 래핑된 열이 표시 됩니다 `Label` 배경색 및 전경색을 교대로 반복 되는 요소입니다. 두 개의 `Slider` 요소에 지정할 수 있습니다 `Basis` 두 번째 및 네 번째 값 `Label`:
 
 [![기본 페이지를 실험](flex-layout-images/BasisExperiment.png "기반 실험 페이지")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-왼쪽에 있는 iOS 스크린샷은 두 `Label` 장치 독립적 단위에서 높이 지정 된 요소입니다. 전체 높이의 비율을 된 높이 지정 된 Android 화면 표시를 `FlexLayout`입니다. 경우는 `Basis` 자식의 높이 100%로 설정 됩니다는 `FlexLayout`, 고 다음 열으로 줄 바꿈되면 하 및 UWP 스크린샷에서 보여 주듯이 해당 열의 전체 높이 차지 합니다: 5 명의 자식 행에 정렬 됩니다 있지만 실제로 5 개의 열에 정렬 처럼 표시 됩니다.
+왼쪽에 있는 iOS 스크린샷은 두 `Label` 장치 독립적 단위에서 높이 지정 된 요소입니다. 전체 높이의 비율을 된 높이 지정 된 Android 화면 표시를 `FlexLayout`입니다. 가 100%로 설정 된 경우 자식은 `FlexLayout`의 높이이 고 다음 열로 래핑하고 해당 열의 전체 높이를 차지 합니다. UWP 스크린샷에서는 다음을 보여 줍니다. `Basis` 5 개의 자식이 행에 정렬 되어 있는 것 처럼 보이지만 실제로는 5 개의 열로 정렬 됩니다.
 
 ### <a name="the-grow-property"></a>속성을 증가
 
@@ -609,7 +609,7 @@ Android 스크린 샷에서 `Shrink` 두 번째 값 `Label` 와 0으로 설정 �
 
 ## <a name="css-styling-with-flexlayout"></a>FlexLayout 사용 하 여 CSS 스타일 지정
 
-사용할 수는 [CSS 스타일이](~/xamarin-forms/user-interface/styles/css/index.md) 연결 하 여 Xamarin.Forms 3.0에 도입 된 기능 `FlexLayout`합니다. **CSS 카탈로그 항목** 페이지를 **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** 샘플의 레이아웃을 복제 합니다 **카탈로그 항목** 페이지 하지만 CSS를 사용 하 여 스타일 시트 스타일:
+사용할 수는 [CSS 스타일이](~/xamarin-forms/user-interface/styles/css/index.md) 연결 하 여 Xamarin.Forms 3.0에 도입 된 기능 `FlexLayout`합니다. **CSS 카탈로그 항목** 페이지를 **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** 샘플의 레이아웃을 복제 합니다 **카탈로그 항목** 페이지 하지만 CSS를 사용 하 여 스타일 시트 스타일:
 
 [![카탈로그 항목 페이지의 CSS](flex-layout-images/CssCatalogItems.png "CSS 카탈로그 항목 페이지")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
@@ -738,8 +738,8 @@ button {
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Xamarin.Forms 3.0 Flex Layout 비디오**
+**Xamarin.ios 3.0 Flex 레이아웃 비디오**
 
 ## <a name="related-links"></a>관련 링크
 
-- [FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)
+- [FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)

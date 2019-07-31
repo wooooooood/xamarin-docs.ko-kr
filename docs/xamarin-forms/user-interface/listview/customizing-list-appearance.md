@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169995"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647624"
 ---
 # <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-[`ListView`](xref:Xamarin.Forms.ListView) 외에 목록 표시를 제어 하는 기능에는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 목록의 각 행에 대 한 인스턴스.
+[`ListView`](xref:Xamarin.Forms.ListView)목록의 각 행에 대 한 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 인스턴스 외에도 목록의 표시를 제어할 수 있습니다.
 
 <a name="Grouping" />
 
@@ -78,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-위의 코드에서 호출할 수도 수 있습니다 `Add` 의 요소에 대 `groups`, 형식의 인스턴스는 `PageTypeGroup`합니다. 이것이 가능 하므로 `PageTypeGroup` 에서 상속 `List<PageModel>`합니다. 이 위에서 언급 한 목록 패턴 목록의 예입니다.
+위의 코드에서 형식의 `Add` `PageTypeGroup`인스턴스인의 `groups`요소에 대해를 호출할 수도 있습니다. 이것이 가능 하므로 `PageTypeGroup` 에서 상속 `List<PageModel>`합니다. 이 위에서 언급 한 목록 패턴 목록의 예입니다.
 
 그룹화 된 목록을 표시 하기 위한 XAML는 다음과 같습니다.
 
@@ -201,13 +201,13 @@ XAML:
 
 ![](customizing-list-appearance-images/header-custom.png "사용자 지정된 헤더 및 바닥글을 사용 하 여 ListView")
 
-## <a name="scrollbar-visibility"></a>스크롤 막대 표시 여부
+## <a name="scrollbar-visibility"></a>스크롤 막대 표시 유형
 
-[`ListView`](xref:Xamarin.Forms.ListView) 가 `HorizontalScrollBarVisibility` 하 고 `VerticalScrollBarVisibility` 속성을 가져오거나 설정를 [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) 가로나 세로로 스크롤 막대에 표시 되는 경우를 나타내는 값입니다. 두 속성은 다음 값으로 설정할 수 있습니다.
+[`ListView`](xref:Xamarin.Forms.ListView)에 `HorizontalScrollBarVisibility` 는 `VerticalScrollBarVisibility` 가로 또는 세로 스크롤 막대가 표시 될 [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) 때를 나타내는 값을 가져오거나 설정 하는 및 속성이 있습니다. 두 속성은 모두 다음 값으로 설정할 수 있습니다.
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) 플랫폼에 대 한 기본 스크롤 막대 동작을 나타내며의 기본값은는 `HorizontalScrollBarVisibility` 고 `VerticalScrollBarVisibility` 속성입니다.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 보기에는 콘텐츠를 맞추는 경우에 스크롤 막대 표시 수를 나타냅니다.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠 보기에 맞지 않는 경우에 스크롤 막대가 표시 되지 않습니다 나타냅니다.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)플랫폼의 기본 스크롤 막대 동작을 나타내며 `HorizontalScrollBarVisibility` 및 `VerticalScrollBarVisibility` 속성의 기본값입니다.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
 <a name="Row_Separators" />
 
@@ -219,7 +219,7 @@ XAML:
 
 기본 표시:
 
-C#: 
+C#:
 
 ```csharp
 SepratorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
@@ -235,7 +235,7 @@ XAML:
 
 None:
 
-C#: 
+C#:
 
 ```csharp
 SepratorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
@@ -251,7 +251,7 @@ XAML:
 
 통해 구분선의 색을 설정할 수도 있습니다는 `SeparatorColor` 속성:
 
-C#: 
+C#:
 
 ```csharp
 SepratorDemoListView.SeparatorColor = Color.Green;
@@ -280,7 +280,7 @@ XAML:
 
 ### <a name="custom-fixed-row-height"></a>사용자 지정 고정된 행 높이
 
-C#: 
+C#:
 
 ```csharp
 RowHeightDemoListView.RowHeight = 100;
@@ -301,7 +301,7 @@ XAML:
 행 높이 되 면 수동으로 설정할 필요가 없습니다 유의 `HasUnevenRows` 로 설정 된 `true`이므로 Xamarin.Forms에서 높이 자동으로 계산 됩니다.
 
 
-C#: 
+C#:
 
 ```csharp
 RowHeightDemoListView.HasUnevenRows = true;
@@ -342,8 +342,8 @@ void OnImageTapped (object sender, EventArgs args)
 
 ## <a name="related-links"></a>관련 링크
 
-- [그룹화 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
-- [사용자 지정 렌더러 보기 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [동적 크기 조정의 행 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/DynamicUnevenListCells/)
+- [그룹화 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [사용자 지정 렌더러 보기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [동적 크기 조정의 행 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [1.4 릴리스 정보](http://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [1.3 릴리스 정보](http://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

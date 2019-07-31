@@ -1,24 +1,24 @@
 ---
-title: IOS에서 VisualElement Drop 그림자
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 VisualElement에 그림자를 사용 하도록 설정 하는 iOS 플랫폼 특정을 사용 하는 방법을 설명 합니다.
+title: IOS의 VisualElement 드롭 그림자
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 VisualElement에서 그림자를 사용 하도록 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2147FD66-058E-4BE5-840A-369842B26EC4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 9c576be30eb4b456e2eabcb5a041c57e58bdc747
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 9d58576e67e6e8129b15f4935986c494bb093538
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925639"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649556"
 ---
-# <a name="visualelement-drop-shadows-on-ios"></a>IOS에서 VisualElement Drop 그림자
+# <a name="visualelement-drop-shadows-on-ios"></a>IOS의 VisualElement 드롭 그림자
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼별에서 그림자를 사용 하도록 설정 되는 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) 연결 된 속성을 `true`, 연결 된 그림자를 제어 하는 속성을 비롯 하 여 많은 추가 선택 사항:
+이 iOS 플랫폼 전용은에서 [`VisualElement`](xref:Xamarin.Forms.VisualElement)그림자를 설정 하는 데 사용 됩니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) 연결 된 속성을 `true`, 연결 된 그림자를 제어 하는 속성을 비롯 하 여 많은 추가 선택 사항:
 
 ```xaml
 <ContentPage ...
@@ -75,6 +75,6 @@ boxView.On<iOS>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e02b5631aff76e35300ae4d7dd5e3c6652f6e3da
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1c3be128749b9fd0f67aa83038b3d30f4b2fcd2d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61427186"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657534"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>탭 표시줄 및 Xamarin.iOS에 탭 표시줄 컨트롤러
 
@@ -61,7 +61,7 @@ ms.locfileid: "61427186"
 
 ### <a name="adding-the-uitabbarcontroller"></a>UITabBarController 추가
 
-다음으로 선택 하 여 빈 클래스를 추가할 **파일 > 새 파일** 선택 하 고는 **일반: 빈 클래스** 템플릿. 파일 이름을 `TabController` 아래와 같이:
+그런 다음 **파일 > 새 파일** 을 선택 하 고 일반을 선택 하 여 **빈 클래스를 추가 합니다. 빈 클래스** 템플릿입니다. 파일 이름을 `TabController` 아래와 같이:
 
 [![](creating-tabbed-applications-images/02-newclass.png "TabController 클래스 추가")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
@@ -283,8 +283,8 @@ Mac 용 visual Studio는 클래스 및 필요한 디자이너 파일에 자동�
 
 끌어 하고자를 `Label` 와 `Button` 에서 ViewController1에는 **도구 상자** 오른쪽에서. 다음 사용 하 여 Properties Pad 이름과 다음 컨트롤의 텍스트를 편집 합니다.
 
--  **Label** : `Text` = **One**
--  **단추** : `Title` = **사용자가 일부 초기 작업 수행**
+-  **레이블** : `Text` = **일회성**
+-  **단추** : `Title` = **사용자가 초기 작업을 수행 합니다.**
 
 
 이 단추의 표시 여부를 제어할 수는 것을 `TouchUpInside` 이벤트를 코드 숨김에 참조 하는 데 필요 합니다. 보겠습니다 식별 하는 **이름을** `aButton` 다음 스크린샷에 표시 된 것 처럼 Properties Pad에서:
@@ -370,6 +370,6 @@ public override void ViewDidLoad ()
 
 ## <a name="related-links"></a>관련 링크
 
-- [탭 응용 프로그램 (샘플) 만들기](https://developer.xamarin.com/samples/monotouch/CreatingTabbedApplications/)
+- [탭 응용 프로그램 (샘플) 만들기](https://docs.microsoft.com/samples/xamarin/ios-samples/creatingtabbedapplications)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
 - [UITabBarController 클래스 참조](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: f9c7ada224cefc9bb80e0bcba370d0dee4a664c9
-ms.sourcegitcommit: 25be5acf979f6b18b6d0e64392c9ab307259c032
+ms.openlocfilehash: 36e2869ec272f74b1d76a3cdab7a63a6fbf0780d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603845"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642936"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Xamarin.Forms 사용자 인터페이스 보기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Xamarin.Forms에서 제공 하는 뷰를 사용 하는 방법_
 
@@ -146,4 +146,4 @@ Xamarin.Forms는 각 플랫폼에서 기본 웹 브라우저 컨트롤을 사용
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms 갤러리(샘플)](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms 갤러리(샘플)](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)

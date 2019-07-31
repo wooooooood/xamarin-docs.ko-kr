@@ -7,16 +7,16 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 8a533dd48acf698667044d600338555b6c00a0ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61181347"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648738"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본적인 애니메이션
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법 알아보기_
 
@@ -24,7 +24,7 @@ _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법 알아보기_
 
 ![](animation-images/animationexample.png "여러 동심원 센터에서 보이는 확장")
 
-합니다 **Pulsating 타원** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램 애니메이션 효과 적용 되는 타원의 두 가지 축을 pulsating 수에 표시 되도록 하 고 제어할 수 있습니다는 이 pulsation의 비율입니다. 합니다 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 뷰를 사용 하 여:
+합니다 **Pulsating 타원** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램 애니메이션 효과 적용 되는 타원의 두 가지 축을 pulsating 수에 표시 되도록 하 고 제어할 수 있습니다는 이 pulsation의 비율입니다. 합니다 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 뷰를 사용 하 여:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -250,4 +250,4 @@ public class ExpandingCirclesPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

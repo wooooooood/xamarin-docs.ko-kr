@@ -6,39 +6,39 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 535eabe07cb4f4d36e6a6f918b5717efcc99185d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 08738a751fd630c6a413b1c7393f8007f5c97060
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023559"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643554"
 ---
 # <a name="fingerprint-authentication-guidance"></a>지문 인증 지침
 
 ## <a name="fingerprint-authentication-guidance"></a>지문 인증 지침
 
-Android 6.0 관련 Api 지문 인증 개념을 살펴본를 지문 Api 사용에 대 한 몇 가지 일반적인 조언을 살펴보겠습니다.
+Android 6.0 지문 인증을 둘러싼 개념 및 Api를 살펴보았으므로 이제 지문 Api 사용에 대 한 몇 가지 일반적인 조언을 살펴보겠습니다.
 
-1. **Android 지원 라이브러리 v4 호환성 Api를 사용 하 여** &ndash; 을 코드에서 API 검사를 제거 하 여 응용 프로그램 코드를 단순화 하 고 응용 프로그램 대상 장치 가장을 허용 합니다.
-2. **그러나 지문 인증에 대 한 대안을 제공** &ndash; 지문 authentication는 사용자를 인증 하는 응용 프로그램에 대 한 훌륭한 빠른 방법, 가정할 수 없습니다는 것은 항상 작동 또는 사용할 수 있습니다. 지문 스캐너를 실패할 수 있습니다, 렌즈 아마도 더티 수, 사용자 장치가 지문 인증을 사용 하도록 구성 되지 않을 수 있습니다 하거나 지문이 이후 가능성이 있습니다. 사용자 응용 프로그램을 사용 하 여 지문 인증을 사용 하도록 하지 않을 수 이기도 합니다. 이러한 이유로 Android 응용 프로그램에 사용자 이름 및 암호와 같은 대체 인증 프로세스를 제공 해야 합니다.
-3. **Google의 지문 아이콘을 사용 하 여** &ndash; 모든 응용 프로그램에는 Google에서 제공 되는 동일한 지문 아이콘을 사용 해야 합니다. 표준 아이콘을 사용 하면 Android 사용자가 앱에서 지문 인증 사용 되는 위치 인식 하기 쉬운: 
+1. **Android 지원 라이브러리 V4 호환성 Api 사용** &ndash; 이렇게 하면 코드에서 API 검사를 제거 하 여 응용 프로그램 코드를 간소화 하 고 응용 프로그램에서 가능한 대부분의 장치를 대상으로 지정할 수 있습니다.
+2. **지문 인증에 대 한 대안 제공** &ndash; 지문 인증은 응용 프로그램이 사용자를 인증 하는 매우 빠른 방법 이지만 항상 작동 하거나 사용할 수 있는 것으로 간주할 수 없습니다. 지문 스캐너가 실패 하거나, 렌즈가 더티 이거나, 사용자가 지문 인증을 사용 하도록 장치를 구성 하지 않았거나, 지문이 누락 된 후에도이 문제가 발생할 수 있습니다. 사용자가 응용 프로그램에서 지문 인증을 사용 하지 않을 수도 있습니다. 이러한 이유로 Android 응용 프로그램은 사용자 이름 및 암호와 같은 대체 인증 프로세스를 제공 해야 합니다.
+3. **Google의 지문 아이콘 사용** &ndash; 모든 응용 프로그램은 Google에서 제공 하는 것과 동일한 지문 아이콘을 사용 해야 합니다. 표준 아이콘을 사용 하면 Android 사용자가 앱에서 지문 인증을 사용 하는 위치를 쉽게 인식할 수 있습니다. 
     
     ![Android 지문 아이콘](summary-images/ic-fp-40px.png)
     
-4. **사용자에 게 알릴** &ndash; 응용 프로그램에는 일종의 지문 스캐너를 활성화 되어 있음을 사용자에 게 알림 표시 해야을 터치 하거나 안쪽으로 살짝 밀어 기다립니다. 
+4. **사용자에 게 알림** &ndash; 응용 프로그램은 지문 스캐너가 활성 상태이 고 터치 또는 살짝 밀기를 대기 하는 사용자에 게 일종의 알림을 표시 해야 합니다. 
 
 ## <a name="summary"></a>요약
 
-지문 인증에는 신속 하 게 쉽게 앱에서 바로 구매와 같은 중요 한 기능을 사용 하 여 상호 작용 하는 사용자에 대 한 사용자를 확인 하려면 Xamarin.Android 응용 프로그램을 허용 하는 좋은 방법입니다. 이 가이드에는 개념 및 API의 Xamarin.Android 응용 프로그램에 Android 6.0 지문을 통합 하는 데 필요한 코드를 설명 합니다.
+지문 인증을 사용 하면 Xamarin Android 응용 프로그램에서 사용자를 신속 하 게 확인 하 여 앱에서 바로 구매와 같은 중요 한 기능을 보다 쉽게 조작할 수 있습니다. 이 가이드에서는 Xamarin Android 응용 프로그램에 Android 6.0 지문 API를 통합 하는 데 필요한 개념 및 코드에 대해 설명 했습니다.
 
-API 자체의 지문을 먼저 설명한 `FingerprintManager` (및 `FingerprintManagerCompat`). 검사할 방법을 `FingerprintManager.AuthenticationCallbacks` 추상 클래스를 응용 프로그램에서 확장 하 고 지문 하드웨어 및 자체 응용 프로그램 간의 중개자로 사용 해야 합니다. Java를 사용 하 여 지문 스캐너 결과의 무결성을 확인 하는 방법을 검사한 다음 `Cipher` 개체입니다. 마지막으로 했습니다 touched 약간 지문을 장치를 등록 하는 방법을 설명 하 고 사용 하 여 테스트에 대 **adb** 지문 에뮬레이터에서 안쪽으로 살짝 밀어를 시뮬레이션할 수 있습니다. 
+먼저 지문 API 자체 `FingerprintManager` (및 `FingerprintManagerCompat`)에 대해 설명 했습니다. 응용 프로그램에서 추상 `FingerprintManager.AuthenticationCallbacks` 클래스를 확장 하 고 지문 하드웨어와 응용 프로그램 자체 사이에 중개자로 사용 하는 방법을 살펴보았습니다. 그런 다음 Java `Cipher` 개체를 사용 하 여 지문 스캐너 결과의 무결성을 확인 하는 방법을 살펴보았습니다. 마지막으로, 장치에 지문을 등록 하 고 **adb** 를 사용 하 여 에뮬레이터에서 지문 살짝 밀기를 시뮬레이션 하는 방법을 설명 하는 테스트에 대해 약간의 노력을 했습니다. 
 
-이미 않았다면 자세히 살펴보아야 합니다 [샘플 응용 프로그램](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) 이 가이드와 함께 제공 되는 합니다. 합니다 [지문 대화 샘플](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/) xamarin.android Java에서 이식 되었습니다 및 지문 인증 Android 응용 프로그램을 추가 하는 방법은 다른 예제를 제공 합니다.
+아직 수행 하지 않은 경우이 가이드와 함께 제공 되는 [샘플 응용 프로그램](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) 을 확인 해야 합니다. [지문 대화 상자 샘플](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) 은 Java에서 xamarin.ios로 이식 되었으며 android 응용 프로그램에 지문 인증을 추가 하는 방법에 대 한 또 다른 예제를 제공 합니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [지문 가이드 샘플 앱](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
-- [지문 대화 샘플](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
+- [지문 대화 상자 샘플](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [지문 아이콘](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)

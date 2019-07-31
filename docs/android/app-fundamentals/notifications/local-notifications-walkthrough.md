@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: fb70ea126216642af513036211f7dd2a86fd9559
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 61dedca1b89237bdd4669a63173b1c6e4fde072b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509535"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644300"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
@@ -265,7 +265,7 @@ namespace LocalNotifications
 
 ## <a name="related-links"></a>관련 링크
 
-- [LocalNotifications (샘플)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
+- [LocalNotifications (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
 - [Android Oreo 알림 채널](https://blog.xamarin.com/android-oreo-notification-channels/)
 - [알림](xref:Android.App.Notification)
 - [NotificationManager](xref:Android.App.NotificationManager)

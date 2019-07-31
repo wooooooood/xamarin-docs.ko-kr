@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 78a84fd8d4f380739a9f080a1a5aad7c5942d0c9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 38206812fbd746a63c5bff18111779c25deedc66
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511875"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648529"
 ---
 # <a name="xamarinforms-grid"></a>Xamarin.Forms 표
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`Grid`](xref:Xamarin.Forms.Grid) 지원 행과 열으로 뷰를 정렬 합니다. 가변 크기 또는 절대 크기는 행과 열을 설정할 수 있습니다. `Grid` 레이아웃 기존 테이블을 사용 하 여 혼동 해서는 안 됩니다 및 테이블 형식 데이터를 표시할 수 없습니다. `Grid` 행, 열 또는 셀 서식 개념이 없습니다. HTML 테이블과 달리 `Grid` 순수 하 게 콘텐츠를 배치 하기 위한 것입니다.
 
@@ -384,5 +384,5 @@ public CalculatorGridCode ()
 
 - [17 장 Xamarin.Forms를 사용 하 여 모바일 앱 만들기](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
 - [눈금](xref:Xamarin.Forms.Grid)
-- [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

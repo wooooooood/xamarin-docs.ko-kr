@@ -1,50 +1,50 @@
 ---
-title: Azure Active Directory B2C 사용 하 여 사용자 인증
-description: Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램에 대 한 클라우드 id 관리를 제공합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 사용 하 여 모바일 응용 프로그램에 id 관리를 통합할 방법을 보여 줍니다.
+title: Azure Active Directory B2C를 사용 하 여 사용자 인증
+description: Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램을 위한 클라우드 id 관리 기능을 제공 합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 통해 id 관리를 모바일 응용 프로그램에 통합 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: 06f5716c8decb21de39fd46abe734b5fdcd6bd43
-ms.sourcegitcommit: 0f78ec17210b915b43ddab75937de8063e472c70
+ms.openlocfilehash: 765f34af3b3c43531857b705bb4a39ea56e32f61
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67417943"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656131"
 ---
-# <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C 사용 하 여 사용자 인증
+# <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C를 사용 하 여 사용자 인증
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
-_Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램에 대 한 클라우드 id 관리를 제공합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 사용 하 여 모바일 응용 프로그램에 id 관리를 통합할 방법을 보여 줍니다._
+_Azure Active Directory B2C는 소비자 지향 웹 및 모바일 응용 프로그램을 위한 클라우드 id 관리 기능을 제공 합니다. 이 문서에서는 Azure Active Directory B2C를 사용 하 여 Microsoft 인증 라이브러리를 통해 id 관리를 모바일 응용 프로그램에 통합 하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
-Azure Active Directory B2C는 소비자 지향 응용 프로그램에 대 한 id 관리 서비스 (ADB2C). 사용자를 기존 소셜 계정 또는 전자 메일 또는 사용자 이름 및 암호와 같은 사용자 지정 자격 증명을 사용 하 여 응용 프로그램에 로그인 할 수 있습니다. 사용자 지정 자격 증명 계정 이라고 _로컬_ 계정.
+ADB2C (Azure Active Directory B2C)는 소비자 지향 응용 프로그램을 위한 id 관리 서비스입니다. 이를 통해 사용자는 기존 소셜 계정 또는 전자 메일, 사용자 이름 및 암호와 같은 사용자 지정 자격 증명을 사용 하 여 응용 프로그램에 로그인 할 수 있습니다. 사용자 지정 자격 증명 계정을 _로컬_ 계정 이라고 합니다.
 
 모바일 응용 프로그램에 Azure Active Directory B2C id 관리 서비스를 통합 하기 위한 프로세스는 다음과 같습니다.
 
 1. Azure Active Directory B2C 테 넌 트 만들기
 1. Azure Active Directory B2C 테 넌 트를 사용 하 여 모바일 응용 프로그램 등록
-1. 등록 및 로그인 정책 만들기 및 사용자 흐름 암호 잊음
-1. Azure Active Directory B2C 테 넌 트를 사용 하 여 인증 워크플로 시작 하려면 Microsoft 인증 라이브러리 (MSAL)를 사용 합니다.
+1. 등록 및 로그인에 대 한 정책 만들기 및 암호 사용자 흐름 잊음
+1. MSAL (Microsoft 인증 라이브러리)을 사용 하 여 Azure Active Directory B2C 테 넌 트를 사용 하 여 인증 워크플로를 시작 합니다.
 
 > [!NOTE]
-> Azure Active Directory B2C는 Microsoft, GitHub, Facebook, Twitter 등을 포함 한 여러 id 공급자를 지원 합니다. Azure Active Directory B2C 기능에 대 한 자세한 내용은 참조 하세요. [Azure Active Directory B2C 설명서](/azure/active-directory-b2c/)합니다.
+> Azure Active Directory B2C는 Microsoft, GitHub, Facebook, Twitter 등을 비롯 한 여러 id 공급자를 지원 합니다. Azure Active Directory B2C 기능에 대 한 자세한 내용은 [Azure Active Directory B2C 설명서](/azure/active-directory-b2c/)를 참조 하세요.
 >
-> Microsoft 인증 라이브러리는 여러 응용 프로그램 아키텍처 및 플랫폼을 지원합니다. MSAL 기능에 대 한 자세한 내용은 [Microsoft 인증 라이브러리](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) github입니다.
+> Microsoft 인증 라이브러리는 여러 응용 프로그램 아키텍처 및 플랫폼을 지원 합니다. MSAL 기능에 대 한 자세한 내용은 GitHub의 [Microsoft 인증 라이브러리](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) 를 참조 하세요.
 
-## <a name="configure-an-azure-active-directory-b2c-tenant"></a>Azure Active Directory B2C 테 넌 트를 구성 합니다.
+## <a name="configure-an-azure-active-directory-b2c-tenant"></a>Azure Active Directory B2C 테 넌 트 구성
 
 샘플 프로젝트를 실행 하려면 Azure Active Directory B2C 테 넌 트를 만들어야 합니다. 자세한 내용은 [Azure portal에서 Azure Active Directory B2C 테 넌 트를 만드는](/azure/active-directory-b2c/active-directory-b2c-get-started/)합니다.
 
-테 넌 트를 만든 후 해야 합니다 **테 넌 트 이름** 하 고 **테 넌 트 ID** 모바일 응용 프로그램을 구성 합니다. 테 넌 트 ID와 이름을 테 넌 트 URL을 만들 때 생성 된 도메인에 의해 정의 됩니다. 생성 된 테 넌 트 URL이 `https://contoso20190410tenant.onmicrosoft.com/` 는 **테 넌 트 ID** 됩니다 `contoso20190410tenant.onmicrosoft.com` 및 **테 넌 트 이름** 는 `contoso20190410tenant`합니다. 클릭 하 여 Azure portal에서 테 넌 트 도메인을 찾을 합니다 **디렉터리 및 구독 필터** 최상위 메뉴에서. 다음 스크린샷에서 Azure 디렉터리 및 구독 필터 단추 및 테 넌 트 도메인을 보여 줍니다.
+테 넌 트를 만든 후에는 모바일 응용 프로그램을 구성 하기 위해 테 넌 트 **이름** 및 **테 넌 트 ID** 가 필요 합니다. 테 넌 트 ID 및 이름은 테 넌 트 URL을 만들 때 생성 된 도메인에 의해 정의 됩니다. 생성 된 테 넌 트 URL `https://contoso20190410tenant.onmicrosoft.com/` 이 인 경우 테 `contoso20190410tenant.onmicrosoft.com` 넌 트 **ID** 는이 `contoso20190410tenant`고 **테 넌 트 이름은** 입니다. 상단 메뉴에서 **디렉터리 및 구독 필터** 를 클릭 하 여 Azure Portal에서 테 넌 트 도메인을 찾습니다. 다음 스크린샷은 Azure 디렉터리 및 구독 필터 단추와 테 넌 트 도메인을 보여 줍니다.
 
-[![Azure 디렉터리 및 구독 필터 보기에서 테 넌 트 이름](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
+[![Azure 디렉터리 및 구독 필터 보기의 테 넌 트 이름](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
 
-샘플 프로젝트에서 편집 합니다 **Constants.cs** 설정 하기 위해 파일을 `tenantName` 및 `tenantId` 필드. 다음 코드에서는 이러한 값을 설정 해야 하는 방법을 테 넌 트 도메인 인지 `https://contoso20190410tenant.onmicrosoft.com/`, 포털에서 값을 사용 하 여 이러한 값을 대체 합니다.
+샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `tenantName` 및 `tenantId` 필드를 설정 합니다. 다음 코드에서는 테 넌 트 도메인이 인 `https://contoso20190410tenant.onmicrosoft.com/`경우 이러한 값을 설정 하는 방법을 보여 줍니다 .이 값은 포털의 값으로 바꿉니다.
 
 ```csharp
 public static class Constants
@@ -57,17 +57,17 @@ public static class Constants
 
 ## <a name="register-your-mobile-application-with-azure-active-directory-b2c"></a>Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록
 
-모바일 응용 프로그램을 연결 하 고 사용자를 인증 하기 전에 테 넌 트를 사용 하 여 등록 되어야 합니다. 등록 프로세스에 고유한 할당 **응용 프로그램 ID** 응용 프로그램에 및 **리디렉션 URL** 는 다시 인증 한 후 응용 프로그램에 대 한 응답을 보냅니다. 자세한 내용은 참조 하세요. [Azure Active Directory B2C: 응용 프로그램을 등록](/azure/active-directory-b2c/active-directory-b2c-app-registration/)합니다. 알아야 할 됩니다는 **응용 프로그램 ID** 속성 보기의 응용 프로그램 이름 뒤에 나열 된 프로그램에 할당 합니다. 다음 스크린샷은 응용 프로그램 ID를 찾을 수 있는 위치를 보여 줍니다.
+모바일 응용 프로그램을 연결 하 고 사용자를 인증 하려면 먼저 테 넌 트에 등록 해야 합니다. 등록 프로세스에서는 응용 프로그램에 고유한 **응용 프로그램 ID** 를 할당 하 고, 인증 후 응답을 응용 프로그램에 다시 전달 하는 **리디렉션 URL** 을 할당 합니다. 자세한 내용은 Azure Active Directory B2C를 참조 [하세요. 응용 프로그램](/azure/active-directory-b2c/active-directory-b2c-app-registration/)을 등록 합니다. 응용 프로그램에 할당 된 응용 프로그램 ID를 알고 있어야 합니다 .이 **ID** 는 속성 보기에서 응용 프로그램 이름 뒤에 나열 됩니다. 다음 스크린샷은 응용 프로그램 ID를 찾을 수 있는 위치를 보여 줍니다.
 
-[![Azure 응용 프로그램 속성 보기에서 응용 프로그램 ID](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
+[![Azure 응용 프로그램 속성 보기의 응용 프로그램 ID](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
 
-Microsoft Authentication Library가 필요 합니다 **리디렉션 URL** 되도록 응용 프로그램에 대 한 프로그램 **응용 프로그램 ID** 붙어 "msal" 및 "auth" 라는 끝점 뒤에. 응용 프로그램 ID "은 1234abcd" 인 경우 전체 URL 이어야 합니다 `msal1234abcd://auth`합니다. 응용 프로그램에 사용할 수 있도록 해야 합니다 **네이티브 클라이언트** 설정 하 고 만들기를 **사용자 지정 리디렉션 URI** 다음 스크린샷에 표시 된 대로 응용 프로그램 ID를 사용 하 여:
+Microsoft 인증 라이브러리에서는 응용 프로그램에 대 한 **리디렉션 URL** 이 "msal" 텍스트와 접두사로 시작 하는 **응용 프로그램 ID** 가 되 고 그 뒤에 "auth" 라는 끝점이 필요 합니다. 응용 프로그램 ID가 "1234abcd" 이면 전체 URL은 이어야 `msal1234abcd://auth`합니다. 응용 프로그램에서 **Native client** 설정을 사용 하도록 설정 했는지 확인 하 고 다음 스크린샷에 표시 된 것 처럼 응용 프로그램 ID를 사용 하 여 **사용자 지정 리디렉션 URI** 를 만들어야 합니다.
 
-![Azure 응용 프로그램 속성 보기에서 사용자 지정 리디렉션 URI](azure-ad-b2c-images/azure-redirect-uri.png)
+![Azure 응용 프로그램 속성 보기의 사용자 지정 리디렉션 URI](azure-ad-b2c-images/azure-redirect-uri.png)
 
-URL 모두 Android에서 나중에 사용할 **ApplicationManifest.xml** 및 iOS **Info.plist**합니다.
+이 URL은 나중에 Android **Applicationmanifest** Info.plist 및 iOS **정보**에서 사용 됩니다.
 
-샘플 프로젝트에서 편집 합니다 **Constants.cs** 설정 하기 위해 파일을 `clientId` 필드를 **응용 프로그램 ID**. 다음 코드에서는이 값을 설정 해야 하는 방법을 응용 프로그램 ID 인지 `1234abcd`:
+샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `clientId` 필드를 **응용 프로그램 ID**로 설정 합니다. 다음 코드는 응용 프로그램 ID가 인 `1234abcd`경우이 값을 설정 하는 방법을 보여 줍니다.
 
 ```csharp
 public static class Constants
@@ -79,15 +79,15 @@ public static class Constants
 }
 ```
 
-## <a name="create-sign-up-and-sign-in-policies-and-forgot-password-policies"></a>등록 및 로그인 정책을 만드는 것을 잊은 암호 정책
+## <a name="create-sign-up-and-sign-in-policies-and-forgot-password-policies"></a>등록 및 로그인 정책 만들기 및 암호 정책 잊음
 
-정책은은 사용자가 계정을 만들거나 암호를 재설정 하는 등의 작업을 완료 하려면 통과 하는 환경입니다. 정책에는 또한 사용자 환경에서 반환 될 때 응용 프로그램에서 받는 토큰의 내용을 지정 합니다. 등록 및 로그인 계정 모두에 대 한 정책을 설정 하 고 암호를 재설정 해야 합니다. Azure에는 일반적인 정책 생성을 간소화 하는 기본 제공 정책이 있습니다. 자세한 내용은 참조 하세요. [Azure Active Directory B2C: 기본 제공 정책](/azure/active-directory-b2c/active-directory-b2c-reference-policies/)합니다.
+정책은 사용자가 계정을 만들거나 암호를 다시 설정 하는 등의 작업을 완료 하기 위해 진행 하는 환경입니다. 또한 정책은 사용자가 환경에서 반환 될 때 응용 프로그램에서 수신 하는 토큰의 콘텐츠를 지정 합니다. 계정 등록 및 로그인에 대 한 정책을 설정 하 고 암호를 재설정 해야 합니다. Azure에는 공통 정책의 생성을 간소화 하는 기본 제공 정책이 있습니다. 자세한 내용은 Azure Active Directory B2C를 참조 [하세요. 기본 제공 정책](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
-정책 설치를 완료 한 경우 두 정책에 있어야 합니다 **사용자 흐름 (정책)** Azure 포털에서 보기. 다음 스크린샷은 Azure portal에서 구성 된 두 개의 정책을 보여 줍니다.
+정책 설정을 완료 한 후에는 Azure Portal의 **사용자 흐름 (정책)** 보기에 두 개의 정책이 있어야 합니다. 다음 스크린샷은 Azure Portal의 두 가지 구성 된 정책을 보여 줍니다.
 
-![Azure 사용자 흐름 (정책)에서 두 개의 구성 된 정책 보기](azure-ad-b2c-images/azure-application-policies.png)
+![Azure 사용자 흐름 (정책) 보기에서 구성 된 두 개의 정책](azure-ad-b2c-images/azure-application-policies.png)
 
-샘플 프로젝트에서 편집 합니다 **Constants.cs** 설정 하기 위해 파일을 `policySignin` 및 `policyPassword` 정책 설치 중에 선택한 이름을 반영 하도록 필드:
+샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `policySignin` 및 `policyPassword` 필드를 정책 설정 중에 선택한 이름을 반영 하도록 설정 합니다.
 
 ```csharp
 public static class Constants
@@ -101,11 +101,11 @@ public static class Constants
 }
 ```
 
-## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Microsoft 인증 라이브러리 (MSAL)를 사용 하 여 인증
+## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>인증에 MSAL (Microsoft 인증 라이브러리) 사용
 
-Microsoft 인증 라이브러리 (MSAL) NuGet 패키지 공유,.NET Standard 프로젝트 및 Xamarin.Forms 솔루션에 플랫폼 프로젝트에 추가 되어야 합니다. MSAL 포함을 `PublicClientApplicationBuilder` 준수 하는 개체를 생성 하는 클래스는 `IPublicClientApplication` 인터페이스입니다. MSAL 활용 `With` 절 생성자 및 인증 방법 추가 매개 변수를 제공 합니다.
+MSAL (Microsoft 인증 라이브러리) NuGet 패키지를 Xamarin.ios 솔루션의 공유, .NET Standard 프로젝트 및 플랫폼 프로젝트에 추가 해야 합니다. Msal에는 `PublicClientApplicationBuilder` `IPublicClientApplication` 인터페이스를 준수 하는 개체를 생성 하는 클래스가 포함 되어 있습니다. Msal은 `With` 절을 활용 하 여 생성자와 인증 메서드에 추가 매개 변수를 제공 합니다.
 
-샘플 프로젝트에 대 한 코드 숨김에 **App.xaml** 라는 정적 속성을 정의 `AuthenticationClient` 및 `UIParent`, 인스턴스화합니다를 `AuthenticationClient` 생성자에는 개체입니다. `WithIosKeychainSecurityGroup` 절에는 iOS 응용 프로그램 보안 그룹 이름을 제공 합니다. `WithB2CAuthority` 절은 기본 제공 **기관**, 또는 사용자를 인증 하는 데 사용할 수 있는 정책입니다. 다음 예제에서는 인스턴스화하는 방법을 보여 줍니다는 `PublicClientApplication`:
+샘플 프로젝트에서 **app.xaml** 에 대 한 코드는 및 `AuthenticationClient` `UIParent`라는 정적 속성을 정의 하 고 생성자에서 개체를 `AuthenticationClient` 인스턴스화합니다. 절 `WithIosKeychainSecurityGroup` 은 iOS 응용 프로그램에 대 한 보안 그룹 이름을 제공 합니다. 절 `WithB2CAuthority` 은 사용자를 인증 하는 데 사용 되는 기본 **인증 기관**또는 정책을 제공 합니다. 다음 예제에서는를 `PublicClientApplication`인스턴스화하는 방법을 보여 줍니다.
 
 ```csharp
 public partial class App : Application
@@ -129,7 +129,7 @@ public partial class App : Application
     ...
 ```
 
-합니다 `OnAppearing` 이벤트 처리기는 **LoginPage.xaml.cs** 호출 코드가 `AcquireTokenSilentAsync` 하기 전에 로그인 하는 사용자에 대 한 인증 토큰을 새로 고치려면 합니다. 인증 프로세스를 리디렉션하는 `LogoutPage` 성공 및 실패 한 경우 아무 작업도 수행 하지. 다음 예제에서는 자동 재인증 프로세스 `OnAppearing`:
+이전에 로그인 한 사용자에 대 한 인증 `AcquireTokenSilentAsync` 토큰을 새로 고치기 위해 **LoginPage.xaml.cs** 코드 뒤에 있는 이벤트처리기가호출됩니다.`OnAppearing` 인증 프로세스는 성공 하는 `LogoutPage` 경우로 리디렉션되고 실패 시 아무 작업도 수행 하지 않습니다. 다음 예에서는의 `OnAppearing`자동 재인증 프로세스를 보여 줍니다.
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -160,7 +160,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-합니다 `OnLoginButtonClicked` (로그인 단추를 클릭할 때 발생) 이벤트 처리기 호출 `AcquireTokenAsync`합니다. MSAL 라이브러리는 자동으로 모바일 장치 브라우저를 열고 하 고 로그인 페이지로 이동 합니다. 라는 로그인 URL을 **기관**, 테 넌 트 이름의 조합 및 정책에 정의 된 합니다 **Constants.cs** 파일입니다. 사용자가 선택 하는 경우는 암호 옵션을 찾기 시작 되는 예외를 사용 하 여 앱에 반환 되는 암호를 잊으셨나요 합니다. 다음 예제에서는 인증 프로세스를 보여 줍니다.
+로그인 `OnLoginButtonClicked` 단추를 클릭할 때 발생 하는 이벤트 처리기는를 호출 `AcquireTokenAsync`합니다. MSAL 라이브러리가 자동으로 모바일 장치 브라우저를 열고 로그인 페이지로 이동 합니다. **권한**이라는 로그인 URL은 **Constants.cs** 파일에 정의 된 테 넌 트 이름과 정책의 조합입니다. 사용자가 암호 찾기 옵션을 선택 하면 예외를 사용 하 여 앱에 반환 되며 암호 찾기 환경을 시작 합니다. 다음 예에서는 인증 프로세스를 보여 줍니다.
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -198,7 +198,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-`OnForgotPassword` 메서드는 로그인 프로세스와 유사 하지만 사용자 지정 정책을 구현 합니다. `OnForgotPassword` 다른 오버 로드를 사용 하 여 `AcquireTokenAsync`, 특정을 제공할 수 있습니다 **기관**합니다. 다음 예제에서는 사용자 지정을 제공 하는 방법을 보여 줍니다 **기관** 토큰을 확보 하는 경우:
+메서드 `OnForgotPassword` 는 로그인 프로세스와 유사 하지만 사용자 지정 정책을 구현 합니다. `OnForgotPassword`는 특정 **권한을**제공할 수 `AcquireTokenAsync`있는의 다른 오버 로드를 사용 합니다. 다음 예제에서는 토큰을 획득할 때 사용자 지정 **권한을** 제공 하는 방법을 보여 줍니다.
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -224,7 +224,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-인증의 마지막 조각은 로그 아웃 프로세스 이며 `OnLogoutButtonClicked` 메서드 사용자가 로그 아웃 단추를 누를 때 호출 됩니다. 모든 계정을 통해 반복 하 고 해당 토큰을 무효화를 확인 합니다. 아래 샘플에는 로그 아웃 구현 방법을 보여 줍니다.
+최종 인증 부분은 로그 아웃 프로세스입니다. 메서드 `OnLogoutButtonClicked` 는 사용자가 로그 아웃 단추를 누를 때 호출 됩니다. 모든 계정을 반복 하 고 해당 토큰이 무효화 되었는지 확인 합니다. 다음 샘플에서는 로그 아웃 구현을 보여 줍니다.
 
 ```csharp
 public partial class LogoutPage : ContentPage
@@ -247,15 +247,15 @@ public partial class LogoutPage : ContentPage
 
 ### <a name="ios"></a>iOS
 
-IOS에서 Azure Active Directory B2C를 사용 하 여 등록 된 사용자 지정 URL 구성표 등록 해야 합니다 **Info.plist**합니다. MSAL에서는 앞에서 설명한 특정 패턴에 맞게 URL 체계 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램을 등록](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)합니다. 다음 스크린샷은의 사용자 지정 URL 체계 **Info.plist**합니다.
+IOS에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 구성표는 **info.plist**에 등록 되어 있어야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 스크린샷은 **info.plist**의 사용자 지정 URL 스키마를 보여 줍니다.
 
-!["Ios 사용자 지정 URL 구성표 등록"](azure-ad-b2c-images/customurl-ios.png)
+!["IOS의 사용자 지정 URL 체계 등록"](azure-ad-b2c-images/customurl-ios.png)
 
-MSAL에 등록 된 iOS에서 키 집합 자격 필요 합니다 **Entitilements.plist**다음 스크린샷에 표시 된 것 처럼:
+MSAL에는 다음 스크린샷에 표시 된 것 처럼 **Entitilements**에 등록 된 iOS의 키 집합 자격도 필요 합니다.
 
-!["Ios 응용 프로그램 권한 부여 설정"](azure-ad-b2c-images/entitlements-ios.png)
+!["IOS에서 응용 프로그램 자격 설정"](azure-ad-b2c-images/entitlements-ios.png)
 
-Azure Active Directory B2C에는 권한 부여 요청 완료 되 면 등록 된 리디렉션 URL로 리디렉션합니다. 사용자 지정 URL 구성표 인해 iOS 모바일 응용 프로그램을 시작 하 고 URL에서 처리 되는 시작 매개 변수로 전달 합니다 `OpenUrl` 응용 프로그램의 재정의 `AppDelegate` 클래스 및 msal 환경의 반환 제어 합니다. `OpenUrl` 구현은 다음 코드 예제에 나와 있습니다.
+Azure Active Directory B2C에는 권한 부여 요청 완료 되 면 등록 된 리디렉션 URL로 리디렉션합니다. 사용자 지정 url 체계는 iOS에서 모바일 응용 프로그램을 시작 하 고 URL을 시작 매개 변수로 전달 하 여 `OpenUrl` `AppDelegate` 응용 프로그램 클래스의 재정의에 의해 처리 되 고, 환경에 대 한 제어를 msal로 반환 합니다. `OpenUrl` 구현은 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 using Microsoft.Identity.Client;
@@ -277,7 +277,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-Android에서 Azure Active Directory B2C를 사용 하 여 등록 된 사용자 지정 URL 구성표에 등록 해야 합니다 **AndroidManifest.xml**합니다. MSAL에서는 앞에서 설명한 특정 패턴에 맞게 URL 체계 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램을 등록](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)합니다. 다음 예제에서는 사용자 지정 URL 구성표에는 **AndroidManifest.xml**합니다.
+Android에서는 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **Androidmanifest**에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예제에서는 **Androidmanifest**의 사용자 지정 URL 스키마를 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -296,7 +296,7 @@ Android에서 Azure Active Directory B2C를 사용 하 여 등록 된 사용자 
 </manifest>
 ```
 
-`MainActivity` 클래스를 제공 하도록 수정 해야 합니다 `UIParent` 하는 동안 응용 프로그램에는 개체를 `OnCreate` 호출. 권한 부여 요청을 완료 하는 Azure Active Directory B2C의 등록 URL 구성표 리디렉션합니다 합니다 **AndroidManifest.xml**합니다. 등록 된 URI 체계 Android 호출의 결과 `OnActivityResult` 에서 처리 되는 시작 매개 변수로 URL 사용 하 여 메서드를 `SetAuthenticationContinuationEventArgs` 메서드.
+클래스를 수정 하 여 `OnCreate` 호출 중에 `UIParent` 응용 프로그램에 개체를 제공 해야 합니다. `MainActivity` Azure Active Directory B2C 권한 부여 요청을 완료 하면 **Androidmanifest**에서 등록 된 URL 체계로 리디렉션됩니다. 등록 된 URI 체계를 사용 하면 Android에서 `OnActivityResult` URL을 사용 하 여 메서드를 시작 매개 변수로 호출 합니다. 여기서 메서드 `SetAuthenticationContinuationEventArgs` 는 메서드를 통해 처리 됩니다.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -323,17 +323,17 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-platform"></a>UWP
 
-추가 설치 없이 유니버설 Windows 플랫폼에서 MSAL을 사용 해야 합니다.
+유니버설 Windows 플랫폼에서 MSAL을 사용 하는 데 필요한 추가 설치는 없습니다.
 
 ## <a name="run-the-project"></a>프로젝트 실행
 
-가상 또는 실제 장치에서 응용 프로그램을 실행 합니다. 탭의 **로그인** 단추는 브라우저를 열고 로그인 하거나 계정을 만들 수 있는 페이지로 이동 합니다. 로그인 프로세스를 완료 한 후 응용 프로그램의 로그 아웃 페이지를 반환 합니다. 다음 스크린샷은 Android 및 iOS를 실행 하는 화면에서 사용자 로그인을 보여 줍니다.
+가상 또는 물리적 장치에서 응용 프로그램을 실행 합니다. **로그인** 단추를 누르면 브라우저가 열리고 로그인 하거나 계정을 만들 수 있는 페이지로 이동 합니다. 로그인 프로세스를 완료 한 후에는 응용 프로그램의 로그 아웃 페이지로 돌아옵니다. 다음 스크린샷은 Android 및 iOS에서 실행 되는 사용자 로그인 화면을 보여 줍니다.
 
-!["Azure ADB2C 로그인 화면에서 Android 및 iOS"](azure-ad-b2c-images/login.png)
+!["Android 및 iOS의 Azure ADB2C 로그인 화면"](azure-ad-b2c-images/login.png)
 
 ## <a name="related-links"></a>관련 링크
 
-- [AzureADB2CAuth (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+- [AzureADB2CAuth (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Microsoft 인증 라이브러리](https://www.nuget.org/packages/Microsoft.Identity.Client)
-- [Microsoft 인증 라이브러리 문서](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)
+- [Microsoft 인증 라이브러리 설명서](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

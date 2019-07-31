@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 61f74e54d4760bb3a85084371fa8e2a62dc06dfd
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e16aa1b96749047554b4f8e6887791d8ed4ff63b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510663"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643689"
 ---
 # <a name="creating-a-custom-contentprovider"></a>사용자 지정 ContentProvider 만들기
 
@@ -124,7 +124,7 @@ public class VegetableProvider : ContentProvider
 
 `ContentProvider` 클래스에 노출할 네 가지 형식의 메타 데이터가 있습니다. Authority만 필요 하며 나머지는 규칙에 따라 수행 됩니다.
 
-- **권한** 응용 프로그램이  설치 될 때 Android에 등록 되도록 특성을클래스에추가해야`ContentProvider`합니다. &ndash;
+- **권한** 응용 프로그램이 설치 될 때 Android에 등록 되도록 특성을클래스에추가해야`ContentProvider`합니다. &ndash;
 
 - **Uri** &ndash; 는`CONTENT_URI` 코드에서 쉽게 사용할 수 있도록 상수로 노출 됩니다. 이는 기관과 일치 해야 하지만 스키마 및 기본 경로를 포함 합니다.
 
@@ -319,4 +319,4 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [SimpleContentProvider (샘플)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
+- [SimpleContentProvider (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)

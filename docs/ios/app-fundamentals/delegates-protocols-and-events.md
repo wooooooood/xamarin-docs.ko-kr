@@ -1,42 +1,42 @@
 ---
-title: 이벤트, 프로토콜 및 Xamarin.iOS에서 대리자
-description: 이 문서는 이벤트, 프로토콜을 사용 하는 방법에 설명 하 고 Xamarin.iOS에서 위임. 이러한 기본 개념은 Xamarin.iOS 개발에서.
+title: Xamarin.ios의 이벤트, 프로토콜 및 대리자
+description: 이 문서에서는 Xamarin.ios에서 이벤트, 프로토콜 및 대리자를 사용 하는 방법을 설명 합니다. 이러한 기본 개념은 Xamarin.ios 개발에서 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: a82d96cf3f290dd28d163dd6f147a9dc28dfaa81
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: d42263733c7fa793713738be4b389eaa4850f38b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827608"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649366"
 ---
-# <a name="events-protocols-and-delegates-in-xamarinios"></a>이벤트, 프로토콜 및 Xamarin.iOS에서 대리자
+# <a name="events-protocols-and-delegates-in-xamarinios"></a>Xamarin.ios의 이벤트, 프로토콜 및 대리자
 
-Xamarin.iOS는 대부분의 사용자 상호 작용에 대 한 이벤트를 노출 하려면 컨트롤을 사용 합니다.
-기존.NET 응용 프로그램으로 동일한 방식으로 이러한 이벤트를 사용 하는 Xamarin.iOS 응용 프로그램. 예를 들어 Xamarin.iOS UIButton 클래스 TouchUpInside 라는 이벤트가 있고 것 처럼이 클래스와 이벤트.NET 앱에서이 이벤트를 사용 합니다.
+Xamarin.ios는 컨트롤을 사용 하 여 대부분의 사용자 상호 작용에 대 한 이벤트를 노출 합니다.
+Xamarin.ios 응용 프로그램은 기존 .NET 응용 프로그램을 사용 하는 것과 거의 동일한 방식으로 이러한 이벤트를 사용 합니다. 예를 들어 Xamarin.ios UIButton 클래스에는 TouchUpInside 라는 이벤트가 있으며이 클래스와 이벤트가 .NET 앱에 있는 것 처럼이 이벤트를 사용 합니다.
 
-Xamarin.iOS는.NET 이렇게 외에도 더 복잡 한 상호 작용 및 데이터 바인딩을 사용할 수 있는 다른 모델을 표시 합니다. 이 방법론 Apple 대리자 및 프로토콜 호출을 사용 합니다. 대리자는 대리자를 개념상 비슷하지만 C#, 하지만 Objective C에서 대리자는 프로토콜을 준수 하는 전체 클래스를 정의 하 고 단일 메서드를 호출 하는 대신 합니다. 프로토콜에서 인터페이스에 비슷합니다. C#에 해당 메서드는 선택 사항일 수 있습니다. 예를 들어 데이터를 사용 하 여 UITableView를 채우기 위해 자체를 채우는 데는 UITableView 호출 UITableViewDataSource 프로토콜에 정의 된 메서드를 구현 하는 대리자 클래스를 만듭니다.
+이 .NET 접근 방식 외에 Xamarin.ios는 보다 복잡 한 상호 작용 및 데이터 바인딩에 사용할 수 있는 다른 모델을 노출 합니다. 이 방법론은 Apple에서 대리자와 프로토콜을 호출 하는 것을 사용 합니다. 대리자는의 C#대리자와 비슷하지만, 단일 메서드를 정의 하 고 호출 하는 대신, 목표 C의 대리자는 프로토콜을 따르는 전체 클래스입니다. 프로토콜은의 C#인터페이스와 유사 합니다. 단, 해당 메서드는 선택 사항 일 수 있습니다. 예를 들어 UITableView를 데이터로 채우려면 UITableView에서 자신을 채우기 위해 호출 하는 UITableViewDataSource 프로토콜에 정의 된 메서드를 구현 하는 대리자 클래스를 만들 수 있습니다.
 
-이러한 모든 항목에 대해 알아봅니다이 문서에서는 제공 견고한 Xamarin.iOS에서 콜백 시나리오를 처리 하는 것에 대 한 포함:
+이 문서에서는 다음을 포함 하 여 Xamarin.ios에서 콜백 시나리오를 처리 하기 위한 견고한 토대를 제공 하는 모든 항목에 대해 알아봅니다.
 
-- **이벤트** – UIKit 컨트롤을 사용 하 여 사용 하 여.NET 이벤트입니다.
-- **프로토콜** – 새로운 학습 프로토콜은 및 사용 방법에 및 맵 주석에 대 한 데이터를 제공 하는 예제를 만들어야 합니다.
-- **대리자** – 주석을 포함 하는 사용자 상호 작용을 처리 하 여 map 예를 확장 한 다음 강력한 / 취약 한 대리자와 이러한 각를 사용 하는 경우의 차이점을 학습 하 여 Objective-c 대리자에 대 한 학습 합니다.
+- **이벤트** – uikit 컨트롤과 함께 .Net 이벤트 사용.
+- **프로토콜** – 프로토콜 및 사용 방법에 대해 배우고 맵 주석에 대 한 데이터를 제공 하는 예제를 만듭니다.
+- **대리자** – 지도 예제를 확장 하 여 주석을 포함 하는 사용자 상호 작용을 처리 하 고, 강력 하 고 약한 대리자와 이러한 각 대리자를 사용 하는 경우의 차이를 파악 하 여 목표-C 대리자에 대해 학습 합니다.
 
-프로토콜 및 대리자를 보여 주기 위해 여기에 표시 된 맵에 주석을 추가 하는 단순 맵 응용 프로그램을 빌드 해 보겠습니다.
+프로토콜과 대리자를 설명 하기 위해 다음과 같이 맵에 주석을 추가 하는 간단한 map 응용 프로그램을 빌드합니다.
 
-[![](delegates-protocols-and-events-images/01-map-sml.png "지도에 주석을 추가 하는 단순 맵 응용 프로그램의 예로")](delegates-protocols-and-events-images/01-map.png#lightbox)
-[![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "예제 주석의 맵에 추가")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+[![](delegates-protocols-and-events-images/01-map-sml.png "")맵에 추가 된 예제 주석을 맵에 추가](delegates-protocols-and-events-images/01-map.png#lightbox)
+[![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "") 하는 간단한 맵 응용 프로그램의 예](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
-이 앱에 들어가기에 시작.NET 이벤트는 UIKit 아래를 보면 됩니다.
+이 앱을 주요 당면 하기 전에 UIKit에서 .NET 이벤트를 살펴보면 시작 하겠습니다.
 
-## <a name="net-events-with-uikit"></a>UIKit 사용 하 여.NET 이벤트
+## <a name="net-events-with-uikit"></a>UIKit를 사용 하는 .NET 이벤트
 
-Xamarin.iOS는 UIKit 컨트롤에 대 한.NET 이벤트를 노출합니다. 예를 들어 UIButton에 TouchUpInside 이벤트를 사용 하는 다음 코드와 같이.net에서 일반적인 방법으로 처리는 C# 람다 식:
+Xamarin.ios는 UIKit 컨트롤에서 .NET 이벤트를 노출 합니다. 예를 들어 UIButton에는 C# 람다 식을 사용 하는 다음 코드와 같이 일반적으로 .net에서와 같이 처리 하는 TouchUpInside 이벤트가 있습니다.
 
 ```csharp
 aButton.TouchUpInside += (o,s) => {
@@ -44,7 +44,7 @@ aButton.TouchUpInside += (o,s) => {
 };
 ```
 
-이를 구현할 수도 있습니다는 C# 2.0 스타일의 무명 메서드는 다음과 같은:
+다음과 같이 2.0 스타일의 C# 무명 메서드를 사용 하 여이를 구현할 수도 있습니다.
 
 ```csharp
 aButton.TouchUpInside += delegate {
@@ -52,31 +52,31 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-위의 코드 연결 되는 `ViewDidLoad` 메서드는 UIViewController의 합니다. `aButton` 변수 참조 단추가 iOS 디자이너 또는 코드를 사용 하 여 추가할 수 있습니다. 다음 그림 iOS 디자이너에에서 추가한 단추를 보여 줍니다.
+위의 코드는 uiviewcontroller의 `ViewDidLoad` 메서드에서 연결 됩니다. 변수 `aButton` 는 iOS 디자이너 또는 코드를 사용 하 여 추가할 수 있는 단추를 참조 합니다. 다음 그림은 iOS 디자이너에 추가 된 단추를 보여 줍니다.
 
-[![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "IOS 디자이너에에서 추가 단추")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
+[![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "IOS 디자이너에 추가 된 단추")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
-Xamarin.iOS는 또한 컨트롤을 사용 하 여 발생 하는 상호 작용에 코드를 연결 하는 대상 동작 스타일을 지원 합니다. 대상 작업을 만드는 합니다 **Hello** 단추를 두 번 클릭 하 여 iOS 디자이너에서에서 합니다. UIViewController의 코드 숨김 파일이 표시 되 고 개발자에서 연결 메서드를 삽입할 위치를 선택 하 라는 메시지가 표시 됩니다.
+또한 xamarin.ios는 컨트롤과 함께 발생 하는 상호 작용에 코드를 연결 하는 대상 작업 스타일을 지원 합니다. **Hello** 단추의 대상 작업을 만들려면 iOS 디자이너에서 해당 작업을 두 번 클릭 합니다. UIViewController의 코드 숨겨진 파일이 표시 되 고 개발자는 연결 방법을 삽입할 위치를 선택 하 라는 메시지가 표시 됩니다.
 
-[![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "UIViewControllers 코드 숨김 파일")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
+[![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "UIViewControllers 코드 숨겨진 파일")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
-위치를 선택한 후 새 메서드 생성 되어 컨트롤에 유선 접속 합니다. 다음 예제에서는 단추를 클릭할 때 메시지를 콘솔에 기록 수 됩니다.
+위치를 선택 하면 새 메서드가 생성 되 고 컨트롤에 연결 됩니다. 다음 예제에서는 단추를 클릭 하면 콘솔에 메시지가 기록 됩니다.
 
-[![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "단추를 클릭할 때 메시지를 콘솔에 기록 됩니다.")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
+[![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "단추를 클릭 하면 콘솔에 메시지가 기록 됩니다.")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
-IOS 대상 동작 패턴에 대 한 자세한 내용은의 대상 작업 섹션을 참조 하세요 [iOS 용 핵심 응용 프로그램 역량](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) Apple iOS 개발자 라이브러리에서에서.
+IOS 대상 작업 패턴에 대 한 자세한 내용은 Apple iOS 개발자 라이브러리의 [ios에 대 한 핵심 응용 프로그램](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) 역량의 대상-작업 섹션을 참조 하세요.
 
-Xamarin.iOS를 사용 하 여 iOS 디자이너를 사용 하는 방법에 대 한 자세한 내용은 참조는 [iOS 디자이너 개요](~/ios/user-interface/designer/index.md) 설명서.
+Xamarin.ios에서 iOS Designer를 사용 하는 방법에 대 한 자세한 내용은 [Ios 디자이너 개요](~/ios/user-interface/designer/index.md) 설명서를 참조 하세요.
 
 ## <a name="events"></a>이벤트
 
-UIControl에서 이벤트를 가로채 고 원하는 경우 다양 한 옵션: 사용 하 여는 C# 람다 식 및 하위 수준 Objective C Api를 사용 하 여 대리자 함수입니다.
+UIControl에서 이벤트를 가로채는 경우 C# 람다 및 대리자 함수를 사용 하 여 하위 수준 목표-C api를 사용 하는 등의 다양 한 옵션을 사용할 수 있습니다.
 
-다음 섹션에서는 얼마나 많이 제어 필요에 따라 단추, TouchDown 이벤트를 캡처할는 방법을 보여 줍니다.
+다음 섹션에서는 필요한 컨트롤의 양에 따라 단추에서 System.windows.uielement.touchdown> 이벤트를 캡처하는 방법을 보여 줍니다.
 
-## <a name="c-style"></a>C#스타일
+## <a name="c-style"></a>C#Style
 
-대리자 구문을 사용합니다.
+대리자 구문 사용:
 
 ```csharp
 UIButton button = MakeTheButton ();
@@ -85,7 +85,7 @@ button.TouchDown += delegate {
 };
 ```
 
-사용 하려는 경우 람다 대신:
+대신 람다를 사용할 경우:
 
 ```csharp
 button.TouchDown += () => {
@@ -93,7 +93,7 @@ button.TouchDown += () => {
 };
 ```
 
-원할 경우 여러 단추 동일한 코드를 공유할 동일한 처리기를 사용 합니다.
+여러 단추가 동일한 처리기를 사용 하 여 동일한 코드를 공유 하도록 하려면 다음을 수행 합니다.
 
 ```csharp
 void handler (object sender, EventArgs args)
@@ -108,21 +108,21 @@ button1.TouchDown += handler;
 button2.TouchDown += handler;
 ```
 
-## <a name="monitoring-more-than-one-kind-of-event"></a>둘 이상의 유형의 이벤트를 모니터링합니다.
+## <a name="monitoring-more-than-one-kind-of-event"></a>여러 종류의 이벤트 모니터링
 
-C# 이벤트 UIControlEvent 플래그에 대 한 개별 플래그 한 일 매핑이 있어야 합니다. 두 개 이상의 이벤트를 처리, 사용 하려는 코드의 동일한 부분이 있는 경우는 `UIControl.AddTarget` 메서드:
+UIControlEvent C# 플래그에 대 한 이벤트는 개별 플래그에 일 대 일 매핑을 포함 합니다. 동일한 코드 조각이 두 개 이상의 이벤트를 처리 하도록 하려면 메서드를 사용 합니다 `UIControl.AddTarget` .
 
 ```csharp
 button.AddTarget (handler, UIControlEvent.TouchDown | UIControlEvent.TouchCancel);
 ```
 
-람다 구문을 사용합니다.
+람다 구문 사용:
 
 ```csharp
 button.AddTarget ((sender, event)=> Console.WriteLine ("An event happened"), UIControlEvent.TouchDown | UIControlEvent.TouchCancel);
 ```
 
-특정 선택기를 호출 하는 특정 개체 인스턴스를 후크 같은 Objective C의 하위 수준 기능을 사용 하는 경우:
+특정 개체 인스턴스에 연결 하 고 특정 선택기를 호출 하는 것 처럼 목표-C의 하위 수준 기능을 사용 해야 하는 경우 다음을 수행 합니다.
 
 ```csharp
 [Export ("MySelector")]
@@ -136,23 +136,23 @@ void MyObjectiveCHandler ()
 button.AddTarget (this, new Selector ("MySelector"), UIControlEvent.TouchDown);
 ```
 
-참고, 상속된 된 기본 클래스의 인스턴스 메서드를 구현 하는 경우 공용 메서드가 이어야 합니다.
+상속 된 기본 클래스에서 인스턴스 메서드를 구현 하는 경우 공용 메서드 여야 합니다.
 
 ## <a name="protocols"></a>프로토콜
 
-프로토콜에는 메서드 선언의 목록을 제공 하는 Objective C 언어 기능입니다. 인터페이스에 비슷한 용도로 사용 C#, 기본적으로 차이가 프로토콜이 선택적 메서드를 사용할 수 있습니다. 프로토콜을 채택 하는 클래스에서 구현 하지 않는 경우에 선택적 메서드 호출 되지 않습니다. Objective C에서 단일 클래스 처럼는 여러 프로토콜을 구현할 수 또한는 C# 클래스는 여러 인터페이스를 구현할 수 있습니다.
+프로토콜은 메서드 선언 목록을 제공 하는 객관적인 C 언어 기능입니다. 의 C#인터페이스와 비슷한 용도를 제공 합니다. 주요 차이점은 프로토콜이 선택적 메서드를 가질 수 있다는 것입니다. 프로토콜을 채택 하는 클래스가 이러한 메서드를 구현 하지 않는 경우에는 선택적 메서드가 호출 되지 않습니다. 또한, 목표 C의 단일 클래스는 C# 클래스가 여러 인터페이스를 구현할 수 있는 것 처럼 여러 프로토콜을 구현할 수 있습니다.
 
-Apple iOS 전체 프로토콜을 사용 하 여 클래스와 동일 하 게 작동 하므로 호출자에서 구현 하는 클래스를 추상화 하는 동안 채택에 대 한 계약을 정의 하는 C# 인터페이스입니다. 프로토콜을 사용 둘 다 대리자가 아닌 시나리오에서 (같은 사용 하 여를 `MKAnnotation` 다음에 표시 된 예제), 대리자 (대리자 섹션에서이 문서의 뒷부분에 표시)으로 사용 하 여 합니다.
+Apple은 iOS 전체에서 프로토콜을 사용 하 여 클래스에 대 한 계약을 정의 하는 동시에 호출자의 구현 클래스를 추상화 하므로 C# 인터페이스 처럼 작동 합니다. 프로토콜은 다음 `MKAnnotation` 예제와 같이 비 대리자 시나리오에서 사용 되며 대리자 (이 문서의 뒷부분에 나오는 대리자 섹션)에서 사용 됩니다.
 
-### <a name="protocols-with-xamarinios"></a>Xamarin.ios 사용 하 여 프로토콜
+### <a name="protocols-with-xamarinios"></a>Xamarin.ios를 사용 하는 프로토콜
 
-Xamarin.iOS에서 Objective-c 프로토콜을 사용 하는 예제를 살펴보겠습니다. 사용 예를 들어 합니다 `MKAnnotation` 참가 하는 프로토콜의는 `MapKit` 프레임 워크입니다. `MKAnnotation` 맵에 추가할 수 있는 주석에 대 한 정보를 제공 하 고 채택 하는 개체를 허용 하는 프로토콜입니다. 예를 들어, 구현 하는 개체 `MKAnnotation` 주석 및 연결 된 제목 위치를 제공 합니다.
+Xamarin.ios에서 목표-C 프로토콜을 사용 하는 예를 살펴보겠습니다. 이 예제에서는 `MKAnnotation` `MapKit` 프레임 워크의 일부인 프로토콜을 사용 합니다. `MKAnnotation`는이를 채택 하는 모든 개체가 맵에 추가할 수 있는 주석에 대 한 정보를 제공 하는 데 사용할 수 있는 프로토콜입니다. 예를 들어를 구현 `MKAnnotation` 하는 개체는 주석의 위치와 연결 된 제목을 제공 합니다.
 
-이러한 방식으로 `MKAnnotation` 프로토콜을 사용 하 여 주석을 함께 제공 되는 관련 데이터를 제공할 수 있습니다. 자체 주석에 대 한 실제 보기 채택 하는 개체의 데이터에서 빌드되는 `MKAnnotation` 프로토콜입니다. 아래 스크린샷에 같이 사용자가 주석을 누를 때 표시 되는 설명선 텍스트에서 제공 하는 예를 들어를 `Title` 프로토콜을 구현 하는 클래스의 속성:
+이러한 방식 `MKAnnotation` 으로 프로토콜은 주석과 함께 제공 되는 관련 데이터를 제공 하는 데 사용 됩니다. 주석 자체에 대 한 실제 뷰는 프로토콜을 `MKAnnotation` 채택 하는 개체의 데이터를 기반으로 빌드됩니다. 예를 들어 아래 스크린샷에서와 같이 사용자가 주석에서 탭 할 때 표시 되는 설명선의 텍스트는 프로토콜을 구현 하는 클래스의 `Title` 속성에서 제공 됩니다.
 
- [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "사용자 주석을 누르면 설명선 텍스트 예제")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "사용자가 주석을 탭 할 때 설명선의 예제 텍스트")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
-다음 섹션에 설명 된 대로 [프로토콜에 대 한 심층 정보](#protocols-deep-dive), Xamarin.iOS 추상 클래스에 프로토콜을 바인딩합니다. 에 대 한 합니다 `MKAnnotation` 프로토콜, 바인딩된 C# 클래스 이름은 `MKAnnotation` 프로토콜의 이름을 모방 하기 위해의 서브 클래스는 `NSObject`, CocoaTouch에 대 한 루트 기본 클래스입니다. Getter 및 setter 좌표;에 대해 구현 해야 하는 프로토콜 필요 그러나 제목 및 부제목은 선택적입니다. 따라서 합니다 `MKAnnotation` 클래스를 `Coordinate` 속성은 *추상*를 구현 해야 한다는 및 `Title` 및 `Subtitle` 속성은 표시 됩니다 *가상* 를 아래와 같이 선택적 있도록 합니다.
+다음 섹션에 설명 된 대로 [프로토콜 심층](#protocols-deep-dive)이해, xamarin.ios는 프로토콜을 추상 클래스에 바인딩합니다. 프로토콜의 경우 바인딩된 C# 클래스의 이름은 프로토콜의 `MKAnnotation` 이름과 비슷하게 지정 되며 CocoaTouch에 대 한 루트 기본 클래스인의 `NSObject`서브 클래스입니다. `MKAnnotation` 이 프로토콜을 사용 하려면 좌표에 대해 getter 및 setter를 구현 해야 합니다. 그러나 제목과 부제목은 선택 사항입니다. 따라서 `MKAnnotation` 클래스에서 속성은 `Coordinate` *추상*이며, 구현 되어야 하 고 `Title` 및 `Subtitle` 속성이 *virtual*로 표시 되어 아래와 같이 선택적으로 설정 합니다.
 
 ```csharp
 [Register ("MKAnnotation"), Model ]
@@ -187,7 +187,7 @@ public abstract class MKAnnotation : NSObject
 }
 ```
 
-모든 클래스에서 파생 하기만 하 여 주석 데이터를 제공할 수 있습니다 `MKAnnotation`같으면 적어도 `Coordinate` 속성 구현 됩니다. 예를 들어, 다음은 생성자에서 시작 하는 좌표를 사용 하 고 제목에 대 한 문자열을 반환 하는 샘플 클래스가입니다.
+적어도 속성을 구현 하기만 하면 모든 클래스는에서 `MKAnnotation`파생 하 여 주석 데이터를 제공할 수 있습니다. `Coordinate` 예를 들어 다음은 생성자의 좌표를 사용 하 고 제목에 대 한 문자열을 반환 하는 샘플 클래스입니다.
 
 ```csharp
 /// <summary>
@@ -214,7 +214,7 @@ public class SampleMapAnnotation : MKAnnotation
 }
 ```
 
-모든 클래스에 바인딩되어 프로토콜을 통해 `MKAnnotation` 주석의 보기를 만들 때 맵에서 사용 되는 관련 데이터를 제공할 수 있습니다. 주석의 지도를 추가 하려면 호출 하기만 하면 됩니다는 `AddAnnotation` 메서드는 `MKMapView` 다음 코드에 표시 된 대로 인스턴스:
+클래스가 바인딩되는 프로토콜을 통해 서브 `MKAnnotation` 클래스에서 주석의 뷰를 만들 때 맵에서 사용할 관련 데이터를 제공할 수 있습니다. 맵에 주석을 추가 하려면 다음 코드에 표시 된 것 처럼 `AddAnnotation` 단순히 `MKMapView` 인스턴스의 메서드를 호출 합니다.
 
 ```csharp
 //an arbitrary coordinate used for demonstration here
@@ -225,15 +225,15 @@ var sampleCoordinate =
 map.AddAnnotation (new SampleMapAnnotation (sampleCoordinate));
 ```
 
-여기에 맵 변수의 인스턴스가 `MKMapView`, 맵 자체를 나타내는 클래스인 합니다. `MKMapView` 사용할지 합니다 `Coordinate` 에서 파생 된 데이터는 `SampleMapAnnotation` 맵에서 주석 보기를 배치 하는 인스턴스.
+여기서 map 변수는 맵 자체를 나타내는 클래스인 `MKMapView`의 인스턴스입니다. 는 `MKMapView` 인스턴스에서`SampleMapAnnotation` 파생 된 `Coordinate` 데이터를 사용 하 여 지도에 주석 보기를 배치 합니다.
 
-`MKAnnotation` 알려진된 집합을 제공 하는 프로토콜 기능의 구현 하는 모든 개체는 소비자가 (이 경우 맵)에 대해 알 필요가 구현 세부 정보입니다. 이 간소화 가능한 주석의 다양 한 지도에 추가 합니다.
+이 `MKAnnotation` 프로토콜은 구현 세부 정보를 알아야 하는 소비자 (이 경우 map) 없이 구현 하는 모든 개체에 대해 알려진 기능 집합을 제공 합니다. 이렇게 하면 다양 한 주석을 맵에 쉽게 추가할 수 있습니다.
 
-### <a name="protocols-deep-dive"></a>프로토콜에 대 한 심층 정보
+### <a name="protocols-deep-dive"></a>프로토콜 심층 살펴보기
 
-이후 C# 인터페이스는 선택적 메서드를 지원 하지 않습니다, Xamarin.iOS 추상 클래스에 프로토콜을 매핑합니다. 따라서 Objective-c에서 프로토콜을 채택 하 여 수행 됩니다 Xamarin.iOS에서 프로토콜에 바인딩되는 추상 클래스에서 파생 하 고 필요한 메서드를 구현. 이러한 메서드는 클래스에서 추상 메서드로 노출 됩니다. 프로토콜에서 선택적 메서드는 바인딩됩니다의 가상 메서드는 C# 클래스입니다.
+인터페이스 C# 는 선택적 메서드를 지원 하지 않으므로 xamarin.ios는 프로토콜을 추상 클래스에 매핑합니다. 따라서 목표-C에서 프로토콜을 채택 하는 것은 프로토콜에 바인딩되고 필요한 메서드를 구현 하는 추상 클래스에서 파생 하 여 Xamarin.ios에서 수행 됩니다. 이러한 메서드는 클래스에서 추상 메서드로 노출 됩니다. 프로토콜의 선택적 메서드는 C# 클래스의 가상 메서드에 바인딩됩니다.
 
-예를 들어, 부분 같습니다는 `UITableViewDataSource` 에 바인딩된 Xamarin.iOS와 프로토콜:
+예를 들어 다음은 xamarin.ios에서 바인딩된 `UITableViewDataSource` 프로토콜의 일부입니다.
 
 ```csharp
 public abstract class UITableViewDataSource : NSObject
@@ -246,44 +246,44 @@ public abstract class UITableViewDataSource : NSObject
 }
 ```
 
-클래스는 추상 임을 유의 합니다. Xamarin.iOS는 프로토콜에서 필수/선택적 메서드를 지원 하기 위해 추상 클래스를 만듭니다.
-Objective-c 프로토콜 달리 (또는 C# 인터페이스), C# 클래스는 다중 상속을 지원 하지 않습니다. 디자인을 미치면 C# 프로토콜을 사용 하 고 일반적으로 코드를 중첩 클래스입니다. 더이 문제에 대 한 대리자 섹션에서이 문서의 뒷부분에 설명 됩니다.
+클래스는 추상 클래스입니다. Xamarin.ios를 사용 하면 클래스를 추상화 하 여 프로토콜에서 선택적/필수 메서드를 지원할 수 있습니다.
+그러나 목적과 C# 인터페이스와 달리 클래스는 C# 다중 상속을 지원 하지 않습니다. 이는 프로토콜을 사용 C# 하는 코드 디자인에 영향을 주며 일반적으로 중첩 된 클래스를 사용 합니다. 이 문제에 대 한 자세한 내용은이 문서의 뒷부분에 있는 대리자 섹션에서 설명 합니다.
 
- `GetCell(…)` 추상 메서드를 Objective-c로 바인딩할 *선택기*, `tableView:cellForRowAtIndexPath:`의 필수 메서드는는 `UITableViewDataSource` 프로토콜입니다. 선택기는 Objective-c 용어 메서드 이름입니다. 필요에 따라 메서드를 적용할 Xamarin.iOS abstract로 선언 합니다. 다른 메서드를 `NumberOfSections(…)`에 바인딩된 `numberOfSectionsInTableview:`합니다. 이 메서드는 Xamarin.iOS 선언 가상으로 쉽게에서 재정의 하는 선택 사항 이므로 프로토콜에서는 선택적 C#입니다.
+ `GetCell(…)``tableView:cellForRowAtIndexPath:`는 프로토콜`UITableViewDataSource` 의 필수 메서드인 목표-C *선택기*에 바인딩된 추상 메서드입니다. Selector는 메서드 이름에 대 한 목표-C 용어입니다. 필요에 따라 메서드를 적용 하기 위해 Xamarin.ios는 추상으로 선언 합니다. 다른 메서드인 `NumberOfSections(…)`는에 `numberOfSectionsInTableview:`바인딩됩니다. 이 메서드는 프로토콜에서 선택 사항 이므로 Xamarin.ios는 가상으로 선언 하므로에서 C#재정의할 수 있습니다.
 
-Xamarin.iOS는 수에 대 한 모든 iOS 바인딩을 처리합니다. 그러나 Objective-c에서 프로토콜을 수동으로 바인딩할 해야 하는 경우 있습니다 이렇게으로 클래스 데코레이팅는 `ExportAttribute`합니다. 이것이 자체 Xamarin.iOS에서 사용한 동일한 메서드를입니다.
+Xamarin.ios는 모든 iOS 바인딩을 처리 합니다. 그러나 목표-C에서 수동으로 프로토콜을 바인딩해야 하는 경우에는 `ExportAttribute`클래스를로 데코레이팅하 여 수행할 수 있습니다. 이는 Xamarin.ios 자체에서 사용 되는 방법과 동일 합니다.
 
-Objective-c 형식 Xamarin.iOS에서 바인딩하는 방법에 대 한 자세한 내용은 문서를 참조 [Objective-c 바인딩 형식](~/ios/platform/binding-objective-c/index.md)합니다.
+Xamarin.ios에서 목표-C 형식을 바인딩하는 방법에 대 한 자세한 내용은 [바인딩 목표-c 형식](~/ios/platform/binding-objective-c/index.md)문서를 참조 하세요.
 
-우리 하지 통해 프로토콜을 사용 하 여 아직 하지만 합니다. 데도 사용 iOS에서 기준으로 다음 섹션의 항목에는 Objective-c 대리자에 대 한 합니다.
+그러나 아직 프로토콜을 사용 하는 것은 아닙니다. 또한이는 다음 섹션의 항목인 목표-C 대리자의 기반으로 iOS에서 사용 됩니다.
 
 ## <a name="delegates"></a>대리자
 
-iOS는 Objective-c 대리자를 사용 하 여 한 개체가 다른 작업 전달 하는 위임 패턴을 구현. 개체 작업을 수행 하는 첫 번째 개체의 대리자입니다. 개체는 특정 상황이 발생 한 후 메시지를 전송 하 여 작업 대리자를 나타냅니다. 기능적에서 메서드를 호출 하는 Objective C에서 다음과 같은 메시지를 보내는 C#입니다. 대리자 이러한 호출에 대 한 응답에서 메서드를 구현 하 고 있으므로 응용 프로그램에 기능을 제공 합니다.
+iOS는 목표-C 대리자를 사용 하 여 한 개체가 다른 개체와 작업을 전달 하는 위임 패턴을 구현 합니다. 작업을 수행 하는 개체는 첫 번째 개체의 대리자입니다. 개체는 특정 상황이 발생 한 후 메시지를 전송 하 여 해당 대리자에 게 작업을 수행 하도록 지시 합니다. 목표 C에서와 같이 메시지를 보내는 것은에서 C#메서드를 호출 하는 것과 기능적으로 동일 합니다. 대리자는 이러한 호출에 대 한 응답으로 메서드를 구현 하므로 응용 프로그램에 기능을 제공 합니다.
 
-대리자를 사용 하면 하위 클래스를 만들 필요 없이 클래스의 동작을 확장할 수 있습니다. 하나의 클래스를 호출할 때 다시 다른 중요 한 작업에서 발생 한 후 ios에서 응용 프로그램 대리자를 종종 사용 합니다. 예를 들어를 `MKMapView` 사용자가 지도 대 한 주석이 대리자 클래스의 작성자에 게 응용 프로그램 내에 응답 기회를 제공 하는 경우 클래스가 해당 대리자를 다시 호출 합니다. Xamarin.iOS 사용 하 여 대리자를 대리자 사용 예제를 사용 하 여이 문서의 뒷부분에이 유형의 예제를 통해 사용할 수 있습니다.
+대리자를 사용 하면 서브 클래스를 만들 필요 없이 클래스의 동작을 확장할 수 있습니다. IOS의 응용 프로그램은 중요 한 작업이 발생 한 후 한 클래스가 다른 클래스를 다시 호출 하는 경우 대리자를 사용 하는 경우가 많습니다. 예를 들어 사용자 `MKMapView` 가 맵에 대 한 주석을 탭 할 때 클래스는 대리자를 다시 호출 하 여 대리자 클래스의 작성자에 게 응용 프로그램 내에서 응답할 수 있는 기회를 제공 합니다. 이 문서의 뒷부분에 나오는 이러한 형식의 대리자 사용에 대 한 예제를 통해 작업할 수 있습니다. 예를 들어 Xamarin.ios에서 대리자를 사용 합니다.
 
-이 시점에서 궁금할 클래스에서 해당 대리자를 호출 하는 방법을 결정 하는 방법입니다. 프로토콜을 사용 하는 다른 위치입니다. 일반적으로 대리자를 사용할 수 있는 방법을 채택할 프로토콜에서 제공 됩니다.
+이 시점에서 클래스가 대리자에 대해 호출할 메서드를 결정 하는 방법을 궁금할 수 있습니다. 프로토콜을 사용 하는 다른 위치입니다. 일반적으로 대리자에 사용할 수 있는 메서드는 채택 하는 프로토콜에서 제공 됩니다.
 
-### <a name="how-protocols-are-used-with-delegates"></a>대리자를 사용 하 여 프로토콜 사용 하는 방법
+### <a name="how-protocols-are-used-with-delegates"></a>대리자에 프로토콜을 사용 하는 방법
 
-프로토콜 맵에 주석을 추가 지원 하기 위해 사용 하는 이전 방법에 대해 살펴보았습니다.
-특정 이벤트 발생, 같은 지도 대 한 주석이 사용자 탭 한 후 또는 테이블의 셀을 선택 하는 후에 호출 하는 클래스에 대 한 메서드 집합을 알된 수 있도록 프로토콜도 사용 됩니다. 이러한 메서드를 구현 하는 클래스를 호출 하는 클래스의 대리자 라고 합니다.
+이전에는 프로토콜을 사용 하 여 맵에 주석을 추가 하는 방법을 살펴보았습니다.
+프로토콜은 사용자가 맵에 대 한 주석을 탭 하거나 테이블의 셀을 선택 하는 경우와 같이 특정 이벤트가 발생 한 후에 호출 하는 클래스에 대 한 알려진 메서드 집합을 제공 하는 데도 사용 됩니다. 이러한 메서드를 구현 하는 클래스를 호출 하는 클래스의 대리자 라고 합니다.
 
-위임을 지 원하는 클래스가 할당 되는 대리자를 구현 하는 클래스, 대리자 속성을 노출 하 여 수행 합니다. 대리자에 대 한 구현 하는 메서드는 특정 대리자 채택 하는 프로토콜에 따라 달라 집니다. 에 대 한는 `UITableView` 메서드를 구현 하는 `UITableViewDelegate` 프로토콜을에 대 한는 `UIAccelerometer` 구현 하는 메서드를 `UIAccelerometerDelegate`등 다른 클래스는 하려는 iOS 전체 노출 대리자에 대 한 합니다.
+위임을 지 원하는 클래스는 대리자를 구현 하는 클래스에 할당 되는 대리자 속성을 노출 하 여이 작업을 수행 합니다. 대리자에 대해 구현 하는 메서드는 특정 대리자가 적용 하는 프로토콜에 따라 달라 집니다. 메서드에 대해 `UITableViewDelegate` 프로토콜을 구현 하 고, `UIAccelerometer` 메서드에 대해을 구현 하 고, 모든 `UIAccelerometerDelegate`iOS에서 대리자를 노출할 다른 모든 클래스에 대해를 구현 합니다. `UITableView`
 
-`MKMapView` 이전 예제에서 살펴본 클래스 라는 대리자를 호출 하는 속성에 다양 한 이벤트가 발생 한 후입니다. 에 대 한 대리자 `MKMapView` 유형의 `MKMapViewDelegate`합니다.
-사용 하 여이 선택한 후 주석에 응답할 예로 사용 하지만 첫 번째에서 곧 보겠습니다 강력한 / 취약 한 대리자 간의 차이 설명 합니다.
+앞의 예제에서 본 클래스에는다양한이벤트가발생한후에호출하는대리자라는속성이있습니다.`MKMapView` 에 대 한 `MKMapView` 대리자는 형식 `MKMapViewDelegate`입니다.
+이를 사용 하 여 선택한 후 주석에 응답 하는 것이 좋습니다. 하지만 먼저 강력 하 고 약한 대리자 간의 차이점에 대해 살펴보겠습니다.
 
-### <a name="strong-delegates-vs-weak-delegates"></a>강력한 대리자 vs입니다. 약한 대리자
+### <a name="strong-delegates-vs-weak-delegates"></a>강력한 대리자 및 약한 대리자
 
-살펴보았습니다 지금 대리자는 강력한 대리자, 강력한 형식으로 의미 합니다. IOS에서 모든 대리자 프로토콜에 대 한 강력한 형식의 클래스를 사용 하 여 Xamarin.iOS 바인딩을 제공 합니다. 그러나 iOS에 약한 대리자의 개념이 있습니다. 특정 대리자의 Objective-c 프로토콜에 바인딩된 클래스를 하위 클래스 지정 대신 iOS 선택할 수도 있습니다 원하는 NSObject을 ExportAttribute로 메서드를 데코레이팅에서 파생 되는 모든 클래스에서 직접 프로토콜 메서드를 바인딩하려면 다음 적절 한 선택기를 제공 합니다.
-이 방법을 사용 하는 경우 대리자 속성 대신 WeakDelegate 속성에 클래스의 인스턴스를 할당 합니다. 약한 대리자 다른 상속 계층을 다운 대리자 클래스를 사용할 수 있는 유연성을 제공 합니다. 강력한 / 취약 한 대리자를 사용 하는 Xamarin.iOS 예제를 살펴보겠습니다.
+지금까지 살펴본 대리자는 강력 하 게 형식화 된 대리자입니다. Xamarin.ios 바인딩은 iOS의 모든 대리자 프로토콜에 대 한 강력한 형식의 클래스와 함께 제공 됩니다. 그러나 iOS에는 약한 대리자의 개념도 있습니다. 특정 대리자에 대 한 목표-C 프로토콜에 바인딩된 클래스를 서브클래싱 하는 대신, iOS를 사용 하 여 NSObject에서 파생 되는 모든 클래스에서 직접 프로토콜 메서드를 바인딩하고, 메서드를 ExportAttribute로 데코레이팅하는 것을 선택할 수도 있습니다. 적절 한 선택기를 제공 합니다.
+이 방법을 사용 하는 경우 대리자 속성이 아닌 WeakDelegate 속성에 클래스의 인스턴스를 할당 합니다. 약한 대리자는 대리자 클래스를 다른 상속 계층 구조에서 사용할 수 있는 유연성을 제공 합니다. 강력 하 고 약한 대리자를 모두 사용 하는 Xamarin.ios 예를 살펴보겠습니다.
 
-### <a name="example-using-a-delegate-with-xamarinios"></a>Xamarin.iOS를 사용 하 여 대리자를 사용 하는 예제
+### <a name="example-using-a-delegate-with-xamarinios"></a>Xamarin.ios에서 대리자를 사용 하는 예제
 
-예제에서 주석을 탭 사용자에 대 한 응답에서 코드를 실행 하려면에서는 서브클래싱 할 수 있습니다 `MKMapViewDelegate` 인스턴스를 할당 합니다 `MKMapView`의 `Delegate` 속성입니다. `MKMapViewDelegate` 프로토콜 선택적 메서드만 포함 합니다.
-따라서 모든 메서드는 가상의 Xamarin.iOS에서이 프로토콜에 바인딩되어 있는 `MKMapViewDelegate` 클래스입니다. 주석의 선택 하면를 `MKMapView` 인스턴스에 보냅니다는 `mapView:didSelectAnnotationView:` 해당 대리자에는 메시지. 이 처리 하기 Xamarin.iOS에서 재정의 해야 합니다 `DidSelectAnnotationView (MKMapView mapView, MKAnnotationView annotationView)` 같이 MKMapViewDelegate 서브 클래스에서 메서드:
+예제에서 주석을 누르는 사용자에 대 한 응답으로 코드를 실행 하려면 인스턴스를 하위 클래스로 `MKMapViewDelegate` 지정 하 고 인스턴스를 `MKMapView`의 `Delegate` 속성에 할당 하면 됩니다. 프로토콜 `MKMapViewDelegate` 에는 선택적 메서드만 포함 됩니다.
+따라서 모든 메서드는 xamarin.ios `MKMapViewDelegate` 클래스에서이 프로토콜에 바인딩된 가상입니다. 사용자가 주석을 선택 하면 인스턴스는 `MKMapView` 해당 대리자에 게 `mapView:didSelectAnnotationView:` 메시지를 보냅니다. Xamarin.ios에서이를 처리 하려면 다음과 같이 MKMapViewDelegate 하위 클래스의 `DidSelectAnnotationView (MKMapView mapView, MKAnnotationView annotationView)` 메서드를 재정의 해야 합니다.
 
 ```csharp
 public class SampleMapDelegate : MKMapViewDelegate
@@ -308,9 +308,9 @@ public class SampleMapDelegate : MKMapViewDelegate
 }
 ```
 
-위에 표시 된 SampleMapDelegate 클래스가 들어 있는 컨트롤러의 중첩 클래스로 구현 되는 `MKMapView` 인스턴스. Objective-c에서 자주 볼 수는 컨트롤러 클래스 내에서 직접 여러 프로토콜을 채택 합니다. 그러나 프로토콜 Xamarin.iOS에서 클래스에 바인딩되어 있는 하므로 강력한 형식의 대리자를 구현 하는 클래스 중첩 클래스로 일반적으로 포함 됩니다.
+위에 표시 된 SampleMapDelegate 클래스는 `MKMapView` 인스턴스를 포함 하는 컨트롤러에서 중첩 된 클래스로 구현 됩니다. 목표-C에서는 컨트롤러가 클래스 내에서 직접 여러 프로토콜을 채택 하는 것을 볼 수 있습니다. 그러나 프로토콜은 Xamarin.ios의 클래스에 바인딩되므로 강력한 형식의 대리자를 구현 하는 클래스는 일반적으로 중첩 클래스로 포함 됩니다.
 
-현재 위치에서 대리자 클래스 구현에서는 하기만 하면 컨트롤러에서 대리자의 인스턴스를 인스턴스화하고에 할당 합니다 `MKMapView`의 `Delegate` 다음과 같이 속성:
+대리자 클래스 구현을 구현 하면 컨트롤러에서 대리자의 인스턴스를 인스턴스화하고 다음과 같이 `MKMapView`의 `Delegate` 속성에 할당 하기만 하면 됩니다.
 
 ```csharp
 public partial class Protocols_Delegates_EventsViewController : UIViewController
@@ -333,7 +333,7 @@ public partial class Protocols_Delegates_EventsViewController : UIViewController
 }
 ```
 
-약한 대리자에 동일한 작업을 수행 하는 데 사용 하려면 클래스에서 파생 되는 직접 메서드를 바인딩하고 해야 `NSObject` 에 할당 하는 `WeakDelegate` 의 속성을 `MKMapView`. 이후 합니다 `UIViewController` 클래스에서 최종적으로 파생 됩니다 `NSObject` (예: Objective-c의에서 모든 클래스 CocoaTouch), 간단히 바인딩된 메서드를 구현할 수 있습니다 `mapView:didSelectAnnotationView:` 컨트롤러에서 직접 컨트롤러를 할당 하 고 `MKMapView`의 `WeakDelegate`, 추가 중첩된 클래스에 대 한 필요성을 방지 합니다. 아래 코드에는이 방법을 보여 줍니다.
+약한 대리자를 사용 하 여 동일한 작업을 수행 하려면에서 `NSObject` 파생 되는 클래스에서 직접 메서드를 바인딩하고의 `WeakDelegate` `MKMapView`속성에 할당 해야 합니다. 클래스는 `UIViewController` 궁극적으로에서 `NSObject` 파생 되므로 (CocoaTouch의 모든 목표-C 클래스와 마찬가지로) 컨트롤러에서 `mapView:didSelectAnnotationView:` 직접 바인딩된 메서드를 구현 하 고 컨트롤러를에 `MKMapView` `WeakDelegate`할당할수있습니다., 추가 중첩 클래스의 필요성을 방지 합니다. 아래 코드에서는이 방법을 보여 줍니다.
 
 ```csharp
 public partial class Protocols_Delegates_EventsViewController : UIViewController
@@ -355,13 +355,13 @@ public partial class Protocols_Delegates_EventsViewController : UIViewController
 }
 ```
 
-이 코드를 실행 하는 경우 응용 프로그램에 강력한 형식의 대리자 버전을 실행 하는 경우와 동일 하 게 동작 합니다. 이 코드에서 장점은 약한 대리자가 강력한 형식의 대리자를 사용 했을 때 생성 된 추가 클래스를 만드는 필요 하지 않습니다. 그러나이 형식 안전성 저하 됩니다. 에 전달 된 선택기를 실수를 하는 경우는 `ExportAttribute`, 런타임 시까지 확인 하지 않습니다.
+이 코드를 실행 하는 경우 응용 프로그램은 강력한 형식의 대리자 버전을 실행할 때와 정확히 동일 하 게 동작 합니다. 이 코드의 혜택은 약한 대리자가 강력한 형식의 대리자를 사용할 때 생성 된 추가 클래스를 만들 필요가 없다는 것입니다. 그러나이는 형식 안전성을 위해 제공 됩니다. 에 전달 `ExportAttribute`된 선택기에서 실수를 수행 하는 경우 런타임이 될 때까지 알 수 없습니다.
 
 ### <a name="events-and-delegates"></a>이벤트 및 대리자
 
-대리자는.NET 이벤트를 사용 하는 방식와 유사 하 게 iOS에서 콜백에 대 한 사용 됩니다. IOS 수 있도록 Api 및 Objective-c 대리자를 사용 하는 방법 보일 더.NET Xamarin.iOS 대리자 iOS에서 사용 되는 여러 위치에서.NET 이벤트를 노출 합니다.
+대리자는 .NET에서 이벤트를 사용 하는 방식과 유사 하 게 iOS의 콜백에 사용 됩니다. IOS Api와 이러한 대리자를 사용 하는 방식이 .NET 처럼 보이는 것 처럼 보일 때 Xamarin.ios는 iOS에서 대리자를 사용 하는 여러 위치에 .NET 이벤트를 노출 합니다.
 
-이전 구현 예를 들어 여기서는 `MKMapViewDelegate` 응답할 선택한 주석이 또한 Xamarin.iOS에서.NET 이벤트를 사용 하 여 구현할 수입니다. 이벤트는 정의 하는 경우 `MKMapView` 호출 `DidSelectAnnotationView`합니다. 했을 때를 `EventArgs` 형식의 서브 클래스 `MKMapViewAnnotationEventsArgs`합니다. 합니다 `View` 속성의 `MKMapViewAnnotationEventsArgs` 주석 보기에 대 한 참조를 제공, 동일 하 게 구현 계속할 수 없습니다는에서 사용 했던 앞서 설명한 것 처럼 여기:
+예를 들어, .net 이벤트를 사용 `MKMapViewDelegate` 하 여 선택 된 주석에 응답 한가 xamarin.ios에서 구현 될 수도 있습니다. 이 경우 이벤트는에서 `MKMapView` 정의 되 고 호출 `DidSelectAnnotationView`됩니다. `EventArgs` 형식의`MKMapViewAnnotationEventsArgs`서브 클래스가 있습니다. `View` 의`MKMapViewAnnotationEventsArgs` 속성은 다음과 같이 앞에서 설명한 것과 동일한 구현으로 진행할 수 있는 주석 보기에 대 한 참조를 제공 합니다.
 
 ```csharp
 map.DidSelectAnnotationView += (s,e) => {
@@ -380,14 +380,14 @@ map.DidSelectAnnotationView += (s,e) => {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.iOS에서 이벤트, 프로토콜 및 대리자를 사용 하는 방법을 설명 합니다. Xamarin.iOS는 컨트롤에 대 한 일반.NET 스타일 이벤트를 노출 하는 방법에 대해 살펴보았습니다.
-Objective-c 프로토콜을 포함 하는 방법을 다른 알아본 다음 C# 인터페이스 및 Xamarin.iOS 하을 사용 하는 방법입니다. 마지막으로, Xamarin.iOS 관점에서 Objective-c 대리자 검사 했습니다. Xamarin.iOS에서 지 원하는 방법 모두 강력한 및 약하게 형식화 된 대리자 및.NET 이벤트 대리자 메서드를 바인딩하는 방법에 살펴보았습니다.
+이 문서에서는 Xamarin.ios에서 이벤트, 프로토콜 및 대리자를 사용 하는 방법을 설명 했습니다. Xamarin.ios가 컨트롤에 대 한 일반적인 .NET 스타일 이벤트를 노출 하는 방법을 살펴보았습니다.
+다음에는 C# 인터페이스와 다른 방법 및 xamarin.ios를 사용 하는 방법을 포함 하 여 목표 C 프로토콜에 대해 알아보았습니다. 마지막으로, Xamarin.ios 관점에서 목표-C 대리자를 검사 했습니다. Xamarin.ios에서 강력 하 고 약한 형식의 대리자를 지 원하는 방법과 .NET 이벤트를 대리자 메서드에 바인딩하는 방법에 대해 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [프로토콜, 대리자 및 이벤트 (샘플)](https://developer.xamarin.com/samples/monotouch/Protocols_Delegates_Events/)
+- [프로토콜, 대리자 및 이벤트 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/protocols-delegates-events)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Objective-c 형식 바인딩](~/ios/platform/binding-objective-c/index.md)
-- [Objective C 프로그래밍 언어](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
-- [Xcode 4에서에서 사용자 인터페이스 디자인](https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
+- [바인딩 목표-C 형식](~/ios/platform/binding-objective-c/index.md)
+- [목표-C 프로그래밍 언어](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
+- [Xcode 4에서 사용자 인터페이스 디자인](https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
 - [IOS에 대 한 핵심 응용 프로그램 역량](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)

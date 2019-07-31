@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: adfc3247bce4d40d73580d6ca9baa31df4f57229
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: cb569a425bf636a51dd6d132f6efa539e74443a0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658970"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644572"
 ---
 # <a name="consume-a-restful-web-service"></a>RESTful 웹 서비스 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _응용 프로그램에 웹 서비스를 통합 하는 것은 일반적인 시나리오입니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 RESTful 웹 서비스를 사용 하는 방법에 설명 합니다._
 
@@ -38,7 +38,7 @@ RESTful 웹 서비스는 일반적으로 클라이언트에 데이터를 반환�
 
 REST의 단순성 모바일 응용 프로그램에서 웹 서비스에 액세스 하기 위한 기본 방법은 있도록 비디오나 합니다.
 
-샘플 응용 프로그램을 실행 하는 경우 다음 스크린샷에 표시 된 대로 로컬에서 호스트 되 REST 서비스에 연결 됩니다.
+샘플 응용 프로그램을 실행 하면 다음 스크린샷에 표시 된 것 처럼 로컬에서 호스팅된 REST 서비스에 연결 합니다.
 
 ![](rest-images/portal.png "샘플 응용 프로그램")
 
@@ -208,5 +208,5 @@ REST 서비스 HTTP 상태 코드를 보냅니다는 `HttpResponseMessage.IsSucc
 ## <a name="related-links"></a>관련 링크
 
 - [네이티브 모바일 응용 프로그램에 대한 백 엔드 서비스 만들기](/aspnet/core/mobile/native-mobile-backend/)
-- [TodoREST (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+- [TodoREST (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

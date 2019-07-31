@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 2c7daca80a207d0c060fc3a867b1eda03dd65258
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 803cd1babc32e3a42d957c4bac0cc93c4552fb8c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61082886"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656117"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
 
 _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서는 ItemsSource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다._
 
 Xamarin.Forms 2.3.4 향상 되었습니다 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 뷰를 설정 하 여 데이터를 입력 하는 기능을 추가 하 여 해당 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성 합니다 에서선택한항목을검색하고[ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성입니다. 선택한 항목에 대 한 텍스트의 색을 설정 하 여 변경할 수 있습니다 또한 합니다 [ `TextColor` ](xref:Xamarin.Forms.Picker.TextColor) 속성을를 [ `Color` ](xref:Xamarin.Forms.Color)합니다.
 
-## <a name="populating-a-picker-with-data"></a>데이터를 사용 하 여 선택 채우기
+## <a name="populating-a-picker-with-data"></a>데이터를 사용 하 여 선택기 채우기
 
 A [ `Picker` ](xref:Xamarin.Forms.Picker) 설정 하 여 데이터로 채울 수 있습니다 해당 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성을는 `IList` 컬렉션입니다. 컬렉션의 각 항목의 수 또는 형식에서 파생 해야 `object`합니다. 초기화 하 여 XAML에서 항목을 추가할 수는 `ItemsSource` 속성 항목의 배열:
 
@@ -103,7 +103,7 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 > [!NOTE]
 > A [ `Picker` ](xref:Xamarin.Forms.Picker) 설정 하 여 특정 항목을 표시 하도록 초기화 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 또는 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성입니다. 그러나 초기화 한 후 이러한 속성 설정 해야 합니다 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 컬렉션입니다.
 
-## <a name="populating-a-picker-with-data-using-data-binding"></a>데이터 바인딩을 사용 하 여 데이터를 사용 하 여 한 선택 채우기
+## <a name="populating-a-picker-with-data-using-data-binding"></a>데이터 바인딩을 사용 하 여 선택기를 데이터로 채우기
 
 A [ `Picker` ](xref:Xamarin.Forms.Picker) 채울 수 있습니다도 데이터 바인딩할 데이터 바인딩을 사용 하 여 해당 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성을는 `IList` 컬렉션입니다. XAML에서이 통해 합니다 [ `Binding` ](xref:Xamarin.Forms.Xaml.BindingExtension) 태그 확장:
 
@@ -182,7 +182,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 ## <a name="related-links"></a>관련 링크
 
-- [선택기 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
-- [Monkey 앱 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
-- [바인딩할 수 있는 선택 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
-- [API 선택](xref:Xamarin.Forms.Picker)
+- [선택기 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Monkey 앱 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+- [바인딩할 수 있는 선택 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [선택 API](xref:Xamarin.Forms.Picker)

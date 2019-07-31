@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 7a149a41a6e50d3b18da166d9c7cb61e36f2d0e7
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 567985b1d6c6aff87e0a6879f05ab711a0095d6f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970460"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647197"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Xamarin.Forms에 명시적 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨트롤에 적용 되는 경우_
 
-## <a name="create-an-explicit-style-in-xaml"></a>XAML에 명시적 스타일 만들기
+## <a name="create-an-explicit-style-in-xaml"></a>XAML에서 명시적 스타일 만들기
 
 선언 하는 [ `Style` ](xref:Xamarin.Forms.Style) 페이지 수준에 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 페이지 및 다음 하나 이상의 추가 해야 합니다 `Style` 선언에 포함 될 수는 `ResourceDictionary`. A `Style` 이루어집니다 *명시적* 선언을 제공 하 여는 `x:Key` 특성에 설명이 포함 된 키를 제공 하는 `ResourceDictionary`. *명시적* 스타일 다음에 적용 해야 특정 한 시각적 요소를 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 속성입니다.
 
@@ -70,7 +70,7 @@ _명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨�
 
 또한 최종 [ `Label` ](xref:Xamarin.Forms.Label) 에 [ `Style` ](xref:Xamarin.Forms.Style) 적용 하지만 또한 재정의 [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) 속성을 다른 `Color`값입니다.
 
-### <a name="create-an-explicit-style-at-the-control-level"></a>제어 수준에 명시적 스타일 만들기
+### <a name="create-an-explicit-style-at-the-control-level"></a>컨트롤 수준에서 명시적 스타일 만들기
 
 외에도 *명시적* 페이지 수준에서 스타일도 만들 수 있습니다 제어 수준에서 다음 코드 예제 에서처럼:
 
@@ -184,8 +184,8 @@ public class ExplicitStylesPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [스타일 (샘플)를 사용 하 여 작업](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [스타일](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

@@ -1,46 +1,46 @@
 ---
-title: JSON을 사용 하 여 Xamarin.iOS에서 사용자 인터페이스를 만들려면
-description: MonoTouch.Dialog (콜로라도 D) JSON 데이터를 통해 동적 UI 생성에 대 한 지원이 포함 되어 있습니다. 이 자습서에서는 응용 프로그램에 포함 되거나 원격 Url에서 로드 되는 JSON에서 사용자 인터페이스를 만들 수는 JSONElement를 사용 하는 방법을 살펴봅니다.
+title: IOS에서 JSON을 사용 하 여 사용자 인터페이스 만들기
+description: Monotouch.dialog (MT. D)에는 JSON 데이터를 통한 동적 UI 생성 지원이 포함 됩니다. 이 자습서에서는 JSONElement를 사용 하 여 응용 프로그램에 포함 되거나 원격 Url에서 로드 된 JSON에서 사용자 인터페이스를 만드는 방법을 안내 합니다.
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: e1eae07fab4a74a4f47f565d4c4ca0b7f6bc1aa9
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: 64b35588afa06a6a8f4a206f10827409f9de316f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039668"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645226"
 ---
-# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>JSON을 사용 하 여 Xamarin.iOS에서 사용자 인터페이스를 만들려면
+# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>IOS에서 JSON을 사용 하 여 사용자 인터페이스 만들기
 
-_MonoTouch.Dialog (콜로라도 D) JSON 데이터를 통해 동적 UI 생성에 대 한 지원이 포함 되어 있습니다. 이 자습서에서는 응용 프로그램에 포함 되거나 원격 Url에서 로드 되는 JSON에서 사용자 인터페이스를 만들 수는 JSONElement를 사용 하는 방법을 살펴봅니다._
+_Monotouch.dialog (MT. D)에는 JSON 데이터를 통한 동적 UI 생성 지원이 포함 됩니다. 이 자습서에서는 JSONElement를 사용 하 여 응용 프로그램에 포함 되거나 원격 Url에서 로드 된 JSON에서 사용자 인터페이스를 만드는 방법을 안내 합니다._
 
-산 D는 JSON에 선언 된 사용자 인터페이스 만들기를 지원 합니다. 요소는 JSON, 산을 사용 하 여 선언 된 경우 차원에서 관련된 요소를 자동으로 만듭니다. 로컬 파일을 구문 분석 된에서 JSON을 로드할 수 있습니다 `JsonObject` 인스턴스 또는 원격 Url입니다.
+휴먼. D에서는 JSON에 선언 된 사용자 인터페이스를 만들 수 있습니다. 요소가 JSON, MT를 사용 하 여 선언 된 경우 D는 자동으로 연결 된 요소를 만듭니다. JSON은 로컬 파일, 구문 분석 `JsonObject` 된 인스턴스 또는 원격 Url에서 로드할 수 있습니다.
 
-산 D 전체 다양 한 JSON을 사용 하는 경우 요소 API에서 사용할 수 있는 기능을 지원 합니다. 예를 들어 다음 스크린샷은 응용 프로그램은 JSON을 사용 하 여을 선언 완전히 됩니다.
+휴먼. D는 JSON을 사용할 때 Elements API에서 사용할 수 있는 모든 범위의 기능을 지원 합니다. 예를 들어 다음 스크린샷에서 응용 프로그램은 JSON을 사용 하 여 완전히 선언 됩니다.
 
 [![](json-element-walkthrough-images/01-load-from-file.png "예를 들어이 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "예를 들어이 스크린샷에서 응용 프로그램은 완전히 사용 하 여 선언 JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
-예를 다시 합니다 [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) JSON을 사용 하 여 작업 세부 정보 화면을 추가 하는 방법을 보여 주는 자습서입니다.
+JSON을 사용 하 여 작업 세부 정보 화면을 추가 하는 방법을 보여 주는 [ELEMENTS API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) 자습서의 예제를 다시 살펴보겠습니다.
 
-## <a name="setting-up-mtd"></a>산 설정 D
+## <a name="setting-up-mtd"></a>MT를 설정 합니다. 2
 
-산 D는 Xamarin.iOS를 사용 하 여 배포 됩니다. 를 사용 하려면 마우스 오른쪽 단추로 클릭 합니다 **참조** Xamarin.iOS 노드의 Mac 용 Visual Studio 2017 또는 Visual Studio에서 프로젝트 및 참조를 추가 합니다 **MonoTouch.Dialog 1** 어셈블리. 그런 다음 추가 `using MonoTouch.Dialog` 필요에 따라 원본에서 문을 코딩 합니다.
+휴먼. D는 Xamarin.ios를 사용 하 여 배포 됩니다. 이를 사용 하려면 Visual Studio 2017 또는 Mac용 Visual Studio에서 Xamarin.ios 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **monotouch.dialog** 어셈블리에 대 한 참조를 추가 합니다. 그런 다음 필요 `using MonoTouch.Dialog` 에 따라 소스 코드에서 문을 추가 합니다.
 
 ## <a name="json-walkthrough"></a>JSON 연습
 
-이 연습에 대 한 예제는 작업을을 만들 수 있습니다. 첫 번째 화면에서 작업을 선택 하면 세부 정보 화면에 표시 된 것 처럼 표시 됩니다.
+이 연습에 대 한 예제에서는 작업을 만들 수 있습니다. 첫 번째 화면에서 작업을 선택 하면 세부 정보 화면이 다음과 같이 표시 됩니다.
 
- [![](json-element-walkthrough-images/03-task-list.png "세부 정보 화면을 표시 된 것 처럼 표시 됩니다 첫 번째 화면에서 작업을 선택한 경우")](json-element-walkthrough-images/03-task-list.png#lightbox)
+ [![](json-element-walkthrough-images/03-task-list.png "첫 번째 화면에서 작업을 선택 하면 세부 정보 화면이 표시 된 대로 표시 됩니다.")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>JSON 만들기
 
-예를 들어 프로젝트 파일에서 JSON 로드에서는 `task.json`합니다. 산 D는 JSON 요소 API를 반영 하는 구문에 맞게 필요 합니다. 코드에서 요소 API를 사용 하는 것 처럼 섹션 JSON을 사용할 경우 선언 하 고 해당 섹션 내에서 요소를 추가 했습니다. 섹션 및 json에서 요소를 선언 하려면 사용 문자열 "섹션" 및 "요소"를 각각의 키와 합니다. 각 요소에 대해 연결 된 요소 형식을 사용 하 여 설정 되는 `type` 키입니다. 다른 모든 요소 속성은 속성 이름을 사용 하 여 키로 설정 됩니다.
+이 예제에서는 라는 `task.json`프로젝트의 파일에서 JSON을 로드 합니다. 휴먼. D에서는 JSON이 Elements API를 미러링 하는 구문을 준수 해야 합니다. 코드에서 Elements API를 사용 하는 것과 마찬가지로, JSON을 사용 하는 경우 섹션을 선언 하 고 해당 섹션 내에서 요소를 추가 합니다. JSON에서 섹션과 요소를 선언 하려면 "sections" 및 "elements" 문자열을 각각 키로 사용 합니다. 각 요소에 대해 연결 된 요소 형식은 `type` 키를 사용 하 여 설정 됩니다. 다른 모든 elements 속성은 속성 이름을 키로 사용 하 여 설정 됩니다.
 
-예를 들어 다음 JSON 섹션 및 작업 세부 정보에 대 한 요소를 설명합니다.
+예를 들어 다음 JSON은 작업 세부 정보에 대 한 섹션과 요소를 설명 합니다.
 
 ```json
 {
@@ -65,17 +65,17 @@ _MonoTouch.Dialog (콜로라도 D) JSON 데이터를 통해 동적 UI 생성에 
 }
 ```
 
-위의 JSON 알림 각 요소에 대 한 id를 포함합니다. 모든 요소에는 런타임 시 참조 id를 포함할 수 있습니다. 코드에서 JSON을 로드 하는 방법을 알아보겠습니다 경우 잠시에서 어떻게 사용 되는지 살펴보겠습니다.
+위의 JSON에는 각 요소에 대 한 id가 포함 되어 있습니다. 모든 요소에는 런타임에 참조할 수 있는 id가 포함 될 수 있습니다. 이는 코드에서 JSON을 로드 하는 방법을 보여 주는 순간에 사용 되는 방법을 살펴보겠습니다.
 
-## <a name="loading-the-json-in-code"></a>코드에서 JSON 로드
+## <a name="loading-the-json-in-code"></a>코드로 JSON 로드
 
-산으로 로드 하려고 하는 JSON을 정의한 후에 D를 사용 하 여 `JsonElement` 클래스입니다. 위에서 만든 JSON 파일을 가정 하 고 이름 sample.json 사용 하 여 프로젝트에 추가 되어 콘텐츠를 로드 빌드 작업을 지정 합니다 `JsonElement` 간단 하 게 코드의 다음 줄을 호출 합니다.
+JSON을 정의한 후에는 MT로 로드 해야 합니다. D 클래스를 `JsonElement` 사용 합니다. 위에서 만든 json이 있는 파일이 이름 sample. json을 사용 하 여 프로젝트에 추가 되 고 콘텐츠 빌드 작업이 지정 된 경우를 로드 하는 것은 `JsonElement` 다음 코드 줄을 호출 하는 것 만큼 간단 합니다.
 
 ```csharp
 var taskElement = JsonElement.FromFile ("task.json");
 ```
 
-추가 하므로이 요청 될 때마다 작업을 만들 시, 이전 요소 API 예제에서 다음과 같이 클릭 한 단추의 수정할 수 있습니다.
+작업을 만들 때마다 요청 시이 작업을 추가 하기 때문에 이전 Elements API 예제에서 클릭 한 단추를 다음과 같이 수정할 수 있습니다.
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
@@ -89,9 +89,9 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
-## <a name="accessing-elements-at-runtime"></a>런타임 시 요소에 액세스
+## <a name="accessing-elements-at-runtime"></a>런타임에 요소 액세스
 
-JSON 파일에 선언 했습니다 하는 경우 두 요소에 id를 추가 했습니다을 기억 하십시오. 코드에서 해당 속성을 수정 하려면 런타임에 각 요소에 액세스 하는 id 속성을 사용할 수 있습니다. 예를 들어, 다음 코드는 작업 개체에서 값을 설정 하는 항목 및 날짜 요소를 참조 합니다.
+JSON 파일에 선언 된 경우 두 요소에 id를 추가 했습니다. Id 속성을 사용 하 여 런타임에 각 요소에 액세스 하 여 코드에서 해당 속성을 수정할 수 있습니다. 예를 들어 다음 코드는 entry 및 date 요소를 참조 하 여 task 개체에서 값을 설정 합니다.
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
@@ -121,7 +121,7 @@ _addButton.Clicked += (sender, e) => {
 
 ## <a name="loading-json-from-a-url"></a>Url에서 JSON 로드
 
-산 D는 단순히 Url의 생성자에 전달 하 여 외부 Url에서 JSON을 동적으로 로드도 지원 합니다 `JsonElement`합니다. 산 D에서는 화면 간 탐색 하는 동안 요청 시 JSON에 선언 된 계층을 확장 합니다. 예를 들어 아래와 같은 JSON 파일을 로컬 웹 서버의 루트에 있는:
+휴먼. D는 단순히 Url을의 `JsonElement`생성자에 전달 하 여 외부 url에서 JSON을 동적으로 로드 하는 것도 지원 합니다. 휴먼. D는 화면 간을 이동할 때 주문형 JSON에 선언 된 계층 구조를 확장 합니다. 예를 들어 아래에는 로컬 웹 서버의 루트에 있는 것과 같은 JSON 파일이 있다고 가정 합니다.
 
 ```json
 {
@@ -147,7 +147,7 @@ _addButton.Clicked += (sender, e) => {
 }
 ```
 
-로드할 수 있습니다이 사용 하 여 `JsonElement` 다음 코드 에서처럼:
+다음 코드와 같이을 `JsonElement` 사용 하 여이를 로드할 수 있습니다.
 
 ```csharp
 _rootElement = new RootElement ("Json Example") {
@@ -157,21 +157,21 @@ _rootElement = new RootElement ("Json Example") {
 };
 ```
 
-런타임 시 파일을 검색 하 고 산에서 구문 분석 아래 스크린샷에 표시 된 것 처럼 사용자가 두 번째 뷰를 이동할 때 D:
+런타임에 파일이 MT로 검색 되 고 구문 분석 됩니다. D 아래 스크린샷에 표시 된 것 처럼 사용자가 두 번째 뷰로 이동 합니다.
 
- [![](json-element-walkthrough-images/04-json-web-example.png "파일을 검색 하 고 산에서 구문 분석 사용자가 두 번째 보기를 탐색할 때 D")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
+ [![](json-element-walkthrough-images/04-json-web-example.png "파일이 검색 되 고 MT로 구문 분석 됩니다. D 사용자가 두 번째 뷰로 이동 하는 경우")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 사용 하 여를 만드는 방법을 보여 주었습니다. 산을 사용 하 여 인터페이스 JSON에서 D입니다. 원격 Url 뿐 아니라 응용 프로그램을 사용 하 여 파일에 포함 된 JSON을 로드 하는 방법에 알아보았습니다. 또한 런타임에 JSON에 설명 된 요소에 액세스 하는 방법에 알아보았습니다.
+이 문서에서는 MT를 사용 하 여 인터페이스를 만드는 방법을 살펴보았습니다. JSON에서 D. 응용 프로그램 뿐만 아니라 원격 Url을 사용 하 여 파일에 포함 된 JSON을 로드 하는 방법을 살펴보았습니다. 또한 런타임에 JSON에 설명 된 요소에 액세스 하는 방법도 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [MTDJsonDemo (샘플)](https://developer.xamarin.com/samples/monotouch/MTDJsonDemo/)
-- [MonoTouch.Dialog 소개](~/ios/user-interface/monotouch.dialog/index.md)
+- [MTDJsonDemo (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdjsondemo)
+- [Monotouch.dialog 소개. 대화 상자](~/ios/user-interface/monotouch.dialog/index.md)
 - [요소 API 연습](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [리플렉션 API 연습](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [Github에서 MonoTouch 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
+- [Github의 Monotouch.dialog 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [TweetStation 응용 프로그램](https://github.com/migueldeicaza/TweetStation)
 - [UITableViewController 클래스 참조](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
 - [UINavigationController 클래스 참조](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

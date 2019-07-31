@@ -7,16 +7,16 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a57e50f098c92dbfcdcaa3139565d2ba0e291e3d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 39de35c8e43ebf2b3db25724ad761e3576ba5057
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61347767"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644951"
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 그래픽을 표시 하기 위한 변환에 알아봅니다_
 
@@ -49,9 +49,9 @@ Xamarin.Forms는 SkiaSharp의 유사한 변환도 지원 합니다. Xamarin.Form
 
 왼쪽 위 모퉁이 기준으로 SkiaSharp 변환 되는 `SKCanvas` Xamarin.Forms 변환은의 왼쪽 위 모퉁이 기준으로 하는 동안는 `VisualElement` 적용 되는 합니다. 크기 조정을 적용할 때이 차이점은 중요 하 고 이러한 변환은 항상 특정 시점을 기준으로 하므로 회전 변환 합니다.
 
-매우 큰 차이 SKiaSharp 변환 *메서드* Xamarin.Forms 변환 하는 동안 *속성*합니다. 다음은 구문상의 차이 외 의미 체계 차이입니다. SkiaSharp 변환 작업을 수행할 Xamarin.Forms 집합을 변형 하는 동안 상태. SkiaSharp 변환에 변환 적용 되기 전에 그려진 그래픽 개체 아니라 이후에 그려지는 그래픽 개체에 적용 됩니다. 반면, Xamarin.Forms 변환 속성을 설정 하는 즉시 이전에 렌더링 된 요소에 적용 됩니다. SkiaSharp 변환은 누적 메서드가 호출 됩니다. Xamarin.Forms 변환 속성을 다른 값으로 설정 된 경우 대체 됩니다.
+매우 큰 차이 SKiaSharp 변환 *메서드* Xamarin.Forms 변환 하는 동안 *속성*합니다. 이는 구문상 차이를 제외한 의미 체계 차이입니다. SkiaSharp 변환에서 작업을 수행 하는 반면 Xamarin. Forms 변환은 상태를 설정 합니다. SkiaSharp 변환에 변환 적용 되기 전에 그려진 그래픽 개체 아니라 이후에 그려지는 그래픽 개체에 적용 됩니다. 반면, Xamarin.Forms 변환 속성을 설정 하는 즉시 이전에 렌더링 된 요소에 적용 됩니다. SkiaSharp 변환은 누적 메서드가 호출 됩니다. Xamarin.Forms 변환 속성을 다른 값으로 설정 된 경우 대체 됩니다.
 
-이 섹션의 모든 샘플 프로그램에 표시 합니다 **SkiaSharp 변환** 섹션을 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램. 소스 코드를 찾을 수 있습니다 합니다 [ **변환** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) 솔루션의 폴더입니다.
+이 섹션의 모든 샘플 프로그램에 표시 합니다 **SkiaSharp 변환** 섹션을 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램. 소스 코드를 찾을 수 있습니다 합니다 [ **변환** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) 솔루션의 폴더입니다.
 
 ## <a name="the-translate-transformtranslatemd"></a>[좌표 이동 변환](translate.md)
 
@@ -89,4 +89,4 @@ SkiaSharp 그래픽 이동할 좌표 이동 변환을 사용 하는 방법에 �
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

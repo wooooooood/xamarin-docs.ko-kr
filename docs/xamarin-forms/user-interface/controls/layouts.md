@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 84ebe6b12e34a5e84c03b095c3909945e84a17f8
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: b48e92bcb49109dad6e8c5260b5cb822945e7a0b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741083"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651341"
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트롤을 작성 하는 데 사용 됩니다._
 
@@ -54,7 +54,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView) 해당 콘텐츠를 스크롤할 수 있습니다. 설정 된 [ `Content` ](xref:Xamarin.Forms.ScrollView.Content) 속성 보기 또는 레이아웃 너무 커서 화면에 맞지 않습니다. (의 콘텐츠를 `ScrollView` 경우가 매우를 [ `StackLayout` ](#stackLayout).) 설정 합니다 [ `Orientation` ](xref:Xamarin.Forms.ScrollView.Orientation) 속성 해야 함을 나타내려면 경우 스크롤 세로, 가로 또는 둘 다.<br /><br />[API 설명서](xref:Xamarin.Forms.ScrollView) / [가이드](~/xamarin-forms/user-interface/layouts/scroll-view.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![ScrollView 예제](layouts-images/ScrollView.png "ScrollView 예제")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView) 해당 콘텐츠를 스크롤할 수 있습니다. 설정 된 [ `Content` ](xref:Xamarin.Forms.ScrollView.Content) 속성 보기 또는 레이아웃 너무 커서 화면에 맞지 않습니다. (의 콘텐츠를 `ScrollView` 경우가 매우를 [ `StackLayout` ](#stackLayout).) 설정 합니다 [ `Orientation` ](xref:Xamarin.Forms.ScrollView.Orientation) 속성 해야 함을 나타내려면 경우 스크롤 세로, 가로 또는 둘 다.<br /><br />[API 설명서](xref:Xamarin.Forms.ScrollView) / [가이드](~/xamarin-forms/user-interface/layouts/scroll-view.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![ScrollView 예제](layouts-images/ScrollView.png "ScrollView 예제")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView
@@ -81,7 +81,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`StackLayout`](xref:Xamarin.Forms.StackLayout) 가로 또는 세로로에 따라 스택에 자식 요소를 배치 합니다 [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) 속성입니다. 합니다 [ `Spacing` ](xref:Xamarin.Forms.StackLayout.Spacing) 속성 자식 사이의 간격을 제어 되며 기본값은 6입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.StackLayout) / [가이드](~/xamarin-forms/user-interface/layouts/stack-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)| [![예제 StackLayout](layouts-images/StackLayout.png "StackLayout 예제")](layouts-images/StackLayout-Large.png#lightbox "StackLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
+| [`StackLayout`](xref:Xamarin.Forms.StackLayout) 가로 또는 세로로에 따라 스택에 자식 요소를 배치 합니다 [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) 속성입니다. 합니다 [ `Spacing` ](xref:Xamarin.Forms.StackLayout.Spacing) 속성 자식 사이의 간격을 제어 되며 기본값은 6입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.StackLayout) / [가이드](~/xamarin-forms/user-interface/layouts/stack-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)| [![예제 StackLayout](layouts-images/StackLayout.png "StackLayout 예제")](layouts-images/StackLayout-Large.png#lightbox "StackLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
 |     |     |
 
 <a name="grid" />
@@ -90,32 +90,32 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`Grid`](xref:Xamarin.Forms.Grid) 행 및 열 표에 해당 자식 요소를 배치합니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) [ `Row` ](xref:Xamarin.Forms.Grid.RowProperty)를 [ `Column` ](xref:Xamarin.Forms.Grid.ColumnProperty)를 [ `RowSpan` ](xref:Xamarin.Forms.Grid.RowSpanProperty), 및 [ `ColumnSpan` ](xref:Xamarin.Forms.Grid.ColumnSpanProperty)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Grid) / [가이드](~/xamarin-forms/user-interface/layouts/grid.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![그리드 예제](layouts-images/Grid.png "그리드 예제")](layouts-images/Grid-Large.png#lightbox "Grid 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/GridDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/GridDemoPage.xaml) |
+| [`Grid`](xref:Xamarin.Forms.Grid) 행 및 열 표에 해당 자식 요소를 배치합니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) [ `Row` ](xref:Xamarin.Forms.Grid.RowProperty)를 [ `Column` ](xref:Xamarin.Forms.Grid.ColumnProperty)를 [ `RowSpan` ](xref:Xamarin.Forms.Grid.RowSpanProperty), 및 [ `ColumnSpan` ](xref:Xamarin.Forms.Grid.ColumnSpanProperty)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Grid) / [가이드](~/xamarin-forms/user-interface/layouts/grid.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![그리드 예제](layouts-images/Grid.png "그리드 예제")](layouts-images/Grid-Large.png#lightbox "Grid 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/GridDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/GridDemoPage.xaml) |
 |     |     |
 
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 |     |     |
 | --- | --- |
-| [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 자식 요소를 부모를 기준으로 특정 위치에 배치 됩니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) 하 고 [ `LayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty)합니다. `AbsoluteLayout` 뷰의 위치에 애니메이션을 적용 하는 데 유용 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.AbsoluteLayout) / [가이드](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![AbsoluteLayout 예제](layouts-images/AbsoluteLayout.png "AbsoluteLayout 예제")](layouts-images/AbsoluteLayout-Large.png#lightbox "AbsoluteLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutdDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml) 사용 하 여 [코드 숨김](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml.cs) |
+| [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) 자식 요소를 부모를 기준으로 특정 위치에 배치 됩니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) [ `LayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) 하 고 [ `LayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty)합니다. `AbsoluteLayout` 뷰의 위치에 애니메이션을 적용 하는 데 유용 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.AbsoluteLayout) / [가이드](~/xamarin-forms/user-interface/layouts/absolute-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![AbsoluteLayout 예제](layouts-images/AbsoluteLayout.png "AbsoluteLayout 예제")](layouts-images/AbsoluteLayout-Large.png#lightbox "AbsoluteLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/AbsoluteLayoutdDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml) 사용 하 여 [코드 숨김](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/AbsoluteLayoutDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="relativelayout"></a>RelativeLayout
 
 |     |     |
 | --- | --- |
-| [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) 에 상대적인 자식 요소를 배치 합니다 `RelativeLayout` 자체 또는 해당 형제입니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 형식의 개체에 설정 된 [ `Constraint` ](xref:Xamarin.Forms.Constraint) 하 고 [ `BoundsConstraint` ](xref:Xamarin.Forms.Constraint)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.RelativeLayout) / [가이드](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![RelativeLayout 예제](layouts-images/RelativeLayout.png "RelativeLayout 예제")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+| [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) 에 상대적인 자식 요소를 배치 합니다 `RelativeLayout` 자체 또는 해당 형제입니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 형식의 개체에 설정 된 [ `Constraint` ](xref:Xamarin.Forms.Constraint) 하 고 [ `BoundsConstraint` ](xref:Xamarin.Forms.Constraint)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.RelativeLayout) / [가이드](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![RelativeLayout 예제](layouts-images/RelativeLayout.png "RelativeLayout 예제")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
 |     |     |
 
 ### <a name="flexlayout"></a>FlexLayout
 
 |     |     |
 | --- | --- |
-| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) CSS를 기반으로 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)일반적으로 알려진 _레이아웃 flex_ 또는 _flex 박스_합니다. `FlexLayout` 여섯 개의 바인딩 가능한 속성 및 누적 하거나 많은 맞춤 및 방향 옵션을 사용 하 여 래핑된 자식을 사용할 수 있는 5 개의 연결 된 바인딩 가능 속성을 정의 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.FlexLayout) / [가이드](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/) | [![FlexLayout 예제](layouts-images/FlexLayout.png "FlexLayout 예제")](layouts-images/FlexLayout-Large.png#lightbox "FlexLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
+| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) CSS를 기반으로 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)일반적으로 알려진 _레이아웃 flex_ 또는 _flex 박스_합니다. `FlexLayout` 여섯 개의 바인딩 가능한 속성 및 누적 하거나 많은 맞춤 및 방향 옵션을 사용 하 여 래핑된 자식을 사용할 수 있는 5 개의 연결 된 바인딩 가능 속성을 정의 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.FlexLayout) / [가이드](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos) | [![FlexLayout 예제](layouts-images/FlexLayout.png "FlexLayout 예제")](layouts-images/FlexLayout-Large.png#lightbox "FlexLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms FormsGallery 샘플](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
-- [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms FormsGallery 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.Forms API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

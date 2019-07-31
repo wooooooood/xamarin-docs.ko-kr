@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a5a70594b0fe48fe601ef836977f69b29e097ab5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 74d626fb1028c630b67888f84153adeb33ae32b9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510378"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644689"
 ---
 # <a name="xamarinandroid-cardview"></a>Xamarin Android CardView
 
@@ -157,7 +157,7 @@ NuGet 패키지를 설치 하는 [방법에 대 한 자세한 내용은 연습: 
 
 [![이미지 및 이미지가 아래에 있는 CardView](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
-이 스크린샷은 `RecyclerView` 위젯을 사용 하 여 사진을 보기 위한 이미지의 `CardView` 스크롤 목록을 제공 하는 [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer) 샘플 앱에서 가져옵니다. 에 대 한 `RecyclerView`자세한 내용은 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) guide를 참조 하세요.
+이 스크린샷은 `RecyclerView` 위젯을 사용 하 여 사진을 보기 위한 이미지의 `CardView` 스크롤 목록을 제공 하는 [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱에서 가져옵니다. 에 대 한 `RecyclerView`자세한 내용은 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) guide를 참조 하세요.
 
 는 `CardView` 콘텐츠 영역에 둘 이상의 자식 뷰를 표시할 수 있습니다. 예를 들어 위의 사진 보기 앱 예제에서 콘텐츠 영역은 `ListView` `ImageView` 및를 `TextView`포함 하는로 구성 됩니다. 인스턴스가 `CardView` 일반적으로 수직으로 정렬 되기는 하지만이를 가로로 정렬할 수도 있습니다 (예제 스크린샷에 대 한 [사용자 지정 보기 스타일 만들기](~/android/user-interface/material-theme.md#customview) 참조).
 
@@ -253,6 +253,6 @@ Android 5.0 롤리팝 `CardView` 이전 버전의 android에서 사용할 수 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [RecyclerView (샘플)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerView (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [롤리팝 소개](~/android/platform/lollipop.md)
 - [CardView 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

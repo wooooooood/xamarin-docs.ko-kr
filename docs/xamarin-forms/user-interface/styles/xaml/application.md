@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 7b13a192f883ea667977f4d9ae3eea41d8c65e24
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: f8fb026cd9a8dfbfd5abf13c9b11463bf84f7e0b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971179"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647243"
 ---
 # <a name="global-styles-in-xamarinforms"></a>Xamarin.Forms에서 글로벌 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _스타일 사용할 수 있습니다 전체적으로 응용 프로그램의 리소스 사전에 추가 하 여 합니다. 이를 페이지 또는 컨트롤에서 스타일의 중복을 방지할 수 있습니다._
 
@@ -66,7 +66,7 @@ _스타일 사용할 수 있습니다 전체적으로 응용 프로그램의 리
 
 페이지의 스타일을 만드는 방법은 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 참조 하십시오 [명시적 스타일](~/xamarin-forms/user-interface/styles/explicit.md) 및 [암시적 스타일](~/xamarin-forms/user-interface/styles/implicit.md)합니다.
 
-### <a name="override-styles"></a>스타일을 재정의 합니다.
+### <a name="override-styles"></a>재정의 스타일
 
 스타일 뷰 계층 구조의 하위를 더 높은 정의 보다 우선 합니다. 예를 들어 설정를 [ `Style` ](xref:Xamarin.Forms.Style) 설정 하는 [ `Button.TextColor` ](xref:Xamarin.Forms.Button.TextColor) 하 `Red` 응용 프로그램 수준 설정 하는 페이지 수준 스타일에 의해 재정의 됩니다 `Button.TextColor` 를`Green`. 마찬가지로, 페이지 수준 스타일 컨트롤 수준 스타일에 의해 재정의 됩니다. 또한 경우 `Button.TextColor` 직접 컨트롤 속성에이 우선적으로 적용 됩니다 스타일이 모두 설정 합니다. 이 우선 순위는 다음 코드 예제에서 보여 줍니다.
 
@@ -153,8 +153,8 @@ public class ApplicationStylesPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [스타일 (샘플)를 사용 하 여 작업](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [스타일](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

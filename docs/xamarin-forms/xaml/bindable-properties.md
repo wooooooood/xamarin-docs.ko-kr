@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: d3e1c8a2b17ba41e3c9d212948f42023c15205ac
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 59ec82c222208ff0e73b0b7b5226d416d3a53398
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926238"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656607"
 ---
 # <a name="bindable-properties"></a>바인딩 가능한 속성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 _Xamarin.Forms에서 공용 언어 런타임 (CLR) 속성의 기능 바인딩 가능한 속성으로 확장 됩니다. 바인딩 가능한 속성을 속성의 값 Xamarin.Forms 속성 시스템에서 추적 되는 속성의 특수 형식입니다. 이 문서에서는 바인딩 가능한 속성에 대해 소개 하 고 만들고이 사용 하는 방법을 보여 줍니다._
 
@@ -226,8 +226,8 @@ public static readonly BindableProperty SizeProperty =
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 네임스페이스](~/xamarin-forms/xaml/namespaces.md)
-- [이벤트: 명령 동작 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
-- [유효성 검사 콜백 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
-- [강제 값 콜백 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
+- [이벤트: 명령 동작 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [유효성 검사 콜백 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [강제 값 콜백 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

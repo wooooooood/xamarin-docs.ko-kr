@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
-ms.openlocfilehash: 366a6e9585817c5a47ba5bec14fb2f238ab23a6b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d38391f3fd0f02dda8bfd92fce650c557bda0153
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61022036"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645210"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>경로 및 SkiaSharp 텍스트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _경로 및 텍스트의 교차점에 알아보고_
 
@@ -30,7 +30,7 @@ _경로 및 텍스트의 교차점에 알아보고_
 
 대 한 이전 문서에서 [ **경로 효과**](effects.md)를 확인 하는 방법을 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) 메서드의 `SKPaint` 그리면된 경로 대 한 개요를 얻을 수 있습니다. 또한 문자 윤곽선에서 파생 된 경로 사용 하 여이 메서드를 사용할 수 있습니다.
 
-마지막으로,이 문서에서는 경로 및 텍스트의 다른 교차 부분을 보여 줍니다. 합니다 [ `DrawTextOnPath` ](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) 메서드의 `SKCanvas` 텍스트의 기준선 단추가 곡선된 경로 뒤에 오도록 텍스트 문자열을 표시할 수 있습니다.
+마지막으로,이 문서에서는 경로와 텍스트의 다른 교집합을 보여 줍니다. [`DrawTextOnPath`](xref:SkiaSharp.SKCanvas.DrawTextOnPath(System.String,SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPaint)) 의`SKCanvas` 메서드를 사용 하 여 텍스트의 기준선이 곡선 경로를 따라가는 텍스트 문자열을 표시할 수 있습니다.
 
 ## <a name="text-to-path-conversion"></a>경로 변환 하는 텍스트
 
@@ -128,7 +128,7 @@ public class ClippingTextPage : ContentPage
 
 [![](text-paths-images/textpatheffect-small.png "텍스트 경로 효과 페이지 스크린샷 삼중")](text-paths-images/textpatheffect-large.png#lightbox "삼중 텍스트 경로 효과 페이지 스크린샷")
 
-작업의 많은 합니다 [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) 클래스 필드와 생성자에 발생 합니다. 두 `SKPaint` 필드는 두 가지 다른 용도로 사용 되 고 정의 된 개체: 첫 번째 (이라는 `textPathPaint`)와 앰퍼샌드를 변환 하는 `TextSize` 1d 경로 효과 대 한 경로에 50입니다. 두 번째 (`textPaint`) 해당 경로 효과 사용 하 여 앰퍼샌드의 더 큰 버전을 표시 하는 데 사용 됩니다. 이런 이유로 합니다 `Style` 로 설정 되어이 두 번째 그리기 개체 `Stroke`, 하지만 `StrokeWidth` 1d 경로 효과 사용 하는 경우 해당 속성이 필요 하지 않기 때문에 속성이 설정 되지 않은:
+작업의 많은 합니다 [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) 클래스 필드와 생성자에 발생 합니다. 필드로 정의 `SKPaint` 된 두 개체는 다음 두 가지 용도로 사용 됩니다. 첫 번째 (명명 `textPathPaint`됨)는 앰퍼샌드 `TextSize` 를 50의로 변환 하는 데 사용 됩니다. 두 번째 (`textPaint`) 해당 경로 효과 사용 하 여 앰퍼샌드의 더 큰 버전을 표시 하는 데 사용 됩니다. 이런 이유로 합니다 `Style` 로 설정 되어이 두 번째 그리기 개체 `Stroke`, 하지만 `StrokeWidth` 1d 경로 효과 사용 하는 경우 해당 속성이 필요 하지 않기 때문에 속성이 설정 되지 않은:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -285,7 +285,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 public Void DrawTextOnPath (String text, SKPath path, Single hOffset, Single vOffset, SKPaint paint)
 ```
 
-첫 번째 인수에 지정 된 텍스트를 두 번째 인수로 지정 된 경로 함께 실행 하도록 합니다. 사용 하 여 경로의 시작 부분부터 오프셋에 텍스트를 시작할 수 있습니다는 `hOffset` 인수입니다. 일반적으로 경로 텍스트의 기준선을 forms: 텍스트 어센더 경로의 한쪽 되며 텍스트 디센더와 다른 합니다. 사용 하 여 경로에서 텍스트 기준선 오프셋 수 있지만 `vOffset` 인수입니다.
+첫 번째 인수에 지정 된 텍스트를 두 번째 인수로 지정 된 경로 함께 실행 하도록 합니다. 사용 하 여 경로의 시작 부분부터 오프셋에 텍스트를 시작할 수 있습니다는 `hOffset` 인수입니다. 일반적으로 경로는 텍스트의 기준선을 형성 합니다. 텍스트 어센더는 경로의 한쪽에 있고 텍스트 디센더는 다른 쪽에 있습니다. 사용 하 여 경로에서 텍스트 기준선 오프셋 수 있지만 `vOffset` 인수입니다.
 
 이 메서드는 설정에 지침을 제공 하는 `TextSize` 속성의 `SKPaint` 경로의 처음부터 끝까지 실행을 완벽 하 게 크기의 텍스트를 합니다. 경우에 따라 직접 텍스트 크기를 확인할 수 있습니다. 에 다음 문서의 설명 대로 경로 측정 함수를 사용 해야 하는 경우도 [ **경로 정보 및 열거형**](information.md)합니다.
 
@@ -326,9 +326,9 @@ public class CircularTextPage : ContentPage
 
 [![](text-paths-images/circulartext-small.png "순환 텍스트 페이지의 3 배가 스크린샷")](text-paths-images/circulartext-large.png#lightbox "삼중 순환 텍스트 페이지 스크린샷")
 
-텍스트 자체도 다소 순환 되도록 선택 되었습니다. "Circle" 단어에는 문장의 주체과 전치사 구의 개체는입니다.
+텍스트 자체가 약간 순환 되도록 선택 되었습니다. "Circle" 이라는 단어는 모두 문장의 제목과 prepositional 구의 개체입니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

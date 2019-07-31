@@ -1,155 +1,155 @@
 ---
-title: TvOS Xamarin의 테이블 뷰를 사용 하 여 작업
-description: 이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 테이블 뷰 및 테이블 뷰 컨트롤러를 사용 하 여 작업을 설명 합니다.
+title: Xamarin에서 tvOS 테이블 뷰 작업
+description: 이 문서에서는 tvOS 앱 내에서 테이블 뷰 및 테이블 뷰 컨트롤러를 디자인 하 고 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3e7fc3d627b5d7a1dc73caa395a9181efb0b5f08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3df0d8f686ec521a55948a9eb4632d77e5c3691f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61356137"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652331"
 ---
-# <a name="working-with-tvos-table-views-in-xamarin"></a>TvOS Xamarin의 테이블 뷰를 사용 하 여 작업
+# <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
-_이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 테이블 뷰 및 테이블 뷰 컨트롤러를 사용 하 여 작업을 설명 합니다._
+_이 문서에서는 tvOS 앱 내에서 테이블 뷰 및 테이블 뷰 컨트롤러를 디자인 하 고 사용 하는 방법을 설명 합니다._
 
-TvOS 테이블 뷰를 필요에 따라 그룹 또는 섹션으로 구성 될 수 있는 행을 스크롤의 단일 열으로 표시 됩니다. 방법을 이해 하는 암호화 되지 않은 사용자에 게 많은 양의 데이터를 효율적으로 표시 해야 하는 경우 테이블 뷰를 사용 해야 합니다.
+TvOS에서는 테이블 뷰가 선택적으로 그룹 또는 섹션으로 구성 될 수 있는 스크롤 행의 단일 열로 표시 됩니다. 테이블 뷰를 사용 하 여 많은 양의 데이터를 사용자에 게 효율적으로 표시 해야 하는 경우에는 명확 하 게 이해 해야 합니다.
 
-테이블 보기의 한 쪽에서 일반적으로 표시 되는 [분할 뷰](~/ios/tvos/user-interface/split-views.md) 반대쪽에 표시 되는 선택한 항목의 세부 정보를 사용 하 여 탐색으로:
+테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고, 선택한 항목의 세부 정보는 반대쪽에 표시 됩니다.
 
-[![](table-views-images/intro01.png "샘플 테이블 보기")](table-views-images/intro01.png#lightbox)
+[![](table-views-images/intro01.png "예제 테이블 뷰")](table-views-images/intro01.png#lightbox)
 
 <a name="About-Table-Views" />
 
 ## <a name="about-table-views"></a>테이블 뷰 정보
 
-`UITableView` 필요에 따라 그룹 또는 섹션으로 구성 될 수 있는 정보의 계층적 목록으로 스크롤할 수 있는 행의 단일 열이 표시 됩니다. 
+은 `UITableView` 스크롤할 수 있는 행의 단일 열을 선택적으로 그룹 또는 섹션으로 구성할 수 있는 정보 계층 목록으로 표시 합니다. 
 
 [![](table-views-images/table01.png "선택한 항목")](table-views-images/table01.png#lightbox)
 
-Apple에 테이블 사용을 위한 다음 제안에 있습니다.
+Apple에는 테이블 작업에 대 한 다음과 같은 제안이 있습니다.
 
-- **인식의 너비로** -사용자 테이블 너비의 올바른 균형 하려고 합니다. 테이블이 너무 넓은 경우 거리를 검색 하기 어려울 수 있습니다 하 고 사용할 수 있는 콘텐츠 영역에서 벗어날 수 있습니다. 테이블이 너무 좁은 경우 잘릴 수 정보를 발생할 수 있습니다 또는 줄 바꿈, 다시이 어려울 수 있습니다 대화방에서에서 읽을 수 있습니다.
-- **테이블 내용을 빠르게 표시** -데이터의 대규모 목록에 대 한 콘텐츠를 지연 로드 하 고 정보를 보여 주는 테이블 사용자에 게 표시 되는 즉시 시작 합니다. 테이블에 로드 하려면 오래 걸리는, 앱 또는 생각을 잠근에 관심을 손실 될 수 있습니다.
-- **사용자의 긴 콘텐츠 로드 상태를 알릴** -긴 테이블 로드 시간을 피할 수 없는, 있는 경우는 [진행률 표시줄 또는 활동 표시기](~/ios/tvos/user-interface/progress-indicators.md) 앱 알 수 있도록 잠근 되지 않았습니다.
+- **너비를 알고 있어야** 합니다. 테이블 너비의 올바른 균형을 유지 하려고 합니다. 테이블이 너무 넓은 경우 거리에서 검색 하기 어려울 수 있으며 사용 가능한 콘텐츠 영역에서 벗어날 수 있습니다. 테이블이 너무 좁아서 정보를 자르거나 래핑할 수 있습니다 .이 경우 사용자가 대화방에서 읽기 어려울 수 있습니다.
+- **테이블 콘텐츠를 빠르게 표시** -데이터를 대량으로 표시 하 고, 콘텐츠를 지연 로드 하 고, 사용자에 게 테이블을 표시 하는 즉시 정보를 표시 하기 시작 합니다. 테이블을 로드 하는 데 시간이 오래 걸리는 경우에는 사용자가 앱에서 관심이 손실 되거나 잠긴 것으로 간주 될 수 있습니다.
+- **긴 콘텐츠 로드를 사용자** 에 게 알립니다. 긴 테이블 로드 시간이 피할 수 없는 경우 앱이 잠기지 않았음을 알 수 있도록 [진행률 표시줄이 나 작업 표시기](~/ios/tvos/user-interface/progress-indicators.md) 를 표시 합니다.
 
 <a name="Table-Cell-Types" />
 
 ## <a name="table-view-cell-types"></a>테이블 뷰 셀 형식
 
-`UITableViewCell` 테이블 뷰에서 데이터의 개별 행을 나타내는 데 사용 됩니다. Apple에는 여러 기본 테이블 셀 형식 정의:
+는 `UITableViewCell` 테이블 뷰에서 데이터의 개별 행을 나타내는 데 사용 됩니다. Apple은 몇 가지 기본 테이블 셀 형식을 정의 합니다.
 
-- **기본** -옵션 이미지 왼쪽 및 오른쪽에서 왼쪽으로 맞춰져 있으며 제목 셀에이 형식 표시 합니다. 
-- **부제목** -첫 번째 줄 및 보다 작은 왼쪽으로 맞춰져 있으며 제목 왼쪽으로 맞춰져 있으며 부제목 다음 줄에서이 형식 표시 합니다.
-- **값 1** -이 유형 같은 줄에서 왼쪽으로 맞춰져 있으며 제목 색이 지정 된 밝게, 오른쪽 맞춤 부제목을 제공 합니다.
-- **값 2** -이 유형 같은 줄에 밝게 색이 지정 된, 왼쪽으로 맞춰져 있으며 부제목 오른쪽 맞춤 제목을 제공 합니다.
+- **기본값** -이 형식은 셀 왼쪽에 옵션 이미지를 표시 하 고 오른쪽에 왼쪽 맞춤 제목을 표시 합니다. 
+- **부제** -이 형식은 첫 번째 줄에 왼쪽 맞춤 제목을 표시 하 고 다음 줄에 더 작은 왼쪽에 맞춰진 부제목을 표시 합니다.
+- **값 1** -이 형식은 같은 줄에서 더 밝은 색, 오른쪽 맞춤 부제목이 있는 왼쪽 맞춤 제목을 표시 합니다.
+- **값 2** -이 형식은 같은 줄에서 더 밝은 색으로 왼쪽에 맞춰진 부제목을 사용 하 여 오른쪽 맞춤 제목을 표시 합니다.
 
-기본 테이블 뷰 셀 형식의 모든 공개 지표 또는 확인 표시와 같은 그래픽 요소도 지원합니다. 
+모든 기본 테이블 뷰 셀 유형은 노출 표시기 또는 확인 표시와 같은 그래픽 요소도 지원 합니다. 
 
-또한 정의할 수 있습니다는 **사용자 지정** 테이블 뷰 셀 형식 및 표시를 _프로토타입 셀_, 하거나 만드는 인터페이스 디자이너 또는 코드를 통해.
+또한 **사용자 지정** 테이블 뷰 셀 형식을 정의 하 고 사용자가 인터페이스 디자이너 또는 코드를 통해 만든 _프로토타입 셀_을 표시할 수 있습니다.
 
-Apple는 테이블 뷰 셀을 사용 하 여 작업 하기 위한 다음 제안에 있습니다.
+Apple에는 테이블 뷰 셀을 사용 하기 위한 다음과 같은 제안이 있습니다.
 
-- **텍스트 클리핑 방지** -짧은 텍스트의 개별 행 되도록 유지 하지 결국 잘린 합니다. 잘린 단어나 구를 어려운 대화방에서에서 구문 분석을 사용자에 대 한 합니다.
-- **Focused 행 상태를 고려** 행 반올림 더 큰 없으므로-셀의 모양을 모든 상태에서 테스트 해야 할 모서리에 포커스가 있 때. 이미지 또는 텍스트 잘린 될 수 있습니다 또는 Focused 상태에서 잘못 확인 합니다.
-- **편집할 수 있는 테이블을 제한적으로 사용 하 여** -이동 하거나 테이블 행을 삭제 하는 보다 많은 시간이 걸립니다 tvOS에 iOS입니다. 이 기능은 추가 또는 tvOS 앱에서 방해가 됩니다 신중 하 게 결정 해야 합니다.
-- **사용자 지정 셀 형식에 적절 한 만들기** 기본 제공 테이블 뷰 셀 형식은 대부분의 경우에 적합 하는 동안-제어를 강화 하 고 정보를 더 잘 표현에 비표준 정보에 대 한 사용자 지정 셀 형식을 만드는 것이 좋습니다. 사용자입니다.
+- **텍스트 클리핑 방지** -잘림 방지 되도록 개별 텍스트 줄을 짧게 유지 합니다. 잘린 단어나 구는 대화방에서 구문을 분석 하는 데 사용 하기 어렵습니다.
+- 포커스가 있는 **행 상태를 고려** 합니다. 포커스가 있으면 모든 상태에서 셀의 모양을 테스트 해야 합니다. 포커스가 있는 상태에서 이미지나 텍스트가 잘리거나 잘못 표시 될 수 있습니다.
+- **편집 가능한 테이블 사용** -테이블 행 이동 또는 삭제는 IOS 보다 tvOS에서 더 많은 시간이 걸립니다. 이 기능이 tvOS 앱을 추가 하거나 방해 여부를 신중 하 게 결정 해야 합니다.
+- **적절 한 경우 사용자 지정 셀 유형을 만듭니다** . 기본 제공 테이블 뷰 셀 유형은 여러 상황에서 매우 유용 하지만, 비표준 정보에 대 한 사용자 지정 셀 유형을 만들어 더 많은 제어를 제공 하 고 정보를에 더 효과적으로 제공 하는 것이 좋습니다. 정의.
 
 <a name="Working-With-Table-Views" />
 
 ## <a name="working-with-table-views"></a>테이블 뷰 작업
 
-Xamarin.tvOS 앱에서 테이블 뷰를 사용 하는 가장 쉬운 방법은 만들고 인터페이스 디자이너에서 모양을 수정 하는 경우
+TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페이스 디자이너에서 모양을 만들고 수정 하는 것입니다.
 
 시작하려면 다음을 수행합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
     
-1. Mac 용 Visual Studio에서 새 tvOS 앱 프로젝트를 시작 하 고 선택 **tvOS** > **앱** > **단일 뷰 앱** 을 클릭 합니다  **다음** 단추: 
+1. Mac용 Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **app** > **단일 뷰 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
 
     [![](table-views-images/table02.png "단일 뷰 앱 선택")](table-views-images/table02.png#lightbox)
-1. 입력 한 **이름을** 앱 및 클릭 **다음**: 
+1. 앱의 **이름을** 입력 하 고 **다음**을 클릭 합니다. 
 
-    [![](table-views-images/table03.png "앱의 이름을 입력 합니다.")](table-views-images/table03.png#lightbox)
-1. 조정 하거나 합니다 **프로젝트 이름** 및 **솔루션 이름** 또는 기본값을 사용 하 고 클릭 합니다 **만들기** 새 솔루션을 만드는 단추: 
+    [![](table-views-images/table03.png "앱의 이름 입력")](table-views-images/table03.png#lightbox)
+1. **프로젝트 이름** 및 **솔루션 이름을** 조정 하거나 기본값을 적용 하 고 **만들기** 단추를 클릭 하 여 새 솔루션을 만듭니다. 
 
     [![](table-views-images/table04.png "프로젝트 이름 및 솔루션 이름")](table-views-images/table04.png#lightbox)
-1. 에 **Solution Pad**를 두 번 클릭 합니다 `Main.storyboard` iOS 디자이너에서에서 열려는 파일: 
+1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 엽니다. 
 
-    [![](table-views-images/table05.png "Main.storyboard 파일")](table-views-images/table05.png#lightbox)
-1. 선택 하 고 삭제 합니다 **기본 뷰 컨트롤러**: 
+    [![](table-views-images/table05.png "주 storyboard 파일")](table-views-images/table05.png#lightbox)
+1. **기본 뷰 컨트롤러**를 선택 하 고 삭제 합니다. 
 
-    [![](table-views-images/table06.png "선택 하 고 기본 뷰 컨트롤러를 삭제 합니다.")](table-views-images/table06.png#lightbox)
-1. 선택 된 **분할 뷰 컨트롤러** 에서 **도구 상자** 디자인 화면으로 끌어 옵니다.
-1. 기본적으로 얻을 수는 [분할 뷰](~/ios/tvos/user-interface/split-views.md) 사용 하 여를 **탐색 보기 컨트롤러** 및 **테이블 뷰 컨트롤러** 왼쪽에 및 **뷰 컨트롤러** 오른쪽에 있습니다. TvOS의 테이블 뷰 Apple의 제안 된 사용법입니다. 
+    [![](table-views-images/table06.png "기본 뷰 컨트롤러를 선택 하 고 삭제 합니다.")](table-views-images/table06.png#lightbox)
+1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 선택 하 고 Design Surface 끌어 옵니다.
+1. 기본적으로 왼쪽에는 **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
 
-    [![](table-views-images/table08.png "분할 된 보기를 추가 합니다.")](table-views-images/table08.png#lightbox)
-1. 테이블 보기의 모든 부분을 선택 하 고 사용자 지정을 할당 해야 합니다 **클래스 이름** 에 **위젯** 탭의 **속성 탐색기** C#코드입니다. 예를 들어 합니다 **테이블 뷰 컨트롤러**: 
+    [![](table-views-images/table08.png "분할 뷰 추가")](table-views-images/table08.png#lightbox)
+1. C# 나중에 코드에서 액세스할 수 있도록 테이블 뷰의 모든 부분을 선택 하 고 **속성 탐색기** 의 **위젯** 탭에서 사용자 지정 **클래스 이름을** 할당 해야 합니다. 예를 들어 **테이블 뷰 컨트롤러**는 다음과 같습니다. 
 
     [![](table-views-images/table09.png "클래스 이름 할당")](table-views-images/table09.png#lightbox)
-1. 에 대 한 사용자 지정 클래스를 만들도록 합니다 **테이블 뷰 컨트롤러**, **테이블 뷰** 임의의 **프로토타입 셀**. 만들 때 Mac 용 visual Studio는 프로젝트 트리에 사용자 지정 클래스를 추가 합니다. 
+1. **테이블 뷰 컨트롤러**, **테이블 뷰** 및 **프로토타입 셀**에 대 한 사용자 지정 클래스를 만들어야 합니다. Mac용 Visual Studio는 사용자 지정 클래스를 만들 때 프로젝트 트리에 추가 합니다. 
 
-    [![](table-views-images/table10.png "프로젝트 트리에서 사용자 지정 클래스")](table-views-images/table10.png#lightbox)
-1. 다음으로, 디자인 화면에서 테이블 보기를 선택 하 고 필요에 따라 해당 속성을 조정 합니다. 수와 같은 **프로토타입 셀** 하며 **스타일** (일반 또는 그룹화 기준): 
+    [![](table-views-images/table10.png "프로젝트 트리의 사용자 지정 클래스")](table-views-images/table10.png#lightbox)
+1. 그런 다음 Design Surface에서 테이블 뷰를 선택 하 고 필요에 따라 속성을 조정 합니다. 예: **프로토타입 셀** 수 및 **스타일** (일반 또는 그룹화 됨): 
 
     [![](table-views-images/table11.png "위젯 탭")](table-views-images/table11.png#lightbox)
-1. 각각에 대 한 **프로토타입 셀**선택 하 고 고유한 할당 **식별자** 에 **위젯** 탭을 **속성 탐색기**합니다. 이 단계는 _매우 중요 한_ 나중에이 식별자는 필요에 따라 채울 경우 테이블입니다. 예를 들어 `AttrCell`: 
+1. 각 **프로토타입 셀**에 대해 해당 셀을 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 고유한 **식별자** 를 할당 합니다. 이 단계는 나중에 테이블을 채울 때이 식별자가 필요 하므로 _매우 중요_ 합니다. 예를 `AttrCell`들면 다음과 같습니다. 
 
     [![](table-views-images/table12.png "위젯 탭")](table-views-images/table12.png#lightbox)
-1. 중 하나로 셀을 표시 하도록 선택할 수도 있습니다는 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 를 통해 합니다 **스타일** 드롭다운으로 설정 하거나 **사용자 지정** 셀 레이아웃을 디자인 화면을 사용 하 여 다른 UI 위젯 내에서 끌어 합니다 **도구 상자**: 
+1. 또한 **스타일** 드롭다운을 통해 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 으로 셀을 표시 하거나 **사용자 지정** 으로 설정 하 고 Design Surface를 사용 하 여 **도구 상자**에서 다른 UI 위젯에서 끌어 셀을 레이아웃 하도록 선택할 수 있습니다. 
 
     [![](table-views-images/table13.png "셀 레이아웃")](table-views-images/table13.png#lightbox)
-1. 고유한 할당 **이름을** 의 프로토타입 셀 디자인에서는 각 UI 요소에는 **위젯** 탭의 **속성 탐색기** 되므로 나중에 액세스할 수 있습니다 C# 코드: 
+1. **속성 탐색기** 의 C# **위젯** 탭에서 프로토타입 셀 디자인의 각 UI 요소에 고유한 **이름을** 할당 하 여 나중에 코드에서 액세스할 수 있도록 합니다. 
 
-    [![](table-views-images/table14.png "이름을 할당합니다")](table-views-images/table14.png#lightbox)
-1. 테이블 보기의 프로토타입 셀을 모두에 대해 위의 단계를 반복 합니다.
-1. 다음으로, UI 디자인, 세부 정보 보기 레이아웃 및 고유한 할당의 나머지 부분에 사용자 지정 클래스를 할당 **이름을** 세부 정보에서 각 UI 요소에 액세스할 수 있도록 확인 C# 도 합니다. 예를 들면 다음과 같습니다. 
+    [![](table-views-images/table14.png "이름 할당")](table-views-images/table14.png#lightbox)
+1. 테이블 뷰의 모든 프로토타입 셀에 대해 위의 단계를 반복 합니다.
+1. 그런 다음 UI 디자인의 나머지 부분에 사용자 지정 클래스를 할당 하 고 자세히 보기를 레이아웃 한 다음에서 C# 액세스할 수 있도록 세부 정보 보기의 각 Ui 요소에 고유한 이름을 할당 합니다. 예를 들면 다음과 같습니다. 
 
     [![](table-views-images/table15.png "UI 레이아웃")](table-views-images/table15.png#lightbox)
 1. 스토리 보드에 변경 내용을 저장 합니다.
     
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. Visual Studio에서 새 tvOS 앱 프로젝트를 시작 하 고 선택 **tvOS** > **단일 뷰 앱** 앱에 대 한 이름을 입력 합니다. 클릭 합니다 **알겠습니다** 단추를 새 솔루션 만들기: 
+1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 **를** 클릭 하 여 새 솔루션을 만듭니다. 
 
     [![](table-views-images/table02-vs.png "단일 뷰 앱 선택")](table-views-images/table02-vs.png#lightbox)
-1. 에 **솔루션 탐색기**를 두 번 클릭 합니다 `Main.storyboard` iOS 디자이너에서에서 열려는 파일: 
+1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 엽니다. 
 
-    [![](table-views-images/table05-vs.png "Main.storyboard 파일")](table-views-images/table05-vs.png#lightbox)
-1. 선택 하 고 삭제 합니다 **기본 뷰 컨트롤러**: 
+    [![](table-views-images/table05-vs.png "주 storyboard 파일")](table-views-images/table05-vs.png#lightbox)
+1. **기본 뷰 컨트롤러**를 선택 하 고 삭제 합니다. 
 
-    [![](table-views-images/table06-vs.png "선택 하 고 기본 뷰 컨트롤러를 삭제 합니다.")](table-views-images/table06-vs.png#lightbox)
-1. 선택는 **분할 뷰 컨트롤러** 에서 합니다 **도구 상자** 디자인 화면으로 끌어 옵니다. 
+    [![](table-views-images/table06-vs.png "기본 뷰 컨트롤러를 선택 하 고 삭제 합니다.")](table-views-images/table06-vs.png#lightbox)
+1. **도구 상자** 에서 **분할 보기 컨트롤러** 를 선택 하 고 Design Surface 끌어 옵니다. 
 
     [![](table-views-images/table07-vs.png "분할 뷰 컨트롤러")](table-views-images/table07-vs.png#lightbox)
-1. 기본적으로 얻을 수는 [분할 뷰](~/ios/tvos/user-interface/split-views.md) 사용 하 여를 **탐색 보기 컨트롤러** 및 **테이블 뷰 컨트롤러** 왼쪽에 및 **뷰 컨트롤러** 오른쪽에 있습니다. TvOS의 테이블 뷰 Apple의 제안 된 사용법입니다. 
+1. 기본적으로 왼쪽에는 **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
 
-    [![](table-views-images/table08-vs.png "레이아웃 UI")](table-views-images/table08-vs.png#lightbox)
-1. 테이블 보기의 모든 부분을 선택 하 고 사용자 지정을 할당 해야 합니다 **클래스 이름** 에 **위젯** 탭의 **속성 탐색기** C#코드입니다. 예를 들어 합니다 **테이블 뷰 컨트롤러**: 
+    [![](table-views-images/table08-vs.png "UI 레이아웃")](table-views-images/table08-vs.png#lightbox)
+1. C# 나중에 코드에서 액세스할 수 있도록 테이블 뷰의 모든 부분을 선택 하 고 **속성 탐색기** 의 **위젯** 탭에서 사용자 지정 **클래스 이름을** 할당 해야 합니다. 예를 들어 **테이블 뷰 컨트롤러**는 다음과 같습니다. 
 
     [![](table-views-images/table09-vs.png "위젯 탭")](table-views-images/table09-vs.png#lightbox)
-1. 에 대 한 사용자 지정 클래스를 만들도록 합니다 **테이블 뷰 컨트롤러**, **테이블 뷰** 임의의 **프로토타입 셀**. 만들 때 Mac 용 visual Studio는 프로젝트 트리에 사용자 지정 클래스를 추가 합니다. 
+1. **테이블 뷰 컨트롤러**, **테이블 뷰** 및 **프로토타입 셀**에 대 한 사용자 지정 클래스를 만들어야 합니다. Mac용 Visual Studio는 사용자 지정 클래스를 만들 때 프로젝트 트리에 추가 합니다. 
 
-    [![](table-views-images/table10-vs.png "프로젝트 트리에서 사용자 지정 클래스")](table-views-images/table10-vs.png#lightbox)
-1. 다음으로, 디자인 화면에서 테이블 보기를 선택 하 고 필요에 따라 해당 속성을 조정 합니다. 수와 같은 **프로토타입 셀** 하며 **스타일** (일반 또는 그룹화 기준): 
+    [![](table-views-images/table10-vs.png "프로젝트 트리의 사용자 지정 클래스")](table-views-images/table10-vs.png#lightbox)
+1. 그런 다음 Design Surface에서 테이블 뷰를 선택 하 고 필요에 따라 속성을 조정 합니다. 예: **프로토타입 셀** 수 및 **스타일** (일반 또는 그룹화 됨): 
 
     [![](table-views-images/table11-vs.png "위젯 탭")](table-views-images/table11-vs.png#lightbox)
-1. 각각에 대 한 **프로토타입 셀**선택 하 고 고유한 할당 **식별자** 에 **위젯** 탭을 **속성 탐색기**합니다. 이 단계는 _매우 중요 한_ 나중에이 식별자는 필요에 따라 채울 경우 테이블입니다. 예를 들어 `AttrCell`: 
+1. 각 **프로토타입 셀**에 대해 해당 셀을 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 고유한 **식별자** 를 할당 합니다. 이 단계는 나중에 테이블을 채울 때이 식별자가 필요 하므로 _매우 중요_ 합니다. 예를 `AttrCell`들면 다음과 같습니다. 
 
-    [![](table-views-images/table12-vs.png "식별자를 할당 합니다.")](table-views-images/table12-vs.png#lightbox)
-1. 중 하나로 셀을 표시 하도록 선택할 수도 있습니다는 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 를 통해 합니다 **스타일** 드롭다운으로 설정 하거나 **사용자 지정** 셀 레이아웃을 디자인 화면을 사용 하 여 다른 UI 위젯 내에서 끌어 합니다 **도구 상자**: 
+    [![](table-views-images/table12-vs.png "식별자 할당")](table-views-images/table12-vs.png#lightbox)
+1. 또한 **스타일** 드롭다운을 통해 [기본 테이블 뷰 셀 형식](#table-view-cell-types) 으로 셀을 표시 하거나 **사용자 지정** 으로 설정 하 고 Design Surface를 사용 하 여 **도구 상자**에서 다른 UI 위젯에서 끌어 셀을 레이아웃 하도록 선택할 수 있습니다. 
 
     [![](table-views-images/table13-vs.png "스타일 드롭다운")](table-views-images/table13-vs.png#lightbox)
-1. 고유한 할당 **이름을** 의 프로토타입 셀 디자인에서는 각 UI 요소에는 **위젯** 탭의 **속성 탐색기** 되므로 나중에 액세스할 수 있습니다 C# 코드: 
+1. **속성 탐색기** 의 C# **위젯** 탭에서 프로토타입 셀 디자인의 각 UI 요소에 고유한 **이름을** 할당 하 여 나중에 코드에서 액세스할 수 있도록 합니다. 
 
     [![](table-views-images/table14-vs.png "위젯 탭")](table-views-images/table14-vs.png#lightbox)
-1. 테이블 보기의 프로토타입 셀을 모두에 대해 위의 단계를 반복 합니다.
-1. 다음으로, UI 디자인, 세부 정보 보기 레이아웃 및 고유한 할당의 나머지 부분에 사용자 지정 클래스를 할당 **이름을** 세부 정보에서 각 UI 요소에 액세스할 수 있도록 확인 C# 도 합니다. 예를 들면 다음과 같습니다. 
+1. 테이블 뷰의 모든 프로토타입 셀에 대해 위의 단계를 반복 합니다.
+1. 그런 다음 UI 디자인의 나머지 부분에 사용자 지정 클래스를 할당 하 고 자세히 보기를 레이아웃 한 다음에서 C# 액세스할 수 있도록 세부 정보 보기의 각 Ui 요소에 고유한 이름을 할당 합니다. 예를 들면 다음과 같습니다. 
 
     [![](table-views-images/table15.png "UI 레이아웃")](table-views-images/table15.png#lightbox)
 1. 스토리 보드에 변경 내용을 저장 합니다.
@@ -160,25 +160,25 @@ Xamarin.tvOS 앱에서 테이블 뷰를 사용 하는 가장 쉬운 방법은 �
 
 ## <a name="designing-a-data-model"></a>데이터 모델 디자인
 
-테이블 보기 쉽게 표시 하는 정보를 사용 하 여 작업을 수행할 수와 자세한 정보 표시 (사용자 선택 하거나 표 뷰의 행을 강조 표시)으로 쉽게, 사용자 지정 클래스를 만들거나 정보에 대 한 데이터 모델로 작동 하는 클래스를 .
+사용자가 테이블 뷰에서 행을 선택 하거나 강조 표시 함에 따라 테이블 보기가 더 쉽게 표시 하 고 자세한 정보를 쉽게 표시 하기 위해 정보를 사용 하 여 작업을 수행 하려면 사용자 지정 클래스를 만들어 표시 되는 정보에 대 한 데이터 모델 역할을 수행 합니다. .
 
-목록을 포함 하는 여행 예약 응용 프로그램의 예로 **도시**의 고유한 목록을 포함 하는 각 **실감** 사용자가 선택할 수 있는 합니다. 사용자는 인력으로 표시할 수는 *즐겨 찾는*가져오려면 선택 합니다 *지침* 는 인력을 및 *항공권 예약* 지정 도시입니다.
+각각 사용자가 선택할 수 있는 고유한 **맛보기** 목록을 포함 하는 **도시**목록이 포함 된 여행 예약 앱의 예를 사용 합니다. 사용자는 인력를 *즐겨찾기로*표시할 수 있습니다. 인력에 대 한 *지침* 을 얻고 지정 된 도시에 *비행* 을 이동 하도록 선택 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-에 대 한 데이터 모델을 만드는 **인력**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 합니다 **Solution Pad** 선택한 **추가** > **새 파일...** . 입력 `AttractionInformation` 에 대 한 합니다 **이름** 을 클릭 합니다 **새로 만들기** 단추: 
+**인력**에 대 한 데이터 모델을 만들려면 **Solution Pad** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다. 이름 `AttractionInformation` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
 
-[![](table-views-images/data01.png "AttractionInformation 이름 입력")](table-views-images/data01.png#lightbox)
+[![](table-views-images/data01.png "이름에 AttractionInformation를 입력 합니다.")](table-views-images/data01.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-에 대 한 데이터 모델을 만드는 **인력**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** 선택한 **추가** > **새 항목 ...** . 선택 **클래스** enter `AttractionInformation` 에 대 한를 **이름** 을 클릭 합니다 **추가** 단추: 
+**인력**에 대 한 데이터 모델을 만들려면 **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 항목** **추가** > ...를 선택 합니다. **클래스** 를 선택 하 `AttractionInformation` 고 **이름** 으로를 입력 한 다음 **추가** 단추를 클릭 합니다. 
 
-[![](table-views-images/data01-vs.png "클래스를 선택 하 고 이름에 대 한 AttractionInformation 입력")](table-views-images/data01-vs.png#lightbox)
+[![](table-views-images/data01-vs.png "클래스를 선택 하 고 이름으로 AttractionInformation을 입력 합니다.")](table-views-images/data01-vs.png#lightbox)
 
 -----
 
-편집 된 `AttractionInformation.cs` 파일을 다음과 같이 표시 되도록 합니다.
+`AttractionInformation.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -210,23 +210,23 @@ namespace tvTable
 }
 ```
 
-에 대 한 정보를 저장 하는 속성을 제공 하는이 클래스는 주어진 **인력**합니다.
+이 클래스는 지정 된 **인력**에 대 한 정보를 저장 하는 속성을 제공 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-그런 다음에 프로젝트 이름을 마우스 오른쪽 단추로 클릭 합니다 **Solution Pad** 다시 선택한 **추가** > **새 파일...** . 입력 `CityInformation` 에 대 한 합니다 **이름** 을 클릭 합니다 **새로 만들기** 단추: 
+그런 다음 **Solution Pad** 에서 프로젝트 이름을 다시 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다. 이름 `CityInformation` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
 
-[![](table-views-images/data02.png "CityInformation 이름 입력")](table-views-images/data02.png#lightbox)
+[![](table-views-images/data02.png "이름에 CityInformation를 입력 합니다.")](table-views-images/data02.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-그런 다음에 프로젝트 이름을 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** 다시 선택한 **추가** > **새 항목...** . 입력 `CityInformation` 에 대 한 합니다 **이름** 을 클릭 합니다 **추가** 단추: 
+그런 다음 **솔루션 탐색기** 에서 프로젝트 이름을 다시 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 항목**...을 선택 합니다. 이름 `CityInformation` 으로를 입력 하 고 **추가** 단추를 클릭 합니다. 
 
-[![](table-views-images/data02-vs.png "CityInformation 이름 입력")](table-views-images/data02-vs.png#lightbox)
+[![](table-views-images/data02-vs.png "이름에 CityInformation를 입력 합니다.")](table-views-images/data02-vs.png#lightbox)
 
 -----
 
-편집 된 `CityInformation.cs` 파일을 다음과 같이 표시 되도록 합니다.
+`CityInformation.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -278,15 +278,15 @@ namespace tvTable
 }
 ```
 
-이 클래스는 대상에 대 한 모든 정보를 보유 **도시**, 컬렉션인 **실감** 도시에 대 한 두 개의 도우미 메서드를 제공 하 고 (`AddAttraction`) 실감을 추가할 수 있도록는 도시입니다.
+이 클래스는 해당 도시의 **맛보기** 컬렉션인 대상 **도시**에 대 한 모든 정보를 포함 하 고, 도시에 맛보기를 더 쉽게`AddAttraction`추가할 수 있도록 두 개의 도우미 메서드 ()를 제공 합니다.
 
 <a name="The-Table-Data-Source" />
 
-## <a name="the-table-view-data-source"></a>테이블 뷰에서 데이터 원본
+## <a name="the-table-view-data-source"></a>테이블 뷰 데이터 원본
 
-각 테이블 뷰에 필요한 데이터 원본 (`UITableViewDataSource`) 테이블 보기에 필요한 테이블에 데이터를 제공 하 여으로 필요한 행을 생성 합니다.
+각 테이블 뷰에서는 테이블에 대 한`UITableViewDataSource`데이터를 제공 하 고 테이블 뷰에 필요한 행을 생성 하기 위해 데이터 원본 ()이 필요 합니다.
 
-프로젝트 이름을 마우스 오른쪽 단추로 위의 예에서 합니다 **솔루션 탐색기**를 선택 **추가** > **새 파일...**  호출 `AttractionTableDatasource` 을 클릭 합니다 **새로 만들기** 만들기 단추. 다음에 편집을 `AttractionTableDatasource.cs` 파일을 다음과 같이 표시 되도록 합니다.
+위의 예에서는 **솔루션 탐색기**의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 `AttractionTableDatasource` **새 파일** **추가** > ...를 선택한 다음 새로 만들기 단추를 클릭 하 여 **새로** 만듭니다. 그런 다음 `AttractionTableDatasource.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -381,9 +381,9 @@ namespace tvTable
 }
 ```
 
-세부 정보에서 클래스의 여러 부분에 대해를 살펴보겠습니다.
+클래스의 몇 가지 섹션을 자세히 살펴보겠습니다.
 
-먼저 프로토타입 셀 (이 위의 인터페이스 디자이너에서 할당 된 동일한 식별자)의 고유 식별자를 포함 하는 상수를 정의 바로 가기를 테이블 뷰 컨트롤러를 다시 추가 하 고 데이터에 대 한 저장소를 생성 합니다.
+먼저 프로토타입 셀의 고유 식별자 (위의 인터페이스 디자이너에서 할당 된 식별자)를 포함 하는 상수를 정의 하 고 테이블 뷰 컨트롤러에 바로 가기를 추가 하 고 데이터에 대 한 저장소를 만들었습니다.
 
 ```csharp
 const string CellID = "AttrCell";
@@ -391,7 +391,7 @@ public AttractionTableViewController Controller { get; set;}
 public List<CityInformation> Cities { get; set;}
 ```
 
-다음으로,에서는 테이블 뷰 컨트롤러를 저장 한 다음를 빌드하고 채워야 (앞에서 정의한 데이터 모델을 사용 하 여) 데이터 원본 클래스의 인스턴스가 만들어질 때:
+다음으로, 클래스를 만들 때 테이블 뷰 컨트롤러를 저장 한 다음 위에 정의 된 데이터 모델을 사용 하 여 데이터 소스를 작성 하 고 채웁니다.
 
 ```csharp
 public AttractionTableDatasource (AttractionTableViewController controller)
@@ -403,7 +403,7 @@ public AttractionTableDatasource (AttractionTableViewController controller)
 }
 ```
 
-예로 `PopulateCities` 메서드 이러한 실제 앱에서 대시보드 또는 웹 서비스에서 쉽게 읽을 수 있지만 메모리에 데이터 모델 개체를 간단히 만듭니다.
+예를 들어, 메서드는 `PopulateCities` 단순히 메모리에 데이터 모델 개체를 만들지만 실제 응용 프로그램의 데이터베이스 또는 웹 서비스에서 쉽게 읽을 수 있습니다.
 
 ```csharp
 public void PopulateCities ()
@@ -418,7 +418,7 @@ public void PopulateCities ()
 }
 ```
 
-`NumberOfSections` 메서드 테이블의 섹션의 수를 반환 합니다.
+메서드 `NumberOfSections` 는 테이블에 있는 섹션의 수를 반환 합니다.
 
 ```csharp
 public override nint NumberOfSections (UITableView tableView)
@@ -428,9 +428,9 @@ public override nint NumberOfSections (UITableView tableView)
 }
 ```
 
-에 대 한 **일반** 테이블 뷰 스타일 항상 1을 반환 합니다.
+**일반** 스타일의 테이블 뷰에서는 항상 1을 반환 합니다.
 
-`RowsInSection` 현재 섹션의 행 수를 반환 합니다.
+메서드 `RowsInSection` 는 현재 섹션의 행 수를 반환 합니다.
 
 ```csharp
 public override nint RowsInSection (UITableView tableView, nint section)
@@ -440,9 +440,9 @@ public override nint RowsInSection (UITableView tableView, nint section)
 }
 ```
 
-다시 **일반** 테이블 뷰 데이터 소스의 항목의 총 수를 반환 합니다.
+다시, **일반** 테이블 보기의 경우 데이터 원본에 있는 총 항목 수를 반환 합니다.
 
-`TitleForHeader` 메서드 제목을 반환 하는 지정 된 섹션:
+메서드 `TitleForHeader` 는 지정 된 섹션에 대 한 제목을 반환 합니다.
 
 ```csharp
 public override string TitleForHeader (UITableView tableView, nint section)
@@ -452,9 +452,9 @@ public override string TitleForHeader (UITableView tableView, nint section)
 }
 ```
 
-에 대 한는 **Plain** 테이블 뷰 형식에 제목을 비워 둡니다 (`""`).
+**일반** 테이블 뷰 형식의 경우 제목 (`""`)을 비워 둡니다.
 
-마지막으로 테이블 보기를 요청한 경우 만들고 사용 하 여 프로토타입 셀을 채우는 `GetCell` 메서드: 
+마지막으로 테이블 뷰에서 요청 하는 경우 메서드를 `GetCell` 사용 하 여 프로토타입 셀을 만들고 채웁니다. 
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -470,15 +470,15 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-작업에 대 한 자세한 내용은 `UITableViewDatasource`, Apple의를 참조 하세요 [UITableViewDatasource](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40006941) 설명서.
+로 작업 하는 `UITableViewDatasource`방법에 대 한 자세한 내용은 Apple의 [uitableviewdatasource](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40006941) 설명서를 참조 하세요.
 
 <a name="The-Table-View-Delegate" />
 
-## <a name="the-table-view-delegate"></a>테이블 보기 대리자
+## <a name="the-table-view-delegate"></a>테이블 뷰 대리자
 
-대리자를 요구 하는 각 테이블 뷰 (`UITableViewDelegate`) 사용자 상호 작용 또는 기타 시스템 이벤트 테이블에 응답할 수 있습니다.
+각 테이블 뷰에서는 테이블의 사용자`UITableViewDelegate`상호 작용 또는 다른 시스템 이벤트에 응답 하는 대리자 ()가 필요 합니다.
 
-프로젝트 이름을 마우스 오른쪽 단추로 위의 예에서 합니다 **솔루션 탐색기**를 선택 **추가** > **새 파일...**  호출 `AttractionTableDelegate` 을 클릭 합니다 **새로 만들기** 만들기 단추. 다음에 편집을 `AttractionTableDelegate.cs` 파일을 다음과 같이 표시 되도록 합니다.
+위의 예에서는 **솔루션 탐색기**의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 `AttractionTableDelegate` **새 파일** **추가** > ...를 선택한 다음 새로 만들기 단추를 클릭 하 여 **새로** 만듭니다. 그런 다음 `AttractionTableDelegate.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -533,9 +533,9 @@ namespace tvTable
 }
 ```
 
-세부 정보에서이 클래스의 여러 섹션에 대해를 살펴보겠습니다.
+이 클래스의 몇 가지 섹션을 자세히 살펴보겠습니다.
 
-먼저 클래스를 만들 때 테이블 뷰 컨트롤러의 바로 가기를 만듭니다.
+먼저 클래스를 만들 때 테이블 뷰 컨트롤러에 대 한 바로 가기를 만듭니다.
 
 ```csharp
 public AttractionTableViewController Controller { get; set;}
@@ -548,7 +548,7 @@ public AttractionTableDelegate (AttractionTableViewController controller)
 }
 ```
 
-행을 선택 하는 경우에 한 (사용자의 Apple 원격 터치 화면에서 클릭) 표시 하려고 합니다 **인력** 즐겨찾기로 선택한 행으로 표시:
+그런 다음, 행이 선택 되 면 (사용자가 Apple 원격의 터치 화면을 클릭 하면) 선택한 행으로 표시 되는 **인력** 을 즐겨찾기로 표시 하려고 합니다.
 
 ```csharp
 public override void RowSelected (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -561,7 +561,7 @@ public override void RowSelected (UITableView tableView, Foundation.NSIndexPath 
 }
 ```
 
-다음으로, (Apple 원격 터치 화면을 사용 하 여 포커스를 받으면)에서 행을 강조 표시할 때 원하는의 세부 정보를 제공 하는 **인력** 분할 뷰 컨트롤러의 해당 행의 세부 정보 섹션에 표시:
+그런 다음 사용자가 행을 강조 표시할 때 (Apple 원격 터치 화면을 사용 하 여 포커스를 제공) 분할 보기 컨트롤러의 세부 정보 섹션에 해당 행으로 표시 되는 **인력** 의 세부 정보를 표시 하려고 합니다.
 
 ```csharp
 public override bool CanFocusRow (UITableView tableView, Foundation.NSIndexPath indexPath)
@@ -582,17 +582,17 @@ internal void RaiseAttractionHighlighted (AttractionInformation attraction)
 }
 ```
 
-`CanFocusRow` 테이블 보기의 포커스를 가져오기에 있는 각 행에 대해 호출 됩니다. 반환 `true` 행에 포커스를 얻을 수, 하는 경우 다른 반환 `false`합니다. 사용자 지정이이 예제의 경우 만들었습니다 `AttractionHighlighted` 포커스를 받을 때 각 행에서 발생할 수 있는 이벤트입니다.
+테이블 뷰에서 포커스를 가져오는 각 행에 대해 메서드가호출됩니다.`CanFocusRow` 행 `true` 이 포커스를 받을 수 있으면를 반환 하 `false`고, 그렇지 않으면를 반환 합니다. 이 예제의 경우 포커스를 받을 때 각 행에 대해 발생 `AttractionHighlighted` 하는 사용자 지정 이벤트를 만들었습니다.
 
-작업에 대 한 자세한 내용은 `UITableViewDelegate`, Apple의를 참조 하세요 [UITableViewDelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942) 설명서.
+로 작업 하는 `UITableViewDelegate`방법에 대 한 자세한 내용은 Apple의 [uitableviewdelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942) 설명서를 참조 하세요.
 
 <a name="The-Table-View-Cell" />
 
 ## <a name="the-table-view-cell"></a>테이블 뷰 셀
 
-인터페이스 디자이너에서 테이블 보기에 추가한 각 프로토타입 셀에 대 한 스페이스도 테이블 뷰 셀의 사용자 지정 인스턴스 (`UITableViewCell`)을 만들 때 새 셀 (행)를 채울 수 있도록 합니다.
+인터페이스 디자이너에서 테이블 뷰에 추가한 각 프로토타입 셀에 대해서도 테이블 뷰 셀`UITableViewCell`()의 사용자 지정 인스턴스를 만들어 새 셀 (행)을 만들 때 채울 수 있습니다.
 
-예제 앱을 두 번 클릭 합니다 `AttractionTableCell.cs` 파일 편집을 위해 열고 다음과 같이 표시 되도록 합니다.
+예제 앱의 경우 `AttractionTableCell.cs` 파일을 두 번 클릭 하 여 편집용으로 열고 다음과 같이 표시 합니다.
 
 ```csharp
 using System;
@@ -640,7 +640,7 @@ namespace tvTable
 }
 ```
 
-이 클래스는 인력 데이터 모델 개체에 대 한 저장소를 제공 (`AttractionInformation` 위에 정의 된 대로)에 지정된 된 행 표시:
+이 클래스는 지정 된 행에 표시 된 인력 데이터`AttractionInformation` 모델 개체에 대 한 저장소를 제공 합니다.
 
 ```csharp
 private AttractionInformation _attraction = null;
@@ -655,7 +655,7 @@ public AttractionInformation Attraction {
 }
 ```
 
-`UpdateUI` 메서드는 필요에 따라 UI 위젯 (에 추가한 인터페이스 디자이너에서 셀의 프로토타입)를 채웁니다.
+메서드 `UpdateUI` 는 필요에 따라 인터페이스 디자이너에서 셀의 프로토타입에 추가 된 UI 위젯을 채웁니다.
 
 ```csharp
 private void UpdateUI ()
@@ -671,15 +671,15 @@ private void UpdateUI ()
 }
 ```
 
-작업에 대 한 자세한 내용은 `UITableViewCell`, Apple의를 참조 하세요 [UITableViewCell](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/doc/uid/TP40006938) 설명서.
+로 작업 하는 `UITableViewCell`방법에 대 한 자세한 내용은 Apple의 [uitableviewcell](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/doc/uid/TP40006938) 설명서를 참조 하세요.
 
 <a name="The-Table-View-Controller" />
 
 ## <a name="the-table-view-controller"></a>테이블 뷰 컨트롤러
 
-테이블 뷰 컨트롤러 (`UITableViewController`) 인터페이스 디자이너를 통해 스토리 보드에 추가 된 테이블 보기를 관리 합니다.
+테이블 뷰 컨트롤러 (`UITableViewController`)는 인터페이스 디자이너를 통해 Storyboard에 추가 된 테이블 뷰를 관리 합니다.
 
-예제 앱을 두 번 클릭 합니다 `AttractionTableViewController.cs` 파일 편집을 위해 열고 다음과 같이 표시 되도록 합니다.
+예제 앱의 경우 `AttractionTableViewController.cs` 파일을 두 번 클릭 하 여 편집용으로 열고 다음과 같이 표시 합니다.
 
 ```csharp
 using System;
@@ -721,27 +721,27 @@ namespace tvTable
 }
 ```
 
-이 클래스에 대해 좀 더 자세히 살펴보겠습니다. 먼저 테이블 보기의 액세스를 쉽게 수행할 수 있도록 바로 가기 키를 만들었습니다 `DataSource` 고 `TableDelegate`입니다. 사용 하 여 해당 나중 분할 뷰의 왼쪽에 있는 테이블 보기와 오른쪽의 세부 정보 뷰 간에 통신 합니다.
+이 클래스를 좀 더 자세히 살펴보겠습니다. 먼저 테이블 뷰의 `DataSource` 및 `TableDelegate`에 보다 쉽게 액세스할 수 있도록 하는 바로 가기를 만들었습니다. 나중에이를 사용 하 여 분할 뷰의 왼쪽에 있는 테이블 뷰와 오른쪽의 자세히 보기 사이에 통신 합니다.
 
-마지막으로, 테이블 뷰는 메모리에 로드 되 면을 만들겠습니다. 인스턴스를 `AttractionTableDatasource` 및 `AttractionTableDelegate` (위에서 만든 둘 다)를 테이블 뷰에 연결 합니다.
+마지막으로 테이블 뷰가 메모리에 로드 되 면 `AttractionTableDatasource` 및 `AttractionTableDelegate` (위에서 만든)의 인스턴스를 만들고이를 테이블 뷰에 연결 합니다.
 
-작업에 대 한 자세한 내용은 `UITableViewController`, Apple의를 참조 하세요 [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523) 설명서.
+로 작업 하는 `UITableViewController`방법에 대 한 자세한 내용은 Apple의 [uitableviewcontroller](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523) 설명서를 참조 하세요.
 
 <a name="Pulling-it-All-Together" />
 
-## <a name="pulling-it-all-together"></a>모든 함께 끌어올
+## <a name="pulling-it-all-together"></a>모두 함께 끌어오기
 
-이 문서의 시작 부분에서 설명 했 듯이 테이블 뷰는 일반적으로의 한쪽에 표시 됩니다는 [분할 뷰](~/ios/tvos/user-interface/split-views.md) 반대쪽에 표시 되는 선택한 항목의 세부 정보를 사용 하 여 탐색으로 합니다. 예를 들어: 
+이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예를 들어: 
 
 [![](table-views-images/intro01.png "샘플 앱 실행")](table-views-images/intro01.png#lightbox)
 
-TvOS의 표준 패턴 이므로 모든 사용자에 게 결합 하는 마지막 단계에 살펴보겠습니다 및 분할 보기의 왼쪽과 오른쪽 서로 상호 작용 합니다.
+이 패턴은 tvOS의 표준 패턴 이므로 모든 항목을 함께 가져오고 분할 보기의 왼쪽과 오른쪽이 서로 상호 작용 하는 마지막 단계를 살펴보겠습니다.
 
 <a name="The-Detail-View" />
 
-### <a name="the-detail-view"></a>세부 정보 보기
+### <a name="the-detail-view"></a>자세히 보기
 
-예를 들어 여행 앱의 사용자 지정 클래스 위에 표시 (`AttractionViewController`) 분할 뷰로 세부 정보 보기의 오른쪽에 제공 된 표준 보기 컨트롤러에 대해 정의 됩니다.
+위에서 언급 한 여행 앱의 예제에서는 사용자 지정 클래스 (`AttractionViewController`)가 분할 뷰의 오른쪽에 자세히 보기로 표시 되는 표준 뷰 컨트롤러에 대해 정의 됩니다.
 
 ```csharp
 using System;
@@ -844,17 +844,17 @@ namespace tvTable
 }
 ```
 
-여기에서 제공 합니다 **인력** (`AttractionInformation`) 속성으로 표시 되 고 생성을 `UpdateUI` UI 위젯 채우는 메서드가 인터페이스 디자이너에서 보기에 추가 합니다.
+여기서는 속성으로 표시 되 는 인력`AttractionInformation`()를 제공 하 고, 인터페이스 디자이너 `UpdateUI` 에서 뷰에 추가 된 UI 위젯을 채우는 메서드를 만들었습니다.
 
-또한 바로 가기를 분할 뷰 컨트롤러를 다시 정의한 (`SplitView`)를 테이블 보기로 다시 변경를 사용 하 여 통신 (`AcctractionTableView`).
+또한 변경 내용을 테이블 뷰 (`SplitView``AcctractionTableView`)로 다시 전달 하는 데 사용할 분할 뷰 컨트롤러 ()에 대 한 바로 가기를 정의 했습니다.
 
-세 가지 사용자 지정 작업 (이벤트) 마지막으로 추가한 `UIButton` 인터페이스 디자이너에서 만든 경우 사용자는 인력으로 표시할 수 있는 _즐겨 찾는_, 가져오기 _지침_ 에 인력 및 _항공권 예약_ 지정 도시입니다.
+마지막으로 사용자 지정 작업 (이벤트)이 인터페이스 디자이너에서 `UIButton` 만든 세 개의 인스턴스에 추가 되었습니다 .이를 통해 사용자는 인력을 _즐겨찾기로_표시 하 고, 인력에 게 _방향을_ 가져오고, 지정 된으로 _비행_ 을 이동할 수 있습니다. 대도시.
 
 <a name="The-Navigation-View-Controller" />
 
 ### <a name="the-navigation-view-controller"></a>탐색 뷰 컨트롤러
 
-탐색 뷰 컨트롤러는 사용자 지정 클래스에 할당 된 테이블 뷰 컨트롤러는 분할 뷰의 왼쪽의 탐색 보기 컨트롤러에 중첩 되 면 때문에 (`MasterNavigationController`) 인터페이스 디자이너에서 다음과 같이 정의 합니다.
+테이블 뷰 컨트롤러는 분할 뷰의 왼쪽에 있는 탐색 뷰 컨트롤러에 중첩 되어 있으므로, 탐색 뷰 컨트롤러는 인터페이스 디자이너에서 사용자 지정 클래스 (`MasterNavigationController`)에 할당 되 고 다음과 같이 정의 됩니다.
 
 ```csharp
 using System;
@@ -881,16 +881,16 @@ namespace tvTable
 }
 ```
 
-마찬가지로이 클래스에는 분할 뷰 컨트롤러의 양쪽을 통해 통신할 수 있도록 몇 가지 바로 가기만 정의 합니다.
+이 클래스는 분할 뷰 컨트롤러의 두 면에서 보다 쉽게 통신할 수 있도록 몇 가지 바로 가기를 정의 하기만 합니다.
 
-* `SplitView` -분할 뷰 컨트롤러에 대 한 링크입니다 (`MainSpiltViewController`)에 속하는 탐색 보기 컨트롤러입니다.
-* `TableController` -테이블 뷰 컨트롤러를 가져옵니다 (`AttractionTableViewController`)는 탐색 보기 컨트롤러의 상위 뷰로 표시 됩니다.
+* `SplitView`-탐색 뷰 컨트롤러가 속한 분할 뷰 컨트롤러 (`MainSpiltViewController`)에 대 한 링크입니다.
+* `TableController`-탐색 뷰 컨트롤러에서 최상위 뷰로`AttractionTableViewController`표시 되는 테이블 뷰 컨트롤러 ()를 가져옵니다.
 
 <a name="The-Split-View-Controller" />
 
 ### <a name="the-split-view-controller"></a>분할 뷰 컨트롤러
 
-사용자 지정 클래스를 만든 분할 뷰 컨트롤러 응용 프로그램의 기본 이기 때문에 (`MasterSplitViewController`) 인터페이스 디자이너에서 다음과 같이 정의 및:
+분할 뷰 컨트롤러는 응용 프로그램의 기반 이므로 인터페이스 디자이너에서 해당 클래스에 대 한 사용자`MasterSplitViewController`지정 클래스 ()를 만들고 다음과 같이 정의 했습니다.
 
 ```csharp
 using System;
@@ -937,28 +937,28 @@ namespace tvTable
 }
 ```
 
-먼저 바로 가기를 만듭니다는 **세부 정보** 분할 뷰의 쪽 (`AttractionViewController`)와 **마스터** 쪽 (`MasterNavigationController`). 다시이 쉽게 나중으로 양쪽 간에 통신 합니다.
+먼저 분할 보기 (`AttractionViewController`)와 **마스터** 쪽 (`MasterNavigationController`)에 대 한 바로 가기를 만듭니다. 이를 통해 나중에 두 쪽 간에 더 쉽게 통신할 수 있습니다.
 
-다음으로 분할 뷰는 메모리에 로드 되 면 분할 보기의 양쪽에 모두 분할 뷰 컨트롤러를 연결 하 고 테이블 보기에는 인력을 강조 표시 하는 사용자에 게 응답 (`AttractionHighlighted`)에서 새 인력을 표시 하 여는 **세부 정보**  분할 뷰의 측면입니다.
+그런 다음 분할 뷰가 메모리에 로드 되 면 분할 보기의 양쪽에 분할 뷰 컨트롤러를 연결 하 고의`AttractionHighlighted` **세부 정보** 쪽에 새 인력를 표시 하 여 테이블 보기 ()의 인력를 강조 표시 하는 사용자에 게 응답 합니다. 분할 뷰입니다.
 
-참조 하십시오 합니다 [tvTables](https://developer.xamarin.com/samples/monotouch/tvos/tvTable/) 분할 보기 내에서 테이블 뷰의 전체 구현에 대 한 샘플 앱입니다.
+분할 뷰 내에서 테이블 뷰의 전체 구현을 보려면 [tvTables](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-tvtable) 샘플 앱을 참조 하세요.
 
-## <a name="table-views-in-detail"></a>표 보기에서 세부 정보
+## <a name="table-views-in-detail"></a>테이블 보기 세부 정보
 
-TvOS iOS를 기반으로, 이후 테이블 뷰 및 테이블 뷰 컨트롤러 설계 되었습니다 및 유사한 방식으로 작동 합니다. 자세한 내용을 보려면 테이블 뷰를 사용 하 여 Xamarin 앱에서 작업할 때, iOS를 참조 하세요 [테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md) 설명서.
+TvOS는 iOS의 기반 이므로 테이블 뷰와 테이블 뷰 컨트롤러는 비슷한 방식으로 디자인 되 고 동작 합니다. Xamarin 앱에서 테이블 뷰로 작업 하는 방법에 대 한 자세한 내용은 iOS [테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md) 설명서를 참조 하세요.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 디자인 및 Xamarin.tvOS 앱 내에서 테이블 뷰를 사용 하 여 작업 검사가 수행 합니다. TvOS 앱에서 테이블 보기의 일반적인 사용 되는 분할 된 보기 내에서 테이블 보기를 사용 하 여 작업의 예제를 설명 했습니다.
+이 문서에서는 tvOS 앱 내에서 테이블 뷰를 디자인 하 고 작업 하는 방법에 대해 설명 했습니다. 및는 tvOS 앱에서 테이블 뷰의 일반적인 사용 인 분할 뷰 내의 테이블 뷰로 작업 하는 예를 제공 했습니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [tvOS 샘플](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS 휴먼 인터페이스 지침](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [TvOS 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [tvOS 휴먼 인터페이스 가이드](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [TvOS에 대 한 앱 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

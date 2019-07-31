@@ -6,12 +6,12 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: d904ab25ee5a91fc33d9fa09c66a043e4bd33872
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 639a62316d718534677b0ae86f9e5b57791c23e1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511405"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649223"
 ---
 # <a name="transport-layer-security-tls-12"></a>TLS (Transport Layer Security) 1.2
 
@@ -136,4 +136,4 @@ Android 프로젝트 옵션을 통해 지원 되는 SSL/TLS 구현도 선택할 
 - [Foundation.CFNetwork](xref:CoreFoundation.CFNetwork)
 - [Foundation.NSUrlConnection](xref:Foundation.NSUrlConnection)
 - [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest(v=vs.110).aspx)
-- [HTTP 클라이언트 (샘플)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [HTTP 클라이언트 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

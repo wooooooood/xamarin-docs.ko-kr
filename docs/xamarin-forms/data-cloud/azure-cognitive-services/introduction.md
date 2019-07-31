@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms 및 Azure Cognitive Services 소개
+title: Xamarin.ios 및 Azure Cognitive Services 소개
 description: 이 문서에서는 일부 Microsoft Cognitive 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램을 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 36aa53a6d257d8f5311cab84485e608bef3e97f8
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 52774b387644b14e3d4612dffa6d3c3b28a37f25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659270"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652306"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Forms 및 Azure Cognitive Services 소개
+# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.ios 및 Azure Cognitive Services 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Cognitive Services는 Api, Sdk 및 얼굴 인식, 음성 인식 및 언어 이해와 같은 기능을 추가 하 여 더 지능적인 응용 프로그램을 확인 하는 개발자에 게 사용할 수 있는 서비스의 집합입니다. 이 문서에서는 일부 Microsoft Cognitive 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한 소개를 제공 합니다._
 
@@ -52,7 +52,7 @@ Smilies 단추를 클릭 하는 `TodoListPage` 으로 이동 합니다 `RateAppP
 
 ## <a name="understand-the-application-anatomy"></a>응용 프로그램 분석 이해
 
-샘플 응용 프로그램에 대 한 공유 코드 프로젝트 5 개 기본 폴더 이루어져 있습니다.
+샘플 응용 프로그램에 대 한 공유 코드 프로젝트는 다음과 같은 5 개의 기본 폴더로 구성 됩니다.
 
 |폴더|용도|
 |--- |--- |
@@ -62,7 +62,7 @@ Smilies 단추를 클릭 하는 `TodoListPage` 으로 이동 합니다 `RateAppP
 |유틸리티|포함 된 `Timer` 클래스에서 사용 되는 `AuthenticationService` 9 분 마다 JWT 액세스 토큰을 갱신 하는 클래스입니다.|
 |보기|응용 프로그램 페이지가 포함 됩니다.|
 
-또한 공유 코드 프로젝트에는 몇 가지 중요 한 파일이 들어 있습니다.
+공유 코드 프로젝트에는 몇 가지 중요 한 파일도 포함 되어 있습니다.
 
 |파일|용도|
 |--- |--- |
@@ -80,7 +80,7 @@ Smilies 단추를 클릭 하는 `TodoListPage` 으로 이동 합니다 `RateAppP
 
 또한 이러한 NuGet 패키지는 또한 자체 종속성을 설치 합니다.
 
-### <a name="model-the-data"></a>데이터 모델
+### <a name="model-the-data"></a>데이터 모델링
 
 샘플 응용 프로그램을 `TodoItem` 표시 되 고 로컬 SQLite 데이터베이스에 저장 하는 데이터를 모델링 하는 클래스입니다. 다음 코드 예제는 `TodoItem` 클래스를 보여줍니다.
 
@@ -107,13 +107,13 @@ public class TodoItem
 
 ### <a name="platform-project-implementations"></a>플랫폼 프로젝트 구현
 
-`Services` 폴더 공유 코드 프로젝트에 포함 합니다 `IFileHelper` 및 `IAudioRecorderService` 에서 사용 되는 인터페이스를 `DependencyService` 플랫폼 프로젝트에서 인터페이스를 구현 하는 클래스를 찾을 클래스입니다.
+공유 코드 프로젝트의 `IFileHelper` `IAudioRecorderService` `DependencyService` 폴더에는 클래스에서 플랫폼 프로젝트의 인터페이스를 구현 하는 클래스를 찾기 위해 사용 하는 및 인터페이스가 포함 되어 있습니다. `Services`
 
 합니다 `IFileHelper` 가 인터페이스를 구현 합니다 `FileHelper` 각 플랫폼 프로젝트에서 클래스입니다. 이 클래스는 단일 메서드로 구성 `GetLocalFilePath`, SQLite 데이터베이스를 저장 하는 것에 대 한 로컬 파일 경로 반환 합니다.
 
 합니다 `IAudioRecorderService` 가 인터페이스를 구현 합니다 `AudioRecorderService` 각 플랫폼 프로젝트에서 클래스입니다. 이 클래스 `StartRecording`, `StopRecording`, 및 장치의 마이크에서 오디오를 기록할 플랫폼 Api를 사용 하 고 wav 파일로 저장 하는 메서드를 지원 합니다. Ios의 경우는 `AudioRecorderService` 사용 하는 `AVFoundation` 오디오 녹음 API. Android에는 `AudioRecordService` 사용 하 여는 `AudioRecord` 오디오 녹음 API. Windows 플랫폼 (UWP (유니버설)을 합니다 `AudioRecorderService` 사용을 `AudioGraph` 오디오 녹음 API.
 
-### <a name="invoke-cognitive-services"></a>Cognitive services를 호출 합니다.
+### <a name="invoke-cognitive-services"></a>인식 서비스 호출
 
 다음 Microsoft Cognitive Services를 호출 하는 샘플 응용 프로그램:
 
@@ -125,4 +125,4 @@ public class TodoItem
 ## <a name="related-links"></a>관련 링크
 
 - [Microsoft Cognitive Services 설명서](https://www.microsoft.com/cognitive-services/documentation)
-- [Todo Cognitive Services (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

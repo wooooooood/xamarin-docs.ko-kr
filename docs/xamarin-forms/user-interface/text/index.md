@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 8754f6573b00334fd228b1c9bd094cd91565976c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3e30e3d4ea3bf0ec58aff842ffee68885a47d44a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363925"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656185"
 ---
 # <a name="text-in-xamarinforms"></a>Xamarin.Forms에는 텍스트
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Xamarin.Forms를 사용 하 여 텍스트를 입력 하거나 표시 합니다._
 
@@ -66,7 +66,7 @@ Xamarin.Forms에 텍스트를 사용 하 여 작업에 대 한 세 가지 기본
 
 ## <a name="fontsfontsmd"></a>[글꼴](fonts.md)
 
-많은 컨트롤에 기본 제공 글꼴을 사용 하 여 각 플랫폼에 사용자 지정 글꼴을 앱에 포함 된 다른 글꼴 설정을 지원 합니다. 참조 된 [글꼴](fonts.md) 자세한 문서.
+많은 컨트롤은 각 플랫폼의 기본 제공 글꼴이 나 앱에 포함 된 사용자 지정 글꼴을 사용 하 여 다른 글꼴 설정을 지원 합니다. 참조 된 [글꼴](fonts.md) 자세한 문서.
 
 <a name="Styles" />
 
@@ -76,4 +76,4 @@ Xamarin.Forms에 텍스트를 사용 하 여 작업에 대 한 세 가지 기본
 
 ## <a name="related-links"></a>관련 링크
 
-- [텍스트 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

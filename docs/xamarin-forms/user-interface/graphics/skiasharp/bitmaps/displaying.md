@@ -7,24 +7,24 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 47b4a1bb0249bc21bd75e82067cb00b3f272e202
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61204873"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642685"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>SkiaSharp 비트맵을 표시합니다.
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp 비트맵의 제목을 문서의 도입  **[SkiaSharp의 비트맵 기본 사항](../basics/bitmaps.md)** 합니다. 이 문서에는 세 가지 방법 부하 비트맵 및 비트맵을 표시 하는 세 가지 방법 보여 주었습니다. 이 문서에서는 비트맵을 로드 하는 기술을 검토 하 고 심층적인 사용 되는 `DrawBitmap` 메서드의 `SKCanvas`합니다.
 
 ![샘플을 표시](displaying-images/DisplayingSample.png "샘플 표시")
 
-`DrawBitmapLattice` 하 고 `DrawBitmapNinePatch` 메서드는 문서에 설명 되어  **[SkiaSharp 비트맵의 표시를 분할](segmented.md)**.
+`DrawBitmapLattice` 하 고 `DrawBitmapNinePatch` 메서드는 문서에 설명 되어  **[SkiaSharp 비트맵의 표시를 분할](segmented.md)** .
 
-이 페이지에는 샘플은는 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램입니다. 해당 응용 프로그램의 홈 페이지에서 선택 **SkiaSharp 비트맵**로 이동 합니다 **표시 비트맵** 섹션.
+이 페이지에는 샘플은는 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램입니다. 해당 응용 프로그램의 홈 페이지에서 선택 **SkiaSharp 비트맵**로 이동 합니다 **표시 비트맵** 섹션.
 
 ## <a name="loading-a-bitmap"></a>비트맵을 로드합니다.
 
@@ -34,7 +34,7 @@ SkiaSharp 응용 프로그램에 일반적으로 사용 하는 비트맵의 세 
 - 실행 파일에 포함 된 리소스에서
 - 사용자의 사진 라이브러리에서
 
-SkiaSharp 또는 응용 프로그램을 새 비트맵을 만들고 및 다음에 그릴 비트맵 비트 알고리즘 방식으로 설정할 수 이기도 합니다. 이러한 기술은 문서에 설명 **[만들고 SkiaSharp 비트맵에 드로잉](drawing.md)** 하 고 **[SkiaSharp 비트맵 픽셀 액세스](pixel-bits.md)**.
+SkiaSharp 또는 응용 프로그램을 새 비트맵을 만들고 및 다음에 그릴 비트맵 비트 알고리즘 방식으로 설정할 수 이기도 합니다. 이러한 기술은 문서에 설명 **[만들고 SkiaSharp 비트맵에 드로잉](drawing.md)** 하 고 **[SkiaSharp 비트맵 픽셀 액세스](pixel-bits.md)** .
 
 비트맵을 로드 하는 다음 세 가지 코드 예제에서는 클래스 형식의 필드를 포함 하도록 가정 `SKBitmap`:
 
@@ -73,7 +73,7 @@ catch
 
 있음을 합니다 `Stream` 개체에서 가져온 `GetStreamAsync` 에 복사 됩니다는 `MemoryStream`합니다. Android 허용 하지 않습니다 합니다 `Stream` 에서 `HttpClient` 비동기 메서드에서 제외 하 고 주 스레드에서 처리 되도록 합니다. 
 
-합니다 [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) 은 많은 한 작업을 수행 합니다. `Stream` 전달 된 개체를 일반적인 비트맵 파일 형식, 일반적으로 JPEG, PNG 또는 GIF 중 하나는 전체 비트맵을 포함 하는 메모리 블록을 참조 합니다. `Decode` 메서드는 형식을 결정 하 고 SkiaSharp의 내부 비트맵 형식으로 비트맵 파일을 디코딩 한 다음 해야 합니다.
+는 [`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) 많은 작업을 수행 합니다. 전달 `Stream` 된 개체는 일반적인 비트맵 파일 형식 (일반적으로 JPEG, PNG 또는 GIF) 중 하나에서 전체 비트맵을 포함 하는 메모리 블록을 참조 합니다. `Decode` 메서드는 형식을 결정 하 고 SkiaSharp의 내부 비트맵 형식으로 비트맵 파일을 디코딩 한 다음 해야 합니다.
 
 코드 호출 후 `SKBitmap.Decode`, 아마도으로 무효화 됩니다 합니다 `CanvasView` 있도록는 `PaintSurface` 처리기 새로 로드 된 비트맵을 표시할 수 있습니다.
 
@@ -92,7 +92,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 또한 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)에 대 한 개별 플랫폼 프로젝트에 리소스로 비트맵 파일을 저장할 수 있습니다. 그러나 이러한 비트맵 로드 플랫폼 프로젝트에 있는 코드가 필요 합니다.
 
-비트맵을 가져오는 세 번째 방법은 사용자의 사진 라이브러리 에서입니다. 다음 코드에 포함 되어 있는 종속성 서비스를 사용 합니다 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램입니다. **SkiaSharpFormsDemo** .NET Standard 라이브러리는 포함를 `IPhotoLibrary` 인터페이스를 각 플랫폼 프로젝트를 포함 하는 동안는 `PhotoLibrary` 인터페이스를 구현 하는 클래스입니다.
+비트맵을 가져오는 세 번째 방법은 사용자의 사진 라이브러리 에서입니다. 다음 코드에 포함 되어 있는 종속성 서비스를 사용 합니다 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램입니다. **SkiaSharpFormsDemo** .NET Standard 라이브러리는 포함를 `IPhotoLibrary` 인터페이스를 각 플랫폼 프로젝트를 포함 하는 동안는 `PhotoLibrary` 인터페이스를 구현 하는 클래스입니다.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -144,7 +144,7 @@ paint.Color = SKColors.Red.WithAlpha(0x80);
 
 `SKPaint` 표시 비트맵 사용 모드를 혼합 하거나 결과 필터링 하는 경우 또한 개체 역할을 수행 합니다. 문서에 설명 된 이러한 [SkiaSharp 합치기 및 혼합 모드](../effects/blend-modes/index.md) 하 고 [SkiaSharp 이미지 필터](../effects/image-filters.md)합니다.
 
-합니다 **픽셀 크기** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 320 x 240 픽셀 높은 있는 비트맵 리소스를 표시 하는 샘플 프로그램:
+합니다 **픽셀 크기** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 320 x 240 픽셀 높은 있는 비트맵 리소스를 표시 하는 샘플 프로그램:
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -194,7 +194,7 @@ public class PixelDimensionsPage : ContentPage
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>리소스 비트맵을 로드 하는 방법
 
-에 나오는 샘플은 대부분 비트맵 리소스를 로드 해야 합니다. 정적 `BitmapExtensions` 클래스를 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 도와줄 메서드를 포함 하는 솔루션:
+에 나오는 샘플은 대부분 비트맵 리소스를 로드 해야 합니다. 정적 `BitmapExtensions` 클래스를 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 도와줄 메서드를 포함 하는 솔루션:
 
 ```csharp
 static class BitmapExtensions
@@ -319,7 +319,7 @@ public class UniformScalingPage : ContentPage
 
 ## <a name="a-versatile-bitmap-display-function"></a>다양 한 비트맵 표시 함수
 
-XAML 기반 프로그래밍 환경 (예: UWP 및 Xamarin.Forms)에 확장 또는 해당 가로 세로 비율을 유지 하면서 비트맵의 크기를 축소 하는 기능을 있습니다. SkiaSharp이이 기능을 포함 하지 않습니다, 하지만 직접 구현할 수 있습니다 것입니다. `BitmapExtensions` 에 포함 된 클래스를 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 응용 프로그램 표시 하는 방법. 클래스 정의 두 개의 새 `DrawBitmap` 가로 세로 비율 계산을 수행 하는 방법입니다. 이러한 새 메서드는 확장 메서드의 `SKCanvas`합니다.
+XAML 기반 프로그래밍 환경 (예: UWP 및 Xamarin.Forms)에 확장 또는 해당 가로 세로 비율을 유지 하면서 비트맵의 크기를 축소 하는 기능을 있습니다. SkiaSharp이이 기능을 포함 하지 않습니다, 하지만 직접 구현할 수 있습니다 것입니다. `BitmapExtensions` 에 포함 된 클래스를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램 표시 하는 방법. 클래스 정의 두 개의 새 `DrawBitmap` 가로 세로 비율 계산을 수행 하는 방법입니다. 이러한 새 메서드는 확장 메서드의 `SKCanvas`합니다.
 
 새 `DrawBitmap` 형식의 매개 변수를 포함 하는 방법 `BitmapStretch`에 정의 된 열거형 합니다 **BitmapExtensions.cs** 파일:
 
@@ -666,5 +666,5 @@ public partial class ScalingModesPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 

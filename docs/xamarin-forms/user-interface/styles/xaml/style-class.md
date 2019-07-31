@@ -1,33 +1,33 @@
 ---
-title: Xamarin.Forms 스타일 클래스
-description: Xamarin.Forms 스타일 클래스 스타일 상속 방식을 사용 하지 않고 컨트롤에 적용할 스타일을 여러 개를 사용 합니다.
+title: Xamarin.ios 스타일 클래스
+description: Xamarin.ios 스타일 클래스를 사용 하면 스타일 상속을 사용 하지 않고 컨트롤에 여러 스타일을 적용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 4762401E-2B48-48F1-B6E4-61F7AF8AA46F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: a3ef0f96bcc955dcac4231f9eb9cf1ab16ee61aa
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 438d3462c123cc9c9a8730405bb64a5e9492bfdf
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925280"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645550"
 ---
-# <a name="xamarinforms-style-classes"></a>Xamarin.Forms 스타일 클래스
+# <a name="xamarinforms-style-classes"></a>Xamarin.ios 스타일 클래스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
-_Xamarin.Forms 스타일 클래스 스타일 상속 방식을 사용 하지 않고 컨트롤에 적용할 스타일을 여러 개를 사용 합니다._
+_Xamarin.ios 스타일 클래스를 사용 하면 스타일 상속을 사용 하지 않고 컨트롤에 여러 스타일을 적용할 수 있습니다._
 
 ## <a name="create-style-classes"></a>스타일 클래스 만들기
 
-스타일 클래스를 설정 하 여 만들 수 있습니다는 [ `Class` ](xref:Xamarin.Forms.Style.Class) 속성을 [ `Style` ](xref:Xamarin.Forms.Style) 에 `string` 클래스 이름을 나타내는입니다. 장점은이 비해를 사용 하 여 명시적 스타일 정의 `x:Key` 특성에 여러 스타일 클래스에 적용할 수는 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다.
+스타일 클래스는 클래스 이름을 나타내는에 [`Class`](xref:Xamarin.Forms.Style.Class) [`Style`](xref:Xamarin.Forms.Style) 대 `string` 한 속성을 설정 하 여 만들 수 있습니다. 이에서 제공 하는 이점에는 `x:Key` 특성을 사용 하 여 명시적 스타일을 정의 하는 것 보다 여러 스타일 클래스를에 적용할 [`VisualElement`](xref:Xamarin.Forms.VisualElement)수 있습니다.
 
 > [!IMPORTANT]
-> 다른 형식을 대상 제공 여러 스타일 클래스 이름이 공유할 수 있습니다. 그러면 동일 하 게 명명 하는 다양 한 대상 유형에 여러 스타일 클래스.
+> 여러 스타일이 서로 다른 형식을 대상으로 하는 경우 동일한 클래스 이름을 공유할 수 있습니다. 이렇게 하면 이름이 같은 여러 스타일 클래스를 사용 하 여 다른 형식을 대상으로 지정할 수 있습니다.
 
-다음 예제에서는 세 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 스타일 클래스와 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스 스타일:
+다음 예제에서는 세 가지 [`BoxView`](xref:Xamarin.Forms.BoxView) 스타일 클래스 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 와 스타일 클래스를 보여 줍니다.
 
 ```xaml
 <ContentPage ...>
@@ -74,9 +74,9 @@ _Xamarin.Forms 스타일 클래스 스타일 상속 방식을 사용 하지 않�
 </ContentPage>
 ```
 
-합니다 `Separator`, `Rounded`, 및 `Circle` 스타일 클래스 각 집합 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 속성을 특정 값입니다.
+, `Separator` 및스타일`Circle` 클래스는 각각 속성을 [`BoxView`](xref:Xamarin.Forms.BoxView) 특정 값으로 설정 합니다. `Rounded`
 
-합니다 `Rotated` 스타일 클래스에는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 의 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement), 즉만 적용할 수 있습니다 `VisualElement` 인스턴스. 그러나 해당 [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성이로 설정 되어 `true`에서 파생 되는 모든 컨트롤에 적용할 수 있는지 확인 하는 `VisualElement`와 같은 [ `BoxView` ](xref:Xamarin.Forms.BoxView)합니다. 파생된 형식으로 스타일을 적용 하는 방법에 대 한 자세한 내용은 참조 하세요. [파생된 형식에 스타일을 적용할](implicit.md#apply-a-style-to-derived-types)합니다.
+Style 클래스에는 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 의 [`VisualElement`](xref:Xamarin.Forms.VisualElement)가 있습니다. 즉, `VisualElement` 인스턴스에만 적용할 수 있습니다. `Rotated` 그러나 해당 [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성은로 `true`설정 됩니다. 그러면와 [`BoxView`](xref:Xamarin.Forms.BoxView)같이에서 `VisualElement`파생 된 모든 컨트롤에 적용할 수 있습니다. 파생 형식에 스타일을 적용 하는 방법에 대 한 자세한 내용은 [파생 형식에 스타일 적용](implicit.md#apply-a-style-to-derived-types)을 참조 하세요.
 
 해당하는 C# 코드는 다음과 같습니다.
 
@@ -178,11 +178,11 @@ Resources = new ResourceDictionary
 };
 ```
 
-## <a name="consume-style-classes"></a>스타일 클래스를 사용 합니다.
+## <a name="consume-style-classes"></a>스타일 클래스 사용
 
-스타일 클래스를 설정 하 여 사용할 수는 [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) 유형인 컨트롤의 속성 `IList<string>`, 스타일 클래스 이름 목록에 있습니다. 스타일 클래스를 적용할 컨트롤 형식이 일치 하는 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 스타일 클래스입니다.
+스타일 클래스는 형식의 [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) `IList<string>`컨트롤 속성을 스타일 클래스 이름 목록으로 설정 하 여 사용할 수 있습니다. 컨트롤의 형식이 스타일 클래스 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 의와 일치 하는 경우 스타일 클래스가 적용 됩니다.
 
-다음 예제에서는 세 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 인스턴스를 각각 설정 다른 스타일 클래스:
+다음 예제에서는 각각 다른 [`BoxView`](xref:Xamarin.Forms.BoxView) 스타일 클래스로 설정 된 세 가지 인스턴스를 보여 줍니다.
 
 ```xaml
 <ContentPage ...>
@@ -201,12 +201,12 @@ Resources = new ResourceDictionary
 </ContentPage>    
 ```
 
-이 예제에서는 첫 번째 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 의 세 번째 하는 동안 줄 구분 기호, 되도록 스타일 `BoxView` 순환 됩니다. 두 번째 `BoxView` 에 두 개의 스타일 클래스를 적용 하는 it 둥근 모퉁이 지정 하 고 45도 회전 합니다.
+이 예제에서 첫 [`BoxView`](xref:Xamarin.Forms.BoxView) 번째는 줄 분리자로 스타일이 지정 되 고 세 `BoxView` 번째는 원형입니다. 두 번째 `BoxView` 는 두 개의 스타일 클래스를 적용 하며,이 클래스는 둥근 모퉁이를 제공 하 고 45도 회전 합니다.
 
-![](style-class-images/boxviews.png "BoxViews는 스타일 클래스를 사용 하 여 스타일")
+![](style-class-images/boxviews.png "스타일 클래스를 사용 하 여 스타일 지정 된 BoxViews")
 
 > [!IMPORTANT]
-> 여러 스타일 클래스에 적용할 수를 제어 하기 때문에 합니다 [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) 형식의 속성이 `IList<string>`합니다. 이 경우 스타일 클래스 목록을 오름차순 적용 됩니다. 따라서 여러 스타일 클래스와 동일한 속성을 설정 하는 경우 가장 높은 목록 위치에 있는 스타일 클래스에서 속성 우선을 적용 됩니다.
+> [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) 속성이 형식이`IList<string>`기 때문에 여러 스타일 클래스를 컨트롤에 적용할 수 있습니다. 이 경우 스타일 클래스는 오름차순 목록 순서로 적용 됩니다. 따라서 여러 스타일 클래스가 동일한 속성을 설정 하는 경우 가장 높은 목록 위치에 있는 스타일 클래스의 속성이 우선적으로 적용 됩니다.
 
 해당하는 C# 코드는 다음과 같습니다.
 
@@ -225,4 +225,4 @@ Content = new StackLayout
 
 ## <a name="related-links"></a>관련 링크
 
-- [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+- [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

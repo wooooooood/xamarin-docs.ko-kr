@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 8da40e5500e5669027f658ec95930e3b3a37530e
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 364e10b8b59fcc8d640799ab6a0f11dcf4ded818
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675239"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644518"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -29,7 +29,7 @@ WatchOS 앱 솔루션에 3 프로젝트:
 
 WatchOS 1 앱에서 iPhone에서 실행 되는 확장의 코드 – Apple Watch 효과적으로 외장 디스플레이입니다. watchOS 2 및 3 앱 Apple Watch 완전히 실행합니다. 이러한 차이 아래 다이어그램에 표시 됩니다.
 
-[![](intro-to-watchos-images/arch-sml.png "WatchOS 1 및 watchOS 2 (이상) 간의 차이이 다이어그램에 표시 됩니다.")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "WatchOS 1과 watchOS 2 (이상)의 차이가이 다이어그램에 표시 됩니다.")](intro-to-watchos-images/arch.png#lightbox)
 
 WatchOS 버전을 대상으로 하는 것에 관계 없이 Solution Pad Mac 용 Visual Studio에서 완벽 한 솔루션을는 다음과 비슷합니다.
 
@@ -53,8 +53,8 @@ WatchOS 1에서 정적 함수 또는 공유 앱 그룹을 통해 데이터를 �
 
 수명 주기를 `WKInterfaceController` 개체는 다음 호출을 포함 합니다.
 
-- [절전 모드 해제](xref:WatchKit.WKInterfaceController.Awake*) : 이 방법에서는 대부분의 초기화를 수행 해야 합니다.
-- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Watch 앱 사용자에 게 표시 하기 바로 호출 됩니다. 이 메서드를 사용 하 여 마지막 순간 초기화를 수행 하려면 애니메이션 등을 시작 합니다.
+- [활성](xref:WatchKit.WKInterfaceController.Awake*) : 이 메서드에서 대부분의 초기화를 수행 해야 합니다.
+- [WillActivate](xref:WatchKit.WKInterfaceController.WillActivate) : Watch 앱이 사용자에 게 표시 되기 직전에 호출 됩니다. 이 메서드를 사용 하 여 마지막 순간 초기화를 수행 하려면 애니메이션 등을 시작 합니다.
 - 이 시점에서 Watch 앱 나타나고 확장을 입력 하 고 응용 프로그램 논리 당 Watch 앱의 표시를 업데이트 하는 사용자에 게 응답을 시작 합니다.
 - [DidDeactivate](xref:WatchKit.WKInterfaceController.DidDeactivate) Watch 앱 후 사용자가 해제 된,이 메서드를 호출 합니다. 다음 시간까지 사용자 인터페이스 컨트롤을 수정할 수 없습니다이 메서드에서 반환 된 후 `WillActivate` 라고 합니다. IPhone에 대 한 연결이 끊어진 경우에이 메서드를 호출 합니다.
 - 확장이 비활성화 된 후 프로그램에 액세스할 수 없는 합니다. 보류 중인 비동기 기능이 **것입니다** 호출할 수 있습니다. 조사식 키트 확장에는 백그라운드 처리 모드를 사용할 수 없습니다. 첫 번째 메서드 호출 수는 프로그램은 사용자가 다시 활성화 하는 경우 운영 체제에서 앱으로 끝나지 않았습니다 `WillActivate`합니다.
@@ -69,7 +69,7 @@ Watch 앱을 사용 하 여 사용자가 상호 작용 하는 방법은 세 종�
 ### <a name="normal-interaction"></a>일반적인 상호 작용
 
 Watch 앱/확장 상호 작용의 대부분의 하위 클래스를 사용 하 여 될 `WKInterfaceController` watch 앱의 백그라운드에서 일치 하도록 작성 하는 **Interface.storyboard**합니다. 자세히 설명 합니다 [설치](~/ios/watchos/get-started/installation.md) 하 고 [Getting Started](~/ios/watchos/get-started/index.md) 문서입니다.
-다음 이미지의 일부를 보여 줍니다.는 [조사식 키트 카탈로그](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) 샘플의 스토리 보드입니다. 여기에 대해 설명 했습니다 각 장면에는 해당 사용자 지정 `WKInterfaceController` (`LabelDetailController`를 `ButtonDetailController`, `SwitchDetailController`등) 확장 프로젝트에서.
+다음 이미지의 일부를 보여 줍니다.는 [조사식 키트 카탈로그](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플의 스토리 보드입니다. 여기에 대해 설명 했습니다 각 장면에는 해당 사용자 지정 `WKInterfaceController` (`LabelDetailController`를 `ButtonDetailController`, `SwitchDetailController`등) 확장 프로젝트에서.
 
 ![](intro-to-watchos-images/scenes.png "기본 상호 작용 예제")
 
@@ -90,10 +90,10 @@ Watch 앱/확장 상호 작용의 대부분의 하위 클래스를 사용 하 �
 
 ## <a name="screen-sizes"></a>화면 크기
 
-Apple Watch 두 개의 얼굴 크기: (38mm 및 42 mm 모두를 5:4 표시 비율과 레 티 나 디스플레이 사용 하 여 합니다. 사용 가능한 크기는 다음과 같습니다.
+Apple Watch는 다음과 같은 두 개의 글꼴 크기를 가집니다. 38mm 및 448mm, 5:4 표시 비율 및 레 티 나 표시 사용 가능한 크기는 다음과 같습니다.
 
-- (38mm: 136 x 170 논리 픽셀 (272 x 340 물리적 픽셀)
-- 42mm: 156 x 195 논리 픽셀 (312 x 390 물리적 픽셀)입니다.
+- 38mm: 136 x 170 논리 픽셀 (272 x 340 실제 픽셀)
+- 448mm: 156 x 195 논리 픽셀 (312 x 390 실제 픽셀)
 
 사용 하 여 `WKInterfaceDevice.ScreenBounds` 어느 디스플레이의 Watch 앱이 실행 중인지 확인 하려면.
 
@@ -133,8 +133,8 @@ Apple의 설명서를 확인해 보세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS 3 카탈로그 (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [watchOS 1 카탈로그 (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [watchOS 3 카탈로그 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 카탈로그 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [설정 및 설치](~/ios/watchos/get-started/installation.md)
 - [첫 번째 Watch 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple는 Watch 키트 설명서에 대 한 개발의](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

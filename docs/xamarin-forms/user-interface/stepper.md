@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
-ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6c89f04b1d1d87fed8d86d50cb68527391a7f317
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250578"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656199"
 ---
 # <a name="xamarinforms-stepper"></a>Xamarin.Forms 스텝 퍼
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _값의 범위에서 숫자 값을 선택 하기 위한 스텝을 사용 합니다._
 
@@ -42,11 +42,11 @@ Xamarin.Forms [ `Stepper` ](xref:Xamarin.Forms.Stepper) 레이블이 지정 된 
 
 ## <a name="basic-stepper-code-and-markup"></a>기본 스텝 퍼 코드와 태그
 
-합니다 [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) 샘플 기능적으로 동일 하지만 다른 방법으로 구현 되는 3 개의 페이지가 포함 되어 있습니다. 첫 번째 페이지만 사용 하 여 C# 코드, 두 번째 용도에서 코드 및 세 번째 이벤트 처리기를 사용 하 여 XAML은 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 피할 수는 없습니다.
+합니다 [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) 샘플 기능적으로 동일 하지만 다른 방법으로 구현 되는 3 개의 페이지가 포함 되어 있습니다. 첫 번째 페이지만 사용 하 여 C# 코드, 두 번째 용도에서 코드 및 세 번째 이벤트 처리기를 사용 하 여 XAML은 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 피할 수는 없습니다.
 
 ### <a name="creating-a-stepper-in-code"></a>스텝 코드에서 만들기
 
-**기본 스텝 퍼 코드** 페이지에 [ **StepperDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) 샘플에는 만드는 방법을 보여 줍니다는 [ `Stepper` ](xref:Xamarin.Forms.Stepper) 두 개의 [ `Label` ](xref:Xamarin.Forms.Label) 코드의 개체:
+**기본 스텝 퍼 코드** 페이지에 [ **StepperDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) 샘플에는 만드는 방법을 보여 줍니다는 [ `Stepper` ](xref:Xamarin.Forms.Stepper) 두 개의 [ `Label` ](xref:Xamarin.Forms.Label) 코드의 개체:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -182,7 +182,7 @@ double value = stepper.Value;
 </ContentPage>
 ```
 
-[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) 첫 번째 속성 [ `Label` ](xref:Xamarin.Forms.Label) 바인딩되는 [ `Value` ](xref:Xamarin.Forms.Stepper.Value) 속성을 [ `Stepper` ](xref:Xamarin.Forms.Stepper)는 합니다 [ `Text` ](xref:Xamarin.Forms.Label.Text) 의 두 번째 속성 `Label` 사용 하 여를 `StringFormat` 사양입니다. 합니다 **기본 스텝 퍼 바인딩을** 페이지 함수 약간 다르게 두 이전 페이지에서: 페이지가 처음 나타날 경우, 두 번째 `Label` 값을 사용 하 여 텍스트 문자열을 표시 합니다. 데이터 바인딩을 사용 하 여이 유용 합니다. 데이터 바인딩 없이 텍스트를 표시 하려면 특히 초기화 해야는 `Text` 의 속성을 `Label` 의 발생을 시뮬레이션 하거나는 [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트 .
+[ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) 첫 번째 속성 [ `Label` ](xref:Xamarin.Forms.Label) 바인딩되는 [ `Value` ](xref:Xamarin.Forms.Stepper.Value) 속성을 [ `Stepper` ](xref:Xamarin.Forms.Stepper)는 합니다 [ `Text` ](xref:Xamarin.Forms.Label.Text) 의 두 번째 속성 `Label` 사용 하 여를 `StringFormat` 사양입니다. **기본 스텝 퍼 바인딩** 페이지는 위의 두 페이지와 약간 다르게 작동 합니다. 페이지가 처음 표시 될 때 두 번째 `Label` 는 값을 포함 하는 텍스트 문자열을 표시 합니다. 데이터 바인딩을 사용 하 여이 유용 합니다. 데이터 바인딩 없이 텍스트를 표시 하려면 특히 초기화 해야는 `Text` 의 속성을 `Label` 의 발생을 시뮬레이션 하거나는 [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트 .
 
 ## <a name="precautions"></a>주의 사항
 
@@ -258,5 +258,5 @@ Stepper stepper = new Stepper
 
 ## <a name="related-links"></a>관련 링크
 
-- [스텝 퍼 데모 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+- [스텝 퍼 데모 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [스텝 퍼 API](xref:Xamarin.Forms.Stepper)

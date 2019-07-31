@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: c493b43edbfa04aafba56c4b47d7c89b455de423
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f5a672f6b34edf02eeac0f2820989d0656342167
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830481"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68648830"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.Forms에서 CocosSharp 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](h https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에 정확한 도형, 이미지 및 텍스트 렌더링을 추가할 수 있습니다._
 
 > [!VIDEO https://youtube.com/embed/eYCx63FeqVU]
 
-**Evolve 2016: Xamarin.Forms의 cocos #**
+**Evolve 2016: Xamarin.ios**
 
 ## <a name="overview"></a>개요
 
@@ -30,7 +30,7 @@ CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 �
 
 * [CocosSharp 란?](#what)
 * [CocosSharp Nuget 패키지 추가](#nuget)
-* [연습: CocosSharp는 Xamarin.Forms 앱에 추가](#add)
+* [연습: Xamarin. Forms 앱에 CocosSharp 추가](#add)
 
 <a name="what" />
 
@@ -39,11 +39,11 @@ CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 �
 [CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) 는 Xamarin 플랫폼에서 사용할 수 있는 오픈 소스 게임 엔진입니다.
 CocosSharp는 다음과 같은 기능을 포함 하는 효율적인 런타임 라이브러리:
 
-* 사용 하 여 이미지 렌더링의 `CCSprite` 클래스
-* 사용 하 여 도형 렌더링 된 `CCDrawNode` 클래스
-* 사용 하 여 프레임의 모든 논리는 `CCNode.Schedule` 클래스
-* 콘텐츠 관리 (로드 및 언로드.png 파일 등의 리소스)를 사용 하 여 `CCTextureCache`
-* 사용 하 여 애니메이션을 `CCAction` 클래스
+* 클래스를 `CCSprite` 사용 하 여 이미지 렌더링
+* 클래스를 `CCDrawNode` 사용 하 여 셰이프 렌더링
+* 클래스를 사용 하는 `CCNode.Schedule` 모든 프레임 논리
+* 콘텐츠 관리 (. .png 파일 등의 리소스 로드 및 언로드)를 사용 하 여`CCTextureCache`
+* 클래스를 사용 `CCAction` 하는 애니메이션
 
 CocosSharp의 주된 초점은 플랫폼 간 2D 게임;의 생성을 간소화 하는 그러나 Xamarin 양식 응용 프로그램에 크게 보강할 수도 있습니다. 게임에는 일반적으로 효율적인 렌더링 및 시각적 개체를 정확 하 게 제어할 필요, CocosSharp 게임 내 응용 프로그램에 강력한 시각화 및 효과 추가 하려면 사용할 수 있습니다.
 
@@ -74,7 +74,7 @@ CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` Xamarin.Forms에
 
 <a name="add" />
 
-## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>연습: CocosSharp는 Xamarin.Forms 앱에 추가
+## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>연습: Xamarin. Forms 앱에 CocosSharp 추가
 
 Xamarin.Forms 앱에 간단한 CocosSharp 뷰를 추가 하려면 다음이 단계를 수행 합니다.
 
@@ -346,8 +346,8 @@ void CreateBottomHalf(Grid grid)
 
 이 가이드는 기존 Xamarin.Forms에서 CocosSharp 추가할 방법을 보여 줍니다. 프로젝트를 Xamarin.Forms에서 CocosSharp, 사이의 상호 작용을 만드는 방법 및 CocosSharp에서 레이아웃을 만들 때 다양 한 고려 사항에 설명 합니다.
 
-CocosSharp 게임 엔진은이 가이드만 개략적으로 CocosSharp 수행할 수 있도록 많은 기능 및 깊이 제공 합니다. CocosSharp를 추가로에 관심이 있는 개발자의 많은 문서를 찾을 수 합니다 [CocosSharp 보관](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/)합니다.
+CocosSharp 게임 엔진은이 가이드만 개략적으로 CocosSharp 수행할 수 있도록 많은 기능 및 깊이 제공 합니다. CocosSharp에 대해 자세히 알고 싶은 개발자는 [cocossharp archive](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/)에서 많은 문서를 찾을 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [CocosSharpForms (샘플)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+- [CocosSharpForms (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

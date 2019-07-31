@@ -7,16 +7,16 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: ee1df713315559c076fbfaed6f5a34057940ff36
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61083215"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68642763"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _선 그리기 및 입력에 사용할 경로 허용 하는 다양 한 경로 효과 검색 합니다._
 
@@ -418,7 +418,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 `y = a · cosh(x / a)`
 
-합니다 *cosh* 은 쌍 곡 코사인 함수입니다. 에 대 한 *x* 0과 같지 *cosh* 0 및 *y* equals *는*합니다. catenary의 중심입니다. 같은 *코사인* 함수 *cosh* 이라고 *도*, 즉 *cosh(–x)* equals *cosh(x)*, 양수 또는 음수 인수 증가 대 한 값을 높이고 있습니다. 이러한 값은 catenary 측면을 형성 하는 곡선을 설명 합니다.
+합니다 *cosh* 은 쌍 곡 코사인 함수입니다. 에 대 한 *x* 0과 같지 *cosh* 0 및 *y* equals *는*합니다. catenary의 중심입니다. 같은 *코사인* 함수 *cosh* 이라고 *도*, 즉 *cosh(–x)* equals *cosh(x)* , 양수 또는 음수 인수 증가 대 한 값을 높이고 있습니다. 이러한 값은 catenary 측면을 형성 하는 곡선을 설명 합니다.
 
 적절 한 값 찾기 *는* 휴대폰의 페이지 크기 catenary에 맞게 아닙니다 직접 계산 합니다. 경우 *w* 하 고 *h* 최적의 값 사각형의 높이 너비는 *를* 은 다음 수식을 충족 합니다.
 
@@ -794,13 +794,13 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-결과 신중 하 게 보면 빨강 및 파랑 빗살 무늬 선 모퉁이가 둥근된 사각형을 정확 하 게 제한 하지는 표시 됩니다. (이 분명히 특성 기본 Skia 코드입니다.) 이 작업이 충분 하지 않으면 대 안으로 녹색에서 대각선 빗살 무늬 선의 표시 됩니다. 모퉁이가 둥근된 사각형으로 클리핑 패스는 및 전체 페이지의 빗살 무늬 선 그려집니다.
+결과 신중 하 게 보면 빨강 및 파랑 빗살 무늬 선 모퉁이가 둥근된 사각형을 정확 하 게 제한 하지는 표시 됩니다. (이 분명히 특성 기본 Skia 코드입니다.) 이 방법이 만족 스 럽 지 않으면 대각선으로 대각선 모양의 빗살 무늬를 표시 합니다. 모퉁이가 둥근 사각형은 클리핑 경로로 사용 되 고 빗살 무늬 선은 전체 페이지에 그려집니다.
 
 `PaintSurface` 처리기가 단순히 빨강 및 파랑 빗살 무늬 선을 사용 하 여 불일치를 볼 수 있도록 모퉁이가 둥근된 사각형을 스트로크를 호출 하 여 종료 합니다.
 
 [![](effects-images/hatchfill-small.png "채우기 해치 페이지 스크린샷 삼중")](effects-images/hatchfill-large.png#lightbox "삼중 채우기 해치 페이지 스크린샷")
 
-실제로 Android 화면을 같습니다. 스크린 샷의 확장을는 빨간 선 및 빨간색으로 보이는 더 광범위 한 줄으로 통합할 수 씬 공간 및 더 넓은 공간 인해 발생 했습니다.
+Android 화면은 다음과 같이 표시 되지 않습니다. 스크린 샷 크기를 조정 하면 작은 빨강 선과 얇은 공간이 더 넓은 빨간색 선과 더 넓은 공간으로 통합 됩니다.
 
 ## <a name="filling-with-a-path"></a>경로 사용 하 여 채우기
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 처음 두 인수에만 필수 이며 참조 경로 액세스 하는 메서드를 `src` 의 스트로크 속성을 기반으로 경로 데이터를 수정 하는 인수를를 `SKPaint` 개체 (포함 하 여는 `PathEffect` 속성), 다음 결과를 씁니다는 `dst` 경로입니다. 합니다 `resScale` 매개 변수를 더 작은 대상 경로 만드는 전체 자릿수를 줄일 수 있습니다 및 `cullRect` 인수 사각형 외부 윤곽을 제거할 수 있습니다.
 
-이 메서드의 기본 하나 사용 하 여 경로 효과 전혀 포함 되지 않습니다. 경우는 `SKPaint` 개체에 해당 `Style` 속성이로 설정 `SKPaintStyle.Stroke`, 및 *하지* 가 해당 `PathEffect` 설정 `GetFillPath` 나타내는 경로 만듭니다는 *개요*원본 경로의 그리기 속성에 의해 외곽선 처럼 합니다.
+이 메서드의 기본 사용에는 항상 경로 효과가 포함 되지 않습니다. `SKPaint` 개체 `PathEffect` 의 속성이로 설정되어`GetFillPath` 있고 해당 집합이 없는 경우는 소스 경로에 대 한 개요를 나타내는 경로를 만듭니다. `SKPaintStyle.Stroke` `Style` paint 속성입니다.
 
 예를 들어 경우는 `src` 경로가 500 반지름의 단순 원 및 `SKPaint` 100 스트로크 너비를 지정 하는 개체는 `dst` 경로 두 동심원 반지름은 550 450 및 다른 반지름 하나 됩니다. 메서드를 호출 `GetFillPath` 이 채우기 때문에 `dst` 경로 선 그리기와 동일 합니다 `src` 경로입니다. 스트로크도 수 있지만 `dst` 경로를 경로 윤곽선을 참조 하세요.
 
@@ -1418,4 +1418,4 @@ public class DashedHatchLinesPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

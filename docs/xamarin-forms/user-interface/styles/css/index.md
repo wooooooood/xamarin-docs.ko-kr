@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: c85dd8dbc654ee9c55248db1133135a2806f4bf2
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d4d7358ca6188f2528ea200f901823f04324ba3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829889"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647475"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms는 스타일 (CSS 스타일 시트)를 사용 하는 시각적 요소를 지원 합니다._
 
@@ -76,7 +76,7 @@ Xamarin.Forms에서 CSS 스타일 시트를 구문 분석 되 고 컴파일 시�
 > [!NOTE]
 > 현재, 모든 XAML 스타일을 사용 하 여 사용할 수 있는 스타일의 CSS를 사용 하 여 수행할 수 없습니다. 그러나 XAML 스타일 Xamarin.Forms에서 현재 지원 되지 않는 속성에 대 한 CSS를 보완 하기 위해 사용할 수 있습니다. XAML 스타일에 대 한 자세한 내용은 참조 하세요. [XAML 스타일을 사용 하 여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)합니다.
 
-합니다 [MonkeyAppCSS](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/) 샘플에서는 CSS를 사용 하 여 간단한 앱 스타일을 지정 하 고 다음 스크린샷과에서 같습니다.
+합니다 [MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) 샘플에서는 CSS를 사용 하 여 간단한 앱 스타일을 지정 하 고 다음 스크린샷과에서 같습니다.
 
 [![CSS 스타일을 사용 하 여 주 페이지 MonkeyApp](css-images/MonkeyAppMainPage.png "CSS 스타일을 사용 하 여 주 페이지 MonkeyApp")](css-images/MonkeyAppMainPage-Large.png#lightbox "CSS 스타일을 사용 하 여 MonkeyApp 주 페이지")
 
@@ -187,7 +187,7 @@ stacklayout {
 이 선택기는 모든 식별 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 스타일 시트를 사용 하 고 해당 여백 20의 균일 두께를 설정 하는 페이지의 요소입니다.
 
 > [!NOTE]
-> `element` 선택기는 지정 된 형식의 하위 클래스를 식별 하지 않습니다.
+> 선택기 `element` 는 지정 된 형식의 서브 클래스를 식별 하지 않습니다.
 
 ### <a name="selecting-elements-by-base-class"></a>기본 클래스에서 요소를 선택합니다.
 
@@ -342,7 +342,7 @@ stacklayout>image {
 |`.class`|`.header`|모든 요소를 선택 합니다 `StyleClass` 'header'를 포함 하는 속성입니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`#id`|`#email`|사용 하 여 요소를 모두 선택 `StyleId` 로 `email`합니다. 하는 경우 `StyleId` 을 설정 하지 않으면 대체 `x:Name`합니다. XAML을 사용 하는 경우 `x:Name` 보다 선호 됩니다 `StyleId`합니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`*`|`*`|모든 요소를 선택합니다.|
-|`element`|`label`|형식의 요소를 모두 선택 `Label`, 하지만 하위 클래스가 없습니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
+|`element`|`label`|형식의 `Label`모든 요소를 선택 하지만 서브 클래스는 선택 하지 않습니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`^base`|`^contentpage`|사용 하 여 요소를 모두 선택 `ContentPage` 기본 클래스를 포함 하 여 `ContentPage` 자체. 참고가이 선택기는 대/소문자를 구분 하 고 CSS 사양에 포함 되지 않습니다.|
 |`element,element`|`label,button`|모두 선택 `Button` 요소와 모든 `Label` 요소입니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`element element`|`stacklayout label`|모두 선택 `Label` 내부 요소는 `StackLayout`합니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
@@ -428,7 +428,7 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 
 또한 방법이 없는 `inherit` 값 등 상속은 지원 되지 않습니다. 예를 들어, 설정할 수 없습니다, 따라서 합니다 `font-size` 레이아웃의 속성 모두 예상 합니다 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스 값을 상속할 수에서. 한 가지 예외는 합니다 `direction` 속성의 기본값은의 `inherit`합니다.
 
-### <a name="xamarinforms-specific-properties"></a>Xamarin.Forms 특정 속성
+### <a name="xamarinforms-specific-properties"></a>Xamarin.ios 관련 속성
 
 다음 Xamarin.Forms 특정 CSS 속성 에서도 지원 됩니다 (에 **값** 열 유형은 _기울임꼴_반면 문자열 리터럴은 `gray`):
 
@@ -447,9 +447,9 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 |`-xf-thumb-color`|`Slider`|_색_ \| `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-spacing`|`StackLayout`|_Double_ \| `initial` |`-xf-spacing: 8;`|
 
-### <a name="xamarinforms-shell-specific-properties"></a>Xamarin.Forms 셸 특정 속성
+### <a name="xamarinforms-shell-specific-properties"></a>Xamarin.ios 셸 관련 속성
 
-다음 Xamarin.Forms 셸 특정 CSS 속성 에서도 지원 됩니다 (에 **값** 열 유형은 _기울임꼴_반면 문자열 리터럴은 `gray`):
+다음 Xamarin. Forms 셸 특정 CSS 속성도 지원 됩니다 ( **값** 열에서 형식은 _기울임꼴_, `gray`문자열 리터럴은 다음과 같습니다).
 
 |속성|적용 대상|값|예제|
 |---|---|---|---|
@@ -504,10 +504,10 @@ Xamarin.Forms를 다음 CSS 속성만 지원 됩니다 (에 **값** 열 유형�
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Forms 3.0 CSS 비디오**
+**Xamarin.ios 3.0 CSS 비디오**
 
 ## <a name="related-links"></a>관련 링크
 
-- [MonkeyAppCSS (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+- [MonkeyAppCSS (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
