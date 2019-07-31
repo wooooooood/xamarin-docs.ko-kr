@@ -7,16 +7,16 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 577eb19106ffa0ebd19c54aeeb155a9c6c85feac
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e8c909ce7dfd9c8f6dccbf2685ff2658931b6a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091629"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656351"
 ---
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 지금까지 살펴본 대로 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스를 포함 한 [ `Color` ](xref:SkiaSharp.SKPaint.Color) 형식의 속성 [ `SKColor` ](xref:SkiaSharp.SKColor). `SKColor` 알파 채널을 모두 사용 하 여 색을 포함 한 `SKColor` 값 부분적으로 투명 하 게 될 수 있습니다. 
 
@@ -36,7 +36,7 @@ SKColor (byte red, byte green, byte blue, byte alpha);
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-부분적으로 투명 한 텍스트의 사용에 설명 되어는 **코드 보다 코드** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플입니다. 이 페이지 페이드 두 개의 텍스트 문자열의 시작 및 종료에서 투명도 통합 하 여는 `SKColor` 값:
+부분적으로 투명 한 텍스트의 사용에 설명 되어는 **코드 보다 코드** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플입니다. 이 페이지 페이드 두 개의 텍스트 문자열의 시작 및 종료에서 투명도 통합 하 여는 `SKColor` 값:
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -241,4 +241,4 @@ public partial class BitmapDissolvePage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

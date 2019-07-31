@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 105d06c7cea23ac0873c8de68d7ad1ad62ae1ffc
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61251382"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665710"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
@@ -89,10 +89,10 @@ Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -118,10 +118,10 @@ public class AppDelegate : UIApplicationDelegate
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -132,7 +132,7 @@ public class AppDelegate : UIApplicationDelegate
 
 ## <a name="adding-a-controller"></a>컨트롤러 추가
 
-앱 많은 뷰 컨트롤러를 포함할 수 있지만 모든 뷰 컨트롤러를 제어 하려면 루트 뷰 컨트롤러를 하나 있어야 합니다.  만들어 창에 컨트롤러 추가 `UIViewController` 인스턴스 및로 설정 된 `window.RootViewController` 속성:
+앱 많은 뷰 컨트롤러를 포함할 수 있지만 모든 뷰 컨트롤러를 제어 하려면 루트 뷰 컨트롤러를 하나 있어야 합니다.  만들어 창에 컨트롤러 추가 `UIViewController` 인스턴스 및로 설정 된 `Window.RootViewController` 속성:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -632,4 +632,4 @@ Apple에.xib 또는 스토리 보드 파일은 iOS 8을 대상으로 하는 응�
 
 ## <a name="related-links"></a>관련 링크
 
-- [SimpleLogin (샘플)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)

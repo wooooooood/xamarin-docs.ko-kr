@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: ba0a76b44f5942db5528e9f5d11a1d2c3f027c40
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: f41bcc3ccaa6b4dd8c001ceb5ead165486745283
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354003"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650256"
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 _XAML 리소스는 공유 하 고 Xamarin.Forms 응용 프로그램 전체에서 다시 사용할 수 있는 개체의 정의입니다._
 
@@ -150,7 +150,7 @@ XAML을에 저장 되는 리소스에는 `ResourceDictionary` 다음 검색 및 
 
 하지만의 막대는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 는 여전히 노란색 때문에 [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) 속성의 값으로 설정 됩니다는 `PageBackgroundColor` 응용 프로그램에 정의 된 리소스 수준 `ResourceDictionary`합니다.
 
-에 대해 생각 하는 또 다른 방법은 다음과 같습니다 `ResourceDictionary` 우선 순위: XAML 파서를 발견할 경우는 `StaticResource`시각적 트리를 통해 위로 이동 하 여 일치 하는 키에 대 한 검색, 찾으면 첫 번째 일치 항목을 사용 합니다. 페이지에서이 검색이 종료 없고 키 여전히 않은 검색 하는 경우 XAML 파서를 검색 합니다 `ResourceDictionary` 연결할는 `App` 개체. 키를 아직 없는 경우 예외가 발생 합니다.
+`ResourceDictionary` 우선 순위를 고려 하는 또 다른 방법은 다음과 같습니다. XAML 파서는를 `StaticResource`발견 하면 찾은 첫 번째 일치 항목을 사용 하 여 시각적 트리를 통해 일치 하는 키를 검색 합니다. 페이지에서이 검색이 종료 없고 키 여전히 않은 검색 하는 경우 XAML 파서를 검색 합니다 `ResourceDictionary` 연결할는 `App` 개체. 키를 아직 없는 경우 예외가 발생 합니다.
 
 ## <a name="stand-alone-resource-dictionaries"></a>독립 실행형 리소스 사전
 
@@ -196,7 +196,7 @@ XAML을에 저장 되는 리소스에는 `ResourceDictionary` 다음 검색 및 
 
 인스턴스의 `MyResourceDictionary` 로 설정 되어를 `Resources` 의 속성을 `ContentPage` 개체입니다.
 
-그러나이 접근 방식에 몇 가지 제한 사항이 있습니다. 합니다 `Resources` 의 속성을 `ContentPage` 이 하나만 참조 `ResourceDictionary`합니다. 대부분의 경우에서 다른 포함 옵션을 원하는 `ResourceDictionary` 인스턴스 및 아마도 다른 리소스도 있습니다.
+그러나이 방법에는 다음과 같은 몇 가지 제한 사항이 있습니다. 의 속성은 `Resources` 이 `ResourceDictionary`항목만 참조 합니다. `ContentPage` 대부분의 경우에서 다른 포함 옵션을 원하는 `ResourceDictionary` 인스턴스 및 아마도 다른 리소스도 있습니다.
 
 이 작업에는 병합 된 리소스 사전에 필요합니다.
 
@@ -306,7 +306,7 @@ Xamarin.Forms 3.0 자동으로 인스턴스화합니다. 때문에 합니다 `Re
 
 ## <a name="related-links"></a>관련 링크
 
-- [리소스 사전 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+- [리소스 사전 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 

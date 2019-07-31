@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: d33dc7d789b9a21fd843cd1f7cab8d221145f492
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 228501172ede71204c64e1efe1673ce92be424ea
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978041"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656051"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual State Manager
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
 _Visual State Manager를 사용 하 여 코드에서 설정 하는 시각적 상태를 기반으로 하는 XAML 요소를 변경 해야 합니다._
 
@@ -180,7 +180,7 @@ VSM 태그를 연결 하는 `Entry` 보기에서 먼저 분리는 `Entry` 시작
 
 각 `Setter` 해당 상태가 현재 태그는 특정 속성의 값을 나타냅니다. 참조 하는 모든 속성을 `Setter` 개체 바인딩 가능한 속성으로 백업 해야 합니다.
 
-다음과 유사 하 게 하는 태그의 기반이 되는 **보기에서 VSM** 페이지에 **[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)** 샘플 프로그램입니다. 페이지를 포함 세 `Entry` 뷰 하는데 두 번째는 연결 된 VSM 태그:
+다음과 유사 하 게 하는 태그의 기반이 되는 **보기에서 VSM** 페이지에 **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플 프로그램입니다. 페이지를 포함 세 `Entry` 뷰 하는데 두 번째는 연결 된 VSM 태그:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -253,17 +253,17 @@ VSM 태그를 연결 하는 `Entry` 보기에서 먼저 분리는 `Entry` 시작
 
 두 번째 `Entry` 역시를 `DataTrigger` 의 일부로 해당 `Trigger` 컬렉션입니다. 이 인해 합니다 `Entry` 무언가 세 번째에 입력할 때까지 사용 하지 않도록 설정할 `Entry`합니다. 다음은 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)에서 실행 되는 시작 페이지가입니다.
 
-[![보기에서 VSM. 사용 하지 않도록 설정](vsm-images/VsmOnViewDisabled.png "보기-사용 안 함에서 VSM")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
+[![뷰에서 VSM: 뷰에서]사용 하지 않도록 설정 된(vsm-images/VsmOnViewDisabled.png "VSM-사용 안 함")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
 현재 시각적 상태를 "Disabled" 하므로 두 번째 배경의 `Entry` iOS 및 Android 화면의 분홍색 이며 합니다. UWP 구현의 `Entry` 배경을 설정 하는 것을 허용 하지 않는 경우 색를 `Entry` 을 사용할 수 없습니다. 
 
 세 번째에 일부 텍스트를 입력할 때 `Entry`, 두 번째 `Entry` "Normal" 상태를 백그라운드 스위치 라임 되었습니다.
 
-[![보기에서 VSM. Normal](vsm-images/VsmOnViewNormal.png "VSM 보기-일반")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
+[![뷰에서 VSM: ](vsm-images/VsmOnViewNormal.png "보기-보통의 일반 VSM")](vsm-images/VsmOnViewNormal-Large.png#lightbox)
 
 두 번째를 터치 할 `Entry`, 입력된 포커스를 가져옵니다. "Focused" 상태로 전환 하 고 높이 두 배가 확장 됩니다.
 
-[![보기에서 VSM. 초점을 맞춘](vsm-images/VsmOnViewFocused.png "뷰-초점을 맞춘 VSM")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
+[![뷰에서 VSM: ](vsm-images/VsmOnViewFocused.png "뷰 중심의 집중 VSM")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
 
 다음에 유의 합니다 `Entry` 입력된 포커스를 가져오면 라임 백그라운드 유지 되지 않습니다. Visual State Manager 시각적 상태 간의 전환으로 이전 상태에 따라 설정 된 속성에 설정 되지 않은 합니다. 시각적 상태 상호 배타적인 것을 염두에 두십시오. "Normal" 상태는 전적으로 의미 하지 않습니다는 `Entry` 사용 가능 합니다. 즉,는 `Entry` 입력된 포커스가 없고 사용 가능 합니다. 
 
@@ -426,11 +426,11 @@ VisualStateManager.GoToState(this, "Focused");
 
 찾을 수 있는 코드만 Visual State Manager는이 `VisualElement` 클래스입니다. 때문에 `GoToState` 에서 파생 되는 모든 클래스를 기반으로 하는 모든 개체에 대 한 라고 `VisualElement`, Visual State Manager를 사용 하 여 사용 하 여 `VisualElement` 이러한 변경에 대응 하는 개체입니다.
 
-흥미롭게도 "CommonStates" 시각적 상태 그룹의 이름을 명시적으로에서 참조 되지 않은 `VisualElement`합니다. 그룹 이름을 Visual State Manager에 대 한 API의 일부가 아닙니다. 앞에서 설명한 두 가지 샘플 프로그램 중 하나를 다른 값으로 "CommonStates" 그룹의 이름을 변경할 수 있습니다 및 프로그램이 계속 작동 합니다. 그룹 이름은 해당 그룹의 상태에 대해 개괄적으로 설명 하기만 합니다. 시각적 상태 그룹에는 상호 배타적인을 암시적으로 인식 합니다. 상태 및 하나의 상태는 언제 든 지 현재입니다.
+흥미롭게도 "CommonStates" 시각적 상태 그룹의 이름을 명시적으로에서 참조 되지 않은 `VisualElement`합니다. 그룹 이름을 Visual State Manager에 대 한 API의 일부가 아닙니다. 앞에서 설명한 두 가지 샘플 프로그램 중 하나를 다른 값으로 "CommonStates" 그룹의 이름을 변경할 수 있습니다 및 프로그램이 계속 작동 합니다. 그룹 이름은 해당 그룹의 상태에 대해 개괄적으로 설명 하기만 합니다. 모든 그룹의 시각적 상태를 함께 사용할 수 없다는 것을 암시적으로 이해 합니다. 한 가지 상태와 한 상태는 언제 든 지 최신 상태입니다.
 
 호출 해야 사용자 고유의 시각적 상태를 구현 하려는 경우 `VisualStateManager.GoToState` 코드에서. 대부분의 page 클래스의 코드 숨김 파일에서이 호출을 해야 합니다.
 
-합니다 **VSM 유효성 검사** 페이지에 **[VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)** 샘플에서는 입력된 유효성 검사와 관련 하 여 Visual State Manager를 사용 하는 방법을 보여 줍니다. XAML 파일을 두 이루어져 `Label` 요소는 `Entry`, 및 `Button`:
+합니다 **VSM 유효성 검사** 페이지에 **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** 샘플에서는 입력된 유효성 검사와 관련 하 여 Visual State Manager를 사용 하는 방법을 보여 줍니다. XAML 파일을 두 이루어져 `Label` 요소는 `Entry`, 및 `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -492,11 +492,11 @@ VisualStateManager.GoToState(this, "Focused");
 
 경우는 `Entry` 현재 상태는 "잘못 된" 이므로 올바른 전화 번호를 포함 하지 않습니다 두 번째 `Label` 표시 됩니다 및 `Button` 을 사용할 수 없습니다.
 
-[![VSM 유효성 검사: 잘못 된 상태](vsm-images/VsmValidationInvalid.png "VSM 유효성 검사-잘못 되었습니다.")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
+[![VSM 유효성 검사: 잘못 된]상태(vsm-images/VsmValidationInvalid.png "VSM 유효성 검사-잘못") 됨](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
 올바른 전화 번호를 입력 한 다음 현재 상태가 "Valid"입니다. 두 번째 `Entry` 사라집니다 및 `Button` 활성화 되었습니다.
 
-[![VSM 유효성 검사: 올바른 상태](vsm-images/VsmValidationValid.png "VSM 유효성 검사-유효한")](vsm-images/VsmValidationValid-Large.png#lightbox)
+[![VSM 유효성 검사: 유효한 상태](vsm-images/VsmValidationValid.png "VSM 유효성 검사-유효")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
 코드 숨김 파일은 처리 작업을 담당 합니다 `TextChanged` 에서 이벤트를 `Entry`입니다. 입력된 문자열은 올바른 경우 확인 하려면 정규식을 사용 하는 처리기. 라는 코드 숨김 파일의 메서드에 `GoToState` 정적 호출 `VisualStateManager.GoToState` 둘 다에 대 한 메서드 `helpLabel` 및 `submitButton`:
 
@@ -529,7 +529,7 @@ public partial class VsmValidationPage : ContentPage
 
 코드 숨김 파일을 고려해 야 모든 개체의 영향을 받는 페이지의 이러한 시각적 상태에서 호출을 확인할 수 있습니다. `VisualStateManager.GoToState` 이러한 각 개체에 대 한 합니다. 이 예에서는 두 개의 개체 (합니다 `Label` 및 `Button`), 여러 수 있지만 자세한 합니다.
 
-궁금할 수 있습니다. 코드 숨김 파일을 이러한 시각적 상태에 영향을 받는 페이지의 모든 개체를 참조 해야 하는 경우 이유 코드 숨김 파일을 간단히 직접 액세스할 수 없는 개체? 이 분명 할 수 없습니다. 그러나 VSM을 사용 하 여의 장점은 visual 요소를 제어할 수 있습니다 완전히 XAML 한곳에 유지 하는 모든 UI 디자인에서에서 다른 상태로 반응 합니다. 이렇게 하면 코드 숨김 파일에서 직접 시각적 요소에 액세스 하 여 설정을 시각적 모양이 없습니다.
+다음과 같이 궁금할 수 있습니다. 코드 숨김이 이러한 시각적 상태의 영향을 받는 페이지의 모든 개체를 참조 해야 하는 경우 코드 숨김이 아닌 파일에서 개체에 직접 액세스할 수 없는 이유는 무엇입니까? 이 분명 할 수 없습니다. 그러나 VSM을 사용 하 여의 장점은 visual 요소를 제어할 수 있습니다 완전히 XAML 한곳에 유지 하는 모든 UI 디자인에서에서 다른 상태로 반응 합니다. 이렇게 하면 코드 숨김 파일에서 직접 시각적 요소에 액세스 하 여 설정을 시각적 모양이 없습니다.
 
 클래스를 파생 하는 것이 좋습니다. 만들고자 할 `Entry` 및 아마도 외부 유효성 검사 함수에 설정할 수 있는 속성을 정의 합니다. 파생 된 클래스 `Entry` 호출할 수는 `VisualStateManager.GoToState` 메서드. 하지만 경우에이 체계 정상적으로 작동 합니다 `Entry` 다른 시각적 상태에 영향을 받는 유일한 개체입니다. 이 예제는 `Label` 및 `Button` 영향을 받을 수는 있습니다. VSM 태그 연결에 대 한 방법이 없기는 `Entry` 시각적 상태의 변경을 다른 개체에서 참조 하는 다른 개체에 연결 된 VSM 태그에 대 한 페이지에 없는 방식으로 다른 개체를 제어 합니다.
 
@@ -551,7 +551,7 @@ public partial class VsmValidationPage : ContentPage
 
 위쪽에서 아래쪽, 프로그램은 유니버설 Windows 플랫폼, Android 및 iOS에서 실행 됩니다.
 
-**VSM 적응 레이아웃** 페이지에 [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/) 샘플 "Portrait" 및 "Landscape" 라는 두 시각적 상태를 사용 하 여 "OrientationStates" 라는 그룹을 정의 합니다. (다소 복잡 한 방법은 수에 따라 여러 다른 페이지 또는 창 너비입니다.) 
+**VSM 적응 레이아웃** 페이지에 [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) 샘플 "Portrait" 및 "Landscape" 라는 두 시각적 상태를 사용 하 여 "OrientationStates" 라는 그룹을 정의 합니다. (다소 복잡 한 방법은 수에 따라 여러 다른 페이지 또는 창 너비입니다.) 
 
 VSM 태그 XAML 파일에 네 곳에서 발생합니다. 합니다 `StackLayout` 라는 `mainStack` 메뉴와 인 콘텐츠를 모두 포함는 `Image` 요소입니다. 이 `StackLayout` 세로 모드에서 세로 방향 및 가로 모드에서는 가로 방향 있어야 합니다.
 
@@ -712,8 +712,8 @@ public partial class VsmAdaptiveLayoutPage : ContentPage
 
 > [!VIDEO https://youtube.com/embed/qhUHbVP5mIQ]
 
-**Xamarin.Forms 3.0 Visual State Manager 비디오**
+**Xamarin.ios 3.0 Visual State Manager 비디오**
 
 ## <a name="related-links"></a>관련 링크
 
-- [VsmDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VsmDemos/)
+- [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)

@@ -1,22 +1,22 @@
 ---
 title: XAML 태그 확장 만들기
-description: 이 문서에서는 사용자 고유의 사용자 지정 Xamarin.Forms XAML 태그 확장을 정의하는 방법을 설명합니다. XAML 태그 확장은 IMarkupExtension 또는 IMarkupExtension를 구현 하는 클래스<T> 인터페이스입니다.
+description: 이 문서에서는 사용자 고유의 사용자 지정 Xamarin.Forms XAML 태그 확장을 정의하는 방법을 설명합니다. XAML 태그 확장은 IMarkupExtension 또는 IMarkupExtension<T> 인터페이스를 구현 하는 클래스입니다.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e69d4b9dcf93c095804c5ac46527c03049580d1c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4d26713f258a8c97abd4b4e9970ebdd4d490f485
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178110"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655858"
 ---
 # <a name="creating-xaml-markup-extensions"></a>XAML 태그 확장 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 프로그래밍 방식 수준에서 XAML 태그 확장은 [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) 또는 [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) 인터페이스를 구현하는 클래스입니다. 아래에 설명 된 Xamarin.Forms GitHub 리포지토리의 [ **MarkupExtensions** 디렉토리](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions)에서 표준 태그 확장의 소스 코드를 살펴볼 수 있습니다.
 
@@ -203,5 +203,5 @@ XAML 태그 확장은 다양한 원본의 특성을 설정할 수 있는 기능�
 
 ## <a name="related-links"></a>관련 링크
 
-- [태그 확장 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [태그 확장 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Xamarin.Forms 책에서 XAML 태그 확장 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

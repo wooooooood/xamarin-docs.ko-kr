@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7717e247ca3b3ecf82e1814ab43e8351b4f75ba6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510449"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643047"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Xamarin Android 용 ActionBar
 
@@ -87,7 +87,7 @@ this.ActionBar.AddTab (tab);
 
 ### <a name="image-sharing-example"></a>이미지 공유 예제
 
-예를 들어, 아래는 이미지를 공유 하는 메뉴 항목이 있는 작업 모음의 스크린샷입니다 ( [Shareactionprovider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) 샘플에서 가져온 것). 사용자가 작업 모음에서 메뉴 항목을 탭 할 때 ShareActionProvider는 응용 프로그램을 로드 하 여와 `ShareActionProvider`연결 된 의도를 처리 합니다. 이 예제에서는 메시징 응용 프로그램이 이전에 사용 되었으므로 작업 모음에 표시 됩니다.
+예를 들어, 아래는 이미지를 공유 하는 메뉴 항목이 있는 작업 모음의 스크린샷입니다 ( [Shareactionprovider](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) 샘플에서 가져온 것). 사용자가 작업 모음에서 메뉴 항목을 탭 할 때 ShareActionProvider는 응용 프로그램을 로드 하 여와 `ShareActionProvider`연결 된 의도를 처리 합니다. 이 예제에서는 메시징 응용 프로그램이 이전에 사용 되었으므로 작업 모음에 표시 됩니다.
 
 [![작업 모음의 메시징 응용 프로그램 아이콘 스크린샷](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
@@ -150,7 +150,7 @@ Intent CreateIntent ()
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello 탭 ICS (샘플)](https://developer.xamarin.com/samples/monodroid/HelloTabsICS/)
-- [ShareActionProvider 데모 (샘플)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Hello 탭 ICS (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
+- [ShareActionProvider 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 - [아이스크림 및 사우스 샌드위치](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

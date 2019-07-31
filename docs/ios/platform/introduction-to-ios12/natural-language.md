@@ -1,51 +1,51 @@
 ---
-title: Xamarin.iOS를 사용 하 여 자연 언어 프레임 워크를 사용 하 여
-description: 이 문서에서는 자연 언어 프레임 워크를 설명 합니다. IOS 12에에서 도입 된, 자연 언어 프레임 워크는 언어 인식, 음성의 부분 식별 및 명명 된 엔터티 인식에 사용할 기본 iOS API.
+title: Xamarin.ios에서 자연어 프레임 워크 사용
+description: 이 문서에서는 자연어 프레임 워크에 대해 설명 합니다. IOS 12에 도입 된 자연어 프레임 워크는 언어 인식, 음성 식별 부분 및 명명 된 엔터티 인식에 사용할 수 있는 기본 iOS API입니다.
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: 41f629739b06431a9b20548f61111bc31e911abb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 235628b512a63ee2f7ec4de2176ab0b90ad65487
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035045"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652606"
 ---
-# <a name="using-the-natural-language-framework-with-xamarinios"></a>Xamarin.iOS를 사용 하 여 자연 언어 프레임 워크를 사용 하 여
+# <a name="using-the-natural-language-framework-with-xamarinios"></a>Xamarin.ios에서 자연어 프레임 워크 사용
 
-자연 언어 프레임 워크를 iOS 12에에서 도입 된, 장치에 자연어 처리를 사용 하도록 설정 합니다. 언어 인식, 토큰화 및 태그 지정을 지원합니다. 토큰화에 해당 구성 요소 단어, 문장 또는 단락; 텍스트를 분 품사, 사람, 장소 및 조직의 식별 태그를 지정 합니다.
+IOS 12에서 도입 된 자연어 프레임 워크는 장치 자연어 처리를 가능 하 게 합니다. 언어 인식, 토큰화 및 태그 지정을 지원 합니다. 토큰화는 텍스트를 해당 구성 요소 단어, 문장 또는 단락으로 분할 합니다. 태그 지정은 음성, 사람, 장소 및 조직의 일부를 식별 합니다.
 
-자연 언어 프레임 워크를 분류 하 고 특수화 된 컨텍스트에서 텍스트 태그를 사용자 지정 핵심 ML 모델을 사용할 수도 있습니다.
+또한 자연어 프레임 워크는 사용자 지정 핵심 ML 모델을 사용 하 여 특수 컨텍스트에서 텍스트를 분류 하 고 태그를 지정할 수 있습니다.
 
-합니다 [NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) 클래스는 계속 사용할 수 있습니다. 그러나 자연 언어 프레임 워크는 자연어 처리를 위해 사용 하는 기본 메커니즘입니다.
+[NSLinguisticTagger](xref:Foundation.NSLinguisticTagger) 클래스는 계속 사용할 수 있습니다. 그러나 자연어를 처리 하는 데 사용 하는 기본 메커니즘은 자연어 프레임 워크입니다.
 
 ## <a name="sample-app-xamarinnl"></a>샘플 앱: XamarinNL
 
-Xamarin.iOS를 사용 하 여 자연 언어 프레임 워크를 사용 하는 방법에 알아보려면 살펴보겠습니다 합니다 [XamarinNL 샘플 앱](https://developer.xamarin.com/samples/monotouch/iOS12/XamarinNL)합니다.
-이 샘플 앱에 자연 언어 프레임 워크를 사용 하는 방법을 보여 줍니다.
+Xamarin.ios에서 자연어 프레임 워크를 사용 하는 방법을 알아보려면 [XamarinNL 샘플 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl)을 살펴보세요.
+이 샘플 앱에서는 자연어 프레임 워크를 사용 하 여 다음을 수행 하는 방법을 보여 줍니다.
 
-- [언어 인식](#recognizing-languages)합니다.
-- [단어 및 문장으로 텍스트 토큰화](#tokenizing-text-into-words-sentences-and-paragraphs)합니다.
-- [명명 된 엔터티 및 품사 태그](#tagging-named-entities-and-parts-of-speech)합니다.
+- [인식 언어](#recognizing-languages).
+- [텍스트를 단어와 문장으로 토큰화](#tokenizing-text-into-words-sentences-and-paragraphs).
+- [명명 된 엔터티 및 음성 부분에 태그를 지정](#tagging-named-entities-and-parts-of-speech)합니다.
 
 ## <a name="recognizing-languages"></a>언어 인식
 
-합니다 **인식기** 샘플 앱의 탭에는 사용 하는 방법을 보여 줍니다.는 [`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
-텍스트 블록에 대 한 언어를 확인 합니다.
+샘플 앱의 **인식기** 탭에서는[`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
+텍스트 블록의 언어를 결정 하는입니다.
 
 > [!NOTE]
-> 언어 인식에는 텍스트 분류의 특정 형식입니다. 자연 언어 프레임 워크는 또한 개발자가 제공한 핵심 ML 모델을 통해 사용자 지정 텍스트 분류를 지원합니다. 자세한 내용은 잠시 살펴 합니다 [자연 언어 프레임 워크 소개](https://developer.apple.com/videos/play/wwdc2018/713/) WWDC 2018에서 세션입니다.
+> 언어 인식은 특정 유형의 텍스트 분류입니다. 자연어 프레임 워크는 개발자가 제공 하는 핵심 ML 모델을 통해 사용자 지정 텍스트 분류도 지원 합니다. 자세한 내용은 WWDC 2018에서 [자연어 프레임 워크 세션 소개](https://developer.apple.com/videos/play/wwdc2018/713/) 를 참조 하세요.
 
 ### <a name="dominant-language"></a>주요 언어
 
-탭의 **언어** 사용자 입력의 주 언어를 식별 하는 단추입니다.
+**언어** 단추를 탭 하 여 사용자 입력의 기준 언어를 식별 합니다.
 
-`HandleDetermineLanguageButtonTap` 메서드는 `LanguageRecognizerViewController` 사용 하는 [`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
-메서드는 `NLLanguageRecognizer` 인출에는 [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
-텍스트에서 찾은 기본 언어:
+`HandleDetermineLanguageButtonTap` 의`LanguageRecognizerViewController` 메서드는[`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
+를 가져올의 `NLLanguageRecognizer` 메서드[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
+텍스트에 있는 주 언어의 경우:
 
 ```csharp
 partial void HandleDetermineLanguageButtonTap(UIButton sender)
@@ -61,11 +61,11 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 ### <a name="language-probabilities"></a>언어 확률
 
-탭의 **언어 확률** 단추 사용자 입력에 대 한 언어 가설의 목록을 가져올 수 있습니다.
+**언어 확률** 단추를 탭 하 여 사용자 입력에 대 한 언어 가설 목록을 페치합니다.
 
-합니다 `HandleLanguageProbabilitiesButtonTap` 메서드를 `LanguageRecognizerViewController` 클래스를 인스턴스화하는 `NLLanguageRecognizer` 하 라고 요청 [`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
-사용자의 텍스트입니다. 그런 다음 언어 인식기의 호출 [`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
-언어와 연관 된 확률의 사전 인출 하는 메서드. `LanguageRecognizerTableViewController` 이러한 언어 및 확률 클래스 렌더링 합니다.
+클래스의 메서드는를 인스턴스화하고 `NLLanguageRecognizer` 에 요청 합니다. `HandleLanguageProbabilitiesButtonTap` `LanguageRecognizerViewController`[`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
+사용자의 텍스트입니다. 그런 다음 언어 인식기를 호출 합니다.[`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
+메서드-언어 사전 및 관련 확률을 페치합니다. 그런 `LanguageRecognizerTableViewController` 다음 클래스는 이러한 언어 및 확률을 렌더링 합니다.
 
 ```csharp
 partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
@@ -81,7 +81,7 @@ partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
 }
 ```
 
-잠재적인 `NLLanguage` 값 포함:
+가능한 `NLLanguage` 값은 다음과 같습니다.
 
 - `Amharic`
 - `Arabic`
@@ -141,18 +141,18 @@ partial void HandleLanguageProbabilitiesButtonTap(UIButton sender)
 - `Urdu`
 - `Vietnamese`
 
-지원 되는 언어의 전체 목록은 제품은 부분을 [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
-enum API 설명서입니다.
+지원 되는 언어의 전체 목록은 다음의 일부로 제공 됩니다.[`NLLanguage`](xref:NaturalLanguage.NLLanguage)
+API 설명서를 열거 합니다.
 
-## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>단어, 문장, 단락에 텍스트를 토큰화
+## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>단어, 문장 및 단락에 텍스트 토큰화
 
-합니다 **토크 나이저** 샘플 앱의 탭 텍스트 블록의 해당 구성 요소 단어로 분리 하는 방법에 설명 이나 사용 하 여 문장는 [ `NLTokenizer` ](xref:NaturalLanguage.NLTokenizer)합니다.
+샘플 앱의 **토크 토크** 탭에서는 텍스트 블록을를 사용 하 여 [`NLTokenizer`](xref:NaturalLanguage.NLTokenizer)해당 구성 요소 단어나 문장으로 구분 하는 방법을 보여 줍니다.
 
-탭의 **단어** 또는 **문장을** 단추 토큰 목록을 가져올 수 있습니다. 각 토큰 단어나 문장을 원래 텍스트에서와 연결 됩니다.
+**단어** 또는 **문장** 단추를 탭 하 여 토큰 목록을 페치합니다. 각 토큰은 원래 텍스트의 단어나 문장과 연결 됩니다.
 
-`ShowTokens` 호출 하 여 사용자의 입력을 토큰으로 분할 합니다 [`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
-메서드는 `NLTokenizer`합니다. 이 메서드는 배열을 반환합니다 [`NSValue`](xref:Foundation.NSValue)
-개체에 각 배치를 `NSRange` 원본 텍스트의 토큰에 해당 하는 값입니다.
+`ShowTokens`을 호출 하 여 사용자의 입력을 토큰으로 분할 합니다.[`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
+의 `NLTokenizer`메서드입니다. 이 메서드는 다음의 배열을 반환 합니다.[`NSValue`](xref:Foundation.NSValue)
+각각 원래 텍스트의 토큰 `NSRange` 에 해당 하는 값을 래핑하는 개체입니다.
 
 ```csharp
 void ShowTokens(NLTokenUnit unit)
@@ -168,7 +168,7 @@ void ShowTokens(NLTokenUnit unit)
 }
 ```
 
-`LanguageTokenizerTableViewController` 각 테이블 셀에 단일 토큰을 렌더링합니다. 추출를 `NSRange` 토큰에서 `NSValue`, 원래 텍스트에서 해당 문자열을 찾습니다 및 레이블을 테이블 뷰 셀에 설정 합니다.
+`LanguageTokenizerTableViewController`각 테이블 셀에서 단일 토큰을 렌더링 합니다. `NSRange` 토큰`NSValue`에서를 추출 하 고, 원래 텍스트에서 해당 문자열을 찾은 다음 테이블 뷰 셀에 레이블을 설정 합니다.
 
 ```csharp
 public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
@@ -180,24 +180,24 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 }
 ```
 
-## <a name="tagging-named-entities-and-parts-of-speech"></a>명명 된 엔터티 및 품사 태그 지정
+## <a name="tagging-named-entities-and-parts-of-speech"></a>명명 된 엔터티 및 음성 부분 태그 지정
 
-합니다 **태거** XamarinNL 샘플 앱의 탭을 사용 하는 방법에 설명 합니다 [`NLTagger`](xref:NaturalLanguage.NLTagger)
-입력된 문자열의 토큰을 사용 하 여 범주를 연결 하는 클래스입니다.
-자연 언어 프레임 워크에는 사람, 장소, 조직 및 파트의 음성 인식에 대 한 기본 제공 지원이 포함 됩니다.
+XamarinNL 샘플 앱의 **태거** 탭은[`NLTagger`](xref:NaturalLanguage.NLTagger)
+범주를 입력 문자열의 토큰과 연결 하는 클래스입니다.
+자연어 프레임 워크에는 사람, 장소, 조직 및 음성 부분을 인식 하기 위한 기본 제공 지원이 포함 됩니다.
 
 > [!NOTE]
-> 자연 언어 프레임 워크는 또한 개발자가 제공한 핵심 ML 모델을 통해 사용자 지정 태그 지정 체계를 지원합니다. 자세한 내용은 잠시 살펴 합니다 [자연 언어 프레임 워크 소개](https://developer.apple.com/videos/play/wwdc2018/713/) WWDC 2018에서 세션입니다.
+> 또한 자연어 프레임 워크는 개발자가 제공 하는 핵심 ML 모델을 통해 사용자 지정 태깅 스키마를 지원 합니다. 자세한 내용은 WWDC 2018에서 [자연어 프레임 워크 세션 소개](https://developer.apple.com/videos/play/wwdc2018/713/) 를 참조 하세요.
 
-탭의 **명명 된 엔터티** 하거나 **품사** 인출 하는 단추:
+인출 하려면 **명명 된 엔터티** 또는 **음성 부분** 단추를 누릅니다.
 
-- 배열을 `NSValue` 개체에 각 배치를 `NSRange` 원본 텍스트의 토큰에 대 한 합니다.
-- 배열을 [ `NLTag` ](xref:NaturalLanguage.NLTag) 값-에 대 한 범주를 `NSValue` 동일한 배열 인덱스에서 토큰입니다.
+- 원본 텍스트의 `NSValue` 토큰에 대해를 래핑하 `NSRange` 는 개체의 배열입니다.
+- 동일한 배열 인덱스 [`NLTag`](xref:NaturalLanguage.NLTag) 에서 `NSValue` 토큰에 대 한 범주-값의 배열입니다.
 
-`LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` 및 `HandleNamedEntitiesButtonTap` 호출할 때마다 `ShowTags`함께 전달는 [ `NLTagScheme` ](xref:NaturalLanguage.NLTagScheme) 하거나 – `NLTagScheme.LexicalClass` (품사)에 대 한 또는 `NLTagScheme.NameType` (에 대 한 명명 된 엔터티).
+`LanguageTaggerViewController` 및`HandleNamedEntitiesButtonTap`의 각 호출은 [`NLTagScheme`](xref:NaturalLanguage.NLTagScheme) (음성`NLTagScheme.NameType` 부분) 또는 (명명 된 엔터티의 경우)을 통해 전달 됩니다. `ShowTags` `HandlePartsOfSpeechButtonTap` `NLTagScheme.LexicalClass`
 
-`ShowTags` 만듭니다는 `NLTagger`의 배열을 사용 하 여 인스턴스화한 `NLTagScheme` 하는 것은 쿼리할 수에 대 한 형식 (만 전달에이 예제의 `NLTagScheme` 값). 사용 하 여는 [`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
-메서드는 `NLTagger` 텍스트 사용자 입력에 관련 태그를 확인 하려면.
+`ShowTags`을 만들어 쿼리할 `NLTagScheme` 형식의 배열 (이 경우에 `NLTagScheme` 는 전달 된 값만)을 사용 하 여 인스턴스화합니다. `NLTagger` 그런 다음[`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
+에서 메서드를 `NLTagger` 사용 하 여 사용자 입력의 텍스트와 관련 된 태그를 확인 합니다.
 
 ```csharp
 void ShowTags(NLTagScheme tagScheme)
@@ -217,9 +217,9 @@ void ShowTags(NLTagScheme tagScheme)
 }
 ```
 
-태그는 다음 테이블에 표시 된 `LanguageTaggerTableViewController`합니다.
+그러면 태그가에 의해 `LanguageTaggerTableViewController`테이블에 표시 됩니다.
 
-잠재적인 `NLTag` 값 포함:
+가능한 `NLTag` 값은 다음과 같습니다.
 
 - `Adjective`
 - `Adverb`
@@ -253,11 +253,11 @@ void ShowTags(NLTagScheme tagScheme)
 - `Word`
 - `WordJoiner`
 
-지원 되는 태그의 전체 목록은 제품은 부분을 [`NLTag`](xref:NaturalLanguage.NLTag)
-enum API 설명서입니다.
+지원 되는 태그의 전체 목록은 다음의 일부로 제공 됩니다.[`NLTag`](xref:NaturalLanguage.NLTag)
+API 설명서를 열거 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 앱 – XamarinNL](https://developer.xamarin.com/samples/monotouch/iOS12/XamarinNL)
-- [자연 언어 프레임 워크를 소개합니다.](https://developer.apple.com/videos/play/wwdc2018/713/)
-- [자연 언어 (Apple)](https://developer.apple.com/documentation/naturallanguage?language=objc)
+- [샘플 앱-XamarinNL](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-xamarinnl)
+- [자연어 프레임 워크 소개](https://developer.apple.com/videos/play/wwdc2018/713/)
+- [자연어 (Apple)](https://developer.apple.com/documentation/naturallanguage?language=objc)

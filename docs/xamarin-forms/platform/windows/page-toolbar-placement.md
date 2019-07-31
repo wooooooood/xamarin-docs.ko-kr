@@ -1,24 +1,24 @@
 ---
-title: Windows에서 페이지 도구 모음 배치
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 페이지의 도구 모음 배치를 변경 하는 Windows 플랫폼별을 사용 하는 방법을 설명 합니다.
+title: Windows의 페이지 도구 모음 배치
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 페이지에서 도구 모음의 배치를 변경 하는 Windows 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6b314a7864ba4c99b980f4b536a0c2103389b666
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 64a44115bcc7ee8781e308c8e116049ef3b06371
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924712"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656881"
 ---
-# <a name="page-toolbar-placement-on-windows"></a>Windows에서 페이지 도구 모음 배치
+# <a name="page-toolbar-placement-on-windows"></a>Windows의 페이지 도구 모음 배치
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 유니버설 Windows 플랫폼 플랫폼별은에서 도구 모음의 위치를 변경 하는 데 사용 됩니다는 [ `Page` ](xref:Xamarin.Forms.Page)를 설정 하 여 XAML에서 사용 되는 [ `Page.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) 연결 된 속성을를 값을 [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) 열거형:
+이 유니버설 Windows 플랫폼 플랫폼별는의 도구 모음 [`Page`](xref:Xamarin.Forms.Page)배치를 변경 하는 데 사용 되며 [`Page.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) 연결 된 속성을 [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) 열거형의 값으로 설정 하 여 XAML에서 사용 됩니다.
 
 ```xaml
 <TabbedPage ...
@@ -46,6 +46,6 @@ page.On<Windows>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

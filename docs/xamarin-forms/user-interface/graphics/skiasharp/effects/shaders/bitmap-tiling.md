@@ -7,18 +7,18 @@ ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 24c33c61002130fe645bba54c307394bbc2e0656
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7d323aa6616f7547ab91dfe2b394c339e273d61c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322255"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650018"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp 비트맵 바둑판식 배열
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
 두 가지 이전 문서에서는 지금까지 살펴본 대로 합니다 [ `SKShader` ](xref:SkiaSharp.SKShader) 클래스는 선형 또는 순환 그라데이션을 만들 수 있습니다. 이 문서에서는 `SKShader` 타일 영역에 비트맵을 사용 하는 개체입니다. 가로 방향과 세로 방향으로 비트맵을 반복할 수 있습니다 원래 방향에서 가로 및 세로로 대칭 이동 또는 또는 합니다. 대칭 이동 타일 간에 불연속성을 방지합니다.
 
@@ -42,7 +42,7 @@ public static SKShader CreateBitmap (SKBitmap src, SKShaderTileMode tmx, SKShade
 
 ## <a name="exploring-the-tile-modes"></a>타일 모드를 탐색합니다.
 
-첫 번째 프로그램 합니다 **비트맵 바둑판식 배열** 섹션을 **셰이더 및 기타 효과** 페이지를 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 두 개의 결과 보여 주는 `SKShaderTileMode` 인수입니다. 합니다 **비트맵 타일 대칭 이동 모드** XAML 파일은는 `SKCanvasView` 두 개의 `Picker` 선택할 수 있도록 하는 뷰는 `SKShaderTilerMode` 가로 및 세로 바둑판식 배열에 대 한 값입니다. 있음을 배열을 합니다 `SKShaderTileMode` 에 정의 된 멤버를 `Resources` 섹션:
+첫 번째 프로그램 합니다 **비트맵 바둑판식 배열** 섹션을 **셰이더 및 기타 효과** 페이지를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 두 개의 결과 보여 주는 `SKShaderTileMode` 인수입니다. 합니다 **비트맵 타일 대칭 이동 모드** XAML 파일은는 `SKCanvasView` 두 개의 `Picker` 선택할 수 있도록 하는 뷰는 `SKShaderTilerMode` 가로 및 세로 바둑판식 배열에 대 한 값입니다. 있음을 배열을 합니다 `SKShaderTileMode` 에 정의 된 멤버를 `Resources` 섹션:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -300,7 +300,7 @@ public class PhotographicBrickWallPage : ContentPage
 
 타일에 대 한 적절 한 비트맵을 가져오려면 몇 가지 작업이 필요 합니다. 음영이 짙을 수록 brick 눈에 띄는 때문에 매우 잘 작동 하지 않고이 너무 많이 있습니다. Brick 벽이 작은 비트맵에서 생성 된는 사실을 드러내지 반복된 이미지 내에서 정기적으로 나타납니다.
 
-**미디어** 폴더를 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 돌 벽이 이미지에도 포함 되어 있습니다.
+**미디어** 폴더를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 돌 벽이 이미지에도 포함 되어 있습니다.
 
 ![Stone 타일 벽](bitmap-tiling-images/StoneWallTile.jpg "Stone 벽 타일")
 
@@ -366,7 +366,7 @@ SKMatrix.PostConcat(ref matrix, SKMatrix.MakeRotationDegrees(15));
 
 단원의 [ **맞춤 타일**](#tile-alignment), 셰이더를 적용할 좌표 이동 변환 예를 볼 수 있습니다.
 
-독립 실행형 [ **Cat 클록** ](https://developer.xamarin.com/samples/xamarin-forms/CatClock) 샘플 (의 일부가 아닌 **SkiaSharpFormsDemos**) wood 수준 배경이 비트맵 바둑판식 배열이 240 픽셀 사각형 비트맵 기준으로 사용 하 여 시뮬레이션 합니다.
+독립 실행형 [ **Cat 클록** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) 샘플 (의 일부가 아닌 **SkiaSharpFormsDemos**) wood 수준 배경이 비트맵 바둑판식 배열이 240 픽셀 사각형 비트맵 기준으로 사용 하 여 시뮬레이션 합니다.
 
 ![조직 나무](bitmap-tiling-images/WoodGrain.png "세분화 나무")
 
@@ -780,5 +780,5 @@ public class AnimatedBitmapTilePage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
-- [CatClock (샘플)](https://developer.xamarin.com/samples/xamarin-forms/CatClock/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)

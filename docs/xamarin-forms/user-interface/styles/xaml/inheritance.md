@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: c5fa46a67496123eb105ae12404d5607032f5ac1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 24f6eac93dd3095df70bbb326388cd9ed47f395c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971143"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657052"
 ---
 # <a name="style-inheritance-in-xamarinforms"></a>Xamarin.Forms에서 스타일 상속
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타일에서 상속할 수 있습니다._
 
-## <a name="style-inheritance-in-xaml"></a>XAML에서 스타일 상속
+## <a name="style-inheritance-in-xaml"></a>XAML의 스타일 상속
 
 스타일 상속 설정 하 여 수행 합니다 [ `Style.BasedOn` ](xref:Xamarin.Forms.Style.BasedOn) 속성을 기존 [ `Style` ](xref:Xamarin.Forms.Style)합니다. XAML,이 작업을 수행 하 여 설정 합니다 `BasedOn` 속성을를 `StaticResource` 이전에 만든 참조 하는 태그 확장 `Style`합니다. C#,이 작업을 수행 하 여 설정 합니다 `BasedOn` 속성을를 `Style` 인스턴스.
 
@@ -69,7 +69,7 @@ _스타일을 중복을 줄이고 다시 사용할 수 있도록 다른 스타�
 > [!NOTE]
 > 암시적 스타일을 명시적 스타일에서 파생 될 수 있지만 명시적 스타일 암시적 스타일에서 파생 될 수 없습니다.
 
-### <a name="respecting-the-inheritance-chain"></a>상속 체인을 존중
+### <a name="respecting-the-inheritance-chain"></a>상속 체인 준수
 
 스타일을 스타일 같은 수준 이상 에서만 상속할 수 뷰 계층 구조에서. 이는 다음을 의미합니다.
 
@@ -158,8 +158,8 @@ public class StyleInheritancePageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [기본 스타일 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
-- [스타일 (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [스타일 (샘플)를 사용 하 여 작업](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [스타일](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

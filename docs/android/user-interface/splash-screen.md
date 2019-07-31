@@ -1,27 +1,27 @@
 ---
 title: 시작 화면
-description: Android 앱 시작 되 고 앱이 장치에서 처음 시작 하는 경우에 특히 시간이 소요 됩니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다.
+description: 특히 앱이 장치에서 처음 시작 될 때 Android 앱을 시작 하는 데 시간이 오래 걸립니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: b28dba9031840b312868e2ebc45e348a390d3b12
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 30e471174d30e58b126c174fd4eacfdbe87d97b0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675055"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646056"
 ---
 # <a name="splash-screen"></a>시작 화면
 
-_Android 앱 시작 되 고 앱이 장치에서 처음 시작 하는 경우에 특히 시간이 소요 됩니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
+_특히 앱이 장치에서 처음 시작 될 때 Android 앱을 시작 하는 데 시간이 오래 걸립니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
 
 
 ## <a name="overview"></a>개요
 
-Android 앱 시작 하려면 약간의 시간이 걸리며, 특히 첫 번째 시간 동안 앱이 장치에서 실행 (이 라고도 _콜드_). 시작 화면은 사용자에게 시작 진행률을 표시하거나 응용 프로그램 식별 및 홍보를 위한 브랜드 정보를 표시할 수 있습니다.
+Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이 처음으로 장치에서 실행 되는 경우 ( _콜드 시작_이라고 함) 시작 화면은 사용자에게 시작 진행률을 표시하거나 응용 프로그램 식별 및 홍보를 위한 브랜드 정보를 표시할 수 있습니다.
 
 이 가이드에서는 Android 응용 프로그램의 시작 화면을 구현하는 한 가지 기술을 설명합니다. 다음 단계를 포함합니다.
 
@@ -31,14 +31,14 @@ Android 앱 시작 하려면 약간의 시간이 걸리며, 특히 첫 번째 �
 
 3.  이전 단계에서 만든 테마를 사용해서 정의한 시작 화면으로 사용될 응용 프로그램에 새 액티비티(Activity)를 추가합니다.
 
-[![앱 화면에서 다음 예제에서는 Xamarin 로고 시작 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[![예제 Xamarin 로고 시작 화면 및 앱 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 
 ## <a name="requirements"></a>요구 사항
 
 이 가이드에서는 Android API 레벨 15(Android 4.0.3) 또는 그 이상을 대상으로 하는 응용 프로그램을 가정합니다. 또한 응용 프로그램은 프로젝트에 추가된 **Xamarin.Android.Support.v4** 및 **Xamarin.Android.Support.v7.AppCompat** NuGet 패키지가 있어야 합니다.
 
-이 가이드에 있는 모든 코드 및 XML은 이 가이드에 대한 샘플 프로젝트인 [SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen)에 포함되어 있습니다.
+이 가이드에 있는 모든 코드 및 XML은 이 가이드에 대한 샘플 프로젝트인 [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)에 포함되어 있습니다.
 
 
 ## <a name="implementing-a-splash-screen"></a>시작 화면 구현
@@ -69,7 +69,7 @@ Android 앱 시작 하려면 약간의 시간이 걸리며, 특히 첫 번째 �
 </layer-list>
 ```
 
-이 `layer-list` 시작 화면 이미지 가운데 맞춤 됩니다 **splash.png** 로 지정 된 배경에 `@color/splash_background` 리소스입니다. 이 XML 파일에 **리소스/drawable** 폴더 (예를 들어 **Resources/drawable/splash_screen.xml**).
+이렇게 `layer-list` 하면 **시작 이미지를** `@color/splash_background` 리소스로 지정 된 배경에 가운데에 배치 합니다. 이 XML 파일을 Resources/ **그릴** 폴더 (예: **resources/그릴/splash_screen**)에 저장 합니다.
 
 시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
 
@@ -132,8 +132,8 @@ public class SplashActivity : AppCompatActivity
 }
 ```
 
-`SplashActivity` 이전 섹션에서 생성 된 응용 프로그램의 기본 테마를 재정의 하는 테마를 명시적으로 사용 합니다.
-레이아웃을 로드 하지 않아도 됩니다 `OnCreate` 으로 테마를 그릴 수 있는 배경으로 선언 합니다.
+`SplashActivity`이전 섹션에서 만든 테마를 명시적으로 사용 하 여 응용 프로그램의 기본 테마를 재정의 합니다.
+테마에서 그릴 수 있는를 배경으로 선언 `OnCreate` 하므로 레이아웃을 로드할 필요가 없습니다.
 
 백 스택에서 액티비티를 제거하기 위한 `NoHistory=true` 특성을 설정하는 것이 중요합니다. 시작 프로세스를 취소시키는 뒤로 가기 버튼을 막기 위해서 `OnBackPressed` 역시 재정의하고 아무 작업도 수행하지 않습니다.
 
@@ -215,7 +215,7 @@ public class MainActivity : AppCompatActivity
 
 7.  빌드하고 앱을 다시 실행합니다. 시작 화면이 계속 표시되는 동안 가로 모드로 장치를 회전합니다. 다음과 같이 시작 화면이 가로 버전으로 변경됩니다.
 
-    [![시작 화면 가로 모드로 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [![시작 화면에서 가로 모드로 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 
 참고로 가로 모드 시작 화면을 사용하면 항상 매끄럽지 못한 환경을 제공합니다. 기본적으로 Android 앱은 장치가 이미 가로 모드일지라도 세로 모드로 시작하고 그것을 가로 모드로 전환합니다. 결과적으로, 장치가 가로 모드에 있는 동안 앱을 실행하는 경우, 장치는 세로 시작 화면을 간략하게 표시한 다음 세로에서 가로 시작 화면으로 애니메이션하면서 회전합니다. 불행하게도, 이 초기 세로-가로 전환은 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape`이 시작 액티비티의 플래그에 지정되어 있을지라도 일어납니다. 이 제한을 해결하는 가장 좋은 방법은 가로 세로 모드 모두 제대로 렌더링 가능한 단일 시작 화면 이미지를 만드는 것입니다.
@@ -228,6 +228,6 @@ public class MainActivity : AppCompatActivity
 
 ## <a name="related-links"></a>관련 링크
 
-- [SplashScreen (샘플)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [계층 목록 Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [SplashScreen (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+- [계층 목록 (그릴 때)](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [재질 디자인 패턴-시작 화면](https://material.io/design/communication/launch-screen.html#usage)

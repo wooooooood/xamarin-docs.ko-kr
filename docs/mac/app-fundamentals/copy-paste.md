@@ -1,73 +1,73 @@
 ---
-title: Xamarin.Mac에서 복사 및 붙여넣기
-description: 이 문서는 복사를 제공 하 여 Xamarin.Mac 응용 프로그램에 붙여 임시 보드를 사용 하 여 작업을 다룹니다. 작업 하는 방법을 보여 줍니다 표준 데이터 형식에 지정된 된 앱 내의 사용자 지정 데이터를 지원 하는 방법과 여러 앱 간에 공유할 수 있습니다.
+title: Xamarin.ios에서 복사 하 여 붙여넣기
+description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 복사 및 붙여넣기 기능을 제공 하기 위해 대지의 작업을 설명 합니다. 여러 앱 간에 공유할 수 있는 표준 데이터 형식으로 작업 하는 방법과 지정 된 앱 내에서 사용자 지정 데이터를 지 원하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: f9e05b6d16210021257fe3958966739e526aed18
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 61b9d84d6d5882d447a78e6583a399013f8919ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61378642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656556"
 ---
-# <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.Mac에서 복사 및 붙여넣기
+# <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.ios에서 복사 하 여 붙여넣기
 
-_이 문서는 복사를 제공 하 여 Xamarin.Mac 응용 프로그램에 붙여 임시 보드를 사용 하 여 작업을 다룹니다. 작업 하는 방법을 보여 줍니다 표준 데이터 형식에 지정된 된 앱 내의 사용자 지정 데이터를 지원 하는 방법과 여러 앱 간에 공유할 수 있습니다._
+_이 문서에서는 Xamarin.ios 응용 프로그램에서 복사 및 붙여넣기 기능을 제공 하기 위해 대지의 작업을 설명 합니다. 여러 앱 간에 공유할 수 있는 표준 데이터 형식으로 작업 하는 방법과 지정 된 앱 내에서 사용자 지정 데이터를 지 원하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
-Xamarin.Mac 응용 프로그램에서 C# 및.NET을 사용 하 여 작업을 하는 경우 동일한 임시 보드 (복사 및 붙여넣기) 지원 서비스는 Objective-c에서 작업 하는 개발자가 액세스할을 수 있습니다.
+Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목표-C에서 작업 하는 개발자에 게는 동일한 대지의 (복사 및 붙여넣기) 지원에 대 한 액세스 권한이 있습니다.
 
-이 문서에서는 주제 지 Xamarin.Mac 앱에서 사용 하는 두 가지 주요 방법:
+이 문서에서는 Xamarin.ios 앱에서 대지의 사용을 위한 두 가지 주요 방법을 설명 합니다.
 
-1. **표준 데이터 형식을** -모두 앱을 지 원하는 다른 데이터 형식을 알고 임시 보드 작업은 두 개의 관련 없는 앱 간에 수행 일반적으로, 때문입니다. 공유에 대 한 가능성을 최대화 하려면 지 (공용 데이터 형식의 표준 집합을 사용 하 여) 지정된 된 항목의 여러 표현 보유할 수 있는,이 해당 요구 사항에 가장 적합 한 버전을 선택 하려면 사용 중인 앱을 허용 합니다.
-2. **사용자 지정 데이터** -복사 및 붙여 넣는 지에서 처리 되는 사용자 지정 데이터 형식을 정의할 수 있습니다 하 여 Xamarin.Mac 내에서 복잡 한 데이터를 지원 합니다. 예를 들어, 벡터 드로잉 앱을 허용 하는 사용자를 여러 데이터 형식 및 지점으로 구성 되는 복잡 한 셰이프 복사 및 붙여넣기 합니다.
+1. **표준 데이터 형식** -대/소문자 작업은 일반적으로 관련 되지 않은 두 앱 간에 수행 되므로 앱은 다른 응용 프로그램에서 지 원하는 데이터 형식을 인식 하지 못합니다. 공유 가능성을 최대화 하기 위해, 대/표시는 특정 항목에 대 한 여러 표시를 보유할 수 있습니다 (일반적인 데이터 형식의 표준 집합을 사용 하 여) .이를 통해 사용 중인 앱이 요구 사항에 가장 적합 한 버전을 선택할 수 있습니다.
+2. **사용자 지정 데이터** -xamarin.ios 내에서 복잡 한 데이터의 복사 및 붙여넣기를 지원 하기 위해 대지의 영향을 받을 사용자 지정 데이터 형식을 정의할 수 있습니다. 예를 들어 사용자가 여러 데이터 형식 및 점으로 구성 된 복잡 한 도형을 복사 하 고 붙여 넣을 수 있도록 하는 벡터 그리기 앱입니다.
 
 [![실행 중인 앱의 예](copy-paste-images/intro01.png "실행 중인 앱의 예")](copy-paste-images/intro01-large.png#lightbox)
 
-이 문서에서는 Xamarin.Mac 응용 프로그램을 지원 복사 및 붙여넣기 작업이에 지 작업의 기본 사항을 설명 합니다. 것이 가장 좋습니다를 통해 작업 하는 합니다 [Hello, Mac](~/mac/get-started/hello-mac.md) 먼저, 특히 문서 합니다 [Xcode 및 Interface Builder 소개](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 하 고 [출 선 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션으로 주요 개념 및이 문서를 사용 하는 기술을 설명 합니다.
+이 문서에서는 복사 및 붙여넣기 작업을 지원 하기 위해 Xamarin.ios 응용 프로그램에서 대지의 사용에 대 한 기본 사항을 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
 
 참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-C 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
 
-## <a name="getting-started-with-the-pasteboard"></a>임시 보드 시작
+## <a name="getting-started-with-the-pasteboard"></a>대지의 시작
 
-임시 보드 지정된 된 응용 프로그램 내에서 또는 응용 프로그램 간에 데이터를 교환 하기 위한 표준화 된 메커니즘을 제공 합니다. Xamarin.Mac 응용 프로그램에 대 한 지에 대 한 일반적인 사용은 처리 복사 및 붙여넣기 작업을 인데 다양 한 다른 작업 (예: 끌어서 놓기 및 응용 프로그램 서비스)도 지원 됩니다.
+이 대지의는 지정 된 응용 프로그램 내에서 또는 응용 프로그램 간에 데이터를 교환 하는 표준화 된 메커니즘을 제공 합니다. Xamarin.ios 응용 프로그램에서 일반적으로 사용 하는 작업은 복사 및 붙여넣기 작업을 처리 하는 것 이지만 다른 많은 작업도 지원 됩니다 (예: 끌어서 & Drop 및 애플리케이션 서비스).
 
-빠르게 순조로운 액세스할, 대지의 오브젝트를 사용 하 여 Xamarin.Mac 앱에서 실제로 간단한 소개를 시작 하려고 합니다. 나중에 지의 작동 방식 및 사용 된 메서드를 대 한 자세한 내용이 제공 됩니다.
+신속 하 게 시작 하려면 Xamarin.ios 앱에서 pasteboards를 사용 하는 방법에 대 한 간단 하 고 실용적인 소개로 시작 하겠습니다. 나중에 대지의 작동 원리와 사용 되는 방법에 대 한 자세한 설명을 제공 합니다.
 
-이 예에서 우리가 만들 이미지 뷰를 포함 하는 창을 관리 하는 간단한 문서 기반 응용 프로그램을 합니다. 사용자는 복사 하 고 앱에서 및를 또는 다른 앱 또는 동일한 앱 내의 여러 windows에서 문서 간에 이미지를 붙여넣을 수 됩니다.
+이 예에서는 이미지 뷰가 포함 된 창을 관리 하는 간단한 문서 기반 응용 프로그램을 만들 예정입니다. 사용자는 앱의 문서 간에 이미지를 복사 하 여 붙여넣을 수 있으며 동일한 앱 내의 다른 앱 또는 여러 창에서 이미지를 복사 하 여 붙여넣을 수 있습니다.
 
 ### <a name="creating-the-xamarin-project"></a>Xamarin 프로젝트 만들기
 
-먼저 하겠습니다는 수 복사본을 추가 하 고 붙여 지원에 대 한 새 기반 문서 Xamarin.Mac 앱을 만듭니다.
+먼저 복사 및 붙여넣기 지원을 추가 하 게 될 새 문서 기반의 Xamarin.ios 앱을 만듭니다.
 
 다음을 수행합니다.
 
-1. Mac 및 클릭에 대 한 Visual Studio를 시작 합니다 **새 프로젝트...**  링크 합니다.
-2. 선택 **Mac** > **앱** > **Cocoa 앱**를 클릭 합니다 **다음** 단추: 
+1. Mac용 Visual Studio를 시작 하 고 **새 프로젝트** ... 링크를 클릭 합니다.
+2. **Mac** > **앱**cocoa 앱을 선택 하 고 다음 단추를 클릭 합니다. >  
 
-    [![새 Cocoa 앱 프로젝트를 만드는](copy-paste-images/sample01.png "새 Cocoa 앱 프로젝트 만들기")](copy-paste-images/sample01-large.png#lightbox)
-3. 입력 `MacCopyPaste` 에 대 한 합니다 **프로젝트 이름** 하 고 나머지는 기본값을 유지 합니다. 다음을 클릭 합니다. 
+    [![새 Cocoa 앱 프로젝트 만들기](copy-paste-images/sample01.png "새 Cocoa 앱 프로젝트 만들기")](copy-paste-images/sample01-large.png#lightbox)
+3. `MacCopyPaste` **프로젝트 이름** 으로를 입력 하 고 다른 모든 항목을 기본값으로 유지 합니다. 다음을 클릭 합니다. 
 
-    [![프로젝트의 이름을 설정할](copy-paste-images/sample01a.png "프로젝트의 이름을 설정 합니다.")](copy-paste-images/sample01a-large.png#lightbox)
+    [![프로젝트 이름 설정](copy-paste-images/sample01a.png "프로젝트 이름 설정")](copy-paste-images/sample01a-large.png#lightbox)
 
-4. 클릭 합니다 **만들기** 단추: 
+4. **만들기** 단추를 클릭 합니다. 
 
     [![새 프로젝트 설정 확인](copy-paste-images/sample02.png "새 프로젝트 설정 확인")](copy-paste-images/sample02-large.png#lightbox)
 
-### <a name="add-an-nsdocument"></a>NSDocument를 추가 합니다.
+### <a name="add-an-nsdocument"></a>NSDocument 추가
 
-다음으로 추가 사용자 지정 `NSDocument` 응용 프로그램의 사용자 인터페이스에 대 한 백그라운드 저장소로 사용할 클래스를 합니다. 단일 이미지 뷰를 포함 하 고 기본 임시 보드는 보기에서 이미지를 복사 하는 방법과 기본 임시 보드에서 이미지를 가져오고 이미지 보기에 표시 하는 방법을 알고 있어야 합니다.
+다음으로 응용 프로그램의 `NSDocument` 사용자 인터페이스에 대 한 백그라운드 저장소 역할을 하는 사용자 지정 클래스를 추가 합니다. 여기에는 단일 이미지 뷰가 포함 되어 있으며, 뷰에서 이미지를 기본 대/표시로 복사 하는 방법과 기본 대지의 이미지를 가져와서 이미지 뷰에 표시 하는 방법을 알고 있습니다.
 
-Xamarin.Mac 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 **Solution Pad** 선택한 **추가** > **새 파일...** :
+**Solution Pad** 에서 xamarin.ios 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.
 
-![NSDocument를 프로젝트에 추가](copy-paste-images/sample03.png "NSDocument를 프로젝트에 추가")
+![프로젝트에 NSDocument 추가](copy-paste-images/sample03.png "프로젝트에 NSDocument 추가")
 
-**이름**에 대해 `ImageDocument`를 입력하고 **새로 만들기** 단추를 클릭합니다. 편집 된 **ImageDocument.cs** 클래스 및 다음과 같이 표시 되도록 합니다.
+**이름**에 대해 `ImageDocument`를 입력하고 **새로 만들기** 단추를 클릭합니다. **ImageDocument.cs** 클래스를 편집 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -172,9 +172,9 @@ namespace MacCopyPaste
 }
 ```
 
-아래에서 자세히 코드 중 일부에 대해를 살펴보겠습니다.
+아래에 자세히 설명 된 코드 중 일부를 살펴보겠습니다.
 
-다음 코드는 이미지를 사용할 수 있으면 기본 지에서 이미지 데이터의 존재 여부를 테스트 하는 속성이 `true` 그렇지 않으면 반환 됩니다 `false`:
+다음 코드에서는 이미지를 사용할 수 `true` `false`있는 경우 기본 대지의 이미지 데이터가 있는지 테스트 하는 속성을 제공 합니다.
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -189,7 +189,7 @@ public bool ImageAvailableOnPasteboard {
 }
 ```
 
-다음 코드는 기본 지에 첨부 된 이미지 보기에서 이미지를 복사합니다.
+다음 코드에서는 연결 된 이미지 보기의 이미지를 기본 대지의로 복사 합니다.
 
 ```csharp
 [Export("CopyImage:")]
@@ -229,7 +229,7 @@ public void CopyImage(NSObject sender) {
 }
 ```
 
-및 다음 코드를 기본 지에서 이미지를 붙여넣고 (올바른 이미지를 포함 하는 지) 하는 경우 연결 된 이미지 보기에 표시 합니다.
+다음 코드는 기본 대지의 이미지를 붙여넣고 첨부 된 이미지 보기에 표시 합니다 (대지의 올바른 이미지를 포함 하는 경우).
 
 ```csharp
 [Export("PasteImage:")]
@@ -259,27 +259,27 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-이 문서의 사용 하 여 Xamarin.Mac 앱의 사용자 인터페이스를 만들겠습니다.
+이 문서를 사용 하 여 Xamarin.ios 앱에 대 한 사용자 인터페이스를 만듭니다.
 
-### <a name="building-the-user-interface"></a>사용자 인터페이스 구축
+### <a name="building-the-user-interface"></a>사용자 인터페이스 빌드
 
-두 번 클릭 합니다 **Main.storyboard** 파일 Xcode에서 엽니다. 다음으로, 도구 모음 및 이미지를도 추가 하 고 같이 구성 합니다.
+**주 storyboard** 파일을 두 번 클릭 하 여 Xcode에서 엽니다. 그런 다음 도구 모음과 이미지 웰을 추가 하 고 다음과 같이 구성 합니다.
 
 [![도구 모음 편집](copy-paste-images/sample04.png "도구 모음 편집")](copy-paste-images/sample04-large.png#lightbox)
 
-복사본을 추가 하 고 붙여넣습니다 **도구 모음 항목 이미지** 도구 모음의 왼쪽에 있습니다. 사용할 것으로 바로 가기 편집 메뉴에서 복사 및 붙여넣기를 합니다. 다음으로, 4 개를 추가 **도구 모음 항목 이미지** 도구 모음의 오른쪽에 있습니다. 이러한도 몇 가지 기본 이미지를 사용 하 여 이미지를 채우는 데 사용 하겠습니다.
+도구 모음 왼쪽에 이미지 복사 및 붙여넣기 **도구 모음 항목** 을 추가 합니다. 편집 메뉴에서 복사 및 붙여넣기를 위한 바로 가기로 사용할 예정입니다. 그런 다음 도구 모음 오른쪽에 4 개의 **이미지 도구 모음 항목** 을 추가 합니다. 이를 사용 하 여 몇 가지 기본 이미지로 이미지를 채웁니다.
 
-작업 도구 모음에 대 한 자세한 내용은 참조 하십시오 우리의 [도구 모음](~/mac/user-interface/toolbar.md) 설명서.
+도구 모음을 사용 하는 방법에 대 한 자세한 내용은 [도구 모음](~/mac/user-interface/toolbar.md) 설명서를 참조 하세요.
 
-다음으로, 보겠습니다 다음 출 선 및 영구적인 도구 모음 항목 및 이미지에 대 한 작업을 잘 노출 합니다.
+다음으로 도구 모음 항목과 이미지 웰에 대해 다음과 같은 출 선 및 작업을 제공 하겠습니다.
 
-[![출 선 및 작업 만들기](copy-paste-images/sample05.png "출 선 및 작업 만들기")](copy-paste-images/sample05-large.png#lightbox)
+[![콘센트 및 작업 만들기](copy-paste-images/sample05.png "콘센트 및 작업 만들기")](copy-paste-images/sample05-large.png#lightbox)
 
-출 선 및 작업을 사용 하 여 작업에 대 한 자세한 내용은 참조 하십시오 합니다 [출 선 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 부분 우리의 [Hello, Mac](~/mac/get-started/hello-mac.md) 설명서.
+콘센트 및 작업으로 작업 하는 방법에 대 한 자세한 내용은 [Hello, Mac](~/mac/get-started/hello-mac.md) 설명서의 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 참조 하세요.
 
-### <a name="enabling-the-user-interface"></a>사용자 인터페이스를 사용 하도록 설정
+### <a name="enabling-the-user-interface"></a>사용자 인터페이스 사용
 
-Xcode 및 출 선 및 작업을 통해 노출 되는 UI 요소에서 만든 사용자 인터페이스를 사용 하 여 UI를 사용 하도록 설정 하는 코드를 추가 해야 합니다. 두 번 클릭 합니다 **ImageWindow.cs** 파일을 **Solution Pad** 수 있으며 다음과 같은 모양:
+Xcode에서 만든 사용자 인터페이스와 콘센트 및 작업을 통해 노출 되는 UI 요소를 사용 하 여 UI를 사용 하도록 설정 하는 코드를 추가 해야 합니다. **Solution Pad** **ImageWindow.cs** 파일을 두 번 클릭 하면 다음과 같이 표시 됩니다.
 
 ```csharp
 using System;
@@ -395,9 +395,9 @@ namespace MacCopyPaste
 }
 ```
 
-이 코드 아래에 자세히 살펴보겠습니다.
+아래에 자세히 설명 되어 있는 코드를 살펴보겠습니다.
 
-인스턴스를 위해 노출 먼저는 `ImageDocument` 위에서 만든 클래스:
+먼저 위에서 만든 `ImageDocument` 클래스의 인스턴스를 노출 합니다.
 
 ```csharp
 private ImageDocument _document;
@@ -414,9 +414,9 @@ public ImageDocument Document {
 }
 ```
 
-사용 하 여 `Export`, `WillChangeValue` 및 `DidChangeValue`를 설치 했으므로 `Document` 키-값 코딩 및 Xcode에서 데이터 바인딩을 허용 하는 속성입니다.
+, `Export` `Document` 및 를`DidChangeValue`사용 하 여 Xcode에서 키-값 코딩 및 데이터 바인딩을 허용 하도록 속성을 설정 했습니다. `WillChangeValue`
 
-Xcode에서 UI에 다음 속성을 사용 하 여 추가한 잘 이미지에서 이미지도 노출 합니다.
+또한 다음 속성을 사용 하 여 Xcode의 UI에 추가한 이미지의 이미지를 노출 합니다.
 
 ```csharp
 public ViewController ImageViewController {
@@ -433,7 +433,7 @@ public NSImage Image {
 }
 ```
 
-인스턴스를 만들 때 주 창 로드 하 고 표시 되는 경우이 `ImageDocument` 클래스 및 연결 UI의 이미지도 다음 코드를 사용 하 여:
+주 창이 로드 되 고 표시 되 면 `ImageDocument` 클래스의 인스턴스를 만들고 다음 코드를 사용 하 여 UI의 이미지를 연결 합니다.
 
 ```csharp
 public override void AwakeFromNib ()
@@ -448,7 +448,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-마지막으로, 복사 및 붙여넣기 도구 모음 항목을 클릭 하 여 사용자에 게 응답 호출의 인스턴스는 `ImageDocument` 실제 작업을 수행 하는 클래스:
+마지막으로, 복사 하 여 붙여넣기 도구 모음 항목을 클릭 하는 사용자에 대 한 응답으로 `ImageDocument` 클래스의 인스턴스를 호출 하 여 실제 작업을 수행 합니다.
 
 ```csharp
 partial void CopyImage (NSObject sender) {
@@ -460,11 +460,11 @@ partial void PasteImage (Foundation.NSObject sender) {
 }
 ```
 
-### <a name="enabling-the-file-and-edit-menus"></a>파일 및 편집 메뉴를 사용 하도록 설정
+### <a name="enabling-the-file-and-edit-menus"></a>파일 및 편집 메뉴 사용
 
-해야 할 마지막 가장을 사용 하도록 설정 됩니다는 **새로 만들기** 메뉴 항목을는 **파일** 메뉴 (주 창의 새 인스턴스를 만들려면)를 사용 하도록 설정 합니다 **잘라내기**, **복사**  하 고 **붙여넣기** 메뉴에서 항목을 **편집** 메뉴.
+마지막으로 수행 해야 할 일은 **파일** 메뉴 (주 창의 새 인스턴스 만들기)에서 **새** 메뉴 항목을 사용 하도록 설정 하 고 **편집** 메뉴에서 **잘라내기**, **복사** 및 **붙여넣기** 메뉴 항목을 사용 하도록 설정 하는 것입니다.
 
-사용 하도록 설정 하려면 합니다 **새로 만들기** 메뉴 항목을 편집 합니다 **AppDelegate.cs** 파일과 다음 코드를 추가:
+**새** 메뉴 항목을 사용 하도록 설정 하려면 **AppDelegate.cs** 파일을 편집 하 고 다음 코드를 추가 합니다.
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
@@ -484,9 +484,9 @@ void NewDocument (NSObject sender) {
 }
 ```
 
-자세한 내용은 참조 하십시오는 [여러 Windows를 사용 하 여 작업](~/mac/user-interface/window.md) 부분 우리의 [Windows](~/mac/user-interface/window.md) 설명서.
+자세한 내용은 [windows](~/mac/user-interface/window.md) 설명서의 [여러 창으로 작업](~/mac/user-interface/window.md) 섹션을 참조 하세요.
 
-사용 하도록 설정 합니다 **잘라내기**, **복사** 및 **붙여넣기** 메뉴 항목을 편집 합니다 **AppDelegate.cs** 파일과 다음 코드를 추가:
+**잘라내기**, **복사** 및 **붙여넣기** 메뉴 항목을 사용 하도록 설정 하려면 **AppDelegate.cs** 파일을 편집 하 고 다음 코드를 추가 합니다.
 
 ```csharp
 [Export("copy:")]
@@ -535,21 +535,21 @@ void PasteImage (NSObject sender)
 }
 ```
 
-각 메뉴 항목에 대 한 우리는 현재 키의 최상위 창을 가져오고 캐스트는 `ImageWindow` 클래스:
+각 메뉴 항목에 대해 현재, 최상위, 키 창을 가져와 `ImageWindow` 클래스로 캐스팅 합니다.
 
 ```csharp
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-여기에서 호출 된 `ImageDocument` 처리 복사 및 붙여넣기 작업이 해당 창의 클래스 인스턴스. 예를 들어: 
+여기에서 해당 창의 `ImageDocument` 클래스 인스턴스를 호출 하 여 복사 및 붙여넣기 작업을 처리 합니다. 예: 
 
 ```csharp
 window.Document.CopyImage (sender);
 ```
 
-만 포함 하려고 **잘라내기**, **복사** 하 고 **붙여넣기** 없을 경우 액세스할 수 있도록 메뉴 항목 이미지 데이터를 기본 지 또는 현재 활성 창도 이미지입니다.
+기본 대지의 이미지 또는 현재 활성 창의 이미지에 이미지 데이터가 있는 경우에만 **잘라내기**, **복사** 및 **붙여넣기** 메뉴 항목에 액세스할 수 있습니다.
 
-추가 해 보겠습니다를 **EditMenuDelegate.cs** Xamarin.Mac 프로젝트에 파일을 다음과 같이 표시 되도록 합니다.
+Xamarin.ios 프로젝트에 **EditMenuDelegate.cs** 파일을 추가 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -600,9 +600,9 @@ namespace MacCopyPaste
 }
 ```
 
-마찬가지로 현재, 최상위 창 가져오기 하 고 사용 하 여 해당 `ImageDocument` 클래스 인스턴스를 필요한 이미지 데이터가 있는지 확인 합니다. 사용 된 `MenuWillHighlightItem` 이 상태를 기반으로 한 메서드를 사용 하도록 설정 하거나 각 항목을 사용 하지 않도록 설정 합니다.
+이번에는 현재 최상위 창을 가져오고 해당 `ImageDocument` 클래스 인스턴스를 사용 하 여 필요한 이미지 데이터가 있는지 확인 합니다. 그런 다음 메서드를 `MenuWillHighlightItem` 사용 하 여이 상태를 기반으로 각 항목을 활성화 하거나 비활성화 합니다.
 
-편집 합니다 **AppDelegate.cs** 파일을 확인 합니다 `DidFinishLaunching` 다음과 같은 메서드 확인:
+**AppDelegate.cs** 파일을 편집 하 고 메서드 `DidFinishLaunching` 를 다음과 같이 만듭니다.
  
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -613,97 +613,97 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-첫째, 자동 및 해제 편집 메뉴에서 메뉴 항목의 비활성화 합니다. 인스턴스에 연결 어는 `EditMenuDelegate` 위에서 만든는 클래스입니다.
+먼저 편집 메뉴에서 메뉴 항목의 자동 사용 및 사용 안 함을 사용 하지 않도록 설정 합니다. 다음으로 위에서 만든 `EditMenuDelegate` 클래스의 인스턴스를 연결 합니다.
 
-자세한 내용은 참조 하십시오 우리의 [메뉴](~/mac/user-interface/menu.md) 설명서.
+자세한 내용은 [메뉴](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
-### <a name="testing-the-app"></a>앱 테스트하기
+### <a name="testing-the-app"></a>앱 테스트
 
-곳에서 모든 항목을 사용 하 여 응용 프로그램을 테스트할 준비가 됩니다. 빌드 및 앱을 실행 하 고 기본 인터페이스 표시 됩니다.
+모든 것이 준비 되 면 응용 프로그램을 테스트할 준비가 된 것입니다. 앱을 빌드하고 실행 하면 기본 인터페이스가 표시 됩니다.
 
-![응용 프로그램을 실행](copy-paste-images/run01.png "응용 프로그램 실행")
+![응용 프로그램 실행](copy-paste-images/run01.png "응용 프로그램 실행")
 
-편집 메뉴를 연 경우 유의 **잘라내기**, **복사** 및 **붙여넣기** 잘 또는 기본 지 이미지에 이미지가 없는 있기 때문에 사용할 수 없습니다.
+편집 메뉴를 여는 경우 이미지의 이미지 또는 기본 대지의 이미지가 없기 때문에 **잘라내기**, **복사** 및 **붙여넣기** 를 사용할 수 없습니다.
 
-![편집 메뉴를 열고](copy-paste-images/run02.png "편집 메뉴 열기")
+![편집 메뉴 열기](copy-paste-images/run02.png "편집 메뉴 열기")
 
-편집 메뉴를 닫고도 이미지에 이미지를 추가 하는 경우 항목을 이제 사용할 수 있습니다.
+이미지를 이미지에 추가 하 고 편집 메뉴를 다시 열면 이제 항목이 활성화 됩니다.
 
-![사용 하도록 설정 된 편집 메뉴 항목을 보여 주는](copy-paste-images/run03.png "편집 메뉴 항목을 표시를 사용할 수 있습니다.")
+![편집 메뉴 항목을 사용 하도록 설정 하는 것을 보여 줍니다] . (copy-paste-images/run03.png "편집 메뉴 항목을 사용 하도록 설정 하는 것을 보여 줍니다") .
 
-이미지를 복사 하 고 선택 하는 경우 **새로 만들기** 파일 메뉴에서 새 창에 해당 이미지를 붙여넣을 수 있습니다.
+이미지를 복사 하 고 파일 메뉴에서 **새로 만들기** 를 선택 하는 경우 해당 이미지를 새 창에 붙여 넣을 수 있습니다.
 
-![새 창에 이미지를 넣는](copy-paste-images/run04.png "이미지를 새 창에 붙여 넣는 방법")
+![새 창에 이미지 붙여넣기](copy-paste-images/run04.png "새 창에 이미지 붙여넣기")
 
-다음 섹션에서는 Xamarin.Mac 응용 프로그램에 지 작업에 대해 자세하게 알아보겠습니다.
+다음 섹션에서는 Xamarin.ios 응용 프로그램에서 대지의 작업을 자세히 살펴보겠습니다.
 
-## <a name="about-the-pasteboard"></a>임시 보드에 대 한
+## <a name="about-the-pasteboard"></a>대지의 정보
 
-MacOS (OS X 이전의 함)의 지 (`NSPasteboard`) 예: 복사 및 붙여넣기, 끌어서 놓기 및 응용 프로그램 서비스를 처리 하는 여러 서버에 대 한 지원을 제공 합니다. 다음 섹션에서는 몇 가지 주요 임시 보드 개념에 대해 좀 더 자세히 알아보겠습니다.
+Macos (이전의 OS X)에서 대지의 (`NSPasteboard`)는 복사 & 붙여넣기, 끌어서 놓기 & 애플리케이션 서비스 등의 여러 서버 프로세스를 지원 합니다. 다음 섹션에서는 몇 가지 주요 대지의 개념을 자세히 살펴보겠습니다.
 
-### <a name="what-is-a-pasteboard"></a>지에서는 란?
+### <a name="what-is-a-pasteboard"></a>대지의 정의
 
-`NSPasteboard` 클래스 또는 지정된 된 앱 내의 응용 프로그램 간에 정보를 교환 하기 위한 표준화 된 메커니즘을 제공 합니다. 복사 및 붙여넣기 작업을 처리 하는 것에 대 한 지에서는의 main 함수는:
+클래스 `NSPasteboard` 는 응용 프로그램 간에 정보를 교환 하거나 지정 된 앱 내에서 정보를 교환 하기 위한 표준화 된 메커니즘을 제공 합니다. 대지의 주요 기능은 복사 및 붙여넣기 작업을 처리 하기 위한 것입니다.
 
-1. 사용자 앱에서 항목을 선택 하 고 사용 하는 경우는 **잘라내기** 하거나 **복사** 메뉴 항목을 선택한 항목의 하나 이상의 표현을 지에 배치 됩니다.
-2. 사용 하는 경우는 **붙여넣기** 메뉴 항목 (내에서 동일한 앱 또는 다른) 처리할 수 있는 데이터의 버전은 지에서 복사 및 앱에 추가 합니다.
+1. 사용자가 앱에서 항목을 선택 하 고 **잘라내기** 또는 **복사** 메뉴 항목을 사용 하는 경우 선택한 항목에 대 한 하나 이상의 표현이 대지의 위에 배치 됩니다.
+2. 사용자가 동일한 앱 또는 다른 앱 내에서 **붙여넣기** 메뉴 항목을 사용 하는 경우 해당 항목에서 처리할 수 있는 데이터 버전이 대지의 복사 되 고 앱에 추가 됩니다.
 
-응용 프로그램 서비스 작업 및 찾기, 끌어서, 끌어서 놓기 임시 보드는 덜 명확 포함 합니다.
+Less 명백한 대지의 경우에는 찾기, 끌기, 끌어서 놓기 및 응용 프로그램 서비스 작업이 포함 됩니다.
 
-- 사용자가 끌기 작업을 시작 하는 경우 끌기 데이터를 임시 보드에 복사 됩니다. 다른 앱으로 드롭다운을 사용 하 여 끌기 작업이 종료 되는 경우 해당 앱 지에서 데이터를 복사 합니다.
-- 번역 서비스를 요청 하는 앱에서 데이터를 변환할 수는 지에 복사 됩니다. 응용 프로그램 서비스를 대 지에서 데이터를 검색, 임시 보드에 클립보드에서 데이터를 다시 번역 하는 합니다.
+- 사용자가 끌기 작업을 시작 하면 끌기 데이터가 대지의에 복사 됩니다. 끌기 작업이 다른 앱에 대 한 drop을 사용 하 여 종료 되는 경우 해당 앱은 대지의 데이터를 복사 합니다.
+- 번역 서비스의 경우에는 요청 하는 앱에서 번역할 데이터가 대 면에 복사 됩니다. 응용 프로그램 서비스는 대지의 데이터를 검색 하 고, 번역을 수행한 다음, 다시 설정에 데이터를 붙여 넣습니다.
 
-가장 간단한 형태로 대지의 오브젝트에 지정된 된 앱 내에서 또는 앱 간에 데이터를 이동 하 고 따라서 앱의 프로세스 외부에서 특별 한 글로벌 메모리 영역에 사용 됩니다. 대지의 오브젝트의 개념은 쉽게 grasps를 고려해 야 할 몇 가지 더 복잡 한 세부 정보가 있습니다. 아래에서 자세히 설명 합니다.
+가장 간단한 형태의 pasteboards는 지정 된 앱 내에서 또는 앱과 줄임으로써 사이에 있는 데이터를 이동 하는 데 사용 됩니다. Pasteboards의 개념은 쉽게 사용할 수 있지만 몇 가지 복잡 한 세부 정보를 고려해 야 합니다. 이러한 내용은 아래에서 자세히 설명 합니다.
 
-### <a name="named-pasteboards"></a>명명 된 대지의 오브젝트
+### <a name="named-pasteboards"></a>명명 된 pasteboards
 
-지에서는 공용 또는 개인 수 있으며 다양 한 용도로 응용 프로그램 내에서 또는 여러 앱 간에 사용할 수 있습니다. macOS에서는 각각 특정 한 잘 정의 된 사용량을 사용 하 여 여러 표준 대지의 오브젝트를 제공합니다.
+대/는 공개 또는 비공개 일 수 있으며, 응용 프로그램 내에서 또는 여러 앱에서 다양 한 용도로 사용할 수 있습니다. macOS는 다음과 같이 잘 정의 된 특정 사용을 포함 하는 몇 가지 표준 pasteboards를 제공 합니다.
 
-- `NSGeneralPboard` -에 대 한 기본 지 **잘라내기**를 **복사본** 하 고 **붙여넣기** 작업 합니다.
-- `NSRulerPboard` -지원 **잘라내기**를 **복사** 하 고 **붙여넣기** 연산은 **눈금자**합니다.
-- `NSFontPboard` -지원 **잘라내기**, **복사** 하 고 **붙여넣기** 연산은 `NSFont` 개체입니다.
-- `NSFindPboard` -지원 응용 프로그램별 검색 텍스트를 공유할 수 있는 패널을 찾습니다.
-- `NSDragPboard` -지원 **끌어서 놓기** 작업 합니다.
+- `NSGeneralPboard`- **잘라내기**, **복사** 및 **붙여넣기** 작업의 기본 기능입니다.
+- `NSRulerPboard`- **눈금자**에서 **잘라내기**, **복사** 및 **붙여넣기** 작업을 지원 합니다.
+- `NSFontPboard`-개체에 대 `NSFont` 한 **잘라내기**, **복사** 및 **붙여넣기** 작업을 지원 합니다.
+- `NSFindPboard`-검색 텍스트를 공유할 수 있는 응용 프로그램별 찾기 패널을 지원 합니다.
+- `NSDragPboard`- **끌기 & Drop** 작업을 지원 합니다.
 
-대부분의 경우에 대 한 시스템 정의 대지의 오브젝트 중 하나를 사용 합니다. 하지만 사용자 고유의 대지의 오브젝트를 만들 수는 경우가 있을 수 있습니다. 이러한 상황에서 사용할 수 있습니다 합니다 `FromName (string name)` 메서드는 `NSPasteboard` 지정 된 이름의 사용자 지정 지에서는 만들 클래스입니다.
+대부분의 경우 시스템 정의 pasteboards 중 하나를 사용 합니다. 그러나 사용자 고유의 pasteboards를 만들어야 하는 경우가 있을 수 있습니다. 이러한 경우 `FromName (string name)` `NSPasteboard` 클래스의 메서드를 사용 하 여 지정 된 이름의 사용자 지정 대지의 이름을 만들 수 있습니다.
 
-필요에 따라 호출할 수 있습니다는 `CreateWithUniqueName` 메서드를 `NSPasteboard` 를 고유 하 게 명명 된 임시 보드를 만들 클래스.
+필요에 따라 `CreateWithUniqueName` `NSPasteboard` 클래스의 메서드를 호출 하 여 고유 하 게 명명 된 대지의를 만들 수 있습니다.
 
-### <a name="pasteboard-items"></a>임시 보드 항목
+### <a name="pasteboard-items"></a>대지의 항목
 
-응용 프로그램을 임시 보드에 기록 하는 데이터의 각 부분으로 간주 됩니다는 _임시 보드 항목_ 지에서는 동시에 여러 항목을 저장할 수 있습니다. 이러한 방식으로 앱 지 (예: 일반 텍스트 및 서식 있는 텍스트)에서는 및 검색 앱 복사 되는 데이터의 여러 버전 데이터만 해제 읽을 수 있습니다 (예: 일반 텍스트만) 처리할 수 있도록 작성할 수 있습니다.
+응용 프로그램이 아트 보드에 기록 하는 각 데이터는 대지의 _항목_ 으로 간주 되 고, 대/는 여러 항목을 동시에 포함할 수 있습니다. 이러한 방식으로 앱은 여러 버전의 데이터 (예: 일반 텍스트 및 서식 있는 텍스트)로 복사 되는 데이터를 작성 하 고, 검색 하는 앱은 처리할 수 있는 데이터만 읽을 수 있습니다 (예: 일반 텍스트에만 해당).
 
 ### <a name="data-representations-and-uniform-type-identifiers"></a>데이터 표현 및 균일 한 형식 식별자
 
-임시 보드 작업에는 일반적으로 두 개의 (또는 이상) 간에 응용 프로그램을 서로 또는 데이터 형식에 대 한 지식이 없는 수행 각 처리할 수 있습니다. 위의 섹션에서 설명 했 듯이 정보를 공유 하는 것에 대 한 잠재력을 극대화할 수 지에서는 보유할 수 복사 되 고 붙여 넣은 데이터의 여러 표현 합니다.
+대지의 작업은 일반적으로 서로를 인식 하지 않는 둘 이상의 응용 프로그램 또는 각 응용 프로그램에서 처리할 수 있는 데이터 형식 사이에 발생 합니다. 위의 섹션에서 설명한 것 처럼 공유 정보에 대 한 잠재적 가능성을 최대화 하기 위해 대지의는 복사 하 여 붙여 넣은 데이터의 여러 표현을 포함할 수 있습니다.
 
-각 표현을 통해를 Uniform 형식 식별자 (UTI)에 제공 되는 날짜의 형식을 고유 하 게 식별 하는 간단한 문자열에 지나지 인 식별 됩니다 (자세한 내용은 Apple의를 참조 하십시오 [Uniform 형식 식별자 개요 ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) 설명서). 
+각 표현은 표시 되는 날짜의 형식을 고유 하 게 식별 하는 단순한 문자열 보다는 UTI (Uniform Type Identifier)를 통해 식별 됩니다. 자세한 내용은 Apple의 [균일 한 형식 식별자 개요](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) 를 참조 하세요. 설명서). 
 
-사용자 지정 데이터 형식 (예를 들어, 앱을 그리기는 벡터 그리기 개체)를 만드는 경우 사용자 고유의 UTI를 고유 하 게 복사에서 쉽게 식별할 붙여넣기 작업을 만들 수 있습니다.
+사용자 지정 데이터 형식 (예: 벡터 그리기 앱에서 그리기 개체)을 만드는 경우 복사 및 붙여넣기 작업에서 고유 하 게 식별할 수 있도록 고유한 UTI를 만들 수 있습니다.
 
-앱을 임시 보드에서 복사한 데이터를 붙여 준비를 하는 경우 (있는 경우) 해당 기능에 가장 적합 한 표현을 찾아야 합니다. 일반적으로 가장 형식을 사용할 수 있습니다 (예를 들어 서식 있는 텍스트, 워드 프로세싱 응용 프로그램)에 됩니다 필요 (일반 텍스트로 간단한 텍스트 편집기에 대 한) 사용할 수 있는 가장 단순한 형태를 대체 합니다.
+응용 프로그램에서 복사 된 데이터를 붙여넣기 위해 준비 하는 경우 해당 기능에 가장 적합 한 표현을 찾아야 합니다 (있는 경우). 일반적으로이는 사용할 수 있는 가장 다양 한 형식 (예: 워드 프로세싱 앱에 대 한 서식 있는 텍스트)으로, 필요한 경우 사용할 수 있는 가장 간단한 형식 (간단한 텍스트 편집기의 경우 일반 텍스트)으로 대체 됩니다.
 
 <a name="Promised_Data" />
 
-### <a name="promised-data"></a>약속된 데이터
+### <a name="promised-data"></a>약속 한 데이터
 
-일반적으로 앱 간에 공유 최대화 하려면 가능한 한 복사 되는 데이터의 여러 표현을 제공 해야 합니다. 그러나 시간 또는 메모리 제약 조건으로 인해 것 않을 실제로 지에 각 데이터 형식을 작성 하는 데 적합 합니다.
+일반적으로 응용 프로그램 간 공유를 최대화 하기 위해 가능한 한 많은 데이터 표현을 제공 해야 합니다. 그러나 시간 또는 메모리 제약 조건으로 인해 실제로는 각 데이터 형식을 대지의에 작성 하는 것이 실용적이 지 않을 수 있습니다.
 
-이 경우 첫 번째 데이터 표현을 지에 배치할 수 및 수신 응용 프로그램 생성된에 즉석 붙여넣기 작업 직전 수 있는 다른 표현을 요청할 수 있습니다.
+이 경우에는 대/소문자에 첫 번째 데이터 표현을 저장할 수 있으며, 받는 앱은 붙여넣기 작업 바로 전에 즉시 생성 될 수 있는 다른 표현을 요청할 수 있습니다.
 
-사용 가능한 다른 표현 중 하나 이상의 준수 하는 개체에 의해 제공 되는 지정 지에 초기 항목을 놓으면는 `NSPasteboardItemDataProvider` 인터페이스입니다. 이러한 개체 수신 응용 프로그램에서 요청한 대로 요청 시 추가 표현을 제공 합니다.
+항목을 표시 하는 경우에는 `NSPasteboardItemDataProvider` 인터페이스를 준수 하는 개체에서 사용할 수 있는 하나 이상의 다른 표현을 제공 하도록 지정 합니다. 이러한 개체는 수신 앱에서 요청 하는 요청에 대 한 추가 표현을 제공 합니다.
 
 ### <a name="change-count"></a>변경 수
 
-각 대 지 유지 관리를 _변경 횟수_ 증분 시간 새 소유자를 선언 합니다. 앱 대 지의 내용을 변경 횟수의 값을 확인 하 여 검사 하 고 마지막 이후 변경 되었는지 여부를 확인할 수 있습니다.
+각 대지의 새 소유자가 선언 될 때마다 증가 하는 _변경 횟수_ 를 유지 합니다. 앱은 변경 개수 값을 확인 하 여 마지막으로 검사 한 후에 대지의 내용이 변경 되었는지 여부를 확인할 수 있습니다.
 
-사용 합니다 `ChangeCount` 및 `ClearContents` 의 메서드는 `NSPasteboard` 지정 된 지에서는 변경 횟수를 수정 하는 클래스입니다.
+클래스의`NSPasteboard` 및 `ClearContents` 메서드를 사용 하 여 지정 된 대지의 변경 횟수를 수정 합니다. `ChangeCount`
 
-## <a name="copying-data-to-a-pasteboard"></a>에 지에서는 데이터를 복사합니다.
+## <a name="copying-data-to-a-pasteboard"></a>대지의 데이터 복사
 
-첫 번째에 액세스 하 여 지에서는, 기존의 모든 콘텐츠를 지우는 만큼 표현을 지 하는 데 필요한 만큼의 데이터를 쓰는 복사 작업을 수행 합니다.
+처음에는 대/소문자에 액세스 하 고, 기존 콘텐츠를 지우고, 대지의에 필요한 만큼의 데이터 표현을 작성 하 여 복사 작업을 수행 합니다.
 
-예를 들어:
+예:
 
 ```csharp
 // Get the standard pasteboard
@@ -716,24 +716,24 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-일반적으로 바로 작성할 수 있습니다 일반 지를 위의 예에서 같이 합니다. 전송 하는 모든 개체를 `WriteObjects` 메서드 *해야* 준수 하는 `INSPasteboardWriting` 인터페이스. 여러 기본 제공 클래스 (같은 `NSString`, `NSImage`, `NSURL`, `NSColor`를 `NSAttributedString`, 및 `NSPasteboardItem`) 자동으로이 인터페이스를 준수 합니다.
+일반적으로 위의 예제에서 수행한 것 처럼 일반 대 면에만 씁니다. `WriteObjects` *메서드에 보내는* 모든 개체는 `INSPasteboardWriting` 인터페이스를 따라야 합니다. `NSString` ,`NSImage` ,,`NSPasteboardItem`, 및와 같은 몇 가지 기본 제공 클래스는이 인터페이스를 자동으로 준수 합니다. `NSURL` `NSColor` `NSAttributedString`
 
-임시 보드를 사용자 지정 데이터 클래스를 작성 하는 경우를 준수 해야 합니다는 `INSPasteboardWriting` 인터페이스 또는 인스턴스의에 래핑될 수는 `NSPasteboardItem` 클래스 (참조는 [사용자 지정 데이터 형식](#Custom_Data_Types) 섹션 아래).
+사용자 지정 데이터 클래스를 대지의에 작성 하는 경우에는 `INSPasteboardWriting` 인터페이스를 준수 하거나 `NSPasteboardItem` 클래스의 인스턴스에 래핑해야 합니다 (아래의 [사용자 지정 데이터 형식](#Custom_Data_Types) 섹션 참조).
 
-## <a name="reading-data-from-a-pasteboard"></a>에 지에서 데이터 읽기
+## <a name="reading-data-from-a-pasteboard"></a>대지의 데이터 읽기
 
-위에서 설명한 대로 지를 앱 간의 데이터 공유에 대 한 잠재력을 극대화할 수 복사한 데이터의 여러 표현을 작성할 수 있습니다. 그가 수신 응용 프로그램에서 (있는 경우) 해당 기능에 대 한 가능한 가장 버전을 선택 합니다.
+위에서 설명한 것 처럼 앱 간에 데이터를 공유할 수 있는 가능성을 최대화 하기 위해 복사 된 데이터에 대 한 여러 표현이 대지의에 기록 될 수 있습니다. 수신 앱은 해당 기능에 사용할 수 있는 가장 다양 한 버전 (있는 경우)을 선택 합니다.
 
-### <a name="simple-paste-operation"></a>간단한 붙여넣기 작업
+### <a name="simple-paste-operation"></a>단순 붙여넣기 작업
 
-임시 보드 사용 하 여 데이터를 읽기는 `ReadObjectsForClasses` 메서드. 두 개의 매개 변수가 필요 합니다.
+메서드를 `ReadObjectsForClasses` 사용 하 여 대지의 데이터를 읽습니다. 두 매개 변수가 필요 합니다.
 
-1. 배열을 `NSObject` 지에서 읽을 수 있는 클래스 형식에 기반 합니다. 주문 해야이 가장 원하는 데이터 형식을 사용 하 여 먼저 모든 나머지 형식 내림차순으로 기본 설정 합니다.
-2. 추가 제약 조건 (예: 특정 URL 내용 유형이 제한 됨)를 포함 하는 사전 또는 추가 제한이 필요한 경우 빈 사전입니다.
+1. 대지의 읽기를 `NSObject` 원하는 기반 클래스 형식의 배열입니다. 가장 적합 한 데이터 형식으로 순서를 지정 해야 합니다.
+2. 추가 제약 조건 (예: 특정 URL 콘텐츠 형식으로 제한)을 포함 하는 사전 또는 추가 제약 조건이 필요 하지 않은 경우 빈 사전입니다.
 
-메서드는에 전달 하는 조건을 충족 하는 항목의 배열을 반환 하 고 요청 된 데이터 형식 수가 최대 포함. 것도 포함 되어 있지 않습니다 요청된 된 형식 있으며 빈 배열이 반환 됩니다.
+메서드는 전달 된 조건을 충족 하는 항목의 배열을 반환 하므로 요청 된 데이터 형식 수가 대부분 포함 됩니다. 요청 된 형식이 없고 빈 배열이 반환 될 수도 있습니다.
 
-예를 들어, 다음 코드를 확인 하는 경우는 `NSImage` 일반적인 지에 존재 하 고 그렇지 않으면 잘 이미지에 표시 합니다.
+예를 들어 다음 코드는가 일반 대지의에 `NSImage` 있는지 확인 하 고,이 경우 이미지 웰에 표시 합니다.
 
 ```csharp
 [Export("PasteImage:")]
@@ -763,22 +763,22 @@ public void PasteImage(NSObject sender) {
 }
 ```
 
-### <a name="requesting-multiple-data-types"></a>여러 데이터 형식을 요청합니다.
+### <a name="requesting-multiple-data-types"></a>여러 데이터 형식 요청
 
-만들려는 Xamarin.Mac 응용 프로그램의 유형에 따라 붙여넣을 데이터의 여러 표현 처리 할 수 있습니다. 이 경우 두 가지 시나리오가 있습니다 지에서 데이터를 검색 합니다.
+생성 되는 Xamarin.ios 응용 프로그램의 형식에 따라 붙여넣은 데이터의 여러 표현을 처리할 수 있습니다. 이러한 상황에서 데이터를 검색 하는 두 가지 시나리오는 다음과 같습니다.
 
-1. 단일 호출 하는 `ReadObjectsForClasses` 메서드와 (기본 순서)에서 원하는 표현의 모든 배열을 제공 합니다.
-2. 여러 번 호출할는 `ReadObjectsForClasses` 메서드 다른 배열에 대 한 요청 될 때마다 형식입니다.
+1. `ReadObjectsForClasses` 메서드를 한 번 호출 하 고 원하는 모든 표현의 배열을 기본 순서로 제공 합니다.
+2. 매번 다른 형식의 배열을 요청 `ReadObjectsForClasses` 하는 메서드를 여러 번 호출 합니다.
 
-참조 된 **간단한 붙여넣기 작업** 지에서는에서 데이터 검색에 대 한 자세한 내용은 위의 섹션입니다.
+작업 보드에서 데이터를 검색 하는 방법에 대 한 자세한 내용은 위의 **단순 붙여넣기 작업** 섹션을 참조 하세요.
 
-### <a name="checking-for-existing-data-types"></a>기존 데이터 형식에 대 한 확인
+### <a name="checking-for-existing-data-types"></a>기존 데이터 형식 확인
 
-지에서는 실제로 지에서 데이터를 읽지 않고 지정 된 데이터 표현을 포함 되어 있는지 확인할 수 있는 경우가 있습니다 (예를 들어 합니다 **붙여넣기** 메뉴 항목 유효 데이터가 존재 하는 경우에).
+올바른 데이터가 있는 경우에만 **붙여넣기** 메뉴 항목을 사용 하도록 설정 하는 것과 같이 대지의 데이터를 실제로 읽지 않고 대지의 특정 데이터 표현이 포함 되어 있는지 확인 하는 것이 좋습니다.
 
-호출 된 `CanReadObjectForClasses` 메서드의 지정된 된 형식에 포함 되어 있는지 확인 하려면 임시 보드입니다.
+대지의 메서드 `CanReadObjectForClasses` 를 호출 하 여 지정 된 형식이 포함 되어 있는지 확인 합니다.
 
-예를 들어 다음 코드는 일반적인 지를 포함 하는 경우 결정을 `NSImage` 인스턴스:
+예를 들어 다음 코드는 일반 대지의 `NSImage` 인스턴스가 포함 되어 있는지 여부를 확인 합니다.
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
@@ -793,25 +793,25 @@ public bool ImageAvailableOnPasteboard {
 }
 ```
 
-### <a name="reading-urls-from-the-pasteboard"></a>임시 보드에서 읽기 url
+### <a name="reading-urls-from-the-pasteboard"></a>대지의 url 읽기
 
-지정된 된 Xamarin.Mac 앱의 기능에 따라 것 지에서는에서 Url을 읽어야 하지만 지정된 된 집합이 기준 (예: 파일 또는 특정 데이터 형식의 Url을 가리키는)를 충족 하는 경우. 이 경우 두 번째 매개 변수를 사용 하 여 추가 검색 조건을 지정할 수 있습니다 합니다 `CanReadObjectForClasses` 또는 `ReadObjectsForClasses` 메서드.
+지정 된 Xamarin.ios 앱의 기능을 기반으로 하는 경우에는 지정 된 조건 집합을 충족 하는 경우에만 (예: 특정 데이터 형식의 파일이 나 Url을 가리키는 경우)에만 대지의 Url을 읽을 수 있습니다. 이 경우 `CanReadObjectForClasses` 또는 `ReadObjectsForClasses` 메서드의 두 번째 매개 변수를 사용 하 여 추가 검색 조건을 지정할 수 있습니다.
 
 <a name="Custom_Data_Types" />
 
 ## <a name="custom-data-types"></a>사용자 지정 데이터 형식
 
-Xamarin.Mac 앱에서 사용자 지정 형식을 지를 저장 해야 하는 경우 경우가 있습니다. 예를 들어, 벡터 드로잉을 사용 하면 복사 및 붙여넣기 그리기 개체를 하는 앱입니다.
+Xamarin.ios 앱의 대지의에 사용자 지정 형식을 저장 해야 하는 경우가 있습니다. 예를 들어 사용자가 그리기 개체를 복사 하 고 붙여 넣을 수 있도록 하는 벡터 그리기 앱입니다.
 
-이 경우 사용자 지정 데이터 클래스에서 상속 하도록 디자인 해야 `NSObject` 몇 가지 인터페이스를 준수 하는 것 (`INSCoding`를 `INSPasteboardWriting` 고 `INSPasteboardReading`). 사용할 수 있습니다는 `NSPasteboardItem` 를 복사 하거나 붙여 넣은 데이터를 캡슐화 합니다.
+이 경우에서 `NSObject` 상속 하 고 몇 가지 `INSPasteboardWriting` 인터페이스 (`INSCoding`및 `INSPasteboardReading`)를 준수 하도록 데이터 사용자 지정 클래스를 디자인 해야 합니다. 필요에 따라를 사용 `NSPasteboardItem` 하 여 복사 하거나 붙여넣을 데이터를 캡슐화 할 수 있습니다.
 
-두이 옵션 모두 아래에서 자세히 설명 합니다.
+이러한 두 옵션에 대해서는 아래에서 자세히 설명 합니다.
 
-### <a name="using-a-custom-class"></a>사용자 지정 클래스를 사용 하 여
+### <a name="using-a-custom-class"></a>사용자 지정 클래스 사용
 
-이 섹션에서는이 문서의 시작 부분에서 만든 간단한 예제에서는 앱에서 확장 되며 windows 간의 복사 및 붙여넣기는 우리는 이미지에 대 한 정보를 추적 하는 사용자 지정 클래스를 추가 합니다.
+이 섹션에서는이 문서의 시작 부분에서 만든 간단한 예제 앱을 확장 하 고 사용자 지정 클래스를 추가 하 여 windows 간에 복사 하 여 붙여 넣는 이미지에 대 한 정보를 추적 합니다.
 
-프로젝트에 새 클래스를 추가 하 고 호출할 **ImageInfo.cs**합니다. 파일 편집 하 고 다음과 같이 표시 되도록 합니다.
+프로젝트에 새 클래스를 추가 하 고 **ImageInfo.cs**를 호출 합니다. 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -925,11 +925,11 @@ namespace MacCopyPaste
     
 ```
 
-다음 섹션에 자세히 살펴보고가이 클래스에 알아보겠습니다.
+다음 섹션에서는이 클래스를 자세히 살펴봅니다.
 
 #### <a name="inheritance-and-interfaces"></a>상속 및 인터페이스
 
-따라야 하는 사용자 지정 데이터 클래스를 작성 하거나 지에서는에서 읽을 수, 전에 `INSPastebaordWriting` 고 `INSPasteboardReading` 인터페이스입니다. 상속 해야 뿐만 `NSObject` 또한 준수 및는 `INSCoding` 인터페이스:
+사용자 지정 데이터 클래스를 작성 하거나 대/ `INSPastebaordWriting` /문자에서 읽으려면 먼저 및 `INSPasteboardReading` 인터페이스를 준수 해야 합니다. 또한이 클래스는 `NSObject` `INSCoding` 에서 상속 하 고 인터페이스를 준수 해야 합니다.
 
 ```csharp
 [Register("ImageInfo")]
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-Objective-c에 클래스 노출 될 수 있어야 합니다를 사용 하 여 합니다 `Register` 지시문과 해당 필수 속성 또는 메서드를 사용 하 여 노출 해야 `Export`합니다. 예를 들어:
+또한 클래스는 `Register` 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 사용 하 여 `Export`필요한 속성이 나 메서드를 노출 해야 합니다. 예를 들어:
 
 ```csharp
 [Export("name")]
@@ -947,13 +947,13 @@ public string Name { get; set; }
 public string ImageType { get; set; }
 ```
 
-포함 된 데이터를이 클래스는-이미지의 이름 및 해당 형식 (예: jpg, png)의 두 필드 공개 하는 것입니다. 
+이 클래스에 포함 되는 데이터의 두 필드를 표시 합니다. 이미지 이름과 해당 형식 (jpg, png 등)이 포함 됩니다. 
 
-자세한 내용은 참조 하세요.를 [노출 C# 클래스 / objective-c 메서드](~/mac/internals/how-it-works.md) 섹션을 [Xamarin.Mac 내부 요소](~/mac/internals/how-it-works.md) 설명 설명서를 `Register` 및 `Export` 특성 요소 Objective-c 개체 및 UI에 C# 클래스에 연결 하는 데 사용 합니다.
+자세한 내용은 [xamarin.ios 내부](~/mac/internals/how-it-works.md) `Register` 설명서의 [ C# 클래스/메서드를 목표로 제공-C](~/mac/internals/how-it-works.md) 섹션을 참조 하십시오. C# 클래스를 연결 하는 데 사용 되 `Export` 는 및 특성에 대해 설명 합니다. 목표-C 개체 및 UI 요소입니다.
 
 #### <a name="constructors"></a>생성자
 
-(Objective-c에 적절히 노출) 하는 두 명의 생성자는 임시 보드에서 읽을 수 있도록 사용자 지정 데이터 클래스에 필요한 됩니다.
+사용자 지정 데이터 클래스에 대 한 두 가지 생성자 (목적-C에 올바르게 노출 됨)는 대/소문자에서 읽을 수 있도록 필요 합니다.
 
 ```csharp
 [Export ("init")]
@@ -974,17 +974,17 @@ public ImageInfo(NSCoder decoder) {
 }
 ```
 
-노출 먼저 합니다 _빈_ 의 기본 Objective-c 메서드로 생성자 `init`합니다.
+먼저의 `init`기본 목표-C 메서드에서 _빈_ 생성자를 노출 합니다.
 
-위해 노출 하는 다음에 `NSCoding` 내보낸된 이름 아래에 있는 붙여넣을 때 임시 보드에서 개체의 새 인스턴스를 만드는 데 사용할 수 있는 규격 생성자 `initWithCoder`합니다.
+다음으로,의 `NSCoding` `initWithCoder`내보낸 이름으로 붙여넣을 때 대지의 새 개체 인스턴스를 만드는 데 사용 되는 호환 생성자를 노출 합니다.
 
-이 생성자는 `NSCoder` (생성 되는 `NSKeyedArchiver` 지를 쓸 때), 키/값 쌍을 이루는 데이터를 추출 및 데이터 클래스의 속성 필드에 저장 합니다.
+이 생성자는를 `NSCoder` 사용 하 여에 게 `NSKeyedArchiver` 작성 될 때에 의해 생성 되는을 사용 하 고 키/값 쌍 데이터를 추출 하 여 데이터 클래스의 속성 필드에 저장 합니다.
 
-#### <a name="writing-to-the-pasteboard"></a>임시 보드에 쓰기
+#### <a name="writing-to-the-pasteboard"></a>대지의에 쓰기
 
-준수 하 여는 `INSPasteboardWriting` 인터페이스를 먼저 두 가지 방법 및 필요에 따라 세 번째 메서드를 노출 하도록 클래스 지에 쓸 수 있도록 합니다.
+`INSPasteboardWriting` 인터페이스를 준수 하 여 두 개의 메서드를 노출 하 고 필요에 따라 세 번째 메서드를 표시 하 여 클래스를 대지의에 쓸 수 있도록 해야 합니다.
 
-먼저 지 데이터 형식 사용자 지정 클래스에 쓸 수 있는 표현 지시 해야 합니다.
+먼저 사용자 지정 클래스를 쓸 수 있는 데이터 형식 표현에 대 한 정보를 지시 해야 합니다.
 
 ```csharp
 [Export ("writableTypesForPasteboard:")]
@@ -994,11 +994,11 @@ public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) 
 }
 ```
 
-각 표현을 통해는 균일 한 형식 식별자 (UTI), 표시 되는 데이터의 형식을 고유 하 게 식별 하는 간단한 문자열에 지나지 인 식별 됩니다 (자세한 내용은 Apple의를 참조 하십시오 [Uniform 형식 식별자 개요 ](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) 설명서).
+각 표현은 표시 되는 데이터의 형식을 고유 하 게 식별 하는 단순한 문자열 보다는 UTI (Uniform Type Identifier)를 통해 식별 됩니다. 자세한 내용은 Apple의 [균일 한 형식 식별자 개요](https://developer.apple.com/library/prerelease/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_intro/understand_utis_intro.html#//apple_ref/doc/uid/TP40001319) 를 참조 하세요. 설명서).
 
-이 사용자 지정 형식에 대 한 고유한 UTI 만들고: "com.xamarin.image-info" (앱 식별자와 마찬가지로 역방향 표기법에 있는 참고). 또한이 클래스는 지 표준 문자열을 쓸 수 있는 (`public.text`). 
+사용자 지정 형식에 대해 사용자 고유의 UTI을 만듭니다. "" (는 앱 식별자와 마찬가지로 역방향 표기법). 또한 클래스는 표준 문자열을 대지의 (`public.text`)에 쓸 수 있습니다. 
 
-다음으로, 임시 보드에 실제로 기록 되는 요청 된 형식 개체를 만들려고 해야 합니다.
+다음에는 실제로 대/면에 작성 되는 요청 된 형식으로 개체를 만들어야 합니다.
 
 ```csharp
 [Export ("pasteboardPropertyListForType:")]
@@ -1017,7 +1017,7 @@ public virtual NSObject GetPasteboardPropertyListForType (string type) {
 }
 ```
 
-에 대 한 합니다 `public.text` 형식에서는 반환 하는 단순 하 고 포맷 `NSString` 개체입니다. 사용자 지정 `com.xamarin.image-info` 형식을 사용 하 고는 `NSKeyedArchiver` 및 `NSCoder` 키/값 쌍을 이루는 보관 파일을 사용자 지정 데이터 클래스를 인코딩할 인터페이스입니다. 실제로 인코딩을 처리 하는 다음 메서드를 구현 해야 합니다.
+형식의 경우 간단한 형식의 `NSString` 개체를 반환 합니다. `public.text` 사용자 지정 `com.xamarin.image-info` 형식의 경우 `NSKeyedArchiver` 및 `NSCoder` 인터페이스를 사용 하 여 사용자 지정 데이터 클래스를 키/값 쌍 보관으로 인코딩합니다. 인코딩을 실제로 처리 하려면 다음 메서드를 구현 해야 합니다.
 
 ```csharp
 [Export ("encodeWithCoder:")]
@@ -1029,9 +1029,9 @@ public void EncodeTo (NSCoder encoder) {
 }
 ```
 
-개별 키/값 쌍을 인코더에 기록 되 고 위에서 추가한 두 번째 생성자를 사용 하 여 디코딩할 수 됩니다.
+개별 키/값 쌍이 인코더에 기록 되 고 위에서 추가한 두 번째 생성자를 사용 하 여 디코딩됩니다.
 
-필요에 따라에서는 지에 데이터를 쓸 때 모든 옵션을 정의 하는 다음 메서드를 포함할 수 있습니다.
+필요에 따라 다음 메서드를 포함 하 여 데이터를 대지의에 쓸 때 옵션을 정의할 수 있습니다.
 
 ```csharp
 [Export ("writingOptionsForType:pasteboard:"), CompilerGenerated]
@@ -1040,9 +1040,9 @@ public virtual NSPasteboardWritingOptions GetWritingOptionsForType (string type,
 }
 ```
 
-현재는 `WritingPromised` 옵션 사용할 수 있고 지정된 된 형식 버전 이후로 예정 이며 지를 실제로 쓸 때 사용 해야 합니다. 자세한 내용은 참조 하십시오 합니다 [약속 데이터](#Promised_Data) 위의 섹션입니다.
+`WritingPromised` 현재 옵션은 사용할 수 있으며, 지정 된 형식이 약속 한 경우에만 사용할 수 있으며 실제로는 대/면에 기록 되지 않습니다. 자세한 내용은 위의 [약속 데이터](#Promised_Data) 섹션을 참조 하세요.
 
-현재 위치에서 이러한 메서드를 사용 하 여 임시 보드 사용자 지정 클래스를 쓸 다음 코드를 사용할 수 있습니다.
+이러한 메서드를 사용 하는 경우 다음 코드를 사용 하 여 사용자 지정 클래스를 대지의에 쓸 수 있습니다.
 
 ```csharp
 // Get the standard pasteboard
@@ -1055,11 +1055,11 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new ImageInfo[] { Info });
 ```
 
-#### <a name="reading-from-the-pasteboard"></a>임시 보드에서 읽기
+#### <a name="reading-from-the-pasteboard"></a>대지의 읽기
 
-준수 하 여는 `INSPasteboardReading` 지에서 사용자 지정 데이터 클래스를 읽을 수 있도록 세 가지 메서드를 노출 하려고 하는 인터페이스입니다.
+`INSPasteboardReading` 인터페이스를 준수 하 여 사용자 지정 데이터 클래스를 대지의에서 읽을 수 있도록 세 가지 메서드를 노출 해야 합니다.
 
-먼저 지 데이터 형식 사용자 지정 클래스를 클립보드의 읽을 수 있는 표현 지시 해야 합니다.
+먼저 사용자 지정 클래스가 클립보드에서 읽을 수 있는 데이터 형식 표현에 대 한 정보를 지시 해야 합니다.
 
 ```csharp
 [Export ("readableTypesForPasteboard:")]
@@ -1069,9 +1069,9 @@ public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard){
 }
 ```
 
-마찬가지로 이러한 간단한 Uti로 정의 됩니다 및 파일에 정의 된 동일한 형식일 것 이라고 합니다 **지 쓸** 위의 섹션입니다.
+다시 말하지만, 이러한 항목은 단순 UTIs로 정의 되며 위의 **대지의에 쓰기** 에 정의 된 것과 동일한 형식입니다.
 
-이 어 지 지시할 필요가 _어떻게_ 다음 메서드를 사용 하 여 각 UTI 유형에 읽을 수:
+다음으로, 다음 메서드를 사용 하 여 각 UTI 유형을 _어떻게_ 읽을 지를 지시 해야 합니다.
 
 ```csharp
 [Export ("readingOptionsForType:pasteboard:")]
@@ -1090,9 +1090,9 @@ public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, 
 }
 ```
 
-에 대 한는 `com.xamarin.image-info` 형식을 사용 하 여 만든 키/값 쌍을 디코딩할 지 지시 했습니다를 `NSKeyedArchiver` 작성 하는 경우 클래스는 지를 호출 하 여는 `initWithCoder:` 생성자 클래스를 추가 합니다.
+형식에 대해 클래스에 추가 된 생성자를 `initWithCoder:` 호출 하 여에 대 한 클래스를 작성할 때를 `NSKeyedArchiver` 사용 하 여 만든 키/값 쌍을 디코드 하도록 대지의 지시를 합니다. `com.xamarin.image-info`
 
-마지막으로, 다른 UTI 데이터 표현을 지 읽을 다음 메서드를 추가 해야 합니다.
+마지막으로, 다음 메서드를 추가 하 여 대지의 다른 UTI 데이터 표현을 읽어야 합니다.
 
 ```csharp
 [Export ("initWithPasteboardPropertyList:ofType:")]
@@ -1109,7 +1109,7 @@ public NSObject InitWithPasteboardPropertyList (NSObject propertyList, string ty
 }
 ```
 
-현재 위치에서 이러한 모든 메서드를 사용 하 여 사용자 지정 데이터 클래스는 다음 코드를 사용 하 여 임시 보드에서 읽을 수 있습니다.
+이러한 모든 메서드를 적용 한 후에는 다음 코드를 사용 하 여 사용자 지정 데이터 클래스를 대지의에서 읽을 수 있습니다.
 
 ```csharp
 // Initialize the pasteboard
@@ -1129,15 +1129,15 @@ if (ok) {
 }
 ```
 
-### <a name="using-a-nspasteboarditem"></a>NSPasteboardItem를 사용 하 여
+### <a name="using-a-nspasteboarditem"></a>NSPasteboardItem 사용
 
-사용자 지정 클래스의 생성을 보증 하지 않습니다는 지를 사용자 지정 항목을 작성 해야 하거나 필요한 만큼만 공통 형식으로 데이터를에서 제공 하려는 경우 시간이 있을 수 있습니다. 이러한 상황에서는 사용할 수는 `NSPasteboardItem`합니다.
+사용자 지정 클래스 만들기를 보증 하지 않는 사용자 지정 항목을에 써야 하는 경우 또는 필요한 경우에만 공통 형식으로 데이터를 제공 하려는 경우가 있습니다. 이러한 경우에는를 `NSPasteboardItem`사용할 수 있습니다.
 
-`NSPasteboardItem` 세부적으로 제어할 지에 기록 되 고 임시 액세스 용인지 여부를 지정 하는 데이터에 대해이 삭제 해야 지에 기록한 후 합니다.
+는 `NSPasteboardItem` 대/소문자에 작성 된 데이터에 대 한 세분화 된 제어를 제공 하며 임시 액세스용으로 설계 된 데이터에 대 한 세분화 된 제어를 제공 합니다 .이는 대/소문자에 쓰여진 후에 삭제 해야 합니다.
 
 #### <a name="writing-data"></a>데이터 쓰기
 
-사용자 지정 데이터를 작성 하는 `NSPasteboardItem` 사용자 지정을 제공 해야 `NSPasteboardItemDataProvider`합니다. 프로젝트에 새 클래스를 추가 하 고 호출할 **ImageInfoDataProvider.cs**합니다. 파일 편집 하 고 다음과 같이 표시 되도록 합니다.
+사용자 지정 데이터 `NSPasteboardItem` 를에 쓰려면 사용자 지정 `NSPasteboardItemDataProvider`를 제공 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 **ImageInfoDataProvider.cs**를 호출 합니다. 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -1200,9 +1200,9 @@ namespace MacCopyPaste
 }
 ```
 
-사용자 지정 데이터 클래스를 사용 하 여 했던 것 처럼 사용 해야 합니다 `Register` 및 `Export` 목표 C에 노출 하는 지시문 클래스에서 상속 해야 합니다 `NSPasteboardItemDataProvider` 하 고 구현 해야 합니다 `FinishedWithDataProvider` 및 `ProvideDataForType` 메서드.
+사용자 지정 데이터 클래스를 사용 하는 것 처럼 `Register` 및 `Export` 지시문을 사용 하 여 목표에 노출 해야 합니다. C. 클래스는에서 `NSPasteboardItemDataProvider` 상속 해야 하 고 및 `ProvideDataForType` 메서드 `FinishedWithDataProvider` 를 구현 해야 합니다.
 
-사용 합니다 `ProvideDataForType` 에서 래핑될 데이터를 제공 하는 방법의 `NSPasteboardItem` 같이:
+메서드를 사용 하 여 다음과 `NSPasteboardItem` 같이에 래핑되는 데이터를 제공 합니다. `ProvideDataForType`
 
 ```csharp
 [Export ("pasteboard:item:provideDataForType:")]
@@ -1220,9 +1220,9 @@ public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardIt
 }
 ```
 
-이 경우에 (이름 및 ImageType) 이미지에 대 한 두 가지 정보를 저장 하 고 간단한 문자열에 쓰기 (`public.text`).
+이 경우 이미지에 대 한 두 가지 정보 (이름 및 ImageType)를 저장 하 고 단순 문자열 (`public.text`)에 기록 합니다.
 
-형식 데이터를 쓸 지 다음 코드를 사용 합니다.
+데이터를 대/쓰기로 쓰기를 입력 하 고 다음 코드를 사용 합니다.
 
 ```csharp
 // Get the standard pasteboard
@@ -1244,7 +1244,7 @@ if (ok) {
 
 #### <a name="reading-data"></a>데이터 읽기
 
-임시 보드에서 다시 데이터를 읽을 하려면 다음 코드를 사용 합니다.
+대지의 데이터를 다시 읽으려면 다음 코드를 사용 합니다.
 
 ```csharp
 // Initialize the pasteboard
@@ -1274,13 +1274,13 @@ if (ok) {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Mac 응용 프로그램을 지원 복사 및 붙여넣기 작업이에 지 작업을 자세히 살펴보려면을 걸렸습니다. 먼저 표준 대지의 오브젝트 작업과 파악 하는 간단한 예제를 소개 했습니다. 다음으로, 데이터 읽기 및 쓰기를 하는 방법과 지 자세히 살펴보고를 걸렸습니다. 마지막으로, 복사 및 붙여넣기 앱 내에서 복잡 한 데이터 형식의 지원 하기 위해 사용자 지정 데이터 형식을 사용 하 여 조회 합니다.
+이 문서에서는 복사 및 붙여넣기 작업을 지원 하기 위해 Xamarin.ios 응용 프로그램의 대지의 사용에 대해 자세히 살펴봅니다. 먼저 표준 pasteboards 작업에 익숙해질 수 있는 간단한 예제를 소개 했습니다. 다음으로, 대지의 데이터를 읽고 쓰는 방법에 대해 자세히 살펴봅니다. 마지막으로, 사용자 지정 데이터 형식을 사용 하 여 앱 내에서 복잡 한 데이터 형식의 복사 및 붙여넣기를 지원 하는 방법을 살펴보았습니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [MacCopyPaste (샘플)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [임시 보드 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
+- [대지의 프로그래밍 가이드](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [macOS 휴먼 인터페이스 지침](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

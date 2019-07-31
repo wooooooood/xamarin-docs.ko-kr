@@ -1,24 +1,24 @@
 ---
 title: IOS에서 선택 항목 선택
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에는 선택에서 항목을 선택할 경우를 제어 하는 iOS 플랫폼 전용을 사용 하는 방법을 설명 합니다.
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 선택에서 항목 선택이 발생 하는 경우를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 26B0604A-BD30-49FD-83A6-F0EDFBB0524B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: aeefa22c8a17611579c56b3105be860c12a8711c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 57420921100c99db1e2c3a5259ece30cfda719f2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925371"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651839"
 ---
 # <a name="picker-item-selection-on-ios"></a>IOS에서 선택 항목 선택
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼 관련 항목 선택에서 발생 하는 경우 제어는 [ `Picker` ](xref:Xamarin.Forms.Picker), 항목 선택 컨트롤에서 항목을 검색할 때 또는 한 번만 발생 하도록 지정할 수 있도록 허용 합니다 **수행** 단추가 눌러져 있습니다. 설정 하 여 XAML에서 사용 되는 `Picker.UpdateMode` 연결 된 속성의 값으로는 `UpdateMode` 열거형:
+이 iOS 플랫폼 특정 컨트롤은에서 [`Picker`](xref:Xamarin.Forms.Picker)항목 선택을 수행 하는 경우 사용자가 컨트롤에서 항목을 검색할 때 또는 **완료** 단추를 누른 경우에만 항목 선택이 발생 하도록 지정할 수 있도록 합니다. 설정 하 여 XAML에서 사용 되는 `Picker.UpdateMode` 연결 된 속성의 값으로는 `UpdateMode` 열거형:
 
 ```xaml
 <ContentPage ...
@@ -67,6 +67,6 @@ switch (picker.On<iOS>().UpdateMode())
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

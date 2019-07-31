@@ -1,22 +1,22 @@
 ---
-title: 저장소 및 Xamarin.Forms에서 Azure Storage에서 데이터에 액세스
-description: Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법 및 데이터에 액세스 하는 방법을 설명 합니다.
+title: Xamarin.ios에서 Azure Storage의 데이터 저장 및 액세스
+description: Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.ios를 사용 하 여 Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법 및 데이터에 액세스 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 044ff7448cc302da4d0efdf88325c40b9db0315c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658630"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649718"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>저장소 및 Xamarin.Forms에서 Azure Storage에서 데이터에 액세스
+# <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Xamarin.ios에서 Azure Storage의 데이터 저장 및 액세스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법을 데이터에 액세스 하는 방법을 보여 줍니다._
 
@@ -260,7 +260,7 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 ## <a name="related-links"></a>관련 링크
 
-- [Azure Storage (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+- [Azure Storage (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Storage 소개](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [Xamarin에서 Blob Storage를 사용 하는 방법](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [공유 액세스 서명 (SAS)을 사용 하 여](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)

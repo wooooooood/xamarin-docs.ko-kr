@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 238ba1853df523ee275de628ebdbd138a6d1d1bf
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649609"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650271"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _한 줄 텍스트 또는 암호 입력_
 
@@ -61,7 +61,7 @@ var entry = new Entry { Placeholder = "Username", PlaceholderColor = Color.Olive
 
 ### <a name="preventing-text-entry"></a>텍스트 입력 방지
 
-텍스트를 수정할 사용자를 방지할 수 있습니다는 [ `Entry` ](xref:Xamarin.Forms.Entry) 설정 하 여 합니다 `IsReadOnly` 기본값이 있는 속성의 `false`를 `true`:
+[`Entry`](xref:Xamarin.Forms.Entry) 사용자는 `IsReadOnly` 속성을 `false` 로`true`설정 하 여의 텍스트를 수정할 수 없도록 할 수 있습니다 .이 속성의 기본값은입니다.
 
 ```xaml
 <Entry Text="This is a read-only Entry"
@@ -73,7 +73,7 @@ var entry = new Entry { Text = "This is a read-only Entry", IsReadOnly = true })
 ```
 
 > [!NOTE]
-> `IsReadonly` 속성의 시각적 모양을 변경 하지 않습니다는 [ `Entry` ](xref:Xamarin.Forms.Entry)달리를 `IsEnabled` 도의 시각적 모양을 변경 하는 속성은 `Entry` 회색입니다.
+> 속성은의 시각적 모양을 회색 `Entry` 으로 변경 하는 [`Entry`](xref:Xamarin.Forms.Entry) `IsEnabled` 속성과 달리의 시각적 모양을 변경 하지 않습니다. `IsReadonly`
 
 ### <a name="limiting-input-length"></a>입력된 길이 제한
 
@@ -323,11 +323,11 @@ entry.BackgroundColor = Color.FromHex("#2c3e50");
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
 
 > [!NOTE]
-> 합니다 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 올 클래스 [ `Entry` ](xref:Xamarin.Forms.Entry) 상속, 역시 [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) 하 고 [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)이벤트입니다.
+> 에서 상속 하는 [`Entry`](xref:Xamarin.Forms.Entry) [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) 클래스에도 및 [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) 이벤트가 있습니다. [`VisualElement`](xref:Xamarin.Forms.VisualElement)
 
 ### <a name="completed"></a>완료
 
-`Completed` 이벤트 진입점와의 상호 작용의 완료에 대응 하는 데 사용 됩니다. `Completed` 키보드에서 return 키를 눌러 (또는 UWP에서 Tab 키를 눌러) 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
+`Completed` 이벤트 진입점와의 상호 작용의 완료에 대응 하는 데 사용 됩니다. `Completed`사용자가 키보드에서 return 키를 누르거나 UWP에서 Tab 키를 눌러 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -381,5 +381,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## <a name="related-links"></a>관련 링크
 
-- [텍스트 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [API 항목](xref:Xamarin.Forms.Entry)

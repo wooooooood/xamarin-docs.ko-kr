@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: b5d32f486b45005534adc8929caf6158d1c62a4b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 05d5003d349ae11a1ec6a1b6f3d66b2f68ffad8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61357178"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652876"
 ---
 # <a name="path-information-and-enumeration"></a>경로 정보 및 열거형
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _경로 대 한 정보를 가져오고 내용을 열거 합니다._
 
@@ -24,7 +24,7 @@ _경로 대 한 정보를 가져오고 내용을 열거 합니다._
 
 경우에 따라 모든 줄 및 경로 구성 하는 곡선의 총 길이 확인 하는 것이 유용 합니다. 이 길이 계산 하지 않으므로 간단한 알고리즘 방식으로 작업을 전체 클래스 라는 [ `PathMeasure` ](xref:SkiaSharp.SKPathMeasure) 를 전용으로 지정 됩니다.
 
-또한 유용한 경우가 모든 그리기 작업 및 경로 구성 하는 요소를 가져오려고 합니다. 처음에이 기능 불필요 해 보일 수 있습니다. 프로그램에서 경로 만든 경우 프로그램에 이미 내용을 알고 있습니다. 그러나 지금까지 살펴본 하 여 경로 만들 수도 있습니다 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 변환 하 [경로에 텍스트 문자열](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)합니다. 모든 그리기 작업 및 이러한 경로 구성 하는 지점을 얻을 수 있습니다. 한 가지 방법은 다음과 같습니다. 반구 주위의 텍스트 줄 바꿈, 예를 들어 모든 지점에 알고리즘 변환 적용
+또한 유용한 경우가 모든 그리기 작업 및 경로 구성 하는 요소를 가져오려고 합니다. 처음에는이 기능이 불필요 한 것 처럼 보일 수 있습니다. 프로그램에서 경로를 만든 경우 프로그램은 콘텐츠를 이미 알고 있습니다. 그러나 지금까지 살펴본 하 여 경로 만들 수도 있습니다 [경로 효과](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) 변환 하 [경로에 텍스트 문자열](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md)합니다. 모든 그리기 작업 및 이러한 경로 구성 하는 지점을 얻을 수 있습니다. 한 가지 방법은 다음과 같습니다. 반구 주위의 텍스트 줄 바꿈, 예를 들어 모든 지점에 알고리즘 변환 적용
 
 ![](information-images/pathenumerationsample.png "반구에서 텍스트")
 
@@ -140,7 +140,7 @@ Boolean GetMatrix (Single distance, out SKMatrix matrix, SKPathMeasureMatrixFlag
 
 [![](information-images/unicyclehalfpipe-small.png "삼중 자전거 절반 파이프 페이지 스크린샷")](information-images/unicyclehalfpipe-large.png#lightbox "삼중 자전거 절반 파이프 페이지 스크린샷")
 
-합니다 `SKPaint` 절반-파이프와는 자전거 선 그리기에 사용 되는 개체의 필드로 정의 됩니다는 `UnicycleHalfPipePage` 클래스입니다. 또한 정의 `SKPath` 는 자전거에 대 한 개체:
+절반 파이프와 unicycle을 스트로크 하는 데 사용 되는 `UnicycleHalfPipePage` 개체는클래스의필드로정의됩니다.`SKPaint` 또한 정의 `SKPath` 는 자전거에 대 한 개체:
 
 ```csharp
 public class UnicycleHalfPipePage : ContentPage
@@ -255,7 +255,7 @@ SKPathVerb pathVerb = rawIterator.Next(points);
 
 키가 원래 직선은 일련의 작은 직선으로 분류 됩니다. 그런 다음 곡선을 형성 하는 다양 한 방법의 더 작은 직선 이러한 개별을 조작할 수 있습니다.
 
-이 프로세스를 사용 하는 데는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플에는 정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스를 `Interpolate` 구분 하는 메서드를 하나의 단위 길이에 다양 한 짧은 줄에는 직선입니다. 또한 클래스에는 일련의 작은 직선 곡선 근사치는 세 가지 유형의 베 지 어 곡선으로 변환 하는 여러 메서드가 들어 있습니다. (문서의 파라메트릭 수식에 표시 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) 이 프로세스를 호출할 _평면화_ 곡선:
+이 프로세스를 사용 하는 데는 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 정적 [ `PathExtensions` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathExtensions.cs) 클래스를 `Interpolate` 구분 하는 메서드를 하나의 단위 길이에 다양 한 짧은 줄에는 직선입니다. 또한 클래스에는 일련의 작은 직선 곡선 근사치는 세 가지 유형의 베 지 어 곡선으로 변환 하는 여러 메서드가 들어 있습니다. (문서의 파라메트릭 수식에 표시 된 [ **베 지 어 곡선의 세 가지 형식**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/beziers.md).) 이 프로세스를 호출할 _평면화_ 곡선:
 
 ```csharp
 static class PathExtensions
@@ -523,4 +523,4 @@ public class GlobularTextPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

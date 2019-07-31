@@ -7,22 +7,22 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 58cf11b2a88e0c399ee197e9c8365d7deafd0f39
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7802360c95d31f237cf69c69728cffe02ad47e5a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229724"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646222"
 ---
 # <a name="three-types-of-bzier-curves"></a>3가지 형식의 Bézier 곡선
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법_
 
 베 지 어 곡선 피에르 베 지 어 (1910 – 1999)의 자동차 본문의 컴퓨터 기반 디자인의 곡선을 사용 하는 자동차 회사에서 프랑스어 엔지니어 후 이라고 합니다.
 
-베 지 어 곡선 대화형 디자인에 잘 맞는 것으로 알려져 됩니다. 정상적으로 작동 되기 &mdash; 즉, 무한 또는 다루기 될 곡선을 일으키는 singularities 없습니다 &mdash; 되며 일반적으로 시선을:
+베 지 어 곡선은 대화형 디자인에 적합 하다는 것으로 알려져 있습니다. 즉, 곡선이 무한 &mdash; 하거나 singularities 되 고 일반적으로 멋지고 보기 편 인 것은 아닙니다. &mdash;
 
 ![](beziers-images/beziersample.png "샘플 베 지 어 곡선")
 
@@ -493,7 +493,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ![](beziers-images/conicarc.png "원호의 원추 호 렌더링")
 
-제어점 원 중심에서의 거리를 확인 하려면 삼각 함수를 사용할 수 있습니다. 절반 각도 α의 코사인 값으로 나눈 원의 반지름을 것입니다. 시작점과 끝점 간의 원호를 그릴 절반 각도의 코사인 해당 동일한 값에 가중치를 설정 합니다. 유의 각도가 180도 인 경우 다음의 접선을 충족 하지 가중치는 0 하십시오. 하지만 180도 보다 작은 각도 대 한 수학 정상적으로 작동 합니다.
+삼각을 사용 하 여 원의 중심에서 제어점의 거리를 결정할 수 있습니다. 원의 반지름은 α 각도의 절반으로 나눈 값입니다. 시작점과 끝점 간의 원호를 그릴 절반 각도의 코사인 해당 동일한 값에 가중치를 설정 합니다. 유의 각도가 180도 인 경우 다음의 접선을 충족 하지 가중치는 0 하십시오. 하지만 180도 보다 작은 각도 대 한 수학 정상적으로 작동 합니다.
 
 합니다 **원추형 원호** 이 페이지를 보여 줍니다. 합니다 [ **ConicCircularArc.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) 파일은을 `Slider` 각도 선택 합니다. 합니다 `PaintSurface` 처리기에는 [ **ConicCircularArc.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) 제어점 및 무게를 계산 하는 코드 숨김 파일:
 
@@ -557,4 +557,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

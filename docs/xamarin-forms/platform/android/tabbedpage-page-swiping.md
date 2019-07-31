@@ -1,24 +1,24 @@
 ---
-title: Android에서 살짝 TabbedPage 페이지
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Android 플랫폼 특정 한 TabbedPage는 페이지 사이의 가로 손가락 제스처를 사용 하 여 살짝 수 있게 해 주는 사용 하는 방법을 설명 합니다.
+title: Android에서 TabbedPage 페이지 살짝 밀기
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 TabbedPage의 페이지 간에 가로 손가락 제스처를 사용 하 여 살짝 밀기를 사용 하는 Android 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 36fd3d047f9f847cfdaadc3787ba81a583f25e57
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 47a941b88ef22a24383f54aad72563a4814ac077
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926458"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649942"
 ---
-# <a name="tabbedpage-page-swiping-on-android"></a>Android에서 살짝 TabbedPage 페이지
+# <a name="tabbedpage-page-swiping-on-android"></a>Android에서 TabbedPage 페이지 살짝 밀기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 Android 플랫폼별 살짝는 페이지 사이의 가로 손가락 제스처를 사용 하 여 사용 하도록 설정 되는 [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)합니다. 설정 하 여 XAML에서 사용 되는 [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) 연결 된 속성을 `boolean` 값:
+이 Android 플랫폼별는의 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)페이지 간에 가로 손가락 제스처를 사용 하 여 살짝 밀기를 사용 하도록 설정 하는 데 사용 됩니다. 설정 하 여 XAML에서 사용 되는 [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) 연결 된 속성을 `boolean` 값:
 
 ```xaml
 <TabbedPage ...
@@ -48,7 +48,7 @@ On<Android>().SetOffscreenPageLimit(2)
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

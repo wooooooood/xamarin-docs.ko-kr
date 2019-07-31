@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 9a54743ed7dc3ce23c3306589c0bae1e0fd3206c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: ed6992f946512cd88b4b2b8cfcf4c826bdd6b837
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658680"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645338"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing Spell Check API를 사용 하 여 맞춤법 검사
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Bing Spell Check에 맞춤법이 틀린된 단어에 대 한 인라인 제안 제공 텍스트를 확인 하는 상황에 맞는 맞춤법이 수행 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 맞춤법 오류를 해결 하려면 Bing Spell Check REST API를 사용 하는 방법을 설명 합니다._
 
@@ -156,7 +156,7 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 ![](spell-check-images/after-spell-check.png "맞춤법 검사 후")
 
 > [!NOTE]
-> 사용 하 여 위의 예제 `Replace` 편의상 하지만 많은 양의 텍스트에서 잘못 된 토큰을 바꿀 수 것입니다. API가 제공 된 `offset` 업데이트를 수행 하는 원본 텍스트에서 올바른 위치를 식별 하려면 프로덕션 앱에서 사용 해야 하는 값입니다.
+> 위의 예제에서는 편의상 `Replace` 를 사용 하지만 많은 양의 텍스트에서 잘못 된 토큰을 바꿀 수 있습니다. API는 업데이트를 `offset` 수행 하기 위해 원본 텍스트에서 올바른 위치를 식별 하기 위해 프로덕션 앱에서 사용 해야 하는 값을 제공 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -166,5 +166,5 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 - [Bing Spell Check 설명서](/azure/cognitive-services/bing-spell-check/)
 - [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Bing Spell Check API v7 참조](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

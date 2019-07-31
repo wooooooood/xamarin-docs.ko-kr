@@ -7,16 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60de4b8abc200ac7892838765210167f8a79dcfe
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61205895"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645839"
 ---
 # <a name="porter-duff-blend-modes"></a>Porter 임신 blend 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Thomas Porter Tom 임신 Lucasfilm 근무 하면서 합성는 대 수를 개발한 후 Porter 임신 blend 모드 라고 합니다. 백서 [ _합치기 디지털 이미지_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) 1984 년 7 월호에 게시 된 _컴퓨터 그래픽_, 253을 259 페이지입니다. 이러한 혼합 모드는 합치기를 복합 장면에 다양 한 이미지를 구축 하는 데 필요한:
 
@@ -279,11 +279,11 @@ canvas.Clear(SKColors.White);
 
 ## <a name="using-mattes-with-porter-duff"></a>Porter 임신 매트 사용
 
-**Brick-Wall 합치기** 페이지 클래식 합치기 작업의 예를 보여 줍니다. 그림 제거 해야 하는 백그라운드를 사용 하 여 비트맵을 포함 하 여 여러 조각에서 조합할 수 해야 합니다. 다음은 **SeatedMonkey.jpg** 문제가 있는 배경 비트맵:
+**Brick 합성** 페이지는 클래식 합성 태스크의 예를 보여 줍니다. 제거 해야 하는 배경의 비트맵을 포함 하 여 여러 부분에서 그림을 조합 해야 합니다. 다음은 **SeatedMonkey.jpg** 문제가 있는 배경 비트맵:
 
 ![Monkey 장착](porter-duff-images/SeatedMonkey.jpg "Monkey를 장착 합니다.")
 
-해당으로 합치기를 위한 준비 _매트_ 만들어진 있는 이미지를 표시 하려는 경우에 검은색 및 투명 하 게 다른 비트 멥 인 합니다. 이 파일의 이름은 **SeatedMonkeyMatte.png** 의 리소스 간에 이며 합니다 **미디어** 폴더에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 :
+해당으로 합치기를 위한 준비 _매트_ 만들어진 있는 이미지를 표시 하려는 경우에 검은색 및 투명 하 게 다른 비트 멥 인 합니다. 이 파일의 이름은 **SeatedMonkeyMatte.png** 의 리소스 간에 이며 합니다 **미디어** 폴더에는 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 :
 
 ![Monkey 매트 장착](porter-duff-images/SeatedMonkeyMatte.png "Monkey 매트를 장착 합니다.")
 
@@ -526,9 +526,9 @@ RGB 색은 알파 값이 미리 곱해집니다. 예를 들어 경우 **Sc** 순
 | `Plus`     | [Sa + Da, Sc + Dc] |
 | `Modulate` | [Sa· Da Sc· Dc] | 
 
-이러한 작업은 분석할 때 쉽게 **Da** 하 고 **Sa** 는 0 또는 1입니다. 기본값에 대 한 예를 들어 `SrcOver` 모드 경우 **Sa** 0 이면 **Sc** 가 0이 고, 결과 이기도 **[Da, Dc]**, 대상 알파 및 색입니다. 하는 경우 **Sa** 가 1 이면 결과 **[Sa, Sc]**, 원본 알파 및 색, 또는 **[1, Sc]** 합니다.
+이러한 작업은 분석할 때 쉽게 **Da** 하 고 **Sa** 는 0 또는 1입니다. 기본값에 대 한 예를 들어 `SrcOver` 모드 경우 **Sa** 0 이면 **Sc** 가 0이 고, 결과 이기도 **[Da, Dc]** , 대상 알파 및 색입니다. 하는 경우 **Sa** 가 1 이면 결과 **[Sa, Sc]** , 원본 알파 및 색, 또는 **[1, Sc]** 합니다.
 
-합니다 `Plus` 고 `Modulate` 모드는 다른 기존과 약간 다를 새 색의 원본 및 대상 조합에서 발생할 수 있습니다. `Plus` 바이트 구성 요소 또는 부동 소수점 구성 요소를 사용 하 여 모드를 해석할 수 있습니다. 에 **Porter 임신 그리드** 대상 색이 이전에 표시 되는 페이지 **(0xC0, 0x80, 0x00)** 소스 색 이며 **(0x00, 0x80, 0xC0)**. 각 쌍 구성 요소에 추가 되지만 합계 0xFF에서 범위로 제한 됩니다. 결과 색인 **(0xC0, 0xFF 0xC0)** 합니다. 교차 부분에서 표시 된 색입니다.
+합니다 `Plus` 고 `Modulate` 모드는 다른 기존과 약간 다를 새 색의 원본 및 대상 조합에서 발생할 수 있습니다. `Plus` 바이트 구성 요소 또는 부동 소수점 구성 요소를 사용 하 여 모드를 해석할 수 있습니다. 에 **Porter 임신 그리드** 대상 색이 이전에 표시 되는 페이지 **(0xC0, 0x80, 0x00)** 소스 색 이며 **(0x00, 0x80, 0xC0)** . 각 쌍 구성 요소에 추가 되지만 합계 0xFF에서 범위로 제한 됩니다. 결과 색인 **(0xC0, 0xFF 0xC0)** 합니다. 교차 부분에서 표시 된 색입니다.
 
 에 대 한는 `Modulate` 모드 RGB 값에 부동 소수점 변환 해야 합니다. 대상 색이 **(0.75, 0.5, 0)** 소스 이며 **(0, 0.5, 0.75)** 합니다. RGB 구성 요소는 각 함께 곱하고 결과가 **(0, 0.25, 0)** 합니다. 교차 부분에서 표시 된 색상입니다 합니다 **Porter 임신 표** 이 모드에 대 한 페이지.
 
@@ -903,4 +903,4 @@ public partial class GradientTransitionsPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

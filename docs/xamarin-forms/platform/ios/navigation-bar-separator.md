@@ -1,24 +1,24 @@
 ---
-title: IOS의 NavigationPage Bar Separator
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에는 iOS 플랫폼 특정 구분선을 숨기는 및를 NavigationPage에서 탐색 모음의 맨 아래에 있는 그림자를 사용 하는 방법을 설명 합니다.
+title: IOS의 NavigationPage 표시줄 구분 기호
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 NavigationPage의 탐색 모음 아래쪽에 있는 구분선 및 그림자를 숨기는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5A45748A-6779-4441-82F2-415BD68473B9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 7e367d742145c6f984c4485afe9201d4b7ae2e38
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: e33b25a9eb97009ca0a260662d492560114fd692
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925680"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655477"
 ---
-# <a name="navigationpage-bar-separator-on-ios"></a>IOS의 NavigationPage Bar Separator
+# <a name="navigationpage-bar-separator-on-ios"></a>IOS의 NavigationPage 표시줄 구분 기호
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼 특정 구분 기호 선과에 탐색 모음의 맨 아래에 있는 섀도 숨기는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)합니다. 설정 하 여 XAML에서 사용 되는 [ `NavigationPage.HideNavigationBarSeparator` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인딩 가능한 속성을 `false`:
+이 iOS 플랫폼 전용은의 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)탐색 모음 아래쪽에 있는 구분선 및 그림자를 숨깁니다. 설정 하 여 XAML에서 사용 되는 [ `NavigationPage.HideNavigationBarSeparator` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) 바인딩 가능한 속성을 `false`:
 
 ```xaml
 <NavigationPage ...
@@ -51,6 +51,6 @@ public class iOSTitleViewNavigationPageCS : Xamarin.Forms.NavigationPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

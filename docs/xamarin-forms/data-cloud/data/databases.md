@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 235a30293939333555c52b8d9e00bcf25ddd4dbd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658590"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645249"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 _Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 애플리케이션이 SQLite.Net을 사용하여 데이터를 읽고 로컬 SQLite 데이터베이스에 데이터를 기록하는 방법을 설명합니다._
 
@@ -122,6 +122,6 @@ Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo 샘플](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
-- [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Todo 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 

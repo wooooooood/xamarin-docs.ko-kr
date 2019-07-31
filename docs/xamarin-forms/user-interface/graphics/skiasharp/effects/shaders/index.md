@@ -7,16 +7,16 @@ ms.assetid: 272B1BEB-0CBC-4E81-A3B9-A9C69AEE3722
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: f16600b6f90755722d031c0fdc21fff1a66673ae
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 90022ddd59f56e0d70e5b8efd57d97713df5e969
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61341389"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654909"
 ---
 # <a name="skiasharp-shaders"></a>SkiaSharp 셰이더
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 설정할 수 있습니다 합니다 [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) 속성을 `SKPaint` 형식의 개체에 [ `SKShader` ](xref:SkiaSharp.SKShader) 몇 가지 유형의 그라데이션, 비트맵을 바둑판식으로 배열 된 패턴 또는 Perlin 노이즈를 만들려면.
 
@@ -39,4 +39,4 @@ Perlin 노이즈 셰이더를 생성 하 고 다른 셰이더를 사용 하 여 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,16 +7,16 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8978bd386ec2f2ea0f9960f079ce82750941cfad
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61086052"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655946"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _클립 그래픽에 대 한 경로 사용 하 여 특정 영역을 영역을 만드는 데_
 
@@ -24,7 +24,7 @@ _클립 그래픽에 대 한 경로 사용 하 여 특정 영역을 영역을 �
 
 ![](clipping-images/clippingsample.png "Monkey 구멍을 통해")
 
-합니다 *클리핑 영역* 그래픽 렌더링 되는 화면 영역입니다. 클리핑 영역 외부에 표시 되는 아무 것도 렌더링 되지 않습니다. 클리핑 영역을 사각형에 의해 일반적으로 정의 됩니다 요소나 [ `SKPath` ](xref:SkiaSharp.SKPath) 수 있지만 개체를 정의할 수 있습니다 또는 사용 하 여 클리핑 영역을 [ `SKRegion` ](xref:SkiaSharp.SKRegion) 개체. 이러한 두 가지 유형의 개체에서 먼저 하므로 것 처럼 보일 관련 경로에서 영역을 만들 수 있습니다. 그러나 지역에서 경로 만들 수 없습니다 하 고 내부적으로 매우 다른 지: 경로 일련의 가로 스캐닝선 지역 정의 되는 동안 일련의 선과 곡선을 구성 합니다.
+합니다 *클리핑 영역* 그래픽 렌더링 되는 화면 영역입니다. 클리핑 영역 외부에 표시 되는 아무 것도 렌더링 되지 않습니다. 클리핑 영역을 사각형에 의해 일반적으로 정의 됩니다 요소나 [ `SKPath` ](xref:SkiaSharp.SKPath) 수 있지만 개체를 정의할 수 있습니다 또는 사용 하 여 클리핑 영역을 [ `SKRegion` ](xref:SkiaSharp.SKRegion) 개체. 이러한 두 가지 유형의 개체에서 먼저 하므로 것 처럼 보일 관련 경로에서 영역을 만들 수 있습니다. 그러나 지역에서 경로를 만들 수 없으며 내부적으로는 서로 다른 위치에 있습니다. 경로는 일련의 선 및 곡선으로 구성 되 고, 영역은 일련의 수평 스캔 선으로 정의 됩니다.
 
 위의 이미지에서 만든 합니다 **구멍 통해 Monkey** 페이지입니다. 합니다 [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) 클래스 SVG 데이터를 사용 하 여 경로 정의 하 고 프로그램 리소스에서 비트맵을 로드 하는 생성자를 사용 합니다.
 
@@ -366,7 +366,7 @@ void DisplayClipOp(SKCanvas canvas, SKRect rect, SKRegionOperation regionOp)
 
 이 작업은 각 경로 가로 검색, 여러 줄 구식 진공 tube Tv의에서 함수와 같이 축소 된 경우 상당히 간소화 됩니다. 각 스캐닝선은 시작점 및 끝점을 사용 하 여 가로줄 하기만 하면 됩니다. 예를 들어 10 픽셀의 radius 사용 하 여 원은 원의 왼쪽된 부분에서 시작 하 고 오른쪽 부분에서 끝납니다 각각 20 가로 검색 선으로 분해할 수 있습니다. 영역 작업을 사용 하 여 두 개의 원을 결합 됩니다 해당 스캐닝선의 각 쌍의 시작 및 끝 좌표를 검사 하는 단순히 이기 때문에 매우 간단 합니다.
 
-이것이 영역은입니다. 영역을 정의 하는 가로 스캐닝선의 일련입니다.
+지역은 다음과 같습니다. 영역을 정의 하는 일련의 수평 스캔 선입니다.
 
 그러나 일련의 검색 영역 축소 된 경우 줄 줄 특정 픽셀 크기를 기반으로 이러한 검색 합니다. 엄격히 말해서, 지역 벡터 그래픽 개체가 아닙니다. 경로 보다 압축 된 흑백 비트맵에 본질적으로 더 가까운 것입니다. 따라서 지역 크기를 조정 하거나 회전 클리핑 영역에 사용 되는 경우 변환 되지 않습니다이 따라서 한 충실도 유지 하면서 수 없습니다.
 
@@ -515,4 +515,4 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

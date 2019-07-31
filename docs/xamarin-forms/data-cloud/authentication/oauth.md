@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 12f34e7bc77fd3978ccfdfb57cc95747123c5603
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508257"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657238"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
 _Xamarin.Auth는 사용자를 인증 하 고 해당 계정에 저장 된 플랫폼 간 SDK입니다. Google, Microsoft, Facebook 및 Twitter와 같은 id 공급자를 사용 하는 것에 대 한 지원을 제공 하는 OAuth 인증자를 포함 합니다. 이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법에 설명 합니다._
 
@@ -267,7 +267,7 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 
 ## <a name="related-links"></a>관련 링크
 
-- [OAuthNativeFlow (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+- [OAuthNativeFlow (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 - [네이티브 앱에 대 한 OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
 - [Oauth 2.0을 사용 하 여 Google Api에 액세스 하기](https://developers.google.com/identity/protocols/OAuth2)
 - [Xamarin.Auth (NuGet)](https://www.nuget.org/packages/xamarin.auth/)

@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: f59aa92f5f4f013a2d14b1667f4d0679a7ba82b3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384830"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643012"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>점 및 대시 SkiaSharp에서
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp에서 점선과 파선 선 그리기의 복잡성을 마스터_
 
@@ -26,7 +26,7 @@ SkiaSharp solid 되지 않지만 대신 점 및 대시 구성 되는 줄을 그�
 
 이 작업을 수행을 *경로 효과*의 인스턴스인 합니다 [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) 로 설정 하는 클래스를 [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) 속성 `SKPaint`. 경로 만들 수 있습니다 정의한 정적 만들기 방법 중 하나를 사용 하 여 효과 (또는 결합 경로 효과) `SKPathEffect`합니다. (`SKPathEffect` SkiaSharp에서 지 원하는 6 개의 효과 중 하나는 다른 섹션에 설명 되어 [ **SkiaSharp 효과**](../effects/index.md).)
 
-사용할 점선된 또는 파선된을 그리려면 합니다 [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) 정적 메서드입니다. 두 개의 인수를 가지 있습니다. 먼저 배열을 이것이 `float` 점 및 대시의 길이 사이 공백의 길이 나타내는 값입니다. 이 배열 요소 수는 짝수 있고 둘 이상의 요소가 있어야 합니다. (있을 수는 배열의 요소가 있지만 실선에서 발생 하는.) 두 개의 요소가 있는 경우 첫 번째 점 또는 대시의 길이 이며 두 번째 간격의 길이 다음 점 또는 대시 하기 전에 합니다. 이 순서 있는 경우 두 개 이상의 요소가: 대시 길이 "," 간격 길이 "," 대시 길이 "," 간격 길이 "및" 등입니다.
+사용할 점선된 또는 파선된을 그리려면 합니다 [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) 정적 메서드입니다. 다음과 같은 두 가지 인수가 있습니다. 첫 번째는 점 및 대시 `float` 의 길이와 그 사이의 공백 길이를 나타내는 값의 배열입니다. 이 배열 요소 수는 짝수 있고 둘 이상의 요소가 있어야 합니다. (있을 수는 배열의 요소가 있지만 실선에서 발생 하는.) 두 개의 요소가 있는 경우 첫 번째 점 또는 대시의 길이 이며 두 번째 간격의 길이 다음 점 또는 대시 하기 전에 합니다. 이 순서 있는 경우 두 개 이상의 요소가: 대시 길이 "," 간격 길이 "," 대시 길이 "," 간격 길이 "및" 등입니다.
 
 일반적으로 스트로크 너비의 배수로 대시 및 간격 길이 확인 해야 합니다. 스트로크 너비는 10 픽셀, 예를 들어, 다음 배열은 {10, 10} 그립니다 점선 점과 간격이 있는 스트로크 두께와 같은 길이.
 
@@ -217,4 +217,4 @@ public class AnimatedSpiralPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

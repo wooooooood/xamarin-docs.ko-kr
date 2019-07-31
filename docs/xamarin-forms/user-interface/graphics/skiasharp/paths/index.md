@@ -7,16 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b266ef96513ac392afa83bc672d41db7cfe3ce16
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 14b92bb576679dee3408c5805c6b698addd9bd8a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61278746"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657452"
 ---
 # <a name="skiasharp-lines-and-paths"></a>SkiaSharp 선 및 경로
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 선 및 그래픽 경로 그릴 사용_
 
@@ -24,7 +24,7 @@ _SkiaSharp 선 및 그래픽 경로 그릴 사용_
 
 그래픽 경로 줄 고 SkiaSharp 곡선 그리기는 가장 일반적인된 방법입니다. 이 섹션에서는 사용 하 여는 [ `SKPath` ](xref:SkiaSharp.SKPath) 직선 그리기 작은 직선의 컬렉션을 사용 하는 개체 (호출을 *다중선*) 알고리즘 방식으로 정의할 수 있는 곡선을 그리는 합니다. 이후 섹션에서 [ **SkiaSharp 곡선 및 경로** ](../curves/index.md) 다양 한 종류에서 지원 되는 곡선의 설명 `SKPath`합니다.
 
-머리글 아래에 나타나고이 단원의 샘플 프로그램을 모두 **선 및 경로** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 프로그램인 및는 [ **경로** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) 해당 솔루션의 폴더입니다.
+머리글 아래에 나타나고이 단원의 샘플 프로그램을 모두 **선 및 경로** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램인 및는 [ **경로** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) 해당 솔루션의 폴더입니다.
 
 ## <a name="lines-and-stroke-capslinesmd"></a>[선 및 스트로크 단면](lines.md)
 
@@ -54,4 +54,4 @@ SkiaSharp에서 점선과 파선 선 그리기의 복잡성을 마스터입니�
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

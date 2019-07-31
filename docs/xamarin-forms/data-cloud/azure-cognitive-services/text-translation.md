@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 73d5695b5f08a3f9085e1960260f2e2e4f30d78a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 5739246ec7804b58d900ec790f427dab37504b1f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658700"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655026"
 ---
 # <a name="text-translation-using-the-translator-api"></a>텍스트 번역, Translator API를 사용 하 여
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Translator API는 음성 및 REST API를 통해 텍스트 번역을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 다른 언어로 텍스트를 변환 하는 Microsoft Translator Text API를 사용 하는 방법을 설명 합니다._
 
@@ -147,5 +147,5 @@ API 응답은 XML 형식으로 반환 합니다. 다음 XML 데이터에는 일�
 
 - [Translator Text API 설명서](/azure/cognitive-services/translator/)합니다.
 - [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Microsoft Translator Text API](http://docs.microsofttranslator.com/text-translate.html)합니다.

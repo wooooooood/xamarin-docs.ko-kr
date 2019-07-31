@@ -1,24 +1,24 @@
 ---
-title: ListView 빠른 Android에서 스크롤
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Android 플랫폼 특정 빠르게 데이터를 ListView의 스크롤할 수 있도록 하는 사용 하는 방법을 설명 합니다.
+title: Android에서 ListView 빠르게 스크롤
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 ListView에서 데이터를 신속 하 게 스크롤할 수 있도록 Android 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 37D95A2D-74AC-488A-B903-2BDD799EAA5C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 6ae266f9309e32c79ec6028d737cfdcaaa85b0d4
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ce51483da9599cf049cf005ae18b35d110aa325b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926576"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649983"
 ---
-# <a name="listview-fast-scrolling-on-android"></a>ListView 빠른 Android에서 스크롤
+# <a name="listview-fast-scrolling-on-android"></a>Android에서 ListView 빠르게 스크롤
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-데이터를 통해 빠른 스크롤을 사용 하려면이 Android 플랫폼 관련 되는 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 설정 하 여 XAML에서 사용 되는 `ListView.IsFastScrollEnabled` 연결 된 속성을 `boolean` 값:
+이 Android 플랫폼 전용은에서 [`ListView`](xref:Xamarin.Forms.ListView)데이터를 빠르게 스크롤할 수 있도록 하는 데 사용 됩니다. 설정 하 여 XAML에서 사용 되는 `ListView.IsFastScrollEnabled` 연결 된 속성을 `boolean` 값:
 
 ```xaml
 <ContentPage ...
@@ -60,7 +60,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

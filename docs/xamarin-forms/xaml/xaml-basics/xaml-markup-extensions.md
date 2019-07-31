@@ -7,16 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 17ca8ec481b8af5ad0515e6544613864f0a66271
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342198"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655483"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML 태그 확장 속성은 다른 소스에서 간접적으로 참조되는 개체 또는 값으로 속성을 설정할 수 있는 XAML에서 중요한 기능을 구성합니다. XAML 태그 확장은 개체를 공유하고 응용 프로그램 전체에서 사용되는 상수를 참조할 때 특히 중요하지만 가장 큰 장점은 데이터 바인딩에서 찾을 수 있습니다._
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 키워드 `clr-namespace` 뒤에 콜론이 오고, 그 다음 .NET 네임 스페이스 이름, 세미콜론, 키워드 `assembly`, 등호 및 어셈블리 이름이 옵니다.
 
-맞습니다, 콜론은 `clr-namespace` 뒤에 오지만 등호는 `assembly` 다음에 옵니다. 구문은이 방식으로 의도적으로 정의 되었습니다. 대부분의 XML 네임 스페이스 선언을 참조와 같은 URI 체계 이름을 시작 하는 URI `http`에 항상 뒤에 콜론입니다. 해당 문자열의 `clr-namespace` 부분은 URI 규칙을 모방하기 위함입니다.
+맞습니다, 콜론은 `clr-namespace` 뒤에 오지만 등호는 `assembly` 다음에 옵니다. 구문은 다음과 같이 의도적으로 정의 되었습니다. 대부분의 XML 네임 스페이스 선언은와 `http`같이 항상 콜론으로 이어지는 uri 체계 이름을 시작 하는 uri를 참조 합니다. 해당 문자열의 `clr-namespace` 부분은 URI 규칙을 모방하기 위함입니다.
 
 해당 네임 스페이스 선언은 모두 **StaticConstantsPage** 샘플에 포함됩니다. `BoxView` 차원은 `Math.PI` 및 `Math.E`로 설정되어 있지만 100의 비율로 배율이 조정됩니다.
 
@@ -547,7 +547,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-아마도이 샘플에서 수행 해야 하는 가장 중요 한과 태그 확장의 구문: 태그 확장의 중괄호 안의 하지 인용 부호 표시 되어야 합니다. XAML 파일에 태그 확장을 입력할 때 속성의 값을 자연스럽게 따옴표로 묶고 싶을 것입니다. 유혹을 이겨내십시오!
+이 샘플에서 수행 해야 하는 가장 중요 한 단원은 태그 확장의 구문입니다. 태그 확장의 중괄호 안에 따옴표를 표시 하지 않아야 합니다. XAML 파일에 태그 확장을 입력할 때 속성의 값을 자연스럽게 따옴표로 묶고 싶을 것입니다. 유혹을 이겨내십시오!
 
 실행 중인 프로그램이 다음과 같습니다.
 
@@ -561,7 +561,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

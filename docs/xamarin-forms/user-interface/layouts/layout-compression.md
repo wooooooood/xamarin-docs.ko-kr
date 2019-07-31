@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 4b37435c9cec7549c04c35a81ec31d3a2236e7c1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 97aa8c321362ebccc954a79f99b7bc69b5a0ad63
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925467"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657070"
 ---
 # <a name="layout-compression"></a>레이아웃 압축
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutCompression/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _레이아웃 압축 페이지 렌더링 성능을 향상 하기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다. 이 문서에서는 레이아웃 압축 및 이점을 얻을 수 있게 하는 방법을 설명 합니다._
 
@@ -123,4 +123,4 @@ Android에서이 인해 14 뷰 중첩된 보기 계층 구조에서:
 
 - [사용자 지정 레이아웃 만들기](~/xamarin-forms/user-interface/layouts/custom.md)
 - [빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/LayoutCompression/)
+- [LayoutCompression (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
