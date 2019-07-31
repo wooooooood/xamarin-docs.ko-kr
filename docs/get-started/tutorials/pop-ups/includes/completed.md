@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 467855da6a691d1661f04e12f481db83b1848717
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 030321c63b9c3494027fc79d010c8b5888871822
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66193790"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669748"
 ---
 이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
 
@@ -21,6 +21,6 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [PopupsTutorial(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/PopupsTutorial)
+- [PopupsTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-popupstutorial/)
 - [팝업 표시(가이드)](~/xamarin-forms/user-interface/pop-ups.md)
 - [페이지 API](xref:Xamarin.Forms.Page)

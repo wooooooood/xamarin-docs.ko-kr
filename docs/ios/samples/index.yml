@@ -11,7 +11,7 @@ abstract:
   description: 'C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되는 Xamarin.iOS 샘플 앱 및 코드 데모입니다.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/ios/all/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS'
         text: 모든 Xamarin.iOS 샘플
 sections:
   - title: null
@@ -20,45 +20,45 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/'
             html: 감지된 표면에 개체를 배치하는 ARKit 확대된 현실 데모입니다.
             image:
               src: images/arkit.png
-              href: 'https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/'
+              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects/'
             title: ARKit(iOS 11)
-          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/'
             html: 'MapKit의 새로운 iOS 11 기능: 확대/축소 수준에 따라 표식을 그룹화하고 분할합니다.'
             image:
               src: images/mapkit.png
-              href: 'https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/'
+              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample/'
             title: MapKit(iOS 11)
-          - href: 'https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/'
             html: Azure의 Custom Vision Service에서 학습한 모델을 사용하는 iOS 11 비전 프레임워크 및 CoreML입니다.
             image:
               src: images/coremlazure.png
-              href: 'https://developer.xamarin.com/samples/monotouch/ios11/CoreMLAzureModel/'
+              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel/'
             title: CoreML 및 Azure(iOS 11)
-          - href: 'https://developer.xamarin.com/samples/monotouch/ios9/QuickContacts/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/contacts'
             html: ContactsUI 보기 컨트롤러 및 속성을 사용하는 방법입니다.
             image:
               src: images/contacts.png
-              href: 'https://developer.xamarin.com/samples/monotouch/Contacts/'
+              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/contacts'
             title: 연락처
-          - href: 'https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/'
             html: watchOS에서 제공되는 UI 컨트롤 모음입니다.
             image:
               src: images/watchos.png
-              href: 'https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/'
+              href: 'https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/'
             title: WatchKit 카탈로그
-          - href: 'https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/'
+          - href: 'https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/tvos-uicatalog/'
             html: tvOS의 UIKit 프레임워크에서 여러 보기와 컨트롤을 사용하는 방법을 보여줍니다.
             image:
               src: images/tvosui.png
-              href: 'https://developer.xamarin.com/samples/monotouch/tvos/UICatalog/'
+              href: 'https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/tvos-uicatalog/'
             title: tvOS UI 카탈로그
-          - href: 'https://developer.xamarin.com/samples/ios/all/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS'
             html: Xamarin.iOS 샘플 앱 및 코드 데모의 전체 집합입니다.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/ios/all/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS'
             title: 모든 Xamarin.iOS 샘플

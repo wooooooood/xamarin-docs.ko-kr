@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58dde82ed95feea8616e144085009b2adb97de8a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 92c0dd4b2b2afc03347af8508fe9a56fc9fd152e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382584"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669739"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
@@ -22,7 +22,7 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [StackLayoutTutorial(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/StackLayoutTutorial)
+- [StackLayoutTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
 - [Xamarin.Forms StackLayout(가이드)](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [여백 및 안쪽 여백(가이드)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [Xamarin.Forms의 레이아웃 옵션(가이드)](~/xamarin-forms/user-interface/layouts/layout-options.md)

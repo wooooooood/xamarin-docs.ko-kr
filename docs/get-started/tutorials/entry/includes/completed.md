@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 064ef79d79a74582e8deb6999589fda14d227e91
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b01edc9807b63613a66f5c24706eb694fef6dfbc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343455"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669747"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
@@ -22,6 +22,6 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [EntryTutorial(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/EntryTutorial)
+- [EntryTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
 - [Xamarin.Forms 항목(가이드)](~/xamarin-forms/user-interface/text/entry.md)
 - [항목 API](xref:Xamarin.Forms.Entry)

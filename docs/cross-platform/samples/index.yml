@@ -11,7 +11,7 @@ abstract:
   description: 'C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되는 Xamarin 플랫폼 간 샘플 앱 및 코드 데모입니다.'
   menu:
     items:
-      - href: 'https://developer.xamarin.com/samples/'
+      - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
         text: 모든 Xamarin 샘플
 sections:
   - title: 시작
@@ -20,11 +20,11 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+          - href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             html: 이 샘플은 로컬 SQLite 데이터베이스에서 데이터가 저장되고 액세스되는 Todo 목록 애플리케이션을 보여주며 Xamarin.Forms를 사용하여 빌드됩니다.
             image:
               src: images/todo.png
-              href: 'https://developer.xamarin.com/samples/xamarin-forms/Todo/'
+              href: 'https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/'
             title: Todo
           - href: 'https://github.com/xamarinhq/app-myshoppe'
             html: '영업 사원이 판매 실적을 추적하고, 잠재 고객을 관리하고, 해당 연락처를 보고, 주문을 관리하고, 제품 카탈로그를 찾을 수 있도록 하는 데모 앱입니다.'
@@ -74,9 +74,9 @@ sections:
         style: cards
         className: cardsW
         items:
-          - href: 'https://developer.xamarin.com/samples/'
+          - href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             html: Xamarin 플랫폼 간 샘플 앱 및 코드 데모의 전체 집합입니다.
             image:
               src: ~/media/shared/sample-download.svg
-              href: 'https://developer.xamarin.com/samples/'
+              href: 'https://docs.microsoft.com/samples/browse/?products=xamarin'
             title: 모든 Xamarin 샘플

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37c2ba1b03d4894d7d7528f4cf520ddb4e6e5aab
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60896715"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68669742"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
@@ -22,6 +22,6 @@ Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [LabelTutorial(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/LabelTutorial)
+- [LabelTutorial(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-labeltutorial/)
 - [Xamarin.Forms 레이블(가이드)](~/xamarin-forms/user-interface/text/label.md)
 - [레이블 API](xref:Xamarin.Forms.Label)
