@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 264bdcc9a7a0d73ebe3385246ee6dfae3d9a850f
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: f49416eddb69e2900eb427f27057cd8f1cb9ceb5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740990"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654697"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>WatchOS에서 Xamarin 탐색 사용
 
@@ -53,7 +53,7 @@ DismissController();
 
 IOS의 경우와 마찬가지로 왼쪽 가장자리 살짝 계층 탐색 스택 부모 컨트롤러를 다시 이동 합니다.
 
-모두를 [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) 하 고 [WatchTables](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/) 샘플 계층적 탐색이 포함 합니다.
+모두를 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 하 고 [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) 샘플 계층적 탐색이 포함 합니다.
 
 ### <a name="pushing-and-popping-in-code"></a>푸시 및 팝 코드
 
@@ -117,5 +117,5 @@ PresentController (controllerNames, contexts);
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (샘플)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

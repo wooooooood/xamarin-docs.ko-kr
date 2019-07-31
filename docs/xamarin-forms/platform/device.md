@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512870"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655959"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 클래스 속성 및 레이아웃 및 플랫폼별으로 기능을 사용자 지정 하는 개발자가 하는 방법의 수를 포함 합니다.
 
-특정 하드웨어 유형 및 크기에서 대상 코드에 메서드와 속성 외에도 `Device` 클래스는 백그라운드 스레드에서 UI 컨트롤과 상호 작용에 사용할 수 있는 메서드를 포함 합니다. 자세한 내용은 [백그라운드 스레드에서 UI와 상호 작용](#interact-with-the-ui-from-background-threads)합니다.
+특정 하드웨어 형식 및 크기에서 코드를 대상으로 하는 메서드 및 속성 외에 `Device` , 클래스에는 백그라운드 스레드에서 UI 컨트롤과 상호 작용 하는 데 사용할 수 있는 메서드가 포함 되어 있습니다. 자세한 내용은 [백그라운드 스레드에서 UI와 상호 작용](#interact-with-the-ui-from-background-threads)을 참조 하세요.
 
-## <a name="providing-platform-specific-values"></a>플랫폼 특정 값을 제공합니다.
+## <a name="providing-platform-specific-values"></a>플랫폼별 값 제공
 
 2\.3.4 Xamarin.Forms 하기 전에 응용 프로그램에서 실행 되는 플랫폼 검사 하 여 가져올 수 없습니다는 [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)하십시오 [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), 및 [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드를 사용 하 여 컨트롤에 플랫폼 특정 값을 제공할 수 있습니다.
 
@@ -182,22 +182,22 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 ## <a name="interact-with-the-ui-from-background-threads"></a>백그라운드 스레드에서 UI와 상호 작용
 
-IOS, Android 및 유니버설 Windows 플랫폼을 비롯 한 대부분의 운영 체제 사용자 인터페이스와 관련 된 코드에 대 한 단일 스레딩 모델을 사용 합니다. 이 스레드가 라고 합니다 *주 스레드에서* 또는 *UI 스레드*합니다. 이 모델의 결과 사용자 인터페이스 요소에 액세스 하는 모든 코드는 응용 프로그램의 주 스레드에서 실행 해야 합니다.
+IOS, Android 및 유니버설 Windows 플랫폼를 비롯 한 대부분의 운영 체제에서는 사용자 인터페이스와 관련 된 코드에 단일 스레딩 모델을 사용 합니다. 이 스레드를 주로 *주 스레드나* *UI 스레드*라고 합니다. 이 모델의 결과는 사용자 인터페이스 요소에 액세스 하는 모든 코드가 응용 프로그램의 주 스레드에서 실행 되어야 한다는 것입니다.
 
-경우에 따라 응용 프로그램 웹 서비스에서 데이터를 검색 하는 등의 장기 실행 가능성이 있는 작업을 수행할 백그라운드 스레드를 사용 합니다. 백그라운드 스레드에서 실행 되는 코드를 사용자 인터페이스 요소에 액세스 해야 하는 경우 주 스레드에서 코드를 실행 해야 합니다.
+응용 프로그램에서는 때때로 백그라운드 스레드를 사용 하 여 웹 서비스에서 데이터를 검색 하는 등의 장기 실행 작업을 수행 합니다. 백그라운드 스레드에서 실행 되는 코드가 사용자 인터페이스 요소에 액세스 해야 하는 경우 주 스레드에서 해당 코드를 실행 해야 합니다.
 
-합니다 `Device` 다음을 포함 하는 클래스 `static` 사용자와 상호 작용 하는 메서드가 인터페이스 배경 스레드에서 요소:
+클래스 `Device` 는 배경 스레드에서 사용자 `static` 인터페이스 요소와 상호 작용 하는 데 사용할 수 있는 다음 메서드를 포함 합니다.
 
 | 메서드 | 인수 | 반환 값 | 용도 |
 |---|---|---|---|
-| `BeginInvokeOnMainThread` | `Action` | `void` | 호출 하는 `Action` 주 스레드에서 완료할 때까지 대기 하지 않습니다. |
-| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 호출 하는 `Func<T>` 주 스레드를 완료할 때까지 기다립니다. |
-| `InvokeOnMainThreadAsync` | `Action` | `Task` | 호출 하는 `Action` 주 스레드를 완료할 때까지 기다립니다. |
-| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | 호출 하는 `Func<Task<T>>` 주 스레드를 완료할 때까지 기다립니다. |
-| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | 호출 하는 `Func<Task>` 주 스레드를 완료할 때까지 기다립니다. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | 반환 된 `SynchronizationContext` 주 스레드에 대 한 합니다. |
+| `BeginInvokeOnMainThread` | `Action` | `void` | `Action` 주 스레드에서를 호출 하 고 완료 될 때까지 기다리지 않습니다. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 주 스레드에서 `Func<T>` 를 호출 하 고 완료 될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | `Action` 주 스레드에서를 호출 하 고 완료 될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | 주 스레드에서 `Func<Task<T>>` 를 호출 하 고 완료 될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | 주 스레드에서 `Func<Task>` 를 호출 하 고 완료 될 때까지 기다립니다. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | 주 스레드에 `SynchronizationContext` 대 한를 반환 합니다. |
 
-다음 코드를 사용 하 여 예제를 `BeginInvokeOnMainThread` 메서드:
+다음 코드에서는 메서드를 `BeginInvokeOnMainThread` 사용 하는 예제를 보여 줍니다.
 
 ```csharp
 Device.BeginInvokeOnMainThread (() =>
@@ -208,6 +208,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## <a name="related-links"></a>관련 링크
 
-- [장치 샘플](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
-- [스타일 샘플](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [장치 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [스타일 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [디바이스](xref:Xamarin.Forms.Device)

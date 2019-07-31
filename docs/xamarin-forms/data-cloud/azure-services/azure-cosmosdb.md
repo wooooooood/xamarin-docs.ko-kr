@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다.
+title: Xamarin.ios에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다.
 description: 이 문서에서는 Azure Cosmos DB.NET Standard 클라이언트 라이브러리를 사용 하 여 Xamarin.Forms 응용 프로그램에 Azure Cosmos DB 문서 데이터베이스를 통합 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C
@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0f0a9d2a5c7afb54256c7c2d3087b7912e833e3f
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: dd325fbdf9d2619df94077eed74f9e6c61796a26
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659230"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651399"
 ---
-# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Xamarin.Forms에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다.
+# <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Xamarin.ios에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다.
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
 _Azure Cosmos DB 문서 데이터베이스는 원활한 확장 및 전역 복제가 필요한 응용 프로그램에 대 한 빠른, 고가용성, 확장성 있는 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 대기 시간이 짧은 액세스를 제공 하는 NoSQL 데이터베이스. 이 문서에서는 Azure Cosmos DB.NET Standard 클라이언트 라이브러리를 사용 하 여 Xamarin.Forms 응용 프로그램에 Azure Cosmos DB 문서 데이터베이스를 통합 하는 방법에 설명 합니다._
 
@@ -230,7 +230,7 @@ await client.DeleteDatabaseAsync(UriFactory.CreateDatabaseUri(Constants.Database
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo Azure Cosmos DB (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDB/)
+- [Todo Azure Cosmos DB (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 - [Azure Cosmos DB 설명서](/azure/cosmos-db/)
 - [Azure Cosmos DB.NET Standard 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
 - [Azure Cosmos DB API](https://docs.microsoft.com/dotnet/api/overview/azure/cosmosdb/client?view=azure-dotnet)

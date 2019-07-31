@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: a1d49639d28e677ebbe2d7cf870a6e91dfff8575
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 1f29f283207ed8c1382424b3680177886ad2c806
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740911"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653154"
 ---
 # <a name="colors-in-xamarinforms"></a>Xamarin.Forms의 색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
 _Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공 합니다._
 
@@ -25,7 +25,7 @@ _Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공 합니다._
 `Color` 다양 한 색 인스턴스를 생성 하는 메서드를 제공 하는 클래스
 
 -  **명명 된 색** -일반적인 명명 된 색을 포함 하 여 컬렉션인 `Red`를 `Green`, 및 `Blue`합니다.
--  **FromHex** -문자열 값 "00FF00" 예를 들어 HTML에 사용 되는 구문과 유사 합니다. 알파 문자 ("CC00FF00")의 첫 번째 쌍으로 선택적으로 지정할 수 있습니다.
+-  **Fromhex** -문자열 값 (예: "00FF00")을 HTML에서 사용 하는 구문과 유사 합니다. 선택적으로 Alpha는 첫 번째 문자 쌍 ("CC00FF00")으로 지정할 수 있습니다.
 -  **FromHsla** -색상, 채도 및 명도 `double` 선택적 알파 값 (0.0-1.0) 값입니다.
 -  **FromRgb** -빨강, 녹색 및 파랑 `int` 값 (0-255).
 -  **FromRgba** -빨간색, 녹색, 파랑 및 알파 `int` 값 (0-255).
@@ -124,5 +124,5 @@ Xamarin.Forms `Color` 클래스 플랫폼 인식 색 참조를 만드는 데 사
 
 ## <a name="related-links"></a>관련 링크
 
-- [ColorsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
-- [바인딩할 수 있는 선택 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
+- [ColorsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
+- [바인딩할 수 있는 선택 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)

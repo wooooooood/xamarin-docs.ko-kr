@@ -1,5 +1,5 @@
 ---
-title: Azure Cosmos DB 문서 데이터베이스 및 Xamarin.Forms를 사용 하 여 사용자 인증
+title: Azure Cosmos DB 문서 데이터베이스 및 Xamarin.ios를 사용 하 여 사용자 인증
 description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 하는 Azure Cosmos DB 컬렉션을 사용 하 여 액세스 제어를 결합 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 6e55b3b9b0f204992de684ba09f3d9ff2552ce00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 0067a9e576e695a308e4326955b540be2ff46f61
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832357"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657223"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스 및 Xamarin.Forms를 사용 하 여 사용자 인증
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스 및 Xamarin.ios를 사용 하 여 사용자 인증
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB 문서 데이터베이스 무제한 저장소 및 처리량을 지원 하면서 여러 서버 및 파티션에 걸칠 수 있는 분할 된 컬렉션을 지원 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션을 사용 하 여 액세스 제어를 결합 하는 방법을 설명 합니다._
 
@@ -271,7 +271,7 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo Azure Cosmos DB 인증 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Todo Azure Cosmos DB 인증 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Azure Cosmos DB 문서 데이터베이스 사용](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Azure Cosmos DB 데이터에 대 한 액세스 보호](/azure/cosmos-db/secure-access-to-data/)
 - [SQL API에서 액세스 제어](/rest/api/documentdb/access-control-on-documentdb-resources/)입니다.

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: 97bb5ec954f36e48d8ae115baf8738862e5a8358
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 1f9cd0acd201f124f4a4577fec23dce52aee627d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649541"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657515"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _여러 줄 텍스트 입력_
 
@@ -61,7 +61,7 @@ var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Co
 
 ### <a name="preventing-text-entry"></a>텍스트 입력 방지
 
-텍스트를 수정할 사용자를 방지할 수 있습니다는 [ `Editor` ](xref:Xamarin.Forms.Editor) 설정 하 여 합니다 `IsReadOnly` 기본값이 있는 속성의 `false`를 `true`:
+[`Editor`](xref:Xamarin.Forms.Editor) 사용자는 `IsReadOnly` 속성을 `false` 로`true`설정 하 여의 텍스트를 수정할 수 없도록 할 수 있습니다 .이 속성의 기본값은입니다.
 
 ```xaml
 <Editor Text="This is a read-only Editor"
@@ -73,7 +73,7 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 ```
 
 > [!NOTE]
-> `IsReadonly` 속성의 시각적 모양을 변경 하지 않습니다는 [ `Editor` ](xref:Xamarin.Forms.Editor)달리를 `IsEnabled` 도의 시각적 모양을 변경 하는 속성은 `Editor` 회색입니다.
+> 속성은의 시각적 모양을 회색 `Editor` 으로 변경 하는 [`Editor`](xref:Xamarin.Forms.Editor) `IsEnabled` 속성과 달리의 시각적 모양을 변경 하지 않습니다. `IsReadonly`
 
 ### <a name="limiting-input-length"></a>입력된 길이 제한
 
@@ -189,9 +189,9 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 
 ### <a name="enabling-and-disabling-text-prediction"></a>설정 및 텍스트 자동 완성을 사용 하지 않도록 설정
 
-`IsTextPredictionEnabled` 속성 컨트롤 여부를 텍스트 예측 및 자동 텍스트 보정을 사용할 수 있습니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 하는 대로 word 예측 표시 됩니다.
+속성 `IsTextPredictionEnabled` 은 텍스트 예측과 자동 텍스트 교정이 사용 되는지 여부를 제어 합니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 하는 대로 word 예측 표시 됩니다.
 
-그러나 일부 텍스트 항목 시나리오에 대 한 사용자 이름, 텍스트 자동 완성 및 자동 텍스트를 입력 하는 등 수정 음수 환경을 제공 하 고 설정 하 여 비활성화 해야 합니다 `IsTextPredictionEnabled` 속성을 `false`:
+그러나 사용자 이름을 입력 하는 것과 같은 일부 텍스트 입력 시나리오의 경우 텍스트 예측 및 자동 텍스트 수정이 부정적 환경을 제공 하므로 `IsTextPredictionEnabled` 속성을로 `false`설정 하 여 사용 하지 않도록 설정 해야 합니다.
 
 ```xaml
 <Editor ... IsTextPredictionEnabled="false" />
@@ -202,7 +202,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
 
 > [!NOTE]
-> 경우는 `IsTextPredictionEnabled` 속성 `false`,이 고 사용자 지정 키보드 가장 되지 않습니다 텍스트 자동 완성 및 자동 사용 텍스트 수정 되지 합니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
+> `IsTextPredictionEnabled` 속성이 로`false`설정 되 고 사용자 지정 키보드를 사용 하지 않는 경우 텍스트 예측 및 자동 텍스트 수정을 사용할 수 없습니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
 
 ### <a name="colors"></a>색
 
@@ -260,11 +260,11 @@ XAML:
 - [완료](xref:Xamarin.Forms.Editor.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
 
 > [!NOTE]
-> 합니다 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 올 클래스 [ `Entry` ](xref:Xamarin.Forms.Entry) 상속, 역시 [ `Focused` ](xref:Xamarin.Forms.VisualElement.Focused) 하 고 [ `Unfocused` ](xref:Xamarin.Forms.VisualElement.Unfocused)이벤트입니다.
+> 에서 상속 하는 [`Entry`](xref:Xamarin.Forms.Entry) [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) 클래스에도 및 [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) 이벤트가 있습니다. [`VisualElement`](xref:Xamarin.Forms.VisualElement)
 
 ### <a name="completed"></a>완료
 
-합니다 `Completed` 이벤트와의 상호 작용을 완료 하 react를 사용 하는 `Editor`합니다. `Completed` 키보드에서 return 키를 입력 하 여 (또는 UWP에서 Tab 키를 눌러) 필드를 사용 하 여 입력을 종료할 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
+합니다 `Completed` 이벤트와의 상호 작용을 완료 하 react를 사용 하는 `Editor`합니다. `Completed`사용자가 키보드에서 return 키를 입력 하거나 UWP에서 Tab 키를 눌러 입력을 끝낼 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -360,5 +360,5 @@ Title="Editor Demo">
 
 ## <a name="related-links"></a>관련 링크
 
-- [텍스트 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [편집기 API](xref:Xamarin.Forms.Editor)

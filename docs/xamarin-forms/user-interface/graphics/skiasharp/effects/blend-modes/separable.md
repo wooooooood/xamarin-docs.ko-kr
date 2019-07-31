@@ -7,16 +7,16 @@ ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 8c86782d5b8b8250049d0ae060ca7bd548c5a4ef
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4fb5bd1e883adc3be89bde7cc0e1529e77165247
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61387364"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655041"
 ---
 # <a name="the-separable-blend-modes"></a>분리 가능한 blend 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 이 문서에서 볼 수 있듯이 [ **SkiaSharp Porter 임신 blend 모드**](porter-duff.md), Porter 임신 blend 모드는 일반적으로 클리핑 작업을 수행 합니다. 분리 가능한 blend 모드는 다릅니다. 분리 가능한 모드는 이미지의 개별 빨강, 녹색 및 파랑 색 구성 요소를 변경합니다. 분리 가능한 blend 모드 색의 빨강, 녹색 및 파랑 조합 흰색인 실제로 보여 주기 위해 혼합할 수 있습니다.
 
@@ -127,7 +127,7 @@ public partial class LightenAndDarkenPage : ContentPage
 
 [![어둡게 및 밝게](separable-images/LightenAndDarken.png "어둡게 및 밝게")](separable-images/LightenAndDarken-Large.png#lightbox)
 
-이 프로그램을 분리 가능한 blend 모드를 사용 하는 일반적인 방법으로 보여 줍니다. 대상은 자주 비트맵 일종의 이미지입니다. 원본이 사용 하 여 표시 사각형을 `SKPaint` 개체를 해당 `BlendMode` 분리 가능한 blend 모드를 설정 하는 속성입니다. 사각형 (이므로 여기) 단색 수 또는 그라데이션 합니다. 투명도 _되지_ 분리 가능한 blend 모드를 사용 하 여 일반적으로 사용 됩니다.
+이 프로그램은 분리 가능 blend 모드를 사용 하는 일반적인 방법을 보여 줍니다. 대상은 일종의 이미지 이며 매우 자주 비트맵입니다. 원본이 사용 하 여 표시 사각형을 `SKPaint` 개체를 해당 `BlendMode` 분리 가능한 blend 모드를 설정 하는 속성입니다. 사각형 (이므로 여기) 단색 수 또는 그라데이션 합니다. 투명도 _되지_ 분리 가능한 blend 모드를 사용 하 여 일반적으로 사용 됩니다.
 
 이 프로그램을 사용 하 여 실험 시에 이러한 두 혼합 모드 밝게 및 이미지를 균일 하 게 어둡게 하지 않는 알 수 있습니다. 대신는 `Slider` 일종의 임계값을 설정 하는 것 같습니다. 예를 들어을 늘리면 합니다 `Slider` 에 대 한는 `Lighten` 모드 이미지의 어두운 영역 가져오기 light 먼저 밝은 영역을 동일 하 게 유지 하는 동안.
 
@@ -149,9 +149,9 @@ public partial class LightenAndDarkenPage : ContentPage
 
 | 혼합 모드   | 변경 안 함 | 작업 |
 | ------------ | --------- | --------- |
-| `Plus`       | 검정     | 색을 추가 하 여: Sc + Dc |
-| `Modulate`   | 하얀     | 색을 곱하여 어두워집니다. Sc·Dc | 
-| `Screen`     | 검정     | 보완 제품을 보완 합니다. Sc + Dc &ndash; Sc·Dc |
+| `Plus`       | 검정     | 색을 추가 하 여 밝게 합니다. Sc + Dc |
+| `Modulate`   | 하얀     | 색을 곱하여 어둡게 합니다. Sc·Dc | 
+| `Screen`     | 검정     | 보완의 제품을 보완 합니다. Sc + Dc &ndash; Sc·Dc |
 | `Overlay`    | 회색      | 역 `HardLight` |
 | `Darken`     | 하얀     | 최소 색: min (Sc, Dc) |
 | `Lighten`    | 검정     | 색의 최대: max (Sc, Dc) |
@@ -159,9 +159,9 @@ public partial class LightenAndDarkenPage : ContentPage
 | `ColorBurn`  | 하얀     | 원본에 따라 대상 어둡게 | 
 | `HardLight`  | 회색      | 강한 집중 미치는 비슷합니다 |
 | `SoftLight`  | 회색      | 소프트 추천의 결과 비슷하게 | 
-| `Difference` | 검정     | 음영이 짙을 수록 더 밝은에서 뺍니다. Abs(Dc &ndash; Sc) | 
+| `Difference` | 검정     | 더 가늘게에서 빼기: Abs (Dc &ndash; Sc) | 
 | `Exclusion`  | 검정     | 유사한 `Difference` 하지만 낮은 대비 |
-| `Multiply`   | 하얀     | 색을 곱하여 어두워집니다. Sc·Dc |
+| `Multiply`   | 하얀     | 색을 곱하여 어둡게 합니다. Sc·Dc |
 
 W3C에서 자세한 알고리즘을 찾을 수 있습니다 [ **합성 하 고 수준 1 혼합** ](https://www.w3.org/TR/compositing-1/) 사양과 Skia [ **SkBlendMode 참조** ](https://skia.org/user/api/SkBlendMode_Reference)이지만 이러한 두 원본의 표기법 같지 않습니다. 에 유의 `Plus` Porter 임신 blend 모드로, 일반적으로 간주 됩니다 및 `Modulate` W3C 사양과의 일부가 아닙니다.
 
@@ -428,4 +428,4 @@ public class PrimaryColorsPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

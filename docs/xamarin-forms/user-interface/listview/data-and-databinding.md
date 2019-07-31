@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: e53f6dce47dd7db60267d21c8d816ece554dc46c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9855255464b32b99d78d7a1cdb24acce22d01648
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61320014"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654753"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
 A [ `ListView` ](xref:Xamarin.Forms.ListView) 데이터의 목록을 표시 하기 위해 사용 됩니다. 데이터 및 선택한 항목에 바인딩할 수 있습니다 하는 방법을 사용 하 여 ListView를 채우는 방법에 대 한 알아보겠습니다.
 
@@ -58,10 +58,6 @@ listView.ItemsSource = new string[]
   "monomodal",
   "mononucleosis"
 };
-
-//monochrome will not appear in the list because it was added
-//after the list was populated.
-listView.ItemsSource.Add("monochrome");
 ```
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView 문자열의 목록 표시")
@@ -88,7 +84,7 @@ employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) 일부인 중 4 개는 [Xamarin.Forms XAML 기본 사항 연재 기사](~/xamarin-forms/xaml/xaml-basics/index.md)합니다.
 
 ### <a name="binding-cells"></a>셀 바인딩
-셀 (및 셀의 자식) 속성에서 개체의 속성에 바인딩할 수 있습니다는 `ItemsSource`합니다. 예를 들어 직원의 목록을 표시 하는 ListView는 사용할 수 있습니다.
+셀 (및 셀의 자식) 속성에서 개체의 속성에 바인딩할 수 있습니다는 `ItemsSource`합니다. 예를 들어는 `ListView` 직원 목록을 표시 하는 데 사용할 수 있습니다.
 
 Employee 클래스:
 
@@ -99,10 +95,12 @@ public class Employee
 }
 ```
 
-`ObservableCollection<Employee>` 생성 되어로 설정 합니다 `ListView`의 `ItemsSource`:
+가 만들어지고 `ListView` 의`ItemsSource`로설정됩니다. `ObservableCollection<Employee>`
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+public ObservableCollection<Employee> Employees { get { return employees; }}
+
 public EmployeeListPage()
 {
   //defined in XAML to follow
@@ -131,11 +129,12 @@ public EmployeeListPage()
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
-x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
-Title="Employee List">
-  <ListView x:Name="EmployeeView">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:constants="clr-namespace:XamarinFormsSample;assembly=XamarinFormsXamlSample"
+             x:Class="XamarinFormsXamlSample.Views.EmployeeListPage"
+             Title="Employee List">
+  <ListView x:Name="EmployeeView"
+            ItemsSource="{Binding Employees}">
     <ListView.ItemTemplate>
       <DataTemplate>
         <TextCell Text="{Binding DisplayName}" />
@@ -145,11 +144,7 @@ Title="Employee List">
 </ContentPage>
 ```
 
-XAML에서 연결 된 있기 수 있지만 바인딩을 않았거나 간단히 하기 위해 코드에서 설치를 참고 합니다.
-
-XAML의 이전 비트 정의 `ContentPage` 를 포함 하는 `ListView`합니다. 데이터 소스를 `ListView` 를 통해 설정 됩니다는 `ItemsSource` 특성입니다. 각 행의 레이아웃을 `ItemsSource`내에 정의 되어는 `ListView.ItemTemplate` 요소입니다.
-
-다음은 결과입니다.
+이 XAML 예제는를 `ContentPage` `ListView`포함 하는를 정의 합니다. 데이터 소스를 `ListView` 를 통해 설정 됩니다는 `ItemsSource` 특성입니다. 에서 `ItemsSource` 각 행의 레이아웃은 `ListView.ItemTemplate` 요소 내에 정의 됩니다. 그러면 다음과 같은 스크린샷을 생성 합니다.
 
 ![](data-and-databinding-images/bound-data.png "데이터 바인딩을 사용 하 여 ListView")
 
@@ -169,4 +164,4 @@ XAML의 이전 비트 정의 `ContentPage` 를 포함 하는 `ListView`합니다
 
 ## <a name="related-links"></a>관련 링크
 
-- [양방향 바인딩을 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
+- [양방향 바인딩을 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

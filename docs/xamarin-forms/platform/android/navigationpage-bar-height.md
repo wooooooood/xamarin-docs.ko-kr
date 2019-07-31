@@ -1,24 +1,24 @@
 ---
-title: Android의 NavigationPage 막대 높이
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 NavigationPage에 탐색 막대의 높이 설정 하는 Android 플랫폼 특정을 사용 하는 방법을 설명 합니다.
+title: Android의 NavigationPage Bar Height
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 NavigationPage의 탐색 모음 높이를 설정 하는 Android 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C8A73B64-FE70-408A-A72E-8AF147F0C52C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: e0d7c16edb3ec11c2ae27a60152fac31fe44dd5e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 501ea85a12a6e9b8b4198e0391e7ec8a16605069
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926556"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650003"
 ---
-# <a name="navigationpage-bar-height-on-android"></a>Android의 NavigationPage 막대 높이
+# <a name="navigationpage-bar-height-on-android"></a>Android의 NavigationPage Bar Height
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-탐색 모음의 높이 설정 하는이 Android 플랫폼 관련 된 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)합니다. 설정 하 여 XAML에서 사용 되는 [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 정수 값으로 바인딩할 수 있는 속성:
+이 Android 플랫폼별는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 탐색 모음 높이를 설정 합니다. 설정 하 여 XAML에서 사용 되는 [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 정수 값으로 바인딩할 수 있는 속성:
 
 ```xaml
 <NavigationPage ...
@@ -52,7 +52,7 @@ public class AndroidNavigationPageCS : Xamarin.Forms.NavigationPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

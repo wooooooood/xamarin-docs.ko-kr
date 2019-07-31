@@ -8,39 +8,39 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 1889579a48364204a977d63bd9bdb875df37a2bf
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977787"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657027"
 ---
 # <a name="layouts-in-xamarinforms"></a>Xamarin.Forms에서 레이아웃
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Xamarin.Forms 여러 레이아웃 고 화면의 콘텐츠를 구성 하기 위한 기능이 추가 되었습니다.
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Xamarin.Forms 레이아웃 비디오**
+**Xamarin.ios 레이아웃 비디오**
 
 각 레이아웃 컨트롤은 화면 방향 변경을 처리 하는 방법에 대 한 세부 정보 뿐만 아니라, 아래 설명 되어 있습니다.
 
-* **[StackLayout](stack-layout.md)**  뷰를 선형적으로 정렬 하는 데 – 가로 또는 세로로 합니다. 뷰는 StackLayout의 왼쪽 또는 레이아웃의 오른쪽 가운데에 정렬할 수 있습니다.
-* **[AbsoluteLayout](absolute-layout.md)**  – 좌표를 설정 하 여 뷰를 정렬 및 절대값 또는 비율 크기 조정 하는 데 사용 합니다. 왼쪽, 오른쪽 또는 가운데 고정할 수 있을 뿐만 아니라 뷰 계층 AbsoluteLayout은 사용할 수 있습니다.
-* **[RelativeLayout](relative-layout.md)**  – 해당 부모의 크기 및 위치를 기준으로 제약 조건을 설정 하 여 뷰를 정렬 하는 데 사용 합니다.
-* **[표 형태](grid.md)**  – 표에 보기를 정렬 하는 데 사용 합니다. 절대값 또는 비율 측면에서 행과 열을 지정할 수 있습니다.
-* **[FlexLayout](flex-layout.md)**  – 배치를 사용 하 여 뷰를 가로 또는 세로로 정렬 하는 데 사용 합니다.
-* **[ScrollView](scroll-view.md)**  – 스크롤 뷰를 화면의 경계 내에 완전히 맞지 않는 경우 제공 하는 데 사용 합니다.
-* **[LayoutOptions](layout-options.md)**  – 맞춤 및 부모를 기준으로 보기에 대 한 확장을 정의 합니다.
-* **[투명도 입력](#input_transparency)**  – 요소에서 입력을 받을지 여부를 지정 합니다.
-* **[여백 및 안쪽 여백](margin-and-padding.md)**  – 사용자 인터페이스에서 요소를 렌더링할 때 레이아웃 동작을 제어 하는 방법에 설명 합니다.
-* **[장치 방향](device-orientation.md)**  – 장치 방향 변경 내용을 처리 하는 방법에 설명 합니다.
-* **[태블릿 및 데스크톱 장치에서 레이아웃](tablet.md)**  – 각 플랫폼에서 큰 화면에 대 한 최적화 하는 방법을 보여 줍니다.
-* **[바인딩 가능한 레이아웃](bindable-layouts.md)**  – 레이아웃 항목의 컬렉션에 바인딩하여 해당 콘텐츠를 생성 하는 클래스를 사용 하도록 설정 합니다.
-* **[사용자 지정 레이아웃 만들기](custom.md)**  – 사용자 지정 레이아웃 클래스를 만드는 방법에 설명 합니다.
-* **[레이아웃 압축](layout-compression.md)**  -제거 페이지 렌더링 성능을 향상 하기 위해 시각적 트리에서 레이아웃을 지정 합니다.
+* **[Stacklayout](stack-layout.md)** – 가로 또는 세로 방향으로 보기를 선형으로 정렬 하는 데 사용 됩니다. 뷰는 StackLayout의 왼쪽 또는 레이아웃의 오른쪽 가운데에 정렬할 수 있습니다.
+* **[AbsoluteLayout](absolute-layout.md)** – 절대값 또는 비율을 기준으로 좌표 & 크기를 설정 하 여 뷰를 정렬 하는 데 사용 됩니다. 왼쪽, 오른쪽 또는 가운데 고정할 수 있을 뿐만 아니라 뷰 계층 AbsoluteLayout은 사용할 수 있습니다.
+* **[RelativeLayout](relative-layout.md)** – 부모 크기 & 위치에 상대적인 제약 조건을 설정 하 여 뷰를 정렬 하는 데 사용 됩니다.
+* **[Grid](grid.md)** – 모눈에서 보기를 정렬 하는 데 사용 됩니다. 절대값 또는 비율 측면에서 행과 열을 지정할 수 있습니다.
+* 상대 **[레이아웃](flex-layout.md)** – 배치를 사용 하 여 가로 또는 세로로 뷰를 정렬 하는 데 사용 됩니다.
+* **[ScrollView](scroll-view.md)** – 뷰가 화면 범위 내에 완전히 들어가지 못할 경우 스크롤을 제공 하는 데 사용 됩니다.
+* **[Layoutoptions](layout-options.md)** – 부모를 기준으로 뷰의 맞춤 및 확장을 정의 합니다.
+* **[입력 투명성](#input_transparency)** – 요소가 입력을 받을지 여부를 지정 합니다.
+* **[Margin 및 패딩](margin-and-padding.md)** – 요소가 사용자 인터페이스에서 렌더링 될 때 레이아웃 동작을 제어 하는 방법을 보여 줍니다.
+* **[장치 방향](device-orientation.md)** – 장치 방향 변경을 처리 하는 방법을 설명 합니다.
+* **[태블릿 및 데스크톱 장치의 레이아웃](tablet.md)** – 각 플랫폼에서 더 큰 화면을 최적화 하는 방법을 보여 줍니다.
+* **[바인딩 가능한 레이아웃](bindable-layouts.md)** – 항목 컬렉션에 바인딩하여 레이아웃 클래스에서 콘텐츠를 생성할 수 있도록 합니다.
+* **[사용자 지정 레이아웃 만들기](custom.md)** – 사용자 지정 레이아웃 클래스를 만드는 방법을 설명 합니다.
+* **[레이아웃 압축](layout-compression.md)** – 페이지 렌더링 성능을 향상 시키기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다.
 
 플랫폼 컨트롤 사용 하 여 Xamarin.Forms 레이아웃에서 직접 사용할 수도 있습니다 [ **네이티브 포함** ](~/xamarin-forms/platform/native-views/index.md) (Xamarin.Forms 2.2의 새로운) 할 수 있습니다 [ **사용자지정레이아웃만들기** ](custom.md) 특정 요구 사항을 충족 하도록 합니다.
 
@@ -206,7 +206,7 @@ iOS, Android 및 유니버설 Windows 플랫폼에서 큰 화면 크기를 지 �
 
 ### <a name="bindable-layoutsbindable-layoutsmd"></a>[바인딩 가능한 레이아웃](bindable-layouts.md)
 
-합니다 `BindableLayout` 클래스에서 파생 되는 모든 레이아웃 클래스를 사용 하면 합니다 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) 사용 하 여 각 항목의 모양을 설정 하는 옵션을 사용 하 여 항목의 컬렉션에 바인딩하여 해당 콘텐츠를 생성 하는 클래스를 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
+클래스를 사용 하면 [`Layout<T>`](xref:Xamarin.Forms.Layout`1) 클래스에서 파생 되는 모든 레이아웃 클래스가 항목 컬렉션에 바인딩하여 항목의 모양을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 설정 하는 옵션을 사용 하 여 콘텐츠를 생성할 수 있습니다. `BindableLayout`
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[사용자 지정 레이아웃 만들기](custom.md)
 
@@ -225,5 +225,5 @@ iOS, Android 및 유니버설 Windows 플랫폼에서 큰 화면 크기를 지 �
 
 - [Apple의 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG)
 - [Android 디자인 웹 사이트](https://developer.android.com/design/index.html)
-- [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

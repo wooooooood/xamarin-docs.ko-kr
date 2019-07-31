@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/04/2018
-ms.openlocfilehash: 263cbb4aed47794a09341bb8c78c4835510e50c0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 521df49a7698bc149d6bca7460cff2df74402bda
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408100"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657016"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
 _날짜를 선택할 수 있도록 하는 Xamarin.Forms 뷰._
 
@@ -92,7 +92,7 @@ DatePicker datePicker = new DatePicker
 
 ## <a name="datepicker-in-an-application"></a>응용 프로그램에서 DatePicker
 
-합니다 [ **DaysBetweenDates** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker) 샘플에 두는 `DatePicker` 해당 페이지 보기. 이러한 두 날짜를 선택할 수 및 해당 날짜 사이의 일 수를 계산 하는 프로그램입니다. 프로그램의 설정을 변경 하지는 `MinimumDate` 고 `MaximumDate` 속성, 두 날짜는 1900 2100 사이 여야 합니다.
+합니다 [ **DaysBetweenDates** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) 샘플에 두는 `DatePicker` 해당 페이지 보기. 이러한 두 날짜를 선택할 수 및 해당 날짜 사이의 일 수를 계산 하는 프로그램입니다. 프로그램의 설정을 변경 하지는 `MinimumDate` 고 `MaximumDate` 속성, 두 날짜는 1900 2100 사이 여야 합니다.
 
 XAML 파일을 다음과 같습니다.
 
@@ -196,5 +196,5 @@ public partial class MainPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [DaysBetweenDates 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+- [DaysBetweenDates 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 - [DatePicker API](xref:Xamarin.Forms.DatePicker)

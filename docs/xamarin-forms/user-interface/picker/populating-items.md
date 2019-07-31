@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 3bbea036efef44077ccbd28a16af06c97cd7026b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6363f84cb9c947fe8035b51c9f7aed05be6be9e0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61230305"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649202"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>선택기 항목 컬렉션에 데이터 추가
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에는 항목 컬렉션에 추가 하 여 데이터를 사용 하 여 선택기를 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다._
 
-## <a name="populating-a-picker-with-data"></a>데이터를 사용 하 여 선택 채우기
+## <a name="populating-a-picker-with-data"></a>데이터를 사용 하 여 선택기 채우기
 
 전에 Xamarin.Forms 2.3.4 채우는 프로세스는 [ `Picker` ](xref:Xamarin.Forms.Picker) 데이터를 사용 하 여 읽기 전용으로 표시할 데이터를 추가 하려면 되었습니다 [ `Items` ](xref:Xamarin.Forms.Picker.Items) 컬렉션 형식인 `IList<string>`. 컬렉션의 각 항목 유형 이어야 `string`합니다. 초기화 하 여 XAML에서 항목을 추가할 수는 `Items` 속성의 목록 사용 하 여 `x:String` 항목:
 
@@ -83,5 +83,5 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [선택기 데모 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
+- [선택기 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 - [선택기](xref:Xamarin.Forms.Picker)

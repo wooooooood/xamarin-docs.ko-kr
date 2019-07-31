@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 37b14b60f3cd9aa6a3fb182583bde902cc677b89
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 4a0a7a4db4b0ca982a162ec3a0b67dc729af0ed2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925084"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655935"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 
 모바일 응용 프로그램을 작성할 때 성능에 중요 합니다. 사용자가 제대로 찾아 오셨습니다 부드러운 스크롤 및 빠른 로드 시간을 예상 합니다. 사용자의 기대를 충족 하기 위해 실패 한 응용 프로그램 저장소에 대 한 등급 비용이 되거나를 기간 업무 응용 프로그램의 경우 조직으로 시간과 비용을 비용 됩니다.
 
@@ -133,7 +133,7 @@ XAML에서 설정 된 `CachingStrategy` 아래 코드에 표시 된 대로 특�
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>서브클래싱된 ListView에서 캐싱 전략을 설정합니다.
 
-설정 합니다 `CachingStrategy` 서브클래싱된를에서 XAML의 특성 [ `ListView` ](xref:Xamarin.Forms.ListView) 있기 때문에 원하는 동작을 생성 하지 것입니다 없습니다 `CachingStrategy` 속성을 `ListView`합니다. 또한 경우 [XAMLC](~/xamarin-forms/xaml/xamlc.md) 가 사용 하도록 설정 하면 다음 오류 메시지가 생성 됩니다. **없거나 속성, 바인딩 가능한 속성을 'CachingStrategy'에 대 한 이벤트**
+설정 합니다 `CachingStrategy` 서브클래싱된를에서 XAML의 특성 [ `ListView` ](xref:Xamarin.Forms.ListView) 있기 때문에 원하는 동작을 생성 하지 것입니다 없습니다 `CachingStrategy` 속성을 `ListView`합니다. 또한 [XAMLC](~/xamarin-forms/xaml/xamlc.md) 를 사용 하는 경우 다음 오류 메시지가 생성 됩니다. **' CachingStrategy '에 대해 속성, 바인딩 가능한 속성 또는 이벤트를 찾을 수 없습니다.**
 
 이 문제를 해결 하려면는 하위 클래스에서 생성자를 지정 하는 것 [ `ListView` ](xref:Xamarin.Forms.ListView) 받아들이는 [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) 매개 변수를 기본 클래스로 전달:
 
@@ -185,6 +185,6 @@ public class CustomListView : ListView
 
 ## <a name="related-links"></a>관련 링크
 
-- [사용자 지정 렌더러 보기 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [사용자 지정 렌더러 ViewCell (샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+- [사용자 지정 렌더러 보기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [사용자 지정 렌더러 ViewCell (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

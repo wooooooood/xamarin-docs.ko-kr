@@ -1,22 +1,22 @@
 ---
-title: Xamarin.Forms 웹 서비스 소개
-description: 이 가이드는 다른 웹 서비스와 통신 하는 방법을 보여 주는 Xamarin.Forms 샘플 응용 프로그램의 연습을 제공 합니다. 별도 샘플 응용 프로그램을 사용 하는 각 웹 서비스, 기능적으로 비슷합니다 하며 공용 클래스를 공유 합니다.
+title: Xamarin Forms 웹 서비스 소개
+description: 이 가이드에서는 다양 한 웹 서비스와 통신 하는 방법을 보여 주는 Xamarin.ios 예제 응용 프로그램의 연습을 제공 합니다. 별도 샘플 응용 프로그램을 사용 하는 각 웹 서비스, 기능적으로 비슷합니다 하며 공용 클래스를 공유 합니다.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: b34381ad587d623e66af1b581200094448851bf6
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: bbeab6a6ab0d4a9d0e3a962240317fc0d54f9e25
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658990"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656646"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Xamarin.Forms 웹 서비스 소개
+# <a name="xamarinforms-web-services-introduction"></a>Xamarin Forms 웹 서비스 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주는 Xamarin.Forms 샘플 응용 프로그램의 연습을 제공 합니다. 별도 샘플 응용 프로그램을 사용 하는 각 웹 서비스, 기능적으로 비슷합니다 하며 공용 클래스를 공유 합니다._
 
@@ -38,7 +38,7 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 
 ## <a name="understand-the-application-anatomy"></a>응용 프로그램 분석 이해
 
-각 샘플 응용 프로그램에 대 한 공유 코드 프로젝트 세 개의 주 폴더가 이루어져 있습니다.
+각 샘플 응용 프로그램에 대 한 공유 코드 프로젝트는 다음과 같은 세 가지 주요 폴더로 구성 됩니다.
 
 |폴더|용도|
 |--- |--- |
@@ -46,7 +46,7 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 |모델|응용 프로그램에 대 한 데이터 모델 클래스를 포함합니다. 여기에 최소한의 `TodoItem` 응용 프로그램에서 사용 되는 데이터의 단일 항목을 모델링 하는 클래스입니다. 폴더는 사용자 데이터 모델에 사용 되는 모든 추가 클래스를 포함할 수도 있습니다.|
 |보기|응용 프로그램 페이지가 포함 됩니다. 일반적으로 이루어져이 `TodoListPage` 고 `TodoItemPage` 클래스 및 인증을 위해 사용 되는 모든 추가 클래스입니다.|
 
-또한 각 응용 프로그램에 대 한 공유 코드 프로젝트 중요 한 파일의 숫자로 구성 됩니다.
+또한 각 응용 프로그램에 대 한 공유 코드 프로젝트는 여러 중요 한 파일로 구성 되어 있습니다.
 
 |파일|용도|
 |--- |--- |
@@ -63,7 +63,7 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 
 또한 몇 가지 샘플 응용 프로그램 사용자 인증 프로세스를 관리 하는 데 사용 되는 추가 페이지를 포함 합니다.
 
-### <a name="model-the-data"></a>데이터 모델
+### <a name="model-the-data"></a>데이터 모델링
 
 각 샘플 응용 프로그램 사용을 `TodoItem` 표시 되 고 저장소에 대 한 웹 서비스로 전송 되는 데이터를 모델링 하는 클래스입니다. 다음 코드 예제는 `TodoItem` 클래스를 보여줍니다.
 
@@ -93,6 +93,6 @@ public class TodoItem
 
 ## <a name="related-links"></a>관련 링크
 
-- [ASMX (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX)
-- [WCF (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
-- [REST (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [ASMX (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

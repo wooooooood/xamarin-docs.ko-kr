@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 34339b9ca3a15c7f7f24edee5401c542fd09ba74
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 79f3f88dba37899bcb9467fcd6d1bd7e9dc5eb10
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370794"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657159"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) 레이아웃을 포함 하 고 스크롤 오프 스크린 수 있습니다. `ScrollView` 키보드를 표시할 때 화면에 보이는 부분을 자동으로 이동 하는 뷰를 허용 하도록도 사용 됩니다.
 
@@ -119,5 +119,5 @@ scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
 
 ## <a name="related-links"></a>관련 링크
 
-- [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

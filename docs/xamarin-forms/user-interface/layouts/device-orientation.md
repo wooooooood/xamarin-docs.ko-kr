@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 2c218b030739dee8d3e49fab4e5c2a70ff5e71e0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511826"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656781"
 ---
 # <a name="device-orientation"></a>장치 방향
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 응용 프로그램 사용 방법 및 사용자 환경을 개선 하기 위해 가로 방향을 통합 하는 방법을 고려 하는 것이 반드시 합니다. 여러 화면 방향에 맞게 개별 레이아웃을 디자인할 수 있습니다 하 고 최적의 사용 가능한 공간을 사용 합니다. 응용 프로그램 수준에서 회전을 사용 하지 않도록 설정 되거나 활성화 될 수 있습니다.
 
@@ -475,7 +475,7 @@ protected override void OnSizeAllocated (double width, double height){
 
 ## <a name="related-links"></a>관련 링크
 
-- [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
-- [반응 형 레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
+- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [반응 형 레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [화면 방향에 따라 이미지를 표시 합니다.](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

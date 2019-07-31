@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 1e57764dacf7ae0599df46f13bd4f5505c4cc4a2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ecb9e84473778f5185276a854bfbf2fdfcbb6528
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370837"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654841"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
-[`ListView`](xref:Xamarin.Forms.ListView) 사용 하 여 사용자 지정할 수 있는 스크롤 가능한 목록이 제공 `ViewCell`s입니다. `ViewCells` 텍스트 및 이미지를 표시 하 고, true/false 상태를 나타내는, 사용자 입력을 받고 사용할 수 있습니다.
+[`ListView`](xref:Xamarin.Forms.ListView)를 사용 `ViewCell`하 여 사용자 지정할 수 있는 스크롤 가능한 목록을 제공 합니다. `ViewCells` 텍스트 및 이미지를 표시 하 고, true/false 상태를 나타내는, 사용자 입력을 받고 사용할 수 있습니다.
 
 <a name="Built_in_Cells" />
 
@@ -115,7 +115,7 @@ x:Class="demoListView.ImageCellPage">
 - 사용자 지정 셀 내에 중첩 되어는 `DataTemplate`, 내부는 `ListView.ItemTemplate`합니다. 이 다른 셀을 사용 하 여 프로세스와 동일 합니다.
 - `ViewCell` 사용자 지정 셀의 유형이입니다. 자식 합니다 `DataTemplate` 요소 이어야 하거나 형식에서 파생 해야 `ViewCell`합니다.
 - 내부를 확인 합니다 `ViewCell`, 레이아웃에서 관리 하는 `StackLayout`합니다. 이 레이아웃을 사용 하면 배경 색을 사용자 지정할 수 있습니다. 모든 속성 `StackLayout` 바인딩할 수 있습니다 즉 여기 표시 되지 않습니다 하지만 사용자 지정 셀 내에서 바인딩할 수 있습니다.
-- 내부는 `ViewCell`, 모든 Xamarin.Forms 레이아웃에서 레이아웃을 관리할 수 있습니다. 
+- 내에서 레이아웃은 모든 xamarin.ios 레이아웃 을통해관리할수있습니다.`ViewCell` 
 
 ### <a name="cnum"></a>C&num;
 
@@ -258,6 +258,6 @@ IOS 및 Android의 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 요소 
 
 ## <a name="related-links"></a>관련 링크
 
-- [기본 제공 셀 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [사용자 지정 셀 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [바인딩이 컨텍스트 변경 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BindingContextChanged)
+- [기본 제공 셀 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [사용자 지정 셀 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [바인딩이 컨텍스트 변경 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)

@@ -7,16 +7,16 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 407fe78618c5e5fcd8732d9ff3cea50561ca78f3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876872"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655546"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _터치, 펴서를 끌어서 회전 구현 사용 하 여 행렬 변환_
 
@@ -273,7 +273,7 @@ public partial class BitmapScalingPage : ContentPage
 
 이 프로그램의 첫 번째 가장 큰 차이점은 적중 테스트 논리. 이전 응용 프로그램이 사용 된 `Contains` 메서드의 `SKRect` 비트맵에 해당 하는 변환된 된 사각형 내에서 터치 지점 인지 확인 하려면. 비트맵을 조작 하는 사용자, 비트맵 될 수 있지만, 회전 및 `SKRect` 회전된 사각형을 올바르게 나타낼 수 없습니다. 적중 테스트 논리를 경우 다소 복잡 한 분석 geometry를 구현 해야 한다고 공포 수 있습니다.
 
-그러나 바로 가기는 사용할 수 있습니다. 점이 변환된 사각형의 경계 내에 있는지를 결정 하는 역 변환 된 점 변환 되지 않은 사각형의 경계 내에 있는지를 결정 하는와 같습니다. 훨씬 더 쉽게 계산을 이며 논리를 계속 사용할 수 편리한 `Contains` 메서드:
+그러나 바로 가기를 사용할 수 있습니다. 요소가 변환 된 사각형의 경계 내에 있는지 확인 하는 것은 역 변환 된 점이 레이크의 사각형의 경계 내에 있는지 여부를 확인 하는 것과 같습니다. 훨씬 더 쉽게 계산을 이며 논리를 계속 사용할 수 편리한 `Contains` 메서드:
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage
@@ -703,7 +703,7 @@ class TouchManipulationBitmap
 
 에 `Moved` 하 고 `Released` 이벤트, 메서드 호출 `Manipulate`합니다. 다음이 시간에는 `touchDictionary` 하나 이상 포함 `TouchManipulationInfo` 개체입니다. 경우는 `touchDictionary` 하나가 포함 되어 있습니다 항목인 것입니다는 `PreviousPoint` 및 `NewPoint` 값 같지 않으며 손가락의 움직임을 나타냅니다. 여러 손가락 비트맵을 터치 하, 사전에 항목이 둘 이상 포함 되어 있지만 이러한 항목 중 하나만 다른 `PreviousPoint` 고 `NewPoint` 값입니다. 모든 rest가 같으면 `PreviousPoint` 고 `NewPoint` 값입니다.
 
-이 중요 합니다. `Manipulate` 메서드 하나만 손가락의 움직임 처리 하는 고 가정할 수 있습니다. 이 호출 시 다른 손가락 모두가 이동 하 고는 실제로 이동 (가능성이)으로, 이러한 움직임에 대 한 이후 호출에서 처리 됩니다 `Manipulate`합니다.
+이는 중요 합니다. 메서드 `Manipulate` 는 한 손가락의 움직임만 처리 하 고 있다고 가정할 수 있습니다. 이 호출 시 다른 손가락 모두가 이동 하 고는 실제로 이동 (가능성이)으로, 이러한 움직임에 대 한 이후 호출에서 처리 됩니다 `Manipulate`합니다.
 
 `Manipulate` 메서드는 먼저 사전 편의 위해 배열에 복사 합니다. 처음 두 항목은 이외의 무시 됩니다. 다른 두 개 이상의 손가락 비트맵을 조작 하려고, 무시 됩니다. `Manipulate` 최종 멤버의 `TouchManipulationBitmap`:
 
@@ -1272,5 +1272,5 @@ else
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [효과의 이벤트를 호출합니다.](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

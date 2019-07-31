@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 855bbc61fb5e4e653dbd39ddf05fac3e2fb42d8c
-ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
+ms.openlocfilehash: 085960b92aa0f349d4cb2737385e723d8b6aa6b7
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493354"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656508"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1장. XAML 시작하기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Xamarin.Forms 응용 프로그램에서 XAML은 주로 페이지의 시각적 내용 및 C# 코드 숨김 파일을 함께 정의할 때 사용됩니다._
 
@@ -102,7 +102,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다. **새
 </ContentPage>
 ```
 
-두 XML 네임 스페이스 (`xmlns`) 선언 Xamarin 웹 사이트에서 보이는 첫 번째 및 microsoft의 두 번째 Uri 참조입니다. 궁금증에 해당 Uri 지점을 확인 합니다. 아무 것도 없는 합니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
+두 XML 네임 스페이스 (`xmlns`) 선언은 uri를 참조 하 고, 첫 번째는 Xamarin의 웹 사이트에, 두 번째는 Microsoft의에 있습니다. 궁금증에 해당 Uri 지점을 확인 합니다. 아무 것도 없는 합니다. 이는 Xamarin 및 Microsoft 소유의 URI이고 기본적으로 버전 식별자로 작동합니다.
 
 첫 번째 XML 네임 스페이스 선언은 Xamarin.Forms에서 접두사가 없는 클래스 참조를 갖는 XAML 파일 내의 정의된 태그, 예를 들면 `ContentPage`와 같은 태그를 의미합니다. 두 번째 네임 스페이스 선언은 `x`의 접두사를 정의합니다. 이는 XAML 자체에 내장된 몇 가지 요소와 특성 및 XAML의 다른 구현이 지원되는 곳에서 사용됩니다. 그러나 이러한 요소와 특성은 URI에 포함된 연도에 따라 약간 다릅니다. Xamarin.Forms는 전체가 아니라 2009 XAML 사양을 지원합니다.
 
@@ -203,9 +203,9 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 또한 `Title` 특성이 루트 태그에 설정되었다는 것에 주의하십시오.
 
-이때 클래스, 속성 및 XML 간의 관계는 분명 하 게 해야 합니다. Xamarin.Forms 클래스 (같은 `ContentPage` 또는 `Label`) XML 요소에 XAML 파일에 표시 됩니다. `ContentPage` 상의 `Title` 및 `Label`의 7가지 속성을 포함하는 해당 클래스의 속성은 일반적으로 XML 특성으로 표시합니다.
+이 때 클래스, 속성 및 XML 간의 관계는 명확 해야 합니다. Xamarin.ios 클래스 (예: `ContentPage` 또는 `Label`)는 XAML 파일에 XML 요소로 표시 됩니다. `ContentPage` 상의 `Title` 및 `Label`의 7가지 속성을 포함하는 해당 클래스의 속성은 일반적으로 XML 특성으로 표시합니다.
 
-대부분의 바로 가기는 이러한 속성의 값을 설정하기 위해 존재합니다. 일부 속성은 기본 데이터 형식: 예를 들어, 합니다 `Title` 및 `Text` 형식의 속성은 `String`, `Rotation` 형식입니다 `Double`, 및 `IsVisible` (되 `true` 기본적으로 설명을 돕기 위해 여기에서 설정 되 고) 형식의`Boolean`.
+대부분의 바로 가기는 이러한 속성의 값을 설정하기 위해 존재합니다. 일부 속성은 기본 데이터 형식입니다. `Title` 예를 들어 및 `String` `IsVisible` 속성은`Double`형식이 고, 는형식이`true` 며, 기본적으로이 고 여기서는 그림에만 설정 됨은 형식입니다. `Rotation` `Text` `Boolean`.
 
 `HorizontalTextAlignment` 속성은 열거형인 `TextAlignment` 유형입니다. 모든 열거형 유형 속성에는 멤버 이름만 제공하면 됩니다.
 
@@ -453,7 +453,7 @@ public partial class XamlPlusCodePage : ContentPage {
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [4부. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

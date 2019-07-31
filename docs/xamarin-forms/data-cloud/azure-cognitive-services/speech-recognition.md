@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: f854ac363fe3e5b9dc3df046c9fab592b97bc962
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675254"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655462"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Microsoft Speech API를 사용 하 여 음성 인식
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Speech API는 음성된 언어를 처리 하는 알고리즘을 제공 하는 클라우드 기반 API입니다. 이 문서에는 오디오 Xamarin.Forms 응용 프로그램에서 텍스트를 변환 하려면 Microsoft Speech Recognition REST API를 사용 하는 방법을 설명 합니다._
 
@@ -114,7 +114,7 @@ string GenerateRequestUri(string speechEndpoint)
 }
 ```
 
-수행한 기본 구성의 `GenerateRequestUri` 방법은 오디오 콘텐츠는의 로캘을 설정 하는 것입니다. 지원 되는 목록에 대해서 [지원 되는 언어](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/)합니다.
+수행한 기본 구성의 `GenerateRequestUri` 방법은 오디오 콘텐츠는의 로캘을 설정 하는 것입니다. 지원 되는 로캘 목록은 [지원 되는 언어](/azure/cognitive-services/speech/api-reference-rest/supportedlanguages/)를 참조 하세요.
 
 ### <a name="sending-the-request"></a>요청을 보내기
 
@@ -171,4 +171,4 @@ API 응답에 포함 되 고 인식된 된 텍스트를 사용 하 여 JSON 형�
 
 - [Microsoft Speech API 설명서](/azure/cognitive-services/speech/home/)합니다.
 - [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

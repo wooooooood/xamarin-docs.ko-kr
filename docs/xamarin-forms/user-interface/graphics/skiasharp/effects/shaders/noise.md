@@ -7,16 +7,16 @@ ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4801aa12acf8eca2384cc5b41d677f7cb0bdd90d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: dea7f5e51a864922d56f7b65d19b21a889cbc650
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61292943"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656161"
 ---
 # <a name="skiasharp-noise-and-composing"></a>SkiaSharp 노이즈 및 작성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 간단한 벡터 그래픽 자연스럽 경향이 있습니다. 직선, 부드러운 곡선 및 단색 실제 개체의 결함 유사 하지 않습니다. 1982 영화에 대 한 컴퓨터에서 생성 된 그래픽 작업 하는 동안 _트 론에_, 컴퓨터 과학자 박 단은 Perlin 임의의 프로세스 보다 현실적인 질감 이러한 이미지를 제공 하는 데는 알고리즘을 개발을 시작 합니다. 1997 년 박 단은 Perlin Academy 상을 기술 도전 과제에 대 한이 했습니다. 자신의 업무에 Perlin 노이즈 이라고 하 고 SkiaSharp 지원 됩니다. 예를 들면 다음과 같습니다.
 
@@ -44,7 +44,7 @@ public static SkiaSharp.SKShader CreatePerlinNoiseTurbulence (float baseFrequenc
 
 `seed` 매개 변수는 난수 생성기의 시작 지점입니다. 부동 소수점 값으로 지정 하지만 비율을 사용 하 고 0은 1과 동일 전에 잘립니다.
 
-**Perlin 노이즈** 페이지에 [ **SkiaSharpFormsDemos**)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플에서는 다양 한 값을 사용 하 여 실험을 `baseFrequency` 및 `numOctaves` 인수. XAML 파일을 다음과 같습니다.
+**Perlin 노이즈** 페이지에 [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에서는 다양 한 값을 사용 하 여 실험을 `baseFrequency` 및 `numOctaves` 인수. XAML 파일을 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -399,4 +399,4 @@ public static SKShader CreateCompose (SKShader dstShader, SKShader srcShader, SK
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

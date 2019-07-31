@@ -7,16 +7,16 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: c1e4a76a70dcac3414d384469f25bad7908ae77f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e2bf493a5d8a4197fbc59044edf126761b41cf8d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61019972"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649720"
 ---
 # <a name="pixels-and-device-independent-units"></a>픽셀 및 디바이스 독립적 단위
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 좌표 및 Xamarin.Forms 좌표 간의 차이점을 살펴보기_
 
@@ -28,7 +28,7 @@ _SkiaSharp 좌표 및 Xamarin.Forms 좌표 간의 차이점을 살펴보기_
 
 이러한 원 *는* Xamarin.Forms 크기에 비해 작은 합니다. 기본적으로 SkiaSharp Xamarin.Forms 기본 플랫폼에 의해 설정 된 장치 독립적 단위 좌표와 크기를 기반으로 하는 동안 픽셀 단위로 그립니다. (에서 Xamarin.Forms 좌표계에 대 한 자세한 정보를 찾을 수 있습니다 [5 장입니다. 크기를 다루는](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) 책 *Creating Mobile Apps with Xamarin.Forms*.)
 
-페이지의 [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 이라는 제목의 프로그램 **화면 크기** SkiaSharp 텍스트 출력을 사용 하 여 서로 다른 세 원본의 디스플레이 화면의 크기를 표시 하려면:
+페이지의 [ **SkewSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 이라는 제목의 프로그램 **화면 크기** SkiaSharp 텍스트 출력을 사용 하 여 서로 다른 세 원본의 디스플레이 화면의 크기를 표시 하려면:
 
 - 일반 Xamarin.Forms [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) 하 고 [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) 의 속성을 `SKCanvasView` 개체.
 - 합니다 [ `CanvasSize` ](xref:SkiaSharp.Views.Forms.SKCanvasView.CanvasSize) 의 속성을 `SKCanvasView` 개체입니다.
@@ -55,7 +55,7 @@ public SurfaceSizePage()
 public void DrawText (String text, Single x, Single y, SKPaint paint)
 ```
 
-텍스트 문자열을 지정 하면, X 및 Y 좌표를 시작 하려면 텍스트 인 및 `SKPaint` 개체입니다. X 좌표, 주의 있지만 텍스트의 왼쪽 위치를 지정 합니다. Y 좌표 위치를 지정 합니다 *기준* 텍스트입니다. 그 어느 때 인라인된 종이에 손으로 작성 했다면, 기준 (예: g, p, q 및 y에 해당)는 디센더와 내림차순 아래는 자 사이트에 선입니다.
+텍스트 문자열을 지정 하면, X 및 Y 좌표를 시작 하려면 텍스트 인 및 `SKPaint` 개체입니다. X 좌표는 텍스트의 왼쪽이 배치 되는 위치를 지정 하지만 감시 합니다. Y 좌표는 텍스트 *기준선* 의 위치를 지정 합니다. 그 어느 때 인라인된 종이에 손으로 작성 했다면, 기준 (예: g, p, q 및 y에 해당)는 디센더와 내림차순 아래는 자 사이트에 선입니다.
 
 `SKPaint` 개체를 사용 하면 텍스트, 글꼴 패밀리 및 텍스트 크기의 색을 지정할 수 있습니다. 기본적으로 [ `TextSize` ](xref:SkiaSharp.SKPaint.TextSize) 속성이 휴대폰과 같은 고해상도 장치에서 작은 텍스트의 결과 12의 값입니다. 가장 간단한 응용 프로그램을 제외 해야 표시 하는 텍스트의 크기에 대 한 정보입니다. `SKPaint` 클래스 정의 [ `FontMetrics` ](xref:SkiaSharp.SKPaint.FontMetrics) 속성과 여러 [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) 메서드를 하지만 덜 멋진 요구 사항에는 [ `FontSpacing` ](xref:SkiaSharp.SKPaint.FontSpacing) 속성은 텍스트의 연속 줄 간격에 대 한 권장 되는 값을 제공합니다.
 
@@ -167,4 +167,4 @@ canvas.DrawOval(rect, paint);
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

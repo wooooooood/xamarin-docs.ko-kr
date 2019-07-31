@@ -7,16 +7,16 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 54f6c8b94a1abdfcc3be9a86e179e766c417232b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61290206"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655375"
 ---
 # <a name="skiasharp-image-filters"></a>SkiaSharp 이미지 필터
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 이미지 필터는 픽셀 이미지를 구성 하는 모든 색 비트에서 작동 하는 효과입니다. 이 문서에 설명 된 대로 알파 채널 에서만 작동 하는 마스크 필터 보다 더 많은 [ **SkiaSharp 마스크 필터**](mask-filters.md)합니다. 이미지 필터를 사용 하려면 설정 합니다 [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) 클래스의 정적 메서드 중 하나를 호출 하 여 만든 합니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "61290206"
 
 ## <a name="blurring-vector-graphics-and-bitmaps"></a>벡터 그래픽 및 비트맵을 흐리게 표시
 
-만든 흐림 효과 [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) 정적 메서드가에 흐리게 방법에 대 한 중요 한 장점 합니다 [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) 클래스: 이미지 필터는 전체 비트맵을 흐리게 표시 수 있습니다. 메서드가 다음 구문:
+[`SKImageFilter.CreateBlur`](xref:SkiaSharp.SKImageFilter.CreateBlur*) 정적 메서드에 의해 생성 되는 흐림 효과는 [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) 클래스의 흐리게 메서드에 비해 크게 이점이 있습니다. 이미지 필터는 전체 비트맵을 흐리게 만들 수 있습니다. 메서드가 다음 구문:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -38,7 +38,7 @@ public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
 
 이 메서드에 두 시그마 값 &mdash; 가로 방향 및 세로 방향에 대 한 두 번째 흐림 정도 대 한 첫 번째입니다. 세 번째 선택적 인수로 다른 이미지 필터를 지정 하 여 이미지 필터 연계할 수 있습니다. 자르기 사각형을 지정할 수도 있습니다.
 
-**이미지 실험 흐리게 표시** 페이지에 [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 포함 하는 두 `Slider` 흐림 효과의 다양 한 수준을 설정 시험해 볼 수 있는 뷰:
+**이미지 실험 흐리게 표시** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 포함 하는 두 `Slider` 흐림 효과의 다양 한 수준을 설정 시험해 볼 수 있는 뷰:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-첫 번째 인수 `SKImageFilter.CreateDistantLitDiffuse` 광원의 방향입니다. 양의 X 및 Y 좌표 광원 오른쪽 및 아래쪽 뾰족한 임을 나타냅니다. 화면에 양수 Z 좌표 지점입니다. XAML 파일을 사용 하면 음수 Z 값을 선택할 수 있습니다 하지만 볼 수 있도록에 작업이 수행 됩니다. 개념적으로 음의 Z 좌표는 화면 가리키도록 light을 발생 합니다. 항목에 대 한 다른 다음 작은 음수 값에 조명 효과 작동이 중지 됩니다.
+첫 번째 인수 `SKImageFilter.CreateDistantLitDiffuse` 광원의 방향입니다. 양의 X 및 Y 좌표 광원 오른쪽 및 아래쪽 뾰족한 임을 나타냅니다. 화면에 양수 Z 좌표 지점입니다. XAML 파일을 사용 하 여 음수 Z 값을 선택할 수 있지만이는 어떤 일이 발생 하는지 확인할 수 있습니다. 개념적으로 음수 Z 좌표를 지정 하면 조명이 화면에서 제외 됩니다. 항목에 대 한 다른 다음 작은 음수 값에 조명 효과 작동이 중지 됩니다.
 
 `surfaceScale` 인수는-1에서 1까지 수 있습니다. (높거나 낮은 값 있을 영향을 주지 않습니다.) 이들은 그래픽 개체 (이 경우 텍스트 문자열) 캔버스 화면에서 거리를 나타내는 Z 축에 상대 값입니다. 캔버스의 화면 위의 텍스트 문자열을 발생 시키는 음수 및 양수 값을 캔버스에 들어온 사용 합니다.
 
@@ -439,9 +439,9 @@ public partial class DistantLightExperimentPage : ContentPage
 
 Android 스크린 샷에 Z 값은 0으로, 아래쪽 및 오른쪽에 밝은 가리키고 있음을 의미 합니다. 백그라운드 켜지는 되지 않습니다 및 텍스트 문자열의 화면 켜지는 되지 중 하나입니다. 밝은 매우 미묘한 효과 텍스트의에 지만 영향을 줍니다.
 
-다른 방법은 볼록 및 음각 텍스트 문서에서 설명 했습니다 [The 변환 변환](../transforms/translate.md): 텍스트 문자열은 서로 약간 오프셋 되는 다양 한 색으로 두 번 표시 됩니다.
+볼록 및 오목 텍스트에 대 한 대체 방법은 변환 [변환](../transforms/translate.md)문서에서 설명 했습니다. 텍스트 문자열은 서로 약간 오프셋 되는 다른 색을 사용 하 여 두 번 표시 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

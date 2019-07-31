@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: b00452d348072060ab0e31a64fdb8cd4eb177471
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 7a6ea06d77b8eb170f4165bfc8cf2fd643d56406
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926973"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651660"
 ---
 # <a name="passing-arguments-in-xaml"></a>XAML의 인수 전달
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 
 _이 문서에서는 기본이 아닌 생성자, 팩터리 메서드를 호출 하 고 제네릭 인수의 형식을 지정 하 여 인수를 전달할 수 있는 XAML 특성을 사용 하는 방법을 보여 줍니다._
 
@@ -173,5 +173,5 @@ _이 문서에서는 기본이 아닌 생성자, 팩터리 메서드를 호출 �
 ## <a name="related-links"></a>관련 링크
 
 - [XAML 네임스페이스](~/xamarin-forms/xaml/namespaces.md)
-- [생성자 인수 전달 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
-- [팩터리 메서드 호출 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)
+- [생성자 인수 전달 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
+- [팩터리 메서드 호출 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)

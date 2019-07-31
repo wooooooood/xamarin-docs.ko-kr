@@ -1,6 +1,6 @@
 ---
 title: 플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
-description: 이 문서에는 XAML 스타일을 사용 하 여 플랫폼 간 Xamarin.Forms 응용 프로그램 스타일을 지정 하는 방법을 설명 합니다.
+description: 이 문서에서는 XAML 스타일을 사용 하 여 플랫폼 간 Xamarin Forms 응용 프로그램의 스타일을 만드는 방법을 설명 합니다.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
@@ -9,37 +9,37 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 1b68afc1f3d3c57a5c336e9d30c97ce2375acb9f
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: e26a71ad72b557a27841bfee1d26001126e2a2a2
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864342"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654659"
 ---
-# <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 응용 프로그램 스타일
+# <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin Forms 응용 프로그램 스타일
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
-이 빠른 시작에서는 배웁니다 방법:
+이 빠른 시작에서는 다음 방법에 대해 알아봅니다.
 
-- XAML 스타일을 사용 하 여 Xamarin.Forms 응용 프로그램 스타일을 지정 합니다.
+- XAML 스타일을 사용 하 여 Xamarin.ios 응용 프로그램 스타일을 만듭니다.
 
-빠른 시작에서는 XAML 스타일을 사용 하 여 플랫폼 간 Xamarin.Forms 응용 프로그램 스타일을 지정 하는 방법을 설명 합니다. 최종 애플리케이션은 다음과 같습니다.
+퀵 스타트는 XAML 스타일을 사용 하 여 플랫폼 간 Xamarin.ios 응용 프로그램의 스타일을 만드는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[![](styling-images/screenshots1-sml.png "페이지 정보")](styling-images/screenshots1.png#lightbox "노트가")
-[![](styling-images/screenshots2-sml.png "항목 페이지를 참고")](styling-images/screenshots2.png#lightbox "참고 항목 페이지")
+[ ![(styling-images/screenshots1-sml.png " ")]메모 페이지] (styling-images/screenshots1.png#lightbox "메모 페이지") 참고 항목 페이지(styling-images/screenshots2.png#lightbox "메모 입력 페이지") [ ![(styling-images/screenshots2-sml.png " ")]] 
+
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
-성공적으로 완료 해야 합니다 [이전 빠른 시작](database.md) 이 빠른 시작을 시도 하기 전에 합니다. 또는 다운로드 합니다 [이전 빠른 시작 샘플](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/) 이 빠른 시작에 대 한 시작 점으로 사용 합니다.
+이 빠른 시작을 시도 하기 전에 [이전 퀵 스타트](database.md) 를 성공적으로 완료 해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) 을 다운로드 하 고이 빠른 시작의 시작 지점으로 사용 합니다.
 
 ::: zone pivot="windows"
 
 ## <a name="update-the-app-with-visual-studio"></a>Visual Studio를 사용하여 앱 업데이트
 
-1. Visual Studio를 시작 하 고 정보 솔루션을 엽니다.
+1. Visual Studio를 시작 하 고 Notes 솔루션을 엽니다.
 
-2. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **App.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+2. **솔루션 탐색기**의 **Notes** 프로젝트에서 **app.xaml** 을 두 번 클릭 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -77,11 +77,11 @@ ms.locfileid: "67864342"
     </Application>
     ```
 
-    이 코드는 정의 [ `Thickness` ](xref:Xamarin.Forms.Thickness) 값, 일련의 [ `Color` ](xref:Xamarin.Forms.Color) 값 및에 대 한 암시적 스타일 합니다 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 및 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). 응용 프로그램 수준에 있는 참고는 이러한 스타일 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 응용 프로그램 전체에서 사용할 수 있습니다. XAML 스타일 지정에 대 한 자세한 내용은 참조 하세요. [스타일](deepdive.md#styling) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    이 코드는 [`Thickness`](xref:Xamarin.Forms.Thickness) [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 및 [`Color`](xref:Xamarin.Forms.Color) [에`ContentPage`](xref:Xamarin.Forms.ContentPage)대 한 값, 일련의 값 및 암시적 스타일을 정의 합니다. 응용 프로그램 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 있는 이러한 스타일은 응용 프로그램 전체에서 사용 될 수 있습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
-    변경 내용을 저장 **App.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
+    **Ctrl + S**를 눌러 변경 내용을 **app.xaml** 에 저장 하 고 파일을 닫습니다.
 
-3. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NotesPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+3. **솔루션 탐색기**의 **Notes** 프로젝트에서 **NotesPage** 를 두 번 클릭 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -116,11 +116,11 @@ ms.locfileid: "67864342"
     </ContentPage>
     ```
 
-    이 코드에 대 한 암시적 스타일을 추가 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 페이지 수준 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 가져오거나 설정 합니다 `ListView.Margin` 속성 응용 프로그램 수준에서 정의 된 값을 `ResourceDictionary` . 합니다 `ListView` 암시적 스타일 페이지 수준에 추가 되었습니다 `ResourceDictionary`이므로 사용 되는 `NotesPage`합니다. XAML 스타일 지정에 대 한 자세한 내용은 참조 하세요. [스타일](deepdive.md#styling) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    이 [`ListView`](xref:Xamarin.Forms.ListView) 코드는의 암시적 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 하 고 `ListView.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. 암시적 스타일은에서 `ResourceDictionary` `NotesPage`사용 되기 때문에 페이지 수준에 추가 되었습니다. `ListView` XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
-    변경 내용을 저장 **NotesPage.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
+    **Ctrl + S**를 눌러 변경 내용을 **NotesPage** 에 저장 하 고 파일을 닫습니다.
 
-4. **솔루션 탐색기**의 **노트** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+4. **솔루션 탐색기**의 **Notes** 프로젝트에서 **NoteEntryPage** 를 두 번 클릭 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -165,22 +165,22 @@ ms.locfileid: "67864342"
     </ContentPage>
     ```
 
-    이 코드에 대 한 암시적 스타일을 추가 합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 및 [ `Button` ](xref:Xamarin.Forms.Button) 페이지 수준 보기 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 설정 하 고는 `StackLayout.Margin` 응용 프로그램 수준에 정의 된 값으로 속성 `ResourceDictionary`합니다. `Editor` 하 고 `Button` 암시적 스타일 페이지 수준에 추가 되었습니다 `ResourceDictionary`이므로에서 사용 됩니다는 `NoteEntryPage`. XAML 스타일 지정에 대 한 자세한 내용은 참조 하세요. [스타일](deepdive.md#styling) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    이 코드는 페이지 [`Editor`](xref:Xamarin.Forms.Editor) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [`Button`](xref:Xamarin.Forms.Button) 수준에`ResourceDictionary`및 뷰에 대 한 암시적 스타일을 추가 하 고 속성을응용프로그램수준에정의된값으로설정합니다.`StackLayout.Margin` 및 암시적 스타일 `ResourceDictionary`은 에서만 사용 `NoteEntryPage`되므로 페이지 수준에 추가 되었습니다. `Button` `Editor` XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
-    변경 내용을 저장 **NoteEntryPage.xaml** 키를 눌러 **CTRL + S**, 파일을 닫습니다.
+    **Ctrl + S**를 눌러 변경 내용을 **NoteEntryPage** 에 저장 하 고 파일을 닫습니다.
 
-5. 빌드 및 각 플랫폼에서 프로젝트를 실행 합니다. 자세한 내용은 [빠른 시작을 작성](single-page.md#building-the-quickstart)합니다.
+5. 각 플랫폼에서 프로젝트를 빌드하고 실행 합니다. 자세한 내용은 [빠른 시작 빌드](single-page.md#building-the-quickstart)를 참조 하세요.
 
-    에 **NotesPage** 키를 누릅니다를 **+** 단추를를 **NoteEntryPage** 메모를 입력 합니다. 각 페이지에서 이전 빠른 시작에서 스타일 어떻게 변경 되었는지 확인 합니다.
+    **NotesPage** 에서 **+** 단추를 눌러 **NoteEntryPage** 로 이동 하 고 메모를 입력 합니다. 각 페이지에서 이전 퀵 스타트에서 스타일을 변경 하는 방법을 살펴봅니다.
 
 ::: zone-end
 ::: zone pivot="macos"
 
 ## <a name="update-the-app-with-visual-studio-for-mac"></a>Mac용 Visual Studio를 사용하여 앱 업데이트
 
-1. Mac 용 Visual Studio를 시작 하 고 정보 프로젝트를 엽니다.
+1. Mac용 Visual Studio를 시작 하 고 Notes 프로젝트를 엽니다.
 
-2. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **App.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+2. **Solution Pad**의 **Notes** 프로젝트에서 **app.xaml** 을 두 번 클릭 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -218,11 +218,11 @@ ms.locfileid: "67864342"
     </Application>
     ```
 
-    이 코드는 정의 [ `Thickness` ](xref:Xamarin.Forms.Thickness) 값, 일련의 [ `Color` ](xref:Xamarin.Forms.Color) 값 및에 대 한 암시적 스타일 합니다 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 및 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). 응용 프로그램 수준에 있는 참고는 이러한 스타일 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 응용 프로그램 전체에서 사용할 수 있습니다. XAML 스타일 지정에 대 한 자세한 내용은 참조 하세요. [스타일](deepdive.md#styling) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    이 코드는 [`Thickness`](xref:Xamarin.Forms.Thickness) [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 및 [`Color`](xref:Xamarin.Forms.Color) [에`ContentPage`](xref:Xamarin.Forms.ContentPage)대 한 값, 일련의 값 및 암시적 스타일을 정의 합니다. 응용 프로그램 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 있는 이러한 스타일은 응용 프로그램 전체에서 사용 될 수 있습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
-    변경 내용을 저장 **App.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
+    **파일 > 저장** (또는  **&#8984; + S**를 눌러)을 선택 하 여 변경 내용을 **app.xaml** 에 저장 하 고 파일을 닫습니다.
 
-3. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NotesPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+3. **Solution Pad**의 **Notes** 프로젝트에서 **NotesPage** 를 두 번 클릭 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -257,11 +257,11 @@ ms.locfileid: "67864342"
     </ContentPage>
     ```
 
-    이 코드에 대 한 암시적 스타일을 추가 합니다 [ `ListView` ](xref:Xamarin.Forms.ListView) 페이지 수준 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 가져오거나 설정 합니다 `ListView.Margin` 속성 응용 프로그램 수준에서 정의 된 값을 `ResourceDictionary` . 합니다 `ListView` 암시적 스타일 페이지 수준에 추가 되었습니다 `ResourceDictionary`이므로 사용 되는 `NotesPage`합니다. XAML 스타일 지정에 대 한 자세한 내용은 참조 하세요. [스타일](deepdive.md#styling) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    이 [`ListView`](xref:Xamarin.Forms.ListView) 코드는의 암시적 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 하 고 `ListView.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. 암시적 스타일은에서 `ResourceDictionary` `NotesPage`사용 되기 때문에 페이지 수준에 추가 되었습니다. `ListView` XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
-    변경 내용을 저장 **NotesPage.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
+    **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **NotesPage** 에 저장 하 고 파일을 닫습니다.
 
-4. 에 **Solution Pad**의 **정보** 프로젝트를 두 번 클릭 **NoteEntryPage.xaml** 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
+4. **Solution Pad**의 **Notes** 프로젝트에서 **NoteEntryPage** 를 두 번 클릭 하 여 엽니다. 그런 다음 기존 코드를 다음 코드로 바꿉니다.
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -306,29 +306,29 @@ ms.locfileid: "67864342"
     </ContentPage>
     ```
 
-    이 코드에 대 한 암시적 스타일을 추가 합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 및 [ `Button` ](xref:Xamarin.Forms.Button) 페이지 수준 보기 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 설정 하 고는 `StackLayout.Margin` 응용 프로그램 수준에 정의 된 값으로 속성 `ResourceDictionary`합니다. `Editor` 하 고 `Button` 암시적 스타일 페이지 수준에 추가 되었습니다 `ResourceDictionary`이므로에서 사용 됩니다는 `NoteEntryPage`. XAML 스타일 지정에 대 한 자세한 내용은 참조 하세요. [스타일](deepdive.md#styling) 에 [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)합니다.
+    이 코드는 페이지 [`Editor`](xref:Xamarin.Forms.Editor) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) [`Button`](xref:Xamarin.Forms.Button) 수준에`ResourceDictionary`및 뷰에 대 한 암시적 스타일을 추가 하 고 속성을응용프로그램수준에정의된값으로설정합니다.`StackLayout.Margin` 및 암시적 스타일 `ResourceDictionary`은 에서만 사용 `NoteEntryPage`되므로 페이지 수준에 추가 되었습니다. `Button` `Editor` XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
-    변경 내용을 저장 **NoteEntryPage.xaml** 를 선택 하 여 **파일 > 저장** (또는 키를 눌러  **&#8984; + S**), 파일을 닫습니다.
+    **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **NoteEntryPage** 에 저장 하 고 파일을 닫습니다.
 
-5. 빌드 및 각 플랫폼에서 프로젝트를 실행 합니다. 자세한 내용은 [빠른 시작을 작성](single-page.md#building-the-quickstart)합니다.
+5. 각 플랫폼에서 프로젝트를 빌드하고 실행 합니다. 자세한 내용은 [빠른 시작 빌드](single-page.md#building-the-quickstart)를 참조 하세요.
 
-    에 **NotesPage** 키를 누릅니다를 **+** 단추를를 **NoteEntryPage** 메모를 입력 합니다. 각 페이지에서 이전 빠른 시작에서 스타일 어떻게 변경 되었는지 확인 합니다.
+    **NotesPage** 에서 **+** 단추를 눌러 **NoteEntryPage** 로 이동 하 고 메모를 입력 합니다. 각 페이지에서 이전 퀵 스타트에서 스타일을 변경 하는 방법을 살펴봅니다.
 
 ::: zone-end
 
 
 ## <a name="next-steps"></a>다음 단계
 
-이 빠른 시작에서 학습 하는 방법.
+이 빠른 시작에서는 다음 방법에 대해 알아보았습니다.
 
-- XAML 스타일을 사용 하 여 Xamarin.Forms 응용 프로그램 스타일을 지정 합니다.
+- XAML 스타일을 사용 하 여 Xamarin.ios 응용 프로그램 스타일을 만듭니다.
 
-Xamarin.Forms를 사용 하 여 응용 프로그램 개발의 기본 사항에 대 한 자세한 내용은 빠른 시작 심층 분석을 계속 진행 하세요.
+Xamarin.ios를 사용 하 여 응용 프로그램을 개발 하는 기본 사항에 대해 자세히 알아보려면 빠른 시작 심층 정보를 계속 확인 하세요.
 
 > [!div class="nextstepaction"]
 > [다음](deepdive.md)
 
 ## <a name="related-links"></a>관련 링크
 
-- [노트(샘플)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
-- [Xamarin.Forms 빠른 시작에 대 한 심층 정보](deepdive.md)
+- [노트(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [Xamarin.ios 빠른 시작 심층 살펴보기](deepdive.md)

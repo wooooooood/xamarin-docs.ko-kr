@@ -7,16 +7,16 @@ ms.assetid: B3E06572-8E2A-49FA-90D1-444C394CD516
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2018
-ms.openlocfilehash: 121d505d578aa20e86977c0da5d69626bbad1f53
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: da923a3542a57b6150e536ecb6649140e57c81e1
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61289307"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655353"
 ---
 # <a name="skiasharp-effects"></a>SkiaSharp 효과
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 SkiaSharp [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스의 일반 용어에서 분류할 수 있는 6 개의 속성을 정의 합니다. _효과_합니다. 이러한 값은 어떤 방식으로든에서 그래픽의 기본 표시 크기를 변경 하는 속성입니다. SkiaSharp 효과 6 개의 범주로 구분 됩니다.
 
@@ -44,9 +44,9 @@ SkiaSharp [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스의 일반 용어에서
 
 설정 합니다 [ `ColorFilter` ](xref:SkiaSharp.SKPaint.ColorFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKColorFilter` ](xref:SkiaSharp.SKColorFilter) 행렬 변환 또는 테이블을 사용 하 여 색을 변경 하려면.
 
-이러한 문서에 대 한 모든 샘플 코드는 [ **SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)합니다. 홈 페이지에서 선택 **SkiaSharp 효과**합니다.
+이러한 문서에 대 한 모든 샘플 코드는 [ **SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)합니다. 홈 페이지에서 선택 **SkiaSharp 효과**합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

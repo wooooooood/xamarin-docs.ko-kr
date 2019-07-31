@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 43497797fe1e740787e531997a62a0ee11deceec
-ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
+ms.openlocfilehash: 7d758d4cb9906542d388f3ced185a0d0bcba5fcd
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388488"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651537"
 ---
 # <a name="introduction-to-macos-sierra"></a>macOS Sierra 소개
 
@@ -123,7 +123,7 @@ macOS Sierra에는 연결 된 장치를 비롯 한 여러 원본의 로그 데�
 
 macOS Sierra는 핵심 그래픽, 핵심 이미지, 금속 및 AVFoundation과 같은 프레임 워크를 포함 하 여 시스템 전체의 확장 범위 픽셀 형식 및 넓은 색 영역 색 공간에 대 한 지원을 확장 합니다. 넓은 색 표시를 사용 하는 장치에 대 한 지원은 전체 그래픽 스택에이 동작을 제공 하 여 추가로 줄어들 됩니다.
 
-또한는 새로운 확장 된 sRGB colorspace에서 작동 하도록 수정 되어 상당한 성능 손실 없이 광범위 한 색 gamuts 색을 더 쉽게 혼합할 수 있게 되었습니다.  `AppKit`
+또한는 새로운 확장 된 sRGB colorspace에서 작동 하도록 수정 되어 상당한 성능 손실 없이 광범위 한 색 gamuts 색을 더 쉽게 혼합할 수 있게 되었습니다. `AppKit`
 
 Apple은 넓은 색으로 작업할 때 다음과 같은 모범 사례를 제공 합니다.
 
@@ -153,5 +153,5 @@ Apple은 위에 나열 된 주요 프레임 워크 변경 및 추가 기능 외�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Mac 샘플](https://developer.xamarin.com/samples/mac/)
+- [Mac 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [MacOS 10.12의 새로운 기능](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

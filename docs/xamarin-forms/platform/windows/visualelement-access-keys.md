@@ -1,28 +1,28 @@
 ---
-title: Windows에서 VisualElement 액세스 키
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 VisualElement에 대 한 액세스 키를 지정 하는 Windows 플랫폼별을 사용 하는 방법을 설명 합니다.
+title: Windows의 VisualElement 액세스 키
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 VisualElement의 액세스 키를 지정 하는 Windows 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 771AF785-76B8-4372-89F5-E4D521D21E0C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ce1d682678c17bb24e7a4fd528c84554465c4fa6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926845"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656832"
 ---
-# <a name="visualelement-access-keys-on-windows"></a>Windows에서 VisualElement 액세스 키
+# <a name="visualelement-access-keys-on-windows"></a>Windows의 VisualElement 액세스 키
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-액세스 키는 터치를 통해 대신 키보드를 통해 앱의 표시 되는 UI를 사용 하 여 사용자가 신속 하 게 이동 하 고 상호 작용 하는 직관적인 방법을 제공 하 여 유용성 및 유니버설 Windows 플랫폼 (UWP)에서 앱의 액세스 가능성을 개선 하는 바로 가기 키 또는 마우스입니다. 이러한는 일반적으로 순차적으로 누르면 하나 이상의 영숫자 키 및 Alt 키의 조합입니다. 바로 가기 키는 단일 영문자를 사용 하는 액세스 키에 대 한 자동으로 지원 됩니다.
+액세스 키는 사용자가 터치를 사용 하는 대신 키보드를 통해 앱의 시각적 UI를 신속 하 게 탐색 하 고 상호 작용할 수 있는 직관적인 방법을 제공 하 여 유니버설 Windows 플랫폼 (UWP)에서 앱의 유용성 및 접근성을 개선 하는 바로 가기 키입니다. 또는 마우스. 이러한는 일반적으로 순차적으로 누르면 하나 이상의 영숫자 키 및 Alt 키의 조합입니다. 바로 가기 키는 단일 영문자를 사용 하는 액세스 키에 대 한 자동으로 지원 됩니다.
 
 액세스 키 팁 액세스 키를 포함 하는 컨트롤 옆에 표시 되는 배지 부동 됩니다. 각 액세스 키 팁에는 연결된 된 컨트롤을 활성화 하는 영숫자 키를 포함 합니다. 사용자가 Alt 키를 누를 때 액세스 키 팁 표시 됩니다.
 
-이 UWP 플랫폼별을 사용 하 여에 대 한 액세스 키를 지정 하는 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)합니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) 영숫자 값을 하 고 필요에 따라 설정 하 여 연결 된 속성을 [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) 합니다 로연결된속성[ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) 열거형을 [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) 연결 된 속성을 `double`, 및 [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) 연결 된 속성을 `double`:
+이 UWP 플랫폼 전용은에 대 한 [`VisualElement`](xref:Xamarin.Forms.VisualElement)액세스 키를 지정 하는 데 사용 됩니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.AccessKey` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyProperty) 영숫자 값을 하 고 필요에 따라 설정 하 여 연결 된 속성을 [ `VisualElement.AccessKeyPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyPlacementProperty) 합니다 로연결된속성[ `AccessKeyPlacement` ](xref:Xamarin.Forms.AccessKeyPlacement) 열거형을 [ `VisualElement.AccessKeyHorizontalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyHorizontalOffsetProperty) 연결 된 속성을 `double`, 및 [ `VisualElement.AccessKeyVerticalOffset` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.VisualElement.AccessKeyVerticalOffsetProperty) 연결 된 속성을 `double`:
 
 ```xaml
 <TabbedPage ...
@@ -104,6 +104,6 @@ button4.On<Windows>()
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

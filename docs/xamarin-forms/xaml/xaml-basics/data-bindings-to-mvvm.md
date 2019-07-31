@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 11bca4bc74316f87ab7b329c897efcd4b768bc03
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61174578"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657114"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5장. 데이터 바인딩부터 MVVM까지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _MVVM(Model-View-ViewModel) 아키텍처 패턴은 XAML을 염두에 두고 고안되었습니다. 해당 패턴은 세 가지 소프트웨어 계층(뷰라고 하는 XAML 사용자 인터페이스, 모델이라고 하는 기본 데이터, ViewModel이라고 하는 뷰와 모델 간의 중개자)으로 구분합니다. 종종 뷰와 ViewModel은 XAML 파일에 정의된 데이터 바인딩을 통해 연결됩니다. 뷰의 BindingContext는 일반적으로 ViewModel의 인스턴스입니다._
 
@@ -35,7 +35,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` 매우 특별 한 속성이입니다. 설정 하는 경우는 `BindingContext` 해당 요소의 모든 자식에 의해 상속 된 요소에 있습니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 여기에는 해당 개체의 속성에 대한 간단한 바인딩이 포함될 수 있습니다.
+`BindingContext`는 매우 특수 한 속성입니다. 요소 `BindingContext` 에 대해를 설정 하는 경우 해당 요소의 모든 자식에 의해 상속 됩니다. 즉, `StackLayout`의 모든 자식은 해당 `BindingContext`와 동일한 것을 가지며, 여기에는 해당 개체의 속성에 대한 간단한 바인딩이 포함될 수 있습니다.
 
 **One-Shot DateTime** 프로그램에서 두 개의 자식은 `DateTime` 값의 속성에 바인딩을 포함하고 있지만, 다른 두 자식은 바인딩 경로가 없는 것으로 보입니다. 이는 다음과 같이 `DateTime` 값 자체가 `StringFormat`에 사용됨을 의미합니다.
 
@@ -298,7 +298,7 @@ namespace XamlSamples
 
 ## <a name="commanding-with-viewmodels"></a>ViewModel을 사용하여 명령 실행
 
-대부분의 경우에서 MVVM 패턴은 데이터 항목의 조작에 제한 됩니다. ViewModel에서 뷰 병렬 데이터 개체의 사용자 인터페이스 개체입니다.
+대부분의 경우 MVVM 패턴은 데이터 항목을 조작 하는 것으로 제한 됩니다. 의 사용자 인터페이스 개체는 ViewModel의 병렬 데이터 개체를 표시 합니다.
 
 하지만 뷰에는 ViewModel에서 다양한 작업을 실행하는 단추가 포함되는 경우가 있습니다. 그러나 ViewModel은 특정 사용자 인터페이스 패러다임을 ViewModel에 묶어주기 때문에 `Clicked` 처리기를 포함시키면 안됩니다.
 
@@ -581,7 +581,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>탐색 메뉴 구현
 
-해당 시리즈 글의 모든 소스 코드가 들어있는 [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/) 프로그램은 해당 홈 페이지에 대한 ViewModel을 사용합니다. 해당 ViewModel은 샘플 페이지, 제목 및 간단한 설명의 유형을 포함하는 `Type`, `Title` 및 `Description`이라는 세 가지 속성을 가진 짧은 클래스 정의입니다. 또한 ViewModel은 프로그램의 모든 페이지 컬렉션인 `All`이라는 정적 속성을 정의합니다.
+해당 시리즈 글의 모든 소스 코드가 들어있는 [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) 프로그램은 해당 홈 페이지에 대한 ViewModel을 사용합니다. 해당 ViewModel은 샘플 페이지, 제목 및 간단한 설명의 유형을 포함하는 `Type`, `Title` 및 `Description`이라는 세 가지 속성을 가진 짧은 클래스 정의입니다. 또한 ViewModel은 프로그램의 모든 페이지 컬렉션인 `All`이라는 정적 속성을 정의합니다.
 
 ```csharp
 public class PageDataViewModel
@@ -702,7 +702,7 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 > [!VIDEO https://youtube.com/embed/DYRLcqG2BAY]
 
-**Xamarin Evolve 2016: Xamarin.Forms 및 Prism을 사용 하 여 간단 하 게 MVVM**
+**Xamarin 진화 2016: MVVM 및 프리즘를 사용 하 여 간단한 구성**
 
 ## <a name="summary"></a>요약
 
@@ -711,7 +711,7 @@ XAML은 특히 데이터 바인딩 및 MVVM을 사용할 때 Xamarin.Forms 응�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1부. XAML 시작](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2부. 필수 XAML 구문](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

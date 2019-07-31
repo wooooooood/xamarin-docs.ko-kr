@@ -1,56 +1,56 @@
 ---
 title: MonoGame의 3D 좌표
-description: 3D 게임 개발에 중요 한 단계는 3D 좌표 시스템을 이해 합니다. MonoGame 다양 한 위치, 방향, 지정 및 3D 공간에서 개체 크기 조정에 대 한 클래스를 제공 합니다.
+description: 3d 좌표 시스템을 이해 하는 것은 3D 게임 개발의 중요 한 단계입니다. MonoGame는 3D 공간에서 개체의 위치 지정, 방향 지정 및 크기 조정에 사용할 수 있는 여러 클래스를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: dc21228f1daa74a90ff8f0ea346bc01b109f0987
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f2e65439084d4e89ae529bda79c2cb2739f1529d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229409"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656209"
 ---
 # <a name="3d-coordinates-in-monogame"></a>MonoGame의 3D 좌표
 
-_3D 게임 개발에 중요 한 단계는 3D 좌표 시스템을 이해 합니다. MonoGame 다양 한 위치, 방향, 지정 및 3D 공간에서 개체 크기 조정에 대 한 클래스를 제공 합니다._
+_3d 좌표 시스템을 이해 하는 것은 3D 게임 개발의 중요 한 단계입니다. MonoGame는 3D 공간에서 개체의 위치 지정, 방향 지정 및 크기 조정에 사용할 수 있는 여러 클래스를 제공 합니다._
 
-3D 게임 개발 3D 좌표계에서 개체를 조작 하는 방법 이해를 해야 합니다. 이 연습에서는 시각적 개체 (특히 모델)을 조작 하는 방법을 설명 합니다. 3D 카메라 클래스를 만들려면 모델을 제어의 개념에서 빌드 해 보겠습니다.
+3D 게임을 개발 하려면 3D 좌표계에서 개체를 조작 하는 방법을 이해 해야 합니다. 이 연습에서는 시각적 개체 (특히 모델)를 조작 하는 방법을 다룹니다. 3D 카메라 클래스를 만들기 위한 모델을 제어 하는 개념을 기반으로 합니다.
 
-제시 된 개념 선형 대 수에서 발생 하지만 강력한 수학 배경이 없는 모든 사용자가 자신의 게임에서 이러한 개념을 적용할 수 있도록 실용적인을 알아보겠습니다.
+제시 된 개념은 선형 대 수에서 시작 되지만 강력한 수학 배경이 없는 모든 사용자는 자신의 게임에서 이러한 개념을 적용할 수 있습니다.
 
-저희 다루고 있습니다 다음 항목:
+다음 항목을 다룹니다.
 
 - 프로젝트 만들기
 - 로봇 엔터티 만들기
-- 로봇 엔터티를 이동합니다.
+- 로봇 엔터티 이동
 - 행렬 곱
-- 카메라 엔터티를 만들기
-- 입력을 사용 하 여 카메라를 이동합니다.
+- 카메라 엔터티 만들기
+- 입력으로 카메라 이동
 
-완료 되 면 원와 터치 입력 하 여 제어할 수 있는 카메라에서 이동 하는 로봇을 사용 하 여 프로젝트를 해야 합니다.
+완료 되 면 원형으로 이동 하는 로봇 및 터치식 입력으로 제어할 수 있는 카메라를 포함 하는 프로젝트가 제공 됩니다.
 
-![](part3-images/image1.gif "완료 되 면 앱 원와 터치 입력 하 여 제어할 수 있는 카메라에서 이동 하는 로봇을 사용 하 여 프로젝트를 포함 됩니다.")
+![](part3-images/image1.gif "완료 되 면 앱은 원에서 이동 하는 로봇이 있는 프로젝트와 터치식 입력으로 제어할 수 있는 카메라를 포함 합니다.")
 
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
-이 연습에서는 3D 공간에서 개체를 이동에 중점을 둡니다. 렌더링 모델 및 꼭 짓 점 배열에 대 한 프로젝트를 사용 하 여 먼저 [여기서 찾을 수 있는](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/)합니다. 다운로드 한 후 압축을 풀고 실행 한 다음 표시 되도록 프로젝트를 엽니다.
+이 연습에서는 3D 공간에서 개체를 이동 하는 방법을 집중적으로 설명 합니다. [여기에서 찾을 수 있는](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/)모델 및 꼭 짓 점 배열의 렌더링을 위한 프로젝트를 시작 합니다. 다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하는지 확인 하 고 다음을 확인 해야 합니다.
 
-![](part3-images/image2.png "다운로드 한 후 압축을 풀고 실행 되 고이 보기를 표시할 수 있도록 프로젝트를 엽니다")
+![](part3-images/image2.png "다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하 고이 보기를 표시 해야 합니다.")
 
 
 ## <a name="creating-a-robot-entity"></a>로봇 엔터티 만들기
 
-만들겠습니다 주위는 로봇을 이동 하기 시작 하기 전에 `Robot` 그리기 및 이동에 대 한 논리를 포함 하는 클래스입니다. 게임 개발자에 게가이 캡슐화 논리 및 데이터의 참조를 *엔터티*합니다.
+로봇을 이동 하기 전에 그리기 및 이동에 대 한 논리 `Robot` 를 포함 하는 클래스를 만듭니다. 게임 개발자는 이러한 논리 및 데이터 캡슐화를 *엔터티로*지칭 합니다.
 
-새 빈 클래스 파일을 추가 합니다 **MonoGame3D** 이식 가능한 클래스 라이브러리 (플랫폼 특정 ModelAndVerts.Android 제외). 이름을 **로봇** 누릅니다 **새로 만들기**:
+**MonoGame3D** 이식 가능한 클래스 라이브러리에 비어 있는 새 클래스 파일을 추가 합니다 (플랫폼별 ModelAndVerts. Android가 아님). 이름을 **로봇이** 로, **새로 만들기**를 클릭 합니다.
 
-![](part3-images/image3.png "로봇을 이름을 지정 하 고 새로 만들기를 클릭 합니다.")
+![](part3-images/image3.png "이름을 로봇이로, 새로 만들기를 클릭 합니다.")
 
-수정 된 `Robot` 다음과 같이 클래스:
+클래스를 `Robot` 다음과 같이 수정 합니다.
 
 ```csharp
 using System;
@@ -107,7 +107,7 @@ namespace MonoGame3D
 }
 ```
 
-합니다 `Robot` 코드는 기본적으로 동일한 코드 `Game1` 그리기를 `Model`입니다. 검토할 `Model` 로드 하 고 그리기을 참조 하세요 [모델 작업에 대 한이 가이드](~/graphics-games/monogame/3d/part1.md)합니다. 모든 지금 제거할 수 있습니다는 `Model` 로드 하 고 코드에서 렌더링 `Game1`, 바꿉니다를 `Robot` 인스턴스:
+코드는 기본적으로를 `Model`그리는 `Game1` 데 사용할 때와 동일한 코드입니다. `Robot` 로드 및 그리기에 `Model` 대 한 검토는 [모델 작업에 대 한이 가이드](~/graphics-games/monogame/3d/part1.md)를 참조 하세요. 이제에서 `Model` `Game1`로드 및 렌더링 코드를 모두 제거 `Robot` 하 고 인스턴스로 바꿀 수 있습니다.
 
 ```csharp
 using Microsoft.Xna.Framework;
@@ -228,17 +228,17 @@ namespace MonoGame3D
 }
 ```
 
-코드를 실행 하는 경우는 이제 바닥에서 주로 그려지는 하나만 로봇을 사용 하 여 장면:
+이제 코드를 실행 하는 경우 주로 바닥에 그려진 로봇이 하나 뿐입니다.
 
-![](part3-images/image4.png "이제 코드를 실행 표시 장면 바닥에서 주로 그려지는 하나만 로봇을 사용 하 여")
+![](part3-images/image4.png "이제 코드를 실행 하는 경우 앱은 1 개의 로봇이 있는 장면을 표시 합니다 .이는 대부분 바닥에서 그려집니다.")
 
 ## <a name="moving-the-robot"></a>로봇 이동
 
-이제는 `Robot` 클래스 이동 논리 로봇을 추가할 수 있습니다. 이 경우 원 게임 시간에 따라 이동 하는 로봇을 만들어 보겠습니다. 이 문자 입력에 일반적으로 응답할 수 있습니다 또는 인공 지능, 하지만 3D 위치 및 회전을 탐색 하기 위한 환경을 제공 하므로 실제 게임에 대 한 다소으로 구현 됩니다.
+이제 `Robot` 클래스가 있으므로 로봇이 이동 논리를 추가할 수 있습니다. 이 경우에는 게임 시간에 따라 원으로 원을 이동 하 게 됩니다. 문자는 일반적으로 입력 또는 인공 지능에 응답할 수 있지만 3D 위치 지정 및 회전을 탐색 하기 위한 환경을 제공 하기 때문에 실제로 게임을 구현 하는 경우에는 다소 실용적이 지 않습니다.
 
-외부에서 필요한 유일한 정보는 `Robot` 클래스는 현재 게임입니다. 추가할 것을 `Update` 걸립니다 메서드는 `GameTime` 매개 변수입니다. 이 `GameTime` 매개 변수 사용 하 여 로봇의 최종 위치를 결정 하는 각도 변수 증가 하 게 됩니다.
+`Robot` 클래스 외부에서 필요한 유일한 정보는 현재 게임 시간입니다. 매개 변수를 `GameTime` 사용 `Update` 하는 메서드를 추가 합니다. 이 `GameTime` 매개 변수는 로봇의 최종 위치를 결정 하는 데 사용할 각도 변수를 증가 시키는 데 사용 됩니다.
 
-먼저 각도 필드를 추가 합니다 `Robot` 아래에 있는 클래스는 `model` 필드:
+먼저 `Robot` 필드`model` 아래의 클래스에 각도 필드를 추가 합니다.
 
 ```csharp
 public class Robot
@@ -250,7 +250,7 @@ public class Robot
     ...
 ```
 
- 이 값을 증가 수 이제는 `Update` 함수:
+ 이제 `Update` 함수에서이 값을 증가 시킬 수 있습니다.
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -260,7 +260,7 @@ public void Update(GameTime gameTime)
 }
 ```
 
-있는지 확인 해야 합니다 `Update` 에서 메서드는 `Game1.Update`:
+메서드가에서 `Update` `Game1.Update`호출 되는지 확인 해야 합니다.
 
 ```csharp
 protected override void Update(GameTime gameTime)
@@ -270,7 +270,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-물론, 각도 필드 아무 작업도 수행 하지 이때 – 사용 하는 코드를 작성 해야 합니다. 수정 합니다 `Draw` 메서드는 전 세계를 계산할 수 있습니다 `Matrix` 전용 메서드에서. 
+물론이 시점에서 각도 필드는 아무 작업도 수행 하지 않습니다 .이 필드를 사용 하는 코드를 작성 해야 합니다. 전용 메서드에서 세계 `Matrix` 를 `Draw` 계산할 수 있도록 메서드를 수정 합니다. 
 
 ```csharp
 public void Draw(Vector3 cameraPosition, float aspectRatio)
@@ -303,7 +303,7 @@ public void Draw(Vector3 cameraPosition, float aspectRatio)
 }
 ```
 
-구현에서는 다음에 `GetWorldMatrix` 의 메서드는 `Robot` 클래스:
+다음으로 `Robot` 클래스에서 메서드를 `GetWorldMatrix` 구현 합니다.
 
 ```csharp
 Matrix GetWorldMatrix()
@@ -325,59 +325,59 @@ Matrix GetWorldMatrix()
 }
 ```
 
-이 코드를 실행 한 결과를 원 안에 이동 로봇 발생 합니다.
+이 코드를 실행 하면 로봇이 원을 이동 합니다.
 
-![](part3-images/image5.gif "원에 이동 하는 로봇에서이 코드 결과 실행")
+![](part3-images/image5.gif "이 코드를 실행 하면 로봇이 원을 이동 합니다.")
 
 ## <a name="matrix-multiplication"></a>행렬 곱
 
-위의 코드를 만들어 로봇을 회전을 `Matrix` 에 `GetWorldMatrix` 메서드. `Matrix` (집합 위치)를 변환, 회전 및 크기 조정에 사용할 수 있는 16 float 값을 포함 하는 구조체 (크기 설정). 할당에서는 `effect.World` 속성인 알려주고 있습니다 내부 시스템 위치, 크기 및 모든 방향을 지정 하는 방법을 렌더링 그리기 수에서 오류가 발생 했습니다 (을 `Model` 또는 꼭 짓 점 기 하 도형). 
+위의 코드는 `Matrix` `GetWorldMatrix` 메서드에를 만들어 로봇을 회전 시킵니다. 구조체 `Matrix` 에는 변환 (위치 설정), 회전 및 크기 조정 (크기 설정)에 사용할 수 있는 16 개의 float 값이 포함 되어 있습니다. `effect.World` 속성을 할당 하는 경우 기본 렌더링 시스템에는 어떤 것을 배치 하 고 크기를 지정 하는 방법 `Model` (즉, 꼭 짓 점에서 또는 기 하 도형)을 지정 합니다. 
 
-다행 스럽게도 `Matrix` 구조체를 다양 한 일반적인 유형의 행렬의 생성을 간소화 하는 메서드를 포함 합니다. 위의 코드에서 사용 되는 첫 번째는 `Matrix.CreateTranslation`합니다. 수학 용어인 *번역* 지점에서 (또는 모델 여기서에서) 결과 작업에 참조 (회전 또는 크기 조정)와 같은 다른 수정 없이 다른 위치로 이동 합니다. 함수 변환에 대 한 X, Y 및 Z 값을 사용 합니다. 이 장면에서 하향식으로 보면이 `CreateTranslation` 메서드로 (격리)에서는 다음 작업을 수행 합니다.
+다행히 구조체에 `Matrix` 는 공용 형식의 매트릭스 생성을 간소화 하는 여러 메서드가 포함 되어 있습니다. 위의 코드에서 처음 사용 된는 `Matrix.CreateTranslation`입니다. 수치 용어 *변환은* 다른 위치 (예: 회전 또는 크기 조정) 없이 한 위치에서 다른 위치로 이동 하는 작업을 가리킵니다. 함수는 변환에 X, Y 및 Z 값을 사용 합니다. 위에서 아래로 `CreateTranslation` 장면을 보는 경우 (격리) 메서드는 다음을 수행 합니다.
 
-![](part3-images/image6.png "이 작업을 수행 하는 격리 된 상태에서 CreateTranslation 메서드")
+![](part3-images/image6.png "격리의 CreateTranslation 메서드는이 작업을 수행 합니다.")
 
-여기서 만든 두 번째 행렬은 회전 행렬을 사용 하 여는 `CreateRotationZ` 행렬입니다. 이 회전을 만드는 데 사용할 수 있는 세 가지 방법 중 하나입니다.
+만드는 두 번째 행렬은 `CreateRotationZ` 행렬을 사용 하는 회전 행렬입니다. 이는 회전을 만드는 데 사용할 수 있는 세 가지 방법 중 하나입니다.
 
 - `CreateRotationX`
 - `CreateRoationY`
 - `CreateRotationZ`
 
-각 메서드는 지정 된 축에 대 한 회전 하 여 회전 행렬을 만듭니다. 경우에 "up" 가리키는 Z 축 회전 하는 것입니다. 다음 축 기반 회전을 시각화 하는 데 도움이 됩니다 작동 합니다.
+각 메서드는 지정 된 축을 중심으로 회전 하 여 회전 행렬을 만듭니다. 이 경우 Z 축에 대 한 회전은 "위쪽"을 가리킵니다. 다음은 축 기반 회전의 작동 방식을 시각화 하는 데 도움이 될 수 있습니다.
 
-![](part3-images/image7.png "회전 축을 기반를 시각화할 수 있습니다이 작동")
+![](part3-images/image7.png "축 기반 회전의 작동 방식을 시각화 하는 데 도움이 될 수 있습니다.")
 
-도 사용 합니다 `CreateRotationZ` 로 인해 시간이 지남에 따라 증가 하는 각도 필드를 사용 하 여 메서드는 `Update` 메서드가 호출 됩니다. 결과 `CreateRotationZ` 메서드를 사용 하면 시간이 지남에 따라 원점 궤도 우리의 로봇입니다.
+`CreateRotationZ` 메서드`Update` 를 호출 하는 동안 시간이 지남에 따라 증가 하는 각도 필드와 함께 메서드를 사용 하 고 있습니다. 결과적으로 메서드는 `CreateRotationZ` 시간 경과에 따라 로봇이 원본을 기준으로 궤도를 회전 시킵니다.
 
-코드의 마지막 줄 하나로 두 매트릭스를 결합합니다.
+코드의 마지막 줄은 두 매트릭스를 하나로 결합 합니다.
 
 ```csharp
 Matrix combined = translationMatrix * rotationMatrix;
 ```
 
-이 일반 곱하기와 약간 다를 작동 하는 행렬 곱 이라고 합니다. 합니다 *곱하기 연산은 치환이* 상태 곱하기 연산에서 숫자의 순서는 결과 변경 되지 않습니다. 즉, 3 * 4는 4 * 3 에 해당 합니다. 행렬 곱와 달리은 누적 되지 않습니다. 즉, 위의 줄 "모델을 이동할 translationMatrix 적용 한 다음 다시 rotationMatrix를 적용 하 여 모든 회전"로 읽을 수 있습니다. 위의 줄 영향을 받는 위치 및 회전을 다음과 같은 방식으로 시각적으로 나타낼 수 있습니다.
+이를 행렬 곱셈 이라고 하며 일반적인 곱셈과 약간 다르게 작동 합니다. 곱하기 작업에서 숫자의 순서가 결과를 변경 하지 않는다는 *곱하기 상태의 교환 속성* 입니다. 즉, 3 * 4는 4 * 3 에 해당 합니다. 행렬 곱셈은 교환 되지 않는다는 점에서 다릅니다. 즉, 위의 줄을 "translationMatrix 적용 하 여 모델을 이동한 다음, rotationMatrix를 적용 하 여 모든 항목을 회전"으로 읽을 수 있습니다. 위의 줄이 위치와 회전에 영향을 주는 방식을 다음과 같이 시각화할 수 있습니다.
 
-![](part3-images/image8.png "시각화 pf 위의 줄 위치 및 회전을 영향을 받는 방법")
+![](part3-images/image8.png "위 선이 위치 및 회전에 영향을 주는 방식으로 시각화 pf")
 
-행렬 곱셈의 주문 수 결과 미치는 영향 이해를 위해 행렬 곱이 반전 하는 다음을 고려 합니다.
+행렬 곱셈의 순서가 결과에 영향을 줄 수 있는 방법을 이해 하려면 행렬 곱셈이 반전 된 다음을 고려 하십시오.
 
 ```csharp
 Matrix combined = rotationMatrix * translationMatrix;
 ```
 
-먼저 모델의 내부에서 회전 한 다음 위의 코드는 변환:
+위의 코드는 먼저 모델을 현재 위치에서 회전 한 다음 변환 합니다.
 
-![](part3-images/image9.png "위의 코드는 먼저 모델의 내부에서 회전 한 다음 변환")
+![](part3-images/image9.png "위의 코드는 먼저 모델을 전체 회전 한 다음 변환 합니다.")
 
-반전 된 곱하기를 사용 하 여 코드를 실행 하는 경우 회전에 먼저 적용 되므로 모델의 방향에만 영향을 모델의 위치는 동일 하 게 유지 것을 보게 됩니다. 즉, 모델 위치에서 회전 합니다.
+역 곱셈을 사용 하 여 코드를 실행 하는 경우 회전이 먼저 적용 된 후 모델의 방향에만 영향을 주며 모델의 위치는 동일 하 게 유지 된다는 것을 알 수 있습니다. 즉, 모델이 원위치에서 회전 합니다.
 
-![](part3-images/image10.gif "현재 위치에서 모델 회전")
+![](part3-images/image10.gif "모델이 제자리에서 회전 합니다.")
 
-## <a name="creating-the-camera-entity"></a>카메라 엔터티를 만들기
+## <a name="creating-the-camera-entity"></a>카메라 엔터티 만들기
 
-합니다 `Camera` 엔터티에 모든 속성에 할당 하는 것에 대 한 속성을 제공 하 고 입력 기반 이동을 수행 하는 데 필요한 논리가 포함 됩니다는 `BasicEffect` 클래스입니다.
+엔터티에 `Camera` 는 입력 기반 이동을 수행 하 고 `BasicEffect` 클래스에서 속성을 할당 하기 위한 속성을 제공 하는 데 필요한 모든 논리가 포함 됩니다.
 
-먼저에서는 고정 된 카메라 (입력 기반 이동 되지)를 구현 하 고 기존 프로젝트에 통합 합니다. 새 클래스를 추가 합니다 **MonoGame3D** 이식 가능한 클래스 라이브러리 (동일한 프로젝트를 `Robot.cs`) 하 고 이름을 **카메라**합니다. 파일의 내용을 다음 코드로 바꿉니다.
+먼저 정적 카메라 (입력 기반 이동 없음)를 구현 하 고 기존 프로젝트에 통합 합니다. **MonoGame3D** 이식 가능한 클래스 라이브러리 (와 동일한 프로젝트)에 새 클래스를 추가 `Robot.cs`하 고 이름을 **Camera**로 바꿉니다. 파일의 내용을 다음 코드로 바꿉니다.
 
 ```csharp
 using System;
@@ -433,9 +433,9 @@ namespace MonoGame3D
 }
 ```
 
-위의 코드는 코드를 매우 비슷합니다 `Game1` 하 고 `Robot` 매트릭스에 할당 하는 `BasicEffect`합니다. 
+위의 코드는에서 `Game1` 매트릭스 `BasicEffect`를 할당 하는 코드와 `Robot` 매우 비슷합니다. 
 
-새 통합 수 이제 `Camera` 기존 프로젝트에 클래스입니다. 먼저 수정 합니다는 `Robot` 클래스에는 `Camera` 인스턴스에 해당 `Draw` 많은 양의 중복 코드를 제거 하는 메서드를 합니다. 대체는 `Robot.Draw` 메서드를 다음:
+이제 기존 프로젝트에 새 `Camera` 클래스를 통합할 수 있습니다. 첫째, `Robot` 클래스를 수정 하 여 `Draw` 메서드 내에서 `Camera` 인스턴스를 사용 하 여 많은 중복 코드를 제거 합니다. 메서드를 `Robot.Draw` 다음으로 바꿉니다.
 
 ```csharp
 public void Draw(Camera camera)
@@ -457,7 +457,7 @@ public void Draw(Camera camera)
 }
 ```
 
-다음으로 수정 된 `Game1.cs` 파일:
+다음으로 파일을 `Game1.cs` 수정 합니다.
 
 ```csharp
 using Microsoft.Xna.Framework;
@@ -573,29 +573,29 @@ namespace MonoGame3D
 }
 ```
 
-수정 된 `Game1` 이전 버전에서 (사용 하 여 식별 되는 `// New camera code` )는:
+이전 버전의에 `Game1` 대 한 수정 (로 `// New camera code` 식별 됨)은 다음과 같습니다.
 
-- `Camera` 필드에 `Game1`
-- `Camera` 에 대 한 인스턴스화 `Game1.Initialize`
-- `Camera.Update` 호출 `Game1.Update`
-- `Robot.Draw` 이제는 `Camera` 매개 변수
-- `Game1.Draw` 이제 사용 `Camera.ViewMatrix` 및 `Camera.ProjectionMatrix`
+- `Camera`필드의`Game1`
+- `Camera`인스턴스화`Game1.Initialize`
+- `Camera.Update`에서 호출`Game1.Update`
+- `Robot.Draw`이제 매개 변수 `Camera` 를 사용 합니다.
+- `Game1.Draw`이제 및 `Camera.ViewMatrix` 를 사용 합니다.`Camera.ProjectionMatrix`
 
-## <a name="moving-the-camera-with-input"></a>입력을 사용 하 여 카메라를 이동합니다.
+## <a name="moving-the-camera-with-input"></a>입력으로 카메라 이동
 
-추가한 지금는 `Camera` 엔터티 런타임 동작을 변경 하려면를 사용 하 여 아무 것도 수행 하지 않은 하지만 합니다. 사용자를 허용 하는 동작 추가 하려면:
+지금까지 `Camera` 엔터티를 추가 했지만 런타임 동작을 변경 하는 작업을 수행 하지 않았습니다. 사용자가 다음 작업을 수행할 수 있도록 하는 동작을 추가 합니다.
 
-- 왼쪽 화면 왼쪽 카메라를 설정 하려면 터치
-- 오른쪽에 카메라를 설정 하려면 화면의 오른쪽 터치
-- 터치 카메라를 앞으로 이동 하려면 화면의 가운데
+- 화면 왼쪽을 터치 하 여 카메라를 왼쪽으로 전환 합니다.
+- 화면 오른쪽을 터치 하 여 카메라를 오른쪽으로 전환 합니다.
+- 화면 가운데를 터치 하 여 카메라를 앞으로 이동 합니다.
 
-### <a name="making-lookat-relative"></a>연간 상대 하기
+### <a name="making-lookat-relative"></a>상대적으로 살펴보겠습니다
 
-먼저 업데이트할 예정 합니다 `Camera` 를 포함 하도록 클래스를 `angle` 하는 데 사용 될 필드 방향을 설정는 `Camera` 연결 됩니다. 현재 우리의 `Camera` 로컬을 통해 연결 되는 방향을 결정 `lookAtVector`에 할당 됨 `Vector3.Zero`합니다. 즉, 우리의 `Camera` 항상 원본 살펴봅니다. 카메라를 이동 하는 경우 카메라는 연결 되는 각도도 변경 됩니다.
+먼저 `Camera` 가 연결 되는 `Camera` 방향을 설정 하는 `angle` 데 사용 되는 필드를 포함 하도록 클래스를 업데이트 합니다. 현재는 `lookAtVector`에 `Camera` 할당된로컬을통해연결되는`Vector3.Zero`방향을 결정 합니다. 즉, `Camera` 는 항상 출처를 확인 합니다. 카메라를 움직이면 카메라를 향하는 각도도 변경 됩니다.
 
-![](part3-images/image11.gif "카메라를 이동 하는 경우 다음 카메라는 연결 되는 각도도 변경 됩니다.")
+![](part3-images/image11.gif "카메라를 움직이면 카메라를 향하는 각도도 변경 됩니다.")
 
-원하는 합니다 `Camera` – 해당 위치에 관계 없이 동일한 방향 최소 연결 수를 회전 하기 위한 논리를 구현 될 때까지 `Camera` 입력을 사용 하 여 합니다. 첫 번째 변경 내용을 조정 해야 합니다는 `lookAtVector` 절대 위치에 보이는 아닌 변수를 현재 위치를 기반으로 합니다.
+를 사용 하 `Camera` 여를 사용 하는 `Camera` 것과 관계 없이를 사용 하 여의 위치에 관계 없이를 동일한 방향으로 연결 하려고 합니다. 첫 번째 변경 내용은 절대 위치를 확인 `lookAtVector` 하는 대신 현재 위치를 기준으로 변수를 조정 하는 것입니다.
 
 ```csharp
 public class Camera
@@ -621,17 +621,17 @@ public class Camera
     ...
 ```
 
-이 인해는 `Camera` 일직선으로 전 세계를 보고 합니다. 초기 `position` 값을 수정한 `(0, 20, 10)` 하므로 `Camera` 가운데 X 축에 표시 됩니다. 게임 표시를 실행 합니다.
+이로 `Camera` 인해 세계를 똑바로 볼 것입니다. 초기 `position` 값이 X 축 가운데에 오도록 `Camera` 로 `(0, 20, 10)` 수정 되었습니다. 게임을 실행 하면 다음이 표시 됩니다.
 
-![](part3-images/image12.png "게임 실행이 뷰가 표시 됩니다.")
+![](part3-images/image12.png "게임을 실행 하면이 보기가 표시 됩니다.")
 
 ### <a name="creating-an-angle-variable"></a>각도 변수 만들기
 
-`lookAtVector` 변수를이 카메라 보는 각도 제어 합니다. 음의 Y 축을 아래로 보려는 고정 및 약간 아래로 기울어진 현재 (에서 `-.5f` Z 값). 만듭니다는 `angle` 조정 하는 데 사용할 변수를 `lookAtVector` 속성입니다. 
+변수 `lookAtVector` 는 카메라가 보는 각도를 제어 합니다. 현재는 음수 Y 축을 표시 하 고 `-.5f` Z 값을 약간 기울어짐 (Z 값에서) 하는 것으로 고정 되어 있습니다. 속성`lookAtVector` 을 조정 하 `angle` 는 데 사용 되는 변수를 만듭니다. 
 
-이 연습에서는 이전 섹션에서 개체를 그리는 방법을 회전 행렬을 사용할 수 있도록 하는 것이 살펴보았습니다. 또한 행렬 같은 벡터를 회전 하려면 사용할 수는 `lookAtVector` 를 사용 하 여를 `Vector3.Transform` 메서드. 
+이 연습의 이전 섹션에서는 행렬을 사용 하 여 개체를 그리는 방법을 회전할 수 있었습니다. 또한 매트릭스를 사용 하 여 `lookAtVector` `Vector3.Transform` 메서드를 사용 하는 것과 같은 벡터를 회전할 수 있습니다. 
 
-추가 `angle` 필드를 수정 합니다 `ViewMatrix` 속성을 다음과 같이 합니다.
+필드를 추가 하 고 다음과 같이 속성을 수정 합니다 `ViewMatrix`. `angle`
 
 ```csharp
 public class Camera
@@ -662,21 +662,21 @@ public class Camera
     ...
 ```
 
-### <a name="reading-input"></a>입력을 읽기
+### <a name="reading-input"></a>입력 읽기
 
-우리의 `Camera` 엔터티 이제 완전히 제어할 수의 위치와 각도 변수를 통해 – 방금 입력에 따라 변경 해야 합니다.
+이제 `Camera` 엔터티를 위치 및 각도 변수를 통해 완전 하 게 제어할 수 있습니다. 입력에 따라 엔터티를 변경 하기만 하면 됩니다.
 
-먼저 살펴보겠습니다는 `TouchPanel` 찾을 사용자 화면에 접촉 되어 있는 상태입니다. 사용 하 여 대 한 자세한 내용은 합니다 `TouchPanel` 클래스를 참조 하십시오 [TouchPanel API 참조](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Input_Touch_TouchPanel)합니다.
+먼저 사용자가 화면에 접촉 `TouchPanel` 하는 위치를 찾을 수 있는 상태를 가져옵니다. `TouchPanel` 클래스 사용에 대 한 자세한 내용은 [TouchPanel API 참조](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Input_Touch_TouchPanel)를 참조 하세요.
 
-사용자는 왼쪽 세 번째 접촉 되어 경우 조정 됩니다는 `angle` 값 이므로 `Camera` 왼쪽 회전 하 고 사용자는 올바른 세 번째 접촉 되어, 다른 방법으로 회전 됩니다 것입니다. 사용자의 화면 중간 세 번째에서 접촉 되어 경우 설명으로 넘어가겠습니다는 `Camera` 전달 합니다.
+사용자가 왼쪽 3에서 접촉 하는 경우 값 `angle` `Camera` 을 조정 하 여 왼쪽으로 회전 하 고, 사용자가 오른쪽 세 번째에서 접촉 하는 경우 다른 방식으로 회전 합니다. 사용자가 화면의 가운데 1/3에서 접촉 하는 경우 `Camera` 앞으로 이동 합니다.
 
-먼저 추가 하 여 되려면 문을 합니다 `TouchPanel` 하 고 `TouchCollection` 의 클래스 `Camera.cs`:
+먼저에서 `TouchPanel` 및`Camera.cs`클래스를 한정할 using 문을 추가 합니다. `TouchCollection`
 
 ```csharp
 using Microsoft.Xna.Framework.Input.Touch; 
 ```
 
-다음으로 수정 합니다 `Update` 터치 패널을 읽고 조정 메서드를 `angle` 및 `position` 변수 적절 하 게:
+다음으로, 터치 `Update` 패널을 읽도록 메서드를 수정 하 고 `angle` 및 `position` 변수를 적절 하 게 조정 합니다.
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -716,19 +716,19 @@ public void Update(GameTime gameTime)
 
 이제는 `Camera` 터치식 입력에 응답 합니다.
 
-![](part3-images/image1.gif "이제 카메라 응답할 터치식 입력")
+![](part3-images/image1.gif "이제 카메라가 터치식 입력에 응답 합니다.")
 
-업데이트 메서드를 호출 하 여 시작 `TouchPanel.GetState`, 터치의 컬렉션을 반환 하는 합니다. 하지만 `TouchPanel.GetState` 여러 터치 포인트를 반환할 수 있습니다 단순성에 대 한 첫 번째 것만 걱정 됩니다.
+Update 메서드는 접촉 컬렉션을 `TouchPanel.GetState`반환 하는를 호출 하 여 시작 합니다. 는 `TouchPanel.GetState` 여러 터치 지점만 반환할 수 있지만 간단 하 게 하기 위해 첫 번째 지점만 걱정 합니다.
 
-사용자가 화면을 터치 하는 경우 첫 번째 터치를 왼쪽, 가운데 또는 오른쪽 화면 세 번째 인지 확인 코드를 확인 합니다. 왼쪽 및 오른쪽 접는 증가 또는 감소 하 여 카메라를 회전 합니다 `angle` 에 따라 변수를 `TotalSeconds` (있도록 값 게임 프레임 속도 관계 없이 동일 하 게 동작).
+사용자가 화면을 터치 하는 경우 코드는 첫 번째 터치가 화면의 왼쪽, 가운데 또는 오른쪽에 있는지 확인 합니다. 왼쪽 및 오른쪽 1/3은 `angle` `TotalSeconds` 값에 따라 변수를 늘리거나 줄여서 카메라를 회전 시킵니다. 그러면 게임은 프레임 요금에 관계 없이 동일 하 게 작동 합니다.
 
-사용자 중심을 세 번째 접촉 되어 있는 경우 화면의 다음 카메라 앞으로 이동 합니다. 이 위해서는 먼저 음의 Y 축을 향하는로 정의 된 다음 사용 하 여 만든 매트릭스를 회전할 처음에 정방향 벡터 `Matrix.CreateRotationZ` 하며 `angle` 값입니다. 마지막 합니다 `forwardVector` 에 적용 됩니다 `position` 사용 하 여는 `unitsPerSecond` 계수입니다.
+사용자가 화면의 세 번째 중심에 닿을 경우 카메라가 앞으로 진행 됩니다. 이는 먼저 음의 Y 축을 가리키는 것으로 정의 된 다음 `Matrix.CreateRotationZ` `angle` , 및 값을 사용 하 여 만든 행렬에 의해 회전 된 앞으로 정의 된 앞으로 벡터를 가져오는 방법으로 수행 됩니다. 마지막으로 `unitsPerSecond` 계수를 사용 `position` 하 여에 적용 됩니다.`forwardVector`
 
 ## <a name="summary"></a>요약
 
-이 연습에서는 이동 및 회전 하는 방법 `Models` 3d에서 사용 하 여 공간 `Matrices` 하며 `BasicEffect.World` 속성입니다. 이러한 형태의 이동 3D 게임에서 개체를 이동 하는 것에 대 한 기반을 제공 합니다. 이 연습에서는 구현 하는 방법에 대해서도 설명는 `Camera` 보는 모든 위치와 각도에서 전 세계에 대 한 엔터티.
+이 연습에서는 및 `Models` `BasicEffect.World` 속성을 사용 하 여 `Matrices` 3d 공간에서 이동 하 고 회전 하는 방법을 설명 합니다. 이러한 형태의 움직임은 3D 게임에서 개체를 이동 하기 위한 기초를 제공 합니다. 이 연습에서는 위치와 각도에서 전 `Camera` 세계를 볼 수 있도록 엔터티를 구현 하는 방법에 대해서도 설명 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [MonoGame API Link](http://www.monogame.net/documentation/?page=api)
-- [완료 된 프로젝트 (샘플)](https://developer.xamarin.com/samples/monodroid/MonoGame3DCamera/)
+- [MonoGame API 링크](http://www.monogame.net/documentation/?page=api)
+- [완료 된 프로젝트 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)

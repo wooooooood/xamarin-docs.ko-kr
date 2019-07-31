@@ -1,50 +1,50 @@
 ---
-title: 요소 API를 사용 하 여 Xamarin.iOS 응용 프로그램 만들기
-description: 이 문서에서는 MonoTouch 대화 문서에 대 한 소개에서 정보를 구축 합니다. MonoTouch.Dialog (MT를 사용 하는 방법을 보여 주는 연습 표시 D) 요소 API 빠르게 산을 사용 하 여 응용 프로그램 빌드 4.
+title: Elements API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
+description: 이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 MT로 응용 프로그램을 빠르게 빌드할 수 있습니다. 2.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 1b4263e37e6d95c03e88905319cfe0ee167cb30b
-ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
+ms.openlocfilehash: 82320b069156828101d17e79ca48a8933b8a8777
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67039699"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655086"
 ---
-# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>요소 API를 사용 하 여 Xamarin.iOS 응용 프로그램 만들기
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Elements API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
-_이 문서에서는 MonoTouch 대화 문서에 대 한 소개에서 정보를 구축 합니다. MonoTouch.Dialog (MT를 사용 하는 방법을 보여 주는 연습 표시 D) 요소 API 빠르게 산을 사용 하 여 응용 프로그램 빌드 4._
+_이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 MT로 응용 프로그램을 빠르게 빌드할 수 있습니다. 2._
 
-이 연습에서는 MT를 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들려면 D 요소 API입니다. 사용자가 선택 하는 경우는 <span class="ui"> + </span> 단추 탐색 모음에서 새 행이 작업에 대 한 테이블에 추가 됩니다. 아래 그림과 같이 작업 설명 및 지불 하기로 한 날짜를 업데이트할 수 있도록 하는 세부 정보 화면으로 이동 됩니다 행을 선택 합니다.
+이 연습에서는 MT를 사용 합니다. D Elements API를 통해 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들 수 있습니다. 사용자가 탐색 모음에서 <span class="ui">+</span> 단추를 선택 하면 태스크에 대 한 테이블에 새 행이 추가 됩니다. 행을 선택 하면 아래 그림과 같이 작업 설명과 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 합니다.
 
- [![](elements-api-walkthrough-images/01-task-list-app.png "작업 설명과 지불 하기로 한 날짜를 업데이트할 수 있는 세부 정보 화면으로 이동 됩니다 행을 선택")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "행을 선택 하면 세부 정보 화면으로 이동 하 여 작업 설명 및 기한 날짜를 업데이트할 수 있습니다.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- ## <a name="setting-up-mtd"></a>산 설정 D
+ ## <a name="setting-up-mtd"></a>MT를 설정 합니다. 2
 
-산 D는 Xamarin.iOS를 사용 하 여 배포 됩니다. 를 사용 하려면 마우스 오른쪽 단추로 클릭 합니다 **참조** Xamarin.iOS 노드의 Mac 용 Visual Studio 2017 또는 Visual Studio에서 프로젝트 및 참조를 추가 합니다 **MonoTouch.Dialog 1** 어셈블리. 그런 다음 추가 `using MonoTouch.Dialog` 필요에 따라 원본에서 문을 코딩 합니다.
+휴먼. D는 Xamarin.ios를 사용 하 여 배포 됩니다. 이를 사용 하려면 Visual Studio 2017 또는 Mac용 Visual Studio에서 Xamarin.ios 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **monotouch.dialog** 어셈블리에 대 한 참조를 추가 합니다. 그런 다음 필요 `using MonoTouch.Dialog` 에 따라 소스 코드에서 문을 추가 합니다.
 
 ## <a name="elements-api-walkthrough"></a>요소 API 연습
 
-에 [MonoTouch 대화 소개](~/ios/user-interface/monotouch.dialog/index.md) 문서 얻은 산의 여러 부분을 확실 하 게 이해 4. 응용 프로그램에 함께 배치 하는 요소 API를 사용해 보겠습니다.
+[Monotouch.dialog 소개 대화 상자](~/ios/user-interface/monotouch.dialog/index.md) 에서 MT의 여러 부분에 대 한 확실 한 이해를 얻었습니다. 2. Elements API를 사용 하 여 응용 프로그램에 모두 함께 배치 해 보겠습니다.
 
 ## <a name="setting-up-the-multi-screen-application"></a>다중 화면 응용 프로그램 설정
 
-화면 만들기 프로세스를 시작 하려면 MonoTouch.Dialog 만듭니다는 `DialogViewController`, 다음 추가 `RootElement`.
+화면 만들기 프로세스를 시작 하려면 monotouch.dialog를 만든 `DialogViewController`후를 `RootElement`추가 합니다.
 
-MonoTouch.Dialog를 사용 하 여 다중 화면 응용 프로그램을 만들려고 해야 합니다.
+Monotouch.dialog를 사용 하 여 다중 화면 응용 프로그램을 만들려면 다음을 수행 해야 합니다.
 
-1.  만들기를 `UINavigationController.`
-1.  만들기를 `DialogViewController.`
-1.  추가 된 `DialogViewController` 의 루트로 합니다  `UINavigationController.` 
-1.  추가 된 `RootElement` 에  `DialogViewController.`
-1.  추가 `Sections` 고 `Elements` 에  `RootElement.` 
+1.  만들기`UINavigationController.`
+1.  만들기`DialogViewController.`
+1.  `DialogViewController` 을의 루트로 추가 합니다.`UINavigationController.` 
+1.  `RootElement` 에를 추가 합니다.`DialogViewController.`
+1.  에 `Sections` 및`Elements` 을 추가 합니다.`RootElement.` 
 
-### <a name="using-a-uinavigationcontroller"></a>UINavigationController를 사용 하 여
+### <a name="using-a-uinavigationcontroller"></a>UINavigationController 사용
 
-탐색 스타일 응용 프로그램을 만들려면 생성 해야는 `UINavigationController`로 추가한를 `RootViewController` 에 `FinishedLaunching` 메서드의 `AppDelegate`합니다. 있도록를 `UINavigationController` MonoTouch.Dialog, 추가 사용을 `DialogViewController` 에 `UINavigationController` 아래와 같이:
+탐색 스타일의 응용 프로그램을 `UINavigationController`만들려면를 만든 다음의 `RootViewController` `FinishedLaunching` `AppDelegate`메서드에서로 추가 해야 합니다. Monotouch.dialog를 사용 `UINavigationController` 하 여 작업을 수행 하려면 아래 `UINavigationController` 와 같이 `DialogViewController` 에를 추가 합니다.
 
 ```csharp
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
@@ -64,27 +64,27 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 }
 ```
 
-위 코드의 인스턴스를 만듭니다는 `RootElement` 에 전달 된 `DialogViewController`. 합니다 `DialogViewController` 항상를 `RootElement` 계층 구조의 맨 위에 있는 합니다. 이 예제는 `RootElement` "할 일 모음" 탐색 컨트롤러의 탐색 모음에서 제목으로 사용 되는 문자열을 사용 하 여 만들어집니다. 이 시점에서 응용 프로그램을 실행 초래 아래에 표시 된 화면:
+위의 코드는의 `RootElement` 인스턴스를 만들고이 `DialogViewController`를에 전달 합니다. 의 `DialogViewController` 계층 구조 맨 `RootElement` 위에는 항상이 있습니다. 이 예제 `RootElement` 에서는 탐색 컨트롤러의 탐색 모음에서 제목 역할을 하는 문자열 "할 일 목록"을 사용 하 여를 만듭니다. 이 시점에서 응용 프로그램을 실행 하면 다음과 같은 화면이 표시 됩니다.
 
- [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "응용 프로그램을 실행 여기에 표시 된 화면이 나타납니다.")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "응용 프로그램을 실행 하면 여기에 표시 되는 화면이 표시 됩니다.")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
-MonoTouch.Dialog의 계층 구조를 사용 하는 방법을 알아보겠습니다 `Sections` 고 `Elements` 자세한 화면을 추가 합니다.
+`Sections` 및`Elements` 의 monotouch.dialog의 계층 구조를 사용 하 여 더 많은 화면을 추가 하는 방법을 살펴보겠습니다.
 
 ### <a name="creating-the-dialog-screens"></a>대화 상자 화면 만들기
 
-A `DialogViewController` 되는 `UITableViewController` MonoTouch.Dialog 화면을 추가 하는 데 사용 하는 하위 클래스입니다. MonoTouch.Dialog 추가 하 여 화면을 만듭니다는 `RootElement` 에 `DialogViewController`위에서 말한 것 처럼, 합니다. 합니다 `RootElement` 있습니다 `Section` 테이블의 섹션을 나타내는 인스턴스.
-섹션으로 이루어져 있습니다 요소, 섹션 또는 다른에 다른 `RootElements`합니다. 중첩 하 여 `RootElements`, 앞으로 살펴보겠지만 다음 자동으로 MonoTouch.Dialog 탐색 스타일 응용 프로그램을 만듭니다.
+는 `DialogViewController`monotouch.dialog 에서 화면을 추가 하는 데 사용 하는 하위클래스입니다.`UITableViewController` Monotouch.dialog은 위에서 설명한 대로에를 추가 `RootElement` `DialogViewController`하 여 화면을 만듭니다. 에 `RootElement` 는 테이블 `Section` 의 섹션을 나타내는 인스턴스가 있을 수 있습니다.
+섹션은 요소, 다른 섹션 또는 다른 `RootElements`섹션으로 구성 됩니다. 중첩 `RootElements`하면 monotouch.dialog는 다음에 표시 되는 것 처럼 탐색 스타일 응용 프로그램을 자동으로 만듭니다.
 
-### <a name="using-dialogviewcontroller"></a>DialogViewController를 사용 하 여
+### <a name="using-dialogviewcontroller"></a>DialogViewController 사용
 
-`DialogViewController`, 되는 `UITableViewController` 하위 클래스에는 `UITableView` 해당 뷰로 합니다. 이 예제에서는 때마다 테이블에 항목을 추가 하려고 합니다 <span class="ui"> + </span> 단추를 탭 할 합니다. 하므로 `DialogViewController` 에 추가 된를 `UINavigationController`, 사용할 수 있습니다는 `NavigationItem`의 `RightBarButton` 추가할 속성을 <span class="ui"> + </span> 단추를 아래와 같이:
+하위 클래스가 `DialogViewController` `UITableView` 되는의는를 뷰로 포함 합니다. `UITableViewController` 이 예에서는 <span class="ui">+</span> 단추를 누를 때마다 테이블에 항목을 추가 하려고 합니다. 는 `DialogViewController` 에 추가 `UINavigationController`되었으므로 아래와 같이 `NavigationItem`의 `RightBarButton` 속성을 사용 하 여 <span class="ui">+</span> 단추를 추가할 수 있습니다.
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-만들 때 합니다 `RootElement` 이전에 전달 하는 단일 `Section` 요소를 추가할 수 있도록 인스턴스를 <span class="ui"> + </span> 사용자가 단추를 탭 할 합니다. 에서는 단추에 대 한 처리기를 수행 하려면 다음 코드를 따르면 됩니다.
+앞에서 `RootElement` 만든 경우에는 사용자가 단추를 <span class="ui">+</span> 탭 `Section` 할 때 요소를 추가할 수 있도록 단일 인스턴스를 전달 했습니다. 단추에 대 한 이벤트 처리기에서 다음 코드를 사용 하 여이 작업을 수행할 수 있습니다.
 
 ```csharp
 _addButton.Clicked += (sender, e) => {                
@@ -104,7 +104,7 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
-이 코드에서는 새 `Task` 단추를 탭 할 때마다 개체입니다. 다음의 간단한 구현을 보여 줍니다는 `Task` 클래스:
+이 코드는 단추를 `Task` 누를 때마다 새 개체를 만듭니다. 다음은 `Task` 클래스의 간단한 구현을 보여 줍니다.
 
 ```csharp
 public class Task
@@ -121,33 +121,33 @@ public class Task
 }
 ```
 
-작업의 `Name` 속성은 만드는 데 합니다 `RootElement`의 라는 카운터 변수 함께 캡션 `n` 각 새 태스크에 대해 증가 되 합니다. MonoTouch.Dialog에 추가 되는 행에 요소를 설정 합니다 `TableView` 때 각 `taskElement` 추가 됩니다.
+작업의 `Name` 속성은 새 작업 마다 증가 하 `RootElement`는 이라는 `n` 카운터 변수와 함께의 캡션을 만드는 데 사용 됩니다. Monotouch.dialog는 각 `TableView` `taskElement` 이 추가 될 때에 추가 되는 행으로 요소를 전환 합니다.
 
-## <a name="presenting-and-managing-dialog-screens"></a>표시 및 관리 대화 상자 화면
+## <a name="presenting-and-managing-dialog-screens"></a>대화 상자 화면 표시 및 관리
 
-사용 된 `RootElement` MonoTouch.Dialog 자동으로 각 작업의 세부 정보에 대 한 새 화면을 만들고 행을 선택 하는 경우를 탐색할 수 있도록 합니다.
+Monotouch.dialog를 사용 `RootElement` 하 여 각 작업의 세부 정보에 대 한 새 화면을 자동으로 만들고 행을 선택할 때이 화면으로 이동 합니다.
 
-두 섹션;으로 구성 된 자체 작업 세부 정보 화면 이러한 각 섹션에는 단일 요소를 포함 합니다. 첫 번째 요소에서 생성 되는 `EntryElement` 작업의 행을 편집할 수 있도록 `Description` 속성입니다. 요소를 선택 하면 텍스트 편집에 대 한 키보드는 아래와 같이 표시 됩니다.
+작업 세부 정보 화면 자체는 두 개의 섹션으로 구성 됩니다. 이러한 각 섹션에는 단일 요소가 포함 됩니다. 첫 번째 요소는에서 `EntryElement` 작업의 `Description` 속성에 대 한 편집 가능한 행을 제공 하기 위해 생성 됩니다. 요소를 선택 하면 아래와 같이 텍스트 편집용 키보드가 제공 됩니다.
 
- [![](elements-api-walkthrough-images/03-create-task.png "요소를 선택 하는 경우 텍스트 편집에 대 한 키보드와 같이 표시 됩니다.")](elements-api-walkthrough-images/03-create-task.png#lightbox)
+ [![](elements-api-walkthrough-images/03-create-task.png "요소를 선택 하면 텍스트 편집을 위한 키보드가 다음과 같이 표시 됩니다.")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
-두 번째 섹션에서는 `DateElement` 태스크의 관리를 수 있게 해 주는 `DueDate` 속성입니다. 날짜를 선택 하면 자동으로 표시 된 대로 날짜 선택기를 로드 합니다.
+두 번째 섹션에는 `DateElement` 작업의 `DueDate` 속성을 관리할 수 있는가 포함 되어 있습니다. 날짜를 선택 하면 다음과 같이 날짜 선택이 자동으로 로드 됩니다.
 
- [![](elements-api-walkthrough-images/04-date-picker.png "날짜 선택기로 로드 날짜를 선택 하면 자동으로")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
+ [![](elements-api-walkthrough-images/04-date-picker.png "날짜를 선택 하면 날짜 선택이 자동으로 로드 됩니다.")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
-둘 다에 `EntryElement` 및 `DateElement` 사례, MonoTouch.Dialog에 있는 모든 데이터 입력 요소에 대 한 값으로 변경 내용을 자동으로 유지 됩니다. 날짜를 편집 하 고 루트 화면 및 세부 정보 화면에 있는 값은 유지 하는 위치를 다양 한 작업 세부 정보 간에 앞뒤로 탐색 하 여이 보여줄 수 했습니다.
+`EntryElement` 및`DateElement` 사례 (또는 monotouch.dialog의 모든 데이터 입력 요소)에서 값에 대 한 모든 변경 내용은 자동으로 유지 됩니다. 날짜를 편집한 다음 루트 화면과 다양 한 작업 세부 정보 화면의 값이 유지 되는 다양 한 작업 세부 정보를 탐색 하 여이를 설명할 수 있습니다.
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 MonoTouch.Dialog 요소 API를 사용 하는 방법을 보여 주는 연습을 제공 합니다. 산을 사용 하 여 다중 화면 응용 프로그램을 만드는 기본 단계에 설명 했습니다. D를 사용 하는 방법 등을 `DialogViewController` 및 화면을 만드는 요소 및 섹션을 추가 하는 방법입니다. 또한 산을 사용 하는 방법에 알아보았습니다. 와 함께에서 D는 `UINavigationController`합니다.
+이 문서에서는 Monotouch.dialog Elements API를 사용 하는 방법을 보여 주는 연습을 제공 했습니다. MT를 사용 하 여 다중 화면 응용 프로그램을 만드는 기본 단계에 대해 설명 했습니다. D .를 사용 `DialogViewController` 하는 방법 및 화면을 만드는 데 요소와 섹션을 추가 하는 방법을 포함 합니다. 또한 MT를 사용 하는 방법을 살펴보았습니다. 과 함께 사용 `UINavigationController`됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [MTDWalkthrough (샘플)](https://developer.xamarin.com/samples/monotouch/MTDWalkthrough/)
-- [MonoTouch.Dialog 소개](~/ios/user-interface/monotouch.dialog/index.md)
+- [Mtd 연습 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
+- [Monotouch.dialog 소개. 대화 상자](~/ios/user-interface/monotouch.dialog/index.md)
 - [리플렉션 API 연습](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [JSON 요소 연습](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
-- [Github에서 MonoTouch 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
+- [Github의 Monotouch.dialog 대화 상자](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [TweetStation 응용 프로그램](https://github.com/migueldeicaza/TweetStation)
 - [UITableViewController 클래스 참조](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
 - [UINavigationController 클래스 참조](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

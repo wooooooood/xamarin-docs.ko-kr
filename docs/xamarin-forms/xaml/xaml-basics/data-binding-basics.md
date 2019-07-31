@@ -7,22 +7,22 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
-ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
+ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67309527"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655250"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _데이터 바인딩 변경 하나에 다른 변경으로 인해 있도록 연결할 두 개체의 속성을 허용 합니다. 매우 유용한 도구이며 데이터 바인딩은 코드로만 정의할 수 있는 반면 XAML은 바로 가기 및 편의성을 제공합니다. 따라서 Xamarin.Forms에서 태그 확장 중 가장 중요한 하나는 바인딩(Binding)입니다._
 
 ## <a name="data-bindings"></a>데이터 바인딩
 
-데이터 바인딩은 두 개체의 속성을 연결하고, *source* 및 *target*을 호출합니다. 코드에서 두 단계가 필요 합니다. `BindingContext` 원본 개체를 대상 개체의 속성을 설정 해야 하며 `SetBinding` 메서드 (종종 함께 사용를 `Binding` 클래스) 원본의 속성에 해당 개체의 속성 바인딩 대상 개체에서 호출 해야 개체입니다.
+데이터 바인딩은 두 개체의 속성을 연결하고, *source* 및 *target*을 호출합니다. 코드에는 다음 두 단계가 필요 합니다. 대상 개체의 `SetBinding` `Binding` 속성을 원본 개체로 설정 하 고, 해당 개체의 속성을 소스의 속성에 바인딩하기 위해 메서드 (클래스와 함께 사용 되는 경우)를 대상 개체에서 호출 해야 합니다. `BindingContext` 개체가.
 
 대상 속성은 대상 개체가 `BindableObject`에서 파생되어야 한다는 것을 의미하는 바인딩 가능한 속성이어야 합니다. 온라인 Xamarin.Forms 문서는 어떤 속성이 바인딩 가능한 속성인지를 나타냅니다. `Text`와 같은 `Label`의 속성은 바인딩 가능한 속성 `TextProperty`와 연관됩니다.
 
@@ -114,11 +114,11 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 - `OneWay` -값이 원본(source)에서 대상(target)으로 전송됩니다.
 - `OneWayToSource` -값이 대상에서 원본으로 전송됩니다.
 - `TwoWay` -값이 원본과 대상 간의 값 양방향으로 전송됩니다.
-- `OneTime` -대상으로 하지만 경우에만 원본에서 데이터 이동은 `BindingContext` 변경
+- `OneTime`-데이터가 원본에서 대상으로 이동 하지만 변경 되는 `BindingContext` 경우에만
 
 다음 프로그램은 `OneWayToSource`와 `TwoWay` 바인딩 모드의 일반적인 사용법을 보여줍니다. 네 개의 `Slider` 뷰는 `Label`의 `Scale`, `Rotate`, `RotateX` 및 `RotateY` 속성을 제어하기 위한 것입니다. 처음에는 `Label`의 네 가지 속성이 각각 `Slider`에 의해 설정되기 때문에 데이터 바인딩 대상이어야 하는 것처럼 보입니다. 그러나, `Label`의 `BindingContext`는 하나의 개체일 수 있으며, 네 개의 다른 슬라이더가 있습니다.
 
-따라서 모든 바인딩을 설정 보이는 이전 버전과 방법으로: `BindingContext` 로 설정 되어 각 네 개의 슬라이더를 `Label`에 바인딩을 설정 하 고는 `Value` 슬라이더의 속성입니다. `OneWayToSource` 및 `TwoWay` 모드를 사용하면, 다음과 같이 `Value` 속성은 `Label`의 `Scale`, `Rotate`, `RotateX` 및 `RotateY` 속성인 원본 속성을 설정할 수 있습니다.
+이러한 이유로 모든 바인딩은 역방향으로 설정 됩니다. 네 `BindingContext` 가지 슬라이더 각각의는 `Label`로 설정 되 고 `Value` 바인딩은 슬라이더의 속성에 설정 됩니다. `OneWayToSource` 및 `TwoWay` 모드를 사용하면, 다음과 같이 `Value` 속성은 `Label`의 `Scale`, `Rotate`, `RotateX` 및 `RotateY` 속성인 원본 속성을 설정할 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -255,7 +255,7 @@ XamlSamples 프로젝트에는 `NamedColor`라는 클래스가 포함되어 있�
 ```
 
 > [!NOTE]
-> 셀, 셀의 자식에 대 한 바인딩 소스는는 `ListView.ItemsSource` 컬렉션입니다.
+> 셀의 바인딩 소스와 셀 `ListView.ItemsSource` 의 자식은 컬렉션입니다.
 
 `Label` 요소는 `ViewCell`의 `View` 속성으로 설정됩니다. (`ViewCell.View` 태그는 `View` 속성이 `ViewCell`의 콘텐츠 속성이므로 필요하지 않습니다.) 해당 태그는 다음과 같이 각 `NamedColor` 개체의 `FriendlyName` 속성을 표시합니다.
 
@@ -410,7 +410,7 @@ namespace XamlSamples
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaml 샘플](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [Xaml 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [1부. XAML 시작(샘플)](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [2부. 필수 XAML 구문 (샘플)](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [3부. XAML 태그 확장 (샘플)](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

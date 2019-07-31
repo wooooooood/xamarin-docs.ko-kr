@@ -7,16 +7,16 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: a51a441aeacf265093b82ddb65237887b0a30719
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4fae33f7de8c6022b2298c462ea510ec8ed623f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382452"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657202"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _SkiaSharp 그래픽 이동할 좌표 이동 변환 사용 방법 알아보기_
 
@@ -38,7 +38,7 @@ public void Translate (Single dx, Single dy)
 public void Translate (SKPoint point)
 ```
 
-**변환 누적** 페이지를 [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) 샘플 프로그램의 여러 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 됩니다. 합니다 [ `AccumulatedTranslatePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 동일한 영역의 20 버전을 표시 하는 클래스, 각각 오프셋 이전 사각형에서 충분 대각선을 따라 stretch 있습니다 있도록 합니다. 다음은 `PaintSurface` 이벤트 처리기:
+**변환 누적** 페이지를 [ **SkiaSharpForms** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 프로그램의 여러 호출 하는 방법을 보여 줍니다는 `Translate` 메서드 누적 됩니다. 합니다 [ `AccumulatedTranslatePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) 동일한 영역의 20 버전을 표시 하는 클래스, 각각 오프셋 이전 사각형에서 충분 대각선을 따라 stretch 있습니다 있도록 합니다. 다음은 `PaintSurface` 이벤트 처리기:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -136,7 +136,7 @@ using (SKPaint textPaint = new SKPaint())
 
 두 번째 예제에서는 호출 [ `ResetMatrix` ](xref:SkiaSharp.SKCanvas.ResetMatrix)합니다. 이렇게 하면 모든 변환 기본 상태로 돌아갑니다.
 
-상태를 저장 하는 세 번째 예제는 `SKCanvas` 개체에 대 한 호출을 사용 하 여 [ `Save` ](xref:SkiaSharp.SKCanvas.Save) 다음에 대 한 호출을 사용 하 여 상태를 복원 [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore)합니다. 이 그리기 작업에 대 한 변환 조작에 대 한 가장 다양 한 방법입니다. 이러한 `Save` 고 `Restore` 스택 처럼 함수를 호출 합니다. 호출할 수 있습니다 `Save` 여러 시간 및 호출 `Restore` 반대로 이전 상태를 반환할 시퀀스입니다. 합니다 `Save` 메서드는 정수를 반환 하 고 해당 정수를 전달할 수 있습니다 [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) 효과적으로 호출 하려면 `Restore` 여러 번입니다. 합니다 [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) 속성 스택의 현재 저장 된 상태의 수를 반환 합니다.
+상태를 저장 하는 세 번째 예제는 `SKCanvas` 개체에 대 한 호출을 사용 하 여 [ `Save` ](xref:SkiaSharp.SKCanvas.Save) 다음에 대 한 호출을 사용 하 여 상태를 복원 [ `Restore` ](xref:SkiaSharp.SKCanvas.Restore)합니다. 이 그리기 작업에 대 한 변환 조작에 대 한 가장 다양 한 방법입니다. 이러한 `Save` 함수 `Restore` 는 스택 처럼 함수를 호출 합니다. 여러 번 호출할 `Save` 수 있으며, 역방향 시퀀스에서 `Restore` 를 호출 하 여 이전 상태로 돌아갈 수 있습니다. 합니다 `Save` 메서드는 정수를 반환 하 고 해당 정수를 전달할 수 있습니다 [ `RestoreToCount` ](xref:SkiaSharp.SKCanvas.RestoreToCount*) 효과적으로 호출 하려면 `Restore` 여러 번입니다. 합니다 [ `SaveCount` ](xref:SkiaSharp.SKCanvas.SaveCount) 속성 스택의 현재 저장 된 상태의 수를 반환 합니다.
 
 사용할 수도 있습니다는 [ `SKAutoCanvasRestore` ](xref:SkiaSharp.SKAutoCanvasRestore) 캔버스 상태를 복원 하기 위한 클래스입니다. 이 클래스의 생성자에서 호출 될 것을 `using` 문; 캔버스 상태가 끝날 때 자동으로 복원 되는 `using` 블록. 
 
@@ -307,4 +307,4 @@ public class HendecagramAnimationPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

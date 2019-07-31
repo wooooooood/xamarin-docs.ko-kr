@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 7b99e876c666160bdfd4392915901ea6535e68e1
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 77ab879205f0260291f04f94111ea95e0d4e556f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674835"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657503"
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.Forms 페이지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/FormsGallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Xamarin.Forms 페이지는 플랫폼 간 모바일 응용 프로그램 화면을 나타냅니다._
 
 Xamarin.Forms에서 아래에 나와 있는 모든 페이지 유형 파생 [ `Page` ](xref:Xamarin.Forms.Page) 클래스입니다. 이러한 시각적 요소는 모든 또는 대부분의 화면을 차지합니다. A `Page` 개체가 나타내는 `ViewController` ios에서 및 `Page` 유니버설 Windows 플랫폼에서 합니다. Android에서 각 페이지와 같은 화면을 차지를 `Activity`, Xamarin.Forms 페이지 되지만 *없습니다* `Activity` 개체입니다.
 
-[![](pages-images/pages-sml.png "Xamarin.Forms 페이지 형식")](pages-images/pages.png#lightbox "Xamarin.Forms 페이지 형식")
+Xamarin Forms 페이지 형식 [ ![(pages-images/pages-sml.png " ")]] (pages-images/pages.png#lightbox "Xamarin Forms 페이지 형식")
 
 ## <a name="pages"></a>인쇄할 페이지
 
@@ -41,28 +41,28 @@ Xamarin.Forms는 페이지 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| A [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 정보의 두 창을 관리 합니다. 설정 된 [ `Master` ](xref:Xamarin.Forms.MasterDetailPage.Master) 일반적으로 목록 또는 메뉴를 보여 주는 페이지로 속성입니다. 설정 된 [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) 마스터 페이지에서 선택한 항목을 보여 주는 페이지로 속성입니다. 합니다 [ `IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented) 속성의 마스터 / 세부 정보 페이지 표시 되는지 여부를 제어 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.MasterDetailPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md) / [샘플](https://developer.xamarin.com/samples/xamarin-forms/Navigation/MasterDetailPage/) | [![MasterDetailPage 예제](pages-images/MasterDetailPage.png "MasterDetailPage 예제")](pages-images/MasterDetailPage-Large.png#lightbox "MasterDetailPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MasterDetailPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml) 사용 하 여 [코드 숨김](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml.cs) |
+| A [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage) 정보의 두 창을 관리 합니다. 설정 된 [ `Master` ](xref:Xamarin.Forms.MasterDetailPage.Master) 일반적으로 목록 또는 메뉴를 보여 주는 페이지로 속성입니다. 설정 된 [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) 마스터 페이지에서 선택한 항목을 보여 주는 페이지로 속성입니다. 합니다 [ `IsPresented` ](xref:Xamarin.Forms.MasterDetailPage.IsPresented) 속성의 마스터 / 세부 정보 페이지 표시 되는지 여부를 제어 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.MasterDetailPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage) | [![MasterDetailPage 예제](pages-images/MasterDetailPage.png "MasterDetailPage 예제")](pages-images/MasterDetailPage-Large.png#lightbox "MasterDetailPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MasterDetailPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml) 사용 하 여 [코드 숨김](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="navigationpage"></a>NavigationPage
 
 |     |     |
 | --- | --- |
-| 합니다 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 스택 기반 아키텍처를 사용 하 여 다른 페이지 간 탐색을 관리 합니다. 생성자에 홈 페이지의 인스턴스를 전달 해야 응용 프로그램에서 페이지 탐색 사용 하는 경우는 `NavigationPage` 개체입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.NavigationPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md) / [1 샘플](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)하십시오 [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/), 및 [3](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)  | [![NavigationPage 예제](pages-images/NavigationPage.png "NavigationPage 예제")](pages-images/NavigationPage-Large.png#lightbox "NavigationPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/NavigationPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml) 사용 하 여 [코드 숨김 =](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml.cs) |
+| 합니다 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 스택 기반 아키텍처를 사용 하 여 다른 페이지 간 탐색을 관리 합니다. 생성자에 홈 페이지의 인스턴스를 전달 해야 응용 프로그램에서 페이지 탐색 사용 하는 경우는 `NavigationPage` 개체입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.NavigationPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md) / [1 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)하십시오 [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata), 및 [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)  | [![NavigationPage 예제](pages-images/NavigationPage.png "NavigationPage 예제")](pages-images/NavigationPage-Large.png#lightbox "NavigationPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/NavigationPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml) 사용 하 여 [코드 숨김 =](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/NavigationPageDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="tabbedpage"></a>TabbedPage
 
 |     |     |
 | --- | --- |
-| [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 에서 파생 [ `MultiPage` ](xref:Xamarin.Forms.MultiPage`1) 클래스 및 자식 간 탐색 탭을 사용 하 여 페이지를 허용 합니다. 설정 된 [ `Children` ](xref:Xamarin.Forms.MultiPage`1.Children) 속성 페이지 또는 집합의 컬렉션을를 [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성을 데이터 개체의 컬렉션 및 [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 각 개체가 시각적으로 나타낼 수 하는 방법을 설명 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TabbedPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) / [1 샘플](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/) 고 [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage) | [![TabbedPage 예제](pages-images/TabbedPage.png "TabbedPage 예제")](pages-images/TabbedPage-Large.png#lightbox "TabbedPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TabbedPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TabbedPageDemoPage.xaml) |
+| [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 에서 파생 [ `MultiPage` ](xref:Xamarin.Forms.MultiPage`1) 클래스 및 자식 간 탐색 탭을 사용 하 여 페이지를 허용 합니다. 설정 된 [ `Children` ](xref:Xamarin.Forms.MultiPage`1.Children) 속성 페이지 또는 집합의 컬렉션을를 [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성을 데이터 개체의 컬렉션 및 [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 각 개체가 시각적으로 나타낼 수 하는 방법을 설명 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TabbedPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md) / [1 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage) 고 [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage) | [![TabbedPage 예제](pages-images/TabbedPage.png "TabbedPage 예제")](pages-images/TabbedPage-Large.png#lightbox "TabbedPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TabbedPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TabbedPageDemoPage.xaml) |
 |     |     |
 
 ### <a name="carouselpage"></a>CarouselPage
 
 |     |     |
 | --- | --- |
-| [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) 에서 파생 [ `MultiPage` ](xref:Xamarin.Forms.MultiPage`1) 클래스 및 자식 간 탐색 손가락 살짝를 통해 페이지를 허용 합니다. 설정 된 [ `Children` ](xref:Xamarin.Forms.MultiPage`1.Children) 속성의 컬렉션을 [ `ContentPage` ](#contentPage) 개체나 집합 합니다 [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성 데이터 개체의 컬렉션을 및 [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 각 개체가 시각적으로 나타낼 수 하는 방법을 설명 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.CarouselPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md) / [1 샘플](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPage/) 고 [2](https://developer.xamarin.com/samples/xamarin-forms/Navigation/CarouselPageTemplate/) | [![CarouselPage 예제](pages-images/CarouselPage.png "CarouselPage 예제")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
+| [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) 에서 파생 [ `MultiPage` ](xref:Xamarin.Forms.MultiPage`1) 클래스 및 자식 간 탐색 손가락 살짝를 통해 페이지를 허용 합니다. 설정 된 [ `Children` ](xref:Xamarin.Forms.MultiPage`1.Children) 속성의 컬렉션을 [ `ContentPage` ](#contentPage) 개체나 집합 합니다 [ `ItemsSource` ](xref:Xamarin.Forms.MultiPage`1.ItemsSource) 속성 데이터 개체의 컬렉션을 및 [ `ItemTemplate` ](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) 속성을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 각 개체가 시각적으로 나타낼 수 하는 방법을 설명 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.CarouselPage) / [가이드](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md) / [1 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage) 고 [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate) | [![CarouselPage 예제](pages-images/CarouselPage.png "CarouselPage 예제")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedpage"></a>TemplatedPage
@@ -74,6 +74,6 @@ Xamarin.Forms는 페이지 형식을 지원 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.Forms FormsGallery 샘플](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
-- [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms FormsGallery 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.Forms API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: f97cd3030b865b53b82845ff8941e3f0a10f0320
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169832"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657169"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Imagebutton이 이미지를 표시 하 고 탭 또는 특정 작업을 수행 하는 응용 프로그램을 지시 하는 클릭에 응답 합니다._
 
@@ -25,7 +25,7 @@ _Imagebutton이 이미지를 표시 하 고 탭 또는 특정 작업을 수행 �
 > [!NOTE]
 > 하는 동안 합니다 [ `Button` ](xref:Xamarin.Forms.Button) 뷰 정의 [ `Image` ](xref:Xamarin.Forms.Button.Image) 속성에서 이미지를 표시할 수 있도록를 `Button`,이 속성은 작은 아이콘을 표시할 때 사용 하기 위한 다음에 `Button` 텍스트입니다.
 
-이 가이드의 코드 예제에서 수행 되는 [FormsGallery 샘플](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)합니다.
+이 가이드의 코드 예제에서 수행 되는 [FormsGallery 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)합니다.
 
 ## <a name="setting-the-image-source"></a>이미지 원본 설정
 
@@ -276,4 +276,4 @@ public class ImageButtonDemoPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [FormsGallery 샘플](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [FormsGallery 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

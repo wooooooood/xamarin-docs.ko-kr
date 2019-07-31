@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 93218289cefe26c523bf14721202f7ec4743f022
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 21d25315aec5c056df90da11b8a51ee1493a45a5
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659080"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656678"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함 리소스를 사용하여 수행할 수 있습니다._
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-그러면 `text` 변수를 사용하여 텍스트를 표시하거나 그렇지 않은 경우 코드에서 사용할 수 있습니다. [샘플 앱](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)의 다음 스크린샷에서는 `Label` 컨트롤에서 렌더링된 텍스트를 보여 줍니다.
+그러면 `text` 변수를 사용하여 텍스트를 표시하거나 그렇지 않은 경우 코드에서 사용할 수 있습니다. [샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)의 다음 스크린샷에서는 `Label` 컨트롤에서 렌더링된 텍스트를 보여 줍니다.
 
  [![PCL로 작성된 포함된 텍스트 파일](files-images/pcltext-sml.png "PCL로 작성된 포함된 텍스트 파일, 앱에 표시됨")](files-images/pcltext.png#lightbox "PCL로 작성된 포함된 텍스트 파일, 앱에 표시됨")
 
@@ -166,7 +166,7 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
 - [Xamarin.iOS에서 파일 시스템 작업](~/ios/app-fundamentals/file-system.md)
 

@@ -1,24 +1,24 @@
 ---
-title: IOS의 NavigationPage 모음 반투명도
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 NavigationPage의 탐색 모음의 투명도 변경 하는 iOS 플랫폼 전용을 사용 하는 방법을 설명 합니다.
+title: IOS의 NavigationPage Bar 반투명도
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 NavigationPage의 탐색 모음 투명도를 변경 하는 iOS 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1150941B-56DB-4781-BE36-A4C4F9F2C500
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d6a3538b4083112a2bf1a343a9db438e4894815b
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6a8d1c0a4130e7f5b909e963fce23c87597a688c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925654"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652126"
 ---
-# <a name="navigationpage-bar-translucency-on-ios"></a>IOS의 NavigationPage 모음 반투명도
+# <a name="navigationpage-bar-translucency-on-ios"></a>IOS의 NavigationPage Bar 반투명도
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-탐색 모음의 투명도 변경 하려면이 iOS 플랫폼 관련 되는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)를 설정 하 여 XAML에서 사용 되는 [ `NavigationPage.IsNavigationBarTranslucent` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty) 연결 된 속성을 `boolean`값:
+이 iOS 플랫폼별는의 탐색 모음 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)에 대 한 투명도를 변경 하는 데 사용 되며 [`NavigationPage.IsNavigationBarTranslucent`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty) 연결 된 속성을 `boolean` 값으로 설정 하 여 XAML에서 사용 됩니다.
 
 ```xaml
 <NavigationPage ...
@@ -54,6 +54,6 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

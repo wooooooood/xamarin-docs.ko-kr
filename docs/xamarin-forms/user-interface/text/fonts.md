@@ -7,22 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: de77be818abbe1250946ee2ce1599235b79d8c01
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 329f7dc9cc43582f630a4895fba452a8496bae9a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512982"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656167"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (크기 및 무게 포함)을 지정할 수 있습니다 하는 방법을 설명 합니다. 글꼴 정보 일 수 있습니다 [코드에서 지정한](#Setting_Font_in_Code) 하거나 [XAML에 지정 된](#Setting_Font_in_Xaml)합니다. 에 '도 사용할 수는 [사용자 지정 글꼴](#Using_a_Custom_Font), 및 [글꼴 아이콘 표시](#display-font-icons)합니다.
+이 문서에서는 텍스트를 표시 하는 컨트롤에 Xamarin.Forms 글꼴 특성 (크기 및 무게 포함)을 지정할 수 있습니다 하는 방법을 설명 합니다. 글꼴 정보 일 수 있습니다 [코드에서 지정한](#Setting_Font_in_Code) 하거나 [XAML에 지정 된](#Setting_Font_in_Xaml)합니다. ' [사용자 지정 글꼴](#Using_a_Custom_Font)을 사용 하 고 [글꼴 아이콘을 표시할](#display-font-icons)수도 있습니다.
 
 <a name="Setting_Font_in_Code" />
 
-## <a name="set-the-font-in-code"></a>코드에서 글꼴 설정
+## <a name="set-the-font-in-code"></a>코드에 글꼴을 설정 합니다.
 
 텍스트를 표시 하는 모든 컨트롤의 3 개의 글꼴 관련 속성을 사용 합니다.
 
@@ -50,7 +50,7 @@ var about = new Label {
 label.FontSize = 24;
 ```
 
-Xamarin.Forms의 필드 정의 [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형입니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 참조 하세요. [명명 된 글꼴 크기](#named-font-sizes)합니다.
+또한 xamarin.ios는 특정 글꼴 크기를 나타내는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 열거형의 필드도 정의 합니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 [명명 된 글꼴 크기](#named-font-sizes)를 참조 하십시오.
 
 <a name="FontAttributes" />
 
@@ -68,7 +68,7 @@ Xamarin.Forms의 필드 정의 [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) 특
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### <a name="set-font-info-per-platform"></a>플랫폼 당 집합 글꼴 정보
+### <a name="set-font-info-per-platform"></a>플랫폼 당 글꼴 정보 설정
 
 또는 `Device.RuntimePlatform` 이 코드에서와 같이 각 플랫폼에서 다른 글꼴 이름을 설정 하려면 속성을 사용할 수 있습니다.
 
@@ -83,7 +83,7 @@ IOS에 대 한 글꼴 정보 좋은 원본은 [iosfonts.com](http://iosfonts.com
 
 <a name="Setting_Font_in_Xaml" />
 
-## <a name="set-the-font-in-xaml"></a>XAML에서 글꼴을 설정
+## <a name="set-the-font-in-xaml"></a>XAML에서 글꼴 설정
 
 Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정할 수 있는 속성입니다. XAML에서 글꼴을 설정 하는 가장 간단한 방법은 다음과 같습니다. 명명 된 크기 열거형 값을 사용 하도록이 예와 같이
 
@@ -92,7 +92,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-에 대 한 기본 제공 변환기는는 `FontSize` 속성을 사용 하는 모든 글꼴 설정을 XAML에서 문자열 값으로 표현 될 수 있습니다. 또한는 `FontAttributes` 글꼴 특성을 지정 하려면 속성을 사용할 수 있습니다.
+에 대 한 기본 제공 변환기는는 `FontSize` 속성을 사용 하는 모든 글꼴 설정을 XAML에서 문자열 값으로 표현 될 수 있습니다. 또한 `FontAttributes` 속성을 사용 하 여 글꼴 특성을 지정할 수 있습니다.
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -118,7 +118,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 
 ## <a name="named-font-sizes"></a>명명 된 글꼴 크기
 
-Xamarin.Forms에서 필드를 정의 합니다 [ `NamedSize` ](xref:Xamarin.Forms.NamedSize) 특정 글꼴 크기를 나타내는 열거형입니다. 다음 표는 `NamedSize` 멤버 및 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기:
+Xamarin.ios는 특정 글꼴 크기를 나타내는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 열거형의 필드를 정의 합니다. 다음 표에서는 `NamedSize` 구성원 및 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기를 보여 줍니다.
 
 | 멤버 | iOS | Android | UWP |
 | --- | --- | --- | --- |
@@ -133,18 +133,18 @@ Xamarin.Forms에서 필드를 정의 합니다 [ `NamedSize` ](xref:Xamarin.Form
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
 
-XAML 및 코드를 통해 명명 된 글꼴 크기를 설정할 수 있습니다. 또한 합니다 `Device.GetNamedSize` 반환할 메서드를 호출할 수는 `double` 명명 된 글꼴 크기를 나타내는:
+명명 된 글꼴 크기는 XAML과 코드를 모두 통해 설정할 수 있습니다. 또한 `Device.GetNamedSize` 메서드를 호출 하 여 명명 된 글꼴 크기를 `double` 나타내는를 반환할 수 있습니다.
 
 ```csharp
 label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 ```
 
 > [!NOTE]
-> IOS 및 Android에서 명명 된 글꼴 크기는 운영 체제의 내게 필요한 옵션에 따라 자동 크기 조정이 됩니다. 플랫폼 전용을 사용 하 여 iOS에서이 동작을 비활성화할 수 있습니다. 자세한 내용은 [iOS에서 명명 된 글꼴 크기에 대 한 내게 필요한 옵션 확장](~/xamarin-forms/platform/ios/named-font-size-scaling.md)합니다.
+> IOS 및 Android에서 명명 된 글꼴 크기는 운영 체제의 내게 필요한 옵션에 따라 자동으로 크기를 조정 합니다. 이 동작은 플랫폼별로 iOS에서 사용 하지 않도록 설정할 수 있습니다. 자세한 내용은 [iOS의 명명 된 글꼴 크기에 대 한 접근성 크기 조정](~/xamarin-forms/platform/ios/named-font-size-scaling.md)을 참조 하세요.
 
 <a name="Using_a_Custom_Font" />
 
-## <a name="use-a-custom-font"></a>사용자 지정 글꼴을 사용 하 여
+## <a name="use-a-custom-font"></a>사용자 지정 글꼴 사용
 
 기본 제공 서체가 아닌 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 사용자 지정 글꼴을 보여 주는이 스크린샷 **Lobster** 에서 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) Xamarin.Forms를 사용 하 여 렌더링 합니다.
 
@@ -157,7 +157,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 먼저 로드 됨을 보장 다음 Xamarin.Forms를 사용 하 여 이름으로 참조 하 여 사용자 지정 글꼴을 표시 하는 것이 불가능 `Font` 메서드.
 지침을 따릅니다 [이 블로그 게시물](https://blog.xamarin.com/custom-fonts-in-ios/):
 
-1. 글꼴 파일 추가 **빌드 작업: BundleResource**, and
+1. 빌드 작업을 사용 하 **여 글꼴 파일 추가: BundleResource**, and
 2. 업데이트를 **Info.plist** 파일 (**응용 프로그램에서 제공 하는 글꼴**, 또는 `UIAppFonts`키,), 한 다음
 3. Xamarin.Forms의 글꼴을 정의 하는 위치를 이름으로 참조!
 
@@ -171,7 +171,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 글꼴 파일을 추가 합니다 **자산** 집합과 응용 프로그램 프로젝트에서 폴더 *빌드 작업: AndroidAsset*. 그런 다음 전체 경로 사용 하 고 *글꼴 이름* 아래 코드 조각에서 보여 주듯이 Xamarin.Forms의 글꼴 이름으로 해시 (#)로 구분:
+Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 응용 프로그램 프로젝트의 **자산** 폴더에 글꼴 파일을 추가 하 고 빌드 *작업을 설정 합니다. AndroidAsset*. 그런 다음 전체 경로 사용 하 고 *글꼴 이름* 아래 코드 조각에서 보여 주듯이 Xamarin.Forms의 글꼴 이름으로 해시 (#)로 구분:
 
 ```csharp
 new Label
@@ -216,19 +216,19 @@ new Label
 
 ## <a name="display-font-icons"></a>글꼴 아이콘 표시
 
-글꼴 아이콘 데이터를 지정 하 여 Xamarin.Forms 응용 프로그램에서 글꼴 아이콘을 표시할 수 있습니다는 `FontImageSource` 개체입니다. 파생 되는이 클래스는 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) 클래스에 다음 속성이 있습니다.
+글꼴 아이콘 데이터를 `FontImageSource` 개체에 지정 하 여 xamarin.ios 응용 프로그램에서 글꼴 아이콘을 표시할 수 있습니다. [`ImageSource`](xref:Xamarin.Forms.ImageSource) 클래스에서 파생 되는이 클래스에는 다음과 같은 속성이 있습니다.
 
-- `Glyph` –로 지정 된 글꼴 아이콘의 유니코드 문자 값을 `string`입니다.
-- `Size` –는 `double` 장치 독립적 단위 렌더링된 글꼴 아이콘의 크기를 나타내는 값입니다. 기본값은 30입니다.
-- `FontFamily` –는 `string` 글꼴 아이콘 속해 있는 글꼴 패밀리를 표시 합니다.
-- `Color` – 선택적 [ `Color` ](xref:Xamarin.Forms.Color) 글꼴 아이콘을 표시할 때 사용할 값입니다.
+- `Glyph`–로 `string`지정 된 글꼴 아이콘의 유니코드 문자 값입니다.
+- `Size`– 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)를 나타내는 값입니다.`double` 기본값은 30입니다.
+- `FontFamily`– 글꼴 아이콘이 속한 글꼴 패밀리를 나타내는입니다.`string`
+- `Color`– 글꼴 아이콘 [`Color`](xref:Xamarin.Forms.Color) 을 표시할 때 사용 되는 선택적 값입니다.
 
-이 데이터는 표시할 수 있는 모든 보기에서 표시할 수 있는 PNG, 만드는 데는 `ImageSource`합니다. 이 방법은 단일 텍스트와 같은 보기를 제공 하는 글꼴 아이콘 표시를 제한 하는 대신 여러 뷰로 표시할 글꼴 아이콘이 모 지를 같은 허용을 [ `Label` ](xref:Xamarin.Forms.Label)합니다.
+이 데이터는를 표시할 `ImageSource`수 있는 보기에서 표시할 수 있는 PNG를 만드는 데 사용 됩니다. 이 접근 방식을 사용 하면 [`Label`](xref:Xamarin.Forms.Label)글꼴 아이콘 표시를 같은 단일 텍스트 (예:)로 제한 하는 것과 달리 여러 뷰에 표시 되는 emojis와 같은 글꼴 아이콘을 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> 글꼴 아이콘은 해당 유니코드 문자 표현으로 현재만 지정할 수 있습니다.
+> 글꼴 아이콘은 현재 유니코드 문자 표시로만 지정할 수 있습니다.
 
-다음 XAML 예제에 표시 되는 단일 글꼴 아이콘에는 [ `Image` ](xref:Xamarin.Forms.Image) 보기:
+다음 XAML 예제에는 [`Image`](xref:Xamarin.Forms.Image) 뷰에서 표시 되는 단일 글꼴 아이콘이 있습니다.
 
 ```xaml
 <Image BackgroundColor="#D1D1D1">
@@ -240,7 +240,7 @@ new Label
 </Image>
 ```
 
-이 코드에서 Ionicons 글꼴 패밀리에서 XBox 아이콘 표시는 [ `Image` ](xref:Xamarin.Forms.Image) 보기. 유니코드 하는 동안이 아이콘에 대 한 문자는 `\uf30c`, XAML에서 이스케이프 해야 하 고 따라서 됩니다 `&#xf30c;`합니다. 해당하는 C# 코드는 다음과 같습니다.
+이 코드는 아이콘 글꼴 패밀리의 [`Image`](xref:Xamarin.Forms.Image) 보기에서 XBox 아이콘을 표시 합니다. 이 아이콘 `\uf30c`의 유니코드 문자는 이지만 XAML에서 이스케이프 되어야 `&#xf30c;`하므로가 됩니다. 해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };
@@ -252,13 +252,13 @@ image.Source = new FontImageSource
 };
 ```
 
-다음 스크린샷과에서 [바인딩할 수 있는 레이아웃](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/) 예제를 바인딩할 수 있는 레이아웃에 표시 되는 여러 글꼴 아이콘을 표시 합니다.
+[바인딩](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) 가능한 레이아웃 샘플에서 다음 스크린샷에는 바인딩 가능한 레이아웃에 의해 표시 되는 몇 가지 글꼴 아이콘이 표시 됩니다.
 
-![글꼴 아이콘 표시 되 고, iOS 및 Android에서 스크린 샷](fonts-images/font-image-source.png "이미지 보기에서 표시 되는 글꼴 아이콘")
+![IOS 및 Android에서 표시 되는 글꼴 아이콘의 스크린샷](fonts-images/font-image-source.png "이미지 뷰에 표시 되는 글꼴 아이콘")
 
 ## <a name="related-links"></a>관련 링크
 
-- [FontsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
-- [텍스트 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/)
-- [바인딩 가능한 레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [FontsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+- [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [바인딩 가능한 레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

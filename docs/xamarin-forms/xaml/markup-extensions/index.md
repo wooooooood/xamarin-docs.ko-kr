@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3b135f916225f896680cfb73175ba0568928be06
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075483"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655751"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 XAML 태그 확장은 일반적인 텍스트 문자열 이외의 소스에서 요소 특성을 설정할 수 있도록 하여 XAML의 기능과 유연성 확장을 돕습니다.
 
@@ -36,7 +36,7 @@ XAML 태그 확장은 일반적인 텍스트 문자열 이외의 소스에서 �
 
 `Color` 특성을 리소스 사전에 저장 된 값, 또는 사용자가 생성한 클래스의 정적 속성의 값, 또는 페이지에 있는 다른 요소의 `Color` 유형, 또는 색조, 채도 및 명도 값으로 구분하여 설정하는 것을 선호할 수 있습니다.
 
-이러한 모든 옵션은 XAML 태그 확장을 사용하여 수행할 수 있습니다.  그러나 구 "태그 확장" 하다 고 걱정할: XAML 태그 확장은 *되지* XML에 대 한 확장입니다. XAML 태그 확장을 사용하더라도 XAML은 항상 유효한 XML입니다.
+이러한 모든 옵션은 XAML 태그 확장을 사용하여 수행할 수 있습니다. 그러나 "태그 확장" 이라는 문구를 사용 하면 다음을 수행 하지 않아도 됩니다. XAML 태그 확장은 XML로 확장 *되지 않습니다* . XAML 태그 확장을 사용하더라도 XAML은 항상 유효한 XML입니다.
 
 태그 확장은 실제로 요소 특성을 표현하는 다른 방식입니다. XAML 태그 확장은 일반적으로 다음과 같이 중괄호로 묶인 특성 설정으로 식별할 수 있습니다.
 
@@ -60,7 +60,7 @@ Xamarin.Forms에 정의된 XAML 태그 확장을 사용합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [태그 확장 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
+- [태그 확장 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Xamarin.Forms 책에서 XAML 태그 확장 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [동적 스타일](~/xamarin-forms/user-interface/styles/dynamic.md)

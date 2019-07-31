@@ -1,26 +1,26 @@
 ---
-title: Windows에서 ListView SelectionMode
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서는 Windows 플랫폼 관련 항목을 ListView에서 탭 제스처에 응답할 수 있는지 여부를 제어 하는 사용 하는 방법을 설명 합니다.
+title: Windows의 ListView SelectionMode
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 ListView의 항목이 탭 제스처에 응답할 수 있는지 여부를 제어 하는 Windows 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 57EF3A7F-1407-4B31-AE21-D149293D4228
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 59b9025b58af4d7080d0506d4994cb72bf4f096d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f6a90a8a0397db99a245f706450e7dc83097a45e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924756"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656905"
 ---
-# <a name="listview-selectionmode-on-windows"></a>Windows에서 ListView SelectionMode
+# <a name="listview-selectionmode-on-windows"></a>Windows의 ListView SelectionMode
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 유니버설 Windows 플랫폼에서 Xamarin.Forms 기본적 [ `ListView` ](xref:Xamarin.Forms.ListView) 네이티브를 사용 하 여 `ItemClick` 네이티브 보다는 상호 작용에 응답할 이벤트 `Tapped` 이벤트입니다. Windows 내레이터와 키보드 상호 작용할 수 있도록 내게 필요한 옵션 기능을 제공 합니다 `ListView`합니다. 그러나 렌더링 내에서 모든 탭 제스처를 `ListView` 작동 하지 않습니다.
 
-이 유니버설 Windows 플랫폼, 플랫폼별 제어 여부를 항목을 [ `ListView` ](xref:Xamarin.Forms.ListView) 제스처와 탭에 응답할 수 있습니다 이므로 여부를 네이티브 `ListView` 발생을 `ItemClick` 또는 `Tapped` 이벤트. 설정 하 여 XAML에서 사용 되는 [ `ListView.SelectionMode` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListView.SelectionModeProperty) 연결 된 속성의 값에는 [ `ListViewSelectionMode` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode) 열거형:
+이 유니버설 Windows 플랫폼 플랫폼별는 [`ListView`](xref:Xamarin.Forms.ListView) 의 항목이 탭 제스처에 응답할 수 있는지 여부와 네이티브 `ListView` 가 `ItemClick` 또는 `Tapped` 이벤트를 발생 시키는 지 여부를 제어 합니다. 설정 하 여 XAML에서 사용 되는 [ `ListView.SelectionMode` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListView.SelectionModeProperty) 연결 된 속성의 값에는 [ `ListViewSelectionMode` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ListViewSelectionMode) 열거형:
 
 ```xaml
 <ContentPage ...
@@ -57,6 +57,6 @@ listView.On<Windows>().SetSelectionMode(ListViewSelectionMode.Inaccessible);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

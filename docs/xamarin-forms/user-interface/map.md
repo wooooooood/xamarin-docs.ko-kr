@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2019
-ms.openlocfilehash: ec1600f57daf627742db41f7410ef4f49b53c2b3
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 51555382e38412b7fa2c5c821b252984758bb1ec
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386191"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656962"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 _Xamarin.Forms는 각 플랫폼에서 기본 지도 Api를 사용합니다._
 
 Xamarin.Forms.Maps 각 플랫폼에 기본 지도 Api를 사용합니다. 이를 통해 사용자는 빠르고 친숙 한 지도를 제공할 수 있지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 합니다.
 한 번 구성 하면는 `Map` 공용 코드의 다른 모든 Xamarin.Forms 요소 처럼 작동을 제어 합니다.
 
-지도 컨트롤에서 사용 된 합니다 [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) 아래 나와 있는 샘플입니다.
+지도 컨트롤에서 사용 된 합니다 [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) 아래 나와 있는 샘플입니다.
 
  [![MobileCRM 예제의 maps](map-images/maps-zoom-sml.png "지도 컨트롤 예제")](map-images/maps-zoom.png#lightbox "지도 컨트롤 예제")
 
@@ -377,8 +377,8 @@ public class MapItemTemplateSelector : DataTemplateSelector
 
 ## <a name="related-links"></a>관련 링크
 
-- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
+- [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [맵 사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
-- [Xamarin.Forms 샘플](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin. Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
 - [지도 API](xref:Xamarin.Forms.Maps)

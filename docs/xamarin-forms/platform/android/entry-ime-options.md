@@ -1,24 +1,24 @@
 ---
-title: Android에서 항목 입력 방법 편집기 옵션
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Android 플랫폼 특정 입력된 메서드 항목에 대 한 소프트 키보드에 대 한 편집기 옵션을 설정 하는 사용 하는 방법을 설명 합니다.
+title: Android에서 입력 방법 편집기 옵션 입력
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 항목에 대 한 소프트 키보드의 입력 방법 편집기 옵션을 설정 하는 Android 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 4da446cf342065ce7766f8df0c71008ab47c31c4
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 3711e85bd30deb06f351f4539c5ffc7e4236efb6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926825"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653597"
 ---
-# <a name="entry-input-method-editor-options-on-android"></a>Android에서 항목 입력 방법 편집기 옵션
+# <a name="entry-input-method-editor-options-on-android"></a>Android에서 입력 방법 편집기 옵션 입력
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 Android 플랫폼 특정 입력된 메서드 (입력기) 옵션을 설정 하에 대 한 소프트 키보드를 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 소프트 키보드와의 상호 작용의 아래쪽 모서리에서 사용자 작업 단추를 설정 하는 것이 여기는 `Entry`합니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) 연결 된 속성의 값에는 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 열거형:
+이 Android 플랫폼별는에 대 [`Entry`](xref:Xamarin.Forms.Entry)한 소프트 키보드의 ime (입력기) 옵션을 설정 합니다. 소프트 키보드와의 상호 작용의 아래쪽 모서리에서 사용자 작업 단추를 설정 하는 것이 여기는 `Entry`합니다. 설정 하 여 XAML에서 사용 되는 [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) 연결 된 속성의 값에는 [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) 열거형:
 
 ```xaml
 <ContentPage ...
@@ -62,7 +62,7 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

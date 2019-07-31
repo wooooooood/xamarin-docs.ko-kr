@@ -1,26 +1,26 @@
 ---
-title: IOS에서 VisualElement 레거시 색 모드
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms 레거시 색 모드를 사용 하지 않도록 설정 하는 iOS 플랫폼 특정을 사용 하는 방법을 설명 합니다.
+title: IOS의 VisualElement 레거시 색 모드
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Xamarin.ios 레거시 색 모드를 사용 하지 않도록 설정 하는 iOS 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 60FFBA67-6E06-439B-A5EB-8C808285E2CD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 7399301e8a979097d25f1916de76fd49a584f90e
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 6a991e1fb3b8d0325a5fd5f56f943bf69f9be602
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926730"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655439"
 ---
-# <a name="visualelement-legacy-color-mode-on-ios"></a>IOS에서 VisualElement 레거시 색 모드
+# <a name="visualelement-legacy-color-mode-on-ios"></a>IOS의 VisualElement 레거시 색 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Xamarin.Forms 뷰의 일부 레거시 색 모드를 기능입니다. 이 모드에서는 때 합니다 [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) 뷰의 속성 `false`, 보기에는 색 사용 안 함된 상태에 대 한 기본 네이티브 색을 사용 하 여 사용자 설정 보다 우선 합니다. 이전 버전과 호환성을 위해이 레거시 색 모드는 지원 되는 보기에 대 한 기본 동작을 유지 합니다.
 
-이 iOS 플랫폼별이 레거시 색 모드에서 사용 하지 않도록를 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement)보기를 비활성화 하는 경우 사용자가 설정한 뷰에 색도 유지 되도록 합니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty) 연결 된 속성을 `false`:
+이 iOS 플랫폼별는 [`VisualElement`](xref:Xamarin.Forms.VisualElement)에서이 레거시 색 모드를 사용 하지 않도록 설정 하므로 보기에 설정 된 색은 보기를 사용 하지 않는 경우에도 계속 유지 됩니다. 설정 하 여 XAML에서 사용 되는 [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsLegacyColorModeEnabledProperty) 연결 된 속성을 `false`:
 
 ```xaml
 <ContentPage ...
@@ -57,6 +57,6 @@ _legacyColorModeDisabledButton.On<iOS>().SetIsLegacyColorModeEnabled(false);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

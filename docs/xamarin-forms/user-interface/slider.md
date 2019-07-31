@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 1fa46af1ac1cf6ea49a53e3f8d3c3dca6ba83e13
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e54b36989f5b4694da5d46a89391d56920b8d6a9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511897"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656251"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _연속 값의 범위에서 선택 하는 슬라이더를 사용 합니다._
 
@@ -56,11 +56,11 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) 은 선택 하는 사용�
 
 ## <a name="basic-slider-code-and-markup"></a>기본 슬라이더 코드와 태그
 
-합니다 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 기능적으로 동일 하지만 다른 방법으로 구현 되는 세 개의 페이지를 사용 하 여 샘플을 시작 합니다. C# 코드만 사용 하 여 첫 번째 페이지, 코드에서 이벤트 처리기를 사용 하 여 XAML을 사용 하는 두 번째 및 세 번째는 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 피할 수는 없습니다.
+합니다 [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 기능적으로 동일 하지만 다른 방법으로 구현 되는 세 개의 페이지를 사용 하 여 샘플을 시작 합니다. C# 코드만 사용 하 여 첫 번째 페이지, 코드에서 이벤트 처리기를 사용 하 여 XAML을 사용 하는 두 번째 및 세 번째는 XAML 파일에서 데이터 바인딩을 사용 하 여 이벤트 처리기를 피할 수는 없습니다.
 
 ### <a name="creating-a-slider-in-code"></a>코드에서 슬라이더를 만드는 방법
 
-합니다 **기본 슬라이더 코드** 페이지에 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 샘플 만들려면 표시를 보여 줍니다.를 `Slider` 두 개의 `Label` 코드의 개체:
+합니다 **기본 슬라이더 코드** 페이지에 [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플 만들려면 표시를 보여 줍니다.를 `Slider` 두 개의 `Label` 코드의 개체:
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -295,7 +295,7 @@ Android 구현의 `Slider` Android 기반 [ `SeekBar` ](xref:Android.Widget.Seek
 
 UWP 구현의 `Slider` UWP 기반 [ `Slider` ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 `Maximum` 및 `Minimum` 10, 하지만 1 보다 크지 않음로 나눈 값 속성입니다.
 
-예를 들어, 기본 범위인 0 ~ 1에 대 한는 `StepFrequency` 속성은 0.1로 설정 합니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 명백 합니다 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 한 다음 속성은 10 이상이 `StepFrequency` 1로 설정 됩니다 및 `Value` 속성이 정수 계열 값입니다.
+예를 들어, 기본 범위인 0 ~ 1에 대 한는 `StepFrequency` 속성은 0.1로 설정 합니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 명백 합니다 [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 한 다음 속성은 10 이상이 `StepFrequency` 1로 설정 됩니다 및 `Value` 속성이 정수 계열 값입니다.
 
 ### <a name="the-stepslider-solution"></a>StepSlider 솔루션
 
@@ -303,7 +303,7 @@ UWP 구현의 `Slider` UWP 기반 [ `Slider` ](https://docs.microsoft.com/uwp/ap
 
 ## <a name="sliders-for-color-selection"></a>색 선택 영역에 대 한 슬라이더
 
-마지막 두 페이지에 [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) 둘 다 사용 하 여 세 가지 샘플 `Slider` 색 선택 영역에 대 한 인스턴스. 두 번째 페이지는 ViewModel을 사용 하 여 데이터 바인딩을 사용 하는 방법을 표시 하는 동안 첫 번째 페이지 코드 숨김 파일에서 모든 상호 작용을 처리 합니다.
+마지막 두 페이지에 [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 둘 다 사용 하 여 세 가지 샘플 `Slider` 색 선택 영역에 대 한 인스턴스. 두 번째 페이지는 ViewModel을 사용 하 여 데이터 바인딩을 사용 하는 방법을 표시 하는 동안 첫 번째 페이지 코드 숨김 파일에서 모든 상호 작용을 처리 합니다.
 
 ### <a name="handling-sliders-in-the-code-behind-file"></a>코드 숨김 파일에서 슬라이더를 처리합니다.
 
@@ -509,5 +509,5 @@ Viewmodel 하며 `INotifyPropertyChanged` 인터페이스는 문서에서 설명
 
 ## <a name="related-links"></a>관련 링크
 
-- [슬라이더 데모 샘플](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
+- [슬라이더 데모 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [슬라이더 API](xref:Xamarin.Forms.Slider)

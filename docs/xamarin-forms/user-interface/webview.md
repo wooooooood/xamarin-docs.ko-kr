@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2019
-ms.openlocfilehash: 6410be4019772ad11cd97d27c5de3c0300d58519
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: a56764771f3106f73809a51616e90fa30692a4d4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649630"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656261"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) 앱에서 웹 및 HTML 콘텐츠를 표시 하기 위한 뷰입니다. 와 달리 `OpenUri`, 사용자 장치의 웹 브라우저에 적용 되 `WebView` 앱 내에서 HTML 콘텐츠를 표시 합니다.
 
@@ -110,7 +110,7 @@ browser.Source = htmlSource;
 위의 코드에서 `@` HTML을 리터럴, 모든 일반적인 이스케이프 문자는 무시 되는 문자열로 표시 하는 데 사용 됩니다.
 
 > [!NOTE]
-> 설정 해야 할 수도 있습니다는 `WidthRequest` 및 `HeightRequest` 의 속성을 [ `WebView` ](xref:Xamarin.Forms.WebView) 레이아웃에 따라 HTML 콘텐츠를 보려면를 `WebView` 의 자식인. 예를 들어이 반드시에 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)합니다.
+> 가 자식인 레이아웃에 따라 `WidthRequest` 의 및 `HeightRequest` 속성 [`WebView`](xref:Xamarin.Forms.WebView) 을 설정 하 여 HTML 콘텐츠를 확인 해야 할 수도 있습니다. `WebView` 예를 들어이는에 [`StackLayout`](xref:Xamarin.Forms.StackLayout)필요 합니다.
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
@@ -334,25 +334,25 @@ public partial class InAppBrowserXaml : ContentPage
 
 WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤트를 발생 시킵니다.
 
-- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) – WebView 새 페이지를 로드할 시작 될 때 발생 하는 이벤트입니다.
-- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) – 이벤트 발생 페이지가 로드 되 고 탐색이 중지 되었습니다.
-- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) – 현재 콘텐츠를 다시 로드 요청이 있을 때 발생 하는 이벤트입니다.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating)– 웹 보기에서 새 페이지를 로드 하기 시작 하면 이벤트가 발생 합니다.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated)– 페이지가 로드 되 고 탐색이 중지 되 면 이벤트가 발생 합니다.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested)– 현재 콘텐츠를 다시 로드 하는 요청을 만들 때 발생 하는 이벤트입니다.
 
-합니다 [ `WebNavigatingEventArgs` ](xref:Xamarin.Forms.WebNavigatingEventArgs) 와 함께 제공 되는 개체를 [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) 이벤트에 4 개의 속성이:
+이벤트 [와`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 함께 제공 되는 [개체에는다음과같은네가지속성이있습니다.`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs)
 
-- `Cancel` – 탐색을 취소할 것인지 여부를 나타냅니다.
-- `NavigationEvent` – 발생 하는 탐색 이벤트.
-- `Source` – 탐색을 수행 하는 요소입니다.
-- `Url` – 탐색 대상입니다.
+- `Cancel`– 탐색을 취소할지 여부를 나타냅니다.
+- `NavigationEvent`– 발생 한 탐색 이벤트입니다.
+- `Source`– 탐색을 수행한 요소입니다.
+- `Url`– 탐색 대상입니다.
 
-합니다 [ `WebNavigatedEventArgs` ](xref:Xamarin.Forms.WebNavigatedEventArgs) 와 함께 제공 되는 개체를 [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) 이벤트에 4 개의 속성이:
+이벤트 [와`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 함께 제공 되는 [개체에는다음과같은네가지속성이있습니다.`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs)
 
-- `NavigationEvent` – 발생 하는 탐색 이벤트.
-- `Result` –는 탐색의 결과 설명를 사용 하는 [ `WebNavigationResult` ](xref:Xamarin.Forms.WebNavigationResult) 열거형 멤버입니다. 유효한 값은 `Cancel`, `Failure`, `Success` 및 `Timeout`입니다.
-- `Source` – 탐색을 수행 하는 요소입니다.
-- `Url` – 탐색 대상입니다.
+- `NavigationEvent`– 발생 한 탐색 이벤트입니다.
+- `Result`– 열거형 멤버를 [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) 사용 하 여 탐색 결과를 설명 합니다. 유효한 값은 `Cancel`, `Failure`, `Success` 및 `Timeout`입니다.
+- `Source`– 탐색을 수행한 요소입니다.
+- `Url`– 탐색 대상입니다.
 
-로드 시간이 오래 걸리는 웹 페이지를 사용 하 여 예상 되는 경우 사용을 고려 합니다 [ `Navigating` ](xref:Xamarin.Forms.WebView.Navigating) 하 고 [ `Navigated` ](xref:Xamarin.Forms.WebView.Navigated) 상태 표시기를 구현 하는 이벤트입니다. 예를 들어:
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -482,7 +482,7 @@ AbsoluteLayout *없이* WidthRequest & HeightRequest:
 
 ## <a name="invoking-javascript"></a>JavaScript를 호출합니다.
 
-[`WebView`](xref:Xamarin.Forms.WebView) JavaScript 함수를 호출 하는 기능을 포함 C#를 호출 하는 결과 반환 하 고 C# 코드입니다. 주게 됩니다 합니다 [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 의 다음 예제에 나와 있는 메서드를 [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) 샘플:
+[`WebView`](xref:Xamarin.Forms.WebView) JavaScript 함수를 호출 하는 기능을 포함 C#를 호출 하는 결과 반환 하 고 C# 코드입니다. 주게 됩니다 합니다 [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) 의 다음 예제에 나와 있는 메서드를 [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) 샘플:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -516,5 +516,5 @@ function factorial(num) {
 
 ## <a name="related-links"></a>관련 링크
 
-- [WebView (샘플)를 사용 하 여 작업](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
-- [WebView (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)
+- [WebView (샘플)를 사용 하 여 작업](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: ad20ba50b8ff0f7dcbba3e8d297b2281544a373b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804903"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657083"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-[StackLayout](xref:Xamarin.Forms.StackLayout) 가로 또는 세로로 1 차원 줄 ("스택")에 뷰를 구성 합니다. 뷰는 `StackLayout` 레이아웃 옵션을 사용 하 여 레이아웃에서 공간을 기준으로 크기 조정 될 수 있습니다. 위치 보기는 레이아웃과 뷰의 레이아웃 옵션에 추가 된 순서에 따라 결정 됩니다.
+[Stacklayout](xref:Xamarin.Forms.StackLayout) 은 1 차원 선 ("stack")의 뷰를 가로 또는 세로로 구성 합니다. 뷰는 `StackLayout` 레이아웃 옵션을 사용 하 여 레이아웃에서 공간을 기준으로 크기 조정 될 수 있습니다. 위치 보기는 레이아웃과 뷰의 레이아웃 옵션에 추가 된 순서에 따라 결정 됩니다.
 
 [![](stack-layout-images/layouts-sml.png "Xamarin.Forms 레이아웃")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
 
@@ -226,5 +226,5 @@ Title="StackLayouts">
 ## <a name="related-links"></a>관련 링크
 
 - [LayoutOptions](~/xamarin-forms/user-interface/layouts/layout-options.md)
-- [레이아웃 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble 예제 (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

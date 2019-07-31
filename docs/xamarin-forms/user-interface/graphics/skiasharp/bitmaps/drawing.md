@@ -7,16 +7,16 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 030655ba94130294729871348b3408fe6c3695e6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61401599"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656947"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 살펴보았습니다 방법을 통해 응용 프로그램 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드할 수 있습니다. 응용 프로그램 내에서 새 비트맵을 만들 수 이기도 합니다. 가장 간단한 방법은의 생성자 중 하나를 포함 [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
@@ -56,7 +56,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 비트맵 표시 될 수 있습니다. 나중에 프로그램을 새로 만들 수 있습니다 `SKCanvas` 동일한, 비트맵 및 조금 더 그릴 개체 기반으로 합니다.
 
-**Hello 비트맵** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램 작성 텍스트 "Hello, 비트맵!" 비트맵에 여러 번 비트맵을 표시 됩니다.  
+**Hello 비트맵** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램 작성 텍스트 "Hello, 비트맵!" 비트맵에 여러 번 비트맵을 표시 됩니다.  
 
 생성자는 `HelloBitmapPage` 만들어 시작을 `SKPaint` 텍스트 표시에 대 한 개체입니다. 텍스트 문자열의 크기를 결정 하 고 해당 차원을 사용 하 여 비트맵을 만듭니다. 그런 다음 만듭니다는 `SKCanvas` 해당 비트맵, 호출을 기반으로 하는 개체 `Clear`, 다음 호출 `DrawText`. 호출 하는 것이 좋습니다는 항상 `Clear` 새 비트맵을 사용 하 여 새로 만든된 비트맵 임의 데이터를 포함 될 수 있습니다.
 
@@ -121,7 +121,7 @@ public partial class HelloBitmapPage : ContentPage
 
 표시 된 **Hello 비트맵** 페이지 비트맵 만든 프로그램은 검은색 텍스트로 제외 하 고 투명 하 게 하는 방법을 보여 줍니다. 이유는 바다색 색 화면을 통해 보여 줍니다.
 
-설명서의 `Clear` 의 메서드 `SKCanvas` 문을 사용 하 여 이러한 기능을 설명 합니다. "현재 클립 캔버스의 모든 픽셀을 대체합니다." "대체" 라는 단어를 사용 하 여 이러한 메서드의 중요 한 특징 표시 됩니다. 모든 그리기 메서드 `SKCanvas` 기존 화면에 내용을 추가 합니다. 합니다 `Clear` 메서드 _대체_ 가 이미 있습니다.
+`Clear` 다음`SKCanvas` 방법의 설명서에서는 문을 사용 하 여 설명 합니다. "캔버스의 현재 클립에서 모든 픽셀을 바꿉니다." "Replace" 라는 단어를 사용 하면 이러한 메서드의 중요 한 특징이 표시 됩니다. 기존 표시 화면에 항목 `SKCanvas` 을 추가 하는 모든 그리기 메서드입니다. 합니다 `Clear` 메서드 _대체_ 가 이미 있습니다.
 
 `Clear` 두 가지 버전에 있습니다. 
 
@@ -131,7 +131,7 @@ public partial class HelloBitmapPage : ContentPage
 
 호출 `Clear` 새 비트맵에 인수를 사용 하 여 완전히 투명 하 게 전체 비트맵을 초기화 합니다. 비트맵에 이후에 그려지는 아무것도 보통은 불투명 하 게 또는 부분적으로 불투명 합니다.
 
-다음은 하려는 것입니다. 에 **Hello 비트맵** 페이지에서 자리를 `Clear` 에 적용 하는 메서드는 `bitmapCanvas` 이 사용 하 여:
+시도해 볼 수 있는 항목은 다음과 같습니다. **Hello 비트맵** 페이지에서에 적용 된 `Clear` `bitmapCanvas` 메서드를이 항목으로 바꿉니다.
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));
@@ -264,7 +264,7 @@ public partial class MonkeyMoustachePage : ContentPage
 
 실제 픽셀 비트에 액세스 하는 비트맵을 수정 하는 가장 다양 한 방법, 문서에 설명 제목을  **[SkiaSharp 액세스 비트맵 픽셀](pixel-bits.md)** 합니다. 하지만 여러 가지 기술을 픽셀 비트에 액세스 되지 않아도 되는 비트맵을 수정할 수 있습니다.
 
-포함 된 다음 비트맵을 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램은 360 픽셀 너비 및 높이 480 픽셀:
+포함 된 다음 비트맵을 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램은 360 픽셀 너비 및 높이 480 픽셀:
 
 ![Mountain Climbers](drawing-images/MountainClimbers.jpg "Mountain Climbers")
 
@@ -496,7 +496,7 @@ public partial class BitmapRotatorPage : ContentPage
 
 일반적으로 비트맵에서 수행 하는 다른 작업 이라고 _대칭 이동_합니다. 개념적으로 비트맵 세로 축 또는 center 비트맵의 가로 축 주위 3 차원에서 회전 합니다. 수직 대칭 이동 미러 이미지를 만듭니다.
 
-**비트맵 플리퍼** 페이지에 **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** 응용 프로그램에서는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 세로 및 가로로 대칭 이동에 대 한 두 개의 단추:
+**비트맵 플리퍼** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에서는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 세로 및 가로로 대칭 이동에 대 한 두 개의 단추:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -599,4 +599,4 @@ Monkey의 shirt 시 역방향된 처리에서 보듯이 대칭 이동 회전 같
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

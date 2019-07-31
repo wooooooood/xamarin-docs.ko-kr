@@ -1,24 +1,24 @@
 ---
-title: IOS에서 슬라이더 위치 조정 컨트롤 탭
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 Slider.Value 속성 슬라이더 막대를 탭 하 여 설정할 수 있도록 하는 iOS 플랫폼 전용을 사용 하는 방법을 설명 합니다.
+title: IOS의 슬라이더 엄지 단추 탭
+description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 슬라이더 막대를 눌러 Slider 속성을 설정 하는 데 사용할 수 있는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D0915D37-9A59-4728-BB6A-FE094A661275
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: b195a277defa04bac88ad65b928957c6efff4601
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 573b68097724c976ce73b51e3b7ba21b52f7a776
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925341"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651775"
 ---
-# <a name="slider-thumb-tap-on-ios"></a>IOS에서 슬라이더 위치 조정 컨트롤 탭
+# <a name="slider-thumb-tap-on-ios"></a>IOS의 슬라이더 엄지 단추 탭
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼별 사용 하도록 설정 합니다 [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) 속성에는 위치에 탭 하 여 설정 될를 [ `Slider` ](xref:Xamarin.Forms.Slider) 끌어 필요가 하는 대신 가로 막대형,는 `Slider` thumb. 설정 하 여 XAML에서 사용 되는 [ `Slider.UpdateOnTap` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider.UpdateOnTapProperty) 바인딩 가능한 속성을 `true`:
+이 iOS 플랫폼 관련 기능을 사용 [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) 하면 `Slider` 엄지 단추를 끌 필요 없이 [`Slider`](xref:Xamarin.Forms.Slider) 막대의 위치를 눌러 속성을 설정할 수 있습니다. 설정 하 여 XAML에서 사용 되는 [ `Slider.UpdateOnTap` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider.UpdateOnTapProperty) 바인딩 가능한 속성을 `true`:
 
 ```xaml
 <ContentPage ...
@@ -49,6 +49,6 @@ slider.On<iOS>().SetUpdateOnTap(true);
 
 ## <a name="related-links"></a>관련 링크
 
-- [PlatformSpecifics (샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
+- [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

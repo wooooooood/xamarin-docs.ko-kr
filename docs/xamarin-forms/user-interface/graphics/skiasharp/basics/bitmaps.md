@@ -7,16 +7,16 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: e1e21fe121fba30755efbabe302ed0f22149e7e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f43779fd0a61bd3ad04f3f7445faa6517fb9c989
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61157398"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645894"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _다양 한 원본에서 비트맵을 로드 하 고 표시 합니다._
 
@@ -104,7 +104,7 @@ Android 운영 체제를 사용할 때 예외가 발생 합니다 `Stream` 에�
 
 코드 측면에서 비트맵을 로드 하는 가장 쉬운 방법은 비트맵 리소스를 포함 하 여 응용 프로그램에서 직접 됩니다. 합니다 **SkiaSharpFormsDemos** 라는 폴더를 포함 하는 프로그램 **Media** 라는 하나를 포함 하 여 파일, 비트맵 몇 개 포함 **monkey.png**합니다. 프로그램 리소스로 저장 하는 비트맵을 사용 해야 합니다 **속성** 파일에는 대화는 **빌드 작업** 의 **포함 리소스**!
 
-각 포함된 리소스에는 *리소스 ID* 프로젝트 이름, 폴더 및 파일 이름, 마침표로 연결 된 모든 구성 된: **SkiaSharpFormsDemos.Media.monkey.png**. 해당 리소스를 지정 하 여이 리소스에 대 한 액세스를 얻을 수 있습니다 인수로 ID는 [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) 메서드를 [ `Assembly` ](xref:System.Reflection.Assembly) 클래스:
+각 포함 리소스에는 프로젝트 이름, 폴더 및 파일 이름으로 구성 된 *리소스 ID* 가 있으며, 모두 마침표로 연결 됩니다. **SkiaSharpFormsDemos.Media.monkey.png**. 해당 리소스를 지정 하 여이 리소스에 대 한 액세스를 얻을 수 있습니다 인수로 ID는 [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) 메서드를 [ `Assembly` ](xref:System.Reflection.Assembly) 클래스:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";
@@ -250,5 +250,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [사진 그림 라이브러리에서 선택](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)
