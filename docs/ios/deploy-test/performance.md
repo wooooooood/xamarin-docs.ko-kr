@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 4954b83b75618128f32b0e5fceed2f04df183433
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870393"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511475"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
@@ -109,7 +109,7 @@ container.AddSubview (new MyView (container));
 
 #### <a name="weak-attribute"></a>약한 특성
 
-[Xamarin.iOS 11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute)에서는 `[Weak]` 특성이 도입되었습니다. `WeakReference <T>`와 마찬가지로 더 적은 코드로 [강력한 순환 참조](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references)를 중단하기 위해 `[Weak]`를 사용할 수 있습니다.
+[Xamarin.iOS 11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute)에서는 `[Weak]` 특성이 도입되었습니다. `WeakReference <T>`와 마찬가지로 더 적은 코드로 [강력한 순환 참조](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references)를 중단하기 위해 `[Weak]`를 사용할 수 있습니다.
 
 `WeakReference <T>`를 사용하는 다음 코드를 살펴봅니다.
 
@@ -211,7 +211,7 @@ class MyChild : UIView
 ```
 
 강력한 참조를 해제하는 방법에 대한 자세한 내용은 [IDisposable 리소스 해제](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable)를 참조하세요.
-다음 블로그 게시물에도 유용한 논의가 있습니다. [Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)(Xamarin.iOS 가비지 수집기 관련 주요 정보)
+다음 블로그 게시물에도 유용한 논의가 있습니다. [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me)(Xamarin.iOS 가비지 수집기 관련 주요 정보)
 
 ### <a name="more-information"></a>추가 정보
 
@@ -270,7 +270,7 @@ XIB가 대부분 스토리보드로 대체되었지만, XIB를 여전히 사용�
 
 ## <a name="test-on-devices"></a>디바이스 테스트
 
-가능한 한 빨리 물리적 장치에서 애플리케이션 배포 및 테스트를 시작합니다. 시뮬레이터는 디바이스의 동작과 제한을 완벽하게 일치시키지 않으므로 가능한 한 빨리 물리적 디바이스 시나리오에서 테스트해야 중요합니다.
+가능한 한 빨리 물리적 디바이스에서 응용 프로그램 배포 및 테스트를 시작합니다. 시뮬레이터는 디바이스의 동작과 제한을 완벽하게 일치시키지 않으므로 가능한 한 빨리 물리적 디바이스 시나리오에서 테스트해야 중요합니다.
 
 특히 시뮬레이터는 어떠한 방식으로든 물리적 디바이스의 메모리 또는 CPU 제한을 시뮬레이션하지 않습니다.
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: fbc5ccda4e798b818b4c21dd459bab6b467cba31
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925445"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645364"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결된 속성으로 효과 매개 변수 전달
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명합니다._
 
@@ -318,7 +318,7 @@ namespace EffectsDemo.Droid
     }
 ```
 
-`OnAttached` 메서드는 `ShadowEffect` getter를 사용하여 연결된 속성 값을 검색하는 메서드를 호출하며, 속성 값을 사용하여 그림자를 만드는 [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 메서드를 호출하는 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
+`OnAttached` 메서드는 `ShadowEffect` getter를 사용하여 연결된 속성 값을 검색하는 메서드를 호출하며, 속성 값을 사용하여 그림자를 만드는 [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) 메서드를 호출하는 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
 #### <a name="responding-to-property-changes"></a>속성 변경 내용에 응답
 
@@ -440,4 +440,4 @@ public class LabelShadowEffect : PlatformEffect
 - [효과](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [그림자 효과(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
+- [그림자 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

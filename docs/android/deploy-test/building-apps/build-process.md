@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 43f8b1185900ff20f8e4c53680c1adf62ac8316a
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829693"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509065"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -81,7 +81,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     *기본적으로* `Debug` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 파일과 패키지가 존재해야 작동하는 소형 Android 패키지를 생성하도록 합니다.
 
-    기본 `Release` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 패키지나 파일을 설치하지 않고도 사용할 수 있는 ‘독립 실행형’ Android 패키지를 생성하도록 합니다.
+    기본 `Release` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 패키지나 파일을 설치하지 않고도 사용할 수 있는 ‘독립 실행형’ Android 패키지를 생성하도록 합니다. 
 
 -   **DebugSymbols** &ndash; `$(DebugType)` 속성과 함께 사용되며, Android 패키지가 *디버그 가능*한지 결정하는 부울 값입니다. 디버그 가능한 패키지는 디버그 기호를 포함하고, `//application/@android:debuggable` 특성을 `true`로 설정하며, 디버거가 프로세스에 연결할 수 있도록 `INTERNET` 권한을 자동으로 추가합니다. `DebugSymbols`가 `True`*이고*`DebugType`이 빈 문자열이거나 `Full`일 경우 애플리케이션을 디버그할 수 있습니다.
 
@@ -127,7 +127,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Android 패키지에는 `<AndroidApplication>True</AndroidApplication>`인 프로젝트가 하나만 존재할 수 있습니다. (하지만 이는 아직 확인되지 않았으며, Android 리소스와 관련하여 미묘하고 기이한 오류를 유발할 수 있습니다.)
 
--   **AndroidApplicationJavaClass** &ndash; 클래스가 [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/)에서 상속되는 경우 `android.app.Application` 대신 사용할 전체 Java 클래스 이름입니다.
+-   **AndroidApplicationJavaClass** &ndash; 클래스가 [Android.App.Application](xref:Android.App.Application)에서 상속되는 경우 `android.app.Application` 대신 사용할 전체 Java 클래스 이름입니다.
 
     이 속성은 일반적으로 `$(AndroidEnableMultiDex)` MSBuild 속성과 같은 *other* 속성으로 설정됩니다.
 
@@ -174,7 +174,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     기본적으로 이 속성은 `False`입니다.
 
 -   **AndroidErrorOnCustomJavaObject** &ndash; 형식이 `Java.Lang.Object` 또는 `Java.Lang.Throwable`에서도 상속되지 ‘않고’ `Android.Runtime.IJavaObject`
-    를 구현할 수 있는지 여부를 확인하는 부울 속성입니다.
+    를 구현할 수 있는지 여부를 확인하는 부울 속성입니다. 
 
     ```csharp
     class BadType : IJavaObject {
@@ -251,7 +251,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 6.1에 추가되었습니다.
 
--   **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 유효한 값은 다음과 같습니다.
+-   **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 올바른 값은 다음과 같습니다.
 
     -   **없음**: 연결을 시도하지 않습니다.
 
@@ -316,7 +316,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidR8JarPath** &ndash; r8 dex 컴파일러 및 shrinker와 함께 사용하기 위한 `r8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
 
--   **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다.
+-   **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다. 
 
     `$(AndroidSdkBuildToolsVersion)` MSBuild 속성에는 기본 설정 빌드 도구 버전이 포함되어 있습니다. Xamarin.Android 빌드 시스템에서 `Xamarin.Android.Common.targets`에 기본값을 제공하고, 최신 aapt가 충돌하고 있지만 이전 버전의 aapt가 작동하는 것으로 알려져 있는 경우와 같이 다른 빌드 도구 버전을 선택하기 위해 프로젝트 파일 내에서 기본값을 재정의할 수 있습니다.
 
@@ -716,7 +716,7 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 ```
 
 
-### <a name="content"></a>Content
+### <a name="content"></a>콘텐츠
 
 일반적인 `Content` 빌드 동작이 지원되지 않습니다(비용이 많이 드는 최초 실행 단계 없이 지원하는 방법을 파악하지 못했기 때문).
 

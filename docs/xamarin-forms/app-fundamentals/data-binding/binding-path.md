@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050781"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646744"
 ---
 # <a name="xamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 이전의 모든 데이터 바인딩 예제에서 `Binding` 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성(또는 `Binding` 태그 확장의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성)을 단일 속성으로 설정했습니다. 실제로 `Path`를 *하위 속성*(속성의 속성) 또는 컬렉션의 멤버로 설정할 수 있습니다.
 
@@ -167,5 +167,5 @@ Xamarin.Forms에서 바인딩 경로를 처리하면 경로의 개체에 `Proper
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

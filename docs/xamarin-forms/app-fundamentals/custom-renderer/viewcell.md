@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 90215be6356722729b441513bf749150c77755ca
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: aa1093336a79689380e920783dd772c5e68c76b9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65924643"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650434"
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. 이렇게 하면 ListView를 스크롤하는 중에 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되지 않습니다._
 
@@ -577,4 +577,4 @@ namespace CustomRenderer.UWP
 ## <a name="related-links"></a>관련 링크
 
 - [ListView 성능](~/xamarin-forms/user-interface/listview/performance.md)
-- [CustomRendererViewCell(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+- [CustomRendererViewCell(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

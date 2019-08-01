@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 2eb6e6f94887301b78f401bf73a4ffaa01559c37
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: be7a145e93aa4720b38921efc895ca3f3f33edb3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059394"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656027"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>손가락 모으기 제스처 인식기 추가
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 
 _손가락 모으기 제스처는 대화형 확대/축소 작업을 수행하는 데 사용되며 PinchGestureRecognizer 클래스로 구현됩니다. 손가락 모으기 제스처에 대한 일반적인 시나리오는 손가락 모으기 위치에서 이미지의 대화형 확대/축소를 수행하는 것입니다. 이는 뷰포트의 콘텐츠를 크기 조정하여 수행되며, 이 문서에서 설명됩니다._
 
@@ -164,6 +164,6 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [PinchGesture(샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
+- [PinchGesture(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PinchGestureRecognizer](xref:Xamarin.Forms.PinchGestureRecognizer)

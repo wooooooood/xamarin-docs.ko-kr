@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 808d7aa8f886dac38ed8ff5f274ca8f4a02c8dbf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 76ce6cd3a78e56acb9d77c0c6a4b942e5bdc3f2e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112431"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656085"
 ---
 # <a name="xamarinmac-performance"></a>Xamarin.Mac 성능
 
 ## <a name="overview"></a>개요
 
-Xamarin.Mac 응용 프로그램은 Xamarin.iOS와 비슷하며 다수의 동일한 성능 제안 사항이 적용됩니다.
+Xamarin.Mac 애플리케이션은 Xamarin.iOS와 비슷하며 다수의 동일한 성능 제안 사항이 적용됩니다.
 
 - [Xamarin.iOS 성능](~/ios/deploy-test/performance.md)
 - [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)
@@ -27,7 +27,7 @@ Xamarin.Mac 응용 프로그램은 Xamarin.iOS와 비슷하며 다수의 동일�
 
 ## <a name="prefer-modern-target-framework"></a>Modern Target Framework 권장
 
-Xamarin.Mac 응용 프로그램에는 다양한 성능 특성과 기능을 가진 여러 [대상 프레임워크](~/mac/platform/target-framework.md)를 사용할 수 있습니다.
+Xamarin.Mac 애플리케이션에는 다양한 성능 특성과 기능을 가진 여러 [대상 프레임워크](~/mac/platform/target-framework.md)를 사용할 수 있습니다.
 
 가능할 경우 Modern을 권장하며, 종속 라이브러리를 사용하여 지원을 추가하세요. Modern Target Framework만 어셈블리 크기를 크게 줄일 수 있는 연결을 허용합니다. 이는 AOT를 활성화할 경우에 특히 중요합니다. 전체 어셈블리의 AOT 컴파일로 대규모 최종 번들이 생성될 수 있기 때문입니다.
 
@@ -43,7 +43,7 @@ Xamarin.Mac 응용 프로그램에는 다양한 성능 특성과 기능을 가�
 
 ## <a name="ensure-performant-delegates"></a>고성능 대리자 보장
 
-여러 Xamarin.Mac 응용 프로그램은 `NSCollectionView`, `NSOutlineView` 또는 `NSTableView` 같은 Cocoa 뷰를 기반으로 합니다. 이러한 보기는 표시할 항목에 대한 질문에 답하기 위해 개발자가 Cocoa에 입력하는 `Delegate` 및 `DataSource` 클래스로 지원되는 경우가 많습니다.
+여러 Xamarin.Mac 애플리케이션은 `NSCollectionView`, `NSOutlineView` 또는 `NSTableView` 같은 Cocoa 뷰를 기반으로 합니다. 이러한 보기는 표시할 항목에 대한 질문에 답하기 위해 개발자가 Cocoa에 입력하는 `Delegate` 및 `DataSource` 클래스로 지원되는 경우가 많습니다.
 
 이러한 진입점은 대부분 자주 호출되며, 스크롤 시 초당 몇 번씩 호출되기도 합니다.
 
@@ -55,11 +55,11 @@ Xamarin.Mac 응용 프로그램에는 다양한 성능 특성과 기능을 가�
 
 ## <a name="use-async-and-do-not-block-the-ui"></a>비동기 방식을 사용하고 UI 차단 안 함
 
-데스크톱 응용 프로그램은 종종 많은 양의 데이터를 처리하며, 동기 작업에서 대기 중인 UI 스레드를 차단하기 일쑤입니다.
+데스크톱 애플리케이션은 종종 많은 양의 데이터를 처리하며, 동기 작업에서 대기 중인 UI 스레드를 차단하기 일쑤입니다.
 
 사용 가능한 경우 항상 [비동기](~/cross-platform/platform/async.md) 및 스레드를 사용하여 UI 차단을 방지하도록 합니다.
 
-장기 실행 작업의 경우 [NSProgressIndicator](https://developer.xamarin.com/samples/mac/ProgressBarExample/) 또는 Apple의 [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/)에 언급된 다른 옵션을 사용하여 사용자에게 알리는 것이 좋습니다.
+장기 실행 작업의 경우 [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) 또는 Apple의 [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/)에 언급된 다른 옵션을 사용하여 사용자에게 알리는 것이 좋습니다.
 
 
 ## <a name="related-links"></a>관련 링크

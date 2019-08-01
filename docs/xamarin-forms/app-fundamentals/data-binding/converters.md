@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 4594da09d48a0888a88cbce9ab135a007eb6f4cd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 34b449aa358874f06a495ec52578dcca2dd13767
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054333"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68654734"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 데이터 바인딩은 일반적으로 원본 속성에서 대상 속성으로, 일부 경우에는 대상 속성에서 원본 속성으로 데이터를 전송합니다. 이 전송은 원본 및 대상 속성이 동일한 형식인 경우 또는 하나의 형식을 암시적 변환을 통해 다른 형식으로 변환할 수 있는 경우에 간단합니다. 그렇지 않은 경우 형식 변환을 수행해야 합니다.
 
@@ -51,7 +51,7 @@ public class IntToBoolConverter : IValueConverter
 
 데이터 바인딩에 `StringFormat` 설정이 포함되는 경우 값 변환기는 결과가 문자열로 서식 지정되기 전에 호출됩니다.
 
-[**데이터 바인딩 데모**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 샘플의 **단추 사용** 페이지는 데이터 바인딩에서 이 값 변환기를 사용하는 방법을 보여줍니다. `IntToBoolConverter`는 페이지의 리소스 사전에서 인스턴스화됩니다. 그런 다음, `StaticResource` 태그 확장을 참조하여 두 개의 데이터 바인딩에서 `Converter` 속성을 설정합니다. 페이지의 여러 데이터 바인딩 간에 데이터 변환기를 공유하는 것은 매우 일반적입니다.
+[**데이터 바인딩 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플의 **단추 사용** 페이지는 데이터 바인딩에서 이 값 변환기를 사용하는 방법을 보여줍니다. `IntToBoolConverter`는 페이지의 리소스 사전에서 인스턴스화됩니다. 그런 다음, `StaticResource` 태그 확장을 참조하여 두 개의 데이터 바인딩에서 `Converter` 속성을 설정합니다. 페이지의 여러 데이터 바인딩 간에 데이터 변환기를 공유하는 것은 매우 일반적입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -467,5 +467,5 @@ binding.ConverterParameter = 255;
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

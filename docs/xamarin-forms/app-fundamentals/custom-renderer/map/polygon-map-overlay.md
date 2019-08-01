@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 01db31a797efc4b383f3bda3fbcf3bb91e0d38e1
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 45a85c8ac2f40e92078d46f5765aaf2af1518b77
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926043"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650737"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>맵의 지역 강조 표시
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)
 
 _이 문서에서는 다각형 오버레이를 맵에 추가하여 맵의 영역을 강조 표시하는 방법을 설명했습니다. 다각형은 닫힌 모양이며 내부는 채워져 있습니다._
 
@@ -308,6 +308,6 @@ namespace MapOverlay.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [다각형 맵 오버레이(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polygon/)
+- [다각형 맵 오버레이(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)
 - [지도 핀 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/14/2019
-ms.openlocfilehash: 0642f304589d30284bc8d3577c0383099e349033
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: fbc966fdf1d79ecc9794d2156db81b583694ce36
+ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513038"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68665678"
 ---
 # <a name="create-a-controltemplate"></a>ControlTemplate 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 
 _컨트롤 템플릿은 애플리케이션 수준 또는 페이지 수준에서 정의할 수 있습니다. 이 문서에서는 컨트롤 템플릿을 만들고 사용하는 방법을 보여줍니다._
 
@@ -236,7 +236,7 @@ class MyCustomControl : ContentView
 {
     Label myLabel;
 
-    protected override OnApplyTemplate()
+    protected override void OnApplyTemplate()
     {  
         myLabel = GetTemplateChild("myLabel");
     }
@@ -249,7 +249,7 @@ class MyCustomControl : ContentView
 ## <a name="related-links"></a>관련 링크
 
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
-- [간단한 테마(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+- [간단한 테마(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)

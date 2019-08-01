@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8cf6c11675f0f3ddca0d5aea69e5e07160ef8454
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114784"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509219"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 
@@ -28,27 +28,27 @@ ms.locfileid: "50114784"
 > [!NOTE]
 > **디버그 로그** 도구는 Xamarin Live Player에서 작동하지 않습니다.
 
-**디버그 로그**는 앱이 장치에서 독립형으로 실행 중인 동안(즉 Visual Studio에서 연결이 끊어진 동안)에는 로그 메시지를 표시하지 않습니다.
+**디버그 로그**는 앱이 디바이스에서 독립형으로 실행 중인 동안(즉 Visual Studio에서 연결이 끊어진 동안)에는 로그 메시지를 표시하지 않습니다.
 
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Visual Studio에서 디버그 로그에 액세스
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-**장치 로그** 도구를 열려면 도구 모음에서 **장치 로그(logcat)** 아이콘을 클릭합니다.
+**디바이스 로그** 도구를 열려면 도구 모음에서 **디바이스 로그(logcat)** 아이콘을 클릭합니다.
 
-[![도구 모음에서 장치 로그 도구의 위치](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
+[![도구 모음에서 디바이스 로그 도구의 위치](android-debug-log-images/vswin-01-logcat-sml.png)](android-debug-log-images/vswin-01-logcat.png#lightbox)
 
 또는 다음 메뉴 선택 사항 중 하나에서 **디바이스 로그** 도구를 시작합니다.
 
--   **보기 > 다른 창 > 장치 로그**
--   **도구 > Android > 장치 로그**
+-   **보기 &gt; 다른 창 &gt; 디바이스 로그**
+-   **도구 &gt; Android &gt; 디바이스 로그**
 
 다음 스크린샷은 **디버그 도구** 창의 다양한 부분을 보여줍니다.
 
 [![디버그 도구 창의 부분](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **장치 선택기** &ndash; 모니터링할 물리적 장치 또는 실행 중인 에뮬레이터를 선택합니다.
+-   **Device Selector**(디바이스 선택기) &ndash; 모니터링할 물리적 디바이스 또는 실행 중인 에뮬레이터를 선택합니다.
 
 -   **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "50114784"
 -   **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
 
 
-**디버그 로그** 도구 창이 표시되면 장치 풀다운 메뉴를 사용하여 모니터링할 Android 장치를 선택합니다.
+**디버그 로그** 도구 창이 표시되면 디바이스 풀다운 메뉴를 사용하여 모니터링할 Android 디바이스를 선택합니다.
 
 [![장치 선택기의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
@@ -70,15 +70,15 @@ ms.locfileid: "50114784"
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-**장치 로그**를 열려면 **보기 > 패드 > 장치 로그**를 클릭합니다.
+**디바이스 로그**를 열려면 **보기 &gt; 패드 &gt; 디바이스 로그**를 클릭합니다.
 
-[![장치 로그 메뉴 항목의 위치](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
+[![디바이스 로그 메뉴 항목의 위치](android-debug-log-images/vsmac-01-logcat-sml.png)](android-debug-log-images/vsmac-01-logcat.png#lightbox)
 
 다음 스크린샷은 **디버그 도구** 창의 다양한 부분을 보여줍니다.
 
 [![디버그 도구 창의 기능](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **장치 선택기** &ndash; 모니터링할 물리적 장치 또는 실행 중인 에뮬레이터를 선택합니다.
+-   **Device Selector**(디바이스 선택기) &ndash; 모니터링할 물리적 디바이스 또는 실행 중인 에뮬레이터를 선택합니다.
 
 -   **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "50114784"
 
 -   **오류 표시** &ndash; 오류 메시지 표시를 토글합니다(오류 메시지는 빨란색으로 표시됨).
 
--   **다시 연결** &ndash; 장치에 다시 연결하고 로그 항목 표시를 새로 고칩니다.
+-   **다시 연결**&ndash; 디바이스에 다시 연결하고 로그 항목 표시를 새로 고칩니다.
 
 -   **마커 추가** &ndash; 마지막 로그 항목 뒤에 마커 메시지(예: `--- Marker N ---`)를 삽입합니다. 여기서 _N_은 1에서 시작하여 새 마커가 추가되면 1씩 증가하는 카운터입니다.
 
@@ -137,7 +137,7 @@ $ ./adb logcat
 
 ## <a name="writing-to-the-debug-log"></a>디버그 로그에 쓰기
 
-[Android.Util.Log](https://developer.xamarin.com/api/type/Android.Util.Log/) 클래스의 메서드를 사용하여 **디버그 로그**에 메시지를 쓸 수 있습니다.
+[Android.Util.Log](xref:Android.Util.Log) 클래스의 메서드를 사용하여 **디버그 로그**에 메시지를 쓸 수 있습니다.
 예: 
 
 ```csharp

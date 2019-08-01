@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 505b2ab60a4fc828790aa2b351460de8980c6b9d
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 269d9d1ff658217a49ff56057c01c011f920b5df
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926797"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650523"
 ---
 # <a name="loading-application-resource-videos"></a>애플리케이션 리소스 비디오 로드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 `VideoPlayer` 보기에 대한 사용자 지정 렌더러는 개별 플랫폼 프로젝트에 애플리케이션 리소스로 포함된 비디오 파일을 재생할 수 있습니다. 그러나 현재 버전의 `VideoPlayer`는 .NET Standard 라이브러리에 포함된 리소스에 액세스할 수 없습니다.
 
@@ -184,4 +184,4 @@ iOS 리소스를 **Resources** 폴더에 저장한 경우 및 UWP 리소스를 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

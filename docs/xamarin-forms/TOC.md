@@ -35,7 +35,8 @@
 ### [XAML 표준(미리 보기)](xaml/standard/index.md)
 #### [컨트롤](xaml/standard/controls.md)
 ### [런타임 시 XAML 로드](xaml/runtime-load.md)
-## [애플리케이션 기본 사항](app-fundamentals/index.md)
+## 애플리케이션 기본 사항
+### [개요](app-fundamentals/index.yml)
 ### [액세스 가능성](app-fundamentals/accessibility/index.md)
 #### [Automation 속성](app-fundamentals/accessibility/automation-properties.md)
 #### [키보드 접근성](app-fundamentals/accessibility/keyboard.md)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6845a08a531305468b861a3205e978b379f242bf
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 219f6498dc1349d32c8f0b247a187df75f2a523a
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926157"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650696"
 ---
 # <a name="accessing-the-devices-video-library"></a>디바이스의 비디오 라이브러리에 액세스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 대부분의 최신 모바일 디바이스 및 데스크톱 컴퓨터에는 디바이스의 카메라를 사용하여 비디오를 녹화할 수 있는 기능이 있습니다. 사용자가 생성한 비디오는 디바이스에 파일로 저장됩니다. 이러한 파일을 이미지 라이브러리에서 가져와서 다른 비디오처럼 `VideoPlayer` 클래스로 재생할 수 있습니다.
 
@@ -188,7 +188,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-`MainActivity` 개체에 대한 추가 사항은 [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) 솔루션의 유일한 코드이며 `FormsVideoLibrary` 클래스를 지원하도록 일반 애플리케이션 코드를 변경해야 합니다.
+`MainActivity` 개체에 대한 추가 사항은 [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 솔루션의 유일한 코드이며 `FormsVideoLibrary` 클래스를 지원하도록 일반 애플리케이션 코드를 변경해야 합니다.
 
 ### <a name="the-uwp-video-picker"></a>UWP 비디오 선택기
 
@@ -229,7 +229,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="invoking-the-dependency-service"></a>종속성 서비스 호출
 
-[**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/) 프로그램의 **Play Library Video**(라이브러리 비디오 재생) 페이지는 비디오 선택기 종속성 서비스를 사용하는 방법을 보여줍니다. XAML 파일에는 `VideoPlayer` 인스턴스와 **Show Video Library**(비디오 라이브러리 표시) 레이블이 지정된 `Button`이 있습니다.
+[**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) 프로그램의 **Play Library Video**(라이브러리 비디오 재생) 페이지는 비디오 선택기 종속성 서비스를 사용하는 방법을 보여줍니다. XAML 파일에는 `VideoPlayer` 인스턴스와 **Show Video Library**(비디오 라이브러리 표시) 레이블이 지정된 `Button`이 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -390,5 +390,5 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 - [사진 라이브러리에서 사진 선택](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

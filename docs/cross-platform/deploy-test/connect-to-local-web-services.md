@@ -6,16 +6,16 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
-ms.openlocfilehash: bc88a5eb977ea49b761df22407329dfaf20fa122
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
+ms.openlocfilehash: 1318d8e1563239d5215d8cfc03c971be8b2cff35
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477579"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647650"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>iOS 시뮬레이터 및 Android Emulator에서 로컬 웹 서비스에 연결
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 많은 모바일 애플리케이션이 웹 서비스를 사용합니다. 개발 단계에서는 로컬로 웹 서비스를 배포하고 iOS 시뮬레이터 또는 Android Emulator에서 실행되는 모바일 애플리케이션에서 웹 서비스를 사용하는 것이 일반적입니다. 따라서 웹 서비스를 호스트된 엔드포인트에 배포하지 않아도 되며, 모바일 애플리케이션 및 웹 서비스를 둘 다 로컬로 실행하기 때문에 디버깅도 간편해집니다.
 
@@ -121,7 +121,7 @@ iOS 시뮬레이터 또는 Android Emulator에서 실행되는 애플리케이�
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoREST(샘플)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [TodoREST(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [로컬 HTTPS 사용](/aspnet/core/getting-started#enable-local-https)
 - [iOS/macOS용 HttpClient 및 SSL/TLS 구현 선택기](~/cross-platform/macios/http-stack.md)
 - [Android용 HttpClient 스택 및 SSL/TLS 구현 선택기](~/android/app-fundamentals/http-stack.md)

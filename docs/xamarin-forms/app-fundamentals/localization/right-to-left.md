@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: e74231133c0a52ba0fe4e5589f09aab15e1b9924
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 78288680a1a522b2c6c413e1f8a2cec2a07835d6
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978594"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656975"
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 쓰는 언어 지역화
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _오른쪽에서 왼쪽으로 쓰는 언어 지역화는 Xamarin.Forms 애플리케이션에 오른쪽에서 왼쪽 흐름 방향에 대한 지원을 추가합니다._
 
@@ -154,4 +154,4 @@ using System.Resources;
 
 ## <a name="related-links"></a>관련 링크
 
-- [TodoLocalizedRTL 샘플 앱](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+- [TodoLocalizedRTL 샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

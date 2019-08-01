@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 9f3d95b3901295c29c2276bfdd85579b321f9795
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: c5271aab5342f065694e598bd5c2892ef1f18aeb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925428"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656670"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 효과 매개 변수 전달
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 _CLR(공용 언어 런타임) 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다. 이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명합니다._
 
@@ -185,7 +185,7 @@ namespace EffectsDemo.Droid
 }
 ```
 
-`OnAttached` 메서드는 `ShadowEffect` 인스턴스를 검색하고, 지정된 속성 값을 사용하여 그림자를 만들도록 [`TextView.SetShadowLayer`](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
+`OnAttached` 메서드는 `ShadowEffect` 인스턴스를 검색하고, 지정된 속성 값을 사용하여 그림자를 만들도록 [`TextView.SetShadowLayer`](xref:Android.Widget.TextView.SetShadowLayer*) 메서드를 호출합니다. 이 기능은 효과가 연결된 컨트롤에 `Control.Layer` 속성이 없는 경우 `try`/`catch` 블록에 래핑됩니다. 정리가 필요하지 않으므로 `OnDetached` 메서드에 의한 구현은 제공되지 않습니다.
 
 ### <a name="universal-windows-platform-project"></a>유니버설 Windows 플랫폼 프로젝트
 
@@ -245,4 +245,4 @@ namespace EffectsDemo.UWP
 - [효과](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [그림자 효과(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+- [그림자 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)

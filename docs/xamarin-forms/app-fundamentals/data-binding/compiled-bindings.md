@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2018
-ms.openlocfilehash: a5273897539cdce4aeb0abde28a0912e8327284a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 8effabc66b51b1cf32e3be455428c44eeea3f26d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052182"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68656221"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 있으므로 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능이 향상됩니다._
 
@@ -175,4 +175,4 @@ XAML 컴파일 시간에 잘못된 바인딩 식은 빌드 오류로 보고됩�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

@@ -8,16 +8,16 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d1759701708c337a804471167223ef68cc3f2910
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 8cec67ec582edad506aecb0945257b9baae3da90
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479747"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650344"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Xamarin.Forms 데이터 바인딩은 두 개의 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 *대상* 및 *원본*이라고 합니다.
 
@@ -138,7 +138,7 @@ BindingContext="slider"
 
 원본 속성은 [`Binding`](xref:Xamarin.Forms.Binding) 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성에 해당하는 `BindingExtension`의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성으로 지정됩니다.
 
-**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉, `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 ‘콘텐츠 속성’ 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다. `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
+**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉, `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 ‘콘텐츠 속성’ 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다.  `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -332,7 +332,7 @@ XAML 태그 확장은 일반적으로 중괄호로 구분되지만, 개체 요�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>관련 동영상

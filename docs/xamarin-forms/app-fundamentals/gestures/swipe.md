@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 2e28d3e7035eb570b2053d39cec8b8d91dada6f0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ae9b5eb5b768b50ddcbc199040074de855f220de
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059420"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68649451"
 ---
 # <a name="adding-a-swipe-gesture-recognizer"></a>살짝 밀기 제스처 인식기 추가
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_살짝 밀기 제스처는 화면에서 손가락이 가로나 세로 방향으로 이동하는 경우 발생하며 콘텐츠 탐색을 시작하는 데 종종 사용됩니다. 이 문서의 코드 예제는 [살짝 밀기 제스처](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/) 샘플에서 사용됩니다._
+_살짝 밀기 제스처는 화면에서 손가락이 가로나 세로 방향으로 이동하는 경우 발생하며 콘텐츠 탐색을 시작하는 데 종종 사용됩니다. 이 문서의 코드 예제는 [살짝 밀기 제스처](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) 샘플에서 사용됩니다._
 
 [`View`](xref:Xamarin.Forms.View)가 살짝 밀기 제스처를 인식하게 하려면 [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) 인스턴스를 만들고, [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) 속성을 [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) 열거형 값(`Left`, `Right`, `Up` 또는 `Down`)으로 설정하고, 필요에 따라 [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) 속성을 설정하고, [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) 이벤트를 처리하고, 뷰의 [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) 컬렉션에 제스처 인식기를 새로 추가합니다. 다음 코드 예제에서는 [`BoxView`](xref:Xamarin.Forms.BoxView)에 연결된 `SwipeGestureRecognizer`를 보여줍니다.
 
@@ -207,6 +207,6 @@ public class SwipeContainerPageCS : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [살짝 밀기 제스처(샘플)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/SwipeGesture/)
+- [살짝 밀기 제스처(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

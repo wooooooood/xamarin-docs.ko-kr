@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3e5db00a73047aaadb1162fa1cc8a21f6e77b3a0
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926198"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650632"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 비디오 플레이어의 전송 컨트롤에는 **재생**, **일시 중지**, **중지** 기능을 수행하는 단추가 포함됩니다. 이러한 단추는 일반적으로 텍스트보다는 친숙한 아이콘으로 식별되며, **재생**과 **일시 중지** 기능은 일반적으로 하나의 단추에 결합됩니다.
 
@@ -364,7 +364,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-status-setting"></a>Android 상태 설정
 
-Android `VideoView`의 [`IsPlaying`](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) 속성은 비디오가 재생 중인지, 일시 중지되었는지 여부만 표시하는 부울 값입니다. `VideoView`가 아직 비디오를 아직 재생하거나 일시 중지할 수 없는지 확인하려면 `VideoView`의 `Prepared` 이벤트를 처리해야 합니다. 이 두 가지 처리기는 `OnElementChanged` 메서드에서 설정되고 `Dispose` 재정의 중에 분리됩니다.
+Android `VideoView`의 [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) 속성은 비디오가 재생 중인지, 일시 중지되었는지 여부만 표시하는 부울 값입니다. `VideoView`가 아직 비디오를 아직 재생하거나 일시 중지할 수 없는지 확인하려면 `VideoView`의 `Prepared` 이벤트를 처리해야 합니다. 이 두 가지 처리기는 `OnElementChanged` 메서드에서 설정되고 `Dispose` 재정의 중에 분리됩니다.
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -660,4 +660,4 @@ namespace VideoPlayerDemos
 
 ## <a name="related-links"></a>관련 링크
 
-- [비디오 플레이어 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
+- [비디오 플레이어 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

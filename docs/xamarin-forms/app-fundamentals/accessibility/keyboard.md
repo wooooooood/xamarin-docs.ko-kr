@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ba29e57008bfea420562d88ab1612c09f4460e85
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830340"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651067"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Xamarin.Forms에서의 키보드 접근성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 화면 판독기를 사용하거나 이동성 문제가 있는 사용자는 적절한 키보드 액세스 권한을 제공하지 않는 애플리케이션을 사용하는 데 문제가 있을 수 있습니다. Xamarin.Forms 애플리케이션에서는 유용성 및 접근성을 개선하기 위해 예상 탭 순서가 지정되어 있을 수도 있습니다. 컨트롤에 대한 탭 순서를 지정하면 키보드 탐색을 사용하도록 설정하고 특정 순서로 입력을 수신할 애플리케이션 페이지를 준비하고 화면 판독기를 통해 사용자가 포커스 가능한 요소를 읽을 수 있게 할 수 있습니다.
 
@@ -146,4 +146,4 @@ ms.locfileid: "67830340"
 
 ## <a name="related-links"></a>관련 링크
 
-- [액세스 가능성(샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [액세스 가능성(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

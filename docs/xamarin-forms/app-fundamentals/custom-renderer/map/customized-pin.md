@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 8e80016e33e8bebba715be4f02060e76086884fc
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 8df5b373fccdef93a8ffbc66fd53a94378f47a6e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386201"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650829"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 지정된 핀 데이터 보기가 있는 네이티브 맵을 나타내는 맵 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
@@ -658,4 +658,4 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 - [맵 컨트롤](~/xamarin-forms/user-interface/map.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [지도 API](~/android/platform/maps-and-location/maps/maps-api.md)
-- [사용자 지정된 Pin(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
+- [사용자 지정된 Pin(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

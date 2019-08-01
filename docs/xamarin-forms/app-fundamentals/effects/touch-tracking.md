@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: 87542bbd158b8c8ab0f48bb57fa0d19ce8f374c0
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411767"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651669"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _효과는 기본 네이티브 뷰의 변경을 신호로 알리는 이벤트를 정의하고 호출할 수 있습니다. 이 문서에서는 하위 수준 멀티 터치 손가락 추적을 구현하는 방법과 터치 동작을 신호로 알려주는 이벤트를 생성하는 방법을 보여줍니다._
 
@@ -52,7 +52,7 @@ UWP 방식은 음악 키보드와 같은 유형의 일부 애플리케이션에 
 
 ## <a name="the-touch-tracking-effect-api"></a>터치 추적 효과 API
 
-[**터치 추적 효과 데모**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 샘플에는 하위 수준 터치 추적을 구현하는 클래스(및 열거형)가 포함됩니다. 이러한 형식은 `TouchTracking` 네임스페이스에 속하며 `Touch`라는 단어로 시작됩니다. **TouchTrackingEffectDemos** .NET Standard 라이브러리 프로젝트에는 터치 이벤트 유형에 대한 `TouchActionType` 열거형이 포함됩니다.
+[**터치 추적 효과 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 샘플에는 하위 수준 터치 추적을 구현하는 클래스(및 열거형)가 포함됩니다. 이러한 형식은 `TouchTracking` 네임스페이스에 속하며 `Touch`라는 단어로 시작됩니다. **TouchTrackingEffectDemos** .NET Standard 라이브러리 프로젝트에는 터치 이벤트 유형에 대한 `TouchActionType` 열거형이 포함됩니다.
 
 ```csharp
 public enum TouchActionType
@@ -359,7 +359,7 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 
 ## <a name="putting-the-touch-effect-to-work"></a>터치 효과 작업
 
-[**TouchTrackingEffectDemos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) 프로그램에는 일반적인 작업에 대한 터치 추적 효과를 테스트하는 페이지가 5개 있습니다.
+[**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) 프로그램에는 일반적인 작업에 대한 터치 추적 효과를 테스트하는 페이지가 5개 있습니다.
 
 **BoxView Dragging**(BoxView 드래그) 페이지에서는 `AbsoluteLayout`에 `BoxView` 요소를 추가한 다음, 화면에서 드래그할 수 있습니다. [XAML 파일](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml)은 `BoxView` 요소를 `AbsoluteLayout`에 추가하고 `AbsoluteLayout`을 지우는 두 개의 `Button` 보기를 인스턴스화합니다.
 
@@ -748,7 +748,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ### <a name="tracking-view-to-view-touch"></a>보기 간 터치 추적
 
-앞의 모든 예제에서 `TouchEffect`가 만들어지거나 `Pressed` 이벤트가 발생하는 경우 `TouchEffect`의 `Capture` 속성을 `true`로 설정했습니다. 이렇게 하면 보기를 처음 누르는 손가락과 연결된 모든 이벤트를 동일한 요소가 수신할 수 있습니다. 최종 샘플은 `Capture`를 `true`로 설정하지 않습니다. 이로 인해 화면에 접촉하는 손가락이 한 요소에서 다른 요소로 이동할 때 다른 동작이 발생합니다. 손가락을 뗀 요소는 `Type` 속성이 `TouchActionType.Exited`로 설정된 이벤트를 수신하고 두 번째 요소는 `Type`이 `TouchActionType.Entered`로 설정된 이벤트를 수신합니다.
+앞의 모든 예제에서 `TouchEffect`가 만들어지거나 `Pressed` 이벤트가 발생하는 경우 `TouchEffect`의 `Capture` 속성을 `true`로 설정했습니다. 이렇게 하면 보기를 처음 누르는 손가락과 연결된 모든 이벤트를 동일한 요소가 수신할 수 있습니다. 최종 샘플은 `Capture`를 `true`로 설정하지 않습니다.  이로 인해 화면에 접촉하는 손가락이 한 요소에서 다른 요소로 이동할 때 다른 동작이 발생합니다. 손가락을 뗀 요소는 `Type` 속성이 `TouchActionType.Exited`로 설정된 이벤트를 수신하고 두 번째 요소는 `Type`이 `TouchActionType.Entered`로 설정된 이벤트를 수신합니다.
 
 이런 유형의 터치 처리는 음악 키보드에 매우 유용합니다. 키는 눌렸을 때는 물론 손가락이 키보드 사이를 미끄러질 때도 이를 감지할 수 있어야 합니다.
 
@@ -809,4 +809,4 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 
 - [iOS에서 멀티 터치 손가락 추적](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Android에서 멀티 터치 손가락 추적](~/android/app-fundamentals/touch/touch-tracking.md)
-- [터치 추적 효과(샘플)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+- [터치 추적 효과(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

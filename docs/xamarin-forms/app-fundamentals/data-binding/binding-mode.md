@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 20a6dab34f290c6e5f170d861183dabbfe382970
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977780"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650217"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 [이전 문서](basic-bindings.md)에서는 **Alternative Code Binding**(대체 코드 바인딩)과 **Alternative XAML Binding**(대체 XAML 바인딩) 페이지에 `Scale` 속성이 있는 `Label`이 `Slider`의 `Value`에 바인딩되는 것을 설명했습니다. `Slider` 초기 값이 0이라서 `Label`의 `Scale` 속성이 1이 아닌 0으로 설정되어 `Label`이 사라졌습니다.
 
-[**DataBindingDemos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 샘플의 **Reverse Binding**(역방향 바인딩) 페이지는 이전 문서의 프로그램과 유사하며, 데이터 바인딩이 `Label`에 정의되지 않고 `Slider`에 정의되는 것만 다릅니다.
+[**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플의 **Reverse Binding**(역방향 바인딩) 페이지는 이전 문서의 프로그램과 유사하며, 데이터 바인딩이 `Label`에 정의되지 않고 `Slider`에 정의되는 것만 다릅니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -109,7 +109,7 @@ ms.locfileid: "64977780"
 
 **Simple Color Selector**(간단한 색 선택기) 페이지는 간단한 ViewModel 사용을 보여줍니다. 데이터 바인딩을 사용하여 사용자가 색상, 채도 및 광도에 대한 세 가지 `Slider` 요소를 사용하여 색상을 선택할 수 있습니다.
 
-ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다. 이 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 이벤트를 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
+ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다.  이 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 이벤트를 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
 
 `HslColorViewModel` 클래스는 5개 속성을 정의합니다. `Hue`, `Saturation`, `Luminosity` 및 `Color` 속성은 서로 관련됩니다. 세 가지 색 구성 요소 중 하나라도 값이 변경되면 `Color` 속성이 다시 계산되고 네 가지 속성 모두에 대해 `PropertyChanged` 이벤트가 실행됩니다.
 
@@ -684,5 +684,5 @@ public partial class SampleSettingsPage : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

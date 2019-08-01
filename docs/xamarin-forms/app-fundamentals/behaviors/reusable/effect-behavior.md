@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 840fa1b40858ccf3bff15f7027735ce98081d23c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 38ecd765b1c6bc81054b2c42426b6c15bb99b9d9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925134"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650982"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 는 컨트롤에 효과를 추가하는 방법을 보여 줍니다._
 
@@ -32,7 +32,7 @@ _동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준
 효과에 대한 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 
 > [!NOTE]
-> `EffectBehavior`는 [효과 동작 샘플](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)에 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
+> `EffectBehavior`는 [효과 동작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)에 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
 
 ## <a name="creating-the-behavior"></a>동작 만들기
 
@@ -169,6 +169,6 @@ label.Behaviors.Add (new EffectBehavior {
 ## <a name="related-links"></a>관련 링크
 
 - [효과](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [효과 동작(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
+- [효과 동작(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [동작](xref:Xamarin.Forms.Behavior)
 - [동작&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

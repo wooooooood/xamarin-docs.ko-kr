@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 01bb3d19b5e79a6ce9942447b5ddd4afb04574cc
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: b1f2dbe87fed951223e731912b696c649d0b6edb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978615"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647184"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으로 뒤로 탐색할 수 있는 계층적 탐색 환경을 제공합니다. 이 클래스는 탐색을 Page 개체의 LIFO(후입선출) 스택으로 구현합니다. 이 문서에서는 NavigationPage 클래스를 사용하여 페이지 스택 탐색을 수행하는 방법을 보여 줍니다._
 
@@ -310,7 +310,7 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 모든 Xamarin.Forms [`View`](xref:Xamarin.Forms.View)는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 탐색 모음에 표시될 수 있습니다. 이렇게 하려면 [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 `View`로 설정합니다. 이 연결된 속성은 모든 [`Page`](xref:Xamarin.Forms.Page)로 설정할 수 있으며 `Page`가 `NavigationPage`에 푸시되면 `NavigationPage`가 속성 값을 적용합니다.
 
-[제목 보기 샘플](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)에서 가져온 다음 예제에서는 XAML에서 [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정하는 방법을 보여 줍니다.
+[제목 보기 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)에서 가져온 다음 예제에서는 XAML에서 [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정하는 방법을 보여 줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -362,9 +362,9 @@ public class TitleViewPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [페이지 탐색](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Hierarchical(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
-- [PassingData(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
-- [LoginFlow(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
-- [TitleView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
+- [Hierarchical(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+- [PassingData(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [LoginFlow(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
+- [TitleView(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
 - [Xamarin.Forms에서 로그인 화면 흐름을 만드는 방법 동영상](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

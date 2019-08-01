@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 39e641d5e911b179ca8da9fc6c1b7685a9644364
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: a00b8052bfa2cd3a762e1b78409ffaa85cdae70c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831490"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68646758"
 ---
 # <a name="localization"></a>지역화
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 _.NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다._
 
@@ -82,7 +82,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 [![](text-images/vs-resx-internal-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-internal.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
 
@@ -95,7 +95,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 [![](text-images/vs-resx-public-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-public.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
 
@@ -566,7 +566,7 @@ namespace UsingResxLocalization.Android
 
 Android 지역화에 대한 자세한 내용은 [Android 지역화](~/android/app-fundamentals/localization.md)를 참조하세요.
 
-#### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+#### <a name="universal-windows-platform"></a>UWP
 
 UWP(유니버설 Windows 플랫폼) 프로젝트에는 종속 서비스가 필요하지 않습니다. 대신 이 플랫폼에서 자동으로 리소스의 문화권을 올바르게 설정합니다.
 
@@ -691,7 +691,7 @@ namespace UsingResxLocalization
 
 Xamarin.Forms 코드로 사용자 인터페이스의 변환을 처리할 수 있지만 각 플랫폼별 프로젝트에서 수행해야 하는 몇 가지 요소가 있습니다. 이 섹션에서는 지역화 방법을 살펴봅니다.
 
-* 애플리케이션 이름
+* Application Name
 * 이미지
 
 샘플 프로젝트에는 다음과 같이 C#에서 참조하는 **flag.png**라는 지역화된 이미지가 포함됩니다.
@@ -805,8 +805,8 @@ RESX 파일 및 .NET 글로벌화 클래스를 사용하여 Xamarin.Forms 애플
 
 ## <a name="related-links"></a>관련 링크
 
-- [RESX 지역화 샘플](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
-- [TodoLocalized 샘플 앱](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/)
+- [RESX 지역화 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+- [TodoLocalized 샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalized)
 - [플랫폼 간 지역화](~/cross-platform/app-fundamentals/localization.md)
 - [iOS 지역화](~/ios/app-fundamentals/localization/index.md)
 - [Android 지역화](~/android/app-fundamentals/localization.md)

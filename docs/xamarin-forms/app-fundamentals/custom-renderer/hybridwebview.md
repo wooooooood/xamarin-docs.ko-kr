@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: d09188373d11b33f3b3d78b92faa46bf754797f6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cd4bb8cae59e5d9cdcc36a58fb37e71e56d580b3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268991"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650873"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 보기 클래스에서 파생되어야 합니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 플랫폼별 웹 컨트롤을 향상시키는 방법을 보여주는 HybridWebView 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
@@ -377,7 +377,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-`HybridWebViewRenderer` 클래스는 `HybridWebView.Uri` 속성에 지정된 웹 페이지를 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 컨트롤에 로드하고, `invokeCSharpAction` JavaScript 함수는 이 웹 페이지에 삽입됩니다. 웹 페이지가 완전히 로드되면 `JavascriptWebViewClient` 클래스에서 `OnPageFinished`가 재정의됩니다.
+`HybridWebViewRenderer` 클래스는 `HybridWebView.Uri` 속성에 지정된 웹 페이지를 네이티브 [`WebView`](xref:Android.Webkit.WebView) 컨트롤에 로드하고, `invokeCSharpAction` JavaScript 함수는 이 웹 페이지에 삽입됩니다. 웹 페이지가 완전히 로드되면 `JavascriptWebViewClient` 클래스에서 `OnPageFinished`가 재정의됩니다.
 
 ```csharp
 public class JavascriptWebViewClient : WebViewClient
@@ -401,10 +401,10 @@ public class JavascriptWebViewClient : WebViewClient
 
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
   - `Control` 속성이 `null`이면 다음 작업이 수행됩니다.
-    - 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 인스턴스가 만들어지고, 컨트롤에서 JavaScript를 사용하도록 설정되고, `WebViewClient`의 구현으로 `JavascriptWebViewClient` 인스턴스가 설정됩니다.
-    - 네이티브 [`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
-  - [`WebView.AddJavascriptInterface`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.AddJavascriptInterface/p/Java.Lang.Object/System.String/) 메서드는 WebView의 JavaScript 컨텍스트 주 프레임에 새 `JSBridge` 인스턴스를 삽입하고 이름을 `jsBridge`로 지정합니다. 이렇게 하면 `JSBridge` 클래스의 메서드를 JavaScript에서 액세스할 수 있습니다.
-  - [`WebView.LoadUrl`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.LoadUrl/p/System.String/) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다.
+    - 네이티브 [`WebView`](xref:Android.Webkit.WebView) 인스턴스가 만들어지고, 컨트롤에서 JavaScript를 사용하도록 설정되고, `WebViewClient`의 구현으로 `JavascriptWebViewClient` 인스턴스가 설정됩니다.
+    - 네이티브 [`WebView`](xref:Android.Webkit.WebView) 컨트롤의 참조를 `Control` 속성에 할당하는 `SetNativeControl` 메서드가 호출됩니다.
+  - [`WebView.AddJavascriptInterface`](xref:Android.Webkit.WebView.AddJavascriptInterface*) 메서드는 WebView의 JavaScript 컨텍스트 주 프레임에 새 `JSBridge` 인스턴스를 삽입하고 이름을 `jsBridge`로 지정합니다. 이렇게 하면 `JSBridge` 클래스의 메서드를 JavaScript에서 액세스할 수 있습니다.
+  - [`WebView.LoadUrl`](xref:Android.Webkit.WebView.LoadUrl*) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다.
   - `JavascriptWebViewClient` 클래스에서 페이지 로드가 완료되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
 - 렌더러가 연결된 요소가 변경되면:
   - 리소스가 해제됩니다.
@@ -511,5 +511,5 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererHybridWebView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/HybridWebView/)
+- [CustomRendererHybridWebView(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 - [JavaScript에서 C# 호출](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)

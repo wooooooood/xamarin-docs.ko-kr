@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 17e6f4a935924b9c7e282747443bb579d08a5ab9
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971252"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68651111"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 Automation 속성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms를 사용하면 AutomationProperties 클래스에서 연결된 속성을 통해 액세스 가능성 값을 사용자 인터페이스 요소에 설정할 수 있으며 이어 기본 액세스 가능성 값을 설정합니다. 이 문서에서는 화면 판독기에 페이지의 요소가 표시될 수 있도록 AutomationProperties 클래스를 사용하는 방법을 설명합니다._
 
@@ -179,4 +179,4 @@ Android에서 `AutomationProperties.Name` 및/또는 `AutomationProperties.HelpT
 ## <a name="related-links"></a>관련 링크
 
 - [연결된 속성](~/xamarin-forms/xaml/attached-properties.md)
-- [액세스 가능성(샘플)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [액세스 가능성(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fe2cc5fb7c51425c8030d31015236473a5264efb
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667592"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509015"
 ---
 # <a name="gdb"></a>GDB
 
@@ -113,7 +113,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 앱 내에 `gdbserver`를 포함하려면
 
-1. Android NDK 내에서 `gdbserver`를 찾고(**$ANDROID\_NDK\_PATH/prebuilt/android-arm/gdbserver/gdbserver**에 있음) 프로젝트 디렉터리에 복사합니다.
+1. Android NDK 내에서 `gdbserver`를 찾고( **$ANDROID\_NDK\_PATH/prebuilt/android-arm/gdbserver/gdbserver**에 있음) 프로젝트 디렉터리에 복사합니다.
 
 2. `gdbserver`의 이름을 **libs/armeabi-v7a/libgdbserver.so**로 바꿉니다.
 
@@ -147,7 +147,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 디버그 앱에서는 기본적으로 `INTERNET` 권한이 활성화됩니다. 애플리케이션에 아직 없을 경우 **속성/AndroidManifest.xml**을 편집하거나 [프로젝트 속성](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)을 편집하여 추가할 수 있습니다.
 
-앱 디버깅은 [ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/) 사용자 지정 특성 속성을 `true`로 설정하거나 **속성/AndroidManifest.xml**을 편집하고 `//application/@android:debuggable` 특성을 `true`로 설정하여 활성화할 수 있습니다.
+앱 디버깅은 [ApplicationAttribute.Debugging](xref:Android.App.ApplicationAttribute.Debuggable) 사용자 지정 특성 속성을 `true`로 설정하거나 **속성/AndroidManifest.xml**을 편집하고 `//application/@android:debuggable` 특성을 `true`로 설정하여 활성화할 수 있습니다.
 
 ```xml
 <application android:label="Example.Name.Here" android:debuggable="true">

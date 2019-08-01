@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9c6edddd70fa7a74a72857a94dbed613b5b0d66d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053466"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68657145"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 MVVM(Model-View-ViewModel) 아키텍처에서 데이터 바인딩은 일반적으로 `INotifyPropertyChanged`에서 파생되는 클래스인 ViewModel의 속성과 일반적으로 XAML 파일인 View의 속성 간에 정의됩니다. 경우에 따라 애플리케이션에서 사용자에게 ViewModel의 어떤 항목에 영향을 주는 명령을 시작하도록 요구하여 이러한 속성 바인딩을 뛰어넘어야 합니다. 이러한 명령은 일반적으로 단추를 클릭하거나 손가락으로 탭하여 신호를 받으며, 대개 `Button`의 `Clicked` 이벤트 또는 `TapGestureRecognizer`의 `Tapped` 이벤트에 대한 처리기의 코드 숨김 파일에서 처리됩니다.
 
@@ -86,7 +86,7 @@ Windows와 Xamarin.Forms 간에 ViewModels를 공유하는 것이 문제가 되�
 
 ## <a name="basic-commanding"></a>기본 명령
 
-[**데이터 바인딩 데모**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 프로그램의 **Person Entry**(사용자 항목) 페이지는 ViewModel에서 구현된 몇 가지 간단한 명령을 보여 줍니다.
+[**데이터 바인딩 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램의 **Person Entry**(사용자 항목) 페이지는 ViewModel에서 구현된 몇 가지 간단한 명령을 보여 줍니다.
 
 `PersonViewModel`은 사용자를 정의하는 `Name`, `Age` 및 `Skills`라는 세 가지 속성을 정의합니다. 이 클래스에는 `ICommand` 속성이 *포함되지 않습니다*.
 
@@ -693,7 +693,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>비동기 탐색 메뉴 명령
 
-명령은 [**데이터 바인딩 데모**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) 프로그램 자체에서와 같은 탐색 메뉴를 구현하는 데 유용합니다. **MainPage.xaml**의 일부는 다음과 같습니다.
+명령은 [**데이터 바인딩 데모**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 프로그램 자체에서와 같은 탐색 메뉴를 구현하는 데 유용합니다. **MainPage.xaml**의 일부는 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -767,5 +767,5 @@ XAML 파서에서 바인딩 정의를 발견하면 바인딩의 두 구성 요�
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

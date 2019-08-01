@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: 505b5bfb9681e5bc30ff84aa90c8e148ed6db4b1
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 67fd8070ae36bdc1a90b8a33b25f13369d8d995d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058287"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650204"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 바인딩 소스를 확인할 수 없거나 바인딩에 성공하지만 `null` 값을 반환하기 때문에 경우에 따라 데이터 바인딩이 실패합니다. 값 변환기 또는 기타 추가 코드를 사용하여 이러한 시나리오를 처리할 수 있고 데이터 바인딩은 바인딩 프로세스에 실패하는 경우 사용할 대체 값을 정의하여 더 강력하게 만들 수 있습니다. 바인딩 식에서 [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) 및 [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) 속성을 정의하여 이 작업을 수행할 수 있습니다. 이러한 속성이 [`BindingBase`](xref:Xamarin.Forms.BindingBase) 클래스에 위치하기 때문에 바인딩, 컴파일된 바인딩 및 `Binding` 태그 확장과 함께 사용할 수 있습니다.
 
@@ -106,4 +106,4 @@ ms.locfileid: "53058287"
 
 ## <a name="related-links"></a>관련 링크
 
-- [데이터 바인딩 데모(샘플)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

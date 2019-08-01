@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 8f5c440784205fa0e7e2001c981e37eab8646f24
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: e8070894bab89ab2e38772518c94482409e4d17f
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268937"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650431"
 ---
 # <a name="implementing-a-view"></a>보기 구현
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
 _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에 레이아웃과 컨트롤을 배치하는 데 사용되는 보기 클래스에서 파생되어야 합니다. 이 문서에서는 디바이스 카메라에서 미리 보기 비디오 스트림을 표시하는 데 사용되는 Xamarin.Forms 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 설명합니다._
 
@@ -335,4 +335,4 @@ namespace CustomRenderer.UWP
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
+- [CustomRendererView(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)

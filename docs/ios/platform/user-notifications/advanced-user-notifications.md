@@ -1,71 +1,71 @@
 ---
-title: Xamarin.iOS에서 고급 사용자 알림
-description: 이 문서에서는 iOS 10에에서 도입 된 사용자 알림 프레임 워크를 자세히 살펴보겠습니다. 사용자 알림, 사용자 알림 인터페이스, 미디어 첨부 파일, 사용자 지정 사용자 인터페이스 및 자세히 설명합니다.
+title: Xamarin.ios의 고급 사용자 알림
+description: 이 문서에서는 iOS 10에 도입 된 사용자 알림 프레임 워크를 자세히 살펴봅니다. 사용자 알림, 사용자 알림 인터페이스, 미디어 첨부 파일, 사용자 지정 사용자 인터페이스 등에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 255603eefb4d7cfd3b906e1744aa19da6a77259a
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 28734af7c3d9958462e47ff6b11a0f9d0e06bcfb
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865288"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655406"
 ---
-# <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.iOS에서 고급 사용자 알림
+# <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.ios의 고급 사용자 알림
 
-새 ios 10 프레임 워크를 제공 하 고 로컬 및 원격 알림이 처리에 대 한 허용 사용자 알림입니다. 앱 또는 앱 확장은이 프레임 워크를 사용 하 여, 위치와 같은 조건 집합 또는 시간을 지정 하 여 로컬 알림 배달을 예약할 수 있습니다.
+IOS 10의 새로운 기능으로, 사용자 알림 프레임 워크를 사용 하면 로컬 및 원격 알림을 배달 하 고 처리할 수 있습니다. 이 프레임 워크를 사용 하 여 앱 또는 앱 확장은 위치 또는 시간 등의 조건 집합을 지정 하 여 로컬 알림의 배달을 예약할 수 있습니다.
 
 ## <a name="about-user-notifications"></a>사용자 알림 정보
 
-새 사용자 알림 프레임 워크를 제공 하 고 로컬 및 원격 알림 처리할 수 있습니다. 앱 또는 앱 확장은이 프레임 워크를 사용 하 여, 위치와 같은 조건 집합 또는 시간을 지정 하 여 로컬 알림 배달을 예약할 수 있습니다.
+새 사용자 알림 프레임 워크를 사용 하면 로컬 및 원격 알림을 배달 하 고 처리할 수 있습니다. 이 프레임 워크를 사용 하 여 앱 또는 앱 확장은 위치 또는 시간 등의 조건 집합을 지정 하 여 로컬 알림의 배달을 예약할 수 있습니다.
 
-또한 앱 또는 확장 수 수신 (및 잠재적으로 수정할) 로컬 및 원격 알림이 사용자의 iOS 장치에 배달 하는 대로 합니다.
+또한 앱 또는 확장은 사용자의 iOS 장치에 전달 될 때 로컬 및 원격 알림을 수신 하 고 잠재적으로 수정할 수 있습니다.
 
-새 사용자 알림 UI 프레임 워크에는 앱 또는 앱 확장 사용자에 게 표시 될 때 로컬 및 원격 알림의 모양을 사용자 지정할 수 있습니다.
+새 사용자 알림 UI 프레임 워크를 사용 하면 앱 또는 앱 확장이 사용자에 게 표시 될 때 로컬 및 원격 알림의 모양을 사용자 지정할 수 있습니다.
 
-이 프레임 워크는 앱 사용자에 게 알림을 배달할 수 있는 다음과 같은 방법으로 제공 합니다.
+이 프레임 워크는 앱이 사용자에 게 알림을 제공할 수 있는 다음과 같은 방법을 제공 합니다.
 
-- **시각적 경고가** -알림이 있는 배너로 화면 맨 위에서 세분화 합니다.
-- **사운드 및 진동** -알림과 연결할 수 있습니다.
-- **앱 아이콘 배지** -앱의 아이콘에는 새 콘텐츠를 사용할 수 있는지를 보여 주는 배지를 표시 하는 경우. 읽지 않은 전자 메일 메시지의 수 예:입니다.
+- **시각적 경고** -알림이 화면 위쪽에서 배너로 롤업되는 위치입니다.
+- **Sound 및 Vibrations** -알림과 연결할 수 있습니다.
+- **앱 아이콘 배지** -앱의 아이콘이 새 콘텐츠를 사용할 수 있음을 보여 주는 배지를 표시 합니다. 읽지 않은 전자 메일 메시지의 수와 같습니다.
 
-또한 사용자의 현재 컨텍스트에 따라 여러 가지는 알림이 표시 됩니다.
+또한 사용자의 현재 컨텍스트에 따라 알림이 표시 되는 방법에는 여러 가지가 있습니다.
 
-- 장치 잠금 해제 된 경우 알림을 롤 다운 화면 맨 위에서 배너로 합니다.
-- 장치가 잠겨 있는 경우 사용자의 잠금 화면에서 알림이 표시 됩니다.
-- 사용자가 알림의 놓친 경우 알림 센터를 열 수 있으며 있는 모든 사용 가능한 대기 알림을 봅니다.
+- 장치의 잠금이 해제 되 면 화면 맨 위에서 배너로 롤오버 됩니다.
+- 장치가 잠기면 사용자의 잠금 화면에 알림이 표시 됩니다.
+- 사용자가 알림을 누락 하는 경우 알림 센터를 열고 사용 가능한 모든 대기 중인 알림을 볼 수 있습니다.
 
-Xamarin.iOS 앱에 두 가지 유형의 사용자 알림을 보낼 수 있습니다.
+Xamarin.ios 앱에는 보낼 수 있는 두 가지 유형의 사용자 알림이 있습니다.
 
-- **로컬 알림** -이러한 사용자가 장치에 로컬로 설치 하는 앱에서 전송 됩니다.
-- **원격 알림** -하 고 사용자에 게 표시 하거나 원격 서버에서 보낸 또는 앱의 내용의 백그라운드 업데이트를 트리거합니다.
+- **로컬 알림** -사용자 장치에 로컬로 설치 된 앱에서 전송 됩니다.
+- **원격 알림** -원격 서버에서 전송 되 고 사용자에 게 제공 되거나 앱 콘텐츠의 백그라운드 업데이트를 트리거합니다.
 
-자세한 내용은 참조 하십시오 우리의 [향상 된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md) 설명서.
+자세한 내용은 [향상 된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md) 설명서를 참조 하세요.
 
 ## <a name="the-new-user-notification-interface"></a>새 사용자 알림 인터페이스
 
-IOS 10에서에서 사용자 알림 장치 또는 알림 센터에서 맨 위에 있는 배너도 잠금 화면에서 제목, 부제목 및 표시할 수 있는 선택적 미디어 첨부 파일 등 더 많은 콘텐츠를 제공 하는 새로운 UI 디자인을 사용 하 여 표시 됩니다.
+IOS 10에서 사용자에 게 표시 되는 새로운 UI 디자인을 사용 하면 잠금 화면에 표시 될 수 있는 제목, 부제목 및 선택적 미디어 첨부 파일 등의 콘텐츠를 장치 또는 알림 센터의 위쪽에 배너 형태로 제공 합니다.
 
-사용자 알림을 표시 되는 위치 iOS 10에서에서,에 관계 없이 동일한 모양 및 느낌와 동일한 기능 및 기능을 사용 하 여 표시 됩니다.
+IOS 10에서 사용자 알림이 표시 되는 위치에 관계 없이 동일한 모양과 느낌을 가진 동일한 기능 및 기능을 제공 합니다.
 
-IOS 8, Apple 개발자 수 알림 사용자 지정 작업을 연결 하 고 사용자가 앱을 실행 하지 않고 알림 작업을 수행 하도록 허용 하는 실행 가능한 알림을 도입 했습니다. Apple ios 9에서 사용자가 텍스트 입력을 사용 하 여 알림에 응답을 허용 하는 빠른 응답을 사용 하 여 실행 가능한 알림 향상 되었습니다.
+IOS 8에서 Apple은 개발자가 알림에 사용자 지정 작업을 연결 하 고 사용자가 앱을 시작 하지 않고도 알림에 대해 조치를 취할 수 있는 조치 가능한 알림을 도입 했습니다. IOS 9에서 사용자가 텍스트 입력을 사용 하 여 알림에 응답할 수 있도록 하는 빠른 회신을 통해 Apple의 조치 가능한 알림이 사용 됩니다.
 
-사용자 알림 iOS 10에서에서 사용자 환경을 더 핵심 이기 때문에 Apple에 필요에 따라 확장 여기서 알림를 누르면 하 고 사용자 지정 사용자 인터페이스를 다양 한 상호 작용을 제공 하는 표시는 3D 터치를 지원 하기 위해 실행 가능한 알림 알림.
+사용자 알림은 iOS 10의 사용자 환경에서 더 중요 한 부분 이므로, Apple은 3D 터치를 지원 하기 위해 사용자가 알림을 누르고 사용자 지정 사용자 인터페이스를 표시 하 여 풍부한 상호 작용을 제공 하는 3D 터치를 지원 합니다. 알림을 사용 합니다.
 
-UI 사용자 지정 사용자 알림 표시 되 면 알림 연결 된 모든 작업을 사용 하 여 사용자 상호 작용 하는 경우, 변경 내용에 대 한 피드백을 보내도록 사용자 지정 UI는 즉시 업데이트할 수 있습니다.
+사용자 지정 사용자 알림 UI가 표시 되 면 사용자가 알림에 연결 된 작업과 상호 작용 하는 경우 변경 된 내용에 대 한 피드백을 제공 하도록 사용자 지정 UI를 즉시 업데이트할 수 있습니다.
 
-새 iOS 10, 사용자 알림 UI API를 쉽게 이러한 새 사용자 알림 UI 기능을 활용 하기 위해 Xamarin.iOS 앱을 허용 합니다.
+IOS 10의 새로운 기능인 사용자 알림 UI API를 사용 하면 Xamarin.ios 앱에서 이러한 새로운 사용자 알림 UI 기능을 쉽게 활용할 수 있습니다.
 
 ## <a name="adding-media-attachments"></a>미디어 첨부 파일 추가
 
-사용자 간에 공유 하는 보다 일반적인 항목 중 하나 이므로 사진, 미디어 항목 (예: 사진)를 연결 하는 기능을 추가 하는 iOS 10 알림을 표시 하 고 알림의 conte의 나머지 부분과 함께 사용자가 쉽게 사용할 수 있게 하려면 직접 nt 합니다.
+사용자 간에 공유 되는 더 일반적인 항목 중 하나는 사진 이므로 iOS 10은 알림에 직접 미디어 항목 (예: 사진)을 연결 하는 기능을 추가 하 여 사용자가 알림 메시지를 표시 하 고 사용자에 게 즉시 제공 하는 기능을 제공 합니다. 4.0.
 
-그러나 전송에 관련 된 크기 때문에 작은 이미지를 연결 하는 원격 알림 페이로드 실용적이 지 합니다. 이 상황을 처리 하려면 개발자를 다른 원본 (예: CloudKit 데이터 저장소)에서 이미지를 다운로드 하 여 사용자에 게 표시 되기 전에 알림 내용에 첨부할 iOS 10에서에서 새 서비스 확장을 사용할 수 있습니다.
+그러나 작은 이미지를 전송 하는 것과 관련 된 크기 때문에 원격 알림 페이로드에 연결 하는 것은 실용적이 지 않습니다. 이러한 상황을 처리 하기 위해 개발자는 iOS 10의 새로운 서비스 확장을 사용 하 여 다른 원본 (예: CloudKit 데이터 저장소)에서 이미지를 다운로드 하 고 사용자에 게 표시 하기 전에 알림 콘텐츠에 연결할 수 있습니다.
 
-서비스 확장에서 수정할 원격 알림에 해당 페이로드 표시 되어야 합니다으로 변경할 수 있습니다. 예를 들어:
+서비스 확장에서 원격 알림을 수정 하려면 해당 페이로드를 변경 가능으로 표시 해야 합니다. 예를 들어:
 
 ```csharp
 {
@@ -77,13 +77,13 @@ UI 사용자 지정 사용자 알림 표시 되 면 알림 연결 된 모든 작
 }
 ```
 
-프로세스의 다음 개요를 살펴보십시오.
+프로세스에 대 한 다음 개요를 살펴보겠습니다.
 
-[![](advanced-user-notifications-images/extension02.png "추가 미디어 첨부 파일 처리")](advanced-user-notifications-images/extension02.png#lightbox)
+[![](advanced-user-notifications-images/extension02.png "미디어 첨부 파일 추가 프로세스")](advanced-user-notifications-images/extension02.png#lightbox)
 
-서비스 확장에 필요한 모든 방법을 통해 필요한 이미지를 다운로드할 수 있습니다 (APNs)를 통해 장치에는 원격 알림이 배달 되 면 (예는 `NSURLSession`) 알림 및 표시의 콘텐츠를 수정할 수 있는 이미지를 수신한 후 사용자에 해당 합니다.
+원격 알림이 장치 (APNs를 통해)에 전달 되 면 서비스 확장에서 원하는 수단 (예: `NSURLSession`)을 통해 필요한 이미지를 다운로드 하 고 이미지를 받은 후에 알림 콘텐츠를 수정 하 고 표시할 수 있습니다. 사용자에 게 있습니다.
 
-다음은이 프로세스 코드에서 처리 될 수 있습니다 하는 방법의 예입니다.
+다음은 코드에서이 프로세스를 처리 하는 방법의 예입니다.
 
 ```csharp
 using System;
@@ -134,65 +134,65 @@ namespace MonkeyNotification
 }
 ```
 
-APNs에서 알림을 받으면 콘텐츠에서 이미지의 사용자 지정 주소를 읽고 파일 서버에서 다운로드 됩니다. 다음 `UNNotificationAttachement` 고유 ID 및 이미지의 로컬 위치를 사용 하 여 만들어집니다 (으로 `NSUrl`). 알림 콘텐츠를 변경할 수 있는 복사본이 생성 됩니다 하 고 미디어 첨부 파일 추가 됩니다. 호출 하 여 사용자에 게 알림이 표시 됩니다는 마지막으로 `contentHandler`합니다.
+APNs에서 알림을 받으면 이미지의 사용자 지정 주소를 콘텐츠에서 읽고 파일이 서버에서 다운로드 됩니다. 그런 다음 `UNNotificationAttachement` 고유한 ID 및 이미지의 로컬 위치 ( `NSUrl`)를 사용 하 여를 만듭니다. 변경 가능한 알림 콘텐츠의 복사본이 만들어지고 미디어 첨부 파일이 추가 됩니다. 마지막으로를 호출 `contentHandler`하 여 사용자에 게 알림을 표시 합니다.
 
-알림 첨부 파일에 추가 되 면 시스템을 이동 및 파일의 관리를 인계 받습니다.
+알림에 첨부 파일이 추가 되 면 시스템은 파일의 이동 및 관리를 수행 합니다.
 
-위의 원격 알림을 외에도 미디어 첨부 파일은 로컬 알림에서 지원 또한 여기서는 `UNNotificationAttachement` 만들어지고 해당 콘텐츠와 함께 알림을 연결할입니다.
+위에서 설명한 원격 알림 외에도, 미디어 첨부 파일은 로컬 알림에서 지원 됩니다. 여기서는 `UNNotificationAttachement` 를 만들고 해당 콘텐츠와 함께 알림에 첨부 합니다.
 
-IOS 10에서에서 알림 이미지의 미디어 첨부 파일 지원 (정적 및 Gif), 오디오 또는 비디오와 시스템 자동으로 표시 됩니다 올바른 사용자 지정 UI 각 이러한 유형의 첨부 파일에 대 한 알림을 사용자에 게 표시 되 면 합니다.
+IOS 10의 알림은 이미지 (정적 및 Gif)의 미디어 첨부 파일을 지원 하며, 오디오 또는 비디오를 사용 하면 사용자에 게 알림이 제공 될 때 이러한 각 첨부 파일 형식에 대 한 올바른 사용자 지정 UI가 자동으로 표시 됩니다.
 
 > [!NOTE]
-> 미디어 크기를 최적화 하기 위해 주의 해야 하 고 시스템으로 원격 서버에서 미디어를 다운로드 하려면 (또는 로컬 알림을 위한 미디어를 조합 하)는 시간 제한을 엄격한 둘 다에 app Service 확장을 실행 하는 경우. 예를 들어, 이미지의 간소한 버전 또는 알림에 표시할 비디오의 약식 클립을 전송 하는 것이 좋습니다.
+> 시스템에서 앱의 서비스 확장을 실행할 때 둘 다에 대해 엄격한 제한을 적용 하므로 미디어 크기와 원격 서버에서 미디어를 다운로드 하는 데 걸리는 시간 (또는 로컬 알림에 대 한 미디어를 조합 하는 데 걸리는 시간)을 모두 최적화 해야 합니다. 예를 들어, 화면에 표시 되는 축소 된 버전의 이미지 또는 작은 비디오 클립을 전송 하는 것이 좋습니다.
 
 ## <a name="creating-custom-user-interfaces"></a>사용자 지정 사용자 인터페이스 만들기
 
-해당 사용자 알림에 대 한 사용자 지정 사용자 인터페이스를 만들려면 개발자는 앱의 솔루션에 새 ios 10 알림 콘텐츠 확장을 추가 해야 합니다.
+사용자 알림에 대 한 사용자 지정 사용자 인터페이스를 만들려면 개발자가 앱의 솔루션에 알림 콘텐츠 확장 (iOS 10에 새로 추가)을 추가 해야 합니다.
 
-알림 콘텐츠 확장에는 개발자를 자신의 뷰 알림 UI를 추가 하 고 원하는 모든 내용을 그리는 수 있습니다. 알림 콘텐츠 확장 iOS 12부터 단추 및 슬라이더와 같은 대화형 UI 컨트롤을 지원 합니다. 자세한 내용은 참조는 [iOS 12에서에서 대화형 알림을](~/ios/platform/introduction-to-ios12/notifications/interactive.md) 설명서.
+알림 콘텐츠 확장을 사용 하면 개발자가 알림 UI에 자신의 보기를 추가 하 고 원하는 콘텐츠를 그릴 수 있습니다. IOS 12부터 알림 콘텐츠 확장 프로그램은 단추 및 슬라이더와 같은 대화형 UI 컨트롤을 지원 합니다. 자세한 내용은 [iOS 12 설명서의 대화형 알림](~/ios/platform/introduction-to-ios12/notifications/interactive.md) 을 참조 하세요.
 
-사용자 알림을 사용 하 여 사용자 상호 작용을 지원 하려면 사용자 지정 작업 생성, 시스템에 등록 된 있고 시스템을 사용 하 여 예약 하기 전에 알림을에 연결 합니다. 이러한 작업을 처리 하는 알림 콘텐츠 확장 호출 됩니다. 참조를 [알림 작업을 사용 하 여 작업](~/ios/platform/user-notifications/enhanced-user-notifications.md) 섹션을 [향상 된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md) 사용자 지정 작업에 대 한 자세한 내용은 문서.
+사용자 알림과의 사용자 상호 작용을 지원 하려면 사용자 지정 작업을 만들어 시스템에 등록 하 고 시스템에 예약 하기 전에 알림에 연결 해야 합니다. 알림 콘텐츠 확장은 이러한 동작의 처리를 처리 하기 위해 호출 됩니다. 사용자 지정 작업에 대 한 자세한 내용은 [고급 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md) 문서의 [알림 작업으로 작업](~/ios/platform/user-notifications/enhanced-user-notifications.md) 섹션을 참조 하세요.
 
-사용자 지정 UI를 사용 하 여 사용자 알림을 사용자에 게 표시 되 면 다음 요소를 갖습니다.
+사용자에 게 사용자 지정 UI가 있는 사용자 알림이 표시 되 면 다음 요소를 갖게 됩니다.
 
-[![](advanced-user-notifications-images/customui01.png "사용자 지정 UI 요소를 사용 하 여 사용자 알림")](advanced-user-notifications-images/customui01.png#lightbox)
+[![](advanced-user-notifications-images/customui01.png "사용자 지정 UI 요소를 사용 하는 사용자 알림")](advanced-user-notifications-images/customui01.png#lightbox)
 
-(알림을 아래 제시 된) 사용자 지정 작업을 사용 하 여 사용자 상호 작용을 하는 경우 지정 된 작업을 호출할 때 발생 하는 대상으로 사용자 피드백을 제공 하려면 사용자 인터페이스를 업데이트할 수 있습니다.
+사용자가 알림 아래에 표시 되는 사용자 지정 작업과 상호 작용 하는 경우 사용자가 지정 된 작업을 호출 했을 때 발생 하는 상황으로 사용자 의견을 제공 하도록 사용자 인터페이스를 업데이트할 수 있습니다.
 
-### <a name="adding-a-notification-content-extension"></a>알림 콘텐츠 확장을 추가합니다.
+### <a name="adding-a-notification-content-extension"></a>알림 콘텐츠 확장 추가
 
-Xamarin.iOS 앱에 사용자 지정 사용자 알림 UI를 구현 하려면 다음을 수행 합니다.
+Xamarin.ios 앱에서 사용자 지정 사용자 알림 UI를 구현 하려면 다음을 수행 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. Mac 용 Visual Studio에서 앱의 솔루션을 열으십시오
-2. 솔루션 이름을 마우스 오른쪽 단추로 클릭 합니다 **Solution Pad** 선택한 **추가** > **새 프로젝트 추가**합니다.
-3. 선택 **iOS** > **확장** > **알림 콘텐츠 확장** 을 클릭 합니다 **다음** 단추: 
+1. Mac용 Visual Studio에서 앱 솔루션을 엽니다.
+2. **Solution Pad** 에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 프로젝트 추가**를 선택 합니다.
+3. **IOS** > **확장** 알림 콘텐츠 확장을 선택 하 고 다음 단추를 클릭 합니다. >  
 
     [![](advanced-user-notifications-images/notify01.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01.png#lightbox)
-4. 입력을 **이름을** 확장을 클릭 합니다 **다음** 단추: 
+4. 확장의 **이름을** 입력 하 고 **다음** 단추를 클릭 합니다. 
 
-    [![](advanced-user-notifications-images/notify02.png "확장의 이름을 입력 합니다.")](advanced-user-notifications-images/notify02.png#lightbox)
-5. 조정 합니다 **프로젝트 이름** 및/또는 **솔루션 이름** 필요 하 고 클릭 합니다 **만들기** 단추: 
+    [![](advanced-user-notifications-images/notify02.png "확장의 이름 입력")](advanced-user-notifications-images/notify02.png#lightbox)
+5. 필요한 경우 **프로젝트 이름** 및/또는 **솔루션 이름을** 조정 하 고 **만들기** 단추를 클릭 합니다. 
 
-    [![](advanced-user-notifications-images/notify03.png "프로젝트 이름 및/또는 솔루션 이름을 조정합니다")](advanced-user-notifications-images/notify03.png#lightbox)
+    [![](advanced-user-notifications-images/notify03.png "프로젝트 이름 및/또는 솔루션 이름 조정")](advanced-user-notifications-images/notify03.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Mac 용 Visual Studio에서 앱의 솔루션을 열으십시오
-2. 솔루션 이름을 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** 선택한 **추가 > 새 프로젝트...** .
-3. 선택 **시각적 C# > iOS 확장 > 알림 콘텐츠 확장**:
+1. Mac용 Visual Studio에서 앱 솔루션을 엽니다.
+2. **솔루션 탐색기** 에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가 > 새 프로젝트**...를 선택 합니다.
+3. **C# Visual > IOS 확장 > 알림 콘텐츠 확장**을 선택 합니다.
 
     [![](advanced-user-notifications-images/notify01.w157-sml.png "알림 콘텐츠 확장 선택")](advanced-user-notifications-images/notify01.w157.png#lightbox)
-4. 입력을 **이름을** 확장을 클릭 합니다 **확인** 단추입니다.
+4. 확장의 **이름을** 입력 하 고 **확인** 단추를 클릭 합니다.
 
 -----
 
-알림 콘텐츠 확장 솔루션에 추가 되 면 확장의 프로젝트에 세 개의 파일이 만들어집니다.
+솔루션에 알림 콘텐츠 확장이 추가 되 면 확장의 프로젝트에 세 개의 파일이 생성 됩니다.
 
-1. `NotificationViewController.cs` -알림 콘텐츠 확장에 대 한 기본 보기 컨트롤러입니다.
-2. `MainInterface.storyboard` -여기서 개발자 레이아웃 표시 되는 UI iOS 디자이너에 있는 알림 콘텐츠 확장에 대 한 합니다.
-3. `Info.plist` -알림 콘텐츠 확장의 구성을 제어합니다.
+1. `NotificationViewController.cs`-알림 콘텐츠 확장에 대 한 주 뷰 컨트롤러입니다.
+2. `MainInterface.storyboard`-개발자가 iOS 디자이너에서 알림 콘텐츠 확장에 대해 표시 되는 UI를 레이아웃 합니다.
+3. `Info.plist`-알림 콘텐츠 확장의 구성을 제어 합니다.
 
 기본 `NotificationViewController.cs` 파일은 다음과 같습니다.
 
@@ -239,34 +239,34 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-합니다 `DidReceiveNotification` 알림을 알림 콘텐츠 확장의 내용 지정 하 여 사용자 지정 UI를 채울 수 있도록 사용자가 확장 되 면 메서드는 `UNNotification`합니다. 위의 예제에 대 한 레이블을 추가한 이름 사용 하 여 코드에 노출 보기로 `label` 알림의 본문을 표시 하는 데 사용 됩니다.
+알림 콘텐츠 확장이 사용자 지정 UI를 `UNNotification`의 콘텐츠로 채울 수 있도록 사용자가 알림을 확장할 때 메서드가호출됩니다.`DidReceiveNotification` 위의 예제에서 레이블은 이름 `label` 으로 코드에 노출 되 고 알림의 본문을 표시 하는 데 사용 되는 뷰에 추가 되었습니다.
 
-### <a name="setting-the-notification-content-extensions-categories"></a>알림 콘텐츠 확장의 범주를 설정합니다.
+### <a name="setting-the-notification-content-extensions-categories"></a>알림 콘텐츠 확장의 범주 설정
 
-시스템에 응답할 때 특정 범주를 기반으로 앱의 알림 콘텐츠 확장을 찾는 방법에 숙지 해야 합니다. 다음을 수행합니다.
+응답 하는 특정 범주에 따라 앱의 알림 콘텐츠 확장을 찾는 방법에 대 한 정보가 시스템에 있어야 합니다. 다음을 수행합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. 확장의 두 번 클릭 `Info.plist` 파일을 **Solution Pad** 을 편집용으로 엽니다.
-2. 으로 전환 합니다 **원본** 보기.
-3. 확장 된 `NSExtension` 키입니다.
-4. 추가 된 `UNNotificationExtensionCategory` 형식으로 키 **문자열** 확장 속한 범주의 값을 사용 하 여 (이 예제의 ' 이벤트 초대): 
+1. `Info.plist` **Solution Pad** 에서 확장 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+2. **원본** 뷰로 전환 합니다.
+3. 키를 `NSExtension` 확장 합니다.
+4. 확장이 속하는 범주의 값을 사용 하 여 키를형식문자열로추가합니다(이예제에서는'이벤트-초대'`UNNotificationExtensionCategory` ). 
 
     [![](advanced-user-notifications-images/customui02.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02.png#lightbox)
 5. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. 확장의 두 번 클릭 `Info.plist` 파일을 **솔루션 탐색기** 을 편집용으로 엽니다.
-2. 확장 된 `NSExtension` 키입니다.
-3. 추가 된 `UNNotificationExtensionCategory` 형식으로 키 **문자열** 확장 속한 범주의 값을 사용 하 여 (이 예제의 ' 이벤트 초대): 
+1. `Info.plist` **솔루션 탐색기** 에서 확장 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+2. 키를 `NSExtension` 확장 합니다.
+3. 확장이 속하는 범주의 값을 사용 하 여 키를형식문자열로추가합니다(이예제에서는'이벤트-초대'`UNNotificationExtensionCategory` ). 
 
     [![](advanced-user-notifications-images/customui02w.png "UNNotificationExtensionCategory 키 추가")](advanced-user-notifications-images/customui02w.png#lightbox)
 4. 변경 내용을 저장합니다.
 
 -----
 
-알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`) 알림 작업을 등록 하는 데 사용 되는 동일한 범주 값을 사용 합니다. 전환 하는 경우 앱 여러 범주에 대 한 동일한 UI를 사용 합니다는 `UNNotificationExtensionCategory` 형식으로 **배열** 모든 필요한 범주를 제공 합니다. 예를 들어:
+알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`)는 알림 작업을 등록 하는 데 사용 되는 것과 동일한 범주 값을 사용 합니다. 앱에서 여러 범주에 대해 동일한 UI를 사용 하는 경우를 형식 **배열로** 전환 `UNNotificationExtensionCategory` 하 고 필요한 모든 범주를 제공 합니다. 예를 들어:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -280,7 +280,7 @@ namespace MonkeyChatNotifyExtension
 
 ### <a name="hiding-the-default-notification-content"></a>기본 알림 내용 숨기기
 
-여기서 사용자 지정 알림 UI를 표시할 수 동일한 콘텐츠를 기본 알림 (제목, 부제목 및 본문 알림 UI의 맨 아래에 자동으로 표시)으로 상황에이 기본 정보를 를추가하여숨길수있습니다`UNNotificationExtensionDefaultContentHidden`키를 `NSExtensionAttributes` 형식으로 키 **부울** 값을 사용 하 여 `YES` 확장의 `Info.plist` 파일:
+사용자 지정 알림 UI가 기본 알림과 동일한 콘텐츠를 표시 하는 경우 (제목, 부제목 및 본문은 알림 UI의 맨 아래에 자동으로 표시 됨), 다음을 추가 `UNNotificationExtensionDefaultContentHidden`하여이기본정보를숨길수있습니다.확장 `NSExtensionAttributes` `YES` 파일의 값을 사용 하는 부울 형식의 키에 대 한 키입니다. `Info.plist`
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -292,14 +292,14 @@ namespace MonkeyChatNotifyExtension
 
 -----
 
-### <a name="designing-the-custom-ui"></a>사용자 지정 UI를 디자인합니다.
+### <a name="designing-the-custom-ui"></a>사용자 지정 UI 디자인
 
-알림 콘텐츠 확장의 사용자 지정 사용자 인터페이스를 디자인 하려면 두 번 클릭 합니다 `MainInterface.storyboard` iOS 디자이너에서에서 편집 하기 위해 열려는 파일을 끌어서 원하는 인터페이스를 작성 해야 하는 요소 (같은 `UILabels` 고 `UIImageViews`).
+알림 콘텐츠 확장의 사용자 지정 사용자 인터페이스를 디자인 하려면 `MainInterface.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다. iOS 디자이너에서 편집 하려면 원하는 인터페이스를 작성 하는 데 필요한 요소 ( `UILabels` 예: 및 `UIImageViews`)를 끌어 놓습니다.
 
 > [!NOTE]
-> IOS 12 일부 터 알림 콘텐츠 확장 단추 및 텍스트 필드와 같은 대화형 컨트롤을 포함할 수 있습니다. 자세한 내용은 참조는 [iOS 12에서에서 대화형 알림을](~/ios/platform/introduction-to-ios12/notifications/interactive.md) 설명서.
+> IOS 12부터 알림 콘텐츠 확장에는 단추와 텍스트 필드와 같은 대화형 컨트롤이 포함 될 수 있습니다. 자세한 내용은 [iOS 12 설명서의 대화형 알림](~/ios/platform/introduction-to-ios12/notifications/interactive.md) 을 참조 하세요.
 
-UI에 배치 하 고 필요한 컨트롤에 노출 되 면 C# 코드를 열고는 `NotificationViewController.cs` 편집에 대 한 수정 및는 `DidReceiveNotification` 알림을 확장할 때 UI를 채우는 방법입니다. 예:
+Ui가 배치 되 고 필요한 컨트롤이 코드에 C# 노출 되 면 편집용으로를 `NotificationViewController.cs` 열고 사용자가 알림을 확장할 때 ui를 채우도록 메서드를 `DidReceiveNotification` 수정 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -355,13 +355,13 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-### <a name="setting-the-content-area-size"></a>콘텐츠 영역 크기를 설정합니다.
+### <a name="setting-the-content-area-size"></a>콘텐츠 영역 크기 설정
 
-사용자에 게 표시 하는 콘텐츠 영역의 크기를 조정 하려면 아래 코드를 설정 하는 것을 `PreferredContentSize` 속성에는 `ViewDidLoad` 메서드 원하는 크기를 합니다. IOS 디자이너에서에서 보기 제약 조건을 적용 하 여이 크기를 조정할 수도, 개발자에 게 가장 적합 한 방법을 선택 하도록 하는 것이 그대로 있습니다.
+사용자에 게 표시 되는 콘텐츠 영역의 크기를 조정 하려면 아래 코드에서 `PreferredContentSize` `ViewDidLoad` 메서드의 속성을 원하는 크기로 설정 합니다. IOS 디자이너에서 뷰에 제약 조건을 적용 하 여이 크기를 조정할 수도 있습니다 .이 크기는 개발자에 게 가장 적합 한 방법을 선택 하는 것입니다.
 
-알림 콘텐츠 확장은 호출 알림 콘텐츠 영역 전 시스템 이미 실행 되 고 먼저 때문에 전체 크기 조정 및 사용자에 게 표시 될 때 요청된 된 크기까지 애니메이션 효과 줄.
+알림 콘텐츠 확장을 호출 하기 전에 알림 시스템이 이미 실행 되 고 있기 때문에 콘텐츠 영역은 전체 크기를 시작 하 고 사용자에 게 표시 될 때 요청 된 크기에 애니메이션을 적용 합니다.
 
-이 효과 제거 하려면 편집를 `Info.plist` 파일에 대 한 확장을 `UNNotificationExtensionInitialContentSizeRatio` 의 키를 `NSExtensionAttributes` 키를 입력 **수** 원하는 비율을 나타내는 값을 사용 하 여 합니다. 예:
+이 효과를 제거 하려면 확장에 `Info.plist` 대 한 파일을 편집 하 고 `UNNotificationExtensionInitialContentSizeRatio` `NSExtensionAttributes` 키의 키를 원하는 비율을 나타내는 값으로 형식 **Number** 로 설정 합니다. 예:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -373,11 +373,11 @@ namespace MonkeyChatNotifyExtension
 
 -----
 
-### <a name="using-media-attachments-in-custom-ui"></a>사용자 지정 UI에서 미디어 첨부 파일을 사용 하 여
+### <a name="using-media-attachments-in-custom-ui"></a>사용자 지정 UI에서 미디어 첨부 파일 사용
 
-때문에 미디어 첨부 파일 (에서처럼 합니다 [미디어 첨부 파일 추가](#adding-media-attachments) 위의 섹션) 알림 페이로드가의 일부인, 액세스 및 기본에서 것 처럼 알림 콘텐츠 확장에 표시 된 수 알림 UI입니다.
+위의 미디어 첨부 [파일 추가](#adding-media-attachments) 섹션에 표시 된 미디어 첨부 파일은 알림 페이로드의 일부 이므로 기본 알림 UI에 있는 것 처럼 알림 콘텐츠 확장에서 액세스 하 고 표시할 수 있습니다.
 
-예를 들어, 위의 사용자 지정 UI를 포함 하는 경우는 `UIImageView` 에 노출 된는 C# 코드를 다음 코드는 미디어 첨부 파일을 사용 하 여에서 채우는 데 사용할 수 없습니다.
+예를 들어 위의 사용자 지정 UI가 코드에 `UIImageView` C# 노출 된를 포함 하는 경우 다음 코드를 사용 하 여 미디어 첨부 파일에서로 채울 수 있습니다.
 
 ```csharp
 using System;
@@ -440,20 +440,20 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-있기 때문에 미디어 첨부 파일 시스템에 의해 관리 되는 앱의 샌드박스 외부입니다. 호출 하 여 파일에 액세스 한다는 것을 시스템에 알리기 위해 해야 하는 확장 된 `StartAccessingSecurityScopedResource` 메서드. 확장 파일을 사용 하 여 완료 되 면 호출 해야 하는 `StopAccessingSecurityScopedResource` 해당 연결을 해제 합니다.
+미디어 첨부 파일은 시스템에 의해 관리 되기 때문에 앱의 샌드박스 외부에 있습니다. 확장은 메서드를 `StartAccessingSecurityScopedResource` 호출 하 여 파일에 대 한 액세스를 필요로 함을 시스템에 알려야 합니다. 확장명이 파일을 사용 하 여 수행 되는 경우를 호출 `StopAccessingSecurityScopedResource` 하 여 연결을 해제 해야 합니다.
 
-### <a name="adding-custom-actions-to-a-custom-ui"></a>사용자 지정 UI를 사용자 지정 작업 추가
+### <a name="adding-custom-actions-to-a-custom-ui"></a>사용자 지정 UI에 사용자 지정 작업 추가
 
-사용자 지정 알림 UI에 대화형 작업을 추가 하려면 사용자 지정 작업 단추를 사용할 수 있습니다. 참조를 [알림 작업을 사용 하 여 작업](~/ios/platform/user-notifications/enhanced-user-notifications.md) 섹션을 [향상 된 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md) 사용자 지정 작업에 대 한 자세한 내용은 문서.
+사용자 지정 동작 단추를 사용 하 여 사용자 지정 알림 UI에 대화형 작업을 추가할 수 있습니다. 사용자 지정 작업에 대 한 자세한 내용은 [고급 사용자 알림](~/ios/platform/user-notifications/enhanced-user-notifications.md) 문서의 [알림 작업으로 작업](~/ios/platform/user-notifications/enhanced-user-notifications.md) 섹션을 참조 하세요.
 
-사용자 지정 작업을 하는 것 외에도 알림 콘텐츠 확장도 다음과 같은 기본 제공 작업에 응답할 수 있습니다.
+사용자 지정 작업 외에도 알림 콘텐츠 확장 프로그램은 다음과 같은 기본 제공 작업에 응답할 수 있습니다.
 
-- **기본 작업** -사용자가 앱을 열고 지정 된 알림의 세부 정보를 표시 하는 알림을 탭 하는 경우입니다.
-- **작업 해제** -이 작업 사용자 지정된 알림을 해제 하는 경우 앱에 전송 됩니다.
+- **기본 작업** -사용자가 알림을 탭 하 여 앱을 열고 지정 된 알림의 세부 정보를 표시 하는 경우입니다.
+- **작업 해제** -이 작업은 사용자가 지정 된 알림을 해제할 때 앱에 전송 됩니다.
 
-알림 콘텐츠 확장 수도 사용자 사용자 지정 작업 중 하나를 호출 하는 경우 해당 UI를 업데이트 하는 기능, 사용자가 수락 하는 경우 날짜를 표시 합니다 **Accept** 사용자 지정 작업 단추입니다. 또한 알림 콘텐츠 확장 시스템 알림을 닫히기 전에 사용자가 작업의 효과 볼 수 있도록 알림 UI의 사건의 지연에 알 수 있습니다.
+사용자가 사용자 지정 작업 **수락** 단추를 탭 할 때 수락 된 날짜를 표시 하는 것과 같은 사용자 지정 작업 중 하나를 호출 하는 경우 알림 콘텐츠 확장에도 UI를 업데이트할 수 있습니다. 또한 알림 콘텐츠 확장은 알림이 종결 되기 전에 사용자가 작업의 영향을 확인할 수 있도록 알림 UI의 해제 지연 하도록 시스템에 지시할 수 있습니다.
 
-두 번째 버전을 구현 하 여 이렇게는 `DidReceiveNotification` 는 완료 처리기를 포함 하는 메서드. 예:
+완료 처리기를 포함 하는 `DidReceiveNotification` 메서드의 두 번째 버전을 구현 하 여이 작업을 수행 합니다. 예:
 
 ```csharp
 using System;
@@ -527,16 +527,16 @@ namespace myApp {
 }
 ```
 
-추가 하 여를 `Server.PostEventResponse` 처리기는 `DidReceiveNotification` 알림 콘텐츠 확장, 확장 메서드의 *해야* 모든 사용자 지정 작업을 처리 합니다. 확장에 포함 된 앱에 사용자 지정 동작을 변경 하 여도 전달할 수는 `UNNotificationContentExtensionResponseOption`합니다. 예를 들어:
+알림 콘텐츠 확장 `Server.PostEventResponse` 의 `DidReceiveNotification` 메서드에 처리기를 추가 하 여 확장은 모든 사용자 지정 작업을 처리 *해야* 합니다. 또한 확장은를 `UNNotificationContentExtensionResponseOption`변경 하 여 포함 하는 앱에 사용자 지정 작업을 전달할 수 있습니다. 예를 들어:
 
 ```csharp
 // Close Notification
 completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwardAction);
 ```
 
-### <a name="working-with-the-text-input-action-in-custom-ui"></a>사용자 지정 UI에 텍스트 입력된 작업을 사용 하 여 작업
+### <a name="working-with-the-text-input-action-in-custom-ui"></a>사용자 지정 UI에서 텍스트 입력 작업 사용
 
-앱의 알림을 디자인에 따라 (예: 메시지에 회신) 알림을에 텍스트를 입력 해야 할 시간 있을 수 있습니다. 알림 콘텐츠 확장을 표준 알림을 않습니다 것 처럼 기본 제공 텍스트 입력된 작업에 액세스할 수 있습니다.
+앱 및 알림 디자인에 따라 사용자가 알림 (예: 메시지에 회신)에 텍스트를 입력 해야 하는 경우가 있을 수 있습니다. 알림 콘텐츠 확장은 표준 알림과 마찬가지로 기본 제공 텍스트 입력 작업에 액세스할 수 있습니다.
 
 예를 들어:
 
@@ -677,7 +677,7 @@ namespace MonkeyChatNotifyExtension
 }
 ```
 
-이 코드 새 텍스트 입력된 작업을 만들고 확장의 범주에 추가 (에 `MakeExtensionCategory`) 메서드. `DidReceive` 메서드를 재정의 다음 코드를 사용 하 여 텍스트를 입력 하는 사용자를 처리 합니다.
+이 코드는 새 텍스트 입력 작업을 만들어 확장의 범주 ( `MakeExtensionCategory`) 메서드에 추가 합니다. `DidReceive` Override 메서드에서는 다음 코드를 사용 하 여 텍스트를 입력 하는 사용자를 처리 합니다.
 
 ```csharp
 // Is text input?
@@ -690,7 +690,7 @@ if (response is UNTextInputNotificationResponse) {
 }
 ```
 
-텍스트 입력 필드에 사용자 지정 단추를 추가 하는 것에 대 한 디자인 호출을 하는 경우 다음 코드를 포함 시킬 추가 합니다.
+디자인에서 텍스트 입력 필드에 사용자 지정 단추를 추가 하기 위해를 호출 하는 경우 다음 코드를 추가 하 여 포함 합니다.
 
 ```csharp
 // Allow to take input
@@ -705,7 +705,7 @@ public override UIView InputAccessoryView {
 }
 ```
 
-주석 작업을 사용자에 의해 트리거되면 뷰 컨트롤러 및 사용자 지정 텍스트 입력된 필드를 모두 활성화할 필요 합니다.
+사용자가 주석 작업을 트리거한 경우 보기 컨트롤러와 사용자 지정 텍스트 입력 필드를 모두 활성화 해야 합니다.
 
 ```csharp
 // Update UI when the user interacts with the
@@ -728,11 +728,11 @@ Server.PostEventResponse += (response) {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 새 사용자 알림 프레임 워크를 사용 하 여 Xamarin.iOS 앱에는 고급 확인을 수행 했습니다. 미디어 첨부 파일을 로컬 및 원격 알림이 추가 설명 및 사용자 지정 알림 Ui를 만드는 새 사용자 알림 UI를 사용 하는 방법을 다루었습니다.
+이 문서에서는 Xamarin.ios 앱에서 새로운 사용자 알림 프레임 워크를 사용 하는 방법을 자세히 살펴봅니다. 로컬 및 원격 알림에 미디어 첨부 파일을 추가 하 고 새 사용자 알림 UI를 사용 하 여 사용자 지정 알림 ui를 만드는 방법에 대해 설명 했습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS 10 샘플](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [UserNotifications 프레임 워크 참조](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

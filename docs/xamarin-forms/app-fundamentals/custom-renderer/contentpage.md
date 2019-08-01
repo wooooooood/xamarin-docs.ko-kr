@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 290cd36f36d86d161b7fc124f8961888ade41955
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925946"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650927"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 시각적 요소입니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 ContentPage 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
@@ -199,7 +199,7 @@ namespace CustomRenderer.Droid
 
 기본 클래스의 `OnElementChanged` 메서드에 대한 호출은 보기의 그룹인 Android `ViewGroup` 컨트롤을 인스턴스화합니다. 라이브 카메라 스트림은 렌더러가 기존 Xamarin.Forms 요소에 아직 연결되어 있지 않은 경우 및 사용자 지정 렌더러에 의해 렌더링된 페이지 인스턴스가 존재하는 경우에만 렌더링됩니다.
 
-그런 다음, 페이지는 `AddView` 메서드가 호출되어 `ViewGroup`에 라이브 카메라 스트림 UI를 추가하기 전에, 카메라의 라이브 스트림 및 사진을 캡처하는 기능을 제공하는 데 `Camera` API를 사용하는 일련의 메서드를 호출하여 사용자 지정됩니다. Android에서는 보기에서 측정값 및 레이아웃 작업을 수행하는 `OnLayout` 메서드도 재정의해야 합니다. 자세한 내용은 [ContentPage 렌더러 샘플](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)을 참조하세요.
+그런 다음, 페이지는 `AddView` 메서드가 호출되어 `ViewGroup`에 라이브 카메라 스트림 UI를 추가하기 전에, 카메라의 라이브 스트림 및 사진을 캡처하는 기능을 제공하는 데 `Camera` API를 사용하는 일련의 메서드를 호출하여 사용자 지정됩니다. Android에서는 보기에서 측정값 및 레이아웃 작업을 수행하는 `OnLayout` 메서드도 재정의해야 합니다. 자세한 내용은 [ContentPage 렌더러 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)을 참조하세요.
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>UWP에서 페이지 렌더러 만들기
 
@@ -257,4 +257,4 @@ UWP에서 `PageRenderer`로부터 파생되는 사용자 지정 렌더러를 구
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererContentPage(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+- [CustomRendererContentPage(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

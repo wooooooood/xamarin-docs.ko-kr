@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: f7319a2c3dd4c3f77873d9b3d2cba74a77f14ae0
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 1d900a7a3fc1bfabc9498852fa37579f5d5a4615
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865590"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645236"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
@@ -496,6 +496,6 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin 앱 아이콘 및 시작 이미지(샘플)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hello, iOS(샘플)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)

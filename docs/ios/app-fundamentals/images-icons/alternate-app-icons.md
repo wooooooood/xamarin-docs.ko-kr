@@ -1,75 +1,75 @@
 ---
-title: Xamarin.iOS에서 대체 앱 아이콘
-description: 이 문서에서는 Xamarin.iOS에서 대체 앱 아이콘을 사용 하는 방법을 설명 합니다. Xamarin.iOS 프로젝트에 이러한 아이콘을 추가 하는 방법, Info.plist 파일을 수정 하는 방법 및 앱의 아이콘을 프로그래밍 방식으로 관리 하는 방법에 설명 합니다.
+title: Xamarin.ios의 대체 앱 아이콘
+description: 이 문서에서는 Xamarin.ios에서 대체 앱 아이콘을 사용 하는 방법을 설명 합니다. 이러한 아이콘을 Xamarin.ios 프로젝트에 추가 하는 방법, info.plist 파일을 수정 하는 방법 및 프로그래밍 방식으로 앱 아이콘을 관리 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: fc4ef6eb16893cc1df0d980d27af8589a280e933
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 43ef420f569f7dbca6140798f798f3a128d9c706
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832421"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68653429"
 ---
-# <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.iOS에서 대체 앱 아이콘
+# <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.ios의 대체 앱 아이콘
 
-_이 문서에서는 Xamarin.iOS에서 대체 앱 아이콘을 사용 하 여 설명 합니다._
+_이 문서에서는 Xamarin.ios에서 대체 앱 아이콘을 사용 하는 방법을 설명 합니다._
 
-Apple이 앱을 해당 아이콘을 관리 하는 iOS 10.3 몇 가지 향상 된 기능 추가.
+Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지 향상 된 기능을 추가 했습니다.
 
-- `ApplicationIconBadgeNumber` -앱 아이콘 배지를 Springboard에서 설정 하거나 가져옵니다.
-- `SupportsAlternateIcons` - `true` 앱 아이콘 집합을 대체 했습니다.
-- `AlternateIconName` -현재 선택한 대체 아이콘의 이름을 반환 합니다. 또는 `null` 기본 아이콘을 사용 하는 경우.
-- `SetAlternameIconName` -지정 된 대체 아이콘 앱 아이콘을 전환 하려면이 메서드를 사용 합니다.
+- `ApplicationIconBadgeNumber`-Springboard에서 앱 아이콘의 배지를 가져오거나 설정 합니다.
+- `SupportsAlternateIcons`-앱 `true` 에 대체 아이콘 집합이 있는 경우입니다.
+- `AlternateIconName`-현재 선택한 대체 아이콘의 이름을 반환 하거나 `null` 기본 아이콘을 사용 하는 경우을 반환 합니다.
+- `SetAlternameIconName`-이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환할 수 있습니다.
 
-![](alternate-app-icons-images/icons04.png "샘플 경고를 앱 아이콘을 변경 하는 경우")
+![](alternate-app-icons-images/icons04.png "앱이 해당 아이콘을 변경 하는 경우의 샘플 경고")
 
 <a name="Adding-Alternate-Icons" />
 
-## <a name="adding-alternate-icons-to-a-xamarinios-project"></a>대체 아이콘 Xamarin.iOS 프로젝트에 추가
+## <a name="adding-alternate-icons-to-a-xamarinios-project"></a>Xamarin.ios 프로젝트에 대체 아이콘 추가
 
-대체 아이콘으로 전환 하는 앱을 허용 하려면 Xamarin.iOS 앱 프로젝트에 포함 될 아이콘 이미지의 컬렉션 할 수 있습니다. 이러한 이미지를 사용 하 여 일반적인 프로젝트에 추가할 수 없습니다 `Assets.xcassets` 메서드를 추가 해야 하는 **리소스** 직접 폴더입니다.
+앱이 대체 아이콘으로 전환 될 수 있도록 하려면 Xamarin.ios 앱 프로젝트에 아이콘 이미지 컬렉션을 포함 해야 합니다. 이러한 이미지는 일반적인 `Assets.xcassets` 메서드를 사용 하 여 프로젝트에 추가할 수 없습니다. **리소스** 폴더에 직접 추가 해야 합니다.
 
 다음을 수행합니다.
 
-1. 폴더에 필요한 아이콘 이미지를 선택 하 고, 모두 선택,로 합니다 **리소스** 폴더에는 **솔루션 탐색기**:
+1. 폴더에서 필수 아이콘 이미지를 선택 하 고 모두를 선택한 다음 **솔루션 탐색기**의 **Resources** 폴더로 끕니다.
 
     ![](alternate-app-icons-images/icons00.png "폴더에서 아이콘 이미지 선택")
 
-2. 메시지가 표시 되 면 선택 **복사**, **동일한 작업을 사용 하 여 선택한 모든 파일에 대 한** 을 클릭 합니다 **확인** 단추:
+2. 메시지가 표시 되 면 **복사**를 선택 하 고 **선택한 모든 파일에 대해 동일한 작업을 사용** 하 고 **확인** 단추를 클릭 합니다.
 
-    ![](alternate-app-icons-images/icons02.png "폴더 대화 상자에 파일 추가")
+    ![](alternate-app-icons-images/icons02.png "폴더에 파일 추가 대화 상자")
 
-3. 합니다 **리소스** 폴더 완료 되 면 다음과 같이 표시 됩니다.
+3. 완료 되 면 **Resources** 폴더는 다음과 같이 표시 됩니다.
 
-    ![](alternate-app-icons-images/icons01.png "리소스 폴더 다음과 같아야 합니다.")
+    ![](alternate-app-icons-images/icons01.png "리소스 폴더는 다음과 같습니다.")
 
 <a name="Modifying-the-Info.plist-File" />
 
 ## <a name="modifying-the-infoplist-file"></a>Info.plist 파일 수정
 
-에 추가 하 고 필요한 이미지를 사용 하 여는 **리소스** 폴더를 [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) 키를 프로젝트에 추가 해야 **Info.plist** 파일입니다. 이 키를 새 아이콘 및 구성 하는 이미지의 이름을 정의 합니다.
+**리소스** 폴더에 필요한 이미지가 추가 되 면 [CFBundleAlternateIcons](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW13) 키를 프로젝트의 **info.plist** 파일에 추가 해야 합니다. 이 키는 새 아이콘의 이름과이를 구성 하는 이미지를 정의 합니다.
 
 다음을 수행합니다.
 
 1. **솔루션 탐색기**에서 **Info.plist** 파일을 두 번 클릭하여 편집용으로 엽니다.
-2. 으로 전환 합니다 **원본** 보기.
-3. 추가 **아이콘을 번들** 두고 키를 **유형** 로 설정 **사전**합니다.
-4. 추가 `CFBundleAlternateIcons` 키를 설정 합니다 **형식** 하 **사전**합니다.
-5. 추가 `AppIcon2` 키를 설정 합니다 **형식** 하 **사전**합니다. 이 새 대체 앱 아이콘 집합의 이름이 됩니다.
-6. 추가 `CFBundleIconFiles` 키를 설정 합니다 **형식** 하려면 **배열**
-7. 새 문자열을 추가 합니다 `CFBundleIconFiles` 확장을 제외 하는 각 아이콘 파일에 대 한 배열 및 `@2x`, `@3x`, 등 접미사 (예제 `100_icon`). 대체 아이콘 집합을 구성 하는 모든 파일에 대해이 단계를 반복 합니다.
-8. 추가 `UIPrerenderedIcon` 키를 `AppIcon2` 사전 설정를 **형식** 에 **부울** 값을 **아니요**합니다.
+2. **원본** 뷰로 전환 합니다.
+3. **번들 아이콘** 키를 추가 하 고 해당 **형식을** **사전**으로 설정 된 상태로 둡니다.
+4. 키를 `CFBundleAlternateIcons` 추가 하 고 **형식을** **사전**으로 설정 합니다.
+5. 키를 `AppIcon2` 추가 하 고 **형식을** **사전**으로 설정 합니다. 새 대체 앱 아이콘 집합의 이름입니다.
+6. 키를 추가 하 고 형식을 **배열로** 설정 합니다. `CFBundleIconFiles`
+7. 확장 `CFBundleIconFiles` `100_icon`및, 등`@3x`의 접미사를 남기고 각 아이콘 파일의 배열에 새 문자열을 추가 합니다 (예:). `@2x` 대체 아이콘 집합을 구성 하는 모든 파일에 대해이 단계를 반복 합니다.
+8. 사전에 키를 추가 하 고, 형식을 부울로 설정 하 고, 값을 아니요로 설정 합니다. `UIPrerenderedIcon` `AppIcon2`
 9. 파일의 변경 내용을 저장합니다.
 
-결과 **Info.plist** 파일 완료 되 면 다음과 같이 표시 됩니다.
+완료 되 면 결과 **info.plist** 파일이 다음과 같이 표시 됩니다.
 
-![](alternate-app-icons-images/icons03.png "완료 된 Info.plist 파일")
+![](alternate-app-icons-images/icons03.png "완료 된 info.plist 파일입니다.")
 
-또는이 경우 같은 텍스트 편집기에서 열립니다.
+또는 텍스트 편집기에서 연 경우 다음과 같이 합니다.
 
 ```xml
 <key>CFBundleIcons</key>
@@ -107,11 +107,11 @@ Apple이 앱을 해당 아이콘을 관리 하는 iOS 10.3 몇 가지 향상 된
 
 <a name="Managing-the-Apps-Icon" />
 
-## <a name="managing-the-apps-icon"></a>관리 앱의 아이콘 
+## <a name="managing-the-apps-icon"></a>앱의 아이콘 관리 
 
-Xamarin.iOS 프로젝트에 포함 된 아이콘 이미지를 사용 하 여 하며 **Info.plist** 올바르게 구성 파일인 개발자 중 하나를 사용 iOS 10.3에 추가 하는 여러 가지 새로운 기능이 응용 프로그램의 아이콘을 제어할 수 있습니다.
+Xamarin.ios 프로젝트에 포함 된 아이콘 이미지와 **info.plist** 파일이 올바르게 구성 된 상태에서 개발자는 iOS 10.3에 추가 된 많은 새 기능 중 하나를 사용 하 여 앱의 아이콘을 제어할 수 있습니다.
 
-합니다 `SupportsAlternateIcons` 의 속성을 `UIApplication` 클래스를 사용 하면 앱에서 다른 아이콘을 지원 하는지 확인 하려면 개발자. 예를 들어:
+개발자 `SupportsAlternateIcons` 는 `UIApplication` 클래스의 속성을 사용 하 여 응용 프로그램에서 대체 아이콘을 지원 하는지 여부를 확인할 수 있습니다. 예를 들어:
 
 ```csharp
 // Can the app select a different icon?
@@ -119,14 +119,14 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-`ApplicationIconBadgeNumber` 의 속성을 `UIApplication` 클래스를 사용 하면 개발자가 있고 springboard 앱 아이콘 배지 수가 현재 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들어:
+개발자 `ApplicationIconBadgeNumber` 는 `UIApplication` 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들어:
 
 ```csharp
 // Set the badge number to 1
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 1;
 ```
 
-합니다 `AlternateIconName` 의 속성을 `UIApplication` 클래스를 사용 하면 개발자가 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 없거나이 반환 `null` 앱에 기본 아이콘을 사용 하는 경우. 예:
+개발자 `AlternateIconName` 는 `UIApplication` 클래스의 속성을 사용 하 여 현재 선택 된 대체 앱 아이콘의 이름을 가져올 수 있으며, 앱 `null` 에서 기본 아이콘을 사용 하는 경우에는를 반환 합니다. 예를 들어:
 
 ```csharp
 // Get the name of the currently selected alternate
@@ -138,7 +138,7 @@ if (name != null ) {
 }
 ```
 
-합니다 `SetAlternameIconName` 의 속성을 `UIApplication` 클래스를 사용 하면 앱 아이콘을 변경 하려면 개발자. 선택 하기 위한 아이콘의 이름을 전달 또는 `null` 기본 아이콘을 반환 합니다. 예를 들어:
+개발자는 `UIApplication` 클래스의 속성을사용하여앱아이콘을변경할수있습니다.`SetAlternameIconName` 아이콘의 이름을 전달 하 여 또는 `null` 를 선택 하 여 기본 아이콘으로 돌아갑니다. 예:
 
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)
@@ -156,22 +156,22 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 }
 ```
 
-앱이 실행 되 고 사용자의 대체 아이콘을 선택 하는 경우 다음과 같은 경고가 표시 됩니다.
+앱이 실행 되 고 사용자가 대체 아이콘을 선택 하는 경우 다음과 같은 경고가 표시 됩니다.
 
-![](alternate-app-icons-images/icons04.png "샘플 경고를 앱 아이콘을 변경 하는 경우")
+![](alternate-app-icons-images/icons04.png "앱이 해당 아이콘을 변경 하는 경우의 샘플 경고")
 
-기본 아이콘으로 다시 전환 하는 사용자를 경우 다음과 같은 경고가 표시 됩니다.
+사용자가 기본 아이콘으로 다시 전환 하는 경우 다음과 같은 경고가 표시 됩니다.
 
-![](alternate-app-icons-images/icons05.png "샘플 경고는 앱의 기본 아이콘으로 변경 되 면")
+![](alternate-app-icons-images/icons05.png "앱이 기본 아이콘으로 변경 되는 경우의 샘플 경고")
 
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.iOS 프로젝트에 대체 앱 아이콘을 추가 하 고 앱 내에서 사용 검사가 수행 합니다.
+이 문서에서는 Xamarin.ios 프로젝트에 대체 앱 아이콘을 추가 하 고 앱 내에서 사용 하는 방법에 대해 설명 했습니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOSTenThree 샘플](https://developer.xamarin.com/samples/ios/iOS10/iOSTenThree)
+- [iOSTenThree 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)

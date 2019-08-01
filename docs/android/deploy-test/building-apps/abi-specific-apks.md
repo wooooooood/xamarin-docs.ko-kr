@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 8c79075c9e01ef5da73255b152b4cbbd676b4f4e
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 20e7385c16324643545e156950efaca565eb0e0c
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674740"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643937"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -185,6 +185,6 @@ Rake 작업이 완료되면 `xamarin.helloworld.apk` 파일이 있는 `bin` 폴�
 
 ## <a name="related-links"></a>관련 링크
 
-- [OneABIPerAPK(샘플)](https://developer.xamarin.com/samples/monodroid/OneABIPerAPK/)
+- [OneABIPerAPK(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/oneabiperapk)
 - [애플리케이션 게시](~/android/deploy-test/publishing/index.md)
 - [Google Play에 대한 여러 APK 지원](https://developer.android.com/google/play/publishing/multiple-apks.html)

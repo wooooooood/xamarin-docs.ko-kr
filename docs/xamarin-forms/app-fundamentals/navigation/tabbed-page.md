@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 8926813e8efae72efa9af2221318d6f1ff1e344f
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 6979b4d3e0d750ee962346a94dd832c86c92d995
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970932"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652944"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms TabbedPage
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 _Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다._
 
@@ -262,6 +262,6 @@ public class TabbedPageDemoPageCS : TabbedPage
 ## <a name="related-links"></a>관련 링크
 
 - [페이지 종류](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [TabbedPageWithNavigationPage(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
-- [TabbedPage(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
+- [TabbedPageWithNavigationPage(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+- [TabbedPage(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
 - [TabbedPage](xref:Xamarin.Forms.TabbedPage)

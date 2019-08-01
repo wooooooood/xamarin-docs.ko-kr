@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9ea2b3ddef731efb9e4bf291ec836248c13d6390
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 400075a1cbd2303f2ecddb9b1cc9465bbcbde32d
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113146"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680259"
 ---
 # <a name="profiling-android-apps"></a>Android 앱 프로파일링
 
@@ -27,24 +27,24 @@ ms.locfileid: "50113146"
  
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
-Xamarin Profiler는 IDE 내에서 Xamarin 앱을 프로파일링하기 위해 Visual Studio 및 Mac용 Visual Studio와 통합되는 독립 실행형 응용 프로그램입니다. Xamarin Profiler 사용에 대한 자세한 내용은 [Xamarin Profiler](~/tools/profiler/index.md)를 참조하세요.
+Xamarin Profiler는 IDE 내에서 Xamarin 앱을 프로파일링하기 위해 Visual Studio 및 Mac용 Visual Studio와 통합되는 독립 실행형 애플리케이션입니다. Xamarin Profiler 사용에 대한 자세한 내용은 [Xamarin Profiler](~/tools/profiler/index.md)를 참조하세요.
 
 > [!NOTE]
 > Windows의 Visual Studio Enterprise 또는 Mac용 Visual Studio에서 Xamarin Profiler 기능을 잠금 해제하려면 [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 구독자여야 합니다.
  
 ## <a name="android-studio-profiler"></a>Android Studio Profiler
 
-Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android Profiler를 사용하여 Visual Studio Enterprise 라이선스의 필요 없이 Visual Studio로 빌드된 Xamarin Android 앱의 성능을 측정할 수 있습니다. 그러나 Xamarin Profiler와 달리 Android Profiler는 Visual Studio와 통합되지 않으며 미리 빌드되고 Android Profiler로 가져온 APK(Android 응용 프로그램 패키지)를 프로파일링하는 데만 사용할 수 있습니다.
+Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android Profiler를 사용하여 Visual Studio Enterprise 라이선스의 필요 없이 Visual Studio로 빌드된 Xamarin Android 앱의 성능을 측정할 수 있습니다. 그러나 Xamarin Profiler와 달리 Android Profiler는 Visual Studio와 통합되지 않으며 미리 빌드되고 Android Profiler로 가져온 APK(Android 애플리케이션 패키지)를 프로파일링하는 데만 사용할 수 있습니다.
 
 ### <a name="launching-a-xamarin-android-app-in-android-profiler"></a>Android Profiler에서 Xamarin Android 앱 시작
 
-다음 단계에서는 Android Studio의 Android Profiler 도구에서 Xamarin Android 응용 프로그램을 시작하는 방법을 설명합니다. 아래 예제 스크린샷에서 Xamarin Forms [XamagonXuzzle](https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/) 앱이 빌드되고 Android Profiler를 사용하여 프로파일링됩니다.
+다음 단계에서는 Android Studio의 Android Profiler 도구에서 Xamarin Android 애플리케이션을 시작하는 방법을 설명합니다. 아래 예제 스크린샷에서 Xamarin Forms [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) 앱이 빌드되고 Android Profiler를 사용하여 프로파일링됩니다.
 
-1.  Android 프로젝트에서 빌드 옵션에서 **공유 런타임 사용**을 비활성화합니다. 이렇게 하면 공유 개발 시 Mono 런타임에서 종속성 없이 APK(Android 응용 프로그램 패키지)가 빌드됩니다.
+1.  Android 프로젝트에서 빌드 옵션에서 **공유 런타임 사용**을 비활성화합니다. 이렇게 하면 공유 개발 시 Mono 런타임에서 종속성 없이 APK(Android 애플리케이션 패키지)가 빌드됩니다.
 
     ![공유 런타임 사용 비활성화](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
-2.  **디버그**용 앱을 빌드하고 물리적 장치 또는 에뮬레이터에 배포합니다. 이로 인해 APK의 서명된 **디버그** 버전이 빌드됩니다.
+2.  **디버그**용 앱을 빌드하고 물리적 디바이스 또는 에뮬레이터에 배포합니다. 이로 인해 APK의 서명된 **디버그** 버전이 빌드됩니다.
     **XamagonXuzzle** 예제의 경우 결과 APK는 **com.companyname.XamagonXuzzle-Signed.apk**로 이름이 지정됩니다.
 
 3.  프로젝트 폴더를 열고 **bin/Debug**로 이동합니다. 이 폴더에서 앱의 **Signed.apk** 버전을 찾고 편리하게 액세스할 수 있는 위치로 복사합니다(예: 바탕 화면). 다음 스크린샷에서 APK **com.companyname.XamagonXuzzle-Signed.apk**가 배치되고 바탕 화면으로 복사됩니다.

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: bf2ba7d0cfe5b5b35eda423654e929e53fff451c
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 959b2091e88adde5bb3f64c2cdb5d5b0748aa0be
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926664"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68650813"
 ---
 # <a name="customizing-a-listview"></a>ListView 사용자 지정
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ListView/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
 
 _Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
@@ -567,4 +567,4 @@ protected override void OnElementPropertyChanged(object sender, System.Component
 
 ## <a name="related-links"></a>관련 링크
 
-- [CustomRendererListView(샘플)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ListView/)
+- [CustomRendererListView(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)

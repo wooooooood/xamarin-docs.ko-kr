@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 901bf683f59574d71c035b9635abaa3441152252
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: b803c1ccfbd8bae008a763f8a31283b653ae4cf3
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741054"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68652159"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 트리거를 사용하면 XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 작업을 선언적으로 표현할 수 있습니다.
 
@@ -333,5 +333,5 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="related-links"></a>관련 링크
 
-- [트리거 샘플](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
+- [트리거 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 - [Xamarin.Forms API 설명서](xref:Xamarin.Forms.TriggerAction`1)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: cd29e284c45bfe59633dde924e27d8022e8416ba
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329288"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645930"
 ---
 # <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
 _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다. 이 문서에서는 모달 페이지를 탐색하는 방법을 설명합니다._
 
@@ -262,5 +262,5 @@ public class DetailPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [페이지 탐색](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [모달(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
-- [PassingData(샘플)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
+- [모달(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
+- [PassingData(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
