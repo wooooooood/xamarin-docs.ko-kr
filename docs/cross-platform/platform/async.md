@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4ade8fbb3ac596ef2da5d76b4efa751661cd8611
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646258"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680934"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -89,7 +89,7 @@ Microsoft Docs에 대 [한 자세한](https://docs.microsoft.com/dotnet/csharp/l
 
 ## <a name="example"></a>예제
 
-[예제 Xamarin 솔루션](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (iOS 및 Android 모두)을 다운로드 하 여 모바일 앱에서 및 `async` `await` 의 작업 예를 확인 합니다. 이 섹션에서는 예제 코드에 대해 자세히 설명 합니다.
+[예제 Xamarin 솔루션](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (iOS 및 Android 모두)을 다운로드 하 여 모바일 앱에서 및 `async` `await` 의 작업 예를 확인 합니다. 이 섹션에서는 예제 코드에 대해 자세히 설명 합니다.
 
 ### <a name="writing-an-async-method"></a>비동기 메서드 작성
 
@@ -196,7 +196,7 @@ Async 및 wait를 사용 하면 주 스레드를 차단 하지 않고 백그라�
 
 ## <a name="related-links"></a>관련 링크
 
-- [AsyncAwait (샘플)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [AsyncAwait (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [세대의 ' Go To ' 문으로 콜백](https://tirania.org/blog/archive/2013/Aug-15.html)
 - [데이터 (iOS) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
 - [HttpClient (iOS) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

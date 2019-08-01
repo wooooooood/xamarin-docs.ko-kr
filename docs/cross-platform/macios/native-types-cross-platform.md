@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: deb4caa4d23d23b2997361cca161b218c1ff7b61
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e400191b40775cef5d1ab1cba0bd6c4544f8c5fe
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511297"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680211"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서의 네이티브 형식 작업
 
@@ -38,7 +38,7 @@ Xamarin.ios 및 xamarin.ios 통합 api에는, `int`및 `PointF` 형식 뿐만 �
 
 PCL (이식 가능한 클래스 라이브러리)을 사용 하면 지원 하려는 플랫폼을 대상으로 지정 하 고 인터페이스를 사용 하 여 플랫폼별 기능을 제공할 수 있습니다.
 
-`.DLL` Pcl 프로젝트 형식이로 컴파일되고 Unified API 의미가 없으므로 pcl 소스 코드에서 기존 데이터 형식 (`int`, `uint`, `float`)을 계속 사용 하 고, pcl에 대 한 호출을 형식으로 캐스팅 해야 합니다. 프런트 엔드 응용 프로그램의 클래스 및 메서드. 예:
+`.DLL` Pcl 프로젝트 형식이로 컴파일되고 Unified API 의미가 없으므로 pcl 소스 코드에서 기존 데이터 형식 (`int`, `uint`, `float`)을 계속 사용 하 고, pcl에 대 한 호출을 형식으로 캐스팅 해야 합니다. 프런트 엔드 응용 프로그램의 클래스 및 메서드. 예를 들어:
 
 ```csharp
 using NativePCL;
@@ -214,7 +214,7 @@ namespace NativeShared
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>프런트 엔드 앱에서 형식 변환 사용
 
-프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예를 들어:
+프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예:
 
 ```csharp
 using NativeShared;
@@ -251,4 +251,4 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 - [Unified API](~/cross-platform/macios/unified/index.md)
 - [네이티브 형식](~/cross-platform/macios/nativetypes.md)
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
-- [코드 공유 샘플](https://developer.xamarin.com/samples/mobile/SharingCode/)
+- [코드 공유 샘플](https://docs.microsoft.com/samples/xamarin/mobile-samples/sharingcode/)

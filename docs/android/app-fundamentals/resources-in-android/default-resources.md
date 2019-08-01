@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 3be63eb8909f129f046b2959ec7963e493674914
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b3a6dfb11b49f9ab3b09cf09594eb374f63fe304
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644221"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680222"
 ---
 # <a name="default-resources"></a>기본 리소스
 
@@ -38,7 +38,7 @@ ms.locfileid: "68644221"
  
 -  **레이아웃** &ndash; 작업 또는 목록의 행과 같은 사용자 인터페이스 레이아웃을 설명 하는 XML 파일입니다.
 
--  **메뉴** 옵션 메뉴, *상황에 맞는 메뉴*및 *하위 메뉴*와 같은 응용 프로그램 메뉴를 설명 하는 XML 파일입니다. &ndash; 메뉴의 예제는 [팝업 메뉴 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) 또는 [표준 컨트롤](https://developer.xamarin.com/samples/mobile/StandardControls/) 샘플을 참조 하세요.
+-  **메뉴** 옵션 메뉴, *상황에 맞는 메뉴*및 *하위 메뉴*와 같은 응용 프로그램 메뉴를 설명 하는 XML 파일입니다. &ndash; 메뉴의 예제는 [팝업 메뉴 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) 또는 [표준 컨트롤](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) 샘플을 참조 하세요.
 
 -  **원시** &ndash; 원시, 이진 형식으로 저장 된 임의 파일 이러한 파일은 Android 응용 프로그램에 이진 형식으로 컴파일됩니다.
 
@@ -70,7 +70,7 @@ ms.locfileid: "68644221"
 
 -  **레이아웃** &ndash; 작업 또는 목록의 행과 같은 사용자 인터페이스 레이아웃을 설명 하는 XML 파일입니다.
 
--  **메뉴** 옵션 메뉴, *상황에 맞는 메뉴*및 *하위 메뉴*와 같은 응용 프로그램 메뉴를 설명 하는 XML 파일입니다. &ndash; 메뉴의 예제는 [팝업 메뉴 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) 또는 [표준 컨트롤](https://developer.xamarin.com/samples/mobile/StandardControls/) 샘플을 참조 하세요.
+-  **메뉴** 옵션 메뉴, *상황에 맞는 메뉴*및 *하위 메뉴*와 같은 응용 프로그램 메뉴를 설명 하는 XML 파일입니다. &ndash; 메뉴의 예제는 [팝업 메뉴 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) 또는 [표준 컨트롤](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) 샘플을 참조 하세요.
 
 -  **원시** &ndash; 원시, 이진 형식으로 저장 된 임의 파일 이러한 파일은 Android 응용 프로그램에 이진 형식으로 컴파일됩니다.
 

@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f2e65439084d4e89ae529bda79c2cb2739f1529d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c44e6b76751096d817727df759ecbeca5bd5a8f3
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656209"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680985"
 ---
 # <a name="3d-coordinates-in-monogame"></a>MonoGame의 3D 좌표
 
@@ -37,7 +37,7 @@ _3d 좌표 시스템을 이해 하는 것은 3D 게임 개발의 중요 한 단�
 
 ## <a name="creating-a-project"></a>프로젝트 만들기
 
-이 연습에서는 3D 공간에서 개체를 이동 하는 방법을 집중적으로 설명 합니다. [여기에서 찾을 수 있는](https://developer.xamarin.com/samples/mobile/ModelsAndVertsMG/)모델 및 꼭 짓 점 배열의 렌더링을 위한 프로젝트를 시작 합니다. 다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하는지 확인 하 고 다음을 확인 해야 합니다.
+이 연습에서는 3D 공간에서 개체를 이동 하는 방법을 집중적으로 설명 합니다. [여기에서 찾을 수 있는](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)모델 및 꼭 짓 점 배열의 렌더링을 위한 프로젝트를 시작 합니다. 다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하는지 확인 하 고 다음을 확인 해야 합니다.
 
 ![](part3-images/image2.png "다운로드가 완료 되 면 프로젝트를 압축 해제 하 고 열어 실행 하 고이 보기를 표시 해야 합니다.")
 

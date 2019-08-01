@@ -1,70 +1,70 @@
 ---
-title: 모델 클래스를 사용 하 여
-description: 모델 클래스는 3D 그래픽을 렌더링 하는 기존의 방법에 비해 복잡 한 3D 개체 렌더링 크게 간소화 합니다. 모델 개체는 사용자 지정 코드 없이 콘텐츠의 쉽게 통합할 수 있도록 콘텐츠 파일에서 생성 됩니다.
+title: 모델 클래스 사용
+description: 모델 클래스는 3D 그래픽을 렌더링 하는 일반적인 방법과 비교할 때 복잡 한 3D 개체 렌더링을 크게 간소화 합니다. 모델 개체는 콘텐츠 파일에서 생성 되므로 사용자 지정 코드 없이 콘텐츠를 쉽게 통합할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 4a72effc85657b4722b17eae486e81db5992a1da
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 35df6e4ca799a875bcd7db50adbc7a300460885c
+ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832251"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680964"
 ---
-# <a name="using-the-model-class"></a>모델 클래스를 사용 하 여
+# <a name="using-the-model-class"></a>모델 클래스 사용
 
-_모델 클래스는 3D 그래픽을 렌더링 하는 기존의 방법에 비해 복잡 한 3D 개체 렌더링 크게 간소화 합니다. 모델 개체는 사용자 지정 코드 없이 콘텐츠의 쉽게 통합할 수 있도록 콘텐츠 파일에서 생성 됩니다._
+_모델 클래스는 3D 그래픽을 렌더링 하는 일반적인 방법과 비교할 때 복잡 한 3D 개체 렌더링을 크게 간소화 합니다. 모델 개체는 콘텐츠 파일에서 생성 되므로 사용자 지정 코드 없이 콘텐츠를 쉽게 통합할 수 있습니다._
 
-MonoGame API를 포함 한 `Model` 렌더링을 수행 하는 콘텐츠 파일에서 데이터를 저장 하는 클래스가 로드 합니다. 모델 파일 (예: 실선 색이 지정 된 삼각형) 매우 간단할 수 있습니다 또는 질감 및 조명를 포함 하 여 복잡 한 렌더링에 대 한 정보를 포함 될 수 있습니다.
+MonoGame API에는 콘텐츠 `Model` 파일에서 로드 된 데이터를 저장 하 고 렌더링을 수행 하는 데 사용할 수 있는 클래스가 포함 되어 있습니다. 모델 파일은 매우 간단할 수도 있고 (예: 색이 칠해진 삼각형) 질감 및 조명을 포함 하 여 복잡 한 렌더링 정보를 포함할 수도 있습니다.
 
-이 연습에서는 [로봇의 3D 모델](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) 다음에 다룹니다.
+이 연습에서는 [로봇의 3d 모델](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) 을 사용 하 고 다음을 다룹니다.
 
-- 새 게임 프로젝트를 시작합니다.
-- 모델 및 해당 질감 XNBs 만들기
-- 게임 프로젝트에는 XNBs를 포함합니다.
-- 3D 모델에 그리기
+- 새 게임 프로젝트 시작
+- 모델 및 해당 질감에 대 한 XNBs 만들기
+- 게임 프로젝트에 XNBs 포함
+- 3D 모델 그리기
 - 여러 모델 그리기
 
 완료 되 면 프로젝트는 다음과 같이 표시 됩니다.
 
-![6 로봇을 보여 주는 완성 된 샘플](part1-images/image1.png)
+![6 개 로봇을 보여 주는 완성 된 샘플](part1-images/image1.png)
 
 ## <a name="creating-an-empty-game-project"></a>빈 게임 프로젝트 만들기
 
-먼저 MonoGame3D 호출 게임 프로젝트를 설정 해야 합니다. 새 MonoGame 프로젝트 만들기에 대 한 내용은 참조 하세요 [플랫폼 간 Monogame 프로젝트 만들기에 대 한이 연습](~/graphics-games/monogame/introduction/part1.md)합니다.
+먼저 MonoGame3D 이라는 게임 프로젝트를 설정 해야 합니다. 새 MonoGame 프로젝트를 만드는 방법에 대 한 자세한 내용은 [플랫폼 간 MonoGame 프로젝트를 만드는 방법에](~/graphics-games/monogame/introduction/part1.md)대 한 연습을 참조 하세요.
 
-넘어가기 전에 프로젝트 열리고 올바르게 배포 확인 해야 합니다. 한 번 배포는 빈 블루 스크린이 표시 되어야 합니다.
+이동 하기 전에 프로젝트가 제대로 열리고 배포 되는지 확인 해야 합니다. 배포 되 면 빈 파란색 화면이 표시 됩니다.
 
 ![빈 파란색 게임 화면](part1-images/image2.png)
 
 
-## <a name="including-the-xnbs-in-the-game-project"></a>게임 프로젝트에는 XNBs를 포함합니다.
+## <a name="including-the-xnbs-in-the-game-project"></a>게임 프로젝트에 XNBs 포함
 
-.Xnb 파일 형식으로 작성된 된 콘텐츠에 대 한 표준 확장명입니다 (하 여 만든 콘텐츠를 [MonoGame 파이프라인 도구](http://www.monogame.net/documentation/?page=Pipeline)). 모든 기본 제공된 콘텐츠는 소스 파일 (.fbx 파일이 모델의 경우) 및 대상 파일 (.xnb 파일)에 있습니다. .Fbx 형식은 같은 응용 프로그램에서 만들 수 있는 일반적인 3D 모델 형식을 [Maya](http://www.autodesk.com/products/maya/overview) 하 고 [Blender](http://www.blender.org/)합니다. 
+.Xnb 파일 형식은 빌드된 콘텐츠 ( [MonoGame 파이프라인 도구로](http://www.monogame.net/documentation/?page=Pipeline)만든 콘텐츠)의 표준 확장입니다. 빌드된 모든 콘텐츠에는 원본 파일 (모델의 경우 fbx 파일) 및 대상 파일 (.xnb 파일)이 있습니다. Fbx 형식은 [Maya](http://www.autodesk.com/products/maya/overview) 및 [Blender](http://www.blender.org/)와 같은 응용 프로그램에서 만들 수 있는 일반적인 3d 모델 형식입니다. 
 
-`Model` 3D 기 하 도형 데이터가 포함 된 디스크에서.xnb 파일을 로드 하 여 클래스를 생성할 수 있습니다.   이.xnb 파일 콘텐츠는 프로젝트를 통해 생성 됩니다. Monogame 템플릿 우리의 콘텐츠 폴더 (사용 하 여 확장.mgcp) 콘텐츠 프로젝트를 자동으로 포함 합니다. MonoGame 파이프라인 도구에 대 한 자세한 내용은 참조는 [콘텐츠 파이프라인 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)합니다.
+3d `Model` 기 하 도형 데이터가 포함 된 디스크에서 .xnb 파일을 로드 하 여 클래스를 생성할 수 있습니다.   이. xnb 파일은 콘텐츠 프로젝트를 통해 생성 됩니다. Monogame 템플릿은 콘텐츠 폴더에 콘텐츠 프로젝트 (mgcp 확장명 포함)를 자동으로 포함 합니다. MonoGame 파이프라인 도구에 대 한 자세한 내용은 [콘텐츠 파이프라인 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)를 참조 하세요.
 
-MonoGame 파이프라인을 사용 하 여 생략 하겠습니다이 가이드에 대 한 도구를 사용 합니다. 여기에 포함 된 XNB 파일입니다. 유의 합니다. XNB 파일 플랫폼 마다 다를 사용 하는 어떤 플랫폼에 대 한 올바른 XNB 파일 집합을 사용 해야 합니다.
+이 가이드에서는 MonoGame 파이프라인 도구를 사용 하 여 건너뛰고을 사용 합니다. 여기에는 XNB 파일이 포함 되어 있습니다. 에 유의 하십시오. XNB 파일은 플랫폼별로 다르므로 작업 중인 플랫폼에 따라 올바른 XNB 파일 집합을 사용 해야 합니다.
 
-압축을 풉니다 됩니다 것를 [Content.zip 파일](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) 게임에서.xnb 포함 된 파일을 사용할 수 있습니다 있도록 합니다. Android 프로젝트를 진행 하는 경우 마우스 오른쪽 단추로 클릭 합니다 **자산** 폴더에는 **WalkingGame.Android** 프로젝트입니다. IOS 프로젝트를 진행 하는 경우 마우스 오른쪽 단추로 클릭 합니다 **WalkingGame.iOS** 프로젝트입니다. 선택 **추가-> 파일 추가...**  작업 중인 플랫폼에 대 한 폴더에 두.xnb 파일을 선택 합니다.
+게임에서 포함 된 .xnb 파일을 사용할 수 있도록 [콘텐츠 .zip 파일](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true) 의 압축을 풉니다. Android 프로젝트에서 작업 하는 경우 **WalkingGame** 프로젝트에서 **자산** 폴더를 마우스 오른쪽 단추로 클릭 합니다. IOS 프로젝트에서 작업 하는 경우 **WalkingGame** 프로젝트를 마우스 오른쪽 단추로 클릭 합니다. **추가-> 파일 추가** ...를 선택 하 고 작업 중인 플랫폼에 대 한 폴더에서 .xnb 파일을 모두 선택 합니다.
 
-두 파일에는 이제 프로젝트의 일부 여야 합니다.
+이제 두 파일이 프로젝트의 일부 여야 합니다.
 
-![솔루션 탐색기 xnb 파일을 사용 하 여 콘텐츠 폴더](part1-images/xnbsinxs.png)
+![Xnb 파일이 있는 솔루션 탐색기 콘텐츠 폴더](part1-images/xnbsinxs.png)
 
-Mac 용 visual Studio의 빌드 작업을 새로 추가 된 XNBs 자동으로 설정 하지 않을 수 있습니다. IOS에 대 한 마우스 오른쪽 단추로 클릭 선택한 파일의 각 **빌드 작업 BundleResource을->** 합니다. Android에 대 한 마우스 오른쪽 단추로 클릭 선택한 파일의 각 **빌드 작업 AndroidAsset->** 합니다.
+Mac용 Visual Studio 새로 추가 된 XNBs에 대 한 빌드 작업을 자동으로 설정할 수 없습니다. IOS의 경우 각 파일을 마우스 오른쪽 단추로 클릭 하 고 **빌드 작업-> BundleResource**를 선택 합니다. Android의 경우 각 파일을 마우스 오른쪽 단추로 클릭 하 고 **빌드 작업-> AndroidAsset**를 선택 합니다.
 
-## <a name="rendering-a-3d-model"></a>3D 모델을 렌더링합니다.
+## <a name="rendering-a-3d-model"></a>3D 모델 렌더링
 
-화면에 표시 되는 모델을 참조 하는 데 필요한 마지막 단계를 로드 하 고 그리기 코드를 추가 하는 것입니다. 특히, 우리가 수행한 다음:
+화면에 모델을 표시 하는 데 필요한 마지막 단계는 로드 및 그리기 코드를 추가 하는 것입니다. 구체적으로 다음을 수행 합니다.
 
-- 정의 된 `Model` 의 인스턴스는 `Game1` 클래스
-- 로드 된 `Model` 인스턴스 `Game1.LoadContent`
-- 그리기는 `Model` 인스턴스 `Game1.Draw`
+- 클래스에서 인스턴스 `Model` `Game1` 정의
+- `Model` 인스턴스 로드`Game1.LoadContent`
+- `Model` 인스턴스 그리기`Game1.Draw`
 
-대체는 `Game1.cs` 코드 파일 (위치한 합니다 **WalkingGame** PCL) 다음을 사용 하 여:
+**WalkingGame PCL** 에 있는 코드파일을다음으로`Game1.cs` 바꿉니다.
 
 ```csharp
 public class Game1 : Game
@@ -162,29 +162,29 @@ public class Game1 : Game
 }
 ```
 
-이 코드 실행 하는 경우에서는 모델을 화면의 표시 됩니다.
+이 코드를 실행 하는 경우 모델이 화면에 표시 됩니다.
 
-![화면에 표시 되는 모델](part1-images/image8.png "이 코드를 실행 하는 경우 모델을 표시할 화면")
+![화면에 표시 되는 모델](part1-images/image8.png "이 코드가 실행 되 면 모델이 화면에 표시") 됩니다.
 
 ### <a name="model-class"></a>모델 클래스
 
-`Model` 클래스는 콘텐츠 파일 (예:.fbx 파일)에서 3D 렌더링을 수행 하기 위한 핵심 클래스입니다. 3D 기 하 도형, 질감에 대 한 참조를 포함 하 여 렌더링 하는 데 필요한 정보를 모두 포함 하 고 `BasicEffect` 위치 지정, 조명 및 카메라 값을 제어 하는 인스턴스.
+`Model` 클래스는 콘텐츠 파일 (예: fbx 파일)에서 3d 렌더링을 수행 하기 위한 핵심 클래스입니다. 여기에는 3d 기 하 도형, 질감 참조 및 `BasicEffect` 위치, 조명 및 카메라 값을 제어 하는 인스턴스를 포함 하 여 렌더링에 필요한 모든 정보가 포함 됩니다.
 
-`Model` 클래스 자체에이 가이드의 뒷부분에서 살펴보겠습니다 단일 모델 인스턴스를 여러 위치에서 렌더링 될 수 있으므로 위치 지정에 대 한 변수를 직접가 없습니다.
+이 `Model` 가이드의 뒷부분에서 설명 하는 것 처럼 단일 모델 인스턴스는 여러 위치에서 렌더링 될 수 있으므로 클래스 자체는 위치를 지정 하기 위한 변수를 직접 포함 하지 않습니다.
 
-각 `Model` 하나 이상의 이루어집니다 `ModelMesh` 를 통해 노출 되는 인스턴스는 `Meshes` 속성. 것으로 간주 될 수 있습니다 하지만 `Model` 단일 게임으로 개체 (예: 로봇 또는 자동차)을 각 `ModelMesh` 다른 그릴 수 `BasicEffect` 값입니다. 예를 들어, 개별 메시 파트 로봇 또는 자동차, 바퀴 다리를 나타낼 수 있습니다 하 고 할당 될 수 있습니다는 `BasicEffect` 바퀴 스핀 또는 다리를 확인 하는 값을 이동 합니다. 
+각 `Model` 는 `Meshes` 속성을 통해 노출 되 `ModelMesh` 는 하나 이상의 인스턴스로 구성 됩니다. 를 `Model` 단일 게임 개체 (예: 로봇 또는 자동차)로 간주할 수도 있지만 각각 `ModelMesh` 다른 `BasicEffect` 값을 사용 하 여 그릴 수 있습니다. 예를 들어 개별 메시 부분은 자동차의 로봇이 나 휠 다리를 나타낼 수 있으며,이 `BasicEffect` 값을 할당 하 여 휠 회전 또는 다리 이동을 만들 수 있습니다. 
 
 ### <a name="basiceffect-class"></a>BasicEffect 클래스
 
-`BasicEffect` 클래스 렌더링 옵션을 제어 하기 위한 속성을 제공 합니다. 우리에 게 처음 수정 합니다 `BasicEffect` 호출 하는 것은 `EnableDefaultLighting` 메서드. 이렇게 하면 매우 간편 하 게 확인 하는 기본 조명 이름에서 알 수 있듯이 `Model` 게임에서 예상 대로 표시 됩니다. 에서는 주석으로 처리 된 `EnableDefaultLighting` 호출에 없는 음영 또는 반사 광선 했지만 해당 개의 질감을 사용 하 여 렌더링 모델을 살펴보겠습니다.
+클래스 `BasicEffect` 는 렌더링 옵션을 제어 하기 위한 속성을 제공 합니다. 에서 `BasicEffect` 처음으로 수정 하는 작업은 `EnableDefaultLighting` 메서드를 호출 하는 것입니다. 이름에서 알 수 있듯이이 경우 기본 조명이 사용 됩니다 .이는가 `Model` 예상 대로 게임에 표시 되는 것을 확인 하는 데 매우 유용 합니다. 호출을 주석으로 처리 `EnableDefaultLighting` 하는 경우 해당 텍스처를 사용 하 여 렌더링 된 모델은 표시 되지만 음영 또는 반사 광선은 표시 되지 않습니다.
 
 ```csharp
 //effect.EnableDefaultLighting ();
 ```
 
-![모델 없음 음영 또는 반사 광선 했지만 해당 개의 질감을 사용 하 여 렌더링](part1-images/image9.png "없습니다 음영 또는 반사 광선 했지만 해당 개의 질감을 사용 하 여 렌더링 모델")
+![모델은 해당 질감 으로만 렌더링 되지만 음영 또는 반사 광선은 포함 하지 않습니다] . (part1-images/image9.png "모델은 해당 질감 으로만 렌더링 되지만 음영 또는 반사 광선은 포함 하지 않습니다") .
 
-`World` 속성 위치, 회전 및 모델의 배율 조정에 사용할 수 있습니다. 사용 하 여 위의 코드는 `Matrix.Identity` 값, 즉는 `Model` 게임 내 지정 된 대로 정확 하 게.fbx 파일에서 렌더링 됩니다. 저희 다루고 있습니다 행렬 및 3D 좌표에서 더 자세하게에서 [3 부](~/graphics-games/monogame/3d/part3.md), 예를 들어 위치를 변경할 수 있습니다 합니다 `Model` 변경 하 여는 `World` 속성을 다음과 같이:
+속성 `World` 은 모델의 위치, 회전 및 배율을 조정 하는 데 사용할 수 있습니다. 위의 코드에서는 `Matrix.Identity` 값을 사용 합니다. 즉,가 `Model` fbx 파일에 지정 된 것과 정확히 일치 하는 게임을 렌더링 합니다. [3 부](~/graphics-games/monogame/3d/part3.md)에서는 행렬 및 3d 좌표에 대해 자세히 설명 하지만 예를 들어 다음과 같이 속성을 `Model` `World` 변경 하 여의 위치를 변경할 수 있습니다.
 
 ```csharp
 // Z is up, so changing Z to 3 moves the object up 3 units:
@@ -192,24 +192,24 @@ var modelPosition = new Vector3 (0, 0, 3);
 effect.World = Matrix.CreateTranslation (modelPosition); 
 ```
 
-이 코드는 3 world 단위에서 위로 이동 되는 개체에서 발생 합니다.
+이 코드를 통해 개체는 세 개의 세계 단위로 이동 됩니다.
 
-![이 코드 3 world 단위에서 위로 이동 되는 개체의 결과](part1-images/image10.png "이 코드 3 world 단위에서 위로 이동 되는 개체의 결과")
+![이 코드를 통해 개체가 3 개의 세계 단위로 이동 합니다] . (part1-images/image10.png "이 코드를 통해 개체가 3 개의 세계 단위로 이동 합니다") .
 
-에 할당 된 마지막 두 속성을 `BasicEffect` 됩니다 `View` 및 `Projection`합니다. 저희 다루고 있습니다 3D 카메라 [3 부](~/graphics-games/monogame/3d/part3.md), 예를 들어 로컬 변경 하 여 카메라 위치를 수정할 수 있습니다 하지만 `cameraPosition` 변수:
+에 `BasicEffect` 할당된`Projection`마지막 두 속성은 및입니다.`View` [3 부에서](~/graphics-games/monogame/3d/part3.md)3d 카메라를 다룰 예정 이지만 예를 들어 지역 `cameraPosition` 변수를 변경 하 여 카메라의 위치를 수정할 수 있습니다.
 
 ```csharp
 // The 8 has been changed to a 30 to move the Camera further back
 var cameraPosition = new Vector3 (0, 30, 0);
 ```
 
-보면 카메라 추가 뒤로 이동 되었습니다 그 결과 `Model` 관점으로 인해 작은 표시:
+카메라가 더 뒤로 이동 하 여 큐브 뷰 때문에 더 작게 표시 `Model` 되는 것을 볼 수 있습니다.
 
-![카메라 관점으로 인해 작은 표시 되는 모델의 결과 추가 뒤로 이동 되었습니다](part1-images/image11.png "카메라 관점으로 인해 작은 표시 되는 모델의 결과 추가 뒤로 이동 되었습니다")
+![카메라가 뒤로 이동 하 여 큐브 뷰 때문에 모델이 더 작게] 표시 됩니다. (part1-images/image11.png "카메라가 뒤로 이동 하 여 큐브 뷰 때문에 모델이 더 작게") 표시 됩니다.
 
-## <a name="rendering-multiple-models"></a>여러 모델을 렌더링
+## <a name="rendering-multiple-models"></a>여러 모델 렌더링
 
-단일 위에서 언급 한 대로 `Model` 여러 번 그릴 수 있습니다. 간편 하 게 하는 것에 이동 합니다 `Model` 그리기 코드를 원하는 사용 하는 고유한 메서드로 `Model` 매개 변수로 위치. 완료 되 면 당사의 `Draw` 및 `DrawModel` 메서드 같이 표시 됩니다.
+위에서 설명한 것 처럼 단일 `Model` 을 여러 번 그릴 수 있습니다. 이 작업을 더 쉽게 수행 하기 위해 원하는 `Model` `Model` 위치를 매개 변수로 사용 하는 자체 메서드로 그리기 코드를 이동 하 게 됩니다. 완료 `Draw` 되 면 및 `DrawModel` 메서드는 다음과 같습니다.
 
 
 ```csharp
@@ -253,16 +253,16 @@ void DrawModel(Vector3 modelPosition)
 }
 ```
 
-이 인해 로봇 6 번 그리고 모델:
+이로 인해 로봇 모델이 6 번 그려집니다.
 
-![이 인해 모델 6 번 그리고 로봇](part1-images/image1.png "로봇 6 번 그리고 모델에에서이 인해")
+![이로 인해 로봇 모델이 6 번 그려집니다] . (part1-images/image1.png "이로 인해 로봇 모델이 6 번 그려집니다") .
 
 ## <a name="summary"></a>요약
 
-이 연습에서는 MonoGame의 도입 `Model` 클래스입니다. .xnb.fbx 파일로 변환 설명 하는 다시 로드할 수는 `Model` 클래스입니다. 또한 표시 하는 방법을 수정을 `BasicEffect` 인스턴스에 영향을 줄 수 `Model` 그리기.
+이 연습에서는 MonoGame의 `Model` 클래스를 소개 했습니다. Fbx 파일을 .xnb로 변환 하는 방법에 대해 설명 합니다 .이를 `Model` 클래스에 로드할 수 있습니다. 또한 인스턴스에 대 한 `BasicEffect` 수정 내용이 그리기에 영향을 줄 `Model` 수 있는 방법도 보여 줍니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [MonoGame 모델 참조](http://www.monogame.net/documentation/?page=T_Microsoft_Xna_Framework_Graphics_Model)
 - [Content.zip](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/Content.zip?raw=true)
-- [완성 된 프로젝트 (샘플)](https://developer.xamarin.com/samples/mobile/ModelRenderingMG/)
+- [완료 된 프로젝트 (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/)
