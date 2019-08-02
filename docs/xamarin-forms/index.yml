@@ -57,7 +57,7 @@ sections:
         className: cardsB
         items:
           - href: ~/xamarin-forms/app-fundamentals/
-            html: '파일, 이미지, 데이터베이스 작업 등과 같이 Xamarin.Forms 앱을 빌드하는 데 필요한 모든 작업을 안내합니다.'
+            html: '탐색, 제스처, 데이터 바인딩을 비롯해 Xamarin.Forms 앱을 개발하는 데 필요한 모든 것을 알아봅니다.'
             image:
               src: ~/media/icons/i_app-build.svg
               href: ~/xamarin-forms/app-fundamentals/
