@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 66d947c8b80546e68c68915b960587a48bd2448d
-ms.sourcegitcommit: 25be5acf979f6b18b6d0e64392c9ab307259c032
+ms.openlocfilehash: 391820cf2e94c1131f4082798ee9efa05d8489b8
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68610493"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739394"
 ---
 # <a name="xamarinforms-searchbar"></a>Xamarin.ios SearchBar
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SearchBar)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
 Xamarin.ios는 검색을 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. 컨트롤 `SearchBar` 은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다. 다음 스크린샷에서는 `ListView`에 결과가 `SearchBar` 표시 된 쿼리를 보여 줍니다.
 
@@ -184,7 +184,7 @@ public class SearchViewModel : INotifyPropertyChanged
 
 ## <a name="related-links"></a>관련 링크
 
-* [SearchBar 데모](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SearchBar)
+* [SearchBar 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 * [Xamarin.ios 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)
 * [Xamarin.ios의 글꼴](~/xamarin-forms/user-interface/text/fonts.md)
 * [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)

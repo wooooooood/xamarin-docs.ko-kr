@@ -1,35 +1,35 @@
 ---
-title: Xamarin.Forms CollectionView 데이터
-description: CollectionView IEnumerable을 구현 하는 모든 컬렉션이 ItemsSource 속성을 설정 하 여 데이터를 사용 하 여 채워집니다.
+title: Xamarin.ios CollectionView 데이터
+description: CollectionView는 System.windows.controls.itemscontrol.itemssource 속성을 IEnumerable을 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다.
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: d2729250c0f991564ae70ddf6a15b40425ed6c46
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: ce745109ea2852b597de3a8a5922a171ad83e289
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005274"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738914"
 ---
-# <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView 데이터
+# <a name="xamarinforms-collectionview-data"></a>Xamarin.ios CollectionView 데이터
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
+![](~/media/shared/preview.png "이 API는 현재 시험판")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 해당 모양과 표시할 데이터를 정의 하는 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)표시할 데이터 및 모양을 정의 하는 다음 속성을 정의 합니다.
 
-- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource)형식의 `IEnumerable`에 표시 될 항목의 컬렉션을 지정의 기본 값이 `null`합니다.
-- [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate)를 형식 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)에 표시할 항목을 컬렉션의 각 항목에 적용할 템플릿을 지정 합니다.
+- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource)형식의 `IEnumerable`는 표시 될 항목의 컬렉션을 지정 하 고 기본값 `null`은입니다.
+- [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate)형식의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)는 표시할 항목 컬렉션의 각 항목에 적용할 템플릿을 지정 합니다.
 
-이러한 속성에 의해 지원 됩니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 속성을 데이터 바인딩의 대상 수 있음을 의미 합니다.
+이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
 
-## <a name="populate-a-collectionview-with-data"></a>데이터 CollectionView 채우기
+## <a name="populate-a-collectionview-with-data"></a>데이터를 사용 하 여 CollectionView 채우기
 
-A [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 설정 하 여 데이터를 채운 해당 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성을 구현 하는 컬렉션 `IEnumerable`합니다. 초기화 하 여 XAML에서 항목을 추가할 수는 `ItemsSource` 문자열의 배열에서 속성:
+는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성을를 구현 `IEnumerable`하는 컬렉션으로 설정 하 여 데이터로 채워집니다. 문자열 배열에서 속성을 `ItemsSource` 초기화 하 여 XAML에 항목을 추가할 수 있습니다.
 
 ```xaml
 <CollectionView>
@@ -48,9 +48,9 @@ A [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 설정 하 여 데이�
 ```
 
 > [!NOTE]
-> `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
+> 합니다 `x:Array` 요소에는 `Type` 배열에 있는 항목의 유형을 나타내는 특성입니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -67,39 +67,39 @@ collectionView.ItemsSource = new string[]
 ```
 
 > [!IMPORTANT]
-> 경우는 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 은 항목 추가, 제거 또는 내부 컬렉션에서 변경 된 새로 고침에 필요한 기본 컬렉션 이어야 합니다는 `IEnumerable` 와 같은 속성을 전송 하는 컬렉션 변경 알림 `ObservableCollection`.
+> 기본 컬렉션 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에서 항목이 추가, 제거 또는 변경 될 때를 새로 고쳐야 하는 경우 기본 컬렉션 `IEnumerable` 은와 `ObservableCollection`같은 속성 변경 알림을 보내는 컬렉션 이어야 합니다.
 
-기본적으로 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 다음 스크린샷과에서 같이 세로 목록에 항목을 표시 합니다.
+기본적으로는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 다음 스크린샷에 표시 된 것 처럼 세로 목록에 항목을 표시 합니다.
 
-[![스크린 샷의 CollectionView iOS 및 Android에서 텍스트 항목이 포함 된](populate-data-images/text.png "수집 뷰의 텍스트 항목")](populate-data-images/text-large.png#lightbox "수집 뷰의 텍스트 항목")
+[(populate-data-images/text.png "CollectionView의") ![iOS 및 Android 텍스트 항목에 대 한 텍스트 항목을 포함 하는 CollectionView의 스크린샷]] (populate-data-images/text-large.png#lightbox "CollectionView의 텍스트 항목")
 
-변경 하는 방법에 대 한 정보에 대 한 합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 레이아웃 참조 [레이아웃을 지정할](layout.md)합니다. 각 항목의 모양을 정의 하는 방법에 대 한 정보에 대 한 합니다 `CollectionView`를 참조 하세요 [항목 모양을 정의](#define-item-appearance).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 레이아웃을 변경 하는 방법에 대 한 자세한 내용은 [레이아웃 지정](layout.md)을 참조 하세요. 에서 `CollectionView`각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 [항목 모양 정의](#define-item-appearance)를 참조 하세요.
 
 ### <a name="data-binding"></a>데이터 바인딩
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 바인딩할 데이터 바인딩을 사용 하 여 데이터로 채울 수 있습니다 해당 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성을는 `IEnumerable` 컬렉션입니다. XAML을 사용 하 여 수행 됩니다이 `Binding` 태그 확장:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)데이터 바인딩을 사용 하 여 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성을 `IEnumerable` 컬렉션에 바인딩하면 데이터를 데이터로 채울 수 있습니다. XAML에서이 작업은 `Binding` 태그 확장을 사용 하 여 구현 됩니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-이 예제에서는 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성 데이터를 바인딩하는 `Monkeys` 연결된 보기 모델의 속성입니다.
+이 예 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 에서는 속성 데이터가 연결 된 뷰 모델의 `Monkeys` 속성에 바인딩됩니다.
 
 > [!NOTE]
 > 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하십시오.
 
 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
-## <a name="define-item-appearance"></a>항목 모양을 정의합니다
+## <a name="define-item-appearance"></a>항목 모양 정의
 
-각 항목의 모양을 합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 설정 하 여 정의할 수 있습니다 합니다 [ `CollectionView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을을 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+에서 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 각 항목의 모양은 [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을로 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)설정 하 여 정의할 수 있습니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -134,7 +134,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -167,7 +167,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 });
 ```
 
-에 지정 된 요소를 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 목록의 각 항목의 모양을 정의 합니다. 예제에서는 레이아웃 내에서 `DataTemplate` 에서 관리 되는 [ `Grid` ](xref:Xamarin.Forms.Grid)합니다. 합니다 `Grid` 포함을 [ `Image` ](xref:Xamarin.Forms.Image) 개체와 두 개의 [ `Label` ](xref:Xamarin.Forms.Label) 개체의 속성을 바인딩하는 모든는 `Monkey` 클래스:
+에서 지정 된 요소는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 목록에 있는 각 항목의 모양을 정의 합니다. `DataTemplate` 이 예제에서 내의 레이아웃은를 [`Grid`](xref:Xamarin.Forms.Grid)통해 관리 됩니다. 는 `Grid` [`Image`](xref:Xamarin.Forms.Image) [`Label`](xref:Xamarin.Forms.Label) 모두 클래스`Monkey` 의 속성에 바인딩되는 개체와 두 개의 개체를 포함 합니다.
 
 ```csharp
 public class Monkey
@@ -179,15 +179,15 @@ public class Monkey
 }
 ```
 
-다음 스크린샷에서 목록에서 템플릿 결과 각 항목을 표시 합니다.
+다음 스크린샷에는 목록의 각 항목에 대 한 템플릿 결과가 나와 있습니다.
 
-[![스크린 샷의 CollectionView 여기서 각 항목은 iOS 및 Android에서 템플릿](populate-data-images/datatemplate.png "수집 뷰의 템플릿 항목")](populate-data-images/datatemplate-large.png#lightbox "수집 뷰의 템플릿 항목")
+[(populate-data-images/datatemplate.png "CollectionView의") ![iOS 및 Android 템플릿 항목에서 각 항목이 템플릿 인 CollectionView의 스크린샷]] (populate-data-images/datatemplate-large.png#lightbox "CollectionView의 템플릿 항목")
 
 데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
-## <a name="choose-item-appearance-at-runtime"></a>런타임 시 항목 모양을 선택 합니다.
+## <a name="choose-item-appearance-at-runtime"></a>런타임에 항목 모양 선택
 
-각 항목의 모양을 합니다 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 값을 기반으로 항목을 설정 하 여 런타임 시 선택할 수 있습니다 합니다 [ `CollectionView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을을 [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector)개체.
+에서 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 각 항목의 모양은 [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 을 개체로 설정 하 여 항목 값에 따라 런타임에 선택할 수 있습니다.
 
 ```xaml
 <ContentPage ...
@@ -211,7 +211,7 @@ public class Monkey
 </ContentPage>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -221,7 +221,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-합니다 [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을 `MonkeyDataTemplateSelector` 개체입니다. 다음 예제는 `MonkeyDataTemplateSelector` 클래스:
+속성은 `MonkeyDataTemplateSelector` 개체로 설정 됩니다. [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 다음 예제에서는 클래스를 `MonkeyDataTemplateSelector` 보여 줍니다.
 
 ```csharp
 public class MonkeyDataTemplateSelector : DataTemplateSelector
@@ -236,15 +236,18 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-합니다 `MonkeyDataTemplateSelector` 클래스 정의 `AmericanMonkey` 하 고 `OtherMonkey` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 다른 데이터 템플릿에 설정 된 속성을 합니다. 합니다 `OnSelectTemplate` 반환 재정의 `AmericanMonkey` monkey 이름을 "America"를 포함 하는 경우 청록에서 monkey 이름 및 위치를 표시 하는 템플릿. Monkey 이름을 "America", 없는 경우는 `OnSelectTemplate` 반환 재정의 `OtherMonkey` silver에서 monkey 이름 및 위치를 표시 하는 템플릿:
+클래스 `MonkeyDataTemplateSelector` 는 다른 `AmericanMonkey` 데이터 `OtherMonkey` 템플릿으로 설정 된 및 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. 재정의 `OnSelectTemplate` 는 원숭이 이름 `AmericanMonkey` 및 위치를 청록색으로 표시 하는 템플릿 (원숭이 이름에 "아메리카"가 포함 된 경우)을 반환 합니다. 원숭이 이름에 "아메리카"가 포함 되어 있지 않으면 `OnSelectTemplate` 재정의는 다음 `OtherMonkey` 의 원숭이 이름과 위치를 은색에 표시 하는 템플릿을 반환 합니다.
 
-[![IOS 및 Android에서 CollectionView의 스크린 샷 런타임 항목 템플릿 선택](populate-data-images/datatemplateselector.png "수집 뷰의 런타임 항목 템플릿 선택")](populate-data-images/datatemplateselector-large.png#lightbox "런타임 항목 템플릿 선택에는 CollectionView")
+[CollectionView에서 iOS 및 Android(populate-data-images/datatemplateselector.png "런타임 항목 템플릿 선택") 의 ![CollectionView 런타임 항목 템플릿 선택 스크린샷]] (populate-data-images/datatemplateselector-large.png#lightbox "CollectionView의 런타임 항목 템플릿 선택")
 
-데이터 템플릿 선택기에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms DataTemplateSelector 만들](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)합니다.
+데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
+
+> [!IMPORTANT]
+> 를 사용 [`CollectionView`](xref:Xamarin.Forms.CollectionView)하는 경우 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체 `ViewCell`의 루트 요소를으로 설정 하지 마십시오. 이로 인해에는 셀 개념이 없기 때문 `CollectionView` 에 예외가 throw 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
-- [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin. Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: c05bc88ef6d182f282decedff3e4fb03b4bb96b1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: feae1a33b2e090ccfe3573285c75978aacd1799a
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334694"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739197"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
 
@@ -26,11 +26,11 @@ ms.locfileid: "61334694"
 
 Microsoft Virtual Academy의 다운로드에 기본 전자책 형식:
 
-*    [**PDF (56 Mb)**](https://aka.ms/xamebook)
+*    [**PDF (56 Mb)** ](https://aka.ms/xamebook)
 
-*    [**ePub (151 Mb)**](https://aka.ms/xamebook/epub)
+*    [**ePub (151 Mb)** ](https://aka.ms/xamebook/epub)
 
-*    [**Kindle 버전 (325mb)**](https://aka.ms/xamebook/mobi)
+*    [**Kindle 버전 (325mb)** ](https://aka.ms/xamebook/mobi)
 
 할 수도 있습니다 [개별 챕터 다운로드](#download-chapters-and-summaries) PDF 파일입니다.
 
@@ -103,7 +103,7 @@ Xamarin.Forms 응용 프로그램은 일반적으로 여러 플랫폼 간에 코
 
 <i>Xamarin.Forms를 사용 하 여 Mobile Apps를 만드는</i> C#을 사용 하 여 Xamarin.Forms 응용 프로그램을 작성 하는 방법을 설명 하는 것으로 시작 합니다. Extensible Application Markup Language (XAML) 될 때까지 도입 되지 [7 장입니다. XAML vs입니다. 코드](summaries/chapter07.md)합니다.
 
-XAML은 Xamarin.Forms에서 훨씬 더 큰 역할을 되었습니다. Visual Studio와 함께 배포 하는 Xamarin.Forms 솔루션 템플릿 XAML 기반 페이지 파일을 만듭니다. Xamarin.Forms를 사용 하는 개발자를 가능한 한 빨리 XAML을 사용 하 여 친숙 한 잘 있어야 합니다. 합니다 [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md) Xamarin.Forms 설명서 섹션에 시작 하는 XAML에 대 한 여러 문서를 포함 합니다.
+XAML은 Xamarin.Forms에서 훨씬 더 큰 역할을 되었습니다. Visual Studio와 함께 배포 하는 Xamarin.Forms 솔루션 템플릿 XAML 기반 페이지 파일을 만듭니다. Xamarin.Forms를 사용 하는 개발자를 가능한 한 빨리 XAML을 사용 하 여 친숙 한 잘 있어야 합니다. 합니다 [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) Xamarin.Forms 설명서 섹션에 시작 하는 XAML에 대 한 여러 문서를 포함 합니다.
 
 ### <a name="supported-platforms"></a>지원되는 플랫폼
 

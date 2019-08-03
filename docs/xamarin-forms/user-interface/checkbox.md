@@ -1,31 +1,31 @@
 ---
-title: Xamarin.Forms 확인란
-description: Xamarin.Forms 확인란에는 확인할 수 있습니다 하거나 또는 빈 단추 형식입니다. 확인란을 선택 하면에 있는 것으로 간주 합니다. 확인란이 비어 있으면 해제 간주 합니다.
+title: Xamarin.ios 확인란
+description: Xamarin.ios 확인란은 선택 하거나 비워 둘 수 있는 단추의 유형입니다. 확인란을 선택 하면 설정 된 것으로 간주 됩니다. 확인란이 비어 있으면 해제 된 것으로 간주 됩니다.
 ms.prod: xamarin
 ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 42631b1b67dc1d342e9f8666916604e68ee158d8
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517922"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739150"
 ---
-# <a name="xamarinforms-checkbox"></a>Xamarin.Forms 확인란
+# <a name="xamarinforms-checkbox"></a>Xamarin.ios 확인란
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
-Xamarin.Forms `CheckBox` 수는 단추의 형식을 선택 하거나 빈 수는 있습니다. 확인란을 선택 하면에 있는 것으로 간주 합니다. 확인란이 비어 있으면 해제 간주 합니다.
+Xamarin.ios는 선택 하거나 `CheckBox` 비워 둘 수 있는 단추의 유형입니다. 확인란을 선택 하면 설정 된 것으로 간주 됩니다. 확인란이 비어 있으면 해제 된 것으로 간주 됩니다.
 
-`CheckBox` 정의 `bool` 라는 속성이 `IsChecked`를 나타내는 여부를 `CheckBox` 확인란이 선택 되어 합니다. 이 속성은 또한 지를 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 스타일을 지정할 수 데이터 바인딩의 대상 수를 의미 합니다.
+`CheckBox`이 선택 `bool` 되었는지 여부 `IsChecked`를 나타내는 라는 속성을 정의 합니다. `CheckBox` 이 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에 의해 지원 됩니다. 즉, 스타일을 지정할 수 있으며 데이터 바인딩의 대상이 될 수 있습니다.
 
 > [!NOTE]
-> 합니다 `IsChecked` 바인딩할 수 있는 속성이의 기본 바인딩 모드 [ `BindingMode.TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay)합니다.
+> 바인딩 `IsChecked` 가능한 속성은의 [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay)기본 바인딩 모드입니다.
 
-`CheckBox` 정의 `CheckedChanged` 될 때 발생 한 이벤트를 `IsChecked` 사용자 조작을 통해 또는 응용 프로그램 설정 속성 변경의 `IsChecked` 속성. 합니다 `CheckedChangedEventArgs` 와 함께 제공 되는 개체를 `CheckedChanged` 이벤트 라는 단일 속성을 가진 `Value`, 형식의 `bool`합니다. 경우 이벤트가의 값을 `Value` 속성의 새 값으로 설정 되는 `IsChecked` 속성.
+`CheckBox`사용자 조작을 `CheckedChanged` 통해 또는 응용 프로그램이 `IsChecked` 속성을 `IsChecked` 설정 하는 경우 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. 이벤트와 `CheckedChanged` 함께 제공 되는 `bool` `Value` `CheckedChangedEventArgs` 개체에는 형식의 이라는 단일 속성이 있습니다. 이벤트가 발생 하면 `Value` 속성의 값이 `IsChecked` 속성의 새 값으로 설정 됩니다.
 
 ## <a name="create-a-checkbox"></a>확인란 만들기
 
@@ -35,29 +35,29 @@ Xamarin.Forms `CheckBox` 수는 단추의 형식을 선택 하거나 빈 수는 
 <CheckBox />
 ```
 
-이 XAML은 다음 스크린샷에 표시 된 모양이 결과:
+이 XAML은 다음 스크린샷에 표시 됩니다.
 
-![IOS 및 Android에는 빈 확인란 스크린샷](checkbox-images/checkbox-empty.png "빈 확인란")
+![IOS 및 Android에 대 한 빈 확인란의 스크린샷](checkbox-images/checkbox-empty.png "빈 확인란")
 
-기본적으로 `CheckBox` 비어 있습니다. 합니다 `CheckBox` 사용자 조작 하거나 설정 하 여 확인할 수 있습니다 합니다 `IsChecked` 속성을 `true`:
+기본적으로는 `CheckBox` 비어 있습니다. 사용자 조작을 통해를 확인 하거나 `IsChecked` 속성을로 `true`설정할 수있습니다.`CheckBox`
 
 ```xaml
 <CheckBox IsChecked="true" />
 ```
 
-이 XAML은 다음 스크린샷에 표시 된 모양이 결과:
+이 XAML은 다음 스크린샷에 표시 됩니다.
 
-![IOS 및 Android에서 선택 된 확인란, 스크린샷](checkbox-images/checkbox-checked.png "확인란 선택")
+![IOS 및 Android에서 선택 된 확인란의 스크린샷](checkbox-images/checkbox-checked.png "선택 됨 확인란")
 
-또는 `CheckBox` 코드에서 만들 수 있습니다.
+또는 코드에서 `CheckBox` 를 만들 수 있습니다.
 
 ```csharp
 CheckBox checkBox = new CheckBox { IsChecked = true };
 ```
 
-## <a name="respond-to-a-checkbox-changing-state"></a>상태를 변경 하는 확인란을 선택에 응답
+## <a name="respond-to-a-checkbox-changing-state"></a>CheckBox 변경 상태에 응답
 
-경우는 `IsChecked` 사용자 조작을 통해 또는 응용 프로그램 설정 속성 변경을 `IsChecked` 속성인을 `CheckedChanged` 이벤트가 발생 합니다. 변경 내용에 응답 하도록이 이벤트에 대 한 이벤트 처리기를 등록할 수 있습니다.
+속성이 변경 되 면 사용자 조작을 통해 또는 응용 프로그램에서 `IsChecked` 속성을 설정 하 `CheckedChanged` 는 경우 이벤트가 발생 합니다. `IsChecked` 이 이벤트에 대 한 이벤트 처리기를 등록 하 여 변경에 응답할 수 있습니다.
 
 ```xaml
 <CheckBox CheckedChanged="OnCheckBoxCheckedChanged" />
@@ -74,7 +74,7 @@ void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
 
 합니다 `sender` 인수가 `CheckBox` 이 이벤트를 담당 합니다. 에 액세스 하는 데 사용할 수 있습니다는 `CheckBox` 개체 또는 여러 구별할 수 `CheckBox` 공유 하는 동일한 개체 `CheckedChanged` 이벤트입니다.
 
-에 대 한 이벤트 처리기 또는 `CheckedChanged` 코드에서 이벤트를 등록할 수 있습니다.
+또는 `CheckedChanged` 이벤트에 대 한 이벤트 처리기를 코드에 등록할 수 있습니다.
 
 ```csharp
 CheckBox checkBox = new CheckBox { ... };
@@ -86,7 +86,7 @@ checkBox.CheckedChanged += (sender, e) =>
 
 ## <a name="data-bind-a-checkbox"></a>데이터 바인딩 확인란
 
-합니다 `CheckedChanged` 응답할 데이터 바인딩 및 트리거를 사용 하 여 이벤트 처리기를 제거할 수 있습니다는 `CheckBox` 선택 또는 빈:
+데이터 바인딩 및 트리거를 사용 하 여 확인 되거나 비어 있는에 응답 `CheckBox` 하 여 이벤트처리기를제거할수있습니다.`CheckedChanged`
 
 ```xaml
 <CheckBox x:Name="checkBox" />
@@ -104,33 +104,33 @@ checkBox.CheckedChanged += (sender, e) =>
 </Label>
 ```
 
-이 예제에서는 [ `Label` ](xref:Xamarin.Forms.Label) 바인딩 식 데이터 트리거를 사용 하 여 모니터링를 `IsChecked` 속성을 `CheckBox`입니다. 경우이 속성은 `true`는 `FontAttributes` 및 `FontSize` 의 속성을 `Label` 변경 합니다. 경우는 `IsChecked` 속성에 반환 `false`, `FontAttributes` 및 `FontSize` 속성의는 `Label` 를 초기 상태로 다시 설정 됩니다.
+이 예제에서는 [`Label`](xref:Xamarin.Forms.Label) 데이터 트리거의 바인딩 식을 사용 하 여의 `IsChecked` `CheckBox`속성을 모니터링 합니다. 이 속성이 `true`이면의 `FontAttributes` `FontSize` 및속성은변경됩니다.`Label` 속성이로`false` 반환되`FontSize` 면의 및속성이초기상태로다시설정됩니다.`Label` `FontAttributes` `IsChecked`
 
-다음 스크린샷에서 iOS 스크린샷은 [ `Label` ](xref:Xamarin.Forms.Label) 때 서식 지정을 `CheckBox` Android 스크린샷에서 비어 있는 경우는 `Label` 때 서식 지정는 `CheckBox` 확인란이 선택 되어:
+다음 [`Label`](xref:Xamarin.Forms.Label) 스크린샷에는 `CheckBox` 이 비어 있을 때 iOS 스크린샷에서 서식 지정이 표시 `CheckBox` 되 고 Android 스크린샷에는를 선택 하면 `Label` 형식이 표시 됩니다.
 
-[![데이터의 스크린샷 iOS 및 Android에서 확인란을 바인딩된](checkbox-images/checkbox-databinding.png "확인란을 선택 하는 데이터 바인딩")](checkbox-images/checkbox-databinding-large.png#lightbox "확인란을 선택 하는 데이터 바인딩")
+[ ![IOS 및 Android](checkbox-images/checkbox-databinding.png "데이터 바인딩된 확인란") 의 데이터 바인딩된 확인란 스크린샷] (checkbox-images/checkbox-databinding-large.png#lightbox "데이터 바인딩 확인란")
 
-트리거에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)합니다.
+트리거에 대 한 자세한 내용은 [Xamarin.ios 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
 
-## <a name="disable-a-checkbox"></a>Checkbox를 사용 하지 않도록 설정
+## <a name="disable-a-checkbox"></a>확인란 사용 안 함
 
-응용 프로그램 상태로 전환 하는 경우에 따라 여기서는 `CheckBox` 확인할 것은 올바른 작업이 아닙니다. 이러한 경우에는 `CheckBox` 설정 하 여 비활성화할 수 있습니다 해당 `IsEnabled` 속성을 `false`입니다.
+경우에 `CheckBox` 따라 응용 프로그램은 검사 중인가 유효한 작업이 아닌 상태로 전환 됩니다. 이러한 경우에는 `CheckBox` `IsEnabled` 속성을로 `false`설정 하 여를 비활성화할 수 있습니다.
 
 ## <a name="checkbox-appearance"></a>확인란 모양
 
-속성 외에 `CheckBox` 에서 상속 되는 [ `View` ](xref:Xamarin.Forms.View) 클래스 `CheckBox` 정의 `Color` 해당 색을 설정 하는 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+`CheckBox` `CheckBox` [클래스에서상속`Color`](xref:Xamarin.Forms.Color)되는 속성 외에도에서 색을로 설정 하는 속성을정의합니다.`Color` [`View`](xref:Xamarin.Forms.View)
 
 ```xaml
 <CheckBox Color="Red" />
 ```
 
-다음 스크린샷에서 일련의 확인 표시 `CheckBox` 개체를 각 개체에 해당 `Color` 속성을 다른 집합 [ `Color` ](xref:Xamarin.Forms.Color):
+다음 스크린샷은 일련의 선택 `CheckBox` 된 개체를 보여 줍니다. 각 개체 `Color` 의 속성은 다른 [`Color`](xref:Xamarin.Forms.Color)로 설정 됩니다.
 
-![IOS 및 Android에서 색이 지정 된 확인란 스크린샷](checkbox-images/checkbox-colors.png "색이 지정 된 확인란")
+![IOS 및 Android에서 색이 지정 된 확인란의 스크린샷](checkbox-images/checkbox-colors.png "색이") 지정 된 확인란
 
-## <a name="checkbox-visual-states"></a>시각적 상태 확인란
+## <a name="checkbox-visual-states"></a>CheckBox 시각적 상태
 
-`CheckBox` 에 `IsChecked` [ `VisualState` ](xref:Xamarin.Forms.VisualState) 시각적으로 변화를 시작 하려면 사용할 수 있는 `CheckBox` 확인 되는 경우.
+`CheckBox`에는이 선택 될 때의 `CheckBox` 시각적 변경을 시작 하는 데 사용할 수 [있는가있습니다.`VisualState`](xref:Xamarin.Forms.VisualState) `IsChecked`
 
 다음 XAML 예제에 대 한 시각적 상태를 정의 하는 방법을 보여 줍니다는 `IsChecked` 상태:
 
@@ -156,12 +156,12 @@ checkBox.CheckedChanged += (sender, e) =>
 </CheckBox>
 ```
 
-이 예제에서는 합니다 `IsChecked` [ `VisualState` ](xref:Xamarin.Forms.VisualState) 되도록 지정 합니다 `CheckBox` 확인란이 해당 `Color` 속성을 녹색으로 설정 됩니다. `Normal` `VisualState` 되도록 지정 합니다 `CheckBox` 정상적인 상태의 해당 `Color` 빨강으로 설정 됩니다. 따라서 전체적인 효과는 `CheckBox` 는 빨간색 이며 비어 있는 경우 녹색을 선택 합니다.
+이 예제 `IsChecked` `CheckBox` 에서는를 선택`Color` 하면 해당 속성이 녹색으로 설정 되도록 [지정합니다.`VisualState`](xref:Xamarin.Forms.VisualState) 는가 정상 상태 이면 해당`Color` 속성은 red로 설정 되도록 지정합니다.`VisualState` `CheckBox` `Normal` 따라서가 비어 있는 경우에 `CheckBox` 는 빨간색이 고 확인 되 면 녹색이 면 전체 효과가 있습니다.
 
-시각적 상태에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)합니다.
+시각적 상태에 대 한 자세한 내용은 [Xamarin. Forms 시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [확인란을 데모 (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
-- [Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [확인란 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+- [Xamarin Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.ios 시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)

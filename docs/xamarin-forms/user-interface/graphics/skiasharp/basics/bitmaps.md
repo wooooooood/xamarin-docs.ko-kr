@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f43779fd0a61bd3ad04f3f7445faa6517fb9c989
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645894"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738884"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
@@ -22,7 +22,7 @@ _다양 한 원본에서 비트맵을 로드 하 고 표시 합니다._
 
 SkiaSharp 비트맵의 지원이 매우 광범위 하 게 됩니다. 이 문서에서는 기본 사항을 &mdash; 비트맵을 로드 하는 방법 및 표시 방법:
 
-![](bitmaps-images/bitmapssample.png "두 비트맵의 표시")
+![](bitmaps-images/basicbitmaps-small.png "두 비트맵의 표시")
 
 비트맵의 많은 심층적 탐색을 섹션에서 찾을 수 있습니다 [SkiaSharp 비트맵](../bitmaps/index.md)합니다.
 
@@ -98,7 +98,7 @@ protected override async void OnAppearing()
 
 Android 운영 체제를 사용할 때 예외가 발생 합니다 `Stream` 에서 반환 된 `GetStreamAsync` 에서 `SKBitmap.Decode` 메서드 주 스레드에서 시간이 많이 걸리는 작업을 수행 하기 때문에. 비트맵 파일의 내용을 복사할 따라서이 `MemoryStream` 개체를 사용 하 여 `CopyToAsync`입니다.
 
-정적 `SKBitmap.Decode` 메서드는 비트맵 파일 디코딩 작업을 담당 합니다. 비트맵 형식으로 JPEG, PNG 및 GIF를 사용 하 여 작동 하 고 내부 SkiaSharp 형식으로 결과 저장 합니다. 이 시점에서 `SKCanvasView` 있도록 무효화 해야 하는 경우는 `PaintSurface` 처리기 디스플레이를 업데이트 합니다. 
+정적 `SKBitmap.Decode` 메서드는 비트맵 파일 디코딩 작업을 담당 합니다. 비트맵 형식으로 JPEG, PNG 및 GIF를 사용 하 여 작동 하 고 내부 SkiaSharp 형식으로 결과 저장 합니다. 이 시점에서 `SKCanvasView` 있도록 무효화 해야 하는 경우는 `PaintSurface` 처리기 디스플레이를 업데이트 합니다.
 
 ## <a name="loading-a-bitmap-resource"></a>비트맵 리소스를 로드합니다.
 

@@ -1,49 +1,49 @@
 ---
-title: Xamarin.Forms CollectionView EmptyView
-description: CollectionView, 빈 뷰를 표시할 수 있는 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 지정할 수 있습니다. 빈 뷰는 문자열로, 뷰 또는 여러 뷰 수 있습니다.
+title: Xamarin.ios CollectionView EmptyView
+description: CollectionView에서 표시할 수 있는 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 빈 뷰를 지정할 수 있습니다. 빈 뷰는 문자열, 뷰 또는 여러 뷰가 될 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 6bf24cb81bbd40c7e3f5b0f65ed2a2af7cbbe98b
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.openlocfilehash: c6a2a53f267a7f6764ec441944193e8c5ecd9189
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005329"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739186"
 ---
-# <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.Forms CollectionView EmptyView
+# <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.ios CollectionView EmptyView
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
+![](~/media/shared/preview.png "이 API는 현재 시험판")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 표시할 데이터가 없는 경우 사용자에 게 피드백을 제공 하는 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)표시할 데이터가 없을 때 사용자 의견을 제공 하는 데 사용할 수 있는 다음 속성을 정의 합니다.
 
-- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)형식의 `object`, 문자열, 바인딩 또는 보기를 선택할 때 표시 된를 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성은 `null`, 컬렉션에서 지정 하는 경우 또는 `ItemsSource` 속성이 `null` 또는 빈 합니다. 기본값은 `null`입니다.
-- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate)형식의 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)에 지정 된 형식을 지정 하는 데 템플릿을 `EmptyView`합니다. 기본값은 `null`입니다.
+- [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)[`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `object` 이거나속성에서지정된`null` 컬렉션이 이거나 비어 있을 때 표시 되는 문자열, 바인딩 또는 뷰의 형식입니다. `ItemsSource` `null` 기본값은 `null`입니다.
+- [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate)지정 된의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)형식을 지정 `EmptyView`하는 데 사용할 템플릿인 형식의입니다. 기본값은 `null`입니다.
 
-이러한 속성에 의해 지원 됩니다 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) 개체 속성을 데이터 바인딩의 대상 수 있음을 의미 합니다.
+이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
 
-설정에 대 한 주요 사용 시나리오는 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성에서 작업을 필터링 할 때 사용자 의견 표시를 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 하는 동안 사용자 의견 표시 없고 데이터를 생성 합니다. 웹 서비스에서 데이터를 검색 됩니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 설정 하는 주요 사용 시나리오는에 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 대 한 필터링 작업에서 데이터가 생성 되지 않을 때 사용자 의견을 표시 하 고 웹 서비스에서 데이터를 검색 하는 동안 사용자 의견을 표시 하는 것입니다.
 
 > [!NOTE]
-> 합니다 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 필요한 경우 대화형 콘텐츠를 포함 하는 보기 속성을 설정할 수 있습니다.
+> 필요한 경우 대화형 콘텐츠를 포함 하는 뷰로 [속성을설정할수있습니다.`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)
 
 데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
-## <a name="display-a-string-when-data-is-unavailable"></a>데이터를 사용할 수 없는 경우 문자열을 표시 합니다.
+## <a name="display-a-string-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 문자열 표시
 
-[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 될 문자열로 속성을 설정할 수 있습니다 때 표시 되는 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null`, 컬렉션에서 지정 하는 경우 또는 `ItemsSource` 속성은 `null` 이거나 비어 있습니다. 다음 XAML에서는이 시나리오의 예를 보여 줍니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 이거나`null`속성으로 지정 된 컬렉션이 이거나비어있을때표시되는문자열로설정될수있습니다.`null` `ItemsSource` 다음 XAML은이 시나리오의 예를 보여 줍니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding EmptyMonkeys}"
                 EmptyView="No items to display" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -53,13 +53,13 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 ```
 
-결과, 데이터 바인딩 컬렉션 이므로 `null`, 문자열으로는 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값이 표시 됩니다.
+데이터 바인딩된 컬렉션이 `null`이기 때문에 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 된 문자열이 표시 되기 때문에 결과는 다음과 같습니다.
 
-[![IOS 및 Android에서 빈 텍스트 뷰를 사용 하 여 CollectionView 세로 목록 스크린샷](emptyview-images/null-itemssource.png "CollectionView 텍스트 빈 뷰를 사용 하 여 세로 목록")](emptyview-images/null-itemssource-large.png#lightbox "빈 텍스트로 CollectionView 세로 목록 보기")
+텍스트 빈 [ ![보기가 있는 CollectionView 세로 목록의 스크린샷, 텍스트 빈 뷰가 있는 IOS 및 Android](emptyview-images/null-itemssource.png "CollectionView 세로 목록") ] (emptyview-images/null-itemssource-large.png#lightbox "텍스트가 빈 CollectionView 세로 목록 표시")
 
-## <a name="display-views-when-data-is-unavailable"></a>데이터를 사용할 수 없는 경우 보기를 표시 합니다.
+## <a name="display-views-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 보기 표시
 
-[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 될 보기로 속성을 설정할 수 있습니다 때 표시 되는 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null`, 컬렉션에서 지정 하는 경우 또는 `ItemsSource` 속성은 `null` 이거나 비어 있습니다. 단일 뷰 또는 여러 자식 뷰를 포함 하는 뷰를 수 있습니다. 다음 XAML 예제에서는 `EmptyView` 속성이 여러 자식 뷰를 포함 하는 뷰입니다로 설정 합니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 이거나`null`속성으로 지정 된 컬렉션이 이거나비어있을때표시되는뷰로설정할수있습니다.`null` `ItemsSource` 단일 보기 이거나 여러 자식 뷰를 포함 하는 뷰입니다. 다음 XAML 예제에서는 여러 자식 `EmptyView` 뷰를 포함 하는 뷰로 설정 된 속성을 보여 줍니다.
 
 ```xaml
 <StackLayout Margin="20">
@@ -92,7 +92,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 </StackLayout>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -110,13 +110,13 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-경우는 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 실행 합니다 `FilterCommand`, 컬렉션으로 표시를 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 에 저장 된 검색 용어에 대 한 필터링 된를 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성입니다. 필터링 작업에 없는 데이터를 생성 하는 경우는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 으로 설정 합니다 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값이 표시 됩니다:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 가를 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 실행 하면에서 표시 하는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. `FilterCommand` 필터링 작업에서 데이터를 생성 하지 않으면 [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 된이 표시 됩니다.
 
-[![IOS 및 Android에서 사용자 지정 빈 뷰를 사용 하 여 CollectionView 세로 목록 스크린샷](emptyview-images/filter-multiple-views.png "빈 사용자 지정 보기를 사용 하 여 세로 목록 CollectionView")](emptyview-images/filter-multiple-views-large.png#lightbox "CollectionView 세로 목록 사용자 지정 빈 뷰")
+사용자 지정 [빈 보기가 있는 iOS 및 Android(emptyview-images/filter-multiple-views.png "CollectionView 세로 목록의") ![CollectionView 세로 목록 스크린샷]] (emptyview-images/filter-multiple-views-large.png#lightbox "사용자 지정 빈 뷰가 있는 CollectionView 세로 목록")
 
-## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 템플릿 기반 사용자 지정 형식 표시
+## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 템플릿 사용자 지정 형식 표시
 
-합니다 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 해당 템플릿은 사용자 지정 형식에 속성을 설정할 수 있습니다 때 표시 되는 [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null`, 합니다 여컬렉션을지정하는경우또는`ItemsSource`속성은 `null` 이거나 비어 있습니다. 합니다 [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 설정할 수 있습니다를 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 의 모양을 정의 하는 `EmptyView`합니다. 다음 XAML에서는이 시나리오의 예를 보여 줍니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null`이거나 속성`ItemsSource` 으로 지정 된 컬렉션이 이거나 비어 있는 경우 템플릿이 표시 되는 사용자 지정 형식으로 설정할 수 있습니다. `null` 속성 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 은의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 모양을`EmptyView`정의 하는로 설정할 수 있습니다. 다음 XAML은이 시나리오의 예를 보여 줍니다.
 
 ```xaml
 <StackLayout Margin="20">
@@ -147,7 +147,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </StackLayout>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -161,7 +161,7 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-합니다 `FilterData` 형식 정의 `Filter` 속성 및 해당 [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty):
+형식은 속성을 정의 하 고 해당 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)하는를 정의 합니다. `Filter` `FilterData`
 
 ```csharp
 public class FilterData : BindableObject
@@ -176,16 +176,16 @@ public class FilterData : BindableObject
 }
 ```
 
-[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 `FilterData` 개체 및 `Filter` 속성 데이터를 바인딩합니다 합니다 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성. 경우는 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 실행를 `FilterCommand`, 컬렉션으로 표시를 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 에 저장 된 검색 용어에 대 한 필터링 된는 `Filter` 속성입니다. 필터링 작업에 없는 데이터를 생성 하는 경우는 [ `Label` ](xref:Xamarin.Forms.Label) 에 정의 된 합니다 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate)로 설정 되어 있는 합니다 [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 값이 표시:
+속성이 개체로 설정 `Filter` 되 고 속성 데이터가 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 바인딩됩니다. `FilterData` [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) [`CollectionView`](xref:Xamarin.Forms.CollectionView) 가를 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 실행 하면에서 표시 하는 컬렉션이 `Filter` 속성에 저장 된 검색 용어에 대해 필터링 됩니다. `FilterCommand` 필터링 작업에서 데이터를 생성 하지 않으면 [`Label`](xref:Xamarin.Forms.Label) [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 값으로 설정 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)되는에 정의 된이 표시 됩니다.
 
-[![IOS 및 Android에서 빈 뷰 템플릿으로 CollectionView 세로 목록 스크린샷](emptyview-images/emptyviewtemplate.png "빈 뷰 템플릿 사용 하 여 세로 목록 CollectionView")](emptyview-images/emptyviewtemplate-large.png#lightbox "CollectionView 세로 목록 빈 뷰 템플릿")
+빈 보기 템플릿을 포함 하는 [ ![CollectionView 세로 목록의 스크린샷, IOS 및 Android](emptyview-images/emptyviewtemplate.png "CollectionView 세로 목록 (빈 보기 템플릿 포함") ] ) (emptyview-images/emptyviewtemplate-large.png#lightbox "빈 뷰 템플릿이 있는 CollectionView 세로 목록")
 
 > [!NOTE]
-> 데이터를 사용할 수 없을 때 템플릿 기반 사용자 지정 형식을 표시할 때 합니다 [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 여러 자식 뷰를 포함 하는 보기 속성을 설정할 수 있습니다.
+> 데이터를 사용할 수 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 없을 때 템플릿 사용자 지정 형식을 표시 하는 경우 여러 자식 뷰가 포함 된 뷰로 속성을 설정할 수 있습니다.
 
 ## <a name="choose-an-emptyview-at-runtime"></a>런타임에 EmptyView 선택
 
-으로 표시 되는 뷰를 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 데이터를 사용할 수 없는 경우으로 정의할 수 있습니다 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 개체를 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)합니다. 합니다 `EmptyView` 한 다음 속성을 특정 `ContentView`런타임 시 일부 비즈니스 논리에 따라 합니다. 다음 XAML 예제에서는이 시나리오의 예를 보여 줍니다.
+데이터를 사용할 수 없을 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 때로 표시 되는 뷰는의 [`ContentView`](xref:Xamarin.Forms.ContentView) [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)개체로 정의 될 수 있습니다. 그런 다음 런타임에 특정 비즈니스 논리에 따라 `ContentView` 속성을특정으로설정할수있습니다.`EmptyView` 다음 XAML 예제에서는이 시나리오의 예를 보여 줍니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -242,7 +242,7 @@ public class FilterData : BindableObject
 </ContentPage>
 ```
 
-이 XAML 정의 두 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 페이지 수준에서 개체 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 사용 하 여는 [ `Switch` ](xref:Xamarin.Forms.Switch) 개체는 제어 `ContentView` 개체는으로 설정 합니다 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값입니다. 경우는 [ `Switch` ](xref:Xamarin.Forms.Switch) 설정/해제는 `OnEmptyViewSwitchToggled` 이벤트 처리기가 실행 되는 `ToggleEmptyView` 메서드:
+이 XAML은 페이지 [`ContentView`](xref:Xamarin.Forms.ContentView) 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에서 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 될 `ContentView` 개체를 [`Switch`](xref:Xamarin.Forms.Switch) 제어 하는 개체를 사용 하 여 두 개체를 정의 합니다. 가 전환 되 면 이벤트 처리기가 `ToggleEmptyView` 메서드를 실행 합니다. `OnEmptyViewSwitchToggled` [`Switch`](xref:Xamarin.Forms.Switch)
 
 ```csharp
 void ToggleEmptyView(bool isToggled)
@@ -251,15 +251,15 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-`ToggleEmptyView` 메서드 집합을 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 `collectionView` 개체 중 하나를 [ `ContentView` ](xref:Xamarin.Forms.ContentView) 에 저장 된 개체를 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)의 값에 기반 합니다 [ `Switch.IsToggled` ](xref:Xamarin.Forms.Switch.IsToggled) 속성입니다. 경우는 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 실행 합니다 `FilterCommand`, 컬렉션으로 표시를 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 에 저장 된 검색 용어에 대 한 필터링 된를 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성입니다. 필터링 작업에 없는 데이터를 생성 하는 경우는 `ContentView` 개체로는 `EmptyView` 속성이 표시 됩니다.
+메서드 `ToggleEmptyView` [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) 는 속성 값 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 에 따라 `collectionView` 개체의 속성을에 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)저장 된 [`ContentView`](xref:Xamarin.Forms.ContentView) 두 개체 중 하나로 설정 합니다. [`CollectionView`](xref:Xamarin.Forms.CollectionView) 가를 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 실행 하면에서 표시 하는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. `FilterCommand` 필터링 작업에서 데이터가 `ContentView` 생성 되지 않으면 `EmptyView` 속성으로 설정 된 개체가 표시 됩니다.
 
-[![IOS 및 Android에서 교체 된 빈 뷰를 사용 하 여 CollectionView 세로 목록 스크린샷](emptyview-images/swap.png "바뀌었으면된 빈 뷰를 사용 하 여 세로 목록 CollectionView")](emptyview-images/swap-large.png#lightbox "CollectionView 세로 목록 빈 뷰를 교환합니다.")
+비어 있는 보기가 포함 된 [ ![CollectionView 세로 목록에서 비어 있는 보기, IOS 및 Android](emptyview-images/swap.png "CollectionView 세로 목록") 으로 교체 하는 스크린샷] (emptyview-images/swap-large.png#lightbox "비어 있는 뷰가 있는 CollectionView 세로 목록")
 
-리소스 사전에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms 리소스가](~/xamarin-forms/xaml/resource-dictionaries.md)합니다.
+리소스 사전에 대 한 자세한 내용은 [Xamarin.ios 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)을 참조 하세요.
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>런타임에 EmptyViewTemplate 선택
 
-모양의 합니다 [ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 해당 값을 기준으로 설정 하 여 런타임 시 선택할 수 있습니다 합니다 [ `CollectionView.EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성을을 [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) 개체:
+의 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 모양은 [`CollectionView.EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 [을개체로설정하여런타임에해당값을기준으로선택할수있습니다.`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)
 
 ```xaml
 <ContentPage ...
@@ -290,7 +290,7 @@ void ToggleEmptyView(bool isToggled)
 </ContentPage>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
@@ -302,11 +302,11 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-[ `EmptyView` ](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성 및 [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성를 `SearchTermDataTemplateSelector` 개체.
+속성은 속성 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 으로 설정 되 고 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성은 `SearchTermDataTemplateSelector` 개체로 설정 됩니다. [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView)
 
-경우는 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 실행 합니다 `FilterCommand`, 컬렉션으로 표시를 [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) 에 저장 된 검색 용어에 대 한 필터링 된를 [ `SearchBar.Text` ](xref:Xamarin.Forms.SearchBar.Text) 속성입니다. 필터링 작업에 없는 데이터를 생성 하는 경우는 [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 에서 선택한를 `SearchTermDataTemplateSelector` 개체도 설정 됩니다는 [ `EmptyViewTemplate` ](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 표시 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 가를 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 실행 하면에서 표시 하는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. `FilterCommand` 필터링 작업에서 데이터를 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 생성 하지 않으면 `SearchTermDataTemplateSelector` [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 개체에서 선택한가 속성으로 설정 되 고 표시 됩니다.
 
-다음 예제는 `SearchTermDataTemplateSelector` 클래스:
+다음 예제에서는 클래스를 `SearchTermDataTemplateSelector` 보여 줍니다.
 
 ```csharp
 public class SearchTermDataTemplateSelector : DataTemplateSelector
@@ -322,15 +322,15 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-합니다 `SearchTermTemplateSelector` 클래스 정의 `DefaultTemplate` 하 고 `OtherTemplate` [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) 다른 데이터 템플릿에 설정 된 속성을 합니다. 합니다 `OnSelectTemplate` 반환 재정의 `DefaultTemplate`, 검색 쿼리 "xamarin"과 같지 않습니다 때 사용자에 게 메시지를 표시 하는 합니다. 검색 쿼리 "xamarin" 다음과 같을 경우 합니다 `OnSelectTemplate` 반환 재정의 `OtherTemplate`, 사용자에 게 기본 메시지를 표시 하는:
+클래스 `SearchTermTemplateSelector` 는 다른 `DefaultTemplate` 데이터 `OtherTemplate` 템플릿으로 설정 된 및 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. 재정의 `OnSelectTemplate` 는 검색 `DefaultTemplate`쿼리가 "xamarin"과 같지 않은 경우 사용자에 게 메시지를 표시 하는을 반환 합니다. 검색 쿼리가 "xamarin"과 같을 때 재정의는 사용자에 `OnSelectTemplate` 게 기본 `OtherTemplate`메시지를 표시 하는를 반환 합니다.
 
-[![CollectionView 런타임 빈 뷰 템플릿 선택, iOS 및 Android에서 스크린샷](emptyview-images/datatemplateselector.png "수집 뷰의 런타임 빈 뷰 템플릿 선택을")](emptyview-images/datatemplateselector-large.png#lightbox "런타임 빈 뷰 템플릿 수집 뷰의 선택")
+[CollectionView의 ![CollectionView 런타임 빈 뷰 템플릿 선택, IOS 및 Android](emptyview-images/datatemplateselector.png "runtime의 빈 뷰 템플릿 선택 항목") 의 스크린샷] (emptyview-images/datatemplateselector-large.png#lightbox "CollectionView의 런타임 빈 뷰 템플릿 선택")
 
-데이터 템플릿 선택기에 대 한 자세한 내용은 참조 하세요. [Xamarin.Forms DataTemplateSelector 만들](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)합니다.
+데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
-- [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Xamarin.Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin Forms 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Xamarin. Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

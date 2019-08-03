@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 321448453ebe38bd7d43665a3c8bade4fe0f68c2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645249"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739173"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
@@ -24,7 +24,7 @@ _Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베�
 
 Xamarin.Forms 애플리케이션은 [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) 패키지를 사용하여 NuGet에서 제공되는 `SQLite` 클래스를 참조하여 데이터베이스 작업을 공유 코드에 통합할 수 있습니다. 데이터베이스 작업은 Xamarin.Forms 솔루션의.NET 표준 라이브러리 프로젝트에서 정의할 수 있습니다.
 
-함께 제공되는 [애플리케이션 예제](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo)는 간단한 할 일 목록 애플리케이션입니다. 다음 스크린샷에서는 각 플랫폼에서 샘플이 어떻게 나타나는지를 보여 줍니다.
+함께 제공되는 [애플리케이션 예제](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)는 간단한 할 일 목록 애플리케이션입니다. 다음 스크린샷에서는 각 플랫폼에서 샘플이 어떻게 나타나는지를 보여 줍니다.
 
 [![Xamarin.Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 페이지 스크린샷") [![Xamarin.Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 페이지 스크린샷")
 
@@ -124,4 +124,3 @@ Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베�
 
 - [Todo 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 - [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-

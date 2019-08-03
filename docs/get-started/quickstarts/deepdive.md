@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: c0e772e0207d2ccc9a94aefd9655dc1bb6776bba
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 997c9e023a743b8e5128ffc566e50da63652f945
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653477"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739011"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.ios 빠른 시작 심층 살펴보기
 
@@ -189,7 +189,7 @@ namespace Notes.Droid
 
 ::: zone pivot="windows"
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
 
 UWP(유니버설 Windows 플랫폼) 애플리케이션에서 Xamarin.Forms 프레임워크를 초기화하는 `Init` 메서드가 `App` 클래스에서 호출됩니다.
 
@@ -474,7 +474,7 @@ Xamarin Forms 응용 프로그램에는 동일한 모양의 여러 시각적 요
 > [!NOTE]
 > 일반적으로 Xamarin.ios 응용 프로그램 스타일 지정은 XAML 스타일을 사용 하 여 수행 됩니다. 그러나 Xamarin.ios는 CSS (CSS 스타일시트)를 사용 하 여 시각적 요소 스타일 지정도 지원 합니다. 자세한 내용은 [CSS (CSS 스타일시트를 사용 하 여 xamarin.ios 앱 스타일](~/xamarin-forms/user-interface/styles/css/index.md)지정을 참조 하세요.
 
-XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)을 참조하세요.
+XAML 스타일에 대 한 자세한 내용은 참조 하세요. [XAML 스타일을 사용 하 여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)합니다.
 
 ### <a name="providing-platform-specific-styles"></a>플랫폼별 스타일 제공
 
@@ -532,7 +532,7 @@ Visual Studio와 Mac용 Visual Studio는 응용 프로그램을 테스트하고 
 
 ## <a name="related-links"></a>관련 링크
 
-- [XAML (eXtensible Application Markup Language)](~/xamarin-forms/xaml/index.md)
+- [XAML (eXtensible Application Markup Language)](~/xamarin-forms/xaml/index.yml)
 - [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)
 - [XAML 마크업 확장](~/xamarin-forms/xaml/markup-extensions/index.md)
