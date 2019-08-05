@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: d3fa958e999a10832d5fa15e4190077955b0e6df
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8fae741f308a8269facef5ca84d34adb48868aec
+ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997383"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68486018"
 ---
 # <a name="introduction-to-effects"></a>효과 소개
 
@@ -38,7 +38,7 @@ Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-inter
 
 다음 표는 각 플랫폼의 `PlatformEffect` 클래스에 대한 네임스페이스 및 해당 속성의 형식을 나열합니다.
 
-|플랫폼|네임스페이스|컨테이너|Control|
+|플랫폼|네임스페이스|컨테이너|컨트롤|
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms.Platform.iOS|UIView|UIView|
 |Android|Xamarin.Forms.Platform.Android|ViewGroup|보기|
@@ -54,7 +54,7 @@ Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-inter
 
 각 플랫폼별 `PlatformEffect` 클래스는 효과를 구현하도록 재정의되어야 하는 다음 메서드를 노출합니다.
 
-- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached) – 효과가 Xamarin.Forms 컨트롤에 연결될 때 호출됩니다. 각 플랫폼별 효과 클래스에서 이 메서드의 재정의된 버전은 지정된 Xamarin.Forms 컨트롤에 효과를 적용할 수 없는 경우의 예외 처리와 함께 컨트롤의 사용자 지정을 수행하는 위치입니다.
+- [`OnAttached`](xref:Xamarin.Forms.Effect.OnAttached) – 효과가 Xamarin.Forms 컨트롤에 연결될 때 호출됩니다. 플랫폼별 효과 클래스에서 이 메서드의 재정의된 버전은 지정된 Xamarin.Forms 컨트롤에 효과를 적용할 수 없는 경우의 예외 처리와 함께 컨트롤의 사용자 지정을 수행하는 위치입니다.
 - [`OnDetached`](xref:Xamarin.Forms.Effect.OnDetached) – 효과가 Xamarin.Forms 컨트롤에서 분리될 때 호출됩니다. 각 플랫폼별 효과 클래스에서 이 메서드의 재정의된 버전은 이벤트 처리기 등록 취소와 같은 효과 정리를 수행하는 위치입니다.
 
 또한 `PlatformEffect`는 재정의될 수 있는 [`OnElementPropertyChanged`](xref:Xamarin.Forms.PlatformEffect`2.OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)) 메서드를 노출합니다. 요소의 속성이 변경될 때 이 메서드가 호출됩니다. 각 플랫폼별 효과 클래스에서 이 메서드의 재정의된 버전은 Xamarin.Forms 컨트롤의 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다. 이 재정의는 여러 번 호출될 수 있으므로 변경되는 속성에 대한 검사는 항상 수행되어야 합니다.

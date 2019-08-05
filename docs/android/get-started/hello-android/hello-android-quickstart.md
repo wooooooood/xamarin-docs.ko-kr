@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 71343aa69cc7fa34fb716ea39454e6437a64169f
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c9f9fb7eecd41c3aeffb7a28042f944c9d6a320b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855083"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68644069"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
 _두 부분으로 구성된 이 가이드에서는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 애플리케이션을 빌드하고, Xamarin을 사용하여 Android 애플리케이션 개발에 대한 기본 사항을 이해하기 시작합니다._
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://developer.xamarin.com/samples/monodroid/Phoneword/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
 
 사용자가 입력한 영숫자 전화 번호를 숫자 전화 번호로 변환하고 해당 숫자 전화 번호를 사용자에게 표시하는 애플리케이션을 만듭니다. 최종 애플리케이션은 다음과 같습니다.
 
@@ -71,6 +71,11 @@ Visual Studio를 시작합니다. **파일 > 새로 만들기 > 프로젝트**�
 [![비어 있는 앱 템플릿 선택](hello-android-quickstart-images/vs/02-blank-app-w158-sml.png)](hello-android-quickstart-images/vs/02-blank-app-w158.png#lightbox)
 
 ## <a name="create-a-layout"></a>레이아웃 만들기
+
+> [!TIP]
+> 최신 버전의 Visual Studio에서는 Android Designer 내에서 .xml을 여는 것을 지원합니다.
+>
+> Android Designer에서는 .axml 파일과 .xml 파일이 모두 지원됩니다.
 
 새 프로젝트를 만든 후에 **솔루션 탐색기**에서 **리소스** 폴더 및 **레이아웃** 폴더를 차례로 확장합니다.
 **activity_main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. 앱의 화면에 대한 레이아웃 파일입니다.
@@ -290,6 +295,11 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 **새 Android 앱 구성** 대화 상자에서 솔루션 및 프로젝트 이름을 `Phoneword`로 설정해 두고 **만들기**를 클릭하여 프로젝트를 만듭니다.
 
 ## <a name="create-a-layout"></a>레이아웃 만들기
+
+> [!TIP]
+> 최신 버전의 Visual Studio에서는 Android Designer 내에서 .xml을 여는 것을 지원합니다.
+>
+> Android Designer에서는 .axml 파일과 .xml 파일이 모두 지원됩니다.
 
 새 프로젝트를 만든 후에 **솔루션** 패드에서 **리소스** 폴더 및 **레이아웃** 폴더를 차례로 확장합니다.
 **Main.axml**을 두 번 클릭하여 Android Designer에서 엽니다. Android Designer에서 볼 때 화면에 대한 레이아웃 파일입니다.
@@ -511,7 +521,7 @@ namespace Phoneword
 
 ## <a name="run-the-app"></a>앱 실행
 
-마지막으로 Android 장치 또는 에뮬레이터에서 애플리케이션을 실행하고 Phoneword를 변환하여 테스트합니다.
+마지막으로 Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하고 Phoneword를 변환하여 테스트합니다.
 
 [![완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 
@@ -525,4 +535,4 @@ Android 디바이스에서 앱을 실행하려면 [개발용 디바이스 설정
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin Android 앱 아이콘(ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword(샘플)](https://developer.xamarin.com/samples/monodroid/Phoneword)
+- [Phoneword(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)

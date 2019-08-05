@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670183"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509573"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 
@@ -141,7 +141,7 @@ Android의 이러한 고유한 기능은 복잡한 애플리케이션을 디자�
 
 ### <a name="phoneword-scenario---starting-with-an-activity"></a>Phoneword 시나리오 - 작업으로 시작
 
-에뮬레이터 또는 장치에서 처음으로 **Phoneword** 애플리케이션을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 애플리케이션 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 애플리케이션의 첫 번째 작업을 만들 때 전체 애플리케이션을 로드합니다.
+에뮬레이터 또는 디바이스에서 처음으로 **Phoneword** 응용 프로그램을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 애플리케이션 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 애플리케이션의 첫 번째 작업을 만들 때 전체 애플리케이션을 로드합니다.
 
 [![작업 부하](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
@@ -153,9 +153,14 @@ Android 애플리케이션을 통한 선형 진행이 없으므로(여러 위치
 
 ## <a name="user-interface"></a>사용자 인터페이스
 
+> [!TIP]
+> 최신 버전의 Visual Studio에서는 Android Designer 내에서 .xml을 여는 것을 지원합니다.
+>
+> Android Designer에서는 .axml 파일과 .xml 파일이 모두 지원됩니다.
+
 ::: zone pivot="windows"
 
-**activity_main.axml**은 응용 프로그램의 첫 번째 화면에 대한 사용자 인터페이스 레이아웃 파일입니다. .axml은 Android Designer 파일임을 나타냅니다(AXML은 *Android XML*을 의미함). *Main*이라는 이름은 Android의 관점에서 임의입니다.&ndash; 레이아웃 파일에는 다른 이름이 지정될 수 있습니다. IDE에서 **activity_main.axml**을 열 때 *Android Designer*라는 Android 레이아웃 파일에 대한 시각적 편집기를 표시합니다.
+**activity_main.axml**은 애플리케이션의 첫 번째 화면에 대한 사용자 인터페이스 레이아웃 파일입니다. .axml은 Android Designer 파일임을 나타냅니다(AXML은 *Android XML*을 의미함). *Main*이라는 이름은 Android의 관점에서 임의입니다.&ndash; 레이아웃 파일에는 다른 이름이 지정될 수 있습니다. IDE에서 **activity_main.axml**을 열 때 *Android Designer*라는 Android 레이아웃 파일에 대한 시각적 편집기를 표시합니다.
 
 [![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
@@ -193,7 +198,7 @@ Android 애플리케이션을 통한 선형 진행이 없으므로(여러 위치
 
 ::: zone-end
 
-이 XML 소스 코드에는 **텍스트(대규모)**, **일반 텍스트** 및 두 개의 **단추** 요소가 포함되어야 합니다. Android Designer의 심층 안내는 Xamarin Android [Designer 개요](~/android/user-interface/android-designer/index.md) 가이드를 참조하세요.
+이 XML 소스 코드에는 2개의 **TextView** 요소, 1개의 **EditText** 요소, 1개의 **Button** 요소, 총 4개의 컨트롤 요소가 포함되어야 합니다. Android Designer의 심층 안내는 Xamarin Android [Designer 개요](~/android/user-interface/android-designer/index.md) 가이드를 참조하세요.
 
 이제 사용자 인터페이스의 시각적 부분에 대한 도구 및 개념을 설명했습니다. 다음으로 작업 및 작업 수명 주기를 탐색하여 사용자 인터페이스를 구동하는 코드로 이동하겠습니다.
 
@@ -207,7 +212,7 @@ Android 애플리케이션을 통한 선형 진행이 없으므로(여러 위치
 
 **Phoneword** 애플리케이션에는 하나의 화면(작업)만이 있습니다. 화면을 구동하는 클래스는 `MainActivity`라고 하며 **MainActivity.cs** 파일에 배치됩니다. `MainActivity`라는 이름은 Android에서 특별한 의미가 없습니다. &ndash; 규칙이 애플리케이션에서 첫 번째 작업 이름을 지정하는 항목이지만 `MainActivity` 다른 이름을 지정하더라도 Android는 상관하지 않습니다.
 
-**MainActivity.cs**를 열 때 `MainActivity` 클래스가 `Activity` 클래스의 *하위 클래스*이며 작업이 [작업](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) 특성으로 표시됨을 확인할 수 있습니다.
+**MainActivity.cs**를 열 때 `MainActivity` 클래스가 `Activity` 클래스의 *하위 클래스*이며 작업이 [작업](xref:Android.App.ActivityAttribute) 특성으로 표시됨을 확인할 수 있습니다.
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]
@@ -312,7 +317,7 @@ translateButton.Click += (sender, e) =>
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
-Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 장치에서 애플리케이션 테스트하기에 대해 설명하며, 다양한 화면 밀도에서 사용자 지정 앱 아이콘을 만들기 위한 도구를 소개합니다.
+Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 응용 프로그램 테스트하기에 대해 설명하며, 다양한 화면 밀도에서 사용자 지정 앱 아이콘을 만들기 위한 도구를 소개합니다.
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
@@ -320,13 +325,13 @@ Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하�
 
 ### <a name="deploy-to-a-device"></a>디바이스에 배포
 
-애플리케이션을 배포하고 테스트하는 데 에뮬레이터를 사용하는 것이 좋지만 사용자는 에뮬레이터에서 최종 앱을 사용하지 않습니다. 조기에 자주 실제 장치에서 애플리케이션을 테스트하는 것이 좋습니다.
+애플리케이션을 배포하고 테스트하는 데 에뮬레이터를 사용하는 것이 좋지만 사용자는 에뮬레이터에서 최종 앱을 사용하지 않습니다. 조기에 자주 실제 디바이스에서 응용 프로그램을 테스트하는 것이 좋습니다.
 
-애플리케이션을 테스트하기 위해 Android 장치를 사용하기 전에 개발을 위해 구성해야 합니다. [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침을 제공합니다.
+응용 프로그램을 테스트하기 위해 Android 디바이스를 사용하기 전에 개발을 위해 구성해야 합니다. [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침을 제공합니다.
 
 ::: zone pivot="windows"
 
-장치를 구성한 후에 플러그 인하고, **장치 선택** 대화 상자에서 선택하고, 애플리케이션을 시작하여 배포할 수 있습니다.
+디바이스를 구성한 후에 플러그 인하고, **디바이스 선택** 대화 상자에서 선택하고, 응용 프로그램을 시작하여 배포할 수 있습니다.
 
 ![디버그 디바이스 선택](hello-android-deepdive-images/vs/06-select-device.png "디버그 디바이스 선택")
 
@@ -339,7 +344,7 @@ Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하�
 
 ::: zone-end
 
-그러면 장치에서 애플리케이션을 시작합니다.
+그러면 디바이스에서 응용 프로그램을 시작합니다.
 
 [![Phoneword 입력](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 

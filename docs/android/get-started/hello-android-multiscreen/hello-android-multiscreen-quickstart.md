@@ -9,18 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
-ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
+ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418662"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643970"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
 _두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확장하여 두 번째 화면을 처리합니다. 이 과정에서 Android 아키텍처에 대해 자세히 알아보려면 기본 Android 애플리케이션 구성 요소를 도입합니다._
 
-이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) 애플리케이션에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 애플리케이션](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
+이 가이드의 연습 부분에서는 앱을 사용하여 변역된 숫자의 기록을 추적하기 위해 두 번째 화면을 [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword) 애플리케이션에 추가합니다. 오른쪽 스크린샷에 표시된 것처럼 [최종 애플리케이션](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)에 "변환된" 수를 표시하는 두 번째 화면이 포함됩니다.
 
 [![예제 앱 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -29,7 +29,7 @@ _두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확
 ## <a name="requirements"></a>요구 사항
 
 이 가이드가 [Hello, Android](~/android/get-started/hello-android/index.md)를 사용하지 않는 위치를 선택하기 때문에 [Hello, Android 빠른 시작](~/android/get-started/hello-android/hello-android-quickstart.md)을 완료해야 합니다.
-아래의 연습으로 직접 이동하려는 경우 전체 버전의 [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/)(Hello, Android 빠른 시작)를 다운로드하고 시작하여 연습을 시작할 수 있습니다.
+아래의 연습으로 직접 이동하려는 경우 전체 버전의 [Phoneword](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)(Hello, Android 빠른 시작)를 다운로드하고 시작하여 연습을 시작할 수 있습니다.
 
 ## <a name="walkthrough"></a>연습
 
@@ -38,6 +38,11 @@ _두 부분으로 구성된 이 가이드는 Phoneword 애플리케이션을 확
 ::: zone pivot="windows"
 
 Visual Studio에서 **Phoneword** 애플리케이션을 열고 **솔루션 탐색기**에서 **Main.axml** 파일을 편집하여 시작합니다.
+
+> [!TIP]
+> 최신 버전의 Visual Studio에서는 Android Designer 내에서 .xml을 여는 것을 지원합니다.
+>
+> Android Designer에서는 .axml 파일과 .xml 파일이 모두 지원됩니다.
 
 ### <a name="updating-the-layout"></a>레이아웃 업데이트
 
@@ -169,7 +174,7 @@ translateButton.Click += (sender, e) =>
 
 ### <a name="running-the-app"></a>앱 실행
 
-에뮬레이터 또는 장치에 애플리케이션을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
+에뮬레이터 또는 디바이스에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -177,6 +182,11 @@ translateButton.Click += (sender, e) =>
 ::: zone pivot="macos"
 
 Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패드**에서 **Main.axml** 파일을 편집하여 시작합니다.
+
+> [!TIP]
+> 최신 버전의 Visual Studio에서는 Android Designer 내에서 .xml을 여는 것을 지원합니다.
+>
+> Android Designer에서는 .axml 파일과 .xml 파일이 모두 지원됩니다.
 
 ### <a name="updating-the-layout"></a>레이아웃 업데이트
 
@@ -302,7 +312,7 @@ translateButton.Click += (sender, e) =>
 
 ### <a name="running-the-app"></a>앱 실행
 
-에뮬레이터 또는 장치에 애플리케이션을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
+에뮬레이터 또는 디바이스에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -313,5 +323,5 @@ translateButton.Click += (sender, e) =>
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin 앱 아이콘 및 시작 화면(ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
-- [Phoneword(샘플)](https://developer.xamarin.com/samples/monodroid/Phoneword)
-- [PhonewordMultiscreen(샘플)](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen)
+- [Phoneword(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phoneword)
+- [PhonewordMultiscreen(샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/phonewordmultiscreen)

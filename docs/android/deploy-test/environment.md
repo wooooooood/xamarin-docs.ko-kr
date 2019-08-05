@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: f0ad51738e0bbe785773f653b06fe5f582527f0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 722dfbb301d6698ee58d42029c8f6b82ecddc37b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120881"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508992"
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -36,7 +36,7 @@ Xamarin.Android 4.6부터 시스템 속성 및 환경 변수는 모두 앱별로
 
 *key*가 대문자로 시작될 경우 *key*는 환경 변수로 취급되며, 프로세스 시작 시 지정된 *value*로 환경 변수를 설정하기 위해 **setenv**(3)가 사용됩니다.
 
-*key*가 소문자로 시작하는 경우 *key*가 Android 시스템 속성으로 취급되고 *value*는 *default value*가 됩니다. Android 시스템 속성 저장소에서 Xamarin.Android 실행 동작을 제어하는 Android 시스템 속성이 먼저 조회되고, 값이 없을 경우 환경 파일에 지정된 값이 사용됩니다. 이는 진단을 위해 환경 파일에서 제공되는 값을 재정의할 때 `adb shell setprop`를 사용하도록 허용하기 위한 것입니다.
+‘key’가 소문자로 시작될 경우 ‘key’는 Android 시스템 속성으로 취급되며, ‘value’는 ‘default value’가 됩니다.     Android 시스템 속성 저장소에서 Xamarin.Android 실행 동작을 제어하는 Android 시스템 속성이 먼저 조회되고, 값이 없을 경우 환경 파일에 지정된 값이 사용됩니다. 이는 진단을 위해 환경 파일에서 제공되는 값을 재정의할 때 `adb shell setprop`를 사용하도록 허용하기 위한 것입니다.
 
 ## <a name="xamarinandroid-environment-variables"></a>Xamarin.Android 환경 변수
 
@@ -49,7 +49,7 @@ Xamarin.Android는 `adb shell setprop debug.mono.env` 또는 `$(AndroidEnvironme
 
 Xamarin.Android 6.1에서는 이 환경 변수가 기본적으로 설정되지 않으며 [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1)가 사용됩니다.
 
-또는 네트워크 액세스에 [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)을 사용하도록 `Xamarin.Android.Net.AndroidClientHandler` 값이 지정되어
+또는 네트워크 액세스에 [`java.net.URLConnection`](xref:Java.Net.URLConnection)을 사용하도록 `Xamarin.Android.Net.AndroidClientHandler` 값이 지정되어
 Android에서 지원하는 경우 TLS 1.2의 사용을 허용*할* 수 있습니다.
 
 Xamarin.Android 6.1에 추가되었습니다.
@@ -90,12 +90,12 @@ Xamarin.Android는 `adb shell setprop` 또는 `$(AndroidEnvironment)` 빌드 동
 Xamarin.Android가 `adb logcat`에 로깅할 추가 정보를 제어합니다.
 쉼표로 구분된 문자열(`,`)이며, 다음 값 중 하나를 포함합니다.
 
-* `all`: *모든* 메시지를 인쇄합니다. 이는 `lref` 메시지를 포함하므로 좋은 방법이 아닙니다.
+* `all`: ‘모든’ 메시지를 인쇄합니다.  이는 `lref` 메시지를 포함하므로 좋은 방법이 아닙니다.
 * `assembly`: `.apk` 및 어셈블리 구문 분석 메시지를 인쇄합니다.
 * `gc`: GC 관련 메시지를 인쇄합니다.
 * `gref`: JNI 전역 참조 메시지를 인쇄합니다.
-* `lref`: JNI 논리 참조 메시지를 인쇄합니다.  
-    *참고*: 이는 *실제로* `adb logcat`을 스팸 처리합니다.  
+* `lref`: JNI 로컬 참조 메시지를 인쇄합니다.  
+    *참고*: 이는 ‘실제로’ `adb logcat`을 스팸 처리합니다.   
     Xamarin.Android 5.1에서는 *gigantic*.Avoid를 받을 수 있는 `.__override__/lrefs.txt` 파일도  
     만듭니다.
 * `timing`: 일부 메서드 타이밍 정보를 인쇄합니다. 이는 또한 `.__override__/methods.txt` 및 `.__override__/counters.txt` 파일도 만듭니다.

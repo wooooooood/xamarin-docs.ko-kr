@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f488ebe1df814a476346de15c740093fc6de54df
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 6757f25cb54adc464f7e41a1cd59db8cf6c7d22a
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854693"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511707"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Xamarin.iOS 앱 단위 테스트
 
@@ -119,11 +119,10 @@ namespace Fixtures {
 ## <a name="writing-new-tests"></a>새 테스트 작성
 
 NUnitLite는 [Touch.Unit](https://github.com/xamarin/Touch.Unit) 프로젝트라고 하는 NUnit의 수정된 버전입니다. [NUnit](http://nunit.com/)의 아이디어를 기반으로 하고 해당 기능의 일부를 제공하는 간단한 .NET 테스트 프레임워크입니다.
-최소한의 리소스를 사용하며, 포함 및 모바일 개발에 사용되는 플랫폼과 같은 리소스 제한 플랫폼에서 실행됩니다. Xamarin.iOS에서 사용할 수 있는 [NUnitLite API를 탐색](https://developer.xamarin.com/api/namespace/NUnitLite/)할 수 있습니다. 단위 테스트 템플릿에서 제공하는 기본 구조를 사용하면 주 진입점은 [Assert 클래스](https://developer.xamarin.com/api/type/NUnit.Framework.Assert/) 메서드가 됩니다.
+최소한의 리소스를 사용하며, 포함 및 모바일 개발에 사용되는 플랫폼과 같은 리소스 제한 플랫폼에서 실행됩니다. NUnitLite API는 Xamarin.iOS에서 사용할 수 있습니다. 단위 테스트 템플릿에서 제공하는 기본 구조를 사용하면 주 진입점은 [Assert 클래스](xref:NUnit.Framework.Assert) 메서드가 됩니다.
 
 Assert 클래스 메서드 외에도 단위 테스트 기능은 NUnitLite의 일부인 다음 네임스페이스에서 분할됩니다.
 
-- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
-- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
-- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
-- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
+- [NUnit.Framework](xref:NUnit.Framework)
+- [NUnit.Constraints](xref:NUnit.Framework.Constraints)
+- [NUniteLite.Runner](xref:NUnitLite.Runner)

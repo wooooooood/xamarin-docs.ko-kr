@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
-ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
+ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58751256"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68647045"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -105,7 +105,7 @@ namespace Phoneword_iOS
 
 ### <a name="application-delegate"></a>애플리케이션 대리자
 
-iOS에서 *응용 프로그램 대리자* 클래스는 시스템 이벤트를 처리합니다. 이 클래스는 **AppDelegate.cs** 안에 있습니다. `AppDelegate` 클래스는 애플리케이션 *창*을 관리합니다. 창은 사용자 인터페이스에 대한 컨테이너 역할을 하는 `UIWindow` 클래스의 단일 인스턴스입니다. 기본적으로 애플리케이션은 콘텐츠를 로드할 하나의 창만 가져오고, 창은 실제 장치 화면의 크기와 일치하는 경계 사각형을 제공하는 *화면*(단일 `UIScreen` 인스턴스)에 연결됩니다.
+iOS에서 *응용 프로그램 대리자* 클래스는 시스템 이벤트를 처리합니다. 이 클래스는 **AppDelegate.cs** 안에 있습니다. `AppDelegate` 클래스는 애플리케이션 *창*을 관리합니다. 창은 사용자 인터페이스에 대한 컨테이너 역할을 하는 `UIWindow` 클래스의 단일 인스턴스입니다. 기본적으로 응용 프로그램은 콘텐츠를 로드할 하나의 창만 가져오고, 창은 실제 디바이스 화면의 크기와 일치하는 경계 사각형을 제공하는 *화면*(단일 `UIScreen` 인스턴스)에 연결됩니다.
 
 또한 *AppDelegate*는 앱 시작이 종료될 때 또는 메모리가 부족할 때와 중요한 애플리케이션 이벤트에 대한 시스템 업데이트를 구독하는 역할을 합니다.
 
@@ -401,7 +401,7 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
-Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 장치에서 애플리케이션 테스트하기에 대해 설명하며, 사용자 지정 앱 아이콘 및 시작 이미지를 만들기 위한 도구를 소개합니다.
+Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 응용 프로그램 테스트하기에 대해 설명하며, 사용자 지정 앱 아이콘 및 시작 이미지를 만들기 위한 도구를 소개합니다.
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
@@ -409,12 +409,12 @@ Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하�
 
 ### <a name="deploy-to-a-device"></a>디바이스에 배포
 
-iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 애플리케이션은 조기에 그리고 자주 실제 장치에서 테스트해야 합니다.
+iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 응용 프로그램은 조기에 그리고 자주 실제 디바이스에서 테스트해야 합니다.
 
 디바이스를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침이 나와 있습니다.
 
 > [!NOTE]
-> 현재 Apple의 요구 사항에 따라 디바이스 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 _서명 ID_가 필요합니다. 이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
+> 현재 Apple의 요구 사항에 따라 물리적 디바이스 또는 시뮬레이터용 코드를 빌드하려면 개발 인증서 또는 ‘서명 ID’가 필요합니다.  이를 설정하려면 [디바이스 프로비전 가이드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md)의 단계를 수행합니다.
 
 디바이스가 프로비전되고 나면, 다음 스크린샷에 표시된 것처럼 플러그 인하고 빌드 도구 모음에 있는 대상을 iOS 디바이스로 변경한 다음, **Start**(**Play**) 키를 눌러 배포할 수 있습니다.
 
@@ -462,6 +462,6 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Hello, iOS(샘플)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [iOS 프로비전 포털](https://developer.apple.com/account/#/overview)

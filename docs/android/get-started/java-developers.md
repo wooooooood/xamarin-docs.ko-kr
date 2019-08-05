@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f3fb083457fa1fbf6590eb53eea504257e93ecc6
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: d59d4fc3ff9df3ea883ab4d5845da193e6cb8c51
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617776"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68643784"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 
@@ -21,7 +21,7 @@ _Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 기본적으로 Xamarin.Android 응용 프로그램을 개발하는 동안 발생할 수 있는 C# 언어 기능에 집중하여 Java 개발자를 위한 C# 프로그래밍에 대해 소개합니다. 또한 이러한 기능과 해당 Java 기능의 차이점을 설명하고, Java에서 사용할 수 없는 중요한 C# 기능(Xamarin.Android와 관련됨)을 소개합니다. 추가 참조 자료에 대한 링크가 포함되어 있으므로 이 문서를 C# 및 .NET에 대한 추가 학습을 위한 "시작" 지점으로 사용할 수 있습니다.
+이 문서에서는 기본적으로 Xamarin.Android 애플리케이션을 개발하는 동안 발생할 수 있는 C# 언어 기능에 집중하여 Java 개발자를 위한 C# 프로그래밍에 대해 소개합니다. 또한 이러한 기능과 해당 Java 기능의 차이점을 설명하고, Java에서 사용할 수 없는 중요한 C# 기능(Xamarin.Android와 관련됨)을 소개합니다. 추가 참조 자료에 대한 링크가 포함되어 있으므로 이 문서를 C# 및 .NET에 대한 추가 학습을 위한 "시작" 지점으로 사용할 수 있습니다.
 
 Java에 익숙한 경우 집에서 C# 구문과 더불어 즉시 경험할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, C#은 Java, C 및 C++와 같은 "중괄호" 언어입니다. C# 구문은 여러 가지 방식에서 Java 구문의 상위 집합처럼 읽지만, 몇 가지 키워드가 추가되고 이름이 바뀌었습니다.
 
@@ -74,7 +74,7 @@ C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Androi
 
 -   [속성](#properties) &ndash; C#의 속성 시스템을 사용하면 setter 및 getter 메서드를 작성하지 않고도 멤버 변수에 안전하게 직접 액세스할 수 있습니다.
 
--   [람다 식](#lambdas) &ndash; C#에서는 무명 메서드(*람다*라고도 함)를 사용하여 기능을 더 간결하고 더 효율적으로 표현할 수 있습니다. 일회용 개체를 작성해야 하는 오버헤드를 방지할 수 있으며, 매개 변수를 추가할 필요 없이 로컬 상태를 메서드에 전달할 수 있습니다.
+-   [람다 식](#lambdas) &ndash; C#에서는 무명 메서드(‘람다’라고도 함)를 사용하여 기능을 더 간결하고 더 효율적으로 표현할 수 있습니다.  일회용 개체를 작성해야 하는 오버헤드를 방지할 수 있으며, 매개 변수를 추가할 필요 없이 로컬 상태를 메서드에 전달할 수 있습니다.
 
 -   [이벤트 처리](#events) &ndash; C#은 *이벤트 구동 프로그래밍*에 대한 언어 수준 지원을 제공합니다. 이 경우 개체는 관심 있는 이벤트가 발생할 때 알림을 받도록 등록할 수 있습니다. `event` 키워드는 게시자 클래스에서 이벤트 구독자에게 알리는 데 사용할 수 있는 멀티캐스트 브로드캐스트 메커니즘을 정의합니다.
 
@@ -174,7 +174,7 @@ Java와 C# 모두는 다음과 같이 매우 비슷한 개체 지향 프로그�
 
 -   모든 클래스 인스턴스는 `new` 연산자를 통해 힙에 만들어집니다.
 
--   두 언어 모두에서 가비지 수집을 사용하므로 사용되지 않는 개체를 명시적으로 해제하는 방법이 있습니다(즉, C++에 있는 것과 같은 `delete` 키워드가 없음).
+-   두 언어 모두에서 가비지 수집을 사용하므로 사용되지 않는 개체를 명시적으로 릴리스하는 방법은 없습니다(즉, C++에 있는 것과 같은 `delete` 키워드가 없음).
 
 -   상속을 통해 클래스를 확장할 수 있으며, 두 언어는 모두 형식별로 하나의 기본 클래스만 허용합니다.
 
@@ -387,19 +387,19 @@ startActivityButton.Click += (sender, e) => {
 
 대리자의 가입을 취소할 수는 있지만(`-=` 연산자를 통해) 람다 식의 가입은 취소할 수 없습니다. 이렇게 하려고 하면 메모리 누수가 발생할 수 있습니다. 처리기에서 이벤트 구독을 취소하지 않을 경우에만 람다 형태의 이벤트 등록을 사용합니다.
 
-일반적으로 람다 식은 Xamarin.Android 코드에서 이벤트 처리기를 선언하는 데 사용됩니다. 이벤트 처리기를 선언하는 이 간단한 방법은 처음에는 신비롭게 보일 수 있지만, 코드를 작성하고 읽을 때 엄청난 시간을 절약합니다. 숙련도가 높아짐에 따라 Xamarin.Android 코드에서 자주 발생하는 이 패턴을 인식하는 데 익숙해지고, 응용 프로그램의 비즈니스 논리를 고려하는 데 더 많은 시간을 들이고 구문 오버헤드에 걸리는 시간을 줄일 수 있습니다.
+일반적으로 람다 식은 Xamarin.Android 코드에서 이벤트 처리기를 선언하는 데 사용됩니다. 이벤트 처리기를 선언하는 이 간단한 방법은 처음에는 신비롭게 보일 수 있지만, 코드를 작성하고 읽을 때 엄청난 시간을 절약합니다. 숙련도가 높아짐에 따라 Xamarin.Android 코드에서 자주 발생하는 이 패턴을 인식하는 데 익숙해지고, 애플리케이션의 비즈니스 논리를 고려하는 데 더 많은 시간을 들이고 구문 오버헤드에 걸리는 시간을 줄일 수 있습니다.
 
 
 <a name="async" />
 
 ## <a name="asynchronous-programming"></a>비동기 프로그래밍
 
-*비동기 프로그래밍*은 응용 프로그램의 전반적인 응답성을 향상시키는 방법입니다. 비동기 프로그래밍 기능을 사용하면 시간이 오래 걸리는 작업에서 앱의 일부를 차단하는 한편 앱 코드의 나머지 부분은 계속 실행할 수 있습니다.
+*비동기 프로그래밍*은 애플리케이션의 전반적인 응답성을 향상시키는 방법입니다. 비동기 프로그래밍 기능을 사용하면 시간이 오래 걸리는 작업에서 앱의 일부를 차단하는 한편 앱 코드의 나머지 부분은 계속 실행할 수 있습니다.
 웹에 액세스하고, 이미지를 처리하고, 파일을 읽고 쓰는 작업은 비동기적으로 작성되지 않은 경우 전체 앱이 정지된 것처럼 보일 수 있는 작업의 예입니다.
 
-C#에는 `async` 및 `await` 키워드를 통한 비동기 프로그래밍에 대한 언어 수준 지원이 포함되어 있습니다. 이러한 언어 기능을 사용하면 응용 프로그램의 기본 스레드를 차단하지 않고 장기 실행 작업을 수행하는 코드를 매우 쉽게 작성할 수 있습니다. 간단히 말해, 메서드에 대해 `async` 키워드를 사용하여 메서드의 코드가 비동기적으로 실행되고 호출자의 스레드를 차단하지 않음을 나타냅니다. `async`로 표시된 메서드를 호출하는 경우 `await` 키워드를 사용합니다. 컴파일러는 `await`를 메서드 실행이 백그라운드 스레드로 이동되는 지점으로 해석합니다(작업이 호출자에게 반환됨). 이 작업이 완료되면 코드의 `await` 지점에 있는 호출자의 스레드에서 코드 실행이 다시 시작되어 `async` 호출의 결과를 반환합니다. 규칙에 따라 비동기적으로 실행되는 메서드의 이름 뒤에는 `Async`가 붙습니다.
+C#에는 `async` 및 `await` 키워드를 통한 비동기 프로그래밍에 대한 언어 수준 지원이 포함되어 있습니다. 이러한 언어 기능을 사용하면 애플리케이션의 기본 스레드를 차단하지 않고 장기 실행 작업을 수행하는 코드를 매우 쉽게 작성할 수 있습니다. 간단히 말해, 메서드에 대해 `async` 키워드를 사용하여 메서드의 코드가 비동기적으로 실행되고 호출자의 스레드를 차단하지 않음을 나타냅니다. `async`로 표시된 메서드를 호출하는 경우 `await` 키워드를 사용합니다. 컴파일러는 `await`를 메서드 실행이 백그라운드 스레드로 이동되는 지점으로 해석합니다(작업이 호출자에게 반환됨). 이 작업이 완료되면 코드의 `await` 지점에 있는 호출자의 스레드에서 코드 실행이 다시 시작되어 `async` 호출의 결과를 반환합니다. 규칙에 따라 비동기적으로 실행되는 메서드의 이름 뒤에는 `Async`가 붙습니다.
 
-Xamarin.Android 응용 프로그램에서 `async`과 `await`는 일반적으로 UI 스레드를 해제하여 백그라운드 작업에서 장시간 실행되는 동안 사용자 입력(예: **취소** 단추 태핑)에 응답할 수 있도록 하는 데 사용됩니다.
+Xamarin.Android 애플리케이션에서 `async`과 `await`는 일반적으로 UI 스레드를 해제하여 백그라운드 작업에서 장시간 실행되는 동안 사용자 입력(예: **취소** 단추 태핑)에 응답할 수 있도록 하는 데 사용됩니다.
 
 다음 예제에서는 단추 클릭 이벤트 처리기에서 비동기 작업으로 인해 웹에서 이미지를 다운로드합니다.
 
@@ -448,7 +448,7 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.|
 
 
-또한 C#에 고유하고 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://developer.xamarin.com/samples/android/all/)를 읽을 때 유용하게 참조할 수 있습니다.
+또한 C#에 고유하고 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)를 읽을 때 유용하게 참조할 수 있습니다.
 
 |C#|설명|
 |---|---|
@@ -473,7 +473,7 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 |[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|관련 변수 그룹을 캡슐화하는 값 형식입니다.|
 |[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|개체의 형식을 가져옵니다.|
 |[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|암시적으로 형식화된 지역 변수를 선언합니다.|
-|[값](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
+|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|파생 클래스에서 메서드를 재정의할 수 있도록 합니다.|
 
 
@@ -481,9 +481,9 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 
 ## <a name="interoperating-with-existing-java-code"></a>기존 Java 코드와의 상호 운용
 
-C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.Android 응용 프로그램에서 두 가지 방법을 통해 기존 Java 라이브러리를 다시 사용할 수 있습니다.
+C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.Android 애플리케이션에서 두 가지 방법을 통해 기존 Java 라이브러리를 다시 사용할 수 있습니다.
 
--  **Java 바인딩 라이브러리 만들기** &ndash; 이 방법을 사용하면 Xamarin 도구를 사용하여 Java 형식에 대한 C# 래퍼를 생성할 수 있습니다. 이러한 래퍼를 *바인딩*이라고 합니다. 따라서 Xamarin.Android 응용 프로그램은 이러한 래퍼로 호출하여 *.jar* 파일을 사용할 수 있습니다.
+-  **Java 바인딩 라이브러리 만들기** &ndash; 이 방법을 사용하면 Xamarin 도구를 사용하여 Java 형식에 대한 C# 래퍼를 생성할 수 있습니다. 이러한 래퍼를 *바인딩*이라고 합니다. 따라서 Xamarin.Android 애플리케이션은 이러한 래퍼로 호출하여 *.jar* 파일을 사용할 수 있습니다.
 
 -  **Java 기본 인터페이스** &ndash; *JNI(Java 기본 인터페이스)* 는 C# 앱에서 Java 코드로 호출하거나 호출할 수 있게 하는 프레임워크입니다.
 
@@ -497,7 +497,7 @@ MSDN [C# 프로그래밍 가이드](https://docs.microsoft.com/dotnet/csharp/pro
 
 Java 지식에서 최소한 Java 언어를 알고 있는 만큼 Java 클래스 라이브러리에 대해 익숙해야 한다는 점과 마찬가지로, C#에 대한 실질적인 지식에서는 .NET 프레임워크에 익숙해야 합니다. Microsoft의 [Java 개발자를 위한 C# 및 .NET Framework로의 이동](https://www.microsoft.com/download/details.aspx?id=6073) 학습 패킷은 Java 관점에서 .NET 프레임워크에 대해 자세히 알아볼 수 있는 좋은 방법입니다(C#에 대한 깊은 이해를 얻을 수 있음).
 
-C#에서 첫 번째 Xamarin.Android 프로젝트를 시작할 준비가 되면, [Hello, Android](~/android/get-started/hello-android/index.md) 시리즈를 통해 첫 번째 Xamarin.Android 응용 프로그램을 빌드하고 Xamarin을 사용하여 Android 응용 프로그램 개발의 기본 사항에 대한 이해를 높일 수 있습니다.
+C#에서 첫 번째 Xamarin.Android 프로젝트를 시작할 준비가 되면, [Hello, Android](~/android/get-started/hello-android/index.md) 시리즈를 통해 첫 번째 Xamarin.Android 애플리케이션을 빌드하고 Xamarin을 사용하여 Android 애플리케이션 개발의 기본 사항에 대한 이해를 높일 수 있습니다.
 
 
 
