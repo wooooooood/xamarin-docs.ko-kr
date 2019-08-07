@@ -128,7 +128,8 @@
 ##### [데이터 템플릿 만들기](app-fundamentals/templates/data-templates/creating.md)
 ##### [데이터 템플릿 선택](app-fundamentals/templates/data-templates/selector.md)
 ### [트리거](app-fundamentals/triggers.md)
-## [사용자 인터페이스](user-interface/index.md)
+## 사용자 인터페이스
+### [개요](user-interface/index.yml)
 ### [작업 표시기](user-interface/activityindicator.md)
 ### [애니메이션](user-interface/animation/index.md)
 #### [단순 애니메이션](user-interface/animation/simple.md)
