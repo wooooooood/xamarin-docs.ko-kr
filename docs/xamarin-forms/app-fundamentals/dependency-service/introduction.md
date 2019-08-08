@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: dfff2c22c17fddb4bbd1feb79e08949e62d8f9bc
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: d49a12e38b9bfe1014583ce7f0d7c7770270af7b
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832217"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739366"
 ---
 # <a name="xamarinforms-dependencyservice-introduction"></a>Xamarin.Forms DependencyService 소개
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스는 Xamarin.Forms 애플리케이션이 공유 코드에서 네이티브 플랫폼 기능을 호출할 수 있도록 하는 서비스 로케이터입니다.
 
@@ -91,7 +91,7 @@ namespace DependencyServiceDemos.Droid
 }
 ```
 
-### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
+### <a name="universal-windows-platform"></a>UWP
 
 다음 코드 예제는 UWP(유니버설 Windows 플랫폼)에서 `IDeviceOrientationService` 인터페이스의 구현을 보여 줍니다.
 
@@ -156,5 +156,5 @@ DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>
 
 ## <a name="related-links"></a>관련 링크
 
-- [DependencyService 데모(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+- [DependencyService 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Xamarin.Forms DependencyService 등록 및 확인](registration-and-resolution.md)

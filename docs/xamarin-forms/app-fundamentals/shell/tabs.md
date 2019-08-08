@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2019
-ms.openlocfilehash: 365e580d7d1182cca55a53a714ebb2b9be45ce35
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 25fcf40f7ad94bf5c2ba03fca7413fcaaedba09e
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650741"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739241"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 애플리케이션에 대한 탐색 패턴이 플라이아웃을 포함하는 경우 애플리케이션에서 탐색의 다음 수준은 아래쪽 탭 표시줄입니다. 뿐만 아니라 플라이아웃이 닫히면 아래쪽 탭 표시줄을 최상위 탐색 수준으로 간주될 수 있습니다.
 
@@ -290,6 +290,6 @@ CSS(CSS 스타일시트)를 사용하여 탭 스타일을 지정할 수도 있�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms Shell 탐색](navigation.md)
 - [Xamarin.Forms CSS Shell 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

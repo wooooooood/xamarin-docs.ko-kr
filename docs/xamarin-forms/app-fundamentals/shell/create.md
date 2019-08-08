@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
-ms.openlocfilehash: 017948e83b051713d5135914a0ae250d5b2479e4
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252334"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739303"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Xamarin.Forms Shell 애플리케이션 만들기
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell 애플리케이션을 만들기 위한 프로세스는 다음과 같습니다.
 
@@ -139,4 +139,4 @@ Xamarin.Forms Shell 애플리케이션을 만드는 마지막 단계는 서브�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

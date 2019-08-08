@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
-ms.openlocfilehash: 186e9af867e89c0130822593bb0d7ab071ee0505
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: 022aa9f1aeb2961d98b52747441e875bd89a584a
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252417"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739323"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.Forms Shell 페이지 구성
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 `Shell` 클래스는 Xamarin.Forms Shell 애플리케이션에서 페이지의 모양을 구성하는 데 사용할 수 있는 연결된 속성을 정의합니다. 여기에는 페이지 색 설정, 탐색 모음을 사용하지 않도록 설정, 탭 표시줄을 사용하지 않도록 설정 및 탐색 모음에 뷰 표시가 포함됩니다.
 
@@ -150,6 +150,6 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
 - [Xamarin.Forms CSS Shell 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

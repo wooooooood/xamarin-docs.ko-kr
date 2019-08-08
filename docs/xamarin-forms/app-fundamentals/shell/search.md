@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
-ms.openlocfilehash: df8ecba2527015dd6a7e2fd324b34306295b94d3
-ms.sourcegitcommit: b986460787677cf8c2fc7cc8c03f4bc60c592120
+ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213307"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739260"
 ---
 # <a name="xamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell에는 `SearchHandler` 클래스에서 제공되는 통합 검색 기능이 포함됩니다. `Shell.SearchHandler` 연결된 속성을 서브클래스 `SearchHandler` 개체로 설정하여 검색 기능을 페이지에 추가할 수 있습니다. 이를 통해 검색 상자가 페이지 위쪽에 추가됩니다.
 
@@ -326,5 +326,5 @@ searchHandler.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFla
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms Shell 탐색](navigation.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 03b9c5f903cea67032a9560754a32ac552635e92
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 73e312a1af56091a7e579d3fcbcea810ee0efb1e
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653869"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820974"
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>이동 제스처 인식기 추가
 
@@ -48,9 +48,6 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
   // Handle the pan
 }
 ```
-
-> [!NOTE]
-> Android에서 올바른 이동에 최소한 [Xamarin.Forms 2.1.0-pre1 NuGet 패키지](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1)가 필요합니다.
 
 ## <a name="creating-a-pan-container"></a>이동 컨테이너 만들기
 
@@ -147,7 +144,7 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 전체 화면을 차지하지 않는 요소에서 콘텐츠를 이동하는 경우 뷰포트의 높이 및 너비는 요소의 [`Height`](xref:Xamarin.Forms.VisualElement.Height) 및 [`Width`](xref:Xamarin.Forms.VisualElement.Width) 속성에서 가져올 수 있습니다.
 
 > [!NOTE]
-> 고해상도 이미지를 표시하면 앱의 메모리 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 앱에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다. 자세한 내용은 [이미지 리소스 최적화](~/xamarin-forms/deploy-test/performance.md#optimizeimages)를 참조하세요.
+> 고해상도 이미지를 표시하면 앱의 메모리 공간이 크게 증가할 수 있습니다. 따라서 필요한 경우에만 만들어야 하며, 앱에 더 이상 필요하지 않을 경우 즉시 해제되어야 합니다. 자세한 내용은 [이미지 리소스 최적화](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources)를 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 

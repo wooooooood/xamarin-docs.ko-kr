@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 9f48659a8af7bb74cc33ec0929f41b2a881e1978
-ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
+ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469514"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68739263"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell에는 세트 탐색 계층 구조를 따르지 않고도 애플리케이션의 모든 페이지로 이동하는 데 경로를 사용하는 URI 기반 탐색 환경이 포함됩니다. 또한 탐색 스택의 모든 페이지를 방문하지 않고도 뒤로 이동할 수 있는 기능을 제공합니다.
 
@@ -339,4 +339,4 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xaminals(샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
