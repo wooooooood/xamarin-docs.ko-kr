@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 71836021b29094911f9d1ad43639ed103fa18b73
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8173ebcc174df6e34a53f226a43083bd28941031
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652824"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869386"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Xamarin Forms 시각적 렌더러 만들기
 
@@ -104,20 +104,23 @@ public class CustomVisual : IVisual
 
 ## <a name="register-the-ivisual-type"></a>IVisual 개체 형식 등록
 
-플랫폼 프로젝트에서 렌더러 클래스를로 `ExportRendererAttribute`데코 레이트 합니다.
+플랫폼 프로젝트에서 렌더러 네임 스페이스를로 `ExportRendererAttribute`데코 레이트 합니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
-public class CustomButtonRenderer : ButtonRenderer
+namespace VisualDemos.iOS
 {
-    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+    public class CustomButtonRenderer : ButtonRenderer
     {
-        ...
+        protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+        {
+            // ...
+        }
     }
 }
 ```
 
-`ExportRendererAttribute` 이 예제에서는 `CustomButtonRenderer` 클래스를 사용 하 여 세 번째 인수로 등록 된 `IVisual` 형식을 [`Button`](xref:Xamarin.Forms.Button) 사용 하 여 개체를 렌더링 하도록 지정 합니다. 의 일부로 형식을`IVisual` 지정 하는 렌더러는 기본 렌더러 대신 옵트인 (opt in) 뷰를 렌더링 하는 데 사용 됩니다. `ExportRendererAttribute`
+IOS 플랫폼 프로젝트에 대 한이 예제에서는 `ExportRendererAttribute` `CustomButtonRenderer` 클래스를 사용 하 여 세 번째 인수로 등록 된 [`Button`](xref:Xamarin.Forms.Button) `IVisual` 형식을 사용 하는 개체를 렌더링 하도록 지정 합니다. 의 일부로 형식을`IVisual` 지정 하는 렌더러는 기본 렌더러 대신 옵트인 (opt in) 뷰를 렌더링 하는 데 사용 됩니다. `ExportRendererAttribute`
 
 ## <a name="consume-the-visual-renderer"></a>시각적 렌더러 사용
 

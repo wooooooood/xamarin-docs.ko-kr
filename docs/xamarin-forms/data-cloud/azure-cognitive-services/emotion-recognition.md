@@ -1,5 +1,5 @@
 ---
-title: Face API를 사용 하 여 감정 인식
+title: Face API를 사용 하는 인식 된 Emotion 인식
 description: Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
@@ -7,22 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 6f03ae1030ef4a69b15c5e219785eee12c4e603b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
+ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656558"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869391"
 ---
-# <a name="emotion-recognition-using-the-face-api"></a>Face API를 사용 하 여 감정 인식
+# <a name="perceived-emotion-recognition-using-the-face-api"></a>Face API를 사용 하는 인식 된 Emotion 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다._
+이 Face API는 휴먼 coders의 인식 된 주석을 기반으로 하는 얼굴 식에서 분노, 경 멸, 혐오, emotion, 행복, 중립, sadness을 검색 하는 데 검색을 수행할 수 있습니다. 그러나 얼굴 식 만으로는 사용자의 내부 상태를 반드시 나타내는 것은 아닙니다.
 
-## <a name="overview"></a>개요
-
-Face API 얼굴 식에 분노, 경 멸, 혐오, 공포, 행복, 중립 검색할 감정 감지, 슬픔 및 놀람을 수행할 수 있습니다. 이러한 감정은 보편적으로 및 문화 기본 동일한 표정을 통해 전달 됩니다. 식의 얼굴 감정을 결과 반환, 뿐만 아니라 Face API 수도 반환 검색 된 얼굴에 대 한 경계 상자입니다. Face API를 사용 하려면 API 키를 받아야 하는 참고 합니다. 가져올 수 있습니다 [Cognitive Services 시도](https://azure.microsoft.com/try/cognitive-services/?api=face-api)합니다.
+얼굴 식에 대 한 emotion 결과를 반환 하는 것 외에도, 검색 Face API 된 면에 대 한 경계 상자를 반환할 수 있습니다. Face API를 사용 하려면 API 키를 받아야 하는 참고 합니다. 가져올 수 있습니다 [Cognitive Services 시도](https://azure.microsoft.com/try/cognitive-services/?api=face-api)합니다.
 
 감정 인식 클라이언트 라이브러리 및 REST API를 통해 수행할 수 있습니다. 이 문서에서는 REST API를 통해 감정 인식을 수행에 중점을 둡니다. REST API에 대 한 자세한 내용은 참조 하세요. [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
 
@@ -44,7 +42,7 @@ public FaceRecognitionService()
 
 Face API에 유효한 API 키를 전달 하는 오류 401 응답 오류가 발생 합니다.
 
-## <a name="performing-emotion-recognition"></a>감정 인식을 수행
+## <a name="perform-emotion-recognition"></a>Emotion 인식 수행
 
 감정 인식 이미지가 포함 된 POST 요청을 만들어 수행 됩니다 합니다 `detect` API `https://[location].api.cognitive.microsoft.com/face/v1.0`여기서 `[location]]` API 키를 가져오는 데 사용할 영역입니다. 선택적 요청 매개 변수를 다음과 같습니다.
 
@@ -81,7 +79,7 @@ public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, boo
 > [!NOTE]
 > 동일한 지역으로 구독 키를 가져오는 데 사용 하 여 Face API 호출에 사용 해야 합니다. 예를 들어에서 구독 키를 구입한 경우 합니다 `westus` 얼굴 검색 끝점 수는 지역 `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`합니다.
 
-### <a name="sending-the-request"></a>요청을 보내기
+### <a name="send-the-request"></a>요청 보내기
 
 합니다 `SendRequestAsync` Face API에 POST 요청 메서드와으로 결과 반환을 `Face` 배열:
 
@@ -132,7 +130,7 @@ async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMetho
 
 `detect` API에서 HTTP 상태 코드 200 (정상) 요청 올바른지 요청이 성공 했는지를 나타내는 응답에 요청 된 정보를 제공 하 고 응답을 보냅니다. 가능한 오류 응답의 목록을 참조 하세요 [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
 
-### <a name="processing-the-response"></a>응답 처리
+### <a name="process-the-response"></a>응답 처리
 
 API 응답은 JSON 형식으로 반환 됩니다. 다음 JSON 데이터에는 샘플 응용 프로그램에서 요청한 데이터를 제공 하는 일반적인 성공 응답 메시지를 보여 줍니다.
 
@@ -173,10 +171,6 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 다음 스크린샷은 샘플 응용 프로그램에서 감정 인식 프로세스의 결과 보여 줍니다.
 
 ![](emotion-recognition-images/emotion-recognition.png "감정 인식")
-
-## <a name="summary"></a>요약
-
-이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다. Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰도 포함 하는 데이터를 반환 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
