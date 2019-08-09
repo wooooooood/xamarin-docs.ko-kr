@@ -235,7 +235,7 @@ pageLink.KeyValues.Add("companyName", "Xamarin");
 
 - `contentType` – 인덱싱된 콘텐츠의 균일한 유형 식별자를 지정하는 `string`입니다. 이 값에 대해 사용하도록 권장되는 규칙은 인덱싱된 콘텐츠를 포함하는 페이지의 형식 이름입니다.
 - `associatedWebPage` – 인덱싱된 콘텐츠도 웹에서 볼 수 있거나 애플리케이션이 Safari의 딥 링크를 지원하는 경우 방문할 웹 페이지를 나타내는 `string`입니다.
-- `shouldAddToPublicIndex` - `true` 또는 `false` 중 하나인 `string`은 인덱싱된 콘텐츠를 Apple의 공용 클라우드 인덱스에 추가할지 여부를 제어하며, 해당 iOS 디바이스에 애플리케이션을 설치하지 않은 사용자에게 제공할 수 있습니다. 그러나 콘텐츠가 공개 인덱스에 대해 설정되어 있어도 Apple의 공용 클라우드 인덱스에 자동으로 추가되지는 않습니다. 자세한 내용은 [공용 검색 인덱싱](~/ios/platform/search/nsuseractivity.md)을 참조하세요. 개인 데이터를 [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) 컬렉션에 추가할 때 이 키를 `false`로 설정해야 합니다.
+- `shouldAddToPublicIndex` - `true` 또는 `false` 중 하나인 `string`은 인덱싱된 콘텐츠를 Apple의 공용 클라우드 인덱스에 추가할지 여부를 제어하며, 해당 iOS 디바이스에 애플리케이션을 설치하지 않은 사용자에게 제공할 수 있습니다. 그러나 콘텐츠가 공개 인덱스에 대해 설정되어 있어도 Apple의 퍼블릭 클라우드 인덱스에 자동으로 추가되지는 않습니다. 자세한 내용은 [공용 검색 인덱싱](~/ios/platform/search/nsuseractivity.md)을 참조하세요. 개인 데이터를 [`KeyValues`](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) 컬렉션에 추가할 때 이 키를 `false`로 설정해야 합니다.
 
 > [!NOTE]
 > `KeyValues` 컬렉션은 Android 플랫폼에서 사용되지 않습니다.
