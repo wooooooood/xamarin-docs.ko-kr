@@ -151,6 +151,7 @@
 #### [레이아웃](user-interface/controls/layouts.md)
 #### [Views](user-interface/controls/views.md)
 #### [셀](user-interface/controls/cells.md)
+#### [타사 컨트롤](user-interface/controls/thirdparty.md)
 ### [DataPages](user-interface/datapages/index.md)
 #### [시작](user-interface/datapages/get-started.md)
 #### [컨트롤 참조](user-interface/datapages/controls.md)
@@ -339,7 +340,7 @@
 #### [음성 인식](data-cloud/azure-cognitive-services/speech-recognition.md)
 #### [맞춤법 검사](data-cloud/azure-cognitive-services/spell-check.md)
 #### [텍스트 번역](data-cloud/azure-cognitive-services/text-translation.md)
-#### [감정 인식](data-cloud/azure-cognitive-services/emotion-recognition.md)
+#### [감지된 감정 인식](data-cloud/azure-cognitive-services/emotion-recognition.md)
 ### 웹 서비스
 #### [Web services 개요](data-cloud/web-services/index.md)
 #### [소개](data-cloud/web-services/introduction.md)

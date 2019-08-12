@@ -829,6 +829,8 @@
               href: troubleshooting/questions/exception-marshal-obj-c.md
             - name: 런타임 오류 - 어셈블리 mscorlib.dll을 찾을 수 없거나 로드할 수 없습니다.
               href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: 컴파일 오류 – 분산된 재배치로 인해 오프셋 X를 인코딩할 수 없습니다.
+              href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
             - name: IPA 파일이 0바이트입니다.
               href: troubleshooting/questions/ipa-zero-bytes.md
             - name: IBTool 오류 - 작업을 완료할 수 없습니다.
