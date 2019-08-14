@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 65e551669edeebfb3c28d16b4eaa0f9e549eb291
-ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
+ms.openlocfilehash: de0d7ae6ac6a028166c13aa29bf0ea44035eddce
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68665701"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012435"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식 참조 가이드
 
@@ -232,6 +232,13 @@ public interface UIActionSheetDelegate {
 }
 ```
 
+<a name="DesignatedDefaultCtorAttribute" />
+
+### <a name="designateddefaultctorattribute"></a>DesignatedDefaultCtorAttribute
+
+이 특성이 인터페이스 정의에 적용 되 면 `[DesignatedInitializer]` `init` 선택기에 매핑되는 기본 생성자 (생성 됨)에 특성이 생성 됩니다.
+
+<a name="DisableDefaultCtorAttribute" />
 
 ### <a name="disabledefaultctorattribute"></a>DisableDefaultCtorAttribute
 
@@ -239,6 +246,7 @@ public interface UIActionSheetDelegate {
 
 클래스의 다른 생성자 중 하나를 사용 하 여 개체를 초기화 해야 하는 경우이 특성을 사용 합니다.
 
+<a name="PrivateDefaultCtorAttribute" />
 
 ### <a name="privatedefaultctorattribute"></a>PrivateDefaultCtorAttribute
 
@@ -327,7 +335,7 @@ interface FooObject {
 
 이 특성이 클래스에 적용 되 면에서 `NSObject`파생 되지 않은 정적 클래스만 생성 [`[BaseType]`](#BaseTypeAttribute) 하므로 특성이 무시 됩니다. 정적 클래스는 노출 하려는 C 공용 변수를 호스트 하는 데 사용 됩니다.
 
-예:
+예를 들어:
 
 ```csharp
 [Static]
@@ -996,6 +1004,16 @@ Task<string> UploadAsync (string file);
 
 이 속성을 사용 하 여 생성 된 비동기 메서드의 이름을 사용자 지정할 수 있습니다.   기본값은 메서드 이름을 사용 하 고 "Async" 텍스트를 추가 하는 것입니다 .이 기본값을 변경 하려면이를 사용할 수 있습니다.
 
+<a name="DesignatedInitializerAttribute" />
+
+### <a name="designatedinitializerattribute"></a>DesignatedInitializerAttribute
+
+이 특성이 생성자에 적용 되 면 최종 플랫폼 어셈블리에서 동일 `[DesignatedInitializer]` 하 게 생성 됩니다. 이는 IDE에서 서브 클래스에 사용 되어야 하는 생성자를 표시 하는 데 도움이 됩니다.
+
+이는의 `__attribute__((objc_designated_initializer))`목적과 C/clang 사용에 매핑되어야 합니다.
+
+<a name="DisableZeroCopyAttribute" />
+
 ### <a name="disablezerocopyattribute"></a>DisableZeroCopyAttribute
 
 이 특성은 문자열 매개 변수 또는 문자열 속성에 적용 되며,이 매개 변수에 대해 제로 복사 문자열 마샬링을 사용 하지 않도록 코드 생성기에 지시 하 고 대신 C# 문자열에서 새 nsstring 인스턴스를 만듭니다.
@@ -1010,6 +1028,7 @@ Task<string> UploadAsync (string file);
 @property(nonatomic,assign) NSString *name2;
 ```
 
+<a name="DisposeAttribute" />
 
 ### <a name="disposeattribute"></a>DisposeAttribute
 
@@ -1469,6 +1488,13 @@ interface XyzPanel {
 }
 ```
 
+특성을 `This` 사용 하 여 `[Category]` 데코레이팅된 형식 내의 메서드에 특성을적용하는경우확장메서드를생성하는동안첫번째인수로을`[Wrap]` 포함 해야 합니다. 예를 들어:
+
+```csharp
+[Wrap ("Write (This, image, options?.Dictionary, out error)")]
+bool Write (CIImage image, CIImageRepresentationOptions options, out NSError error);
+```
+
 `[Wrap]` 에서 생성 하는 멤버는 `virtual` 기본적으로는 아닙니다. `virtual` 멤버가 필요한 경우 선택적 `isVirtual` 매개 변수로 설정할 `true` 수 있습니다.
 
 ```csharp
@@ -1479,6 +1505,40 @@ interface FooExplorer {
 
     [Wrap ("FromUrl (NSUrl.FromString (url))", isVirtual: true)]
     void FromUrl (string url);
+}
+```
+
+`[Wrap]`속성 getter 및 setter에서 직접 사용할 수도 있습니다.
+이를 통해에 대 한 모든 권한을 보유 하 고 필요에 따라 코드를 조정할 수 있습니다.
+예를 들어, 스마트 열거형을 사용 하는 다음 API 정의를 살펴보세요.
+
+```csharp
+// Smart enum.
+enum PersonRelationship {
+        [Field (null)]
+        None,
+
+        [Field ("FMFather", "__Internal")]
+        Father,
+
+        [Field ("FMMother", "__Internal")]
+        Mother
+}
+```
+
+인터페이스 정의:
+
+```csharp
+// Property definition.
+
+[Export ("presenceType")]
+NSString _PresenceType { get; set; }
+
+PersonRelationship PresenceType {
+    [Wrap ("PersonRelationshipExtensions.GetValue (_PresenceType)")]
+    get;
+    [Wrap ("_PresenceType = value.GetConstant ()")]
+    set;
 }
 ```
 
@@ -1904,6 +1964,12 @@ public interface UITableViewController {
 이 특성을 사용 하 여 개발자가 사용 하기에 더 편리할 수 있는 다른 Api에 대 한 힌트를 개발자에 게 제공 합니다.   예를 들어 강력한 형식의 API를 제공 하는 경우 약한 형식의 특성에이 특성을 사용 하 여 개발자에 게 더 나은 API를 지시할 수 있습니다.
 
 이 특성의 정보는 설명서에 나와 있습니다. 이러한 정보를 활용 하 여 개선 하는 방법에 대 한 사용자 의견을 제공 하도록 도구를 개발할 수 있습니다.
+
+### <a name="requiressuperattribute"></a>RequiresSuperAttribute
+
+이 클래스는 메서드를 재정의 하 `[Advice]` 는 개발자에 게 기본 (재정의 된) 메서드를 호출 **해야** 하는 경우에 사용할 수 있는 특성의 특수 서브 클래스입니다.
+
+다음에 해당 `clang` 합니다.[`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
 
 ### <a name="zerocopystringsattribute"></a>ZeroCopyStringsAttribute
 
