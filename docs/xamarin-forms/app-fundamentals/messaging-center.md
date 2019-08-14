@@ -1,118 +1,104 @@
 ---
 title: Xamarin.Forms MessagingCenter
-description: 이 문서에서는 Xamarin.Forms MessagingCenter를 사용하여 메시지를 보내고 받으면서 보기 모델과 같은 클래스 간의 결합을 줄이는 방법을 설명합니다.
+description: Xamarin.ios MessagingCenter 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2016
-ms.openlocfilehash: b40617dc9ed2054540ce04d5527fae8de6e2285b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/30/2019
+ms.openlocfilehash: a4d246419c7449c2395759cf5a8b04469e7a2309
+ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644907"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820995"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
-_Xamarin.Forms에는 메시지를 보내거나 받을 수 있는 간단한 메시징 서비스가 포함되어 있습니다._
+게시-구독 패턴은 게시자가 구독자로 알려진 수신자를 몰라도 메시지를 보내는 메시징 패턴입니다. 마찬가지로 구독자는 게시자를 전혀 알지 못해도 특정 메시지를 수신 대기합니다.
 
-<a name="Overview" />
+Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자가 서로를 참조하지 않고 통신할 수 있으므로 둘 사이의 종속성을 줄일 수 있습니다.
 
-## <a name="overview"></a>개요
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스에서는 멀티캐스트 게시-구독 기능을 제공합니다. 즉, 단일 메시지를 게시하는 여러 게시자가 있을 수 있으며 동일한 메시지를 수신 대기하는 여러 구독자가 있을 수 있습니다.
 
-Xamarin.Forms `MessagingCenter`를 사용하면 보기 모델 및 기타 구성 요소가 서로에 대해 알 필요 없이 간단한 메시지 계약으로 통신이 가능합니다.
+![](messaging-center-images/messaging-center.png "멀티캐스트 게시-구독 기능")
 
-<a name="How_the_MessagingCenter_Works" />
+게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 메서드를 사용하여 메시지를 보내는 한편, 구독자는 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드를 사용하여 메시지를 수신 대기합니다. 또한 구독자는 필요한 경우 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메서드를 사용하여 메시지 구독을 구독 취소할 수도 있습니다.
 
-## <a name="how-the-messagingcenter-works"></a>MessagingCenter의 작동 방식
+> [!IMPORTANT]
+> 내부적으로 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스에서는 약한 참조를 사용합니다. 즉, 개체가 활성 상태로 유지되지 않으며 가비지 수집될 수 있습니다. 따라서 클래스가 더 이상 메시지를 받지 않으려는 경우에만 메시지의 구독을 취소해야 합니다.
 
-`MessagingCenter`에는 두 가지 부분이 있습니다.
+## <a name="publish-a-message"></a>메시지 게시
 
--  **Subscribe** - 특정 서명이 있는 메시지를 수신 대기하고, 수신되면 일부 작업을 수행합니다. 여러 구독자가 동일한 메시지를 수신 대기할 수 있습니다.
--  **Send** - 수신기에서 수행할 메시지를 게시합니다. 수신기에서 구독하지 않으면 메시지가 무시됩니다.
-
-`MessagingCenter`는 솔루션 전체에서 사용되는 `Subscribe` 및 `Send` 메서드가 있는 정적 클래스입니다.
-
-메시지에는 메시지를 *처리*하는 방법으로 사용되는 `message` 문자열 매개 변수가 있습니다. `Subscribe` 및 `Send` 메서드는 제네릭 매개 변수를 사용하여 메시지를 전달하는 방식을 더 자세히 제어합니다. 동일한 `message` 텍스트를 사용하지만 제네릭 형식 인수가 다른 두 개의 메시지는 동일한 구독자에게 전달되지 않습니다.
-
-`MessagingCenter`에 대한 API는 다음과 같이 간단합니다.
-
-- `Subscribe<TSender> (object subscriber, string message, Action<TSender> callback, TSender source = null)`
-- `Subscribe<TSender, TArgs> (object subscriber, string message, Action<TSender, TArgs> callback, TSender source = null)`
-- `Send<TSender> (TSender sender, string message)`
-- `Send<TSender, TArgs> (TSender sender, string message, TArgs args)`
-- `Unsubscribe<TSender, TArgs> (object subscriber, string message)`
-- `Unsubscribe<TSender> (object subscriber, string message)`
-
-이러한 메서드는 아래에 설명되어 있습니다.
-
-<a name="Using_the_MessagingCenter" />
-
-## <a name="using-the-messagingcenter"></a>MessagingCenter 사용
-
-메시지는 사용자 상호 작용(예: 단추 클릭), 시스템 이벤트(예: 컨트롤 변경 상태) 또는 일부 다른 인시던트(예: 비동기 다운로드 완료 등)의 결과로 전송될 수 있습니다. 구독자는 사용자 인터페이스의 모양을 변경하거나, 데이터를 저장하거나, 일부 다른 작업을 트리거하기 위해 수신 대기 중일 수 있습니다.
-
-`MessagingCenter` 클래스 사용에 대한 자세한 내용은 [느슨하게 결합된 구성 요소 간 통신](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)을 참조하세요.
-
-### <a name="simple-string-message"></a>간단한 문자열 메시지
-
-가장 간단한 메시지에는 `message` 매개 변수의 문자열만 포함됩니다. 간단한 문자열 메시지를 *수신 대기*하는 `Subscribe` 메서드는 아래와 같습니다. 보낸 사람을 지정하는 제네릭 형식이 `MainPage` 형식이어야 합니다. 솔루션의 모든 클래스에서 다음 구문을 사용하여 메시지를 구독할 수 있습니다.
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 메시지는 문자열입니다. 게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 오버로드 중 하나로 구독자에게 메시지를 알립니다. 다음 코드 예제에서는 `Hi` 메시지를 게시합니다.
 
 ```csharp
-MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) => {
-    // do something whenever the "Hi" message is sent
+MessagingCenter.Send<MainPage>(this, "Hi");
+```
+
+이 예제에서는 [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 메서드를 통해 보낸 사람을 나타내는 제네릭 인수를 지정합니다. 메시지를 수신하려면 구독자가 동일한 제네릭 인수를 지정하여 보낸 사람의 메시지를 수신 대기하고 있음을 나타내야 합니다. 또한 이 예제에서는 두 개의 메서드 인수를 지정합니다.
+
+- 첫 번째 인수는 보낸 사람 인스턴스를 지정합니다.
+- 두 번째 인수는 메시지를 지정합니다.
+
+페이로드 데이터는 메시지와 함께 보낼 수도 있습니다.
+
+```csharp
+MessagingCenter.Send<MainPage, string>(this, "Hi", "John");
+```
+
+이 예제에서는 [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 메서드를 통해 두 개의 제네릭 인수를 지정합니다. 첫 번째는 메시지를 보내는 형식이고, 두 번째는 전송되는 페이로드 데이터의 유형입니다. 메시지를 받으려면 구독자가 동일한 제네릭 인수도 지정해야 합니다. 그러면 여러 메시지에서 메시지 ID를 공유하지만 여러 다른 구독자가 받도록 여러 다른 페이로드 데이터 형식을 보낼 수 있습니다. 이 예제에서는 구독자에게 보낼 페이로드 데이터를 나타내는 세 번째 메서드 인수도 지정합니다. 이 경우 페이로드 데이터는 `string`입니다.
+
+[`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 메서드에서는 실행 후 제거(fire-and-forget) 방법을 사용하여 메시지와 페이로드를 게시합니다. 따라서 메시지를 수신하도록 등록된 구독자가 없는 경우에도 메시지가 전송됩니다. 이 경우 보낸 메시지는 무시됩니다.
+
+## <a name="subscribe-to-a-message"></a>메시지 구독
+
+구독자는 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 오버로드 중 하나를 사용하여 메시지를 받도록 등록할 수 있습니다. 다음 코드 예제는 이러한 예를 보여줍니다.
+
+```csharp
+MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) =>
+{
+    // Do something whenever the "Hi" message is received
 });
 ```
 
-`MainPage` 클래스의 다음 코드에서 메시지를 *보냅니다*. `this` 매개 변수는 `MainPage`의 인스턴스입니다.
+이 예제에서 [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드는 `MainPage` 형식으로 전송된 `Hi` 메시지에 `this` 개체를 등록하고 메시지를 수신하는 데 대한 응답으로 콜백 대리자를 실행합니다. 람다 식으로 지정된 콜백 대리자는 UI를 업데이트하거나 일부 데이터를 저장하거나 다른 작업을 트리거하는 코드일 수 있습니다.
+
+> [!NOTE]
+> 구독자는 게시된 메시지의 모든 인스턴스를 처리할 필요가 없으며 이는 [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드에 지정된 제네릭 형식 인수를 통해 제어할 수 있습니다.
+
+다음 예에서는 페이로드 데이터를 포함하는 메시지를 구독하는 방법을 보여줍니다.
 
 ```csharp
-MessagingCenter.Send<MainPage> (this, "Hi");
-```
-
-문자열은 변경되지 않습니다. *메시지 유형*을 나타내며 알림을 보낼 구독자를 결정하는 데 사용됩니다. 이러한 종류의 메시지는 추가 정보가 필요하지 않은 "업로드 완료"와 같은 일부 이벤트가 발생했음을 나타내는 데 사용됩니다.
-
-### <a name="passing-an-argument"></a>인수 전달
-
-인수를 메시지와 함께 전달하려면 `Subscribe` 제네릭 인수와 Action 서명에 Type 인수를 지정합니다.
-
-```csharp
-MessagingCenter.Subscribe<MainPage, string> (this, "Hi", (sender, arg) => {
-    // do something whenever the "Hi" message is sent
-    // using the 'arg' parameter which is a string
+MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
+{
+    await DisplayAlert("Message received", "arg=" + arg, "OK");
 });
 ```
 
-인수를 사용하여 메시지를 보내려면 Type 제네릭 매개 변수와 인수의 값을 `Send` 메서드 호출에 포함시킵니다.
+이 예제에서는 [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드를 통해 페이로드 데이터가 `string`인 `MainPage` 형식으로 보낸 `Hi` 메시지를 구독합니다. 콜백 대리자는 경고에 페이로드 데이터를 표시하는 해당 메시지를 수신하는 데 대한 응답으로 실행됩니다.
+
+## <a name="unsubscribe-from-a-message"></a>메시지 구독 취소
+
+구독자는 더 이상 수신하지 않을 메시지를 구독 취소할 수 있습니다. 이 조치는 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 오버로드 중 하나를 통해 수행합니다.
 
 ```csharp
-MessagingCenter.Send<MainPage, string> (this, "Hi", "John");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
-이 간단한 예제에서는 `string` 인수를 사용하지만 C# 개체를 전달할 수 있습니다.
+이 예제에서는 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메소드가 `MainPage` 형식을 통해 보낸 `Hi` 메시지에서 `this` 개체를 구독 취소합니다.
 
-### <a name="unsubscribe"></a>구독 취소
-
-개체는 메시지 서명에서 구독을 취소하여 이후 메시지가 전달되지 않도록 할 수 있습니다. `Unsubscribe` 메서드 구문에서 메시지의 서명을 반영해야 하므로 메시지 인수에서 Type 제네릭 매개 변수를 포함해야 할 수도 있습니다.
+페이로드 데이터를 포함하는 메시지는 두 개의 제네릭 인수를 지정하는 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 오버로드를 사용하여 구독을 취소해야 합니다.
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage> (this, "Hi");
-MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
-<a name="Summary" />
-
-## <a name="summary"></a>요약
-
-MessagingCenter는 특히 보기 모델 간의 결합을 줄일 수 있는 간단한 방법입니다. 간단한 메시지를 보내고 받고, 클래스 rks에 인수를 전달하는 데 사용할 수 있습니다. 클래스는 더 이상 받지 않으려는 메시지의 구독을 취소해야 합니다.
-
+이 예제에서는 [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메소드가 `MainPage` 형식을 통해 보낸 `Hi` 메시지에서 `this` 개체를 구독 취소합니다. 해당 페이로드 데이터는 `string`입니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
-- [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
-- [느슨하게 결합된 구성 요소 간 통신](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)

@@ -1,20 +1,20 @@
 ---
 title: 'Xamarin.Essentials: 파일 시스템 도우미'
-description: Xamarin.Essentials의 FileSystem 클래스에는 앱 패키지 내에서 응용 프로그램의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
+description: Xamarin.Essentials의 FileSystem 클래스에는 앱 패키지 내에서 애플리케이션의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 74089d55006555168d9774924c484cb8866cfb37
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
+ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898858"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68738859"
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: 파일 시스템 도우미
 
-**FileSystem** 클래스에는 앱 패키지 내에서 응용 프로그램의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
+**FileSystem** 클래스에는 앱 패키지 내에서 애플리케이션의 캐시 및 데이터와 열린 파일을 찾기 위한 일련의 도우미가 포함되어 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -28,19 +28,19 @@ ms.locfileid: "52898858"
 using Xamarin.Essentials;
 ```
 
-**캐시 데이터**를 저장할 응용 프로그램 디렉터리를 가져옵니다. 캐시 데이터는 임시 데이터보다 오래 지속되어야 하지만 제대로 작동하는 데 필요한 데이터가 아닌 모든 데이터에 사용할 수 있습니다.
+**캐시 데이터**를 저장할 애플리케이션 디렉터리를 가져옵니다. 캐시 데이터는 임시 데이터보다 오래 지속되어야 하지만. OS에서 이 스토리지를 지우는 시기를 나타내므로 제대로 작동하는 데 필요한 데이터가 아닌 모든 데이터에 사용할 수 있습니다.
 
 ```csharp
 var cacheDir = FileSystem.CacheDirectory;
 ```
 
-사용자 데이터 파일이 아닌 파일에 대한 응용 프로그램의 최상위 디렉터리를 가져옵니다. 이러한 파일은 운영 체제 동기화 프레임워크를 사용하여 백업됩니다. 아래 플랫폼 구현 관련 정보를 참조하세요.
+사용자 데이터 파일이 아닌 파일에 대한 애플리케이션의 최상위 디렉터리를 가져옵니다. 이러한 파일은 운영 체제 동기화 프레임워크를 사용하여 백업됩니다. 아래 플랫폼 구현 관련 정보를 참조하세요.
 
 ```csharp
 var mainDir = FileSystem.AppDataDirectory;
 ```
 
-응용 프로그램 패키지에 번들로 제공된 파일을 엽니다.
+애플리케이션 패키지에 번들로 제공된 파일을 엽니다.
 
 ```csharp
  using (var stream = await FileSystem.OpenAppPackageFileAsync(templateFileName))
