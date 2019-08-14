@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: b48e92bcb49109dad6e8c5260b5cb822945e7a0b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82ca106f29eb28672abcbd282b60841bfdb4da8c
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651341"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980823"
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
 
@@ -45,7 +45,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| 합니다 [ `Frame` ](xref:Xamarin.Forms.Frame) 클래스에서 파생 됩니다 [ `ContentView` ](#contentView) 자식 주위에 사각형 프레임을 표시 합니다. `Frame` 기본값이 [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) 20의 값도 정의 [ `OutlineColor` ](xref:Xamarin.Forms.Frame.OutlineColor)를 [ `CornerRadius` ](xref:Xamarin.Forms.Frame.CornerRadius), 및 [ `HasShadow` ](xref:Xamarin.Forms.Frame.HasShadow)속성입니다.<br /><br />[API 문서](xref:Xamarin.Forms.Frame) | [![예제에서는 프레임](layouts-images/Frame.png "예제에서는 프레임")](layouts-images/Frame-Large.png#lightbox "예제 프레임")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| 클래스 [`Frame`](xref:Xamarin.Forms.Frame) 는에서 [`ContentView`](#contentView) 파생 되 고 자식 주위에 테두리 또는 프레임을 표시 합니다. [`Padding`](xref:Xamarin.Forms.Layout.Padding) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)클래스의 기본값은 20이 고, 및 [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 속성도 정의 합니다. `Frame`<br /><br />[API 설명서](xref:Xamarin.Forms.Frame) / [가이드](~/xamarin-forms/user-interface/layouts/frame.md) / [샘플](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![예제에서는 프레임](layouts-images/Frame.png "예제에서는 프레임")](layouts-images/Frame-Large.png#lightbox "예제 프레임")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
 
 <a name="scrollView" />

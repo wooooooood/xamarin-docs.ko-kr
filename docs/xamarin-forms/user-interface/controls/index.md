@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019
-ms.openlocfilehash: 9456512931822abd59a081485744846a11cdea88
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 925e97292d19745b0b89fb98103d205ab8476157
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869368"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980758"
 ---
 # <a name="controls-reference"></a>컨트롤 참조
 
@@ -27,7 +27,7 @@ Xamarin Forms 응용 프로그램의 사용자 인터페이스를 만드는 데 
 - [**레이아웃**](views.md)
 - [**셀**](cells.md)
 
-Xamarin.Forms 페이지는 일반적으로 전체 화면을 차지 합니다. 일반적으로 페이지 뷰 및 기타 레이아웃을 포함 하는 레이아웃을 포함 합니다. 셀을 함께 사용 하는 특수 한 구성 요소 [ `TableView` ](views.md#tableView) 하 고 [ `ListView` ](views.md#listView)합니다.
+Xamarin.Forms 페이지는 일반적으로 전체 화면을 차지 합니다. 일반적으로 페이지 뷰 및 기타 레이아웃을 포함 하는 레이아웃을 포함 합니다. 셀을 함께 사용 하는 특수 한 구성 요소 [ `TableView` ](views.md#tableView) 하 고 [ `ListView` ](views.md#listView)합니다. Xamarin에서 사용자 인터페이스를 빌드하는 데 일반적으로 사용 되는 형식의 계층 구조를 보여 주는 클래스 다이어그램입니다. 폼은 [Xamarin.ios Controls 클래스 계층 구조](~/xamarin-forms/internals/class-hierarchy.md)에서 찾을 수 있습니다.
 
 네 가지 문서에서 [ **페이지**](pages.md)합니다 [ **레이아웃**](layouts.md)를 [ **뷰** ](views.md), 및 [ **셀**](cells.md), 컨트롤의 각 형식 (있는 경우) 해당 API 설명서, 용도 (있는 경우)를 설명 하는 아티클을 하나 이상의 샘플 프로그램에 대 한 링크를 사용 하 여 설명 합니다. 각 컨트롤 형식에는 iOS 및 Android 장치에서 실행 되는 [**양식 갤러리**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) 샘플의 페이지를 보여 주는 스크린샷도 함께 제공 됩니다. C# 페이지에 해당 하는 XAML 페이지에 대 한 소스 코드에 대 한 링크 되며 (필요한 경우) 아래 스크린샷은 각 XAML 페이지에 대 한 C# 코드 숨김 파일입니다.
 
@@ -36,4 +36,5 @@ Xamarin.ios를 사용 하 여 제공 되는 컨트롤 외에도 타사 컨트롤
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms FormsGallery 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.ios Controls 클래스 계층 구조](~/xamarin-forms/internals/class-hierarchy.md)
 - [API 문서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

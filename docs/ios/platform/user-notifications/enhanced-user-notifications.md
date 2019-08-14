@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 775675e11b85bb53bb51c36b71129a086d9dd60f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651257"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980799"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.ios에서 향상 된 사용자 알림
 
@@ -78,7 +78,7 @@ IOS 앱에서 보낼 수 있는 원격 알림에는 다음과 같은 기능 및 
 IOS 앱에 사용할 수 있는 원격 알림은 다음과 같은 두 가지 유형이 있습니다.
 
 - **사용자 측** -장치에서 사용자에 게 표시 됩니다.
-- **자동 업데이트** -백그라운드에서 iOS 앱의 콘텐츠를 업데이트 하는 메커니즘을 제공 합니다. 자동 업데이트가 수신 되 면 앱은 제거 서버에 연결 하 여 최신 콘텐츠를 끌어올 수 있습니다.
+- **자동 업데이트** -백그라운드에서 iOS 앱의 콘텐츠를 업데이트 하는 메커니즘을 제공 합니다. 자동 업데이트가 수신 되 면 앱은 원격 서버에 연결 하 여 최신 콘텐츠를 끌어올 수 있습니다.
 
 자세한 내용은 Apple의 [로컬 및 원격 알림 프로그래밍 가이드](https://developer.apple.com/documentation/usernotifications) 설명서를 참조 하세요.
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>포그라운드 앱 알림 처리
 
-IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `WillPresentNotification` 메서드를 구현 하 여 앱은 알림을 표시 하는 데 책임이 있습니다. 예:
+IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `WillPresentNotification` 메서드를 구현 하 여 앱은 알림을 표시 하는 데 책임이 있습니다. 예를 들어:
 
 ```csharp
 using System;
@@ -471,7 +471,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>작업 응답 처리
 
-사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `UserNotificationCenter` 메서드를 구현 하 여이 작업을 수행 합니다. 예를 들어:
+사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `UserNotificationCenter` 메서드를 구현 하 여이 작업을 수행 합니다. 예:
 
 ```csharp
 using System;

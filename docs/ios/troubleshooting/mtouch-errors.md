@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: da19b9071695f11a7c5591b7e715d85daa01841b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 3291589f4a61fad7d7465e0ac2bd4844ae4a0655
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508714"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980730"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -137,7 +137,7 @@ Mtouch에 두 개 이상의 루트 어셈블리가 전달 되었지만 하나의
 
 <a name="MT0015" />
 
-### <a name="mt0015-invalid-abi--supported-abis-are-i386-x8664--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: ABI: *이 잘못 되었습니다. 지원 되는 ABIs: i386, x86_64, armv7, armv7 + llvm, armv7 + llvm + thumb2, armv7s 용 thumb-2, armv7s 용 thumb-2 + llvm, armv7s 용 thumb-2 + llvm + thumb2, arm64 및 arm64 + llvm.
+### <a name="mt0015-invalid-abi--supported-abis-are-i386-x86_64--armv7-armv7llvm-armv7llvmthumb2-armv7s-armv7sllvm-armv7sllvmthumb2-arm64-and-arm64llvm"></a>MT0015: ABI: *이 잘못 되었습니다. 지원 되는 ABIs: i386, x86_64, armv7, armv7 + llvm, armv7 + llvm + thumb2, armv7s 용 thumb-2, armv7s 용 thumb-2 + llvm, armv7s 용 thumb-2 + llvm + thumb2, arm64 및 arm64 + llvm.
 
 Mtouch에 잘못 된 ABI를 전달 했습니다. 올바른 ABI를 지정 하세요.
 
@@ -252,7 +252,7 @@ Xcode symbolicates (메모리 주소를 함수 이름 및 파일/줄 번호)로 
 
 <a name="MT0037" />
 
-### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x8664"></a>MT0037: monotouch.dialog는 64 비트와 호환 되지 않습니다. Xamarin.ios를 참조 하거나 64 비트 아키텍처 (ARM64 및/또는 x86_64)에 대해 빌드하지 않습니다.
+### <a name="mt0037-monotouchdll-is-not-64-bit-compatible-either-reference-xamariniosdll-or-do-not-build-for-a-64-bit-architecture-arm64-andor-x86_64"></a>MT0037: monotouch.dialog는 64 비트와 호환 되지 않습니다. Xamarin.ios를 참조 하거나 64 비트 아키텍처 (ARM64 및/또는 x86_64)에 대해 빌드하지 않습니다.
 
 <a name="MT0038" />
 
@@ -583,7 +583,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 오류 메시지에 언급 된 어셈블리에 충돌 하는 빌드 대상이 있습니다.
 
-예:
+예를 들어:
 
     --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
 
@@ -595,7 +595,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 오류 메시지에 언급 된 어셈블리는 모두 단일 정적 개체로 컴파일됩니다. 이는 허용 되지 않습니다. 모든 어셈블리는 다른 정적 개체로 컴파일해야 합니다.
 
-예:
+예를 들어:
 
     --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
 
@@ -838,7 +838,7 @@ class Program {
 
 파일을 터치 하는 동안 오류가 발생 했습니다 (부분 빌드가 제대로 수행 되었는지 확인 하기 위해 수행 됨).
 
-이 경고는 무시할 수 있습니다. 문제가 발생 하는 경우 버그 (https://bugzilla.xamarin.com ] (https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) )를 조사 합니다.
+이 경고는 무시할 수 있습니다. 문제가 발생 하는 경우 버그 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 를 조사 하 게 됩니다.
 
 ## <a name="mt1xxx-project-related-error-messages"></a>MT1xxx: 프로젝트 관련 오류 메시지
 
@@ -1678,7 +1678,7 @@ Parameter name: instruction
 
 <a name="MT3002" />
 
-### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvancedtopicslimitationsreversecallbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: AOT 제한: ' * ' 메서드는 [MonoPInvokeCallback]로 데코 레이트 되므로 정적 이어야 합니다. [Developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks) 를 참조 하세요.
+### <a name="mt3002-aot-restriction-method--must-be-static-since-it-is-decorated-with-monopinvokecallback-see-developerxamarincomguidesiosadvanced_topicslimitationsreverse_callbacksiosinternalslimitationsmdreverse-callbacks"></a>MT3002: AOT 제한: ' * ' 메서드는 [MonoPInvokeCallback]로 데코 레이트 되므로 정적 이어야 합니다. [Developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks) 를 참조 하세요.
 
 이 오류 메시지는 AOT 컴파일러에서 제공 됩니다.
 
@@ -1824,7 +1824,7 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우에는에서 [http
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvancedtopicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: 등록 기관에서 잘못 된 형식을 `*`찾았습니다. 목적-C를 사용 하 여 제네릭 형식을 등록 하는 것은 지원 되지 않으며, 임의 동작 및/또는 충돌이 발생할 수 있습니다 (이전 버전의 xamarin.ios와 이전 버전과의 호환성을 위해 추가 mtouch `--unsupported--enable-generics-in-registrar` 를 전달 하 여이 오류를 무시할 수 있음). 프로젝트의 iOS 빌드 옵션 페이지에 있는 인수입니다. 자세한 내용은 [developer.xamarin.com/guides/ios/advanced_topics/registrar](~/ios/internals/registrar.md) 를 참조 하세요.
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: 등록 기관에서 잘못 된 형식을 `*`찾았습니다. 목적-C를 사용 하 여 제네릭 형식을 등록 하는 것은 지원 되지 않으며, 임의 동작 및/또는 충돌이 발생할 수 있습니다 (이전 버전의 xamarin.ios와 이전 버전과의 호환성을 위해 추가 mtouch `--unsupported--enable-generics-in-registrar` 를 전달 하 여이 오류를 무시할 수 있음). 프로젝트의 iOS 빌드 옵션 페이지에 있는 인수입니다. 자세한 내용은 [developer.xamarin.com/guides/ios/advanced_topics/registrar](~/ios/internals/registrar.md) 를 참조 하세요.
 
 <a name="MT4113" />
 
@@ -2110,7 +2110,7 @@ Xcode를 업그레이드 하세요.
 
 <a name="MT4168" />
 
-### <a name="mt4168-cannot-register-the-type-managedname-because-its-objective-c-name-exportedname-is-an-objective-c-keyword-please-use-a-different-name"></a>MT4168: ' {Managed name} '은\_(는) 객관적인 이름 ' {내보내진\_name} '이 (가) 목표-c 키워드 이므로 해당 유형을 등록할 수 없습니다. 다른 이름을 사용 하세요.
+### <a name="mt4168-cannot-register-the-type-managed_name-because-its-objective-c-name-exported_name-is-an-objective-c-keyword-please-use-a-different-name"></a>MT4168: ' {Managed name} '은\_(는) 객관적인 이름 ' {내보내진\_name} '이 (가) 목표-c 키워드 이므로 해당 유형을 등록할 수 없습니다. 다른 이름을 사용 하세요.
 
 해당 형식에 대 한 목표-C 이름이 올바른 목표-C 식별자가 아닙니다.
 
@@ -2310,7 +2310,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: 네이티브 링크 실패, 정의 되지 않은 기호: *. 이 기호는 관리 되는 멤버 *를 참조 했습니다. 필요한 모든 프레임 워크가 참조 되었으며 네이티브 라이브러리가 연결 되어 있는지 확인 하세요.
 
-이 오류는 관리 코드에 존재 하지 않는 네이티브 메서드에 대 한 P/Invoke가 포함 되어 있을 때 보고 됩니다. 예를 들어:
+이 오류는 관리 코드에 존재 하지 않는 네이티브 메서드에 대 한 P/Invoke가 포함 되어 있을 때 보고 됩니다. 예:
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -3017,6 +3017,6 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8024" />
 
-### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smarttype-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: 스마트 열거형 ' {smart_type} '에 대 한 올바른 확장 유형을 찾을 수 없습니다. 버그를 제출 하세요 https://bugzilla.xamarin.com 합니다.
+### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: 스마트 열거형 ' {smart_type} '에 대 한 올바른 확장 유형을 찾을 수 없습니다. 버그를 제출 하세요 https://bugzilla.xamarin.com 합니다.
 
 이는 Xamarin.ios의 버그를 나타냅니다. 버그를 제출 하세요 [http://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.

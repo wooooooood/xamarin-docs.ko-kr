@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 7c7b58266b4f5168fdb231258390fa64278963f8
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 44ba9188a059cc28c7b4d89143cef1921a0b1701
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680949"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978478"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>2 부-WalkingGame 구현
 
@@ -29,12 +29,11 @@ _이 연습에서는 빈 MonoGame 프로젝트에 게임 논리 및 콘텐츠를
 - 문자 이동 추가
 - 일치 하는 이동 및 애니메이션
 
-
 ## <a name="unzipping-our-game-content"></a>게임 콘텐츠 압축 풀기
 
 코드 작성을 시작 하기 전에 게임 *콘텐츠의*압축을 푸는 것이 좋습니다. 게임 개발자는 종종 *콘텐츠* 용어를 사용 하 여 일반적으로 시각적 아티스트, 게임 디자이너 또는 오디오 디자이너에서 만든 비 코드 파일을 참조 합니다. 일반적인 콘텐츠 형식에는 시각적 개체를 표시 하거나, 소리를 재생 하거나, AI (인공 지능) 동작을 제어 하는 데 사용 되는 파일이 포함 됩니다. 게임 개발 팀의 관점에서는 일반적으로 비 프로그래머에 의해 만들어집니다.
 
-여기에 사용 된 콘텐츠는 [github에서](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true)찾을 수 있습니다. 이러한 파일은이 연습의 뒷부분에서 액세스할 위치로 다운로드 해야 합니다.
+여기에 사용 된 콘텐츠는 [GitHub에서](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true)찾을 수 있습니다. 이러한 파일은이 연습의 뒷부분에서 액세스할 위치로 다운로드 해야 합니다.
 
 ## <a name="monogame-class-overview"></a>MonoGame 클래스 개요
 
@@ -57,11 +56,11 @@ _이 연습에서는 빈 MonoGame 프로젝트에 게임 논리 및 콘텐츠를
 
 게임 콘텐츠를 추가 하려면 **콘텐츠** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 파일 추가** ...를 선택 합니다. .Zip 파일이 추출 된 위치로 이동 하 여 **charactersheet** 파일을 선택 합니다. 폴더에 파일을 추가 하는 방법에 대해 묻는 메시지가 표시 되 면 **복사** 옵션을 선택 해야 합니다.
 
-![](part2-images/image1.png "폴더에 파일을 추가 하는 방법에 대해 묻는 메시지가 표시 되 면 복사 옵션을 선택 합니다.")
+![폴더에 파일을 추가 하는 방법에 대해 묻는 메시지가 표시 되 면 복사 옵션을 선택 합니다.](part2-images/image1.png)
 
 이제 콘텐츠 폴더에 charactersheet 파일이 포함 됩니다.
 
-![](part2-images/image2.png "이제 콘텐츠 폴더에 charactersheet 파일이 포함 되어 있습니다.")
+![이제 콘텐츠 폴더에 charactersheet 파일이 포함 되어 있습니다.](part2-images/image2.png)
 
 다음에는 charactersheet 파일을 로드 하 고를 `Texture2D`만드는 코드를 추가 합니다. 이렇게 하려면 `Game1.cs` 파일을 열고 Game1.cs 클래스에 다음 필드를 추가 합니다.
 
@@ -117,7 +116,7 @@ protected override void Draw(GameTime gameTime)
 
 게임을 실행 하면 charactersheet에서 생성 된 질감이 표시 되는 단일 스프라이트가 표시 됩니다.
 
-![](part2-images/image3.png "게임을 실행 하면 charactersheet에서 생성 된 질감이 표시 되는 단일 스프라이트가 표시 됩니다.")
+![게임을 실행 하면 charactersheet에서 생성 된 질감이 표시 되는 단일 스프라이트가 표시 됩니다.](part2-images/image3.png)
 
 ## <a name="creating-the-characterentity"></a>CharacterEntity 만들기
 
@@ -132,7 +131,6 @@ protected override void Draw(GameTime gameTime)
 - 플레이어에서 표시 하 고 수집 하는 전원과 같이 동적으로 만들고 제거할 수 있습니다.
 
 엔터티 조직 시스템은 복잡할 수 있으며 많은 게임 엔진에서 엔터티를 관리 하는 데 사용할 수 있는 클래스를 제공 합니다. 매우 간단한 엔터티 시스템을 구현 하므로 전체 게임에는 일반적으로 개발자 파트에 대 한 더 많은 조직이 필요 합니다.
-
 
 ### <a name="defining-the-characterentity"></a>CharacterEntity 정의
 
@@ -215,7 +213,6 @@ namespace WalkingGame
 
 `SpriteBatch` 그 이유는 동일한 인스턴스가 모든 `Draw` 호출에 사용 될 때 그리고 단일 집합과 `Begin` `End` 호출 사이에 모든 `Draw` 호출이 수행 될 때 가장 효율적인 렌더링이 가능 하기 때문입니다. 물론,이 게임에는 단일 엔터티 인스턴스만 포함 되지만 여러 엔터티가 동일한 `SpriteBatch` 인스턴스를 사용할 수 있도록 하는 패턴을 사용 하면 더 복잡 한 게임의 이점을 누릴 수 있습니다.
 
-
 ## <a name="adding-characterentity-to-the-game"></a>게임에 CharacterEntity 추가
 
 자신을 렌더링 하는 코드 `CharacterEntity` 와 함께를 추가 했으므로 이제이 새 엔터티의 인스턴스를 사용 `Game1.cs` 하도록의 코드를 바꿀 수 있습니다. 이렇게 하려면 `Texture2D` 필드 `CharacterEntity` 를의 `Game1`필드로 바꿉니다.
@@ -278,7 +275,7 @@ protected override void Draw(GameTime gameTime)
 
 게임을 실행 하는 경우 이제 문자가 표시 됩니다. X 및 Y의 기본값은 0 이므로 문자는 화면의 왼쪽 위 모퉁이에 배치 됩니다.
 
-![](part2-images/image4.png "X 및 Y의 기본값은 0 이므로 문자는 화면의 왼쪽 위 모퉁이에 배치 됩니다.")
+![X 및 Y의 기본값은 0 이므로 문자는 화면의 왼쪽 위 모퉁이에 배치 됩니다.](part2-images/image4.png)
 
 ## <a name="creating-the-animation-class"></a>애니메이션 클래스 만들기
 
@@ -286,11 +283,9 @@ protected override void Draw(GameTime gameTime)
 
 CharacterEntity 애니메이션의 논리 `Animation` 와 상태를 제어 하는 클래스를 만듭니다. 애니메이션 클래스는 애니메이션 뿐만 `CharacterEntity` 아니라 모든 엔터티에 사용할 수 있는 일반 클래스가 됩니다. Ultimate 클래스는가 자신을 `Rectangle` 그릴 때 `CharacterEntity` 사용할를 제공 합니다. `Animation` 또한 애니메이션을 정의 하 `AnimationFrame` 는 데 사용 되는 클래스를 만듭니다.
 
-
 ### <a name="defining-animationframe"></a>애니메이션 프레임 정의
 
 `AnimationFrame`애니메이션에 관련 된 논리를 포함 하지 않습니다. 데이터를 저장 하는 데에만 사용 됩니다. `AnimationFrame` 클래스를 추가 하려면 **WalkingGame** 공유 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가** ...를 선택 합니다. 이름 **애니메이션 프레임** 을 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 다음 코드를 포함 `AnimationFrame.cs` 하도록 파일을 수정 합니다.
-
 
 ```csharp
 using System;
@@ -504,7 +499,7 @@ protected override void Update(GameTime gameTime)
 
 이제는 `CharacterEntity` `walkDown` 애니메이션을 재생 합니다.
 
-![](part2-images/image5.gif "이제 CharacterEntity가 walkDown 애니메이션을 재생 합니다.")
+![이제 CharacterEntity가 walkDown 애니메이션을 재생 합니다.](part2-images/image5.gif)
 
 ## <a name="adding-movement-to-the-character"></a>문자 이동 추가
 
@@ -513,7 +508,6 @@ protected override void Update(GameTime gameTime)
 ### <a name="defining-getdesiredvelocityfrominput"></a>GetDesiredVelocityFromInput 정의
 
 터치 스크린의 현재 상태에 `TouchPanel` 대 한 정보를 제공 하는 MonoGame의 클래스를 사용 합니다. 를 `TouchPanel` 확인 하 고 문자의 원하는 속도를 반환 하는 메서드를 추가 해 보겠습니다.
-
 
 ```csharp
 Vector2 GetDesiredVelocityFromInput()
@@ -552,7 +546,6 @@ Vector2 GetDesiredVelocityFromInput()
 
 `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` 문은 속도가 0이 아닌지 여부를 확인 합니다. 즉, 사용자가 문자의 현재 위치와 동일한 위치에 접촉 하 고 있지 않은지 확인 합니다. 그렇지 않으면 터치의 거리에 관계 없이 문자의 속도를 상수로 설정 해야 합니다. 이는 속도 벡터를 정규화 하 여 길이가 1 인 속도 벡터를 표준화 하 여 수행 합니다. 속도 벡터 1은 문자가 1 픽셀에서 초당 이동 한다는 것을 의미 합니다. 값을 원하는 속도의 200에 곱하여 속도를 높이는 것이 좋습니다.
 
-
 ### <a name="applying-velocity-to-position"></a>위치에 속도 적용
 
 에서 `GetDesiredVelocityFromInput` 반환 된 속도는 런타임에 적용 되는 `X` 문자 및 `Y` 값에 적용 해야 합니다. 메서드를 다음과 같이 `Update` 수정 합니다.
@@ -578,7 +571,7 @@ public void Update(GameTime gameTime)
 
 지금 게임을 실행 하는 경우 문자가 터치 위치로 이동 하는 것을 알 수 있습니다.
 
-![](part2-images/image6.gif "문자가 터치 위치로 이동 하 고 있습니다.")
+![문자가 터치 위치로 이동 하 고 있습니다.](part2-images/image6.gif)
 
 ## <a name="matching-movement-and-animation"></a>일치 하는 이동 및 애니메이션
 
@@ -661,7 +654,6 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 
 다음으로, 문자가 이동 하는 방향에 따라 또는 문자가 방금 중지 된 경우 마지막 애니메이션에 따라 애니메이션을 사용 하도록 논리를 조정 합니다. 이렇게 하려면 메서드를 수정 합니다 `Update` .
 
-
 ```csharp
 public void Update(GameTime gameTime)
 {
@@ -736,7 +728,7 @@ public void Update(GameTime gameTime)
 
 이 코드의 결과는 문자를 탐색 하는 동안 적절 하 게 애니메이션 효과를 적용 한 다음 중지 될 때 이동한 마지막 방향을 face 하는 것입니다.
 
-![](part2-images/image7.gif "이 코드의 결과는 문자를 탐색 하는 동안 적절 하 게 애니메이션 효과를 적용 한 다음, 중지할 때 이동한 마지막 방향을 face 하는 것입니다.")
+![이 코드의 결과는 문자를 탐색 하는 동안 적절 하 게 애니메이션 효과를 적용 한 다음, 중지할 때 이동한 마지막 방향을 face 하는 것입니다.](part2-images/image7.gif)
 
 ## <a name="summary"></a>요약
 

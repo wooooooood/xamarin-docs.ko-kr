@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 1889579a48364204a977d63bd9bdb875df37a2bf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7d63dafbb17a3757f5d15f65e977b4b0cb8bc44a
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657027"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980870"
 ---
 # <a name="layouts-in-xamarinforms"></a>Xamarin.Forms에서 레이아웃
 
@@ -32,6 +32,7 @@ Xamarin.Forms 여러 레이아웃 고 화면의 콘텐츠를 구성 하기 위�
 * **[RelativeLayout](relative-layout.md)** – 부모 크기 & 위치에 상대적인 제약 조건을 설정 하 여 뷰를 정렬 하는 데 사용 됩니다.
 * **[Grid](grid.md)** – 모눈에서 보기를 정렬 하는 데 사용 됩니다. 절대값 또는 비율 측면에서 행과 열을 지정할 수 있습니다.
 * 상대 **[레이아웃](flex-layout.md)** – 배치를 사용 하 여 가로 또는 세로로 뷰를 정렬 하는 데 사용 됩니다.
+* **[프레임](frame.md)** -색, 그림자 등을 사용 하 여 구성할 수 있는 테두리 또는 프레임이 있는 뷰를 래핑하는 데 사용 됩니다.
 * **[ScrollView](scroll-view.md)** – 뷰가 화면 범위 내에 완전히 들어가지 못할 경우 스크롤을 제공 하는 데 사용 됩니다.
 * **[Layoutoptions](layout-options.md)** – 부모를 기준으로 뷰의 맞춤 및 확장을 정의 합니다.
 * **[입력 투명성](#input_transparency)** – 요소가 입력을 받을지 여부를 지정 합니다.
@@ -179,6 +180,10 @@ RelativeLayout 장치 크기를 비례적으로 확장 되는 Ui를 만드는 �
 - 표 및 열을 명시적으로 지정 콘텐츠에서 유추할 수 없습니다.
 - `Height` 및 `Width` 값 표에 사용 가능한 공간을 채우기 위해 해당 값을 설정 됩니다는 의미 하는, 별로 설정할 수 있습니다.
 - 각 단추의 위치 지정 `Grid.Row`  &  `Grid.Column` 속성입니다.
+
+### <a name="frameframemd"></a>[프레임](frame.md)
+
+레이아웃은 자식 `View`주위에 사용자 지정 가능한 테두리를 만드는 데 사용 됩니다. `Frame` 를 `Frame` 사용 하 여 `Button` 또는 `Label` 와 같은 컨트롤 주위에 테두리를 추가 하거나 다른 레이아웃을 래핑하여 카드와 같은 더 복잡 한 UI 개체를 만들 수 있습니다.
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 

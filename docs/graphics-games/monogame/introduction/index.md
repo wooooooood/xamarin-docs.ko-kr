@@ -6,12 +6,12 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 47ed7fc1b4485864646a17940aceed395a4a8983
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680917"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978384"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>MonoGame를 사용한 게임 개발 소개
 
@@ -23,18 +23,17 @@ MonoGame는 그래픽, 오디오, 게임 상태 관리, 입력 및 자산 가져
 
 이 연습의 첫 번째 섹션에서는 빈 프로젝트를 설정 하는 방법을 집중적으로 설명 합니다. 마지막 섹션에서는 모든 게임 논리 및 콘텐츠를 작성 하는 방법을 다룹니다. 대부분은 플랫폼 간입니다.
 
-이 연습을 마치면 플레이어가 터치 입력으로 애니메이션 문자를 제어할 수 있는 간단한 게임을 만들었습니다.  이는 기술적으로 전체 게임을 하지는 않지만 (win 또는 분실 조건이 있으므로) 많은 게임 개발 개념을 보여 주며 많은 유형의 게임을 위한 기반으로 사용할 수 있습니다. 
+이 연습을 마치면 플레이어가 터치 입력으로 애니메이션 문자를 제어할 수 있는 간단한 게임을 만들었습니다.  이는 기술적으로 전체 게임을 하지는 않지만 (win 또는 분실 조건이 있으므로) 많은 게임 개발 개념을 보여 주며 많은 유형의 게임을 위한 기반으로 사용할 수 있습니다.
 
 다음은이 연습의 결과를 보여 줍니다.
 
 ![마우스 다음에 나오는 샘플 게임 문자 애니메이션](images/image1.gif)
 
-## <a name="monogame-and-xna"></a>Monogame 및 XNA
+## <a name="monogame-and-xna"></a>MonoGame 및 XNA
 
-MonoGame 라이브러리는 구문과 기능 모두에서 Microsoft의 XNA 라이브러리를 모방 하기 위한 것입니다.  모든 MonoGame 개체는 MonoGame에서 수정 없이 대부분의 XNA 코드를 사용할 수 있도록 하는 Microsoft Xna 네임 스페이스에 있습니다. 
+MonoGame 라이브러리는 구문과 기능 모두에서 Microsoft의 XNA 라이브러리를 모방 하기 위한 것입니다.  모든 MonoGame 개체는 MonoGame에서 수정 없이 대부분의 XNA 코드를 사용할 수 있도록 하는 Microsoft Xna 네임 스페이스에 있습니다.
 
 XNA에 익숙한 개발자는 이미 MonoGame의 구문에 익숙하고 MonoGame 사용에 대 한 추가 정보를 찾는 개발자는 기존 온라인 XNA 연습, API 설명서 및 토론을 참조할 수 있습니다.
-
 
 ## <a name="walkthrough-parts"></a>연습 파트
 

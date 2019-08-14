@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 8173ebcc174df6e34a53f226a43083bd28941031
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: bc95b9be0605c353ee9f914cb065f79711b9f92b
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869386"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978282"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Xamarin Forms 시각적 렌더러 만들기
 
@@ -104,7 +104,7 @@ public class CustomVisual : IVisual
 
 ## <a name="register-the-ivisual-type"></a>IVisual 개체 형식 등록
 
-플랫폼 프로젝트에서 렌더러 네임 스페이스를로 `ExportRendererAttribute`데코 레이트 합니다.
+플랫폼 프로젝트에서 어셈블리 수준에를 `ExportRendererAttribute` 추가 합니다.
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
