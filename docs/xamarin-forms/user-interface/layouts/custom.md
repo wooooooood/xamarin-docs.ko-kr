@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 레이아웃 만들기
+title: Xamarin.ios에서 사용자 지정 레이아웃 만들기
 description: 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법에 설명 하 고 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -7,20 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 11707a1e871b0988847ab4a2c266d268db063000
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0f2136aa4a07d289e1e8aecc6cb37460fdc5727c
+ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645198"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024524"
 ---
-# <a name="creating-a-custom-layout"></a>사용자 지정 레이아웃 만들기
+# <a name="create-a-custom-layout-in-xamarinforms"></a>Xamarin.ios에서 사용자 지정 레이아웃 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms 4 레이아웃 클래스 – StackLayout, AbsoluteLayout, RelativeLayout, 및 그리드를 정의 하 고 자식을 다른 방식으로 정렬 하는 각 키를 누릅니다. 그러나 경우에 Xamarin.Forms에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 합니다. 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법에 설명 하 고 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
-
-## <a name="overview"></a>개요
 
 Xamarin.forms에 모든 레이아웃 클래스에서 파생 된 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) 클래스 및 제네릭 형식 제약 [ `View` ](xref:Xamarin.Forms.View) 및 파생된 형식입니다. 차례로 합니다 `Layout<T>` 클래스에서 파생 되는 [ `Layout` ](xref:Xamarin.Forms.Layout) 요소 배치 및 크기 조정 자식 메커니즘을 제공 하는 클래스입니다.
 
@@ -67,7 +65,7 @@ Xamarin.Forms 레이아웃 및 무효화 순환의 철저 한 이해를 사용�
 
 합니다 [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) 반복 해 서 호출을 최소화 하기 위해 캐시를 구현 하도록 재정의할 수 있습니다 합니다 [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) 레이아웃의 자식의 메서드. 재정의 `InvalidateLayout` 메서드 자식이 추가 되거나 레이아웃에서 제거 시기에 대 한 알림을 제공 합니다. 마찬가지로, 합니다 [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 메서드를 재정의 하 여 레이아웃의 자식 중 하나가 크기를 변경 하는 경우 알림을 제공할 수 있습니다. 두 메서드 재정의 대 한 사용자 지정 레이아웃 캐시를 지우면 응답 해야 합니다. 자세한 내용은 [계산 및 데이터 캐싱](#caching)합니다.
 
-## <a name="creating-a-custom-layout"></a>사용자 지정 레이아웃 만들기
+## <a name="create-a-custom-layout"></a>사용자 지정 레이아웃 만들기
 
 사용자 지정 레이아웃을 만드는 프로세스는 다음과 같습니다.
 
@@ -89,7 +87,7 @@ Xamarin.Forms 레이아웃 및 무효화 순환의 철저 한 이해를 사용�
 
 <a name="creating" />
 
-### <a name="creating-a-wraplayout"></a>WrapLayout 만들기
+### <a name="create-a-wraplayout"></a>WrapLayout 만들기
 
 샘플 응용 프로그램을 보여 줍니다는 방향에 민감한 `WrapLayout` 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 클래스입니다.
 
@@ -107,7 +105,7 @@ public class WrapLayout : Layout<View>
 
 <a name="caching" />
 
-#### <a name="calculating-and-caching-layout-data"></a>계산 및 레이아웃 데이터 캐싱
+#### <a name="calculate-and-cache-layout-data"></a>레이아웃 데이터 계산 및 캐시
 
 `LayoutData` 구조는 다양 한 속성에서에서 자식 컬렉션에 대 한 데이터를 저장 합니다.
 
@@ -200,7 +198,7 @@ LayoutData GetLayoutData(double width, double height)
 
 <a name="adding_properties" />
 
-#### <a name="adding-properties-backed-by-bindable-properties"></a>바인딩 가능한 속성에서 지 원하는 속성 추가
+#### <a name="add-properties-backed-by-bindable-properties"></a>바인딩 가능한 속성에 의해 지원 되는 속성 추가
 
 `WrapLayout` 클래스 정의 `ColumnSpacing` 및 `RowSpacing` 속성 값이 포함 된 행과 열 레이아웃에서 구분 하는 데와 바인딩 가능한 속성에 의해 지원 됩니다. 바인딩 가능한 속성은 다음 코드 예제에 나와 있습니다.
 
@@ -230,7 +228,7 @@ public static readonly BindableProperty RowSpacingProperty = BindableProperty.Cr
 
 <a name="onmeasure" />
 
-#### <a name="overriding-the-onmeasure-method"></a>OnMeasure 메서드 재정의
+#### <a name="override-the-onmeasure-method"></a>OnMeasure 메서드 재정의
 
 `OnMeasure` 재정의 다음 코드 예제에 표시 됩니다.
 
@@ -256,7 +254,7 @@ protected override SizeRequest OnMeasure(double widthConstraint, double heightCo
 
 <a name="layoutchildren" />
 
-#### <a name="overriding-the-layoutchildren-method"></a>LayoutChildren 메서드 재정의
+#### <a name="override-the-layoutchildren-method"></a>LayoutChildren 메서드 재정의
 
 `LayoutChildren` 재정의 다음 코드 예제에 표시 됩니다.
 
@@ -307,7 +305,7 @@ protected override void LayoutChildren(double x, double y, double width, double 
 
 <a name="invalidatelayout" />
 
-#### <a name="overriding-the-invalidatelayout-method"></a>InvalidateLayout 메서드 재정의
+#### <a name="overridethe-invalidatelayout-method"></a>Overridethe 메서드
 
 합니다 [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) 재정의 자식이 추가 되거나 하나 또는 레이아웃에서 제거 될 때 호출 되의 `WrapLayout` 속성 값을 변경, 다음 코드 예제 에서처럼:
 
@@ -326,7 +324,7 @@ protected override void InvalidateLayout()
 
 <a name="onchildmeasureinvalidated" />
 
-#### <a name="overriding-the-onchildmeasureinvalidated-method"></a>OnChildMeasureInvalidated 메서드 재정의
+#### <a name="override-the-onchildmeasureinvalidated-method"></a>OnChildMeasureInvalidated 메서드 재정의
 
 합니다 [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 재정의 레이아웃의 자식 중 크기를 변경 하 고 다음 코드 예제에 표시 되 면 호출 됩니다.
 
@@ -342,7 +340,7 @@ protected override void OnChildMeasureInvalidated()
 
 <a name="consuming" />
 
-### <a name="consuming-the-wraplayout"></a>WrapLayout 사용
+### <a name="consume-the-wraplayout"></a>WrapLayout 사용
 
 합니다 `WrapLayout` 클래스에 배치 하 여 사용할 수는 [ `Page` ](xref:Xamarin.Forms.Page) 파생 형식에 다음 XAML 코드 예제에서 설명한 것 처럼:
 
