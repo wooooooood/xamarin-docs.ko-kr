@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/14/2019
-ms.openlocfilehash: fbc966fdf1d79ecc9794d2156db81b583694ce36
-ms.sourcegitcommit: 84764b9c51e769d6d6570a362af8451607c7e0d2
+ms.openlocfilehash: 523113a7b54541733e14f947eefa247e4f774b99
+ms.sourcegitcommit: 157da886e1f304c6b482aa3f265ef7d78b696ab7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68665678"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024510"
 ---
 # <a name="create-a-controltemplate"></a>ControlTemplate 만들기
 
@@ -152,7 +152,7 @@ void OnButtonClicked (object sender, EventArgs e)
 
 ## <a name="create-a-controltemplate-in-c35"></a>C&#35;에서 ControlTemplate 만들기
 
-애플리케이션 수준에서 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)을 정의하려면 `ControlTemplate`을 나타내는 `class`를 만들어야 합니다. 클래스는 다음 코드 예제와 같이 템플릿에 사용되는 [레이아웃](~/xamarin-forms/user-interface/layouts/index.md)에서 파생되어야 합니다.
+애플리케이션 수준에서 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)을 정의하려면 `ControlTemplate`을 나타내는 `class`를 만들어야 합니다. 클래스는 다음 코드 예제와 같이 템플릿에 사용되는 [레이아웃](~/xamarin-forms/user-interface/layouts/index.yml)에서 파생되어야 합니다.
 
 ```csharp
 class TealTemplate : Grid
