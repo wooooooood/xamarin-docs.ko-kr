@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: e54f499316d2b99d87d05fbd202308eecaaed220
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 614a0e3952db42d2587930b66bf71ce4c703d035
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643366"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524069"
 ---
 # <a name="jelly-bean-features"></a>Jelly Bean 기능
 
@@ -48,9 +48,9 @@ Jelly Bean을 사용 하 여 Xamarin Android 응용 프로그램을 개발 하�
 
 작업은 클래스를 `ActivityOptions` 사용 하 여 확대/축소 애니메이션이 나 사용자 지정 애니메이션을 사용 하 여 시작할 수 있습니다. 이러한 애니메이션을 지원 하기 위해 다음과 같은 새로운 메서드가 제공 됩니다.
 
--   `MakeScaleUpAnimation`– 작업 창을 화면에서 시작 위치와 크기에서 확장 하는 애니메이션을 만듭니다.
--   `MakeThumbnailScaleUpAnimation`– 화면에서 지정 된 위치에서 축소판 이미지를 확대 하는 애니메이션을 만듭니다.
--   `MakeCustomAnimation`– 응용 프로그램의 리소스에서 애니메이션을 만듭니다. 활동을 열 때와 활동이 중지 될 때에 대해 다른 애니메이션이 하나씩 있습니다.
+- `MakeScaleUpAnimation`– 작업 창을 화면에서 시작 위치와 크기에서 확장 하는 애니메이션을 만듭니다.
+- `MakeThumbnailScaleUpAnimation`– 화면에서 지정 된 위치에서 축소판 이미지를 확대 하는 애니메이션을 만듭니다.
+- `MakeCustomAnimation`– 응용 프로그램의 리소스에서 애니메이션을 만듭니다. 활동을 열 때와 활동이 중지 될 때에 대해 다른 애니메이션이 하나씩 있습니다.
 
 
 새 `TimeAnimator` 클래스는 애니메이션에서 프레임이 `TimeAnimator.ITimeListener` 변경 될 때마다 응용 프로그램에 알릴 수 있는 인터페이스를 제공 합니다. 예를 들어 다음 구현을 `TimeAnimator.ITimeListener`고려 하십시오.
@@ -85,12 +85,12 @@ Android 4.1는 Android 3.0에 도입 된 응용 프로그램 스택 탐색을 �
 
 더 복잡 한 시나리오의 경우 활동 클래스에 탐색의 동작을 처리 하 고 백 스택을 생성 하는 데 사용할 수 있는 새로운 메서드가 있습니다.
 
--   `OnNavigateUp`–이 메서드를 재정의 하면 <span class="ui">위로</span> 단추를 누를 때 사용자 지정 작업을 수행할 수 있습니다.
--   `NavigateUpTo`–이 메서드를 호출 하면 응용 프로그램이 현재 활동에서 지정 된 의도에 지정 된 활동으로 이동 합니다.
--   `ParentActivityIntent`– 현재 활동의 부모 활동을 시작할 의도를 가져오는 데 사용 됩니다.
--   `ShouldUpRecreateTask`–이 메서드는 부모 작업까지 탐색 하기 위해 가상 뒤로 스택을 만들어야 하는지 여부를 쿼리 하는 데 사용 됩니다. 가상 `true` 스택을 만들어야 하는 경우를 반환 합니다. 
--   `FinishAffinity`–이 메서드를 호출 하면 현재 작업과 작업 선호도가 같은 현재 작업에서 해당 작업 아래에 있는 모든 작업이 완료 됩니다.
--   `OnCreateNavigateUpTaskStack`–이 메서드는 가상 스택을 만드는 방법을 완전히 제어 해야 하는 경우에 재정의 됩니다.
+- `OnNavigateUp`–이 메서드를 재정의 하면 **위로** 단추를 누를 때 사용자 지정 작업을 수행할 수 있습니다.
+- `NavigateUpTo`–이 메서드를 호출 하면 응용 프로그램이 현재 활동에서 지정 된 의도에 지정 된 활동으로 이동 합니다.
+- `ParentActivityIntent`– 현재 활동의 부모 활동을 시작할 의도를 가져오는 데 사용 됩니다.
+- `ShouldUpRecreateTask`–이 메서드는 부모 작업까지 탐색 하기 위해 가상 뒤로 스택을 만들어야 하는지 여부를 쿼리 하는 데 사용 됩니다. 가상 `true` 스택을 만들어야 하는 경우를 반환 합니다. 
+- `FinishAffinity`–이 메서드를 호출 하면 현재 작업과 작업 선호도가 같은 현재 작업에서 해당 작업 아래에 있는 모든 작업이 완료 됩니다.
+- `OnCreateNavigateUpTaskStack`–이 메서드는 가상 스택을 만드는 방법을 완전히 제어 해야 하는 경우에 재정의 됩니다.
 
 
 
@@ -120,10 +120,10 @@ public class AutoFocusCallbackActivity : Activity, Camera.IAutoFocusCallback
 
 새 클래스 `MediaActionSound` 는 다양 한 미디어 동작에 대 한 소리를 생성 하기 위한 API 집합을 제공 합니다. 카메라에서 발생할 수 있는 몇 가지 작업은 열거형 `Android.Media.MediaActionSoundType`으로 정의 됩니다.
 
--   `MediaActionSoundType.FocusComplete`– 포커스를 완료할 때 재생 되는 소리입니다.
--   `MediaActionSoundType.ShutterClick`–이 소리는 이미지 그림을 만들 때 재생 됩니다.
--   `MediaActionSoundType.StartVideoRecording`–이 소리는 비디오 녹음의 시작을 나타내는 데 사용 됩니다.
--   `MediaActionSoundType.StopVideoRecording`–이 소리는 비디오 녹음의 끝을 나타내기 위해 재생 됩니다.
+- `MediaActionSoundType.FocusComplete`– 포커스를 완료할 때 재생 되는 소리입니다.
+- `MediaActionSoundType.ShutterClick`–이 소리는 이미지 그림을 만들 때 재생 됩니다.
+- `MediaActionSoundType.StartVideoRecording`–이 소리는 비디오 녹음의 시작을 나타내는 데 사용 됩니다.
+- `MediaActionSoundType.StopVideoRecording`–이 소리는 비디오 녹음의 끝을 나타내기 위해 재생 됩니다.
 
 
 클래스를 `MediaActionSound` 사용 하는 방법에 대 한 예제는 다음 코드 조각에서 확인할 수 있습니다.
@@ -178,10 +178,10 @@ Android 4.1에는 멀티 캐스트 DNS 기반 서비스 검색용 새 API가 포
 
 Jelly Bean에서는 `WifiP2pManager` *Bonjour* 또는 *Upnp*를 사용 하 여 주변 장치를 검색할 수 있습니다. Bonjour는 Apple의 zeroconf 구현입니다. Upnp는 zeroconf도 지 원하는 네트워킹 프로토콜의 집합입니다. Wi-fi 서비스 검색 `WiFiP2pManager` 을 지원 하기 위해에 추가 된 메서드는 다음과 같습니다.
 
--   `AddLocalService()`–이 메서드는 피어에서 검색을 위해 Wi-fi를 통해 응용 프로그램을 서비스로 알리기 위해 사용 됩니다.
--   `AddServiceRequest(`) –이 메서드는 서비스 검색 요청을 프레임 워크에 보내는 것입니다. Wi-fi 서비스 검색을 초기화 하는 데 사용 됩니다.
--   `SetDnsSdResponseListeners()`–이 메서드는 Bonjour의 검색 요청에 대 한 응답을 받을 때 호출 되는 콜백을 등록 하는 데 사용 됩니다.
--   `SetUpnpServiceResponseListener()`–이 메서드는 Upnp를 검색 요청에 대 한 응답을 받을 때 호출 되는 콜백을 등록 하는 데 사용 됩니다.
+- `AddLocalService()`–이 메서드는 피어에서 검색을 위해 Wi-fi를 통해 응용 프로그램을 서비스로 알리기 위해 사용 됩니다.
+- `AddServiceRequest(`) –이 메서드는 서비스 검색 요청을 프레임 워크에 보내는 것입니다. Wi-fi 서비스 검색을 초기화 하는 데 사용 됩니다.
+- `SetDnsSdResponseListeners()`–이 메서드는 Bonjour의 검색 요청에 대 한 응답을 받을 때 호출 되는 콜백을 등록 하는 데 사용 됩니다.
+- `SetUpnpServiceResponseListener()`–이 메서드는 Upnp를 검색 요청에 대 한 응답을 받을 때 호출 되는 콜백을 등록 하는 데 사용 됩니다.
 
 
 
@@ -196,9 +196,9 @@ Jelly Bean에서는 `WifiP2pManager` *Bonjour* 또는 *Upnp*를 사용 하 여 �
 
 이제 `Intent` 클래스는 `Intent.ClipData` 속성을 통해 `ClipData` 개체와 연결 된 개체를 가질 수 있습니다. 이 메서드를 사용 하면 클립보드의 추가 데이터를 의도를 사용 하 여 전송할 수 있습니다. 인스턴스에 `ClipData` 는를 하나 `ClipData.Item`이상 포함할 수 있습니다. `ClipData.Item`는 다음 형식의 항목입니다.
 
--   **Text** – 기본 제공 Android 스타일 범위에서 지원 되는 형식의 텍스트 또는 HTML 또는 문자열입니다.
--  **의도** -모든 `Intent` 개체입니다.
--   **Uri** – HTTP 책갈피 또는 콘텐츠 공급자에 대 한 uri와 같은 모든 uri가 될 수 있습니다.
+- **Text** – 기본 제공 Android 스타일 범위에서 지원 되는 형식의 텍스트 또는 HTML 또는 문자열입니다.
+- **의도** -모든 `Intent` 개체입니다.
+- **Uri** – HTTP 책갈피 또는 콘텐츠 공급자에 대 한 uri와 같은 모든 uri가 될 수 있습니다.
 
 
 
@@ -214,9 +214,9 @@ Isolated 서비스는 자체의 특별 한 프로세스에서 실행 되 고 자
 
 캡처된 오디오 `Android.Media.Audiofx.AudioEffect` 에서 추가 오디오 전처리를 지원 하기 위해 새 서브 클래스가 추가 되었습니다.
 
--   `Android.Media.Audiofx.AcousticEchoCanceler`–이 클래스는 캡처된 오디오 신호에서 원격 파티의 신호를 제거 하는 오디오를 전처리 하는 데 사용 됩니다. 예를 들어 음성 통신 응용 프로그램에서 에코를 제거 합니다.
--   `Android.Media.Audiofx.AutomaticGainControl`–이 클래스는 출력 신호가 일정 하도록 입력 신호를 늘리거나 줄여 캡처된 신호를 정규화 하는 데 사용 됩니다.
--   `Android.Media.Audiofx.NoiseSuppressor`–이 클래스는 캡처된 신호에서 배경 노이즈를 제거 합니다.
+- `Android.Media.Audiofx.AcousticEchoCanceler`–이 클래스는 캡처된 오디오 신호에서 원격 파티의 신호를 제거 하는 오디오를 전처리 하는 데 사용 됩니다. 예를 들어 음성 통신 응용 프로그램에서 에코를 제거 합니다.
+- `Android.Media.Audiofx.AutomaticGainControl`–이 클래스는 출력 신호가 일정 하도록 입력 신호를 늘리거나 줄여 캡처된 신호를 정규화 하는 데 사용 됩니다.
+- `Android.Media.Audiofx.NoiseSuppressor`–이 클래스는 캡처된 신호에서 배경 노이즈를 제거 합니다.
 
 
 모든 장치가 이러한 효과를 지 원하는 것은 아닙니다. 응용 프로그램 `AudioEffect.IsAvailable` 을 실행 하는 장치에서 문제의 오디오 효과가 지원 되는지 확인 하기 위해 응용 프로그램에서 메서드를 호출 해야 합니다.
@@ -225,8 +225,8 @@ Isolated 서비스는 자체의 특별 한 프로세스에서 실행 되 고 자
 
 다음 새 클래스는 미디어를 재생할 위치를 선택 하기 위한 표준 메커니즘과 UI를 제공 합니다.
 
--   `MediaRouter`–이 클래스를 통해 응용 프로그램은 장치에서 외부 스피커나 기타 장치로의 미디어 채널 라우팅을 제어할 수 있습니다.
--   `MediaRouterActionProvider`및 `MediaRouteButton` – 이러한 클래스를 통해 미디어를 선택 하 고 재생 하는 일관 된 UI를 제공할 수 있습니다.
+- `MediaRouter`–이 클래스를 통해 응용 프로그램은 장치에서 외부 스피커나 기타 장치로의 미디어 채널 라우팅을 제어할 수 있습니다.
+- `MediaRouterActionProvider`및 `MediaRouteButton` – 이러한 클래스를 통해 미디어를 선택 하 고 재생 하는 일관 된 UI를 제공할 수 있습니다.
 
 
 
@@ -235,17 +235,17 @@ Isolated 서비스는 자체의 특별 한 프로세스에서 실행 되 고 자
 
 Android 4.1을 사용 하면 응용 프로그램에서 보다 유연 하 고 알림을 표시 하 여 제어할 수 있습니다. 이제 응용 프로그램은 더 크고 더 나은 알림을 사용자에 게 표시할 수 있습니다. 새 메서드로, `NotificationBuilder.SetStyle()` 알림에 대해 새로운 세 가지 새 스타일 중 하나를 설정할 수 있습니다.
 
--   `Notification.BigPictureStyle`– 이미지를 포함 하는 알림을 생성 하는 도우미 클래스입니다. 다음 이미지는 큰 이미지를 사용 하는 알림의 예를 보여 줍니다.
+- `Notification.BigPictureStyle`– 이미지를 포함 하는 알림을 생성 하는 도우미 클래스입니다. 다음 이미지는 큰 이미지를 사용 하는 알림의 예를 보여 줍니다.
 
 
  [![이상 및 스타일 알림의 예제 스크린샷](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
--   `Notification.BigTextStyle`– 전자 메일과 같이 여러 줄의 텍스트를 포함 하는 알림을 생성 하는 도우미 클래스입니다. 다음 스크린샷에서는이 새 알림 스타일의 예를 볼 수 있습니다.
+- `Notification.BigTextStyle`– 전자 메일과 같이 여러 줄의 텍스트를 포함 하는 알림을 생성 하는 도우미 클래스입니다. 다음 스크린샷에서는이 새 알림 스타일의 예를 볼 수 있습니다.
 
 
  [![이상 텍스트 알림 예제 스크린샷](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
--   `Notification.InboxStyle`–이 스크린샷에 표시 된 것 처럼 전자 메일 메시지의 조각과 같은 문자열 목록을 포함 하는 알림을 생성 하는 도우미 클래스입니다.
+- `Notification.InboxStyle`–이 스크린샷에 표시 된 것 처럼 전자 메일 메시지의 조각과 같은 문자열 목록을 포함 하는 알림을 생성 하는 도우미 클래스입니다.
 
 
  [![InboxStyle 알림의 예제 스크린샷](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
@@ -263,11 +263,11 @@ Android 4.1을 사용 하면 응용 프로그램에서 보다 유연 하 고 알
 
 다음과 같은 새 사용 권한이 추가 되었습니다.
 
--   `READ_EXTERNAL_STORAGE`-응용 프로그램에는 외부 저장소에 대 한 읽기 전용 액세스 권한이 필요 합니다. 현재 모든 응용 프로그램에는 기본적으로 읽기 권한이 있지만 이후 Android 릴리스에서는 응용 프로그램이 명시적으로 읽기 액세스를 요청 해야 합니다.
--   `READ_USER_DICTIONARY`-사용자의 단어 사전에 대 한 읽기 액세스를 허용 합니다.
--   `READ_CALL_LOG`-호출 로그를 읽어 응용 프로그램에서 들어오고 나가는 호출에 대 한 정보를 가져올 수 있습니다.
--   `WRITE_CALL_LOG`-응용 프로그램이 휴대폰의 통화 로그에 쓸 수 있도록 허용 합니다.
--   `WRITE_USER_DICTIONARY`-응용 프로그램이 사용자의 word 사전에 쓸 수 있도록 허용 합니다.
+- `READ_EXTERNAL_STORAGE`-응용 프로그램에는 외부 저장소에 대 한 읽기 전용 액세스 권한이 필요 합니다. 현재 모든 응용 프로그램에는 기본적으로 읽기 권한이 있지만 이후 Android 릴리스에서는 응용 프로그램이 명시적으로 읽기 액세스를 요청 해야 합니다.
+- `READ_USER_DICTIONARY`-사용자의 단어 사전에 대 한 읽기 액세스를 허용 합니다.
+- `READ_CALL_LOG`-호출 로그를 읽어 응용 프로그램에서 들어오고 나가는 호출에 대 한 정보를 가져올 수 있습니다.
+- `WRITE_CALL_LOG`-응용 프로그램이 휴대폰의 통화 로그에 쓸 수 있도록 허용 합니다.
+- `WRITE_USER_DICTIONARY`-응용 프로그램이 사용자의 word 사전에 쓸 수 있도록 허용 합니다.
 
 
 중요 한 변경 `READ_EXTERNAL_STORAGE` 사항-현재이 권한은 Android에서 자동으로 부여 됩니다. 이후 버전의 Android에서는 사용 권한을 부여 하기 전에 응용 프로그램에서이 권한을 요청 해야 합니다.

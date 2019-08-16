@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/03/2018
-ms.openlocfilehash: 95d71beff2bd5219712494deb43f1f9fb4b082ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7c98686a1aa99e250b3fd1d0fcc6ae64d625a11f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646304"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522402"
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -27,9 +27,9 @@ _RecyclerView는 컬렉션을 표시 하기 위한 뷰 그룹입니다. ListView
 
 `RecyclerView`는 다음과 같은 두 가지 강력한 기능을 제공 합니다.
 
--  기본 구성 요소를 연결 하 여 해당 동작을 수정할 수 있는 유연한 아키텍처가 있습니다.
+- 기본 구성 요소를 연결 하 여 해당 동작을 수정할 수 있는 유연한 아키텍처가 있습니다.
 
--  항목 뷰를 다시 사용 하 고 뷰 *소유자* 를 사용 하 여 뷰 참조를 캐시 하기 때문에 규모가 많은 컬렉션이 효율적입니다.
+- 항목 뷰를 다시 사용 하 고 뷰 *소유자* 를 사용 하 여 뷰 참조를 캐시 하기 때문에 규모가 많은 컬렉션이 효율적입니다.
 
 이 가이드에서는 xamarin android 응용 `RecyclerView` 프로그램에서를 사용 하는 방법을 설명 합니다 .이 가이드 `RecyclerView` 에서는 xamarin.ios 프로젝트에 패키지를 추가 하는 방법에 대해 `RecyclerView` 설명 하 고 일반적인 응용 프로그램에서 함수를 사용 하는 방법을 설명 합니다. 응용 프로그램에 통합 `RecyclerView` 하는 방법, 항목-뷰 클릭을 구현 하는 방법 및 기본 데이터가 변경 될 때 새로 고치 `RecyclerView` 는 방법을 보여 주는 실제 코드 예제가 제공 됩니다. 이 가이드에서는 사용자가 Xamarin Android 개발에 대해 잘 알고 있다고 가정 합니다.
 
@@ -38,27 +38,27 @@ _RecyclerView는 컬렉션을 표시 하기 위한 뷰 그룹입니다. ListView
 
 는 `RecyclerView` android 5.0 롤리팝과 연결 되는 경우가 많지만 API 수준 7 (Android 2.1 &ndash; ) 이상을 대상으로 하는 앱에서 지원 라이브러리 `RecyclerView` 를 사용할 때 제공 됩니다. Xamarin 기반 응용 프로그램에서를 `RecyclerView` 사용 하려면 다음이 필요 합니다.
 
--  Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.20 이상 버전을 설치 하 고 구성 해야 합니다.
+- Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.20 이상 버전을 설치 하 고 구성 해야 합니다.
 
--  앱 프로젝트는 **RecyclerView** 패키지를 포함 해야 합니다. NuGet 패키지를 설치 하는 [방법에 대 한 자세한 내용은 연습: 프로젝트](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)에 NuGet을 포함 합니다.
+- 앱 프로젝트는 **RecyclerView** 패키지를 포함 해야 합니다. NuGet 패키지를 설치 하는 [방법에 대 한 자세한 내용은 연습: 프로젝트](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)에 NuGet을 포함 합니다.
 
 
 ### <a name="overview"></a>개요
 
 `RecyclerView`는 Android에서 `ListView` 및 `GridView` 위젯의 대체로 간주할 수 있습니다. 선행 작업과 마찬가지로는 `RecyclerView` 작은 창에 많은 데이터 집합을 표시 하도록 설계 되었지만 `RecyclerView` 더 많은 레이아웃 옵션을 제공 하며, 많은 컬렉션을 표시 하는 데 더 적합 합니다. 에 `ListView`대해 잘 알고 있는 경우와 `RecyclerView`사이 `ListView` 에 몇 가지 중요 한 차이점이 있습니다.
 
--   `RecyclerView``RecyclerView` 를`ListView`사용 하는 것은 약간 더 복잡 합니다 .와 비교 하 여 더 많은 코드를 작성 해야 합니다.
+- `RecyclerView``RecyclerView` 를`ListView`사용 하는 것은 약간 더 복잡 합니다 .와 비교 하 여 더 많은 코드를 작성 해야 합니다.
 
--   `RecyclerView`는 미리 정의 된 어댑터를 제공 하지 않습니다. 데이터 원본에 액세스 하는 어댑터 코드를 구현 해야 합니다. 그러나 Android에는 `ListView` 및 `GridView`에서 작동 하는 몇 가지 미리 정의 된 어댑터가 포함 되어 있습니다.
+- `RecyclerView`는 미리 정의 된 어댑터를 제공 하지 않습니다. 데이터 원본에 액세스 하는 어댑터 코드를 구현 해야 합니다. 그러나 Android에는 `ListView` 및 `GridView`에서 작동 하는 몇 가지 미리 정의 된 어댑터가 포함 되어 있습니다.
 
--   `RecyclerView`사용자가 항목을 탭 할 때 항목 클릭 이벤트를 제공 하지 않습니다. 대신, 항목 클릭 이벤트는 도우미 클래스에서 처리 됩니다. 이와 대조적 `ListView` 으로는 항목 클릭 이벤트를 제공 합니다.
+- `RecyclerView`사용자가 항목을 탭 할 때 항목 클릭 이벤트를 제공 하지 않습니다. 대신, 항목 클릭 이벤트는 도우미 클래스에서 처리 됩니다. 이와 대조적 `ListView` 으로는 항목 클릭 이벤트를 제공 합니다.
 
--   `RecyclerView`뷰를 재생 하 고, 뷰 소유자 패턴을 적용 하 여 불필요 한 레이아웃 리소스 조회를 제거 하 여 성능을 향상 시킵니다. 에서 `ListView`뷰 소유자 패턴의 사용은 선택 사항입니다.
+- `RecyclerView`뷰를 재생 하 고, 뷰 소유자 패턴을 적용 하 여 불필요 한 레이아웃 리소스 조회를 제거 하 여 성능을 향상 시킵니다. 에서 `ListView`뷰 소유자 패턴의 사용은 선택 사항입니다.
 
--   `RecyclerView`는 사용자 지정을 용이 하 게 하는 모듈식 디자인을 기반으로 합니다. 예를 들어 응용 프로그램에 중요 한 코드를 변경 하지 않고도 다른 레이아웃 정책을 연결할 수 있습니다.
+- `RecyclerView`는 사용자 지정을 용이 하 게 하는 모듈식 디자인을 기반으로 합니다. 예를 들어 응용 프로그램에 중요 한 코드를 변경 하지 않고도 다른 레이아웃 정책을 연결할 수 있습니다.
     이와 대조적 `ListView` 으로는 구조에서 상대적으로 모놀리식.
 
--   `RecyclerView`항목 추가 및 제거에 대 한 기본 제공 애니메이션을 포함 합니다. `ListView`애니메이션에는 앱 개발자의 일부에 대 한 몇 가지 추가 노력이 필요 합니다.
+- `RecyclerView`항목 추가 및 제거에 대 한 기본 제공 애니메이션을 포함 합니다. `ListView`애니메이션에는 앱 개발자의 일부에 대 한 몇 가지 추가 노력이 필요 합니다.
 
 
 ### <a name="sections"></a>섹션

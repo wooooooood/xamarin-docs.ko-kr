@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e4676314b361bac17b3c6df64631572e62f4d870
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6960fe3db1ddf7d6d911fe8151e49b1a42388d26
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653724"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527850"
 ---
 # <a name="core-image-in-xamarinios"></a>Xamarin.ios의 핵심 이미지
 
@@ -22,9 +22,9 @@ _핵심 이미지는 이미지 처리와 라이브 비디오 기능 향상 기�
 
 이 문서에는 다음과 같은 간단한 예가 포함 되어 있습니다.
 
--  얼굴 감지.
--  이미지에 필터 적용
--  사용 가능한 필터를 나열 합니다.
+- 얼굴 감지.
+- 이미지에 필터 적용
+- 사용 가능한 필터를 나열 합니다.
 
 
 이러한 예제는 Xamarin.ios 응용 프로그램에 핵심 이미지 기능을 통합 하기 시작 하는 데 도움이 됩니다.
@@ -49,12 +49,12 @@ CIFeature[] features = detector.FeaturesInImage(ciImage);
 
 기능 배열이 검색 된 경우에는 `CIFaceFeature` 개체로 채워집니다. 각 면 `CIFaceFeature` 에 대 한가 있습니다. `CIFaceFeature`에는 다음과 같은 속성이 있습니다.
 
--  HasMouthPosition –이 면에 대 한 입/군/시가 검색 되었는지 여부입니다.
--  HasLeftEyePosition –이 면에 대해 왼쪽 눈이 감지 되었는지 여부입니다.
--  HasRightEyePosition –이 얼굴에 대 한 올바른 눈이 감지 되었는지 여부입니다. 
--  MouthPosition –이 면에 대 한 입/군/시의 좌표입니다.
--  LeftEyePosition –이 면의 왼쪽 눈동자 좌표입니다.
--  RightEyePosition –이 면의 올바른 눈동자 좌표입니다.
+- HasMouthPosition –이 면에 대 한 입/군/시가 검색 되었는지 여부입니다.
+- HasLeftEyePosition –이 면에 대해 왼쪽 눈이 감지 되었는지 여부입니다.
+- HasRightEyePosition –이 얼굴에 대 한 올바른 눈이 감지 되었는지 여부입니다. 
+- MouthPosition –이 면에 대 한 입/군/시의 좌표입니다.
+- LeftEyePosition –이 면의 왼쪽 눈동자 좌표입니다.
+- RightEyePosition –이 면의 올바른 눈동자 좌표입니다.
 
 
 이러한 모든 속성의 좌표는 왼쪽 위를 원본으로 사용 하는 UIKit와는 달리 왼쪽 아래에 원점이 있습니다. 좌표를 사용 하는 `CIFaceFeature` 경우 해당 좌표를 ' 대칭 이동 ' 해야 합니다. CoreImage\CoreImageViewController.cs의이 매우 기본적인 사용자 지정 이미지 뷰는 이미지에 ' face 표시기 ' 삼각형을 그리는 방법을 보여 줍니다 ( `FlipForBottomOrigin` 메서드 참고).

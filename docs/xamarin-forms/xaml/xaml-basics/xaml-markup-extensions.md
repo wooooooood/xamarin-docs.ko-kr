@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 2417d6400faf80ad9b3b24a032046e7e867814f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655483"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529274"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
@@ -441,9 +441,9 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 여러 태그 확장은 XAML에 고유하며 Xamarin.Forms XAML 파일에 지원됩니다. 이 중 몇 가지는 자주 사용되지 않지만 필요할 때는 기본적입니다.
 
--  속성은 기본적으로 `null`이 아닌 값을 갖지만, `null`로 설정하고자 한다면 `{x:Null}` 태그 확장으로 설정합니다.
--  속성이 `Type` 형식인 경우, `{x:Type someClass}`를 사용하여 해당 속성을 `Type` 개체에 할당할 수 있습니다.
--  XAML의 배열은 `x:Array` 태그 확장을 사용하여 정의할 수 있습니다. 이 태그 확장에는 배열에 있는 요소 유형을 나타내는 `Type`이라는 필수 특성이 있습니다.
+- 속성은 기본적으로 `null`이 아닌 값을 갖지만, `null`로 설정하고자 한다면 `{x:Null}` 태그 확장으로 설정합니다.
+- 속성이 `Type` 형식인 경우, `{x:Type someClass}`를 사용하여 해당 속성을 `Type` 개체에 할당할 수 있습니다.
+- XAML의 배열은 `x:Array` 태그 확장을 사용하여 정의할 수 있습니다. 이 태그 확장에는 배열에 있는 요소 유형을 나타내는 `Type`이라는 필수 특성이 있습니다.
 - `Binding` 태그 확장에 대해서는 설명 [4부.  데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)에서 논의합니다.
 
 ## <a name="the-constraintexpression-markup-extension"></a>ConstraintExpression 태그 확장

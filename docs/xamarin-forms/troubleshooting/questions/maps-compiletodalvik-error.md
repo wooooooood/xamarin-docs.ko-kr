@@ -1,5 +1,5 @@
 ---
-title: COMPILETODALVIK UNEXPECTED TOP-LEVEL ERROR를 사용 하 여 Xamarin.Forms.Maps Android 프로젝트가 실패 하는 이유
+title: COMPILETODALVIK Android 프로젝트가 예기치 않은 최상위 오류를 표시 하며 실패 하는 이유는 무엇 인가요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C0251EB1-F509-47AD-98D6-846AF46425E5
@@ -7,34 +7,34 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: 9df9e348440b9dd4b18b3859d64cbe47bd05b24c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: efa21d3547167996e1a7dcc533caa00e0b1262e6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250494"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529037"
 ---
-# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>COMPILETODALVIK UNEXPECTED TOP-LEVEL ERROR를 사용 하 여 Xamarin.Forms.Maps Android 프로젝트가 실패 하는 이유
+# <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>COMPILETODALVIK Android 프로젝트가 예기치 않은 최상위 오류를 표시 하며 실패 하는 이유는 무엇 인가요?
 
-Mac 또는 Visual Studio의 빌드 출력 창의 오류 패드의 Visual Studio에서이 오류가 표시 될 수 있습니다. Xamarin.Forms.Maps를 사용 하 여 Android 프로젝트입니다.
+이 오류는 Mac용 Visual Studio의 오류 패드 또는 Visual Studio의 빌드 출력 창에서 볼 수 있습니다. Xamarin.ios를 사용 하는 Android 프로젝트.
 
-이 오류를 Xamarin.Android 프로젝트에 대 한 Java 힙 크기를 늘려 가장 일반적으로 해결 됩니다. 힙 크기를 늘리려면 다음이 단계를 수행 합니다.
+이는 일반적으로 Xamarin Android 프로젝트에 대 한 Java 힙 크기를 늘려서 해결 됩니다. 다음 단계를 수행 하 여 힙 크기를 늘립니다.
 
 ## <a name="visual-studio"></a>Visual Studio
 
-1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 & 프로젝트 옵션을 엽니다.
-2. 로 **Android 옵션-> 고급**
-3. Java 힙 크기의 입력란에 1 G를 입력 합니다.
+1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 & 프로젝트 옵션을 엽니다.
+2. **Android 옵션으로 이동-> 고급**
+3. Java 힙 크기 텍스트 상자에 1G를 입력 합니다.
 4. 프로젝트를 다시 빌드합니다.
 
-![Visual Studio 프로젝트 옵션의 스크린샷](maps-compiletodalvik-error-images/vsjavaheap.png "Android 빌드 옵션 Visual Studio에서")
+![Visual Studio 프로젝트 옵션의 스크린샷](maps-compiletodalvik-error-images/vsjavaheap.png "Visual Studio의 Android 빌드 옵션")
 
-## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
-1.  Android 프로젝트를 마우스 오른쪽 단추로 클릭 & 프로젝트 옵션을 엽니다.
-2.  로 **빌드 Android 빌드->-> 고급**
-3.  Java 힙 크기의 입력란에 1 G를 입력 합니다.
-4.  프로젝트를 다시 빌드합니다.  
+1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 & 프로젝트 옵션을 엽니다.
+2. **빌드-> Android 빌드-> 고급** 으로 이동
+3. Java 힙 크기 텍스트 상자에 1G를 입력 합니다.
+4. 프로젝트를 다시 빌드합니다.  
 
-![Visual Studio for Mac 프로젝트 옵션의 스크린샷](maps-compiletodalvik-error-images/xsjavaheap.png "Android 빌드 Mac 용 Visual Studio의 옵션")
+![Mac용 Visual Studio 프로젝트 옵션의 스크린샷](maps-compiletodalvik-error-images/xsjavaheap.png "Mac용 Visual Studio의 Android 빌드 옵션")
 

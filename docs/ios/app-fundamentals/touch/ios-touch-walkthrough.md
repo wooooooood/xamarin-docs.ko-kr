@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f772bf1309330b41f9faea812e2cdcdba8e969cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 352a312d795ba292b47621ddb84540c2259ea10a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653132"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527058"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.ios에서 Touch 사용
 
@@ -181,8 +181,8 @@ ms.locfileid: "68653132"
 [이전 섹션](#Touch_Samples) 에서는 터치 이벤트를 사용 하 여 화면 주위에서 개체를 끄는 방법을 살펴보았습니다.
 이 섹션에서는 터치 이벤트를 제거 하 고 다음 제스처 인식기를 사용 하는 방법을 보여 줍니다.
 
--  화면 주위에서 이미지를 끌기 위한입니다.`UIPanGestureRecognizer`
--  화면 `UITapGestureRecognizer` 에서 두 번 탭 할 때 응답 하는입니다.
+- 화면 주위에서 이미지를 끌기 위한입니다.`UIPanGestureRecognizer`
+- 화면 `UITapGestureRecognizer` 에서 두 번 탭 할 때 응답 하는입니다.
 
 [시작 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) 를 실행 하 고 **제스처 인식기 샘플** 단추를 클릭 하면 다음과 같은 화면이 표시 됩니다.
 

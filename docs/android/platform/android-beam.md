@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 0c4f7303d3620dcc2c829d732fe7a5f97f0e3883
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643774"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524731"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -23,9 +23,9 @@ Android 무선은 두 장치가 범위 내에 있을 때 NFC를 통해 메시지
 
 Android는 Android 빔을 사용 하 여 메시지를 설정 하는 두 가지 방법을 지원 합니다.
 
--   `SetNdefPushMessage`-Android 무선 연결을 시작 하기 전에 응용 프로그램은 SetNdefPushMessage를 호출 하 여 NFC를 통해 푸시할 NdefMessage와이를 푸시하는 활동을 지정할 수 있습니다. 응용 프로그램을 사용 하는 동안 메시지가 변경 되지 않는 경우이 메커니즘을 사용 하는 것이 가장 좋습니다.
+- `SetNdefPushMessage`-Android 무선 연결을 시작 하기 전에 응용 프로그램은 SetNdefPushMessage를 호출 하 여 NFC를 통해 푸시할 NdefMessage와이를 푸시하는 활동을 지정할 수 있습니다. 응용 프로그램을 사용 하는 동안 메시지가 변경 되지 않는 경우이 메커니즘을 사용 하는 것이 가장 좋습니다.
 
--   `SetNdefPushMessageCallback`-Android 빔이 시작 되 면 응용 프로그램은 콜백을 처리 하 여 NdefMessage를 만들 수 있습니다. 이 메커니즘을 사용 하면 장치가 범위 내에 있을 때까지 메시지를 만들 수 있습니다. 응용 프로그램에서 발생 하는 상황에 따라 메시지가 달라질 수 있는 시나리오를 지원 합니다.
+- `SetNdefPushMessageCallback`-Android 빔이 시작 되 면 응용 프로그램은 콜백을 처리 하 여 NdefMessage를 만들 수 있습니다. 이 메커니즘을 사용 하면 장치가 범위 내에 있을 때까지 메시지를 만들 수 있습니다. 응용 프로그램에서 발생 하는 상황에 따라 메시지가 달라질 수 있는 시나리오를 지원 합니다.
 
 
 두 경우 모두 Android 빔를 사용 하 여 데이터를 전송 하기 위해 응용 `NdefMessage`프로그램은를 전송 하 고 `NdefRecords`데이터를 여러 패키지로 패키지화 합니다. Android 보를 트리거하기 전에 해결 해야 하는 주요 요소에 대해 살펴보겠습니다. 먼저를 만드는 `NdefMessage`콜백 스타일을 사용 합니다.

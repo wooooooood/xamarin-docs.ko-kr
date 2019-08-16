@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 646a26b4c9b2d44595315a6a32b7294b18c42d7a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7dd3889e9fcbb2260165a96f32f56f437df15ade
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648957"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528842"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 보기 사용
 
@@ -67,7 +67,7 @@ TvOS 앱에서 `UIStackView` 를 사용 하는 경우 개발자는 iOS 디자이
 
 또한 스택 뷰의 **높이** 및 **너비**에 대 한 제약 조건을 지정할 수 있습니다. 이 경우 하위 뷰는 `Distribution` 및 `Alignment` 속성에 의해 결정 되는 스택 뷰에 지정 된 공간을 채우도록 (크기 조정) 배치 됩니다.
 
--   속성이 이면 하위 뷰는 Top, bottom 또는 * Center Y 위치를 사용 하는 대신 첫 번째 또는 마지막 하위 뷰의 기준선을 기준으로 배치 됩니다. `true` `BaselineRelativeArrangement` 이러한 항목은 스택 뷰의 콘텐츠에서 다음과 같이 계산 됩니다.
+- 속성이 이면 하위 뷰는 Top, bottom 또는 * Center Y 위치를 사용 하는 대신 첫 번째 또는 마지막 하위 뷰의 기준선을 기준으로 배치 됩니다. `true` `BaselineRelativeArrangement` 이러한 항목은 스택 뷰의 콘텐츠에서 다음과 같이 계산 됩니다.
 
 * 세로 스택 뷰는 첫 번째 기준선에 대해 첫 번째 하위 뷰를 반환 하 고 마지막에는 마지막 하위 뷰를 반환 합니다. 이러한 하위 뷰 중 하나가 스택 보기 이면 첫 번째 또는 마지막 기준이 사용 됩니다.
 * 가로 스택 보기는 첫 번째 및 마지막 기준선 모두에 가장 긴 하위 뷰를 사용 합니다. 가장 긴 뷰도 스택 보기 이면 가장 긴 하위 뷰를 기준선으로 사용 합니다.
@@ -85,9 +85,9 @@ TvOS 앱에서 `UIStackView` 를 사용 하는 경우 개발자는 iOS 디자이
 스택 뷰 컨트롤에서 잘 작동 하는 몇 가지 레이아웃 유형이 있습니다. Apple에 따라 다음과 같은 몇 가지 일반적인 사용 방법에 대해 살펴보겠습니다.
 
 - **축을 따라 크기를 정의** 합니다. 스택 보기의 `Axis` 가장자리와 인접 한 가장자리 중 하나를 고정 하 여 위치를 설정 하면 스택 뷰가 축을 따라 하위 뷰에서 정의 된 공간에 맞게 늘어납니다.
-*  하위 뷰의 **위치 정의** – 부모 뷰에 스택 뷰의 인접 한 가장자리에 고정 하 여 하위 뷰 포함 하는 크기에 맞게 스택 뷰를 늘립니다.
+- 하위 뷰의 **위치 정의** – 부모 뷰에 스택 뷰의 인접 한 가장자리에 고정 하 여 하위 뷰 포함 하는 크기에 맞게 스택 뷰를 늘립니다.
 - 스택의 **크기 및 위치를 정의** 합니다. 스택 보기의 네 가지 모든 가장자리를 부모 뷰에 고정 하 여 스택 뷰에서 스택 보기 내에 정의 된 공간을 기준으로 하위 뷰을 정렬 합니다.
-*  **축에 수직인 크기 정의** – 스택 보기 `Axis` 에 수직인 가장자리와 축을 따라 가장자리 중 하나를 고정 하 여 위치를 설정 하면 스택 뷰가 축에 수직으로 증가 하 여 하위 뷰에 의해 정의 된 공간에 맞게 조정 됩니다.
+- **축에 수직인 크기 정의** – 스택 보기 `Axis` 에 수직인 가장자리와 축을 따라 가장자리 중 하나를 고정 하 여 위치를 설정 하면 스택 뷰가 축에 수직으로 증가 하 여 하위 뷰에 의해 정의 된 공간에 맞게 조정 됩니다.
 
 <a name="Stack-Views-and-Storyboards" />
 
@@ -108,7 +108,7 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다. 
 
     [![](stacked-views-images/layout03.png "스택 뷰")](stacked-views-images/layout03.png#lightbox)
-1. 스택 뷰를 선택 하 고, **Properties Pad** 의 **위젯 탭** 에서 **맞춤**에 대해 **채우기** 를 선택 하 고, **균등** 하 게 입력 `25` **하 고,** **간격**을 입력 합니다. 
+1. 스택 뷰를 선택 하 고, **Properties Pad** 의 **위젯 탭** 에서 **맞춤**에 대해 **채우기** 를 선택 하 고, **균등** 하 게 입력 `25` 하 고, **간격**을 입력 합니다. 
 
     [![](stacked-views-images/layout04.png "위젯 탭")](stacked-views-images/layout04.png#lightbox)
 1. 화면에서 원하는 위치에 스택 보기를 배치 하 고 필요한 위치에 유지 하기 위한 제약 조건을 추가 합니다.
@@ -132,7 +132,7 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다. 
 
     [![](stacked-views-images/layout03-vs.png "스택 뷰")](stacked-views-images/layout03-vs.png#lightbox)
-1. 스택 뷰를 선택 하 고, **속성 탐색기** 의 **위젯 탭** 에서 맞춤 **을 선택 하** 고, **균등** 하 게 입력 **하 고** , `25` **간격**을 입력 합니다. 
+1. 스택 뷰를 선택 하 고 , **속성 탐색기** 의 **위젯 탭** 에서 **맞춤**을 선택 하 고, **균등** 하 게 입력 하 고, `25` **간격**을 입력 합니다. 
 
     [![](stacked-views-images/layout04-vs.png "위젯 탭")](stacked-views-images/layout04-vs.png#lightbox)
 1. 화면에서 원하는 위치에 스택 보기를 배치 하 고 필요한 위치에 유지 하기 위한 제약 조건을 추가 합니다.

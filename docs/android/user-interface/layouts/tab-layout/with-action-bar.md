@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 92278fb84cba6329c33ac8a972a686fff7186f67
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647436"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522334"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>ActionBar를 사용 하는 탭 레이아웃
 
@@ -47,17 +47,17 @@ ActionBar는 모든 탭을 표시할 수 없는 경우 가로로 스크롤할 �
 
 작업 모음의 각 탭은 [*조각*](~/android/platform/fragments/index.md)에 연결 되어야 합니다. 사용자가 탭을 선택 하면 응용 프로그램은 탭과 연결 된 조각을 표시 합니다. ActionBar는 사용자에 게 적절 한 조각을 표시 하는 일을 담당 하지 않습니다. 대신 ActionBar는 ActionBar 인터페이스를 구현 하는 클래스를 통해 탭의 상태 변경 내용을 응용 프로그램에 알립니다. 이 인터페이스는 탭의 상태가 변경 될 때 Android에서 호출 하는 세 가지 콜백 메서드를 제공 합니다. 
 
--  **Ontabselected** -이 메서드는 사용자가 탭을 선택할 때 호출 됩니다. 조각이 표시 되어야 합니다.
+- **Ontabselected** -이 메서드는 사용자가 탭을 선택할 때 호출 됩니다. 조각이 표시 되어야 합니다.
 
--  **OnTabReselected** -이 메서드는 탭이 이미 선택 되어 있지만 사용자가 다시 선택 하는 경우 호출 됩니다. 이 콜백은 일반적으로 표시 되는 조각을 새로 고치거 나 업데이트 하는 데 사용 됩니다.
+- **OnTabReselected** -이 메서드는 탭이 이미 선택 되어 있지만 사용자가 다시 선택 하는 경우 호출 됩니다. 이 콜백은 일반적으로 표시 되는 조각을 새로 고치거 나 업데이트 하는 데 사용 됩니다.
 
--  **Ontabunselected 취소** -이 메서드는 사용자가 다른 탭을 선택할 때 호출 됩니다. 이 콜백은 표시 된 조각에 상태를 저장 하는 데 사용 됩니다.
+- **Ontabunselected 취소** -이 메서드는 사용자가 다른 탭을 선택할 때 호출 됩니다. 이 콜백은 표시 된 조각에 상태를 저장 하는 데 사용 됩니다.
 
 Xamarin.ios는 `ActionBar.Tab` 클래스의 이벤트 `ActionBar.ITabListener` 를 사용 하 여를 래핑합니다. 응용 프로그램은 이러한 이벤트 중 하나 이상에 이벤트 처리기를 할당할 수 있습니다. 작업 모음 탭에서 발생 하는 세 가지 이벤트 `ActionBar.ITabListener`(의 각 메서드에 하나씩)가 있습니다. 
 
--  TabSelected
--  TabReselected
--  TabUnselected 취소
+- TabSelected
+- TabReselected
+- TabUnselected 취소
 
 
 

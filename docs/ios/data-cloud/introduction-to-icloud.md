@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: e4728d14e4fdb914fbfc950ffe38abee031b4c49
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649652"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527583"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.ios에서 iCloud 사용
 
@@ -45,9 +45,9 @@ IOS 5의 iCloud 저장소 API를 사용 하면 응용 프로그램에서 사용�
 
 ICloud에 액세스 하도록 응용 프로그램을 올바르게 구성 하려면:
 
--   [Developer.apple.com](https://developer.apple.com) 에 대 한 **teamid** -로그인을 찾은 다음 **회원 > 센터 > 개발자 계정 요약** 을 방문 하 여 팀 id (또는 단일 개발자를 위한 개별 id)를 가져옵니다. 10 자리 문자열 (예: **A93A5CM278** ) 이며, "컨테이너 식별자"의 일부를 형성 합니다.
+- [Developer.apple.com](https://developer.apple.com) 에 대 한 **teamid** -로그인을 찾은 다음 **회원 > 센터 > 개발자 계정 요약** 을 방문 하 여 팀 id (또는 단일 개발자를 위한 개별 id)를 가져옵니다. 10 자리 문자열 (예: **A93A5CM278** ) 이며, "컨테이너 식별자"의 일부를 형성 합니다.
 
--   **새 앱 Id 만들기** -앱 id를 만들려면 [장치 프로 비전 가이드의 스토어 기술 프로 비전 섹션](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)에 설명 된 단계에 따라 **iCloud** 를 허용 되는 서비스로 확인 합니다.
+- **새 앱 Id 만들기** -앱 id를 만들려면 [장치 프로 비전 가이드의 스토어 기술 프로 비전 섹션](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)에 설명 된 단계에 따라 **iCloud** 를 허용 되는 서비스로 확인 합니다.
 
  [![](introduction-to-icloud-images/icloud-sml.png "ICloud를 허용 되는 서비스로 확인")](introduction-to-icloud-images/icloud.png#lightbox)
 
@@ -224,7 +224,7 @@ ICloud를 사용 하려면 UIDocument 하위 클래스에서 구현 해야 하�
 
 - **LoadFromContents** -모델 클래스/es로 압축을 풀 수 있도록 파일 내용의 nsdata를 전달 합니다.
 
-- 내용 **지정-디스크** (및 클라우드)에 저장할 모델 클래스/Es의 nsdata 표현을 제공 하는 요청입니다.
+- 내용 지정-디스크 (및 클라우드)에 저장할 모델 클래스/Es의 nsdata 표현을 제공 하는 요청입니다.
 
 **ICloudUIDoc\MonkeyDocument.cs** 의이 샘플 코드에서는 uidocument를 구현 하는 방법을 보여 줍니다.
 

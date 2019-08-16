@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: e22d1d8a1c2604c1bbe710fcaf1ba7793455e6f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c4050f439f3499289063c286afd255241bf0343
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508867"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521461"
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
@@ -23,11 +23,11 @@ _Xamarin.ios에는 여러 버전의 Android와 앱의 호환성을 결정 하는
 
 Xamarin Android는 다음과 같은 세 가지 Android API 수준 프로젝트 설정을 노출 합니다.
 
--   [대상 프레임 워크](#framework) &ndash; 응용 프로그램을 빌드하는 데 사용할 프레임 워크를 지정 합니다. 이 API 수준은 *컴파일* 시 Xamarin. Android에서 사용 됩니다.
+- [대상 프레임 워크](#framework) &ndash; 응용 프로그램을 빌드하는 데 사용할 프레임 워크를 지정 합니다. 이 API 수준은 *컴파일* 시 Xamarin. Android에서 사용 됩니다.
 
--   [최소 Android 버전](#minimum) &ndash; 앱에서 지원 하려는 가장 오래 된 Android 버전을 지정 합니다. 이 API 수준은 Android에서 *런타임에* 사용 됩니다.
+- [최소 Android 버전](#minimum) &ndash; 앱에서 지원 하려는 가장 오래 된 Android 버전을 지정 합니다. 이 API 수준은 Android에서 *런타임에* 사용 됩니다.
 
--   [대상 Android 버전](#target) &ndash; 앱이 실행 되는 Android 버전을 지정 합니다. 이 API 수준은 Android에서 *런타임에* 사용 됩니다.
+- [대상 Android 버전](#target) &ndash; 앱이 실행 되는 Android 버전을 지정 합니다. 이 API 수준은 Android에서 *런타임에* 사용 됩니다.
 
 프로젝트에 대 한 API 수준을 구성 하려면 먼저 해당 API 수준에 대 한 SDK 플랫폼 구성 요소를 설치 해야 합니다. Android SDK 구성 요소를 다운로드 하 고 설치 하는 방법에 대 한 자세한 내용은 [Android SDK 설치](~/android/get-started/installation/android-sdk.md)를 참조 하세요.
 
@@ -81,9 +81,9 @@ Android 플랫폼이 진화 하 고 새로운 Android 버전이 출시 됨에 �
 
 Android의 각 릴리스는 여러 이름으로 이동 합니다.
 
--   Android 버전 (예: **android 9.0** )
--   _원형_ 같은 코드 (또는 후 식) 이름
--   **Api 수준 28** 과 같은 해당 api 수준
+- Android 버전 (예: **android 9.0** )
+- _원형_ 같은 코드 (또는 후 식) 이름
+- **Api 수준 28** 과 같은 해당 api 수준
 
 Android 코드 이름은 다음 표에 표시 된 것 처럼 여러 버전 및 API 수준에 해당할 수 있지만 각 Android 버전은 정확히 하나의 API 수준에 해당 합니다.
 
@@ -100,9 +100,9 @@ Android 코드 이름은 다음 표에 표시 된 것 처럼 여러 버전 및 A
 
 응용 프로그램을 빌드할 때 다음과 같은 API 수준 정보가 포함 됩니다.
 
--   앱이 실행 되도록 빌드된 Android의 *대상* API 수준입니다.
+- 앱이 실행 되도록 빌드된 Android의 *대상* API 수준입니다.
 
--   Android 장치에서 앱을 실행 하는 데 필요한 *최소* android API 수준입니다. 
+- Android 장치에서 앱을 실행 하는 데 필요한 *최소* android API 수준입니다. 
 
 이러한 설정은 설치 시 Android 장치에서 앱을 올바르게 실행 하는 데 필요한 기능을 사용할 수 있는지 확인 하는 데 사용 됩니다. 그렇지 않은 경우 해당 장치에서 앱이 실행 되지 않도록 차단 됩니다. 예를 들어 Android 장치의 API 수준이 앱에 대해 지정한 최소 API 수준 보다 낮으면 Android 장치에서 사용자가 앱을 설치 하지 못하게 됩니다.
 
@@ -120,7 +120,7 @@ Xamarin.ios에서 대상 또는 최소 API 수준을 선택 하려면 먼저 해
 
 ### <a name="target-framework"></a>대상 프레임워크
 
-*대상 프레임 워크* (라고도 함 `compileSdkVersion`)는 빌드할 때 앱이 컴파일되는 특정 Android Framework 버전 (API 수준)입니다. 이 설정은 앱을 실행할 때 앱에서 *사용 해야 하* 는 api를 지정 하지만, 앱이 설치 될 때 앱에서 실제로 사용할 수 있는 api에는 영향을 주지 않습니다. 따라서 대상 프레임 워크 설정을 변경 해도 런타임 동작은 변경 되지 않습니다.
+*대상 프레임 워크* (라고도 함 `compileSdkVersion`)는 빌드할 때 앱이 컴파일되는 특정 Android Framework 버전 (API 수준)입니다. 이 설정은 앱을 실행할 때 앱 에서 사용 해야 하는 api를 지정 하지만, 앱이 설치 될 때 앱에서 실제로 사용할 수 있는 api에는 영향을 주지 않습니다. 따라서 대상 프레임 워크 설정을 변경 해도 런타임 동작은 변경 되지 않습니다.
 
 대상 프레임 워크는 응용 프로그램이 연결 &ndash; 된 라이브러리 버전을 식별 하 여 앱에서 사용할 수 있는 api를 결정 합니다. 예를 들어 Android 5.0 롤리팝에서 도입 된 [Notificationbuilder. SetCategory](xref:Android.App.Notification.Builder.SetCategory*) 메서드를 사용 하려면 대상 프레임 워크를 **API 수준 21 (롤리팝)** 이상으로 설정 해야 합니다. 프로젝트의 대상 프레임 워크를 **api 수준 19 (KitKat)** 와 같은 api 수준으로 설정 하 고 코드에서 `SetCategory` 메서드를 호출 하려고 하면 컴파일 오류가 발생 합니다.
 
@@ -263,9 +263,9 @@ Xamarin android 라이브러리 프로젝트를 만들 때 최소 android 버전
 
 결과로 생성 되는 라이브러리가 독립 실행형 앱 &ndash; 이 아니기 때문에 최소 android 버전 및 대상 Android 버전 설정을 사용할 수 없습니다 .이 라이브러리는 패키지 된 앱에 따라 android 버전에서 실행 될 수 있습니다. 라이브러리를 *컴파일하*는 방법을 지정할 수 있지만 라이브러리가 실행 될 플랫폼 API 수준을 예측할 수는 없습니다. 이 점을 염두에 두면 라이브러리를 사용 하거나 만들 때 다음과 같은 모범 사례를 준수 해야 합니다.
 
--   **Android 라이브러리를 사용 하는 경우** 응용 프로그램에서 Android 라이브러리를 사용 하는 경우 응용 프로그램의 대상 프레임 워크 설정을 라이브러리의 대상 프레임 워크 설정 보다 *적어도 높은* API 수준으로 설정 해야 합니다. &ndash;
+- **Android 라이브러리를 사용 하는 경우** 응용 프로그램에서 Android 라이브러리를 사용 하는 경우 응용 프로그램의 대상 프레임 워크 설정을 라이브러리의 대상 프레임 워크 설정 보다 *적어도 높은* API 수준으로 설정 해야 합니다. &ndash;
 
--   **Android 라이브러리를 만드는 경우** &ndash; 다른 응용 프로그램에서 사용할 Android 라이브러리를 만드는 경우 대상 프레임 워크 설정을 컴파일하는 데 필요한 최소 API 수준으로 설정 해야 합니다.
+- **Android 라이브러리를 만드는 경우** &ndash; 다른 응용 프로그램에서 사용할 Android 라이브러리를 만드는 경우 대상 프레임 워크 설정을 컴파일하는 데 필요한 최소 API 수준으로 설정 해야 합니다.
 
 이러한 모범 사례는 라이브러리에서 런타임에 사용할 수 없는 API를 호출 하려고 하는 상황을 방지 하는 데 도움이 됩니다 (응용 프로그램의 작동이 중단 될 수 있음). 라이브러리 개발자는 API 호출 사용을 전체 API 노출 영역의 작고 잘 구성 된 하위 집합으로 제한 하도록 노력 해야 합니다. 이렇게 하면 더 광범위 한 Android 버전에서 라이브러리를 안전 하 게 사용할 수 있습니다.
 

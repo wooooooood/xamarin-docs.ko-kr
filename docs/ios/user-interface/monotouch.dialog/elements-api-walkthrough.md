@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 82320b069156828101d17e79ca48a8933b8a8777
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655086"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528467"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Elements API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
 _이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기반으로 합니다. Monotouch.dialog (MT. 대화 상자를 사용 하는 방법을 보여 주는 연습을 제공 합니다. D) 요소 API를 사용 하 여 MT로 응용 프로그램을 빠르게 빌드할 수 있습니다. 2._
 
-이 연습에서는 MT를 사용 합니다. D Elements API를 통해 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들 수 있습니다. 사용자가 탐색 모음에서 <span class="ui">+</span> 단추를 선택 하면 태스크에 대 한 테이블에 새 행이 추가 됩니다. 행을 선택 하면 아래 그림과 같이 작업 설명과 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 합니다.
+이 연습에서는 MT를 사용 합니다. D Elements API를 통해 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들 수 있습니다. 사용자가 탐색 모음에서 **+** 단추를 선택 하면 태스크에 대 한 테이블에 새 행이 추가 됩니다. 행을 선택 하면 아래 그림과 같이 작업 설명과 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 합니다.
 
  [![](elements-api-walkthrough-images/01-task-list-app.png "행을 선택 하면 세부 정보 화면으로 이동 하 여 작업 설명 및 기한 날짜를 업데이트할 수 있습니다.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
@@ -36,11 +36,11 @@ _이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기
 
 Monotouch.dialog를 사용 하 여 다중 화면 응용 프로그램을 만들려면 다음을 수행 해야 합니다.
 
-1.  만들기`UINavigationController.`
-1.  만들기`DialogViewController.`
-1.  `DialogViewController` 을의 루트로 추가 합니다.`UINavigationController.` 
-1.  `RootElement` 에를 추가 합니다.`DialogViewController.`
-1.  에 `Sections` 및`Elements` 을 추가 합니다.`RootElement.` 
+1. 만들기`UINavigationController.`
+1. 만들기`DialogViewController.`
+1. `DialogViewController` 을의 루트로 추가 합니다.`UINavigationController.` 
+1. `RootElement` 에를 추가 합니다.`DialogViewController.`
+1. 에 `Sections` 및`Elements` 을 추가 합니다.`RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>UINavigationController 사용
 
@@ -77,14 +77,14 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="using-dialogviewcontroller"></a>DialogViewController 사용
 
-하위 클래스가 `DialogViewController` `UITableView` 되는의는를 뷰로 포함 합니다. `UITableViewController` 이 예에서는 <span class="ui">+</span> 단추를 누를 때마다 테이블에 항목을 추가 하려고 합니다. 는 `DialogViewController` 에 추가 `UINavigationController`되었으므로 아래와 같이 `NavigationItem`의 `RightBarButton` 속성을 사용 하 여 <span class="ui">+</span> 단추를 추가할 수 있습니다.
+하위 클래스가 `DialogViewController` `UITableView` 되는의는를 뷰로 포함 합니다. `UITableViewController` 이 예에서는 **+** 단추를 누를 때마다 테이블에 항목을 추가 하려고 합니다. 는 `DialogViewController` 에 추가 `UINavigationController`되었으므로 아래와 같이 `NavigationItem`의 `RightBarButton` 속성을 사용 하 여 **+** 단추를 추가할 수 있습니다.
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-앞에서 `RootElement` 만든 경우에는 사용자가 단추를 <span class="ui">+</span> 탭 `Section` 할 때 요소를 추가할 수 있도록 단일 인스턴스를 전달 했습니다. 단추에 대 한 이벤트 처리기에서 다음 코드를 사용 하 여이 작업을 수행할 수 있습니다.
+앞에서 `RootElement` 만든 경우에는 사용자가 단추를 **+** 탭 `Section` 할 때 요소를 추가할 수 있도록 단일 인스턴스를 전달 했습니다. 단추에 대 한 이벤트 처리기에서 다음 코드를 사용 하 여이 작업을 수행할 수 있습니다.
 
 ```csharp
 _addButton.Clicked += (sender, e) => {                

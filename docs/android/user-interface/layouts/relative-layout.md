@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: a53baed9d5f291628d7d1a8da05739e43412d473
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: af74ae3c7c87f501bff519bcfa361264205ca3f1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509724"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522384"
 ---
 # <a name="xamarinandroid-relativelayout"></a>Xamarin Android RelativeLayout
 
@@ -82,7 +82,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 [![TextView, EditText 및 두 개의 단추가 있는 상대 레이아웃의 스크린샷](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
-## <a name="resources"></a>자료
+## <a name="resources"></a>리소스
 
 - [`RelativeLayout`](xref:Android.Widget.RelativeLayout)
 - [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams)
@@ -90,5 +90,4 @@ protected override void OnCreate (Bundle savedInstanceState)
 - [`EditText`](xref:Android.Widget.EditText)
 - [`Button`](xref:Android.Widget.Button)
 
-*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
-[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.
+_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._

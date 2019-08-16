@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: f577af88140c5797182617a22efbb2e7991a8abc
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510563"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524080"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Xamarin.ios와 Java 통합
 
@@ -24,13 +24,13 @@ Java 에코 시스템의 범위가 지정 된 경우 Xamarin.ios 응용 프로�
 
 Xamarin Android 응용 프로그램에서 Java 라이브러리를 다시 사용할 수 있는 세 가지 방법이 있습니다. 
 
--   **Java 바인딩 라이브러리 만들기** 이 기술을 사용 하면 Xamarin Android 프로젝트를 사용 하 여 Java 형식 C# 주위에 래퍼를 만들 수 있습니다. &ndash; 그런 다음 Xamarin Android 응용 프로그램은이 프로젝트 C# 에서 만든 래퍼를 참조 한 다음 `.jar` 파일을 사용할 수 있습니다. 
+- **Java 바인딩 라이브러리 만들기** 이 기술을 사용 하면 Xamarin Android 프로젝트를 사용 하 여 Java 형식 C# 주위에 래퍼를 만들 수 있습니다. &ndash; 그런 다음 Xamarin Android 응용 프로그램은이 프로젝트 C# 에서 만든 래퍼를 참조 한 다음 `.jar` 파일을 사용할 수 있습니다. 
 
--   **Java Native 인터페이스**  C++ C#  JNI (java Native Interface)는 JVM 내에서 실행 되는 java 코드에 의해 호출 되거나 호출 될 수 있는 비 java 코드 (예: 또는)를 허용 하는 프레임 워크입니다. &ndash; 
+- **Java Native 인터페이스** C++ C# JNI (java Native Interface)는 JVM 내에서 실행 되는 java 코드에 의해 호출 되거나 호출 될 수 있는 비 java 코드 (예: 또는)를 허용 하는 프레임 워크입니다. &ndash; 
 
--   **코드를 이식 합니다** . 이 메서드는 Java 소스 코드를 가져온 다음로 변환 하 C#는 과정을 포함 합니다. &ndash; 이러한 작업은 수동으로 수행 하거나 선명도와 같은 자동화 된 도구를 사용 하 여 수행할 수 있습니다. 
+- **코드를 이식 합니다** . 이 메서드는 Java 소스 코드를 가져온 다음로 변환 하 C#는 과정을 포함 합니다. &ndash; 이러한 작업은 수동으로 수행 하거나 선명도와 같은 자동화 된 도구를 사용 하 여 수행할 수 있습니다. 
 
-처음 두 기술의 핵심은 *Java Native Interface* (JNI)입니다. JNI은 Java로 작성 되지 않은 응용 프로그램을 Java Virtual Machine에서 실행 되는 Java 코드와 상호 작용 하는 데 사용할 수 있는 프레임 워크입니다. Xamarin.ios는 JNI을 사용 하 여  코드에 C# 대 한 바인딩을 만듭니다. 
+처음 두 기술의 핵심은 *Java Native Interface* (JNI)입니다. JNI은 Java로 작성 되지 않은 응용 프로그램을 Java Virtual Machine에서 실행 되는 Java 코드와 상호 작용 하는 데 사용할 수 있는 프레임 워크입니다. Xamarin.ios는 JNI을 사용 하 여 코드에 C# 대 한 바인딩을 만듭니다. 
 
 첫 번째 방법은 Java 라이브러리를 바인딩하는 보다 자동화 된 선언적 방법입니다. Mac용 Visual Studio 또는 xamarin.ios &ndash; 에서 제공 하는 Visual Studio 프로젝트 형식 (Java 바인딩 라이브러리)을 사용 해야 합니다. 이러한 바인딩을 성공적으로 만들려면 Java 바인딩 라이브러리에 몇 가지 수동 수정이 필요 하지만 순수한 JNI 접근 방식은 많지 않습니다. Java 바인딩 라이브러리에 대 한 자세한 내용은 [Java 라이브러리 바인딩을](~/android/platform/binding-java-library/index.md) 참조 하세요. 
 

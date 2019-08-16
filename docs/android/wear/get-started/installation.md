@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 0099414529027a9a6e52b79393cfa6f0f3bc24d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1f6fa57bbe47bbc2fe97bbd0df7018fc1cd3897a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647799"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522173"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -22,13 +22,13 @@ _이 문서에서는 Android를 개발 하기 위해 컴퓨터 및 장치를 준
 
 Xamarin 기반 Android 마모 앱을 만들려면 다음이 필요 합니다.
 
--   **Visual Studio 또는 Mac용 Visual Studio** &ndash; Visual Studio 2017 Community 이상이 필요 합니다.
+- **Visual Studio 또는 Mac용 Visual Studio** &ndash; Visual Studio 2017 Community 이상이 필요 합니다.
 
--   Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.17 이상 버전을 설치 하 고 구성 해야 합니다.
+- Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.17 이상 버전을 설치 하 고 구성 해야 합니다.
 
--   Android SDK Manager를 통해 **Android SDK** Android SDK 5.0.1 용 (API 21) 이상을 설치 해야 합니다.
+- Android SDK Manager를 통해 **Android SDK** Android SDK 5.0.1 용 (API 21) 이상을 설치 해야 합니다.
 
--   **Java 개발자 키트** Api 레벨 24 이상에 대해 개발 중인 경우 Xamarin Android 개발에 [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이 필요 합니다 (jdk 1.8은 24 이전 API 수준도 지원). &ndash;
+- **Java 개발자 키트** Api 레벨 24 이상에 대해 개발 중인 경우 Xamarin Android 개발에 [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이 필요 합니다 (jdk 1.8은 24 이전 API 수준도 지원). &ndash;
 
 API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 을 계속 사용할 수 있습니다.
 
@@ -39,9 +39,9 @@ API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https
 
 Xamarin.ios를 설치한 후 다음 단계를 수행 하 여 Android 앱을 빌드하고 테스트할 준비가 완료 되도록 합니다. 
 
-1.  필요한 Android SDK 및 도구를 설치 합니다.
-2.  테스트 장치를 구성 합니다.
-3.  첫 번째 Android 앱을 만듭니다.
+1. 필요한 Android SDK 및 도구를 설치 합니다.
+2. 테스트 장치를 구성 합니다.
+3. 첫 번째 Android 앱을 만듭니다.
 
 이러한 단계는 다음 섹션에 설명 되어 있습니다.
 

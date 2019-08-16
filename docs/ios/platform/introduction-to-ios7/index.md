@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 067d97e6a36dae6c11f056241c08c21899e96c08
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 885cf4b77d4eac0668a2e70c57187e9b23a91dd1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649321"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527562"
 ---
 # <a name="introduction-to-ios-7"></a>iOS 7 소개
 
@@ -28,8 +28,8 @@ iOS 7은 UIKit에서 애니메이션 지원을 보강 하 여 응용 프로그�
 
  `UIView`에서는 이제 스프링 효과를 사용 하 여 속성 변경에 애니메이션 효과를 지원 합니다. 이를 추가 하려면 아래에서 설명 `AnimateNotify` 하 `AnimateNotifyAsync` 는 것 처럼 또는 메서드를 호출 하 여 스프링 댐핑 비율 및 초기 스프링 속도에 대 한 값을 전달 합니다.
 
--  `springWithDampingRatio`– 진동 범위가가 더 작은 값에 대해 늘리는 0에서 1 사이의 값입니다.
--  `initialSpringVelocity`– 초기 스프링 속도는 초당 총 애니메이션 거리의 백분율로 나타낸 것입니다.
+- `springWithDampingRatio`– 진동 범위가가 더 작은 값에 대해 늘리는 0에서 1 사이의 값입니다.
+- `initialSpringVelocity`– 초기 스프링 속도는 초당 총 애니메이션 거리의 백분율로 나타낸 것입니다.
 
 
 다음 코드는 이미지 뷰의 중심이 변경 될 때 스프링 효과를 생성 합니다.
@@ -97,19 +97,19 @@ API는 본질적으로 선언적입니다. 무게, 충돌, 스프링 등의 물�
 
 다음을 포함 하 여 복잡 한 상호 작용을 트리거하는 데 사용할 수 있는 여러 가지 기본 동작이 있습니다.
 
--  `UIAttachmentBehavior`– 함께 이동 하거나 동적 항목을 첨부 지점에 연결 하는 두 개의 동적 항목을 연결 합니다.
--  `UICollisionBehavior`– 동적 항목이 충돌에 참여할 수 있도록 허용 합니다.
--  `UIDynamicItemBehavior`– 탄력성, 밀도, 마찰 등의 동적 항목에 적용할 일반적인 속성 집합을 지정 합니다.
--  `UIGravityBehavior`-동적 항목에 무게를 적용 하 여 gravitational 방향으로 항목을 가속 시킵니다.
--  `UIPushBehavior`– Force를 동적 항목에 적용 합니다.
--  `UISnapBehavior`– 스프링 효과를 사용 하 여 동적 항목을 위치에 맞출 수 있습니다.
+- `UIAttachmentBehavior`– 함께 이동 하거나 동적 항목을 첨부 지점에 연결 하는 두 개의 동적 항목을 연결 합니다.
+- `UICollisionBehavior`– 동적 항목이 충돌에 참여할 수 있도록 허용 합니다.
+- `UIDynamicItemBehavior`– 탄력성, 밀도, 마찰 등의 동적 항목에 적용할 일반적인 속성 집합을 지정 합니다.
+- `UIGravityBehavior`-동적 항목에 무게를 적용 하 여 gravitational 방향으로 항목을 가속 시킵니다.
+- `UIPushBehavior`– Force를 동적 항목에 적용 합니다.
+- `UISnapBehavior`– 스프링 효과를 사용 하 여 동적 항목을 위치에 맞출 수 있습니다.
 
 
 여러 가지 기본 형식이 있지만 UIKit Dynamics를 사용 하 여 보기에 물리학 기반 상호 작용을 추가 하는 일반적인 프로세스는 동작 간에 일관 됩니다.
 
-1.  동적 애니메이터를 만듭니다.
-1.  동작을 만듭니다.
-1.  동적 애니메이터에 동작을 추가 합니다.
+1. 동적 애니메이터를 만듭니다.
+1. 동작을 만듭니다.
+1. 동적 애니메이터에 동작을 추가 합니다.
 
 
 ### <a name="dynamics-example"></a>Dynamics 예제
@@ -230,9 +230,9 @@ var dynBehavior = new UIDynamicItemBehavior (dynItems) {
 
 iOS 7은 백그라운드 작업 수행 시와 방법을 변경 합니다. 작업을 백그라운드에서 실행 하는 경우 iOS 7에서 작업을 완료 하면 더 이상 응용 프로그램을 계속 사용할 수 없으며, 응용 프로그램은 연속 하지 않는 방식으로 백그라운드 처리에 해제 됩니다. 또한 iOS 7에서는 응용 프로그램을 새 콘텐츠로 업데이트 하는 세 가지 새로운 Api를 백그라운드에서 추가 합니다.
 
--  백그라운드 페치 – 응용 프로그램에서 정기적인 간격으로 백그라운드에서 콘텐츠를 업데이트할 수 있습니다.
--  원격 알림-푸시 알림을 받을 때 응용 프로그램에서 콘텐츠를 업데이트할 수 있습니다. 알림은 자동 이거나 잠금 화면에 배너를 표시할 수 있습니다.
--  백그라운드 전송 서비스 – 고정 된 시간 제한이 없는 대량 파일 등의 데이터를 업로드 및 다운로드할 수 있습니다.
+- 백그라운드 페치 – 응용 프로그램에서 정기적인 간격으로 백그라운드에서 콘텐츠를 업데이트할 수 있습니다.
+- 원격 알림-푸시 알림을 받을 때 응용 프로그램에서 콘텐츠를 업데이트할 수 있습니다. 알림은 자동 이거나 잠금 화면에 배너를 표시할 수 있습니다.
+- 백그라운드 전송 서비스 – 고정 된 시간 제한이 없는 대량 파일 등의 데이터를 업로드 및 다운로드할 수 있습니다.
 
 
 새 멀티태스킹 기능에 대 한 자세한 내용은 Xamarin [Backgrounding guide](~/ios/app-fundamentals/backgrounding/index.md)의 iOS 섹션을 참조 하세요.

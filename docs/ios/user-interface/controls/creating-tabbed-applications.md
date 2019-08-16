@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 1c3be128749b9fd0f67aa83038b3d30f4b2fcd2d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7fe03fbbdff02df9494317abe223ede5ed386c48
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657534"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528936"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>탭 표시줄 및 Xamarin.iOS에 탭 표시줄 컨트롤러
 
@@ -26,8 +26,8 @@ ms.locfileid: "68657534"
 
 `UITabBarController` 지 원하는 다음과 같은 응용 프로그램 개발을 탭 합니다.
 
--  여러 컨트롤러를를 추가할 수 있습니다.
--  탭된 사용자 인터페이스를 통해 제공 된 `UITabBar` 사용자가 뷰와 컨트롤러 사이 전환할 수 있도록 클래스입니다. 
+- 여러 컨트롤러를를 추가할 수 있습니다.
+- 탭된 사용자 인터페이스를 통해 제공 된 `UITabBar` 사용자가 뷰와 컨트롤러 사이 전환할 수 있도록 클래스입니다. 
 
 
 컨트롤러에 추가 됩니다는 `UITabBarController` 를 통해 해당 `ViewControllers` 속성을 `UIViewController` 배열입니다. `UITabBarController` 적절 한 컨트롤러를 로드 하 고 선택한 탭에 따라 해당 뷰를 제공 합니다. 자체 처리 합니다.
@@ -69,9 +69,9 @@ ms.locfileid: "68657534"
 
 구현 하는 `UITabBarController` 다음을 수행 해야 합니다.
 
-1.  기본 클래스를 설정 `TabController` 에 `UITabBarController` 입니다. 
-1.  만들 `UIViewController` 에 추가할 인스턴스는 `TabController` 합니다. 
-1.  추가 `UIViewController` 에 할당 된 배열에는 인스턴스를 `ViewControllers` 의 속성을 `TabController` 입니다. 
+1. 기본 클래스를 설정 `TabController` 에 `UITabBarController` 입니다. 
+1. 만들 `UIViewController` 에 추가할 인스턴스는 `TabController` 합니다. 
+1. 추가 `UIViewController` 에 할당 된 배열에는 인스턴스를 `ViewControllers` 의 속성을 `TabController` 입니다. 
 
 
 다음 코드를 추가 합니다 `TabController` 다음이 단계를 달성 하기 위해 클래스:
@@ -283,8 +283,8 @@ Mac 용 visual Studio는 클래스 및 필요한 디자이너 파일에 자동�
 
 끌어 하고자를 `Label` 와 `Button` 에서 ViewController1에는 **도구 상자** 오른쪽에서. 다음 사용 하 여 Properties Pad 이름과 다음 컨트롤의 텍스트를 편집 합니다.
 
--  **레이블** : `Text` = **일회성**
--  **단추** : `Title` = **사용자가 초기 작업을 수행 합니다.**
+- **레이블** : `Text` = **일회성**
+- **단추** : `Title` = **사용자가 초기 작업을 수행 합니다.**
 
 
 이 단추의 표시 여부를 제어할 수는 것을 `TouchUpInside` 이벤트를 코드 숨김에 참조 하는 데 필요 합니다. 보겠습니다 식별 하는 **이름을** `aButton` 다음 스크린샷에 표시 된 것 처럼 Properties Pad에서:

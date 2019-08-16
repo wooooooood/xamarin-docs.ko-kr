@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6826088dcc192f4bc4dcfa7424236f98391e0bd6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656712"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528398"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -76,7 +76,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/remove-alpha-sml.png "알파 채널이 있는 경우 표시 되는 대화 상자에 알파 확인란이 포함 됩니다.")
 
-3. **알파** *확인란의 선택을* 취소 하 고 파일을 올바른 위치에 **저장** 합니다.
+3. **알파** 확인란의 선택을 취소 하 고 파일을 올바른 위치에 **저장** 합니다.
 
 4. 이제 아이콘 이미지가 Apple의 유효성 검사를 통과 해야 합니다.
 
@@ -105,37 +105,39 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 4. 스토리 보드를 닫고 Mac용 Visual Studio로 돌아갑니다. **Watch** 앱 확장 C# 프로젝트에 새 파일 **MyInterfaceController.cs** (또는 원하는 이름을 원하는 대로)를 만듭니다 (storyboard가 있는 watch 앱 자체는 아님). 네임 스페이스, classname 및 생성자 이름을 업데이트 하는 다음 코드를 추가 합니다.
 
-        using System;
-        using WatchKit;
-        using Foundation;
-        
-        namespace WatchAppExtension  // remember to update this
+    ```csharp
+    using System;
+    using WatchKit;
+    using Foundation;
+
+    namespace WatchAppExtension  // remember to update this
+    {
+        public partial class MyInterfaceController // remember to update this
+        : WKInterfaceController
         {
-            public partial class MyInterfaceController // remember to update this
-            : WKInterfaceController
+            public MyInterfaceController // remember to update this
+            (IntPtr handle) : base (handle)
             {
-                public MyInterfaceController // remember to update this
-                (IntPtr handle) : base (handle)
-                {
-                }
-                public override void Awake (NSObject context)
-                {
-                    base.Awake (context);
-                    // Configure interface objects here.
-                    Console.WriteLine ("{0} awake with context", this);
-                }
-                public override void WillActivate ()
-                {
-                    // This method is called when the watch view controller is about to be visible to the user.
-                    Console.WriteLine ("{0} will activate", this);
-                }
-                public override void DidDeactivate ()
-                {
-                    // This method is called when the watch view controller is no longer visible to the user.
-                    Console.WriteLine ("{0} did deactivate", this);
-                }
+            }
+            public override void Awake (NSObject context)
+            {
+                base.Awake (context);
+                // Configure interface objects here.
+                Console.WriteLine ("{0} awake with context", this);
+            }
+            public override void WillActivate ()
+            {
+                // This method is called when the watch view controller is about to be visible to the user.
+                Console.WriteLine ("{0} will activate", this);
+            }
+            public override void DidDeactivate ()
+            {
+                // This method is called when the watch view controller is no longer visible to the user.
+                Console.WriteLine ("{0} did deactivate", this);
             }
         }
+    }
+    ```
 
 5. C# **Watch 앱 확장** 프로젝트에서 다른 새 파일 **MyInterfaceController.designer.cs** 를 만들고 아래 코드를 추가 합니다. 네임 스페이스, classname 및 `Register` 특성을 업데이트 해야 합니다.
 
@@ -155,7 +157,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
     }
     ```
     
-    팁:  (선택 사항)이 파일을 Mac용 Visual Studio Solution Pad의 다른 C# 파일로 끌어서이 파일을 첫 번째 파일의 자식 노드로 만들 수 있습니다. 그러면 다음과 같이 표시 됩니다.
+    팁: (선택 사항)이 파일을 Mac용 Visual Studio Solution Pad의 다른 C# 파일로 끌어서이 파일을 첫 번째 파일의 자식 노드로 만들 수 있습니다. 그러면 다음과 같이 표시 됩니다.
     
     ![](troubleshooting-images/add-5.png "Solution pad")
 
@@ -188,22 +190,22 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 11. 스토리 보드 변경을 저장 하 고 Xcode를 닫으면 Mac용 Visual Studio로 돌아갑니다. 헤더 파일 변경 내용을 검색 하 고 **designer.cs** 파일에 코드를 자동으로 추가 합니다.
 
+    ```csharp
+    [Register ("MyInterfaceController")]
+    partial class MyInterfaceController
+    {
+        [Outlet]
+        WatchKit.WKInterfaceButton myButton { get; set; }
 
-        [Register ("MyInterfaceController")]
-        partial class MyInterfaceController
+        void ReleaseDesignerOutlets ()
         {
-            [Outlet]
-            WatchKit.WKInterfaceButton myButton { get; set; }
-        
-            void ReleaseDesignerOutlets ()
-            {
-                if (myButton != null) {
-                    myButton.Dispose ();
-                    myButton = null;
-                }
+            if (myButton != null) {
+                myButton.Dispose ();
+                myButton = null;
             }
         }
-
+    }
+    ```
 
 이제!에서 C#컨트롤을 참조 하거나 작업을 구현할 수 있습니다.
 

@@ -49,6 +49,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: hot-reload.md
+            html: XAML 핫 다시 로드를 사용하여 UI 변경 내용의 유효성을 신속하게 검사하는 방법을 알아보세요.
+            image:
+              src: ~/media/icons/i_quickstart-3.svg
+              href: hot-reload.md
+            title: 핫 다시 로드
           - href: toolbox.md
             html: XAML 도구 상자를 사용하여 Xamarin.Forms 컨트롤과 레이아웃을 XAML 편집기로 끌어서 놓는 방법을 알아보세요.
             image:

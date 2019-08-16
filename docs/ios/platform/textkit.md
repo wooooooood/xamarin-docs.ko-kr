@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 4d4785d6e556c856b0f7b4db2accd87f5297e277
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655363"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528724"
 ---
 # <a name="textkit-in-xamarinios"></a>Xamarin.ios의 TextKit
 
@@ -20,17 +20,17 @@ TextKit은 강력한 텍스트 레이아웃 및 렌더링 기능을 제공 하�
 
 TextKit의 기능을 표준 컨트롤에서 사용할 수 있도록 하기 위해 다음을 비롯 하 여 TextKit를 사용 하도록 몇 가지 iOS 텍스트 컨트롤이 다시 구현 되었습니다.
 
--  UITextView
--  UITextField
--  UILabel
+- UITextView
+- UITextField
+- UILabel
 
 ## <a name="architecture"></a>아키텍처
 
 TextKit는 다음 클래스를 비롯 하 여 레이아웃과 표시에서 텍스트 저장소를 구분 하는 계층화 된 아키텍처를 제공 합니다.
 
--  `NSTextContainer`– 텍스트를 레이아웃 하는 데 사용 되는 좌표계 및 기 하 도형을 제공 합니다.
--  `NSLayoutManager`– 텍스트를 문자 모양으로 설정 하 여 텍스트를 배치 합니다. 
--  `NSTextStorage`– 텍스트 데이터를 포함 하며 일괄 처리 텍스트 속성 업데이트를 처리 합니다. 일괄 처리 업데이트는 레이아웃을 다시 계산 하 고 텍스트를 다시 그리는 등의 실제 변경 내용 처리를 위해 레이아웃 관리자에 전달 됩니다.
+- `NSTextContainer`– 텍스트를 레이아웃 하는 데 사용 되는 좌표계 및 기 하 도형을 제공 합니다.
+- `NSLayoutManager`– 텍스트를 문자 모양으로 설정 하 여 텍스트를 배치 합니다. 
+- `NSTextStorage`– 텍스트 데이터를 포함 하며 일괄 처리 텍스트 속성 업데이트를 처리 합니다. 일괄 처리 업데이트는 레이아웃을 다시 계산 하 고 텍스트를 다시 그리는 등의 실제 변경 내용 처리를 위해 레이아웃 관리자에 전달 됩니다.
 
 
 이러한 세 클래스는 텍스트를 렌더링 하는 뷰에 적용 됩니다. `UITextView` `UIView` , 및`UITextField`와 같은기본제공텍스트처리뷰는이미설정되어있지만모든인스턴스에`UILabel` 만들고 적용할 수 있습니다.

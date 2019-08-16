@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 30e471174d30e58b126c174fd4eacfdbe87d97b0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646056"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522184"
 ---
 # <a name="splash-screen"></a>시작 화면
 
@@ -25,11 +25,11 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 
 이 가이드에서는 Android 응용 프로그램의 시작 화면을 구현하는 한 가지 기술을 설명합니다. 다음 단계를 포함합니다.
 
-1.  시작 화면에 그림 리소스를 만듭니다.
+1. 시작 화면에 그림 리소스를 만듭니다.
 
-2.  그림 리소스를 표시하는 새 테마를 정의합니다.
+2. 그림 리소스를 표시하는 새 테마를 정의합니다.
 
-3.  이전 단계에서 만든 테마를 사용해서 정의한 시작 화면으로 사용될 응용 프로그램에 새 액티비티(Activity)를 추가합니다.
+3. 이전 단계에서 만든 테마에서 정의한 시작 화면으로 사용할 새 작업을 응용 프로그램에 추가 합니다.
 
 [![예제 Xamarin 로고 시작 화면 및 앱 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
@@ -69,7 +69,7 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 </layer-list>
 ```
 
-이렇게 `layer-list` 하면 **시작 이미지를** `@color/splash_background` 리소스로 지정 된 배경에 가운데에 배치 합니다. 이 XML 파일을 Resources/ **그릴** 폴더 (예: **resources/그릴/splash_screen**)에 저장 합니다.
+이렇게 `layer-list` 하면 시작 이미지를 `@color/splash_background` 리소스로 지정 된 배경에 가운데에 배치 합니다. 이 XML 파일을 Resources/ **그릴** 폴더 (예: **resources/그릴/splash_screen**)에 저장 합니다.
 
 시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
 
@@ -178,11 +178,11 @@ public class MainActivity : AppCompatActivity
     </layer-list>
     ```
 
-3.  **Resources/values-land** 폴더가 존재하지 않는 경우 생성합니다.
+3. **리소스/값-육지** 폴더가 아직 없는 경우 만듭니다.
 
-4.  **values-land**에 **colors.xml** 및 **style.xml** 파일을 추가합니다(이 파일들은 기존 **values/colors.xml**및 **values/style.xml** 파일을 복사 및 수정할 수 있습니다).
+4. 파일 **색 .xml** 및 **스타일 .xml** 을 **값** 에 추가 합니다. 이러한 파일은 기존 **값/colors** 및 **값/스타일 .xml** 파일에서 복사 하 여 수정할 수 있습니다.
 
-5.  `windowBackground`에 대한 그림의 가로 버전을 사용하도록 **values-land/style.xml**을 수정합니다. 이 예제에서는 **splash_screen_land.xml**을 사용하였습니다.
+5. `windowBackground`에 대한 그림의 가로 버전을 사용하도록 **values-land/style.xml**을 수정합니다. 이 예제에서는 **splash_screen_land.xml**을 사용하였습니다.
 
     ```xml
     <resources>
@@ -200,7 +200,7 @@ public class MainActivity : AppCompatActivity
     </resources>
     ```
 
-6.  시작 화면의 가로 버전용으로 사용하려는 색을 구성하려면 **values-land/colors.xml**을 수정합니다. 이 예제에서 가로 모드용 시작 배경 색은 파란색으로 변경되었습니다.
+6. 시작 화면의 가로 버전용으로 사용하려는 색을 구성하려면 **values-land/colors.xml**을 수정합니다. 이 예제에서 가로 모드용 시작 배경 색은 파란색으로 변경되었습니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -213,7 +213,7 @@ public class MainActivity : AppCompatActivity
     </resources>
     ```
 
-7.  빌드하고 앱을 다시 실행합니다. 시작 화면이 계속 표시되는 동안 가로 모드로 장치를 회전합니다. 다음과 같이 시작 화면이 가로 버전으로 변경됩니다.
+7. 빌드하고 앱을 다시 실행합니다. 시작 화면이 계속 표시되는 동안 가로 모드로 장치를 회전합니다. 다음과 같이 시작 화면이 가로 버전으로 변경됩니다.
 
     [![시작 화면에서 가로 모드로 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 

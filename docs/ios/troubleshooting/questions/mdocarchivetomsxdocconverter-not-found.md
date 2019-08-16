@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 0746174857f66843ef9a09429b6286f2efca90d6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: af90baf6d7b94973a76bcf391f2cb28c45340602
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61420539"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528156"
 ---
 # <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequest"></a>MDocArchiveToMsxDocConverter.exe에서 rver.BaseCommand.OnRequest를 찾을 수 없습니다.
 
 > [!IMPORTANT]
-> Xamarin의 최신 버전에서이 문제가 해결 되었습니다. 그러나 소프트웨어의 최신 버전에 문제가 발생 하면 제출 하세요를 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 버전을 사용 하 여 합니다.
+> 이 문제는 최신 버전의 Xamarin에서 해결 되었습니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
 
 
 ## <a name="error-message"></a>오류 메시지
 
-이 오류가 나타날 수는 *Mac 서버 로그* Visual Studio에서:
+이 오류는 Visual Studio의 *Mac 서버 로그* 에 나타날 수 있습니다.
 
 ```
 Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found
@@ -30,12 +30,12 @@ Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter
   at Mtb.Server.Listener.OnRequest (System.Object state) [0x00000] in <filename unknown>:0
 ```
 
-이 메시지는 별도 문제가 2:
+이 메시지에는 두 가지 별도의 문제가 있습니다.
 
-1.  `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
+1. `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
 
-    이 오류는 문제가 있지만 잘못 해석 됩니다. 것 [제거할](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) 릴리스에서 합니다.
+    이 오류는 무해 하지만 잘못 된 경우도 있습니다. 이후 릴리스에서 [제거 될 예정](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) 입니다.
 
-2.  `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
+2. `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
 
-    이 오류는 실제 문제. 아쉽게도로 인해를 [제한이](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) 이 예외 스택 추적 *불완전 한*합니다. Mac 서버 로그에 다음과 같이 완료 되지 않은 스택 추적을 보면 확인할 수 있습니다는 `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` 전체 스택 추적을 찾으려면 Mac 빌드 호스트에는 파일입니다.
+    이 오류는 실제 문제입니다. 아쉽게도이 예외 스택 추적이 *불완전*한 [제한](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) 으로 인해 발생 합니다. Mac Server 로그에 이와 같이 불완전 한 스택 추적이 있는 경우 mac 빌드 호스트의 `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` 파일을 확인 하 여 전체 스택 추적을 찾을 수 있습니다.

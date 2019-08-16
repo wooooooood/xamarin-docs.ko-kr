@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2019
-ms.openlocfilehash: 51555382e38412b7fa2c5c821b252984758bb1ec
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e818495d45435546f9d2fc9c5593d9c7caa608ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656962"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528877"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -56,9 +56,9 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 각 플랫폼에 대해 다음 파일에이 호출을 추가 합니다.
 
--  **iOS** -AppDelegate.cs 파일을 `FinishedLaunching` 메서드.
--  **Android** -MainActivity.cs 파일은 `OnCreate` 메서드.
--  **UWP** -MainPage.xaml.cs 파일을 `MainPage` 생성자입니다.
+- **iOS** -AppDelegate.cs 파일을 `FinishedLaunching` 메서드.
+- **Android** -MainActivity.cs 파일은 `OnCreate` 메서드.
+- **UWP** -MainPage.xaml.cs 파일을 `MainPage` 생성자입니다.
 
 NuGet 패키지를 추가 하 고 각 응용 프로그램 내에서 초기화 메서드를 호출 하면 `Xamarin.Forms.Maps` 일반적인 .NET Standard 라이브러리 프로젝트 또는 공유 프로젝트 코드에서 api를 사용할 수 있습니다.
 
@@ -178,16 +178,16 @@ map.MapType == MapType.Street;
 
 유효한 `MapType` 값은:
 
--  하이브리드
--  위성
--  주소 (기본값)
+- 하이브리드
+- 위성
+- 주소 (기본값)
 
 ### <a name="map-region-and-mapspan"></a>지도 영역 및 MapSpan
 
 위의 코드 조각에서와 같이 제공을 `MapSpan` 초기 보기를 설정 하는 맵 생성자에는 인스턴스 (중심점 및 확대/축소 수준) 로드 되는 경우 맵의 합니다. `MoveToRegion` 지도의 위치 또는 확대/축소 수준을 변경 하려면 다음 map 클래스에서 메서드를 사용할 수 있습니다. 두 가지 방법으로 새 `MapSpan` 인스턴스:
 
--  **MapSpan.FromCenterAndRadius()** -의 범위를 만드는 정적 메서드를를 `Position` 지정 하는 `Distance` 합니다.
--  **새 MapSpan ()** -사용 하는 생성자를 `Position` 위도 및 경도 표시할 각도입니다.
+- **MapSpan.FromCenterAndRadius()** -의 범위를 만드는 정적 메서드를를 `Position` 지정 하는 `Distance` 합니다.
+- **새 MapSpan ()** -사용 하는 생성자를 `Position` 위도 및 경도 표시할 각도입니다.
 
 
 위치를 변경 하지 않고 지도의 확대/축소 수준을 변경 하려면 새로 만듭니다 `MapSpan` 에서 현재 위치를 사용 하는 `VisibleRegion.Center` 지도 컨트롤의 속성입니다. 하지만 `Slider` (지도 컨트롤에서 직접 확대/축소 슬라이더의 값을 현재 업데이트할 수 없습니다) 다음과 같은 지도 확대/축소를 제어 하는데 사용할 수 없습니다.
@@ -220,10 +220,10 @@ map.Pins.Add(pin);
 
 `PinType`는 다음 값 중 하나로 설정할 수 있습니다 .이 값은 플랫폼에 따라 핀이 렌더링 되는 방식에 영향을 줄 수 있습니다.
 
--  제네릭
--  현재 위치
--  SavedPin
--  SearchResult
+- 제네릭
+- 현재 위치
+- SavedPin
+- SearchResult
 
 ### <a name="map-clicks"></a>지도 클릭
 

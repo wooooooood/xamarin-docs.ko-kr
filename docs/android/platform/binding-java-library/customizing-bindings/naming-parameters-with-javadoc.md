@@ -1,46 +1,46 @@
 ---
-title: Javadoc 사용 하 여 매개 변수 이름 지정
-description: 이 문서에서는 Java 프로젝트에서 생성 되는 Javadoc을 사용 하 여 Java 바인딩 프로젝트의 매개 변수 이름은 복구 하는 방법에 설명 합니다.
+title: Javadoc를 사용 하 여 매개 변수 명명
+description: 이 문서에서는 java 프로젝트에서 생성 된 Javadoc를 사용 하 여 Java 바인딩 프로젝트에서 매개 변수 이름을 복구 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: e394377043953a297afed36a3ce0747a3e6d1512
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 77cd5ac86a24769947eefb6941229c56efc3297b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60955873"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524566"
 ---
-# <a name="naming-parameters-with-javadoc"></a>Javadoc 사용 하 여 매개 변수 이름 지정
+# <a name="naming-parameters-with-javadoc"></a>Javadoc를 사용 하 여 매개 변수 명명
 
-_이 문서에서는 Java 프로젝트에서 생성 되는 Javadoc을 사용 하 여 Java 바인딩 프로젝트의 매개 변수 이름은 복구 하는 방법에 설명 합니다._
+_이 문서에서는 java 프로젝트에서 생성 된 Javadoc를 사용 하 여 Java 바인딩 프로젝트에서 매개 변수 이름을 복구 하는 방법을 설명 합니다._
 
 
 ## <a name="overview"></a>개요
 
-기존 Java 라이브러리를 바인딩하는 경우 바인딩된 API에 대 한 일부 메타 데이터는 손실 됩니다. 특히 메서드 매개 변수의 이름입니다. 매개 변수 이름으로 표시 됩니다 `p0`, `p1`등입니다. 왜냐하면 Java `.class` 파일 Java 소스 코드에 사용 된 매개 변수 이름을 유지 하지 않습니다. 
+기존 Java 라이브러리를 바인딩하는 경우 바인딩된 API에 대 한 일부 메타 데이터가 손실 됩니다. 특히 메서드의 매개 변수 이름입니다. 매개 변수 이름은, `p0` `p1`등으로 표시 됩니다. Java `.class` 파일이 java 소스 코드에 사용 된 매개 변수 이름을 유지 하지 않기 때문입니다. 
 
-Xamarin.Android Java 바인딩 프로젝트를 원본 라이브러리의 Javadoc HTML로 액세스할 수 있는 경우 매개 변수 이름을 제공할 수 있습니다. 
+원본 라이브러리의 Javadoc HTML에 대 한 액세스 권한이 있는 경우 Xamarin.ios Java 바인딩 프로젝트는 매개 변수 이름을 제공할 수 있습니다. 
 
-## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>Javadoc HTML 프로젝트 바인딩 Java 통합
+## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>Javadoc HTML을 Java 바인딩 프로젝트에 통합
 
-Java 바인딩 프로젝트 Javadoc HTML 통합 다음 단계를 구성 하는 수동 프로세스입니다. 
+Javadoc HTML을 Java 바인딩 프로젝트에 통합 하는 작업은 다음 단계로 구성 된 수동 프로세스입니다. 
 
-1.  라이브러리에 대 한 Javadoc 다운로드
-2.  편집 된 `.csproj` 파일과 추가 `<JavaDocPaths>` 속성:
-3.  정리 하 고 프로젝트를 다시 작성
+1. 라이브러리에 대 한 Javadoc 다운로드
+2. 파일을 `.csproj` 편집 하 고 속성 `<JavaDocPaths>` 을 추가 합니다.
+3. 프로젝트를 정리 하 고 다시 빌드합니다.
 
-이 작업이 완료 되 면 원래 Java 매개 변수 이름은 Java 바인딩 프로젝트에 의해 바인딩된 Api에 있어야 합니다. 
+이 작업을 완료 한 후에는 Java 바인딩 프로젝트에 의해 바인딩된 Api에 원래 Java 매개 변수 이름이 있어야 합니다. 
 
 
 > [!NOTE]
-> JavaDoc 출력에 대 한 분산 많은 방법이 있습니다. 합니다. JAR 바인딩 도구 체인은 단일 모든 가능한 순열을 지원 하지 않습니다 및 결과적으로 일부 매개 변수 수 올바르게 이름을 지정 합니다.
+> JavaDoc 출력에는 상당한 차이가 있습니다. 여. JAR 바인딩 도구 체인는 가능한 모든 단일 순열을 지원 하지 않으므로 일부 매개 변수의 이름이 제대로 지정 되지 않을 수 있습니다.
 
 
 ## <a name="summary"></a>요약
 
-이 문서는 방법을 설명 바인딩된 Api에 대 한 매개 변수 이름을 의미 Java 바인딩 프로젝트에서 Javadoc을 사용 합니다. 
+이 문서에서는 Java 바인딩 프로젝트에서 Javadoc를 사용 하 여 바인딩된 Api에 대 한 매개 변수 이름을 제공 하는 방법에 대해 설명 했습니다. 
 

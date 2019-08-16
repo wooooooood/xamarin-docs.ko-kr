@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
-ms.openlocfilehash: 644728d70946180f79523eeb98baabdb6daa1980
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984365"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529282"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Xamarin Forms 응용 프로그램 테마
 
@@ -89,7 +89,7 @@ Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로�
 </Application>
 ```
 
-리소스 사전을 병합 하는 방법에 대 한 자세한 내용은 [xamarin.ios에서 사전 병합 3.0](~/xamarin-forms/xaml/resource-dictionaries.md#merging-dictionaries-in-xamarinforms-30)을 참조 하세요.
+리소스 사전을 병합 하는 방법에 대 한 자세한 내용은 [병합 된 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries)을 참조 하세요.
 
 ## <a name="consume-theme-resources"></a>테마 리소스 사용
 

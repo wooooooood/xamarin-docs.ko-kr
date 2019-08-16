@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: dac81a40983ea8414ec730f10c4c1f17e4d9915c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0c606e001552f1c4267ffc29bd69b2f38f2ec971
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653801"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527936"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 
@@ -24,10 +24,10 @@ iOS에는 하위 수준의 그리기 지원 기능을 제공 하는 [*핵심 그
 
 핵심 그래픽은 다음을 비롯 한 다양 한 시나리오에서 그리기를 지원 합니다.
 
--  [ 를`UIView` 통해 화면에 그립니다](#Drawing_in_a_UIView_Subclass) .
--  [메모리 나 화면에 이미지를 그립니다](#Drawing_Images_and_Text).
--  PDF 만들기 및 그리기
--  기존 PDF를 읽고 그립니다.
+- [ 를`UIView` 통해 화면에 그립니다](#Drawing_in_a_UIView_Subclass) .
+- [메모리 나 화면에 이미지를 그립니다](#Drawing_Images_and_Text).
+- PDF 만들기 및 그리기
+- 기존 PDF를 읽고 그립니다.
 
 
 ## <a name="geometric-space"></a>기 하 도형 공간
@@ -36,9 +36,9 @@ iOS에는 하위 수준의 그리기 지원 기능을 제공 하는 [*핵심 그
 
 이 방법에는 다음과 같은 몇 가지 이점이 있습니다.
 
--  그리기 코드는 동적이 되며 이후에는 런타임에 그래픽을 수정할 수 있습니다.
--  응용 프로그램 번들에서 정적 이미지의 필요성을 줄이면 응용 프로그램 크기를 줄일 수 있습니다.
--  그래픽은 장치에서 해상도를 변경 하는 데 더 탄력적으로 유지 됩니다.
+- 그리기 코드는 동적이 되며 이후에는 런타임에 그래픽을 수정할 수 있습니다.
+- 응용 프로그램 번들에서 정적 이미지의 필요성을 줄이면 응용 프로그램 크기를 줄일 수 있습니다.
+- 그래픽은 장치에서 해상도를 변경 하는 데 더 탄력적으로 유지 됩니다.
 
 <a name="Drawing_in_a_UIView_Subclass"/>
 
@@ -270,10 +270,10 @@ public override void Draw (RectangleF rect)
 
 핵심 그래픽은 뷰의 그래픽 컨텍스트로 그리는 것 외에도 화면에서 그리기 라고도 하는 메모리 지원 이미지 그리기를 지원 합니다. 이렇게 하려면 다음을 수행 해야 합니다.
 
--  메모리 내 비트맵에 의해 지원 되는 그래픽 컨텍스트 만들기
--  그리기 상태 설정 및 그리기 명령 실행
--  컨텍스트에서 이미지 가져오기
--  컨텍스트 제거
+- 메모리 내 비트맵에 의해 지원 되는 그래픽 컨텍스트 만들기
+- 그리기 상태 설정 및 그리기 명령 실행
+- 컨텍스트에서 이미지 가져오기
+- 컨텍스트 제거
 
 
 뷰가에서 컨텍스트를 제공 하는 메서드와달리이경우다음두가지방법중하나로컨텍스트를만듭니다.`Draw`

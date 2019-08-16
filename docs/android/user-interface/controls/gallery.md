@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 6fe6b5a11473827eb716b0adf0fb0f3ae28a3538
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 04fac4084328c0af962282dea7a31e3c00457bef
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510276"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523000"
 ---
 # <a name="xamarinandroid-gallery-control"></a>Xamarin Android 갤러리 컨트롤
 
@@ -146,11 +146,10 @@ public class ImageAdapter : BaseAdapter
 
 ![샘플 이미지를 표시 하는 HelloGallery의 스크린샷](gallery-images/hellogallery3.png)
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - [`BaseAdapter`](xref:Android.Widget.BaseAdapter)
 - [`Gallery`](xref:Android.Widget.Gallery)
 - [`ImageView`](xref:Android.Widget.ImageView)
 
-*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
-[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.
+_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._

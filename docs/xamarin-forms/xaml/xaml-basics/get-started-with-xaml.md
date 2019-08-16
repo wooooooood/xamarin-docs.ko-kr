@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 085960b92aa0f349d4cb2737385e723d8b6aa6b7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f4acadc1153c93ebade7453cfd7a79f5b052e513
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656508"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528363"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1장. XAML 시작하기
 
@@ -211,9 +211,9 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 그러나 변환기는 더 복잡한 유형의 속성에 대하여 구문 분석에 XAML을 사용합니다. 변환기는 `TypeConverter`에서 파생되는 Xamarin.Forms의 클래스입니다. 대부분이 공용(public) 클래스이지만 몇몇은 아닙니다. 해당 특정 XAML 파일에 대해 다음과 같은 몇 가지 변환기 클래스가 배후에서 작동합니다.
 
--  `VerticalOptions` 속성에 대한 `LayoutOptionsConverter`
--  `FontSize` 속성에 대한 `FontSizeConverter`
--  `TextColor` 속성에 대한 `ColorTypeConverter`
+- `VerticalOptions` 속성에 대한 `LayoutOptionsConverter`
+- `FontSize` 속성에 대한 `FontSizeConverter`
+- `TextColor` 속성에 대한 `ColorTypeConverter`
 
 이러한 변환기는 속성 설정의 허용 구문을 제어합니다.
 

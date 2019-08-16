@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4eb115889b65819e969b8024fc9fbcdc02b566fb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648198"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527805"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Xamarin.ios에서 제품 정보를 보관 하 고 검색 합니다.
 
@@ -28,14 +28,14 @@ ms.locfileid: "68648198"
    
  **SKProductsRequest** – 승인 된 제품을 판매 하는 (앱 스토어) 키트에 대 한 요청입니다. 다양 한 제품 Id를 사용 하 여 구성할 수 있습니다.
 
--   **SKProductsRequestDelegate** – 제품 요청 및 응답을 처리 하는 메서드를 선언 합니다. 
--   **SKProductsResponse** – 저장소 키트 (앱 스토어)에서 대리자로 다시 전송 됩니다. 요청과 함께 전송 된 제품 Id와 일치 하는 제품 Id를 포함 합니다. 
--   이상 **제품** – 사용자가 iTunes Connect에서 구성한 제품입니다. 제품 ID, 제목, 설명 및 가격과 같은 제품에 대 한 정보를 포함 합니다. 
--   비 **결제** -제품 ID로 생성 되 고 구매를 수행 하기 위해 지불 큐에 추가 됩니다. 
--   **SKPaymentQueue** – Apple에 보낼 대기 중인 지불 요청 알림이 처리 되는 각 지불의 결과로 알림이 트리거됩니다. 
--   **SKPaymentTransaction** – 완료 된 트랜잭션 (앱 스토어에서 처리 하 고, 사용자 키트 키트를 통해 응용 프로그램으로 다시 전송 된 구매 요청)을 나타냅니다. 트랜잭션을 구매, 복원 또는 실패할 수 있습니다. 
--   **SKPaymentTransactionObserver** – 사용자 키트 지불 큐에 의해 생성 된 이벤트에 응답 하는 사용자 지정 하위 클래스입니다. 
--   사용자 **키트 작업은 비동기적** 으로 수행 됩니다.-가 나 제품 요청이 시작 되거나 큐에 대기 중인 지불이 추가 된 후에는 컨트롤이 코드로 반환 됩니다. 데이터 파일 키트는 Apple 서버에서 데이터를 받을 때 SKProductsRequestDelegate 또는 SKPaymentTransactionObserver 하위 클래스에서 메서드를 호출 합니다. 
+- **SKProductsRequestDelegate** – 제품 요청 및 응답을 처리 하는 메서드를 선언 합니다. 
+- **SKProductsResponse** – 저장소 키트 (앱 스토어)에서 대리자로 다시 전송 됩니다. 요청과 함께 전송 된 제품 Id와 일치 하는 제품 Id를 포함 합니다. 
+- 이상 **제품** – 사용자가 iTunes Connect에서 구성한 제품입니다. 제품 ID, 제목, 설명 및 가격과 같은 제품에 대 한 정보를 포함 합니다. 
+- 비 **결제** -제품 ID로 생성 되 고 구매를 수행 하기 위해 지불 큐에 추가 됩니다. 
+- **SKPaymentQueue** – Apple에 보낼 대기 중인 지불 요청 알림이 처리 되는 각 지불의 결과로 알림이 트리거됩니다. 
+- **SKPaymentTransaction** – 완료 된 트랜잭션 (앱 스토어에서 처리 하 고, 사용자 키트 키트를 통해 응용 프로그램으로 다시 전송 된 구매 요청)을 나타냅니다. 트랜잭션을 구매, 복원 또는 실패할 수 있습니다. 
+- **SKPaymentTransactionObserver** – 사용자 키트 지불 큐에 의해 생성 된 이벤트에 응답 하는 사용자 지정 하위 클래스입니다. 
+- 사용자 **키트 작업은 비동기적** 으로 수행 됩니다.-가 나 제품 요청이 시작 되거나 큐에 대기 중인 지불이 추가 된 후에는 컨트롤이 코드로 반환 됩니다. 데이터 파일 키트는 Apple 서버에서 데이터를 받을 때 SKProductsRequestDelegate 또는 SKPaymentTransactionObserver 하위 클래스에서 메서드를 호출 합니다. 
 
 
 다음 다이어그램에서는 다양 한 사용자 키트 클래스 간의 관계를 보여 줍니다 (추상 클래스는 응용 프로그램에서 구현 해야 함).   
@@ -95,11 +95,11 @@ ITunes Connect에서 테스트 사용자를 만들려면 기본 페이지에서 
    
  앱에서 판매 하는 제품 유형 (사용할 수 있는 제품 또는 구독 유형)에 관계 없이 표시를 위한 제품 정보를 검색 하는 프로세스는 동일 합니다. 이 문서와 함께 제공 되는 InAppPurchaseSample 코드에는 표시를 위해 프로덕션 정보를 검색 하는 방법을 보여 주는 *소모품* 이라는 프로젝트가 포함 되어 있습니다. 다음 작업을 수행 하는 방법을 보여 줍니다.
 
--  의 `SKProductsRequestDelegate` 구현을 만들고 추상 메서드를 `ReceivedResponse` 구현 합니다. 예제 코드는이 클래스를 `InAppPurchaseManager` 호출 합니다. 
--  을 사용 하 여 지불이 허용 되는지 (사용 `SKPaymentQueue.CanMakePayments` ) 확인 합니다. 
--  ITunes Connect `SKProductsRequest` 에 정의 된 제품 id를 사용 하 여를 인스턴스화합니다. 예제의 `InAppPurchaseManager.RequestProductData` 메서드에서이 작업을 수행 합니다. 
--  에서 Start 메서드를 호출 합니다 `SKProductsRequest` . 그러면 앱 저장소 서버에 대 한 비동기 호출이 트리거됩니다. 대리자 ( `InAppPurchaseManager` )는 결과를 사용 하 여 다시 호출 됩니다. 
--  대리자의 ( `InAppPurchaseManager` ) `ReceivedResponse` 메서드는 앱 스토어에서 반환 된 데이터 (제품 가격 & 설명 또는 잘못 된 제품에 대 한 메시지)로 UI를 업데이트 합니다. 
+- 의 `SKProductsRequestDelegate` 구현을 만들고 추상 메서드를 `ReceivedResponse` 구현 합니다. 예제 코드는이 클래스를 `InAppPurchaseManager` 호출 합니다. 
+- 을 사용 하 여 지불이 허용 되는지 (사용 `SKPaymentQueue.CanMakePayments` ) 확인 합니다. 
+- ITunes Connect `SKProductsRequest` 에 정의 된 제품 id를 사용 하 여를 인스턴스화합니다. 예제의 `InAppPurchaseManager.RequestProductData` 메서드에서이 작업을 수행 합니다. 
+- 에서 Start 메서드를 호출 합니다 `SKProductsRequest` . 그러면 앱 저장소 서버에 대 한 비동기 호출이 트리거됩니다. 대리자 ( `InAppPurchaseManager` )는 결과를 사용 하 여 다시 호출 됩니다. 
+- 대리자의 ( `InAppPurchaseManager` ) `ReceivedResponse` 메서드는 앱 스토어에서 반환 된 데이터 (제품 가격 & 설명 또는 잘못 된 제품에 대 한 메시지)로 UI를 업데이트 합니다. 
 
 전반적인 상호 작용은 다음과 같이 표시 됩니다. 즉, 저장소 **키트가** iOS에 기본 제공 되 고 **앱 스토어** 는 Apple의 서버를 나타냅니다.
 

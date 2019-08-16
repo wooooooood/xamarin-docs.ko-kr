@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: feae1a33b2e090ccfe3573285c75978aacd1799a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: f4ff4b7b39f589f29f0c4c5df76ff36fe0060d83
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739197"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529221"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples)
 
-<p><img src="images/cover-sml.png" title="Xamarin.Forms 책으로 모바일 앱 만들기" align="left" />책 <i>Creating Mobile Apps with Xamarin.Forms</i> Charles petzold가 저술한는 Xamarin.Forms 응용 프로그램을 작성 하는 방법에 대 한 가이드입니다. 유일한 필수 구성 요소에 대 한 지식이 됩니다는 C# 프로그래밍 언어입니다. 책은 Xamarin.Forms 사용자 인터페이스에 광범위 한 탐색을 제공 하 고 또한 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러, 및 등을 다룹니다.
+<img src="images/cover-sml.png" title="Xamarin.Forms 책으로 모바일 앱 만들기" align="left" />책 *Creating Mobile Apps with Xamarin.Forms* Charles petzold가 저술한는 Xamarin.Forms 응용 프로그램을 작성 하는 방법에 대 한 가이드입니다. 유일한 필수 구성 요소에 대 한 지식이 됩니다는 C# 프로그래밍 언어입니다. 책은 Xamarin.Forms 사용자 인터페이스에 광범위 한 탐색을 제공 하 고 또한 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러, 및 등을 다룹니다.
 
 책은 2016 년 봄에 게시 된 및 이후로 업데이트 되지 않았습니다. 가 책에는 계속 제공 하지만 일부는 [자료는 오래 된](#ways-in-which-the-book-is-outdated), 일부 항목은 더 이상 완전히 잘못 완료 및 합니다.
 
@@ -26,11 +26,11 @@ ms.locfileid: "68739197"
 
 Microsoft Virtual Academy의 다운로드에 기본 전자책 형식:
 
-*    [**PDF (56 Mb)** ](https://aka.ms/xamebook)
+* [**PDF (56 Mb)** ](https://aka.ms/xamebook)
 
-*    [**ePub (151 Mb)** ](https://aka.ms/xamebook/epub)
+* [**ePub (151 Mb)** ](https://aka.ms/xamebook/epub)
 
-*    [**Kindle 버전 (325mb)** ](https://aka.ms/xamebook/mobi)
+* [**Kindle 버전 (325mb)** ](https://aka.ms/xamebook/mobi)
 
 할 수도 있습니다 [개별 챕터 다운로드](#download-chapters-and-summaries) PDF 파일입니다.
 
@@ -85,7 +85,7 @@ Microsoft Virtual Academy의 다운로드에 기본 전자책 형식:
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>책의 오래 된 방법
 
-게시 이후 <i>Creating Mobile Apps with Xamarin.Forms</i>, Xamarin.Forms에 몇 가지 새 기능이 추가 되었습니다. 이러한 새 기능에 개별 문서에서 설명 합니다 [Xamarin.Forms](/xamarin/) 설명서.
+게시 이후 *Creating Mobile Apps with Xamarin.Forms*, Xamarin.Forms에 몇 가지 새 기능이 추가 되었습니다. 이러한 새 기능에 개별 문서에서 설명 합니다 [Xamarin.Forms](/xamarin/) 설명서.
 
 다른 내용으로 인해 일부 오래 된 되도록 책의 콘텐츠:
 
@@ -101,7 +101,7 @@ Xamarin.Forms 응용 프로그램은 일반적으로 여러 플랫폼 간에 코
 
 ### <a name="the-role-of-xaml-has-been-elevated"></a>XAML의 역할이 올렸습니다.
 
-<i>Xamarin.Forms를 사용 하 여 Mobile Apps를 만드는</i> C#을 사용 하 여 Xamarin.Forms 응용 프로그램을 작성 하는 방법을 설명 하는 것으로 시작 합니다. Extensible Application Markup Language (XAML) 될 때까지 도입 되지 [7 장입니다. XAML vs입니다. 코드](summaries/chapter07.md)합니다.
+*Xamarin.Forms를 사용 하 여 Mobile Apps를 만드는* C#을 사용 하 여 Xamarin.Forms 응용 프로그램을 작성 하는 방법을 설명 하는 것으로 시작 합니다. Extensible Application Markup Language (XAML) 될 때까지 도입 되지 [7 장입니다. XAML vs입니다. 코드](summaries/chapter07.md)합니다.
 
 XAML은 Xamarin.Forms에서 훨씬 더 큰 역할을 되었습니다. Visual Studio와 함께 배포 하는 Xamarin.Forms 솔루션 템플릿 XAML 기반 페이지 파일을 만듭니다. Xamarin.Forms를 사용 하는 개발자를 가능한 한 빨리 XAML을 사용 하 여 친숙 한 잘 있어야 합니다. 합니다 [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) Xamarin.Forms 설명서 섹션에 시작 하는 XAML에 대 한 여러 문서를 포함 합니다.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: d3e5b36f2cbc48dac09b55bfba8c3613db12bbc8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fa0a3a75a4cc2cfd04b607f17206faa822af0474
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643276"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523635"
 ---
 # <a name="using-native-libraries"></a>네이티브 라이브러리 사용
 
@@ -24,8 +24,8 @@ Xamarin.ios 라이브러리 프로젝트를 사용 하 여 네이티브 라이�
 Android는 여러 응용 프로그램 이진 인터페이스 (ABIs)를 지원 하기 때문에 Xamarin Android는 네이티브 라이브러리가 빌드되는 ABI를 알아야 합니다.
 이는 두 가지 방법으로 수행할 수 있습니다.
 
-1.  경로 "스니핑"
-1.  프로젝트 파일 내 `AndroidNativeLibrary/Abi` 에서 요소 사용
+1. 경로 "스니핑"
+1. 프로젝트 파일 내 `AndroidNativeLibrary/Abi` 에서 요소 사용
 
 
 경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 프로젝트에를 추가 `lib/armeabi/libfoo.so` 하는 경우 ABI는로 `armeabi`"스니핑" 됩니다.

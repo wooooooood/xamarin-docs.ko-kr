@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: 8c816bf98d9997d09b73e7c9cb0d2ff436b65fbb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fd34532e647f0595ed8afa5ef7ad044b84b7d918
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643977"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525804"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging로 원격 알림
 
@@ -31,12 +31,12 @@ _이 연습에서는 Xamarin Android 응용 프로그램에서 Google Cloud Mess
 
 GCM 사용 Xamarin Android 클라이언트 앱을 만들려면 다음 단계를 사용 합니다.
 
-1.  GCM 서버와 통신 하는 데 필요한 추가 패키지를 설치 합니다.
-2.  GCM 서버에 액세스 하기 위한 앱 사용 권한을 구성 합니다.
-3.  Google Play 서비스 있는지 확인 하는 코드를 구현 합니다. 
-4.  등록 토큰에 대해 GCM과 협상 하는 등록 의도 서비스를 구현 합니다.
-5.  GCM에서 등록 토큰 업데이트를 수신 하는 인스턴스 ID 수신기 서비스를 구현 합니다.
-6.  GCM을 통해 앱 서버에서 원격 메시지를 수신 하는 GCM 수신기 서비스를 구현 합니다.
+1. GCM 서버와 통신 하는 데 필요한 추가 패키지를 설치 합니다.
+2. GCM 서버에 액세스 하기 위한 앱 사용 권한을 구성 합니다.
+3. Google Play 서비스 있는지 확인 하는 코드를 구현 합니다. 
+4. 등록 토큰에 대해 GCM과 협상 하는 등록 의도 서비스를 구현 합니다.
+5. GCM에서 등록 토큰 업데이트를 수신 하는 인스턴스 ID 수신기 서비스를 구현 합니다.
+6. GCM을 통해 앱 서버에서 원격 메시지를 수신 하는 GCM 수신기 서비스를 구현 합니다.
 
 이 앱은 *토픽 메시징*이라는 새로운 GCM 기능을 사용 합니다. 토픽 메시지에서 앱 서버는 개별 장치 목록이 아니라 토픽으로 메시지를 보냅니다. 해당 항목을 구독 하는 장치는 토픽 메시지를 푸시 알림으로 받을 수 있습니다. GCM 토픽 메시징에 대 한 자세한 내용은 Google의 [구현 항목 메시지](https://developers.google.com/cloud-messaging/topic-messaging)를 참조 하세요. 
 
@@ -87,14 +87,14 @@ GCM에서 메시지를 수신 하려면 Google Play 스토어 응용 프로그�
 
 Android 응용 프로그램은 Google Cloud Messaging에서 알림을 수신 하기 전에 다음 권한이 구성 되어 있어야 합니다. 
 
--   `com.google.android.c2dm.permission.RECEIVE`&ndash; Google Cloud Messaging에서 메시지를 등록 하 고 받을 수 있도록 앱에 권한을 부여 합니다. 무엇 `c2dm` 을 의미 하나요? 이는 현재 사용 되지 않는 최신 선행 작업 인 _클라우드-장치 메시징을_의미 합니다. 
+- `com.google.android.c2dm.permission.RECEIVE`&ndash; Google Cloud Messaging에서 메시지를 등록 하 고 받을 수 있도록 앱에 권한을 부여 합니다. 무엇 `c2dm` 을 의미 하나요? 이는 현재 사용 되지 않는 최신 선행 작업 인 _클라우드-장치 메시징을_의미 합니다. 
     GCM은 여전히 `c2dm` 많은 사용 권한 문자열에서를 사용 합니다. 
 
--   `android.permission.WAKE_LOCK`&ndash; (선택 사항) 메시지를 수신 대기 하는 동안 장치 CPU가 절전 모드로 전환 되지 않도록 합니다. 
+- `android.permission.WAKE_LOCK`&ndash; (선택 사항) 메시지를 수신 대기 하는 동안 장치 CPU가 절전 모드로 전환 되지 않도록 합니다. 
 
--   `android.permission.INTERNET`&ndash; 클라이언트 앱이 GCM과 통신할 수 있도록 인터넷 액세스를 허용 합니다. 
+- `android.permission.INTERNET`&ndash; 클라이언트 앱이 GCM과 통신할 수 있도록 인터넷 액세스를 허용 합니다. 
 
--   *package_name는 Android를* `.permission.C2D_MESSAGE` 사용 하 여 응용 프로그램을 등록 하 고 모든 C2D (클라우드-장치) 메시지를 독점적으로 수신 하는 권한을 요청 합니다. &ndash; *Package_name* 접두사는 응용 프로그램 ID와 동일 합니다. 
+- *package_name는 Android를* `.permission.C2D_MESSAGE` 사용 하 여 응용 프로그램을 등록 하 고 모든 C2D (클라우드-장치) 메시지를 독점적으로 수신 하는 권한을 요청 합니다. &ndash; *Package_name* 접두사는 응용 프로그램 ID와 동일 합니다. 
 
 Android 매니페스트에서 이러한 사용 권한을 설정 합니다. **Androidmanifest** 을 편집 하 고 내용을 다음 xml로 바꿉니다. 
 
@@ -205,11 +205,11 @@ protected override void OnCreate (Bundle bundle)
 
 앱은 앱 서버에서 원격 알림을 받을 수 있기 전에 GCM에 등록 하 고 등록 토큰을 다시 가져와야 합니다. GCM을 사용 하 여 응용 프로그램을 등록 하는 작업 `IntentService` 은 만드는에 의해 처리 됩니다. 에서 다음 단계를 수행합니다.`IntentService` 
 
-1.  는 [InstanceID](https://developers.google.com/instance-id/) API를 사용 하 여 클라이언트 앱이 앱 서버에 액세스 하도록 권한을 부여 하는 보안 토큰을 생성 합니다. 반환 시 GCM에서 등록 토큰을 가져옵니다.
+1. 는 [InstanceID](https://developers.google.com/instance-id/) API를 사용 하 여 클라이언트 앱이 앱 서버에 액세스 하도록 권한을 부여 하는 보안 토큰을 생성 합니다. 반환 시 GCM에서 등록 토큰을 가져옵니다.
 
-2.  앱 서버에 등록 토큰을 전달 합니다 (앱 서버에 필요한 경우).
+2. 앱 서버에 등록 토큰을 전달 합니다 (앱 서버에 필요한 경우).
 
-3.  하나 이상의 알림 토픽 채널을 구독 합니다.
+3. 하나 이상의 알림 토픽 채널을 구독 합니다.
 
 이 `IntentService`를 구현한 후에는 GCM에서 등록 토큰이 반환 되는지 테스트 합니다.
 
@@ -272,11 +272,11 @@ namespace ClientApp
 
 위의 샘플 코드에서 *YOUR_SENDER_ID* 를 클라이언트 앱 프로젝트의 보낸 사람 ID 번호로 변경 합니다. 프로젝트의 보낸 사람 ID를 가져오려면 다음을 수행 합니다. 
 
-1.  [Google Cloud Console](https://console.cloud.google.com/) 에 로그인 하 고 풀 다운 메뉴에서 프로젝트 이름을 선택 합니다. 프로젝트에 대해 표시 되는 **프로젝트 정보** 창에서 **프로젝트 설정으로 이동**을 클릭 합니다.
+1. [Google Cloud Console](https://console.cloud.google.com/) 에 로그인 하 고 풀 다운 메뉴에서 프로젝트 이름을 선택 합니다. 프로젝트에 대해 표시 되는 **프로젝트 정보** 창에서 **프로젝트 설정으로 이동**을 클릭 합니다.
 
     [![XamarinGCM 프로젝트 선택](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
 
-2.  **설정** 페이지에서 프로젝트의 보낸 사람 ID 인 **프로젝트 번호** &ndash; 를 찾습니다.
+2. **설정** 페이지에서 프로젝트의 보낸 사람 ID 인 **프로젝트 번호** &ndash; 를 찾습니다.
 
     [![표시 되는 프로젝트 번호](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
 
@@ -404,7 +404,7 @@ namespace ClientApp
 
 #### <a name="test-registration-with-gcm"></a>GCM을 사용한 테스트 등록
 
-앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예를 들어: 
+앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예: 
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2
@@ -510,7 +510,7 @@ GCM에서 메시지를 받으려면 먼저 Android 매니페스트에서 GCM 수
 
 이 XML의 각 설정에서 수행 하는 작업을 살펴보겠습니다.
 
-|설정|Description|
+|설정|설명|
 |---|---|
 |`com.google.android.gms.gcm.GcmReceiver`|앱이 들어오는 푸시 알림 메시지를 캡처하고 처리 하는 GCM 수신기를 구현 하도록 선언 합니다.|
 |`com.google.android.c2dm.permission.SEND`|GCM 서버만 앱에 직접 메시지를 보낼 수 있음을 선언 합니다.|

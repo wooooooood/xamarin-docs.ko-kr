@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e73695046786e4d9949fd46bdbba665ff4f6cc72
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645170"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528680"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>iOS Designer에서 테이블 작업
 
@@ -58,9 +58,9 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 스토리 보드는 다음 세 단계로 편집 됩니다.
 
--  먼저 필요한 뷰 컨트롤러를 레이아웃 하 고 해당 속성을 설정 합니다.
--  둘째, 개체를 뷰에서 끌어서 놓아 UI를 만듭니다.
--  마지막으로, 각 뷰에 필요한 UIKit 클래스를 추가 하 고 코드에서 참조할 수 있도록 여러 컨트롤의 이름을 지정 합니다.
+- 먼저 필요한 뷰 컨트롤러를 레이아웃 하 고 해당 속성을 설정 합니다.
+- 둘째, 개체를 뷰에서 끌어서 놓아 UI를 만듭니다.
+- 마지막으로, 각 뷰에 필요한 UIKit 클래스를 추가 하 고 코드에서 참조할 수 있도록 여러 컨트롤의 이름을 지정 합니다.
 
 
 스토리 보드가 완료 되 면 코드를 추가 하 여 모든 작업을 수행할 수 있습니다.
@@ -69,21 +69,21 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 ### <a name="layout-the-view-controllers"></a>뷰 컨트롤러 레이아웃
 
-스토리 보드의 첫 번째 변경 내용은 기존 세부 정보 보기를 삭제 하 고 UITableViewController로 바꾸는 것입니다. 다음 단계를 수행하십시오.
+스토리 보드의 첫 번째 변경 내용은 기존 세부 정보 보기를 삭제 하 고 UITableViewController로 바꾸는 것입니다. 다음 단계를 수행하세요.
 
-1.  뷰 컨트롤러의 맨 아래에 있는 막대를 선택 하 고 삭제 합니다.
-2.  도구 상자에서 **탐색 컨트롤러** 와 **테이블 뷰 컨트롤러** 를 스토리 보드로 끕니다. 
-3.  루트 뷰 컨트롤러에서 방금 추가 된 두 번째 테이블 뷰 컨트롤러로 segue를 만듭니다. Segue를 만들려면 *정보 셀에서* 새로 추가 된 UITableViewController로 컨트롤을 끌어 놓습니다. **Segue 선택**아래에서 **표시** 옵션을 선택 합니다. 
-4.  만든 새 segue를 선택 하 고 코드에서이 segue를 참조 하는 식별자를 제공 합니다. Segue을 클릭 하 고 다음과 `TaskSegue` 같이 **Properties Pad**에 **식별자** 를 입력 합니다.    
+1. 뷰 컨트롤러의 맨 아래에 있는 막대를 선택 하 고 삭제 합니다.
+2. 도구 상자에서 **탐색 컨트롤러** 와 **테이블 뷰 컨트롤러** 를 스토리 보드로 끕니다. 
+3. 루트 뷰 컨트롤러에서 방금 추가 된 두 번째 테이블 뷰 컨트롤러로 segue를 만듭니다. Segue를 만들려면 *정보 셀에서* 새로 추가 된 UITableViewController로 컨트롤을 끌어 놓습니다. **Segue 선택**아래에서 **표시** 옵션을 선택 합니다. 
+4. 만든 새 segue를 선택 하 고 코드에서이 segue를 참조 하는 식별자를 제공 합니다. Segue을 클릭 하 고 다음과 `TaskSegue` 같이 **Properties Pad**에 **식별자** 를 입력 합니다.    
   [![속성 패널의 이름 지정 segue](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. 그런 다음 두 테이블 뷰를 선택 하 고 Properties Pad 사용 하 여 구성 합니다. 보기를 선택 하 고 보기 컨트롤러를 선택 하지 마십시오. 문서 개요를 사용 하 여 선택 항목에 대 한 도움말을 볼 수 있습니다.
 
-6.  루트 뷰 컨트롤러 **를 콘텐츠로 변경 합니다. 동적 프로토타입** (Design Surface에 대 한 뷰에는 **프로토타입 콘텐츠가** 레이블이 표시 됨):
+6. 루트 뷰 컨트롤러 **를 콘텐츠로 변경 합니다. 동적 프로토타입** (Design Surface에 대 한 뷰에는 **프로토타입 콘텐츠가** 레이블이 표시 됨):
 
     [![Content 속성을 동적 프로토타입으로 설정](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  새 **uitableviewcontroller** 를 **콘텐츠로 변경 합니다. 정적 셀**. 
+7. 새 **uitableviewcontroller** 를 **콘텐츠로 변경 합니다. 정적 셀**. 
 
 
 8. 새 UITableViewController에는 클래스 이름과 식별자가 설정 되어 있어야 합니다. 뷰 컨트롤러를 선택 하 고 **Properties Pad** **클래스** 에 대해 _TaskDetailViewController_ 를 입력 합니다. 이렇게 하면 Solution Pad에서 `TaskDetailViewController.cs` 새 파일이 만들어집니다. 아래 예제에 나와 있는 것 처럼 **StoryboardID** 를 _세부 정보_로 입력 합니다. 나중에 코드에서 C# 이 뷰를 로드 하는 데 사용 됩니다.  
@@ -114,9 +114,9 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 다음을 수행합니다. 
 
--  도구 상자에서 _탐색 모음의 오른쪽_으로 **막대 단추 항목** 을 끕니다.
--  **Properties Pad**의 **표시줄 단추 항목** 에서 식별자를 선택 **합니다. 를** 추가 하 여 단추를 *+* 추가 합니다. 
--  이후 단계에서 코드에서 식별할 수 있도록 이름을 지정 합니다. 사용자가 막대 단추 항목의 이름을 설정할 수 있도록 루트 뷰 컨트롤러에 클래스 이름 (예: **Itemviewcontroller**)을 지정 해야 합니다.
+- 도구 상자에서 _탐색 모음의 오른쪽_으로 **막대 단추 항목** 을 끕니다.
+- **Properties Pad**의 **표시줄 단추 항목** 에서 식별자를 선택 **합니다. 를** 추가 하 여 단추를 *+* 추가 합니다. 
+- 이후 단계에서 코드에서 식별할 수 있도록 이름을 지정 합니다. 사용자가 막대 단추 항목의 이름을 설정할 수 있도록 루트 뷰 컨트롤러에 클래스 이름 (예: **Itemviewcontroller**)을 지정 해야 합니다.
 
 
 #### <a name="taskdetail-view-controller"></a>TaskDetail 뷰 컨트롤러
@@ -129,10 +129,10 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 테이블 뷰를 선택 하 고 **속성 패드**를 엽니다. 다음 속성을 업데이트 합니다.
 
--  **섹션**: _sr-2_ 
--  **스타일**: _속성별로_
--  **구분 기호**: _없음_
--  **선택**: _선택 항목 없음_
+- **섹션**: _sr-2_ 
+- **스타일**: _속성별로_
+- **구분 기호**: _없음_
+- **선택**: _선택 항목 없음_
 
 아래 그림과 같이 위쪽 섹션을 선택 하 고 **속성 > 테이블 뷰 섹션** 에서 **행** 을 _3_으로 변경 합니다.
 
@@ -141,16 +141,16 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 각 셀에 대해 **Properties Pad** 을 열고 다음을 설정 합니다.
 
--  **스타일**:  _사용자 지정_
--  **식별자**: 각 셀에 대 한 고유 식별자를 선택 합니다 (예: "_제목_", "_메모_", "_완료_").
--  필요한 컨트롤을 끌어 스크린샷에 표시 된 레이아웃 ( **UILabel**, **uitextfield** 및 **UISwitch** 를 올바른 셀에 생성 하 고 레이블을 적절 하 게 설정 합니다. 제목, 메모 및 완료).
+- **스타일**:  _사용자 지정_
+- **식별자**: 각 셀에 대 한 고유 식별자를 선택 합니다 (예: "_제목_", "_메모_", "_완료_").
+- 필요한 컨트롤을 끌어 스크린샷에 표시 된 레이아웃 ( **UILabel**, **uitextfield** 및 **UISwitch** 를 올바른 셀에 생성 하 고 레이블을 적절 하 게 설정 합니다. 제목, 메모 및 완료).
 
 
 두 번째 섹션에서 **행** 을 _1_ 로 설정 하 고 셀의 아래쪽 크기 조정 핸들을 사용 하 여 셀을 더 길게 만듭니다.
 
--  **식별자**를 고유한 값으로 설정 합니다 (예: "저장"). 
--  **배경 설정**:  _색의 선택을 취소_ 합니다.
--  아래 그림과 같이 두 단추를 셀로 끌고 해당 제목을 적절 하 게 설정 합니다 (예: _저장_ 및 _삭제_).
+- **식별자**를 고유한 값으로 설정 합니다 (예: "저장"). 
+- **배경 설정**:  _색의 선택을 취소_ 합니다.
+- 아래 그림과 같이 두 단추를 셀로 끌고 해당 제목을 적절 하 게 설정 합니다 (예: _저장_ 및 _삭제_).
 
    [![아래쪽 섹션에서 두 단추 설정](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
@@ -160,11 +160,11 @@ StoryboardTable 예제에는 스토리 보드에서 두 가지 유형의 UITable
 
 스토리 보드를 만드는 마지막 단계는 몇 가지입니다. 먼저 코드에서 나중에 사용할 수 있도록 **id > name** 아래에 있는 각 컨트롤의 이름을 지정 해야 합니다. 다음과 같이 이름을로 합니다.
 
--  **제목 UITextField** : _TitleText_
--  **참고 UITextField** : _NotesText_
--  **UISwitch** : _DoneSwitch_
--  **UIButton 삭제** : _DeleteButton_
--  **UIButton 저장** : _SaveButton_
+- **제목 UITextField** : _TitleText_
+- **참고 UITextField** : _NotesText_
+- **UISwitch** : _DoneSwitch_
+- **UIButton 삭제** : _DeleteButton_
+- **UIButton 저장** : _SaveButton_
 
 
 <a name="Adding_Code" />
@@ -346,10 +346,10 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 예제에서는 다음을 보여 줍니다.
 
--  데이터 목록을 표시 하기 위해 다시 사용 하도록 셀이 정의 된 프로토타입 콘텐츠가 있는 테이블을 만듭니다. 
--  정적 콘텐츠를 사용 하 여 테이블을 만들어 입력 폼을 작성 합니다. 여기에는 테이블 스타일 변경 및 섹션, 셀 및 UI 컨트롤 추가가 포함 됩니다. 
--  Segue를 만들고 메서드를 `PrepareForSegue` 재정의 하 여 필요한 매개 변수의 대상 뷰에 알리도록 하는 방법입니다. 
--  `Storyboard.InstantiateViewController` 메서드를 사용 하 여 스토리 보드 뷰를 직접 로드 합니다.
+- 데이터 목록을 표시 하기 위해 다시 사용 하도록 셀이 정의 된 프로토타입 콘텐츠가 있는 테이블을 만듭니다. 
+- 정적 콘텐츠를 사용 하 여 테이블을 만들어 입력 폼을 작성 합니다. 여기에는 테이블 스타일 변경 및 섹션, 셀 및 UI 컨트롤 추가가 포함 됩니다. 
+- Segue를 만들고 메서드를 `PrepareForSegue` 재정의 하 여 필요한 매개 변수의 대상 뷰에 알리도록 하는 방법입니다. 
+- `Storyboard.InstantiateViewController` 메서드를 사용 하 여 스토리 보드 뷰를 직접 로드 합니다.
 
 
 

@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 2efc782386b8ec39ecca21aaf88738c813c260f0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511652"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529052"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -143,8 +143,8 @@ IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실�
 
 #### <a name="launching-from-visual-studio"></a>Visual Studio에서 시작
 
-1.  먼저 Visual Studio에서 응용 프로그램을 로드 했는지 확인 하 고 위에 지정 된 대로 (기본값) 디버그 구성을 선택 합니다.
-2.  아래 다이어그램에 나와 있는 것 처럼 Visual Studio에서 **Xamarin Profiler > 분석** 을 찾아 프로파일러를 엽니다.
+1. 먼저 Visual Studio에서 응용 프로그램을 로드 했는지 확인 하 고 위에 지정 된 대로 (기본값) 디버그 구성을 선택 합니다.
+2. 아래 다이어그램에 나와 있는 것 처럼 Visual Studio에서 **Xamarin Profiler > 분석** 을 찾아 프로파일러를 엽니다.
 
 ![Visual Studio에서 프로파일러 시작](images/start-profiling-vs.png)
 
@@ -231,8 +231,8 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 할당에 대 한 검사기 보기는 개체를 필터링 및 그룹화 하 고, 할당 된 메모리에 대 한 통계를 제공 하 고, 스택 추적 및 루트 경로에 대 한 뷰를 제공 하는 옵션을 제공 합니다.
 
 - **호출 트리** – 응용 프로그램의 모든 스레드에 대 한 전체 호출 트리를 표시 하 고 각 노드에 할당 된 메모리에 대 한 정보를 포함 합니다. 목록에서 요소를 선택 하면 모든 형제 노드가 회색으로 표시 됩니다. 트리를 확장 하거나 요소를 두 번 클릭 하 여 드릴 다운할 수 있습니다. 이 데이터 뷰를 표시 하는 경우 디스플레이 설정 검사자 보기를 사용 하 여 표시 되는 방식을 변경할 수 있습니다. 현재 다음과 같은 두 가지 옵션이 있습니다.
-    1.  **반전 된 호출 트리** -스택 추적을 위에서 아래로 간주 합니다. 이 옵션은 CPU가 시간을 소비 하는 가장 깊은 메서드를 나타내므로 편리 하 게 볼 수 있습니다.
-    2.  **스레드별로 분리** –이 옵션은 스레드를 통해 호출 트리를 구성 합니다.
+    1. **반전 된 호출 트리** -스택 추적을 위에서 아래로 간주 합니다. 이 옵션은 CPU가 시간을 소비 하는 가장 깊은 메서드를 나타내므로 편리 하 게 볼 수 있습니다.
+    2. **스레드별로 분리** –이 옵션은 스레드를 통해 호출 트리를 구성 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

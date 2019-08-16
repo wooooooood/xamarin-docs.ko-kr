@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 43c57b552ab9465e67290018fe5f1908eecf2ee9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82a2e2b4abe5bc634c74c083b860d1f4f59a90b7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656037"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528479"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Xamarin.ios에서 컨트롤러 전환 보기
 
@@ -24,10 +24,10 @@ IOS 7에서 보기 컨트롤러 간의 애니메이션 전환은 완전히 사�
 
 사용자 지정 전환을 `PresentViewController`사용 하려면:
 
-1.  표시 될 컨트롤러 `UIModalPresentationStyle.Custom` 에서 을로설정합니다.`ModalPresentationStyle`
-2.  `UIViewControllerTransitioningDelegate` 의`UIViewControllerAnimatedTransitioning` 인스턴스인 애니메이터 클래스를 만들려면를 구현 합니다.
-3.  표시 될 컨트롤러 에서도 `UIViewControllerTransitioningDelegate` 속성을의인스턴스로설정합니다.`TransitioningDelegate`
-4.  뷰 컨트롤러를 표시 합니다.
+1. 표시 될 컨트롤러 `UIModalPresentationStyle.Custom` 에서 을로설정합니다.`ModalPresentationStyle`
+2. `UIViewControllerTransitioningDelegate` 의`UIViewControllerAnimatedTransitioning` 인스턴스인 애니메이터 클래스를 만들려면를 구현 합니다.
+3. 표시 될 컨트롤러 에서도 `UIViewControllerTransitioningDelegate` 속성을의인스턴스로설정합니다.`TransitioningDelegate`
+4. 뷰 컨트롤러를 표시 합니다.
 
 
 예를 들어 다음 코드는-a `ControllerTwo` `UIViewController` 하위 클래스 형식의 뷰 컨트롤러를 제공 합니다.
@@ -80,8 +80,8 @@ public class TransitioningDelegate : UIViewControllerTransitioningDelegate
 
 클래스 `UIViewControllerAnimatedTransitioning` 는 실제 애니메이션을 처리 합니다. 두 가지 메서드를 구현 해야 합니다.
 
-1.  `TransitionDuration`– 애니메이션의 기간 (초)을 반환 합니다.
-1.  `AnimateTransition`– 실제 애니메이션을 수행 합니다.
+1. `TransitionDuration`– 애니메이션의 기간 (초)을 반환 합니다.
+1. `AnimateTransition`– 실제 애니메이션을 수행 합니다.
 
 
 예를 들어 다음 클래스는 컨트롤러 `UIViewControllerAnimatedTransitioning` 뷰의 프레임에 애니메이션 효과를 주기 위해를 구현 합니다.
@@ -126,18 +126,18 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 
 컬렉션 뷰는 애니메이션 전환을 만들 수 있도록 기본적으로 지원 됩니다.
 
--  **탐색 컨트롤러** – 두 `UICollectionViewController` 인스턴스 간의 애니메이션 전환을 관리 하는 `UINavigationController` 경우 선택적으로 자동으로 처리할 수 있습니다.
--  **전환 레이아웃** – 새 `UICollectionViewTransitionLayout` 클래스를 사용 하면 레이아웃 간의 대화형 전환을 수행할 수 있습니다.
+- **탐색 컨트롤러** – 두 `UICollectionViewController` 인스턴스 간의 애니메이션 전환을 관리 하는 `UINavigationController` 경우 선택적으로 자동으로 처리할 수 있습니다.
+- **전환 레이아웃** – 새 `UICollectionViewTransitionLayout` 클래스를 사용 하면 레이아웃 간의 대화형 전환을 수행할 수 있습니다.
 
 
 ### <a name="navigation-controller-transitions"></a>탐색 컨트롤러 전환
 
 탐색 컨트롤러 내에서 사용 하는 경우 `UICollectionViewController` 에는 컨트롤러 간의 애니메이션 전환에 대 한 지원이 포함 됩니다. 이 지원은 기본적으로 제공 되며 다음과 같은 몇 가지 간단한 단계를 구현 해야 합니다.
 
-1.  에서 `UseLayoutToLayoutNavigationTransitions` `false`을로 설정 합니다.`UICollectionViewController`
-1.  의 `UICollectionViewController` 인스턴스를 탐색 컨트롤러 스택의 루트에 추가 합니다.
-1.  초 `UICollectionViewController` 를 만들고 해당 `UseLayoutToLayoutNavigtionTransitions` 속성을로 `true` 설정 합니다.
-1.  두 번째 `UICollectionViewController` 를 탐색 컨트롤러의 스택에 푸시합니다.
+1. 에서 `UseLayoutToLayoutNavigationTransitions` `false`을로 설정 합니다.`UICollectionViewController`
+1. 의 `UICollectionViewController` 인스턴스를 탐색 컨트롤러 스택의 루트에 추가 합니다.
+1. 초 `UICollectionViewController` 를 만들고 해당 `UseLayoutToLayoutNavigtionTransitions` 속성을로 `true` 설정 합니다.
+1. 두 번째 `UICollectionViewController` 를 탐색 컨트롤러의 스택에 푸시합니다.
 
 
 다음 코드는 `UICollectionViewController` `UseLayoutToLayoutNavigationTransitions` 속성이로 `ImagesCollectionViewController` 설정된탐색컨트롤러스택의루트에이라는하위클래스를추가합니다.`false`
@@ -208,13 +208,13 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 
 를 사용 하 여 `UICollectionViewTransitionLayout` 제스처 인식기 내에서 대화형 전환을 구현 하는 단계는 다음과 같습니다.
 
-1.  제스처 인식기를 만듭니다.
-1.  의 메서드를 호출 하 여 대상 레이아웃 및 완료 처리기에 전달 합니다. `UICollectionView` `StartInteractiveTransition`
-1.  메서드에서 반환 `TransitionProgress` 되 `UICollectionViewTransitionLayout` 는 인스턴스의 속성을 설정 합니다. `StartInteractiveTransition`
-1.  레이아웃을 무효화 합니다.
-1.  의 메서드를 `FinishInteractiveTransition` 호출 하 여 전환을 `CancelInteractiveTransition` 완료 하거나 메서드를 호출 하 여 취소 합니다. `UICollectionView`  `FinishInteractiveTransition`애니메이션에서 대상 레이아웃으로의 전환을 완료 하는 반면 `CancelInteractiveTransition` 애니메이션이 원래 레이아웃으로 반환 되도록 합니다.
-1.  `StartInteractiveTransition` 메서드의 완료 처리기에서 전환 완료를 처리 합니다.
-1.  컬렉션 뷰에 제스처 인식기를 추가 합니다.
+1. 제스처 인식기를 만듭니다.
+1. 의 메서드를 호출 하 여 대상 레이아웃 및 완료 처리기에 전달 합니다. `UICollectionView` `StartInteractiveTransition`
+1. 메서드에서 반환 `TransitionProgress` 되 `UICollectionViewTransitionLayout` 는 인스턴스의 속성을 설정 합니다. `StartInteractiveTransition`
+1. 레이아웃을 무효화 합니다.
+1. 의 메서드를 `FinishInteractiveTransition` 호출 하 여 전환을 `CancelInteractiveTransition` 완료 하거나 메서드를 호출 하 여 취소 합니다. `UICollectionView`  `FinishInteractiveTransition`애니메이션에서 대상 레이아웃으로의 전환을 완료 하는 반면 `CancelInteractiveTransition` 애니메이션이 원래 레이아웃으로 반환 되도록 합니다.
+1. `StartInteractiveTransition` 메서드의 완료 처리기에서 전환 완료를 처리 합니다.
+1. 컬렉션 뷰에 제스처 인식기를 추가 합니다.
 
 
 다음 코드는 손가락을 발생 하는 제스처 인식기 내에서 대화형 레이아웃 전환을 구현 합니다.

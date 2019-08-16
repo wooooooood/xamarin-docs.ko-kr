@@ -1,5 +1,5 @@
 ---
-title: Android 빌드 오류 – The LinkAssemblies 작업이 예기치 않게 실패 했습니다
+title: Android 빌드 오류 – LinkAssemblies 작업이 예기치 않게 실패 했습니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EB3BE685-CB72-48E3-89D7-C845E76B9FA2
@@ -7,33 +7,33 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: f517aaa770fa7b2f1463954638f0afc95168bf65
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 71305dd7287df56036d0298ebfcf8a8cb7c4d3b3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250746"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528369"
 ---
-# <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Android 빌드 오류 – The LinkAssemblies 작업이 예기치 않게 실패 했습니다
+# <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Android 빌드 오류 – LinkAssemblies 작업이 예기치 않게 실패 했습니다.
 
-오류 메시지가 표시 될 수 있습니다 `The "LinkAssemblies" task failed unexpectedly` Forms를 사용 하는 Xamarin.Android 프로젝트를 빌드할 경우. 링커 활성화 되어 있을 때 이런 (에서 일반적으로 *릴리스* 앱 패키지의 크기를 줄이기 위해 빌드); Android 대상을 최신 프레임 워크에 업데이트 되지 않은 때문에 발생 하 고 합니다. (자세한 정보: [Android 요구 사항에 대 한 Xamarin.Forms](~/get-started/requirements.md#android))
+양식을 사용 하는 Xamarin Android `The "LinkAssemblies" task failed unexpectedly` 프로젝트를 빌드할 때 오류 메시지가 표시 될 수 있습니다. 이는 링커가 활성 상태일 때 (일반적으로 *릴리스* 빌드에서 앱 패키지의 크기를 줄이기 위해) 발생 합니다. Android 대상이 최신 프레임 워크로 업데이트 되지 않기 때문에 발생 합니다. (추가 정보: [Android 용 Xamarin.ios 요구 사항](~/get-started/requirements.md#android))
 
-이 문제를 해결 하 고 최신 지원 되는 Android SDK 버전을 설정 해야 하는 것은 **대상 프레임 워크** 설치 된 최신 플랫폼입니다. 설정 하는 것이 좋습니다 합니다 **대상 Android 버전** 최신 설치 된 플랫폼 및 **최소 Android 버전** API 19 이상입니다. 이것은 지원 되는 구성 합니다.
+이 문제를 해결 하려면 지원 되는 최신 Android SDK 버전이 있는지 확인 하 고 **대상 프레임 워크** 를 설치 된 최신 플랫폼으로 설정 합니다. 또한 **대상 Android 버전** 을 설치 된 최신 플랫폼으로 설정 하 고 **최소 ANDROID 버전** 을 API 19 이상으로 설정 하는 것이 좋습니다. 이는 지원 되는 구성으로 간주 됩니다.
 
-## <a name="setting-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 설정
+## <a name="setting-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 설정
 
-1.  Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **옵션** 메뉴에서.
-2.  에 **프로젝트 옵션** 대화 상자에서로 이동 **빌드 > 일반**합니다.
-3.  설정 된 **Android 버전을 사용 하 여 컴파일: (대상 프레임 워크)**  설치 된 최신 플랫폼입니다.
-4.  에 **프로젝트 옵션** 대화 상자에서로 이동 **빌드 > Android 응용 프로그램**합니다.
-5.  설정 합니다 **최소 Android 버전** API 수준 19 이상 및 **대상 Android 버전** (3)에서 선택한 최신 설치 된 플랫폼입니다.
+1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 메뉴에서 **옵션** 을 선택 합니다.
+2. **프로젝트 옵션** 대화 상자에서 **빌드 > 일반**으로 이동 합니다.
+3. Android 버전 **을 사용 하 여 컴파일 설정: (대상 프레임 워크)**  최신 버전으로 설치 합니다.
+4. **프로젝트 옵션** 대화 상자에서 **빌드 > Android 응용 프로그램**으로 이동 합니다.
+5. **최소 android 버전** 을 API 수준 19 이상으로 설정 하 고 **대상 android 버전** 을 (3)에서 선택한 최신 플랫폼으로 설정 합니다.
 
 ## <a name="setting-in-visual-studio"></a>Visual Studio에서 설정
 
-1.  Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 메뉴에서.
-2.  프로젝트 속성에서로 이동 **응용 프로그램**합니다.
-3.  설정 된 **Android 버전을 사용 하 여 컴파일: (대상 프레임 워크)**  설치 된 최신 플랫폼입니다.
-4.  프로젝트 속성에서로 이동 **Android 매니페스트**합니다.
-5.  설정 합니다 **최소 Android 버전** API 수준 19 이상 및 **대상 Android 버전** (3)에서 선택한 최신 설치 된 플랫폼입니다.
+1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 메뉴에서 **속성** 를 선택 합니다.
+2. 프로젝트 속성에서 **응용 프로그램**으로 이동 합니다.
+3. Android 버전 **을 사용 하 여 컴파일 설정: (대상 프레임 워크)**  최신 버전으로 설치 합니다.
+4. 프로젝트 속성에서 **Android 매니페스트**로 이동 합니다.
+5. **최소 android 버전** 을 API 수준 19 이상으로 설정 하 고 **대상 android 버전** 을 (3)에서 선택한 최신 플랫폼으로 설정 합니다.
 
-이러한 설정을 업데이트 한 후 정리 하 고 변경 내용을 선택 하도록 프로젝트를 다시 작성 하십시오.
+이러한 설정을 업데이트 한 후에는 프로젝트를 정리 하 고 다시 빌드하여 변경 내용이 선택 되었는지 확인 하세요.

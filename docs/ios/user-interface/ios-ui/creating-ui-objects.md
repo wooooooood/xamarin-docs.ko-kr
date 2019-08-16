@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dd935e6feb14d9077c1ad98a2e7e10e67646dc4f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f77a4f2f31c72726515e33dc273616f175df2891
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650111"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528530"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.ios에서 사용자 인터페이스 개체 만들기
 
@@ -28,9 +28,9 @@ using UIKit;
 
 다음 세 가지 방법으로 UI 컨트롤 및 레이아웃을 편집할 수 있습니다.
 
--  **[Xamarin IOS Designer](~/ios/user-interface/designer/index.md)** – xamarin의 기본 제공 레이아웃 디자이너를 사용 하 여 화면을 디자인 합니다. 스토리 보드 또는 XIB 파일을 두 번 클릭 하 여 기본 제공 디자이너를 사용 하 여 편집할 수 있습니다.
--  **Xcode Interface Builder** – Interface Builder를 사용 하 여 화면 레이아웃에 컨트롤을 끌어 놓습니다. **Solution Pad** 에서 파일을 마우스 오른쪽 단추로 클릭 하 고 **> Xcode Interface Builder를 사용**하 여 열기를 선택 하 여 XCODE에서 storyboard 또는 XIB 파일을 엽니다.
--  **사용 C#**  – 컨트롤을 프로그래밍 방식으로 코드를 사용 하 여 생성 하 고 뷰 계층 구조에 추가할 수도 있습니다.
+- **[Xamarin IOS Designer](~/ios/user-interface/designer/index.md)** – xamarin의 기본 제공 레이아웃 디자이너를 사용 하 여 화면을 디자인 합니다. 스토리 보드 또는 XIB 파일을 두 번 클릭 하 여 기본 제공 디자이너를 사용 하 여 편집할 수 있습니다.
+- **Xcode Interface Builder** – Interface Builder를 사용 하 여 화면 레이아웃에 컨트롤을 끌어 놓습니다. **Solution Pad** 에서 파일을 마우스 오른쪽 단추로 클릭 하 고 **> Xcode Interface Builder를 사용**하 여 열기를 선택 하 여 XCODE에서 storyboard 또는 XIB 파일을 엽니다.
+- **사용 C#**  – 컨트롤을 프로그래밍 방식으로 코드를 사용 하 여 생성 하 고 뷰 계층 구조에 추가할 수도 있습니다.
 
 IOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가**...를 선택 하 여 새 스토리 보드 및 XIB 파일을 추가할 수 있습니다.
 
@@ -92,12 +92,12 @@ Xcode의 Interface Builder Mac용 Visual Studio 통합 하는 방법에 대 한 
 
 보기 또는 보기 컨트롤러에서를 사용 하 여 C# 프로그래밍 방식으로 사용자 인터페이스 개체를 만들려면 다음 단계를 수행 합니다.
 
--  사용자 인터페이스 개체에 대 한 클래스 수준 필드를 선언 합니다. 예를 들어 컨트롤 자체를 한 `ViewDidLoad` 번 만듭니다. 그런 다음 뷰 컨트롤러의 수명 주기 메서드 (예:
+- 사용자 인터페이스 개체에 대 한 클래스 수준 필드를 선언 합니다. 예를 들어 컨트롤 자체를 한 `ViewDidLoad` 번 만듭니다. 그런 다음 뷰 컨트롤러의 수명 주기 메서드 (예:
 `ViewWillAppear`).
--  컨트롤의 `CGRect` 프레임 (너비와 높이 뿐만 아니라 화면에서 X 및 Y 좌표)을 정의 하는을 만듭니다. 이에 대 한 `using CoreGraphics` 지시문이 있는지 확인 해야 합니다.
--  생성자를 호출 하 여 컨트롤을 만들고 할당 합니다.
--  속성 또는 이벤트 처리기를 설정 합니다.
--  를 `Add()` 호출 하 여 뷰 계층 구조에 컨트롤을 추가 합니다.
+- 컨트롤의 `CGRect` 프레임 (너비와 높이 뿐만 아니라 화면에서 X 및 Y 좌표)을 정의 하는을 만듭니다. 이에 대 한 `using CoreGraphics` 지시문이 있는지 확인 해야 합니다.
+- 생성자를 호출 하 여 컨트롤을 만들고 할당 합니다.
+- 속성 또는 이벤트 처리기를 설정 합니다.
+- 를 `Add()` 호출 하 여 뷰 계층 구조에 컨트롤을 추가 합니다.
 
 다음은를 사용 하 여 `UILabel` C#뷰 컨트롤러에서를 만드는 간단한 예입니다.
 

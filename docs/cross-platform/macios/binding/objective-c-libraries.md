@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 1d4c93e625b92275828428917ebbc86d931e8363
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649500"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522011"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -97,10 +97,10 @@ API 파일의 형식 및 사용할 수 있는 특성에 대 한 자세한 내용
 
 완전 한 바인딩을 만들려면 일반적으로 다음 네 가지 구성 요소를 처리 합니다.
 
--  템플릿의 API 정의 파일`ApiDefinition.cs` 입니다.
--  선택 사항: API 정의 파일 (`StructsAndEnums.cs` 템플릿)에 필요한 열거형, 형식, 구조체
--  선택 사항: 생성 된 바인딩을 확장 하거나 더 C# 친숙 한 API (프로젝트에 추가 하는 모든 C# 파일)를 제공할 수 있는 추가 소스입니다.
--  바인딩할 네이티브 라이브러리입니다.
+- 템플릿의 API 정의 파일`ApiDefinition.cs` 입니다.
+- 선택 사항: API 정의 파일 (`StructsAndEnums.cs` 템플릿)에 필요한 열거형, 형식, 구조체
+- 선택 사항: 생성 된 바인딩을 확장 하거나 더 C# 친숙 한 API (프로젝트에 추가 하는 모든 C# 파일)를 제공할 수 있는 추가 소스입니다.
+- 바인딩할 네이티브 라이브러리입니다.
 
 이 차트에서는 파일 간의 관계를 보여 줍니다.
 
@@ -309,10 +309,10 @@ interface MyMutableTree {
 
 이 `btouch-native` 도구는 클래스에서 fours 생성자를 자동으로 생성 하며, 지정 된 `Foo`클래스에 대해 다음을 생성 합니다.
 
--  `Foo ()`: 기본 생성자 (객관적인-C의 "init" 생성자에 매핑됨)
--  `Foo (NSCoder)`: NIB 파일의 deserialization 중에 사용 되는 생성자입니다. (목표-C의 "initWithCoder:" 생성자에 매핑됩니다.)
--  `Foo (IntPtr handle)`: 핸들 기반 만들기에 대 한 생성자입니다. 런타임이 관리 되지 않는 개체에서 관리 되는 개체를 노출 해야 하는 경우 런타임에서 호출 됩니다.
--  `Foo (NSEmptyFlag)`:이는 파생 클래스에서 이중 초기화를 방지 하는 데 사용 됩니다.
+- `Foo ()`: 기본 생성자 (객관적인-C의 "init" 생성자에 매핑됨)
+- `Foo (NSCoder)`: NIB 파일의 deserialization 중에 사용 되는 생성자입니다. (목표-C의 "initWithCoder:" 생성자에 매핑됩니다.)
+- `Foo (IntPtr handle)`: 핸들 기반 만들기에 대 한 생성자입니다. 런타임이 관리 되지 않는 개체에서 관리 되는 개체를 노출 해야 하는 경우 런타임에서 호출 됩니다.
+- `Foo (NSEmptyFlag)`:이는 파생 클래스에서 이중 초기화를 방지 하는 데 사용 됩니다.
 
 사용자가 정의 하는 생성자의 경우 인터페이스 정의 내에서 다음 서명을 사용 하 여 선언 해야 합니다. `IntPtr` 값을 반환 해야 하 고 메서드 이름이 생성자 여야 합니다. 예를 들어 `initWithFrame:` 생성자를 바인딩하려면 다음을 사용 합니다.
 
@@ -522,7 +522,7 @@ public void AppendWorkers(params Worker[] workers)
 
 일반적으로 이러한 필드는 참조 해야 하는 문자열이 나 정수 값을 포함 합니다. 일반적으로 특정 알림과 사전에서 키를 나타내는 문자열로 사용 됩니다.
 
-필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예를 들어:
+필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -545,14 +545,14 @@ interface LonelyClass {
 
 특성 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 은 다음 데이터 형식에 적용 될 수 있습니다.
 
--  `NSString`참조 (읽기 전용 속성에만 해당)
--  `NSArray`참조 (읽기 전용 속성에만 해당)
--  32 비트 정수 (`System.Int32`)
--  64 비트 정수 (`System.Int64`)
--  32 비트 부동 소수점 (`System.Single`)
--  64 비트 부동 소수점 (`System.Double`)
--  `System.Drawing.SizeF`
--  `CGSize`
+- `NSString`참조 (읽기 전용 속성에만 해당)
+- `NSArray`참조 (읽기 전용 속성에만 해당)
+- 32 비트 정수 (`System.Int32`)
+- 64 비트 정수 (`System.Int64`)
+- 32 비트 부동 소수점 (`System.Single`)
+- 64 비트 부동 소수점 (`System.Double`)
+- `System.Drawing.SizeF`
+- `CGSize`
 
 네이티브 필드 이름 외에도 라이브러리 이름을 전달 하 여 필드가 있는 라이브러리 이름을 지정할 수 있습니다.
 
@@ -682,7 +682,7 @@ Xamarin.ios 바인딩 생성기는 개발자가 알림을 바인딩할 수 있�
 
 페이로드를 사용 하지 않는 알림에 대해 인수를 사용 하지 않고이 특성을 사용 하거나, 일반적 `System.Type` 으로 이름이 "EventArgs"로 끝나는 API 정의의 다른 인터페이스를 참조 하는를 지정할 수 있습니다. 생성기는 인터페이스를 서브 `EventArgs` 클래스로 변환 하 고 여기에 나열 된 모든 속성을 포함 합니다. EventArgs [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 클래스에서 특성을 사용 하 여 값을 인출 하기 위해 목표-C 사전을 조회 하는 데 사용 되는 키의 이름을 나열 해야 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 interface MyClass {
@@ -1197,9 +1197,9 @@ void SomeString (ref NSObject byref);
 
 위의 예에서는 "Retain" 의미 체계가 있는 값에 플래그를 지정 합니다. 사용 가능한 의미 체계는 다음과 같습니다.
 
--  할당
--  복사
--  보유
+- 할당
+- 복사
+- 보유
 
 <a name="Style_Guidelines" />
 
@@ -1255,9 +1255,9 @@ interface MyClassDelegate {
 
 클래스를 래핑하려면 다음을 수행 해야 합니다.
 
--  호스트 클래스에서에를 추가 합니다.[`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
+- 호스트 클래스에서에를 추가 합니다.[`[BaseType]`](~/cross-platform/macios/binding/binding-types-reference.md#BaseTypeAttribute)  
    선언 대리자 역할을 하는 형식 및 사용자가 노출 C# 한 이름입니다. 위의 예제에서 및은 `typeof (MyClassDelegate)` 각각 및 `WeakDelegate` 입니다.
--  대리자 클래스에서 매개 변수가 세 개 이상인 각 메서드에서 자동으로 생성 된 EventArgs 클래스에 사용할 형식을 지정 해야 합니다.
+- 대리자 클래스에서 매개 변수가 세 개 이상인 각 메서드에서 자동으로 생성 된 EventArgs 클래스에 사용할 형식을 지정 해야 합니다.
 
 바인딩 생성기는 단일 이벤트 대상만 래핑하는 것으로 제한 되지 않습니다. 일부 목표 C 클래스는 메시지를 두 개 이상의 대리자로 내보낼 수 있으므로이 설정을 지원 하기 위해 배열을 제공 해야 합니다. 대부분의 경우에는이 기능이 필요 하지 않지만 생성기는 이러한 사례를 지원할 준비가 된 것입니다.
 
@@ -1337,7 +1337,7 @@ Btouch 인터페이스 정의 시스템에서 직접 지원 하지 않는 열거
 위의 예제는 `libMyLibrary.a` `libSystemLibrary.dylib` 및 `CFNetwork` 프레임 워크 라이브러리를 최종 실행 파일에 연결 합니다.
 
 또는 계약 파일에 포함할 수 있는 어셈블리 수준 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)( `AssemblyInfo.cs`예:)을 활용할 수 있습니다.
-[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)을 사용 하는 경우 네이티브 라이브러리를 응용 프로그램에 포함 하기 때문에 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예를 들어:
+[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)을 사용 하는 경우 네이티브 라이브러리를 응용 프로그램에 포함 하기 때문에 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예:
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

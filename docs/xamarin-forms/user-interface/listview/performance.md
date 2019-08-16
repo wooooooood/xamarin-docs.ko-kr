@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: 4a0a7a4db4b0ca982a162ec3a0b67dc729af0ed2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a1fae280f42f91fce4b4fe28c3f728cf14c7a21c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655935"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528910"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
@@ -163,20 +163,20 @@ public class CustomListView : ListView
 
 성능 향상을 위한 많은 기술이 있습니다를 `ListView`:
 
--  바인딩 합니다 `ItemsSource` 속성을는 `IList<T>` 대신 컬렉션을 `IEnumerable<T>` 컬렉션 때문에 `IEnumerable<T>` 컬렉션 임의 액세스를 지원 하지 않습니다.
--  기본 제공 셀을 사용 하 여 (같은 `TextCell`  /  `SwitchCell` ) 대신 `ViewCell` 수 있을 때마다 합니다.
--  더 적은 수의 요소를 사용 합니다. 예를 들어 단일을 사용 하는 것이 좋습니다 `FormattedString` 레이블 대신 여러 개의 레이블이 있습니다.
--  대체는 `ListView` 사용 하 여를 `TableView` 형식이 다른 데이터 – 즉, 서로 다른 유형의 데이터를 표시할 때.
--  사용을 제한 합니다 [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) 메서드. 를 지나치게 사용이 성능이 저하 됩니다.
--  Android에서 설정 하지 마십시오는 `ListView`의 성능이 크게 저하 되므로 인스턴스화된 후 색 또는 행 구분 기호 표시 합니다.
--  기반으로 셀 레이아웃을 변경 하지 않도록 합니다 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)합니다. 이 비용이 큰 레이아웃 및 초기화 합니다.
--  많이 중첩 된 레이아웃 계층을 방지 합니다. 사용 하 여 `AbsoluteLayout` 또는 `Grid` 중첩을 줄일 수 있습니다.
--  특정 방지 `LayoutOptions` 이외의 `Fill` (채우기 계산 하는 중 가장 저렴 한입니다).
--  숨겨질 수를 `ListView` 안에 `ScrollView` 다음과 같은 이유로:
+- 바인딩 합니다 `ItemsSource` 속성을는 `IList<T>` 대신 컬렉션을 `IEnumerable<T>` 컬렉션 때문에 `IEnumerable<T>` 컬렉션 임의 액세스를 지원 하지 않습니다.
+- 기본 제공 셀을 사용 하 여 (같은 `TextCell`  /  `SwitchCell` ) 대신 `ViewCell` 수 있을 때마다 합니다.
+- 더 적은 수의 요소를 사용 합니다. 예를 들어 단일을 사용 하는 것이 좋습니다 `FormattedString` 레이블 대신 여러 개의 레이블이 있습니다.
+- 대체는 `ListView` 사용 하 여를 `TableView` 형식이 다른 데이터 – 즉, 서로 다른 유형의 데이터를 표시할 때.
+- 사용을 제한 합니다 [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) 메서드. 를 지나치게 사용이 성능이 저하 됩니다.
+- Android에서 설정 하지 마십시오는 `ListView`의 성능이 크게 저하 되므로 인스턴스화된 후 색 또는 행 구분 기호 표시 합니다.
+- 기반으로 셀 레이아웃을 변경 하지 않도록 합니다 [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext)합니다. 이 비용이 큰 레이아웃 및 초기화 합니다.
+- 많이 중첩 된 레이아웃 계층을 방지 합니다. 사용 하 여 `AbsoluteLayout` 또는 `Grid` 중첩을 줄일 수 있습니다.
+- 특정 방지 `LayoutOptions` 이외의 `Fill` (채우기 계산 하는 중 가장 저렴 한입니다).
+- 숨겨질 수를 `ListView` 안에 `ScrollView` 다음과 같은 이유로:
     - `ListView` 자체 스크롤을 구현 합니다.
     - 합니다 `ListView` 부모에 의해 처리 됩니다 하는 대로 모든 제스처를 받지 `ScrollView`합니다.
     - 합니다 `ListView` 잠재적으로 기능을 하는 제품 목록의 요소를 사용 하 여 사용자 지정된 헤더 및 스크롤 하는 바닥글을 제공할 수는 `ScrollView` 사용 되었습니다. 자세한 내용은 참조 [머리글 및 바닥글](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers)합니다.
--  셀에 표시 되는 매우 특정 한 복잡 한 디자인 해야 하는 경우 사용자 지정 렌더러를 고려 합니다.
+- 셀에 표시 되는 매우 특정 한 복잡 한 디자인 해야 하는 경우 사용자 지정 렌더러를 고려 합니다.
 
 `AbsoluteLayout` 단일 측정값 호출 하지 않고 레이아웃 하는 데 있습니다. 이렇게 하면 성능에 대 한 매우 강력 합니다. 하는 경우 `AbsoluteLayout` 일 수 없습니다를 사용 하는 것이 좋습니다 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout)합니다. 사용 하는 경우 `RelativeLayout`, 식 API를 사용 하 여 보다 크게 향상 되는 제약 조건에 직접 전달 합니다. 이것은 JIT에 사용 되는 식 API 하며 iOS에서 트리를 해석할 수는 느립니다. API 식에 적합 한 페이지 레이아웃 위치만 필요할 초기 레이아웃과 회전에서 `ListView`스크롤을 하는 동안 지속적으로 실행 되는 경우, 성능 문제가 발생 합니다.
 

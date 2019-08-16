@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 360ea18de0c9d30988d63602ba3c17c3d00ed83a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 33d0e87e8823db6bf0fd0bc5541f37bd41b6dcde
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644089"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526257"
 ---
 # <a name="running-android-services-in-remote-processes"></a>원격 프로세스에서 Android 서비스 실행
 
@@ -83,7 +83,7 @@ _일반적으로 Android 응용 프로그램의 모든 구성 요소는 동일�
 
 서비스가 실행 되는 프로세스의 종류는 `Process` 속성의 값에 따라 달라 집니다. Android는 다음과 같은 세 가지 유형의 프로세스를 식별 합니다.
 
--   **개인 프로세스** &ndash; 개인 프로세스는 해당 프로세스를 시작한 응용 프로그램에만 사용할 수 있는 프로세스입니다. 프로세스를 개인으로 식별 하려면 해당 **이름이 (세미콜론** )로 시작 해야 합니다. 이전 코드 조각과 스크린샷에 표시 된 서비스는 개인 프로세스입니다. 다음 코드 조각은의 `ServiceAttribute`예제입니다.
+- **개인 프로세스** &ndash; 개인 프로세스는 해당 프로세스를 시작한 응용 프로그램에만 사용할 수 있는 프로세스입니다. 프로세스를 개인으로 식별 하려면 해당 이름이 (세미콜론)로 시작 해야 합니다. 이전 코드 조각과 스크린샷에 표시 된 서비스는 개인 프로세스입니다. 다음 코드 조각은의 `ServiceAttribute`예제입니다.
 
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -91,7 +91,7 @@ _일반적으로 Android 응용 프로그램의 모든 구성 요소는 동일�
              Exported=true)]
     ```
 
--   **글로벌 프로세스** &ndash; 전역 프로세스에서 실행 되는 서비스는 장치에서 실행 되는 모든 응용 프로그램에 액세스할 수 있습니다. 전역 프로세스는 소문자로 시작 하는 정규화 된 클래스 이름 이어야 합니다.
+- **글로벌 프로세스** &ndash; 전역 프로세스에서 실행 되는 서비스는 장치에서 실행 되는 모든 응용 프로그램에 액세스할 수 있습니다. 전역 프로세스는 소문자로 시작 하는 정규화 된 클래스 이름 이어야 합니다.
     서비스를 보호 하기 위해 단계를 수행 하지 않으면 다른 응용 프로그램에서 해당 서비스를 바인딩하고 상호 작용할 수 있습니다. 무단 사용 으로부터 서비스를 보호 하는 방법에 대해서는이 가이드의 뒷부분에서 설명 합니다.
 
     ```csharp
@@ -100,7 +100,7 @@ _일반적으로 Android 응용 프로그램의 모든 구성 요소는 동일�
              Exported=true)]
     ```
 
--   **격리 된 프로세스** &ndash; 격리 된 프로세스는 자체 샌드박스에서 실행 되는 프로세스로, 시스템의 나머지 부분에서 분리 되며 별도의 특별 한 사용 권한은 없습니다. 격리 된 프로세스 `IsolatedProcess` 에서 서비스를 실행 하기 위해 `ServiceAttribute` 의 속성은 다음 코드 조각에 `true` 표시 된 것 처럼로 설정 됩니다.
+- **격리 된 프로세스** &ndash; 격리 된 프로세스는 자체 샌드박스에서 실행 되는 프로세스로, 시스템의 나머지 부분에서 분리 되며 별도의 특별 한 사용 권한은 없습니다. 격리 된 프로세스 `IsolatedProcess` 에서 서비스를 실행 하기 위해 `ServiceAttribute` 의 속성은 다음 코드 조각에 `true` 표시 된 것 처럼로 설정 됩니다.
     
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -393,7 +393,7 @@ Android `signature` 에서는 `normal` 설치 된 시간에 및 사용 권한이
 
 Android 권한으로 서비스를 보호 하는 일반적인 방법에는 다음 두 가지가 있습니다.
 
-1.  **서명 수준 보안 구현** &ndash; 서명 수준 보안은 서비스를 보유 하 고 있는 apk에 서명 하는 데 사용 된 것과 동일한 키로 서명 된 응용 프로그램에 권한이 자동으로 부여 됨을 의미 합니다. 이 방법은 개발자가 자신의 응용 프로그램에서 액세스할 수 있는 서비스를 보호 하는 간단한 방법입니다. 서명 수준 권한은 `Permission` `ServiceAttribute` 의 속성을로 `signature`설정 하 여 선언 됩니다.
+1. **서명 수준 보안 구현** &ndash; 서명 수준 보안은 서비스를 보유 하 고 있는 apk에 서명 하는 데 사용 된 것과 동일한 키로 서명 된 응용 프로그램에 권한이 자동으로 부여 됨을 의미 합니다. 이 방법은 개발자가 자신의 응용 프로그램에서 액세스할 수 있는 서비스를 보호 하는 간단한 방법입니다. 서명 수준 권한은 `Permission` `ServiceAttribute` 의 속성을로 `signature`설정 하 여 선언 됩니다.
 
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -404,7 +404,7 @@ Android 권한으로 서비스를 보호 하는 일반적인 방법에는 다음
     }
     ```
 
-2.  **사용자 지정 권한 만들기** &ndash; 서비스 개발자가 서비스에 대 한 사용자 지정 권한을 만들 수 있습니다. 개발자가 다른 개발자의 응용 프로그램과 서비스를 공유 하려는 경우에 가장 적합 합니다. 사용자 지정 권한을 구현 하려면 약간의 노력이 필요 하며 아래에서 설명 합니다.
+2. **사용자 지정 권한 만들기** &ndash; 서비스 개발자가 서비스에 대 한 사용자 지정 권한을 만들 수 있습니다. 개발자가 다른 개발자의 응용 프로그램과 서비스를 공유 하려는 경우에 가장 적합 합니다. 사용자 지정 권한을 구현 하려면 약간의 노력이 필요 하며 아래에서 설명 합니다.
 
 사용자 지정 `normal` 권한 만들기에 대 한 간단한 예는 다음 섹션에서 설명 합니다. Android 사용 권한에 대 한 자세한 내용은 Google 설명서를 참조 하 여 [보안 & 모범 사례](https://developer.android.com/training/articles/security-tips.html)를 참조 하세요. Android 사용 권한에 대 한 자세한 내용은 android 사용 권한에 대 한 자세한 내용은 응용 프로그램 매니페스트에 대 한 Android 설명서의 [사용 권한 섹션](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms) 을 참조 하세요.
 

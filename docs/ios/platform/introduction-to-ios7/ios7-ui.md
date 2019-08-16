@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 5ebfa7348e13e5b168dd7f2decbef921bd7d69e3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e943b10623507278c073e73e5b755bcb5954bdaa
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652119"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528338"
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -130,9 +130,9 @@ cell.SeparatorInset = new UIEdgeInsets (0, 50, 0, 0);
 
 UIKit의 변경 내용 외에도 iOS 7은 다음을 비롯 하 여 UI에 대 한 다양 한 시각적 변화를 소개 합니다.
 
--  전체 화면 콘텐츠
--  막대 모양
--  색조 색
+- 전체 화면 콘텐츠
+- 막대 모양
+- 색조 색
 
 <a name="fullscreen" />
 

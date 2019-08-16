@@ -1,47 +1,47 @@
 ---
-title: ADO.NET을 사용 하 여 android
+title: Android에서 ADO.NET 사용
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 10b5a1696b0416bfda115627f7c7b8c2fbd20fcb
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 76a66b4dbde65a3fc44d3490e0147ff66b088466
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649580"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525973"
 ---
-# <a name="using-adonet-with-android"></a>ADO.NET을 사용 하 여 android
+# <a name="using-adonet-with-android"></a>Android에서 ADO.NET 사용
 
-Xamarin은 Android에서 사용할 수 있고 친숙 한 ADO.NET 같은 구문을 사용 하 여 노출 될 수 있습니다는 SQLite 데이터베이스에 대 한 기본 제공 지원 합니다. SQLite에서와 같은 처리 되는 SQL 문을 작성 해야 이러한 Api를 사용 하 여 `CREATE TABLE`, `INSERT` 및 `SELECT` 문입니다.
+Xamarin은 Android에서 사용할 수 있는 SQLite 데이터베이스를 기본적으로 지원 하며 익숙한 ADO.NET와 유사한 구문을 사용 하 여 노출할 수 있습니다. 이러한 api를 사용 하려면 `CREATE TABLE`, `INSERT` 및 `SELECT` 문과 같이 SQLite에 의해 처리 되는 SQL 문을 작성 해야 합니다.
 
 ## <a name="assembly-references"></a>어셈블리 참조
 
-SQLite를 추가 해야 하는 ADO.NET 통한 액세스를 사용 하려면 `System.Data` 및 `Mono.Data.Sqlite` 다음과 같이 Android 프로젝트에 대 한 참조:
+ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` 같이 `Mono.Data.Sqlite` Android 프로젝트에 대 한 참조를 추가 해야 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows) 
 
-![Visual Studio에서 android 참조](using-adonet-images/image7.png "Visual Studio에서 Android 참조") 
+![Visual Studio의 Android 참조](using-adonet-images/image7.png "Visual Studio의 Android 참조") 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos) 
 
-![Mac 용 Visual Studio의 android 참조](using-adonet-images/image5.png "Android Mac 용 Visual Studio에서 참조 합니다.") 
+![Mac용 Visual Studio의 Android 참조](using-adonet-images/image5.png "Mac용 Visual Studio의 Android 참조") 
 
 -----
 
 
-마우스 오른쪽 단추로 클릭 **참조 > 참조를 편집 하는 중...**  다음 클릭 하 여 필요한 어셈블리를 선택 합니다.
+참조 > 마우스 오른쪽 단추로 클릭 하 고 참조 **편집** ...을 클릭 하 여 필요한 어셈블리를 선택 합니다.
 
-## <a name="about-monodatasqlite"></a>Mono.Data.Sqlite에 대 한
+## <a name="about-monodatasqlite"></a>Mono 정보. Sqlite
 
-사용 하 여는 `Mono.Data.Sqlite.SqliteConnection` 빈 데이터베이스 파일을 만드는 클래스를 인스턴스화하는 차례로 `SqliteCommand` 에서는 데이터베이스에 대해 SQL 명령을 실행 하는 데 사용할 수 있는 개체입니다.
+여기서는 `Mono.Data.Sqlite.SqliteConnection` 클래스를 사용 하 여 빈 데이터베이스 파일을 만든 다음 데이터베이스에 `SqliteCommand` 대해 SQL 명령을 실행 하는 데 사용할 수 있는 개체를 인스턴스화합니다.
 
-**빈 데이터베이스 만들기** &ndash; 호출을 `CreateFile` 유효한 (즉, 쓰기 가능) 파일 경로 사용 하 여 메서드. 여부를이 메서드를 호출 하기 전에 파일이 이미, 그렇지 않으면 (새) 데이터베이스를 이전 버전의 맨 위에 만들어지고 이전 파일에 데이터가 손실 됩니다 확인 해야 합니다.
-`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);` `dbPath` 변수는이 문서의 앞부분에서 설명한 규칙에 따라 결정 되어야 합니다.
+**빈 데이터베이스 만들기** 올바른 ( `CreateFile` 즉, 쓰기 가능) 파일 경로를 사용 하 여 메서드를 호출 합니다. &ndash; 이 메서드를 호출 하기 전에 파일이 이미 있는지 여부를 확인 해야 합니다. 그렇지 않으면 새 (비어 있는) 데이터베이스가 이전 데이터베이스의 맨 위에 생성 되며 이전 파일의 데이터가 손실 됩니다.
+`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`변수 `dbPath` 는이 문서의 앞부분에서 설명한 규칙에 따라 결정 해야 합니다.
 
-**데이터베이스 연결 만들기** &ndash; SQLite 데이터베이스 파일을 만든 후 데이터에 액세스 하는 연결 개체를 만들 수 있습니다. 연결 형식으로 사용 하는 연결 문자열을 사용 하 여 생성 된 `Data Source=file_path`다음과 같이 합니다.
+**데이터베이스 연결 만들기** &ndash; SQLite 데이터베이스 파일이 생성 된 후에는 데이터에 액세스 하는 연결 개체를 만들 수 있습니다. 연결은 다음과 같이의 `Data Source=file_path`형식을 사용 하는 연결 문자열을 사용 하 여 생성 됩니다.
 
 ```csharp
 var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -50,9 +50,9 @@ connection.Open();
 connection.Close();
 ```
 
-앞에서 설명한 대로 연결 되어서는 안 다시 사용 되는 다른 스레드에서 합니다. 확실 하지 않은의 경우 필요에 따라 연결 만들고; 완료 되 면 닫습니다 하지만 너무 필요한 것 보다이 더 자주 수행 하는 주의 해야 합니다.
+앞에서 설명한 것 처럼 여러 스레드에서 연결이 다시 사용 되어서는 안 됩니다. 확실 하지 않은 경우 필요에 따라 연결을 만들고 완료 되 면 닫습니다. 그러나 필요한 것 보다 더 자주이 작업을 수행 하는 것에 유의 해야 합니다.
 
-**만들기 및 데이터베이스 명령을 실행** &ndash; 연결 되 면에 대해 임의의 SQL 명령을 실행할 수 있습니다. 아래 코드는 `CREATE TABLE` 실행 중인 문의 합니다.
+**데이터베이스 명령 만들기 및 실행** &ndash; 연결이 있으면이에 대해 임의의 SQL 명령을 실행할 수 있습니다. 아래 코드는 실행 되 `CREATE TABLE` 는 문을 보여 줍니다.
 
 ```csharp
 using (var command = connection.CreateCommand ()) {
@@ -61,17 +61,17 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-SQL 데이터베이스에 대해 직접 실행 하는 경우 이미 존재 하는 테이블을 만들려고 시도 같은 잘못 된 요청을 하지는 일반 예방 조치를 취해야 합니다. 한 추적 데이터베이스의 구조는 발생 하지는 `SqliteException` 와 같은 **SQLite 오류 테이블 [항목] 이미**합니다.
+데이터베이스에 대해 직접 SQL을 실행할 때는 이미 존재 하는 테이블을 만들려고 하는 것과 같이 잘못 된 요청을 수행 하지 않는 일반적인 예방 조치를 취해야 합니다. `SqliteException` **SQLite 오류 테이블 [항목]이 이미 존재**하지 않도록 데이터베이스 구조를 추적 합니다.
 
 ## <a name="basic-data-access"></a>기본 데이터 액세스
 
-합니다 *DataAccess_Basic* Android에서 실행 하는 경우이 문서에 대 한 샘플 코드가 다음과 같이 합니다.
+이 문서에 대 한 *DataAccess_Basic* 샘플 코드는 Android에서 실행 하는 경우 다음과 같습니다.
 
 ![Android ADO.NET 샘플](using-adonet-images/image8.png "Android ADO.NET 샘플")
 
-아래 코드는 간단한 SQLite 작업을 수행 하는 방법을 보여 줍니다 하 고 응용 프로그램의 주 창에 텍스트로 결과 보여 줍니다.
+아래 코드에서는 간단한 SQLite 작업을 수행 하 고 결과를 응용 프로그램의 주 창에 텍스트로 표시 하는 방법을 보여 줍니다.
 
-이러한 네임 스페이스를 포함 해야 합니다.
+다음 네임 스페이스를 포함 해야 합니다.
 
 ```csharp
 using System;
@@ -79,13 +79,13 @@ using System.IO;
 using Mono.Data.Sqlite;
 ```
 
-다음 코드 예제에서는 전체 데이터베이스 상호 작용을 보여 줍니다.
+다음 코드 샘플에서는 전체 데이터베이스 상호 작용을 보여 줍니다.
 
-1.  데이터베이스 파일 만들기
-2.  일부 데이터를 삽입합니다.
-3.  데이터 쿼리
+1. 데이터베이스 파일 만들기
+2. 일부 데이터 삽입
+3. 데이터 쿼리
 
-이러한 작업은 일반적으로 여러 위치에 나타나는 코드 전체에서 예를 들어 응용 프로그램을 처음 시작할 때 데이터베이스 파일 및 테이블 만들기 및 앱에서 개별 화면에서 데이터 읽기 및 쓰기를 수행할 수 있습니다. 아래 예제에서는이 예제에 대 한 단일 메서드로 그룹화 되어 있습니다.
+이러한 작업은 일반적으로 코드 전체의 여러 위치에 표시 됩니다. 예를 들어 응용 프로그램이 처음 시작 될 때 데이터베이스 파일 및 테이블을 만들고 앱의 개별 화면에서 데이터 읽기 및 쓰기를 수행할 수 있습니다. 아래 예제에서는이 예제에서 단일 메서드로 그룹화 되었습니다.
 
 ```csharp
 public static SqliteConnection connection;
@@ -143,18 +143,18 @@ public static string DoSomeDataAccess ()
 
 ## <a name="more-complex-queries"></a>더 복잡 한 쿼리
 
-SQLite에서는 임의의 SQL 명령 데이터에 대해 실행 되도록 하므로 어떤를 수행할 수 있습니다 `CREATE`, `INSERT`, `UPDATE`, `DELETE`, 또는 `SELECT` 문을 선택 합니다. SQLite 웹 사이트에서 SQLite에서 지 원하는 SQL 명령에 대 한 읽을 수 있습니다. 세 가지 방법 중 하나를 사용 하 여 SQL 문이 실행 되는 `SqliteCommand` 개체:
+SQLite는 임의의 SQL 명령을 데이터에 대해 실행할 수 있으므로 원하는 모든 `CREATE` `UPDATE`, `INSERT` `DELETE`,, 또는 `SELECT` 문을 수행할 수 있습니다. Sqlite 웹 사이트의 SQLite에서 지원 되는 SQL 명령에 대해 알아볼 수 있습니다. SQL 문은 `SqliteCommand` 개체의 세 가지 메서드 중 하나를 사용 하 여 실행 됩니다.
 
--   **ExecuteNonQuery** &ndash; 테이블 만들기 또는 데이터 삽입을 위해 일반적으로 사용 합니다. 일부 작업에 대 한 반환 값은 영향을 받는 행 수,이-1이 고, 그렇지 합니다.
+- **ExecuteNonQuery** &ndash; 일반적으로 테이블을 만들거나 데이터를 삽입 하는 데 사용 됩니다. 일부 작업의 반환 값은 영향을 받는 행의 수입니다. 그렇지 않으면-1입니다.
 
--   **ExecuteReader** &ndash; 행의 컬렉션으로 반환 되어야 하는 경우에 사용 된 `SqlDataReader`합니다.
+- **ExecuteReader** 행 컬렉션을 `SqlDataReader`로 반환 해야 할 때 사용 됩니다. &ndash;
 
--   **ExecuteScalar** &ndash; 단일 값 (예를 들어 집계)를 검색 합니다.
+- **ExecuteScalar** &ndash; 단일 값 (예: 집계)을 검색 합니다.
 
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
-`INSERT`를 `UPDATE`, 및 `DELETE` 문의 영향을 받는 행 수를 반환 합니다. 다른 모든 SQL 문은-1을 반환 합니다.
+`INSERT`, `UPDATE` 및`DELETE` 문은 영향을 받는 행의 수를 반환 합니다. 다른 모든 SQL 문은-1을 반환 합니다.
 
 ```csharp
 using (var c = connection.CreateCommand ()) {
@@ -165,8 +165,8 @@ using (var c = connection.CreateCommand ()) {
 
 ### <a name="executereader"></a>EXECUTEREADER
 
-에서는 다음 메서드를 `WHERE` 절을 `SELECT` 문입니다.
-코드는 완전 한 SQL 문이 선별 하기 때문에 문자열 주위에 따옴표 (')와 같은 예약된 문자 이스케이프에 주의 해야 합니다.
+다음 메서드는 `SELECT` 문의 절 `WHERE` 을 보여 줍니다.
+코드는 전체 SQL 문을 작성 하므로 문자열 주위에 따옴표 (')와 같은 예약 된 문자를 이스케이프 처리 해야 합니다.
 
 ```csharp
 public static string MoreComplexQuery ()
@@ -193,16 +193,16 @@ public static string MoreComplexQuery ()
 }
 ```
 
-`ExecuteReader` 메서드는 `SqliteDataReader` 개체를 반환합니다. 이외에 `Read` 예에 표시 된 기타 유용한 속성을 포함 하는 메서드:
+`ExecuteReader` 메서드는 `SqliteDataReader` 개체를 반환합니다. 예제에 표시 된 `Read` 방법 외에도 다른 유용한 속성은 다음과 같습니다.
 
--   **RowsAffected** &ndash; 쿼리에 의해 영향을 받는 행 수입니다.
+- **Rowsaffected을 받음** &ndash; 쿼리의 영향을 받는 행의 수입니다.
 
--   **HasRows** &ndash; 모든 행이 반환 여부.
+- **Hasrows** &ndash; 반환 된 행이 있는지 여부를 나타냅니다.
 
 
 ### <a name="executescalar"></a>EXECUTESCALAR
 
-이 사용 하 여 `SELECT` (집계) 같은 단일 값을 반환 하는 문입니다.
+단일 값 ( `SELECT` 예: 집계)을 반환 하는 문에 대해 사용 합니다.
 
 ```csharp
 using (var contents = connection.CreateCommand ()) {
@@ -211,13 +211,13 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-합니다 `ExecuteScalar` 메서드의 반환 형식이 `object` &ndash; 데이터베이스 쿼리에 따라 결과 캐스팅 해야 합니다. 정수 표시 될 수는 `COUNT` 쿼리 또는 단일 열에서 문자열 `SELECT` 쿼리 합니다. 이 다른 여러 `Execute` 판독기 개체 또는 영향을 받는 행의 개수를 반환 하는 메서드.
+`ExecuteScalar` 메서드의 반환 `object` 형식은데이터베이스쿼리에따라결과를&ndash; 캐스팅 해야 합니다. 결과는 `COUNT` 쿼리의 정수 이거나 단일 열 `SELECT` 쿼리의 문자열 일 수 있습니다. 이는 판독기 개체 또는 영향을 `Execute` 받는 행 수의 수를 반환 하는 다른 메서드와는 다릅니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [DataAccess Basic (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess 고급 (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android 데이터 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Android 데이터 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
+- [Xamarin 양식 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)

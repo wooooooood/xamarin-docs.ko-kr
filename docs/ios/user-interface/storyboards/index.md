@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 9b4f71599ecf85e51899c41c37aecc63e44e7188
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 86198c7a2fa0460070d012afd0b7b9d078d2a5f3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646420"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528571"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -66,11 +66,11 @@ Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아�
 
 전환 유형에는 여러 가지가 있으며, 각각은 새 뷰 컨트롤러를 사용자에 게 표시 하는 방법과 Storyboard의 다른 뷰 컨트롤러와 상호 작용 하는 방식을 제어 합니다. 이러한 사항은 아래에 설명 되어 있습니다. Segue 개체를 하위 클래스로 지정 하 여 사용자 지정 전환을 구현할 수도 있습니다.
 
--  **Show/push** – push segue는 뷰 컨트롤러를 탐색 스택에 추가 합니다. 이 클래스는 뷰가 스택에 추가 될 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 것으로 가정 합니다. 이는와 `pushViewController` 동일한 작업을 수행 하며, 일반적으로 화면에 있는 데이터 간의 관계가 있는 경우에 사용 됩니다. Push segue를 사용 하면 뷰 계층 구조를 통해 드릴 다운 탐색을 허용 하는 뒤로 단추와 제목 (스택의 각 뷰에 추가 됨)이 포함 된 탐색 모음이 있는 luxury 제공 됩니다.
--  **Modal** – 모달 segue 표시 되는 애니메이션 전환의 옵션을 사용 하 여 프로젝트의 두 뷰 컨트롤러 간에 관계를 만듭니다. 자식 뷰 컨트롤러는 표시 될 때 부모 뷰 컨트롤러를 완전히 숨깁니다. 후면 단추를 추가 하는 push segue와는 달리 모달 segue `DismissViewController` 을 사용 하는 경우 이전 뷰 컨트롤러에 반환 하기 위해 사용 해야 합니다.
--  **사용자 지정** -사용자 지정 segue을의 `UIStoryboardSegue`하위 클래스로 만들 수 있습니다.
--  **해제** – 해제 segue를 사용 하 여 push 또는 modal segue를 통해 다시 탐색할 수 있습니다. 예를 들어, 모달로 제공 된 뷰 컨트롤러를 해제할 수 있습니다. 이 외에도 한 번만 사용 하 고 일련의 푸시 및 모달 segue을 해제 하 고 단일 해제 작업으로 탐색 계층 구조에서 여러 단계를 되돌릴 수 있습니다. IOS에서 해제 segue를 사용 하는 방법을 이해 하려면 [해제 Segue 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) 조리법을 읽어 보세요.
--  **원본 없는** – A 원본 없는 segue는 초기 뷰 컨트롤러를 포함 하는 장면을 나타내며 사용자에 게 먼저 표시 되는 보기입니다. 이는 아래에 표시 된 segue 나타냅니다.  
+- **Show/push** – push segue는 뷰 컨트롤러를 탐색 스택에 추가 합니다. 이 클래스는 뷰가 스택에 추가 될 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 것으로 가정 합니다. 이는와 `pushViewController` 동일한 작업을 수행 하며, 일반적으로 화면에 있는 데이터 간의 관계가 있는 경우에 사용 됩니다. Push segue를 사용 하면 뷰 계층 구조를 통해 드릴 다운 탐색을 허용 하는 뒤로 단추와 제목 (스택의 각 뷰에 추가 됨)이 포함 된 탐색 모음이 있는 luxury 제공 됩니다.
+- **Modal** – 모달 segue 표시 되는 애니메이션 전환의 옵션을 사용 하 여 프로젝트의 두 뷰 컨트롤러 간에 관계를 만듭니다. 자식 뷰 컨트롤러는 표시 될 때 부모 뷰 컨트롤러를 완전히 숨깁니다. 후면 단추를 추가 하는 push segue와는 달리 모달 segue `DismissViewController` 을 사용 하는 경우 이전 뷰 컨트롤러에 반환 하기 위해 사용 해야 합니다.
+- **사용자 지정** -사용자 지정 segue을의 `UIStoryboardSegue`하위 클래스로 만들 수 있습니다.
+- **해제** – 해제 segue를 사용 하 여 push 또는 modal segue를 통해 다시 탐색할 수 있습니다. 예를 들어, 모달로 제공 된 뷰 컨트롤러를 해제할 수 있습니다. 이 외에도 한 번만 사용 하 고 일련의 푸시 및 모달 segue을 해제 하 고 단일 해제 작업으로 탐색 계층 구조에서 여러 단계를 되돌릴 수 있습니다. IOS에서 해제 segue를 사용 하는 방법을 이해 하려면 [해제 Segue 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) 조리법을 읽어 보세요.
+- **원본 없는** – A 원본 없는 segue는 초기 뷰 컨트롤러를 포함 하는 장면을 나타내며 사용자에 게 먼저 표시 되는 보기입니다. 이는 아래에 표시 된 segue 나타냅니다.  
 
     [![](images/sourcelesssegue.png "원본 없는 segue")](images/sourcelesssegue.png#lightbox)
 
@@ -142,12 +142,14 @@ if (callHistoryController != null) {
     이는 앱 대리자 내 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 스토리 보드를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 다음을 수행 합니다. 화면에 표시 되는 창입니다.
 
 3. 에서 windows 속성을 구현 하 `Window` 는 다음 코드를 사용 하 여 기본 메서드를 재정의 합니다. `AppDelegate`
-        
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 새 파일 > 추가 하 고 아래 그림과 같이 **새 파일 > iOS > 빈 스토리 보드에 추가**하 여 새 스토리 보드 파일을 만듭니다. 
@@ -162,11 +164,13 @@ if (callHistoryController != null) {
 
 3. 에서 windows 속성을 구현 하 `Window` 는 다음 코드를 사용 하 여 기본 메서드를 재정의 합니다. `AppDelegate`
 
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 -----
 
 ## <a name="creating-a-storyboard-with-the-ios-designer"></a>IOS Designer를 사용 하 여 스토리 보드 만들기

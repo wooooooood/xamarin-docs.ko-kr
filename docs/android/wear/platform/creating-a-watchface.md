@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: 52891a11dcc271497031658d0eff9f98a01d3555
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647873"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522243"
 ---
 # <a name="creating-a-watch-face"></a>시계 모드 만들기
 
@@ -35,9 +35,9 @@ _이 가이드에서는 Android 마모 1.0에 대 한 사용자 지정 시계 �
 
 Watch face 서비스를 구현 하려면 다음이 필요 합니다.
 
--   마모 된 장치 또는 에뮬레이터에서 Android 5.0 (API 레벨 21) 이상
+- 마모 된 장치 또는 에뮬레이터에서 Android 5.0 (API 레벨 21) 이상
 
--   Xamarin [Android 마모 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Wear) 를 xamarin.ios 프로젝트에 추가 해야 합니다.
+- Xamarin [Android 마모 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Wear) 를 xamarin.ios 프로젝트에 추가 해야 합니다.
 
 Android 5.0는 시청 얼굴 서비스를 구현 하는 데 필요한 최소 API 수준이 긴 하지만 Android 5.1 이상이 권장 됩니다. Android 5.1 (API 22) 이상을 실행 하는 android 장치는 장치를 저전력 *주변* 모드에 있는 동안 앱에서 화면에 표시 되는 내용을 제어할 수 있습니다. 장치가 저전력 *주변* 모드에서 벗어나면 *대화형* 모드입니다. 이러한 모드에 대 한 자세한 내용은 [앱 표시 유지](https://developer.android.com/training/wearables/apps/always-on.html)를 참조 하세요.
 
@@ -127,17 +127,17 @@ Android 마모는 클래스를 통해 조사식 `CanvasWatchFaceService` 얼굴�
 
 다음 섹션에서는 다음 단계를 수행 하 여 사용자 지정 watch face 서비스를 만듭니다.
 
-1.  `MyWatchFaceService` 에서`CanvasWatchFaceService`파생 되는 이라는 클래스를 정의 합니다.
+1. `MyWatchFaceService` 에서`CanvasWatchFaceService`파생 되는 이라는 클래스를 정의 합니다.
 
-2.  내 `MyWatchFaceService`에서 `MyWatchFaceEngine` 에서`CanvasWatchFaceService.Engine`파생 된 이라는 중첩 된 클래스를 만듭니다.
+2. 내 `MyWatchFaceService`에서 `MyWatchFaceEngine` 에서`CanvasWatchFaceService.Engine`파생 된 이라는 중첩 된 클래스를 만듭니다.
 
-3.  에서 `MyWatchFaceService` `CreateEngine` 인스턴스화하고 반환`MyWatchFaceEngine` 하는 메서드를 구현 합니다.
+3. 에서 `MyWatchFaceService` `CreateEngine` 인스턴스화하고 반환`MyWatchFaceEngine` 하는 메서드를 구현 합니다.
 
-4.  에서 `MyWatchFaceEngine`메서드를 `OnCreate` 구현 하 여 조사식 얼굴 스타일을 만들고 다른 초기화 작업을 수행 합니다.
+4. 에서 `MyWatchFaceEngine`메서드를 `OnCreate` 구현 하 여 조사식 얼굴 스타일을 만들고 다른 초기화 작업을 수행 합니다.
 
-5.  `OnDraw` 의`MyWatchFaceEngine`메서드를 구현 합니다. 이 메서드는 조사식 얼굴을 다시 그려야 할 때마다 호출 됩니다 (즉, *무효화*됨). `OnDraw`는 시간, 분 및 초 바늘과 같은 조사식 얼굴 요소를 그리고 다시 그리는 메서드입니다.
+5. `OnDraw` 의`MyWatchFaceEngine`메서드를 구현 합니다. 이 메서드는 조사식 얼굴을 다시 그려야 할 때마다 호출 됩니다 (즉, *무효화*됨). `OnDraw`는 시간, 분 및 초 바늘과 같은 조사식 얼굴 요소를 그리고 다시 그리는 메서드입니다.
 
-6.  `OnTimeTick` 의`MyWatchFaceEngine`메서드를 구현 합니다.
+6. `OnTimeTick` 의`MyWatchFaceEngine`메서드를 구현 합니다.
     `OnTimeTick`는 1 분에 한 번 이상 (주변 모드와 대화형 모드에서) 또는 날짜/시간이 변경 된 경우 호출 됩니다.
 
 에 대 한 `CanvasWatchFaceService`자세한 내용은 Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) API 설명서를 참조 하세요.
@@ -222,11 +222,11 @@ public override void OnCreate(ISurfaceHolder holder)
 
 를 `SetWatchFaceStyle` 호출 하면 다음이 수행 됩니다.
 
-1.  *미리 보기 모드* 를 `PeekModeShort`로 설정 합니다. 그러면 알림이 디스플레이에서 작은 "피킹" 카드로 표시 됩니다.
+1. *미리 보기 모드* 를 `PeekModeShort`로 설정 합니다. 그러면 알림이 디스플레이에서 작은 "피킹" 카드로 표시 됩니다.
 
-2.  배경 표시 유형을로 `Interruptive`설정 합니다. 그러면 피킹 (peeking) 카드의 배경이 비파괴적 이며 방해 알림을 나타내는 경우 간략하게 표시 됩니다.
+2. 배경 표시 유형을로 `Interruptive`설정 합니다. 그러면 피킹 (peeking) 카드의 배경이 비파괴적 이며 방해 알림을 나타내는 경우 간략하게 표시 됩니다.
 
-3.  사용자 지정 조사식이 대신 시간을 표시할 수 있도록 기본 시스템 UI 시간이 조사식에 그려지지 않도록 합니다.
+3. 사용자 지정 조사식이 대신 시간을 표시할 수 있도록 기본 시스템 UI 시간이 조사식에 그려지지 않도록 합니다.
 
 이러한 색 및 기타 조사식 얼굴 스타일 옵션에 대 한 자세한 내용은 Android [WatchFaceStyle](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) API 설명서를 참조 하세요.
 
@@ -237,7 +237,7 @@ public override void OnCreate(ISurfaceHolder holder)
 
 메서드 `OnDraw` 는 숫자 및 시계 표면 바늘 `CanvasWatchFaceService.Engine` 과 &ndash; 같은 실제로 조사식 얼굴 요소를 그리는 메서드인 경우에 가장 중요 한 메서드입니다.
 다음 예제에서는 조사식 면에 시간 문자열을 그립니다.
-다음 메서드를에 `MyWatchFaceEngine`추가 합니다.
+`MyWatchFaceEngine`에 다음 메서드를 추가합니다.
 
 ```csharp
 public override void OnDraw (Canvas canvas, Rect frame)
@@ -256,7 +256,7 @@ Android는를 `OnDraw`호출할 때 `Canvas` 인스턴스 및 얼굴을 그릴 �
 
 ### <a name="implement-the-engine-ontimetick-method"></a>엔진 OnTimeTick 메서드 구현
 
-Android는 주기적으로 `OnTimeTick` 메서드를 호출 하 여 시계 면에서 표시 되는 시간을 업데이트 합니다. 1 분에 한 번 이상 (주변 모드와 대화형 모드에서) 또는 날짜/시간 또는 표준 시간대가 변경 된 경우에 호출 됩니다. 다음 메서드를에 `MyWatchFaceEngine`추가 합니다.
+Android는 주기적으로 `OnTimeTick` 메서드를 호출 하 여 시계 면에서 표시 되는 시간을 업데이트 합니다. 1 분에 한 번 이상 (주변 모드와 대화형 모드에서) 또는 날짜/시간 또는 표준 시간대가 변경 된 경우에 호출 됩니다. `MyWatchFaceEngine`에 다음 메서드를 추가합니다.
 
 ```csharp
 public override void OnTimeTick()
@@ -296,13 +296,13 @@ public override void OnTimeTick()
 
 이 XML은 다음을 수행 합니다.
 
-1.  `android.permission.BIND_WALLPAPER` 사용 권한을 설정 합니다. 이 사용 권한은 장치에서 시스템 배경 화면을 변경할 수 있는 시계 표면 서비스 권한을 제공 합니다. 이 권한은 외부 `<service>` `<application>` 섹션이 아닌 섹션에서 설정 해야 합니다.
+1. `android.permission.BIND_WALLPAPER` 사용 권한을 설정 합니다. 이 사용 권한은 장치에서 시스템 배경 화면을 변경할 수 있는 시계 표면 서비스 권한을 제공 합니다. 이 권한은 외부 `<service>` `<application>` 섹션이 아닌 섹션에서 설정 해야 합니다.
 
-2.  리소스를 `watch_face` 정의 합니다. 이 리소스는 리소스를 `wallpaper` 선언 하는 짧은 XML 파일입니다 (이 파일은 다음 섹션에서 만들어짐).
+2. 리소스를 `watch_face` 정의 합니다. 이 리소스는 리소스를 `wallpaper` 선언 하는 짧은 XML 파일입니다 (이 파일은 다음 섹션에서 만들어짐).
 
-3.  조사식 선택 선택 화면에 `preview` 표시 되는 라는 그릴 수 있는 이미지를 선언 합니다.
+3. 조사식 선택 선택 화면에 `preview` 표시 되는 라는 그릴 수 있는 이미지를 선언 합니다.
 
-4.  `intent-filter` 에는에대한`MyWatchFaceService` 정보가 포함 되어 있습니다.
+4. `intent-filter` 에는에대한`MyWatchFaceService` 정보가 포함 되어 있습니다.
 
 기본 `WatchFace` 예제에 대 한 코드를 완료 합니다. 다음 단계는 필요한 리소스를 추가 하는 것입니다.
 
@@ -338,17 +338,17 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 앱을 빌드하여 마모 된 장치에 배포 합니다. 마모 된 앱 화면이 이전과 같이 표시 되어야 합니다. 새 조사식 얼굴을 사용 하도록 설정 하려면 다음을 수행 합니다.
 
-1.  조사식 화면의 배경이 표시 될 때까지 오른쪽으로 살짝 밉니다.
+1. 조사식 화면의 배경이 표시 될 때까지 오른쪽으로 살짝 밉니다.
 
-2.  2 초 동안 화면 배경의 모든 위치를 터치 하 고 유지 합니다.
+2. 2 초 동안 화면 배경의 모든 위치를 터치 하 고 유지 합니다.
 
-3.  다양 한 조사식 얼굴을 찾아보려면 왼쪽에서 오른쪽으로 살짝 밉니다.
+3. 다양 한 조사식 얼굴을 찾아보려면 왼쪽에서 오른쪽으로 살짝 밉니다.
 
-4.  **Xamarin 샘플** 조사식 얼굴 (오른쪽에 표시 됨)을 선택 합니다.
+4. **Xamarin 샘플** 조사식 얼굴 (오른쪽에 표시 됨)을 선택 합니다.
 
     [![Watchface 선택기](creating-a-watchface-images/11-watchface-picker.png "Xamarin 샘플 시청 얼굴을 찾으려면 살짝 밀기")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5.  **Xamarin 샘플** 조사식 얼굴을 탭 하 여 선택 합니다.
+5. **Xamarin 샘플** 조사식 얼굴을 탭 하 여 선택 합니다.
 
 이렇게 하면 지금까지 구현 된 사용자 지정 시청 얼굴 서비스를 사용 하도록 마모 된 장치의 조사식이 변경 됩니다.
 
@@ -364,15 +364,15 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 이 연습의 `MyWatchFaceService` 나머지 부분에서는 아날로그 스타일의 조사식을 표시 하도록 업그레이드 되 고 더 많은 기능을 지원 하도록 확장 됩니다. 업그레이드 된 watch 얼굴을 만들기 위해 다음과 같은 기능이 추가 됩니다.
 
-1.  아날로그 시간, 분 및 초 바늘의 시간을 나타냅니다.
+1. 아날로그 시간, 분 및 초 바늘의 시간을 나타냅니다.
 
-2.  표시 여부 변경에 반응 합니다.
+2. 표시 여부 변경에 반응 합니다.
 
-3.  앰비언트 모드와 대화형 모드 간의 변경 내용에 응답 합니다.
+3. 앰비언트 모드와 대화형 모드 간의 변경 내용에 응답 합니다.
 
-4.  기본 마모 장치의 속성을 읽습니다.
+4. 기본 마모 장치의 속성을 읽습니다.
 
-5.  표준 시간대 변경이 발생 하는 시간을 자동으로 업데이트 합니다.
+5. 표준 시간대 변경이 발생 하는 시간을 자동으로 업데이트 합니다.
 
 아래 코드 변경을 구현 하기 전에, 그릴 수 있는 [.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true)파일을 다운로드 하 고 압축을 풀고 압축을 푼 .png 파일을 **리소스/그릴** 수 있는 .png로 이동 합니다 (이전 **preview .png**덮어쓰기). 새 .png 파일을 `WatchFace` 프로젝트에 추가 합니다.
 
@@ -387,13 +387,13 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 업데이트 된 **OnCreate** 메서드는 이전 처럼 조사식 얼굴 스타일을 구성 하지만 몇 가지 추가 단계를 포함 합니다.
 
-1.  **리소스/drawable-hdpi/xamarin_background**에 있는 **xamarin_background** 리소스로 배경 이미지를 설정 합니다.
+1. **리소스/drawable-hdpi/xamarin_background**에 있는 **xamarin_background** 리소스로 배경 이미지를 설정 합니다.
 
-2.  시 `Paint` , 분 및 초를 그리는 개체를 초기화 합니다.
+2. 시 `Paint` , 분 및 초를 그리는 개체를 초기화 합니다.
 
-3.  조사식 표면의 `Paint` 가장자리 둘레의 시간 틱을 그리기 위한 개체를 초기화 합니다.
+3. 조사식 표면의 `Paint` 가장자리 둘레의 시간 틱을 그리기 위한 개체를 초기화 합니다.
 
-4.  두 번째 손을 매 초 `Invalidate` 마다 다시 그리도록 (다시 그리기) 메서드를 호출 하는 타이머를 만듭니다. 이 타이머는 1 분 마다 한 `OnTimeTick` 번 `Invalidate` 만 호출 하므로 필요 합니다.
+4. 두 번째 손을 매 초 `Invalidate` 마다 다시 그리도록 (다시 그리기) 메서드를 호출 하는 타이머를 만듭니다. 이 타이머는 1 분 마다 한 `OnTimeTick` 번 `Invalidate` 만 호출 하므로 필요 합니다.
 
 이 예제는 xamarin_background 이미지 **를** 하나만 포함 합니다. 그러나 사용자 지정 시청 얼굴에서 지원할 각 화면 밀도 마다 다른 배경 이미지를 만들 수 있습니다.
 
@@ -401,17 +401,17 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 업데이트 된 **OnDraw** 메서드는 다음 단계를 사용 하 여 아날로그 스타일의 조사식 모양을 그립니다.
 
-1.  현재 `time` 개체에서 유지 관리 되는 현재 시간을 가져옵니다.
+1. 현재 `time` 개체에서 유지 관리 되는 현재 시간을 가져옵니다.
 
-2.  그리기 화면 및 해당 중심의 범위를 결정 합니다.
+2. 그리기 화면 및 해당 중심의 범위를 결정 합니다.
 
-3.  배경을 그릴 때 장치에 맞게 크기를 조정 하 여 배경을 그립니다.
+3. 배경을 그릴 때 장치에 맞게 크기를 조정 하 여 배경을 그립니다.
 
-4.  시계의 표면 주위에 12 개의 *틱* 을 그립니다 (클록 표면의 시간에 해당).
+4. 시계의 표면 주위에 12 개의 *틱* 을 그립니다 (클록 표면의 시간에 해당).
 
-5.  각 조사식의 각도, 회전 및 길이를 계산 합니다.
+5. 각 조사식의 각도, 회전 및 길이를 계산 합니다.
 
-6.  각 손을 조사식 화면에 그립니다. 조사식이 앰비언트 모드인 경우 두 번째 손은 그려지지 않습니다.
+6. 각 손을 조사식 화면에 그립니다. 조사식이 앰비언트 모드인 경우 두 번째 손은 그려지지 않습니다.
 
 
 #### <a name="onpropertieschanged"></a>OnPropertiesChanged

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: b44bb52dc69aae1d3d058a1eae7c3be13ec5dc53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643347"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523991"
 ---
 # <a name="location-services-on-android"></a>Android의 위치 서비스
 
@@ -30,11 +30,11 @@ Android에서는 위치 데이터를 사용 하기 위해 어떤 API를 선택 �
 
 사용자의 위치를 정확 하 게 파악 하기 위해 여러 기술이 내부적으로 사용 됩니다. 사용 되는 하드웨어는 데이터 수집 작업을 위해 선택한 *위치 공급자* 유형에 따라 달라 집니다. Android는 세 가지 위치 공급자를 사용 합니다.
 
--   **GPS 공급자** &ndash; GPS은 가장 정확한 위치를 제공 하 고, 가장 강력한 기능을 사용 하 고, 최상의 작업을 합니다. 이 공급자는 휴대용 타워에서 수집 된 GPS 데이터를 반환 하는 GPS 및 지원 GPS ([Agps](https://en.wikipedia.org/wiki/Assisted_GPS))의 조합을 사용 합니다.
+- **GPS 공급자** &ndash; GPS은 가장 정확한 위치를 제공 하 고, 가장 강력한 기능을 사용 하 고, 최상의 작업을 합니다. 이 공급자는 휴대용 타워에서 수집 된 GPS 데이터를 반환 하는 GPS 및 지원 GPS ([Agps](https://en.wikipedia.org/wiki/Assisted_GPS))의 조합을 사용 합니다.
 
--   **네트워크 공급자** &ndash; 셀 타워에 의해 수집 된 agps 데이터를 포함 하 여 WiFi 및 셀룰러 데이터의 조합을 제공 합니다. GPS 공급자 보다 더 많은 전력을 사용 하지만, 다양 한 정확도의 위치 데이터를 반환 합니다.
+- **네트워크 공급자** &ndash; 셀 타워에 의해 수집 된 agps 데이터를 포함 하 여 WiFi 및 셀룰러 데이터의 조합을 제공 합니다. GPS 공급자 보다 더 많은 전력을 사용 하지만, 다양 한 정확도의 위치 데이터를 반환 합니다.
 
--   **수동 공급자** &ndash; 응용 프로그램에서 위치 데이터를 생성 하기 위해 다른 응용 프로그램 또는 서비스에서 요청 하는 공급자를 사용 하는 "긍정" 옵션입니다. 이는 일정 한 위치 업데이트가 작동 하지 않아도 되는 응용 프로그램에 적합 하지만 전원 저장 옵션은 안정적이 지 않습니다.
+- **수동 공급자** &ndash; 응용 프로그램에서 위치 데이터를 생성 하기 위해 다른 응용 프로그램 또는 서비스에서 요청 하는 공급자를 사용 하는 "긍정" 옵션입니다. 이는 일정 한 위치 업데이트가 작동 하지 않아도 되는 응용 프로그램에 적합 하지만 전원 저장 옵션은 안정적이 지 않습니다.
 
 위치 공급자는 항상 사용할 수 있는 것은 아닙니다. 예를 들어 응용 프로그램에 대해 GPS를 사용 하 고 있지만 설정에서 GPS를 끌 수도 있고, 장치에 GPS가 없을 수도 있습니다. 특정 공급자를 사용할 수 없는 경우 해당 공급자를 선택 하면이 `null`반환 될 수 있습니다.
 
@@ -43,10 +43,10 @@ Android에서는 위치 데이터를 사용 하기 위해 어떤 API를 선택 �
 위치 인식 응용 프로그램은 GPS, Wi-fi 및 셀룰러 데이터를 수신 하기 위해 장치의 하드웨어 센서에 액세스 해야 합니다. 응용 프로그램의 Android 매니페스트에서 적절 한 사용 권한을 통해 액세스를 제어 합니다.
 응용 프로그램의 요구 사항 &ndash; 및 선택한 API에 따라 사용할 수 있는 두 가지 권한이 있습니다.
 
--   `ACCESS_FINE_LOCATION`&ndash; 응용 프로그램에서 GPS에 액세스할 수 있습니다.
+- `ACCESS_FINE_LOCATION`&ndash; 응용 프로그램에서 GPS에 액세스할 수 있습니다.
     *Gps 공급자* 및 *수동 공급자* 옵션 (*수동 공급자는 다른 응용 프로그램 또는 서비스에서 수집 된 GPS 데이터에 액세스할 수 있는 권한이 필요*함)에 필요 합니다. *네트워크 공급자*에 대 한 선택적 권한입니다.
 
--   `ACCESS_COARSE_LOCATION`&ndash; 응용 프로그램에서 셀룰러 및 wi-fi 위치에 액세스할 수 있습니다. 가 설정 되지 않은 경우 `ACCESS_FINE_LOCATION` *네트워크 공급자* 에 필요 합니다.
+- `ACCESS_COARSE_LOCATION`&ndash; 응용 프로그램에서 셀룰러 및 wi-fi 위치에 액세스할 수 있습니다. 가 설정 되지 않은 경우 `ACCESS_FINE_LOCATION` *네트워크 공급자* 에 필요 합니다.
 
 API 버전 21 (Android 5.0 롤리팝) 이상을 대상으로 하는 앱의 경우 GPS 하드웨어가 `ACCESS_FINE_LOCATION` 없는 장치에서를 사용 하도록 설정 하 고 계속 실행할 수 있습니다. 앱에 GPS 하드웨어가 필요한 경우 Android 매니페스트에 `android.hardware.location.gps` `uses-feature` 요소를 명시적으로 추가 해야 합니다. 자세한 내용은 Android [사용-기능](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) 요소 참조를 참조 하세요.
 
@@ -175,7 +175,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 
 이 메서드는 두 개의 매개 변수를 사용 합니다.
 
--   **`Android.Gms.Location.LocationRequest`** 개체 는`LocationRequest` Xamarin Android 응용 프로그램이 퓨즈 위치 공급자가 작동 하는 방식에 대 한 매개 변수를 전달 하는 방법입니다. &ndash; 에 `LocationRequest` 는 자주 발생 하는 요청 또는 정확한 위치 업데이트의 중요도와 같은 정보가 포함 됩니다. 예를 들어 중요 한 위치 요청은 장치에서 GPS를 사용 하 고, 위치를 결정할 때 더 많은 기능을 사용 합니다. 이 코드 조각에서는 정확도가 높은 위치 `LocationRequest` 에 대해를 만드는 방법을 보여 줍니다. 위치 업데이트의 경우 약 5 분 간격으로 확인 합니다 (요청 사이에 2 분 미만). 퓨즈 위치 공급자는 장치 위치를 `LocationRequest` 결정할 때 사용할 위치 공급자에 대 한 지침으로를 사용 합니다.
+- **`Android.Gms.Location.LocationRequest`** 개체 는`LocationRequest` Xamarin Android 응용 프로그램이 퓨즈 위치 공급자가 작동 하는 방식에 대 한 매개 변수를 전달 하는 방법입니다. &ndash; 에 `LocationRequest` 는 자주 발생 하는 요청 또는 정확한 위치 업데이트의 중요도와 같은 정보가 포함 됩니다. 예를 들어 중요 한 위치 요청은 장치에서 GPS를 사용 하 고, 위치를 결정할 때 더 많은 기능을 사용 합니다. 이 코드 조각에서는 정확도가 높은 위치 `LocationRequest` 에 대해를 만드는 방법을 보여 줍니다. 위치 업데이트의 경우 약 5 분 간격으로 확인 합니다 (요청 사이에 2 분 미만). 퓨즈 위치 공급자는 장치 위치를 `LocationRequest` 결정할 때 사용할 위치 공급자에 대 한 지침으로를 사용 합니다.
 
     ```csharp
     LocationRequest locationRequest = new LocationRequest()
@@ -184,7 +184,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
                                       .SetFastestInterval(60 * 1000 * 2);
     ```
 
--   **`Android.Gms.Location.LocationCallback`** 위치 업데이트를 수신 하기 위해 xamarin.ios 응용 프로그램은 `LocationProvider` 추상 클래스를 하위 클래스 해야 합니다. &ndash; 이 클래스는 위치 정보를 사용 하 여 응용 프로그램을 업데이트 하기 위해 퓨즈 위치 공급자에 의해 호출 될 수 있는 두 개의 메서드를 노출 했습니다. 이에 대해서는 아래에서 자세히 설명 합니다.
+- **`Android.Gms.Location.LocationCallback`** 위치 업데이트를 수신 하기 위해 xamarin.ios 응용 프로그램은 `LocationProvider` 추상 클래스를 하위 클래스 해야 합니다. &ndash; 이 클래스는 위치 정보를 사용 하 여 응용 프로그램을 업데이트 하기 위해 퓨즈 위치 공급자에 의해 호출 될 수 있는 두 개의 메서드를 노출 했습니다. 이에 대해서는 아래에서 자세히 설명 합니다.
 
 Xamarin Android 응용 프로그램에 위치 업데이트를 알리려면 퓨즈 위치 공급자가를 `LocationCallBack.OnLocationResult(LocationResult result)`호출 합니다. `Android.Gms.Location.LocationResult` 매개 변수에 업데이트 위치 정보가 포함 됩니다.
 
@@ -233,10 +233,10 @@ Location Service는 시스템에서 관리 하는 특수 한 유형의 [서비�
 
 Android Location Service를 사용 하 여 사용자의 위치를 얻으려면 몇 가지 단계를 수행 해야 합니다.
 
-1.  `LocationManager` 서비스에 대 한 참조를 가져옵니다.
-2.  인터페이스를 `ILocationListener` 구현 하 고 위치가 변경 될 때 이벤트를 처리 합니다.
-3.  지정 된 공급자에 대 한 위치 업데이트 를요청하려면를사용합니다.`LocationManager` 이전 `ILocationListener` 단계의는에서 콜백을 `LocationManager`수신 하는 데 사용 됩니다.
-4.  응용 프로그램에서 업데이트를 수신 하는 데 더 이상 적절 하지 않은 경우 위치 업데이트를 중지 합니다.
+1. `LocationManager` 서비스에 대 한 참조를 가져옵니다.
+2. 인터페이스를 `ILocationListener` 구현 하 고 위치가 변경 될 때 이벤트를 처리 합니다.
+3. 지정 된 공급자에 대 한 위치 업데이트 를요청하려면를사용합니다.`LocationManager` 이전 `ILocationListener` 단계의는에서 콜백을 `LocationManager`수신 하는 데 사용 됩니다.
+4. 응용 프로그램에서 업데이트를 수신 하는 데 더 이상 적절 하지 않은 경우 위치 업데이트를 중지 합니다.
 
 ### <a name="location-manager"></a>위치 관리자
 

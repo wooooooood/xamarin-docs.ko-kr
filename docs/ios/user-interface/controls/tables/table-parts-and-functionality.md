@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d6ad088f9223dccb1966148fe8f53d76e85040a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff0773b3073221bead48439b7d99f1db993e3353
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645598"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528597"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Xamarin.ios의 테이블 파트 및 기능
 
 UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으며 다음과 같은 부분으로 구성 됩니다.
 
--  [섹션 헤더](#Section_Header)
--  [셀](#Cells) (또는 원하는 행을 원하는 경우)
--  [섹션 바닥글](#Section_Footer)
--  [Index](#Index)
--  [편집 모드](#Edit_Features) (' 안쪽으로 살짝 밀기 ' 및 끌어서 핸들을 행 순서 변경) 
+- [섹션 헤더](#Section_Header)
+- [셀](#Cells) (또는 원하는 행을 원하는 경우)
+- [섹션 바닥글](#Section_Footer)
+- [Index](#Index)
+- [편집 모드](#Edit_Features) (' 안쪽으로 살짝 밀기 ' 및 끌어서 핸들을 행 순서 변경) 
 
 이러한 스크린샷에는 섹션 행, 머리글, 바닥글, 편집 컨트롤 및 인덱스가 표시 되는 방식이 나와 있습니다.
 

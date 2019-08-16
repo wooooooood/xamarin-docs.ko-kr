@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 027b526815c56e5a0092b68b550129d9ffbf1493
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 610f9be346b761c4d20e4bbf97ecfcda74c0bee0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643028"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523057"
 ---
 # <a name="xamarinandroid-calendar"></a>Xamarin Android 일정
 
@@ -224,10 +224,10 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 일정 데이터를 읽는 방법을 알아보았습니다. 이제 일정에 이벤트를 추가 하는 방법을 살펴보겠습니다. 이 작업을 수행 하려면 앞에서 언급 한 `android.permission.WRITE_CALENDAR` 권한을 포함 해야 합니다. 일정에 이벤트를 추가 하려면 다음을 수행 합니다.
 
-1.  인스턴스를 `ContentValues` 만듭니다.
-1.  `CalendarContract.Events.InterfaceConsts` 클래스의 키를 사용 하 여 `ContentValues` 인스턴스를 채웁니다.
-1.  이벤트 시작 시간과 종료 시간에 대 한 표준 시간대를 설정 합니다.
-1.  을 `ContentResolver` 사용 하 여 이벤트 데이터를 일정에 삽입 합니다.
+1. 인스턴스를 `ContentValues` 만듭니다.
+1. `CalendarContract.Events.InterfaceConsts` 클래스의 키를 사용 하 여 `ContentValues` 인스턴스를 채웁니다.
+1. 이벤트 시작 시간과 종료 시간에 대 한 표준 시간대를 설정 합니다.
+1. 을 `ContentResolver` 사용 하 여 이벤트 데이터를 일정에 삽입 합니다.
 
 
 아래 코드에서는 이러한 단계를 보여 줍니다.

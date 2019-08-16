@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 79f97382b6d8bd7875e4921c859f92cd6b321687
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3817a6a111bb8a19248127d3be31a719fac68ba8
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646314"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522563"
 ---
 # <a name="xamarinandroid-listview"></a>Xamarin Android ListView
 
@@ -192,26 +192,26 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 
 나머지 토픽 (아래 링크 참조)에서는 `ListView` 클래스와 함께 사용할 수 있는 다양 한 유형의 어댑터 유형을 사용 하는 방법에 대해 포괄적으로 설명 합니다. 구조체는 다음과 같습니다.
 
--   **시각적 모양** 컨트롤의`ListView`부분과작동방법 &ndash;
+- **시각적 모양** 컨트롤의`ListView`부분과작동방법 &ndash;
 
--   **클래스** &ndash; 를`ListView`표시 하는 데 사용 되는 클래스에 대 한 개요입니다.
+- **클래스** &ndash; 를`ListView`표시 하는 데 사용 되는 클래스에 대 한 개요입니다.
 
--   **ListView에서 데이터 표시** 간단한 데이터 목록을 표시 하는 방법, 유용성 기능을 구현 `ListView's` 하는 방법, 다른 기본 제공 행 레이아웃을 사용 하는 방법 및 어댑터에서 행 뷰를 다시 사용 하 여 메모리를 절약 하는 방법입니다. &ndash;
+- **ListView에서 데이터 표시** 간단한 데이터 목록을 표시 하는 방법, 유용성 기능을 구현 `ListView's` 하는 방법, 다른 기본 제공 행 레이아웃을 사용 하는 방법 및 어댑터에서 행 뷰를 다시 사용 하 여 메모리를 절약 하는 방법입니다. &ndash;
 
--   **사용자 지정 모양** 사용자 지정 레이아웃, 글꼴 `ListView` 및 색을 사용 하 여의 스타일 변경 &ndash;
+- **사용자 지정 모양** 사용자 지정 레이아웃, 글꼴 `ListView` 및 색을 사용 하 여의 스타일 변경 &ndash;
 
--   **SQLite 사용** &ndash; 를`CursorAdapter`사용 하 여 SQLite 데이터베이스의 데이터를 표시 하는 방법
+- **SQLite 사용** &ndash; 를`CursorAdapter`사용 하 여 SQLite 데이터베이스의 데이터를 표시 하는 방법
 
--   **활동 수명 주기** 수명 주기에서 데이터 `ListView` 를 채워야 하는 위치 및 리소스를 해제할 시기를 포함 하 여 활동을 구현할 때의 디자인 고려 사항입니다. &ndash;
+- **활동 수명 주기** 수명 주기에서 데이터 `ListView` 를 채워야 하는 위치 및 리소스를 해제할 시기를 포함 하 여 활동을 구현할 때의 디자인 고려 사항입니다. &ndash;
 
 토론 (6 개 부분으로 분리 됨)은 `ListView` 클래스 자체의 개요부터 시작 하 여이를 사용 하는 방법에 대 한 보다 복잡 한 예제를 소개 합니다.
 
--   [ListView 파트 및 기능](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
--   [데이터를 사용 하 여 ListView 채우기](~/android/user-interface/layouts/list-view/populating.md)
--   [ListView 모양 사용자 지정](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [CursorAdapters 사용](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [ContentProvider 사용](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView 및 작업 수명 주기](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+- [ListView 파트 및 기능](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+- [데이터를 사용 하 여 ListView 채우기](~/android/user-interface/layouts/list-view/populating.md)
+- [ListView 모양 사용자 지정](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+- [CursorAdapters 사용](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+- [ContentProvider 사용](~/android/user-interface/layouts/list-view/content-provider.md)
+- [ListView 및 작업 수명 주기](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
 ## <a name="summary"></a>요약

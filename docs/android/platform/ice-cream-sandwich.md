@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 548d513d8b949b56711bacad6924c692c0454bf4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f8d9841deff485a67919aea9fede75044541ba5f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643508"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524204"
 ---
 # <a name="ice-cream-sandwich-features"></a>아이스크림 샌드위치 기능
 
@@ -22,10 +22,10 @@ _이 문서에서는 Android 4 API (Ice)를 사용 하는 응용 프로그램 �
 
 Android OS 버전 4.0 (API 수준 14)은 Android 운영 체제의 주요 수정 사항을 나타내며 다음과 같은 몇 가지 중요 한 변경 및 업그레이드를 포함 합니다.
 
--   **업데이트 된 사용자 인터페이스** -여러 가지 새로운 UI 기능을 통해 개발자는 응용 프로그램 사용자 인터페이스를 만들 때 더 강력한 기능과 유연성을 제공 합니다. 이러한 새로운 기능 `GridLayout` 에는, `PopupMenu` , `Switch` 위젯 및 `TextureView` 가 포함 됩니다. 
--   **향상 된 하드웨어 가속** – 이제 모든 Android 컨트롤에 대해 GPU에서 2d 렌더링이 수행 됩니다. 또한 하드웨어 가속은 Android 4.0 용으로 개발 된 모든 응용 프로그램에서 기본적으로 설정 되어 있습니다. 
--   **새 데이터 api** – 이전에 공식적으로 액세스 하지 않은 데이터 (예: 일정 데이터 및 장치 소유자의 사용자 프로필)에 대 한 새로운 액세스 권한이 있습니다. 
--   **앱 데이터 공유** – 이제와 같은 `ShareActionProvider` 기술을 통해 응용 프로그램과 장치 간에 데이터를 공유 하는 것이 훨씬 더 쉬워졌습니다 .이를 통해 작업 모음에서 공유 작업을 쉽게 만들 수 있고 가까운 현장에서 *Android 보* 를 사용할 수 있습니다.  *NFC (통신)* -서로 가까이 있는 장치 간에 데이터를 공유 하는 스냅으로 만듭니다. 
+- **업데이트 된 사용자 인터페이스** -여러 가지 새로운 UI 기능을 통해 개발자는 응용 프로그램 사용자 인터페이스를 만들 때 더 강력한 기능과 유연성을 제공 합니다. 이러한 새로운 기능 `GridLayout` 에는, `PopupMenu` , `Switch` 위젯 및 `TextureView` 가 포함 됩니다. 
+- **향상 된 하드웨어 가속** – 이제 모든 Android 컨트롤에 대해 GPU에서 2d 렌더링이 수행 됩니다. 또한 하드웨어 가속은 Android 4.0 용으로 개발 된 모든 응용 프로그램에서 기본적으로 설정 되어 있습니다. 
+- **새 데이터 api** – 이전에 공식적으로 액세스 하지 않은 데이터 (예: 일정 데이터 및 장치 소유자의 사용자 프로필)에 대 한 새로운 액세스 권한이 있습니다. 
+- **앱 데이터 공유** – 이제와 같은 `ShareActionProvider` 기술을 통해 응용 프로그램과 장치 간에 데이터를 공유 하는 것이 훨씬 더 쉬워졌습니다 .이를 통해 작업 모음에서 공유 작업을 쉽게 만들 수 있고 가까운 현장에서 *Android 보* 를 사용할 수 있습니다.  *NFC (통신)* -서로 가까이 있는 장치 간에 데이터를 공유 하는 스냅으로 만듭니다. 
 
 
 이 문서에서는 Android 4.0 API에 대 한 이러한 기능 및 기타 변경 내용을 살펴보고, Xamarin. Android에서 각 기능을 사용 하는 방법을 설명 합니다.
@@ -34,10 +34,10 @@ Android OS 버전 4.0 (API 수준 14)은 Android 운영 체제의 주요 수정 
 
 Android 4에서 제공 되는 다양 한 새로운 사용자 인터페이스 기술은 다음과 같습니다.
 
--   **[GridLayout](~/android/user-interface/layouts/grid-layout.md)** – 컨트롤의 2d 모눈 레이아웃을 지원 합니다. 
--   **[스위치 위젯](~/android/user-interface/controls/switch.md)** – 설정 또는 해제 간을 전환할 수 있습니다. 
--   **[TextureView](~/android/user-interface/controls/texture-view.md)** – 보기 내에서 비디오 및 OpenGL 콘텐츠를 사용 하도록 설정 합니다. 
--   **[탐색 모음](~/android/user-interface/controls/navigation-bar.md)** – 뒤로, 홈 및 다중 태스킹에 대 한 가상 단추를 포함 합니다. 
+- **[GridLayout](~/android/user-interface/layouts/grid-layout.md)** – 컨트롤의 2d 모눈 레이아웃을 지원 합니다. 
+- **[스위치 위젯](~/android/user-interface/controls/switch.md)** – 설정 또는 해제 간을 전환할 수 있습니다. 
+- **[TextureView](~/android/user-interface/controls/texture-view.md)** – 보기 내에서 비디오 및 OpenGL 콘텐츠를 사용 하도록 설정 합니다. 
+- **[탐색 모음](~/android/user-interface/controls/navigation-bar.md)** – 뒤로, 홈 및 다중 태스킹에 대 한 가상 단추를 포함 합니다. 
 
 
 또한 보다 세련 된 모양의 탭과 같이 더 쉽게 작업할 수 `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`있는 등의 다른 UI 요소가 향상 되었습니다.
@@ -46,10 +46,10 @@ Android 4에서 제공 되는 다양 한 새로운 사용자 인터페이스 기
 
 Android 4에는 여러 응용 프로그램 간에 데이터를 공유할 수 있는 몇 가지 새로운 기술이 포함 되어 있습니다. 또한 일정 정보 및 장치 소유자의 사용자 프로필과 같이 이전에는 사용할 수 없었던 다양 한 유형의 데이터에 대 한 액세스를 제공 합니다. 이 섹션에서는 다음을 포함 하 여 이러한 영역을 해결 하는 Android 4에서 제공 하는 다양 한 기능을 살펴봅니다.
 
--  **[Android 보](~/android/platform/android-beam.md)** – NFC를 통해 데이터를 공유할 수 있습니다.
--   **[Shareactionprovider](~/android/user-interface/controls/action-bar.md)** – 개발자가 작업 모음에서 공유 작업을 지정할 수 있도록 하는 공급자를 만듭니다. 
--   **[사용자 프로필](~/android/user-interface/user-profile.md)** – 장치 소유자의 프로필 데이터에 대 한 액세스를 제공 합니다. 
--   **[CALENDAR API](~/android/user-interface/controls/calendar.md)** -달력 공급자의 일정 데이터에 대 한 액세스를 제공 합니다. 
+- **[Android 보](~/android/platform/android-beam.md)** – NFC를 통해 데이터를 공유할 수 있습니다.
+- **[Shareactionprovider](~/android/user-interface/controls/action-bar.md)** – 개발자가 작업 모음에서 공유 작업을 지정할 수 있도록 하는 공급자를 만듭니다. 
+- **[사용자 프로필](~/android/user-interface/user-profile.md)** – 장치 소유자의 프로필 데이터에 대 한 액세스를 제공 합니다. 
+- **[CALENDAR API](~/android/user-interface/controls/calendar.md)** -달력 공급자의 일정 데이터에 대 한 액세스를 제공 합니다. 
 
 ## <a name="x86-emulators"></a>x86 에뮬레이터
 

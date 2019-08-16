@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c017ab96bdd78a41b31a3305021c5bc1f8e472d0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3bb2b47623c03d335ae1edc4bf87881622823ea1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644919"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522931"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Xamarin Android 탐색 모음
 
@@ -22,9 +22,9 @@ Android 4에는 **홈**, **뒤로**및 **메뉴**를 위한 하드웨어 단추�
 
 Android 3에 도입 된 시스템 표시줄의 표시 유형 뿐만 아니라 탐색 모음과 해당 컨트롤의 표시 여부를 제어 하는 몇 가지 새로운 플래그를 사용할 수 있습니다. 플래그는 `Android.View.View` 클래스에 정의 되며 아래에 나열 되어 있습니다.
 
--   `SystemUiFlagVisible`&ndash; 탐색 모음이 표시 되도록 합니다. 
--   `SystemUiFlagLowProfile`&ndash; 탐색 모음에서 컨트롤을 희미하게 표시 합니다. 
--   `SystemUiFlagHideNavigation`&ndash; 탐색 모음을 숨깁니다. 
+- `SystemUiFlagVisible`&ndash; 탐색 모음이 표시 되도록 합니다. 
+- `SystemUiFlagLowProfile`&ndash; 탐색 모음에서 컨트롤을 희미하게 표시 합니다. 
+- `SystemUiFlagHideNavigation`&ndash; 탐색 모음을 숨깁니다. 
 
 
 이러한 플래그는 속성을 `SystemUiVisibility` 설정 하 여 뷰 계층의 모든 뷰에 적용할 수 있습니다. 여러 뷰에이 속성이 설정 된 경우 시스템은 OR 작업과 결합 하 고 플래그가 설정 된 창이 포커스를 유지 하는 동안이를 적용 합니다. 뷰를 제거 하면 설정 된 플래그도 제거 됩니다.

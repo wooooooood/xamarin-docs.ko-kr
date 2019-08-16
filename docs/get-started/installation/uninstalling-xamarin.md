@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 6a0fe95d6d471bfb464234f0540b8398acb22e6a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97b870d96a2ffc599e010e049554b51b550a7311
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61262983"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521585"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -29,7 +29,7 @@ ms.locfileid: "61262983"
 - [Xamarin.Mac](#uninstallmac)
 - [Workbooks](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
-- [설치 프로그램](#uninstallinstaller)
+- [설치 관리자](#uninstallinstaller)
 
 > [!TIP]
 > macOS 컴퓨터에서 Xamarin을 제거할 때 사용할 [제거 스크립트](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)를 제공했습니다. 스크립트 사용에 대한 자세한 내용은 이 가이드의 [스크립트 제거 사용](#uninstallscript) 섹션을 참조하세요.
@@ -196,14 +196,18 @@ rm -rf "~/Library/Preferences/Visual Studio/"
 
 1. 스크립트를 마우스 오른쪽 단추로 클릭하고 [다른 이름으로 저장...]을 선택하여 Mac에 파일을 저장합니다.
 
-2.  **터미널**을 열고 스크립트를 다운로드한 위치로 작업 디렉터리를 변경합니다.
+2. **터미널**을 열고 스크립트를 다운로드한 위치로 작업 디렉터리를 변경합니다.
 
-        $ cd /location/of/file
+    ```
+    cd /location/of/file
+    ```
 
 3. 스크립트를 실행 가능으로 설정하고 **sudo**로 실행합니다.
 
-        $ chmod +x ./xamarin_uninstall.sh
-        $ sudo ./xamarin_uninstall.sh
+    ```
+    chmod +x ./xamarin_uninstall.sh
+    sudo ./xamarin_uninstall.sh
+    ```
 
 4. 마지막으로 제거 스크립트를 삭제합니다.
 
@@ -224,7 +228,7 @@ Xamarin은 다음에서 지원됩니다.
 
 ### <a name="visual-studio-2019-and-visual-studio-2017"></a>Visual Studio 2019 및 Visual Studio 2017
 
-Visual Studio 2019 및 설치 관리자 앱을 사용 하 여 Visual Studio 2017에서 Xamarin은 제거 합니다.
+설치 관리자 앱을 사용 하 여 Visual Studio 2019 및 Visual Studio 2017에서 Xamarin이 제거 됩니다.
 
 1. **시작 메뉴**를 사용하여 **Visual Studio 설치 관리자**를 엽니다.
 

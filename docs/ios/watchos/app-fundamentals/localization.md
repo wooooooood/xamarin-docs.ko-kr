@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 70555a0e2df3bcdd9c3abe47cf8231145891a826
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865956"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528412"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Watchos에서 Xamarin 지역화 작업
 
@@ -56,7 +56,7 @@ Watch 앱 즉, 염두에서 다른 텍스트 길이 사용 하 여 스토리 보
 
 1. 만들 **Base.lproj** 디렉터리와 이동 합니다 **Interface.storyboard** 넣습니다.
 
-2. 만들  **<language>.lproj** 지원 하려는 각 언어에 대 한 디렉터리입니다.
+2. 지원 하려는 각 언어에 대 한  **\<언어 > .lproj** 디렉터리를 만듭니다.
 
 3. 합니다 **.lproj** 디렉터리에 있어야는 **Interface.strings** 텍스트 파일 (파일 이름 storboard의 이름과 일치 해야 합니다). 필요에 따라 이러한 디렉터리에 지역화가 필요한 모든 이미지를 배치할 수 있습니다.
 
@@ -125,7 +125,7 @@ displayText.SetText (localizedDisplay);
 
 두 가지 방법으로 코드에 의해 채워지는 이미지를 설정할 수 있습니다.
 
-1. 변경할 수는 `Image` 컨트롤 값 설정 하 여 이미지의 문자열 이름에는 이미 존재 Watch 앱의 예:
+1. 해당 값을 Watch `Image` 앱에 이미 있는 이미지의 문자열 이름으로 설정 하 여 컨트롤을 변경할 수 있습니다. 예를 들어
 
     ```csharp
     displayImage.SetImage("gradient"); // image in Watch App (as shown above)
@@ -139,7 +139,7 @@ displayText.SetText (localizedDisplay);
     }
     ```
 
-    지정 해야 하는 참고 합니다 **@2x** 이미지의 파일 이름으로 참조 하는 경우.
+    이미지의 파일 이름을 참조 하는 경우에 **@2x** 는를 지정할 필요가 없습니다.
 
 두 번째 방법은; 보기에서 렌더링 하기 위한 원격 서버에서 이미지를 다운로드 하는 경우에 적용 됩니다. 그러나이 경우 해야 다운로드 이미지를 사용자의 기본 설정에 따라 올바르게 지역화 된는 합니다.
 

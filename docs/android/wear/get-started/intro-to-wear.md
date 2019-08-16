@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a57273005df45c2f8035563efe9562c27cdfa732
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6a9bb5fae84b6883943410d0c2585ce60a1208a4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648415"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526447"
 ---
 # <a name="introduction-to-android-wear"></a>Android Wear 소개
 
@@ -90,15 +90,15 @@ Android wearable는 두 가지 통신 Api를 제공 하 여 apps와 도우미 �
 
 Android 마모에 익숙해지는 가장 좋은 방법은 첫 번째 앱을 빌드하고 테스트 하는 것입니다. 다음 목록에서는 빠른 속도를 제공 하는 데 도움이 되는 권장 읽기 순서를 제공 합니다.
 
-1.  설치 [& 설치](~/android/wear/get-started/installation.md) 에서는 xamarin.ios 앱을 빌드하기 위한 개발 환경을 설치 하 고 구성 하는 방법에 대 한 자세한 지침을 제공 합니다. 
+1. 설치 [& 설치](~/android/wear/get-started/installation.md) 에서는 xamarin.ios 앱을 빌드하기 위한 개발 환경을 설치 하 고 구성 하는 방법에 대 한 자세한 지침을 제공 합니다. 
 
-2.  필수 패키지를 설치 하 고 에뮬레이터 또는 장치를 구성한 후에는 단추 클릭을 처리 하 고 마모 된 클릭 카운터를 표시 하는 작은 Android 마모 프로젝트를 만드는 방법을 설명 하는 단계별 지침에 대 한 [Hello, 마모](~/android/wear/get-started/hello-wear.md) 를 참조 하세요. 장치. 
+2. 필수 패키지를 설치 하 고 에뮬레이터 또는 장치를 구성한 후에는 단추 클릭을 처리 하 고 마모 된 클릭 카운터를 표시 하는 작은 Android 마모 프로젝트를 만드는 방법을 설명 하는 단계별 지침에 대 한 [Hello, 마모](~/android/wear/get-started/hello-wear.md) 를 참조 하세요. 장치. 
 
-3.  [배포 & 테스트](~/android/wear/deploy-test/index.md) 에서는 Bluetooth를 통해 장치에 앱을 배포 하는 방법에 대 한 지침을 비롯 하 여 에뮬레이터 및 장치에 대 한 구성 및 배포에 대 한 자세한 정보를 제공 합니다.
+3. [배포 & 테스트](~/android/wear/deploy-test/index.md) 에서는 Bluetooth를 통해 장치에 앱을 배포 하는 방법에 대 한 지침을 비롯 하 여 에뮬레이터 및 장치에 대 한 구성 및 배포에 대 한 자세한 정보를 제공 합니다.
 
-4.  [화면 크기 작업](~/android/wear/screen-sizes.md) 에서는 마모 된 장치에서 사용 가능한 다양 한 화면 크기에 맞게 사용자 인터페이스를 미리 보고 최적화 하는 방법을 설명 합니다. 
+4. [화면 크기 작업](~/android/wear/screen-sizes.md) 에서는 마모 된 장치에서 사용 가능한 다양 한 화면 크기에 맞게 사용자 인터페이스를 미리 보고 최적화 하는 방법을 설명 합니다. 
 
-5.  [패키징 작업](~/android/wear/deploy-test/packaging.md) 은 Google Play에서 배포용 앱을 수동으로 패키징하는 단계에 대해 설명 합니다.
+5. [패키징 작업](~/android/wear/deploy-test/packaging.md) 은 Google Play에서 배포용 앱을 수동으로 패키징하는 단계에 대해 설명 합니다.
 
 첫 번째 마모 된 앱을 만든 후에는 Android 마모를 위한 사용자 지정 시계 얼굴을 빌드 해 볼 수 있습니다. 
 [Watch 얼굴을 만드는](~/android/wear/platform/creating-a-watchface.md) 방법에 대 한 단계별 지침과 예제 코드를 제공 하 고, 추가 기능을 제공 하는 아날로그 스타일의 조사식에 더 많은 코드를 추가 하 여 제거 된 digital Watch face 서비스를 개발 합니다. 
@@ -169,8 +169,8 @@ Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있�
 
 손목 제스처를 사용 하면 사용자가 터치 스크린 &ndash; 을 사용 하지 않고 앱과 상호 작용할 수 있으므로 사용자는 단일 손으로 앱에 응답할 수 있습니다. 지원 되는 두 가지 손목 제스처는 다음과 같습니다. 
 
--   긋기 손목
--   긋기 손목
+- 긋기 손목
+- 긋기 손목
 
 자세한 내용은 Android [손목 제스처](https://developer.android.com/wear/preview/features/gestures.html) 항목을 참조 하세요. 
 

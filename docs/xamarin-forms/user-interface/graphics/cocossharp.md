@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: f5a672f6b34edf02eeac0f2820989d0656342167
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a6077029a82577cccbf060f14cdd7586c2793a94
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648830"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529260"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.Forms에서 CocosSharp 사용
 
@@ -62,7 +62,7 @@ CocosSharp를 사용 하기 전에 개발자는 Xamarin.Forms 프로젝트에 �
 CocosSharp Nuget 패키지는 모든 CocosSharp 개체를 만드는 데 필요한 개체를 포함 합니다.
 CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` Xamarin.Forms에서 CocosSharp 호스팅하는 데 사용 하는 클래스입니다.
 추가 된 **CocosSharp.Forms** NuGet 및 **CocosSharp** 도 자동으로 추가 될 예정입니다.
-이렇게 하려면 마우스 오른쪽 단추로 클릭 합니다 <span class="UIItem">패키지</span> 선택한.NET Standard 라이브러리 프로젝트 폴더 <span class="UIItem">패키지 추가... </span>. 검색 용어를 입력 <span class="UIItem">CocosSharp.Forms</span>를 선택 <span class="UIItem">Xamarin.Forms 용 CocosSharp</span>, 클릭 <span class="UIItem">패키지 추가</span>합니다.
+이렇게 하려면 마우스 오른쪽 단추로 클릭 합니다 **패키지** 선택한.NET Standard 라이브러리 프로젝트 폴더 **패키지 추가...** . 검색 용어를 입력 **CocosSharp.Forms**를 선택 **Xamarin.Forms 용 CocosSharp**, 클릭 **패키지 추가**합니다.
 
 ![](cocossharp-images/image1.png "추가 패키지 대화 상자")
 

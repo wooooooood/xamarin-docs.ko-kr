@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 9387b44419af87785d45a25ab254d3361a5615a3
-ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
+ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485919"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523655"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Xamarin. Android Designer 사용
 
@@ -25,9 +25,9 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 이 문서에서는 Android Designer를 사용 하 여 사용자 인터페이스를 시각적으로 만드는 방법을 보여 줍니다.
 
 > [!TIP]
-> Visual Studio의 최신 릴리스에서는 Android Designer 내에서 .xml 파일을 여는 것을 지원 합니다.
+> 최신 버전의 Visual Studio에서는 Android Designer 내에서 .xml을 여는 것을 지원합니다.
 >
-> . Axml 및 .xml 파일은 모두 Android Designer에서 지원 됩니다.
+> Android Designer에서는 .axml 파일과 .xml 파일이 모두 지원됩니다.
 
 ## <a name="walkthrough"></a>연습
 
@@ -105,11 +105,11 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 
 다음 단계는 왼쪽 `ImageView` 에를 표시 하도록 UI를 수정 하 고 오른쪽 `ImageView`에 두 개의 `TextView` 위젯을 누적 하는 것입니다.
 
-1.  `ImageView`를 선택합니다.
+1. `ImageView`를 선택합니다.
 
-2.  **속성 창**검색 상자에 *너비* 를 입력 하 고 **레이아웃 너비**를 찾습니다.
+2. **속성 창**검색 상자에 *너비* 를 입력 하 고 **레이아웃 너비**를 찾습니다.
 
-3.  **레이아웃 너비** 설정을 `wrap_content`다음과 같이 변경 합니다.
+3. **레이아웃 너비** 설정을 `wrap_content`다음과 같이 변경 합니다.
 
 ![콘텐츠 래핑 설정](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
@@ -153,11 +153,11 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 
 는 `ImageView` 이미지 대신 색을 표시 하는 데 사용 되기 때문에 다음 단계는 템플릿에 의해 추가 된 기본 이미지 원본을 제거 하는 것입니다.
 
-1.  `ImageView` **디자이너 화면**에서을 선택 합니다.
+1. `ImageView` **디자이너 화면**에서을 선택 합니다.
 
-2.  **속성**의 검색 상자에 *src* 를 입력 합니다.
+2. **속성**의 검색 상자에 *src* 를 입력 합니다.
 
-3.  **Src** 속성 설정 오른쪽의 작은 사각형을 클릭 하 고 **다시 설정**을 선택 합니다.
+3. **Src** 속성 설정 오른쪽의 작은 사각형을 클릭 하 고 **다시 설정**을 선택 합니다.
 
 [![ImageView src 설정 지우기](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
@@ -357,11 +357,11 @@ Mac용 Visual Studio에서 **Solution** Pad의 **리소스/레이아웃** 을 �
 
 다음 단계는 왼쪽 `ImageView` 에를 표시 하도록 UI를 수정 하 고 오른쪽 `ImageView`에 두 개의 `TextView` 위젯을 누적 하는 것입니다.
 
-1.  선택 된 상태에서 속성 탭을 클릭 합니다. `ImageView`
+1. 선택 된 상태에서 속성 탭을 클릭 합니다. `ImageView`
 
-2.  **속성** 탭 바로 아래에서 **레이아웃**을 클릭 합니다.
+2. **속성** 탭 바로 아래에서 **레이아웃**을 클릭 합니다.
 
-3.  **ViewGroup** 까지 아래로 스크롤하고 설정을 `Width` `wrap_content`다음과 같이 변경 합니다.
+3. **ViewGroup** 까지 아래로 스크롤하고 설정을 `Width` `wrap_content`다음과 같이 변경 합니다.
 
 [![콘텐츠 래핑 설정](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
 
@@ -397,11 +397,11 @@ Mac용 Visual Studio에서 **Solution** Pad의 **리소스/레이아웃** 을 �
 
 는 `ImageView` 이미지 대신 색을 표시 하는 데 사용 되기 때문에 다음 단계는 템플릿에 의해 추가 된 기본 이미지 원본을 제거 하는 것입니다.
 
-1.  `ImageView`를 선택합니다.
+1. `ImageView`를 선택합니다.
 
-2.  **속성**에서 **위젯** 탭을 클릭 합니다.
+2. **속성**에서 **위젯** 탭을 클릭 합니다.
 
-3.  비어 있게 `Src` 설정의 선택을 취소 합니다.
+3. 비어 있게 `Src` 설정의 선택을 취소 합니다.
 
 [![ImageView src 설정 지우기](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 

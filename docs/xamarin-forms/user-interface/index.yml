@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
+  ms.date: 08/07/2019
 abstract:
   description: Xamarin.Forms를 사용하여 사용자 인터페이스를 만드는 방법을 알아봅니다.
 sections:
@@ -115,6 +115,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: map.md
             title: 맵
+          - href: menuitem.md
+            html: MenuItem 클래스를 사용하여 ListView 셀의 상황에 맞는 메뉴에 항목을 추가 하는 방법에 대해 알아보세요.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: menuitem.md
+            title: MenuItem
           - href: picker/index.md
             html: Picker 컨트롤을 사용하여 데이터 목록에서 텍스트 항목을 선택하는 방법을 알아봅니다.
             image:
@@ -169,12 +175,24 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: text/index.md
             title: 텍스트
+          - href: theming.md
+            html: Xamarin.Forms 애플리케이션 테마를 작성하고 런타임 시 테마를 변경하는 방법에 대해 알아보세요.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: theming.md
+            title: 테마
           - href: timepicker.md
             html: TimePicker를 사용하여 시간을 선택할 수 있도록 하는 방법을 알아봅니다.
             image:
               src: ~/media/icons/i_user-interface.svg
               href: timepicker.md
             title: TimePicker
+          - href: toolbaritem.md
+            html: ToolbarItem을 사용하여 탐색 표시줄에 단추를 추가하는 방법에 대해 알아보세요.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: toolbaritem.md
+            title: ToolbarItem
           - href: visual/index.md
             html: Xamarin.Forms 재질 시각적 개체를 사용하여 iOS 및 Android에서 동일해 보이거나 거의 동일해 보이는 애플리케이션을 만드는 방법을 알아봅니다.
             image:

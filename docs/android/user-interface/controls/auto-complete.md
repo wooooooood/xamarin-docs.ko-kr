@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 810c6ddead66d191870ce97a50653f29737492b0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510660"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523085"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Xamarin Android의 자동 완성
 
@@ -197,13 +197,10 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 ```
 
 
-### <a name="references"></a>참조
+### <a name="references"></a>참조 항목
 
--   [AutoCompleteTextView 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) 에 대 한 Xamarin Android 샘플 프로젝트 입니다.`AutoCompleteTextView` &ndash;
--   [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
--   [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+- [AutoCompleteTextView 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; 용 Xamarin Android 샘플 프로젝트`AutoCompleteTextView`
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
-[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/) *에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다. 이 자습서는*[*Android 자동 완성 자습서*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-를 기반으로
-*합니다.*
+_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다. 이 자습서는 [Android 자동 완성 자습서 *](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)를 기반으로 합니다._

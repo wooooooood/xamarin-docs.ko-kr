@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 3837e28fa657764312cdbe379ba66caf9ccf18a4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: df13c1080be5fd466c4875ed8a3bdc2012a70df0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644208"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526163"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 클라우드 메시징으로 원격 알림
 
@@ -26,11 +26,11 @@ _이 연습에서는 Firebase 클라우드 메시징을 사용 하 여 Xamarin A
 
 다음 항목 영역을 탐색 합니다.
 
-1.  백그라운드 알림
+1. 백그라운드 알림
 
-2.  토픽 메시지
+2. 토픽 메시지
 
-3.  포그라운드 알림
+3. 포그라운드 알림
 
 이 연습을 수행 하는 동안 **Fcmclient** 에 기능을 증분 방식으로 추가 하 고 장치 또는 에뮬레이터에서 실행 하 여 FCM와 상호 작용 하는 방식을 이해 합니다. FCM 서버를 사용 하 여 라이브 앱 트랜잭션을 미러링 모니터 하는 데 로깅을 사용 하 고, Firebase Console Notification GUI에 입력 하는 FCM 메시지에서 알림이 생성 되는 방법을 관찰 합니다.
 
@@ -55,9 +55,9 @@ Firebase 클라우드 메시징에서 보낼 수 있는 [다양 한 유형의 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  **Fcmclient** 프로젝트의 속성을 엽니다.
+1. **Fcmclient** 프로젝트의 속성을 엽니다.
 
-2.  **Android 매니페스트** 페이지에서 패키지 이름을 설정 합니다.
+2. **Android 매니페스트** 페이지에서 패키지 이름을 설정 합니다.
 
 다음 예에서는 패키지 이름이로 `com.xamarin.fcmexample`설정 됩니다.
 
@@ -67,9 +67,9 @@ Firebase 클라우드 메시징에서 보낼 수 있는 [다양 한 유형의 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1.  **Fcmclient** 프로젝트의 속성을 엽니다.
+1. **Fcmclient** 프로젝트의 속성을 엽니다.
 
-2.  **Android 응용 프로그램** 페이지에서 패키지 이름을 설정 합니다.
+2. **Android 응용 프로그램** 페이지에서 패키지 이름을 설정 합니다.
 
 다음 예에서는 패키지 이름이로 `com.xamarin.fcmexample`설정 됩니다.
 
@@ -88,21 +88,21 @@ Firebase 클라우드 메시징은 Google Play 서비스에 따라 달라 지므
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Visual Studio에서 **참조 > NuGet 패키지 관리**...를 마우스 오른쪽 단추로 클릭 합니다.
+1. Visual Studio에서 **참조 > NuGet 패키지 관리**...를 마우스 오른쪽 단추로 클릭 합니다.
 
-2.  **찾아보기** 탭을 클릭 하 고 **xamarin.googleplayservices.base**를 검색 합니다.
+2. **찾아보기** 탭을 클릭 하 고 **xamarin.googleplayservices.base**를 검색 합니다.
 
-3.  이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
+3. 이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
 
     [![Google Play 서비스 기반 설치](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1.  Mac용 Visual Studio에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가**...를 클릭 합니다.
+1. Mac용 Visual Studio에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가**...를 클릭 합니다.
 
-2.  **Xamarin.googleplayservices.base**를 검색 합니다.
+2. **Xamarin.googleplayservices.base**를 검색 합니다.
 
-3.  이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
+3. 이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
 
     [![Google Play 서비스 기반 설치](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png#lightbox)
 
@@ -125,21 +125,21 @@ FCM에서 메시지를 수신 하려면 [Xamarin Firebase Messaging](https://www
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  Visual Studio에서 **참조 > NuGet 패키지 관리**...를 마우스 오른쪽 단추로 클릭 합니다.
+1. Visual Studio에서 **참조 > NuGet 패키지 관리**...를 마우스 오른쪽 단추로 클릭 합니다.
 
 2. **Firebase**를 검색 합니다.
 
-3.  이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
+3. 이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
 
     [![Xamarin Firebase Messaging 설치](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1.  Mac용 Visual Studio에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가**...를 클릭 합니다.
+1. Mac용 Visual Studio에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가**...를 클릭 합니다.
 
-2.  **Firebase**를 검색 합니다.
+2. **Firebase**를 검색 합니다.
 
-3.  이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
+3. 이 패키지를 **Fcmclient** 프로젝트에 설치 합니다.
 
     [![Xamarin Firebase Messaging 설치](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
 
@@ -163,13 +163,13 @@ using Android.Util;
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1.  **Google-service. json** 을 프로젝트 폴더에 복사 합니다.
+1. **Google-service. json** 을 프로젝트 폴더에 복사 합니다.
 
-2.  앱 프로젝트에 **google-service. json** 을 추가 합니다 ( **솔루션 탐색기**의 **모든 파일 표시** 를 클릭 하 고 **google-service. json**을 마우스 오른쪽 단추로 클릭 한 다음 **프로젝트에 포함**을 선택).
+2. 앱 프로젝트에 **google-service. json** 을 추가 합니다 ( **솔루션 탐색기**의 **모든 파일 표시** 를 클릭 하 고 **google-service. json**을 마우스 오른쪽 단추로 클릭 한 다음 **프로젝트에 포함**을 선택).
 
-3.  **솔루션 탐색기** 창에서 **google-service json** 을 선택 합니다.
+3. **솔루션 탐색기** 창에서 **google-service json** 을 선택 합니다.
 
-4.  **속성** 창에서 **빌드 작업** 을 **GoogleServicesJson**로 설정 합니다.
+4. **속성** 창에서 **빌드 작업** 을 **GoogleServicesJson**로 설정 합니다.
 
     [![빌드 작업을 GoogleServicesJson로 설정](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
 
@@ -178,13 +178,13 @@ using Android.Util;
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1.  **Google-service. json** 을 프로젝트 폴더에 복사 합니다.
+1. **Google-service. json** 을 프로젝트 폴더에 복사 합니다.
 
-2.  응용 프로그램 프로젝트에 **google-service json** 을 추가 합니다.
+2. 응용 프로그램 프로젝트에 **google-service json** 을 추가 합니다.
 
-3.  **Google-service. json**을 마우스 오른쪽 단추로 클릭 합니다.
+3. **Google-service. json**을 마우스 오른쪽 단추로 클릭 합니다.
 
-4.  **빌드 작업** 을 **GoogleServicesJson**로 설정 합니다.
+4. **빌드 작업** 을 **GoogleServicesJson**로 설정 합니다.
 
     [![빌드 작업을 GoogleServicesJson로 설정](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png#lightbox)
 
@@ -338,11 +338,11 @@ protected override void OnCreate (Bundle bundle)
 
 이 XML은 다음을 수행 합니다.
 
--   각 응용 프로그램 인스턴스에 대 한 [고유 식별자](https://developers.google.com/instance-id/) 를 제공 하는 구현을선언합니다.`FirebaseInstanceIdReceiver` 또한이 수신자 인증 하 고 작업에 권한을 부여 합니다.
+- 각 응용 프로그램 인스턴스에 대 한 [고유 식별자](https://developers.google.com/instance-id/) 를 제공 하는 구현을선언합니다.`FirebaseInstanceIdReceiver` 또한이 수신자 인증 하 고 작업에 권한을 부여 합니다.
 
--   내부 선언 `FirebaseInstanceIdInternalReceiver` 서비스를 안전 하 게 시작 하는 데 사용 되는 구현 합니다.
+- 내부 선언 `FirebaseInstanceIdInternalReceiver` 서비스를 안전 하 게 시작 하는 데 사용 되는 구현 합니다.
 
--   [앱 ID](./firebase-cloud-messaging.md#fcm-in-action-app-id) 는 [프로젝트에 추가](#add-googleplayservices-json)된 **google 서비스의 json** 파일에 저장 됩니다. Xamarin Android Firebase 바인딩은 토큰 `${applicationId}` 을 앱 id로 대체 합니다. 클라이언트 앱이 앱 id를 제공 하는 데 추가 코드는 필요 하지 않습니다.
+- [앱 ID](./firebase-cloud-messaging.md#fcm-in-action-app-id) 는 [프로젝트에 추가](#add-googleplayservices-json)된 **google 서비스의 json** 파일에 저장 됩니다. Xamarin Android Firebase 바인딩은 토큰 `${applicationId}` 을 앱 id로 대체 합니다. 클라이언트 앱이 앱 id를 제공 하는 데 추가 코드는 필요 하지 않습니다.
 
 `FirebaseInstanceIdReceiver` `FirebaseInstanceId` 는및`FirebaseInstanceIdService`이벤트를받아 파생 된 클래스에 전달 하는입니다.`WakefulBroadcastReceiver` `FirebaseMessaging`
 
@@ -351,9 +351,9 @@ protected override void OnCreate (Bundle bundle)
 FCM를 사용 하 여 응용 프로그램을 등록 하는 작업은 `FirebaseInstanceIdService` 사용자가 제공 하는 사용자 지정 서비스에 의해 처리 됩니다.
 `FirebaseInstanceIdService`다음 단계를 수행 합니다.
 
-1.  는 [인스턴스 ID API](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID) 를 사용 하 여 클라이언트 앱이 FCM 및 앱 서버에 액세스할 수 있는 권한을 부여 하는 보안 토큰을 생성 합니다. 반환 시 앱은 FCM에서 [등록 토큰](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#fcm-in-action-registration-token) 을 다시 가져옵니다.
+1. 는 [인스턴스 ID API](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID) 를 사용 하 여 클라이언트 앱이 FCM 및 앱 서버에 액세스할 수 있는 권한을 부여 하는 보안 토큰을 생성 합니다. 반환 시 앱은 FCM에서 [등록 토큰](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#fcm-in-action-registration-token) 을 다시 가져옵니다.
 
-2.  앱 서버에 필요한 경우 등록 토큰을 앱 서버에 전달 합니다.
+2. 앱 서버에 필요한 경우 등록 토큰을 앱 서버에 전달 합니다.
 
 **MyFirebaseIIDService.cs** 라는 새 파일을 추가 하 고 해당 템플릿 코드를 다음으로 바꿉니다.
 
@@ -393,13 +393,13 @@ Log.Debug(TAG, "Refreshed token: " + refreshedToken);
 
 `OnTokenRefresh`는 자주 호출 되지 않습니다. 다음과 같은 상황에서 토큰을 업데이트 하는 데 사용 됩니다.
 
--   앱을 설치 하거나 제거 하는 경우
+- 앱을 설치 하거나 제거 하는 경우
 
--   사용자가 앱 데이터를 삭제 하는 경우
+- 사용자가 앱 데이터를 삭제 하는 경우
 
--   앱에서 인스턴스 ID를 지우는 경우
+- 앱에서 인스턴스 ID를 지우는 경우
 
--   토큰 보안이 손상 된 경우
+- 토큰 보안이 손상 된 경우
 
 Google의 [인스턴스 id](https://developers.google.com/instance-id/guides/android-implementation) 설명서에 따라 FCM instance id 서비스는 앱이 토큰을 주기적으로 새로 고치도록 요청 합니다 (일반적으로 6 개월 마다).
 
@@ -573,19 +573,19 @@ subscribeButton.Click += delegate {
 
 토픽 메시지를 보내려면 다음 단계를 사용 합니다.
 
-1.  Firebase 콘솔에서 **새 메시지**를 클릭 합니다.
+1. Firebase 콘솔에서 **새 메시지**를 클릭 합니다.
 
-2.  **메시지 작성** 페이지에서 메시지 텍스트를 입력 하 고 **항목**을 선택 합니다.
+2. **메시지 작성** 페이지에서 메시지 텍스트를 입력 하 고 **항목**을 선택 합니다.
 
-3.  **항목** 풀 다운 메뉴에서 기본 제공 항목인 **news**:를 선택 합니다.
+3. **항목** 풀 다운 메뉴에서 기본 제공 항목인 **news**:를 선택 합니다.
 
     [![뉴스 항목 선택](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png#lightbox)
 
-4.  Android 장치 (또는 에뮬레이터)에서 Android **개요** 단추를 탭 하 고 홈 화면을 터치 하 여 앱을 배경으로 합니다.
+4. Android 장치 (또는 에뮬레이터)에서 Android **개요** 단추를 탭 하 고 홈 화면을 터치 하 여 앱을 배경으로 합니다.
 
-5.  장치가 준비 되 면 Firebase 콘솔에서 **메시지 보내기** 를 클릭 합니다.
+5. 장치가 준비 되 면 Firebase 콘솔에서 **메시지 보내기** 를 클릭 합니다.
 
-6.  로그 출력에서 **/항목/뉴스** 를 보려면 IDE 출력 창을 확인 합니다.
+6. 로그 출력에서 **/항목/뉴스** 를 보려면 IDE 출력 창을 확인 합니다.
 
     [![/Topic/news의 메시지가 표시 됩니다.](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png#lightbox)
 
@@ -653,19 +653,19 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 
 앱을 제거 하 고 다시 빌드하고 다시 실행 한 후 다음 단계에 따라 다른 메시지를 보냅니다.
 
-1.  Firebase 콘솔에서 **새 메시지**를 클릭 합니다.
+1. Firebase 콘솔에서 **새 메시지**를 클릭 합니다.
 
-2.  **메시지 작성** 페이지에서 메시지 텍스트를 입력 하 고 **단일 장치**를 선택 합니다.
+2. **메시지 작성** 페이지에서 메시지 텍스트를 입력 하 고 **단일 장치**를 선택 합니다.
 
-3.  IDE 출력 창에서 토큰 문자열을 복사 하 고 이전과 같이 Firebase 콘솔의 **FCM 등록 토큰** 필드에 붙여넣습니다.
+3. IDE 출력 창에서 토큰 문자열을 복사 하 고 이전과 같이 Firebase 콘솔의 **FCM 등록 토큰** 필드에 붙여넣습니다.
 
-4.  응용 프로그램이 포그라운드에서 실행 중인지 확인 하 고 Firebase 콘솔에서 **메시지 보내기** 를 클릭 합니다.
+4. 응용 프로그램이 포그라운드에서 실행 중인지 확인 하 고 Firebase 콘솔에서 **메시지 보내기** 를 클릭 합니다.
 
     [![콘솔에서 다른 메시지 보내기](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png#lightbox)
 
-5.  **메시지 검토** 대화 상자가 표시 되 면 **보내기**를 클릭 합니다.
+5. **메시지 검토** 대화 상자가 표시 되 면 **보내기**를 클릭 합니다.
 
-6.  들어오는 메시지는 IDE 출력 창에 기록 됩니다.
+6. 들어오는 메시지는 IDE 출력 창에 기록 됩니다.
 
     [![출력 창에 인쇄 되는 메시지 본문](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
 
@@ -679,7 +679,7 @@ using FCMClient;
 using System.Collections.Generic;
 ```
 
-다음 메서드를에 `MyFirebaseMessagingService`추가 합니다.
+`MyFirebaseMessagingService`에 다음 메서드를 추가합니다.
 
 <a name="sendnotification-method"></a>
 
@@ -741,13 +741,13 @@ public override void OnMessageReceived(RemoteMessage message)
 
 앱을 제거 하 고 다시 빌드하고 다시 실행 한 후 다음 단계를 사용 하 여 마지막 메시지를 보냅니다.
 
-1.  Firebase 콘솔에서 **새 메시지**를 클릭 합니다.
+1. Firebase 콘솔에서 **새 메시지**를 클릭 합니다.
 
-2.  **메시지 작성** 페이지에서 메시지 텍스트를 입력 하 고 **단일 장치**를 선택 합니다.
+2. **메시지 작성** 페이지에서 메시지 텍스트를 입력 하 고 **단일 장치**를 선택 합니다.
 
-3.  IDE 출력 창에서 토큰 문자열을 복사 하 고 이전과 같이 Firebase 콘솔의 **FCM 등록 토큰** 필드에 붙여넣습니다.
+3. IDE 출력 창에서 토큰 문자열을 복사 하 고 이전과 같이 Firebase 콘솔의 **FCM 등록 토큰** 필드에 붙여넣습니다.
 
-4.  응용 프로그램이 포그라운드에서 실행 중인지 확인 하 고 Firebase 콘솔에서 **메시지 보내기** 를 클릭 합니다.
+4. 응용 프로그램이 포그라운드에서 실행 중인지 확인 하 고 Firebase 콘솔에서 **메시지 보내기** 를 클릭 합니다.
 
     [![전경 메시지 보내기](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png#lightbox)
 
@@ -772,7 +772,7 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예를 들어:
+FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예:
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();

@@ -1,329 +1,329 @@
 ---
-title: Xamarin.Android 디자이너 재질 디자인 기능
-description: 이 항목에서는 쉽게 재료 디자인 규격 레이아웃을 만드는 개발자를 위한 디자이너 기능을 설명 합니다. 이 섹션에서는 소개 하 고 자료 표, 자료 색상표, 인쇄 확장 및 테마 편집기를 사용 하는 방법에 설명 합니다.
+title: Xamarin. Android Designer 재질 디자인 기능
+description: 이 항목에서는 개발자가 재질 디자인 호환 레이아웃을 보다 쉽게 만들 수 있도록 하는 디자이너 기능에 대해 설명 합니다. 이 섹션에서는 재질 표, 재질 색상표, 인쇄 단위 배율 및 테마 편집기를 사용 하는 방법을 소개 하 고 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 59c61cc637a435f8107256ddcd6bfacfb0466867
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 77b0bc28bc4156092cb2b12d0c8b234d3f021239
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61211221"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523443"
 ---
-# <a name="xamarinandroid-designer-material-design-features"></a>Xamarin.Android 디자이너 재질 디자인 기능
+# <a name="xamarinandroid-designer-material-design-features"></a>Xamarin. Android Designer 재질 디자인 기능
 
-_이 항목에서는 쉽게 재료 디자인 규격 레이아웃을 만드는 개발자를 위한 디자이너 기능을 설명 합니다. 이 섹션에서는 소개 하 고 자료 표, 자료 색상표, 인쇄 확장 및 테마 편집기를 사용 하는 방법에 설명 합니다._
+_이 항목에서는 개발자가 재질 디자인 호환 레이아웃을 보다 쉽게 만들 수 있도록 하는 디자이너 기능에 대해 설명 합니다. 이 섹션에서는 재질 표, 재질 색상표, 인쇄 단위 배율 및 테마 편집기를 사용 하는 방법을 소개 하 고 설명 합니다._
 
 > [!Video https://youtube.com/embed/E3_ZjIOzVzY]
 
-**Evolve 2016: 재질 디자인을 사용 하 여 멋진 앱을 만들 수 있습니다 모든 사람**
+**Evolve 2016: 모든 사용자는 재질 디자인을 사용 하 여 멋진 앱을 만들 수 있습니다.**
 
 ## <a name="overview"></a>개요
 
-Xamarin.Android 디자이너에는 쉽게 재료 디자인 규격이 아닌 레이아웃을 만들 수 있는 기능이 포함 됩니다. 재질 디자인을 잘 모르는 경우 참조를 [재질 디자인 소개](https://material.io/design/introduction)합니다.
+Android Designer에는 재질 디자인 호환 레이아웃을 보다 쉽게 만들 수 있도록 하는 기능이 포함 되어 있습니다. 재질 디자인에 익숙하지 않은 경우 [재질 디자인 소개](https://material.io/design/introduction)를 참조 하세요.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-이 가이드에서는 다음과 같은 디자이너 기능을 확인을 해야 합니다.
+이 가이드에서는 다음과 같은 디자이너 기능을 살펴봅니다.
 
--   *재질 그리드* &ndash; 표, 간격 및 재료 디자인 지침에 따라 레이아웃 위젯을 배치 하는 데 keylines 보여 주는 디자인 화면에 오버레이 합니다.
+- *재질 표* &ndash; 재질 디자인 지침에 따라 레이아웃 위젯을 배치 하는 데 도움이 되는 표, 간격 및 keylines를 표시 하는 Design Surface에 대 한 오버레이입니다.
 
--   *테마 편집기* &ndash; 수 있는 작은 색 리소스 편집기 테마의 하위 집합에 대 한 색 정보를 설정 합니다. 미리 보기 같은 재질 색을 수정 하는 예를 들어 `colorPrimary`, `colorPrimaryDark`, 및 `colorAccent`합니다.
+- *테마 편집기* &ndash; 테마의 하위 집합에 대 한 색 정보를 설정 하는 데 사용할 수 있는 작은 색 리소스 편집기입니다. 예를 들어, `colorPrimary` `colorPrimaryDark`, `colorAccent`등의 재질 색을 미리 보고 수정할 수 있습니다.
 
-에서는 이러한 각 기능 확인 하 고 사용 하는 방법의 예제를 제공 합니다.
+이러한 각 기능을 살펴보고 사용 방법에 대 한 예제를 제공 합니다.
 
-## <a name="material-design-grid"></a>재질 디자인 눈금
+## <a name="material-design-grid"></a>재질 디자인 그리드
 
-재질 디자인 눈금 메뉴는 디자이너의 맨 위에 있는 도구 모음에서 제공 됩니다.
+재질 디자인 그리드 메뉴는 디자이너 맨 위에 있는 도구 모음에서 사용할 수 있습니다.
 
-[![재질 디자인 눈금](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
+[![재질 디자인 그리드](material-design-features-images/vs/01-material-design-grid-w158-sml.png)](material-design-features-images/vs/01-material-design-grid-w158.png#lightbox)
 
-재질 디자인 눈금 아이콘을 클릭 하면 다음 요소가 포함 된 디자인 화면에 오버레이 표시 하는 디자이너:
+재질 디자인 그리드 아이콘을 클릭 하면 디자이너는 다음 요소를 포함 하는 Design Surface에 오버레이를 표시 합니다.
 
--   Keylines (주황색 선)
+- Keylines (주황색 선)
 
--   간격 (녹색 영역)
+- 간격 (녹색 영역)
 
--   표 (파란색 선)
+- 표 (파란색 선)
 
-이러한 요소는 이전 스크린샷에서 볼 수 있습니다. 이러한 각 오버레이 항목은 구성할 수 있습니다. 재질 디자인 눈금 메뉴 옆의 줄임표를 클릭 하면 대화 팝 오버는 표를 사용/사용 안 함, keylines, 배치를 구성 하 고 간격을 설정할 수 있는 열립니다. 모든 값으로 표현 되는 참고 `dp` (밀도 독립적 픽셀).
+이러한 요소는 이전 스크린샷에서 볼 수 있습니다. 이러한 각 오버레이 항목을 구성할 수 있습니다. 재질 디자인 그리드 메뉴 옆의 줄임표 (...)를 클릭 하면 표를 비활성화/활성화 하 고, keylines 배치를 구성 하 고, 간격를 설정할 수 있는 대화 상자 팝 오버 열립니다. 모든 값은 `dp` (밀도 독립적 픽셀)로 표현 됩니다.
 
-[![표, 도련을, 및 간격 구성](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
+[![표, keyline 및 간격 구성](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
 
-새 도련을 추가 하려면 새 오프셋된 값을 입력 합니다 **오프셋** 상자에서 위치를 선택 (**왼쪽**를 **위쪽**, **오른쪽**, 또는  **아래쪽**) 클릭 하 고는 + 새 도련을 추가 하는 아이콘입니다. 마찬가지로, 새 간격을 추가 하려면 입력 크기와 오프셋 (dp)에 **크기** 하 고 **오프셋** 상자에 각각. 위치를 선택 (**왼쪽**, **위쪽**를 **오른쪽**, 또는 **아래쪽**) 클릭 하 고는 + 새 간격을 추가 하려면 아이콘을 합니다.
+새 keyline을 추가 하려면 **오프셋** 상자에 새 오프셋 값을 입력 하 고 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택한 다음 + 아이콘을 클릭 하 여 새 keyline를 추가 합니다. 마찬가지로, 새 간격을 추가 하려면 크기와 오프셋 상자에 각각 크기와 오프셋 (dp의 경우) 을 입력 합니다. 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고 + 아이콘을 클릭 하 여 새 간격을 추가 합니다.
 
-이러한 구성 값을 변경 하면 레이아웃 XML 파일에 저장 되며 레이아웃을 다시 열 때 다시 사용 합니다.
+이러한 구성 값을 변경 하면 레이아웃 XML 파일에 저장 되 고 레이아웃을 다시 열 때 다시 사용 됩니다.
 
 
 ## <a name="theme-editor"></a>테마 편집기
 
-합니다 **테마 편집기** 테마 특성의 하위 집합에 대 한 색 정보를 사용자 지정할 수 있습니다. 여는 **테마 편집기**, 도구 모음에서 페인트 브러시 아이콘을 클릭 합니다.
+**테마 편집기** 를 사용 하 여 테마 특성의 하위 집합에 대 한 색 정보를 사용자 지정할 수 있습니다. **테마 편집기**를 열려면 도구 모음에서 페인트 브러시 아이콘을 클릭 합니다.
 
 [![테마 편집기 아이콘](material-design-features-images/vs/04-theme-editor-icon-w158-sml.png)](material-design-features-images/vs/04-theme-editor-icon-w158.png#lightbox)
 
-하지만 합니다 **테마 편집기** 은 도구 모음에서 액세스할 수 있는 모든 대상 Android 버전 및 API 수준에 대 한 아래에 설명 된 기능의 하위 집합이 대상 API 수준 (Android 5.0 API 21 보다 이전인 경우에 사용할 수 있습니다. Lollipop)입니다.
+모든 대상 Android 버전 및 API 수준에 대 한 도구 모음에서 **테마 편집기** 에 액세스할 수 있지만, 대상 API 수준이 api 21 (Android 5.0 롤리팝) 이전인 경우 아래 설명 된 기능의 하위 집합만 사용할 수 있습니다.
 
-왼쪽 패널의 **테마 편집기** 현재 선택된 된 테마를 구성 하는 색 목록이 표시 됩니다 (이 예에서는 사용를 `Default Theme`):
+**테마 편집기** 의 왼쪽 패널에는 현재 선택한 테마를 구성 하는 색 목록이 표시 됩니다 .이 예제에서는를 사용 합니다 `Default Theme`.
 
 [![테마 편집기](material-design-features-images/vs/05-theme-editor-w158-sml.png)](material-design-features-images/vs/05-theme-editor-w158.png#lightbox)
 
-왼쪽의 색을 선택 하면 해당 색을 편집 하는 데는 다음과 같은 탭을 오른쪽 패널에 제공 합니다.
+왼쪽에서 색을 선택 하는 경우 오른쪽 패널은 해당 색을 편집 하는 데 도움이 되는 다음 탭을 제공 합니다.
 
--   **상속** &ndash; 선택한 색에 대 한 스타일 상속 다이어그램을 표시 하 고 해결된 색 및 해당 테마 색을 할당 하는 색 코드를 나열 합니다.
+- **상속** &ndash; 선택한 색에 대 한 스타일 상속 다이어그램을 표시 하 고 해당 테마 색에 할당 된 확인 된 색 및 색 코드를 나열 합니다.
 
--   **색 선택기** &ndash; 임의의 값으로 선택한 색을 변경할 수 있습니다.
+- **색 선택** &ndash; 선택한 색을 임의의 값으로 변경할 수 있습니다.
 
--   **재질 팔레트** &ndash; 재료 디자인에 맞는 값으로 선택한 색을 변경할 수 있습니다.
+- **재질 팔레트** &ndash; 선택한 색을 재질 디자인을 준수 하는 값으로 변경할 수 있습니다.
 
--   **리소스** &ndash; 테마의 다른 기존 색 리소스 중 하나에 선택한 색을 변경할 수 있습니다.
+- **리소스** &ndash; 선택한 색을 테마의 다른 기존 색 리소스 중 하나로 변경할 수 있습니다.
 
-이러한 세부 정보이 탭 각각 살펴보겠습니다.
+이러한 탭의 각 항목에 대해 자세히 살펴보겠습니다.
 
-### <a name="inherit-tab"></a>탭 상속
+### <a name="inherit-tab"></a>상속 탭
 
-다음 예에서 볼 수 있듯이 **상속** 탭에 대 한 스타일 상속을 나열 합니다 **백그라운드** 의 색을 **기본 테마**:
+다음 예제에 표시 된 것 처럼 **상속** 탭에는 **기본 테마**의 **배경색** 에 대 한 스타일 상속이 나열 됩니다.
 
-[![탭 상속](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
+[![상속 탭](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
-이 예는 **기본 테마** 사용 하는 스타일에서 상속 `@color/background_material_light` 사용 하 여 재정의 하지만 `color/material_grey_50`, 색 코드 값은 `#fffafafa`합니다.
-스타일 상속에 대 한 자세한 내용은 참조 하세요. [스타일과 테마](https://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
+이 예제에서 **기본 테마** 는를 사용 `@color/background_material_light` 하는 스타일에서 상속 하지만 색 코드 값 `color/material_grey_50` `#fffafafa`이 인로 재정의 합니다.
+스타일 상속에 대 한 자세한 내용은 [스타일 및 테마](https://developer.android.com/guide/topics/ui/themes.html#Inheritance)를 참조 하세요.
 
 ### <a name="color-picker"></a>색 선택
 
-다음 스크린샷에서 보여 줍니다 합니다 **색 선택**:
+다음 스크린샷에는 **색 선택**이 나와 있습니다.
 
 [![색 선택](material-design-features-images/vs/07-color-picker-w158-sml.png)](material-design-features-images/vs/07-color-picker-w158.png#lightbox)
 
-이 예제는 **백그라운드** 다양 한 수단을 통해 값으로 색을 변경할 수 있습니다.
+이 예제에서는 다양 한 방법을 통해 **배경색** 을 원하는 값으로 변경할 수 있습니다.
 
--   직접 색을 클릭합니다.
--   색상, 채도 및 밝기 값을 입력 합니다.
--   10 진수에서 RGB (빨강, 녹색, 파랑) 값을 입력 합니다.
--   선택한 색의 알파 (불투명)를 설정 합니다.
--   16 진수 색 코드를 직접 입력 합니다.
+- 색을 직접 클릭 합니다.
+- 색상, 채도 및 밝기 값을 입력 합니다.
+- Decimal의 RGB (빨강, 녹색, 파랑) 값을 입력 합니다.
+- 선택한 색의 알파 (불투명도)를 설정 합니다.
+- 16 진수 색 코드를 직접 입력 합니다.
 
-색 선택에서 선택한 색은 *되지* 재료 디자인 지침 또는 사용할 수 있는 색 리소스 집합을 제한 합니다.
+색 선택에서 선택한 색은 재질 디자인 지침이 나 사용 가능한 색 리소스 집합으로 제한 *되지 않습니다* .
 
-### <a name="resources"></a>자료
+### <a name="resources"></a>리소스
 
-합니다 **리소스** 탭 테마에 존재 하는 색 리소스의 목록을 제공 합니다.
+**리소스** 탭에서는 테마에 이미 있는 색 리소스의 목록을 제공 합니다.
 
-[![Resources](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
+[![인사](material-design-features-images/vs/08-resources-w158-sml.png)](material-design-features-images/vs/08-resources-w158.png#lightbox)
 
-사용 하는 **리소스** 탭 색이이 목록에 선택 항목을 제한 합니다. 염두에 테마의 다른 부분에 이미 할당 되어 있는 색 리소스를 선택 하면 두 인접 요소의 UI "겹칠 수도" (있기 때문에 동일한 색)와 구분 하기 위해 사용자에 대 한 어렵습니다.
+**리소스** 탭을 사용 하 여 선택 항목을이 색 목록으로 제한 합니다. 테마의 다른 부분에 이미 할당 된 색 리소스를 선택 하는 경우 두 개의 인접 한 UI 요소가 동일한 색을 사용 하 여 "함께 실행" 될 수 있으며 사용자가 구분 하기 어려워집니다.
 
 ### <a name="material-palette"></a>재질 팔레트
 
-합니다 **재질 팔레트** 탭이 열립니다 합니다 **재료 디자인 색상표**합니다. 재료 디자인 지침에 부합 되도록에 색 선택을 제한이 색상표에서 색 값을 선택 합니다.
+**재질 팔레트** 탭은 **재질 디자인**색상표를 엽니다. 이 색상표에서 색 값을 선택 하면 재질 디자인 지침과 일치 하도록 색 선택이 제한 됩니다.
 
 [![재질 팔레트](material-design-features-images/vs/09-material-palette-w158-sml.png)](material-design-features-images/vs/09-material-palette-w158.png#lightbox)
 
-색상표에서 맨 팔레트의 맨 아래 선택한 기본 색에 대 한 색상의 범위를 표시 하는 동안 기본 재질 디자인 색을 표시 합니다. 예를 들어, 선택 하면 **Indigo**, 컬렉션인 **Indigo** 색상 대화 상자의 맨 아래에 표시 됩니다.
-색상을 선택 하면 색 속성을 선택한 색상으로 변경 됩니다. 다음 예제에서는 `Background Tint` 로 변경 되는 단추의 *Indigo 500*:
+색상표의 위쪽에는 주 재질 디자인 색이 표시 되 고, 색상표 아래쪽에는 선택한 기본 색의 다양 한 색이 표시 됩니다. 예를 들어, **indigo**를 선택 하면 대화 상자 아래쪽에 **indigo** 색상 컬렉션이 표시 됩니다.
+색상을 선택 하면 속성의 색이 선택한 색조로 변경 됩니다. 다음 예제에서 단추의는 `Background Tint` *Indigo 500*로 변경 됩니다.
 
-![Indigo 500를 선택 합니다.](material-design-features-images/vs/10-indigo-w158.png)
+![Indigo 500 선택](material-design-features-images/vs/10-indigo-w158.png)
 
-`Background Tint` 에 대 한 색 코드로 설정 됩니다 *Indigo 500* (`#ff3f51b5`), 디자이너 배경 색이이 변경 내용을 반영 하도록 업데이트 합니다.
+`Background Tint`는 *Indigo 500* (`#ff3f51b5`)에 대 한 색 코드로 설정 되 고 디자이너는이 변경 내용을 반영 하도록 배경색을 업데이트 합니다.
 
-[![변경 하는 백그라운드 색조](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
+[![배경 색조가 변경 됨](material-design-features-images/vs/11-background-tint-w158-sml.png)](material-design-features-images/vs/11-background-tint-w158.png#lightbox)
 
-재질 디자인 색상표에 대 한 자세한 내용은 참조 자료 디자인 [색 색상표 가이드](https://material.io/design/color/)합니다.
+재질 디자인 색상표에 대 한 자세한 내용은 재질 디자인 색상표 [가이드](https://material.io/design/color/)를 참조 하세요.
 
 ### <a name="creating-a-new-theme"></a>새 테마 만들기
 
-다음 예에서 새 사용자 지정 테마를 만들려면 자료 색상표를 사용 하겠습니다. 에서는 변경 먼저 합니다 **백그라운드** 색 *파란색 900*:
+다음 예제에서는 재질 색상표를 사용 하 여 새 사용자 지정 테마를 만듭니다. 먼저 **배경색** 을 *파란색 900*로 변경 합니다.
 
-![파란색 900 배경 변경](material-design-features-images/vs/12-change-background-to-blue-w158.png)
+![배경색을 Blue 900로 변경 합니다.](material-design-features-images/vs/12-change-background-to-blue-w158.png)
 
-색 리소스 변경 되 면 팝업 메시지가 메시지와 함께 *현재 테마에 저장 되지 않은 변경 내용을*:
+색 리소스가 변경 되 면 메시지가 표시 되 고 *현재 테마에 저장 되지 않은 변경 내용이 있습니다*.
 
-[![경고 저장 되지 않은 변경 내용](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
+[![저장 되지 않은 변경 내용 경고](material-design-features-images/vs/13-unsaved-changes-w158-sml.png)](material-design-features-images/vs/13-unsaved-changes-w158.png#lightbox)
 
-합니다 **백그라운드** 새 색 선택 항목에 디자이너에서 색 변경 되었지만이 변경 아직 저장 되지 않았습니다. 이 시점에서 다음 중 하나를 수행할 수 있습니다.
+디자이너의 **배경색이** 새 색 선택으로 변경 되었지만이 변경 내용은 아직 저장 되지 않았습니다. 이 시점에서 다음 중 하나를 수행할 수 있습니다.
 
--   클릭 **변경 내용 취소** 에 새 색 선택 (또는 선택)를 삭제 하 고 테마를 원래 상태로 되돌립니다.
+- **변경 내용 취소** 를 클릭 하 여 새 색 선택 (또는 선택 항목)을 취소 하 고 테마를 원래 상태로 되돌립니다.
 
--   키를 눌러 <kbd>CTRL + S</kbd> 에 변경 내용을 저장 하는 현재 테마입니다.
+- <kbd>Ctrl + S</kbd> 를 눌러 현재 테마에 대 한 변경 내용을 저장 합니다.
 
-다음 예에서 <kbd>CTRL + S</kbd> 에 변경 내용을 저장할 수 있도록 눌렀습니다 **AppTheme**:
+다음 예제에서는 변경 내용이 **Apptheme**에 저장 되도록 <kbd>CTRL + S</kbd> 를 눌렀습니다.
 
-[![AppTheme에 저장 하는 변경 내용](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
+[![AppTheme에 저장 된 변경 내용](material-design-features-images/vs/14-custom-theme-w158-sml.png)](material-design-features-images/vs/14-custom-theme-w158.png#lightbox)
 
 ## <a name="summary"></a>요약
 
-이 항목에서는 Xamarin.Android 디자이너에서 제공 되는 재질 디자인 기능을 설명합니다. 사용 하도록 설정 하 여 재질 디자인 눈금을 구성 하는 방법을 설명 했습니다 및 재료 디자인 지침을 따르는 새 사용자 지정 테마를 만들려면 테마 편집기를 사용 하는 방법을 설명 했습니다.
-재질 디자인에 대 한 Xamarin.Android 지원에 대 한 자세한 내용은 참조 하세요. [재질 테마](~/android/user-interface/material-theme.md)합니다.
+이 항목에서는 Android Designer에서 사용할 수 있는 재질 디자인 기능에 대해 설명 했습니다. 재질 디자인 그리드를 사용 하도록 설정 하 고 구성 하는 방법에 대해 설명 하 고, 테마 편집기를 사용 하 여 재질 디자인 지침을 따르는 새 사용자 지정 테마를 만드는 방법을 설명 했습니다.
+재질 디자인을 위한 Xamarin Android 지원에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요.
 
 
 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-에서는이 가이드에서는 다음과 같은 디자이너 기능을 살펴보겠습니다.
+이 가이드에서는 다음과 같은 디자이너 기능을 살펴보겠습니다.
 
--   *재질 디자인 눈금* &ndash; 표, 간격 및 재료 디자인 지침에 따라 레이아웃 위젯을 배치 하는 데 keylines 보여 주는 디자인 화면에 오버레이 합니다.
+- *재질 디자인 그리드* &ndash; 재질 디자인 지침에 따라 레이아웃 위젯을 배치 하는 데 도움이 되는 표, 간격 및 keylines를 표시 하는 Design Surface에 대 한 오버레이입니다.
 
--   *재질 디자인 색상표* &ndash; 공식 재료 디자인 색상표에서 색을 선택 하는 데 도움이 되는 속성 패드 대화 합니다.
+- *재질 디자인 색상표* &ndash; 공식 재질 디자인 팔레트에서 색을 선택 하는 데 도움이 되는 속성 패드 대화 상자입니다.
 
--   *글꼴 배율* &ndash; 재료 디자인-호환 되는 설정에 대 한 선택 옵션이 제공 되는 속성 패드 대화 상자는 `textAppearance` 텍스트 필드의 속성입니다.
+- *인쇄 크기 조정* 텍스트 필드의 `textAppearance` 속성에 대 한 재질 디자인 호환 설정을 선택 하 여 제공 하는 속성 패드 대화 상자입니다. &ndash;
 
--   *테마 편집기* &ndash; 수 있는 작은 색 리소스 편집기 테마의 하위 집합에 대 한 색 정보를 설정 합니다. 미리 보기 같은 재질 색을 수정 하는 예를 들어 `colorPrimary`, `colorPrimaryDark`, 및 `colorAccent`합니다.
+- *테마 편집기* &ndash; 테마의 하위 집합에 대 한 색 정보를 설정 하는 데 사용할 수 있는 작은 색 리소스 편집기입니다. 예를 들어, `colorPrimary` `colorPrimaryDark`, `colorAccent`등의 재질 색을 미리 보고 수정할 수 있습니다.
 
-에서는 이러한 각 기능 확인 하 고 사용 하는 방법의 예제를 제공 합니다.
+이러한 각 기능을 살펴보고 사용 방법에 대 한 예제를 제공 합니다.
 
-## <a name="material-design-grid"></a>재질 디자인 눈금
+## <a name="material-design-grid"></a>재질 디자인 그리드
 
-재질 디자인 눈금 메뉴는 디자이너의 맨 위에 있는 도구 모음에서 제공 됩니다.
+재질 디자인 그리드 메뉴는 디자이너 맨 위에 있는 도구 모음에서 사용할 수 있습니다.
 
-[![재질 디자인 눈금](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
+[![재질 디자인 그리드](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
-재질 디자인 눈금 아이콘을 클릭 하면 다음 요소가 포함 된 디자인 화면에 오버레이 표시 하는 디자이너:
+재질 디자인 그리드 아이콘을 클릭 하면 디자이너는 다음 요소를 포함 하는 Design Surface에 오버레이를 표시 합니다.
 
--   Keylines (주황색 선)
+- Keylines (주황색 선)
 
--   간격 (녹색 영역)
+- 간격 (녹색 영역)
 
--   표 (파란색 선)
+- 표 (파란색 선)
 
-이러한 요소는 다음 스크린샷에 확인할 수 있습니다.
+이러한 요소는 다음 스크린샷에서 볼 수 있습니다.
 
-[![도련을, 간격 및 그리드](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
+[![Keyline, 간격 및 그리드](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
-이러한 각 오버레이 항목은 구성할 수 있습니다. 줄임표를 클릭 하면 (&hellip;) 재질 디자인 눈금 메뉴 옆에 대화 팝 오버 표를 사용/사용 안 함, keylines, 배치를 구성 하 고는 간격을 설정할 수 있도록 열립니다. 모든 값으로 표현 되는 참고 `dp` (밀도 독립적 픽셀).
+이러한 각 오버레이 항목을 구성할 수 있습니다. 재질 디자인 그리드 메뉴 옆의&hellip;줄임표 ()를 클릭 하면 표를 비활성화/활성화 하 고, keylines 배치를 구성 하 고, 간격를 설정 하는 데 사용할 수 있는 대화 팝 오버 열립니다. 모든 값은 `dp` (밀도 독립적 픽셀)로 표현 됩니다.
 
-[![표, 도련을, 및 간격 구성](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
+[![표, keyline 및 간격 구성](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
-새 도련을 추가 하려면 새 오프셋된 값을 입력 합니다 **오프셋** 상자에서 위치를 선택 (**왼쪽**를 **위쪽**, **오른쪽**, 또는  **아래쪽**) 클릭 하 고는 + 아이콘 (값을 입력 한 경우에는 오른쪽에 표시 됨) 새 도련을 추가할 합니다. 마찬가지로, 새 간격을 추가 하려면 입력 크기와 오프셋 (dp)에 **크기** 하 고 **오프셋** 상자에 각각. 위치를 선택 (**왼쪽**, **위쪽**를 **오른쪽**, 또는 **아래쪽**) 클릭 하 고는 + 새 간격을 추가 하려면 아이콘을 합니다.
+새 keyline을 추가 하려면 **오프셋** 상자에 새 오프셋 값을 입력 하 고, 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고, + 아이콘 (값이 입력 될 때 오른쪽에 표시 됨)을 클릭 하 여 새 keyline를 추가 합니다. 마찬가지로, 새 간격을 추가 하려면 크기와 오프셋 상자에 각각 크기와 오프셋 (dp의 경우) 을 입력 합니다. 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고 + 아이콘을 클릭 하 여 새 간격을 추가 합니다.
 
-이러한 구성 값을 변경 하면 레이아웃 XML 파일에 저장 되며 레이아웃을 다시 열 때 다시 사용 합니다.
+이러한 구성 값을 변경 하면 레이아웃 XML 파일에 저장 되 고 레이아웃을 다시 열 때 다시 사용 됩니다.
 
 ## <a name="material-design-color-palette"></a>재질 디자인 색상표
 
-이제 색을 허용 하는 모든 속성 패널 항목에이 스크린샷에 표시 된 대로 재료 디자인 색 팔레트를 열려면 사용할 수 있는 추가 색상표 아이콘:
+이제 색을 허용 하는 모든 속성 패널 항목에는 다음 스크린샷에 표시 된 것 처럼 재질 디자인 색상표를 여는 데 사용할 수 있는 추가 색상표 아이콘이 있습니다.
 
 [![색 아이콘](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
-이 아이콘을 클릭 하면 색 재료 디자인 색상표에서 해당 속성을 구성할 수 있게 해 주는 대화 팝 오버가 열립니다.
+이 아이콘을 클릭 하면 재질 디자인 색상표에서 해당 속성의 색을 구성할 수 있도록 하는 대화 팝 오버 열립니다.
 
 [![재질 디자인 색상표](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
-색상표에서 맨 팔레트의 맨 아래 선택한 기본 색에 대 한 색상의 범위를 표시 하는 동안 기본 재질 디자인 색을 표시 합니다. 예를 들어, 선택 하면 **Indigo**, 컬렉션인 **Indigo** 색상 대화 상자의 맨 아래에 표시 됩니다.
-색상을 선택 하면 색 속성을 선택한 색상으로 변경 됩니다. 다음 예제에서는 `Background Tint` 로 변경 되는 단추의 *Indigo 500*:
+색상표의 위쪽에는 주 재질 디자인 색이 표시 되 고, 색상표 아래쪽에는 선택한 기본 색의 다양 한 색이 표시 됩니다. 예를 들어, **indigo**를 선택 하면 대화 상자 아래쪽에 **indigo** 색상 컬렉션이 표시 됩니다.
+색상을 선택 하면 속성의 색이 선택한 색조로 변경 됩니다. 다음 예제에서 단추의는 `Background Tint` *Indigo 500*로 변경 됩니다.
 
-[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![Indigo 500 선택](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
-`Background Tint` 에 대 한 색 코드로 설정 됩니다 *Indigo 500* (`#ff3f51b5`), 디자이너가이 변경 내용을 반영 하는 단추의 배경색을 업데이트 합니다.
+`Background Tint`는 *Indigo 500* (`#ff3f51b5`)에 대 한 색 코드로 설정 되 고 디자이너는이 변경 내용을 반영 하도록 단추의 배경색을 업데이트 합니다.
 
-[![백그라운드 tint 변경](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
+[![배경 색조 변경](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
-재질 디자인 색상표에 대 한 자세한 내용은 참조 자료 디자인 [색 색상표 가이드](https://material.io/design/color/)합니다.
+재질 디자인 색상표에 대 한 자세한 내용은 재질 디자인 색상표 [가이드](https://material.io/design/color/)를 참조 하세요.
 
-## <a name="typographic-scale"></a>입력 체계 확장
+## <a name="typographic-scale"></a>인쇄 크기 조정
 
-**텍스트 모양을** 섹션을 **속성** 패드 **스타일** 탭 하면 아이콘이 있습니다에서 선택를 `TextAppearance` 준수 재료 디자인 하는 스타일 사양:
+**속성** 패드 **스타일** 탭의 `TextAppearance` **텍스트 모양** 섹션에는 재질 디자인 사양에 맞는 스타일에서 선택할 수 있는 아이콘이 있습니다.
 
 [![스타일 탭](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
-이 아이콘을 클릭 하면 열립니다는 **입력 체계 확장** 대화 팝 오버에서 선택할 수 있는 미리 구성 된 텍스트 스타일의 목록을 제공 하는:
+이 아이콘을 클릭 하면 다음과 같이 선택할 수 있는 미리 구성 된 텍스트 스타일의 목록이 표시 되는 **인쇄 간격** 대화 상자 팝 오버 열립니다.
 
 [![텍스트 스타일 선택](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
-클릭 하면 다음 예와에서 **디스플레이 1** 단추의 텍스트의 큰 글꼴로 변경 **디스플레이 1**:
+다음 예제에서 **1 표시** 를 클릭 하면 단추의 텍스트가 **표시 1**의 더 큰 글꼴로 변경 됩니다.
 
 [![1 스타일 표시](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
-텍스트 스타일을 **입력 체계 확장** 따르는 **테마** 설정 합니다. 예를 들어 경우는 **Light** 디자이너를 사용할 수 있는 텍스트 스타일 미러의 목록에서 선택 하는 테마를 **Light** 테마:
+[ **인쇄 크기 조정** ] 대화 상자의 텍스트 스타일은 **테마** 설정을 따릅니다. 예를 들어, 디자이너에서 **밝은** 테마를 선택 하면 사용 가능한 텍스트 스타일 목록이 **밝은** 테마를 미러링합니다.
 
 [![밝은 테마](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 ## <a name="theme-editor"></a>테마 편집기
 
-합니다 **테마 편집기** 테마 특성의 하위 집합에 대 한 색 정보를 사용자 지정할 수 있습니다. 여는 **테마 편집기**, 도구 모음에서 페인트 브러시 아이콘을 클릭 합니다.
+**테마 편집기** 를 사용 하 여 테마 특성의 하위 집합에 대 한 색 정보를 사용자 지정할 수 있습니다. **테마 편집기**를 열려면 도구 모음에서 페인트 브러시 아이콘을 클릭 합니다.
 
 [![테마 편집기 아이콘](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
-하지만 합니다 **테마 편집기** 은 도구 모음에서 액세스할 수 있는 모든 대상 Android 버전 및 API 수준에 대 한 아래에 설명 된 기능의 하위 집합이 대상 API 수준 (Android 5.0 API 21 보다 이전인 경우에 사용할 수 있습니다. Lollipop)입니다.
+모든 대상 Android 버전 및 API 수준에 대 한 도구 모음에서 **테마 편집기** 에 액세스할 수 있지만, 대상 API 수준이 api 21 (Android 5.0 롤리팝) 이전인 경우 아래 설명 된 기능의 하위 집합만 사용할 수 있습니다.
 
-왼쪽 패널의 **테마 편집기** 현재 선택된 된 테마를 구성 하는 색 목록이 표시 됩니다 (이 예에서는 사용를 `Default Theme`):
+**테마 편집기** 의 왼쪽 패널에는 현재 선택한 테마를 구성 하는 색 목록이 표시 됩니다 .이 예제에서는를 사용 합니다 `Default Theme`.
 
 [![테마 편집기](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
-왼쪽의 색을 선택 하면 해당 색을 편집 하는 데는 다음과 같은 탭을 오른쪽 패널에 제공 합니다.
+왼쪽에서 색을 선택 하는 경우 오른쪽 패널은 해당 색을 편집 하는 데 도움이 되는 다음 탭을 제공 합니다.
 
--   **상속** &ndash; 선택한 색에 대 한 스타일 상속 다이어그램을 표시 하 고 해결된 색 및 해당 테마 색을 할당 하는 색 코드를 나열 합니다.
+- **상속** &ndash; 선택한 색에 대 한 스타일 상속 다이어그램을 표시 하 고 해당 테마 색에 할당 된 확인 된 색 및 색 코드를 나열 합니다.
 
--   **색 선택기** &ndash; 임의의 값으로 선택한 색을 변경할 수 있습니다.
+- **색 선택** &ndash; 선택한 색을 임의의 값으로 변경할 수 있습니다.
 
--   **재질 팔레트** &ndash; 재료 디자인에 맞는 값으로 선택한 색을 변경할 수 있습니다.
+- **재질 팔레트** &ndash; 선택한 색을 재질 디자인을 준수 하는 값으로 변경할 수 있습니다.
 
--   **리소스** &ndash; 테마의 다른 기존 색 리소스 중 하나에 선택한 색을 변경할 수 있습니다.
+- **리소스** &ndash; 선택한 색을 테마의 다른 기존 색 리소스 중 하나로 변경할 수 있습니다.
 
-이러한 세부 정보이 탭 각각 살펴보겠습니다.
+이러한 탭의 각 항목에 대해 자세히 살펴보겠습니다.
 
-### <a name="inherit-tab"></a>탭 상속
+### <a name="inherit-tab"></a>상속 탭
 
-다음 예에서 볼 수 있듯이 **상속** 탭에 대 한 스타일 상속을 나열 합니다 **백그라운드** 의 색을 **기본 테마**:
+다음 예제에 표시 된 것 처럼 **상속** 탭에는 **기본 테마**의 **배경색** 에 대 한 스타일 상속이 나열 됩니다.
 
-[![탭 상속](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
+[![상속 탭](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
-이 예는 **기본 테마** 사용 하는 스타일에서 상속 `@color/background_material_dark` 사용 하 여 재정의 하지만 `color/material_grey_850`, 색 코드 값은 `#ff303030`합니다.
-스타일 상속에 대 한 자세한 내용은 참조 하세요. [스타일과 테마](https://developer.android.com/guide/topics/ui/themes.html#Inheritance)합니다.
+이 예제에서 **기본 테마** 는를 사용 `@color/background_material_dark` 하는 스타일에서 상속 하지만 색 코드 값 `color/material_grey_850` `#ff303030`이 인로 재정의 합니다.
+스타일 상속에 대 한 자세한 내용은 [스타일 및 테마](https://developer.android.com/guide/topics/ui/themes.html#Inheritance)를 참조 하세요.
 
 ### <a name="color-picker"></a>색 선택
 
-다음 스크린샷에서 보여 줍니다 합니다 **색 선택**:
+다음 스크린샷에는 **색 선택**이 나와 있습니다.
 
 [![색 선택](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 
-이 예제는 **백그라운드** 다양 한 수단을 통해 값으로 색을 변경할 수 있습니다.
+이 예제에서는 다양 한 방법을 통해 **배경색** 을 원하는 값으로 변경할 수 있습니다.
 
--   직접 색을 클릭합니다.
--   색상, 채도 및 밝기 값을 입력 합니다.
--   10 진수에서 RGB (빨강, 녹색, 파랑) 값을 입력 합니다.
--   선택한 색의 알파 (불투명)를 설정 합니다.
--   16 진수 색 코드를 직접 입력 합니다.
+- 색을 직접 클릭 합니다.
+- 색상, 채도 및 밝기 값을 입력 합니다.
+- Decimal의 RGB (빨강, 녹색, 파랑) 값을 입력 합니다.
+- 선택한 색의 알파 (불투명도)를 설정 합니다.
+- 16 진수 색 코드를 직접 입력 합니다.
 
-색 선택에서 선택한 색은 *되지* 재료 디자인 지침 또는 사용할 수 있는 색 리소스 집합을 제한 합니다.
+색 선택에서 선택한 색은 재질 디자인 지침이 나 사용 가능한 색 리소스 집합으로 제한 *되지 않습니다* .
 
-### <a name="resources"></a>자료
+### <a name="resources"></a>리소스
 
-합니다 **리소스** 탭 테마에 존재 하는 색 리소스의 목록을 제공 합니다.
+**리소스** 탭에서는 테마에 이미 있는 색 리소스의 목록을 제공 합니다.
 
-[![Resources](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
+[![인사](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
-사용 하는 **리소스** 탭 색이이 목록에 선택 항목을 제한 합니다. 염두에 테마의 다른 부분에 이미 할당 되어 있는 색 리소스를 선택 하면 두 인접 요소의 UI "겹칠 수도" (있기 때문에 동일한 색)와 구분 하기 위해 사용자에 대 한 어렵습니다.
+**리소스** 탭을 사용 하 여 선택 항목을이 색 목록으로 제한 합니다. 테마의 다른 부분에 이미 할당 된 색 리소스를 선택 하는 경우 두 개의 인접 한 UI 요소가 동일한 색을 사용 하 여 "함께 실행" 될 수 있으며 사용자가 구분 하기 어려워집니다.
 
 ### <a name="material-palette"></a>재질 팔레트
 
-합니다 **재질 팔레트** 탭이 열립니다 합니다 **재료 디자인 색상표** 설명 [이전](#material-design-color-palette)합니다. 재료 디자인 지침에 부합 되도록에 색 선택을 제한이 색상표에서 색 값을 선택 합니다.
+**재질 팔레트** 탭은 [앞](#material-design-color-palette)에서 설명한 **재질 디자인** 색상표를 엽니다. 이 색상표에서 색 값을 선택 하면 재질 디자인 지침과 일치 하도록 색 선택이 제한 됩니다.
 
 [![재질 팔레트](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 ### <a name="creating-a-new-theme"></a>새 테마 만들기
 
-다음 예에서 새 사용자 지정 테마를 만들려면 자료 색상표를 사용 하겠습니다. 에서는 변경 먼저 합니다 **백그라운드** 색 *파란색 900*:
+다음 예제에서는 재질 색상표를 사용 하 여 새 사용자 지정 테마를 만듭니다. 먼저 **배경색** 을 *파란색 900*로 변경 합니다.
 
-[![파란색 900 배경 변경](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
+[![배경색을 Blue 900로 변경 합니다.](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
-색 리소스 변경 되 면 팝업 메시지가 메시지와 함께 *현재 테마에 저장 되지 않은 변경 내용을*:
+색 리소스가 변경 되 면 메시지가 표시 되 고 *현재 테마에 저장 되지 않은 변경 내용이 있습니다*.
 
-[![경고 저장 되지 않은 변경 내용](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
+[![저장 되지 않은 변경 내용 경고](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
-디자이너에서 색 변경 내용이 있지만이 변경 아직 저장 되지 않았습니다. 이 시점에서 다음 중 하나를 수행할 수 있습니다.
+디자이너에서 색이 변경 되었지만 변경 내용이 아직 저장 되지 않았습니다. 이 시점에서 다음 중 하나를 수행할 수 있습니다.
 
--   클릭 **변경 내용 취소** 에 새 색 선택 (또는 선택)를 삭제 하 고 테마를 원래 상태로 되돌립니다.
+- **변경 내용 취소** 를 클릭 하 여 새 색 선택 (또는 선택 항목)을 취소 하 고 테마를 원래 상태로 되돌립니다.
 
--   키를 눌러  **&#8984; + S** 새 테마에 변경 내용을 저장 하려면 호출 **Custom**합니다.
+- **&#8984; + S** 를 눌러 **사용자 지정**이라는 새 테마에 변경 내용을 저장 합니다.
 
 
 ## <a name="summary"></a>요약
 
-이 항목에서는 Xamarin.Android 디자이너에서 제공 되는 재질 디자인 기능을 설명합니다. 재질 디자인 눈금을 구성 하는 방법, 재질 디자인 색상표를 사용 하 여 색 속성을 편집 하는 방법 및 입력 체계 확장 선택기를 사용 하 여 텍스트 속성을 구성 하는 방법을 설명 했습니다. 또한 재료 디자인 지침을 따르는 새 사용자 지정 테마를 만들려면 테마 편집기를 사용 하는 방법을 보여 줍니다. 재질 디자인에 대 한 Xamarin.Android 지원에 대 한 자세한 내용은 참조 하세요. [재질 테마](~/android/user-interface/material-theme.md)합니다.
+이 항목에서는 Android Designer에서 사용할 수 있는 재질 디자인 기능에 대해 설명 했습니다. 재질 디자인 그리드를 사용 하도록 설정 하 고 구성 하는 방법, 재질 디자인 색상표를 사용 하 여 색 속성을 편집 하는 방법 및 인쇄 크기 조정 선택기를 사용 하 여 텍스트 속성을 구성 하는 방법을 설명 했습니다. 또한 테마 편집기를 사용 하 여 재질 디자인 지침을 따르는 새 사용자 지정 테마를 만드는 방법도 보여 줍니다. 재질 디자인을 위한 Xamarin Android 지원에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요.
 
 -----
 

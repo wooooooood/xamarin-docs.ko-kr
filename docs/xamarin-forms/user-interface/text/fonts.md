@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: 329f7dc9cc43582f630a4895fba452a8496bae9a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656167"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529314"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -58,9 +58,9 @@ label.FontSize = 24;
 
 글꼴 스타일과 같은 **굵게** 하 고 *기울임꼴* 에서 설정할 수 있습니다는 `FontAttributes` 속성. 다음 값은 현재 지원 됩니다.
 
--  **없음**
--  **굵게**
--  **기울임꼴**
+- **없음**
+- **굵게**
+- **기울임꼴**
 
 합니다 `FontAttribute` 열거형을 다음과 같이 사용할 수 있습니다 (단일 특성을 지정할 수 있습니다 또는 `OR` 함께 해당):
 
@@ -100,7 +100,7 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) 데도 사용할 수 있습니다 XAML에서 각 플랫폼에서 다른 글꼴을 렌더링 합니다. 아래 예제에서는 사용자 지정 글꼴을 사용 하 여 iOS에서 (<span style="font-family:MarkerFelt-Thin">MarkerFelt 씬</span>) 다른 플랫폼에만 크기/특성을 지정 합니다.
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) 데도 사용할 수 있습니다 XAML에서 각 플랫폼에서 다른 글꼴을 렌더링 합니다. 아래 예제에서는 iOS (MarkerFelt-씬)에서 사용자 지정 글꼴을 사용 하 고 다른 플랫폼의 크기/특성만 지정 합니다.
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -183,7 +183,7 @@ new Label
 
 ### <a name="windows"></a>Windows
 
-Windows 플랫폼용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 글꼴 파일을 추가 합니다 **/Assets 글꼴/** 집합과 응용 프로그램 프로젝트에서 폴더를 <span class="UIItem">빌드 작업: 콘텐츠</span>. 해시 (#) 뒤에 전체 경로 및 글꼴 파일을 사용 하 여 및 <span class="UIItem">글꼴 이름</span>처럼 아래 코드 조각을 보여 줍니다.
+Windows 플랫폼용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 글꼴 파일을 추가 합니다 **/Assets 글꼴/** 집합과 응용 프로그램 프로젝트에서 폴더를 **빌드 작업: 콘텐츠**. 해시 (#) 뒤에 전체 경로 및 글꼴 파일을 사용 하 여 및 **글꼴 이름**처럼 아래 코드 조각을 보여 줍니다.
 
 ```csharp
 new Label

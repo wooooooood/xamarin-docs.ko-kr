@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1f29f283207ed8c1382424b3680177886ad2c806
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f68e192db0b7acceb325ad44f40dce9cb229a26a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653154"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528979"
 ---
 # <a name="colors-in-xamarinforms"></a>Xamarin.Forms의 색
 
@@ -24,12 +24,12 @@ _Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공 합니다._
 
 `Color` 다양 한 색 인스턴스를 생성 하는 메서드를 제공 하는 클래스
 
--  **명명 된 색** -일반적인 명명 된 색을 포함 하 여 컬렉션인 `Red`를 `Green`, 및 `Blue`합니다.
--  **Fromhex** -문자열 값 (예: "00FF00")을 HTML에서 사용 하는 구문과 유사 합니다. 선택적으로 Alpha는 첫 번째 문자 쌍 ("CC00FF00")으로 지정할 수 있습니다.
--  **FromHsla** -색상, 채도 및 명도 `double` 선택적 알파 값 (0.0-1.0) 값입니다.
--  **FromRgb** -빨강, 녹색 및 파랑 `int` 값 (0-255).
--  **FromRgba** -빨간색, 녹색, 파랑 및 알파 `int` 값 (0-255).
--  **FromUint** -단일 설정 `double` 값을 나타내는 **argb**합니다.
+- **명명 된 색** -일반적인 명명 된 색을 포함 하 여 컬렉션인 `Red`를 `Green`, 및 `Blue`합니다.
+- **Fromhex** -문자열 값 (예: "00FF00")을 HTML에서 사용 하는 구문과 유사 합니다. 선택적으로 Alpha는 첫 번째 문자 쌍 ("CC00FF00")으로 지정할 수 있습니다.
+- **FromHsla** -색상, 채도 및 명도 `double` 선택적 알파 값 (0.0-1.0) 값입니다.
+- **FromRgb** -빨강, 녹색 및 파랑 `int` 값 (0-255).
+- **FromRgba** -빨간색, 녹색, 파랑 및 알파 `int` 값 (0-255).
+- **FromUint** -단일 설정 `double` 값을 나타내는 **argb**합니다.
 
 여기에 할당 된 일부 예제에서는 색을가 `BackgroundColor` 다양 한 허용 되는 구문 사용 하 여 일부 레이블의:
 
@@ -69,11 +69,11 @@ IOS 및 Android에서이 인스턴스는 기본 배경으로 표시 되었지만
 
 `Color` 새 색을 만드는 데 사용할 수 있는 추가 메서드를 포함 하는 인스턴스:
 
--  **AddLuminosity** -제공 된 델타 여 명도 수정 하 여 색을 반환 합니다.
--  **WithHue** -색상을 나타내는 제공 된 값 대체 색을 반환 합니다.
--  **WithLuminosity** -제공 된 값을 사용 하 여 명도 대체 색을 반환 합니다.
--  **WithSaturation** -제공 된 값을 사용 하 여 채도 대체 색을 반환 합니다.
--  **MultiplyAlpha** -제공된 된 알파 값으로 곱하여 알파, 수정 하 여 색을 반환 합니다.
+- **AddLuminosity** -제공 된 델타 여 명도 수정 하 여 색을 반환 합니다.
+- **WithHue** -색상을 나타내는 제공 된 값 대체 색을 반환 합니다.
+- **WithLuminosity** -제공 된 값을 사용 하 여 명도 대체 색을 반환 합니다.
+- **WithSaturation** -제공 된 값을 사용 하 여 채도 대체 색을 반환 합니다.
+- **MultiplyAlpha** -제공된 된 알파 값으로 곱하여 알파, 수정 하 여 색을 반환 합니다.
 
 ## <a name="implicit-conversions"></a>암시적 변환
 

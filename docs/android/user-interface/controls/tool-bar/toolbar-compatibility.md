@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: ce13532026e2c49cb733e5afc0f6abd41ff1abdd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 31602b14179691d13d8058c90cf20a6f7f667124
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645028"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522826"
 ---
 # <a name="toolbar-compatibility"></a>도구 모음 호환성
 
@@ -20,17 +20,17 @@ ms.locfileid: "68645028"
 
 이 섹션에서는 android 5.0 롤리팝 `Toolbar` 이전 버전의 android에서를 사용 하는 방법을 설명 합니다. 앱이 Android 5.0 이전 버전의 Android를 지원 하지 않는 경우이 섹션을 건너뛸 수 있습니다. 
 
-는 `Toolbar` android v7 지원 라이브러리의 일부 이기 때문에 android 2.1 (API 수준 7) 이상을 실행 하는 장치에서 사용할 수 있습니다. 그러나 [Android 지원 라이브러리 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet을 설치 하 고이 라이브러리에 제공 된 `Toolbar` 구현을 사용 하도록 코드를 수정 해야 합니다. 이 섹션에서는이 NuGet을 설치 하 고 **, 응용 프로그램** [도구 모음을 추가](~/android/user-interface/controls/tool-bar/adding-a-second-toolbar.md) 하는 방법에 대해 설명 합니다 .이 도구 모음은 롤리팝 5.0 이전 버전의 Android에서 실행 되도록 합니다.
+는 `Toolbar` android v7 지원 라이브러리의 일부 이기 때문에 android 2.1 (API 수준 7) 이상을 실행 하는 장치에서 사용할 수 있습니다. 그러나 [Android 지원 라이브러리 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet을 설치 하 고이 라이브러리에 제공 된 `Toolbar` 구현을 사용 하도록 코드를 수정 해야 합니다. 이 섹션에서는이 NuGet을 설치 하 고, 응용 프로그램 [도구 모음을 추가](~/android/user-interface/controls/tool-bar/adding-a-second-toolbar.md) 하는 방법에 대해 설명 합니다 .이 도구 모음은 롤리팝 5.0 이전 버전의 Android에서 실행 되도록 합니다.
 
 응용 프로그램을 수정 하 여 도구 모음의 AppCompat 버전을 사용 하려면 다음을 수행 합니다. 
 
-1.  앱에 대 한 최소 및 대상 Android 버전을 설정 합니다.
+1. 앱에 대 한 최소 및 대상 Android 버전을 설정 합니다.
 
-2.  AppCompat NuGet 패키지를 설치 합니다.
+2. AppCompat NuGet 패키지를 설치 합니다.
 
-3.  기본 제공 Android 테마 대신 AppCompat 테마를 사용 합니다.
+3. 기본 제공 Android 테마 대신 AppCompat 테마를 사용 합니다.
 
-4.  대신 `MainActivity` 하위 클래스 `AppCompatActivity`를수정합니다. `Activity` 
+4. 대신 `MainActivity` 하위 클래스 `AppCompatActivity`를수정합니다. `Activity` 
 
 이러한 각 단계는 다음 섹션에 자세히 설명 되어 있습니다.
 

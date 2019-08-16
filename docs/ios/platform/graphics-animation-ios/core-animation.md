@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 12bb8fe6f8ed77ea9091c165d4656da292266679
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9412012949cd012d572b65b7af6e2890160338dc
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656609"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527939"
 ---
 # <a name="core-animation-in-xamarinios"></a>Xamarin.ios의 핵심 애니메이션
 
@@ -40,9 +40,9 @@ UIKit는 응용 프로그램에 애니메이션을 쉽게 추가할 수 있도�
 
 이 섹션에서는 다음을 비롯 한 UIKit 애니메이션 기능에 대해 설명 합니다.
 
--  컨트롤러 간 전환
--  뷰 간 전환
--  속성 애니메이션 보기
+- 컨트롤러 간 전환
+- 뷰 간 전환
+- 속성 애니메이션 보기
 
 
 ### <a name="view-controller-transitions"></a>뷰 컨트롤러 전환
@@ -59,9 +59,9 @@ SecondViewController vc2 = new SecondViewController {
 
 이 경우 다음을 `PartialCurl` 비롯 한 여러 다른 항목을 사용할 수 있지만 애니메이션을 사용 합니다.
 
--  `CoverVertical`– 화면 아래쪽에서 위쪽으로 슬라이드
--  `CrossDissolve`– 이전 뷰에서 새 보기가 페이드 인 & 페이드 아웃 됩니다.
--  `FlipHorizontal`-가로 오른쪽에서 왼쪽으로 대칭 이동 합니다. 해제에서는 전환이 왼쪽에서 오른쪽으로 대칭 이동 됩니다.
+- `CoverVertical`– 화면 아래쪽에서 위쪽으로 슬라이드
+- `CrossDissolve`– 이전 뷰에서 새 보기가 페이드 인 & 페이드 아웃 됩니다.
+- `FlipHorizontal`-가로 오른쪽에서 왼쪽으로 대칭 이동 합니다. 해제에서는 전환이 왼쪽에서 오른쪽으로 대칭 이동 됩니다.
 
 
 전환에 애니메이션 효과를 주려면 `true` 의 두 번째 인수로를 `PresentViewController`전달 합니다.
@@ -100,12 +100,12 @@ UIView.Transition (
 
 Uikit는 다음을 포함 하 여 `UIView` 클래스에서 다양 한 속성에 대 한 애니메이션 효과를 무료로 지원 합니다.
 
--  프레임
--  범위
--  가운데 맞춤
--  알파
--  변환
--  색
+- 프레임
+- 범위
+- 가운데 맞춤
+- 알파
+- 변환
+- 색
 
 
 이러한 애니메이션은 정적 `NSAction` `UIView.Animate` 메서드에 전달 된 대리자의 속성 변경 내용을 지정 하 여 암시적으로 발생 합니다. 예를 들어 다음 코드는의 `UIImageView`중심점에 애니메이션 효과를 적용 합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 715fd408cc05671beba0277a690585fdbb558c7e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ff406b8bd6630ef9e17011e0b4b6b996fa944d89
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654024"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528793"
 ---
 # <a name="social-framework-in-xamarinios"></a>Xamarin.ios의 소셜 프레임 워크
 
@@ -55,9 +55,9 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 
  `SLComposeViewController`사용자 개입 없이 직접 트 윗를 전송 하지 않습니다. 그러나 다음 방법을 사용 하 여 초기화할 수 있습니다.
 
--   `SetInitialText`– 트 윗에서 표시할 초기 텍스트를 추가 합니다. 
--  `AddUrl`– 트 윗에 Url을 추가 합니다.
--  `AddImage`– 이미지를 트 윗에 추가 합니다.
+- `SetInitialText`– 트 윗에서 표시할 초기 텍스트를 추가 합니다. 
+- `AddUrl`– 트 윗에 Url을 추가 합니다.
+- `AddImage`– 이미지를 트 윗에 추가 합니다.
 
 
 초기화 되 면를 `PresentVIewController` 호출 하면에서 만든 `SLComposeViewController`뷰가 표시 됩니다. 사용자는 필요에 따라 트 윗를 편집 및 전송 하거나 송신을 취소할 수 있습니다. 두 경우 모두에서 컨트롤러를 해제 해야 `CompletionHandler`합니다. 그런 다음 아래와 같이 트 윗를 보내거나 취소 했는지 여부를 확인 하기 위해 결과를 확인할 수도 있습니다.

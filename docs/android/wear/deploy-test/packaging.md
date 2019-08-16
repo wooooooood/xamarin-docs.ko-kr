@@ -1,69 +1,69 @@
 ---
-title: Wear 앱 패키징
+title: 패키지 마모 앱
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 585c276b327a9092bdd13fa633307477017558c5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bca29089a61ed1f3400458f4b102c61023f47247
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276808"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522108"
 ---
-# <a name="packaging-wear-apps"></a>Wear 앱 패키징
+# <a name="packaging-wear-apps"></a>패키지 마모 앱
 
-Google Play에서 배포를 위해 전체 Android 앱을 android Wear 앱 패키징 됩니다. 
+Android 마모 된 앱은 Google Play에 배포할 수 있도록 전체 Android 앱으로 패키지 됩니다. 
 
 ## <a name="automatic-packaging"></a>자동 패키징
 
-Xamarin Android 5.0부터 Wear 앱 자동으로 패키지 됩니다 핸드헬드 장치 앱에서 리소스로 Wear 프로젝트 핸드헬드 프로젝트에서 프로젝트 참조를 만들 때. 이 연결을 만들려면 다음 단계를 사용할 수 있습니다. 
+Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 한 프로젝트 참조를 만들 때 앱이 자동으로 핸드헬드 앱에 리소스로 패키지 됩니다. 다음 단계를 사용 하 여이 연결을 만들 수 있습니다. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Wear 앱이 핸드헬드 솔루션의 일부로 이미 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > 기존 프로젝트 추가...** .
+1. 사용자의 앱이 핸드헬드 솔루션에 아직 포함 되지 않은 경우 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 기존 프로젝트 추가**...를 선택 합니다.
 
-2. 로 이동 합니다 **.csproj** 파일의 Wear 앱을 선택 하 고 클릭 **오픈**합니다. Wear 앱 프로젝트를 이제 핸드헬드 솔루션에 표시 됩니다.
+2. 마모 된 앱의 **.csproj** 파일로 이동 하 여 선택 하 고 **열기**를 클릭 합니다. 이제 마모 된 앱 프로젝트가 핸드헬드 솔루션에 표시 됩니다.
 
-3. 마우스 오른쪽 단추로 클릭 합니다 **참조가** 노드를 선택 **참조 추가**합니다.
+3. **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다.
 
-4. 에 **참조 관리자** 대화 상자에서 사용 Wear 프로젝트 (확인 표시를 추가 하려면 클릭)를 클릭 **확인**합니다.
+4. **참조 관리자** 대화 상자에서 사용자의 마모 프로젝트 (확인 표시를 추가 하려면 클릭)를 사용 하도록 설정 하 고 **확인**을 클릭 합니다.
 
-5. 핸드헬드 프로젝트의 패키지 이름을 일치 시킬 수 있도록 Wear 프로젝트에 대 한 패키지 이름을 변경 (패키지 이름 아래에서 변경할 수 있습니다 **속성 > Android 매니페스트**).
+5. 사용자의 프로젝트에 대 한 패키지 이름이 핸드헬드 프로젝트의 패키지 이름과 일치 하도록 변경 합니다. 패키지 이름은 **속성 > Android Manifest**에서 변경할 수 있습니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. Wear 앱이 핸드헬드 솔루션의 일부로 이미 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 > 기존 프로젝트 추가...** .
+1. 사용자의 앱이 핸드헬드 솔루션에 아직 포함 되지 않은 경우 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 기존 프로젝트 추가**...를 선택 합니다.
 
-2. 로 이동 합니다 **.csproj** 파일의 Wear 앱을 선택 하 고 클릭 **오픈**합니다. Wear 앱 프로젝트를 이제 핸드헬드 솔루션에 표시 됩니다.
+2. 마모 된 앱의 **.csproj** 파일로 이동 하 여 선택 하 고 **열기**를 클릭 합니다. 이제 마모 된 앱 프로젝트가 핸드헬드 솔루션에 표시 됩니다.
 
-3. 솔루션 및 클릭 핸드헬드 프로젝트 노드를 마우스 오른쪽 단추로 클릭 **참조 편집...** .
+3. 솔루션에서 핸드헬드 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 편집**...을 클릭 합니다.
 
-4. 에 **참조 편집** 대화 상자에서 사용 Wear 프로젝트 (확인 표시를 추가 하려면 클릭)를 클릭 **확인**합니다.
+4. **참조 편집** 대화 상자에서 사용자의 마모 프로젝트를 사용 하도록 설정 합니다 (확인 표시를 추가 하려면 클릭). 그런 다음 **확인**을 클릭 합니다.
 
-5. 핸드헬드 프로젝트의 패키지 이름을 일치 시킬 수 있도록 Wear 프로젝트에 대 한 패키지 이름을 변경 (패키지 이름 아래에서 변경할 수 있습니다 **프로젝트 옵션 > Android 응용 프로그램**).
+5. 사용자가 만든 프로젝트의 패키지 이름과 일치 하도록 사용자의 패키지 이름 변경 ( **Android 응용 프로그램 > 프로젝트 옵션**에서 패키지 이름 변경 가능)
 
 -----
 
 
-받을 수 있는 참고는 **XA5211** Wear 앱의 패키지 이름을 핸드헬드 장치 앱의 패키지 이름과 일치 하지 않습니다 하는 경우 오류가 발생 합니다. 예를 들어:
+마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예를 들어:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
 app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 ```
 
-이 오류를 해결 하려면 핸드헬드 장치 앱의 패키지 이름을 일치 시킬 수 있도록 Wear 앱의 패키지 이름을 변경 합니다.
+이 오류를 해결 하려면 핸드헬드 앱의 패키지 이름과 일치 하도록 마모 된 앱의 패키지 이름을 변경 합니다.
 
-클릭 하면 **빌드 > 모두 빌드**,이 연결을 주 Handheld (전화) 프로젝트에 자동 패키징 Wear 프로젝트의 트리거합니다. Wear 앱을 자동으로 빌드되어 핸드헬드 장치 앱에 리소스로 포함 합니다.
+**빌드 > 모두 빌드**를 클릭 하면이 연결은 기본 핸드헬드 (Phone) 프로젝트에 대 한 마모 프로젝트의 자동 패키징을 트리거합니다. 마모 된 앱은 자동으로 빌드되고 핸드헬드 앱에 리소스로 포함 됩니다.
 
-Wear 앱 프로젝트를 생성 하는 어셈블리도 Handheld (전화) 프로젝트의 어셈블리 참조 사용 되지 않습니다. 대신, 빌드 프로세스는 다음을 수행합니다.
+마모 된 앱 프로젝트가 생성 하는 어셈블리는 핸드헬드 (Phone) 프로젝트에서 어셈블리 참조로 사용 되지 않습니다. 대신, 빌드 프로세스에서 다음을 수행 합니다.
 
--   패키지 이름이 일치를 확인 합니다. 
+- 패키지 이름이 일치 하는지 확인 합니다. 
 
--   XML을 생성 하 고 Wear 앱과 연결할 핸드헬드 프로젝트에 추가 합니다. 예를 들어: 
+- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -74,20 +74,20 @@ Wear 앱 프로젝트를 생성 하는 어셈블리도 Handheld (전화) 프로�
     </ProjectReference>
     ```
 
--   Wear 앱을 추가 하는 **원시** 핸드헬드 프로젝트에 리소스입니다. 
+- 푸시 응용 프로그램을 Hpc 프로젝트에 **원시** 리소스로 추가 합니다. 
 
 
 ## <a name="manual-packaging"></a>수동 패키징
 
-이전 버전 5.0, Xamarin.Android에서 Android Wear 앱을 작성할 수 있습니다 하지만 앱을 배포 하려면 이러한 수동 패키징의 지침을 따라야 합니다. 
+Android 용 앱은 버전 5.0 이전에 Xamarin.ios에서 작성할 수 있지만 앱을 배포 하려면 다음 수동 패키징 지침을 따라야 합니다. 
 
-1. 착용 식 프로젝트 및 Handheld (전화) 프로젝트는 동일한 버전 번호와 패키지 이름을 가졌는지 확인 합니다.
+1. Wearable 프로젝트와 핸드헬드 (Phone) 프로젝트의 버전 번호와 패키지 이름이 동일한 지 확인 합니다.
 
-2. 수동으로 착용 식 프로젝트 빌드를 **릴리스** 작성 합니다.
+2. Wearable 프로젝트를 **릴리스** 빌드로 수동으로 빌드합니다.
 
-3. 릴리스를 수동으로 추가 **합니다. APK** 단계 (2)에 **리소스/원시** Handheld (전화) 프로젝트의 디렉터리입니다.
+3. 수동으로 릴리스를 추가 **합니다.** (2)에서 핸드헬드 (전화) 프로젝트의 **리소스/원시** 디렉터리로 apk를 실행 합니다.
 
-4. 수동으로 새 XML 리소스를 추가 **Resources/xml/wearable_app_desc.xml** 착용 식 참조 핸드헬드 프로젝트의 **APK** 단계 (3)에서:
+4. Wearable **Apk** 의 단계 (3)를 참조 하는 핸드헬드 프로젝트에서 새 Xml 리소스 **리소스/x m l/wearable_app_desc** 을 수동으로 추가 합니다.
 
     ```xml
     <wearableApp package="wearable.app.package.name">
@@ -97,12 +97,12 @@ Wear 앱 프로젝트를 생성 하는 어셈블리도 Handheld (전화) 프로�
     </wearableApp>
     ```
 
-5. 수동으로 추가 된 `<meta-data />` 핸드헬드 프로젝트의 요소 **AndroidManifest.xml** `<application>` 새 XML 리소스를 참조 하는 요소:
+5. 새 xml 리소스 `<meta-data />` 를 참조 하는 핸드헬드 프로젝트의 **androidmanifest .xml** `<application>` 요소에 요소를 수동으로 추가 합니다.
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"
         android:resource="@xml/wearable_app_desc"/>
     ```
 
-또한 Android 개발자 사이트의를 참조 하세요 [수동 packging 지침](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)합니다.
+Android 개발자 사이트의 [manual packging 지침](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)도 참조 하세요.
 

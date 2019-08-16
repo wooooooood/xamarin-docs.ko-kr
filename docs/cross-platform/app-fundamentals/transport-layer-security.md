@@ -6,19 +6,19 @@ ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: 639a62316d718534677b0ae86f9e5b57791c23e1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 31069199e8ebc89da76b63e58651adea82db6882
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649223"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526773"
 ---
 # <a name="transport-layer-security-tls-12"></a>TLS (Transport Layer Security) 1.2
 
 최신 버전의 [TLS ( _Transport Layer Security_ )](https://en.wikipedia.org/wiki/Transport_Layer_Security) 를 사용 하는 것은 응용 프로그램 네트워크 통신의 보안을 유지 하는 데 중요 합니다.
 
 > [!WARNING]
-> **4 월, 2018** – PCI 규정 준수를 포함 하 여 보안 요구 사항이 증가 함에 따라 주요 클라우드 공급자 및 웹 서버는 1.2 보다 오래 된 TLS 버전 지원을 중지 해야 합니다.  이전 버전의 Visual Studio에서 만든 Xamarin 프로젝트는 이전 버전의 TLS를 사용 합니다.
+> **4 월, 2018** – PCI 규정 준수를 포함 하 여 보안 요구 사항이 증가 함에 따라 주요 클라우드 공급자 및 웹 서버는 1.2 보다 오래 된 TLS 버전 지원을 중지 해야 합니다. 이전 버전의 Visual Studio에서 만든 Xamarin 프로젝트는 이전 버전의 TLS를 사용 합니다.
 >
 > 앱이 이러한 서버 및 서비스와 계속 작동 하는지 확인 하려면 **Xamarin 프로젝트를 업데이트 하 여 아래 설정을 사용 하 고 앱을 다시 빌드하고 다시 배포** 하 여 사용자에 게 배포 해야 합니다.
 

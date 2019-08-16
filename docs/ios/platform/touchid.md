@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: fe0f3c6904255284c01cbb3277086b01ec852d7b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 54e910d0a4f3301ca441fd18ddb27da930e9415c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654048"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528780"
 ---
 # <a name="touch-id-in-xamarinios"></a>Xamarin.ios의 Touch ID
 
@@ -127,7 +127,7 @@ ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecA
 3. **도구 상자** 에서 **Design Surface**새 **뷰 컨트롤러** 를 끌어 옵니다. **탐색 컨트롤러**에서 **Ctrl + Drag** 를 수행 하 여이를 **루트 뷰 컨트롤러로** 설정 합니다.
 
     [![](touchid-images/image4.png "루트 뷰 컨트롤러 설정")](touchid-images/image4.png#lightbox)
-4.  새 뷰 컨트롤러 `AuthenticationViewController`의 이름을로 표시 합니다.
+4. 새 뷰 컨트롤러 `AuthenticationViewController`의 이름을로 표시 합니다.
 5. 그런 다음 단추를 끌어서에 놓습니다 `AuthenticationViewController`. 이 `AuthenticateButton`를 호출 하 고 텍스트 `Add a Chore`를 지정 합니다.
 6. `AuthenticateButton` 호출`AuthenticateMe`된에서 이벤트를 만듭니다.
 7. 아래쪽에 있는 검은색 표시줄 `AuthenticationViewController` 을 클릭 하 고 **Ctrl + 끌어서** 를 선택 하 고 **푸시** (또는 size 클래스를 `MasterViewController` 사용 하는 경우 **표시** )를 선택 하 여에서 수동 segue을 만듭니다.

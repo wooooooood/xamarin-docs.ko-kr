@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: d8052e00809b15f0858583ee2919c47cfd8af00b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7526349c1b4b61495af95dfc200a5055cea5650e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646567"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529289"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
@@ -82,9 +82,9 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 
 해당 새 구문으로 다음과 같은 몇 가지 편리한 용어를 사용할 수 있습니다.
 
--  `Label`은 *개체 요소*입니다. XML 요소로 표현된 Xamarin.Forms 개체입니다.
--  `Text`, `VerticalOptions`, `FontAttributes` 및 `FontSize`는 *속성 특성* 입니다. 이들은 XML 특성으로 표현된 Xamarin.Forms 속성입니다.
--  해당 마지막 조각에서 `TextColor`는 *속성 요소*가 되었습니다. 이는 Xamarin.Forms 속성이지만 이제 XML 요소입니다.
+- `Label`은 *개체 요소*입니다. XML 요소로 표현된 Xamarin.Forms 개체입니다.
+- `Text`, `VerticalOptions`, `FontAttributes` 및 `FontSize`는 *속성 특성* 입니다. 이들은 XML 특성으로 표현된 Xamarin.Forms 속성입니다.
+- 해당 마지막 조각에서 `TextColor`는 *속성 요소*가 되었습니다. 이는 Xamarin.Forms 속성이지만 이제 XML 요소입니다.
 
 
 속성 요소의 정의는 처음에는 XML 구문을 위반하는 것처럼 보일 수 있지만 그렇지 않습니다. 마침표는 XML에서 특별한 의미가 없습니다. XML 디코더에서 `Label.TextColor`는 단순히 일반적인 자식 요소입니다.
@@ -176,13 +176,13 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 
 다음 특성을 사용하여 `Grid`의 각 자식에 대한 태그 내에서의 해당 자식의 행과 열을 지정합니다.
 
--  `Grid.Row`
--  `Grid.Column`
+- `Grid.Row`
+- `Grid.Column`
 
 해당 특성의 기본값은 0입니다. 다음의 특성을 사용하여 해당 속성을 가진 자식이 둘 이상의 행 또는 열에 걸쳐 있는지 여부를 나타낼 수도 있습니다.
 
--  `Grid.RowSpan`
--  `Grid.ColumnSpan`
+- `Grid.RowSpan`
+- `Grid.ColumnSpan`
 
 해당 두 특성의 기본값은 1입니다.
 

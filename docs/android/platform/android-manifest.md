@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 4a5b0e7d45878dcaa0f3e97411c2ef83d2e26c5a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510690"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524689"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
@@ -82,7 +82,7 @@ public class MyActivity : Activity
 ### <a name="activity-title-bar"></a>활동 제목 표시줄
 
 기본적으로 Android는 실행 될 때 응용 프로그램에 제목 표시줄을 제공 합니다. 이에 사용 되는 값 [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label)은입니다. 대부분의 경우이 값은 클래스 이름과 다릅니다. 제목 표시줄에 앱의 레이블을 지정 하려면 [`Label`](xref:Android.App.ActivityAttribute.Label) 속성을 사용 합니다.
-예: 
+예를 들어: 
 
 ```csharp
 [Activity (Label="Awesome Demo App")]
@@ -101,7 +101,7 @@ public class MyActivity : Activity
 
 ### <a name="launchable-from-application-chooser"></a>응용 프로그램 선택에서 시작 가능한
 
-기본적으로 작업은 Android의 응용 프로그램 시작 관리자 화면에 표시 되지 않습니다. 이는 응용 프로그램에 많은 활동이 있을 가능성이 높기 때문에 모든 활동이 필요 하지 않기 때문입니다. 응용 프로그램 시작 관리자에서 시작 가능한 해야 하는 항목을 지정 하려면 [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) 속성을 사용 합니다. 예: 
+기본적으로 작업은 Android의 응용 프로그램 시작 관리자 화면에 표시 되지 않습니다. 이는 응용 프로그램에 많은 활동이 있을 가능성이 높기 때문에 모든 활동이 필요 하지 않기 때문입니다. 응용 프로그램 시작 관리자에서 시작 가능한 해야 하는 항목을 지정 하려면 [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) 속성을 사용 합니다. 예를 들어: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -178,7 +178,7 @@ Android 매니페스트에 권한 [추가](https://github.com/xamarin/recipes/tr
 Android 매니페스트는 활동의 기능을 설명 하는 방법을 제공 합니다. 이것은 [의도](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 를 통해 수행 되며[`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
 사용자 지정 특성입니다. 을 사용 하 여 작업에 적절 한 작업을 지정할 수 있습니다.[`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
 생성자 및에 적합 한 범주[`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-속성의 값에 따라 달라집니다. 활동을 생성자에 제공 하는 것과 같은 활동을 하나 이상 제공 해야 합니다. `[IntentFilter]`는 여러 번 제공 될 수 있으며, 각를 사용 하면 `<intent-filter/>` `<activity/>`내에서 별도의 요소가 생성 됩니다. 예를 들어:
+속성의 값에 따라 달라집니다. 활동을 생성자에 제공 하는 것과 같은 활동을 하나 이상 제공 해야 합니다. `[IntentFilter]`는 여러 번 제공 될 수 있으며, 각를 사용 하면 `<intent-filter/>` `<activity/>`내에서 별도의 요소가 생성 됩니다. 예:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -237,18 +237,18 @@ public class MyActivity : Activity
 
 ## <a name="list-of-custom-attributes"></a>사용자 지정 특성 목록
 
--   [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : [/Manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML 조각을 생성 합니다. 
--   [Android.App.ApplicationAttribute](xref:Android.App.ApplicationAttribute) : [/Manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML 조각을 생성 합니다. 
--   [Android.App.InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : [/Manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML 조각을 생성 합니다. 
--   [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : [//Intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML 조각을 생성 합니다. 
--   [Android.App.MetaDataAttribute](xref:Android.App.MetaDataAttribute) : [//Meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML 조각을 생성 합니다. 
--   [Android.App.PermissionAttribute](xref:Android.App.PermissionAttribute) : / [권한](https://developer.android.com/guide/topics/manifest/permission-element.html) XML 조각을 생성 합니다. 
--   [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : / [그룹](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML 조각을 생성 합니다. 
--   [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : [트리](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML 조각을 생성 합니다. 
--   [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute) : [/Manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML 조각을 생성 합니다. 
--   [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : [/Manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML 조각을 생성 합니다. 
--   [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : [/Manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML 조각을 생성 합니다. 
--   [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : [/Manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML 조각을 생성 합니다. 
--   [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : [/Manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML 조각을 생성 합니다. 
--   [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : [/Manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML 조각을 생성 합니다.
+- [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : [/Manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML 조각을 생성 합니다. 
+- [Android.App.ApplicationAttribute](xref:Android.App.ApplicationAttribute) : [/Manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML 조각을 생성 합니다. 
+- [Android.App.InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : [/Manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML 조각을 생성 합니다. 
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : [//Intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML 조각을 생성 합니다. 
+- [Android.App.MetaDataAttribute](xref:Android.App.MetaDataAttribute) : [//Meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML 조각을 생성 합니다. 
+- [Android.App.PermissionAttribute](xref:Android.App.PermissionAttribute) : / [권한](https://developer.android.com/guide/topics/manifest/permission-element.html) XML 조각을 생성 합니다. 
+- [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : / [그룹](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML 조각을 생성 합니다. 
+- [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : [트리](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML 조각을 생성 합니다. 
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute) : [/Manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML 조각을 생성 합니다. 
+- [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : [/Manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML 조각을 생성 합니다. 
+- [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : [/Manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML 조각을 생성 합니다. 
+- [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : [/Manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML 조각을 생성 합니다. 
+- [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : [/Manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML 조각을 생성 합니다. 
+- [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : [/Manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML 조각을 생성 합니다.
 

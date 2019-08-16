@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 64a12f4f797630ad37e5821cd04a14a9d561c53e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8fb0b5136cc75463fc35ced2336e0ea321e8aecd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510687"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524424"
 ---
 # <a name="how-content-providers-work"></a>콘텐츠 공급자의 작동 방식
 
@@ -73,10 +73,10 @@ Android는 다음을 사용 하 여 `ContentProviders`광범위 한 시스템 �
 
 API `ContentProvider` 를 통해 소비자는 다음과 같은 다양 한 데이터 작업을 수행할 수 있습니다.
 
--  데이터를 쿼리하여 목록 또는 개별 레코드를 반환 합니다.
--  개별 레코드를 수정 합니다.
--  새 레코드를 추가 합니다.
--  레코드를 삭제 합니다.
+- 데이터를 쿼리하여 목록 또는 개별 레코드를 반환 합니다.
+- 개별 레코드를 수정 합니다.
+- 새 레코드를 추가 합니다.
+- 레코드를 삭제 합니다.
 
 이 문서에는 시스템 제공 `ContentProvider`를 사용 하는 예제와 사용자 지정 `ContentProvider`을 구현 하는 간단한 읽기 전용 예가 포함 되어 있습니다.
 

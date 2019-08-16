@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/06/2016
-ms.openlocfilehash: d01814bc241dcfb7b62f40bef226ee720a96ff23
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0dd3830b4903658d0b014eceaad9c57859963c04
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656999"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528636"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Xamarin.ios의 테이블 및 셀 작업
 
@@ -22,10 +22,10 @@ Xamarin.ios를 사용 하 여 플랫폼 간 응용 프로그램에서 작업 하
 
 다음 문서에서는 다음을 포함 하 여 테이블을 사용 하는 방법에 대해 자세히 살펴보겠습니다.
 
--   **테이블 파트** – `UITableView` 컨트롤의 시각적 요소를 소개 하 고 설명 합니다. 
--   **테이블에 데이터 표시** – 테이블을 만들고 채우고, 다른 테이블 및 셀 스타일을 사용 하 고, 셀 개체를 재생 하 여 메모리 문제를 방지 하는 방법을 보여 줍니다. 
--   **고급 사용** – 사용자 지정 셀을 빌드하고 UITableView 클래스의 편집 기능을 사용 합니다. 
--   **시각적으로 테이블 만들기** -Xamarin Designer for iOS를 사용 하 여 Storyboard를 사용 하 여 테이블 기반 인터페이스를 만듭니다. 
+- **테이블 파트** – `UITableView` 컨트롤의 시각적 요소를 소개 하 고 설명 합니다. 
+- **테이블에 데이터 표시** – 테이블을 만들고 채우고, 다른 테이블 및 셀 스타일을 사용 하 고, 셀 개체를 재생 하 여 메모리 문제를 방지 하는 방법을 보여 줍니다. 
+- **고급 사용** – 사용자 지정 셀을 빌드하고 UITableView 클래스의 편집 기능을 사용 합니다. 
+- **시각적으로 테이블 만들기** -Xamarin Designer for iOS를 사용 하 여 Storyboard를 사용 하 여 테이블 기반 인터페이스를 만듭니다. 
 
 ## <a name="contents"></a>목차
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a1bcb83d6057cb7d4a43c510d7b5805b574812e6
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: f71c275dd2beee6aedf41ecd19c8a4a39ab5a36f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510057"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522635"
 ---
 # <a name="xamarinandroid-gridview"></a>Xamarin Android GridView
 
@@ -136,7 +136,7 @@ public class ImageAdapter : BaseAdapter
 필요한 첫 번째 방법은 [`GetView()`](xref:Android.Widget.BaseAdapter.GetView*)입니다.
 이 메서드는 새를 만듭니다.[`View`](xref:Android.Views.View)
 에 추가 된 `ImageAdapter`각 이미지에 대해입니다. 이를 호출 하는 경우[`View`](xref:Android.Views.View)
-이 전달 됩니다 .이 개체는 일반적으로이를 한 번 호출한 후에 재활용 된 개체 이므로 개체가 null 인지 여부를 확인 합니다. *Null 인* 경우[`ImageView`](xref:Android.Widget.ImageView)
+이 전달 됩니다 .이 개체는 일반적으로이를 한 번 호출한 후에 재활용 된 개체 이므로 개체가 null 인지 여부를 확인 합니다. Null 인 경우[`ImageView`](xref:Android.Widget.ImageView)
 가 인스턴스화되어 이미지 표현의 desired 속성으로 구성 됩니다.
 
 - [`LayoutParams`](xref:Android.Views.View.LayoutParameters)보기&mdash;의 높이와 너비를 설정 합니다 .이를 위해 그릴 수 있는 크기에 관계 없이 각 이미지 크기를 조정 하 고 적절 하 게 이러한 크기에 맞게 자릅니다.
@@ -145,7 +145,7 @@ public class ImageAdapter : BaseAdapter
 
 - [`SetPadding(int, int, int, int)`](xref:Android.Views.View.SetPadding*)모든 변의 안쪽 여백을 정의 합니다. 이미지의 가로 세로 비율이 서로 다른 경우에는 이미지가 ImageView에 지정 된 차원과 일치 하지 않는 경우에는 더 많은 여백이 줄어듭니다.
 
-[`View`](xref:Android.Views.View) [에`GetView()`](xref:Android.Widget.BaseAdapter.GetView*) 전달 된 *가 null이* 아니면 로컬[`ImageView`](xref:Android.Widget.ImageView)
+에 [`View`](xref:Android.Views.View) [전달`GetView()`](xref:Android.Widget.BaseAdapter.GetView*) 된가 null 이 아니면 로컬[`ImageView`](xref:Android.Widget.ImageView)
 는 재활용 [`View`](xref:Android.Views.View) 된 개체를 사용 하 여 초기화 됩니다.
 
 끝에[`GetView()`](xref:Android.Widget.BaseAdapter.GetView*)
@@ -166,5 +166,4 @@ public class ImageAdapter : BaseAdapter
 - [`ImageView`](xref:Android.Widget.ImageView)
 - [`BaseAdapter`](xref:Android.Widget.BaseAdapter)
 
-*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
-[*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.
+_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a27bc699d6c7a77c8a970e363ca55bf54751df66
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 32cb0e376646478ad01a6ea7784094d23529b0b4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655636"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528614"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.ios의 데이터로 테이블 채우기
 
@@ -34,8 +34,8 @@ ms.locfileid: "68655636"
 
 테이블에 데이터를 표시 하는 데 필요한 두 가지 필수 메서드는 다음과 같습니다.
 
--   **Rowsinsection** – 테이블에 [`nint`](~/cross-platform/macios/nativetypes.md) 표시 해야 하는 총 데이터 행 수를 반환 합니다.
--   **Getcell** – 메서드에 전달 `UITableCellView` 된 해당 행 인덱스의 데이터로 채워진을 반환 합니다.
+- **Rowsinsection** – 테이블에 [`nint`](~/cross-platform/macios/nativetypes.md) 표시 해야 하는 총 데이터 행 수를 반환 합니다.
+- **Getcell** – 메서드에 전달 `UITableCellView` 된 해당 행 인덱스의 데이터로 채워진을 반환 합니다.
 
 
 BasicTable 샘플 파일 **TableSource.cs** 에는의 `UITableViewSource`가장 간단한 구현이 있습니다. 아래 코드 조각에서 확인할 수 있습니다. 아래 코드 조각에서는 테이블에 표시 되는 문자열의 배열을 허용 하 고 각 문자열이 포함 된 기본 셀 스타일을 반환 합니다.
@@ -239,9 +239,9 @@ keys = indexedTableItems.Keys.ToArray ();
 
 그런 다음를 `Dictionary<>` 사용 하려면 서브클래스에다음메서드를추가하거나수정해야합니다.`UITableViewSource`
 
--   **Numberofsections** –이 메서드는 선택 사항이 며 기본적으로 테이블은 하나의 섹션을 가정 합니다. 인덱스를 표시 하는 경우이 메서드는 인덱스의 항목 수를 반환 해야 합니다. 예를 들어 인덱스에 영어 알파벳의 모든 문자가 포함 된 경우에는 26입니다.
--   **Rowsinsection** – 지정 된 섹션의 행 수를 반환 합니다.
--   **섹션 Indextitles** – 인덱스를 표시 하는 데 사용 되는 문자열의 배열을 반환 합니다. 샘플 코드는 문자 배열을 반환 합니다.
+- **Numberofsections** –이 메서드는 선택 사항이 며 기본적으로 테이블은 하나의 섹션을 가정 합니다. 인덱스를 표시 하는 경우이 메서드는 인덱스의 항목 수를 반환 해야 합니다. 예를 들어 인덱스에 영어 알파벳의 모든 문자가 포함 된 경우에는 26입니다.
+- **Rowsinsection** – 지정 된 섹션의 행 수를 반환 합니다.
+- **섹션 Indextitles** – 인덱스를 표시 하는 데 사용 되는 문자열의 배열을 반환 합니다. 샘플 코드는 문자 배열을 반환 합니다.
 
 
 샘플 파일 **Basictableindex/Tableource. cs** 의 업데이트 된 메서드는 다음과 같습니다.
@@ -275,8 +275,8 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 헤더 및 바닥글을 표시 하려면 `UITableViewSource` 하위 클래스에 다음과 같은 추가 방법이 필요 합니다.
 
--   **TitleForHeader** – 헤더로 사용할 텍스트를 반환 합니다.
--   **TitleForFooter** – 바닥글로 사용할 텍스트를 반환 합니다.
+- **TitleForHeader** – 헤더로 사용할 텍스트를 반환 합니다.
+- **TitleForFooter** – 바닥글로 사용할 텍스트를 반환 합니다.
 
 
 샘플 파일 **Basictableheaderfooter/Code/Tableource. cs** 의 업데이트 된 메서드는 다음과 같습니다.

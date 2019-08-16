@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 11bca4bc74316f87ab7b329c897efcd4b768bc03
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f81a9d232e1702d112e837a80d35403162e3adca
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657114"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529334"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5장. 데이터 바인딩부터 MVVM까지
 
@@ -304,26 +304,26 @@ namespace XamlSamples
 
 ViewModel이 특정 사용자 인터페이스 개체와 좀 더 독립되도록 해주지만, ViewModel 내에서 메서드를 호출할 수 있도록 하려면 *command* 인터페이스가 있어야 합니다. 이 명령의 인터페이스는 Xamarin.Forms의 다음과 같은 요소에서 지원됩니다.
 
--  `Button`
--  `MenuItem`
--  `ToolbarItem`
--  `SearchBar`
--  `TextCell`(그리고 `ImageCell`도 따름)
--  `ListView`
--  `TapGestureRecognizer`
+- `Button`
+- `MenuItem`
+- `ToolbarItem`
+- `SearchBar`
+- `TextCell`(그리고 `ImageCell`도 따름)
+- `ListView`
+- `TapGestureRecognizer`
 
 `SearchBar`와 `ListView` 요소를 제외하고, 해당 요소들은 다음과 같이 두 개의 속성을 정의합니다.
 
--  `System.Windows.Input.ICommand` 유형의 `Command`
--  `Object` 유형의 `CommandParameter`
+- `System.Windows.Input.ICommand` 유형의 `Command`
+- `Object` 유형의 `CommandParameter`
 
 `SearchBar`는 `SearchCommand` 및  `SearchCommandParameter` 속성을 정의하는 반면 `ListView`는 `ICommand` 유형의 `RefreshCommand`를 정의합니다.
 
 `ICommand` 인터페이스는 다음과 같이 두 개의 메서드와 하나의 이벤트를 정의합니다.
 
--  `void Execute(object arg)`
--  `bool CanExecute(object arg)`
--  `event EventHandler CanExecuteChanged`
+- `void Execute(object arg)`
+- `bool CanExecute(object arg)`
+- `event EventHandler CanExecuteChanged`
 
 ViewModel은 `ICommand` 유형의 속성을 정의할 수 있습니다. 그런 다음 해당 속성들을 `Button`이나 다른 요소의 `Command` 속성 또는 해당 인터페이스를 구현하는 사용자 지정 뷰에 바인딩할 수 있습니다. 선택적으로 `CommandParameter` 속성을 설정하여 해당 ViewModel 속성에 바인딩된 개별 `Button` 개체(또는 다른 요소)를 식별할 수 있습니다. 내부적으로 `Button`은 사용자가 `Button`을 누를 때마다 `Execute` 메서드를 호출하고 `Execute` 메서드에 자신의 `CommandParameter`를 전달합니다.
 

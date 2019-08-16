@@ -1,5 +1,5 @@
 ---
-title: RESTful 웹 서비스를 인증 합니다.
+title: RESTful 웹 서비스 인증
 description: 기본 인증 자격 증명이 있는 클라이언트만를 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: bf334c7fde8433b7bbe45c8caaf962705c39320d
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 5a0e820c8a9f04b7ad9173893852285d53dbe7a6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650396"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529209"
 ---
-# <a name="authenticate-a-restful-web-service"></a>RESTful 웹 서비스를 인증 합니다.
+# <a name="authenticate-a-restful-web-service"></a>RESTful 웹 서비스 인증
 
 _HTTP은 리소스에 대 한 액세스를 제어 하는 몇 가지 인증 메커니즘 사용을 지원 합니다. 기본 인증 자격 증명이 있는 클라이언트만를 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법에 설명 합니다._
 
@@ -35,7 +35,7 @@ _HTTP은 리소스에 대 한 액세스를 제어 하는 몇 가지 인증 메�
 ![](rest-images/basic-authentication-success.png "기본 인증 성공")
 
 > [!NOTE]
-> HTTPS 연결을 통해만 기본 인증을 사용 해야 합니다. HTTP 연결을 통해 사용 하는 경우는 <code>Authorization</code> 공격자에 의해 캡처된 HTTP 트래픽을 하는 경우에 쉽게 헤더를 디코딩할 수 있습니다.
+> HTTPS 연결을 통해만 기본 인증을 사용 해야 합니다. HTTP 연결을 통해 사용 하는 경우는 `Authorization` 공격자에 의해 캡처된 HTTP 트래픽을 하는 경우에 쉽게 헤더를 디코딩할 수 있습니다.
 
 ## <a name="specifying-basic-authentication-in-a-web-request"></a>웹 요청에 지정 기본 인증
 
@@ -73,11 +73,11 @@ public class RestService : IRestService
 요청으로 서명 되어 웹 서비스 작업에는 요청이 만들어질 때 다음을 `Authorization` 사용자 작업을 호출할 수 있는 권한이 있는지 여부를 나타내는 헤더입니다.
 
 > [!NOTE]
-> 이 코드는 상수로 자격 증명을 저장, 하는 동안 이러한 해야 저장 되지 게시 된 응용 프로그램에서 안전 하지 않은 형식으로. 합니다 [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet 자격 증명을 안전 하 게 저장 하는 기능을 제공 합니다. 자세한 내용은 참조 [저장 및 장치에 대 한 계정 정보를 검색](~/xamarin-forms/data-cloud/authentication/oauth.md)합니다.
+> 이 코드는 자격 증명을 상수로 저장 하지만 게시 된 응용 프로그램에서는 안전 하지 않은 형식으로 저장 해서는 안 됩니다. 합니다 [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet 자격 증명을 안전 하 게 저장 하는 기능을 제공 합니다. 자세한 내용은 참조 [저장 및 장치에 대 한 계정 정보를 검색](~/xamarin-forms/data-cloud/authentication/oauth.md)합니다.
 
 ## <a name="processing-the-authorization-header-server-side"></a>권한 부여 헤더 서버 쪽 처리
 
-REST 서비스에는 각 작업을 데코 레이트 합니다는 `[BasicAuthentication]` 특성입니다. 이 특성 구문 분석 하는 데 사용 되는 `Authorization` 헤더에 저장 된 값을 비교 하 여 base64로 인코딩된 자격 증명이 올바른 경우 확인 하 고 *Web.config*합니다. 이 접근 방식은 샘플 서비스에 대 한 적합 한, 공용 웹 서비스에 대 한 확장이 필요 합니다.
+REST 서비스는 각 작업을 `[BasicAuthentication]` 특성으로 데코레이팅 해야 합니다. 이 특성은 헤더를 `Authorization` 구문 분석 하 고 base64 인코딩 자격 증명이 유효한 지를 확인 하는 데 사용 되며,이를 web.config에 저장 된 값과 비교 하 여 확인 합니다. 이 접근 방식은 샘플 서비스에 적합 하지만 공용 웹 서비스를 위해 확장 해야 합니다.
 
 IIS에서 사용 하는 기본 인증 모듈에서 사용자는 Windows 자격 증명에 대해 인증 됩니다. 따라서 사용자는 서버의 도메인에 계정이 있어야 합니다. 그러나 사용자 계정 데이터베이스와 같은 외부 원본에 대해 인증 됩니다 여기서 사용자 지정 인증을 허용 하는 기본 인증 모델을 구성할 수 있습니다. 자세한 내용은 참조 [ASP.NET Web API에서 기본 인증](http://www.asp.net/web-api/overview/security/basic-authentication) ASP.NET 웹 사이트입니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 1aacd9a29ca13335d14f66175b2d2a4ccb19c9dc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655959"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529067"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
@@ -71,12 +71,12 @@ layout.Margin = new Thickness(5, top, 5, 0);
 
 `Device.Idiom` 장치 응용 프로그램에 따라 기능에서 실행 되 고 또는 레이아웃을 변경 하려면 속성을 사용할 수 있습니다. 합니다 [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) 열거형 다음 값을 포함 합니다.
 
--  **Phone** – iPhone, iPod touch 및 Android 장치 600 dip 보다 너비가 좁습니다 ^
--  **태블릿** -iPad, Windows 장치 및 Android 장치 600 dip 보다 넓은 ^
--  **데스크톱** – 반환 [UWP 앱](~/xamarin-forms/platform/windows/installation/index.md) Windows 10 데스크톱 컴퓨터에서 (반환 `Phone` 연속성 시나리오에 포함 하 여 모바일 Windows 장치의)
--  **TV** – Tizen TV 장치
--  **조사식** – Tizen watch 장치
--  **지원 되지 않는** – 사용 되지 않는
+- **Phone** – iPhone, iPod touch 및 Android 장치 600 dip 보다 너비가 좁습니다 ^
+- **태블릿** -iPad, Windows 장치 및 Android 장치 600 dip 보다 넓은 ^
+- **데스크톱** – 반환 [UWP 앱](~/xamarin-forms/platform/windows/installation/index.md) Windows 10 데스크톱 컴퓨터에서 (반환 `Phone` 연속성 시나리오에 포함 하 여 모바일 Windows 장치의)
+- **TV** – Tizen TV 장치
+- **조사식** – Tizen watch 장치
+- **지원 되지 않는** – 사용 되지 않는
 
 *^ dip가 반드시 물리적 픽셀 수*
 

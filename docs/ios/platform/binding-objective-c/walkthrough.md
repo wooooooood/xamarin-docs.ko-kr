@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: b73f00eb704d80da6b0bab3a34f08f2d1cb70a16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646171"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527996"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -45,10 +45,10 @@ Xamarin.ios에서이 특정 목표-C API를 사용 하는 데 필요한 모든 �
 
 이 문서에서는 Xcode 및 목표-C 언어에 대해 잘 알고 있는 것으로 가정 하 고, [바인딩 목표-c](~/cross-platform/macios/binding/index.md) 설명서를 읽었습니다. 또한 다음은 제시 된 단계를 완료 하는 데 필요 합니다.
 
--  **Xcode 및 IOS SDK** -Apple의 Xcode와 최신 ios API는 개발자의 컴퓨터에 설치 하 고 구성 해야 합니다.
--  **[Xcode 명령줄 도구](#Installing_the_Xcode_Command_Line_Tools)** -현재 설치 된 Xcode 버전에 대해 Xcode 명령줄 도구를 설치 해야 합니다 (설치 정보는 아래 참조).
--  **Mac용 Visual Studio 또는 Visual studio** -개발 컴퓨터에서 최신 버전의 Mac용 Visual Studio 또는 visual studio를 설치 하 고 구성 해야 합니다. Xamarin.ios 응용 프로그램을 개발 하려면 Apple Mac이 필요 하 고, Visual Studio를 사용 하는 경우 [xamarin.ios 빌드 호스트](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 에 연결 해야 합니다.
--  **최신 버전의 목표 Sharpie** - [여기](~/cross-platform/macios/binding/objective-sharpie/get-started.md)에서 다운로드 한 목표 Sharpie 도구의 현재 복사본입니다. 이미 목표 Sharpie이 설치 되어 있는 경우 다음을 사용 하 여 최신 버전으로 업데이트할 수 있습니다.`sharpie update`
+- **Xcode 및 IOS SDK** -Apple의 Xcode와 최신 ios API는 개발자의 컴퓨터에 설치 하 고 구성 해야 합니다.
+- **[Xcode 명령줄 도구](#Installing_the_Xcode_Command_Line_Tools)** -현재 설치 된 Xcode 버전에 대해 Xcode 명령줄 도구를 설치 해야 합니다 (설치 정보는 아래 참조).
+- **Mac용 Visual Studio 또는 Visual studio** -개발 컴퓨터에서 최신 버전의 Mac용 Visual Studio 또는 visual studio를 설치 하 고 구성 해야 합니다. Xamarin.ios 응용 프로그램을 개발 하려면 Apple Mac이 필요 하 고, Visual Studio를 사용 하는 경우 [xamarin.ios 빌드 호스트](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 에 연결 해야 합니다.
+- **최신 버전의 목표 Sharpie** - [여기](~/cross-platform/macios/binding/objective-sharpie/get-started.md)에서 다운로드 한 목표 Sharpie 도구의 현재 복사본입니다. 이미 목표 Sharpie이 설치 되어 있는 경우 다음을 사용 하 여 최신 버전으로 업데이트할 수 있습니다.`sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 
@@ -332,7 +332,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 -----
 
-**파일이 프로젝트** 에 추가 되 면 xamarin.ios는 파일의 **빌드 작업** 을 자동으로 **ObjcBindingNativeLibrary**로 설정 하 고 라는 `libInfColorPickerSDK.linkwith.cs`특수 파일을 만듭니다.
+파일이 프로젝트 에 추가 되 면 xamarin.ios는 파일의 **빌드 작업** 을 자동으로 **ObjcBindingNativeLibrary**로 설정 하 고 라는 `libInfColorPickerSDK.linkwith.cs`특수 파일을 만듭니다.
 
 
 이 파일에는 `LinkWith` xamarin.ios에서 방금 추가한 정적 라이브러리를 처리 하는 방법을 설명 하는 특성이 포함 되어 있습니다. 이 파일의 내용은 다음 코드 조각에 나와 있습니다.

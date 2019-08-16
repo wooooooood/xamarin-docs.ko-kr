@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15ff11c5100f697e1945793da0baca68add082be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a4e165f6156bf5224881327049b2c3ed48b5c2fe
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646558"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522750"
 ---
 # <a name="viewpager-with-views"></a>보기가 있는 ViewPager
 
@@ -101,11 +101,11 @@ protected override void OnCreate(Bundle bundle)
 
 이 코드는 다음을 수행 합니다.
 
-1.  **주. axml** 레이아웃 리소스에서 뷰를 설정 합니다.
+1. **주. axml** 레이아웃 리소스에서 뷰를 설정 합니다.
 
-2.  레이아웃 `ViewPager` 에서에 대 한 참조를 검색 합니다.
+2. 레이아웃 `ViewPager` 에서에 대 한 참조를 검색 합니다.
 
-3.  새 `TreeCatalog` 를 데이터 소스로 인스턴스화합니다.
+3. 새 `TreeCatalog` 를 데이터 소스로 인스턴스화합니다.
 
 이 코드를 작성 하 고 실행 하면 다음 스크린샷에 표시 됩니다. 
 
@@ -120,13 +120,13 @@ protected override void OnCreate(Bundle bundle)
 
 을 구현 `PagerAdapter`하는 경우 다음을 재정의 해야 합니다.
 
--   **InstantiateItem** 지정 된 위치에`View`대 한 페이지 ()를 만들어 `ViewPager`의 뷰 컬렉션에 추가 합니다. &ndash; 
+- **InstantiateItem** 지정 된 위치에`View`대 한 페이지 ()를 만들어 `ViewPager`의 뷰 컬렉션에 추가 합니다. &ndash; 
 
--   **DestroyItem** &ndash; 지정 된 위치에서 페이지를 제거 합니다.
+- **DestroyItem** &ndash; 지정 된 위치에서 페이지를 제거 합니다.
 
--   **개수** &ndash; 사용 가능한 뷰 (페이지) 수를 반환 하는 읽기 전용 속성입니다. 
+- **개수** &ndash; 사용 가능한 뷰 (페이지) 수를 반환 하는 읽기 전용 속성입니다. 
 
--   **IsViewFromObject** &ndash; 페이지가 특정 키 개체와 연결 되어 있는지 여부를 확인 합니다. 이 개체는 `InstantiateItem` 메서드에 의해 생성 됩니다. 이 예제에서 키 개체 `TreeCatalog` 는 데이터 개체입니다.
+- **IsViewFromObject** &ndash; 페이지가 특정 키 개체와 연결 되어 있는지 여부를 확인 합니다. 이 개체는 `InstantiateItem` 메서드에 의해 생성 됩니다. 이 예제에서 키 개체 `TreeCatalog` 는 데이터 개체입니다.
 
 **TreePagerAdapter.cs** 라는 새 파일을 추가 하 고 해당 내용을 다음 코드로 바꿉니다. 
 
@@ -224,14 +224,14 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 
 이 코드는 다음을 수행 합니다.
 
-1.  새 `ImageView` 를 인스턴스화하여 지정 된 위치에 트리 이미지를 표시 합니다. 앱 `MainActivity` 은 `ImageView` 생성자에 전달 되는 컨텍스트입니다.
+1. 새 `ImageView` 를 인스턴스화하여 지정 된 위치에 트리 이미지를 표시 합니다. 앱 `MainActivity` 은 `ImageView` 생성자에 전달 되는 컨텍스트입니다.
 
-2.  리소스를 지정 된 위치 `TreeCatalog` 에 있는 이미지 리소스 ID로 설정 합니다. `ImageView`
+2. 리소스를 지정 된 위치 `TreeCatalog` 에 있는 이미지 리소스 ID로 설정 합니다. `ImageView`
 
-3.  전달 된 컨테이너 `View` 를 `ViewPager` 참조로 캐스팅 합니다.
+3. 전달 된 컨테이너 `View` 를 `ViewPager` 참조로 캐스팅 합니다.
     를 사용 `JavaCast<ViewPager>()` 하 여이 캐스트를 올바르게 수행 해야 합니다 .이는 Android에서 런타임 검사 형식 변환을 수행 하는 데 필요 합니다.
 
-4.  인스턴스화된 `ImageView` 를에`ImageView` 추가 하 고를호출자에게반환합니다.`ViewPager`
+4. 인스턴스화된 `ImageView` 를에`ImageView` 추가 하 고를호출자에게반환합니다.`ViewPager`
 
 에서 `ViewPager` 이미지를표시하`ImageView`는 경우이 를표시합니다.`position` 처음에 `InstantiateItem` 는 처음 두 페이지를 뷰로 채우기 위해가 두 번 호출 됩니다. 사용자가 스크롤하면 현재 표시 된 항목의 바로 뒤에 있는 뷰를 유지 하기 위해 다시 호출 됩니다. 
 
@@ -253,11 +253,11 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 이 코드는 다음을 수행 합니다.
 
-1.  전달 된 컨테이너 `View` 를 `ViewPager` 참조로 캐스팅 합니다.
+1. 전달 된 컨테이너 `View` 를 `ViewPager` 참조로 캐스팅 합니다.
 
-2.  전달 된`view`Java 개체 ()를 C# `View` (`view as View`)로 캐스팅 합니다.
+2. 전달 된`view`Java 개체 ()를 C# `View` (`view as View`)로 캐스팅 합니다.
 
-3.  에서 뷰를 제거 합니다 `ViewPager`. 
+3. 에서 뷰를 제거 합니다 `ViewPager`. 
 
 
 
@@ -265,7 +265,7 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 사용자가 콘텐츠 페이지에서 왼쪽과 오른쪽으로 이동 하면을 `ViewPager` 호출 `IsViewFromObject` 하 여 지정 된 위치의 자식이 `View` 같은 위치에 대 한 어댑터의 개체와 연결 되어 있는지 확인 합니다. 따라서 어댑터의 개체를 *개체 키*). 비교적 간단한 앱의 경우 연결은 id &ndash; 중 하나입니다. 해당 인스턴스에서 어댑터의 개체 키는 이전에 `ViewPager` 를 통해 `InstantiateItem`로 반환 된 뷰입니다. 그러나 다른 앱의 경우에는 개체 키가 해당 위치에 표시 되 `ViewPager` 는 자식 뷰와 연결 되어 있지만 이와는 다른 어댑터별 클래스 인스턴스일 수 있습니다. 어댑터 에서만 전달 된 뷰와 개체 키가 연결 되어 있는지 여부를 알 수 있습니다. 
 
-`IsViewFromObject`제대로 작동 `PagerAdapter` 하려면를 구현 해야 합니다. 이 `IsViewFromObject` 지정 `false` 된 위치`ViewPager` 에 대해를 반환 하면는 해당 위치에 뷰를 표시 하지 않습니다. 앱에서 `InstantiateItem` *에 의해 반환* 되는 개체 키는 트리의 페이지 `View` 이므로 코드에서 id를 확인 하기만 하면 됩니다. 즉, 개체 키와 뷰가 동일 합니다. `TreePager` `IsViewFromObject`를 다음 코드로 바꿉니다. 
+`IsViewFromObject`제대로 작동 `PagerAdapter` 하려면를 구현 해야 합니다. 이 `IsViewFromObject` 지정 `false` 된 위치`ViewPager` 에 대해를 반환 하면는 해당 위치에 뷰를 표시 하지 않습니다. 앱에서에 의해 `InstantiateItem` 반환 되는 개체 키는 트리의 페이지 `View` 이므로 코드에서 id를 확인 하기만 하면 됩니다. 즉, 개체 키와 뷰가 동일 합니다. `TreePager` `IsViewFromObject`를 다음 코드로 바꿉니다. 
 
 ```csharp
 public override bool IsViewFromObject(View view, Java.Lang.Object obj)

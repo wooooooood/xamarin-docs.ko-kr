@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: d48f7012d0389b262e2dfce560d4f8aa925c21d5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655647"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528898"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임워크 변경 내용
 
@@ -39,12 +39,12 @@ MacOS Sierra AppKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 - 지연 된 뷰 레이아웃 패스가 최적화 되 고 확장 되었습니다.
 - 이제 끌어서 놓기 API에는 끌기 flocking 지원 하기 `NSFilePromiseProvider` 위한 `NSFilePromiseReceiver` 새로운 및 클래스가 포함 되어 있습니다.
 - 기존 컨트롤에 몇 가지 편리한 생성자를 추가 했습니다.
-    -  `NSButton`에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-    -  `NSTextField`줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
-    -  `NSSegmentedControl`에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-    -  `NSSlider`에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-    -  `NSImageView`지정 `NSImage`된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 합니다.
--  동적으로 `NSGridView` 숨기 거 나 표시할 수 있는 가변 크기의 행과 열이 있는 그리드에 하위 뷰의 컬렉션을 자동으로 레이아웃 하기 위해 새가 추가 되었습니다.
+    - `NSButton`에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+    - `NSTextField`줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
+    - `NSSegmentedControl`에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+    - `NSSlider`에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+    - `NSImageView`지정 `NSImage`된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 합니다.
+- 동적으로 `NSGridView` 숨기 거 나 표시할 수 있는 가변 크기의 행과 열이 있는 그리드에 하위 뷰의 컬렉션을 자동으로 레이아웃 하기 위해 새가 추가 되었습니다.
 
 <a name="AVFoundation-Framework-Enhancements" />
 

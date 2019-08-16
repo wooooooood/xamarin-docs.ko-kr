@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 5230294dcacf6677e145dd8803d65841b3e22618
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 889bc13cfd0cbea51c34e8b3bcb6393293f4c2ae
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655429"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528751"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Xamarin.ios의 수동 카메라 컨트롤
 
@@ -32,9 +32,9 @@ IOS 장치에서 카메라를 사용 하 여 비디오 또는 이미지를 사�
 
 응용 프로그램은 iOS 8에서 제공 되는 새 Api를 사용 하 여 다음과 같은 카메라 기능을 제어할 수 있습니다.
 
--  **수동 포커스** – 최종 사용자가 포커스를 직접 제어할 수 있도록 하 여 응용 프로그램에서 사용 되는 이미지를 보다 세밀 하 게 제어할 수 있습니다.
--  **수동 노출** -노출을 수동으로 제어 하 여 응용 프로그램은 사용자에 게 보다 자유롭게 사용자를 제공 하 고 스타일을 지정할 수 있습니다.
--  **수동 흰색 밸런스** – 흰색 밸런스는 이미지의 색을 조정 하는 데 사용 됩니다 .이 경우에는 자주 사용 됩니다. 광원 마다 색 온도가 다르고 이미지를 캡처하는 데 사용 되는 카메라 설정이 이러한 차이를 보정 하도록 조정 됩니다. 사용자가 사용자 정의 컨트롤을 사용 하면 사용자가 자동으로 수행할 수 없는 조정을 수행할 수 있습니다.
+- **수동 포커스** – 최종 사용자가 포커스를 직접 제어할 수 있도록 하 여 응용 프로그램에서 사용 되는 이미지를 보다 세밀 하 게 제어할 수 있습니다.
+- **수동 노출** -노출을 수동으로 제어 하 여 응용 프로그램은 사용자에 게 보다 자유롭게 사용자를 제공 하 고 스타일을 지정할 수 있습니다.
+- **수동 흰색 밸런스** – 흰색 밸런스는 이미지의 색을 조정 하는 데 사용 됩니다 .이 경우에는 자주 사용 됩니다. 광원 마다 색 온도가 다르고 이미지를 캡처하는 데 사용 되는 카메라 설정이 이러한 차이를 보정 하도록 조정 됩니다. 사용자가 사용자 정의 컨트롤을 사용 하면 사용자가 자동으로 수행할 수 없는 조정을 수행할 수 있습니다.
 
 
 iOS 8은 기존 iOS Api에 대 한 확장 및 향상 된 기능을 제공 하 여 이미지 캡처 프로세스에 대 한 세분화 된 제어를 제공 합니다.
@@ -49,9 +49,9 @@ iOS 8은 기존 iOS Api에 대 한 확장 및 향상 된 기능을 제공 하 �
 
 이 문서에 제공 된 단계를 완료 하려면 다음이 필요 합니다.
 
--  **Xcode 7 이상 및 ios 8 이상** – Apple의 Xcode 7 및 ios 8 이상 api를 개발자의 컴퓨터에 설치 하 고 구성 해야 합니다.
--  **Mac용 Visual Studio** – 최신 버전의 Mac용 Visual Studio를 설치 하 고 사용자 장치에 구성 해야 합니다.
--  **ios 8 장치** – 최신 버전의 ios 8을 실행 하는 ios 장치입니다. IOS 시뮬레이터에서는 카메라 기능을 테스트할 수 없습니다.
+- **Xcode 7 이상 및 ios 8 이상** – Apple의 Xcode 7 및 ios 8 이상 api를 개발자의 컴퓨터에 설치 하 고 구성 해야 합니다.
+- **Mac용 Visual Studio** – 최신 버전의 Mac용 Visual Studio를 설치 하 고 사용자 장치에 구성 해야 합니다.
+- **ios 8 장치** – 최신 버전의 ios 8을 실행 하는 ios 장치입니다. IOS 시뮬레이터에서는 카메라 기능을 테스트할 수 없습니다.
 
 
 ## <a name="general-av-capture-setup"></a>일반 AV 캡처 설정
@@ -300,11 +300,11 @@ IOS 장치에서 렌즈는 가까운 자석 및 스프링에서 센서에 가깝
 
 포커스를 처리할 때 개발자가 알아야 할 몇 가지 용어가 있습니다.
 
--  **필드의 깊이** – 가장 가까이와 가장 가까이 있는 개체 사이의 거리입니다. 
--  **매크로** -포커스 스펙트럼의 가까운 끝 이며, 렌즈가 포커스를 이동할 수 있는 가장 가까운 거리입니다.
--  **Infinity** – 포커스 스펙트럼의 끝 부분으로, 렌즈가 집중할 수 있는 가장 먼 거리입니다.
--  하이퍼 **초점 거리** – 프레임의 가장 먼 개체가 포커스의 맨 끝에만 있는 포커스 스펙트럼의 지점입니다. 즉, 필드의 깊이를 최대화 하는 초점면 위치가 여기에 해당 합니다. 
--  **렌즈 위치** – 위의 모든 용어를 제어 하는 것입니다. 센서의 렌즈와 포커스의 컨트롤러 사이의 거리입니다.
+- **필드의 깊이** – 가장 가까이와 가장 가까이 있는 개체 사이의 거리입니다. 
+- **매크로** -포커스 스펙트럼의 가까운 끝 이며, 렌즈가 포커스를 이동할 수 있는 가장 가까운 거리입니다.
+- **Infinity** – 포커스 스펙트럼의 끝 부분으로, 렌즈가 집중할 수 있는 가장 먼 거리입니다.
+- 하이퍼 **초점 거리** – 프레임의 가장 먼 개체가 포커스의 맨 끝에만 있는 포커스 스펙트럼의 지점입니다. 즉, 필드의 깊이를 최대화 하는 초점면 위치가 여기에 해당 합니다. 
+- **렌즈 위치** – 위의 모든 용어를 제어 하는 것입니다. 센서의 렌즈와 포커스의 컨트롤러 사이의 거리입니다.
 
 
 이러한 용어와 정보를 염두에 두고 새로운 수동 포커스 컨트롤을 iOS 8 응용 프로그램에서 성공적으로 구현할 수 있습니다.
@@ -313,17 +313,17 @@ IOS 장치에서 렌즈는 가까운 자석 및 스프링에서 센서에 가깝
 
 iOS 7 및 이전 버전에서는 기존 포커스가 다음과 같이 속성을 `FocusMode`통해 제어 됩니다.
 
--   `AVCaptureFocusModeLocked`– 포커스는 단일 포커스 지점에서 잠깁니다.
--   `AVCaptureFocusModeAutoFocus`– 카메라는 선명 하 게 포커스를 찾은 다음 해당 위치에 유지 될 때까지 모든 초점을 통해 렌즈를 스윕 합니다.
--   `AVCaptureFocusModeContinuousAutoFocus`– 카메라가 포커스를 벗어난 상태를 감지할 때마다 refocuses.
+- `AVCaptureFocusModeLocked`– 포커스는 단일 포커스 지점에서 잠깁니다.
+- `AVCaptureFocusModeAutoFocus`– 카메라는 선명 하 게 포커스를 찾은 다음 해당 위치에 유지 될 때까지 모든 초점을 통해 렌즈를 스윕 합니다.
+- `AVCaptureFocusModeContinuousAutoFocus`– 카메라가 포커스를 벗어난 상태를 감지할 때마다 refocuses.
 
 
 또한 기존 컨트롤은 사용자가 특정 영역에 초점을 맞출`FocusPointOfInterest` 수 있도록 속성을 통해 설정 가능한 관심 지점을 제공 합니다. 응용 프로그램은 속성을 `IsAdjustingFocus` 모니터링 하 여 렌즈 움직임을 추적할 수도 있습니다.
 
 또한 `AutoFocusRangeRestriction` 속성에서 범위 제한이 다음과 같이 제공 되었습니다.
 
--   `AVCaptureAutoFocusRangeRestrictionNear`– 자동 포커스를 주변 깊이에 제한 합니다. QR 코드 또는 바코드를 스캔 하는 경우에 유용 합니다.
--   `AVCaptureAutoFocusRangeRestrictionFar`– Autofocus를 원거리 수준으로 제한 합니다. 관련이 없는 것으로 알려진 개체가 뷰 필드 (예를 들어 창 프레임)에 있는 경우에 유용 합니다.
+- `AVCaptureAutoFocusRangeRestrictionNear`– 자동 포커스를 주변 깊이에 제한 합니다. QR 코드 또는 바코드를 스캔 하는 경우에 유용 합니다.
+- `AVCaptureAutoFocusRangeRestrictionFar`– Autofocus를 원거리 수준으로 제한 합니다. 관련이 없는 것으로 알려진 개체가 뷰 필드 (예를 들어 창 프레임)에 있는 경우에 유용 합니다.
 
 
 마지막으로 자동 포커스 `SmoothAutoFocus` 알고리즘의 속도를 높이는 속성을 사용 하 고 비디오를 녹화할 때 아티팩트 이동을 방지 하기 위해 더 작은 증분으로 단계를 수행 합니다.
@@ -332,8 +332,8 @@ iOS 7 및 이전 버전에서는 기존 포커스가 다음과 같이 속성을 
 
 IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사용 하 여 iOS 8에서 포커스를 제어할 수 있습니다.
 
--  포커스를 잠글 때 렌즈 위치를 완전히 수동으로 제어 합니다.
--  포커스 모드에서 렌즈 위치의 키-값 관찰.
+- 포커스를 잠글 때 렌즈 위치를 완전히 수동으로 제어 합니다.
+- 포커스 모드에서 렌즈 위치의 키-값 관찰.
 
 
 위의 기능을 구현 하기 위해 클래스 `AVCaptureDevice` 는 카메라 렌즈의 현재 위치를 가져오는 데 사용 `LensPosition` 되는 읽기 전용 속성을 포함 하도록 수정 되었습니다.
@@ -360,9 +360,9 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
 
 뷰에는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
--  비디오 피드를 표시 하는입니다.`UIImageView`
--  포커스 모드를 자동에서 잠김으로 변경 하는입니다.`UISegmentedControl`
--  현재 렌즈 위치를 표시 하 고 업데이트 하는입니다.`UISlider`
+- 비디오 피드를 표시 하는입니다.`UIImageView`
+- 포커스 모드를 자동에서 잠김으로 변경 하는입니다.`UISegmentedControl`
+- 현재 렌즈 위치를 표시 하 고 업데이트 하는입니다.`UISlider`
 
 
 수동 포커스 제어를 위해 보기 컨트롤러를 연결 하려면 다음을 수행 합니다.
@@ -516,9 +516,9 @@ IOS 8 응용 프로그램에서 노출을 제어 하는 방법에 대 한 자세
 
 노출을 제어 하기 위해 함께 제공 되는 세 가지 기본 요소는 다음과 같습니다.
 
--  **셔터 속도** – 카메라 센서를 밝게 하기 위해 셔터를 여는 데 걸리는 시간입니다. 셔터를 여는 시간이 짧을수록 빛이 줄어들고 이미지가 더 선명해 지는 것이 좋습니다 (동작 흐림 효과 낮음). 셔터를 더 길게 열면에서 더 많은 조명을 사용 하 고 더 많은 동작 흐림을 발생 합니다.
--  **ISO 매핑** – 필름 사진에서 빌려 온 용어 이며 필름의 화학 물질의 민감도를 나타냅니다. 필름의 낮은 ISO 값은 더 적고 색을 더 세밀 하 게 복제 합니다. 디지털 센서의 낮은 ISO 값은 센서 노이즈가 적고 밝기가 낮습니다. ISO 값이 높을수록 이미지의 밝기는 높아지지만 센서 소음은 더 커집니다. 디지털 센서의 "ISO"는 물리적 기능이 아니라 [전자적 이득을](https://en.wikipedia.org/wiki/Gain)측정 한 것입니다. 
--  **렌즈 애퍼처** – 렌즈를 여는 크기입니다. 모든 iOS 장치에서 렌즈 애퍼처는 고정 되어 있으므로 노출을 조정 하는 데 사용할 수 있는 두 값은 셔터 속도와 ISO입니다.
+- **셔터 속도** – 카메라 센서를 밝게 하기 위해 셔터를 여는 데 걸리는 시간입니다. 셔터를 여는 시간이 짧을수록 빛이 줄어들고 이미지가 더 선명해 지는 것이 좋습니다 (동작 흐림 효과 낮음). 셔터를 더 길게 열면에서 더 많은 조명을 사용 하 고 더 많은 동작 흐림을 발생 합니다.
+- **ISO 매핑** – 필름 사진에서 빌려 온 용어 이며 필름의 화학 물질의 민감도를 나타냅니다. 필름의 낮은 ISO 값은 더 적고 색을 더 세밀 하 게 복제 합니다. 디지털 센서의 낮은 ISO 값은 센서 노이즈가 적고 밝기가 낮습니다. ISO 값이 높을수록 이미지의 밝기는 높아지지만 센서 소음은 더 커집니다. 디지털 센서의 "ISO"는 물리적 기능이 아니라 [전자적 이득을](https://en.wikipedia.org/wiki/Gain)측정 한 것입니다. 
+- **렌즈 애퍼처** – 렌즈를 여는 크기입니다. 모든 iOS 장치에서 렌즈 애퍼처는 고정 되어 있으므로 노출을 조정 하는 데 사용할 수 있는 두 값은 셔터 속도와 ISO입니다.
 
 
 ### <a name="how-continuous-auto-exposure-works"></a>연속 자동 노출이 작동 하는 방식
@@ -541,8 +541,8 @@ IOS 8 응용 프로그램에서 노출을 제어 하는 방법에 대 한 자세
 
 iOS 7 이상에서는 `ExposureMode` 속성을 통해 다음과 같은 기존 노출 컨트롤을 제공 합니다.
 
--   `AVCaptureExposureModeLocked`– 장면을 한 번 샘플링 하 고 장면 전체에서 해당 값을 사용 합니다.
--   `AVCaptureExposureModeContinuousAutoExposure`– 장면을 연속 해 서 샘플링 하 여 제대로 작동 하는지 확인 합니다.
+- `AVCaptureExposureModeLocked`– 장면을 한 번 샘플링 하 고 장면 전체에서 해당 값을 사용 합니다.
+- `AVCaptureExposureModeContinuousAutoExposure`– 장면을 연속 해 서 샘플링 하 여 제대로 작동 하는지 확인 합니다.
 
 
 을 (를) 사용 하 여 노출할 대상 개체를 선택 하 여 장면을 노출 하 고, 응용 프로그램에서 속성을 `AdjustingExposure` 모니터링 하 여 노출이 조정 될 때 볼 수 있습니다. `ExposurePointOfInterest`
@@ -551,8 +551,8 @@ iOS 7 이상에서는 `ExposureMode` 속성을 통해 다음과 같은 기존 �
 
 IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사용 하 여 iOS 8에서 노출을 제어할 수 있습니다.
 
--  완전히 수동 사용자 지정 노출.
--  Get, Set 및 Key 값은 IOS 및 셔터 속도 (기간)를 관찰 합니다.
+- 완전히 수동 사용자 지정 노출.
+- Get, Set 및 Key 값은 IOS 및 셔터 속도 (기간)를 관찰 합니다.
 
 
 위의 기능을 구현 하기 위해 새 `AVCaptureExposureModeCustom` 모드가 추가 되었습니다. 의 카메라가 사용자 지정 모드 이면 다음 코드를 사용 하 여 노출 기간 및 ISO를 조정할 수 있습니다.
@@ -573,12 +573,12 @@ CaptureDevice.UnlockForConfiguration();
 
 최소 및 최대 설정 범위는 응용 프로그램이 실행 되는 장치에 따라 달라 지므로 하드 코드 되어서는 안 됩니다. 대신 다음 속성을 사용 하 여 최소 및 최대 값 범위를 가져옵니다.
 
--   `CaptureDevice.MinExposureTargetBias` 
--   `CaptureDevice.MaxExposureTargetBias` 
--   `CaptureDevice.ActiveFormat.MinISO` 
--   `CaptureDevice.ActiveFormat.MaxISO` 
--   `CaptureDevice.ActiveFormat.MinExposureDuration` 
--   `CaptureDevice.ActiveFormat.MaxExposureDuration` 
+- `CaptureDevice.MinExposureTargetBias` 
+- `CaptureDevice.MaxExposureTargetBias` 
+- `CaptureDevice.ActiveFormat.MinISO` 
+- `CaptureDevice.ActiveFormat.MaxISO` 
+- `CaptureDevice.ActiveFormat.MinExposureDuration` 
+- `CaptureDevice.ActiveFormat.MaxExposureDuration` 
 
 
 위의 코드에서 볼 수 있듯이 캡처 장치를 구성 하려면 먼저 잠금 상태를 변경 해야 노출이 변경 될 수 있습니다.
@@ -591,9 +591,9 @@ CaptureDevice.UnlockForConfiguration();
 
 뷰에는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
--  비디오 피드를 표시 하는입니다.`UIImageView`
--  포커스 모드를 자동에서 잠김으로 변경 하는입니다.`UISegmentedControl`
--  오프셋 `UISlider` , 기간, ISO 및 바이어스를 표시 하 고 업데이트 하는 네 가지 컨트롤.
+- 비디오 피드를 표시 하는입니다.`UIImageView`
+- 포커스 모드를 자동에서 잠김으로 변경 하는입니다.`UISegmentedControl`
+- 오프셋 `UISlider` , 기간, ISO 및 바이어스를 표시 하 고 업데이트 하는 네 가지 컨트롤.
 
 
 다음을 수행 하 여 수동 노출 제어를 위해 뷰 컨트롤러를 연결 합니다.
@@ -835,8 +835,8 @@ iOS 장치는 이와 반대 되는 색 획득을 통해 색 캐스트를 보정 
 
 iOS 7 이상에서는 속성을 통해 `WhiteBalanceMode` 다음과 같은 기존 흰색 잔액 컨트롤을 제공 했습니다.
 
--   `AVCapture WhiteBalance ModeLocked`– 장면을 한 번 샘플링 하 고 장면 전체에 해당 값을 사용 합니다.
--   `AVCapture WhiteBalance ModeContinuousAutoExposure`– 적절 한 균형을 유지 하기 위해 장면을 지속적으로 샘플링 합니다.
+- `AVCapture WhiteBalance ModeLocked`– 장면을 한 번 샘플링 하 고 장면 전체에 해당 값을 사용 합니다.
+- `AVCapture WhiteBalance ModeContinuousAutoExposure`– 적절 한 균형을 유지 하기 위해 장면을 지속적으로 샘플링 합니다.
 
 
 그리고 응용 프로그램은 `AdjustingWhiteBalance` 속성을 모니터링 하 여 노출이 조정 될 때를 확인할 수 있습니다.
@@ -845,17 +845,17 @@ iOS 7 이상에서는 속성을 통해 `WhiteBalanceMode` 다음과 같은 기�
 
 IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사용 하 여 iOS 8의 흰색 균형을 제어할 수 있습니다.
 
--  장치 RGB 이득을 완전히 수동으로 제어 합니다.
--  Get, Set 및 Key 값은 장치 RGB 이득을 관찰 합니다.
--  회색 카드를 사용한 흰색 밸런스 지원.
--  장치 독립적 색 공간에 대 한 변환 루틴.
+- 장치 RGB 이득을 완전히 수동으로 제어 합니다.
+- Get, Set 및 Key 값은 장치 RGB 이득을 관찰 합니다.
+- 회색 카드를 사용한 흰색 밸런스 지원.
+- 장치 독립적 색 공간에 대 한 변환 루틴.
 
 
 위의 기능 `AVCaptureWhiteBalanceGain` 을 구현 하기 위해 구조가 다음과 같은 멤버와 함께 추가 되었습니다.
 
--   `RedGain` 
--   `GreenGain` 
--   `BlueGain` 
+- `RedGain` 
+- `GreenGain` 
+- `BlueGain` 
 
 
 최대 잔액 이득은 현재 4 (4) 이며 `MaxWhiteBalanceGain` 속성에서 준비할 수 있습니다. 따라서 올바른 범위는 (1)에서 (4) `MaxWhiteBalanceGain` 로 현재입니다.
@@ -866,14 +866,14 @@ IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사
 
 변환 루틴은 장치 독립적 색 공간으로 변환 하는 데 도움이 되도록 iOS 8에 추가 되었습니다. 변환 루틴을 `AVCaptureWhiteBalanceChromaticityValues` 구현 하기 위해 구조가 다음과 같은 멤버와 함께 추가 되었습니다.
 
--   `X`-0에서 1 사이의 값입니다.
--   `Y`-0에서 1 사이의 값입니다.
+- `X`-0에서 1 사이의 값입니다.
+- `Y`-0에서 1 사이의 값입니다.
 
 
 또한 다음과 같은 멤버를 사용 하 여 구조체를추가했습니다.`AVCaptureWhiteBalanceTemperatureAndTintValues`
 
--   `Temperature`-절대 온도 단위의 부동 소수점 값입니다.
--   `Tint`-0에서 150 사이의 오프셋으로, 양수 값은 녹색 방향으로, 자홍에서는 음수입니다.
+- `Temperature`-절대 온도 단위의 부동 소수점 값입니다.
+- `Tint`-0에서 150 사이의 오프셋으로, 양수 값은 녹색 방향으로, 자홍에서는 음수입니다.
 
 
 `CaptureDevice.GetTemperatureAndTintValues` 및메서드를사용하여온도와색조,chromaticity및RGB게인색`CaptureDevice.GetDeviceWhiteBalanceGains`공간 간을 변환 합니다.
@@ -902,10 +902,10 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 뷰에는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
--  비디오 피드를 표시 하는입니다.`UIImageView`
--  포커스 모드를 자동에서 잠김으로 변경 하는입니다.`UISegmentedControl`
--  온도 `UISlider` 와 색조를 표시 하 고 업데이트 하는 두 개의 컨트롤
--  회색 카드 (회색 세계) 공간을 샘플링 하 고 해당 값을 사용 하 여 잔고를 설정 하는 데사용되는입니다.`UIButton`
+- 비디오 피드를 표시 하는입니다.`UIImageView`
+- 포커스 모드를 자동에서 잠김으로 변경 하는입니다.`UISegmentedControl`
+- 온도 `UISlider` 와 색조를 표시 하 고 업데이트 하는 두 개의 컨트롤
+- 회색 카드 (회색 세계) 공간을 샘플링 하 고 해당 값을 사용 하 여 잔고를 설정 하는 데사용되는입니다.`UIButton`
 
 
 수동 흰색 잔액 제어를 위해 보기 컨트롤러를 연결 하려면 다음을 수행 합니다.
@@ -1134,9 +1134,9 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 또한 대괄호로 묶인 캡처는 그림에서 그림으로 다양 한 설정으로 촬영 된 이미지의 버스트입니다. 사용할 수 있는 대괄호로 묶인 캡처 유형은 다음과 같습니다.
 
--  **자동 노출 대괄호** – 모든 이미지의 편차 양이 달라 집니다.
--  **수동 노출 대괄호** – 모든 이미지에 다양 한 셔터 속도 (기간) 및 ISO 금액이 있는 모든 이미지입니다.
--  **단순 버스트 대괄호** – 연속적으로 연속 해 서 촬영 한 일련의 이미지입니다.
+- **자동 노출 대괄호** – 모든 이미지의 편차 양이 달라 집니다.
+- **수동 노출 대괄호** – 모든 이미지에 다양 한 셔터 속도 (기간) 및 ISO 금액이 있는 모든 이미지입니다.
+- **단순 버스트 대괄호** – 연속적으로 연속 해 서 촬영 한 일련의 이미지입니다.
 
 
 ### <a name="new-bracketed-capture-controls-in-ios-8"></a>IOS 8의 새 대괄호로 묶인 캡처 컨트롤
@@ -1145,8 +1145,8 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 설정을 처리 하기 위해 두 개의 새로운 클래스가 구현 되었습니다.
 
--   `AVCaptureAutoExposureBracketedStillImageSettings`-자동 노출 괄호에 대 `ExposureTargetBias`한 바이어스를 설정 하는 데 사용 되는 속성이 하나 있습니다. 
--   `AVCaptureManual`  `ExposureBracketedStillImageSettings`-수동 노출 괄호에 대해 `ExposureDuration` 셔터 `ISO`속도와 ISO를 설정 하는 데 사용 되는 및 라는 두 가지 속성이 있습니다. 
+- `AVCaptureAutoExposureBracketedStillImageSettings`-자동 노출 괄호에 대 `ExposureTargetBias`한 바이어스를 설정 하는 데 사용 되는 속성이 하나 있습니다. 
+- `AVCaptureManual`  `ExposureBracketedStillImageSettings`-수동 노출 괄호에 대해 `ExposureDuration` 셔터 `ISO`속도와 ISO를 설정 하는 데 사용 되는 및 라는 두 가지 속성이 있습니다. 
 
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>대괄호로 묶인 캡처 컨트롤의 및 일과
@@ -1155,28 +1155,28 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 다음은 iOS 8에서 대괄호로 묶인 캡처 컨트롤을 사용할 때 수행 해야 하는 작업 목록입니다.
 
--  메서드를 `PrepareToCaptureStillImageBracket` 호출 하 여 최악의 캡처 상황을 대비해 앱을 준비 합니다.
--  샘플 버퍼가 동일한 공유 풀에서 제공 되는 것으로 가정 합니다.
--  이전 준비 호출에 의해 할당 된 메모리를 해제 하려면를 다시 호출 `PrepareToCaptureStillImageBracket` 하 고 하나의 개체 배열을 보냅니다.
+- 메서드를 `PrepareToCaptureStillImageBracket` 호출 하 여 최악의 캡처 상황을 대비해 앱을 준비 합니다.
+- 샘플 버퍼가 동일한 공유 풀에서 제공 되는 것으로 가정 합니다.
+- 이전 준비 호출에 의해 할당 된 메모리를 해제 하려면를 다시 호출 `PrepareToCaptureStillImageBracket` 하 고 하나의 개체 배열을 보냅니다.
 
 
 #### <a name="donts"></a>일과
 
 다음은 iOS 8에서 대괄호로 묶인 캡처 컨트롤을 사용할 때 수행 하지 않아야 하는 작업 목록입니다.
 
--  대괄호로 묶인 캡처 설정 유형을 단일 캡처로 혼합 하지 마세요.
--  단일 캡처에 이미지 `MaxBracketedCaptureStillImageCount` 를 초과 하 여 요청 하지 마세요.
+- 대괄호로 묶인 캡처 설정 유형을 단일 캡처로 혼합 하지 마세요.
+- 단일 캡처에 이미지 `MaxBracketedCaptureStillImageCount` 를 초과 하 여 요청 하지 마세요.
 
 
 ### <a name="bracketed-capture-details"></a>대괄호로 묶인 캡처 세부 정보
 
 IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 고려해 야 합니다.
 
--  대괄호로 묶인 설정은 `AVCaptureDevice` 설정을 일시적으로 재정의 합니다.
--  Flash 및 여전히 이미지 안정화 설정은 무시 됩니다.
--  모든 이미지는 동일한 출력 형식 (jpeg, png 등)을 사용 해야 합니다.
--  비디오 미리 보기는 프레임을 삭제할 수 있습니다.
--  대괄호로 묶인 캡처는 iOS 8과 호환 되는 모든 장치에서 지원 됩니다.
+- 대괄호로 묶인 설정은 `AVCaptureDevice` 설정을 일시적으로 재정의 합니다.
+- Flash 및 여전히 이미지 안정화 설정은 무시 됩니다.
+- 모든 이미지는 동일한 출력 형식 (jpeg, png 등)을 사용 해야 합니다.
+- 비디오 미리 보기는 프레임을 삭제할 수 있습니다.
+- 대괄호로 묶인 캡처는 iOS 8과 호환 되는 모든 장치에서 지원 됩니다.
 
 
 이 정보를 염두에 두면 iOS 8에서 대괄호로 묶인 캡처를 사용 하는 예제를 살펴보겠습니다.
@@ -1189,10 +1189,10 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
 
 뷰에는 다음과 같은 주요 요소가 포함 되어 있습니다.
 
--  비디오 피드를 표시 하는입니다.`UIImageView`
--  캡처 `UIImageViews` 결과를 표시 하는 3입니다.
--  `UIScrollView` 비디오 피드 및 결과 보기를 저장할입니다.
--  일부 기본 설정으로 대괄호로 묶인 캡처를 수행 하는 데사용되는입니다.`UIButton`
+- 비디오 피드를 표시 하는입니다.`UIImageView`
+- 캡처 `UIImageViews` 결과를 표시 하는 3입니다.
+- `UIScrollView` 비디오 피드 및 결과 보기를 저장할입니다.
+- 일부 기본 설정으로 대괄호로 묶인 캡처를 수행 하는 데사용되는입니다.`UIButton`
 
 
 다음 작업을 수행 하 여 대괄호로 캡처하기 위해 뷰 컨트롤러를 연결 합니다.

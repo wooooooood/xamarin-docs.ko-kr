@@ -6,30 +6,30 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7f68695b4fa6b8abb7938dd96794eb1d0d1d13a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 274c441e0507f100697fc153a9f748de1bce4cf3
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643948"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526075"
 ---
 # <a name="touch-in-android"></a>Android 터치
 
 IOS와 마찬가지로 Android는 &ndash; `Android.View.MotionEvent` 개체를 화면에 대 한 사용자의 물리적 상호 작용에 대 한 데이터를 포함 하는 개체를 만듭니다. 이 개체에는 수행 되는 작업, 터치가 발생 한 위치, 적용 된 압력 등의 데이터가 포함 됩니다. 개체 `MotionEvent` 는 다음 값으로 이동 하는 작업을 중단 합니다.
 
--  초기 터치, 화면 전체 터치 이동 또는 터치 종료와 같은 동작의 유형을 설명 하는 작업 코드입니다.
+- 초기 터치, 화면 전체 터치 이동 또는 터치 종료와 같은 동작의 유형을 설명 하는 작업 코드입니다.
 
--  터치가 발생 하는 위치, 터치가 수행 된 `MotionEvent` 시간 및 사용 된 압력 등의 기타 이동 속성의 위치를 설명 하는 축 값 집합입니다.
+- 터치가 발생 하는 위치, 터치가 수행 된 `MotionEvent` 시간 및 사용 된 압력 등의 기타 이동 속성의 위치를 설명 하는 축 값 집합입니다.
    축 값은 장치에 따라 다를 수 있으므로 이전 목록에서 모든 축 값을 설명 하지는 않습니다.
 
 
 개체 `MotionEvent` 는 응용 프로그램의 적절 한 메서드에 전달 됩니다. Xamarin Android 응용 프로그램에서 터치 이벤트에 응답 하는 방법에는 다음 세 가지가 있습니다.
 
--  *이벤트 처리기를에 `View.Touch`*  `Android.Views.View` 할당 합니다. 클래스는 응용 `EventHandler<View.TouchEventArgs>` 프로그램에서 처리기를 할당할 수 있는를 포함 합니다. 이는 일반적인 .NET 동작입니다.
+- *이벤트 처리기를에 `View.Touch`*  `Android.Views.View` 할당 합니다. 클래스는 응용 `EventHandler<View.TouchEventArgs>` 프로그램에서 처리기를 할당할 수 있는를 포함 합니다. 이는 일반적인 .NET 동작입니다.
 
--  이 인터페이스의 인스턴스를 *구현 `View.IOnTouchListener`*  하면 뷰를 사용 하 여 뷰 개체에 할당할 수 있습니다. `SetOnListener`방법이. 이벤트 처리기를 `View.Touch` 이벤트에 할당 하는 것과 기능적으로 동일 합니다. 작업을 수행할 때 여러 뷰가 필요할 수 있는 일반적인 또는 공유 논리가 있는 경우 클래스를 만들고이 메서드를 구현 하는 것이 더 효율적입니다.
+- 이 인터페이스의 인스턴스를 *구현 `View.IOnTouchListener`*  하면 뷰를 사용 하 여 뷰 개체에 할당할 수 있습니다. `SetOnListener`방법이. 이벤트 처리기를 `View.Touch` 이벤트에 할당 하는 것과 기능적으로 동일 합니다. 작업을 수행할 때 여러 뷰가 필요할 수 있는 일반적인 또는 공유 논리가 있는 경우 클래스를 만들고이 메서드를 구현 하는 것이 더 효율적입니다.
 
--  *Override`View.OnTouchEvent`* -Android 하위 클래스 `Android.Views.View`의 모든 뷰입니다. 뷰가 작업 될 때 Android는를 `OnTouchEvent` 호출 하 고 개체를 `MotionEvent` 매개 변수로 전달 합니다.
+- *Override`View.OnTouchEvent`* -Android 하위 클래스 `Android.Views.View`의 모든 뷰입니다. 뷰가 작업 될 때 Android는를 `OnTouchEvent` 호출 하 고 개체를 `MotionEvent` 매개 변수로 전달 합니다.
 
 
 > [!NOTE]
@@ -67,17 +67,17 @@ public override bool OnTouchEvent(MotionEvent e)
 인스턴스가 `GestureDetector` 관심 있는 제스처를 식별 하면 이벤트를 발생 시키거나에서 `GestureDetector.IOnGestureListener`제공 하는 콜백을 통해 활동이 나 응용 프로그램에이를 알립니다.
 이 인터페이스는 다양 한 제스처에 대해 6 개의 메서드를 제공 합니다.
 
--  *Ondown* -탭이 발생 하지만 릴리스되지 않을 때 호출 됩니다.
+- *Ondown* -탭이 발생 하지만 릴리스되지 않을 때 호출 됩니다.
 
--  *Onfling* -이벤트를 트리거한 시작 및 종료에 대 한 데이터를 제공 하 고 fling이 발생 하는 경우 호출 됩니다.
+- *Onfling* -이벤트를 트리거한 시작 및 종료에 대 한 데이터를 제공 하 고 fling이 발생 하는 경우 호출 됩니다.
 
--  *Onlongpress* 는 긴 누름이 발생할 때 호출 됩니다.
+- *Onlongpress* 는 긴 누름이 발생할 때 호출 됩니다.
 
--  *Onscroll* -scroll 이벤트가 발생 하면 호출 됩니다.
+- *Onscroll* -scroll 이벤트가 발생 하면 호출 됩니다.
 
--  *Onshowpress* 는 ondown이 발생 하 고 move 또는 up 이벤트가 수행 되지 않은 후에 호출 됩니다.
+- *Onshowpress* 는 ondown이 발생 하 고 move 또는 up 이벤트가 수행 되지 않은 후에 호출 됩니다.
 
--  *OnSingleTapUp* -단일 탭이 발생 하면 호출 됩니다.
+- *OnSingleTapUp* -단일 탭이 발생 하면 호출 됩니다.
 
 
 대부분의 경우 응용 프로그램은 제스처의 하위 집합에만 관심이 있을 수 있습니다. 이 경우 응용 프로그램은 GestureDetector 클래스를 확장 하 고 관심이 있는 이벤트에 해당 하는 메서드를 재정의 해야 합니다.

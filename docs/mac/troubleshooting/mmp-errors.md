@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
-ms.openlocfilehash: d81435f7d693204a76249fc3fa6953766f7ab59a
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.openlocfilehash: 16708ad1d26c9d7394ad95b2d449ca304534a2bd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012460"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528869"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.ios 오류 메시지 (mmp)
 
@@ -103,7 +103,7 @@ ms.locfileid: "69012460"
 
 <a name="MM0056" />
 
-#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: 기본 위치에서 Xcode를 찾을 수 없습니다. Xcode를 설치 하거나--sdkroot =를 사용 하 여 사용자 지정 경로를 전달 하세요.<path>
+#### <a name="mm0056-cannot-find-xcode-in-any-of-our-default-locations-please-install-xcode-or-pass-a-custom-path-using---sdkrootpath"></a>MM0056: 기본 위치에서 Xcode를 찾을 수 없습니다. Xcode를 설치 하거나--sdkroot =\<path를 사용 하 여 사용자 지정 경로를 전달 하세요 >
 
 <a name="MM0059" />
 
@@ -566,7 +566,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM5309" />
 
-#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309: 네이티브 연결에 실패 했습니다 (오류 코드 1).  자세한 내용은 빌드 로그를 확인 하세요.
+#### <a name="mm5309-native-linking-failed-with-error-code-1-check-build-log-for-details"></a>MM5309: 네이티브 연결에 실패 했습니다 (오류 코드 1). 자세한 내용은 빌드 로그를 확인 하세요.
 
 <a name="MM5310" />
 

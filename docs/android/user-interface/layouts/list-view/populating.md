@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: abc7bb09791df115536f552979b48a3a12b4f443
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646343"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522546"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Xamarin Android ListView를 데이터로 채우기
 
@@ -21,7 +21,7 @@ ms.locfileid: "68646343"
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Listactivity 및 arrayadapter&lt;문자열 사용&gt;
 
-다음 예 **에서는** 이러한 클래스를 사용 하 여 몇 줄의 코드만으로를 `ListView` 표시 하는 방법을 보여 줍니다.
+다음 예 에서는 이러한 클래스를 사용 하 여 몇 줄의 코드만으로를 `ListView` 표시 하는 방법을 보여 줍니다.
 
 ```csharp
 [Activity(Label = "BasicTable", MainLauncher = true, Icon = "@drawable/icon")]
@@ -62,14 +62,14 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 `ArrayAdapter<string>`는 간단 하기 때문에 좋지만 매우 제한적입니다. 그러나 바인딩하려는 문자열이 아닌 비즈니스 엔터티 컬렉션이 있는 경우가 종종 있습니다.
 예를 들어 데이터가 Employee 클래스 컬렉션으로 구성 된 경우 목록에서 각 직원의 이름만 표시 하는 것이 좋습니다. 표시 되는 데이터 `ListView` 를 제어 하기 위해의 동작을 사용자 지정 하려면 다음 네 가지 항목을 `BaseAdapter` 재정의 하는 서브 클래스를 구현 해야 합니다.
 
--   **개수** &ndash; 데이터에 있는 행 수를 컨트롤에 알리기 위해
+- **개수** &ndash; 데이터에 있는 행 수를 컨트롤에 알리기 위해
 
--   **Getview** &ndash; 각 행에 대 한 뷰를 반환 하려면 데이터로 채워집니다.
+- **Getview** &ndash; 각 행에 대 한 뷰를 반환 하려면 데이터로 채워집니다.
     이 메서드에는 `ListView` 다시 사용 하기 위해 사용 되지 않는 기존 행을 전달 하기 위해에 대 한 매개 변수가 있습니다.
 
--   **Getitemid** &ndash; 행 식별자를 반환 합니다 (원하는 긴 값이 될 수 있지만 일반적으로 행 번호).
+- **Getitemid** &ndash; 행 식별자를 반환 합니다 (원하는 긴 값이 될 수 있지만 일반적으로 행 번호).
 
--   **이 [int]** 인덱서 &ndash; 를 사용 하 여 특정 행 번호와 연결 된 데이터를 반환 합니다.
+- **이 [int]** 인덱서 &ndash; 를 사용 하 여 특정 행 번호와 연결 된 데이터를 반환 합니다.
 
 **Basictableadapter/HomeScreenAdapter** 의 예제 코드는 다음을 서브 클래스 `BaseAdapter`하는 방법을 보여 줍니다.
 
@@ -159,11 +159,11 @@ ListView.FastScrollEnabled = true;
 
 을 구현 `ISectionIndexer` 하려면 어댑터에 세 개의 메서드를 추가 해야 합니다.
 
--   **Getsections** &ndash; 표시할 수 있는 섹션 인덱스 타이틀의 전체 목록을 제공 합니다. 이 메서드는 Java 개체 배열을 필요로 하므로 코드가 .net 컬렉션에서를 `Java.Lang.Object[]` 만들어야 합니다. 이 예제에서는 목록의 첫 문자 목록을로 `Java.Lang.String` 반환 합니다.
+- **Getsections** &ndash; 표시할 수 있는 섹션 인덱스 타이틀의 전체 목록을 제공 합니다. 이 메서드는 Java 개체 배열을 필요로 하므로 코드가 .net 컬렉션에서를 `Java.Lang.Object[]` 만들어야 합니다. 이 예제에서는 목록의 첫 문자 목록을로 `Java.Lang.String` 반환 합니다.
 
--   **Getpositionforsection** &ndash; 지정 된 섹션 인덱스의 첫 번째 행 위치를 반환 합니다.
+- **Getpositionforsection** &ndash; 지정 된 섹션 인덱스의 첫 번째 행 위치를 반환 합니다.
 
--   **Get섹션 Forposition** &ndash; 지정 된 행에 대해 표시할 섹션 인덱스를 반환 합니다.
+- **Get섹션 Forposition** &ndash; 지정 된 행에 대해 표시할 섹션 인덱스를 반환 합니다.
 
 
 예제 `SectionIndex/HomeScreenAdapter.cs` 파일은 이러한 메서드를 구현 하 고 생성자에 몇 가지 추가 코드를 구현 합니다. 생성자는 모든 행을 반복 하 고 제목의 첫 번째 문자를 추출 하 여 섹션 인덱스를 작성 합니다 .이 작업을 수행 하려면 항목이 이미 정렬 되어 있어야 합니다.

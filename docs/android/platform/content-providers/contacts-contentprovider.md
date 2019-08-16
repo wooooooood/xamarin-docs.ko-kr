@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: e83b9a594bad5ee3d29800988eb94812600da8a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e5b23973d7784a9116d4c82ef6d892aacbf584a1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643704"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524477"
 ---
 # <a name="using-the-contacts-contentprovider"></a>연락처 ContentProvider 사용
 
@@ -33,11 +33,11 @@ Uri에서 커서를 만드는 방법에는 다음 세 가지가 있습니다.
 
 이러한 각 메서드에는 동일한 기본 입력 집합이 있습니다.
 
--  **Uri** 의 정규화 된 이름입니다. `ContentProvider` &ndash;
--  **프로젝션** &ndash; 커서에 대해 선택할 열 사양입니다.
--  **선택** &ndash; SQL`WHERE` 절과 유사 합니다.
--  **Selectionargs** &ndash; 선택 영역에서 대체 되는 매개 변수입니다.
--  **SortOrder** &ndash; 정렬할 열입니다.
+- **Uri** 의 정규화 된 이름입니다. `ContentProvider` &ndash;
+- **프로젝션** &ndash; 커서에 대해 선택할 열 사양입니다.
+- **선택** &ndash; SQL`WHERE` 절과 유사 합니다.
+- **Selectionargs** &ndash; 선택 영역에서 대체 되는 매개 변수입니다.
+- **SortOrder** &ndash; 정렬할 열입니다.
 
 
 

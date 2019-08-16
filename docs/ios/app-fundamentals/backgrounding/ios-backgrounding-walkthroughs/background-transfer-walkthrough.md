@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fad85eadd819c04d087345c6bf4b5e977c9ec279
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a0c659904be2f6755ff4a32853e141ee8572e839
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656520"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521248"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Xamarin.ios의 백그라운드 전송 및 NSURLSession
 
@@ -52,15 +52,15 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
 
 는 `NSUrlSessionDelegate` 전송 상태를 확인 하는 다음과 같은 기본 메서드를 제공 합니다.
 
--  *DidFinishEventsForBackgroundSession* -이 메서드는 모든 작업이 완료 되 고 전송이 완료 되 면 호출 됩니다.
--  *DidReceiveChallenge* -권한 부여가 필요한 경우 자격 증명을 요청 하기 위해 호출 됩니다.
--  *DidBecomeInvalidWithError* -가 `NSURLSession` 무효화 되 면 호출 됩니다.
+- *DidFinishEventsForBackgroundSession* -이 메서드는 모든 작업이 완료 되 고 전송이 완료 되 면 호출 됩니다.
+- *DidReceiveChallenge* -권한 부여가 필요한 경우 자격 증명을 요청 하기 위해 호출 됩니다.
+- *DidBecomeInvalidWithError* -가 `NSURLSession` 무효화 되 면 호출 됩니다.
 
 
 백그라운드 세션에는 실행 중인 작업의 유형에 따라 보다 특수화 된 대리자가 필요 합니다. 백그라운드 세션은 다음과 같은 두 가지 유형의 작업으로 제한 됩니다.
 
--  *작업 업로드* -형식의 `NSUrlSessionUploadTask` 작업은 `NSUrlSessionTaskDelegate` 에서 `NSUrlSessionDelegate` 상속 되는를 사용 합니다. 이 대리자는 업로드 진행률을 추적 하 고, HTTP 리디렉션을 처리 하는 등의 추가 메서드를 제공 합니다.
--  *다운로드 작업* -형식의 `NSUrlSessionDownloadTask` 작업에서 `NSUrlSessionTaskDelegate` 상속 되 `NSUrlSessionDownloadDelegate` 는를 사용 합니다. 이 대리자는 다운로드 작업의 모든 메서드 뿐만 아니라 다운로드 진행률을 추적 하 고 다운로드 작업을 다시 시작 하거나 완료 한 시간을 결정 하는 다운로드 관련 방법을 제공 합니다.
+- *작업 업로드* -형식의 `NSUrlSessionUploadTask` 작업은 `NSUrlSessionTaskDelegate` 에서 `NSUrlSessionDelegate` 상속 되는를 사용 합니다. 이 대리자는 업로드 진행률을 추적 하 고, HTTP 리디렉션을 처리 하는 등의 추가 메서드를 제공 합니다.
+- *다운로드 작업* -형식의 `NSUrlSessionDownloadTask` 작업에서 `NSUrlSessionTaskDelegate` 상속 되 `NSUrlSessionDownloadDelegate` 는를 사용 합니다. 이 대리자는 다운로드 작업의 모든 메서드 뿐만 아니라 다운로드 진행률을 추적 하 고 다운로드 작업을 다시 시작 하거나 완료 한 시간을 결정 하는 다운로드 관련 방법을 제공 합니다.
 
 
 다음 코드는 URL에서 이미지를 다운로드 하는 데 사용할 수 있는 작업을 정의 합니다. 백그라운드 세션에서를 호출 `CreateDownloadTask` 하 고 URL 요청을 전달 하 여 작업을 시작 합니다.

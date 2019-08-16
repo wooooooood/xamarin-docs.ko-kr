@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 19ac5a023b1f97b2e08bbe1821a2b9259280fc98
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d59acaec36c63c62fe934f145d06bfbb78d11f6c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645143"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522864"
 ---
 # <a name="replacing-the-action-bar"></a>작업 모음 바꾸기
 
@@ -21,15 +21,15 @@ ms.locfileid: "68645143"
 
 앱의 기본 작업 모음을로 바꾸려면 다음을 `Toolbar`수행 합니다. 
 
-1.  새 사용자 지정 테마를 만들고이 새 테마를 사용 하도록 앱의 속성을 수정 합니다. 
+1. 새 사용자 지정 테마를 만들고이 새 테마를 사용 하도록 앱의 속성을 수정 합니다. 
 
-2.  사용자 지정 `windowActionBar` 테마에서 특성을 사용 하지 않도록 설정 `windowNoTitle` 하 고 특성을 사용 하도록 설정 합니다.
+2. 사용자 지정 `windowActionBar` 테마에서 특성을 사용 하지 않도록 설정 `windowNoTitle` 하 고 특성을 사용 하도록 설정 합니다.
 
-3.  의 레이아웃 `Toolbar`을 정의 합니다.
+3. 의 레이아웃 `Toolbar`을 정의 합니다.
 
-4.  활동의 `Toolbar` **주. axml** 레이아웃 파일에 레이아웃을 포함 합니다. 
+4. 활동의 `Toolbar` **주. axml** 레이아웃 파일에 레이아웃을 포함 합니다. 
 
-5.  활동의 `OnCreate` 메서드에 코드를 추가 하 여를 `Toolbar` 찾고를 호출 `SetActionBar` 하 여를 `ToolBar` 작업 모음으로 설치 합니다.
+5. 활동의 `OnCreate` 메서드에 코드를 추가 하 여를 `Toolbar` 찾고를 호출 `SetActionBar` 하 여를 `ToolBar` 작업 모음으로 설치 합니다.
 
 다음 섹션에서는이 프로세스에 대해 자세히 설명 합니다. 간단한 앱이 생성 되 고 해당 작업 모음이 사용자 지정 `Toolbar`된로 바뀝니다. 
 
@@ -37,7 +37,7 @@ ms.locfileid: "68645143"
 
 ## <a name="start-an-app-project"></a>앱 프로젝트 시작
 
-새 android 프로젝트 만들기 (새 Android 프로젝트 만들기에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md) 참조 **) 라는 새** android 프로젝트를 만듭니다. 이 프로젝트를 만든 후에는 대상 및 최소 Android API 수준을 **android 5.0 (API 레벨 21-롤리팝)** 이상으로 설정 합니다. Android 버전 수준을 설정 하는 방법에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요. 앱을 빌드하고 실행 하면 다음 스크린샷에 표시 된 것 처럼 기본 작업 모음이 표시 됩니다.
+새 android 프로젝트 만들기 (새 android 프로젝트 만들기에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md) 참조) 라는 새 android 프로젝트를 만듭니다. 이 프로젝트를 만든 후에는 대상 및 최소 Android API 수준을 **android 5.0 (API 레벨 21-롤리팝)** 이상으로 설정 합니다. Android 버전 수준을 설정 하는 방법에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요. 앱을 빌드하고 실행 하면 다음 스크린샷에 표시 된 것 처럼 기본 작업 모음이 표시 됩니다.
 
 [![기본 작업 표시줄의 스크린샷](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
@@ -175,13 +175,13 @@ ActionBar.Title = "My Toolbar";
 
 에 메뉴를 추가 하려면 `Toolbar`다음을 수행 합니다. 
 
-1.  응용 프로그램 프로젝트의 `mipmap-` 폴더에 메뉴 아이콘 (필요한 경우)을 추가 합니다. Google은 [재질 아이콘](https://design.google.com/icons/) 페이지에 일련의 자유 메뉴 아이콘을 제공 합니다. 
+1. 응용 프로그램 프로젝트의 `mipmap-` 폴더에 메뉴 아이콘 (필요한 경우)을 추가 합니다. Google은 [재질 아이콘](https://design.google.com/icons/) 페이지에 일련의 자유 메뉴 아이콘을 제공 합니다. 
 
-2.  **리소스/메뉴**아래에 새 메뉴 리소스 파일을 추가 하 여 메뉴 항목의 내용을 정의 합니다. 
+2. **리소스/메뉴**아래에 새 메뉴 리소스 파일을 추가 하 여 메뉴 항목의 내용을 정의 합니다. 
 
-3.  `OnCreateOptionsMenu` 활동&ndash; 의 메서드를 구현 합니다 .이 메서드는 메뉴 항목을 늘어납니다 합니다. 
+3. `OnCreateOptionsMenu` 활동&ndash; 의 메서드를 구현 합니다 .이 메서드는 메뉴 항목을 늘어납니다 합니다. 
 
-4.  메뉴 항목 `OnOptionsItemSelected` 을 탭 할 때 &ndash; 동작을 수행 하는 작업의 메서드를 구현 합니다. 
+4. 메뉴 항목 `OnOptionsItemSelected` 을 탭 할 때 &ndash; 동작을 수행 하는 작업의 메서드를 구현 합니다. 
 
 다음 섹션에서는 사용자 지정 `Toolbar`된에 **편집** 및 **저장** 메뉴 항목을 추가 하 여이 프로세스에 대해 자세히 설명 합니다. 
 
@@ -189,7 +189,7 @@ ActionBar.Title = "My Toolbar";
 
 ### <a name="install-menu-icons"></a>메뉴 아이콘 설치
 
-`ToolbarFun` 예제 앱을 계속 진행 하 여 앱 프로젝트에 메뉴 아이콘을 추가 합니다. [도구 모음 아이콘](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)을 다운로드 하 고 압축을 풀고 압축 *을 푼 파일* 의 콘텐츠를 프로젝트에 포함 된 프로젝트의 *밉 맵* 폴더에 복사 합니다. 여기에는 프로젝트에 추가 된 각 아이콘 파일이 포함 됩니다.
+`ToolbarFun` 예제 앱을 계속 진행 하 여 앱 프로젝트에 메뉴 아이콘을 추가 합니다. [도구 모음 아이콘](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)을 다운로드 하 고 압축을 풀고 압축을 푼 파일의 콘텐츠를 프로젝트에 포함 된 프로젝트의 *밉 맵* 폴더에 복사 합니다. 여기에는 프로젝트에 추가 된 각 아이콘 파일이 포함 됩니다.
 
 
 ### <a name="define-a-menu-resource"></a>메뉴 리소스 정의
@@ -218,11 +218,11 @@ ActionBar.Title = "My Toolbar";
 
 이 XML은 세 가지 메뉴 항목을 만듭니다.
 
--   `ic_action_content_create.png` 아이콘 (연필)을 사용 하는 **편집** 메뉴 항목입니다. 
+- `ic_action_content_create.png` 아이콘 (연필)을 사용 하는 **편집** 메뉴 항목입니다. 
 
--   `ic_action_content_save.png` 아이콘 (디스켓)을 사용 하는 **저장** 메뉴 항목입니다. 
+- `ic_action_content_save.png` 아이콘 (디스켓)을 사용 하는 **저장** 메뉴 항목입니다. 
 
--   아이콘이 없는 **기본 설정** 메뉴 항목입니다.
+- 아이콘이 없는 **기본 설정** 메뉴 항목입니다.
 
 &ndash; `ifRoom` **편집 및** **저장** 메뉴 항목의 `Toolbar` 특성을이 설정으로 설정 하면 해당 메뉴 항목이 표시 될 충분 한 공간이 있는 경우에 해당 메뉴 항목이 표시 됩니다. `showAsAction` **기본 설정** 메뉴 항목을 `showAsAction` 로 `never` &ndash; 설정 하면 **기본 설정** 메뉴가 *오버플로* 메뉴 (세로 3 개 점)에 표시 됩니다. 
 

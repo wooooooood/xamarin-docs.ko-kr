@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: dfc4c8a5f00fd11d1554dcadf5e35018046e49f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: beb063d423c860958948751d162af661040004b7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642902"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529003"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Xamarin.ios의 데이터 바인딩 및 키-값 코딩
 
@@ -70,7 +70,7 @@ namespace MacDatabinding
 
 먼저, 특성 `[Register("PersonModel")]` 은 클래스를 등록 하 고 목표-C에 노출 합니다. 그런 다음 클래스는 (또는에서 `NSObject` `NSObject`상속 되는 서브 클래스)에서 상속 해야 하며,이는 클래스가 kvc 규격이 될 수 있도록 하는 몇 가지 기본 메서드를 추가 합니다. 그런 다음 `Name` 특성은 속성을 노출 하 고 나중에 kvc 및 KVO 기술을 통해 속성에 액세스 하는 데 사용 되는 키 값을 정의 합니다. `[Export("Name")]` 
 
-마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` `Export` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 `DidChangeValue` 해당 값에 대 한 변경 내용을 래핑해야 합니다.  예를 들어:
+마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` `Export` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 `DidChangeValue` 해당 값에 대 한 변경 내용을 래핑해야 합니다.  예:
 
 ```csharp
 set {
@@ -599,11 +599,11 @@ public override void AwakeFromNib ()
 2. **표 내용** 접혀에서 바인딩 및 **배열 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.  
 
     ![컨트롤러 키 정의](databinding-images/table08.png "컨트롤러 키 정의")
-3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.  
+3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.  
 
     [![모델 키 경로 설정](databinding-images/table09.png "모델 키 경로 설정")](databinding-images/table09-large.png#lightbox)
 4. `objectValue`배열 컨트롤러에서 `PersonModel` 관리 중인 배열의 현재입니다.
-5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.  
+5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.  
 
     [![모델 키 경로 설정](databinding-images/table10.png "모델 키 경로 설정")](databinding-images/table10-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
@@ -721,11 +721,11 @@ public override void AwakeFromNib ()
 2. **개요 보기 내용** 접혀에서 바인딩 및 **트리 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.  
 
     ![컨트롤러 키 설정](databinding-images/outline08.png "컨트롤러 키 설정")
-3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.  
+3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.  
 
     [![모델 키 경로 입력](databinding-images/outline09.png "모델 키 경로 입력")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue`는 트리 컨트롤러 `PersonModel` 에서 관리 중인 배열의 현재입니다.
-5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.  
+5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.  
 
     [![모델 키 경로 입력](databinding-images/outline10.png "모델 키 경로 입력")](databinding-images/outline10-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
@@ -816,8 +816,8 @@ Now we need to create our Collection View, double-click the **Main.storyboard** 
 
 When you add a Collection View to a User Interface design, two extra elements are also added:
 
-1.  **Collection View Item** -  That manages a single instance of an item in the collection.
-2.  **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
+1. **Collection View Item** -  That manages a single instance of an item in the collection.
+2. **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
 
 Select the view and make it look like the following using an Image View and two Text Fields:
 

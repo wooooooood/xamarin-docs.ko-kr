@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 209d70c2e158261ca671e6a889e979de39362d53
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 38d58350cf067a2d5f7813250590cc0715b6c9ea
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647980"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527403"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.ios의 3D 터치 소개
 
@@ -179,7 +179,7 @@ namespace DTouch
 
 ### <a name="registering-for-peek-and-pop"></a>피킹 (Peeking) 및 Pop 등록
 
-사용자 **가 항목을** **피킹 (peeking** ) 할 수 있도록 허용할 뷰 컨트롤러에서이 서비스에 등록 해야 합니다. 테이블 뷰 컨트롤러 (`MasterViewController`) 위에 지정 된 예에서는 다음 코드를 사용 합니다.
+사용자가 항목을 **피킹 (peeking** ) 할 수 있도록 허용할 뷰 컨트롤러 에서이 서비스에 등록 해야 합니다. 테이블 뷰 컨트롤러 (`MasterViewController`) 위에 지정 된 예에서는 다음 코드를 사용 합니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -274,11 +274,11 @@ public override void ViewDidLoad ()
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-        ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType 이미지")
 
-* `UIApplicationShortcutItemSubtitle`-항목에 대 한 부제목을 정의 합니다.
-* `UIApplicationShortcutItemTitle`-항목의 제목을 정의 합니다.
-* `UIApplicationShortcutItemType`-앱에서 항목을 식별 하는 데 사용 하는 문자열 값입니다. 자세한 내용은 다음 단원을 참조하세요.
+- `UIApplicationShortcutItemSubtitle`-항목에 대 한 부제목을 정의 합니다.
+- `UIApplicationShortcutItemTitle`-항목의 제목을 정의 합니다.
+- `UIApplicationShortcutItemType`-앱에서 항목을 식별 하는 데 사용 하는 문자열 값입니다. 자세한 내용은 다음 단원을 참조하세요.
 
 > [!IMPORTANT]
 > `Info.plist` 파일에 설정 된 빠른 작업 바로 가기 항목은 `Application.ShortcutItems` 속성을 사용 하 여 액세스할 수 없습니다. `HandleShortcutItem` 이벤트 처리기에만 전달 됩니다.

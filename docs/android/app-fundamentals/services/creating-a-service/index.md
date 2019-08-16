@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: c5348ab754139dbd4012f6bfe9d22068ac16d12b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d5b3f084be7adc664dcb52342af617788f4dde48
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509252"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526228"
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
@@ -75,7 +75,7 @@ public class DemoService : Service
 
 Android에서 서비스를 시작 하는 가장 기본적인 방법은 시작할 서비스를 식별 `Intent` 하는 데 도움이 되는 메타 데이터를 포함 하는를 디스패치 하는 것입니다. 서비스를 시작 하는 데 사용할 수 있는 두 가지 다른 스타일의 의도가 있습니다.
 
--   **명시적 의도** 명시적 의도는 지정 된 작업을 완료 하는 데 사용 해야 하는 서비스를 정확 하 게 식별 합니다.  &ndash; 명시적 의도는 특정 주소가 있는 문자로 간주할 수 있습니다. Android는 명시적으로 식별 된 서비스로 의도를 라우팅합니다. 이 코드 조각은 명시적 의도를 사용 하 여 라는 `DownloadService`서비스를 시작 하는 한 가지 예입니다.
+- **명시적 의도** 명시적 의도는 지정 된 작업을 완료 하는 데 사용 해야 하는 서비스를 정확 하 게 식별 합니다. &ndash; 명시적 의도는 특정 주소가 있는 문자로 간주할 수 있습니다. Android는 명시적으로 식별 된 서비스로 의도를 라우팅합니다. 이 코드 조각은 명시적 의도를 사용 하 여 라는 `DownloadService`서비스를 시작 하는 한 가지 예입니다.
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -83,7 +83,7 @@ Android에서 서비스를 시작 하는 가장 기본적인 방법은 시작할
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **암시적 의도** &ndash; 이 유형의 의도는 사용자가 수행 하려는 동작의를 식별 하지만 해당 작업을 완료 하는 정확한 서비스를 알 수 없습니다. 암시적 의도는 "문제를 해결할 수 있습니다." 라고 하는 문자로 간주할 수 있습니다.
+- **암시적 의도** &ndash; 이 유형의 의도는 사용자가 수행 하려는 동작의를 식별 하지만 해당 작업을 완료 하는 정확한 서비스를 알 수 없습니다. 암시적 의도는 "문제를 해결할 수 있습니다." 라고 하는 문자로 간주할 수 있습니다.
     Android는 의도 된 내용을 검사 하 고 해당 의도와 일치 하는 기존 서비스가 있는지 확인 합니다.
 
     _내재 된 필터_ 를 사용 하 여 등록 된 서비스와 암시적 의도를 일치 시킬 수 있습니다. 의도 필터는 서비스와 암시적 의도를 일치 시키는 데 도움이 되는 필요한 메타 데이터를 포함 하는 **Androidmanifest** 에 추가 되는 xml 요소입니다.

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: 78878e62a36e3f6dd6ca3c7fcfb6413da4f0e0f9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: efff9edd81f17979ce8f4441da3d512d0a8ec188
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644119"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526271"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>연습-Android에서 Touch 사용
 
@@ -23,17 +23,17 @@ ms.locfileid: "68644119"
 
 ## <a name="touch-sample-activity"></a>Touch 샘플 활동
 
--   Project **TouchWalkthrough\_Start**를 엽니다. **Mainactivity** 는 모두 go &ndash; 로 설정 되어 활동에서 터치 동작을 구현 합니다. 응용 프로그램을 실행 하 고 **터치 샘플**을 클릭 하면 다음 작업이 시작 됩니다.
+- Project **TouchWalkthrough\_Start**를 엽니다. **Mainactivity** 는 모두 go &ndash; 로 설정 되어 활동에서 터치 동작을 구현 합니다. 응용 프로그램을 실행 하 고 **터치 샘플**을 클릭 하면 다음 작업이 시작 됩니다.
 
     [![터치 시작이 표시 된 활동의 스크린샷](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
--   이제 활동이 시작 되는 것을 확인 했으므로 **TouchActivity.cs** 파일을 열고의 `Touch` `ImageView`이벤트에 대 한 처리기를 추가 합니다.
+- 이제 활동이 시작 되는 것을 확인 했으므로 **TouchActivity.cs** 파일을 열고의 `Touch` `ImageView`이벤트에 대 한 처리기를 추가 합니다.
 
     ```csharp
     _touchMeImageView.Touch += TouchMeImageViewOnTouch;
     ```
 
--   그런 다음 **TouchActivity.cs**에 다음 메서드를 추가 합니다.
+- 그런 다음 **TouchActivity.cs**에 다음 메서드를 추가 합니다.
 
     ```csharp
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
@@ -74,7 +74,7 @@ ms.locfileid: "68644119"
 
 이제에서 제스처 인식기 작업을 구현할 수 있습니다. 이 활동에서는 화면을 중심으로 뷰를 끄는 방법 및 확대/축소를 구현 하는 한 가지 방법을 보여 줍니다.
 
--   이라는 `GestureRecognizer`응용 프로그램에 새 작업을 추가 합니다.
+- 이라는 `GestureRecognizer`응용 프로그램에 새 작업을 추가 합니다.
     이 활동에 대 한 코드를 다음 코드와 유사 하 게 편집 합니다.
 
     ```csharp
@@ -89,7 +89,7 @@ ms.locfileid: "68644119"
     }
     ```
 
--   새 Android 보기를 프로젝트에 추가 하 고 이름을 `GestureRecognizerView`로 합니다. 이 클래스에 다음 변수를 추가 합니다.
+- 새 Android 보기를 프로젝트에 추가 하 고 이름을 `GestureRecognizerView`로 합니다. 이 클래스에 다음 변수를 추가 합니다.
 
     ```csharp
     private static readonly int InvalidPointerId = -1;
@@ -105,7 +105,7 @@ ms.locfileid: "68644119"
     private float _scaleFactor = 1.0f;
     ```
 
--   에 `GestureRecognizerView`다음 생성자를 추가 합니다. 이 생성자는 활동 `ImageView` 에를 추가 합니다. 이 시점에서 코드는 여전히 컴파일되지 &ndash; 않습니다. 사용자가 pinches 일 때의 크기를 `ImageView` 조정 하는 데 도움이 되는 클래스 `MyScaleListener` 를 만들어야 합니다.
+- 에 `GestureRecognizerView`다음 생성자를 추가 합니다. 이 생성자는 활동 `ImageView` 에를 추가 합니다. 이 시점에서 코드는 여전히 컴파일되지 &ndash; 않습니다. 사용자가 pinches 일 때의 크기를 `ImageView` 조정 하는 데 도움이 되는 클래스 `MyScaleListener` 를 만들어야 합니다.
 
     ```csharp
     public GestureRecognizerView(Context context): base(context, null, 0)
@@ -116,7 +116,7 @@ ms.locfileid: "68644119"
     }
     ```
 
--   활동에 이미지를 그리려면 다음 코드 조각과 같이 뷰 클래스의 `OnDraw` 메서드를 재정의 해야 합니다. 이 코드는를 `ImageView` 에 `_posX` 지정 된 위치로 이동 하 고 `_posY` 배율 인수에 따라 이미지 크기를 조정 합니다.
+- 활동에 이미지를 그리려면 다음 코드 조각과 같이 뷰 클래스의 `OnDraw` 메서드를 재정의 해야 합니다. 이 코드는를 `ImageView` 에 `_posX` 지정 된 위치로 이동 하 고 `_posY` 배율 인수에 따라 이미지 크기를 조정 합니다.
 
     ```csharp
     protected override void OnDraw(Canvas canvas)
@@ -130,7 +130,7 @@ ms.locfileid: "68644119"
     }
     ```
 
--   다음으로 인스턴스 변수 `_scaleFactor` 를 사용자 `ImageView`pinches 업데이트 해야 합니다. 이라는 `MyScaleListener`클래스를 추가 합니다. 이 클래스는 사용자가 pinches `ImageView`인 경우 Android에서 발생 하는 크기 조정 이벤트를 수신 대기 합니다.
+- 다음으로 인스턴스 변수 `_scaleFactor` 를 사용자 `ImageView`pinches 업데이트 해야 합니다. 이라는 `MyScaleListener`클래스를 추가 합니다. 이 클래스는 사용자가 pinches `ImageView`인 경우 Android에서 발생 하는 크기 조정 이벤트를 수신 대기 합니다.
     에 `GestureRecognizerView`다음 내부 클래스를 추가 합니다. 이 클래스는 `ScaleGesture.SimpleOnScaleGestureListener`입니다. 이 클래스는 제스처의 하위 집합에 관심이 있을 때 수신기에서 서브 클래스로 사용할 수 있는 편리한 클래스입니다.
 
     ```csharp
@@ -163,7 +163,7 @@ ms.locfileid: "68644119"
     }
     ```
 
--   `GestureRecognizerView` 에서`OnTouchEvent`재정의 해야 하는 다음 메서드는입니다. 다음 코드에서는이 메서드의 전체 구현을 보여 줍니다. 여기에는 많은 코드가 있으므로 몇 분 정도 걸리며 여기서 살펴보겠습니다. 이 메서드의 첫 번째 작업은 필요한 &ndash; 경우를 호출 `_scaleDetector.OnTouchEvent`하 여 해당 아이콘의 크기를 조정 하는 것입니다. 다음으로이 메서드를 호출 하는 작업을 파악 합니다.
+- `GestureRecognizerView` 에서`OnTouchEvent`재정의 해야 하는 다음 메서드는입니다. 다음 코드에서는이 메서드의 전체 구현을 보여 줍니다. 여기에는 많은 코드가 있으므로 몇 분 정도 걸리며 여기서 살펴보겠습니다. 이 메서드의 첫 번째 작업은 필요한 &ndash; 경우를 호출 `_scaleDetector.OnTouchEvent`하 여 해당 아이콘의 크기를 조정 하는 것입니다. 다음으로이 메서드를 호출 하는 작업을 파악 합니다.
 
     - 사용자가를 사용 하 여 화면을 작업 한 경우 X 및 Y 위치와 화면에 대 한 첫 번째 포인터의 ID를 기록 합니다.
 
@@ -231,12 +231,12 @@ ms.locfileid: "68644119"
     }
     ```
 
--   이제 응용 프로그램을 실행 하 고 제스처 인식기 작업을 시작 합니다.
+- 이제 응용 프로그램을 실행 하 고 제스처 인식기 작업을 시작 합니다.
     시작 하는 경우 화면은 아래 스크린샷 처럼 표시 됩니다.
 
     [![Android 아이콘이 있는 제스처 인식기 시작 화면](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
--   이제 아이콘을 터치 하 여 화면 주위로 끌어 옵니다. 확대/축소 제스처를 사용해 보세요. 어느 시점에서 화면이 다음 스크린샷 처럼 보일 수 있습니다.
+- 이제 아이콘을 터치 하 여 화면 주위로 끌어 옵니다. 확대/축소 제스처를 사용해 보세요. 어느 시점에서 화면이 다음 스크린샷 처럼 보일 수 있습니다.
 
     [![화면 주위에서 제스처 이동 아이콘](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
@@ -248,7 +248,7 @@ ms.locfileid: "68644119"
 
 이 연습을 위해 제스처 라이브러리는 이미 제스처 도구를 사용 하 여 만들어져 파일 **리소스/원시/제스처**의 프로젝트에 추가 되었습니다. 이러한 약간의 정리 작업을 통해 연습에서 최종 활동을 사용할 수 있습니다.
 
--   **사용자 지정\_제스처\_레이아웃. axml** 이라는 레이아웃 파일을 다음 내용이 포함 된 프로젝트에 추가 합니다. 프로젝트의 **Resources** 폴더에 모든 이미지가 이미 있습니다.
+- **사용자 지정\_제스처\_레이아웃. axml** 이라는 레이아웃 파일을 다음 내용이 포함 된 프로젝트에 추가 합니다. 프로젝트의 **Resources** 폴더에 모든 이미지가 이미 있습니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -274,14 +274,14 @@ ms.locfileid: "68644119"
     </LinearLayout>
     ```
 
--   그런 다음 프로젝트에 새 활동을 추가 하 고 이름을 `CustomGestureRecognizerActivity.cs`로 만듭니다. 다음 두 줄의 코드에 표시 된 것 처럼 두 개의 인스턴스 변수를 클래스에 추가 합니다.
+- 그런 다음 프로젝트에 새 활동을 추가 하 고 이름을 `CustomGestureRecognizerActivity.cs`로 만듭니다. 다음 두 줄의 코드에 표시 된 것 처럼 두 개의 인스턴스 변수를 클래스에 추가 합니다.
 
     ```csharp
     private GestureLibrary _gestureLibrary;
     private ImageView _imageView;
     ```
 
--   이 작업의 메서드를 다음 코드와 유사 하 게 편집 합니다. `OnCreate` 이 코드에서 진행 되는 사항을 설명 하는 데 몇 분 정도 걸릴 수 있습니다. 가장 먼저 할 일은를 `GestureOverlayView` 인스턴스화하고 활동의 루트 뷰로 설정 하는 것입니다.
+- 이 작업의 메서드를 다음 코드와 유사 하 게 편집 합니다. `OnCreate` 이 코드에서 진행 되는 사항을 설명 하는 데 몇 분 정도 걸릴 수 있습니다. 가장 먼저 할 일은를 `GestureOverlayView` 인스턴스화하고 활동의 루트 뷰로 설정 하는 것입니다.
     또한 이벤트 처리기를의 `GesturePerformed` `GestureOverlayView`이벤트에 할당 합니다. 그런 다음 앞에서 만든 레이아웃 파일을 확장 하 고이를의 `GestureOverlayView`자식 뷰로 추가 합니다. 마지막 단계는 변수 `_gestureLibrary` 를 초기화 하 고 응용 프로그램 리소스에서 제스처 파일을 로드 하는 것입니다. 어떤 이유로 든 제스처 파일을 로드할 수 없는 경우이 작업을 수행할 수 있는 작업은 많지 않으므로 종료 됩니다.
 
     ```csharp
@@ -306,7 +306,7 @@ ms.locfileid: "68644119"
     }
     ```
 
--   다음 코드 조각과 같이 메서드 `GestureOverlayViewOnGesturePerformed` 를 구현 하는 데 필요한 최종 작업은 다음과 같습니다. 에서 `GestureOverlayView` 제스처를 검색 하면이 메서드를 다시 호출 합니다. 첫 번째는를 호출 `IList<Prediction>` `_gestureLibrary.Recognize()`하 여 제스처와 일치 하는 개체를 가져오려고 시도 하는 것입니다. 약간의 LINQ를 사용 하 여 제스처 점수가 `Prediction` 가장 높은를 가져옵니다.
+- 다음 코드 조각과 같이 메서드 `GestureOverlayViewOnGesturePerformed` 를 구현 하는 데 필요한 최종 작업은 다음과 같습니다. 에서 `GestureOverlayView` 제스처를 검색 하면이 메서드를 다시 호출 합니다. 첫 번째는를 호출 `IList<Prediction>` `_gestureLibrary.Recognize()`하 여 제스처와 일치 하는 개체를 가져오려고 시도 하는 것입니다. 약간의 LINQ를 사용 하 여 제스처 점수가 `Prediction` 가장 높은를 가져옵니다.
 
     충분 한 점수가 있는 일치 하는 제스처가 없으면 이벤트 처리기는 아무 작업도 수행 하지 않고 종료 됩니다. 그렇지 않으면 예측의 이름을 확인 하 고 제스처 이름에 따라 표시 되는 이미지를 변경 합니다.
 
@@ -339,7 +339,7 @@ ms.locfileid: "68644119"
     }
     ```
 
--   응용 프로그램을 실행 하 고 사용자 지정 제스처 인식기 작업을 시작 합니다. 다음 스크린샷 처럼 표시 됩니다.
+- 응용 프로그램을 실행 하 고 사용자 지정 제스처 인식기 작업을 시작 합니다. 다음 스크린샷 처럼 표시 됩니다.
 
     [![Check Me 이미지를 사용 하는 스크린샷](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: fd813427836b0250b84941eca54d6bbe6219518e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645328"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522498"
 ---
 # <a name="extending-the-recyclerview-example"></a>RecyclerView 예제 확장
 
@@ -26,11 +26,11 @@ ms.locfileid: "68645328"
 
 항목 클릭 이벤트를 처리 하는 방법을 설명 하기 위해 다음 단계에서는 사용자가 작업 한 사진을 보고 하기 위해 기본 사진 보기 앱이 수정 되는 방법에 대해 설명 합니다. 샘플 앱에서 항목 클릭 이벤트가 발생 하면 다음 시퀀스가 수행 됩니다.
 
-1.  사진은 항목 클릭 `CardView` 이벤트를 검색 하 고 어댑터에 알립니다.
+1. 사진은 항목 클릭 `CardView` 이벤트를 검색 하 고 어댑터에 알립니다.
 
-2.  어댑터는 이벤트 (항목 위치 정보 포함)를 활동의 항목 클릭 처리기에 전달 합니다.
+2. 어댑터는 이벤트 (항목 위치 정보 포함)를 활동의 항목 클릭 처리기에 전달 합니다.
 
-3.  활동의 항목 클릭 처리기는 항목 클릭 이벤트에 응답 합니다.
+3. 활동의 항목 클릭 처리기는 항목 클릭 이벤트에 응답 합니다.
 
 먼저 이라는 `ItemClick` 이벤트 처리기 멤버가 `PhotoAlbumAdapter` 클래스 정의에 추가 됩니다.
 

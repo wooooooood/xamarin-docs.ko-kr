@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2256e52e1b2a468ecbed97d5c7ed2d0a05f6cc4e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: d1a96c81da8d71d92e3ce5acd9928b293f3cf3dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510743"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524711"
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -159,7 +159,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 
 의도 필터가 제대로 구성 되어 있고 앱이 URI에 대 한 기본 처리기로 설정 되었는지 확인 하기 위해 수행할 수 있는 두 가지 테스트가 있습니다.
 
-1.  디지털 자산 파일은 위에서 설명한 대로 제대로 호스트 됩니다. 첫 번째 테스트는 Android가 모바일 응용 프로그램으로 리디렉션하는 의도를 디스패치합니다. Android 응용 프로그램을 시작 하 고 URL에 대해 등록 된 활동을 표시 합니다. 명령 프롬프트에서 다음을 입력 합니다.
+1. 디지털 자산 파일은 위에서 설명한 대로 제대로 호스트 됩니다. 첫 번째 테스트는 Android가 모바일 응용 프로그램으로 리디렉션하는 의도를 디스패치합니다. Android 응용 프로그램을 시작 하 고 URL에 대해 등록 된 활동을 표시 합니다. 명령 프롬프트에서 다음을 입력 합니다.
 
     ```shell
     $ adb shell am start -a android.intent.action.VIEW \
@@ -167,7 +167,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2.  지정 된 장치에 설치 된 응용 프로그램에 대 한 기존 링크 처리 정책을 표시 합니다. 다음 명령을 사용 하 여 장치의 각 사용자에 대 한 링크 정책 목록을 다음 정보와 함께 덤프 합니다. 명령 프롬프트에 다음 명령을 입력합니다.
+2. 지정 된 장치에 설치 된 응용 프로그램에 대 한 기존 링크 처리 정책을 표시 합니다. 다음 명령을 사용 하 여 장치의 각 사용자에 대 한 링크 정책 목록을 다음 정보와 함께 덤프 합니다. 명령 프롬프트에 다음 명령을 입력합니다.
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -177,7 +177,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     * **`Domain`** &ndash; 응용 프로그램에서 웹 링크를 처리 하는 도메인 (공백으로 구분)입니다.
     * **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 `android:autoVerify=true` 를 선언 하 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
 
-    예:
+    예를 들어:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps

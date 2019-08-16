@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 6d80af60ae94c638c7d90229852f304a40ce0b0c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4c612faca90d4b2b4e44cfbb53ff65ec07fcdfd1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643816"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524830"
 ---
 # <a name="binding-an-aar"></a>.AAR 바인딩
 
@@ -24,10 +24,10 @@ _이 연습에서는 Android에서 Xamarin.ios Java 바인딩 라이브러리를
 *Android 보관 파일 (. AAR)* 파일은 Android 라이브러리의 파일 형식입니다.
 하면. AAR 파일은입니다. 다음을 포함 하는 ZIP 보관 파일:
 
--   컴파일된 Java 코드
--   리소스 Id
--   리소스
--   메타 데이터 (예: 활동 선언, 사용 권한)
+- 컴파일된 Java 코드
+- 리소스 Id
+- 리소스
+- 메타 데이터 (예: 활동 선언, 사용 권한)
 
 이 가이드에서는 단일에 대 한 바인딩 라이브러리를 만드는 기본 사항을 단계별로 설명 합니다. AAR 파일입니다. 일반적인 Java 라이브러리 바인딩에 대 한 개요는 기본 코드 예제와 함께 [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)을 참조 하세요.
 
@@ -81,35 +81,35 @@ public class TextCounter
 
 아래 단계를 시작 하기 전에 [aar](https://github.com/xamarin/monodroid-samples/blob/master/JavaIntegration/AarBinding/Resources/textanalyzer.aar?raw=true) Android 보관 파일 예제를 다운로드 하세요.
 
-1.  Android 바인딩 라이브러리 템플릿으로 시작 하는 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac용 Visual Studio 또는 Visual Studio 중 하나를 사용할 수 있습니다. 아래 스크린샷은 Visual Studio를 표시 하지만 Mac용 Visual Studio는 매우 비슷합니다. 솔루션 이름을 **AarBinding**로 합니다.
+1. Android 바인딩 라이브러리 템플릿으로 시작 하는 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac용 Visual Studio 또는 Visual Studio 중 하나를 사용할 수 있습니다. 아래 스크린샷은 Visual Studio를 표시 하지만 Mac용 Visual Studio는 매우 비슷합니다. 솔루션 이름을 **AarBinding**로 합니다.
 
     [![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
-2.  템플릿에는를 추가 하는 **jar** 폴더가 포함 되어 있습니다. 바인딩 라이브러리 프로젝트에 대 한 AAR입니다. **Jar** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **> 기존 항목 추가**를 선택 합니다.
+2. 템플릿에는를 추가 하는 **jar** 폴더가 포함 되어 있습니다. 바인딩 라이브러리 프로젝트에 대 한 AAR입니다. **Jar** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **> 기존 항목 추가**를 선택 합니다.
 
     [![기존 항목 추가](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
 
-3.  이전에 다운로드 한 **textanalyzer. aar** 파일로 이동 하 여 선택 하 고 **추가**를 클릭 합니다.
+3. 이전에 다운로드 한 **textanalyzer. aar** 파일로 이동 하 여 선택 하 고 **추가**를 클릭 합니다.
 
     [![Textanalayzer. aar를 추가 합니다.](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
 
 
-4.  **Textanalyzer** 파일이 프로젝트에 성공적으로 추가 되었는지 확인 합니다.
+4. **Textanalyzer** 파일이 프로젝트에 성공적으로 추가 되었는지 확인 합니다.
 
     [![Textanalyzer 파일이 추가 되었습니다.](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
-5.  **Textanalyzer. aar** 에 대 한 빌드 작업을 `LibraryProjectZip`로 설정 합니다. Mac용 Visual Studio에서 **textanalyzer. aar** 를 마우스 오른쪽 단추로 클릭 하 여 빌드 작업을 설정 합니다. Visual Studio에서 빌드 작업은 **속성** 창에서 설정할 수 있습니다.
+5. **Textanalyzer. aar** 에 대 한 빌드 작업을 `LibraryProjectZip`로 설정 합니다. Mac용 Visual Studio에서 **textanalyzer. aar** 를 마우스 오른쪽 단추로 클릭 하 여 빌드 작업을 설정 합니다. Visual Studio에서 빌드 작업은 **속성** 창에서 설정할 수 있습니다.
 
     [![Textanalyzer. aar 빌드 작업을 라이브러리 편집기로 설정](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
-6.  프로젝트 속성을 열어 *대상 프레임 워크*를 구성 합니다. 이면이 고, 그렇지 않으면입니다. AAR는 Android Api를 사용 하 여 대상 프레임 워크를의 API 수준으로 설정 합니다. AAR에는가 필요 합니다. (일반적으로 대상 프레임 워크 설정 및 Android API 수준에 대 한 자세한 내용은 [ANDROID Api 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.)
+6. 프로젝트 속성을 열어 *대상 프레임 워크*를 구성 합니다. 이면이 고, 그렇지 않으면입니다. AAR는 Android Api를 사용 하 여 대상 프레임 워크를의 API 수준으로 설정 합니다. AAR에는가 필요 합니다. (일반적으로 대상 프레임 워크 설정 및 Android API 수준에 대 한 자세한 내용은 [ANDROID Api 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.)
 
     바인딩 라이브러리의 대상 API 수준을 설정 합니다. 이 예제에서 **textanalyzer** 는 Android api에 대 한 종속성이 없기 때문에 최신 플랫폼 api 수준 (api 수준 23)을 무료로 사용할 수 있습니다.
 
     [![대상 수준을 API 23으로 설정](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
-7.  바인딩 라이브러리를 빌드합니다. 바인딩 라이브러리 프로젝트가 성공적으로 작성 되 고 출력을 생성 해야 합니다. 다음 위치의 DLL: **AarBinding/bin/Debug/AarBinding.dll**
+7. 바인딩 라이브러리를 빌드합니다. 바인딩 라이브러리 프로젝트가 성공적으로 작성 되 고 출력을 생성 해야 합니다. 다음 위치의 DLL: **AarBinding/bin/Debug/AarBinding.dll**
 
 
 
@@ -117,19 +117,19 @@ public class TextCounter
 
 이를 사용 하려면입니다. DLL을 다운로드 하려면 먼저 바인딩 라이브러리에 대 한 참조를 추가 해야 합니다. 다음 단계를 사용합니다.
 
-1.  이 연습을 간소화 하기 위해 바인딩 라이브러리와 동일한 솔루션에이 앱을 만듭니다. 바인딩 라이브러리를 사용 하는 앱은 다른 솔루션에도 있을 수 있습니다. 새 Xamarin Android 앱 만들기: 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **새 프로젝트 추가**를 선택 합니다. 새 프로젝트의 이름을 **Bindingtest**로 합니다.
+1. 이 연습을 간소화 하기 위해 바인딩 라이브러리와 동일한 솔루션에이 앱을 만듭니다. 바인딩 라이브러리를 사용 하는 앱은 다른 솔루션에도 있을 수 있습니다. 새 Xamarin Android 앱 만들기: 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **새 프로젝트 추가**를 선택 합니다. 새 프로젝트의 이름을 **Bindingtest**로 합니다.
 
     [![새 BindingTest 프로젝트 만들기](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
-2.  **Bindingtest** 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**...를 선택 합니다.
+2. **Bindingtest** 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**...를 선택 합니다.
 
     [![참조 추가를 클릭 합니다.](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
 
-3.  이전에 만든 **AarBinding** 프로젝트를 선택 하 고 **확인을**클릭 합니다.
+3. 이전에 만든 **AarBinding** 프로젝트를 선택 하 고 **확인을**클릭 합니다.
 
     [![AAR 바인딩 프로젝트를 확인 합니다.](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
 
-4.  **Bindingtest** 프로젝트의 **참조** 노드를 열어 **AarBinding** 참조가 있는지 확인 합니다.
+4. **Bindingtest** 프로젝트의 **참조** 노드를 열어 **AarBinding** 참조가 있는지 확인 합니다.
 
     [![AarBinding은 참조 아래에 나열 됩니다.](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
@@ -276,7 +276,7 @@ Xamarin 도구는에서 **R** 데이터를 병합 합니다. 앱의 **리소스*
 <ImageView android:src="@drawable/image" ... />
 ```
 
-에 있는 리소스 레이아웃에도 액세스할 수 있습니다. AAR. 이렇게 하려면 내에 패키지 된 레이아웃에 대 한 **리소스. 레이아웃** 이름을 사용 합니다. AAR. 예:
+에 있는 리소스 레이아웃에도 액세스할 수 있습니다. AAR. 이렇게 하려면 내에 패키지 된 레이아웃에 대 한 **리소스. 레이아웃** 이름을 사용 합니다. AAR. 예를 들어:
 
 ```csharp
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);

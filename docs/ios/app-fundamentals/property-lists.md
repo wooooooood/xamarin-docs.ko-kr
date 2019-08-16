@@ -1,61 +1,61 @@
 ---
-title: Xamarin.iOS에서 속성 목록 사용
-description: 이 문서에서는 Entitlements.plist Info.plist와 작업에 대 한 Mac의 그래픽 및 고급 속성 목록 (.plist) 편집기에 대 한 Visual Studio를 소개 합니다. 설정 아이콘 및 시작 이미지에서 iOS 응용 프로그램에 대 한 설명 mac 용 Visual Studio 내에서
+title: Xamarin.ios에서 속성 목록 작업
+description: 이 문서에서는 info.plist 및 info.plist를 사용 하기 위한 Mac용 Visual Studio의 그래픽 및 고급 속성 목록 (. info.plist) 편집기를 소개 합니다. Mac용 Visual Studio 내에서 iOS 응용 프로그램에 대 한 아이콘 및 시작 이미지를 설정 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 87015163eca9fdb2fb8cee35e74d5031314fd42e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ca3622e01d6c7b616dc115b89ffcccf64022b1a1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61246040"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527132"
 ---
-# <a name="working-with-property-lists-in-xamarinios"></a>Xamarin.iOS에서 속성 목록 사용
+# <a name="working-with-property-lists-in-xamarinios"></a>Xamarin.ios에서 속성 목록 작업
 
-_이 문서에서는 Entitlements.plist Info.plist와 작업에 대 한 Mac의 그래픽 및 고급 속성 목록 (.plist) 편집기에 대 한 Visual Studio를 소개 합니다. 설정 아이콘 및 시작 이미지에서 iOS 응용 프로그램에 대 한 설명 mac 용 Visual Studio 내에서_
+_이 문서에서는 info.plist 및 info.plist를 사용 하기 위한 Mac용 Visual Studio의 그래픽 및 고급 속성 목록 (. info.plist) 편집기를 소개 합니다. Mac용 Visual Studio 내에서 iOS 응용 프로그램에 대 한 아이콘 및 시작 이미지를 설정 하는 방법을 보여 줍니다._
 
-Mac 용 visual Studio 기능을 쉽게 기능과 앱 속성을 편집 하는 그래픽.plist 편집기입니다. Mac 용 visual Studio에는 두.plists- `Info.plist` 앱 속성 및 아이콘을 편집 및 `Entitlements.plist` 앱 기능을 관리 합니다. 이 가이드는 Info.plists를 소개 하 고 mac 용 Visual Studio에서 작업 하는 개요를 제공 합니다. Entitlements.plist에 대 한 내용은 참조는 [자격](~/ios/deploy-test/provisioning/entitlements.md) 가이드입니다.
+Mac용 Visual Studio에는 앱 속성과 기능을 보다 쉽게 편집할 수 있도록 하는 info.plist 편집기가 있습니다. Mac용 Visual Studio에는 앱 속성 및 `Info.plist` 아이콘을 편집 하 고 `Entitlements.plist` 앱 기능을 관리 하기 위한 plists가 있습니다. 이 가이드에서는 plists를 소개 하 고 Mac용 Visual Studio에서 작업에 대 한 개요를 제공 합니다. Info.plist에 대 한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조 하세요.
 
 ## <a name="infoplist"></a>Info.plist
 
-정보 속성 목록 ( `Info.plist`)는 필요한 iOS 파일 시스템에 응용 프로그램의 구성에 대 한 정보를 제공입니다. Mac 용 visual Studio의 사용자 지정 `Info.plist` 편집기 창의 맨 아래에 탭으로 제어 하는 패널 세 개 남아 편집기 기능:
+정보 속성 목록 ( `Info.plist`)은 시스템에 응용 프로그램의 구성에 대 한 정보를 제공 하는 필수 iOS 파일입니다. Mac용 Visual Studio의 사용자 `Info.plist` 지정 편집기 기능은 편집기 창의 왼쪽 아래에 탭으로 제어 되는 세 개의 패널을 제공 합니다.
 
- [![](property-lists-images/tabs.png "편집기 창의 왼쪽 맨 아래에서 Info.plist 편집기 탭")](property-lists-images/tabs.png#lightbox)
+ [![](property-lists-images/tabs.png "편집기 창의 왼쪽 아래에 있는 info.plist 편집기 탭")](property-lists-images/tabs.png#lightbox)
 
-각 패널 아래에 설명 된 대로 서로 다른 속성을 제어 합니다.
+각 패널은 아래에 설명 된 대로 서로 다른 속성을 제어 합니다.
 
--  **응용 프로그램 패널** -일반적인 응용 프로그램 속성 뿐만 아니라 아이콘 및 시작 설정 하기 위한 그래픽 인터페이스 이미지; 지도 통합 및 backgrounding 모드를 지정 합니다.
--  **패널 고급** -고급 패널이 지원 되는 문서 유형의 경우 Uti를 지정 하는 위치 및 URL 형식입니다.
--  **원본 패널** -원본 패널 응용 프로그램에 대 한 사용자 지정 속성 뿐만 아니라 덜 일반적인 속성을 제어 합니다.
+- **응용 프로그램 패널** -일반적인 응용 프로그램 속성 뿐만 아니라 아이콘 및 시작 이미지를 설정 하는 그래픽 인터페이스입니다. 지도 통합 및 backgrounding 모드를 지정 합니다.
+- **고급 패널** -고급 패널은 지원 되는 문서 유형, UTIS 및 URL 유형을 지정 하는 장소입니다.
+- **원본 패널** -원본 패널은 응용 프로그램에 대 한 사용자 지정 속성 뿐만 아니라 더 낮은 공용 속성을 제어 합니다.
 
 
-다음 세 섹션 자세히 각 패널의 기능을 조사합니다.
+다음 세 개의 섹션에서는 각 패널의 기능을 자세히 조사 합니다.
 
 ## <a name="application-panel"></a>응용 프로그램 패널
 
-Mac 용 visual Studio 기능 일반적인 편집 하기 위한 그래픽 인터페이스 `Info.plist` 응용 프로그램에 대 한 항목:
+Mac용 Visual Studio는 응용 프로그램의 공통 `Info.plist` 항목을 편집 하기 위한 그래픽 인터페이스를 제공 합니다.
 
-1.  애플리케이션 속성
-1.  지원 되는 장치 유형
-1.  각 장치 유형에 대해 지원 방향
-1.  상태 표시줄 스타일 및 색
-1.  아이콘 및 시작 화면
-1.  맵 및 백그라운드 모드
+1. 애플리케이션 속성
+1. 지원 되는 장치 유형
+1. 각 장치 유형에 대 한 지원 방향
+1. 상태 표시줄 스타일 및 색
+1. 아이콘 및 시작 화면
+1. 지도 및 백그라운드 모드
 
 
-이러한 작업은 다음 섹션에서 자세히 설명 되어 있습니다.
+이러한 내용은 다음 섹션에 자세히 설명 되어 있습니다.
 
  <a name="iOS_Application_Target" />
 
 
 ### <a name="ios-application-target"></a>iOS 응용 프로그램 대상
 
-이 섹션에서는 응용 프로그램을 설명 하는 중요 한 정보를 포함 합니다.
-합니다 **식별자** 저장 여기에 iTunes Connect (앱 스토어 앱) 및 개발 및 배포 인증서 iOS Provisioning Portal 앱 Id 목록에 입력 된 번들 식별자와 일치 해야 합니다.
+이 섹션에는 응용 프로그램을 설명 하는 중요 한 정보가 포함 되어 있습니다.
+여기에 저장 된 **식별자** 는 iTunes Connect (앱 스토어 앱의 경우) 및 IOS 프로 비전 포털 앱 id 목록 및 개발 및 배포 인증서에 입력 된 번들 식별자와 일치 해야 합니다.
 
  [![](property-lists-images/image24.png "iOS 응용 프로그램 대상")](property-lists-images/image24.png#lightbox)
 
@@ -63,15 +63,15 @@ Mac 용 visual Studio 기능 일반적인 편집 하기 위한 그래픽 인터�
 
  [![](property-lists-images/deployment.png "장치 배포")](property-lists-images/deployment.png#lightbox)
 
-장치 **배포** info 섹션의 선택에 따라 선택적으로 표시 되는 **장치** 드롭다운에서 합니다 **응용 프로그램 대상** 위의 섹션. 합니다 **주 인터페이스** 드롭다운 목록으로 설정 됩니다 **MainStoryboard** 스토리 보드 기반 응용 프로그램에서입니다. 사용자 인터페이스는 코드로 완전히 작성 하는 경우 다음이 비워둘 수 있습니다.
+장치 **배포** 정보 섹션은 위의 **응용 프로그램 대상** 섹션에서 **장치** 드롭다운의 선택에 따라 선택적으로 표시 됩니다. **주 인터페이스** 드롭다운은 Storyboard 기반 응용 프로그램에서 **mainstoryboard.storyboard** 로 설정 됩니다. 사용자 인터페이스가 코드로 완전히 작성 된 경우 비워 둘 수 있습니다.
 
 ### <a name="supported-device-orientations"></a>지원 되는 장치 방향
 
- **장치 방향 지원** 앱 장치 회전에 반응 하는 방법을 제어 합니다. IPhone/iPad 앱만 지원 하기 위해 매우 일반적 이기 **세로**, 또는 있지만 **거꾸로**합니다. 일반적으로 게임을 제외한 모든 iPad 응용 프로그램에는 모든 방향을 지원 해야 합니다.
+ **지원 되는 장치 방향은** 앱이 장치 회전에 응답 하는 방식을 제어 합니다. IPhone/iPad 앱에서 **세로**또는 모든 항목을 지 원하는 것은 매우 일반적입니다. 일반적으로 게임을 제외한 모든 iPad 응용 프로그램은 모든 방향을 지원 해야 합니다.
 
 ### <a name="status-bar-styles"></a>상태 표시줄 스타일
 
-합니다 **상태 표시줄 스타일** 섹션은 응용 프로그램을 편집 하기 위한 그래픽 인터페이스 `UIStatusBarStyle`:
+**상태 표시줄 스타일** 섹션은 응용 프로그램 `UIStatusBarStyle`을 편집 하기 위한 그래픽 인터페이스입니다.
 
  [![](property-lists-images/status.png "상태 표시줄 스타일")](property-lists-images/status.png#lightbox)
 
@@ -80,85 +80,85 @@ Mac 용 visual Studio 기능 일반적인 편집 하기 위한 그래픽 인터�
 
 ### <a name="icons-launch-images-and-itunes-artwork"></a>아이콘, 시작 이미지 및 iTunes 아트 워크
 
-아이콘, 이미지 및 아트 워크를 사용 하 여 Info.plist 파일에 대 한 정보를 찾을 수 있습니다 합니다 [이미지를 사용 하 여 작업](~/ios/app-fundamentals/images-icons/index.md) 가이드입니다.
+Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 방법에 대 한 정보는 [이미지 작업](~/ios/app-fundamentals/images-icons/index.md) 가이드에서 찾을 수 있습니다.
 
 
 
 
 ### <a name="maps-integration-and-background-modes"></a>지도 통합 및 백그라운드 모드
 
-`Info.plist` 지도 통합 및 backgrounding 모드를 지정 하는 특별 한 섹션이 포함 되어 있습니다. 지원 하려는 옵션을 선택할 수에 대 한 응용 프로그램에 필요한 속성을 추가 합니다.
+에 `Info.plist` 는 지도 통합 및 backgrounding 모드를 지정 하기 위한 특수 섹션이 포함 되어 있습니다. 지원 하려는 옵션을 선택 하면 응용 프로그램에 필요한 속성이 추가 됩니다.
 
  [![](property-lists-images/maps.png "지도 통합")](property-lists-images/maps.png#lightbox)
 
-맵 사용 하 여 작업에 대 한 자세한 내용은 Xamarin 참조 [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md) 가이드입니다.
+맵 사용에 대 한 자세한 내용은 Xamarin [IOS maps](~/ios/user-interface/controls/ios-maps/index.md) 가이드를 참조 하세요.
 
  [![](property-lists-images/bging.png "백그라운드 모드")](property-lists-images/bging.png#lightbox)
 
-백그라운드 모드에 대 한 자세한 내용은 Xamarin 참조 [iOS의 Backgrounding](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) 가이드입니다.
+백그라운드 모드에 대 한 자세한 내용은 [iOS의 Xamarin Backgrounding](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) 가이드를 참조 하세요.
 
 ## <a name="advanced-panel"></a>고급 패널
 
-[고급] 패널 문서 형식 및 응용 프로그램을 지 원하는 URL 스키마를 제어 합니다.
+고급 패널은 응용 프로그램에서 지 원하는 문서 유형 및 URL 스키마를 제어 합니다.
 
  [![](property-lists-images/image34.png "고급 패널")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
 
 
-## <a name="document-types"></a>문서 형식
+## <a name="document-types"></a>문서 유형
 
-IOS 응용 프로그램 특정 파일 형식을 열기 지원에 대해 제공 된 `CFBundleDocumentTypes` 키입니다. -예를 들어 Pdf-특정 알려진된 파일 형식을 지원 하도록 응용 프로그램을 할까요 키 PDF 값의 연결을 추가할 것입니다. 이 섹션에 저장 되는 데이터를 입력 하는 편리한 방법을 제공 합니다 `CFBundleDocumentTypes` 키를 `Info.plist` 파일입니다.
+특정 형식의 파일을 여는 기능을 지 원하는 응용 프로그램의 `CFBundleDocumentTypes` 경우 iOS에서 키를 제공 합니다. 응용 프로그램에서 알려진 특정 파일 형식 (예: Pdf)을 지원 하려는 경우 PDF 값을 키에 추가 합니다. 이 섹션에서는 `CFBundleDocumentTypes` `Info.plist` 파일의 키에 저장 되는 데이터를 편리 하 게 입력할 수 있는 방법을 제공 합니다.
 
-설명서를 참조 하십시오 [파일 형식 Your App 지원 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) 이러한 값을 구성 하는 방법에 대 한 자세한 내용은 합니다.
+이러한 값을 구성 하는 방법에 대 한 자세한 내용은 [앱이 지 원하는 파일 형식을 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) 하는 방법에 대 한 설명서를 참조 하세요.
 
 ## <a name="utis"></a>Uti
 
-경우에 따라 응용 프로그램을 사용자 지정 파일 형식을 열기를 지원 해야 합니다. 예를 들어, 하려는 사용자 지정 확장을 사용 하 여 이미지 파일을 엽니다 *.xam*합니다. 사용자 지정 파일 형식을 지정 하려면 만들어 사용 하 여 사용자 지정-범용 유형 식별자-UTI를 `UIExportedTypeDeclarations` 키입니다. 아래 스크린샷에서.xam 확장에 대 한 사용자 지정 UTI를 만드는 방법을 보여 줍니다.
+응용 프로그램에서 사용자 지정 파일 형식 열기를 지원 해야 하는 경우가 있습니다. 예를 들어 사용자 지정 확장 *. xam*을 사용 하 여 이미지 파일을 열 수 있습니다. 사용자 지정 파일 형식을 지정 하려면 `UIExportedTypeDeclarations` 키를 사용 하 여 사용자 지정 UTI-범용 형식 식별자를 만듭니다. 아래 스크린샷에서는 .xam 확장에 대 한 사용자 지정 UTI을 만드는 방법을 보여 줍니다.
 
- [![](property-lists-images/uti.png "Uti 편집기")](property-lists-images/uti.png#lightbox)
+ [![](property-lists-images/uti.png "UTIs 편집기")](property-lists-images/uti.png#lightbox)
 
-특정 앱에 사용자 지정 Uti를 지정 하는 것으로 내보낸된 형식 Uti 합니다 *가져온 형식 Uti* ( `UIImportedTypeDeclarations` 키) 지원 되지만 응용 프로그램을 소유 하지 않은 사용자 지정 형식을 지정 합니다.
+내보낸 형식 utis는 사용자 지정 utis를 앱에 특정 하 게 지정 하는 것 처럼, `UIImportedTypeDeclarations` *가져온 형식 utis* (키)는 지원 되지만 응용 프로그램이 소유 하지 않은 사용자 지정 형식을 지정 합니다.
 
-사용자 지정 Uti를 사용 하 여에 대 한 자세한 내용은 Apple의 참조 [등록할 파일 형식을 사용자 앱에서 지 원하는](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_declare/understand_utis_declare.html#//apple_ref/doc/uid/TP40001319-CH204-SW1) 가이드.
+사용자 지정 UTIs를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [앱에서 지 원하는 파일 형식 등록](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_declare/understand_utis_declare.html#//apple_ref/doc/uid/TP40001319-CH204-SW1) 가이드를 참조 하세요.
 
 ## <a name="custom-urls"></a>사용자 지정 Url
 
-URL의 첫 번째 부분은 (프로토콜 라고도 함) URL 구성표 이름입니다. 예를 들어 `http://` 고 `https://` 공용 URL 구성표가 있습니다. 응용 프로그램에 대 한 사용자 지정 URL 구성표를 만드는 옵션이 있습니다. 사용자 지정 URL 구성표는 앞뒤로 다른 응용 프로그램을 사용 하 여 데이터를 보내고 통신에 사용 됩니다. 다음 스크린 샷에서 라는 새 사용자 지정 URL 구성표를 만들 방법을 보여 줍니다 `monkeys://`:
+Url 체계 이름 (프로토콜이 라고도 함)은 URL의 첫 번째 부분입니다. 예를 `http://` 들어 및 `https://` 는 일반적인 URL 체계입니다. 응용 프로그램에 대 한 사용자 지정 URL 체계를 만들 수 있습니다. 사용자 지정 URL 체계는 다른 응용 프로그램과 주고받는 데이터를 주고받는 데 사용 됩니다. 다음 스크린샷에서는 이라는 `monkeys://`새 사용자 지정 URL 구성표를 만드는 방법을 보여 줍니다.
 
  [![](property-lists-images/url.png "사용자 지정 Url")](property-lists-images/url.png#lightbox)
 
 
 
-사용자 지정 URL 구성표의 구현에 대 한 자세한 내용은 Apple의 참조 [이 가이드의 섹션에서는 사용자 지정 URL 체계 구현](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
+사용자 지정 URL 체계를 구현 하는 방법에 대 한 자세한 내용은 [이 가이드의 Apple의 사용자 지정 Url 구성표 구현 섹션](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html) 을 참조 하세요.
 
 ## <a name="source-panel"></a>원본 패널
 
-**원본** 탭을 `Info.plist` 파일 추가 하거나 편집 하려면 사용자 지정 값을 허용 합니다. Mac 용 visual Studio는 가장 일반적인 속성의 목록을 제공합니다.
+`Info.plist` 파일의 **원본** 탭을 사용 하 여 사용자 지정 값을 추가 하거나 편집할 수 있습니다. Mac용 Visual Studio는 가장 일반적인 속성 목록을 제공 합니다.
 
  [![](property-lists-images/image31.png "드롭다운에서 새 속성 추가")](property-lists-images/image31.png#lightbox)
 
-다음 스크린샷에 표시 된 것으로 알려진된 속성 Mac 용 Visual Studio에 대 한 유효한 값 목록을 수행 됩니다.
+알려진 속성의 경우 다음 스크린샷에 표시 된 것 처럼 Mac용 Visual Studio는 유효한 값의 목록입니다.
 
  [![](property-lists-images/image32.png "알려진 값 목록에서 값을 선택 합니다.")](property-lists-images/image32.png#lightbox)
 
-표시 된 대로 Mac 용 visual Studio는 또한 속성 형식 검색:
+Mac용 Visual Studio는 다음과 같이 속성 형식도 검색 합니다.
 
- [![](property-lists-images/image33.png "사용 가능한 속성 형식")](property-lists-images/image33.png#lightbox)
+ [![](property-lists-images/image33.png "사용 가능한 속성 유형")](property-lists-images/image33.png#lightbox)
 
-Apple 검토 [앱 관련 리소스](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) 선택적 속성에 대 한 추가 정보에 대 한 링크입니다.
+옵션 속성에 대 한 자세한 내용은 Apple의 [앱 관련 리소스](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) 링크를 검토 하세요.
 
  <a name="Entitlements" />
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 지정 아이콘 및 시작 이미지에 대 한 일반적인 앱 구성을 편집 하려면 그래픽 및 고급.plist 편집기를 사용 하 여 보여 줍니다. 또한 도입 하는 `Entitlements.plist` 추가 및 관리 앱 기능에 대 한 합니다.
+이 문서에서는 그래픽 및 info.plist 편집기를 사용 하 여 일반 앱 구성을 편집 하 고 아이콘을 지정 하 고 이미지를 시작 하는 방법을 보여 주었습니다. 응용 프로그램 기능을 `Entitlements.plist` 추가 하 고 관리 하기 위한도 도입 되었습니다.
 
 
 ## <a name="related-links"></a>관련 링크
 
 - [IDE](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
 - [앱 관련 리소스](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
-- [사용자 앱에서 지 원하는 형식 파일을 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
-- [사용자 지정 URL 구성표를 구현합니다.](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
+- [앱에서 지 원하는 파일 형식 등록](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
+- [사용자 지정 URL 스키마 구현](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 - [자산 카탈로그 형식 참조](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

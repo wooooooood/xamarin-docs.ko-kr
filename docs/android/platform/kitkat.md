@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: efb55b060243950640978ae2cfc3fe6998efdb87
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3e68ac0a39d3268ce7c84f583c64b247e9f82362
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643468"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524186"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -22,13 +22,13 @@ _Android 4.4 (KitKat)은 사용자 및 개발자를 위한 cornucopia 기능과 
 
 Android 4.4 (API 레벨 19) ("KitKat" 라고도 함)는 2013에 릴리스 되었습니다. KitKat는 다음과 같은 다양 한 새로운 기능 및 향상 된 기능을 제공 합니다.
 
--  [사용자 환경](#user_experience) &ndash; 전환 프레임 워크, 반투명 상태 및 탐색 모음, 전체 화면 몰입 형 모드를 사용 하는 간단한 애니메이션을 통해 사용자에 게 더 나은 환경을 만들 수 있습니다.
+- [사용자 환경](#user_experience) &ndash; 전환 프레임 워크, 반투명 상태 및 탐색 모음, 전체 화면 몰입 형 모드를 사용 하는 간단한 애니메이션을 통해 사용자에 게 더 나은 환경을 만들 수 있습니다.
 
--  [사용자 콘텐츠](#user_content) &ndash; 향상 된 인쇄 api를 통해 저장소 액세스 프레임 워크를 사용 하 여 간소화 된 사용자 파일 관리, 그림, 웹 사이트 및 기타 콘텐츠 인쇄를 더 쉽게 수행할 수 있습니다.
+- [사용자 콘텐츠](#user_content) &ndash; 향상 된 인쇄 api를 통해 저장소 액세스 프레임 워크를 사용 하 여 간소화 된 사용자 파일 관리, 그림, 웹 사이트 및 기타 콘텐츠 인쇄를 더 쉽게 수행할 수 있습니다.
 
--  [하드웨어](#hardware) Nfc 호스트 기반 카드 에뮬레이션을 사용 하 여 앱을 nfc 카드로 전환 하 고를 `SensorManager` 사용 하 여 저전력 센서를 실행 합니다. &ndash;
+- [하드웨어](#hardware) Nfc 호스트 기반 카드 에뮬레이션을 사용 하 여 앱을 nfc 카드로 전환 하 고를 `SensorManager` 사용 하 여 저전력 센서를 실행 합니다. &ndash;
 
--  [개발자 도구](#developer_tools) &ndash; Android Debug Bridge 클라이언트를 사용 하 여 동영상 가이드 응용 프로그램을 Android SDK 일부로 사용할 수 있습니다.
+- [개발자 도구](#developer_tools) &ndash; Android Debug Bridge 클라이언트를 사용 하 여 동영상 가이드 응용 프로그램을 Android SDK 일부로 사용할 수 있습니다.
 
 
 이 가이드에서는 기존 Xamarin.ios 응용 프로그램을 KitKat로 마이그레이션하기 위한 지침 뿐만 아니라 Xamarin.ios 개발자를 위한 KitKat에 대 한 개략적인 개요를 제공 합니다.
@@ -79,11 +79,11 @@ KitKat를 사용 하면 정확 하 게 반복 되는 경보를 설정할 수 없
 
 외부 저장소는 이제 응용 프로그램에 고유한 저장소와 여러 응용 프로그램에서 공유 되는 데이터의 두 가지 유형으로 나뉩니다. 외부 저장소에서 앱의 특정 위치를 읽고 쓰려면 특별 한 권한이 필요 하지 않습니다. 이제 공유 저장소의 데이터와 상호 작용 하려면 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한이 필요 합니다. 이러한 두 가지 형식은 다음과 같이 분류할 수 있습니다.
 
--  에서 `Context` 메서드를 호출 하 여 파일 또는 디렉터리 경로를 가져오는 경우 (예:[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
+- 에서 `Context` 메서드를 호출 하 여 파일 또는 디렉터리 경로를 가져오는 경우 (예:[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
    디스크나[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
    - 앱에 추가 권한이 필요 하지 않습니다.
 
--  속성에 액세스 하거나에서 `Environment` 메서드를 호출 하 여 파일 또는 디렉터리 경로를 가져오는 경우[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
+- 속성에 액세스 하거나에서 `Environment` 메서드를 호출 하 여 파일 또는 디렉터리 경로를 가져오는 경우[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
    디스크나[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
    앱에는 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한이 필요 합니다.
 
@@ -100,7 +100,7 @@ KitKat 사용자가 선택한 하나의 기본 응용 프로그램에서 모든 
 
 <a name="user_experience" />
 
-## <a name="user-experience"></a>사용자 경험
+## <a name="user-experience"></a>사용자 환경
 
 KitKat에는 속성 애니메이션 처리를 위한 새로운 전환 프레임 워크 및 테마를 위한 반투명 UI 옵션을 포함 하 여 사용자 환경을 향상 시키기 위한 몇 가지 새로운 Api가 제공 됩니다. 이러한 변경 내용은 아래에 설명 되어 있습니다.
 
@@ -284,11 +284,11 @@ TransitionManager.Go (scene1, transition);
 
 KitKat를 사용 하면 선택적 반투명 상태 및 탐색 모음으로 앱에 테마를 지정 하는 기능을 더 효과적으로 제어할 수 있습니다. Android 테마를 정의 하는 데 사용 하는 것과 동일한 XML 파일에서 시스템 UI 요소의 반투명도를 변경할 수 있습니다. KitKat에서는 다음 속성을 소개 합니다.
 
--  `windowTranslucentStatus`-True로 설정 하면 위쪽 상태 표시줄을 반투명 하 게 만듭니다.
+- `windowTranslucentStatus`-True로 설정 하면 위쪽 상태 표시줄을 반투명 하 게 만듭니다.
 
--  `windowTranslucentNavigation`-True로 설정 하면 아래쪽 탐색 막대가 반투명 하 게 표시 됩니다.
+- `windowTranslucentNavigation`-True로 설정 하면 아래쪽 탐색 막대가 반투명 하 게 표시 됩니다.
 
--  `fitsSystemWindows`-위쪽 또는 아래쪽 막대를 transcluent로 설정 하면 기본적으로 투명 UI 요소에서 콘텐츠가 이동 합니다. 이 속성을로 `true` 설정 하는 것은 콘텐츠가 반투명 시스템 UI 요소와 겹치지 않도록 하는 간단한 방법입니다.
+- `fitsSystemWindows`-위쪽 또는 아래쪽 막대를 transcluent로 설정 하면 기본적으로 투명 UI 요소에서 콘텐츠가 이동 합니다. 이 속성을로 `true` 설정 하는 것은 콘텐츠가 반투명 시스템 UI 요소와 겹치지 않도록 하는 간단한 방법입니다.
 
 
 다음 코드에서는 반투명 상태와 탐색 모음이 있는 테마를 정의 합니다.
@@ -537,9 +537,9 @@ Hce를 사용 하려면 `Nfc` `AndroidManifest.xml`다음과 같이 hce 기능�
 
 작업 하려면 HCE를 백그라운드에서 실행할 수 있어야 하 고, 사용자가 NFC 트랜잭션을 수행할 때 HCE를 사용 하는 응용 프로그램이 실행 되 고 있지 않은 경우에도이를 시작 해야 합니다. HCE 코드를로 `Service`작성 하 여이를 수행할 수 있습니다. Hce 서비스는 다음 메서드 `HostApduService` 를 구현 하는 인터페이스를 구현 합니다.
 
--  *Processcommandapdu* -APDU (응용 프로그램 프로토콜 데이터 단위)는 NFC 판독기와 Hce 서비스 간에 전송 되는 항목입니다. 이 메서드는 판독기에서 ADPU를 사용 하 고 응답으로 데이터 단위를 반환 합니다.
+- *Processcommandapdu* -APDU (응용 프로그램 프로토콜 데이터 단위)는 NFC 판독기와 Hce 서비스 간에 전송 되는 항목입니다. 이 메서드는 판독기에서 ADPU를 사용 하 고 응답으로 데이터 단위를 반환 합니다.
 
--  *Ondeactivated* `HostAdpuService` 됨-hce 서비스가 더 이상 NFC 판독기와 통신 하지 않는 경우 비활성화 됩니다.
+- *Ondeactivated* `HostAdpuService` 됨-hce 서비스가 더 이상 NFC 판독기와 통신 하지 않는 경우 비활성화 됩니다.
 
 
 또한 HCE 서비스는 응용 프로그램의 매니페스트에 등록 하 고 적절 한 권한, 의도 필터 및 메타 데이터로 데코 레이트 되어야 합니다. 다음 코드는 `Service` 특성을 사용 하 여 `HostApduService` android Manifest에 등록 된의 예제입니다. 특성에 대 한 자세한 내용은 [android 매니페스트](~/android/platform/android-manifest.md) 를 사용 하 여 Xamarin 작업 가이드를 참조 하세요.
@@ -591,9 +591,9 @@ KitKat는를 [`SensorManager`](xref:Android.Hardware.SensorManager)통해 장치
 
 KitKat에는 사용자의 단계를 추적 하기 위한 두 가지 새 센서 유형도 함께 제공 됩니다. 이러한 작업은가 속도계를 기반으로 하며 다음을 포함 합니다.
 
--  단계 *탐지기* -사용자가 단계를 수행 하면 앱이 알림/해제 되며, 탐지기는 단계가 발생 했을 때의 시간 값을 제공 합니다.
+- 단계 *탐지기* -사용자가 단계를 수행 하면 앱이 알림/해제 되며, 탐지기는 단계가 발생 했을 때의 시간 값을 제공 합니다.
 
--  *Stcounter* - *다음 장치를 다시 부팅할 때까지*센서가 등록 된 이후에 사용자가 수행한 단계 수를 추적 합니다.
+- *Stcounter* - *다음 장치를 다시 부팅할 때까지*센서가 등록 된 이후에 사용자가 수행한 단계 수를 추적 합니다.
 
 아래 스크린샷에서는 작업의 단계 카운터를 보여 줍니다.
 
@@ -678,29 +678,29 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 위에서 설명한 변경 내용 외에도 KitKat를 사용 하면 다음을 수행할 수 있습니다.
 
--  *전체 화면을 사용* 하 여 콘텐츠 검색, 게임 재생, 전체 화면 환경에서 혜택을 받을 수 있는 다른 응용 프로그램 실행을 위한 새로운 [몰입 형 모드](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) 를 KitKat.
+- *전체 화면을 사용* 하 여 콘텐츠 검색, 게임 재생, 전체 화면 환경에서 혜택을 받을 수 있는 다른 응용 프로그램 실행을 위한 새로운 [몰입 형 모드](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) 를 KitKat.
 
--  *알림 사용자 지정* -를 사용 하 여 시스템 알림에 대 한 추가 세부 정보를 가져옵니다.[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
+- *알림 사용자 지정* -를 사용 하 여 시스템 알림에 대 한 추가 세부 정보를 가져옵니다.[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
    . 이를 통해 앱 내에서 다른 방식으로 정보를 제공할 수 있습니다.
 
--  *그릴 수 있는 리소스 미러링* -그릴 수 있는 리소스에 새로운[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
+- *그릴 수 있는 리소스 미러링* -그릴 수 있는 리소스에 새로운[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
    시스템에서 왼쪽에서 오른쪽 레이아웃으로의 대칭 이동이 필요한 이미지에 대해 미러된 버전을 만들도록 지시 하는 특성입니다.
 
--  *애니메이션 일시 중지* -를 사용 하 여 만든 애니메이션을 일시 중지 하 고 다시 시작 합니다.[`Animator`](xref:Android.Animation.Animator)
+- *애니메이션 일시 중지* -를 사용 하 여 만든 애니메이션을 일시 중지 하 고 다시 시작 합니다.[`Animator`](xref:Android.Animation.Animator)
    포함됩니다.
 
--  *동적으로 변경 되는 텍스트 읽기* -새 텍스트를 사용 하 여 동적으로 업데이트 되는 UI 파트를 새 텍스트와 함께 "라이브 영역"으로 표시 합니다.[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+- *동적으로 변경 되는 텍스트 읽기* -새 텍스트를 사용 하 여 동적으로 업데이트 되는 UI 파트를 새 텍스트와 함께 "라이브 영역"으로 표시 합니다.[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    새 텍스트를 접근성 모드에서 자동으로 읽도록 특성입니다.
 
--  *오디오 환경 개선* -를 사용 하 여 트랙을 크게 만듭니다.[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
+- *오디오 환경 개선* -를 사용 하 여 트랙을 크게 만듭니다.[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
    에서 다음을 사용 하 여 오디오 스트림의 최고 및 RMS를 찾습니다.[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
    클래스를 사용 하 고 오디오 [타임 스탬프](xref:Android.Media.AudioTimestamp) 에서 정보를 가져와 오디오-비디오 동기화에 도움을 줍니다.
 
--  *사용자 지정 간격에 따라 ContentResolver 동기화* -KitKat은 동기화 요청이 수행 되는 시간에 일부 가변성을 추가 합니다. 를 호출 `ContentResolver` `ContentResolver.RequestSync` 하 고를 `SyncRequest`전달 하 여 사용자 지정 시간 또는 간격으로를 동기화 합니다.
+- *사용자 지정 간격에 따라 ContentResolver 동기화* -KitKat은 동기화 요청이 수행 되는 시간에 일부 가변성을 추가 합니다. 를 호출 `ContentResolver` `ContentResolver.RequestSync` 하 고를 `SyncRequest`전달 하 여 사용자 지정 시간 또는 간격으로를 동기화 합니다.
 
--  *컨트롤러를 구분* 합니다. KitKat 컨트롤러에는 장치의 `ControllerNumber` 속성을 통해 액세스할 수 있는 고유한 정수 식별자가 할당 됩니다. 이렇게 하면 게임에서 플레이어를 쉽게 구분할 수 있습니다.
+- *컨트롤러를 구분* 합니다. KitKat 컨트롤러에는 장치의 `ControllerNumber` 속성을 통해 액세스할 수 있는 고유한 정수 식별자가 할당 됩니다. 이렇게 하면 게임에서 플레이어를 쉽게 구분할 수 있습니다.
 
--  *원격 제어* -하드웨어 및 소프트웨어 쪽에서 몇 가지 사항이 변경 되 면 KitKat를 사용 하 여 IR 전송기를 사용 하는 장치 outfitted을를 사용 하 여 원격 `ConsumerIrService`제어로 전환 하 고, 새로운 기능을 사용 하 여 주변 장치를 조작할 수 있습니다.[`RemoteController`](xref:Android.Media.RemoteController)
+- *원격 제어* -하드웨어 및 소프트웨어 쪽에서 몇 가지 사항이 변경 되 면 KitKat를 사용 하 여 IR 전송기를 사용 하는 장치 outfitted을를 사용 하 여 원격 `ConsumerIrService`제어로 전환 하 고, 새로운 기능을 사용 하 여 주변 장치를 조작할 수 있습니다.[`RemoteController`](xref:Android.Media.RemoteController)
    Api.
 
 위의 API 변경 내용에 대 한 자세한 내용은 Google [Android 4.4 api](https://developer.android.com/about/versions/android-4.4.html) 개요를 참조 하세요.

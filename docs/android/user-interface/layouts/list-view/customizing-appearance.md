@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: 9307e440a780d60a8301c58d70ee882fbbdebab1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646397"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522608"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Xamarin.ios를 사용 하 여 ListView의 모양 사용자 지정
 
@@ -164,17 +164,17 @@ Console.WriteLine();
 
 이 예는 다양 한 방법으로 이전 예제와 다릅니다.
 
--  는이 `Activity` 아니라 `ListActivity` 에서 상속 됩니다. 모든 `ListView` 항목에 대 한 행을 사용자 지정할 수 있지만 다른 컨트롤은 `Activity` 레이아웃 (예: 머리글, 단추 또는 기타 사용자 인터페이스 요소)에 포함 될 수도 있습니다. 이 예제에서는 `ListView` 을 설명 하기 위해 위의 제목을 추가 합니다.
+- 는이 `Activity` 아니라 `ListActivity` 에서 상속 됩니다. 모든 `ListView` 항목에 대 한 행을 사용자 지정할 수 있지만 다른 컨트롤은 `Activity` 레이아웃 (예: 머리글, 단추 또는 기타 사용자 인터페이스 요소)에 포함 될 수도 있습니다. 이 예제에서는 `ListView` 을 설명 하기 위해 위의 제목을 추가 합니다.
 
--  화면에 대 한 AXML 레이아웃 파일이 필요 합니다. 이전 예제에서에는 `ListActivity` 레이아웃 파일이 필요 하지 않습니다. 이 axml에는 `ListView` 컨트롤 선언이 포함 되어 있습니다.
+- 화면에 대 한 AXML 레이아웃 파일이 필요 합니다. 이전 예제에서에는 `ListActivity` 레이아웃 파일이 필요 하지 않습니다. 이 axml에는 `ListView` 컨트롤 선언이 포함 되어 있습니다.
 
--  각 행을 렌더링 하려면 AXML 레이아웃 파일이 필요 합니다. 이 AXML 파일에는 사용자 지정 글꼴 및 색 설정을 사용 하는 텍스트 및 이미지 컨트롤이 포함 되어 있습니다.
+- 각 행을 렌더링 하려면 AXML 레이아웃 파일이 필요 합니다. 이 AXML 파일에는 사용자 지정 글꼴 및 색 설정을 사용 하는 텍스트 및 이미지 컨트롤이 포함 되어 있습니다.
 
--  선택적 사용자 지정 선택기 XML 파일을 사용 하 여 행이 선택 될 때 표시 되는 모양을 설정 합니다.
+- 선택적 사용자 지정 선택기 XML 파일을 사용 하 여 행이 선택 될 때 표시 되는 모양을 설정 합니다.
 
--  `Adapter` 구현은 재정의`GetView` 에서 사용자 지정 레이아웃을 반환 합니다.
+- `Adapter` 구현은 재정의`GetView` 에서 사용자 지정 레이아웃을 반환 합니다.
 
--  `ItemClick`는 다르게 선언 해야 합니다. 이벤트 처리기는에서 `ListView.ItemClick` `ListActivity`재정의 `OnListItemClick` 되는 대신에 연결 됩니다.
+- `ItemClick`는 다르게 선언 해야 합니다. 이벤트 처리기는에서 `ListView.ItemClick` `ListActivity`재정의 `OnListItemClick` 되는 대신에 연결 됩니다.
 
 
 이러한 변경 내용은 활동의 뷰 및 사용자 지정 행 뷰를 만든 다음 어댑터 및이를 렌더링 하기 위한 작업에 대 한 수정 사항을 포함 하 여 아래에 자세히 설명 되어 있습니다.

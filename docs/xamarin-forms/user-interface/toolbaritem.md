@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: dfc50defb6eafe705cc9c59b1b9793f1ce48c527
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: b42a300d9d76a18322891856486720116eb6a8d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984305"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522032"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Xamarin.ios 항목
 
@@ -37,6 +37,9 @@ Xamarin.ios [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 클래스는 `Page` 
 * [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)는에 전달 `SearchCommand`되어야 하는 매개 변수를 지정 하는입니다.`object`
 
 이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 `ToolbarItem` 되므로 인스턴스가 데이터 바인딩의 대상이 될 수 있습니다.
+
+> [!NOTE]
+> 개체에서 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 도구 모음을 만드는 대신 여러 뷰가 포함 된 레이아웃 [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 클래스로 연결 된 속성을 설정 합니다. 자세한 내용은 [탐색 모음에서 보기 표시](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md#displaying-views-in-the-navigation-bar)를 참조 하세요.
 
 ## <a name="create-a-toolbaritem"></a>단일 항목 만들기
 

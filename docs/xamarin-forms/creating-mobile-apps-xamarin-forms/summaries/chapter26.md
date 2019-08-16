@@ -1,18 +1,18 @@
 ---
 title: 요약 26 장입니다. 사용자 지정 레이아웃
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 26 장입니다. 사용자 지정 레이아웃
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 26 장입니다. 사용자 지정 레이아웃'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 9fa9802f94e10612c4b0fe02c84ddcabc89820a8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 46a9887d12d251e60cf6767fe89f6125fe1438d4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331574"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529241"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 26 장입니다. 사용자 지정 레이아웃
 
@@ -116,7 +116,7 @@ Xamarin.Forms 레이아웃을 처리 하는 중앙 집중식된 체제가 없는
 
 합니다 [ **ExploreChildSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) 표시 제약 조건 및 크기 단순형 레이아웃에 대 한 정보를 요청 합니다.
 
-## <a name="deriving-from-layoutview"></a>레이아웃에서 파생<View>
+## <a name="deriving-from-layoutview"></a>레이아웃\<뷰에서 파생 >
 
 사용자 지정 레이아웃 클래스에서 파생 되며 `Layout<View>`합니다. 두 가지 책임이 있습니다.
 

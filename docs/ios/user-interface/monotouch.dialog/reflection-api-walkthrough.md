@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 9dc98480d57dc7d4883306e9f4fc530599af9bd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6482d0626874b3f2ca5e90efb0e376be60551fd7
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652411"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528454"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>리플렉션 API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -26,9 +26,9 @@ MT입니다. D 리플렉션 API를 사용 하면 클래스를 MT 인 특성으�
 
 리플렉션 API를 사용 하는 것은 다음과 같이 간단 합니다.
 
-1.  MT로 데코레이팅된 클래스 만들기 D 특성.
-1.  인스턴스를 `BindingContext` 만들고 위의 클래스의 인스턴스를 전달 합니다. 
-1.  를 만들고를 전달 `BindingContext’s` `RootElement` 합니다. `DialogViewController` 
+1. MT로 데코레이팅된 클래스 만들기 D 특성.
+1. 인스턴스를 `BindingContext` 만들고 위의 클래스의 인스턴스를 전달 합니다. 
+1. 를 만들고를 전달 `BindingContext’s` `RootElement` 합니다. `DialogViewController` 
 
 
 리플렉션 API를 사용 하는 방법을 보여 주는 예를 살펴보겠습니다. 이 예에서는 아래와 같이 간단한 데이터 입력 화면을 작성 합니다.

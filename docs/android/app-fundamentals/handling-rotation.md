@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b1039dd433456731b775399ab42222fe0e4cc6d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 198d667ea52fcad4758c2845e5f2e935d1f74a0b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644364"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521112"
 ---
 # <a name="handling-rotation"></a>회전 처리
 
@@ -25,9 +25,9 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 이 가이드는 다음과 같은 방향 항목을 검사 합니다.
 
--   **선언적 레이아웃 회전** &ndash; Android 리소스 시스템을 사용 하 여 특정 방향에 대 한 레이아웃 및 drawables을 로드 하는 방법을 비롯 하 여 방향 인식 응용 프로그램을 빌드하는 방법입니다.
+- **선언적 레이아웃 회전** &ndash; Android 리소스 시스템을 사용 하 여 특정 방향에 대 한 레이아웃 및 drawables을 로드 하는 방법을 비롯 하 여 방향 인식 응용 프로그램을 빌드하는 방법입니다.
 
--   **프로그래밍 레이아웃 회전** &ndash; 프로그래밍 방식으로 컨트롤을 추가 하는 방법 뿐만 아니라 방향 변경을 수동으로 처리 하는 방법을 설명 합니다.
+- **프로그래밍 레이아웃 회전** &ndash; 프로그래밍 방식으로 컨트롤을 추가 하는 방법 뿐만 아니라 방향 변경을 수동으로 처리 하는 방법을 설명 합니다.
 
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>레이아웃을 사용 하 여 선언적으로 회전 처리
@@ -35,9 +35,9 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 명명 규칙을 따르는 폴더에 파일을 포함 하 여, 해당 방향이 변경 될 때 Android에서 적절 한 파일을 자동으로 로드 합니다.
 여기에는에 대 한 지원이 포함 됩니다.
 
--   *리소스 레이아웃* &ndash; 각 방향에 대해 팽창 되는 레이아웃 파일 지정
+- *리소스 레이아웃* &ndash; 각 방향에 대해 팽창 되는 레이아웃 파일 지정
 
--   *그릴 때 리소스* &ndash; 각 방향에 대해 로드 되는 drawables 지정 하는 것입니다.
+- *그릴 때 리소스* &ndash; 각 방향에 대해 로드 되는 drawables 지정 하는 것입니다.
 
 
 ### <a name="layout-resources"></a>리소스 레이아웃
@@ -133,12 +133,12 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 응용 프로그램에서 프로그래밍 방식으로 컨트롤을 추가 하려면 다음 단계를 수행 해야 합니다.
 
--  레이아웃을 만듭니다.
--  레이아웃 매개 변수를 설정 합니다.
--  컨트롤을 만듭니다.
--  컨트롤 레이아웃 매개 변수를 설정 합니다.
--  레이아웃에 컨트롤을 추가 합니다.
--  레이아웃을 콘텐츠 뷰로 설정 합니다.
+- 레이아웃을 만듭니다.
+- 레이아웃 매개 변수를 설정 합니다.
+- 컨트롤을 만듭니다.
+- 컨트롤 레이아웃 매개 변수를 설정 합니다.
+- 레이아웃에 컨트롤을 추가 합니다.
+- 레이아웃을 콘텐츠 뷰로 설정 합니다.
 
 예를 들어, 다음 코드와 같이에 추가 `TextView` `RelativeLayout`된 단일 컨트롤로 구성 된 사용자 인터페이스를 살펴보겠습니다.
 

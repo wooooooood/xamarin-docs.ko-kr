@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 94a0bddcb3a9a1e7236bed4b4c95fc38e1f9f0dd
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: f25ce3c5bfe7e3d8032709e9df99e7538e978862
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510434"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523421"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Android NUnit 테스트 프로젝트를 자동화하려면 어떻게 할까요?
 
@@ -28,7 +28,7 @@ adb shell am instrument
 
 다음 단계는이 프로세스를 설명 합니다.
 
-1.  **TestInstrumentation.cs**라는 새 파일을 만듭니다. 
+1. **TestInstrumentation.cs**라는 새 파일을 만듭니다. 
 
     ```cs 
     using System;
@@ -37,16 +37,16 @@ adb shell am instrument
     using Android.Content;
     using Android.Runtime;
     using Xamarin.Android.NUnitLite;
-     
+
     namespace App.Tests {
-     
+
         [Instrumentation(Name="app.tests.TestInstrumentation")]
         public class TestInstrumentation : TestSuiteInstrumentation {
-     
+
             public TestInstrumentation (IntPtr handle, JniHandleOwnership transfer) : base (handle, transfer)
             {
             }
-     
+
             protected override void AddTests ()
             {
                 AddTest (Assembly.GetExecutingAssembly ());
@@ -54,11 +54,12 @@ adb shell am instrument
         }
     }
     ```
+
     이 파일 `Xamarin.Android.NUnitLite.TestSuiteInstrumentation` 에서 ( **xamarin.ios**에서)를 만들어 만들도록 `TestInstrumentation`서브클래싱 합니다.
 
-2.  `TestInstrumentation` 생성자`AddTests` 와 메서드를 구현 합니다. 메서드 `AddTests` 는 실제로 실행 되는 테스트를 제어 합니다.
+2. `TestInstrumentation` 생성자`AddTests` 와 메서드를 구현 합니다. 메서드 `AddTests` 는 실제로 실행 되는 테스트를 제어 합니다.
 
-3.  **TestInstrumentation.cs를**추가 하도록 파일을수정`.csproj` 합니다. 예:
+3. **TestInstrumentation.cs를**추가 하도록 파일을수정`.csproj` 합니다. 예를 들어:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -74,13 +75,13 @@ adb shell am instrument
     </Project>
     ```
 
-4.  다음 명령을 사용 하 여 단위 테스트를 실행 합니다. 를 `PACKAGE_NAME` 앱의 패키지 이름으로 바꿉니다. 패키지 이름은 **androidmanifest**에 있는 앱의 `/manifest/@package` 특성에서 찾을 수 있습니다.
+4. 다음 명령을 사용 하 여 단위 테스트를 실행 합니다. 를 `PACKAGE_NAME` 앱의 패키지 이름으로 바꿉니다. 패키지 이름은 **androidmanifest**에 있는 앱의 `/manifest/@package` 특성에서 찾을 수 있습니다.
 
     ```shell
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-5.  필요에 따라 `.csproj` 파일을 수정 하 여 `RunTests` MSBuild 대상을 추가할 수 있습니다. 이렇게 하면 다음과 같은 명령을 사용 하 여 단위 테스트를 호출할 수 있습니다.
+5. 필요에 따라 `.csproj` 파일을 수정 하 여 `RunTests` MSBuild 대상을 추가할 수 있습니다. 이렇게 하면 다음과 같은 명령을 사용 하 여 단위 테스트를 호출할 수 있습니다.
 
     ```shell
     msbuild /t:RunTests Project.csproj

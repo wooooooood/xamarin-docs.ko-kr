@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 21d25315aec5c056df90da11b8a51ee1493a45a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0d4e32b7bf98758f12dc038e0b61ffa0132f234d
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656678"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529232"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
 
@@ -115,8 +115,8 @@ listView.ItemsSource = monkeys;
 
 공유 프로젝트와 관련된 이 문제에 대한 두 가지 해결 방법은 다음과 같습니다.
 
--  **프로젝트 동기화** - **동일한** 어셈블리 이름과 기본 네임스페이스를 사용하도록 각 플랫폼에 대한 프로젝트 속성을 편집합니다. 이 값은 공유 프로젝트의 포함 리소스 ID에 대한 접두사로 "하드 코드"될 수 있습니다.
--  **#if 컴파일러 지시문** - 컴파일러 지시문을 사용하여 올바른 리소스 ID 접두사를 설정하고, 해당 값을 사용하여 올바른 리소스 ID를 동적으로 구성합니다.
+- **프로젝트 동기화** - **동일한** 어셈블리 이름과 기본 네임스페이스를 사용하도록 각 플랫폼에 대한 프로젝트 속성을 편집합니다. 이 값은 공유 프로젝트의 포함 리소스 ID에 대한 접두사로 "하드 코드"될 수 있습니다.
+- **#if 컴파일러 지시문** - 컴파일러 지시문을 사용하여 올바른 리소스 ID 접두사를 설정하고, 해당 값을 사용하여 올바른 리소스 ID를 동적으로 구성합니다.
 
 
 두 번째 옵션을 설명하는 코드는 아래와 같습니다. 컴파일러 지시문은 하드 코드된 리소스 접두사(일반적으로 참조 프로젝트에 대한 기본 네임스페이스와 동일함)를 선택하는 데 사용됩니다. 그런 다음, `resourcePrefix` 변수가 포함 리소스 파일 이름과 연결하여 올바른 리소스 ID를 만드는 데 사용됩니다.

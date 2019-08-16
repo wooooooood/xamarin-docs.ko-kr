@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 5d2fec537f10ad3ef5300275c9851d4f57bc961d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645163"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522869"
 ---
 # <a name="adding-a-second-toolbar"></a>두 번째 도구 모음 추가
 
@@ -86,13 +86,13 @@ android:background="?android:attr/colorAccent
 
 보조 `Toolbar`항목에 메뉴 항목을 추가 하려면 다음을 수행 합니다. 
 
-1.  응용 프로그램 프로젝트의 `mipmap-` 폴더 (필요한 경우)에 메뉴 아이콘을 추가 합니다.
+1. 응용 프로그램 프로젝트의 `mipmap-` 폴더 (필요한 경우)에 메뉴 아이콘을 추가 합니다.
 
-2.  **리소스/메뉴**에 추가 메뉴 리소스 파일을 추가 하 여 메뉴 항목의 내용을 정의 합니다. 
+2. **리소스/메뉴**에 추가 메뉴 리소스 파일을 추가 하 여 메뉴 항목의 내용을 정의 합니다. 
 
-3.  활동의 `OnCreate` 메서드에서를 `Toolbar` `FindViewById`호출하여를 찾고 의메뉴를확장합니다.`Toolbar`
+3. 활동의 `OnCreate` 메서드에서를 `Toolbar` `FindViewById`호출하여를 찾고 의메뉴를확장합니다.`Toolbar`
 
-4.  에서 `OnCreate` 새 메뉴 항목에 대 한 클릭 처리기를 구현 합니다. 
+4. 에서 `OnCreate` 새 메뉴 항목에 대 한 클릭 처리기를 구현 합니다. 
 
 다음 섹션에서는이 프로세스에 대해 자세히 설명 합니다. **잘라내기**, **복사**및 **붙여넣기** 메뉴 항목이 아래쪽 `Toolbar`에 추가 됩니다. 
 
@@ -140,7 +140,7 @@ editToolbar.MenuItemClick += (sender, e) => {
 };
 ```
 
-이 코드는 늘어납니다 `edit_toolbar` 에 정의 된 뷰를 **찾고, 해당**제목을 **편집**으로 설정 하 고, **edit_menus**에 정의 된 메뉴 항목을 표시 합니다. 누른 편집 아이콘을 표시 하는 알림 메시지를 표시 하는 메뉴 클릭 처리기를 정의 합니다. 
+이 코드는 늘어납니다 `edit_toolbar` 에 정의 된뷰를 찾고, 해당 제목을 **편집**으로 설정 하 고, **edit_menus**에 정의 된 메뉴 항목을 표시 합니다. 누른 편집 아이콘을 표시 하는 알림 메시지를 표시 하는 메뉴 클릭 처리기를 정의 합니다. 
 
 앱을 빌드하고 실행합니다. 앱이 실행 되 면 위에 추가 된 텍스트와 아이콘이 다음과 같이 표시 됩니다. 
 
@@ -159,7 +159,7 @@ editToolbar.MenuItemClick += (sender, e) => {
 ## <a name="the-up-button"></a>위쪽 단추 
 
 대부분의 Android 앱은 앱 탐색에 대해 **뒤로** 단추를 사용 합니다. **뒤로** 단추를 누르면 사용자가 이전 화면으로 이동 합니다.
-그러나 사용자가 앱의 주 화면으로 "위로" 이동할 수 있도록 하 **는 단추를** 제공 하는 것도 좋습니다. 사용자가 **위로** 단추를 선택 하면 사용자가 앱 계층 구조 &ndash; 에서 상위 수준으로 이동 합니다. 즉, 앱이 이전에 방문한 작업을 다시 팝 하지 않고 뒤로 스택에 있는 여러 작업을 다시 팝 합니다. 
+그러나 사용자가 앱의 주 화면으로 " 위로" 이동할 수 있도록 하는 단추를 제공 하는 것도 좋습니다. 사용자가 **위로** 단추를 선택 하면 사용자가 앱 계층 구조 &ndash; 에서 상위 수준으로 이동 합니다. 즉, 앱이 이전에 방문한 작업을 다시 팝 하지 않고 뒤로 스택에 있는 여러 작업을 다시 팝 합니다. 
 
 `Toolbar` 작업 `SetHomeButtonEnabled` 모음으로`OnCreate` 를 사용 하는 두 번째 활동에서 **위로** 단추를 사용 하도록 설정 하려면 두 번째 활동의 메서드에서 및메서드를호출합니다.`SetDisplayHomeAsUpEnabled`
 

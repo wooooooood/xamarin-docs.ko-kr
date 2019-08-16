@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1efccdd5f56194f002731b0490bad7573321d7d2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0b11f5c290f07debb61d511bdd27ad1a7ad0b0b0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643993"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526089"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Xamarin Android의 터치 및 제스처
 
@@ -32,9 +32,9 @@ Android 또는 iOS에 대 한 작업을 수행 하는 경우 터치 및 제스�
 
 ## <a name="sections"></a>섹션
 
--  [Android 터치](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [연습: Android에서 Touch 사용](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [멀티 터치 추적](touch-tracking.md)
+- [Android 터치](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [연습: Android에서 Touch 사용](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [멀티 터치 추적](touch-tracking.md)
 
 ## <a name="summary"></a>요약
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: cad7378e3d569454606a9d472cf30c42956553e4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24f5ce0daddab090b5486af99eebc0d6e7a2b1dd
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644936"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528675"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Xamarin.ios에서 테이블 모양 사용자 지정
 
@@ -22,10 +22,10 @@ ms.locfileid: "68644936"
 
 네 가지 기본 제공 스타일은 다음과 같습니다.
 
--  **기본값** –을 `UIImageView`지원 합니다.
--  **부제** – 및 부제목 `UIImageView` 을 지원 합니다.
--  **Value1** – 오른쪽 맞춤 부제목은를 `UIImageView`지원 합니다.
--  **Value2** – 제목은 오른쪽 맞춤 되 고 부제목은 왼쪽 맞춤 되지만 이미지는 그렇지 않습니다.
+- **기본값** –을 `UIImageView`지원 합니다.
+- **부제** – 및 부제목 `UIImageView` 을 지원 합니다.
+- **Value1** – 오른쪽 맞춤 부제목은를 `UIImageView`지원 합니다.
+- **Value2** – 제목은 오른쪽 맞춤 되 고 부제목은 왼쪽 맞춤 되지만 이미지는 그렇지 않습니다.
 
 
 이러한 스크린샷에는 각 스타일이 표시 되는 방식이 나와 있습니다.
@@ -53,10 +53,10 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 셀은 보기의 오른쪽에 다음과 같은 액세서리를 추가할 수 있습니다.
 
--   확인 **표시 – 테이블** 에서 여러 선택 항목을 표시 하는 데 사용할 수 있습니다.
--   **DetailButton** – 셀의 나머지 부분과 독립적으로 터치에 응답 하 여 다른 기능을 수행 하 여 셀 자체를 터치 합니다 (예: 팝업 또는 `UINavigationController` 스택의 일부가 아닌 새 창 열기).
--   **DisclosureIndicator** – 일반적으로 셀을 터치 하면 다른 뷰를 열도록 나타내는 데 사용 됩니다.
--   **DetailDisclosureButton** – `DetailButton` 및 `DisclosureIndicator`의 조합입니다.
+- 확인 표시 – 테이블에서 여러 선택 항목을 표시 하는 데 사용할 수 있습니다.
+- **DetailButton** – 셀의 나머지 부분과 독립적으로 터치에 응답 하 여 다른 기능을 수행 하 여 셀 자체를 터치 합니다 (예: 팝업 또는 `UINavigationController` 스택의 일부가 아닌 새 창 열기).
+- **DisclosureIndicator** – 일반적으로 셀을 터치 하면 다른 뷰를 열도록 나타내는 데 사용 됩니다.
+- **DetailDisclosureButton** – `DetailButton` 및 `DisclosureIndicator`의 조합입니다.
 
 
 이는 다음과 같습니다.
@@ -124,9 +124,9 @@ Cellcustomtable 예제는 및의 `UITableViewCell` `UILabel`사용자 지정 레
 
 사용자 지정 셀 클래스는 다음의 세 가지 방법으로 구성 됩니다.
 
--   **생성자** – UI 컨트롤을 만들고 사용자 지정 스타일 속성을 설정 합니다 (예: 글꼴, 크기 및 색)이 있습니다.
--   **UpdateCell** –에서 셀의 `UITableView.GetCell` 속성을 설정 하는 데 사용할 메서드입니다.
--   **LayoutSubviews** – UI 컨트롤의 위치를 설정 합니다. 예제에서 모든 셀의 레이아웃은 동일 하지만 보다 복잡 한 셀 (특히 크기를 변경 하는 셀)은 표시 되는 콘텐츠에 따라 다른 레이아웃 위치를 필요로 할 수 있습니다.
+- **생성자** – UI 컨트롤을 만들고 사용자 지정 스타일 속성을 설정 합니다 (예: 글꼴, 크기 및 색)이 있습니다.
+- **UpdateCell** –에서 셀의 `UITableView.GetCell` 속성을 설정 하는 데 사용할 메서드입니다.
+- **LayoutSubviews** – UI 컨트롤의 위치를 설정 합니다. 예제에서 모든 셀의 레이아웃은 동일 하지만 보다 복잡 한 셀 (특히 크기를 변경 하는 셀)은 표시 되는 콘텐츠에 따라 다른 레이아웃 위치를 필요로 할 수 있습니다.
 
 
 **Cellcustomtable > CustomVegeCell.cs** 의 전체 샘플 코드는 다음과 같습니다.

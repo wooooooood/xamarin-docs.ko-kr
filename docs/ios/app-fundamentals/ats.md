@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 62ccaea83a3648c5d9b0a029b3a22d136c4f2cee
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649419"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521434"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.ios의 앱 전송 보안
 
@@ -175,7 +175,7 @@ NSAppTransportSecurity
 - **NSAllowsArbitraryLoads** (`Boolean` `NSExceptionDomains`) `YES` -ATS가에 나열 **되지 않은** 모든 도메인에 대해 사용 하지 않도록 설정 됩니다. 나열 된 도메인에 대해 지정 된 보안 설정이 사용 됩니다.
 - **NSAllowsArbitraryLoadsInWebContent** (`Boolean` )`YES` -앱의 나머지 부분에 대해 ATS (Apple Transport Security) 보호를 사용 하는 동안 웹 페이지를 올바르게 로드할 수 있습니다.
 - **NSExceptionDomains** (`Dictionary`)-지정 된 도메인에 대해 ATS가 사용 해야 하는 보안 설정 및 도메인의 컬렉션입니다.
-- **도메인 이름-예외 문자열 > <** (`Dictionary`)-지정 된 도메인에 대 한 예외 컬렉션입니다 (예: `www.xamarin.com`).
+- `Dictionary`  **도메인이름-예외-문자열>()-지정된도메인에대한\<** 예외 컬렉션 (예: `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** (`String`)-최소 TLS 버전 `TLSv1.0` `TLSv1.1` `TLSv1.2` (기본값)입니다.
 - **NSExceptionRequiresForwardSecrecy** (`Boolean`)-도메인이 `NO` 전달 보안과 함께 암호를 사용할 필요가 없는 경우 기본값은 `YES`입니다.
 - **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`) `HTTPS` -(기본값)이 도메인과의 모든 통신은 프로토콜에 있어야 합니다. `NO`
