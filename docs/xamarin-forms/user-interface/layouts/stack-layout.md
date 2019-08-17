@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad20ba50b8ff0f7dcbba3e8d297b2281544a373b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b2660ec18d075279f9cb84be4521429c05974e59
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657083"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560285"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
@@ -219,7 +219,7 @@ Title="StackLayouts">
 
 ![](stack-layout-images/stack.png "복잡 한 StackLayout")
 
-`StackLayouts`s 중첩 된 경우에 따라 레이아웃 중첩 수 있으므로 동일한 레이아웃 내에서 모든 요소를 제공 하는 것 보다 쉽습니다. 또한 알 수 있으므로 `StackLayout` 페이지 하지 있는 레이아웃 기능이의 일부 페이지에 있는 다른 레이아웃에 겹치는 항목을 지원 하지 않습니다.
+일부 경우에 `StackLayouts` 는 동일한 레이아웃 내에 모든 요소를 표시 하는 것 보다 더 쉽게 중첩 된 레이아웃을 만들 수 있기 때문에이 중첩 되어 있습니다. 또한 알 수 있으므로 `StackLayout` 페이지 하지 있는 레이아웃 기능이의 일부 페이지에 있는 다른 레이아웃에 겹치는 항목을 지원 하지 않습니다.
 
 
 

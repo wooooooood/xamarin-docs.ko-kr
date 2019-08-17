@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/03/2019
-ms.openlocfilehash: 88483f151852e882d6bac42a2d0c3fd0857060fb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0543d35b8bd4160aa84688da21dbc5bda5408444
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653230"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560302"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
 
@@ -184,7 +184,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-`static` `MainActivity.Instance` 필드를 사용 하 여 `MainActivity.NavigateToNoteEntryyPage` 다음 코드 예제에 나와 있는 메서드를 호출 하려면:
+`static` `MainActivity.Instance` 필드를 사용 하 여 `MainActivity.NavigateToNoteEntryPage` 다음 코드 예제에 나와 있는 메서드를 호출 하려면:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)

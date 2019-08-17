@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c1a374feaadf28898b7fde8e364cf0adab83acd5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
+ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509600"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69560296"
 ---
 # <a name="updating-existing-mac-apps"></a>기존 Mac 앱 업데이트
 
@@ -29,7 +29,7 @@ Xamarin은 Mac용 Visual Studio 및 Visual Studio 모두에서 Classic API Unifi
 
 ## <a name="automated-updating"></a>자동 업데이트
 
-경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 Mac 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예를 들어:
+경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 Mac 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예:
 
 ![](updating-mac-apps-images/beta-tool1.png "프로젝트 메뉴에서 Xamarin.ios Unified API로 마이그레이션을 선택 합니다.")
 
@@ -70,7 +70,7 @@ Xamarin.ios 응용 프로그램에서 Unified API를 사용할 때 선택할 수
 
 예제:
 
-![](updating-mac-apps-images/csproj3.png "< AssemblyName > 요소 뒤에 다음 코드 줄을 추가 합니다.")
+![AssemblyName > 요소 뒤에 다음 코드 \<줄을 추가 합니다.](updating-mac-apps-images/csproj3.png)
 
 ### <a name="2-update-project-references"></a>2. 프로젝트 참조 업데이트
 
