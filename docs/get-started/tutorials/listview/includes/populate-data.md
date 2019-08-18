@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037595"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69541504"
 ---
 [`ListView`](xref:Xamarin.Forms.ListView)는 `IEnumerable` 형식인 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 사용하여 데이터를 채웁니다. 이전 단계에서 XAML의 `ListView`를 문자열 배열로 채웠습니다. 그러나 일반적으로 `ListView`은 코드 숨김으로 정의된 `IEnumerable`를 구현하는 컬렉션의 데이터로 채워집니다.
 
@@ -177,7 +177,7 @@ ms.locfileid: "61037595"
     > [!IMPORTANT]
     > [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 시각적 트리를 통해 상속됩니다. 따라서 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체에 설정되어 있기 때문에, `ContentPage`의 자식 개체는 [`ListView`](xref:Xamarin.Forms.ListView)를 포함하여 해당 값을 상속합니다.
 
-1.  **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.Image) 선언을 수정하여 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 `Monkeys` 컬렉션으로 설정합니다.
+1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.Image) 선언을 수정하여 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 `Monkeys` 컬렉션으로 설정합니다.
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />
@@ -358,7 +358,7 @@ ms.locfileid: "61037595"
     > [!IMPORTANT]
     > [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 시각적 트리를 통해 상속됩니다. 따라서 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체에 설정되어 있기 때문에, `ContentPage`의 자식 개체는 [`ListView`](xref:Xamarin.Forms.ListView)를 포함하여 해당 값을 상속합니다.
 
-1.  **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.Image) 선언을 수정하여 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 `Monkeys` 컬렉션으로 설정합니다.
+1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.Image) 선언을 수정하여 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 `Monkeys` 컬렉션으로 설정합니다.
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />
