@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 5d3635ccc61a0be50e4a4b6d8bc44e60515cc21e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ffa462ed7cfdc45357f0ac62cae23d307cdb92b7
+ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509065"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012454"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -72,6 +72,28 @@ Xamarin.Android 프로젝트에는 다음 빌드 대상이 정의됩니다.
 
 -   **UpdateAndroidResources** &ndash; `Resource.designer.cs` 파일을 업데이트합니다. 이 대상은 일반적으로 프로젝트에 새 리소스가 추가될 때 IDE에 의해 호출됩니다.
 
+## <a name="build-extension-points"></a>빌드 확장점
+
+Xamarin.Android 빌드 시스템은 빌드 프로세스에 연결하려는 사용자를 위한 몇 가지 공용 확장점을 공개합니다. 이 확장점 중 하나를 사용하려면 사용자 지정 대상을 `PropertyGroup`의 해당하는 MSBuild 속성에 추가해야 합니다. 예:
+
+```xml
+<PropertyGroup>
+   <AfterGenerateAndroidManifest>
+      $(AfterGenerateAndroidManifest);
+      YourTarget;
+   </AfterGenerateAndroidManifest>
+</PropertyGroup>
+```
+
+빌드 프로세스를 확장하는 방법에 대한 주의 사항: 제대로 작성되지 않은 빌드 확장은 특히 모든 빌드에서 실행된다면 빌드 성능에 영향을 줄 수 있습니다. 해당 확장을 구현하기 전에 MSBuild [설명서](https://docs.microsoft.com/visualstudio/msbuild/msbuild)를 읽는 것이 좋습니다.
+
+-   **AfterGenerateAndroidManifest** &ndash; 이 속성에 나열된 대상은 내부 `_GenerateJavaStubs` 대상 바로 뒤에 실행됩니다. 여기서 `AndroidManifest.xml` 파일은 `$(IntermediateOutputPath)`에서 생성됩니다. 따라서 생성된 `AndroidManifest.xml` 파일을 수정하려는 경우 이 확장점을 사용하여 수정할 수 있습니다.
+
+    Xamarin.Android 9.4에 추가되었습니다.
+
+-   **BeforeGenerateAndroidManifest** &ndash; 이 속성에 나열된 대상은 `_GenerateJavaStubs` 바로 앞에 실행됩니다.
+
+    Xamarin.Android 9.4에 추가되었습니다.
 
 ## <a name="build-properties"></a>빌드 속성
 
@@ -113,13 +135,19 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 패키징 속성은 Android 패키지의 생성을 제어하며, `Install` 및 `SignAndroidPackage` 대상에서 사용합니다.
 릴리스 애플리케이션을 패키지하는 경우에는 [서명 속성](#Signing_Properties)도 관련이 있습니다.
 
+-   **AndroidApkDigestAlgorithm** &ndash; `jarsigner -digestalg`와 함께 사용하는 다이제스트 알고리즘을 지정하는 문자열 값입니다.
+
+    기본값은 API의 경우 `SHA1`이고 앱 번들의 경우 `SHA-256`입니다.
+
+    Xamarin.Android 9.4에 추가되었습니다.
+
 -   **AndroidApkSignerAdditionalArguments** &ndash; 개발자가 `apksigner` 도구에 추가 인수를 제공할 수 있는 문자열 속성입니다.
 
     Xamarin.Android 8.2에 추가되었습니다.
 
 -   **AndroidApkSigningAlgorithm** &ndash; `jarsigner -sigalg`와 함께 사용하는 서명 알고리즘을 지정하는 문자열 값입니다.
 
-    기본값은 `md5withRSA`입니다.
+    기본값은 API의 경우 `md5withRSA`이고 앱 번들의 경우 `SHA256withRSA`입니다.
 
     Xamarin.Android 8.2에 추가되었습니다.
 
@@ -147,6 +175,10 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidEnableDesugar** &ndash; `desugar`가 활성화되있는지 여부를 확인하는 부울 속성입니다. Android는 현재 모든 Java 8 기능을 지원하지 않으며, 기본 도구 체인은 `javac` 컴파일러의 출력에서 `desugar`라는 바이트 코드 변환을 수행하여 새 언어 기능을 구현합니다. `AndroidDexTool=dx`를 사용하는 경우 기본값은 `False`이며 `AndroidDexTool=d8`을 사용하는 경우 기본값은 `True`입니다.
 
+-   **AndroidEnableGooglePlayStoreChecks** &ndash; 개발자가 다음 Google Play 스토어 검사를 사용하지 않도록 설정할 수 있는 부울 속성입니다. XA1004, XA1005 및 XA1006. 이 기능은 Google Play 스토어를 대상으로 하지 않고 해당 검사를 실행하지 않으려는 개발자에게 유용합니다.
+
+    Xamarin.Android 9.4에 추가되었습니다.
+
 -   **AndroidEnableMultiDex** &ndash; 최종 `.apk`에서 Multi-Dex 지원이 사용되는지 여부를 결정하는 부울 속성입니다.
 
     이 속성에 대한 지원은 Xamarin.Android 5.1에 추가되었습니다.
@@ -166,6 +198,14 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     기본적으로 이 값은 `True`로 설정됩니다.
 
     Xamarin.Android 9.2에 추가되었습니다.
+
+-   **AndroidEnableProfiledAot** &ndash; AOT(Ahead-Of-Time) 컴파일 중에 AOT 프로필을 사용할지 여부를 결정하는 부울 속성입니다.
+
+    프로필은 `AndroidAotProfile` 항목 그룹에 나열됩니다. 이 ItemGroup에는 기본 프로필이 포함되어 있습니다. 이 프로필은 기존 항목을 제거하고 고유한 AOT 프로필을 추가하여 재정의할 수 있습니다.
+
+    이 속성에 대한 지원은 Xamarin.Android 9.4에 추가되었습니다.
+
+    기본적으로 이 속성은 `False`입니다.
 
 -   **AndroidEnableSGenConcurrent** &ndash; Mono의 [동시 GC 수집기](https://www.mono-project.com/docs/about-mono/releases/4.8.0/#concurrent-sgen)를 사용할지 여부를 결정하는 부울 속성입니다.
 
@@ -238,11 +278,23 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     Xamarin.Android 9.2에 추가되었습니다.
 
 -   **AndroidHttpClientHandlerType** &ndash; `System.Net.Http.HttpClient` 기본 생성자에서 사용할 기본 `System.Net.Http.HttpMessageHandler` 구현을 제어합니다. 값은 [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_)과 함께 사용하기에 적합한 `HttpMessageHandler` 서브클래스의 정규화된 어셈블리 형식 이름입니다.
+    이 속성의 가장 일반적인 값은 다음과 같습니다.
 
-    기본값은 `System.Net.Http.HttpClientHandler, System.Net.Http`입니다.
+    -   `Xamarin.Android.Net.AndroidClientHandler`: Android Java API를 사용하여 네트워크 요청을 수행합니다. 기본 Android 버전이 TLS 1.2를 지원할 때 TLS 1.2 URL 액세스를 허용합니다. Android 5.0 이상에서만 Java를 통해 TLS 1.2 지원을 안정적으로 제공할 수 있습니다.
 
-    이는 네트워크 요청을 수행하기 위해 Android Java API를 사용하는 `Xamarin.Android.Net.AndroidClientHandler`를 포함하도록 재정의될 수 있습니다. 기본 Android 버전이 TLS 1.2를 지원할 때 TLS 1.2 URL 액세스를 허용합니다.  
-    Android 5.0 이상에서만 Java를 통해 TLS 1.2 지원을 안정적으로 제공할 수 있습니다.
+        이 항목은 Visual Studio 속성 페이지의 **Android** 옵션 및 Mac용 Visual Studio 속성 페이지의 **AndroidClientHandler** 옵션에 해당합니다.
+
+        새 프로젝트 마법사는 Visual Studio에서 **최소 Android 버전**이 **Android 5.0(Lollipop)** 이상으로 구성되거나 Mac용 Visual Studio에서 **대상 플랫폼**이 **가장 유용한 최신**으로 설정된 경우 새 프로젝트에 대해 이 옵션을 선택합니다.
+
+    -   설정 해제/빈 문자열: `System.Net.Http.HttpClientHandler, System.Net.Http`와 동일합니다.
+
+        Visual Studio 속성 페이지의 **Default** 옵션에 해당합니다.
+
+        새 프로젝트 마법사는 Visual Studio에서 **최소 Android 버전**이 **Android 4.4.87** 이하로 구성되거나 Mac용 Visual Studio에서 **대상 플랫폼**이 **최신 개발** 또는 **최대 호환성**으로 설정된 경우 새 프로젝트에 대해 이 옵션을 선택합니다.
+
+    -  `System.Net.Http.HttpClientHandler, System.Net.Http`: 관리형 `HttpMessageHandler`를 사용합니다.
+
+       Visual Studio 속성 페이지의 **Managed** 옵션에 해당합니다.
 
     *참고*: Android 버전 5.0 이전에서 TLS 1.2 지원이 필요*하거나* TLS 1.2 지원이 `System.Net.WebClient` 및 관련 API에 필요한 경우 `$(AndroidTlsProvider)`를 사용해야 합니다.
 
@@ -314,6 +366,17 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 8.3에 추가되었습니다.
 
+-   **AndroidPackageFormat** &ndash; 유효한 값이 `apk` 또는 `aab`인 열거형 스타일 속성입니다. Android 애플리케이션을 [APK 파일][apk] 또는 [Android 앱 번들][bundle]로 패키지할지 여부를 나타냅니다. 앱 번들은 Google Play에서 전송용으로 사용되는 `Release` 빌드의 새로운 형식입니다. 현지 이 값은 기본적으로 `apk`로 설정됩니다.
+
+    `$(AndroidPackageFormat)`가 `aab`로 설정되면 Android 앱 번들에 필요한 기타 MSBuild 속성이 설정됩니다.
+
+    * `$(AndroidUseAapt2)`가 `True`입니다.
+    * `$(AndroidUseApkSigner)`가 `False`입니다.
+    * `$(AndroidCreatePackagePerAbi)`가 `False`입니다.
+
+[apk]: https://en.wikipedia.org/wiki/Android_application_package
+[bundle]: https://developer.android.com/platform/technology/app-bundle
+
 -   **AndroidR8JarPath** &ndash; r8 dex 컴파일러 및 shrinker와 함께 사용하기 위한 `r8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
 
 -   **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다. 
@@ -331,19 +394,27 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 -   **AndroidTlsProvider**&ndash; 애플리케이션에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은 다음과 같습니다.
 
+    -   설정 해제/빈 문자열: Xamarin.Android 7.3 이상에서는 `btls`에 해당합니다.
+
+        Xamarin.Android 7.1에서는 `legacy`에 해당합니다.
+
+        Visual Studio 속성 페이지의 **Default** 설정에 해당합니다.
+
     -   `btls`: [HttpWebRequest](xref:System.Net.HttpWebRequest)와의 TLS 통신에는 [Boring SSL](https://boringssl.googlesource.com/boringssl)을 사용합니다.
+
         이렇게 하면 모든 Android 버전에서 TLS 1.2를 사용할 수 있습니다.
+
+        Visual Studio 속성 페이지의 **Native TLS 1.2+** 설정에 해당합니다.
 
     -   `legacy`: 네트워크 상호 작용을 위해 관리되는 SSL 구현 기록을 사용합니다. 이는 TLS 1.2를 지원하지 *않습니다*.
 
-    -   `default`: 기본 TLS 공급자를 선택하도록 *Mono*를 허용합니다.
-        이는 Xamarin.Android 7.3에서도 `legacy`에 해당합니다.  
-        *참고*: IDE "기본값"이 `$(AndroidTlsProvider)` 속성에서 *제거*되므로 이 값은 `.csproj` 값에 나타날 가능성이 없습니다.
+        Visual Studio 속성 페이지의 **Managed TLS 1.0** 설정에 해당합니다.
 
-    -   설정 해제/빈 문자열: Xamarin.Android 7.1에서는 `legacy`에 해당합니다.  
-        Xamarin.Android 7.3에서는 `btls`에 해당합니다.
+    -   `default`: 이 값은 Xamarin.Android 프로젝트에 사용될 가능성이 없습니다. 이 값은 Visual Studio 속성 페이지의 **Default** 설정에 해당하는 빈 문자열을 대신 사용하는 것이 좋습니다.
 
-    기본값은 빈 문자열입니다.
+        `default` 값은 Visual Studio 속성 페이지에서 제공되지 않습니다.
+
+        현재 `legacy`에 해당합니다.
 
     Xamarin.Android 7.1에 추가되었습니다.
 
@@ -359,7 +430,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
     Xamarin.Android 8.1에 추가되었습니다.
 
--   **AndroidUseSharedRuntime**&ndash; 대상 디바이스에서 응용 프로그램을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
+-   **AndroidUseSharedRuntime**&ndash; 대상 디바이스에서 애플리케이션을 실행하기 위해 *공유 런타임 패키지*가 필요한지 확인하는 부울 속성입니다. 공유 런타임 패키지를 사용하면 애플리케이션 패키지의 크기를 줄여 패키지 생성 및 배포 프로세스의 속도를 높일 수 있습니다. 그러면 빌드, 배포, 디버그 소요 주기가 빨라집니다.
 
     이 속성은 디버그 빌드의 경우 `True`, 릴리스 프로젝트의 경우 `False`여야 합니다.
 
@@ -553,7 +624,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 ### <a name="signing-properties"></a>서명 속성
 
-서명 속성은 Android 디바이스에 설치할 수 있도록 응용 프로그램 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
+서명 속성은 Android 디바이스에 설치할 수 있도록 애플리케이션 패키지에 서명하는 방법을 제어합니다. 더욱 빠른 빌드 반복을 위해 Xamarin.Android 작업은 빌드 프로세스 중에 패키지에 서명되지 않습니다. 서명 속도가 상당히 느리기 때문입니다. 대신, IDE 또는 *설치* 빌드 대상을 통해 설치 전이나 내보내기 중에 서명합니다(필요할 경우). *SignAndroidPackage* 대상을 호출하면 출력 디렉터리에 접미사가 `-Signed.apk`인 패키지가 생성됩니다.
 
 기본적으로 서명 대상은 필요한 경우 새 디버그 서명 키를 생성합니다. 예를 들어 빌드 서버에서 특정 키를 사용하려는 경우 다음 MSBuild 속성을 사용할 수 있습니다.
 
