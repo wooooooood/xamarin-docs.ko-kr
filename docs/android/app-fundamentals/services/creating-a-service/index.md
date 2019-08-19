@@ -32,7 +32,7 @@ public class DemoService : Service
 }
 ```
 
-컴파일 시 Xamarin.ios는 다음 XML 요소를 **Androidmanifest** 에 삽입 하 여 서비스를 등록 합니다. 즉, xamarin.ios에서 서비스에 대 한 무작위 이름을 생성 합니다.
+컴파일 시 Xamarin.Android는 다음 XML 요소를 **Androidmanifest**에 삽입하여 서비스를 등록합니다(Xamarin.Android에서 서비스에 대해 무작위로 이름을 생성했음을 알 수 있습니다).
 
 ```xml
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
