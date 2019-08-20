@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c8b2b20d037edd35fd3c50d1418df2110cb8e4c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b382b7dd66722df6acb4bb7c90e401e5895c0947
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528898"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620901"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임워크 변경 내용
 
@@ -33,17 +33,17 @@ MacOS Sierra의 가속화 된 프레임 워크에는 다음과 같은 기능이 
 MacOS Sierra AppKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
 - 다음과 `NSCollectionView` 같은 몇 가지 향상 된 기능이 있습니다.
-    - **축소 가능한 섹션** -사용자가 컬렉션 뷰 섹션을 단일 가로 행으로 축소할 수 있습니다.
-    - **부동 헤더** -이제 IOS에서 [UICOLLECTIONVIEW](https://developer.apple.com/reference/uikit/uicollectionview) 와 동일한 API를 사용 하 여 헤더 및 바닥글을 선형 레이아웃으로 이동할 수 있습니다.
-    - **스크롤 가능한 배경 보기** -이제 콘텐츠와 함께 스크롤하도록 컬렉션 뷰 배경을 설정할 수 있습니다.
+  - **축소 가능한 섹션** -사용자가 컬렉션 뷰 섹션을 단일 가로 행으로 축소할 수 있습니다.
+  - **부동 헤더** -이제 IOS에서 [UICOLLECTIONVIEW](https://developer.apple.com/reference/uikit/uicollectionview) 와 동일한 API를 사용 하 여 헤더 및 바닥글을 선형 레이아웃으로 이동할 수 있습니다.
+  - **스크롤 가능한 배경 보기** -이제 콘텐츠와 함께 스크롤하도록 컬렉션 뷰 배경을 설정할 수 있습니다.
 - 지연 된 뷰 레이아웃 패스가 최적화 되 고 확장 되었습니다.
 - 이제 끌어서 놓기 API에는 끌기 flocking 지원 하기 `NSFilePromiseProvider` 위한 `NSFilePromiseReceiver` 새로운 및 클래스가 포함 되어 있습니다.
 - 기존 컨트롤에 몇 가지 편리한 생성자를 추가 했습니다.
-    - `NSButton`에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-    - `NSTextField`줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
-    - `NSSegmentedControl`에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-    - `NSSlider`에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-    - `NSImageView`지정 `NSImage`된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 합니다.
+  - `NSButton`에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+  - `NSTextField`줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
+  - `NSSegmentedControl`에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+  - `NSSlider`에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+  - `NSImageView`지정 `NSImage`된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 합니다.
 - 동적으로 `NSGridView` 숨기 거 나 표시할 수 있는 가변 크기의 행과 열이 있는 그리드에 하위 뷰의 컬렉션을 자동으로 레이아웃 하기 위해 새가 추가 되었습니다.
 
 <a name="AVFoundation-Framework-Enhancements" />

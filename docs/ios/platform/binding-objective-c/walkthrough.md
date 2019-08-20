@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0870139def82317646981f154116a704d84cfa0e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4c4aaeaa451a67da16057cd9b345fbbcd0af6f35
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527996"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621019"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -74,16 +74,16 @@ Xcode FAQ 설명서를 [사용 하 여 명령줄에서](https://developer.apple.
 
 - **Xcode 설치** -Xcode을 설치 하면 모든 명령줄 도구와 함께 제공 됩니다. OS X 10.9 shim (에 `/usr/bin`설치 됨)에서는에 `/usr/bin` 포함 된 도구를 Xcode 내의 해당 도구에 매핑할 수 있습니다. 예를 들어 명령줄 `xcrun` 에서 Xcode 내의 모든 도구를 찾거나 실행할 수 있는 명령을 사용할 수 있습니다.
 - **터미널 응용 프로그램** -터미널 응용 프로그램에서 `xcode-select --install` 명령을 실행 하 여 명령줄 도구를 설치할 수 있습니다.
-    - 터미널 응용 프로그램을 시작 합니다.
-    - 을 `xcode-select --install` 입력 하 고 **enter**키를 누릅니다. 예를 들면 다음과 같습니다.
+  - 터미널 응용 프로그램을 시작 합니다.
+  - 을 `xcode-select --install` 입력 하 고 **enter**키를 누릅니다. 예를 들면 다음과 같습니다.
 
-    ```bash
-    Europa:~ kmullins$ xcode-select --install
-    ```
+  ```bash
+  Europa:~ kmullins$ xcode-select --install
+  ```
 
-    - 명령줄 도구를 설치 하 라는 메시지가 표시 되 면 **설치** 단추를 클릭 합니다.   [![](walkthrough-images/xcode01.png "명령줄 도구 설치")](walkthrough-images/xcode01.png#lightbox)
+  - 명령줄 도구를 설치 하 라는 메시지가 표시 되 면 **설치** 단추를 클릭 합니다. [![](walkthrough-images/xcode01.png "명령줄 도구 설치")](walkthrough-images/xcode01.png#lightbox)
 
-    - 이 도구는 Apple의 서버에서 다운로드 되 고 설치 됩니다.   [![](walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
+  - 이 도구는 Apple의 서버에서 다운로드 되 고 설치 됩니다. [![](walkthrough-images/xcode02.png "도구 다운로드")](walkthrough-images/xcode02.png#lightbox)
 
 - **Apple 개발자를 위한 다운로드** - [Apple 개발자 용 다운로드](https://developer.apple.com/downloads/index.action) 웹 페이지에서 명령줄 도구 패키지를 사용할 수 있습니다. Apple ID로 로그인 한 다음 명령줄 도구를 검색 하 고 다운로드 합니다. [![](walkthrough-images/xcode03.png "명령줄 도구 찾기")](walkthrough-images/xcode03.png#lightbox)
 
@@ -186,7 +186,8 @@ Fat 이진 파일을 만드는 과정은 다음 3 단계로 진행 됩니다.
 
 이러한 작업을 자동화 하는 데 사용할 수 있는 여러 도구가 있습니다 (셸 스크립트, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)및 [만들기](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)). Xcode 명령줄 도구가 설치 `make` 되 면도 설치 되므로이 연습에 사용할 빌드 시스템입니다. IOS 장치에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는 **메이크파일** 및 라이브러리에 대 한 시뮬레이터는 다음과 같습니다.
 
-```bash
+<!--markdownlint-disable MD010 -->
+```makefile
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=./YOUR-PROJECT-NAME
 PROJECT=$(PROJECT_ROOT)/YOUR-PROJECT-NAME.xcodeproj
@@ -212,6 +213,7 @@ lib$(TARGET).a: lib$(TARGET)-i386.a lib$(TARGET)-armv7.a lib$(TARGET)-arm64.a
 clean:
     -rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 선택한 일반 텍스트 편집기에서 **메이크파일** 명령을 입력 하 고 프로젝트 이름으로 섹션을 업데이트 합니다. 또한 지침 내에서 탭을 사용 하 여 위의 지침을 정확 하 게 붙여 넣어야 합니다.
 
@@ -622,21 +624,21 @@ using UIKit;
 
 namespace InfColorPickerSample
 {
-    public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  {
+    readonly UIViewController parent;
+
+    public ColorSelectedDelegate (UIViewController parent)
     {
-        readonly UIViewController parent;
-
-        public ColorSelectedDelegate (UIViewController parent)
-        {
-            this.parent = parent;
-        }
-
-        public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
-        {
-            parent.View.BackgroundColor = controller.ResultColor;
-            parent.DismissViewController (false, null);
-        }
+      this.parent = parent;
     }
+
+    public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
+    {
+      parent.View.BackgroundColor = controller.ResultColor;
+      parent.DismissViewController (false, null);
+    }
+  }
 }
 ```
 
@@ -653,9 +655,9 @@ ColorSelectedDelegate selector;
 ```csharp
 public override void ViewDidLoad ()
 {
-    base.ViewDidLoad ();
-    ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
-    selector = new ColorSelectedDelegate (this);
+  base.ViewDidLoad ();
+  ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
+  selector = new ColorSelectedDelegate (this);
 }
 ```
 **HandleTouchUpInsideWithStrongDelegate 메서드를 구현** 합니다. 그러면 사용자가 **colorchangebutton 단추**를 사용할 때에 대 한 이벤트 처리기를 구현 합니다. 를 `ViewController`편집 하 고 다음 메서드를 추가 합니다.

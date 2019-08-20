@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
-ms.openlocfilehash: c6c279a31b6081f7e20b4047e2a8e82c79aeac23
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521811"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621030"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Razor 템플릿을 사용 하 여 HTML 뷰 빌드
 
@@ -167,7 +167,7 @@ class HybridWebViewClient : WebViewClient {
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### <a name="calling-javascript-from-c"></a>JavaScript 호출C#
+### <a name="calling-javascript-from-c"></a>C에서 JavaScript 호출\#
 
 웹 보기에 새 HTML 페이지를 로드 하는 것 외에도 C# 코드는 현재 표시 된 페이지 내에서 JavaScript를 실행할 수 있습니다. 전체 javascript 코드 블록은 문자열을 사용 C# 하 여 생성 하거나 실행할 수 있습니다. 또는 태그를 통해 `script` 페이지에서 이미 사용할 수 있는 javascript에 대 한 메서드 호출을 만들 수 있습니다.
 
@@ -465,7 +465,7 @@ var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 
 URL을 처리 한 후 메서드는 웹 뷰가 사용자 지정 URL 탐색을 완료 하지 않도록 탐색을 중단 합니다.
 
-#### <a name="manipulating-the-template-from-c"></a>템플릿 조작C#
+#### <a name="manipulating-the-template-from-c"></a>C에서 템플릿 조작\#
 
 에서 렌더링 된 HTML 웹 보기와 C# 의 통신은 웹 뷰에서 JavaScript를 호출 하 여 수행 됩니다. IOS에서는 uiwebview 보기에서를 호출 `EvaluateJavascript` 하 여이 작업을 수행 합니다.
 

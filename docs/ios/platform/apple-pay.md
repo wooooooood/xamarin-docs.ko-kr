@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 538778d70e175afb8de0c61648f646c4a1669982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cd5293e90caef81c875c0b06b9e5db06cd562655
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655056"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620520"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.ios의 Apple Pay
 
@@ -76,7 +76,7 @@ IOS 10을 사용 하 여 동적 지불 네트워크 및 새 샌드박스 테스�
 
 ### <a name="apple-pay-website-integration"></a>Apple Pay 웹 사이트 통합
 
-IOS 10을 **처음 사용 하**는 개발자는 전 세계의 웹 사이트에 Apple Pay를 직접 통합할 수 있습니다. IOS 또는 macOS에서 Safari를 사용 하 여 웹 사이트를 검색 하는 사용자는 iPhone 또는 Apple Watch에서 트랜잭션의 유효성을 검사 하 여 Apple Pay 지불을 수행할 수 있습니다. 자세한 내용은 Apple의 [사과 Epay 프레임 워크 참조](https://developer.apple.com/reference/applepayjs)를 참조 하세요.
+IOS 10을 처음 사용 하는 개발자는 전 세계의 웹 사이트에Apple Pay를 직접 통합할 수 있습니다. IOS 또는 macOS에서 Safari를 사용 하 여 웹 사이트를 검색 하는 사용자는 iPhone 또는 Apple Watch에서 트랜잭션의 유효성을 검사 하 여 Apple Pay 지불을 수행할 수 있습니다. 자세한 내용은 Apple의 [사과 Epay 프레임 워크 참조](https://developer.apple.com/reference/applepayjs)를 참조 하세요.
 
 ### <a name="passkit-framework-enhancements"></a>PassKit Framework의 향상 된 기능
 

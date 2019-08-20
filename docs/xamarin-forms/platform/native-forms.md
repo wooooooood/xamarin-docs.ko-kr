@@ -6,13 +6,13 @@ ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/03/2019
-ms.openlocfilehash: 0543d35b8bd4160aa84688da21dbc5bda5408444
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
+ms.date: 08/19/2019
+ms.openlocfilehash: 0c84b844455b8a792b8cbe2f4dac97097e5ebd97
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560302"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621054"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin Native 프로젝트에서 Xamarin.Forms
 
@@ -43,13 +43,11 @@ Ios의 경우는 `FinishedLaunching` 의 재정의 `AppDelegate` 클래스는 �
 [Register("AppDelegate")]
 public class AppDelegate : UIApplicationDelegate
 {
-    public static string FolderPath { get; private set; }
-
     public static AppDelegate Instance;
-
     UIWindow _window;
-    UINavigationController _navigation;
-    UIViewController _noteEntryPage;
+    AppNavigationController _navigation;
+
+    public static string FolderPath { get; private set; }
 
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
@@ -67,13 +65,13 @@ public class AppDelegate : UIApplicationDelegate
         UIViewController mainPage = new NotesPage().CreateViewController();
         mainPage.Title = "Notes";
 
-        _navigation = new UINavigationController(mainPage);
+        _navigation = new AppNavigationController(mainPage);
         _window.RootViewController = _navigation;
         _window.MakeKeyAndVisible();
 
         return true;
     }
-    ...
+    // ...
 }
 ```
 
@@ -85,8 +83,8 @@ public class AppDelegate : UIApplicationDelegate
 - 속성 `FolderPath` 은 메모 데이터가 저장 되는 장치의 경로로 초기화 됩니다.
 - 합니다 `NotesPage` 는 Xamarin.Forms 클래스 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-파생 XAML에 정의 된 페이지, 생성 되 고 변환를 `UIViewController` 사용 하 여는 `CreateViewController` 확장 메서드.
 - `Title` 의 속성을 `UIViewController` 에 표시 되는 설정 되어를 `UINavigationBar`.
-- `UINavigationController` 계층적 탐색 관리에 대해 생성 됩니다. `UINavigationController` 클래스 뷰 컨트롤러의 스택을 관리 및 `UIViewController` 에 전달 된 생성자 나타납니다 처음 경우는 `UINavigationController` 로드 됩니다.
-- 합니다 `UINavigationController` 인스턴스는 최상위 수준으로 설정 됩니다 `UIViewController` 에 대 한 합니다 `UIWindow`, 및 `UIWindow` 응용 프로그램에 대 한 키 창으로 설정 되 고 표시 됩니다.
+- `AppNavigationController` 계층적 탐색 관리에 대해 생성 됩니다. 이 클래스는에서 `UINavigationController`파생 되는 사용자 지정 탐색 컨트롤러 클래스입니다. 개체 `AppNavigationController` 는 뷰 컨트롤러의 스택을 관리 하 고 생성자에 `UIViewController` 전달 된는 `AppNavigationController` 가 로드 될 때 처음에 표시 됩니다.
+- 개체가의 `UIViewController`최상위수준 으로 설정 되 고 `UIWindow` 이 응용 프로그램에 대 한 키 창으로 설정 되 고 표시 됩니다. `UIWindow` `AppNavigationController`
 
 한 번 합니다 `FinishedLaunching` 메서드가 실행 되었는지, Xamarin.Forms UI 정의 `NotesPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 될:
 
@@ -106,23 +104,42 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    _noteEntryPage = new NoteEntryPage
+    var noteEntryPage = new NoteEntryPage
     {
         BindingContext = note
     }.CreateViewController();
-    _noteEntryPage.Title = "Note Entry";
-    _navigation.PushViewController(_noteEntryPage, true);
+    noteEntryPage.Title = "Note Entry";
+    _navigation.PushViewController(noteEntryPage, true);
 }
 ```
 
-`NavigateToNoteEntryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생을 `UIViewController` 사용 하 여를 `CreateViewController` 집합과 확장 메서드를를 `Title` 속성은 `UIViewController`합니다. 합니다 `UIViewController` 다음 푸시됩니다 `UINavigationController` 여는 `PushViewController` 메서드. Xamarin.Forms에 UI를 정의 하는 따라서 `NoteEntryPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
+`NavigateToNoteEntryPage` 메서드 변환 Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-페이지를 파생을 `UIViewController` 사용 하 여를 `CreateViewController` 집합과 확장 메서드를를 `Title` 속성은 `UIViewController`합니다. 합니다 `UIViewController` 다음 푸시됩니다 `AppNavigationController` 여는 `PushViewController` 메서드. Xamarin.Forms에 UI를 정의 하는 따라서 `NoteEntryPage` 클래스 다음 스크린샷에 표시 된 것 처럼 표시 됩니다.
 
 Xaml [![에 정의 된 UI를 사용 하는 Xamarin.ios 응용 프로그램의 스크린샷](native-forms-images/ios-noteentrypage.png " ui를 사용 하 여 xaml xamarin.ios 앱")](native-forms-images/ios-noteentrypage-large.png#lightbox "XAML UI를 사용 하는 xamarin.ios 앱")
 
-경우는 `NoteEntryPage` 뒤로 탭 표시 됩니다 화살표 표시 됩니다는 `UIViewController` 에 대 한는 `NoteEntryPage` 에서 클래스를 `UINavigationController`, 사용자 수를 반환를 `UIViewController` 에 대 한는 `NotesPage` 클래스.
+`AppNavigationController` `NoteEntryPage` `UIViewController` `UIViewController` `NotesPage` 이 표시 되 면 후방 탐색이의 클래스에 대 한를 팝 하 여 클래스에 대해 사용자를로 반환 합니다. `NoteEntryPage` 그러나 iOS 네이티브 탐색 `UIViewController` 스택에서를 팝 해도 및 연결 `Page` 된 개체는 `UIViewController` 자동으로 삭제 되지 않습니다. 따라서 클래스는 `AppNavigationController` `PopViewController` 메서드를 재정의 하 여 역방향 탐색 시 뷰 컨트롤러를 삭제 합니다.
+
+```csharp
+public class AppNavigationController : UINavigationController
+{
+    //...
+    public override UIViewController PopViewController(bool animated)
+    {
+        UIViewController topView = TopViewController;
+        if (topView != null)
+        {
+            // Dispose of ViewController on back navigation.
+            topView.Dispose();
+        }
+        return base.PopViewController(animated);
+    }
+}
+```
+
+재정의 `PopViewController` 는 iOS 네이티브 `Dispose` 탐색 스택에서 팝 `UIViewController` 된 개체에 대해 메서드를 호출 합니다. 이 작업을 수행 하지 못하면 `UIViewController` 및 연결 된 `Page` 개체가 분리 됩니다.
 
 > [!IMPORTANT]
-> IOS 네이티브 `UIViewController` 탐색 스택에서를 팝 하면가 자동으로 `UIViewController`삭제 되지 않습니다. 개발자 `UIViewController` 는 더 이상 필요 `Dispose` 하지 않은 메서드를 호출 하는 것이 좋습니다. 그렇지 않으면 및 연결 `Page` 된는 `UIViewController` 분리 되며 가비지 수집기에서 수집 되지 않습니다. 이로 인해 메모리 누수가 발생 합니다.
+> 분리 된 개체는 가비지 수집 될 수 없으므로 메모리 누수가 발생 합니다.
 
 ## <a name="android"></a>Android
 

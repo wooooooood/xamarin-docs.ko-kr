@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ad0952bb620645a4cbc5fbc17b21f6a977c889ff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2503b8a96e8f1c6f08dfcd19672db3b93a5ce7e1
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657317"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620316"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Xamarin으로 빌드된 tvOS apps 문제 해결
 
@@ -26,10 +26,10 @@ _이 문서에서는 Xamarin의 tvOS 지원으로 작업 하는 동안 발생할
 현재 Xamarin tvOS 지원 릴리스에는 다음과 같은 알려진 문제가 있습니다.
 
 - Mono **프레임 워크** – Mono 4.3 ProtectedData는 mono 4.2에서 데이터 암호를 해독 하지 못합니다. 따라서 보호 된 nuget 원본을 구성할 때 오류 `Data unprotection failed` 와 함께 nuget 패키지를 복원 하지 못합니다.
-    - **해결 방법** – Mac용 Visual Studio에서 암호 인증을 사용 하는 모든 NuGet 패키지 소스를 다시 추가 해야 패키지 복원을 다시 시도할 수 있습니다.
+  - **해결 방법** – Mac용 Visual Studio에서 암호 인증을 사용 하는 모든 NuGet 패키지 소스를 다시 추가 해야 패키지 복원을 다시 시도할 수 있습니다.
 - **Mac용 Visual Studio w/ F# 추가 기능** – Windows에서 Android 템플릿을 만들 F# 때 발생 하는 오류입니다. 이는 Mac에서 제대로 작동 해야 합니다.
 - **Xamarin.ios** – 대상 프레임 워크가로 `Unsupported`설정 된 xamarin.ios 통합 템플릿 프로젝트를 실행 하는 경우 팝업 `Could not connect to the debugger` 이 표시 될 수 있습니다.
-    - **잠재적 해결 방법** – 안정적인 채널에서 사용할 수 있는 Mono 프레임 워크 버전을 다운 그레이드 합니다.
+  - **잠재적 해결 방법** – 안정적인 채널에서 사용할 수 있는 Mono 프레임 워크 버전을 다운 그레이드 합니다.
 - Xamarin **visual studio & xamarin.ios** – Visual studio에서 WatchKit 응용 프로그램을 배포할 때 오류가 `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` 나타날 수 있습니다.
 
 [GitHub](https://github.com/xamarin/xamarin-macios/issues/new)에서 찾은 버그를 보고 하세요.
@@ -80,7 +80,7 @@ Section
 
 사용 중인 타사 정적 (`.a`) 라이브러리가 tvOS 라이브러리 (iOS 라이브러리 아님)에 대해 빌드 되었으며 bitcode 정보도 포함 하 고 있는지 확인 해야 합니다.
 
-유효한 bitcode `size` 를 포함 하는 앱 또는 라이브러리의 경우이 1 보다 큽니다. 라이브러리에 bitcode 마커가 있지만 유효한 bitcode를 포함 하지 않는 경우가 있습니다. 예:
+유효한 bitcode `size` 를 포함 하는 앱 또는 라이브러리의 경우이 1 보다 큽니다. 라이브러리에 bitcode 마커가 있지만 유효한 bitcode를 포함 하지 않는 경우가 있습니다. 예를 들어:
 
 **잘못 된 Bitcode**
 
@@ -115,7 +115,7 @@ _"Arm64 조각만 포함 된 앱은 info.plist의 UIRequiredDeviceCapabilities �
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
 <array>
-    <string>arm64</string>
+  <string>arm64</string>
 </array>
 ```
 

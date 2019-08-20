@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 83b8b6b443a794b1001c581f45299dbd22133c80
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656424"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620519"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin의 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -35,7 +35,7 @@ WatchOS에서 일반적으로 사용자는 손목를 올리고 앱과 신속 하
 이러한 목표를 달성 하려면 Apple Watch 앱은 다음과 같아야 합니다.
 
 - **Glanceable** -사용자가 필요한 정보를 신속 하 게 파악할 수 있음을 의미 합니다. 
-- 작업 **가능-사용자** 가 신속 하 고 정확한 의사 결정을 내릴 수 있음을 의미 합니다.
+- 작업 가능-사용자가 신속 하 고 정확한 의사 결정을 내릴 수 있음을 의미 합니다.
 - **응답성** -사용자가 필요한 정보를 수신 하거나 원하는 작업을 얻기 위해 대기 하지 않아야 합니다.
 
 ### <a name="quick-interactions-length"></a>빠른 조작 길이
@@ -47,12 +47,12 @@ Apple Watch 앱의 glanceable 특성 때문에 Apple은 빠른 상호 작용의 
 Apple은 개발자가 Apple Watch 앱에 신속 하 게 상호 작용 하는 데 도움을 주는 몇 가지 새로운 기능과 Api를 WatchKit에 추가 했습니다.
 
 - watchOS 3은 다음과 같은 새로운 종류의 사용자 입력에 대 한 액세스를 제공 합니다.
-    - 제스처 인식기
-    - Digital Crown 회전 
+  - 제스처 인식기
+  - Digital Crown 회전 
 - watchOS 3은 다음과 같이 정보를 표시 하 고 업데이트 하는 새로운 방법을 제공 합니다.
-    - 향상 된 테이블 탐색
-    - 새 사용자 알림 프레임 워크 지원
-    - SpriteKit 및 SceneKit 통합
+  - 향상 된 테이블 탐색
+  - 새 사용자 알림 프레임 워크 지원
+  - SpriteKit 및 SceneKit 통합
 
 개발자는 이러한 새로운 기능을 구현 하 여 watchOS 3 앱이 Glanceable, 실행 가능 하 고 응답성을 보장할 수 있습니다.
 
@@ -63,11 +63,11 @@ Apple은 개발자가 Apple Watch 앱에 신속 하 게 상호 작용 하는 데
 watchOS 3은 다음 네 가지 제스처 인식자를 지원 합니다.
 
 - 불연속 제스처 유형:
-    - 살짝 밀기 제스처 (`WKSwipeGestureRecognizer`)입니다.
-    - 탭 제스처 (`WKTapGestureRecognizer`)입니다.
+  - 살짝 밀기 제스처 (`WKSwipeGestureRecognizer`)입니다.
+  - 탭 제스처 (`WKTapGestureRecognizer`)입니다.
 - 연속 제스처 유형:
-    - 이동 제스처 (`WKPanGestureRecognizer`)입니다.
-    - 긴 누름 제스처 (`WKLongPressGestureRecognizer`)입니다.
+  - 이동 제스처 (`WKPanGestureRecognizer`)입니다.
+  - 긴 누름 제스처 (`WKLongPressGestureRecognizer`)입니다.
 
 새 제스처 인식기 중 하나를 구현 하려면 Mac용 Visual Studio에서 iOS 디자이너의 디자인 화면으로 끌어 놓고 해당 속성을 구성 하면 됩니다.
 
@@ -96,8 +96,8 @@ WatchOS 3에서 제스처 인식기를 사용 하 여 작업 하는 경우 Apple
 - 개별 컨트롤 대신 요소를 그룹화 하는 제스처 인식기를 추가 합니다. Apple Watch의 실제 화면 크기가 작으므로 그룹 요소는 사용자가 적중 하는 데 더 크고 더 쉬운 대상이 될 수 있습니다. 또한 제스처 인식자는 네이티브 UI 컨트롤에 이미 있는 기본 제공 제스처와 충돌할 수 있습니다.
 - Watch 앱의 스토리 보드에서 종속성 관계를 설정 합니다.
 - 일부 제스처는 다음과 같은 다른 제스처 형식 보다 우선적으로 적용 됩니다.
-    - 스크롤
-    - Force Touch
+  - 스크롤
+  - Force Touch
  
 ### <a name="digital-crown-rotation"></a>Digital Crown 회전
 
@@ -137,28 +137,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-    public class CrownDelegate : WKCrownDelegate
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
+
+    #region Constructors
+    public CrownDelegate ()
     {
-        #region Computed Properties
-        public double AccumulatedRotations { get; set;}
-        #endregion
-
-        #region Constructors
-        public CrownDelegate ()
-        {
-        }
-        #endregion
-
-        #region Override Methods
-        public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-        {
-            base.CrownDidRotate (crownSequencer, rotationalDelta);
-
-            // Accumulate rotations
-            AccumulatedRotations += rotationalDelta;
-        }
-        #endregion
     }
+    #endregion
+
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
+
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -225,8 +225,8 @@ MenuTable.PerformSegue (0);
 - 잘 정의 되 고 표시 된 알림의 경우에는 사용자가 아무 작업도 수행 하지 않고 알림을 해제 하면 됩니다.
 - WatchOS 앱을 시작 하는 알림을 탭 할 수도 있습니다.
 - 사용자 지정 작업을 지 원하는 알림의 경우 사용자가 사용자 지정 작업 중 하나를 선택할 수 있습니다. 다음 중 하나일 수 있습니다.
-    - **포그라운드 작업** -앱을 시작 하 여 작업을 수행 합니다.
-    - **백그라운드 작업** -항상 watchOS 2의 iPhone으로 라우팅되고 watchOS 3의 watchApp로 라우팅할 수 있습니다.
+  - **포그라운드 작업** -앱을 시작 하 여 작업을 수행 합니다.
+  - **백그라운드 작업** -항상 watchOS 2의 iPhone으로 라우팅되고 watchOS 3의 watchApp로 라우팅할 수 있습니다.
 
 WatchOS 3의 새로운 작업:
 

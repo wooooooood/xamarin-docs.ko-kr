@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: 5d4d7358ca6188f2528ea200f901823f04324ba3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ed9a376da0fcfebffd707e2e93919237adfef87b
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647475"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620833"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -129,7 +129,7 @@ Xamarin.Forms에서 CSS 스타일 시트를 구문 분석 되 고 컴파일 시�
 
 리소스 사전에 대 한 자세한 내용은 참조 하세요. [리소스가](~/xamarin-forms/xaml/resource-dictionaries.md)합니다.
 
-### <a name="c"></a>C#
+### <a name="c"></a>C\#
 
 C#, 스타일 시트의 포함 리소스로 로드 하 고 추가할 수는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
 

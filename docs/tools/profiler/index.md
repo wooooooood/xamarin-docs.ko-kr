@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 4541a795d819c3738fffbb3224ef35dce5fc5521
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac77977f3832b0ab7ba440a2c795037e8fcf5f2e
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529052"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620991"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -68,21 +68,21 @@ Xamarin Profiler는 개발자에 게 Mac용 Visual Studio 또는 Visual Studio �
 Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 - Mac용 Visual Studio (macOS, Enterprise License)
-    - Android
-        - 장치 및 에뮬레이터
-    - iOS
-        - 장치 및 시뮬레이터
-    - tvOS (시간 계측은 지원 되지 않음)
-        - 장치 및 시뮬레이터
-    - Mac
+  - Android
+    - 장치 및 에뮬레이터
+  - iOS
+    - 장치 및 시뮬레이터
+  - tvOS (시간 계측은 지원 되지 않음)
+    - 장치 및 시뮬레이터
+  - Mac
 
 - Visual Studio ( **Enterprise** 버전에만 해당)
-    - Android
-        - 장치 및 에뮬레이터
-    - iOS [실험적]
-        - 장치 및 시뮬레이터
-    - tvOS
-        - 장치 및 시뮬레이터
+  - Android
+    - 장치 및 에뮬레이터
+  - iOS [실험적]
+    - 장치 및 시뮬레이터
+  - tvOS
+    - 장치 및 시뮬레이터
 
 **디버그** 구성 **만** 프로 파일링 할 수 있습니다.
 

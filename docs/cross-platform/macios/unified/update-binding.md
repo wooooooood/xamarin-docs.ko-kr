@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 4046dcff5cb572890ad41ab57efe6345d09f61fd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 16cf976b252e409ae4302ab51eb594370a6689d1
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646290"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620948"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩을 Unified API로 마이그레이션
 
@@ -140,7 +140,8 @@ IntPtr Constructor (CGRect frame);
 
 따라서 다음 `MakeFile`이 제공 됩니다.
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 BINDDIR=/src/binding
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=XMBindingLibrarySample
@@ -172,19 +173,22 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 clean:
     -rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 호출 `btouch` 에서로 `btouch-native`전환 해야 하므로 다음과 같이 매크로 정의를 조정 합니다.
 
-```csharp
+```makefile
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
 에 대 `btouch` 한 호출을 업데이트 하 고 `--new-style` 옵션을 다음과 같이 추가 합니다.
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMBindingLibrarySampleUniversal.a
     $(BTOUCH) -unsafe --new-style -out:$@ XMBindingLibrarySample.cs -x=AssemblyInfo.cs -x=extras.cs --link-with=libXMBindingLibrarySampleUniversal.a,libXMBindingLibrarySampleUniversal.a
 ```
+<!--markdownlint-enable MD010 -->
 
 이제 일반적인 방법 `MakeFile` 으로를 실행 하 여 API의 새 64 비트 버전을 빌드할 수 있습니다.
 
@@ -196,7 +200,7 @@ Mac용 Visual Studio 바인딩 프로젝트 템플릿을 사용 하 여 API를 �
 
 1. Mac용 Visual Studio를 시작 합니다.
 2. **파일** > **새로**만들기솔루션 >  **...** 을 선택 합니다.
-3. 새 솔루션 대화 상자에서 ios**Unified API** > **ios 바인딩 프로젝트** **를 선택** > 합니다. 
+3. 새 솔루션 대화 상자에서 ios**Unified API** > **ios 바인딩 프로젝트**를 선택 > 합니다. 
 
     [![](update-binding-images/image01new.png "새 솔루션 대화 상자에서 iOS/Unified API/iOS 바인딩 프로젝트를 선택 합니다.")](update-binding-images/image01new.png#lightbox)
 4. ' 새 프로젝트 구성 ' 대화 상자에서 새 바인딩 프로젝트의 **이름을** 입력 하 고 **확인** 단추를 클릭 합니다.

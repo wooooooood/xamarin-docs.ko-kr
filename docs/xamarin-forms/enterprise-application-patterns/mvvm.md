@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 1e3e1a2165c9acee127a543301f00262aa4bdc4f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2bd704b17f5aff1b4d3f2da1813d1eb19ef29e59
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529090"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620677"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>모델 뷰-ViewModel 패턴
 
@@ -284,7 +284,7 @@ public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 
 연결 된 속성을 통해 컨트롤에 연결 된 동작을 *연결 된 동작*이라고 합니다. 그러면 동작에서 해당 컨트롤이 연결 된 요소의 노출 된 API를 사용 하 여 뷰의 시각적 트리에서 해당 컨트롤이 나 기타 컨트롤에 기능을 추가할 수 있습니다. EShopOnContainers 모바일 앱은 연결 된 `LineColorBehavior` 동작인 클래스를 포함 합니다. 이 동작에 대 한 자세한 내용은 [유효성 검사 오류 표시](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors)를 참조 하세요.
 
-Xamarin.ios 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생 되는 클래스입니다. 여기서 `T `는 동작을 적용할 컨트롤의 형식입니다. 이러한 클래스는 `OnAttachedTo` 및 `OnDetachingFrom` 메서드를 제공 합니다 .이 메서드는 동작을 컨트롤에 연결 하 고 분리할 때 실행 되는 논리를 제공 하도록 재정의 해야 합니다.
+Xamarin.ios 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생 되는 클래스입니다. 여기서 `T` 는 동작을 적용할 컨트롤의 형식입니다. 이러한 클래스는 `OnAttachedTo` 및 `OnDetachingFrom` 메서드를 제공 합니다 .이 메서드는 동작을 컨트롤에 연결 하 고 분리할 때 실행 되는 논리를 제공 하도록 재정의 해야 합니다.
 
 EShopOnContainers 모바일 앱에서 클래스는 `BindableBehavior<T>` [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생 됩니다. `BindableBehavior<T>` 클래스의 목적은 동작의를 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 연결 된 컨트롤에 설정 해야 하는 xamarin.ios 동작에 대 한 기본 클래스를 제공 하는 것입니다.
 

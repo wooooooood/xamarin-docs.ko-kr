@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 11d9c3d27fa9cf9ba830648d95ef8af9ed386afb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5fe0c4d02dbe6cc5b3768ea92179b3781ef09aa9
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526479"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620850"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.ios API 디자인
 
@@ -48,16 +48,16 @@ Monotouch.dialog 코드와 통신 하는 하위 수준 런타임은 [Cruntime](#
 - Api의 IDE 내 탐색을 권장 합니다.
 
   - 예를 들어 다음과 같이 약하게 형식화 된 배열을 노출 하는 대신
-    
+
     ```objc
     NSArray *getViews
     ```
     다음과 같이 강력한 형식을 노출 합니다.
-    
+
     ```csharp
     NSView [] Views { get; set; }
     ```
-    
+
     Mac용 Visual Studio 이렇게 하면 API를 검색 하는 동안 자동 완성 기능을 수행 하 고, 반환 된 `System.Array` 값에서 모든 작업을 사용할 수 있게 하며, 반환 값이 LINQ에 참여할 수 있도록 합니다.
 
 - 네이티브 C# 형식:
@@ -72,8 +72,8 @@ Monotouch.dialog 코드와 통신 하는 하위 수준 런타임은 [Cruntime](#
 
 - 목표-C 대리자 패턴 지원:
 
-    - C#이벤트 시스템
-    - 대리자 C# (람다, 무명 메서드 및 `System.Delegate`)를 목표-C api에 블록으로 노출 합니다.
+  - C#이벤트 시스템
+  - 대리자 C# (람다, 무명 메서드 및 `System.Delegate`)를 목표-C api에 블록으로 노출 합니다.
 
 ### <a name="assemblies"></a>어셈블리
 

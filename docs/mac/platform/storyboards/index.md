@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 75affbdb6e919c15c644a68ae45e7ff657a53f6a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: afaba327299461af6b71846a39eb6c455125feae
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652288"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620379"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -79,9 +79,9 @@ Presentation segue를 사용 하는 `PrepareForSegue` 경우 프레젠테이션 
 디자인 타임 (Xcode의 Interface Builder UI를 레이아웃 하는 경우)에서 앱 UI의 각 요소는 해당 구성 항목으로 분류 됩니다.
 
 - **장면** -다음으로 구성 됩니다.
-    - **뷰 컨트롤러** -뷰 및 뷰를 지 원하는 데이터 간의 관계를 정의 합니다.
-    - **Views 및 하위 뷰** -사용자 인터페이스를 구성 하는 실제 요소입니다.
-    - **포함 segue** -장면 간 부모-자식 관계를 정의 합니다.
+  - **뷰 컨트롤러** -뷰 및 뷰를 지 원하는 데이터 간의 관계를 정의 합니다.
+  - **Views 및 하위 뷰** -사용자 인터페이스를 구성 하는 실제 요소입니다.
+  - **포함 segue** -장면 간 부모-자식 관계를 정의 합니다.
 - **프레젠테이션 segue** -개별 프레젠테이션 모드를 정의 합니다. 
 
 이러한 방식으로 각 요소를 정의 하 여 런타임 중에 필요할 때만 각 요소를 지연 로드할 수 있습니다. MacOS에서 전체 프로세스는 개발자가 작업을 수행 하기 위해 최소한의 지원 코드를 필요로 하는 복잡 하 고 유연한 사용자 인터페이스를 만들 수 있도록 설계 되었습니다 .이는 모두 시스템 리소스를 최대한 효율적으로 사용 합니다.
