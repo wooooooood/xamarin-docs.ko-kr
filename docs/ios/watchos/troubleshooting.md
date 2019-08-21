@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 37b04b5aaca269f3053010127010369c92a5cda4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4ce217d31811df82f0779a22d0c64464b5295fcc
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528398"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629665"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -92,7 +92,7 @@ with an alpha channel. Icons should not have an alpha channel.
 Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 앱에 대 한 새 인터페이스 컨트롤러를 만들고 Xcode와 동기화를 사용 하도록 설정 하 여에서 C#콘센트 및 작업을 사용할 수 있도록 합니다.
 
 1. **Xcode Interface Builder**에서 watch 앱의 **인터페이스. storyboard** 를 엽니다.
-    
+
     ![](troubleshooting-images/add-6.png "Xcode Interface Builder에서 스토리 보드 열기")
 
 2. 새 `InterfaceController` 를 스토리 보드로 끌어 옵니다.
@@ -144,7 +144,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
     ```csharp
     using Foundation;
     using System.CodeDom.Compiler;
-    
+
     namespace HelloWatchExtension  // remember to update this
     {
         [Register ("MyInterfaceController")] // remember to update this
@@ -156,9 +156,10 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
         }
     }
     ```
-    
-    팁: (선택 사항)이 파일을 Mac용 Visual Studio Solution Pad의 다른 C# 파일로 끌어서이 파일을 첫 번째 파일의 자식 노드로 만들 수 있습니다. 그러면 다음과 같이 표시 됩니다.
-    
+
+    > [!TIP]
+    > (선택 사항)이 파일을 Mac용 Visual Studio Solution Pad의 다른 C# 파일로 끌어서이 파일을 첫 번째 파일의 자식 노드로 만들 수 있습니다. 그러면 다음과 같이 표시 됩니다.
+
     ![](troubleshooting-images/add-5.png "Solution pad")
 
 6. Xcode 동기화가 사용 된 새 클래스 (특성을 `Register` 통해)를 인식할 수 있도록 **빌드 > 모두 빌드** 를 선택 합니다.
@@ -168,7 +169,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
     ![](troubleshooting-images/add-6.png "Interface Builder에서 스토리 보드 열기")
 
 8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`.
-모든 항목이 제대로 작동 하는 경우 **클래스:** 드롭다운 목록에 자동으로 표시 되며 여기에서 선택할 수 있습니다.
+    모든 항목이 제대로 작동 하는 경우 **클래스:** 드롭다운 목록에 자동으로 표시 되며 여기에서 선택할 수 있습니다.
 
     ![](troubleshooting-images/add-4.png "사용자 지정 클래스 설정")
 

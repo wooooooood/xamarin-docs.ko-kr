@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: 765f34af3b3c43531857b705bb4a39ea56e32f61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a13501218b6d3039f189693512d185a9d546d23f
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656131"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629655"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C를 사용 하 여 사용자 인증
 
@@ -57,7 +57,7 @@ public static class Constants
 
 ## <a name="register-your-mobile-application-with-azure-active-directory-b2c"></a>Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록
 
-모바일 응용 프로그램을 연결 하 고 사용자를 인증 하려면 먼저 테 넌 트에 등록 해야 합니다. 등록 프로세스에서는 응용 프로그램에 고유한 **응용 프로그램 ID** 를 할당 하 고, 인증 후 응답을 응용 프로그램에 다시 전달 하는 **리디렉션 URL** 을 할당 합니다. 자세한 내용은 Azure Active Directory B2C를 참조 [하세요. 응용 프로그램](/azure/active-directory-b2c/active-directory-b2c-app-registration/)을 등록 합니다. 응용 프로그램에 할당 된 응용 프로그램 ID를 알고 있어야 합니다 .이 **ID** 는 속성 보기에서 응용 프로그램 이름 뒤에 나열 됩니다. 다음 스크린샷은 응용 프로그램 ID를 찾을 수 있는 위치를 보여 줍니다.
+모바일 응용 프로그램을 연결 하 고 사용자를 인증 하려면 먼저 테 넌 트에 등록 해야 합니다. 등록 프로세스에서는 응용 프로그램에 고유한 **응용 프로그램 ID** 를 할당 하 고, 인증 후 응답을 응용 프로그램에 다시 전달 하는 **리디렉션 URL** 을 할당 합니다. 자세한 내용은 [Azure Active Directory B2C: 응용 프로그램](/azure/active-directory-b2c/active-directory-b2c-app-registration/)을 등록 합니다. 응용 프로그램에 할당 된 응용 프로그램 ID를 알고 있어야 합니다 .이 **ID** 는 속성 보기에서 응용 프로그램 이름 뒤에 나열 됩니다. 다음 스크린샷은 응용 프로그램 ID를 찾을 수 있는 위치를 보여 줍니다.
 
 [![Azure 응용 프로그램 속성 보기의 응용 프로그램 ID](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
 
@@ -81,7 +81,7 @@ public static class Constants
 
 ## <a name="create-sign-up-and-sign-in-policies-and-forgot-password-policies"></a>등록 및 로그인 정책 만들기 및 암호 정책 잊음
 
-정책은 사용자가 계정을 만들거나 암호를 다시 설정 하는 등의 작업을 완료 하기 위해 진행 하는 환경입니다. 또한 정책은 사용자가 환경에서 반환 될 때 응용 프로그램에서 수신 하는 토큰의 콘텐츠를 지정 합니다. 계정 등록 및 로그인에 대 한 정책을 설정 하 고 암호를 재설정 해야 합니다. Azure에는 공통 정책의 생성을 간소화 하는 기본 제공 정책이 있습니다. 자세한 내용은 Azure Active Directory B2C를 참조 [하세요. 기본 제공 정책](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+정책은 사용자가 계정을 만들거나 암호를 다시 설정 하는 등의 작업을 완료 하기 위해 진행 하는 환경입니다. 또한 정책은 사용자가 환경에서 반환 될 때 응용 프로그램에서 수신 하는 토큰의 콘텐츠를 지정 합니다. 계정 등록 및 로그인에 대 한 정책을 설정 하 고 암호를 재설정 해야 합니다. Azure에는 공통 정책의 생성을 간소화 하는 기본 제공 정책이 있습니다. 자세한 내용은 [Azure Active Directory B2C: 기본 제공 정책](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
 정책 설정을 완료 한 후에는 Azure Portal의 **사용자 흐름 (정책)** 보기에 두 개의 정책이 있어야 합니다. 다음 스크린샷은 Azure Portal의 두 가지 구성 된 정책을 보여 줍니다.
 
@@ -247,7 +247,7 @@ public partial class LogoutPage : ContentPage
 
 ### <a name="ios"></a>iOS
 
-IOS에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 구성표는 **info.plist**에 등록 되어 있어야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 스크린샷은 **info.plist**의 사용자 지정 URL 스키마를 보여 줍니다.
+IOS에서 Azure Active Directory B2C에 등록 된 사용자 지정 URL 구성표는 **info.plist**에 등록 되어 있어야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 스크린샷은 **info.plist**의 사용자 지정 URL 스키마를 보여 줍니다.
 
 !["IOS의 사용자 지정 URL 체계 등록"](azure-ad-b2c-images/customurl-ios.png)
 
@@ -277,7 +277,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-Android에서는 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **Androidmanifest**에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예제에서는 **Androidmanifest**의 사용자 지정 URL 스키마를 보여 줍니다.
+Android에서는 Azure Active Directory B2C에 등록 된 사용자 지정 URL 체계를 **Androidmanifest**에 등록 해야 합니다. MSAL은 이전에 [Azure Active Directory B2C를 사용 하 여 모바일 응용 프로그램 등록](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c)에서 설명한 특정 패턴을 준수 하는 URL 체계를 기대 합니다. 다음 예제에서는 **Androidmanifest**의 사용자 지정 URL 스키마를 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -289,7 +289,9 @@ Android에서는 Azure Active Directory B2C에 등록 된 사용자 지정 URL �
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />"
+        <!-- example -->
+        <!-- <data android:scheme="msalaaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee" android:host="auth" /> -->
+        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />
       </intent-filter>
     </activity>"
   </application>

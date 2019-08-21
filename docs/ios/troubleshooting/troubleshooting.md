@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 37e5e68aff293910db4638c52f592e10fd60abfa
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d26f8f68b2cf4eca2d28a365c921b533e657c64b
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528129"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629607"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁 
 
@@ -212,7 +212,8 @@ int count = ((ICollection<Foo>) array).Count;
 
 XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp} .log** 를 연결 하세요. 이전 버전의 XS/MonoDevelop에서 ~/library/logs를 전송 합니다.  **/MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
 
- **참고: 위의 문제가 XS 2.2 최종에서 수정 되었습니다.**
+> [!NOTE]
+> 위의 문제가 XS 2.2 마지막에 수정 되었습니다. * *
 
 ## <a name="compiled-application-is-very-large"></a>컴파일된 응용 프로그램이 매우 큼
 

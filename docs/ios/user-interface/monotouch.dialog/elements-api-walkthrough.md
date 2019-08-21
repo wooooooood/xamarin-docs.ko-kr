@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: ab7761071ef0795d054febbfb302702e09d80c53
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 88823aa2d86b7cc5db72b3949453cd6aa464bd74
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528467"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629635"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Elements API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -20,9 +20,9 @@ _이 문서는 Monotouch.dialog 소개 대화 상자에 제공 된 정보를 기
 
 이 연습에서는 MT를 사용 합니다. D Elements API를 통해 작업 목록을 표시 하는 응용 프로그램의 마스터-세부 스타일을 만들 수 있습니다. 사용자가 탐색 모음에서 **+** 단추를 선택 하면 태스크에 대 한 테이블에 새 행이 추가 됩니다. 행을 선택 하면 아래 그림과 같이 작업 설명과 기한을 업데이트할 수 있는 세부 정보 화면으로 이동 합니다.
 
- [![](elements-api-walkthrough-images/01-task-list-app.png "행을 선택 하면 세부 정보 화면으로 이동 하 여 작업 설명 및 기한 날짜를 업데이트할 수 있습니다.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+[![](elements-api-walkthrough-images/01-task-list-app.png "행을 선택 하면 세부 정보 화면으로 이동 하 여 작업 설명 및 기한 날짜를 업데이트할 수 있습니다.")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- ## <a name="setting-up-mtd"></a>MT를 설정 합니다. 2
+## <a name="setting-up-mtd"></a>MT를 설정 합니다. 2
 
 휴먼. D는 Xamarin.ios를 사용 하 여 배포 됩니다. 이를 사용 하려면 Visual Studio 2017 또는 Mac용 Visual Studio에서 Xamarin.ios 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **monotouch.dialog** 어셈블리에 대 한 참조를 추가 합니다. 그런 다음 필요 `using MonoTouch.Dialog` 에 따라 소스 코드에서 문을 추가 합니다.
 
