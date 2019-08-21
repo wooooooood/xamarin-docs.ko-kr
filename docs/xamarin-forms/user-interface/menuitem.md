@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 68560c6cc814f54bb8ba9348bc53334089c36a93
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 396853e2e61904689069b7abd157c73d1da59fed
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984475"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658102"
 ---
 # <a name="xamarinforms-menuitem"></a>Xamarin.ios MenuItem
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
-Xamarin.ios [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 `ListView` 항목 컨텍스트 메뉴 및 셸 응용 프로그램 플라이 아웃 메뉴와 같은 메뉴에 대 한 메뉴 항목을 정의 하는 데 사용 됩니다.
+Xamarin.ios [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 항목 컨텍스트 메뉴 및 셸 응용 프로그램 플라이 아웃 `ListView` 메뉴와 같은 메뉴에 대 한 메뉴 항목을 정의 합니다.
 
 다음 스크린샷에서는 iOS `MenuItem` 및 Android의 `ListView` 상황에 맞는 메뉴에 있는 개체를 보여 줍니다.
 

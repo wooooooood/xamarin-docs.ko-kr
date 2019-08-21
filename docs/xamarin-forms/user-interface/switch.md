@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: 58755c54ce2afe80a8bf43adc25a0cf2d90a0bb5
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739462"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658044"
 ---
 # <a name="xamarinforms-switch"></a>Xamarin Forms 스위치
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-Xamarin.ios [`Switch`](xref:Xamarin.Forms.Switch) 는 `boolean` 값으로 표시 되는 설정/해제 상태를 전환 하기 위해 사용자가 조작할 수 있는 가로 토글 단추입니다. 클래스 `Switch` 는에서 [`View`](xref:Xamarin.Forms.View)상속 됩니다.
+Xamarin.ios [`Switch`](xref:Xamarin.Forms.Switch) 컨트롤은 사용자가 `boolean` 값으로 표시 되는 설정/해제 상태를 전환 하기 위해 조작할 수 있는 가로 토글 단추입니다. 클래스 `Switch` 는에서 [`View`](xref:Xamarin.Forms.View)상속 됩니다.
 
 다음 스크린샷에서는 iOS 및 `Switch` Android의 설정 / **해제** 상태에 있는 컨트롤을 보여 줍니다.
 
@@ -44,7 +44,7 @@ Xamarin.ios [`Switch`](xref:Xamarin.Forms.Switch) 는 `boolean` 값으로 표시
 코드 `Switch` 에서를 만들 수도 있습니다.
 
 ```csharp
-Switch switch = new Switch { IsToggled = true };
+Switch switchControl = new Switch { IsToggled = true };
 ```
 
 ### <a name="switch-style-properties"></a>스위치 스타일 속성
@@ -58,10 +58,10 @@ Switch switch = new Switch { IsToggled = true };
 코드 `OnColor` 에서을 `Switch` 만들 때도 속성을 설정할 수 있습니다.
 
 ```csharp
-Switch switch = new Switch { OnColor = Color.Orange };
+Switch switchControl = new Switch { OnColor = Color.Orange };
 ```
 
-다음 스크린샷에서는 iOS 및 `Switch` Android에서 `OnColor` 속성이로 `Color.Orange` 설정 된 **on** 및 **off** 토글 상태의을 보여 줍니다.
+다음 스크린샷에는 iOS 및 `Switch` Android에서 `OnColor` 속성이로 `Color.Orange` 설정 된 **on** 및 **off** 토글 상태의가 나와 있습니다.
 
 ![IOS 및 Android에서 on 및 off 상태의 스위치 스크린샷](switch-images/switch-states-oncolor.png "IOS 및 Android의 스위치")
 
@@ -87,8 +87,8 @@ void OnToggled(object sender, ToggledEventArgs e)
 이벤트 `Toggled` 처리기는 코드에서 할당 될 수도 있습니다.
 
 ```csharp
-Switch switch = new Switch {...};
-switch.Toggled += (sender, e) =>
+Switch switchControl = new Switch {...};
+switchControl.Toggled += (sender, e) =>
 {
     // Perform an action after examining e.Value
 }

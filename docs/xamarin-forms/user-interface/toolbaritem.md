@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: b42a300d9d76a18322891856486720116eb6a8d4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9bb041206dbafb68c1bb60bbbb3068f0a2001b55
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522032"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658052"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Xamarin.ios 항목
 
@@ -20,21 +20,21 @@ ms.locfileid: "69522032"
 
 Xamarin.ios [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 클래스는 `Page` 개체의 `ToolbarItems` 컬렉션에 추가할 수 있는 특수 한 형식의 단추입니다. 각 `ToolbarItem` 개체는 응용 프로그램의 탐색 모음에서 단추로 표시 됩니다. 인스턴스 `ToolbarItem` 는 아이콘을 포함 하 고 기본 또는 보조 메뉴 항목으로 표시 될 수 있습니다. 클래스 `ToolbarItem` 는에서 [`MenuItem`](xref:Xamarin.Forms.MenuItem)상속 됩니다.
 
-다음 스크린샷에서는 iOS `ToolbarItem` 및 Android의 탐색 모음에 있는 개체를 보여 줍니다.
+다음 스크린샷에는 iOS `ToolbarItem` 및 Android의 탐색 모음에 있는 개체가 표시 됩니다.
 
 ![Android 및 iOS의 "도구 항목 데모 스크린샷"](toolbaritem-images/toolbaritem-device-screenshot.png "Android 및 iOS의 도구 모음의 항목 데모 스크린샷")
 
-컨트롤 `ToolbarItem` 은 다음 속성을 정의 합니다.
+클래스 `ToolbarItem` 는 다음 속성을 정의 합니다.
 
 * [`Order`](xref:Xamarin.Forms.ToolbarItem.Order)인스턴스가 기본 메뉴 또는 보조 메뉴에 표시 `ToolbarItemOrder` 되는지 여부를 결정 하는 열거형 `ToolbarItem` 값입니다.
 * [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority)`Page` 개체의 컬렉션`ToolbarItems` 에 있는 항목의 표시 순서를 결정 하는 값입니다.`integer`
 
 클래스 `ToolbarItem` 는 `MenuItem` 클래스에서 다음과 같이 일반적으로 사용 되는 속성을 상속 합니다.
 
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text)개체의 표시 텍스트를 결정 하는입니다.`string` `ToolbarItem`
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)개체의 표시 아이콘을 결정 하는 값입니다.`ImageSource` `ToolbarItem`
 * [`Command`](xref:Xamarin.Forms.MenuItem.Command)는 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.`ICommand`
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)는에 전달 `SearchCommand`되어야 하는 매개 변수를 지정 하는입니다.`object`
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)는에 전달 `Command`되어야 하는 매개 변수를 지정 하는입니다.`object`
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)개체의 표시 아이콘을 결정 하는 값입니다.`ImageSource` `ToolbarItem`
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text)개체의 표시 텍스트를 결정 하는입니다.`string` `ToolbarItem`
 
 이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 `ToolbarItem` 되므로 인스턴스가 데이터 바인딩의 대상이 될 수 있습니다.
 
@@ -119,3 +119,4 @@ void OnItemClicked(object sender, EventArgs e)
 
 * [나이 항목 데모](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Xamarin.ios의 이미지](~/xamarin-forms/user-interface/images.md)
+* [Xamarin.ios MenuItem](~/xamarin-forms/user-interface/menuitem.md)

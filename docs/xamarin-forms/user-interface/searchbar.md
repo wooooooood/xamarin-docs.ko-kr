@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 391820cf2e94c1131f4082798ee9efa05d8489b8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
+ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739394"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658032"
 ---
 # <a name="xamarinforms-searchbar"></a>Xamarin.ios SearchBar
 
@@ -22,7 +22,7 @@ Xamarin.ios는 검색을 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 시작 하�
 
 Ios 및 Android의 [ ![Ios 및 android searchbar에 대 한 Searchbar의 스크린샷](searchbar-images/device-searchbars-cropped.png "") ] (searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 Searchbar")
 
-는 `SearchBar` 다음 속성을 정의 합니다.
+클래스 `SearchBar` 는 다음 속성을 정의 합니다.
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)는 취소 단추의 색을 정의 하는입니다.`Color`
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)글꼴이 굵게, 기울임꼴로 또는 둘 다 `FontAttributes` 인지 여부를 결정 하는 열거형 `SearchBar` 값입니다.
@@ -66,7 +66,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
            FontAttributes="Italic" />
 ```
 
-코드에서을 `SearchBar` 만들 때도 이러한 속성을 지정할 수 있습니다.
+이러한 속성은 코드에서 개체를 `SearchBar` 만들 때에도 지정할 수 있습니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,7 +80,7 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-다음 스크린샷은 결과 `SearchBar`를 보여 줍니다.
+다음 스크린샷은 결과 `SearchBar` 컨트롤을 보여 줍니다.
 
 Ios 및 android에서 사용자 지정 [ ![된 Searchbar의 스크린샷 및 android](searchbar-images/device-searchbars-styled-cropped.png "사용자 지정 searchbar") ] (searchbar-images/device-searchbars-styled.png#lightbox "IOS 및 Android의 사용자 지정 된 SearchBar")
 
