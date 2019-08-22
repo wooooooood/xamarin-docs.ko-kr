@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 66bbc7015daaba04f8431b31f639c9173484c790
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e0fb6c1ced4953fd03939f56eb4011d956dfcca6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108667"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525605"
 ---
 # <a name="debuggable-attribute"></a>디버깅 가능한 특성
 
@@ -19,10 +19,10 @@ ms.locfileid: "50108667"
 
 Android를 디버깅이 가능하도록 JDWP(Java Debug Wire Protocol)를 지원합니다. 이것은 ADB 같은 도구가 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 개발 시 중요하지만 응용 프로그램을 게시하기 전에 비활성화해야 합니다.
 
-JDWP는 Android 응용 프로그램에서 `android:debuggable` 특성 값이 될 수 있습니다. Xamarin.Android는 이러한 특성을 설정할 수 있는 다음과 같은 방법을 제공합니다.
+JDWP는 Android 애플리케이션에서 `android:debuggable` 특성 값이 될 수 있습니다. Xamarin.Android는 이러한 특성을 설정할 수 있는 다음과 같은 방법을 제공합니다.
 
-1.  `AndroidManifext.xml` 파일을 만들어 `android:debuggable` 특성 설정.
-2.  `.CS` 파일에 `ApplicationAttribute` 포함(예: `[assembly: Application(Debuggable=false)]`).
+1. `AndroidManifext.xml` 파일을 만들어 `android:debuggable` 특성 설정.
+2. `.CS` 파일에 `ApplicationAttribute` 포함(예: `[assembly: Application(Debuggable=false)]`).
 
 
 `AndroidManifest.xml` 및 `ApplicationAttribute`가 둘 다 있을 경우 `AndroidManifest.xml`의 콘텐츠가 `ApplicationAttribute`에서 지정하는 것보다 우선합니다.

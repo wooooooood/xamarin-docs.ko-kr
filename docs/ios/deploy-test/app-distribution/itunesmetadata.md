@@ -1,26 +1,26 @@
 ---
 title: Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
-description: 이 문서에서는 테스트 또는 엔터프라이즈 배포를 위해 임시 배포를 사용하여 iOS 응용 프로그램에 관한 정보를 iTunes에 제공하는 데 사용되는 iTunesMetadata.plist 파일에 대해 설명합니다.
+description: 이 문서에서는 테스트 또는 엔터프라이즈 배포를 위해 임시 배포를 사용하여 iOS 애플리케이션에 관한 정보를 iTunes에 제공하는 데 사용되는 iTunesMetadata.plist 파일에 대해 설명합니다.
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c03815776921a61c1f54136e3f09c0996dff71d3
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: f632b44e087c0e380ecd81c2af7db3d49c072f7e
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528418"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887751"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
 
-_이 문서에서는 테스트 또는 엔터프라이즈 배포를 위해 임시 배포를 사용하여 iOS 응용 프로그램에 관한 정보를 iTunes에 제공하는 데 사용되는 iTunesMetadata.plist 파일에 대해 설명합니다._
+_이 문서에서는 테스트 또는 엔터프라이즈 배포를 위해 임시 배포를 사용하여 iOS 애플리케이션에 관한 정보를 iTunes에 제공하는 데 사용되는 iTunesMetadata.plist 파일에 대해 설명합니다._
 
-iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 응용 프로그램의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 디바이스 및 필요한 디바이스 기능과 같은 정보를 지정할 수 있습니다. 임시 배포를 통해 테스터 또는 엔터프라이즈 사용자에게 배달되는 iOS 응용 프로그램의 경우 이 정보가 누락됩니다.
+iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용)이 iTunes Connect에 만들어지면, 개발자가 애플리케이션의 장르, 하위 장르, 저작권 표시, 지원되는 iOS 디바이스 및 필요한 디바이스 기능과 같은 정보를 지정할 수 있습니다. 임시 배포를 통해 테스터 또는 엔터프라이즈 사용자에게 배달되는 iOS 애플리케이션의 경우 이 정보가 누락됩니다.
 
-누락된 정보를 임시 배포에 제공하기 위해 선택적인 `iTunesMetadata.plist` 파일을 만들어 응용 프로그램 IPA 파일에 포함할 수 있습니다. 이 plist 파일은 지정된 iOS 애플리케이션에 대한 정보를 정의하는 키/값 쌍이 포함된 특수 형식의 XML 파일입니다(Apple의 [속성 목록 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) 참조).
+누락된 정보를 임시 배포에 제공하기 위해 선택적인 `iTunesMetadata.plist` 파일을 만들어 애플리케이션 IPA 파일에 포함할 수 있습니다. 이 plist 파일은 지정된 iOS 애플리케이션에 대한 정보를 정의하는 키/값 쌍이 포함된 특수 형식의 XML 파일입니다(Apple의 [속성 목록 프로그래밍 가이드](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) 참조).
 
 <a name="iTunesMetadata_contents" />
 
@@ -108,7 +108,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="uirequireddevicecapabilities"></a>UIRequiredDeviceCapabilities
 
-`UIRequiredDeviceCapabilities` 키를 사용하면 iTunes에서 지정된 iOS 장치에 설치되기 전에 iOS 응용 프로그램에 필요한 장치의 특정 기능을 인식할 수 있습니다. 이 키는 기능(`<key>...</key>`)의 사전(`<dict>...</dict>`) 및 각 기능에 대한 부울 값으로 제공됩니다. 기능의 값이 `true`이면 해당 기능이 장치에 있어야 합니다. `false`이면 해당 기능이 장치에 없어야 합니다. 예:
+`UIRequiredDeviceCapabilities` 키를 사용하면 iTunes에서 지정된 iOS 디바이스에 설치되기 전에 iOS 애플리케이션에 필요한 디바이스의 특정 기능을 인식할 수 있습니다. 이 키는 기능(`<key>...</key>`)의 사전(`<dict>...</dict>`) 및 각 기능에 대한 부울 값으로 제공됩니다. 기능의 값이 `true`이면 해당 기능이 장치에 있어야 합니다. `false`이면 해당 기능이 디바이스에 없어야 합니다. 예:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -119,11 +119,12 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
     <true/>
 </dict>
 ```
-이 응용 프로그램을 디바이스에 설치하려면 먼저 iOS 디바이스에서 ARM7 명령 집합을 지원하고 전면 카메라가 있어야 한다고 지정합니다. 허용되는 값의 전체 목록은 Apple의 [UIRequiredDeviceCapabilities](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) 설명서를 참조하세요.
+
+이 애플리케이션을 디바이스에 설치하려면 먼저 iOS 디바이스에서 ARM7 명령 집합을 지원하고 전면 카메라가 있어야 한다고 지정합니다. 허용되는 값의 전체 목록은 Apple의 [UIRequiredDeviceCapabilities](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) 설명서를 참조하세요.
 
 ### <a name="artistname-and-playlistartistname"></a>artistName 및 playlistArtistName
 
-`artistName` 및 `playlistArtistName` 키를 사용하여 iTunes에 표시할 iOS 응용 프로그램을 만든 회사의 이름을 정의합니다. 예제:
+`artistName` 및 `playlistArtistName` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션을 만든 회사의 이름을 정의합니다. 예제:
 
 ```xml
 <key>artistName</key>
@@ -135,7 +136,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="bundledisplayname-itemname-and-playlistname"></a>bundleDisplayName, itemName 및 playlistName
 
-`bundleDisplayName`, `itemName` 및 `playlistName` 키를 사용하여 iTunes 내부에 표시할 iOS 응용 프로그램의 이름을 정의합니다. 예제:
+`bundleDisplayName`, `itemName` 및 `playlistName` 키를 사용하여 iTunes 내부에 표시할 iOS 애플리케이션의 이름을 정의합니다. 예제:
 
 ```xml
 <key>bundleDisplayName</key>
@@ -150,7 +151,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="bundleshortversionstring-and-bundleversion"></a>bundleShortVersionString 및 bundleVersion
 
-`bundleShortVersionString` 및 `bundleVersion` 키를 사용하여 iTunes에 표시할 iOS 응용 프로그램의 버전 번호를 정의합니다. 예제:
+`bundleShortVersionString` 및 `bundleVersion` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션의 버전 번호를 정의합니다. 예제:
 
 ```xml
 <key>bundleShortVersionString</key>
@@ -161,7 +162,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="softwareversionbundleid"></a>softwareVersionBundleId
 
-`softwareVersionBundleId` 키를 사용하여 iOS 응용 프로그램에 대한 번들 ID를 지정합니다. 예제:
+`softwareVersionBundleId` 키를 사용하여 iOS 애플리케이션에 대한 번들 ID를 지정합니다. 예제:
 
 ```xml
 <key>softwareVersionBundleId</key>
@@ -179,7 +180,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="releasedate"></a>releaseDate
 
-`releaseDate` 키를 사용하여 iTunes에 표시할 iOS 응용 프로그램의 릴리스 날짜를 제공합니다. 예제:
+`releaseDate` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션의 릴리스 날짜를 제공합니다. 예제:
 
 ```xml
 <key>releaseDate</key>
@@ -188,7 +189,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="softwareiconneedsshine"></a>softwareIconNeedsShine
 
-`softwareIconNeedsShine` 키를 사용하여 iOS 6(및 이전 버전)에 대해 _반짝이는 강조 표시_가 iOS 응용 프로그램의 아이콘에 필요한지 여부를 iTunes에 알립니다. 예제:
+`softwareIconNeedsShine` 키를 사용하여 iOS 6(및 이전 버전)에 대해 _반짝이는 강조 표시_가 iOS 애플리케이션의 아이콘에 필요한지 여부를 iTunes에 알립니다. 예제:
 
 ```xml
 <key>softwareIconNeedsShine</key>
@@ -197,7 +198,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="gamecenterenabled-and-gamecentereverenabled"></a>gameCenterEnabled 및 gameCenterEverEnabled
 
-`gameCenterEnabled` 및 `gameCenterEverEnabled` 키를 사용하여 이 iOS 응용 프로그램이 Apple의 Game Center를 지원하는지 여부를 iTunes에 알립니다. 예제:
+`gameCenterEnabled` 및 `gameCenterEverEnabled` 키를 사용하여 이 iOS 애플리케이션이 Apple의 Game Center를 지원하는지 여부를 iTunes에 알립니다. 예제:
 
 ```xml
 <key>gameCenterEnabled</key>
@@ -208,7 +209,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 
 ### <a name="genre-genreid-and-subgenres"></a>genre, genreId 및 subgenres
 
-`genre` 및 `genreId` 키를 사용하여 iOS 응용 프로그램이 속한 장르를 iTunes에 알립니다. 예제:
+`genre` 및 `genreId` 키를 사용하여 iOS 애플리케이션이 속한 장르를 iTunes에 알립니다. 예제:
 
 ```xml
 <key>genre</key>
@@ -217,7 +218,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 <integer>6014</integer>
 ```
 
-필요에 따라 `subgenres` 키를 사용하여 iOS 응용 프로그램에 대해 최대 두 개의 하위 장르를 추가로 정의할 수 있습니다. 예제:
+필요에 따라 `subgenres` 키를 사용하여 iOS 애플리케이션에 대해 최대 두 개의 하위 장르를 추가로 정의할 수 있습니다. 예제:
 
 ```xml
 <key>subgenres</key>
@@ -237,7 +238,7 @@ iOS 응용 프로그램(iTunes 앱 스토어의 판매 또는 무료 릴리스�
 </array>
 ```
 
-iOS 응용 프로그램의 경우 현재 Apple에서 정의한 장르 및 장르 ID는 다음과 같습니다.
+iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 ID는 다음과 같습니다.
 
 [!include[](~/ios/includes/table-appstore.md)]
 
@@ -245,7 +246,7 @@ iOS 응용 프로그램의 경우 현재 Apple에서 정의한 장르 및 장르
 
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
-`softwareSupportedDeviceIds` 키를 사용하여 이 iOS 응용 프로그램이 지원하는 iOS 장치를 iTunes에 알립니다. 예제:
+`softwareSupportedDeviceIds` 키를 사용하여 이 iOS 애플리케이션이 지원하는 iOS 디바이스를 iTunes에 알립니다. 예제:
 
 ```xml
 <key>softwareSupportedDeviceIds</key>
@@ -263,7 +264,7 @@ iOS 응용 프로그램의 경우 현재 Apple에서 정의한 장르 및 장르
 
 ### <a name="standard-keys"></a>표준 키
 
-다음 키는 iOS 응용 프로그램의 모든 `iTunesMetadata.plist` 파일에 포함되어 있으며 항상 동일한 값을 갖습니다.
+다음 키는 iOS 애플리케이션의 모든 `iTunesMetadata.plist` 파일에 포함되어 있으며 항상 동일한 값을 갖습니다.
 
 ```xml
 <key>drmVersionNumber</key>
@@ -357,7 +358,7 @@ Visual Studio용 Xamarin 플러그 인은 `Info.plist` 및 `Entitlement.plist` �
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 iTunes에 임시로 배달된 iOS 응용 프로그램을 알리는 데 사용할 수 있는 `iTunesMetadata.plist` 파일에 대해 설명했습니다. plist 파일의 표준 키와 Visual Studio 및 Mac용 Visual Studio에서 파일을 만들고 유지 관리하는 방법에 대해 설명했습니다.
+이 문서에서는 iTunes에 임시로 배달된 iOS 애플리케이션을 알리는 데 사용할 수 있는 `iTunesMetadata.plist` 파일에 대해 설명했습니다. plist 파일의 표준 키와 Visual Studio 및 Mac용 Visual Studio에서 파일을 만들고 유지 관리하는 방법에 대해 설명했습니다.
 
 ## <a name="related-links"></a>관련 링크
 

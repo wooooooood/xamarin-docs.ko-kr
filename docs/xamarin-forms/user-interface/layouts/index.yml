@@ -55,6 +55,12 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: scroll-view.md
             title: ScrollView
+          - href: contentview.md
+            html: ContentView를 사용하여 사용자 지정 컨트롤을 만드는 방법에 대해 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: contentview.md
+            title: 프레임
           - href: frame.md
             html: '색, 그림자 및 기타 옵션으로 구성할 수 있는 프레임을 사용하여 뷰를 래핑하는 방법에 대해 알아보세요.'
             image:

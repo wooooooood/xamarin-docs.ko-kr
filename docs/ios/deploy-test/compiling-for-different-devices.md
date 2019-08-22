@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: aac558f52423132bef53f1754307e743c69f6f22
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1b3bc6874a8584b60b15d1d373ad97fde565dfc4
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121210"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527119"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 디바이스용으로 컴파일
 
@@ -31,7 +31,7 @@ ms.locfileid: "50121210"
 
 UI에서 사용할 수 있는 구성 옵션 외에도, 개발자 고유의 명령줄 옵션 집합을 [Xamarin.iOS 빌드 도구(mtouch)](~/ios/deploy-test/mtouch.md)에 전달할 수 있습니다.
 
-[http://iossupportmatrix.com/](http://iossupportmatrix.com/)은 필요한 모든 장치, 아키텍처 및 iOS 버전이 포함되었는지 확인하는 데 사용할 수 있는 유용한 리소스입니다.
+[http://iossupportmatrix.com/](http://iossupportmatrix.com/)은 필요한 모든 디바이스, 아키텍처 및 iOS 버전이 포함되었는지 확인하는 데 사용할 수 있는 유용한 리소스입니다.
 
  <a name="SDK_Options" />
 
@@ -42,7 +42,7 @@ Mac용 Visual Studio를 사용하면 SDK와 관련된 두 가지 중요한 속�
 
 iOS **SDK 버전** 옵션을 통해 Apple에서 게시한 다른 SDK 버전을 사용할 수 있으며, 이렇게 하면 Xamarin.iOS가 빌드 중에 참조해야 하는 컴파일러, 링커 및 라이브러리로 이동됩니다. 
 
-**배포 대상** 설정은 응용 프로그램이 실행될 운영 체제에서 필요한 최소 버전을 선택하는 데 사용됩니다. 프로젝트의 Info.plist 파일에서 설정합니다. 응용 프로그램을 실행하는 데 필요한 모든 API가 있는 최소 버전을 선택해야 합니다.
+**배포 대상** 설정은 애플리케이션이 실행될 운영 체제에서 필요한 최소 버전을 선택하는 데 사용됩니다. 프로젝트의 Info.plist 파일에서 설정합니다. 애플리케이션을 실행하는 데 필요한 모든 API가 있는 최소 버전을 선택해야 합니다.
 
 일반적으로 Xamarin.iOS API는 최신 버전의 SDK에서 사용할 수 있는 모든 메서드를 노출하며, 필요한 경우 런타임에 기능을 사용할 수 있는지 여부를 감지할 수 있는 편의 속성을 제공해 드립니다(예를 들어 `UIDevice.UserInterfaceIdiom` 및 `UIDevice.IsMultitaskingSupported`는 Xamarin.iOS에서 항상 작동하며 모든 작업이 보이지 않는 곳에서 처리됨).
 
@@ -110,7 +110,7 @@ ARMv7s 프로세서만 대상으로 하는 경우 생성된 코드는 약간 더
 - iPad Mini 2, 3, 4
 - iPad Pro(모두)
 
-앱 스토어에 제출된 모든 빌드는 64비트를 지원해야 하며, 이는 [Apple](https://developer.apple.com/news/?id=12172014b)에서 설정한 요구 사항입니다. 또한 iOS 11은 64비트 응용 프로그램만 지원합니다.
+앱 스토어에 제출된 모든 빌드는 64비트를 지원해야 하며, 이는 [Apple](https://developer.apple.com/news/?id=12172014b)에서 설정한 요구 사항입니다. 또한 iOS 11은 64비트 애플리케이션만 지원합니다.
 
  <a name="ARM_Thumb_Support" />
 
@@ -128,8 +128,8 @@ Thumb는 ARM 프로세서에서 사용하는 보다 간단한 명령 집합입�
 
 이렇게 하려면 다음 단계를 수행해야 합니다.
 
--  **프로젝트 옵션**을 열고 **iOS 빌드** 창으로 이동합니다.
--  약하게 연결하려는 각 구성의 **추가 옵션**에 `'-gcc_flags "-weak_framework iAd"'`를 추가합니다.
+- **프로젝트 옵션**을 열고 **iOS 빌드** 창으로 이동합니다.
+- 약하게 연결하려는 각 구성의 **추가 옵션**에 `'-gcc_flags "-weak_framework iAd"'`를 추가합니다.
 
 
 [![](compiling-for-different-devices-images/image3.png "추가 옵션")](compiling-for-different-devices-images/image3.png#lightbox)

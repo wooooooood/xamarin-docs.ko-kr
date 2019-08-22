@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 1d900a7a3fc1bfabc9498852fa37579f5d5a4615
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0016a26ea7e44b64154eae9b503c2d726626e73f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645236"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890402"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
@@ -450,6 +450,7 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
             }
     };
     ```
+
     파일의 네임스페이스가 다른 경우 `using Phoneword;`를 포함합니다.
 
 1. `CallButton`이라는 두 번째 단추를 눌러 사용자에게 응답하는 코드를 추가합니다. `TranslateButton`에 대한 코드 아래에 다음 코드를 배치하고, `using Foundation;`을 파일의 맨 위에 추가합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: e6f7ec4fe018181b6f470de4201d5e5a3f90d4da
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831514"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527629"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -31,7 +31,7 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 ## <a name="provisioning-an-app-for-app-store-distribution"></a>앱 스토어 배포를 위한 앱 프로비전
 
-Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특정 *배포 프로비전 프로필*을 작성해야 합니다. 이 프로필을 사용하면 응용 프로그램을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다. 개발 프로비전 프로필과 마찬가지로 배포 프로필에는 다음 항목이 포함됩니다.
+Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특정 *배포 프로비전 프로필*을 작성해야 합니다. 이 프로필을 사용하면 애플리케이션을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다. 개발 프로비전 프로필과 마찬가지로 배포 프로필에는 다음 항목이 포함됩니다.
 
 - 앱 ID
 - 배포 인증서
@@ -64,11 +64,11 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
 
-1.   팀을 선택하고 **인증서 관리...** 를 클릭합니다. [![](images/selectteam.png "팀을 선택하고 세부 정보 보기")](images/selectteam.png#lightbox)
+1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![](images/selectteam.png "팀을 선택하고 세부 정보 보기")](images/selectteam.png#lightbox)
 
-2.   다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다. [![](images/selectcert.png "iOS 배포 인증서 만들기")](images/selectcert.png#lightbox)
+2. 다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다.  [![](images/selectcert.png "iOS 배포 인증서 만들기")](images/selectcert.png#lightbox)
 
-3.   팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다. [ ![](images/generated.png "서명 ID 생성 및 대화 상자 표시")](images/generated.png#lightbox)
+3. 팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다.  [ ![](images/generated.png "서명 ID 생성 및 대화 상자 표시")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
@@ -111,7 +111,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
     [![](images/distribute04.png "애플리케이션 서명에 필요한 인증서 선택")](images/distribute04.png#lightbox)
 
-5. **계속** 단추를 클릭하고 Xamarin.iOS 응용 프로그램이 실행될 수 있는 iOS 디바이스를 선택합니다.
+5. **계속** 단추를 클릭하고 Xamarin.iOS 애플리케이션이 실행될 수 있는 iOS 디바이스를 선택합니다.
 
     [![](images/distribute05.png "앱이 실행될 수 있는 iOS 디바이스 선택")](images/distribute05.png#lightbox)
 
@@ -122,7 +122,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -138,7 +138,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  Mac용 Visual Studio에서 다음을 수행합니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: b6b95f730b966ef5edaabbe7b0f333c2cacf5bc5
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: bc983fb43e0c649e3b7e231f42fce9d6af40e047
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58070841"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526752"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>NuGet을 사용하여 NUnit 2.6.4 설치하기
 
@@ -84,25 +84,29 @@ NUnit 3.0 이상을 보면 NUnit 2.6.4로 다운그레이드해야 합니다.
 
 1. **NUnit 3.0 제거** - `Uninstall-Package` commandlet을 사용하여 NUnit 3.0을 제거합니다.
 
-        <PM> Uninstall-Package NUnit -Project <TEST PROJECT NAME>
-        Attempting to gather dependencies information for package 'NUnit.3.0.1' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
-        Resolving actions to uninstall package 'NUnit.3.0.1'
-        Resolved actions to uninstall package 'NUnit.3.0.1'
-        Removed package 'NUnit.3.0.1' from 'packages.config'
-        Successfully uninstalled 'NUnit.3.0.1' from <TEST PROJECT NAME>
+    ```
+    <PM> Uninstall-Package NUnit -Project <TEST PROJECT NAME>
+    Attempting to gather dependencies information for package 'NUnit.3.0.1' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
+    Resolving actions to uninstall package 'NUnit.3.0.1'
+    Resolved actions to uninstall package 'NUnit.3.0.1'
+    Removed package 'NUnit.3.0.1' from 'packages.config'
+    Successfully uninstalled 'NUnit.3.0.1' from <TEST PROJECT NAME>
+    ```
 
 1. **NUnit 2.6.4 설치** - 다음 코드 조각에서 설명한 것처럼 `Install-Package` commandlet을 사용하여 Nunit 2.6.4를 설치합니다.
 
-        <PM> Install-Package NUnit -Version 2.6.4 -Project <TEST PROJECT NAME>
-        Attempting to gather dependencies information for package 'NUnit.2.6.4' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
-        Attempting to resolve dependencies for package 'NUnit.2.6.4' with DependencyBehavior 'Lowest'
-        Resolving actions to install package 'NUnit.2.6.4'
-        Resolved actions to install package 'NUnit.2.6.4'
-        Adding package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
-        Added package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
-        Added package 'NUnit.2.6.4' to 'packages.config'
-        Successfully installed 'NUnit 2.6.4' to <TEST PROJECT NAME>
-    
+    ```
+    <PM> Install-Package NUnit -Version 2.6.4 -Project <TEST PROJECT NAME>
+    Attempting to gather dependencies information for package 'NUnit.2.6.4' with respect to project '<TEST PROJECT NAME>', targeting '.NETFramework,Version=v4.5'
+    Attempting to resolve dependencies for package 'NUnit.2.6.4' with DependencyBehavior 'Lowest'
+    Resolving actions to install package 'NUnit.2.6.4'
+    Resolved actions to install package 'NUnit.2.6.4'
+    Adding package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
+    Added package 'NUnit.2.6.4' to folder 'Z:\Desktop\DowngradeNunit\packages'
+    Added package 'NUnit.2.6.4' to 'packages.config'
+    Successfully installed 'NUnit 2.6.4' to <TEST PROJECT NAME>
+    ```
+
 ## <a name="summary"></a>요약
 
 이 가이드에서는 패키지 관리자 콘솔을 사용하여 Visual Studio 2015 이상에서 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 설명합니다.

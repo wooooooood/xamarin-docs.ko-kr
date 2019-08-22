@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 4f6a0b45d37252c141b2741dd0b37a980c958a51
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 59b72daecdc1159494d069bec044ee1891916d11
+ms.sourcegitcommit: fd349a121164c85545f4b0881940eefdd0cf3b65
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896399"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Xamarin.ios에 대 한 XAML 핫 다시 로드 (미리 보기)
 
@@ -30,7 +30,7 @@ Xamarin.Forms | 4.1 이상
 
 ## <a name="use-xaml-hot-reload-for-xamarinforms"></a>Xamarin에 대해 XAML 핫 다시 로드 사용
 
-XAML 핫 다시 로드를 사용 하려면 추가 설치 또는 설정이 필요 하지 않습니다. Visual Studio에 기본 제공 되며 IDE 설정에서 사용 하도록 설정할 수 있습니다. 사용 하도록 설정 되 면 에뮬레이터, 시뮬레이터 또는 물리적 장치에서 앱을 디버그 하 여 XAML 핫 다시 로드 사용을 시작할 수 있습니다.
+XAML 핫 다시 로드를 사용 하려면 추가 설치 또는 설정이 필요 하지 않습니다. Visual Studio에 기본 제공 되며 IDE 설정에서 사용 하도록 설정할 수 있습니다. 사용 하도록 설정 되 면 에뮬레이터, 시뮬레이터 또는 물리적 장치에서 앱을 디버그 하 여 XAML 핫 다시 로드 사용을 시작할 수 있습니다. 현재, XAML 핫 다시 로드는 iOS 또는 Android에서 디버그할 때만 작동 합니다.
 
 Windows에서는 **도구** > **옵션** **xamarin 핫 다시 로드**에서 **xamarin 핫 다시 로드 사용** 확인란을 선택 하 여 XAML 핫 다시 로드를 사용 하도록 설정할 수 있습니다. >  > 
 

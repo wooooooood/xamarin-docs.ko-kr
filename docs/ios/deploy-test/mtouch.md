@@ -1,24 +1,24 @@
 ---
 title: mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
-description: 이 문서에서는 Xamarin.iOS 애플리케이션을 번들로 묶고, 시뮬레이터에서 실행하고, 물리적 장치에 배포하는 데 필요한 많은 단계를 제공하는 도구인 mtouch를 설명합니다.
+description: 이 문서에서는 Xamarin.iOS 애플리케이션을 번들로 묶고, 시뮬레이터에서 실행하고, 물리적 디바이스에 배포하는 데 필요한 많은 단계를 제공하는 도구인 mtouch를 설명합니다.
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: 4f545893ca4cde441cd05fc3d8e52ecf0f6aae98
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c67544824f23ea72ad325d39347330a863846c2b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669494"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526542"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
 
 iPhone 애플리케이션은 애플리케이션 번들로 제공됩니다. 애플리케이션 번들은 iPhone이 애플리케이션에 대해 배우기 위해 사용하는 코드, 데이터, 구성 파일 및 매니페스트를 포함하는 `.app` 확장이 포함된 디렉터리 입니다.
 
-.NET 실행 파일을 애플리케이션으로 바꾸는 프로세스는 대부분 애플리케이션을 번들로 바꾸는 데 필요한 여러 단계를 통합하는 도구인 `mtouch` 명령을 통해 이루어집니다. 이 도구는 시뮬레이터에서 애플리케이션을 시작하고 실제 iPhone 또는 iPod Touch 장치에 소프트웨어를 배포할 때도 사용됩니다.
+.NET 실행 파일을 애플리케이션으로 바꾸는 프로세스는 대부분 애플리케이션을 번들로 바꾸는 데 필요한 여러 단계를 통합하는 도구인 `mtouch` 명령을 통해 이루어집니다. 이 도구는 시뮬레이터에서 애플리케이션을 시작하고 실제 iPhone 또는 iPod Touch 디바이스에 소프트웨어를 배포할 때도 사용됩니다.
 
 ## <a name="detailed-instructions"></a>자세한 지침
 
@@ -45,9 +45,9 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 
 `mtouch` 명령은 세 가지 방법으로 코드를 컴파일할 수 있습니다.
 
--  시뮬레이터 테스트용 컴파일.
--  디바이스 배포용으로 컴파일.
--  실행 파일을 디바이스에 배포.
+- 시뮬레이터 테스트용 컴파일.
+- 디바이스 배포용으로 컴파일.
+- 실행 파일을 디바이스에 배포.
 
 
 ### <a name="building-for-the-simulator"></a>시뮬레이터용으로 빌드
@@ -60,13 +60,13 @@ $ mtouch -sim Hello.app hello.exe
 
 ### <a name="building-for-the-device"></a>디바이스용으로 빌드
 
-장치용 소프트웨어를 빌드하려면 `mtouch -dev` 옵션을 사용하여 애플리케이션을 빌드해야 하며, 또한 애플리케이션을 서명하는 데 사용되는 인증서의 이름을 제공해야 합니다. 다음은 장치용 애플리케이션을 빌드하는 방법입니다.
+디바이스용 소프트웨어를 빌드하려면 `mtouch -dev` 옵션을 사용하여 애플리케이션을 빌드해야 하며, 또한 애플리케이션을 서명하는 데 사용되는 인증서의 이름을 제공해야 합니다. 다음은 디바이스용 애플리케이션을 빌드하는 방법입니다.
 
 ```bash
 $ mtouch -dev -c "iPhone Developer: Miguel de Icaza" foo.exe
 ```
 
-이 특별한 경우에 "iPhone 개발자: Miguel de Icaza" 인증서를 사용하여 애플리케이션에 서명합니다. 이 단계는 매우 중요하며, 이 단계를 거치지 않으면 물리적 장치에서 애플리케이션 로드를 거부합니다.
+이 특별한 경우에 "iPhone 개발자: Miguel de Icaza" 인증서를 사용하여 애플리케이션에 서명합니다. 이 단계는 매우 중요하며, 이 단계를 거치지 않으면 물리적 디바이스에서 애플리케이션 로드를 거부합니다.
 
  <a name="Running_your_Application" />
 

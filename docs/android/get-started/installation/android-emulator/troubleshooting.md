@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 5f8d977c126cfe4bdfdb48470841ee17de6bda31
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 421d51cbb1ae3adb80aef6e4bf3cf1da38d6de8e
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117735"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887830"
 ---
 # <a name="android-emulator-troubleshooting"></a>Android 에뮬레이터 문제 해결
 
@@ -29,7 +29,7 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 에뮬레이터에 APK 설치 실패 또는 Android Debug Bridge(**adb**) 실행 실패에 대한 오류가 표시되면 Android SDK가 에뮬레이터에 연결할 수 있는지 확인합니다. 에뮬레이터 연결을 확인하려면 다음 단계를 수행합니다.
 
-1. **Android Device Manager**에서 에뮬레이터를 시작합니다(가상 장치를 선택하고 **시작** 클릭).
+1. **Android Device Manager**에서 에뮬레이터를 시작합니다(가상 디바이스를 선택하고 **시작** 클릭).
 
 2. 명령 프롬프트를 열고 **adb**가 설치된 폴더로 이동합니다. Android SDK가 기본 위치에 설치된 경우 **adb**는 **C:\\프로그램 파일(x86)\\Android\\android sdk\\플랫폼 도구\\adb.exe**에 있습니다. 그렇지 않은 경우, 컴퓨터에서 Android SDK의 위치에 대한 이 경로를 수정합니다.
 
@@ -60,8 +60,8 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 에뮬레이터에서 실행 중인 가상 디바이스에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 이러한 패키지를 포함하지 않고 가상 디바이스를 만들 때 발생하는 경우가 많습니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 옵션 중 하나 또는 둘 다를 선택해야 합니다.
 
-- **Google API** &ndash;에는 가상 장치에 Google Play 서비스가 포함되어 있습니다.
-- **Google Play 스토어** &ndash;에는 가상 장치에 Google Play 스토어가 포함되어 있습니다.
+- **Google API**&ndash;에는 가상 디바이스에 Google Play 서비스가 포함되어 있습니다.
+- **Google Play 스토어**&ndash;에는 가상 디바이스에 Google Play 스토어가 포함되어 있습니다.
 
 예를 들어 이 가상 디바이스에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
 
@@ -96,7 +96,7 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 이 문제의 일반적인 원인은 가상 디바이스(AVD)에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
 
-[![가상 장치용 x86 시스템 이미지 선택](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
+[![가상 디바이스용 x86 시스템 이미지 선택](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
 
 <a name="accel-issues-win" />
@@ -180,6 +180,7 @@ VT feature disabled in BIOS/UEFI
     ```powershell
     Get-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online
     ```
+
     하이퍼바이저가 활성화되어 있지 않으면 HypervisorPlatform 상태가 **사용 안 함**임을 나타내는 다음 예제와 유사한 메시지가 표시됩니다.
 
     ```
@@ -286,7 +287,7 @@ Device Guard 및 Credential Guard는 Windows 컴퓨터에서 Hyper-V가 비활�
 
 2. **시스템 요약**에서 **Device Guard 가상화 기반 보안**이 존재하고 **실행 중** 상태인지 확인합니다.
 
-   [![장치 가드가 존재하고 실행 중임](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
+   [![디바이스 가드가 존재하고 실행 중임](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
 
 Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니다.
 
@@ -304,14 +305,16 @@ Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니�
 
 6. 다음 명령을 복사하여 명령 프롬프트 창에 붙여넣습니다(**Z:** 드라이브가 사용중인 경우 사용되지 않는 드라이브 문자를 대신 선택).
 
-        mountvol Z: /s
-        copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
-        bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
-        bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
-        bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
-        mountvol Z: /d
+    ```cmd
+    mountvol Z: /s
+    copy %WINDIR%\System32\SecConfig.efi Z:\EFI\Microsoft\Boot\SecConfig.efi /Y
+    bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
+    bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\SecConfig.efi"
+    bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
+    bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions DISABLE-LSA-ISO,DISABLE-VBS
+    bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=Z:
+    mountvol Z: /d
+    ```
 
 7. 컴퓨터를 다시 시작합니다. 부팅 화면에서는 다음 메시지와 유사한 프롬프트가 나타납니다.
 
@@ -374,7 +377,7 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 에뮬레이터에 APK 설치 실패 또는 Android Debug Bridge(**adb**) 실행 실패에 대한 오류가 표시되면 Android SDK가 에뮬레이터에 연결할 수 있는지 확인합니다. 연결을 확인하려면 다음 단계를 수행합니다.
 
-1. **Android Device Manager**에서 에뮬레이터를 시작합니다(가상 장치를 선택하고 **시작** 클릭).
+1. **Android Device Manager**에서 에뮬레이터를 시작합니다(가상 디바이스를 선택하고 **시작** 클릭).
 
 2. 명령 프롬프트를 열고 **adb**가 설치된 폴더로 이동합니다. Android SDK가 기본 위치에 설치된 경우 **adb**는 **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**에 있습니다. 그렇지 않은 경우, 컴퓨터에서 Android SDK의 위치에 대한 이 경로를 수정합니다.
 
@@ -404,8 +407,8 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 에뮬레이터에서 실행 중인 가상 디바이스에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 일반적으로 패키지를 포함하지 않고 가상 디바이스를 만드는 경우에 발생합니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 중 하나 또는 둘 다를 선택해야 합니다.
 
-- **Google API** &ndash;에는 가상 장치에 Google Play 서비스가 포함되어 있습니다.
-- **Google Play 스토어** &ndash;에는 가상 장치에 Google Play 스토어가 포함되어 있습니다.
+- **Google API**&ndash;에는 가상 디바이스에 Google Play 서비스가 포함되어 있습니다.
+- **Google Play 스토어**&ndash;에는 가상 디바이스에 Google Play 스토어가 포함되어 있습니다.
 
 예를 들어 이 가상 디바이스에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
 
@@ -436,7 +439,7 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 이 문제의 일반적인 원인은 가상 디바이스에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
 
-[![가상 장치용 x86 시스템 이미지 선택](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
+[![가상 디바이스용 x86 시스템 이미지 선택](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
 <a name="accel-issues-mac" />
 
@@ -467,7 +470,7 @@ Mac에서 하이퍼바이저 프레임워크를 사용할 수 없는 경우 [HAX
 
 ### <a name="haxm-issues"></a>HAXM 문제
 
-Android Emulator가 제대로 시작되지 않는 경우 이 문제는 HAXM 관련 문제로 인해 자주 발생합니다. HAXM 문제는 다른 가상화 기술과의 충돌, 잘못된 설정 또는 만료된 HAXM 드라이버 때문인 경우가 많습니다. [HAXM 설치](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#install-haxm-mac)에서 설명한 단계를 통해 HAXM 드라이버를 다시 설치해 봅니다. 
+Android Emulator가 제대로 시작되지 않는 경우 이 문제는 HAXM 관련 문제로 인해 자주 발생합니다. HAXM 문제는 다른 가상화 기술과의 충돌, 잘못된 설정 또는 만료된 HAXM 드라이버 때문인 경우가 많습니다. [HAXM 설치](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#install-haxm-mac)에서 설명한 단계를 통해 HAXM 드라이버를 다시 설치해 봅니다.
 
 
 ## <a name="additional-troubleshooting-tips"></a>추가 문제 해결 팁

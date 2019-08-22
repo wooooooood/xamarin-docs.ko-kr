@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0363f6fa1611a15c6925717f7bdf3905f467831e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 92631fa50dc4826e70df4333bb55f7f69937d053
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107796"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526552"
 ---
 # <a name="fastlane-for-ios---match"></a>iOS용 fastlane – match
 
@@ -53,7 +53,9 @@ App Store에 앱을 배포하거나 베타 테스트를 수행하거나 디바�
 
 터미널을 사용하여 디렉터리를 프로젝트 디렉터리로 변경하고 다음을 실행합니다.
 
-    fastlane match init
+```
+fastlane match init
+```
 
 메시지가 표시되면 Git 리포지토리의 URL을 입력합니다.
 
@@ -76,11 +78,13 @@ URL은 아래 그림과 같이 github.com에서 찾아서 **Clone or Download**(
 
 필요한 환경이 무엇인지에 따라 다음 명령 중 하나를 사용하여 새 인증서와 프로비전 프로필을 생성하고 새로운 Git 리포지토리에 저장할 수 있습니다.
 
-    fastlane match appstore
+```
+fastlane match appstore
 
-    fastlane match adhoc
+fastlane match adhoc
 
-    fastlane match development
+fastlane match development
+```
 
 새 인증서와 프로필을 생성하는 것 외에 위의 명령을 사용하면 Git 리포지토리에 다음 항목이 추가됩니다.
 
@@ -99,15 +103,21 @@ URL은 아래 그림과 같이 github.com에서 찾아서 **Clone or Download**(
 
 깔끔하지 않은 인증서가 있으면 다음 명령으로 `nuke`를 사용하여 각 환경에 대한 인증서와 프로필을 해지할 수 있습니다.
 
-    fastlane match nuke
+```
+fastlane match nuke
+```
 
 특정 환경에 대한 모든 인증서 및 프로비전 프로필을 해지하려면:
 
-    fastlane match nuke development
+```
+fastlane match nuke development
+```
 
  또는
 
-    fastlane match nuke distribution
+```
+fastlane match nuke distribution
+```
 
 fastlane은 삭제하기 전에 제거할 파일을 확인합니다.
 
@@ -127,15 +137,21 @@ fastlane은 삭제하기 전에 제거할 파일을 확인합니다.
 
 - 사용 가능한 모든 명령의 목록을 보려면 `-–help` 플래그를 사용합니다.
 
-        fastlane match cert --help
+    ```
+    fastlane match cert --help
+    ```
 
 - 출력의 자세한 정도를 높이려면 `-–verbose` 플래그를 사용합니다.
 
-        fastlane match --development --verbose
+    ```
+    fastlane match --development --verbose
+    ```
 
 - 개발자 포털의 디바이스 수가 변경된 경우 프로비전 프로필에 갱신을 적용하려면 `--force_for_new_devices` 플래그를 사용합니다.
 
-        fastlane match development --force_for_new_devices
+    ```
+    fastlane match development --force_for_new_devices
+    ```
 
 ## <a name="related-links"></a>관련 링크
 

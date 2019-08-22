@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 43ce43b7ffb8cbe24fd4bb9dd95e496de27110d6
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 8557a3efca1336f70c0feef2ac4dc9c462eedbf5
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620968"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889884"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.ios의 컬렉션 뷰
 
@@ -184,7 +184,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 
 을 `DequeReusableCell` 호출 하면 다시 사용 큐에서 셀이 큐에서 제거 되거나, `CollectionView.RegisterClassForCell`호출에 등록 된 형식에 따라 생성 된 큐에서 셀을 사용할 수 없는 경우이 호출 됩니다.
 
-이 경우 `AnimalCell` 클래스를 등록 하면 iOS는 새 `AnimalCell` 를 만든 다음, 셀을 큐에서 제거 하는 호출이 수행 될 때이를 반환 하 고, 그 후에는 animal 클래스에 포함 된 이미지를 사용 하 여 구성 되 고에 표시 하기위해반환됩니다 `UICollectionView`.
+이 경우 `AnimalCell` 클래스를 등록 하면 iOS는 새 `AnimalCell` 를 만든 다음, 셀을 큐에서 제거 하는 호출이 수행 될 때이를 반환 하 고, 그 후에는 animal 클래스에 포함 된 이미지를 사용 하 여 구성 되 고에 표시 하기위해반환됩니다.`UICollectionView`.
 
  <a name="Delegate" />
 
@@ -462,6 +462,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
   ...
 }
 ```
+
 <a name="Simple-Reordering-Example" />
 
 ### <a name="simple-reordering-example"></a>간단한 다시 정렬 예제
@@ -693,7 +694,7 @@ namespace CollectionView
 
 UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 사용자가 목록에서 항목을 선택 하 여 새 위치로 끌면 항목을 이동할 때 다른 항목이 자동으로 애니메이션 효과를 적용 합니다.
-사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예를 들어:
+사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예:
 
 [![](uicollectionview-images/intro01.png "항목을 새 위치로 끌어 오는 예")](uicollectionview-images/intro01.png#lightbox)
 

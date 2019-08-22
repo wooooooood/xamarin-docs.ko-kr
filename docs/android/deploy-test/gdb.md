@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: fe2cc5fb7c51425c8030d31015236473a5264efb
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: aa72daae1727e0d100592873a7895a7d8942b4f2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509015"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525493"
 ---
 # <a name="gdb"></a>GDB
 
@@ -24,9 +24,9 @@ Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 통해 `gdb`를 사용하는 �
 
 `gdb`를 사용하는 방법은 세 가지가 있습니다.
 
-1.  [빠른 배포가 활성화된 디버그 빌드](#Debug_Builds_with_Fast_Deployment).
-1.  [빠른 배포가 비활성화된 디버그 빌드](#Debug_Builds_without_Fast_Deployment).
-1.  [릴리스 빌드](#Release_Builds).
+1. [빠른 배포가 활성화된 디버그 빌드](#Debug_Builds_with_Fast_Deployment).
+1. [빠른 배포가 비활성화된 디버그 빌드](#Debug_Builds_without_Fast_Deployment).
+1. [릴리스 빌드](#Release_Builds).
 
 
 문제가 발생할 경우 [문제 해결](#Troubleshooting) 섹션을 참조하세요.
@@ -83,8 +83,8 @@ GNU gdb (GDB) 7.3.1-gg2
 
 두 가지 해결 방법이 있습니다.
 
--   `.__override__` 디렉터리가 생성되도록 `debug.mono.log` 시스템 속성을 설정합니다.
--   `.apk` 내에 `gdbserver`를 포함합니다.
+- `.__override__` 디렉터리가 생성되도록 `debug.mono.log` 시스템 속성을 설정합니다.
+- `.apk` 내에 `gdbserver`를 포함합니다.
 
 ### <a name="setting-the-debugmonolog-system-property"></a>`debug.mono.log` 시스템 속성 설정
 
@@ -141,9 +141,9 @@ GNU gdb (GDB) 7.3.1-gg2
 
 `gdb` 지원에는 다음 세 가지가 필요합니다.
 
-1.  `INTERNET` 권한.
-2.  앱 디버깅 활성화.
-3.  액세스 가능한 `gdbserver`.
+1. `INTERNET` 권한.
+2. 앱 디버깅 활성화.
+3. 액세스 가능한 `gdbserver`.
 
 디버그 앱에서는 기본적으로 `INTERNET` 권한이 활성화됩니다. 애플리케이션에 아직 없을 경우 **속성/AndroidManifest.xml**을 편집하거나 [프로젝트 속성](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)을 편집하여 추가할 수 있습니다.
 
@@ -161,7 +161,7 @@ GNU gdb (GDB) 7.3.1-gg2
 
 ## <a name="troubleshooting"></a>문제 해결
 
-### <a name="monopmip-doesnt-work"></a>`mono_pmip`가 작동하지 않음
+### <a name="mono_pmip-doesnt-work"></a>`mono_pmip`가 작동하지 않음
 
 `mono_pmip` 함수([관리되는 스택 프레임 가져오기](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)에 유용)가 `libmonosgen-2.0.so`에서 내보내졌고, `_Gdb` 대상을 현재 끌어내릴 수 없습니다. (이 문제는 향후 릴리스에서 수정됩니다.)
 

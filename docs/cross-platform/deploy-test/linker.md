@@ -1,31 +1,31 @@
 ---
 title: 사용자 지정 링커 구성
-description: 이 문서에서는 필요한 코드가 연결된 응용 프로그램에서 제거되지 않았음을 명시적으로 확인하는 링커를 구성하는 데 사용할 수 있는 XML 파일을 설명합니다.
+description: 이 문서에서는 필요한 코드가 연결된 애플리케이션에서 제거되지 않았음을 명시적으로 확인하는 링커를 구성하는 데 사용할 수 있는 XML 파일을 설명합니다.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: caf43e6cb975b65240f5c0f8538b9be175978eac
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: bf934d50c90efaba266cbfac00aa5140ea92009b
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34780462"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526678"
 ---
 # <a name="custom-linker-configuration"></a>사용자 지정 링커 구성
 
 기본 옵션 집합으로 충분하지 않은 경우 링커에서 원하는 내용을 설명하는 XML 파일을 사용하여 연결 프로세스를 운영할 수 있습니다.
 
-응용 프로그램에서 형식, 메서드 및/또는 필드가 제거되지 않도록 링커에 추가 정의를 제공할 수 있습니다. 사용자 고유의 코드에서 사람들이 선호하는 방법은 [iOS에서 연결](~/ios/deploy-test/linker.md) 및 [Android에서 연결](~/android/deploy-test/linker.md) 가이드에 설명된 것처럼 `[Preserve]` 사용자 지정 특성을 사용하는 것입니다.
+애플리케이션에서 형식, 메서드 및/또는 필드가 제거되지 않도록 링커에 추가 정의를 제공할 수 있습니다. 사용자 고유의 코드에서 사람들이 선호하는 방법은 [iOS에서 연결](~/ios/deploy-test/linker.md) 및 [Android에서 연결](~/android/deploy-test/linker.md) 가이드에 설명된 것처럼 `[Preserve]` 사용자 지정 특성을 사용하는 것입니다.
 그러나 SDK 또는 제품 어셈블리의 일부 정의가 필요한 경우 링커가 필요한 항목을 제거하지 않도록 방지하는 코드를 추가하는 것보다 XML 파일을 사용하는 것이 더 좋은 해결책일 수 있습니다.
 
-이렇게 하려면 최상위 요소 <linker>를 사용하여 *어셈블리* 노드를 포함하는 XML 파일을 정의합니다. 그러면 어셈블리 노드가 *형식* 노드를 포함하고, 형식 노드는 *메서드* 및 *필드* 노드를 포함합니다.
+이렇게 하려면 최상위 요소 `<linker>`를 사용하여 *어셈블리* 노드를 포함하는 XML 파일을 정의합니다. 그러면 어셈블리 노드가 *형식* 노드를 포함하고, 형식 노드는 *메서드* 및 *필드* 노드를 포함합니다.
 
 이 링커 설명 파일이 생겼으면 프로젝트에 추가하고 다음 작업을 수행합니다.
 
--  **Android의 경우** : **빌드 작업**을 **LinkDescription**으로 설정
--  **iOS의 경우** : **빌드 작업**을 **LinkDescription**으로 설정
+- **Android의 경우** : **빌드 작업**을 **LinkDescription**으로 설정
+- **iOS의 경우** : **빌드 작업**을 **LinkDescription**으로 설정
 
 
 다음 예에서는 XML 파일의 모습을 보여줍니다.

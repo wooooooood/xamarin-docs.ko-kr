@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: b1f2dbe87fed951223e731912b696c649d0b6edb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647184"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621096"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -51,7 +51,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 ### <a name="creating-the-root-page"></a>루트 페이지 만들기
 
-탐색 스택에 추가된 첫 번째 페이지는 응용 프로그램의 *root* 페이지라고 하며, 다음 코드 예제는 해당 수행 방법을 보여줍니다.
+탐색 스택에 추가된 첫 번째 페이지는 애플리케이션의 *root* 페이지라고 하며, 다음 코드 예제는 해당 수행 방법을 보여줍니다.
 
 ```csharp
 public App ()
@@ -95,7 +95,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>탐색 스택에서 페이지 꺼내기
 
-활성 페이지는 장치의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 단추든 화면상 단추든 상관없습니다.
+활성 페이지는 디바이스의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 디바이스의 물리적 단추든 화면상 단추든 상관없습니다.
 
 프로그래밍 방식으로 원래 페이지로 돌아가려면 `Page2Xaml` 개체가 다음 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 
@@ -366,5 +366,5 @@ public class TitleViewPage : ContentPage
 - [PassingData(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
 - [LoginFlow(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
 - [TitleView(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
-- [Xamarin.Forms에서 로그인 화면 흐름을 만드는 방법 동영상](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
+- [Xamarin.Forms에서 로그인 화면 흐름을 만드는 방법 동영상](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

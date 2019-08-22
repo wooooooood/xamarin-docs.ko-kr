@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865317"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890096"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -21,7 +21,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ## <a name="requirements"></a>요구 사항
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - Mac용 Visual Studio 7.3 이상
 - Xcode 9 이상
@@ -43,19 +43,22 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 > [!IMPORTANT]
 > 시작하기 전에 [iTunes Connect](https://itunesconnect.apple.com/) 또는 [appleid.apple.com](https://appleid.apple.com)에 로그인하여 최신 Apple 계정 정책에 동의했는지 확인하세요. 메시지가 표시되면 단계를 완료하여 Apple의 새 계정 계약에 동의합니다. 2018년 5월부터 개인 정보 보호 계약에 동의하지 않은 경우 디바이스를 프로비저닝할 때 다음 경고 중 하나가 표시됩니다.
+>
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
 > }
 > ```
+>
 > 또는
+>
 > ```
 > Authentication Service Is Unavailable
 > ```
 
 IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac용 Visual Studio에서 iOS 프로젝트를 엽니다.
 

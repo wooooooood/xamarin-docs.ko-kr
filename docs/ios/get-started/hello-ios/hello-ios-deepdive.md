@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 050f084086df02314faecaca42a93007e6cc5246
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: adfc8e34d64b6091ba8ffc56c0f93bcf560128b1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647045"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527712"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -28,7 +28,7 @@ ms.locfileid: "68647045"
 
 Mac용 Visual Studio는 Visual Studio와 XCode의 기능을 결합하는 무료 오픈 소스 IDE입니다. 완전히 통합된 비주얼 디자이너, 리팩터리 도구가 함께 포함된 텍스트 편집기, 어셈블리 브라우저, 소스 코드 통합 등을 제공합니다. 이 가이드는 몇 가지 기본 Mac용 Visual Studio 기능을 소개하지만, Mac용 Visual Studio를 처음 접하는 경우 [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/) 설명서를 확인하세요.
 
-Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 응용 프로그램** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
+Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는 Visual Studio 연습을 따릅니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 애플리케이션** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
 
 ![](hello-ios-deepdive-images/image30.png "초기 솔루션의 스크린샷")
 
@@ -39,7 +39,7 @@ Mac용 Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성하는
 
 Visual Studio는 Microsoft의 강력한 IDE입니다. 완전히 통합된 비주얼 디자이너, 리팩터리 도구가 함께 포함된 텍스트 편집기, 어셈블리 브라우저, 소스 코드 통합 등을 제공합니다. 이 가이드에서는 Visual Studio용 Xamarin 도구를 사용한 몇 가지 기본적인 Visual Studio 기능을 소개합니다.
 
-Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 응용 프로그램** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
+Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루션은 하나 이상의 프로젝트를 포함할 수 있는 컨테이너입니다. 프로젝트는 애플리케이션(예: iOS 또는 Android), 지원 라이브러리, 테스트 애플리케이션 등이 될 수 있습니다. **단일 뷰 애플리케이션** 템플릿을 사용하여 Phoneword 앱에서 새 iPhone 프로젝트가 추가됩니다. 초기 솔루션은 다음과 같았습니다.
 
 ![](hello-ios-deepdive-images/vs-image30.png "초기 솔루션의 스크린샷")
 
@@ -72,7 +72,7 @@ Visual Studio는 코드를 솔루션 및 프로젝트로 구성합니다. 솔루
 - **Main.storyboard** - 스토리보드는 애플리케이션의 사용자 인터페이스의 시각적 디자인을 포함합니다. 스토리보드 파일은 iOS 디자이너라고 하는 그래픽 편집기에서 엽니다.
 - **ViewController.cs** – 뷰 컨트롤러는 사용자가 보고 터치하는 화면(뷰)을 제공합니다. 뷰 컨트롤러는 사용자와 뷰 간 상호 작용을 처리하는 일을 담당합니다.
 - **ViewController.designer.cs** – `designer.cs`는 뷰의 컨트롤과 뷰 컨트롤러에서 해당 코드 표현 간의 연결점으로 사용되는 자동으로 생성되는 파일입니다. 내부 배관 파일이기 때문에 IDE는 수동 변경을 덮어쓰게 되며 대부분의 경우 이 파일은 무시할 수 있습니다. 비주얼 디자이너와 백업 코드 사이의 관계에 대한 자세한 내용은 [iOS 디자이너 소개](~/ios/user-interface/designer/introduction.md) 가이드를 참조하세요.
-- **Info.plist** – **Info.plist**에서는 응용 프로그램 이름, 아이콘, 시작 이미지 등과 같은 응용 프로그램 속성이 설정됩니다. 강력한 파일로, 전체 소개는 [속성 목록 작업](~/ios/app-fundamentals/property-lists.md) 가이드에서 확인할 수 있습니다.
+- **Info.plist** – **Info.plist**에서는 애플리케이션 이름, 아이콘, 시작 이미지 등과 같은 애플리케이션 속성이 설정됩니다. 강력한 파일로, 전체 소개는 [속성 목록 작업](~/ios/app-fundamentals/property-lists.md) 가이드에서 확인할 수 있습니다.
 - **Entitlements.plist** - 자격 속성 목록을 통해 iCloud, PassKit 등의 *기능*(앱 스토어 기술이라고도 함)을 지정할 수 있습니다. **Entitlements.plist**에 대한 자세한 내용은 [속성 목록 작업](~/ios/app-fundamentals/property-lists.md) 가이드에서 확인할 수 있습니다. 자격에 대한 일반적인 소개의 경우 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
 
 ## <a name="architecture-and-app-fundamentals"></a>아키텍처 및 앱 기본 사항
@@ -85,7 +85,7 @@ iOS 애플리케이션이 사용자 인터페이스를 로드하려면 두 가�
 
 ### <a name="main-method"></a>Main 메서드
 
-iOS 응용 프로그램의 주 진입점은 `Application` 클래스입니다. `Application` 클래스는 **Main.cs** 파일에 정의되어 있으며 정적 `Main` 메서드를 포함합니다. 새 Xamarin.iOS 응용 프로그램 인스턴스를 만들고 OS 이벤트를 처리하는 *응용 프로그램 대리자* 클래스의 이름을 전달합니다. 정적 `Main` 메서드에 대한 템플릿 코드가 아래에 나와 있습니다.
+iOS 애플리케이션의 주 진입점은 `Application` 클래스입니다. `Application` 클래스는 **Main.cs** 파일에 정의되어 있으며 정적 `Main` 메서드를 포함합니다. 새 Xamarin.iOS 애플리케이션 인스턴스를 만들고 OS 이벤트를 처리하는 *애플리케이션 대리자* 클래스의 이름을 전달합니다. 정적 `Main` 메서드에 대한 템플릿 코드가 아래에 나와 있습니다.
 
 ```csharp
 using System;
@@ -105,7 +105,7 @@ namespace Phoneword_iOS
 
 ### <a name="application-delegate"></a>애플리케이션 대리자
 
-iOS에서 *응용 프로그램 대리자* 클래스는 시스템 이벤트를 처리합니다. 이 클래스는 **AppDelegate.cs** 안에 있습니다. `AppDelegate` 클래스는 애플리케이션 *창*을 관리합니다. 창은 사용자 인터페이스에 대한 컨테이너 역할을 하는 `UIWindow` 클래스의 단일 인스턴스입니다. 기본적으로 응용 프로그램은 콘텐츠를 로드할 하나의 창만 가져오고, 창은 실제 디바이스 화면의 크기와 일치하는 경계 사각형을 제공하는 *화면*(단일 `UIScreen` 인스턴스)에 연결됩니다.
+iOS에서 *애플리케이션 대리자* 클래스는 시스템 이벤트를 처리합니다. 이 클래스는 **AppDelegate.cs** 안에 있습니다. `AppDelegate` 클래스는 애플리케이션 *창*을 관리합니다. 창은 사용자 인터페이스에 대한 컨테이너 역할을 하는 `UIWindow` 클래스의 단일 인스턴스입니다. 기본적으로 애플리케이션은 콘텐츠를 로드할 하나의 창만 가져오고, 창은 실제 디바이스 화면의 크기와 일치하는 경계 사각형을 제공하는 *화면*(단일 `UIScreen` 인스턴스)에 연결됩니다.
 
 또한 *AppDelegate*는 앱 시작이 종료될 때 또는 메모리가 부족할 때와 중요한 애플리케이션 이벤트에 대한 시스템 업데이트를 구독하는 역할을 합니다.
 
@@ -136,7 +136,7 @@ namespace Phoneword_iOS
 
 ## <a name="user-interface"></a>사용자 인터페이스
 
-iOS 앱의 사용자 인터페이스는 storefront와 비슷합니다. 애플리케이션은 일반적으로 하나의 창을 가져오지만 필요한 많은 개체로 채울 수 있으며 개체 및 배열은 앱이 표시하려고 항목에 따라 변경할 수 있습니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 응용 프로그램에서 단일 화면을 빌드하려면 뷰가 *콘텐츠 뷰 계층 구조*에 쌓이고 계층 구조는 단일 뷰 컨트롤러에서 관리됩니다. 여러 화면이 있는 응용 프로그램은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 응용 프로그램은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
+iOS 앱의 사용자 인터페이스는 storefront와 비슷합니다. 애플리케이션은 일반적으로 하나의 창을 가져오지만 필요한 많은 개체로 채울 수 있으며 개체 및 배열은 앱이 표시하려고 항목에 따라 변경할 수 있습니다. 사용자에게 표시되는 항목인 이 시나리오의 개체를 뷰라고 합니다. 애플리케이션에서 단일 화면을 빌드하려면 뷰가 *콘텐츠 뷰 계층 구조*에 쌓이고 계층 구조는 단일 뷰 컨트롤러에서 관리됩니다. 여러 화면이 있는 애플리케이션은 각각 고유한 뷰 컨트롤러가 있는 여러 콘텐츠 뷰 계층 구조가 있으며, 애플리케이션은 사용자가 보는 화면에 따라 다른 콘텐츠 뷰 계층 구조를 만들도록 창에 뷰를 배치합니다.
 
 이 섹션에서는 뷰, 콘텐츠 뷰 계층 구조 및 iOS 디자이너를 설명하면서 사용자 인터페이스에 대해 살펴봅니다.
 
@@ -148,7 +148,7 @@ iOS 디자이너는 Xamarin에서 사용자 인터페이스를 빌드하는 비�
 
 ![](hello-ios-deepdive-images/image33.png "iOS 디자이너 인터페이스")
 
-*스토리보드*는 화면 간 전환 및 관계와 함께 애플리케이션 화면의 시각적 디자인을 포함하는 파일입니다. 스토리보드에서 애플리케이션의 화면 표현을 _장면_이라고 합니다. 각 장면은 뷰 컨트롤러와 관리하는 뷰의 스택을 나타냅니다(콘텐츠 뷰 계층 구조). 새 **단일 뷰 응용 프로그램** 프로젝트를 템플릿에서 만들면 Mac용 Visual Studio는 `Main.storyboard`라는 스토리보드 파일을 자동으로 생성하고 아래 스크린샷에 나온 것처럼 단일 장면으로 채웁니다.
+*스토리보드*는 화면 간 전환 및 관계와 함께 애플리케이션 화면의 시각적 디자인을 포함하는 파일입니다. 스토리보드에서 애플리케이션의 화면 표현을 _장면_이라고 합니다. 각 장면은 뷰 컨트롤러와 관리하는 뷰의 스택을 나타냅니다(콘텐츠 뷰 계층 구조). 새 **단일 뷰 애플리케이션** 프로젝트를 템플릿에서 만들면 Mac용 Visual Studio는 `Main.storyboard`라는 스토리보드 파일을 자동으로 생성하고 아래 스크린샷에 나온 것처럼 단일 장면으로 채웁니다.
 
 ![](hello-ios-deepdive-images/image34.png "Mac용 Visual Studio가 자동으로 Main.storyboard라는 스토리보드 파일을 생성하고 단일 장면에 채웁니다.")
 
@@ -161,7 +161,7 @@ iOS 디자이너는 Xamarin에서 사용자 인터페이스를 빌드하는 비�
 
 ![](hello-ios-deepdive-images/vs-image33.png "iOS 디자이너 인터페이스")
 
-*스토리보드*는 화면 간 전환 및 관계와 함께 애플리케이션 화면의 시각적 디자인을 포함하는 파일입니다. 스토리보드에서 애플리케이션의 화면 표현을 _장면_이라고 합니다. 각 장면은 뷰 컨트롤러와 관리하는 뷰의 스택을 나타냅니다(콘텐츠 뷰 계층 구조). 새 **단일 뷰 응용 프로그램** 프로젝트를 템플릿에서 만들면 Visual Studio는 `Main.storyboard`라는 스토리보드 파일을 자동으로 생성하고 아래 스크린샷에 나온 것처럼 단일 장면으로 채웁니다.
+*스토리보드*는 화면 간 전환 및 관계와 함께 애플리케이션 화면의 시각적 디자인을 포함하는 파일입니다. 스토리보드에서 애플리케이션의 화면 표현을 _장면_이라고 합니다. 각 장면은 뷰 컨트롤러와 관리하는 뷰의 스택을 나타냅니다(콘텐츠 뷰 계층 구조). 새 **단일 뷰 애플리케이션** 프로젝트를 템플릿에서 만들면 Visual Studio는 `Main.storyboard`라는 스토리보드 파일을 자동으로 생성하고 아래 스크린샷에 나온 것처럼 단일 장면으로 채웁니다.
 
 ![](hello-ios-deepdive-images/vs-image34.png "Visual Studio가 자동으로 Main.storyboard라는 스토리보드 파일을 생성하고 단일 장면에 채웁니다.")
 
@@ -259,7 +259,7 @@ _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단�
 
 이 장면으로 표시되는 콘텐츠 뷰 계층 구조에 대한 사용자 지정 뷰 컨트롤러 클래스는 **Properties Pad**에 있는 **ID** 섹션의 **클래스** 속성을 편집하여 설정할 수 있습니다. 예를 들어 **Phoneword** 애플리케이션은 아래 스크린샷에 나온 것처럼 `ViewController`를 첫 번째 화면에 대한 뷰 컨트롤러로 설정합니다.
 
-![](hello-ios-deepdive-images/image45new.png "Phoneword 응용 프로그램이 ViewController를 뷰 컨트롤러로 설정")
+![](hello-ios-deepdive-images/image45new.png "Phoneword 애플리케이션이 ViewController를 뷰 컨트롤러로 설정")
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -270,7 +270,7 @@ _콘텐츠 뷰 계층 구조_는 아래 다이어그램에 나온 것처럼 단�
 
 이 장면으로 표시되는 콘텐츠 뷰 계층 구조에 대한 사용자 지정 뷰 컨트롤러 클래스는 **속성 창**에 있는 **ID** 섹션의 **클래스** 속성을 편집하여 설정할 수 있습니다. 예를 들어 **Phoneword** 애플리케이션은 아래 스크린샷에 나온 것처럼 `ViewController`를 첫 번째 화면에 대한 뷰 컨트롤러로 설정합니다.
 
-![](hello-ios-deepdive-images/vs-image45.png "Phoneword 응용 프로그램이 ViewController를 뷰 컨트롤러로 설정")
+![](hello-ios-deepdive-images/vs-image45.png "Phoneword 애플리케이션이 ViewController를 뷰 컨트롤러로 설정")
 
 ::: zone-end
 
@@ -387,7 +387,7 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
     }
     ```
 
-- **경고 표시** – 사용자가 통화를 지원하지 않는 장치(예: 시뮬레이터 또는 iPod Touch)에서 전화 걸기를 시도하는 경우 사용자에게 전화를 걸 수 없음을 알리는 경고 대화 상자가 표시됩니다. 아래 코드는 경고 컨트롤러를 만들고 채웁니다.
+- **경고 표시** – 사용자가 통화를 지원하지 않는 디바이스(예: 시뮬레이터 또는 iPod Touch)에서 전화 걸기를 시도하는 경우 사용자에게 전화를 걸 수 없음을 알리는 경고 대화 상자가 표시됩니다. 아래 코드는 경고 컨트롤러를 만들고 채웁니다.
 
     ```csharp
     if (!UIApplication.SharedApplication.OpenUrl (url)) {
@@ -401,7 +401,7 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
-Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 응용 프로그램 테스트하기에 대해 설명하며, 사용자 지정 앱 아이콘 및 시작 이미지를 만들기 위한 도구를 소개합니다.
+Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 애플리케이션 테스트하기에 대해 설명하며, 사용자 지정 앱 아이콘 및 시작 이미지를 만들기 위한 도구를 소개합니다.
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
@@ -409,7 +409,7 @@ Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하�
 
 ### <a name="deploy-to-a-device"></a>디바이스에 배포
 
-iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 응용 프로그램은 조기에 그리고 자주 실제 디바이스에서 테스트해야 합니다.
+iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방법입니다. 시뮬레이터에는 모의 위치, [이동 시뮬레이션](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/test_location_changes_in_simulator) 등을 포함한 테스트에 유용한 최적화가 많이 있습니다. 그러나 사용자는 시뮬레이터에서 최종 앱을 사용하지 않습니다. 모든 애플리케이션은 조기에 그리고 자주 실제 디바이스에서 테스트해야 합니다.
 
 디바이스를 프로비전하는 데는 시간이 걸리며 Apple 개발자 계정이 있어야 합니다. [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침이 나와 있습니다.
 
@@ -442,14 +442,14 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 - [**Sketch**](https://www.sketchapp.com") – Sketch는 사용자 인터페이스, 아이콘 등을 디자인하기 위한 Mac 앱입니다. 이는 Xamarin 앱 아이콘 및 시작 이미지 집합을 디자인하는 데 사용되었던 앱입니다. Sketch 3은 App Store에서 사용할 수 있습니다. 무료 [Sketch Tool](http://bohemiancoding.com/sketch/tool/)도 사용해 볼 수 있습니다.
 - [**Pixelmator**](http://www.pixelmator.com/) – Mac용 다양한 이미지 편집 앱입니다(약 $30).
 - [**Glyphish**](http://www.glyphish.com/) – 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
-- [**Fiverr**](http://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터).  성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
+- [**Fiverr**](http://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 ::: zone pivot="windows"
 
 * Visual Studio - IDE에서 직접 앱에 대한 간단한 아이콘 집합을 만드는 데 사용할 수 있습니다.
 - [**Glyphish**](http://www.glyphish.com/) – 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
-- [**Fiverr**](http://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터).  성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
+- [**Fiverr**](http://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 

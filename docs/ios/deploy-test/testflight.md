@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 27fd8cac85cdf139278d3824ebf71e54cdc7d140
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5729c32ca671a4fcc309d235a34929dcba6a3d03
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865575"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621105"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -55,21 +55,21 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 3. 베타 테스트를 관리합니다.
     - 메타데이터 추가
     - 내부 사용자 추가
-        - 최대 25명의 사용자
+      - 최대 25명의 사용자
     - 외부 사용자 추가
-        - 최대 1,000명의 사용자
-        - Apple 지침을 준수해야 하는 베타 테스트 검토가 필요합니다.
+      - 최대 1,000명의 사용자
+      - Apple 지침을 준수해야 하는 베타 테스트 검토가 필요합니다.
 4. 사용자로부터 피드백을 받고, 이에 따라 작업을 수행하고, 2단계로 돌아갑니다.
 
 ## <a name="create-an-itunes-connect-record"></a>iTunes Connect 레코드 만들기
 
-1.  Apple 개발자 자격 증명을 사용하여 [iTunes Connect 포털](https://itunesconnect.apple.com/)에 로그인합니다.
-2.  **My Apps**를 선택합니다.
+1. Apple 개발자 자격 증명을 사용하여 [iTunes Connect 포털](https://itunesconnect.apple.com/)에 로그인합니다.
+2. **My Apps**를 선택합니다.
 
     [![](testflight-images/my-apps.png "내 앱 선택")](testflight-images/my-apps.png#lightbox)
 
 
-3.  **My Apps** 화면의 왼쪽 위 모서리에 있는 **+** 단추를 클릭하여 새 앱을 추가합니다. Mac 및 iOS 개발자 계정이 있는 경우 여기서 새 앱 유형을 선택하라는 메시지가 표시됩니다.
+3. **My Apps** 화면의 왼쪽 위 모서리에 있는 **+** 단추를 클릭하여 새 앱을 추가합니다. Mac 및 iOS 개발자 계정이 있는 경우 여기서 새 앱 유형을 선택하라는 메시지가 표시됩니다.
 
 앱의 Info.plist와 정확히 동일한 정보를 포함해야 하는 **새 iOS 앱** 제출 창이 표시됩니다.
 
@@ -84,12 +84,12 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 [![](testflight-images/infoplist.png "앱의 Info.plist")](testflight-images/infoplist.png#lightbox)
 [ ![](testflight-images/newiosapp.png "iTunes Connect의 양식")](testflight-images/newiosapp.png#lightbox)
 
--  **이름** - 앱 번들을 설정할 때 사용되는 설명이 포함된 이름입니다. `Info.plist`의 **애플리케이션 이름** 항목과 정확히 일치해야 합니다.
--  **기본 언어** - 앱 내에서 사용되는 기본 언어입니다. 일반적으로 말하는 모든 언어입니다.
--  **번들 ID** - 개발자 계정에 만들어진 모든 앱 ID를 나열하는 드롭다운 메뉴입니다.
-    *   **번들 ID 접미사** - 와일드카드 번들 ID(예: 위의 예제와 같이 *로 끝남)를 선택하면 번들 ID 접미사를 묻는 추가 상자가 표시됩니다. 예제에서 **번들 ID**는 `mobi.chkn.*`이고, 접미사는 **PageView**입니다. 이러한 항목 모두는 `Info.plist`에서 **번들 식별자**를 구성합니다.
--  **버전** - 업로드되는 앱의 버전 번호입니다. 이 항목은 개발자가 선택합니다.
--  **SKU** - 사용자에게 표시되지 않는 앱의 고유 ID입니다. 제품 ID와 비슷한 방식으로 생각할 수 있습니다. 위의 예제에서는 해당 날짜에 대한 버전 번호와 함께 날짜를 선택했습니다.
+- **이름** - 앱 번들을 설정할 때 사용되는 설명이 포함된 이름입니다. `Info.plist`의 **애플리케이션 이름** 항목과 정확히 일치해야 합니다.
+- **기본 언어** - 앱 내에서 사용되는 기본 언어입니다. 일반적으로 말하는 모든 언어입니다.
+- **번들 ID** - 개발자 계정에 만들어진 모든 앱 ID를 나열하는 드롭다운 메뉴입니다.
+  - **번들 ID 접미사** - 와일드카드 번들 ID(예: 위의 예제와 같이 *로 끝남)를 선택하면 번들 ID 접미사를 묻는 추가 상자가 표시됩니다. 예제에서 **번들 ID**는 `mobi.chkn.*`이고, 접미사는 **PageView**입니다. 이러한 항목 모두는 `Info.plist`에서 **번들 식별자**를 구성합니다.
+- **버전** - 업로드되는 앱의 버전 번호입니다. 이 항목은 개발자가 선택합니다.
+- **SKU** - 사용자에게 표시되지 않는 앱의 고유 ID입니다. 제품 ID와 비슷한 방식으로 생각할 수 있습니다. 위의 예제에서는 해당 날짜에 대한 버전 번호와 함께 날짜를 선택했습니다.
 
 
 ## <a name="upload-your-app"></a>앱 업로드
@@ -98,7 +98,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
 먼저 IDE에서 [최종 배포 가능한 파일](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)을 빌드한 다음, 애플리케이션 로더 또는 Xcode의 보관 기능을 통해 [Apple에 앱을 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ### <a name="create-an-archive"></a>보관 만들기
 
@@ -129,7 +129,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>최종 배포 가능한 파일 빌드
- Visual Studio용 Xamarin 플러그 인은 앱 스토어에 게시하기 위해 Xamarin.iOS 앱을 보관하는 것을 지원하지 않으므로, Visual Studio에서 iOS 애플리케이션을 게시하는 두 가지 옵션이 있습니다. 다음과 같습니다.
+ Visual Studio용 Xamarin 플러그 인은 앱 스토어에 게시하기 위해 Xamarin.iOS 앱을 보관하는 것을 지원하지 않으므로, Visual Studio에서 iOS 애플리케이션을 게시하는 두 가지 옵션이 있습니다. 이러한 항목은 다음과 같습니다.
 
 1. 임시 IPA 빌드 명령을 통해 만든 IPA를 업로드합니다.
 1. 압축된 `.app` 번들을 업로드합니다.
@@ -190,9 +190,9 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 
 내부 테스터는 iTunes Connect에서 다음 역할 중 하나가 할당된 개발 팀의 구성원입니다.
 
--  **관리자** – 관리자는 iTunes Connect에서 새 사용자를 추가하고 관리할 책임이 있습니다.
--  **법적** – 팀 에이전트는 법적 역할을 할당받는 유일한 관리 사용자입니다. 법적 계약에 서명할 수 있습니다.
--  **기술** – 기술 사용자는 앱과 관련된 대부분의 속성을 변경할 수 있습니다. 예를 들어 앱 정보를 수정하고, 이진 파일을 업로드한 다음, 검토를 위해 앱을 보냅니다.
+- **관리자** – 관리자는 iTunes Connect에서 새 사용자를 추가하고 관리할 책임이 있습니다.
+- **법적** – 팀 에이전트는 법적 역할을 할당받는 유일한 관리 사용자입니다. 법적 계약에 서명할 수 있습니다.
+- **기술** – 기술 사용자는 앱과 관련된 대부분의 속성을 변경할 수 있습니다. 예를 들어 앱 정보를 수정하고, 이진 파일을 업로드한 다음, 검토를 위해 앱을 보냅니다.
 
 각 빌드는 최대 25명의 구성원과 공유할 수 있습니다.
 
@@ -257,11 +257,11 @@ first name, last name, email address
 
 **TestFlight에서 열기** 단추를 클릭하면 TestFlight 애플리케이션에서 앱이 열리거나, 아직 다운로드되지 않은 경우 앱 스토어로 이동하여 다운로드할 수 있습니다.
 
-앱이 TestFlight에서 열리면 테스트할 항목에 대한 세부 정보가 표시되고, 테스터가 iOS 8.0 이상 디바이스에 응용 프로그램을 설치하도록 요구하는 메시지가 표시됩니다.
+앱이 TestFlight에서 열리면 테스트할 항목에 대한 세부 정보가 표시되고, 테스터가 iOS 8.0 이상 디바이스에 애플리케이션을 설치하도록 요구하는 메시지가 표시됩니다.
 
 [![](testflight-images/install-app.png "테스트할 항목에 대한 세부 정보를 보여주는 TestFlight")](testflight-images/install-app.png#lightbox)
 
-테스트 빌드는 디바이스의 홈 화면에서 응용 프로그램 이름 앞에 주황색 점으로 표시됩니다.
+테스트 빌드는 디바이스의 홈 화면에서 애플리케이션 이름 앞에 주황색 점으로 표시됩니다.
 
 테스터는 TestFlight 앱을 통해 피드백을 제공할 수 있으며, 이 정보는 메타데이터에 제공된 이메일 주소에서 완화됩니다.
 

@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 3dad36dc93f5c23e5d9ef1e05a1b9419b7a724b6
-ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.openlocfilehash: 989d0fe1d8fffd74ea5f64ae7bd5a13487d25c0e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "58855109"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525727"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 디바이스 관리
 
@@ -183,7 +183,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
   [![탐색기에 표시 클릭 후 결과](device-manager-images/win/26-reveal-in-explorer-sml.png)](device-manager-images/win/26-reveal-in-explorer.png#lightbox)
 
-- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
+- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅샷도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
 
   ![공장 재설정 대화 상자](device-manager-images/win/27-factory-reset.png)
 
@@ -217,9 +217,9 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 - Android SDK를 설치해야 합니다([Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md) 참조).
 
 - [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 통해 다음 패키지를 설치해야 합니다. 
-    -  **SDK 도구 버전 26.1.1** 이상
-    -  **Android SDK 플랫폼 도구 28.0.1** 이상 
-    -  **Android SDK 빌드 도구 26.0.3** 이상
+    - **SDK 도구 버전 26.1.1** 이상
+    - **Android SDK 플랫폼 도구 28.0.1** 이상 
+    - **Android SDK 빌드 도구 26.0.3** 이상
 
   이러한 패키지는 다음 스크린샷에 표시된 대로 **설치됨** 상태로 표시됩니다.
 
@@ -356,7 +356,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
   [![Finder에 표시 클릭 후 결과](device-manager-images/mac/26-reveal-in-finder-sml.png)](device-manager-images/mac/26-reveal-in-finder.png#lightbox)
 
-- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅숏도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
+- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅샷도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
 
   ![공장 재설정 대화 상자](device-manager-images/mac/27-factory-reset-m76.png)
 
@@ -419,9 +419,9 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 - **Android SDK 빌드 도구 27.0.3** 이상
 
 
-### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅숏이 Android Oreo에서 WiFi를 사용하지 않음
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅샷이 Android Oreo에서 WiFi를 사용하지 않음
 
-시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅숏을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
+시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅샷을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
 
 이 문제를 해결하려면 다음과 같이 합니다.
 
@@ -429,7 +429,7 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 2. 추가 옵션 메뉴에서 **탐색기에 표시**를 클릭합니다.
 
-3. **스냅숏 > default_boot**로 이동합니다.
+3. **스냅샷 &gt; default_boot**로 이동합니다.
 
 4. **snapshot.pb** 파일을 삭제합니다.
 
@@ -454,9 +454,9 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 - **Android SDK 플랫폼 도구 28.0.1** 이상
 - **Android SDK 빌드 도구 26.0.3** 이상
 
-### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅숏이 Android Oreo에서 WiFi를 사용하지 않음
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅샷이 Android Oreo에서 WiFi를 사용하지 않음
 
-시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅숏을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
+시뮬레이션된 Wi-Fi 액세스를 통해 Android Oreo용 AVD가 구성되어 있는 경우 스냅샷을 만든 후 AVD를 다시 시작하면 Wi-Fi 액세스가 비활성화될 수 있습니다.
 
 이 문제를 해결하려면 다음과 같이 합니다.
 
@@ -464,7 +464,7 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 2. 추가 옵션 메뉴에서 **Finder에 표시**를 클릭합니다.
 
-3. **스냅숏 > default_boot**로 이동합니다.
+3. **스냅샷 &gt; default_boot**로 이동합니다.
 
 4. **snapshot.pb** 파일을 삭제합니다.
 

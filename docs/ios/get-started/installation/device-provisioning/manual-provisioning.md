@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865888"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526626"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
 _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS 디바이스를 프로비전하는 것입니다. 이 가이드에서는 수동 프로비저닝을 사용하여 개발 인증서와 프로필을 설정하는 방법을 설명합니다._
 
 > [!NOTE]
-> 이 페이지에서 지침은 Apple 개발자 프로그램에 대한 유료 액세스 권한을 가진 개발자와 관련이 있습니다. 무료 계정이 있는 경우 장치 테스트에 대한 자세한 내용은 [무료 프로 비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 살펴보세요.
+> 이 페이지에서 지침은 Apple 개발자 프로그램에 대한 유료 액세스 권한을 가진 개발자와 관련이 있습니다. 무료 계정이 있는 경우 디바이스 테스트에 대한 자세한 내용은 [무료 프로 비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md) 가이드를 살펴보세요.
 
 ## <a name="creating-a-signing-identity"></a>서명 ID 만들기
 
@@ -28,7 +28,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 - 개발 인증서
 - 개인 키
 
-개발 인증서 및 연결된 [키](#understanding-certificate-key-pairs)는 iOS 개발자에게 중요합니다. Apple의 ID를 설정하여 응용 프로그램에 디지털 서명을 넣는 것처럼 개발용 특정 디바이스 및 프로필에 연결합니다. Apple은 인증서를 확인하여 배포하도록 허용된 디바이스에 대한 액세스를 제어합니다.
+개발 인증서 및 연결된 [키](#understanding-certificate-key-pairs)는 iOS 개발자에게 중요합니다. Apple의 ID를 설정하여 애플리케이션에 디지털 서명을 넣는 것처럼 개발용 특정 디바이스 및 프로필에 연결합니다. Apple은 인증서를 확인하여 배포하도록 허용된 디바이스에 대한 액세스를 제어합니다.
 
 개발 팀, 인증서 및 프로필의 Apple Members Center의 [인증서, 식별자 및 프로필](https://developer.apple.com/account/overview.action)(로그인 필수) 섹션에 액세스하여 관리할 수 있습니다. 디바이스 또는 시뮬레이터용 코드를 빌드하려면 Apple에 서명 ID가 필요합니다.  
 
@@ -73,7 +73,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ### <a name="understanding-certificate-key-pairs"></a>인증서 키 쌍 이해
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 개발자 프로필에는 인증서, 이와 연결된 키, 계정과 연결된 프로비전 프로필에 포함됩니다. 실제로 개발자 프로필에는 두 가지 버전이 있습니다. 한 가지는 개발자 포털에 있고 나머지는 로컬 Mac에 있습니다. 이 두 가지의 차이점은 포함된 키의 유형입니다. _포털의 프로필에는 인증서와 연결된 모든 공개 키가 있지만 로컬 Mac의 복사본에는 모든 개인 키가 포함됩니다_. 인증서가 유효하려면 키 쌍이 일치해야 합니다. 로컬 Mac에 개발자 프로필의 백업을 유지해야 합니다. 개인 키가 손실되면 모든 인증서와 프로비전 프로필을 다시 생성해야 하기 때문입니다.
 
@@ -96,7 +96,7 @@ Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 디바�
 
 ## <a name="add-a-device"></a>디바이스 추가
 
-개발용 프로비전 프로필을 만드는 경우 어떤 디바이스가 응용 프로그램을 실행할 수 있는지 명시해야 합니다. 이를 위해서는 연간 최대 100개의 디바이스를 개발자 포털에 추가할 수 있으며 이 곳에서 특정 프로비전 프로필에 추가할 디바이스를 선택할 수 있습니다. 개발자 포털에 디바이스를 추가하려면 Mac에서 다음 단계를 수행합니다.
+개발용 프로비전 프로필을 만드는 경우 어떤 디바이스가 애플리케이션을 실행할 수 있는지 명시해야 합니다. 이를 위해서는 연간 최대 100개의 디바이스를 개발자 포털에 추가할 수 있으며 이 곳에서 특정 프로비전 프로필에 추가할 디바이스를 선택할 수 있습니다. 개발자 포털에 디바이스를 추가하려면 Mac에서 다음 단계를 수행합니다.
 
 1. Xcode를 시작합니다.
 2. 프로비전할 디바이스를 제공된 USB 케이블을 사용하여 Mac에 연결합니다.
@@ -131,7 +131,7 @@ Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 디바�
 
     [![](manual-provisioning-images/add07.png "정보 검토")](manual-provisioning-images/add07.png#lightbox)
 
-Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용할 iOS 디바이스에 위의 단계를 반복합니다.
+Xamarin.iOS 애플리케이션을 테스트하거나 디버그하는 데 사용할 iOS 디바이스에 위의 단계를 반복합니다.
 
 개발자 포털에 디바이스를 추가한 후에는 프로비전 프로필을 만들어서 이 프로필에 디바이스를 추가해야 합니다.
 
@@ -193,18 +193,18 @@ Xamarin.iOS 응용 프로그램을 테스트하거나 디버그하는 데 사용
 
 Apple Developer 포털에서 만든 인증서 및 프로비전 프로필은 Xcode에 자동으로 나타나지 않을 수 있습니다. 따라서 Mac용 Visual Studio 및 Visual Studio에서 액세스할 수 있도록 다운로드할 필요가 있습니다. Apple Developer 포털에서 만든 인증서를 업데이트하고 다운로드하려면 다음을 수행합니다.
 
-1.   Mac용 Visual Studio 또는 Visual Studio를 종료합니다.
-2.   Xcode를 시작합니다.
-3.   **Xcode 메뉴 > 기본 설정...** 을 선택합니다.
-4.   **계정** 탭을 클릭합니다.
-5.   팀을 선택하고 **수동 프로필 다운로드** 단추를 클릭합니다. [![](manual-provisioning-images/selectteam1.png "수동 프로필 다운로드")](manual-provisioning-images/selectteam1.png#lightbox)
+1. Mac용 Visual Studio 또는 Visual Studio를 종료합니다.
+2. Xcode를 시작합니다.
+3. **Xcode 메뉴 > 기본 설정...** 을 선택합니다.
+4. **계정** 탭을 클릭합니다.
+5. 팀을 선택하고 **수동 프로필 다운로드** 단추를 클릭합니다.  [![](manual-provisioning-images/selectteam1.png "수동 프로필 다운로드")](manual-provisioning-images/selectteam1.png#lightbox)
 
-6.   Xcode를 종료합니다.
-7.  Mac용 Visual Studio 또는 Visual Studio를 시작합니다.
+6. Xcode를 종료합니다.
+7. Mac용 Visual Studio 또는 Visual Studio를 시작합니다.
 
 Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 프로필이 보이고 사용할 준비가 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Mac용 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
@@ -228,9 +228,9 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 
 ## <a name="deploying-to-a-device"></a>디바이스에 배포
 
-이 시점에서 프로비전은 완료되고, 디바이스에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 다음 단계를 수행하세요.
+이 시점에서 프로비전은 완료되고, 디바이스에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 > [!IMPORTANT]
 > 시작하기 전에 **Info.plist**에서 **수동 프로비저닝**을 선택해야 합니다.
@@ -271,7 +271,7 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 
 ## <a name="summary"></a>요약
 
-이 가이드에서는 Xamarin.iOS용 개발 환경을 설정하는 데 필요한 단계를 설명했습니다. 개발자, 개발자 팀, 앱을 실행할 수 있는 디바이스 및 개별 앱 ID에 대한 정보로 응용 프로그램을 코드 서명하는 방법을 알아보았습니다.
+이 가이드에서는 Xamarin.iOS용 개발 환경을 설정하는 데 필요한 단계를 설명했습니다. 개발자, 개발자 팀, 앱을 실행할 수 있는 디바이스 및 개별 앱 ID에 대한 정보로 애플리케이션을 코드 서명하는 방법을 알아보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 5722a3a208942e8ecef6e5b3c092ac6c9825395f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865800"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890159"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -83,6 +83,7 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
     ```bash
     ssh amyb@10.1.8.95
     ```
+
     <a name="stepnine" />
 
 9. **8단계가 성공하면** 연결에 대해 `ls` 같은 간단한 명령을 실행해 볼 수 있습니다.
@@ -218,7 +219,7 @@ Mac에서 OS X 10.11(El Capitan) 이상을 실행 중이면 이 메시지를 무
 
 [연결] 대화 상자에 Mac 빌드 호스트의 IP 주소가 표시되는 한, 이 메시지를 무시해도 됩니다. 대화 상자에 IP 주소가 _없는_ 경우 [수동으로 Mac을 추가](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac)할 수 있습니다.
 
-#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"10.1.8.95의 사용자 a는 잘못된 사용자입니다." 및 "input\_userauth\_request: 잘못된 사용자 a [사전 인증]"
+#### <a name="invalid-user-a-from-101895-and-input_userauth_request-invalid-user-a-preauth"></a>"10.1.8.95의 사용자 a는 잘못된 사용자입니다." 및 "input\_userauth\_request: 잘못된 사용자 a [사전 인증]"
 
 **sshd.log**를 살펴볼 때 이 메시지를 발견할 수 있습니다. 이러한 메시지는 정상적인 연결 프로세스의 일부입니다. Xamarin이 _SSH 지문_을 검색할 때 임시로 사용자 이름 **a**를 사용하기 때문에 이러한 메시지가 표시됩니다.
 
