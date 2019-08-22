@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
-ms.openlocfilehash: d170e37b8bf4ce880f9d8f48d30defb42ee6bba2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 28cb1573262b63cc2b0ccad9f468fe36c682718d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648005"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888843"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>WCF (Windows Communication Foundation) 웹 서비스 사용
 
@@ -232,6 +232,7 @@ Visual Studio 2017 또는 Visual Studio 2019에서는 추가 구성 없이 PC에
 기본적으로 IIS Express는에 대 `localhost`한 요청에만 응답 합니다. 원격 장치 (예: Android 장치, iPhone 또는 시뮬레이터)는 로컬 WCF 서비스에 액세스할 수 없습니다. 로컬 네트워크에서 Windows 10 워크스테이션 IP 주소를 알고 있어야 합니다. 이 예제의 목적에 따라 워크스테이션에 IP 주소가 `192.168.1.143`있다고 가정 합니다. 다음 단계는 원격 연결을 허용 하 고 물리적 또는 가상 장치에서 서비스에 연결 하도록 Windows 10 및 IIS Express를 구성 하는 방법을 설명 합니다.
 
 1. **Windows 방화벽에 예외를 추가**합니다. 서브넷의 응용 프로그램이 WCF 서비스와 통신 하는 데 사용할 수 있는 Windows 방화벽을 통해 포트를 열어야 합니다. 방화벽에서 포트 49393을 여는 인바운드 규칙을 만듭니다. 관리 명령 프롬프트에서 다음 명령을 실행 합니다.
+
     ```
     netsh advfirewall firewall add rule name="TodoWCFService" dir=in protocol=tcp localport=49393 profile=private remoteip=localsubnet action=allow
     ```

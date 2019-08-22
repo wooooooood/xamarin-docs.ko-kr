@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9fafc6965c5d2dec79f440579a5cf3746a545bae
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: febb9b297712a97c03613468b79ca583ec300e77
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644390"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887721"
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>연습 - 작업 상태 저장
 
@@ -60,6 +60,7 @@ _활동 수명 주기 가이드의 저장 상태에 대 한 이론적 원리를 
 [ActivityLifecycle.SecondActivity] Activity B - OnStop
 [ActivityLifecycle.SecondActivity] Activity B - OnDestroy
 ```
+
 ### <a name="adding-a-click-counter"></a>클릭 카운터 추가
 
 다음으로 응용 프로그램을 변경 하 여 클릭 횟수를 계산 하 고 표시 하는 단추를 표시 합니다. 먼저 `_counter` `MainActivity`다음과 같이 인스턴스 변수를 추가 해 보겠습니다.

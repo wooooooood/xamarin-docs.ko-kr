@@ -6,17 +6,17 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: ce745109ea2852b597de3a8a5922a171ad83e289
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 08/13/2019
+ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738914"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888538"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.ios CollectionView 데이터
 
-![](~/media/shared/preview.png "이 API는 현재 시험판")
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -26,6 +26,11 @@ ms.locfileid: "68738914"
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate)형식의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)는 표시할 항목 컬렉션의 각 항목에 적용할 템플릿을 지정 합니다.
 
 이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
+
+> [!NOTE]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)새 항목이 `ItemsUpdatingScrollMode` 추가 `CollectionView` 될 때의 스크롤 동작을 나타내는 속성을 정의 합니다. 이 속성에 대 한 자세한 내용은 [새 항목이 추가 될 때 스크롤 위치 제어](scrolling.md#control-scroll-position-when-new-items-are-added)를 참조 하세요.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)사용자가 스크롤하면 데이터를 증분 로드할 수도 있습니다. 자세한 내용은 [데이터를 증분 로드](#load-data-incrementally)를 참조 하세요.
 
 ## <a name="populate-a-collectionview-with-data"></a>데이터를 사용 하 여 CollectionView 채우기
 
@@ -48,9 +53,9 @@ ms.locfileid: "68738914"
 ```
 
 > [!NOTE]
-> 합니다 `x:Array` 요소에는 `Type` 배열에 있는 항목의 유형을 나타내는 특성입니다.
+> `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -83,14 +88,14 @@ collectionView.ItemsSource = new string[]
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-이 예 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 에서는 속성 데이터가 연결 된 뷰 모델의 `Monkeys` 속성에 바인딩됩니다.
+이 예제에서 속성 데이터 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 는 연결 된 viewmodel의 `Monkeys` 속성에 바인딩됩니다.
 
 > [!NOTE]
 > 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하십시오.
@@ -134,7 +139,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -211,7 +216,7 @@ public class Monkey
 </ContentPage>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -244,6 +249,56 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 > [!IMPORTANT]
 > 를 사용 [`CollectionView`](xref:Xamarin.Forms.CollectionView)하는 경우 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체 `ViewCell`의 루트 요소를으로 설정 하지 마십시오. 이로 인해에는 셀 개념이 없기 때문 `CollectionView` 에 예외가 throw 됩니다.
+
+## <a name="load-data-incrementally"></a>증분 방식으로 데이터 로드
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)사용자가 항목을 스크롤할 때 증분 데이터 로드를 지원 합니다. 이렇게 하면 사용자가 스크롤할 때 웹 서비스에서 데이터 페이지를 비동기적으로 로드 하는 등의 시나리오를 사용할 수 있습니다. 또한 더 많은 데이터를 로드 하는 지점은 사용자가 빈 공간을 보거나 스크롤에서 중지 되도록 구성할 수 있습니다.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)데이터의 증분 로드를 제어 하는 다음 속성을 정의 합니다.
+
+- `RemainingItemsThreshold`형식의 `int`, `RemainingItemsThresholdReached` 이벤트가 발생 되는 목록에 아직 표시 되지 않는 항목의 임계값입니다.
+- `RemainingItemsThresholdReachedCommand`에 도달할 `ICommand` `RemainingItemsThreshold` 때 실행 되는 형식의입니다.
+- `object` 형식의 `RemainingItemsThresholdReachedCommandParameter` - `RemainingItemsThresholdReachedCommand`에 전달되는 매개 변수입니다.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)또한 `RemainingItemsThreshold` 항목이 표시 `RemainingItemsThresholdReached` 되지 않을 정도로 `CollectionView` 가 충분히 스크롤 될 때 발생 하는 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 더 많은 항목을 로드할 수 있습니다. 또한 `RemainingItemsThresholdReached` 이벤트가 발생 `RemainingItemsThresholdReachedCommand` 하면이 실행 되어 viewmodel에서 증분 데이터 로드가 발생 하도록 할 수 있습니다.
+
+`RemainingItemsThreshold` 속성의 기본값은-1 이며이는 `RemainingItemsThresholdReached` 이벤트가 발생 하지 않음을 나타냅니다. 속성 값이 0 `RemainingItemsThresholdReached` 이면의 마지막 항목이 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 표시 될 때 이벤트가 발생 합니다. 0 `RemainingItemsThresholdReached` 보다 큰 값의 경우에 아직 스크롤되지 않는 항목 수가에 `ItemsSource` 포함 되어 있으면 이벤트가 발생 합니다.
+
+> [!NOTE]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)속성의 `RemainingItemsThreshold` 값이 항상-1 보다 크거나 같도록 속성의 유효성을 검사 합니다.
+
+다음 XAML 예제에서는 데이터를 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 증분 로드 하는을 보여 줍니다.
+
+```xaml
+<CollectionView ItemsSource="{Binding Animals}"
+                RemainingItemsThreshold="5"
+                RemainingItemsThresholdReached="OnCollectionViewRemainingItemsThresholdReached">
+    ...
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    RemainingItemsThreshold = 5
+};
+collectionView.RemainingItemsThresholdReached += OnCollectionViewRemainingItemsThresholdReached;
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
+```
+
+이 코드 예제에서 이벤트는 `RemainingItemsThresholdReached` 5 개의 항목이 아직 스크롤되지 않고 `OnCollectionViewRemainingItemsThresholdReached` 이벤트 처리기를 실행 하는 경우에 발생 합니다.
+
+```csharp
+void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
+{
+    // Retrieve more data here and add it to the CollectionView's ItemsSource collection.
+}
+```
+
+> [!NOTE]
+> 를 `RemainingItemsThresholdReachedCommand` viewmodel의 `ICommand` 구현에 바인딩하여 데이터를 증분 로드할 수도 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

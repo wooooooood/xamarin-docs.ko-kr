@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: 729daef1a7a003613bebc4f82067bc267dab8e00
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: de63a0f3f6564671a50594c66b55ed095329c95c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522849"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887632"
 ---
 # <a name="xamarinandroid-ratingbar"></a>Xamarin Android RatingBar
 
@@ -26,13 +26,14 @@ RatingBar는 별 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. �
 1. **리소스/레이아웃/기본. axml** 파일을 열고 다음을 추가 합니다.[`RatingBar`](xref:Android.Widget.RatingBar)
    요소 (내 [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
-    ```xml
-    <RatingBar android:id="@+id/ratingbar"
+   ```xml
+   <RatingBar android:id="@+id/ratingbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
             android:stepSize="1.0"/>
-    ```
+   ```
+
    특성 `android:numStars` 은 등급 표시줄에 표시할 별 수를 정의 합니다. 특성 `android:stepSize` 은 각 별모양의 세분성을 정의 합니다. 예를 들어의 `0.5` 값은 반쪽 별 등급을 허용 합니다.
 
 2. 새 등급이 설정 된 경우 작업을 수행 하려면 다음 코드를의 끝에 추가 합니다.[`OnCreate()`](xref:Android.App.Activity.OnCreate*)

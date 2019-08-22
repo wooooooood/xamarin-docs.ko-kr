@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 4c4aaeaa451a67da16057cd9b345fbbcd0af6f35
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 634081b63ce4a70368ef7621837932a3ae6de0a8
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621019"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890388"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -490,6 +490,7 @@ Europa:Resources kmullins$
 [BaseType(typeof(NSObject))]
 [Model]
 ```
+
 정의가 다음과 같이 표시 됩니다.
 
 [![](walkthrough-images/os11.png "정의")](walkthrough-images/os11.png#lightbox)
@@ -660,6 +661,7 @@ public override void ViewDidLoad ()
   selector = new ColorSelectedDelegate (this);
 }
 ```
+
 **HandleTouchUpInsideWithStrongDelegate 메서드를 구현** 합니다. 그러면 사용자가 **colorchangebutton 단추**를 사용할 때에 대 한 이벤트 처리기를 구현 합니다. 를 `ViewController`편집 하 고 다음 메서드를 추가 합니다.
 
 ```csharp
@@ -698,6 +700,7 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
     picker.PresentModallyOverViewController (this);
 }
 ```
+
 **ViewDidLoad 업데이트** -방금 만든 이벤트 `ViewDidLoad` 처리기를 사용 하도록 변경 해야 합니다. 를 `ViewController` 편집 하 `ViewDidLoad` 고 다음 코드 조각과 유사 하 게 변경 합니다.
 
 

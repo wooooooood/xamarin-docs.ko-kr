@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: ed9a376da0fcfebffd707e2e93919237adfef87b
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1de7ec7dc87fc4ba61e76603240197fc9d041255
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620833"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887943"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -131,25 +131,7 @@ Xamarin.Forms에서 CSS 스타일 시트를 구문 분석 되 고 컴파일 시�
 
 ### <a name="c"></a>C\#
 
-C#, 스타일 시트의 포함 리소스로 로드 하 고 추가할 수는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
-
-```csharp
-public partial class MyPage : ContentPage
-{
-    public MyPage()
-    {
-        InitializeComponent();
-
-        this.Resources.Add(StyleSheet.FromAssemblyResource(
-            IntrospectionExtensions.GetTypeInfo(typeof(MyPage)).Assembly,
-            "MyProject.Assets.styles.css"));
-    }
-}
-```
-
-첫 번째 인수는 `StyleSheet.FromAssemblyResource` 메서드는 스타일 시트를 포함 하는 어셈블리는 두 번째 인수는 `string` 리소스 식별자를 나타내는입니다. 리소스 식별자에서 가져올 수 있습니다 합니다 **속성** 창 CSS 파일을 선택 합니다.
-
-또는에서 스타일 시트를 로드할 수 있습니다는 `StringReader` 에 추가 하 고는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+에서는 C#에서 스타일 시트를 로드 `StringReader` 하 여에 추가할 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)수 있습니다.
 
 ```csharp
 public partial class MyPage : ContentPage

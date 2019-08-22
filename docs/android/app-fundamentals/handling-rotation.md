@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 198d667ea52fcad4758c2845e5f2e935d1f74a0b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 394feda6f5a13855be1d1166dc22bb2a5c890d26
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521112"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887769"
 ---
 # <a name="handling-rotation"></a>회전 처리
 
@@ -228,6 +228,7 @@ protected override void OnCreate (Bundle bundle)
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 ```
+
 이제 장치가 회전 될 때 활동이 다시 시작 되지 않습니다. 이 경우 방향 변경을 수동으로 처리 하기 위해 활동은 메서드를 `OnConfigurationChanged` 재정의 하 고 아래 활동의 새 구현에서와 같이 전달 되는 `Configuration` 개체에서 방향을 결정할 수 있습니다.
 
 ```csharp

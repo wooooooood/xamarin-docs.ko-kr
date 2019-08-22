@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7f5c205f73d29c3751acc351294e3ef66c23bb22
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8593ef34922fca076aa13c70faa4289824f94374
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656391"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889510"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Xamarin의 사전 예방적 제안 watchOS
 
@@ -275,6 +275,7 @@ attributes.PhoneNumbers = new string[]{"(800) 275-2273"};
 attributes.SupportsPhoneCalls = true;
 attributes.SupportsNavigation = true;
 ```
+
 ## <a name="activities-best-practices"></a>활동 모범 사례
 
 Apple은 활동 작업을 수행할 때 다음과 같은 모범 사례를 제안 합니다.
@@ -297,7 +298,7 @@ Apple은 활동 작업을 수행할 때 다음과 같은 모범 사례를 제안
 - Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 것을 처리 합니다.
 - 사용자 참여를 기준으로 앱을 제안 하는 방법에 대 한 watchOS을 제공 합니다.
 
-Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 경우 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예:
+Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 경우 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예를 들어:
 
 
 ```csharp

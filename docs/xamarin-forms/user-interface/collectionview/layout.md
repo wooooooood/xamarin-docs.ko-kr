@@ -6,17 +6,17 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2019
-ms.openlocfilehash: 5fb92882f443007e5b3dd693f54e582757db1905
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 08/12/2019
+ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739017"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888663"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.ios CollectionView 레이아웃
 
-![](~/media/shared/preview.png "이 API는 현재 시험판")
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -105,22 +105,18 @@ ms.locfileid: "68739017"
 </CollectionView>
 ```
 
-또는 [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) [열거형멤버를인수로지정`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) `Vertical` 하 여 속성을 클래스의 개체로 설정 하 여이 작업을 수행할 수도 있습니다.
+또는 [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) 클래스의 개체로 설정 하 여 [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) 열거형 멤버를 `Orientation` 속성 값으로 지정 `Vertical` 하 여이 작업을 수행할 수도 있습니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout>
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <ListItemsLayout Orientation="Vertical" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -173,22 +169,18 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-또는 [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) [열거형멤버를인수로지정`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) `Horizontal` 하 여 속성을 개체로 설정 하 여이 작업을 수행할 수도 있습니다.
+또는 [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) 클래스의 개체로 설정 하 여 [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) 열거형 멤버를 `Orientation` 속성 값으로 지정 `Horizontal` 하 여이 작업을 수행할 수도 있습니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout>
-            <x:Arguments>
-                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <ListItemsLayout Orientation="Horizontal" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -244,7 +236,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -300,7 +292,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -313,6 +305,147 @@ CollectionView collectionView = new CollectionView
 기본적으로 가로 [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) 는 단일 행에 항목을 표시 합니다. 그러나이 예제에서는 `GridItemsLayout.Span` 속성을 4로 설정 합니다. 그러면 새 항목이 추가 될 때 가로 크기가 증가 하는 4 행 표가 생성 됩니다.
 
 [IOS 및 Android(layout-images/horizontal-grid.png "CollectionView 가로 그리드 레이아웃") ![에 대 한 CollectionView 가로 그리드 레이아웃 스크린샷]] (layout-images/horizontal-grid-large.png#lightbox "CollectionView 가로 그리드 레이아웃")
+
+## <a name="headers-and-footers"></a>머리글 및 바닥글
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)는 목록에 있는 항목으로 스크롤 하는 머리글 및 바닥글을 표시할 수 있습니다. 머리글과 바닥글은 문자열, 뷰 또는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체 일 수 있습니다.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)머리글 및 바닥글을 지정 하기 위한 다음 속성을 정의 합니다.
+
+- `Header`형식의 `object`는 목록 시작 부분에 표시 되는 문자열, 바인딩 또는 뷰를 지정 합니다.
+- `HeaderTemplate`형식의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)형식은를 `DataTemplate` 지정 하는 `Header`데 사용할를 지정 합니다.
+- `Footer`형식의 `object`는 목록 끝에 표시 되는 문자열, 바인딩 또는 뷰를 지정 합니다.
+- `FooterTemplate`형식의 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)형식은를 `DataTemplate` 지정 하는 `Footer`데 사용할를 지정 합니다.
+
+이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
+
+> [!IMPORTANT]
+> 현재 머리글과 바닥글은 Android 에서만 지원 됩니다.
+
+왼쪽에서 오른쪽으로 수평으로 확장 되는 레이아웃에 머리글을 추가 하면 머리글은 목록 왼쪽에 표시 됩니다. 마찬가지로 왼쪽에서 오른쪽으로 수평으로 증가 하는 레이아웃에 바닥글을 추가 하면 목록 오른쪽에 바닥글이 표시 됩니다.
+
+### <a name="display-strings-in-the-header-and-footer"></a>머리글 및 바닥글에 문자열 표시
+
+`string` 및 `Header` 속성은다음예제와같이값으로`Footer` 설정할 수 있습니다.
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                Header="Monkeys"
+                Footer="2019">
+    ...
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    Header = "Monkeys",
+    Footer = "2019"
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+### <a name="display-views-in-the-header-and-footer"></a>머리글 및 바닥글에 보기 표시
+
+`Header` 및`Footer` 속성은 각각 뷰로 설정할 수 있습니다. 단일 보기 이거나 여러 자식 뷰를 포함 하는 뷰입니다. 다음 `Header` 예제에서는 `Footer` [개체`Label`](xref:Xamarin.Forms.Label) 를 포함 하는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 개체로 설정 된 및 속성을 보여 줍니다.
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.Header>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Margin="10,0,0,0"
+                   Text="Monkeys"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </CollectionView.Header>
+    <CollectionView.Footer>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Margin="10,0,0,0"
+                   Text="Friends of Xamarin Monkey"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </CollectionView.Footer>
+    ...
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    Header = new StackLayout
+    {
+        Children =
+        {
+            new Label { Text = "Monkeys", ... }
+        }
+    },
+    Footer = new StackLayout
+    {
+        Children =
+        {
+            new Label { Text = "Friends of Xamarin Monkey", ... }
+        }
+    }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+### <a name="display-a-templated-header-and-footer"></a>템플릿 기반 머리글 및 바닥글 표시
+
+및 `HeaderTemplate` 속성`FooterTemplate`은 머리글 및 바닥글의 서식을 지정 하는 데 사용 되는 [개체로설정할수있습니다.`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 이 시나리오에서 및 `Header` `Footer` 속성은 다음 예제와 같이 적용 될 템플릿이 현재 소스에 바인딩되어야 합니다.
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                Header="{Binding .}"
+                Footer="{Binding .}">
+    <CollectionView.HeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="10,0,0,0"
+                       Text="Monkeys"
+                       FontSize="Small"
+                       FontAttributes="Bold" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.HeaderTemplate>
+    <CollectionView.FooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="10,0,0,0"
+                       Text="Friends of Xamarin Monkey"
+                       FontSize="Small"
+                       FontAttributes="Bold" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.FooterTemplate>
+    ...
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    HeaderTemplate = new DataTemplate(() =>
+    {
+        return new StackLayout { };
+    }),
+    FooterTemplate = new DataTemplate(() =>
+    {
+        return new StackLayout { };
+    })
+};
+collectionView.SetBinding(ItemsView.HeaderProperty, ".");
+collectionView.SetBinding(ItemsView.FooterProperty, ".");
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
 
 ## <a name="item-spacing"></a>항목 간격
 
@@ -336,7 +469,7 @@ CollectionView collectionView = new CollectionView
 > [!NOTE]
 > `ListItemsLayout.ItemSpacing` 속성에는 속성 값이 항상 0 보다 크거나 같도록 확인 하는 유효성 검사 콜백 집합이 있습니다.
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -370,7 +503,7 @@ CollectionView collectionView = new CollectionView
 > [!NOTE]
 > `GridItemsLayout.VerticalItemSpacing` 및`GridItemsLayout.HorizontalItemSpacing` 속성에는 속성 값이 항상 0 보다 크거나 같은지 확인 하는 유효성 검사 콜백이 설정 되어 있습니다.
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -392,7 +525,7 @@ CollectionView collectionView = new CollectionView
 
 의 UI 요소가 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 고정 크기를 지정 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 하지 않는 경우 기본적으로의 각 항목은 개별적으로 측정 되 고 크기가 지정 됩니다. 변경할 수 있는이 동작은 [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy) 속성 값으로 지정 됩니다. 이 속성 값은 [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) 열거형 멤버 중 하나로 설정할 수 있습니다.
 
-- `MeasureAllItems`– 각 항목은 개별적으로 측정 됩니다. 기본값입니다.
+- `MeasureAllItems`– 각 항목은 개별적으로 측정 됩니다. 이것은 기본값입니다.
 - `MeasureFirstItem`– 첫 번째 항목만 측정 되며 이후의 모든 항목은 첫 번째 항목의 크기와 동일 하 게 지정 됩니다.
 
 > [!IMPORTANT]
@@ -407,7 +540,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

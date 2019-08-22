@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 82423e48f844cde60bcd5e85c5bbe3cb8bc856b8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522460"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887538"
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
@@ -145,6 +145,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
     }
 }
 ```
+
 이 코드 예제에서 생성자는 `PhotoViewHolder` `PhotoViewHolder` 래핑하는 부모 항목 뷰 `CardView`()에 대 한 참조를 전달 합니다. 항상 부모 항목 뷰를 기본 생성자에 전달 합니다. 생성자 `PhotoViewHolder` 는 부모 `FindViewById` 항목 뷰에서를 호출 하 여 각 `TextView`자식 뷰 참조를 `ImageView` 찾고 결과를 각각 `Image` 및 `Caption` 속성에 저장 합니다. 어댑터는 나중에 새 데이터로이 `CardView`자식 뷰를 업데이트할 때 이러한 속성에서 뷰 참조를 검색 합니다.
 
 에 대 한 `RecyclerView.ViewHolder`자세한 내용은 [RecyclerView. ViewHolder 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html)를 참조 하세요.

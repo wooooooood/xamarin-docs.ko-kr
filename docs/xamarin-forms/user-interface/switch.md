@@ -6,13 +6,13 @@ ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/03/2019
-ms.openlocfilehash: 825561c6106ba2ab8e5886df64c3ff850750587b
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.date: 07/18/2019
+ms.openlocfilehash: 1f2ef838287e32df5df42f73e4b43816d618552d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658044"
+ms.locfileid: "69887876"
 ---
 # <a name="xamarinforms-switch"></a>Xamarin Forms 스위치
 
@@ -26,8 +26,9 @@ Xamarin.ios [`Switch`](xref:Xamarin.Forms.Switch) 컨트롤은 사용자가 `boo
 
 컨트롤 `Switch` 은 다음 두 가지 속성을 정의 합니다.
 
-* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)가 전환 또는 상태에서 렌더링 `Switch` 되는 방식에 영향을 주는입니다.`Color`
 * [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)가 설정 `Switch` 되어 있는지 여부를 나타내는 값입니다.`boolean`
+* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)가 전환 또는 상태에서 렌더링 `Switch` 되는 방식에 영향을 주는입니다.`Color`
+* `ThumbColor`는 스위치 엄지의입니다. `Color`
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에 의해 지원 됩니다. 즉, `Switch` 가 스타일을 지정 하 고 데이터 바인딩의 대상이 될 수 있습니다.
 
@@ -47,23 +48,24 @@ Xamarin.ios [`Switch`](xref:Xamarin.Forms.Switch) 컨트롤은 사용자가 `boo
 Switch switchControl = new Switch { IsToggled = true };
 ```
 
-### <a name="switch-style-properties"></a>스위치 스타일 속성
+## <a name="switch-appearance"></a>모양 전환
 
-속성을 설정 하 여 해당 상태로 전환 `Switch` 될 때 색을 정의할 수 있습니다. `OnColor` 다음 예제에서는 `OnColor` 속성 집합을 사용 하 `Switch` 여 XAML에서를 인스턴스화하는 방법을 보여 줍니다.
+[`Switch`](xref:Xamarin.Forms.Switch) `ThumbColor` `OnColor` 클래스`Switch`에서상속 되는 속성 외에도 및 속성을 정의 합니다. [`View`](xref:Xamarin.Forms.View) `Color` `ThumbColor` `Switch` 속성을 설정 하 여 해당 상태로 전환 될 때 색을 정의 하 고, 속성을 설정 하 여 스위치 엄지의를 정의할 수 있습니다. `OnColor` 다음 예제에서는 이러한 속성을 설정 하 `Switch` 여 XAML에서를 인스턴스화하는 방법을 보여 줍니다.
 
 ```xaml
-<Switch OnColor="Orange" />
+<Switch OnColor="Orange"
+        ThumbColor="Green" />
 ```
 
-코드 `OnColor` 에서을 `Switch` 만들 때도 속성을 설정할 수 있습니다.
+코드에서를 `Switch` 만들 때 속성을 설정할 수도 있습니다.
 
 ```csharp
-Switch switchControl = new Switch { OnColor = Color.Orange };
+Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 ```
 
-다음 스크린샷에는 iOS 및 `Switch` Android에서 `OnColor` 속성이로 `Color.Orange` 설정 된 **on** 및 **off** 토글 상태의가 나와 있습니다.
+다음 스크린샷은 `Switch` `OnColor` 및 속성이`ThumbColor` 설정 된 on 및 **off** 토글 상태의을 보여 줍니다.
 
-![IOS 및 Android에서 on 및 off 상태의 스위치 스크린샷](switch-images/switch-states-oncolor.png "IOS 및 Android의 스위치")
+![IOS 및 Android에서 on 및 off 상태의 스위치 스크린샷](switch-images/switch-states-colors.png "IOS 및 Android의 스위치")
 
 ## <a name="respond-to-a-switch-state-change"></a>전환 상태 변경에 응답
 

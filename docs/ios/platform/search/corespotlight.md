@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acf065a275b28863c5133f764a7f7b1f87127887
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c322a329a517f9c655ce7b8dac4aaaaf8c5ef4cc
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654204"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889785"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Xamarin.ios에서 핵심 스포트라이트를 사용 하 여 검색
 
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예를 들어:
+다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예:
 
 ```csharp
 // Delete by Domain Name
@@ -124,6 +124,7 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
     }
 });
 ```
+
 ## <a name="additional-core-spotlight-features"></a>추가 핵심 스포트라이트 기능
 
 핵심 스포트라이트는 인덱스를 정확 하 고 최신 상태로 유지 하는 데 도움이 되는 다음과 같은 기능을 제공 합니다.

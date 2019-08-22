@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: d26f8f68b2cf4eca2d28a365c921b533e657c64b
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: 06283987e1d70659653729b4f3d5a00e1877aa5f
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629607"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887381"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁 
 
@@ -98,6 +98,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
+
 ## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException: Foo. Bar:: ctor (System.web)에 대해 생성자를 찾을 수 없습니다.
 
 이 오류는 코드가 Interface Builder 파일에서 참조 한 클래스의 인스턴스를 인스턴스화하려고 할 때 런타임에 생성 됩니다. 즉, 단일 IntPtr을 매개 변수로 사용 하는 생성자를 추가 하지 않습니다.
@@ -109,6 +110,7 @@ IntPtr 핸들을 사용 하는 생성자는 관리 되는 개체를 관리 되�
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
+
 ## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>{Foo} 형식에에 대 한 `GetNativeField` 정의가 포함 되어 있지 않으며 {foo} 형식의 확장 메서드 `GetNativeField` 를 찾을 수 없습니다.
 
 디자이너에서 생성 한 파일 (*. xib.designer.cs)에서이 오류가 발생 하는 경우 다음 두 가지 중 하나를 의미 합니다.
@@ -312,7 +314,7 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 
 (Ed Anuff에서 기여)
 
-다음 단계를 수행하세요.
+다음 단계를 수행하십시오.
 
 - IPhone 빌드에서 SDK 버전을 3.2 또는 iTunes connect로 변경 하면 3.2 보다 작은 SDK 버전을 사용 하 여 빌드된 iPad 호환 앱이 표시 되기 때문에 업로드가 거부 됩니다.
 - 프로젝트에 대 한 사용자 지정 info.plist을 만들고이를 명시적으로 3.0에 설정 합니다.   이렇게 하면 Xamarin.ios로 설정 된 이상 값 Osversion 3.2 값이 재정의 됩니다.   이 작업을 수행 하지 않으면 iPhone에서 앱을 실행할 수 없게 됩니다.
@@ -388,6 +390,7 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
   at MonoTouch.ObjCRuntime.Runtime.RegisterAssembly (System.Reflection.Assembly)
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
+
 ... 그러면 시뮬레이터 응용 프로그램 디렉터리에 하나 이상의 부실 어셈블리가 있을 것입니다. Apple iOS 시뮬레이터는 파일을 추가 하 고 업데이트 하지만 삭제 하지 않으므로 이러한 어셈블리가 있을 수 있습니다. 이 경우 가장 쉬운 솔루션은 "다시 설정 및 콘텐츠 및 설정 ..."을 선택 하는 것입니다. 시뮬레이터 메뉴에서.   
 
 > [!WARNING]

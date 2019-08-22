@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/29/2019
-ms.openlocfilehash: a56764771f3106f73809a51616e90fa30692a4d4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/19/2019
+ms.openlocfilehash: 65bcd9f534685a8a953d217d3573f5fe4b0b7400
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656261"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887926"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -352,7 +352,7 @@ WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤�
 - `Source`– 탐색을 수행한 요소입니다.
 - `Url`– 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어:
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -409,6 +409,9 @@ webView.Reload();
 // Opt-in to using WkWebView instead of UIWebView.
 [assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
 ```
+
+> [!NOTE]
+> IOS에서에는 `WkWebViewRenderer` `WkWebViewConfiguration` 인수를 허용 하는 생성자 오버 로드가 있습니다. 이렇게 하면 렌더러를 만들 때 구성할 수 있습니다.
 
 `WebView` 기본적으로 Android에 대 한 기본 제공 브라우저 빨리입니다.
 

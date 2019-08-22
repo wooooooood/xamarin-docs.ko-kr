@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 20010fb3704da54ae1e1133c25f332e8481a1b87
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528547"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890169"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.ios의 통합 스토리 보드
 
@@ -71,6 +71,7 @@ IOS의 이미지 로드 동작은 이미지 파일의 `@3x` 접미사도 인식 
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
+
 또는 iOS Designer `MonkeyIcon.png`를 사용 하 여 UI 요소에 이미지를 할당 하는 `MonkeyIcon@3x.png` 경우 iPhone 6 Plus에서가 자동으로 사용 됩니다.
 
 <a name="dynamic-launch-screens" />

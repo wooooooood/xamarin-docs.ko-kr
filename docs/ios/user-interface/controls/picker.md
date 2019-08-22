@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/14/2018
-ms.openlocfilehash: 4f4855c3928f05f2593d3d80fb7490a115b36e6a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c31f68245a459a99604633d23426c4fa1fe5e72c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655806"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887392"
 ---
 # <a name="picker-control-in-xamarinios"></a>Xamarin.ios의 선택 컨트롤
 
@@ -175,6 +175,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 > [!TIP]
 > `DateTime` 을`NSDate`로 명시적으로 캐스팅할 수 있습니다.
+>
 > ```csharp
 > DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
 > DatePicker.MaximumDate = (NSDate)DateTime.Today.AddDays (7);

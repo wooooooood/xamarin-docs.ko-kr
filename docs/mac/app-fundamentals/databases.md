@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: febfa23ecb2f1536631b3009d6ddc614fa355f01
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3e6bc829ec947f8f3c01c7ef9679a5feadf4a42a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656495"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887371"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
 
@@ -50,7 +50,7 @@ Xcode의 Interface Builder에서 UI 요소에 바인딩할 SQLite 데이터의 �
 다음을 수행합니다.
 
 1. **Solution Pad**에서 **참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **참조 편집**을 선택 합니다.
-2. **Mono. Sqlite** **및 system.xml** 어셈블리를 모두 선택 합니다. 
+2. **Mono. Sqlite** 및 system.xml 어셈블리를 모두 선택 합니다. 
 
     [![필요한 참조 추가](databases-images/reference01.png "필요한 참조 추가")](databases-images/reference01-large.png#lightbox)
 3. **확인** 단추를 클릭 하 여 변경 내용을 저장 하 고 참조를 추가 합니다.
@@ -612,6 +612,7 @@ for (nuint n = 0; n < People.Count; ++n) {
     Person.Update (conn);
 }
 ```
+
 #### <a name="loading-a-record"></a>레코드 로드
 
 다음 코드는 SQLite 데이터베이스에서 기존 레코드를 로드 하기 위해 추가 되었습니다.
@@ -1971,6 +1972,7 @@ namespace MacDatabase
 [PrimaryKey, AutoIncrement]
 public int ID { get; set; }
 ```
+
 ### <a name="initializing-the-database"></a>데이터베이스 초기화
 
 데이터 모델을 변경 하 여 데이터베이스에 대 한 읽기 및 쓰기를 지원 하기 위해 데이터베이스에 대 한 연결을 열고 첫 번째 실행에서 초기화 해야 합니다. 다음 코드를 추가 해 보겠습니다.

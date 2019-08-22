@@ -6,17 +6,17 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 89bbe402f056b875a7dadd96527364847ad470e8
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 08/13/2019
+ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738929"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888646"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.ios CollectionView 스크롤
 
-![](~/media/shared/preview.png "이 API는 현재 시험판")
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -24,7 +24,50 @@ ms.locfileid: "68738929"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)[`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 중 [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 하나가 호출 될 때 발생 하는 이벤트를 정의 합니다. `IsAnimated` `Index` `Item` `ScrollToPosition`이벤트와 함께 제공 되는 [개체에는,,,등의많은속성이있습니다.`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) `ScrollToRequested` 이러한 속성은 `ScrollTo` 메서드 호출에 지정 된 인수에서 설정 됩니다.
 
+또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 스크롤이 발생 했음을 `Scrolled` 나타내기 위해 발생 하는 이벤트를 정의 합니다. 이벤트 와`Scrolled` 함께 제공 되는 개체에는많은속성이있습니다.`ItemsViewScrolledEventArgs` 자세한 내용은 [스크롤 검색](#detect-scrolling)을 참조 하세요.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)또한에 새 `ItemsUpdatingScrollMode` 항목이 추가 `CollectionView` 될 때의 스크롤 동작을 나타내는 속성도 정의 합니다. 이 속성에 대 한 자세한 내용은 [새 항목이 추가 될 때 스크롤 위치 제어](#control-scroll-position-when-new-items-are-added)를 참조 하세요.
+
 사용자가 스크롤을 시작 swipes 면 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능은 스크롤이 중지 될 때 항목이 위치에 스냅 되기 때문에 맞추기 라고 합니다. 자세한 내용은 [맞추기 요소](#snap-points)를 참조 하세요.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)사용자가 스크롤하면 데이터를 증분 로드할 수도 있습니다. 자세한 내용은 [데이터를 증분 로드](populate-data.md#load-data-incrementally)를 참조 하세요.
+
+## <a name="detect-scrolling"></a>스크롤 검색
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)스크롤이 발생 `Scrolled` 했음을 나타내기 위해 발생 하는 이벤트를 정의 합니다. 다음 XAML 예제에서는 `CollectionView` `Scrolled` 이벤트에 대 한 이벤트 처리기를 설정 하는을 보여 줍니다.
+
+```xaml
+<CollectionView Scrolled="OnCollectionViewScrolled">
+    ...
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.Scrolled += OnCollectionViewScrolled;
+```
+
+이 코드 예제에서 이벤트 처리기 `OnCollectionViewScrolled` 는 `Scrolled` 이벤트가 발생할 때 실행 됩니다.
+
+```csharp
+void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
+{
+    Debug.WriteLine("HorizontalDelta: " + e.HorizontalDelta);
+    Debug.WriteLine("VerticalDelta: " + e.VerticalDelta);
+    Debug.WriteLine("HorizontalOffset: " + e.HorizontalOffset);
+    Debug.WriteLine("VerticalOffset: " + e.VerticalOffset);
+    Debug.WriteLine("FirstVisibleItemIndex: " + e.FirstVisibleItemIndex);
+    Debug.WriteLine("CenterItemIndex: " + e.CenterItemIndex);
+    Debug.WriteLine("LastVisibleItemIndex: " + e.LastVisibleItemIndex);
+}
+```
+
+이벤트 `OnCollectionViewScrolled` 처리기는 이벤트와 함께 제공 되 `ItemsViewScrolledEventArgs` 는 개체의 값을 출력 합니다.
+
+> [!IMPORTANT]
+> 이벤트 `Scrolled` 는 사용자가 시작한 스크롤에 대해 발생 하 고 프로그래밍 방식으로 스크롤됩니다.
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>인덱스에 있는 항목을 뷰로 스크롤합니다.
 
@@ -33,6 +76,9 @@ ms.locfileid: "68738929"
 ```csharp
 collectionView.ScrollTo(12);
 ```
+
+> [!NOTE]
+> 이 이벤트는 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드를 호출할 때 발생 합니다. [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested)
 
 ## <a name="scroll-an-item-into-view"></a>항목을 뷰로 스크롤
 
@@ -43,6 +89,17 @@ MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
 Monkey monkey = viewModel.Monkeys.FirstOrDefault(m => m.Name == "Proboscis Monkey");
 collectionView.ScrollTo(monkey);
 ```
+
+> [!NOTE]
+> 이 이벤트는 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드를 호출할 때 발생 합니다. [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested)
+
+## <a name="scroll-bar-visibility"></a>스크롤 막대 표시 여부
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)바인딩 `HorizontalScrollBarVisibility` 가능한 `VerticalScrollBarVisibility` 속성에 의해 지원 되는 및 속성을 정의 합니다. 이러한 속성은 가로 또는 세로 [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) 스크롤 막대가 표시 되는 경우를 나타내는 열거형 값을 가져오거나 설정 합니다. `ScrollBarVisibility` 열거형은 다음 멤버를 정의합니다.
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)플랫폼의 기본 스크롤 막대 동작을 나타내며 `HorizontalScrollBarVisibility` 및 `VerticalScrollBarVisibility` 속성의 기본값입니다.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
 ## <a name="control-scroll-position"></a>컨트롤 스크롤 위치
 
@@ -107,6 +164,31 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 collectionView.ScrollTo(monkey, animate: false);
 ```
 
+## <a name="control-scroll-position-when-new-items-are-added"></a>새 항목이 추가 되는 경우 스크롤 위치 제어
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)바인딩 가능한 속성에 의해 지원 되는 속성을정의합니다.`ItemsUpdatingScrollMode` 이 속성은 새 항목이 추가 `ItemsUpdatingScrollMode` `CollectionView` 될 때의 스크롤 동작을 나타내는 열거형 값을 가져오거나 설정 합니다. `ItemsUpdatingScrollMode` 열거형은 다음 멤버를 정의합니다.
+
+- `KeepItemsInView`새 항목이 추가 될 때 표시 되는 첫 번째 항목을 유지 하도록 스크롤 오프셋을 조정 합니다.
+- `KeepScrollOffset`새 항목이 추가 될 때 목록의 시작 부분을 기준으로 스크롤 오프셋을 유지 합니다.
+- `KeepLastItemInView`새 항목이 추가 될 때 마지막 항목이 표시 되도록 스크롤 오프셋을 조정 합니다.
+
+기본값은 `ItemsUpdatingScrollMode` 속성은 `KeepItemsInView`합니다. 따라서 목록에서 처음 표시 되는 항목에 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 새 항목이 추가 되 면 목록에 표시 되는 항목은 계속 표시 됩니다. 새로 추가 된 항목이 목록의 `ItemsUpdatingScrollMode` 맨 아래에 항상 표시 되도록 하려면 속성을로 `KeepLastItemInView`설정 해야 합니다.
+
+```xaml
+<CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">
+    ...
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ItemsUpdatingScrollMode = ItemsUpdatingScrollMode.KeepLastItemInView
+};
+```
+
 ## <a name="snap-points"></a>맞춤 요소
 
 사용자가 스크롤을 시작 swipes 면 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능은 스크롤이 중지 될 때 항목이 위치에 스냅 되 고 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) 클래스의 다음 속성에 의해 제어 되기 때문에 맞추기 라고 합니다.
@@ -163,7 +245,7 @@ collectionView.ScrollTo(monkey, animate: false);
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -207,7 +289,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -251,7 +333,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

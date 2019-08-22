@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 32cb0e376646478ad01a6ea7784094d23529b0b4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d700aa8c0744d08e6536614b8cb8b024a99c84e1
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528614"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889786"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.ios의 데이터로 테이블 채우기
 
@@ -109,6 +109,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 ```csharp
 HomeScreen owner;
 ```
+
 뷰 컨트롤러를 매개 변수로 사용 하 고 필드에 저장 하는 UITableViewSource 클래스에 생성자를 추가 합니다.
 
 ```csharp
@@ -119,11 +120,13 @@ public TableSource (string[] items, HomeScreen owner)
 
 }
 ```
+
 참조를 `this` 전달 하기 위해 uitableviewsource 클래스가 만들어지는 ViewDidLoad 메서드를 수정 합니다.
 
 ```csharp
 table.Source = new TableSource(tableItems, this);
 ```
+
 마지막으로 `RowSelected` 메서드로 돌아가서 캐시 된 필드에 `PresentViewController` 대해를 호출 합니다.
 
 ```csharp

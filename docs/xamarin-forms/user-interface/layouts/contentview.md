@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: e340b45148c7528eff1aa511ee9902a4ac2658c0
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: 379791d4dda676140425d79eca696cdca94cd55b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658160"
+ms.locfileid: "69888427"
 ---
 # <a name="xamarinforms-contentview"></a>Xamarin.ios ContentView
 
@@ -61,7 +61,7 @@ Xamarin.ios [`ContentView`](xref:Xamarin.Forms.ContentView) 클래스는 단일 
 > [!NOTE]
 > 속성 `BorderColor` 은 데모를 위해 여러 항목에 영향을 줍니다. 필요한 경우이 속성을 세 가지 속성으로 구분할 수 있습니다.
 
-각 속성은 `BindableProperty` 인스턴스에 의해 지원 됩니다. 백업을 `BindableProperty` 사용 하면 MVVM 패턴을 사용 하 여 각 속성의 스타일을 지정 하 고 바인딩할 수 있습니다. 자세한 내용은 [MVVM를 사용 하 여 데이터 바인딩](#bind-data-with-mvvm)을 참조 하세요.
+각 속성은 `BindableProperty` 인스턴스에 의해 지원 됩니다. 백업을 `BindableProperty` 사용 하면 MVVM 패턴을 사용 하 여 각 속성의 스타일을 지정 하 고 바인딩할 수 있습니다.
 
 다음 예에서는 백업을 `BindableProperty`만드는 방법을 보여 줍니다.
 
@@ -151,117 +151,6 @@ CardView card = new CardView
     IconImageSource = ImageSource.FromFile("user.png")
 };
 ```
-
-### <a name="bind-data-with-mvvm"></a>MVVM를 사용 하 여 데이터 바인딩
-
-클래스의 개체는 `BindableProperty` MVVM (모델-뷰-ViewModel) 스타일 바인딩을 허용 합니다. `CardView` 샘플 응용 프로그램에는 `PersonCollectionViewModel` 단일 컬렉션 속성을 정의 하는 클래스가 포함 되어 있습니다.
-
-```csharp
-public class PersonCollectionViewModel : INotifyPropertyChanged
-{
-    ...
-    public List<PersonViewModel> Items
-    {
-        get
-        {
-            return items;
-        }
-        set
-        {
-            items = value;
-            NotifyPropertyChanged();
-        }
-    }
-    ...
-}
-```
-
-클래스 `PersonViewModel` 는 개인 프로필을 나타냅니다.
-
-```csharp
-public class PersonViewModel : INotifyPropertyChanged
-{
-    ...
-
-    string photo;
-    public string Photo
-    {
-        get
-        {
-            return photo;
-        }
-        set
-        {
-            photo = value;
-            NotifyPropertyChanged();
-        }
-    }
-
-    string name;
-    public string Name
-    {
-        get
-        {
-            return name;
-        }
-        set
-        {
-            name = value;
-            NotifyPropertyChanged();
-        }
-    }
-
-    string bio;
-    public string Bio
-    {
-        get
-        {
-            return bio;
-        }
-        set
-        {
-            bio = value;
-            NotifyPropertyChanged();
-        }
-    }
-    ...
-}
-```
-
-는 `CardView` 개체의 `PersonViewModel` 컬렉션을 카드 목록으로 렌더링 하는 데 사용할 수 있습니다. 다음 예제에서는 `PersonViewCollection` 인스턴스 `StackLayout` 를 XAML의 인스턴스에 바인딩하는 방법을 보여 줍니다.
-
-```xaml
-<StackLayout HorizontalOptions="Fill"
-             VerticalOptions="Fill"
-             BindableLayout.ItemsSource="{Binding Items}">
-    <BindableLayout.ItemTemplate>
-        <DataTemplate>
-            <controls:CardView Margin="4"
-                               BorderColor="DarkGray"
-                               IconBackgroundColor="SlateGray"
-                               BindingContext="{Binding .}"
-                               CardTitle="{Binding Name}"
-                               CardDescription="{Binding Bio}"
-                               IconImageSource="{Binding Photo}"/>
-        </DataTemplate>
-    </BindableLayout.ItemTemplate>
-</StackLayout>
-```
-
-인스턴스의 속성은 바인딩 가능한 레이아웃을 사용하여에바인딩됩니다.`StackLayout` `Items` `PersonViewCollection` 는 `DataTemplate` `PersonViewModel`각 `CardView` 개체의 모양을 정의 하 고의 속성에 데이터를 바인딩합니다. 이 설정 `Items` `PersonView` 되 면 컬렉션의 각 개체에 대 한 개체가생성됩니다.`CardView` `BindingContext` 는 다음 예제와 같이 설정 됩니다.`BindingContext`
-
-```csharp
-public partial class CardViewMvvmPage : ContentPage
-{
-    public CardViewMvvmPage()
-    {
-        InitializeComponent();
-        BindingContext = DataService.GetPersonCollection();
-    }
-}
-```
-
-데이터 바인딩에 대 한 자세한 내용은 [Xamarin.ios 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조 하세요. 개체에 대 한 `BindableProperty` 자세한 내용은 [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)을 참조 하세요.
 
 ## <a name="customize-appearance-with-a-controltemplate"></a>ControlTemplate를 사용 하 여 모양 사용자 지정
 

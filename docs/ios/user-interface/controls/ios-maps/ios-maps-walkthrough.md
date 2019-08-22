@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: dba8fc3c239a8c20795913d6d1e5409a478c4072
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b666e8e8621019da4f2acb71ab5b3bf22fad3a
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642734"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889768"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Xamarin.ios의 주석 및 오버레이
 
@@ -178,6 +178,7 @@ ms.locfileid: "68642734"
     
     map.AddOverlay (hotelOverlay);  
     ```
+
 그러면의 `ViewDidLoad`코드가 완성 됩니다. 이제 `MapDelegate` 클래스를 구현 하 여 각각 주석과 오버레이 뷰를 만드는 과정을 처리 해야 합니다.
 
 
@@ -192,6 +193,7 @@ ms.locfileid: "68642734"
         ...
     }
     ```
+
     여기에는 하나의 주석만 있으므로 재사용 코드가 반드시 필요한 것은 아니지만이를 포함 하는 것이 좋습니다.
 
 1. 이 연습 `GetViewForAnnotation` 에 포함 된 **컨퍼런스 .png** 이미지를 `ConferenceAnnotation` 사용 하 여에 대 한 뷰를 반환 하려면 메서드를 구현 합니다.
@@ -261,6 +263,7 @@ ms.locfileid: "68642734"
         }
     }
     ```
+
     이제 주석에 대 한 코드가 준비 되었습니다. 에 코드 `MapDelegate` 를 추가 하 여 호텔 오버레이에 대 한 뷰를 만들 수 있습니다.
 
 1. 의 `GetViewForOverlay` 다음 구현을에 추가 합니다 `MapDelegate`.

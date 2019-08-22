@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0c606e001552f1c4267ffc29bd69b2f38f2ec971
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a5587d5a4ed5201b8f09dfa3b4d2d292abd008d3
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527936"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889835"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 
@@ -106,6 +106,7 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 ...
 }
 ```
+
 이 줄에서는 먼저 그리기에 사용할 현재 그래픽 컨텍스트를 가져옵니다. 그리기를 수행 하는 캔버스로 그래픽 컨텍스트를 생각할 수 있습니다. 스트로크 및 채우기 색과 같은 그리기에 대 한 모든 상태와 그릴 기 하 도형도 포함 합니다.
 
 ```csharp

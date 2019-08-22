@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2019
-ms.openlocfilehash: 6eeafcd943f9d92cf8fb2c19cea40a491413f78b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 07/18/2019
+ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657275"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887897"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -28,6 +28,7 @@ XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있�
 - [`OnPlatform`](#onplatform) – 플랫폼별 기준에서 UI 모양을 사용자 지정합니다.
 - [`OnIdiom`](#onidiom) – 응용 프로그램이 실행 중인 장치의 관용구를 기반으로 UI 모양을 사용자 지정합니다.
 - [`DataTemplate`](#datatemplate-markup-extension)-형식을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 변환 합니다.
+- [`FontImage`](#fontimage-markup-extension)-를 `ImageSource`표시할 수 있는 모든 보기에 글꼴 아이콘을 표시 합니다.
 
 추가적인 XAML 태그 확장은 지금까지 다른 XAML 구현에서 지원되었으며, Xamarin.Forms에서도 지원됩니다. 해당 내용은 다음과 같이 다른 글에서 더 자세히 설명합니다.
 
@@ -556,6 +557,37 @@ public partial class TypeDemoPage : ContentPage
 이 예제 `MonkeysPage` 에서는 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 속성`ShellContent.ContentTemplate` 의 값으로 설정 된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에서로 변환 됩니다. 이렇게 하면 응용 `MonkeysPage` 프로그램 시작 시가 아니라 페이지 탐색이 발생 하는 경우에만이 생성 됩니다.
 
 셸 응용 프로그램에 대 한 자세한 내용은 [Xamarin.ios shell](~/xamarin-forms/app-fundamentals/shell/index.md)(영문)을 참조 하세요.
+
+## <a name="fontimage-markup-extension"></a>FontImage 태그 확장
+
+태그 확장을 사용 하면를 `ImageSource`표시할 수 있는 모든 보기에 글꼴 아이콘을 표시할 수 있습니다. `FontImage` `FontImageSource` 클래스와 동일한 기능을 제공 하지만 더 간결 하 게 표현 합니다.
+
+태그 확장은 다음 속성을 정의 `FontImageExtension` 하는 클래스에서 지원 됩니다. `FontImage`
+
+- `FontFamily`글꼴 아이콘이 `string`속한 글꼴 패밀리 형식의입니다.
+- `Glyph`글꼴 아이콘 `string`의 유니코드 문자 값인 형식의입니다.
+- `Color`형식의 `Color`글꼴 아이콘을 표시할 때 사용 되는 색입니다.
+- `Size`형식 `double`, 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)입니다.
+
+> [!NOTE]
+> XAML 파서는 `FontImageExtension` 클래스를 약식으로 `FontImage`지정할 수 있습니다.
+
+`Glyph` 속성은 `FontImageExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Glyph=` 부분을 제거할 수 있습니다.
+
+**FontImage Demo** 페이지에서는 `FontImage` 태그 확장을 사용 하는 방법을 보여 줍니다.
+
+```xaml
+<Image BackgroundColor="#D1D1D1"
+       Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=44}" />
+```
+
+이 예제에서는 `FontImageExtension` 클래스 이름의 축약 된 버전을 사용 하 여 [`Image`](xref:Xamarin.Forms.Image)의 아이콘 글꼴 패밀리에서 XBox 아이콘을 표시 합니다. 또한이 식은 `OnPlatform` 태그 확장을 사용 하 여 iOS `FontFamily` 및 Android에서 다른 속성 값을 지정 합니다. 또한 식의 `Glyph=` 일부는 제거 되며 설정 된 태그 확장 속성은 쉼표로 구분 됩니다. 아이콘 `\uf30c`의 유니코드 문자는 이지만 XAML에서 이스케이프 되어야 `&#xf30c;`하므로가 됩니다.
+
+실행 중인 프로그램은 다음과 같습니다.
+
+[ ![FontImage 태그 확장](consuming-images/fontimagedemo.png "FontImage Demo") 의 스크린샷] (consuming-images/fontimagedemo-large.png#lightbox "FontImage 데모")
+
+`FontImageSource` 개체에서 글꼴 아이콘 데이터를 지정 하 여 글꼴 아이콘을 표시 하는 방법에 대 한 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons)를 참조 하세요.
 
 ## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장 정의
 

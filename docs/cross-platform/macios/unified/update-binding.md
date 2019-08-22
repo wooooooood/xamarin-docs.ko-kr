@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 16cf976b252e409ae4302ab51eb594370a6689d1
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e6aac37561d107cb7e3f646c15621b86385dd0ee
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620948"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887519"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩을 Unified API로 마이그레이션
 
@@ -89,6 +89,7 @@ int Add(int operandUn, int operandDeux);
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 처음에 연결한 것 보다 최신 버전의 타사 라이브러리에 매핑할 경우 라이브러리에 대 한 `.h` 헤더 파일을 검토 하 고, `int` `int32_t` `unsigned int` `uint32_t` , 또는에 대 한 명시적 호출이 있는지 확인 해야 합니다. `float` 는 `NSInteger`, 또는`NSUInteger` 로`CGFloat`업그레이드 되었습니다. 이 경우 `nint`, `nuint` 및 `nfloat` 형식도 동일한 수정 작업을 수행 해야 합니다.
 
 이러한 데이터 형식 변경에 대해 자세히 알아보려면 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 문서를 참조 하세요.

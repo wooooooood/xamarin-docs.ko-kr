@@ -1,22 +1,22 @@
 ---
-title: Android에서 콜백
+title: Android의 콜백
 ms.prod: xamarin
 ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8f32da34c82e46fa4afd69ae420b314eab18b235
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61215880"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889353"
 ---
-# <a name="callbacks-on-android"></a>Android에서 콜백
+# <a name="callbacks-on-android"></a>Android의 콜백
 
-Java에서 호출 C# 범주는 다소를 *위험한 비즈니스*합니다. 즉 있기를 *패턴* 에서 콜백에 대 한 C# java;는 것이 예상 보다 더 복잡 합니다.
+에서 C# Java로 호출 하는 것은 매우 *위험한 비즈니스*입니다. 즉,에서 C# Java로의 콜백에 대 한 *패턴이* 있다고 가정 합니다. 그러나 원하는 것 보다 더 복잡 합니다.
 
-Java 용 적합 하 게 하는 콜백을 수행 하기 위한 세 가지 옵션 설명 하겠습니다.
+Java에 가장 적합 한 콜백을 수행 하기 위한 세 가지 옵션을 살펴보겠습니다.
 
 - 추상 클래스
 - 인터페이스
@@ -24,9 +24,9 @@ Java 용 적합 하 게 하는 콜백을 수행 하기 위한 세 가지 옵션 
 
 ## <a name="abstract-classes"></a>추상 클래스
 
-이 가장 쉬운 방법은 대 한 경로가 콜백을 사용할 것을 권장 하므로 `abstract` 가장 간단한 형태로 작업 콜백을 가져올만 하려는 경우.
+이는 콜백에 가장 쉬운 경로 이기 때문에 가장 간단한 형태로 콜백을 `abstract` 작동 하려는 경우를 사용 하는 것이 좋습니다.
 
-부터 시작 하겠습니다는 C# 클래스를 구현 하는 Java 싶습니다.
+Java를 구현할 C# 클래스부터 살펴보겠습니다.
 
 ```csharp
 [Register("mono.embeddinator.android.AbstractClass")]
@@ -41,15 +41,15 @@ public abstract class AbstractClass : Java.Lang.Object
 }
 ```
 
-이 작업을 하려면 세부 정보는 다음과 같습니다.
+이 작업을 수행 하기 위한 세부 정보는 다음과 같습니다.
 
-- `[Register]` 좋은 패키지 이름을 생성-java에서를 자동으로 생성 된 패키지 이름 없이 표시 됩니다.
-- 서브클래싱 `Java.Lang.Object` Xamarin.Android의 Java 생성기를 통해 클래스를 실행 하려면.NET 포함 하는 신호입니다.
-- 빈 생성자:는 원하는 Java 코드에서 사용 됩니다.
-- `(IntPtr, JniHandleOwnership)` 생성자: Xamarin.Android가을 만들기 위한 사용 되는 C#-Java 개체에 해당 합니다.
-- `[Export]` Java에 메서드 노출 하는 Xamarin.Android 신호를 보냅니다. Java 전 세계에서 소문자 메서드를 사용 하므로 메서드 이름을 변경할 수도 있습니다.
+- `[Register]`Java에서 유용한 패키지 이름을 생성 합니다 .이를 제외 하 고는 자동 생성 된 패키지 이름을 가져옵니다.
+- Xamarin.ios `Java.Lang.Object` 의 Java 생성기를 통해 클래스를 실행 하는 .net 포함에 대 한 신호를 서브클래싱 합니다.
+- 빈 생성자: Java 코드에서 사용 하려는 것입니다.
+- `(IntPtr, JniHandleOwnership)`생성자: Xamarin은 Java 개체에 해당 하는를 C#만드는 데 사용 됩니다.
+- `[Export]`Xamarin에서 메서드를 Java에 노출 하도록 신호를 보냅니다. Java 세계에서 소문자 메서드를 사용 하는 것이 선호 되므로 메서드 이름을 변경할 수도 있습니다.
 
-다음 확인을 C# 시나리오를 테스트 하는 방법.
+그런 다음 시나리오를 테스트 C# 하는 메서드를 살펴보겠습니다.
 
 ```csharp
 [Register("mono.embeddinator.android.JavaCallbacks")]
@@ -62,11 +62,12 @@ public class JavaCallbacks : Java.Lang.Object
     }
 }
 ```
-`JavaCallbacks` 것으로이 테스트 하려면 클래스일 수는 `Java.Lang.Object`합니다.
 
-이제는 AAR 생성에.NET 어셈블리에서.NET 포함을 실행 합니다. 참조 된 [Getting Started guide](~/tools/dotnet-embedding/get-started/java/android.md) 세부 정보에 대 한 합니다.
+`JavaCallbacks`인 경우이를 테스트 하는 모든 클래스 일 수 있습니다 `Java.Lang.Object`.
 
-Android Studio로 AAR 파일을 가져온 후 단위 테스트를 작성해 보겠습니다.
+이제 .NET 어셈블리에 .NET 포함을 실행 하 여 AAR를 생성 합니다. 자세한 내용은 [시작 가이드](~/tools/dotnet-embedding/get-started/java/android.md) 를 참조 하세요.
+
+AAR 파일을 Android Studio로 가져온 후에는 단위 테스트를 작성 하겠습니다.
 
 ```java
 @Test
@@ -82,24 +83,26 @@ public void abstractCallback() throws Throwable {
     assertEquals("Java", JavaCallbacks.abstractCallback(callback));
 }
 ```
-따라서 했습니다.
 
-- 구현 된 `AbstractClass` 익명 형식 사용 하 여 java
-- 인스턴스를 반환 하는지 확인 수행 `"Java"` Java에서
-- 인스턴스를 반환 하는지 확인 수행 `"Java"` 에서C#
-- 추가 `throws Throwable`, 이후 C# 생성자를 사용 하 여 현재 표시 된 `throws`
+따라서 다음 작업을 수행 합니다.
 
-이 단위 테스트 실행에서는-인와 같은 오류와 함께 실패할 것:
+- 무명 형식을 `AbstractClass` 사용 하 여 Java에서을 구현 합니다.
+- 인스턴스가 Java에서 반환 `"Java"` 되도록 했습니다.
+- 인스턴스가 다음에서 반환 `"Java"` 되도록 했습니다.C#
+- 생성자 `throws Throwable`가 현재 C# 로 표시 되어 있기 때문에 추가 되었습니다.`throws`
+
+이 단위 테스트를 있는 그대로 실행 하면 다음과 같은 오류가 발생 하 여 실패 합니다.
 
 ```csharp
 System.NotSupportedException: Unable to find Invoker for type 'Android.AbstractClass'. Was it linked away?
 ```
 
-무엇이 같습니다는 `Invoker` 형식입니다. 서브 클래스를 이것이 `AbstractClass` 전달 하는 C# Java에 대 한 호출 합니다. Java 개체를 입력 하는 경우는 C# world 및 해당 C# 형식은 추상을 Xamarin.Android을 자동으로 찾습니다는 C# 접미사를 사용 하 여 형식을 `Invoker` 내에서 사용할 C# 코드입니다.
+여기서 누락 된 항목은 `Invoker` 형식입니다. Java에 대 한 호출 `AbstractClass` 을 전달 C# 하는의 서브 클래스입니다. Java 개체가 전 C# 세계에 있고 동일한 C# 형식이 abstract 인 경우 xamarin.ios는 코드 내에서 C# `Invoker` C# 사용할 수 있도록 접미사를 사용 하 여 형식을 자동으로 찾습니다.
 
-이 사용 하 여 Xamarin.Android `Invoker` 무엇 보다도 Java 바인딩 프로젝트에 대 한 패턴입니다.
+Xamarin.ios는 Java 바인딩 프로젝트 `Invoker` 에서이 패턴을 사용 합니다.
 
-구현은 다음과 같습니다 `AbstractClassInvoker`:
+다음은의 `AbstractClassInvoker`구현입니다.
+
 ```csharp
 class AbstractClassInvoker : AbstractClass
 {
@@ -141,25 +144,25 @@ class AbstractClassInvoker : AbstractClass
 }
 ```
 
-여기에 약간 상당히 했습니다.
+여기서는 약간의 차이가 있습니다.
 
-- 접미사를 사용 하 여 클래스를 추가 `Invoker` 해당 서브 클래스 `AbstractClass`
-- 추가 `class_ref` 는 Java 클래스 JNI 참조를 포함 하는 C# 클래스
-- 추가 `id_gettext` java JNI 참조를 포함 하 `getText` 메서드
-- 포함 된 `(IntPtr, JniHandleOwnership)` 생성자
-- 구현 `ThresholdType` 고 `ThresholdClass` 에 대 한 세부 정보를 알아야 Xamarin.Android에 대 한 요구 사항으로는 `Invoker`
-- `GetText` Java를 조회 하는 데 필요한 `getText` JNI 적절 한 시그니처가 있는 메서드 호출
-- `Dispose` 에 대 한 참조의 선택을 취소 하는 데 필요한 것 `class_ref`
+- 서브 클래스에 대 한 접미사가 `Invoker` 있는 클래스를 추가 했습니다.`AbstractClass`
+- 클래스를 서브클래싱하는 Java 클래스에 대 한 JNI 참조를 유지 하기 위해 추가 되었습니다 `class_ref`. C#
+- `id_gettext` Java`getText` 메서드에 대 한 JNI 참조를 포함 하도록 추가 되었습니다.
+- `(IntPtr, JniHandleOwnership)` 생성자 포함
+- `ThresholdType` 및`ThresholdClass` 에 대 한 세부 정보를 확인 하기 위해 xamarin.ios에 대 한 요구 사항으로 구현 됨`Invoker`
+- `GetText`적절 한 JNI 시그니처를 `getText` 사용 하 여 Java 메서드를 조회 하 고 호출 하는 데 필요 합니다.
+- `Dispose`는에 대 한 참조를 지워야 합니다.`class_ref`
 
-이 클래스를 추가 하 고 새 AAR 생성 유닛 테스트를 통과 합니다. 콜백에 대 한이 패턴은 볼 수 있듯이 *이상적인*, 하지만 실행 취소가 가능 합니다.
+이 클래스를 추가 하 고 새 AAR를 생성 한 후 단위 테스트를 통과 합니다. 이는 콜백에 대 한이 패턴을 볼 수 있지만 심지어는 *적합*하지 않습니다.
 
-Java 상호 운용성에 대 한 내용은 참조는 놀라운 [Xamarin.Android 설명서](~/android/platform/java-integration/working-with-jni.md) 이 주제에 있습니다.
+Java interop에 대 한 자세한 내용은이 주제에 대 한 놀라운 [Xamarin Android 설명서](~/android/platform/java-integration/working-with-jni.md) 를 참조 하세요.
 
 ## <a name="interfaces"></a>인터페이스
 
-인터페이스는 하나의 세부 정보를 제외 하 고 추상 클래스와 거의 동일 합니다. Xamarin.Android에 Java를 생성 하지 않습니다. .NET 포함 하기 전에 없는 Java를 구현 하는 다양 한 시나리오 이므로이 C# 인터페이스입니다.
+인터페이스는 다음과 같은 한 가지 세부 사항을 제외 하 고 추상 클래스와 거의 같습니다. Xamarin.ios는 이러한 항목에 대 한 Java를 생성 하지 않습니다. 이는 .NET을 포함 하기 전에 Java가 인터페이스를 C# 구현 하는 시나리오는 많지 않기 때문입니다.
 
-다음을 가정해 보겠습니다 C# 인터페이스.
+다음 C# 인터페이스가 있다고 가정해 보겠습니다.
 
 ```csharp
 [Register("mono.embeddinator.android.IJavaCallback")]
@@ -170,9 +173,9 @@ public interface IJavaCallback : IJavaObject
 }
 ```
 
-`IJavaObject` .NET 포함 하는 Xamarin.Android 인터페이스는 그렇지 않은 경우이 정확히 동일 신호를 보냅니다는 `abstract` 클래스입니다.
+`IJavaObject`는 xamarin.ios 인터페이스 라는 .net 포함에 신호를 전달 합니다. 그렇지 않으면 `abstract` 클래스와 정확히 동일 합니다.
 
-Xamarin.Android는이 인터페이스에 대 한 Java 코드를 생성 하지 하므로 추가 하려면 다음이 Java 프로그램 C# 프로젝트:
+Xamarin.ios는 현재이 인터페이스에 대 한 Java 코드를 생성 하지 않으므로 C# 프로젝트에 다음 java를 추가 합니다.
 
 ```java
 package mono.embeddinator.android;
@@ -182,9 +185,9 @@ public interface IJavaCallback {
 }
 ```
 
-어디서 나 파일을 배치할 수 있지만 해당 빌드 작업을 설정 해야 `AndroidJavaSource`합니다. 이 신호를 보내는.NET 포함 AAR 파일로 컴파일됩니다에 적절 한 디렉터리에 복사 합니다.
+어디에 나 파일을 저장할 수 있지만 빌드 작업을로 `AndroidJavaSource`설정 해야 합니다. 그러면 AAR 파일로 컴파일하기 위해 적절 한 디렉터리에 복사 하는 .NET 포함을 알립니다.
 
-다음으로 `Invoker` 동일 구현 됩니다.
+다음으로 `Invoker` 구현은 매우 동일 합니다.
 
 ```csharp
 class IJavaCallbackInvoker : Java.Lang.Object, IJavaCallback
@@ -226,7 +229,7 @@ class IJavaCallbackInvoker : Java.Lang.Object, IJavaCallback
 }
 ```
 
-AAR 파일을 생성 한 후 다음 전달 단위로 작성할 수 있습니다 하는 Android Studio에서 테스트:
+AAR 파일을 생성 한 후에는 다음을 전달 하는 단위 테스트를 작성할 수 Android Studio.
 
 ```java
 class ConcreteCallback implements IJavaCallback {
@@ -247,9 +250,9 @@ public void interfaceCallback() {
 
 ## <a name="virtual-methods"></a>가상 메서드
 
-재정의 `virtual` Java는 하지만 좋은 경험 하지 않습니다.
+Java에서 `virtual` a를 재정의 하는 것은 가능 하지만 좋은 환경은 아닙니다.
 
-다음에 있다고 가정해 보겠습니다 C# 클래스:
+다음 C# 클래스가 있다고 가정해 보겠습니다.
 
 ```csharp
 [Register("mono.embeddinator.android.VirtualClass")]
@@ -264,34 +267,34 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-수행한 경우는 `abstract` 하나의 세부 정보를 제외 하 고 작동할 것 위의 클래스 예제: _Xamarin.Android를 조회 하지 합니다 `Invoker`_ 합니다.
+위의 클래스 예제를 `abstract` 수행한 경우에는 한 가지 세부 정보를 제외 하 고는 다음과 같은 작업을 수행 합니다. _Xamarin Android는를 `Invoker`조회 하지 않습니다_ .
 
-이 문제를 해결 하려면 수정 된 C# 클래스 `abstract`:
+이 문제를 해결 하려면 클래스 C# `abstract`를 다음과 같이 수정 합니다.
 
 ```csharp
 public abstract class VirtualClass : Java.Lang.Object
 ```
 
-이 이상적이 지 않습니다. 하지만이 시나리오 작업을 가져옵니다. Xamarin.Android는 승차 합니다 `VirtualClassInvoker` 및 Java를 사용 하 여 `@Override` 메서드.
+이는 이상적이 지 않지만이 시나리오를 작동 하 게 됩니다. Xamarin Android는를 `VirtualClassInvoker` 선택 하 고 Java는 메서드에 사용할 `@Override` 수 있습니다.
 
-## <a name="callbacks-in-the-future"></a>나중에 콜백
+## <a name="callbacks-in-the-future"></a>미래의 콜백
 
-몇 가지 수행 이러한 시나리오를 향상 시킬 수:
+이러한 시나리오를 향상 시킬 수 있는 몇 가지 작업이 있습니다.
 
-1. `throws Throwable` C# 생성자는이에 고정 [PR](https://github.com/xamarin/java.interop/pull/170)합니다.
-1. 인터페이스를 지원 Xamarin.Android에서 Java 생성기를 확인 합니다.
-    - 빌드 작업을 사용 하 여 Java 소스 파일을 추가 하는 것에 대 한 필요성을 제거 `AndroidJavaSource`합니다.
-1. Xamarin.Android 로드 하는 방법을 확인을 `Invoker` 가상 클래스에 대 한 합니다.
-    - 이 클래스를 표시할 필요가 우리의 `virtual` 예제에서는 `abstract`합니다.
-1. 생성 `Invoker` 자동으로 포함 하는.NET 클래스
-    - 이 복잡 하지만 맞지 않을 것입니다. Xamarin.Android는 다음과 비슷한 Java 바인딩 프로젝트는 이미 수행 됩니다.
+1. `throws Throwable`이 C# [PR](https://github.com/xamarin/java.interop/pull/170)에서 생성자가 수정 되었습니다.
+1. Xamarin Android 지원 인터페이스에서 Java 생성기를 만듭니다.
+    - 이렇게 하면의 `AndroidJavaSource`빌드 작업을 사용 하 여 Java 소스 파일을 추가 하지 않아도 됩니다.
+1. Xamarin.ios에서 가상 클래스 `Invoker` 에 대 한를 로드 하는 방법을 만듭니다.
+    - 이렇게 하면 `virtual` 예제 `abstract`에서 클래스를 표시할 필요가 없습니다.
+1. 자동 `Invoker` 으로 .net 포함 클래스 생성
+    - 이는 복잡 하지만 심지어. Xamarin.ios는 Java 바인딩 프로젝트에 대해 이미 이와 유사한 작업을 수행 하 고 있습니다.
 
-여기에서 수행할 작업을 많이 있지만.NET 포함 하려면 이러한 개선할 수 있습니다.
+여기에서는 많은 작업을 수행 해야 하지만 .NET 포함의 이러한 향상 된 기능을 사용할 수 있습니다.
 
 ## <a name="further-reading"></a>추가 정보
 
 * [Android 시작](~/tools/dotnet-embedding/get-started/java/android.md)
-* [예비 Android 조사](~/tools/dotnet-embedding/android/index.md)
+* [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)
 * [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
-* [오픈 소스 프로젝트 기여](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+* [오픈 소스 프로젝트에 기여](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 * [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)

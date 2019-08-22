@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: ef1ccd07eb4807cd84094cad1200d8a1ed7cea8b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1aaacae8cebed2396661a28c189af44c25238e7b
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524689"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887837"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
@@ -101,7 +101,7 @@ public class MyActivity : Activity
 
 ### <a name="launchable-from-application-chooser"></a>응용 프로그램 선택에서 시작 가능한
 
-기본적으로 작업은 Android의 응용 프로그램 시작 관리자 화면에 표시 되지 않습니다. 이는 응용 프로그램에 많은 활동이 있을 가능성이 높기 때문에 모든 활동이 필요 하지 않기 때문입니다. 응용 프로그램 시작 관리자에서 시작 가능한 해야 하는 항목을 지정 하려면 [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) 속성을 사용 합니다. 예를 들어: 
+기본적으로 작업은 Android의 응용 프로그램 시작 관리자 화면에 표시 되지 않습니다. 이는 응용 프로그램에 많은 활동이 있을 가능성이 높기 때문에 모든 활동이 필요 하지 않기 때문입니다. 응용 프로그램 시작 관리자에서 시작 가능한 해야 하는 항목을 지정 하려면 [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) 속성을 사용 합니다. 예: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true)] 
@@ -126,7 +126,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-icon"></a>활동 아이콘
 
-기본적으로 작업에는 시스템에서 제공 하는 기본 시작 관리자 아이콘이 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 **리소스/그릴**수 있는 **.png에 .png** 를 추가 하 고 빌드 작업을 **androidresource**로 설정한 다음 [`Icon`](xref:Android.App.ActivityAttribute.Icon) 속성을 사용 하 여 사용할 아이콘을 지정 합니다. 예를 들어: 
+기본적으로 작업에는 시스템에서 제공 하는 기본 시작 관리자 아이콘이 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 **리소스/그릴**수 있는 **.png에 .png** 를 추가 하 고 빌드 작업을 **androidresource**로 설정한 다음 [`Icon`](xref:Android.App.ActivityAttribute.Icon) 속성을 사용 하 여 사용할 아이콘을 지정 합니다. 예: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -227,6 +227,7 @@ public class MyActivity : Activity
              android:theme="@android:style/Theme.Light"
                 ... />
 ```
+
 이 예제에서는 앱의 모든 활동이 기본적으로 `Theme.Light` 스타일로 바뀝니다. 활동 `Theme.Dialog`의 테마를로 설정 하면 해당 활동에만 `Theme.Dialog` 스타일이 사용 되는 반면, 앱의 다른 모든 활동은 기본적으로 `<application>` 요소에 `Theme.Light` 설정 된 스타일로 설정 됩니다. 
 
 요소 `Application` 는 특성을 구성 `<application>` 하는 유일한 방법이 아닙니다. 또는 `<application>` **속성/androidmanifest**의 요소에 직접 특성을 삽입할 수 있습니다. 이러한 설정은 `<application>` **obj/Debug/android/androidmanifest .xml**에 있는 최종 요소로 병합 됩니다. **Properties/AndroidManifest** 의 내용은 항상 사용자 지정 특성에서 제공 되는 데이터를 재정의 합니다. 

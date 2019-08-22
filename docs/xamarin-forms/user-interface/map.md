@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/13/2019
-ms.openlocfilehash: e818495d45435546f9d2fc9c5593d9c7caa608ea
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.date: 07/18/2019
+ms.openlocfilehash: 4cfedad6ccf87dfef819b677233be1edb2d2c62d
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528877"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887958"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -173,35 +173,41 @@ public class MapPage : ContentPage {
 맵 내용을 설정 하 여 변경할 수도 있습니다는 `MapType` 일반 거리 맵 (기본값), 위성 이미지 또는 둘의 조합을 표시할 속성입니다.
 
 ```csharp
-map.MapType == MapType.Street;
+map.MapType = MapType.Street;
 ```
 
 유효한 `MapType` 값은:
 
-- 하이브리드
-- 위성
-- 주소 (기본값)
+- `Hybrid`
+- `Satellite`
+- `Street` (기본값)
 
 ### <a name="map-region-and-mapspan"></a>지도 영역 및 MapSpan
 
-위의 코드 조각에서와 같이 제공을 `MapSpan` 초기 보기를 설정 하는 맵 생성자에는 인스턴스 (중심점 및 확대/축소 수준) 로드 되는 경우 맵의 합니다. `MoveToRegion` 지도의 위치 또는 확대/축소 수준을 변경 하려면 다음 map 클래스에서 메서드를 사용할 수 있습니다. 두 가지 방법으로 새 `MapSpan` 인스턴스:
+위의 코드 조각에서와 같이 제공을 `MapSpan` 초기 보기를 설정 하는 맵 생성자에는 인스턴스 (중심점 및 확대/축소 수준) 로드 되는 경우 맵의 합니다. 두 가지 방법으로 새 `MapSpan` 인스턴스:
 
 - **MapSpan.FromCenterAndRadius()** -의 범위를 만드는 정적 메서드를를 `Position` 지정 하는 `Distance` 합니다.
 - **새 MapSpan ()** -사용 하는 생성자를 `Position` 위도 및 경도 표시할 각도입니다.
 
-
-위치를 변경 하지 않고 지도의 확대/축소 수준을 변경 하려면 새로 만듭니다 `MapSpan` 에서 현재 위치를 사용 하는 `VisibleRegion.Center` 지도 컨트롤의 속성입니다. 하지만 `Slider` (지도 컨트롤에서 직접 확대/축소 슬라이더의 값을 현재 업데이트할 수 없습니다) 다음과 같은 지도 확대/축소를 제어 하는데 사용할 수 없습니다.
+`MoveToRegion` 지도의 위치 또는 확대/축소 수준을 변경 하려면 다음 map 클래스에서 메서드를 사용할 수 있습니다. 위치를 변경 하지 않고 지도의 확대/축소 수준을 변경 하려면 새로 만듭니다 `MapSpan` 에서 현재 위치를 사용 하는 `VisibleRegion.Center` 지도 컨트롤의 속성입니다. 는 `Slider` 다음과 같이 지도 확대/축소를 제어 하는 데 사용할 수 있습니다. 그러나 지도 컨트롤에서 바로 확대/축소는 현재 슬라이더의 값을 업데이트할 수 없습니다.
 
 ```csharp
-var slider = new Slider (1, 18, 1);
-slider.ValueChanged += (sender, e) => {
+Slider slider = new Slider (1, 18, 1);
+slider.ValueChanged += (sender, e) =>
+{
     var zoomLevel = e.NewValue; // between 1 and 18
     var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
     map.MoveToRegion(new MapSpan (map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
 };
 ```
 
- [![확대/축소를 사용 하 여 maps](map-images/maps-zoom-sml.png "지도 컨트롤 확대/축소")](map-images/maps-zoom.png#lightbox "지도 컨트롤 확대/축소")
+[![확대/축소를 사용 하 여 maps](map-images/maps-zoom-sml.png "지도 컨트롤 확대/축소")](map-images/maps-zoom.png#lightbox "지도 컨트롤 확대/축소")
+
+또한 클래스에 [`Map`](xref:Xamarin.Forms.Maps.Map) 는 바인딩 가능한 속성에 의해 지원 `bool`되는 형식의 `MoveToLastRegionOnLayoutChange` 속성이 있습니다. 기본적으로이 속성은 `true`입니다 .이 속성은 표시 된 지도 지역이 장치 회전과 같은 레이아웃 변경이 발생할 때 현재 영역에서 이전 집합 영역으로 이동 함을 나타냅니다. 이 속성을로 `false`설정 하면 레이아웃 변경이 발생할 때 표시 되는 맵 지역이 가운데에 그대로 유지 됩니다. 다음 예제에서는이 속성을 설정 하는 방법을 보여 줍니다.
+
+```csharp
+map.MoveToLastRegionOnLayoutChange = false;
+```
 
 ### <a name="map-pins"></a>지도 핀
 
@@ -297,6 +303,7 @@ MyMap.MoveToRegion(
     <Grid>
         ...
         <maps:Map x:Name="map"
+                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>
