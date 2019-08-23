@@ -1,71 +1,71 @@
 ---
-title: Xamarin.iOS에서 자동 크기 조정 행 높이
-description: 이 문서에서는 해당 높이에 따라 콘텐츠에 따라 변경 테이블 뷰 행 Xamarin.iOS 앱에 추가 하는 방법을 설명 합니다. IOS 디자이너의에서 셀 레이아웃 및 사용 하도록 설정 하면 자동 크기 조정 높이 설명 합니다.
+title: Xamarin.ios의 행 높이 자동 크기 조정
+description: 이 문서에서는 콘텐츠에 따라 높이가 다른 행을 Xamarin.ios 앱 테이블 뷰 행에 추가 하는 방법을 설명 합니다. IOS 디자이너의 셀 레이아웃에 대해 설명 하 고 높이 자동 조정 기능을 사용 하도록 설정 합니다.
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e4446abc73817eb0672cd10a69ff6f738de0c1e1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 025c3ee6fc176df02f72e78395b880153d6b841d
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61029116"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68655722"
 ---
-# <a name="auto-sizing-row-height-in-xamarinios"></a>Xamarin.iOS에서 자동 크기 조정 행 높이
+# <a name="auto-sizing-row-height-in-xamarinios"></a>Xamarin.ios의 행 높이 자동 크기 조정
 
-Apple iOS 8 부터는 테이블 뷰를 작성 하는 기능 추가 (`UITableView`) 자동으로 증가 하 고 자동 레이아웃 및 크기 클래스 제약 조건을 사용 하 여 해당 콘텐츠의 크기를 기준으로 지정된 된 행의 높이 축소 수는 있습니다.
+IOS 8부터 Apple은 자동 레이아웃, 크기 클래스 및 제약 조건을 사용 하`UITableView`여 해당 콘텐츠의 크기에 따라 지정 된 행의 높이를 자동으로 증가 및 축소할 수 있는 테이블 뷰 ()를 만드는 기능을 추가 했습니다.
 
-iOS 11을 자동으로 확장 하는 행에 대 한 기능을 추가 했습니다. 머리글, 바닥글 및 셀 이제 자동으로 크기를 조정할 수 해당 콘텐츠를 기반으로 합니다. 그러나 iOS 디자이너 Interface Builder에서에서 테이블을 만들거나 하는 행 높이 수정 하는 경우 수동으로 해야 하는 경우 사용할 셀 크기 조정 자체이 가이드에 설명 된 대로.
+iOS 11에는 행이 자동으로 확장 될 수 있는 기능이 추가 되었습니다. 이제 머리글, 바닥글 및 셀의 크기를 내용에 따라 자동으로 조정할 수 있습니다. 그러나 테이블이 iOS 디자이너에서 만들어지거나 Interface Builder 또는 고정 행 높이가 있는 경우이 가이드에 설명 된 대로 자동 크기 조정 셀을 수동으로 사용 하도록 설정 해야 합니다.
 
-## <a name="cell-layout-in-the-ios-designer"></a>IOS 디자이너의에서 셀 레이아웃
+## <a name="cell-layout-in-the-ios-designer"></a>IOS 디자이너의 셀 레이아웃
 
-열린 행의 자동 크기 조정에 대 한 iOS 디자이너에 하려는 테이블 뷰에 대 한 스토리 보드의 셀을 선택 *프로토타입* 셀의 레이아웃을 디자인 하 고 있습니다. 예를 들어:
+IOS 디자이너에서 행의 자동 크기 조정을 사용할 테이블 뷰에 대 한 스토리 보드를 열고 셀의 *프로토타입을* 선택한 다음 셀의 레이아웃을 디자인 합니다. 예를 들어:
 
 [![](autosizing-row-height-images/table01.png "셀의 프로토타입 디자인")](autosizing-row-height-images/table01.png#lightbox)
 
-프로토타입에 각 요소에 대해 제약 조건을 테이블 뷰 회전 또는 다른 iOS 장치의 화면 크기에 대 한 크기를 조정할 때 올바른 위치에 요소를 계속 추가 합니다. 예를 들어, 고정 합니다 `Title` 셀의 위쪽, 왼쪽 및 오른쪽 *콘텐츠 뷰에*:
+프로토타입의 각 요소에 대해 테이블 뷰의 크기가 회전 또는 다른 iOS 장치 화면 크기에 맞게 조정 될 때 올바른 위치에 요소를 유지 하는 제약 조건을 추가 합니다. 예를 들어를 셀 `Title` 의 *콘텐츠 뷰의*위쪽, 왼쪽 및 오른쪽에 고정 합니다.
 
-[![](autosizing-row-height-images/table02.png "위쪽, 왼쪽 및 오른쪽 셀 콘텐츠 뷰의 제목 고정")](autosizing-row-height-images/table02.png#lightbox)
+[![](autosizing-row-height-images/table02.png "셀 내용 보기의 위쪽, 왼쪽 및 오른쪽에 제목 고정")](autosizing-row-height-images/table02.png#lightbox)
 
-예제 테이블, 작은 경우 `Label` (아래는 `Title`) 축소 하 고 행 높이 늘리거나 증가할 수 있는 필드입니다. 이 위해서는 왼쪽, 오른쪽, 위쪽 및 아래쪽 레이블의 고정 하려면 다음과 같은 제약 조건을 추가 합니다.
+예제 테이블의 경우 작은 `Label` ( `Title`아래)는 축소 및 확장 하 여 행 높이를 늘리거나 줄일 수 있는 필드입니다. 이 효과를 얻으려면 레이블의 왼쪽, 오른쪽, 위쪽 및 아래쪽을 고정 하는 다음 제약 조건을 추가 합니다.
 
-[![](autosizing-row-height-images/table03.png "이러한 제약 조건은 왼쪽, 오른쪽, 위쪽 및 아래쪽 레이블의 고정 하려면")](autosizing-row-height-images/table03.png#lightbox)
+[![](autosizing-row-height-images/table03.png "레이블의 왼쪽, 오른쪽, 위쪽 및 아래쪽을 고정 하기 위한 제약 조건")](autosizing-row-height-images/table03.png#lightbox)
 
-이제는 완전히 셀에 있는 요소에 제한에서는 요소를 늘이는 명확 하 게 해야 합니다. 이 위해 설정 합니다 **콘텐츠 Hugging 우선 순위** 하 고 **콘텐츠 압축 저항 우선 순위** 에서 필요에 따라는 **레이아웃** Properties Pad의 섹션:
+이제 셀의 요소를 완전히 제한 했으므로 스트레치 되어야 하는 요소를 명확 하 게 지정 해야 합니다. 이렇게 하려면 Properties Pad의 **레이아웃** 섹션에서 필요에 따라 **content Hugging Priority** 및 **content 압축 저항 우선 순위** 를 설정 합니다.
 
 [![](autosizing-row-height-images/table03a.png "Properties Pad의 레이아웃 섹션")](autosizing-row-height-images/table03a.png#lightbox)
 
-할 확장 하려는 요소를 설정를 **낮은** Hugging 우선 순위 값 및 **낮은** 압축 저항 우선 순위 값입니다.
+확장 하려는 요소를 **낮은** Hugging 우선 순위 값으로 설정 하 고 **더 낮은** 압축 저항 우선 순위 값을 설정 합니다.
 
-셀 프로토타입을 선택 하 고 고유한 제공 해야이 어 **식별자**:
+다음으로 셀 프로토타입을 선택 하 고 고유한 **식별자**를 지정 해야 합니다.
 
-[![](autosizing-row-height-images/table04.png "셀 프로토타입 고유 식별자 제공")](autosizing-row-height-images/table04.png#lightbox)
+[![](autosizing-row-height-images/table04.png "셀 프로토타입에 고유 식별자 제공")](autosizing-row-height-images/table04.png#lightbox)
 
-이 예의 경우 `GrowCell`합니다. 이 값에서는 테이블을 구성 하는 경우 나중에 사용 합니다.
+이 `GrowCell`예제의 경우입니다. 나중에 테이블을 채울 때이 값을 사용 합니다.
 
 > [!IMPORTANT]
-> 테이블 셀 형식이 둘 이상 있는 경우 (**프로토타입**)를 각 형식에는 자체 고유 해야 `Identifier` 자동 행 크기 조정 작업에 대 한 합니다.
+> 테이블에 두 개 이상의 셀 형식 (**프로토타입**)이 포함 된 경우 각 형식에 자동 행 크기 조정 작업을 `Identifier` 수행 하는 고유한 고유한가 있는지 확인 해야 합니다.
 
-이 셀 프로토타입의 각 요소에 대해 할당 한 **이름** 를 노출 하 C# 코드. 예를 들어:
+셀 프로토타입의 각 요소에 대해 코드에 C# 노출할 **이름을** 할당 합니다. 예를 들어:
 
-[![](autosizing-row-height-images/table05.png "이를 노출 하에 이름을 할당 C# 코드")](autosizing-row-height-images/table05.png#lightbox)
+[![](autosizing-row-height-images/table05.png "코드에 C# 노출할 이름을 할당 합니다.")](autosizing-row-height-images/table05.png#lightbox)
 
-그런 다음에 대 한 사용자 지정 클래스를 추가 합니다 `UITableViewController`는 `UITableView` 및 `UITableCell` (프로토타입). 예를 들어: 
+그런 다음 `UITableViewController` `UITableView` , 및`UITableCell` (프로토타입)의 사용자 지정 클래스를 추가 합니다. 예를 들어: 
 
-[![](autosizing-row-height-images/table06.png "사용자 지정 클래스는 UITableViewController는 UITableView 및는 UITableCell 추가")](autosizing-row-height-images/table06.png#lightbox)
+[![](autosizing-row-height-images/table06.png "UITableViewController, UITableView 및 UITableCell에 대 한 사용자 지정 클래스 추가")](autosizing-row-height-images/table06.png#lightbox)
 
-마지막으로 필요한 모든 콘텐츠는 레이블에 표시 됩니다로 설정 합니다 **줄** 속성을 `0`:
+마지막으로, 모든 예상 내용이 레이블에 표시 되도록 하려면 **선** 속성 `0`을 다음과 같이 설정 합니다.
 
-[![](autosizing-row-height-images/table06.png "줄 속성이 0으로 설정")](autosizing-row-height-images/table06a.png#lightbox)
+[![](autosizing-row-height-images/table06.png "선 속성을 0으로 설정 합니다.")](autosizing-row-height-images/table06a.png#lightbox)
 
-UI 정의 사용 하 여 자동 행 높이 크기 조정을 사용 하도록 설정 하는 코드를 추가 해 보겠습니다.
+UI를 정의한 상태에서 자동 행 높이 크기 조정을 사용 하도록 코드를 추가 해 보겠습니다.
 
-## <a name="enabling-auto-resizing-height"></a>높이 자동 크기 조정 사용
+## <a name="enabling-auto-resizing-height"></a>자동 크기 조정 높이 사용
 
-이 테이블 보기의 데이터 원본 (`UITableViewDatasource`) 또는 원본 (`UITableViewSource`)를 사용 해야 하는 셀을 큐에서 제거 했습니다 하는 경우는 `Identifier` 디자이너에서 정의한 합니다. 예를 들어:
+테이블 뷰의 Datasource (`UITableViewDatasource`) 또는 Source (`UITableViewSource`)에서 셀을 큐에서 제거 하는 경우 디자이너에서 정의한를 `Identifier` 사용 해야 합니다. 예:
 
 ```csharp
 public string CellID {
@@ -87,7 +87,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 }
 ```
 
-기본적으로 테이블 뷰 행 높이 자동 크기 조정에 대 한 설정 됩니다. 이 위해 합니다 `RowHeight` 속성에 설정할 `UITableView.AutomaticDimension`합니다. 설정 해야 합니다 `EstimatedRowHeight` 속성에서 우리의 `UITableViewController`합니다. 예를 들어:
+기본적으로 테이블 뷰는 행 높이 자동 크기 조정에 대해 설정 됩니다. 이 `RowHeight` 를 확인 하려면 속성을로 `UITableView.AutomaticDimension`설정 해야 합니다. `EstimatedRowHeight` 또한`UITableViewController`에서 속성을 설정 해야 합니다. 예를 들어:
 
 ```csharp
 public override void ViewWillAppear (bool animated)
@@ -103,13 +103,13 @@ public override void ViewWillAppear (bool animated)
 }
 ```
 
-이 견적을 정확 하 게 없는 테이블 보기의 각 행의 평균 높이의 대략적인 예상 값만 합니다.
+이 예상 값은 정확 하지 않아도 되며, 테이블 뷰에서 각 행의 평균 높이를 대략적으로 예측 한 것입니다.
 
-이 코드를 사용 하 여 앱을 실행 하는 경우 각 행 축소를 셀 프로토타입에서 마지막 레이블의 높이에 따라 증가 합니다. 예를 들어:
+이 코드를 사용 하면 앱이 실행 될 때 각 행이 셀 프로토타입에서 마지막 레이블의 높이를 기준으로 축소 되 고 증가 합니다. 예를 들어:
 
-[![](autosizing-row-height-images/table07.png "실행 하는 예제 테이블")](autosizing-row-height-images/table07.png#lightbox)
+[![](autosizing-row-height-images/table07.png "예제 테이블 실행")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [GrowRowTable (샘플)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)
+- [GrowRowTable (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/growrowtable)

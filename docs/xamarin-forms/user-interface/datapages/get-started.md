@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: d47a8d4a0fa72cee59a054554e9868f20323d00b
+ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832434"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980783"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -21,8 +21,7 @@ ms.locfileid: "67832434"
 ![](~/media/shared/preview.png "이 API는 현재 미리 보기")
 
 > [!IMPORTANT]
-> DataPages 필요는 [Xamarin.Forms 테마](~/xamarin-forms/user-interface/themes/index.md) 렌더링에 대 한 참조입니다.
-
+> DataPages를 렌더링 하려면 Xamarin.ios 테마 참조가 필요 합니다. 이 것은 프로젝트에 [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet 패키지 설치를 유발하고, [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) 및 [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet 패키지 전체에로 따른다.
 
 DataPages 미리 보기를 사용 하 여 간단한 데이터 기반 페이지를 작성 합니다. 시작 하려면 다음 단계를 수행 합니다. 이 데모에서는 미리 보기에서 하드 코드 된 스타일 ("이벤트")를 작성 하는 코드에서 특정 JSON 형식 에서만 작동 합니다.
 
@@ -52,7 +51,7 @@ Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트�
 ```
 
 > [!IMPORTANT]
-> 단계를 따라야 [(아래) 테마 어셈블리를 로드](#loadtheme) ios 일부 상용구 코드를 추가 하 여 `AppDelegate` Android 및 `MainActivity`합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
+> 또한 iOS `AppDelegate` 및 Android `MainActivity`에 일부 상용구 코드를 추가 하 여 [테마 어셈블리를 로드](#loadtheme) 하는 단계를 수행 해야 합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. XAML 페이지 추가
@@ -100,7 +99,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 삭제를 `Content` 요소로 바꿉니다는 `p:ListDataPage.DataSource` 데이터를 사용 하 여 페이지를 채우려면. 원격 Json 아래 예제에서는 데이터 파일 URL에서 로드 되 고 있습니다.
 
 > [!NOTE]
-> 미리 보기 *필요* 는 `StyleClass` 특성을 데이터 원본에 대 한 렌더링 힌트를 제공 합니다. 합니다 `StyleClass="Events"` 미리 보기에 사전 정의 된 스타일을 포함 하는 레이아웃을 가리킵니다 *하드 코드 된* 사용 하 고 JSON 데이터 원본과 일치 하도록 합니다.
+> 미리 보기 에는 `StyleClass` 데이터 원본에 대 한 렌더링 힌트를 제공 하는 특성이 필요 합니다. 합니다 `StyleClass="Events"` 미리 보기에 사전 정의 된 스타일을 포함 하는 레이아웃을 가리킵니다 *하드 코드 된* 사용 하 고 JSON 데이터 원본과 일치 하도록 합니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -177,7 +176,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
 
-부터 테마를 만드는 작업이 좀 더 많은 (참조를 [테마 가이드](~/xamarin-forms/user-interface/themes/index.md)) 하지만 향후 미리 보기 릴리스는 쉽게이 작업을 수행 하 합니다.
+테마를 처음부터 만드는 데 더 많은 작업이 필요 하지만 이후 미리 보기 릴리스에서는이 작업을 보다 쉽게 수행할 수 있습니다.
 
 
 ## <a name="troubleshooting"></a>문제 해결

@@ -1,89 +1,89 @@
 ---
 title: ViewPager
-description: ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 왼쪽 및 오른쪽 데이터 페이지를 단계별로 gestural 탐색 안쪽으로 살짝 밀어 사용자를 수 있습니다. 이 가이드와 조각 없이 ViewPager 사용 하 여 gestural 탐색을 구현 하는 방법에 설명 합니다. 또한 PagerTitleStrip 및 PagerTabStrip을 사용 하 여 페이지 표시기를 추가 하는 방법을 설명 합니다.
+description: ViewPager는 gestural 탐색을 구현할 수 있도록 하는 레이아웃 관리자입니다. Gestural 탐색을 사용 하면 사용자가 왼쪽 및 오른쪽으로 이동 하 여 데이터 페이지를 단계별로 이동할 수 있습니다. 이 가이드에서는 조각이 있거나 없는 ViewPager를 사용 하 여 gestural 탐색을 구현 하는 방법을 설명 합니다. PagerTitleStrip 및 PagerTabStrip를 사용 하 여 페이지 표시기를 추가 하는 방법에 대해서도 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: bb9795eb1e77a48b01556c553ae19613d6ab6de6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.openlocfilehash: 8c7aae672d284d4105c6b09dfe81b72cf4ad519b
+ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267607"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68645508"
 ---
 # <a name="viewpager"></a>ViewPager
 
-_ViewPager는 레이아웃 관리자 gestural 탐색을 구현 하면입니다. 왼쪽 및 오른쪽 데이터 페이지를 단계별로 gestural 탐색 안쪽으로 살짝 밀어 사용자를 수 있습니다. 이 가이드와 조각 없이 ViewPager 사용 하 여 gestural 탐색을 구현 하는 방법에 설명 합니다. 또한 PagerTitleStrip 및 PagerTabStrip을 사용 하 여 페이지 표시기를 추가 하는 방법을 설명 합니다._
+_ViewPager는 gestural 탐색을 구현할 수 있도록 하는 레이아웃 관리자입니다. Gestural 탐색을 사용 하면 사용자가 왼쪽 및 오른쪽으로 이동 하 여 데이터 페이지를 단계별로 이동할 수 있습니다. 이 가이드에서는 조각이 있거나 없는 ViewPager를 사용 하 여 gestural 탐색을 구현 하는 방법을 설명 합니다. PagerTitleStrip 및 PagerTabStrip를 사용 하 여 페이지 표시기를 추가 하는 방법에 대해서도 설명 합니다._
 
  
 ## <a name="overview"></a>개요
 
-앱 개발의 일반적인 시나리오는 형제 뷰 간에 gestural 탐색을 사용 하 여 사용자를 제공 해야 합니다. 이 방법에서는 사용자 천공 기와 왼쪽 또는 오른쪽으로 액세스의 내용 페이지 (예를 들어, 설치 마법사 또는 슬라이드 쇼). 사용 하 여 이러한 안쪽으로 살짝 밀어 뷰를 만들 수 있습니다는 `ViewPager` 에서 사용할 수 있는 위젯 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)합니다. `ViewPager` 는 여러 자식 뷰 이루어져 레이아웃 위젯 각 자식 뷰 레이아웃 페이지를 구성 하는 위치: 
+앱 개발에서 일반적인 시나리오는 사용자에 게 형제 보기 간에 gestural 탐색을 제공 해야 하는 경우입니다. 이 방법에서는 사용자가 왼쪽 또는 오른쪽으로 swipes 콘텐츠 페이지 (예: 설치 마법사 또는 슬라이드 쇼)에 액세스할 수 있습니다. `ViewPager` [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)에서 사용할 수 있는 위젯을 사용 하 여 이러한 살짝 밀기 보기를 만들 수 있습니다. 는 `ViewPager` 각 자식 뷰가 레이아웃의 페이지를 구성 하는 여러 자식 뷰로 구성 된 레이아웃 위젯입니다. 
 
-[![가로 안쪽으로 살짝 밀어 예제를 사용 하 여 스크린 샷을의 TreePager 앱](images/01-intro-sml.png)](images/01-intro.png#lightbox)
+[![수평 살짝 밀기 예제가 있는 TreePager 앱의 스크린샷](images/01-intro-sml.png)](images/01-intro.png#lightbox)
 
-일반적으로 `ViewPager` 와 함께 사용 되어 [조각을](https://developer.xamarin.com/guides/android/platform_features/fragments/)하지만 사용 하려는 경우가 있습니다 `ViewPager` 의 복잡성이 추가 하지 않고 `Fragment`s입니다.
+일반적으로 `ViewPager`는 [조각](~/android/platform/fragments/index.md)과 함께 사용되지만 `Fragment`의 복잡성을 추가 하지 않고 `ViewPager`를 사용 해야 하는 경우도 있습니다.
 
-`ViewPager` 표시할 보기를 제공 하는 어댑터 패턴을 사용 합니다. 여기에 어댑터를 사용 하는 개념적으로 비슷합니다 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) &ndash; 구현의 제공한 `PagerAdapter` 페이지를 생성 하는 `ViewPager` 사용자에 게 표시 합니다. 페이지에서 표시 `ViewPager` 될 수 있습니다 `View`s 또는 `Fragment`s입니다. 때 `View`가 표시 되는 어댑터 서브 클래스 Android의 `PagerAdapter` 기본 클래스입니다. 하는 경우 `Fragment`가 표시 되는 어댑터 서브 클래스 Android의 `FragmentPagerAdapter`합니다. Android 지원 라이브러리도 포함 되어 있습니다 `FragmentPagerAdapter` (의 서브 클래스 `PagerAdapter`) 연결의 세부 정보를 사용 하 여는 데 `Fragment`s 데이터입니다. 
+`ViewPager`어댑터 패턴을 사용 하 여 표시할 뷰를 제공 합니다. 여기에서 사용 된 어댑터는 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) &ndash; 에서 사용 하는 것과 개념적으로 유사 하며 `PagerAdapter` , `ViewPager` 사용자에 게 표시 되는 페이지를 생성 하기 위해의 구현을 제공 합니다. 에 의해 `ViewPager` 표시 되는 페이지는 s `Fragment`또는 s 일 `View`수 있습니다. S `View`가 표시 되 면 어댑터는 Android의 `PagerAdapter` 기본 클래스입니다. S `Fragment`가 표시 되 면 어댑터 하위 클래스 Android가 `FragmentPagerAdapter`표시 됩니다. Android 지원 라이브러리에는 데이터 `FragmentPagerAdapter` 에 연결 `Fragment`하는 `PagerAdapter`방법에 대 한 세부 정보를 제공 하는 (의 하위 클래스)도 포함 되어 있습니다. 
 
-이 가이드에는 두 가지 방법을 모두 보여 줍니다. 
+이 가이드에서는 두 가지 방법을 모두 보여 줍니다. 
 
--   [Viewpager](~/android/user-interface/controls/view-pager/viewpager-and-views.md), [TreePager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) 사용 하는 방법을 보여 주기 위해 개발 된 앱 `ViewPager` 트리 카탈로그 (낙 엽 및 evergreen 트리의 이미지 갤러리)의 보기를 표시 하려면. 
-    `PagerTabStrip`  및 `PagerTitleStrip` 페이지 탐색에 도움이 되는 제목을 표시 하는 데 사용 됩니다.
+-   뷰를 사용 하는 [viewpager](~/android/user-interface/controls/view-pager/viewpager-and-views.md)에서 [TreePager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) 앱은를 사용 `ViewPager` 하 여 트리 카탈로그 (낙 엽 수 및가 중 트리의 이미지 갤러리) 보기를 표시 하는 방법을 보여 주기 위해 개발 되었습니다. 
+    `PagerTabStrip`및 `PagerTitleStrip` 는 페이지 탐색에 도움이 되는 제목을 표시 하는 데 사용 됩니다.
 
--   [Viewpager](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), 약간 더 복잡 [FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) 사용 하는 방법을 보여 주기 위해 개발 된 앱 `ViewPager` 사용 하 여 `Fragment`s로 수학 문제를 표시 하는 앱을 빌드하려면 플래시 카드 및 사용자 입력에 응답 합니다. 
+-   [조각을 사용 하는 viewpager](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md)에서 `ViewPager`와 함께 `Fragment`를 사용하여 플래시 카드로 수학 문제를 제공 하 고 사용자 입력에 응답 하는 앱을 빌드하는 방법을 보여 주기 위해 약간 더 복잡 한 [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) 앱이 개발 되었습니다. 
 
 
 ## <a name="requirements"></a>요구 사항
 
-사용 하도록 `ViewPager` 앱 프로젝트에 설치 해야 합니다 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 패키지. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 프로젝트에서 NuGet을 포함 하 여](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)입니다. 
+앱 프로젝트 `ViewPager` 에서를 사용 하려면 [Android 지원 라이브러리 v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) 패키지를 설치 해야 합니다. NuGet 패키지를 설치 하는 [방법에 대 한 자세한 내용은 연습: 프로젝트](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)에 NuGet을 포함 합니다. 
 
  
 ## <a name="architecture"></a>아키텍처
 
-사용 하 여 gestural 탐색을 구현 하기 위한 세 가지 구성 요소는 사용 `ViewPager`:
+Gestural 탐색을 구현 하 `ViewPager`는 데 사용 되는 세 가지 구성 요소는 다음과 같습니다.
 
 -   ViewPager
 -   어댑터
 -   호출기 표시기
 
-이러한 각 구성이 요소 아래에 요약 되어 있습니다.
+이러한 각 구성 요소는 아래에 요약 되어 있습니다.
 
 
 
 ### <a name="viewpager"></a>ViewPager
 
-`ViewPager` 컬렉션을 표시 하는 레이아웃 관리자 `View`번 s 하나입니다. 역할은 사용자의 살짝 밀기 제스처를 감지 하 고 적절 하 게 다음 또는 이전 보기로 이동 합니다. 예를 들어 아래 스크린샷에서 보여 줍니다는 `ViewPager` 사용자 제스처에 대 한 응답에서 하나의 이미지에서 다음으로 전환 하기: 
+`ViewPager`는 한 번에 하나씩의 `View`컬렉션을 표시 하는 레이아웃 관리자입니다. 해당 작업은 사용자의 살짝 밀기 제스처를 검색 하 고 적절 한 다음 또는 이전 뷰로 이동 하는 것입니다. 예를 들어 아래 스크린샷에서는 사용자 제스처 `ViewPager` 에 대 한 응답으로 한 이미지에서 다음 이미지로의 전환을 수행 하는 방법을 보여 줍니다. 
 
-[![클로즈업의 TreePager 앱 보기 간에 전환을 표시](images/02-transition-sml.png)](images/02-transition.png#lightbox)
+[![보기 간 전환을 표시 하는 TreePager 앱의 확대/확대](images/02-transition-sml.png)](images/02-transition.png#lightbox)
 
 
 ### <a name="adapter"></a>어댑터
 
-`ViewPager` 해당 데이터를 가져오고를 *어댑터*합니다. 어댑터의 작업을 만들 때 합니다 `View`으로 표시 되는 `ViewPager`, 필요에 따라 제공 합니다. 아래 다이어그램에서는이 개념을 보여 줍니다 &ndash; 어댑터를 만들고 채웁니다 `View`s를 제공 하 고는 `ViewPager`합니다. 로 `ViewPager` 사용자의 살짝 밀기 제스처를 감지를 제공 하기 위해 어댑터는 적절 한 요청 `View` 표시 하려면: 
+`ViewPager`*어댑터*에서 데이터를 가져옵니다. 어댑터의 작업은에 `View` `ViewPager`표시 되는를 만들고 필요에 따라 제공 합니다. 아래 다이어그램에서는 어댑터가를 만들고 &ndash; 채우고 `View`를 `ViewPager`제공 하는이 개념을 보여 줍니다. 는 `ViewPager` 사용자의 살짝 밀기 제스처를 검색 하 고, 표시 하는 데 적합 한 `View` 을 제공 하도록 어댑터에 요청 합니다. 
 
-[![어댑터는 ViewPager에 이미지 이름과 연결 하는 방법을 보여 주는 다이어그램](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
+[![어댑터가 ViewPager에 이미지 및 이름을 연결 하는 방법을 보여 주는 다이어그램](images/03-adapter-sml.png)](images/03-adapter.png#lightbox)
 
-이 특정 예제에서는 각 `View` 에 전달 되기 전에 트리 이름과 트리 이미지에서 생성 되는 `ViewPager`합니다. 
+이 특정 예제에서 각 `View` 는에 전달 `ViewPager`되기 전에 트리 이미지와 트리 이름에서 생성 됩니다. 
 
 
 
 ### <a name="pager-indicator"></a>호출기 표시기
 
-`ViewPager` 큰 데이터 집합을 표시 하려면 사용할 수 있습니다 (예를 들어, 이미지 갤러리 있을 수백 개의 이미지). 사용자 큰 데이터 집합을 이동 하는 데 도움이 `ViewPager` 와 함께 자주를 *호출기 표시기* 문자열로 표시 하는 합니다. 이미지 제목, 캡션, 또는 데이터 집합 내에서 현재 보기의 위치를 단순히 문자열 수 있습니다. 
+`ViewPager`대량 데이터 집합을 표시 하는 데 사용할 수 있습니다. 예를 들어 이미지 갤러리에는 수백 개의 이미지가 포함 될 수 있습니다. 사용자가 대량 데이터 집합을 `ViewPager` 탐색 하는 데 도움을 주기 위해 일반적으로 문자열을 표시 하는 *호출기 표시기* 가 수반 됩니다. 문자열은 이미지 제목, 캡션 또는 단지 데이터 집합 내의 현재 뷰의 위치 일 수 있습니다. 
 
-이 탐색 정보를 생성할 수 있는 두 개의 뷰가: `PagerTabStrip` 및 `PagerTitleStrip.` 맨 위에 있는 문자열을 표시 하는 각를 `ViewPager`에서 해당 데이터를 가져오고 각 및는 `ViewPager`의 한다는 항상 동기화를 유지 하므로 어댑터는 현재 표시 된 `View`합니다. 그 차이 `PagerTabStrip` 포함 하는 동안 "현재" 문자열에 대 한 시각적 표시기 `PagerTitleStrip` 않습니다 (아니라이 스크린 샷에 표시): 
+이 탐색 정보를 생성할 수 있는 두 가지 뷰가 있습니다. 및 `PagerTabStrip` `PagerTitleStrip.` 각각은의 맨 위에 `ViewPager`문자열을 표시 하 고, 각각 `ViewPager`의 어댑터에서 데이터를 끌어와서 항상와 동기화 됩니다. 현재 표시 `View`되어 있습니다. 두 항목 간의 차이점은 ( `PagerTabStrip` 이러한 스크린샷에 표시 된 것 처럼)가 아니라 "current `PagerTitleStrip` " 문자열에 대 한 시각적 표시기를 포함 한다는 것입니다. 
 
-[![PagerTitleStrip 및 PagerTabStrip TreePager 응용 프로그램의 스크린샷](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
+[![PagerTitleStrip 및 PagerTabStrip를 사용 하는 TreePager 앱의 스크린샷](images/04-comparison-sml.png)](images/04-comparison.png#lightbox)
 
-이 가이드에서는 immplement 방법 `ViewPager`, 어댑터 및 표시기 앱 구성 요소 gestural 탐색을 지원 하기를 통합 합니다. 
+이 가이드는 앱 구성 요소 `ViewPager`를 immplement, 어댑터 및 표시기 (gestural) 탐색을 지원 하도록 통합 하는 방법을 보여 줍니다. 
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [TreePager (샘플)](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager)
-- [FlashCardPager (샘플)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)
+- [TreePager (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)
+- [FlashCardPager (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

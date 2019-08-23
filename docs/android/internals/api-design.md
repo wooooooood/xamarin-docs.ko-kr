@@ -1,47 +1,44 @@
 ---
-title: Xamarin.Android API Design Principles
+title: Xamarin Android API 디자인 원칙
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c10935f4623fd4455ec5cf8a80c6473c0f69d9b9
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
-ms.translationtype: MT
+ms.openlocfilehash: 2958e456aeb25ba39697ad82500d574907e963e4
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674685"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510758"
 ---
-# <a name="xamarinandroid-api-design-principles"></a>Xamarin.Android API Design Principles
+# <a name="xamarinandroid-api-design-principles"></a>Xamarin Android API 디자인 원칙
 
+Mono의 일부인 핵심 기본 클래스 라이브러리 외에도 Xamarin.ios는 개발자가 Mono를 사용 하 여 네이티브 Android 응용 프로그램을 만들 수 있도록 다양 한 Android Api에 대 한 바인딩을 제공 합니다.
 
-## <a name="overview"></a>개요
-
-가장 핵심적인 Mono의 일부인 기본 클래스 라이브러리 외에도 Xamarin.Android 개발자 Mono를 사용 하 여 네이티브 Android 응용 프로그램을 만들 수 있도록 다양 한 Android Api에 대 한 바인딩을 제공 합니다.
-
-Xamarin.Android의 핵심 있습니다 interop 엔진 Java 대상과 브리지 C# 세계 이며 다른.NET 언어 또는 C#에서 Java Api에 대 한 액세스를 사용 하 여 개발자에 게 제공 합니다.
+Xamarin.ios의 핵심에는 C# 전 세계와 java 세계를 연결 하 고 개발자에 게 또는 다른 .net 언어에서 C# java api에 대 한 액세스 권한을 제공 하는 interop 엔진이 있습니다.
 
 
 ## <a name="design-principles"></a>디자인 원칙
 
-이 Xamarin.Android 바인딩에 대 한 디자인 원칙은 중 일부
+다음은 Xamarin Android 바인딩에 대 한 몇 가지 디자인 원칙입니다.
 
--  따라야 합니다 [.NET Framework 디자인 지침](https://docs.microsoft.com/dotnet/standard/design-guidelines/)합니다.
+-  [.NET Framework 디자인 지침](https://docs.microsoft.com/dotnet/standard/design-guidelines/)을 따릅니다.
 
--  서브 클래스 Java 클래스를 수 있습니다.
+-  개발자가 Java 클래스를 서브클래싱하는 것을 허용 합니다.
 
--  서브 클래스는 C# 표준 구문을 사용 하 여 작동 해야 합니다.
+-  서브 클래스는 표준 C# 구문을 사용 해야 합니다.
 
--  기존 클래스에서 파생 됩니다.
+-  기존 클래스에서 파생 합니다.
 
--  체인에 기본 생성자를 호출 합니다.
+-  체인으로 기본 생성자를 호출 합니다.
 
--  C#의 재정의 시스템을 사용 하 여 메서드를 재정의 해야 합니다.
+-  재정의 메서드는의 override 시스템 C#을 사용 하 여 수행 해야 합니다.
 
--  쉬우며 일반적인 Java 작업 및 하드 Java 작업 가능 하 게 합니다.
+-  일반적인 Java 작업을 쉽게 수행 하 고 하드 Java 작업을 수행할 수 있습니다.
 
--  C# 속성으로 JavaBean 속성을 노출 합니다.
+-  JavaBean 속성을 속성 C# 으로 노출 합니다.
 
 -  강력한 형식의 API를 노출 합니다.
 
@@ -49,46 +46,46 @@ Xamarin.Android의 핵심 있습니다 interop 엔진 Java 대상과 브리지 C
 
     - 런타임 오류를 최소화 합니다.
 
-    - 반환 형식은 IDE intellisense를 가져옵니다.
+    - 반환 형식에 대 한 IDE intellisense를 가져옵니다.
 
-    - IDE 팝업 설명서에 대 한 허용합니다.
+    - IDE 팝업 설명서를 허용 합니다.
 
--  IDE에서 탐색을 api는 것이 좋습니다.
+-  Api의 IDE 내 탐색을 권장 합니다.
 
-    - Java Classlib 최소화 노출에 대 한 프레임 워크 대안을 활용 합니다.
+    - 프레임 워크 대체를 활용 하 여 Java Classlib 노출을 최소화 합니다.
 
-    - 적절 하 고 해당 하는 경우에 단일 메서드 인터페이스 대신 C# 대리자 (람다, 무명 메서드 및 System.Delegate)를 노출 합니다.
+    - 적절 C# 하 고 적용 가능한 경우 단일 메서드 인터페이스 대신 대리자 (람다, 무명 메서드 및 system.object)를 노출 합니다.
 
-    - 임의의 Java 라이브러리를 호출 하는 메커니즘이 제공 ( [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)).
+    - 임의의 Java 라이브러리 ( [JNIEnv](xref:Android.Runtime.JNIEnv))를 호출 하는 메커니즘을 제공 합니다.
 
 
 ## <a name="assemblies"></a>어셈블리
 
-Xamarin.Android를 구성 하는 어셈블리의 여러 포함 된 *MonoMobile 프로필*합니다. 합니다 [어셈블리](~/cross-platform/internals/available-assemblies.md) 페이지에 자세한 정보가 있습니다.
+Xamarin.ios에는 *MonoMobile 프로필*을 구성 하는 많은 어셈블리가 포함 되어 있습니다. [어셈블리](~/cross-platform/internals/available-assemblies.md) 페이지에 자세한 정보가 있습니다.
 
-에 포함 된 Android 플랫폼에 대 한 바인딩을 `Mono.Android.dll` 어셈블리입니다. 사용 중인 Android Api에 대 한 전체 바인딩와 통신 하는 Android 런타임 VM 사용 하 여이 어셈블리에 포함 되어 있습니다.
+Android 플랫폼에 대 한 바인딩은 `Mono.Android.dll` 어셈블리에 포함 되어 있습니다. 이 어셈블리에는 Android Api를 사용 하 고 Android 런타임 VM과 통신 하기 위한 전체 바인딩이 포함 되어 있습니다.
 
 
-## <a name="binding-design"></a>디자인 바인딩
+## <a name="binding-design"></a>바인딩 디자인
 
 
 ### <a name="collections"></a>컬렉션
 
-Android Api 목록, 집합 및 지도 제공 하는 광범위 하 게 java.util 컬렉션을 활용 합니다. 사용 하 여 이러한 요소를 위해 노출 합니다 [System.Collections.Generic](xref:System.Collections.Generic) 바인딩의 인터페이스입니다. 기본 매핑은 다음과 같습니다.
+Android Api는 java. util 컬렉션을 광범위 하 게 활용 하 여 목록, 집합 및 지도를 제공 합니다. 이러한 요소는 바인딩에서 컬렉션의 [제네릭](xref:System.Collections.Generic) 인터페이스를 사용 하 여 노출 합니다. 기본 매핑은 다음과 같습니다.
 
--   [java.util.Set<E> ](https://developer.android.com/reference/java/util/Set.html) 시스템 형식에 매핑됩니다 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 [Android.Runtime.JavaSet<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaSet%601/)합니다.
+-   JavaSet는 시스템 유형 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 Android. c a n. [<E> ](https://developer.android.com/reference/java/util/Set.html) [<T>](xref:Android.Runtime.JavaSet`1)
 
--   [java.util.List<E> ](https://developer.android.com/reference/java/util/List.html) 시스템 형식에 매핑됩니다 [IList<T>](xref:System.Collections.Generic.IList`1), 도우미 클래스 [Android.Runtime.JavaList<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaList%601/)합니다.
+-   JavaList은 시스템 형식 [IList<T>](xref:System.Collections.Generic.IList`1), 도우미 클래스 Android. [<E> ](https://developer.android.com/reference/java/util/List.html) [<T>](xref:Android.Runtime.JavaList`1)
 
--   [< K, V > java.util.Map](https://developer.android.com/reference/java/util/Map.html) 시스템 형식에 매핑됩니다 [< TKey, TValue > IDictionary](xref:System.Collections.Generic.IDictionary`2), 도우미 클래스 [Android.Runtime.JavaDictionary < K, V >](https://developer.xamarin.com/api/type/Android.Runtime.JavaDictionary%602/)합니다.
+-   TValue [< K, v >](https://developer.android.com/reference/java/util/Map.html) 시스템 유형 [IDictionary < TKey, >](xref:System.Collections.Generic.IDictionary`2), 도우미 클래스 [JavaDictionary < K, v >](xref:Android.Runtime.JavaDictionary`2)에 매핑됩니다.
 
--   [java.util.Collection<E> ](https://developer.android.com/reference/java/util/Collection.html) 시스템 형식에 매핑됩니다 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), 도우미 클래스 [Android.Runtime.JavaCollection<T>](https://developer.xamarin.com/api/type/Android.Runtime.JavaCollection%601/)합니다.
+-   JavaCollection은 시스템 형식 [ICollection<T>](xref:System.Collections.Generic.ICollection`1), helper 클래스에 매핑됩니다. [<E> ](https://developer.android.com/reference/java/util/Collection.html) [<T>](xref:Android.Runtime.JavaCollection`1)
 
-이러한 형식의 마샬링 copyless 빠르게를 용이 하 게 하기 위한 도우미 클래스를 준비 했습니다. 가능한 경우 제공 된 프레임 워크 구현 대신 컬렉션을 제공 하는이 사용 하는 것이 좋습니다와 같은 [ `List<T>` ](xref:System.Collections.Generic.List`1) 하거나 [ `Dictionary<TKey, TValue>` ](xref:System.Collections.Generic.Dictionary`2)합니다. 합니다 [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) 구현을 네이티브 Java 컬렉션을 내부적으로 사용 되며 따라서 필요 하지 않습니다는 Android API 멤버에 전달 하는 경우 기본 컬렉션에서 복사 합니다.
+이러한 유형의 더 빠른 복사를 용이 하 게 하는 도우미 클래스를 제공 했습니다. 가능 하면 또는 [`List<T>`](xref:System.Collections.Generic.List`1) [`Dictionary<TKey, TValue>`](xref:System.Collections.Generic.Dictionary`2)와 같이 프레임 워크에서 제공 하는 구현 대신 제공 된 컬렉션을 사용 하는 것이 좋습니다. [Android Runtime](xref:Android.Runtime) 구현은 내부적으로 네이티브 Java 컬렉션을 사용 하므로 android API 멤버에 전달할 때 네이티브 컬렉션 간에 복사 하지 않아도 됩니다.
 
-인터페이스 구현을 해당 인터페이스를 수락 하는 Android 메서드에 전달, 예: 전달 수를 `List<int>` 에 [ArrayAdapter&lt;int&gt;(컨텍스트, int, IList&lt;int&gt;)](https://developer.xamarin.com/api/constructor/Android.Widget.ArrayAdapter%3CT%3E.ArrayAdapter%3CT%3E/p/Android.Content.Context/System.Int32/System.Collections.Generic.IList%7BT%7D/)생성자입니다. *그러나*, 모든 구현에 대 한 *제외 하 고* Android.Runtime 구현은이 포함 됩니다 *복사* 는 Android 런타임 VM에 Mono VM 목록입니다. 목록 뒷부분에 나오는 경우 Android 런타임 내에서 변경 (예: 호출 하 여는 [ArrayAdapter&lt;T&gt;합니다. Add(T)](https://developer.xamarin.com/api/member/Android.Widget.ArrayAdapter%3CT%3E.Add/p/T/) 메서드), 해당 변경 내용을 *것입니다* 관리 코드에 표시 됩니다. 경우는 `JavaList<int>` 된 사용 내용이 표시 됩니다.
+인터페이스 구현을 해당 인터페이스를 허용 하는 Android 메서드에 전달할 수 있습니다. 예를 들어 `List<int>` [arrayadapter&lt;int&gt;(Context, int, IList&lt;&gt;int)](xref:Android.Widget.ArrayAdapter`1) 생성자에를 전달 합니다. *그러나*android runtime 구현을 *제외한* 모든 구현에 대해 Mono VM에서 android 런타임 VM으로 목록을 *복사* 하는 작업이 포함 됩니다. 이후 목록이 Android 런타임 내에서 변경 되 면 (예: [&lt;arrayadapter T&gt;를 호출 하 여) Add (T)](xref:Android.Widget.ArrayAdapter`1.Add*) 메서드)는 관리 코드에 표시 *되지* 않습니다. 을 `JavaList<int>` 사용 하는 경우 이러한 변경 내용이 표시 됩니다.
 
-조항을, 컬렉션 인터페이스는 구현 *되지* 나열 된 위의 하나 **도우미 클래스**es [In]만 마샬링할:
+위에 나열 된 **도우미 클래스**중 하나가 *아닌* Rephrased, Collections 인터페이스 구현은 [In]만 마샬링합니다.
 
 ```csharp
 // This fails:
@@ -109,21 +106,21 @@ if (goodSource.Count != 4) // false
 
 ### <a name="properties"></a>속성
 
-Java 메서드를 속성으로 해당 하는 경우 변환 됩니다.
+적절 한 경우 Java 메서드는 속성으로 변환 됩니다.
 
--  Java 메서드 쌍 `T getFoo()` 하 고 `void setFoo(T)` 으로 변환 되는 `Foo` 속성입니다. 예제: [Activity.Intent](https://developer.xamarin.com/api/property/Android.App.Activity.Intent/)합니다.
+-  Java 메서드 `T getFoo()` 및 `void setFoo(T)` 는 `Foo` 속성으로 변환 됩니다. 예제: [활동 의도](xref:Android.App.Activity.Intent)입니다.
 
--  다음 Java 메서드의 경우 `getFoo()` 읽기 전용 Foo 속성으로 변환 됩니다. 예제: [Context.PackageName](https://developer.xamarin.com/api/property/Android.Content.Context.PackageName/).
+-  Java 메서드 `getFoo()` 는 읽기 전용 Foo 속성으로 변환 됩니다. 예제: [Context.PackageName](xref:Android.Content.Context.PackageName).
 
--  집합 전용 속성이 생성 되지 않습니다.
+-  설정 전용 속성은 생성 되지 않습니다.
 
--  속성은 *되지* 속성 형식이 배열 되는 경우 생성 합니다.
+-  속성 형식이 배열인 경우에는 속성이 생성 *되지 않습니다* .
 
 
 
-### <a name="events-and-listeners"></a>수신기 및 이벤트
+### <a name="events-and-listeners"></a>이벤트 및 수신기
 
-Java를 기반으로 하는 Android Api 및 해당 구성 요소 이벤트 수신기를 연결 하기 위한 Java 패턴을 따릅니다. 이 패턴에서 사용자가 익명 클래스를 만들고를 재정의할 메서드를 선언할 필요 하므로 작업은 복잡할 수 경향이, 예를 들어,이 Java 사용 하 여 Android에서 작업은 수행 하는 방법을:
+Android Api는 Java 위에 빌드되어 있으며 해당 구성 요소는 이벤트 수신기를 연결 하기 위한 Java 패턴을 따릅니다. 이 패턴은 사용자가 익명 클래스를 만들고 재정의할 메서드를 선언 해야 하기 때문에 복잡할 수 있습니다. 예를 들어 다음은 Java를 사용 하 여 Android에서 작업을 수행 하는 방법입니다.
 
 ```csharp
 final android.widget.Button button = new android.widget.Button(context);
@@ -136,7 +133,7 @@ button.setOnClickListener (new View.OnClickListener() {
 });
 ```
 
-이벤트를 사용 하 여 C#에서 해당 하는 코드는 다음과 같습니다.
+이벤트를 C# 사용 하는 동일한 코드는 다음과 같습니다.
 
 ```csharp
 var button = new Android.Widget.Button (context) {
@@ -147,58 +144,57 @@ button.Click += (sender, e) => {
 };
 ```
 
-Xamarin.Android와 함께 사용할 수 있는 위의 메커니즘 중 두 참고 합니다. 수신기 인터페이스를 구현 하 고 View.SetOnClickListener를 사용 하 여 연결 하거나 클릭 이벤트에 일반적인 C# 패러다임 중 하나를 통해 만든 대리자를 연결할 수 있습니다.
+위의 두 메커니즘 모두 Xamarin. Android에서 사용할 수 있습니다. 수신기 인터페이스를 구현 하 고 View. Setonclick 수신기를 사용 하 여 연결 하거나 일반적인 C# 패러다임을 통해 만든 대리자를 클릭 이벤트에 연결할 수 있습니다.
 
-API 요소를 기반으로 만들겠습니다. 수신기 콜백 메서드는 void 반환에 있는 경우는 [EventHandler&lt;TEventArgs&gt; ](xref:System.EventHandler`1) 위임 합니다. 이러한 수신기 형식에 대 한 위의 예제와 같이 이벤트를 생성합니다. 그러나 수신기 콜백을 반환 void가 아닌 및 비- **부울** 값, 이벤트 및 EventHandlers 사용 되지 않습니다. 대신 콜백의 서명에 대 한 특정 대리자를 생성 하 고 이벤트 대신 속성을 추가 합니다. 이유는 대리자 호출 순서를 사용 하 여 처리 하 고 처리를 반환 하는 것입니다. 이 방법은 수행 되는 Xamarin.iOS API를 사용 하 여 반영 됩니다.
+수신기 콜백 메서드에 void 반환이 있는 경우 [&lt;EventHandler teventargs&gt; ](xref:System.EventHandler`1) 대리자를 기반으로 API 요소를 만듭니다. 이러한 수신기 형식에 대 한 위의 예제와 같은 이벤트를 생성 합니다. 그러나 수신기 콜백이 void가 아닌 값을 반환 하 고 **부울** 이 아닌 값을 반환 하는 경우에는 Events 및 EventHandlers가 사용 되지 않습니다. 대신 콜백 시그니처의 특정 대리자를 생성 하 고 이벤트 대신 속성을 추가 합니다. 그 이유는 대리자 호출 순서를 처리 하 고 처리를 반환 하기 위한 것입니다. 이 방법은 Xamarin.ios API를 사용 하 여 수행 하는 작업을 미러링합니다.
 
-C# 이벤트 또는 속성 자동으로 생성 하는 경우 Android 이벤트 등록 메서드:
+C#이벤트 또는 속성은 Android 이벤트 등록 방법의 경우에만 자동으로 생성 됩니다.
 
-1. 에 `set` 접두사, 예를 들어 [ *설정*OnClickListener](https://developer.xamarin.com/api/member/Android.Views.View.SetOnClickListener/)합니다.
+1. 에는 `set` 접두사가 있습니다 (예: [on클릭 수신기 *설정*](xref:Android.Views.View.SetOnClickListener*)).
 
-1. 에 `void` 형식을 반환 합니다.
+1. 에는 `void` 반환 형식이 있습니다.
 
-1. 하나의 매개 변수를 수락 매개 변수 형식은 인터페이스, 인터페이스에 하나만 메서드 및 인터페이스 이름이 끝나는 `Listener` , 예를 들어 [View.OnClick *수신기*](https://developer.xamarin.com/api/type/Android.Views.View+IOnClickListener/)합니다.
+1. 는 매개 변수를 하나만 허용 하 고 매개 변수 형식은 인터페이스 이며 인터페이스에는 메서드가 하나만 있으며 인터페이스 이름은에서 `Listener` 끝납니다. 예를 들어, [View. OnClick *수신기*](xref:Android.Views.View.IOnClickListener)입니다.
 
 
-또한 수신기 인터페이스 메서드 경우 형식이 반환 **부울** 대신 **void**에 생성 된 *EventArgs* 서브 클래스를 포함됩니다*처리* 속성입니다. 값을 *처리* 속성은 반환 값으로 사용 합니다 *수신기* 메서드와 해당 기본값은 `true`합니다.
+또한 수신기 인터페이스 메서드의 반환 형식이 **void**가 아닌 **부울** 인 경우 생성 된 *EventArgs* 하위 클래스에는 *처리* 된 속성이 포함 됩니다. *처리* 된 속성의 값은 *수신기* 메서드의 반환 값으로 사용 되 고 기본값은로 `true`설정 됩니다.
 
-예를 들어, Android [View.setOnKeyListener()](https://developer.xamarin.com/api/member/Android.Views.View.SetOnKeyListener/p/Android.Views.View+IOnKeyListener/) 메서드에서 [View.OnKeyListener](https://developer.xamarin.com/api/type/Android.Views.View+IOnKeyListener) 인터페이스와 [View.OnKeyListener.onKey (보기, int, KeyEvent)](https://developer.xamarin.com/api/member/Android.Views.View+IOnKeyListener.OnKey/p/Android.Views.View/Android.Views.Keycode/Android.Views.KeyEvent/) 메서드는 부울 반환 형식이 있습니다. Xamarin.Android 해당 생성 [View.KeyPress](https://developer.xamarin.com/api/event/Android.Views.View.KeyPress/) 이벤트에는 [EventHandler&lt;View.KeyEventArgs&gt;](https://developer.xamarin.com/api/type/Android.Views.View+KeyEventArgs/)합니다.
-*KeyEventArgs* 클래스에는 [View.KeyEventArgs.Handled](https://developer.xamarin.com/api/property/Android.Views.View+KeyEventArgs.Handled/) 속성에 대 한 반환 값으로 사용 되는 합니다 *View.OnKeyListener.onKey()* 메서드.
+예를 들어 Android [보기. setOnKeyListener ()](xref:Android.Views.View.SetOnKeyListener*) 메서드는 [onKey (view, int, KeyEvent)](xref:Android.Views.View.IOnKeyListener.OnKey*) 메서드를 사용할 때 [뷰](xref:Android.Views.View.IOnKeyListener) . onkeylistener 인터페이스를 허용 하 고, Xamarin.ios는 해당 하는 [system.windows.forms.keyeventargs.handled&lt;&gt;](xref:Android.Views.View.KeyEventArgs)이벤트를 생성 합니다. [KeyPress](xref:Android.Views.View.KeyPress) 이벤트는 EventHandler 뷰입니다.
+*System.windows.forms.keyeventargs.handled* 클래스에는 [system.windows.forms.keyeventargs.handled](xref:Android.Views.View.KeyEventArgs.Handled) 속성이 있습니다 .이 속성은 *onKey ()* 메서드에 대 한 반환 값으로 사용 됩니다.
 
-다른 메서드 및 대리자 기반 연결을 노출 하는 생성자 오버 로드를 추가 하려고 합니다. 또한 수신기가 여러 콜백이 있는 경우 개별 콜백 구현 이므로, 변환 하는 것이 발견 되 결정할 몇 가지 추가 검사가 필요 합니다. 해당 이벤트가 없습니다 있으면 수신기 C#에서 사용할 되지만 하세요 존경 대리자 사용을 가질 수를 생각 하는 합니다. 또한 대리자 대신에서 도움이 되는 선택 취소 했을 때 "수신기" 접미사 없이 인터페이스의 일부 변환 완료 된 합니다.
+대리자 기반 연결을 노출 하기 위해 다른 메서드 및 ctors에 대 한 오버 로드를 추가 하려고 합니다. 또한 여러 콜백이 있는 수신기는 개별 콜백 구현이 적절 한지 여부를 확인 하기 위해 몇 가지 추가 검사를 수행 해야 하므로 식별 된 대로 변환 합니다. 해당 하는 이벤트가 없는 경우에서 수신기를 사용 해야 합니다 C#. 그러나이 경우에는 관심을 가질 수 있는 모든 것을 고려해 야 합니다. 또한 "수신기" 접미사가 없는 인터페이스를 변환 하는 것은 대리자 대체를 활용 하는 것이 좋습니다.
 
-모든 수신기 인터페이스를 구현 합니다 [`Android.Runtime.IJavaObject`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)
-인터페이스는 수신기 클래스는이 인터페이스를 구현 해야 하므로 바인딩 구현 세부 사항 때문입니다. 수신기 인터페이스의 서브 클래스에서 구현 하 여 이렇게 [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 다른 래핑된 Android 활동 등의 Java 개체입니다.
+모든 수신기 인터페이스는을 구현 합니다.[`Android.Runtime.IJavaObject`](xref:Android.Runtime.IJavaObject)
+인터페이스는 바인딩의 구현 세부 정보 때문에 수신기 클래스가이 인터페이스를 구현 해야 합니다. 이 작업은 Android 작업과 같은 다른 래핑된 Java 개체 또는 [java](xref:Java.Lang.Object) 의 서브 클래스에 수신기 인터페이스를 구현 하 여 수행할 수 있습니다.
 
 
 ### <a name="runnables"></a>Runnables
 
-Java를 활용 합니다 [java.lang.Runnable](https://developer.xamarin.com/api/type/Java.Lang.Runnable/) 위임 메커니즘을 제공 하는 인터페이스입니다. 합니다 [java.lang.Thread](https://developer.xamarin.com/api/type/Java.Lang.Thread/) 클래스는이 인터페이스의 주요 소비자입니다. Android 에서도 API의 인터페이스를 채택 했습니다.
-[Activity.runOnUiThread()](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/p/Java.Lang.IRunnable/) 하 고 [View.post()](https://developer.xamarin.com/api/member/Android.Views.View.Post/p/Java.Lang.IRunnable) 은 중요 한 예입니다.
+Java는 node.js [인터페이스를](xref:Java.Lang.Runnable) 활용 하 여 위임 메커니즘을 제공 합니다. 이 인터페이스의 주목할 만한 소비자는 [java](xref:Java.Lang.Thread) 클래스입니다. Android는 API에도 인터페이스를 사용 했습니다.
+[작업. runOnUiThread ()](xref:Android.App.Activity.RunOnUiThread*) 및 [View.post ()](xref:Android.Views.View.Post*) 는 주목할 만한 예입니다.
 
-합니다 `Runnable` 단일 void 메서드를 포함 하는 인터페이스 [run ()](https://developer.xamarin.com/api/member/Java.Lang.Runnable.Run%28%29/)합니다. 따라서 인계 서 C#에서 바인딩을 [System.Action](xref:System.Action) 위임 합니다. 바인딩에서 허용 하는 오버 로드를 준비 했습니다를 `Action` 을 사용 하는 모든 API 멤버에 대 한 매개 변수를 `Runnable` 네이티브 API의 예를 들어 [Activity.RunOnUiThread()](https://developer.xamarin.com/api/member/Android.App.Activity.RunOnUiThread/(System.Action)) 및 [View.Post()](https://developer.xamarin.com/api/member/Android.Views.View.Post/(System.Action)).
+인터페이스 `Runnable` 에는 단일 void 메서드인 [run ()](xref:Java.Lang.Runnable.Run)이 포함 되어 있습니다. 따라서를 System.object C# 로 바인딩하는 것이 자동으로 [수행](xref:System.Action) 됩니다. 기본 api `Action` 에서를 `Runnable` 사용 하는 모든 API 멤버에 대 한 매개 변수를 허용 하는 바인딩 (예: [runonuithread ()](xref:Android.App.Activity.RunOnUiThread*) 및 [View.Post ())](xref:Android.Views.View.Post*)에 오버 로드를 제공 했습니다.
 
-남겨둔 합니다 [irunnable이](https://developer.xamarin.com/api/type/Java.Lang.IRunnable/) 유형인 인터페이스를 구현 하 고 따라서 수 있으므로를 대체 하는 대신 현재 위치에서 오버 로드 runnables로 직접 전달 합니다.
+몇 가지 형식이 인터페이스를 구현 하므로 직접 runnables으로 전달 될 수 있으므로 [IRunnable](xref:Java.Lang.IRunnable) 가능한 오버 로드를 대신 사용할 수 있습니다.
 
 
 ### <a name="inner-classes"></a>내부 클래스
 
-Java에 두 가지 유형의 [중첩 클래스](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html): 정적 클래스 및 비정적 클래스를 중첩 합니다.
+Java에는 정적 중첩 클래스와 비정적 클래스 라는 두 가지 유형의 [중첩 클래스가](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html)있습니다.
 
-Java의 정적 중첩된 클래스를 C#의 중첩 형식 동일합니다.
+Java 정적 중첩 클래스는 C# 중첩 형식과 동일 합니다.
 
-비정적 중첩 클래스 라고도 *내부 클래스가*를 크게 다릅니다. 바깥쪽 형식 인스턴스에 대 한 암시적 참조가 포함 하며 (이 개요의 범위를 벗어나는 다른 차이점) 간에 정적 멤버를 포함할 수 없습니다.
+*내부 클래스*라고도 하는 비정적 중첩 클래스는 상당히 다릅니다. 여기에는 바깥쪽 형식의 인스턴스에 대 한 암시적 참조가 포함 되며 정적 멤버를 포함할 수 없습니다 (이 개요의 범위를 벗어나는 다른 차이점).
 
-바인딩 및 C# 사용 하더라도 정적 중첩된 클래스는 중첩된의 일반 형식으로 처리 됩니다. 내부 클래스는 한편, 두 가지 중요 한 차이가 있습니다.
+바인딩 및 C# 사용에 대 한 정적 중첩 클래스는 일반 중첩 형식으로 처리 됩니다. 내부 클래스는 다음과 같은 두 가지 중요 한 차이점이 있습니다.
 
-1. 생성자 매개 변수로 포함 하는 형식에 대 한 암시적 참조를 명시적으로 제공 되어야 합니다.
+1. 포함 하는 형식에 대 한 암시적 참조는 생성자 매개 변수로 명시적으로 제공 되어야 합니다.
 
-1. 내부 클래스는 내부 클래스에서 상속 하는 경우 *해야* 형식 내에 중첩 될 기본 내부 클래스의 포함 하는 형식에서 상속 되는 및 파생된 된 형식 생성자를 제공 해야 C#으로 동일한 유형의 형식을 포함 하 합니다.
+1. 내부 클래스에서 상속 하는 경우 *내부 클래스는* 기본 내부 클래스의 포함 하는 형식에서 상속 되는 형식 내에 중첩 되어야 하 고 파생 된 형식은 C# 포함 하는 형식과 동일한 형식의 생성자를 제공 해야 합니다.
 
+예를 들어 [WallpaperService](xref:Android.Service.Wallpaper.WallpaperService.Engine) 내부 클래스를 예로 들어 보겠습니다. 내부 클래스 이기 때문에 [WallpaperService () 생성자](xref:Android.Service.Wallpaper.WallpaperService.Engine#ctor) 는 [WallpaperService](xref:Android.Service.Wallpaper.WallpaperService) 인스턴스에 대 한 참조를 사용 합니다 (매개 변수를 사용 하지 않는 Java WallpaperService () 생성자와 비교 및 대조).
 
-예를 들어 합니다 [Android.Service.Wallpaper.WallpaperService.Engine](https://developer.xamarin.com/api/type/Android.Service.Wallpaper.WallpaperService+Engine/) 내부 클래스입니다. 내부 클래스 이므로 합니다 [WallpaperService.Engine() 생성자](https://developer.xamarin.com/api/constructor/Android.Service.Wallpaper.WallpaperService+Engine.Engine/p/Android.Service.Wallpaper.WallpaperService/) 에 대 한 참조를 [WallpaperService](https://developer.xamarin.com/api/type/Android.Service.Wallpaper.WallpaperService/) 인스턴스 (비교 및 대조 java [WallpaperService.Engine ( ) 생성자](https://developer.xamarin.com/api/type/Android.Service.Wallpaper.WallpaperService+Engine/) 매개 변수를 사용 하는).
-
-내부 클래스는 예제에서는 파생 CubeWallpaper.CubeEngine 같습니다.
+내부 클래스의 파생 예는 CubeWallpaper 무늬입니다. Cubewallpaper:
 
 ```csharp
 class CubeWallpaper : WallpaperService {
@@ -216,12 +212,11 @@ class CubeWallpaper : WallpaperService {
 }
 ```
 
-참고 어떻게 `CubeWallpaper.CubeEngine` 내에 중첩 `CubeWallpaper`를 `CubeWallpaper` 의 포함 하는 클래스에서 상속 `WallpaperService.Engine`, 및 `CubeWallpaper.CubeEngine` 선언 형식-를 사용 하는 생성자가 `CubeWallpaper` 위에서 지정한으로이 경우.
-
+`CubeWallpaper` `WallpaperService.Engine` `CubeWallpaper` 는 내 `CubeWallpaper`에서 중첩 되 고,의 포함 하는 클래스에서 상속 `CubeWallpaper.CubeEngine` 되며, 선언 형식을 사용 하는 생성자를 포함 합니다 .이 경우에는 위에 지정 된 것과 같습니다. `CubeWallpaper.CubeEngine`
 
 ### <a name="interfaces"></a>인터페이스
 
-Java 인터페이스에는 세 가지 C#에서 문제를 일으킬 수 있는 두 개의 멤버를 포함할 수 있습니다.
+Java 인터페이스에는 세 가지 멤버 집합이 포함 될 수 있으며, 그 중 C#두 가지는 다음과 같은 문제를 일으킵니다.
 
 1. 메서드
 
@@ -229,51 +224,49 @@ Java 인터페이스에는 세 가지 C#에서 문제를 일으킬 수 있는 �
 
 1. 필드
 
+Java 인터페이스는 다음과 같은 두 가지 형식으로 변환 됩니다.
 
-Java 인터페이스는 두 가지 유형으로 변환 됩니다.
+1. 메서드 선언이 포함 된 (선택적) 인터페이스입니다. 이 인터페이스에는 ' *I* ' 접두사를 포함 하는 것을 *제외* 하 고 Java 인터페이스와 동일한 이름이 있습니다.
 
-1. 메서드 선언을 포함 (선택 사항) 인터페이스입니다. Java 인터페이스와이 인터페이스의 이름이 같은 *제외한* 있습니다를 ' *있습니까* ' 접두사.
+1. Java 인터페이스 내에 선언 된 모든 필드를 포함 하는 (옵션) 정적 클래스입니다.
 
-1. 모든 필드를 포함 하는 (선택 사항) 정적 클래스는 Java 인터페이스 내에서 선언 합니다.
+중첩 된 형식은 바깥쪽 인터페이스 이름을 접두사로 사용 하는 중첩 형식 대신 바깥쪽 인터페이스의 형제로 "재배치" 됩니다.
 
-중첩된 형식 "에 재배치 되므로" 접두사로 바깥쪽 인터페이스 이름의 중첩된 형식 대신 바깥쪽 인터페이스의 형제입니다.
-
-예를 들어 합니다 [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 인터페이스입니다.
-합니다 *Parcelable* 인터페이스 메서드 및 중첩된 형식 상수를 포함 합니다. 합니다 *Parcelable* 인터페이스 메서드는 배치 합니다 [Android.OS.IParcelable](https://developer.xamarin.com/api/type/Android.OS.IParcelable/) 인터페이스입니다.
-합니다 *Parcelable* 인터페이스 상수에 배치 되는 [Android.OS.ParcelableConsts](https://developer.xamarin.com/api/type/Android.OS.ParcelableConsts/) 형식입니다. 중첩 [android.os.Parcelable.ClassLoaderCreator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) 하 고 [android.os.Parcelable.Creator <t> </t> ](https://developer.android.com/reference/android/os/Parcelable.Creator.html) 유형은 현재 없습니다 제네릭 지원과;의 제한으로 인해 바인딩된 으로 표시 됩니다, 지원 된 경우에 *Android.OS.IParcelableClassLoaderCreator* 하 고 *Android.OS.IParcelableCreator* 인터페이스입니다. 예를 들어 중첩 [android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) 인터페이스로 바인딩되어 합니다 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/) 인터페이스입니다.
-
+예를 들어 [넣는](xref:Android.OS.Parcelable) 인터페이스를 살펴보겠습니다.
+*넣는* 인터페이스에는 메서드, 중첩 형식 및 상수가 포함 되어 있습니다. *넣는* 인터페이스 메서드는 [IParcelable](xref:Android.OS.IParcelable) 인터페이스에 배치 됩니다.
+*넣는* 인터페이스 상수는 [ParcelableConsts](xref:Android.OS.ParcelableConsts) 형식에 배치 됩니다. 중첩 된 [넣는. ClassLoaderCreator&lt;t >](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html) 및 [> 넣는&lt;](https://developer.android.com/reference/android/os/Parcelable.Creator.html) 형식은 현재 제네릭 지원의 제한 사항으로 인해 바인딩되어 있지 않습니다. 지원 되는 경우 는 *android. IParcelableClassLoaderCreator* 및 *IParcelableCreator* 인터페이스로 제공 됩니다. 예를 들어, 중첩 된 [DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html) 인터페이스는 [IBinderDeathRecipient](xref:Android.OS.IBinderDeathRecipient) 인터페이스에 바인딩되어 있습니다.
 
 > [!NOTE]
-> Java 인터페이스 상수는 Xamarin.Android 1.9부터 <em>중복</em> Java 포팅 간소화 하기 위해에서 코드입니다. 사용 하는 이식 Java 코드를 개선 하기 위해 이렇게 [android 공급자](https://developer.android.com/reference/android/provider/package-summary.html) 상수 인터페이스입니다.
+> Xamarin.ios 1.9부터 java 인터페이스 상수는 Java 코드 포팅 간소화를 위한 노력으로 _중복_ 됩니다. 이를 통해 [android 공급자](https://developer.android.com/reference/android/provider/package-summary.html) 인터페이스 상수를 사용 하는 Java 코드의 이식 기능을 향상 시킬 수 있습니다.
 
-위의 형식 외에 4 개의 추가 변경 내용이:
+위의 형식 외에도 다음과 같은 4 가지 추가 변경 내용이 있습니다.
 
-1. Java 인터페이스와 동일한 이름 가진 형식 상수를 포함 하도록 생성 됩니다.
+1. Java 인터페이스와 이름이 같은 형식이 생성 되어 상수를 포함 합니다.
 
-1. 또한 인터페이스 상수를 포함 하는 형식이 구현된 하는 Java 인터페이스에서 제공 되는 모든 상수를 포함 합니다.
+1. 인터페이스 상수를 포함 하는 형식에는 구현 된 Java 인터페이스에서 제공 되는 모든 상수만 포함 됩니다.
 
-1. 상수를 포함 하는 Java 인터페이스를 구현 하는 모든 클래스에는 모든 구현 된 인터페이스의 상수를 포함 하는 새 중첩된 InterfaceConsts 형식을 가져옵니다.
+1. 상수를 포함 하는 Java 인터페이스를 구현 하는 모든 클래스는 구현 된 모든 인터페이스의 상수를 포함 하는 새 중첩 된 InterfaceConsts 형식을 가져옵니다.
 
-1. 합니다 *비용* 형식 이제 사용 되지 않습니다.
-
-
-에 대 한 합니다 *android.os.Parcelable* 인터페이스, 즉, 이제 것을 [ *Android.OS.Parcelable* ](https://developer.xamarin.com/api/type/Android.OS.Parcelable/) 상수를 포함 하는 형식입니다. 예를 들어 합니다 [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) 상수로 바인딩될 합니다 [ *Parcelable.ContentsFileDescriptor* ](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/) 상수를 대신 합니다  *ParcelableConsts.ContentsFileDescriptor* 상수입니다.
-
-포함 된 다른 인터페이스를 구현 하는 상수 아직 자세한 상수를 포함 하는 인터페이스에 대 한 모든 상수 합한 이제 생성 됩니다. 예를 들어 합니다 [android.provider.MediaStore.Video.VideoColumns](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) 구현 인터페이스는 [android.provider.MediaStore.MediaColumns](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumns/) 인터페이스입니다. 그러나 1.9를 이전 합니다 [Android.Provider.MediaStore.Video.VideoColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+Video+VideoColumnsConsts/) 형식에 대해 선언 된 상수에 액세스 하는 방법은 없습니다 [Android.Provider.MediaStore.MediaColumnsConsts](https://developer.xamarin.com/api/type/Android.Provider.MediaStore+MediaColumnsConsts/)합니다.
-결과적으로 Java 표현식 *MediaStore.Video.VideoColumns.TITLE* C# 식에 바인딩해야 *MediaStore.Video.MediaColumnsConsts.Title* 읽지도 않고 검색 하기 어려운는 Java 설명서 다양 합니다. 1\.9에 해당 하는 C# 식 됩니다 [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/)합니다.
-
-또한 고려해 야 합니다 [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) Java를 구현 하는 형식 *Parcelable* 인터페이스입니다. 예를 들어 해당 인터페이스의 모든 상수는 "통해" 번들 형식에 액세스할 수 있는 인터페이스를 구현 하기 때문 *Bundle.CONTENTS_FILE_DESCRIPTOR* 완벽 하 게 유효한 Java 식입니다.
-이전에이 식을 포트를 C# 연결 된 모든 인터페이스는 형식에서 참조 하기 위해 구현 되는 확인 해야 합니다 *CONTENTS_FILE_DESCRIPTOR* 에서 제공 합니다. Xamarin.Android 1.9부터 상수를 포함 하는 Java 인터페이스를 구현 하는 클래스 해야 중첩 *InterfaceConsts* 모든 상속 된 인터페이스 상수를 포함 하는 형식입니다. 그러면 변환 *Bundle.CONTENTS_FILE_DESCRIPTOR* 하 [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/)합니다.
-
-마지막으로 사용 하 여 형식를 *비용* 접미사와 같은 *Android.OS.ParcelableConsts* 사용 되지 않음, 새로 도입된 된 InterfaceConsts 이외의 중첩 형식은 이제 됩니다. Xamarin.Android 3.0에서 제거 됩니다.
+1. *Consts* 형식은 이제 사용 되지 않습니다.
 
 
-## <a name="resources"></a>자료
+*넣는* 인터페이스의 경우에는이는 상수를 포함 하는 [*넣는*](xref:Android.OS.Parcelable) 형식입니다. 예를 들어, [넣는. CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR) 상수는 *ParcelableConsts Filedescriptor* 상수 대신 [*넣는*](xref:Android.OS.Parcelable.ContentsFileDescriptor) 로 바인딩됩니다.
 
-이미지, 레이아웃 설명, 이진 blob 및 문자열 사전으로 응용 프로그램에 포함할 수 [리소스 파일](https://developer.android.com/guide/topics/resources/providing-resources.html)합니다.
-다양 한 Android Api는 데 사용할 [리소스 Id 작업할](https://developer.android.com/guide/topics/resources/accessing-resources.html) 이미지로 처리 하는 대신 문자열이 나 이진 blob 직접.
+아직 추가 상수가 포함 된 다른 인터페이스를 구현 하는 상수가 포함 된 인터페이스의 경우 이제 모든 상수의 합집합이 생성 됩니다. 예를 들어, [MediaColumns](xref:Android.Provider.MediaStore.MediaColumns) 인터페이스를 구현 하는 [android](https://developer.android.com/reference/android/provider/MediaStore.Video.VideoColumns.html) . i d. i d. 그러나 1.9 이전 버전의 경우 [MediaColumnsConsts](xref:Android.Provider.MediaStore.MediaColumnsConsts)에 선언 된 상수에 액세스할 수 있는 방법이 없습니다. [Video. videostore](xref:Android.Provider.MediaStore.Video.VideoColumnsConsts) . video.
+결과적으로 Java 식 Mediastore를 C# 식의 여러 java 설명서를 읽어 서 검색 하기 어려운 식 *mediastore* . d a. d. 1\.9에서 해당 하 C# 는 식은 [Mediastore. videocolumns입니다](xref:Android.Provider.MediaStore.Video.VideoColumns.Title).
 
-예를 들어 샘플 Android 앱을 사용자 인터페이스 레이아웃을 포함 하는 ( `main.axml`)은 국제화 테이블 문자열 ( `strings.xml`) 및 일부 아이콘 ( `drawable-*/icon.png`) 응용 프로그램의 "리소스" 디렉터리에 해당 리소스를 보관할 때:
+또한 Java *넣는* 인터페이스를 구현 하는 [android. s a s. 번들](xref:Android.OS.Bundle) 형식을 고려 합니다. 인터페이스를 구현 하므로 해당 인터페이스에 대 한 모든 상수는 번들 형식 (예: *CONTENTS_FILE_DESCRIPTOR* 은 완벽 하 게 유효한 Java 식)에 액세스할 수 있습니다.
+이전에는이 식을로 C# 이식 하기 위해 구현 된 모든 인터페이스를 확인 하 여 *CONTENTS_FILE_DESCRIPTOR* 에서 가져온 형식을 확인 해야 합니다. Xamarin Android 1.9부터 상수를 포함 하는 Java 인터페이스를 구현 하는 클래스에는 상속 된 모든 인터페이스 상수가 포함 될 중첩 된 *InterfaceConsts* 형식이 있습니다. 이렇게 하면 *CONTENTS_FILE_DESCRIPTOR* 를 [*InterfaceConsts*](xref:Android.OS.Bundle.InterfaceConsts.ContentsFileDescriptor)로 쉽게 변환할 수 있습니다.
+
+마지막으로 *ParcelableConsts* 와 같은 *consts* 접미사가 있는 형식은 새로 도입 된 InterfaceConsts 중첩 형식 이외에는 더 이상 사용 되지 않습니다. Xamarin Android 3.0에서 제거 됩니다.
+
+
+## <a name="resources"></a>리소스
+
+이미지, 레이아웃 설명, 이진 blob 및 문자열 사전은 응용 프로그램에 [리소스 파일로](https://developer.android.com/guide/topics/resources/providing-resources.html)포함할 수 있습니다.
+다양 한 Android Api는 이미지, 문자열 또는 이진 blob을 직접 처리 하는 대신 [리소스 id에서 작동](https://developer.android.com/guide/topics/resources/accessing-resources.html) 하도록 설계 되었습니다.
+
+예를 들어 사용자 인터페이스 레이아웃 ( `main.axml`), 국제화 테이블 문자열 ( `strings.xml`) 및 일부 아이콘 ( `drawable-*/icon.png`)이 포함 된 샘플 Android 앱은 응용 프로그램의 "resources" 디렉터리에 해당 리소스를 유지 합니다.
 
     Resources/
         drawable-hdpi/
@@ -291,7 +284,7 @@ Java 인터페이스는 두 가지 유형으로 변환 됩니다.
         values/
             strings.xml
 
-네이티브 Android Api 파일 이름으로 직접 작동 하지 않습니다 하지만 대신 리소스 Id에서 작동 합니다. 빌드 시스템 배포에 대 한 리소스 패키지 되며 라는 클래스를 생성 합니다. 리소스를 사용 하는 Android 응용 프로그램을 컴파일할 때 `Resource` 각각 포함 된 리소스에 대 한 토큰을 포함 하는 합니다. 예를 들어 위의 리소스 레이아웃의 경우 다음과 같습니다. 해당 R 클래스에 노출 되는 내용
+네이티브 Android Api는 파일 이름으로 직접 작동 하지 않고 대신 리소스 Id에 대해 작동 합니다. 리소스를 사용 하는 Android 응용 프로그램을 컴파일할 때 빌드 시스템은 배포를 위해 리소스를 패키지 하 고 포함 된 `Resource` 각 리소스에 대 한 토큰을 포함 하는 라는 클래스를 생성 합니다. 예를 들어 위의 리소스 레이아웃의 경우 R 클래스가 노출 하는 항목은 다음과 같습니다.
 
 ```csharp
 public class Resource {
@@ -310,18 +303,18 @@ public class Resource {
 }
 ```
 
-다음 사용 `Resource.Drawable.icon` 참조를 `drawable/icon.png` 파일 또는 `Resource.Layout.main` 참조를 `layout/main.xml` 파일 또는 `Resource.String.first_string` 사전 파일의 첫 번째 문자열을 참조 하도록 `values/strings.xml`.
+그런 다음를 사용 `Resource.Drawable.icon` 하 여 `drawable/icon.png` 파일을 참조 하거나 `Resource.Layout.main` `layout/main.xml` 파일을 참조 하거나 `Resource.String.first_string` 사전 파일 `values/strings.xml`의 첫 번째 문자열을 참조 합니다.
 
 
 ## <a name="constants-and-enumerations"></a>상수 및 열거형
 
-네이티브 Android Api에 수행 하거나 int의 의미를 확인 하는 상수 필드에 매핑해야 하는 int를 반환 하는 여러 메서드가 있습니다. 이러한 메서드를 사용 하려면 사용자가 이상적인 되는 상수는 적절 한 값을 확인 하려면 설명서를 참조 해야 합니다.
+네이티브 Android Api에는 int가 의미 하는 것을 확인 하기 위해 상수 필드에 매핑해야 하는 int를 사용 하거나 반환 하는 여러 메서드가 있습니다. 이러한 메서드를 사용 하려면 사용자가 설명서를 참조 하 여 적절 한 값이 되는 상수를 확인 해야 합니다 .이는 이상적인 값 보다 낮습니다.
 
-예를 들어 [Activity.requestWindowFeature (int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int))합니다.
+예를 들어, [작업. requestWindowFeature (Int featureID)](https://developer.android.com/reference/android/app/Activity.html#requestWindowFeature(int))를 참조 하세요.
 
-이러한 경우.NET 열거형에 관련된 상수를 함께 그룹화 하 여 열거형을 대신 수행할 메서드를 다시 매핑할 다해야 합니다.
-이 작업을 수행 하면 IntelliSense 다양 한 잠재적인 값을 제공할 수 있습니다.
+이러한 경우 관련 상수를 .NET 열거형으로 그룹화 하 고 메서드를 다시 매핑하여 대신 열거형을 사용 합니다.
+이렇게 하면 IntelliSense에서 잠재적 값을 선택할 수 있습니다.
 
-위의 예제는 다음과 같이 계산 됩니다. [(WindowFeatures featureId) Activity.RequestWindowFeature](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)합니다.
+위의 예제는 다음과 같습니다. [작업. RequestWindowFeature (WindowFeatures featureId)](xref:Android.App.Activity.RequestWindowFeature*).
 
-이 상수는 서로 파악 하는 매우 수동 프로세스가 하 고 어떤 Api 이러한 상수를 사용 합니다. 열거형으로 표현 된 더 잘 될 API에서 사용 되는 모든 상수에 대 한 버그를 제출 하세요.
+이는 함께 사용 되는 상수와 이러한 상수를 사용 하는 Api를 파악 하는 매우 수동 프로세스입니다. API에서 사용 되는 상수에 대 한 버그를 파일에 표시 하 여 열거형으로 더 잘 표현 해 주세요.
