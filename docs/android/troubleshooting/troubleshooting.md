@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: f57736238fc01d865d7655d72da427e2c18dca59
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
-ms.translationtype: HT
+ms.openlocfilehash: 5fccc07d35eda1ba420f48a8058d8d2a00b18fd9
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68757242"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523202"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -22,9 +22,9 @@ ms.locfileid: "68757242"
 Xamarin.ios에는 다양 한 버그를 추적할 때 살펴볼 몇 가지 위치가 있습니다.
 이러한 개체는 다음과 같습니다.
 
-1.  진단 MSBuild 출력입니다.
-2.  장치 배포 로그.
-3.  Android 디버그 로그 출력입니다.
+1. 진단 MSBuild 출력입니다.
+2. 장치 배포 로그.
+3. Android 디버그 로그 출력입니다.
 
 
 <a name="Diagnostic_MSBuild_Output" />
@@ -35,23 +35,23 @@ Xamarin.ios에는 다양 한 버그를 추적할 때 살펴볼 몇 가지 위치
 
 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
-1.  **도구 > 옵션 ...** 을 클릭 합니다.
-2.  왼쪽 트리 보기에서 **프로젝트 및 솔루션 > 빌드 및 실행** 을 선택 합니다.
-3.  오른쪽 패널에서 MSBuild 빌드 출력 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
-4.  **확인** 을 클릭합니다.
-5.  패키지를 지우고 다시 빌드합니다.
-6.  진단 출력이 출력 패널에 표시 됩니다.
+1. **도구 > 옵션 ...** 을 클릭 합니다.
+2. 왼쪽 트리 보기에서 **프로젝트 및 솔루션 > 빌드 및 실행** 을 선택 합니다.
+3. 오른쪽 패널에서 MSBuild 빌드 출력 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
+4. **확인** 을 클릭합니다.
+5. 패키지를 지우고 다시 빌드합니다.
+6. 진단 출력이 출력 패널에 표시 됩니다.
 
 
 Mac용 Visual Studio/OS X 내에서 진단 MSBuild 출력을 사용 하려면 다음을 수행 합니다.
 
-1.  **Mac용 Visual Studio > 기본 설정** ...을 클릭 합니다.
-2.  왼쪽 트리 뷰에서 **프로젝트 > 빌드** 를 선택 합니다.
-3.  오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
-4.  **확인** 을 클릭합니다.
-5.  Mac용 Visual Studio 다시 시작
-6.  패키지를 지우고 다시 빌드합니다.
-7.  빌드 출력 단추를 클릭 하 여 오류 패드 (**보기 > 패드 > 오류** ) 내에 진단 출력이 표시 됩니다.
+1. **Mac용 Visual Studio > 기본 설정** ...을 클릭 합니다.
+2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 를 선택 합니다.
+3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
+4. **확인** 을 클릭합니다.
+5. Mac용 Visual Studio 다시 시작
+6. 패키지를 지우고 다시 빌드합니다.
+7. 빌드 출력 단추를 클릭 하 여 오류 패드 (**보기 > 패드 > 오류** ) 내에 진단 출력이 표시 됩니다.
 
 
 
@@ -60,16 +60,16 @@ Mac용 Visual Studio/OS X 내에서 진단 MSBuild 출력을 사용 하려면 �
 
 Visual Studio 내에서 장치 배포 로깅을 사용 하도록 설정 하려면
 
-1.  **도구 > 옵션 ...** >
-2.  왼쪽 트리 보기에서 **Xamarin > Android 설정** 을 선택 합니다.
-3.  오른쪽 패널에서 [X] **확장 디버그 로깅 (바탕 화면에 monodroid 쓰기)** 확인란을 사용 하도록 설정 합니다.
-4.  로그 메시지는 데스크톱의 monodroid 파일에 기록 됩니다.
+1. **도구 > 옵션 ...** >
+2. 왼쪽 트리 보기에서 **Xamarin > Android 설정** 을 선택 합니다.
+3. 오른쪽 패널에서 [X] **확장 디버그 로깅 (바탕 화면에 monodroid 쓰기)** 확인란을 사용 하도록 설정 합니다.
+4. 로그 메시지는 데스크톱의 monodroid 파일에 기록 됩니다.
 
 
 Mac용 Visual Studio는 항상 장치 배포 로그를 작성 합니다. 찾기는 약간 더 어렵습니다. *AndroidUtils* 로그 파일은 다음과 같이 배포가 발생 하는 매일 + 시간 마다 생성 됩니다. **AndroidTools-2012-10-24_12-35-45.log**.
 
--  Windows에서는 로그 파일이에 `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`기록 됩니다.
--  OS X에서 로그 파일은에 `$HOME/Library/Logs/XamarinStudio-{VERSION}`기록 됩니다.
+- Windows에서는 로그 파일이에 `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`기록 됩니다.
+- OS X에서 로그 파일은에 `$HOME/Library/Logs/XamarinStudio-{VERSION}`기록 됩니다.
 
 
 
@@ -91,9 +91,9 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 
 Xamarin Android는 다음과 같은 시스템 속성을 지원 합니다.
 
--   *debug.mono.debug*: 비어 있지 않은 문자열의 경우이 값은와 동일 `*mono-debug*`합니다.
+- *debug.mono.debug*: 비어 있지 않은 문자열의 경우이 값은와 동일 `*mono-debug*`합니다.
 
--   *debug.mono.env*: Mono가 초기화 *되기 전에* 응용 *|* 프로그램 시작 중에 내보낼 환경 변수의 파이프로 구분 된 (' ') 목록입니다. 이렇게 하면 mono 로깅을 제어 하는 환경 변수를 설정할 수 있습니다.
+- *debug.mono.env*: Mono가 초기화 *되기 전에* 응용 *|* 프로그램 시작 중에 내보낼 환경 변수의 파이프로 구분 된 (' ') 목록입니다. 이렇게 하면 mono 로깅을 제어 하는 환경 변수를 설정할 수 있습니다.
 
     - *참고*: 값이 *|* ' '로 구분 되어 있으므로 *adb shell* \` 명령이 따옴표 집합을 제거 하기 때문에 값은 \`추가 수준의 따옴표를 포함 해야 합니다.
 
@@ -101,18 +101,20 @@ Xamarin Android는 다음과 같은 시스템 속성을 지원 합니다.
 
     - 예제:
 
-            adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+      ```
+      adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+      ```
 
--   *debug.mono.log*: Android 디버그 로그에 추가 메시지를 인쇄 해야 하는 구성 요소의 쉼표로 구분 된 (' *,* ') 목록입니다. 기본적으로는 아무것도 설정 되지 않습니다. 구성 요소는 다음과 같습니다.
+- *debug.mono.log*: Android 디버그 로그에 추가 메시지를 인쇄 해야 하는 구성 요소의 쉼표로 구분 된 (' *,* ') 목록입니다. 기본적으로는 아무것도 설정 되지 않습니다. 구성 요소는 다음과 같습니다.
 
-    -   *all*: 모든 메시지 인쇄
-    -   *gc*: GC 관련 메시지를 인쇄 합니다.
-    -   *gref*: 인쇄 (weak, global) 참조 할당 및 할당 취소 메시지입니다.
-    -   *lref*: 로컬 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
+    - *all*: 모든 메시지 인쇄
+    - *gc*: GC 관련 메시지를 인쇄 합니다.
+    - *gref*: 인쇄 (weak, global) 참조 할당 및 할당 취소 메시지입니다.
+    - *lref*: 로컬 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
 
     *참고*: *매우* 자세한 정보를 표시 합니다. 반드시 필요한 경우가 아니면 사용 하지 마십시오.
 
--   *debug.mono.trace*: [Mono--추적](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` 설정을 설정할 수 있습니다.
+- *debug.mono.trace*: [Mono--추적](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` 설정을 설정할 수 있습니다.
 
 ## <a name="deleting-bin-and-obj"></a>삭제 `bin``obj`
 
@@ -213,10 +215,10 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 
 결과에는 다음과 같은 네 가지 메시지가 있습니다.
 
--  전역 참조 만들기: *+ g +* 로 시작 하는 줄 이며, 코드 생성 경로에 대 한 스택 추적을 제공 합니다.
--  전역 참조 소멸: *-g-* 로 시작 하는 줄 이며 전역 참조의 코드 경로 삭제에 대 한 스택 추적을 제공할 수 있습니다. GC가 gref를 삭제 하는 경우 스택 추적이 제공 되지 않습니다.
--  약한 전역 참조 만들기: *+ w +* 로 시작 하는 줄입니다.
--  약한 전역 참조 소멸: *-w-* 로 시작 하는 선입니다.
+- 전역 참조 만들기: *+ g +* 로 시작 하는 줄 이며, 코드 생성 경로에 대 한 스택 추적을 제공 합니다.
+- 전역 참조 소멸: *-g-* 로 시작 하는 줄 이며 전역 참조의 코드 경로 삭제에 대 한 스택 추적을 제공할 수 있습니다. GC가 gref를 삭제 하는 경우 스택 추적이 제공 되지 않습니다.
+- 약한 전역 참조 만들기: *+ w +* 로 시작 하는 줄입니다.
+- 약한 전역 참조 소멸: *-w-* 로 시작 하는 선입니다.
 
 
 모든 메시지에서 *grefc* 값은 xamarin.ios가 만든 전역 참조의 수이 고 *Grefwc* 값은 xamarin.ios가 만든 약한 전역 참조의 수입니다. *핸들* 또는 *obj 핸들* 값은 JNI handle 값이 고, */* ' ' 뒤의 문자는 핸들 값의 형식입니다. 로컬 참조의 경우 */l* , 전역 참조의 경우 */g* , 약한 전역 참조의 경우 */w*
@@ -345,15 +347,15 @@ emulator -partition-size 512 -avd MonoDroid
 
 Android 패키지 이름은 마침표 (' *.* ')를 포함 *해야* 합니다. 마침표를 포함 하도록 패키지 이름을 편집 합니다.
 
--   Visual Studio 내에서:
-    -   프로젝트 > 속성을 마우스 오른쪽 단추로 클릭 합니다.
-    -   왼쪽의 Android 매니페스트 탭을 클릭 합니다.
-    -   패키지 이름 필드를 업데이트 합니다.
-        -   메시지가 &ldquo;표시 되 면 androidmanifest을 찾지 못했습니다. 하나를 클릭 하 여 추가 합니다. &rdquo;에서 링크를 클릭 한 다음 패키지 이름 필드를 업데이트 합니다.
--   Mac용 Visual Studio 내에서:
-    -   프로젝트 > 옵션을 마우스 오른쪽 단추로 클릭 합니다.
-    -   빌드/Android 응용 프로그램 섹션으로 이동 합니다.
-    -   패키지 이름 필드를 '. '를 포함 하도록 변경 합니다.
+- Visual Studio 내에서:
+    - 프로젝트 > 속성을 마우스 오른쪽 단추로 클릭 합니다.
+    - 왼쪽의 Android 매니페스트 탭을 클릭 합니다.
+    - 패키지 이름 필드를 업데이트 합니다.
+        - 메시지가 &ldquo;표시 되 면 androidmanifest을 찾지 못했습니다. 하나를 클릭 하 여 추가 합니다. &rdquo;에서 링크를 클릭 한 다음 패키지 이름 필드를 업데이트 합니다.
+- Mac용 Visual Studio 내에서:
+    - 프로젝트 > 옵션을 마우스 오른쪽 단추로 클릭 합니다.
+    - 빌드/Android 응용 프로그램 섹션으로 이동 합니다.
+    - 패키지 이름 필드를 '. '를 포함 하도록 변경 합니다.
 
 
 
@@ -375,15 +377,15 @@ Android 패키지는 `<uses-library/>` 요소에 필요한 공유 라이브러�
 
 Android 패키지에는 세 가지 요구 사항이 있습니다.
 
--   '. '를 포함 해야 합니다. (이전 항목 참조)
--   고유한 문자열 패키지 이름을 포함 해야 합니다 (따라서 Android 앱 이름에 표시 되는, 즉 Chrome 앱에 대 한 com. android. chrome).
--   패키지를 업그레이드 하는 경우 패키지에 동일한 서명 키가 있어야 합니다.
+- '. '를 포함 해야 합니다. (이전 항목 참조)
+- 고유한 문자열 패키지 이름을 포함 해야 합니다 (따라서 Android 앱 이름에 표시 되는, 즉 Chrome 앱에 대 한 com. android. chrome).
+- 패키지를 업그레이드 하는 경우 패키지에 동일한 서명 키가 있어야 합니다.
 
 따라서 다음 시나리오를 가정 합니다.
 
-1.  앱을 빌드 & 디버그 앱으로 배포 합니다.
-2.  서명 키를 변경 합니다. 예를 들어,를 릴리스 앱으로 사용 하거나 기본 제공 디버그 서명 키를 사용 하지 않는 것이 좋습니다.
-3.  응용 프로그램을 먼저 제거 하지 않고 설치 합니다. 예를 들어 Visual Studio 내에서 디버깅을 사용 하지 않고 디버그 > 시작 합니다.
+1. 앱을 빌드 & 디버그 앱으로 배포 합니다.
+2. 서명 키를 변경 합니다. 예를 들어,를 릴리스 앱으로 사용 하거나 기본 제공 디버그 서명 키를 사용 하지 않는 것이 좋습니다.
+3. 응용 프로그램을 먼저 제거 하지 않고 설치 합니다. 예를 들어 Visual Studio 내에서 디버깅을 사용 하지 않고 디버그 > 시작 합니다.
 
 
 이 경우 패키지 이름은 서명 키가 변경 되지 않았기 때문\_에\_패키지\_설치가 실패 한 업데이트 설치 실패 오류와 함께 실패 합니다. [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 에는 다음과 유사한 메시지도 포함 됩니다.
@@ -433,10 +435,10 @@ E/AndroidRuntime( 1710):        at java.lang.Runtime.loadLibrary(Runtime.java:36
 
 그렇다면 다음과 같은 두 가지 원인이 있을 수 있습니다.
 
-1.  . Apk는 대상 장치에서 지 원하는 ABI를 제공 하지 않습니다.
+1. . Apk는 대상 장치에서 지 원하는 ABI를 제공 하지 않습니다.
     예를 들어 .apk에는 armeabi-armeabi-v7a 이진 파일만 포함 되 고 대상 장치는 armeabi만 지원 합니다.
 
-2.  [Android 버그](http://code.google.com/p/android/issues/detail?id=21670). 이 경우 앱을 제거 하 고 손가락을 교차 하 고 앱을 다시 설치 합니다.
+2. [Android 버그](http://code.google.com/p/android/issues/detail?id=21670). 이 경우 앱을 제거 하 고 손가락을 교차 하 고 앱을 다시 설치 합니다.
 
 (1)를 수정 하려면 프로젝트 옵션/속성을 편집 하 고 [필요한 ABI에 대 한 지원을 지원 되는 ABIs 목록에 추가](~/android/app-fundamentals/cpu-architectures.md)합니다. 추가 해야 하는 ABI를 결정 하려면 대상 장치에 대해 다음 adb 명령을 실행 합니다.
 
@@ -457,7 +459,7 @@ $ adb shell getprop | grep ro.product.cpu
 
 이는 일반적으로 HP 컴퓨터가 있고 환경 변수 &ldquo;플랫폼이&rdquo; mcd 또는 hpd와 같은 것으로 설정 되었음을 의미 합니다. 이는 &ldquo;일반적으로 Any CPU&rdquo; 또는 &ldquo;x 86&rdquo;으로 설정 되는 MSBuild Platform 속성과 충돌 합니다. MSBuild를 작동 하려면 컴퓨터에서이 환경 변수를 제거 해야 합니다.
 
--   제어판 > System > 고급 > 환경 변수
+- 제어판 > System > 고급 > 환경 변수
 
 Visual Studio 또는 Mac용 Visual Studio을 다시 시작 하 고 다시 빌드 해 보세요. 이제 작업이 예상 대로 작동 합니다.
 
@@ -686,11 +688,11 @@ E/dalvikvm( 123): VM aborting
 
 ### <a name="in-release-build-missingmethodexception-occurs-for-dynamic-code-at-run-time"></a>릴리스 빌드에서 MissingMethodException는 런타임에 동적 코드에 대해 발생 합니다.
 
--   응용 프로그램 프로젝트에는 System.object, Microsoft CSharp 또는 Mono .dll에 대 한 참조가 없을 수 있습니다. 해당 어셈블리가 참조 되는지 확인 합니다.
+- 응용 프로그램 프로젝트에는 System.object, Microsoft CSharp 또는 Mono .dll에 대 한 참조가 없을 수 있습니다. 해당 어셈블리가 참조 되는지 확인 합니다.
 
-    -   동적 코드는 항상 비용을 지불 해야 합니다. 효율적인 코드가 필요한 경우 동적 코드를 사용 하지 않는 것이 좋습니다.
+    - 동적 코드는 항상 비용을 지불 해야 합니다. 효율적인 코드가 필요한 경우 동적 코드를 사용 하지 않는 것이 좋습니다.
 
--   첫 번째 미리 보기에서는 각 어셈블리의 형식을 응용 프로그램 코드에서 명시적으로 사용 하지 않는 한 해당 어셈블리가 제외 되었습니다. 해결 방법은 다음을 참조 하세요.[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
+- 첫 번째 미리 보기에서는 각 어셈블리의 형식을 응용 프로그램 코드에서 명시적으로 사용 하지 않는 한 해당 어셈블리가 제외 되었습니다. 해결 방법은 다음을 참조 하세요.[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>X86 장치에서 AOT + LLVM crash로 빌드된 프로젝트

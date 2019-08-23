@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 4b0e540bdcdf061f64880ea961a5e07a0a45b22e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642908"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69887483"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.ios의 Maps
 
@@ -28,28 +28,30 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
- `MKMapView`는 맵을 표시 하는 하위클래스입니다.`UIView` 위의 코드를 사용 하 여 지도를 추가 하기만 하면 대화형 지도가 생성 됩니다.
+`MKMapView`는 맵을 표시 하는 하위클래스입니다.`UIView` 위의 코드를 사용 하 여 지도를 추가 하기만 하면 대화형 지도가 생성 됩니다.
 
- ![](images/00-map.png "샘플 맵")
+![](images/00-map.png "샘플 맵")
 
 ## <a name="map-style"></a>지도 스타일
 
- `MKMapView`3 가지 지도 스타일을 지원 합니다. 지도 스타일을 적용 하려면 `MapType` 속성을 `MKMapType` 열거형의 값으로 설정 하면 됩니다.
- ```
+`MKMapView`3 가지 지도 스타일을 지원 합니다. 지도 스타일을 적용 하려면 `MapType` 속성을 `MKMapType` 열거형의 값으로 설정 하면 됩니다.
+
+```
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
- ```
-  다음 스크린샷에서는 사용할 수 있는 다양 한 지도 스타일을 보여 줍니다.
+```
 
- ![](images/01-mapstyles.png "이 스크린샷에서는 사용 가능한 다양 한 지도 스타일을 보여 줍니다.")
+다음 스크린샷에서는 사용할 수 있는 다양 한 지도 스타일을 보여 줍니다.
+
+![](images/01-mapstyles.png "이 스크린샷에서는 사용 가능한 다양 한 지도 스타일을 보여 줍니다.")
 
 ## <a name="panning-and-zooming"></a>패닝 및 확대/축소
 
- `MKMapView`에는 다음과 같은 지도 상호 작용 기능에 대 한 지원이 포함 되어 있습니다.
+`MKMapView`에는 다음과 같은 지도 상호 작용 기능에 대 한 지원이 포함 되어 있습니다.
 
--  손가락을 사용한 확대/축소 제스처
--  이동 제스처를 통해 패닝
+- 손가락을 사용한 확대/축소 제스처
+- 이동 제스처를 통해 패닝
 
 
 `ZoomEnabled` 인스턴스의 및`ScrollEnabled` 속성을 설정 하 여 이러한 기능을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 여기서 기본값은 두 경우 모두 true입니다. `MKMapView` 예를 들어 정적 맵을 표시 하려면 적절 한 속성을 false로 설정 하면 됩니다.
@@ -96,8 +98,8 @@ map.ShowsUserLocation = true;
 
 주석 자체는 다음과 같은 두 부분으로 구성 됩니다.
 
--  주석의 제목 및 위치와 같은 주석에 대 한 모델 데이터를 포함 하는 개체입니다.`MKAnnotation`
--  `MKAnnotationView` 표시할 이미지를 포함 하는와 사용자가 주석을 누를 때 표시 되는 선택적 설명선입니다.
+- 주석의 제목 및 위치와 같은 주석에 대 한 모델 데이터를 포함 하는 개체입니다.`MKAnnotation`
+- `MKAnnotationView` 표시할 이미지를 포함 하는와 사용자가 주석을 누를 때 표시 되는 선택적 설명선입니다.
 
 
 지도 키트는 iOS 위임 패턴을 사용 하 여 맵에 주석을 추가 합니다 `Delegate` `MKMapViewDelegate`. 여기서 `MKMapView` 의 속성은의 인스턴스로 설정 됩니다. 주석에 대 한를 `MKAnnotationView` 반환 하는이 대리자의 구현입니다.
@@ -177,9 +179,9 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 지도에서 그래픽을 계층화 하는 또 다른 방법은 오버레이를 사용 하는 것입니다. 오버레이는 확대/축소하는 대로 맵을 크기 조정하는 그래픽 그리기 콘텐츠를 지원합니다. iOS는 다음과 같은 몇 가지 유형의 오버레이를 지원 합니다.
 
--  다각형-지도에서 일부 영역을 강조 표시 하는 데 주로 사용 됩니다.
--  다중선-경로를 표시할 때 주로 표시 됩니다.
--  원-지도의 원형 영역을 강조 표시 하는 데 사용 됩니다.
+- 다각형-지도에서 일부 영역을 강조 표시 하는 데 주로 사용 됩니다.
+- 다중선-경로를 표시할 때 주로 표시 됩니다.
+- 원-지도의 원형 영역을 강조 표시 하는 데 사용 됩니다.
 
 
 또한 세부적인 사용자 지정 그리기 코드를 사용 하 여 임의 기 하 도형을 표시 하도록 사용자 지정 오버레이를 만들 수 있습니다. 예를 들어 날씨 레이더는 사용자 지정 오버레이의 좋은 후보가 됩니다.
@@ -188,8 +190,8 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 주석과 유사 하 게 오버레이를 추가 하는 과정은 다음 두 부분으로 구성 됩니다.
 
--  오버레이의 모델 개체를 만들어에 추가 `MKMapView` 합니다.
--  에서 오버레이의 보기를 만듭니다 `MKMapViewDelegate` .
+- 오버레이의 모델 개체를 만들어에 추가 `MKMapView` 합니다.
+- 에서 오버레이의 보기를 만듭니다 `MKMapViewDelegate` .
 
 
 오버레이에 대 한 모델은 모든 `MKShape` 하위 클래스일 수 있습니다. Xamarin.ios에는 `MKPolygon`, `MKShape` `MKPolyline` 및`MKCircle` 클래스를 통해 다각형, 폴리라인 및 원의 서브 클래스가 포함 됩니다.
@@ -225,10 +227,10 @@ iOS에는 지정 된 지역에서 관심 지점의 비동기 검색을 허용 �
 
 로컬 검색을 수행 하려면 응용 프로그램에서 다음 단계를 수행 해야 합니다.
 
-1.  개체 `MKLocalSearchRequest` 를 만듭니다.
-1.  에서 개체를 만듭니다. `MKLocalSearchRequest` `MKLocalSearch`
-1.  개체에서 메서드를 `Start` 호출 합니다. `MKLocalSearch`
-1.  콜백에서 개체 `MKLocalSearchResponse` 를 검색 합니다.
+1. 개체 `MKLocalSearchRequest` 를 만듭니다.
+1. 에서 개체를 만듭니다. `MKLocalSearchRequest` `MKLocalSearch`
+1. 개체에서 메서드를 `Start` 호출 합니다. `MKLocalSearch`
+1. 콜백에서 개체 `MKLocalSearchResponse` 를 검색 합니다.
 
 
 로컬 검색 API 자체는 사용자 인터페이스를 제공 하지 않습니다. 지도를 사용 하지 않아도 됩니다. 그러나 로컬 검색을 효과적으로 사용 하려면 응용 프로그램에서 검색 쿼리를 지정 하 고 결과를 표시 하는 몇 가지 방법을 제공 해야 합니다. 또한 결과에 위치 데이터가 포함 되므로 맵에 표시 하는 것이 좋습니다.

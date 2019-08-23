@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: choose-layout.md
+            html: Xamarin.Forms의 기본 레이아웃 클래스에서 자식의 위치 및 크기를 조정하는 방법에 대해 알아보세요.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: choose-layout.md
+            title: 레이아웃 선택
           - href: stack-layout.md
             html: 1차원 스택으로 가로 또는 세로 보기를 구성하는 방법을 알아봅니다.
             image:
@@ -37,18 +43,18 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: flex-layout.md
             title: FlexLayout
-          - href: absolute-layout.md
-            html: 비례 또는 절댓값을 설정하여 뷰를 구성하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
           - href: relative-layout.md
             html: 레이아웃 또는 형제 뷰의 속성을 기준으로 제약 조건을 설정하여 뷰를 구성하는 방법을 알아보세요.
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: absolute-layout.md
             title: RelativeLayout
+          - href: absolute-layout.md
+            html: 비례 또는 절댓값을 설정하여 뷰를 구성하는 방법을 알아보세요.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
+              href: absolute-layout.md
+            title: AbsoluteLayout
           - href: scroll-view.md
             html: 뷰가 화면 경계와 맞지 않을 때 스크롤 기능을 제공하는 방법에 대해 알아보세요.
             image:
@@ -60,7 +66,7 @@ sections:
             image:
               src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
               href: contentview.md
-            title: 프레임
+            title: ContentView
           - href: frame.md
             html: '색, 그림자 및 기타 옵션으로 구성할 수 있는 프레임을 사용하여 뷰를 래핑하는 방법에 대해 알아보세요.'
             image:

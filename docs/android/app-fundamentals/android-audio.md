@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 256871fd225808af1fdebf14c4eb2b43e575e105
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 960b4eb058209547c65a3b438bed541c3ade257c
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644348"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521260"
 ---
 # <a name="android-audio"></a>Android Audio
 
@@ -25,13 +25,13 @@ _Android OS는 오디오 및 비디오를 모두 제공 하는 멀티미디어�
 
 Android는 멀티미디어를 광범위 하 게 지원 합니다. 이 문서에서는 Android에서 오디오 작업을 검토 하 고 다음 항목에 대해 설명 합니다.
 
-1.  **MediaPlayer로 오디오 재생** &ndash; 기본 `AudioTrack` 제공 `MediaPlayer` 클래스를 사용 하 여 클래스를 사용 하 여 로컬 오디오 파일 및 스트리밍된 오디오 파일을 비롯 한 오디오 재생
+1. **MediaPlayer로 오디오 재생** &ndash; 기본 `AudioTrack` 제공 `MediaPlayer` 클래스를 사용 하 여 클래스를 사용 하 여 로컬 오디오 파일 및 스트리밍된 오디오 파일을 비롯 한 오디오 재생
 
-2.  **오디오 기록** &ndash; 기본 제공`MediaRecorder` 클래스를 사용 하 여 오디오 기록
+2. **오디오 기록** &ndash; 기본 제공`MediaRecorder` 클래스를 사용 하 여 오디오 기록
 
-3.  **오디오 알림 사용** &ndash; 오디오 알림을 사용 하 여 오디오 출력을 일시 중단 하거나 취소 하 여 이벤트 (예: 수신 전화 통화)에 올바르게 응답 하는 잘 작동 하는 응용 프로그램을 만듭니다.
+3. **오디오 알림 사용** &ndash; 오디오 알림을 사용 하 여 오디오 출력을 일시 중단 하거나 취소 하 여 이벤트 (예: 수신 전화 통화)에 올바르게 응답 하는 잘 작동 하는 응용 프로그램을 만듭니다.
 
-4.  **하위 수준 오디오 작업** 메모리 버퍼에 직접 `AudioTrack` 기록 하 여 클래스를 사용 하 여 오디오 재생 &ndash; 클래스를 `AudioRecord` 사용 하 여 오디오를 기록 하 고 메모리 버퍼에서 직접 읽습니다.
+4. **하위 수준 오디오 작업** 메모리 버퍼에 직접 `AudioTrack` 기록 하 여 클래스를 사용 하 여 오디오 재생 &ndash; 클래스를 `AudioRecord` 사용 하 여 오디오를 기록 하 고 메모리 버퍼에서 직접 읽습니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -228,15 +228,15 @@ recorder.Release();
 
 장치의 오디오 리소스를 요청 하는 데 필요한 단계는 다음과 같습니다.
 
-1.  `AudioManager` 시스템 서비스에 대 한 핸들을 가져옵니다.
+1. `AudioManager` 시스템 서비스에 대 한 핸들을 가져옵니다.
 
-2.  콜백 클래스의 인스턴스를 만듭니다.
+2. 콜백 클래스의 인스턴스를 만듭니다.
 
-3.  에서 메서드를 `RequestAudioFocus` 호출 하 여 장치의 오디오 리소스를 요청 합니다.`AudioManager` 매개 변수는 콜백 개체, 스트림 형식 (음악, 음성 통화, 링 등) 및 요청 된 액세스 권한 유형 (예: 일시적으로 또는 무기한으로 오디오 리소스를 요청할 수 있음)입니다.
+3. 에서 메서드를 `RequestAudioFocus` 호출 하 여 장치의 오디오 리소스를 요청 합니다.`AudioManager` 매개 변수는 콜백 개체, 스트림 형식 (음악, 음성 통화, 링 등) 및 요청 된 액세스 권한 유형 (예: 일시적으로 또는 무기한으로 오디오 리소스를 요청할 수 있음)입니다.
 
-4.  요청이 부여 `playMusic` 되 면 메서드가 즉시 호출 되 고 오디오가 재생 되기 시작 합니다.
+4. 요청이 부여 `playMusic` 되 면 메서드가 즉시 호출 되 고 오디오가 재생 되기 시작 합니다.
 
-5.  요청이 거부 되 면 추가 작업을 수행 하지 않습니다. 이 경우에는 요청이 나중에 부여 된 경우에만 오디오가 재생 됩니다.
+5. 요청이 거부 되 면 추가 작업을 수행 하지 않습니다. 이 경우에는 요청이 나중에 부여 된 경우에만 오디오가 재생 됩니다.
 
 
 아래 코드 샘플에서는 이러한 단계를 보여 줍니다.
@@ -267,11 +267,11 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 
 하위 수준 오디오 Api는 파일 Uri를 사용 하는 대신 메모리 버퍼와 직접 상호 작용 하기 때문에 오디오 재생 및 기록에 대 한 더 많은 제어를 제공 합니다. 이 방법을 사용 하는 것이 가장 좋은 몇 가지 시나리오가 있습니다. 이러한 시나리오는 다음과 같습니다.
 
-1.  암호화 된 오디오 파일에서 재생 하는 경우
+1. 암호화 된 오디오 파일에서 재생 하는 경우
 
-2.  연속 하는 짧은 클립을 재생 하는 경우
+2. 연속 하는 짧은 클립을 재생 하는 경우
 
-3.  오디오 스트리밍.
+3. 오디오 스트리밍.
 
 
 ### <a name="audiotrack-class"></a>오디오 트랙 클래스
@@ -283,17 +283,17 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 
 오디오를 재생 하려면의 `AudioTrack` 새 인스턴스를 인스턴스화해야 합니다. [생성자](xref:Android.Media.AudioTrack) 에 전달 된 인수 목록은 버퍼에 포함 된 오디오 샘플을 재생 하는 방법을 지정 합니다. 인수는 다음과 같습니다.
 
-1.  Stream 형식 &ndash; 음성, 벨 소리, 음악, 시스템 또는 경보.
+1. Stream 형식 &ndash; 음성, 벨 소리, 음악, 시스템 또는 경보.
 
-2.  빈도 &ndash; 는 Hz로 표시 되는 샘플링 률입니다.
+2. 빈도 &ndash; 는 Hz로 표시 되는 샘플링 률입니다.
 
-3.  채널 구성 &ndash; Mono 또는 스테레오.
+3. 채널 구성 &ndash; Mono 또는 스테레오.
 
-4.  오디오 형식 &ndash; 8 비트 또는 16 비트 인코딩입니다.
+4. 오디오 형식 &ndash; 8 비트 또는 16 비트 인코딩입니다.
 
-5.  버퍼 크기 &ndash; (바이트)입니다.
+5. 버퍼 크기 &ndash; (바이트)입니다.
 
-6.  버퍼 모드 &ndash; 스트리밍 또는 정적입니다.
+6. 버퍼 모드 &ndash; 스트리밍 또는 정적입니다.
 
 
 생성 후의 `AudioTrack` [재생](xref:Android.Media.AudioTrack.Play) 메서드를 호출 하 여 재생을 시작 하도록 설정 합니다. 오디오 버퍼 `AudioTrack` 를에 쓰면 재생이 시작 됩니다.
@@ -354,17 +354,17 @@ audioTrack.Release();
 
 첫 번째 단계는 새 [AudioRecord](xref:Android.Media.AudioRecord) 개체를 생성 하는 것입니다. [생성자](xref:Android.Media.AudioRecord) 에 전달 되는 인수 목록은 기록에 필요한 모든 정보를 제공 합니다. 에서 `AudioTrack`인수가 주로 열거 되는와 달리의 `AudioRecord` 해당 인수는 정수입니다. 이러한 개체는 다음과 같습니다.
 
-1.  마이크와 같은 하드웨어 오디오 입력 원본입니다.
+1. 마이크와 같은 하드웨어 오디오 입력 원본입니다.
 
-2.  Stream 형식 &ndash; 음성, 벨 소리, 음악, 시스템 또는 경보.
+2. Stream 형식 &ndash; 음성, 벨 소리, 음악, 시스템 또는 경보.
 
-3.  빈도 &ndash; 는 Hz로 표시 되는 샘플링 률입니다.
+3. 빈도 &ndash; 는 Hz로 표시 되는 샘플링 률입니다.
 
-4.  채널 구성 &ndash; Mono 또는 스테레오.
+4. 채널 구성 &ndash; Mono 또는 스테레오.
 
-5.  오디오 형식 &ndash; 8 비트 또는 16 비트 인코딩입니다.
+5. 오디오 형식 &ndash; 8 비트 또는 16 비트 인코딩입니다.
 
-6.  버퍼 크기 (바이트)
+6. 버퍼 크기 (바이트)
 
 
 `AudioRecord`가 생성 되 면 해당 [startrecording](xref:Android.Media.AudioRecord.StartRecording) 메서드가 호출 됩니다. 이제 기록을 시작할 준비가 되었습니다. 는 `AudioRecord` 입력에 대 한 오디오 버퍼를 지속적으로 읽고 오디오 파일에이 입력을 씁니다.

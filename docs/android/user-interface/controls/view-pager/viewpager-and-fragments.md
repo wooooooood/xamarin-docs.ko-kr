@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 90bffc2360654f571728f76810f144e702a81e57
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 0657e89e3026cbe2d146d538ca0158ed1d1806d2
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646097"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522747"
 ---
 # <a name="viewpager-with-fragments"></a>조각이 있는 ViewPager
 
@@ -106,11 +106,11 @@ protected override void OnCreate(Bundle bundle)
 
 이 코드는 다음을 수행 합니다.
 
-1.  **주. axml** 레이아웃 리소스에서 뷰를 설정 합니다.
+1. **주. axml** 레이아웃 리소스에서 뷰를 설정 합니다.
 
-2.  레이아웃 `ViewPager` 에서에 대 한 참조를 검색 합니다.
+2. 레이아웃 `ViewPager` 에서에 대 한 참조를 검색 합니다.
 
-3.  새 `FlashCardDeck` 를 데이터 소스로 인스턴스화합니다.
+3. 새 `FlashCardDeck` 를 데이터 소스로 인스턴스화합니다.
 
 이 코드를 작성 하 고 실행 하면 다음 스크린샷에 표시 됩니다. 
 
@@ -248,9 +248,9 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 
 을 구현 `FragmentPagerAdapter`하는 경우 다음을 재정의 해야 합니다.
 
--   **개수** &ndash; 사용 가능한 뷰 (페이지) 수를 반환 하는 읽기 전용 속성입니다.
+- **개수** &ndash; 사용 가능한 뷰 (페이지) 수를 반환 하는 읽기 전용 속성입니다.
 
--   **GetItem** &ndash; 지정 된 페이지에 대해 표시할 조각을 반환 합니다.
+- **GetItem** &ndash; 지정 된 페이지에 대해 표시할 조각을 반환 합니다.
 
 **FlashCardDeckAdapter.cs** 라는 새 파일을 추가 하 고 해당 내용을 다음 코드로 바꿉니다.
 
@@ -335,13 +335,13 @@ public override Android.Support.V4.App.Fragment GetItem(int position)
 
 이 코드는 다음을 수행 합니다.
 
-1.  지정 된 위치에 대 한 `FlashCardDeck` 데크에서 수학 문제 문자열을 조회 합니다. 
+1. 지정 된 위치에 대 한 `FlashCardDeck` 데크에서 수학 문제 문자열을 조회 합니다. 
 
-2.  지정 된 위치에 대 한 `FlashCardDeck` 데크에서 대답 문자열을 조회 합니다. 
+2. 지정 된 위치에 대 한 `FlashCardDeck` 데크에서 대답 문자열을 조회 합니다. 
 
-3.  `FlashCardFragment` 팩터리 메서드`newInstance`를 호출 하 여 플래시 카드 문제 및 응답 문자열을 전달 합니다. 
+3. `FlashCardFragment` 팩터리 메서드`newInstance`를 호출 하 여 플래시 카드 문제 및 응답 문자열을 전달 합니다. 
 
-4.  해당 위치에 대 한 질문 및 `Fragment` 대답 텍스트가 포함 된 새 플래시 카드를 만들어 반환 합니다. 
+4. 해당 위치에 대 한 질문 및 `Fragment` 대답 텍스트가 포함 된 새 플래시 카드를 만들어 반환 합니다. 
 
 `position` 에서을 `ViewPager` `TextBox` 렌더링 `Fragment` 하면플래시카드데크에있는수학문제문자열이포함된`position`이 표시 됩니다. 
 

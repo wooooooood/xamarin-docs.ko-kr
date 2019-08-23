@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 67fb12fd66d4d218f6e8bd40e21499e6c07e9e15
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: e49f12dd656d5e07feccd34e231a00124d81048a
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510594"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69524279"
 ---
 # <a name="specialized-fragment-classes"></a>특수화된 조각 클래스
 
 조각 API는 응용 프로그램에서 찾을 수 있는 몇 가지 일반적인 기능을 캡슐화 하는 다른 서브 클래스를 제공 합니다. 이러한 서브 클래스는 다음과 같습니다.
 
--   **Listfragment** &ndash; 이 조각은 배열 또는 커서와 같은 데이터 원본에 바인딩된 항목의 목록을 표시 하는 데 사용 됩니다.
+- **Listfragment** &ndash; 이 조각은 배열 또는 커서와 같은 데이터 원본에 바인딩된 항목의 목록을 표시 하는 데 사용 됩니다.
 
--   **Dialogfragment** &ndash; 이 조각은 대화 상자 주위의 래퍼로 사용 됩니다. 조각은 활동의 맨 위에 대화 상자를 표시 합니다.
+- **Dialogfragment** &ndash; 이 조각은 대화 상자 주위의 래퍼로 사용 됩니다. 조각은 활동의 맨 위에 대화 상자를 표시 합니다.
 
--   **PreferenceFragment** &ndash; 이 조각은 기본 설정 개체를 목록으로 표시 하는 데 사용 됩니다.
+- **PreferenceFragment** &ndash; 이 조각은 기본 설정 개체를 목록으로 표시 하는 데 사용 됩니다.
 
 
 
@@ -91,9 +91,9 @@ public override void OnListItemClick(ListView l, View v, int index, long id)
 
 는 `DialogFragment` 조각과 대화 상자 간의 상태를 일관 되 게 유지 합니다. 대화 상자 개체에 대 한 모든 상호 작용 및 제어는 `DialogFragment` API를 통해 수행 되어야 하며, 대화 상자 개체에 대 한 직접 호출로 생성 되지 않습니다. API `DialogFragment` 는 각 인스턴스에 `Show()` 조각을 표시 하는 데 사용 되는 메서드를 제공 합니다. 다음 두 가지 방법으로 조각을 제거할 수 있습니다.
 
--  인스턴스에서를 호출 `DialogFragment.Dismiss()`합니다. `DialogFragment` 
+- 인스턴스에서를 호출 `DialogFragment.Dismiss()`합니다. `DialogFragment` 
 
--  다른 `DialogFragment`를 표시 합니다.
+- 다른 `DialogFragment`를 표시 합니다.
 
 을 만들려면 `DialogFragment`클래스가에서 `Android.App.DialogFragment,` 상속 된 후 다음 두 메서드 중 하나를 재정의 합니다.
 

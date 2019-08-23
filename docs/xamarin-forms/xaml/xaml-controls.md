@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2019
-ms.openlocfilehash: 9d9d07388c2dc32e82fb780d0ed09e586e401662
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: f146fc25af5b5c62acece5c736522773e6dc455d
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976525"
 ---
 # <a name="xaml-controls"></a>XAML 컨트롤
 
@@ -40,7 +40,7 @@ Xamarin.ios에 정의 된 모든 뷰는 XAML 파일에서 참조할 수 있습�
 | --- | --- |
 | <h3>단추</h3>사각형 개체에 텍스트를 표시 합니다.<p align="center">![단추의 스크린샷](xaml-controls-images/Button.png "단추")</p>[API](xref:Xamarin.Forms.Button) / [가이드](~/xamarin-forms/user-interface/button.md) | <p valign="center"><pre>&lt;Button Text="Click Me!"<br />        Font="Large"<br />        BorderWidth="1"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand"<br />        Clicked="OnButtonClicked" /&gt;</pre></p> |
 | <h3>ImageButton</h3>사각형 개체에 이미지를 표시 합니다.<p align="center">![ImageButton의 스크린샷](xaml-controls-images/ImageButton.png "ImageButton")</p>[API](xref:Xamarin.Forms.ImageButton) / [가이드](~/xamarin-forms/user-interface/imagebutton.md) | <p valign="center"><pre>&lt;ImageButton Source="XamarinLogo.png"<br />             HorizontalOptions="Center"<br />             VerticalOptions="CenterAndExpand"<br />             Clicked="OnImageButtonClicked" /&gt;</pre></p> |
-| <h3>SearchBar</h3>검색을 수행 하는 검색 창을 표시 합니다.<p align="center">![SearchBar의 스크린샷](xaml-controls-images/SearchBar.png "Searchbar")</p>[API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
+| <h3>SearchBar</h3>검색을 수행 하는 검색 창을 표시 합니다.<p align="center">![SearchBar의 스크린샷](xaml-controls-images/SearchBar.png "Searchbar")</p>[API](xref:Xamarin.Forms.SearchBar) / [가이드](~/xamarin-forms/user-interface/searchbar.md) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-for-setting-values"></a>값을 설정 하는 것에 대 한 보기
@@ -67,8 +67,8 @@ Xamarin.ios에 정의 된 모든 뷰는 XAML 파일에서 참조할 수 있습�
 
 |     |     |
 | --- | --- |
-| <h3>ActivityIndicator</h3>진행률을 표시 하지 않고 응용 프로그램이 긴 작업에서 사용 되 고 있음을 보여 주는 애니메이션을 표시 합니다.<p align="center">![ActivityIndicator의 스크린샷](xaml-controls-images/ActivityIndicator.png "Activityindicator")</p>[API](xref:Xamarin.Forms.ActivityIndicator) | <p valign="center"><pre>&lt;ActivityIndicator IsRunning="True"<br />                   VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>ProgressBar</h3>응용 프로그램에서 시간이 오래 걸리는 작업을 진행 하 고 있음을 보여 주는 애니메이션을 표시 합니다.<p align="center">![ProgressBar의 스크린샷](xaml-controls-images/ProgressBar.png "ProgressBar")</p>[API](xref:Xamarin.Forms.ProgressBar) | <p valign="center"><pre>&lt;ProgressBar Progress=".5"<br />             VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>ActivityIndicator</h3>진행률을 표시 하지 않고 응용 프로그램이 긴 작업에서 사용 되 고 있음을 보여 주는 애니메이션을 표시 합니다.<p align="center">![ActivityIndicator의 스크린샷](xaml-controls-images/ActivityIndicator.png "Activityindicator")</p>[API](xref:Xamarin.Forms.ActivityIndicator) / [가이드](~/xamarin-forms/user-interface/activityindicator.md) | <p valign="center"><pre>&lt;ActivityIndicator IsRunning="True"<br />                   VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
+| <h3>ProgressBar</h3>응용 프로그램에서 시간이 오래 걸리는 작업을 진행 하 고 있음을 보여 주는 애니메이션을 표시 합니다.<p align="center">![ProgressBar의 스크린샷](xaml-controls-images/ProgressBar.png "ProgressBar")</p>[API](xref:Xamarin.Forms.ProgressBar) / [가이드](~/xamarin-forms/user-interface/progressbar.md) | <p valign="center"><pre>&lt;ProgressBar Progress=".5"<br />             VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-that-display-collections"></a>컬렉션을 표시 하는 보기

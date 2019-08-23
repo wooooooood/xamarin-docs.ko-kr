@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 69ddb42f6bf51ec78d9735346c44efa94fb9c418
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: 106d6100d373c8d14a35aaee59035cf4a98083a5
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508769"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69528259"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Xamarin.ios에서 ARKit를 사용 하 여 UrhoSharp 사용
 
@@ -59,33 +59,33 @@ IOS 응용 프로그램에서 3d 콘텐츠를 만들고 시작 해야 합니다 
 
 ARKit/UrhoSharp 샘플은 질감이 있는 애니메이션 문자를 로드 하 고 다음 구현을 사용 하 여 애니메이션을 재생 합니다.
 
-    ```csharp
-    public class MutantDemo : ArkitApp
+```csharp
+public class MutantDemo : ArkitApp
+{
+    [Preserve]
+    public MutantDemo(ApplicationOptions opts) : base(opts) { }
+
+    Node mutantNode;
+
+    protected override void Start()
     {
-        [Preserve]
-        public MutantDemo(ApplicationOptions opts) : base(opts) { }
+        base.Start ();
 
-        Node mutantNode;
+        // Mutant
+        mutantNode = Scene.CreateChild();
+        mutantNode.Rotation = new Quaternion(x: 0, y:15, z:0);
+        mutantNode.Position = new Vector3(0, -1f, 2f); /*two meters away*/
+        mutantNode.SetScale(0.5f);
 
-        protected override void Start()
-        {
-            base.Start ();
+        var mutant = mutantNode.CreateComponent<AnimatedModel>();
+        mutant.Model = ResourceCache.GetModel("Models/Mutant.mdl");
+        mutant.Material = ResourceCache.GetMaterial("Materials/mutant_M.xml");
 
-            // Mutant
-            mutantNode = Scene.CreateChild();
-            mutantNode.Rotation = new Quaternion(x: 0, y:15, z:0);
-            mutantNode.Position = new Vector3(0, -1f, 2f); /*two meters away*/
-            mutantNode.SetScale(0.5f);
-
-            var mutant = mutantNode.CreateComponent<AnimatedModel>();
-            mutant.Model = ResourceCache.GetModel("Models/Mutant.mdl");
-            mutant.Material = ResourceCache.GetMaterial("Materials/mutant_M.xml");
-
-            var animation = mutantNode.CreateComponent<AnimationController>();
-            animation.Play("Animations/Mutant_HipHop1.ani", 0, true, 0.2f);
-        }
+        var animation = mutantNode.CreateComponent<AnimationController>();
+        animation.Play("Animations/Mutant_HipHop1.ani", 0, true, 0.2f);
     }
-    ```
+}
+```
 
 그리고이 시점에서 3D 콘텐츠를 확대 된 현실에 표시 하기 위해 수행 해야 하는 것은 사실입니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 52141141ab525c7407fa2f3ff2dca749473b39c1
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
-ms.translationtype: HT
+ms.openlocfilehash: d4d7379e1d4d2dd605331b30d692df299f5f5c13
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511450"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69523669"
 ---
 # <a name="android-pie-features"></a>Android 원형 기능
 
@@ -69,7 +69,7 @@ Xamarin. Android 9.0를 사용 하 여 프로젝트를 만들려면 먼저 Andro
 
     [![리포지토리를 Google으로 설정](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
-3. 플랫폼 **탭에** **Android SDK Platform 28** 로 나열 된 **Android 원형** SDK 패키지를 설치 합니다 (SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 [Android SDK 설치](~/android/get-started/installation/android-sdk.md)참조).
+3. 플랫폼 탭에 **Android SDK Platform 28** 로 나열 된 **Android 원형** SDK 패키지를 설치 합니다 (SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 [Android SDK 설치](~/android/get-started/installation/android-sdk.md)참조).
 
     [![Android 원형 패키지 설치](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
@@ -95,13 +95,13 @@ Nexus 또는 픽셀과 같은 물리적 장치를 사용 하는 경우 [nexus �
 
 Android 원형에는 다양 한 새로운 기능이 도입 되었습니다. 이러한 새로운 기능 중 일부는 최신 Android 장치에서 제공 하는 새로운 하드웨어 기능을 활용 하기 위한 것이 고, 다른 일부는 Android 사용자 환경을 더욱 향상 시키기 위해 설계 되었습니다.
 
--   **컷아웃 지원 표시** 최신 Android 장치에서 화면 위쪽에 있는 잘라낸 위치와 모양을 찾는 api를 제공 합니다. &ndash;
+- **컷아웃 지원 표시** 최신 Android 장치에서 화면 위쪽에 있는 잘라낸 위치와 모양을 찾는 api를 제공 합니다. &ndash;
 
--   **알림 기능 향상** 이제 알림 메시지에서 이미지를 표시 하 고 대화 `Person` 참가자를 간소화 하는 데 새 클래스를 사용할 수 있습니다. &ndash;
+- **알림 기능 향상** 이제 알림 메시지에서 이미지를 표시 하 고 대화 `Person` 참가자를 간소화 하는 데 새 클래스를 사용할 수 있습니다. &ndash;
 
--   **실내 위치 지정** &ndash; Wifi 왕복 시간 프로토콜에 대 한 플랫폼 지원으로 앱에서 실내 설정 탐색에 wifi 장치를 사용할 수 있습니다.
+- **실내 위치 지정** &ndash; Wifi 왕복 시간 프로토콜에 대 한 플랫폼 지원으로 앱에서 실내 설정 탐색에 wifi 장치를 사용할 수 있습니다.
 
--   **다중 카메라 지원** &ndash; 에서는 여러 실제 카메라 (예: 이중 전면 카메라 및 이중 후면 카메라)에서 스트림에 동시에 액세스할 수 있는 기능을 제공 합니다.
+- **다중 카메라 지원** &ndash; 에서는 여러 실제 카메라 (예: 이중 전면 카메라 및 이중 후면 카메라)에서 스트림에 동시에 액세스할 수 있는 기능을 제공 합니다.
 
 
 다음 섹션에서는 이러한 기능을 강조 하 고 응용 프로그램에서 사용을 시작 하는 데 도움이 되는 간단한 코드 예제를 제공 합니다.
@@ -115,11 +115,11 @@ Edge to edge 화면을 사용 하는 최신 Android 장치에는 카메라 및 �
 
 응용 프로그램 창에 표시 되는 장치에서 콘텐츠를 표시 하는 방법을 관리 하려면 Android 원형에서 새로운 [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) 창 레이아웃 특성을 추가 했습니다. 이 특성은 다음 값 중 하나로 설정할 수 있습니다.
 
--   [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; 창은 잘라낸 영역과 겹칠 수 없습니다.
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER) &ndash; 창은 잘라낸 영역과 겹칠 수 없습니다.
 
--   [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; 창은 잘라낸 영역으로 확장 될 수 있지만 화면의 짧은 가장자리 에서만 가능 합니다. 
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) &ndash; 창은 잘라낸 영역으로 확장 될 수 있지만 화면의 짧은 가장자리 에서만 가능 합니다. 
 
--   [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; 잘라낸 부분을 시스템 표시줄 안에 포함 하는 경우 창을 잘라낸 영역으로 확장할 수 있습니다.
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT) &ndash; 잘라낸 부분을 시스템 표시줄 안에 포함 하는 경우 창을 잘라낸 영역으로 확장할 수 있습니다.
 
 예를 들어 응용 프로그램 창이 잘라낸 영역과 겹치지 않도록 하려면 레이아웃 오려내기 모드를 사용 *안 함*으로 설정 합니다. 
 
@@ -145,13 +145,13 @@ Android P의 새로운 컷아웃 기능에 대 한 자세한 내용은 [잘라�
 
 Android 원형은 다음과 같은 향상 된 기능을 제공 하 여 메시징 환경을 향상 시킵니다.
 
--   알림 채널 ( [Android Oreo](~/android/platform/oreo.md)에서 도입 됨)은 이제 채널 그룹의 차단을 지원 합니다.
+- 알림 채널 ( [Android Oreo](~/android/platform/oreo.md)에서 도입 됨)은 이제 채널 그룹의 차단을 지원 합니다.
 
--   알림 시스템에는 경보, 시스템 소리 및 미디어 원본에 우선 순위를 정하는 세 가지 새로운 비-방해 범주가 있습니다. 또한 시각적 중단을 방지 하는 데 사용할 수 있는 7 가지 새로운 비-방해 모드 (예: 배지, 알림 광원, 상태 표시줄 모양, 전체 화면 작업 시작)가 있습니다.
+- 알림 시스템에는 경보, 시스템 소리 및 미디어 원본에 우선 순위를 정하는 세 가지 새로운 비-방해 범주가 있습니다. 또한 시각적 중단을 방지 하는 데 사용할 수 있는 7 가지 새로운 비-방해 모드 (예: 배지, 알림 광원, 상태 표시줄 모양, 전체 화면 작업 시작)가 있습니다.
 
--   메시지의 보낸 사람을 나타내기 위해 새 [Person](https://developer.android.com/reference/android/app/Person.html) 클래스가 추가 되었습니다. 이 클래스를 사용 하면 대화에 포함 된 사용자 (아바타 및 Uri 포함)를 식별 하 여 각 알림의 렌더링을 최적화할 수 있습니다.
+- 메시지의 보낸 사람을 나타내기 위해 새 [Person](https://developer.android.com/reference/android/app/Person.html) 클래스가 추가 되었습니다. 이 클래스를 사용 하면 대화에 포함 된 사용자 (아바타 및 Uri 포함)를 식별 하 여 각 알림의 렌더링을 최적화할 수 있습니다.
 
--   이제 알림이 이미지를 표시할 수 있습니다. 
+- 이제 알림이 이미지를 표시할 수 있습니다. 
 
 다음 예제에서는 새 Api를 사용 하 여 이미지를 포함 하는 알림을 생성 하는 방법을 보여 줍니다. 다음 스크린샷에는 텍스트 알림이 게시 되 고 다음에 포함 된 이미지를 사용 하는 알림이 발생 합니다. 오른쪽에 표시 된 대로 알림이 확장 되 면 첫 번째 알림의 텍스트가 표시 되 고 두 번째 알림에 포함 된 이미지는 확대 됩니다.
 
@@ -230,13 +230,13 @@ Android P의 다중 카메라 지원에 대 한 자세한 내용은 [다중 카�
 
 또한 Android 원형은 다음과 같은 여러 가지 새로운 기능을 지원 합니다.
 
--   애니메이션 이미지를 그리거나 표시 하는 데 사용할 수 있는 새 [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) 클래스입니다.
+- 애니메이션 이미지를 그리거나 표시 하는 데 사용할 수 있는 새 [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html) 클래스입니다.
 
--   `BitmapFactory`을 대체 하는 새 [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) 클래스입니다. `ImageDecoder`를 디코딩하 `AnimatedImageDrawable`는 데 사용할 수 있습니다.
+- `BitmapFactory`을 대체 하는 새 [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) 클래스입니다. `ImageDecoder`를 디코딩하 `AnimatedImageDrawable`는 데 사용할 수 있습니다.
 
--   HDR (높은 동적 범위) 비디오 및 뛰어난 경우 (높은 효율성 이미지 파일 형식) 이미지에 대 한 지원.
+- HDR (높은 동적 범위) 비디오 및 뛰어난 경우 (높은 효율성 이미지 파일 형식) 이미지에 대 한 지원.
 
--   [Jobscheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) 는 네트워크 관련 작업을 보다 지능적으로 처리 하도록 개선 되었습니다. [Jobparameters](https://developer.android.com/reference/android/app/job/JobParameters) 클래스의 새 [getnetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) 메서드는 지정 된 작업에 대 한 네트워크 요청을 수행 하기 위한 최상의 네트워크를 반환 합니다.
+- [Jobscheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) 는 네트워크 관련 작업을 보다 지능적으로 처리 하도록 개선 되었습니다. [Jobparameters](https://developer.android.com/reference/android/app/job/JobParameters) 클래스의 새 [getnetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) 메서드는 지정 된 작업에 대 한 네트워크 요청을 수행 하기 위한 최상의 네트워크를 반환 합니다.
 
 최신 Android 원형 기능에 대 한 자세한 내용은 [android 9의 기능 및 api](https://developer.android.com/about/versions/pie/android-9.0)를 참조 하세요.
 
@@ -245,11 +245,11 @@ Android P의 다중 카메라 지원에 대 한 자세한 내용은 [다중 카�
 
 대상 Android 버전이 API 수준 28로 설정 된 경우 위에 설명 된 새로운 기능을 구현 하지 않는 경우에도 앱의 동작에 영향을 줄 수 있는 몇 가지 플랫폼 변경이 있습니다. 다음 목록은 이러한 변경 내용에 대 한 간략 한 요약입니다.
 
--  이제 응용 프로그램은 포그라운드 서비스를 사용 하기 전에 포그라운드 권한을 요청 해야 합니다.
+- 이제 응용 프로그램은 포그라운드 서비스를 사용 하기 전에 포그라운드 권한을 요청 해야 합니다.
 
--  앱에 프로세스가 두 개 이상 있는 경우 여러 프로세스에서 단일 [웹 보기](xref:Android.Webkit.WebView) 데이터 디렉터리를 공유할 수 없습니다.
+- 앱에 프로세스가 두 개 이상 있는 경우 여러 프로세스에서 단일 [웹 보기](xref:Android.Webkit.WebView) 데이터 디렉터리를 공유할 수 없습니다.
 
--  경로를 기준으로 다른 응용 프로그램의 데이터 디렉터리에 직접 액세스 하는 것은 더 이상 허용 되지 않습니다.
+- 경로를 기준으로 다른 응용 프로그램의 데이터 디렉터리에 직접 액세스 하는 것은 더 이상 허용 되지 않습니다.
 
 Android P를 대상으로 하는 앱의 동작 변경에 대 한 자세한 내용은 [동작 변경](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps)을 참조 하세요.
 

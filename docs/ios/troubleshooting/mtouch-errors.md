@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: 736195182713eb35ad18fb1ae12c5cc7ddce0787
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
-ms.translationtype: HT
+ms.openlocfilehash: 588c46274aa0b4d77742d004bf1fbe91e56a42c6
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012515"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620602"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -24,7 +24,7 @@ ms.locfileid: "69012515"
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
  https://github.com/xamarin/xamarin-macios/blob/master/tools/mtouch/error.cs
-    -->
+  -->
 
 <a name="MT0000" />
 
@@ -130,8 +130,8 @@ Mtouch에 두 개 이상의 루트 어셈블리가 전달 되었지만 하나의
 
 이 문제는 다음과 같은 경우에 발생할 수 있습니다.
 
-*  ARMv6를 사용 하도록 설정 하 고 Xcode 4.5 이상을 설치 합니다.
-*  Armv7s 용 thumb-2를 사용 하도록 설정 하 고 Xcode 4.4 또는 이전 버전을 설치 합니다.
+* ARMv6를 사용 하도록 설정 하 고 Xcode 4.5 이상을 설치 합니다.
+* Armv7s 용 thumb-2를 사용 하도록 설정 하 고 Xcode 4.4 또는 이전 버전을 설치 합니다.
 
 설치 된 Xcode 버전에서 선택한 아키텍처를 지원 하는지 확인 하세요.
 
@@ -165,12 +165,12 @@ Mtouch는 오류 메시지에 언급 된 명령줄 인수를 인식 하지 못�
 
 동시에 사용할 수 없는 mtouch에 대 한 몇 가지 옵션이 있습니다.
 
--  --logdev
--  --installdev
--  --killdev
--  --launchdev
--  --launchdebug
--  --launchsim
+- --logdev
+- --installdev
+- --killdev
+- --launchdev
+- --launchdebug
+- --launchsim
 
 <a name="MT0020" />
 
@@ -334,7 +334,7 @@ Mtouch에 대 한 작업이 지정 되지 않았습니다.
 
 <a name="MT0056" />
 
-### <a name="mt0056-cannot-find-xcode-in-the-default-location-applicationsxcodeapp-please-install-xcode-or-pass-a-custom-path-using---sdkroot-path"></a>MT0056: 기본 위치에서 Xcode를 찾을 수 없습니다 (/Sups/xcode.xml 앱). Xcode를 설치 하거나--sdkroot <path>를 사용 하 여 사용자 지정 경로를 전달 하세요.
+### <a name="mt0056-cannot-find-xcode-in-the-default-location-applicationsxcodeapp-please-install-xcode-or-pass-a-custom-path-using---sdkroot-path"></a>MT0056: 기본 위치에서 Xcode를 찾을 수 없습니다 (/Sups/xcode.xml 앱). Xcode를 설치 하거나--sdkroot \<path >를 사용 하 여 사용자 지정 경로를 전달 하세요.
 
 <a name="MT0057" />
 
@@ -585,7 +585,9 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 예를 들어:
 
-    --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
+```
+  --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
+```
 
 이 예제에서는 동일한 설정 (`MyBinary`)을 사용 하 여 동적 라이브러리와 프레임 워크를 모두 만들려고 합니다.
 
@@ -597,7 +599,9 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 예를 들어:
 
-    --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
+```
+--assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
+```
 
 이 예제에서는 허용 되지 않는 두 개의 어셈블리`MyBinary`(`Assembly1.dll` 및 `Assembly2.dll`)로 구성 된 정적 개체 ()를 빌드하려고 시도 합니다.
 
@@ -619,7 +623,9 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 예를 들어 다음 값은이 오류를 트리거합니다.
 
-    --assembly-build-target:Assembly1.dll=staticobject=my/path.o
+```
+--assembly-build-target:Assembly1.dll=staticobject=my/path.o
+```
 
 `my/path.o` 는 디렉터리 구분 문자 때문에 올바른 파일 이름이 아닙니다.
 
@@ -1143,7 +1149,7 @@ sudo chmod 0644 /Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/m
 
 ### <a name="mt1108-could-not-find-developer-tools-for-this-xx-yy-device"></a>MT1108: 이 XX (YY) 장치용 개발자 도구를 찾을 수 없습니다.
 
-Mtouch에서 몇 가지 작업을 수행 하려면 <tt>dmg</tt> 파일이 있어야 합니다.   이 파일은 Xcode의 일부 이며 일반적으로 빌드에 사용 하는 SDK와 관련 하 여 <tt>Xcode/Contents/Developer/iPhoneOS/DeviceSupport/VERSION/DeveloperDiskImage</tt>.
+Mtouch에서 몇 가지 작업을 수행 `DeveloperDiskImage.dmg` 하려면 파일이 있어야 합니다.   이 파일은 Xcode의 일부 이며 일반적으로에 대해 `Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg`빌드하는 데 사용 하는 SDK를 기준으로 합니다.
 
 이 오류는 연결 된 장치와 일치 하는 dmg DeveloperDiskImage 없기 때문에 발생할 수 있습니다.
 
@@ -1254,7 +1260,7 @@ Mtouch에서 몇 가지 작업을 수행 하려면 <tt>dmg</tt> 파일이 있어
 이 문제를 해결 하기 위해 수행 해야 하는 작업:
 
 * Xcode에서 시뮬레이터를 한 번 사용 합니다.
-* --Sdk <version>를 사용 하 여 명시적 sdk 버전을 전달 합니다.
+* --Sdk \<버전 >를 사용 하 여 명시적 sdk 버전을 전달 합니다.
 * Xcode를 다시 설치 합니다.
 
 <a name="MT1221" />
@@ -1425,7 +1431,9 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 터미널의 `file` 명령을 사용 하 여 라이브러리의 형식을 확인할 수 있습니다.
 
-    file -arch all -l /path/to/library.dylib
+```
+file -arch all -l /path/to/library.dylib
+```
 
 <a name="MT1601" />
 
@@ -1437,7 +1445,9 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 터미널의 `file` 명령을 사용 하 여 라이브러리의 형식을 확인할 수 있습니다.
 
-    file -arch all -l /path/to/library.a
+```
+file -arch all -l /path/to/library.a
+```
 
 <a name="MT1602" />
 
@@ -1449,7 +1459,9 @@ Info.plist 파일의 배포 대상을 8.0 이상으로 설정 하 여이 오류�
 
 터미널의 `file` 명령을 사용 하 여 라이브러리의 형식을 확인할 수 있습니다.
 
-    file -arch all -l /path/to/library.dylib
+```
+file -arch all -l /path/to/library.dylib
+```
 
 <a name="MT1603" />
 
@@ -1461,7 +1473,9 @@ Fat 보관 파일이 유효한 지 확인 하세요.
 
 터미널의 `file` 명령을 사용 하 여 fat 보관 파일의 형식을 확인할 수 있습니다.
 
-    file -arch all -l /path/to/file
+```
+file -arch all -l /path/to/file
+```
 
 <a name="MT1604" />
 
@@ -1473,7 +1487,9 @@ Fat 보관 파일이 유효한 지 확인 하세요.
 
 터미널의 `file` 명령을 사용 하 여 파일 형식을 확인할 수 있습니다.
 
-    file -arch all -l /path/to/file
+```
+file -arch all -l /path/to/file
+```
 
 ## <a name="mt2xxx-linker-error-messages"></a>MT2xxx: 링커 오류 메시지
 
@@ -1959,14 +1975,14 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우 [github](https://
 ```csharp
 class MyNSObject : NSObject
 {
-    [Export ("retain")]
-    new void Retain () {}
+  [Export ("retain")]
+  new void Retain () {}
 
-    [Export ("release")]
-    new void Release () {}
+  [Export ("release")]
+  new void Release () {}
 
-    [Export ("dealloc")]
-    new void Dealloc () {}
+  [Export ("dealloc")]
+  new void Dealloc () {}
 }
 ```
 
@@ -1979,14 +1995,14 @@ class MyNSObject : NSObject
 
 class MyCustomNSObject : MyNSObject
 {
-    [Export ("retain")]
-    new void Retain () {}
+  [Export ("retain")]
+  new void Retain () {}
 
-    [Export ("release")]
-    new void Release () {}
+  [Export ("release")]
+  new void Release () {}
 
-    [Export ("dealloc")]
-    new void Dealloc () {}
+  [Export ("dealloc")]
+  new void Dealloc () {}
 }
 ```
 
@@ -2225,7 +2241,9 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 * 타사 바인딩에는 프레임 워크가 필요 하지만 바인딩에는 해당 `[LinkWith]` 특성이 지정 되지 않습니다. 해결책이
   - 타사 바인딩의 작성자 이거나 소스에 대 한 액세스 권한이 있는 경우 필요한 프레임 워크를 포함 하도록 바인딩의 `[LinkWith]` 특성을 수정 합니다.
 
-            [LinkWith ("mylib.a", Frameworks = "SystemConfiguration")]
+    ```csharp
+    [LinkWith ("mylib.a", Frameworks = "SystemConfiguration")]
+    ```
 
   - 타사 바인딩을 수정할 수 없는 경우에 `-gcc_flags '-framework SystemFramework'` `mtouch` 전달 하 여 필요한 프레임 워크를 수동으로 연결할 수 있습니다 .이 작업은 프로젝트의 iOS 빌드 옵션 페이지에서 추가 mtouch 인수를 수정 하 여 수행 합니다. 모든 프로젝트 구성에 대해이 작업을 수행 해야 합니다.
 * 경우에 따라 관리 되는 바인딩은 여러 네이티브 라이브러리로 구성 되며 모두 바인딩에 포함 되어야 합니다. 각 바인딩 프로젝트에 네이티브 라이브러리가 두 개 이상 있을 수 있으므로 솔루션은 필요한 네이티브 라이브러리를 모두 바인딩 프로젝트에 추가 하는 것입니다.</li>
@@ -2235,9 +2253,11 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 * 타사 바인딩/라이브러리가를 사용 하 여 C++빌드 되었지만 바인딩이 `[LinkWith]` 특성에이를 지정 하지 않습니다. 이는 기호에 올바른 C++ 기호가 있기 때문에 일반적으로 쉽게 인식할 수 있습니다 (한 가지 일반적인 예 `__ZNKSt9exception4whatEv`는).
   - 타사 바인딩의 작성자 이거나 소스에 대 한 액세스 권한이 있는 경우, 바인딩의 `[LinkWith]` 특성을 수정 하 여 `IsCxx` 플래그를 설정 합니다.
 
-            [LinkWith ("mylib.a", IsCxx = true)]
+    ```csharp
+    [LinkWith ("mylib.a", IsCxx = true)]
+    ```
 
-  - 타사 바인딩을 수정할 수 없거나 타사 라이브러리를 사용 하 여 수동으로 연결 하는 경우 mtouch에 전달 <code>-cxx</code> 하 여 해당 플래그를 설정할 수 있습니다 .이 작업은 프로젝트의 iOS 빌드 옵션 페이지에서 추가 mtouch 인수를 수정 하 여 수행 됩니다. . 모든 프로젝트 구성에 대해이 작업을 수행 해야 합니다.
+  - 타사 바인딩을 수정할 수 없거나 타사 라이브러리를 사용 하 여 수동으로 연결 하는 경우 mtouch에 전달 `-cxx` 하 여 해당 플래그를 설정할 수 있습니다 .이 작업은 프로젝트의 iOS 빌드 옵션 페이지에서 추가 mtouch 인수를 수정 하 여 수행 됩니다. . 모든 프로젝트 구성에 대해이 작업을 수행 해야 합니다.
 
 <a name="MT5211" />
 
@@ -2245,14 +2265,16 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 이는 네이티브 링커가 어딘가에 참조 된 목표 C 클래스를 찾을 수 없는 경우에 발생 합니다. 이는 다음과 같은 몇 가지 이유로 발생할 수 있습니다. [MT5210](#MT5210) 와 동일 합니다.
 
-* 타사 바인딩에는 목표 C 프로토콜이 바인딩되어 있지만 api 정의의 특성에는 <code>[Protocol]</code> 주석이 지정 되지 않았습니다. 해결책이
+* 타사 바인딩에는 목표 C 프로토콜이 바인딩되어 있지만 api 정의의 특성에는 `[Protocol]` 주석이 지정 되지 않았습니다. 해결책이
   - 누락 `[Protocol]` 된 특성을 추가 합니다.
 
-              [BaseType (typeof (NSObject))]
-              [Protocol] // Add this
-              public interface MyProtocol
-              {
-              }
+    ```csharp
+    [BaseType (typeof (NSObject))]
+    [Protocol] // Add this
+    public interface MyProtocol
+    {
+    }
+    ```
 
 <a name="MT5212" />
 
@@ -2265,48 +2287,54 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 * 네이티브 라이브러리가 제대로 빌드되지 않고 동일한 기호를 두 번 이상 포함 합니다.
   터미널에서 다음 명령 집합을 사용 하 여 확인할 수 있습니다 (x86_64/armv7/armv7s 용 thumb-2/arm64를 빌드하는 아키텍처에 따라 바꾸기).
 
-        # Native libraries are usually fat libraries, containing binary code for
-        # several architectures in the same file. First we extract the binary
-        # code for the architecture we're interested in.
-        lipo libNative.a -thin i386 -output libNative.i386.a
+  ```
+  # Native libraries are usually fat libraries, containing binary code for
+  # several architectures in the same file. First we extract the binary
+  # code for the architecture we're interested in.
+  lipo libNative.a -thin i386 -output libNative.i386.a
 
-        # Now query the native library for the duplicated symbol.
-        nm libNative.i386.a | fgrep 'SYMBOL'
+  # Now query the native library for the duplicated symbol.
+  nm libNative.i386.a | fgrep 'SYMBOL'
 
-        # You can also list the object files inside the native library.
-        # In most cases this will reveal duplicated object files.
-        ar -t libNative.i386.a
+  # You can also list the object files inside the native library.
+  # In most cases this will reveal duplicated object files.
+  ar -t libNative.i386.a
+  ```
 
   다음과 같은 몇 가지 방법으로이 문제를 해결할 수 있습니다.
 
   - 네이티브 라이브러리의 공급자가이를 수정 하 고 업데이트 된 버전을 제공 하도록 요청 합니다.
   - 추가 개체 파일을 제거 하 여 직접 수정 합니다 .이는 문제가 실제로 중복 된 개체 파일에 있는 경우에만 작동 합니다.
 
-            # Find out if the library is a fat library, and which
-            # architectures it contains.
-            lipo -info libNative.a
+  ```
+  # Find out if the library is a fat library, and which
+  # architectures it contains.
+  lipo -info libNative.a
 
-            # Extract each architecture (i386/x86_64/armv7/armv7s/arm64) to a separate file
-            lipo libNative.a -thin ARCH -output libNative.ARCH.a
+  # Extract each architecture (i386/x86_64/armv7/armv7s/arm64) to a separate file
+  lipo libNative.a -thin ARCH -output libNative.ARCH.a
 
-            # Extract the object files for the offending architecture
-            # This will remove the duplicates by overwriting them
-            # (since they have the same filename)
-            mkdir -p ARCH
-            cd ARCH
-            ar -x ../libNative.ARCH.a
+  # Extract the object files for the offending architecture
+  # This will remove the duplicates by overwriting them
+  # (since they have the same filename)
+  mkdir -p ARCH
+  cd ARCH
+  ar -x ../libNative.ARCH.a
 
-            # Reassemble the object files in an .a
-            ar -r ../libNative.ARCH.a *.o
-            cd ..
+  # Reassemble the object files in an .a
+  ar -r ../libNative.ARCH.a *.o
+  cd ..
 
-            # Reassemble the fat library
-            lipo *.a -create -output libNative.a
+  # Reassemble the fat library
+  lipo *.a -create -output libNative.a
+  ```
 
   - 링커에 사용 하지 않는 코드를 제거 하도록 요청 합니다. 다음 조건이 모두 충족 되 면 xamarin.ios가 자동으로이 작업을 수행 합니다.
     - 모든 타사 바인딩의 `[LinkWith]` 특성에서 smartlink를 사용 하도록 설정 했습니다.
 
-            [assembly: LinkWith ("libNative.a", SmartLink = true)]
+      ```csharp
+      [assembly: LinkWith ("libNative.a", SmartLink = true)]
+      ```
 
     - Mtouch (프로젝트의 iOS 빌드 옵션의 추가 mtouch 인수 필드)에 가전달되지않습니다.`-gcc_flags`
     - 프로젝트의 iOS 빌드 옵션에서 추가 mtouch 인수를 추가 `-gcc_flags -dead_strip` 하 여 링커에서 사용 하지 않는 코드를 직접 제거 하도록 요청할 수도 있습니다.
@@ -2386,8 +2414,8 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 이에 대 한 두 가지 주요 이유는 다음과 같습니다.
 
 * 기호 이름이 잘못 되었습니다.
-    * 기호 이름 앞에 밑줄을 추가 하지 않습니다.
-    * 객관적인 C 클래스 `OBJC_CLASS_$_<classname>`에 대 한 기호는입니다.
+  * 기호 이름 앞에 밑줄을 추가 하지 않습니다.
+  * 객관적인 C 클래스 `OBJC_CLASS_$_<classname>`에 대 한 기호는입니다.
 * 기호가 올바르지만 일반적인 방법으로 이미 유지 되 고 있는 기호입니다. 일부 빌드 옵션을 사용 하면 정확한 동적 기호 목록이 달라질 수 있습니다.
 
 ### <a name="mt53xx-other-tools"></a>MT53xx: 기타 도구

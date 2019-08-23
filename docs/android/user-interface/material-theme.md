@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 027460196f97173fcf977971b79def722ab672d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: fca8ee02fc48979db1d29716374ba300a0e8bbbf
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647861"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69522369"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -20,11 +20,11 @@ ms.locfileid: "68647861"
 
 Android는 다음과 같은 세 가지 재질 테마를 제공 합니다.
 
--  `Theme.Material`&ndash; 어두운 버전의 재질 테마입니다 .이는 Android 5.0의 기본 버전입니다.
+- `Theme.Material`&ndash; 어두운 버전의 재질 테마입니다 .이는 Android 5.0의 기본 버전입니다.
 
--  `Theme.Material.Light`&ndash; 재질 테마의 조명 버전입니다.
+- `Theme.Material.Light`&ndash; 재질 테마의 조명 버전입니다.
 
--  `Theme.Material.Light.DarkActionBar`&ndash; 재질 테마의 조명 버전 이지만 어두운 작업 막대가 있습니다.
+- `Theme.Material.Light.DarkActionBar`&ndash; 재질 테마의 조명 버전 이지만 어두운 작업 막대가 있습니다.
 
 이러한 재질 테마의 예가 여기에 표시 됩니다.
 
@@ -41,11 +41,11 @@ Android는 다음과 같은 세 가지 재질 테마를 제공 합니다.
 
 Xamarin 기반 앱에서 새로운 Android 5.0 재질 테마 기능을 사용 하려면 다음이 필요 합니다.
 
--  Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.20 이상 버전을 설치 하 고 구성 해야 합니다. 
+- Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.20 이상 버전을 설치 하 고 구성 해야 합니다. 
 
--  **Android SDK** &ndash; Android 5.0 (API 21) 이상을 Android SDK Manager를 통해 설치 해야 합니다.
+- **Android SDK** &ndash; Android 5.0 (API 21) 이상을 Android SDK Manager를 통해 설치 해야 합니다.
 
--  **JAVA JDK 1.8** &ndash; 특히 API 레벨 23 및 이전 버전을 대상으로 하는 경우 JDK 1.7을 사용할 수 있습니다. JDK 1.8은 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)에서 사용할 수 있습니다.
+- **JAVA JDK 1.8** &ndash; 특히 API 레벨 23 및 이전 버전을 대상으로 하는 경우 JDK 1.7을 사용할 수 있습니다. JDK 1.8은 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)에서 사용할 수 있습니다.
 
 Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android 5.0 프로젝트 설정](~/android/platform/lollipop.md)을 참조 하세요.
 
@@ -59,11 +59,11 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 재질 테마 버전을 사용 하도록 전체 응용 프로그램을 구성 하려면 `android:theme` **androidmanifest .xml** 의 응용 프로그램 노드 특성을 다음 중 하나로 설정 합니다.
 
--  `@android:style/Theme.Material`&ndash; 어두운 테마입니다.
+- `@android:style/Theme.Material`&ndash; 어두운 테마입니다.
 
--  `@android:style/Theme.Material.Light`&ndash; 밝은 테마입니다.
+- `@android:style/Theme.Material.Light`&ndash; 밝은 테마입니다.
 
--  `@android:style/Theme.Material.Light.DarkActionBar`&ndash; 어두운 동작 표시줄이 있는 밝은 테마입니다.
+- `@android:style/Theme.Material.Light.DarkActionBar`&ndash; 어두운 동작 표시줄이 있는 밝은 테마입니다.
 
 다음 예제에서는 light 테마를 사용 하도록 응용 프로그램 *MyApp* 를 구성 합니다.
 
@@ -101,19 +101,19 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 재질 테마는 사용자 지정을 위해 다음과 같은 레이아웃 특성을 제공 합니다.
 
--  `colorPrimary`&ndash; 앱 바의 색입니다.
+- `colorPrimary`&ndash; 앱 바의 색입니다.
 
--  `colorPrimaryDark`상태 표시줄 및 상황별 앱 막대의 색입니다. 일반적으로이는의 `colorPrimary`진한 버전입니다. &ndash;
+- `colorPrimaryDark`상태 표시줄 및 상황별 앱 막대의 색입니다. 일반적으로이는의 `colorPrimary`진한 버전입니다. &ndash;
 
--  `colorAccent`&ndash; 확인란, 라디오 단추 및 편집 텍스트 상자와 같은 UI 컨트롤의 색입니다.
+- `colorAccent`&ndash; 확인란, 라디오 단추 및 편집 텍스트 상자와 같은 UI 컨트롤의 색입니다.
 
--  `windowBackground`&ndash; 화면 배경의 색입니다.
+- `windowBackground`&ndash; 화면 배경의 색입니다.
 
--  `textColorPrimary`&ndash; 응용 프로그램 표시줄의 UI 텍스트 색입니다.
+- `textColorPrimary`&ndash; 응용 프로그램 표시줄의 UI 텍스트 색입니다.
 
--  `statusBarColor`&ndash; 상태 표시줄의 색입니다.
+- `statusBarColor`&ndash; 상태 표시줄의 색입니다.
 
--  `navigationBarColor`&ndash; 탐색 모음의 색입니다.
+- `navigationBarColor`&ndash; 탐색 모음의 색입니다.
 
 이러한 화면 영역에는 다음 다이어그램이 표시 됩니다.
 
@@ -126,7 +126,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 앱 프로젝트의 **리소스** 폴더에서 파일을 만들고 수정 하 여 사용자 지정 앱 테마를 만들 수 있습니다. 사용자 지정 테마를 사용 하 여 앱 스타일을 지정 하려면 다음 단계를 사용 합니다.
 
--   **리소스/값** &mdash; 에서 **색 .xml** 파일을 만듭니다 .이 파일을 사용 하 여 사용자 지정 테마 색을 정의 합니다. 예를 들어 다음 코드를 **색 .xml** 에 붙여넣어 시작 하는 데 도움이 될 수 있습니다.
+- **리소스/값** &mdash; 에서 **색 .xml** 파일을 만듭니다 .이 파일을 사용 하 여 사용자 지정 테마 색을 정의 합니다. 예를 들어 다음 코드를 **색 .xml** 에 붙여넣어 시작 하는 데 도움이 될 수 있습니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -138,15 +138,15 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </resources>
 ```
 
--   사용자 지정 테마에서 사용할 색 리소스의 이름 및 색 코드를 정의 하려면이 예제 파일을 수정 합니다.
+- 사용자 지정 테마에서 사용할 색 리소스의 이름 및 색 코드를 정의 하려면이 예제 파일을 수정 합니다.
 
--   **리소스/값-v21** 폴더를 만듭니다. 이 폴더에서 **스타일 .xml** 파일을 만듭니다.
+- **리소스/값-v21** 폴더를 만듭니다. 이 폴더에서 **스타일 .xml** 파일을 만듭니다.
 
     [![Resources/values-21 폴더에서 스타일 .xml의 위치](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
 
     **리소스/값-v21** 은 android 5.0 &ndash; 에만 해당 되며 이전 버전의 android는이 폴더의 파일을 읽지 않습니다.
 
--   `resources` **스타일 .xml** 에 노드를 추가 하 고 사용자 지정 `style` 테마 이름으로 노드를 정의 합니다. 예를 들어 다음은 *mycustomtheme* ( `Theme.Material.Light` 기본 제공 테마 스타일에서 파생 됨)을 정의 하는 **스타일 .xml** 파일입니다.
+- `resources` **스타일 .xml** 에 노드를 추가 하 고 사용자 지정 `style` 테마 이름으로 노드를 정의 합니다. 예를 들어 다음은 *mycustomtheme* ( `Theme.Material.Light` 기본 제공 테마 스타일에서 파생 됨)을 정의 하는 **스타일 .xml** 파일입니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -158,11 +158,11 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </resources>
 ```
 
--   이 시점에서 *mycustomtheme* 을 사용 하는 앱은 사용자 지정 없이 `Theme.Material.Light` 스톡 테마를 표시 합니다.
+- 이 시점에서 *mycustomtheme* 을 사용 하는 앱은 사용자 지정 없이 `Theme.Material.Light` 스톡 테마를 표시 합니다.
 
     [![사용자 지정 전에 사용자 지정 테마 모양](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
--   변경 하려는 레이아웃 특성의 색을 정의 하 여 **스타일 .xml** 에 색 사용자 지정을 추가 합니다. 예를 들어 앱 `my_blue` 바 색을로 변경 하 고 UI 컨트롤의 색을로 `my_purple`변경 하려면 색 **xml**에 구성 된 색 리소스를 참조 하는 **스타일 .xml** 에 색 재정의를 추가 합니다.
+- 변경 하려는 레이아웃 특성의 색을 정의 하 여 **스타일 .xml** 에 색 사용자 지정을 추가 합니다. 예를 들어 앱 `my_blue` 바 색을로 변경 하 고 UI 컨트롤의 색을로 `my_purple`변경 하려면 색 **xml**에 구성 된 색 리소스를 참조 하는 **스타일 .xml** 에 색 재정의를 추가 합니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -190,7 +190,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 또한 Android 5.0을 사용 하면 개별 보기의 스타일을 지정할 수 있습니다. 이전 섹션에서 설명한 대로 **색 .xml** 및 **스타일 .xml** 을 만든 후에는 **스타일 .xml**에 보기 스타일을 추가할 수 있습니다.
 개별 보기의 스타일을 만들려면 다음 단계를 사용 합니다.
 
--   **Resources/values-v21/styles** 를 편집 하 고 사용자 지정 `style` 보기 스타일의 이름이 있는 노드를 추가 합니다. 이 `style` 노드 내에서 보기에 대 한 사용자 지정 색 특성을 설정 합니다. 예를 들어 모퉁이가 더 둥글고 `my_blue`를 카드 배경색으로 사용 하는 사용자 지정 [CardView](~/android/user-interface/controls/card-view.md) 스타일을 만들려면 `resources`노드 내 에서 **스타일 .xml**에 `style`노드를 추가 하 고 배경색을 구성 합니다. 모퉁이 반경:
+- **Resources/values-v21/styles** 를 편집 하 고 사용자 지정 `style` 보기 스타일의 이름이 있는 노드를 추가 합니다. 이 `style` 노드 내에서 보기에 대 한 사용자 지정 색 특성을 설정 합니다. 예를 들어 모퉁이가 더 둥글고 `my_blue`를 카드 배경색으로 사용 하는 사용자 지정 [CardView](~/android/user-interface/controls/card-view.md) 스타일을 만들려면 `resources`노드 내 에서 **스타일 .xml**에 `style`노드를 추가 하 고 배경색을 구성 합니다. 모퉁이 반경:
 
 ```xml
 <!-- Theme an individual view: -->
@@ -204,7 +204,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </style>
 ```
 
--   레이아웃에서 해당 보기에 대 `style` 한 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 예를 들어:
+- 레이아웃에서 해당 보기에 대 `style` 한 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 예를 들어:
 
 ```xml
 <android.support.v7.widget.CardView
@@ -225,7 +225,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 하향 호환 스타일로 자동으로 전환 하도록 앱의 스타일을 설정 하려면 다음 단계를 사용 합니다.
 
--   재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 예를 들어:
+- 재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 예를 들어:
 
 ```xml
 <resources>
@@ -235,7 +235,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </resources>
 ```
 
--   이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 예를 들어:
+- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 예를 들어:
 
 ```xml
 <resources>
@@ -245,7 +245,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </resources>
 ```
 
--   **Androidmanifest**에서 사용자 지정 테마 이름으로 앱을 구성 합니다. 
+- **Androidmanifest**에서 사용자 지정 테마 이름으로 앱을 구성 합니다. 
     예를 들어:
 
 ```xml
@@ -254,7 +254,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </application>
 ```
 
--   또는 사용자 지정 테마를 사용 하 여 특정 작업의 스타일을 지정할 수 있습니다.
+- 또는 사용자 지정 테마를 사용 하 여 특정 작업의 스타일을 지정할 수 있습니다.
 
 ```C#
 [Activity(Label = "MyActivity", Theme = "@style/MyCustomTheme")]

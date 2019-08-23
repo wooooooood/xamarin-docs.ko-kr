@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 03c18c50b15db05d26e1cec20e571367219f8643
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 818d5c734e8e662c271e20c26347e5e941ddad3e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643063"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527866"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>iOS 6의 StoreKit 변경 내용
 
@@ -244,8 +244,8 @@ Apple에 업로드 하는 콘텐츠 파일은 다음 제한 사항을 충족 해
 
 샘플 응용 프로그램에는 판매에 대 한 책 장이 있습니다. 각 챕터 콘텐츠 패키지에는 다음이 포함 됩니다.
 
--  텍스트 파일
--  챕터를 나타내는 이미지입니다.
+- 텍스트 파일
+- 챕터를 나타내는 이미지입니다.
 
 
 메뉴에서 **파일 > 새 프로젝트** 를 선택 하 고 **앱 내 구매 콘텐츠**를 선택 하 여 시작 합니다.

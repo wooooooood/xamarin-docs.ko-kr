@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
-ms.openlocfilehash: 8f1e77d112eae951f3441484df94772da1b0f303
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 5abd28dc9a6fc2a0dca5fa31908731a5496ce5fa
+ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655527"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621041"
 ---
 # <a name="introduction-to-watchos-3"></a>watchOS 3 소개
 
@@ -21,17 +21,17 @@ _이 문서에서는 Xamarin 개발자를 위해 watchOS 3에서 사용할 수 �
 이 문서에서는 다음 항목을 다룹니다.
 
 - [WatchOS 3의 새로운 기능](#Whats-New-in-watchOS-3)
-    - [Apple Pay 향상](#Apple-Pay-Enhancements) 된 기능을 통해 Apple Watch에서 앱 내 지불액에 대 한 지원이 추가 되었습니다.
-    - [백그라운드 작업](#Background-Tasks) 을 통해 앱이 백그라운드에서 정보를 업데이트 하는 기능을 제공 하므로 사용자가 필요할 때 준비가 됩니다.
-    - 앱에 대 한 새로운 기능을 제공 하는 watchOS 3에 대 한 [복잡 한 기능이 향상](#Complications-Enhancements) 되었습니다.
-    - [새로 제공 되는 프레임 워크](#Newly-Available-Frameworks) 는 watchOS apps에 대해 노출 됩니다.
-    - [사전 제안을](#Proactive-Suggestions) 통해 앱은 사용자에 게 정보를 사전에 표시할 수 있습니다.
-    * WatchOS 3에 대 한 몇 가지 [보안 및 개인 정보 향상 기능이 향상](#Security-and-Privacy-Enhancements) 되었습니다.
-    - [스냅숏 및 도킹](#Snapshots-and-Dock) 은 사용자에 게 앱 watchOS 앱에 대 한 빠른 액세스를 제공 합니다.
-    - [사용자 알림은](#User-Notifications) 사용자에 게 로컬 알림과 원격 알림을 모두 제공 합니다.
-    * WatchOS 3에서는 몇 가지 [감시 연결 프레임 워크 기능이 향상](#Watch-Connectivity-Framework-Enhancements) 되었습니다.
-    * WatchOS 3에는 몇 가지 [WatchKit Framework 기능이 향상](#WatchKit-Framework-Enhancements) 되었습니다.
-    - [향상 된 응용 프로그램 향상](#Workout-App-Enhancements) 은 Apple Watch 앱에 대 한 새로운 기능을 제공 합니다.
+  - [Apple Pay 향상](#Apple-Pay-Enhancements) 된 기능을 통해 Apple Watch에서 앱 내 지불액에 대 한 지원이 추가 되었습니다.
+  - [백그라운드 작업](#Background-Tasks) 을 통해 앱이 백그라운드에서 정보를 업데이트 하는 기능을 제공 하므로 사용자가 필요할 때 준비가 됩니다.
+  - 앱에 대 한 새로운 기능을 제공 하는 watchOS 3에 대 한 [복잡 한 기능이 향상](#Complications-Enhancements) 되었습니다.
+  - [새로 제공 되는 프레임 워크](#Newly-Available-Frameworks) 는 watchOS apps에 대해 노출 됩니다.
+  - [사전 제안을](#Proactive-Suggestions) 통해 앱은 사용자에 게 정보를 사전에 표시할 수 있습니다.
+  - WatchOS 3에 대 한 몇 가지 [보안 및 개인 정보 향상 기능이 향상](#Security-and-Privacy-Enhancements) 되었습니다.
+  - [스냅숏 및 도킹](#Snapshots-and-Dock) 은 사용자에 게 앱 watchOS 앱에 대 한 빠른 액세스를 제공 합니다.
+  - [사용자 알림은](#User-Notifications) 사용자에 게 로컬 알림과 원격 알림을 모두 제공 합니다.
+  - WatchOS 3에서는 몇 가지 [감시 연결 프레임 워크 기능이 향상](#Watch-Connectivity-Framework-Enhancements) 되었습니다.
+  - WatchOS 3에는 몇 가지 [WatchKit Framework 기능이 향상](#WatchKit-Framework-Enhancements) 되었습니다.
+  - [향상 된 응용 프로그램 향상](#Workout-App-Enhancements) 은 Apple Watch 앱에 대 한 새로운 기능을 제공 합니다.
 - WatchOS 3에서 [프레임 워크를 추가로 변경할](#Additional-Framework-Changes) 수 있습니다.
 - WatchOS 3에서 [사용 되지 않는 api](#Deprecated-APIs)
 

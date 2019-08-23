@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7f21964fff0ac37fd87b8dcc6321e47c42c78a49
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 0a9921706acc4da076e98b1c42c0624c7f56e62f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644330"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521200"
 ---
 # <a name="android-graphics-and-animation"></a>Android 그래픽 및 애니메이션
 
@@ -30,18 +30,18 @@ Android의 UI API 프레임 워크는 대략적으로 다음과 같은 두 가�
 
 Android는 2D 그래픽을 만들기 위한 두 가지 API를 제공 합니다. 하나는 높은 수준의 선언적 방법과 기타 프로그래밍 수준이 낮은 API입니다.
 
--   **그릴 때 리소스** &ndash; 이러한 기능은 XML 파일에 그리기 명령을 포함 하 여 프로그래밍 방식으로 또는 (더 일반적으로) 사용자 지정 그래픽을 만드는 데 사용 됩니다. 그릴 수 있는 리소스는 일반적으로 Android에서 2D 그래픽을 렌더링 하기 위한 명령이 나 작업을 포함 하는 XML 파일로 정의 됩니다. 
+- **그릴 때 리소스** &ndash; 이러한 기능은 XML 파일에 그리기 명령을 포함 하 여 프로그래밍 방식으로 또는 (더 일반적으로) 사용자 지정 그래픽을 만드는 데 사용 됩니다. 그릴 수 있는 리소스는 일반적으로 Android에서 2D 그래픽을 렌더링 하기 위한 명령이 나 작업을 포함 하는 XML 파일로 정의 됩니다. 
 
--   **Canvas** &ndash; 이는 기본 비트맵에서 직접 그리기를 포함 하는 하위 수준 API입니다. 표시 되는 항목에 대해 매우 세분화 된 제어를 제공 합니다. 
+- **Canvas** &ndash; 이는 기본 비트맵에서 직접 그리기를 포함 하는 하위 수준 API입니다. 표시 되는 항목에 대해 매우 세분화 된 제어를 제공 합니다. 
 
 Android는 이러한 2D 그래픽 기술 외에도 다양 한 방법으로 애니메이션을 만들 수 있습니다.
 
--   **그릴 때 애니메이션** Android는 그릴 수 있는 애니메이션 이라고 하는 프레임별 애니메이션도 지원 합니다. &ndash; 이는 가장 간단한 애니메이션 API입니다. Android는 순차적으로 그릴 리소스를 순차적으로 로드 하 고 표시 합니다 (예: 카툰).
+- **그릴 때 애니메이션** Android는 그릴 수 있는 애니메이션 이라고 하는 프레임별 애니메이션도 지원 합니다. &ndash; 이는 가장 간단한 애니메이션 API입니다. Android는 순차적으로 그릴 리소스를 순차적으로 로드 하 고 표시 합니다 (예: 카툰).
 
--   **애니메이션 보기** 보기 애니메이션은 android의 원본 애니메이션 API 이며 모든 버전의 android에서 사용할 수 있습니다. &ndash; 이 API는 뷰 개체 에서만 작동 하 고 해당 보기에 대 한 간단한 변환만 수행할 수 있도록 제한 됩니다.
+- **애니메이션 보기** 보기 애니메이션은 android의 원본 애니메이션 API 이며 모든 버전의 android에서 사용할 수 있습니다. &ndash; 이 API는 뷰 개체 에서만 작동 하 고 해당 보기에 대 한 간단한 변환만 수행할 수 있도록 제한 됩니다.
     뷰 애니메이션은 일반적으로 `/Resources/anim` 폴더에 있는 XML 파일에 정의 됩니다.
 
--   **속성 애니메이션** Android 3.0에는 *속성 애니메이션*이라는 새로운 애니메이션 API 집합이 도입 되었습니다. &ndash; 이러한 새 API에는 뷰 개체 뿐만 아니라 개체의 속성에 애니메이션 효과를 주는 데 사용할 수 있는 확장 가능 하 고 유연한 시스템이 도입 되었습니다. 이러한 유연성을 통해 애니메이션은 코드를 보다 쉽게 공유할 수 있는 고유한 클래스로 캡슐화 할 수 있습니다.
+- **속성 애니메이션** Android 3.0에는 *속성 애니메이션*이라는 새로운 애니메이션 API 집합이 도입 되었습니다. &ndash; 이러한 새 API에는 뷰 개체 뿐만 아니라 개체의 속성에 애니메이션 효과를 주는 데 사용할 수 있는 확장 가능 하 고 유연한 시스템이 도입 되었습니다. 이러한 유연성을 통해 애니메이션은 코드를 보다 쉽게 공유할 수 있는 고유한 클래스로 캡슐화 할 수 있습니다.
 
 
 보기 애니메이션은 이전의 Android 이전 3.0 API (API 수준 11)를 지원 해야 하는 응용 프로그램에 더 적합 합니다. 그렇지 않으면 위에서 설명한 이유로 응용 프로그램에서 최신 속성 애니메이션 API를 사용 해야 합니다.
@@ -75,23 +75,23 @@ Android의 접근성 Api를 활용 하는 방법에 대 한 자세한 내용은 
 런타임에 Android 응용 프로그램은 이러한 리소스를 로드 하 고 이러한 XML 파일에 포함 된 지침을 사용 하 여 2D 그래픽을 만듭니다.
 Android는 여러 가지 형식의 그릴 수가 있는 리소스를 정의 합니다.
 
--   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; 이 개체는 기본 도형을 그리고 해당 도형에 제한 된 그래픽 효과 집합을 적용 하는 그릴 수 있는 개체입니다. 단추 사용자 지정 또는 TextViews의 배경 설정과 같은 작업에 매우 유용 합니다. 이 문서의 뒷부분에서를 `ShapeDrawable` 사용 하는 방법에 대 한 예제를 확인할 수 있습니다.
+- [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; 이 개체는 기본 도형을 그리고 해당 도형에 제한 된 그래픽 효과 집합을 적용 하는 그릴 수 있는 개체입니다. 단추 사용자 지정 또는 TextViews의 배경 설정과 같은 작업에 매우 유용 합니다. 이 문서의 뒷부분에서를 `ShapeDrawable` 사용 하는 방법에 대 한 예제를 확인할 수 있습니다.
 
--   [Statelistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) 때 &ndash; 위젯/컨트롤의 상태에 따라 모양을 변경 하는 그릴 수 있는 리소스입니다. 예를 들어 단추는 눌러져 있는지 여부에 따라 모양이 변경 될 수 있습니다.
+- [Statelistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) 때 &ndash; 위젯/컨트롤의 상태에 따라 모양을 변경 하는 그릴 수 있는 리소스입니다. 예를 들어 단추는 눌러져 있는지 여부에 따라 모양이 변경 될 수 있습니다.
 
--   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; 다른 모든 drawables을 스택에 있는이 그릴 수 있는이 리소스는 다른 모든 drawables 가장 합니다. 다음 스크린샷에서는 *LayerDrawable* 의 예를 보여 줍니다.
+- [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; 다른 모든 drawables을 스택에 있는이 그릴 수 있는이 리소스는 다른 모든 drawables 가장 합니다. 다음 스크린샷에서는 *LayerDrawable* 의 예를 보여 줍니다.
 
     ![LayerDrawable 예제](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) 이는 LayerDrawable 하지만 한 가지 차이점이 있습니다. &ndash; *TransitionDrawable* 는 한 레이어에 애니메이션 효과를 줄 수 있습니다.
+- [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) 이는 LayerDrawable 하지만 한 가지 차이점이 있습니다. &ndash; *TransitionDrawable* 는 한 레이어에 애니메이션 효과를 줄 수 있습니다.
 
--   [Levellistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) 때 이는 특정 조건에 따라 이미지를 표시 한다는 점에서 사용 가능한 statelistdrawable 매우 비슷합니다. &ndash; 그러나 *Statelistdrawable*때와 달리 *levellistdrawable* 때는 정수 값을 기준으로 이미지가 표시 됩니다. *Levellistdrawable* 수 있는 예제는 WiFi 신호의 강도를 표시 하는 것입니다. WiFi 신호의 강도가 변경 되 면 표시 되는 그릴 수 있는 것이 그에 따라 변경 됩니다.
+- [Levellistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) 때 이는 특정 조건에 따라 이미지를 표시 한다는 점에서 사용 가능한 statelistdrawable 매우 비슷합니다. &ndash; 그러나 *Statelistdrawable*때와 달리 *levellistdrawable* 때는 정수 값을 기준으로 이미지가 표시 됩니다. *Levellistdrawable* 수 있는 예제는 WiFi 신호의 강도를 표시 하는 것입니다. WiFi 신호의 강도가 변경 되 면 표시 되는 그릴 수 있는 것이 그에 따라 변경 됩니다.
 
--   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)는 &ndash;이름이 암시 하므로 이러한 drawables 크기 조정 및 클리핑 기능을 모두 제공 합니다. *ScaleDrawable* 는 다른 그릴 수 있는 다른 것으로 크기를 조정할 수 있습니다.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)는 &ndash;이름이 암시 하므로 이러한 drawables 크기 조정 및 클리핑 기능을 모두 제공 합니다. *ScaleDrawable* 는 다른 그릴 수 있는 다른 것으로 크기를 조정할 수 있습니다.
 
--   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; 이 경우 그릴 수 있는 다른 리소스의 측면에 음각이 적용 됩니다. 보기의 실제 범위 보다 작은 배경이 보기에 필요할 때 사용 됩니다.
+- [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; 이 경우 그릴 수 있는 다른 리소스의 측면에 음각이 적용 됩니다. 보기의 실제 범위 보다 작은 배경이 보기에 필요할 때 사용 됩니다.
 
--   Xml [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; 이 파일은 실제 비트맵에서 수행 되는 명령 집합 (xml)입니다. Android에서 수행할 수 있는 작업에는 바둑판식 배열, 디더링 및 앤티앨리어싱을 사용할 수 있습니다. 이를 사용 하는 가장 일반적인 방법 중 하나는 레이아웃의 배경 전체에 비트맵을 바둑판식으로 배열 하는 것입니다.
+- Xml [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; 이 파일은 실제 비트맵에서 수행 되는 명령 집합 (xml)입니다. Android에서 수행할 수 있는 작업에는 바둑판식 배열, 디더링 및 앤티앨리어싱을 사용할 수 있습니다. 이를 사용 하는 가장 일반적인 방법 중 하나는 레이아웃의 배경 전체에 비트맵을 바둑판식으로 배열 하는 것입니다.
 
 #### <a name="drawable-example"></a>그릴 때 예제
 
@@ -214,11 +214,11 @@ public class MyView : View
 
 응용 프로그램에서 이동 하는 등의 사용자 애니메이션은 응용 프로그램의 사용자 환경을 개선 하 고 확장 하는 데 도움이 되는 유용한 방법입니다. 가장 좋은 애니메이션은 자연스럽 게 생각 하기 때문에 사용자가 확인 하지 않는 애니메이션입니다. Android는 애니메이션에 대해 다음과 같은 세 가지 API를 제공 합니다.
 
--   **애니메이션 보기** &ndash; 이것은 원래 API입니다. 이러한 애니메이션은 특정 뷰에 연결 되며 뷰의 내용에 대 한 간단한 변환을 수행할 수 있습니다. 이 API는 간단 하 게 하기 때문에 알파 애니메이션, 회전 등과 같은 작업에도 유용 합니다.
+- **애니메이션 보기** &ndash; 이것은 원래 API입니다. 이러한 애니메이션은 특정 뷰에 연결 되며 뷰의 내용에 대 한 간단한 변환을 수행할 수 있습니다. 이 API는 간단 하 게 하기 때문에 알파 애니메이션, 회전 등과 같은 작업에도 유용 합니다.
 
--   **속성 애니메이션** &ndash; 속성 애니메이션은 Android 3.0에서 도입 되었습니다. 응용 프로그램에서 거의 모든 항목에 애니메이션 효과를 주는 데 사용할 수 있습니다. 속성 애니메이션은 개체가 화면에 표시 되지 않는 경우에도 개체의 모든 속성을 변경 하는 데 사용할 수 있습니다.
+- **속성 애니메이션** &ndash; 속성 애니메이션은 Android 3.0에서 도입 되었습니다. 응용 프로그램에서 거의 모든 항목에 애니메이션 효과를 주는 데 사용할 수 있습니다. 속성 애니메이션은 개체가 화면에 표시 되지 않는 경우에도 개체의 모든 속성을 변경 하는 데 사용할 수 있습니다.
 
--   **그릴 때 애니메이션** &ndash; 이는 레이아웃에 매우 간단한 애니메이션 효과를 적용 하는 데 사용 되는 특별 한 그릴 수 있는 리소스입니다.
+- **그릴 때 애니메이션** &ndash; 이는 레이아웃에 매우 간단한 애니메이션 효과를 적용 하는 데 사용 되는 특별 한 그릴 수 있는 리소스입니다.
 
 일반적으로 속성 애니메이션은 더 유연 하 고 더 많은 기능을 제공 하므로 사용할 기본 설정 시스템입니다.
 
@@ -230,25 +230,25 @@ public class MyView : View
 
 애니메이션 XML 파일은 xamarin.ios 프로젝트의 `/Resources/anim` 디렉터리에 저장 됩니다. 이 파일에는 루트 요소로 다음 요소 중 하나가 있어야 합니다.
 
--   `alpha`&ndash; 페이드 인 또는 페이드 아웃 애니메이션입니다.
+- `alpha`&ndash; 페이드 인 또는 페이드 아웃 애니메이션입니다.
 
--   `rotate`&ndash; 회전 애니메이션입니다.
+- `rotate`&ndash; 회전 애니메이션입니다.
 
--   `scale`&ndash; 크기 조정 애니메이션입니다.
+- `scale`&ndash; 크기 조정 애니메이션입니다.
 
--   `translate`&ndash; 가로 및/또는 세로 동작입니다.
+- `translate`&ndash; 가로 및/또는 세로 동작입니다.
 
--   `set`&ndash; 하나 이상의 다른 애니메이션 요소를 포함할 수 있는 컨테이너입니다.
+- `set`&ndash; 하나 이상의 다른 애니메이션 요소를 포함할 수 있는 컨테이너입니다.
 
 기본적으로 XML 파일의 모든 애니메이션은 동시에 적용 됩니다. 애니메이션을 순차적으로 발생 시키려면 위에 정의 `android:startOffset` 된 요소 중 하나에 특성을 설정 합니다.
 
 *보간 기*를 사용 하 여 애니메이션의 변경 률에 영향을 줄 수 있습니다. 보간 기를 사용 하 여 애니메이션 효과를 가속화, 반복 또는 decelerated 수 있습니다. Android 프레임 워크는 다음과 같은 다양 한 interpolators를 제공 합니다 (이에 국한 되지 않음).
 
--   `AccelerateInterpolator`이러한interpolators애니메이션의변경률을늘리거나줄입니다/. `DecelerateInterpolator` &ndash;
+- `AccelerateInterpolator`이러한interpolators애니메이션의변경률을늘리거나줄입니다/. `DecelerateInterpolator` &ndash;
 
--   `BounceInterpolator`&ndash; 변경 내용이 끝에 바운스 됩니다.
+- `BounceInterpolator`&ndash; 변경 내용이 끝에 바운스 됩니다.
 
--   `LinearInterpolator`&ndash; 변경 비율은 일정 합니다.
+- `LinearInterpolator`&ndash; 변경 비율은 일정 합니다.
 
 
 다음 XML에서는 이러한 몇 가지 요소를 결합 하는 애니메이션 파일의 예를 보여 줍니다.
@@ -316,20 +316,20 @@ myImage.StartAnimation(myAnimation);
 
 모든 속성 애니메이션은 [애니메이터](xref:Android.Animation.Animator) 하위 클래스의 인스턴스를 통해 생성 됩니다. 응용 프로그램은이 클래스를 직접 사용 하지 않고 대신 클래스의 하위 클래스 중 하나를 사용 합니다.
 
--   [Valueanimator](xref:Android.Animation.ValueAnimator) &ndash; 이 클래스는 전체 속성 애니메이션 API에서 가장 중요 한 클래스입니다. 변경 해야 하는 속성의 값을 계산 합니다. 는 `ViewAnimator` 이러한 값을 직접 업데이트 하지 않고 애니메이션 개체를 업데이트 하는 데 사용할 수 있는 이벤트를 발생 시킵니다.
+- [Valueanimator](xref:Android.Animation.ValueAnimator) &ndash; 이 클래스는 전체 속성 애니메이션 API에서 가장 중요 한 클래스입니다. 변경 해야 하는 속성의 값을 계산 합니다. 는 `ViewAnimator` 이러한 값을 직접 업데이트 하지 않고 애니메이션 개체를 업데이트 하는 데 사용할 수 있는 이벤트를 발생 시킵니다.
 
--   [Objectanimator](xref:Android.Animation.ObjectAnimator) 이 클래스는의 `ValueAnimator` 서브 클래스입니다. &ndash; 업데이트를 위해 대상 개체 및 속성을 허용 하 여 개체에 애니메이션 효과를 주는 프로세스를 간소화 합니다.
+- [Objectanimator](xref:Android.Animation.ObjectAnimator) 이 클래스는의 `ValueAnimator` 서브 클래스입니다. &ndash; 업데이트를 위해 대상 개체 및 속성을 허용 하 여 개체에 애니메이션 효과를 주는 프로세스를 간소화 합니다.
 
--   [애니메이션 집합](xref:Android.Animation.AnimatorSet) &ndash; 이 클래스는 애니메이션이 서로 관련 하 여 실행 되는 방식을 오케스트레이션 하는 일을 담당 합니다. 애니메이션은 동시에 또는 순차적으로 실행 되거나 지정 된 지연 시간 동안 실행 될 수 있습니다.
+- [애니메이션 집합](xref:Android.Animation.AnimatorSet) &ndash; 이 클래스는 애니메이션이 서로 관련 하 여 실행 되는 방식을 오케스트레이션 하는 일을 담당 합니다. 애니메이션은 동시에 또는 순차적으로 실행 되거나 지정 된 지연 시간 동안 실행 될 수 있습니다.
 
 
 *계산기* 는 애니메이터에서 애니메이션 중에 새 값을 계산 하는 데 사용 하는 특수 클래스입니다. Android에서 제공 하는 기본 제공 되는 계산기는 다음과 같습니다.
 
--   [IntEvaluator](xref:Android.Animation.IntEvaluator) &ndash; 정수 속성의 값을 계산 합니다.
+- [IntEvaluator](xref:Android.Animation.IntEvaluator) &ndash; 정수 속성의 값을 계산 합니다.
 
--   [FloatEvaluator](xref:Android.Animation.FloatEvaluator) &ndash; Float 속성의 값을 계산 합니다.
+- [FloatEvaluator](xref:Android.Animation.FloatEvaluator) &ndash; Float 속성의 값을 계산 합니다.
 
--   [Argbevaluator](xref:Android.Animation.ArgbEvaluator) &ndash; 색 속성의 값을 계산 합니다.
+- [Argbevaluator](xref:Android.Animation.ArgbEvaluator) &ndash; 색 속성의 값을 계산 합니다.
 
 애니메이션 효과가 적용 되는 속성이 `float`, `int` 또는 색이 아니면 응용 프로그램은 `ITypeEvaluator` 인터페이스를 구현 하 여 고유한 계산기를 만들 수 있습니다. 사용자 지정 계산기를 구현 하는 것은이 항목의 범위를 벗어나는 것입니다.
 
@@ -340,9 +340,9 @@ myImage.StartAnimation(myAnimation);
 
 다음 팩터리 메서드 중 하나 `ValueAnimator` 를 호출 하 여의 인스턴스를 가져옵니다.
 
--  `ValueAnimator.OfInt`
--  `ValueAnimator.OfFloat`
--  `ValueAnimator.OfObject`
+- `ValueAnimator.OfInt`
+- `ValueAnimator.OfFloat`
+- `ValueAnimator.OfObject`
 
 이 작업을 완료 `ValueAnimator` 한 후에는 인스턴스에 기간이 설정 되어 있어야 하며 시작 될 수 있습니다. 다음 예제에서는 1000 밀리초의 범위에 대해 0에서 1 사이의 값에 애니메이션 효과를 주는 방법을 보여 줍니다.
 
