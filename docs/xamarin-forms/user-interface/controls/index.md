@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2019
-ms.openlocfilehash: 925e97292d19745b0b89fb98103d205ab8476157
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: dfc6c71a252b57bb39b464425b89fe8f5bda7d3e
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976511"
 ---
 # <a name="controls-reference"></a>컨트롤 참조
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 Xamarin.ios 응용 프로그램의 사용자 인터페이스는 각 대상 플랫폼의 네이티브 컨트롤에 매핑되는 개체를 구성 합니다. 이렇게 하면 iOS, Android 및 유니버설 Windows 플랫폼에 대 한 플랫폼별 응용 프로그램이 [.NET Standard 라이브러리](~/cross-platform/app-fundamentals/net-standard.md)에 포함 된 xamarin.ios 코드를 사용할 수 있습니다.
 

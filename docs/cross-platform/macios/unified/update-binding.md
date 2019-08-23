@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: e6aac37561d107cb7e3f646c15621b86385dd0ee
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 90ef47d4e105dc401369c92e9196111c060314e3
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976417"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩을 Unified API로 마이그레이션
 
@@ -224,4 +224,4 @@ Mac용 Visual Studio 바인딩 프로젝트 템플릿을 사용 하 여 API를 �
 - [32/64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md)
 - [기존 iOS 앱 업그레이드](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
-- [BindingSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/bindingsample/)
+- [BindingSample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)

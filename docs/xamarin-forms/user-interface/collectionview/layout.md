@@ -6,13 +6,13 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/12/2019
-ms.openlocfilehash: e22b79fada5582adfec05ce7c5ebeddd6fe7e5d2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 08/22/2019
+ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976539"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.ios CollectionView 레이아웃
 
@@ -319,9 +319,6 @@ CollectionView collectionView = new CollectionView
 
 이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
 
-> [!IMPORTANT]
-> 현재 머리글과 바닥글은 Android 에서만 지원 됩니다.
-
 왼쪽에서 오른쪽으로 수평으로 확장 되는 레이아웃에 머리글을 추가 하면 머리글은 목록 왼쪽에 표시 됩니다. 마찬가지로 왼쪽에서 오른쪽으로 수평으로 증가 하는 레이아웃에 바닥글을 추가 하면 목록 오른쪽에 바닥글이 표시 됩니다.
 
 ### <a name="display-strings-in-the-header-and-footer"></a>머리글 및 바닥글에 문자열 표시
@@ -346,6 +343,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+이 코드는 iOS 스크린샷에 표시 된 헤더와 Android 스크린샷에 표시 된 바닥글을 포함 하는 다음과 같은 스크린샷을 생성 합니다.
+
+[IOS 및 Android(layout-images/header-footer-string.png "CollectionView string 머리글 및 바닥글") ![에 대 한 CollectionView 문자열 머리글 및 바닥글의 스크린샷]] (layout-images/header-footer-string-large.png#lightbox "CollectionView string 헤더 및 꼬리말")
 
 ### <a name="display-views-in-the-header-and-footer"></a>머리글 및 바닥글에 보기 표시
 
@@ -395,6 +396,10 @@ CollectionView collectionView = new CollectionView
 };
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+이 코드는 iOS 스크린샷에 표시 된 헤더와 Android 스크린샷에 표시 된 바닥글을 포함 하는 다음과 같은 스크린샷을 생성 합니다.
+
+[보기, iOS 및 Android(layout-images/header-footer-view.png "CollectionView 보기 머리글 및 바닥글") 을 ![사용 하 여 CollectionView 머리글 및 바닥글의 스크린샷]] (layout-images/header-footer-view-large.png#lightbox "CollectionView 뷰 머리글 및 바닥글")
 
 ### <a name="display-a-templated-header-and-footer"></a>템플릿 기반 머리글 및 바닥글 표시
 
@@ -446,6 +451,10 @@ collectionView.SetBinding(ItemsView.HeaderProperty, ".");
 collectionView.SetBinding(ItemsView.FooterProperty, ".");
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
+
+이 코드는 iOS 스크린샷에 표시 된 헤더와 Android 스크린샷에 표시 된 바닥글을 포함 하는 다음과 같은 스크린샷을 생성 합니다.
+
+[IOS 및 Android(layout-images/header-footer-template.png "CollectionView 템플릿 머리글 및 바닥글") ![에서 템플릿을 사용 하 여 CollectionView 머리글 및 바닥글의 스크린샷]] (layout-images/header-footer-template-large.png#lightbox "CollectionView 템플릿 머리글 및 바닥글")
 
 ## <a name="item-spacing"></a>항목 간격
 

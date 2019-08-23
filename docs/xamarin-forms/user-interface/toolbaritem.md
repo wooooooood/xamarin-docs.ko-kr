@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/29/2019
-ms.openlocfilehash: 9bb041206dbafb68c1bb60bbbb3068f0a2001b55
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: e6ce55f25b130c64b72a5a7e2ec2ec9a00291d14
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976339"
 ---
 # <a name="xamarinforms-toolbaritem"></a>Xamarin.ios 항목
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 Xamarin.ios [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 클래스는 `Page` 개체의 `ToolbarItems` 컬렉션에 추가할 수 있는 특수 한 형식의 단추입니다. 각 `ToolbarItem` 개체는 응용 프로그램의 탐색 모음에서 단추로 표시 됩니다. 인스턴스 `ToolbarItem` 는 아이콘을 포함 하 고 기본 또는 보조 메뉴 항목으로 표시 될 수 있습니다. 클래스 `ToolbarItem` 는에서 [`MenuItem`](xref:Xamarin.Forms.MenuItem)상속 됩니다.
 
@@ -117,6 +117,6 @@ void OnItemClicked(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-* [나이 항목 데모](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+* [나이 항목 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Xamarin.ios의 이미지](~/xamarin-forms/user-interface/images.md)
 * [Xamarin.ios MenuItem](~/xamarin-forms/user-interface/menuitem.md)

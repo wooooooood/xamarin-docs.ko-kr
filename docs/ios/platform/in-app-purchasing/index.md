@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: fb8f4a8e62ea163dc58589382c31c4bf19973c36
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2445645012e54b1818b1ec72116a85d8b985ead3
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528263"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976465"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Xamarin.ios의 앱 내 구매
 
@@ -59,7 +59,7 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [InAppPurchaseSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/storekit/)
+- [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit/)
 - [앱 구매 프로그래밍 가이드](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
 - [iTunes Connect 개발자 가이드](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
 - [스토어 키트 프레임 워크 참조](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)

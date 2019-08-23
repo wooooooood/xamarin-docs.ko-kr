@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: ef73462000de90693e527121d1ebad3a9d670ed3
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.openlocfilehash: 294b538b0e73344ffe9109a1e1091bc9b7591f63
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658117"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976481"
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
 
@@ -36,7 +36,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`ContentView`](xref:Xamarin.Forms.ContentView) 으로 설정 된 단일 자식이 포함 되어는 [ `Content` ](xref:Xamarin.Forms.ContentView.Content) 속성입니다. 합니다 `Content` 속성에 설정할 수 있습니다 `View` 파생 개체를 비롯 한 다른 `Layout` 파생 합니다. `ContentView` 구조적 요소와 주로 사용 되 고를 기본 클래스로 사용 됩니다 [ `Frame` ](#frame)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ContentView) / [가이드](~/xamarin-forms/user-interface/layouts/contentview.md) /[샘플] (https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-cardview/ | [![ContentView 예제](layouts-images/ContentView.png "ContentView 예제")](layouts-images/ContentView-Large.png#lightbox "ContentView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+| [`ContentView`](xref:Xamarin.Forms.ContentView) 으로 설정 된 단일 자식이 포함 되어는 [ `Content` ](xref:Xamarin.Forms.ContentView.Content) 속성입니다. 합니다 `Content` 속성에 설정할 수 있습니다 `View` 파생 개체를 비롯 한 다른 `Layout` 파생 합니다. `ContentView` 구조적 요소와 주로 사용 되 고를 기본 클래스로 사용 됩니다 [ `Frame` ](#frame)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ContentView) / [가이드](~/xamarin-forms/user-interface/layouts/contentview.md) /[샘플] (https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/ | [![ContentView 예제](layouts-images/ContentView.png "ContentView 예제")](layouts-images/ContentView-Large.png#lightbox "ContentView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
 <a named="frame" />
@@ -45,7 +45,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| 클래스 [`Frame`](xref:Xamarin.Forms.Frame) 는에서 [`ContentView`](#contentView) 파생 되 고 자식 주위에 테두리 또는 프레임을 표시 합니다. [`Padding`](xref:Xamarin.Forms.Layout.Padding) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)클래스의 기본값은 20이 고, 및 [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 속성도 정의 합니다. `Frame`<br /><br />[API 설명서](xref:Xamarin.Forms.Frame) / [가이드](~/xamarin-forms/user-interface/layouts/frame.md) / [샘플](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![예제에서는 프레임](layouts-images/Frame.png "예제에서는 프레임")](layouts-images/Frame-Large.png#lightbox "예제 프레임")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| 클래스 [`Frame`](xref:Xamarin.Forms.Frame) 는에서 [`ContentView`](#contentView) 파생 되 고 자식 주위에 테두리 또는 프레임을 표시 합니다. [`Padding`](xref:Xamarin.Forms.Layout.Padding) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)클래스의 기본값은 20이 고, 및 [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 속성도 정의 합니다. `Frame`<br /><br />[API 설명서](xref:Xamarin.Forms.Frame) / [가이드](~/xamarin-forms/user-interface/layouts/frame.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![예제에서는 프레임](layouts-images/Frame.png "예제에서는 프레임")](layouts-images/Frame-Large.png#lightbox "예제 프레임")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
 
 <a name="scrollView" />

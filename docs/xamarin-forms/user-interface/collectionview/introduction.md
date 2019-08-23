@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/24/2019
-ms.openlocfilehash: 5832cb28162602a41d31026bc4a0ed54ac6bfb34
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 14abf2e7eff64d2e3e9656bf1ca76f4cee615408
+ms.sourcegitcommit: 5ef92b44f0d10c58013d3c3dd6283509f1499587
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888605"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986083"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Xamarin Forms CollectionView 소개
 
-![](~/media/shared/preview.png "이 API는 현재 시험판임")
+![이 API는 현재 시험판입니다.](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -31,7 +31,7 @@ Forms.SetFlags("CollectionView_Experimental");
 ```
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)는 iOS 및 Android에서 사용할 수 있지만 유니버설 Windows 플랫폼 에서만 부분적으로 사용할 수 있습니다.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)는 iOS 및 Android에서 사용할 수 있지만 유니버설 Windows 플랫폼 에서만 [부분적으로 사용할 수](https://gist.github.com/hartez/7d0edd4182dbc7de65cebc6c67f72e14) 있습니다.
 
 ## <a name="collectionview-and-listview-differences"></a>CollectionView 및 ListView 차이점
 
