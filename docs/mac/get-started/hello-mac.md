@@ -541,13 +541,13 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 [![](hello-mac-images/run01-sml.png "디버그 빌드 선택")](hello-mac-images/run01.png#lightbox)
 
-## <a name="building-the-application"></a>응용 프로그램 빌드
+## <a name="building-the-application"></a>애플리케이션 빌드
 
 이 예제의 경우 디버그 빌드를 사용할 예정이므로 **디버그**를 선택합니다. **⌘B**를 누르거나 **빌드** 메뉴에서 **모두 빌드**를 선택하여 우선 앱을 빌드합니다.
 
 오류가 없으면  Mac용 Visual Studio의 상태 표시줄에 **빌드 성공** 메시지가 표시됩니다. 오류가 있으면 프로젝트를 검토하여 위의 단계를 올바르게 수행되었는지 확인합니다. 먼저 코드(Xcode의 코드와 Mac용 Visual Studio의 코드 모두)가 자습서의 코드와 일치하는지 확인합니다.
 
-## <a name="running-the-application"></a>응용 프로그램 실행
+## <a name="running-the-application"></a>애플리케이션 실행
 
 앱을 실행하는 세 가지 방법이 있습니다.
 

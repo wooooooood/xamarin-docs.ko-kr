@@ -22,11 +22,11 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 iTunes Connect는 앱 테스트를 관리하기 위한 하나의 옵션이며, [TestFlight](~/ios/deploy-test/testflight.md) 가이드에서 자세히 설명합니다. 그러나 Apple Developer Enterprise Program의 구성원은 iTunes Connect에 액세스할 수 없으므로 *임시* 배포가 이러한 앱을 테스트하는 가장 좋은 방법입니다.
 
-Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer Enterprise Program 모두에서 사용할 수 있는 *임시* 배포를 통해 사용자가 테스트할 수 있으며, 최대 100개의 iOS 디바이스를 테스트하도록 허용합니다.
+Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer Enterprise Program 모두에서 사용할 수 있는 *임시* 배포를 통해 사용자가 테스트할 수 있으며, 최대 100개의 iOS 디바이스를 테스트하도록 허용합니다.
 
 임시 배포는 앱 스토어 승인을 요구하지 않는 이점이 있으며, 웹 서버 또는 iTunes를 통해 무선으로 설치할 수 있습니다. 그러나 개발 및 배포 모두에 대해 **100**개 디바이스로 제한되며 이러한 디바이스는 Member Center에서 UDID를 통해 수동으로 추가해야 합니다. 디바이스 추가에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#adddevice) 가이드를 참조하세요.
 
-임시 배포를 사용하려면 응용 프로그램 ID 및 이 응용 프로그램을 설치할 수 있는 디바이스뿐만 아니라 코드 서명 정보가 포함된 임시 *프로비전 프로필*도 사용하여 해당 응용 프로그램을 프로비전해야 합니다.
+임시 배포를 사용하려면 애플리케이션 ID 및 이 애플리케이션을 설치할 수 있는 디바이스뿐만 아니라 코드 서명 정보가 포함된 임시 *프로비전 프로필*도 사용하여 해당 애플리케이션을 프로비전해야 합니다.
 
 이 가이드에서는 임시 배포를 위한 프로비전 정보 및 Xamarin.iOS 앱을 배포하는 방법에 대한 정보를 제공합니다.
 
@@ -34,7 +34,7 @@ Xamarin.iOS 응용 프로그램은 Apple Developer Program 및 Apple Developer E
 
 ## <a name="setting-up-for-distribution"></a>배포 설정
 
-사내 배포를 위해 Xamarin.iOS 애플리케이션을 릴리스하려는 경우에도 테스트용 특정 임시 배포 프로비전 프로필을 작성해야 합니다. 이 프로필을 사용하면 응용 프로그램을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다.
+사내 배포를 위해 Xamarin.iOS 애플리케이션을 릴리스하려는 경우에도 테스트용 특정 임시 배포 프로비전 프로필을 작성해야 합니다. 이 프로필을 사용하면 애플리케이션을 iOS 디바이스에 설치할 수 있도록 디지털 서명하여 릴리스할 수 있습니다.
 
 다음 섹션에서는 배포 인증서 및 배포 프로비전 프로필을 사용하여 설정하는 방법에 대해 설명합니다.
 
@@ -172,7 +172,7 @@ iTunes Connect가 옵션이 아닌 경우 임시 배포를 사용하면 개발�
 
 ### <a name="ipa-support-for-ad-hoc-deployment"></a>임시 배포를 위한 IPA 지원
 
-프로비전된 애플리케이션은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 애플리케이션이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 응용 프로그램을 iTunes에 로컬로 추가하는 데 사용됩니다.
+프로비전된 애플리케이션은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 애플리케이션이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 애플리케이션을 iTunes에 로컬로 추가하는 데 사용됩니다.
 
 IPA 만들기에 대한 자세한 내용은 [IPA 지원](~/ios/deploy-test/app-distribution/ipa-support.md) 가이드를 참조하세요.
 

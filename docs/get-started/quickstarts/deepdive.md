@@ -18,7 +18,7 @@ ms.locfileid: "68739011"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.ios 빠른 시작 심층 살펴보기
 
-[Xamarin.ios 빠른](~/get-started/index.yml)시작에서 Notes 응용 프로그램이 빌드 되었습니다. 이 문서에서는 Xamarin.Forms 애플리케이션의 핵심 작동 원리를 이해하기 위해 무엇이 빌드되었는지 검토합니다.
+[Xamarin.ios 빠른](~/get-started/index.yml)시작에서 Notes 응용 프로그램이 빌드 되었습니다. 이 문서에서는 Xamarin.Forms 애플리케이션의 핵심 작동 원리를 이해하기 위해 빌드된 결과물을 검토합니다.
 
 ::: zone pivot="windows"
 
@@ -78,8 +78,8 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 - **Data\NoteDatabase.cs** –이 클래스에는 데이터베이스를 만들고, 데이터에서 데이터를 읽고, 데이터를 삭제 하는 코드가 포함 되어 있습니다.
 - **Models\note.cs** –이 클래스는 인스턴스가 `Note` 응용 프로그램의 각 메모에 대 한 데이터를 저장 하는 모델을 정의 합니다.
-- **App.xaml** - 응용 프로그램의 리소스 사전을 정의하는 `App` 클래스에 대한 XAML 태그입니다.
-- **App.xaml.cs** – `App` 클래스의 코드 숨김으로, 각 플랫폼에서 응용 프로그램이 표시할 첫 번째 페이지를 인스턴스화하고 응용 프로그램 수명 주기 이벤트를 처리하는 역할을 담당합니다.
+- **App.xaml** - 애플리케이션의 리소스 사전을 정의하는 `App` 클래스에 대한 XAML 태그입니다.
+- **App.xaml.cs** – `App` 클래스의 코드 숨김으로, 각 플랫폼에서 애플리케이션이 표시할 첫 번째 페이지를 인스턴스화하고 애플리케이션 수명 주기 이벤트를 처리하는 역할을 담당합니다.
 - **AssemblyInfo.cs** –이 파일은 어셈블리 수준에서 적용 되는 프로젝트에 대 한 응용 프로그램 특성을 포함 합니다.
 - **NotesPage** – 응용 프로그램이 시작 될 때 표시 되 `NotesPage` 는 페이지의 UI를 정의 하는 클래스에 대 한 xaml 태그입니다.
 - **NotesPage.xaml.cs** – `NotesPage` 클래스의 코드 숨김으로, 사용자가 페이지와 상호 작용할 때 실행 되는 비즈니스 논리를 포함 합니다.
@@ -90,7 +90,7 @@ Xamarin.iOS 애플리케이션에 대한 자세한 내용은 [Xamarin.iOS 애플
 
 ## <a name="architecture-and-application-fundamentals"></a>아키텍처 및 응용 프로그램 기본 사항
 
-Xamarin.Forms 애플리케이션은 기존의 플랫폼 간 애플리케이션과 같은 방식으로 설계됩니다. 공유 코드는 일반적으로 .NET 표준 라이브러리에 배치되고 플랫폼 관련 애플리케이션은 공유 코드를 사용합니다. 다음 다이어그램에서는 Notes 응용 프로그램에 대 한이 관계의 개요를 보여 줍니다.
+Xamarin.Forms 애플리케이션은 전통적인 교차 플랫폼 애플리케이션과 같은 방식으로 설계되었습니다. 공유 코드는 일반적으로 .NET Standard 라이브러리에 배치되고, 플랫폼 특정 애플리케이션은 해당 공유 코드를 사용합니다. 다음 다이어그램에서는 Notes 응용 프로그램에 대 한이 관계의 개요를 보여 줍니다.
 
 ::: zone pivot="windows"
 
@@ -156,7 +156,7 @@ namespace Notes.iOS
 }
 ```
 
-`FinishedLaunching` 재정의는 `Init` 메서드를 호출하여 Xamarin.Forms 프레임워크를 초기화합니다. 이렇게 하면 루트 뷰 컨트롤러가 `LoadApplication` 메서드에 대한 호출로 설정되기 전에 Xamarin.Forms의 iOS 특정 구현이 응용 프로그램에 로드됩니다.
+`FinishedLaunching` 재정의는 `Init` 메서드를 호출하여 Xamarin.Forms 프레임워크를 초기화합니다. 이렇게 하면 루트 뷰 컨트롤러가 `LoadApplication` 메서드에 대한 호출로 설정되기 전에 Xamarin.Forms의 iOS 특정 구현이 애플리케이션에 로드됩니다.
 
 ### <a name="android"></a>Android
 
@@ -348,7 +348,7 @@ Xamarin.Forms는 사용된 [`Page`](xref:Xamarin.Forms.Page) 형식에 따라 �
 > [!NOTE]
 > [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 및 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 클래스는 대체 탐색 환경을 제공합니다. 자세한 내용은 [탐색](~/xamarin-forms/app-fundamentals/navigation/index.md)을 참조하세요.
 
-계층적 탐색 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 에서는 클래스를 사용 하 여 개체의 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 스택을 원하는 대로 앞뒤로 탐색할 수 있습니다. 이 모델은 탐색을 [`Page`](xref:Xamarin.Forms.Page) 개체의 LIFO(Last-In, First-Out, 후입선출) 스택으로 구현합니다. 한 페이지에서 다른 페이지로 이동하려면 애플리케이션은 새 페이지를 탐색 스택으로 푸시하여 활성 페이지가 되게 합니다. 이전 페이지로 돌아가기 위해 응용 프로그램은 탐색 스택에서 현재 페이지를 빼(pop)고 맨 위에 있는 새 페이지는 활성 페이지가 됩니다.
+계층적 탐색 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 에서는 클래스를 사용 하 여 개체의 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 스택을 원하는 대로 앞뒤로 탐색할 수 있습니다. 이 모델은 탐색을 [`Page`](xref:Xamarin.Forms.Page) 개체의 LIFO(Last-In, First-Out, 후입선출) 스택으로 구현합니다. 한 페이지에서 다른 페이지로 이동하려면 애플리케이션은 새 페이지를 탐색 스택으로 푸시하여 활성 페이지가 되게 합니다. 이전 페이지로 돌아가기 위해 애플리케이션은 탐색 스택에서 현재 페이지를 빼(pop)고 맨 위에 있는 새 페이지는 활성 페이지가 됩니다.
 
 `NavigationPage`클래스는 또한 제목을 표시하는 페이지의 맨 위에 탐색 모음을 추가하고 이전 페이지로 돌아가게 하는 플랫폼에 적절한 **뒤로** 단추를 추가합니다.
 
@@ -370,7 +370,7 @@ await Navigation.PushAsync(new NoteEntryPage());
 
 이렇게 하면 새 `NoteEntryPage` 개체가 활성 페이지가 되는 탐색 스택으로 푸시됩니다.
 
-활성 페이지는 장치의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 장치의 물리적 단추든 화면상 단추든 상관없습니다. 프로그래밍 방식으로 원래 페이지로 돌아가려면 `NoteEntryPage` 개체는 아래 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
+활성 페이지는 디바이스의 *뒤로* 단추를 눌러 탐색 스택에서 뺄(pop) 수 있습니다. 이때 단추는 디바이스의 물리적 단추든 화면상 단추든 상관없습니다. 프로그래밍 방식으로 원래 페이지로 돌아가려면 `NoteEntryPage` 개체는 아래 코드 예제에서 설명한 것처럼 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드를 호출해야 합니다.
 
 ```csharp
 await Navigation.PopAsync();
@@ -510,15 +510,15 @@ XAML 태그 확장에 대한 자세한 내용은 [XAML 태그 확장](~/xamarin-
 
 ## <a name="testing-and-deployment"></a>테스트 및 배포
 
-Visual Studio와 Mac용 Visual Studio는 응용 프로그램을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 애플리케이션 디버그는 애플리케이션 개발 주기에서 일반적인 과정이며 코드 문제를 진단하는 데 도움이 됩니다. 자세한 내용은 [중단점 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [단계별 코드 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) 및 [로그 창에 정보 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)을 참조하세요.
+Visual Studio와 Mac용 Visual Studio는 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 애플리케이션 디버그는 애플리케이션 개발 주기에서 일반적인 과정이며 코드 문제를 진단하는 데 도움이 됩니다. 자세한 내용은 [중단점 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [단계별 코드 실행](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) 및 [로그 창에 정보 출력](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window)을 참조하세요.
 
-시뮬레이터는 응용 프로그램 배포 및 테스트를 시작하기에 좋은 곳이며, 응용 프로그램을 테스트하는 유용한 기능을 제공합니다. 그러나 사용자가 최종 응용 프로그램을 시뮬레이터에서 사용하지는 않으므로, 초기에 자주 실제 장치에서 응용 프로그램을 테스트해야 합니다. iOS 디바이스 프로비전에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md)을 참조하세요. Android 디바이스 프로비전에 대한 자세한 내용은 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하세요.
+시뮬레이터는 애플리케이션 배포 및 테스트를 시작하기에 좋은 곳이며, 애플리케이션을 테스트하는 유용한 기능을 제공합니다. 그러나 사용자가 최종 애플리케이션을 시뮬레이터에서 사용하지는 않으므로, 초기에 자주 실제 디바이스에서 애플리케이션을 테스트해야 합니다. iOS 디바이스 프로비전에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/index.md)을 참조하세요. Android 디바이스 프로비전에 대한 자세한 내용은 [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)을 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
 이 심층 조사에서는 Xamarin.ios를 사용 하 여 응용 프로그램 개발의 기본 사항을 검토 했습니다. 제안된 다음 단계로는 다음 기능에 대한 내용이 있습니다.
 
-- Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주된 제어 그룹이 있습니다. 자세한 내용은 [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)를 참조하세요.
+- Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주요 컨트롤 그룹이 있습니다. 자세한 내용은 [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)를 참조하세요.
 - 데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변경 내용이 다른 속성에 자동으로 반영되도록 하는 기술입니다. 자세한 내용은 [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 - Xamarin.Forms는 사용되는 페이지 형식에 따라 다양한 페이지 탐색 환경을 제공합니다. 자세한 내용은 [탐색](~/xamarin-forms/app-fundamentals/navigation/index.md)을 참조하세요.
 - 스타일을 통해 반복 태그를 줄이고, 애플리케이션 모양을 쉽게 변경할 수 있습니다. 자세한 내용은 [Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.

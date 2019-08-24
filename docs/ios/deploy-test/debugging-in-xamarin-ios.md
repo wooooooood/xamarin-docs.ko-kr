@@ -24,7 +24,7 @@ C# 및 기타 관리되는 언어 코드를 디버그하는 경우 Mac용 Visual
 > [!NOTE]
 > 디버그 모드에서 애플리케이션을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 애플리케이션을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
 
-Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 장치에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 애플리케이션을 디버그할 수 있습니다.
+Xamarin.iOS 디버거는 IDE에 통합되어 있으므로 개발자는 시뮬레이터와 디바이스에서 Xamarin.iOS를 통해 지원되는 모든 관리되는 언어로 빌드한 Xamarin.iOS 애플리케이션을 디버그할 수 있습니다.
 
 Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com/docs/advanced/runtime/docs/soft-debugger/)를 사용합니다. 즉, 생성된 코드와 Mono 런타임이 IDE와 협력하여 디버깅 환경을 제공합니다. 이는 디버그된 프로그램의 지식이나 협력 없이 프로그램을 제어하는 LLDB 또는 MDB와 같은 하드 디버거와 다릅니다.
 
@@ -183,7 +183,7 @@ iOS가 애플리케이션 대리자에서 `FinishedLaunching` 메서드를 시�
 
 ## <a name="wireless-debugging"></a>무선 디버깅
 
-Xamarin.iOS는 기본적으로 USB 연결을 통해 장치에서 애플리케이션을 디버그합니다. 때로는 ExternalAccessory 지원 애플리케이션을 개발하기 위해 USB 장치에서 케이블의 연결/분리를 테스트해야 할 수도 있습니다. 이러한 경우 무선 네트워크를 통해 디버깅을 사용할 수 있습니다.
+Xamarin.iOS는 기본적으로 USB 연결을 통해 디바이스에서 애플리케이션을 디버그합니다. 때로는 ExternalAccessory 지원 애플리케이션을 개발하기 위해 USB 디바이스에서 케이블의 연결/분리를 테스트해야 할 수도 있습니다. 이러한 경우 무선 네트워크를 통해 디버깅을 사용할 수 있습니다.
 
 무선 배포 및 디버깅에 대한 자세한 내용은 [무선 배포](~/ios/deploy-test/wireless-deployment.md) 가이드를 참조하세요.
 

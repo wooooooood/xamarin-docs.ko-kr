@@ -24,7 +24,7 @@ ms.locfileid: "61282948"
 
 <a name="devices" />
 
-## <a name="devices"></a>장치
+## <a name="devices"></a>디바이스
 
 실제 iPhone 또는 iPad에서 iOS 앱을 테스트 개발자 센터에 등록할 수 있도록 장치에 항상 필요 합니다. 장치 목록에는 다음과 같습니다 (더하기 기호를 클릭 **+** 새 장치를 추가 하려면):
 

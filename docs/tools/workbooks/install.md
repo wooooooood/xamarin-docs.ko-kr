@@ -96,7 +96,7 @@ Visual Studio
 
 문제가 있는 **통합 문서** 파일에 연결 하거나 연결할 수 있는 경우 버그를 보다 신속 하 게 해결 하는 데 도움이 될 수 있습니다.
 
-### <a name="devices"></a>장치
+### <a name="devices"></a>디바이스
 
 IOS 또는 Android 통합 문서를 연결 하는 데 문제가 있고 [문제 해결 페이지](~/tools/workbooks/troubleshooting/index.md)를 이미 확인 한 경우 다음 사항을 알고 있어야 합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: 개발용 디바이스 설정
-description: 이 문서에서는 디바이스를 사용하여 Xamarin.Android 응용 프로그램을 실행하고 디버깅할 수 있도록 Android 디바이스를 설정하고 컴퓨터에 연결하는 방법을 설명합니다.
+description: 이 문서에서는 디바이스를 사용하여 Xamarin.Android 애플리케이션을 실행하고 디버깅할 수 있도록 Android 디바이스를 설정하고 컴퓨터에 연결하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
@@ -30,7 +30,7 @@ Android 에뮬레이터에서 테스트한 후 Android 디바이스에서 실행
 
 ## <a name="enable-debugging-on-the-device"></a>디바이스에서 디버깅 사용
 
-Android 디바이스를 사용하여 Android 응용 프로그램을 테스트할 수 있습니다. 그러나 디버깅하기 전에 디바이스를 올바르게 구성해야 합니다. 포함된 단계는 디바이스에서 실행되는 Android 버전에 따라 약간 다릅니다.
+Android 디바이스를 사용하여 Android 애플리케이션을 테스트할 수 있습니다. 그러나 디버깅하기 전에 디바이스를 올바르게 구성해야 합니다. 포함된 단계는 디바이스에서 실행되는 Android 버전에 따라 약간 다릅니다.
 
 ### <a name="android-40-to-android-41"></a>Android 4.0부터 Android 4.1까지
 

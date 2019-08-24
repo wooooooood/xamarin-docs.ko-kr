@@ -81,7 +81,7 @@ sections:
               href: ~/xamarin-forms/platform/
             title: 플랫폼 기능
           - href: ~/essentials/index.md?context=xamarin/xamarin-forms
-            html: '파일 액세스, 장치 정보, 하드웨어 기능 등의 공통 작업을 위한 교차 플랫폼 API입니다.'
+            html: '파일 액세스, 디바이스 정보, 하드웨어 기능 등의 공통 작업을 위한 교차 플랫폼 API입니다.'
             image:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/xamarin-forms

@@ -86,7 +86,7 @@ Url로 `https://` 작업할 때 `NSURLConnection` 및는 TLS 핸드셰이크 중
 
 WatchOS 3에서 SSL/TLS 연결 보안은 Apple에 의해 엄격히 적용 됩니다. 영향을 받는 서비스와 앱은 최신 TLS 프로토콜 버전을 사용 하도록 웹 서버를 업데이트 해야 합니다. 자세한 내용은 위의 [NSURLConnection](#nsurlconnection) 를 참조 하세요.
 
-## <a name="snapshots"></a>스냅숏
+## <a name="snapshots"></a>스냅샷
 
 새 `HandelBackgroundTask` API를 채택 하지 않은 WatchKit apps는 watchOS 3에서 더 이상 정기적으로 업데이트를 받지 않습니다. 
 

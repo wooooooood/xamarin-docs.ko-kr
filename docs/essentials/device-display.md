@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 디바이스 표시 정보'
-description: 이 문서에서는 애플리케이션이 실행 중인 장치의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
+description: 이 문서에서는 애플리케이션이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont

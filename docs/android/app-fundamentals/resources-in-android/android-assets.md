@@ -70,7 +70,7 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 
-## <a name="running-the-application"></a>응용 프로그램 실행
+## <a name="running-the-application"></a>애플리케이션 실행
 
 응용 프로그램을 실행 하면 다음이 표시 됩니다.
 

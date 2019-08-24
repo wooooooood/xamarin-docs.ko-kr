@@ -20,7 +20,7 @@ _Android는 여러 컴퓨터 아키텍처에서 실행할 수 있습니다. 이 
 
 ## <a name="overview"></a>개요
 
-Android는 여러 CPU 아키텍처를 지원하는 컴퓨터 코드가 포함된 단일 `.apk` 파일인 "패트 이진"의 생성을 지원합니다. 이는 *애플리케이션 이진 인터페이스*로 컴퓨터 코드의 각 조각을 연결하여 만들 수 있습니다. ABI는 특정 하드웨어 디바이스에서 실행될 컴퓨터 코드를 제어하는 데 사용됩니다. 예를 들어 x86 디바이스에서 실행되는 Android 응용 프로그램의 경우 응용 프로그램을 컴파일할 때 x86 ABI 지원을 포함해야 합니다.
+Android는 여러 CPU 아키텍처를 지원하는 컴퓨터 코드가 포함된 단일 `.apk` 파일인 "패트 이진"의 생성을 지원합니다. 이는 *애플리케이션 이진 인터페이스*로 컴퓨터 코드의 각 조각을 연결하여 만들 수 있습니다. ABI는 특정 하드웨어 디바이스에서 실행될 컴퓨터 코드를 제어하는 데 사용됩니다. 예를 들어 x86 디바이스에서 실행되는 Android 애플리케이션의 경우 애플리케이션을 컴파일할 때 x86 ABI 지원을 포함해야 합니다.
 
 특히 각 Android 애플리케이션은 EABI(*포함된 애플리케이션 이진 인터페이스*)를 하나 이상 지원하게 됩니다. EABI는 포함된 소프트웨어 프로그램과 관련된 규칙입니다. 일반적인 EABI는 다음과 같은 항목을 설명합니다.
 
@@ -38,7 +38,7 @@ Android는 여러 CPU 아키텍처를 지원하는 컴퓨터 코드가 포함된
 
 ### <a name="armeabi-and-thread-safety"></a>armeabi 및 스레드 보안
 
-애플리케이션 이진 인터페이스는 아래에서 자세히 살펴보겠지만, Xamarin.Android에서 사용하는 `armeabi` 런타임은 *스레드로부터 안전하지 않다는 것*을 유념하시기 바랍니다. `armeabi` 지원이 포함된 응용 프로그램이 `armeabi-v7a` 디바이스에 배포될 경우 이상하고 말로 설명할 수 없는 예외가 많이 발생합니다.
+애플리케이션 이진 인터페이스는 아래에서 자세히 살펴보겠지만, Xamarin.Android에서 사용하는 `armeabi` 런타임은 *스레드로부터 안전하지 않다는 것*을 유념하시기 바랍니다. `armeabi` 지원이 포함된 애플리케이션이 `armeabi-v7a` 디바이스에 배포될 경우 이상하고 말로 설명할 수 없는 예외가 많이 발생합니다.
 
 Android 4.0.0, 4.0.1, 4.0.2 및 4.0.3의 버그로 인해 `armeabi-v7a` 디렉터리가 있고 디바이스가 `armeabi-v7a` 디바이스이더라도 네이티브 라이브러리는 `armeabi` 디렉터리에서 선택됩니다.
 
@@ -79,7 +79,7 @@ Xamarin.Android 5.1이 이 아키텍처에 대한 지원을 도입했습니다. 
 > [!NOTE]
 > Google TV는 x86에서 실행되기는 하지만 Android의 NDK에서 지원되지 않습니다.
 
-#### <a name="x8664"></a>x86_64
+#### <a name="x86_64"></a>x86_64
 
 이는 64비트 x86 명령 집합을 지원하는 CPU의 ABI입니다(*x64* 또는 *AMD64*라고도 함). Xamarin.Android 5.1이 이 아키텍처에 대한 지원을 도입했습니다. 자세한 내용은 [64비트 런타임 지원](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#64-bit-runtime-support)을 확인하세요.
 
@@ -126,7 +126,7 @@ Android의 네이티브 라이브러리 설치 동작은 Android 버전에 따�
 
 Android 4.0 Ice Cream Sandwich 이전 버전은 `.apk` 내 *단일 ABI*에서만 네이티브 라이브러리를 추출합니다. 이 버전의 Android 앱은 먼저 주 ABI의 모든 네이티브 라이브러리 추출을 시도하고, 이러한 라이브러리가 없을 경우 보조 ABI의 모든 네이티브 라이브러리를 추출합니다. "병합"은 수행되지 않습니다.
 
-예를 들어 `armeabi-v7a` 디바이스에 응용 프로그램이 설치된 상황을 생각해 보세요. `armeabi` 및 `armeabi-v7a`를 모두 지원하는 `.apk,`에는 다음과 같은 ABI `lib` 디렉터리와 파일이 포함되어 있습니다.
+예를 들어 `armeabi-v7a` 디바이스에 애플리케이션이 설치된 상황을 생각해 보세요. `armeabi` 및 `armeabi-v7a`를 모두 지원하는 `.apk,`에는 다음과 같은 ABI `lib` 디렉터리와 파일이 포함되어 있습니다.
 
 ```shell
 lib/armeabi/libone.so
@@ -243,14 +243,14 @@ Mac용 Visual Studio에서는 다음 스크린샷에서처럼 **고급** 탭에�
 
 다음과 같이 추가적인 ABI 지원을 선언해야 하는 경우가 있습니다.
 
-- `x86` 디바이스에 응용 프로그램 배포.
+- `x86` 디바이스에 애플리케이션 배포.
 
-- 스레드 보안을 위해 `armeabi-v7a` 디바이스에 응용 프로그램 배포
+- 스레드 보안을 위해 `armeabi-v7a` 디바이스에 애플리케이션 배포
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Android 애플리케이션을 실행할 수 있는 여러 CPU 아키텍처를 설명했습니다. 애플리케이션 이진 인터페이스와 Android에서 이를 사용하여 개별 CPU 아키텍처를 지원하는 방법을 소개했습니다.
-그런 다음, Xamarin.Android 응용 프로그램에서 ABI 지원을 지정하는 방법을 설명하고, `armeabi` 전용으로 고안된 `armeabi-v7a` 디바이스에서 Xamarin.Android 응용 프로그램을 사용할 경우 발생하는 문제를 중점적으로 살펴보았습니다.
+그런 다음, Xamarin.Android 애플리케이션에서 ABI 지원을 지정하는 방법을 설명하고, `armeabi` 전용으로 고안된 `armeabi-v7a` 디바이스에서 Xamarin.Android 애플리케이션을 사용할 경우 발생하는 문제를 중점적으로 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

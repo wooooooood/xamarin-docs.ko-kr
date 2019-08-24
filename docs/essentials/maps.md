@@ -121,7 +121,7 @@ public class MapTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android는 `geo:` URI 체계를 사용하여 장치에서 지도 애플리케이션을 시작합니다. 이 URI 체계를 지원하는 기존 앱에서 선택하라는 메시지가 사용자에게 표시될 수 있습니다.  Xamarin.Essentials는 이 체계를 지원하는 Google Maps로 테스트되었습니다.
+Android는 `geo:` URI 체계를 사용하여 디바이스에서 지도 애플리케이션을 시작합니다. 이 URI 체계를 지원하는 기존 앱에서 선택하라는 메시지가 사용자에게 표시될 수 있습니다.  Xamarin.Essentials는 이 체계를 지원하는 Google Maps로 테스트되었습니다.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 

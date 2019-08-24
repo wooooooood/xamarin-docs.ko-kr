@@ -442,13 +442,13 @@ Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기
 
 [![](hello-tvos-images/run01.png "빌드 유형 선택")](hello-tvos-images/run01.png#lightbox)
 
-### <a name="building-the-application"></a>응용 프로그램 빌드
+### <a name="building-the-application"></a>애플리케이션 빌드
 
 이 경우 디버그 빌드를 원하는 것 이므로 **디버그** 가 선택 되어 있는지 확인 합니다. 먼저 **⌘ B**를 누르거나 **빌드** 메뉴에서 **모두 빌드**를 선택 하 여 응용 프로그램을 빌드 해 보겠습니다.
 
 오류가 발생 하지 않으면 Mac용 Visual Studio의 상태 표시줄에 **빌드 성공** 메시지가 표시 됩니다. 오류가 있는 경우 프로젝트를 검토 하 고 단계를 올바르게 수행 했는지 확인 합니다. 먼저 코드 (Xcode 및 Mac용 Visual Studio)가 자습서의 코드와 일치 하는지 확인 합니다.
 
-### <a name="running-the-application"></a>응용 프로그램 실행
+### <a name="running-the-application"></a>애플리케이션 실행
 
 응용 프로그램을 실행 하려면 다음 세 가지 옵션을 사용할 수 있습니다.
 

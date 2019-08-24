@@ -21,7 +21,7 @@ ms.locfileid: "67864040"
 
 ## <a name="build-processandroiddeploy-testbuilding-appsbuild-processmd"></a>[빌드 프로세스](~/android/deploy-test/building-apps/build-process.md)
 
-이 토픽에서는 Xamarin.Android 응용 프로그램의 소스 코드, 리소스 및 자산과 Android 디바이스에 설치할 수 있는 APK 생성과 관련된 단계 및 프로세스를 설명합니다.
+이 토픽에서는 Xamarin.Android 애플리케이션의 소스 코드, 리소스 및 자산과 Android 디바이스에 설치할 수 있는 APK 생성과 관련된 단계 및 프로세스를 설명합니다.
 
 
 ## <a name="building-abi-specific-apksandroiddeploy-testbuilding-appsabi-specific-apksmd"></a>[ABI 관련 APK 빌드](~/android/deploy-test/building-apps/abi-specific-apks.md)

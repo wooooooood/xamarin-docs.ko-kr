@@ -38,7 +38,7 @@ Windows 컴퓨터에서 Xamarin.iOS 설치에 대한 지침은 [Windows 설치](
 
 ## <a name="development-and-device-provisioning"></a>개발 및 디바이스 프로비저닝
 
-Xamarin.iOS를 성공적으로 설치한 후에 장치에서 Xamarin.iOS 애플리케이션을 개발하고 테스트할 수 있도록 iOS 장치를 프로비전하는 방법을 알아봅니다.
+Xamarin.iOS를 성공적으로 설치한 후에 디바이스에서 Xamarin.iOS 애플리케이션을 개발하고 테스트할 수 있도록 iOS 디바이스를 프로비전하는 방법을 알아봅니다.
 
 * [개발용 디바이스 설정](device-provisioning/index.md)
 * [무료 프로비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

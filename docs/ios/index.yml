@@ -81,7 +81,7 @@ sections:
               href: ~/essentials/index.md?context=xamarin/ios
             title: Xamarin.Essentials
           - href: ~/ios/data-cloud/
-            html: 로컬 및 원격 데이터 저장과 검색 및 기타 클라우드 기반 서비스입니다.
+            html: 로컬 및 원격 데이터 스토리지과 검색 및 기타 클라우드 기반 서비스입니다.
             image:
               src: ~/media/icons/i_data-cloud.svg
               href: ~/ios/data-cloud/

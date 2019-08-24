@@ -28,7 +28,7 @@ Xamarin.Mac 애플리케이션에서 C# 및 .NET을 작업할 때 개발자는 *
 ![AppIcon.appiconset 편집기](app-icon-images/intro01.png "AppIcon.appiconset 편집기")
 
 
-## <a name="application-icon"></a>응용 프로그램 아이콘
+## <a name="application-icon"></a>애플리케이션 아이콘
 
 좋은 아이콘이란 Xamarin.Mac 앱의 주 목적을 달성해야 하며 사용자가 앱을 사용할 때 예상하는 경험을 제공해야 합니다. 모든 macOS 앱은 Finder, Dock, 실행 패드 및 컴퓨터의 다른 위치에 표시할 수 있도록 여러 가지 아이콘 크기를 포함해야 합니다.
 

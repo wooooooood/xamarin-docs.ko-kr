@@ -28,7 +28,7 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 - **Visual Studio 소개** &ndash; Visual Studio 및 새로운 Xamarin.Android 응용 프로그램 만들기를 소개합니다.
 
-- **Xamarin.Android 응용 프로그램 분석** - Xamarin.Android 응용 프로그램의 핵심 부분을 안내합니다.
+- **Xamarin.Android 애플리케이션 분석** - Xamarin.Android 애플리케이션의 핵심 부분을 안내합니다.
 
 - **앱 기본 항목 및 아키텍처 기본 사항** &ndash; 작업, Android 매니페스트 및 일반 버전의 Android 개발을 소개합니다.
 
@@ -78,7 +78,7 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 
 <a name="anatomy" />
 
-## <a name="anatomy-of-a-xamarinandroid-application"></a>Xamarin.Android 응용 프로그램 분석
+## <a name="anatomy-of-a-xamarinandroid-application"></a>Xamarin.Android 애플리케이션 분석
 
 ::: zone pivot="windows"
 
@@ -141,7 +141,7 @@ Android의 이러한 고유한 기능은 복잡한 애플리케이션을 디자�
 
 ### <a name="phoneword-scenario---starting-with-an-activity"></a>Phoneword 시나리오 - 작업으로 시작
 
-에뮬레이터 또는 디바이스에서 처음으로 **Phoneword** 응용 프로그램을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 애플리케이션 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 애플리케이션의 첫 번째 작업을 만들 때 전체 애플리케이션을 로드합니다.
+에뮬레이터 또는 디바이스에서 처음으로 **Phoneword** 애플리케이션을 열 때 운영 체제는 첫 번째 *작업*을 만듭니다. 작업은 단일 애플리케이션 화면에 해당하는 특별한 Android 클래스이며 사용자 인터페이스를 끌어내고 구동하는 작업을 담당합니다. Android이 애플리케이션의 첫 번째 작업을 만들 때 전체 애플리케이션을 로드합니다.
 
 [![작업 부하](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
@@ -171,7 +171,7 @@ Android 애플리케이션을 통한 선형 진행이 없으므로(여러 위치
 ::: zone-end
 ::: zone pivot="macos"
 
-**Main.axml**은 응용 프로그램의 첫 번째 화면에 대한 사용자 인터페이스 레이아웃 파일입니다. .axml은 Android Designer 파일임을 나타냅니다(AXML은 *Android XML*을 의미함). *Main*이라는 이름은 Android의 관점에서 임의입니다.&ndash; 레이아웃 파일에는 다른 이름이 지정될 수 있습니다. IDE에서 **Main.axml**을 열 때 *Android Designer*라는 Android 레이아웃 파일에 대한 시각적 편집기를 표시합니다.
+**Main.axml**은 애플리케이션의 첫 번째 화면에 대한 사용자 인터페이스 레이아웃 파일입니다. .axml은 Android Designer 파일임을 나타냅니다(AXML은 *Android XML*을 의미함). *Main*이라는 이름은 Android의 관점에서 임의입니다.&ndash; 레이아웃 파일에는 다른 이름이 지정될 수 있습니다. IDE에서 **Main.axml**을 열 때 *Android Designer*라는 Android 레이아웃 파일에 대한 시각적 편집기를 표시합니다.
 
 [![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
@@ -317,7 +317,7 @@ translateButton.Click += (sender, e) =>
 
 ## <a name="testing-deployment-and-finishing-touches"></a>터치 테스트, 배포 및 마무리
 
-Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 응용 프로그램 테스트하기에 대해 설명하며, 다양한 화면 밀도에서 사용자 지정 앱 아이콘을 만들기 위한 도구를 소개합니다.
+Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하고 배포하기 위한 다양한 옵션을 제공합니다. 이 섹션에서는 디버깅 옵션에 대해 다루고, 디바이스에서 애플리케이션 테스트하기에 대해 설명하며, 다양한 화면 밀도에서 사용자 지정 앱 아이콘을 만들기 위한 도구를 소개합니다.
 
 ### <a name="debugging-tools"></a>디버깅 도구
 
@@ -325,13 +325,13 @@ Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하�
 
 ### <a name="deploy-to-a-device"></a>디바이스에 배포
 
-애플리케이션을 배포하고 테스트하는 데 에뮬레이터를 사용하는 것이 좋지만 사용자는 에뮬레이터에서 최종 앱을 사용하지 않습니다. 조기에 자주 실제 디바이스에서 응용 프로그램을 테스트하는 것이 좋습니다.
+애플리케이션을 배포하고 테스트하는 데 에뮬레이터를 사용하는 것이 좋지만 사용자는 에뮬레이터에서 최종 앱을 사용하지 않습니다. 조기에 자주 실제 디바이스에서 애플리케이션을 테스트하는 것이 좋습니다.
 
-응용 프로그램을 테스트하기 위해 Android 디바이스를 사용하기 전에 개발을 위해 구성해야 합니다. [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침을 제공합니다.
+애플리케이션을 테스트하기 위해 Android 디바이스를 사용하기 전에 개발을 위해 구성해야 합니다. [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md) 가이드에 개발을 위한 디바이스 준비에 대한 철저한 지침을 제공합니다.
 
 ::: zone pivot="windows"
 
-디바이스를 구성한 후에 플러그 인하고, **디바이스 선택** 대화 상자에서 선택하고, 응용 프로그램을 시작하여 배포할 수 있습니다.
+디바이스를 구성한 후에 플러그 인하고, **디바이스 선택** 대화 상자에서 선택하고, 애플리케이션을 시작하여 배포할 수 있습니다.
 
 ![디버그 디바이스 선택](hello-android-deepdive-images/vs/06-select-device.png "디버그 디바이스 선택")
 
@@ -344,7 +344,7 @@ Mac용 Visual Studio와 Visual Studio 모두 애플리케이션을 테스트하�
 
 ::: zone-end
 
-그러면 디바이스에서 응용 프로그램을 시작합니다.
+그러면 디바이스에서 애플리케이션을 시작합니다.
 
 [![Phoneword 입력](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 

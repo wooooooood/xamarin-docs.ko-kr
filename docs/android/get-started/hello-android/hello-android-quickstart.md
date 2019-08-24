@@ -270,7 +270,7 @@ translateButton.Click += (sender, e) =>
 
 ## <a name="run-the-app"></a>앱 실행
 
-Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하여 테스트합니다.
+Android 디바이스 또는 에뮬레이터에서 애플리케이션을 실행하여 테스트합니다.
 **좌표 이동** 단추를 눌러 **1-855-XAMARIN**을 전화 번호로 변환합니다.
 
 [![실행 중인 앱의 스크린샷](hello-android-quickstart-images/vs/15-running-app-sml.png)](hello-android-quickstart-images/vs/15-running-app.png#lightbox)
@@ -521,7 +521,7 @@ namespace Phoneword
 
 ## <a name="run-the-app"></a>앱 실행
 
-마지막으로 Android 디바이스 또는 에뮬레이터에서 응용 프로그램을 실행하고 Phoneword를 변환하여 테스트합니다.
+마지막으로 Android 디바이스 또는 에뮬레이터에서 애플리케이션을 실행하고 Phoneword를 변환하여 테스트합니다.
 
 [![완료 시 앱 스크린샷](hello-android-quickstart-images/intro-app-examples-sml.png)](hello-android-quickstart-images/intro-app-examples.png#lightbox)
 

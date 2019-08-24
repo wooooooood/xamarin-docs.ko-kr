@@ -174,7 +174,7 @@ translateButton.Click += (sender, e) =>
 
 ### <a name="running-the-app"></a>앱 실행
 
-에뮬레이터 또는 디바이스에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
+에뮬레이터 또는 디바이스에 애플리케이션을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
@@ -312,7 +312,7 @@ translateButton.Click += (sender, e) =>
 
 ### <a name="running-the-app"></a>앱 실행
 
-에뮬레이터 또는 디바이스에 응용 프로그램을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
+에뮬레이터 또는 디바이스에 애플리케이션을 배포합니다. 다음 스크린샷에서는 실행 중인 **Phoneword** 애플리케이션을 설명합니다.
 
 [![예제 스크린샷](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 

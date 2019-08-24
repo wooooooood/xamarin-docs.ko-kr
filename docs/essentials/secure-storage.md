@@ -148,7 +148,7 @@ SecureStorage.RemoveAll();
 
 [KeyChain](xref:Security.SecKeyChain)을 사용하여 iOS 디바이스에 값을 안전하게 저장합니다.  값을 저장하는 데 사용된 `SecRecord`의 `Service` 값은 **[YOUR-APP-BUNDLE-ID].xamarinessentials**로 설정됩니다.
 
-KeyChain 데이터가 iCloud와 동기화되어 응용 프로그램을 제거해도 iCloud 및 사용자의 다른 디바이스에서 안전한 값이 제거되지 않는 경우도 있습니다.
+KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해도 iCloud 및 사용자의 다른 디바이스에서 안전한 값이 제거되지 않는 경우도 있습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

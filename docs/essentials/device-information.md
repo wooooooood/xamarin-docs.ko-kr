@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: 디바이스 정보'
-description: 이 문서에서는 애플리케이션이 실행 중인 장치에 대한 정보를 제공하는 Xamarin.Essentials의 DeviceInfo 클래스를 설명합니다.
+description: 이 문서에서는 애플리케이션이 실행 중인 디바이스에 대한 정보를 제공하는 Xamarin.Essentials의 DeviceInfo 클래스를 설명합니다.
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
@@ -14,7 +14,7 @@ ms.locfileid: "58329327"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: 디바이스 정보
 
-**DeviceInfo** 클래스는 애플리케이션이 실행 중인 장치에 대한 정보를 제공합니다.
+**DeviceInfo** 클래스는 애플리케이션이 실행 중인 디바이스에 대한 정보를 제공합니다.
 
 ## <a name="get-started"></a>시작
 
@@ -75,7 +75,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="device-type"></a>디바이스 유형
 
-`DeviceInfo.DeviceType`은 애플리케이션이 물리적 또는 가상 장치에서 실행 중인지 판별하는 열거형에 상호 연결됩니다. 가상 디바이스는 시뮬레이터 또는 에뮬레이터입니다.
+`DeviceInfo.DeviceType`은 애플리케이션이 물리적 또는 가상 디바이스에서 실행 중인지 판별하는 열거형에 상호 연결됩니다. 가상 디바이스는 시뮬레이터 또는 에뮬레이터입니다.
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 

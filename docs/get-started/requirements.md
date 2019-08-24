@@ -43,7 +43,7 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 
 최신 Android SDK 도구 및 Android API 플랫폼이 설치되어 있어야 합니다. [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 사용하여 최신 버전으로 업데이트할 수 있습니다.
 
-또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 장치를 계속 지원할 수 있도록 API 19로 설정할 수 있습니다. 이러한 값은 **프로젝트 옵션**에서 설정합니다.
+또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 디바이스를 계속 지원할 수 있도록 API 19로 설정할 수 있습니다. 이러한 값은 **프로젝트 옵션**에서 설정합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -94,7 +94,7 @@ UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 
 ## <a name="deprecated-platforms"></a>사용 되지 않는 플랫폼
 
-3.0 이상 Xamarin.Forms를 사용 하는 경우에 이러한 플랫폼 지원 되지 않습니다.
+3\.0 이상 Xamarin.Forms를 사용 하는 경우에 이러한 플랫폼 지원 되지 않습니다.
 
 - *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*

@@ -122,7 +122,7 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 이[`OnKeyDown(int, KeyEvent)`](xref:Android.App.Activity.OnKeyDown*)
 활동을 실행 하는 동안 단추를 누를 때마다 콜백 메서드가 호출 됩니다. 내부의 조건은를 [`KeyEvent`](xref:Android.Views.KeyEvent) 사용 하 여 누른 키가 **뒤로** [`WebView`](xref:Android.Webkit.WebView) 단추이 고가 실제로 뒤로 이동할 수 있는지 여부를 확인 합니다 (기록이 있는 경우). 둘 다 true [`GoBack()`](xref:Android.Webkit.WebView.GoBack) 이면 메서드를 호출 합니다 .이 메서드는 [`WebView`](xref:Android.Webkit.WebView) 기록에서 한 단계 뒤로 이동 합니다. 을 `true` 반환 하면 이벤트가 처리 되었음을 나타냅니다. 이 조건이 충족 되지 않으면 이벤트는 다시 시스템으로 전송 됩니다.
 
-응용 프로그램을 다시 실행합니다. 이제 링크를 팔 로우 하 고 페이지 기록을 통해 다시 탐색할 수 있습니다.
+애플리케이션을 다시 실행합니다. 이제 링크를 팔 로우 하 고 페이지 기록을 통해 다시 탐색할 수 있습니다.
 
 [![작업 중인 뒤로 단추의 스크린샷 예](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 

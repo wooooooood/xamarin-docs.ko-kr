@@ -43,7 +43,7 @@ WatchOS 1에서 정적 함수 또는 공유 앱 그룹을 통해 데이터를 �
 
 조사식 Connectivity framework 부모 앱과 통신 하는 watchOS 2 이상에서 사용 하는 `WCSession` 클래스입니다.
 
-## <a name="application-lifecycle"></a>응용 프로그램 수명 주기
+## <a name="application-lifecycle"></a>애플리케이션 수명 주기
 
 조사식 확장의 서브 클래스에는 `WKInterfaceController` 각 스토리 보드 장면에 대 한 클래스를 만듭니다.
 

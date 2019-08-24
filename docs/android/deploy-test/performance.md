@@ -199,7 +199,7 @@ App.Current.Service1.Updated -= service1UpdateHandler;
 
 ## <a name="release-resources-when-notified"></a>알림을 받을 때 리소스 릴리스
 
-응용 프로그램 수명 주기 동안 디바이스 메모리가 부족한 경우 [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) 콜백은 알림을 제공합니다. 이 콜백을 구현하여 다음 메모리 수준 알림을 수신해야 합니다.
+애플리케이션 수명 주기 동안 디바이스 메모리가 부족한 경우 [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) 콜백은 알림을 제공합니다. 이 콜백을 구현하여 다음 메모리 수준 알림을 수신해야 합니다.
 
 - [`TrimMemoryRunningModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate) – 애플리케이션이 필요없는 일부 리소스를 릴리스하려고 *할 수 있습니다*.
 - [`TrimMemoryRunningLow`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningLow) – 애플리케이션이 필요없는 리소스를 릴리스*해야 합니다*.

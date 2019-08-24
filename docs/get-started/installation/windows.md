@@ -43,7 +43,7 @@ Visual Studio 2019에 Xamarin 설치를 앱에 대 한 코드 작성을 시작�
 
 1. [Mac용 Visual Studio 설치](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Mac 빌드 호스트에 Visual Studio 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-3. [iOS 개발자 설정](~/ios/get-started/installation/device-provisioning/index.md) - 디바이스에서 응용 프로그램을 실행하는 데 필요합니다.
+3. [iOS 개발자 설정](~/ios/get-started/installation/device-provisioning/index.md) - 디바이스에서 애플리케이션을 실행하는 데 필요합니다.
 4. [원격 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
 5. [Visual Studio용 Xamarin.iOS 소개](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 

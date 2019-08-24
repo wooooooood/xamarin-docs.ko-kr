@@ -27,7 +27,7 @@ Azure Storage는 4 개의 저장소 서비스를 제공합니다.
 - 큐 저장소는 워크플로 처리 및 클라우드 서비스 간의 통신에 대 한 메시징 서비스입니다.
 - File Storage는 SMB 프로토콜을 사용 하 여 공유 저장소를 제공 합니다.
 
-저장소 계정의 다음과 같은 두 종류가 있습니다.
+스토리지 계정에는 다음과 같은 두 종류가 있습니다.
 
 - 범용 저장소 계정을 단일 계정에서 Azure Storage 서비스에 액세스를 제공 합니다.
 - Blob storage 계정에 blob 저장에 대 한 특수 저장소 계정이입니다. Blob 데이터를 저장 해야 하는 경우이 계정 유형은 것이 좋습니다.
@@ -57,13 +57,13 @@ Blob은 Azure Storage에 업로드 및 바이트 스트림으로 Azure Storage�
 
 Azure Storage에 저장 된 모든 개체에 고유한 URL 주소가 있습니다. 해당 주소 및 하위 도메인 및 도메인 이름 형식의 조합을의 하위 도메인을 구성 하는 저장소 계정 이름은 *끝점* 저장소 계정에 대 한 합니다. 예를 들어 저장소 계정 이름은 *mystorageaccount*, 저장소 계정에 대 한 기본 blob 끝점은 `https://mystorageaccount.blob.core.windows.net`합니다.
 
-저장소 계정의 개체에 액세스 하기 위한 URL 끝점에 저장소 계정에서 개체의 위치를 추가 하 여 빌드됩니다. 예를 들어 blob 주소는 형식이 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob`합니다.
+스토리지 계정의 개체에 액세스하기 위한 URL은 스토리지 계정의 개체 위치를 엔드포인트에 추가하여 작성됩니다. 예를 들어 blob 주소는 형식이 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob`합니다.
 
 ## <a name="setup"></a>설정
 
 Xamarin.Forms 응용 프로그램을 Azure Storage 계정 통합에 대 한 프로세스는 다음과 같습니다.
 
-1. 저장소 계정을 만듭니다. 자세한 내용은 [저장소 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account)합니다.
+1. 스토리지 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) 를 참조하세요.
 1. 추가 된 [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) Xamarin.Forms 응용 프로그램입니다.
 1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결할](#connecting)합니다.
 1. 추가 `using` 지시문에 대 한 합니다 `Microsoft.WindowsAzure.Storage` 및 `Microsoft.WindowsAzure.Storage.Blob` 네임 스페이스는 Azure Storage에 액세스 하는 클래스입니다.

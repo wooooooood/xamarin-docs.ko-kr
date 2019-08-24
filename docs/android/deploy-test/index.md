@@ -49,7 +49,7 @@ ms.locfileid: "67864208"
 
 ## <a name="installing-a-system-appinstall-system-appmd"></a>[시스템 앱 설치](install-system-app.md)
 
-이 가이드에서는 Xamarin.Android 앱을 Android 디바이스의 시스템 응용 프로그램이나 사용자 지정 ROM의 일부로 설치하는 방법을 설명합니다.
+이 가이드에서는 Xamarin.Android 앱을 Android 디바이스의 시스템 애플리케이션이나 사용자 지정 ROM의 일부로 설치하는 방법을 설명합니다.
 
 ## <a name="linking-on-androidlinkermd"></a>[Android의 연결](linker.md)
 

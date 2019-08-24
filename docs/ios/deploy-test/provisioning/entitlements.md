@@ -26,12 +26,12 @@ Mac용 Visual Studio와 Visual Studio는 Entitlements.plist 편집기를 통해 
 
 ## <a name="entitlements-and-provisioning"></a>자격 및 프로비전
 
-Entitlements.plist 파일은 자격을 지정하는 데 사용되며 응용 프로그램 번들에 서명하는 데 사용됩니다.
+Entitlements.plist 파일은 자격을 지정하는 데 사용되며 애플리케이션 번들에 서명하는 데 사용됩니다.
 
 하지만 앱이 코드로 올바르게 서명되었는지 확인하려면 추가 프로비전이 필요합니다. 사용된 프로비전 프로필에는 필요한 기능이 활성화된 앱 ID가 있어야 합니다. 방법에 대한 자세한 내용은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드를 참조하세요.
 
 > [!IMPORTANT]
-> Entitlements.plist 파일은 기능을 사용하여 응용 프로그램의 올바른 속성을 입력하는 데 도움이 되지만 Apple 개발자 계정에 연결되어 있지 않기 때문에 프로비저닝 프로필을 생성할 수 없습니다. 애플리케이션을 배포하려면 개발자 포털을 사용하여 프로비전 프로필을 생성해야 합니다.
+> Entitlements.plist 파일은 기능을 사용하여 애플리케이션의 올바른 속성을 입력하는 데 도움이 되지만 Apple 개발자 계정에 연결되어 있지 않기 때문에 프로비저닝 프로필을 생성할 수 없습니다. 애플리케이션을 배포하려면 개발자 포털을 사용하여 프로비전 프로필을 생성해야 합니다.
 
 ## <a name="set-entitlements-in-a-xamarinios-project"></a>Xamarin.iOS 프로젝트에서 자격 설정
 
@@ -128,7 +128,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 ### <a name="app-groups"></a>앱 그룹
 
-- **설명**: 앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다.
+- **설명**: 앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 스토리지 위치에 액세스할 수 있습니다.
 
     - **키**: com.apple.security.application-groups
     - **문자열**: group.$(CFBundleIdentifier)

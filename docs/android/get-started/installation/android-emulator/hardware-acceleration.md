@@ -19,7 +19,7 @@ ms.locfileid: "56331885"
 
 _이 아티클에서는 컴퓨터의 하드웨어 가속 기능을 사용하여 Android Emulator 성능을 최대화하는 방법을 설명합니다._
 
-Visual Studio를 통해 Android 디바이스가 지원되지 않거나 실용적이지 않은 경우 Android 에뮬레이터를 사용하여 개발자가 Xamarin.Android 응용 프로그램을 쉽게 테스트하고 디버그할 수 있습니다.
+Visual Studio를 통해 Android 디바이스가 지원되지 않거나 실용적이지 않은 경우 Android 에뮬레이터를 사용하여 개발자가 Xamarin.Android 애플리케이션을 쉽게 테스트하고 디버그할 수 있습니다.
 그러나 Android 에뮬레이터는 실행되는 컴퓨터에서 하드웨어 가속을 사용할 수 없는 경우 너무 늦게 실행됩니다. 컴퓨터의 가상화 기능과 함께 특별한 x86 가상 디바이스 이미지를 사용하여 Android 에뮬레이터의 성능을 상당히 개선할 수 있습니다.
 
 ::: zone pivot="windows"

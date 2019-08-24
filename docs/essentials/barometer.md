@@ -14,7 +14,7 @@ ms.locfileid: "52899046"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: 기압계
 
-**Barometer** 클래스를 사용하면 압력을 측정하는 장치의 기압계 센서를 모니터링할 수 있습니다.
+**Barometer** 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 

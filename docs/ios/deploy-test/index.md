@@ -44,7 +44,7 @@ TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베�
 
 ## <a name="debugging-in-xamariniosiosdeploy-testdebugging-in-xamarin-iosmd"></a>[Xamarin.iOS에서 디버깅](~/ios/deploy-test/debugging-in-xamarin-ios.md)
 
-Mac IDE용 Visual Studio 및 Visual Studio는 iOS 시뮬레이터 및 iOS 디바이스 모두에서 Xamarin.iOS 응용 프로그램 디버깅을 지원합니다. 이 아티클에서는 디버거를 사용하는 방법과 지원되는 다양한 옵션을 구성하는 방법을 보여줍니다.
+Mac IDE용 Visual Studio 및 Visual Studio는 iOS 시뮬레이터 및 iOS 디바이스 모두에서 Xamarin.iOS 애플리케이션 디버깅을 지원합니다. 이 아티클에서는 디버거를 사용하는 방법과 지원되는 다양한 옵션을 구성하는 방법을 보여줍니다.
 
 ## <a name="touchunitiosdeploy-testtouchunitmd"></a>[Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
@@ -53,11 +53,11 @@ Xamarin.iOS의 단위 테스트는 iOS Test Runner와 단위 테스트 작성을
 
 ## <a name="using-instruments-to-detect-native-leaks-using-markheapiosdeploy-testusing-instruments-to-detect-native-leaks-using-markheapmd"></a>[MarkHeap을 사용하여 네이티브 누수를 검색하는 기기 사용](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
-이 아티클에서는 모든 iOS 디바이스 및 모든 Xamarin.iOS 응용 프로그램에 기기를 사용하는 방법을 설명합니다. 또한 시뮬레이터에서 애플리케이션을 프로파일링하는 방법을 설명합니다.
+이 아티클에서는 모든 iOS 디바이스 및 모든 Xamarin.iOS 애플리케이션에 기기를 사용하는 방법을 설명합니다. 또한 시뮬레이터에서 애플리케이션을 프로파일링하는 방법을 설명합니다.
 
 ## <a name="walkthrough---using-apples-instrument-tooliosdeploy-testwalkthrough-apples-instrumentmd"></a>[연습 - Apple의 계측 도구 사용](~/ios/deploy-test/walkthrough-apples-instrument.md)
 
-이 아티클에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드된 iOS 애플리케이션의 메모리 문제를 진단하는 방법을 설명합니다. 계측을 시작하고, 힙 스냅숏을 만들고, 메모리 증가를 분석하는 방법을 보여 줍니다. 또한 계측을 사용하여 메모리 문제가 발생하는 정확한 코드 줄을 표시하여 찾아내는 방법을 보여 줍니다.
+이 아티클에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드된 iOS 애플리케이션의 메모리 문제를 진단하는 방법을 설명합니다. 계측을 시작하고, 힙 스냅샷을 만들고, 메모리 증가를 분석하는 방법을 보여 줍니다. 또한 계측을 사용하여 메모리 문제가 발생하는 정확한 코드 줄을 표시하여 찾아내는 방법을 보여 줍니다.
 
 ## <a name="linking-on-ioslinkermd"></a>[iOS에서 연결](linker.md)
 
