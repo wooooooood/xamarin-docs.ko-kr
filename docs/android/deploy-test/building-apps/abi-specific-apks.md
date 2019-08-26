@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 20e7385c16324643545e156950efaca565eb0e0c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4a3ba970f8ca32f0bfa2e5297e8052f3eb572ed0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643937"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525725"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -22,21 +22,21 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 
 ## <a name="overview"></a>개요
 
-응용 프로그램에 여러 APK를 포함하는 것이 유리한 경우가 있습니다. 각 APK는 동일한 키 저장소를 사용하여 서명되고 동일한 패키지 이름을 공유하지만 특정 디바이스나 Android 구성을 위해 컴파일됩니다. 이는 권장되는 방법이 아닙니다. 여러 디바이스와 구성을 지원할 수 있는 APK 하나를 포함하는 것이 훨씬 더 간단합니다. 다음과 같이 여러 APK를 만드는 것이 유용한 경우도 있습니다.
+애플리케이션에 여러 APK를 포함하는 것이 유리한 경우가 있습니다. 각 APK는 동일한 키 스토리지를 사용하여 서명되고 동일한 패키지 이름을 공유하지만 특정 디바이스나 Android 구성을 위해 컴파일됩니다. 이는 권장되는 방법이 아닙니다. 여러 디바이스와 구성을 지원할 수 있는 APK 하나를 포함하는 것이 훨씬 더 간단합니다. 다음과 같이 여러 APK를 만드는 것이 유용한 경우도 있습니다.
 
--  **APK 크기 축소** - Google Play는 APK 파일에 100MB 크기 제한을 적용합니다. 디바이스별 APK를 만들면 응용 프로그램의 자산 및 리소스를 일부만 제공하면 되므로 APK의 크기를 줄일 수 있습니다.
+- **APK 크기 축소** - Google Play는 APK 파일에 100MB 크기 제한을 적용합니다. 디바이스별 APK를 만들면 애플리케이션의 자산 및 리소스를 일부만 제공하면 되므로 APK의 크기를 줄일 수 있습니다.
 
--  **여러 CPU 아키텍처 지원** - 애플리케이션에 특정 CPU에 대한 공유 라이브러리가 있을 경우 해당 CPU에 대한 공유 라이브러리만 배포할 수 있습니다.
+- **여러 CPU 아키텍처 지원** - 애플리케이션에 특정 CPU에 대한 공유 라이브러리가 있을 경우 해당 CPU에 대한 공유 라이브러리만 배포할 수 있습니다.
 
 
-여러 APK가 있으면 배포가 복잡해질 수 있음 - Google Play에서 해결한 문제입니다. Google Play는 **AndroidManifest.XML**에 포함된 응용 프로그램의 버전 코드 및 기타 메타데이터에 따라 디바이스에 올바른 APK가 제공되도록 합니다. Google Play에서 애플리케이션에 여러 APK를 지원하는 방식에 대한 자세한 내용과 제한 사항은 [여러 APK 지원에 대한 Google 설명서](https://developer.android.com/google/play/publishing/multiple-apks.html)를 참조하세요.
+여러 APK가 있으면 배포가 복잡해질 수 있음 - Google Play에서 해결한 문제입니다. Google Play는 **AndroidManifest.XML**에 포함된 애플리케이션의 버전 코드 및 기타 메타데이터에 따라 디바이스에 올바른 APK가 제공되도록 합니다. Google Play에서 애플리케이션에 여러 APK를 지원하는 방식에 대한 자세한 내용과 제한 사항은 [여러 APK 지원에 대한 Google 설명서](https://developer.android.com/google/play/publishing/multiple-apks.html)를 참조하세요.
 
 이 가이드에서는 Xamarin.Android 애플리케이션을 위해 각 APK가 특정 ABI를 대상으로 하는 여러 APK 빌드를 스크립팅하는 방법을 설명합니다. 다음 토픽을 살펴봅니다.
 
-1.  APK의 고유한 *버전 코드*를 만듭니다.
-1.  이 APK에 사용할 임시 버전의 **AndroidManifest.XML**을 만듭니다.
-1.  이전 단계의 **AndroidManifest.XML**을 사용하여 애플리케이션을 빌드합니다.
-1.  APK에 서명하고 zipalign하여 릴리스를 준비합니다.
+1. APK의 고유한 *버전 코드*를 만듭니다.
+1. 이 APK에 사용할 임시 버전의 **AndroidManifest.XML**을 만듭니다.
+1. 이전 단계의 **AndroidManifest.XML**을 사용하여 애플리케이션을 빌드합니다.
+1. APK에 서명하고 zipalign하여 릴리스를 준비합니다.
 
 
 이 가이드의 뒷부분에 [Rake](http://martinfowler.com/articles/rake.html)를 사용하여 이러한 단계를 스크립팅하는 방법을 보여주는 연습이 있습니다.
@@ -48,20 +48,20 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 알고리즘을 권장합니다([여러 APK 지원 문서](https://developer.android.com/google/play/publishing/multiple-apks.html)에서 *버전 코드 구성표 사용* 섹션 참조).
 이 버전 코드 구성표를 8자리로 확장하면 일부 ABI 정보를 버전 코드에 포함하여 Google Play에서 디바이스에 올바른 APK를 배포하도록 할 수 있습니다. 다음 목록에서는 이 8자리 버전 코드 형식을 설명합니다(왼쪽에서 오른쪽으로 인덱싱됨).
 
--   **인덱스 0**(아래 다이어그램에서 빨간색) &ndash; ABI의 정수:
-    -   1 &ndash; `armeabi`
-    -   2 &ndash; `armeabi-v7a`
-    -   6 &ndash; `x86`
+- **인덱스 0**(아래 다이어그램에서 빨간색) &ndash; ABI의 정수:
+    - 1 &ndash; `armeabi`
+    - 2 &ndash; `armeabi-v7a`
+    - 6 &ndash; `x86`
 
--   **인덱스 1-2**(아래 다이어그램에서 주황색) &ndash; 애플리케이션에서 지원하는 최소 API 수준입니다.
+- **인덱스 1-2**(아래 다이어그램에서 주황색) &ndash; 애플리케이션에서 지원하는 최소 API 수준입니다.
 
--   **인덱스 3-4**(아래 다이어그램에서 파란색) &ndash; 지원되는 화면 크기:
-    -   1 &ndash; 소형
-    -   2 &ndash; 표준
-    -   3 &ndash; 대형
-    -   4 &ndash; 초대형
+- **인덱스 3-4**(아래 다이어그램에서 파란색) &ndash; 지원되는 화면 크기:
+    - 1 &ndash; 소형
+    - 2 &ndash; 표준
+    - 3 &ndash; 대형
+    - 4 &ndash; 초대형
 
--   **인덱스 5-7**(아래 다이어그램에서 녹색) &ndash; 버전 코드의 고유 번호입니다. 
+- **인덱스 5-7**(아래 다이어그램에서 녹색) &ndash; 버전 코드의 고유 번호입니다. 
     이 항목은 개발자가 설정합니다. 애플리케이션의 각 공용 릴리스마다 증가해야 합니다.
 
 다음 다이어그램에서는 위 목록에 설명된 각 코드의 위치를 보여줍니다.
@@ -71,17 +71,17 @@ Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 �
 
 Google Play에서는 `versionCode` 및 APK 구성에 따라 디바이스에 올바른 APK가 제공되도록 합니다. 가장 높은 버전 코드를 가진 APK가 디바이스에 제공됩니다. 예를 들어 애플리케이션에 다음 버전 코드를 갖는 세 APK가 있을 수 있습니다.
 
--  11413456 - ABI가 `armeabi`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 번호는 456입니다.
--  21423456 - ABI가 `armeabi-v7a`이고, API 수준 14, 표준 및 대형 화면을 대상으로 하며, 버전 번호는 456입니다.
--  61423456 - ABI가 `x86`이고, API 수준 14, 표준 및 대형 화면을 대상으로 하며, 버전 번호는 456입니다.
+- 11413456 - ABI가 `armeabi`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 번호는 456입니다.
+- 21423456 - ABI가 `armeabi-v7a`이고, API 수준 14, 표준 및 대형 화면을 대상으로 하며, 버전 번호는 456입니다.
+- 61423456 - ABI가 `x86`이고, API 수준 14, 표준 및 대형 화면을 대상으로 하며, 버전 번호는 456입니다.
 
 이 예제로 계속 진행하려면 `armeabi-v7a`와 관련된 버그가 해결되었다고 간주하세요. 앱 버전이 457로 증가하고, `android:versionCode`를 21423457로 설정하여 새 APK가 빌드됩니다. `armeabi` 및 `x86` 버전의 versionCodes는 동일하게 유지됩니다.
 
 x86 버전이 최신 API(API 수준 19)를 대상으로 하는 업데이트나 버그 수정을 받아서 앱의 버전이 500이 된다고 가정해 보겠습니다. 새 `versionCode`는 61923500으로 변경되고, armeabi/armeabi-v7a는 그대로 유지됩니다. 이때 버전 코드는 다음과 같습니다.
 
--  11413456 - ABI가 `armeabi`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 이름은 456입니다.
--  21423457 - ABI가 `armeabi-v7a`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 이름은 457입니다.
--  61923500 - ABI가 `x86`이고, API 수준 19, 소형~대형 화면을 대상으로 하며, 버전 이름은 500입니다.
+- 11413456 - ABI가 `armeabi`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 이름은 456입니다.
+- 21423457 - ABI가 `armeabi-v7a`이고, API 수준 14, 소형~대형 화면을 대상으로 하며, 버전 이름은 457입니다.
+- 61923500 - ABI가 `x86`이고, API 수준 19, 소형~대형 화면을 대상으로 하며, 버전 이름은 500입니다.
 
 
 이러한 버전 코드를 수동으로 유지 관리하는 것은 개발자에게 큰 부담이 될 수 있습니다. 정확한 `android:versionCode`를 계산한 후 APK를 빌드하는 프로세스는 자동화되어야 합니다.
@@ -106,19 +106,19 @@ ABI별 APK를 빌드할 때는 다음 샘플 명령줄에 나와 있는 것처�
 
 다음 목록에서는 각 명령줄 매개 변수를 설명합니다.
 
--   `/t:Package` &ndash; 디버그 키 저장소를 사용하여 서명된 Android APK를 만듭니다.
+- `/t:Package` &ndash; 디버그 키 저장소를 사용하여 서명된 Android APK를 만듭니다.
 
--   `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; 대상으로 할 ABI입니다. `armeabi`, `armeabi-v7a` 또는 `x86` 중 하나여야 합니다.
+- `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; 대상으로 할 ABI입니다. `armeabi`, `armeabi-v7a` 또는 `x86` 중 하나여야 합니다.
 
--   `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; 이는 빌드의 일부로 생성된 중간 파일을 저장하는 디렉터리입니다. Xamarin.Android는 필요할 경우 ABI의 이름을 딴 디렉터리를 만듭니다(예: `obj.armeabi-v7a`). 한 빌드에서 다른 빌드로 파일이 "유출"되는 결과를 가져오는 문제를 방지할 수 있으므로 각 ABI당 하나의 폴더를 사용하는 것이 좋습니다. 이 값은 디렉터리 구분 기호(OS X의 경우 `/`)를 사용하여 종결됩니다.
+- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; 이는 빌드의 일부로 생성된 중간 파일을 저장하는 디렉터리입니다. Xamarin.Android는 필요할 경우 ABI의 이름을 딴 디렉터리를 만듭니다(예: `obj.armeabi-v7a`). 한 빌드에서 다른 빌드로 파일이 "유출"되는 결과를 가져오는 문제를 방지할 수 있으므로 각 ABI당 하나의 폴더를 사용하는 것이 좋습니다. 이 값은 디렉터리 구분 기호(OS X의 경우 `/`)를 사용하여 종결됩니다.
 
--   `/p:AndroidManifest` &ndash; 이 속성은 빌드 중에 사용되는 **AndroidManifest.XML** 파일에 대한 경로를 지정합니다.
+- `/p:AndroidManifest` &ndash; 이 속성은 빌드 중에 사용되는 **AndroidManifest.XML** 파일의 경로를 지정합니다.
 
--   `/p:OutputPath=bin.<TARGET_ABI>` &ndash; 이는 최종 APK가 저장될 디렉터리입니다. Xamarin.Android는 ABI의 이름을 딴 디렉터리를 만듭니다(예: `bin.armeabi-v7a`).
+- `/p:OutputPath=bin.<TARGET_ABI>` &ndash; 이는 최종 APK가 저장될 디렉터리입니다. Xamarin.Android는 ABI의 이름을 딴 디렉터리를 만듭니다(예: `bin.armeabi-v7a`).
 
--   `/p:Configuration=Release` &ndash; APK의 릴리스 빌드를 수행합니다. 디버그 빌드는 Google Play에 업로드하지 못할 수 있습니다.
+- `/p:Configuration=Release` &ndash; APK의 릴리스 빌드를 수행합니다. 디버그 빌드는 Google Play에 업로드하지 못할 수 있습니다.
 
--   `<CS_PROJ FILE>` &ndash; 이는 Xamarin.Android 프로젝트의 `.csproj` 파일에 대한 경로입니다.
+- `<CS_PROJ FILE>` &ndash; 이는 Xamarin.Android 프로젝트에 대한 `.csproj` 파일의 경로입니다.
 
 
 
@@ -130,7 +130,7 @@ APK에 서명해야 Google Play를 통해 배포할 수 있습니다. 이는 Jav
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore <PATH/TO/KEYSTORE> -storepass <PASSWORD> -signedjar <PATH/FOR/SIGNED_JAR> <PATH/FOR/JAR/TO/SIGN> <NAME_OF_KEY_IN_KEYSTORE>
 ```
 
-모든 Xamarin.Android 응용 프로그램은 zipalign되어야 디바이스에서 실행될 수 있습니다. 사용할 명령줄의 형식은 다음과 같습니다.
+모든 Xamarin.Android 애플리케이션은 zipalign되어야 디바이스에서 실행될 수 있습니다. 사용할 명령줄의 형식은 다음과 같습니다.
 
 ```shell
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
@@ -141,9 +141,9 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 
 샘플 프로젝트 [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK)는 ABI별 버전 번호를 계산하고 다음과 같은 각 ABI별로 별도의 APK 3개를 빌드하는 방법을 보여 주는 간단한 Android 프로젝트입니다.
 
--  armeabi
--  armeabi-v7a
--  x86
+- armeabi
+- armeabi-v7a
+- x86
 
 
 샘플 프로젝트의 [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb)은 이전 섹션에 설명된 각 단계를 수행합니다.

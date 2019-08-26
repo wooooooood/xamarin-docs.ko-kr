@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: edd6fc92603783dc9de64b10304e8d48f97bdef3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509219"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525703"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 
@@ -22,8 +22,8 @@ ms.locfileid: "68509219"
 
 **디버그 로그** 도구는 Visual Studio를 통해 앱을 디버그하는 동안 로그 출력을 보는 방법을 제공합니다. 디버그 로그는 다음 디바이스를 지원합니다.
 
--   물리적인 Android 휴대폰, 태블릿 및 착용식 장치
--   Android Emulator에서 실행 중인 Android 가상 디바이스 
+- 물리적인 Android 휴대폰, 태블릿 및 착용식 장치
+- Android Emulator에서 실행 중인 Android 가상 디바이스 
 
 > [!NOTE]
 > **디버그 로그** 도구는 Xamarin Live Player에서 작동하지 않습니다.
@@ -41,29 +41,29 @@ ms.locfileid: "68509219"
 
 또는 다음 메뉴 선택 사항 중 하나에서 **디바이스 로그** 도구를 시작합니다.
 
--   **보기 &gt; 다른 창 &gt; 디바이스 로그**
--   **도구 &gt; Android &gt; 디바이스 로그**
+- **보기 &gt; 다른 창 &gt; 디바이스 로그**
+- **도구 &gt; Android &gt; 디바이스 로그**
 
 다음 스크린샷은 **디버그 도구** 창의 다양한 부분을 보여줍니다.
 
 [![디버그 도구 창의 부분](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **Device Selector**(디바이스 선택기) &ndash; 모니터링할 물리적 디바이스 또는 실행 중인 에뮬레이터를 선택합니다.
+- **디바이스 선택기** &ndash; 모니터링할 물리적 디바이스 또는 실행 중인 에뮬레이터를 선택합니다.
 
--   **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
+- **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
 
--   **로그 항목 지우기** &ndash; 테이블에서 현재 로그를 모두 지웁니다.
+- **로그 항목 지우기** &ndash; 테이블에서 현재 로그를 모두 지웁니다.
 
--   **재생/일시 중지** &ndash; 새 로그 항목 표시 업데이트 또는 일시 중지 간을 토글합니다.
+- **재생/일시 중지** &ndash; 새 로그 항목 표시 업데이트 또는 일시 중지 간을 토글합니다.
 
--   **중지** &ndash; 새 로그 항목 표시를 중지합니다.
+- **중지** &ndash; 새 로그 항목 표시를 중지합니다.
 
--   **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
+- **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
 
 
 **디버그 로그** 도구 창이 표시되면 디바이스 풀다운 메뉴를 사용하여 모니터링할 Android 디바이스를 선택합니다.
 
-[![장치 선택기의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
+[![디바이스 선택기의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
 
@@ -78,27 +78,27 @@ ms.locfileid: "68509219"
 
 [![디버그 도구 창의 기능](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **Device Selector**(디바이스 선택기) &ndash; 모니터링할 물리적 디바이스 또는 실행 중인 에뮬레이터를 선택합니다.
+- **디바이스 선택기** &ndash; 모니터링할 물리적 디바이스 또는 실행 중인 에뮬레이터를 선택합니다.
 
--   **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
+- **로그 항목** &ndash; logcat의 로그 메시지 테이블입니다.
 
--   **로그 항목 지우기** &ndash; 테이블에서 현재 로그를 모두 지웁니다.
+- **로그 항목 지우기** &ndash; 테이블에서 현재 로그를 모두 지웁니다.
 
--   **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
+- **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
 
--   **메시지 표시** &ndash; 정보 메시지 표시를 토글합니다.
+- **메시지 표시** &ndash; 정보 메시지 표시를 토글합니다.
 
--   **경고 표시** &ndash; 경고 메시지 표시를 토글합니다(경고 메시지는 노란색으로 표시됨).
+- **경고 표시** &ndash; 경고 메시지 표시를 토글합니다(경고 메시지는 노란색으로 표시됨).
 
--   **오류 표시** &ndash; 오류 메시지 표시를 토글합니다(오류 메시지는 빨란색으로 표시됨).
+- **오류 표시** &ndash; 오류 메시지 표시를 토글합니다(오류 메시지는 빨란색으로 표시됨).
 
--   **다시 연결**&ndash; 디바이스에 다시 연결하고 로그 항목 표시를 새로 고칩니다.
+- **다시 연결**&ndash; 디바이스에 다시 연결하고 로그 항목 표시를 새로 고칩니다.
 
--   **마커 추가** &ndash; 마지막 로그 항목 뒤에 마커 메시지(예: `--- Marker N ---`)를 삽입합니다. 여기서 _N_은 1에서 시작하여 새 마커가 추가되면 1씩 증가하는 카운터입니다.
+- **마커 추가** &ndash; 마지막 로그 항목 뒤에 마커 메시지(예: `--- Marker N ---`)를 삽입합니다. 여기서 _N_은 1에서 시작하여 새 마커가 추가되면 1씩 증가하는 카운터입니다.
 
 [디버그 로그] 도구 창이 표시되면 디바이스 풀다운 메뉴를 사용하여 모니터링할 Android 디바이스를 선택합니다.
 
-[![장치 선택기의 위치](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
+[![디바이스 선택기의 위치](android-debug-log-images/vsmac-02-devices-combo-sml.png)](android-debug-log-images/vsmac-02-devices-combo.png#lightbox)
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
 

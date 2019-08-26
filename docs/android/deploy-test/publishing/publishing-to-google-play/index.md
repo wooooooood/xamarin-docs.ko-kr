@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668857"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525477"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
-앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다. 
+앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다.
 
-이 섹션에서는 게시자가 되기 위한 등록, Google Play의 애플리케이션 판촉 및 광고를 위한 자산 수집, Google Play 애플리케이션 등급 지침, 필터를 사용하여 특정 장치에 대한 애플리케이션 배포 제한 등과 같은 Google Play 특정 항목을 다룹니다.
+이 섹션에서는 게시자가 되기 위한 등록, Google Play의 애플리케이션 판촉 및 광고를 위한 자산 수집, Google Play 애플리케이션 등급 지침, 필터를 사용하여 특정 디바이스에 대한 애플리케이션 배포 제한 등과 같은 Google Play 특정 항목을 다룹니다.
 
 
 ## <a name="requirements"></a>요구 사항
@@ -36,19 +36,19 @@ Google Play를 전세계에서 사용할 수 있는 것은 아닙니다. 일부 
 
 Google play에서 애플리케이션을 게시하려면 게시자 계정이 있어야 합니다. 게시자 계정에 등록하려면 다음 단계를 따릅니다.
 
-1.  [Google Play 개발자 콘솔](https://play.google.com/apps/publish)을 방문합니다.
-1.  개발자 ID에 대한 기본 정보를 입력합니다.
-1.  로캘의 개발자 배포 규약을 읽고 규약에 동의합니다.
-1.  $25 USD 등록 요금을 지불합니다.
-1.  이메일을 통해 확인합니다.
-1.  계정이 만들어진 후 Google Play를 사용하여 애플리케이션을 게시할 수 있습니다.
+1. [Google Play 개발자 콘솔](https://play.google.com/apps/publish)을 방문합니다.
+1. 개발자 ID에 대한 기본 정보를 입력합니다.
+1. 로캘의 개발자 배포 규약을 읽고 규약에 동의합니다.
+1. $25 USD 등록 요금을 지불합니다.
+1. 이메일을 통해 확인합니다.
+1. 계정이 만들어진 후 Google Play를 사용하여 애플리케이션을 게시할 수 있습니다.
 
 
 Google Play가 전 세계의 모든 국가를 지원하지는 않습니다. 가장 최신 국가 목록은 다음 링크에서 제공합니다.
 
-1.  [지원되는 개발자 위치 &amp; 판매자 등록](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324)&ndash; 개발자가 판매자로 등록하고 유료 애플리케이션을 판매할 수 있는 모든 국가의 목록입니다.
+1. [지원되는 개발자 위치 &amp; 판매자 등록](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324)&ndash; 개발자가 판매자로 등록하고 유료 애플리케이션을 판매할 수 있는 모든 국가의 목록입니다.
 
-1.  [Google Play 사용자에 대한 배포 지원 위치](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294)&ndash; 애플리케이션을 배포할 수 있는 모든 국가의 목록입니다.
+1. [Google Play 사용자에 대한 배포 지원 위치](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294)&ndash; 애플리케이션을 배포할 수 있는 모든 국가의 목록입니다.
 
 
 
@@ -60,23 +60,23 @@ Google Play에서 애플리케이션을 효과적으로 프로모션 및 광고�
 
 #### <a name="launcher-icons"></a>시작 아이콘
 
-*시작 아이콘*은 애플리케이션을 나타내는 그래픽입니다. 각 시작 아이콘은 투명 알파 채널이 있는 32비트 PNG여야 합니다. 애플리케이션에는 아래 목록에서 설명한 대로 모든 일반 화면 밀도에 대한 아이콘이 있어야 합니다. 
+*시작 아이콘*은 애플리케이션을 나타내는 그래픽입니다. 각 시작 아이콘은 투명 알파 채널이 있는 32비트 PNG여야 합니다. 애플리케이션에는 아래 목록에서 설명한 대로 모든 일반 화면 밀도에 대한 아이콘이 있어야 합니다.
 
--   **ldpi** (120dpi) &ndash; 36 x 36 px
--   **mdpi** (160dpi) &ndash; 48 x 48 px
--   **hdpi** (240dpi) &ndash; 72 x 72 px
--   **xhdpi** (320dpi) &ndash; 96 x 96 px
+- **ldpi** (120dpi) &ndash; 36 x 36 px
+- **mdpi** (160dpi) &ndash; 48 x 48 px
+- **hdpi** (240dpi) &ndash; 72 x 72 px
+- **xhdpi** (320dpi) &ndash; 96 x 96 px
 
 
 시작 아이콘은 사용자가 Google Play에서 처음으로 보게 되는 애플리케이션의 모습이므로 시각적으로 의미 있고 매력적인 아이콘이 되도록 주의가 필요합니다.
 
 시작 아이콘 팁:
 
-1.  **간단하고 깔끔할 것** &ndash; 시작 아이콘은 간단하고 깔끔해야 합니다. 즉 애플리케이션의 이름은 아이콘에서 제외합니다. 간단할수록 더 기억에 남고 더 작을수록 구분하기 쉽습니다.
+1. **간단하고 깔끔할 것** &ndash; 시작 아이콘은 간단하고 깔끔해야 합니다. 즉 애플리케이션의 이름은 아이콘에서 제외합니다. 간단할수록 더 기억에 남고 더 작을수록 구분하기 쉽습니다.
 
-1.  **옅지 않은 아이콘** &ndash; 지나치게 옅은 아이콘은 일부 배경에서 잘 드러나지 않습니다.
+1. **옅지 않은 아이콘** &ndash; 지나치게 옅은 아이콘은 일부 배경에서 잘 드러나지 않습니다.
 
-1.  **알파 채널 사용** &ndash; 아이콘은 전체 프레임 이미지가 아니면서 알파 채널을 사용해야 합니다.
+1. **알파 채널 사용** &ndash; 아이콘은 전체 프레임 이미지가 아니면서 알파 채널을 사용해야 합니다.
 
 
 
@@ -84,9 +84,9 @@ Google Play에서 애플리케이션을 효과적으로 프로모션 및 광고�
 
 Google Play의 애플리케이션에는 충실도 높은 애플리케이션 아이콘 버전이 필요합니다. Google Play에서만 사용되며 애플리케이션 실행 아이콘을 대신하지 않습니다. 고해상도 아이콘의 사양은 다음과 같습니다.
 
-1.  알파 채널 32비트 PNG
-1.  512 x 512픽셀
-1.  최대 크기 1024KB
+1. 알파 채널 32비트 PNG
+1. 512 x 512픽셀
+1. 최대 크기 1024KB
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)는 적합한 실행 아이콘과 고해상도 애플리케이션 아이콘을 만드는 데 유용한 도구입니다.
 
@@ -98,8 +98,8 @@ Google Play에서는 한 애플리케이션에 최소 2개, 최대 8개의 스�
 
 스크린 샷의 사양은 다음과 같습니다.
 
-1.  알파 채널이 없는 24비트 JPG 또는 PNG
-1.  320w x 480h, 480w x 800h 또는 480w x 854h 가로 이미지는 잘립니다.
+1. 알파 채널이 없는 24비트 JPG 또는 PNG
+1. 320w x 480h, 480w x 800h 또는 480w x 854h 가로 이미지는 잘립니다.
 
 
 
@@ -107,8 +107,8 @@ Google Play에서는 한 애플리케이션에 최소 2개, 최대 8개의 스�
 
 Google Play에서 사용하는 선택적 이미지입니다.
 
-1.  알파 채널이 없는 180w x 120h 24비트 PNG 또는 JPG
-1.  아트에 테두리 없음
+1. 알파 채널이 없는 180w x 120h 24비트 PNG 또는 JPG
+1. 아트에 테두리 없음
 
 
 
@@ -116,9 +116,9 @@ Google Play에서 사용하는 선택적 이미지입니다.
 
 Google Play의 추천 섹션에서 사용합니다. 이 그래픽은 애플리케이션 아이콘 없이 단독으로 표시될 수 있습니다.
 
-1.  알파 채널과 투명도 없는 1024w x 500h PNG 또는 JPG
-1.  모든 중요한 콘텐츠는 924 x 500 프레임 안에 있어야 합니다. 이 프레임 외부의 픽셀은 스타일을 위해 잘릴 수 있습니다.
-1.  이 그래픽은 축소될 수 있으므로 큰 텍스트를 사용하고 그래픽은 간단하게 유지합니다.
+1. 알파 채널과 투명도 없는 1024w x 500h PNG 또는 JPG
+1. 모든 중요한 콘텐츠는 924 x 500 프레임 안에 있어야 합니다. 이 프레임 외부의 픽셀은 스타일을 위해 잘릴 수 있습니다.
+1. 이 그래픽은 축소될 수 있으므로 큰 텍스트를 사용하고 그래픽은 간단하게 유지합니다.
 
 
 
@@ -218,7 +218,7 @@ OAuth 클라이언트의 기본 이름은 *Google Play Android Developer*입니�
 
 [![표시된 클라이언트 ID와 암호](images/06-client-id-and-secret-sml.png)](images/06-client-id-and-secret.png#lightbox)
 
-**저장**을 클릭하여 변경 내용을 저장합니다. 그러면 **JSON 다운로드** 아이콘을 클릭하여 자격 증명을 다운로드할 수 있는**자격 증명** 페이지로 돌아갑니다. 
+**저장**을 클릭하여 변경 내용을 저장합니다. 그러면 **JSON 다운로드** 아이콘을 클릭하여 자격 증명을 다운로드할 수 있는**자격 증명** 페이지로 돌아갑니다.
 
 [![JSON 다운로드 아이콘](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
@@ -299,13 +299,13 @@ Google Play 테스트 및 단계별 출시에 대한 자세한 내용은 [알파
 
 Google Play에서는 앱 업로드를 위해 가능한 4개 트랙을 제공합니다.
 
--   **알파** &ndash; 소규모 테스터 목록에 앱의 아주 초기 버전을 업로드하는 데 사용합니다.
+- **알파** &ndash; 소규모 테스터 목록에 앱의 아주 초기 버전을 업로드하는 데 사용합니다.
 
--   **베타** &ndash; 더 큰 규모의 테스터 목록에 앱의 초기 버전을 업로드하는 데 사용합니다.
+- **베타** &ndash; 더 큰 규모의 테스터 목록에 앱의 초기 버전을 업로드하는 데 사용합니다.
 
--   **출시** &ndash; 일정 비율의 사용자가 앱의 업데이트 버전을 받을 수 있습니다. 이를 통해 버그를 해결하는 동안 예를 들어 10%에서 출발하여 천천히 비율을 높여가고 100%까지 증대할 수 있습니다.
+- **출시** &ndash; 일정 비율의 사용자가 앱의 업데이트 버전을 받을 수 있습니다. 이를 통해 버그를 해결하는 동안 예를 들어 10%에서 출발하여 천천히 비율을 높여가고 100%까지 증대할 수 있습니다.
 
--   **프로덕션** &ndash; 앱이 Google Play 스토어에서 전체 배포할 준비가 되면 이 트랙을 선택합니다.
+- **프로덕션** &ndash; 앱이 Google Play 스토어에서 전체 배포할 준비가 되면 이 트랙을 선택합니다.
 
 Google Play 테스트 및 단계별 출시에 대한 자세한 내용은 [알파/베타 테스트 설정](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en)을 참조하세요.
 

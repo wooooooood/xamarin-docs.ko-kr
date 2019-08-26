@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 4c0fc5edd309d5ed8103c5fc3e33817001049241
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739263"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888962"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
@@ -91,7 +91,7 @@ about
 `dogs` 경로의 `ShellContent` 개체로 이동하려면 절대 경로 URI는 `//animals/domestic/dogs`입니다. 마찬가지로, `about` 경로의 `ShellContent` 개체로 이동하려면 절대 경로 URI는 `//about`입니다.
 
 > [!IMPORTANT]
-> 중복 경로 이름이 허용됩니다. 그러나 중복 경로는 허용되지 않습니다. 중복 경로가 검색되는 경우 애플리케이션 시작 시 `ArgumentException`이 throw됩니다.
+> 중복 경로가 검색되는 경우 애플리케이션 시작 시 `ArgumentException`이 throw됩니다. 이 예외는 계층 구조의 동일한 수준에 있는 두 개 이상의 경로가 경로 이름을 공유하는 경우에도 throw됩니다.
 
 #### <a name="register-page-routes"></a>페이지 경로 등록
 
@@ -123,7 +123,7 @@ Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 이 예제에서는 `monkeys` 경로에 대한 페이지에서 `details` 경로로 이동하면 `MonkeyDetailPage`가 표시되는 상황별 페이지 탐색을 사용하도록 설정합니다. 마찬가지로, `elephants` 경로에 대한 페이지에서 `details` 경로로 이동하면 `ElephantDetailPage`가 표시됩니다.
 
 > [!IMPORTANT]
-> 현재는 이전 등록을 덮어쓰는 중복 등록과 함께 `Routing.RegisterRoute` 메서드를 사용할 때 중복 경로 이름이 허용됩니다.
+> `Routing.RegisterRoute` 메서드가 둘 이상의 다른 형식에 대한 동일한 경로를 등록하려고 시도하면 `ArgumentException`이 throw됩니다.
 
 ## <a name="perform-navigation"></a>탐색 수행
 

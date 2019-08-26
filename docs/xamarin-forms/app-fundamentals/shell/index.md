@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
-ms.openlocfilehash: a988a99e20af76d071f55c4cd2c97b135ad077f8
-ms.sourcegitcommit: 10b4ccbfcf182be940899c00fc0fecae1e199c5b
+ms.openlocfilehash: 20ac6ad748e7056f7f8037a73a95de66b9eae3b6
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66252284"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69888916"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -43,6 +43,10 @@ Xamarin.Forms Shell 애플리케이션을 만들기 위한 프로세스는 `Shel
 ## <a name="searchsearchmd"></a>[검색](search.md)
 
 셸 애플리케이션은 각 페이지 위쪽에 추가될 수 있는 검색 상자에 제공되는 통합 검색 기능을 사용할 수 있습니다.
+
+## <a name="lifecyclelifecyclemd"></a>[수명 주기](lifecycle.md)
+
+셸 애플리케이션은 Xamarin.Forms 수명 주기를 기준으로 하며, `Appearing` 이벤트는 페이지가 화면에 표시되려고 할 때 발생하고, `Disappearing` 이벤트는 페이지가 화면에서 사라지려고 할 때 발생합니다.
 
 ## <a name="custom-rendererscustomrenderersmd"></a>[사용자 지정 렌더러](customrenderers.md)
 

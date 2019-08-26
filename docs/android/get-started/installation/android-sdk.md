@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 3be28815441b65df101ac9722a665e01503e1b5c
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 54b57097c7742cb5c09f97b40c68c72b6f9c3bf1
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386215"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525109"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
@@ -41,11 +41,11 @@ Xamarin Android SDK Manager를 사용하려면 다음이 필요합니다.
 
 Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치되는) Java Development Kit도 필요합니다. 여러 가지 JDK 대안 중에서 선택할 수 있습니다.
 
--   기본적으로 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함).
+- 기본적으로 Xamarin.Android는 API 레벨 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 레벨 24 미만도 지원함).
 
--   API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
+- API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
--   Visual Studio 15.8 미리 보기 5 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 모바일 OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
+- Visual Studio 15.8 미리 보기 5 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 Mobile OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.
@@ -134,15 +134,15 @@ Google 리포지토리를 선택하면 추가 패키지가 이전에 지원되�
 
 Xamarin Android SDK Manager를 사용하려면 다음이 필요합니다.
 
--   Mac용 Visual Studio 7.5 이상
+- Mac용 Visual Studio 7.5 이상
 
 Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치되는) Java Development Kit도 필요합니다. 여러 가지 JDK 대안 중에서 선택할 수 있습니다.
 
--   기본적으로 Xamarin.Android는 API 수준 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 24 미만도 지원함).
+- 기본적으로 Xamarin.Android는 API 레벨 24 이상을 대상으로 개발하는 경우에 필요한 [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)을 사용합니다(JDK 8은 API 레벨 24 미만도 지원함).
 
--   API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
+- API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
--   Mac용 Visual Studio 7.7 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 모바일 OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
+- Mac용 Visual Studio 7.7 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 Mobile OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.

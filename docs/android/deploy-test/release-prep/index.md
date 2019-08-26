@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 605db1c2e0dc0cf41288f9d6c9252582ce91d525
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 4ddae1ae4f49c01220b2f5ce78dc19122b3015a0
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58071072"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525282"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -19,19 +19,19 @@ ms.locfileid: "58071072"
 
 다음 단계를 통해 릴리스용 앱을 빌드합니다.
 
--   **[애플리케이션 아이콘 지정](#Specify_the_Application_Icon)**&ndash; 각각의 Xamarin.Android 애플리케이션에는 지정된 애플리케이션 아이콘이 있어야 합니다. 기술적으로 필요하지는 않지만 Google Play와 같은 일부 마켓에서 필요합니다.
+- **[애플리케이션 아이콘 지정](#Specify_the_Application_Icon)** &ndash; 각각의 Xamarin.Android 애플리케이션에는 지정된 애플리케이션 아이콘이 있어야 합니다. 기술적으로 필요하지는 않지만 Google Play와 같은 일부 마켓에서 필요합니다.
 
--   **[애플리케이션 버전 지정](#Versioning)**&ndash; 이 단계에서는 버전 정보를 초기화하거나 업데이트합니다. 이것은 향후 애플리케이션 업데이트와, 사용자가 설치한 애플리케이션 버전을 인지하도록 하기 위해 중요합니다.
+- **[애플리케이션 버전 지정](#Versioning)** &ndash; 이 단계에서는 버전 정보를 초기화하거나 업데이트합니다. 이것은 향후 애플리케이션 업데이트와, 사용자가 설치한 애플리케이션 버전을 인지하도록 하기 위해 중요합니다.
 
--   **[APK 축소](#shrink_apk)** &ndash; 관리 코드에서 Xamarin.Android 링커나 Java 바이트코드에서 ProGuard를 사용하여 최종 APK의 크기를 상당히 줄일 수 있습니다.
+- **[APK 축소](#shrink_apk)** &ndash; 관리 코드에서 Xamarin.Android 링커나 Java 바이트코드에서 ProGuard를 사용하여 최종 APK의 크기를 상당히 줄일 수 있습니다.
 
--   **[애플리케이션 보호](#protect_app)**&ndash; 디버깅을 사용하지 못하게 하고, 관리 코드를 난독 처리하고, 디버그 방지 및 변조 방지를 추가하며 네이티브 컴파일을 사용하여 사용자나 공격자가 애플리케이션을 디버깅, 변조 또는 리버스 엔지니어링하지 못하게 합니다. 
+- **[애플리케이션 보호](#protect_app)** &ndash; 디버깅을 사용하지 못하게 하고, 관리 코드를 난독 처리하고, 디버그 방지 및 변조 방지를 추가하며 네이티브 컴파일을 사용하여 사용자나 공격자가 애플리케이션을 디버그, 변조 또는 리버스 엔지니어링하지 못하게 합니다.
 
--   **[패키지 속성 설정](#Set_Packaging_Properties)**&ndash; 패키지 속성은 Android 애플리케이션 패키지(APK)의 생성을 제어합니다. 이 단계에서는 APK를 최적화하고 그 자산을 보호하며 필요에 맞게 패키지를 모듈화합니다.
+- **[패키지 속성 설정](#Set_Packaging_Properties)** &ndash; 패키지 속성은 Android 애플리케이션 패키지(APK)의 생성을 제어합니다. 이 단계에서는 APK를 최적화하고 그 자산을 보호하며 필요에 맞게 패키지를 모듈화합니다.
 
--   **[컴파일](#Compile)** &ndash; 이 단계에서는 코드와 자산을 컴파일하여 릴리스 모드에서의 빌드를 확인합니다.
+- **[컴파일](#Compile)** &ndash; 이 단계에서는 코드와 자산을 컴파일하여 릴리스 모드에서 빌드되는지 확인합니다.
 
--   **[게시를 위한 보관](#archive)** &ndash; 이 단게에서는 앱을 빌드하여 서명 및 게시를 위해 보관합니다.
+- **[게시를 위한 보관](#archive)** &ndash; 이 단계에서는 앱을 빌드하여 서명 및 게시를 위해 보관합니다.
 
 이러한 각 단계는 아래에서 자세히 설명합니다.
 
@@ -55,7 +55,7 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 -----
 
-이러한 예제에서 `@drawable/icon`은 **Resources/drawable/icon.png**(**.png** 확장명이 리소스 이름에 포함되지 않음)에 있는 아이콘 파일을 참조합니다. 이 특성은 이 샘플 코드 조각에서처럼 **Properties\AssemblyInfo.cs** 파일에서 선언할 수도 있습니다.
+이러한 예제에서 `@drawable/icon`은 **Resources/drawable/icon.png**( **.png** 확장명이 리소스 이름에 포함되지 않음)에 있는 아이콘 파일을 참조합니다. 이 특성은 이 샘플 코드 조각에서처럼 **Properties\AssemblyInfo.cs** 파일에서 선언할 수도 있습니다.
 
 ```csharp
 [assembly: Application(Icon = "@drawable/icon")]
@@ -69,9 +69,9 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 버전 작업은 Android 애플리케이션 유지 관리와 배포를 위해 중요합니다. 일종의 버전 작업이 없으면 애플리케이션이 업데이트되어야 하는지 여부를 판단하기가 어렵습니다. 버전 작업을 지원하기 위해 Android는 두 가지 유형의 정보를 인식합니다. 
 
--   **버전 번호**&ndash; 애플리케이션의 버전을 나타내는 정수값(Android 및 애플리케이션에서 내부적으로 사용)입니다. 대부분의 애플리케이션은 이 값을 1로 설정한 다음 빌드마다 커집니다. 이 값은 버전 이름 특성과의 관련이나 선호 관계가 없습니다(아래 참조). 애플리케이션 및 게시 서비스는 이 값을 사용자에게 표시해서는 안 됩니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionCode`로 저장됩니다. 
+- **버전 번호**&ndash; 애플리케이션의 버전을 나타내는 정수값(Android 및 애플리케이션에서 내부적으로 사용)입니다. 대부분의 애플리케이션은 이 값을 1로 설정한 다음 빌드마다 커집니다. 이 값은 버전 이름 특성과의 관련이나 선호 관계가 없습니다(아래 참조). 애플리케이션 및 게시 서비스는 이 값을 사용자에게 표시해서는 안 됩니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionCode`로 저장됩니다. 
 
--   **버전 이름**&ndash; 애플리케이션 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 장치에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 디바이스에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
+- **버전 이름**&ndash; 애플리케이션 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 디바이스에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 디바이스에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -98,9 +98,9 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 릴리스 모드는 공유 런타임을 해제하고 연결을 실행하여 애플리케이션이 런타임 시 필요한 Xamarin.Android 부분만 탑재할 수 있게 합니다. Xamarin.Android의 *링커*는 정적 분석을 사용하여 Xamarin.Android 애플리케이션에서 사용하거나 참조하는 어셈블리, 형식 및 형식 번호를 결정합니다. 그런 다음 링커는 사용되지 않는(또는 참조되지 않는) 모든 어셈블리, 형식 및 멤버를 버립니다. 이렇게 해서 패키지 크기를 상당히 줄일 수 있습니다. 예를 들어 [HelloWorld](~/android/deploy-test/linker.md) 샘플에서는 최종 APK 크기가 83% 줄었습니다. 
 
--   구성: None &ndash; Xamarin.Android 4.2.5 Size = 17.4 MB.
+- 구성: None &ndash; Xamarin.Android 4.2.5 Size = 17.4 MB.
 
--   구성: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
+- 구성: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -110,12 +110,12 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 **연결** 풀다운 메뉴는 링커 제어를 위한 다음 옵션을 제공합니다.
 
--   **없음** &ndash; 링커가 해제되고 연결이 수행되지 않습니다.
+- **없음** &ndash; 링커가 꺼지고 연결이 수행되지 않습니다.
 
--   **SDK 어셈블리만** &ndash; [Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 
+- **SDK 어셈블리만** &ndash; [Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 
     다른 어셈블리는 연결되지 않습니다.
 
--   **Sdk 및 사용자 어셈블리**&ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
+- **SDK 및 사용자 어셈블리**&ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -125,15 +125,15 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 링커 제어를 위한 옵션은 다음과 같습니다.
 
--   **연결 안 함** &ndash; 링커가 해제되고 연결이 수행되지 않습니다.
+- **연결 안 함** &ndash; 링커가 꺼지고 연결이 수행되지 않습니다.
 
--   **SDK 어셈블리만 연결** &ndash; [Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 다른 어셈블리는 연결되지 않습니다.
+- **SDK 어셈블리만 연결** &ndash; [Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 다른 어셈블리는 연결되지 않습니다.
 
--   **모든 어셈블리**&ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
+- **모든 어셈블리 연결** &ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
 
 -----
 
-연결에는 의도치 않은 부작용이 있을 수 있으므로 물리적 장치의 릴리스 모드에서 애플리케이션을 다시 테스트하는 것이 중요합니다.
+연결에는 의도치 않은 부작용이 있을 수 있으므로 물리적 디바이스의 릴리스 모드에서 애플리케이션을 다시 테스트하는 것이 중요합니다.
 
 ### <a name="proguard"></a>ProGuard
 
@@ -141,7 +141,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android 링커는 *관리* 코드를 연결하고 ProGuard는 Java 바이트 코드를 연결합니다. 빌드 프로세스에서는 먼저 Xamarin.Android 링커를 사용하여 관리 코드(C#) 수준에서 앱을 최적화한 다음 ProGuard(사용하도록 설정된 경우)를 사용하여 Java 바이트 코드 수준에서 APK를 최적화합니다. 
 
-**ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다.  
+**ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다. 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -165,7 +165,7 @@ ProGuard 도구 사용에 대한 자세한 정보는 [ProGuard](~/android/deploy
 
 ### <a name="disable-debugging"></a>디버깅 사용 안 함
 
-Android 애플리케이션 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 애플리케이션의 디버그 빌드에 대해 기본적으로 켜져 있습니다.  JDWP는 개발 중에 중요하지만 릴리스된 애플리케이션에는 보안 문제를 야기할 수 있습니다. 
+Android 애플리케이션 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 애플리케이션의 디버그 빌드에 대해 기본적으로 켜져 있습니다. JDWP는 개발 중에 중요하지만 릴리스된 애플리케이션에는 보안 문제를 야기할 수 있습니다. 
 
 > [!IMPORTANT]
 > 디버그 상태를 사용하지 않게 설정하지 않은 경우 Java 프로세스에 완전히 액세스할 수 있고 애플리케이션의 컨텍스트에서 임의 코드를 실행할 수 있으므로(JDWP를 통해 가능) 릴리스된 애플리케이션에서는 디버그 상태를 항상 사용하지 않게 설정합니다.
@@ -363,10 +363,10 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 여기에서는 배포 채널을 선택할 수 있습니다.
 
--   **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있게 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, &ldquo;임시&rdquo; 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
+- **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있게 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, &ldquo;임시&rdquo; 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
 
 
--   **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다.
+- **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다.
     계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.
 
 -----

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: a79dcf14ddefd13d17e218602030a6467a3f1448
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643835"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69525425"
 ---
 # <a name="linking-on-android"></a>Android의 연결
 
@@ -55,9 +55,9 @@ public class MyActivity {
 
 링커 제어의 기본 메커니즘은 **프로젝트 옵션** 대화 상자 내 **링커 동작**(Visual Studio의 *연결*) 드롭다운입니다. 여기에는 세 가지 옵션이 있습니다.
 
-1.  **연결하지 않음**(Visual Studio의 *없음*)
-1.  **SDK 어셈블리 연결**(*SDK 어셈블리만*)
-1.  **모든 어셈블리 연결**(*SDK 및 사용자 어셈블리*)
+1. **연결하지 않음**(Visual Studio의 *없음*)
+1. **SDK 어셈블리 연결**(*SDK 어셈블리만*)
+1. **모든 어셈블리 연결**(*SDK 및 사용자 어셈블리*)
 
 
 **연결하지 않음** 옵션은 링커를 해제합니다. 위의 "연결 없이 릴리스" 애플리케이션 크기 예제에서는 이 동작을 사용했습니다. 이는 런타임 오류를 해결할 때 링커가 원인인지 파악하는 데 유용합니다. 이 설정은 일반적으로 프로덕션 빌드에 권장되지 않습니다.
@@ -92,11 +92,11 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 링커는 사용자가 유지하려는 코드를 제거하는 경우가 있습니다. 예:
 
--   `System.Reflection.MemberInfo.Invoke`를 통해 동적으로 호출하는 코드가 있을 수 있습니다.
+- `System.Reflection.MemberInfo.Invoke`를 통해 동적으로 호출하는 코드가 있을 수 있습니다.
 
--   형식을 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지하는 것이 좋습니다.
+- 형식을 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지하는 것이 좋습니다.
 
--   XML 직렬화를 사용하는 경우에 형식의 속성을 유지하는 것이 좋습니다.
+- XML serialization을 사용하는 경우 형식의 속성을 유지하는 것이 좋습니다.
 
 이러한 경우 [Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute) 특성을 사용할 수 있습니다. 애플리케이션에 의해 정적으로 연결되지 않은 모든 멤버는 제거될 수 있으므로, 이 특성을 사용하여 정적으로 참조되지 않았지만 여전히 애플리케이션에 필요한 멤버를 표시할 수 있습니다. 형식의 모든 멤버 또는 형식 자체에 이 특성을 적용할 수 있습니다.
 
@@ -198,27 +198,27 @@ class MyActivity {
 
 어셈블리가 연결되면 모든 멤버에서 다음 사용자 지정 특성 형식이 제거됩니다.
 
--  System.ObsoleteAttribute
--  System.MonoDocumentationNoteAttribute
--  System.MonoExtensionAttribute
--  System.MonoInternalNoteAttribute
--  System.MonoLimitationAttribute
--  System.MonoNotSupportedAttribute
--  System.MonoTODOAttribute
--  System.Xml.MonoFIXAttribute
+- System.ObsoleteAttribute
+- System.MonoDocumentationNoteAttribute
+- System.MonoExtensionAttribute
+- System.MonoInternalNoteAttribute
+- System.MonoLimitationAttribute
+- System.MonoNotSupportedAttribute
+- System.MonoTODOAttribute
+- System.Xml.MonoFIXAttribute
 
 
 어셈블리가 연결되면 릴리스 빌드의 모든 멤버에서 다음 사용자 지정 특성 형식이 제거됩니다.
 
--  System.Diagnostics.DebuggableAttribute
--  System.Diagnostics.DebuggerBrowsableAttribute
--  System.Diagnostics.DebuggerDisplayAttribute
--  System.Diagnostics.DebuggerHiddenAttribute
--  System.Diagnostics.DebuggerNonUserCodeAttribute
--  System.Diagnostics.DebuggerStepperBoundaryAttribute
--  System.Diagnostics.DebuggerStepThroughAttribute
--  System.Diagnostics.DebuggerTypeProxyAttribute
--  System.Diagnostics.DebuggerVisualizerAttribute
+- System.Diagnostics.DebuggableAttribute
+- System.Diagnostics.DebuggerBrowsableAttribute
+- System.Diagnostics.DebuggerDisplayAttribute
+- System.Diagnostics.DebuggerHiddenAttribute
+- System.Diagnostics.DebuggerNonUserCodeAttribute
+- System.Diagnostics.DebuggerStepperBoundaryAttribute
+- System.Diagnostics.DebuggerStepThroughAttribute
+- System.Diagnostics.DebuggerTypeProxyAttribute
+- System.Diagnostics.DebuggerVisualizerAttribute
 
 
 ## <a name="related-links"></a>관련 링크

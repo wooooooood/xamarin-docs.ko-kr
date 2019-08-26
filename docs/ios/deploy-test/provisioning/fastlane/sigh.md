@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 88cc4899956b03d7236d7aa5c2bd30a5f6880507
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bb2fd504cccb7aa81831288762ba623824e52554
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119516"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69526516"
 ---
 # <a name="fastlane-for-ios-sigh"></a>iOS용 fastlane – sigh
 
@@ -29,13 +29,13 @@ ms.locfileid: "50119516"
 - 프로비전 프로필 만들기
 - 프로필 및 인증서 다운로드
 
-간 단계에는 개발하는 응용 프로그램 유형에 따라 처리해야 하는 변수가 있습니다. 수동으로 또는 Xcode를 통해 개발용 디바이스를 설정하는 데 필요한 단계에 대한 자세한 내용은 [디바이스 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
+간 단계에는 개발하는 애플리케이션 유형에 따라 처리해야 하는 변수가 있습니다. 수동으로 또는 Xcode를 통해 개발용 디바이스를 설정하는 데 필요한 단계에 대한 자세한 내용은 [디바이스 프로비저닝](~/ios/get-started/installation/device-provisioning/index.md) 가이드를 참조하세요.
 
 이 가이드에서는 Xcode를 사용하는 대신 fastlane 도구를 소개하고 다음 내용을 설명합니다.
 
 - [sigh란?](#whatissigh)
 - [앱 ID 만들기](#appid)
-- [새 장치 추가](#newdevices)
+- [새 디바이스 추가](#newdevices)
 - [sigh 사용](#using)
 - [추가 옵션](#options)
 
@@ -50,7 +50,7 @@ fastlane 설치 및 업데이트에 대한 자세한 내용은 [fastlane](~/ios/
 
 ## <a name="what-is-sigh"></a>sigh란?
 
-sigh는 개발, 앱 스토어 배포, 임시 배포 및 엔터프라이즈 배포와 같은 모든 구성에 대한 프로비전 프로필을 생성하고 갱신할 수 있는 터미널 인터페이스를 제공합니다. 또한 프로비전 프로필을 다운로드하고 복구하는 간단한 방법을 제공합니다.
+sigh는 개발, App Store 배포, 임시 배포 및 엔터프라이즈 배포와 같은 모든 구성의 프로비저닝 프로필을 생성하고 갱신할 수 있는 터미널 인터페이스를 제공합니다. 또한 프로비전 프로필을 다운로드하고 복구하는 간단한 방법을 제공합니다.
 
 <a name="appid" />
 
@@ -58,11 +58,13 @@ sigh는 개발, 앱 스토어 배포, 임시 배포 및 엔터프라이즈 배�
 
 앱 ID는 다음 명령으로 만들 수 있습니다.
 
-    fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
+fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
 
-`com.company.appname`은 앱의 번들 ID이며 아래 그림과 같이 Xamarin.iOS 응용 프로그램의 Info.plist 파일에서 찾을 수 있습니다.
+`com.company.appname`은 앱의 번들 ID이며 아래 그림과 같이 Xamarin.iOS 애플리케이션의 Info.plist 파일에서 찾을 수 있습니다.
 
-[![](sigh-images/fastlane-image5.png "Xamarin.iOS 응용 프로그램의 Info.plist 파일")](sigh-images/fastlane-image5.png#lightbox)
+[![](sigh-images/fastlane-image5.png "Xamarin.iOS 애플리케이션의 Info.plist 파일")](sigh-images/fastlane-image5.png#lightbox)
 
 고유한 앱 ID는 역방향 DNS 스타일 문자열이어야 합니다. ID를 만든 후에는 ID를 메모해 두었다가 이 가이드의 뒷부분 나오는 sigh를 사용할 때 사용해야 합니다.
 

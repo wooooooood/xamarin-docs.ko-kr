@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: 9f2aecf1bcac8f9603db40e3562f49123e924bfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 07/19/2019
+ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
+ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739295"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889192"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
@@ -130,6 +130,32 @@ Shell.Current.FlyoutIsPresented = false;
     ...
 </Shell>
 ```
+
+## <a name="flyout-background-image"></a>플라이아웃 배경 이미지
+
+플라이아웃은 플라이아웃 헤더 바로 아래, 플라이아웃 항목과 메뉴 항목 뒤에 표시되는 선택적 배경 이미지를 포함할 수 있습니다. [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식의 `FlyoutBackgroundImage` 바인딩 가능 속성을 파일, 포함 리소스, URI 또는 스트림으로 설정하여 배경 이미지를 지정할 수 있습니다.
+
+[`Aspect`](xref:Xamarin.Forms.Aspect) 형식의 `FlyoutBackgroundImageAspect` 바인딩 가능 속성을 `Aspect` 열거형 멤버 중 하나로 설정하여 배경 이미지의 가로 세로 비율을 구성할 수 있습니다.
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - 이미지가 가로 세로 비율을 유지하면서 표시 영역을 채우도록 이미지를 자릅니다.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - 이미지가 표시 영역에 맞춰지도록, 필요에 따라 이미지의 너비 또는 높이를 기준으로 위쪽/아래쪽 또는 측면에 공백을 추가하여 이미지 레터박스를 지정합니다.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) - 완전히 정확하게 표시 영역을 채우도록 이미지를 늘립니다. 이로 인해 이미지가 왜곡될 수 있습니다.
+
+기본적으로 `FlyoutBackgroundImageAspect` 속성은 `AspectFit`로 설정됩니다.
+
+다음 예제에서는 이러한 속성을 설정하는 방법을 보여 줍니다.
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+이 설정에 따라 배경 이미지가 플라이아웃에 표시됩니다.
+
+![플라이아웃 배경 이미지 스크린샷](flyout-images/flyout-backgroundimage.png "플라이아웃 배경 이미지")
 
 ## <a name="flyout-items"></a>플라이아웃 항목
 

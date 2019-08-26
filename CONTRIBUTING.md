@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: afb4da5e424fd86a386b85d8b64bd2a126af6add
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194933"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69521110"
 ---
 # <a name="contributing"></a>참여
 
@@ -45,15 +45,17 @@ Xamarin 설명서에 기여하는 데 관심을 가져주셔서 감사합니다!
 
 새 항목인 경우 [템플릿 파일](../contributing-guidelines/template.md)을 시작점으로 사용할 수 있습니다. 작성 지침을 포함하고 작성자 정보 등의 각 문서에 필요한 메타데이터도 설명합니다.
 
-이미지 및 다른 정적 리소스의 경우 **<mypage>-images**라는 하위 폴더에 추가합니다. 콘텐츠에 대한 새 폴더를 만드는 경우 새 폴더에 이미지 폴더를 추가합니다.
+이미지 및 다른 정적 리소스의 경우 **\<mypage>-images**라는 하위 폴더에 추가합니다. 콘텐츠에 대한 새 폴더를 만드는 경우 새 폴더에 이미지 폴더를 추가합니다.
 
 #### <a name="example-structure"></a>예제 구조
 
-    docs
-      /android
-          mypage.md
-          /mypage-images
-              some-image.png
+```
+docs
+    /android
+        mypage.md
+        /mypage-images
+            some-image.png
+```
 
 적절한 Markdown 구문을 수행해야 합니다. 자세한 내용은 [스타일 가이드](../contributing-guidelines/template.md)를 참조하세요.
 
@@ -63,7 +65,7 @@ Xamarin 팀은 PR을 검토하고 승인하기 위해 변경 내용이 적합하
 
 그런 다음, 피드백이 적용되고 변경 내용이 적합하면 유지 관리자는 PR을 병합합니다.
 
-특정 주기에서는 모든 커밋을 마스터 분기에서 라이브 사이트로 푸시한 다음, https://docs.microsoft.com/xamarin/에서 참여도를 확인할 수 있습니다.
+특정 주기에서는 모든 커밋을 마스터 분기에서 라이브 사이트로 푸시한 다음, https://docs.microsoft.com/xamarin/ 에서 참여도를 확인할 수 있습니다.
 
 ## <a name="dos-and-donts"></a>권고 및 금지
 

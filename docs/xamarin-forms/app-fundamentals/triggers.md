@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: b803c1ccfbd8bae008a763f8a31283b653ae4cf3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652159"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629618"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -111,7 +111,8 @@ ms.locfileid: "68652159"
 </Button>
 ```
 
-팁: `Path=Text.Length`를 평가할 때 항상 대상 속성(예:`Text=""`)에 기본값을 제공합니다. 그렇지 않으면 `null`이 되고 트리거가 예상대로 작동하지 않기 때문입니다.
+> [!TIP]
+> `Path=Text.Length`를 평가할 때 항상 대상 속성(예:`Text=""`)에 기본값을 제공합니다. 그렇지 않으면 `null`이 되고 트리거가 예상대로 작동하지 않기 때문입니다.
 
 `Setter`를 지정하는 것 외에도 [`EnterActions` 및 `ExitActions`](#enterexit)도 제공할 수 있습니다.
 

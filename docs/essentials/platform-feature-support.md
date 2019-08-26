@@ -5,12 +5,12 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/10/2019
-ms.openlocfilehash: 8bdd5c0d40cfdac0dadbc6bab1c538ab1b27946e
-ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
+ms.openlocfilehash: 2dadc9effb2433467609338d4654e784fe8b085e
+ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68386173"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629586"
 ---
 # <a name="platform-support"></a>플랫폼 지원
 
@@ -25,11 +25,10 @@ Xamarin.Essentials는 다음 플랫폼 및 운영 체제를 지원합니다.
 | watchOS | 4.0 이상 |
 | UWP | 10.0.16299.0 이상 |
 
-**참고:**
-
-* Tizen은 Samsung 개발 팀에서 공식적으로 지원합니다.
-* tvOS 및 watchOS의 API 범위는 제한되어 있습니다. 자세한 내용은 기능 가이드를 참조하세요.
-* Tizen, tvOS 및 watchOS는 현재 미리 보기로 제공되며 Xamarin.Essentials 1.3-pre에서 사용할 수 있습니다.
+> [!NOTE]
+> * Tizen은 Samsung 개발 팀에서 공식적으로 지원합니다.
+> * tvOS 및 watchOS의 API 범위는 제한되어 있습니다. 자세한 내용은 기능 가이드를 참조하세요.
+> * Tizen, tvOS 및 watchOS는 현재 미리 보기로 제공되며 Xamarin.Essentials 1.3-pre에서 사용할 수 있습니다.
 
 ## <a name="feature-support"></a>기능 지원
 
@@ -39,7 +38,7 @@ Xamarin.Essentials는 항상 모든 플랫폼에 기능을 가져오려고 하�
 
 * ✔ - 완전히 지원됨
 * ⚠ - 제한적으로 지원됨
-* - 지원되지 않음
+* ❌ - 지원되지 않음
 
 | 기능 | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
