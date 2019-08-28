@@ -122,7 +122,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
 
      ![Mac에서 키 집합을 사용하여 CSR 만들기](apple-pay-capabilities-images/image46.png)
 
-6. 이메일 주소를 입력하고, 개인 키의 이름을 입력하고, CA Email Address(CA 이메일 주소)를 비워두고, **디스크에 저장** 옵션과 **Let me specify key pair information**(키 쌍 정보 직접 지정)을 차례로 선택합니다.
+6. 이메일 주소를 입력하고, 프라이빗 키의 이름을 입력하고, CA Email Address(CA 이메일 주소)를 비워두고, **디스크에 저장** 옵션과 **Let me specify key pair information**(키 쌍 정보 직접 지정)을 차례로 선택합니다.
 
      ![인증서 정보 대화 상자](apple-pay-capabilities-images/image47.png)
 

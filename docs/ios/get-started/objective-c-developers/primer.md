@@ -117,7 +117,7 @@ public string Address {
 
 ### <a name="static-keyword"></a>Static 키워드
 
-*static* 키워드의 의미는 Objective-C와 C#에서 매우 다릅니다. Objective-C에서 정적 함수는 함수의 범위를 현재 파일로 제한하는 데 사용됩니다. 하지만 C#에서는 *공용*, *개인* 및 *내부* 키워드를 통해 범위가 유지됩니다.
+*static* 키워드의 의미는 Objective-C와 C#에서 매우 다릅니다. Objective-C에서 정적 함수는 함수의 범위를 현재 파일로 제한하는 데 사용됩니다. 하지만 C#에서는 *퍼블릭*, *퍼블릭* 및 *내부* 키워드를 통해 범위가 유지됩니다.
 
 Objective-C의 변수에 static 키워드가 적용되면 변수는 함수 호출에서 해당 값을 유지합니다.
 

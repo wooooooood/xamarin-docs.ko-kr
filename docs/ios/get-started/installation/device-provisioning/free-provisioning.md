@@ -21,7 +21,7 @@ ms.locfileid: "58855070"
 
 무료 프로비전을 사용하여 디바이스에 앱을 배포하려면:
 
-- Xcode를 사용하여 필요한 *서명 ID*(개발자 인증서 및 개인 키) 및 *프로비전 프로필*(명시적 앱 ID 및 연결된 iOS 디바이스의 UDID 포함)을 만듭니다.
+- Xcode를 사용하여 필요한 *서명 ID*(개발자 인증서 및 프라이빗 키) 및 *프로비전 프로필*(명시적 앱 ID 및 연결된 iOS 디바이스의 UDID 포함)을 만듭니다.
 - Mac용 Visual Studio 및 Visual Studio 2019에서 Xcode로 만든 서명 ID 및 프로비전 프로필을 사용하여 Xamarin.iOS 애플리케이션을 배포합니다.
 
 > [!IMPORTANT]

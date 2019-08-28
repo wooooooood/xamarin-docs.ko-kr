@@ -105,7 +105,7 @@ cert와 sigh는 서명 인증서를 만들고 관리하며 로컬 컴퓨터에 �
 
 ## <a name="using-fastlane-tools-with-xamarin"></a>Xamarin과 함께 fastlane 도구 사용하기
 
-fastlane을 사용하여 서명 ID와 프로비전 프로필을 만들었다면 Mac용 Visual Studio에서 번들 서명 옵션을 설정하는 일은 인증서와 개인 키가 macOS 키 집합에 있고 프로비전 프로필이 폴더 `~/Library/MobileDevice/Provisioning Profiles`에 있는 경우 간단합니다.
+fastlane을 사용하여 서명 ID와 프로비전 프로필을 만들었다면 Mac용 Visual Studio에서 번들 서명 옵션을 설정하는 일은 인증서와 프라이빗 키가 macOS 키 집합에 있고 프로비전 프로필이 폴더 `~/Library/MobileDevice/Provisioning Profiles`에 있는 경우 간단합니다.
 
 Xamarin.iOS 애플리케이션에 대한 코드 서명 옵션을 설정하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션 &gt; 빌드 &gt; iOS 번들 서명**을 선택하고 아래에 설명했듯이 서명 ID와 프로비전 프로필을 명시적으로 설정합니다.
 

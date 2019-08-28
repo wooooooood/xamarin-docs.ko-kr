@@ -95,7 +95,7 @@ fastlane match development
 
 [![](match-images/fastlane-image9.png "Git 리포지토리의 프로젝트 구조")](match-images/fastlane-image9.png#lightbox)
 
-프로비전 프로필은 `~/Library/MobileDevice/Provisioning Profiles`에 설치됩니다. 인증서와 개인 키는 키 집합에 바로 설치됩니다.
+프로비전 프로필은 `~/Library/MobileDevice/Provisioning Profiles`에 설치됩니다. 인증서와 프라이빗 키는 키 집합에 바로 설치됩니다.
 
 <a name="using" />
 
