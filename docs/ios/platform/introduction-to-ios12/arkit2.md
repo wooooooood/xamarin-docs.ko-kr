@@ -7,21 +7,21 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 747eed60c40f7faee0ed7512d6db05116c81b50d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4af5e7ea9c1d744cd3b5ea5444312ba68bfcea11
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645743"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120444"
 ---
 # <a name="arkit-2-in-xamarinios"></a>Xamarin.ios의 ARKit 2
 
 IOS 11의 작년 출시 이후 ARKit가 상당히 발전 했습니다. 무엇 보다도 이제 수직 및 수평 비행기를 검색 하 여 실내 확대 현실 환경의 practicality을 크게 향상 시킬 수 있습니다. 또한 다음과 같은 새로운 기능이 있습니다.
 
-* 실제 이미지와 디지털 이미지 간의 접합으로 참조 이미지 및 개체 인식
-* 실제 조명을 시뮬레이트하는 새로운 조명 모드
-* AR 환경을 공유 하 고 유지 하는 기능
-* AR 콘텐츠를 저장 하는 데 선호 되는 새 파일 형식
+- 실제 이미지와 디지털 이미지 간의 접합으로 참조 이미지 및 개체 인식
+- 실제 조명을 시뮬레이트하는 새로운 조명 모드
+- AR 환경을 공유 하 고 유지 하는 기능
+- AR 콘텐츠를 저장 하는 데 선호 되는 새 파일 형식
 
 ## <a name="recognizing-reference-objects"></a>참조 개체 인식
 
@@ -31,11 +31,11 @@ ARKit 2의 한 가지 전시 기능은 참조 이미지 및 개체를 인식할 
 
 [3D 개체 검색 및 검색](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) 샘플은 다음을 보여 주는 [Apple 프로젝트](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) 의 포트입니다.
 
-* 개체를 사용 하 [`NSNotification`](xref:Foundation.NSNotification) 여 응용 프로그램 상태 관리
-* 사용자 지정 시각화
-* 복잡 한 제스처
-* 개체 검색
-* 저장[`ARReferenceObject`](xref:ARKit.ARReferenceObject)
+- 개체를 사용 하 [`NSNotification`](xref:Foundation.NSNotification) 여 응용 프로그램 상태 관리
+- 사용자 지정 시각화
+- 복잡 한 제스처
+- 개체 검색
+- 저장[`ARReferenceObject`](xref:ARKit.ARReferenceObject)
 
 참조 개체를 검색 하면 배터리를 사용 하 고 프로세서를 많이 사용 하 고 오래 된 장치에서 안정적인 추적을 구현 하는 데 문제가 있는 경우가 많습니다.
 
@@ -43,17 +43,17 @@ ARKit 2의 한 가지 전시 기능은 참조 이미지 및 개체를 인식할 
 
 이 응용 프로그램은 다음 상태를 전환 하는 상태 시스템을 사용 합니다.
 
-* `AppState.StartARSession`
-* `AppState.NotReady`
-* `AppState.Scanning`
-* `AppState.Testing`
+- `AppState.StartARSession`
+- `AppState.NotReady`
+- `AppState.Scanning`
+- `AppState.Testing`
 
 및에서는 다음과 같은 경우에 `AppState.Scanning`도 포함 된 상태 및 전환 집합을 사용 합니다.
 
-* `Scan.ScanState.Ready`
-* `Scan.ScanState.DefineBoundingBox`
-* `Scan.ScanState.Scanning`
-* `Scan.ScanState.AdjustingOrigin`
+- `Scan.ScanState.Ready`
+- `Scan.ScanState.DefineBoundingBox`
+- `Scan.ScanState.Scanning`
+- `Scan.ScanState.AdjustingOrigin`
 
 앱은에 [`NSNotificationCenter`](xref:Foundation.NSNotificationCenter) 상태 전환 알림을 게시 하 고 이러한 알림을 구독 하는 대응식 아키텍처를 사용 합니다. 설정은 `ViewController.cs`다음과 같습니다.
 
@@ -121,9 +121,9 @@ internal void EnterStateTesting()
 
 이 지점 클라우드는 개발자가 [`ARFrame.RawFeaturePoints`](xref:ARKit.ARFrame.RawFeaturePoints) 속성에서 사용할 수 있습니다. 지점 클라우드를 효율적으로 시각화 하는 것은 까다로운 문제입니다. 점을 반복 하 고 각 점에 대 한 새 SceneKit 노드를 만들고 배치 하면 프레임 비율이 종료 됩니다. 또는 비동기적으로 수행 되는 경우에는 지연 시간이 발생 합니다. 이 샘플에서는 세 부분으로 구성 된 전략을 통해 성능을 유지 합니다.
 
-* 안전 하지 않은 코드를 사용 하 여 데이터를 제자리에 고정 하 고 데이터를 원시 버퍼 (바이트)로 해석 합니다.
-* 해당 원시 버퍼를로 [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) 변환 하 고 "template" [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) 개체를 만듭니다.
-* 를 사용 하 여 원시 데이터와 템플릿을 빠르게 "중철"[`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
+- 안전 하지 않은 코드를 사용 하 여 데이터를 제자리에 고정 하 고 데이터를 원시 버퍼 (바이트)로 해석 합니다.
+- 해당 원시 버퍼를로 [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) 변환 하 고 "template" [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) 개체를 만듭니다.
+- 를 사용 하 여 원시 데이터와 템플릿을 빠르게 "중철"[`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
 
 ```csharp
 internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color, float size)
@@ -251,11 +251,11 @@ internal partial class ThresholdRotationGestureRecognizer : UIRotationGestureRec
 
 이제 혼합 현실 환경의 기반으로 다음 중 하나를 사용할 수 있습니다.
 
-* 장치만가 속도계 ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), iOS 11)
-* 얼굴 ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
-* 참조 이미지 ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), iOS 12)
-* 3d 개체 스캔 ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), iOS 12)
-* 시각적 관성 odometry ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration), iOS 12에서 향상 됨)
+- 장치만가 속도계 ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), iOS 11)
+- 얼굴 ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
+- 참조 이미지 ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), iOS 12)
+- 3d 개체 스캔 ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), iOS 12)
+- 시각적 관성 odometry ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration), iOS 12에서 향상 됨)
 
 `AROrientationTrackingConfiguration`[이 블로그 게시물 F# 및 샘플](https://github.com/lobrien/FSharp_Face_AR)에서 설명 하는는 장치 및 화면을 실제 환경에 연결 하지 않고도 장치의 움직임을 기준으로 디지털 개체만 배치 하므로 가장 제한적 이며 매우 제한적인 혼합 현실 환경을 제공 합니다.
 
@@ -284,8 +284,8 @@ configuration.TrackingImages = referenceImages;
 
 이 구성에는 다음과 같은 두 가지 흥미로운 측면이 있습니다.
 
-* 효율적 이며 잠재적으로 많은 수의 참조 이미지와 함께 사용할 수 있습니다.
-* 디지털 이미지는 이미지에 고정 되어 있습니다. 예를 들어 책의 덮개가 인식 되는 경우 책의 덮개가 인식 되 면 책을 추적 하 여 책을 추적 합니다.
+- 효율적 이며 잠재적으로 많은 수의 참조 이미지와 함께 사용할 수 있습니다.
+- 디지털 이미지는 이미지에 고정 되어 있습니다. 예를 들어 책의 덮개가 인식 되는 경우 책의 덮개가 인식 되 면 책을 추적 하 여 책을 추적 합니다.
 
 는 `ARObjectScanningConfiguration` [이전](#recognizing-reference-objects) 에 설명 되었으며 3d 개체를 검색 하기 위한 개발자 중심 구성입니다. 프로세서 및 배터리 집약적 이며 최종 사용자 응용 프로그램에서 사용 하면 안 됩니다. [3D 개체 검색 및 검색](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) 샘플에서는이 구성을 사용 하는 방법을 보여 줍니다.
 
@@ -299,8 +299,8 @@ ARKit 2는 캡처된 이미지를 사용 하 여 조명을 예측 하 고 빛나
 
 환경 질감를 사용 하려면 다음을 수행 합니다.
 
-* 개체가를 사용 [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) 하 고 및에 대해 [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) 0에서 1 사이의 값을 할당 해야 합니다. [`SCNMaterial`](xref:SceneKit.SCNMaterial)
-* 추적 구성에서 다음을 [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) 설정  =  [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) 해야 합니다.
+- 개체가를 사용 [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) 하 고 및에 대해 [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) 0에서 1 사이의 값을 할당 해야 합니다. [`SCNMaterial`](xref:SceneKit.SCNMaterial)
+- 추적 구성에서 다음을 [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) 설정  =  [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) 해야 합니다.
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);

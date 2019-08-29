@@ -7,12 +7,12 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 1977da75e430e72bee151814abc4502ee090b40c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521501"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119961"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그는 어디에서 확인할 수 있나요?
 
@@ -182,9 +182,9 @@ Finder에서 **이동 > 폴더로 이동** 메뉴 항목을 선택 하 고이 �
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />iOS 시뮬레이터 로그 (Mac)
 
-* 시스템 로그에 액세스 하려면 iOS 시뮬레이터 앱에서 **디버그 > 시스템 로그 열기** ...를 선택 합니다.
+- 시스템 로그에 액세스 하려면 iOS 시뮬레이터 앱에서 **디버그 > 시스템 로그 열기** ...를 선택 합니다.
 
-* 시뮬레이터에서 충돌 보고서를 보려면 Console. 앱을 열고로 `~/Library/Logs > DiagnosticReports`이동 합니다.
+- 시뮬레이터에서 충돌 보고서를 보려면 Console. 앱을 열고로 `~/Library/Logs > DiagnosticReports`이동 합니다.
 
 ### <a name="a-idios-device-logs-nameios-device-logs-ios-device-logs-on-mac"></a><a id="ios-device-logs" name="ios-device-logs" />iOS 장치 로그 (Mac의 경우)
 

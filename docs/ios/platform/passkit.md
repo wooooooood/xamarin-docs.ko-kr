@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
-ms.openlocfilehash: 9f8a092b63da413974f387aca02d81efef9c1625
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c434c39c12403bfc61e146041eb2a0780f29eb3e
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528326"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119179"
 ---
 # <a name="passkit-in-xamarinios"></a>Xamarin.ios의 PassKit
 
@@ -326,9 +326,9 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 
 패스는 다음과 같은 방법으로 작은에 추가할 수 있습니다.
 
-* **앱** 을 직접 조작 하지 않는 앱-패스 파일을 로드 하 고 사용자에 게 작은 사용자에 게 추가 하는 옵션을 제공 합니다. 
+- **앱** 을 직접 조작 하지 않는 앱-패스 파일을 로드 하 고 사용자에 게 작은 사용자에 게 추가 하는 옵션을 제공 합니다. 
 
-* **동반 앱** -공급자가 전달 된 앱을 배포 하 고 탐색 하거나 편집 하기 위한 추가 기능을 제공 합니다. Xamarin.ios 응용 프로그램은 PassKit API에 대 한 완전 한 액세스 권한을 가지 며 패스를 만들고 조작 합니다. 그런 다음를 `PKAddPassesViewController`사용 하 여 작은에 게 패스를 추가할 수 있습니다. 이 프로세스는이 문서의 **자매 응용 프로그램** 섹션에서 자세히 설명 합니다.
+- **동반 앱** -공급자가 전달 된 앱을 배포 하 고 탐색 하거나 편집 하기 위한 추가 기능을 제공 합니다. Xamarin.ios 응용 프로그램은 PassKit API에 대 한 완전 한 액세스 권한을 가지 며 패스를 만들고 조작 합니다. 그런 다음를 `PKAddPassesViewController`사용 하 여 작은에 게 패스를 추가할 수 있습니다. 이 프로세스는이 문서의 **자매 응용 프로그램** 섹션에서 자세히 설명 합니다.
 
 ### <a name="conduit-applications"></a>응용 프로그램 통로
 

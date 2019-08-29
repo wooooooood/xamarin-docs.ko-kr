@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7dd3889e9fcbb2260165a96f32f56f437df15ade
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528842"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120737"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 보기 사용
 
@@ -61,16 +61,16 @@ TvOS 앱에서 `UIStackView` 를 사용 하는 경우 개발자는 iOS 디자이
 
 일반적으로이는 스택 뷰의 가장자리를 두 개 이상 고정 하 여 확장 및 축소 하 여 해당 위치를 정의 함을 의미 합니다. 추가 제약 조건이 없는 경우 스택 보기는 다음과 같이 모든 하위 뷰에 맞게 자동으로 크기가 조정 됩니다.
 
-* 크기는 모든 하위 `Axis` 뷰 크기와 각 하위 뷰 사이에 정의 된 공간을 더한 값이 됩니다.
-* `LayoutMarginsRelativeArrangement` 속성이이면스택보기크기에도`true`여백의 공간이 포함 됩니다.
-* 에 수직인 `Axis` 크기는 컬렉션에서 가장 큰 서브 집합으로 설정 됩니다.
+- 크기는 모든 하위 `Axis` 뷰 크기와 각 하위 뷰 사이에 정의 된 공간을 더한 값이 됩니다.
+- `LayoutMarginsRelativeArrangement` 속성이이면스택보기크기에도`true`여백의 공간이 포함 됩니다.
+- 에 수직인 `Axis` 크기는 컬렉션에서 가장 큰 서브 집합으로 설정 됩니다.
 
 또한 스택 뷰의 **높이** 및 **너비**에 대 한 제약 조건을 지정할 수 있습니다. 이 경우 하위 뷰는 `Distribution` 및 `Alignment` 속성에 의해 결정 되는 스택 뷰에 지정 된 공간을 채우도록 (크기 조정) 배치 됩니다.
 
 - 속성이 이면 하위 뷰는 Top, bottom 또는 * Center Y 위치를 사용 하는 대신 첫 번째 또는 마지막 하위 뷰의 기준선을 기준으로 배치 됩니다. `true` `BaselineRelativeArrangement` 이러한 항목은 스택 뷰의 콘텐츠에서 다음과 같이 계산 됩니다.
 
-* 세로 스택 뷰는 첫 번째 기준선에 대해 첫 번째 하위 뷰를 반환 하 고 마지막에는 마지막 하위 뷰를 반환 합니다. 이러한 하위 뷰 중 하나가 스택 보기 이면 첫 번째 또는 마지막 기준이 사용 됩니다.
-* 가로 스택 보기는 첫 번째 및 마지막 기준선 모두에 가장 긴 하위 뷰를 사용 합니다. 가장 긴 뷰도 스택 보기 이면 가장 긴 하위 뷰를 기준선으로 사용 합니다.
+- 세로 스택 뷰는 첫 번째 기준선에 대해 첫 번째 하위 뷰를 반환 하 고 마지막에는 마지막 하위 뷰를 반환 합니다. 이러한 하위 뷰 중 하나가 스택 보기 이면 첫 번째 또는 마지막 기준이 사용 됩니다.
+- 가로 스택 보기는 첫 번째 및 마지막 기준선 모두에 가장 긴 하위 뷰를 사용 합니다. 가장 긴 뷰도 스택 보기 이면 가장 긴 하위 뷰를 기준선으로 사용 합니다.
 
 > [!IMPORTANT]
 > 기준선 맞춤은 잘못 된 위치로 계산 되기 때문에 스트레치 되었거나 압축 된 하위 뷰 크기에서는 작동 하지 않습니다. 기준선 맞춤의 경우 하위 뷰의 **높이가** 내장 콘텐츠 뷰의 **높이**와 일치 하는지 확인 합니다.

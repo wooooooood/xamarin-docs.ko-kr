@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 180ffa7cf723d841021a8bf7d1f1a285c882c103
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 3949dd85492a8181ee53e23b3ba2e986e59f8f47
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065545"
+ms.locfileid: "70121618"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
@@ -79,9 +79,9 @@ C# 및 XAML의 상황에 맞는 작업을 구현할 수 있습니다. 아래 있
 
 있는 상황에 맞는 작업을 구현할 수 있습니다 `Cell` 서브 클래스 (한 그룹 헤더로 사용 되 고 있지)를 만들어 `MenuItem`s에 추가 하는 `ContextActions` 셀에 대 한 컬렉션입니다. 다음과 같은 상황에 맞는 작업에 대 한 속성을 구성할 수 있습니다.
 
-* **텍스트** &ndash; 메뉴 항목에 표시 되는 문자열입니다.
-* **클릭할** &ndash; 항목을 클릭할 때 이벤트입니다.
-* **IsDestructive** &ndash; true (선택 사항) 항목에서 다르게 렌더링 됩니다 iOS입니다.
+- **텍스트** &ndash; 메뉴 항목에 표시 되는 문자열입니다.
+- **클릭할** &ndash; 항목을 클릭할 때 이벤트입니다.
+- **IsDestructive** &ndash; true (선택 사항) 항목에서 다르게 렌더링 됩니다 iOS입니다.
 
 하지만 여러 상황에 맞는 작업 하나만 있어야 셀에 추가할 수 있습니다 `IsDestructive` 로 `true`합니다. 다음 코드는 상황에 맞는 작업에 추가 되는 방법을 보여 줍니다는 `ViewCell`:
 

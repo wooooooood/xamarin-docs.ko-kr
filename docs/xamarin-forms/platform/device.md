@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: 802f9ff60f74914a9369c7ef281cb2e70ca01d4b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eb1358f039cc5d5a200f929fcc7dfa71ca863d2a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529067"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121311"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
@@ -135,12 +135,12 @@ this.FlowDirection = Device.FlowDirection;
 
 합니다 [ `Styles` 속성](~/xamarin-forms/user-interface/styles/index.md) 일부 컨트롤에 적용할 수 있는 기본 제공 스타일 정의가 포함 되어 있습니다 (같은 `Label`) `Style` 속성입니다. 사용 가능한 스타일 다음과 같습니다.
 
-* BodyStyle
-* CaptionStyle
-* ListItemDetailTextStyle
-* ListItemTextStyle
-* SubtitleStyle
-* TitleStyle
+- BodyStyle
+- CaptionStyle
+- ListItemDetailTextStyle
+- ListItemTextStyle
+- SubtitleStyle
+- TitleStyle
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 

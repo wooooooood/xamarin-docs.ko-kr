@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: df13c1080be5fd466c4875ed8a3bdc2012a70df0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a7276b6a3269c012ad57e13510b6479266c43209
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526163"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119793"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 클라우드 메시징으로 원격 알림
 
@@ -731,9 +731,9 @@ public override void OnMessageReceived(RemoteMessage message)
 
 앱이 백그라운드에 있으면 메시지 [의 페이로드](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) 는 메시지 처리 방법을 결정 합니다.
 
-* **알림** 메시지는 시스템 트레이에 전송 됩니다. &ndash; 로컬 알림이 표시 됩니다. 사용자가 알림을 탭 하면 앱이 시작 됩니다.
-* **데이터** 메시지는에 의해 `OnMessageReceived`처리 됩니다. &ndash;
-* **모두** &ndash; 알림과 데이터 페이로드가 모두 있는 메시지는 시스템 트레이에 배달 됩니다. 앱이 시작 되 면 데이터 페이로드가 앱을 시작 하는 `Extras` 데 사용 `Intent` 된의에 표시 됩니다.
+- **알림** 메시지는 시스템 트레이에 전송 됩니다. &ndash; 로컬 알림이 표시 됩니다. 사용자가 알림을 탭 하면 앱이 시작 됩니다.
+- **데이터** 메시지는에 의해 `OnMessageReceived`처리 됩니다. &ndash;
+- **모두** &ndash; 알림과 데이터 페이로드가 모두 있는 메시지는 시스템 트레이에 배달 됩니다. 앱이 시작 되 면 데이터 페이로드가 앱을 시작 하는 `Extras` 데 사용 `Intent` 된의에 표시 됩니다.
 
 이 예제에서 앱이 backgrounded `SendNotification` 인 경우 메시지에 데이터 페이로드가 있으면이 실행 됩니다. 그렇지 않으면이 연습의 앞부분에서 설명한 백그라운드 알림이 시작 됩니다.
 
@@ -772,7 +772,7 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예:
+FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예를 들어:
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();

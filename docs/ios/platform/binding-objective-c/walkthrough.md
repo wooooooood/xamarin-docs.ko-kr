@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 634081b63ce4a70368ef7621837932a3ae6de0a8
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890388"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121332"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -22,9 +22,9 @@ IOS에서 작업 하는 경우 타사 목표-C 라이브러리를 사용 하려�
 
 일반적으로 iOS 에코 시스템에서는 다음의 3 가지 버전으로 라이브러리를 찾을 수 있습니다.
 
-* 확장명을 포함 `.a` 하는 미리 컴파일된 정적 라이브러리 파일로 서 헤더 (.h 파일)와 함께 사용 됩니다. 예: [Google의 분석 라이브러리](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
-* 미리 컴파일된 프레임 워크로. 이는 정적 라이브러리, 헤더 및 확장을 사용 `.framework` 하는 추가 리소스를 포함 하는 폴더에 불과합니다. 예를 들어 [Google의 AdMob 라이브러리](https://developers.google.com/admob/ios/download)입니다.
-* 원본 코드 파일입니다. 예를 들어, `.m` 및 `.h` 목표 C 파일을 포함 하는 라이브러리입니다.
+- 확장명을 포함 `.a` 하는 미리 컴파일된 정적 라이브러리 파일로 서 헤더 (.h 파일)와 함께 사용 됩니다. 예: [Google의 분석 라이브러리](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
+- 미리 컴파일된 프레임 워크로. 이는 정적 라이브러리, 헤더 및 확장을 사용 `.framework` 하는 추가 리소스를 포함 하는 폴더에 불과합니다. 예를 들어 [Google의 AdMob 라이브러리](https://developers.google.com/admob/ios/download)입니다.
+- 원본 코드 파일입니다. 예를 들어, `.m` 및 `.h` 목표 C 파일을 포함 하는 라이브러리입니다.
 
 첫 번째 및 두 번째 시나리오에서는 미리 컴파일된 CocoaTouch 정적 라이브러리가 이미 있으므로이 문서에서는 세 번째 시나리오에 중점을 둡니다. 바인딩을 만들기 전에 항상 라이브러리와 함께 제공 되는 라이선스를 확인 하 여 해당 라이선스를 자유롭게 바인딩할 수 있도록 해야 합니다.
 

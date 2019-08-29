@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 49bb3f901f2b1f8ed4ae26650cb0509aabfd2369
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647624"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121632"
 ---
 # <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
 
@@ -214,8 +214,8 @@ XAML:
 ## <a name="row-separators"></a>행 구분 기호
 사이 구분 기호 선을 표시할지 `ListView` iOS 및 Android에서 기본적으로 요소입니다. IOS 및 Android에서 구분 기호 선 숨기기 하려는 경우 설정의 `SeparatorVisibility` 에 ListView에는 속성입니다. 에 대 한 옵션 `SeparatorVisibility` 됩니다.
 
-* **기본** -iOS 및 Android에서 구분 기호를 표시 합니다.
-* **None** -모든 플랫폼에서 구분 기호를 숨깁니다.
+- **기본** -iOS 및 Android에서 구분 기호를 표시 합니다.
+- **None** -모든 플랫폼에서 구분 기호를 숨깁니다.
 
 기본 표시:
 

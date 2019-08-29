@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/23/2017
-ms.openlocfilehash: f11e72e433c443fbb9639b1f972ec4d87adf8b58
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60bd87adb56e311407280ba98f48d8c3e2160836
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526905"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121011"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Xamarin.ios 앱에서 터치 처리
 
@@ -34,8 +34,8 @@ IOS는 터치 데이터를 캡처할 뿐만 아니라 터치의 패턴을 제스
 
 이 가이드는 iOS의 터치에 대 한 소개를 제공 합니다. Ios에서 3D 터치 및 햅 피드백을 사용 하는 방법에 대 한 자세한 내용은 각각 iOS 9 및 10에 소개 되어 있습니다. 아래 특정 가이드를 참조 하세요.
 
-* [3D Touch](~/ios/platform/3d-touch.md)
-* [햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
+- [3D Touch](~/ios/platform/3d-touch.md)
+- [햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## <a name="related-links"></a>관련 링크
 

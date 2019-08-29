@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: c0e4152574cf400f5b77b504955b248dd8477a7c
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 2b82de58b9d2f9e8acb8996f484845f9a71b6e80
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509508"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120307"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>코드를 Unified API로 업데이트하는 팁
 
@@ -55,43 +55,43 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 마이그레이션 도구를 사용한 후에도 수동으로 작업 해야 하는 일부 컴파일러 오류가 발생할 수 있습니다.
 수동으로 수정 해야 할 수 있는 몇 가지 사항은 다음과 같습니다.
 
-* `enum` 를`(int)` 비교 하려면 캐스트가 필요할 수 있습니다.
+- `enum` 를`(int)` 비교 하려면 캐스트가 필요할 수 있습니다.
 
-* `NSDictionary.IntValue`이제을 반환 `nint` `Int32Value` 합니다. 대신 사용할 수 있는가 있습니다.
+- `NSDictionary.IntValue`이제을 반환 `nint` `Int32Value` 합니다. 대신 사용할 수 있는가 있습니다.
 
-* `nfloat`및 `nint` 형식은로 표시할 `const`수 없습니다.   `static readonly nint` 는 적절 한 대안입니다.
+- `nfloat`및 `nint` 형식은로 표시할 `const`수 없습니다.   `static readonly nint` 는 적절 한 대안입니다.
 
-* `MonoTouch.` 네임 스페이스에 직접 사용 되는 항목은 이제 일반적으로 `ObjCRuntime.` 네임 스페이스에 있습니다 (예: `MonoTouch.Constants.Version` 현재 `ObjCRuntime.Constants.Version`:).
+- `MonoTouch.` 네임 스페이스에 직접 사용 되는 항목은 이제 일반적으로 `ObjCRuntime.` 네임 스페이스에 있습니다 (예: `MonoTouch.Constants.Version` 현재 `ObjCRuntime.Constants.Version`:).
 
-* 개체를 serialize 하는 코드는 및 `nint` `nfloat` 형식을 serialize 하려고 할 때 중단 될 수 있습니다. Serialization 코드가 마이그레이션 후 예상 대로 작동 하는지 확인 해야 합니다.
+- 개체를 serialize 하는 코드는 및 `nint` `nfloat` 형식을 serialize 하려고 할 때 중단 될 수 있습니다. Serialization 코드가 마이그레이션 후 예상 대로 작동 하는지 확인 해야 합니다.
 
-* 경우에 따라 자동화 된 도구가 조건부 `#if #else` 컴파일러 지시문 내에서 코드를 누락 하 게 됩니다. 이 경우 수정 사항을 수동으로 설정 해야 합니다 (아래의 일반적인 오류 참조).
+- 경우에 따라 자동화 된 도구가 조건부 `#if #else` 컴파일러 지시문 내에서 코드를 누락 하 게 됩니다. 이 경우 수정 사항을 수동으로 설정 해야 합니다 (아래의 일반적인 오류 참조).
 
-* 를 사용 하 여 `[Export]` 수동으로 내보낸 메서드는 마이그레이션 도구에 의해 자동으로 고정 되지 않을 수 있습니다. 예를 들어이 코드 snippert 반환 형식을 `nfloat`로 수동으로 업데이트 해야 합니다.
+- 를 사용 하 여 `[Export]` 수동으로 내보낸 메서드는 마이그레이션 도구에 의해 자동으로 고정 되지 않을 수 있습니다. 예를 들어이 코드 snippert 반환 형식을 `nfloat`로 수동으로 업데이트 해야 합니다.
 
     ```csharp
     [Export("tableView:heightForRowAtIndexPath:")]
     public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
     ```
 
-* Unified API는 무손실 변환이 아니기 때문에 NSDate와 .NET DateTime 간의 암시적 변환을 제공 하지 않습니다. 로 `DateTime` `DateTimeKind.Unspecified` 캐스팅하기전에.net을로컬또는UTC로변환하는것과관련된오류를방지하려면입니다.`NSDate`
+- Unified API는 무손실 변환이 아니기 때문에 NSDate와 .NET DateTime 간의 암시적 변환을 제공 하지 않습니다. 로 `DateTime` `DateTimeKind.Unspecified` 캐스팅하기전에.net을로컬또는UTC로변환하는것과관련된오류를방지하려면입니다.`NSDate`
 
-* 이제는 목표-C 범주 메서드가 Unified API 확장 메서드로 생성 됩니다. 예를 들어 이전에 사용한 `UIView.DrawString` 코드는 이제 Unified API에서 참조 `NSString.DrawString` 합니다.
+- 이제는 목표-C 범주 메서드가 Unified API 확장 메서드로 생성 됩니다. 예를 들어 이전에 사용한 `UIView.DrawString` 코드는 이제 Unified API에서 참조 `NSString.DrawString` 합니다.
 
-* 에서 `VideoSettings` avfoundation 클래스를 사용 하는 `WeakVideoSettings` 코드는 속성을 사용 하도록 변경 해야 합니다. 이렇게 하려면 설정 `Dictionary`클래스에서 속성으로 사용할 수 있는가 필요 합니다. 예를 들면 다음과 같습니다.
+- 에서 `VideoSettings` avfoundation 클래스를 사용 하는 `WeakVideoSettings` 코드는 속성을 사용 하도록 변경 해야 합니다. 이렇게 하려면 설정 `Dictionary`클래스에서 속성으로 사용할 수 있는가 필요 합니다. 예를 들면 다음과 같습니다.
 
     ```csharp
     vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
     ```
 
-* Nsobject `.ctor(IntPtr)` 생성자가[부적절 한 사용을 방지 하기 위해](~/cross-platform/macios/unified/overview.md#NSObject_ctor)public에서 protected로 변경 되었습니다.
+- Nsobject `.ctor(IntPtr)` 생성자가[부적절 한 사용을 방지 하기 위해](~/cross-platform/macios/unified/overview.md#NSObject_ctor)public에서 protected로 변경 되었습니다.
 
-* `NSAction`는 표준 .net`Action` [으로 대체](~/cross-platform/macios/unified/overview.md#NSAction) 되었습니다. 몇 가지 간단한 (단일 매개 변수) 대리자도로 `Action<T>`대체 되었습니다.
+- `NSAction`는 표준 .net`Action` [으로 대체](~/cross-platform/macios/unified/overview.md#NSAction) 되었습니다. 몇 가지 간단한 (단일 매개 변수) 대리자도로 `Action<T>`대체 되었습니다.
 
 마지막으로, 코드에서 Api에 대 한 변경 내용을 조회 하려면 [클래식 v Unified API 차이점](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) 을 참조 하세요. [이 페이지](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) 를 검색 하면 클래식 api 및 업데이트 된 항목을 쉽게 찾을 수 있습니다.
 
 > [!NOTE]
-> 네임 `MonoTouch.Dialog` 스페이스는 마이그레이션 후에도 동일 하 게 유지 됩니다. 코드에서 monotouch.dialog를 사용 하는 경우 해당 네임 스페이스  `MonoTouch.Dialog` `Dialog`를 계속 사용 해야 합니다 **.**
+> 네임 `MonoTouch.Dialog` 스페이스는 마이그레이션 후에도 동일 하 게 유지 됩니다. 코드에서 monotouch.dialog를 사용 하는 경우 해당 네임 스페이스 `MonoTouch.Dialog` `Dialog`를 계속 사용 해야 합니다 **.**
 
 ## <a name="common-compiler-errors"></a>일반적인 컴파일러 오류
 
@@ -107,7 +107,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 **오류 CS0234: ' Monotouch.dialog ' 네임 스페이스에 ' Foundation ' 형식 또는 네임 스페이스 이름이 없습니다. 어셈블리 참조가 있나요?**
 
-방법을 Mac용 Visual Studio의 자동화 된 마이그레이션 도구  는에 대 `MonoTouch.Foundation` `Foundation`한 모든 참조를 업데이트 해야 하지만 일부 경우에는 수동으로 업데이트 해야 합니다. 이전에에 `MonoTouch`포함 된 다른 네임 스페이스 ( `UIKit`예:)에 대해 유사한 오류가 나타날 수 있습니다.
+방법을 Mac용 Visual Studio의 자동화 된 마이그레이션 도구 는에 대 `MonoTouch.Foundation` `Foundation`한 모든 참조를 업데이트 해야 하지만 일부 경우에는 수동으로 업데이트 해야 합니다. 이전에에 `MonoTouch`포함 된 다른 네임 스페이스 ( `UIKit`예:)에 대해 유사한 오류가 나타날 수 있습니다.
 
 **오류 CS0266: 암시적으로 ' double ' 형식을 ' system.string ' 형식으로 변환할 수 없습니다.**
 
@@ -152,13 +152,13 @@ public override nint NumberOfSections (UITableView tableView)
 
 방법을 로의 철자 `AddEllipseInRect`를 수정 합니다. 다른 이름 변경 내용은 다음과 같습니다.
 
-* ' 색. Black '을로 `NSColor.Black`변경 합니다.
-* MapKit ' AddAnnotation '을로 `AddAnnotations`변경 합니다.
-* AVFoundation ' DataUsingEncoding '을로 `Encode`변경 합니다.
-* AVFoundation ' Avfoundation '를로 `AVMetadataObjectType.QRCode`변경 합니다.
-* AVFoundation ' 비디오 설정 '을로 `WeakVideoSettings`변경 합니다.
-* PopViewControllerAnimated을로 `PopViewController`변경 합니다.
-* CoreGraphics ' CGBitmapContext. SetRGBFillColor '를로 `SetFillColor`변경 합니다.
+- ' 색. Black '을로 `NSColor.Black`변경 합니다.
+- MapKit ' AddAnnotation '을로 `AddAnnotations`변경 합니다.
+- AVFoundation ' DataUsingEncoding '을로 `Encode`변경 합니다.
+- AVFoundation ' Avfoundation '를로 `AVMetadataObjectType.QRCode`변경 합니다.
+- AVFoundation ' 비디오 설정 '을로 `WeakVideoSettings`변경 합니다.
+- PopViewControllerAnimated을로 `PopViewController`변경 합니다.
+- CoreGraphics ' CGBitmapContext. SetRGBFillColor '를로 `SetFillColor`변경 합니다.
 
 **오류 CS0546: ' MapKit. MKAnnotation '에 재정의 가능한 set 접근자가 없으므로 재정의할 수 없습니다 (CS0546).**
 
@@ -166,10 +166,10 @@ MKAnnotation를 서브클래싱 하 여 사용자 지정 주석을 만들 때 �
 
 [해결](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505)방법:
 
-* 필드를 추가 하 여 좌표 추적
-* 좌표 속성의 getter에서이 필드를 반환 합니다.
-* SetCoordinate 메서드를 재정의 하 고 필드를 설정 합니다.
-* 전달 된 좌표 매개 변수를 사용 하 여 ctor에서 SetCoordinate를 호출 합니다.
+- 필드를 추가 하 여 좌표 추적
+- 좌표 속성의 getter에서이 필드를 반환 합니다.
+- SetCoordinate 메서드를 재정의 하 고 필드를 설정 합니다.
+- 전달 된 좌표 매개 변수를 사용 하 여 ctor에서 SetCoordinate를 호출 합니다.
 
 결과는 다음과 비슷합니다.
 

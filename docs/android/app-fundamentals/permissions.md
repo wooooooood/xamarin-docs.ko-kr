@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1426054b60d182f7f40bf3c4b0bf69b2287ad57e
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509404"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119149"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Xamarin Android의 사용 권한
 
@@ -22,15 +22,15 @@ Android 응용 프로그램은 자체 샌드박스에서 실행 되며, 보안�
 
 앱을 개발할 때 응용 프로그램 개발자가 사용 권한을 **Androidmanifest** 에서 선언 합니다. Android에는 해당 권한에 대 한 사용자의 동의를 얻기 위한 두 가지 워크플로가 있습니다.
  
-* Android 5.1 (API 수준 22)를 대상으로 하는 앱의 경우 앱을 설치할 때 사용 권한 요청이 발생 합니다. 사용자가 권한을 부여 하지 않은 경우 앱이 설치 되지 않습니다. 앱이 설치 되 면 앱을 제거 하는 경우를 제외 하 고는 권한을 취소할 수 없습니다.
-* Android 6.0 (API 수준 23)부터 사용자에 게 사용 권한을 보다 세부적으로 제어할 수 있습니다. 앱이 장치에 설치 되어 있는 한 사용 권한을 부여 하거나 취소할 수 있습니다. 이 스크린샷에서는 Google 연락처 앱에 대 한 권한 설정을 보여 줍니다. 다양 한 사용 권한을 나열 하 고 사용자가 사용 권한을 설정 하거나 해제할 수 있습니다.
+- Android 5.1 (API 수준 22)를 대상으로 하는 앱의 경우 앱을 설치할 때 사용 권한 요청이 발생 합니다. 사용자가 권한을 부여 하지 않은 경우 앱이 설치 되지 않습니다. 앱이 설치 되 면 앱을 제거 하는 경우를 제외 하 고는 권한을 취소할 수 없습니다.
+- Android 6.0 (API 수준 23)부터 사용자에 게 사용 권한을 보다 세부적으로 제어할 수 있습니다. 앱이 장치에 설치 되어 있는 한 사용 권한을 부여 하거나 취소할 수 있습니다. 이 스크린샷에서는 Google 연락처 앱에 대 한 권한 설정을 보여 줍니다. 다양 한 사용 권한을 나열 하 고 사용자가 사용 권한을 설정 하거나 해제할 수 있습니다.
 
 ![샘플 사용 권한 화면](permissions-images/01-permissions-check.png) 
 
 Android 앱은 런타임에 확인 하 여 보호 된 리소스에 액세스할 수 있는 권한이 있는지 확인 해야 합니다. 앱에 권한이 없는 경우 사용자에 게 사용 권한을 부여 하기 위해 Android SDK에서 제공 하는 새 Api를 사용 하 여 요청 해야 합니다. 사용 권한은 다음과 같은 두 가지 범주로 구분 됩니다.
 
-* **일반 권한** &ndash; 사용자의 보안 또는 개인 정보에 대 한 보안 위험을 최소화 하는 사용 권한입니다. Android 6.0는 설치 시 일반 권한을 자동으로 부여 합니다. [일반 사용 권한의 전체 목록은](https://developer.android.com/guide/topics/permissions/normal-permissions.html)Android 설명서를 참조 하세요.
-* **위험한 권한** &ndash; 일반적인 사용 권한과는 달리 사용자의 보안 또는 개인 정보를 보호 하는 사용 권한이 위험한 사용 권한입니다. 이러한 명시적으로는 사용자가 부여 해야 합니다. SMS 메시지를 보내거나 받는 작업은 위험한 권한이 필요한 작업의 예입니다.
+- **일반 권한** &ndash; 사용자의 보안 또는 개인 정보에 대 한 보안 위험을 최소화 하는 사용 권한입니다. Android 6.0는 설치 시 일반 권한을 자동으로 부여 합니다. [일반 사용 권한의 전체 목록은](https://developer.android.com/guide/topics/permissions/normal-permissions.html)Android 설명서를 참조 하세요.
+- **위험한 권한** &ndash; 일반적인 사용 권한과는 달리 사용자의 보안 또는 개인 정보를 보호 하는 사용 권한이 위험한 사용 권한입니다. 이러한 명시적으로는 사용자가 부여 해야 합니다. SMS 메시지를 보내거나 받는 작업은 위험한 권한이 필요한 작업의 예입니다.
 
 > [!IMPORTANT]
 > 사용 권한이 속하는 범주가 시간이 지남에 따라 변경 될 수 있습니다.  "일반" 권한으로 분류 된 사용 권한은 이후 API 수준에서 위험한 권한으로 승격 될 수 있습니다.
@@ -121,8 +121,8 @@ Android 5.1 (API 수준 22)이 하를 대상으로 하는 앱의 경우 수행 �
 
 ( `ContextCompat.CheckSelfPermission` Android 지원 라이브러리에서 사용 가능) 메서드는 특정 권한이 부여 되었는지 확인 하는 데 사용 됩니다. 이 메서드는 두 값 [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) 중 하나를 포함 하는 열거형을 반환 합니다.
 
-* **`Permission.Granted`** &ndash; 지정 된 사용 권한이 부여 되었습니다.
-* **`Permission.Denied`** &ndash; 지정 된 사용 권한이 부여 되지 않았습니다.
+- **`Permission.Granted`** &ndash; 지정 된 사용 권한이 부여 되었습니다.
+- **`Permission.Denied`** &ndash; 지정 된 사용 권한이 부여 되지 않았습니다.
 
 이 코드 조각은 활동에서 카메라 사용 권한을 확인 하는 방법의 예입니다. 
 
@@ -145,9 +145,9 @@ else
 
 사용자가 권한을 `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` 부여 하는 경우 메서드를 호출 해야 합니다. 이 메서드에는 다음과 같은 매개 변수가 필요 합니다.
 
-* **활동** &ndash; 이는 사용 권한을 요청 하는 작업이 며 Android에서 결과를 받습니다.
-* **권한** &ndash; 요청 되는 사용 권한의 목록입니다.
-* **Requestcode** 호출에`RequestPermissions` 대 한 권한 요청 결과를 일치 시키는 데 사용 되는 &ndash; 정수 값입니다. 이 값은 0보다 커야 합니다.
+- **활동** &ndash; 이는 사용 권한을 요청 하는 작업이 며 Android에서 결과를 받습니다.
+- **권한** &ndash; 요청 되는 사용 권한의 목록입니다.
+- **Requestcode** 호출에`RequestPermissions` 대 한 권한 요청 결과를 일치 시키는 데 사용 되는 &ndash; 정수 값입니다. 이 값은 0보다 커야 합니다.
 
 이 코드 조각은 설명 된 두 메서드의 예입니다. 먼저 권한 근거를 표시할지 여부를 확인 하는 검사가 수행 됩니다. 이론적으로 표시 되는 경우 Snackbar가 설명으로 표시 됩니다. 사용자가 Snackbar에서 **확인** 을 클릭 하면 앱이 사용 권한을 요청 합니다. 사용자가 설명에 동의 하지 않으면 앱에서 권한 요청을 진행 하지 않아야 합니다. 설명 된 내용이 표시 되지 않으면 활동에서 다음과 같은 사용 권한을 요청 합니다.
 

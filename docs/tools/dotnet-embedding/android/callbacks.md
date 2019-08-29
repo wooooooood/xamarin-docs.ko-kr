@@ -5,12 +5,12 @@ ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 8f32da34c82e46fa4afd69ae420b314eab18b235
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 982eecea12a4e967bc0c05480ae9099cea10b4cb
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889353"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120041"
 ---
 # <a name="callbacks-on-android"></a>Android의 콜백
 
@@ -293,8 +293,8 @@ public abstract class VirtualClass : Java.Lang.Object
 
 ## <a name="further-reading"></a>추가 정보
 
-* [Android 시작](~/tools/dotnet-embedding/get-started/java/android.md)
-* [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)
-* [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
-* [오픈 소스 프로젝트에 기여](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
-* [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)
+- [Android 시작](~/tools/dotnet-embedding/get-started/java/android.md)
+- [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)
+- [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
+- [오픈 소스 프로젝트에 기여](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+- [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)

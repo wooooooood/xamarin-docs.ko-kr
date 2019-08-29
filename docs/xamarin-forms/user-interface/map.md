@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
-ms.openlocfilehash: 4cfedad6ccf87dfef819b677233be1edb2d2c62d
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 5eee9fea7ea0fffe9dc254ac4340ff05d087ce33
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887958"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121554"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -115,13 +115,13 @@ Xamarin 문서에서 지침에 따라 [v2 Google Maps API 키를 가져오는](~
 
 Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 적절 한 권한을 사용 하도록 설정 해야 **옵션 > 빌드 > Android 응용 프로그램** 다음 타이머에서 틱 및:
 
-* `AccessCoarseLocation`
-* `AccessFineLocation`
-* `AccessLocationExtraCommands`
-* `AccessMockLocation`
-* `AccessNetworkState`
-* `AccessWifiState`
-* `Internet`
+- `AccessCoarseLocation`
+- `AccessFineLocation`
+- `AccessLocationExtraCommands`
+- `AccessMockLocation`
+- `AccessNetworkState`
+- `AccessWifiState`
+- `Internet`
 
 그 중 일부는 아래 스크린샷에 표시 됩니다.
 

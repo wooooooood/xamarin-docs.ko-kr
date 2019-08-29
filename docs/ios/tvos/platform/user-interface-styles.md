@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: ca3580648d357d2c943274717af66ad5d825ce75
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: f4004b4b9cdc8f8c6555be82cf1da5b92a83d45c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065585"
+ms.locfileid: "70120054"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Xamarin에서 tvOS 사용자 인터페이스 스타일
 
@@ -131,7 +131,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 
 개발자는 선택 된 ui 테마를 기반으로 하는 ui 요소의 모양을 세부적으로 제어 해야 합니다. `TraitCollectionDidChange` `UIView` 또는 `UIViewController` 클래스의 메서드를 재정의할 수 있습니다.
 
-예:
+예를 들어:
 
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
@@ -149,7 +149,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 TvOS 앱의 디자인에 따라 개발자가 지정 된 사용자 인터페이스 요소의 특성 컬렉션을 재정의 하 고 항상 특정 UI 테마를 사용 해야 하는 경우가 있을 수 있습니다.
 
-`UIViewController` 클래스의 메서드를 `SetOverrideTraitCollection` 사용 하 여이 작업을 수행할 수 있습니다. 예:
+`UIViewController` 클래스의 메서드를 `SetOverrideTraitCollection` 사용 하 여이 작업을 수행할 수 있습니다. 예를 들어:
 
 ```csharp
 // Create new trait and configure it
@@ -183,22 +183,22 @@ TvOS 10에서는 특성 컬렉션에 응답 하도록 앱의 스토리 보드를
 
 Apple은 Interface Builder에서 tvOS Storyboard를 편집할 때 다음과 같은 기능을 추가 했습니다.
 
-* 개발자는 **특성 검사자**에서 UI 테마를 기반으로 사용자 인터페이스 요소의 다른 변형을 지정할 수 있습니다.
+- 개발자는 **특성 검사자**에서 UI 테마를 기반으로 사용자 인터페이스 요소의 다른 변형을 지정할 수 있습니다.
 
-  * 이제 몇 가지 속성은 **+** 클릭 하 여 UI 테마 특정 버전을 추가할 수 있습니다.
+  - 이제 몇 가지 속성은 **+** 클릭 하 여 UI 테마 특정 버전을 추가할 수 있습니다.
 
     [![](user-interface-styles-images/theme08.png "UI 테마 특정 버전 추가")](user-interface-styles-images/theme08.png#lightbox)
 
-  * 개발자는 새 속성을 지정 하거나 **x** 단추를 클릭 하 여 제거할 수 있습니다.
+  - 개발자는 새 속성을 지정 하거나 **x** 단추를 클릭 하 여 제거할 수 있습니다.
 
     [![](user-interface-styles-images/theme09.png "새 속성을 지정 하거나 x 단추를 클릭 하 여 제거 합니다.")](user-interface-styles-images/theme09.png#lightbox)
-* 개발자는 Interface Builder 내에서 밝은 테마 또는 어두운 테마 중 하나에서 UI 디자인을 미리 볼 수 있습니다.
+- 개발자는 Interface Builder 내에서 밝은 테마 또는 어두운 테마 중 하나에서 UI 디자인을 미리 볼 수 있습니다.
 
-  * Design Surface의 맨 아래에서 개발자는 현재 UI 테마를 전환할 수 있습니다.
+  - Design Surface의 맨 아래에서 개발자는 현재 UI 테마를 전환할 수 있습니다.
 
     [![](user-interface-styles-images/theme10.png "Design Surface의 아래쪽입니다.")](user-interface-styles-images/theme10.png#lightbox)
 
-  * 새 테마는 Interface Builder 표시 되 고 특성 컬렉션 특정 조정 내용이 표시 됩니다.
+  - 새 테마는 Interface Builder 표시 되 고 특성 컬렉션 특정 조정 내용이 표시 됩니다.
 
     [![](user-interface-styles-images/theme11.png "에 표시 되는 테마 Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 

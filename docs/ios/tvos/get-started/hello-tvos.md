@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: a3ec307061c47736722c5dacef9a939518586ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528805"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119161"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS 빠른 시작 가이드
 
@@ -327,8 +327,8 @@ IOS Designer 및 작동 방식에 대 한 자세한 내용은 [Xamarin Designer 
 
 IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는 두 가지 주요 방법이 있습니다.
 
-* 컨트롤에 이벤트 처리기를 만듭니다.
-* 나중에 참조할 수 있도록 컨트롤의 이름을 지정 합니다.
+- 컨트롤에 이벤트 처리기를 만듭니다.
+- 나중에 참조할 수 있도록 컨트롤의 이름을 지정 합니다.
 
 둘 중 하나가 추가 되 면 내의 `ViewController.designer.cs` partial 클래스가 변경 내용을 반영 하도록 업데이트 됩니다. 이를 통해 뷰 컨트롤러의 컨트롤에 액세스할 수 있습니다.
 
@@ -442,13 +442,13 @@ Mac용 Visual Studio 화면의 왼쪽 위 모서리에 있는 **구성 선택기
 
 [![](hello-tvos-images/run01.png "빌드 유형 선택")](hello-tvos-images/run01.png#lightbox)
 
-### <a name="building-the-application"></a>애플리케이션 빌드
+### <a name="building-the-application"></a>응용 프로그램 빌드
 
 이 경우 디버그 빌드를 원하는 것 이므로 **디버그** 가 선택 되어 있는지 확인 합니다. 먼저 **⌘ B**를 누르거나 **빌드** 메뉴에서 **모두 빌드**를 선택 하 여 응용 프로그램을 빌드 해 보겠습니다.
 
 오류가 발생 하지 않으면 Mac용 Visual Studio의 상태 표시줄에 **빌드 성공** 메시지가 표시 됩니다. 오류가 있는 경우 프로젝트를 검토 하 고 단계를 올바르게 수행 했는지 확인 합니다. 먼저 코드 (Xcode 및 Mac용 Visual Studio)가 자습서의 코드와 일치 하는지 확인 합니다.
 
-### <a name="running-the-application"></a>애플리케이션 실행
+### <a name="running-the-application"></a>응용 프로그램 실행
 
 응용 프로그램을 실행 하려면 다음 세 가지 옵션을 사용할 수 있습니다.
 

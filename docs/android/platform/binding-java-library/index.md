@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 4c01022e01c5ba6a9099b88e99558bd7d7ce728d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524550"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119643"
 ---
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
@@ -68,36 +68,36 @@ using Com.Company.Package;
 
 기존 Android 라이브러리를 바인딩할 때는 다음 사항을 염두에 두어야 합니다.
 
-* **라이브러리에 대 한 외부 종속성이 있나요?** &ndash;Android 라이브러리에 필요한 모든 Java 종속성은 **ReferenceJar** 프로젝트에 포함 되거나 **EmbeddedReferenceJar**로 포함 되어야 합니다. 모든 네이티브 어셈블리를 바인딩 프로젝트에 **EmbeddedNativeLibrary**로 추가 해야 합니다.  
+- **라이브러리에 대 한 외부 종속성이 있나요?** &ndash;Android 라이브러리에 필요한 모든 Java 종속성은 **ReferenceJar** 프로젝트에 포함 되거나 **EmbeddedReferenceJar**로 포함 되어야 합니다. 모든 네이티브 어셈블리를 바인딩 프로젝트에 **EmbeddedNativeLibrary**로 추가 해야 합니다.  
 
-* **Android 라이브러리 대상의 Android API 버전은 무엇 인가요?** &ndash;Android API 수준을 "다운 그레이드" 할 수 없습니다. Xamarin Android 바인딩 프로젝트가 Android 라이브러리와 동일한 API 수준 (또는 그 이상)을 대상으로 하는지 확인 합니다.
+- **Android 라이브러리 대상의 Android API 버전은 무엇 인가요?** &ndash;Android API 수준을 "다운 그레이드" 할 수 없습니다. Xamarin Android 바인딩 프로젝트가 Android 라이브러리와 동일한 API 수준 (또는 그 이상)을 대상으로 하는지 확인 합니다.
 
-* **라이브러리를 컴파일하는 데 사용 된 JDK 버전은 무엇 인가요?** &ndash;Android 라이브러리가 Xamarin.ios에서 사용 하는 것과 다른 버전의 JDK로 빌드된 경우 바인딩 오류가 발생할 수 있습니다. 가능 하면 Xamarin.ios 설치에 사용 되는 것과 동일한 버전의 JDK를 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
+- **라이브러리를 컴파일하는 데 사용 된 JDK 버전은 무엇 인가요?** &ndash;Android 라이브러리가 Xamarin.ios에서 사용 하는 것과 다른 버전의 JDK로 빌드된 경우 바인딩 오류가 발생할 수 있습니다. 가능 하면 Xamarin.ios 설치에 사용 되는 것과 동일한 버전의 JDK를 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
 
 
 ## <a name="build-actions"></a>빌드 작업
 
 바인딩 라이브러리를 만들 때 **jar** 또는에 대 한 *빌드 작업* 을 설정 합니다. 바인딩 라이브러리 프로젝트 &ndash; 에 통합 하는 AAR 파일 각 빌드 작업은 **.jar** 또는의 방법을 결정 합니다. AAR 파일은 바인딩 라이브러리에 포함 되거나 바인딩 라이브러리에 의해 참조 됩니다. 다음 목록에서는 이러한 빌드 작업을 요약 합니다.
 
-* `EmbeddedJar`결과 바인딩 라이브러리 DLL에 jar를 포함 리소스로 포함 합니다. &ndash; 가장 간단 하 고 가장 일반적으로 사용 되는 빌드 작업입니다. **Jar** 를 자동으로 바이트 코드로 컴파일하고 바인딩 라이브러리에 패키지 하려는 경우이 옵션을 사용 합니다.
+- `EmbeddedJar`결과 바인딩 라이브러리 DLL에 jar를 포함 리소스로 포함 합니다. &ndash; 가장 간단 하 고 가장 일반적으로 사용 되는 빌드 작업입니다. **Jar** 를 자동으로 바이트 코드로 컴파일하고 바인딩 라이브러리에 패키지 하려는 경우이 옵션을 사용 합니다.
 
-* `InputJar`는 결과 바인딩 라이브러리에 jar을 포함 하지 않습니다. &ndash; GDIPLUS.DLL. 바인딩 라이브러리입니다. DLL은 런타임에이 **jar** 에 종속 됩니다. 바인딩 라이브러리에 **jar** 를 포함 하지 않으려는 경우 (예: 라이선스의 경우)이 옵션을 사용 합니다. 이 옵션을 사용 하는 경우 앱을 실행 하는 장치에서 입력 **jar** 를 사용할 수 있는지 확인 해야 합니다.
+- `InputJar`는 결과 바인딩 라이브러리에 jar을 포함 하지 않습니다. &ndash; GDIPLUS.DLL. 바인딩 라이브러리입니다. DLL은 런타임에이 **jar** 에 종속 됩니다. 바인딩 라이브러리에 **jar** 를 포함 하지 않으려는 경우 (예: 라이선스의 경우)이 옵션을 사용 합니다. 이 옵션을 사용 하는 경우 앱을 실행 하는 장치에서 입력 **jar** 를 사용할 수 있는지 확인 해야 합니다.
 
-* `LibraryProjectZip`&ndash; 을 포함 합니다. AAR 파일을 결과 바인딩 라이브러리로 변환 합니다. GDIPLUS.DLL. 이는 바인딩된의 코드 및 리소스에 액세스할 수 있다는 점을 제외 하 고 EmbeddedJar와 비슷합니다. AAR 파일입니다. 을 포함 하려는 경우이 옵션을 사용 합니다. 바인딩 라이브러리로 AAR.
+- `LibraryProjectZip`&ndash; 을 포함 합니다. AAR 파일을 결과 바인딩 라이브러리로 변환 합니다. GDIPLUS.DLL. 이는 바인딩된의 코드 및 리소스에 액세스할 수 있다는 점을 제외 하 고 EmbeddedJar와 비슷합니다. AAR 파일입니다. 을 포함 하려는 경우이 옵션을 사용 합니다. 바인딩 라이브러리로 AAR.
 
-* `ReferenceJar` 참조를 지정 합니다. jar: 참조 jar는 바인딩된 jar 또는입니다. &ndash; AAR 파일은에 따라 달라 집니다. 이 참조 **jar** 는 컴파일 타임 종속성을 충족 하는 데만 사용 됩니다. 이 빌드 작업을 사용 하는 C# 경우 참조 **jar** 에 대 한 바인딩이 생성 되지 않으며 결과 바인딩 라이브러리에 포함 되지 않습니다. GDIPLUS.DLL. 참조에 대 한 바인딩 라이브러리를 만들지만 아직 수행 하지 않은 경우 이 옵션을 사용 합니다. 이 빌드 작업은 여러 **.jar**s (및/또는)를 패키징하는 데 유용 합니다. AARs)를 상호 의존적인 여러 바인딩 라이브러리로 변환 합니다.
+- `ReferenceJar` 참조를 지정 합니다. jar: 참조 jar는 바인딩된 jar 또는입니다. &ndash; AAR 파일은에 따라 달라 집니다. 이 참조 **jar** 는 컴파일 타임 종속성을 충족 하는 데만 사용 됩니다. 이 빌드 작업을 사용 하는 C# 경우 참조 **jar** 에 대 한 바인딩이 생성 되지 않으며 결과 바인딩 라이브러리에 포함 되지 않습니다. GDIPLUS.DLL. 참조에 대 한 바인딩 라이브러리를 만들지만 아직 수행 하지 않은 경우 이 옵션을 사용 합니다. 이 빌드 작업은 여러 **.jar**s (및/또는)를 패키징하는 데 유용 합니다. AARs)를 상호 의존적인 여러 바인딩 라이브러리로 변환 합니다.
 
-* `EmbeddedReferenceJar`결과 바인딩 라이브러리에 참조 jar를 포함 합니다. &ndash; GDIPLUS.DLL. 입력 C# **jar** (또는)에 대 한 바인딩을 만들려는 경우이 빌드 작업을 사용 합니다. AAR) 및 모든 참조 **jar**를 바인딩 라이브러리에 있습니다.
+- `EmbeddedReferenceJar`결과 바인딩 라이브러리에 참조 jar를 포함 합니다. &ndash; GDIPLUS.DLL. 입력 C# **jar** (또는)에 대 한 바인딩을 만들려는 경우이 빌드 작업을 사용 합니다. AAR) 및 모든 참조 **jar**를 바인딩 라이브러리에 있습니다.
 
-* `EmbeddedNativeLibrary`Native를 바인딩에 포함 합니다. &ndash; 이 빌드 작업은에 사용 **되므로** **jar** 파일에 필요한 파일을 바인딩합니다. Java 라이브러리에서 코드를 실행 하기 전에 라이브러리를 수동으로 로드 해야 할 수도 있습니다. 이 내용은 아래에 설명 되어 있습니다.
+- `EmbeddedNativeLibrary`Native를 바인딩에 포함 합니다. &ndash; 이 빌드 작업은에 사용 **되므로** **jar** 파일에 필요한 파일을 바인딩합니다. Java 라이브러리에서 코드를 실행 하기 전에 라이브러리를 수동으로 로드 해야 할 수도 있습니다. 이 내용은 아래에 설명 되어 있습니다.
 
 이러한 빌드 작업은 다음 가이드에 자세히 설명 되어 있습니다.
 
 또한 다음과 같은 빌드 작업을 사용 하 여 Java API 설명서를 가져오고 C# XML 문서로 변환할 수 있습니다.
 
-* `JavaDocJar`는 Maven 패키지 스타일 (일반적으로 `FOOBAR-javadoc**.jar**`)을 준수 하는 Java 라이브러리의 Javadoc archive Jar를 가리키는 데 사용 됩니다.
-* `JavaDocIndex`는 API 참조 문서 HTML `index.html` 내에서 파일을 가리키는 데 사용 됩니다.
-* `JavaSourceJar`는를 보완 `JavaDocJar`하 여 먼저 원본에서 JavaDoc를 생성 한 다음 Maven 패키지 스타일을 `JavaDocIndex`준수 하는 Java 라이브러리에 대해 결과를로 처리 합니다 (일반적 `FOOBAR-sources**.jar**`으로).
+- `JavaDocJar`는 Maven 패키지 스타일 (일반적으로 `FOOBAR-javadoc**.jar**`)을 준수 하는 Java 라이브러리의 Javadoc archive Jar를 가리키는 데 사용 됩니다.
+- `JavaDocIndex`는 API 참조 문서 HTML `index.html` 내에서 파일을 가리키는 데 사용 됩니다.
+- `JavaSourceJar`는를 보완 `JavaDocJar`하 여 먼저 원본에서 JavaDoc를 생성 한 다음 Maven 패키지 스타일을 `JavaDocIndex`준수 하는 Java 라이브러리에 대해 결과를로 처리 합니다 (일반적 `FOOBAR-sources**.jar**`으로).
 
 API 설명서는 Java8, Java7 또는 Java6 SDK (모두 다른 형식) 또는 DroidDoc 스타일의 기본 doclet 합니다.
 

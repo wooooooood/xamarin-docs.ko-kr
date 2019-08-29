@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: a6077029a82577cccbf060f14cdd7586c2793a94
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d6440518149a4fab8e9667a2a41d3df818e2a879
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529260"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120521"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.Forms에서 CocosSharp 사용
 
@@ -28,9 +28,9 @@ _CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에
 
 CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 콘텐츠를 재생 하기 위한 유연 하 고 강력한 기술 됩니다. 이 가이드에서는 CocosSharp Xamarin.Forms 응용 프로그램을 추가 하는 방법을 설명 합니다. 다음 내용을 다룹니다.
 
-* [CocosSharp 란?](#what)
-* [CocosSharp Nuget 패키지 추가](#nuget)
-* [연습: Xamarin. Forms 앱에 CocosSharp 추가](#add)
+- [CocosSharp 란?](#what)
+- [CocosSharp Nuget 패키지 추가](#nuget)
+- [연습: Xamarin. Forms 앱에 CocosSharp 추가](#add)
 
 <a name="what" />
 
@@ -39,11 +39,11 @@ CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 �
 [CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) 는 Xamarin 플랫폼에서 사용할 수 있는 오픈 소스 게임 엔진입니다.
 CocosSharp는 다음과 같은 기능을 포함 하는 효율적인 런타임 라이브러리:
 
-* 클래스를 `CCSprite` 사용 하 여 이미지 렌더링
-* 클래스를 `CCDrawNode` 사용 하 여 셰이프 렌더링
-* 클래스를 사용 하는 `CCNode.Schedule` 모든 프레임 논리
-* 콘텐츠 관리 (. .png 파일 등의 리소스 로드 및 언로드)를 사용 하 여`CCTextureCache`
-* 클래스를 사용 `CCAction` 하는 애니메이션
+- 클래스를 `CCSprite` 사용 하 여 이미지 렌더링
+- 클래스를 `CCDrawNode` 사용 하 여 셰이프 렌더링
+- 클래스를 사용 하는 `CCNode.Schedule` 모든 프레임 논리
+- 콘텐츠 관리 (. .png 파일 등의 리소스 로드 및 언로드)를 사용 하 여`CCTextureCache`
+- 클래스를 사용 `CCAction` 하는 애니메이션
 
 CocosSharp의 주된 초점은 플랫폼 간 2D 게임;의 생성을 간소화 하는 그러나 Xamarin 양식 응용 프로그램에 크게 보강할 수도 있습니다. 게임에는 일반적으로 효율적인 렌더링 및 시각적 개체를 정확 하 게 제어할 필요, CocosSharp 게임 내 응용 프로그램에 강력한 시각화 및 효과 추가 하려면 사용할 수 있습니다.
 
@@ -273,9 +273,9 @@ CocosSharp 시각적 개체 표시 되는 이제 조사할 수 있습니다는 `
 
 위의 다이어그램 검은색 텍스트로 화면 외부의 픽셀 크기를 표시합니다. 단위는 흰색 텍스트의 다이어그램의 내부에 표시 됩니다. 위에 표시 된 몇 가지 중요 한 세부 정보는 다음과 같습니다.
 
-* CocosSharp 디스플레이의 원점은 왼쪽 맨 아래에 있습니다. X 값 증가 오른쪽으로 이동 하 고 Y 값을 증가 위로 이동 됩니다. 일부 다른 2D 레이아웃 엔진에 비해으로 Y 값을 반전 됩니다 표시 위치 (0, 0) 캔버스의 왼쪽 위입니다.
-* CocosSharp의 기본 동작은 해당 보기의 가로 세로 비율을 유지 하는 것입니다. 표의 첫 번째 행 높이 것 보다 더 광범위 한 이므로 CocosSharp 채워지지 해당 셀의 전체 너비 점선된 흰색 사각형으로 표시 된 것과 같이 합니다. 이 동작에 설명 된 대로 변경할 수는 [CocosSharp에서 여러 해상도 처리 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md)합니다.
-* 이 예제에서는 CocosSharp 표시 영역의 너비와 높이 크기에 관계 없이 100 단위 또는 해당 장치의 가로 세로 비율을 유지 합니다. 즉, 코드는는 CocosSharp의 오른쪽 끝 바인딩된 X = 100 나타냅니다 레이아웃을 표시, 보관 모든 장치에서 일관 된 가정할 수 있습니다.
+- CocosSharp 디스플레이의 원점은 왼쪽 맨 아래에 있습니다. X 값 증가 오른쪽으로 이동 하 고 Y 값을 증가 위로 이동 됩니다. 일부 다른 2D 레이아웃 엔진에 비해으로 Y 값을 반전 됩니다 표시 위치 (0, 0) 캔버스의 왼쪽 위입니다.
+- CocosSharp의 기본 동작은 해당 보기의 가로 세로 비율을 유지 하는 것입니다. 표의 첫 번째 행 높이 것 보다 더 광범위 한 이므로 CocosSharp 채워지지 해당 셀의 전체 너비 점선된 흰색 사각형으로 표시 된 것과 같이 합니다. 이 동작에 설명 된 대로 변경할 수는 [CocosSharp에서 여러 해상도 처리 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md)합니다.
+- 이 예제에서는 CocosSharp 표시 영역의 너비와 높이 크기에 관계 없이 100 단위 또는 해당 장치의 가로 세로 비율을 유지 합니다. 즉, 코드는는 CocosSharp의 오른쪽 끝 바인딩된 X = 100 나타냅니다 레이아웃을 표시, 보관 모든 장치에서 일관 된 가정할 수 있습니다.
 
 #### <a name="ccdrawnode-details"></a>CCDrawNode 세부 정보
 

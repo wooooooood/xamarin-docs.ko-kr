@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: ddefae8ad24b74a3c9ed05bf46b54430c00beaea
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620519"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120166"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin의 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -230,16 +230,16 @@ MenuTable.PerformSegue (0);
 
 WatchOS 3의 새로운 작업:
 
-* 알림은 모든 플랫폼 (iOS, watchOS, tvOS 및 macOS)에서 비슷한 API를 사용 합니다.
-* Apple Watch에서 로컬 알림을 예약할 수 있습니다.
-* 백그라운드 알림은 Apple Watch에 예약 된 경우 앱의 확장으로 라우팅됩니다.
+- 알림은 모든 플랫폼 (iOS, watchOS, tvOS 및 macOS)에서 비슷한 API를 사용 합니다.
+- Apple Watch에서 로컬 알림을 예약할 수 있습니다.
+- 백그라운드 알림은 Apple Watch에 예약 된 경우 앱의 확장으로 라우팅됩니다.
 
 #### <a name="notification-scheduling-and-delivery"></a>알림 예약 및 배달
 
 사용자의 iPhone에서 알림은 다음과 같은 경우에 Apple Watch 전달 됩니다.
 
-* IPhone의 화면이 꺼져 있습니다.
-* Apple Watch 마모 되었으며 잠금이 해제 되었습니다.
+- IPhone의 화면이 꺼져 있습니다.
+- Apple Watch 마모 되었으며 잠금이 해제 되었습니다.
 
 WatchOS 3에서 로컬 알림은 Apple Watch 예약할 수 있으며, 시계로만 제공 됩니다. 앱에 필요한 경우 해당 iPhone 알림을 예약 하는 것은 개발자의 작업입니다.
 

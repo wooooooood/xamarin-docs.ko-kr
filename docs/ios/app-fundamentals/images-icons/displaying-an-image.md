@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 2c69c995317d5121f203946cf1a4196bce9b4177
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643080"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120593"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.ios에서 이미지 표시
 
@@ -159,9 +159,9 @@ if (MyIcon.Image != null) {
 
 열거형`UIImageRenderingMode` 을 `UIImage.RenderMode` 통해 다음과 같은 세 가지 설정이 있을 수 있습니다.
 
-* `AlwaysOriginal`-이미지를 변경 하지 않고 원래 원본 이미지 파일로 렌더링 합니다.
-* `AlwaysTemplate`-지정 된 색으로 픽셀의 색을 지정 `Tint` 하 여 이미지가 템플릿 이미지로 렌더링 되도록 합니다.
-* `Automatic`-이미지를 템플릿 또는 원본으로 사용 되는 환경을 기반으로 렌더링 합니다. 예를 `UIToolBar`들어, `UITabBar` 또는 `UINavigationBar` 에서이미지를사용하는경우에는템플릿으로처리됩니다.`UISegmentControl`
+- `AlwaysOriginal`-이미지를 변경 하지 않고 원래 원본 이미지 파일로 렌더링 합니다.
+- `AlwaysTemplate`-지정 된 색으로 픽셀의 색을 지정 `Tint` 하 여 이미지가 템플릿 이미지로 렌더링 되도록 합니다.
+- `Automatic`-이미지를 템플릿 또는 원본으로 사용 되는 환경을 기반으로 렌더링 합니다. 예를 `UIToolBar`들어, `UITabBar` 또는 `UINavigationBar` 에서이미지를사용하는경우에는템플릿으로처리됩니다.`UISegmentControl`
 
 ## <a name="adding-new-assets-collections"></a>새 자산 컬렉션 추가
 

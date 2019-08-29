@@ -7,19 +7,19 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5138062cec6ee71f1db17d0118001b59dd7bc02c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 58250770b925c20b912b71e5591b1d0e252c801a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642953"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119033"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
 2\.10 Xamarin.ios에서 여러 macOS 확장 점에 대 한 지원이 추가 되었습니다.
 
 - Finder
-- Share
+- 공유
 - 오늘
 
 <a name="Limitations-and-Known-Issues" />
@@ -28,9 +28,9 @@ ms.locfileid: "68642953"
 
 다음은 Xamarin.ios에서 확장을 개발할 때 발생할 수 있는 제한 사항 및 알려진 문제입니다.
 
-* 현재 Mac용 Visual Studio에는 디버깅을 지원 하지 않습니다. 모든 디버깅은 **Nslog** 및 **콘솔**을 통해 수행 해야 합니다. 자세한 내용은 아래의 팁 섹션을 참조 하십시오.
-* 확장은 호스트 응용 프로그램에 포함 되어야 하며,이 응용 프로그램은 시스템에 등록 하 여 한 번 실행 될 때 사용할 수 있습니다. 그런 다음 **시스템 기본 설정**의 **확장** 섹션에서 사용 하도록 설정 해야 합니다. 
-* 일부 확장 작동이 중단 되 면 호스트 응용 프로그램이 불안정 해질 수 있으며 이상한 동작이 발생할 수 있습니다. 특히 **알림 센터** 의 **Finder** 및 **Today** 섹션은 "걸린" 상태가 되 고 응답 하지 않게 될 수 있습니다. 이는 Xcode의 확장 프로젝트 에서도 발생 했으며 현재 Xamarin.ios와 관련이 없는 것으로 나타납니다. 시스템 로그에 표시 되는 경우가 종종 있습니다. ( **콘솔**을 통해 자세한 내용을 보려면 팁 참조) 반복 된 오류 메시지를 인쇄 합니다. MacOS를 다시 시작 하면이 문제를 해결할 수 있습니다.
+- 현재 Mac용 Visual Studio에는 디버깅을 지원 하지 않습니다. 모든 디버깅은 **Nslog** 및 **콘솔**을 통해 수행 해야 합니다. 자세한 내용은 아래의 팁 섹션을 참조 하십시오.
+- 확장은 호스트 응용 프로그램에 포함 되어야 하며,이 응용 프로그램은 시스템에 등록 하 여 한 번 실행 될 때 사용할 수 있습니다. 그런 다음 **시스템 기본 설정**의 **확장** 섹션에서 사용 하도록 설정 해야 합니다. 
+- 일부 확장 작동이 중단 되 면 호스트 응용 프로그램이 불안정 해질 수 있으며 이상한 동작이 발생할 수 있습니다. 특히 **알림 센터** 의 **Finder** 및 **Today** 섹션은 "걸린" 상태가 되 고 응답 하지 않게 될 수 있습니다. 이는 Xcode의 확장 프로젝트 에서도 발생 했으며 현재 Xamarin.ios와 관련이 없는 것으로 나타납니다. 시스템 로그에 표시 되는 경우가 종종 있습니다. ( **콘솔**을 통해 자세한 내용을 보려면 팁 참조) 반복 된 오류 메시지를 인쇄 합니다. MacOS를 다시 시작 하면이 문제를 해결할 수 있습니다.
 
 <a name="Tips" />
 

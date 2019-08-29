@@ -6,12 +6,12 @@ ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 21f61b4504367dafc2907fd6471af333f636b521
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 3701a2a111c5c18f694def241b1e888fa6f4ce19
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889396"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120326"
 ---
 # <a name="known-issues--workarounds"></a>알려진 문제 & 해결 방법
 
@@ -21,20 +21,20 @@ Mono `System.Threading.CurrentThread.CurrentCulture` 의 `System.Globalization.C
 
 ### <a name="workarounds"></a>해결 방법
 
-* 응용 프로그램 도메인 로컬 `DefaultThreadCurrentCulture`을 설정 합니다.
+- 응용 프로그램 도메인 로컬 `DefaultThreadCurrentCulture`을 설정 합니다.
 
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* 또는에 `System.Threading.CurrentThread.CurrentCulture` 할당을 다시 작성 하 고 `System.Globalization.CultureInfo.CurrentCulture` 원하는 동작 (Mono 버그를 해결 하는)을 제공 하는 통합 문서 1.2.1 이상으로 업데이트 합니다.
+- 또는에 `System.Threading.CurrentThread.CurrentCulture` 할당을 다시 작성 하 고 `System.Globalization.CultureInfo.CurrentCulture` 원하는 동작 (Mono 버그를 해결 하는)을 제공 하는 통합 문서 1.2.1 이상으로 업데이트 합니다.
 
 ## <a name="unable-to-use-newtonsoftjson"></a>Newtonsoft.json를 사용할 수 없습니다.
 
 ### <a name="workaround"></a>해결 방법
 
-* Newtonsoft.json 9.0.1를 설치 하는 통합 문서 1.2.1로 업데이트 합니다.
+- Newtonsoft.json 9.0.1를 설치 하는 통합 문서 1.2.1로 업데이트 합니다.
   현재 알파 채널의 1.3 통합 문서는 버전 10 이상을 지원 합니다.
 
 ### <a name="details"></a>세부 정보
@@ -51,9 +51,9 @@ Mac 통합 문서 앱에서 사용 되는 Safari/WebKit의 [모나코 편집기�
 
 ### <a name="workaround"></a>해결 방법
 
-* 표시 되 면 도구 설명을 클릭 하면 텍스트가 렌더링 됩니다.
+- 표시 되 면 도구 설명을 클릭 하면 텍스트가 렌더링 됩니다.
 
-* 또는 통합 문서 1.2.1 이상으로 업데이트
+- 또는 통합 문서 1.2.1 이상으로 업데이트
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
@@ -64,7 +64,7 @@ Mac 통합 문서 앱에서 사용 되는 Safari/WebKit의 [모나코 편집기�
 
 ### <a name="workaround"></a>해결 방법
 
-* SkiaSharp를 NuGet의 최신 버전으로 업데이트 합니다. 이 문서를 작성할 당시에는 1.57.1입니다.
+- SkiaSharp를 NuGet의 최신 버전으로 업데이트 합니다. 이 문서를 작성할 당시에는 1.57.1입니다.
 
 ## <a name="related-links"></a>관련 링크
 

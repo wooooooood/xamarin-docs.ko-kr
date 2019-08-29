@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e8113a9cefad5f53b66595728340f71101faa9de
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: b8ffeb996783d7a3b1a385265b14f37f36126e8f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065571"
+ms.locfileid: "70119058"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Xamarin.ios에서 경고 표시
 
@@ -23,16 +23,16 @@ UIView의 서브 클래스인 대체 된 클래스와 달리 UIAlertController�
 표시할 `UIAlertControllerStyle` 경고 유형을 나타내는 데 사용 합니다. 이러한 경고 유형은 다음과 같습니다.
 
 - **UIAlertControllerStyleActionSheet**
-  * IOS 이전 8이이는 UIActionSheet.
+  - IOS 이전 8이이는 UIActionSheet.
 - **UIAlertControllerStyleAlert**
-  * IOS 이전 8입니다. 이것은 UIAlertView입니다. 
+  - IOS 이전 8입니다. 이것은 UIAlertView입니다. 
 
 경고 컨트롤러를 만들 때 수행 해야 하는 세 가지 단계가 있습니다.
 
 - 다음을 사용 하 여 경고를 만들고 구성 합니다.
-  * title
-  * message
-  * preferredStyle
+  - title
+  - message
+  - preferredStyle
 
 - 필드 텍스트 필드 추가
 - 필요한 작업 추가

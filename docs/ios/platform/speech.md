@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fe871985700c5a40db2736ded78588b0b7d4f616
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655398"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121282"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.ios의 음성 인식
 
@@ -89,8 +89,8 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 - 키를 `Info.plist` `NSSpeechRecognitionUsageDescription` 사용 하 여 앱의 파일에 사용 설명을 제공 합니다. 예를 들어 카메라 앱에는 다음 설명이 포함 될 수 있습니다 _. "이를 통해 ' 치즈 ' 라는 단어를 말하여 사진을 가져올 수 있습니다."_
 - 응용 프로그램에서 대화 상자 `SFSpeechRecognizer.RequestAuthorization` 에 있는 사용자에 대 한 음성 인식을 인식 `NSSpeechRecognitionUsageDescription` 하 고 허용 또는 거부 하는 이유에 대 한 설명을 제공 하기 위해 메서드를 호출 하 여 권한 부여를 요청 합니다.
 - 음성 인식 요청을 만듭니다.
-    * 디스크에 미리 기록 된 `SFSpeechURLRecognitionRequest` 오디오의 경우 클래스를 사용 합니다.
-    * 라이브 오디오 (또는 메모리의 오디오)의 경우 `SFSPeechAudioBufferRecognitionRequest` 클래스를 사용 합니다.
+    - 디스크에 미리 기록 된 `SFSpeechURLRecognitionRequest` 오디오의 경우 클래스를 사용 합니다.
+    - 라이브 오디오 (또는 메모리의 오디오)의 경우 `SFSPeechAudioBufferRecognitionRequest` 클래스를 사용 합니다.
 - 음성 인식 요청을 음성 인식기 (`SFSpeechRecognizer`)에 전달 하 여 인식을 시작 합니다. 앱은 선택적으로 반환 `SFSpeechRecognitionTask` 된을 포함 하 여 인식 결과를 모니터링 하 고 추적할 수 있습니다.
 
 이러한 단계는 아래에 자세히 설명 되어 있습니다.
@@ -105,7 +105,7 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 2. **원본** 뷰로 전환 합니다. 
 
     [![](speech-images/speech02.png "원본 뷰")](speech-images/speech02.png#lightbox)
-3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
 
     [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
 4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
@@ -119,7 +119,7 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 2. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
 
     [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
-3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
 
     [![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.

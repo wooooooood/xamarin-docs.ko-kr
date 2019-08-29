@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
-ms.openlocfilehash: c2092cd9e7beb233c9478869ebff91d85b5b30c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c2747b24c47e826e0d832faa36ddb93d8aa06f37
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649614"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121515"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Xamarin.ios의 CoreML 소개
 
@@ -171,11 +171,11 @@ void HandleClassification(VNRequest request, NSError error){
 
 다음 세 가지 CoreML 샘플이 있습니다.
 
-* [Mars Habitat Price 예측 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) 은 간단한 숫자 입력 및 출력을 포함 합니다.
+- [Mars Habitat Price 예측 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) 은 간단한 숫자 입력 및 출력을 포함 합니다.
 
-* [비전 & coreml 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) 은 이미지 매개 변수를 수락 하 고, 비전 프레임 워크를 사용 하 여 이미지의 사각형 영역을 식별 하며,이는 단일 숫자를 인식 하는 coreml 모델에 전달 됩니다.
+- [비전 & coreml 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) 은 이미지 매개 변수를 수락 하 고, 비전 프레임 워크를 사용 하 여 이미지의 사각형 영역을 식별 하며,이는 단일 숫자를 인식 하는 coreml 모델에 전달 됩니다.
 
-* 마지막으로 [Coreml 이미지 인식 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) 은 coreml를 사용 하 여 사진의 기능을 식별 합니다. 기본적으로 더 작은 5MB ( **SqueezeNet** model)를 사용 하지만, 더 큰 **VGG16** 모델 (553MB)을 다운로드 하 여 통합할 수 있도록 작성 되었습니다. 자세한 내용은 [샘플의 추가](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md)정보를 참조 하세요.
+- 마지막으로 [Coreml 이미지 인식 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) 은 coreml를 사용 하 여 사진의 기능을 식별 합니다. 기본적으로 더 작은 5MB ( **SqueezeNet** model)를 사용 하지만, 더 큰 **VGG16** 모델 (553MB)을 다운로드 하 여 통합할 수 있도록 작성 되었습니다. 자세한 내용은 [샘플의 추가](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md)정보를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

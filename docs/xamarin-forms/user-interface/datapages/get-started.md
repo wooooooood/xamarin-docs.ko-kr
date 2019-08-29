@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d47a8d4a0fa72cee59a054554e9868f20323d00b
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: e6f26fb96c0a538543c8e0b0574461ea99709631
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980783"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119485"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -31,9 +31,9 @@ DataPages 미리 보기를 사용 하 여 간단한 데이터 기반 페이지�
 
 Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트에 이러한 Nuget 패키지를 추가 합니다.
 
-* Xamarin.Forms.Pages
-* Xamarin.Forms.Theme.Base
-* 테마 구현 (예: Nuget Xamarin.Forms.Theme.Light)
+- Xamarin.Forms.Pages
+- Xamarin.Forms.Theme.Base
+- 테마 구현 (예: Nuget Xamarin.Forms.Theme.Light)
 
 ## <a name="2-add-theme-reference"></a>2. 테마 참조를 추가 합니다.
 

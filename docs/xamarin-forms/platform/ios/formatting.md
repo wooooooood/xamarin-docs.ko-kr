@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2016
-ms.openlocfilehash: 22efd672c041ad84488f822ac2e7e51a80ea2b61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: be353c6274dcf69946740e2d195b9e4d64208313
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655323"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121566"
 ---
 # <a name="adding-ios-specific-formatting"></a>IOS 특정 형식 추가
 
@@ -20,8 +20,8 @@ IOS 관련 형식을 설정 하는 한 가지 방법은 컨트롤에 대 한 [�
 
 Xamarin.ios iOS 앱의 모양을 제어 하는 다른 옵션은 다음과 같습니다.
 
-* Info.plist에서 표시 옵션을 구성 하는 중 [ **입니다.** ](#info-plist)
-* [ `UIAppearance` API를 통해 컨트롤 스타일 설정](#uiappearance)
+- Info.plist에서 표시 옵션을 구성 하는 중 [ **입니다.** ](#info-plist)
+- [ `UIAppearance` API를 통해 컨트롤 스타일 설정](#uiappearance)
 
 이러한 대안은 아래에 설명 되어 있습니다.
 

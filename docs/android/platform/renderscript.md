@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 9f15ef73e51a2e94e1a1174134f3e69d2cb2c4a3
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 14fb3740f558b006d507ff6875fd2cfc81a04298
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511435"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119731"
 ---
 # <a name="an-introduction-to-renderscript"></a>Renderscript 소개
 
@@ -22,11 +22,11 @@ _이 가이드에서는 Renderscript를 소개 하 고 API 레벨 17 이상을 �
 
 Renderscript는 광범위 한 계산 리소스를 필요로 하는 Android 응용 프로그램의 성능을 향상 시키기 위해 Google에서 만든 프로그래밍 프레임 워크입니다. [C99](https://en.wikipedia.org/wiki/C99)을 기반으로 하는 낮은 수준의 고성능 API입니다. Cpu, Gpu 또는 Dsp에서 실행 되는 하위 수준 API 이므로 Renderscript는 다음 작업을 수행 해야 할 수 있는 Android 앱에 적합 합니다.
 
-* 그래픽
-* 이미지 처리
-* 암호화
-* 신호 처리
-* 수학 루틴
+- 그래픽
+- 이미지 처리
+- 암호화
+- 신호 처리
+- 수학 루틴
 
 Renderscript는 apk에 번들로 제공 되는 바이트 코드를 LLVM 스크립트를 사용 `clang` 하 고 컴파일합니다. 앱이 처음으로 실행 될 때 LLVM 바이트 코드는 장치의 프로세서에 대 한 기계어 코드로 컴파일됩니다. 이 아키텍처를 통해 Android 응용 프로그램은 개발자가 장치 자체의 각 프로세서에 대 한 코드를 작성 하지 않고도 컴퓨터 코드의 이점을 활용할 수 있습니다.
 

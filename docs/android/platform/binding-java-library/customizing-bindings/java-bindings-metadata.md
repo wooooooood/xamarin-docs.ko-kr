@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 05b8be21373930ae2b501c84757b7be11f794aa9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524613"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119849"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
@@ -79,9 +79,9 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 이미 학습 한 대로 바인딩 생성기에서 파일 **메타 데이터** 를 사용 하 여 바인딩 어셈블리 생성에 영향을 줍니다.
 메타 데이터 형식은 [XPath](https://www.w3.org/TR/xpath/) 구문을 사용 하며, [gapi 메타 데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) 가이드에 설명 된 *gapi 메타 데이터* 와 거의 동일 합니다. 이 구현은 거의 완전 한 XPath 1.0 구현 이며, 따라서 1.0 표준의 항목을 지원 합니다. 이 파일은 API 파일의 요소나 특성을 변경, 추가, 숨기기 또는 이동 하는 강력한 XPath 기반 메커니즘입니다. 메타 데이터 사양의 모든 rule 요소에는 규칙이 적용 되는 노드를 식별 하는 경로 특성이 포함 됩니다. 규칙은 다음 순서로 적용 됩니다.
 
-* **노드 추가** &ndash; Path 특성으로 지정 된 노드에 자식 노드를 추가 합니다.
-* **attr** &ndash; Path 특성에 지정 된 요소의 특성 값을 설정 합니다.
-* **노드 제거** &ndash; 지정 된 XPath와 일치 하는 노드를 제거 합니다.
+- **노드 추가** &ndash; Path 특성으로 지정 된 노드에 자식 노드를 추가 합니다.
+- **attr** &ndash; Path 특성에 지정 된 요소의 특성 값을 설정 합니다.
+- **노드 제거** &ndash; 지정 된 XPath와 일치 하는 노드를 제거 합니다.
 
 다음은 **메타 데이터 .xml** 파일의 예입니다.
 
@@ -248,8 +248,8 @@ NavigationManager.2DSignNextManueverEventArgs
 
 Java 라이브러리를 난독 처리 하는 도구는 Xamarin Android 바인딩 생성기 및 래퍼 클래스 생성 C# 기능을 방해할 수 있습니다. 난독 처리 된 클래스의 특징은 다음과 같습니다. 
 
-* 클래스 이름에는 **$** 가 포함 됩니다 (예: **$. class** ).
-* 클래스 이름은 소문자 (예: **클래스** )로 완전히 손상 됩니다.
+- 클래스 이름에는 **$** 가 포함 됩니다 (예: **$. class** ).
+- 클래스 이름은 소문자 (예: **클래스** )로 완전히 손상 됩니다.
 
 이 코드 조각은 "난독 처리 되지 않은" C# 형식을 생성 하는 방법의 예입니다.
 

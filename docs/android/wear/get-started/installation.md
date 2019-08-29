@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 1f6fa57bbe47bbc2fe97bbd0df7018fc1cd3897a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d85c199f6243fc49c1ca924bbd60cfef48b6d91f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522173"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120000"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -63,9 +63,9 @@ Xamarin.ios를 설치한 후 다음 단계를 수행 하 여 Android 앱을 빌�
 
 다음 Android SDK 및 도구가 설치 되어 있는지 확인 합니다.
 
-* Android SDK Tools v 24.0.0 이상
-* Android 4.4 W (API20) 또는
-* Android 5.0.1 용 (API21) 이상.
+- Android SDK Tools v 24.0.0 이상
+- Android 4.4 W (API20) 또는
+- Android 5.0.1 용 (API21) 이상.
 
 최신 sdk 및 도구를 설치 하지 않은 경우 필요한 sdk 도구 *및* api 비트를 다운로드 합니다 (아래에 api 선택이 표시 되어 있는지 확인 &ndash; 하려면 약간 스크롤해야 할 수 있음). 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b865f08c9f6506996b5303bb80677977f1d0fa21
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643559"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119518"
 ---
 # <a name="fingerprint-authentication"></a>지문 인증
 
@@ -27,9 +27,9 @@ FingerprintManager Api는 지문 스캐너를 사용 하 여 장치를 대상으
 
 [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (및 해당 지원 라이브러리 대응, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html))은 지문 검사 하드웨어를 사용 하기 위한 기본 클래스입니다. 이 클래스는 하드웨어 자체와의 상호 작용을 관리 하는 시스템 수준 서비스 주위의 Android SDK 래퍼입니다. 이는 지문 스캐너를 시작 하 고 스캐너에서 피드백에 응답 하는 일을 담당 합니다. 이 클래스에는 다음과 같은 세 개의 멤버만 있는 매우 간단한 인터페이스가 있습니다.
 
-* **`Authenticate`** &ndash; 이 메서드는 하드웨어 스캐너를 초기화 하 고 백그라운드에서 서비스를 시작 하 여 사용자가 지문을 검색할 때까지 대기 합니다.
-* **`EnrolledFingerprints`** 사용자가 하나 이상의 `true` 지문을 장치에 등록 한 경우이 속성은를 반환 합니다. &ndash;
-* **`HardwareDetected`** &ndash; 이 속성은 장치에서 지문 검색을 지원 하는지 여부를 확인 하는 데 사용 됩니다.
+- **`Authenticate`** &ndash; 이 메서드는 하드웨어 스캐너를 초기화 하 고 백그라운드에서 서비스를 시작 하 여 사용자가 지문을 검색할 때까지 대기 합니다.
+- **`EnrolledFingerprints`** 사용자가 하나 이상의 `true` 지문을 장치에 등록 한 경우이 속성은를 반환 합니다. &ndash;
+- **`HardwareDetected`** &ndash; 이 속성은 장치에서 지문 검색을 지원 하는지 여부를 확인 하는 데 사용 됩니다.
 
 메서드 `FingerprintManager.Authenticate` 는 Android 응용 프로그램에서 지문 스캐너를 시작 하는 데 사용 됩니다. 다음 코드 조각은 지원 라이브러리 호환성 Api를 사용 하 여 호출 하는 방법의 예입니다.
 

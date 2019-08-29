@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 886a6145851720c088e39818b3a6e42a7b66e4bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eaae0859ddce1c7601b0429381c8643c0884c3ac
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654399"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121388"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -78,8 +78,8 @@ Apple에는 iOS 9의 Foundation framework에 대 한 다음과 같은 변경 내
 
 IOS 9에 대 한 [Nsbundle](xref:Foundation.NSBundle) 클래스가 다음과 같이 변경 되었습니다.
 
-* `GetPreservationPriorityForTag (NSString tag)`-지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 가져옵니다. 유효한 값의 범위 `0.0` `1.0`에는 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
-* `SetPreservationPriorityForTag (double priority, NSSet tags)`-지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 설정 합니다. 유효한 값의 범위 `0.0` `1.0`에는 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
+- `GetPreservationPriorityForTag (NSString tag)`-지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 가져옵니다. 유효한 값의 범위 `0.0` `1.0`에는 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)`-지정 된 태그를 사용 하 여 리소스에 대 한 현재 유지 우선 순위를 설정 합니다. 유효한 값의 범위 `0.0` `1.0`에는 우선 순위가 가장 낮은 리소스가 먼저 제거 됩니다.
 
 자세한 내용은 Apple의 [Nsbundle 참조](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)를 참조 하세요.
 

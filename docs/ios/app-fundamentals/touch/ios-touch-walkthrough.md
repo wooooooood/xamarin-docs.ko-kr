@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1e1bba499a14b92965a5fb544ccf321b0e453894
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: bd6f40a117734712941585b6ce0d630105e54693
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065447"
+ms.locfileid: "70121036"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.ios에서 Touch 사용
 
@@ -96,9 +96,9 @@ ms.locfileid: "70065447"
     
     이 메서드는 `UITouch` 개체를 확인 하 고 존재 하는 경우 터치가 발생 한 위치에 따라 동작을 수행 합니다.
 
-    * _TouchImage 내부_ – 레이블에 텍스트 `Touches Began` 를 표시 하 고 이미지를 변경 합니다.
-    * _DoubleTouchImage 내부_ – 제스처가 두 번 누르기로 면 표시 되는 이미지를 변경 합니다.
-    * _DragImage 내부_ – 터치가 시작 되었음을 나타내는 플래그를 설정 합니다. 이 메서드 `TouchesMoved` 는 다음 단계에서 볼 수 있듯이 `DragImage` 이 플래그를 사용 하 여가 화면 주위에서 이동 해야 하는지 여부를 확인 합니다.
+    - _TouchImage 내부_ – 레이블에 텍스트 `Touches Began` 를 표시 하 고 이미지를 변경 합니다.
+    - _DoubleTouchImage 내부_ – 제스처가 두 번 누르기로 면 표시 되는 이미지를 변경 합니다.
+    - _DragImage 내부_ – 터치가 시작 되었음을 나타내는 플래그를 설정 합니다. 이 메서드 `TouchesMoved` 는 다음 단계에서 볼 수 있듯이 `DragImage` 이 플래그를 사용 하 여가 화면 주위에서 이동 해야 하는지 여부를 확인 합니다.
 
     위의 코드는 개별 접촉만 처리 하며 사용자가 화면에서 손가락을 이동 하는 경우에도 여전히 동작 하지 않습니다. 이동에 응답 하려면 아래 코드 `TouchesMoved` 와 같이을 구현 합니다.
 

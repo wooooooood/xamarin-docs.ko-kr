@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: b5ffa884def5acb01dc07ce39a2189e2570209c3
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620584"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120824"
 ---
 # <a name="table-views-in-xamarinmac"></a>Xamarin.ios의 테이블 뷰
 
@@ -40,8 +40,8 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 테이블 뷰를 만들 때 Apple에서는 다음을 제안 합니다.
 
-* 사용자가 열 머리글을 클릭 하 여 테이블을 정렬할 수 있습니다.
-* 해당 열에 표시 되는 데이터를 설명 하는 명사 또는 짧은 명사 구에 열 머리글을 만듭니다.
+- 사용자가 열 머리글을 클릭 하 여 테이블을 정렬할 수 있습니다.
+- 해당 열에 표시 되는 데이터를 설명 하는 명사 또는 짧은 명사 구에 열 머리글을 만듭니다.
 
 자세한 내용은 Apple [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)의 [콘텐츠 보기](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) 섹션을 참조 하세요.
 

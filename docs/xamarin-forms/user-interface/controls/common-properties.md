@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/21/2019
-ms.openlocfilehash: c487442af7df4e4b8dc8860dcea4cd6065087a7f
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
-ms.translationtype: HT
+ms.openlocfilehash: 6d10e665c6461655440ddfb2c524cb56a14337f6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/28/2019
-ms.locfileid: "70075659"
+ms.locfileid: "70121356"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.ios 공용 컨트롤 속성, 메서드 및 이벤트
 
@@ -80,11 +80,15 @@ Xamarin.ios `VisualElement` 클래스는 xamarin.ios 응용 프로그램에서 �
 
 ### [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest)
 
-속성은 원하는 컨트롤 `double` 의 최소 높이를 결정 하는 값입니다. `MinimumHeightRequest` 자세한 내용은 [요청 속성](#request-properties)을 참조 하세요.
+속성은 두 요소가 `double` 제한 된 공간에 대해 경쟁 하는 경우 오버플로를 처리 하는 방법을 결정 하는 값입니다. `MinimumHeightRequest` 속성을 `MinimumHeightRequest` 설정 하면 레이아웃 프로세스에서 요소를 요청 된 최소 차원까지 축소할 수 있습니다. 을 지정 `MinimumHeightRequest` 하지 않으면 기본값은-1이 고, 레이아웃 프로세스는를 최소값으로 `HeightRequest` 간주 합니다. 즉, 값이 없는 `MinimumHeightRequest` 요소는 확장 가능한 높이를 갖지 않습니다.
+
+자세한 내용은 [최소 요청 속성](#minimum-request-properties)을 참조 하세요.
 
 ### [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest)
 
-속성은 원하는 컨트롤 `double` 의 최소 너비를 결정 하는 값입니다. `MinimumWidthRequest` 자세한 내용은 [요청 속성](#request-properties)을 참조 하세요.
+속성은 두 요소가 `double` 제한 된 공간에 대해 경쟁 하는 경우 오버플로를 처리 하는 방법을 결정 하는 값입니다. `MinimumWidthRequest` 속성을 `MinimumWidthRequest` 설정 하면 레이아웃 프로세스에서 요소를 요청 된 최소 차원까지 축소할 수 있습니다. 을 지정 `MinimumWidthRequest` 하지 않으면 기본값은-1이 고, 레이아웃 프로세스는를 최소값으로 `WidthRequest` 간주 합니다. 즉, 값이 없는 `MinimumWidthRequest` 요소는 확장 가능한 너비를 갖지 않습니다.
+
+자세한 내용은 [최소 요청 속성](#minimum-request-properties)을 참조 하세요.
 
 ### [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity)
 
@@ -229,6 +233,35 @@ Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 �
 ## <a name="request-properties"></a>요청 속성
 
 이름에 "request"가 포함 된 속성은 실제 렌더링 된 값과 일치 하지 않을 수 있는 원하는 값을 정의 합니다. 예를 들어 `HeightRequest` ,가 150로 설정 되어 있지만 레이아웃에서 100 단위에 대 한 공간을 허용 하 `Height` 는 경우 컨트롤의 렌더링은 100만 됩니다. 렌더링 된 크기는 사용 가능한 공간 및 포함 된 구성 요소의 영향을 받습니다.
+
+## <a name="minimum-request-properties"></a>최소 요청 속성
+
+최소 요청 속성에 `MinimumHeightRequest` 는 `MinimumWidthRequest`및가 포함 되며,는 요소가 서로를 기준으로 오버플로를 처리 하는 방식을 보다 정확 하 게 제어할 수 있도록 하기 위한 것입니다. 그러나 이러한 속성과 관련 된 레이아웃 동작에는 몇 가지 중요 한 고려 사항이 있습니다.
+
+### <a name="unspecified-minimum-property-values"></a>지정 되지 않은 최소 속성 값
+
+최소값을 설정 하지 않으면 최소 속성의 기본값은-1입니다. 레이아웃 프로세스에서는이 값을 무시 하 고 절대 값을 최소값으로 간주 합니다. 이 동작의 실제 결과는 최소 값이 지정 되지 않은 요소가 축소 **되지** 않는 것입니다. 최소값이 지정 된 요소가 축소 **됩니다** .
+
+다음 XAML에서는 가로 `BoxView` `StackLayout`의 두 요소를 보여 줍니다.
+
+```xaml
+<StackLayout Orientation="Horizontal">
+    <BoxView HeightRequest="100" BackgroundColor="Purple" WidthRequest="500"></BoxView>
+    <BoxView HeightRequest="100" BackgroundColor="Green" WidthRequest="500" MinimumWidthRequest="250"></BoxView>
+</StackLayout>
+```
+
+첫 번째 `BoxView` 인스턴스는 500의 너비를 요청 하 고 최소 너비를 지정 하지 않습니다. 두 번째 `BoxView` 인스턴스는 너비 500 및 최소 너비 250를 요청 합니다. 부모 `StackLayout` 요소의 너비가 요청 된 너비의 두 구성 요소를 모두 포함 하도록 충분 하지 않은 경우 첫 `BoxView` 번째 인스턴스는 지정 된 다른 최소값이 없으므로 레이아웃 프로세스에서 최소 너비 500을 갖는 것으로 간주 됩니다. 두 번째 `BoxView` 인스턴스는 250로 축소 될 수 있으며 너비가 250 단위까지 감소할 수 있습니다.
+
+첫 번째 `BoxView` 인스턴스가 최소 너비로 `MinimumWidthRequest` 축소 되도록 하려면 원하는 동작을 0과 같은 유효한 값으로 설정 해야 합니다.
+
+### <a name="minimum-and-absolute-property-values"></a>최소 및 절대 속성 값
+
+최소값이 절대값 보다 크면 동작이 정의 되지 않습니다. 예를 들어가 `MinimumWidthRequest` 100로 설정 된 경우 속성 `WidthRequest` 은 100을 초과 하면 안 됩니다. 최소 속성 값을 지정 하는 경우 절대 값이 최소값 보다 큰지 항상 절대값을 지정 해야 합니다.
+
+### <a name="minimum-properties-within-a-grid"></a>그리드 내의 최소 속성
+
+`Grid`레이아웃에는 행과 열의 상대적인 크기 조정을 위한 고유한 시스템이 있습니다. 레이아웃 내 `MinimumHeightRequest` 에서 `MinimumWidthRequest` 또는를 사용 하면 효과가 없습니다. `Grid` 자세한 내용은 [Xamarin.ios 표](~/xamarin-forms/user-interface/layouts/grid.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

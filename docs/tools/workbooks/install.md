@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: d94a14bcd1486b7b64e9ce6d9fee6d36406b2710
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dd1e0838fbd3c3606021ddc996bf94cabc084f77
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511849"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119989"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 문서 설치 및 요구 사항
 
@@ -78,7 +78,7 @@ ms.locfileid: "68511849"
 
 통합 문서의 주 메뉴에서 다음을 수행 합니다.
 
-* **버전 정보를 복사 > 도움말**
+- **버전 정보를 복사 > 도움말**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>통합 문서 1.3 및 이전 버전에 대 한 지침:
 
@@ -96,7 +96,7 @@ Visual Studio
 
 문제가 있는 **통합 문서** 파일에 연결 하거나 연결할 수 있는 경우 버그를 보다 신속 하 게 해결 하는 데 도움이 될 수 있습니다.
 
-### <a name="devices"></a>디바이스
+### <a name="devices"></a>장치
 
 IOS 또는 Android 통합 문서를 연결 하는 데 문제가 있고 [문제 해결 페이지](~/tools/workbooks/troubleshooting/index.md)를 이미 확인 한 경우 다음 사항을 알고 있어야 합니다.
 

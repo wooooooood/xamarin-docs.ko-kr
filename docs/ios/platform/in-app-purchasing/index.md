@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 2445645012e54b1818b1ec72116a85d8b985ead3
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 2e429002923d4bfdd2cf5ded4ef1508f8ebf20b8
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976465"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121507"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Xamarin.ios의 앱 내 구매
 
@@ -34,17 +34,17 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 
 ## <a name="contents"></a>목차
 
-* [앱에서 바로 구매 기본 사항 및 구성](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+- [앱에서 바로 구매 기본 사항 및 구성](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
-* [보관 키트 개요 및 제품 정보 검색](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+- [보관 키트 개요 및 제품 정보 검색](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
-* [소모성 제품 구매](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+- [소모성 제품 구매](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
-* [영구 제품 구매](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+- [영구 제품 구매](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
-* [트랜잭션 및 확인](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+- [트랜잭션 및 확인](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
-* [구독 및 보고](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+- [구독 및 보고](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## <a name="summary"></a>요약
 

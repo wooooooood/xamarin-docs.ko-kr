@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: 0f20e7dafaa855e3610595886537ee4910b09d2e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dd712940ff6e7000ffd9181f808a8ab32093b38d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643057"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121470"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.ios의 응용 프로그램 아이콘
 
 다음 항목에 대해 자세히 설명합니다.
 
-* [응용 프로그램, 스포트라이트 및 설정 아이콘](#icon-types) -iOS 앱에 필요한 여러 종류의 아이콘이 있습니다.
-* [자산 카탈로그를](#managing) 사용 하 여 아이콘 관리-자산 카탈로그를 사용 하 여 응용 프로그램 아이콘 관리
-* [ITunes 아트 워크](#itunes) -응용 프로그램을 제공 하는 임시 방법에 필요한 ITunes 아트 워크를 제공 합니다.
+- [응용 프로그램, 스포트라이트 및 설정 아이콘](#icon-types) -iOS 앱에 필요한 여러 종류의 아이콘이 있습니다.
+- [자산 카탈로그를](#managing) 사용 하 여 아이콘 관리-자산 카탈로그를 사용 하 여 응용 프로그램 아이콘 관리
+- [ITunes 아트 워크](#itunes) -응용 프로그램을 제공 하는 임시 방법에 필요한 ITunes 아트 워크를 제공 합니다.
 
 <a name="icon-types" />
 

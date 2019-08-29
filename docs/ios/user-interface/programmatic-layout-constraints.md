@@ -1,55 +1,55 @@
 ---
-title: Xamarin.iOS에서 프로그래밍 레이아웃 제약 조건
-description: 이 가이드에서는 제공 iOS 사용 하 여 작업에 자동 레이아웃 제약 조건 C# iOS 디자이너에서에서 만드는 대신 코드입니다.
+title: Xamarin.ios의 프로그래밍 레이아웃 제약 조건
+description: 이 가이드에서는 ios 디자이너에서 iOS 자동 레이아웃 제약 C# 조건을 만드는 대신 코드에서 작업을 수행 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 089ada051b6780a15acfcdd7f9e32ddda1384d05
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: c26e064a32762dcb1d088e614830a7a9632f9b1b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832044"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120732"
 ---
-# <a name="programmatic-layout-constraints-in-xamarinios"></a>Xamarin.iOS에서 프로그래밍 레이아웃 제약 조건
+# <a name="programmatic-layout-constraints-in-xamarinios"></a>Xamarin.ios의 프로그래밍 레이아웃 제약 조건
 
-_이 가이드에서는 제공 iOS 사용 하 여 작업에 자동 레이아웃 제약 조건 C# iOS 디자이너에서에서 만드는 대신 코드입니다._
+_이 가이드에서는 ios 디자이너에서 iOS 자동 레이아웃 제약 C# 조건을 만드는 대신 코드에서 작업을 수행 하는 방법을 보여 줍니다._
 
-반응 형 디자인 방식은 자동 레이아웃 ("적응 레이아웃"이 라고도 함)입니다. 에 대 한 자동 레이아웃은 전환 레이아웃 시스템에 있는 각 요소의 위치를 화면에서 지점으로 하드 코딩 된 달리 *관계* -디자인 화면의 다른 요소를 기준으로 요소의 위치입니다. 자동 레이아웃의 핵심은 제약 조건 또는 화면의 다른 요소의 컨텍스트에서 요소 배치 또는 요소 집합을 정의 하는 규칙의 개념입니다. 요소 화면에서 특정 위치에 고정 되지 않은, 때문에 다양 한 화면 크기 및 장치 방향에서 보기 좋게 적응 레이아웃을 만들 제약 조건 도움말입니다.
+자동 레이아웃 ("적응 레이아웃"이 라고도 함)은 응답성이 뛰어난 디자인 방법입니다. 각 요소의 위치가 화면의 점으로 하드 코딩 되는 전환 레이아웃 시스템과 달리 자동 레이아웃은 디자인 화면에서 다른 요소를 기준으로 하는 요소의 위치와 *관계* 에 대 한 것입니다. 자동 레이아웃의 핵심은 화면에 있는 다른 요소의 컨텍스트에서 요소나 요소의 집합을 정의 하는 제약 조건이 나 규칙의 개념입니다. 요소가 화면에서 특정 위치에 연결 되어 있지 않기 때문에 제약 조건을 통해 다양 한 화면 크기 및 장치 방향에 적합 한 적응 레이아웃을 만들 수 있습니다.
 
-일반적으로 자동 레이아웃 ios에서에서 작업할 때 사용 하 여 iOS 디자이너 UI 항목에 대 한 레이아웃 제약 조건을 그래픽으로 배치 합니다. 그러나 경우도 만들고 제약 조건을 적용 해야 할 때 C# 코드입니다. 예를 들어 동적으로 사용 하 여 만들 때 추가 UI 요소를 `UIView`입니다.
+일반적으로 iOS에서 자동 레이아웃으로 작업할 때 iOS 디자이너를 사용 하 여 UI 항목에 레이아웃 제약 조건을 그래픽으로 배치 합니다. 그러나 코드에서 C# 제약 조건을 만들고 적용 해야 하는 경우가 있을 수 있습니다. 예를 들어 동적으로 생성 된 UI 요소를에 추가 `UIView`하는 경우입니다.
 
-이 가이드를 만들고 사용 하 여 제약 조건으로 작업 하는 방법을 보여는 C# iOS 디자이너에서에서 그래픽 방식으로 만드는 대신 코드입니다.
+이 가이드에서는 iOS 디자이너에서 그래픽을 만드는 대신 코드를 사용 C# 하 여 제약 조건을 만들고 작업 하는 방법을 보여 줍니다.
 
 <a name="Creating-Constraints-Programmatically" />
 
-## <a name="creating-constraints-programmatically"></a>제약 조건을 프로그래밍 방식으로 만들기
+## <a name="creating-constraints-programmatically"></a>프로그래밍 방식으로 제약 조건 만들기
 
-위에서 설명한 대로 일반적으로에서는 사용 하 게 자동 레이아웃 제약 조건을 사용 하 여 iOS 디자이너. 제약 조건을 프로그래밍 방식으로 만들 필요가 있는 해당 시간에 세 가지 옵션을 선택 해야 합니다.
+위에서 설명한 것 처럼 일반적으로 iOS 디자이너에서 자동 레이아웃 제약 조건을 사용 합니다. 제약 조건을 프로그래밍 방식으로 만들어야 하는 경우 다음 세 가지 옵션 중에서 선택할 수 있습니다.
 
-* [레이아웃 앵커](#Layout-Anchors) -이 API는 앵커 속성에 대 한 액세스를 제공 (같은 `TopAnchor`를 `BottomAnchor` 또는 `HeightAnchor`) 제한 되 고 UI 항목의 합니다.
-* [레이아웃 제약 조건](#Layout-Constraints) -제약 조건을 사용 하 여 직접 만들 수 있습니다는 `NSLayoutConstraint` 클래스입니다.
-* [시각적 서식 지정 언어](#Visual-Format-Language) -ASCII 정교한 작업에서 제약 조건을 정의 하는 방법 등을 제공 합니다.
+- [레이아웃 앵커](#Layout-Anchors) -이 API는 제한 되는 UI 항목의 앵커 속성 `TopAnchor`( `BottomAnchor` 예 `HeightAnchor`: 또는)에 대 한 액세스를 제공 합니다.
+- [레이아웃 제약 조건](#Layout-Constraints) -클래스를 `NSLayoutConstraint` 사용 하 여 직접 제약 조건을 만들 수 있습니다.
+- [시각적 서식 지정 언어](#Visual-Format-Language) -제약 조건을 정의 하는 메서드와 같은 ASCII 아트를 제공 합니다.
 
-다음 섹션에서는 각 옵션을 자세히 살펴봅니다.
+다음 섹션에서는 각 옵션을 자세히 설명 합니다.
 
 <a name="Layout-Anchors" />
 
 ### <a name="layout-anchors"></a>레이아웃 앵커
 
-사용 하 여는 `NSLayoutAnchor` 제한 되 고 UI 항목의 앵커 속성을 기반으로 하는 제약 조건을 만들기 위한 흐름 인터페이스 있는 클래스입니다. 예를 들어 뷰 컨트롤러의 위쪽과 아래쪽 레이아웃 안내선 노출 합니다 `TopAnchor`, `BottomAnchor` 및 `HeightAnchor` 뷰 가장자리, 가운데, 크기 및 기준 속성을 표시 하는 동안 속성을 고정 합니다.
+`NSLayoutAnchor` 클래스를 사용 하 여 제한 되는 UI 항목의 앵커 속성을 기반으로 제약 조건을 만들기 위한 흐름 인터페이스가 있습니다. 예를 들어 뷰 컨트롤러의 위쪽 및 아래쪽 레이아웃 안내선은 `TopAnchor`, `BottomAnchor` 및 `HeightAnchor` 앵커 속성을 노출 하는 반면 뷰는 가장자리, 가운데, 크기 및 기준 속성을 노출 합니다.
 
 > [!IMPORTANT]
-> 앵커 속성을 표준 집합 외에도 iOS 보기도 포함 합니다 `LayoutMarginsGuides` 및 `ReadableContentGuide` 속성입니다. 이러한 속성을 노출 `UILayoutGuide` 개체 뷰의 여백 및 읽을 수 있는 작업에 대 한 가이드를 각각 콘텐츠입니다.
+> 표준 앵커 속성 집합 외에도 iOS 보기에는 `LayoutMarginsGuides` 및 `ReadableContentGuide` 속성이 포함 됩니다. 이러한 속성은 `UILayoutGuide` 각각 보기의 여백 및 읽을 수 있는 콘텐츠 가이드를 사용 하기 위한 개체를 노출 합니다.
 
-레이아웃 앵커 읽기 쉽게 하 고 간단한 형식 제약 조건을 만들기 위한 여러 가지 방법을 제공 합니다.
+레이아웃 앵커는 읽기 쉬운 간단한 형식으로 제약 조건을 만들 수 있는 몇 가지 메서드를 제공 합니다.
 
-- **ConstraintEqualTo** -관계를 정의 합니다. 여기서 `first attribute = second attribute + [constant]` 필요에 따라 제공 된 `constant` 오프셋 값입니다.
-- **ConstraintGreaterThanOrEqualTo** -관계를 정의 합니다. 여기서 `first attribute >= second attribute + [constant]` 필요에 따라 제공 된 `constant` 오프셋 값입니다.
-- **ConstraintLessThanOrEqualTo** -관계를 정의 합니다. 여기서 `first attribute <= second attribute + [constant]` 필요에 따라 제공 된 `constant` 오프셋 값입니다.
+- **ConstraintEqualTo** -선택적으로 제공 되 `first attribute = second attribute + [constant]` `constant` 는 오프셋 값을 사용 하는 관계를 정의 합니다.
+- **ConstraintGreaterThanOrEqualTo** -선택적으로 제공 되 `first attribute >= second attribute + [constant]` `constant` 는 오프셋 값을 사용 하는 관계를 정의 합니다.
+- **ConstraintLessThanOrEqualTo** -선택적으로 제공 되 `first attribute <= second attribute + [constant]` `constant` 는 오프셋 값을 사용 하는 관계를 정의 합니다.
 
 예를 들어:
 
@@ -67,35 +67,35 @@ OrangeView.TrailingAnchor.ConstraintEqualTo (margins.TrailingAnchor).Active = tr
 OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 ```
 
-일반적인 레이아웃 제약 조건은 선형 식으로 간단히 표현할 수 있습니다. 다음 예제를 참조하세요.
+일반적인 레이아웃 제약 조건은 단지 선형 식으로 표현 될 수 있습니다. 다음 예제를 참조하세요.
 
 [![](programmatic-layout-constraints-images/graph01.png "선형 식으로 표현 되는 레이아웃 제약 조건")](programmatic-layout-constraints-images/graph01.png#lightbox)
 
-다음 줄으로 변환 됩니다는 C# 레이아웃 앵커를 사용 하 여 코드:
+레이아웃 앵커를 사용 하 여 다음 C# 코드 줄로 변환 됩니다.
 
 ```csharp
 PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Active = true; 
 ```
 
-여기서의 일부는 C# 코드 부분에 해당 하는 지정 된 수식의 같이:
+여기서 C# 코드 부분은 다음과 같이 수식의 지정 된 부분에 해당 합니다.
 
-|수식|코드|
+|인식|코드|
 |---|---|
 |항목 1|PurpleView|
 |특성 1|LeadingAnchor|
 |Relationship|ConstraintEqualTo|
-|승수|따라서 지정 되지 않은 1.0 기본값|
+|곱한|기본값은 1.0 이므로 지정 하지 않음|
 |항목 2|OrangeView|
 |특성 2|TrailingAnchor|
 |상수|10.0|
 
-지정 된 레이아웃 제약 조건 수식을 해결 하는 데 필요한 매개 변수만 제공 하는 것 외에도 각 레이아웃 앵커 메서드에 전달 된 매개 변수의 형식 안전성을 적용 합니다. 따라서 가로 제약 조건 같은 앵커 `LeadingAnchor` 또는 `TrailingAnchor` 에서만 사용할 수 있습니다 다른 가로 앵커를 사용 하 여 형식 및 승수만 제공 크기 제약 조건입니다.
+지정 된 레이아웃 제약 조건 수식을 해결 하는 데 필요한 매개 변수만 제공 하는 것 외에도 각 레이아웃 앵커 메서드는 전달 된 매개 변수의 형식 안전성을 적용 합니다. 따라서 또는 `LeadingAnchor` `TrailingAnchor` 와 같은 가로 제약 조건 앵커는 다른 수평선 앵커 유형에만 사용할 수 있으며, 승수는 크기 제약 조건에만 제공 됩니다.
 
 <a name="Layout-Constraints" />
 
 ### <a name="layout-constraints"></a>레이아웃 제약 조건
 
-직접 생성 하 여 자동 레이아웃 제약을 수동으로 추가할 수 있습니다는 `NSLayoutConstraint` 에서 C# 코드입니다. 레이아웃 앵커를 사용 하 여 달리 정의 되는 제약 조건에 영향을 주지는 해당 하는 경우에 모든 매개 변수에 대해 값을 지정 해야 합니다. 결과적으로, 하면 결국 상당한 읽기가 상용구 코드를 생성 합니다. 예:
+코드에서 `NSLayoutConstraint` C# 를 직접 구성 하 여 자동 레이아웃 제약 조건을 수동으로 추가할 수 있습니다. 레이아웃 앵커를 사용 하는 것과 달리 정의 되는 제약 조건에 영향을 주지 않는 경우에도 모든 매개 변수에 대 한 값을 지정 해야 합니다. 결과적으로 상당한 양의 코드를 읽을 수 있는 상용구 코드를 생성 하 게 됩니다. 예:
 
 ```csharp
 //// Pin the leading edge of the view to the margin
@@ -108,31 +108,31 @@ NSLayoutConstraint.Create (OrangeView, NSLayoutAttribute.Trailing, NSLayoutRelat
 NSLayoutConstraint.Create (OrangeView, NSLayoutAttribute.Height, NSLayoutRelation.Equal, OrangeView, NSLayoutAttribute.Width, 2.0f, 0.0f).Active = true;
 ```
 
-여기서는 `NSLayoutAttribute` enum 뷰의 여백 값을 정의 하 고 해당 하는 `LayoutMarginsGuide` 와 같은 속성 `Left`, `Right`를 `Top` 및 `Bottom` 및 `NSLayoutRelation` 관계를 정의 하는 열거형은 으로 지정 된 특성 간의 만들어집니다 `Equal`, `LessThanOrEqual` 또는 `GreaterThanOrEqual`합니다.
+여기서 열거형 `NSLayoutAttribute` 은 뷰의 여백 값을 정의 하 고 `Left`, `Top` `Right`및 `Bottom` 와 같은 `LayoutMarginsGuide` 속성에 해당 하며 열거형은 `NSLayoutRelation` 는 지정 된 특성 간에, `Equal` `LessThanOrEqual` 또는 `GreaterThanOrEqual`로 생성 됩니다.
 
-와 달리 레이아웃 앵커 API를 사용 하 여는 `NSLayoutConstraint` 생성 방법에 특정 제약 조건의 중요 한 측면을 강조 표시 되지 않습니다 되며 컴파일되지 않은 제약 조건에서 수행 되는 검사 시간입니다. 결과적으로, 런타임 시 예외가 발생 하는 잘못 된 제약 조건을 구성 하기 쉽습니다.
+레이아웃 앵커 API와 달리 생성 메서드는 `NSLayoutConstraint` 특정 제약 조건의 중요 한 측면을 강조 하지 않으며 제약 조건에 대해 수행 되는 컴파일 시간 검사는 없습니다. 따라서 런타임에 예외를 throw 하는 잘못 된 제약 조건을 쉽게 생성할 수 있습니다.
 
 <a name="Visual-Format-Language" />
 
-### <a name="visual-format-language"></a>시각적 형식으로 언어
+### <a name="visual-format-language"></a>시각적 서식 언어
 
-Visual 형식의 언어를 사용 하면 ASCII 아트가 만들어지는 제약 조건의 시각적 표현을 제공 하는 문자열 등을 사용 하 여 제약 조건을 정의할 수 있습니다. 여기에 다음과 같은 장점 및 단점이 있습니다.
+시각적 서식 언어를 사용 하면 생성 되는 제약 조건에 대 한 시각적 표현을 제공 하는 문자열과 같은 ASCII 아트를 사용 하 여 제약 조건을 정의할 수 있습니다. 여기에는 다음과 같은 장점과 단점이 있습니다.
 
-- 시각적 언어 형식을 유효한 제약 조건만 만들을 적용합니다.
-- 자동 레이아웃 제약 조건에 디버그 메시지는 코드와 유사 합니다 제약 조건을 만드는 데 Visual 언어 형식을 사용 하 여 콘솔에 출력 합니다.
-- Visual 형식의 언어를 사용 하면 매우 간단한 식 사용 하 여 동시에 여러 제약 조건을 만들 수 있습니다.
-- 시각적 형식 언어 문자열에 대 한 컴파일 쪽 유효성 이므로 문제 런타임에 검색할 수 있습니다.
-- 시각적 언어 형식을 완결성을 통해 시각화 강조 되므로 (예: 비율) 된 일부 제약 조건 형식에 만들 수 없습니다.
+- 비주얼 서식 언어는 유효한 제약 조건만 만들도록 적용 합니다.
+- 자동 레이아웃은 비주얼 서식 언어를 사용 하 여 콘솔에 제약 조건을 출력 하므로 디버깅 메시지는 제약 조건을 만드는 데 사용 되는 코드와 유사 합니다.
+- 시각적 서식 언어를 사용 하면 매우 간결한 식으로 여러 제약 조건을 동시에 만들 수 있습니다.
+- 시각적 서식 언어 문자열의 컴파일 쪽 유효성 검사는 없으므로 런타임에만 문제를 검색할 수 있습니다.
+- 시각적 서식 언어는 완전 한 시각화를 강조 하므로 일부 제약 조건 형식 (예: 비율)을 만들 수 없습니다.
 
-제약 조건을 만들려면 비주얼 형식 언어를 사용 하는 경우에 다음 단계를 수행 합니다.
+시각적 서식 언어를 사용 하 여 제약 조건을 만드는 경우 다음 단계를 수행 합니다.
 
-1. 만들기는 `NSDictionary` 개체 보기 및 레이아웃 안내선 형식을 정의할 때 사용할 문자열 키를 포함 하는 합니다.
-2. 필요에 따라 만듭니다는 `NSDictionary` 키와 값의 집합을 정의 하는 (`NSNumber`) 제약 조건에 대 한 상수 값으로 사용 합니다.
-3. 단일 열 또는 행 항목을 레이아웃에 형식 문자열을 만듭니다.
-4. 호출을 `FromVisualFormat` 메서드는 `NSLayoutConstraint` 제약 조건을 생성 하는 클래스입니다.
-5. 호출을 `ActivateConstraints` 메서드는 `NSLayoutConstraint` 활성화 제약 조건을 적용 하는 클래스입니다.
+1. 뷰 개체 `NSDictionary` 및 레이아웃 안내선과 형식을 정의할 때 사용할 문자열 키를 포함 하는을 만듭니다.
+2. 필요에 따라 `NSDictionary` 제약 조건에 대 한 상수 값으로 사용`NSNumber`되는 키 및 값 () 집합을 정의 하는을 만듭니다.
+3. 단일 열 또는 항목 행을 레이아웃 하는 형식 문자열을 만듭니다.
+4. 클래스의 메서드를 `FromVisualFormat` 호출 하 여 제약 조건을 생성 합니다. `NSLayoutConstraint`
+5. 클래스의 메서드를 `ActivateConstraints` 호출 하 여 제약 조건을 활성화 하 고 적용 합니다. `NSLayoutConstraint`
 
-예를 들어, 선행 및 후행 제약 조건을 둘 다 Visual 형식 언어에서를 만들려면 사용할 수 있습니다 다음:
+예를 들어, 시각적 서식 언어에서 선행 및 후행 제약 조건을 모두 만들려면 다음을 사용할 수 있습니다.
 
 ```csharp
 // Get views being constrained
@@ -147,22 +147,22 @@ var constraints = NSLayoutConstraint.FromVisualFormat (format, NSLayoutFormatOpt
 NSLayoutConstraint.ActivateConstraints (constraints);
 ```
 
-Visual 언어 형식을 기본 간격을 사용 하는 경우 부모 보기의 여백으로 연결 된 0 개 지점 제약 조건 항상 만들어지므로이 코드는 위의 예와 동일한 결과 생성 합니다.
+시각적 서식 언어는 기본 간격을 사용할 때 항상 부모 뷰의 여백에 연결 된 0 포인트 제약 조건을 만들기 때문에이 코드는 위에 표시 된 예제와 동일한 결과를 생성 합니다.
 
-단일 줄에 여러 자식 뷰 같은 더 복잡 한 UI 디자인에 대 한 시각적 언어 형식을 가로 간격과 세로 맞춤을 지정합니다. 위의 예와 여기서 지정 된 `AlignAllTop` `NSLayoutFormatOptions` 의 모든 행 또는 열을 해당 위쪽에서 보기를 맞춥니다.
+한 줄에 여러 자식 보기와 같은 보다 복잡 한 UI 디자인의 경우 시각적 서식 언어는 가로 간격과 세로 맞춤을 모두 지정 합니다. 위의 예제와 같이를 지정 하면 `AlignAllTop` `NSLayoutFormatOptions` 행 또는 열의 모든 뷰를 위쪽에 맞춥니다.
 
-Apple의를 참조 하세요 [비주얼 형식 언어 부록](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1) Visual 형식의 문자열 문법 및 일반적인 제약 조건을 지정 하는 몇 가지 예입니다.
+일반 제약 조건 및 시각적 서식 문자열 문법을 지정 하는 몇 가지 예는 Apple의 [시각적 형식 언어 부록](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1) 을 참조 하세요.
 
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
-이 가이드는 제약 조건을 자동 레이아웃을 만들고 작업 표시 C# iOS 디자이너에서에서 그래픽 방식으로 만드는 대신 합니다. 첫째,이 레이아웃 앵커를 사용 하 여 확인할 수 (`NSLayoutAnchor`) 자동 레이아웃을 처리 하도록 합니다. 다음으로, 레이아웃 제약 조건을 사용 하는 방법에 알아보았습니다 (`NSLayoutConstraint`). 마지막으로, 자동 레이아웃에 대 한 비주얼 형식 언어를 사용 하 여 표시 합니다.
+이 가이드에서는 iOS 디자이너에서 그래픽을 그래픽으로 만드는 C# 것과는 반대로에서 자동 레이아웃 제약 조건을 만들고 사용 하는 방법을 설명 했습니다. 먼저 레이아웃 앵커 (`NSLayoutAnchor`)를 사용 하 여 자동 레이아웃을 처리 하는 방법을 살펴보았습니다. 다음으로 레이아웃 제약 조건 (`NSLayoutConstraint`)을 사용 하는 방법을 살펴보았습니다. 마지막으로, 자동 레이아웃에 대 한 시각적 서식 언어를 사용 하 여 표시 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Storyboards 소개](~/ios/user-interface/storyboards/index.md)
-- [iOS 디자인할 수 있는 컨트롤 연습](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
-- [IOS 용 Xamarin 디자이너를 사용 하 여 자동 레이아웃](~/ios/user-interface/designer/designer-auto-layout.md#modifying-in-code)
+- [iOS 디자인 가능한 컨트롤 연습](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
+- [Xamarin Designer for iOS 자동 레이아웃](~/ios/user-interface/designer/designer-auto-layout.md#modifying-in-code)
 - [Apple-프로그래밍 방식으로 제약 조건 만들기](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html#//apple_ref/doc/uid/TP40010853-CH16-SW1)
-- [Apple-시각적 형식으로 언어 부록](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1)
+- [Apple-Visual Format 언어 부록](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1)

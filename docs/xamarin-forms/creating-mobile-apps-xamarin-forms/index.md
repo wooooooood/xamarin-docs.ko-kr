@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: f4ff4b7b39f589f29f0c4c5df76ff36fe0060d83
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a350a3ae37b66b8701f977370fcbe79940d84f50
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529221"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120484"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Xamarin.Forms 책으로 모바일 앱 만들기
 
@@ -26,11 +26,11 @@ ms.locfileid: "69529221"
 
 Microsoft Virtual Academy의 다운로드에 기본 전자책 형식:
 
-* [**PDF (56 Mb)** ](https://aka.ms/xamebook)
+- [**PDF (56 Mb)** ](https://aka.ms/xamebook)
 
-* [**ePub (151 Mb)** ](https://aka.ms/xamebook/epub)
+- [**ePub (151 Mb)** ](https://aka.ms/xamebook/epub)
 
-* [**Kindle 버전 (325mb)** ](https://aka.ms/xamebook/mobi)
+- [**Kindle 버전 (325mb)** ](https://aka.ms/xamebook/mobi)
 
 할 수도 있습니다 [개별 챕터 다운로드](#download-chapters-and-summaries) PDF 파일입니다.
 

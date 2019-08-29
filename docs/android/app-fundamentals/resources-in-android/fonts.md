@@ -6,27 +6,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/09/2018
-ms.openlocfilehash: c7953748e79bd43bc14601c1f0ea05d1a36adf08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1d0341af35d3c580141c5bfc76e9f170cd7ff4c5
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013422"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119099"
 ---
 # <a name="fonts"></a>글꼴
 
 ## <a name="overview"></a>개요
 
-글꼴을 레이아웃 마찬가지로 리소스로 간주 사용 하면 Android SDK API 레벨 26 부터는 또는 드로어 블 합니다. 합니다 [Android 지원 라이브러리 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) 새 글꼴 API의 대상 API 수준 14 이상 해당 앱을 백 포팅 됩니다.
+API 수준 26부터 Android SDK를 사용 하면 레이아웃이 나 drawables과 마찬가지로 글꼴이 리소스로 처리 될 수 있습니다. [Android 지원 라이브러리 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) 은 api 수준 14 이상을 대상으로 하는 앱에 새 font API를 이식할 수 있습니다.
 
-대상으로 하는 API 26 또는 Android 지원 라이브러리 v26 설치 후 Android 응용 프로그램에서 글꼴을 사용 하는 방법은 두 가지 있습니다.
+API 26을 대상으로 하거나 Android 지원 라이브러리 v26를 설치한 후에는 두 가지 방법으로 Android 응용 프로그램에서 글꼴을 사용할 수 있습니다.
 
-1. **패키지는 Android 리소스와 글꼴** &ndash; 하면 글꼴은 항상 응용 프로그램에 사용할 수 있지만 APK의 크기를 증가 합니다.
-2. **글꼴 다운로드** &ndash; Android에서 글꼴 다운로드도 지원를 _글꼴 공급자_합니다. 글꼴 공급자는 이미 글꼴 장치의 적용 인지를 확인 합니다. 필요한 경우 글꼴을 다운로드 하 고 장치에 캐시 됩니다. 이 글꼴은 여러 응용 프로그램 간에 공유할 수 있습니다.
+1. **Android 리소스로 글꼴 패키지** &ndash; 이렇게 하면 응용 프로그램에서 글꼴을 항상 사용할 수 있지만 apk의 크기가 증가 합니다.
+2. **글꼴 다운로드** Android는 글꼴 공급자의 글꼴 다운로드도 지원 합니다. &ndash; 글꼴 공급자는 글꼴이 장치에 이미 있는지 확인 합니다. 필요한 경우 글꼴이 다운로드 되어 장치에 캐시 됩니다. 이 글꼴은 여러 응용 프로그램 간에 공유할 수 있습니다.
 
-비슷한 글꼴 (또는 몇 가지 다른 스타일을 가질 수 있는 글꼴)으로 그룹화 할 수 있습니다 _글꼴 패밀리_합니다. 개발자가 글꼴의 가중치 등의 특정 특성을 지정할 수 있으며 Android가 글꼴 패밀리에서 적절 한 글꼴을 자동으로 선택 합니다.
+비슷한 글꼴이 나 여러 스타일을 포함할 수 있는 글꼴은 _글꼴 패밀리_로 그룹화 될 수 있습니다. 이를 통해 개발자는 가중치와 같은 글꼴의 특정 특성을 지정할 수 있습니다. 그러면 Android에서 글꼴 패밀리의 적절 한 글꼴을 자동으로 선택 합니다.
 
-Android 지원 라이브러리 v26 API 수준 26 글꼴에 대 한 백 포팅 지원이 됩니다. 선언 해야 하는 경우 이전 API 수준을 대상으로 하는 `app` XML 네임 스페이스를 사용 하 여 다양 한 글꼴 특성의 이름을 합니다 `android:` 네임 스페이스 및 `app:` 네임 스페이스입니다. 경우는 `android:` 네임 스페이스를 사용 하 고, 다음 글꼴 25 또는 API 레벨을 실행 하는 표시 된 장치 수 없습니다. 예를 들어이 XML 조각을 선언 새 [ _글꼴 패밀리_ ](#font_families) API 수준 14 이상에서 작동 하는 리소스:
+Android Support Library v26는 글꼴에 대 한 포트 지원을 API 수준 26으로 백 합니다. 이전 API 수준을 대상으로 지정 하는 경우 `app` `android:` 네임 스페이스 및 `app:` 네임 스페이스를 사용 하 여 XML 네임 스페이스를 선언 하 고 다양 한 글꼴 특성의 이름을 지정 해야 합니다. `android:` 네임 스페이스를 사용 하는 경우에는 API 레벨 25를 실행 하는 장치에서 글꼴이 표시 되지 않습니다. 예를 들어 다음 XML 코드 조각은 API 수준 14 이상에서 작동 하는 새 [_글꼴 패밀리_](#font_families) 리소스를 선언 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,7 +44,7 @@ Android 지원 라이브러리 v26 API 수준 26 글꼴에 대 한 백 포팅 �
 </font-family>
 ```
 
-글꼴은 Android 응용 프로그램에 적절 한 방식으로 제공 됩니다,으로 이러한에 적용할 수 UI 위젯 설정 하 여 합니다 [ `fontFamily` 특성](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily)합니다. 예를 들어, 다음 코드 조각은 글꼴 TextView를 표시 하는 방법을 보여 줍니다.
+글꼴이 Android 응용 프로그램에 적절 한 방식으로 제공 되는 한, [ `fontFamily` 특성](https://developer.android.com/reference/android/widget/TextView.html#attr_android:fontFamily)을 설정 하 여 UI 위젯에 적용할 수 있습니다. 예를 들어 다음 코드 조각은 TextView에서 글꼴을 표시 하는 방법을 보여 줍니다.
 
 ```xml
 <TextView
@@ -56,26 +56,26 @@ Android 지원 라이브러리 v26 API 수준 26 글꼴에 대 한 백 포팅 �
     android:layout_height="wrap_content" />
 ```
 
-이 가이드는 먼저 Android 리소스로 글꼴을 사용 하는 방법에 논의 하 고 런타임에 글꼴을 다운로드 하는 방법에 논의 하 이동 합니다.
+이 가이드에서는 먼저 글꼴을 Android 리소스로 사용한 다음 런타임에 글꼴을 다운로드 하는 방법에 대해 설명 하는 방법에 대해 설명 합니다.
 
-## <a name="fonts-as-a-resource"></a>리소스로 글꼴
+## <a name="fonts-as-a-resource"></a>리소스로 서의 글꼴
 
-Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항상 인지 확인 합니다. 글꼴 파일 (중 하나를 합니다. TTF 또는 합니다. OTF 파일)에서 하위 디렉터리에 파일을 복사 하 여 다른 리소스와 마찬가지로 Xamarin.Android 응용 프로그램에 추가 됩니다는 **리소스** Xamarin.Android 프로젝트의 폴더입니다. 글꼴 리소스에 유지 되는 **글꼴** 의 하위 디렉터리를 **리소스** 프로젝트의 폴더입니다.
+Android APK에 글꼴을 패키지 하면 응용 프로그램에서 항상 사용할 수 있습니다. 글꼴 파일 ( .TTF 또는입니다. Xamarin.ios 프로젝트의 **Resources** 폴더에 있는 하위 디렉터리에 파일을 복사 하 여 다른 리소스와 마찬가지로 xamarin.ios 응용 프로그램에 추가 됩니다. Fonts 리소스는 프로젝트의 **resources** 폴더에 있는 **글꼴** 하위 디렉터리에 보관 됩니다.
 
 > [!NOTE]
-> 글꼴 있어야를 **빌드 작업** 의 **AndroidResource** 또는 최종 APK에 패키지 되지 것입니다. IDE에서 빌드 작업을 자동으로 설정 되어야 합니다.
+> 글꼴은 **Androidresource** 의 **빌드 작업** 을 수행 해야 합니다. 그렇지 않으면 최종 apk에 패키지 되지 않습니다. IDE에서 빌드 작업을 자동으로 설정 해야 합니다.
 
-유사한 여러 글꼴 파일 (예를 들어, 서로 다른 가중치 또는 스타일을 사용 하 여 동일한 글꼴) 경우 글꼴 패밀리로 그룹화 하는 것이 같습니다.
+비슷한 글꼴 파일이 여러 개 있는 경우 (예: 다른 가중치가 나 스타일을 사용 하는 동일한 글꼴) 글꼴 패밀리로 그룹화 할 수 있습니다.
 
 <a name="font_families" />
 
 ### <a name="font-families"></a>글꼴 패밀리
 
-글꼴 패밀리는 다른 가중치가 및 스타일에 있는 글꼴의 집합입니다. 예를 들어, 굵게 또는 기울임꼴 글꼴에 대 한 별도 글꼴 파일 있을 수 있습니다. 글꼴 패밀리 정의한 `font` 에 보관 되는 XML 파일에 요소를 **리소스/글꼴** 디렉터리입니다. 각 글꼴 패밀리에 대 한 자체 XML 파일이 있어야 합니다.
+글꼴 패밀리는 가중치와 스타일이 다른 글꼴 집합입니다. 예를 들어, 굵게 또는 기울임꼴 글꼴을 위한 별도의 글꼴 파일이 있을 수 있습니다. 글꼴 패밀리는 `font` **리소스/글꼴** 디렉터리에 보관 된 XML 파일의 요소에 의해 정의 됩니다. 각 글꼴 패밀리에는 고유한 XML 파일이 있어야 합니다.
 
-글꼴 패밀리를 만들려면 먼저 모든 글꼴을 추가 합니다 **글꼴리소스/** 폴더입니다. 그런 다음 글꼴 패밀리에 대 한 글꼴 폴더에 새 XML 파일을 만듭니다. XML 파일의 이름에 없거나 선호도 관계; 참조 되는 글꼴 리소스 파일에 모든 올바른 Android 리소스 파일 이름일 수 있습니다. 이 XML 파일을 루트 갖습니다 `font-family` 하나 이상 포함 하는 요소 `font` 요소입니다. 각 `font` 요소 글꼴의 특성을 선언 합니다.
+글꼴 패밀리를 만들려면 먼저 **리소스/글꼴** 폴더에 모든 글꼴을 추가 합니다. 그런 다음 글꼴 패밀리에 대 한 글꼴 폴더에 새 XML 파일을 만듭니다. XML 파일의 이름에는 참조 되는 글꼴에 대 한 선호도 또는 관계가 없습니다. 리소스 파일은 모든 올바른 Android 리소스 파일 이름일 수 있습니다. 이 XML 파일에는 하나 `font-family` `font` 이상의 요소를 포함 하는 루트 요소가 있습니다. 각 `font` 요소는 글꼴의 특성을 선언 합니다.
 
-다음 XML은 예제에 대 한 글꼴 패밀리입니다 합니다 _소스 San Pro_ 많은 다양 한 글꼴 두께 정의 하는 글꼴입니다. 이에 파일로 저장 되는 **리소스/글꼴** 라는 폴더 **sourcesanspro.xml**:
+다음 XML은 다양 한 글꼴 가중치를 정의 하는 _원본 San Pro_ 글꼴의 글꼴 패밀리에 대 한 예입니다. 이 파일은 **sourcesanspro .xml**이라는 **리소스/글꼴** 폴더에 파일로 저장 됩니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,24 +102,24 @@ Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항�
 </font-family>
 ```
 
-`fontStyle` 특성에 두 개의 가능한 값:
+특성 `fontStyle` 에는 두 가지 가능한 값이 있습니다.
 
-* **정상적인** &ndash; 보통 글꼴
-* **기울임꼴** &ndash; 여 기울임꼴 글꼴
+- **보통** &ndash; 일반 글꼴
+- **기울임꼴** &ndash; 기울임꼴 글꼴
 
-합니다 `fontWeight` CSS에 해당 하는 특성 `font-weight` 특성 및 글꼴의 두께 가리킵니다. 100-900 범위의 값입니다. 다음 목록에는 일반 글꼴 두께 값 및 해당 이름을 설명합니다.
+특성 `fontWeight` 은 CSS `font-weight` 특성에 해당 하며 글꼴 두께를 참조 합니다. 100-900 범위의 값입니다. 다음 목록에서는 일반적인 글꼴 가중치 값과 해당 이름을 설명 합니다.
 
-* **씬** &ndash; 100
-* **Extra Light** &ndash; 200
-* **Light** &ndash; 300
-* **Normal** &ndash; 400
-* **중간** &ndash; 500
-* **굵게 semi** &ndash; 600
-* **굵은** &ndash; 700
-* **아주 굵게** &ndash; 800
-* **Black** &ndash; 900
+- **씬** &ndash; 100
+- **Extra Light** &ndash; 200
+- **Light** &ndash; 300
+- **보통** &ndash; 400
+- **보통** &ndash; 500
+- **반 굵게** &ndash; 600
+- **굵게** &ndash; 700
+- **매우 굵게** &ndash; 800
+- **검정** &ndash; 900
 
-설정 하 여 선언적으로 사용할 수 있습니다 글꼴 패밀리를 정의한 후 합니다 `fontFamily`, `textStyle`, 및 `fontWeight` 레이아웃 파일의 특성입니다.  예를 들어 다음 XML 조각 (일반) 600 가중치 글꼴 및 기울임꼴 텍스트 스타일을 설정합니다.
+글꼴 패밀리를 정의한 후에는 레이아웃 파일에서 `fontFamily`, `textStyle`및 `fontWeight` 특성을 설정 하 여 선언적으로 사용할 수 있습니다.  예를 들어 다음 XML 코드 조각은 600 가중치 글꼴 (보통) 및 기울임꼴 텍스트 스타일을 설정 합니다.
 
 ```xml
 <TextView
@@ -134,9 +134,9 @@ Android APK로 글꼴 패키징 응용 프로그램에 사용할 수 있는 항�
     />
 ```
 
-### <a name="programmatically-assigning-fonts"></a>글꼴을 프로그래밍 방식으로 할당
+### <a name="programmatically-assigning-fonts"></a>프로그래밍 방식으로 글꼴 할당
 
-글꼴을 사용 하 여 프로그래밍 방식으로 설정할 수 있습니다 합니다 [ `Resources.GetFont` ](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int)) 검색 하는 메서드를 [ `Typeface` ](https://developer.android.com/reference/android/graphics/Typeface.html) 개체입니다. 많은 보기에는 `TypeFace` 위젯에 글꼴을 할당할 수 있는 속성입니다. 이 코드 조각은 글꼴 TextView를 프로그래밍 방식으로 설정 하는 방법을 보여 줍니다.
+메서드를 [`Resources.GetFont`](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int)) 사용 하 여 개체를 [`Typeface`](https://developer.android.com/reference/android/graphics/Typeface.html) 검색 하는 방식으로 글꼴을 프로그래밍 방식으로 설정할 수 있습니다. 많은 보기 `TypeFace` 에 글꼴을 위젯에 할당 하는 데 사용할 수 있는 속성이 있습니다. 이 코드 조각은 TextView에서 프로그래밍 방식으로 글꼴을 설정 하는 방법을 보여 줍니다.
 
 ```csharp
 Android.Graphics.Typeface typeface = this.Resources.GetFont(Resource.Font.caveat_regular);
@@ -144,7 +144,7 @@ textView1.Typeface = typeface;
 textView1.Text = "Changed the font";
 ```
 
-`GetFont` 메서드 글꼴 패밀리 내 첫 번째 글꼴을 자동으로 로드 됩니다.  특정 스타일과 일치 하는 글꼴을 로드 하려면 사용 된 `Typeface.Create` 메서드. 이 메서드는 지정된 된 스타일과 일치 하는 글꼴을 로드 하려고 합니다. 예를 들어이 코드 조각은 굵게 표시 된 로드를 시도 `Typeface` 개체에 정의 된 글꼴 패밀리 **리소스/글꼴**:
+이 `GetFont` 메서드는 글꼴 패밀리 내에서 첫 번째 글꼴을 자동으로 로드 합니다.  특정 스타일과 일치 하는 글꼴을 로드 하려면 메서드를 `Typeface.Create` 사용 합니다. 이 메서드는 지정 된 스타일과 일치 하는 글꼴을 로드 하려고 합니다. 예를 들어이 코드 조각은 **리소스/글꼴**에 정의 된 `Typeface` 글꼴 패밀리에서 굵은 개체를 로드 하려고 합니다.
 
 ```csharp
 var typeface = Typeface.Create("<FONT FAMILY NAME>", Android.Graphics.TypefaceStyle.Bold);
@@ -153,20 +153,20 @@ textView1.Typeface = typeface;
 
 ## <a name="downloading-fonts"></a>글꼴 다운로드
 
-응용 프로그램 리소스로 글꼴 패키징, 대신 Android 원격 원본에서 글꼴을 다운로드할 수 있습니다. 이 APK의 크기를 줄이는 바람직하지 적용을 해야 합니다.
+Android는 응용 프로그램 리소스로 글꼴을 패키징하는 대신 원격 원본에서 글꼴을 다운로드할 수 있습니다. 이를 통해 APK의 크기를 줄이는 것이 좋습니다.
 
-글꼴의 도움으로 다운로드 됩니다는 _글꼴 공급자_합니다. 다운로드 및 장치에서 모든 응용 프로그램에 글꼴의 캐싱을 관리 하는 특수 한 콘텐츠 공급자입니다. Android 8.0에서 글꼴을 다운로드 하려면 글꼴 공급자를 포함 합니다 [Google 글꼴 리포지토리](http://fonts.google.com)합니다. 이 기본 글꼴 공급자는 Android 지원 라이브러리 v26 사용 하 여 API 수준 14로 백 포팅 합니다.
+_글꼴은 글꼴 공급자_의 지원과 함께 다운로드 됩니다. 이는 장치의 모든 응용 프로그램에 대 한 글꼴 다운로드 및 캐싱을 관리 하는 특수 한 콘텐츠 공급자입니다. Android 8.0에는 [Google 글꼴 리포지토리에서](http://fonts.google.com)글꼴을 다운로드 하는 글꼴 공급자가 포함 되어 있습니다. 이 기본 글꼴 공급자는 Android 지원 라이브러리 v26를 사용 하 여 API 수준 14로 백 포팅 됩니다.
 
-앱의 글꼴에 대 한 요청 하면 글꼴 공급자는 글꼴이 이미 장치에 있는지 먼저 확인 됩니다. 그렇지 않은 경우 해당 글꼴을 다운로드 하려고 합니다. 글꼴 다운로드 한 다음 Android 수 없을 경우 기본 시스템 글꼴을 사용 합니다. 글꼴 다운로드 되 면 초기 요청을 수행 하는 앱 뿐 아니라 장치의 모든 응용 프로그램에 제공 됩니다.
+앱에서 글꼴을 요청 하면 글꼴 공급자는 먼저 글꼴이 장치에 이미 있는지 확인 합니다. 그렇지 않으면 글꼴 다운로드를 시도 합니다. 글꼴을 다운로드할 수 없는 경우 Android에서 기본 시스템 글꼴을 사용 합니다. 글꼴이 다운로드 되 면 초기 요청을 만든 앱 뿐만 아니라 장치의 모든 응용 프로그램에서 사용할 수 있습니다.
 
-글꼴 다운로드 요청을 만들면 앱을 직접으로 글꼴 공급자를 쿼리하지 않습니다. 앱은의 인스턴스를 사용 하는 대신 합니다 [ `FontsContract` ](https://developer.android.com/reference/android/provider/FontsContract.html) API (또는 [ `FontsContractCompat` ](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html) 지원 라이브러리 26를 사용 하는 경우).  
+글꼴을 다운로드 하도록 요청 하는 경우 앱은 글꼴 공급자를 직접 쿼리하지 않습니다. 대신, 앱은 [`FontsContract`](https://developer.android.com/reference/android/provider/FontsContract.html) API 인스턴스 ( [`FontsContractCompat`](https://developer.android.com/reference/android/support/v4/provider/FontsContractCompat.html) 또는 지원 라이브러리 26이 사용 되는 경우)를 사용 합니다.  
 
-Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니다.
+Android 8.0는 다음과 같은 두 가지 방법으로 글꼴 다운로드를 지원 합니다.
 
-1. **다운로드할 수 있는 글꼴을 리소스로 선언** &ndash; 앱 XML 리소스 파일을 통해 Android에 대 한 다운로드 가능한 글꼴을 선언할 수 있습니다. 이러한 파일에는 Android 앱을 시작 하 고 장치에서 캐시 하는 글꼴을 비동기적으로 다운로드 해야 하는 메타 데이터를 모두 포함 됩니다.
-2. **프로그래밍 방식으로** &ndash; Android API 레벨 26 Api 응용 프로그램이 실행 되는 동안 글꼴을 프로그래밍 방식으로 다운로드 하는 응용 프로그램을 허용 합니다. 앱을 만듭니다는 `FontRequest` 지정된 된 글꼴에 대 한 개체 및이 개체는 `FontsContract` 클래스입니다. `FontsContract` 사용 합니다 `FontRequest` 에서 글꼴을 검색 하 고는 _글꼴 공급자_합니다. Android는 글꼴을 동기적으로 다운로드 합니다. 만드는 예제는 `FontRequest` 이 가이드의 뒷부분에 표시 됩니다.
+1. **다운로드 가능한 글꼴을 리소스로 선언** &ndash; 앱은 XML 리소스 파일을 통해 Android에 다운로드 가능한 글꼴을 선언할 수 있습니다. 이러한 파일에는 앱이 시작 될 때 Android에서 비동기적으로 글꼴을 다운로드 하 고 장치에서 캐시 하는 데 필요한 모든 메타 데이터가 포함 됩니다.
+2. **프로그래밍 방식으로** &ndash; Android api level 26의 api를 사용 하면 응용 프로그램이 실행 되는 동안 응용 프로그램에서 프로그래밍 방식으로 글꼴을 다운로드할 수 있습니다. 앱은 지정 된 `FontRequest` 글꼴에 대 한 개체를 만들고이 개체를 `FontsContract` 클래스에 전달 합니다. 는 `FontsContract` 를`FontRequest` 가져와서 _글꼴 공급자_에서 글꼴을 검색 합니다. Android에서 동기적으로 글꼴을 다운로드 합니다. 을 `FontRequest` 만드는 예제는이 가이드의 뒷부분에 나와 있습니다.
 
-어떤 방법을 사용 하는 것에 관계 없이 글꼴 전에 Xamarin.Android 응용 프로그램에 추가 되어야 하는 리소스 파일을 다운로드할 수 있습니다. XML 파일에 글꼴 먼저 선언 해야 합니다 **리소스/글꼴** 글꼴 패밀리 일부로 디렉터리입니다. 이 코드 조각은 글꼴에서 다운로드 하는 방법의 예는 [Google 글꼴 오픈 소스 컬렉션](https://fonts.google.com) Android 8.0 (또는 지원 라이브러리 v26) 함께 제공 되는 기본 글꼴 공급자를 사용 하 여:
+사용 되는 방법에 관계 없이, 글꼴을 다운로드 하기 전에 Xamarin.ios 응용 프로그램에 추가 해야 하는 리소스 파일을 확인할 수 있습니다. 먼저 글꼴을 글꼴 패밀리의 일부로 **리소스/글꼴** 디렉터리의 XML 파일에 선언 해야 합니다. 이 코드 조각은 Android 8.0 (또는 Support Library v26)와 함께 제공 되는 기본 글꼴 공급자를 사용 하 여 [Google Fonts Open Source collection](https://fonts.google.com) 에서 글꼴을 다운로드 하는 방법의 예입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -184,20 +184,20 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 </font-family>
 ```
 
-`font-family` 요소 Android 필요한 글꼴을 다운로드 하는 정보를 선언에 다음 특성을 포함 합니다.
+요소 `font-family` 는 다음 특성을 포함 하며, Android에서 글꼴을 다운로드 하는 데 필요한 정보를 선언 합니다.
 
-1. **fontProviderAuthority** &ndash; 요청에 사용할 글꼴 공급자의 기관입니다.
-2. **fontPackage** &ndash; 요청에 사용할 글꼴 공급자에 대 한 패키지 있습니다. 이 공급자의 id를 확인 하려면 사용 됩니다.
-3. **fontQuery** &ndash; 글꼴 공급자 요청 된 글꼴을 찾는 데 도움이 되는 문자열입니다. 글꼴 쿼리에 대 한 세부 정보는 글꼴 공급자와 관련이 있습니다. 합니다 [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) 클래스를 [다운로드 글꼴](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) 샘플 앱 일부 정보를 제공 하는 쿼리 형식에 글꼴에 대 한 Google 글꼴 오픈 소스 컬렉션에서 합니다.
-4. **fontProviderCerts** &ndash; 공급자를 사용 하 여 서명 해야 하는 인증서에 대 한 해시 집합의 목록으로는 리소스 배열입니다.
+1. 가 나 **Providerauthority** &ndash; 요청에 사용할 글꼴 공급자의 인증 기관입니다.
+2. **글꼴 패키지** &ndash; 요청에 사용할 글꼴 공급자의 패키지입니다. 공급자의 id를 확인 하는 데 사용 됩니다.
+3. **글꼴 쿼리** &ndash; 글꼴 공급자가 요청 된 글꼴을 찾는 데 도움이 되는 문자열입니다. 글꼴 쿼리 정보는 글꼴 공급자에 따라 다릅니다. [`QueryBuilder`](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) [다운로드 가능한 글꼴](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) 샘플 앱의 클래스는 Google fonts Open Source Collection의 글꼴에 대 한 쿼리 형식에 대 한 일부 정보를 제공 합니다.
+4. 가 나 **Provider인증서** &ndash; 공급자에 서명 해야 하는 인증서의 해시 집합 목록이 포함 된 리소스 배열입니다.
 
-글꼴을 정의 하는 방법에 대 한 정보를 제공 해야 할 수 있습니다 합니다 _글꼴 인증서_ 다운로드에 포함 합니다.
+글꼴이 정의 되 면 다운로드와 관련 된 _글꼴 인증서_ 에 대 한 정보를 제공 해야 할 수 있습니다.
 
 ### <a name="font-certificates"></a>글꼴 인증서
 
-글꼴 공급자 장치에 사전 설치 되지 않은 경우 또는 앱을 사용 하는 경우는 `Xamarin.Android.Support.Compat` Android 라이브러리 글꼴 공급자의 보안 인증서를 요구 합니다. 이러한 인증서에 보관 되는 배열 리소스 파일에 나열 됩니다 **리소스/값** 디렉터리입니다.
+장치에 글꼴 공급자가 미리 설치 되어 있지 않거나 앱이 `Xamarin.Android.Support.Compat` 라이브러리를 사용 하는 경우 Android를 사용 하려면 글꼴 공급자의 보안 인증서가 필요 합니다. 이러한 인증서는 **리소스/값** 디렉터리에 유지 되는 배열 리소스 파일에 나열 됩니다.
 
-예를 들어, 다음 XML 이름이 **Resources/values/fonts_cert.xml** Google 글꼴 공급자에 대 한 인증서를 저장 합니다.
+예를 들어 다음 XML은 **Resources/values/fonts_cert** 라는 이름으로 지정 되며 Google 글꼴 공급자에 대 한 인증서를 저장 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -219,11 +219,11 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 </resources>
 ```
 
-현재 위치에서 이러한 리소스 파일을 사용 하 여 앱이 글꼴을 다운로드할 수 있는 합니다.
+이러한 리소스 파일이 준비 되 면 앱에서 글꼴을 다운로드할 수 있습니다.
 
-### <a name="declaring-downloadable-fonts-as-resources"></a>다운로드할 수 있는 글꼴을 리소스로 선언
+### <a name="declaring-downloadable-fonts-as-resources"></a>다운로드 가능한 글꼴을 리소스로 선언
 
-다운로드할 수 있는 글꼴을 나열 하 여 합니다 **AndroidManifest.XML**, 앱을 처음 시작할 때 Android 글꼴을 비동기적으로 다운로드 됩니다. 글꼴의 자체는이 이와 유사한 배열 리소스 파일에 나열 됩니다.
+Android는 **Androidmanifest**에서 다운로드 가능한 글꼴을 나열 하 여 앱이 처음 시작 될 때 해당 글꼴을 비동기식으로 다운로드 합니다. 글꼴 자체는 다음과 유사 하 게 배열 리소스 파일에 나열 됩니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -234,37 +234,37 @@ Android 8.0에서는 두 가지 방법으로 다운로드 글꼴을 지원합니
 </resources>
 ```
 
-이러한 글꼴을 다운로드 하려면에 선언할 필요가 **AndroidManifest.XML** 더하여 `meta-data` 의 자식으로는 `application` 요소. 예를 들어, 다운로드 가능한 글꼴에 있는 리소스 파일에 선언 된 경우 **Resources/values/downloadable_fonts.xml**를 매니페스트에 추가 되었으면이 코드 조각:
+이러한 글꼴을 다운로드 하려면 `application` 요소를 자식으로 추가 `meta-data` 하 여 **androidmanifest** 에 선언 해야 합니다. 예를 들어 다운로드 가능한 글꼴이 **Resources/values/downloadable_fonts**의 리소스 파일에 선언 된 경우이 코드 조각을 매니페스트에 추가 해야 합니다.
 
 ```xml
 <meta-data android:name="downloadable_fonts" android:resource="@array/downloadable_fonts" />
 ```
 
-### <a name="downloading-a-font-with-the-font-apis"></a>글꼴 Api 사용 하 여 글꼴 다운로드
+### <a name="downloading-a-font-with-the-font-apis"></a>글꼴 Api를 사용 하 여 글꼴 다운로드
 
-프로그래밍 방식으로 인스턴스화하여 글꼴을 다운로드할 수 있기를 [ `FontRequest` ](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) 개체에 전달 하는 `FontContractCompat.RequestFont` 메서드. `FontContractCompat.RequestFont` 메서드를 먼저 글꼴 장치에 존재 하는지 확인 하 고 다음 필요한 경우는 비동기적으로 쿼리 글꼴 공급자 및 앱에 대 한 글꼴을 다운로드 하려고 합니다. 경우 `FontRequest` Android는 기본 시스템 글꼴을 사용 하 여 글꼴을 다운로드할 수 없는 합니다.
+개체를 [`FontRequest`](https://developer.android.com/reference/android/support/v4/provider/FontRequest.html) 인스턴스화하고 `FontContractCompat.RequestFont` 메서드에 전달 하 여 프로그래밍 방식으로 글꼴을 다운로드할 수 있습니다. 메서드 `FontContractCompat.RequestFont` 는 먼저 장치가 장치에 있는지 확인 한 다음 필요한 경우에는 해당 글꼴이 비동기적으로 쿼리 되 고 앱의 글꼴을 다운로드 합니다. 에서 `FontRequest` 글꼴을 다운로드할 수 없는 경우 Android에서 기본 시스템 글꼴을 사용 합니다.
 
-`FontRequest` 개체를 찾아 글꼴 다운로드 글꼴 공급자에서 사용할 정보를 포함 합니다. `FontRequest` 네 가지 정보가 필요 합니다.
+개체 `FontRequest` 는 글꼴 공급자가 글꼴을 찾아서 다운로드 하는 데 사용 되는 정보를 포함 합니다. 에 `FontRequest` 는 다음 네 가지 정보가 필요 합니다.
 
-1. **글꼴 공급자 기관** &ndash; 요청에 사용할 글꼴 공급자의 기관입니다.
-2. **글꼴 패키지** &ndash; 요청에 사용할 글꼴 공급자에 대 한 패키지 있습니다. 이 공급자의 id를 확인 하려면 사용 됩니다.
-3. **글꼴 쿼리** &ndash; 글꼴 공급자 요청 된 글꼴을 찾는 데 도움이 되는 문자열입니다. 글꼴 쿼리에 대 한 세부 정보는 글꼴 공급자와 관련이 있습니다. 문자열의 세부 사항은 글꼴 공급자별으로 다릅니다. 합니다 [ `QueryBuilder` ](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) 클래스를 [다운로드 글꼴](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) 샘플 앱 일부 정보를 제공 하는 쿼리 형식에 글꼴에 대 한 Google 글꼴 오픈 소스 컬렉션에서 합니다.
-4. **글꼴 공급자 인증서** &ndash; 공급자를 사용 하 여 서명 인증서에 대 한 해시 집합의 목록으로는 리소스 배열입니다.
+1. **글꼴 공급자 인증 기관** &ndash; 요청에 사용할 글꼴 공급자의 인증 기관입니다.
+2. **글꼴 패키지** &ndash; 요청에 사용할 글꼴 공급자의 패키지입니다. 공급자의 id를 확인 하는 데 사용 됩니다.
+3. **글꼴 쿼리** &ndash; 글꼴 공급자가 요청 된 글꼴을 찾는 데 도움이 되는 문자열입니다. 글꼴 쿼리 정보는 글꼴 공급자에 따라 다릅니다. 문자열의 세부 정보는 글꼴 공급자와 관련이 있습니다. [`QueryBuilder`](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/DownloadableFonts/QueryBuilder.cs) [다운로드 가능한 글꼴](https://github.com/xamarin/monodroid-samples/blob/master/android-o/DownloadableFonts/) 샘플 앱의 클래스는 Google fonts Open Source Collection의 글꼴에 대 한 쿼리 형식에 대 한 일부 정보를 제공 합니다.
+4. **글꼴 공급자 인증서** &ndash; 공급자에 서명 해야 하는 인증서의 해시 집합 목록을 포함 하는 리소스 배열입니다.
 
-이 코드 조각은 새 인스턴스화의 한 예로 `FontRequest` 개체:
+이 코드 조각은 새 `FontRequest` 개체를 인스턴스화하는 예제입니다.
 
 ```csharp
 FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.google.android.gms", <FontToDownload>, Resource.Array.com_google_android_gms_fonts_certs);
 ```
 
-이전 코드 조각에서 `FontToDownload` Google 글꼴 오픈 소스 컬렉션에서 글꼴을 안내 하는 쿼리입니다.
+이전 코드 조각은 `FontToDownload` Google Fonts Open Source collection의 글꼴을 돕는 쿼리입니다.
 
-전달 하기 전에 합니다 `FontRequest` 에 `FontContractCompat.RequestFont` 메서드를 작성 해야 하는 개체 두 개가:
+를 `FontContractCompat.RequestFont` 메서드에 전달 `FontRequest` 하기 전에 다음 두 개체를 만들어야 합니다.
 
-* **`FontsContractCompat.FontRequestCallback`** &ndash; 이것이 확장 해야 하는 추상 클래스입니다. 콜백이 될 것이 될 때 호출 `RequestFont` 가 완료 합니다. Xamarin.Android 앱을 서브 클래스 해야 `FontsContractCompat.FontRequestCallback` 재정의 `OnTypefaceRequestFailed` 및 `OnTypefaceRetrieved`, 다운로드가 실패 하거나 각각 성공 하는 경우 수행할 작업을 제공 합니다.
-* **`Handler`** &ndash; 이 `Handler` 에서 사용 됩니다 `RequestFont` 필요한 경우 스레드에서 글꼴을 다운로드 합니다. 글꼴 해야 **되지** UI 스레드에서 다운로드할 수 있습니다.
+- **`FontsContractCompat.FontRequestCallback`** &ndash; 확장 해야 하는 추상 클래스입니다. 가 완료 되 면 `RequestFont` 호출 되는 콜백입니다. Xamarin Android 앱은 `FontsContractCompat.FontRequestCallback` `OnTypefaceRequestFailed` 및 `OnTypefaceRetrieved`를 하위 클래스 하 고 재정의 해야 하며, 각각 다운로드에 실패 하거나 성공할 경우 수행할 작업을 제공 해야 합니다.
+- **`Handler`** 이는 필요한 `Handler` 경우에서 `RequestFont` 스레드에 글꼴을 다운로드 하는 데 사용 하는입니다. &ndash; UI 스레드에서 글꼴을 다운로드 해서는 안 됩니다.
 
-이 코드 조각은의 한 예로 C# Google 글꼴 오픈 소스 컬렉션에서 글꼴을 비동기적으로 다운로드 하는 클래스입니다. 구현 하는 `FontRequestCallback` 인터페이스를 발생 시킵니다를 C# 이벤트 때 `FontRequest` 완료 합니다.
+이 코드 조각은 Google Fonts Open Source C# collection에서 비동기적으로 글꼴을 다운로드 하는 클래스의 예입니다. `FontRequestCallback` 인터페이스를 구현 하 고이 완료 되 C# 면 `FontRequest` 이벤트를 발생 시킵니다.
 
 ```csharp
 public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
@@ -327,7 +327,7 @@ public class FontDownloadEventArg : EventArgs
 }
 ```
 
-이 도우미를 사용 하려면 새 `FontDownloadHelper` 만들어지면 이벤트 처리기가 할당 됩니다.  
+이 도우미를 사용 하려면 새 `FontDownloadHelper` 가 만들어지고 이벤트 처리기가 할당 됩니다.  
 
 ```csharp
 var fontHelper = new FontDownloadHelper();
@@ -341,7 +341,7 @@ fontHelper.DownloadFonts(this); // this is an Android Context instance.
 
 ## <a name="summary"></a>요약
 
-이 가이드는 다운로드 가능한 글꼴 및 글꼴 리소스를 지원 하도록 Android 8.0의 새로운 Api를 설명 합니다. 해당 APK의 기존 글꼴을 포함 하 고 레이아웃을 사용 하는 방법을 설명 합니다. 또한 프로그래밍 방식으로 또는 리소스 파일의 글꼴 메타 데이터를 선언 하 여 Android 8.0 글꼴 공급자 로부터 다운로드 글꼴을 지원 하는 방법을 설명 합니다.
+이 가이드에서는 다운로드 가능한 글꼴 및 글꼴을 리소스로 지원 하기 위해 Android 8.0의 새 Api에 대해 설명 했습니다. 기존 글꼴을 APK에 포함 하 고 레이아웃에서 사용 하는 방법에 대해 설명 했습니다. 또한 Android 8.0는 프로그래밍 방식으로 또는 리소스 파일에서 글꼴 메타 데이터를 선언 하 여 글꼴 공급자의 글꼴 다운로드를 지 원하는 방법도 설명 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
@@ -352,7 +352,7 @@ fontHelper.DownloadFonts(this); // this is an Android Context instance.
 - [Resources.GetFont](https://developer.android.com/reference/android/content/res/Resources.html#getFont(int))
 - [Typeface](https://developer.android.com/reference/android/graphics/Typeface.html)
 - [Android 지원 라이브러리 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/)
-- [Android에서 글꼴을 사용 하 여](https://www.youtube.com/watch?v=TfB-TsLFJdM)
+- [Android에서 글꼴 사용](https://www.youtube.com/watch?v=TfB-TsLFJdM)
 - [CSS 글꼴 두께 사양](https://www.w3.org/TR/css-fonts-3/#font-weight-numeric-values)
-- [Google 글꼴 오픈 소스 컬렉션](https://fonts.google.com/)
-- [Pro San 원본](https://fonts.google.com/specimen/Source+Sans+Pro)
+- [Google Fonts 오픈 소스 컬렉션](https://fonts.google.com/)
+- [원본 San Pro](https://fonts.google.com/specimen/Source+Sans+Pro)

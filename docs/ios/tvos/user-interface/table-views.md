@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3df0d8f686ec521a55948a9eb4632d77e5c3691f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652331"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121382"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
@@ -115,7 +115,7 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
     
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
     
-1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 **를** 클릭 하 여 새 솔루션을 만듭니다. 
+1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 를 클릭 하 여 새 솔루션을 만듭니다. 
 
     [![](table-views-images/table02-vs.png "단일 뷰 앱 선택")](table-views-images/table02-vs.png#lightbox)
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 엽니다. 
@@ -883,8 +883,8 @@ namespace tvTable
 
 이 클래스는 분할 뷰 컨트롤러의 두 면에서 보다 쉽게 통신할 수 있도록 몇 가지 바로 가기를 정의 하기만 합니다.
 
-* `SplitView`-탐색 뷰 컨트롤러가 속한 분할 뷰 컨트롤러 (`MainSpiltViewController`)에 대 한 링크입니다.
-* `TableController`-탐색 뷰 컨트롤러에서 최상위 뷰로`AttractionTableViewController`표시 되는 테이블 뷰 컨트롤러 ()를 가져옵니다.
+- `SplitView`-탐색 뷰 컨트롤러가 속한 분할 뷰 컨트롤러 (`MainSpiltViewController`)에 대 한 링크입니다.
+- `TableController`-탐색 뷰 컨트롤러에서 최상위 뷰로`AttractionTableViewController`표시 되는 테이블 뷰 컨트롤러 ()를 가져옵니다.
 
 <a name="The-Split-View-Controller" />
 

@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: daca6d1cc5ec8a5e47f068f140f835219bd24c86
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522011"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120469"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -522,7 +522,7 @@ public void AppendWorkers(params Worker[] workers)
 
 일반적으로 이러한 필드는 참조 해야 하는 문자열이 나 정수 값을 포함 합니다. 일반적으로 특정 알림과 사전에서 키를 나타내는 문자열로 사용 됩니다.
 
-필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예:
+필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예를 들어:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -682,7 +682,7 @@ Xamarin.ios 바인딩 생성기는 개발자가 알림을 바인딩할 수 있�
 
 페이로드를 사용 하지 않는 알림에 대해 인수를 사용 하지 않고이 특성을 사용 하거나, 일반적 `System.Type` 으로 이름이 "EventArgs"로 끝나는 API 정의의 다른 인터페이스를 참조 하는를 지정할 수 있습니다. 생성기는 인터페이스를 서브 `EventArgs` 클래스로 변환 하 고 여기에 나열 된 모든 속성을 포함 합니다. EventArgs [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 클래스에서 특성을 사용 하 여 값을 인출 하기 위해 목표-C 사전을 조회 하는 데 사용 되는 키의 이름을 나열 해야 합니다.
 
-예를 들어:
+예:
 
 ```csharp
 interface MyClass {
@@ -918,8 +918,8 @@ public class  XyzOptions {
 
 이렇게 하려면 다음과 같은 몇 가지 작업을 수행 해야 합니다.
 
-* [DictionaryContainer](xref:Foundation.DictionaryContainer) 는 강력한 형식의 클래스를 만들고 각 속성에 대해 다양 한 getter 및 setter를 제공 합니다.
-* 새 강력한 형식의 버전을 사용 `NSDictionary` 하는 메서드에 대 한 오버 로드를 선언 합니다.
+- [DictionaryContainer](xref:Foundation.DictionaryContainer) 는 강력한 형식의 클래스를 만들고 각 속성에 대해 다양 한 getter 및 setter를 제공 합니다.
+- 새 강력한 형식의 버전을 사용 `NSDictionary` 하는 메서드에 대 한 오버 로드를 선언 합니다.
 
 강력한 형식의 클래스를 수동으로 만들거나 생성기를 사용 하 여 작업을 수행할 수 있습니다.  먼저이 작업을 수동으로 수행 하는 방법 및 자동 접근 방법을 파악 하는 방법을 알아봅니다.
 
@@ -1337,7 +1337,7 @@ Btouch 인터페이스 정의 시스템에서 직접 지원 하지 않는 열거
 위의 예제는 `libMyLibrary.a` `libSystemLibrary.dylib` 및 `CFNetwork` 프레임 워크 라이브러리를 최종 실행 파일에 연결 합니다.
 
 또는 계약 파일에 포함할 수 있는 어셈블리 수준 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)( `AssemblyInfo.cs`예:)을 활용할 수 있습니다.
-[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)을 사용 하는 경우 네이티브 라이브러리를 응용 프로그램에 포함 하기 때문에 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예:
+[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)을 사용 하는 경우 네이티브 라이브러리를 응용 프로그램에 포함 하기 때문에 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예를 들어:
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:
@@ -1404,3 +1404,4 @@ Xamarin.ios v 3.2 부터는 [`[Model]`](~/cross-platform/macios/binding/binding-
 ## <a name="related-links"></a>관련 링크
 
 - [바인딩 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+ 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 364e10b8b59fcc8d640799ab6a0f11dcf4ded818
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6367ab41be821c5b1add4fface6bd17eb00b763b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644518"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121607"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -43,7 +43,7 @@ WatchOS 1에서 정적 함수 또는 공유 앱 그룹을 통해 데이터를 �
 
 조사식 Connectivity framework 부모 앱과 통신 하는 watchOS 2 이상에서 사용 하는 `WCSession` 클래스입니다.
 
-## <a name="application-lifecycle"></a>애플리케이션 수명 주기
+## <a name="application-lifecycle"></a>응용 프로그램 수명 주기
 
 조사식 확장의 서브 클래스에는 `WKInterfaceController` 각 스토리 보드 장면에 대 한 클래스를 만듭니다.
 
@@ -124,11 +124,11 @@ WatchOS watchOS 앱을 개발할 때 알아야 할 몇 가지 제한이 있습�
 
 Apple의 설명서를 확인해 보세요.
 
-* [조사식 키트에 대 한 개발](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
+- [조사식 키트에 대 한 개발](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
 
-* [키트 프로그래밍 가이드를 시청 하세요.](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
+- [키트 프로그래밍 가이드를 시청 하세요.](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
-* [Apple Watch 휴먼 인터페이스 지침](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
+- [Apple Watch 휴먼 인터페이스 지침](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
 
 
 ## <a name="related-links"></a>관련 링크

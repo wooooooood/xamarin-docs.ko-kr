@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: cb4933695d34a0805be4139c7b345f7a70f33613
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524330"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119592"
 ---
 # <a name="responding-to-authentication-callbacks"></a>인증 콜백에 응답
 
 지문 스캐너는 자체 스레드에서 백그라운드에서 실행 되 고, 완료 되 면 UI 스레드에서의 `FingerprintManager.AuthenticationCallback` 메서드 하나를 호출 하 여 검사 결과를 보고 합니다. Android 응용 프로그램은 다음의 모든 메서드를 구현 하 여이 추상 클래스를 확장 하는 자체 처리기를 제공 해야 합니다.
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; 복구할 수 없는 오류가 발생 하는 경우 호출 됩니다. 응용 프로그램 또는 사용자가 상황을 해결 하기 위해 수행할 수 있는 작업은 없습니다. 단, 다시 시도할 수 있습니다.
-* **`OnAuthenticationFailed()`** &ndash; 이 메서드는 지문이 검색 되었지만 장치에서 인식 되지 않을 때 호출 됩니다.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; 스캐너를 통해 스와이프 하는 핑거와 같이 복구할 수 있는 오류가 있을 때 호출 됩니다.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; 지문이 인식 될 때 호출 됩니다.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; 복구할 수 없는 오류가 발생 하는 경우 호출 됩니다. 응용 프로그램 또는 사용자가 상황을 해결 하기 위해 수행할 수 있는 작업은 없습니다. 단, 다시 시도할 수 있습니다.
+- **`OnAuthenticationFailed()`** &ndash; 이 메서드는 지문이 검색 되었지만 장치에서 인식 되지 않을 때 호출 됩니다.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; 스캐너를 통해 스와이프 하는 핑거와 같이 복구할 수 있는 오류가 있을 때 호출 됩니다.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; 지문이 인식 될 때 호출 됩니다.
 
 를 `CryptoObject` 호출할 `Authenticate`때가 사용 된 경우에서 `OnAuthenticationSuccessful`를 호출 `Cipher.DoFinal` 하는 것이 좋습니다.
 `DoFinal`는 암호가 변조 되었거나 잘못 초기화 된 경우에 예외를 throw 합니다 .이 경우 지문 스캐너의 결과가 응용 프로그램 외부에서 변조 되었을 수 있습니다.

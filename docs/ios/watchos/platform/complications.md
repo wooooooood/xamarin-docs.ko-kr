@@ -1,62 +1,62 @@
 ---
-title: watchOS Xamarin의 복잡성
-description: 이 문서에서는 Xamarin에서 watchOS 복잡성을 사용 하는 방법을 설명 합니다. Complication, 템플릿을 작성 하는 complication 추가 하는 방법에 설명 하 고 샘플 코드를 제공 합니다.
+title: Xamarin에서 watchOS의 복잡 한 문제
+description: 이 문서에서는 Xamarin에서 watchOS 복잡 한 작업을 수행 하는 방법을 설명 합니다. 이 문서에서는 복잡 한 기능을 추가 하 고, 복잡 한 템플릿을 작성 하 고, 샘플 코드를 제공 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/03/2017
-ms.openlocfilehash: 85b0c9b0688e9fb310a8f427018a02fe629404bb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3fc40f3a422901d0ffb4779e0c0b7c46de052d3a
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61225546"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121206"
 ---
-# <a name="watchos-complications-in-xamarin"></a>watchOS Xamarin의 복잡성
+# <a name="watchos-complications-in-xamarin"></a>Xamarin에서 watchOS의 복잡 한 문제
 
-_watchOS는 조사식 얼굴에 대 한 사용자 지정 복잡성을 작성 하는 개발자를 수 있습니다._
+_watchOS를 사용 하면 개발자가 시청 얼굴에 대 한 사용자 지정 문제를 작성할 수 있습니다._
 
-이 페이지에서는 다양 한 유형의 사용 가능한 복잡성 및 watchOS 3 앱에는 복잡 한 상황을 추가 하는 방법을 설명 합니다.
+이 페이지에서는 사용 가능한 다양 한 종류의 복잡 한 유형과 watchOS 3 앱에 복잡 한를 추가 하는 방법을 설명 합니다.
 
-참고 각 watchOS 응용 프로그램 하나 complication를 하나만 사용할 수 있습니다.
+각 watchOS 응용 프로그램은 한 가지 복잡 한 경우에만 사용할 수 있습니다.
 
-먼저 읽으십시오 [Apple 문서](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) 앱은 복잡 한 상황에 적합 한지 확인 하려면. 5 가지 `CLKComplicationFamily` 형식에서 선택할 수 표시:
+먼저 [Apple의 문서](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) 를 읽고 앱이 복잡 한 경우에 적합 한지 확인 합니다. 선택할 수 있는 `CLKComplicationFamily` 표시 유형에는 다음 5 가지가 있습니다.
 
-[![](complications-images/all-complications-sml.png "5 CLKComplicationFamily 형식을 사용할 수 있습니다. 원형 소형 작은 모듈 형식 큰, Utilitarian 작은 모듈 형식, 큰 Utilitarian")](complications-images/all-complications.png#lightbox)
+[![](complications-images/all-complications-sml.png "사용할 수 있는 5 가지 CLKComplicationFamily 형식은 다음과 같습니다. 원형 Small, 모듈형 Small, 모듈식 큼, 실속형 Small, 실속형 Large")](complications-images/all-complications.png#lightbox)
 
-앱은 하나의 스타일 또는 5 개 모두에 표시 되는 데이터에 따라 구현할 수 있습니다.
-또한 시간 이동, 사용자가 디지털 Crown 대로 지난 및/또는 이후 시간에 대 한 값을 제공을 지원할 수 있습니다.
+앱은 표시 되는 데이터에 따라 스타일을 하나 또는 5 개만 구현할 수 있습니다.
+사용자가 Digital Crown를 전환할 때 과거 및/또는 미래의 시간에 대 한 값을 제공 하 여 시간 이동을 지원할 수도 있습니다.
 
 <a name="adding" />
 
-## <a name="adding-a-complication"></a>Complication 추가
+## <a name="adding-a-complication"></a>복잡 한 추가
 
-### <a name="configuration"></a>구성
+### <a name="configuration"></a>Configuration
 
-복잡성은 watch 앱을 만드는 동안 추가 또는 기존 솔루션에 수동으로 추가할 수 있습니다.
+응용 프로그램을 만드는 동안 조사식 응용 프로그램에 추가 하거나 기존 솔루션에 수동으로 추가할 수 있습니다.
 
-### <a name="add-new-project"></a>새 프로젝트 추가...
+### <a name="add-new-project"></a>새 프로젝트 추가 ...
 
-**새 프로젝트 추가...**  마법사에 자동으로 복잡성 컨트롤러 클래스를 만들고 구성 하는 확인란을 선택 합니다 **Info.plist** 파일:
+**새 프로젝트 추가 ...** 마법사에는 복잡 한 컨트롤러 클래스를 자동으로 만들고 **info.plist** 파일을 구성 하는 확인란이 포함 됩니다.
 
-![](complications-images/file-new-project-sml.png "Complication 포함 확인란")
+![](complications-images/file-new-project-sml.png "복잡 한 내용 포함 확인란")
 
 ### <a name="existing-projects"></a>기존 프로젝트
 
-에 복잡 한 기존 프로젝트에 추가 합니다.
+기존 프로젝트에 복잡 한 프로젝트를 추가 하려면 다음을 수행 합니다.
 
-1. 새 **ComplicationController.cs** 클래스 파일 및 구현 `CLKComplicationDataSource`합니다.
-2. 앱의 구성 **Info.plist** complication, 및 complication 패밀리는 지원 되는 id를 노출 합니다.
+1. 새 **ComplicationController.cs** 클래스 파일을 만들고을 구현 `CLKComplicationDataSource`합니다.
+2. 응용 프로그램의 **info.plist** 를 구성 하 여 복잡 한 패밀리를 노출 하 고 지원 되는 복잡 한 패밀리를 식별 합니다.
 
-이러한 단계는 아래에서 자세히 설명 합니다.
+이러한 단계는 아래에 자세히 설명 되어 있습니다.
 
 <a name="clkcomplicationcontroller" />
 
 ### <a name="clkcomplicationdatasource-class"></a>CLKComplicationDataSource 클래스
 
-다음 C# 구현에 필요한 최소 메서드를 포함 하는 서식 파일을 `CLKComplicationDataSource`합니다.
+다음 C# 템플릿에서는을 `CLKComplicationDataSource`구현 하는 데 필요한 최소 메서드를 제공 합니다.
 
 ```csharp
 [Register ("ComplicationController")]
@@ -77,45 +77,45 @@ public class ComplicationController : CLKComplicationDataSource
 }
 ```
 
-에 따라 합니다 [는 복잡 한 작성](#writing) 이 클래스에 코드를 추가 하는 지침입니다.
+[복잡 한 지침 작성](#writing) 을 수행 하 여이 클래스에 코드를 추가 합니다.
 
 ### <a name="infoplist"></a>Info.plist
 
-조사식 확장 **Info.plist** 파일의 이름을 지정 해야 합니다 `CLKComplicationDataSource` 지원 하려는 complication 제품군 및:
+Watch 확장의 **info.plist** 파일은 지원 하려는 `CLKComplicationDataSource` 및 복잡 한 제품군의 이름을 지정 해야 합니다.
 
-[![](complications-images/complications-config-sml.png "Complication 제품군 형식")](complications-images/complications-config.png#lightbox)
+[![](complications-images/complications-config-sml.png "복잡 한 패밀리 형식")](complications-images/complications-config.png#lightbox)
 
-합니다 **데이터 소스 클래스** 항목 목록 클래스 이름을 해당 서브 클래스에 표시 됩니다 `CLKComplicationDataSource` complication 논리를 포함 하는 하위 클래스입니다.
+**데이터 소스 클래스** 항목 목록에는 복잡 한 논리를 포함 `CLKComplicationDataSource` 하는 하위 클래스의 클래스 이름이 표시 됩니다.
 
 ## <a name="clkcomplicationdatasource"></a>CLKComplicationDataSource
 
-모든 complication 기능이 단일 클래스에서 메서드 재정의에서 구현 되는 `CLKComplicationDataSource` 추상 클래스 (구현 하는 `ICLKComplicationDataSource` 인터페이스).
+모든 복잡 한 기능은 단일 클래스에서 구현 되며, `CLKComplicationDataSource` `ICLKComplicationDataSource` 인터페이스를 구현 하는 추상 클래스의 메서드를 재정의 합니다.
 
 ### <a name="required-methods"></a>필수 메서드
 
-Complication 실행에 대 한 다음 메서드를 구현 해야 합니다.
+복잡 한 실행을 위해 다음 메서드를 구현 해야 합니다.
 
-- `GetPlaceholderTemplate` -앱을 제공할 수 없는 경우 또는 구성 하는 동안 사용 되는 정적 표시를 반환 합니다.
-- `GetCurrentTimelineEntry` -Complication 실행 중일 때 올바른 표시를 계산 합니다.
-- `GetSupportedTimeTravelDirections` --에서 옵션을 반환 하는 중 `CLKComplicationTimeTravelDirections` 와 같은 `None`, `Forward`합니다 `Backward`, 또는 `Forward | Backward`합니다.
+- `GetPlaceholderTemplate`-구성 중 또는 앱에서 값을 제공할 수 없는 경우에 사용 되는 정적 표시를 반환 합니다.
+- `GetCurrentTimelineEntry`-복잡 한를 실행 하는 경우 올바른 디스플레이를 계산 합니다.
+- `GetSupportedTimeTravelDirections`- `None`,, 또는 `CLKComplicationTimeTravelDirections` `Forward` `Backward`등의 옵션을 반환 합니다. `Forward | Backward`
 
-### <a name="privacy"></a>개인 정보 보호
+### <a name="privacy"></a>개인 정보 취급 방침
 
-개인 데이터를 표시 하는 복잡성
+개인 데이터를 표시 하는 복잡 한
 
-* `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` 또는 `HideOnLockScreen`
+- `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` 또는 `HideOnLockScreen`
 
-이 메서드가 반환 하는 경우 `HideOnLockScreen` complication 중 하나 또는 응용 프로그램 이름 (아이콘과 아닌 데이터)에 표시 됩니다 시계 잠긴 경우.
+이 메서드가를 반환 `HideOnLockScreen` 하는 경우 조사식이 잠기면 아이콘이 나 응용 프로그램 이름 (데이터 아님)이 표시 됩니다.
 
-### <a name="updates"></a>Updates
+### <a name="updates"></a>업데이트
 
-- `GetNextRequestedUpdateDate` -운영 체제 업데이트 complication 표시 데이터에 대 한 앱은 다음 쿼리 하는 경우 시간을 반환 합니다.
+- `GetNextRequestedUpdateDate`-운영 체제가 다음에 앱을 쿼리하여 업데이트 된 복잡 한 표시 데이터를 반환 해야 하는 시간을 반환 합니다.
 
-IOS 앱에서 업데이트를 강제로 수도 있습니다.
+IOS 앱에서 강제로 업데이트할 수도 있습니다.
 
 ### <a name="supporting-time-travel"></a>지원 시간 이동
 
-시간 여행 지원은 선택 사항에 의해 제어 되는 `GetSupportedTimeTravelDirections` 메서드. 반환 하는 경우 `Forward`하십시오 `Backward`, 또는 `Forward | Backward` 다음 메서드를 구현 해야 하는 다음
+시간 이동 지원은 선택 사항이 며 `GetSupportedTimeTravelDirections` 메서드에 의해 제어 됩니다. , `Forward` `Backward`또는 를반환하는경우다음메서드를구현해야합니다.`Forward | Backward`
 
 - `GetTimelineStartDate`
 - `GetTimelineEndDate`
@@ -126,15 +126,15 @@ IOS 앱에서 업데이트를 강제로 수도 있습니다.
 
 ## <a name="writing-a-complication"></a>복잡 한 작성
 
-단순 데이터에서 복잡성이 범위를 복잡 한 이미지 및 데이터 렌더링 시간 이동 지원과 표시 합니다. 아래 코드는 간단 하 고 단일 템플릿 complication 빌드하는 방법을 보여 줍니다.
+간단한 데이터 표시부터 시간 이동 지원과 관련 된 복잡 한 이미지 및 데이터 렌더링에 이르기까지 다양 합니다. 아래 코드에서는 간단한 단일 템플릿을 복잡 하 게 만드는 방법을 보여 줍니다.
 
 <!--
 The [sample]() for this article supports more template styles.
 -->
 
-## <a name="sample-code"></a>샘플 코드
+## <a name="sample-code"></a>예제 코드
 
-이 예제에서는 지원 합니다 `UtilitarianLarge` 템플릿이 없으므로 complication의 해당 유형을 지 원하는 특정 조사식 면에만 선택할 수 있습니다. 때 *선택* 복잡성 표시를 watch **내 COMPLICATION** 시점과 *실행* 텍스트를 표시 **분 _시간_**   (부분과 시간).
+이 예제에서는 `UtilitarianLarge` 템플릿만 지원 하므로 해당 유형을 지 원하는 특정 조사식 면 에서만 선택할 수 있습니다. 조사식을 *선택* 하는 경우 복잡 한 것 을 표시 하 고 *실행* 하면 텍스트 분 ( **시간**  부분 포함)을 표시 합니다.
 
 ```csharp
 [Register ("ComplicationController")]
@@ -182,62 +182,62 @@ public class ComplicationController : CLKComplicationDataSource
 
 <a name="templates" />
 
-## <a name="complication-templates"></a>Complication 템플릿
+## <a name="complication-templates"></a>복잡 한 템플릿
 
-각 complication 스타일에 대 한 사용 가능한 여러 템플릿의 여러 가지가 있습니다.
-합니다 **링** 템플릿을 complication 진행률 또는 기타 값을 그래픽으로 표시 하려면 사용할 수 있는 주변 스타일 진행률 링을 표시할 수 있습니다.
+각 복잡 한 스타일에 사용할 수 있는 다양 한 템플릿이 있습니다.
+**링** 템플릿을 사용 하면 진행률 또는 기타 일부 값을 그래픽으로 표시 하는 데 사용 될 수 있는 복잡 한 진행률 스타일 링을 표시할 수 있습니다.
 
-[Apple의 CLKComplicationTemplate docs](https://developer.apple.com/reference/clockkit/clkcomplicationtemplate)
+[Apple의 CLKComplicationTemplate 문서](https://developer.apple.com/reference/clockkit/clkcomplicationtemplate)
 
-### <a name="circular-small"></a>원형 소형
+### <a name="circular-small"></a>원형 작은
 
-이러한 템플릿 클래스 이름을 모두 사용 하 여 접두사가 `CLKComplicationTemplateCircularSmall`:
+이러한 템플릿 클래스 이름 앞에 `CLKComplicationTemplateCircularSmall`는 모두 접두사가 붙습니다.
 
-- **RingImage** -묶어 진행률 링을 사용 하 여 단일 이미지를 표시 합니다.
-- **RingText** -묶어 진행률 링을 사용 하 여 텍스트 한 줄을 표시 합니다.
-- **SimpleImage** -작은 단일 이미지를 표시 합니다.
-- **SimpleText** -텍스트의 작은 코드 조각을 표시 합니다.
-- **StackImage** -이미지 및 텍스트 상하로 줄 표시
-- **StackText** -두 줄 텍스트를 표시 합니다.
+- **RingImage** -단일 이미지를 표시 하 고 그 주위에 진행률 링을 표시 합니다.
+- **RingText** -한 줄의 텍스트를 표시 하 고 진행률 고리를 표시 합니다.
+- **SimpleImage** -작은 단일 이미지를 표시 하기만 하면 됩니다.
+- **SimpleText** -작은 텍스트 조각을 표시 하기만 하면 됩니다.
+- **Stackimage** -이미지와 텍스트 한 줄을 표시 합니다.
+- **Stacktext** -두 줄의 텍스트를 표시 합니다.
 
-### <a name="modular-small"></a>작은 모듈 형식
+### <a name="modular-small"></a>모듈식 소형
 
-이러한 템플릿 클래스 이름을 모두 사용 하 여 접두사가 `CLKComplicationTemplateModularSmall`:
+이러한 템플릿 클래스 이름 앞에 `CLKComplicationTemplateModularSmall`는 모두 접두사가 붙습니다.
 
-- **ColumnsText** -(2 행과 2 열)의 텍스트 값의 작은 표를 표시 합니다.
-- **RingImage** -묶어 진행률 링을 사용 하 여 단일 이미지를 표시 합니다.
-- **RingText** -묶어 진행률 링을 사용 하 여 텍스트 한 줄을 표시 합니다.
-- **SimpleImage** -작은 단일 이미지를 표시 합니다.
-- **SimpleText** -텍스트의 작은 코드 조각을 표시 합니다.
-- **StackImage** -이미지 및 텍스트 상하로 줄 표시
-- **StackText** -두 줄 텍스트를 표시 합니다.
+- **ColumnsText** -작은 텍스트 값 표 (행 2 개 및 열 2 개)를 표시 합니다.
+- **RingImage** -단일 이미지를 표시 하 고 그 주위에 진행률 링을 표시 합니다.
+- **RingText** -한 줄의 텍스트를 표시 하 고 진행률 고리를 표시 합니다.
+- **SimpleImage** -작은 단일 이미지를 표시 하기만 하면 됩니다.
+- **SimpleText** -작은 텍스트 조각을 표시 하기만 하면 됩니다.
+- **Stackimage** -이미지와 텍스트 한 줄을 표시 합니다.
+- **Stacktext** -두 줄의 텍스트를 표시 합니다.
 
-### <a name="modular-large"></a>큰 모듈 형식
+### <a name="modular-large"></a>모듈식 큼
 
-이러한 템플릿 클래스 이름을 모두 사용 하 여 접두사가 `CLKComplicationTemplateModularLarge`:
+이러한 템플릿 클래스 이름 앞에 `CLKComplicationTemplateModularLarge`는 모두 접두사가 붙습니다.
 
-- **열** -필요에 따라 각 행의 왼쪽에 이미지를 포함 하 여 2 개의 열, 3 행의 표를 표시 합니다.
-- **StandardBody** -일반 텍스트의 두 행이 있는 굵은 헤더 문자열을 표시 합니다. 필요에 따라 헤더 왼쪽 이미지를 표시할 수 있습니다.
-- **테이블** -2x2 표 아래에 있는 텍스트를 사용 하 여 굵은 헤더 문자열을 표시 합니다. 필요에 따라 헤더 왼쪽 이미지를 표시할 수 있습니다.
-- **TallBody** -큰 글꼴 한 줄 텍스트 아래에 굵게 표시 된 헤더 문자열을 표시 합니다.
+- **열** -두 개의 열이 있는 3 개 행의 표를 표시 합니다. 각 행의 왼쪽에 이미지를 포함 시킬 수도 있습니다.
+- **Standardbody** -일반 텍스트 행 두 개가 있는 굵은 머리글 문자열을 표시 합니다. 머리글은 선택적으로 왼쪽에 이미지를 표시할 수 있습니다.
+- **테이블** -굵은 머리글 문자열을 표시 하 고 그 아래에 2x2 표를 표시 합니다. 머리글은 선택적으로 왼쪽에 이미지를 표시할 수 있습니다.
+- **TallBody** -아래에 더 큰 글꼴 텍스트 한 줄이 있는 굵은 머리글 문자열을 표시 합니다.
 
-### <a name="utilitarian-small"></a>Utilitarian 작은
+### <a name="utilitarian-small"></a>실속형 Small
 
-이러한 템플릿 클래스 이름을 모두 사용 하 여 접두사가 `CLKComplicationTemplateUtilitarianSmall`:
+이러한 템플릿 클래스 이름 앞에 `CLKComplicationTemplateUtilitarianSmall`는 모두 접두사가 붙습니다.
 
-- **플랫** -(텍스트 짧은 이어야 함)는 한 줄에는 이미지 및 일부 텍스트를 표시 합니다.
-- **RingImage** -묶어 진행률 링을 사용 하 여 단일 이미지를 표시 합니다.
-- **RingText** -묶어 진행률 링을 사용 하 여 텍스트 한 줄을 표시 합니다.
-- **사각형** -(40px 또는 44px는 38 mm 또는 42 mm Apple Watch 각각에 대 한 사각형) 정사각형 이미지를 표시 합니다.
+- **Flat** -이미지와 일부 텍스트를 한 줄에 표시 합니다. 텍스트는 짧게 표시 됩니다.
+- **RingImage** -단일 이미지를 표시 하 고 그 주위에 진행률 링을 표시 합니다.
+- **RingText** -한 줄의 텍스트를 표시 하 고 진행률 고리를 표시 합니다.
+- **사각형** -사각형 이미지를 표시 합니다. 즉, Apple Watch 38mm에 대 한 사각형 이미지 (40px 또는 44px square)를 각각 표시 합니다.
 
-### <a name="utilitarian-large"></a>큰 utilitarian
+### <a name="utilitarian-large"></a>실속형 큼
 
-이 complication 스타일에 대 한 하나의 템플릿이: `CLKComplicationTemplateUtilitarianLargeFlat`합니다.
-한 줄에 모두 단일 이미지와 일부 텍스트를 표시합니다.
+이 복잡 한 스타일 `CLKComplicationTemplateUtilitarianLargeFlat`에는 템플릿이 하나만 있습니다.
+단일 이미지와 일부 텍스트를 한 줄에 표시 합니다.
 
 
 
 ## <a name="related-links"></a>관련 링크
 
-- [Apple 문서](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ComplicationEssentials.html)
+- [Apple의 문서](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ComplicationEssentials.html)
 - [WWDC 비디오](https://developer.apple.com/videos/play/wwdc2015-209/)

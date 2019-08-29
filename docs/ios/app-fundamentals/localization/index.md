@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 604313009129ad3c7133098d8e7880b0e07eef6e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 70e9f403e40cff8e1af536acf3a5efc3d12ad20b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527116"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121400"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.ios의 지역화
 
@@ -145,9 +145,9 @@ Info.plist `CFBundleDevelopmentRegion` 파일에가 지정 되지 않은 경우 
 
 문자열에서 다음 문자를 이스케이프 해야 합니다.
 
-* `\"`시세
-* `\\`백슬래시
-* `\n`줄
+- `\"`시세
+- `\\`백슬래시
+- `\n`줄
 
 이는 **es/지역화 가능 문자열** (ie)의 예입니다. 스페인어) 샘플의 파일입니다.
 

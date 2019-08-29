@@ -6,26 +6,26 @@ ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: df29a7f595973a0447899666838e21418ff69330
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d1d05c75b8026112e8b81c91144361b65ad3a8e0
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650081"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120028"
 ---
 # <a name="getting-started-with-android"></a>Android 시작
 
 [Java 시작](~/tools/dotnet-embedding/get-started/java/index.md) 가이드의 요구 사항 외에도 다음이 필요 합니다.
 
-* [Xamarin Android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상
-* [Android Studio 3(sp3)](https://developer.android.com/studio/index.html) (Java 1.8 포함)
+- [Xamarin Android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상
+- [Android Studio 3(sp3)](https://developer.android.com/studio/index.html) (Java 1.8 포함)
 
 개요로 다음 작업을 수행 합니다.
 
-* C# Android 라이브러리 프로젝트 만들기
-* NuGet을 통해 .NET 포함 설치
-* Android 라이브러리 어셈블리에 .NET 포함을 실행 합니다.
-* Android Studio의 Java 프로젝트에서 생성 된 AAR 파일을 사용 합니다.
+- C# Android 라이브러리 프로젝트 만들기
+- NuGet을 통해 .NET 포함 설치
+- Android 라이브러리 어셈블리에 .NET 포함을 실행 합니다.
+- Android Studio의 Java 프로젝트에서 생성 된 AAR 파일을 사용 합니다.
 
 ## <a name="create-an-android-library-project"></a>Android 라이브러리 프로젝트 만들기
 
@@ -159,17 +159,17 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 여기에서 무슨 일이 발생 했는지 확인 합니다.
 
-* C# 클래스는 Java를 포함 `HelloActivity`하는 클래스입니다.
-* Android 리소스 파일이 있습니다.
-* Android Studio의 Java에서이를 사용 했습니다.
+- C# 클래스는 Java를 포함 `HelloActivity`하는 클래스입니다.
+- Android 리소스 파일이 있습니다.
+- Android Studio의 Java에서이를 사용 했습니다.
 
 이 샘플이 작동 하려면 다음 모든 것이 최종 APK에 설정 되어 있습니다.
 
-* 응용 프로그램 시작 시 Xamarin Android 구성
-* **자산/어셈블리** 에 포함 된 .net 어셈블리
-* C# 활동에 대해 **Androidmanifest** 을 수정 합니다.
-* .NET 라이브러리의 Android 리소스 및 자산
-* 모든`Java.Lang.Object` 하위 클래스에 대 한 [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)
+- 응용 프로그램 시작 시 Xamarin Android 구성
+- **자산/어셈블리** 에 포함 된 .net 어셈블리
+- C# 활동에 대해 **Androidmanifest** 을 수정 합니다.
+- .NET 라이브러리의 Android 리소스 및 자산
+- 모든`Java.Lang.Object` 하위 클래스에 대 한 [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)
 
 추가 연습을 찾고 있는 경우 Android Studio 프로젝트에 Charles Petzold의 [FingerPaint demo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) 를 포함 하는 다음 비디오를 확인 하세요.
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Android의 현재 제한 사항
 
-현재 하위 클래스 `Java.Lang.Object`를 사용할 경우 Xamarin은 .net 포함 대신 Java 스텁 (Android 호출 가능 래퍼)을 생성 합니다. 이로 인해 Xamarin.ios로 Java로 내보내기 C# 와 동일한 규칙을 따라야 합니다. 예를 들어:
+현재 하위 클래스 `Java.Lang.Object`를 사용할 경우 Xamarin은 .net 포함 대신 Java 스텁 (Android 호출 가능 래퍼)을 생성 합니다. 이로 인해 Xamarin.ios로 Java로 내보내기 C# 와 동일한 규칙을 따라야 합니다. 예:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -223,8 +223,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-* `[Register]`필요한 Java 패키지 이름에 매핑해야 합니다.
-* `[Export]`메서드가 Java에 표시 되도록 하려면 필요 합니다.
+- `[Register]`필요한 Java 패키지 이름에 매핑해야 합니다.
+- `[Export]`메서드가 Java에 표시 되도록 하려면 필요 합니다.
 
 Java에서 다음과 `ViewSubclass` 같이를 사용할 수 있습니다.
 
@@ -243,18 +243,18 @@ v.apply("Hello");
 
 .NET 포함에는 다음과 같은 여러 형식의 파일을 최종 AAR에 포함 해야 하기 때문에 딜레마이 발생 합니다.
 
-* Android 자산
-* Android 리소스
-* Android 네이티브 라이브러리
-* Android java 소스
+- Android 자산
+- Android 리소스
+- Android 네이티브 라이브러리
+- Android java 소스
 
 Android 지원 라이브러리 또는 AAR에 Google Play 서비스 이러한 파일을 포함 하지 않으려는 경우, 대신 Google의 Android Studio 공식 버전을 사용 합니다.
 
 권장 되는 방법은 다음과 같습니다.
 
-* 사용자가 소유 하 고 있는 어셈블리를 포함 하는 .NET을 포함 하 여 (에 대 한 소스 포함) Java에서 호출 하려고 합니다.
-* Android 자산, 네이티브 라이브러리 또는 리소스가 필요한 어셈블리를 .NET에 전달 합니다.
-* Android 지원 라이브러리 또는 Google Play 서비스와 같은 Java 종속성을 추가 Android Studio
+- 사용자가 소유 하 고 있는 어셈블리를 포함 하는 .NET을 포함 하 여 (에 대 한 소스 포함) Java에서 호출 하려고 합니다.
+- Android 자산, 네이티브 라이브러리 또는 리소스가 필요한 어셈블리를 .NET에 전달 합니다.
+- Android 지원 라이브러리 또는 Google Play 서비스와 같은 Java 종속성을 추가 Android Studio
 
 따라서 다음과 같은 명령을 사용할 수 있습니다.
 
@@ -262,7 +262,7 @@ Android 지원 라이브러리 또는 AAR에 Google Play 서비스 이러한 파
 mono Embeddinator-4000.exe --gen=Java --platform=Android -c -o output YourMainAssembly.dll YourDependencyA.dll YourDependencyB.dll
 ```
 
-사용자가 Android Studio 프로젝트에 필요한 Android 자산, 리소스 등이 포함 되어 있지 않으면 NuGet에서 모든 항목을 제외 해야 합니다. Java에서 호출 하지 않아도 되는 종속성을 생략 하 고 필요한 라이브러리의 일부 _를 링커에 포함할_ 수도 있습니다.
+사용자가 Android Studio 프로젝트에 필요한 Android 자산, 리소스 등이 포함 되어 있지 않으면 NuGet에서 모든 항목을 제외 해야 합니다. Java에서 호출 하지 않아도 되는 종속성을 생략 하 고 필요한 라이브러리의 일부를 링커에 포함할 수도 있습니다.
 
 Android Studio에 필요한 Java 종속성을 추가 하려면 **gradle** 파일이 다음과 같이 표시 될 수 있습니다.
 
@@ -277,11 +277,11 @@ dependencies {
 
 ## <a name="further-reading"></a>추가 정보
 
-* [Android의 콜백](~/tools/dotnet-embedding/android/callbacks.md)
-* [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)
-* [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
-* [오픈 소스 프로젝트에 기여](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)
+- [Android의 콜백](~/tools/dotnet-embedding/android/callbacks.md)
+- [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)
+- [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
+- [오픈 소스 프로젝트에 기여](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+- [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2017
-ms.openlocfilehash: 648b03dc34daa8906adab316c552a9615649800d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fa4744ba217d602dbd3134e616ac3bc4d47f7b76
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655818"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120821"
 ---
 # <a name="introduction-to-ios-11"></a>iOS 11 소개
 
@@ -61,24 +61,24 @@ PDFKit는 이제 iOS 11에서 사용할 수 있으며 앱에 PDF 만들기 및 �
 
 시작 하는 데 몇 C# 가지 [샘플이](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11) 있습니다.
 
-* [ARKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
-* [개체를 배치 하는 ARKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
-* [ARKit 및 UrhoSharp](arkit/urhosharp.md)
-* [CoreML 이미지 인식 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
-* [Azure 사용자 지정 모델을 사용 하는 CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
-* [CoreNFC 태그 판독기 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
-* [테이블 뷰 & 끌어서 놓기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
-* [컬렉션 뷰 & 끌어서 놓기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
-* [사용자 지정 보기 & 끌어서 놓기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
-* [DragBoard 끌어서 놓기 샘플 &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
-* [MapKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
-* [SiriKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
-* [업데이트 된 사진 프레임 워크 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
-* [시력 & CoreML 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
-* [시각 사각형 검색 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
-* [시력 얼굴 검색 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
-* [PDKFit 위젯 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
-* [PDFKit 워터 마크 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
+- [ARKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
+- [개체를 배치 하는 ARKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [ARKit 및 UrhoSharp](arkit/urhosharp.md)
+- [CoreML 이미지 인식 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [Azure 사용자 지정 모델을 사용 하는 CoreML](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [CoreNFC 태그 판독기 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
+- [테이블 뷰 & 끌어서 놓기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [컬렉션 뷰 & 끌어서 놓기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [사용자 지정 보기 & 끌어서 놓기](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
+- [DragBoard 끌어서 놓기 샘플 &](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
+- [MapKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [SiriKit 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [업데이트 된 사진 프레임 워크 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
+- [시력 & CoreML 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
+- [시각 사각형 검색 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
+- [시력 얼굴 검색 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [PDKFit 위젯 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
+- [PDFKit 워터 마크 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
 
 ## <a name="related-links"></a>관련 링크
 

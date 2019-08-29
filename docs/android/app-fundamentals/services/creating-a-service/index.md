@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: d5b3f084be7adc664dcb52342af617788f4dde48
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 63f815cc974315735220a99fd4cce2af408a8c2f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526228"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119054"
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
 Xamarin Android 서비스는 Android 서비스의 두 가지 inviolable 규칙을 준수 해야 합니다.
 
-* 를 [`Android.App.Service`](xref:Android.App.Service)확장 해야 합니다.
-* 로 데코 레이트 되어야 합니다 [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
+- 를 [`Android.App.Service`](xref:Android.App.Service)확장 해야 합니다.
+- 로 데코 레이트 되어야 합니다 [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
 
 Android 서비스의 또 다른 요구 사항은 **Androidmanifest** 에 등록 하 고 고유한 이름을 지정 해야 한다는 것입니다. Xamarin.ios는 빌드 시 필요한 XML 특성을 사용 하 여 매니페스트에 서비스를 자동으로 등록 합니다.
 

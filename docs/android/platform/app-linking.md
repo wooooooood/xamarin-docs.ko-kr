@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d1a96c81da8d71d92e3ce5acd9928b293f3cf3dd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524711"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119687"
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -55,12 +55,12 @@ Android 6.0에서 앱 링크를 설정 하려면 다음 두 가지 주요 단계
 
 웹 사이트에서 Android 응용 프로그램의 작업에 URI (또는 Uri 집합 가능)를 매핑하는 의도 필터를 구성 해야 합니다. Xamarin.ios에서이 관계는 [Intentfilterattribute](xref:Android.App.IntentFilterAttribute)를 사용 하 여 활동을 표시할 하 여 설정 합니다. 의도 필터는 다음 정보를 선언 해야 합니다.
 
-* **`Intent.ActionView`** &ndash; 이렇게 하면 정보를 보기 위해 요청에 응답 하는 의도 필터를 등록 합니다.
-* **`Categories`** 의도 필터는 두 **[의도](xref:Android.Content.Intent.CategoryBrowsable)** 를 모두 등록 해야 합니다. categorybrowsable 가능 하 고 의도 된 웹 URI를 올바르게 처리할 수 있습니다 **[.](xref:Android.Content.Intent.CategoryDefault)** &ndash;
-* **`DataScheme`** 의도 필터는 and/ `http` or `https`를 선언 해야 합니다. &ndash; 이러한 두 가지 유효한 스키마만 있습니다.
-* **`DataHost`** &ndash; Uri가 생성 되는 도메인입니다.
-* **`DataPathPrefix`** &ndash; 웹 사이트의 리소스에 대 한 선택적 경로입니다.
-* **`AutoVerify`** 특성은 Android에 응용 프로그램과 웹 사이트 간의 관계를 확인 하도록 지시 합니다 `autoVerify`. &ndash; 이에 대해서는 아래에서 자세히 설명 합니다.
+- **`Intent.ActionView`** &ndash; 이렇게 하면 정보를 보기 위해 요청에 응답 하는 의도 필터를 등록 합니다.
+- **`Categories`** 의도 필터는 두 **[의도](xref:Android.Content.Intent.CategoryBrowsable)** 를 모두 등록 해야 합니다. categorybrowsable 가능 하 고 의도 된 웹 URI를 올바르게 처리할 수 있습니다 **[.](xref:Android.Content.Intent.CategoryDefault)** &ndash;
+- **`DataScheme`** 의도 필터는 and/ `http` or `https`를 선언 해야 합니다. &ndash; 이러한 두 가지 유효한 스키마만 있습니다.
+- **`DataHost`** &ndash; Uri가 생성 되는 도메인입니다.
+- **`DataPathPrefix`** &ndash; 웹 사이트의 리소스에 대 한 선택적 경로입니다.
+- **`AutoVerify`** 특성은 Android에 응용 프로그램과 웹 사이트 간의 관계를 확인 하도록 지시 합니다 `autoVerify`. &ndash; 이에 대해서는 아래에서 자세히 설명 합니다.
 
 다음 예제에서는 [intentfilterattribute](xref:Android.App.IntentFilterAttribute) 를 사용 하 여에서 `https://www.recipe-app.com/recipes` `http://www.recipe-app.com/recipes`링크를 처리 하는 방법을 보여 줍니다.
 
@@ -90,9 +90,9 @@ Android 6.0 앱을 연결 하려면 응용 프로그램을 URI에 대 한 기본
 
 디지털 자산 파일에는 Android에서 연결을 확인 하는 데 필요한 메타 데이터가 포함 되어 있습니다. **Assetlinks. json** 파일의 키-값 쌍은 다음과 같습니다.
 
-* `namespace`&ndash; Android 응용 프로그램의 네임 스페이스입니다.
-* `package_name`&ndash; 응용 프로그램 매니페스트에 선언 된 Android 응용 프로그램의 패키지 이름입니다.
-* `sha256_cert_fingerprints`&ndash; 서명 된 응용 프로그램의 SHA256 지문입니다. 응용 프로그램의 SHA1 지문을 가져오는 방법에 대 한 자세한 내용은 [키 저장소의 MD5 또는 Sha1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md) 가이드를 참조 하세요.
+- `namespace`&ndash; Android 응용 프로그램의 네임 스페이스입니다.
+- `package_name`&ndash; 응용 프로그램 매니페스트에 선언 된 Android 응용 프로그램의 패키지 이름입니다.
+- `sha256_cert_fingerprints`&ndash; 서명 된 응용 프로그램의 SHA256 지문입니다. 응용 프로그램의 SHA1 지문을 가져오는 방법에 대 한 자세한 내용은 [키 저장소의 MD5 또는 Sha1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md) 가이드를 참조 하세요.
 
 다음 코드 조각은 단일 응용 프로그램이 나열 된 **assetlinks. json** 의 예입니다.
 
@@ -173,9 +173,9 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    * **`Package`** &ndash; 응용 프로그램의 패키지 이름입니다.
-    * **`Domain`** &ndash; 응용 프로그램에서 웹 링크를 처리 하는 도메인 (공백으로 구분)입니다.
-    * **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 `android:autoVerify=true` 를 선언 하 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
+    - **`Package`** &ndash; 응용 프로그램의 패키지 이름입니다.
+    - **`Domain`** &ndash; 응용 프로그램에서 웹 링크를 처리 하는 도메인 (공백으로 구분)입니다.
+    - **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 `android:autoVerify=true` 를 선언 하 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
 
     예를 들어:
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8e5d4cf50874a0976c1dd10e35e7bd84518f14c4
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 03796af880aaef74c2d4b54007ac34ef1c5dc180
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511151"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119832"
 ---
 # <a name="creating-a-cryptoobject"></a>CryptoObject 만들기
 
@@ -105,10 +105,10 @@ public class CryptoObjectHelper
 
 Android에서 키를 무효화할 수 있는 몇 가지 상황이 있습니다. 
 
-* 새 지문이 장치에 등록 되었습니다.
-* 장치에 등록 된 지문이 없습니다.
-* 사용자가 화면 잠금을 사용 하지 않도록 설정 했습니다.
-* 사용자가 화면 잠금 (screenlock의 유형 또는 사용 된 PIN/패턴)을 변경 했습니다.
+- 새 지문이 장치에 등록 되었습니다.
+- 장치에 등록 된 지문이 없습니다.
+- 사용자가 화면 잠금을 사용 하지 않도록 설정 했습니다.
+- 사용자가 화면 잠금 (screenlock의 유형 또는 사용 된 PIN/패턴)을 변경 했습니다.
 
 이 `Cipher.Init` 경우는 [`KeyPermanentlyInvalidatedException`](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)을 throw 합니다. 위의 샘플 코드에서는 해당 예외를 트래핑 하 고 키를 삭제 한 다음 새 항목을 만듭니다.
 
@@ -122,11 +122,11 @@ Android에서 키를 무효화할 수 있는 몇 가지 상황이 있습니다.
 
 그런 다음를 `KeyGenParameterSpec` `KeyGenParameterSpec.Builder`사용 하 여를 만듭니다. 는 `KeyGenParameterSpec.Builder` 만들 키에 대 한 다음 정보를 래핑합니다.
 
-* 키의 이름입니다.
-* 키는 암호화 및 암호 해독 모두에 유효 해야 합니다.
-* 샘플 코드 `BLOCK_MODE` 에서는 _Cipher block 체인화_ (`KeyProperties.BlockModeCbc`)로 설정 됩니다. 즉, 각 블록이 이전 블록으로 XORed (각 블록 간의 종속성을 생성 함). 
-* 는 `CryptoObjectHelper` _PKCS7_( [_공개 키 암호화 표준 #7_](https://tools.ietf.org/html/rfc2315) )를 사용 하 여 블록이 모두 동일한 크기 인지 확인 하는 바이트를 생성 합니다.
-* `SetUserAuthenticationRequired(true)`키를 사용 하려면 사용자 인증이 필요 함을 의미 합니다.
+- 키의 이름입니다.
+- 키는 암호화 및 암호 해독 모두에 유효 해야 합니다.
+- 샘플 코드 `BLOCK_MODE` 에서는 _Cipher block 체인화_ (`KeyProperties.BlockModeCbc`)로 설정 됩니다. 즉, 각 블록이 이전 블록으로 XORed (각 블록 간의 종속성을 생성 함). 
+- 는 `CryptoObjectHelper` _PKCS7_( [_공개 키 암호화 표준 #7_](https://tools.ietf.org/html/rfc2315) )를 사용 하 여 블록이 모두 동일한 크기 인지 확인 하는 바이트를 생성 합니다.
+- `SetUserAuthenticationRequired(true)`키를 사용 하려면 사용자 인증이 필요 함을 의미 합니다.
 
 를 만든 후에는 키를 생성 하 여 장치 `KeyGenerator`에 안전 하 게 저장 하는을 초기화 하는 데 사용 됩니다. `KeyGenParameterSpec` 
 
