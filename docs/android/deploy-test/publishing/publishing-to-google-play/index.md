@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: fc14c2279fd8ca7e1d67dcf58f98af33a5e4d87f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525477"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119813"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
@@ -246,10 +246,10 @@ JSON 파일에는 잘라서 다음 단계의 **서명 및 배포** 대화 상자
 
 다음으로 **Google Play 트랙** 대화 상자가 표시됩니다. Google Play에서는 앱 업로드를 위해 가능한 4개 트랙을 제공합니다.
 
-* **알파** &ndash; 소규모 테스터 목록에 앱의 아주 초기 버전을 업로드하는 데 사용합니다.
-* **베타** &ndash; 더 큰 규모의 테스터 목록에 앱의 초기 버전을 업로드하는 데 사용합니다.
-* **출시** &ndash; 일정 비율의 사용자가 앱의 업데이트 버전을 받을 수 있습니다. 이를 통해 버그를 해결하는 동안 예를 들어 10%에서 출발하여 천천히 비율을 높여가고 100%까지 증대할 수 있습니다.
-* **프로덕션** &ndash; 앱이 Google Play 스토어에서 전체 배포할 준비가 되면 이 트랙을 선택합니다.
+- **알파** &ndash; 소규모 테스터 목록에 앱의 아주 초기 버전을 업로드하는 데 사용합니다.
+- **베타** &ndash; 더 큰 규모의 테스터 목록에 앱의 초기 버전을 업로드하는 데 사용합니다.
+- **출시** &ndash; 일정 비율의 사용자가 앱의 업데이트 버전을 받을 수 있습니다. 이를 통해 버그를 해결하는 동안 예를 들어 10%에서 출발하여 천천히 비율을 높여가고 100%까지 증대할 수 있습니다.
+- **프로덕션** &ndash; 앱이 Google Play 스토어에서 전체 배포할 준비가 되면 이 트랙을 선택합니다.
 
 앱 업로드에 사용할 Google Play 트랙을 선택하고 **업로드**를 클릭합니다. **출시**를 선택할 때는 백분율 값을 입력해야 합니다.
 

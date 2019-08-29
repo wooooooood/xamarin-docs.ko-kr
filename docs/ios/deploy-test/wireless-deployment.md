@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: ac4ae1d8b247a709307841be1ffa1fee2afbf68f
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865499"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121486"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
@@ -27,7 +27,7 @@ ms.locfileid: "67865499"
 
 무선 배포를 사용하려면 다음이 필요합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 - macOS 10.12.4
 - 최신 버전의 Mac용 Visual Studio
@@ -95,9 +95,9 @@ iOS 또는 tvOS 디바이스에 배포하려면 다음 단계를 수행합니다
 
 2. 디바이스가 Visual Studio에서 보이지 않으면 Xcode의 **디바이스 및 시뮬레이터** 창을 선택합니다. 
 
-    * Xcode가 해당 디바이스를 연결된 것으로 표시하지 **않으면** 디바이스를 다시 [페어링](#pair)합니다.
+    - Xcode가 해당 디바이스를 연결된 것으로 표시하지 **않으면** 디바이스를 다시 [페어링](#pair)합니다.
 
-    * Xcode가 해당 디바이스를 연결된 것으로 표시하면 Visual Studio와 디바이스를 다시 시작합니다.
+    - Xcode가 해당 디바이스를 연결된 것으로 표시하면 Visual Studio와 디바이스를 다시 시작합니다.
 
 3. 아직 디바이스를 [프로비전](~/ios/get-started/installation/device-provisioning/index.md)하지 않았으면 지금 합니다.
 

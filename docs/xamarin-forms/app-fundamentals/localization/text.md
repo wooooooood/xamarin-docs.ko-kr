@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: a00b8052bfa2cd3a762e1b78409ffaa85cdae70c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 54a1f32d4e2102654a6111dc1fb27bc1ba9aabcc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646758"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119107"
 ---
 # <a name="localization"></a>지역화
 
@@ -28,8 +28,8 @@ _.NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있
 
 이 문서와 연결된 두 개의 샘플이 있습니다.
 
-* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization)은 설명된 개념의 매우 간단한 데모입니다. 아래에 표시된 코드 조각은 이 샘플의 모든 것입니다.
-* [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized)은 이러한 지역화 기술을 사용하는 기본 작업 앱입니다.
+- [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization)은 설명된 개념의 매우 간단한 데모입니다. 아래에 표시된 코드 조각은 이 샘플의 모든 것입니다.
+- [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized)은 이러한 지역화 기술을 사용하는 기본 작업 앱입니다.
 
 #### <a name="shared-projects-are-not-recommended"></a>공유 프로젝트는 권장되지 않습니다.
 
@@ -64,8 +64,8 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 프로젝트에 두 파일을 추가합니다.
 
-* 변환 가능한 문자열이 XML 형식으로 저장되는 **AppResources.resx** 파일입니다.
-* partial 클래스를 선언하여 RESX XML 파일에서 생성된 모든 요소에 대한 참조를 포함하는 **AppResources.designer.cs** 파일입니다.
+- 변환 가능한 문자열이 XML 형식으로 저장되는 **AppResources.resx** 파일입니다.
+- partial 클래스를 선언하여 RESX XML 파일에서 생성된 모든 요소에 대한 참조를 포함하는 **AppResources.designer.cs** 파일입니다.
 
 솔루션 트리에서는 관련 파일을 보여줍니다. 새 변환 가능한 문자열을 추가하려면 RESX 파일을 편집*해야* 하며, **.designer.cs** 파일은 편집하지 *말아야* 합니다.
 
@@ -112,10 +112,10 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 안타깝게도 Mac용 Visual Studio에는 기본 제공 RESX 편집기가 없습니다. 변환 가능한 문자열을 추가하면 각 문자열에 대한 새 XML `data` 요소의 추가가 필요합니다. 각 `data` 요소에는 다음이 포함될 수 있습니다.
 
-* `name` 특성(필수)는 이 변환 가능한 문자열의 핵심입니다. 공백이나 특수 문자가 허용되지 않도록 올바른 C# 속성 이름이어야 합니다.
-* 실제 문자열인 `value` 요소(필수)는 애플리케이션에 표시됩니다.
-* `comment` 요소(선택 사항)에는 문자열을 사용하는 방법을 설명하는 변환기에 대한 지침이 포함될 수 있습니다.
-* 문자열의 공백을 유지하는 방법을 제어하기 위한 `xml:space` 특성(선택 사항)입니다.
+- `name` 특성(필수)는 이 변환 가능한 문자열의 핵심입니다. 공백이나 특수 문자가 허용되지 않도록 올바른 C# 속성 이름이어야 합니다.
+- 실제 문자열인 `value` 요소(필수)는 애플리케이션에 표시됩니다.
+- `comment` 요소(선택 사항)에는 문자열을 사용하는 방법을 설명하는 변환기에 대한 지침이 포함될 수 있습니다.
+- 문자열의 공백을 유지하는 방법을 제어하기 위한 `xml:space` 특성(선택 사항)입니다.
 
 몇 가지 예제 `data` 요소가 여기에 표시됩니다.
 
@@ -145,14 +145,14 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 지원하려는 각 언어에 대한 추가적인 RESX 파일 하나를 추가합니다.
 언어별 리소스 파일은 특정 명명 규칙을 따라야 합니다. 즉, 기본 리소스 파일과 동일한 파일 이름을 사용하고(예: **AppResources**). 간단한 예제는 다음과 같습니다.
 
-* **AppResources.fr.resx** - 프랑스어 번역입니다.
-* **AppResources.es.resx** - 스페인어 번역입니다.
-* **AppResources.de.resx** - 독일어 번역입니다.
-* **AppResources.ja.resx** - 일본어 번역입니다.
-* **AppResources.zh-Hans.resx** - 중국어(간체) 번역입니다.
-* **AppResources.zh-Hant.resx** - 중국어(번체) 번역입니다.
-* **AppResources.pt.resx** - 포르투갈어 번역입니다.
-* **AppResources.pt-BR.resx** - 브라질 포르투갈어 번역입니다.
+- **AppResources.fr.resx** - 프랑스어 번역입니다.
+- **AppResources.es.resx** - 스페인어 번역입니다.
+- **AppResources.de.resx** - 독일어 번역입니다.
+- **AppResources.ja.resx** - 일본어 번역입니다.
+- **AppResources.zh-Hans.resx** - 중국어(간체) 번역입니다.
+- **AppResources.zh-Hant.resx** - 중국어(번체) 번역입니다.
+- **AppResources.pt.resx** - 포르투갈어 번역입니다.
+- **AppResources.pt-BR.resx** - 브라질 포르투갈어 번역입니다.
 
 일반적인 패턴은 2글자 언어 코드를 사용하는 것이지만 다른 형식을 사용하는 일부 예제(예: 중국어) 및 4글자 로캘 식별자가 필요한 다른 예제(예: 브라질 포르투갈어)도 있습니다.
 
@@ -255,10 +255,10 @@ System.Resources.ResourceManager temp =
 그렇지 않은 경우, `AppResources` 클래스는 해당 리소스를 로드할 수 없습니다.
 리소스를 찾을 수 없는 문제를 해결하려면 다음을 확인합니다.
 
-* 프로젝트에 대한 기본 네임스페이스는 **AppResources.Designer.cs** 파일의 루트 네임스페이스와 일치합니다.
-* **AppResources.resx** 파일이 하위 디렉터리에 있는 경우 하위 디렉터리 이름은 네임스페이스 *및* 리소스 식별자에 속해야 합니다.
-* **AppResources.resx** 파일에는 **빌드 작업: EmbeddedResource**가 있습니다.
-* **프로젝트 옵션 > 소스 코드 > .NET 명명 정책 > Visual Studio 스타일 리소스 이름 사용**을 선택합니다. 그러나 앱 전체에서 업데이트되어야 할 RESX 리소스를 참조할 때 사용된 네임스페이스를 선호하는 경우 선택을 취소할 수 있습니다.
+- 프로젝트에 대한 기본 네임스페이스는 **AppResources.Designer.cs** 파일의 루트 네임스페이스와 일치합니다.
+- **AppResources.resx** 파일이 하위 디렉터리에 있는 경우 하위 디렉터리 이름은 네임스페이스 *및* 리소스 식별자에 속해야 합니다.
+- **AppResources.resx** 파일에는 **빌드 작업: EmbeddedResource**가 있습니다.
+- **프로젝트 옵션 > 소스 코드 > .NET 명명 정책 > Visual Studio 스타일 리소스 이름 사용**을 선택합니다. 그러나 앱 전체에서 업데이트되어야 할 RESX 리소스를 참조할 때 사용된 네임스페이스를 선호하는 경우 선택을 취소할 수 있습니다.
 
 #### <a name="doesnt-work-in-debug-mode-android-only"></a>DEBUG 모드(Android 전용)에서 작동하지 않습니다.
 
@@ -654,13 +654,13 @@ namespace UsingResxLocalization
 
 다음 글머리 기호는 위의 코드의 중요한 요소를 설명합니다.
 
-* 클래스 이름은 `TranslateExtension`이라고 할 수 있지만 참조할 수 있는 규칙에 따라 태그의 **변환**으로 명명됩니다.
-* 클래스는 작동하려면 Xamarin.Forms에서 필요한 `IMarkupExtension`을 구현합니다.
-* `"UsingResxLocalization.Resx.AppResources"`는 RESX 리소스에 대한 리소스 식별자입니다. 이 식별자는 기본 네임스페이스, 리소스 파일이 있는 폴더 및 기본 RESX 파일로 구성되어 있습니다.
-* 리소스를 로드하고 정적 `ResMgr` 필드에서 캐시될 현재 어셈블리를 확인하려면 `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`를 사용하여 `ResourceManager` 클래스를 만듭니다. `ProvideValue` 메서드에서 처음 사용될 때까지 해당 생성을 지연하도록 해당 클래스를 `Lazy` 형식으로 만듭니다.
-* `ci`는 종속성 서비스를 사용하여 기본 운영 체제에서 사용자가 선택한 언어를 가져옵니다.
-* `GetString`은 리소스 파일에서 실제 변환된 문자열을 검색하는 메서드입니다. `ILocalize` 인터페이스가 해당 플랫폼에서 구현되지 않으므로 유니버설 Windows 플랫폼에서 `ci`는 null입니다. 이 방법은 첫 번째 매개 변수만 사용하여 `GetString` 메서드를 호출하는 것과 동일합니다. 대신 리소스 프레임 워크는 로캘을 자동으로 인식하고 적절한 RESX 파일에서 변환된 문자열을 검색합니다.
-* 예외(`DEBUG` 모드 전용에서)를 throw하여 누락된 리소스를 디버깅하도록 오류 처리가 포함되었습니다.
+- 클래스 이름은 `TranslateExtension`이라고 할 수 있지만 참조할 수 있는 규칙에 따라 태그의 **변환**으로 명명됩니다.
+- 클래스는 작동하려면 Xamarin.Forms에서 필요한 `IMarkupExtension`을 구현합니다.
+- `"UsingResxLocalization.Resx.AppResources"`는 RESX 리소스에 대한 리소스 식별자입니다. 이 식별자는 기본 네임스페이스, 리소스 파일이 있는 폴더 및 기본 RESX 파일로 구성되어 있습니다.
+- 리소스를 로드하고 정적 `ResMgr` 필드에서 캐시될 현재 어셈블리를 확인하려면 `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)`를 사용하여 `ResourceManager` 클래스를 만듭니다. `ProvideValue` 메서드에서 처음 사용될 때까지 해당 생성을 지연하도록 해당 클래스를 `Lazy` 형식으로 만듭니다.
+- `ci`는 종속성 서비스를 사용하여 기본 운영 체제에서 사용자가 선택한 언어를 가져옵니다.
+- `GetString`은 리소스 파일에서 실제 변환된 문자열을 검색하는 메서드입니다. `ILocalize` 인터페이스가 해당 플랫폼에서 구현되지 않으므로 유니버설 Windows 플랫폼에서 `ci`는 null입니다. 이 방법은 첫 번째 매개 변수만 사용하여 `GetString` 메서드를 호출하는 것과 동일합니다. 대신 리소스 프레임 워크는 로캘을 자동으로 인식하고 적절한 RESX 파일에서 변환된 문자열을 검색합니다.
+- 예외(`DEBUG` 모드 전용에서)를 throw하여 누락된 리소스를 디버깅하도록 오류 처리가 포함되었습니다.
 
 다음 XAML 코드 조각에서는 태그 확장을 사용하는 방법을 보여줍니다. 작동하게 하려면 두 단계가 있습니다.
 
@@ -691,8 +691,8 @@ namespace UsingResxLocalization
 
 Xamarin.Forms 코드로 사용자 인터페이스의 변환을 처리할 수 있지만 각 플랫폼별 프로젝트에서 수행해야 하는 몇 가지 요소가 있습니다. 이 섹션에서는 지역화 방법을 살펴봅니다.
 
-* Application Name
-* 이미지
+- Application Name
+- 이미지
 
 샘플 프로젝트에는 다음과 같이 C#에서 참조하는 **flag.png**라는 지역화된 이미지가 포함됩니다.
 

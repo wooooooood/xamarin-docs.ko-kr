@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 59df461c52cd01187ca3a9fc25fe741342910061
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e5f322ece2775f975ab3737eb20ebbd854afa6c4
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854537"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064841"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
@@ -108,11 +108,11 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com
 
 - 새 조건부 중단점을 추가하려면 편집기 여백에서 중단점을 설정하려는 코드의 줄 번호 왼쪽을 마우스 오른쪽 단추로 클릭하고 새 중단점을 선택합니다.
 
-    [![](debugging-in-xamarin-ios-images/image4.png "새 중단점 선택")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "새 중단점 선택")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - 기존 중단점에 조건을 추가하려면, 중단점을 마우스 오른쪽 단추로 클릭하고 **중단점 속성**을 선택하거나 **중단점 패드**에서 아래 그림과 같은 속성 단추를 선택합니다.
 
-    [![](debugging-in-xamarin-ios-images/image5.png "중단점 패드")](debugging-in-xamarin-ios-images/image5.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image5.png "중단점 패드")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 
 그런 다음, 중단점이 발생되게 하는 조건을 입력할 수 있습니다.

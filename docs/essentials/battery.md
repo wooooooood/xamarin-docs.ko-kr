@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: 9ab2f960872386b68063d7af209ec0a7a24ac287
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: d5408894a9eda6b782f1f790ed8f1d0bb138a2f3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479669"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120149"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
 
@@ -171,12 +171,12 @@ public class EnergySaverTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* API를 테스트하려면 디바이스를 사용해야 합니다. 
-* `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
+- API를 테스트하려면 디바이스를 사용해야 합니다. 
+- `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
+- `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
 
 -----
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 0dcc0c9499a1f4085e489fe6d8dcfa3fbf2fa3e0
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 20aa1da478916bf4c8949103a5ce7fbf1f5d8f93
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832414"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70064830"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Xamarin.iOS에서 앱 그룹 기능
 
@@ -20,15 +20,15 @@ _애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설�
 
 앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 스토리지 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
 
-*   [Apple Watch 설정](~/ios/watchos/app-fundamentals/settings.md)
-*   [공유 NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
-*   [공유 파일](~/ios/watchos/app-fundamentals/parent-app.md#files)
+* [Apple Watch 설정](~/ios/watchos/app-fundamentals/settings.md)
+* [공유 NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
+* [공유 파일](~/ios/watchos/app-fundamentals/parent-app.md#files)
 
 ## <a name="configure-a-new-app-group"></a>새 앱 그룹 구성
 
 공유 위치는 [Apple Developer Center](https://developer.apple.com/account/)의 **Certificates, Identifiers & Profiles**(인증서, 식별자 및 프로필) 섹션에 구성된 [앱 그룹](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)을 사용하여 구성됩니다. 이 값은 각 프로젝트의 Entitlements.plist에서도 참조해야 합니다.
 
-앱 그룹에는 일반적으로 그룹 식별됩니다. 예를 들어 번들 ID  `com.xamarin.WatchSettings` 에는 앱 그룹  `group.com.xamarin.WatchSettings`가 있습니다.
+앱 그룹에는 일반적으로 그룹 접두사가 있는 번들 ID인 식별자가 있습니다. 예를 들어 번들 ID  `com.xamarin.WatchSettings` 에는 앱 그룹  `group.com.xamarin.WatchSettings`가 있습니다.
 
 새 앱 그룹을 만들려면 다음을 수행합니다.
 

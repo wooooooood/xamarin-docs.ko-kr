@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 25ebf101dfe0cc3d51e8411b7977e6dc0b061f2d
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8cb5d1cb29f5668194d15102c0b2fb4118388e94
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978401"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065464"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Wallet 기능
 
@@ -22,11 +22,11 @@ Wallet은 사용자가 티켓, 탑승권 및 쿠폰을 디바이스에서 바로
 
 개발자는 다양한 방법으로 Wallet을 사용할 수 있습니다.
 
-*   패스를 만들기 위해 애플리케이션을 빌드할 필요가 없습니다. Passfile은 JSON 파일과 선택적 메타데이터 파일을 포함하는 압축된 아카이브입니다. 이것을 준비하려면 [Pass Type ID](~/ios/platform/passkit.md)(패스 유형 ID) 및 [Pass certificate](~/ios/platform/passkit.md)(패스 인증서)가 필요합니다. 이 정보는 JSON 파일에서 선언됩니다. Passfile 프로비전에 대한 자세한 내용은 [PassKit 소개](~/ios/platform/passkit.md) 가이드를 참조하세요.
+* 패스를 만들기 위해 애플리케이션을 빌드할 필요가 없습니다. Passfile은 JSON 파일과 선택적 메타데이터 파일을 포함하는 압축된 아카이브입니다. 이것을 준비하려면 [Pass Type ID](~/ios/platform/passkit.md)(패스 유형 ID) 및 [Pass certificate](~/ios/platform/passkit.md)(패스 인증서)가 필요합니다. 이 정보는 JSON 파일에서 선언됩니다. Passfile 프로비전에 대한 자세한 내용은 [PassKit 소개](~/ios/platform/passkit.md) 가이드를 참조하세요.
 
-*   패스를 배포하도록 도우미 앱을 작성합니다. 이러한 앱에는 패스를 생성, 편집 및 업데이트한 다음, Wallet 앱에 추가하는 기능이 포함됩니다. 이런 종류의 앱의 좋은 예는 영화 앱입니다. 사용자가 앱을 통해 티켓을 구입하면 티켓을 앱에서 Wallet으로 직접 추가할 수 있습니다. 도우미 앱을 사용하려면 프로비전 프로필에 Wallet 기능이 있는 앱 ID가 포함되어야 하며, 아래 단계에 따라 설정할 수 있습니다. 또한 필요한 자격이 앱에 포함되어야 합니다.
+* 패스를 배포하도록 도우미 앱을 작성합니다. 이러한 앱에는 패스를 생성, 편집 및 업데이트한 다음, Wallet 앱에 추가하는 기능이 포함됩니다. 이런 종류의 앱의 좋은 예는 영화 앱입니다. 사용자가 앱을 통해 티켓을 구입하면 티켓을 앱에서 Wallet으로 직접 추가할 수 있습니다. 도우미 앱을 사용하려면 프로비전 프로필에 Wallet 기능이 있는 앱 ID가 포함되어야 하며, 아래 단계에 따라 설정할 수 있습니다. 또한 필요한 자격이 앱에 포함되어야 합니다.
 
-*   통로 앱은 패스를 직접 조작하지 않는 앱입니다. 패스를 받아서 Wallet에 추가하는 옵션을 제공하는 것 이상의 최소 상호 작용이 포함됩니다. 이러한 앱에는 특별한 프로비전 또는 자격이 필요하지 않지만 PassKit Framework의 메서드가 사용됩니다.
+* 통로 앱은 패스를 직접 조작하지 않는 앱입니다. 패스를 받아서 Wallet에 추가하는 옵션을 제공하는 것 이상의 최소 상호 작용이 포함됩니다. 이러한 앱에는 특별한 프로비전 또는 자격이 필요하지 않지만 PassKit Framework의 메서드가 사용됩니다.
 
 ## <a name="developer-center"></a>개발자 센터
 
@@ -57,7 +57,7 @@ Wallet에 사용할 새 프로비전 프로필을 만들려면 다음을 수행�
 
 Wallet 사용에 대한 자세한 내용은 다음 가이드를 참조하세요.
 
-*   [PassKit 소개](~/ios/platform/passkit.md)
+* [PassKit 소개](~/ios/platform/passkit.md)
  
 ## <a name="next-steps"></a>다음 단계
  

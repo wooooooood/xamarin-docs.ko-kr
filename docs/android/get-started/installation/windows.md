@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 4aa549258d3261d00c0623c2b21a2cebaa226e54
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 32ededcda1fdfc463269c7e4a2db444edab51d22
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524942"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119771"
 ---
 # <a name="windows-installation"></a>Windows 설치
 
@@ -74,9 +74,9 @@ Xamarin Android SDK Manager에 대한 자세한 내용은 [Android SDK 설정](~
 
 컴퓨터에서 Android 디바이스를 에뮬레이션하는 작업에는 다음 구성 요소가 포함됩니다.
 
-* **Google Android Emulator**&ndash; 개발자의 워크스테이션에서 실행하는 가상화된 디바이스를 만드는 [QEMU](https://www.qemu.org/)에 기반한 에뮬레이터입니다.
-* **에뮬레이터 이미지** &ndash; _에뮬레이터 이미지_는 가상화되어야 하는 하드웨어 및 운영 체제의 템플릿 또는 사양입니다. 예를 들어 하나의 에뮬레이터 이미지는 Google Play 서비스가 설치된 Android 7.0을 실행하는 Nexus 5X의 하드웨어 요구 사항을 식별합니다. 다른 에뮬레이터 이미지는 Android 6.0을 실행하는 특정 10" 테이블일 수 있습니다.
-* **AVD(Android 가상 디바이스)** &ndash;_Android 가상 디바이스_는 에뮬레이터 이미지에서 만들어진 에뮬레이트된 Android 디바이스입니다. Android 앱을 실행하고 테스트할 때 Xamarin.Android는 Android Emulator를 시작하여 특정 AVD를 시작하고, APK를 설치한 다음, 앱을 실행합니다.
+- **Google Android Emulator**&ndash; 개발자의 워크스테이션에서 실행하는 가상화된 디바이스를 만드는 [QEMU](https://www.qemu.org/)에 기반한 에뮬레이터입니다.
+- **에뮬레이터 이미지** &ndash; _에뮬레이터 이미지_는 가상화되어야 하는 하드웨어 및 운영 체제의 템플릿 또는 사양입니다. 예를 들어 하나의 에뮬레이터 이미지는 Google Play 서비스가 설치된 Android 7.0을 실행하는 Nexus 5X의 하드웨어 요구 사항을 식별합니다. 다른 에뮬레이터 이미지는 Android 6.0을 실행하는 특정 10" 테이블일 수 있습니다.
+- **AVD(Android 가상 디바이스)** &ndash;_Android 가상 디바이스_는 에뮬레이터 이미지에서 만들어진 에뮬레이트된 Android 디바이스입니다. Android 앱을 실행하고 테스트할 때 Xamarin.Android는 Android Emulator를 시작하여 특정 AVD를 시작하고, APK를 설치한 다음, 앱을 실행합니다.
 
 x86 기반 컴퓨터에서 개발하는 경우 x86 아키텍처에 최적화된 두 개의 가상화 기술 중 하나인 특별한 에뮬레이터 이미지를 사용하여 성능을 크게 향상시킬 수 있습니다.
 

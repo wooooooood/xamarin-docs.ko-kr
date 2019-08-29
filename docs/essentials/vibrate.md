@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: 진동'
+title: 'Xamarin.Essentials: Vibration'
 description: 이 문서에서는 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있는 Xamarin.Essentials의 Vibration 클래스를 설명합니다.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: d9bf7a1e5e0d15f1fdc909745cd439115b6f8463
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898942"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120111"
 ---
-# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: 진동
+# <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
 
 **Vibration** 클래스를 사용하면 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있습니다.
 
@@ -107,9 +107,9 @@ catch (Exception ex)
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* 디바이스가 “전화벨이 울리면 진동”으로 설정된 경우에만 진동합니다.
-* 항상 500밀리초 동안 진동합니다.
-* 진동을 취소할 수 없습니다.
+- 디바이스가 “전화벨이 울리면 진동”으로 설정된 경우에만 진동합니다.
+- 항상 500밀리초 동안 진동합니다.
+- 진동을 취소할 수 없습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 24aa6dae3767255155c6b739e50174214a28d3d8
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 92081ceed9df0525f49005b636298a8142162a31
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855252"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120933"
 ---
 # <a name="xamarinios-installation"></a>Xamarin.iOS 설치
 
@@ -40,5 +40,5 @@ Windows 컴퓨터에서 Xamarin.iOS 설치에 대한 지침은 [Windows 설치](
 
 Xamarin.iOS를 성공적으로 설치한 후에 디바이스에서 Xamarin.iOS 애플리케이션을 개발하고 테스트할 수 있도록 iOS 디바이스를 프로비전하는 방법을 알아봅니다.
 
-* [개발용 디바이스 설정](device-provisioning/index.md)
-* [무료 프로비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
+- [개발용 디바이스 설정](device-provisioning/index.md)
+- [무료 프로비전](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

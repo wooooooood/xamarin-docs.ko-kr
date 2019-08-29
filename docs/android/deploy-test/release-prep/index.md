@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 4ddae1ae4f49c01220b2f5ce78dc19122b3015a0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525282"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119626"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -319,15 +319,15 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 **솔루션 목록**은 보관된 프로젝트가 하나 이상 있는 모든 솔루션을 표시합니다. **솔루션 목록**에는 다음 섹션이 포함됩니다.
 
-* **현재 솔루션** &ndash; 현재 솔루션을 표시합니다. 현재 솔루션에 기존 보관 파일이 없으면 이 영역이 비었을 수 있습니다.
-* **모든 보관** &ndash; 보관 파일이 있는 모든 솔루션을 표시합니다.
-* **검색** 텍스트 상자(위) &ndash; 텍스트 상자에 입력한 검색 문자열에 따라 **모든 보관** 목록에 나열된 솔루션을 필터링합니다.
+- **현재 솔루션** &ndash; 현재 솔루션을 표시합니다. 현재 솔루션에 기존 보관 파일이 없으면 이 영역이 비었을 수 있습니다.
+- **모든 보관** &ndash; 보관 파일이 있는 모든 솔루션을 표시합니다.
+- **검색** 텍스트 상자(위) &ndash; 텍스트 상자에 입력한 검색 문자열에 따라 **모든 보관** 목록에 나열된 솔루션을 필터링합니다.
 
 **보관 목록** 선택한 솔루션에 대한 모든 보관 파일 목록을 표시합니다. **보관 목록**에는 다음 섹션이 포함됩니다.
 
-* **솔루션 이름 선택** &ndash; **솔루션 목록**에서 선택한 솔루션의 이름을 표시합니다. **보관 목록**에 표시된 모든 정보는 이 선택한 솔루션에 대한 것입니다.
-* **플랫폼 필터** &ndash; 이 필드를 통해 플랫폼 종류(예: iOS 또는 Android)에 따라 보관 파일을 필터링할 수 있습니다.
-* **항목 보관** &ndash; 선택한 솔루션의 보관 파일의 목록입니다. 이 목록의 각 항목에는 프로젝트 이름, 만든 날짜 및 플랫폼이 포함되어 있습니다. 항목이 보관 또는 게시 중인 동안 진행률 같은 추가 정보를 표시할 수도 있습니다.
+- **솔루션 이름 선택** &ndash; **솔루션 목록**에서 선택한 솔루션의 이름을 표시합니다. **보관 목록**에 표시된 모든 정보는 이 선택한 솔루션에 대한 것입니다.
+- **플랫폼 필터** &ndash; 이 필드를 통해 플랫폼 종류(예: iOS 또는 Android)에 따라 보관 파일을 필터링할 수 있습니다.
+- **항목 보관** &ndash; 선택한 솔루션의 보관 파일의 목록입니다. 이 목록의 각 항목에는 프로젝트 이름, 만든 날짜 및 플랫폼이 포함되어 있습니다. 항목이 보관 또는 게시 중인 동안 진행률 같은 추가 정보를 표시할 수도 있습니다.
 
 **세부 정보 패널** 각 보관 파일에 대한 추가 정보를 표시합니다. 이를 통해 사용자가 배포 워크플로를 시작하거나 배포가 만들어진 폴더를 열 수 있습니다. **빌드 설명** 섹션을 사용하면 보관 파일에 빌드 설명을 포함할 수 있습니다.
 
@@ -343,9 +343,9 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 다음 배포 채널 중 하나를 선택할 수 있습니다.
 
-* **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있는 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, _임시_ 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
+- **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있는 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, _임시_ 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
 
-* **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다. 계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.
+- **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다. 계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

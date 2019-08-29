@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: afb4da5e424fd86a386b85d8b64bd2a126af6add
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521110"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70118908"
 ---
 # <a name="contributing"></a>참여
 
@@ -12,7 +12,7 @@ Xamarin 설명서에 기여하는 데 관심을 가져주셔서 감사합니다!
 
 이 페이지에서는 [Xamarin 설명서](https://docs.microsoft.com/xamarin)의 콘텐츠를 업데이트하는 기본 프로세스를 설명합니다.
 
-* [기여자 라이선스 계약](LICENSE)
+- [기여자 라이선스 계약](LICENSE)
 
 ## <a name="process-for-contributing"></a>기여하는 프로세스
 

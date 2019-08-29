@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 0314ec958b2c38e702c56ef64d1cc2bba1383060
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: bbc01416fe49b361b163808f3502533db8e39d8c
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865837"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121320"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Xamarin.iOS에서 자격 사용
 
@@ -37,7 +37,7 @@ Entitlements.plist 파일은 자격을 지정하는 데 사용되며 애플리�
 
 앱 ID를 정의할 때 필요한 애플리케이션 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격을 구성해야 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac용 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
@@ -94,13 +94,13 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 ### <a name="wallet"></a>Wallet
 
-*   **설명**: 일반적으로 Passbook으로 알려진 Wallet은 패스를 저장 및 관리하는 앱입니다. 패스는 신용 카드, 상점 카드, 탑승권 또는 티켓일 수 있습니다.
+- **설명**: 일반적으로 Passbook으로 알려진 Wallet은 패스를 저장 및 관리하는 앱입니다. 패스는 신용 카드, 상점 카드, 탑승권 또는 티켓일 수 있습니다.
 
     - **패스 유형 식별자**
-        * **키**: com.apple.developer.pass-type-identifiers
-        * **문자열**: `$(TeamIdentifierPrefix)*`
+        - **키**: com.apple.developer.pass-type-identifiers
+        - **문자열**: `$(TeamIdentifierPrefix)*`
 
-* **참고**:
+- **참고**:
     - 앱에서 모든 패스 유형을 허용할 수 있습니다. 앱을 제한하고 팀 패스 유형의 하위 집합만 허용하려면 문자열 값을 다음과 같이 설정합니다. `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
     여기서 pass.$(CFBundleIdentifier)는 [위](~/ios/platform/passkit.md)에서 만든 패스 ID입니다.
@@ -109,7 +109,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 ### <a name="icloud"></a>iCloud
 
-*   **설명**: iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 스토리지 수단을 제공할 수 있는 네 가지 방법이 있습니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리용 스토리지를 직접 제공합니다. 자세한 내용은 iCloud 소개 가이드를 참조하세요.
+- **설명**: iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 스토리지 수단을 제공할 수 있는 네 가지 방법이 있습니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리용 스토리지를 직접 제공합니다. 자세한 내용은 iCloud 소개 가이드를 참조하세요.
 
     - **iCloud 문서 및 CloudKit**
         - **키**: com.apple.developer.ubiquity-container-identifiers
@@ -118,7 +118,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
         - **키**: com.apple.developer.ubiquity-kvstore-identifier
         - **문자열**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
-* **참고**:
+- **참고**:
     - `$(TeamIdentifierPrefix)` 문자열은 developer.apple.com에 로그인하여 **Member Center > Your Account(계정) > Developer Account Summary(개발자 계정 요약)** 로 이동하여 팀 ID(또는 단일 개발자의 개인 ID)를 얻을 수 있습니다. 10자로 된 문자열(예: A93A5CM278)입니다.
     - `$(CFBundleIdentifier)` 문자열은`iCloud`로 시작되며 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 가이드의 단계에 따라 iCloud 컨테이너를 만들 때 설정됩니다.
     - $`(TeamIdentifierPrefix)` 및 `$(CFBundleIdentifier)` 자리 표시자를 사용할 수 있으며 빌드 시 올바른 값으로 대체됩니다.

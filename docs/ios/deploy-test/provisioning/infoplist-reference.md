@@ -1,18 +1,18 @@
 ---
 title: Xamarin.iOS에 대한 Info.plist 참조
-description: 이 문서에서는 Xamarin.iOS 응용 프로그램의 Info.plist 파일에서 설정할 수 있는 다양한 키/값 쌍을 설명합니다. 이러한 키는 앱에서 위치, 사진, 마이크 또는 카메라에 액세스와 같은 특정 작업을 수행하는 경우에 필요합니다.
+description: 이 문서에서는 Xamarin.iOS 애플리케이션의 Info.plist 파일에서 설정할 수 있는 다양한 키/값 쌍을 설명합니다. 이러한 키는 앱에서 위치, 사진, 마이크 또는 카메라에 액세스와 같은 특정 작업을 수행하는 경우에 필요합니다.
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/18/2017
-ms.openlocfilehash: 654eca1098f9486e0c41fd296b3f8d381ac7ea34
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a61a4a313fa23b5cdc629279bee39f1eed792cc
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105378"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120497"
 ---
 # <a name="infoplist-reference-for-xamarinios"></a>Xamarin.iOS에 대한 Info.plist 참조
 
@@ -22,8 +22,8 @@ Info.Plist 키 작업에 대한 자세한 내용은 [보안 및 개인 정보 �
 
 사용자 위치에 액세스하려면 Info.plist를 수정해야 합니다. 위치 데이터와 관련된 다음 키를 설정해야 합니다. 
 
-* **NSLocationWhenInUseUsageDescription** - 사용자가 앱과 상호 작용하는 동안 사용자의 위치에 액세스하는 경우 
-* **NSLocationAlwaysUsageDescription** - 앱이 백그라운드에서 사용자의 위치에 액세스하는 경우
+- **NSLocationWhenInUseUsageDescription** - 사용자가 앱과 상호 작용하는 동안 사용자의 위치에 액세스하는 경우 
+- **NSLocationAlwaysUsageDescription** - 앱이 백그라운드에서 사용자의 위치에 액세스하는 경우
 
 ## <a name="photos"></a>사진 
 

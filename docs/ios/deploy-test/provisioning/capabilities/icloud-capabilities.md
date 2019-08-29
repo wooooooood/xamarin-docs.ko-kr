@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 86b077c95bfe1cb32731c92c0c1cfec451295c12
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ef36e79254a6d07ae6d23de7e86f6a43b2140b09
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831344"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065525"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS에서 iCloud 기능
 
@@ -97,9 +97,9 @@ iCloud 기능을 애플리케이션에 추가하는 것은 _컨테이너_ 때문
 
 iCloud 사용에 대한 자세한 내용은 다음 가이드를 참조하세요.
 
-*   [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md)
-*   [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md)
-*   [문서 선택기 소개](~/ios/platform/document-picker.md)
+* [iCloud 소개](~/ios/data-cloud/introduction-to-icloud.md)
+* [CloudKit 소개](~/ios/data-cloud/intro-to-cloudkit.md)
+* [문서 선택기 소개](~/ios/platform/document-picker.md)
 
 ## <a name="next-steps"></a>다음 단계
  

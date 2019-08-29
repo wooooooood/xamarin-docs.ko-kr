@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e21ae2c335a1ffe410317ef8870ee074a3a5ebe2
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.openlocfilehash: d9e3055130a66fe240bf378ad2f63679e71bec14
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629618"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121147"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -24,13 +24,13 @@ ms.locfileid: "69629618"
 
 트리거에는 다음 네 가지 유형이 있습니다.
 
-* [속성 트리거](#property) - 컨트롤의 속성이 특정 값으로 설정될 때 발생합니다.
+- [속성 트리거](#property) - 컨트롤의 속성이 특정 값으로 설정될 때 발생합니다.
 
-* [데이터 트리거](#data) - 데이터 바인딩을 사용하여 다른 컨트롤의 속성을 기반으로 하여 트리거합니다.
+- [데이터 트리거](#data) - 데이터 바인딩을 사용하여 다른 컨트롤의 속성을 기반으로 하여 트리거합니다.
 
-* [이벤트 트리거](#event) - 컨트롤에서 이벤트가 발생할 때 발생합니다.
+- [이벤트 트리거](#event) - 컨트롤에서 이벤트가 발생할 때 발생합니다.
 
-* [다중 트리거](#multi) - 작업이 발생하기 전에 여러 트리거 조건을 설정할 수 있도록 합니다.
+- [다중 트리거](#multi) - 작업이 발생하기 전에 여러 트리거 조건을 설정할 수 있도록 합니다.
 
 <a name="property" />
 
@@ -52,15 +52,15 @@ ms.locfileid: "69629618"
 
 트리거 선언에서 중요한 부분은 다음과 같습니다.
 
-* **TargetType** - 트리거가 적용되는 컨트롤 형식입니다.
+- **TargetType** - 트리거가 적용되는 컨트롤 형식입니다.
 
-* **Property** - 모니터링되는 컨트롤의 속성입니다.
+- **Property** - 모니터링되는 컨트롤의 속성입니다.
 
-* **Value** - 모니터링되는 속성에 대해 발생할 때 트리거가 활성화되는 값입니다.
+- **Value** - 모니터링되는 속성에 대해 발생할 때 트리거가 활성화되는 값입니다.
 
-* **Setter** - 트리거 조건이 충족될 때 `Setter` 요소의 컬렉션을 추가할 수 있습니다. 설정할 `Property` 및 `Value`를 지정합니다.
+- **Setter** - 트리거 조건이 충족될 때 `Setter` 요소의 컬렉션을 추가할 수 있습니다. 설정할 `Property` 및 `Value`를 지정합니다.
 
-* **EnterActions 및 ExitActions**(표시되지 않음) - 코드로 작성되며 `Setter` 요소에 추가하여(또는 대신) 사용할 수 있습니다. 이러한 모든 부분은 [아래와 같이 설명됩니다](#enterexit).
+- **EnterActions 및 ExitActions**(표시되지 않음) - 코드로 작성되며 `Setter` 요소에 추가하여(또는 대신) 사용할 수 있습니다. 이러한 모든 부분은 [아래와 같이 설명됩니다](#enterexit).
 
 ### <a name="applying-a-trigger-using-a-style"></a>Style(스타일)을 사용하여 Trigger(트리거) 적용
 
@@ -140,11 +140,11 @@ ms.locfileid: "69629618"
 
 트리거 작업 구현에서 수행해야 하는 작업은 다음과 같습니다.
 
-* 트리거가 적용될 컨트롤 형식에 해당하는 제네릭 매개 변수를 사용하여 제네릭 `TriggerAction<T>` 클래스를 구현합니다. `VisualElement`와 같은 수퍼클래스를 사용하여 다양한 컨트롤에서 작동하는 트리거 작업을 작성하거나 `Entry`와 같은 컨트롤 형식을 지정할 수 있습니다.
+- 트리거가 적용될 컨트롤 형식에 해당하는 제네릭 매개 변수를 사용하여 제네릭 `TriggerAction<T>` 클래스를 구현합니다. `VisualElement`와 같은 수퍼클래스를 사용하여 다양한 컨트롤에서 작동하는 트리거 작업을 작성하거나 `Entry`와 같은 컨트롤 형식을 지정할 수 있습니다.
 
-* 트리거 조건이 충족될 때마다 호출되는 `Invoke` 메서드를 재정의합니다.
+- 트리거 조건이 충족될 때마다 호출되는 `Invoke` 메서드를 재정의합니다.
 
-* 필요에 따라 트리거를 선언할 때 XAML에서 설정할 수 있는 속성(예: 이 예제의 경우 `Anchor`, `Scale` 및 `Length`)을 공개합니다.
+- 필요에 따라 트리거를 선언할 때 XAML에서 설정할 수 있는 속성(예: 이 예제의 경우 `Anchor`, `Scale` 및 `Length`)을 공개합니다.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -236,9 +236,9 @@ public class MultiTriggerConverter : IValueConverter
 
 XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이점은 다음과 같습니다.
 
-* 단추는 기본적으로 `IsEnabled="false"`로 설정되어 있습니다.
-* 다중 트리거 조건은 변환기를 사용하여 `Text.Length` 값을 `boolean`으로 변환합니다.
-* 모든 조건이 `true`이면 setter에서 단추의 `IsEnabled` 속성을 `true`로 설정합니다.
+- 단추는 기본적으로 `IsEnabled="false"`로 설정되어 있습니다.
+- 다중 트리거 조건은 변환기를 사용하여 `Text.Length` 값을 `boolean`으로 변환합니다.
+- 모든 조건이 `true`이면 setter에서 단추의 `IsEnabled` 속성을 `true`로 설정합니다.
 
 ```xaml
 <Entry x:Name="user" Text="" Placeholder="user name" />

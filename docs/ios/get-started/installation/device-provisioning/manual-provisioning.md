@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 993588a46c8d7048c7494908d6f59a5bbe2ddda6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0702241b5dbc744bf40c59928103d92a73a4c462
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526626"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121226"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
@@ -222,9 +222,9 @@ Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 �
 
 Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애플리케이션 서비스(다른 이름: 기능)를 제공합니다. 이러한 애플리케이션 서비스는 **앱 ID**를 만들 때 iOS 프로비전 포털에서 구성하고 Xamarin.iOS 애플리케이션 프로젝트에 속하는 **Entitlements.plist** 파일에서도 구성해야 합니다. 앱에 애플리케이션 서비스를 추가하는 방법에 대한 자세한 내용은 [기능 소개](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드 및 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
-* 필요한 앱 서비스를 포함하는 앱 ID를 만듭니다.
-* 앱 ID를 포함하는 새로운 [프로비전 프로필](#provisioningprofile)을 만듭니다.
-* Xamarin.iOS 프로젝트에서 자격 설정
+- 필요한 앱 서비스를 포함하는 앱 ID를 만듭니다.
+- 앱 ID를 포함하는 새로운 [프로비전 프로필](#provisioningprofile)을 만듭니다.
+- Xamarin.iOS 프로젝트에서 자격 설정
 
 ## <a name="deploying-to-a-device"></a>디바이스에 배포
 

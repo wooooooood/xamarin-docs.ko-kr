@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 796c196b5c8ebcd70a0529112189cea6116a9ab0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 4f5c28c4ad9b673ac50b404e7d34f718366bd11d
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890096"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121458"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -100,11 +100,11 @@ IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수�
 
 자동 서명이 활성화되면 다음과 같은 상황이 발생할 경우 필요에 따라 Mac용 Visual Studio에서 이러한 아티팩트를 업데이트합니다.
 
-* iOS 디바이스가 mac에 플러그 인됩니다.
+- iOS 디바이스가 mac에 플러그 인됩니다.
     - 디바이스가 Apple Developer Portal에 등록되었는지 자동으로 검사합니다. 그렇지 않다면 추가하고 이를 포함하는 새 프로비저닝 프로필을 생성합니다.
-* 앱의 번들 ID가 변경된 경우
+- 앱의 번들 ID가 변경된 경우
     - 앱 ID를 업데이트합니다. 이 앱 ID를 포함하는 새 프로비저닝 프로필이 생성됩니다.
-* 지원되는 기능은 Entitlements.plist 파일에 활성화됩니다.
+- 지원되는 기능은 Entitlements.plist 파일에 활성화됩니다.
     - 이 기능은 앱 ID에 추가되고, 업데이트된 앱 ID가 포함된 새 프로비저닝 프로필이 생성됩니다.
     - 일부 기능은 현재 지원되지 않습니다. 지원되는 기능에 대한 자세한 내용은 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드를 참조하세요.
 

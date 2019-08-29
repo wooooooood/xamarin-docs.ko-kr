@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: adfc8e34d64b6091ba8ffc56c0f93bcf560128b1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 42edb04cb6dfe5fca59a6cc96f34cb8f9c5e1e88
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527712"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120581"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -447,7 +447,7 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 ::: zone-end
 ::: zone pivot="windows"
 
-* Visual Studio - IDE에서 직접 앱에 대한 간단한 아이콘 집합을 만드는 데 사용할 수 있습니다.
+- Visual Studio - IDE에서 직접 앱에 대한 간단한 아이콘 집합을 만드는 데 사용할 수 있습니다.
 - [**Glyphish**](http://www.glyphish.com/) – 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
 - [**Fiverr**](http://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 

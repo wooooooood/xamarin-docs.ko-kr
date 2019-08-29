@@ -4,13 +4,13 @@ description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식
 ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/10/2019
-ms.openlocfilehash: 2dadc9effb2433467609338d4654e784fe8b085e
-ms.sourcegitcommit: 3434624a36a369986b6aeed7959dae60f7112a14
+ms.date: 08/20/2019
+ms.openlocfilehash: 6175e6ca6c09f1e85302df309fd58b8278aaf90c
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629586"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060079"
 ---
 # <a name="platform-support"></a>플랫폼 지원
 
@@ -28,7 +28,6 @@ Xamarin.Essentials는 다음 플랫폼 및 운영 체제를 지원합니다.
 > [!NOTE]
 > * Tizen은 Samsung 개발 팀에서 공식적으로 지원합니다.
 > * tvOS 및 watchOS의 API 범위는 제한되어 있습니다. 자세한 내용은 기능 가이드를 참조하세요.
-> * Tizen, tvOS 및 watchOS는 현재 미리 보기로 제공되며 Xamarin.Essentials 1.3-pre에서 사용할 수 있습니다.
 
 ## <a name="feature-support"></a>기능 지원
 

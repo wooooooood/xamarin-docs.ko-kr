@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 7bb4e142a8b7bd0cf0691da381729dc226028193
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832175"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121369"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
@@ -21,28 +21,28 @@ _애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설�
 Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히는 수단으로 _앱 서비스_라는 _기능_을 개발자에게 제공합니다. 이런 기능을 통해 개발자는 앱에서 시작된 금전 거래 기능, Siri와 같은 추가 디바이스 서비스 등과 같은 플랫폼 기능을 애플리케이션에 더 깊이 통합할 수 있습니다.
 이러한 기능은 Xamarin.iOS 프로젝트에 사용할 수 있습니다. 전체 서비스 목록은 아래에 설명되어 있습니다.
 
-* 앱 그룹
-* 연결된 도메인
-* 데이터 보호
-* Game Center
-* HealthKit
-* HomeKit
-* 무선 액세서리 구성
-* iCloud
-* 앱에서 바로 구매
-* 내부 앱 오디오
-* Apple Pay
-* Wallet
-* 푸시 알림
-* 개인 VPN
-* Siri
-* 맵
-* 백그라운드 모드
-* 키 집합 공유
-* 네트워크 확장
-* 핫스폿 구성
-* 다중 경로
-* NFC 태그 읽기
+- 앱 그룹
+- 연결된 도메인
+- 데이터 보호
+- Game Center
+- HealthKit
+- HomeKit
+- 무선 액세서리 구성
+- iCloud
+- 앱에서 바로 구매
+- 내부 앱 오디오
+- Apple Pay
+- Wallet
+- 푸시 알림
+- 개인 VPN
+- Siri
+- 맵
+- 백그라운드 모드
+- 키 집합 공유
+- 네트워크 확장
+- 핫스폿 구성
+- 다중 경로
+- NFC 태그 읽기
 
 기능은 Mac용 Visual Studio 및 Visual Studio 2019를 통해 사용하도록 설정하거나 Apple Developer Portal에서 수동으로 사용하도록 설정할 수 있습니다. Wallet, Apple Pay 및 iCloud와 같은 특정 기능을 사용하려면 앱 ID를 추가로 구성해야 합니다.
 
@@ -57,22 +57,22 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 > [!IMPORTANT]
 > 일부 기능은 자동 프로비저닝에서 추가하고 관리할 수 없습니다. 다음 목록에는 지원되는 기능이 포함되어 있습니다.
 >
->* HealthKit 
->* HomeKit 
->* 개인 VPN 
->* 무선 액세서리 구성 
->* 내부 앱 오디오 
->* SiriKit 
->* 핫스폿 
->* 네트워크 확장 
->* NFC 태그 읽기
->* 다중 경로 
+>- HealthKit 
+>- HomeKit 
+>- 개인 VPN 
+>- 무선 액세서리 구성 
+>- 내부 앱 오디오 
+>- SiriKit 
+>- 핫스폿 
+>- 네트워크 확장 
+>- NFC 태그 읽기
+>- 다중 경로 
 >
 >푸시 알림, Game Center, 앱에서 바로 구매, 맵, 키 집합 공유, 연결된 도메인 및 데이터 보호 기능은 현재 지원되지 않습니다. 이러한 기능을 추가하려면 수동 프로비전을 사용하고 [개발자 센터](#devcenter) 섹션의 단계를 수행합니다.
 
 ## <a name="using-the-ide"></a>IDE 사용
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
 
@@ -85,8 +85,8 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
     ![entitlements.plist 파일에 기능 추가](images/image17.png)
 
     기능을 선택하면 두 가지 작업이 수행됩니다.
-    * 해당 기능이 앱 ID에 추가됩니다.
-    * 자격 키/값 쌍이 Entitlements.plist 파일에 추가됩니다.
+    - 해당 기능이 앱 ID에 추가됩니다.
+    - 자격 키/값 쌍이 Entitlements.plist 파일에 추가됩니다.
 
     이러한 작업이 수행되면 Mac용 Visual Studio에 다음과 같이 성공 메시지가 표시됩니다.
 
@@ -108,8 +108,8 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
     **Entitlement.plist**를 저장하면 다음과 같은 두 작업을 수행합니다.
 
-    * 해당 기능이 앱 ID에 추가됩니다.
-    * 자격 키/값 쌍이 Entitlements.plist 파일에 추가됩니다.
+    - 해당 기능이 앱 ID에 추가됩니다.
+    - 자격 키/값 쌍이 Entitlements.plist 파일에 추가됩니다.
 
 -----
 
@@ -152,7 +152,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ### <a name="creating-a-provisioning-profile"></a>프로비전 프로필 만들기
 
-이제 이 앱 ID가 포함된 프로비전 프로필을 만듭니다. 다음 단계를 따르세요.
+이제 이 앱 ID가 포함된 프로비전 프로필을 만듭니다. 아래의 단계를 수행합니다.
 
 1. Apple Developer Center에서 **프로비전 프로필 > 모두**로 이동합니다.
 
@@ -196,8 +196,8 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 서버 쪽에서 기능을 사용하도록 설정한 후에도 앱에서 해당 기능을 사용하려면 추가로 작업을 수행해야 합니다. 아래 목록에는 필요할 수도 있는 추가 단계가 설명되어 있습니다.
 
-*   앱에서 프레임워크 네임스페이스를 사용합니다.
-*   앱에 필요한 자격을 추가합니다. 필요한 자격에 및 추가 방법에 대한 자세한 내용은 [자격 소개](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
+- 앱에서 프레임워크 네임스페이스를 사용합니다.
+- 앱에 필요한 자격을 추가합니다. 필요한 자격에 및 추가 방법에 대한 자세한 내용은 [자격 소개](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
 
 <a name="troubleshooting" />
 

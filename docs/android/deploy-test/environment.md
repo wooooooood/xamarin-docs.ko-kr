@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 722dfbb301d6698ee58d42029c8f6b82ecddc37b
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 14be0fec50138aed7b2b3e8d48d49cad86abbb2b
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508992"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70119425"
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -58,16 +58,16 @@ Xamarin.Android 6.1에 추가되었습니다.
 
 Xamarin.Android는 `adb shell setprop` 또는 `$(AndroidEnvironment)` 빌드 동작을 통해 설정할 수 있는 다음과 같은 시스템 속성을 지원합니다.
 
-* `debug.mono.debug`
-* `debug.mono.env`
-* `debug.mono.gc`
-* `debug.mono.log`
-* `debug.mono.max_grefc`
-* `debug.mono.profile`
-* `debug.mono.runtime_args`
-* `debug.mono.trace`
-* `debug.mono.wref`
-* `XA_HTTP_CLIENT_HANDLER_TYPE`
+- `debug.mono.debug`
+- `debug.mono.env`
+- `debug.mono.gc`
+- `debug.mono.log`
+- `debug.mono.max_grefc`
+- `debug.mono.profile`
+- `debug.mono.runtime_args`
+- `debug.mono.trace`
+- `debug.mono.wref`
+- `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 ### `debug.mono.debug`
 
@@ -90,15 +90,15 @@ Xamarin.Android는 `adb shell setprop` 또는 `$(AndroidEnvironment)` 빌드 동
 Xamarin.Android가 `adb logcat`에 로깅할 추가 정보를 제어합니다.
 쉼표로 구분된 문자열(`,`)이며, 다음 값 중 하나를 포함합니다.
 
-* `all`: ‘모든’ 메시지를 인쇄합니다.  이는 `lref` 메시지를 포함하므로 좋은 방법이 아닙니다.
-* `assembly`: `.apk` 및 어셈블리 구문 분석 메시지를 인쇄합니다.
-* `gc`: GC 관련 메시지를 인쇄합니다.
-* `gref`: JNI 전역 참조 메시지를 인쇄합니다.
-* `lref`: JNI 로컬 참조 메시지를 인쇄합니다.  
+- `all`: ‘모든’ 메시지를 인쇄합니다.  이는 `lref` 메시지를 포함하므로 좋은 방법이 아닙니다.
+- `assembly`: `.apk` 및 어셈블리 구문 분석 메시지를 인쇄합니다.
+- `gc`: GC 관련 메시지를 인쇄합니다.
+- `gref`: JNI 전역 참조 메시지를 인쇄합니다.
+- `lref`: JNI 로컬 참조 메시지를 인쇄합니다.  
     *참고*: 이는 ‘실제로’ `adb logcat`을 스팸 처리합니다.   
     Xamarin.Android 5.1에서는 *gigantic*.Avoid를 받을 수 있는 `.__override__/lrefs.txt` 파일도  
     만듭니다.
-* `timing`: 일부 메서드 타이밍 정보를 인쇄합니다. 이는 또한 `.__override__/methods.txt` 및 `.__override__/counters.txt` 파일도 만듭니다.
+- `timing`: 일부 메서드 타이밍 정보를 인쇄합니다. 이는 또한 `.__override__/methods.txt` 및 `.__override__/counters.txt` 파일도 만듭니다.
 
 
 ### `debug.mono.max_grefc`
@@ -131,15 +131,15 @@ debug.mono.max_grefc`와만 함께 사용할 수 있습니다.
 
 `debug.mono.wref` 시스템 속성을 사용하면 기본으로 검색된 JNI 약한 참조 메커니즘을 재정의할 수 있습니다. 지원되는 값은 두 가지가 있습니다.
 
-* `jni`: `JNIEnv::NewWeakGlobalRef()`에서 만들고 `JNIEnv::DeleteWeakGlobalREf()`에서 파괴하는 JNI 약한 참조를 사용합니다.
-* `java`: `java.lang.WeakReference` 인스턴스를 참조하는 JNI 전역 참조를 사용합니다.
+- `jni`: `JNIEnv::NewWeakGlobalRef()`에서 만들고 `JNIEnv::DeleteWeakGlobalREf()`에서 파괴하는 JNI 약한 참조를 사용합니다.
+- `java`: `java.lang.WeakReference` 인스턴스를 참조하는 JNI 전역 참조를 사용합니다.
 
 API-7 이하와 API-19(Kit Kat)에서는 ART가 활성화된 경우 기본적으로 `java`가 사용됩니다. (API-8은 `jni` 참조를 추가했고, ART는 `jni` 참조를 *중단*했습니다.)
 
 이 시스템 속성은 테스트와 특정 형태의 조사에 유용합니다.
 *일반적으로* 변경해서는 안 됩니다.
 
-### <a name="xahttpclienthandlertype"></a>XA\_HTTP\_CLIENT\_HANDLER\_TYPE
+### <a name="xa_http_client_handler_type"></a>XA\_HTTP\_CLIENT\_HANDLER\_TYPE
 
 Xamarin.Android 6.1에 처음 도입된 이 환경 변수는 `HttpClient`에서 사용할 기본 `HttpMessageHandler` 구현을 선언합니다. 기본적으로 이 변수는 설정되지 않으며, Xamarin.Android는 `HttpClientHandler`를 사용합니다.
 

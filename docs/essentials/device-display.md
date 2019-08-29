@@ -5,12 +5,12 @@ ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 61d0a77d7a6a862ec5e06c7b693f8e23e4cdb975
-ms.sourcegitcommit: 6d41b5d48fd626d3f649809ed5480e5356755f14
+ms.openlocfilehash: 9c0eb4f856dbbb05e891a07326f40528a4e99bea
+ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986239"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70120097"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 디바이스 표시 정보
 
@@ -91,7 +91,7 @@ public class KeepScreenOnTest
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* UI 스레드에서 `DeviceDisplay`에 액세스해야 합니다. 그렇지 않으면 예외가 발생합니다. [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) 메서드를 사용하여 UI 스레드에서 해당 코드를 실행할 수 있습니다.
+- UI 스레드에서 `DeviceDisplay`에 액세스해야 합니다. 그렇지 않으면 예외가 발생합니다. [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) 메서드를 사용하여 UI 스레드에서 해당 코드를 실행할 수 있습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
