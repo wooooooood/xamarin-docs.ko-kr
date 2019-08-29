@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/14/2019
-ms.openlocfilehash: 2dde7415f40c9db205351a81d63d273fc211ed2b
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 86e92ee5293b4c9ed902f1c8d9858e06db1aa458
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976589"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065505"
 ---
 # <a name="xamarinforms-contentview"></a>Xamarin.ios ContentView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 Xamarin.ios [`ContentView`](xref:Xamarin.Forms.ContentView) 클래스는 단일 자식 요소를 포함 하 `Layout` 고 재사용 가능한 사용자 지정 컨트롤을 만드는 데 일반적으로 사용 되는의 형식입니다. 클래스 `ContentView` 는에서 [`TemplatedView`](xref:Xamarin.Forms.TemplatedView)상속 됩니다. 이 문서 및 관련 샘플에서는 `CardView` `ContentView` 클래스를 기반으로 사용자 지정 컨트롤을 만드는 방법을 설명 합니다.
 
@@ -205,7 +205,7 @@ CardView card = new CardView
 
 ## <a name="related-links"></a>관련 링크
 
-* [ContentView 샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+* [ContentView 샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)입니다.
 * [Xamarin Forms 컨트롤 템플릿](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 54e910d0a4f3301ca441fd18ddb27da930e9415c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
-ms.translationtype: MT
+ms.openlocfilehash: 0f92dca71f74266e1408cd65c842f729a9a648ce
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528780"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065659"
 ---
 # <a name="touch-id-in-xamarinios"></a>Xamarin.ios의 Touch ID
 
@@ -102,15 +102,15 @@ ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecA
 
 로컬 인증 API를 활용 하 여 키 집합 없이 Touch ID를 사용 하려면 몇 가지 기능을 사용할 수 있습니다. 이러한 내용은 아래에 자세히 설명 되어 있습니다.
 
-*   `CanEvaluatePolicy`– 장치에서 Touch ID를 받아들일 수 있는지만 확인 합니다.
-*   `EvaluatePolicy`– 인증 작업을 시작 하 고 UI를 표시 하며 `true` 또는 `false` 대답을 반환 합니다.
-*   `DeviceOwnerAuthenticationWithBiometrics`– Touch ID 화면을 표시 하는 데 사용할 수 있는 정책입니다. 여기에는 암호 대체 메커니즘이 없다는 것에 주목 해야 합니다. 대신 사용자가 Touch ID 인증을 건너뛸 수 있도록 응용 프로그램에서이 대체 (fallback)를 구현 해야 합니다.
+* `CanEvaluatePolicy`– 장치에서 Touch ID를 받아들일 수 있는지만 확인 합니다.
+* `EvaluatePolicy`– 인증 작업을 시작 하 고 UI를 표시 하며 `true` 또는 `false` 대답을 반환 합니다.
+* `DeviceOwnerAuthenticationWithBiometrics`– Touch ID 화면을 표시 하는 데 사용할 수 있는 정책입니다. 여기에는 암호 대체 메커니즘이 없다는 것에 주목 해야 합니다. 대신 사용자가 Touch ID 인증을 건너뛸 수 있도록 응용 프로그램에서이 대체 (fallback)를 구현 해야 합니다.
 
 로컬 인증을 사용 하는 경우 다음과 같은 몇 가지 주의 사항이 있습니다.
 
-*   키 집합을 사용 하는 것 처럼 포그라운드에서 실행할 수 있습니다. 이를 백그라운드 스레드에서 호출 하면 오류가 발생 합니다.
-*   정책 평가가 실패할 수 있다는 점에 유의 하세요. 암호 단추를 대체 방법으로 구현 해야 합니다.
-*   인증이 필요한 이유를 `localizedReason` 설명 하기 위해를 제공 해야 합니다. 이렇게 하면 사용자와의 트러스트를 만들 수 있습니다.
+* 키 집합을 사용 하는 것 처럼 포그라운드에서 실행할 수 있습니다. 이를 백그라운드 스레드에서 호출 하면 오류가 발생 합니다.
+* 정책 평가가 실패할 수 있다는 점에 유의 하세요. 암호 단추를 대체 방법으로 구현 해야 합니다.
+* 인증이 필요한 이유를 `localizedReason` 설명 하기 위해를 제공 해야 합니다. 이렇게 하면 사용자와의 트러스트를 만들 수 있습니다.
 
 다음 섹션에서는 이러한 주의 사항을 고려 하 여 API를 구현 하는 방법을 살펴보겠습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: f79e7f3576748737a4feb9204fb9840afdbb1ef4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 914afe63136323e3506bb40d4759869f97fb264c
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645430"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065691"
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -436,7 +436,7 @@ public override void GetNewWindowForTab (NSObject sender)
 
 #### <a name="redrawing-views-with-layers"></a>레이어를 사용 하 여 뷰 다시 그리기
 
-Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서 `NSView` `NSViewController`의를 `OnSetNeedsDisplay` 로 설정 하는 것입니다. 예를 들어:
+Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서 `NSView` `NSViewController`의를 `OnSetNeedsDisplay` 로 설정 하는 것입니다. 예:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -637,7 +637,7 @@ macOS Sierra는 이전 버전의 OS에서 사용할 수 있는 기존 컨테이�
 
 ## <a name="table-view-enhancements"></a>테이블 뷰 향상
 
-개발자는 항상와 `NSView` `NSTableView`같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다. 예를 들어:
+개발자는 항상와 `NSView` `NSTableView`같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다. 예:
 
 ```csharp
 using System;
@@ -836,7 +836,7 @@ public override void ViewDidLoad ()
 
 컨트롤의을 `ImagePosition` `Alignment` 기반으로및를설정`UserInterfaceLayoutDirection` 하는입니다.
 
-macOS Sierra는 여러 가지 매개 변수 (예: 제목 `CreateButton` , 이미지 및 작업)를 사용 하는 몇 가지 새로운 편의 생성자 (정적 메서드를 통해)를 추가 하 고 올바르게 자동으로 미러링됩니다. 예:
+macOS Sierra는 여러 가지 매개 변수 (예: 제목 `CreateButton` , 이미지 및 작업)를 사용 하는 몇 가지 새로운 편의 생성자 (정적 메서드를 통해)를 추가 하 고 올바르게 자동으로 미러링됩니다. 예를 들어:
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
@@ -908,7 +908,7 @@ Apple에는 시스템 모양새 사용에 대 한 다음과 같은 제안이 있
 - Ui 구조적 dependancies을 사용 하지 마십시오 .이는 UI 유연성이 제한 되기 때문입니다.
 - 인터페이스 C# 를 사용 하 여 제네릭 데이터 dependancies을 제공 합니다.
 
-Segue의 소스로 작동 하는 뷰 컨트롤러는 Segue를 실행 하 여 대상 뷰 `PrepareForSegue` 컨트롤러를 표시 하기 전에 메서드를 재정의 하 고 데이터 전달과 같은 모든 초기화 작업을 수행할 수 있습니다. 예:
+Segue의 소스로 작동 하는 뷰 컨트롤러는 Segue를 실행 하 여 대상 뷰 `PrepareForSegue` 컨트롤러를 표시 하기 전에 메서드를 재정의 하 고 데이터 전달과 같은 모든 초기화 작업을 수행할 수 있습니다. 예를 들어:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)

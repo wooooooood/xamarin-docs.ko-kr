@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 5109e3a66e22d885d8dc8b685db0817057709464
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b4d827715870d54de3116067a3e24e229ecda530
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653686"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065630"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>설치 및 watchOS에서 Xamarin 사용
 
@@ -29,9 +29,9 @@ Watch 앱의 세 프로젝트로 구성 됩니다.
 
 - **Xamarin.iOS 앱 프로젝트를 iPhone** -일반 iPhone 프로젝트가이, Xamarin.iOS 템플릿 중 하나일 수 있습니다. Watch 앱 및 해당 확장이 기본 프로젝트 내에서 함께 제공 됩니다.
 
-- **조사식 확장 프로젝트** -Watch 앱에 대 한 코드 (예: 컨트롤러 클래스)를 포함 합니다.
+- 감시 앱에 대 한 코드 (예: 컨트롤러 클래스)가 포함 된 **조사식 확장 프로젝트** 입니다.
 
-- **Watch 앱 프로젝트** -Watch 앱에 대 한 모든 UI 리소스를 사용 하 여 사용자 인터페이스 스토리 보드 파일을 포함 합니다.
+- **Watch 앱 프로젝트** -여기에는 watch 앱에 대 한 모든 UI 리소스를 포함 하는 사용자 인터페이스 스토리 보드 파일이 포함 됩니다.
 
 합니다 [조사식 키트 Catalog 예제](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) Xamarin.Studio에서 다음과 같은 솔루션:
 
@@ -220,10 +220,10 @@ Mac 용 Visual Studio 및 Visual Studio에서 디버깅이 지원 됩니다.
 
 <!--
 To test the functionality in your  and 
-    methods, use the **Hardware > Lock** command in the iOS Simulator.
-    Locking will trigger the `DidDeactivate` method and the watch simulator
-    will indicate that it has been locked. Swipe the iOS Simulator to unlock,
-    which triggers the `WillActivate` method of the watch app.
+  methods, use the **Hardware > Lock** command in the iOS Simulator.
+  Locking will trigger the `DidDeactivate` method and the watch simulator
+  will indicate that it has been locked. Swipe the iOS Simulator to unlock,
+  which triggers the `WillActivate` method of the watch app.
 -->
 
 WatchOS 템플릿 파일 (같은 `InterfaceController`, `ExtensionDelegate`를 `NotificationController`, 및 `ComplicationController`) 이미 구현 하는 필수 수명 주기 메서드를 사용 하 여 제공 합니다. 추가 `Console.WriteLine` 호출과 읽기 합니다 **응용 프로그램 출력** 이벤트 수명 주기를 더 잘 이해 하려면.

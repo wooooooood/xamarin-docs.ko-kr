@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a3273b4bed13c3982b9d9b4df874e4ad2ee30e3f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 39c77b4016027171a4e76bc4fb15c77d733cf5ba
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645916"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065363"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS에서 Xamarin 알림
 
@@ -37,7 +37,7 @@ ms.locfileid: "68645916"
 
 알림의 다음과 같은 두 종류가 있습니다.
 
-- **짧은 모양을** -시스템에 의해 정의 되는 스크롤할 수 없는 정적 보기입니다.
+- 시스템에서 정의한 스크롤할 때 스크롤할 때 정적 뷰가 아닙니다.
 
 - **장기 모양을** 스크롤할 수-사용자가 정의한 사용자 지정 가능한 보기! 간단 하 고 정적 버전 및 더 복잡 한 동적 버전을 지정할 수 있습니다.
 
@@ -99,21 +99,21 @@ Apple Watch 알림을 테스트할 때 유의 [Apple 설명서](https://develope
 
 Watch 확장으로 설정 된 경우 Mac 용 visual Studio는 추가 옵션을 표시 합니다 **시작 프로젝트**합니다.
 조사식 확장 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **사용 하 여 실행 > 매개 변수 사용자 지정 하는 중...** :
-    
+
 [![](notifications-images/runwith-customparams-sml.png "사용자 지정 속성을 사용 하 여 실행")](notifications-images/runwith-customparams.png#lightbox)
-    
+
 열립니다는 **실행 인수** 포함 하는 창을 **WatchKit** 탭 합니다. 선택 **알림을** JSON 페이로드를 제공 하 고 다음 키를 누릅니다 **Execute** 시뮬레이터에서 watch 앱을 시작 하려면:
-    
+
 [![](notifications-images/runwith-execargs-sml.png "알림 페이로드 기본값 선택")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조사식 확장에서 테스트 알림 페이로드를 설정 하는 **프로젝트 속성**합니다. 로 이동 합니다 **디버그** 섹션 및 목록 (이 자동으로 표시 된 프로젝트에 포함 된 모든 JSON 파일)에서 알림을 JSON 파일을 선택 합니다.
-    
+
 [![](notifications-images/runwith-execargs-sml-vs.png "알림 JSON 파일을 선택 합니다.")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 조사식 확장의 경우는 **시작 프로젝트**, 아래와 같이 Visual Studio 추가 옵션이 표시 됩니다. 중 하나를 선택 합니다 **알림을** watch 앱 시작 하는 옵션 **알림** (속성 창에서 선택 된 JSON 파일을 사용 하 여) 모드:
-    
+
 ![](notifications-images/runwith-vs.png "장치 메뉴")
 
 -----
@@ -128,7 +128,7 @@ Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조
 
 에 [조사식 키트 카탈로그](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 있습니다 샘플 페이로드 JSON 파일의 예는 **NotificationPayload.json** (아래 참조).
 
-```csharp
+```json
 {
     "aps": {
         "alert": "Test message content",

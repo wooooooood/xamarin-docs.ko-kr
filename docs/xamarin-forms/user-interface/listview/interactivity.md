@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 833e6d3fc06ceeb5f8f63cb8b8b255b2a940098c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: MT
+ms.openlocfilehash: 180ffa7cf723d841021a8bf7d1f1a285c882c103
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653879"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065545"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
@@ -75,7 +75,7 @@ C# 및 XAML의 상황에 맞는 작업을 구현할 수 있습니다. 아래 있
 
 기본적으로 MenuItem에 속하는 셀을 알 수 없습니다. `CommandParameter` 사용할 수 있습니다 `MenuItem` 로 MenuItem의 ViewCell 뒤의 개체가 같은 개체를 저장 합니다. `CommandParameter` XAML과 C# 모두에서 설정할 수 있습니다.
 
-### <a name="c"></a>C#  
+### <a name="c"></a>C\#
 
 있는 상황에 맞는 작업을 구현할 수 있습니다 `Cell` 서브 클래스 (한 그룹 헤더로 사용 되 고 있지)를 만들어 `MenuItem`s에 추가 하는 `ContextActions` 셀에 대 한 컬렉션입니다. 다음과 같은 상황에 맞는 작업에 대 한 속성을 구성할 수 있습니다.
 
