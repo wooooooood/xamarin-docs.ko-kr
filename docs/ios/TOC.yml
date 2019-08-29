@@ -559,6 +559,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/ios
         - name: 진동
           href: ~/essentials/vibrate.md?context=xamarin/ios
+        - name: Xamarin.Essentials 릴리스 정보
+          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: 문제 해결
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
     - name: 데이터 및 Cloud Services

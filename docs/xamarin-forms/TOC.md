@@ -154,6 +154,7 @@
 #### [레이아웃](user-interface/controls/layouts.md)
 #### [Views](user-interface/controls/views.md)
 #### [셀](user-interface/controls/cells.md)
+#### [공용 속성, 메서드, 이벤트](user-interface/controls/common-properties.md)
 #### [타사 컨트롤](user-interface/controls/thirdparty.md)
 ### [DataPages](user-interface/datapages/index.md)
 #### [시작](user-interface/datapages/get-started.md)
@@ -324,6 +325,7 @@
 ### [단위 변환기](~/essentials/unit-converters.md?context=xamarin/xamarin-forms)
 ### [버전 추적](~/essentials/version-tracking.md?context=xamarin/xamarin-forms)
 ### [진동](~/essentials/vibrate.md?context=xamarin/xamarin-forms)
+### [Xamarin.Essentials 릴리스 정보](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 ### [문제 해결](~/essentials/troubleshooting.md?context=xamarin/xamarin-forms)
 
 ## 데이터 및 Azure Cloud Services
