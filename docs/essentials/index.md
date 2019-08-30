@@ -4,13 +4,13 @@ description: 이 문서에는 모바일 애플리케이션에 대한 플랫폼 �
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 08f97263ccb5b4c91a541d06534e82aaaebbae1e
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.date: 08/27/2019
+ms.openlocfilehash: 2101d2e3948cb917e62725731c4895cc57282b3b
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175397"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065136"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -63,6 +63,10 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 ## <a name="troubleshootingtroubleshootingmdcontextxamarinxamarin-forms"></a>[문제 해결](troubleshooting.md?context=xamarin/xamarin-forms)
 
 문제가 발생하는 경우 도움말을 찾으세요.
+
+## <a name="release-noteshttpsdocsmicrosoftcomxamarinessentialsrelease-notes"></a>[릴리스 정보](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+
+Xamarin.Essentials의 각 릴리스에 대한 전체 릴리스 정보를 찾으세요.
 
 ## <a name="api-documentationxrefxamarinessentials"></a>[API 문서](xref:Xamarin.Essentials)
 

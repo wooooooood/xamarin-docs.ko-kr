@@ -4,13 +4,13 @@ description: Xamarin.Essentials의 Launcher 클래스를 사용하면 애플리�
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 26ab3687e9bcfecbd003ddd0a97f3e46a0cd92b2
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.date: 08/20/2019
+ms.openlocfilehash: 276e4d9bc1294984a73ef2214cf9c1fd6c3bb89b
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870055"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060110"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: 시작 관리자
 
@@ -40,6 +40,35 @@ public class LauncherTest
             await Launcher.OpenAsync("lyft://ridetype?id=lyft_line");
     }
 }
+```
+
+그러면 매개 변수를 열 수 있는지 확인하고 열 수 있는 경우 여는 `TryOpenAsync`를 사용하여 단일 호출로 결합할 수 있습니다.
+
+```csharp
+public class LauncherTest
+{
+    public async Task<bool> OpenRideShareAsync()
+    {
+        return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
+    }
+}
+```
+
+## <a name="files"></a>파일
+
+이 기능을 사용하면 앱에서 다른 앱을 열고 파일을 볼 수 있도록 요청할 수 있습니다. Xamarin.Essentials는 자동으로 파일 형식(MIME)을 검색하고 파일을 열도록 요청합니다.
+
+다음은 디스크에 텍스트를 작성하고 열도록 요청하는 샘플입니다.
+
+```csharp
+var fn = "File.txt";
+var file = Path.Combine(FileSystem.CacheDirectory, fn);
+File.WriteAllText(file, "Hello World");
+
+await Launcher.OpenAsync(new OpenFileRequest
+{
+    File = new ReadOnlyFile(file)
+});
 ```
 
 ## <a name="platform-differences"></a>플랫폼의 차이점

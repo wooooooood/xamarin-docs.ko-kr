@@ -1,26 +1,26 @@
 ---
 title: 'Xamarin.Essentials: MainThread'
-description: MainThread 클래스를 사용하면 응용 프로그램이 주 실행 스레드에서 코드를 실행할 수 있습니다.
+description: MainThread 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 코드를 실행할 수 있습니다.
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 7ec1420d87c898f63614eb6d980c28834e980afd
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 08/20/2019
+ms.openlocfilehash: 9109e7bff4cfe60479e711240d290d77b60a9af6
+ms.sourcegitcommit: 9a46ee759ec4a738da348e8f8904d0f482ef0f25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899007"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060123"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
-**MainThread** 클래스를 사용하면 응용 프로그램이 주 실행 스레드에서 코드를 실행할 수 있으며, 특정 코드 블록이 현재 주 스레드에서 실행되고 있는지 확인할 수 있습니다.
+**MainThread** 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 코드를 실행할 수 있으며, 특정 코드 블록이 현재 주 스레드에서 실행되고 있는지 확인할 수 있습니다.
 
 ## <a name="background"></a>배경
 
-iOS, Android 및 유니버설 Windows 플랫폼을 포함한 대부분의 운영 체제는 사용자 인터페이스와 관련된 코드에 대해 단일 스레딩 모델을 사용합니다. 이 모델은 키 입력 및 터치 입력을 포함한 사용자 인터페이스 이벤트를 올바르게 직렬화하는 데 필요합니다. 이 스레드를 _주 스레드_, _사용자 인터페이스 스레드_ 또는 _UI 스레드_라고 합니다. 이 모델의 단점은 사용자 인터페이스 요소에 액세스하는 모든 코드가 응용 프로그램의 주 스레드에서 실행되어야 한다는 것입니다. 
+iOS, Android 및 유니버설 Windows 플랫폼을 포함한 대부분의 운영 체제는 사용자 인터페이스와 관련된 코드에 대해 단일 스레딩 모델을 사용합니다. 이 모델은 키 입력 및 터치 입력을 포함한 사용자 인터페이스 이벤트를 올바르게 직렬화하는 데 필요합니다. 이 스레드를 _주 스레드_, _사용자 인터페이스 스레드_ 또는 _UI 스레드_라고 합니다. 이 모델의 단점은 사용자 인터페이스 요소에 액세스하는 모든 코드가 애플리케이션의 주 스레드에서 실행되어야 한다는 것입니다. 
 
-응용 프로그램이 보조 실행 스레드의 이벤트 처리기를 호출하는 이벤트를 사용해야 하는 경우도 있습니다. (Xamarin.Essentials 클래스 [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) 및 [`OrientationSensor`](orientation-sensor.md)는 더 빠른 속도로 사용할 경우 모두 보조 스레드에 대한 정보를 반환할 수 있습니다.) 이벤트 처리기가 사용자 인터페이스 요소에 액세스해야 하는 경우, 주 스레드에서 해당 코드를 실행해야 합니다. **MainThread** 클래스를 사용하면 응용 프로그램이 주 실행 스레드에서 이 코드를 실행할 수 있습니다.
+애플리케이션이 보조 실행 스레드의 이벤트 처리기를 호출하는 이벤트를 사용해야 하는 경우도 있습니다. (Xamarin.Essentials 클래스 [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) 및 [`OrientationSensor`](orientation-sensor.md)는 더 빠른 속도로 사용할 경우 모두 보조 스레드에 대한 정보를 반환할 수 있습니다.) 이벤트 처리기가 사용자 인터페이스 요소에 액세스해야 하는 경우, 주 스레드에서 해당 코드를 실행해야 합니다. **MainThread** 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 이 코드를 실행할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -64,7 +64,7 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 
 ## <a name="determining-if-code-is-running-on-the-main-thread"></a>코드가 주 스레드에서 실행되고 있는지 확인
 
-`MainThread` 클래스를 사용하면 응용 프로그램은 특정 코드 블록이 주 스레드에서 실행되고 있는지도 확인할 수 있습니다. `IsMainThread` 속성은 해당 속성을 호출하는 코드가 주 스레드에서 실행되고 있는 경우 `true`를 반환합니다. 프로그램은 이 속성을 사용하여 주 스레드 또는 보조 스레드에 대해 서로 다른 코드를 실행할 수 있습니다.
+`MainThread` 클래스를 사용하면 애플리케이션은 특정 코드 블록이 주 스레드에서 실행되고 있는지도 확인할 수 있습니다. `IsMainThread` 속성은 해당 속성을 호출하는 코드가 주 스레드에서 실행되고 있는 경우 `true`를 반환합니다. 프로그램은 이 속성을 사용하여 주 스레드 또는 보조 스레드에 대해 서로 다른 코드를 실행할 수 있습니다.
 
 ```csharp
 if (MainThread.IsMainThread)
@@ -93,6 +93,18 @@ else
 코드 블록이 이미 주 스레드에서 실행되고 있다면 이 검사를 통해 성능을 향상할 수 있지 않을까 하는 의심을 가질 수 있습니다.
 
 _그러나 이 검사는 필요하지 않습니다._ 플랫폼의 `BeginInvokeOnMainThread` 구현 자체에서 호출이 주 스레드에서 수행되었는지 확인합니다. 필요하지 않을 때 `BeginInvokeOnMainThread`를 호출해도 성능에 미치는 영향은 거의 없습니다.
+
+## <a name="additional-methods"></a>추가 방법
+
+`MainThread` 클래스에는 백그라운드 스레드의 사용자 인터페이스 요소와 상호 작용하는 데 사용될 수 있는 다음 추가 `static` 메서드가 포함됩니다.
+
+| 메서드 | 인수 | 반환 값 | 용도 |
+|---|---|---|---|
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 주 스레드에서 `Func<T>`를 호출하고 완료될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | 주 스레드에서 `Action`을 호출하고 완료될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | 주 스레드에서 `Func<Task<T>>`를 호출하고 완료될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | 주 스레드에서 `Func<Task>`를 호출하고 완료될 때까지 기다립니다. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | 주 스레드의 `SynchronizationContext`를 반환합니다. |
 
 ## <a name="api"></a>API
 

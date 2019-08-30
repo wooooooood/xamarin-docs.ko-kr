@@ -1,18 +1,18 @@
 ---
-title: 'Xamarin.Essentials: 기압계'
+title: 'Xamarin.Essentials: 지표'
 description: Xamarin.Essentials의 Barometer 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.
 ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 342ae1b64fefebaa4b3fa82e9f48c6e9a58d4751
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
+ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976431"
 ---
-# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: 기압계
+# <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: 지표
 
 **Barometer** 클래스를 사용하면 압력을 측정하는 디바이스의 기압계 센서를 모니터링할 수 있습니다.
 
@@ -82,6 +82,8 @@ public class BarometerTest
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 이 API는 [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter)를 사용하여 압력 변경 내용을 모니터링합니다. 이 기능은 iPhone 6 이상 디바이스에 추가된 하드웨어 기능입니다. 고도계를 지원하지 않는 디바이스에서는 `FeatureNotSupportedException`이 throw됩니다.
+
+`SensorSpeed`는 iOS에서 지원되지 않으므로 사용되지 않습니다.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

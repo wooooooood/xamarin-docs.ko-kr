@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/19/2016
-ms.openlocfilehash: 777e8d2880313b5a793d6257cc0fd9d8299cb94d
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 4a80b14aeb1517bac1e0d994a606ac4e74b2a94a
+ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528483"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70065637"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Xamarin.Mac 앱에서 네이티브 크래시 디버깅
 
@@ -24,7 +24,7 @@ ms.locfileid: "51528483"
 
 ## <a name="example-1-assertion-failure"></a>예제 1: 어설션 실패
 
-다음은 간단한 테스트 응용 프로그램에서 크래시의 처음 몇 줄입니다(이 정보는 **응용 프로그램 출력** 패드에 있음).
+다음은 간단한 테스트 애플리케이션에서 크래시의 처음 몇 줄입니다(이 정보는 **애플리케이션 출력** 패드에 있음).
 
 ```csharp
 2014-10-15 16:18:02.364 NSOutlineViewHottness[79111:1304993] *** Assertion failure in -[NSTableView _uncachedRectHeightOfRow:], /SourceCache/AppKit/AppKit-1343.13/TableView.subproj/NSTableView.m:1855
@@ -32,17 +32,17 @@ ms.locfileid: "51528483"
 2014-10-15 16:18:02.378 NSOutlineViewHottness[79111:1304993] *** Assertion failure in -[NSTableView _uncachedRectHeightOfRow:], /SourceCache/AppKit/AppKit-1343.13/TableView.subproj/NSTableView.m:1855
 2014-10-15 16:18:02.378 NSOutlineViewHottness[79111:1304993] NSTableView variable rowHeight error: The value must be > 0 for row 0, but the delegate <NSOutlineViewHottness_HotnessViewDelegate: 0xaa01860> gave -1.000.
 2014-10-15 16:18:02.381 NSOutlineViewHottness[79111:1304993] (
-    0   CoreFoundation                      0x91888343 __raiseError + 195
-    1   libobjc.A.dylib                     0x9a5e6a2a objc_exception_throw + 276
-    2   CoreFoundation                      0x918881ca +[NSException raise:format:arguments:] + 138
-    3   Foundation                          0x950742b1 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 118
-    4   AppKit                              0x975db476 -[NSTableView _uncachedRectHeightOfRow:] + 373
-    5   AppKit                              0x975db2f8 -[_NSTableRowHeightStorage _uncachedRectHeightOfRow:] + 143
-    6   AppKit                              0x975db206 -[_NSTableRowHeightStorage _cacheRowHeights] + 167
-    7   AppKit                              0x975db130 -[_NSTableRowHeightStorage _createRowHeightsArray] + 226
-    8   AppKit                              0x975b5851 -[_NSTableRowHeightStorage _ensureRowHeights] + 73
-    9   AppKit                              0x975b5790 -[_NSTableRowHeightStorage computeTableHeightForNumberOfRows:] + 89
-    10  AppKit                              0x975b4c38 -[NSTableView _totalHeightOfTableView] + 220
+  0   CoreFoundation                      0x91888343 __raiseError + 195
+  1   libobjc.A.dylib                     0x9a5e6a2a objc_exception_throw + 276
+  2   CoreFoundation                      0x918881ca +[NSException raise:format:arguments:] + 138
+  3   Foundation                          0x950742b1 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 118
+  4   AppKit                              0x975db476 -[NSTableView _uncachedRectHeightOfRow:] + 373
+  5   AppKit                              0x975db2f8 -[_NSTableRowHeightStorage _uncachedRectHeightOfRow:] + 143
+  6   AppKit                              0x975db206 -[_NSTableRowHeightStorage _cacheRowHeights] + 167
+  7   AppKit                              0x975db130 -[_NSTableRowHeightStorage _createRowHeightsArray] + 226
+  8   AppKit                              0x975b5851 -[_NSTableRowHeightStorage _ensureRowHeights] + 73
+  9   AppKit                              0x975b5790 -[_NSTableRowHeightStorage computeTableHeightForNumberOfRows:] + 89
+  10  AppKit                              0x975b4c38 -[NSTableView _totalHeightOfTableView] + 220
 ```
 
 숫자 접두사가 붙은 줄은 기본 스택 추적입니다. 여기서는 행 높이를 처리하는 `NSTableView` 내부 어딘가에서 발생한 크래시를 볼 수 있습니다. 그리고 `NSAssertionHandler`가 `NSException (objc_exception_throw)`를 실행하면 어설션 실패가 보입니다.
@@ -134,7 +134,7 @@ mainWindowController.Window.StandardWindowButton (NSWindowButton.CloseButton).Ac
 
 이 특정 문제의 근본 원인은 아니지만, Objective-C로 `[Export]`된 함수의 메서드 서명이 잘못되어 이와 같은 스택 추적이 발생할 수 있습니다. 예를 들어 메서드에서는 매개 변수로 `out string`을 예상하고 있는데 `string`이 입력되면 같은 방식으로 크래시가 발생할 수 있습니다.
 
-## <a name="example-3-callbacks-and-managed-objects"></a>예제 3: 콜백 및 관리 개체
+## <a name="example-3-callbacks-and-managed-objects"></a>예제 3: 콜백 및 관리형 개체
 
 많은 Cocoa API는 일부 이벤트가 발생할 때(이때 콜백되면 사용자에게 응답할 기회 제공) 또는 작업을 수행하기 위해 일부 데이터가 필요할 때 라이브러리에 의해 "콜백"됩니다. 많은 분들이 **대리자** 및 **DataSource** 패턴을 생각하시겠지만, 이런 방식으로 작동하는 여러 API가 있습니다. 예를 들어 `NSView` 메서드를 재정의하여 시각적 트리에 삽입하면 특정 이벤트가 발생할 때 AppKit가 사용자를 호출할 것으로 예상할 수 있습니다.
 
@@ -177,7 +177,7 @@ new System.Threading.Thread (() =>
 }).Start (); 
 ```
 
-이렇게 하면 응용 프로그램이 가비지 수집기를 1초마다 실행합니다. 응용 프로그램을 다시 실행하고 버그를 재현해 봅니다. 크래시가 즉시 발생하거나, 임의로 발생하는 것이 아니라 지속적으로 발생하는 경우 제대로 추적하고 있는 것입니다.
+이렇게 하면 애플리케이션이 가비지 수집기를 1초마다 실행합니다. 애플리케이션을 다시 실행하고 버그를 재현해 봅니다. 크래시가 즉시 발생하거나, 임의로 발생하는 것이 아니라 지속적으로 발생하는 경우 제대로 추적하고 있는 것입니다.
 
 ### <a name="reporting"></a>보고
 
