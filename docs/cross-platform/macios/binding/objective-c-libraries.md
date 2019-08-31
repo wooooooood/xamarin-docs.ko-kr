@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 667a3726a2d214c9e33e20a73f629c9ca532eab1
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 36b5ace881ba8f7fb45fef9d0350ffca67e0c951
+ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120469"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169265"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -325,7 +325,7 @@ IntPtr Constructor (CGRect frame);
 
 ### <a name="binding-protocols"></a>바인딩 프로토콜
 
-API 디자인 문서에 설명 된 대로 [모델 및 프로토콜](~/ios/internals/api-design/index.md#Models)에 대해 설명 하는 섹션에서 Xamarin.ios는 목표-C 프로토콜을에 플래그가 지정 된 클래스에 매핑합니다.[`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
+API 디자인 문서에 설명 된 대로 [모델 및 프로토콜](~/ios/internals/api-design/index.md#models)에 대해 설명 하는 섹션에서 Xamarin.ios는 목표-C 프로토콜을에 플래그가 지정 된 클래스에 매핑합니다.[`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
 특성도. 이는 일반적으로 목표-C 대리자 클래스를 구현할 때 사용 됩니다.
 
 일반적인 바인딩된 클래스와 대리자 클래스의 큰 차이점은 대리자 클래스가 하나 이상의 선택적 메서드를 가질 수 있다는 것입니다.
@@ -682,7 +682,7 @@ Xamarin.ios 바인딩 생성기는 개발자가 알림을 바인딩할 수 있�
 
 페이로드를 사용 하지 않는 알림에 대해 인수를 사용 하지 않고이 특성을 사용 하거나, 일반적 `System.Type` 으로 이름이 "EventArgs"로 끝나는 API 정의의 다른 인터페이스를 참조 하는를 지정할 수 있습니다. 생성기는 인터페이스를 서브 `EventArgs` 클래스로 변환 하 고 여기에 나열 된 모든 속성을 포함 합니다. EventArgs [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 클래스에서 특성을 사용 하 여 값을 인출 하기 위해 목표-C 사전을 조회 하는 데 사용 되는 키의 이름을 나열 해야 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 interface MyClass {
@@ -1404,4 +1404,3 @@ Xamarin.ios v 3.2 부터는 [`[Model]`](~/cross-platform/macios/binding/binding-
 ## <a name="related-links"></a>관련 링크
 
 - [바인딩 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
- 
