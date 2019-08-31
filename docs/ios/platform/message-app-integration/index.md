@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/29/2016
-ms.openlocfilehash: 7cb079beac7fd97072333bccf3ff387a9e8c5465
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8f029084982237d7dd16c8f3e5e5ae46f5d0223c
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654314"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198986"
 ---
 # <a name="message-app-integration-in-xamarinios"></a>Xamarin.ios의 메시지 앱 통합
 
@@ -20,7 +20,6 @@ _이러한 문서에서는 메시지 앱과 통합 되어 사용자에 게 새 �
 
 IOS 10의 새로운 기능으로, 메시지 앱 확장은 **메시지** 앱과 통합 되며 사용자에 게 새로운 기능을 제공 합니다. 확장은 텍스트, 스티커, 미디어 파일 및 대화형 메시지를 보낼 수 있습니다.
 
-    
 ## <a name="message-app-extension-basicsiosplatformmessage-app-integrationintro-to-message-app-extensionsmd"></a>[메시지 앱 확장 기본 사항](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
 이 문서에서는 **메시지** 앱과 통합 되 고 사용자에 게 새로운 기능을 제공 하는 xamarin.ios 솔루션에 메시지 앱 확장을 포함 하는 방법을 보여 줍니다.

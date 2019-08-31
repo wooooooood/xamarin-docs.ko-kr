@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 76e9d91b735f2ae5041330d8e290347ae9314487
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 43c9ee599fe96c107bf10996834d9bcf60847603
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654813"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200113"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.ios 앱에 대 한 시작 화면
 
@@ -214,7 +214,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
     ![](launch-screens-images/image013.png "시작 화면에 대 한 이름 입력")
 3. **솔루션 탐색기**에서 새로 만든 스토리 보드 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-4. **Size 클래스** 를 any로 설정 **하 고** 뷰를 **제네릭** **로** 설정 합니다. 
+4. **Size 클래스** 를 any로 설정 하 고 뷰를 **제네릭** **로** 설정 합니다. 
 
     ![](launch-screens-images/image016.png "Size 클래스가 any로 설정 되었는지 확인 하 고 뷰를 제네릭로 설정 합니다.")
 5. 응용 프로그램의 번들에 포함 된 크기 클래스, 간단한 UI 요소 ( `UIImageView`예:) 및 이미지에서 시작 화면을 어셈블리 합니다. 

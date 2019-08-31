@@ -6,12 +6,12 @@ ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: dc23aed074360a06fcef6ad540d91aa98a19318b
-ms.sourcegitcommit: 9912e57ff6124c583600f9460ebfa3f7f7525960
+ms.openlocfilehash: a6d245e60a0d163c054fd74e0fb64780225da031
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560296"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197811"
 ---
 # <a name="updating-existing-mac-apps"></a>기존 Mac 앱 업데이트
 
@@ -29,7 +29,7 @@ Xamarin은 Mac용 Visual Studio 및 Visual Studio 모두에서 Classic API Unifi
 
 ## <a name="automated-updating"></a>자동 업데이트
 
-경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 Mac 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예:
+경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 Mac 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예를 들어:
 
 ![](updating-mac-apps-images/beta-tool1.png "프로젝트 메뉴에서 Xamarin.ios Unified API로 마이그레이션을 선택 합니다.")
 
@@ -118,7 +118,7 @@ Unified API 지원 작업을 수행 하기 위해 NuGet에 변경 내용을 적�
 ## <a name="enabling-64-bit-builds-of-xamarinmac-apps"></a>Xamarin.ios 앱의 64 비트 빌드 사용
 
 Unified API로 변환 된 Xamarin.ios 모바일 응용 프로그램의 경우 개발자는 응용 프로그램의 옵션에서 64 비트 컴퓨터용 응용 프로그램 빌드를 계속 사용 하도록 설정 해야 합니다. 64 비트 빌드를 사용 하는 방법에 대 한 자세한 내용은 [32/64 비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 문서의 **64 비트 빌드 사용** 을 참조 하세요.
-    
+
 ## <a name="finishing-up"></a>완료
 
 자동 또는 수동 방법을 사용 하 여 Xamarin.ios 응용 프로그램을 클래식에서 통합 된 Api로 변환 하는지 여부에 관계 없이 추가, 수동 작업을 필요로 하는 여러 인스턴스가 있습니다. 알려진 문제 및 해결 방법에 대해서 [는 Unified API 문서에 대 한 코드 업데이트에 대 한 팁](~/cross-platform/macios/unified/updating-tips.md) 을 참조 하세요.

@@ -1,32 +1,32 @@
 ---
-title: Xamarin.iOS에서 SceneKit
-description: 이 문서에서는 OpenGL의 복잡성을 추상화 함으로써 3D 그래픽 작업을 간소화 하는 3D 장면 그래프 API, SceneKit을 설명 합니다.
+title: Xamarin.ios의 SceneKit
+description: 이 문서에서는 OpenGL의 복잡성을 추상화 하 여 3D 그래픽 작업을 간소화 하는 3D 장면 그래프 API 인 SceneKit에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 19049ED5-B68E-4A0E-9D57-B7FAE3BB8987
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 0944978b34c8e164acd6e829db177bf4fd72dea9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3221764db0fa85f4cd0eb2dbc291f4b7b1d70d66
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61376293"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199577"
 ---
-# <a name="scenekit-in-xamarinios"></a>Xamarin.iOS에서 SceneKit
+# <a name="scenekit-in-xamarinios"></a>Xamarin.ios의 SceneKit
 
-SceneKit 3D 장면 그래프 API 3D 그래픽 작업을 간소화 하는 경우 OS X 10.8에 처음 도입 하 고 iOS 8 하기 위해 이제 왔습니다. SceneKit를 사용 하 여 몰입 감이 뛰어난 3D 시각화 및 아마추어 3D 게임을 만들기는 OpenGL에 대 한 전문이 필요 하지 않습니다. 일반적인 장면 그래프 개념을 토대로 SceneKit 추상화 OpenGL 및 OpenGL ES를 매우 간편 하 게 추가 3D 콘텐츠 응용 프로그램의 복잡성입니다. 그러나 OpenGL 전문가 라면 SceneKit는도 OpenGL을 사용 하 여 직접 시도 하는 것에 대 한 훌륭한 지원 합니다. 또한 물리학 같은 3D 그래픽을 보완 하는 다양 한 기능을 포함 하 고 몇 가지 Apple 등 다른 프레임 워크, Core Animation, Core 이미지 및 Sprite Kit를 사용 하 여 매끄럽게 통합 되 합니다.
+SceneKit는 3D 그래픽 작업을 간소화 하는 3D 장면 그래프 API입니다. OS X 10.8에 처음 도입 되었으며 이제 iOS 8로 제공 되었습니다. SceneKit는 몰입 형 3D 시각화 및 일반 3D 게임을 만드는 데 OpenGL의 전문 지식이 필요 하지 않습니다. 일반적인 장면 그래프 개념을 기반으로 하는 SceneKit는 OpenGL 및 OpenGL ES의 복잡성을 추상화 하 여 응용 프로그램에 3D 콘텐츠를 매우 쉽게 추가할 수 있도록 합니다. 그러나 OpenGL 전문가 인 경우 SceneKit는 OpenGL에 직접 연결할 수 있는 기능을 제공 합니다. 또한 물리와 같은 3D 그래픽을 보완 하 고 핵심 애니메이션, 핵심 이미지 및 스프라이트 키트와 같은 다른 여러 Apple 프레임 워크와 매우 잘 통합 하는 다양 한 기능이 포함 되어 있습니다.
 
-SceneKit 사용 하기가 매우 쉽습니다. 렌더링을 처리 하는 선언적 API입니다. 단순히를 설정 하 장면 장면의 렌더링, 그리고 SceneKit 처리 속성을 추가 합니다.
+SceneKit는 작업 하기가 매우 쉽습니다. 렌더링을 처리 하는 선언적 API입니다. 장면을 설정 하 고, 여기에 속성을 추가 하 고, SceneKit 장면 렌더링을 처리 하기만 하면 됩니다.
 
-사용 하 여 장면 그래프 만든 SceneKit을 사용 하 여 `SCNScene` 클래스입니다. 인스턴스를 나타내는 노드 계층을 포함 하는 장면 `SCNNode`를 3D 공간에서 위치를 정의 합니다. 다음 그림에 나온 것 처럼 각 노드에 기 하 도형, 조명 등 해당 모양에 영향을 주는 자료는 속성이 있습니다.
+SceneKit로 작업 하려면 클래스를 `SCNScene` 사용 하 여 장면 그래프를 만듭니다. 장면에는의 `SCNNode`인스턴스로 표시 되는 노드의 계층이 포함 되어 3d 공간에서 위치를 정의 합니다. 각 노드에는 다음 그림에 나와 있는 것 처럼 모양, 조명, 재질 등의 모양에 영향을 주는 속성이 있습니다.
 
-![](scenekit-images/image7.png "SceneKit 계층") 
+![](scenekit-images/image7.png "SceneKit 계층 구조")
 
 ## <a name="create-a-scene"></a>장면 만들기
 
-화면에 표시 하는 장면 있도록에 추가 `SCNView` 뷰의 장면 속성에 할당 하 여 합니다. 또한 장면 변경을 수행한 경우 `SCNView` 변경 내용을 표시 하려면 자동으로 업데이트 됩니다.
+화면이 화면에 표시 되도록 하려면 해당 장면을 보기의 장면 속성에 `SCNView` 할당 하 여에 추가 합니다. 또한 장면을 변경 하는 경우에서 `SCNView` 자체 업데이트를 수행 하 여 변경 내용을 표시 합니다.
 
 ```csharp
 scene = SCNScene.Create ();
@@ -34,7 +34,7 @@ sceneView = new SCNView (View.Frame);
 sceneView.Scene = scene;
 ```
 
-장면 3d 모델링 도구를 통해 내보낸 파일에서 또는 프로그래밍 방식으로 기하학적 기본 형식에서 채울 수 있습니다. 예를 들어, 이것이 구 만들고 장면에 추가 하는 방법입니다.
+3d 모델링 도구를 통해 내보낸 파일이 나 기 하 도형 기본 형식에서 프로그래밍 방식으로 장면을 채울 수 있습니다. 예를 들어 다음은 구를 만들고 장면에 추가 하는 방법입니다.
 
 ```csharp
 sphere = SCNSphere.Create (10.0f);
@@ -45,7 +45,7 @@ scene.RootNode.AddChildNode (sphereNode);
 
 ## <a name="adding-light"></a>광원 추가
 
-이 시점에서 구체 장면에서 없습니다 light 있기 때문에 항목으로 표시 되지 않습니다. 연결 `SCNLight` 인스턴스 노드를 SceneKit에서 광원을 만듭니다. 주변 조명 까지의 다양 한 형식의 방향성 조명은 광원의 몇 가지 종류가 있습니다. 예를 들어 다음 코드는 구체 측면의 전방향 light를 만듭니다.
+이 시점에서 장면에는 광원이 없으므로 구에는 아무것도 표시 되지 않습니다. 노드에 `SCNLight` 인스턴스를 연결 하면 SceneKit에서 조명이 생성 됩니다. 다양 한 형태의 방향성 조명에서 주변 조명까지 다양 한 형식의 조명이 있습니다. 예를 들어 다음 코드는 구의 측면에 전방향 라이트를 만듭니다.
 
 ```csharp
 // omnidirectional light
@@ -58,7 +58,7 @@ lightNode.Position = new SCNVector3 (-40, 40, 60);
 scene.RootNode.AddChildNode (lightNode);
 ```
 
-전방향 조명을 비추는 손전등 같은 일종의 결과도 조명에 확산 반사를 생성 합니다. 주변 광원을 만드는 경우와 마찬가지로 하지만 방향이 없는 모든 방향에서 균등 하 게 장점을 발휘 하는 대로 생각 무드:) 조명
+전방향 조명을 통해 확산 반사를 생성 하 여 손전등를 비추는 것과 비슷한 방식으로 조명 합니다. 주변 광원을 만드는 것은 유사 하지만 모든 방향에서 동일 하 게 나타납니다. 분위기 조명 처럼 생각:)
 
 ```csharp
 // ambient light
@@ -70,13 +70,13 @@ ambientLightNode.Light = ambientLight;
 scene.RootNode.AddChildNode (ambientLightNode);
 ```
 
-원위치에서 조명을 사용 하 여 구의 장면에 표시 됩니다.
+조명이 제자리에 있으면 이제 구가 장면에 표시 됩니다.
 
-![](scenekit-images/image8.png "구체 켜지 면 장면에 표시 됩니다.")
- 
-## <a name="adding-a-camera"></a>카메라를 추가합니다.
+![](scenekit-images/image8.png "조명이 켜질 때 장면에 표시 됩니다.")
 
-관점을 변경 (SCNCamera) 카메라 장면에 추가 합니다. 카메라를 추가 하는 패턴이 비슷합니다. 카메라를 만들고 노드에 연결 장면 노드를 추가 합니다.
+## <a name="adding-a-camera"></a>카메라 추가
+
+장면에 카메라 (SCNCamera)를 추가 하면 보기 지점이 변경 됩니다. 카메라를 추가 하는 패턴은 비슷합니다. 카메라를 만들어 노드에 연결 하 고 해당 노드를 장면에 추가 합니다.
 
 ```csharp
 // camera
@@ -91,21 +91,21 @@ cameraNode = new SCNNode {
 scene.RootNode.AddChildNode (cameraNode);
 ```
 
-Create 팩터리 메서드 또는 생성자를 사용 하 여 개체를 만들 수 있습니다 SceneKit 위의 코드에서 볼 수 있습니다. 전자를 사용 하 여 사용 하면 C# 이니셜라이저 구문을 있지만 사용할지는 주로 기본 설정 합니다.
+위의 코드에서 볼 수 있듯이 생성자를 사용 하거나 Create factory 메서드에서 SceneKit 개체를 만들 수 있습니다. 이전에는 이니셜라이저 C# 구문을 사용 하는 것을 허용 하지만 사용할 수 있는 것은 대부분 기본 설정의 문제입니다.
 
-위치에서 카메라를 사용 하 여 전체 구를 사용자에 게 표시 됩니다.
+카메라를 배치한 상태에서 전체 구가 사용자에 게 표시 됩니다.
 
-![](scenekit-images/image9.png "전체 구를 사용자에 게 표시 됩니다.")
- 
-장면에 추가 광원을 추가할 수 있습니다. 모양을 몇 가지 자세한 전방향 표시등이 다음과 같습니다.
+![](scenekit-images/image9.png "사용자에 게 전체 구가 표시 됩니다.")
 
-![](scenekit-images/image10.png "몇 가지 자세한 전방향 표시등이 구")
- 
-또한 설정 하 여 `sceneView.AllowsCameraControl = true`, 사용자가 터치 제스처를 사용 하 여 관점을 변경할 수 있습니다.
+장면에 조명을 더 추가할 수도 있습니다. 다음은 몇 가지 전방향 광원으로 표시 되는 모양입니다.
 
-### <a name="materials"></a>자료
+![](scenekit-images/image10.png "더 많은 전방향 표시등을 포함 하는 구")
 
-자료는 SCNMaterial 클래스를 사용 하 여 생성 됩니다. 구의 화면에 이미지를 추가 하는 예에 대 한 자료의 이미지를 설정 *확산* 내용입니다.
+또한를 설정 `sceneView.AllowsCameraControl = true`하면 사용자가 터치 제스처를 사용 하 여 뷰 지점을 변경할 수 있습니다.
+
+### <a name="materials"></a>자재
+
+자료는 SCNMaterial 클래스를 사용 하 여 생성 됩니다. 예를 들어 구의 표면에 이미지를 추가 하려면 재질의 *확산* 콘텐츠로 이미지를 설정 합니다.
 
 ```csharp
 material = SCNMaterial.Create ();
@@ -113,27 +113,27 @@ material.Diffuse.Contents = UIImage.FromFile ("monkey.png");
 sphere.Materials = new SCNMaterial[] { material };
 ```
 
-이 계층 아래와 같이 노드로 이미지:
+그러면 아래와 같이 이미지가 노드로 표시 됩니다.
 
-![](scenekit-images/image11.png "계층화 된 sphere 이미지")
- 
-다른 유형의 너무 조명에 응답 하는 자료를 설정할 수 있습니다. 예를 들어 개체 shiny 수 있습니다 및 반사 내용을 설정한 반사광을 아래와 같이 화면에서 밝은 위치에 결과 표시 하려면:
+![](scenekit-images/image11.png "구에 이미지를 계층화 합니다.")
 
-![](scenekit-images/image12.png "화면에 흰 점이 발생 하는 반사 리플렉션을 사용 하 여 shiny 수행 하는 개체")
- 
-자료는 매우 유연 하므로 매우 적은 양의 코드로 많이 얻을 수 있습니다. 예를 들어, 확산 내용에 이미지를 설정 하는 대신 해당 내용으로 설정 반사 대신 합니다.
+재질은 다른 종류의 조명에도 응답 하도록 설정 될 수 있습니다. 예를 들어 개체를 광택이 나 반사 내용을 표시 하도록 반사를 설정 하 여 아래와 같이 화면에 밝은 지점을 만들 수 있습니다.
+
+![](scenekit-images/image12.png "반사 반사를 사용 하 여 빛나는 개체입니다. 그러면 화면에 밝은 지점이 생성 됩니다.")
+
+재질은 매우 유연 하므로 매우 작은 코드를 사용 하 여 많은 것을 달성할 수 있습니다. 예를 들어 이미지를 확산 콘텐츠로 설정 하는 대신 반사 콘텐츠로 설정 합니다.
 
 ```csharp
 material.Reflective.Contents = UIImage.FromFile ("monkey.png");
 ```
 
-이제는 monkey 구체를 관점의 독립적인 내에서 시각적으로 배치에 나타납니다.
+이제 원숭이은 보기의 지점에 관계 없이 구에 시각적으로 표시 됩니다.
 
 ### <a name="animation"></a>애니메이션
 
-SceneKit은 애니메이션에서 잘 작동 하도록 설계 되었습니다. 암시적 또는 명시적 애니메이션을 만들 수 있습니다 하 고 핵심 애니메이션 계층 트리에서 장면 렌더링도 있습니다. SceneKit 자체 전환 클래스를 제공 암시적 애니메이션을 만들 때 `SCNTransaction`합니다.
+SceneKit는 애니메이션과 함께 작동 하도록 설계 되었습니다. 암시적 또는 명시적 애니메이션을 모두 만들 수 있으며, 핵심 애니메이션 계층 트리에서 장면을 렌더링할 수도 있습니다. 암시적 애니메이션을 만들 때 SceneKit는 자체 전환 클래스인를 `SCNTransaction`제공 합니다.
 
-구체를 회전 하는 예제는 다음과 같습니다.
+다음은 구를 회전 하는 예제입니다.
 
 ```csharp
 SCNTransaction.Begin ();
@@ -142,7 +142,7 @@ sphereNode.Rotation = new SCNVector4 (0, 1, 0, (float)Math.PI * 4);
 SCNTransaction.Commit ();
 ```
 
-그러나 회전 보다 훨씬 더 애니메이트할 수 있습니다. SceneKit의 많은 속성은 애니메이션 효과 줄. 예를 들어, 다음 코드는 애니메이션 효과 줍니다 재질의 `Shininess` 반사광을 늘려야 합니다.
+그러나 회전 보다 훨씬 더 많은 애니메이션 효과를 적용할 수 있습니다. SceneKit의 많은 속성은 애니메이션 효과입니다. 예를 들어 다음 코드는 재질 `Shininess` 에 반사 반사를 높이는 애니메이션 효과를 적용 합니다.
 
 ```csharp
 SCNTransaction.Begin ();
@@ -151,4 +151,4 @@ material.Shininess = 0.1f;
 SCNTransaction.Commit ();
 ```
 
-SceneKit 매우 간단 하 게 사용 됩니다. 다양 한 제약 조건, 물리, 선언적 작업, 3D 텍스트, 필드 지원, Sprite Kit 통합 및 몇 가지 이름을 Core 이미지 통합의 깊이 비롯 한 추가 기능을 제공 합니다.
+SceneKit은 매우 간단 하 게 사용할 수 있습니다. 제약 조건, 물리, 선언적 작업, 3D 텍스트, 필드 지원 깊이, 스프라이트 키트 통합 및 핵심 이미지 통합을 비롯 한 다양 한 추가 기능을 제공 합니다.

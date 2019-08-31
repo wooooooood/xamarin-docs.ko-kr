@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 245b41eea556ef36c81b337b57ce58d922e4e8fd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2c50ffb37f0fd1d7b0d9fad063c4d6195d6b1f08
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653675"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199783"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
@@ -48,15 +48,37 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 5. NuGet 패키지가 복원될 때까지 기다립니다(상태 표시줄에 "복원 완료" 메시지가 표시됨).
 
-6. 디버그 단추(또는 **디버그 > 디버깅 시작** 메뉴 항목)를 눌러 Android 에뮬레이터를 시작합니다.
+6. 새 Visual Studio 2019 설치에는 Android 에뮬레이터가 구성 되어 있지 않습니다. **디버그** 단추에서 드롭다운 화살표를 클릭 하 고 **Android Emulator 만들기** 를 선택 하 여 에뮬레이터 만들기 화면을 시작 합니다.
 
-7. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
+    ![Android Emulator 드롭다운 만들기](images/win-2019/debug-dropdown.png)
+
+7. 에뮬레이터 만들기 화면에서 기본 설정을 사용 하 고 **만들기** 단추를 클릭 합니다.
+
+    [![Android emulator 만들기 화면](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+
+8. 에뮬레이터를 만들면 Device Manager 창이 반환 됩니다. **시작** 단추를 클릭 하 여 새 에뮬레이터를 시작 합니다.
+
+    ![Device Manager의 Android 에뮬레이터](images/win-2019/start-emulator.png)
+
+9. 이제 Visual Studio 2019는 **디버그** 단추에 새 에뮬레이터의 이름을 표시 합니다.
+
+    ![디버그 단추의 Android 에뮬레이터 이름](images/win-2019/debug-emulator-name.png)
+
+10. **디버그** 단추를 클릭 하 여 응용 프로그램을 빌드하고 Android 에뮬레이터에 배포 합니다.
+
+    ![응용 프로그램을 표시 하는 Android 에뮬레이터](images/win-2019/android-emulator.png)
+
+## <a name="customize-the-application"></a>애플리케이션 사용자 지정
+
+대화형 기능을 추가 하도록 응용 프로그램을 사용자 지정할 수 있습니다. 응용 프로그램에 사용자 상호 작용을 추가 하려면 다음 단계를 수행 합니다.
+
+1. **MainPage.xaml**을 편집하여 다음 XAML을 `</StackLayout>`이 종료되기 전에 추가합니다.
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-8. **MainPage.xaml.cs**를 편집하여 다음 코드를 클래스 끝에 추가합니다.
+2. **MainPage.xaml.cs**를 편집하여 다음 코드를 클래스 끝에 추가합니다.
 
     ```csharp
     int count = 0;
@@ -67,14 +89,16 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
     }
     ```
 
-9. Android에서 앱을 디버그합니다.
+3. Android에서 앱을 디버그합니다.
 
     ![Android 앱](images/win/07-sml.png)
 
-    > [!TIP]
-    > 네트워크로 연결된 Mac 컴퓨터를 사용하여 Visual Studio에서 iOS 앱을 빌드하고 디버그할 수 있습니다. 자세한 내용은 [설치 지침](~/ios/get-started/installation/windows/index.md)을 참조하세요.
+> [!NOTE]
+> 샘플 응용 프로그램에는 비디오에서 다루지 않는 추가 대화형 기능이 포함 되어 있습니다.
 
 ## <a name="build-an-ios-app-in-visual-studio-2019"></a>Visual Studio 2019에서 iOS 앱 빌드
+
+네트워크로 연결 된 Mac 컴퓨터를 사용 하 여 Visual Studio에서 iOS 앱을 빌드하고 디버그할 수 있습니다. 자세한 내용은 [설치 지침](~/ios/get-started/installation/windows/index.md)을 참조하세요.
 
 이 비디오에서는 Windows에서 Visual Studio 2019을 사용 하 여 iOS 앱을 빌드 및 테스트 하는 과정을 다룹니다.
 

@@ -7,17 +7,17 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: febfb017e963ce795aa7e6ab8cf9fdb44cc2afb4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f45df6dc07246fad0e43b3fcd9a4a23a72ff142b
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386419"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198733"
 ---
 # <a name="deploy-to-the-remoted-ios-simulator"></a>원격 iOS 시뮬레이터에 배포
 
-Windows에서 Visual Studio 2017을 사용 하 여 원격 iOS 시뮬레이터를 사용 하 여 iOS 앱을 테스트 하는 단계별 지침은이 비디오를 시청 하세요.
+Windows에서 Visual Studio 2017을 사용 하 여 원격 iOS 시뮬레이터로 iOS 앱을 테스트 하는 방법에 대 한 단계별 지침을 보려면이 비디오를 시청 하세요.
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Deploying--Debugging-NET-iOS-apps-with-Visual-Studio-2017/player]
 
-에 대 한 자세한 정보는 [원격 iOS 시뮬레이터 기능](index.md)합니다.
+[원격 IOS 시뮬레이터 기능](index.md)에 대해 자세히 알아보세요.

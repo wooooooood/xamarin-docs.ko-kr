@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 36b5ace881ba8f7fb45fef9d0350ffca67e0c951
-ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
+ms.openlocfilehash: df90bc764200434e8d546a1ebf61e039498517bb
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169265"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199403"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -378,23 +378,23 @@ Monotouch.dialog 7.0부터 새롭게 향상 된 프로토콜 바인딩 기능이
 [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 특성을 포함 하는 모든 정의는 실제로 프로토콜을 사용 하는 방법을 크게 개선 하는 세 가지 지원 클래스를 생성 합니다.
 
 ```csharp
-    // Full method implementation, contains all methods
-    class MyProtocol : IMyProtocol {
-        public void Say (string msg);
-        public void Listen (string msg);
-    }
+// Full method implementation, contains all methods
+class MyProtocol : IMyProtocol {
+    public void Say (string msg);
+    public void Listen (string msg);
+}
 
-    // Interface that contains only the required methods
-    interface IMyProtocol: INativeObject, IDisposable {
-        [Export ("say:")]
-        void Say (string msg);
-    }
+// Interface that contains only the required methods
+interface IMyProtocol: INativeObject, IDisposable {
+    [Export ("say:")]
+    void Say (string msg);
+}
 
-    // Extension methods
-    static class IMyProtocol_Extensions {
-        public static void Optional (this IMyProtocol this, string msg);
-        }
+// Extension methods
+static class IMyProtocol_Extensions {
+    public static void Optional (this IMyProtocol this, string msg);
     }
+}
 ```
 
 **클래스 구현은** 의 개별 메서드를 재정의 하 고 완전 한 형식 안전성을 얻을 수 있는 완전 한 추상 클래스를 제공 합니다.  그러나 다중 상속 C# 을 지원 하지 않기 때문에 다른 기본 클래스를 포함 해야 하는 시나리오가 있습니다. 그러나 인터페이스를 구현 하려면
@@ -632,7 +632,7 @@ interface MyType {
 반환 값에 대 한 메서드, 매개 변수 및 속성 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)을에 데코레이팅 할 수 있습니다. 유일한 제한 사항은 멤버가 내에 **있지 않아야** 한다는 것입니다.[`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 
 또는 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 인터페이스입니다.
 
-예를 들어:
+예:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -651,7 +651,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)는 및 `NSNumber` `NSValue` (열거형)의배열`NSString`도 지원 합니다.
 
-예를 들어:
+예:
 
 ```csharp
 [BindAs (typeof (CAScroll []))]

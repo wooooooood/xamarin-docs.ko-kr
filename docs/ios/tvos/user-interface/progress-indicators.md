@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/25/2018
-ms.openlocfilehash: 6ab1b4ad5493075e8806190e77f6d234354af9ff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab82b98351b95fbdea9c33a9eae7142c7a54fc77
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648970"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200299"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Xamarin에서 tvOS 진행률 표시기 사용
 
@@ -46,7 +46,7 @@ Apple에는 진행률 표시줄을 사용 하기 위한 다음과 같은 제안�
 TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 앱의 UI에 추가 하는 것입니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-    
+
 1. **Solution Pad**에서 **주 storyboard** 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 
 2. **도구 상자** 에서 **활동 표시기** 를 끌어서 뷰에 놓습니다. 
@@ -72,13 +72,13 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 6. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. **솔루션 탐색기**에서 **주 storyboard** 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 
 2. **도구 상자** 에서 **활동 표시기** 를 끌어서 뷰에 놓습니다. 
 
-    ![활동 표시기 인 활동](progress-indicators-images/activity01-vs.png
-    "표시기")
+    ![]활동 표시기인활동표시기(progress-indicators-images/activity01-vs.png
+    "")
 
 3. **속성 탐색기**의 **위젯** 탭에서 작업 표시기의 **스타일**, **동작**및 **이름과**같은 몇 가지 속성을 조정할 수 있습니다. 
 

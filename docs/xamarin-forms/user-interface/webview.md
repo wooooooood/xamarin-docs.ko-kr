@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: 65bcd9f534685a8a953d217d3573f5fe4b0b7400
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887926"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198291"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -352,7 +352,7 @@ WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤�
 - `Source`– 탐색을 수행한 요소입니다.
 - `Url`– 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예:
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

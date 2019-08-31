@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: bca29089a61ed1f3400458f4b102c61023f47247
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522108"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198389"
 ---
 # <a name="packaging-wear-apps"></a>패키지 마모 앱
 
@@ -63,7 +63,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 - 패키지 이름이 일치 하는지 확인 합니다. 
 
-- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예: 
+- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예를 들어: 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->

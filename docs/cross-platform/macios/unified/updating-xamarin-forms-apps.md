@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d119d96a3ce8389a71726e1359e064efe1fbb1ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dee3b04630ae9fc94548becdcc294427f9deb433
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509447"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199215"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>기존 Xamarin Forms 앱 업데이트
 
@@ -161,7 +161,7 @@ public class MainActivity :
 다음과 같이 **Mainpage .xaml** 파일을 변경 합니다.
 
 - 루트 XAML 요소는 이어야 `winPhone:FormsApplicationPage`합니다.
-- 특성을로 변경 해야 합니다.  `xmlns:phone``xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- 특성을로 변경 해야 합니다. `xmlns:phone``xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 업데이트 된 예제는 다음과 같습니다. 이러한 항목을 편집 하기만 하면 됩니다. 나머지 특성은 동일 하 게 유지 되어야 합니다.
 

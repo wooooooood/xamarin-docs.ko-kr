@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/06/2018
-ms.openlocfilehash: d75f46f8b06ef0e743218d5f42d5b2732b6e4158
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: aa8f25af4a394b981fdc7d5dc5a8836b7ff240cc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120972"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200269"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -2506,7 +2506,7 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 - 실행 `csharp -e 'System.Net.Dns.GetHostEntry (System.Net.Dns.GetHostName ()).AddressList'` 을 시도 합니다 (IP 주소를 제공 하 고 오류는 표시 하지 않음).
 - 다음과 같은 추가 정보를 \`제공할\`수 있는 "ping 호스트 이름"을 실행 해 봅니다.`cannot resolve MyHost.local: Unknown host`
 
-일부 경우에는 "로컬 네트워크" 문제 이며에서 `127.0.0.1   MyHost.local` `/etc/hosts`알 수 없는 호스트를 추가 하 여 해결할 수 있습니다.
+일부 경우에는 "로컬 네트워크" 문제 이며에서 `127.0.0.1    MyHost.local` `/etc/hosts`알 수 없는 호스트를 추가 하 여 해결할 수 있습니다.
 
 <a name="MT7002" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 236a64736bc5f92537c858b9cdf938410cf4b0f4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64b114cad16095a2afd80b690a4654b91b2aa203
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649658"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199933"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Xamarin에서 tvOS 탭 모음 컨트롤러 작업
 
@@ -59,7 +59,7 @@ Apple에는 탭 모음 사용에 대 한 다음과 같은 제안이 있습니다
 TvOS 앱에서 탭 모음을 작업 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 앱의 UI에 추가 하는 것입니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-    
+
 1. 새 tvOS 앱을 시작 하 고 **tvOS** > **app** > **탭 앱**을 선택 합니다. 
 
     [![](tab-bars-images/tab02.png "탭 앱 선택")](tab-bars-images/tab02.png#lightbox)
@@ -84,7 +84,7 @@ TvOS 앱에서 탭 모음을 작업 하는 가장 쉬운 방법은 iOS Designer�
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. 새 tvOS 앱을 시작 하 고 **tvOS** > **app** > **탭 앱**을 선택 합니다. 
 
     [![](tab-bars-images/tab02vs.png "탭 앱 선택")](tab-bars-images/tab02vs.png#lightbox)
@@ -107,7 +107,7 @@ TvOS 앱에서 탭 모음을 작업 하는 가장 쉬운 방법은 iOS Designer�
 1. 코드에서 C# UI 컨트롤을 사용 하는 데 필요한 모든 이벤트를 노출 합니다.
 1. 코드에 노출할 UI 컨트롤의 C# 이름을 지정할 수 있습니다.
 1. 변경 내용을 저장합니다.
-    
+
 -----
 
 > [!IMPORTANT]

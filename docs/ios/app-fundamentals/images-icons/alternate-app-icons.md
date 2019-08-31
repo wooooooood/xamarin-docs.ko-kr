@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: 43ef420f569f7dbca6140798f798f3a128d9c706
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e194edcea75df9dc18d89bba00c0b97e5bd71c34
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653429"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197868"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.ios의 대체 앱 아이콘
 
@@ -119,7 +119,7 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-개발자 `ApplicationIconBadgeNumber` 는 `UIApplication` 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들어:
+개발자 `ApplicationIconBadgeNumber` 는 `UIApplication` 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예:
 
 ```csharp
 // Set the badge number to 1
@@ -138,7 +138,7 @@ if (name != null ) {
 }
 ```
 
-개발자는 `UIApplication` 클래스의 속성을사용하여앱아이콘을변경할수있습니다.`SetAlternameIconName` 아이콘의 이름을 전달 하 여 또는 `null` 를 선택 하 여 기본 아이콘으로 돌아갑니다. 예:
+개발자는 `UIApplication` 클래스의 속성을사용하여앱아이콘을변경할수있습니다.`SetAlternameIconName` 아이콘의 이름을 전달 하 여 또는 `null` 를 선택 하 여 기본 아이콘으로 돌아갑니다. 예를 들어:
 
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)

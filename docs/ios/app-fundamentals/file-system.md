@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 파일 시스템을 사용 �
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/12/2018
-ms.openlocfilehash: e52f9abb31090f3acc361eb5a3f9ae2e12600b36
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: daa9625ccbac3661d3678889d4efd6319e0bd424
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653526"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198136"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Xamarin.ios의 파일 시스템 액세스
 
@@ -292,7 +292,7 @@ ITunes에서 장치를 백업 하는 경우 응용 프로그램의 홈 디렉터
 
 Apple에는 iOS 5와 함께 *ICloud 백업* 기능이 도입 되었습니다. Icloud 백업을 사용 하도록 설정 하면 응용 프로그램의 홈 디렉터리에 있는 모든 파일 (일반적으로 백업 되지 않는 디렉터리 (예: 앱 번들, `Caches`및 `tmp`)이 icloud 서버에 백업 됩니다. 이 기능을 통해 사용자는 장치를 분실 하거나 도난당 하거나 손상 한 경우 전체 백업을 수행할 수 있습니다.
 
-ICloud는 각 사용자에 게 5gb의 ' free ' 공간만 제공 하 고 대역폭을 불필요 하 게 사용 하지 않도록 하기 때문에 Apple에서는 응용 프로그램이 필수적인 사용자 생성 데이터만 백업 하도록 요구 합니다. IOS 데이터 저장소 지침을 준수 하려면 다음 항목을 준수 하 여 백업 되는 데이터의 양을 제한 해야 합니다.
+ICloud는 각 사용자에 게 5gb의 사용 가능한 공간만 제공 하 고 대역폭을 불필요 하 게 사용 하지 않도록 하기 때문에 Apple에서는 응용 프로그램이 필수적인 사용자 생성 데이터를 백업 해야 합니다. IOS 데이터 저장소 지침을 준수 하려면 다음 항목을 준수 하 여 백업 되는 데이터의 양을 제한 해야 합니다.
 
 - 사용자가 생성 한 데이터 또는 다시 만들 수 없는 데이터를 문서 디렉터리 (백업 됨)에만 저장 합니다.
 - `Library/Caches` 또는`tmp` 에서 쉽게 다시 만들거나 다시 다운로드할 수 있는 다른 데이터를 저장 합니다 .이 데이터는 백업 되지 않으며 ' 치료 ' 될 수 있습니다.

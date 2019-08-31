@@ -1,37 +1,37 @@
 ---
 title: Graph API에 액세스
-description: 이 문서에서는 Xamarin으로 빌드된 모바일 응용 프로그램에 Azure Active Directory 인증을 추가 하는 방법을 설명 합니다.
+description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 모바일 응용 프로그램에 Azure Active Directory 인증을 추가 하는 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: c43dfa79831f22e55490b27c3c360602ae717627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 74072a48e190478af79ec06ca8e5048d2cb61e36
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61190029"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198576"
 ---
 # <a name="accessing-the-graph-api"></a>Graph API에 액세스
 
-Xamarin 응용 프로그램 내에서 Graph API를 사용 하려면 다음이 단계를 수행 합니다.
+Xamarin 응용 프로그램 내에서 Graph API를 사용 하려면 다음 단계를 수행 합니다.
 
-1. [Azure Active Directory를 사용 하 여 등록](~/cross-platform/data-cloud/active-directory/get-started/register.md) 에 *windowsazure.com* 다음 포털
-2. [서비스 구성](~/cross-platform/data-cloud/active-directory/get-started/configure.md)합니다.
+1. *Windowsazure.com* 포털에서 [Azure Active Directory 등록](~/cross-platform/data-cloud/active-directory/get-started/register.md)
+2. [서비스를 구성](~/cross-platform/data-cloud/active-directory/get-started/configure.md)합니다.
 
 ## <a name="step-3-adding-active-directory-authentication-to-an-app"></a>3단계. 앱에 Active Directory 인증 추가
 
-응용 프로그램에 대 한 참조를 추가 **Azure Active Directory 인증 라이브러리 (Azure ADAL)** mac 용 Visual Studio 또는 Visual Studio에서 NuGet 패키지 관리자를 사용 하 여
-선택 했는지 **시험판 패키지 표시** 미리 보기 상태에서 이므로이 패키지를 포함 합니다.
+응용 프로그램에서 Visual Studio의 NuGet 패키지 관리자 또는 Mac용 Visual Studio를 사용 하 여 **AZURE ADAL (Azure Active Directory Authentication Library)** 에 대 한 참조를 추가 합니다.
+미리 보기 상태 이므로이 패키지를 포함 하려면 **시험판 패키지 표시** 를 선택 해야 합니다.
 
 > [!IMPORTANT]
-> 참고: Azure ADAL 3.0은 현재 미리 보기 및 최종 버전 해제 되기 전에 주요 변경 내용 수입니다. 
+> 참고: Azure ADAL 3.0은 현재 미리 보기로 제공 되며 최종 버전을 출시 하기 전에 주요 변경 내용이 있을 수 있습니다. 
 
 
-![](graph-images/06.-adal-nuget-package.jpg "Azure Active Directory 인증 라이브러리 (Azure ADAL)에 대 한 참조를 추가 합니다.")
+![](graph-images/06.-adal-nuget-package.jpg "Azure Active Directory 인증 라이브러리에 대 한 참조 추가 (Azure ADAL)")
 
-응용 프로그램에 인증 흐름에 필요한 다음 클래스 수준 변수를 추가 하려면 이제 해야 합니다.
+이제 응용 프로그램에서 인증 흐름에 필요한 다음과 같은 클래스 수준 변수를 추가 해야 합니다.
 
 ```csharp
 //Client ID
@@ -46,11 +46,11 @@ public static string graphApiVersion = "2013-11-08";
 AuthenticationResult authResult = null;
 ```
 
-여기서 한 가지 `commonAuthority`합니다. 인증 끝점의 경우 `common`를 통해 앱이 **다중 테 넌 트**, 즉, 모든 사용자가 Active Directory 자격 증명을 사용 하 여 로그인을 사용할 수 있습니다. 인증 후 사용자가 자신의 Active Directory의 컨텍스트에서 작동 합니다. – 즉, 자신의 Active Directory와 관련 된 세부 정보 표시 됩니다.
+한 가지 주의할 점은 `commonAuthority`입니다. 인증 끝점이 인 경우 앱 `common`은 **다중 테 넌 트**로 사용 됩니다. 즉, 사용자가 Active Directory 자격 증명으로 로그인을 사용할 수 있습니다. 인증 후 해당 사용자는 자신의 Active Directory의 컨텍스트에서 작업 하 게 됩니다. 즉, Active Directory와 관련 된 세부 정보를 볼 수 있습니다.
 
-### <a name="write-method-to-acquire-access-token"></a>액세스 토큰을 획득 하는 메서드를 작성 합니다.
+### <a name="write-method-to-acquire-access-token"></a>액세스 토큰을 획득 하는 Write 메서드
 
-(Android)에 대 한 다음 코드는 인증을 시작 하 고 완료 시의 결과 할당 `authResult`합니다. IOS 및 Windows Phone 구현 마다 약간 다: 두 번째 매개 변수 (`Activity`)은 iOS에서 서로 다르며 없기 Windows Phone.
+다음 코드 (Android의 경우)는 인증을 시작 하 고 완료 되 면에서 `authResult`결과를 할당 합니다. Ios 및 Windows Phone 구현은 약간 다릅니다. 두 번째 매개 변수 (`Activity`)는 ios에서 다르며 Windows Phone에는 없습니다.
 
 ```csharp
 public static async Task<AuthenticationResult> GetAccessToken
@@ -64,13 +64,13 @@ public static async Task<AuthenticationResult> GetAccessToken
 }  
 ```
 
-위의 코드에서의 `AuthenticationContext` commonAuthority 사용 하 여 인증을 담당 합니다. 에 `AcquireTokenAsync` 이 경우에 액세스 해야 하는 리소스와 매개 변수를 사용 하는 메서드를 `graphResourceUri`를 `clientId`, 및 `returnUri`합니다. 앱 다시 돌아갈 것은 `returnUri` 인증이 완료 되는 경우. 그러나이 코드는 모든 플랫폼, 마지막 매개 변수를 그대로 유지 됩니다 `AuthorizationParameters`, 다양 한 플랫폼에서 다르게 됩니다 및 인증 흐름을 제어 하기 위해 일을 담당 합니다.
+위의 코드 `AuthenticationContext` 에서은 commonAuthority를 사용 하 여 인증을 담당 합니다. 이 클래스에 `AcquireTokenAsync` 는 액세스 해야 하는 리소스 (이 `clientId`경우 `graphResourceUri`, 및 `returnUri`)로 매개 변수를 사용 하는 메서드가 있습니다. 인증이 완료 `returnUri` 되 면 앱이로 돌아갑니다. 이 코드는 모든 플랫폼에서 동일 하 게 유지 되지만 마지막 매개 변수 `AuthorizationParameters`는 플랫폼 마다 다르며 인증 흐름을 관리 하는 일을 담당 합니다.
 
-Android 또는 iOS의 경우 전달 `this` 매개 변수를 `AuthorizationParameters(this)` 컨텍스트를 공유 하는, Windows에서 변수로 전달 된 매개 변수 없이 새 반면 `AuthorizationParameters()`합니다.
+Android 또는 iOS의 경우에는 매개 변수를 `this` 로 `AuthorizationParameters(this)` 전달 하 여 컨텍스트를 공유 하는 반면 Windows에서는 매개 변수 없이 새 `AuthorizationParameters()`로 전달 됩니다.
 
-### <a name="handle-continuation-for-android"></a>Android에 대 한 연속 작업을 처리 합니다.
+### <a name="handle-continuation-for-android"></a>Android에 대 한 연속 처리
 
-인증 완료 되 면 흐름은 앱에 반환 해야 합니다. 다음 코드에서 처리 하는 Android의 경우는 추가할지 **MainActivity.cs**:
+인증이 완료 된 후에는 흐름이 앱으로 돌아옵니다. Android의 경우 **MainActivity.cs**에 추가 해야 하는 다음 코드에 의해 처리 됩니다.
 
 
 ```csharp
@@ -78,14 +78,12 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 {
   base.OnActivityResult(requestCode, resultCode, data);
   AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode, data);
-
-    
 }
 ```
 
-### <a name="handle-continuation-for-windows-phone"></a>Windows Phone 대 한 연속 작업을 처리 합니다.
+### <a name="handle-continuation-for-windows-phone"></a>Windows Phone에 대 한 연속 처리
 
-Windows Phone 대 한 수정 합니다 `OnActivated` 에서 메서드를 **App.xaml.cs** 파일을 아래 코드:
+Windows Phone 아래 코드를 `OnActivated` 사용 하 여 **App.xaml.cs** 파일에서 메서드를 수정 합니다.
 
 ```csharp
 protected override void OnActivated(IActivatedEventArgs args)
@@ -100,16 +98,16 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-이제 응용 프로그램을 실행 하는 경우 인증 대화 상자를 표시 됩니다.
-인증이 성공 하면 (이 경우 Graph API)에서 리소스에 액세스 권한을 요청 합니다.
+이제 응용 프로그램을 실행 하면 인증 대화 상자가 표시 됩니다.
+인증에 성공 하면 리소스에 액세스할 수 있는 권한을 요청 합니다 (이 경우 Graph API).
 
-![](graph-images/08.-authentication-flow.jpg "인증이 성공 하면이 경우 Graph API의에서 리소스에 액세스할 수 있는 권한이 요청")
+![](graph-images/08.-authentication-flow.jpg "인증에 성공 하면 해당 사례에서 리소스에 대 한 액세스 권한을 요청 하 게 됩니다 Graph API")
 
-인증이 성공 하는 리소스에 액세스 하려면 앱을 승인한를 가져와야 하는 경우는 `AccessToken` 하 고 `RefreshToken` 콤보에서 `authResult`합니다. 이러한 토큰은 백그라운드에서 Azure Active Directory를 사용 하 여 권한 부여 및 추가 API 호출에 필요 합니다.
+인증에 성공 하 고 리소스에 액세스 하도록 앱에 권한을 부여한 경우에서 `AccessToken` `authResult`및 `RefreshToken` 콤보를 가져와야 합니다. 이러한 토큰은 추가 API 호출에 필요 하며 백그라운드에서 Azure Active Directory 권한 부여를 위해 필요 합니다.
 
-![](graph-images/07.-access-token-for-authentication.jpg "이러한 토큰은 API 호출에 추가 하 고 백그라운드에서 Azure Active Directory를 사용 하 여 권한 부여 필요")
+![](graph-images/07.-access-token-for-authentication.jpg "이러한 토큰은 추가 API 호출에 필요 하며 백그라운드에서 Azure Active Directory 권한 부여를 위해 필요 합니다.")
 
-예를 들어 아래 코드를 사용 하면 Active Directory에서 사용자 목록을 가져올 수 있습니다. Azure AD에서 보호 되는 Web API를 사용 하 여 Web API URL을 바꿀 수 있습니다.
+예를 들어 아래 코드를 사용 하 여 Active Directory에서 사용자 목록을 가져올 수 있습니다. Web API URL을 Azure AD로 보호 되는 Web API로 바꿀 수 있습니다.
 
 ```csharp
 var client = new HttpClient();

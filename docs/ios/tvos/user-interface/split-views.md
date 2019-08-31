@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 52160d11c8c17a67a5db92e6a95f94815d54a0a6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7735f53d96977041f518a0ee56fb103a449e6cba
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648938"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198193"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Xamarin에서 tvOS 분할 뷰 컨트롤러 작업
 
@@ -85,7 +85,7 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
     [![](split-views-images/activity04.png "콘텐츠 레이아웃")](split-views-images/activity04.png#lightbox)
 1. 코드에서 C# UI 컨트롤을 사용 하려면 **속성 탐색기** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
 1. 변경 내용을 저장합니다.
-    
+
 -----
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
@@ -146,7 +146,7 @@ public override void ViewDidLoad ()
 
 ### <a name="showing-and-hiding-master"></a>마스터 표시 및 숨기기
 
-필요에 따라 분할 뷰 컨트롤러의 `PreferredDisplayMode` 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예를 들어:
+필요에 따라 분할 뷰 컨트롤러의 `PreferredDisplayMode` 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예:
 
 ```csharp
 // Show hide split view

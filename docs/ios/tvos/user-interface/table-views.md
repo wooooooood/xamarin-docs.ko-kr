@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 42749bf07f3b0239a550e66247fc0377fdc1a0b4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121382"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199915"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
@@ -69,7 +69,7 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 시작하려면 다음을 수행합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-    
+
 1. Mac용 Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **app** > **단일 뷰 앱** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
 
     [![](table-views-images/table02.png "단일 뷰 앱 선택")](table-views-images/table02.png#lightbox)
@@ -112,9 +112,9 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 
     [![](table-views-images/table15.png "UI 레이아웃")](table-views-images/table15.png#lightbox)
 1. 스토리 보드에 변경 내용을 저장 합니다.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 를 클릭 하 여 새 솔루션을 만듭니다. 
 
     [![](table-views-images/table02-vs.png "단일 뷰 앱 선택")](table-views-images/table02-vs.png#lightbox)
@@ -153,7 +153,7 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 
     [![](table-views-images/table15.png "UI 레이아웃")](table-views-images/table15.png#lightbox)
 1. 스토리 보드에 변경 내용을 저장 합니다.
-    
+
 -----
 
 <a name="Designing-a-Data-Model" />

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 7175cfa3b671a1510182b1497c941521170f39a9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e55e6d908bbeb9b4b42ccbcad8121a1b410b79af
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654528"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200138"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Xamarin.ios의 고급 메시지 앱 확장
 
@@ -38,7 +38,7 @@ IOS 10의 새로운 기능으로, 이제 메시지 앱은 자체의 전용 기�
 
 IOS 10 에서도 새로 추가 된 Apple에는 사용자가 앱을 쉽게 검색할 수 있도록 하는 인라인 앱 특성이 추가 되었습니다. 예를 들어 한 사용자가 두 번째 사용자가 설치 하지 않은 앱에서 다른 사용자에 게 콘텐츠를 전송 하는 경우 (예: 스티커) 보내는 앱의 이름이 메시지 기록의 내용에 나열 됩니다. 사용자가 앱의 이름을 탭 하면 메시지 앱 스토어가 열리고 앱이 스토어에서 선택 됩니다.
 
-메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 예:
+메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 예를 들어:
 
 - 앱 내 구매에 액세스할 수 있습니다.
 - Apple Pay에 대 한 액세스 권한이 있습니다.

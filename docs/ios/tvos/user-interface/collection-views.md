@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3246dcbf58a1b6dda6838b5eb81442fdbc429af5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 616b20872a01b4df6c3f27c636ce7b8ee912414e
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652346"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200345"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Xamarin에서 tvOS Collection 뷰 작업
 
@@ -59,7 +59,7 @@ TvOS에서 컬렉션 뷰를 사용 하는 경우 응용 프로그램은 데이�
 - `DequeueReusableCell`-지정 된 형식의 셀을 만들거나 반환 합니다 (앱의 스토리 보드에 지정 된 대로).
 - `DequeueReusableSupplementaryView`-지정 된 형식의 보충 뷰 (앱의 스토리 보드에 지정 된)를 만들거나 반환 합니다.
 
-이러한 메서드 중 하나를 호출 하기 전에 컬렉션 뷰를 사용 하 여 셀 `.xib` 의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예:
+이러한 메서드 중 하나를 호출 하기 전에 컬렉션 뷰를 사용 하 여 셀 `.xib` 의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예를 들어:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -102,7 +102,7 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 1. 기존 뷰에 이미지 뷰, 레이블 및 단추를 추가 하 고 다음과 같이 구성 합니다. 
 
     [![](collection-views-images/collection02.png "샘플 레이아웃")](collection-views-images/collection02.png#lightbox)
-1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 예: 
+1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 예를 들어: 
 
     [![](collection-views-images/collection03.png "이름 설정")](collection-views-images/collection03.png#lightbox)
 1. 다음으로, 컬렉션 뷰 컨트롤러를 Storyboard로 끌어 옵니다. 
@@ -142,7 +142,7 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 1. 기존 뷰에 이미지 뷰, 레이블 및 단추를 추가 하 고 다음과 같이 구성 합니다. 
 
     [![](collection-views-images/collection02vs.png "레이아웃 구성")](collection-views-images/collection02vs.png#lightbox)
-1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 예: 
+1. **속성 탐색기**의 **위젯 탭** 에서 이미지 뷰 및 레이블에 **이름을** 지정 합니다. 예를 들어: 
 
     [![](collection-views-images/collection03vs.png "속성 탐색기")](collection-views-images/collection03vs.png#lightbox)
 1. 다음으로, 컬렉션 뷰 컨트롤러를 Storyboard로 끌어 옵니다. 

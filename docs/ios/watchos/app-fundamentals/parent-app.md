@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 0dc3c8e4c8b4db99b07114e855910ccfe5fe180f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05dfb419834c2eee94f98d023df3a3fe8d6eee90
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654560"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198123"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>WatchOS에서 Xamarin 부모 응용 프로그램 사용
 
@@ -22,11 +22,11 @@ ms.locfileid: "68654560"
 
 Watch 앱 및 번들로 제공 되는 iOS 앱 간에 통신 하는 방법은 여러 가지:
 
-- 조사식 확장 수 있습니다 [메서드를 호출](#code) iPhone의 백그라운드에서 실행 되는 부모 앱에 대 한 합니다.
+- 조사식 확장은 iPhone의 백그라운드에서 실행 되는 부모 앱에 대해 [메서드를 호출할](#code) 수 있습니다.
 
 - 조사식 확장 수 있습니다 [저장소 위치를 공유](#storage) 부모 iPhone 앱을 사용 하 여 합니다.
 
-- 핸드 오프를 사용 하 여 전달할 데이터 보기 또는 알림 Watch 앱을 사용자 앱에서 특정 인터페이스 컨트롤러에 전송 합니다.
+- 사용자를 앱의 특정 인터페이스 컨트롤러에 보내서 사용자를 Watch 앱에 전달 하기 위해 핸드 오프를 사용 합니다.
 
 부모 앱 되기도 컨테이너 앱 이라고 합니다.
 

@@ -6,12 +6,12 @@ ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 9d43bbdb49fe4ab1ff909f709a37f979c360ceb9
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509585"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199395"
 ---
 # <a name="native-types-for-ios-and-macos"></a>IOS 및 macOS의 네이티브 형식
 
@@ -45,9 +45,9 @@ Mac 및 iOS Api는 32 비트 플랫폼에서 항상 32 비트인 아키텍처 �
 
 명시적 변환 연산자는 데이터 손실이 발생할 가능성이 있는 경우에 제공 됩니다. 64 비트 값은 32 또는 잠재적으로 32 저장소 위치에 저장 됩니다.
 
- `int``nint` `nfloat` 및는 모두 암시적으로로 변환할 수 있으며32비트는항상32또는64비트에맞습니다.`nuint` `float` `uint`
+`int``nint` `nfloat` 및는 모두 암시적으로로 변환할 수 있으며32비트는항상32또는64비트에맞습니다.`nuint` `float` `uint`
 
- `nint``long` `ulong` 및는 모두 암시적으로로 변환할 수 있으며 `double` , 32 또는 64 비트 값은 항상 64 비트 저장소에 맞습니다. `nfloat` `nuint`
+`nint``long` `ulong` 및는 모두 암시적으로로 변환할 수 있으며 `double` , 32 또는 64 비트 값은 항상 64 비트 저장소에 맞습니다. `nfloat` `nuint`
 
 네이티브 형식에 64 비트의 `nint`저장소가 저장 될 수 `uint` `float` 있으므로, `nuint` 및 `nfloat` 에서로 `int`의 명시적 변환을 사용 해야 합니다.
 
@@ -59,7 +59,7 @@ CoreGraphics와 함께 사용 되는 점, 크기 및 사각형 데이터 형식�
 
 **통합**으로 이동할 때 다음 표에 표시 된 것 처럼 인스턴스 `System.Drawing` 를 해당 `CoreGraphics` 항목으로 바꾸어야 합니다.
 
-|시스템 그리기의 이전 형식|새 데이터 형식 CoreGraphics|Description|
+|시스템 그리기의 이전 형식|새 데이터 형식 CoreGraphics|설명|
 |--- |--- |--- |
 |`RectangleF`|`CGRect`|부동 소수점 사각형 정보를 포함 합니다.|
 |`SizeF`|`CGSize`|부동 소수점 크기 정보 (너비, 높이)를 포함 합니다.|

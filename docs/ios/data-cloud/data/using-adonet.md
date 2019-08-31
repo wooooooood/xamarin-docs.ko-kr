@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4f2d16ca2ff258da1b65bf7c7174c989ead7782c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 09c20b776f2c5d4ddd36e8b515f5bcbf6d92d7a4
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527360"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199710"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Xamarin.ios에서 ADO.NET 사용
 
@@ -56,7 +56,7 @@ ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` �
     ```
 
     앞에서 설명한 것 처럼 여러 스레드에서 연결이 다시 사용 되어서는 안 됩니다. 확실 하지 않은 경우 필요에 따라 연결을 만들고 완료 되 면 닫습니다. 그러나 필요한 것 보다 더 자주이 작업을 수행 하는 것에 유의 해야 합니다.
-    
+
 3. **데이터베이스 명령 만들기 및 실행** -연결 된 후에는 임의의 SQL 명령을 실행할 수 있습니다. 아래 코드는 실행 중인 CREATE TABLE 문을 보여 줍니다.
 
     ```csharp

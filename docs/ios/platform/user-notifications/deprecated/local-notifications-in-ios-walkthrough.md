@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f7290d8284f90db4f53a38dc89f7b5a1a10213c0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655532"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200376"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
@@ -62,29 +62,28 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-            var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
-                UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
-            );
+        var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
+            UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
+        );
 
-            application.RegisterUserNotificationSettings (notificationSettings);
-        }
+        application.RegisterUserNotificationSettings (notificationSettings);
+    }
     ```
 
 1. 에서 `AppDelegate.cs`알림을 받을 때 호출 되는 다음 메서드를 추가 합니다.
 
     ```csharp
     public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
-            {
-                // show an alert
-                UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
-                okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    {
+        // show an alert
+        UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
+        okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-                UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
+        UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
 
-                // reset our badge
-                UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-            }
-
+        // reset our badge
+        UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+    }
     ```
 
 1. 로컬 알림으로 인해 알림이 시작 된 경우를 처리 해야 합니다. 에서 메서드 `FinishedLaunching` 를 편집 하여다음코드조각을포함합니다.`AppDelegate`
@@ -111,7 +110,6 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
             }
         }
     }
-
     ```
 
 1. 마지막으로 응용 프로그램을 실행 합니다. IOS 8에서 알림을 허용 하 라는 메시지가 표시 됩니다. **확인** 을 클릭 한 다음 **알림 추가** 단추를 클릭 합니다. 잠시 후에 다음 스크린샷에 표시 된 것 처럼 경고 대화 상자가 표시 됩니다.

@@ -1,58 +1,58 @@
 ---
-title: 포함 하는.NET 설치
-description: 이 문서에서는.NET 포함을 설치 하는 방법을 설명 합니다. 한편으로 도구를 실행 하는 방법에 설명 바인딩을 생성 하는 방법을 사용자 지정 MSBuild 대상 및 필요한 빌드 후 단계를 사용 하는 방법을 자동으로 합니다.
+title: .NET 포함 설치
+description: 이 문서에서는 .NET 포함을 설치 하는 방법을 설명 합니다. 도구를 직접 실행 하는 방법, 바인딩을 자동으로 생성 하는 방법, 사용자 지정 MSBuild 대상 사용 방법 및 필요한 빌드 후 단계에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 04/18/2018
-ms.openlocfilehash: 2a572748c21d2a640add3346d1162f4b6bdc8e99
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7da163e85b04791c276f9cb14f5b21615b7909fb
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076645"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200161"
 ---
-# <a name="installing-net-embedding"></a>포함 하는.NET 설치
+# <a name="installing-net-embedding"></a>.NET 포함 설치
 
-## <a name="installing-net-embedding-from-nuget"></a>NuGet에서 포함 하는.NET 설치
+## <a name="installing-net-embedding-from-nuget"></a>NuGet에서 .NET 포함 설치
 
-선택 **추가 > NuGet 패키지 추가...**  하 고 설치 **Embeddinator 4000** NuGet 패키지 관리자에서:
+**추가 > nuget 패키지 추가** ...를 선택 하 고 nuget 패키지 관리자에서 **Embeddinator-4000** 을 설치 합니다.
 
 ![NuGet 패키지 관리자](images/visualstudionuget.png)
 
-이렇게 하면 설치 됩니다 **Embeddinator 4000.exe** 하 고 **objcgen** 에 **패키지/Embeddinator-4000/도구** 디렉터리.
+이렇게 하면 **Embeddinator-4000** 및 **objcgen** 가 **패키지/Embeddinator-4000/tools** 디렉터리에 설치 됩니다.
 
-일반적으로 최신 릴리스의 Embeddinator-4000 다운로드에 대 한 선택 해야 합니다. Objective-c 지원을 위해서는 0.4 이상.
+일반적으로 Embeddinator-4000의 최신 릴리스를 다운로드 하도록 선택 해야 합니다. 목표-C 지원에는 0.4 이상이 필요 합니다.
 
 ## <a name="running-manually"></a>수동으로 실행
 
-NuGet 설치 했으므로 직접 도구를 실행할 수 있습니다.
+이제 NuGet이 설치 되었으므로 도구를 직접 실행할 수 있습니다.
 
-- (MacOS) 터미널 또는 명령 프롬프트 (Windows) 열기
-- 솔루션 루트에 디렉터리를 변경
-- 도구에 설치 됩니다.
-    - **. / 패키지/Embeddinator부터 4000 까지입니다. [VERSION] / 도구/objcgen** (Objective-c)
-    - **. / 패키지/Embeddinator부터 4000 까지입니다. [VERSION]/tools/Embeddinator-4000.exe** (Java/C)
-- Macos에서는 **objcgen** 직접 실행할 수 있습니다.
-- Windows에 온 **Embeddinator 4000.exe** 직접 실행할 수 있습니다.
-- Macos에서는 **Embeddinator 4000.exe** 사용 하 여 실행 해야 **mono**:
+- 터미널 (macOS) 또는 명령 프롬프트를 엽니다 (Windows).
+- 디렉터리를 솔루션 루트로 변경
+- 도구는 다음 위치에 설치 됩니다.
+    - **./packages/Embeddinator-4000. [VERSION]/tools/objcgen** (목적-C)
+    - **./packages/Embeddinator-4000. [VERSION]/tools/Embeddinator-4000.exe** (Java/C)
+- MacOS에서 **objcgen** 는 직접 실행할 수 있습니다.
+- Windows에서는 **Embeddinator-4000** 을 직접 실행할 수 있습니다.
+- MacOS에서 Embeddinator-4000는 **mono**를 사용 하 여 실행 해야 **합니다** .
     - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
-각 명령 호출 다양 한 플랫폼 관련 설명서에 나열 된 매개 변수가 필요 합니다.
+각 명령 호출에는 플랫폼별 설명서에 나열 된 많은 매개 변수가가 필요 합니다.
 
 ## <a name="automatic-binding-generation"></a>자동 바인딩 생성
 
-자동으로 빌드 프로세스의 일부.NET 포함을 실행 하는 방법은 두 가지가 있습니다.
+빌드 프로세스의 .NET 포함 부분을 자동으로 실행 하는 방법에는 두 가지가 있습니다.
 
 - 사용자 지정 MSBuild 대상
 - 빌드 후 단계
 
-이 문서는 모두를 설명 하는 동안 사용자 지정 MSBuild 대상을 사용 하는 것이 좋습니다. 명령줄에서 빌드할 때 사후 빌드 단계는 반드시 실행 되지 않습니다.
+이 문서에서는 두 가지 방법에 대해 설명 하지만 사용자 지정 MSBuild 대상을 사용 하는 것이 좋습니다. 명령줄에서 빌드할 때 빌드 후 단계가 반드시 실행 되는 것은 아닙니다.
 
 ### <a name="custom-msbuild-targets"></a>사용자 지정 MSBuild 대상
 
-MSbuild 대상으로 사용 하 여 빌드를 사용자 지정 하려면 먼저 만듭니다는 **Embeddinator 4000.targets** 다음과 유사한 csproj에 옆에 있는 파일:
+MSbuild 대상을 사용 하 여 빌드를 사용자 지정 하려면 먼저 다음과 같이 .csproj 옆에 **Embeddinator** 파일을 만듭니다.
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -62,34 +62,34 @@ MSbuild 대상으로 사용 하 여 빌드를 사용자 지정 하려면 먼저 
 </Project>
 ```
 
-여기에서 플랫폼별 설명서에 나열 된.NET 포함 호출 중 하나를 사용 하 여 명령의 텍스트 채워야 합니다.
+여기서는 플랫폼별 설명서에 나열 된 .NET 포함 호출 중 하나를 사용 하 여 명령 텍스트를 채워야 합니다.
 
-사용 하려면이 대상:
+이 대상을 사용 하려면:
 
-- Mac 용 Visual Studio 2017 또는 Visual Studio에서 프로젝트를 닫습니다.
-- 라이브러리 csproj 텍스트 편집기에서 열기
-- 최종 위에서 맨 아래에 다음이 줄 추가 `</Project>` 줄:
+- Visual Studio 2017 또는 Mac용 Visual Studio에서 프로젝트를 닫습니다.
+- 텍스트 편집기에서 라이브러리 .csproj를 엽니다.
+- 최종 `</Project>` 줄의 맨 아래에 다음 줄을 추가 합니다.
 
 ```xml
  <Import Project="Embeddinator-4000.targets" />
 ```
 
-- 프로젝트를 다시 엽니다.
+- 프로젝트 다시 열기
 
 ### <a name="post-build-steps"></a>빌드 후 단계
 
-.NET 포함 실행할 빌드 후 단계를 추가 하는 단계는 IDE에 따라 달라 집니다.
+.NET 포함을 실행 하기 위한 빌드 후 단계를 추가 하는 단계는 IDE에 따라 다릅니다.
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
-Mac 용 Visual Studio로 이동 **프로젝트 옵션 > 빌드 > 사용자 지정 명령** 추가한는 **빌드 후** 단계입니다.
+Mac용 Visual Studio에서 프로젝트 옵션으로 이동 하 여 **사용자 지정 명령 > 빌드하고** **빌드 후** 단계를 추가 > 합니다.
 
-플랫폼 관련 설명서에 나열 된 명령을 설정 합니다.
+플랫폼별 설명서에 나열 된 명령을 설정 합니다.
 
 > [!NOTE]
 > NuGet에서 설치한 버전 번호를 사용 해야 합니다.
 
-진행 중인 개발에서 수행 하려는 경우는 C# 프로젝트를 추가할 수 있습니다도 정리를 사용자 지정 명령 합니다 **출력** .NET 포함을 실행 하기 전에 디렉터리:
+C# 프로젝트에 대 한 지속적인 개발을 수행 하려는 경우 .net 포함을 실행 하기 전에 **출력** 디렉터리를 정리 하는 사용자 지정 명령을 추가할 수도 있습니다.
 
 ```shell
 rm -Rf '${SolutionDir}/output/'
@@ -98,12 +98,13 @@ rm -Rf '${SolutionDir}/output/'
 ![사용자 지정 빌드 작업](images/visualstudiocustombuild.png)
 
 > [!NOTE]
-> 생성 된 바인딩 하 여 지정 된 디렉터리에 배치 됩니다 합니다 `--outdir` 또는 `--out` 매개 변수입니다. 일부 플랫폼 패키지 이름에 대 한 제한 사항으로 생성 된 바인딩 이름을 달라질 수 있습니다.
+> 생성 된 바인딩은 `--outdir` 또는 `--out` 매개 변수로 표시 되는 디렉터리에 배치 됩니다. 일부 플랫폼에는 패키지 이름에 대 한 제한이 있으므로 생성 된 바인딩 이름은 다를 수 있습니다.
 
 #### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-동일한 작업을 기본적으로 설정 됩니다 있지만 Visual Studio 2017에서 메뉴 약간 다릅니다. 셸 명령 또한 약간 다릅니다.
+기본적으로 동일한 작업을 설정 하지만 Visual Studio 2017의 메뉴는 약간 다릅니다. 셸 명령도 약간 다릅니다.
 
-로 이동 **프로젝트 옵션 > 빌드 이벤트** 에 플랫폼 특정 설명서에 나열 된 명령을 입력 합니다 **빌드 후 이벤트 명령줄** 상자입니다. 예를 들어:
+프로젝트 옵션으로 이동 하 여 **빌드 이벤트 >** 플랫폼별 설명서에 나열 된 명령을 **빌드 후 이벤트 명령줄** 상자에 입력 합니다. 예를 들어:
 
-![Windows에 포함 하는.NET](images/visualstudiowindows.png)
+![Windows에 .NET 포함](images/visualstudiowindows.png)
+ 

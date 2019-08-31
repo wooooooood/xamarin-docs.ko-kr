@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 98b68423012fad479f3949452d53c2a49e2a677e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c3f0130e96ae61838b9a7abcd68ccd219a327d4d
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654307"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70198488"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.ios의 iPad 용 멀티태스킹
 
@@ -157,7 +157,7 @@ IPad에서 실행 되는 iOS 9에서는 Apple에서 하드웨어 키보드에 �
 
 [![](multitasking-images/keyboard01.png "앱 전환기")](multitasking-images/keyboard01.png#lightbox)
 
-IOS 9 앱에 바로 가기 키가 포함 되어 있는 경우 사용자는 **명령**, **옵션** **또는 키** 를 사용 하 여 팝업에 표시할 수 있습니다.
+IOS 9 앱에 바로 가기 키가 포함 되어 있는 경우 사용자는 **명령**, **옵션** 또는 키를 사용 하 여 팝업에 표시할 수 있습니다.
 
 [![](multitasking-images/keyboard02.png "바로 가기 키 팝업")](multitasking-images/keyboard02.png#lightbox)
 

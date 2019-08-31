@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2019
-ms.openlocfilehash: 89afb106320ce77e86a66f2c78bd6e32de8c38f3
-ms.sourcegitcommit: be9658de032f3893741261f16162a664952ce178
+ms.openlocfilehash: 33a121c97df435d3423e3e0f525e6a3d32c780ad
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64986968"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70197473"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 요구 사항
 
@@ -25,10 +25,10 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 다음 운영 체제에 대한 Xamarin.Forms 애플리케이션을 작성할 수 있습니다.
 
 - iOS 8 이상
-- Android 5.0 (API 21) 이상 ([자세한 내용은](#android))
+- Android 5.0 (API 21) 이상 ([자세한 내용](#android))
 - Windows 10 UWP(Universal Windows Platform)([자세한 내용)](#windows10))
 
-개발자에 잘 알고 있다고 가정 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)합니다.
+개발자가 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)에 대해 잘 알고 있다고 가정 합니다.
 
 ### <a name="additional-platform-support"></a>추가 플랫폼 지원
 
@@ -49,17 +49,17 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 
 **프로젝트 옵션 &gt; 애플리케이션 &gt; 애플리케이션 속성**
 
-![Visual Studio의 android 빌드 옵션](requirements-images/options-android-vs-sml.png)
+![Visual Studio의 Android 빌드 옵션](requirements-images/options-android-vs-sml.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 **빌드 > 일반**
 
-![최신 대상 프레임 워크를 선택 합니다.](requirements-images/options-general-sml.png)
+![최신 대상 프레임 워크 선택](requirements-images/options-general-sml.png)
 
 **빌드 &gt; Android 애플리케이션**
 
-![최소를 선택 하 고 앱에 대 한 Android 버전 대상](requirements-images/options-android-sml.png)
+![앱에 대 한 최소 및 대상 Android 버전을 선택 합니다.](requirements-images/options-android-sml.png)
 
 -----
 
@@ -69,7 +69,7 @@ Xamarin.Forms 앱은 macOS 및 Windows에서 개발할 수 있습니다. 그러�
 
 ## <a name="mac-system-requirements"></a>Mac 시스템 요구 사항
 
-Mac 용 Visual Studio를 사용 하 여 macOS High Sierra (10.13)에서 Xamarin.Forms 앱을 개발할 수 이상입니다. IOS 앱을 개발 하려면 iOS 10 SDK 및 Xcode 9가 설치 되어 최소한 하는 것이 좋습니다.
+Mac용 Visual Studio를 사용 하 여 macOS-시에라리온 (10.13) 이상에서 Xamarin.ios 앱을 개발할 수 있습니다. IOS 앱을 개발 하려면 적어도 iOS 10 SDK 및 Xcode 9를 설치 하는 것이 좋습니다.
 
 > [!NOTE]
 >  Windows 앱은 macOS에서 개발할 수 없습니다.
@@ -84,9 +84,9 @@ Xamarin 개발을 지원하는 모든 Windows 설치에서 iOS 및 Android용 Xa
 
 UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 
-- Windows 10 (최신 버전 권장 최소 Fall Creators Update)
+- Windows 10 (최신 버전 권장, 적합 한 작성자 업데이트 최소)
 
-- Visual Studio 2019 권장 (Visual Studio 2017 버전 15.8 최소)
+- Visual Studio 2019 권장 (Visual Studio 2017 버전 15.8 이상)
 
 - [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
@@ -94,7 +94,7 @@ UWP용 Xamarin.Forms 앱 개발에 다음이 필요합니다.
 
 ## <a name="deprecated-platforms"></a>사용 되지 않는 플랫폼
 
-3\.0 이상 Xamarin.Forms를 사용 하는 경우에 이러한 플랫폼 지원 되지 않습니다.
+Xamarin. Forms 3.0 이상 버전을 사용 하는 경우 이러한 플랫폼은 지원 되지 않습니다.
 
 - *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*

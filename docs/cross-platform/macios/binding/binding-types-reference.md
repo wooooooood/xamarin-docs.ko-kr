@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: de0d7ae6ac6a028166c13aa29bf0ea44035eddce
-ms.sourcegitcommit: 9f37dc00c2adab958025ad1cdba9c37f0acbccd0
+ms.openlocfilehash: 52c4f6b45a44eaa9df253e9d049d1016de4a6e30
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012435"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70199360"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식 참조 가이드
 
@@ -803,7 +803,7 @@ interface NSUrlSession {
 
 반환 값에 대 한 메서드, 매개 변수 및 속성 `BindAs`을에 데코레이팅 할 수 있습니다. 유일한 제한 사항은 멤버가 `[Protocol]` 또는 [`[Model]`](#ModelAttribute) 인터페이스 내에 **있지 않아야** 한다는 것입니다.
 
-예를 들어:
+예:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -1125,7 +1125,7 @@ interface CameraEffects {
 
 바인딩을 디자인할 때 일반적으로이 특성을 사용 하 여 메서드 또는 속성을 숨기고, 메서드 또는 속성에 대해 다른 이름을 제공한 다음, C# 보완 지원 파일에서를 노출 하는 강력한 형식의 래퍼를 추가 합니다. 기본 기능.
 
-예를 들어:
+예:
 
 ```csharp
 [Internal]
@@ -1769,13 +1769,13 @@ Call (x.GetConstant ()); // NSDefaultRunLoopMode will be used
 예제:
 
 ```csharp
-    [Native]
-    [ErrorDomain ("AVKitErrorDomain")]
-    public enum AVKitError : nint {
-        None = 0,
-        Unknown = -1000,
-        PictureInPictureStartFailed = -1001
-    }
+[Native]
+[ErrorDomain ("AVKitErrorDomain")]
+public enum AVKitError : nint {
+    None = 0,
+    Unknown = -1000,
+    PictureInPictureStartFailed = -1001
+}
 ```
 
 그런 다음 확장 메서드 `GetDomain` 를 호출 하 여 모든 오류에 대 한 도메인 상수를 가져올 수 있습니다.
@@ -2020,7 +2020,7 @@ Xamarin.ios 8.0을 사용 하면 래핑하 `NSDictionaries`는 강력한 형식�
 
 이 특성은 사전의 요소에 액세스 하는 데 사용 되는 키를 포함 하는 클래스의 이름인 하나의 매개 변수를 사용 합니다.   기본적으로 특성을 사용 하는 인터페이스의 각 속성은 지정 된 형식의 멤버를 "Key" 접미사를 사용 하는 이름으로 조회 합니다.
 
-예:
+예를 들어:
 
 ```csharp
 [StrongDictionary ("MyOptionKeys")]

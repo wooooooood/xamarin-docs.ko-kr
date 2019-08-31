@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: f4f063cf7004d35aa93f688e71a917caa7a3e5a8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
+ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648940"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70200257"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
 
@@ -65,13 +65,13 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
     [![](segmented-controls-images/segment03.png "위젯 탭")](segmented-controls-images/segment03.png#lightbox)
 1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
 1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예: 
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어: 
 
     [![](segmented-controls-images/segment04.png "이름 할당")](segmented-controls-images/segment04.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **세그먼트 컨트롤** 을 끌어 뷰에 놓습니다. 
 
@@ -85,7 +85,7 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
 
     [![](segmented-controls-images/segment04-vs.png "이름 할당")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
-    
+
 -----
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요. 
