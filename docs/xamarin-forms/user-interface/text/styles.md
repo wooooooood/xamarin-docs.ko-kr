@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: b639a7fdefb8fca67d833b07ef9aa1a85da67ef6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642891"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228015"
 ---
 # <a name="xamarinforms-text-styles"></a>Xamarin.Forms 텍스트 스타일
 
@@ -48,7 +48,7 @@ C#에서 기본 제공 스타일에서 선택 `Device.Styles`:
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "장치 스타일 예제")
+![장치 스타일 예제](styles-images/builtinstyles.png)
 
 <a name="Custom_Styles" />
 
@@ -90,7 +90,7 @@ XAML:
 
 리소스 (스타일을 모두 포함) 내에서 정의 되어 `ContentPage.Resources`에 더 친숙 한의 형제인 `ContentPage.Content` 요소입니다.
 
-![](styles-images/customstyle.png "사용자 지정 스타일 예제")
+![사용자 지정 스타일 예제](styles-images/customstyle.png)
 
 <a name="Applying_Styles" />
 
@@ -137,11 +137,11 @@ label.Style = Device.Styles.TitleStyle;
 
 사용 안 함:
 
-![](styles-images/pre-access.png "내게 필요한 옵션 사용 안 함을 사용 하 여 장치 스타일")
+![내게 필요한 옵션을 사용 하지 않는 장치 스타일](styles-images/pre-access.png)
 
 사용:
 
-![](styles-images/post-access.png "사용 하도록 설정 하는 내게 필요한 옵션을 사용 하 여 장치 스타일")
+![내게 필요한 옵션 기능이 설정 된 장치 스타일](styles-images/post-access.png)
 
 접근성을 위해 앱 내에서 모든 텍스트 관련 스타일에 대 한 기준으로 기본 제공 스타일을 사용 하 고 스타일을 일관 되 게 사용 중인지를 확인 합니다. 참조 [스타일](~/xamarin-forms/user-interface/styles/index.md) 확장 하 고 스타일을 사용 하 여 일반적인 작동에 대 한 자세한 내용은 합니다.
 

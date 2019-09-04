@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 1e1e86c6301214c7117b8f3b21b19554499d7fbd
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 99fafe0ae0186ac68609ebe22dabe64e588ee5e0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121435"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226677"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Xamarin에서 tvOS 용 siri 원격 및 Bluetooth 컨트롤러
 
@@ -67,7 +67,7 @@ Apple은 터치 Surface 제스처를 사용할 때 다음과 같은 제안 사�
 
 ## <a name="siri-remote-buttons"></a>Siri 원격 단추
 
-터치 표면의 제스처 외에도 앱은 터치 표면을 클릭 하거나 재생/일시 중지 단추를 눌러 사용자에 게 응답할 수 있습니다. 게임 컨트롤러 프레임 워크를 사용 하 여 Siri 원격에 액세스 하는 경우 누른 메뉴 단추를 검색할 수도 있습니다. 
+터치 표면의 제스처 외에도 앱은 터치 표면을 클릭 하거나 재생/일시 중지 단추를 눌러 사용자에 게 응답할 수 있습니다. 게임 컨트롤러 프레임 워크를 사용 하 여 Siri 원격에 액세스 하는 경우 누른 메뉴 단추를 검색할 수도 있습니다.
 
 또한 표준 `UIKit` 요소가 있는 제스처 인식기를 사용 하 여 메뉴 단추 누름을 검색할 수 있습니다. 누른 메뉴 단추를 가로채 면 현재 뷰 및 뷰 컨트롤러를 닫고 이전으로 돌아갈 책임이 있습니다.
 
@@ -83,14 +83,14 @@ TvOS 앱에서 Siri 원격으로 작업 하는 가장 쉬운 방법은 인터페
 제스처 인식기를 추가 하려면 다음을 수행 합니다.
 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 인터페이스 디자이너를 편집할 수 있도록 엽니다.
-2. **라이브러리** 에서 **탭 제스처 인식기** 를 끌어서 뷰에 놓습니다. 
+2. **라이브러리** 에서 **탭 제스처 인식기** 를 끌어서 뷰에 놓습니다.
 
     [![](remote-bluetooth-images/storyboard01.png "탭 제스처 인식기")](remote-bluetooth-images/storyboard01.png#lightbox)
-3. **특성 검사자**의 **단추** 섹션에서 **선택을 선택** 합니다. 
+3. **특성 검사자**의 **단추** 섹션에서 **선택을 선택** 합니다.
 
     [![](remote-bluetooth-images/storyboard02.png "선택 선택")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **선택** 은 사용자가 Siri 원격에서 **Touch Surface** 를 클릭 하 여 사용자에 게 응답 하는 동작을 의미 합니다. **메뉴**, **재생/일시 중지**, **위쪽**, **아래쪽**, **왼쪽** 및 **오른쪽** 단추에 응답 하는 옵션도 있습니다.
-5. 그런 다음 **탭 제스처 인식기** 에서 `TouchSurfaceClicked` **작업** 을 연결 하 고 호출 합니다. 
+5. 그런 다음 **탭 제스처 인식기** 에서 `TouchSurfaceClicked` **작업** 을 연결 하 고 호출 합니다.
 
     [![](remote-bluetooth-images/storyboard03.png "탭 제스처 인식기의 작업")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. 변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아갑니다.
@@ -142,7 +142,7 @@ namespace tvRemote
         #region Override Methods
         public override void ViewDidLoad ()
         {
-            base.ViewDidLoad ();    
+            base.ViewDidLoad ();
 
             // Wire-up gestures
             var upGesture = new UISwipeGestureRecognizer (() => {
@@ -186,9 +186,9 @@ namespace tvRemote
 
 ## <a name="low-level-event-handling"></a>하위 수준 이벤트 처리
 
-TvOS 앱 `UIKit` 에서를 기반으로 사용자 지정 형식을 만드는 경우 (예: `UIView`) 이벤트를 통한 `UIPress` 단추 누르기의 하위 수준 처리 기능을 제공할 수도 있습니다. 
+TvOS 앱 `UIKit` 에서를 기반으로 사용자 지정 형식을 만드는 경우 (예: `UIView`) 이벤트를 통한 `UIPress` 단추 누르기의 하위 수준 처리 기능을 제공할 수도 있습니다.
 
-이벤트는 siri 원격 또는 기타 `UITouch` 연결 된 Bluetooth 장치 (예 `UIPress` : 게임 컨트롤러)에서 단추를 누르는 방법에 대 한 정보를 반환 하는 것을 제외 하 고 tvOS 이벤트를 iOS에 게 제공 하는 것입니다. `UIPress` `UIPress`이벤트는 누른 단추와 해당 상태 (시작 됨, 취소 됨, 변경 됨 또는 종료 됨)를 설명 합니다. 
+이벤트는 siri 원격 또는 기타 `UITouch` 연결 된 Bluetooth 장치 (예 `UIPress` : 게임 컨트롤러)에서 단추를 누르는 방법에 대 한 정보를 반환 하는 것을 제외 하 고 tvOS 이벤트를 iOS에 게 제공 하는 것입니다. `UIPress` `UIPress`이벤트는 누른 단추와 해당 상태 (시작 됨, 취소 됨, 변경 됨 또는 종료 됨)를 설명 합니다.
 
 Bluetooth 게임 컨트롤러와 같은 장치에서 아날로그 단추를 `UIPress` 사용할 경우 단추에 적용 되는 힘의 양도 반환 됩니다. 이벤트의 속성은 `Type` 상태를 변경 하는 실제 단추를 정의 하는 반면, 나머지 속성은 발생 한 변경 사항을 설명 합니다. `UIPress`
 
@@ -211,7 +211,7 @@ namespace tvRemote
         }
         #endregion
 
-        #region 
+        #region
         public EventView (IntPtr handle) : base (handle)
         {
         }

@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: e0af5188dd34e76b419b4cd5bf8d604fb059b7d3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642763"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228249"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
 
@@ -22,7 +22,7 @@ _선 그리기 및 입력에 사용할 경로 허용 하는 다양 한 경로 �
 
 A *경로 효과* 의 인스턴스를 [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) 클래스에 의해 정의 되는 8 개의 정적 생성 방법 중 하나를 사용 하 여 만든 클래스입니다. `SKPathEffect` 개체 설정 됩니다는 [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) 속성을 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 작은 복제 경로 사용 하 여 줄을 따라 다양 한 예를 들어, 흥미로운 효과 대 한 개체 :
 
-![](effects-images/patheffectsample.png "연결 된 체인 샘플")
+![연결 된 체인 샘플](effects-images/patheffectsample.png)
 
 경로 효과 수행할 수 있습니다.
 
@@ -51,7 +51,7 @@ public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 
 **점으로 구분 된 텍스트 애니메이션** 비슷합니다는 **윤곽선이 있는 텍스트** 문서에서 설명 하는 페이지 [ **통합 텍스트와 그래픽** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) 에서 텍스트 문자를 설정 하 여 설명 표시는 `Style` 의 속성을 `SKPaint` 개체를 `SKPaintStyle.Stroke`입니다. 또한 **점으로 구분 된 텍스트 애니메이션** 사용 하 여 `SKPathEffect.CreateDash` 이 개요는 점으로 구분 된 형태를 제공 하 고 프로그램 또한 애니메이션를 `phase` 인수를 `SKPathEffect.CreateDash` 텍스트를 둘러싸는 여행을 점을 확인 하는 방법 문자입니다. 가로 모드에서 페이지가 같습니다.
 
-[![](effects-images/animateddottedtext-small.png "애니메이션을 점으로 구분 된 텍스트 페이지의 삼중 스크린샷")](effects-images/animateddottedtext-large.png#lightbox "삼중 애니메이션 점으로 구분 된 텍스트 페이지 스크린샷")
+[![애니메이션 점선 텍스트 페이지의 삼중 스크린 샷](effects-images/animateddottedtext-small.png)](effects-images/animateddottedtext-large.png#lightbox)
 
 [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 클래스는 몇 가지 상수를 정의 하 여 시작 하 고 재정의 `OnAppearing` 고 `OnDisappearing` 애니메이션에 대 한 메서드:
 
@@ -159,7 +159,7 @@ public class AnimatedDottedTextPage : ContentPage
 
 **Dot / Dash Morph** 대시 같습니다 다시 폼 대시를 결합 하는 점, 나눌 수 있도록 프로그램 애니메이션 자체는 대시 패턴을 적용 합니다.
 
-[![](effects-images/dotdashmorph-small.png "Triple 점 Dash Morph 페이지 스크린샷")](effects-images/dotdashmorph-large.png#lightbox "Triple 점 Dash Morph 페이지 스크린샷")
+[![점 대시 모핑 페이지의 삼중 스크린샷](effects-images/dotdashmorph-small.png)](effects-images/dotdashmorph-large.png#lightbox)
 
 합니다 [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 재정의 클래스를 `OnAppearing` 및 `OnDisappearing` 이전 프로그램 했지만 클래스 정의와 같이 메서드를 `SKPaint` 필드로 개체:
 
@@ -398,7 +398,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 합니다 `PaintSurface` 처리기 자체, 루프 및 결정 선택기에 액세스 하는 베 지 어 곡선을 만듭니다 `PathEffect` 해당 스트로크를 사용 해야 합니다. 세 가지 옵션 — `Translate`, `Rotate`, 및 `Morph` -왼쪽에서 오른쪽으로 표시 됩니다.
 
-[![](effects-images/1dpatheffect-small.png "삼중 1d 경로 효과 페이지 스크린샷")](effects-images/1dpatheffect-large.png#lightbox "삼중 1d 경로 효과 페이지 스크린샷")
+[![1D 경로 효과 페이지의 세 번째 스크린샷](effects-images/1dpatheffect-small.png)](effects-images/1dpatheffect-large.png#lightbox)
 
 에 지정 된 경로 `SKPathEffect.Create1DPath` 메서드 항상 채워집니다. 에 지정 된 경로 `DrawPath` 메서드는 경우에 항상 스트로크 되는 `SKPaint` 개체에 해당 `PathEffect` 1d 경로 효과를 설정 하는 속성입니다. 있음을 합니다 `pathPaint` 개체에 없습니다 `Style` 기본값은 일반적으로 설정 `Fill`, 경로 상관 없이 스트로크는 있지만 합니다.
 
@@ -410,7 +410,7 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 
 경우는 `advance` 인수가 경로의 크기 보다 작은 경우 복제 된 경로 겹칠 수 있습니다. 이 작업은 몇 가지 흥미로운 효과에서 발생할 수 있습니다. 합니다 **연결 된 체인** 일련의 중단을 catenary 눈에 띄는 모양에 연결 된 체인을 유사 하 게 보이는 원 겹치는 페이지에 표시 됩니다.
 
-[![](effects-images/linkedchain-small.png "연결 된 체인 페이지 스크린샷 삼중")](effects-images/linkedchain-large.png#lightbox "삼중 연결 된 체인 페이지 스크린샷")
+[![연결 된 체인 페이지의 삼중 스크린샷](effects-images/linkedchain-small.png)](effects-images/linkedchain-large.png#lightbox)
 
 근접 찾고 실제로 원 아닙니다는 표시 됩니다. 체인의 각 링크는 두 개의 원호, 크기 및 배치 되므로 인접 링크를 사용 하 여 연결 하는 것 같습니다.
 
@@ -549,7 +549,7 @@ public class LinkedChainPage : ContentPage
 
 합니다 **컨베이어 벨트** 페이지 곡선된 위쪽 및 아래쪽 창의 크기를 크기가 지정 된는 장방형 컨베이어 벨트와 비슷한 경로 만듭니다. 간단한을 사용 하 여 해당 경로 스트로크 `SKPaint` 20 픽셀 색이 지정 된 회색 개체 및 다른 한 다음 다시 스트로크 `SKPaint` 개체는 `SKPathEffect` 거의 버킷와 비슷한 경로 참조 하는 개체:
 
-[![](effects-images/conveyorbelt-small.png "삼중 컨베이어 벨트 페이지 스크린샷")](effects-images/conveyorbelt-large.png#lightbox "삼중 컨베이어 벨트 페이지 스크린샷")
+[![컨베이어 벨트 페이지의 세 번째 스크린샷](effects-images/conveyorbelt-small.png)](effects-images/conveyorbelt-large.png#lightbox)
 
 (0, 0) 버킷 경로의 점은 핸들, 있으므로 `phase` 인수 애니메이션이 적용 되어, 버킷의 아마도 scooping 물 맨 아래에 등록 하 고 맨 위에 있는 덤프 하는 컨베이어 벨트를 중심으로 것 같습니다.
 
@@ -798,7 +798,7 @@ public class HatchFillPage : ContentPage
 
 `PaintSurface` 처리기가 단순히 빨강 및 파랑 빗살 무늬 선을 사용 하 여 불일치를 볼 수 있도록 모퉁이가 둥근된 사각형을 스트로크를 호출 하 여 종료 합니다.
 
-[![](effects-images/hatchfill-small.png "채우기 해치 페이지 스크린샷 삼중")](effects-images/hatchfill-large.png#lightbox "삼중 채우기 해치 페이지 스크린샷")
+[![빗살 무늬 채우기 페이지의 세 번째 스크린샷](effects-images/hatchfill-small.png)](effects-images/hatchfill-large.png#lightbox)
 
 Android 화면은 다음과 같이 표시 되지 않습니다. 스크린 샷 크기를 조정 하면 작은 빨강 선과 얇은 공간이 더 넓은 빨간색 선과 더 넓은 공간으로 통합 됩니다.
 
@@ -852,7 +852,7 @@ public class PathTileFillPage : ContentPage
 
 에 `PaintSurface` 처리기는 `SKPathEffect.Create2DPath` 발생할 겹치는 80 픽셀 정사각형 타일에는 64를 가로 및 세로 간격을 설정 하는 호출 합니다. 다행 스럽게도 경로 원활 하 게 사용 하 여 타일에 인접 meshing 퍼즐 조각에서와 유사 합니다.
 
-[![](effects-images/pathtilefill-small.png "삼중 경로 타일 채우기 페이지 스크린샷")](effects-images/pathtilefill-large.png#lightbox "삼중 경로 타일 채우기 페이지 스크린샷")
+[![경로 타일 채우기 페이지의 세 번째 스크린샷](effects-images/pathtilefill-small.png)](effects-images/pathtilefill-large.png#lightbox)
 
 Android 화면에서 특히 일부 왜곡을 사용 하면 원래 스크린샷에서 크기 조정 합니다.
 
@@ -927,7 +927,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이 효과 사용 하 여 선 그리기 또는 기반 채우기 합니다 `Style` 의 속성을 `SKPaint` 개체입니다. 여기이 실행 됩니다.
 
-[![](effects-images/anotherroundedheptagon-small.png "다른 반올림 Heptagon 페이지 스크린샷 삼중")](effects-images/anotherroundedheptagon-large.png#lightbox "삼중 다른 반올림 Heptagon 페이지 스크린샷")
+[![둥근 다른 Heptagon 페이지의 세 번째 스크린샷](effects-images/anotherroundedheptagon-small.png)](effects-images/anotherroundedheptagon-large.png#lightbox)
 
 이 둥근된 heptagon 이전 프로그램 같다는 것을 표시 합니다. 자세한 유도 해야 하는 경우 모퉁이 반경을 실제로 100 보다는 50에 지정 된 된 `SKPathEffect.CreateCorner` 호출 모서리에 있는 프로그램 및 참조 100 radius 원 마지막 문에서 겹쳐을 주석 수 있습니다.
 
@@ -946,7 +946,7 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 합니다 **실험 지터** 페이지 사각형 선 그리기는 서로 다른 값을 실험할 수 있습니다.
 
-[![](effects-images/jitterexperiment-small.png "Triple 지터 실험 페이지의 스크린샷")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
+[![JitterExperiment 페이지의 세 번째 스크린샷](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
 
 프로그램은 간단 합니다. 합니다 [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일 두 개를 인스턴스화하고 `Slider` 요소와 `SKCanvasView`:
 
@@ -1072,7 +1072,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기 가로 모드에서 실행 중인:
 
-[![](effects-images/jittertext-small.png "Triple 지터 텍스트 페이지의 스크린샷")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
+[![JitterText 페이지의 세 번째 스크린샷](effects-images/jittertext-small.png)](effects-images/jittertext-large.png#lightbox)
 
 ## <a name="path-outlining"></a>경로 개요
 
@@ -1173,11 +1173,11 @@ public partial class TapToOutlineThePathPage : ContentPage
 
 원 채우기 및 예상한 대로 스트로크:
 
-[![](effects-images/taptooutlinethepathnormal-small.png "일반 탭에 윤곽선은 패스 페이지 스크린샷 삼중")](effects-images/taptooutlinethepathnormal-large.png#lightbox "삼중 일반 탭에 윤곽선은 패스 페이지 스크린샷")
+[![경로 페이지에 대 한 개요를 설명 하는 일반 탭의 세 번째 스크린샷](effects-images/taptooutlinethepathnormal-small.png)](effects-images/taptooutlinethepathnormal-large.png#lightbox)
 
 화면을 누르면 `outlineThePath` 로 설정 된 `true`, 및 `PaintSurface` 처리기를 새로 만듭니다 `SKPath` 개체 및 사용에 대 한 호출의 대상 경로로 `GetFillPath` 에 `redThickStroke` 그리기 개체입니다. 대상 경로 다음 채워지고 사용 하 여 스트로크 `redThinStroke`, 다음에서 결과:
 
-[![](effects-images/taptooutlinethepathoutlined-small.png "윤곽선이 있는 탭에 윤곽선은 패스 페이지 스크린샷 삼중")](effects-images/taptooutlinethepathoutlined-large.png#lightbox "삼중 윤곽선이 있는 탭에 윤곽선은 패스 페이지 스크린샷")
+[![경로 페이지를 윤곽선으로 표시 하는 탭의 세 번째 스크린샷](effects-images/taptooutlinethepathoutlined-small.png)](effects-images/taptooutlinethepathoutlined-large.png#lightbox)
 
 두 개의 빨간색 원을 원래 원형 경로 두 순환 윤곽 변환 된는 명확히 표시 합니다.
 
@@ -1241,7 +1241,7 @@ public static SKPathEffect CreateCompose (SKPathEffect outer, SKPathEffect inner
 
 한 가지 확실 한 용도 `CreateSum` 정의 하는 것을 `SKPaint` 개체 하나 경로 효과 사용 하 여 경로 채우고 다른 경로 효과 사용 하 여 경로 선입니다. 에 설명 되어이 **프레임에서 고양이** 수직 물결 막대 가장자리가 프레임 내 고양이 배열을 표시 하는 샘플:
 
-[![](effects-images/catsinframe-small.png "삼중 고양이의 프레임 페이지 스크린샷")](effects-images/catsinframe-large.png#lightbox "삼중 고양이의 프레임 페이지 스크린샷")
+[![프레임 페이지의 고양이 세 번째 스크린샷](effects-images/catsinframe-small.png)](effects-images/catsinframe-large.png#lightbox)
 
 합니다 [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) 클래스는 여러 필드를 정의 하 여 시작 합니다. 첫 번째 필드를 인식할 수 있습니다 합니다 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 에서 클래스를 [ **SVG 경로 데이터** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) 문서. 두 번째 경로 선과 프레임의 조개 패턴에 대 한 호를 기반으로 합니다.
 
@@ -1409,7 +1409,7 @@ public class DashedHatchLinesPage : ContentPage
 
 이미 알게 빗살 무늬 선 영역의 내부를 정확 하 게 제한 되지 않습니다 및이 예제에서는 항상 시작 전체 대시를 사용 하 여 왼쪽에서:
 
-[![](effects-images/dashedhatchlines-small.png "삼중 파선 빗살 무늬 선 페이지 스크린샷")](effects-images/dashedhatchlines-large.png#lightbox "삼중 파선 빗살 무늬 선 페이지 스크린샷")
+[![파선 해치 선 페이지의 삼중 스크린샷](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 이제 지금까지 살펴본 경로 효과 이상한 조합에 해당 범위에서 간단한 점 및 대시 상상력을 사용 하 여을 만들 수 있습니다를 참조 하세요.
 

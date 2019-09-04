@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 0ce718bf0380c47033129755d6ca9d40c1136e2c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 620a986ea9c5a6792d321b0c89dae936ffa256da
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529274"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227918"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
@@ -297,7 +297,7 @@ XAML에서 한가지 인기있는 해결책은 해당 값이나 개체를 *리�
 
 스크린샷은 일관된 스타일 및 플랫폼별 스타일 지정을 다음과 같이 보여줍니다.
 
-[![](xaml-markup-extensions-images/sharedresources.png "스타일의 컨트롤")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "스타일의 컨트롤")
+[![스타일이 지정 된 컨트롤](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 페이지의 상단에 `Resources` 컬렉션을 정의하는 것이 가장 일반적이지만, `Resources` 속성은 `VisualElement`에 의해 정의되고, 페이지의 다른 요소에서 `Resources` 컬렉션을 사용할 수도 있습니다. 예를 들어, 다음과 같이 `StackLayout`에 하나를 추가해 봅니다.
 
@@ -435,7 +435,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 결과의 크기 `BoxView` 화면을 기준으로 플랫폼에 따라 다릅니다.
 
- [![](xaml-markup-extensions-images/staticconstants.png "X:static 태그 확장을 사용하는 컨트롤")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "X:static 태그 확장을 사용하는 컨트롤")
+[![X:Static 태그 확장을 사용 하는 컨트롤](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## <a name="other-standard-markup-extensions"></a>기타 표준 태그 확장
 
@@ -551,7 +551,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 실행 중인 프로그램이 다음과 같습니다.
 
-[![](xaml-markup-extensions-images/relativelayout.png "제약 조건을 사용하는 상대 레이아웃")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "제약 조건을 사용하는 상대 레이아웃")
+[![제약 조건을 사용 하는 상대 레이아웃](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## <a name="summary"></a>요약
 

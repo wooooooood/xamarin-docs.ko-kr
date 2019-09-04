@@ -6,12 +6,12 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: asb3993
 ms.author: amburns
 ms.date: 04/07/2016
-ms.openlocfilehash: e400191b40775cef5d1ab1cba0bd6c4544f8c5fe
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 9018c3e3c976ef7623835055ee989dfd86dc25e1
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680211"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226225"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서의 네이티브 형식 작업
 
@@ -58,7 +58,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 #### <a name="using-duplicate-methods"></a>중복 메서드 사용
 
-위에 지정 된 사각형 데이터에서 변환을 수행 하는 라이브러리의 예를 들어 보겠습니다. 라이브러리에 매우 간단한 메서드를 하나 또는 두 개만 포함 하는 경우 Xamarin.ios 및 Xamarin.ios에 대 한 해당 메서드의 중복 버전을 만들도록 선택할 수 있습니다. 예를 들어:
+위에 지정 된 사각형 데이터에서 변환을 수행 하는 라이브러리의 예를 들어 보겠습니다. 라이브러리에 매우 간단한 메서드를 하나 또는 두 개만 포함 하는 경우 Xamarin.ios 및 Xamarin.ios에 대 한 해당 메서드의 중복 버전을 만들도록 선택할 수 있습니다. 예:
 
 ```csharp
 using System;
@@ -214,7 +214,7 @@ namespace NativeShared
 
 #### <a name="using-type-conversions-in-the-front-end-app"></a>프런트 엔드 앱에서 형식 변환 사용
 
-프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예:
+프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예를 들어:
 
 ```csharp
 using NativeShared;

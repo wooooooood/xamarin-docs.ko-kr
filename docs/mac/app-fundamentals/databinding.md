@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: beb063d423c860958948751d162af661040004b7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529003"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227262"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Xamarin.ios의 데이터 바인딩 및 키-값 코딩
 
@@ -36,7 +36,7 @@ Xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기
 
 KVC (키-값 코딩)는 키 (특수 형식의 문자열)를 사용 하 여 개체의 속성에 간접적으로 액세스 하 고 인스턴스 변수 또는 접근자 메서드 (`get/set`)를 통해 액세스 하는 대신 속성을 식별 하는 메커니즘입니다. Xamarin.ios 응용 프로그램에서 키-값 코딩 규격 접근자를 구현 하 여 키-값 관찰 (KVO), 데이터 바인딩, 코어 데이터, Cocoa 바인딩 및 scriptability 같은 다른 macOS (이전의 OS X)에 액세스할 수 있습니다.
 
-Xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기술을 사용 하 여 UI 요소를 채우고 사용 하기 위해 작성 하 고 유지 관리 해야 하는 코드의 양을 크게 줄일 수 있습니다. 또한 프런트 엔드 사용자 인터페이스 (_모델-뷰-컨트롤러_)에서 지원 데이터 (_데이터 모델_)를 추가로 분리 하 여 더 쉽게 유지 관리 하 고 더욱 유연한 응용 프로그램을 디자인할 수 있는 이점을 누릴 수 있습니다. 
+Xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기술을 사용 하 여 UI 요소를 채우고 사용 하기 위해 작성 하 고 유지 관리 해야 하는 코드의 양을 크게 줄일 수 있습니다. 또한 프런트 엔드 사용자 인터페이스 (_모델-뷰-컨트롤러_)에서 지원 데이터 (_데이터 모델_)를 추가로 분리 하 여 더 쉽게 유지 관리 하 고 더욱 유연한 응용 프로그램을 디자인할 수 있는 이점을 누릴 수 있습니다.
 
 예를 들어 KVC 규격 개체의 다음 클래스 정의를 살펴보겠습니다.
 
@@ -50,7 +50,7 @@ namespace MacDatabinding
     public class PersonModel : NSObject
     {
         private string _name = "";
-        
+
         [Export("Name")]
         public string Name {
             get { return _name; }
@@ -60,7 +60,7 @@ namespace MacDatabinding
                 DidChangeValue ("Name");
             }
         }
-        
+
         public PersonModel ()
         {
         }
@@ -68,9 +68,9 @@ namespace MacDatabinding
 }
 ```
 
-먼저, 특성 `[Register("PersonModel")]` 은 클래스를 등록 하 고 목표-C에 노출 합니다. 그런 다음 클래스는 (또는에서 `NSObject` `NSObject`상속 되는 서브 클래스)에서 상속 해야 하며,이는 클래스가 kvc 규격이 될 수 있도록 하는 몇 가지 기본 메서드를 추가 합니다. 그런 다음 `Name` 특성은 속성을 노출 하 고 나중에 kvc 및 KVO 기술을 통해 속성에 액세스 하는 데 사용 되는 키 값을 정의 합니다. `[Export("Name")]` 
+먼저, 특성 `[Register("PersonModel")]` 은 클래스를 등록 하 고 목표-C에 노출 합니다. 그런 다음 클래스는 (또는에서 `NSObject` `NSObject`상속 되는 서브 클래스)에서 상속 해야 하며,이는 클래스가 kvc 규격이 될 수 있도록 하는 몇 가지 기본 메서드를 추가 합니다. 그런 다음 `Name` 특성은 속성을 노출 하 고 나중에 kvc 및 KVO 기술을 통해 속성에 액세스 하는 데 사용 되는 키 값을 정의 합니다. `[Export("Name")]`
 
-마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` `Export` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 `DidChangeValue` 해당 값에 대 한 변경 내용을 래핑해야 합니다.  예:
+마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` `Export` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 `DidChangeValue` 해당 값에 대 한 변경 내용을 래핑해야 합니다.  예를 들어:
 
 ```csharp
 set {
@@ -103,7 +103,7 @@ namespace MacDatabinding
     {
         private string _name = "";
         private PersonModel _child = new PersonModel();
-        
+
         [Export("Name")]
         public string Name {
             get { return _name; }
@@ -113,7 +113,7 @@ namespace MacDatabinding
                 DidChangeValue ("Name");
             }
         }
-        
+
         [Export("Child")]
         public PersonModel Child {
             get { return _child; }
@@ -123,7 +123,7 @@ namespace MacDatabinding
                 DidChangeValue ("Child");
             }
         }
-        
+
         public PersonModel ()
         {
         }
@@ -138,11 +138,11 @@ namespace MacDatabinding
 메서드 `ValueForKey` 는 요청을 받는 kvc 클래스의 인스턴스를 기준 `NSString`으로 지정 된 키 ()의 값을 반환 합니다. 예를 들어이 `Person` 위에 정의 된 `PersonModel` 클래스의 인스턴스인 경우:
 
 ```csharp
-// Read value 
+// Read value
 var name = Person.ValueForKey (new NSString("Name"));
 ```
 
-이렇게 하면 해당 `Name` `PersonModel`인스턴스에 대 한 속성 값이 반환 됩니다. 
+이렇게 하면 해당 `Name` `PersonModel`인스턴스에 대 한 속성 값이 반환 됩니다.
 
 ### <a name="setting-values-using-key-value-coding"></a>키-값 코딩을 사용 하 여 값 설정
 
@@ -159,7 +159,7 @@ Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 
 ### <a name="observing-value-changes"></a>값 변경 관찰
 
-키-값 관찰 (KVO)을 사용 하 여, 관찰자를 KVC 규격 클래스의 특정 키에 연결 하 고, 해당 키에 대 한 값이 수정 될 때마다 (KVC 기술을 사용 하거나 코드에서 C# 지정 된 속성에 직접 액세스 하는 경우) 알리도록 할 수 있습니다. 예를 들어:
+키-값 관찰 (KVO)을 사용 하 여, 관찰자를 KVC 규격 클래스의 특정 키에 연결 하 고, 해당 키에 대 한 값이 수정 될 때마다 (KVC 기술을 사용 하거나 코드에서 C# 지정 된 속성에 직접 액세스 하는 경우) 알리도록 할 수 있습니다. 예:
 
 ```csharp
 // Watch for the name value changing
@@ -169,7 +169,7 @@ Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
 });
 ```
 
-이제 `Person` `Name` 클래스`PersonModel` 인스턴스의 속성이 수정 될 때마다 새 값이 콘솔에 기록 됩니다. 
+이제 `Person` `Name` 클래스`PersonModel` 인스턴스의 속성이 수정 될 때마다 새 값이 콘솔에 기록 됩니다.
 
 자세한 내용은 Apple의 [키-값 관찰 프로그래밍 가이드를](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i)참조 하세요.
 
@@ -391,7 +391,7 @@ public NSImage Icon {
         }
     }
 }
-``` 
+```
 
 이를 해결 하기 위해 다음 코드를 사용 합니다.
 
@@ -419,7 +419,7 @@ public bool isManager {
 
 데이터 모델을 정의 하면 Xcode의 Interface Builder에 있는 데이터 바인딩의 간단한 예를 살펴보겠습니다. 예를 들어 위에서 정의한을 편집 `PersonModel` 하는 데 사용할 수 있는 양식을 xamarin.ios 응용 프로그램에 추가 하겠습니다. 몇 가지 텍스트 필드와 확인란을 추가 하 여 모델의 속성을 표시 하 고 편집할 수 있습니다.
 
-먼저 Interface Builder의 **기본 storyboard** 파일에 새 `SimpleViewController` **뷰 컨트롤러** 를 추가 하 고 해당 클래스의 이름을로 지정 합니다. 
+먼저 Interface Builder의 **기본 storyboard** 파일에 새 `SimpleViewController` **뷰 컨트롤러** 를 추가 하 고 해당 클래스의 이름을로 지정 합니다.
 
 [![새 뷰 컨트롤러 추가](databinding-images/simple01.png "새 뷰 컨트롤러 추가")](databinding-images/simple01-large.png#lightbox)
 
@@ -466,23 +466,23 @@ public override void ViewDidLoad ()
 키`Person` 를 통해 노출 `PersonModel` 된에 폼을 데이터 바인딩하려면 다음을 수행 합니다.
 
 1. **직원 이름** 텍스트 필드를 선택 하 고 **바인딩 검사자**로 전환 합니다.
-2. **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 뷰 컨트롤러** 를 선택 합니다. `self.Person.Name` **키 경로**에 대해 다음을 입력 합니다. 
+2. **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 뷰 컨트롤러** 를 선택 합니다. `self.Person.Name` **키 경로**에 대해 다음을 입력 합니다.
 
     [![키 경로 입력](databinding-images/simple03.png "키 경로 입력")](databinding-images/simple03-large.png#lightbox)
-3. **직업** 텍스트 필드를 선택 하 고 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.Occupation` **키 경로**에 대해 다음을 입력 합니다.  
+3. **직업** 텍스트 필드를 선택 하 고 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.Occupation` **키 경로**에 대해 다음을 입력 합니다.
 
     [![키 경로 입력](databinding-images/simple04.png "키 경로 입력")](databinding-images/simple04-large.png#lightbox)
-4. **Employee is a Manager** 확인란을 선택 하 고 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.isManager` **키 경로**에 대해 다음을 입력 합니다.  
+4. **Employee is a Manager** 확인란을 선택 하 고 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.isManager` **키 경로**에 대해 다음을 입력 합니다.
 
     [![키 경로 입력](databinding-images/simple05.png "키 경로 입력")](databinding-images/simple05-large.png#lightbox)
-5. **직원의 관리 되** 는 텍스트 필드를 선택 하 고 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.NumberOfEmployees` **키 경로**에 대해 다음을 입력 합니다.  
+5. **직원의 관리 되** 는 텍스트 필드를 선택 하 고 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.NumberOfEmployees` **키 경로**에 대해 다음을 입력 합니다.
 
     [![키 경로 입력](databinding-images/simple06.png "키 경로 입력")](databinding-images/simple06-large.png#lightbox)
 6. 직원이 관리자가 아니면 직원의 관리 되는 레이블과 텍스트 필드의 수를 숨기려는 것입니다.
-7. **직원의 관리 되** 는 레이블 수를 선택 하 **고 Hidden** 접혀를 확장 한 다음 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.isManager` **키 경로**에 대해 다음을 입력 합니다.  
+7. **직원의 관리 되** 는 레이블 수를 선택 하 **고 Hidden** 접혀를 확장 한 다음 **바인딩 대상** 상자를 선택 하 고 드롭다운에서 **단순 보기 컨트롤러** 를 선택 합니다. `self.Person.isManager` **키 경로**에 대해 다음을 입력 합니다.
 
     [![키 경로 입력](databinding-images/simple07.png "키 경로 입력")](databinding-images/simple07-large.png#lightbox)
-8. `NSNegateBoolean` **값 변환기** 드롭다운에서 다음을 선택 합니다.  
+8. `NSNegateBoolean` **값 변환기** 드롭다운에서 다음을 선택 합니다.
 
     ![NSNegateBoolean 키 변환 선택](databinding-images/simple08.png "NSNegateBoolean 키 변환 선택")
 9. 그러면 `isManager` 속성 값이 인 `false`경우 레이블이 숨겨지도록 데이터 바인딩에 지시 합니다.
@@ -576,34 +576,34 @@ public override void AwakeFromNib ()
 
 테이블에 바인딩된 데이터를 제공 하기 위해 **배열 컨트롤러** 를 추가 하 고 다음을 수행 해야 합니다.
 
-1. **라이브러리 검사기** 의 **배열 컨트롤러** 를 **인터페이스 편집기**로 끌어 옵니다.  
+1. **라이브러리 검사기** 의 **배열 컨트롤러** 를 **인터페이스 편집기**로 끌어 옵니다.
 
     ![라이브러리에서 배열 컨트롤러 선택](databinding-images/table03.png "라이브러리에서 배열 컨트롤러 선택")
-2. **인터페이스 계층 구조** 에서 **배열 컨트롤러** 를 선택 하 고 **특성 검사자**로 전환 합니다.  
+2. **인터페이스 계층 구조** 에서 **배열 컨트롤러** 를 선택 하 고 **특성 검사자**로 전환 합니다.
 
     [![특성 검사자 선택](databinding-images/table04.png "특성 검사자 선택")](databinding-images/table04-large.png#lightbox)
-3. `PersonModel` **클래스 이름**으로를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. `Name`이름 및:`Occupation` `isManager`  
+3. `PersonModel` **클래스 이름**으로를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. `Name`이름 및:`Occupation` `isManager`
 
     ![필수 키 경로 추가](databinding-images/table05.png "필수 키 경로 추가")
 4. 이렇게 하면 배열 컨트롤러에서 배열을 관리 하는 대상과 키를 통해 노출 해야 하는 속성을 알 수 있습니다.
-5. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **테이블 뷰 컨트롤러**를 선택 합니다. **모델 키 경로** `self.personModelArray`입력:  
+5. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **테이블 뷰 컨트롤러**를 선택 합니다. **모델 키 경로** `self.personModelArray`입력:
 
     ![키 경로 입력](databinding-images/table06.png "키 경로 입력")
 6. 이렇게 하면 배열 컨트롤러가 보기 컨트롤러에 노출 `PersonModels` 된 배열에 연결 됩니다.
 
 이제 테이블 뷰를 배열 컨트롤러에 바인딩해야 하며, 다음을 수행 해야 합니다.
 
-1. 테이블 뷰 및 **바인딩 검사기**를 선택 합니다.  
+1. 테이블 뷰 및 **바인딩 검사기**를 선택 합니다.
 
     [![바인딩 검사자 선택](databinding-images/table07.png "바인딩 검사자 선택")](databinding-images/table07-large.png#lightbox)
-2. **표 내용** 접혀에서 바인딩 및 **배열 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.  
+2. **표 내용** 접혀에서 바인딩 및 **배열 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.
 
     ![컨트롤러 키 정의](databinding-images/table08.png "컨트롤러 키 정의")
-3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.  
+3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 설정](databinding-images/table09.png "모델 키 경로 설정")](databinding-images/table09-large.png#lightbox)
 4. `objectValue`배열 컨트롤러에서 `PersonModel` 관리 중인 배열의 현재입니다.
-5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.  
+5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 설정](databinding-images/table10.png "모델 키 경로 설정")](databinding-images/table10-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
@@ -618,7 +618,7 @@ public override void AwakeFromNib ()
 
 개요 뷰에 대 한 데이터 바인딩은 테이블 뷰에 대 한 바인딩과 매우 유사 합니다. 주요 차이점은 **배열 컨트롤러** 대신 **트리 컨트롤러** 를 사용 하 여 바인딩된 데이터를 개요 뷰에 제공 한다는 것입니다. 개요 보기를 사용 하는 방법에 대 한 자세한 내용은 [개요 보기](~/mac/user-interface/outline-view.md) 설명서를 참조 하세요.
 
-먼저 Interface Builder의 **기본 storyboard** 파일에 새 `OutlineViewController` **뷰 컨트롤러** 를 추가 하 고 해당 클래스의 이름을로 지정 합니다. 
+먼저 Interface Builder의 **기본 storyboard** 파일에 새 `OutlineViewController` **뷰 컨트롤러** 를 추가 하 고 해당 클래스의 이름을로 지정 합니다.
 
 [![새 뷰 컨트롤러 추가](databinding-images/outline01.png "새 뷰 컨트롤러 추가")](databinding-images/outline01-large.png#lightbox)
 
@@ -694,38 +694,38 @@ public override void AwakeFromNib ()
 
 개요에 바인딩된 데이터를 제공 하는 **트리 컨트롤러** 를 추가 하 고 다음을 수행 해야 합니다.
 
-1. **라이브러리 검사기** 에서 **트리 컨트롤러** 를 **인터페이스 편집기**로 끌어 옵니다.  
+1. **라이브러리 검사기** 에서 **트리 컨트롤러** 를 **인터페이스 편집기**로 끌어 옵니다.
 
     ![라이브러리에서 트리 컨트롤러 선택](databinding-images/outline03.png "라이브러리에서 트리 컨트롤러 선택")
-2. **인터페이스 계층 구조** 에서 **트리 컨트롤러** 를 선택 하 고 **특성 검사자**로 전환 합니다.  
+2. **인터페이스 계층 구조** 에서 **트리 컨트롤러** 를 선택 하 고 **특성 검사자**로 전환 합니다.
 
     [![특성 검사자 선택](databinding-images/outline04.png "특성 검사자 선택")](databinding-images/outline04-large.png#lightbox)
-3. `PersonModel` **클래스 이름**으로를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. `Name`이름 및:`Occupation` `isManager`  
+3. `PersonModel` **클래스 이름**으로를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. `Name`이름 및:`Occupation` `isManager`
 
     ![필수 키 경로 추가](databinding-images/outline05.png "필수 키 경로 추가")
 4. 이를 통해 트리 컨트롤러에서 배열을 관리 하는 대상 및 키를 통해 노출 해야 하는 속성을 알 수 있습니다.
-5. **트리 컨트롤러** 섹션에서 **자식** `NumberOfEmployees` 에 대해 `personModelArray` 를 입력 하 고 **개수** 아래에을 입력 `isEmployee` 한 다음 **리프**아래에을 입력 합니다.  
+5. **트리 컨트롤러** 섹션에서 **자식** `NumberOfEmployees` 에 대해 `personModelArray` 를 입력 하 고 **개수** 아래에을 입력 `isEmployee` 한 다음 **리프**아래에을 입력 합니다.
 
     ![트리 컨트롤러 키 경로 설정](databinding-images/outline05.png "트리 컨트롤러 키 경로 설정")
 6. 그러면 트리 컨트롤러에 자식 노드를 찾을 수 있는 위치, 자식 노드 수와 현재 노드에 자식 노드가 있는지 여부를 알 수 있습니다.
-7. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **파일의 소유자**를 선택 합니다. **모델 키 경로** `self.personModelArray`입력:  
+7. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **파일의 소유자**를 선택 합니다. **모델 키 경로** `self.personModelArray`입력:
 
     ![키 경로 편집](databinding-images/outline06.png "키 경로 편집")
 8. 이는 트리 컨트롤러를 뷰 컨트롤러에 노출 `PersonModels` 된의 배열에 연결 합니다.
 
 이제 개요 뷰를 트리 컨트롤러에 바인딩해야 하며, 다음을 수행 해야 합니다.
 
-1. 개요 보기를 선택 하 고 **바인딩 검사기** 에서 다음을 선택 합니다.  
+1. 개요 보기를 선택 하 고 **바인딩 검사기** 에서 다음을 선택 합니다.
 
     [![바인딩 검사자 선택](databinding-images/outline07.png "바인딩 검사자 선택")](databinding-images/outline07-large.png#lightbox)
-2. **개요 보기 내용** 접혀에서 바인딩 및 **트리 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.  
+2. **개요 보기 내용** 접혀에서 바인딩 및 **트리 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.
 
     ![컨트롤러 키 설정](databinding-images/outline08.png "컨트롤러 키 설정")
-3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.  
+3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 입력](databinding-images/outline09.png "모델 키 경로 입력")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue`는 트리 컨트롤러 `PersonModel` 에서 관리 중인 배열의 현재입니다.
-5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.  
+5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 입력](databinding-images/outline10.png "모델 키 경로 입력")](databinding-images/outline10-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
@@ -743,7 +743,7 @@ public override void AwakeFromNib ()
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 
-First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`: 
+First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`:
 
 ![](databinding-images/collection01.png)
 

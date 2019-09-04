@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 567985b1d6c6aff87e0a6879f05ab711a0095d6f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b7888ea29dd02733059346bca21fec0a4c510c2e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647197"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228002"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Xamarin.Forms에 명시적 스타일
 
@@ -64,9 +64,9 @@ _명시적 스타일의 스타일 속성을 설정 하 여 선택적으로 컨�
 </ContentPage>
 ```
 
-합니다 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 3 정의 *명시적* 페이지에 적용 되는 스타일 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 됩니다 `Label` 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 사용 하 여 속성을 `StaticResource` 태그 확장 합니다. 이 인해 다음 스크린샷에 표시 된 모양:
+합니다 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 3 정의 *명시적* 페이지에 적용 되는 스타일 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스. 각 `Style` 도 글꼴 크기 및 가로 및 세로 레이아웃 옵션을 설정 하는 동안 다른 색으로 텍스트를 표시 하는 데 사용 됩니다. 각 `Style` 다른 적용 됩니다 `Label` 설정 하 여 해당 [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) 사용 하 여 속성을 `StaticResource` 태그 확장 합니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-[![](explicit-images/explicit-styles.png "명시적 스타일 예제")](explicit-images/explicit-styles-large.png#lightbox "명시적 스타일 예제")
+[![명시적 스타일 예제](explicit-images/explicit-styles.png)](explicit-images/explicit-styles-large.png#lightbox)
 
 또한 최종 [ `Label` ](xref:Xamarin.Forms.Label) 에 [ `Style` ](xref:Xamarin.Forms.Style) 적용 하지만 또한 재정의 [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) 속성을 다른 `Color`값입니다.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: a5587d5a4ed5201b8f09dfa3b4d2d292abd008d3
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 36b0526f549e0439543d762cd9390b72ce93825f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889835"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225999"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 
 _이 문서에서는 핵심 그래픽 iOS 프레임 워크에 대해 설명 합니다. 핵심 그래픽을 사용 하 여 기 하 도형, 이미지 및 Pdf를 그리는 방법을 보여 줍니다._
 
-iOS에는 하위 수준의 그리기 지원 기능을 제공 하는 [*핵심 그래픽*](https://developer.apple.com/library/prerelease/ios/documentation/CoreGraphics/Reference/CoreGraphics_Framework/index.html) 프레임 워크가 포함 되어 있습니다. 이러한 프레임 워크는 UIKit 내에서 풍부한 그래픽 기능을 사용 하도록 설정 합니다. 
+iOS에는 하위 수준의 그리기 지원 기능을 제공 하는 [*핵심 그래픽*](https://developer.apple.com/library/prerelease/ios/documentation/CoreGraphics/Reference/CoreGraphics_Framework/index.html) 프레임 워크가 포함 되어 있습니다. 이러한 프레임 워크는 UIKit 내에서 풍부한 그래픽 기능을 사용 하도록 설정 합니다.
 
 핵심 그래픽은 장치 독립적인 그래픽의 그리기를 허용 하는 낮은 수준의 2D 그래픽 프레임 워크입니다. UIKit의 모든 2D 그리기는 내부적으로 핵심 그래픽을 사용 합니다.
 
@@ -77,7 +77,7 @@ Draw는 직접 호출 하면 안 됩니다. 실행된 루프 처리 하는 동�
 ```csharp
 //get graphics context
 using (CGContext g = UIGraphics.GetCurrentContext ()) {
-            
+
     //set up drawing attributes
     g.SetLineWidth (10);
     UIColor.Blue.SetFill ();
@@ -88,13 +88,13 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 
     path.AddLines (new CGPoint[]{
     new CGPoint (100, 200),
-    new CGPoint (160, 100), 
+    new CGPoint (160, 100),
     new CGPoint (220, 200)});
 
     path.CloseSubpath ();
 
     //add geometry to graphics context and draw it
-    g.AddPath (path);       
+    g.AddPath (path);
     g.DrawPath (CGPathDrawingMode.FillStroke);
 }
 ```
@@ -113,7 +113,7 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 g.SetLineWidth (10);
 UIColor.Blue.SetFill ();
 UIColor.Red.SetStroke ();
-``` 
+```
 
 그래픽 컨텍스트를 가져온 후 코드는 위에 표시 된 대로 그릴 때 사용할 일부 특성을 설정 합니다. 이 경우 선 두께, 스트로크 및 채우기 색이 설정 됩니다. 그런 다음, 모든 후속 그리기는 그래픽 컨텍스트의 상태에서 유지 되므로 이러한 특성을 사용 합니다.
 
@@ -124,11 +124,11 @@ var path = new CGPath ();
 
 path.AddLines (new CGPoint[]{
 new CGPoint (100, 200),
-new CGPoint (160, 100), 
+new CGPoint (160, 100),
 new CGPoint (220, 200)});
 
 path.CloseSubpath ();
-``` 
+```
 
 경로를 만든 후에는를 호출 `AddPath` 하 고 `DrawPath` 각각을 그릴 수 있도록 그래픽 컨텍스트에 추가 됩니다.
 
@@ -159,9 +159,9 @@ g.Clip ();
 
 // draw a linear gradient
     g.DrawLinearGradient (
-        gradient, 
-        new CGPoint (path.BoundingBox.Left, path.BoundingBox.Top), 
-        new CGPoint (path.BoundingBox.Right, path.BoundingBox.Bottom), 
+        gradient,
+        new CGPoint (path.BoundingBox.Left, path.BoundingBox.Top),
+        new CGPoint (path.BoundingBox.Right, path.BoundingBox.Bottom),
         CGGradientDrawingOptions.DrawsBeforeStartLocation);
     }
 ```
@@ -182,7 +182,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 그리기 작업을 수행 하기 전에이 코드를 추가 하면 아래와 같이 파선 사이에 4 개의 간격을 사용 하 여 대시 선이 10 단위 길이입니다.
 
  ![](core-graphics-images/02-dashed-stroke.png "그리기 작업 앞에이 코드를 추가 하면 대시 선이 생성 됩니다.")
- 
+
 Xamarin.ios에서 Unified API를 사용 하는 경우 배열 형식은 이어야 `nfloat`하며, 수학. PI로 명시적으로 캐스팅 해야 합니다.
 
 <a name="Drawing_Images_and_Text"/>
@@ -214,14 +214,14 @@ public override void Draw (CGRect rect)
 public override void Draw (CGRect rect)
 {
     base.Draw (rect);
-    
+
     using (CGContext g = UIGraphics.GetCurrentContext ()) {
 
         // scale and translate the CTM so the image appears upright
         g.ScaleCTM (1, -1);
         g.TranslateCTM (0, -Bounds.Height);
         g.DrawImage (rect, UIImage.FromFile ("MyImage.png").CGImage);
-}   
+}
 ```
 
 그러면 결과 이미지가 수직으로 표시 됩니다.
@@ -239,7 +239,7 @@ public override void Draw (CGRect rect)
 public override void Draw (RectangleF rect)
 {
     base.Draw (rect);
-    
+
     // image drawing code omitted for brevity ...
 
     // translate the CTM by the font size so it displays on screen
@@ -308,7 +308,7 @@ UIImage DrawTriangle ()
 
         path.AddLines(new CGPoint[]{
             new CGPoint(100,200),
-            new CGPoint(160,100), 
+            new CGPoint(160,100),
             new CGPoint(220,200)});
 
         path.CloseSubpath();
@@ -320,7 +320,7 @@ UIImage DrawTriangle ()
         //get a UIImage from the context
         triangleImage = UIGraphics.GetImageFromCurrentImageContext ();
     }
-    
+
     return triangleImage;
 }
 ```
@@ -358,7 +358,7 @@ public class PDFView : UIView
         //create a CGPDFDocument from file.pdf included in the main bundle
         pdfDoc = CGPDFDocument.FromFile ("file.pdf");
     }
-  
+
      public override void Draw (Rectangle rect)
     {
         ...
@@ -372,21 +372,21 @@ public class PDFView : UIView
 public override void Draw (CGRect rect)
 {
     base.Draw (rect);
-        
+
     //flip the CTM so the PDF will be drawn upright
     using (CGContext g = UIGraphics.GetCurrentContext ()) {
         g.TranslateCTM (0, Bounds.Height);
         g.ScaleCTM (1, -1);
-        
+
         // render the first page of the PDF
         using (CGPDFPage pdfPage = pdfDoc.GetPage (1)) {
-            
+
         //get the affine transform that defines where the PDF is drawn
         CGAffineTransform t = pdfPage.GetDrawingTransform (CGPDFBox.Crop, rect, 0, true);
-        
+
         //concatenate the pdf transform with the CTM for display in the view
         g.ConcatCTM (t);
-        
+
         //draw the pdf page
         g.DrawPDFPage (pdfPage);
         }
@@ -409,14 +409,14 @@ UIGraphics.BeginPDFContext (data, CGRect.Empty, null);
 
 //start a PDF page
 UIGraphics.BeginPDFPage ();
-       
+
 using (CGContext g = UIGraphics.GetCurrentContext ()) {
     g.ScaleCTM (1, -1);
-    g.TranslateCTM (0, -25);      
+    g.TranslateCTM (0, -25);
     g.SelectFont ("Helvetica", 25, CGTextEncoding.MacRoman);
     g.ShowText ("Hello Core Graphics");
     }
-    
+
 //complete a PDF page
 UIGraphics.EndPDFContent ();
 ```

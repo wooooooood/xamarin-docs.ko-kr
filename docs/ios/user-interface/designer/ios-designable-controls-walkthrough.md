@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 448bc60891a44d8cd5eea0480031d692b4fb5d31
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 65b6f11662cdb8e1814e1146faf70cd01b2c11bc
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657472"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227095"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>iOS 디자이너에서 사용자 지정 컨트롤 사용
 
@@ -44,7 +44,7 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
     using CoreGraphics;
     using Foundation;
     using UIKit;
-    
+
     namespace ScratchTicket
     {
         [Register("ScratchTicketView"), DesignTimeVisible(true)]
@@ -55,7 +55,7 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
             CGPoint latestPoint;
             bool startNewPath = false;
             UIImage image;
-    
+
             [Export("Image"), Browsable(true)]
             public UIImage Image
             {
@@ -66,18 +66,18 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
                     SetNeedsDisplay();
                 }
             }
-    
+
             public ScratchTicketView(IntPtr p)
                 : base(p)
             {
                 Initialize();
             }
-    
+
             public ScratchTicketView()
             {
                 Initialize();
             }
-    
+
             void Initialize()
             {
                 initialPoint = CGPoint.Empty;
@@ -87,42 +87,42 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
                 path = new CGPath();
                 SetNeedsDisplay();
             }
-    
+
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
-    
+
                 var touch = touches.AnyObject as UITouch;
-    
+
                 if (touch != null)
                 {
                     initialPoint = touch.LocationInView(this);
                 }
             }
-    
+
             public override void TouchesMoved(NSSet touches, UIEvent evt)
             {
                 base.TouchesMoved(touches, evt);
-    
+
                 var touch = touches.AnyObject as UITouch;
-    
+
                 if (touch != null)
                 {
                     latestPoint = touch.LocationInView(this);
                     SetNeedsDisplay();
                 }
             }
-    
+
             public override void TouchesEnded(NSSet touches, UIEvent evt)
             {
                 base.TouchesEnded(touches, evt);
                 startNewPath = true;
             }
-    
+
             public override void Draw(CGRect rect)
             {
                 base.Draw(rect);
-    
+
                 using (var g = UIGraphics.GetCurrentContext())
                 {
                     if (image != null)
@@ -130,13 +130,13 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
                     else
                         g.SetFillColor(UIColor.LightGray.CGColor);
                     g.FillRect(rect);
-    
+
                     if (!initialPoint.IsEmpty)
                     {
                         g.SetLineWidth(20);
                         g.SetBlendMode(CGBlendMode.Clear);
                         UIColor.Clear.SetColor();
-    
+
                         if (path.IsEmpty || startNewPath)
                         {
                             path.AddLines(new CGPoint[] { initialPoint, latestPoint });
@@ -146,9 +146,9 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
                         {
                             path.AddLineToPoint(latestPoint);
                         }
-    
+
                         g.SetLineCap(CGLineCap.Round);
-                        g.AddPath(path);        
+                        g.AddPath(path);
                         g.DrawPath(CGPathDrawingMode.Stroke);
                     }
                 }
@@ -159,7 +159,7 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
 
 1. `FillTexture.png`, 및파일`Monkey.png` ( [GitHub에서](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)사용 가능)을 Resources 폴더에 추가 합니다. `FillTexture2.png`
-    
+
 1. 디자이너에서 `Main.storyboard` 파일을 두 번 클릭 하 여 엽니다.
 
     [![](ios-designable-controls-walkthrough-images/03new.png "IOS 디자이너")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
@@ -174,7 +174,7 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
     [![](ios-designable-controls-walkthrough-images/05new.png "이미지 보기 이미지 속성을 원숭이 .png로 설정")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
-    
+
 1. Size 클래스를 사용할 때이 이미지 뷰를 제한 해야 합니다. 이미지를 두 번 클릭 하 여 제약 조건 모드로 전환 합니다. 중심 고정 핸들을 클릭 하 여 가운데로 제한 하 고 가로 및 세로로 정렬 합니다.
 
     [![](ios-designable-controls-walkthrough-images/06new.png "이미지 가운데 맞춤")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
@@ -215,12 +215,12 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
 ```csharp
 [Export("Image"), Browsable(true)]
-public UIImage Image 
+public UIImage Image
 {
     get { return image; }
-    set { 
+    set {
             image = value;
-            SetNeedsDisplay ();
+              SetNeedsDisplay ();
         }
 }
 ```
@@ -238,7 +238,7 @@ public override void Draw(CGRect rect)
             g.SetFillColor ((UIColor.FromPatternImage (image).CGColor));
         else
             g.SetFillColor (UIColor.LightGray.CGColor);
-            
+
         g.FillRect(rect);
 
         if (!initialPoint.IsEmpty)
@@ -258,7 +258,7 @@ public override void Draw(CGRect rect)
              }
 
              g.SetLineCap(CGLineCap.Round);
-             g.AddPath(path);       
+             g.AddPath(path);
              g.DrawPath(CGPathDrawingMode.Stroke);
         }
     }

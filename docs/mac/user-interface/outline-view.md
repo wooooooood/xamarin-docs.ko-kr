@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a57363ef0fec4668fe35e1d7198372a543d672e7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3b045d18d66463a1464e446847cb5dbfd531bbf3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655341"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227879"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Xamarin.ios의 개요 보기
 
@@ -87,11 +87,11 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 - **Grid color** -셀 테두리 색을 설정 합니다.
 - **배경** -셀 배경색을 설정 합니다.
 - **선택** -사용자가 테이블의 셀을 선택 하는 방법을 제어할 수 있습니다.
-    - **Multiple** -이면 `true`사용자가 여러 행과 열을 선택할 수 있습니다.
-    - **열** -이면 `true`사용자가 열을 선택할 수 있습니다.
-    - **Select** -If `true`를 입력 하 고 사용자가 문자를 입력 하 여 행을 선택할 수 있습니다.
-    - **Empty** -인 `true`경우 사용자가 행 또는 열을 선택할 필요가 없으면 테이블에서 선택할 수 없습니다.
-- 자동 **저장-테이블** 형식이 자동으로 저장 되는 이름입니다.
+  - **Multiple** -이면 `true`사용자가 여러 행과 열을 선택할 수 있습니다.
+  - **열** -이면 `true`사용자가 열을 선택할 수 있습니다.
+  - **Select** -If `true`를 입력 하 고 사용자가 문자를 입력 하 여 행을 선택할 수 있습니다.
+  - **Empty** -인 `true`경우 사용자가 행 또는 열을 선택할 필요가 없으면 테이블에서 선택할 수 없습니다.
+- 자동 저장-테이블 형식이 자동으로 저장 되는 이름입니다.
 - **열 정보** -이면 `true`열의 순서와 너비가 자동으로 저장 됩니다.
 - **줄 바꿈** -셀에서 줄 바꿈을 처리 하는 방법을 선택 합니다.
 - **마지막으로 표시 되** 는 줄 `true`을 자릅니다.-인 경우 데이터에서 잘린 셀은 해당 범위 내에 맞지 않을 수 있습니다.
@@ -157,14 +157,14 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 이 프로세스는 표시 하려는 모든 개요 뷰 요소에 대해 동일 합니다.
 
-1. **길잡이 편집기** 로 전환 하 여 `ViewController.h` 파일이 선택 되었는지 확인 합니다. 
+1. **길잡이 편집기** 로 전환 하 여 `ViewController.h` 파일이 선택 되었는지 확인 합니다.
 
     [![](outline-view-images/edit11.png "올바른 .h 파일 선택")](outline-view-images/edit11.png#lightbox)
 2. **인터페이스 계층 구조**에서 개요 뷰를 선택 하 고, 컨트롤을 클릭 한 다음 `ViewController.h` 파일을 끕니다.
-3. 다음 이라는 `ProductOutline`개요 보기의 콘센트를 만듭니다. 
+3. 다음 이라는 `ProductOutline`개요 보기의 콘센트를 만듭니다.
 
     [![](outline-view-images/edit13.png "콘센트 구성")](outline-view-images/edit13.png#lightbox)
-4. `ProductColumn` 및`DetailsColumn`라는 테이블 열에 대 한 콘센트를 만듭니다. 
+4. `ProductColumn` 및`DetailsColumn`라는 테이블 열에 대 한 콘센트를 만듭니다.
 
     [![](outline-view-images/edit14.png "콘센트 구성")](outline-view-images/edit14.png#lightbox)
 5. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
@@ -263,7 +263,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).Products [childIndex];
             }
-                
+
         }
 
         public override bool ItemExpandable (NSOutlineView outlineView, NSObject item)
@@ -273,7 +273,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).IsProductGroup;
             }
-        
+
         }
         #endregion
     }
@@ -298,7 +298,7 @@ namespace MacOutlines
 {
     public class ProductOutlineDelegate : NSOutlineViewDelegate
     {
-        #region Constants 
+        #region Constants
         private const string CellIdentifier = "ProdCell";
         #endregion
 
@@ -578,7 +578,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.StringValue;
-            break; 
+            break;
         }
     };
 
@@ -649,7 +649,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.TextField.StringValue;
-            break; 
+            break;
         }
     };
 

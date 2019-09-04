@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 1f49f3c24bc4c89edb005206b953176639214481
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647172"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226897"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
 
@@ -35,16 +35,16 @@ _이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없
 응용 프로그램에 대 한 Xibless 창으로 전환 하려면 다음을 수행 합니다.
 
 1. 또는. xib 파일을 사용 하 여 `.storyboard` 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio에서 사용자 인터페이스를 정의 합니다.
-2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** 파일을 마우스 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다. 
+2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** 파일을 마우스 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다.
 
     ![주 storyboard 또는 창 제거](xibless-ui-images/switch01.png "주 storyboard 또는 창 제거")
-3. **제거 대화 상자**에서 **삭제** 단추를 클릭 하 여 프로젝트에서 storyboard 또는. xib을 완전히 제거 합니다. 
+3. **제거 대화 상자**에서 **삭제** 단추를 클릭 하 여 프로젝트에서 storyboard 또는. xib을 완전히 제거 합니다.
 
     ![삭제 확인](xibless-ui-images/switch02.png "삭제 확인")
 
 이제를 더 이상 사용 하지 않으므로 창의 레이아웃을 정의 하 고 **ViewController.cs** 또는 **MainWindowController.cs** 파일을 수정 하 여 `MainWindow` 클래스의 인스턴스를 만들도록 **MainWindow.cs** 파일을 수정 해야 합니다. 스토리 보드 또는. xib 파일.
 
-사용자 인터페이스에 대해 Storyboard를 사용 하는 최신 Xamarin.ios 앱은 **MainWindow.cs**, **ViewController.cs** 또는 **MainWindowController.cs** 파일을 자동으로 포함 하지 않을 수 있습니다. C# 필요한 경우 프로젝트에 새 빈 클래스를 추가 하기만 하면 됩니다.**새 파일** 을**추가** > 합니다.  > 일반빈 > **클래스**)와 이름이 누락 된 파일과 동일 하 게 합니다. 
+사용자 인터페이스에 대해 Storyboard를 사용 하는 최신 Xamarin.ios 앱은 **MainWindow.cs**, **ViewController.cs** 또는 **MainWindowController.cs** 파일을 자동으로 포함 하지 않을 수 있습니다. C# 필요한 경우 프로젝트에 새 빈 클래스를 추가 하기만 하면 됩니다.**새 파일** 을**추가** > 합니다.  > 일반빈 > **클래스**)와 이름이 누락 된 파일과 동일 하 게 합니다.
 
 
 ### <a name="defining-the-window-in-code"></a>코드에서 창 정의
@@ -160,7 +160,7 @@ ContentView.AddSubview (ClickMeButton);
 
 마지막으로 메서드 `ContentView.AddSubview (ClickMeButton)` 는 응용 프로그램이 `NSButton` 실행 되 고 창이 표시 될 때 화면에 표시 되도록 콘텐츠 뷰에를 추가 합니다.
 
-다음으로를 클릭 한 횟수 `NSButton` 를 표시 하는 레이블이 창에 추가 됩니다. 
+다음으로를 클릭 한 횟수 `NSButton` 를 표시 하는 레이블이 창에 추가 됩니다.
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -172,7 +172,7 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
     StringValue = "Button has not been clicked yet."
 };
 ContentView.AddSubview (ClickMeLabel);
-``` 
+```
 
 Macos는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 역할을 `NSTextField` 할 수 있도록 특수 스타일이 지정 된를 추가 했습니다. 이전 단추와 마찬가지로 크기 및 위치는 (0, 0)가 창의 왼쪽 아래에 있는 것을 고려 합니다. 속성 `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` 은 **또는** 연산자를 사용 하 여 두 `NSViewResizingMask` 기능을 결합 합니다. 그러면 창의 가로 크기를 조정 하 고 창의 크기를 가로로 조정 하는 경우 창의 위쪽에서 같은 위치에 레이블을 유지 하 게 됩니다.
 
@@ -239,17 +239,17 @@ base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
-``` 
+```
 
 사용할 수 있는 기능은 다음과 같습니다. `NSWindowStyle`
 
-- 테두리 **없음-창의** 테두리를 포함 하지 않습니다.
-- 제목이 **-창** 에 제목 표시줄이 표시 됩니다.
+- 테두리 없음-창의 테두리를 포함 하지 않습니다.
+- 제목이-창에 제목 표시줄이 표시 됩니다.
 - **Closable** -창에 닫기 단추가 있으며 닫을 수 있습니다.
 - **Miniaturizable** -창에는 Miniaturize 단추가 있으며 최소화 될 수 있습니다.
-- 크기 조정 **가능-창의** 크기 조정 단추가 있으며 크기를 조정할 수 있습니다.
+- 크기 조정 가능-창의 크기 조정 단추가 있으며 크기를 조정할 수 있습니다.
 - **유틸리티** -유틸리티 스타일 창 (패널)입니다.
-- **Docmodal** -창이 패널 인 경우 시스템 모달 대신 문서 모달이 됩니다. 
+- **Docmodal** -창이 패널 인 경우 시스템 모달 대신 문서 모달이 됩니다.
 - **NonactivatingPanel** -창이 패널 인 경우 주 창이 됩니다.
 - **TexturedBackground** -창에 질감이 배경으로 포함 됩니다.
 - **크기** 를 조정 하지 않습니다. 창의 크기가 조정 되지 않습니다.
@@ -292,7 +292,7 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해당 **Solution Pad** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다. **새 파일** 대화 상자에서 아래 > 그림과 같이**컨트롤러를 사용 하 여 xamarin.ios cocoa 창을**선택 합니다.
 
-![새 창 컨트롤러 추가](xibless-ui-images/add01.png "새 창 컨트롤러 추가") 
+![새 창 컨트롤러 추가](xibless-ui-images/add01.png "새 창 컨트롤러 추가")
 
 이전과 마찬가지로 프로젝트에서 xib 파일 (이 경우 **SecondWindow. xib**)을 삭제 하 고 위의 [코드를 사용 하](#Switching_a_Window_to_use_Code) 여 창 전환 섹션의 단계에 따라 창의 정의를 코드에 포함 합니다.
 

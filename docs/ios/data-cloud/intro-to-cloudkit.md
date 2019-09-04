@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
-ms.openlocfilehash: 29e737e5a6cb6abdae099c0224a2da058c2ea025
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: af0765adb7e059bdc80c0b851b4bdcad8be0e3e4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527740"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227833"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.ios의 CloudKit
 
@@ -55,7 +55,7 @@ Xamarin 응용 프로그램에서 CloudKit 프레임 워크를 사용 하려면 
 
 1. Mac용 Visual Studio 또는 Visual Studio에서 프로젝트를 엽니다.
 2. **솔루션 탐색기**에서 **info.plist** 파일을 열고 **번들 식별자** 가 프로 비전 설정의 일부로 만든 **앱 ID** 에 정의 된 것과 일치 하는지 확인 합니다.
- 
+
     [![](intro-to-cloudkit-images/image26a.png "번들 식별자를 입력 하세요.")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3. **Info.plist** 파일의 아래쪽으로 스크롤하고 **사용 하도록 설정 된 백그라운드 모드**, **위치 업데이트** 및 **원격 알림**을 선택 합니다.
@@ -471,42 +471,42 @@ Cloudkit는 쿼리를 사용할 `NSPredicates` 때 다음과 같은 유형을 �
 
 
 1. 이름이 변수에 저장 된 값과 동일한 레코드 일치:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("name = '{0}'", recordName))
     ```
-   
+
 2. 는 동적 키 값에 따라 일치 하는 항목을 허용 하므로 컴파일 시간에 키를 몰라도 됩니다.
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("{0} = '{1}'", key, value))
     ```
-    
+
 3. 레코드 값이 지정 된 값 보다 큰 레코드 일치:
-   
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0}", (NSDate)date))
     ```
 
 4. 레코드 위치가 지정 된 위치의 100 미터 내에 있는 일치 레코드:
-    
-    ```
+
+    ```csharp
     var location = new CLLocation(37.783,-122.404);
     var predicate = NSPredicate.FromFormat(string.Format("distanceToLocation:fromLocation(Location,{0}) < 100", location));
     ```
 
 5. CloudKit는 토큰화 된 검색을 지원 합니다. 이 호출은 두 개의 토큰을 만듭니다. 하나 `after` 는에 대해 `session`하나, 다른 하나는 용입니다. 이러한 두 토큰이 포함 된 레코드를 반환 합니다.
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
-    
+
 6. Cloudkit는 연산자를 사용 하 여 `AND` 조인 된 복합 조건자를 지원 합니다.
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
-    
+
 
 
 #### <a name="creating-queries"></a>쿼리 작성
@@ -820,40 +820,40 @@ CloudKit를 사용 하는 응용 프로그램을 전달 하기 전에 **프로�
 
 다음을 수행합니다.
 
-1. Ma 용 Visual Studio에서 **릴리스** > **iOS 장치**에 대 한 응용 프로그램을 컴파일합니다. 
+1. Ma 용 Visual Studio에서 **릴리스** > **iOS 장치**에 대 한 응용 프로그램을 컴파일합니다.
 
     [![](intro-to-cloudkit-images/shipping01.png "릴리스에 대 한 응용 프로그램 컴파일")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
-2. **빌드** 메뉴에서 **보관**을 선택 합니다. 
+2. **빌드** 메뉴에서 **보관**을 선택 합니다.
 
     [![](intro-to-cloudkit-images/shipping02.png "보관 선택")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
-3. **보관 파일이** 생성 되 고 Mac용 Visual Studio 표시 됩니다. 
+3. **보관 파일이** 생성 되 고 Mac용 Visual Studio 표시 됩니다.
 
     [![](intro-to-cloudkit-images/shipping03.png "보관 파일이 생성 되 고 표시 됩니다.")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. **Xcode**를 시작합니다.
-5. **창** 메뉴에서 **구성 도우미**를 선택 합니다. 
+5. **창** 메뉴에서 **구성 도우미**를 선택 합니다.
 
     [![](intro-to-cloudkit-images/shipping04.png "구성 도우미 선택")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
-6. 응용 프로그램의 보관 위치를 선택 하 고 **내보내기 ...** 단추를 클릭 합니다. 
+6. 응용 프로그램의 보관 위치를 선택 하 고 **내보내기 ...** 단추를 클릭 합니다.
 
     [![](intro-to-cloudkit-images/shipping05.png "응용 프로그램의 보관 파일")](intro-to-cloudkit-images/shipping05.png#lightbox)
-    
-7. 내보낼 메서드를 선택 하 고 **다음** 단추를 클릭 합니다. 
+
+7. 내보낼 메서드를 선택 하 고 **다음** 단추를 클릭 합니다.
 
     [![](intro-to-cloudkit-images/shipping06.png "내보낼 방법 선택")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
-8. 드롭다운 목록에서 **개발 팀** 을 선택 하 고 **선택** 단추를 클릭 합니다. 
+8. 드롭다운 목록에서 **개발 팀** 을 선택 하 고 **선택** 단추를 클릭 합니다.
 
     [![](intro-to-cloudkit-images/shipping07.png "드롭다운 목록에서 개발 팀을 선택 합니다.")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
-9. 드롭다운 목록에서 **프로덕션** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
+9. 드롭다운 목록에서 **프로덕션** 을 선택 하 고 **다음** 단추를 클릭 합니다.
 
     [![](intro-to-cloudkit-images/shipping08.png "드롭다운 목록에서 프로덕션을 선택 합니다.")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
-10. 설정을 검토 하 고 **내보내기** 단추를 클릭 합니다. 
+10. 설정을 검토 하 고 **내보내기** 단추를 클릭 합니다.
 
     [![](intro-to-cloudkit-images/shipping09.png "설정 검토")](intro-to-cloudkit-images/shipping09.png#lightbox)
 

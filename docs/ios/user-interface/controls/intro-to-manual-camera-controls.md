@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 889bc13cfd0cbea51c34e8b3bcb6393293f4c2ae
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6f60b52d4fd29aacf319f9de94051e28c9876e33
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528751"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226705"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Xamarin.ios의 수동 카메라 컨트롤
 
@@ -172,8 +172,8 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
 
 1. 솔루션 탐색기 `AppDelegate.cs` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. 다음 using 문을 파일 맨 위에 추가 합니다.
-    
-    ```
+
+    ```csharp
     using System;
     using Foundation;
     using UIKit;
@@ -188,12 +188,12 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
     ```
 
 1. `AppDelegate` 클래스에 다음 전용 변수 및 계산 된 속성을 추가 합니다.
-    
-    ```
+
+    ```csharp
     #region Private Variables
     private NSError Error;
     #endregion
-    
+
     #region Computed Properties
     public override UIWindow Window {get;set;}
     public bool CameraAvailable { get; set; }
@@ -204,16 +204,16 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
     public AVCaptureDeviceInput Input { get; set; }
     #endregion
     ```
-  
+
 1. 완성 된 메서드를 재정의 하 고 다음과 같이 변경 합니다.
-    
-    ```
+
+    ```csharp
     public override void FinishedLaunching (UIApplication application)
     {
         // Create a new capture session
         Session = new AVCaptureSession ();
         Session.SessionPreset = AVCaptureSession.PresetMedium;
-    
+
         // Create a device input
         CaptureDevice = AVCaptureDevice.DefaultDeviceWithMediaType (AVMediaType.Video);
         if (CaptureDevice == null) {
@@ -222,7 +222,7 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
             CameraAvailable = false;
             return;
         }
-    
+
         // Prepare device for configuration
         CaptureDevice.LockForConfiguration (out Error);
         if (Error != null) {
@@ -231,13 +231,13 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
             CaptureDevice.UnlockForConfiguration ();
             return;
         }
-    
+
         // Configure stream for 15 frames per second (fps)
         CaptureDevice.ActiveVideoMinFrameDuration = new CMTime (1, 15);
-    
+
         // Unlock configuration
         CaptureDevice.UnlockForConfiguration ();
-    
+
         // Get input from capture device
         Input = AVCaptureDeviceInput.FromDevice (CaptureDevice);
         if (Input == null) {
@@ -246,27 +246,27 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
             CameraAvailable = false;
             return;
         }
-    
+
         // Attach input to session
         Session.AddInput (Input);
-    
+
         // Create a new output
         var output = new AVCaptureVideoDataOutput ();
         var settings = new AVVideoSettingsUncompressed ();
         settings.PixelFormatType = CVPixelFormatType.CV32BGRA;
         output.WeakVideoSettings = settings.Dictionary;
-    
+
         // Configure and attach to the output to the session
         Queue = new DispatchQueue ("ManCamQueue");
         Recorder = new OutputRecorder ();
         output.SetSampleBufferDelegate (Recorder, Queue);
         Session.AddOutput (output);
-    
+
         // Let tabs know that a camera is available
         CameraAvailable = true;
     }
-    ```  
-  
+    ```
+
 1. 파일의 변경 내용을 저장합니다.
 
 
@@ -300,10 +300,10 @@ IOS 장치에서 렌즈는 가까운 자석 및 스프링에서 센서에 가깝
 
 포커스를 처리할 때 개발자가 알아야 할 몇 가지 용어가 있습니다.
 
-- **필드의 깊이** – 가장 가까이와 가장 가까이 있는 개체 사이의 거리입니다. 
+- **필드의 깊이** – 가장 가까이와 가장 가까이 있는 개체 사이의 거리입니다.
 - **매크로** -포커스 스펙트럼의 가까운 끝 이며, 렌즈가 포커스를 이동할 수 있는 가장 가까운 거리입니다.
 - **Infinity** – 포커스 스펙트럼의 끝 부분으로, 렌즈가 집중할 수 있는 가장 먼 거리입니다.
-- 하이퍼 **초점 거리** – 프레임의 가장 먼 개체가 포커스의 맨 끝에만 있는 포커스 스펙트럼의 지점입니다. 즉, 필드의 깊이를 최대화 하는 초점면 위치가 여기에 해당 합니다. 
+- 하이퍼 **초점 거리** – 프레임의 가장 먼 개체가 포커스의 맨 끝에만 있는 포커스 스펙트럼의 지점입니다. 즉, 필드의 깊이를 최대화 하는 초점면 위치가 여기에 해당 합니다.
 - **렌즈 위치** – 위의 모든 용어를 제어 하는 것입니다. 센서의 렌즈와 포커스의 컨트롤러 사이의 거리입니다.
 
 
@@ -383,8 +383,8 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     using CoreGraphics;
     using CoreFoundation;
     using System.Timers;
-    ```  
-  
+    ```
+
 1. 다음 전용 변수를 추가 합니다.
 
     ```csharp
@@ -392,8 +392,8 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     private NSError Error;
     private bool Automatic = true;
     #endregion
-    ```  
-  
+    ```
+
 1. 다음 계산 된 속성을 추가 합니다.
 
     ```csharp
@@ -403,21 +403,21 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
     }
     public Timer SampleTimer { get; set; }
     #endregion
-    ```  
-  
+    ```
+
 1. 메서드를 `ViewDidLoad` 재정의 하 고 다음 코드를 추가 합니다.
 
     ```csharp
     public override void ViewDidLoad ()
     {
         base.ViewDidLoad ();
-    
+
         // Hide no camera label
         NoCamera.Hidden = ThisApp.CameraAvailable;
-    
+
         // Attach to camera view
         ThisApp.Recorder.DisplayView = CameraView;
-    
+
         // Create a timer to monitor and update the UI
         SampleTimer = new Timer (5000);
         SampleTimer.Elapsed += (sender, e) => {
@@ -426,13 +426,13 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
                 Position.Value = ThisApp.Input.Device.LensPosition;
             });
         };
-    
+
         // Watch for value changes
         Segments.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // Lock device for change
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
-    
+
             // Take action based on the segment selected
             switch(Segments.SelectedSegment) {
             case 0:
@@ -450,43 +450,43 @@ ThisApp.CaptureDevice.UnlockForConfiguration();
                 Position.Enabled = true;
                 break;
             }
-    
+
             // Unlock device
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         // Monitor position changes
         Position.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             if (Automatic) return;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.SetFocusModeLocked(Position.Value,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
     }
-    ```  
-  
+    ```
+
 1. 메서드를 `ViewDidAppear` 재정의 하 고 다음을 추가 하 여 뷰가 로드 될 때 기록을 시작 합니다.
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
             SampleTimer.Start ();
         }
     }
-    ```  
-  
+    ```
+
 1. 카메라를 Auto 모드에서 사용 하면 카메라가 포커스를 조정할 때 슬라이더가 자동으로 이동 됩니다.
 
     [![](intro-to-manual-camera-controls-images/image6.png "카메라가이 샘플 앱에서 포커스를 조정할 때 슬라이더가 자동으로 이동 됩니다.")](intro-to-manual-camera-controls-images/image6.png#lightbox)
@@ -517,7 +517,7 @@ IOS 8 응용 프로그램에서 노출을 제어 하는 방법에 대 한 자세
 노출을 제어 하기 위해 함께 제공 되는 세 가지 기본 요소는 다음과 같습니다.
 
 - **셔터 속도** – 카메라 센서를 밝게 하기 위해 셔터를 여는 데 걸리는 시간입니다. 셔터를 여는 시간이 짧을수록 빛이 줄어들고 이미지가 더 선명해 지는 것이 좋습니다 (동작 흐림 효과 낮음). 셔터를 더 길게 열면에서 더 많은 조명을 사용 하 고 더 많은 동작 흐림을 발생 합니다.
-- **ISO 매핑** – 필름 사진에서 빌려 온 용어 이며 필름의 화학 물질의 민감도를 나타냅니다. 필름의 낮은 ISO 값은 더 적고 색을 더 세밀 하 게 복제 합니다. 디지털 센서의 낮은 ISO 값은 센서 노이즈가 적고 밝기가 낮습니다. ISO 값이 높을수록 이미지의 밝기는 높아지지만 센서 소음은 더 커집니다. 디지털 센서의 "ISO"는 물리적 기능이 아니라 [전자적 이득을](https://en.wikipedia.org/wiki/Gain)측정 한 것입니다. 
+- **ISO 매핑** – 필름 사진에서 빌려 온 용어 이며 필름의 화학 물질의 민감도를 나타냅니다. 필름의 낮은 ISO 값은 더 적고 색을 더 세밀 하 게 복제 합니다. 디지털 센서의 낮은 ISO 값은 센서 노이즈가 적고 밝기가 낮습니다. ISO 값이 높을수록 이미지의 밝기는 높아지지만 센서 소음은 더 커집니다. 디지털 센서의 "ISO"는 물리적 기능이 아니라 [전자적 이득을](https://en.wikipedia.org/wiki/Gain)측정 한 것입니다.
 - **렌즈 애퍼처** – 렌즈를 여는 크기입니다. 모든 iOS 장치에서 렌즈 애퍼처는 고정 되어 있으므로 노출을 조정 하는 데 사용할 수 있는 두 값은 셔터 속도와 ISO입니다.
 
 
@@ -573,12 +573,12 @@ CaptureDevice.UnlockForConfiguration();
 
 최소 및 최대 설정 범위는 응용 프로그램이 실행 되는 장치에 따라 달라 지므로 하드 코드 되어서는 안 됩니다. 대신 다음 속성을 사용 하 여 최소 및 최대 값 범위를 가져옵니다.
 
-- `CaptureDevice.MinExposureTargetBias` 
-- `CaptureDevice.MaxExposureTargetBias` 
-- `CaptureDevice.ActiveFormat.MinISO` 
-- `CaptureDevice.ActiveFormat.MaxISO` 
-- `CaptureDevice.ActiveFormat.MinExposureDuration` 
-- `CaptureDevice.ActiveFormat.MaxExposureDuration` 
+- `CaptureDevice.MinExposureTargetBias`
+- `CaptureDevice.MaxExposureTargetBias`
+- `CaptureDevice.ActiveFormat.MinISO`
+- `CaptureDevice.ActiveFormat.MaxISO`
+- `CaptureDevice.ActiveFormat.MinExposureDuration`
+- `CaptureDevice.ActiveFormat.MaxExposureDuration`
 
 
 위의 코드에서 볼 수 있듯이 캡처 장치를 구성 하려면 먼저 잠금 상태를 변경 해야 노출이 변경 될 수 있습니다.
@@ -600,8 +600,8 @@ CaptureDevice.UnlockForConfiguration();
 
 
 1. 다음 using 문을 추가 합니다.
-    
-    ```
+
+    ```csharp
     using System;
     using Foundation;
     using UIKit;
@@ -614,19 +614,19 @@ CaptureDevice.UnlockForConfiguration();
     using CoreGraphics;
     using CoreFoundation;
     using System.Timers;
-    ```  
-  
+    ```
+
 1. 다음 전용 변수를 추가 합니다.
 
     ```csharp
     #region Private Variables
-    private NSError Error; 
+    private NSError Error;
     private bool Automatic = true;
     private nfloat ExposureDurationPower = 5;
     private nfloat ExposureMinimumDuration = 1.0f/1000.0f;
     #endregion
-    ```  
-  
+    ```
+
 1. 다음 계산 된 속성을 추가 합니다.
 
     ```csharp
@@ -636,34 +636,34 @@ CaptureDevice.UnlockForConfiguration();
     }
     public Timer SampleTimer { get; set; }
     #endregion
-    ```  
-  
+    ```
+
 1. 메서드를 `ViewDidLoad` 재정의 하 고 다음 코드를 추가 합니다.
 
     ```csharp
     public override void ViewDidLoad ()
     {
         base.ViewDidLoad ();
-    
+
         // Hide no camera label
         NoCamera.Hidden = ThisApp.CameraAvailable;
-    
+
         // Attach to camera view
         ThisApp.Recorder.DisplayView = CameraView;
-    
+
         // Set min and max values
         Offset.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
         Offset.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
-    
+
         Duration.MinValue = 0.0f;
         Duration.MaxValue = 1.0f;
-    
+
         ISO.MinValue = ThisApp.CaptureDevice.ActiveFormat.MinISO;
         ISO.MaxValue = ThisApp.CaptureDevice.ActiveFormat.MaxISO;
-    
+
         Bias.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
         Bias.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
-    
+
         // Create a timer to monitor and update the UI
         SampleTimer = new Timer (5000);
         SampleTimer.Elapsed += (sender, e) => {
@@ -671,7 +671,7 @@ CaptureDevice.UnlockForConfiguration();
             Offset.BeginInvokeOnMainThread(() =>{
                 Offset.Value = ThisApp.Input.Device.ExposureTargetOffset;
             });
-    
+
             Duration.BeginInvokeOnMainThread(() =>{
                 var newDurationSeconds = CMTimeGetSeconds(ThisApp.Input.Device.ExposureDuration);
                 var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration), ExposureMinimumDuration);
@@ -679,22 +679,22 @@ CaptureDevice.UnlockForConfiguration();
                 var p = (newDurationSeconds - minDurationSeconds) / (maxDurationSeconds - minDurationSeconds);
                 Duration.Value = (float)Math.Pow(p, 1.0f/ExposureDurationPower);
             });
-    
+
             ISO.BeginInvokeOnMainThread(() => {
                 ISO.Value = ThisApp.Input.Device.ISO;
             });
-    
+
             Bias.BeginInvokeOnMainThread(() => {
                 Bias.Value = ThisApp.Input.Device.ExposureTargetBias;
             });
         };
-    
+
         // Watch for value changes
         Segments.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // Lock device for change
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
-    
+
             // Take action based on the segment selected
             switch(Segments.SelectedSegment) {
             case 0:
@@ -722,71 +722,71 @@ CaptureDevice.UnlockForConfiguration();
                 ISO.Enabled = true;
                 break;
             }
-    
+
             // Unlock device
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         // Monitor position changes
         Duration.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             if (Automatic) return;
-    
+
             // Calculate value
             var p = Math.Pow(Duration.Value,ExposureDurationPower);
             var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration),ExposureMinimumDuration);
             var maxDurationSeconds = CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MaxExposureDuration);
             var newDurationSeconds = p * (maxDurationSeconds - minDurationSeconds) +minDurationSeconds;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.LockExposure(CMTime.FromSeconds(p,1000*1000*1000),ThisApp.CaptureDevice.ISO,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         ISO.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             if (Automatic) return;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.LockExposure(ThisApp.CaptureDevice.ExposureDuration,ISO.Value,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
-    
+
         Bias.ValueChanged += (object sender, EventArgs e) => {
-    
+
             // If we are in the automatic mode, ignore changes
             // if (Automatic) return;
-    
+
             // Update Focus position
             ThisApp.CaptureDevice.LockForConfiguration(out Error);
             ThisApp.CaptureDevice.SetExposureTargetBias(Bias.Value,null);
             ThisApp.CaptureDevice.UnlockForConfiguration();
         };
     }
-    ```  
-  
+    ```
+
 1. 메서드를 `ViewDidAppear` 재정의 하 고 다음을 추가 하 여 뷰가 로드 될 때 기록을 시작 합니다.
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
             SampleTimer.Start ();
         }
     }
-    ```  
-  
+    ```
+
 1. 카메라를 Auto 모드로 사용 하면 카메라에서 노출이 조정 될 때 슬라이더가 자동으로 이동 합니다.
 
     [![](intro-to-manual-camera-controls-images/image13.png "카메라가 노출을 조정 하면 슬라이더가 자동으로 이동 합니다.")](intro-to-manual-camera-controls-images/image13.png#lightbox)
@@ -853,9 +853,9 @@ IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사
 
 위의 기능 `AVCaptureWhiteBalanceGain` 을 구현 하기 위해 구조가 다음과 같은 멤버와 함께 추가 되었습니다.
 
-- `RedGain` 
-- `GreenGain` 
-- `BlueGain` 
+- `RedGain`
+- `GreenGain`
+- `BlueGain`
 
 
 최대 잔액 이득은 현재 4 (4) 이며 `MaxWhiteBalanceGain` 속성에서 준비할 수 있습니다. 따라서 올바른 범위는 (1)에서 (4) `MaxWhiteBalanceGain` 로 현재입니다.
@@ -926,17 +926,17 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
     using CoreGraphics;
     using CoreFoundation;
     using System.Timers;
-    ```  
-  
+    ```
+
 1. 다음 전용 변수를 추가 합니다.
 
     ```csharp
     #region Private Variables
-    private NSError Error; 
+    private NSError Error;
     private bool Automatic = true;
     #endregion
     ```
-  
+
 1. 다음 계산 된 속성을 추가 합니다.
 
     ```csharp
@@ -946,8 +946,8 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
     }
     public Timer SampleTimer { get; set; }
     #endregion
-    ```  
-  
+    ```
+
 1. 다음 전용 메서드를 추가 하 여 새로운 흰색 잔액 온도와 색조를 설정 합니다.
 
     ```csharp
@@ -966,7 +966,7 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
             ThisApp.CaptureDevice.UnlockForConfiguration ();
         }
     }
-    
+
     AVCaptureWhiteBalanceGains NomralizeGains (AVCaptureWhiteBalanceGains gains)
     {
         gains.RedGain = Math.Max (1, gains.RedGain);
@@ -981,8 +981,8 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
         return gains;
     }
     #endregion
-    ```   
-  
+    ```
+
 1. 메서드를 `ViewDidLoad` 재정의 하 고 다음 코드를 추가 합니다.
 
     ```csharp
@@ -1086,26 +1086,26 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
             }
         };
     }
-    ``` 
-  
+    ```
+
 1. 메서드를 `ViewDidAppear` 재정의 하 고 다음을 추가 하 여 뷰가 로드 될 때 기록을 시작 합니다.
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
             SampleTimer.Start ();
         }
     }
-    ```  
-  
+    ```
+
 1. 코드에 변경 내용을 저장 하 고 응용 프로그램을 실행 합니다.
 1. 카메라를 Auto 모드로 사용 하면 카메라의 균형이 조정 됨에 따라 슬라이더가 자동으로 이동 됩니다.
 
@@ -1145,8 +1145,8 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 
 설정을 처리 하기 위해 두 개의 새로운 클래스가 구현 되었습니다.
 
-- `AVCaptureAutoExposureBracketedStillImageSettings`-자동 노출 괄호에 대 `ExposureTargetBias`한 바이어스를 설정 하는 데 사용 되는 속성이 하나 있습니다. 
-- `AVCaptureManual`  `ExposureBracketedStillImageSettings`-수동 노출 괄호에 대해 `ExposureDuration` 셔터 `ISO`속도와 ISO를 설정 하는 데 사용 되는 및 라는 두 가지 속성이 있습니다. 
+- `AVCaptureAutoExposureBracketedStillImageSettings`-자동 노출 괄호에 대 `ExposureTargetBias`한 바이어스를 설정 하는 데 사용 되는 속성이 하나 있습니다.
+- `AVCaptureManual`  `ExposureBracketedStillImageSettings`-수동 노출 괄호에 대해 `ExposureDuration` 셔터 `ISO`속도와 ISO를 설정 하는 데 사용 되는 및 라는 두 가지 속성이 있습니다.
 
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>대괄호로 묶인 캡처 컨트롤의 및 일과
@@ -1214,8 +1214,8 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
     using CoreGraphics;
     using CoreFoundation;
     using CoreImage;
-    ```  
-  
+    ```
+
 1. 다음 전용 변수를 추가 합니다.
 
     ```csharp
@@ -1224,8 +1224,8 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
     private List<UIImageView> Output = new List<UIImageView>();
     private nint OutputIndex = 0;
     #endregion
-    ```    
-  
+    ```
+
 1. 다음 계산 된 속성을 추가 합니다.
 
     ```csharp
@@ -1234,68 +1234,68 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
         get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
     }
     #endregion
-    ```  
-  
+    ```
+
 1. 다음 전용 메서드를 추가 하 여 필요한 출력 이미지 뷰를 빌드합니다.
 
     ```csharp
     #region Private Methods
     private UIImageView BuildOutputView(nint n) {
-    
+
         // Create a new image view controller
         var imageView = new UIImageView (new CGRect (CameraView.Frame.Width * n, 0, CameraView.Frame.Width, CameraView.Frame.Height));
-    
+
         // Load a temp image
         imageView.Image = UIImage.FromFile ("Default-568h@2x.png");
-    
+
         // Add a label
         UILabel label = new UILabel (new CGRect (0, 20, CameraView.Frame.Width, 24));
         label.TextColor = UIColor.White;
         label.Text = string.Format ("Bracketed Image {0}", n);
         imageView.AddSubview (label);
-    
+
         // Add to scrolling view
         ScrollView.AddSubview (imageView);
-    
+
         // Return new image view
         return imageView;
     }
     #endregion
-    ```  
-  
-1. 메서드를 `ViewDidLoad` 재정의 하 고 다음 코드를 추가 합니다.
-    
     ```
+
+1. 메서드를 `ViewDidLoad` 재정의 하 고 다음 코드를 추가 합니다.
+
+    ```csharp
     public override void ViewDidLoad ()
     {
         base.ViewDidLoad ();
-    
+
         // Hide no camera label
         NoCamera.Hidden = ThisApp.CameraAvailable;
-    
+
         // Attach to camera view
         ThisApp.Recorder.DisplayView = CameraView;
-    
+
         // Setup scrolling area
         ScrollView.ContentSize = new SizeF (CameraView.Frame.Width * 4, CameraView.Frame.Height);
-    
+
         // Add output views
         Output.Add (BuildOutputView (1));
         Output.Add (BuildOutputView (2));
         Output.Add (BuildOutputView (3));
-    
+
         // Create preset settings
         var Settings = new AVCaptureBracketedStillImageSettings[] {
             AVCaptureAutoExposureBracketedStillImageSettings.Create(-2.0f),
             AVCaptureAutoExposureBracketedStillImageSettings.Create(0.0f),
             AVCaptureAutoExposureBracketedStillImageSettings.Create(2.0f)
         };
-    
+
         // Wireup capture button
         CaptureButton.TouchUpInside += (sender, e) => {
             // Reset output index
             OutputIndex = 0;
-    
+
             // Tell the camera that we are getting ready to do a bracketed capture
             ThisApp.StillImageOutput.PrepareToCaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings,async (bool ready, NSError err) => {
                 // Was there an error, if so report it
@@ -1303,16 +1303,16 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
                     Console.WriteLine("Error: {0}",err.LocalizedDescription);
                 }
             });
-    
+
             // Ask the camera to snap a bracketed capture
             ThisApp.StillImageOutput.CaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings, (sampleBuffer, settings, err) =>{
                 // Convert raw image stream into a Core Image Image
                 var imageData = AVCaptureStillImageOutput.JpegStillToNSData(sampleBuffer);
                 var image = CIImage.FromData(imageData);
-    
+
                 // Display the resulting image
                 Output[OutputIndex++].Image = UIImage.FromImage(image);
-    
+
                 // IMPORTANT: You must release the buffer because AVFoundation has a fixed number
                 // of buffers and will stop delivering frames if it runs out.
                 sampleBuffer.Dispose();
@@ -1320,26 +1320,26 @@ IOS 8에서 대괄호로 묶인 캡처 작업을 수행할 때 다음 정보를 
         };
     }
     ```
-    
-  
+
+
 1. 메서드를 `ViewDidAppear` 재정의 하 고 다음 코드를 추가 합니다.
 
     ```csharp
     public override void ViewDidAppear (bool animated)
     {
         base.ViewDidAppear (animated);
-    
+
         // Start udating the display
         if (ThisApp.CameraAvailable) {
             // Remap to this camera view
             ThisApp.Recorder.DisplayView = CameraView;
-    
+
             ThisApp.Session.StartRunning ();
         }
     }
-    
-    ```  
-    
+
+    ```
+
 1. 코드에 변경 내용을 저장 하 고 응용 프로그램을 실행 합니다.
 1. 장면을 프레임으로 프레임 하 고 캡처 대괄호 단추를 누릅니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: f3baa6756b4e72b750ff1b128b72802f8f1ce6d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7d5c9ebec2a1d79df7a9a16da91c79772746f6fc
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527342"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227534"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.ios의 제한 사항
 
@@ -57,11 +57,11 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 
 - System.object를 사용할 수 없습니다.
 - System.object를 지원 하지 않습니다.
-- 형식을 동적으로 만들 수 없습니다 (예: gettype ("MyType ' 1")). 예를 들어, 기존 형식 (예: GetType ("System.string"))을 조회 하는 것은 제대로 작동 합니다. 
+- 형식을 동적으로 만들 수 없습니다 (예: gettype ("MyType ' 1")). 예를 들어, 기존 형식 (예: GetType ("System.string"))을 조회 하는 것은 제대로 작동 합니다.
 - 역방향 콜백은 컴파일 시간에 런타임에 등록 해야 합니다.
 
 
- 
+
  <a name="System.Reflection.Emit" />
 
 
@@ -71,7 +71,7 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 
 - 동적 언어 런타임입니다.
 - 동적 언어 런타임 위에 빌드된 모든 언어
-- Remoting의 TransparentProxy 또는 런타임에서 코드를 동적으로 생성 하 게 하는 기타 항목입니다. 
+- Remoting의 TransparentProxy 또는 런타임에서 코드를 동적으로 생성 하 게 하는 기타 항목입니다.
 
 
   > [!IMPORTANT]
@@ -91,7 +91,7 @@ C# 대리자를 통해 네이티브 함수를 호출 하려면 대리자의 선�
 ```
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
- 
+
  <a name="Reverse_Callbacks" />
 
 
@@ -103,7 +103,7 @@ Mono에서 이러한 브리지는 Just-in-time 컴파일러에 의해 구현 됩
 
 - 모든 콜백 메서드에 [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute) 를 사용 하 여 플래그를 지정 해야 합니다.
 - 메서드는 정적 메서드 여야 하며 인스턴스 메서드를 지원 하지 않습니다.
- 
+
 <a name="No_Remoting" />
 
 ## <a name="no-remoting"></a>원격이 없음

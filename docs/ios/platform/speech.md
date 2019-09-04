@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 65644673bde426fff92530a7a36812d1c95b5995
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121282"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227330"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.ios의 음성 인식
 
@@ -89,8 +89,8 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 - 키를 `Info.plist` `NSSpeechRecognitionUsageDescription` 사용 하 여 앱의 파일에 사용 설명을 제공 합니다. 예를 들어 카메라 앱에는 다음 설명이 포함 될 수 있습니다 _. "이를 통해 ' 치즈 ' 라는 단어를 말하여 사진을 가져올 수 있습니다."_
 - 응용 프로그램에서 대화 상자 `SFSpeechRecognizer.RequestAuthorization` 에 있는 사용자에 대 한 음성 인식을 인식 `NSSpeechRecognitionUsageDescription` 하 고 허용 또는 거부 하는 이유에 대 한 설명을 제공 하기 위해 메서드를 호출 하 여 권한 부여를 요청 합니다.
 - 음성 인식 요청을 만듭니다.
-    - 디스크에 미리 기록 된 `SFSpeechURLRecognitionRequest` 오디오의 경우 클래스를 사용 합니다.
-    - 라이브 오디오 (또는 메모리의 오디오)의 경우 `SFSPeechAudioBufferRecognitionRequest` 클래스를 사용 합니다.
+  - 디스크에 미리 기록 된 `SFSpeechURLRecognitionRequest` 오디오의 경우 클래스를 사용 합니다.
+  - 라이브 오디오 (또는 메모리의 오디오)의 경우 `SFSPeechAudioBufferRecognitionRequest` 클래스를 사용 합니다.
 - 음성 인식 요청을 음성 인식기 (`SFSpeechRecognizer`)에 전달 하 여 인식을 시작 합니다. 앱은 선택적으로 반환 `SFSpeechRecognitionTask` 된을 포함 하 여 인식 결과를 모니터링 하 고 추적할 수 있습니다.
 
 이러한 단계는 아래에 자세히 설명 되어 있습니다.
@@ -105,10 +105,10 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 2. **원본** 뷰로 전환 합니다. 
 
     [![](speech-images/speech02.png "원본 뷰")](speech-images/speech02.png#lightbox)
-3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
+3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
 
     [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
-4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
 
     [![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
@@ -116,10 +116,10 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 파일을 `Info.plist` 두 번 클릭 하 여 편집용으로 엽니다.
-2. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+2. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
 
     [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
-3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
+3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
 
     [![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
@@ -243,7 +243,7 @@ public void RecognizeFile (NSUrl url)
 
 ### <a name="recognizing-live-speech"></a>라이브 음성 인식
 
-앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예를 들어:
+앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예:
 
 ```csharp
 using System;
@@ -380,8 +380,8 @@ RecognitionTask.Cancel ();
 Apple은 iOS 앱에서 음성 인식을 사용할 때 다음과 같은 제한 사항을 적용 합니다.
 
 - 음성 인식은 모든 앱에서 무료로 사용할 수 있지만 사용에는 제한이 없습니다.
-    - 개별 iOS 장치에는 하루에 수행할 수 있는 제한 된 수의 인식가 있습니다.
-    - 앱은 매일 요청을 통해 전역적으로 제한 됩니다.
+  - 개별 iOS 장치에는 하루에 수행할 수 있는 제한 된 수의 인식가 있습니다.
+  - 앱은 매일 요청을 통해 전역적으로 제한 됩니다.
 - 음성 인식 네트워크 연결 및 사용 빈도 제한 오류를 처리할 수 있도록 앱을 준비 해야 합니다.
 - 음성 인식은 사용자의 iOS 장치에서 배터리 드레이닝 및 높은 네트워크 트래픽 모두에 대해 높은 비용을 발생 시킬 수 있습니다 .이 때문에 Apple은 엄격한 오디오 기간 제한을 약 1 분으로 설정 합니다.
 

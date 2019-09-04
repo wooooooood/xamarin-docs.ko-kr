@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9dbcecf40c742de6e9f3a5c8458dcae3f347501d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be4d10eceb4ddf7da44409815f3e9c08117a06f7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120737"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227222"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 보기 사용
 
@@ -24,7 +24,7 @@ Stack View control (`UIStackView`)은 Auto Layout 및 Size 클래스의 강력�
 
 TvOS 앱에서 `UIStackView` 를 사용 하는 경우 개발자는 iOS 디자이너의 스토리 보드 내에서 또는 코드에서 C# 하위 뷰를 추가 및 제거 하 여 하위 뷰를 정의할 수 있습니다.
 
-## <a name="about-stacked-view-controls"></a>누적 보기 컨트롤 정보 
+## <a name="about-stacked-view-controls"></a>누적 보기 컨트롤 정보
 
 는 `UIStackView` 비 렌더링 컨테이너 뷰로 설계 되었으므로의 `UIView`다른 서브 클래스와 같이 캔버스로 그려지지 않습니다. 등 `BackgroundColor` 의 속성을 설정 하거나 `DrawRect` 재정의 하면 시각적 효과가 없습니다.
 
@@ -98,21 +98,21 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
-1. 스택 보기에 추가 하려는 개별 요소의 레이아웃을 디자인 합니다. 
+1. 스택 보기에 추가 하려는 개별 요소의 레이아웃을 디자인 합니다.
 
     [![](stacked-views-images/layout01.png "요소 레이아웃 예제")](stacked-views-images/layout01.png#lightbox)
 1. 요소에 필요한 제약 조건을 추가 하 여 올바르게 확장 되도록 합니다. 요소가 스택 뷰에 추가 되 면이 단계가 중요 합니다.
-1. 필요한 수의 복사본을 만듭니다 (이 경우 4). 
+1. 필요한 수의 복사본을 만듭니다 (이 경우 4).
 
     [![](stacked-views-images/layout02.png "필요한 복사본 수")](stacked-views-images/layout02.png#lightbox)
-1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다. 
+1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다.
 
     [![](stacked-views-images/layout03.png "스택 뷰")](stacked-views-images/layout03.png#lightbox)
-1. 스택 뷰를 선택 하 고, **Properties Pad** 의 **위젯 탭** 에서 **맞춤**에 대해 **채우기** 를 선택 하 고, **균등** 하 게 입력 `25` 하 고, **간격**을 입력 합니다. 
+1. 스택 뷰를 선택 하 고, **Properties Pad** 의 **위젯 탭** 에서 **맞춤**에 대해 **채우기** 를 선택 하 고, **균등** 하 게 입력 `25` 하 고, **간격**을 입력 합니다.
 
     [![](stacked-views-images/layout04.png "위젯 탭")](stacked-views-images/layout04.png#lightbox)
 1. 화면에서 원하는 위치에 스택 보기를 배치 하 고 필요한 위치에 유지 하기 위한 제약 조건을 추가 합니다.
-1. 개별 요소를 선택 하 여 스택 보기로 끌어 옵니다. 
+1. 개별 요소를 선택 하 여 스택 보기로 끌어 옵니다.
 
     [![](stacked-views-images/layout05.png "스택 뷰의 개별 요소")](stacked-views-images/layout05.png#lightbox)
 1. 위에서 설정한 특성에 따라 레이아웃이 조정 되 고 요소가 스택 뷰에 정렬 됩니다.
@@ -122,21 +122,21 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
-1. 스택 보기에 추가 하려는 개별 요소의 레이아웃을 디자인 합니다. 
+1. 스택 보기에 추가 하려는 개별 요소의 레이아웃을 디자인 합니다.
 
     [![](stacked-views-images/layout01.png "예제 요소 레이아웃")](stacked-views-images/layout01.png#lightbox)
 1. 요소에 필요한 제약 조건을 추가 하 여 올바르게 확장 되도록 합니다. 요소가 스택 뷰에 추가 되 면이 단계가 중요 합니다.
-1. 필요한 수의 복사본을 만듭니다 (이 경우 4). 
+1. 필요한 수의 복사본을 만듭니다 (이 경우 4).
 
     [![](stacked-views-images/layout02.png "필요한 복사본 수")](stacked-views-images/layout02.png#lightbox)
-1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다. 
+1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다.
 
     [![](stacked-views-images/layout03-vs.png "스택 뷰")](stacked-views-images/layout03-vs.png#lightbox)
-1. 스택 뷰를 선택 하 고 , **속성 탐색기** 의 **위젯 탭** 에서 **맞춤**을 선택 하 고, **균등** 하 게 입력 하 고, `25` **간격**을 입력 합니다. 
+1. 스택 뷰를 선택 하 고 , **속성 탐색기** 의 **위젯 탭** 에서 **맞춤**을 선택 하 고, **균등** 하 게 입력 하 고, `25` **간격**을 입력 합니다.
 
     [![](stacked-views-images/layout04-vs.png "위젯 탭")](stacked-views-images/layout04-vs.png#lightbox)
 1. 화면에서 원하는 위치에 스택 보기를 배치 하 고 필요한 위치에 유지 하기 위한 제약 조건을 추가 합니다.
-1. 개별 요소를 선택 하 여 스택 보기로 끌어 옵니다. 
+1. 개별 요소를 선택 하 여 스택 보기로 끌어 옵니다.
 
     [![](stacked-views-images/layout05-vs.png "스택 뷰의 개별 요소")](stacked-views-images/layout05-vs.png#lightbox)
 1. 위에서 설정한 특성에 따라 레이아웃이 조정 되 고 요소가 스택 뷰에 정렬 됩니다.

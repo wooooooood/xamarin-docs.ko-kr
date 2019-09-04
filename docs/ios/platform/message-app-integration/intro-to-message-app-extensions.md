@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7004c4692158be2e51eca93dece349da2a735bab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92b16e4a802411c70bef7d5810a161dbdfedfa09
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654388"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227488"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Xamarin.ios의 메시지 앱 확장 기본 사항
 
@@ -118,14 +118,14 @@ Xcode의 Attributes Inspector를 사용 하 여 전체 스티커 팩의 크기�
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. Mac용 Visual Studio를 시작 합니다.
-2. 솔루션을 열어에 메시지 앱 확장을 추가 합니다. 
-3. **IOS** > **확장** iMessage 확장을 선택 하 고 다음 단추를 클릭 합니다. >  
+2. 솔루션을 열어에 메시지 앱 확장을 추가 합니다.
+3. **IOS** > **확장** iMessage 확장을 선택 하 고 다음 단추를 클릭 합니다. > 
 
     [![](intro-to-message-app-extensions-images/message01.png "IMessage 확장 선택")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. **확장 이름을** 입력 하 고 **다음** 단추를 클릭 합니다. 
+4. **확장 이름을** 입력 하 고 **다음** 단추를 클릭 합니다.
 
     [![](intro-to-message-app-extensions-images/message02.png "확장 이름 입력")](intro-to-message-app-extensions-images/message02.png#lightbox)
-5. **만들기** 단추를 클릭 하 여 확장을 빌드합니다. 
+5. **만들기** 단추를 클릭 하 여 확장을 빌드합니다.
 
     [![](intro-to-message-app-extensions-images/message03.png "만들기 단추를 클릭 합니다.")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
@@ -158,7 +158,7 @@ Xcode의 Attributes Inspector를 사용 하 여 전체 스티커 팩의 크기�
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. **Solution Pad**에서 확장의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.  >  **iOS |**  > **인터페이스 컨트롤러**를 Apple Watch 합니다.
-2. 이름 `StickerBrowserViewController` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
+2. 이름 `StickerBrowserViewController` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다.
 
     [![](intro-to-message-app-extensions-images/browser01.png "이름에 StickerBrowserViewController를 입력 합니다.")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. 편집할 파일 `StickerBrowserViewController.cs` 을 엽니다.
@@ -166,7 +166,7 @@ Xcode의 Attributes Inspector를 사용 하 여 전체 스티커 팩의 크기�
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기**에서 확장의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.  >  **iOS |**  > **인터페이스 컨트롤러**를 Apple Watch 합니다.
-2. 이름 `StickerBrowserViewController` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
+2. 이름 `StickerBrowserViewController` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다.
 
     [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "이름에 StickerBrowserViewController를 입력 합니다.")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. 편집할 파일 `StickerBrowserViewController.cs` 을 엽니다.
@@ -537,7 +537,7 @@ namespace MessageExtension
                 MessagesAppViewController.AddStickerToCollection (NewSticker);
             };
             View.AddSubview (doneButton);
-            
+
             ...
         }
         #endregion
@@ -702,7 +702,7 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
         break;
     }
 }
-``` 
+```
 
 ## <a name="summary"></a>요약
 

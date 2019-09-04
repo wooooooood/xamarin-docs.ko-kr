@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 6890846a1cb5cd44429c9157b3aeb75c7a1f2f4b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67fbd3fb7fb9c7bf1e326404d0d63bc42a3fd8ed
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521434"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227676"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.ios의 앱 전송 보안
 
@@ -41,7 +41,7 @@ ATS는 모든 인터넷 연결에 대해 다음과 같은 요구 사항을 적�
 - TLS (전송 계층 보안) 프로토콜은 버전 1.2 이상 이어야 합니다.
 - 2048 비트 이상 RSA 키가 있는 SHA256 지문을 하나 이상 사용 하거나 모든 인증서에 256 비트 이상 ECC (타원 Curve) 키를 사용 해야 합니다.
 
-ATS가 iOS 9에서 기본적으로 사용 하도록 설정 되어 있기 때문에 이러한 요구 사항을 충족 하지 않는 연결을 시도 하면 예외가 throw 됩니다. 
+ATS가 iOS 9에서 기본적으로 사용 하도록 설정 되어 있기 때문에 이러한 요구 사항을 충족 하지 않는 연결을 시도 하면 예외가 throw 됩니다.
 
 <a name="ATS-Compatible-Ciphers" />
 
@@ -132,7 +132,7 @@ NSUrlSession 기반 처리기는 네이티브 `NSUrlSession` API를 기반으로
 단점
 
 - IOS 7 이상이 필요 합니다.
-- 일부 HttpClient 기능 및 옵션을 사용할 수 없습니다. 
+- 일부 HttpClient 기능 및 옵션을 사용할 수 없습니다.
 
 ## <a name="diagnosing-ats-issues"></a>ATS 문제 진단
 
@@ -153,7 +153,7 @@ ATS는 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적
 
 앱의 **info.plist** 파일에서 특정 키에 대 한 값을 설정 하 여 ATS의 여러 기능을 구성할 수 있습니다. 다음 키는 ATS 제어 하는 데 사용할 수 있습니다 (_중첩 된 방법을 표시 하도록 들여쓰기_됨).
 
-```csharp
+```
 NSAppTransportSecurity
     NSAllowsArbitraryLoads
     NSAllowsArbitraryLoadsInWebContent

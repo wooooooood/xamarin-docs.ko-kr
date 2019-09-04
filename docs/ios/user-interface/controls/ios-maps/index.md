@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: c989481c1235429091c2a196a66e4abd2c12fb52
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 157f797ebb19de1ae00a00328a9c63b051c7224f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887483"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226457"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.ios의 Maps
 
@@ -36,7 +36,7 @@ View = map;
 
 `MKMapView`3 가지 지도 스타일을 지원 합니다. 지도 스타일을 적용 하려면 `MapType` 속성을 `MKMapType` 열거형의 값으로 설정 하면 됩니다.
 
-```
+```csharp
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
@@ -87,7 +87,7 @@ map.ShowsUserLocation = true;
 ```
 
  ![](images/02-location-alert.png "위치 액세스 허용 경고")
- 
+
 ## <a name="annotations"></a>주석
 
  `MKMapView`는 지도에서 주석 이라고 하는 이미지 표시도 지원 합니다. 사용자 지정 이미지 또는 다양 한 색의 시스템 정의 핀 중 하나일 수 있습니다. 예를 들어 다음 스크린샷은 핀과 사용자 지정 이미지가 모두 포함 된 맵을 보여 줍니다.
@@ -250,7 +250,7 @@ var searchResultsController = new SearchResultsViewController (map);
 //Creates a search controller updater
 var searchUpdater = new SearchResultsUpdator ();
 searchUpdater.UpdateSearchResults += searchResultsController.Search;
-            
+
 //add the search controller
 searchController = new UISearchController (searchResultsController) {
                 SearchResultsUpdater = searchUpdater
@@ -264,7 +264,7 @@ searchController.SearchBar.Placeholder = "Enter a search query";
 //the search bar is contained in the navigation bar, so it should be visible
 searchController.HidesNavigationBarDuringPresentation = false;
 
-//Ensure the searchResultsController is presented in the current View Controller 
+//Ensure the searchResultsController is presented in the current View Controller
 DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
@@ -279,7 +279,7 @@ NavigationItem.TitleView = searchController.SearchBar;
 그러면 아래와 같이 지도 위에 검색 표시줄이 표시 됩니다.
 
  ![](images/07-searchbar.png "지도 위에 표시 되는 검색 표시줄")
- 
+
 
 
 ### <a name="displaying-the-search-results"></a>검색 결과 표시
@@ -358,7 +358,7 @@ public class SearchResultsViewController : UITableViewController
 
 ### <a name="updating-the-search-results"></a>검색 결과 업데이트
 
-는 `SearchResultsUpdater` `searchController`의 검색 표시줄과 검색 결과 간의 mediator 역할을 합니다. 
+는 `SearchResultsUpdater` `searchController`의 검색 표시줄과 검색 결과 간의 mediator 역할을 합니다.
 
 이 예제에서는 먼저에서 `SearchResultsViewController`검색 메서드를 만들어야 합니다. 이렇게 하려면 `MKLocalSearch` 개체를 만들고이 개체를 사용 하 여 `MKLocalSearchRequest`에 대 한 검색을 실행 해야 합니다. 그러면 `MKLocalSearch` 개체의 `Start` 메서드에 전달 된 콜백에서 결과가 검색 됩니다. 그런 다음 개체의 `MKLocalSearchResponse` `MKMapItem` 배열을 포함 하는 개체에서 결과가 반환 됩니다.
 
@@ -403,7 +403,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 위의 구현은 아래와 같이 결과에서 항목을 선택할 때 맵에 주석을 추가 합니다.
 
  ![](images/08-search-results.png "결과에서 항목을 선택할 때 맵에 추가 되는 주석입니다.")
- 
+
 > [!IMPORTANT]
 > `UISearchController`는 iOS 8에서 구현 되었습니다. 이전 장치를 지원 하려는 경우를 사용 `UISearchDisplayController`해야 합니다.
 

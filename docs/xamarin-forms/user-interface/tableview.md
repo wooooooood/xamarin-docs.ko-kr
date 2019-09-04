@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: fc3837cd0d69d49b9939b04da667010aac919fe2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 195ed82325ed681f31f9963d5ff0ca0a7fef48ab
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657118"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228145"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -20,7 +20,7 @@ ms.locfileid: "68657118"
 
 [`TableView`](xref:Xamarin.Forms.TableView)는 스크롤 가능한 데이터 목록이 나 동일한 템플릿을 공유 하지 않는 행이 있는 선택 항목을 표시 하기 위한 뷰입니다. `ItemsSource` [ListView](~/xamarin-forms/user-interface/listview/index.md) `TableView` 와 달리에는의 개념이 없으므로 항목을 수동으로 자식으로 추가 해야 합니다.
 
-![](tableview-images/tableview-all-sml.png "TableView 예제")
+![TableView 예제](tableview-images/tableview-all-sml.png)
 
 <a name="Use_Cases" />
 
@@ -106,7 +106,7 @@ Xamarin.Forms를 수집 하 고 정보를 표시 하는 기본 제공 셀 수반
 
 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell)는 `OnChanged` 또한 이벤트를 노출 하 여 셀의 상태 변경 내용에 응답할 수 있도록 합니다.
 
-![](tableview-images/switch-cell.png "SwitchCell 예제")
+![SwitchCell 예제](tableview-images/switch-cell.png)
 
 <a name="entrycell" />
 
@@ -123,7 +123,7 @@ Xamarin.Forms를 수집 하 고 정보를 표시 하는 기본 제공 셀 수반
 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell)또한는 텍스트 `Completed` 를 편집 하는 동안 사용자가 키보드의 ' 완료 ' 단추를 누를 때 발생 하는 이벤트를 노출 합니다.
 
-![](tableview-images/entry-cell.png "EntryCell 예제")
+![EntryCell 예제](tableview-images/entry-cell.png)
 
 <a name="Custom_Cells" />
 
@@ -135,7 +135,7 @@ Xamarin.Forms를 수집 하 고 정보를 표시 하는 기본 제공 셀 수반
 
 사용자 지정 셀의 예로 다음과 같습니다.
 
-![](tableview-images/custom-cell.png "사용자 지정 셀 예제")
+![사용자 지정 셀 예제](tableview-images/custom-cell.png)
 
 다음 예제에서는 위의 스크린샷에를 만드는 [`TableView`](xref:Xamarin.Forms.TableView) 데 사용 되는 XAML을 보여 줍니다.
 
@@ -252,11 +252,11 @@ void OnViewCellTapped(object sender, EventArgs e)
 
 다음 스크린샷에서 시 탭 되 고 이전 셀을 표시 합니다.
 
-![](tableview-images/cell-beforeresize.png "크기가 조정 되기 전의 ViewCell")
+![크기를 조정 하기 전의 ViewCell](tableview-images/cell-beforeresize.png)
 
 다음 스크린샷에서 시 탭 되 후 셀을 표시 합니다.
 
-![](tableview-images/cell-afterresize.png "ViewCell 크기가 조정 된 후")
+![크기를 조정한 후의 ViewCell](tableview-images/cell-afterresize.png)
 
 > [!IMPORTANT]
 > 이 기능은 초과 사용 되 면 강력한 성능 저하가 발생할 수가 있습니다.

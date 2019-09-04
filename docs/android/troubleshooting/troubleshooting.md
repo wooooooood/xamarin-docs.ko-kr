@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 5fccc07d35eda1ba420f48a8058d8d2a00b18fd9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6a5c06d64a06d8b1a7bcbf32e99905494cd06180
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523202"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225487"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -95,24 +95,24 @@ Xamarin Android는 다음과 같은 시스템 속성을 지원 합니다.
 
 - *debug.mono.env*: Mono가 초기화 *되기 전에* 응용 *|* 프로그램 시작 중에 내보낼 환경 변수의 파이프로 구분 된 (' ') 목록입니다. 이렇게 하면 mono 로깅을 제어 하는 환경 변수를 설정할 수 있습니다.
 
-    - *참고*: 값이 *|* ' '로 구분 되어 있으므로 *adb shell* \` 명령이 따옴표 집합을 제거 하기 때문에 값은 \`추가 수준의 따옴표를 포함 해야 합니다.
+  - *참고*: 값이 *|* ' '로 구분 되어 있으므로 *adb shell* \` 명령이 따옴표 집합을 제거 하기 때문에 값은 \`추가 수준의 따옴표를 포함 해야 합니다.
 
-    - *참고*: Android 시스템 속성 값의 길이는 92 자를 초과할 수 없습니다.
+  - *참고*: Android 시스템 속성 값의 길이는 92 자를 초과할 수 없습니다.
 
-    - 예제:
+  - 예제:
 
-      ```
-      adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
-      ```
+    ```
+    adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+    ```
 
 - *debug.mono.log*: Android 디버그 로그에 추가 메시지를 인쇄 해야 하는 구성 요소의 쉼표로 구분 된 (' *,* ') 목록입니다. 기본적으로는 아무것도 설정 되지 않습니다. 구성 요소는 다음과 같습니다.
 
-    - *all*: 모든 메시지 인쇄
-    - *gc*: GC 관련 메시지를 인쇄 합니다.
-    - *gref*: 인쇄 (weak, global) 참조 할당 및 할당 취소 메시지입니다.
-    - *lref*: 로컬 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
+  - *all*: 모든 메시지 인쇄
+  - *gc*: GC 관련 메시지를 인쇄 합니다.
+  - *gref*: 인쇄 (weak, global) 참조 할당 및 할당 취소 메시지입니다.
+  - *lref*: 로컬 참조 할당 및 할당 취소 메시지를 인쇄 합니다.
 
-    *참고*: *매우* 자세한 정보를 표시 합니다. 반드시 필요한 경우가 아니면 사용 하지 마십시오.
+  *참고*: *매우* 자세한 정보를 표시 합니다. 반드시 필요한 경우가 아니면 사용 하지 마십시오.
 
 - *debug.mono.trace*: [Mono--추적](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` 설정을 설정할 수 있습니다.
 
@@ -348,14 +348,14 @@ emulator -partition-size 512 -avd MonoDroid
 Android 패키지 이름은 마침표 (' *.* ')를 포함 *해야* 합니다. 마침표를 포함 하도록 패키지 이름을 편집 합니다.
 
 - Visual Studio 내에서:
-    - 프로젝트 > 속성을 마우스 오른쪽 단추로 클릭 합니다.
-    - 왼쪽의 Android 매니페스트 탭을 클릭 합니다.
-    - 패키지 이름 필드를 업데이트 합니다.
-        - 메시지가 &ldquo;표시 되 면 androidmanifest을 찾지 못했습니다. 하나를 클릭 하 여 추가 합니다. &rdquo;에서 링크를 클릭 한 다음 패키지 이름 필드를 업데이트 합니다.
+  - 프로젝트 > 속성을 마우스 오른쪽 단추로 클릭 합니다.
+  - 왼쪽의 Android 매니페스트 탭을 클릭 합니다.
+  - 패키지 이름 필드를 업데이트 합니다.
+    - 메시지가 &ldquo;표시 되 면 androidmanifest을 찾지 못했습니다. 하나를 클릭 하 여 추가 합니다. &rdquo;에서 링크를 클릭 한 다음 패키지 이름 필드를 업데이트 합니다.
 - Mac용 Visual Studio 내에서:
-    - 프로젝트 > 옵션을 마우스 오른쪽 단추로 클릭 합니다.
-    - 빌드/Android 응용 프로그램 섹션으로 이동 합니다.
-    - 패키지 이름 필드를 '. '를 포함 하도록 변경 합니다.
+  - 프로젝트 > 옵션을 마우스 오른쪽 단추로 클릭 합니다.
+  - 빌드/Android 응용 프로그램 섹션으로 이동 합니다.
+  - 패키지 이름 필드를 '. '를 포함 하도록 변경 합니다.
 
 
 
@@ -690,7 +690,7 @@ E/dalvikvm( 123): VM aborting
 
 - 응용 프로그램 프로젝트에는 System.object, Microsoft CSharp 또는 Mono .dll에 대 한 참조가 없을 수 있습니다. 해당 어셈블리가 참조 되는지 확인 합니다.
 
-    - 동적 코드는 항상 비용을 지불 해야 합니다. 효율적인 코드가 필요한 경우 동적 코드를 사용 하지 않는 것이 좋습니다.
+  - 동적 코드는 항상 비용을 지불 해야 합니다. 효율적인 코드가 필요한 경우 동적 코드를 사용 하지 않는 것이 좋습니다.
 
 - 첫 번째 미리 보기에서는 각 어셈블리의 형식을 응용 프로그램 코드에서 명시적으로 사용 하지 않는 한 해당 어셈블리가 제외 되었습니다. 해결 방법은 다음을 참조 하세요.[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 

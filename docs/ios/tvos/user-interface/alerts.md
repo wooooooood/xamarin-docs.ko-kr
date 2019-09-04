@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3f1761df5c2b638c5777e6384f4c0c06e9b3071f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657295"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227272"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 작업
 
@@ -34,7 +34,7 @@ TvOS 사용자의 주의가 나 파괴적인 작업 (예: 파일 삭제)을 수�
 
 Apple에는 경고를 사용 하기 위한 다음과 같은 제안이 있습니다.
 
-- **경고를 사용** 하는 경우 경고를 사용 합니다. 경고는 앱에 대 한 사용자의 흐름과 중단 하 고 사용자 환경을 중단 하는 것과 같은 중요 한 상황 에서만 사용 해야 합니다. 
+- **경고를 사용** 하는 경우 경고를 사용 합니다. 경고는 앱에 대 한 사용자의 흐름과 중단 하 고 사용자 환경을 중단 하는 것과 같은 중요 한 상황 에서만 사용 해야 합니다.
 - **유용한 선택 항목 제공** -경고에 사용자에 대 한 옵션이 표시 되는 경우 각 옵션이 중요 한 정보를 제공 하 고 사용자가 수행할 수 있는 유용한 작업을 제공 해야 합니다.
 
 <a name="Alert-Titles-and-Messages" />
@@ -44,7 +44,7 @@ Apple에는 경고를 사용 하기 위한 다음과 같은 제안이 있습니�
 Apple에는 경고의 제목 및 선택적 메시지를 표시 하기 위한 다음과 같은 제안이 있습니다.
 
 - **다중 단어 제목 사용** -경고의 제목에는 계속 해 서 간단 하 게 유지 하면서 상황을 명확 하 게 파악할 수 있습니다. 단일 단어 제목은 거의 정보를 제공 하지 않습니다.
-- **메시지를 요구 하지 않는 설명이 포함 된 제목을 사용** 합니다. 가능 하면 선택적 메시지 텍스트가 필요 하지 않을 정도로 경고의 제목을 설명 하는 것이 좋습니다. 
+- **메시지를 요구 하지 않는 설명이 포함 된 제목을 사용** 합니다. 가능 하면 선택적 메시지 텍스트가 필요 하지 않을 정도로 경고의 제목을 설명 하는 것이 좋습니다.
 - **메시지를 짧고 완전 한 문장으로 만듭니다** . 경고의 점을 가져오는 데 선택적 메시지가 필요한 경우에는 가능한 한 간단 하 게 유지 하 고 적절 한 대/소문자 구분 및 문장 부호를 사용 하 여 완전 한 문장으로 만듭니다.
 
 <a name="Alert-Buttons" />
@@ -70,15 +70,15 @@ const string acceptButtonTitle = "OK";
 const string cancelButtonTitle = "Cancel";
 const string deleteButtonTitle = "Delete";
 ...
-        
+
 var alertController = UIAlertController.Create (title, message, UIAlertControllerStyle.Alert);
 
 // Create the action.
-var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ => 
+var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
-var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ => 
+var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ =>
     Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
@@ -97,7 +97,7 @@ UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 다음으로, 경고에 표시 하려는 각 단추에 대해 단추의 제목, 해당 스타일 및 단추를 누를 경우 수행할 동작을 정의 하는 작업을 만듭니다.
 
 ```csharp
-UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
+UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
     // Do something when the button is pressed
     ...
 );
@@ -192,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>경고 뷰 컨트롤러 도우미 클래스
 
-를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들어:
+를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예:
 
 ```csharp
 using System;

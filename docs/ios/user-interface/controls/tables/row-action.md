@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 41aabb5e8b6d3eb46a92ee194c6b6b5e3ca51943
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e90e108e6b02055a585129b6412641a726afaab4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655625"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226302"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.ios에서 행 작업 사용
 
@@ -22,7 +22,7 @@ _이 가이드에서는 UISwipeActionsConfiguration 또는 UITableViewRowAction�
 
 iOS에서는 테이블 `UISwipeActionsConfiguration` 에 대 한 작업을 수행 하는 두 `UITableViewRowAction`가지 방법인 및를 제공 합니다.
 
-`UISwipeActionsConfiguration`는 iOS 11에서 도입 되었으며 사용자가 테이블 뷰의 행에 대해 _어느 방향으로_ swipes 때 발생 해야 하는 작업 집합을 정의 하는 데 사용 됩니다. 이 동작은 네이티브 메일 앱과 유사 합니다. 
+`UISwipeActionsConfiguration`는 iOS 11에서 도입 되었으며 사용자가 테이블 뷰의 행에 대해 _어느 방향으로_ swipes 때 발생 해야 하는 작업 집합을 정의 하는 데 사용 됩니다. 이 동작은 네이티브 메일 앱과 유사 합니다.
 
 `UITableViewRowAction` 클래스는 사용자가 테이블 뷰의 행에서 가로로 swipes 때 발생 하는 동작을 정의 하는 데 사용 됩니다.
 예를 들어 테이블을 편집 하는 경우 행을 왼쪽으로 살짝 밀어 놓으면 **삭제** 단추가 기본적으로 표시 됩니다. `UITableViewRowAction` 클래스의 여러 인스턴스를에 `UITableView`연결 하 여 각각 고유한 텍스트, 서식 지정 및 동작을 포함 하는 여러 사용자 지정 작업을 정의할 수 있습니다.
@@ -32,7 +32,7 @@ iOS에서는 테이블 `UISwipeActionsConfiguration` 에 대 한 작업을 수�
 
 를 사용 하 여 `UISwipeActionsConfiguration`살짝 밀기 작업을 구현 하는 데 필요한 세 가지 단계가 있습니다.
 
-1. 및 `GetLeadingSwipeActionsConfiguration` /또는 `GetTrailingSwipeActionsConfiguration` 메서드를 재정의 합니다. 이러한 메서드는을 `UISwipeActionsConfiguration`반환 합니다. 
+1. 및 `GetLeadingSwipeActionsConfiguration` /또는 `GetTrailingSwipeActionsConfiguration` 메서드를 재정의 합니다. 이러한 메서드는을 `UISwipeActionsConfiguration`반환 합니다.
 2. `UISwipeActionsConfiguration` 반환 될를 인스턴스화합니다. 이 클래스는 배열을 `UIContextualAction`사용 합니다.
 3. `UIContextualAction`를 만듭니다.
 
@@ -40,7 +40,7 @@ iOS에서는 테이블 `UISwipeActionsConfiguration` 에 대 한 작업을 수�
 
 ### <a name="1-implementing-the-swipeactionsconfigurations-methods"></a>1. SwipeActionsConfigurations 메서드 구현
 
-`UITableViewController``UITableViewSource` (및 `UITableViewDelegate` )에`GetTrailingSwipeActionsConfiguration`는 및 라는 두 가지 메서드가 포함 되어 있습니다 .이 메서드는 테이블 뷰 행에 대해 살짝 밀기 동작 집합을 구현 하는 데 사용 됩니다. `GetLeadingSwipeActionsConfiguration` 선행 살짝 밀기 동작은 화면 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로 진행 되는 언어의 화면 오른쪽에서 살짝 밀기를 나타냅니다. 
+`UITableViewController``UITableViewSource` (및 `UITableViewDelegate` )에`GetTrailingSwipeActionsConfiguration`는 및 라는 두 가지 메서드가 포함 되어 있습니다 .이 메서드는 테이블 뷰 행에 대해 살짝 밀기 동작 집합을 구현 하는 데 사용 됩니다. `GetLeadingSwipeActionsConfiguration` 선행 살짝 밀기 동작은 화면 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로 진행 되는 언어의 화면 오른쪽에서 살짝 밀기를 나타냅니다.
 
 다음 예제에서는 ( [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) 샘플에서) 선행 살짝 밀기 구성을 구현 하는 방법을 보여 줍니다. 두 작업은 [아래](#create-uicontextualaction)에서 설명 하는 상황별 동작에서 만들어집니다. 이러한 작업은 반환 값으로 사용 되는 새로 [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations)초기화 된에 전달 됩니다.
 
@@ -54,11 +54,11 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 
     //UISwipeActionsConfiguration
     var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction });
-    
+
     leadingSwipe.PerformsFirstActionWithFullSwipe = false;
-    
+
     return leadingSwipe;
-}  
+}
 ```
 
 <a name="create-uiswipeactionsconfigurations" />
@@ -99,10 +99,10 @@ public UIContextualAction ContextualFlagAction(int row)
                         "Flag",
                         (FlagAction, view, success) => {
                             var alertController = UIAlertController.Create($"Report {words[row]}?", "", UIAlertControllerStyle.Alert);
-                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null)); 
+                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
                             alertController.AddAction(UIAlertAction.Create("Yes", UIAlertActionStyle.Destructive, null));
                             PresentViewController(alertController, true, null);
-                            
+
                             success(true);
                         });
 
@@ -163,7 +163,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 메서드는 사용자가 테이블의 행에 `UITableViewRowAction` 가로 방향으로 swipes **때 단추를** 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 `TableDelegate` 새 인스턴스가 만들어져에 연결 `UITableView`됩니다. 예를 들어:
+정적 `UITableViewRowAction.Create` 메서드는 사용자가 테이블의 행에 `UITableViewRowAction` 가로 방향으로 swipes 때 단추를 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 `TableDelegate` 새 인스턴스가 만들어져에 연결 `UITableView`됩니다. 예를 들어:
 
 ```csharp
 TableDelegate tableDelegate;
@@ -179,7 +179,7 @@ table.Delegate = tableDelegate;
 
 [![](row-action-images/action01.png "[삭제] 단추 대신 표시 되는 안녕하세요.")](row-action-images/action01.png#lightbox)
 
-사용자 `Hello World!` **가 단추를** 탭 하면 응용 프로그램이 디버그 모드에서 실행 될 때가 Mac용 Visual Studio 또는 Visual Studio에서 콘솔에 기록 됩니다.
+사용자가 단추 `Hello World!` 를 탭 하면 응용 프로그램이 디버그 모드에서 실행 될 때가 Mac용 Visual Studio 또는 Visual Studio에서 콘솔에 기록 됩니다.
 
 
 

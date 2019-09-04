@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 1b4732e87fb09a4846bfe12b7a476dfef2d6f4f9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9a26532d13b843b812da94739be071c7accac212
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647234"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228200"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Xamarin.Forms에서 동적 스타일
 
@@ -82,10 +82,10 @@ public partial class DynamicStylesPage : ContentPage
 }
 ```
 
-경우는 `OnButtonClicked` 이벤트 처리기가 실행 `searchBarStyle` 간을 전환 합니다 `blueSearchBarStyle` 고 `greenSearchBarStyle`입니다. 이 인해 다음 스크린샷에 표시 된 모양:
+경우는 `OnButtonClicked` 이벤트 처리기가 실행 `searchBarStyle` 간을 전환 합니다 `blueSearchBarStyle` 고 `greenSearchBarStyle`입니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-[![](dynamic-images/dynamic-style-blue.png "동적 스타일 예제 파란색")](dynamic-images/dynamic-style-blue-large.png#lightbox "예제 동적 스타일 파란색")
-[![](dynamic-images/dynamic-style-green.png "예제 동적 스타일 녹색") ] (dynamic-images/dynamic-style-green-large.png#lightbox "녹색 동적 Style 예제")
+[![파랑 동적 스타일 예제](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
+[![녹색 동적 스타일 예제](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 다음 코드 예제에서는 C#의 해당 페이지를 보여 줍니다.
 
@@ -161,10 +161,10 @@ C#에서는 합니다 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스
 
 [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) 인스턴스를 사용 하 여를 `StaticResource` 태그 확장 참조 하는 [ `Style` ](xref:Xamarin.Forms.Style) 라는 `tealSearchBarStyle`합니다. 이 `Style` 몇 가지 추가 속성을 설정 하 고 사용 합니다 [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) 참조할 속성 `searchBarStyle`합니다. 합니다 `DynamicResource` 하므로 태그 확장이 필요 하지 않습니다 `tealSearchBarStyle` 변경 되지 것입니다 제외 하 고는 `Style` 에서 파생 합니다. 따라서 `tealSearchBarStyle` 에 대 한 링크를 유지 관리 `searchBarStyle` 기본 스타일이 변경 될 때 변경 됩니다.
 
-코드 숨김 파일에서 생성자를 만듭니다는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 키를 사용 하 여 항목 `searchBarStyle`, 동적 스타일을 설명 하는 앞의 예제를 기준으로 합니다. 경우는 `OnButtonClicked` 이벤트 처리기가 실행 `searchBarStyle` 간을 전환 합니다 `blueSearchBarStyle` 고 `greenSearchBarStyle`입니다. 이 인해 다음 스크린샷에 표시 된 모양:
+코드 숨김 파일에서 생성자를 만듭니다는 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 키를 사용 하 여 항목 `searchBarStyle`, 동적 스타일을 설명 하는 앞의 예제를 기준으로 합니다. 경우는 `OnButtonClicked` 이벤트 처리기가 실행 `searchBarStyle` 간을 전환 합니다 `blueSearchBarStyle` 고 `greenSearchBarStyle`입니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "동적 스타일 상속 예제 파란색")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "동적 스타일 상속 예제 파란색")
-[![](dynamic-images/dynamic-style-inheritance-green.png "동적 스타일 녹색 상속 예제")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "녹색 동적 스타일 상속 예제")
+[![파랑 동적 스타일 상속 예제](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
+[![녹색 동적 스타일 상속 예제](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 다음 코드 예제에서는 C#의 해당 페이지를 보여 줍니다.
 

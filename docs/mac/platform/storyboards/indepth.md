@@ -7,22 +7,22 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 06d3127bbe7766a70efc570bd455a8d570548731
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2f3bdc70928dc06719bf7cfb775bf70fae9695a4
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653780"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227871"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Xamarin.ios에서 Storyboard 사용
 
 스토리 보드는 지정 된 앱에 대 한 모든 UI를 해당 뷰 컨트롤러의 기능 개요로 분할 하 여 정의 합니다. Xcode의 Interface Builder에서 이러한 각 컨트롤러는 자체 장면에 상주 합니다.
 
-[![](indepth-images/intro01.png "Xcode의 Interface Builder storyboard")](indepth-images/intro01.png#lightbox)
+[![Xcode의 Interface Builder storyboard](indepth-images/intro01.png)](indepth-images/intro01.png#lightbox)
 
 스토리 보드는 컴파일되어 제공 될 때 xamarin.ios 앱의 번들 `.storyboard`에 포함 되는 리소스 파일 (확장명 포함)입니다. 앱에 대 한 시작 Storyboard를 정의 하려면 해당 `Info.plist` 파일을 편집 하 고 드롭다운 상자에서 **주 인터페이스** 를 선택 합니다. 
 
-[![](indepth-images/sb01.png "Info.plist 편집기")](indepth-images/sb01.png#lightbox)
+[![Info.plist 편집기](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
@@ -41,11 +41,11 @@ controller.ShowWindow(this);
 
 는 `FromName` 앱의 번들에 포함 된 지정 된 이름을 사용 하 여 스토리 보드 파일을 로드 합니다. 는 `InstantiateControllerWithIdentifier` 지정 된 id를 사용 하 여 뷰 컨트롤러의 인스턴스를 만듭니다. UI를 디자인할 때 Xcode의 Interface Builder에 Id를 설정 합니다.
 
-[![](indepth-images/sb02.png "스토리 보드 ID 설정")](indepth-images/sb02.png#lightbox)
+[![스토리 보드 ID 설정](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
 
 필요에 따라 `InstantiateInitialController` 메서드를 사용 하 여 Interface Builder에서 초기 컨트롤러가 할당 된 뷰 컨트롤러를 로드할 수 있습니다.
 
-[![](indepth-images/sb03.png "초기 컨트롤러 설정")](indepth-images/sb03.png#lightbox)
+[![초기 컨트롤러 설정](indepth-images/sb03.png)](indepth-images/sb03.png#lightbox)
 
 **스토리 보드 진입점** 및 위의 열린 끝 화살표로 표시 됩니다.
 
@@ -76,7 +76,7 @@ Macos에서 storyboard를 지원 하기 위해 `NSViewController` 여러 가지 
 
 또한 이제는 창의 응답자 체인의 일부입니다. `NSViewControllers`
 
-[![](indepth-images/vc01.png "응답자 체인")](indepth-images/vc01.png#lightbox)
+[![응답자 체인](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
 그리고 잘라내기, 복사 및 붙여넣기 메뉴 항목 선택 등의 이벤트를 수신 하 고 응답 하기 위해 연결 되어 있습니다. 이 자동 보기 컨트롤러는 macOS Sierra (10.12) 이상에서 실행 되는 앱에 대해서만 발생 합니다.
 
@@ -86,13 +86,13 @@ Macos에서 storyboard를 지원 하기 위해 `NSViewController` 여러 가지 
 
 스토리 보드에서 뷰 컨트롤러 (예: 분할 뷰 컨트롤러 및 탭 뷰 컨트롤러)는 이제 다른 하위 뷰 컨트롤러를 "포함" 할 수 있도록 _포함_을 구현할 수 있습니다.
 
-[![](indepth-images/vc02.png "뷰 컨트롤러 포함의 예")](indepth-images/vc02.png#lightbox)
+[![뷰 컨트롤러 포함의 예](indepth-images/vc02.png)](indepth-images/vc02.png#lightbox)
 
 자식 뷰 컨트롤러에는 부모 뷰 컨트롤러에 다시 연결 하 고 화면에서 보기를 표시 하 고 제거 하는 데 사용할 수 있는 메서드와 속성이 포함 되어 있습니다.
 
 MacOS에 기본 제공 되는 모든 컨테이너 뷰 컨트롤러에는 고유한 사용자 지정 컨테이너 뷰 컨트롤러를 만들 때 따라야 하는 Apple 제안에 해당 하는 레이아웃이 있습니다.
 
-[![](indepth-images/vc03.png "뷰 컨트롤러 레이아웃")](indepth-images/vc03.png#lightbox)
+[![뷰 컨트롤러 레이아웃](indepth-images/vc03.png)](indepth-images/vc03.png#lightbox)
 
 컬렉션 뷰 컨트롤러에는 각각 자체 뷰를 포함 하는 하나 이상의 뷰 컨트롤러를 포함 하는 컬렉션 뷰 항목의 배열이 포함 되어 있습니다.
 
@@ -131,7 +131,7 @@ PerformSegue("MyNamedSegue", this);
 
 Segue ID는 앱 UI의 레이아웃을 지정 하는 경우 Xcode의 Interface Builder 내부에 정의 됩니다.
 
-[![](indepth-images/sg02.png "Segue 이름 입력")](indepth-images/sg02.png#lightbox)
+[![Segue 이름 입력](indepth-images/sg02.png)](indepth-images/sg02.png#lightbox)
 
 Segue의 소스로 작동 하는 뷰 컨트롤러에서 `PrepareForSegue` 메서드를 재정의 하 고, Segue를 실행 하 고 지정 된 뷰 컨트롤러를 표시 하기 전에 초기화를 수행 해야 합니다.
 
@@ -215,7 +215,7 @@ namespace OnCardMac
 
 Xcode의 Interface Builder에서이 새 Segue 형식을 사용 하려면 먼저 앱을 컴파일한 다음 Xcode로 전환 하 고 두 장면 사이에 새 Segue를 추가 해야 합니다. **스타일** 을 **custom** 으로 설정 하 고 **Segue 클래스** 를 `ReplaceViewSegue` (사용자 지정 Segue 클래스의 이름)로 설정 합니다.
 
-[![](indepth-images/sg01.png "Segue 클래스 설정")](indepth-images/sg01.png#lightbox)
+[![Segue 클래스 설정](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
@@ -271,21 +271,21 @@ MacOS에서 사용할 수 있는 제스처 인식기는 다음과 같습니다.
 
 1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.  > MacStoryboard > . 새 스토리 보드의 **이름을** 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 
 
-    [![](indepth-images/ref01.png "새 스토리 보드 추가")](indepth-images/ref01.png#lightbox)
+    [![새 스토리 보드 추가](indepth-images/ref01.png)](indepth-images/ref01.png#lightbox)
 2. **솔루션 탐색기**에서 새 스토리 보드 이름을 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
 3. 일반적인 방법으로 새 Storyboard의 배경 레이아웃을 디자인 하 고 변경 내용을 저장 합니다. 
 
-    [![](indepth-images/ref02.png "인터페이스 디자인")](indepth-images/ref02.png#lightbox)
+    [![인터페이스 디자인](indepth-images/ref02.png)](indepth-images/ref02.png#lightbox)
 4. Interface Builder에 대 한 참조를 추가할 Storyboard로 전환 합니다.
 5. **개체 라이브러리** 의 **스토리 보드 참조** 를 Design Surface 끌어 옵니다. 
 
-    [![](indepth-images/ref03.png "라이브러리에서 스토리 보드 참조 선택")](indepth-images/ref03.png#lightbox)
+    [![라이브러리에서 스토리 보드 참조 선택](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. **특성 검사자**에서 위에서 만든 **Storyboard** 의 이름을 선택 합니다. 
 
-    [![](indepth-images/ref04.png "참조 구성")](indepth-images/ref04.png#lightbox)
+    [![참조 구성](indepth-images/ref04.png)](indepth-images/ref04.png#lightbox)
 7. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다.  팝업 메뉴에서 **표시** 를 선택 하 여 Segue를 완료 합니다. 
 
-    [![](indepth-images/ref06.png "Segue 형식 설정")](indepth-images/ref06.png#lightbox) 
+    [![Segue 형식 설정](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
 9. Mac용 Visual Studio로 돌아와서 변경 내용을 동기화 합니다.
 
@@ -300,20 +300,20 @@ MacOS에서 사용할 수 있는 제스처 인식기는 다음과 같습니다.
 1. **솔루션 탐색기**에서 외부 스토리 보드를 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
 2. 새 장면을 추가 하 고 일반적으로 다음과 같이 레이아웃을 디자인 합니다. 
 
-    [![](indepth-images/ref07.png "Xcode에서 레이아웃 디자인")](indepth-images/ref07.png#lightbox)
+    [![Xcode에서 레이아웃 디자인](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. **Id 검사자**에서 새 장면의 창 컨트롤러에 대 한 **스토리 보드 ID** 를 입력 합니다. 
 
-    [![](indepth-images/ref08.png "스토리 보드 ID 설정")](indepth-images/ref08.png#lightbox)
+    [![스토리 보드 ID 설정](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Interface Builder에 대 한 참조를 추가할 스토리 보드를 엽니다.
 5. **개체 라이브러리** 의 **스토리 보드 참조** 를 Design Surface 끌어 옵니다. 
 
-    [![](indepth-images/ref03.png "라이브러리에서 스토리 보드 참조 선택")](indepth-images/ref03.png#lightbox)
+    [![라이브러리에서 스토리 보드 참조 선택](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. **Identity Inspector**에서 위에서 만든 장면의 **스토리 보드** 이름 및 **참조 ID** (storyboard id)를 선택 합니다. 
 
-    [![](indepth-images/ref09.png "참조 ID 설정")](indepth-images/ref09.png#lightbox)
+    [![참조 ID 설정](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다. 팝업 메뉴에서 **표시** 를 선택 하 여 Segue를 완료 합니다. 
 
-    [![](indepth-images/ref06.png "Segue 형식 설정")](indepth-images/ref06.png#lightbox) 
+    [![Segue 형식 설정](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 8. 스토리 보드에 변경 내용을 저장 합니다.
 9. Mac용 Visual Studio로 돌아와서 변경 내용을 동기화 합니다.
 
@@ -328,19 +328,19 @@ MacOS에서 사용할 수 있는 제스처 인식기는 다음과 같습니다.
 1. **솔루션 탐색기**에서 스토리 보드를 두 번 클릭 하 여 편집용으로 엽니다.
 2. 새 장면을 추가 하 고 일반적으로 다음과 같이 레이아웃을 디자인 합니다. 
 
-    [![](indepth-images/ref11.png "Xcode에서 storyboard 편집")](indepth-images/ref11.png#lightbox)
+    [![Xcode에서 storyboard 편집](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. **Id 검사자**에서 새 장면의 창 컨트롤러에 대 한 **스토리 보드 ID** 를 입력 합니다. 
 
-    [![](indepth-images/ref12.png "스토리 보드 ID 설정")](indepth-images/ref12.png#lightbox)
+    [![스토리 보드 ID 설정](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. **도구 상자** 의 **스토리 보드 참조** 를 Design Surface 끌어 옵니다. 
 
-    [![](indepth-images/ref03.png "라이브러리에서 스토리 보드 참조 선택")](indepth-images/ref03.png#lightbox)
+    [![라이브러리에서 스토리 보드 참조 선택](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. **특성 검사자**에서 위에서 만든 장면의 **참조 ID** (Storyboard id)를 선택 합니다. 
 
-    [![](indepth-images/ref13.png "참조 ID 설정")](indepth-images/ref13.png#lightbox)
+    [![참조 ID 설정](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다. 팝업 메뉴에서 **표시** 를 선택 하 여 Segue를 완료 합니다. 
 
-    [![](indepth-images/ref06.png "Segue 유형 선택")](indepth-images/ref06.png#lightbox) 
+    [![Segue 유형 선택](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
 7. 스토리 보드에 변경 내용을 저장 합니다.
 8. Mac용 Visual Studio로 돌아와서 변경 내용을 동기화 합니다.
 

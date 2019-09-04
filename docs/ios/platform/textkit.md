@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bed0e272293d3462d32fe5134147112e38116f0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c0ee125090a2bb817f09a18c34033a1f8a788569
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528724"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227289"
 ---
 # <a name="textkit-in-xamarinios"></a>Xamarin.ios의 TextKit
 
@@ -29,7 +29,7 @@ TextKit의 기능을 표준 컨트롤에서 사용할 수 있도록 하기 위�
 TextKit는 다음 클래스를 비롯 하 여 레이아웃과 표시에서 텍스트 저장소를 구분 하는 계층화 된 아키텍처를 제공 합니다.
 
 - `NSTextContainer`– 텍스트를 레이아웃 하는 데 사용 되는 좌표계 및 기 하 도형을 제공 합니다.
-- `NSLayoutManager`– 텍스트를 문자 모양으로 설정 하 여 텍스트를 배치 합니다. 
+- `NSLayoutManager`– 텍스트를 문자 모양으로 설정 하 여 텍스트를 배치 합니다.
 - `NSTextStorage`– 텍스트 데이터를 포함 하며 일괄 처리 텍스트 속성 업데이트를 처리 합니다. 일괄 처리 업데이트는 레이아웃을 다시 계산 하 고 텍스트를 다시 그리는 등의 실제 변경 내용 처리를 위해 레이아웃 관리자에 전달 됩니다.
 
 
@@ -160,7 +160,7 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 다음 스크린 샷에서는 그려지는 경로를 중심으로 텍스트 레이아웃을 변경 하는 방법을 보여 줍니다.
 
-<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
+<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")-->
 ![](textkit-images/exclusionpath2.png "이 스크린샷에서는 그려지는 경로를 중심으로 텍스트 레이아웃을 변경 하는 방법을 보여 줍니다.")
 
 이 경우 레이아웃 관리자의 `AllowsNonContiguousLayout` 속성은 false로 설정 됩니다. 이렇게 하면 텍스트가 변경 되는 모든 경우에 레이아웃을 다시 계산 합니다. 이를 true로 설정 하면 전체 레이아웃 새로 고침을 방지 하 여 성능이 향상 될 수 있습니다. 특히 문서가 큰 경우에는 더욱 그렇습니다. 그러나를 true `AllowsNonContiguousLayout` 로 설정 하면 일부 환경에서 제외 경로에서 레이아웃을 업데이트할 수 없습니다. 예를 들어, 경로를 설정 하기 전에 후행 캐리지 리턴 없이 런타임에 텍스트를 입력 하는 경우입니다.

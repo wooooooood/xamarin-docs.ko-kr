@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: a1fae280f42f91fce4b4fe28c3f728cf14c7a21c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dabbd21a2ad2ef3c77017ea92704ccdf69f7b36c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528910"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228208"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
@@ -173,9 +173,9 @@ public class CustomListView : ListView
 - 많이 중첩 된 레이아웃 계층을 방지 합니다. 사용 하 여 `AbsoluteLayout` 또는 `Grid` 중첩을 줄일 수 있습니다.
 - 특정 방지 `LayoutOptions` 이외의 `Fill` (채우기 계산 하는 중 가장 저렴 한입니다).
 - 숨겨질 수를 `ListView` 안에 `ScrollView` 다음과 같은 이유로:
-    - `ListView` 자체 스크롤을 구현 합니다.
-    - 합니다 `ListView` 부모에 의해 처리 됩니다 하는 대로 모든 제스처를 받지 `ScrollView`합니다.
-    - 합니다 `ListView` 잠재적으로 기능을 하는 제품 목록의 요소를 사용 하 여 사용자 지정된 헤더 및 스크롤 하는 바닥글을 제공할 수는 `ScrollView` 사용 되었습니다. 자세한 내용은 참조 [머리글 및 바닥글](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers)합니다.
+  - `ListView` 자체 스크롤을 구현 합니다.
+  - 합니다 `ListView` 부모에 의해 처리 됩니다 하는 대로 모든 제스처를 받지 `ScrollView`합니다.
+  - 합니다 `ListView` 잠재적으로 기능을 하는 제품 목록의 요소를 사용 하 여 사용자 지정된 헤더 및 스크롤 하는 바닥글을 제공할 수는 `ScrollView` 사용 되었습니다. 자세한 내용은 참조 [머리글 및 바닥글](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers)합니다.
 - 셀에 표시 되는 매우 특정 한 복잡 한 디자인 해야 하는 경우 사용자 지정 렌더러를 고려 합니다.
 
 `AbsoluteLayout` 단일 측정값 호출 하지 않고 레이아웃 하는 데 있습니다. 이렇게 하면 성능에 대 한 매우 강력 합니다. 하는 경우 `AbsoluteLayout` 일 수 없습니다를 사용 하는 것이 좋습니다 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout)합니다. 사용 하는 경우 `RelativeLayout`, 식 API를 사용 하 여 보다 크게 향상 되는 제약 조건에 직접 전달 합니다. 이것은 JIT에 사용 되는 식 API 하며 iOS에서 트리를 해석할 수는 느립니다. API 식에 적합 한 페이지 레이아웃 위치만 필요할 초기 레이아웃과 회전에서 `ListView`스크롤을 하는 동안 지속적으로 실행 되는 경우, 성능 문제가 발생 합니다.

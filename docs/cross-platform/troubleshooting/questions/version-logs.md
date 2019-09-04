@@ -7,38 +7,38 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b421378f8aa99728fa13f104e284b9c410abe2b3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cd7a2026a4d1d1458455733a6f2710364cc7fec7
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119961"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226775"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그는 어디에서 확인할 수 있나요?
 
 ## <a name="outline"></a>윤곽선
 
 - [버전 정보](#version-information)
-    - Windows 버전 정보
-    - Mac 버전 정보
-    - Android SDK Tools, 플랫폼 도구, 빌드-도구
+  - Windows 버전 정보
+  - Mac 버전 정보
+  - Android SDK Tools, 플랫폼 도구, 빌드-도구
 - [IDE 및 설치 관리자 로그](#ide-and-installer-logs)
-    - [Windows 로그](#windows-logs)
-        - Xamarin Studio
-        - Visual Studio용 Xamarin
-        - Xamarin Universal 설치 관리자
-        - 개별 `.msi` 설치 관리자, 자세한 정보 로그
-        - Visual Studio 시작, 자세한 정보 로그
-    - [Mac 로그](#mac-logs)
-        - 빌드 호스트
-    - Mac용 Visual Studio
-        - Xamarin Studio
-        - Xamarin 설치 관리자
+  - [Windows 로그](#windows-logs)
+    - Xamarin Studio
+    - Visual Studio용 Xamarin
+    - Xamarin Universal 설치 관리자
+    - 개별 `.msi` 설치 관리자, 자세한 정보 로그
+    - Visual Studio 시작, 자세한 정보 로그
+  - [Mac 로그](#mac-logs)
+    - 빌드 호스트
+  - Mac용 Visual Studio
+    - Xamarin Studio
+    - Xamarin 설치 관리자
 - [자세한 정보 표시 빌드 출력](#verbose-build-output-logs)
 - [Xamarin Android 및 Xamarin.ios 앱에 대 한 디버그 로그](#debug-logs-for-xamarin-apps)
-    - Android `adb` logcat 로그
-    - iOS 시뮬레이터 로그 (Mac)
-    - iOS 장치 로그 (Mac의 경우)
+  - Android `adb` logcat 로그
+  - iOS 시뮬레이터 로그 (Mac)
+  - iOS 장치 로그 (Mac의 경우)
 
 ## <a name="a-idversion-information-nameversion-information-version-information"></a><a id="version-information" name="version-information" />버전 정보
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 4fa15e73575e20541df7ee8f606b01ec6e3d875a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656714"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226573"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.ios의 siri 바로 가기
 
@@ -264,19 +264,19 @@ Xcode **프로젝트 탐색기**에서 최상위 프로젝트 **OrderSoupIntentS
 
 - Xcode 10 명령줄 도구를 사용 하도록 시스템을 구성 합니다.
 
-    > [!WARNING]
-    > 선택한 명령줄 도구를 업데이트 하면 시스템에 설치 된 Xcode의 모든 버전에 영향을 줍니다. 수프 Chef 샘플 앱 사용을 완료 한 후에는이 설정을 원래 구성으로 되돌려야 합니다.
+  > [!WARNING]
+  > 선택한 명령줄 도구를 업데이트 하면 시스템에 설치 된 Xcode의 모든 버전에 영향을 줍니다. 수프 Chef 샘플 앱 사용을 완료 한 후에는이 설정을 원래 구성으로 되돌려야 합니다.
 
-    - Xcode에서 **Xcode > 기본 설정 > 위치** 를 선택 하 고, **명령줄 도구** 를 시스템에서 사용할 수 있는 최신 Xcode 10 설치로 설정 합니다.
+  - Xcode에서 **Xcode > 기본 설정 > 위치** 를 선택 하 고, **명령줄 도구** 를 시스템에서 사용할 수 있는 최신 Xcode 10 설치로 설정 합니다.
 
 - 터미널 `cd` 에서 **OrderSoupIntentStaticLib** 디렉터리를 대상으로 합니다.
 
 - 다음 `make`을 작성 하는 형식:
 
-    - 정적 라이브러리 **libOrderSoupIntentStaticLib**
-    - **Bo** 출력 디렉터리에서 C# 바인딩 정의:
-        - **ApiDefinitions.cs**
-        - **StructsAndEnums.cs**
+  - 정적 라이브러리 **libOrderSoupIntentStaticLib**
+  - **Bo** 출력 디렉터리에서 C# 바인딩 정의:
+    - **ApiDefinitions.cs**
+    - **StructsAndEnums.cs**
 
 이 정적 라이브러리와 연결 된 바인딩 정의에 의존 하는 **OrderSoupIntentBindings** 프로젝트는 이러한 항목을 자동으로 빌드합니다.
 그러나 위의 프로세스를 통해 수동으로 실행 하면 예상 대로 빌드됩니다.
@@ -315,7 +315,7 @@ C# **SoupChef** 솔루션에서 **SoupKit** 프로젝트는 앱과 해당 확장
 
 Siri가 바로 가기를 제안 하려면 먼저 바로 가기가 관련 된 경우를 이해 해야 합니다.
 
-Siri를 이해 하기 위해 _수프 Chef는_ 사용자가 수프 주문을 배치할 때마다 siri에 대 한 의도를 제공 합니다. 이러한 기부에 기반 하 여 기증 된 곳에서 기증 된 경우 포함 된 매개 변수 – Siri는 나중에 바로 가기를 제안할 시기를 학습 합니다.
+Siri를 이해 하기 위해 수프 Chef는 사용자가 수프 주문을 배치할 때마다 siri에 대 한 의도를 제공 합니다. 이러한 기부에 기반 하 여 기증 된 곳에서 기증 된 경우 포함 된 매개 변수 – Siri는 나중에 바로 가기를 제안할 시기를 학습 합니다.
 
 **SoupChef** 는 `SoupOrderDataManager` 클래스를 사용 하 여 기부금을 넣습니다.
 사용자에 대 한 수프 순서를 설정 하기 위해 호출 되 `PlaceOrder` 면 메서드는를 [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*)호출 합니다.
@@ -645,16 +645,16 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 
 - 수프 Chef 앱과 해당 확장 간에 데이터를 공유 하는 앱 그룹을 만듭니다. 예를 들면 다음과 같습니다. **SoupChef**
 
-- 응용 프로그램 자체에 대 한 세 가지 앱 Id를 만듭니다. 하나는 의도 확장을 위한 것이 고 다른 하나는 의도 UI 확장에 대 한 Id입니다. 예:
+- 응용 프로그램 자체에 대 한 세 가지 앱 Id를 만듭니다. 하나는 의도 확장을 위한 것이 고 다른 하나는 의도 UI 확장에 대 한 Id입니다. 예를 들어:
 
-    - App: **com.yourcompanyname.SoupChef**
-        - 이 앱 ID로 SiriKit 및 **앱 그룹** 기능을 할당 합니다.
+  - App: **com.yourcompanyname.SoupChef**
+    - 이 앱 ID로 SiriKit 및 **앱 그룹** 기능을 할당 합니다.
 
-    - 의도 확장: **com. SoupChef.**
-        - 이 앱 ID에 **앱 그룹** 기능을 할당 합니다.
+  - 의도 확장: **com. SoupChef.**
+    - 이 앱 ID에 **앱 그룹** 기능을 할당 합니다.
 
-    - 의도 UI 확장: **com. SoupChef. Intentsui**
-        - 이 앱 ID에는 특별 한 기능이 필요 하지 않습니다.
+  - 의도 UI 확장: **com. SoupChef. Intentsui**
+    - 이 앱 ID에는 특별 한 기능이 필요 하지 않습니다.
 
 - 위의 앱 Id를 만든 후 위에 만든 특정 앱 그룹을 지정 하 여 앱 및 의도 확장에 할당 된 **앱 그룹** 기능을 편집 합니다.
 
@@ -668,16 +668,16 @@ Mac용 Visual Studio 또는 Visual Studio 2017에서 다음을 수행 합니다.
 
 - 솔루션의 다양 한 **info.plist** 파일을 업데이트 합니다. 앱, 의도 확장 및 의도 UI 확장 **번들 식별자** 를 위에서 정의한 앱 id로 설정 합니다.
 
-    - App: **com.yourcompanyname.SoupChef**
-    - 의도 확장: **com. SoupChef.**
-    - 의도 UI 확장: **com. SoupChef. Intentsui**
+  - App: **com.yourcompanyname.SoupChef**
+  - 의도 확장: **com. SoupChef.**
+  - 의도 UI 확장: **com. SoupChef. Intentsui**
 
 - **SoupChef** 프로젝트에 대 한 **info.plist** 파일을 업데이트 합니다.
-    - **앱 그룹** 기능에 대해 위에서 만든 새 앱 그룹으로 그룹을 설정 합니다 (위의 예제에서는 **SoupChef**).
-    - **Sirikit** 를 사용 하도록 설정 했는지 확인 합니다.
+  - **앱 그룹** 기능에 대해 위에서 만든 새 앱 그룹으로 그룹을 설정 합니다 (위의 예제에서는 **SoupChef**).
+  - **Sirikit** 를 사용 하도록 설정 했는지 확인 합니다.
 
 - **SoupChefIntents** 프로젝트에 대 한 **info.plist** 파일을 업데이트 합니다.
-    - **앱 그룹** 기능에 대해 위에서 만든 새 앱 그룹으로 그룹을 설정 합니다 (위의 예제에서는 **SoupChef**).
+  - **앱 그룹** 기능에 대해 위에서 만든 새 앱 그룹으로 그룹을 설정 합니다 (위의 예제에서는 **SoupChef**).
 
 - 마지막으로 **NSUserDefaultsHelper.cs**를 엽니다. 변수를 새 앱 그룹의 값으로 설정 합니다 (예:로 `group.com.yourcompanyname.SoupChef`설정). `AppGroup`
 

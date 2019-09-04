@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: ac77977f3832b0ab7ba440a2c795037e8fcf5f2e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620991"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227890"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -100,13 +100,13 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
   **프로 파일링을 사용 하도록 설정 하 > iOS 디버그 > 빌드**
 
-  ![](images/ios-options-mac.png "Mac용 Visual Studio의 iOS 옵션 대화 상자")
+  ![Mac용 Visual Studio의 iOS 옵션 대화 상자](images/ios-options-mac.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
   **프로 파일링을 사용 하도록 설정 > iOS 빌드 > 속성**
 
-  ![](images/ios-project-options-vs.png "Visual Studio의 iOS 옵션 대화 상자")
+  ![Visual Studio의 iOS 옵션 대화 상자](images/ios-project-options-vs.png)
 
 -----
 
@@ -137,7 +137,7 @@ IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실�
 1. 먼저 Mac용 Visual Studio에서 응용 프로그램을 로드 했는지 확인 하 고 (기본값) 디버그 구성을 선택 합니다.
 2. 아래 다이어그램에 나와 있는 것 처럼 Mac용 Visual Studio에서 **프로 파일링을 시작**하거나 Visual Studio에서 **> Xamarin Profiler를 분석** 하 여 프로파일러를 열 > 실행 합니다.
 
-  ![](images/start-profiling-xs.png "Mac용 Visual Studio에서 프로파일러 시작")
+  ![Mac용 Visual Studio에서 프로파일러 시작](images/start-profiling-xs.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -164,13 +164,13 @@ IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실�
 
 설치 된 후에는 아래 스크린샷에 나와 있는 것 처럼 응용 프로그램 폴더에서 Xamarin Profiler를 찾을 수 있습니다.
 
-![](images/applications.png "Mac에서 독립 실행형 프로파일러 열기")
+![Mac에서 독립 실행형 프로파일러 열기](images/applications.png)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 응용 프로그램을 설치한 후에는 응용 프로그램 디렉터리에서 Xamarin Profiler 응용 프로그램을 찾을 수 있습니다.
 
-![](images/applications-vs.png "Windows에서 독립 실행형 프로파일러 열기")
+![Windows에서 독립 실행형 프로파일러 열기](images/applications-vs.png)
 
 -----
 
@@ -184,11 +184,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![](images/profiler-mac-sml.png "Mac용 Visual Studio의 프로파일러 섹션")](images/profiler-mac.png#lightbox) 
+[![Mac용 Visual Studio의 프로파일러 섹션](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/profiler-vs.png "Visual Studio의 프로파일러 섹션")](images/profiler-vs.png#lightbox)
+[![Visual Studio의 프로파일러 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -206,11 +206,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![](images/allocations1.png "할당 계측")](images/allocations1.png#lightbox) 
+[![할당 계측](images/allocations1.png)](images/allocations1.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/allocations1-vs.png "할당 계측")](images/allocations1-vs.png#lightbox)
+[![할당 계측](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -220,11 +220,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-  [![](images/allocations3.png "할당 탭")](images/allocations3.png#lightbox) 
+  [![할당 탭](images/allocations3.png)](images/allocations3.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations2-vs.png "할당 탭")](images/allocations2-vs.png#lightbox)
+  [![할당 탭](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -236,11 +236,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-  [![](images/allocations2.png "호출 트리 탭")](images/allocations2.png#lightbox) 
+  [![호출 트리 탭](images/allocations2.png)](images/allocations2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations3-vs.png "호출 트리 탭")](images/allocations3-vs.png#lightbox)
+  [![호출 트리 탭](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -248,11 +248,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-  [![](images/allocations4.png "스냅숏 탭")](images/allocations4.png#lightbox) 
+  [![스냅숏 탭](images/allocations4.png)](images/allocations4.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/allocations4-vs.png "스냅숏 탭")](images/allocations4-vs.png#lightbox)
+  [![스냅숏 탭](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -280,11 +280,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-  [![](images/time2.png "시간 프로파일러 계측 – 호출 트리")](images/time2.png#lightbox) 
+  [![시간 프로파일러 계측 – 호출 트리](images/time2.png)](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![](images/time2-vs.png "시간 프로파일러 계측 – 호출 트리")](images/time2-vs.png#lightbox) 
+  [![시간 프로파일러 계측 – 호출 트리](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -315,7 +315,7 @@ C# 및 F# 관리 코드를 사용 하면 매우 일반적 일 수 있으며, 삭
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](images/image1vs.png "프로 파일링 오류 대화 상자")](images/image1vs.png#lightbox) 
+[![프로 파일링 오류 대화 상자](images/image1vs.png)](images/image1vs.png#lightbox) 
 
 -----
 

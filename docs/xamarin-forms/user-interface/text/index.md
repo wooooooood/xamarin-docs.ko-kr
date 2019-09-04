@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 3e30e3d4ea3bf0ec58aff842ffee68885a47d44a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b7cd9445ec9f28211037608ab04ffc45bec705c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656185"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227978"
 ---
 # <a name="text-in-xamarinforms"></a>Xamarin.Forms에는 텍스트
 
@@ -34,7 +34,7 @@ Xamarin.Forms에 텍스트를 사용 하 여 작업에 대 한 세 가지 기본
 
 `Label` 보기가 사용 되는 텍스트를 표시 합니다. 여러 줄의 텍스트 또는 텍스트 한 줄 표시할 수 있습니다. `Label` 인라인에 사용 되는 여러 서식 옵션을 사용 하 여 텍스트를 표시할 수 있습니다. 레이블 뷰가 줄 바꿈 하거나 한 줄에 표시할 수 없을 때 텍스트를 자를 수 있습니다.
 
-![](images/label.png "레이블 예제")
+![레이블 예](images/label.png)
 
 참조 된 [레이블](label.md) 자세한 문서.
 
@@ -46,7 +46,7 @@ Xamarin.Forms에 텍스트를 사용 하 여 작업에 대 한 세 가지 기본
 
 `Entry` 한 줄 텍스트 입력을 허용 하는 데 사용 됩니다. `Entry` 제품 색 및 글꼴 제어 합니다. `Entry` 암호 모드 있으며 텍스트를 입력할 때까지 자리 표시자 텍스트를 표시할 수 있습니다.
 
-![](images/entry.png "항목 예")
+![항목 예제](images/entry.png)
 
 참조를 [항목이](entry.md) 자세한 문서.
 
@@ -58,7 +58,7 @@ Xamarin.Forms에 텍스트를 사용 하 여 작업에 대 한 세 가지 기본
 
 `Editor` 여러 줄 텍스트 입력을 허용 하는 데 사용 됩니다. `Editor` 제품 색 및 글꼴 제어 합니다.
 
-![](images/editor.png "편집기 예제")
+![편집기 예제](images/editor.png)
 
 참조 된 [편집기](editor.md) 자세한 문서.
 

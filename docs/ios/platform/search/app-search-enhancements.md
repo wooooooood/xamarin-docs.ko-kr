@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 27eff717fd1390f54a177cc7636e7d107b69cd24
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ec7523ac2adc3a6b4ba18a7b8a0fe21749bd7856
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656277"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227418"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Xamarin.ios의 앱 검색 향상 기능
 
@@ -44,13 +44,13 @@ Xamarin.ios 앱에서 딥 링크를 구현 하는 방법에 대 한 자세한 �
 
 새 [Cssearchquery](https://developer.apple.com/reference/corespotlight/cssearchquery) 클래스를 구현 하 여 앱은 사용자가 앱을 떠나지 않고도 (메일, 메시지 및 메모 앱이 작동 하는 방식과 비슷함) 스포트라이트의 검색 및 일치 규칙 기술을 제공 하 여 자체 내에서 콘텐츠를 찾을 수 있습니다.
 
-일반적으로를 지 원하는 `CSSearchQuery` 앱은 별도의 검색 인덱스를 유지 관리할 필요가 없습니다. 
+일반적으로를 지 원하는 `CSSearchQuery` 앱은 별도의 검색 인덱스를 유지 관리할 필요가 없습니다.
 
 ## <a name="search-continuation"></a>연속 검색
 
 IOS 9에서 Apple은 검색 api (예: 핵심 스포트라이트 `NSUserActivity` 및 웹 태그)를 도입 하 여 앱 내에서 사용자가 스포트라이트 및 Safari 검색 인터페이스를 모두 사용 하 여 콘텐츠를 검색할 수 있도록 하는 기능을 제공 합니다. 자세한 내용은 [새 검색 api](~/ios/platform/search/index.md) 설명서를 참조 하세요.
 
-IOS 10 Apple은 사용자가 스포트라이트 나 Safari에서 검색을 시작할 수 있도록 허용 하 여이 기능을 기반으로 한 다음 앱을 열 때 검색을 계속 합니다. 
+IOS 10 Apple은 사용자가 스포트라이트 나 Safari에서 검색을 시작할 수 있도록 허용 하 여이 기능을 기반으로 한 다음 앱을 열 때 검색을 계속 합니다.
 
 이 기능을 구현 하려면 앱의 `Info.plist` 파일을 편집 하 고 **부울** 형식의 `YES` `CoreSpotlightContinuation` 키를 추가 하 고 해당 값을로 설정 합니다.
 

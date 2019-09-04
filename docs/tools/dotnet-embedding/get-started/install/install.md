@@ -6,12 +6,12 @@ ms.assetid: 47106AF3-AC6E-4A0E-B30B-9F73C116DDB3
 author: chamons
 ms.author: chhamo
 ms.date: 04/18/2018
-ms.openlocfilehash: 7da163e85b04791c276f9cb14f5b21615b7909fb
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 47efbaa12475f627b5963cb6613c3441a1d96aac
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200161"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227848"
 ---
 # <a name="installing-net-embedding"></a>.NET 포함 설치
 
@@ -32,12 +32,12 @@ ms.locfileid: "70200161"
 - 터미널 (macOS) 또는 명령 프롬프트를 엽니다 (Windows).
 - 디렉터리를 솔루션 루트로 변경
 - 도구는 다음 위치에 설치 됩니다.
-    - **./packages/Embeddinator-4000. [VERSION]/tools/objcgen** (목적-C)
-    - **./packages/Embeddinator-4000. [VERSION]/tools/Embeddinator-4000.exe** (Java/C)
+  - **./packages/Embeddinator-4000. [VERSION]/tools/objcgen** (목적-C)
+  - **./packages/Embeddinator-4000. [VERSION]/tools/Embeddinator-4000.exe** (Java/C)
 - MacOS에서 **objcgen** 는 직접 실행할 수 있습니다.
 - Windows에서는 **Embeddinator-4000** 을 직접 실행할 수 있습니다.
 - MacOS에서 Embeddinator-4000는 **mono**를 사용 하 여 실행 해야 **합니다** .
-    - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
+  - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
 각 명령 호출에는 플랫폼별 설명서에 나열 된 많은 매개 변수가가 필요 합니다.
 
@@ -104,7 +104,7 @@ rm -Rf '${SolutionDir}/output/'
 
 기본적으로 동일한 작업을 설정 하지만 Visual Studio 2017의 메뉴는 약간 다릅니다. 셸 명령도 약간 다릅니다.
 
-프로젝트 옵션으로 이동 하 여 **빌드 이벤트 >** 플랫폼별 설명서에 나열 된 명령을 **빌드 후 이벤트 명령줄** 상자에 입력 합니다. 예를 들어:
+프로젝트 옵션으로 이동 하 여 **빌드 이벤트 >** 플랫폼별 설명서에 나열 된 명령을 **빌드 후 이벤트 명령줄** 상자에 입력 합니다. 예:
 
 ![Windows에 .NET 포함](images/visualstudiowindows.png)
  

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb53c11612cf492cda39067db861c1d67e0d3e16
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: decbbdab09b514bd49784f6ba45575ae845c547f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648990"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226480"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Xamarin에서 tvOS 페이지 컨트롤 사용
 
@@ -35,44 +35,44 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-    
+
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다. 
+1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다.
 
     [![](page-controls-images/page02.png "페이지 컨트롤")](page-controls-images/page02.png#lightbox)
-1. **Properties Pad**의 **위젯 탭** 에서 **현재 페이지** 및 페이지 수와 같은 페이지 컨트롤의 몇 가지 속성을 조정할 수 **있습니다.** 
+1. **Properties Pad**의 **위젯 탭** 에서 **현재 페이지** 및 페이지 수와 같은 페이지 컨트롤의 몇 가지 속성을 조정할 수 있습니다.
 
     [![](page-controls-images/page03.png "위젯 탭")](page-controls-images/page03.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어: 
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어:
 
     [![](page-controls-images/page04.png "컨트롤 이름")](page-controls-images/page04.png#lightbox)
 1. 변경 내용을 저장합니다.
-    
+
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
+
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다. 
+1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다.
 
     [![](page-controls-images/page02-vs.png "페이지 컨트롤")](page-controls-images/page02-vs.png#lightbox)
-1. **속성 탐색기**의 **위젯 탭** 에서 **현재 페이지** 및 페이지 수와 같은 페이지 컨트롤의 여러 속성을 조정할 수 **있습니다.** 
+1. **속성 탐색기**의 **위젯 탭** 에서 **현재 페이지** 및 페이지 수와 같은 페이지 컨트롤의 여러 속성을 조정할 수 있습니다.
 
     [![](page-controls-images/page03-vs.png "위젯 탭")](page-controls-images/page03-vs.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어: 
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어:
 
     [![](page-controls-images/page04-vs.png "컨트롤 이름")](page-controls-images/page04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
-    
+
 
 -----
 
 > [!IMPORTANT]
 > IOS 디자이너에서 uibutton 등의 UI 요소 `TouchUpInside` 에와 같은 이벤트를 할당할 수 있지만, Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 `Primary Action` 대 한 이벤트 처리기를 만들 때 항상 이벤트를 사용 해야 합니다.
 
-뷰 컨트롤러 (예제 `ViewController.cs`) 파일을 편집 하 고 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 예를 들어:
+뷰 컨트롤러 (예제 `ViewController.cs`) 파일을 편집 하 고 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 예:
 
 ```csharp
 using System;
@@ -160,7 +160,7 @@ PageView.CurrentPage = PageNumber;
 
 `CurrentPage` 속성은 0부터 시작 하므로 첫 번째 페이지는 0이 고 마지막 페이지는 최대 페이지 수에서 1을 뺀 값이 됩니다.
 
-스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요. 
+스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
 <a name="Summary" />
 

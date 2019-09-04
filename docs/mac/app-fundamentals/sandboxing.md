@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8379b9c9575c5a4f24f6c35c37cf8682e53b78ec
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121133"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227244"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.ios 앱 샌드 박싱
 
@@ -68,24 +68,24 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 다음을 수행 하 여 샘플 프로젝트를 만들어 보겠습니다.
 
 1. Mac용 Visual Studio를 시작 하 고 **새 솔루션** 을 클릭 합니다. 추가합니다.
-2. **새 프로젝트** 대화 상자에서 **Mac** > **앱** > **cocoa 앱**을 선택 합니다. 
+2. **새 프로젝트** 대화 상자에서 **Mac** > **앱** > **cocoa 앱**을 선택 합니다.
 
     [![새 Cocoa 앱 만들기](sandboxing-images/sample01.png "새 Cocoa 앱 만들기")](sandboxing-images/sample01-large.png#lightbox)
-3. **다음** 단추를 클릭 하 고 `MacSandbox` 프로젝트 이름으로를 입력 한 다음 **만들기** 단추를 클릭 합니다. 
+3. **다음** 단추를 클릭 하 고 `MacSandbox` 프로젝트 이름으로를 입력 한 다음 **만들기** 단추를 클릭 합니다.
 
     [![앱 이름 입력](sandboxing-images/sample02.png "앱 이름 입력")](sandboxing-images/sample02-large.png#lightbox)
-4. **Solution Pad**에서 **주 storyboard** 파일을 두 번 클릭 하 여 Xcode에서 편집할 수 있도록 엽니다. 
+4. **Solution Pad**에서 **주 storyboard** 파일을 두 번 클릭 하 여 Xcode에서 편집할 수 있도록 엽니다.
 
     [![주 스토리 보드 편집](sandboxing-images/sample03.png "주 스토리 보드 편집")](sandboxing-images/sample03-large.png#lightbox)
-5. **웹 뷰** 를 창으로 끌어 놓고 크기를 조정 하 여 콘텐츠 영역을 채운 다음 창에서 확대/축소로 설정 합니다. 
+5. **웹 뷰** 를 창으로 끌어 놓고 크기를 조정 하 여 콘텐츠 영역을 채운 다음 창에서 확대/축소로 설정 합니다.
 
     [![웹 보기 추가](sandboxing-images/sample04.png "웹 보기 추가")](sandboxing-images/sample04-large.png#lightbox)
-6. 이라는 `webView`웹 보기에 대 한 콘센트를 만듭니다. 
+6. 이라는 `webView`웹 보기에 대 한 콘센트를 만듭니다.
 
     [![새 콘센트 만들기](sandboxing-images/sample05.png "새 콘센트 만들기")](sandboxing-images/sample05-large.png#lightbox)
 7. Mac용 Visual Studio로 돌아가서 **Solution Pad** **ViewController.cs** 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
 8. 다음 using 문을 추가 합니다.`using WebKit;`
-9. 다음과 같이 `ViewDidLoad` 메서드를 만듭니다. 
+9. 다음과 같이 `ViewDidLoad` 메서드를 만듭니다.
 
     ```csharp
     public override void AwakeFromNib ()
@@ -109,34 +109,34 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 
 다음 작업을 수행 합니다.
 
-1. Apple 개발자 포털에 로그인 합니다. 
+1. Apple 개발자 포털에 로그인 합니다.
 
     [![Apple 개발자 포털에 로그인](sandboxing-images/sign01.png "Apple 개발자 포털에 로그인")](sandboxing-images/sign01-large.png#lightbox)
-2. **인증서, 식별자 & 프로필을 선택 합니다**. 
+2. **인증서, 식별자 & 프로필을 선택 합니다**.
 
     [![인증서, 식별자 및 프로필 선택](sandboxing-images/sign02.png "인증서, 식별자 및 프로필 선택")](sandboxing-images/sign02-large.png#lightbox)
-3. **Mac 앱**에서 **식별자**:를 선택 합니다. 
+3. **Mac 앱**에서 **식별자**:를 선택 합니다.
 
     [![식별자 선택](sandboxing-images/sign03.png "식별자 선택")](sandboxing-images/sign03-large.png#lightbox)
-4. 응용 프로그램에 대 한 새 ID를 만듭니다. 
+4. 응용 프로그램에 대 한 새 ID를 만듭니다.
 
     [![새 앱 ID 만들기](sandboxing-images/sign04.png "새 앱 ID 만들기")](sandboxing-images/sign04-large.png#lightbox)
-5. 프로 **비전 프로필**에서 **개발**을 선택 합니다. 
+5. 프로 **비전 프로필**에서 **개발**을 선택 합니다.
 
     [![개발 선택](sandboxing-images/sign05.png "개발 선택")](sandboxing-images/sign05-large.png#lightbox)
-6. 새 프로필을 만들고 **Mac 앱 개발**을 선택 합니다. 
+6. 새 프로필을 만들고 **Mac 앱 개발**을 선택 합니다.
 
     [![새 프로필 만들기](sandboxing-images/sign06.png "새 프로필 만들기")](sandboxing-images/sign06-large.png#lightbox)
-7. 위에서 만든 앱 ID를 선택 합니다. 
+7. 위에서 만든 앱 ID를 선택 합니다.
 
     [![앱 ID 선택](sandboxing-images/sign07.png "앱 ID 선택")](sandboxing-images/sign07-large.png#lightbox)
-8. 이 프로필의 개발자를 선택 합니다. 
+8. 이 프로필의 개발자를 선택 합니다.
 
     [![개발자 추가](sandboxing-images/sign08.png "개발자 추가")](sandboxing-images/sign08-large.png#lightbox)
-9. 이 프로필에 대 한 컴퓨터 선택: 
+9. 이 프로필에 대 한 컴퓨터 선택:
 
     [![허용 된 컴퓨터 선택](sandboxing-images/sign09.png "허용 된 컴퓨터 선택")](sandboxing-images/sign09-large.png#lightbox)
-10. 프로필에 이름을 지정 합니다. 
+10. 프로필에 이름을 지정 합니다.
 
     [![프로필에 이름] 지정 (sandboxing-images/sign10.png "프로필에 이름") 지정](sandboxing-images/sign10-large.png#lightbox)
 11. **완료** 단추를 클릭 합니다.
@@ -146,10 +146,10 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 
 다음으로, 개발 컴퓨터에서 새 앱 ID 및 프로필을 로드 해야 합니다. 다음 작업을 수행해 보겠습니다.
 
-1. Xcode을 시작 하 고 **Xcode** 메뉴에서 **기본 설정** 을 선택 합니다. 
+1. Xcode을 시작 하 고 **Xcode** 메뉴에서 **기본 설정** 을 선택 합니다.
 
     ![Xcode에서 계정 편집](sandboxing-images/sign11.png "Xcode에서 계정 편집")
-2. **자세히 보기** ... 단추를 클릭 합니다. 
+2. **자세히 보기** ... 단추를 클릭 합니다.
 
     ![자세히 보기 단추 클릭](sandboxing-images/sign12.png "자세히 보기 단추 클릭")
 3. 왼쪽 아래에 있는 **새로 고침** 단추를 클릭 합니다.
@@ -158,17 +158,17 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 다음으로, Xamarin.ios 프로젝트에서 새 앱 ID 및 프로 비전 프로필을 선택 해야 합니다. 다음 작업을 수행해 보겠습니다.
 
 1. **Solution Pad**에서 info.plist 파일을 두 번 클릭 하 여 편집을 위해 엽니다 **.**
-2. **번들 식별자** 가 위에서 만든 앱 ID와 일치 하는지 확인 합니다 (예: `com.appracatappra.MacSandbox`). 
+2. **번들 식별자** 가 위에서 만든 앱 ID와 일치 하는지 확인 합니다 (예: `com.appracatappra.MacSandbox`).
 
     [![번들 식별자 편집](sandboxing-images/sign13.png "번들 식별자 편집")](sandboxing-images/sign13-large.png#lightbox)
-3. 그런 다음 **info.plist** 파일을 두 번 클릭 하 고 **Icloud 키-값 저장소** 와 **Icloud 컨테이너** 모두 위에서 만든 앱 ID와 일치 하는지 확인 합니다 (예: `com.appracatappra.MacSandbox`). 
+3. 그런 다음 **info.plist** 파일을 두 번 클릭 하 고 **Icloud 키-값 저장소** 와 **Icloud 컨테이너** 모두 위에서 만든 앱 ID와 일치 하는지 확인 합니다 (예: `com.appracatappra.MacSandbox`).
 
     [![Info.plist 파일 편집](sandboxing-images/sign17.png "Info.plist 파일 편집")](sandboxing-images/sign17-large.png#lightbox)
 4. 변경 내용을 저장합니다.
-5. **Solution Pad**에서 프로젝트 파일을 두 번 클릭 하 여 편집을 위한 옵션을 엽니다.  
+5. **Solution Pad**에서 프로젝트 파일을 두 번 클릭 하 여 편집을 위한 옵션을 엽니다.
 
     ![솔루션의 옵션 Editign](sandboxing-images/sign14.png "솔루션의 옵션 Editign")
-6. **Mac 서명**을 선택 하 고 **응용 프로그램 번들에 서명** 및 **설치 관리자 패키지에 서명**을 선택 합니다. 프로 **비전 프로필**아래에서 위에서 만든 프로필을 선택 합니다. 
+6. **Mac 서명**을 선택 하 고 **응용 프로그램 번들에 서명** 및 **설치 관리자 패키지에 서명**을 선택 합니다. 프로 **비전 프로필**아래에서 위에서 만든 프로필을 선택 합니다.
 
     ![프로 비전 프로필 설정](sandboxing-images/sign15.png "프로 비전 프로필 설정")
 7. **완료** 단추를 클릭 합니다.
@@ -195,7 +195,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 프로젝트 옵션에서 확인란을 선택 하 여 앱 샌드박스를 사용 하도록 설정 합니다. 다음을 수행합니다.
 
 1. **Solution Pad**에서 **info.plist** 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
-2. **자격 사용** 및 **앱 샌드 박싱 사용**을 모두 선택 합니다. 
+2. **자격 사용** 및 **앱 샌드 박싱 사용**을 모두 선택 합니다.
 
     [![자격 편집 및 샌드 박싱 사용](sandboxing-images/sign17.png "자격 편집 및 샌드 박싱 사용")](sandboxing-images/sign17-large.png#lightbox)
 3. 변경 내용을 저장합니다.
@@ -208,25 +208,25 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 
 리소스 차단 동작 외에도 다음과 같은 세 가지 주요 방법으로 Xamarin.ios 응용 프로그램이 성공적으로 샌드 박싱 되었는지 확인할 수 있습니다.
 
-1. Finder에서 `~/Library/Containers/` 폴더의 콘텐츠를 확인 합니다.-앱이 샌드 박싱 되 면 앱의 번들 식별자와 같은 라는 폴더가 있습니다 (예: `com.appracatappra.MacSandbox`). 
+1. Finder에서 `~/Library/Containers/` 폴더의 콘텐츠를 확인 합니다.-앱이 샌드 박싱 되 면 앱의 번들 식별자와 같은 라는 폴더가 있습니다 (예: `com.appracatappra.MacSandbox`).
 
     [![앱의 번들 열기](sandboxing-images/sample09.png "앱의 번들 열기")](sandboxing-images/sample09-large.png#lightbox)
 2. 시스템은 작업 모니터에서 앱이 샌드 박싱된로 표시 됩니다.
-    - 작업 모니터 (아래 `/Applications/Utilities`)를 시작 합니다. 
+    - 작업 모니터 (아래 `/Applications/Utilities`)를 시작 합니다.
     - **열** **보기** > 를 선택 하 고 **Sandbox** 메뉴 항목이 선택 되어 있는지 확인 합니다.
-    - 응용 프로그램에 대 한 샌드박스 `Yes` 열이 읽기 인지 확인 합니다. 
+    - 응용 프로그램에 대 한 샌드박스 `Yes` 열이 읽기 인지 확인 합니다.
 
     [![작업 모니터에서 앱을 확인 하는 중](sandboxing-images/sample10.png "작업 모니터에서 앱을 확인 하는 중")](sandboxing-images/sample10-large.png#lightbox)
 3. 앱 이진 파일이 샌드 박싱 되었는지 확인 합니다.
     - 터미널 앱을 시작 합니다.
     - 응용 프로그램 `bin` 디렉터리로 이동 합니다.
-    - 이 명령을 실행 합니다 `codesign -dvvv --entitlements :- executable_path` . 여기서 `executable_path` 는 응용 프로그램의 경로입니다. 
+    - 이 명령을 실행 합니다 `codesign -dvvv --entitlements :- executable_path` . 여기서 `executable_path` 는 응용 프로그램의 경로입니다.
 
     [![명령줄에서 앱을 확인 하는 중](sandboxing-images/sample11.png "명령줄에서 앱을 확인 하는 중")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>샌드박스 응용 프로그램 디버깅
 
-디버거는 TCP를 통해 Xamarin.ios 앱에 연결 합니다. 즉, 기본적으로 샌드 박싱을 사용 하도록 설정 하면 앱에 연결할 수 없습니다. 따라서 적절 한 사용 권한을 설정 하지 않고 앱을 실행 하려고 하면 *"디버거에 연결할 수 없습니다." 오류가 발생 합니다.* . 
+디버거는 TCP를 통해 Xamarin.ios 앱에 연결 합니다. 즉, 기본적으로 샌드 박싱을 사용 하도록 설정 하면 앱에 연결할 수 없습니다. 따라서 적절 한 사용 권한을 설정 하지 않고 앱을 실행 하려고 하면 *"디버거에 연결할 수 없습니다." 오류가 발생 합니다.* .
 
 [![필수 옵션 설정](sandboxing-images/debug01.png "필수 옵션 설정")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -246,7 +246,7 @@ Xamarin.ios 응용 프로그램에서 앱 샌드박스 위반이 발생 하는 �
 
 1. 문제의 앱을 컴파일하고 Mac용 Visual Studio에서 실행 합니다.
 2. **콘솔** 응용 프로그램 (에서 `/Applications/Utilties/`)을 엽니다.
-3. 사이드바에서 **모든 메시지** 를 선택 하 고 `sandbox` 검색에 입력 합니다. 
+3. 사이드바에서 **모든 메시지** 를 선택 하 고 `sandbox` 검색에 입력 합니다.
 
     [![콘솔의 샌드 박싱 문제의 예](sandboxing-images/resolve01.png "콘솔의 샌드 박싱 문제의 예")](sandboxing-images/resolve01-large.png#lightbox)
 
@@ -259,7 +259,7 @@ Xamarin.ios 응용 프로그램에서 앱 샌드박스 위반이 발생 하는 �
 다음을 수행합니다.
 
 1. **Solution Pad**에서 **info.plist** 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
-2. **자격** 섹션에서 **송신 네트워크 연결 허용 (클라이언트)** 확인란을 선택 합니다. 
+2. **자격** 섹션에서 **송신 네트워크 연결 허용 (클라이언트)** 확인란을 선택 합니다.
 
     [![자격 편집](sandboxing-images/sign17.png "자격 편집")](sandboxing-images/sign17-large.png#lightbox)
 3. 응용 프로그램에 대 한 변경 내용을 저장 합니다.
@@ -280,7 +280,7 @@ Xamarin.ios 응용 프로그램이 악성 코드에 의해 악용 되지 않도�
 
 위에서 살펴본 대로 샌드 박싱 되지 않은 Xamarin.ios 응용 프로그램에는 앱을 실행 하는 사용자에 대 한 모든 권한 및 액세스 권한이 부여 됩니다. 악성 코드에 의해 손상 된 경우 보호 되지 않는 앱은 악의적 동작에 대 한 에이전트로 작동할 수 있으며,이로 인해 피해를 일으킬 수 있는 범위가 광범위 합니다.
 
-앱 샌드박스를 사용 하도록 설정 하면 최소한의 권한 집합만 제거 하 여 Xamarin.ios 앱의 자격을 사용 하 여 필요에 따라 다시 사용 하도록 설정할 수 있습니다. 
+앱 샌드박스를 사용 하도록 설정 하면 최소한의 권한 집합만 제거 하 여 Xamarin.ios 앱의 자격을 사용 하 여 필요에 따라 다시 사용 하도록 설정할 수 있습니다.
 
 **Info.plist** 파일을 편집 하 고 편집기 드롭다운 상자에서 필요한 권한을 확인 하거나 선택 하 여 응용 프로그램의 앱 샌드박스 리소스를 수정할 수 있습니다.
 
@@ -356,13 +356,13 @@ _Powerbox_ 는 사용자와 상호 작용 하 여 샌드박스가 적용 된 xam
 - 파일 열기 **최근 열기** 메뉴에서 사용자가 선택 합니다.
 - 다른 응용 프로그램 간에 복사 & 붙여넣기를 사용 합니다.
 - 다음과 같이 전 세계에서 읽을 수 있는 위치에서 파일을 읽습니다.
-    - `/bin`
-    - `/sbin`
-    - `/usr/bin`
-    - `/usr/lib`
-    - `/usr/sbin`
-    - `/usr/share`
-    - `/System`
+  - `/bin`
+  - `/sbin`
+  - `/usr/bin`
+  - `/usr/lib`
+  - `/usr/sbin`
+  - `/usr/share`
+  - `/System`
 - 에서 `NSTemporaryDirectory`만든 디렉터리의 파일을 읽고 씁니다.
 
 기본적으로 샌드 박싱된 앱에서 열거나 저장 한 파일은 앱이 종료 될 때까지 계속 액세스할 수 있습니다 (앱이 종료 될 때 파일이 열려 있지 않은 경우). 열려 있는 파일은 다음에 앱이 시작 될 때 macOS 다시 시작 기능을 통해 앱의 샌드박스에 자동으로 복원 됩니다.
@@ -401,10 +401,10 @@ _보안 범위 책갈피_를 사용 하면 샌드박스가 적용 된 xamarin.io
 
 보안 범위 책갈피 및 영구 리소스 액세스를 사용할 때 다음과 같은 두 가지 sistine 사용 사례가 있습니다.
 
-- **앱 범위 책갈피는 사용자 지정 파일 또는 폴더에 대 한 영구 액세스를 제공 합니다.** 
+- **앱 범위 책갈피는 사용자 지정 파일 또는 폴더에 대 한 영구 액세스를 제공 합니다.**
 
     예를 들어, 샌드박스가 적용 된 xamarin.ios 응용 프로그램에서를 `NSOpenPanel`사용 하 여 편집을 위해 외부 문서를 열 수 있는 경우 앱은 나중에 동일한 파일에 다시 액세스할 수 있도록 앱 범위 책갈피를 만들 수 있습니다.
-- **문서 범위 책갈피는 하위 파일에 대 한 영구 액세스를 제공 합니다.** 
+- **문서 범위 책갈피는 하위 파일에 대 한 영구 액세스를 제공 합니다.**
 
 예를 들어, 개별 이미지, 비디오 클립 및 소리 파일에 액세스할 수 있는 프로젝트 파일을 만드는 비디오 편집 앱은 나중에 단일 동영상으로 결합 됩니다.
 
@@ -432,7 +432,7 @@ _보안 범위 책갈피_를 사용 하면 샌드박스가 적용 된 xamarin.io
 
 ### <a name="the-app-sandbox-and-code-signing"></a>앱 샌드박스 및 코드 서명
 
-앱 샌드박스를 사용 하도록 설정 하 고 Xamarin.ios 앱에 대 한 특정 요구 사항 (자격을 통해)을 사용 하도록 설정한 후 샌드 박싱을 적용 하려면 프로젝트에 서명 해야 합니다. 앱 샌드 박싱에 필요한 자격이 앱의 서명에 연결 되기 때문에 코드 서명을 수행 해야 합니다. 
+앱 샌드박스를 사용 하도록 설정 하 고 Xamarin.ios 앱에 대 한 특정 요구 사항 (자격을 통해)을 사용 하도록 설정한 후 샌드 박싱을 적용 하려면 프로젝트에 서명 해야 합니다. 앱 샌드 박싱에 필요한 자격이 앱의 서명에 연결 되기 때문에 코드 서명을 수행 해야 합니다.
 
 macOS는 앱의 컨테이너와 코드 서명 간에 링크를 적용 합니다. 이러한 방식으로 앱 번들 ID를 스푸핑 하는 경우에도 다른 응용 프로그램이 해당 컨테이너에 액세스할 수 없습니다. 이 메커니즘은 다음과 같이 작동 합니다.
 
@@ -529,7 +529,7 @@ find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executabl
 - **파일 시스템 리소스에 대 한 액세스 유지** -Xamarin.ios 앱이 컨테이너 외부의 리소스에 대 한 영구 액세스에 종속 되는 경우 보안 범위 책갈피를 사용 하 여 액세스를 유지 합니다.
 - **앱에 대 한 로그인 항목 만들기** -앱 샌드박스를 사용 하 여 로그인 항목 `LSSharedFileList` 을 만들 수 없고를 사용 하 `LSRegisterURL`여 시작 서비스의 상태를 조작할 수 없습니다. Apple의 `SMLoginItemSetEnabled` 로그인 항목 추가에 설명 된 대로 함수를 사용 [하 여 서비스 관리 프레임 워크](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) 설명서를 사용 합니다.
 - **사용자 데이터 액세스** -와 `getpwuid` 같은 POSIX 함수를 사용 하 여 디렉터리 서비스에서 사용자의 홈 디렉터리를 가져오는 경우와 `NSHomeDirectory`같은 cocoa 또는 Core Foundation 기호를 사용 하는 것이 좋습니다.
-- **다른 앱의 기본 설정에 액세스** -앱 샌드박스는 경로를 검색 하는 api를 앱 컨테이너에 전달 하기 때문에 해당 컨테이너 내에서 기본 설정을 수정 하 고 다른 앱 기본 설정에 액세스 하는 것은 허용 되지 않습니다. 
+- **다른 앱의 기본 설정에 액세스** -앱 샌드박스는 경로를 검색 하는 api를 앱 컨테이너에 전달 하기 때문에 해당 컨테이너 내에서 기본 설정을 수정 하 고 다른 앱 기본 설정에 액세스 하는 것은 허용 되지 않습니다.
 - **웹 보기에서 HTML5 Embedded 비디오 사용** -Xamarin.ios 앱이 WebKit를 사용 하 여 임베디드 HTML5 비디오를 재생 하는 경우 AV 기반 프레임 워크에 대해 앱을 연결 해야 합니다. 앱 샌드박스에서 이러한 비디오를 재생 하는 것을 CoreMedia 수 있습니다.
 
 ### <a name="applying-required-app-sandbox-entitlements"></a>필수 앱 샌드박스 자격 적용
@@ -555,7 +555,7 @@ Xamarin.ios 앱에 필요한 자격을 확인 하려면 다음을 수행 합니�
 
 ### <a name="implement-a-migration-strategy"></a>마이그레이션 전략 구현
 
-이전에 샌드 박싱 되지 않았던 새 샌드 박싱된 버전의 Xamarin.ios 응용 프로그램을 릴리스 하는 경우 현재 사용자에 게 원활한 업그레이드 경로가 있는지 확인 해야 합니다. 
+이전에 샌드 박싱 되지 않았던 새 샌드 박싱된 버전의 Xamarin.ios 응용 프로그램을 릴리스 하는 경우 현재 사용자에 게 원활한 업그레이드 경로가 있는지 확인 해야 합니다.
 
  컨테이너 마이그레이션 매니페스트를 구현 하는 방법에 대 한 자세한 내용은 Apple의 [앱을 샌드박스 문서로 마이그레이션](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1) 을 참조 하세요.
 

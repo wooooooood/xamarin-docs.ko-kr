@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 5e5cc20e9fbeaf2b00e022ccdbf67286aed6d5ef
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3920445c234344fe7f2a1cdd93ed7f4f6405727d
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528815"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226588"
 ---
 # <a name="photokit-in-xamarinios"></a>Xamarin.ios의 사진 키트
 
@@ -25,13 +25,13 @@ ms.locfileid: "69528815"
 
 ## <a name="querying-model-data"></a>모델 데이터 쿼리
 
-사진 키트를 사용 하면 다양 한 fetch 메서드를 통해 모델 데이터를 쉽게 쿼리할 수 있습니다. 예를 들어 모든 이미지를 검색 하려면를 호출 `PFAsset.Fetch`하 여 `PHAssetMediaType.Image` 미디어 형식을 전달 합니다.
+사진 키트를 사용 하면 다양 한 fetch 메서드를 통해 모델 데이터를 쉽게 쿼리할 수 있습니다. 예를 들어 모든 이미지를 검색 하려면를 호출 `PHAsset.Fetch`하 여 `PHAssetMediaType.Image` 미디어 형식을 전달 합니다.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-그러면 `PHFetchResult` 인스턴스는 이미지를 나타내는 `PFAsset` 모든 인스턴스를 포함 합니다. 이미지 자체를 가져오려면 `PHImageManager` (또는 캐싱 `PHCachingImageManager`버전)를 사용 하 여를 호출 `RequestImageForAsset`하 여 이미지에 대 한 요청을 수행 합니다. 예를 들어 다음 코드는 컬렉션 뷰 셀에 표시할의 `PHFetchResult` 각 자산에 대 한 이미지를 검색 합니다.
+그러면 `PHFetchResult` 인스턴스는 이미지를 나타내는 `PHAsset` 모든 인스턴스를 포함 합니다. 이미지 자체를 가져오려면 `PHImageManager` (또는 캐싱 `PHCachingImageManager`버전)를 사용 하 여를 호출 `RequestImageForAsset`하 여 이미지에 대 한 요청을 수행 합니다. 예를 들어 다음 코드는 컬렉션 뷰 셀에 표시할의 `PHFetchResult` 각 자산에 대 한 이미지를 검색 합니다.
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

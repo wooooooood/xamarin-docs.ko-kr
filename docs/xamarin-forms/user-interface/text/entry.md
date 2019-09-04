@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2018
-ms.openlocfilehash: decdcc451927d5e9e1889558bfc9150c98fecf91
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e712f0b69f87659499f7eab4955a9f943716f5b5
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650271"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227986"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -105,7 +105,7 @@ C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "항목 IsPassword 예")
+![항목 IsPassword 예제](entry-images/password.png)
 
 인스턴스를 사용 하 여 자리 표시자를 사용할 수 있습니다 `Entry` 암호 필드로 구성 된:
 
@@ -121,7 +121,7 @@ C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "항목 IsPassword 및 자리 표시자 예제")
+![항목 IsPassword 및 자리 표시자 예제](entry-images/passwordplaceholder.png)
 
 ### <a name="setting-the-cursor-position-and-text-selection-length"></a>커서 위치 및 텍스트 선택 길이 설정합니다.
 
@@ -294,7 +294,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "항목 TextColor 예")
+![항목 TextColor 예](entry-images/textcolor.png)
 
 지정 된 자리 표시자 하지는 영향을 받는 `TextColor`합니다.
 
@@ -311,7 +311,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "항목의 BackgroundColor 예")
+![항목 BackgroundColor 예제](entry-images/textbackgroundcolor.png)
 
 배경색과 텍스트 색을 선택 하면 각 플랫폼에서 사용할 수 하 고 자리 표시자 텍스트를가 려 서 없는 되도록 주의 해야 합니다.
 

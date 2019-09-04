@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: c322a329a517f9c655ce7b8dac4aaaaf8c5ef4cc
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 6b89b8e681cf0bd3715e2fb80ca794e594875d8c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889785"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227376"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Xamarin.ios에서 핵심 스포트라이트를 사용 하 여 검색
 
@@ -101,7 +101,7 @@ CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) =
 });
 ```
 
-다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예:
+다음으로 도메인 이름으로 인덱스 항목 그룹을 삭제할 수 있습니다. 예를 들어:
 
 ```csharp
 // Delete by Domain Name

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: 4aae2a206f07ea6caa7fc0d7530fb9fec05ce5f0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f05703babd3f6e67713dfccdb1a1fc6a4ea6966e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648425"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228028"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
@@ -21,7 +21,7 @@ ms.locfileid: "68648425"
 [`ListView`](xref:Xamarin.Forms.ListView)는 스크롤을 필요로 하는 데이터 목록, 특히 긴 목록을 제공 하는 뷰입니다.
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)는 다른 레이아웃 사양을 사용 하 여 데이터 목록을 표시 하는 뷰입니다. 보다 유연 하 고 성능이 뛰어난 대안 [`ListView`](xref:Xamarin.Forms.ListView)을 제공 하는 것을 목표로 합니다. 자세한 내용은 [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)를 참조 하세요.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)는 다른 레이아웃 사양을 사용하여 데이터 목록을 표시하는 뷰입니다. 보다 유연 하 고 성능이 뛰어난 대안 [`ListView`](xref:Xamarin.Forms.ListView)을 제공 하는 것을 목표로 합니다. 자세한 내용은 [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)를 참조하세요.
 
 ## <a name="use-cases"></a>사용 사례
 
@@ -41,8 +41,8 @@ ListView에는 여러 구성 요소가 각 플랫폼의 기본 기능을 실행 
 
 - **[셀](customizing-cell-appearance.md)**  &ndash; 을 ListView에서 데이터 셀에 표시 됩니다. 각 셀은 데이터 행에 해당 합니다. 셀이 기본 제공 또는 사용자 고유의 사용자 지정 셀을 정의할 수 있습니다. 기본 제공 및 사용자 지정 셀 XAML 또는 코드에서 사용 되 는/정의 변수일 수 있습니다.
   - **[기본 제공](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; 셀 TextCell과 ImageCell, 특히 기본 제공 성능에 대 한 훌륭한 있으므로 수는 각 플랫폼에서 네이티브 컨트롤에 해당 합니다.
-       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; 정보 텍스트를 사용 하 여 필요에 따라 텍스트 문자열을 표시 합니다. 세부 정보 텍스트를 강조 색을 사용 하 여 필요한 경우 작은 글꼴로 두 번째 줄으로 렌더링 됩니다.
-       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; 텍스트를 사용 하 여 이미지를 표시 합니다. 왼쪽에 있는 이미지를 사용 하 여 TextCell으로 표시 됩니다.
+    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; 정보 텍스트를 사용 하 여 필요에 따라 텍스트 문자열을 표시 합니다. 세부 정보 텍스트를 강조 색을 사용 하 여 필요한 경우 작은 글꼴로 두 번째 줄으로 렌더링 됩니다.
+    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; 텍스트를 사용 하 여 이미지를 표시 합니다. 왼쪽에 있는 이미지를 사용 하 여 TextCell으로 표시 됩니다.
   - **[사용자 지정 셀](customizing-cell-appearance.md#customcells)**  &ndash; 복잡 한 데이터를 제공 해야 하는 경우 사용자 지정 셀 유용 합니다. 예를 들어, 노래, 앨범과 아티스트를 포함 하 여 목록을 표시 하는 사용자 지정 보기를 사용할 수 있습니다.
 
 ![](images/image-cell-default.png "ImageCells 사용 하 여 ListView")

@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f5c5f0449962dec45a521112b2de92cddefe453f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655250"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227936"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
@@ -102,7 +102,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 실행 프로그램은 다음과 같습니다.
 
-[![](data-binding-basics-images/sliderbinding.png "뷰를 바인딩")](data-binding-basics-images/sliderbinding-large.png#lightbox "뷰를 바인딩 ")
+[![뷰 뷰 바인딩](data-binding-basics-images/sliderbinding.png)](data-binding-basics-images/sliderbinding-large.png#lightbox)
 
 ## <a name="the-binding-mode"></a>바인딩 모드
 
@@ -201,7 +201,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 
 그러나 `Scale` 속성에 대한 바인딩은 `TwoWay`입니다. 이것은 `Scale` 속성이 기본값 1을 가지며 `TwoWay` 바인딩을 사용하면 `Slider` 초기 값이 0이 아닌 1로 설정됩니다. 해당 바인딩이 `OneWayToSource`라면 `Scale` 속성은 초기에 `Slider` 기본값 0으로 설정됩니다. `Label`이 표시되지 않으며, 사용자에게 약간의 혼동이 발생할 수 있습니다.
 
- [![](data-binding-basics-images/slidertransforms.png "역 바인딩")](data-binding-basics-images/slidertransforms-large.png#lightbox "역 바인딩")
+ [![역방향 바인딩](data-binding-basics-images/slidertransforms.png)](data-binding-basics-images/slidertransforms-large.png#lightbox)
 
  > [!NOTE]
  > [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 클래스는 또한 x축 및 y축 각각 `VisualElement`로 크기를 조정하는 [ `ScaleX` ](xref:Xamarin.Forms.VisualElement.ScaleX) 및 [ `ScaleY` ](xref:Xamarin.Forms.VisualElement.ScaleY) 속성을 가지고 있습니다.
@@ -234,7 +234,7 @@ XamlSamples 프로젝트에는 `NamedColor`라는 클래스가 포함되어 있�
 
 다음과 같이 결과 표시는 항목이 실제로 `XamlSamples.NamedColor` 유형임을 입증하고 있습니다.
 
-[![](data-binding-basics-images/listview1.png "컬렉션에 바인딩")](data-binding-basics-images/listview1-large.png#lightbox "컬렉션에 바인딩")
+[![컬렉션에 바인딩](data-binding-basics-images/listview1.png)](data-binding-basics-images/listview1-large.png#lightbox)
 
 정보가 많지는 않지만 `ListView`는 스크롤이 가능하고 선택이 가능합니다.
 
@@ -259,7 +259,7 @@ XamlSamples 프로젝트에는 `NamedColor`라는 클래스가 포함되어 있�
 
 `Label` 요소는 `ViewCell`의 `View` 속성으로 설정됩니다. (`ViewCell.View` 태그는 `View` 속성이 `ViewCell`의 콘텐츠 속성이므로 필요하지 않습니다.) 해당 태그는 다음과 같이 각 `NamedColor` 개체의 `FriendlyName` 속성을 표시합니다.
 
-[![](data-binding-basics-images/listview2.png "DataTemplate을 사용하여 컬렉션에 바인딩")](data-binding-basics-images/listview2-large.png#lightbox "DataTemplate을 사용하여 컬렉션에 바인딩")
+[![DataTemplate를 사용 하 여 컬렉션에 바인딩](data-binding-basics-images/listview2.png)](data-binding-basics-images/listview2-large.png#lightbox)
 
 훨씬 낫습니다. 이제 더 많은 정보와 실제 색상으로 항목 템플릿을 멋지게 꾸미기만 하면 됩니다. 해당 템플릿을 지원하기 위해 일부 값과 개체가 다음과 같이 페이지의 리소스 사전에 정의되어 있습니다.
 
@@ -396,7 +396,7 @@ namespace XamlSamples
 
 결과 다음과 같습니다.
 
-[![](data-binding-basics-images/listview3.png "DataTemplate 및 변환기를 사용하여 컬렉션에 바인딩")](data-binding-basics-images/listview3-large.png#lightbox "DataTemplate 및 변환기를 사용하여 컬렉션에 바인딩")
+[![DataTemplate 및 변환기를 사용 하 여 컬렉션에 바인딩](data-binding-basics-images/listview3.png)](data-binding-basics-images/listview3-large.png#lightbox)
 
 `ListView`는 기본 데이터에서 동적으로 발생할 수 있는 변경 사항을 처리하는 데 상당히 정교하지만 특정 단계를 수행할 때만 가능합니다. `ListView`의 `ItemsSource` 속성에 할당된 항목의 컬렉션이 런타임 중에 변경되면(즉, 항목이 컬렉션에서 추가되거나 제거될 수 있는 경우), 해당 항목에 대해 `ObservableCollection` 클래스를 사용하십시오. `ObservableCollection`은 `INotifyCollectionChanged` 인터페이스를 구현하고, `ListView`는 `CollectionChanged` 이벤트를 위한 처리기를 설치합니다.
 

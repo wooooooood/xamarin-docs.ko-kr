@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f2ac37676dbdfc96c853c9bc679e79c2aae1adb1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71c58baee5e98efcfb38b75ffed2b85c90f8a131
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656242"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227359"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>IOS 10에서 향상 된 검색 및 홈 화면 위젯
 
@@ -50,14 +50,14 @@ Apple은 위젯 시스템에 몇 가지 향상 된 기능을 도입 하 여 새 
 
 ## <a name="working-with-vibrancy"></a>Vibrancy 사용
 
-Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예:
+Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예를 들어:
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-이는 iOS 10에서 더 이상 사용 되지 않으며, [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)로 바꾸어야 합니다. 예:
+이는 iOS 10에서 더 이상 사용 되지 않으며, [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)로 바꾸어야 합니다. 예를 들어:
 
 ```csharp
 // Get Primary Widget Vibrancy Effect
@@ -71,7 +71,7 @@ var vibrancy2 = UIVibrancyEffect.CreateSecondaryVibrancyEffectForNotificationCen
 
 IOS 10의 새로운 기능에는 이제 개발자가 사용할 수 있는 콘텐츠의 양을 설명 하 고 사용자가 콘텐츠를 확장 및 축소할 수 있도록 하는 [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) 속성이 포함 되어 있습니다.
 
-처음에는 위젯이 표시 될 때 축소 된 상태입니다. 축소 된 위젯의 높이는 약 2와 절반 표준 iOS 테이블 행입니다. 개발자는 확장 된 위젯의 크기를 요청할 수 있지만이는 화면 높이 보다 작아야 합니다. 
+처음에는 위젯이 표시 될 때 축소 된 상태입니다. 축소 된 위젯의 높이는 약 2와 절반 표준 iOS 테이블 행입니다. 개발자는 확장 된 위젯의 크기를 요청할 수 있지만이는 화면 높이 보다 작아야 합니다.
 
 축소 된 상태에서는 위젯에 필수적인 독립 실행형 정보만 표시 됩니다. 확장 하면 위젯에 축소 된 상태에 표시 되는 기본 콘텐츠를 개선 하는 추가 정보가 표시 됩니다. 예를 들어 날씨 앱은 축소 될 때 현재 날씨 조건을 표시 하 고 확장 될 때 시간별 예측을 추가 합니다.
 

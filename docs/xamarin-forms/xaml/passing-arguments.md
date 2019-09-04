@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 7a6ea06d77b8eb170f4165bfc8cf2fd643d56406
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 065c7284970ececacbdb298d773b19f654280513
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651660"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228096"
 ---
 # <a name="passing-arguments-in-xaml"></a>XAML의 인수 전달
 
@@ -91,7 +91,7 @@ _이 문서에서는 기본이 아닌 생성자, 팩터리 메서드를 호출 �
 
 각 호출의 결과 표시 하는 다음 스크린샷과 [ `Color` ](xref:Xamarin.Forms.Color) 지정 된 인수 값을 사용 하 여 생성자:
 
-![](passing-arguments-images/passing-arguments.png "X: 인수를 사용 하 여 지정 된 BoxView.Color")
+![BoxView. x:Arguments로 지정 된 색](passing-arguments-images/passing-arguments.png)
 
 <a name="factory_methods" />
 
@@ -141,7 +141,7 @@ _이 문서에서는 기본이 아닌 생성자, 팩터리 메서드를 호출 �
 
 각 호출의 결과 표시 하는 다음 스크린샷과 [ `Color` ](xref:Xamarin.Forms.Color) 지정 된 인수 값을 사용 하 여 팩터리 메서드입니다.
 
-![](passing-arguments-images/factory-methods.png "BoxView.Color X:factorymethod 및 x: 인수를 사용 하 여 지정 합니다.")
+![BoxView. x:FactoryMethod 및 x:Arguments로 지정 된 색](passing-arguments-images/factory-methods.png)
 
 <a name="generic_type_arguments" />
 

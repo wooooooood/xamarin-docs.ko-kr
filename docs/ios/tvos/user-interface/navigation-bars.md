@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bde37c907d2cad327dd2a72f26ee357a4391c43
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14fbbd72d3ec80d15d2dcae5938f8df28923ca4c
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649049"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226610"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Xamarin에서 tvOS 탐색 모음 사용
 
@@ -34,16 +34,16 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. **Solution Pad**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
-1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다. 
+1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
 
     [![](navigation-bars-images/navbar02.png "탐색 모음")](navigation-bars-images/navbar02.png#lightbox)
-1. 탐색 **모음** 을 두 번 클릭 하 여 **탐색 항목**을 선택 합니다. **Properties Pad**의 **위젯** 탭에서 **제목을**설정할 수 있습니다. 
+1. 탐색 **모음** 을 두 번 클릭 하 여 **탐색 항목**을 선택 합니다. **Properties Pad**의 **위젯** 탭에서 **제목을**설정할 수 있습니다.
 
     [![](navigation-bars-images/navbar03.png "제목 설정")](navigation-bars-images/navbar03.png#lightbox)
-1. 다음으로 막대의 한쪽 끝에 하나 이상의 **막대 단추 항목** 을 추가할 수 있습니다. 
+1. 다음으로 막대의 한쪽 끝에 하나 이상의 **막대 단추 항목** 을 추가할 수 있습니다.
 
     [![](navigation-bars-images/navbar04.png "막대 단추 항목")](navigation-bars-images/navbar04.png#lightbox)
-1. 마지막으로 **속성 탐색기**의 **이벤트** 탭에 있는 작업에 **막대 단추 항목** 을 연결 합니다. 
+1. 마지막으로 **속성 탐색기**의 **이벤트** 탭에 있는 작업에 **막대 단추 항목** 을 연결 합니다.
 
     [![](navigation-bars-images/navbar05.png "막대 단추 항목 동작")](navigation-bars-images/navbar05.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -53,16 +53,16 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
 
 
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
-1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다. 
+1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
 
     [![](navigation-bars-images/navbar02-vs.png "탐색 모음")](navigation-bars-images/navbar02-vs.png#lightbox)
-1. 탐색 **모음** 을 두 번 클릭 하 여 **탐색 항목**을 선택 합니다. **속성 탐색기**의 **위젯** 탭에서 **제목을**설정할 수 있습니다. 
+1. 탐색 **모음** 을 두 번 클릭 하 여 **탐색 항목**을 선택 합니다. **속성 탐색기**의 **위젯** 탭에서 **제목을**설정할 수 있습니다.
 
     [![](navigation-bars-images/navbar03-vs.png "제목 설정")](navigation-bars-images/navbar03-vs.png#lightbox)
-1. 다음으로 막대의 한쪽 끝에 하나 이상의 **막대 단추 항목** 을 추가할 수 있습니다. 
+1. 다음으로 막대의 한쪽 끝에 하나 이상의 **막대 단추 항목** 을 추가할 수 있습니다.
 
     [![](navigation-bars-images/navbar04-vs.png "막대 단추 항목")](navigation-bars-images/navbar04-vs.png#lightbox)
-1. 마지막으로 **속성 탐색기**의 **이벤트** 탭에 있는 작업에 **막대 단추 항목** 을 연결 합니다. 
+1. 마지막으로 **속성 탐색기**의 **이벤트** 탭에 있는 작업에 **막대 단추 항목** 을 연결 합니다.
 
     [![](navigation-bars-images/navbar05-vs.png "막대 단추 항목 동작")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -126,7 +126,7 @@ namespace MySingleView
 
 단추의 `Enabled` 속성이이 `true` 고 다른 컨트롤 또는 뷰에서 포함 되지 않는 한, siri 원격을 사용 하 여 포커스 내 항목으로 만들 수 있습니다.
 
-스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요. 
+스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
 <a name="Summary" />
 

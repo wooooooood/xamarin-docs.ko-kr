@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 68d6cb1df8557b6055feb81b21ed5513592c71c4
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1e2b50a260ed5f5bbbbfc3c4ba55a33075262f25
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198149"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228108"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
 
@@ -24,7 +24,7 @@ ms.locfileid: "70198149"
 SKBitmap bitmap = new SKBitmap(width, height);
 ```
 
-합니다 `width` 고 `height` 매개 변수는 정수 및 비트맵의 픽셀 크기를 지정 합니다. 이 생성자는 픽셀당 4 바이트를 사용 하 여 전체 색 비트맵을 만듭니다: 빨강, 녹색, 파랑 및 알파 (불투명) 구성 요소에 대 한 1 바이트입니다. 
+합니다 `width` 고 `height` 매개 변수는 정수 및 비트맵의 픽셀 크기를 지정 합니다. 이 생성자는 픽셀당 4 바이트를 사용 하 여 전체 색 비트맵을 만듭니다: 빨강, 녹색, 파랑 및 알파 (불투명) 구성 요소에 대 한 1 바이트입니다.
 
 새 비트맵을 만든 후 비트맵의 화면에 결과가 표시 해야 합니다. 일반적으로 두 가지 방법 중 하나에서 이렇게합니다.
 
@@ -56,7 +56,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 비트맵 표시 될 수 있습니다. 나중에 프로그램을 새로 만들 수 있습니다 `SKCanvas` 동일한, 비트맵 및 조금 더 그릴 개체 기반으로 합니다.
 
-**Hello 비트맵** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램 작성 텍스트 "Hello, 비트맵!" 비트맵에 여러 번 비트맵을 표시 됩니다.  
+**Hello 비트맵** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램 작성 텍스트 "Hello, 비트맵!" 비트맵에 여러 번 비트맵을 표시 됩니다.
 
 생성자는 `HelloBitmapPage` 만들어 시작을 `SKPaint` 텍스트 표시에 대 한 개체입니다. 텍스트 문자열의 크기를 결정 하 고 해당 차원을 사용 하 여 비트맵을 만듭니다. 그런 다음 만듭니다는 `SKCanvas` 해당 비트맵, 호출을 기반으로 하는 개체 `Clear`, 다음 호출 `DrawText`. 호출 하는 것이 좋습니다는 항상 `Clear` 새 비트맵을 사용 하 여 새로 만든된 비트맵 임의 데이터를 포함 될 수 있습니다.
 
@@ -88,7 +88,7 @@ public partial class HelloBitmapPage : ContentPage
             }
         }
 
-        // Create SKCanvasView to view result 
+        // Create SKCanvasView to view result
         SKCanvasView canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;
@@ -123,7 +123,7 @@ public partial class HelloBitmapPage : ContentPage
 
 `Clear` 다음`SKCanvas` 방법의 설명서에서는 문을 사용 하 여 설명 합니다. "캔버스의 현재 클립에서 모든 픽셀을 바꿉니다." "Replace" 라는 단어를 사용 하면 이러한 메서드의 중요 한 특징이 표시 됩니다. 기존 표시 화면에 항목 `SKCanvas` 을 추가 하는 모든 그리기 메서드입니다. 합니다 `Clear` 메서드 _대체_ 가 이미 있습니다.
 
-`Clear` 두 가지 버전에 있습니다. 
+`Clear` 두 가지 버전에 있습니다.
 
 - 합니다 [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) 메서드를 `SKColor` 매개 변수는 픽셀 색을 디스플레이 화면의 픽셀을 대체 합니다.
 
@@ -167,7 +167,7 @@ Color = new SKColor(0, 0, 0, 0)
 - `Gray8` &mdash; 각 픽셀은 흰색으로 검정에서 회색 음영을 나타내는 8 비트
 - `RgbaF16` &mdash; 각 픽셀은 빨간색, 녹색, 파랑 및 알파는 16 비트 부동 소수점 형식에서 사용 하 여 64 비트
 
-각 픽셀은 32 픽셀 (4 바이트)는 두 가지 형식 이라고 _컬러_ 형식입니다. 여러 비디오 자체 표시 되는 경우 한 번에서 다른 형식 날짜의 전체 색 수 있었습니다. 제한 된 색 비트맵이 디스플레이 대 한 적절 한 되었으며 비트맵 메모리에 더 적은 공간을 차지 하도록 허용 합니다. 
+각 픽셀은 32 픽셀 (4 바이트)는 두 가지 형식 이라고 _컬러_ 형식입니다. 여러 비디오 자체 표시 되는 경우 한 번에서 다른 형식 날짜의 전체 색 수 있었습니다. 제한 된 색 비트맵이 디스플레이 대 한 적절 한 되었으며 비트맵 메모리에 더 적은 공간을 차지 하도록 허용 합니다.
 
 이러한 일 프로그래머에 게 거의 항상 전체 색 비트맵을 사용 하 여 및 다른 형식과 이름을 바꾸지 않습니다. 예외는 `RgbaF16` 컬러 형식에도 보다 큰 컬러 해상도 허용 하는 형식입니다. 그러나이 형식은 의료 이미지 등의 특수 한 용도로 사용 되 고 타당성을 많은 표준 컬러 디스플레이 사용 하는 경우.
 
@@ -197,7 +197,7 @@ Color = new SKColor(0, 0, 0, 0)
 
 ## <a name="drawing-on-existing-bitmaps"></a>에 기존 비트맵 그리기
 
-에 그릴 새 비트맵을 만들 필요는 없습니다. 기존 비트맵 이미지에 그릴 수 있습니다. 
+에 그릴 새 비트맵을 만들 필요는 없습니다. 기존 비트맵 이미지에 그릴 수 있습니다.
 
 **Monkey 콧수염** 페이지의 생성자를 사용 하 여 로드 하는 **MonkeyFace.png** 이미지입니다. 그런 다음 만듭니다는 `SKCanvas` 개체는 비트맵을 기반으로 하며 사용 하 여 `SKPaint` 및 `SKPath` 는 콧수염에 그릴 개체:
 
@@ -236,7 +236,7 @@ public partial class MonkeyMoustachePage : ContentPage
             }
         }
 
-        // Create SKCanvasView to view result 
+        // Create SKCanvasView to view result
         SKCanvasView canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;
@@ -268,7 +268,7 @@ public partial class MonkeyMoustachePage : ContentPage
 
 ![Mountain Climbers](drawing-images/MountainClimbers.jpg "Mountain Climbers")
 
-이 사진을 게시 하려면 왼쪽 monkey에서 권한을 받지 못했으면 가정. 한 가지 해결책은 기법을 사용 하는 monkey의 얼굴을 모호 _pixelization_합니다. 기능을 수행할 수 없습니다 있도록 글꼴의 픽셀 색의 요소를 사용 하 여 대체 됩니다. 색의 요소는 일반적으로 이러한 블록을 해당 픽셀의 색을 구하여 원래 이미지에서 파생 됩니다. 하지만이 평균 직접 수행할 필요가 없습니다. 이것이 자동으로 비트맵을 작은 픽셀 치수를 복사할 때. 
+이 사진을 게시 하려면 왼쪽 monkey에서 권한을 받지 못했으면 가정. 한 가지 해결책은 기법을 사용 하는 monkey의 얼굴을 모호 _pixelization_합니다. 기능을 수행할 수 없습니다 있도록 글꼴의 픽셀 색의 요소를 사용 하 여 대체 됩니다. 색의 요소는 일반적으로 이러한 블록을 해당 픽셀의 색을 구하여 원래 이미지에서 파생 됩니다. 하지만이 평균 직접 수행할 필요가 없습니다. 이것이 자동으로 비트맵을 작은 픽셀 치수를 복사할 때.
 
 왼쪽된 monkey의 얼굴 약는 72 픽셀 사각형 영역 (112, 238) 지점에서 왼쪽 위 모퉁이 차지합니다. 보겠습니다 8-8 하 여 픽셀 사각형은 각 색이 지정 된 블록의 9에서 9에 대 한 배열을 사용 하 여 해당 72 픽셀 사각형 영역을 대체 합니다.
 
@@ -312,7 +312,7 @@ public class PixelizedImagePage : ContentPage
             canvas.DrawBitmap(originalBitmap, new SKPoint());
 
             // Draw tiny bitmap to cover face
-            canvas.DrawBitmap(faceBitmap, 
+            canvas.DrawBitmap(faceBitmap,
                               new SKRect(112, 238, 184, 310));  // destination
         }
 
@@ -369,7 +369,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
     canvas.RotateDegrees(90);
     canvas.DrawBitmap(bitmap, new SKPoint());
 }
-```                        
+```
 
 그리고은 시계 반대 방향으로 90도 회전 하는 것에 대 한 유사한 기능.
 
@@ -402,7 +402,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-그러나 일반적인 경우이 논리를 자르고 회전된 비트맵의 모퉁이. 삼각 함수를 사용 하 여 해당 모퉁이 포함 하도록 회전된 비트맵의 크기를 계산 하는 것이 좋습니다. 
+그러나 일반적인 경우이 논리를 자르고 회전된 비트맵의 모퉁이. 삼각 함수를 사용 하 여 해당 모퉁이 포함 하도록 회전된 비트맵의 크기를 계산 하는 것이 좋습니다.
 
 이 trigonometry 같으며 합니다 **비트맵 Rotator** 페이지입니다. XAML 파일은는 `SKCanvasView` 와 `Slider` 는 까지일 수 있습니다 0에서 360도 사용 하 여는 `Label` 현재 값을 보여 주는:
 
@@ -436,7 +436,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 ```csharp
 public partial class BitmapRotatorPage : ContentPage
 {
-    static readonly SKBitmap originalBitmap = 
+    static readonly SKBitmap originalBitmap =
         BitmapExtensions.LoadBitmapResource(typeof(BitmapRotatorPage),
             "SkiaSharpFormsDemos.Media.Banana.jpg");
 
@@ -514,7 +514,7 @@ public partial class BitmapRotatorPage : ContentPage
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        
+
         <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                            PaintSurface="OnCanvasViewPaintSurface" />
@@ -532,7 +532,7 @@ public partial class BitmapRotatorPage : ContentPage
 </ContentPage>
 ```
 
-이러한 두 작업을 구현 하는 코드 숨김 파일은 `Clicked` 단추에 대 한 처리기: 
+이러한 두 작업을 구현 하는 코드 숨김 파일은 `Clicked` 단추에 대 한 처리기:
 
 ```csharp
 public partial class BitmapFlipperPage : ContentPage
@@ -588,7 +588,7 @@ public partial class BitmapFlipperPage : ContentPage
 }
 ```
 
-수직 대칭 이동의 가로 배율 인수를 사용 하 여 크기 조정 변환을 통해 수행 됩니다 &ndash;1입니다. 크기 조정 center 경우 비트맵의 세로 가운데 수평 대칭 이동 후에는의 세로 배율 인수를 사용 하 여 크기 조정 변환 &ndash;1입니다. 
+수직 대칭 이동의 가로 배율 인수를 사용 하 여 크기 조정 변환을 통해 수행 됩니다 &ndash;1입니다. 크기 조정 center 경우 비트맵의 세로 가운데 수평 대칭 이동 후에는의 세로 배율 인수를 사용 하 여 크기 조정 변환 &ndash;1입니다.
 
 Monkey의 shirt 시 역방향된 처리에서 보듯이 대칭 이동 회전 같지는 않습니다. 이지만 오른쪽 UWP 스크린샷에서 보여 주듯이 둘 다가 가로 및 세로로 대칭 이동 180도 회전와 동일 합니다.
 

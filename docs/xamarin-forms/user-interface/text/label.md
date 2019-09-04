@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 5c12b5a5c0e558403362bd12baddfb8201f40759
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642928"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228155"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -48,7 +48,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 다음 스크린샷에서 표시 된 `TextDecorations` 열거형 멤버에 적용 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스:
 
-![](label-images/label-textdecorations.png "텍스트 장식으로 레이블")
+![텍스트 장식이 있는 레이블](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > 텍스트 장식을 적용할 수도 있습니다 [ `Span` ](xref:Xamarin.Forms.Span) 인스턴스. 에 대 한 자세한 내용은 합니다 `Span` 클래스를 참조 하십시오 [서식 있는 텍스트](#Formatted_Text)합니다.
@@ -91,7 +91,7 @@ public partial class LabelPage : ContentPage
 
 설정의 결과 표시 하는 다음 스크린샷에서 `TextColor` 속성:
 
-![](label-images/textcolor.png "레이블 TextColor 예")
+![레이블 TextColor 예](label-images/textcolor.png)
 
 색에 대 한 자세한 내용은 참조 하세요. [색](~/xamarin-forms/user-interface/colors.md)합니다.
 
@@ -140,7 +140,7 @@ var label =
 
 설정의 결과 표시 하는 다음 스크린샷에서 `MaxLines` 를 2, 텍스트는 2 개 이상의 줄을 차지 하기에 충분히 길지 속성:
 
-![](label-images/label-maxlines.png "레이블 MaxLines 예")
+![레이블 MaxLines 예](label-images/label-maxlines.png)
 
 <a name="Formatted_Text" />
 
@@ -223,7 +223,7 @@ public class LabelPageCode : ContentPage
 
 다음 스크린샷은 설정의 결과 표시 합니다 `FormattedString` 속성을 3 `Span` 인스턴스:
 
-![](label-images/formattedtext.png "레이블 FormattedText 예")
+![레이블 FormattedText 예제](label-images/formattedtext.png)
 
 ## <a name="line-height"></a>줄 높이
 
@@ -254,7 +254,7 @@ var label =
 
 다음 스크린샷은 설정의 결과 표시 합니다 [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) 1.8 속성:
 
-![](label-images/label-lineheight.png "레이블 LineHeight 예")
+![레이블 LineHeight 예](label-images/label-lineheight.png)
 
 다음 XAML 예제에서는 설정 된 [ `LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) 속성을 [ `Span` ](xref:Xamarin.Forms.Span):
 
@@ -294,7 +294,7 @@ var label = new Label
 
 다음 스크린샷은 설정의 결과 표시 합니다 [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) 1.8 속성:
 
-![](label-images/span-lineheight.png "Span LineHeight 예제")
+![Span LineHeight 예](label-images/span-lineheight.png)
 
 ## <a name="hyperlinks"></a>하이퍼링크
 

@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 2b82de58b9d2f9e8acb8996f484845f9a71b6e80
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 844730d2ace717b951df2d80b2add6d1094fe997
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120307"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226102"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>코드를 Unified API로 업데이트하는 팁
 
@@ -59,7 +59,7 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 - `NSDictionary.IntValue`이제을 반환 `nint` `Int32Value` 합니다. 대신 사용할 수 있는가 있습니다.
 
-- `nfloat`및 `nint` 형식은로 표시할 `const`수 없습니다.   `static readonly nint` 는 적절 한 대안입니다.
+- `nfloat`및 `nint` 형식은로 표시할 `const`수 없습니다. `static readonly nint` 는 적절 한 대안입니다.
 
 - `MonoTouch.` 네임 스페이스에 직접 사용 되는 항목은 이제 일반적으로 `ObjCRuntime.` 네임 스페이스에 있습니다 (예: `MonoTouch.Constants.Version` 현재 `ObjCRuntime.Constants.Version`:).
 
@@ -69,10 +69,10 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 - 를 사용 하 여 `[Export]` 수동으로 내보낸 메서드는 마이그레이션 도구에 의해 자동으로 고정 되지 않을 수 있습니다. 예를 들어이 코드 snippert 반환 형식을 `nfloat`로 수동으로 업데이트 해야 합니다.
 
-    ```csharp
-    [Export("tableView:heightForRowAtIndexPath:")]
-    public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
-    ```
+  ```csharp
+  [Export("tableView:heightForRowAtIndexPath:")]
+  public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
+  ```
 
 - Unified API는 무손실 변환이 아니기 때문에 NSDate와 .NET DateTime 간의 암시적 변환을 제공 하지 않습니다. 로 `DateTime` `DateTimeKind.Unspecified` 캐스팅하기전에.net을로컬또는UTC로변환하는것과관련된오류를방지하려면입니다.`NSDate`
 
@@ -80,9 +80,9 @@ Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not
 
 - 에서 `VideoSettings` avfoundation 클래스를 사용 하는 `WeakVideoSettings` 코드는 속성을 사용 하도록 변경 해야 합니다. 이렇게 하려면 설정 `Dictionary`클래스에서 속성으로 사용할 수 있는가 필요 합니다. 예를 들면 다음과 같습니다.
 
-    ```csharp
-    vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
-    ```
+  ```csharp
+  vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
+  ```
 
 - Nsobject `.ctor(IntPtr)` 생성자가[부적절 한 사용을 방지 하기 위해](~/cross-platform/macios/unified/overview.md#NSObject_ctor)public에서 protected로 변경 되었습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: b13ee05f6d0e17287254b7c30c07b5a4a3c70638
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9113ff728c382a26d0f0b5c0a6e40575cb8e776f
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198291"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227942"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -20,7 +20,7 @@ ms.locfileid: "70198291"
 
 [`WebView`](xref:Xamarin.Forms.WebView) 앱에서 웹 및 HTML 콘텐츠를 표시 하기 위한 뷰입니다. 와 달리 `OpenUri`, 사용자 장치의 웹 브라우저에 적용 되 `WebView` 앱 내에서 HTML 콘텐츠를 표시 합니다.
 
-![](webview-images/in-app-browser.png "앱 내 브라우저에서")
+![앱 브라우저에서](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>콘텐츠
 
@@ -105,7 +105,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "HTML 문자열을 표시 하는 WebView")
+![HTML 문자열을 표시 하는 웹 보기](webview-images/html-string.png)
 
 위의 코드에서 `@` HTML을 리터럴, 모든 일반적인 이스케이프 문자는 무시 되는 문자열로 표시 하는 데 사용 됩니다.
 
@@ -147,7 +147,7 @@ body,p,h1 {
 
 다음 스크린샷에서 각 플랫폼에서 로컬 콘텐츠를 표시 하는 결과 보여 줍니다.
 
-![](webview-images/local-content.png "웹 보기 로컬 콘텐츠 표시")
+![로컬 콘텐츠를 표시 하는 웹 보기](webview-images/local-content.png)
 
 첫 페이지 로드 하지만 `WebView` 알지 HTML에서 발생 한 위치입니다. 로컬 리소스를 참조 하는 페이지를 처리할 때 문제가 됩니다. 발생 하는 수의 예로 별도 JavaScript 파일의 각 다른 페이지를 사용 하면 로컬 페이지 링크를 사용 하거나 페이지는 CSS 스타일 시트에 연결 하는 경우를 들 수 있습니다.  
 
@@ -176,11 +176,11 @@ Ios, 웹 콘텐츠를 프로젝트의 루트 디렉터리에 배치 해야 하�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "IOS에서 로컬 파일")
+![IOS의 로컬 파일](webview-images/ios-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "IOS에서 로컬 파일")
+![IOS의 로컬 파일](webview-images/ios-xs.png)
 
 -----
 
@@ -206,11 +206,11 @@ Android, HTML, CSS 및 이미지에에서 배치 빌드 작업을 사용 하 여
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](webview-images/android-vs.png "Android에서 로컬 파일")
+![Android의 로컬 파일](webview-images/android-vs.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![](webview-images/android-xs.png "Android에서 로컬 파일")
+![Android의 로컬 파일](webview-images/android-xs.png)
 
 -----
 
@@ -326,9 +326,9 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-정말 간단하죠.
+이제 끝났습니다!
 
-![](webview-images/in-app-browser.png "WebView 탐색 단추")
+![웹 보기 탐색 단추](webview-images/in-app-browser.png)
 
 ## <a name="events"></a>이벤트
 
@@ -352,7 +352,7 @@ WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤�
 - `Source`– 탐색을 수행한 요소입니다.
 - `Url`– 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들어:
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -383,11 +383,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 이 인해 다음 출력 (로드):
 
-![](webview-images/loading-start.png "WebView 탐색 이벤트 예제")
+![웹 보기 탐색 이벤트 예제](webview-images/loading-start.png)
 
 완료 된 로드 합니다.
 
-![](webview-images/loading-end.png "WebView 탐색할된 이벤트 예")
+![웹 보기 탐색 이벤트 예제](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>콘텐츠를 다시 로드
 

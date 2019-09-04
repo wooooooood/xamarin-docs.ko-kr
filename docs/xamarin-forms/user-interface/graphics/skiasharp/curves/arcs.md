@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 97c168460b091b9ada954cacd895a670c31805b2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ada7ce8fc9365ab4133ddf439353e97e640f39d6
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655189"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228116"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>원호를 그리는 3가지 방법
 
@@ -22,7 +22,7 @@ _SkiaSharp를 사용 하 여 세 가지 방법으로 타원을 정의 하는 방
 
 호 곡선이이 무한대 기호 둥근된 파트와 같은 타원의 일부:
 
-![](arcs-images/arcsample.png "무한대 기호")
+![무한대 기호](arcs-images/arcsample.png)
 
 해당 정의의 단순성에도 불구 하 고는 모든 요구를 충족 하는 호 그리기 함수를 정의할 수 없습니다 및 따라서는 가장 좋은 방법은 호를 그릴 그래픽 시스템 간에 합의 되지 않습니다. 이러한 이유로 `SKPath` 하나만 방법 자체를 클래스에 제한 하지 않습니다.
 
@@ -42,21 +42,21 @@ public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean fo
 
 두 방법 모두 시작을 `SKRect` 타원의 크기와 위치를 정의 하는 값:
 
-![](arcs-images/anglearcoval.png "각도 호를 시작 하는 타원")
+![원호를 시작 하는 타원입니다.](arcs-images/anglearcoval.png)
 
 이 타원의 원 둘레의 일부인 호입니다.
 
 `startAngle` 인수는 오른쪽에는 타원의 중심에서 가져온 가로줄을 기준으로 시계 방향의 각도입니다. 합니다 `sweepAngle` 인수는 기준으로 `startAngle`합니다. 다음과 같습니다 `startAngle` 고 `sweepAngle` 60도의 및 100도 각각 값:
 
-![](arcs-images/anglearcangles.png "각도 호를 정의 하는 각도")
+![원호를 정의 하는 각도입니다.](arcs-images/anglearcangles.png)
 
 호의 시작 각도 시작 합니다. 스윕 각도 길이가 적용 됩니다. 호는 빨간색으로 다음과 같습니다.
 
-![](arcs-images/anglearchighlight.png "강조 표시 된 각도 호")
+![강조 표시 된 원호입니다.](arcs-images/anglearchighlight.png)
 
 곡선 경로 추가 합니다 `AddArc` 또는 `ArcTo` 메서드는 단순히 원주 타원의 부분:
 
-![](arcs-images/anglearc.png "자체적으로 각도 호")
+![자체의 각도 원호](arcs-images/anglearc.png)
 
 `startAngle` 또는`sweepAngle` 인수는 음수일 수 있습니다. 호는의 `sweepAngle` 양수 값에 대해 시계 방향으로, 음수 값의 경우 시계 반대입니다.
 
@@ -103,7 +103,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 알 수 있듯이 시작 각도 및 스윕 각도 둘 다 음수 값에 사용할 수 있습니다.
 
-[![](arcs-images/anglearc-small.png "삼중 각도 호 페이지 스크린샷")](arcs-images/anglearc-large.png#lightbox "삼중 각도 호 페이지 스크린샷")
+[![앵글 Arc 페이지의 세 번째 스크린샷](arcs-images/anglearc-small.png)](arcs-images/anglearc-large.png#lightbox)
 
 알고리즘 방식으로 가장 간단 하 고 호를 생성 하는이 방법 이며 호를 설명 하는 매개 방정식을 파생 하기가 쉽습니다. 타원 및 시작 및 스윕 각도의 위치와 크기를 알고 있으면 호의 시작점과 끝점 수를 계산 간단한 삼각 함수를 사용 하 여.
 
@@ -208,11 +208,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 새 `SKPath` 각 원형 조각이 개체가 만들어집니다. 센터에서 한 줄으로 구성 된 경로 `ArcTo` center 결과에 원호, 및 다른 줄을 다시 그리기를 `Close` 호출 합니다. 이 프로그램을 이동 하 여 모든 센터에서 50 픽셀 "쪼개기" 원형 조각을 표시 합니다. 해당 작업에는 각 조각에 대 한 스윕 각도의 중간점의 방향에서 벡터를 필요합니다.
 
-[![](arcs-images/explodedpiechart-small.png "쪼개진 원형 차트 페이지의 3 배가 스크린샷")](arcs-images/explodedpiechart-large.png#lightbox "삼중 쪼개진 원형 차트 페이지 스크린샷")
+[![쪼개진 원형 차트 페이지의 세 번째 스크린샷](arcs-images/explodedpiechart-small.png)](arcs-images/explodedpiechart-large.png#lightbox)
 
 그렇 군요 "급증" 하지 않고를 확인 하려면 단순히 주석으로 처리 된 `Translate` 호출:
 
-[![](arcs-images/explodedpiechartunexploded-small.png "급증 없이 쪼개진 원형 차트 페이지의 3 배가 스크린샷")](arcs-images/explodedpiechartunexploded-large.png#lightbox "삼중 급증 없이 쪼개진 원형 차트 페이지 스크린샷")
+[![폭발 하지 않고 쪼개진 원형 차트 페이지의 세 번째 스크린샷](arcs-images/explodedpiechartunexploded-small.png)](arcs-images/explodedpiechartunexploded-large.png#lightbox)
 
 ## <a name="the-tangent-arc"></a>탄젠트 호
 
@@ -234,31 +234,31 @@ public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 - 첫 번째 지점 인수는 `ArcTo` 메서드를 호출 합니다 *지점 모서리*
 - 두 번째 지점 인수 `ArcTo`라는 합니다 *대상 지점*:
 
-![](arcs-images/tangentarcthreepoints.png "탄젠트 호를 시작 하는 3 개의 점으로")
+![탄젠트 호를 시작 하는 세 가지 요소](arcs-images/tangentarcthreepoints.png)
 
 세 가지 사항은 연결 된 두 줄을 정의합니다.
 
-![](arcs-images/tangentarcconnectinglines.png "탄젠트 원호의 세 개의 점을 연결 하는 줄")
+![접선의 세 요소를 연결 하는 선](arcs-images/tangentarcconnectinglines.png)
 
 3 개의 점으로 동일 선상의 경우 &mdash; 즉, 동일한 직선에 놓여 있습니다 경우 &mdash; 원호가 가져오게 됩니다.
 
 합니다 `ArcTo` 메서드에 포함 됩니다는 `radius` 매개 변수입니다. 이 원의 반지름을 정의 합니다.
 
-![](arcs-images/tangentarccircle.png "탄젠트 원호의 원")
+![탄젠트 원호의 원입니다.](arcs-images/tangentarccircle.png)
 
 탄젠트 호 타원에 대 한 일반화 되지 됩니다.
 
 모든 각도로 두 줄을 충족 하는 경우 해당 원 수 사이 삽입 선을 두 줄으로 탄젠트 되도록:
 
-![](arcs-images/tangentarctangentcircle.png "두 줄 사이의 탄젠트 호 원")
+![두 줄 사이의 탄젠트 원호 원입니다.](arcs-images/tangentarctangentcircle.png)
 
 윤곽선에 추가 되는 곡선을 건드리지 않습니다에 지정 된 지점 중 하나는 `ArcTo` 메서드. 첫 번째 탄젠트 지점, 빨간색으로 여기 표시 된 두 번째 탄젠트 점에서 끝나는 호를 현재 위치에서 직선의 구성 됩니다.
 
-![](arcs-images/tangentarchighlight.png "두 줄 사이의 강조 표시 된 탄젠트 호")
+![두 줄 사이의 강조 표시 된 접선 호](arcs-images/tangentarchighlight.png)
 
 최종 직선 및 호 윤곽선에 추가 되는 다음과 같습니다.
 
-![](arcs-images/tangentarc.png "두 줄 사이의 강조 표시 된 탄젠트 호")
+![두 줄 사이의 강조 표시 된 접선 호](arcs-images/tangentarc.png)
 
 두 번째 탄젠트 점에서 윤곽선을 계속할 수 있습니다.
 
@@ -416,7 +416,7 @@ public partial class TangentArcPage : InteractivePage
 
 다음은 **탄젠트 호** 실행 페이지:
 
-[![](arcs-images/tangentarc-small.png "Arc Tangent 페이지 스크린샷 삼중")](arcs-images/tangentarc-large.png#lightbox "삼중 탄젠트 호 페이지 스크린샷")
+[![탄젠트 호 페이지의 삼중 스크린샷](arcs-images/tangentarc-small.png)](arcs-images/tangentarc-large.png#lightbox)
 
 탄젠트 호는 모서리가 둥근된 사각형을 같은 둥근된 모서리를 만드는 데 적합 합니다. 때문에 `SKPath` 이미 포함 되어 있습니다를 `AddRoundedRect` 메서드는 **Heptagon 반올림** 페이지를 사용 하는 방법에 설명 `ArcTo` 7 양면 다각형의 모퉁이 둥글게 하는 것에 대 한 합니다. (코드는 일반 모든 다각형에 대 한 범용 화) 합니다.
 
@@ -489,9 +489,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![](arcs-images/roundedheptagon-small.png "삼중 반올림 Heptagon 페이지 스크린샷")](arcs-images/roundedheptagon-large.png#lightbox "삼중 반올림 Heptagon 페이지 스크린샷")
+[![둥근 Heptagon 페이지의 삼중 스크린샷](arcs-images/roundedheptagon-small.png)](arcs-images/roundedheptagon-large.png#lightbox)
 
 ## <a name="the-elliptical-arc"></a>타원형 원호
 
@@ -507,31 +507,31 @@ public void ArcTo (Single rx, Single ry, Single xAxisRotate, SKPathArcSize large
 
 이러한 `ArcTo` 메서드는 윤곽선의 현재 지점 두 점 사이의 호를 그립니다 및 마지막 매개 변수를 `ArcTo` 메서드 (합니다 `xy` 매개 변수 또는 별도 `x` 및 `y` 매개 변수):
 
-![](arcs-images/ellipticalarcpoints.png "타원형 호를 정의 하는 두 지점")
+![타원형 원호를 정의한 두 요소](arcs-images/ellipticalarcpoints.png)
 
 첫 번째 지점 매개 변수를 `ArcTo` 메서드 (`r`, 또는 `rx` 및 `ry`) 점이 아닌 전혀 아니라 대신; 되는 타원의 가로 및 세로 반지름
 
-![](arcs-images/ellipticalarcellipse.png "타원 타원형 호를 정의 합니다.")
+![타원형 원호를 정의한 타원입니다.](arcs-images/ellipticalarcellipse.png)
 
 `xAxisRotate` 매개 변수는이 타원의 회전을 시계 방향 각도입니다.
 
-![](arcs-images/ellipticalarctiltedellipse.png "타원형 호를 정의한 기운된 타원")
+![타원형 원호를 정의한 기울어진 타원입니다.](arcs-images/ellipticalarctiltedellipse.png)
 
 이 기운된 타원 두 개의 점을 이어지도록 합니다이 배치를 점은 두 개의 다른 호로 연결 됩니다.
 
-![](arcs-images/ellipticalarcellipse1.png "첫 번째 집합이 타원형 원호")
+![타원형 호의 첫 번째 집합입니다.](arcs-images/ellipticalarcellipse1.png)
 
 이러한 두 원호는 다음과 같은 두 가지 방법으로 구분할 수 있습니다. 위쪽 원호는 아래쪽 호 보다 크고 원호를 왼쪽에서 오른쪽으로 그리면 위쪽 원호는 시계 방향으로 그려지고 아래쪽 호는 시계 반대 방향으로 그려집니다.
 
 다른 방식으로 두 점 사이의 타원을 맞출 수 이기도 합니다.
 
-![](arcs-images/ellipticalarcellipse2.png "두 번째 집합이 타원형 원호")
+![타원형 원호의 두 번째 집합입니다.](arcs-images/ellipticalarcellipse2.png)
 
 이제는 시계 방향으로 그려지는 맨 위에 작은 호 그려지는 맨 아래에서 더 큰 호 시계 반대 방향으로.
 
 따라서 네 가지 방법 중 총에서 기운된 타원에 의해 정의 되는 호에서 이러한 두 지점을 연결할 수 있습니다.
 
-![](arcs-images/ellipticalarccolors.png "모든 4 개의 타원형 원호")
+![네 개의 원형 원호 모두](arcs-images/ellipticalarccolors.png)
 
 이러한 4 개의 타원의 4 가지 조합으로 구분 됩니다는 [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) 하 고 [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) 열거형 형식 인수가 `ArcTo` 메서드:
 
@@ -586,21 +586,21 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기이 실행 됩니다.
 
-[![](arcs-images/ellipticalarc-small.png "타원형 호 페이지 스크린샷 삼중")](arcs-images/ellipticalarc-large.png#lightbox "삼중 타원형 호 페이지 스크린샷")
+[![원형 호 페이지의 삼중 스크린 샷](arcs-images/ellipticalarc-small.png)](arcs-images/ellipticalarc-large.png#lightbox)
 
 합니다 **Arc 무한대** 페이지 타원형 호를 사용 하 여은 무한대 기호를 그립니다. 무한대 기호를 구분 하 여 100 단위 100 단위의 반지름을 사용 하 여 두 개의 원을 기반으로 합니다.
 
-![](arcs-images/infinitycircles.png "두 개의 원")
+![두 개의 원](arcs-images/infinitycircles.png)
 
 서로 교차 하는 두 줄 모두 원형으로 탄젠트 같습니다.
 
-![](arcs-images/infinitycircleslines.png "접선을 사용 하 여 두 개의 원")
+![접선을 사용 하는 두 개의 원](arcs-images/infinitycircleslines.png)
 
 무한대 기호에는 이러한 원과 두 줄의 일부 조합입니다. 무한대 기호를 그릴 타원형 호를 사용 하려면 두 줄을 탄젠트 원에 있는 좌표를 결정 해야 합니다.
 
 원 중 하나에 올바른 사각형을 생성 합니다.
 
-![](arcs-images/infinitytriangle.png "두 개의 원을 접선와 포함 된 원")
+![접선 및 포함 된 원이 있는 두 개의 원](arcs-images/infinitytriangle.png)
 
 원의 반지름은 100 단위 및 삼각형의 빗변 이므로 150 단위 각도 α 150 여 또는 41.8도 구분 100의 아크사인 (역 사인). 삼각형의 다른 쪽의 길이가 150 번 41.8 각도의 코사인 또는 112는 피타고라스 정리 하 여 계산할 수도 있습니다.
 
@@ -612,7 +612,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 4 개의 탄젠트 사항은 100 원 반지름을 사용 하 여 점 (0, 0)에 가운데 맞춤은 무한대 기호를 그릴 필요한 모든 것 같습니다.
 
-![](arcs-images/infinitycoordinates.png "접선 및 좌표를 사용 하 여 두 개의 원")
+![접선 및 좌표가 있는 두 개의 원](arcs-images/infinitycoordinates.png)
 
 `PaintSurface` 처리기에는 [ `ArcInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ArcInfinityPage.cs) 클래스의 무한대 기호를 배치 있도록는 (0, 0) 지점 페이지의 가운데에 배치 되 고 화면 크기에 대 한 경로 확장:
 
@@ -654,7 +654,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 코드를 사용 하는 `Bounds` 속성의 `SKPath` 를 캔버스의 크기를 조정할 무한대 사인 값의 크기를 확인 하려면:
 
-[![](arcs-images/arcinfinity-small.png "삼중 호 무한대 페이지 스크린샷")](arcs-images/arcinfinity-large.png#lightbox "삼중 호 무한대 페이지 스크린샷")
+[![호 Infinity 페이지의 삼중 스크린샷](arcs-images/arcinfinity-small.png)](arcs-images/arcinfinity-large.png#lightbox)
 
 결과 것을 제안 하는 약간 작은 합니다 `Bounds` 의 속성 `SKPath` 경로 보다 큰 크기를 보고 합니다.
 
@@ -662,7 +662,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 긴밀 하 게 맞춤을 사용 합니다 `TightBounds` 제어점을 제외 하는 속성입니다. 같습니다. 가로 모드에서 실행 되 고 사용 하 여 프로그램을 `TightBounds` 속성 경로 경계를 가져오려면:
 
-[![](arcs-images/arcinfinitytightbounds-small.png "긴밀 하 게 범위를 사용 하 여 원호 무한대 페이지 스크린샷 삼중")](arcs-images/arcinfinitytightbounds-large.png#lightbox "삼중 긴밀 하 게 범위를 사용 하 여 원호 무한대 페이지 스크린샷")
+[![범위가 엄격한 Arc Infinity 페이지의 삼중 스크린샷](arcs-images/arcinfinitytightbounds-small.png)](arcs-images/arcinfinitytightbounds-large.png#lightbox)
 
 직선 원호 사이의 연결을 수학적으로 부드러운 이지만, 직선 호에서 변경 잠시 갑작스러운 보일 수 있습니다. 더 나은 무한대 기호를 다음 문서에 표시 됩니다 [ **베 지 어 곡선의 세 가지 형식**](beziers.md)합니다.
 

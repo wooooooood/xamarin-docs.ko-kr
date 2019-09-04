@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 41f1b96a39bde7b94f67f972bfd4ace7e454e2c0
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8082fc6ab2625e68d64ee9d42a9b630f885d9002
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120593"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227758"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.ios에서 이미지 표시
 
@@ -41,7 +41,7 @@ IOS 7에 추가 된 **자산 카탈로그 이미지 집합** 에는 앱에 대 �
 3. 새 이미지 집합을 선택 하면 편집기가 표시 됩니다.
 
     ![](displaying-an-image-images/imageset03.png "이미지 집합 편집기")
-4. 여기에서 필요한 여러 장치 및 해상도에 대 한 이미지를 끌어 놓습니다. 
+4. 여기에서 필요한 여러 장치 및 해상도에 대 한 이미지를 끌어 놓습니다.
 5. **자산 목록** 에서 새 이미지 집합의 **이름을** 두 번 클릭 하 여 편집 합니다. ![](displaying-an-image-images/imageset04.png "새 이미지 집합의 이름 편집")
 
 IOS 디자이너에서 **이미지 집합** 을 사용 하는 경우 속성 편집기의 드롭다운 목록에서 집합의 이름을 선택 하면 됩니다.
@@ -54,7 +54,7 @@ IOS 디자이너에서 **이미지 집합** 을 사용 하는 경우 속성 편�
 
     ![](displaying-an-image-images/asset5.png "더하기 단추를 클릭 합니다.")
 
-2. **이미지 집합 추가** 를 선택 하면 새 이미지 집합에 대해 이미지 집합 편집기가 표시 됩니다. 여기에서 필요한 여러 장치 및 해상도에 대 한 이미지를 끌어 놓습니다. 
+2. **이미지 집합 추가** 를 선택 하면 새 이미지 집합에 대해 이미지 집합 편집기가 표시 됩니다. 여기에서 필요한 여러 장치 및 해상도에 대 한 이미지를 끌어 놓습니다.
 
     ![](displaying-an-image-images/asset7.png "이미지 집합 편집기")
 
@@ -193,7 +193,7 @@ IOS는 이미지를 사용 하 여 앱을 지 원하는 것 외에도 탭 모음
 
 ### <a name="frombundle"></a>FromBundle
 
-`FromBundle` 메서드 호출은 다양 한 해상도를 위한 캐싱 지원 및 이미지 파일 자동 처리와 같이 여러 이미지 로드 및 관리 기능을 기본 제공 하는 동기 (차단) 호출입니다.  
+`FromBundle` 메서드 호출은 다양 한 해상도를 위한 캐싱 지원 및 이미지 파일 자동 처리와 같이 여러 이미지 로드 및 관리 기능을 기본 제공 하는 동기 (차단) 호출입니다.
 
 다음 예제에서는의 `UITabBarItem` `UITabBar`이미지를 설정 하는 방법을 보여 줍니다.
 

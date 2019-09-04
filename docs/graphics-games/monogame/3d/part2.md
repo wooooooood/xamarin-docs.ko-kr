@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: f125f8f20d22da4e988440cbaa936771d86a7673
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680979"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227730"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>MonoGame에서 꼭 짓 점을 사용 하 여 3D 그래픽 그리기
 
@@ -85,7 +85,7 @@ protected override void Draw(GameTime gameTime)
 먼저 Game1 클래스에 멤버를 추가 합니다.
 
 ```csharp
-VertexPositionTexture[] floorVerts; 
+VertexPositionTexture[] floorVerts;
 ```
 
 그런 다음에서 `Game1.Initialize`꼭 짓 점을 정의 합니다. 이 문서의 앞부분에서 참조 하는 제공 된 템플릿에는 `Game1.Initialize` 메서드가 포함 되어 있지 않으므로 전체 메서드를에 `Game1`추가 해야 합니다.
@@ -179,7 +179,7 @@ void DrawGround()
             PrimitiveType.TriangleList,
             // The array of verts that we want to render
             floorVerts,
-            // The offset, which is 0 since we want to start 
+            // The offset, which is 0 since we want to start
             // at the beginning of the floorVerts array
             0,
             // The number of triangles to draw
@@ -213,7 +213,7 @@ protected override void Draw (GameTime gameTime)
 
 ### <a name="techniques-and-passes"></a>기술 및 통과
 
-효과에 대 한 속성을 할당 하면 실제 렌더링을 수행할 수 있습니다. 
+효과에 대 한 속성을 할당 하면 실제 렌더링을 수행할 수 있습니다.
 
 이 연습에서는 속성을 `CurrentTechnique` 변경 하지 않지만 고급 게임에는 다른 방식으로 그리기를 수행할 수 있는 단일 효과 (예: 색 값이 적용 되는 방법)가 있을 수 있습니다. 이러한 각 렌더링 모드는 렌더링 전에 할당 될 수 있는 기술로 표시 될 수 있습니다. 또한 각 기법을 제대로 렌더링 하려면 여러 단계가 필요할 수 있습니다. 광선 표면 또는 이유 같이 복잡 한 시각적 개체를 렌더링 하는 경우에는 여러 패스가 필요할 수 있습니다.
 
@@ -231,7 +231,7 @@ protected override void Draw (GameTime gameTime)
 
 ## <a name="rendering-with-a-texture"></a>질감으로 렌더링
 
-이 시점에서 앱은 흰색 평면 (관점에서)을 렌더링 합니다. 다음으로는 평면을 렌더링할 때 사용할 텍스처를 프로젝트에 추가 합니다. 
+이 시점에서 앱은 흰색 평면 (관점에서)을 렌더링 합니다. 다음으로는 평면을 렌더링할 때 사용할 텍스처를 프로젝트에 추가 합니다.
 
 작업을 단순하게 유지 하기 위해 MonoGame 파이프라인 도구를 사용 하는 대신 .png를 프로젝트에 직접 추가할 수 있습니다. 이렇게 하려면 [이 .png 파일](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) 을 컴퓨터에 다운로드 합니다. 다운로드 되 면 Solution pad에서 **Content** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 파일 추가** ...를 선택 합니다. Android에서 작업 하는 경우이 폴더는 Android 관련 프로젝트의 **자산** 폴더 아래에 있습니다. IOS에서이 폴더는 iOS 프로젝트의 루트에 있습니다. **체크 무늬 .png** 가 저장 된 위치로 이동 하 여이 파일을 선택 합니다. 디렉터리에 파일을 복사 하려면 선택 합니다.
 
@@ -332,7 +332,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 코드를 실행 하는 경우 이제 평면에서 바둑판 패턴을 표시 하는 것을 볼 수 있습니다.
@@ -404,7 +404,7 @@ protected override void Draw(GameTime gameTime)
     DrawModel (new Vector3 ( 4, 4, 3));
 
     base.Draw(gameTime);
-} 
+}
 ```
 
 또한 `Vector3` 에서`Game1` 카메라의 위치를 나타내는를 만듭니다. `checkerboardTexture` 선언 아래에 필드를 추가 합니다.
@@ -413,7 +413,7 @@ protected override void Draw(GameTime gameTime)
 ...
 Texture2D checkerboardTexture;
 // new code:
-Vector3 cameraPosition = new Vector3(0, 10, 10); 
+Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 다음으로 `cameraPosition` `DrawModel` 메서드에서 지역 변수를 제거 합니다.
@@ -434,7 +434,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
 
             effect.View = Matrix.CreateLookAt (
-                cameraPosition, cameraLookAtVector, cameraUpVector); 
+                cameraPosition, cameraLookAtVector, cameraUpVector);
             ...
 ```
 
@@ -450,7 +450,7 @@ void DrawGround()
 
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
-    ... 
+    ...
 ```
 
 이제 코드를 실행 하는 경우 모델과 땅을 동시에 볼 수 있습니다.

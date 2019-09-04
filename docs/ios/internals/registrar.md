@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/29/2018
-ms.openlocfilehash: 9817ac2df7a60b5358316599ce02702448b0c307
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199714"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226040"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Xamarin.ios에 대 한 형식 등록자
 
@@ -129,10 +129,10 @@ class MyClass : IMyProtocol
 이 새 등록 시스템은 다음과 같은 새로운 기능을 제공 합니다.
 
 - 프로그래머 오류에 대 한 컴파일 시간 검색:
-    - 동일한 이름을 사용 하 여 두 클래스를 등록 합니다.
-    - 동일한 선택기에 응답 하기 위해 내보낸 메서드가 둘 이상 있습니다.
+  - 동일한 이름을 사용 하 여 두 클래스를 등록 합니다.
+  - 동일한 선택기에 응답 하기 위해 내보낸 메서드가 둘 이상 있습니다.
 - 사용 하지 않는 네이티브 코드 제거:
-    - 새 등록 시스템은 정적 라이브러리에서 사용 되는 코드에 대 한 강력한 참조를 추가 하 여 네이티브 링커가 결과 이진에서 사용 하지 않는 네이티브 코드를 제거할 수 있도록 합니다. Xamarin의 샘플 바인딩에서 대부분의 응용 프로그램은 최소 제한은 30만 개의 됩니다.
+  - 새 등록 시스템은 정적 라이브러리에서 사용 되는 코드에 대 한 강력한 참조를 추가 하 여 네이티브 링커가 결과 이진에서 사용 하지 않는 네이티브 코드를 제거할 수 있도록 합니다. Xamarin의 샘플 바인딩에서 대부분의 응용 프로그램은 최소 제한은 30만 개의 됩니다.
 
 - 의 `NSObject`제네릭 서브 클래스에 대 한 지원. 자세한 내용은 [nsobject 제네릭을](~/ios/internals/api-design/nsobject-generics.md) 참조 하세요. 또한 새 등록 시스템은 런타임에 임의 동작을 발생 시킨 지원 되지 않는 제네릭 구문을 catch 합니다.
 
@@ -142,37 +142,37 @@ class MyClass : IMyProtocol
 
 - 동일한 클래스에서 동일한 선택기를 두 번 이상 내보냅니다.
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo:")]
-        void Foo (NSString str);
-        [Export ("foo:")]
-        void Foo (string str)
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo:")]
+      void Foo (NSString str);
+      [Export ("foo:")]
+      void Foo (string str)
+  }
+  ```
 
 - 동일한 목표를 사용 하 여 둘 이상의 관리 되는 클래스 내보내기-C 이름:
 
-    ```csharp
-    [Register ("Class")]
-    class MyClass : NSObject {}
+  ```csharp
+  [Register ("Class")]
+  class MyClass : NSObject {}
 
-    [Register ("Class")]
-    class YourClass : NSObject {}
-    ```
+  [Register ("Class")]
+  class YourClass : NSObject {}
+  ```
 
 - 제네릭 메서드 내보내기:
 
-    ```csharp
-    [Register]
-    class MyDemo : NSObject
-    {
-        [Export ("foo")]
-        void Foo<T> () {}
-    }
-    ```
+  ```csharp
+  [Register]
+  class MyDemo : NSObject
+  {
+      [Export ("foo")]
+      void Foo<T> () {}
+  }
+  ```
 
 ### <a name="limitations-of-the-new-registrar"></a>새 등록자의 제한 사항
 

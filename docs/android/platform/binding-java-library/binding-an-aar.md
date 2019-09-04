@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 4c612faca90d4b2b4e44cfbb53ff65ec07fcdfd1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ee29f54ac68f370cb9499d315116a030247f6044
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524830"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225721"
 ---
 # <a name="binding-an-aar"></a>.AAR 바인딩
 
@@ -83,7 +83,7 @@ public class TextCounter
 
 1. Android 바인딩 라이브러리 템플릿으로 시작 하는 새 바인딩 라이브러리 프로젝트를 만듭니다. Mac용 Visual Studio 또는 Visual Studio 중 하나를 사용할 수 있습니다. 아래 스크린샷은 Visual Studio를 표시 하지만 Mac용 Visual Studio는 매우 비슷합니다. 솔루션 이름을 **AarBinding**로 합니다.
 
-    [![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
+    [![AarBindings 프로젝트 만들기](binding-an-aar-images/01-new-bindings-library-vs-sml.w160.png)](binding-an-aar-images/01-new-bindings-library-vs.w160.png#lightbox)
 
 2. 템플릿에는를 추가 하는 **jar** 폴더가 포함 되어 있습니다. 바인딩 라이브러리 프로젝트에 대 한 AAR입니다. **Jar** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **> 기존 항목 추가**를 선택 합니다.
 
@@ -276,7 +276,7 @@ Xamarin 도구는에서 **R** 데이터를 병합 합니다. 앱의 **리소스*
 <ImageView android:src="@drawable/image" ... />
 ```
 
-에 있는 리소스 레이아웃에도 액세스할 수 있습니다. AAR. 이렇게 하려면 내에 패키지 된 레이아웃에 대 한 **리소스. 레이아웃** 이름을 사용 합니다. AAR. 예를 들어:
+에 있는 리소스 레이아웃에도 액세스할 수 있습니다. AAR. 이렇게 하려면 내에 패키지 된 레이아웃에 대 한 **리소스. 레이아웃** 이름을 사용 합니다. AAR. 예:
 
 ```csharp
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);

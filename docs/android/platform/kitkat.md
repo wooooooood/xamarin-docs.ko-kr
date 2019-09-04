@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b61924c78f85c8a1a835cef87f357ec262926935
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 1aa4e6dcf5137d12647fb2a5531218839b6db9a1
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197734"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225805"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -80,12 +80,12 @@ KitKat를 사용 하면 정확 하 게 반복 되는 경보를 설정할 수 없
 외부 저장소는 이제 응용 프로그램에 고유한 저장소와 여러 응용 프로그램에서 공유 되는 데이터의 두 가지 유형으로 나뉩니다. 외부 저장소에서 앱의 특정 위치를 읽고 쓰려면 특별 한 권한이 필요 하지 않습니다. 이제 공유 저장소의 데이터와 상호 작용 하려면 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한이 필요 합니다. 이러한 두 가지 형식은 다음과 같이 분류할 수 있습니다.
 
 - 에서 `Context` 메서드를 호출 하 여 파일 또는 디렉터리 경로를 가져오는 경우 (예:[`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
-   디스크나[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
-   - 앱에 추가 권한이 필요 하지 않습니다.
+  디스크나[`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
+  - 앱에 추가 권한이 필요 하지 않습니다.
 
 - 속성에 액세스 하거나에서 `Environment` 메서드를 호출 하 여 파일 또는 디렉터리 경로를 가져오는 경우[`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
-   디스크나[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
-   앱에는 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한이 필요 합니다.
+  디스크나[`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
+  앱에는 `READ_EXTERNAL_STORAGE` 또는 `WRITE_EXTERNAL_STORAGE` 권한이 필요 합니다.
 
 > [!NOTE]
 > `WRITE_EXTERNAL_STORAGE`는 `READ_EXTERNAL_STORAGE` 사용 권한을 암시 하므로 하나의 사용 권한만 설정할 필요가 있습니다.
@@ -681,27 +681,27 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 - *전체 화면을 사용* 하 여 콘텐츠 검색, 게임 재생, 전체 화면 환경에서 혜택을 받을 수 있는 다른 응용 프로그램 실행을 위한 새로운 [몰입 형 모드](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) 를 KitKat.
 
 - *알림 사용자 지정* -를 사용 하 여 시스템 알림에 대 한 추가 세부 정보를 가져옵니다.[`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
-   . 이를 통해 앱 내에서 다른 방식으로 정보를 제공할 수 있습니다.
+  . 이를 통해 앱 내에서 다른 방식으로 정보를 제공할 수 있습니다.
 
 - *그릴 수 있는 리소스 미러링* -그릴 수 있는 리소스에 새로운[`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
-   시스템에서 왼쪽에서 오른쪽 레이아웃으로의 대칭 이동이 필요한 이미지에 대해 미러된 버전을 만들도록 지시 하는 특성입니다.
+  시스템에서 왼쪽에서 오른쪽 레이아웃으로의 대칭 이동이 필요한 이미지에 대해 미러된 버전을 만들도록 지시 하는 특성입니다.
 
 - *애니메이션 일시 중지* -를 사용 하 여 만든 애니메이션을 일시 중지 하 고 다시 시작 합니다.[`Animator`](xref:Android.Animation.Animator)
-   포함됩니다.
+  포함됩니다.
 
 - *동적으로 변경 되는 텍스트 읽기* -새 텍스트를 사용 하 여 동적으로 업데이트 되는 UI 파트를 새 텍스트와 함께 "라이브 영역"으로 표시 합니다.[`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
-   새 텍스트를 접근성 모드에서 자동으로 읽도록 특성입니다.
+  새 텍스트를 접근성 모드에서 자동으로 읽도록 특성입니다.
 
 - *오디오 환경 개선* -를 사용 하 여 트랙을 크게 만듭니다.[`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
-   에서 다음을 사용 하 여 오디오 스트림의 최고 및 RMS를 찾습니다.[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
-   클래스를 사용 하 고 오디오 [타임 스탬프](xref:Android.Media.AudioTimestamp) 에서 정보를 가져와 오디오-비디오 동기화에 도움을 줍니다.
+  에서 다음을 사용 하 여 오디오 스트림의 최고 및 RMS를 찾습니다.[`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
+  클래스를 사용 하 고 오디오 [타임 스탬프](xref:Android.Media.AudioTimestamp) 에서 정보를 가져와 오디오-비디오 동기화에 도움을 줍니다.
 
 - *사용자 지정 간격에 따라 ContentResolver 동기화* -KitKat은 동기화 요청이 수행 되는 시간에 일부 가변성을 추가 합니다. 를 호출 `ContentResolver` `ContentResolver.RequestSync` 하 고를 `SyncRequest`전달 하 여 사용자 지정 시간 또는 간격으로를 동기화 합니다.
 
 - *컨트롤러를 구분* 합니다. KitKat 컨트롤러에는 장치의 `ControllerNumber` 속성을 통해 액세스할 수 있는 고유한 정수 식별자가 할당 됩니다. 이렇게 하면 게임에서 플레이어를 쉽게 구분할 수 있습니다.
 
 - *원격 제어* -하드웨어 및 소프트웨어 쪽에서 몇 가지 사항이 변경 되 면 KitKat를 사용 하 여 IR 전송기를 사용 하는 장치 outfitted을를 사용 하 여 원격 `ConsumerIrService`제어로 전환 하 고, 새로운 기능을 사용 하 여 주변 장치를 조작할 수 있습니다.[`RemoteController`](xref:Android.Media.RemoteController)
-   Api.
+  Api.
 
 위의 API 변경 내용에 대 한 자세한 내용은 Google [Android 4.4 api](https://developer.android.com/about/versions/android-4.4.html) 개요를 참조 하세요.
 

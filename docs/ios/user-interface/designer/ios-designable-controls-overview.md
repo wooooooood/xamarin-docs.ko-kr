@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: aa6db1403a34b7228352e12e1b2f954308db3744
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3f36ef7541ea00e2a08733c9d47d252477da787a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528497"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227068"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS의 사용자 지정 컨트롤
 
@@ -98,7 +98,7 @@ IOS 디자이너 내에서 설정 된 값을 덮어쓰지 않도록 사용자 �
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
-    
+
     [Export ("Counter"), Browsable (true)]
     public int Counter {get; set;}
 
@@ -179,7 +179,8 @@ public class DesignerAwareLabel : UILabel, IComponent {
 
  ![](ios-designable-controls-overview-images/exception-box.png "빨강 자리 표시자와 예외 세부 정보로 잘못 된 컨트롤")
 
-컨트롤에 디버그 기호를 사용할 수 있는 경우 추적에는 파일 이름과 줄 번호가 있습니다. 스택 추적에서 줄을 두 번 클릭 하면 소스 코드에서 해당 줄로 이동 합니다.
+컨트롤에 디버그 기호를 사용할 수 있는 경우 추적에는 파일 이름과 줄 번호가 있습니다.
+스택 추적에서 줄을 두 번 클릭 하면 소스 코드에서 해당 줄로 이동 합니다.
 
 디자이너에서 잘못 된 컨트롤을 격리할 수 없는 경우 디자인 화면 위쪽에 경고 메시지가 표시 됩니다.
 

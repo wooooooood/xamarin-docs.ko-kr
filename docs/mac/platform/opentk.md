@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: eb6eff59ccb44d9954139c294592fafcba1f08e0
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 806f58ae6a79f935916008e93deed0136920951a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889530"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227823"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Xamarin.ios의 OpenTK 소개
 
@@ -237,7 +237,7 @@ Game.Resize += (sender, e) =>
 
 ### <a name="the-updateframe-event"></a>UpdateFrame 이벤트
 
-`UpdateFrame` 이벤트는 사용자 입력을 처리 하 고, 개체 위치를 업데이트 하 고, 물리 또는 AI 계산을 실행 하는 데 사용 됩니다. 간단한 테스트 앱의 경우에는 `UpdateFrame` 이벤트를 사용 하지 않지만 참조용으로 포함 되어 있습니다. 
+`UpdateFrame` 이벤트는 사용자 입력을 처리 하 고, 개체 위치를 업데이트 하 고, 물리 또는 AI 계산을 실행 하는 데 사용 됩니다. 간단한 테스트 앱의 경우에는 `UpdateFrame` 이벤트를 사용 하지 않지만 참조용으로 포함 되어 있습니다.
 
 ```csharp
 Game.UpdateFrame += (sender, e) =>
@@ -253,7 +253,7 @@ Game.UpdateFrame += (sender, e) =>
 
 ### <a name="the-renderframe-event"></a>RenderFrame 이벤트
 
-이벤트 `RenderFrame` 에는 그래픽을 렌더링 (그리기) 하는 데 사용 되는 코드가 포함 되어 있습니다. 예제 앱의 경우 간단한 삼각형으로 게임 보기를 채웁니다. 
+이벤트 `RenderFrame` 에는 그래픽을 렌더링 (그리기) 하는 데 사용 되는 코드가 포함 되어 있습니다. 예제 앱의 경우 간단한 삼각형으로 게임 보기를 채웁니다.
 
 ```csharp
 Game.RenderFrame += (sender, e) =>

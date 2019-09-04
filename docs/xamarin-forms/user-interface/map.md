@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
-ms.openlocfilehash: 5eee9fea7ea0fffe9dc254ac4340ff05d087ce33
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 242673efb38931eb678432a28f24db0ad9b8cb7d
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121554"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228222"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
 
@@ -73,11 +73,11 @@ NuGet 패키지를 추가 하 고 각 응용 프로그램 내에서 초기화 �
 에 다음 키를 설정 해야 하는 iOS에서 위치 서비스에 액세스 하려면 **Info.plist**:
 
 - iOS 11
-    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 앱 사용 중인 경우 위치 서비스를 사용 하기 위한
-    - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) -위치 서비스를 사용 하 여 모든 시간에 대 한
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 앱 사용 중인 경우 위치 서비스를 사용 하기 위한
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) -위치 서비스를 사용 하 여 모든 시간에 대 한
 - iOS 10 및 이전 버전
-    - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 앱 사용 중인 경우 위치 서비스를 사용 하기 위한
-    - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) -위치 서비스를 사용 하 여 모든 시간에 대 한    
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 앱 사용 중인 경우 위치 서비스를 사용 하기 위한
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) -위치 서비스를 사용 하 여 모든 시간에 대 한    
 
 IOS 11 및 이전 버전을 지원 하려면 모든 세 개의 키를 포함할 수 있습니다: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, 및 `NSLocationAlwaysUsageDescription`합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 885cf4b77d4eac0668a2e70c57187e9b23a91dd1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 962f06367542cc0e5d0d17f3261411c96f215e44
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527562"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227482"
 ---
 # <a name="introduction-to-ios-7"></a>iOS 7 소개
 
@@ -36,14 +36,14 @@ iOS 7은 UIKit에서 애니메이션 지원을 보강 하 여 응용 프로그�
 
 ```csharp
 void AnimateWithSpring ()
-{ 
+{
     float springDampingRatio = 0.25f;
     float initialSpringVelocity = 1.0f;
-    
+
     UIView.AnimateNotify (3.0, 0.0, springDampingRatio, initialSpringVelocity, 0, () => {
-    
-        imageView.Center = new CGPoint (imageView.Center.X, 400);   
-            
+
+        imageView.Center = new CGPoint (imageView.Center.X, 400);
+
     }, null);
 }
 ```
@@ -67,11 +67,11 @@ void AnimateViewWithKeyframes ()
     // can now use keyframes directly on UIView without needing to drop directly into Core Animation
 
     UIView.AnimateKeyframes (2.0, 0, UIViewKeyframeAnimationOptions.Autoreverse, () => {
-        UIView.AddKeyframeWithRelativeStartTime (0.0, 0.5, () => { 
+        UIView.AddKeyframeWithRelativeStartTime (0.0, 0.5, () => {
             imageView.Center = new CGPoint (200, 200);
         });
 
-        UIView.AddKeyframeWithRelativeStartTime (0.5, 0.5, () => { 
+        UIView.AddKeyframeWithRelativeStartTime (0.5, 0.5, () => {
             imageView.Transform = CGAffineTransform.MakeRotation ((float)Math.PI / 2);
         });
     }, (finished) => {
@@ -156,7 +156,7 @@ dynAnimator.AddBehavior (gravity);
 
 이로 인해 아래 그림과 같이 이미지가 중력에 애니메이션 효과를 줍니다.
 
-![](images/gravity2.png "시작 이미지 위치") 
+![](images/gravity2.png "시작 이미지 위치")
 ![](images/gravity3.png "끝 이미지 위치")
 
 화면 경계를 제한 하는 것이 없으므로 이미지 뷰는 아래쪽을 벗어납니다. 이미지가 화면 가장자리와 충돌 하도록 보기를 제한 하려면를 `UICollisionBehavior`추가할 수 있습니다. 이에 대해서는 다음 섹션에서 설명 합니다.

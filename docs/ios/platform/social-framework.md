@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b95c68b43e4c7fda4d60f6976ab626968800d3dc
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: c6e0005207a7c6fc444d029c9577684370b4cbf0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889806"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226618"
 ---
 # <a name="social-framework-in-xamarinios"></a>Xamarin.ios의 소셜 프레임 워크
 
@@ -55,7 +55,7 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 
  `SLComposeViewController`사용자 개입 없이 직접 트 윗를 전송 하지 않습니다. 그러나 다음 방법을 사용 하 여 초기화할 수 있습니다.
 
-- `SetInitialText`– 트 윗에서 표시할 초기 텍스트를 추가 합니다. 
+- `SetInitialText`– 트 윗에서 표시할 초기 텍스트를 추가 합니다.
 - `AddUrl`– 트 윗에 Url을 추가 합니다.
 - `AddImage`– 이미지를 트 윗에 추가 합니다.
 
@@ -101,7 +101,7 @@ namespace SocialFrameworkDemo
         #region Constructors
         protected ViewController (IntPtr handle) : base (handle)
         {
-            
+
         }
         #endregion
 
@@ -165,7 +165,7 @@ public override void ViewWillAppear (bool animated)
     SendTweet.Enabled = isTwitterAvailable;
     RequestTwitterTimeline.Enabled = false;
 
-    // Initialize Twitter Account access 
+    // Initialize Twitter Account access
     var accountStore = new ACAccountStore ();
     var accountType = accountStore.FindAccountType (ACAccountType.Twitter);
 
@@ -302,7 +302,7 @@ request.PerformRequest ((data, response, error) => {
 
 소셜 프레임 워크는 여러 소셜 네트워크에 액세스 하도록 디자인 된 통합 API 이므로 사용 중인 소셜 네트워크에 관계 없이 코드는 거의 동일 하 게 유지 됩니다.
 
-예를 들어 앞 `SLComposeViewController` 에서 설명한 Twitter 예제와 똑같이를 사용할 수 있으며, 다른 유일한 설정은 Facebook 특정 설정 및 옵션으로 전환 하는 것입니다. 예를 들어:
+예를 들어 앞 `SLComposeViewController` 에서 설명한 Twitter 예제와 똑같이를 사용할 수 있으며, 다른 유일한 설정은 Facebook 특정 설정 및 옵션으로 전환 하는 것입니다. 예:
 
 ```csharp
 using System;
@@ -331,7 +331,7 @@ namespace SocialFrameworkDemo
         #region Constructors
         protected ViewController (IntPtr handle) : base (handle)
         {
-            
+
         }
         #endregion
 
@@ -397,7 +397,7 @@ public override void ViewWillAppear (bool animated)
     PostToFacebook.Enabled = isFacebookAvailable;
     RequestFacebookTimeline.Enabled = false;
 
-    // Initialize Facebook Account access 
+    // Initialize Facebook Account access
     var accountStore = new ACAccountStore ();
     var options = new AccountStoreOptions ();
     var options.FacebookAppId = ""; // Enter your specific Facebook App ID here

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: c752f4acf4bf43c138a7b359b94620dae5e8d46e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2137ff95e65c6841b3e525f0c9755e013310c7e0
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524529"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225588"
 ---
 # <a name="troubleshooting-bindings"></a>바인딩 문제 해결
 
@@ -51,8 +51,8 @@ Android 라이브러리를 디컴파일된 소스 코드를 검사 합니다. �
 
 - **난독 처리 된 특성이 있는 클래스** &ndash; 난독 처리 된 클래스의 특징은 다음과 같습니다.
 
-    - 클래스 이름에는 **$** 가 포함 됩니다 (예: **$. class** ).
-    - 클래스 이름은 소문자 (예: **클래스** )로 완전히 손상 됩니다.      
+  - 클래스 이름에는 **$** 가 포함 됩니다 (예: **$. class** ).
+  - 클래스 이름은 소문자 (예: **클래스** )로 완전히 손상 됩니다.      
 
 - 참조 되지 않은 라이브러리의 문은 참조 되지 않은 라이브러리를 식별하고ReferenceJar또는의빌드작업을사용하여Xamarin.Android바인딩프로젝트에해당종속성을추가&ndash; 합니다. **`import`**  **EmbedddedReferenceJar**.
 
@@ -114,19 +114,19 @@ Binding **.dll** 은 일부 Java 형식을 작성 하지만 누락 된 형식이
 
 - Java는 public 클래스가 아닌 클래스에서 파생 될 수 있지만 .NET에서는 지원 되지 않습니다. 바인딩 생성기는 public이 아닌 클래스에 대 한 바인딩을 생성 하지 않으므로 이러한 파생 클래스를 올바르게 생성할 수 없습니다. 이 문제를 해결 하려면 **메타 데이터 .xml**의 제거 노드를 사용 하 여 파생 된 클래스에 대 한 메타 데이터 항목을 제거 하거나 public이 아닌 클래스를 public으로 설정 하는 메타 데이터를 수정 합니다. 후자 솔루션은 C# 소스가 빌드하도록 바인딩을 만들기 때문에 public이 아닌 클래스를 사용 하면 안 됩니다.
 
-    예를 들어:
+  예:
 
-    ```xml
-    <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
-        name="visibility">public</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
+      name="visibility">public</attr>
+  ```
 
 - Java 라이브러리를 난독 처리 하는 도구는 Xamarin Android 바인딩 생성기 및 래퍼 클래스 생성 C# 기능을 방해할 수 있습니다. 다음 코드 조각은 클래스 이름을 unobfuscate 하는 **메타 데이터** 를 업데이트 하는 방법을 보여 줍니다.
 
-    ```xml
-    <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
-        name="obfuscated">false</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
+      name="obfuscated">false</attr>
+  ```
 
 ### <a name="problem-generated-c-source-does-not-build-due-to-parameter-type-mismatch"></a>문제점: 매개 C# 변수 형식이 일치 하지 않아 생성 된 소스가 빌드되지 않습니다.
 
@@ -203,24 +203,24 @@ return type of 'Java.Lang.Object'
 
 - 에 대 한 `HttpURLConnectionRequestAdapter` partial 클래스 선언을 추가 하 고 `IHttpRequest.Unwrap()`명시적으로 구현 합니다.
 
-    ```csharp
-    namespace Oauth.Signpost.Basic {
-        partial class HttpURLConnectionRequestAdapter {
-            Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
-                return Unwrap();
-            }
-        }
-    }
-    ```
+  ```csharp
+  namespace Oauth.Signpost.Basic {
+      partial class HttpURLConnectionRequestAdapter {
+          Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
+              return Unwrap();
+          }
+      }
+  }
+  ```
 
 - 생성 C# 된 코드에서 공 분산을 제거 합니다. 이렇게 하려면 생성 C# 된 코드가의 `Java.Lang.Object`반환 형식을 갖도록 하는 다음 변환을 **Transforms\Metadata.xml** 에 추가 해야 합니다.
 
-    ```xml
-    <attr
-        path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
-        name="managedReturn">Java.Lang.Object
-    </attr>
-    ```
+  ```xml
+  <attr
+      path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
+      name="managedReturn">Java.Lang.Object
+  </attr>
+  ```
 
 ### <a name="problem-name-collisions-on-inner-classes--properties"></a>문제점: 내부 클래스/속성에 대 한 이름 충돌
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: f4acadc1153c93ebade7453cfd7a79f5b052e513
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14f7692c88f5047f1250707940e3871371aecc8b
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528363"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227960"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1장. XAML 시작하기
 
@@ -30,13 +30,13 @@ _Xamarin.Forms 응용 프로그램에서 XAML은 주로 페이지의 시각적 �
 
 Windows에서는 Visual Studio를 사용하여 메뉴에서  **파일 > 새로 만들기 > 프로젝트** 를 선택합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C# > Cross-Platform** 을 선택한 다음 가운데 있는 목록에서  **모바일 앱(Xamarin.Forms)** 을 선택합니다.
 
-![](get-started-with-xaml-images/win/newprojectdialog.w157.png "새 프로젝트 대화 상자")
+![새 프로젝트 대화 상자](get-started-with-xaml-images/win/newprojectdialog.w157.png)
 
 솔루션에 대한 위치를 선택하고, 이름을 **XamlSamples**(또는 선호하는 이름)로 입력하고 **확인**을 누릅니다.
 
 다음 화면에서 **Blank** 템플릿 및 **.NET Standard** 코드 공유 전략을 선택합니다.
 
-![](get-started-with-xaml-images/win/newcrossplatformapp.png "새 앱 대화 상자")
+![새 응용 프로그램 대화 상자](get-started-with-xaml-images/win/newcrossplatformapp.png)
 
 **확인**을 누릅니다.
 
@@ -46,19 +46,19 @@ Windows에서는 Visual Studio를 사용하여 메뉴에서  **파일 > 새로 �
 
 Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택합니다. **새 프로젝트**  대화 상자에서 왼쪽의 **다중 플랫폼 > 앱** 및 템플릿 목록에서 **빈 Forms 앱** (*Forms 앱*이 **아님** ) 을 선택합니다.
 
-![](get-started-with-xaml-images/mac/newprojectdialog1.png "새 프로젝트 대화 상자 1")
+![새 프로젝트 대화 상자 1](get-started-with-xaml-images/mac/newprojectdialog1.png)
 
 **다음**을 누릅니다.
 
 다음의 대화 상자에서 앱 이름에 **XamlSamples**(또는 선호하는 이름)를 입력합니다. **.NET Standard 사용** 라디오 단추가 선택되었는지 확인합니다.
 
-![](get-started-with-xaml-images/mac/newprojectdialog2.png "새 프로젝트 대화 상자 2")
+![새 프로젝트 대화 상자 2](get-started-with-xaml-images/mac/newprojectdialog2.png)
 
 **다음**을 누릅니다.
 
 다음의 대화 상자에서 프로젝트 위치를 선택할 수 있습니다.
 
-![](get-started-with-xaml-images/mac/newprojectdialog3.png "새 프로젝트 대화 상자 3")
+![새 프로젝트 대화 상자 3](get-started-with-xaml-images/mac/newprojectdialog3.png)
 
 **만들기**를 누릅니다.
 
@@ -141,7 +141,7 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 이 프로그램을 컴파일하고 실행하는 경우, `Label` 요소는 다음 XAML에서 알 수 있듯이 페이지의 가운데에 나타납니다.
 
-[![](get-started-with-xaml-images/xamlsamples.png "기본 Xamarin.Forms 표시")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "기본 Xamarin.Forms 표시")
+[![기본 Xamarin 양식 표시](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 시각적인 것에 더 관심이 있다면 XAML에 더 관심을 갖기만 하면 됩니다.
 
@@ -151,13 +151,13 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 프로젝트에 다른 XAML 기반 `ContentPage` 를 추가하려면 **XamlSamples** .NET Standard 라이브러리 프로젝트를 선택하고 **프로젝트 > 새 항목 추가** 메뉴 항목을 실행합니다. **새 항목 추가** 대화 상자에서 왼쪽에 있는 **Visual C#**  및 **Xamarin.Forms**를 선택합니다. 목록에서 **콘텐츠 페이지**(코드 전용 페이지를 생성하는  **콘텐츠 페이지 (C#)** 또는 페이지가 아닌**콘텐츠 뷰**가 아님)를 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage.xaml**로 입력합니다.
 
-![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "새 항목 추가 대화 상자")
+![새 항목 추가 대화 상자](get-started-with-xaml-images/win/addnewitemdialog.w157.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 프로젝트에 다른 XAML 기반 `ContentPage` 를 추가하려면  **XamlSamples**.NET Standard 라이브러리 프로젝트를 선택하고 **파일 > 새 파일** 메뉴 항목을 실행합니다. **새 파일** 대화 상자에서 왼쪽에 있는 **Forms**및 **Forms ContentPage Xaml**(코드 전용 페이지를 생성하는  **Forms ContentPage**또는 페이지가 아닌 **Contents View**가 아님)을 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage**로 입력합니다.
 
-![](get-started-with-xaml-images/mac/newfiledialog.png "새 파일 대화 상자")
+![새 파일 대화 상자](get-started-with-xaml-images/mac/newfiledialog.png)
 
 -----
 
@@ -278,7 +278,7 @@ public MainPage()
 
 페이지의 `Content` 속성을 설정하면 XAML 파일의 `Content` 속성을 대체하게 됩니다. 해당 프로그램의 새 버전을 컴파일하고 배포하면 단추가 화면에 나타납니다. 단추를 눌러 `HelloXamlPage`로 이동합니다. IPhone, Android 및 UWP 결과 페이지는 다음과 같습니다.
 
-[![](get-started-with-xaml-images/helloxaml1.png "레이블 텍스트 회전")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "레이블 텍스트를 회전합니다.")
+[![회전 된 레이블 텍스트](get-started-with-xaml-images/helloxaml1.png)](get-started-with-xaml-images/helloxaml1-large.png#lightbox)
 
 iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상단 또는 폰의 맨 아래에 있는 왼쪽 화살표를 사용하며, Windows 10에서는 페이지의 상단에 있는 왼쪽 화살표를 사용하여 `MainPage`로 다시 이동할 수 있습니다.
 
@@ -288,7 +288,7 @@ iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상
 
 해당 모양은 다음과 같습니다.
 
-[![](get-started-with-xaml-images/helloxaml2.png "유니코드 문자를 사용하여 레이블 텍스트를 회전")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "유니코드 문자를 사용하여 레이블 텍스트를 회전합니다.")
+[![유니코드 문자를 사용 하 여 회전 된 레이블 텍스트](get-started-with-xaml-images/helloxaml2.png)](get-started-with-xaml-images/helloxaml2-large.png#lightbox)
 
 ## <a name="xaml-and-code-interactions"></a>XAML 및 코드 상호 작용
 
@@ -316,7 +316,7 @@ iOS에서는 **< 뒤로** 버튼을 사용하고, Android에서는 페이지 상
 
 이 XAML 파일은 구문상으로 완전하며 다음과 같이 표시됩니다.
 
-[![](get-started-with-xaml-images/xamlpluscode1.png "페이지의 여러 컨트롤")](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox "페이지의 여러 컨트롤")
+[![페이지의 여러 컨트롤](get-started-with-xaml-images/xamlpluscode1.png)](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox)
 
 그러나 이 프로그램이 기능적으로 결함이 있다고 생각할 수 있습니다. `Slider`는 `Label`에 현재 값을 표시하고, `Button`은 프로그램 내에서 어떤 작업을 수행할 가능성이 있슴니다.
 
@@ -407,7 +407,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 프로그램을 처음 실행하면, `ValueChanged` 이벤트가 아직 실행되지 않았기 때문에 `Label`에 `Slider` 값이 표시되지 않습니다. 하지만 다음과 같이 `Slider`를 조정하기만 하면 값이 표시됩니다.
 
-[![](get-started-with-xaml-images/xamlpluscode2.png "슬라이더 값 표시")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "슬라이더 값 표시")
+[![표시 된 슬라이더 값](get-started-with-xaml-images/xamlpluscode2.png)](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox)
 
 이제는 `Button` 차례입니다. 버튼의 `Text`를 사용하여 경고를 표시하도록 `Clicked` 이벤트 응답을 시연해 보겠습니다. 이벤트 처리기는 다음과 같이 `sender` 인수를 `Button`으로 안전하게 변환한 다음 해당 속성에 접근할 수 있습니다.
 

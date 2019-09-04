@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: aee3d81375ab619fa2016a87951cce3e72cdbe47
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650193"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70227911"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.ios에서 사용자 지정 컨트롤 만들기
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우, *Swift* 및 *Xcode* *에서 개발자*가 작업 하는 것과 동일한 사용자 정의 컨트롤에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 사용자 정의 컨트롤을 만들고 유지 관리 하거나 선택적으로 코드에서 C# 직접 만들 수 있습니다.
+Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우, *Swift* 및 *Xcode* 에서 개발자가 작업 하는 것과 동일한 사용자정의 컨트롤에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 사용자 정의 컨트롤을 만들고 유지 관리 하거나 선택적으로 코드에서 C# 직접 만들 수 있습니다.
 
 MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만 사용자 지정 컨트롤을 만들어 사용자 지정 컨트롤을 만들어 사용자 지정 UI 테마 (예: 게임 인터페이스)와 사용자 지정 UI 테마를 일치 시 키 지 않도록 해야 할 수 있습니다.
 
@@ -285,7 +285,7 @@ private void Initialize() {
 
 ### <a name="responding-to-state-change-events"></a>상태 변경 이벤트에 대 한 응답
 
-사용자가 사용자 지정 컨트롤의 상태를 변경 하는 경우 코드의 상태 변경에 응답 하는 방법이 필요 합니다 (예: 사용자 지정 단추를 클릭할 때 수행 하는 작업). 
+사용자가 사용자 지정 컨트롤의 상태를 변경 하는 경우 코드의 상태 변경에 응답 하는 방법이 필요 합니다 (예: 사용자 지정 단추를 클릭할 때 수행 하는 작업).
 
 이 기능을 제공 하려면 `NSFlipSwitch` 클래스를 편집 하 고 다음 코드를 추가 합니다.
 
@@ -299,7 +299,7 @@ internal void RaiseValueChanged() {
 
     // Perform any action bound to the control from Interface Builder
     // via an Action.
-    if (this.Action !=null) 
+    if (this.Action !=null)
         NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 }
 ## endregion
@@ -320,7 +320,7 @@ private void FlipSwitchState() {
 둘째, 사용자 지정 컨트롤은에서 `NSControl`상속 되므로 Xcode의 Interface Builder에서 할당할 수 있는 **동작이** 자동으로 포함 됩니다. 상태가 변경 될 때이 **작업** 을 호출 하려면 다음 코드를 사용 합니다.
 
 ```csharp
-if (this.Action !=null) 
+if (this.Action !=null)
     NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 ```
 
@@ -361,7 +361,7 @@ public override void ViewDidLoad ()
         Console.WriteLine("Option Two: {0}", OptionTwo.Value);
     };
 }
-``` 
+```
 
 여기서는 위에서 `ValueChanged` `NSFlipSwitch` 정의한 이벤트에 응답 하 고 사용자가 컨트롤을 클릭할 때 현재 **값** 을 작성 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: 438d3462c123cc9c9a8730405bb64a5e9492bfdf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4a353d64f0e7e29da6c64f93b8554c3661f4d389
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645550"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228131"
 ---
 # <a name="xamarinforms-style-classes"></a>Xamarin.ios 스타일 클래스
 
@@ -203,7 +203,7 @@ Resources = new ResourceDictionary
 
 이 예제에서 첫 [`BoxView`](xref:Xamarin.Forms.BoxView) 번째는 줄 분리자로 스타일이 지정 되 고 세 `BoxView` 번째는 원형입니다. 두 번째 `BoxView` 는 두 개의 스타일 클래스를 적용 하며,이 클래스는 둥근 모퉁이를 제공 하 고 45도 회전 합니다.
 
-![](style-class-images/boxviews.png "스타일 클래스를 사용 하 여 스타일 지정 된 BoxViews")
+![스타일 클래스를 사용 하 여 스타일 지정 된 BoxViews](style-class-images/boxviews.png)
 
 > [!IMPORTANT]
 > [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) 속성이 형식이`IList<string>`기 때문에 여러 스타일 클래스를 컨트롤에 적용할 수 있습니다. 이 경우 스타일 클래스는 오름차순 목록 순서로 적용 됩니다. 따라서 여러 스타일 클래스가 동일한 속성을 설정 하는 경우 가장 높은 목록 위치에 있는 스타일 클래스의 속성이 우선적으로 적용 됩니다.

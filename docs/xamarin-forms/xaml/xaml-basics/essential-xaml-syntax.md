@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 7526349c1b4b61495af95dfc200a5055cea5650e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b55c9d8a65dbb4e44605295043d1b302295030ce
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529289"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228068"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
@@ -255,7 +255,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 
 해당 모양은 다음과 같습니다.
 
-[![](essential-xaml-syntax-images/griddemo.png "모눈 레이아웃")](essential-xaml-syntax-images/griddemo-large.png#lightbox "모눈 레이아웃")
+[![모눈 레이아웃](essential-xaml-syntax-images/griddemo.png)](essential-xaml-syntax-images/griddemo-large.png#lightbox)
 
 구문으로만 미루어 보면, 해당 `Grid.Row`, `Grid.Column`, `Grid.RowSpan` 및 `Grid.ColumnSpan` 속성은 정적(static) 필드 또는 `Grid`의 특성으로 보이지만, 흥미롭게도 `Grid`는 `Row`, `Column`, `RowSpan` 또는 `ColumnSpan` 이름을 가진 어떤 것도 정의하지 않습니다.
 
@@ -312,7 +312,7 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 
 화면은 다음과 같습니다.
 
-[![](essential-xaml-syntax-images/absolutedemo-large.png "절대 레이아웃")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "절대 레이아웃")
+[![절대 레이아웃](essential-xaml-syntax-images/absolutedemo-large.png)](essential-xaml-syntax-images/absolutedemo-large.png#lightbox)
 
 이런 경우 XAML 사용의 지혜로움에 의문을 제기할 수 있습니다. `LayoutBounds` 사각형의 반복 및 규칙성으로 보아 코드에서 구현되는 편이 낫지 않았나 생각할 수 있습니다.
 

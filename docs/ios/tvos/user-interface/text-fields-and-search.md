@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: cb8520a223a2bc10706c7e5bcebf8fc412d4e64e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652297"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226680"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Xamarin에서 tvOS 텍스트 및 검색 필드 작업
 
@@ -30,7 +30,7 @@ ms.locfileid: "68652297"
 
 ## <a name="about-text-and-search-fields"></a>텍스트 및 검색 필드 정보
 
-위에서 언급 한 것 처럼 필요한 경우 tvOS는 하나 이상의 텍스트 필드를 표시 하 여 화면 (또는 사용자가 설치한 tvOS 버전에 따라 선택적 블루투스 키보드)을 사용 하 여 사용자의 적은 양의 텍스트를 사용자에 게 수집할 수 있습니다. 
+위에서 언급 한 것 처럼 필요한 경우 tvOS는 하나 이상의 텍스트 필드를 표시 하 여 화면 (또는 사용자가 설치한 tvOS 버전에 따라 선택적 블루투스 키보드)을 사용 하 여 사용자의 적은 양의 텍스트를 사용자에 게 수집할 수 있습니다.
 
 또한 앱이 사용자에 게 많은 양의 콘텐츠를 제공 하는 경우 (예: 음악, 동영상 또는 그림 컬렉션) 사용자가 적은 양의 텍스트를 입력 하 여 사용 가능한 항목의 목록을 필터링 할 수 있도록 하는 검색 필드를 포함할 수 있습니다.
 
@@ -59,7 +59,7 @@ Apple에는 텍스트 필드 작업에 대 한 다음과 같은 제안이 있습
 
 [![](text-fields-and-search-images/keyboard01.png "Siri 원격 키보드")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-현재 보기에 텍스트 필드가 두 개 이상 있으면 **다음 단추가 자동** 으로 표시 되어 사용자가 다음 텍스트 필드로 이동 합니다. 텍스트 입력을 종료 하 고 사용자를 이전 화면으로 반환 하는 마지막 텍스트 필드에 대해 **완료** 단추가 표시 됩니다. 
+현재 보기에 텍스트 필드가 두 개 이상 있으면 다음 단추가 자동으로 표시 되어 사용자가 다음 텍스트 필드로 이동 합니다. 텍스트 입력을 종료 하 고 사용자를 이전 화면으로 반환 하는 마지막 텍스트 필드에 대해 **완료** 단추가 표시 됩니다.
 
 사용자는 언제 든 지 Siri Remote to end 텍스트 항목의 **메뉴** 단추를 누르고 다시 이전 화면으로 돌아갈 수 있습니다.
 
@@ -99,37 +99,37 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다. 
+1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다.
 
     [![](text-fields-and-search-images/text02.png "텍스트 필드")](text-fields-and-search-images/text02.png#lightbox)
-1. **텍스트 필드** 를 선택 하 고 **Properties Pad**의 **위젯** 탭에서 각 고유 **이름을** 지정 합니다. 
+1. **텍스트 필드** 를 선택 하 고 **Properties Pad**의 **위젯** 탭에서 각 고유 **이름을** 지정 합니다.
 
     [![](text-fields-and-search-images/text03.png "Properties Pad의 위젯 탭")](text-fields-and-search-images/text03.png#lightbox)
-1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 및 기본값과 같은 요소를 정의할 수 **있습니다.** 
+1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 및 기본값과 같은 요소를 정의할 수 있습니다.
 
     [![](text-fields-and-search-images/text04.png "텍스트 필드 섹션")](text-fields-and-search-images/text04.png#lightbox)
-1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다. 
+1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다.
 
-    [![](text-fields-and-search-images/text05.png "맞춤법 검사, 대문자 표시 및 기본 키보드 종류")](text-fields-and-search-images/text05.png#lightbox) 
+    [![](text-fields-and-search-images/text05.png "맞춤법 검사, 대문자 표시 및 기본 키보드 종류")](text-fields-and-search-images/text05.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
-1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다. 
+1. 디자인 화면에서 하나 이상의 **텍스트 필드** 를 뷰로 끌어 옵니다.
 
     [![](text-fields-and-search-images/text02-vs.png "텍스트 필드")](text-fields-and-search-images/text02-vs.png#lightbox)
-1. **텍스트 필드** 를 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 각각 고유한 **이름을** 지정 합니다. 
+1. **텍스트 필드** 를 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 각각 고유한 **이름을** 지정 합니다.
 
     [![](text-fields-and-search-images/text03-vs.png "위젯 탭")](text-fields-and-search-images/text03-vs.png#lightbox)
-1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 및 기본값과 같은 요소를 정의할 수 **있습니다.** 
+1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 및 기본값과 같은 요소를 정의할 수 있습니다.
 
     [![](text-fields-and-search-images/text04-vs.png "텍스트 필드 섹션")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다. 
+1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다.
 
-    [![](text-fields-and-search-images/text05-vs.png "맞춤법 검사, 대문자 표시 및 기본 키보드 종류")](text-fields-and-search-images/text05-vs.png#lightbox) 
+    [![](text-fields-and-search-images/text05-vs.png "맞춤법 검사, 대문자 표시 및 기본 키보드 종류")](text-fields-and-search-images/text05-vs.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
-    
+
 -----
 
 코드에서 `Text` 속성을 사용 하 여 텍스트 필드의 값을 가져오거나 설정할 수 있습니다.
@@ -149,41 +149,41 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 다음을 수행합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-    
+
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다. 
+1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다.
 
     [![](text-fields-and-search-images/search02.png "컬렉션 뷰 컨트롤러")](text-fields-and-search-images/search02.png#lightbox)
-1. **Properties Pad** `SearchResultsViewController` 의 **위젯** 탭에서 **클래스** 및 `SearchResults` **스토리 보드 ID**에 대해를 사용 합니다. 
+1. **Properties Pad** `SearchResultsViewController` 의 **위젯** 탭에서 **클래스** 및 `SearchResults` **스토리 보드 ID**에 대해를 사용 합니다.
 
     [![](text-fields-and-search-images/search03.png "위젯 탭")](text-fields-and-search-images/search03.png#lightbox)
 1. 디자인 화면에서 **셀 프로토타입을** 선택 합니다.
-1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 및 `ImageCell` **식별자**에 `SearchResultCell` 대해를 사용 합니다. 
+1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 및 `ImageCell` **식별자**에 `SearchResultCell` 대해를 사용 합니다.
 
     [![](text-fields-and-search-images/search04.png "위젯 탭")](text-fields-and-search-images/search04.png#lightbox)
-1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다. 
+1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다.
 
     [![](text-fields-and-search-images/search05.png "셀 프로토타입의 디자인 레이아웃")](text-fields-and-search-images/search05.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
-    
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-    
+
 1. 편집하기 위해 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭하여 엽니다.
-1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다. 
+1. 새 컬렉션 뷰 컨트롤러를 스토리 보드로 끌어 사용자의 검색 결과를 표시 합니다.
 
     [![](text-fields-and-search-images/seach02-vs.png "컬렉션 뷰 컨트롤러")](text-fields-and-search-images/seach02-vs.png#lightbox)
-1. **속성 탐색기**의 `SearchResultsViewController` **위젯** 탭에서 **클래스** 및 `SearchResults` **Storyboard ID**에 대해를 사용 합니다. 
+1. **속성 탐색기**의 `SearchResultsViewController` **위젯** 탭에서 **클래스** 및 `SearchResults` **Storyboard ID**에 대해를 사용 합니다.
 
     [![](text-fields-and-search-images/search03-vs.png "위젯 탭")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. 디자인 화면에서 **셀 프로토타입을** 선택 합니다.
-1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 및 `ImageCell` **식별자**에 `SearchResultCell` 대해를 사용 합니다. 
+1. **속성 탐색기**의 **위젯** 탭에서 **클래스** 및 `ImageCell` **식별자**에 `SearchResultCell` 대해를 사용 합니다.
 
     [![](text-fields-and-search-images/search04-vs.png "위젯 탭")](text-fields-and-search-images/search04-vs.png#lightbox)
-1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다. 
+1. **셀 프로토타입의** 디자인을 레이아웃 하 고 **속성 탐색기**의 **위젯** 탭에서 각 요소에 고유한 **이름을** 표시 합니다.
 
     [![](text-fields-and-search-images/search05-vs.png "셀 프로토타입의 디자인 레이아웃")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. 스토리 보드에 대 한 변경 내용을 저장 합니다.
-    
+
 -----
 
 <a name="Provide-a-Data-Model" />
@@ -192,13 +192,13 @@ TvOS 앱에서 검색 필드에 대 한 작업을 수행 하는 가장 쉬운 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.일반빈클래스이며이름을제공합니다 > .  >  
+다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.일반빈클래스이며이름을제공합니다 > .  > 
 
 [![](text-fields-and-search-images/search06.png "빈 클래스를 선택 하 고 이름을 입력 합니다.")](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 항목** ...을 선택 합니다.Apple기타 > 클래스 및이름을제공합니다. >   >  
+다음으로, 사용자가 검색 하는 결과에 대 한 데이터 모델 역할을 할 클래스를 제공 해야 합니다. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 항목** ...을 선택 합니다.Apple기타 > 클래스 및이름을제공합니다. >   > 
 
 [![](text-fields-and-search-images/search06-vs.png "클래스를 선택 하 고 이름을 입력 합니다.")](text-fields-and-search-images/search06-vs.png#lightbox)
 
@@ -613,7 +613,7 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 
 ### <a name="presenting-the-search-field"></a>검색 필드 프레젠테이션
 
-TvOS에서 사용자에 게 검색 필드 (및 연결 된 화면 키보드 및 검색 결과)를 표시 하는 두 가지 주요 방법이 있습니다. 
+TvOS에서 사용자에 게 검색 필드 (및 연결 된 화면 키보드 및 검색 결과)를 표시 하는 두 가지 주요 방법이 있습니다.
 
 - **모달 대화 상자 보기** -검색 필드는 현재 뷰 및 뷰 컨트롤러에 전체 화면 모달 대화 상자 보기로 표시 될 수 있습니다. 일반적으로이 작업은 단추 또는 다른 UI 요소를 클릭 하는 사용자에 게 응답 하 여 수행 됩니다. 사용자가 검색 결과에서 항목을 선택 하면 대화 상자가 닫힙니다.
 - **내용 보기** -검색 필드는 지정 된 보기의 직접적인 부분입니다. 예를 들어 탭 보기 컨트롤러의 검색 탭 내용으로 사용할 경우입니다.

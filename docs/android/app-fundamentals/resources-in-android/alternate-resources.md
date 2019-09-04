@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 7c48244e316854b04234ec8dee4eebeb55a4f119
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526384"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225773"
 ---
 # <a name="alternate-resources"></a>대체 리소스
 
@@ -73,52 +73,52 @@ ms.locfileid: "69526384"
 
 - **화면 픽셀 밀도 (dpi)** &ndash; 실제 화면에서 지정 된 영역의 픽셀 수입니다. 일반적으로 dpi (인치당 도트 수)로 표시 됩니다. 가능한 값은
 
-    - `ldpi`&ndash; 낮은 밀도 화면.
+  - `ldpi`&ndash; 낮은 밀도 화면.
 
-    - `mdpi`&ndash; 보통 밀도 화면
+  - `mdpi`&ndash; 보통 밀도 화면
 
-    - `hdpi`&ndash; 고밀도 화면
+  - `hdpi`&ndash; 고밀도 화면
 
-    - `xhdpi`&ndash; 추가 고밀도 화면
+  - `xhdpi`&ndash; 추가 고밀도 화면
 
-    - `nodpi`&ndash; 크기를 조정 하지 않을 리소스
+  - `nodpi`&ndash; 크기를 조정 하지 않을 리소스
 
-    - `tvdpi`&ndash; Mdpi와 hdpi 사이의 화면에 대 한 API 수준 13 (Android 3.2)에서 도입 되었습니다.
+  - `tvdpi`&ndash; Mdpi와 hdpi 사이의 화면에 대 한 API 수준 13 (Android 3.2)에서 도입 되었습니다.
 
 - **터치 스크린 형식** &ndash; 장치에 포함 될 수 있는 터치 스크린의 유형을 지정 합니다. 가능한 값은 `notouch` (터치 스크린 없음), `stylus` (스타일러스에 적합 한 resistive 터치 스크린) 및 `finger` (터치 스크린)입니다.
 
 - **키보드 가용성** &ndash; 사용할 수 있는 키보드 종류를 지정 합니다. 이는 사용자가 하드웨어 키보드를 열 때 &ndash; 예를 들어 응용 프로그램의 수명 동안 변경 될 수 있습니다. 가능한 값은
 
-    - `keysexposed`&ndash; 장치에 사용할 수 있는 키보드가 있습니다. 사용 하도록 설정 된 소프트웨어 키보드가 없으면 하드웨어 키보드가 열려 있는 경우에만 사용 됩니다.
+  - `keysexposed`&ndash; 장치에 사용할 수 있는 키보드가 있습니다. 사용 하도록 설정 된 소프트웨어 키보드가 없으면 하드웨어 키보드가 열려 있는 경우에만 사용 됩니다.
 
-    - `keyshidden`&ndash; 장치에 하드웨어 키보드가 있지만 숨겨진 상태 이며 소프트웨어 키보드를 사용할 수 없습니다.
+  - `keyshidden`&ndash; 장치에 하드웨어 키보드가 있지만 숨겨진 상태 이며 소프트웨어 키보드를 사용할 수 없습니다.
 
-    - `keyssoft`&ndash; 장치에서 소프트웨어 키보드를 사용할 수 있습니다.
+  - `keyssoft`&ndash; 장치에서 소프트웨어 키보드를 사용할 수 있습니다.
 
 - **기본 텍스트 입력 방법** &ndash; 입력에 사용할 수 있는 하드웨어 키 종류를 지정 하는 데 사용 합니다. 가능한 값은
 
-    - `nokeys`&ndash; 입력에 대 한 하드웨어 키가 없습니다.
+  - `nokeys`&ndash; 입력에 대 한 하드웨어 키가 없습니다.
 
-    - `qwerty`&ndash; 사용할 수 있는 qwerty 키보드가 있습니다.
+  - `qwerty`&ndash; 사용할 수 있는 qwerty 키보드가 있습니다.
 
-    - `12key`&ndash; 12 개의 키 하드웨어 키보드가 있습니다.
+  - `12key`&ndash; 12 개의 키 하드웨어 키보드가 있습니다.
 
 
 - **탐색 키 가용성** &ndash; 5 방향 또는 d-패드 (방향 패드) 탐색을 사용할 수 있는 경우. 이는 응용 프로그램의 수명 동안 변경 될 수 있습니다. 가능한 값은
 
-    - `navexposed`&ndash; 사용자가 탐색 키를 사용할 수 있습니다.
+  - `navexposed`&ndash; 사용자가 탐색 키를 사용할 수 있습니다.
 
-    - `navhidden`&ndash; 탐색 키를 사용할 수 없습니다.
+  - `navhidden`&ndash; 탐색 키를 사용할 수 없습니다.
 
 - **기본 비 터치 탐색 방법** &ndash; 장치에서 사용할 수 있는 탐색의 종류입니다. 가능한 값은
 
-    - `nonav`&ndash; 터치 스크린만 사용할 수 있는 탐색 기능이 있습니다.
+  - `nonav`&ndash; 터치 스크린만 사용할 수 있는 탐색 기능이 있습니다.
 
-    - `dpad`&ndash; d-패드 (방향 패드)를 탐색에 사용할 수 있습니다.
+  - `dpad`&ndash; d-패드 (방향 패드)를 탐색에 사용할 수 있습니다.
 
-    - `trackball`&ndash; 장치에 탐색을 위한 트랙볼이 있습니다.
+  - `trackball`&ndash; 장치에 탐색을 위한 트랙볼이 있습니다.
 
-    - `wheel`&ndash; 하나 이상의 방향성 바퀴를 사용할 수 있는 드문 시나리오
+  - `wheel`&ndash; 하나 이상의 방향성 바퀴를 사용할 수 있는 드문 시나리오
 
 - **플랫폼 버전 (API 수준)** V n 형식의 장치에서 지원 되는 api 수준으로, 여기서 *N* 은 대상으로 하는 api 수준입니다. &ndash; 예를 들어 v11는 API 레벨 11 (Android 3.0) 장치를 대상으로 합니다.
 
