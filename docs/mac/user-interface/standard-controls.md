@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 단추, �
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: e5868e2cfe9a054e84eeb67432a01c2d98b1c3e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648343"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292244"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.ios의 표준 컨트롤
 
@@ -93,7 +93,7 @@ Interface Builder에서 사용자 인터페이스를 만드는 방법에 대 한
 
 [![](standard-controls-images/edit04.png "제약 조건 설정")](standard-controls-images/edit04.png#lightbox)
 
-**Autoresizing** 상자 외부의 **빨간색 빔** 을 _사용 하 여_ 지정 된 (x, y) 위치에 컨트롤을 고정 합니다. 예: 
+**Autoresizing** 상자 외부의 **빨간색 빔** _을 사용 하 여_ 지정 된 (x, y) 위치에 컨트롤을 고정 합니다. 예를 들어: 
 
 [![](standard-controls-images/edit05.png "제약 조건 편집")](standard-controls-images/edit05.png#lightbox)
 
@@ -499,7 +499,7 @@ TickedSlider.Activated += (sender, e) => {
 };
 ```
 
-선택 컨트롤의 값을 설정 하거나 읽으려면 `IntValue` 속성을 사용 합니다. 예:
+선택 컨트롤의 값을 설정 하거나 읽으려면 `IntValue` 속성을 사용 합니다. 예를 들어:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
@@ -528,7 +528,7 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 유
 
 [![](standard-controls-images/level01.png "예제 지표 컨트롤")](standard-controls-images/level01.png#lightbox)
 
-표시기 컨트롤이 사용자 상호 작용을 `Activated` **수행** 하는 시기를 추적 하는 방법에는 두 가지가 있습니다. 예를 들어:
+표시기 컨트롤이 사용자 상호 작용을 **수행** `Activated` 하는 **시기를 추적** 하는 방법에는 두 가지가 있습니다. 예:
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
@@ -542,7 +542,7 @@ LevelIndicator.Activated += (sender, e) => {
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-표시 되지 않는 경우 미정 및 비동기 진행률 표시기를 애니메이션으로 적용 해야 합니다. 애니메이션을 표시할 때 애니메이션을 시작 하려면 메서드를사용합니다.`StartAnimation` 예:
+표시 되지 않는 경우 미정 및 비동기 진행률 표시기를 애니메이션으로 적용 해야 합니다. 애니메이션을 표시할 때 애니메이션을 시작 하려면 메서드를사용합니다.`StartAnimation` 예를 들어:
 
 ```csharp
 Indeterminate.StartAnimation (this);

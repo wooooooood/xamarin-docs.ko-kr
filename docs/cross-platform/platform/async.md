@@ -3,15 +3,15 @@ title: 비동기 지원 개요
 description: 이 문서에서는 비동기 및 대기를 사용한 프로그래밍에 대해 설명 C# 하 고 5에 도입 된 개념을 사용 하 여 비동기 코드를 보다 쉽게 작성할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: fb58cb000d8179422979d9661950db82d1884414
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680934"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280628"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -69,7 +69,7 @@ Wait를 사용 하면 호출자의 스레드를 차단 하지 않고 제어가 �
 
 작업이 완료 되 면 메서드는 코드의 동일한 지점에서 실행을 다시 시작 합니다. 여기에는 try-catch-finally 블록의 try 범위로의 반환 (있는 경우)이 포함 됩니다. wait는 catch 또는 finally 블록에서 사용할 수 없습니다.
 
-Microsoft Docs에 대 [한 자세한](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) 내용은을 참조 하세요.
+Microsoft Docs [에 대 한 자세한](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) 내용은을 참조 하세요.
 
 ## <a name="exception-handling"></a>예외 처리
 
@@ -120,9 +120,9 @@ public async Task<int> DownloadHomepage()
 
 다음 사항에 유의 하세요.
 
--  메서드 선언에는 `async` 키워드가 포함 됩니다.
--  반환 형식은를 `Task<int>` 호출 하는 코드가이 메서드에서 계산 `int` 된 값에 액세스할 수 있도록 합니다.
--  Return 문은 `return exampleInt;` 정수 개체입니다. 메서드가 반환 `Task<int>` 하는 사실은 언어 개선의 일부입니다.
+- 메서드 선언에는 `async` 키워드가 포함 됩니다.
+- 반환 형식은를 `Task<int>` 호출 하는 코드가이 메서드에서 계산 `int` 된 값에 액세스할 수 있도록 합니다.
+- Return 문은 `return exampleInt;` 정수 개체입니다. 메서드가 반환 `Task<int>` 하는 사실은 언어 개선의 일부입니다.
 
 
 ### <a name="calling-an-async-method-1"></a>비동기 메서드 호출 1
@@ -148,11 +148,11 @@ GetButton.Click += async (sender, e) => {
 
 참고:
 
--  익명 대리자에는 async 키워드 접두사가 있습니다.
--  비동기 메서드 downloadhomepage는 sizeTask 변수에 저장 <int> 된 작업을 반환 합니다.
--  SizeTask 변수에 대 한 기다립니다 코드입니다.  *이* 위치는 메서드가 일시 중단 되 고 비동기 작업이 자체 스레드에서 완료 될 때까지 제어를 호출 코드로 반환 하는 위치입니다.
--  작업을 만들 때에도 메서드의 첫 번째 줄에 작업이 생성 되 면 실행이 일시 중지 *되지* 않습니다. Wait 키워드는 실행이 일시 중지 된 위치를 나타냅니다.
--  비동기 작업이 완료 되 면 intResult가 설정 되 고 wait 줄에서 원래 스레드에서 실행이 계속 됩니다.
+- 익명 대리자에는 async 키워드 접두사가 있습니다.
+- 비동기 메서드 downloadhomepage는 sizeTask 변수에 저장\<된 작업 int >을 반환 합니다.
+- SizeTask 변수에 대 한 기다립니다 코드입니다.  *이* 위치는 메서드가 일시 중단 되 고 비동기 작업이 자체 스레드에서 완료 될 때까지 제어를 호출 코드로 반환 하는 위치입니다.
+- 작업을 만들 때에도 메서드의 첫 번째 줄에 작업이 생성 되 면 실행이 일시 중지 *되지* 않습니다. Wait 키워드는 실행이 일시 중지 된 위치를 나타냅니다.
+- 비동기 작업이 완료 되 면 intResult가 설정 되 고 wait 줄에서 원래 스레드에서 실행이 계속 됩니다.
 
 
 ### <a name="calling-an-async-method-2"></a>비동기 메서드 2 호출
@@ -181,9 +181,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 몇 가지 중요 한 사항은 다음과 같습니다.
 
--  메서드가로 `async` 표시 되었지만를 반환 `void` 합니다. 이는 일반적으로 이벤트 처리기에 대해서만 수행 됩니다. 그렇지 않으면 `Task` 또는 `Task<TResult>` 를 반환 합니다.
--  메서드의 코드 `await` `intResult` 는 중간 변수`Task<int>` 를 사용 하 여 작업을 참조 하는 이전 예제와 달리 변수 ()에 대 한 할당에 직접 사용 됩니다. `DownloadHomepage`  *이* 위치는 비동기 메서드가 다른 스레드에서 완료 될 때까지 제어가 호출자에 게 반환 되는 위치입니다.
--  비동기 메서드가 완료 되 고를 반환 하면에서 실행이 다시 `await` 시작 되어 정수 결과가 반환 된 다음 UI 위젯에 렌더링 됩니다.
+- 메서드가로 `async` 표시 되었지만를 반환 `void` 합니다. 이는 일반적으로 이벤트 처리기에 대해서만 수행 됩니다. 그렇지 않으면 `Task` 또는 `Task<TResult>` 를 반환 합니다.
+- 메서드의 코드 `await` `intResult` 는 중간 변수`Task<int>` 를 사용 하 여 작업을 참조 하는 이전 예제와 달리 변수 ()에 대 한 할당에 직접 사용 됩니다. `DownloadHomepage`  *이* 위치는 비동기 메서드가 다른 스레드에서 완료 될 때까지 제어가 호출자에 게 반환 되는 위치입니다.
+- 비동기 메서드가 완료 되 고를 반환 하면에서 실행이 다시 `await` 시작 되어 정수 결과가 반환 된 다음 UI 위젯에 렌더링 됩니다.
 
 
 ## <a name="summary"></a>요약

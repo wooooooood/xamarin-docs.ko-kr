@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 앱에서의 구매에 대해 �
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0c24c0f3a57847a7ecf1a1410a1745419517e0c6
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198864"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288582"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>앱 내 구매 기본 사항 및 Xamarin.ios의 구성
 
@@ -142,7 +142,7 @@ com.xamarin.storekit.testing.greyscale
 
 앱에서 제공 하는 다음과 같은 5 가지 유형의 앱 구매 제품이 있습니다.
 
-1. 사용 가능 – 플레이어에서 소비할 수 있는 게임 내 통화와 같이 ' 사용 ' 되는 항목입니다. 사용자가 백업/복원을 수행 하거나 장치를 새로 고쳐야 하는 경우에는 사용 가능한 트랜잭션도 복원 되지 않습니다 (효과적으로 플레이어에 게 동일한 혜택을 제공 함). 응용 프로그램 코드는 트랜잭션이 완료 되는 즉시 ' 사용할 수 있는 항목 '을 제공 해야 합니다.
+1. 사용 **가능 – 플레이어** 에서 소비할 수 있는 게임 내 통화와 같이 ' 사용 ' 되는 항목입니다. 사용자가 백업/복원을 수행 하거나 장치를 새로 고쳐야 하는 경우에는 사용 가능한 트랜잭션도 복원 되지 않습니다 (효과적으로 플레이어에 게 동일한 혜택을 제공 함). 응용 프로그램 코드는 트랜잭션이 완료 되는 즉시 ' 사용할 수 있는 항목 '을 제공 해야 합니다.
 1. **사용 불가능** – 사용자가 구매한 제품 (예: digital magazine 문제 또는 게임 수준)을 구매한 제품입니다.
 1. **자동 갱신 가능한 구독** -실제 매거진 구독과 마찬가지로 구독 기간이 끝나면 Apple에서 자동으로 고객에 게 다시 요금을 청구 하 고 구독 기간을 영구적으로 또는 고객이 명시적으로 취소할 때까지 연장 합니다. 이는 Newsstand apps에 대 한 기본 지불 방법입니다 (실제로 앱은 Newsstand 배포에 대해이 결제 방법을 승인 하도록 지원 해야 함).
 1. **무료 구독** – Newsstand 사용 앱 에서만 제공할 수 있으며, 고객은 모든 장치에서 구독 콘텐츠에 액세스할 수 있습니다. 무료 구독은 만료 되지 않습니다.

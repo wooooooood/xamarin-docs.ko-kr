@@ -4,15 +4,15 @@ description: 이 문서에서는 핵심 그래픽 iOS 프레임 워크에 대해
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 36b0526f549e0439543d762cd9390b72ce93825f
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 72c233dc492fe1c93546121bc9103e666c2127ac
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225999"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286256"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10에서 Apple에서 릴리스된 새 CallK
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 92e4cd45a7fe49a7a78a8922bf70ac87870db095
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ef2894d91604f0bc315b38eb525862858428c405
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200413"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292160"
 ---
 # <a name="callkit-in-xamarinios"></a>Xamarin.ios의 CallKit
 
@@ -1251,7 +1251,7 @@ namespace MonkeyCallDirExtension
 
 필요한 기능을 제공 하려면 호출 디렉터리 처리기의 메서드를수정해야합니다.`BeginRequest` 위의 샘플에서는 VOIP 앱의 연락처 데이터베이스에서 차단 및 사용 가능한 숫자 목록을 설정 하려고 합니다. 어떤 이유로 든 실패 한 요청이 있으면를 만들어 `NSError` 오류를 설명 하 고 `CXCallDirectoryExtensionContext` 클래스의 `CancelRequest` 메서드를 전달 합니다.
 
-차단 된 번호를 설정 하려면 `AddBlockingEntry` `CXCallDirectoryExtensionContext` 클래스의 메서드를 사용 합니다. 메서드에 제공 되는 숫자는 숫자순으로 오름차순 이어야 합니다. 전화 번호가 많은 경우 최적의 성능과 메모리 사용을 위해 지정 된 시간에 숫자 하위 집합을 로드 하 고 autorelease pool을 사용 하 여 로드 된 각 일괄 처리에서 할당 된 개체를 해제 하는 것만 고려 하십시오.
+차단 된 번호를 설정 하려면 `AddBlockingEntry` `CXCallDirectoryExtensionContext` 클래스의 메서드를 사용 합니다. 메서드에 제공 되는 숫자는 숫자순으로 _오름차순 이어야 합니다_ . 전화 번호가 많은 경우 최적의 성능과 메모리 사용을 위해 지정 된 시간에 숫자 하위 집합을 로드 하 고 autorelease pool을 사용 하 여 로드 된 각 일괄 처리에서 할당 된 개체를 해제 하는 것만 고려 하십시오.
 
 VOIP 앱에 알려진 연락처 번호의 연락처에 알리기 위해 `AddIdentificationEntry` `CXCallDirectoryExtensionContext` 클래스의 메서드를 사용 하 고 숫자와 식별 레이블을 모두 제공 합니다. 또한 메서드에 제공 되는 숫자는 숫자로 오름차순으로 정렬 _되어야_ 합니다. 전화 번호가 많은 경우 최적의 성능과 메모리 사용을 위해 지정 된 시간에 숫자 하위 집합을 로드 하 고 autorelease pool을 사용 하 여 로드 된 각 일괄 처리에서 할당 된 개체를 해제 하는 것만 고려 하십시오.
 

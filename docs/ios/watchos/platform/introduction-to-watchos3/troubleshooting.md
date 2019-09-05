@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin에서 watchOS 3으로 작업할 때 유
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 323aad42832a70bf80e7a5bf3508bb9b65e77b5a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f10fb237bca92f49ac77657778ada8a47ed69c49
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655199"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292180"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 문제 해결
 
@@ -86,7 +86,7 @@ Url로 `https://` 작업할 때 `NSURLConnection` 및는 TLS 핸드셰이크 중
 
 WatchOS 3에서 SSL/TLS 연결 보안은 Apple에 의해 엄격히 적용 됩니다. 영향을 받는 서비스와 앱은 최신 TLS 프로토콜 버전을 사용 하도록 웹 서버를 업데이트 해야 합니다. 자세한 내용은 위의 [NSURLConnection](#nsurlconnection) 를 참조 하세요.
 
-## <a name="snapshots"></a>스냅샷
+## <a name="snapshots"></a>스냅숏
 
 새 `HandelBackgroundTask` API를 채택 하지 않은 WatchKit apps는 watchOS 3에서 더 이상 정기적으로 업데이트를 받지 않습니다. 
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 기존 목표-C 라이브러리, InfColorPicker
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ffd244a77ae75fefcf42f185bad1e8f7ccdbe560
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121332"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285769"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -215,7 +215,7 @@ clean:
 ```
 <!--markdownlint-enable MD010 -->
 
-선택한 일반 텍스트 편집기에서 **메이크파일** 명령을 입력 하 고 프로젝트 이름으로 섹션을 업데이트 합니다. 또한 지침 내에서 탭을 사용 하 여 위의 지침을 정확 하 게 붙여 넣어야 합니다.
+선택한 일반 텍스트 편집기에서 **메이크파일** 명령을 입력 하 고 프로젝트 **이름으로 섹션** 을 업데이트 합니다. 또한 지침 내에서 탭을 사용 하 여 위의 지침을 정확 하 게 붙여 넣어야 합니다.
 
 이름 **Makefile** 을 포함 하는 파일을 위에서 만든 InfColorPicker Xcode 정적 라이브러리와 동일한 위치에 저장 합니다.
 
@@ -334,7 +334,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 -----
 
-파일이 프로젝트 에 추가 되 면 xamarin.ios는 파일의 **빌드 작업** 을 자동으로 **ObjcBindingNativeLibrary**로 설정 하 고 라는 `libInfColorPickerSDK.linkwith.cs`특수 파일을 만듭니다.
+파일이 프로젝트에 추가 되 면 Xamarin.ios **는 파일의** **빌드 작업** 을 자동으로 **ObjcBindingNativeLibrary**로 설정 하 고 라는 `libInfColorPickerSDK.linkwith.cs`특수 파일을 만듭니다.
 
 
 이 파일에는 `LinkWith` xamarin.ios에서 방금 추가한 정적 라이브러리를 처리 하는 방법을 설명 하는 특성이 포함 되어 있습니다. 이 파일의 내용은 다음 코드 조각에 나와 있습니다.

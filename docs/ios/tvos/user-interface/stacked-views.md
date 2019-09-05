@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 앱에서 tvOS 누적 �
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: be4d10eceb4ddf7da44409815f3e9c08117a06f7
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227222"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287971"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 보기 사용
 
@@ -108,7 +108,7 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다.
 
     [![](stacked-views-images/layout03.png "스택 뷰")](stacked-views-images/layout03.png#lightbox)
-1. 스택 뷰를 선택 하 고, **Properties Pad** 의 **위젯 탭** 에서 **맞춤**에 대해 **채우기** 를 선택 하 고, **균등** 하 게 입력 `25` 하 고, **간격**을 입력 합니다.
+1. 스택 뷰를 선택 하 고, **Properties Pad** 의 **위젯 탭** 에서 **맞춤**에 대해 **채우기** 를 선택 하 고, 균등 **하 게 입력 하 고,** `25` **간격**을 입력 합니다.
 
     [![](stacked-views-images/layout04.png "위젯 탭")](stacked-views-images/layout04.png#lightbox)
 1. 화면에서 원하는 위치에 스택 보기를 배치 하 고 필요한 위치에 유지 하기 위한 제약 조건을 추가 합니다.
@@ -132,7 +132,7 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 1. **도구 상자** 에서 **스택 뷰** 를 끌어 뷰에 놓습니다.
 
     [![](stacked-views-images/layout03-vs.png "스택 뷰")](stacked-views-images/layout03-vs.png#lightbox)
-1. 스택 뷰를 선택 하 고 , **속성 탐색기** 의 **위젯 탭** 에서 **맞춤**을 선택 하 고, **균등** 하 게 입력 하 고, `25` **간격**을 입력 합니다.
+1. 스택 뷰를 선택 하 고, **속성 탐색기** 의 **위젯 탭** 에서 맞춤 **을 선택 하** 고, **균등** 하 게 입력 하 **고** , `25` **간격**을 입력 합니다.
 
     [![](stacked-views-images/layout04-vs.png "위젯 탭")](stacked-views-images/layout04-vs.png#lightbox)
 1. 화면에서 원하는 위치에 스택 보기를 배치 하 고 필요한 위치에 유지 하기 위한 제약 조건을 추가 합니다.
@@ -150,7 +150,7 @@ TvOS 앱에서 스택 뷰를 사용 하는 가장 쉬운 방법은 iOS Designer�
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
-이 예제의 경우 세그먼트 컨트롤에 대 한 유출 및 작업과 각 "플레이어 카드"에 대 한 콘센트가 제공 됩니다. 코드에서 현재 세그먼트를 기준으로 플레이어를 숨기고 표시 합니다. 예를 들어:
+이 예제의 경우 세그먼트 컨트롤에 대 한 유출 및 작업과 각 "플레이어 카드"에 대 한 콘센트가 제공 됩니다. 코드에서 현재 세그먼트를 기준으로 플레이어를 숨기고 표시 합니다. 예:
 
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {

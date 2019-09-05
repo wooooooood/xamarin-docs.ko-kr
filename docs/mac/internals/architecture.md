@@ -4,15 +4,15 @@ description: 이 가이드에서는 Xamarin.ios 및 목표-C와의 관계를 낮
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: 61a5757c20f3a39df583bda10a11145e04560bf8
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 2c9bbd663257e937e35e062f03b4aa84813edb27
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198215"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287780"
 ---
 # <a name="xamarinmac-architecture"></a>Xamarin.ios 아키텍처
 

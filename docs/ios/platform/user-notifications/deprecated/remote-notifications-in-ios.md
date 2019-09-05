@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 9 및 이전 버전에서 푸시 알림을 
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c707cb1afb774d73be7ea441695b88920489eb5f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528761"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290587"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
 

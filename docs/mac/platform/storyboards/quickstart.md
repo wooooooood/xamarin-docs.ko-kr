@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 storyboard를 사용 하 여 
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b93cc584a58d864e6dc7477dc7f76d4f59844d48
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 498f73d6e5942fe305dc19effc83b9d976d86ac5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652402"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291910"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Xamarin.ios의 storyboard – 빠른 시작
 
@@ -108,7 +108,7 @@ Mac용 Visual Studio으로 돌아가면 앱을 실행 하 고 검사기에서 **
 
 [![](quickstart-images/qs19.png "제약 조건 설정")](quickstart-images/qs19.png#lightbox)
 
-다음으로, 사용자가 **기본 설정 ...** 메뉴 항목을 선택할 때 기본 설정 창을 표시 하려고 합니다. 메뉴 모음에서 기본 설정 메뉴 항목을 선택 하 고 **키를** 클릭 한 다음 탭 보기 컨트롤러로 줄을 끕니다.
+다음으로, 사용자가 **기본 설정 ...** 메뉴 항목을 선택할 때 기본 설정 창을 표시 하려고 합니다. 메뉴 모음에서 기본 설정 메뉴 항목을 선택 하 고 **키를 클릭 한 다음** 탭 보기 컨트롤러로 줄을 끕니다.
 
 [![](quickstart-images/qs20.png "드래그 하 여 segue 만들기")](quickstart-images/qs20.png#lightbox)
 

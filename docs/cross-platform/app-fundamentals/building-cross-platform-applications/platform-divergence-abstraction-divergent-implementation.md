@@ -3,15 +3,15 @@ title: 4부 - 다중 플랫폼 처리
 description: 이 문서에서는 플랫폼 또는 기능에 따라 응용 프로그램 확산을 처리 하는 방법을 설명 합니다. 화면 크기, 탐색 메타포, 터치/제스처, 푸시 알림 및 목록 및 탭과 같은 인터페이스 패러다임에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 993a455ff0d376f213c403a55df71b3ac52d0d4b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887667"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288888"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>4부 - 다중 플랫폼 처리
 

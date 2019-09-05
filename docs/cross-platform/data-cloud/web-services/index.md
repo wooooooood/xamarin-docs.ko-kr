@@ -3,15 +3,15 @@ title: 웹 서비스 소개
 description: 이 가이드에서는 다양 한 웹 서비스 기술을 사용 하는 방법을 보여 줍니다. 여기서 다루는 항목에는 REST 서비스와의 통신, SOAP 서비스 및 Windows Communication Foundation 서비스가 포함 됩니다.
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 07ebd61704ed07892eed9ce4d7fd7a21e215bee2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3e5ce4496b4a2deb86bb2b7dd6d36e5e9b3f446c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526716"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287568"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -302,7 +302,7 @@ file:///Users/myUserName/projects/MyProjectName/service.wsdl
 
 #### <a name="manually-adding-a-proxy-to-a-project"></a>수동으로 프록시를 프로젝트에 추가
 
-호환 되는 도구를 사용 하 여 생성 된 기존 프록시가 있는 경우이 출력은 프로젝트의 일부로 포함 될 때 사용 될 수 있습니다. Mac용 Visual Studio에서 **파일 추가** ...를 사용 하 여 프록시를 추가 하는 메뉴 옵션입니다. 또한이를 위해 **참조 추가 ...** 를 사용 하 여 명시적으로 참조 해야 합니다. 대화.
+호환 되는 도구를 사용 하 여 생성 된 기존 프록시가 있는 경우이 출력은 프로젝트의 일부로 포함 될 때 사용 될 수 있습니다. Mac용 Visual Studio에서 **파일 추가** ...를 사용 하 여 프록시를 추가 하는 메뉴 옵션입니다. 또한이를 위해 **참조 추가 ...** *를 사용* 하 여 명시적으로 참조 해야 합니다. 대화.
 
 ### <a name="consuming-the-proxy"></a>프록시 사용
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10에 도입 된 사용자 알림 프레임
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ccb10829f10ddd76fe7402143d66a32949daccc1
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980799"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290581"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.ios에서 향상 된 사용자 알림
 
@@ -431,7 +431,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 
 사용자 지정 작업 및 범주 집합을 만들고 시스템에 등록 한 후에는 로컬 또는 원격 알림에서 표시할 수 있습니다.
 
-원격 알림에 대해 위에서 만든 범주 `category` 중 하 나와 일치 하는 원격 알림 페이로드의를 설정 합니다. 예를 들어:
+원격 알림에 대해 위에서 만든 범주 `category` 중 하 나와 일치 하는 원격 알림 페이로드의를 설정 합니다. 예:
 
 ```csharp
 {
@@ -442,7 +442,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-로컬 알림의 경우 `CategoryIdentifier` `UNMutableNotificationContent` 개체의 속성을 설정 합니다. 예:
+로컬 알림의 경우 `CategoryIdentifier` `UNMutableNotificationContent` 개체의 속성을 설정 합니다. 예를 들어:
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -471,7 +471,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>작업 응답 처리
 
-사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `UserNotificationCenter` 메서드를 구현 하 여이 작업을 수행 합니다. 예:
+사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `UserNotificationCenter` 메서드를 구현 하 여이 작업을 수행 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -561,7 +561,7 @@ Xamarin.ios 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 > [!IMPORTANT]
 > 서비스 확장의 번들 식별자는 끝에 추가 된 `.appnameserviceextension` 주 앱의 번들 식별자와 일치 해야 합니다. 예를 들어 기본 앱에의 `com.xamarin.monkeynotify`번들 식별자가 있는 경우 서비스 확장에는 번들 `com.xamarin.monkeynotify.monkeynotifyserviceextension`식별자가 있어야 합니다. 확장이 솔루션에 추가 될 때 자동으로 설정 됩니다. 
 
-알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예:
+알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예를 들어:
 
 ```csharp
 using System;
@@ -616,7 +616,7 @@ namespace MonkeyChatServiceExtension
 
 ### <a name="triggering-a-service-extension"></a>서비스 확장 트리거
 
-서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예를 들어:
+서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예:
 
 ```csharp
 {

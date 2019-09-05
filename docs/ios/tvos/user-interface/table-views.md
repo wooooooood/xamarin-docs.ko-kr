@@ -4,15 +4,15 @@ description: 이 문서에서는 tvOS 앱 내에서 테이블 뷰 및 테이블 
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d93978d6f7b3dff6d0d7ebf7c9f9afbe3572079
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199915"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288296"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
@@ -86,7 +86,7 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 
     [![](table-views-images/table06.png "기본 뷰 컨트롤러를 선택 하 고 삭제 합니다.")](table-views-images/table06.png#lightbox)
 1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 선택 하 고 Design Surface 끌어 옵니다.
-1. 기본적으로 왼쪽에는 **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
+1. 기본적으로 **왼쪽에는** **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
 
     [![](table-views-images/table08.png "분할 뷰 추가")](table-views-images/table08.png#lightbox)
 1. C# 나중에 코드에서 액세스할 수 있도록 테이블 뷰의 모든 부분을 선택 하 고 **속성 탐색기** 의 **위젯** 탭에서 사용자 지정 **클래스 이름을** 할당 해야 합니다. 예를 들어 **테이블 뷰 컨트롤러**는 다음과 같습니다. 
@@ -115,7 +115,7 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 를 클릭 하 여 새 솔루션을 만듭니다. 
+1. Visual Studio에서 새 tvOS app 프로젝트를 시작 하 고 **tvOS** > **단일 뷰 앱** 을 선택 하 고 앱의 이름을 입력 합니다. 확인 단추 **를 클릭 하 여 새** 솔루션을 만듭니다. 
 
     [![](table-views-images/table02-vs.png "단일 뷰 앱 선택")](table-views-images/table02-vs.png#lightbox)
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 엽니다. 
@@ -127,7 +127,7 @@ TvOS 앱에서 테이블 뷰로 작업 하는 가장 쉬운 방법은 인터페�
 1. **도구 상자** 에서 **분할 보기 컨트롤러** 를 선택 하 고 Design Surface 끌어 옵니다. 
 
     [![](table-views-images/table07-vs.png "분할 뷰 컨트롤러")](table-views-images/table07-vs.png#lightbox)
-1. 기본적으로 왼쪽에는 **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
+1. 기본적으로 **왼쪽에는** **탐색 뷰 컨트롤러** 와 뷰 컨트롤러, 오른쪽에는 **뷰 컨트롤러** 를 사용 하 여 [분할 뷰가](~/ios/tvos/user-interface/split-views.md) 표시 됩니다. 다음은 tvOS에서 테이블 뷰에 대 한 Apple의 제안 된 사용법입니다. 
 
     [![](table-views-images/table08-vs.png "UI 레이아웃")](table-views-images/table08-vs.png#lightbox)
 1. C# 나중에 코드에서 액세스할 수 있도록 테이블 뷰의 모든 부분을 선택 하 고 **속성 탐색기** 의 **위젯** 탭에서 사용자 지정 **클래스 이름을** 할당 해야 합니다. 예를 들어 **테이블 뷰 컨트롤러**는 다음과 같습니다. 
@@ -731,7 +731,7 @@ namespace tvTable
 
 ## <a name="pulling-it-all-together"></a>모두 함께 끌어오기
 
-이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예를 들어: 
+이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예: 
 
 [![](table-views-images/intro01.png "샘플 앱 실행")](table-views-images/intro01.png#lightbox)
 

@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 06283987e1d70659653729b4f3d5a00e1877aa5f
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: a888c29a6409fc803b8a0d06bcc6f8a668e64f5e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887381"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292060"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁 
 
@@ -49,7 +49,7 @@ IB에서 콘센트 및 작업을 사용 하는 방법에 대 한 자세한 내�
 - 멤버에 [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) 특성을 추가 합니다.  이렇게 하면 링커가 제거 되지 않습니다.
 - [**Mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29)를 호출할 때 **-nolink** 또는 **-linksdkonly** 옵션을 사용 합니다.
   - **-nolink** 는 모든 링크를 사용 하지 않습니다.
-  - **-linksdkonly** 는 사용자가 만든 어셈블리의 모든 형식 (즉, 앱프로젝트)을 유지 하면서 xamarin.ios와 같이 xamarin.ios에서 제공 하는 어셈블리만 연결 합니다.
+  - **-linksdkonly** 는 사용자가 만든 어셈블리의 모든 형식 (즉, 앱 프로젝트)을 유지 하면서 **Xamarin.ios와 같이 xamarin.ios에서 제공**하는 어셈블리만 연결 합니다.
 
 어셈블리가 연결 되어 결과 실행 파일의 크기가 작아집니다. 따라서 링크를 사용 하지 않도록 설정 하면 더 큰 실행 파일을 사용 하는 것이 바람직 할 수 있습니다.
 
@@ -212,7 +212,7 @@ int count = ((ICollection<Foo>) array).Count;
 
 
 
-XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp} .log** 를 연결 하세요. 이전 버전의 XS/MonoDevelop에서 ~/library/logs를 전송 합니다.  **/MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
+XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp} .log** 를 연결 하세요. 이전 버전의 XS/MonoDevelop에서 **~/library/logs를 전송 합니다. /MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
 
 > [!NOTE]
 > 위의 문제가 XS 2.2 마지막에 수정 되었습니다. * *
@@ -314,7 +314,7 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 
 (Ed Anuff에서 기여)
 
-다음 단계를 수행하십시오.
+다음 단계를 수행하세요.
 
 - IPhone 빌드에서 SDK 버전을 3.2 또는 iTunes connect로 변경 하면 3.2 보다 작은 SDK 버전을 사용 하 여 빌드된 iPad 호환 앱이 표시 되기 때문에 업로드가 거부 됩니다.
 - 프로젝트에 대 한 사용자 지정 info.plist을 만들고이를 명시적으로 3.0에 설정 합니다.   이렇게 하면 Xamarin.ios로 설정 된 이상 값 Osversion 3.2 값이 재정의 됩니다.   이 작업을 수행 하지 않으면 iPhone에서 앱을 실행할 수 없게 됩니다.
@@ -420,4 +420,4 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
 
 Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 다음과 같은 오류 메시지가 표시 될 수 있습니다. "NotSupportedException: 응용 프로그램을 컴파일하고 실행 하려고 할 때 "encoding 437"에 사용할 수 있는 데이터가 없습니다. 예를 들어와 `Ionic.Zip.ZipFile`같은 라이브러리는 작업 중에이 예외를 throw 할 수 있습니다.
 
-이는 ios 프로젝트에 대 한 옵션을 열고 **ios** > **국제화** 로 이동 하 여 국제화 된 국제화를 확인 하 여 해결할 수 있습니다.
+이는 ios 프로젝트에 대 한 옵션을 열고 **ios** > **국제화** 로 이동 **하 여 국제화 된 국제화** 를 확인 하 여 해결할 수 있습니다.

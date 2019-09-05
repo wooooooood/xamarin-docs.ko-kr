@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin에서 watchOS 복잡 한 작업을 수�
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/03/2017
-ms.openlocfilehash: 7e2b3e93baaeac85267c9db2f414793610521f2e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 6831fa9a660a55eccd8584dccb1f81ae9953aee5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200033"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282345"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Xamarin에서 watchOS의 복잡 한 문제
 
@@ -134,7 +134,7 @@ The [sample]() for this article supports more template styles.
 
 ## <a name="sample-code"></a>예제 코드
 
-이 예제에서는 `UtilitarianLarge` 템플릿만 지원 하므로 해당 유형을 지 원하는 특정 조사식 면 에서만 선택할 수 있습니다. 조사식을 *선택* 하는 경우 복잡 한 것 을 표시 하 고 *실행* 하면 텍스트 분 ( **시간**  부분 포함)을 표시 합니다.
+이 예제에서는 `UtilitarianLarge` 템플릿만 지원 하므로 해당 유형을 지 원하는 특정 조사식 면 에서만 선택할 수 있습니다. 조사식을 *선택* 하는 **경우 복잡 한** 것을 표시 하 고 *실행* 하면 텍스트 **분**  (시간 부분 포함)을 표시 합니다.
 
 ```csharp
 [Register ("ComplicationController")]

@@ -3,15 +3,15 @@ title: Unified API 개요
 description: Xamarin의 Unified API를 사용 하면 Mac과 iOS 간에 코드를 공유 하 고, 32 및 64 비트 응용 프로그램을 동일한 이진으로 지원할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99347ccc2490361bedda926b25076158a12e39bf
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 75177daa2f8bd1faa271940713ff8543db3b97c0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065166"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287385"
 ---
 # <a name="unified-api-overview"></a>Unified API 개요
 
@@ -133,7 +133,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>배열 및 System.object
 
-인덱서 C# 는 형식을 `int`필요로 하므로 컬렉션 또는 배열의 요소에 액세스 하려면 값 `nint` 을로 `int` 명시적으로 캐스팅 해야 합니다. 예를 들어:
+인덱서 C# 는 형식을 `int`필요로 하므로 컬렉션 또는 배열의 요소에 액세스 하려면 값 `nint` 을로 `int` 명시적으로 캐스팅 해야 합니다. 예:
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -191,7 +191,7 @@ Xamarin.ios 클래식 API (monotouch.dialog) 내에서 특성은 `[Obsolete]` �
 
 모든 `NSObject` 서브 클래스에는를 `IntPtr`허용 하는 생성자가 있습니다. 이는 네이티브 ObjC 핸들에서 새로운 관리 되는 인스턴스를 인스턴스화할 수 있는 방법입니다.
 
-클래식에서는 `public` 생성자 였습니다. 그러나 사용자 코드에서이 기능을 사용 하는 것은 간단 합니다. 예를 들어 단일 ObjC 인스턴스에 대해 여러 개의 관리 되는 인스턴스를 만들거나 필요한 관리 되는 상태 (서브 클래스의 경우)가 없는 관리 되는 인스턴스를 만들 수 있습니다.
+클래식에서는 `public` 생성자 였습니다. 그러나 사용자 코드에서이 기능을 사용 하는 것은 간단 합니다. 예 *를 들어 단일 ObjC 인스턴스에 대해* 여러 개의 관리 되는 인스턴스를 만들거나 필요한 관리 되는 상태 (서브 클래스의 경우)가 없는 관리 되는 인스턴스를 만들 수 있습니다.
 
 이러한 종류의 문제를 방지 하기 `IntPtr` 위해 생성자는 `protected` 이제 **통합** API에 있으므로 서브클래싱에만 사용할 수 있습니다. 이렇게 하면 올바른/안전 API를 사용 하 여 핸들에서 관리 되는 인스턴스를 만들 수 있습니다. 즉,
 

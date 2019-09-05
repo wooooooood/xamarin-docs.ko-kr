@@ -4,15 +4,15 @@ description: 이 문서는 Xamarin.iOS 애플리케이션 배포 및 테스트�
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 29a1134ebe25f0ce1f25f2c41bf28d4c60f8fa6a
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 8ce601bff478cfc75d209b0d3e6ec3f6a48dbeee
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865789"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288959"
 ---
 # <a name="deploying-and-testing-xamarinios-apps"></a>Xamarin.iOS 앱 배포 및 테스트
 
@@ -36,7 +36,7 @@ Ad-Hoc 및 Enterprise 배포를 통해 개발자는 테스트용 또는 내부 �
 
 ## <a name="wireless-deploymentwireless-deploymentmd"></a>[무선 배포](wireless-deployment.md)
 
- Xcode 9은 앱을 배포하고 디버그할 때마다 디바이스를 유선으로 연결하지 않고 네트워크를 통해 iOS 디바이스 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 현재 미리 보기로 제공됩니다.
+ Xcode 9은 앱을 배포하고 디버그할 때마다 디바이스를 유선으로 연결하지 않고 네트워크를 통해 iOS 디바이스 또는 Apple TV에 배포하는 옵션을 도입했습니다. 이 기능은 현재 미리 보기입니다.
 
 ## <a name="testflightiosdeploy-testtestflightmd"></a>[TestFlight](~/ios/deploy-test/testflight.md)
 

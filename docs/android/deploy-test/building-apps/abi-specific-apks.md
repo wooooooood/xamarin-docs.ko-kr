@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4a3ba970f8ca32f0bfa2e5297e8052f3eb572ed0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e7c8721254157565461e00657a3ee8a786e3ea00
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525725"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225759"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -49,17 +49,17 @@ Google에서는 7자리 버전 코드를 사용하는 버전 코드에 특정 �
 이 버전 코드 구성표를 8자리로 확장하면 일부 ABI 정보를 버전 코드에 포함하여 Google Play에서 디바이스에 올바른 APK를 배포하도록 할 수 있습니다. 다음 목록에서는 이 8자리 버전 코드 형식을 설명합니다(왼쪽에서 오른쪽으로 인덱싱됨).
 
 - **인덱스 0**(아래 다이어그램에서 빨간색) &ndash; ABI의 정수:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **인덱스 1-2**(아래 다이어그램에서 주황색) &ndash; 애플리케이션에서 지원하는 최소 API 수준입니다.
 
 - **인덱스 3-4**(아래 다이어그램에서 파란색) &ndash; 지원되는 화면 크기:
-    - 1 &ndash; 소형
-    - 2 &ndash; 표준
-    - 3 &ndash; 대형
-    - 4 &ndash; 초대형
+  - 1 &ndash; 소형
+  - 2 &ndash; 표준
+  - 3 &ndash; 대형
+  - 4 &ndash; 초대형
 
 - **인덱스 5-7**(아래 다이어그램에서 녹색) &ndash; 버전 코드의 고유 번호입니다. 
     이 항목은 개발자가 설정합니다. 애플리케이션의 각 공용 릴리스마다 증가해야 합니다.
@@ -112,13 +112,13 @@ ABI별 APK를 빌드할 때는 다음 샘플 명령줄에 나와 있는 것처�
 
 - `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; 이는 빌드의 일부로 생성된 중간 파일을 저장하는 디렉터리입니다. Xamarin.Android는 필요할 경우 ABI의 이름을 딴 디렉터리를 만듭니다(예: `obj.armeabi-v7a`). 한 빌드에서 다른 빌드로 파일이 "유출"되는 결과를 가져오는 문제를 방지할 수 있으므로 각 ABI당 하나의 폴더를 사용하는 것이 좋습니다. 이 값은 디렉터리 구분 기호(OS X의 경우 `/`)를 사용하여 종결됩니다.
 
-- `/p:AndroidManifest` &ndash; 이 속성은 빌드 중에 사용되는 **AndroidManifest.XML** 파일의 경로를 지정합니다.
+- `/p:AndroidManifest` &ndash; 이 속성은 빌드 중에 사용되는 **AndroidManifest.XML** 파일에 대한 경로를 지정합니다.
 
 - `/p:OutputPath=bin.<TARGET_ABI>` &ndash; 이는 최종 APK가 저장될 디렉터리입니다. Xamarin.Android는 ABI의 이름을 딴 디렉터리를 만듭니다(예: `bin.armeabi-v7a`).
 
 - `/p:Configuration=Release` &ndash; APK의 릴리스 빌드를 수행합니다. 디버그 빌드는 Google Play에 업로드하지 못할 수 있습니다.
 
-- `<CS_PROJ FILE>` &ndash; 이는 Xamarin.Android 프로젝트에 대한 `.csproj` 파일의 경로입니다.
+- `<CS_PROJ FILE>` &ndash; 이는 Xamarin.Android 프로젝트의 `.csproj` 파일에 대한 경로입니다.
 
 
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 복사 �
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 43da869cfdb4ccbf5fcd8836a6fa5ca5ca732bfa
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199883"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291230"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.ios에서 복사 하 여 붙여넣기
 
@@ -716,7 +716,7 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-일반적으로 위의 예제에서 수행한 것 처럼 일반 대 면에만 씁니다. `WriteObjects` 메서드에 보내는 모든 개체는 `INSPasteboardWriting` 인터페이스를 따라야 합니다. `NSString` ,`NSImage` ,,`NSPasteboardItem`, 및와 같은 몇 가지 기본 제공 클래스는이 인터페이스를 자동으로 준수 합니다. `NSURL` `NSColor` `NSAttributedString`
+일반적으로 위의 예제에서 수행한 것 처럼 일반 대 면에만 씁니다. `WriteObjects` 메서드에 보내는 모든 개체는 `INSPasteboardWriting` 인터페이스를 따라야 *합니다.* `NSString` ,`NSImage` ,,`NSPasteboardItem`, 및와 같은 몇 가지 기본 제공 클래스는이 인터페이스를 자동으로 준수 합니다. `NSURL` `NSColor` `NSAttributedString`
 
 사용자 지정 데이터 클래스를 대지의에 작성 하는 경우에는 `INSPasteboardWriting` 인터페이스를 준수 하거나 `NSPasteboardItem` 클래스의 인스턴스에 래핑해야 합니다 (아래의 [사용자 지정 데이터 형식](#Custom_Data_Types) 섹션 참조).
 
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-또한 클래스는 `Register` 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 사용 하 여 `Export`필요한 속성이 나 메서드를 노출 해야 합니다. 예:
+또한 클래스는 `Register` 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 사용 하 여 `Export`필요한 속성이 나 메서드를 노출 해야 합니다. 예를 들어:
 
 ```csharp
 [Export("name")]

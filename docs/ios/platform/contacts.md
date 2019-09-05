@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 새 연락처 및 연락�
 ms.prod: xamarin
 ms.assetid: 7b6fb66a-5e19-4a5a-9ed2-f6b02af099af
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: fe69e596193aab306a3701ea1ae0792362270557
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644676"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278532"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Xamarin.ios의 연락처 및 연락처
 
@@ -23,9 +23,9 @@ Ios 9가 도입 되면서 Apple은 ios 8 및 이전 버전에서 사용 `Contact
 새로운 두 프레임 워크에는 다음과 같은 기능이 포함 되어 있습니다.
 
 - [**연락처**](#contacts) -사용자의 연락처 목록 데이터에 대 한 액세스를 제공 합니다.
-    대부분의 앱은 읽기 전용 액세스만 필요 하므로이 프레임 워크는 스레드로부터 안전한 읽기 전용 액세스를 위해 최적화 되었습니다.
+  대부분의 앱은 읽기 전용 액세스만 필요 하므로이 프레임 워크는 스레드로부터 안전한 읽기 전용 액세스를 위해 최적화 되었습니다.
 
-- 연락처 [ **-ios**](#contactsui) 장치에서 연락처를 표시, 편집, 선택 및 만들 수 있는 xamarin.ios UI 요소를 제공 합니다.
+- [**연락처-ios**](#contactsui) 장치에서 연락처를 표시, 편집, 선택 및 만들 수 있는 xamarin.ios UI 요소를 제공 합니다.
 
 [![](contacts-images/add01.png "IOS 장치에 대 한 예제 연락처 시트")](contacts-images/add01.png#lightbox)
 
@@ -124,7 +124,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예를 들어:
+응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예:
 
 ```csharp
 // Localized properties

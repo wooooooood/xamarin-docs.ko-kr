@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 통합 스토리 보드에 대�
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 6085f85a1b13bdeb4fe7b906beeca0bdc7a45a17
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890169"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280857"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.ios의 통합 스토리 보드
 
@@ -51,7 +51,7 @@ IPhone에는 장치의 방향에 따라 다양 한 크기 클래스가 있습니
 
  [![](unified-storyboards-images/iphonesizeclasses.png "iPhone 크기 클래스")](unified-storyboards-images/iphonesizeclasses.png#lightbox)
 
-- 장치가 세로 모드 이면 화면에 가로 및 세로로 세로로 **압축** 된 클래스가 있습니다.
+- 장치가 세로 모드 이면 화면에 **가로 및 세로로** 세로로 **압축** 된 클래스가 있습니다.
 - 장치가 가로 모드 이면 화면 클래스가 세로 모드에서 반전 됩니다.
 
 ### <a name="iphone-6-plus-size-classes"></a>iPhone 6 Plus Size 클래스
@@ -139,7 +139,7 @@ IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래�
 
 또한 개발자는와 `UITraitCollection.FromHorizontalSizeClass`같이 Apple에서 제공 하는 생성 방법 중 하나를 사용 하 여 새 컬렉션을 만드는 경우 부분적으로 정규화 된 특성 컬렉션을 가져옵니다.
 
-여러 특성 컬렉션에 대해 수행할 수 있는 한 가지 작업은 서로 비교 하는 것입니다. 즉, 하나의 특성 컬렉션을 포함 하는 경우 하나의 특성 컬렉션을 요청 해야 합니다. 예를 들어, 두 번째 컬렉션에 지정 된 특성의 경우 값은 첫 번째 컬렉션의 값과 정확 하 게 일치 해야 합니다.
+여러 특성 컬렉션에 대해 수행할 수 있는 한 가지 작업은 서로 비교 하는 것입니다. 즉, 하나의 특성 컬렉션을 포함 하는 경우 하나의 특성 컬렉션을 요청 해야 합니다. 예를 들어, 두 번째 컬렉션에 지정 된 특성의 경우 *값은 첫* 번째 컬렉션의 값과 정확 하 게 일치 해야 합니다.
 
 두 특성을 테스트 하려면 테스트할 `Contains` 특성의 값 `UITraitCollection` 을 전달 하는의 메서드를 사용 합니다.
 

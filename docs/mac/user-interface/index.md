@@ -4,15 +4,15 @@ description: 이 문서는 Xamarin.ios 개발자에 게 제공 되는 다양 한
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 7dfd8392abf832e53cb90d0a09990fc5ef57b0bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f1168378104fd40fa7de78297f1f683d0caa0afa
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656316"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283115"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>Xamarin.ios의 macOS 사용자 인터페이스 컨트롤
 

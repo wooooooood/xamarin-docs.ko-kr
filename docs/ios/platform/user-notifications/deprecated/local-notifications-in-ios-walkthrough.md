@@ -4,15 +4,15 @@ description: 이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 �
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 376f046769e27586d9611d634aef89811c7b3be8
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200376"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290454"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
@@ -58,7 +58,7 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
 
     이 코드는 소리를 사용 하는 알림을 만들고 아이콘 배지 값을 1로 설정 하 고 사용자에 게 경고를 표시 합니다.
 
-1. 그런 다음 파일 `AppDelegate.cs`을 편집 하 여 먼저 `FinishedLaunching` 메서드에 다음 코드를 추가 합니다. 장치가 iOS 8을 실행 하 고 있는지 확인 합니다 .이 경우 사용자가 알림을 받을 수 있는 권한을 요청 해야 합니다.
+1. 그런 다음 파일 `AppDelegate.cs`을 편집 하 여 먼저 `FinishedLaunching` 메서드에 다음 코드를 추가 합니다. 장치가 iOS 8을 실행 하 고 있는지 확인 합니다 .이 경우 사용자가 알림을 받을 수 있는 권한을 **요청 해야 합니다** .
 
     ```csharp
     if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {

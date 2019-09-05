@@ -4,15 +4,15 @@ description: 이 문서에서는 앱 스토어에서 배포를 위해 릴리스�
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 910f91478eeb6894e11748c929cc94bc2c0dbe64
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865603"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283587"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -42,7 +42,7 @@ iTunes Connect의 **계약, 세금 및 뱅킹** 섹션은 iTunes 개발자 지�
 
 [![](itunesconnect-images/agreement01.png "계약, 세금 및 뱅킹 관리")](itunesconnect-images/agreement01.png#lightbox)
 
-여기에서 다음을 할 수 있습니다.
+여기서는 다음을 수행할 수 있습니다.
 
 - **팀 에이전트**를 제공하고 **관리자** 또는 **재무**와 같은 iTunes Connect 계정에 대한 다른 사용자 역할을 정의합니다.
 - 조직이 앱 스토어에서 애플리케이션을 배포할 수 있도록 **계약**을 등록하고 유지 관리합니다.
@@ -158,7 +158,7 @@ Apple에서 애플리케이션 설명을 작성하는 데 권장하는 제안 �
 - 항목을 중요도 순으로 나열하고 변경 내용과 버그 수정을 정확히 지적합니다.
 - 변경 내용은 기술적인 전문 용어보다는 인증된 일반 언어로 나타냅니다.
 
-### <a name="keywords"></a>키워드
+### <a name="keywords"></a>키워드가
 
 애플리케이션의 기능과 관련된 신중하고 전략적인 키워드는 사용자가 앱 스토어에서 검색할 때 애플리케이션을 쉽게 찾을 수 있도록 합니다. 또한 애플리케이션에서 iAd 광고를 제공하는 경우 iAd App Network는 앱에서 대상이 되는 광고를 선택할 때 키워드를 사용합니다.
 
@@ -200,7 +200,7 @@ iTunes Connect 애플리케이션 레코드의 이 섹션에서는 애플리케�
 ### <a name="app-icon"></a>앱 아이콘
 
 > [!IMPORTANT]
->  앱 아이콘은 더 이상 iTunes Connect를 통해 제출되지 않습니다. 프로젝트의 **Assets.xcassets** 파일에 있는 **AppIcon** 이미지 집합을 통해 제출해야 합니다. 자세한 내용은 [앱 스토어 아이콘](~/ios/app-fundamentals/images-icons/app-store-icon.md) 가이드를 참조하세요.
+> 앱 아이콘은 더 이상 iTunes Connect를 통해 제출되지 않습니다. 프로젝트의 **Assets.xcassets** 파일에 있는 **AppIcon** 이미지 집합을 통해 제출해야 합니다. 자세한 내용은 [앱 스토어 아이콘](~/ios/app-fundamentals/images-icons/app-store-icon.md) 가이드를 참조하세요.
 
 앱 아이콘은 사용자에게 보여 주는 애플리케이션의 얼굴이므로 기억하기 쉽고 작은 크기로 잘 표시되어야 합니다. 기억하기 쉬운 아이콘은 명확하고 간단하며 즉시 인식할 수 있습니다.
 

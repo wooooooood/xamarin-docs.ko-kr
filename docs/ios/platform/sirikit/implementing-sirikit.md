@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 SiriKit 지원을 구현 
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 78d39b080a136f66c81b48d6cceb5fbdd9d24c11
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654936"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290646"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.ios에서 SiriKit 구현
 
@@ -300,7 +300,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 ### <a name="localization-and-siri"></a>지역화 및 Siri
 
-IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 `SiriLanguageCode` `INPreferences` 클래스의 메서드를 사용 하 여 siri에서 언어 코드를 가져와야 합니다. 예를 들어:
+IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 `SiriLanguageCode` `INPreferences` 클래스의 메서드를 사용 하 여 siri에서 언어 코드를 가져와야 합니다. 예:
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -324,7 +324,7 @@ if (language == "en-US") {
 
 사용자 지정 어휘로 등록 하는 용어를 선택 하는 경우 앱에 익숙하지 않은 사람이 잘못 해석 될 수 있는 용어를 선택 합니다. "내 체력" 또는 "내 앨범"과 같은 일반적인 용어를 등록 하지 마십시오. 예를 들어 MonkeyChat 앱은 사용자 주소록의 각 연락처와 연결 된 애칭을 등록 합니다.
 
-앱은 `SetVocabularyStrings` `INVocabulary` 클래스의 메서드를 호출 하 고 주 앱에서 컬렉션을 `NSOrderedSet` 전달 하 여 사용자별 어휘를 제공 합니다. 새 용어를 추가 하기 전에 `RemoveAllVocabularyStrings` 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예를 들어:
+앱은 `SetVocabularyStrings` `INVocabulary` 클래스의 메서드를 호출 하 고 주 앱에서 컬렉션을 `NSOrderedSet` 전달 하 여 사용자별 어휘를 제공 합니다. 새 용어를 추가 하기 전에 `RemoveAllVocabularyStrings` 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예:
 
 ```csharp
 using System;
@@ -430,7 +430,7 @@ namespace MonkeyChat
 ```
 
 > [!IMPORTANT]
-> Siri는 사용자 지정 어휘를 힌트로 처리 하 고 최대한 많은 용어를 통합 합니다. 그러나 사용자 지정 어휘를 위한 공간이 제한 되므로 혼동 될 수 있는 용어 _를 등록 하_ 는 것이 중요 하므로 등록 된 용어의 총 수가 최소로 유지 됩니다.
+> Siri는 사용자 지정 어휘를 힌트로 처리 하 고 최대한 많은 용어를 통합 합니다. 그러나 사용자 지정 어휘를 위한 공간이 제한 되므로 혼동 될 수 있는 용어를 등록 하는 것이 중요 _하므로 등록 된_ 용어의 총 수가 최소로 유지 됩니다.
 
 자세한 내용은 사용자 지정 어휘 [참조](~/ios/platform/sirikit/understanding-sirikit.md) 및 Apple의 [사용자 지정 어휘 참조 지정](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SpecifyingCustomVocabulary.html#//apple_ref/doc/uid/TP40016875-CH6-SW1)을 참조 하세요.
 

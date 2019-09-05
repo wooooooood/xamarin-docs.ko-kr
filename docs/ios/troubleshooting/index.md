@@ -1,30 +1,30 @@
 ---
-title: Xamarin.iOS를 문제 해결
-description: 이 문서는 질문과 대답 및 Xamarin.iOS에서 Xamarin.iOS 응용 프로그램을 빌드할 때 잠재적인 오류 목록에 대 한 문제 해결 정보를 제공 하는 다양 한 리소스에 연결 합니다.
+title: Xamarin.ios 문제 해결
+description: 이 문서는 xamarin.ios에 대 한 문제 해결 정보를 제공 하는 다양 한 리소스, Xamarin.ios 응용 프로그램을 빌드할 때 발생 하는 잠재적 오류 목록 및 질문과 대답을 제공 합니다.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1DE5E667-A671-47CE-A0AC-F0D8B00ACFCE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/27/2018
-ms.openlocfilehash: 10dbba41fc7e07265056a75565764b713faae422
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 65ff267853fd06cb633ccc8b193dcdc49a858851
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61422068"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289636"
 ---
-# <a name="troubleshooting-xamarinios"></a>Xamarin.iOS를 문제 해결
+# <a name="troubleshooting-xamarinios"></a>Xamarin.ios 문제 해결
 
 ## <a name="troubleshootingiostroubleshootingtroubleshootingmd"></a>[문제 해결](~/ios/troubleshooting/troubleshooting.md)
 
-문제 해결 팁 및 트릭
+문제 해결 팁 및 요령
 
-## <a name="xamarinios-errorsiostroubleshootingmtouch-errorsmd"></a>[Xamarin.iOS 오류](~/ios/troubleshooting/mtouch-errors.md)
+## <a name="xamarinios-errorsiostroubleshootingmtouch-errorsmd"></a>[Xamarin.ios 오류](~/ios/troubleshooting/mtouch-errors.md)
 
-Mac 용 Visual Studio에서 Xamarin.iOS를 사용 하는 경우 발생할 수 있습니다 하는 가장 일반적인 오류를 표시 하는 오류 참조 가이드
+Mac용 Visual Studio에서 Xamarin.ios를 사용 하는 경우 발생할 수 있는 가장 일반적인 오류를 보여 주는 오류 참조 가이드
 
 ## <a name="frequently-asked-questionsquestionsindexmd"></a>[질문과 대답](questions/index.md)
 
-자주 묻는 질문을 해결 하는 Xamarin.iOS입니다.
+자주 묻는 질문과 대답을 확인할 합니다.

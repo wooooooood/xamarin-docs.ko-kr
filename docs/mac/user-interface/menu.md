@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 메뉴를
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0879fcc529e72e03df4eaba7790a534ace38856f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657339"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292431"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.ios의 메뉴
 
@@ -226,7 +226,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 앱에서을 사용 `NSDocuments`하지 않는 경우에도를 `SharedDocumentController` `NSDocumentController` 사용 하 여의 `NoteNewRecentDocumentURL` 메서드에 파일의 위치를 포함 하 `NSUrl` 는를 전송 하 여 **최근 열기** 메뉴를 유지 관리 합니다.
 
-그런 다음 사용자가 `OpenFile` 최근 항목 **열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예를 들어:
+그런 다음 사용자가 `OpenFile` 최근 항목 **열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예:
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -374,7 +374,7 @@ namespace MacHyperlink
 }
 ```
 
-앱의 요구 사항에 따라 사용자가 동시에 두 개 이상의 창에서 동일한 파일을 열지 않으려고 할 수 있습니다. 예제 앱에서 사용자가 이미 열려 있는 파일을 선택 하는 경우 (열기 **최근** 항목에서 열기 메뉴 항목)에서 파일을 포함 하는 창을 맨 앞으로 가져옵니다.
+앱의 요구 사항에 따라 사용자가 동시에 두 개 이상의 창에서 동일한 파일을 열지 않으려고 할 수 있습니다. 예제 앱에서 사용자가 이미 열려 있는 파일을 선택 하는 경우 (열기 **최근** 항목 **에서 열기** 메뉴 항목)에서 파일을 포함 하는 창을 맨 앞으로 가져옵니다.
 
 이를 위해 도우미 메서드에서 다음 코드를 사용 했습니다.
 
@@ -483,7 +483,7 @@ public void defineKeyword (NSObject sender) {
 
 [![새 위치의 항목](menu-images/maint05.png "새 위치의 항목")](menu-images/maint05-large.png#lightbox)
 
-그런 다음 **서식** 메뉴에서 **텍스트** 하위 메뉴를 바깥쪽으로 끌어와 **창** 메뉴의 주 메뉴 모음에 놓습니다.
+그런 다음 **서식** 메뉴에서 **텍스트** 하위 메뉴를 바깥쪽으로 끌어와 **창** **메뉴의 주** 메뉴 모음에 놓습니다.
 
 [![텍스트 메뉴](menu-images/maint06.png "텍스트 메뉴")](menu-images/maint06-large.png#lightbox)
 

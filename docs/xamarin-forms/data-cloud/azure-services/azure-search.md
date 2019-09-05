@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: d13246ddae3f505d04db2a866f785a9f60ce3979
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652037"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292685"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Azure Search 및 Xamarin.ios를 사용 하 여 데이터 검색
 
@@ -60,7 +60,7 @@ var searchClient =
 `SearchServiceClient` 생성자 오버 로드는 검색 서비스 이름 및 `SearchCredentials` 인수를 사용 하 여 개체를 `SearchCredentials` 개체 래핑 합니다 *관리자 키* Azure Search 서비스에 대 한 합니다. 합니다 *관리자 키* 인덱스를 만드는 데 필요 합니다.
 
 > [!NOTE]
->  단일 `SearchServiceClient` 인스턴스를 Azure Search에 너무 많은 연결이 열리는 방지 하려면 응용 프로그램에 사용할 수 해야 합니다.
+> 단일 `SearchServiceClient` 인스턴스를 Azure Search에 너무 많은 연결이 열리는 방지 하려면 응용 프로그램에 사용할 수 해야 합니다.
 
 인덱스를 정의한는 `Index` 다음 코드 예제에서 설명한 것 처럼 개체:
 

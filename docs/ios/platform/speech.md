@@ -4,15 +4,15 @@ description: 이 문서에서는 새로운 Speech API를 제공 하 고 높여�
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 40aa36fa8a89eacd8be7914020c06f3fec75baff
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227330"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292530"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.ios의 음성 인식
 
@@ -105,10 +105,10 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 2. **원본** 뷰로 전환 합니다. 
 
     [![](speech-images/speech02.png "원본 뷰")](speech-images/speech02.png#lightbox)
-3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
 
     [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
-4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
+4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
 
     [![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
@@ -243,7 +243,7 @@ public void RecognizeFile (NSUrl url)
 
 ### <a name="recognizing-live-speech"></a>라이브 음성 인식
 
-앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예:
+앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예를 들어:
 
 ```csharp
 using System;

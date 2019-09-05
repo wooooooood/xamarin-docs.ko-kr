@@ -3,15 +3,15 @@ title: 바인딩을 Unified API로 마이그레이션
 description: 이 문서에서는 Xamarin.ios 및 Xamarin.ios 응용 프로그램에 대 한 통합 Api를 지원 하도록 기존 Xamarin 바인딩 프로젝트를 업데이트 하는 데 필요한 단계를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 90ef47d4e105dc401369c92e9196111c060314e3
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976417"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287375"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩을 Unified API로 마이그레이션
 
@@ -201,7 +201,7 @@ Mac용 Visual Studio 바인딩 프로젝트 템플릿을 사용 하 여 API를 �
 
 1. Mac용 Visual Studio를 시작 합니다.
 2. **파일** > **새로**만들기솔루션 >  **...** 을 선택 합니다.
-3. 새 솔루션 대화 상자에서 ios**Unified API** > **ios 바인딩 프로젝트**를 선택 > 합니다. 
+3. 새 솔루션 대화 상자에서 ios**Unified API** > **ios 바인딩 프로젝트** **를 선택** > 합니다. 
 
     [![](update-binding-images/image01new.png "새 솔루션 대화 상자에서 iOS/Unified API/iOS 바인딩 프로젝트를 선택 합니다.")](update-binding-images/image01new.png#lightbox)
 4. ' 새 프로젝트 구성 ' 대화 상자에서 새 바인딩 프로젝트의 **이름을** 입력 하 고 **확인** 단추를 클릭 합니다.

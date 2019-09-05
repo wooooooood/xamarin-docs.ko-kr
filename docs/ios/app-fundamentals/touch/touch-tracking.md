@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 멀티 터치 제스처�
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: cdf6e78356ee1c846b5921957e8eda53931a3c6b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 00fa1a65d2a73220675d8142e70ac904a93e3042
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655164"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281980"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Xamarin.ios의 멀티 터치 핑거 추적
 

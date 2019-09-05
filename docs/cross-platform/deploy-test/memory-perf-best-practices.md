@@ -3,15 +3,15 @@ title: 플랫폼 간 성능
 description: 이 문서에서는 모바일 애플리케이션의 성능을 개선하는 데 사용할 수 있는 다양한 기술을 설명합니다. 프로파일러, IDisposable 리소스, 약한 참조, SGen 가비지 수집기, 크기 감소 기법 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 75bc540ee518a1f5cfef29886d968648ea5769ed
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526710"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290183"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 

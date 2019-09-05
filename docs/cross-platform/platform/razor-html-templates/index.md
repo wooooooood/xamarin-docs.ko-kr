@@ -3,15 +3,15 @@ title: Razor 템플릿을 사용 하 여 HTML 뷰 빌드
 description: " HTML을 렌더링 하기 위해 전체 화면 웹 페이지를 사용 하는 것은 특히 웹 사이트 프로젝트의 HTML, JavaScript 및 CSS가 이미 있는 경우 플랫폼 간 방식으로 복잡 한 서식을 렌더링 하는 간단 하 고 효과적인 방법입니다."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: d822a4dc50d3f33ba4c217b8fcc557acc2bfdb3e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621030"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284916"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Razor 템플릿을 사용 하 여 HTML 뷰 빌드
 
@@ -385,7 +385,7 @@ var page = template.GenerateString ();
 
  ![IPhone 및 Android 솔루션 만들기](images/image13_1139x959.png)
 
-기존 Xamarin 프로젝트에 **. cshtml** Razor 템플릿을 쉽게 추가할 수 있으며 , 이러한 솔루션 템플릿을 사용할 필요는 없습니다. iOS 프로젝트에서는 Razor를 사용 하기 위해 Storyboard가 필요 하지 않습니다. 프로그래밍 방식으로 모든 뷰에 UIWebView 보기 컨트롤을 추가 하 고 코드에서 C# Razor 템플릿 전체를 렌더링할 수 있습니다.
+*기존 Xamarin* 프로젝트에 **. cshtml** Razor 템플릿을 쉽게 추가할 수 있으며, 이러한 솔루션 템플릿을 사용할 필요는 없습니다. iOS 프로젝트에서는 Razor를 사용 하기 위해 Storyboard가 필요 하지 않습니다. 프로그래밍 방식으로 모든 뷰에 UIWebView 보기 컨트롤을 추가 하 고 코드에서 C# Razor 템플릿 전체를 렌더링할 수 있습니다.
 
 IPhone 및 Android 프로젝트에 대 한 기본 템플릿 솔루션 콘텐츠는 다음과 같습니다.
 
@@ -495,7 +495,7 @@ HTML은 프로토타입 제작에 적합 하 고, 다양 한 텍스트 및 응�
 - **RazorNativeTodo** -IOS 및 Android 용 네이티브 목록 뷰 컨트롤을 사용 하지만 HTML 및 Razor를 사용 하 여 편집 화면을 표시 합니다.
 
 
-이러한 Xamarin 앱은 iOS 및 Android에서 실행 되며, PCLs (이식 가능한 클래스 라이브러리)를 활용 하 여 데이터베이스 및 모델 클래스와 같은 공통 코드를 공유 합니다. Razor 파일은 여러 플랫폼에서 쉽게 공유할 수 있도록 PCL에 포함 될 수도 있습니다.
+이러한 Xamarin 앱은 iOS 및 Android에서 실행 되며, PCLs (이식 가능한 클래스 라이브러리)를 활용 하 여 데이터베이스 및 모델 클래스와 같은 공통 코드를 공유 합니다. Razor **파일** 은 여러 플랫폼에서 쉽게 공유할 수 있도록 PCL에 포함 될 수도 있습니다.
 
 두 샘플 앱은 네이티브 플랫폼에서 Twitter 공유 및 텍스트 음성 변환 Api를 통합 하며, Xamarin을 사용 하는 하이브리드 응용 프로그램은 HTML Razor 템플릿 기반 뷰에서 모든 기본 기능에 액세스할 수 있다는 것을 보여 줍니다.
 

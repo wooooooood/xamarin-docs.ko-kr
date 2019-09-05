@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple의 계측 앱을 사용하여 디바이�
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: cef817c30dd20840c440cdbbdc8145047ad1fc0e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9492c90274e28f14dee0e8cbcb2aaa1a55de2420
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110793"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282741"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>계측을 사용하여 Xamarin.iOS 애플리케이션 프로파일링
 
@@ -30,7 +30,7 @@ Xcode 계측은 Mac에서만 실행됩니다.
 1. Mac용 Visual Studio에서 Xamarin.iOS 프로젝트를 엽니다.
 2. **디버그 | iPhone** 구성을 선택합니다.
 3. 컴퓨터에 iOS 디바이스를 연결합니다.
-4. **실행** 메뉴에서 **장치에 업로드**를 선택합니다. 이제 애플리케이션이 빌드되어 디바이스에 업로드됩니다.
+4. **실행** 메뉴에서 **디바이스에 업로드**를 선택합니다. 이제 애플리케이션이 빌드되어 디바이스에 업로드됩니다.
 5. **도구** 메뉴에서 **계측 시작**을 선택합니다.
 
 

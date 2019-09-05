@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 사용자 인터페이스를 
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: cfbd722726357b0adc9fa14ce2c9a13f8de1bb87
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: a153c6115605ca2a58df233186fa45d200d8b99f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620929"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287305"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.ios에서 사용자 인터페이스 개체 만들기
 

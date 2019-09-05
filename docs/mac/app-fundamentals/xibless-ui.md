@@ -4,15 +4,15 @@ description: 이 문서에서는 storyboard 파일,. xib 파일 또는 Interface
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: d51e1b20e1409d228db2f38e6c31ad1165897654
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226897"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283327"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
 
@@ -35,7 +35,7 @@ _이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없
 응용 프로그램에 대 한 Xibless 창으로 전환 하려면 다음을 수행 합니다.
 
 1. 또는. xib 파일을 사용 하 여 `.storyboard` 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio에서 사용자 인터페이스를 정의 합니다.
-2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** 파일을 마우스 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다.
+2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** **파일을 마우스** 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다.
 
     ![주 storyboard 또는 창 제거](xibless-ui-images/switch01.png "주 storyboard 또는 창 제거")
 3. **제거 대화 상자**에서 **삭제** 단추를 클릭 하 여 프로젝트에서 storyboard 또는. xib을 완전히 제거 합니다.
@@ -243,11 +243,11 @@ base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.
 
 사용할 수 있는 기능은 다음과 같습니다. `NSWindowStyle`
 
-- 테두리 없음-창의 테두리를 포함 하지 않습니다.
-- 제목이-창에 제목 표시줄이 표시 됩니다.
+- **테두리 없음-창의** 테두리를 포함 하지 않습니다.
+- **제목이-창** 에 제목 표시줄이 표시 됩니다.
 - **Closable** -창에 닫기 단추가 있으며 닫을 수 있습니다.
 - **Miniaturizable** -창에는 Miniaturize 단추가 있으며 최소화 될 수 있습니다.
-- 크기 조정 가능-창의 크기 조정 단추가 있으며 크기를 조정할 수 있습니다.
+- **크기 조정 가능-창의** 크기 조정 단추가 있으며 크기를 조정할 수 있습니다.
 - **유틸리티** -유틸리티 스타일 창 (패널)입니다.
 - **Docmodal** -창이 패널 인 경우 시스템 모달 대신 문서 모달이 됩니다.
 - **NonactivatingPanel** -창이 패널 인 경우 주 창이 됩니다.

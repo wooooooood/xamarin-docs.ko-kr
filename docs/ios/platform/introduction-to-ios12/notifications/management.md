@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios를 사용 하 여 iOS 12에 도입 
 ms.prod: xamarin
 ms.assetid: F1D90729-F85A-425B-B633-E2FA38FB4A0C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
-ms.openlocfilehash: 69b6876a22e511d1c14a795d7b81c3a638492468
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b6c6baad2cbd923bde4dab3766040b5df4351787
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652395"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282121"
 ---
 # <a name="notification-management-in-xamarinios"></a>Xamarin.ios의 알림 관리
 

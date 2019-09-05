@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 84bb6815c19bcacb4a9d1bddc44d340d51199c32
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4a8e3827deadd5c5d183c61c53cbe8346949759b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61421985"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290497"
 ---
 # <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>런타임 오류: 어셈블리 mscorlib.dll을 찾을 수 없거나 로드할 수 없습니다.
 
@@ -22,5 +22,5 @@ ms.locfileid: "61421985"
 <Warning>: Service exited with abnormal code: 1
 ```
 
-이런 경우는 *숨겨진* `.monotouch-32` 및 `.monotouch-64` 폴더에서 누락 된를 `.xcarchive` 서명에 / IPA 만들기, 런타임 오류를 발생 시키는.
+이 문제는 서명/IPA 만들기 `.monotouch-64` `.xcarchive` 에 대해 *숨겨진* `.monotouch-32` 및 폴더를 누락 하 여 런타임 오류를 트리거할 때 발생 합니다.
 

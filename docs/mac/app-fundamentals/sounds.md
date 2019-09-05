@@ -1,39 +1,39 @@
 ---
-title: Xamarin.mac에서 AVAudioPlayer로 소리 재생
-description: 이 문서에서는 Xamarin.Mac 앱에서 AVAudioPlayer로 소리를 재생 하는 방법을 설명 합니다. AVAudioPlayer 자세히에 탐색 하는 기타 문서에 대 한 링크를 높은 수준에서 설명 합니다.
+title: Xamarin.ios에서 Av오디오 플레이어로 소리 재생
+description: 이 문서에서는 Xamarin.ios 앱에서 Av오디오 플레이어로 소리를 재생 하는 방법을 설명 합니다. 높은 수준의 Avother 플레이어에 대해 설명 하 고 그에 대 한 링크를 제공 하는 다른 설명서에 대 한 링크를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 9aeb7bbfc2fddef1f690b5299ec060c475ea1ce7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4a5ead3e3c02fbdd2ae5486a6ac637defeb5abd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61234868"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283296"
 ---
-# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Xamarin.mac에서 AVAudioPlayer로 소리 재생
+# <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Xamarin.ios에서 Av오디오 플레이어로 소리 재생
 
-## <a name="about-the-avaudioplayer"></a>AVAudioPlayer에 대 한
+## <a name="about-the-avaudioplayer"></a>Av오디오 플레이어 정보
 
-`AVAudioPlayer` 클래스는 메모리 또는 파일에서 오디오 데이터를 재생 하는 데 사용 됩니다. Apple이이 클래스를 사용 하 여 네트워크 스트리밍을 수행 하는 작업 또는 대기 시간이 짧은 오디오 I/O 필요 하지 않는 한 앱에서 오디오를 재생 하는 것이 좋습니다.
+`AVAudioPlayer` 클래스는 메모리 또는 파일에서 오디오 데이터를 재생 하는 데 사용 됩니다. 네트워크 스트리밍을 수행 하거나 대기 시간이 짧은 오디오 i/o를 요구 하지 않는 한 Apple은이 클래스를 사용 하 여 앱에서 오디오를 재생 하는 것을 권장 합니다.
 
-사용할 수는 `AVAudioPlayer` 다음을 수행 하는 클래스:
+`AVAudioPlayer` 클래스를 사용 하 여 다음을 수행할 수 있습니다.
 
-- 선택적 반복 재생 시간이의 소리를 재생 합니다.
-- 선택적 동기화를 사용 하 여 동시에 여러 소리를 재생 합니다.
-- 볼륨, 재생 속도 및 각 사운드 재생에 대 한 스테레오 배치를 제어 합니다.
-- 빨리 감기 또는 rewind 같은 기능을 지원 합니다.
-- 재생 수준을 계량 데이터를 가져옵니다.
+- 선택적인 반복이 있는 모든 기간의 소리를 재생 합니다.
+- 선택적 동기화를 사용 하 여 여러 소리를 동시에 재생 합니다.
+- 재생 하는 각 사운드의 볼륨, 재생 빈도 및 스테레오 위치를 제어 합니다.
+- 빨리 감기 또는 되감기와 같은 기능을 지원 합니다.
+- 재생 수준 계량 데이터를 가져옵니다.
 
-`AVAudioPlayer` iOS, tvOS 및 macOS.aif,.wav 또는. mp3 등에서 제공 하는 모든 오디오 형식에서 소리를 지원 합니다.
+`AVAudioPlayer`는 iOS, tvOS 및 macOS에서 제공 하는 오디오 형식 (예: aif, .wav 또는 mp3)의 소리를 지원 합니다.
 
 ## <a name="playing-sounds-in-macos"></a>MacOS에서 소리 재생
 
-MacOS iOS와 같은 오디오 도구 상자 클래스를 지원 하므로 iOS를 참조 하세요 [AVAudioPlayer로 소리 재생](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) Xamarin.Mac 앱에서 오디오 재생의 전체 세부 정보에 대 한 설명서입니다.
+MacOS는 iOS와 같은 오디오 도구 상자 클래스를 지원 하기 때문에 Xamarin.ios 앱에서 오디오를 재생 하는 방법에 대 한 자세한 내용은 [Avaudio player를 사용 하 여 Ios 게임 재생](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) 설명서를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [AVAudioPlayer 참조](https://developer.apple.com/documentation/avfoundation/avaudioplayer)
+- [Av오디오 플레이어 참조](https://developer.apple.com/documentation/avfoundation/avaudioplayer)

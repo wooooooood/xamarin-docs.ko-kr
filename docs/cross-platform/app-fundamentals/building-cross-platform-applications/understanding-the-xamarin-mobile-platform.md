@@ -3,15 +3,15 @@ title: 1 부-Xamarin Mobile Platform 이해
 description: 이 문서는 높은 수준의 Xamarin 플랫폼을 설명 하 고, 컴파일 프로세스, 플랫폼 SDK 액세스, 코드 공유, 사용자 인터페이스 만들기, 비주얼 디자이너 등을 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e3a9afa2780f9cf5816427d282644fb2ac3c8dde
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 5398d99a64e7f6b75c8b9e418da252852aff1322
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526766"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288673"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>1 부-Xamarin Mobile Platform 이해
 
@@ -52,7 +52,7 @@ Xamarin을 사용 하면 플랫폼별 SDK에서 제공 하는 기능을 친숙 C
 
 - **ios** – Xamarin.ios는 Apple의 CocoaTouch SDK 프레임 워크를 참조할 수 있는 네임 스페이스로 노출 C#합니다. 예를 들어 모든 사용자 인터페이스 컨트롤을 포함 하는 uikit 프레임 워크를 간단한 `using UIKit;` 문에 포함할 수 있습니다.
 - **Android** – Xamarin android는 Google의 Android SDK를 네임 스페이스로 노출 하므로 사용자 인터페이스 컨트롤에 액세스 `using Android.Views;` 하는 등의 using 문을 사용 하 여 지원 되는 SDK의 모든 부분을 참조할 수 있습니다.
-- Windows – windows 응용 프로그램은 Windows에서 Visual Studio를 사용 하 여 빌드됩니다. 프로젝트 형식에는 Windows Forms, WPF, WinRT 및 UWP (유니버설 Windows 플랫폼)가 포함 됩니다.
+- **Windows – windows** 응용 프로그램은 Windows에서 Visual Studio를 사용 하 여 빌드됩니다. 프로젝트 형식에는 Windows Forms, WPF, WinRT 및 UWP (유니버설 Windows 플랫폼)가 포함 됩니다.
 
 ## <a name="seamless-integration-for-developers"></a>개발자를 위한 원활한 통합
 

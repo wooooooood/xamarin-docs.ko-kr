@@ -3,15 +3,15 @@ title: 플랫폼 간 앱에서의 네이티브 형식 작업
 description: 이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치와 코드를 공유 하는 플랫폼 간 응용 프로그램에서 새로운 iOS Unified API 네이티브 형식 (nint, nuint, nint)을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: 9018c3e3c976ef7623835055ee989dfd86dc25e1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226225"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290846"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서의 네이티브 형식 작업
 
@@ -58,7 +58,7 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 
 #### <a name="using-duplicate-methods"></a>중복 메서드 사용
 
-위에 지정 된 사각형 데이터에서 변환을 수행 하는 라이브러리의 예를 들어 보겠습니다. 라이브러리에 매우 간단한 메서드를 하나 또는 두 개만 포함 하는 경우 Xamarin.ios 및 Xamarin.ios에 대 한 해당 메서드의 중복 버전을 만들도록 선택할 수 있습니다. 예:
+위에 지정 된 사각형 데이터에서 변환을 수행 하는 라이브러리의 예를 들어 보겠습니다. 라이브러리에 매우 간단한 메서드를 하나 또는 두 개만 포함 하는 경우 Xamarin.ios 및 Xamarin.ios에 대 한 해당 메서드의 중복 버전을 만들도록 선택할 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

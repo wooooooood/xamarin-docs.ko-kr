@@ -4,15 +4,15 @@ description: SQLite.NET PCL NuGet 라이브러리는 Xamarin.ios 앱에 대 한 
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 0416aed671c9675e7c2c990eb59a7a4d8cab7888
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199616"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289833"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Xamarin.ios에서 SQLite.NET 사용
 

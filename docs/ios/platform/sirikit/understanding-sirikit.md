@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 SiriKit로 작업 하는 
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: bce2c1e543084ea80908946b1e37e43cf53c1676
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227353"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292559"
 ---
 # <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해하기
 
@@ -107,7 +107,7 @@ Siri는 사용자의 접근성 요구를 충족 하도록 조정 되며, 이러�
 [![](understanding-sirikit-images/monkeychat02.png "Siri가 따라야 하는 단계")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. 먼저 Siri는 사용자의 **음성** 오디오를 사용 하 고 텍스트로 변환 합니다.
-2. 그런 다음 텍스트는 사용자의 요청에대 한 구조화 된 표현으로 변환 됩니다.
+2. 그런 다음 텍스트는 사용자의 요청에 대 한 구조화 된 **표현으로 변환**됩니다.
 3. 의도에 따라 Siri는 사용자의 요청을 수행 하는 **작업** 을 수행 합니다.
 4. 마지막으로 Siri는 수행 된 동작에 따라 사용자에 게 **응답** (시각적 개체 및 구두)을 제공 합니다.
 
@@ -135,7 +135,7 @@ Siri의 데이터베이스에는 "Bobo" 라는 이름이 없지만 앱은 어휘
 
 Siri는 받는 사람에 게 메시지를 전송 하는 데 더 많은 작업이 필요 하다는 것을 알고 있으므로 응용 프로그램 확장으로 신속 하 게 확인 하 여 메시지가 콘텐츠를 필요로 하는지 확인 합니다. MonkeyChat가 수행 하므로 Siri는 다음과 같은 질문을 통해 사용자에 게 응답 합니다. *"원하는 항목을 Bobo?"*
 
-위의 예제에서 사용자는 *"더 많은 bananas을 보내 주세요."* 라는 응답을 받았습니다.
+위의 예제에서 사용자는 *"더 많은 bananas을 보내 주세요* **.** " 라는 응답을 받았습니다.
 
 [![](understanding-sirikit-images/monkeychat05.png "Siri는 사용자의 응답을 구조적 의도에 번들 합니다.")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
@@ -403,7 +403,7 @@ Siri에는 앱을 대신 하 여 사용자와 대화가 있음을 항상 명심 
 
 앱에 해당 하는 단일 값이 표시 되 면이를 처리 하는 기본 방법은 Siri에서 사용자에 게 확인을 요청 하는 것입니다. 예를 들어 *"Bobo?"* 라는 간단한 예를 사용 하 여 회신할 수 있습니다.
 
-단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예를 들어:
+단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예:
 
 ```csharp
 Who do you want to send the message to?

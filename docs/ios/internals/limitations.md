@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 제한 사항, 제네릭 토론,
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 7d5c9ebec2a1d79df7a9a16da91c79772746f6fc
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227534"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291899"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.ios의 제한 사항
 
@@ -75,7 +75,7 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 
 
   > [!IMPORTANT]
-  > 리플렉션과 리플렉션을 혼동 해서는 안 **됩니다.** JITed는 코드를 동적으로 생성 하 고 해당 코드를 네이티브 코드로 컴파일하고 컴파일하는 방법에 대 한 것입니다. IOS에 대 한 제한 사항 (JIT 컴파일 없음)으로 인해이는 지원 되지 않습니다.
+  > 리플렉션과 **리플렉션을 혼동**해서는 안 **됩니다.** JITed는 코드를 동적으로 생성 하 고 해당 코드를 네이티브 코드로 컴파일하고 컴파일하는 방법에 대 한 것입니다. IOS에 대 한 제한 사항 (JIT 컴파일 없음)으로 인해이는 지원 되지 않습니다.
 
 그러나 GetType ("조각이 someclass")을 비롯 한 전체 리플렉션 API (""), 메서드 나열, 속성 나열, 특성 및 값 페치는 정상적으로 작동 합니다.
 

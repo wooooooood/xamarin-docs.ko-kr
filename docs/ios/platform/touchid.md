@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 Touch ID, Apple의 생체
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cb71fc75b01621ed381f42b41df68fc80309f22c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: bc797d250b4b66ebfd06bad76c3f43759a65e7c3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121295"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292507"
 ---
 # <a name="touch-id-in-xamarinios"></a>Xamarin.ios의 Touch ID
 

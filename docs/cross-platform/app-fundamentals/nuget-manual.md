@@ -3,15 +3,15 @@ title: Xamarin에 대 한 NuGet 패키지 수동 만들기
 description: 이 문서에는 Xamarin 플랫폼을 대상으로 하는 NuGet 패키지를 빌드하는 데 유용한 팁이 포함 되어 있습니다. NuGet 패키지 Xamarin 프로필, 플랫폼 종속성이 있는 PCL Nuget 및 다양 한 오픈 소스 샘플에 대 한 링크를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: cf694b54c8d2cdb33fd480d89d32b439f036ddc5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119442"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289198"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin에 대 한 NuGet 패키지 수동 만들기
 
@@ -28,7 +28,7 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 - **MonoAndroid** - Xamarin.Android
 - **Xamarin.ios** -xamarin.ios [Unified API](~/cross-platform/macios/unified/index.md) (64 비트 지원)
-- Xamarin.ios 및 xamarin.ios의 모바일 프로필. Xamarin.ios 및 xamarin.ios API 화면에 해당 합니다.
+- **Xamarin.ios 및** xamarin.ios의 모바일 프로필. Xamarin.ios 및 xamarin.ios API 화면에 해당 합니다.
 
 이전 iOS [Classic API](~/cross-platform/macios/unified/index.md)에 대 한 대상도 있습니다.
 

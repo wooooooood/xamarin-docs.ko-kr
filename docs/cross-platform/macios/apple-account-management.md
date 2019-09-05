@@ -3,15 +3,15 @@ title: Apple 계정 관리
 description: 이 문서에서는 Mac용 Visual Studio 및 Visual Studio 2019에서 Apple 계정 관리 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: bb51550518c723a72a29637ad8972cb61c687c6b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118971"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290625"
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 

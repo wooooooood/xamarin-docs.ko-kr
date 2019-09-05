@@ -1,47 +1,47 @@
 ---
 title: watchOS 5 소개
-description: 이 문서에서는 일부 watchOS 5 개괄적으로 설명 제공 Xamarin에 대 한 Api입니다.
+description: 이 문서에서는 Xamarin 용 watchOS 5 Api에 대 한 개략적인 설명을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: 775BE4E4-F408-4620-AED9-2B48C7B27F38
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 5df751f683c530ee9f7ec58d9d6393d9f089314d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e873d476e38c91bad0db805d53e2c396f4ffb9dd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61222860"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282035"
 ---
 # <a name="introduction-to-watchos-5"></a>watchOS 5 소개
 
-이 문서에서는 일부 watchOS 5 개괄적으로 설명 제공 Api.
+이 문서에서는 watchOS 5 Api에 대 한 개략적인 설명을 제공 합니다.
 
-Xamarin 사용한 5 watchOS 앱 빌드 시작, 참조는 [시작 가이드](~/ios/platform/introduction-to-ios12/get-started.md)
+Xamarin을 사용 하 여 watchOS 5 앱 빌드를 시작 하려면 [시작 가이드](~/ios/platform/introduction-to-ios12/get-started.md) 를 참조 하세요.
 
-## <a name="workout-improvements"></a>운동 개선 사항
+## <a name="workout-improvements"></a>체력 향상
 
-WatchOS 5에서에서 운동 Api 달리기 HealthKit를 자동으로 앱 작동이 중단 후 만납니다를 계속 하 고 일련의 관련된 수량 데이터를 사용 하 여 작업에 저장 되는 운동 데이터 컬렉션에 대 한 새 기능을 제공 합니다.
+WatchOS 5의 체력 Api는 체력 데이터 수집에 대 한 새로운 기능을 제공 하 고, HealthKit에 작업을 저장 하 고, 앱이 충돌 한 후 자동으로 체력을 지속적으로 지속 하 고, 일련의 관련 수량 데이터로 작업 합니다.
 
 ## <a name="siri-shortcuts"></a>Siri 바로 가기
 
-5 watchOS에서 Siri 시계 화면의 바로 가기를 표시 해당 화면 앱 콘텐츠 및 사용자에 게 기능 편리한 시간에. Siri 사용할 가능성이 가장 높은 경우 관련 바로 가기 키를 표시 하는 시간이 지남에 따라 학습 합니다.
+WatchOS 5에서 Siri watch 표면에는 앱 콘텐츠와 기능을 사용자에 게 편리한 시간에 노출 하는 바로 가기가 표시 됩니다. Siri는 시간 경과에 따라 가장 적합 한 바로 가기를 표시 합니다.
 
 ## <a name="background-audio-mode"></a>배경 오디오 모드
 
-watchOS 5는 타사 AV Foundation 프레임 워크를 통해 백그라운드에서 오디오를 재생 하는 앱 수 있도록 만듭니다.
+watchOS 5는 타사 앱이 AV 기반 프레임 워크를 통해 백그라운드에서 오디오를 재생할 수 있도록 합니다.
 
-## <a name="movement-disorder-api"></a>이동 무질서 API
+## <a name="movement-disorder-api"></a>이동 잘못 API
 
-이동 무질서 API, 5, watchOS에 그것 프레임 워크의 일부 파 킨 슨 's 질병 관련이 머 및 dyskinesia 증상 watchOS 응용 프로그램 모니터링, 기록 및 쿼리를 허용 합니다.
+WatchOS 5에서 CoreMotion 프레임 워크의 일부인 이동 잘못 API를 통해 watchOS 응용 프로그램은 tremor의 질병과 관련 된 dyskinesia 및 Parkinson 증상을 모니터링, 기록 및 쿼리할 수 있습니다.
 
-## <a name="natural-language-framework"></a>자연 언어 프레임 워크
+## <a name="natural-language-framework"></a>자연어 프레임 워크
 
-자연 언어 프레임 워크에는 응용 프로그램을을 다양 한 유형의 언어 분석을 수행할 수 있습니다. 예를 들어, 요소를 확인 하 고 텍스트 블록을 나타내는 언어를 결정 하려면 사용할 수 있습니다.
+자연어 프레임 워크를 사용 하면 응용 프로그램에서 다양 한 유형의 언어 분석을 수행할 수 있습니다. 예를 들어, 음성의 일부를 식별 하 고 텍스트 블록이 나타내는 언어를 결정 하는 데 사용할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [watchOS – Apple Developer (Apple)](https://developer.apple.com/watchOS/)
-- [WatchOS (Apple) (비디오)의 새로운 기능](https://developer.apple.com/videos/play/wwdc2018/206/)
-- [조사식 (Apple)](https://www.apple.com/watch/)
+- [watchOS – apple Developer (apple)](https://developer.apple.com/watchOS/)
+- [WatchOS의 새로운 기능 (Apple) (비디오)](https://developer.apple.com/videos/play/wwdc2018/206/)
+- [시청 (Apple)](https://www.apple.com/watch/)

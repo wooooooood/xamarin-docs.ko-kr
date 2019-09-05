@@ -3,15 +3,15 @@ title: 플랫폼 간 애플리케이션 빌드
 description: 이 섹션에서는이 항목의 요약에서는 6 개의 부분으로, xamarin 개발 플랫폼을 사용 하 여 응용 프로그램을 빌드하는 방법에 대해 설명 하 고, Xamarin이 모바일 앱을 설계 하는 방법을 이해 하 고, 다양 한 앱 스토어에서 테스트 및 배포 하는
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/28/2016
-ms.openlocfilehash: 4485f25ac2f81747132ccd92d73c52118f70e545
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680921"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288051"
 ---
 # <a name="building-cross-platform-applications"></a>플랫폼 간 애플리케이션 빌드
 

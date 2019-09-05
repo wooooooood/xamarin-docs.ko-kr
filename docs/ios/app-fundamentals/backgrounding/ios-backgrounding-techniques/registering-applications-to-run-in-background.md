@@ -4,15 +4,15 @@ description: 이 문서에서는 백그라운드에서 실행할 Xamarin.ios 응
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 67cc2028276b6e1415c88cb8957e2cd567fa5bae
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 044ae7e4a77abb77e766df58b9cda5938ce8fe7b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521272"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290610"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>백그라운드에서 실행할 Xamarin.ios 앱 등록
 
@@ -24,7 +24,7 @@ ms.locfileid: "69521272"
 
 등록 된 앱은 다음과 같은 여러 범주로 나눌 수 있습니다.
 
-- 오디오 음악 플레이어 및 오디오 콘텐츠로 작업 하는 기타 응용 프로그램을 등록 하 여 앱이 더 이상 포그라운드에 있지 않아도 오디오를 계속 재생할 수 있습니다. 이 범주의 앱이 오디오 재생 또는 백그라운드에서 다운로드 이외의 다른 작업을 수행 하려고 하면 iOS에서 종료 됩니다.
+- **오디오 음악** 플레이어 및 오디오 콘텐츠로 작업 하는 기타 응용 프로그램을 등록 하 여 앱이 더 이상 포그라운드에 있지 않아도 오디오를 계속 재생할 수 있습니다. 이 범주의 앱이 오디오 재생 또는 백그라운드에서 다운로드 이외의 다른 작업을 수행 하려고 하면 iOS에서 종료 됩니다.
 - **Voip** -voip (Voice Over Internet Protocol) 응용 프로그램은 오디오 응용 프로그램에 부여 된 것과 동일한 권한을 받아 오디오를 백그라운드에서 계속 처리할 수 있습니다. 또한 연결을 유지 하기 위해 해당 장치를 구동 하는 VoIP 서비스에 필요에 따라 응답할 수 있습니다.
 - **외부 액세서리 및 bluetooth** -bluetooth 장치 및 기타 외부 하드웨어 액세서리와 통신 해야 하는 응용 프로그램용으로 예약 된 이러한 범주에 등록 하면 앱이 하드웨어에 연결 된 상태를 유지할 수 있습니다.
 - **Newsstand** -Newsstand 응용 프로그램은 백그라운드에서 콘텐츠를 계속 동기화 할 수 있습니다.

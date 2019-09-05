@@ -1,64 +1,64 @@
 ---
-title: WatchOS에서 Xamarin 화면 크기를 사용 하 여 작업
-description: 이 문서에서는 다양 한 watchOS 화면 크기를 사용 하는 방법을 설명 합니다. WatchOS 인터페이스 디자이너, watchOS 시뮬레이터에 설명 하 고 이미지 리소스입니다.
+title: Xamarin에서 watchOS 화면 크기 작업
+description: 이 문서에서는 다양 한 watchOS 화면 크기를 사용 하는 방법을 설명 합니다. WatchOS 인터페이스 디자이너, watchOS 시뮬레이터 및 이미지 리소스에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: b2f4cc71c1993e51ed55b51edd7c50d393e60873
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f0caa2dd2c2b675fe85000a73e5d58ce7e277488
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61412907"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281462"
 ---
-# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>WatchOS에서 Xamarin 화면 크기를 사용 하 여 작업
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Xamarin에서 watchOS 화면 크기 작업
 
-Apple Watch 두 화면 크기에서 제공 됩니다.
+Apple Watch는 다음과 같은 두 가지 화면 크기로 사용할 수 있습니다.
 
 - **38mm**
-  - 136 x 170 논리 픽셀 (272 x 340 물리적 픽셀)
+  - 136 x 170 논리 픽셀 (272 x 340 실제 픽셀)
 
 - **42mm**
-  - 156 x 195 논리 픽셀 (312 x 390 물리적 픽셀)입니다.
+  - 156 x 195 논리 픽셀 (312 x 390 실제 픽셀)
 
-화면 크기 디자인 및 앱을 테스트 하는 경우 계정에 수행 해야 합니다.
+앱을 디자인 하 고 테스트할 때는 화면 크기를 고려해 야 합니다.
 
-## <a name="watchos-interface-designer"></a>watchOS 인터페이스 디자이너
+## <a name="watchos-interface-designer"></a>watchOS Interface 디자이너
 
-Mac 디자이너에 대 한 Visual Studio에서 표시 하는 기본적으로에서 인터페이스 컨트롤러를 시청 **Any Apple Watch**합니다.
+기본적으로 Mac용 Visual Studio 디자이너는 **모든 Apple Watch**에서 조사식 인터페이스 컨트롤러를 표시 합니다.
 
-![](screen-sizes-images/screen-any-sml.png "디자이너를 표시 하는 모든 Apple Watch 인터페이스 컨트롤러를 시청 하세요.")
+![](screen-sizes-images/screen-any-sml.png "디자이너는 모든 Apple Watch에서 조사식 인터페이스 컨트롤러를 표시 합니다.")
 
-크기 메뉴를 사용 하 여 편집 및 사용 가능한 화면 크기 중 하나에서 스토리 보드를 미리 보려면: **(38mm** 나 **42 mm**:
+크기 메뉴를 사용 하 여 사용 가능한 화면 크기 중 하나에서 스토리 보드를 편집 하 고 미리 봅니다. **38mm** 또는 **448mm**:
 
-![](screen-sizes-images/screen-menu-sml.png "(38mm 또는 42 mm 크기 선택")
+![](screen-sizes-images/screen-menu-sml.png "38mm 또는 448mm 크기 선택")
 
-화면 크기는 더 작은 화면에서 잘린/숨겨진 콘텐츠를 렌더링 경우에 따라 합니다.
-두 크기에서 테스트 해야 합니다.
+화면 크기가 클수록 작은 화면에서 잘리거나 숨겨지는 콘텐츠가 렌더링 되는 경우도 있습니다.
+두 크기를 모두 테스트 해야 합니다.
 
 
 ### <a name="interface-design"></a>인터페이스 디자인
 
-앱 크기에 관계 없이 화면에서 동일한 콘텐츠를 표시 해야 하 고 확장 하거나 적절 하 게 요소 계약 해야 합니다. 특성 검사기에서 Mac 디자이너에 대 한 Visual Studio를 사용 하 여 **컨테이너에 상대적인** 하거나 **크기에 맞게 콘텐츠를** 고정된 크기 보다 우선적으로 합니다.
+앱은 크기에 관계 없이 화면에 동일한 콘텐츠를 표시 하 고 필요에 따라 요소를 확장 하거나 축소 해야 합니다. Mac용 Visual Studio 디자이너의 특성 검사자에서는 컨테이너 또는 크기 **를 기준** 으로 기본 설정의 콘텐츠를 고정 크기에 **맞게** 사용 해야 합니다.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "컨테이너에 대 한 상대 또는 크기에 맞게 콘텐츠 고정된 크기 보다 우선적으로 사용 하 여")
+![](screen-sizes-images/sizeattributepanel-sml.png "컨테이너 또는 크기를 기준으로 기본 설정의 콘텐츠를 고정 크기에 맞게 사용")
 
-보기 화면을 검은색 베젤에 둘러싸여, 때문에 사용자 인터페이스 주위에 안쪽 여백을 제공 권장 되지 않습니다. 요소를 화면 가장자리에 대 한 rest 하 고 앱 주위에 테두리를 자연스럽 게 형성 베젤에 사용 수 있습니다.
+조사식 화면이 검정색 베젤을 묶으 므로 인터페이스 주위의 안쪽 여백을 제공 하지 않는 것이 좋습니다. 화면 가장자리에 대 한 요소를 구성 하 고 베젤을 앱 주위에서 자연 스러운 테두리를 만들도록 합니다.
 
 
 ## <a name="watchos-simulator"></a>watchOS 시뮬레이터
 
-경우 시뮬레이터에서 테스트 간에 쉽게 전환할 수를 사용 하 여 두 화면 크기를 **하드웨어 > 장치** 메뉴.
+시뮬레이터에서 테스트할 때 **하드웨어 > 장치** 메뉴를 사용 하 여 두 화면 크기 간을 쉽게 전환할 수 있습니다.
 
-![](screen-sizes-images/simulator.png "시뮬레이터는 하드웨어 장치 메뉴를 사용 하 여 두 화면 크기 간에 전환할 수 있습니다.")
+![](screen-sizes-images/simulator.png "시뮬레이터는 하드웨어 장치 메뉴를 사용 하 여 두 화면 크기 간을 전환할 수 있습니다.")
 
 
 ## <a name="image-resources"></a>이미지 리소스
 
-단일 자산 다양 한 크기의 좋은 찾지 않습니다 하는 경우에 여러 이미지 자산을 사용 해야 합니다. 이미지 자산 카탈로그를 각 크기에 대해 지정할 별도 비트맵에 대 한 허용:
+단일 자산이 여러 크기에서 잘 보이지 않는 경우 여러 이미지 자산을 사용 해야 합니다. 이미지 자산 카탈로그를 사용 하면 각 크기에 대해 별도의 비트맵이 지정 됩니다.
 
 ![](screen-sizes-images/images-xcassets.png "이미지 자산 카탈로그 편집기")
 
@@ -67,7 +67,7 @@ Mac 디자이너에 대 한 Visual Studio에서 표시 하는 기본적으로에
 staticImage.SetImage(UIImage.FromBundle("Walkway"));
 ```
 
-또는 화면 크기를 확인 하 고 다양 한 이미지를 완전히 로드 하려면 코드를 사용 합니다.
+또는 코드를 사용 하 여 화면 크기를 확인 하 고 다른 이미지를 모두 로드 합니다.
 
 ```csharp
 bool large = WKInterfaceDevice.CurrentDevice.ScreenBounds.Size.Width > 136.0;
@@ -79,7 +79,7 @@ using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 }
 ```
 
-사용 하 여 자세히 알아보세요 합니다 [이미지 컨트롤](~/ios/watchos/user-interface/image.md)합니다.
+[이미지 컨트롤](~/ios/watchos/user-interface/image.md)사용에 대해 자세히 알아보세요.
 
 
 

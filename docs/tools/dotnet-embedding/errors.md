@@ -3,15 +3,15 @@ title: .NET 포함 오류
 description: 이 문서에서는 .NET 포함에 의해 생성 되는 오류에 대해 설명 합니다. 오류는 코드 별로 나열 되며 문제 해결에 도움이 되는 설명이 제공 됩니다.
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: e5f998105202a4143c94748efad5faae0212acba
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: be62ba212cb92e031f760ef3f267bc3eac91c748
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198783"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282163"
 ---
 # <a name="net-embedding-errors"></a>.NET 포함 오류
 

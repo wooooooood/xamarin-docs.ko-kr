@@ -3,15 +3,15 @@ title: Unified API에 기존 앱 업데이트
 description: 이 문서는 Xamarin 응용 프로그램을 Unified API 업데이트 하는 방법을 설명 하는 다양 한 가이드에 연결 됩니다. Xamarin.ios 앱, Xamarin.ios 앱에 대해 설명 합니다. Xamarin Forms 앱, 플랫폼 간 앱 및 바인딩 프로젝트의 네이티브 형식입니다.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 021139c817d2b0eb430a6c8fe09dbd07b7c17813
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3379b9672b344e8e424f95e273683f4c5e241b71
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226158"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280795"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Unified API에 기존 앱 업데이트
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Mac용 Visual Studio를 사용하여 Xamarin.Ma
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 601e8f0e47c07aab6d3c56b4799716e10ec606ab
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9454d1b7144bc41c0a4510314a59dd90971fbbc6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105872"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285532"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Mac App Store에 Xamarin.Mac 앱 게시
 
@@ -20,7 +20,7 @@ ms.locfileid: "50105872"
 
 Xamarin.Mac 앱은 두 가지 방법으로 배포할 수 있습니다.
 
-- **개발자 ID** – 개발자 ID로 서명된 응용 프로그램은 앱 스토어 외부에 배포할 수 있지만, 게이트키퍼에서 인식하고 설치할 수 있습니다.
+- **개발자 ID** – 개발자 ID로 서명된 애플리케이션은 앱 스토어 외부에 배포할 수 있지만, 게이트키퍼에서 인식하고 설치할 수 있습니다.
 - **Mac 앱 스토어** – 앱에는 설치 관리자 패키지가 있어야 하며, Mac 앱 스토어에 제출할 수 있도록 앱과 설치 관리자가 모두 서명되어야 합니다.
 
 이 문서에서는 Mac용 Visual Studio 및 Xcode를 사용하여 Apple 개발자 계정을 설정하고 각 배포 유형에 대한 Xamarin.Mac 프로젝트를 구성하는 방법을 설명합니다.

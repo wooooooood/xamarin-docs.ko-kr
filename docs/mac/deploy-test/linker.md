@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.Mac에서 연결을 설명합니다. �
 ms.prod: xamarin
 ms.assetid: F03176C3-F8D4-4DE8-870C-7F27D8CE525A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: dd42de4dda4b5d5b09156898fd7a8bab331adf88
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 00d5d5cf9cda38fbfc09fcfe8b4dcb56d00dee5b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865903"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291420"
 ---
 # <a name="xamarinmac-linker-options"></a>Xamarin.Mac 링커 옵션
 
@@ -27,7 +27,7 @@ _연결은 사용되지 않는 코드를 제거하여 애플리케이션의 크�
 - **없음** – 모든 연결을 사용하지 않습니다. Modern의 디버그 구성과 [전체]의 모든 구성에서 기본값입니다.
 - **SDK** – 사용자 어셈블리를 제외한 모든 SDK 어셈블리를 연결합니다. [Modern]의 릴리스 구성에서 기본값입니다. [전체]에서는 사용할 수 없습니다.
 - **전체** – 모든 어셈블리를 연결합니다. 이렇게 하려면 사용자 코드가 링커로부터 안전해야 하며, 자세한 내용은 [참고](~/ios/deploy-test/linker.md)에서 확인할 수 있습니다. [전체]에서는 사용할 수 없습니다.
-- **플랫폼** – Xamarin.Mac.dll만 연결합니다. 자세한 내용은 다음을 참조하세요.
+- **플랫폼** – Xamarin.Mac.dll만 연결합니다. 자세한 내용은 다음을 참조하십시오.
 
 ## <a name="platform-linking"></a>플랫폼 연결
 

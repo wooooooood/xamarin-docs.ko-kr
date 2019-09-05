@@ -4,15 +4,15 @@ description: 이 문서에서는 iCloud와 Xamarin.ios 응용 프로그램에서
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: d25ad46b0d8797da8f14987f54006b63d2b8233d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 364775ae8e8874d87022b5e45bd23ea29e82382d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527583"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292415"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.ios에서 iCloud 사용
 
@@ -224,7 +224,7 @@ ICloud를 사용 하려면 UIDocument 하위 클래스에서 구현 해야 하�
 
 - **LoadFromContents** -모델 클래스/es로 압축을 풀 수 있도록 파일 내용의 nsdata를 전달 합니다.
 
-- 내용 지정-디스크 (및 클라우드)에 저장할 모델 클래스/Es의 nsdata 표현을 제공 하는 요청입니다.
+- 내용 **지정-디스크** (및 클라우드)에 저장할 모델 클래스/Es의 nsdata 표현을 제공 하는 요청입니다.
 
 **ICloudUIDoc\MonkeyDocument.cs** 의이 샘플 코드에서는 uidocument를 구현 하는 방법을 보여 줍니다.
 

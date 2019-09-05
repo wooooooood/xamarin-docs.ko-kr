@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 개발자를 위한 iOS 9에서 제
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69a599b6a7534cb77dd9e023d937f10a6b0523fb
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620666"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285203"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
@@ -29,7 +29,7 @@ IOS 9 및 iPhone 6s와 iPhone 6s Plus를 처음 접하는 3D Touch는 iOS 앱에
 3D Touch는 앱에 다음과 같은 기능을 제공 합니다.
 
 - **압력 민감도** -이제 앱은 사용자가 화면을 터치 하는 속도를 측정 하 고 해당 정보를 활용할 수 있습니다. 예를 들어 그리기 앱은 사용자가 화면에 접촉 하는 정도에 따라 선을 더 두껍게 하거나 더 가늘게 만들 수 있습니다.
-- 이제 응용 프로그램을 **피킹 (peeking** ) 하 여 현재 컨텍스트에서 이동 하지 않고도 사용자가 해당 데이터와 상호 작용할 수 있게 할 수 있습니다. 화면에서 하드 키를 누르면 관심 있는 항목 을 볼 수 있습니다 (예: 메시지 미리 보기). 더 어렵게 누르면 항목을 볼 수 있습니다.
+- 이제 응용 프로그램을 **피킹 (peeking** ) 하 여 현재 컨텍스트에서 이동 하지 않고도 사용자가 해당 데이터와 상호 작용할 수 있게 할 수 있습니다. 화면에서 하드 키를 누르면 관심 있는 항목을 볼 수 있습니다 (예: 메시지 *미리 보기)* . 더 어렵게 누르면 *항목을 볼 수 있습니다* .
 - **빠른 작업** -사용자가 데스크톱 앱에서 항목을 마우스 오른쪽 단추로 클릭할 때 팝업 될 수 있는 상황에 맞는 메뉴와 같은 빠른 작업을 생각 합니다. 빠른 작업을 사용 하 여 iOS 장치의 홈 화면 아이콘에서 앱의 함수에 대 한 쉽고 빠르게 액세스 하는 바로 가기를 추가할 수 있습니다.
 
 자세히 알아보려면 [3D 터치 가이드 소개](~/ios/platform/3d-touch.md) 를 참조 하세요.
@@ -63,7 +63,7 @@ IOS 9가 도입 됨에 따라 Apple은 iOS 8 및 이전 버전에서 사용 하�
 이러한 새로운 개체 지향 프레임 워크는 다음과 같은 기능을 제공 합니다.
 
 - **연락처** – 사용자의 연락처 정보에 대 한 xamarin.ios 액세스를 제공 합니다. 대부분의 앱은 읽기 전용 액세스만 필요 하므로이 프레임 워크는 스레드로부터 안전한 읽기 전용 액세스를 위해 최적화 되었습니다.
-- 지 수-ios 장치에서 연락처를 표시, 편집, 선택 및 만들기 위한 xamarin.ios UI 요소를 제공 합니다.
+- 지 **수-ios** 장치에서 연락처를 표시, 편집, 선택 및 만들기 위한 xamarin.ios UI 요소를 제공 합니다.
 
 자세한 내용은 [연락처 및 연락처 UI](~/ios/platform/contacts.md) 설명서를 참조 하세요.
 

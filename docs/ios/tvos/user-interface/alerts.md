@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin에서 tvOS 경고를 사용 하는 방�
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: de7c8918ff500cb2353214fd84eaa4c97713493e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227272"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291121"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 작업
 
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-메서드 `AddTextField` 는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예:
+메서드 `AddTextField` 는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예를 들어:
 
 ```csharp
 // Initialize field
@@ -192,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>경고 뷰 컨트롤러 도우미 클래스
 
-를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예:
+를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들어:
 
 ```csharp
 using System;

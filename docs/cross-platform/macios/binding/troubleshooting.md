@@ -1,48 +1,48 @@
 ---
 title: 바인딩 문제 해결
-description: 이 가이드는 Objective-c 라이브러리 바인딩 문제가 있을 경우 수행할 작업을 설명 합니다. 특히, 누락 된 바인딩, 바인딩 및 버그를 보고 하려면 null을 전달 하는 경우 인수 예외를 설명 합니다.
+description: 이 가이드에서는 목표-C 라이브러리를 바인딩하는 데 어려움이 있는 경우 수행할 작업에 대해 설명 합니다. 특히 바인딩에 null을 전달 하는 경우의 인수 예외 및 버그를 보고 하는 경우 누락 된 바인딩에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: 686ce3b46f268b650c63cace2a29b9d501a4063c
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 8fd4a11208be1271785a7e02ad8d45db66d6f1fd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977603"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280882"
 ---
 # <a name="binding-troubleshooting"></a>바인딩 문제 해결
 
-MacOS (OS X 이전의 함)에 대 한 바인딩 문제 해결에 대 한 몇 가지 팁 Xamarin.Mac의 Api입니다.
+Xamarin.ios에서 macOS (이전의 OS X) Api에 대 한 바인딩 문제 해결에 대 한 몇 가지 팁입니다.
 
 ## <a name="missing-bindings"></a>누락 된 바인딩
 
-Xamarin.Mac을 사용 하면 Apple Api의 대부분을 하는 동안 때로는 해야 할 수 있습니다 바인딩이 없는 일부 Apple API를 호출 하려면 아직 있습니다. 다른 경우에 타사 C/Objective-c로 호출 해야 한다는 Xamarin.Mac 바인딩의 범위 외부입니다.
+Xamarin.ios는 많은 Apple Api를 다루지만, 아직 바인딩이 없는 일부 Apple API를 호출 해야 하는 경우가 있습니다. 다른 경우에는 Xamarin.ios 바인딩 범위 밖에 서 타사 C/목표 C를 호출 해야 합니다.
 
-Apple API를 사용 하 여 처리 하는 경우 Xamarin는 적중할 API의 섹션을 검사 한 아직 없는 것을 알 수 있도록 하는 첫 번째 단계가입니다. [버그를 파일링](#reporting-bugs) 누락 API 유의 해야 합니다. 고객의 보고서에서는 다음에 작동 하는 Api를 우선 순위를 사용 합니다. 또한 Business 또는 Enterprise 라이선스가 있는 경우 진행률을 차단 하는 바인딩의이 부족도의 지침을 따르세요 [지원](http://xamarin.com/support) 티켓을 제출 합니다. 바인딩 설계 수 없습니다. 하지만 경우에 따라 해결할 수 있습니다 작업.
+Apple API를 사용 하는 경우 첫 번째 단계는 아직 적용 되지 않은 API의 섹션에 대해 Xamarin을 인식 하도록 하는 것입니다. 누락 된 API에 대 [한 버그를 파일에](#reporting-bugs) 기록 합니다. 고객의 보고서를 사용 하 여 다음에 작업할 Api의 우선 순위를 지정 합니다. 또한 비즈니스 또는 기업 라이선스를 보유 하 고 있으며,이로 인해 진행 상황이 차단 되는 경우에는 [지원](http://xamarin.com/support) 의 지침에 따라 티켓을 제출 해야 합니다. 바인딩을 사용할 수 없지만 경우에 따라 해결할 수 있습니다.
 
-에 알립니다 Xamarin (있는 경우)에 누락 된 바인딩, 직접 바인딩 고려해 야 할 다음 단계는입니다. 전체 가이드를 있다고 [여기](~/cross-platform/macios/binding/overview.md) 및 일부 비공식 설명서 [여기](http://brendanzagaeski.appspot.com/xamarin/0002.html) 손으로 Objective-c 바인딩 배치에 대 한 합니다. C API를 호출 하는 경우 사용할 수 있습니다 C#의 P/Invoke 메커니즘을 문서가 [여기](https://www.mono-project.com/docs/advanced/pinvoke/)합니다.
+누락 된 바인딩의 Xamarin (해당 하는 경우)에 게 알리려면 다음 단계는 직접 바인딩을 고려 하는 것입니다. [여기](~/cross-platform/macios/binding/overview.md) 에서 전체 가이드를 제공 하 고, [여기](http://brendanzagaeski.appspot.com/xamarin/0002.html) 에는 목표-C 바인딩을 직접 래핑하는 몇 가지 비공식 설명서가 있습니다. C API를 호출 하는 경우에는 P/ C#Invoke 메커니즘을 사용할 수 있습니다. 설명서는 [여기](https://www.mono-project.com/docs/advanced/pinvoke/)에 있습니다.
 
-작업 하려는 경우 바인딩에서 직접 주의 바인딩에 실수가 모든 종류의 흥미로운 네이티브 런타임 충돌을 생성할 수 있습니다. 특히 주의 해야 하는에서 서명을 C# 인수의 수와 각 인수의 크기에 기본 시그니처와 일치 합니다. 이렇게 하지 않으면 메모리 및/또는 스택 손상 될 수 있습니다 하 고 나중에 즉시 또는 임의의 시점에 충돌 하거나 데이터를 손상 시킬 수 있습니다.
+바인딩에 대해 작업을 수행 하기로 결정 한 경우 바인딩의 실수는 네이티브 런타임에서 모든 종류의 흥미로운 충돌을 생성할 수 있습니다. 특히의 C# 시그니처는 인수 수 및 각 인수의 크기에서 네이티브 시그니처와 일치 해야 합니다. 이렇게 하지 않으면 메모리 및/또는 스택이 손상 될 수 있으며 즉시 또는 나중에 또는 손상 된 데이터의 임의 지점에서 충돌을 발생 시킬 수 있습니다.
 
-## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>인수 예외를 바인딩에 null을 전달 하는 경우
+## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>바인딩에 null을 전달할 때 인수 예외
 
-Xamarin은 고가용성을 제공 하 게 작동 하는 동안 품질 및 Apple Api에 대 한 거친된 바인딩을 경우에 따라 실수를 쪽지의 버그입니다. 실행할 수 있는 가장 일반적인 문제는 API를 throw `ArgumentNullException` 전달 하는 경우 null에서 기본 API를 사용 하는 경우 `nil`합니다. 기본 헤더 파일 API를 자주 정의 Api nil 적용 하 고에 전달 하는 경우 충돌 하는 데 충분 한 정보를 제공 하지 않습니다.
+Xamarin은 Apple Api에 대 한 고품질 및 잘 테스트 된 바인딩을 제공 하는 데 사용할 수 있지만 실수 및 버그가 지연 되는 경우도 있습니다. 지금까지 실행할 수 있는 가장 일반적인 문제는 기본 api가 허용 `ArgumentNullException` `nil`하는 경우 null을 전달할 때 발생 하는 api입니다. API를 정의 하는 네이티브 헤더 파일은 종종 nil을 허용 하는 Api에 대 한 충분 한 정보를 제공 하지 않으며,이를 전달 하는 경우 충돌이 발생 합니다.
 
-경우에 실행 하는 경우 전달 하는 경우 `null` throw는 `ArgumentNullException` , 다음이 단계를 수행 해야 하는 것이 생각 하지만:
+를 전달 `null` 하는 경우를 `ArgumentNullException` throw 하는 경우를 throw 하지만 작동 해야 한다고 생각 하는 경우 다음 단계를 수행 합니다.
 
-1. Apple 설명서 및/또는 허용 하는 개념 증명을 찾을 수 있는지 확인 하려면 예제 확인 `nil`합니다. Objective-c에 익숙한 경우 확인을 위해 작은 테스트 프로그램을 작성할 수 있습니다.
-2. [버그를 파일링](#reporting-bugs)합니다.
-3. 버그를 해결할 수 있습니다? API를 호출 하지 않아도 경우 `null`, 한 호출에 따라 간단한 null 검사를 쉽게 해결할 수 있습니다.
-4. 그러나 일부 Api off로 설정 하거나 일부 기능을 사용 하지 않도록 설정 하려면 null 전달을 해야 합니다. 이러한 경우에 해결할 수 있습니다 문제 어셈블리 브라우저를 가져와서 (참조 [찾기는 C# 지정된 선택기에 대 한 멤버](~/mac/app-fundamentals/mac-apis.md#finding_selector))를 복사 하는 바인딩 및 null 검사를 제거 합니다. 이렇게 하면 복사 바인딩을 업데이트 되 고 수정 Xamarin.Mac에서 수신 하지 않습니다 하 고이 짧은 기간 동안 해결 간주 해야 하는 경우 버그 (2 단계)를 파일에 있는지 확인 하십시오.
+1. Apple 설명서 및/또는 예제를 확인 하 여 허용 `nil`되는 증명을 찾을 수 있는지 확인 합니다. 목표-C에 익숙해지면 작은 테스트 프로그램을 작성 하 여 확인할 수 있습니다.
+2. [버그를 파일로 만듭니다](#reporting-bugs).
+3. 버그를 해결할 수 있나요? 를 사용 `null`하 여 API 호출을 방지할 수 있는 경우 호출에 대 한 간단한 null 검사를 쉽게 해결할 수 있습니다.
+4. 그러나 일부 Api를 해제 하거나 비활성화 하려면 null을 전달 해야 합니다. 이러한 경우 어셈블리 브라우저를 열고 ( [지정 된 선택기 C# 의 멤버 찾기](~/mac/app-fundamentals/mac-apis.md#finding_selector)참조) 바인딩을 복사 하 고 null 검사를 제거 하 여 문제를 해결할 수 있습니다. 복사 된 바인딩이 Xamarin.ios에서 만든 업데이트 및 픽스를 수신 하지 않으므로이 작업을 수행 하는 경우 버그를 파일에 입력 해야 합니다 (2 단계).
 
 <a name="reporting-bugs"/>
 
 ## <a name="reporting-bugs"></a>버그 보고
 
-여러분의 의견은 소중 합니다. Xamarin.Mac 사용 하 여 문제가 경우:
+사용자 의견은 microsoft에 중요 합니다. Xamarin.ios에서 문제가 발견 되 면 다음을 수행 합니다.
 
 - [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/mac) 확인
 - [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색 

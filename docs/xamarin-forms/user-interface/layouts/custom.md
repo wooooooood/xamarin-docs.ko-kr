@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: d6bcecd27e0380221febc34f787f71d20e0fcaf9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526959"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292580"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Xamarin.ios에서 사용자 지정 레이아웃 만들기
 
@@ -74,8 +74,8 @@ Xamarin.Forms 레이아웃 및 무효화 순환의 철저 한 이해를 사용�
 1. 재정의 [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 메서드를 호출 하는 [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) 레이아웃에 대 한 메서드는 레이아웃의 모든 자식에 요청 된 크기를 반환 합니다. 자세한 내용은 [OnMeasure 메서드 재정의](#onmeasure)합니다.
 1. 재정의 된 [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 메서드를 호출 하는 [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 레이아웃의 모든 자식에서 메서드. 호출에 실패 합니다 [ `Layout` ](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 메서드는 레이아웃에 있는 각 자식에 올바른 크기 또는 위치를 수신 하지 자식 하면 이며 따라서 자식 페이지에 표시 있게 됩니다. 자세한 내용은 [LayoutChildren 메서드 재정의](#layoutchildren)합니다.
 
-  > [!NOTE]
->  자식을 열거 하는 경우는 [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 하 고 [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 재정의 건너뛸 모든 자식입니다 [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) 속성`false`. 이렇게 하면 사용자 지정 레이아웃 보이지 않는 자식에 대 한 공간을 유지 하지 않습니다는 있습니다.
+    > [!NOTE]
+    > 자식을 열거 하는 경우는 [ `OnMeasure` ](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) 하 고 [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) 재정의 건너뛸 모든 자식입니다 [ `IsVisible` ](xref:Xamarin.Forms.VisualElement.IsVisible) 속성`false`. 이렇게 하면 사용자 지정 레이아웃 보이지 않는 자식에 대 한 공간을 유지 하지 않습니다는 있습니다.
 
 1. [*선택적*] 재정의 [ `InvalidateLayout` ](xref:Xamarin.Forms.Layout.InvalidateLayout) 메서드 자식이 추가 되거나 레이아웃에서 제거 하는 경우 알림을 받을 수 있습니다. 자세한 내용은 [InvalidateLayout 메서드 재정의](#invalidatelayout)합니다.
 1. [*선택적*] 재정의 [ `OnChildMeasureInvalidated` ](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) 메서드 레이아웃의 자식 중 하나가 크기를 변경 하는 경우 알림을 받을 수 있습니다. 자세한 내용은 [OnChildMeasureInvalidated 메서드 재정의](#onchildmeasureinvalidated)합니다.

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 선택기 컨트롤을 �
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/14/2018
-ms.openlocfilehash: c31f68245a459a99604633d23426c4fa1fe5e72c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887392"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286394"
 ---
 # <a name="picker-control-in-xamarinios"></a>Xamarin.ios의 선택 컨트롤
 
@@ -260,7 +260,7 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 형식을 지정 `NSDate`하려면를 [`NSDateFormatter`](xref:Foundation.NSDateFormatter)사용 합니다.
 
-`NSDateFormatter`를 사용 하려면 해당 [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) 메서드를 호출 합니다. 예:
+`NSDateFormatter`를 사용 하려면 해당 [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) 메서드를 호출 합니다. 예를 들어:
 
 ```csharp
 var date = NSDate.Now;

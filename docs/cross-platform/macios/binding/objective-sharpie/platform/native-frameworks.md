@@ -3,15 +3,15 @@ title: 네이티브 프레임워크 바인딩
 description: 이 문서에서는 목적 Sharpie의 프레임 워크 옵션을 사용 하 여 프레임 워크로 배포 된 라이브러리에 대 한 바인딩을 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/15/2016
-ms.openlocfilehash: cb6c39b2110161b3f839b8adc03701007f09cc4d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 560db570e915cc9bf261f482f03d972973968585
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521889"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279034"
 ---
 # <a name="binding-native-frameworks"></a>네이티브 프레임워크 바인딩
 

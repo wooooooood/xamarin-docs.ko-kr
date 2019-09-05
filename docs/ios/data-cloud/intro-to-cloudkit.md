@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 CloudKit를 사용 하는 방
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/11/2016
-ms.openlocfilehash: af0765adb7e059bdc80c0b851b4bdcad8be0e3e4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 09275517a1d081073ab471d1e8c993dc232a4385
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227833"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292453"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.ios의 CloudKit
 
@@ -153,7 +153,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 |**데이터 형식**|공유 데이터|현재 사용자의 데이터|
 |**양보다**|개발자 할당량에서의 고려|사용자의 할당량에 대 한 고려|
 |**기본 권한**|전 세계 읽기|사용자가 읽을 수 있음|
-|**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|N/A|
+|**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|해당 사항 없음|
 
 ### <a name="records"></a>레코드
 
@@ -859,7 +859,7 @@ CloudKit를 사용 하는 응용 프로그램을 전달 하기 전에 **프로�
 
 11. 결과 응용 프로그램 `.ipa` 파일을 생성할 위치를 선택 합니다.
 
-이 프로세스는 응용 프로그램을 iTunes Connect에 직접 전송 하는 것과 유사 합니다. 내보내기 ... 단추를 클릭 하면 됩니다. 구성 도우미 창에서 보관 파일을 선택한 후
+이 프로세스는 응용 프로그램을 iTunes Connect에 직접 전송 하는 것과 유사 합니다. 내보내기 **... 단추를 클릭 하면 됩니다** . 구성 도우미 창에서 보관 파일을 선택한 후
 
 ## <a name="when-to-use-cloudkit"></a>CloudKit를 사용 하는 경우
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS에 대 한 추가 가이드를 제공 하 �
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 528eee6ade7236d83d5a5bdec6b27ba76f540ad0
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 92f028a632a32392a349c06c0b7ab8e15b308b9f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649148"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279529"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>iTunes Connect에서 tvOS 앱 구성
 

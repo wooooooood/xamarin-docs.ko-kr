@@ -4,15 +4,15 @@ description: 소셜 프레임 워크는 Twitter 및 Facebook을 비롯 한 소�
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c6e0005207a7c6fc444d029c9577684370b4cbf0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fd94cd7a6d37e7fa00489e788f232842b319e5d3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226618"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292663"
 ---
 # <a name="social-framework-in-xamarinios"></a>Xamarin.ios의 소셜 프레임 워크
 
@@ -302,7 +302,7 @@ request.PerformRequest ((data, response, error) => {
 
 소셜 프레임 워크는 여러 소셜 네트워크에 액세스 하도록 디자인 된 통합 API 이므로 사용 중인 소셜 네트워크에 관계 없이 코드는 거의 동일 하 게 유지 됩니다.
 
-예를 들어 앞 `SLComposeViewController` 에서 설명한 Twitter 예제와 똑같이를 사용할 수 있으며, 다른 유일한 설정은 Facebook 특정 설정 및 옵션으로 전환 하는 것입니다. 예:
+예를 들어 앞 `SLComposeViewController` 에서 설명한 Twitter 예제와 똑같이를 사용할 수 있으며, 다른 유일한 설정은 Facebook 특정 설정 및 옵션으로 전환 하는 것입니다. 예를 들어:
 
 ```csharp
 using System;

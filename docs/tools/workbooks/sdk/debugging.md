@@ -3,15 +3,15 @@ title: 통합 디버깅
 description: 이 문서에서는 Windows 및 Mac에서 에이전트 쪽 및 클라이언트 쪽 Xamarin Workbooks 통합을 디버그 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 6b89c0855b35a10a2afcbb69c4a011079c2aaf1d
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fbb5673a70328ad6edde78af1b35d2801fe65ca8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511869"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283924"
 ---
 # <a name="debugging-integrations"></a>통합 디버깅
 

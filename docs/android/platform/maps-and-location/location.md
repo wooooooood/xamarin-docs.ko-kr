@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: f6bc5891e416d7cb6c9b80c0502a9cc5d2d911d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523991"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280603"
 ---
 # <a name="location-services-on-android"></a>Android의 위치 서비스
 
@@ -336,15 +336,15 @@ else
 ```
 
 > [!NOTE]
->  사용자가 모든 위치 공급자를 사용 하지 않도록 `GetBestProvider` 설정한 경우 `null`는를 반환 합니다. 실제 장치에서이 코드가 작동 하는 방식을 확인 하려면 다음 스크린샷에 표시 된 것 처럼 **Google 설정 > 위치 > 모드** 에서 GPS, wi-fi 및 셀룰러 네트워크를 사용 하도록 설정 해야 합니다.
-
-[![Android 휴대폰의 설정 위치 모드 화면](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-아래 스크린샷에서는를 사용 하 여 `GetBestProvider`실행 되는 위치 응용 프로그램을 보여 줍니다.
-
-[![위도, 경도 및 공급자를 표시 하는 GetBestProvider 앱](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-`GetBestProvider` 에서는 공급자를 동적으로 변경 하지 않습니다. 대신 작업 수명 주기 중에 사용 가능한 가장 적합 한 공급자를 결정 합니다. 공급자 상태가 설정 된 후에 변경 되는 경우 응용 프로그램 `ILocationListener` 은, `OnProviderDisabled`및 &ndash; 메서드의 `OnProviderEnabled`추가 코드를 요구 하 여와 `OnStatusChanged` &ndash; 관련 된 모든 가능성을 처리 합니다. 공급자 전환.
+> 사용자가 모든 위치 공급자를 사용 하지 않도록 `GetBestProvider` 설정한 경우 `null`는를 반환 합니다. 실제 장치에서이 코드가 작동 하는 방식을 확인 하려면 다음 스크린샷에 표시 된 것 처럼 **Google 설정 > 위치 > 모드** 에서 GPS, wi-fi 및 셀룰러 네트워크를 사용 하도록 설정 해야 합니다.
+>
+> [![Android 휴대폰의 설정 위치 모드 화면](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> 아래 스크린샷에서는를 사용 하 여 `GetBestProvider`실행 되는 위치 응용 프로그램을 보여 줍니다.
+>
+> [![위도, 경도 및 공급자를 표시 하는 GetBestProvider 앱](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> `GetBestProvider` 에서는 공급자를 동적으로 변경 하지 않습니다. 대신 작업 수명 주기 중에 사용 가능한 가장 적합 한 공급자를 결정 합니다. 공급자 상태가 설정 된 후에 변경 되는 경우 응용 프로그램 `ILocationListener` 은, `OnProviderDisabled`및 &ndash; 메서드의 `OnProviderEnabled`추가 코드를 요구 하 여와 `OnStatusChanged` &ndash; 관련 된 모든 가능성을 처리 합니다. 공급자 전환.
 
 ## <a name="summary"></a>요약
 

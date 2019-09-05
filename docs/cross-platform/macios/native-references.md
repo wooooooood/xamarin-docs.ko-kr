@@ -3,15 +3,15 @@ title: 네이티브 참조 iOS, Mac 및 바인딩 프로젝트
 description: 네이티브 참조를 사용 하면 네이티브 프레임 워크를 Xamarin.ios, Xamarin.ios 또는 바인딩 프로젝트에 포함할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e5e232ffa8a41f7adbffae595b85341a10d8667a
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065268"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287552"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>IOS, Mac 및 바인딩 프로젝트의 네이티브 참조
 
@@ -71,7 +71,7 @@ Xamarin.ios 또는 Xamarin.ios 앱에서 포함 된 프레임 워크를 사용 �
 다음 단계는 네이티브 참조를 사용 하 여 Xamarin.ios 또는 Xamarin.ios 프로젝트에 프레임 워크를 포함 하는 데 필요 합니다.
 
 1. 새를 만들거나 기존 Xamarin.ios, Xamarin.ios 또는 바인딩 프로젝트를 엽니다.
-2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 추가**네이티브 참조**추가를 선택 > 합니다. 
+2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 추가**네이티브 참조**추가 **를 선택** > 합니다. 
 
     [![](native-references-images/ref01.png "솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 네이티브 참조 추가를 선택 합니다.")](native-references-images/ref01.png#lightbox)
 3. **열기** 대화 상자에서 포함 하려는 네이티브 프레임 워크의 이름을 선택 하 고 **열기** 단추를 클릭 합니다. 

@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: dbc0802b39e8fa736ec3b71dc23f488d08fd8a42
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621085"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290597"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.ios의 iOS 확장
 
@@ -93,7 +93,7 @@ Ios 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 입력 또
 
   ![](extensions-images/bundleidentifiers.png) 
 - 해당 `Info.plist` 파일에서 적절 한 `NSExtensionPointIdentifier`값 ( `com.apple.widget-extension` 예: **오늘** 알림 센터 위젯)을 사용 하 여 키를 정의 해야 합니다.
-- 또한 해당 `NSExtensionMainStoryboard` `Info.plist` 파일의 키 또는 `NSExtensionPrincipalClass` 키를 적절 한 값으로 정의 해야 합니다.
+- 또한 해당 `Info.plist` 파일의 키 또는 `NSExtensionMainStoryboard` `NSExtensionPrincipalClass` 키를 적절 한 값 *으로 정의 해야* 합니다.
   - 키를 사용 하 여 확장 (빼기 `.storyboard`)의 주 UI를 표시 하는 Storyboard의 이름을 지정 합니다. `NSExtensionMainStoryboard` 예 `Main` 를 들어 `Main.storyboard` 파일의 경우입니다.
   - `NSExtensionPrincipalClass` 키를 사용 하 여 확장이 시작 될 때 초기화 될 클래스를 지정 합니다. 값은의 `UIViewController` **등록** 값과 일치 해야 합니다. 
 

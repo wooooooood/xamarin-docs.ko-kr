@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 작성 된 tvOS apps에서 Siri �
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 99fafe0ae0186ac68609ebe22dabe64e588ee5e0
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 32deee1ea1e47438f4f671ac3ccaa09f4218a88b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226677"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290750"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Xamarin에서 tvOS 용 siri 원격 및 Bluetooth 컨트롤러
 

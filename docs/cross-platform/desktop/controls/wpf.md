@@ -2,15 +2,15 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'WPF 및 Xamarin.Forms: 유사성 & 차이점'
 description: 이 문서에서는 WPF를 Xamarin.ios와 비교 하 고 대조 합니다. 컨트롤 템플릿, XAML, 바인딩 인프라, 데이터 템플릿, ItemsControl, UserControl, 탐색 및 URL 탐색에 대해 설명 합니다.
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 149636719c7f8046b8a32d8d2f4157b663388cb1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: d23b449382183b0385eac38c0b9205e48dbe0a34
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227613"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290401"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 Xamarin.Forms: 유사성 & 차이점
 
@@ -18,7 +18,7 @@ ms.locfileid: "70227613"
 
 WPF는 컨트롤에 대 한 시각화 지침 (`Button`, `ListBox`등)을 제공 하는 *컨트롤 템플릿의* 개념을 지원 합니다. 위에서 설명한 것 처럼 Xamarin.ios는 네이티브 플랫폼 (iOS, Android 등)과 상호 작용 하 여 컨트롤을 시각화 하는 구체적인 _렌더링_ 클래스를 사용 합니다.
 
-그러나 xamarin.ios에는 테마 `Page` 개체에 사용 `ControlTemplate` 되는 형식이 있습니다. 일관 된 콘텐츠를 제공 `Page` 하는에 대 한 정의를 제공 하지만 페이지 사용자가 색, 글꼴 등을 변경할 수 있도록 하 고, 요소를 추가 하 여 응용 프로그램에 고유 하 게 만들 수도 있습니다.
+그러나 xamarin.ios에는 테마 `Page` 개체에 사용 `ControlTemplate` 되는 _형식이 있습니다._ 일관 된 콘텐츠를 제공 `Page` 하는에 대 한 정의를 제공 하지만 페이지 사용자가 색, 글꼴 등을 변경할 수 있도록 하 고, 요소를 추가 하 여 응용 프로그램에 고유 하 게 만들 수도 있습니다.
 
 이에 대 한 일반적인 용도는 인증 대화 상자, 프롬프트 및 표준화 된 기능을 제공 하는 것 이며 앱 내에서 사용자 지정할 수 있는 페이지 모양과 느낌을 제공 합니다. 이 지원의 일부로 익숙한 WPF 이름 컨트롤을 많이 사용 합니다.
 

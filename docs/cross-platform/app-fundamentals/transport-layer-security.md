@@ -3,15 +3,15 @@ title: TLS (Transport Layer Security) 1.2
 description: 이 문서에서는 Xamarin.ios, Xamarin Android 및 Xamarin.ios 프로젝트용 TLS 1.2을 사용 하도록 설정 하는 방법을 설명 합니다. Visual Studio 2019 및 Mac용 Visual Studio에서이 작업을 수행 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 31069199e8ebc89da76b63e58651adea82db6882
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6175725ae3eea805680b4da81aa0458aa3f8a68c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526773"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280362"
 ---
 # <a name="transport-layer-security-tls-12"></a>TLS (Transport Layer Security) 1.2
 

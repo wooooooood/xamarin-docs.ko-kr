@@ -3,15 +3,15 @@ title: 목표 Sharpie 릴리스 내역
 description: 이 문서에서는 목표-C 코드에 대 한 C# 바인딩 만들기를 자동화 하는 데 사용 되는 도구인 Sharpie의 릴리스 기록을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: 86c9f46064b66dc31f805e830309cb061a78a2c8
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509645"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290867"
 ---
 # <a name="objective-sharpie-release-history"></a>목표 Sharpie 릴리스 내역
 

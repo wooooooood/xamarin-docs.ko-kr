@@ -4,15 +4,15 @@ description: HomeKit은 홈 automation 장치를 제어 하기 위한 Apple의 �
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e8acec18785ff5017aa012a646f40f8a866070f8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656623"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292722"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.ios의 HomeKit
 
@@ -341,7 +341,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 - **배터리** -액세서리 배터리의 상태를 정의 합니다.
 - **CarbonDioxideSensor** -참조 이산화탄소 센서를 정의 합니다.
 - **CarbonMonoxideSensor** -참조 Monoxide 센서를 정의 합니다.
-- 연락처 **센서-연락처** 센서 (예: 열거나 닫는 창)를 정의 합니다.
+- **연락처 센서-연락처** 센서 (예: 열거나 닫는 창)를 정의 합니다.
 - **도어** -도어 상태 센서 (예: 열림 또는 닫힘)를 정의 합니다.
 - **팬** -원격 제어 팬을 정의 합니다.
 - **GarageDoorOpener** -중고품 도어 열기를 정의 합니다.
@@ -666,7 +666,7 @@ HomeKit 액세서리 시뮬레이터에서 광원의 상태를 변경 해야 합
 
 이 문서에서는 Xamarin.ios 앱에서 HomeKit 액세서리를 사용 하는 데 필요한 기본 기능에 대해 설명 했습니다. 그러나이 소개에서 다루지 않는 HomeKit의 몇 가지 고급 기능이 있습니다.
 
-- HomeKit 사용 액세서리는 필요에 따라 최종 사용자가 대화방으로 구성할 수 있습니다. 이를 통해 HomeKit는 사용자가 쉽게 이해 하 고 사용할 수 있는 방식으로 액세서리를 제공할 수 있습니다. 대화방을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmroom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) 설명서를 참조 하세요.
+- HomeKit 사용 액세서리는 필요에 따라 최종 사용자 **가 대화방으로** 구성할 수 있습니다. 이를 통해 HomeKit는 사용자가 쉽게 이해 하 고 사용할 수 있는 방식으로 액세서리를 제공할 수 있습니다. 대화방을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmroom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) 설명서를 참조 하세요.
 - **영역** -대화방은 최종 사용자가 선택적으로 영역으로 구성할 수 있습니다. 영역은 사용자가 단일 단위로 처리할 수 있는 대화방 컬렉션을 참조 합니다. 예: Upstairs, Downstairs 또는 지하실입니다. 이를 통해 HomeKit는 최종 사용자에 게 적합 한 방식으로 액세서리를 제공 하 고 작업을 수행할 수 있습니다. 영역을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmzone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서를 참조 하세요.
 - 작업 **및 동작 집합** -작업은 액세서리 서비스 특성을 수정 하 고 집합으로 그룹화 할 수 있습니다. 작업은 프로그램 그룹을 제어 하 고 작업을 조정 하는 스크립트 역할을 합니다. 예를 들어 "TV 시청" 스크립트는 블라인드를 닫고 조명을 희미하게 하 고 텔레비전 및 사운드 시스템을 켤 수 있습니다. 작업 및 작업 집합을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmaction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) 및 [hmactionset](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) 설명서를 참조 하세요.
 - **트리거** -지정 된 조건 집합이 충족 될 때 트리거는 하나 이상의 작업 집합을 활성화할 수 있습니다. 예를 들어, portch 라이트를 켜고 외부 문이 어두운 곳에 있을 때 모든 외부 도어를 잠급니다. 트리거를 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmtrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) 설명서를 참조 하세요.

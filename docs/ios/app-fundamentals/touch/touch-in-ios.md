@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 터치 �
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 70c46282c9eebfed45bbdae75fdb2216e7f4c889
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526605"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280091"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Xamarin.ios의 터치 이벤트 및 제스처
 

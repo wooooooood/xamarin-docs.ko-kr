@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 9에 도입 된 추가 프레임 워크 변
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c3f140affe3d539eb07d06f50a031cd7ef469728
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197755"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292413"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -176,7 +176,7 @@ Apple에는 iOS 9의 [Safari 서비스](xref:SafariServices) 프레임 워크에
 
 - 이제 새 [SFSafariViewController](xref:SafariServices.SFSafariViewController) 클래스를 사용 하 여 xamarin.ios 앱 내에 웹 콘텐츠를 표시할 수 있습니다. 웹 사이트 데이터 및 쿠키를 Safari 앱과 공유 하는 기능을 제공 하 고 몇 가지 Safari 기능 (예: 읽기 및 자동 채우기)을 포함 합니다. [SFSafariViewController](xref:SafariServices.SFSafariViewController) 기능 웹 콘텐츠 보기를 완료 한 후 사용자를 앱에 반환 하는 **완료** 단추를 제공 합니다.
 
-[SFSafariViewController](xref:SafariServices.SFSafariViewController) 클래스는 웹 콘텐츠의 단일 페이지를 표시 하도록 맞춤 되어 있기 때문에 기존 xamarin.ios 앱 내에서 [WKWebKit](xref:WebKit.WKWebView) 또는 uiwebview [보기](xref:UIKit.UIWebView) 컨트롤을 대체 하는 데이 클래스를 사용 하는 것이 좋습니다.
+[SFSafariViewController](xref:SafariServices.SFSafariViewController) 클래스는 웹 콘텐츠의 단일 페이지를 표시 하도록 맞춤 되어 있기 때문에 기존 xamarin.ios 앱 내에서 [WKWebKit](xref:WebKit.WKWebView) 또는 [uiwebview 보기](xref:UIKit.UIWebView) 컨트롤을 대체 하는 데이 클래스를 사용 하는 것이 좋습니다.
 
 ### <a name="displaying-a-website"></a>웹 사이트 표시
 

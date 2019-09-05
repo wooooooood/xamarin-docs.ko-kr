@@ -3,15 +3,15 @@ title: Apple 플랫폼 (iOS 및 Mac)
 description: 이 문서에서는 Xamarin.ios 및 Xamarin.ios 개발과 관련 된 다양 한 항목 (코드 공유, Unified API, 바인딩 목표-C 라이브러리, 네이티브 참조, 네이티브 형식 등)에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 2d57e69f3cb7662b1ff6e1e7fe1645605d7861b9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199415"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290831"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple 플랫폼 (iOS 및 Mac)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70199415"
 
 ## <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
 
-IOS 및 Mac 프로젝트에 대 한 Unified API 프레임 워크에 동일한 네임 스페이스를 사용 하므로 원활한 코드 공유를 위해 두 플랫폼에서 동일한 코드 파일을 사용할 수 있습니다. 또한 32 및 64 비트 빌드를 모두 사용 하도록 설정 합니다. Unified API은 2015 초기부터 템플릿 기본값 이므로 모든 새 프로젝트에 대해 권장 되며, Unified API 프로젝트를 앱 스토어에 제출할 수 있습니다.
+IOS 및 Mac 프로젝트에 대 한 Unified API 프레임 워크에 동일한 네임 스페이스를 사용 하므로 원활한 코드 공유를 위해 두 플랫폼에서 동일한 코드 파일을 사용할 수 있습니다. 또한 32 및 64 비트 빌드를 모두 사용 하도록 설정 합니다. Unified API은 2015 초기부터 템플릿 기본값 이므로 모든 새 프로젝트에 대해 권장 되며 *, Unified API 프로젝트* 를 앱 스토어에 제출할 수 있습니다.
 
 ### <a name="classic-apis"></a>클래식 Api
 

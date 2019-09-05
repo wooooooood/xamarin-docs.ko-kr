@@ -4,15 +4,15 @@ description: 이 문서에서는 tvOS 앱에 사용할 수 있는 배포 기술�
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: df3a3462923ab396037f9267194588ffcb03f9e5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 0ea96eb3808daeb9f8764695d1b4b3d432727ff2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655233"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292491"
 ---
 # <a name="tvos-app-distribution-overview"></a>tvOS 앱 배포 개요
 
@@ -66,7 +66,7 @@ Apple TV 앱 스토어에 tvOS 앱을 제출 하는 데 문제가 있는 경우 
 
 ## <a name="in-house-distribution"></a>사내 배포
 
-*엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 애플리케이션을 설치할 수 있는 디바이스의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
+*엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 응용 프로그램을 설치할 수 있는 디바이스의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
 
 설정 및 응용 프로그램을 사내에 배포 하는 방법에 대 한 자세한 내용은 [사내 배포 가이드](~/ios/deploy-test/app-distribution/in-house-distribution.md)를 참조 하세요. 이 문서는 iOS에만 해당 되지만 동일한 기술이 tvOS apps에 사용 됩니다.
 

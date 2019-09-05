@@ -4,15 +4,15 @@ description: 자격은 특수 앱 기능이며 올바르게 사용하도록 구�
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/13/2018
-ms.openlocfilehash: bbc01416fe49b361b163808f3502533db8e39d8c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 381cddcef826d00b09f9928746bb4f60ce78a7e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121320"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284808"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Xamarin.iOS에서 자격 사용
 
@@ -96,14 +96,14 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 - **설명**: 일반적으로 Passbook으로 알려진 Wallet은 패스를 저장 및 관리하는 앱입니다. 패스는 신용 카드, 상점 카드, 탑승권 또는 티켓일 수 있습니다.
 
-    - **패스 유형 식별자**
-        - **키**: com.apple.developer.pass-type-identifiers
-        - **문자열**: `$(TeamIdentifierPrefix)*`
+  - **패스 유형 식별자**
+    - **키**: com.apple.developer.pass-type-identifiers
+    - **문자열**: `$(TeamIdentifierPrefix)*`
 
 - **참고**:
-    - 앱에서 모든 패스 유형을 허용할 수 있습니다. 앱을 제한하고 팀 패스 유형의 하위 집합만 허용하려면 문자열 값을 다음과 같이 설정합니다. `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
+  - 앱에서 모든 패스 유형을 허용할 수 있습니다. 앱을 제한하고 팀 패스 유형의 하위 집합만 허용하려면 문자열 값을 다음과 같이 설정합니다. `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
-    여기서 pass.$(CFBundleIdentifier)는 [위](~/ios/platform/passkit.md)에서 만든 패스 ID입니다.
+  여기서 pass.$(CFBundleIdentifier)는 [위](~/ios/platform/passkit.md)에서 만든 패스 ID입니다.
 
 <a name="icloud" />
 
@@ -111,17 +111,17 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 - **설명**: iCloud는 iOS 사용자에게 콘텐츠를 저장하고 디바이스 간에 공유할 수 있는 편리하고 간단한 방법을 제공합니다. 개발자가 iCloud를 사용하여 사용자를 위한 스토리지 수단을 제공할 수 있는 네 가지 방법이 있습니다. 키-값 스토리지, UIDocument 스토리지, CoreData 및 CloudKit을 사용하여 개별 파일 및 디렉터리용 스토리지를 직접 제공합니다. 자세한 내용은 iCloud 소개 가이드를 참조하세요.
 
-    - **iCloud 문서 및 CloudKit**
-        - **키**: com.apple.developer.ubiquity-container-identifiers
-        - **문자열**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
-    - **iCloud KeyValue 스토리지**
-        - **키**: com.apple.developer.ubiquity-kvstore-identifier
-        - **문자열**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+  - **iCloud 문서 및 CloudKit**
+    - **키**: com.apple.developer.ubiquity-container-identifiers
+    - **문자열**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+  - **iCloud KeyValue 스토리지**
+    - **키**: com.apple.developer.ubiquity-kvstore-identifier
+    - **문자열**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
 - **참고**:
-    - `$(TeamIdentifierPrefix)` 문자열은 developer.apple.com에 로그인하여 **Member Center > Your Account(계정) > Developer Account Summary(개발자 계정 요약)** 로 이동하여 팀 ID(또는 단일 개발자의 개인 ID)를 얻을 수 있습니다. 10자로 된 문자열(예: A93A5CM278)입니다.
-    - `$(CFBundleIdentifier)` 문자열은`iCloud`로 시작되며 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 가이드의 단계에 따라 iCloud 컨테이너를 만들 때 설정됩니다.
-    - $`(TeamIdentifierPrefix)` 및 `$(CFBundleIdentifier)` 자리 표시자를 사용할 수 있으며 빌드 시 올바른 값으로 대체됩니다.
+  - `$(TeamIdentifierPrefix)` 문자열은 developer.apple.com에 로그인하여 **Member Center > Your Account(계정) > Developer Account Summary(개발자 계정 요약)** 로 이동하여 팀 ID(또는 단일 개발자의 개인 ID)를 얻을 수 있습니다. 10자로 된 문자열(예: A93A5CM278)입니다.
+  - `$(CFBundleIdentifier)` 문자열은`iCloud`로 시작되며 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 가이드의 단계에 따라 iCloud 컨테이너를 만들 때 설정됩니다.
+  - $`(TeamIdentifierPrefix)` 및 `$(CFBundleIdentifier)` 자리 표시자를 사용할 수 있으며 빌드 시 올바른 값으로 대체됩니다.
 
 > [!IMPORTANT]
 > Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
@@ -130,16 +130,16 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 
 - **설명**: 앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 스토리지 위치에 액세스할 수 있습니다.
 
-    - **키**: com.apple.security.application-groups
-    - **문자열**: group.$(CFBundleIdentifier)
+  - **키**: com.apple.security.application-groups
+  - **문자열**: group.$(CFBundleIdentifier)
 
 <a name="apple-pay" />
 
 ### <a name="apple-pay"></a>Apple Pay
 
 - **설명**: Apple pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품을 구입할 수 있습니다.
-    - **키**: com.apple.developer.in-app-payments
-    - **문자열**: merchant.your.mechantid
+  - **키**: com.apple.developer.in-app-payments
+  - **문자열**: merchant.your.mechantid
 
 ### <a name="push-notifications"></a>푸시 알림
 
@@ -149,7 +149,7 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 ### <a name="siri"></a>Siri
 
 - **설명**: SiriKit을 통해 iOS 앱은 앱 확장 및 새로운 인텐트와 인텐트 UI 프레임워크를 사용하여 iOS 디바이스에서 Siri 및 맵 앱에 액세스할 수 있는 서비스를 제공할 수 있습니다. 자세한 내용은 SiriKit 소개 가이드를 참조하세요.
-    - **키**: com.apple.developer.siri
+  - **키**: com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>개인 VPN
 
@@ -159,50 +159,50 @@ Xamarin.iOS에 Entitlements.plist 파일을 추가하려면 다음을 수행합�
 ### <a name="keychain-sharing"></a>키 집합 공유
 
 - **설명**: 앱 개발자는 키 집합 공유를 통해 디바이스 키 집합에 저장된 암호를 동일한 팀에서 개발한 다른 앱과 공유할 수 있습니다. 문자열에 키 집합 액세스 그룹 식별자를 전달하여 액세스를 제한할 수 있습니다.
-    - **키**: keychain-access-groups
-    - **문자열**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
+  - **키**: keychain-access-groups
+  - **문자열**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
 
 ### <a name="inter-app-audio"></a>내부 앱 오디오
 
 - **설명**: 개발자는 내부 앱 오디오를 통해 앱 사이에 오디오를 스트리밍할 수 있습니다.
-    - **키**: inter-app-audio
-    - **부울:** 예
+  - **키**: inter-app-audio
+  - **부울:** 예
 
 ### <a name="associated-domains"></a>연결된 도메인
 
 - **설명**: 범용 링크로 처리해야 하는 연결된 도메인은 이 자격과 함께 전달해야 합니다. 범용 링크는 앱과 웹 사이트 사이의 딥 링크 설정을 허용하기 위해 구현될 수 있습니다. 앱이 지원하는 각 도메인에 항목을 제공해야 하고 각 항목은 `applinks:`로 시작해야 합니다.
-    - **키**: com.apple.developer.associated-domains
-    - **문자열**: webcredentials:example.com
+  - **키**: com.apple.developer.associated-domains
+  - **문자열**: webcredentials:example.com
 
 ### <a name="data-protection"></a>데이터 보호
 
 - **설명**: 데이터 보호를 사용하도록 설정하면 기본 제공된 암호화 하드웨어를 사용하여 앱에 사용되는 중요한 데이터가 암호화된 형식으로 저장됩니다. 기본적으로 보호 수준은 완전 보호(디바이스가 잠금 해제된 경우에만 파일에 액세스 가능)로 설정됩니다.
-    - **키**: com.apple.developer.default-data-protection
-    - **문자열**: NSFileProtectionComplete
+  - **키**: com.apple.developer.default-data-protection
+  - **문자열**: NSFileProtectionComplete
 
 ### <a name="homekit"></a>HomeKit
 
 - **설명**: HomeKit 프레임워크는 지원되는 홈 자동화 디바이스(모두 iOS 디바이스)를 설정, 구성 및 관리하기 위한 플랫폼을 제공합니다. HomeKit 사용에 대한 자세한 내용은 HomeKit 소개 가이드를 참조하세요.
-    - **키**: com.apple.developer.homekit
-    - **부울:** 예
+  - **키**: com.apple.developer.homekit
+  - **부울:** 예
 
 ### <a name="healthkit"></a>HealthKit
 
 - **설명**: HealthKit은 건강 관련 정보를 위한 중앙 집중식의 조정된 보안 데이터 저장소를 제공하는 iOS 8에 도입된 프레임워크입니다. HealthKit 사용에 대한 자세한 내용은 HealthKit 소개 가이드를 참조하세요.
-    - **키**: com.apple.developer.healthkit
-    - **부울:** 예
+  - **키**: com.apple.developer.healthkit
+  - **부울:** 예
 
 ### <a name="wireless-accessory-configuration"></a>무선 액세서리 구성
 
 - **설명**: 무선 액세서리 구성을 사용하면 앱에서 MFi Wi-Fi 액세서리를 구성할 수 있습니다.
-    - **키**: com.apple.external-accessory.wireless-configuration
-    - **부울:** 예
+  - **키**: com.apple.external-accessory.wireless-configuration
+  - **부울:** 예
 
 ### <a name="classkit"></a>ClassKit
 
 - **설명**: ClassKit을 사용하면 교사가 앱에서 할당된 활동에 대한 학생의 진행 상황을 볼 수 있습니다.
-    - **키**: com.apple.developer.ClassKit-environment
-    - **문자열**: `development` 또는 `production`
+  - **키**: com.apple.developer.ClassKit-environment
+  - **문자열**: `development` 또는 `production`
 
 ## <a name="summary"></a>요약
 

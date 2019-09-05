@@ -4,15 +4,15 @@ description: 이 문서에서는 코드 서명, 프로비저닝, TestFlight 및 
 ms.prod: xamarin
 ms.assetid: 65286D09-F74D-4F22-B6CD-D1BCD7FC7992
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: a290f29707bd59a22f612f31e544a211488eba0d
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b6fbe8ca975100310922240e532b9922e76e4724
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121491"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290667"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Xamarin.iOS 테스트 및 배포 - 문제 해결
 

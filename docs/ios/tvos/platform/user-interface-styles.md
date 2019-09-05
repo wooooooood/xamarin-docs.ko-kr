@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple이 tvOS 10에 추가 하 고 tvOS 앱에�
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f4004b4b9cdc8f8c6555be82cf1da5b92a83d45c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4df67221c367386cddd485fcd1853523d77158e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120054"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290675"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Xamarin에서 tvOS 사용자 인터페이스 스타일
 
@@ -149,7 +149,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 
 TvOS 앱의 디자인에 따라 개발자가 지정 된 사용자 인터페이스 요소의 특성 컬렉션을 재정의 하 고 항상 특정 UI 테마를 사용 해야 하는 경우가 있을 수 있습니다.
 
-`UIViewController` 클래스의 메서드를 `SetOverrideTraitCollection` 사용 하 여이 작업을 수행할 수 있습니다. 예를 들어:
+`UIViewController` 클래스의 메서드를 `SetOverrideTraitCollection` 사용 하 여이 작업을 수행할 수 있습니다. 예:
 
 ```csharp
 // Create new trait and configure it

@@ -3,15 +3,15 @@ title: 기존 iOS 앱 업데이트
 description: 이 문서에서는 Xamarin.ios 앱을 Classic API에서 Unified API 업데이트 하기 위해 따라야 하는 단계를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 303C36A8-CBF4-48C0-9412-387E95024CAB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b0999ff6fc3b3042827f11ae1e127ef7bb9fedfe
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c74efef96a15a950122041eb52dc09835bb8940b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279558"
 ---
 # <a name="updating-existing-ios-apps"></a>기존 iOS 앱 업데이트
 

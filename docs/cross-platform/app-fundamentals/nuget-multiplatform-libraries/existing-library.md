@@ -1,46 +1,46 @@
 ---
 title: 기존 라이브러리 프로젝트에서 NuGet 만들기
-description: 이 문서에는 코드를 다른 개발자와 공유할 수 있도록 기존 라이브러리 프로젝트에서 NuGet 패키지를 만드는 방법을 설명 합니다.
+description: 이 문서에서는 기존 라이브러리 프로젝트에서 NuGet 패키지를 만들어 다른 개발자와 코드를 공유할 수 있도록 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2017
-ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f9d49fc4bff91939c9924dc42a11ef31ffd87362
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864702"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289218"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>기존 라이브러리 프로젝트에서 NuGet 만들기
 
-기존 PCL 또는.NET Standard 라이브러리는 Nuget을 통해로 변환할 수 있습니다 합니다 **프로젝트 옵션** 창:
+기존 PCL 또는 .NET Standard 라이브러리는 **프로젝트 옵션** 창을 통해 nuget로 설정할 수 있습니다.
 
-1. 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 합니다 **Solution Pad** 선택한 **옵션**합니다.
+1. **Solution Pad** 에서 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **옵션**을 선택 합니다.
 
-2. 로 이동 합니다 **NuGet 패키지 > 메타 데이터** 섹션 및 모든 입력는 [필요한 정보를](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 에 **일반** 탭:
+2. **NuGet 패키지 > 메타 데이터** 섹션으로 이동 하 고 **일반** 탭에서 [필요한 정보](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 를 모두 입력 합니다.
 
-   [![](existing-library-images/existing-metadata-sml.png "필수 메타 데이터를 입력 합니다.")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "필요한 메타 데이터 입력")](existing-library-images/existing-metadata.png#lightbox)
 
-3. 필요에 따라 [추가 메타 데이터 추가](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 에 **세부 정보** 탭 합니다.
+3. 필요에 따라 **세부 정보** 탭에서 [메타 데이터를 추가](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 합니다.
 
-4. 메타 데이터를 구성한 후에 프로젝트를 마우스 오른쪽 단추로 클릭 및 선택할 수 있습니다 **NuGet 패키지 만들기** 하며 **.nupkg** NuGet 패키지 파일에 저장 됩니다는 **/bin/** 폴더 (디버그 또는 릴리스 구성에 따라).
+4. 메타 데이터가 구성 되 면 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Nuget 패키지 만들기** 를 선택할 수 있습니다 **. nupkg** NuGet 패키지 **파일은 구성** 에 따라 디버그 또는 릴리스 중 하나에 저장 됩니다.
 
    ![](existing-library-images/create-nuget-package.png "오른쪽 클릭 메뉴에서 NuGet 패키지 만들기를 선택 합니다.")
 
-5. NuGet 패키지를 만들려면 _모든_ 빌드 또는 배포로 이동 합니다 **NuGet 패키지 > 빌드** 섹션과 눈금 **프로젝트를 빌드할 때 NuGet 패키지를 만듭니다**:
+5. _모든_ 빌드 또는 배포에서 nuget 패키지를 만들려면 프로젝트를 빌드할 때 nuget **패키지 > 빌드** 섹션 및 틱 **nuget 패키지 만들기**로 이동 합니다.
 
-    [![](existing-library-images/existing-tickbox-sml.png "NuGet 패키지를 만들려면 선택 합니다.")](existing-library-images/existing-tickbox.png#lightbox)
+    [![](existing-library-images/existing-tickbox-sml.png "NuGet 패키지를 만드는 틱")](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
-> NuGet 빌드 패키지 빌드 프로세스 속도가 떨어질 수 있습니다. 이 상자를 선택 하지는 경우 언제 든 지 (위의 4 단계에서 표시) 프로젝트 상황에 맞는 메뉴에서 NuGet 패키지를 수동으로 생성할 수 있습니다.
+> NuGet 패키지를 빌드하면 빌드 프로세스의 속도가 느려질 수 있습니다. 이 상자를 선택 않는 경우 프로젝트 상황에 맞는 메뉴 (위의 4 단계에 표시 됨)에서 언제 든 지 수동으로 NuGet 패키지를 생성할 수 있습니다.
 
 ## <a name="verifying-the-output"></a>출력 확인
 
-NuGet 패키지는 ZIP 파일 또한 생성된 된 패키지의 내부 구조를 검사 하는 것이 가능 합니다.
+NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부 구조를 검사할 수 있습니다.
 
-이 스크린샷에서 단일 PCL 어셈블리만 포함 됩니다. PCL 기반 NuGet –의 콘텐츠를 보여줍니다.
+이 스크린샷에서는 PCL 기반 NuGet의 내용을 보여 줍니다. 단일 PCL 어셈블리만 포함 됩니다.
 
 ![](existing-library-images/nuget-output.png "NuGet 패키지에 포함 된 파일")
 

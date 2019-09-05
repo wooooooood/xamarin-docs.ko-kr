@@ -4,15 +4,15 @@ description: 이 문서에서는 다양한 디바이스에 대한 Xamarin.iOS �
 ms.prod: xamarin
 ms.assetid: 3B259248-887E-3E4F-E09C-7AD28C2A8CEE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 1b3bc6874a8584b60b15d1d373ad97fde565dfc4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e24f450c16e144b313d5f8e3da0221fccdaa145b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527119"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285408"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 디바이스용으로 컴파일
 

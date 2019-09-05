@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8fb647e12de621fc0772ad5c18aac21e46758715
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ab070d1f5f2400ee5daa12013953cf8c6beff082
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113107"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279774"
 ---
 # <a name="debugging"></a>디버깅
 
@@ -26,7 +26,7 @@ Android 애플리케이션을 개발하려면 물리적 하드웨어에서 또�
 
 이 아티클에서는 Visual Studio에서 Android Emulator를 시작하고 가상 디바이스에서 앱을 시작하는 방법을 설명합니다.
 
-### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[장치에서 디버깅](~/android/deploy-test/debugging/debug-on-device.md)
+### <a name="debugging-on-a-deviceandroiddeploy-testdebuggingdebug-on-devicemd"></a>[디바이스에서 디버깅](~/android/deploy-test/debugging/debug-on-device.md)
 
 이 문서에서는 Xamarin.Android 애플리케이션이 Visual Studio 또는 Mac용 Visual Studio에서 직접 배포되도록 물리적 Android 디바이스를 구성하는 방법을 보여줍니다.
 

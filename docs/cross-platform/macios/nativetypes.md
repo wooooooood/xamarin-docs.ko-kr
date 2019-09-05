@@ -3,15 +3,15 @@ title: IOS 및 macOS의 네이티브 형식
 description: 이 문서에서는 Xamarin의 Unified API 컴파일 대상 아키텍처에 따라 필요에 따라 .NET 형식을 32 비트 및 64 비트 네이티브 형식에 매핑하는 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 6b6a7b8bb2efdd099d7fde6bb5397e6330258bcc
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f370bc816fa72f94af8dae32ac295448f858dbb8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199395"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290799"
 ---
 # <a name="native-types-for-ios-and-macos"></a>IOS 및 macOS의 네이티브 형식
 

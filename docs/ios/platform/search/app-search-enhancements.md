@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10의 앱 검색에 대 한 Apple의 향상
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: ec7523ac2adc3a6b4ba18a7b8a0fe21749bd7856
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2a2475bcc5eea48584c4aa128aafeeb326e41f8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227418"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280365"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Xamarin.ios의 앱 검색 향상 기능
 

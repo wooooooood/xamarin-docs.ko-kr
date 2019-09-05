@@ -4,14 +4,14 @@ description: 'PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지�
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
-author: asb3993
-ms.author: amburns
-ms.openlocfilehash: 09aef14efdce93e28326deb78292da98f1969ea1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: e3ced3c989a88c6e759a5bc497147128b0a79868
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521555"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288202"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 할까요?
 
@@ -43,7 +43,7 @@ Xamarin.ios 및 Xamarin은 참조로 허용 하는 모든 PCL 프로필의 100%�
 
 ### <a name="explanation"></a>설명
 
-라이브러리 `portable-net45+win8+wp8+wpa81` 의 버전은 _모든_문제를 해결 하는 데 문제가 없도록 완전히 방지 합니다.
+라이브러리 `portable-net45+win8+wp8+wpa81` 의 버전은 _모든_문제를 해결 하는 데 문제가 없도록 완전히 **방지 합니다.**
 
 ### <a name="limitations"></a>제한 사항
 
@@ -53,7 +53,7 @@ Xamarin.ios 및 Xamarin은 참조로 허용 하는 모든 PCL 프로필의 100%�
 
 ## <a name="details-about-the-three-layers-of-errors"></a>세 가지 오류 계층에 대 한 세부 정보
 
-1. XamarinVS 외관 어셈블리는 현재 xamarin의 모든 Mac 버전 (public이 아닌 버그 34888)에 없으며 9.0 보다 낮은 모든 xamarin.ios 버전 (또는 Windows의 3.11.1443 보다 낮음)에서 제외 됩니다 (다음에서 수정 됨). [버그 32388](https://bugzilla.xamarin.com/show_bug.cgi?id=32388)). 이 문제가 발생 하면 배포 대상 및 링커 설정에 따라 다음 오류 중 하나가 발생 합니다.
+1. XamarinVS **외관 어셈블리는 현재** xamarin의 모든 Mac 버전 (public이 아닌 버그 34888)에 없으며 9.0 보다 낮은 모든 xamarin.ios 버전 (또는 Windows의 3.11.1443 보다 낮음)에서 제외 됩니다 (다음에서 수정 됨). [버그 32388](https://bugzilla.xamarin.com/show_bug.cgi?id=32388)). 이 문제가 발생 하면 배포 대상 및 링커 설정에 따라 다음 오류 중 하나가 발생 합니다.
 
     - Xamarin.Android.Common.targets: 오류: 어셈블리를 로드 하는 동안 예외가 발생 했습니다. System.IO.FileNotFoundException: ' 4.0.0.0, Version =, Culture = 중립, PublicKeyToken = b03f5f7f11d50a3a ' 어셈블리를 로드할 수 없습니다. Android 용 Mono 프로필에 존재 하지 않는 것 같습니다.
 
@@ -69,7 +69,7 @@ Xamarin.ios 및 Xamarin은 참조로 허용 하는 모든 PCL 프로필의 100%�
 
     - MTOUCH: error MT2002: "WriteEvent, Version = 4.0.0.0, Culture = 중립, PublicKeyToken = b03f5f7f11d50a3a"에서 ",:: (System.web, System.object [])" 참조를 확인 하지 못했습니다.
 
-3. ["System.web. 추적"에 있는 형식의 현재 Mono 구현](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) 도 현재 _빈_ "더미" 구현 ([버그 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890))입니다. 따라서 런타임에 이러한 메서드를 사용 하려고 하면 예기치 않은 결과가 발생할 수 있습니다. Microsoft TPL 데이터 흐름 라이브러리의 경우에는 대부분의 라이브러리 동작에 대 한 `WriteEvent(System.Int32,System.Object[])` 호출이 필수적이 지 않으므로 "계층 2" ([버그 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337), 빈 구현 추가)에 대 한 수정 사항이 충분할 수 있습니다. 대부분의 Microsoft TPL 데이터 흐름 사용 사례
+3. ["System.web. 추적"에 있는 형식의 현재 Mono 구현](https://github.com/mono/mono/blob/master/mcs/class/corlib/System.Diagnostics.Tracing/EventSource.cs) 도 현재 _빈_ "더미" 구현 ([버그 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890))입니다. 따라서 런타임에 이러한 메서드를 사용 하려고 하면 예기치 않은 결과가 발생할 수 있습니다. Microsoft TPL 데이터 흐름 라이브러리 _의 경우에는 대부분_ 의 라이브러리 동작에 대 한 `WriteEvent(System.Int32,System.Object[])` 호출이 필수적이 지 않으므로 "계층 2" ([버그 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337), 빈 구현 추가)에 대 한 수정 사항이 충분할 수 있습니다. 대부분의 Microsoft TPL 데이터 흐름 사용 사례
 
 ## <a name="questions--answers"></a>질문 & 대답
 
@@ -112,13 +112,13 @@ _특히 이러한 2 단계를 사용 하 여 문제를 해결할 수 있나요?_
 
 - Windows에서 Xamarin.ios 9.0 또는 최신 버전의 Xamarin.ios의 경우이 해결 방법은 완전히 중복 되며, 동일한 id를 사용 하는 "어셈블리 ' 시스템에 대 한 컴파일 오류를 이미 가져왔습니다." 라는 오류가 발생할 수 있습니다.
 
-- Mac에서 xamarin.ios 8.10이 하 또는 하위 Android의 경우이 해결 방법은 도움이 되지만 "계층 1" 에는 어셈블리 문제가 없습니다. "계층 2" 링커 오류는 해결 _되지_ 않으므로 완전 한 솔루션은 아닙니다.
+- Mac에서 xamarin.ios 8.10이 하 또는 하위 Android의 경우이 해결 방법은 도움이 되지만 "계층 1" _에는 어셈블리_ 문제가 없습니다. "계층 2" 링커 오류는 해결 _되지_ 않으므로 완전 한 솔루션은 아닙니다.
 
 ### <a name="can-i-use-the-systemdiagnosticstracing-nuget-packagehttpswwwnugetorgpackagessystemdiagnosticstracing-to-solve-the-problem"></a>[진단 NuGet 패키지](https://www.nuget.org/packages/System.Diagnostics.Tracing/) 를 사용 하 여 문제를 해결할 수 있나요?
 
 #### <a name="answer"></a>대답할
 
-아니요, NuGet 3.0 "DNXCore50" 패키지는 "" 및 "netcore50"에 대 한 플랫폼별 구현만 포함 합니다. Xamarin Android ("MonoAndroid") 및 Xamarin.ios ("Monotouch.dialog" 및 "xamarinios")에 대 한 구현은 명시적으로 _생략_ 됩니다. 즉, 패키지를 설치 해도 Xamarin.ios 및 Xamarin.ios 프로젝트에는 _영향을 주지_ 않습니다. NuGet 패키지는 두 플랫폼 모두 형식의 _고유한_ 구현을 제공 한다고 가정 합니다. Mono에는 네임 스페이스의 구현이 있지만, 위의 "세 가지 오류 계층 정보에 대 한 세부 정보"의 요소 \#2와 \#3에 설명 된 것 처럼 이러한 가정이 "올바른" 것으로 간주 됩니다. 안함. 따라서 Mono 팀이 [버그 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337) 및 [버그 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890)을 해결 하기 위한 적절 한 해결 방법이 됩니다.
+아니요, NuGet 3.0 "DNXCore50" 패키지는 "" 및 "netcore50"에 대 한 플랫폼별 구현만 포함 합니다. Xamarin Android ("MonoAndroid") 및 Xamarin.ios ("Monotouch.dialog" 및 "xamarinios")에 대 한 구현은 명시적으로 _생략_ 됩니다. 즉, 패키지를 설치 해도 Xamarin.ios 및 Xamarin.ios 프로젝트에는 _영향을 주지_ 않습니다. NuGet 패키지는 두 플랫폼 모두 형식의 _고유한_ 구현을 제공 한다고 가정 합니다. Mono _에는 네임 스페이스의 구현이 있지만_ , 위의 "세 가지 오류 계층 정보에 대 한 세부 정보"의 요소 \#2와 \#3에 설명 된 것 처럼 이러한 가정이 "올바른" 것으로 간주 됩니다. 안함. 따라서 Mono 팀이 [버그 27337](https://bugzilla.xamarin.com/show_bug.cgi?id=27337) 및 [버그 34890](https://bugzilla.xamarin.com/show_bug.cgi?id=34890)을 해결 하기 위한 적절 한 해결 방법이 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

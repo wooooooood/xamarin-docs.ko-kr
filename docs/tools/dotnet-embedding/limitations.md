@@ -1,52 +1,52 @@
 ---
 title: .NET 포함 제한 사항
-description: 이 문서에는.NET 포함, 다른 프로그래밍 언어로.NET 코드를 사용할 수 있는 도구 제한 사항을 설명 합니다.
+description: 이 문서에서는 다른 프로그래밍 언어로 .NET 코드를 사용할 수 있도록 하는 도구인 .NET 포함의 제한 사항에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945796"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292703"
 ---
 # <a name="net-embedding-limitations"></a>.NET 포함 제한 사항
 
-이 문서.NET 포함의 제한 사항에 설명 하 고 가능한 경우에 해결 방법을 제공 합니다.
+이 문서에서는 .NET 포함의 제한 사항에 대해 설명 하 고 가능한 경우이에 대 한 해결 방법을 제공 합니다.
 
 ## <a name="general"></a>일반
 
-### <a name="use-more-than-one-embedded-library-in-a-project"></a>프로젝트에서 여러 개 포함 된 라이브러리를 사용 합니다.
+### <a name="use-more-than-one-embedded-library-in-a-project"></a>프로젝트에 포함 된 라이브러리를 둘 이상 사용
 
-동일한 응용 프로그램 내에서 존재 하는 두 개의 Mono 런타임이 할는 것이 불가능 합니다. 즉, 동일한 응용 프로그램 내에서 서로 다른 두 개의.NET 포함에서 생성 된 라이브러리를 사용할 수 없습니다.
+동일한 응용 프로그램 내에 두 개의 Mono 런타임이 공동으로 존재 하는 것은 가능 하지 않습니다. 즉, 동일한 응용 프로그램 내에서 두 개의 서로 다른 .NET 포함 생성 라이브러리를 사용할 수 없습니다.
 
-**해결 방법:** (다른 프로젝트)에서 여러 어셈블리를 포함 하는 단일 라이브러리를 만들려면 생성자를 사용할 수 있습니다.
+**해결 방법:** 생성기를 사용 하 여 여러 프로젝트의 여러 어셈블리를 포함 하는 단일 라이브러리를 만들 수 있습니다.
 
-### <a name="subclassing"></a>서브클래싱
+### <a name="subclassing"></a>서브클래싱하
 
-.NET 포함 응용 프로그램 내에서 Mono 런타임 통합 대상 언어 및 플랫폼에 대 한 준비 쉬운 Api 집합을 노출 하 여 줄일 수 있습니다.
+.NET 포함은 대상 언어 및 플랫폼에 대 한 바로 사용할 수 있는 Api 집합을 노출 하 여 응용 프로그램 내에서 Mono 런타임의 통합을 용이 하 게 합니다.
 
-하지만 이것이 양방향 통합을 예: 관리 되는 형식 하위 클래스입니다. 수 없으며 관리 되는 코드를이 공존 인식 되지 않았기 때문에 네이티브 코드 내에서 다시 호출 하는 관리 되는 코드를 예상 합니다.
+그러나이는 양방향 통합이 아닙니다. 예를 들어 관리 되는 코드는이 공동 공존을 인식 하지 못하므로 관리 되는 형식을 하위 클래스로 지정할 수 없으며 관리 되는 코드가 네이티브 코드 내부에서 콜백 될 것으로 예측할 수 없습니다.
 
-필요에 따라 수 있습니다 이러한 제한 사항을 해결 부분에 예:
+사용자의 요구에 따라 이러한 제한의 일부를 해결할 수 있습니다 (예:).
 
-* 관리 코드 네이티브 코드에 p/invoke 있습니다. 이렇게 하려면 네이티브 코드에서 사용자 지정을 허용 하도록 관리 되는 코드를 사용자 지정
+* 관리 코드는 네이티브 코드에 p/invoke를 사용할 수 있습니다. 이렇게 하려면 네이티브 코드의 사용자 지정을 허용 하도록 관리 코드를 사용자 지정 해야 합니다.
 
-* Xamarin.iOS와 같은 제품을 사용 하 고 Objective-c (이 경우)를 하위 클래스로 일부 관리 NSObject 서브 클래스를 허용 하는 관리 되는 라이브러리를 노출 합니다.
+* Xamarin.ios와 같은 제품을 사용 하 여 관리 되는 라이브러리 (이 경우에는 관리 되는 NSObject 서브 클래스의 하위 클래스)를 제공 합니다.
 
-## <a name="objective-c-generated-code"></a>Objective-c로 생성 된 코드
+## <a name="objective-c-generated-code"></a>목표-C 생성 된 코드
 
 ### <a name="nullability"></a>Null 허용 여부
 
-Null 참조는 허용 되는 경우 알려주세요는.NET 또는 하지 API에 대 한 메타 데이터가 있습니다. 대부분의 Api를 발생 시킵니다 `ArgumentNullException` 없습니다 대처 하는 경우는 `null` 인수입니다. Objective-c로 처리 하는 예외는 더 나은 방지할 무언가 문제가 됩니다.
+.NET에는 null 참조를 사용할 수 있는지 여부를 나타내는 메타 데이터가 없으므로 API에 대 한 메타 데이터가 없습니다. 대부분의 api는 `ArgumentNullException` `null` 인수를 사용 하 여 처리할 수 없는 경우을 throw 합니다. 이것은 목표-C 예외를 처리 하는 것이 더 좋습니다.
 
-에서는 기본값 null이 아닌 인수의 수 없습니다. 헤더 파일의 정확한 null 허용 여부 주석을 생성 하 고 관리 되는 예외를 최소화 하려면 이후 (`NS_ASSUME_NONNULL_BEGIN`) 하 고 몇 가지 특정 전체 자릿수는 가능한 경우, null 허용 여부 주석을 추가 합니다.
+헤더 파일에는 정확한 null 허용 여부 주석을 생성할 수 없으며 관리 되는 예외를 최소화 하기 때문에 기본적으로 null이`NS_ASSUME_NONNULL_BEGIN`아닌 인수 ()로 지정 하 고 전체 자릿수가 가능 하면 null 허용 여부 주석을 추가 합니다.
 
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 
-현재.NET 포함 지원 하지 않습니다 bitcode ios의 경우 일부 Xcode 프로젝트 템플릿을 사용 하도록 설정 됩니다. 이 성공적으로 생성 된 연결 프레임 워크를 사용할 수 없게 해야 합니다.
+현재 .NET 포함은 일부 Xcode 프로젝트 템플릿에 대해 사용 하도록 설정 된 iOS에서 bitcode를 지원 하지 않습니다. 생성 된 프레임 워크를 성공적으로 연결 하려면이 기능을 사용 하지 않도록 설정 해야 합니다.
 
 ![Bitcode 옵션](images/ios-bitcode-option.png)

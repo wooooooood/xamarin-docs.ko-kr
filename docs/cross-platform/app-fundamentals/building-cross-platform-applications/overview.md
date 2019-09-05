@@ -3,15 +3,15 @@ title: 플랫폼 간 응용 프로그램 빌드 개요
 description: 이 문서에서는 플랫폼 간 응용 프로그램을 빌드하기 위한 개략적인 개요를 제공 합니다. 의 C#값, MVC/MVVM와 같은 디자인 패턴, 네이티브 ui를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c97cfda836f59d4cdbcd234744f723eb9429ace4
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526853"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288379"
 ---
 # <a name="building-cross-platform-applications-overview"></a>플랫폼 간 응용 프로그램 빌드 개요
 

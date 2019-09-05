@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS에서 기계 학습을 가능 하 게 하�
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/30/2017
-ms.openlocfilehash: c2747b24c47e826e0d832faa36ddb93d8aa06f37
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 96ea328901beede663c9ed3d8d42979544b041ea
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121515"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292639"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Xamarin.ios의 CoreML 소개
 

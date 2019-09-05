@@ -4,15 +4,15 @@ description: 이 문서에서는 기능 키트의 개요를 제공 합니다. �
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 64ad867dca0bbbf27d39b69dc7a1acba73728ca2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4a68526187271c00332548764850783531391c73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527805"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292184"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Xamarin.ios에서 제품 정보를 보관 하 고 검색 합니다.
 

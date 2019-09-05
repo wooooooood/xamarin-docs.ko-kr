@@ -3,15 +3,15 @@ title: 3 부-Xamarin 플랫폼 간 솔루션 설정
 description: 이 문서에서는 Xamarin에서 플랫폼 간 솔루션을 설정 하는 방법을 설명 합니다. 공유 프로젝트 및 .NET Standard 같은 다양 한 코드 공유 전략에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: a33c924df3da8642f4b765868f213e6e196f7866
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f8b8f13f323f404554ca73c3e75c23713e0fbe35
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526813"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288840"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>3 부-Xamarin 플랫폼 간 솔루션 설정
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin 개발자를 위해 watchOS 3에서 사
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2017
-ms.openlocfilehash: 5abd28dc9a6fc2a0dca5fa31908731a5496ce5fa
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 50278eaa6d3518b8de85685c1faf64eabac4531d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621041"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292196"
 ---
 # <a name="introduction-to-watchos-3"></a>watchOS 3 소개
 

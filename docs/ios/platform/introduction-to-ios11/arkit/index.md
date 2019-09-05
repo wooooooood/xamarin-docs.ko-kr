@@ -4,15 +4,15 @@ description: 이 문서에서는 ARKit를 사용 하는 iOS 11의 보강 된 현
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/30/2017
-ms.openlocfilehash: 47c092215afef4aa6964a39f7dcb5b685d98a4fc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9e6b5c763d620bf5ef17e4fdb613d4bed9c00279
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655725"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290910"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Xamarin.ios의 ARKit 소개
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 개발자가 Apple의 유료 개발
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/16/2018
-ms.openlocfilehash: 533ab09a73116402e39da65933f26b8f3065357c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855070"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291429"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 무료 프로비전
 

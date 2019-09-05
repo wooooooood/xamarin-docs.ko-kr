@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin�
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f06af6a2121fc037f5c3f496ee8bd6b91e2969e6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2bdb95c73ed692b3ba7f0c3ff15cd7754a7e7b66
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656743"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278871"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>연습 - Apple의 계측 도구 사용
 
@@ -24,7 +24,7 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 ## <a name="diagnosing-the-memory-issues"></a>메모리 문제 진단
 
 1. Mac용 Visual Studio에서 **도구 > 계측 시작** 메뉴 항목에서 **계측**을 시작합니다.
-2. **실행 &gt; 디바이스에 업로드** 메뉴 항목을 선택하여 응용 프로그램을 디바이스에 업로드합니다.
+2. **실행 &gt; 디바이스에 업로드** 메뉴 항목을 선택하여 애플리케이션을 디바이스에 업로드합니다.
 3. **할당** 템플릿(흰색 상자가 있는 주황색 아이콘)을 선택합니다.
 
     ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "할당 템플릿 선택")

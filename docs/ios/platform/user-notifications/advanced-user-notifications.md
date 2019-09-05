@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10에 도입 된 사용자 알림 프레임
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 28734af7c3d9958462e47ff6b11a0f9d0e06bcfb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a22e0d6979173ca29596687da8a0b54c6fc565a7
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655406"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279046"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.ios의 고급 사용자 알림
 
@@ -266,7 +266,7 @@ namespace MonkeyChatNotifyExtension
 
 -----
 
-알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`)는 알림 작업을 등록 하는 데 사용 되는 것과 동일한 범주 값을 사용 합니다. 앱에서 여러 범주에 대해 동일한 UI를 사용 하는 경우를 형식 **배열로** 전환 `UNNotificationExtensionCategory` 하 고 필요한 모든 범주를 제공 합니다. 예를 들어:
+알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`)는 알림 작업을 등록 하는 데 사용 되는 것과 동일한 범주 값을 사용 합니다. 앱에서 여러 범주에 대해 동일한 UI를 사용 하는 경우를 형식 **배열로** 전환 `UNNotificationExtensionCategory` 하 고 필요한 모든 범주를 제공 합니다. 예:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -361,7 +361,7 @@ namespace MonkeyChatNotifyExtension
 
 알림 콘텐츠 확장을 호출 하기 전에 알림 시스템이 이미 실행 되 고 있기 때문에 콘텐츠 영역은 전체 크기를 시작 하 고 사용자에 게 표시 될 때 요청 된 크기에 애니메이션을 적용 합니다.
 
-이 효과를 제거 하려면 확장에 `Info.plist` 대 한 파일을 편집 하 고 `UNNotificationExtensionInitialContentSizeRatio` `NSExtensionAttributes` 키의 키를 원하는 비율을 나타내는 값으로 형식 **Number** 로 설정 합니다. 예:
+이 효과를 제거 하려면 확장에 `Info.plist` 대 한 파일을 편집 하 고 `UNNotificationExtensionInitialContentSizeRatio` `NSExtensionAttributes` 키의 키를 원하는 비율을 나타내는 값으로 형식 **Number** 로 설정 합니다. 예를 들어:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -538,7 +538,7 @@ completionHandler (UNNotificationContentExtensionResponseOption.DismissAndForwar
 
 앱 및 알림 디자인에 따라 사용자가 알림 (예: 메시지에 회신)에 텍스트를 입력 해야 하는 경우가 있을 수 있습니다. 알림 콘텐츠 확장은 표준 알림과 마찬가지로 기본 제공 텍스트 입력 작업에 액세스할 수 있습니다.
 
-예를 들어:
+예:
 
 ```csharp
 using System;

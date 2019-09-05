@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 101e27d3ebb26295418c63c1be703976091e50d6
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 57908027c6e9215504f410c0f9c989d6fbe3adad
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869337"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290515"
 ---
 # <a name="ios-frequently-asked-questions"></a>iOS faq (질문과 대답)
 
@@ -59,7 +59,7 @@ Xamarin 주기 7에서는 사용자 지정 된 MSBuild 대상을 사용 하 여�
 Xamarin 4를 기준으로 이제 `.xcarchive` `ArchiveOnBuild` 속성을로 `true`설정 하 여 Windows에서을 만들 수 있습니다.
 
 ### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[다음 메시지가 표시되며 내 앱 제출에 실패한 이유는 무엇인가요? "...에서 허용되지 않는 경로("iTunesMetadata.plist")를 발견했습니다."](itunesmetadata-disallowed-paths.md)
-이 오류는 Apple 앱 스토어 확인 프로세스의 변경에 대 한 결과입니다. 이 특정 오류는 설치한 Xamarin의 특정 버전과 관련이 없으므로 다운 그레이드는 도움이 _되지_ 않습니다. 이 가이드는 문제를 해결 하는 방법에 대 한 자세한 정보로 연결 됩니다.
+이 오류는 Apple 앱 스토어 확인 프로세스의 변경에 대 한 결과입니다. 이 특정 오류는 설치한 Xamarin의 특정 _버전과 관련이 없으므로 다운 그레이드는 도움이_ _되지_ 않습니다. 이 가이드는 문제를 해결 하는 방법에 대 한 자세한 정보로 연결 됩니다.
 
 
 ## <a name="diagnosing-specific-error-messages"></a>특정 오류 메시지 진단

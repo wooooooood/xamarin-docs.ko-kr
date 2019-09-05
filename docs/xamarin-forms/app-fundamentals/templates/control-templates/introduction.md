@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b7a6c6d9c9c541e1d5e821fc2dac202e98bec62
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 676523e461737d7820278ca8c319794d3347088d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994427"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289801"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿 소개
 
@@ -38,7 +38,7 @@ _Xamarin.Forms 컨트롤 템플릿은 런타임 시 애플리케이션 페이지
 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)이 생성되어 이러한 형식에 할당되면 기존 모양이 `ControlTemplate`에 정의된 모양으로 바뀝니다. 또한 `ControlTemplate` 속성을 사용하여 모양을 설정하는 것은 물론 테마 기능을 더욱 확장하는 스타일을 사용해서도 컨트롤 템플릿을 적용할 수 있습니다.
 
 > [!NOTE]
->  *이란 합니다 `TemplatedPage` 고 `TemplatedView` 형식?* `TemplatedPage`는 `ContentPage`의 기본 클래스로, Xamarin.Forms에서 제공한 가장 기본적인 페이지 형식입니다. `ContentPage`와 달리, `TemplatedPage`에는 `Content` 속성이 없습니다. 따라서 콘텐츠를 `TemplatedPage` 인스턴스에 직접 추가할 수 없습니다. 대신, `TemplatedPage` 인스턴스에 대한 컨트롤 템플릿을 설정하여 콘텐츠를 추가합니다. 마찬가지로 `TemplatedView`는 `ContentView`에 대한 기본 클래스입니다. `ContentView`와 달리, `TemplatedView`에는 `Content` 속성이 없습니다. 따라서 콘텐츠를 `TemplatedView` 인스턴스에 직접 추가할 수 없습니다. 대신, `TemplatedView` 인스턴스에 대한 컨트롤 템플릿을 설정하여 콘텐츠를 추가합니다.
+> *이란 합니다 `TemplatedPage` 고 `TemplatedView` 형식?* `TemplatedPage`는 `ContentPage`의 기본 클래스로, Xamarin.Forms에서 제공한 가장 기본적인 페이지 형식입니다. `ContentPage`와 달리, `TemplatedPage`에는 `Content` 속성이 없습니다. 따라서 콘텐츠를 `TemplatedPage` 인스턴스에 직접 추가할 수 없습니다. 대신, `TemplatedPage` 인스턴스에 대한 컨트롤 템플릿을 설정하여 콘텐츠를 추가합니다. 마찬가지로 `TemplatedView`는 `ContentView`에 대한 기본 클래스입니다. `ContentView`와 달리, `TemplatedView`에는 `Content` 속성이 없습니다. 따라서 콘텐츠를 `TemplatedView` 인스턴스에 직접 추가할 수 없습니다. 대신, `TemplatedView` 인스턴스에 대한 컨트롤 템플릿을 설정하여 콘텐츠를 추가합니다.
 
 컨트롤 템플릿은 XAML 및 C#으로 생성할 수 있습니다.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 iPhone 6s 및 iPhone 6s Plus에 도입 된 3D �
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 784638e2796f12cb338fb3583b62a376e16dcf60
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 46db28dab32f14fa476b9fbb42b788feb669aa74
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199736"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291859"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.ios의 3D 터치 소개
 
@@ -175,11 +175,11 @@ namespace DTouch
 
 메서드 `GetViewControllerForPreview` 는 **피킹 (peeking** ) 작업을 수행 하는 데 사용 됩니다. 표 셀에 대 한 액세스를 얻은 다음 데이터를 백업 하 고 `DetailViewController` 현재 스토리 보드에서을 로드 합니다. `PreferredContentSize` 을 (0, 0)로 설정 하 여 기본 **피킹 (peeking** ) 보기 크기를 요청 합니다. 마지막으로 표시 되 `previewingContext.SourceRect = cell.Frame` 는 셀을 제외한 모든 항목을 흐리게 표시 하 고 새 보기를 반환 합니다.
 
-는 `CommitViewController` 사용자가 더 이상 사용 되지 않는 경우 **Pop** 보기에서 만든 뷰를 다시 사용 합니다.
+는 `CommitViewController` 사용자가 더 이상 사용 되지 않는 경우 **Pop** **보기에서 만든** 뷰를 다시 사용 합니다.
 
 ### <a name="registering-for-peek-and-pop"></a>피킹 (Peeking) 및 Pop 등록
 
-사용자가 항목을 **피킹 (peeking** ) 할 수 있도록 허용할 뷰 컨트롤러 에서이 서비스에 등록 해야 합니다. 테이블 뷰 컨트롤러 (`MasterViewController`) 위에 지정 된 예에서는 다음 코드를 사용 합니다.
+사용자 **가 항목을** **피킹 (peeking** ) 할 수 있도록 허용할 뷰 컨트롤러에서이 서비스에 등록 해야 합니다. 테이블 뷰 컨트롤러 (`MasterViewController`) 위에 지정 된 예에서는 다음 코드를 사용 합니다.
 
 ```csharp
 public override void ViewDidLoad ()

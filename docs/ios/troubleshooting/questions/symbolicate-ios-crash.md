@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: 1e746a44deb024894a5d1f94fab21128126287e8
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: edd5a2c1ed2efdffc9bd28bb06ac19348615eefc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198800"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292105"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>iOS 크래시 로그를 기호로 표시하는 .dSYM 파일을 어디에서 찾을 수 있나요?
 
@@ -30,7 +30,7 @@ Mac용 Visual Studio 또는 Visual Studio 2017을 사용 하 여 iOS 앱을 빌�
 
     **&lt;프로젝트 디렉터리&gt;/l i&lt;/&gt;플랫폼/구성&lt;&gt;/**
 
-    예를 들어:
+    예:
 
     **TestApp/bin/iPhone/Release/**
 

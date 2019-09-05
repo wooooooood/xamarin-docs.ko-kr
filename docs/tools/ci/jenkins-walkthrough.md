@@ -3,15 +3,15 @@ title: Xamarin에서 Jenkins 사용
 description: 이 문서에서는 Xamarin 응용 프로그램과의 연속 통합을 위해 Jenkins를 사용 하는 방법을 설명 합니다. Jenkins를 설치, 구성 및 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d44e7232529386b7cb6b3db5fbb8bc4a285972fb
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 40f3443fb7c6fc6240e016106d9b6bbe0e0b666d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529120"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290816"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin에서 Jenkins 사용
 
@@ -133,7 +133,7 @@ Jenkins는 추가 플러그 인 없이 Git를 지원 합니다.
 
  [![](jenkins-walkthrough-images/image15.png "MSBuild 추가 단추가 나타날 때까지 System Jenkins 구성 페이지 아래로 스크롤합니다.")](jenkins-walkthrough-images/image15.png#lightbox)
 
-이 단추를 클릭 하 고 표시 되는 폼에서 **MSBuild** 필드의 **이름과** **경로** 를 채웁니다. Msbuild 설치의 이름은 의미가 있어야 하 고, **msbuild의 경로** 는 일반적으로 `xbuild` **/Library/Frameworks/Mono.framework/Commands/xbuild**에 대 한 경로 여야 합니다. 페이지 맨 아래에 있는 저장 또는 적용 단추를 클릭 하 여 변경 내용을 저장 한 후에는 Jenkins를 사용 `xbuild` 하 여 솔루션을 컴파일할 수 있습니다.
+이 단추를 클릭 하 고 표시 되는 폼에서 **MSBuild** 필드의 **이름과** **경로** 를 채웁니다. **Msbuild 설치의** 이름은 의미가 있어야 하 고, **msbuild의 경로** 는 일반적으로 `xbuild` **/Library/Frameworks/Mono.framework/Commands/xbuild**에 대 한 경로 여야 합니다. 페이지 맨 아래에 있는 저장 또는 적용 단추를 클릭 하 여 변경 내용을 저장 한 후에는 Jenkins를 사용 `xbuild` 하 여 솔루션을 컴파일할 수 있습니다.
 
 #### <a name="configuring-the-tfs-plugin"></a>TFS 플러그 인 구성
 
@@ -341,7 +341,7 @@ APK에 서명 하 고 zipalign는 Android SDK에서 별도의 두 명령줄 도�
 
 이러한 명령에는 프로젝트와 프로젝트에 따라 다를 수 있는 명령줄 매개 변수가 필요 합니다. 또한 이러한 명령줄 매개 변수 중 일부는 빌드를 실행 하는 경우 콘솔 출력에 표시 되지 않아야 하는 암호입니다. 이러한 명령줄 매개 변수 중 일부는 환경 변수에 저장 합니다. 서명 및/또는 zip 정렬에 필요한 환경 변수는 아래 표에 설명 되어 있습니다.
 
-|환경 변수|설명|
+|환경 변수|Description|
 |--- |--- |
 |KEYSTORE_FILE|APK에 서명 하기 위한 키 저장소 경로입니다.|
 |KEYSTORE_ALIAS|APK에 서명 하는 데 사용 되는 키 저장소의 키입니다.|

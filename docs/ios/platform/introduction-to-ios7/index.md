@@ -4,15 +4,15 @@ description: 이 문서에서는 보기 컨트롤러 전환을 비롯 하 여 iO
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 962f06367542cc0e5d0d17f3261411c96f215e44
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227482"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292021"
 ---
 # <a name="introduction-to-ios-7"></a>iOS 7 소개
 
@@ -93,7 +93,7 @@ void AnimateViewWithKeyframes ()
 
 UIKit Dynamics는 응용 프로그램이 물리학에 따라 애니메이션 된 상호 작용을 만들 수 있도록 하는 UIKit의 새로운 Api 집합입니다. UIKit Dynamics는 이러한 작업을 가능 하 게 하는 2D 물리학 엔진을 캡슐화 합니다.
 
-API는 본질적으로 선언적입니다. 무게, 충돌, 스프링 등의 물리학 개념을 표현 하 는 개체를 만들어 물리 상호 작용의 동작 방식을 선언 합니다. 그런 다음 뷰를 캡슐화 하는 *동적 애니메이터*라는 다른 개체에 동작을 연결 합니다. 동적 애니메이터는 선언 된 물리 동작을 *동적 항목* 에 적용 하는 데 관심이 `IUIDynamicItem` `UIView`있습니다 .와 같이를 구현 하는 항목입니다.
+API는 본질적으로 선언적입니다. 무게, 충돌, 스프링 등의 물리학 개념을 표현 하는 개체를 만들어 물리 상호 작용 *의 동작 방식을* 선언 합니다. 그런 다음 뷰를 캡슐화 하는 *동적 애니메이터*라는 다른 개체에 동작을 연결 합니다. 동적 애니메이터는 선언 된 물리 동작을 *동적 항목* 에 적용 하는 데 관심이 `IUIDynamicItem` `UIView`있습니다 .와 같이를 구현 하는 항목입니다.
 
 다음을 포함 하 여 복잡 한 상호 작용을 트리거하는 데 사용할 수 있는 여러 가지 기본 동작이 있습니다.
 

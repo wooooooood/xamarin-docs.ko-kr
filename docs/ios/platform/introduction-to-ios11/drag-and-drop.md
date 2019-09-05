@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11에 도입 된 Api를 사용 하 여 Xama
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/05/2017
-ms.openlocfilehash: cb982b1cd2340262101ff09bce2c37c69864b8dc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d6848c478e0704fab16a2f8cc64bb8aa80f9a174
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656477"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286608"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Xamarin.ios에서 끌어서 놓기
 

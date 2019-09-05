@@ -3,15 +3,15 @@ title: Graph API에 액세스
 description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 모바일 응용 프로그램에 Azure Active Directory 인증을 추가 하는 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 74072a48e190478af79ec06ca8e5048d2cb61e36
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 96e0991bb0805e61dfbf91e8479cbf1c9943f212
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198576"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287753"
 ---
 # <a name="accessing-the-graph-api"></a>Graph API에 액세스
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 네이티브 C 라이브러리를 Xamarin.ios �
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/28/2016
-ms.openlocfilehash: eb49be3e52258864d61521bbe1dc388e9f6d1210
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 75180152c3ed7056102038b9019f8017183c17ee
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198305"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279942"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.ios에서 네이티브 라이브러리 참조
 
@@ -30,7 +30,7 @@ IOS 개발을 위해 지원 되는 각 플랫폼에 대 한 네이티브 라이�
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphonesimulator -arch i386 -configuration Release clean build
 ```
 
-그러면에서 `MyProject.xcodeproj/build/Release-iphonesimulator/`네이티브 정적 라이브러리가 생성 됩니다. 라이브러리 보관 파일 (arm64)을 나중에 사용 하기 위해 안전한 위치에 복사 (또는 이동) 하 여 다음에 빌드할 동일한 라이브러리의 및 armv7버전과 충돌 하지 않도록 해당 이름을 해당 이름 (예:)에 제공 합니다.
+그러면에서 `MyProject.xcodeproj/build/Release-iphonesimulator/`네이티브 정적 라이브러리가 생성 됩니다. 라이브러리 보관 파일 (arm64)을 나중에 사용 하기 위해 안전한 위치에 복사 (또는 이동) 하 여 다음에 빌드할 동일한 라이브러리의 및 armv7 버전과 충돌 하지 않도록 해당 이름을 해당 이름 (예: **)에 제공 합니다.**
 
 ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을 실행 합니다.
 

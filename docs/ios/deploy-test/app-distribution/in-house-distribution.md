@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple Enterprise Developer Program의 구성원
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: f81e5a24957d4af1cd2ce27b39d1f398797cce73
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865525"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289883"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 사내 배포
 
@@ -22,7 +22,7 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 
 - Apple에서 검토를 위해 애플리케이션을 제출할 필요가 없습니다.
 - 애플리케이션을 배포할 수 있는 디바이스의 수에는 제한이 없습니다
-    - Apple에서는 사내 애플리케이션을 내부용으로만 사용해야 한다고 명확하게 언급하고 있습니다.
+  - Apple에서는 사내 애플리케이션을 내부용으로만 사용해야 한다고 명확하게 언급하고 있습니다.
 
 또한 Enterprise Program과 관련하여 주의해야 할 사항은 다음과 같습니다.
 
@@ -125,7 +125,7 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 6. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -146,7 +146,7 @@ Apple Developer Enterprise Program에서 정식 사용자는 애플리케이션�
 - iTunes를 통해 로컬로
 - MDM 서버
 - 내부 보안 웹 서버
-- Email
+- 전자 메일
 
 이러한 방법 중 하나를 사용하여 앱을 배포하려면 다음 섹션에서 설명하는 대로 먼저 IPA 파일을 만들어야 합니다.
 

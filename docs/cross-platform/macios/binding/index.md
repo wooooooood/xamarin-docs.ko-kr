@@ -1,47 +1,47 @@
 ---
 title: Objective-C 바인딩
-description: 이 문서를 만드는 방법을 설명 하는 다양 한 가이드에 대 한 링크를 제공 C# 에 대 한 바인딩을 Objective-c 코드를 개발자가 Xamarin 응용 프로그램에서 기본 제공 라이브러리를 사용할 수 있도록 합니다.
+description: 이 문서는 목표-C 코드에 대 한 바인딩을 만드는 C# 방법을 설명 하는 다양 한 가이드의 링크를 제공 하 여 개발자가 Xamarin 응용 프로그램에서 선반 드 라이브러리를 사용할 수 있도록 합니다.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 923ec41443feff67d851a0c2f3cba1b948aed580
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 8975bb899127d0761359bec695cd084f89c12972
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864408"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290566"
 ---
 # <a name="binding-objective-c"></a>Objective-C 바인딩
 
-이 섹션에서는 다양 한 문서에서 호출 될 수 있으므로 Objective-c 라이브러리 바인딩 만들기를 포함 하는 C# Xamarin.iOS 또는 Xamarin.Mac을 사용 하 여 만든 응용 프로그램입니다.
+이 섹션에는 목표-C 라이브러리에 대 한 바인딩을 만드는 과정을 다루는 여러 문서가 포함 되어 있으므로 Xamarin.ios 또는 C# xamarin.ios를 사용 하 여 만든 응용 프로그램에서 호출할 수 있습니다.
 
 ## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[개요](~/cross-platform/macios/binding/overview.md)
 
-이 문서 바인딩을 수행 하는 방법의 내부 구조 중 일부를 포함 합니다. 이 일부 기술 정보를 사용 하 여 고급 문서.
+이 문서에는 바인딩이 발생 하는 방법에 대 한 일부 내부 정보가 포함 되어 있습니다. 몇 가지 기술 정보가 포함 된 고급 문서입니다.
 
 ## <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Objective-C 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 
-이 문서를 만드는 데 사용 하는 프로세스를 설명 합니다. C# Objective C Api 및 objective-c에서 코드를.NET에 사용 되는 관용구에 매핑되는 방법의 바인딩.
-C Api만을 바인딩하는 경우이 P/Invoke 프레임 워크에 대 한 표준.NET 메커니즘을 사용 해야 합니다.
+이 문서에서는 관용구 Api의 바인딩을 만드는 C# 데 사용 되는 프로세스와 목적-c의이 .net에서 사용 되는 관용구에 매핑되는 방법에 대해 설명 합니다.
+C Api만 바인딩하는 경우에는 P/Invoke 프레임 워크로 표준 .NET 메커니즘을 사용 해야 합니다.
 
 ## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[바인딩 정의 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
 
-바인딩 생성 프로세스를 추진 하는 바인딩 작성자가 사용할 수 있는 특성의 모든 설명 하는 참조 가이드입니다.
+바인딩 생성 프로세스를 구동 하기 위해 바인딩 작성자가 사용할 수 있는 모든 특성을 설명 하는 참조 가이드입니다.
 
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
-목표 Sharpie는 바인딩의 첫 번째 패스를 부트스트랩 하는 데는 명령줄 도구입니다. 공용 API에 매핑할 네이티브 라이브러리의 헤더 파일을 구문 분석 하 여 작동 합니다 [바인딩 정의](~/cross-platform/macios/binding/objective-c-libraries.md) (수동으로 수행할 수 있는 프로세스).
+목표 Sharpie는 첫 번째 바인딩 패스를 부트스트랩 하는 데 도움이 되는 명령줄 도구입니다. 네이티브 라이브러리의 헤더 파일을 구문 분석 하 여 공용 API를 [바인딩 정의](~/cross-platform/macios/binding/objective-c-libraries.md) (수동으로 수행할 수도 있는 프로세스)에 매핑하는 방식으로 작동 합니다.
 
 ## <a name="ios"></a>iOS
 
-합니다 [iOS 바인딩 페이지](~/ios/platform/binding-objective-c/index.md) 에 다시 연결 공통 바인딩 리소스 또한 아래 예제입니다.
+[IOS 바인딩 페이지](~/ios/platform/binding-objective-c/index.md) 는 아래 예제와 함께 이러한 일반적인 바인딩 리소스에 다시 연결 됩니다.
 
-### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[연습: Objective-c 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
+### <a name="walkthrough-binding-an-objective-c-libraryiosplatformbinding-objective-cwalkthroughmd"></a>[연습: 목표-C 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
 
-이 문서에서는 오픈 소스를 사용 하 여 바인딩 프로젝트 만들기의 단계별 연습은 [InfColorPicker](https://github.com/InfinitApps/InfColorPicker) 예로 Objective C 프로젝트입니다. InfColorPicker 라이브러리는 사용자가 색 선택 영역을 보다 친숙 한 만들기, HSB 표현에 따라 색을 선택할 수 있는 재사용 가능한 뷰 컨트롤러를 제공 합니다. 목표 Sharpie 바인딩 프로세스를 지원 하기 위해 사용 됩니다.
+이 문서에서는 예를 들어 오픈 소스 [Infcolorpicker](https://github.com/InfinitApps/InfColorPicker) 목표-C 프로젝트를 사용 하 여 바인딩 프로젝트를 만드는 단계별 연습을 제공 합니다. InfColorPicker 라이브러리는 다시 사용할 수 있는 뷰 컨트롤러를 제공 합니다 .이를 통해 사용자는이를 통해 HSB 표시를 기준으로 색을 선택 하 여 사용자에 게 더 쉽게 색을 선택할 수 있습니다. 목표 Sharpie는 바인딩 프로세스를 지 원하는 데 사용 됩니다.
 
 ### <a name="binding-sampleshttpsgithubcommonomonotouch-bindings"></a>[바인딩 샘플](https://github.com/mono/monotouch-bindings)
 
@@ -49,9 +49,9 @@ C Api만을 바인딩하는 경우이 P/Invoke 프레임 워크에 대 한 표�
 
 ## <a name="mac"></a>Mac
 
-지금까지 [Mac 바인딩](~/mac/platform/binding.md) 매우 수동 프로세스가 되었습니다. 현재는 [다운로드할 수 있는 미리 보기](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) mac 용 Visual Studio의 향후 릴리스에 대 한 Mac 바인딩 프로젝트 지원
+지금까지 [Mac 바인딩은](~/mac/platform/binding.md) 매우 수동 프로세스입니다. 현재 Mac용 Visual Studio의 이후 릴리스에 대 한 Mac 바인딩 프로젝트 지원 [미리 보기를 다운로드할](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS Binding](~/ios/platform/binding-objective-c/index.md)
+- [iOS 바인딩](~/ios/platform/binding-objective-c/index.md)
 - [Mac 바인딩](~/mac/platform/binding.md)

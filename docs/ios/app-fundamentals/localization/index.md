@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 지역화 기능 및 Xamarin.ios 앱에서 
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/28/2017
-ms.openlocfilehash: 70e9f403e40cff8e1af536acf3a5efc3d12ad20b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e394b5487b240f98310ab223371466d62a3bdf23
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121400"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278880"
 ---
 # <a name="localization-in-xamarinios"></a>Xamarin.ios의 지역화
 
@@ -353,7 +353,7 @@ someControl.Text = localizedString;
 
 ## <a name="app-store-listing"></a>앱 스토어 목록
 
-앱 [스토어](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization) 에 대 한 Apple FAQ를 따라 앱에서 판매 중인 각 국가에 대 한 번역을 입력 합니다. 앱에 해당 언어에 대 한 지역화 된 .xproj 디렉터리가 포함 되어 있는 경우 에만 번역이 표시 된다는 경고를 확인 합니다.
+앱 [스토어](https://itunespartner.apple.com/en/apps/faq/App%20Store_Localization) 에 대 한 Apple FAQ를 따라 앱에서 판매 중인 각 국가에 대 한 번역을 입력 합니다. 앱에 해당 언어에 대 한 지역화 된 **.xproj** 디렉터리가 포함 되어 있는 경우에만 번역이 표시 된다는 경고를 확인 합니다.
 
 ## <a name="summary"></a>요약
 

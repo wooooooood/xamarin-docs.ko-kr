@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 989d0fe1d8fffd74ea5f64ae7bd5a13487d25c0e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 200ee3fdee3274063becec19fbc6d1504e132a88
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525727"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226649"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 디바이스 관리
 
@@ -47,10 +47,10 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
   아직 설치되지 않은 경우, 기본 위치에 Android SDK를 설치하세요. **C:\\Program Files (x86)\\Android\\android-sdk**.
 
 - [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 통해 다음 패키지를 설치해야 합니다. 
-    - **Android SDK Tools 버전 26.1.1** 이상
-    - **Android SDK 플랫폼 도구 27.0.1** 이상
-    - **Android SDK 빌드 도구 27.0.3** 이상 
-    - **Android Emulator 27.2.7** 이상. 
+  - **Android SDK Tools 버전 26.1.1** 이상
+  - **Android SDK 플랫폼 도구 27.0.1** 이상
+  - **Android SDK 빌드 도구 27.0.3** 이상 
+  - **Android Emulator 27.2.7** 이상. 
 
   이러한 패키지는 다음 스크린샷에 표시된 대로 **설치됨** 상태로 표시됩니다.
 
@@ -217,9 +217,9 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 - Android SDK를 설치해야 합니다([Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md) 참조).
 
 - [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 통해 다음 패키지를 설치해야 합니다. 
-    - **SDK 도구 버전 26.1.1** 이상
-    - **Android SDK 플랫폼 도구 28.0.1** 이상 
-    - **Android SDK 빌드 도구 26.0.3** 이상
+  - **SDK 도구 버전 26.1.1** 이상
+  - **Android SDK 플랫폼 도구 28.0.1** 이상 
+  - **Android SDK 빌드 도구 26.0.3** 이상
 
   이러한 패키지는 다음 스크린샷에 표시된 대로 **설치됨** 상태로 표시됩니다.
 

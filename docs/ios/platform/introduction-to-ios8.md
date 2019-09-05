@@ -4,15 +4,15 @@ description: IOS 8을 사용 하 여 Apple은 흥미 및 즐거움 개발자에 
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 592eff29e7c12741975dda0d602f5850071c1f45
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b3c1af480db2c5642ef0b16aed795d2bb43290f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644808"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292398"
 ---
 # <a name="introduction-to-ios-8"></a>iOS 8 소개
 

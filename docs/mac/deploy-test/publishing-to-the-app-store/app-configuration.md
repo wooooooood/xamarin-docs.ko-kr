@@ -1,28 +1,28 @@
 ---
 title: Mac 앱 구성
-description: 이 문서에서는 게시를 위해 Xamarin.Mac 앱을 구성하는 방법을 설명합니다. 응용 프로그램 설정, 서명 설정 및 빌드 설정을 설명합니다.
+description: 이 문서에서는 게시를 위해 Xamarin.Mac 앱을 구성하는 방법을 설명합니다. 애플리케이션 설정, 서명 설정 및 빌드 설정을 설명합니다.
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: 1f88a429d58a09b54bb2383dbb77a3768ce64152
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6134cbfabb342750ec68b676dd06388f4fb8f035
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115096"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283026"
 ---
 # <a name="mac-app-configuration"></a>Mac 앱 구성
 
 ## <a name="mac-app-configuration"></a>Mac 앱 구성
 
-Mac용 Visual Studio에서 Mac 응용 프로그램 프로젝트를 마우스 오른쪽 단추로 클릭하고 **옵션**을 선택합니다.
+Mac용 Visual Studio에서 Mac 애플리케이션 프로젝트를 마우스 오른쪽 단추로 클릭하고 **옵션**을 선택합니다.
 
-### <a name="application-settings"></a>응용 프로그램 설정
+### <a name="application-settings"></a>애플리케이션 설정
 
-Xamarin.Mac 앱의 응용 프로그램 설정을 변경하려면 **Solution Pad**에서 **Info.plist** 파일을 두 번 클릭합니다.
+Xamarin.Mac 앱의 애플리케이션 설정을 변경하려면 **Solution Pad**에서 **Info.plist** 파일을 두 번 클릭합니다.
 
 ![Info.plist 파일 선택](app-configuration-images/config04.png "Info.plist 파일 선택")
 
@@ -30,7 +30,7 @@ Xamarin.Mac 앱의 응용 프로그램 설정을 변경하려면 **Solution Pad*
 
  [![Info.plist 파일 편집](app-configuration-images/config01.png "Info.plist 파일 편집")](app-configuration-images/config01-large.png#lightbox)
 
-Xamarin.Mac으로 만든 Mac 응용 프로그램을 실행하려면 다음과 같은 시스템 요구 사항이 필요합니다.
+Xamarin.Mac으로 만든 Mac 애플리케이션을 실행하려면 다음과 같은 시스템 요구 사항이 필요합니다.
 
 - Mac OS X 10.7 이상을 실행하는 Mac 컴퓨터.
 

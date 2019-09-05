@@ -4,19 +4,19 @@ description: 이 문서에서는 Xamarin.ios에서 사용자 지정 컨트롤을
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 537816213208ed6e71f0986558c9a94a327759e2
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 24e4113f0437c626ba93f12c1124407c472fef8d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227911"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284952"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.ios에서 사용자 지정 컨트롤 만들기
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우, *Swift* 및 *Xcode* 에서 개발자가 작업 하는 것과 동일한 사용자정의 컨트롤에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 사용자 정의 컨트롤을 만들고 유지 관리 하거나 선택적으로 코드에서 C# 직접 만들 수 있습니다.
+Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우, *Swift* 및 *Xcode* *에서 개발자*가 작업 하는 것과 동일한 사용자 정의 컨트롤에 액세스할 수 있습니다. Xamarin.ios는 Xcode와 직접 통합 되므로 Xcode의 _Interface Builder_ 를 사용 하 여 사용자 정의 컨트롤을 만들고 유지 관리 하거나 선택적으로 코드에서 C# 직접 만들 수 있습니다.
 
 MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만 사용자 지정 컨트롤을 만들어 사용자 지정 컨트롤을 만들어 사용자 지정 UI 테마 (예: 게임 인터페이스)와 사용자 지정 UI 테마를 일치 시 키 지 않도록 해야 할 수 있습니다.
 
@@ -324,7 +324,7 @@ if (this.Action !=null)
     NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 ```
 
-먼저 컨트롤이 컨트롤에 할당 되었는지 확인 합니다 . 그런 다음 작업을 정의 하는 경우이 **작업** 을 호출 합니다.
+먼저 컨트롤이 컨트롤에 **할당 되었는지 확인** 합니다. 그런 다음 작업을 정의 하는 경우이 **작업** 을 호출 합니다.
 
 <a name="Using-the-Custom-Control" />
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 경고를
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: c97006d1afb68d693e2792879788ea92907873fc
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 1e2ad12e7dc52b44bda079340638298b87ac5f65
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889540"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291209"
 ---
 # <a name="alerts-in-xamarinmac"></a>Xamarin.ios의 경고
 
@@ -115,7 +115,7 @@ alert.BeginSheet (this);
 
 ## <a name="working-with-alert-buttons"></a>경고 단추 사용
 
-기본적으로 경고는 **확인** 단추만 표시 합니다. 그러나 **단추** 컬렉션에 추가 하 여 추가 단추를 만들 수 있습니다. 다음 코드에서는 **확인**, **취소** 및 다음을 수행 하 여 자유 부동 경고 를 만듭니다.
+기본적으로 경고는 **확인** 단추만 표시 합니다. 그러나 **단추** 컬렉션에 추가 하 여 추가 단추를 만들 수 있습니다. 다음 코드에서는 **확인**, **취소** **및 다음을 수행 하 여** 자유 부동 경고를 만듭니다.
 
 ```csharp
 var alert = new NSAlert () {

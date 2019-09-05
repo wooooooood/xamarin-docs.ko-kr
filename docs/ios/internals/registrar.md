@@ -4,15 +4,15 @@ description: 이 문서에서는 클래스를 목표-C 런타임에 사용할 �
 ms.prod: xamarin
 ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: c761290f43d780b2eafcf416fb9edf1e069f65c3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 0d8e16c2a651df293b13e7f7586d5a643caa1c9c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226040"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291837"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Xamarin.ios에 대 한 형식 등록자
 
@@ -180,7 +180,7 @@ class MyClass : IMyProtocol
 
 - 새 등록 시스템을 사용 하려면 일부 타사 라이브러리를 업데이트 해야 합니다. 자세한 내용은 아래의 [필수 수정 사항을](#required-modifications) 참조 하세요.
 
-- 단기 단점은 계정 프레임 워크를 사용 하는 경우 Clang를 사용 해야 한다는 것입니다 .이는 Apple의 Clang 헤더 를로만 컴파일할 수 있기 때문입니다. Xcode `--compiler:clang` 4.6 이전 버전을 사용 하는 경우 Clang를 사용 하도록 추가 mtouch 인수를 추가 합니다 (xamarin.ios는 Xcode 5.0 이상에서 Clang를 자동으로 선택).
+- 단기 단점은 계정 프레임 워크를 사용 하는 경우 Clang를 사용 해야 한다는 것입니다 .이는 **Apple의 Clang** 헤더를로만 컴파일할 수 있기 때문입니다. Xcode `--compiler:clang` 4.6 이전 버전을 사용 하는 경우 Clang를 사용 하도록 추가 mtouch 인수를 추가 합니다 (xamarin.ios는 Xcode 5.0 이상에서 Clang를 자동으로 선택).
 
 - Xcode 4.6 (또는 이전 버전)를 사용 하는 경우 내보낸 형식 이름에 ASCII 문자가 아닌 문자가 포함 된 경우 GCC/G + +를 선택 해야 합니다 .이는 Xcode 4.6와 함께 제공 되는 Clang 버전이 목표-C 코드의 식별자 내에서 비 ASCII 문자를 지원 하지 않기 때문입니다. GCC `--compiler:gcc` 를 사용 하기 위해 추가 mtouch 인수에를 추가 합니다.
 

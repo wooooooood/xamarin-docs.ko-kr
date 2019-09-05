@@ -4,15 +4,15 @@ description: 이 가이드에서는 첫 번째 tvOS 앱 및 해당 개발 도구
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 59019e08c279a9910281de98fe64db798379e1a4
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119161"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70281816"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS 빠른 시작 가이드
 
@@ -334,7 +334,7 @@ IOS 디자이너에서 코드를 통해 추가 된 컨트롤에 액세스 하는
 
 ### <a name="creating-an-event-handler"></a>이벤트 처리기 만들기
 
-이 샘플 응용 프로그램에서는 단추를 클릭할 때 발생 하는 것을 원하지 않으므로 단추의 특정 이벤트에 이벤트 처리기를 추가 해야 합니다. 이를 설정 하려면 다음을 수행 합니다.
+이 샘플 응용 프로그램에서는 단추를 클릭할 때 발생 하는 것을 원하지 않으므로 단추의 특정 이벤트에 이벤트 처리기를 추가 _해야 합니다._ 이를 설정 하려면 다음을 수행 합니다.
 
 1. Xamarin iOS 디자이너에서 보기 컨트롤러의 단추를 선택 합니다.
 2. 속성 패드에서 **이벤트** 탭을 선택 합니다.

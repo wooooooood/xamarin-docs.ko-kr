@@ -4,14 +4,14 @@ description: 이 문서에서는 일반적인 오류 및 Xamarin의 Unified API 
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
-author: asb3993
-ms.author: amburns
-ms.openlocfilehash: 844730d2ace717b951df2d80b2add6d1094fe997
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: 0d1f09f8318f1292f6c9b65627d9b659f8fc466b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226102"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280782"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>코드를 Unified API로 업데이트하는 팁
 

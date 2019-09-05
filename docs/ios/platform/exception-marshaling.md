@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 네이티브 및 관리 �
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/05/2017
-ms.openlocfilehash: 16ff511a2984e98eb8a67ef33cdca25a63fff7ab
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a5dea7358e48ebb1961c1fa3253ad096d041c0cf
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200319"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279689"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Xamarin.ios의 예외 마샬링
 
@@ -80,7 +80,7 @@ try {
 
 이는 목표-C stack 해제기가 관리 되 `catch` 는 절에 대해 알지 못하기 때문 이며, `finally` 절이 실행 되지 않습니다.
 
-위의 코드 예제를 효과적 으로 사용 하는 경우 목표-c에는 처리 되지 않은 목표-c 예외 ( [`NSSetUncaughtExceptionHandler`][2]xamarin.ios 및 xamarin.ios에서 사용 됨)에 대 한 알림이 있고 해당 지점에서 목표-c 예외를 변환 하려고 시도 하기 때문입니다. 관리 되는 예외입니다.
+위의 코드 예제를 효과적으로 사용 _하는 경우_ 목표-c에는 처리 되지 않은 목표-c 예외 ( [`NSSetUncaughtExceptionHandler`][2]xamarin.ios 및 xamarin.ios에서 사용 됨)에 대 한 알림이 있고 해당 지점에서 목표-c 예외를 변환 하려고 시도 하기 때문입니다. 관리 되는 예외입니다.
 
 ## <a name="scenarios"></a>시나리오
 

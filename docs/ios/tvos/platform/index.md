@@ -4,15 +4,15 @@ description: 이 문서는 다양 한 tvOS 릴리스에 포함 된 기능을 설
 ms.prod: xamarin
 ms.assetid: FB705CAD-B43C-4374-B139-92AB81185429
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 7bc85c4aba0bf1c217a1cb45c1ac605dc43695cc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 187e761948a560a96257ffa0ac84415d862a629d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283521"
 ---
 # <a name="tvos-platform-features"></a>tvOS 플랫폼 기능
 

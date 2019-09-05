@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 문서 선택기에 대해 설명 하 고 X
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 6982f02860db2e89f83b4002d6acb5b28bae906b
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 67ee8f1ef7f254eb77cfb186a478993b6fd3847c
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200374"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280032"
 ---
 # <a name="document-picker-in-xamarinios"></a>Xamarin.ios의 문서 선택기
 

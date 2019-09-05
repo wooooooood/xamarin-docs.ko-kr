@@ -4,15 +4,15 @@ description: 이 문서에서는 사용자의 다른 장치에서 실행 되는 
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 28c5086833ceb1dc8550e513b120f7355aa9bebe
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656573"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290752"
 ---
 # <a name="handoff-in-xamarinios"></a>Xamarin.ios의 핸드 오프
 
@@ -453,7 +453,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 
 지정 된 도메인이 `WebpageURL` 속성의 값과 일치 하면 핸드 오프는 해당 도메인의 웹 사이트에서 승인 된 앱 id 목록을 다운로드 합니다. 웹 사이트는 **apple 앱 사이트-연결** (예: `https://company.com/apple-app-site-association`) 이라는 서명 된 JSON 파일에 승인 된 id 목록을 제공 해야 합니다.
 
-이 JSON 파일에는 형식의 `<team identifier>.<bundle identifier>`앱 id 목록을 지정 하는 사전이 포함 되어 있습니다. 예:
+이 JSON 파일에는 형식의 `<team identifier>.<bundle identifier>`앱 id 목록을 지정 하는 사전이 포함 되어 있습니다. 예를 들어:
 
 ```csharp
 {
@@ -487,7 +487,7 @@ https://example.com/apple-app-site-association.
 
 ## <a name="supporting-handoff-in-document-based-apps"></a>문서 기반 앱에서 핸드 오프 지원
 
-위에서 설명한 것 처럼 iOS 및 OS X에서 문서 기반 앱은 앱의 **info.plist** 파일에의 `CFBundleDocumentTypes` `NSUbiquitousDocumentUserActivityType`키가 포함 된 경우 iCloud 기반 문서의 전달 기능을 자동으로 지원 합니다. 예:
+위에서 설명한 것 처럼 iOS 및 OS X에서 문서 기반 앱은 앱의 **info.plist** 파일에의 `CFBundleDocumentTypes` `NSUbiquitousDocumentUserActivityType`키가 포함 된 경우 iCloud 기반 문서의 전달 기능을 자동으로 지원 합니다. 예를 들어:
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -523,7 +523,7 @@ https://example.com/apple-app-site-association.
 
 는 작업을 계속 하는 데 필요한 정보의 양이 초기 전달 페이로드에 의해 효율적으로 전송 되지 않는 경우가 있을 수 있습니다. 이러한 상황에서 수신 앱은 데이터를 전송 하기 위해 자신과 원래 앱 간에 하나 이상의 스트림을 설정할 수 있습니다.
 
-원본 응용 프로그램은 `SupportsContinuationStreams` `NSUserActivity` 인스턴스의 속성을로 `true`설정 합니다. 예:
+원본 응용 프로그램은 `SupportsContinuationStreams` `NSUserActivity` 인스턴스의 속성을로 `true`설정 합니다. 예를 들어:
 
 ```csharp
 // Create a new user Activity to support this tab

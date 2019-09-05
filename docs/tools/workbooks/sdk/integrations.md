@@ -3,15 +3,15 @@ title: 고급 통합 항목
 description: 이 문서에서는 Xamarin Workbooks 통합과 관련 된 고급 항목을 설명 합니다. Xamarin 통합 문서 내에서 Xamarin.ios 패키지 및 API 노출에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: 07dd0e64b90bb0aa11f0a7050e3b86f3203ce7de
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: f8105c8285e696f8754799c33c30e31ce5356870
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199983"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283891"
 ---
 # <a name="advanced-integration-topics"></a>고급 통합 항목
 

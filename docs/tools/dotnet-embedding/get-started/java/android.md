@@ -3,15 +3,15 @@ title: Android 시작
 description: 이 문서에서는 Android에서 .NET 포함을 사용 하 여 시작 하는 방법을 설명 합니다. .NET 포함을 설치 하 고, Android 라이브러리 프로젝트를 만들고, Android Studio 프로젝트에서 생성 된 출력을 사용 하 고, 기타 고려 사항을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2018
-ms.openlocfilehash: d1d05c75b8026112e8b81c91144361b65ad3a8e0
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 9b0da6f5b195ecef5fd4e5e2b4585b660573a5be
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120028"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278568"
 ---
 # <a name="getting-started-with-android"></a>Android 시작
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Android의 현재 제한 사항
 
-현재 하위 클래스 `Java.Lang.Object`를 사용할 경우 Xamarin은 .net 포함 대신 Java 스텁 (Android 호출 가능 래퍼)을 생성 합니다. 이로 인해 Xamarin.ios로 Java로 내보내기 C# 와 동일한 규칙을 따라야 합니다. 예:
+현재 하위 클래스 `Java.Lang.Object`를 사용할 경우 Xamarin은 .net 포함 대신 Java 스텁 (Android 호출 가능 래퍼)을 생성 합니다. 이로 인해 Xamarin.ios로 Java로 내보내기 C# 와 동일한 규칙을 따라야 합니다. 예를 들어:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -262,7 +262,7 @@ Android 지원 라이브러리 또는 AAR에 Google Play 서비스 이러한 파
 mono Embeddinator-4000.exe --gen=Java --platform=Android -c -o output YourMainAssembly.dll YourDependencyA.dll YourDependencyB.dll
 ```
 
-사용자가 Android Studio 프로젝트에 필요한 Android 자산, 리소스 등이 포함 되어 있지 않으면 NuGet에서 모든 항목을 제외 해야 합니다. Java에서 호출 하지 않아도 되는 종속성을 생략 하 고 필요한 라이브러리의 일부를 링커에 포함할 수도 있습니다.
+사용자가 Android Studio 프로젝트에 필요한 Android 자산, 리소스 등이 포함 되어 있지 않으면 NuGet에서 모든 항목을 제외 해야 합니다. Java에서 호출 하지 않아도 되는 종속성을 생략 하 고 필요한 라이브러리의 일부 _를 링커에 포함할_ 수도 있습니다.
 
 Android Studio에 필요한 Java 종속성을 추가 하려면 **gradle** 파일이 다음과 같이 표시 될 수 있습니다.
 

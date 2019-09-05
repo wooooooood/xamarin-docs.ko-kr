@@ -3,15 +3,15 @@ title: 목적 Sharpie 도구 & 명령
 description: 이 문서에서는 Sharpie에 포함 된 도구에 대 한 개요와 함께 사용할 수 있는 명령줄 인수를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2015
-ms.openlocfilehash: ddfe0f99991808214a6006c9504d267179adf2ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 13f3000315e91cec7ff2422cff3b520997ba26fd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521863"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280918"
 ---
 # <a name="objective-sharpie-tools--commands"></a>목적 Sharpie 도구 & 명령
 
@@ -51,7 +51,7 @@ Available Tools:
 
 목표 Sharpie 다음과 같은 도구를 제공 합니다.
 
-|도구|Description|
+|도구|설명|
 |--- |--- |
 |**xcode**|현재 Xcode 설치 및 사용할 수 있는 iOS 및 Mac Sdk 버전에 대 한 정보를 제공 합니다. 나중에 바인딩을 생성할 때이 정보를 사용할 예정입니다.|
 |**pod**|로컬 디렉터리에서를 검색, 구성 및 설치 하 고 마스터 사양 리포지토리에서 사용 가능한 목표-C [CocoaPod](https://cocoapods.org/) 라이브러리를 바인딩합니다. 이 도구는 설치 된 CocoaPod를 평가 하 여 아래 `bind` 도구에 전달할 올바른 입력을 자동으로 추론 합니다. 3\.0의 새로운|

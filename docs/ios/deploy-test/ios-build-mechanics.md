@@ -4,15 +4,15 @@ description: 이 가이드에서는 앱의 시간을 맞추는 방법 및 빠른
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: dbf8f85192f9052041fc65367eb2f6c57603b440
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ec510d46bf1b46cf8fd70c8f4d43b3108f46a010
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831419"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284783"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -27,14 +27,14 @@ Xamarin 빌드 속도는 프로세서 기능, 버스 속도, 실제 메모리의
 
 ## <a name="timing-apps"></a>타이밍 앱
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
 1. **Mac용 Visual Studio > 기본 설정...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 선택
 3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 **진단**으로 설정합니다.  [![](ios-build-mechanics-images/image2.png "로그 세부 정보 표시 설정")](ios-build-mechanics-images/image2.png#lightbox)
-4. **확인**
+4. **확인** 을 클릭합니다.
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드
 7. 빌드 출력 단추를 클릭하여 오류 패드 내에서 진단 출력 보기(보기 > 패드 > 오류)
@@ -47,7 +47,7 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 1. **도구 > 옵션...** 클릭
 2. 왼쪽 트리 뷰에서 **프로젝트 및 솔루션 > 빌드 및 실행** 선택
 3. 오른쪽 패널에서 *MSBuild 빌드 출력 세부 정보 표시 드롭다운*을 **진단**으로 설정합니다.  [![](ios-build-mechanics-images/image2-vs.png "MSBuild 빌드 출력 세부 정보 표시 설정")](ios-build-mechanics-images/image2-vs.png#lightbox)
-4. **확인**
+4. **확인** 을 클릭합니다.
 5. 패키지를 지우고 다시 빌드합니다.
 6. 출력 패널에 진단 출력이 표시됩니다.
 
@@ -113,7 +113,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 
 - 디버그
   - 앱이 개발 중일 때 사용해야 하는 기본 구성이며, 따라서 최대한 빨라야 합니다.
-- 해제
+- Release
   - 릴리스 빌드는 사용자에게 제공되는 빌드이며 무엇보다도 성능에 초점을 맞춰야 합니다. 릴리스 구성을 사용할 때 LLVM 최적화 컴파일러를 사용하여 PNG 파일을 최적화할 수 있습니다.
 
  

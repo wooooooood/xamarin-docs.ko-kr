@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 tvOS 앱에서 텍스�
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b1f4712e87762acb81a366700174db33e0c557bf
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226680"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292494"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Xamarin에서 tvOS 텍스트 및 검색 필드 작업
 
@@ -59,7 +59,7 @@ Apple에는 텍스트 필드 작업에 대 한 다음과 같은 제안이 있습
 
 [![](text-fields-and-search-images/keyboard01.png "Siri 원격 키보드")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-현재 보기에 텍스트 필드가 두 개 이상 있으면 다음 단추가 자동으로 표시 되어 사용자가 다음 텍스트 필드로 이동 합니다. 텍스트 입력을 종료 하 고 사용자를 이전 화면으로 반환 하는 마지막 텍스트 필드에 대해 **완료** 단추가 표시 됩니다.
+현재 보기에 텍스트 필드가 두 개 이상 있으면 다음 단추가 자동으로 표시 되어 사용자 **가 다음 텍스트** 필드로 이동 합니다. 텍스트 입력을 종료 하 고 사용자를 이전 화면으로 반환 하는 마지막 텍스트 필드에 대해 **완료** 단추가 표시 됩니다.
 
 사용자는 언제 든 지 Siri Remote to end 텍스트 항목의 **메뉴** 단추를 누르고 다시 이전 화면으로 돌아갈 수 있습니다.
 
@@ -105,7 +105,7 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 1. **텍스트 필드** 를 선택 하 고 **Properties Pad**의 **위젯** 탭에서 각 고유 **이름을** 지정 합니다.
 
     [![](text-fields-and-search-images/text03.png "Properties Pad의 위젯 탭")](text-fields-and-search-images/text03.png#lightbox)
-1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 및 기본값과 같은 요소를 정의할 수 있습니다.
+1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 **및 기본값과 같은**요소를 정의할 수 있습니다.
 
     [![](text-fields-and-search-images/text04.png "텍스트 필드 섹션")](text-fields-and-search-images/text04.png#lightbox)
 1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다.
@@ -122,7 +122,7 @@ TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Des
 1. **텍스트 필드** 를 선택 하 고 **속성 탐색기**의 **위젯** 탭에서 각각 고유한 **이름을** 지정 합니다.
 
     [![](text-fields-and-search-images/text03-vs.png "위젯 탭")](text-fields-and-search-images/text03-vs.png#lightbox)
-1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 및 기본값과 같은 요소를 정의할 수 있습니다.
+1. **텍스트 필드** 섹션에서 **자리 표시자** 힌트 **및 기본값과 같은**요소를 정의할 수 있습니다.
 
     [![](text-fields-and-search-images/text04-vs.png "텍스트 필드 섹션")](text-fields-and-search-images/text04-vs.png#lightbox)
 1. 아래로 스크롤하여 **맞춤법 검사**, **대문자** 표시 및 기본 **키보드 종류**와 같은 속성을 정의 합니다.
@@ -291,7 +291,7 @@ namespace tvText
 }
 ```
 
-메서드 `UpdateUI` 는 속성이 업데이트 될 때마다 명명 된 UI 요소에 있는 `PictureInfo` 속성의 개별 필드 (속성)를 표시 하는 데 사용 됩니다. 예를 들어 그림과 연결 된 이미지와 제목이 있습니다.
+메서드 `UpdateUI` 는 속성이 업데이트 될 때마다 명명 된 UI 요소 `PictureInfo` 에 **있는 속성** 의 개별 필드 (속성)를 표시 하는 데 사용 됩니다. 예를 들어 그림과 연결 된 이미지와 제목이 있습니다.
 
 <a name="The-Collection-View-Controller" />
 

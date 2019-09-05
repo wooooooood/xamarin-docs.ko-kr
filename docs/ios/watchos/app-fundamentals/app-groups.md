@@ -1,48 +1,48 @@
 ---
-title: WatchOS에서 Xamarin 앱 그룹 사용
-description: 이 문서에서는 앱 그룹 및 watchOS 응용 프로그램에서 사용을 설명 합니다. 요구 사항, Entitlements.plist 고려 사항 및 배포를 프로 비전 하는 앱 그룹을 구성 하는 방법에 설명 합니다.
+title: Xamarin에서 watchOS 앱 그룹 작업
+description: 이 문서에서는 watchOS 응용 프로그램에서 앱 그룹 및 해당 그룹의 용도에 대해 설명 합니다. 앱 그룹, 프로 비전 요구 사항, info.plist 고려 사항 및 배포를 구성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 78f6c03f73f0e4d8a74f826dd7bc25bbe325d545
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c75db8bd29b7a57c46610abdd5e4024938fc9e1b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61411720"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280325"
 ---
-# <a name="working-with-watchos-app-groups-in-xamarin"></a>WatchOS에서 Xamarin 앱 그룹 사용
+# <a name="working-with-watchos-app-groups-in-xamarin"></a>Xamarin에서 watchOS 앱 그룹 작업
 
 
-앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 스토리지 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
+앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
 
-- Apple Watch [설정을](~/ios/watchos/app-fundamentals/settings.md)합니다.
-- 공유 [NSUserDefaults](~/ios/watchos/app-fundamentals/parent-app.md#nsuserdefaults)합니다.
-- 공유 [파일](~/ios/watchos/app-fundamentals/parent-app.md#files)합니다.
+- Apple Watch [설정](~/ios/watchos/app-fundamentals/settings.md).
+- 공유 [Nsuserdefaults](~/ios/watchos/app-fundamentals/parent-app.md#nsuserdefaults).
+- 공유 [파일](~/ios/watchos/app-fundamentals/parent-app.md#files).
 
 ## <a name="configure-an-app-group"></a>앱 그룹 구성
 
-공유 위치를 사용 하 여 구성 되어는 [앱 그룹](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)에서 구성 된 합니다 **인증서, 식별자 및 프로필** 섹션에서 [iOS 개발자 센터](https://developer.apple.com/devcenter/ios/)합니다. 이 값을 참조 하 여 각 프로젝트에도 해야 합니다 **Entitlements.plist**합니다.
+공유 위치는 [IOS 개발자 센터](https://developer.apple.com/devcenter/ios/)의 **인증서, 식별자 & 프로필** 섹션에서 구성 된 [앱 그룹](https://developer.apple.com/library/ios/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19)을 사용 하 여 구성 됩니다. 이 값은 각 프로젝트의 **info.plist**에서도 참조 되어야 합니다.
 
 ### <a name="provisioning"></a>프로비전
 
-앱 그룹 식별자는 일반적으로 번들 ID를 해야 합니다. 사용 하 여를 `group.` 접두사입니다. 예를 들어, 번들 ID를 사용할 수 있습니다 `com.xamarin.WatchSettings` 앱 그룹 및 `group.com.xamarin.WatchSettings`합니다.
+앱 그룹에는 일반적으로 `group.` 접두사를 사용 하는 번들 ID 인 식별자가 포함 됩니다. 예를 들어 번들 ID `com.xamarin.WatchSettings` 와 앱 그룹 `group.com.xamarin.WatchSettings`을 사용할 수 있습니다.
 
-[![](app-groups-images/app-group-sml.png "번들 ID com.xamarin.WatchSettings 및 앱 그룹 group.com.xamarin.WatchSettings 사용")](app-groups-images/app-group.png#lightbox)
+[![](app-groups-images/app-group-sml.png "번들 ID WatchSettings 및 앱 그룹 WatchSettings를 사용 합니다.")](app-groups-images/app-group.png#lightbox)
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-프로비저닝 프로필을 구성 하는 데 뿐만 아니라 **앱 그룹을 사용 하도록 설정** 에 **Entitlements.plist** 선택한 ID를 입력:
+프로 비전 프로필을 구성 하는 것 외에도 **info.plist** 에서 **앱 그룹을 사용 하도록 설정** 하 고 선택한 ID를 입력 합니다.
 
-[![](app-groups-images/entitlements-sml.png "Plist를 구성 하 고 ID를 입력 합니다.")](app-groups-images/entitlements.png#lightbox)
+[![](app-groups-images/entitlements-sml.png "Info.plist를 구성 하 고 ID를 입력 합니다.")](app-groups-images/entitlements.png#lightbox)
 
 
 ### <a name="deployment"></a>배포
 
-앱 그룹에 올바르게 구성 해야 하 [배포](~/ios/watchos/deploy-test/index.md#App_Groups) 프로 비전 합니다.
+[배포](~/ios/watchos/deploy-test/index.md#App_Groups) 프로 비전에서 앱 그룹을 올바르게 구성 했는지 확인 합니다.
 
 
 자세한 내용은 참조 하십시오 합니다 [앱 그룹 기능](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) 설명서.

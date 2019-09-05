@@ -3,15 +3,15 @@ title: Xamarin Profiler
 description: 이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. 프로파일러, 프로 파일링 및 사용 해야 하는 경우 및 Xamarin 응용 프로그램 프로 파일링을 위한 표준 워크플로에서 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: b62c8453049a1e014cd75cbee562c8f1a2c16c31
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ca26edc0311de2028af529dc43ea1ffde2383cf4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227890"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70283661"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 

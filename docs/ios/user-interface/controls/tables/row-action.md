@@ -4,15 +4,15 @@ description: 이 가이드에서는 UISwipeActionsConfiguration 또는 UITableVi
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: e90e108e6b02055a585129b6412641a726afaab4
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: aabbbb706d4b6fcd022e30f726696b5d4f46167f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226302"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279512"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.ios에서 행 작업 사용
 
@@ -163,7 +163,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 메서드는 사용자가 테이블의 행에 `UITableViewRowAction` 가로 방향으로 swipes 때 단추를 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 `TableDelegate` 새 인스턴스가 만들어져에 연결 `UITableView`됩니다. 예를 들어:
+정적 `UITableViewRowAction.Create` 메서드는 사용자가 테이블의 행에 `UITableViewRowAction` 가로 **방향으로 swipes 때 단추를** 표시 하는 새을 만드는 데 사용 됩니다. 나중에의 `TableDelegate` 새 인스턴스가 만들어져에 연결 `UITableView`됩니다. 예:
 
 ```csharp
 TableDelegate tableDelegate;
@@ -179,7 +179,7 @@ table.Delegate = tableDelegate;
 
 [![](row-action-images/action01.png "[삭제] 단추 대신 표시 되는 안녕하세요.")](row-action-images/action01.png#lightbox)
 
-사용자가 단추 `Hello World!` 를 탭 하면 응용 프로그램이 디버그 모드에서 실행 될 때가 Mac용 Visual Studio 또는 Visual Studio에서 콘솔에 기록 됩니다.
+사용자 `Hello World!` **가 단추를** 탭 하면 응용 프로그램이 디버그 모드에서 실행 될 때가 Mac용 Visual Studio 또는 Visual Studio에서 콘솔에 기록 됩니다.
 
 
 

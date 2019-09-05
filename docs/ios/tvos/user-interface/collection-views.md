@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 tvOS 앱에
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 616b20872a01b4df6c3f27c636ce7b8ee912414e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200345"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280213"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Xamarin에서 tvOS Collection 뷰 작업
 
@@ -59,7 +59,7 @@ TvOS에서 컬렉션 뷰를 사용 하는 경우 응용 프로그램은 데이�
 - `DequeueReusableCell`-지정 된 형식의 셀을 만들거나 반환 합니다 (앱의 스토리 보드에 지정 된 대로).
 - `DequeueReusableSupplementaryView`-지정 된 형식의 보충 뷰 (앱의 스토리 보드에 지정 된)를 만들거나 반환 합니다.
 
-이러한 메서드 중 하나를 호출 하기 전에 컬렉션 뷰를 사용 하 여 셀 `.xib` 의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예를 들어:
+이러한 메서드 중 하나를 호출 하기 전에 컬렉션 뷰를 사용 하 여 셀 `.xib` 의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)

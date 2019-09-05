@@ -3,15 +3,15 @@ title: 5부 - 실제 코드 공유 전략
 description: 이 문서에는 실제 코드 공유 전략 데이터베이스, 파일 액세스, 네트워크 작업 및 비동기 코드와 같은 시나리오에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e7739642bdb9a10046286035c4aa1a3699bb75b0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9f0a4d0367142be500aeae67041feb8cd3bbca76
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526785"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288799"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5부 - 실제 코드 공유 전략
 

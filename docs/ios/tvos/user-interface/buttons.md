@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 tvOS 앱에서 단추�
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: c53344d2e2e9458585439fd90a1f71a4869026be
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200190"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291102"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Xamarin에서 tvOS 단추 사용
 
@@ -166,7 +166,7 @@ View.AddSubview (button);
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-그런 다음 단추의 제목을 설정 합니다. `UIButtons`는 상태를 포함 `UIKit` 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수 없으므로 지정 `UIControlState`된에 대해 변경 해야 합니다. 예:
+그런 다음 단추의 제목을 설정 합니다. `UIButtons`는 상태를 포함 `UIKit` 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수 없으므로 지정 `UIControlState`된에 대해 변경 해야 합니다. 예를 들어:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -209,7 +209,7 @@ tvOS는 제목을 제공 하는 `UIButton` 데 사용할 수 있는의 여러 �
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-`SetTitleColor` 메서드를 사용 하 여 단추에 대 한 제목 색을 설정할 수 있습니다. 예:
+`SetTitleColor` 메서드를 사용 하 여 단추에 대 한 제목 색을 설정할 수 있습니다. 예를 들어:
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);

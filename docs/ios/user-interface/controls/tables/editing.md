@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 테이블을 편집 하는 �
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f82057957e76ee683e2a649fdf6c2350bf282c18
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 90ef335bd3683028d5f9951cdf2ca341158209b9
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528643"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284209"
 ---
 # <a name="editing-tables-with-xamarinios"></a>Xamarin.ios를 사용 하 여 테이블 편집
 
@@ -200,7 +200,7 @@ public void DidFinishTableEditing (UITableView tableView)
 }
 ```
 
-마지막으로,이 코드는 편집 및 **완료** 단추를 인스턴스화하고 편집 모드를 사용 하거나 사용 하지 않도록 설정 하는 람다를 사용 합니다.
+마지막으로,이 **코드는 편집** 및 **완료** 단추를 인스턴스화하고 편집 모드를 사용 하거나 사용 하지 않도록 설정 하는 람다를 사용 합니다.
 
 ```csharp
 done = new UIBarButtonItem(UIBarButtonSystemItem.Done, (s,e)=>{

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 앱에 대한 임시 및 영구 환
 ms.prod: xamarin
 ms.assetid: 9801644A-89BB-4491-AD28-7F3B97D2CD62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 52ae48a0cd911cd90d985b830876ec003d073d2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d85fa063580e9619ef433e98f6e6a0e4121ee37
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119305"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289008"
 ---
 # <a name="execution-environment-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 실행 환경
 
@@ -20,7 +20,7 @@ ms.locfileid: "50119305"
 
 ## <a name="temporary-environment-variables"></a>임시 환경 변수
 
-임시 환경 변수는 프로젝트의 **속성**/**옵션** 창에 있는 **실행 > 일반** 섹션에서 설정합니다. 이러한 환경 변수는 Mac용 Visual Studio를 사용하여 응용 프로그램이 시작되는 경우에만 적용되며, 앱을 탭하여 수동으로 앱을 시작하는 경우에는 이러한 환경 변수가 설정되지 않습니다.
+임시 환경 변수는 프로젝트의 **속성**/**옵션** 창에 있는 **실행 > 일반** 섹션에서 설정합니다. 이러한 환경 변수는 Mac용 Visual Studio를 사용하여 애플리케이션이 시작되는 경우에만 적용되며, 앱을 탭하여 수동으로 앱을 시작하는 경우에는 이러한 환경 변수가 설정되지 않습니다.
 
 ## <a name="permanent-environment-variables"></a>영구 환경 변수
 

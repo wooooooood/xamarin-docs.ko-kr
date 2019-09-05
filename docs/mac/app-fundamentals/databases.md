@@ -4,15 +4,15 @@ description: 이 문서에서는 키-값 코딩 및 키-값 관찰을 사용 하
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 893a3f76fe21bfe831ae81ffcd64c1538d9f05e1
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 3bcf52d33ebfaba6117a2089419673e0152cbe88
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200178"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70289117"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
 
@@ -50,7 +50,7 @@ Xcode의 Interface Builder에서 UI 요소에 바인딩할 SQLite 데이터의 �
 다음을 수행합니다.
 
 1. **Solution Pad**에서 **참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **참조 편집**을 선택 합니다.
-2. **Mono. Sqlite** 및 system.xml 어셈블리를 모두 선택 합니다. 
+2. **Mono. Sqlite** 및 system.xml 어셈블리를 모두 선택 **합니다.** 
 
     [![필요한 참조 추가](databases-images/reference01.png "필요한 참조 추가")](databases-images/reference01-large.png#lightbox)
 3. **확인** 단추를 클릭 하 여 변경 내용을 저장 하 고 참조를 추가 합니다.
