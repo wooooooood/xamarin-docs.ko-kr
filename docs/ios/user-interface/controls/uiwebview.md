@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱이 웹 콘텐츠를 표시 하�
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 8848f2bacac4b1ddab5c74ec07246e077bb4f158
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e593a594bbf0fd6398c277d531258f6fded515f1
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642687"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282543"
 ---
 # <a name="web-views-in-xamarinios"></a>Xamarin.ios의 웹 보기
 
@@ -84,7 +84,7 @@ Javascript [경고 처리](https://github.com/xamarin/recipes/tree/master/Recipe
  
  `SFSafariViewController`는 기본적으로 앱에 포함할 수 있는 ' 미니 safari '입니다. WKWebView와 마찬가지로 동일한 Nitro Javascript 엔진을 사용 하지만 자동 채우기, 판독기 및 모바일 Safari와 쿠키 및 데이터를 공유 하는 기능과 같은 추가 Safari 기능을 제공 합니다. 사용자와 `SFSafariViewController` 간의 상호 작용은 앱에 액세스할 수 없습니다. 앱은 기본 Safari 기능에 액세스할 수 없습니다.
  
-또한 기본적으로 사용자가 앱으로 쉽게 돌아갈 수 있도록 하 고 사용자가 웹 페이지의 스택을 탐색할 수 있도록 하 여 사용자가 앱으로 쉽게 돌아가 탐색 단추를 전달 **하는 데** 사용할 수 있습니다. 또한 사용자에 게 예상 되는 웹 페이지에 있다는 점에 대 한 평화를 제공 하는 주소 표시줄을 제공 합니다. 주소 표시줄에서 사용자가 url을 변경할 수 없습니다. 
+또한 기본적으로 사용자가 앱으로 쉽게 돌아갈 수 있도록 하 고 사용자가 웹 페이지의 스택을 탐색할 수 있도록 하 여 사용자가 앱으로 쉽게 돌아가 **탐색 단추를 전달 하는 데** 사용할 수 있습니다. 또한 사용자에 게 예상 되는 웹 페이지에 있다는 점에 대 한 평화를 제공 하는 주소 표시줄을 제공 합니다. 주소 표시줄에서 사용자가 url을 변경할 수 없습니다. 
 
 이러한 구현은 변경할 `SFSafariViewController` 수 없으므로 앱이 사용자 지정 없이 웹 페이지를 제공 하려는 경우에는 기본 브라우저로 사용 하는 것이 좋습니다.
 

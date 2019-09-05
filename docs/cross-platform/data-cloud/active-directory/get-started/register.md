@@ -3,15 +3,15 @@ title: 1단계. Azure Active Directory 사용할 앱 등록
 description: 이 문서에서는 모바일 클라이언트에서 안전 하 게 액세스할 수 있도록 Azure Active Directory에 Azure 응용 프로그램을 등록 하는 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 732c1ee241b39a4bb1422b8c27820631bf8c6b0c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 2811297e24aac726ae3c91e5354675499d4b9ddb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199056"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290087"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>1단계. Azure Active Directory 사용할 앱 등록
 

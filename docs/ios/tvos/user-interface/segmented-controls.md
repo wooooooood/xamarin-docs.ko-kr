@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 앱에서 t
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 622960f73c96209c1a67a08a4f0abe27656331bf
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 9ca931058f15c2ff6f1b46810196d9ea2bb964e0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200257"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291390"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
 
@@ -81,7 +81,7 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
     [![](segmented-controls-images/segment03-vs.png "위젯 탭")](segmented-controls-images/segment03-vs.png#lightbox)
 1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
 1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예: 
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어: 
 
     [![](segmented-controls-images/segment04-vs.png "이름 할당")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
@@ -179,7 +179,7 @@ SegmentedControl.SetTitle("New Title", 0);
 SegmentedControl.SetImage(UIImage.FromFile("icon.png"), 0);
 ```
 
-지정 된 세그먼트가 사용 되는지 확인 하려면다음을 사용 합니다.
+지정 된 세그먼트가 **사용 되는지 확인**하려면 다음을 사용 합니다.
 
 ```csharp
 if (SegmentedControl.IsEnabled(0)) {

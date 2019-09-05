@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 테이블의 모양을 사용
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 24f5ce0daddab090b5486af99eebc0d6e7a2b1dd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6eb942c0276bda28cb4be14fb31cdf820b9ccd5e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528675"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291349"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Xamarin.ios에서 테이블 모양 사용자 지정
 
@@ -53,7 +53,7 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 셀은 보기의 오른쪽에 다음과 같은 액세서리를 추가할 수 있습니다.
 
-- 확인 표시 – 테이블에서 여러 선택 항목을 표시 하는 데 사용할 수 있습니다.
+- 확인 **표시 – 테이블** 에서 여러 선택 항목을 표시 하는 데 사용할 수 있습니다.
 - **DetailButton** – 셀의 나머지 부분과 독립적으로 터치에 응답 하 여 다른 기능을 수행 하 여 셀 자체를 터치 합니다 (예: 팝업 또는 `UINavigationController` 스택의 일부가 아닌 새 창 열기).
 - **DisclosureIndicator** – 일반적으로 셀을 터치 하면 다른 뷰를 열도록 나타내는 데 사용 됩니다.
 - **DetailDisclosureButton** – `DetailButton` 및 `DisclosureIndicator`의 조합입니다.

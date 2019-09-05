@@ -3,15 +3,15 @@ title: Xamarin Workbooks에 표시
 description: 이 문서에서는 값을 반환 하는 모든 코드에 대해 다양 한 결과를 렌더링 하는 데 사용할 수 있는 Xamarin Workbooks 표현 파이프라인을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 5C7A60E3-1427-47C9-A022-720F25ECB031
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
-ms.openlocfilehash: b61452fc21d81f427249825decee4f119c50abf0
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: dde4e6b9c4903ccb0f23d8df82f39ff68030850e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511505"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292820"
 ---
 # <a name="representations-in-xamarin-workbooks"></a>Xamarin Workbooks에 표시
 
@@ -85,6 +85,6 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-여기서 는`Renderer` 인터페이스를 구현합니다.`PersonRenderer` 자세한 내용은 [해당 항목][typings] 을 참조 하세요.
+여기서 는`Renderer` 인터페이스를 구현합니다.`PersonRenderer` 자세한 내용은 [해당 항목을 참조][typings] 하세요.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts

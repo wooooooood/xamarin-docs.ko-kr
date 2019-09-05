@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 대체 앱 아이콘을 사�
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e194edcea75df9dc18d89bba00c0b97e5bd71c34
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: b15b39460b40bc2c9f993b3b0d9bca3275ac7644
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197868"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286801"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Xamarin.ios의 대체 앱 아이콘
 
@@ -119,7 +119,7 @@ PrimaryIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIco
 AlternateIconButton.Enabled = UIApplication.SharedApplication.SupportsAlternateIcons;
 ```
 
-개발자 `ApplicationIconBadgeNumber` 는 `UIApplication` 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예:
+개발자 `ApplicationIconBadgeNumber` 는 `UIApplication` 클래스의 속성을 사용 하 여 Springboard에서 앱 아이콘의 현재 배지 번호를 가져오거나 설정할 수 있습니다. 기본값은 영(0)입니다. 예를 들어:
 
 ```csharp
 // Set the badge number to 1

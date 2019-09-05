@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11의 새로운 MapKit 기능에 대해 설
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/30/2017
-ms.openlocfilehash: 0345a20e20b96e2f219218fc396b11ac508c8add
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c194f2c9f8ea974bf3d6a8798f8a12e246c7d75b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656437"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286689"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>IOS 11의 MapKit의 새로운 기능
 
@@ -106,7 +106,7 @@ public class BikeView : MKMarkerAnnotationView
 
 ### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. 표식의 클러스터 `MKAnnotationView` 를 나타내는를 만듭니다.
 
-_표식의 클러스터_ 를 나타내는 주석 보기는 간단한 이미지인 반면, 사용자는 앱이 그룹화 된 표식의 수에 대 한 시각적 표시를 제공 하는 것으로 간주 합니다.
+표식의 클러스터를 나타내는 주석 보기는 간단한 이미지인 반면, 사용자는 앱이 그룹화 된 _표식의 수에_ 대 한 시각적 표시를 제공 하는 것으로 간주 합니다.
 
 이 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) 에서는 CoreGraphics를 사용 하 여 클러스터의 마커 수와 각 표식 유형 비율의 원 그래프 표현을 렌더링 합니다.
 

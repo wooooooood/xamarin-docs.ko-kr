@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 1777bfe627d0dc579169c954f7799348befbf6b8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 8cf2eaf381b0e9f87b5d91bccb6f4aa86dc68e4d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227018"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292833"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -76,7 +76,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/remove-alpha-sml.png "알파 채널이 있는 경우 표시 되는 대화 상자에 알파 확인란이 포함 됩니다.")
 
-3. **알파** 확인란의 선택을 취소 하 고 파일을 올바른 위치에 **저장** 합니다.
+3. **알파** *확인란의 선택을* 취소 하 고 파일을 올바른 위치에 **저장** 합니다.
 
 4. 이제 아이콘 이미지가 Apple의 유효성 검사를 통과 해야 합니다.
 

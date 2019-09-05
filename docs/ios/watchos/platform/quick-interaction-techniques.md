@@ -4,15 +4,15 @@ description: 이 문서에서는 watchOS 3에 추가 된 빠른 상호 작용 �
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: e04b6be1547183869fb49955703245e19365bdb3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120166"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286752"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin의 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -35,7 +35,7 @@ WatchOS에서 일반적으로 사용자는 손목를 올리고 앱과 신속 하
 이러한 목표를 달성 하려면 Apple Watch 앱은 다음과 같아야 합니다.
 
 - **Glanceable** -사용자가 필요한 정보를 신속 하 게 파악할 수 있음을 의미 합니다. 
-- 작업 가능-사용자가 신속 하 고 정확한 의사 결정을 내릴 수 있음을 의미 합니다.
+- 작업 **가능-사용자** 가 신속 하 고 정확한 의사 결정을 내릴 수 있음을 의미 합니다.
 - **응답성** -사용자가 필요한 정보를 수신 하거나 원하는 작업을 얻기 위해 대기 하지 않아야 합니다.
 
 ### <a name="quick-interactions-length"></a>빠른 조작 길이

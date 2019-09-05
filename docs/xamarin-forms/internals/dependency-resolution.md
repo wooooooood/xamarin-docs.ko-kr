@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: e2cab7191bb4877deacb3f3f3235a3a4d5c65612
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6df393d59207cea9c316189059f8d0e08a5e5137
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656374"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290063"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Xamarin.Forms에서 종속성 확인
 
@@ -29,9 +29,9 @@ _이 문서에서는 응용 프로그램의 종속성 주입 컨테이너 만들
 
 ## <a name="injecting-a-dependency-resolution-method"></a>종속성 확인 메서드를 삽입합니다.
 
-[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) Xamarin.Forms를 종속성 확인 메서드를 삽입 하는 기능을 제공 하는 클래스를 사용 하는 [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드. 그런 다음 Xamarin.Forms에서 특정 형식의 인스턴스를 필요한 경우, 종속성 확인 메서드가 인스턴스를 제공 하는 데 지정 됩니다. 종속성 확인 메서드를 반환 하는 경우 `null` 요청 된 형식에 대 한 Xamarin.Forms 대체 형식을 만들려고 하를 사용 하 여 자체 인스턴스를 `Activator.CreateInstance` 메서드.
+[ `DependencyResolver` ](xref:Xamarin.Forms.Internals.DependencyResolver) Xamarin.Forms를 종속성 확인 메서드를 삽입 하는 기능을 제공 하는 클래스를 사용 하는 [ `ResolveUsing` ](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드. 그런 다음 Xamarin.Forms에서 특정 형식의 인스턴스를 필요한 경우, 종속성 확인 메서드가 인스턴스를 제공 하는 데 지정 됩니다. 종속성 확인 메서드를 반환 하는 경우 `null` 요청 된 형식에 대 한 Xamarin.Forms 대체 형식을 만들려고 하를 사용 하 여 자체 인스턴스를 `Activator.CreateInstance` 메서드.
 
-다음 예제에서는 사용 하 여 종속성 확인 메서드를 설정 하는 방법을 보여 줍니다 합니다 [ `ResolveUsing` ](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드:
+다음 예제에서는 사용 하 여 종속성 확인 메서드를 설정 하는 방법을 보여 줍니다 합니다 [ `ResolveUsing` ](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) 메서드:
 
 ```csharp
 using Autofac;

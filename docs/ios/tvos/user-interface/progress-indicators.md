@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 tvOS 앱에서 진행�
 ms.prod: xamarin
 ms.assetid: 582B6D0C-1F16-4299-A9A6-5651E76009FE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: ab82b98351b95fbdea9c33a9eae7142c7a54fc77
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 202ce8d674a39b06fd1b07460dff4bf573062592
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200299"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291411"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Xamarin에서 tvOS 진행률 표시기 사용
 
@@ -77,7 +77,7 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
 2. **도구 상자** 에서 **활동 표시기** 를 끌어서 뷰에 놓습니다. 
 
-    ![]활동 표시기인활동표시기(progress-indicators-images/activity01-vs.png
+    ![활동 표시기 인 활동 표시기](progress-indicators-images/activity01-vs.png
     "")
 
 3. **속성 탐색기**의 **위젯** 탭에서 작업 표시기의 **스타일**, **동작**및 **이름과**같은 몇 가지 속성을 조정할 수 있습니다. 

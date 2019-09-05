@@ -4,15 +4,15 @@ description: 이 문서에서는 info.plist 및 info.plist를 사용 하기 위�
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ca3622e01d6c7b616dc115b89ffcccf64022b1a1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527132"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286798"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Xamarin.ios에서 속성 목록 작업
 
@@ -67,7 +67,7 @@ Mac용 Visual Studio는 응용 프로그램의 공통 `Info.plist` 항목을 편
 
 ### <a name="supported-device-orientations"></a>지원 되는 장치 방향
 
- **지원 되는 장치 방향은** 앱이 장치 회전에 응답 하는 방식을 제어 합니다. IPhone/iPad 앱에서 **세로**또는 모든 항목을 지 원하는 것은 매우 일반적입니다. 일반적으로 게임을 제외한 모든 iPad 응용 프로그램은 모든 방향을 지원 해야 합니다.
+ **지원 되는 장치 방향은** 앱이 장치 회전에 응답 하는 방식을 제어 합니다. IPhone/iPad 앱에서 **세로**또는 모든 항목을 지 원하는 것은 매우 일반적입니다 **.** 일반적으로 게임을 제외한 모든 iPad 응용 프로그램은 모든 방향을 지원 해야 합니다.
 
 ### <a name="status-bar-styles"></a>상태 표시줄 스타일
 
