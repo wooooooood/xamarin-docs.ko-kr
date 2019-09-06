@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 슬라이드, 스위치 및 분�
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: be4ae87600e533cdfdf39c204a8ef6af4682ec0c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bcb860a88c67b3b2cde7336d53d717d4d9201fd4
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655767"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70288488"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Xamarin.ios의 슬라이더, 스위치 및 분할 컨트롤
 
@@ -50,7 +50,7 @@ slider1.MaximumTrackTintColor = UIColor.Green;
  [![](slider-switch-segmented-controls-images/image27a.png "사용자 지정 슬라이더")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> 현재가 런타임에 예상 대로 렌더링 되지 `ThumbTint`않도록 하는 [버그](https://stackoverflow.com/a/19496179)가 있습니다. 위의 코드 줄에 **다음 코드 줄** 을 추가 하 여 해결 방법을 사용할 수 있습니다. [[Source](https://stackoverflow.com/a/21396794)]:
+> 현재가 런타임에 예상 대로 렌더링 되지 `ThumbTint`않도록 하는 [버그](https://stackoverflow.com/a/19496179)가 있습니다. 위의 **코드 줄에 다음 코드 줄** 을 추가 하 여 해결 방법을 사용할 수 있습니다. [[Source](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
