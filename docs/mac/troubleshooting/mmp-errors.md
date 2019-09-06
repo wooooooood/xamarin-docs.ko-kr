@@ -172,7 +172,7 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 <a name="MM0099" />
 
-#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099: 내부 오류 {0}입니다. 테스트 사례 ()http://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
+#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MM0099: 내부 오류 {0}입니다. 테스트 사례 ( http://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
 
 <a name="MM0114" />
 
