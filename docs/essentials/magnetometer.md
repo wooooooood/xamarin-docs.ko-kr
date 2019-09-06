@@ -5,16 +5,16 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: bfc4916c40b47b715357692308d6b5dfa9db57bf
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 7682afd26bc09e467c5badbea25c9d478c7bb842
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898718"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70226809"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: 지자기 센터
 
-**Magnetometer** 클래스를 사용하면 지구 자기장을 기준으로 장치 방향을 나타내는 장치의 지자기 센터 센서를 모니터링할 수 있습니다.
+**Magnetometer** 클래스를 사용하면 지구 자기장을 기준으로 디바이스 방향을 나타내는 디바이스의 지자기 센터 센서를 모니터링할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -71,7 +71,7 @@ public class MagnetometerTest
 }
 ```
 
-모든 데이터는 µ(microtesla) 단위로 반환됩니다.
+모든 데이터는 µT(microtesla) 단위로 반환됩니다.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

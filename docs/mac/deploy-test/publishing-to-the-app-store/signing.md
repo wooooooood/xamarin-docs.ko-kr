@@ -4,15 +4,15 @@ description: 이 문서에서는 Mac App Store 외부에 배포될 수 있도록
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 9294080f361d280bcb61ea162320da57f44a2a95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9272c522383251a54aff5093c20e4b6b6131e2b2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117670"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293041"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>개발자 ID를 사용하여 Xamarin.Mac 앱 서명
 
@@ -39,7 +39,7 @@ Apple 웹 사이트에서 [개발자 ID 및 게이트키퍼](https://developer.a
 
  [![](signing-images/image58.png "키 집합 액세스 허용")](signing-images/image58.png#lightbox)
 
-응용 프로그램을 빌드한 후 개발자는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **상위 폴더 열기**를 선택하여 패키지 파일을 찾습니다(`bin/Release` 디렉터리에서). 이 패키지 파일에는 응용 프로그램 설치 관리자가 포함되어 있으므로 아무 macOS 사용자에게 설치용으로 배포할 수 있습니다.
+애플리케이션을 빌드한 후 개발자는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **상위 폴더 열기**를 선택하여 패키지 파일을 찾습니다(`bin/Release` 디렉터리에서). 이 패키지 파일에는 애플리케이션 설치 관리자가 포함되어 있으므로 아무 macOS 사용자에게 설치용으로 배포할 수 있습니다.
 
  [![](signing-images/image59.png "찾기에서 앱 패키지 선택")](signing-images/image59.png#lightbox)
 

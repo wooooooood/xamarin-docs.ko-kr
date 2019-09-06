@@ -4,15 +4,15 @@ description: 이 문서에서는 다양한 그룹의 사람들과 함께 Xamarin
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: efa3c8cf4d2e64c6d8bccdfe6e6fec9602d17c73
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 35596d5231f7e485cf8217e35a5641277dcab11d
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67865848"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70285593"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 임시 배포
 
@@ -24,7 +24,7 @@ iTunes Connect는 앱 테스트를 관리하기 위한 하나의 옵션이며, [
 
 Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer Enterprise Program 모두에서 사용할 수 있는 *임시* 배포를 통해 사용자가 테스트할 수 있으며, 최대 100개의 iOS 디바이스를 테스트하도록 허용합니다.
 
-임시 배포는 앱 스토어 승인을 요구하지 않는 이점이 있으며, 웹 서버 또는 iTunes를 통해 무선으로 설치할 수 있습니다. 그러나 개발 및 배포 모두에 대해 **100**개 디바이스로 제한되며 이러한 디바이스는 Member Center에서 UDID를 통해 수동으로 추가해야 합니다. 디바이스 추가에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#adddevice) 가이드를 참조하세요.
+임시 배포는 App Store 승인을 요구하지 않는 이점이 있으며, 웹 서버 또는 iTunes를 통해 무선으로 설치할 수 있습니다. 그러나 개발 및 배포 모두에 대해 **100**개 디바이스로 제한되며 이러한 디바이스는 Member Center에서 UDID를 통해 수동으로 추가해야 합니다. 디바이스 추가에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#adddevice) 가이드를 참조하세요.
 
 임시 배포를 사용하려면 애플리케이션 ID 및 이 애플리케이션을 설치할 수 있는 디바이스뿐만 아니라 코드 서명 정보가 포함된 임시 *프로비전 프로필*도 사용하여 해당 애플리케이션을 프로비전해야 합니다.
 
@@ -49,17 +49,17 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 1. Apple Developer Member Center의 *인증서, 식별자 및 프로필* 섹션으로 이동합니다.
 2. *인증서* 아래에서 **프로덕션**을 선택합니다.
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
-4. *프로덕션* 제목 아래에서 프로그램 구성원 자격에 따라 **사내 및 임시** 또는 **앱 스토어 및 임시**를 선택합니다.
+4. *프로덕션* 제목 아래에서 프로그램 구성원 자격에 따라 **사내 및 임시** 또는 **App Store 및 임시**를 선택합니다.
 
-   [![](ad-hoc-distribution-images/cert-first-small.png "사내 및 임시 선택 또는 앱 스토어 및 임시 선택")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
+   [![사내 및 임시 선택 또는 App Store 및 임시 선택](ad-hoc-distribution-images/cert-first-small.png)](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. [계속]을 클릭하고, 지시에 따라 키 집합 액세스를 통해 CSR(인증서 서명 요청)을 만듭니다.
 
-   [![](ad-hoc-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
+   [![키 집합 액세스를 통해 인증서 서명 요청 만들기](ad-hoc-distribution-images/createcertmanually02.png)](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. 지시한 대로 CSR을 만들었으면 [계속]을 클릭하고 CSR을 Member Center에 업로드합니다.
 
-   [![](ad-hoc-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
+   [![Member Center에 CSR 업로드](ad-hoc-distribution-images/createcertmanually03.png)](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. [생성]을 클릭하여 인증서를 만듭니다.
 8. 마지막으로 완성된 인증서를 다운로드하고 파일을 두 번 클릭하여 설치합니다.
@@ -67,9 +67,9 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
 
-1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![](ad-hoc-distribution-images/selectteam.png "팀 선택")](ad-hoc-distribution-images/selectteam.png#lightbox)
+1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![팀 선택](ad-hoc-distribution-images/selectteam.png)](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.  [![](ad-hoc-distribution-images/selectcert.png "iOS 앱 스토어 선택")](ad-hoc-distribution-images/selectcert.png#lightbox)
+2. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS App Store**를 선택합니다.  [![iOS App Store 선택](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,27 +91,27 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 배포 프로필을 만드는 데 필요한 필수 구성 요소가 있으면 아래 단계에 따라 해당 배포 프로필을 만듭니다.
 
-1. Apple 프로비전 포털로 돌아가서 **프로비전 > 배포**를 차례로 선택합니다.  [![](ad-hoc-distribution-images/distribute01.png "프로비전 > 배포 선택")](ad-hoc-distribution-images/distribute01.png#lightbox)
+1. Apple 프로비전 포털로 돌아가서 **프로비전 > 배포**를 차례로 선택합니다.  [![프로비저닝 > 배포 선택](ad-hoc-distribution-images/distribute01.png)](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. **+** 단추를 클릭하고 만들려는 배포 프로필 유형을 **임시**로 선택합니다.
 
-    [![](ad-hoc-distribution-images/distribute02.png "임시 배포 형식 만들기")](ad-hoc-distribution-images/distribute02.png#lightbox)
+    [![임시 배포 형식 만들기](ad-hoc-distribution-images/distribute02.png)](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. **계속** 단추를 클릭하고 드롭다운 목록에서 배포 프로필을 만들려는 앱 ID를 선택합니다.
 
-    [![](ad-hoc-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](ad-hoc-distribution-images/distribute03.png#lightbox)
+    [![드롭다운 목록에서 앱 ID 선택](ad-hoc-distribution-images/distribute03.png)](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. **계속** 단추를 클릭하고 애플리케이션에 서명하는 데 필요한 배포 인증서를 선택합니다.
 
-    [![](ad-hoc-distribution-images/distribute04.png "애플리케이션 서명에 필요한 배포 인증서 선택")](ad-hoc-distribution-images/distribute04.png#lightbox)
+    [![애플리케이션 서명에 필요한 배포 인증서 선택](ad-hoc-distribution-images/distribute04.png)](ad-hoc-distribution-images/distribute04.png#lightbox)
 
 5. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
-    [![](ad-hoc-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](ad-hoc-distribution-images/distribute06.png#lightbox)
+    [![새 배포 프로필에 대한 이름 입력](ad-hoc-distribution-images/distribute06.png)](ad-hoc-distribution-images/distribute06.png#lightbox)
 
 6. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [Xcode에서 프로필 및 인증서 다운로드](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -127,20 +127,20 @@ Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studi
 
 Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  Mac용 Visual Studio에서 다음을 수행합니다.
 
 1. 편집하기 위해 **솔루션 탐색기**에서 프로젝트 이름을 두 번 클릭하여 엽니다.
 2. **구성** 드롭다운에서 **iOS 번들 서명** 및 빌드 형식을 선택합니다.
 
-    ![](ad-hoc-distribution-images/releasexs01.png "구성 드롭다운에서 빌드 형식 선택")
+    ![구성 드롭다운에서 빌드 형식 선택](ad-hoc-distribution-images/releasexs01.png)
 3. 대부분의 경우 **서명 ID** 및 **프로비전 프로필**은 기본값(**자동**)으로 그대로 둘 수 있으며, Mac용 Visual Studio에서는 Info.plist의 번들 식별자에 따라 올바른 프로필을 선택합니다.
 
-    ![](ad-hoc-distribution-images/releasexs02.png "기본값(자동)으로 설정된 서명 ID 및 프로비전 프로필")
+    ![기본값(자동)으로 설정된 서명 ID 및 프로비저닝 프로필](ad-hoc-distribution-images/releasexs02.png)
 4. 필요한 경우 드롭다운에서 서명 ID 및 배포 프로필(위에서 만든 항목)을 선택합니다.
 
-    ![](ad-hoc-distribution-images/releasexs03.png "서명 ID 및 배포 프로필 선택")
+    ![서명 ID 및 배포 프로필 선택](ad-hoc-distribution-images/releasexs03.png)
 5. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -149,13 +149,13 @@ Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 �
 1. 편집하기 위해 **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 엽니다.
 2. **구성** 드롭다운에서 **iOS 번들 서명** 및 빌드 형식을 선택합니다.
 
-    ![](ad-hoc-distribution-images/releasevs01.png "구성 드롭다운에서 빌드 형식 선택")
+    ![구성 드롭다운에서 빌드 형식 선택](ad-hoc-distribution-images/releasevs01.png)
 3. 대부분의 경우 **서명 ID** 및 **프로비전 프로필**은 기본값(**자동**)으로 그대로 둘 수 있으며, Visual Studio에서는 Info.plist의 번들 식별자에 따라 올바른 프로필을 선택합니다.
 
-    ![](ad-hoc-distribution-images/releasevs02.png "기본값(자동)으로 설정된 서명 ID 및 프로비전 프로필")
+    ![기본값(자동)으로 설정된 서명 ID 및 프로비저닝 프로필](ad-hoc-distribution-images/releasevs02.png)
 4. 필요한 경우 드롭다운에서 서명 ID 및 배포 프로필(위에서 만든 항목)을 선택합니다.
 
-    ![](ad-hoc-distribution-images/releasevs03.png "서명 ID 및 배포 프로필 선택")
+    ![서명 ID 및 배포 프로필 선택](ad-hoc-distribution-images/releasevs03.png)
 5. 프로젝트의 속성에 대한 변경 내용을 저장합니다.
 
 -----
