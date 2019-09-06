@@ -4,15 +4,15 @@ description: 이 문서에서는 검색 및 홈 화면 위젯의 업데이트를
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 71c58baee5e98efcfb38b75ffed2b85c90f8a131
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 47055ca61e0be9b5b54e8f5ff23719b64f1101cd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227359"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291705"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>IOS 10에서 향상 된 검색 및 홈 화면 위젯
 
@@ -50,7 +50,7 @@ Apple은 위젯 시스템에 몇 가지 향상 된 기능을 도입 하 여 새 
 
 ## <a name="working-with-vibrancy"></a>Vibrancy 사용
 
-Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예를 들어:
+Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예:
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect

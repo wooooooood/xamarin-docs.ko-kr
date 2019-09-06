@@ -4,15 +4,15 @@ description: 이 문서에서는 앱 스토어에서 릴리스에 대 한 Xamari
 ms.prod: xamarin
 ms.assetid: 06A2CA8D-1E46-410F-8C31-00EA36F0735D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5c697ebc4621fa8287bd001bcc4b44bb23fc163e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227244"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290312"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.ios 앱 샌드 박싱
 
@@ -352,7 +352,7 @@ _Powerbox_ 는 사용자와 상호 작용 하 여 샌드박스가 적용 된 xam
 또한 시스템은 샌드박스가 적용 된 앱에 대해 다음을 자동으로 허용 합니다.
 
 - 시스템 입력 메서드에 대 한 연결입니다.
-- 서비스 메뉴에서 사용자가 선택한 서비스를 호출 합니다 (서비스 공급자가 _샌드박스 앱에 안전_ 으로 표시 된 서비스에만 해당).
+- 서비스 메뉴에서 사용자가 선택한 서비스를 호출 합니다 (서비스 공급자가 _샌드박스 앱에 안전_ 으로 **표시 된 서비스** 에만 해당).
 - 파일 열기 **최근 열기** 메뉴에서 사용자가 선택 합니다.
 - 다른 응용 프로그램 간에 복사 & 붙여넣기를 사용 합니다.
 - 다음과 같이 전 세계에서 읽을 수 있는 위치에서 파일을 읽습니다.
@@ -413,7 +413,7 @@ _보안 범위 책갈피_를 사용 하면 샌드박스가 적용 된 xamarin.io
 문서 범위 책갈피는 책갈피 데이터와 문서 자체를 열 수 있는 모든 응용 프로그램에서 확인할 수 있습니다. 이렇게 하면 이식성이 지원 되므로 사용자가 프로젝트 파일을 다른 사용자에 게 보내고 모든 책갈피를 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> 문서 범위 책갈피는 폴더가 아니라 단일 파일만 가리킬 수 있으며 `/private` ,이 파일은 시스템에서 사용 하는 위치 (예: 또는 `/Library`)에 있을 수 없습니다.
+> 문서 범위 책갈피는 폴더가 아니라 단일 _파일만 가리킬 수 있으며_ `/private` ,이 파일은 시스템에서 사용 하는 위치 (예: 또는 `/Library`)에 있을 수 없습니다.
 
 #### <a name="using-security-scoped-bookmarks"></a>보안 범위 책갈피 사용
 

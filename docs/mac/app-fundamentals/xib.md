@@ -4,15 +4,15 @@ description: 이 문서에서는 Xcode의 Interface Builder에서 만든 xib 파
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: bdb27d42e872bff4004e8f43d13019dbc8bfeab9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f0889ecc428c595509fb23710bf3110c1bacad4e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227859"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290286"
 ---
 # <a name="xib-files-in-xamarinmac"></a>Xamarin.ios의 xib 파일
 
@@ -575,7 +575,7 @@ private void DisplaySubview(NSViewController controller, SubviewType type) {
 DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 ```
 
-그러면 표시할 새 뷰에 대 한 뷰 컨트롤러의 새 인스턴스가 생성 되 고, 해당 형식이 프로젝트에 추가 된 열거형에 의해 지정 된 대로 설정 되며, 창 클래스에 추가 `DisplaySubview` 된 메서드를 사용 하 여 실제로 뷰가 표시 됩니다. 예를 들어:
+그러면 표시할 새 뷰에 대 한 뷰 컨트롤러의 새 인스턴스가 생성 되 고, 해당 형식이 프로젝트에 추가 된 열거형에 의해 지정 된 대로 설정 되며, 창 클래스에 추가 `DisplaySubview` 된 메서드를 사용 하 여 실제로 뷰가 표시 됩니다. 예:
 
 [![샘플 앱 실행](xib-images/view04.png "샘플 앱 실행")](xib-images/view04-large.png#lightbox)
 

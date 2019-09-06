@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11에서 SiriKit로 작업 하는 방법에
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 7aa3b430af28a85cb8b774baa9538306cb9dd673
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656402"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70286734"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>IOS 11의 SiriKit 업데이트
 
@@ -24,7 +24,7 @@ IOS 11의 SiriKit은 다음과 같이 새로운 및 업데이트 된 의도 도�
 
 - [**목록 및 메모**](#listsnotes) – 새로 만들기! 작업 및 메모를 처리할 앱에 대 한 API를 제공 합니다.
 - **시각적 코드** – 새로 만들기! Siri는 QR 코드를 표시 하 여 연락처 정보를 공유 하거나 지불 트랜잭션에 참여할 수 있습니다.
-- 지불 **-지불** 상호 작용에 대 한 검색 및 전송 의도를 추가 했습니다.
+- **지불-지불** 상호 작용에 대 한 검색 및 전송 의도를 추가 했습니다.
 - 수렴 **예약** – 취소 및 피드백 의도를 추가 했습니다.
 
 기타 새로운 기능은 다음과 같습니다.
@@ -49,7 +49,7 @@ IOS 11의 SiriKit은 다음과 같이 새로운 및 업데이트 된 의도 도�
 
 - 제목과 내용 필드가 있습니다.
 
-작업과 메모는 모두 그룹으로 구성할 수 있습니다. 이 섹션의 나머지 부분에서는 sirikit를 사용 하 여이 새 도메인을 구현 하는 방법에 대해 설명 [합니다.](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
+작업과 메모는 모두 그룹으로 구성할 수 있습니다. 이 섹션의 나머지 부분에서는 [sirikit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)를 사용 하 여이 새 도메인을 구현 하는 방법에 대해 설명 합니다.
 
 ### <a name="how-to-process-a-sirikit-request"></a>SiriKit 요청을 처리 하는 방법
 

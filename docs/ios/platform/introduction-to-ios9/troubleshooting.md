@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 iOS 9를 사용 하기 위한
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: e6e264d9f1cd959c95a27597649d2ec23d832b1c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c624dc9be86161305fddba56e58ae5b99d674770
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200071"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70292926"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9 – 문제 해결
 
@@ -44,7 +44,7 @@ IOS 8 (및 이전 버전)에서 storyboard의 UI 요소는 **오른쪽** & **왼
 
 > Catch 되지 않은 예외 ' NSInvalidArgumentException '로 인해 앱을 종료 하는 중입니다. 이유: ' * * * + [NSLayoutConstraint constraintWithItem: attribute: relatedBy: toItem: attribute: 승수: constant:]: 선행/후행 특성과 오른쪽/왼쪽 특성 사이에는 제약 조건을 적용할 수 없습니다. 또는 둘 다에 대해 선행/후행을 사용 합니다. '
 
-iOS 9는 레이아웃을 적용 하 여 **오른쪽** & **왼쪽** _또는_ **선행** & **후행** 특성 중 하나만 사용 합니다. 이 문제를 해결 하려면 스토리 보드 파일 내에 설정 된 것과 동일한 특성을 사용 하도록 모든 레이아웃 제약 조건을 변경 합니다.
+iOS 9는 레이아웃을 적용 하 여 **오른쪽** & **왼쪽** _또는_ **선행** & **후행** 특성 *중 하나만 사용* 합니다. 이 문제를 해결 하려면 스토리 보드 파일 내에 설정 된 것과 동일한 특성을 사용 하도록 모든 레이아웃 제약 조건을 변경 합니다.
 
 자세한 내용은 [iOS 9 제약 조건 오류](https://stackoverflow.com/questions/32692841/ios-9-constraint-error) Stack Overflow 토론을 참조 하세요.
 
@@ -147,7 +147,7 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 2. **창** 메뉴에서 **장치** 를 선택 하 여 장치 창을 엽니다. 
 
     [![](troubleshooting-images/untrusted02.png "장치 창")](troubleshooting-images/untrusted02.png#lightbox)
-3. 장치 측면 패널에서 장치를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **프로 비전 프로필 표시**...를 선택 합니다. 
+3. **장치 측면 패널** 에서 장치를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **프로 비전 프로필 표시**...를 선택 합니다. 
 
     [![](troubleshooting-images/untrusted03.png "프로 비전 프로필 표시")](troubleshooting-images/untrusted03.png#lightbox)
 4. 현재 장치에서 각 프로 비전 프로필을 선택 하 고 **-** 단추를 클릭 하 여 삭제 합니다. 

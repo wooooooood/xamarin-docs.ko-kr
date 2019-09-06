@@ -4,15 +4,15 @@ description: 이 가이드에서는 Apple Pay와 함께 사용 하기 위해 Xam
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: cd5293e90caef81c875c0b06b9e5db06cd562655
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620520"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291808"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.ios의 Apple Pay
 
@@ -76,7 +76,7 @@ IOS 10을 사용 하 여 동적 지불 네트워크 및 새 샌드박스 테스�
 
 ### <a name="apple-pay-website-integration"></a>Apple Pay 웹 사이트 통합
 
-IOS 10을 처음 사용 하는 개발자는 전 세계의 웹 사이트에Apple Pay를 직접 통합할 수 있습니다. IOS 또는 macOS에서 Safari를 사용 하 여 웹 사이트를 검색 하는 사용자는 iPhone 또는 Apple Watch에서 트랜잭션의 유효성을 검사 하 여 Apple Pay 지불을 수행할 수 있습니다. 자세한 내용은 Apple의 [사과 Epay 프레임 워크 참조](https://developer.apple.com/reference/applepayjs)를 참조 하세요.
+IOS 10을 처음 사용 하는 개발자는 전 세계의 웹 사이트에 Apple Pay를 직접 통합할 **수 있습니다.** IOS 또는 macOS에서 Safari를 사용 하 여 웹 사이트를 검색 하는 사용자는 iPhone 또는 Apple Watch에서 트랜잭션의 유효성을 검사 하 여 Apple Pay 지불을 수행할 수 있습니다. 자세한 내용은 Apple의 [사과 Epay 프레임 워크 참조](https://developer.apple.com/reference/applepayjs)를 참조 하세요.
 
 ### <a name="passkit-framework-enhancements"></a>PassKit Framework의 향상 된 기능
 
@@ -113,7 +113,7 @@ IOS 10을 사용 하 여 Apple은 개발자가 iOS 장치에서 직접 테스트
 4. [Apple Pay 가이드](https://developer.apple.com/apple-pay/) 에서 테스트 지불 카드 중 하나를 사용 하 여 지불액을 만듭니다.
 
 > [!IMPORTANT]
-> ICloud 계정을 전환 하면 장치가 새 테스트 환경으로 자동 전환 됩니다. 그러나 Apple에서는 iTunes 앱 스토어에 제출 하기 전에 프로덕션 환경에서 실제 카드로 앱을 테스트 해야 합니다.
+> ICloud 계정을 전환 하면 장치가 새 테스트 환경으로 자동 전환 됩니다. 그러나 Apple에서는 iTunes 앱 스토어에 제출 하기 전에 프로덕션 환경에서 실제 카드로 앱을 **테스트 해야 합니다** .
 
 ## <a name="summary"></a>요약
 

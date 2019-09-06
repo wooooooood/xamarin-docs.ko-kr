@@ -4,15 +4,15 @@ description: 이 문서에서는 개발자가 Xamarin.ios에서 최신 macOS 앱
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 914afe63136323e3506bb40d4759869f97fb264c
-ms.sourcegitcommit: 3d21bb1a6d9b78b65aa49917b545c39d44aa3e3c
+ms.openlocfilehash: 04bcf1012800ef2883fef80580bcec869bd8e5a3
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70065691"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291476"
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -436,7 +436,7 @@ public override void GetNewWindowForTab (NSObject sender)
 
 #### <a name="redrawing-views-with-layers"></a>레이어를 사용 하 여 뷰 다시 그리기
 
-Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서 `NSView` `NSViewController`의를 `OnSetNeedsDisplay` 로 설정 하는 것입니다. 예:
+Xamarin.ios 앱에서 계층 기반 뷰를 사용 하는 경우 또 다른 중요 한 단계는 `LayerContentsRedrawPolicy` 에서 `NSView` `NSViewController`의를 `OnSetNeedsDisplay` 로 설정 하는 것입니다. 예를 들어:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -637,7 +637,7 @@ macOS Sierra는 이전 버전의 OS에서 사용할 수 있는 기존 컨테이�
 
 ## <a name="table-view-enhancements"></a>테이블 뷰 향상
 
-개발자는 항상와 `NSView` `NSTableView`같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다. 예:
+개발자는 항상와 `NSView` `NSTableView`같은 컨테이너 뷰 컨트롤의 새 기반 버전을 사용 해야 합니다. 예를 들어:
 
 ```csharp
 using System;

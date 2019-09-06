@@ -3,15 +3,15 @@ title: MacOS 시작
 description: 이 문서에서는 macOS에 .NET 포함을 사용 하 여 시작 하는 방법을 설명 합니다. 이 샘플에서는 요구 사항에 대해 설명 하 고, 관리 되는 어셈블리를 바인딩하고 Xcode 프로젝트에서 생성 된 출력을 사용 하는 방법을 보여 주는 샘플 응용 프로그램을 제공 합니다.
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: ee40a5ef3504e5d274a34ec2d9569026e5d40551
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e7f1bac95e9e812c0e47b55b85f72f34ba76e68e
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199861"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290262"
 ---
 # <a name="getting-started-with-macos"></a>MacOS 시작
 

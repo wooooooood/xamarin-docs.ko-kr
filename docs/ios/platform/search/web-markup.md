@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에 다시 연결 되는 웹 기
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 77d526fd49ac62788bea1ab885cb1248ffc5697e
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: 87037c8c3797c7c305ce2689172bda1babbc26bd
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620952"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291714"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Xamarin.ios에서 웹 태그를 사용 하 여 검색
 
@@ -75,7 +75,7 @@ Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공�
 
 ## <a name="using-facebook-app-links"></a>Facebook 앱 링크 사용
 
-Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예를 들어:
+Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예:
 
 ```html
 <meta property="al:ios:app_name" content="AppName">
@@ -121,7 +121,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 다양 한 결과를 활용 하 여 더 많은 사용자가 상호 작용 하도록 enticing 하 여 클라우드 기반 검색 인덱스에서 순위를 향상할 수 있습니다.
 
-구조화 된 데이터 태그를 제공 하는 한 가지 옵션은 Open Graph를 사용 하는 것입니다. 예를 들어:
+구조화 된 데이터 태그를 제공 하는 한 가지 옵션은 Open Graph를 사용 하는 것입니다. 예:
 
 ```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -131,7 +131,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 자세한 내용은 Graph 웹 사이트 [열기](http://ogp.me) 를 참조 하세요.
 
-구조화 된 데이터 태그의 또 다른 일반적인 형식은 schema. org의 마이크로 데이터 형식입니다. 예:
+구조화 된 데이터 태그의 또 다른 일반적인 형식은 schema. org의 마이크로 데이터 형식입니다. 예를 들어:
 
 ```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">

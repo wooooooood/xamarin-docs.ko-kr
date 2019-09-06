@@ -3,15 +3,15 @@ title: Xamarin Live Player 앱
 description: 이 문서에서는 장치에서 라이브 코드 변경을 미리 보는 데 사용할 수 있는 Xamarin Live Player 앱에 대해 설명 합니다. 설정, 샘플, 로그, 설정, 장치 관리 등에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/13/2019
-ms.openlocfilehash: b09ea4e8ec09db5e9bf443476cd3a67e16f02d19
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d725cb0687cce85f10dbf6915e4eeec785c0ae54
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651218"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290209"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 앱
 
@@ -35,9 +35,9 @@ ms.locfileid: "68651218"
 
 ![장치에서 실행 되는 샘플 계산기 앱](player-images/basic-calculator-sml.png)
 
-## <a name="options"></a>변수
+## <a name="options"></a>옵션
 
-앱 아래쪽의 정보 **단추를** 눌러 **옵션** 메뉴를 표시 합니다.
+앱 **아래쪽의 정보 단추를** 눌러 **옵션** 메뉴를 표시 합니다.
 
 [![옵션 메뉴의 스크린샷](player-images/options-sml.png)](player-images/options.png#lightbox)
 

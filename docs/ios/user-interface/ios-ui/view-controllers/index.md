@@ -1,24 +1,24 @@
 ---
-title: Xamarin.iOS에서 뷰 컨트롤러
-description: 이 문서는 Xamarin.iOS에서 뷰 컨트롤러 간에 애니메이션 된 전환이 사용자 지정 하는 방법을 설명 하는 지침에 연결 됩니다.
+title: Xamarin.ios의 뷰 컨트롤러
+description: 이 문서는 Xamarin.ios의 뷰 컨트롤러 간에 애니메이션 전환을 사용자 지정 하는 방법을 설명 하는 가이드로 연결 됩니다.
 ms.prod: xamarin
 ms.assetid: 15846D93-26A7-4E7E-B6DA-8E20FCD995E7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/21/2017
-ms.openlocfilehash: ff440721cfb3217371f91b97425751f325dcaa50
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5e7fe2604df44b1c171fd028cf47dbe2e54ac5cf
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61246291"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291545"
 ---
-# <a name="view-controllers-in-xamarinios"></a>Xamarin.iOS에서 뷰 컨트롤러
+# <a name="view-controllers-in-xamarinios"></a>Xamarin.ios의 뷰 컨트롤러
 
 ## <a name="view-controller-transitionstransitionsmd"></a>[뷰 컨트롤러 전환](transitions.md)
 
-UIKit 뷰 컨트롤러를 표시할 때 나타나는 애니메이션된 전환을 사용자 지정에 대 한 지원을 추가 합니다. 이 지원은에서 직접 상속 하는 모든 사용자 지정 컨트롤러 뿐만 아니라 기본 제공 컨트롤러를 사용 하 여 포함 `UIViewController`합니다. 또한 `UICollectionViewController` 컬렉션 보기 레이아웃의 애니메이션된 전환을 활용 하 여 컨트롤러 전환 사용자 지정 기능을 활용 합니다.
+UIKit에는 뷰 컨트롤러를 발표할 때 발생 하는 애니메이션 전환을 사용자 지정 하는 기능이 추가 되었습니다. 이 지원은 기본 제공 컨트롤러 뿐만 아니라에서 `UIViewController`직접 상속 되는 사용자 지정 컨트롤러에도 포함 되어 있습니다. `UICollectionViewController` 또한은 컨트롤러 전환 사용자 지정을 활용 하 여 컬렉션 뷰 레이아웃에서 애니메이션 전환을 활용 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

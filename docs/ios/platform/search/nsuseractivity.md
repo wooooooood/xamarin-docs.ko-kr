@@ -4,15 +4,15 @@ description: 이 문서에서는 NSUserActivity를 인덱싱하고, 스포트라
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 0b673128d675d825d4c0564929dbd3896c09b0c5
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198502"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291763"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.ios에서 NSUserActivity를 사용 하 여 검색
 
@@ -96,7 +96,7 @@ activity.BecomeCurrent();
 
 ## <a name="responding-to-an-activity"></a>작업에 응답
 
-앱에 대 한 검색 결과 (`NSUserActivity`)를 누르는 사용자에 게 응답 하려면 **AppDelegate.cs** `ContinueUserActivity` 파일을 편집 하 고 메서드를 재정의 합니다. 예:
+앱에 대 한 검색 결과 (`NSUserActivity`)를 누르는 사용자에 게 응답 하려면 **AppDelegate.cs** `ContinueUserActivity` 파일을 편집 하 고 메서드를 재정의 합니다. 예를 들어:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)

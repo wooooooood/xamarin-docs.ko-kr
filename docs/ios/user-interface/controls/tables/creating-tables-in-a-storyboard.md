@@ -4,15 +4,15 @@ description: 이전 섹션에서는 테이블을 사용 하 여 개발 하는 �
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 46729df70d08b8d6d1b5b953d74f5619a5dc5858
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 58e57f9406642a3bb0ff108bffa89d77c3f2cebb
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528680"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291385"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>iOS Designer에서 테이블 작업
 

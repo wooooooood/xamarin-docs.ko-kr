@@ -4,25 +4,25 @@ description: 이 문서에서는 Xamarin을 사용 하 여 간단한 watchOS 응
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 12/14/2016
-ms.openlocfilehash: 7bc728360c26321c16839c5d67b93a91d2593602
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: c5527db543a0b0d5218c37f0d75e22afcd59297a
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655505"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293155"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchOS – 연습
 
 [설정 및 설치](~/ios/watchos/get-started/installation.md)의 단계에 따라 솔루션을 만든 후에는 다음 3 개의 프로젝트가 있습니다.
 
-- 설치 또는 기타 장치 관리 작업에 사용 되는 iOS 부모 앱입니다. (다른 유형의 iOS 확장을 사용 하면 "컨테이너" 앱이 라고도 합니다.) 시청 앱을 사용 하면 사용자가 부모 앱을 **실행 하지 않고도** 시청 앱 실행을 시작할 수 있습니다.
+- 설치 또는 기타 장치 관리 작업에 사용 되는 iOS 부모 앱입니다. (다른 유형의 iOS 확장을 사용 하면 "컨테이너" 앱이 라고도 합니다.) 시청 앱을 사용 하면 사용자가 부모 앱을 **실행 하지 않고도 시청 앱 실행을** 시작할 수 있습니다.
 - Watch 앱에 대 한 프로그램 코드를 포함 하는 조사식 확장입니다. 하거나
 - Watch에서 렌더링 되는 스토리 보드 및 이미지 리소스를 보유 하는 Watch 앱입니다.
 
-부모 앱에 확장에 대 한 참조가 있고 확장에 조사식 앱에 대 한 참조가 있는지 확인 [합니다.](~/ios/watchos/get-started/project-references.md)
+부모 앱에 확장에 대 한 참조가 있고 확장에 조사식 앱 [에 대 한](~/ios/watchos/get-started/project-references.md)참조가 있는지 확인 합니다.
 
 번들 식별자가 \*. watchkitextension \*. watchkitapp 규칙을 따르고 확장 프로그램의 info.plist 파일에 감시 앱의 번들 식별자로 설정 된 **WKApp 번들 ID** 값이 있는지 확인 합니다.
 
@@ -39,14 +39,14 @@ ms.locfileid: "68655505"
 -----
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-    
+
 Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 합니다. (Mac을 사용 하는 경우 마우스 오른쪽 단추를 클릭 하 고 **Interface Builder >를 사용 하 여 열**수도 있습니다.)
 
 
-1.  **도구 상자** 및 **속성** 패드가 표시 되는지 확인 합니다.
-1.  인터페이스 컨트롤러를 클릭 하 여 선택 합니다.
-1.  인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
-1.  **클래스가** **InterfaceController** 로 설정 되었는지 확인 합니다.
+1. **도구 상자** 및 **속성** 패드가 표시 되는지 확인 합니다.
+1. 인터페이스 컨트롤러를 클릭 하 여 선택 합니다.
+1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
+1. **클래스가** **InterfaceController** 로 설정 되었는지 확인 합니다.
 
     ![](hello-watch-images/interfacecontrollerattributes.png "인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.")
 
@@ -54,10 +54,10 @@ Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 �
 
 Visual Studio에서 Xamarin iOS Designer를 사용 하 여 편집 하려면 Watch 앱에서 storyboard를 두 번 클릭 합니다.
 
-1.  속성 창을 엽니다.
-1.  클래스를 **InterfaceController**로 변경 합니다.
-1.  인터페이스 컨트롤러를 클릭 합니다. 하거나
-1.  인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
+1. 속성 창을 엽니다.
+1. 클래스를 **InterfaceController**로 변경 합니다.
+1. 인터페이스 컨트롤러를 클릭 합니다. 하거나
+1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
 
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.")
 

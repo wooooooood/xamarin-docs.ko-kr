@@ -4,15 +4,15 @@ description: 이 문서에서는 watchOS 4에 대 한 개략적인 소개를 제
 ms.prod: xamarin
 ms.assetid: 753A9993-A951-40A2-9270-37F000A01BC9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2017
-ms.openlocfilehash: e3766815e071c190046cc5bc7d436621bcee3d29
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7f2440cfa7ac3149fd190c6752c9b2829681b602
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651544"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293019"
 ---
 # <a name="introduction-to-watchos-4"></a>watchOS 4 소개
 

@@ -4,20 +4,20 @@ description: 이 문서에서는 xib 파일을에 C#매핑하는 xamarin.ios가 
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 280802adbb5326854b4d47045bbb1569dd123f30
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527336"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291829"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Xamarin.ios의 xib 코드 생성
 
 > [!IMPORTANT]
->  이 문서에서는 작업 및 콘센트가 Xamarin Designer for iOS에서 사용 되지 않으므로 Xcode의 Interface Builder와의 통합 Mac용 Visual Studio 설명 합니다. IOS 디자이너에 대 한 자세한 내용은 [Ios designer](~/ios/user-interface/designer/index.md) 문서를 참조 하세요.
+> 이 문서에서는 작업 및 콘센트가 Xamarin Designer for iOS에서 사용 되지 않으므로 Xcode의 Interface Builder와의 통합 Mac용 Visual Studio 설명 합니다. IOS 디자이너에 대 한 자세한 내용은 [Ios designer](~/ios/user-interface/designer/index.md) 문서를 참조 하세요.
 
 Apple Interface Builder 도구 ("IB")를 사용 하 여 사용자 인터페이스를 시각적으로 디자인할 수 있습니다. IB에서 만든 인터페이스 정의는 **xib** 파일에 저장 됩니다. **Xib** 파일의 widget 및 기타 개체에는 사용자 지정 사용자 정의 형식일 수 있는 "클래스 id"가 제공 될 수 있습니다. 이렇게 하면 위젯의 동작을 사용자 지정 하 고 사용자 지정 위젯을 작성할 수 있습니다.
 
@@ -33,7 +33,7 @@ Interface Builder의 "클래스" 탭에서 "하위 클래스 추가" 명령을 �
 
 ## <a name="generating-code"></a>코드 생성
 
-Xib 파일의 빌드 작업을 사용 하는 경우  **{0}xib.designer.cs** 파일이 프로젝트에도 있는 경우 모든 사용자 클래스에 대 한 디자이너 파일에 부분 클래스가 생성 됩니다 Mac용 Visual Studio  **{0}** **xib** 파일에서 모든 동작에 대 한 콘센트의 속성과 부분 메서드 (partial method)를 찾을 수 있습니다. 코드 생성은이 파일이 있는 경우에만 사용할 수 있습니다.
+Xib 파일 *의 빌드*작업을 사용 하는 경우  **{0}xib.designer.cs** 파일이 프로젝트에도 있는 경우 모든 사용자 클래스에 대 한 디자이너 파일에 부분 클래스가 생성 됩니다 Mac용 Visual Studio  **{0}** **xib** 파일에서 모든 동작에 대 한 콘센트의 속성과 부분 메서드 (partial method)를 찾을 수 있습니다. 코드 생성은이 파일이 있는 경우에만 사용할 수 있습니다.
 
 Xib 파일이 변경 되 고 포커스를 Mac용 Visual Studio 다시 얻으면 디자이너 파일이 자동으로 업데이트 됩니다 **.** 다음에 Mac용 Visual Studio 파일을 업데이트할 때 변경 내용을 덮어쓰기 때문에 디자이너 파일을 수동으로 수정 하면 안 됩니다.
 

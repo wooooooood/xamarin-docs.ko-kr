@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 사용자 인터페이스 레이
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 06d7ef896a560040f2e2820945264b92d9cf2ada
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528492"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287036"
 ---
 # <a name="layout-options-in-xamarinios"></a>Xamarin.ios의 레이아웃 옵션
 

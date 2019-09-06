@@ -1,48 +1,48 @@
 ---
 title: .NET 포함
-description: 기존.NET 코드를 사용 하면.NET 포함 (C#, F#, 및 기타) 다른 프로그래밍 언어로 작성 된 코드에서 사용할 수 있도록 합니다.
+description: .Net 포함을 사용 하면 다른 프로그래밍 언어로C#작성 F#된 코드에서 기존 .net 코드 (, 및 기타)를 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: af068e5a09cc11eec33508a4f2eb33186168aae6
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61363552"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290219"
 ---
 # <a name="net-embedding"></a>.NET 포함
 
-![미리 보기](~/media/shared/preview.png)
+![Preview](~/media/shared/preview.png)
 
-기존.NET 코드를 사용 하면.NET 포함 (C#, F#, 및 기타) 다양 한 다른 환경 및 다른 프로그래밍 언어에서 사용할 수 있도록 합니다.
+.Net 포함을 사용 하면 기존 .net 코드C#( F#, 및 기타)를 다른 프로그래밍 언어 및 여러 다른 환경에서 사용할 수 있습니다.
 
-즉,이 기존 iOS 앱에서 사용 하려는.NET 라이브러리를 사용 하는 경우 이렇게 할 수 있습니다.   네이티브를 사용 하 여 연결 하려는 경우 또는 C++ 라이브러리에도 수행할 수 있습니다.   또는 Java에서.NET 코드를 사용 합니다.
+즉, 기존 iOS 앱에서 사용 하려는 .NET 라이브러리가 있는 경우이 작업을 수행할 수 있습니다.   또는 네이티브 C++ 라이브러리를 사용 하 여 연결 하려는 경우에도이 작업을 수행할 수 있습니다.   또는 Java의 .NET 코드를 사용 합니다.
 
-.NET 포함 기반으로 합니다 [Embeddinator 4000](https://github.com/mono/Embeddinator-4000) 오픈 소스 프로젝트입니다.
+.NET 포함은 [Embeddinator-4000](https://github.com/mono/Embeddinator-4000) 오픈 소스 프로젝트를 기반으로 합니다.
 
 ## <a name="environments-and-languages"></a>환경 및 언어
 
-이 도구는 둘 다를 사용 하는 환경 뿐만 아니라는 해당 설명을 사용 하는 언어를 인식 합니다.   예를 들어 iOS 플랫폼에서는.NET 포함 정적으로 컴파일되지.NET 코드를 iOS에서 사용할 수 있는 네이티브 코드에 있으므로 (JIT) 컴파일, 수 없습니다.  다른 환경에 JIT 컴파일을 허용지 않습니다 및 이러한 환경에서 JIT 컴파일 하도록 선택 했습니다.
+도구는 사용 하는 환경 뿐만 아니라이 도구를 사용 하는 언어도 인식 합니다.   예를 들어 iOS 플랫폼은 JIT (just-in-time) 컴파일을 허용 하지 않으므로 .NET 포함은 .NET 코드를 iOS에서 사용할 수 있는 네이티브 코드로 정적으로 컴파일합니다.  다른 환경에서는 JIT 컴파일을 허용 하 고, 이러한 환경에서는 JIT 컴파일을 옵트인 합니다.
 
-대상 언어의 관용구 코드와.NET 코드를 표시 합니다.이 있으므로 다양 한 언어 소비자를 지원 합니다.   현재 지원 되는 언어 목록입니다.
+다양 한 언어 소비자를 지원 하므로 .NET 코드를 대상 언어로 자연 스러운 코드로 표시 합니다.   현재 지원 되는 언어 목록입니다.
 
-- [**Objective-c** ](objective-c/index.md) –.NET 자연 스러운 Objective C Api에 매핑
-- [**Java** ](android/index.md) –.NET 자연 스러운 Java Api에 매핑
-- [**C** ](get-started/c.md) – C Api와 같은 개체 지향.NET 매핑
+- [**목적-c**](objective-c/index.md) – 자연 스러운 목적과 api에 대 한 .net 매핑
+- [**Java**](android/index.md) – 자연 스러운 Java api로 .net 매핑
+- [**C**](get-started/c.md) – 개체 지향 c api와 같은 .net 매핑
 
-더 많은 언어 나중에 제공 됩니다.
+추가 언어는 나중에 제공 될 예정입니다.
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
-시작 하려면이 가이드는 현재 지원 되는 언어에 대 한 중 하나를 확인 합니다.
+시작 하려면 현재 지원 되는 각 언어에 대 한 가이드 중 하나를 확인 하세요.
 
-- [**Objective-c** ](get-started/objective-c/index.md) – macOS 및 iOS에 설명
-- [**Java** ](get-started/java/index.md) – macOS 및 Android에 설명
-- [**C** ](get-started/c.md) – 데스크톱 플랫폼에서 C 언어를 설명 합니다.
+- [**목적-C**](get-started/objective-c/index.md) – macos 및 iOS를 다룹니다.
+- [**Java**](get-started/java/index.md) – macos 및 Android 커버
+- [**C**](get-started/c.md) – 데스크톱 플랫폼의 c 언어에 대해 설명 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [GitHub에서 Embeddinator 4000](https://github.com/mono/Embeddinator-4000)
+- [GitHub의 Embeddinator-4000](https://github.com/mono/Embeddinator-4000)

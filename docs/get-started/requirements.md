@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2019
-ms.openlocfilehash: 33a121c97df435d3423e3e0f525e6a3d32c780ad
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: a79f22fa96c4c34d2a9704e9aa3be3825895a15b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197473"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291591"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 요구 사항
 
@@ -72,7 +72,7 @@ Xamarin.Forms 앱은 macOS 및 Windows에서 개발할 수 있습니다. 그러�
 Mac용 Visual Studio를 사용 하 여 macOS-시에라리온 (10.13) 이상에서 Xamarin.ios 앱을 개발할 수 있습니다. IOS 앱을 개발 하려면 적어도 iOS 10 SDK 및 Xcode 9를 설치 하는 것이 좋습니다.
 
 > [!NOTE]
->  Windows 앱은 macOS에서 개발할 수 없습니다.
+> Windows 앱은 macOS에서 개발할 수 없습니다.
 
 ## <a name="windows-system-requirements"></a>Windows 시스템 요구 사항
 

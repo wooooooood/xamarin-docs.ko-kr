@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 창과 �
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6d766e74f99e3c69259a41ce13501de80cf0231a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653112"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291542"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.ios의 Windows
 
@@ -98,7 +98,7 @@ Apple에서는 다음 지침을 제안 합니다.
 
 [![](window-images/panel01.png "색 패널")](window-images/panel01.png#lightbox)
 
-패널은 _앱 특정_ _또는 전체_를 사용할 수 있습니다. 앱 특정 패널은 응용 프로그램의 문서 창 맨 위에 고정 되어 있고 응용 프로그램이 백그라운드에 있을 때 사라집니다. 응용 프로그램에 상관 없이 모든 시스템 패널 (예: **글꼴** 패널)은 열려 있는 모든 창 위에 배치 됩니다. 
+패널은 _앱 특정_ _또는 전체를 사용할_수 있습니다. 앱 특정 패널은 응용 프로그램의 문서 창 맨 위에 고정 되어 있고 응용 프로그램이 백그라운드에 있을 때 사라집니다. 응용 프로그램에 상관 없이 모든 시스템 패널 (예: **글꼴** 패널)은 열려 있는 모든 창 위에 배치 됩니다. 
 
 Apple에서는 다음 지침을 제안 합니다.
 
@@ -337,7 +337,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>창을 닫기 전에 변경 내용 저장
 
-사용자가 창을 닫고 수정 된 콘텐츠를 미리 저장할 수 있도록 허용 하려면의 `NSWindowDelegate` 서브 클래스를 만들고 해당 `WindowShouldClose` 메서드를 재정의 해야 합니다. 예:
+사용자가 창을 닫고 수정 된 콘텐츠를 미리 저장할 수 있도록 허용 하려면의 `NSWindowDelegate` 서브 클래스를 만들고 해당 `WindowShouldClose` 메서드를 재정의 해야 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -511,7 +511,7 @@ var window = NSApplication.SharedApplication.KeyWindow;
 
 Xamarin.ios 앱이 현재 열려 있는 모든 창에 액세스 해야 하는 경우가 있을 수 있습니다. 예를 들어 사용자가 열려는 파일이 종료 창에 이미 열려 있는지 여부를 확인 합니다.
 
-는 `NSApplication.SharedApplication` 앱에서 `Windows` 열려 있는 모든 창의 배열을 포함 하는 속성을 유지 관리 합니다. 이 배열을 반복 하 여 모든 응용 프로그램의 현재 창에 액세스할 수 있습니다. 예를 들어:
+는 `NSApplication.SharedApplication` 앱에서 `Windows` 열려 있는 모든 창의 배열을 포함 하는 속성을 유지 관리 합니다. 이 배열을 반복 하 여 모든 응용 프로그램의 현재 창에 액세스할 수 있습니다. 예:
 
 ```csharp
 // Is the file already open?
@@ -561,7 +561,7 @@ Xamarin.ios 앱 내에서 창의 크기 변경을 모니터링 해야 하는 경
 
 [![](window-images/resize01.png "Identity Inspector")](window-images/resize01.png#lightbox)
 
-다음으로, 사용자 지정 창 컨트롤러 클래스를 편집 하 `DidResize` 고 컨트롤러 창의 이벤트를 모니터링 하 여 라이브 크기 변경에 대 한 알림이 표시 되도록 합니다. 예:
+다음으로, 사용자 지정 창 컨트롤러 클래스를 편집 하 `DidResize` 고 컨트롤러 창의 이벤트를 모니터링 하 여 라이브 크기 변경에 대 한 알림이 표시 되도록 합니다. 예를 들어:
 
 ```csharp
 public override void WindowDidLoad ()

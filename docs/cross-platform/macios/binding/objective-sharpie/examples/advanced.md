@@ -1,23 +1,23 @@
 ---
-title: 고급 (수동) 실제 예제
-description: 이 문서에서는 xcodebuild 출력의 내부적인 목표 Sharpie 용도에 대 한 정보를 제공 하는 목표 Sharpie 대 한 입력으로 사용 하는 방법을 설명 합니다.
+title: 고급 (수동) 실제 예
+description: 이 문서에서는 xcodebuild의 출력을 객관적인 Sharpie에 대 한 입력으로 사용 하는 방법에 대해 설명 합니다 .이를 통해 Sharpie가 내부적으로 수행 하는 작업을 파악할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: e820a0c208907a95dda4a50427bb4dac27b88964
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: a4a6df4916ae5dcc2a0f826d2f0ab9d09167ba5f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977900"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290043"
 ---
-# <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예제
+# <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예
 
-**이 예제에서는 합니다 [Facebook에서 POP 라이브러리](https://github.com/facebook/pop)합니다.**
+**이 예제에서는 [Facebook의 POP 라이브러리](https://github.com/facebook/pop)를 사용 합니다.**
 
-이 섹션에서는 바인딩, Apple의 사용 위치 하는 고급 방법을 `xcodebuild` 먼저 프로젝트를 빌드하려면 POP, 도구 및 목표 Sharpie에 대 한 입력 한 다음 수동으로 추론 합니다. 기본적으로 이전 섹션에서 내부에서 수행 하는 목표 Sharpie 다룹니다.
+이 섹션에서는 Apple `xcodebuild` 도구를 사용 하 여 먼저 POP 프로젝트를 빌드한 다음, 목표 Sharpie에 대 한 입력을 수동으로 추론 하는 바인딩에 대 한 고급 접근 방법을 설명 합니다. 이는 Sharpie가 이전 섹션의 내부적으로 수행 하는 작업을 설명 합니다.
 
 ```
  $ git clone https://github.com/facebook/pop.git
@@ -27,7 +27,7 @@ Cloning into 'pop'...
 $ cd pop
 ```
 
-POP 라이브러리 Xcode 프로젝트에 있으므로 (`pop.xcodeproj`), 바로 사용할 수 있습니다 `xcodebuild` POP을 만들려고 합니다. 이 프로세스는 목표 Sharpie 구문 분석 해야 하는 헤더 파일을 생성할 다시 수 있습니다. 이 때문에 중요 한 바인딩 되기 전에 작성 합니다. 통해 빌드할 때 `xcodebuild` 을 통과 하는 같은 SDK 식별자 및 아키텍처는 목표 Sharpie 전달할 (다시 말하지만 목표 Sharpie 3.0 일반적으로이를 수행할 수 있습니다!) 하려면:
+Pop 라이브러리에 Xcode 프로젝트 (`pop.xcodeproj`)가 있으므로를 사용 `xcodebuild` 하 여 pop를 빌드할 수 있습니다. 이 프로세스는 목표 Sharpie이 구문 분석 해야 할 수 있는 헤더 파일을 생성할 수 있습니다. 이 때문에 바인딩이 중요 합니다. 을 (를 `xcodebuild` ) 통해 빌드할 때 목적 Sharpie으로 전달 하려는 것과 동일한 SDK 식별자와 아키텍처를 전달 해야 합니다. 3.0 Sharpie 목표는 일반적으로이 작업을 수행할 수 있습니다.
 
 ```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
@@ -50,9 +50,9 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 ** BUILD SUCCEEDED **
 ```
 
-일부로 많은 빌드 정보를 콘솔에 출력 됩니다 `xcodebuild`합니다. 위에 표시를 보면 "CpHeader" 대상이 실행 된 헤더 파일을 빌드 출력 디렉터리에 복사 된 가정해 보십시오. 이 경우 경우가 및 바인딩 쉽게: 네이티브 라이브러리의 빌드의 일부로 헤더 파일 종종 위치에 복사 됩니다는 "공개적 으로" 사용할 수 있는 쉽게 바인딩에 대 한 구문 분석 해야 할 수 있습니다. 이 경우 알게 POP의 헤더 파일에는 `build/Headers` 디렉터리입니다.
+콘솔에는의 `xcodebuild`일부로 빌드 정보가 많이 출력 됩니다. 위에 표시 된 것 처럼 헤더 파일이 빌드 출력 디렉터리에 복사 된 "CpHeader" 대상이 실행 된 것을 볼 수 있습니다. 이 경우에는 이러한 경우가 종종 있으며 바인딩을 용이 하 게 합니다. 기본 라이브러리 빌드의 일부로 헤더 파일은 일반적으로 "공용" 사용 가능 위치에 복사 되므로 바인딩을 위한 구문 분석을 용이 하 게 만들 수 있습니다. 이 경우 POP의 헤더 파일이 `build/Headers` 디렉터리에 있다는 것을 알 수 있습니다.
 
-이제 POP 바인딩할 준비가 되었습니다. SDK에 대 한 빌드 하려고 한다는 것을 알게 `iphoneos8.1` 사용 하 여 합니다 `arm64` 아키텍처 및 신경 써야 하는 헤더 파일에 `build/Headers` POP git checkout 아래. 살펴보면는 `build/Headers` 디렉터리 헤더 파일의 수를 살펴보겠습니다.
+이제 POP를 바인딩할 준비가 되었습니다. 아키텍처를 `build/Headers` `iphoneos8.1` `arm64` 사용 하 여 SDK에 대해 빌드 하려고 하 고, 관심 있는 헤더 파일이 POP git 체크 인 아래에 있음을 알고 있습니다. `build/Headers` 디렉터리를 살펴보면 많은 헤더 파일이 표시 됩니다.
 
 ```
 $ ls build/Headers/POP/
@@ -64,7 +64,7 @@ POPAnimationExtras.h     POPCustomAnimation.h     POPSpringAnimation.h
 POPAnimationPrivate.h    POPDecayAnimation.h
 ```
 
-보면 `POP.h`, 것이 라이브러리의 기본 최상위 헤더 파일을 보면 `#import`s 기타 파일입니다. 이 인해 하기만 전달 `POP.h` 목표 Sharpie를 clang 백그라운드에서 나머지 부분에서 수행 될 작업:
+`POP.h`를 살펴보면 라이브러리의 주 최상위 헤더 파일이 다른 파일 임을 `#import`확인할 수 있습니다. 이로 인해 Sharpie는 목표를 달성 하 `POP.h` 는 데만 필요 하며, clang는 백그라운드에서 나머지 작업을 수행 합니다.
 
 ```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
@@ -122,18 +122,18 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-전달 된 것을 알 수 있습니다는 `-scope build/Headers` 목표 Sharpie 인수입니다. C 및 Objective-c 라이브러리 해야 하기 때문에 `#import` 또는 `#include` 라이브러리와 바인딩 하려는 API 아니라 구현 세부 정보는 다른 헤더 파일은 `-scope` 목표 Sharpie에서 정의 되지 않은 모든 API를 무시 하도록 지정 하는 인수는 내 임의 위치에 파일이 `-scope` 디렉터리입니다.
+목표 Sharpie에 `-scope build/Headers` 인수를 전달 했습니다. C 및 객관적인 c 라이브러리는 바인딩하려는 `#import` api `#include` 가 아니라 라이브러리의 구현 세부 정보를 가진 기타 헤더 파일을 가져야 하기 때문에 인수는 `-scope` Sharpie에 정의 되지 않은 모든 api를 무시 하는 것을 목표로 합니다. `-scope` 디렉터리 내의 파일입니다.
 
-하지만 찾을 수 있습니다는 `-scope` 인수는 명확 하 게 구현 된 라이브러리에 대 한 선택적 보통, 명시적으로 제공 하더라도 피해는 합니다.
+인수는 `-scope` 명확 하 게 구현 된 라이브러리의 경우 선택적 이지만 명시적으로 제공 하는 데에는 나쁜 영향을 미치지 않습니다.
 
-지정한 또한 `-c -Ibuild/headers`합니다. 첫째, 합니다 `-c` 명령줄 인수를 해석할 중지 하 고 모든 후속 인수를 전달 하려면 Sharpie 목표를 지정 하는 인수 _clang 컴파일러에 직접_입니다. 따라서 `-Ibuild/Headers` 아래에서 검색할 clang 지시 하는 clang 컴파일러 인수를 포함 `build/Headers`, POP 헤더 거주 하는 것이입니다. 이 인수를 사용 하지 않고 clang 파일을 찾을 수 있는 위치 알지 못합니다입니다 `POP.h` 는 `#import`연산입니다. _목표 Sharpie를 사용 하 여 거의 모든 "문제" 하느냐, clang 전달할 대상을 파악_합니다.
+또한를 지정 `-c -Ibuild/headers`했습니다. 첫째, 인수 `-c` 는 Sharpie가 명령줄 인수 해석을 중지 하 고 모든 후속 인수를 _clang 컴파일러에 직접_전달 한다는 것을 목표로 합니다. 따라서는 POP 헤더가 라이브 인에서 `build/Headers`포함 된을 검색 하도록 clang에 게 지시 하는 clang 컴파일러 인수입니다. `-Ibuild/Headers` 이 인수를 `POP.h` 사용 `#import`하지 않으면 clang에서 파일을 찾을 수 있는 위치를 알 수 없습니다. _객관적인 Sharpie 있지만를 사용 하는 거의 모든 "문제"는 clang에 전달할 사항을 파악 하는 데 사용_됩니다.
 
-### <a name="completing-the-binding"></a>바인딩이 완료
+### <a name="completing-the-binding"></a>바인딩 완료
 
-목표 Sharpie 지금 생성 `Binding/ApiDefinitions.cs` 고 `Binding/StructsAndEnums.cs` 파일입니다.
+이제 목표 Sharpie에서 및 `Binding/ApiDefinitions.cs` 파일 `Binding/StructsAndEnums.cs` 을 생성 했습니다.
 
-목표 Sharpie 기본 첫 번째 단계에서 바인딩, 이며 일부의 경우에는 것이 하기만 하면 됩니다. 하지만 목표 Sharpie에 완료 된 후 생성 된 파일을 수동으로 수정 하려면 개발자는 일반적으로 해야 위에서 설명한 대로 [문제를 해결](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) 는 처리할 수 없는 자동 도구입니다.
+이는 바인딩에서 기본적인 첫 번째 단계를 수행 하는 것 이며, 경우에 따라 필요한 경우가 Sharpie 있습니다. 그러나 위에서 설명한 대로 개발자는 목표 Sharpie 완료 된 후에 생성 된 파일을 수동으로 수정 하 여 도구에서 자동으로 처리할 수 없는 [문제를 해결](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) 해야 합니다.
 
-이 두 파일 이제 Mac 용 Visual Studio에서 바인딩 프로젝트에 추가 수 또는 직접 전달할 업데이트가 완료 되 면 합니다 `btouch` 또는 `bmac` 최종 바인딩을 생성 하는 도구입니다.
+업데이트가 완료 되 면 이제 이러한 두 파일을 Mac용 Visual Studio의 바인딩 프로젝트에 추가 하거나 `btouch` 또는 `bmac` 도구에 직접 전달 하 여 최종 바인딩을 생성할 수 있습니다.
 
-바인딩 프로세스를 세부적 설명은 참조 하십시오 우리의 [연습은 지침](~/ios/platform/binding-objective-c/walkthrough.md)합니다.
+바인딩 프로세스에 대 한 자세한 설명은 [전체 연습 지침](~/ios/platform/binding-objective-c/walkthrough.md)을 참조 하세요.

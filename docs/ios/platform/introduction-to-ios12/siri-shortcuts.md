@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 12에서 Siri 바로 가기를 사용 하�
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/08/2018
-ms.openlocfilehash: f0927a6d6d5e3b9db6f203f779fbd50a026ce7e8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: a2ae80946cb94b6c81b87a88c91cd9bf1706186f
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226573"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291767"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.ios의 siri 바로 가기
 
@@ -315,7 +315,7 @@ C# **SoupChef** 솔루션에서 **SoupKit** 프로젝트는 앱과 해당 확장
 
 Siri가 바로 가기를 제안 하려면 먼저 바로 가기가 관련 된 경우를 이해 해야 합니다.
 
-Siri를 이해 하기 위해 수프 Chef는 사용자가 수프 주문을 배치할 때마다 siri에 대 한 의도를 제공 합니다. 이러한 기부에 기반 하 여 기증 된 곳에서 기증 된 경우 포함 된 매개 변수 – Siri는 나중에 바로 가기를 제안할 시기를 학습 합니다.
+Siri를 이해 하기 위해 수프 Chef는 사용자가 수프 주문을 배치할 때마다 Siri에 _대 한 의도_ 를 제공 합니다. 이러한 기부에 기반 하 여 기증 된 곳에서 기증 된 경우 포함 된 매개 변수 – Siri는 나중에 바로 가기를 제안할 시기를 학습 합니다.
 
 **SoupChef** 는 `SoupOrderDataManager` 클래스를 사용 하 여 기부금을 넣습니다.
 사용자에 대 한 수프 순서를 설정 하기 위해 호출 되 `PlaceOrder` 면 메서드는를 [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*)호출 합니다.

@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: e4c8e404f447dd88b338123335a291bc9f23e449
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 50bcdcc23d1291071a6045544faad9388755116b
+ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119014"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70225468"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -185,8 +185,8 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 - This
 - 글머리 기호
 - list
-    - 유유진
-    - 주준서
+  - 유유진
+  - 주준서
 - 포함
 - 기타
     1. 유현기 대령

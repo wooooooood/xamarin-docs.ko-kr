@@ -4,21 +4,21 @@ description: 이 문서에서는 EventKit 및 Xamarin.ios에서이를 사용 하
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: bb64a0457ad5228e32f233d630576da2836547c1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528051"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291527"
 ---
 # <a name="eventkit-in-xamarinios"></a>Xamarin.ios의 EventKit
 
 iOS에는 달력 응용 프로그램 및 미리 알림 응용 프로그램 이라는 두 가지 달력 관련 응용 프로그램이 있습니다. 달력 응용 프로그램에서 일정 데이터를 관리 하는 방법을 이해할 수 있을 정도로 간단 하지만 미리 알림 응용 프로그램은 명확 하지 않습니다. 알림을 사용 하는 경우, 완료 시기 등을 기준으로 미리 알림이 실제로 연결 된 날짜를 사용할 수 있습니다. 이와 같이 iOS는 일정 이벤트 또는 미리 알림이 일정 *데이터베이스*라는 한 위치에서 모든 달력 데이터를 저장 합니다.
 
-EventKit 프레임 워크는 일정 데이터베이스에서 저장 하는 일정, *일정 이벤트*및 *미리 알림* 데이터에 액세스 하는 방법을 제공 합니다. IOS 4부터 캘린더 및 일정 이벤트에 대 한 액세스를 사용할 수 있지만 미리 알림에 대 한 액세스는 iOS 6에서 새롭게 제공 됩니다.
+EventKit 프레임 워크는 일정 데이터베이스에서 저장 하는 일정, *일정 이벤트*및 *미리 알림* *데이터에 액세스*하는 방법을 제공 합니다. IOS 4부터 캘린더 및 일정 이벤트에 대 한 액세스를 사용할 수 있지만 미리 알림에 대 한 액세스는 iOS 6에서 새롭게 제공 됩니다.
 
 이 가이드에서는 다음에 대해 다룹니다.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램의 데이터로
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 7c798ce8d6146b499769caae0ecbc8a6bfbab92e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: d409787661491a6922434a12157c494851644412
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226315"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291626"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.ios의 데이터로 테이블 채우기
 

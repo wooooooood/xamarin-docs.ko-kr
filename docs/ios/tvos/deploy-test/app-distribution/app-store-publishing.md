@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple TV 앱 스토어에 앱을 게시 하는 
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: aaffaf3d66bb51d467c40bc3e5707a149154c0a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528737"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70282714"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV App Store에 게시
 
@@ -136,7 +136,7 @@ tvOS는 *프로 비전 프로필* 을 사용 하 여 특정 응용 프로그램 
 4. TvOS 앱을 배송 하려면 LLVM 최적화 컴파일러를 사용 해야 합니다. **릴리스** 구성에서 **LLVM 최적화 컴파일러 사용** 확인란이 선택 되어 있는지 확인 합니다.
 5. 또한 tvOS apps에서 bitcode를 사용 해야 합니다. **릴리스** 구성 아래에서 `--bitcode=asmonly` **추가 mtouch 인수** 상자에를 추가 합니다.
 6. **IOS에 대 한 PNG 이미지 파일 최적화** 확인란을 선택 하면 앱의 결과물 크기를 더 줄일 수 있습니다.
-7. 빌드를 불필요 하 게 더 크게 만들기 때문에 디버깅을 사용 하도록 설정 하면 안 됩니다.
+7. 빌드를 불필요 하 게 더 크게 만들기 때문에 디버깅을 사용 하도록 *설정 하면 안* 됩니다.
 
 
 <a name="Building_and_Submitting_the_Distributable" />

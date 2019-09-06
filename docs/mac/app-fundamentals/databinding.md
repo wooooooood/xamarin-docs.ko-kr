@@ -4,15 +4,15 @@ description: 이 문서에서는 Xcode의 Interface Builder에서 UI 요소에 �
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 0816afe7831338348f7612576041623abe8ba283
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: ab5355459f12c8b3cb7fa5f262f015bfd64d3e08
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227262"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70290153"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Xamarin.ios의 데이터 바인딩 및 키-값 코딩
 
@@ -599,11 +599,11 @@ public override void AwakeFromNib ()
 2. **표 내용** 접혀에서 바인딩 및 **배열 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.
 
     ![컨트롤러 키 정의](databinding-images/table08.png "컨트롤러 키 정의")
-3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
+3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 설정](databinding-images/table09.png "모델 키 경로 설정")](databinding-images/table09-large.png#lightbox)
 4. `objectValue`배열 컨트롤러에서 `PersonModel` 관리 중인 배열의 현재입니다.
-5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
+5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 설정](databinding-images/table10.png "모델 키 경로 설정")](databinding-images/table10-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
@@ -721,11 +721,11 @@ public override void AwakeFromNib ()
 2. **개요 보기 내용** 접혀에서 바인딩 및 **트리 컨트롤러** **를** 선택 합니다. `arrangedObjects` **컨트롤러 키** 필드에 대해을 입력 합니다.
 
     ![컨트롤러 키 설정](databinding-images/outline08.png "컨트롤러 키 설정")
-3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
+3. **Employee** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Name` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 입력](databinding-images/outline09.png "모델 키 경로 입력")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue`는 트리 컨트롤러 `PersonModel` 에서 관리 중인 배열의 현재입니다.
-5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 바인딩 및 **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
+5. **직업** 열 아래에서 **테이블 뷰 셀** 을 선택 합니다. **바인딩 검사자** 의 **값** 접혀에서 **바인딩 및** **테이블 셀 뷰**를 선택 합니다. `objectValue.Occupation` **모델 키 경로**를 입력 합니다.
 
     [![모델 키 경로 입력](databinding-images/outline10.png "모델 키 경로 입력")](databinding-images/outline10-large.png#lightbox)
 6. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.

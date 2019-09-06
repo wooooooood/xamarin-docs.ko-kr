@@ -4,15 +4,15 @@ description: 이 문서에서는 tvOS 앱 내부에서의 탐색을 제공 하 �
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: a65509184611ae8fc4102f7c4f198cef7a5ff9d2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: fdf675e37bec07ef03576313befbaa9309ab9349
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645492"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291582"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>TvOS 탐색 및 Xamarin에서 포커스 사용
 
@@ -25,7 +25,7 @@ _이 문서에서는 tvOS 앱 내부에서의 탐색을 제공 하 고 처리 �
 
 다음으로, [시차](#Focus-and-Parallax) 및 *계층화 된 이미지* 에서 포커스를 사용 하 여 최종 사용자에 게 현재 탐색 상태를 시각적으로 파악할 수 있는 방법을 살펴보겠습니다.
 
-마지막으로, [포커스,](#Working-with-Focus) [포커스 업데이트](#Working-with-Focus-Updates), [포커스 가이드](#Working-with-Focus-Guides), [컬렉션에 포커스](#Working-with-Focus-in-Collections) 를 사용 하 고 TvOS 앱에서 이미지 보기에 대 한 [시차를 사용 하도록 설정](#enabling-parallax) 하는 방법을 살펴보겠습니다.
+마지막으로, 포커스, [포커스 업데이트](#Working-with-Focus-Updates), [포커스 가이드](#Working-with-Focus-Guides), [컬렉션에 포커스](#Working-with-Focus-in-Collections) [를 사용 하](#Working-with-Focus)고 TvOS 앱에서 이미지 보기에 대 한 [시차를 사용 하도록 설정](#enabling-parallax) 하는 방법을 살펴보겠습니다.
 
 <a name="Navigation" />
 
@@ -81,7 +81,7 @@ Apple에는 포커스 및 선택 작업에 대 한 다음과 같은 제안이 �
 
 ### <a name="working-with-focus"></a>포커스 작업
 
-포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. 이 경우 속성을 `CanBecomeFocused` 재정의 하 고 `true`를 반환 합니다 `false`. 그렇지 않으면을 반환 합니다. 예:
+포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. 이 경우 속성을 `CanBecomeFocused` 재정의 하 고 `true`를 반환 합니다 `false`. 그렇지 않으면을 반환 합니다. 예를 들어:
 
 ```csharp
 public class myView : UIView
@@ -208,7 +208,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 첫째,이 코드는 ( `NextFocusedView` `context`)에 전달 `UIFocusUpdateContext` 된의을 가져옵니다. 이 뷰가 `null`이면 처리가 필요 하지 않으며 메서드가 종료 됩니다.
 
-그런 다음이 평가 됩니다. `nextFocusableItem` **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 `PreferredFocusedView` 속성을 사용 하 여 반대 단추에 포커스를 보냅니다. 예:
+그런 다음이 평가 됩니다. `nextFocusableItem` **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 `PreferredFocusedView` 속성을 사용 하 여 반대 단추에 포커스를 보냅니다. 예를 들어:
 
 ```csharp
 // Move from the More Info to Buy button

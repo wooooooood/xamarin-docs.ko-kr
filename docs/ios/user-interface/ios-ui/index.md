@@ -1,40 +1,40 @@
 ---
 title: iOS의 사용자 인터페이스
-description: 이 문서는 Xamarin.iOS 앱에 대 한 사용자 인터페이스를 작성 하는 방법에 설명 하는 지침에 연결 합니다. 연결 된 가이드 모양을 API를 만들고 사용자 인터페이스 개체를 레이아웃 옵션을 자세히 설명 합니다.
+description: 이 문서는 Xamarin.ios 앱에서 사용자 인터페이스를 빌드하는 방법을 설명 하는 가이드로 연결 됩니다. 연결 된 안내선은 모양 API, 사용자 인터페이스 개체 만들기, 레이아웃 옵션 등을 다룹니다.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: efb88ada8a4b4c36dd49de137eb64acd63552968
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 106cadc6fef43c06597cf1e3b846bd48cecb6fa5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61382338"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70287046"
 ---
 # <a name="user-interfaces-in-ios"></a>iOS의 사용자 인터페이스
 
 ## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[모양 API](introduction-to-the-appearance-api.md)
 
-iOS는 UIAppearance Api를 사용 하 여 테마를 적용할 사용자 인터페이스 컨트롤의 시각적 특성을 많은 수 있습니다.
+iOS에서는 UIAppearance Api를 사용 하 여 사용자 인터페이스 컨트롤의 많은 시각적 특성에 테마를 적용할 수 있습니다.
 
 ## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[사용자 인터페이스 개체 만들기](~/ios/user-interface/ios-ui/creating-ui-objects.md)
 
-Apple 그룹 관련된 부분 "프레임 워크" Xamarin.iOS 네임 스페이스에 상응 하는 기능입니다. `UIKit` iOS에 대 한 모든 사용자 인터페이스 컨트롤이 포함 된 네임 스페이스가입니다.
+Apple에서는 관련 기능을 Xamarin.ios 네임 스페이스와 관련 된 "프레임 워크"로 그룹화 합니다. `UIKit`는 iOS의 모든 사용자 인터페이스 컨트롤을 포함 하는 네임 스페이스입니다.
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[레이아웃 옵션](~/ios/user-interface/ios-ui/layout-options.md)
 
-보기 크기를 조정 하거나 회전 하는 경우 레이아웃을 제어 하기 위한 두 가지 메커니즘 가지가 있습니다. 자동 크기 조정 및 자동 레이아웃 합니다.
+뷰의 크기를 조정 하거나 회전할 때 레이아웃을 제어 하는 두 가지 메커니즘이 있습니다. 자동 크기 조정 및 자동 레이아웃.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
-이 문서에서는 새로운 종류의 햅 틱 피드백 iOS 10과 Xamarin.iOS에서 구현 하는 방법에서 사용할 수 있습니다.
+이 문서에서는 iOS 10에서 제공 되는 새로운 유형의 햅 피드백 및 Xamarin.ios에서 구현 하는 방법에 대해 설명 합니다.
 
 ## <a name="working-with-the-ui-threadiosuser-interfaceios-uiui-threadmd"></a>[UI 스레드 작업](~/ios/user-interface/ios-ui/ui-thread.md)
 
-코드 변경 내용을 사용자 인터페이스 컨트롤 기본에서 (또는 UI) 스레드를 확인만 해야 합니다. UI 업데이트 (예: 콜백 또는 백그라운드 스레드) 다른 스레드에서 발생 하는 화면에 렌더링 되지 않을 수 있습니다 또는 충돌이 발생할 수 있습니다.
+코드는 주 (또는 UI) 스레드의 사용자 인터페이스 컨트롤만 변경 해야 합니다. 다른 스레드에서 발생 한 모든 UI 업데이트 (예: 콜백 또는 백그라운드 스레드)가 화면에 렌더링 되지 않거나 충돌을 일으킬 수 있습니다.
 
 
 

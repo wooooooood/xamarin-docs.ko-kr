@@ -3,15 +3,15 @@ title: Xamarin과 함께 팀 도시 사용
 description: 이 가이드에서는 TeamCity를 사용 하 여 모바일 응용 프로그램을 컴파일한 다음 Xamarin Test Cloud에 제출 하는 단계에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2880fcbc3366079955945c4780af2be82afe5a4a
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511949"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293132"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin과 함께 팀 도시 사용
 
@@ -62,7 +62,7 @@ TeamCity 8.1에 대 한 지식이 필요 합니다. TeamCity의 설치는이 문
 4. **Xcode 명령줄 도구** -이에 대 한 설명은 [r단계별 v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드의 설치 섹션 1 단계에 설명 되어 있습니다.
 5. **서명 id & 프로 비전 프로필** – XCode를 통해 인증서 및 프로 비전 프로필을 가져옵니다. 자세한 내용은 Apple의 [서명 id 및 프로 비전 프로필 내보내기](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) 에 대 한 지침을 참조 하세요.
 6. **Android keystores** – teamcity 사용자가 액세스할 수 있는 디렉터리 (예: `~/Documents/keystores/MyAndroidApp1`)에 필요한 android keystores를 복사 합니다.
-7. **Calabash** – 응용 프로그램에 calabash를 사용 하 여 작성 된 테스트가 있는 경우 선택적 단계입니다. 자세한 내용은 [OS X Mavericks에서 Calabash 설치](https://github.com/calabash/calabash-ios/wiki) 가이드 및 rguide [v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드를 참조 하세요.
+7. **Calabash** – 응용 프로그램에 calabash를 사용 하 여 작성 된 테스트가 있는 경우 선택적 단계입니다. 자세한 내용은 [OS X Mavericks에서 Calabash 설치](https://github.com/calabash/calabash-ios/wiki) 가이드 및 [rguide v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드를 참조 하세요.
 
 다음 다이어그램에서는 이러한 구성 요소를 모두 보여 줍니다.
 

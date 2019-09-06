@@ -4,15 +4,15 @@ description: 이 문서는 watchOS 응용 프로그램 수명 주기, 사용자 
 ms.prod: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 6367ab41be821c5b1add4fface6bd17eb00b763b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 59d02db9fa2787e93ad88e4b6f37e0fef50572a5
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121607"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70293107"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 

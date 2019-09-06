@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램의 테이블 �
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 09e4ca561f962e46dfe4eccbaf1cf284f4bb2827
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
+ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120824"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70291617"
 ---
 # <a name="table-views-in-xamarinmac"></a>Xamarin.ios의 테이블 뷰
 
@@ -87,7 +87,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
   - **열** -이면 `true`사용자가 열을 선택할 수 있습니다.
   - **Select** -If `true`를 입력 하 고 사용자가 문자를 입력 하 여 행을 선택할 수 있습니다.
   - **Empty** -인 `true`경우 사용자가 행 또는 열을 선택할 필요가 없으면 테이블에서 선택할 수 없습니다.
-- 자동 저장-테이블 형식이 자동으로 저장 되는 이름입니다.
+- **자동 저장-테이블** 형식이 자동으로 저장 되는 이름입니다.
 - **열 정보** -이면 `true`열의 순서와 너비가 자동으로 저장 됩니다.
 - **줄 바꿈** -셀에서 줄 바꿈을 처리 하는 방법을 선택 합니다.
 - **마지막으로 표시 되** 는 줄 `true`을 자릅니다.-인 경우 데이터에서 잘린 셀은 해당 범위 내에 맞지 않을 수 있습니다.
