@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6711a16ba0035190d10687ef821831559c07b797
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 45205859a55974414ee865b2141d2bb127e85bcc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289833"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763139"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Xamarin.ios에서 SQLite.NET 사용
 
@@ -136,7 +136,6 @@ public static void DoSomeDataAccess () {
 - **[무시]** – SQLite.NET가이 속성을 무시 하도록 합니다. 이는 데이터베이스에 저장할 수 없는 형식이 있는 속성 또는 자동으로 해결할 수 없는 모델 컬렉션이 자동으로 SQLite 인 속성에 특히 유용 합니다.
 - **[Unique]** – 기본 데이터베이스 열의 값이 고유한 지 확인 합니다.
 
-
 이러한 특성의 대부분은 선택 사항이 며, SQLite는 테이블 및 열 이름에 기본값을 사용 합니다. 데이터에 대해 선택 및 삭제 쿼리를 효율적으로 수행할 수 있도록 항상 정수 기본 키를 지정 해야 합니다.
 
 ## <a name="more-complex-queries"></a>더 복잡 한 쿼리
@@ -149,7 +148,6 @@ public static void DoSomeDataAccess () {
 - **삭제** – 해당 기본 키를 사용 하 여 개체를 삭제 합니다.
 - **쿼리\<T >** -여러 행을 개체로 반환 하는 SQL 쿼리를 수행 합니다.
 - **Execute** – SQL에서 행을 반환 하지 `Query` 않을 경우 (예: INSERT, UPDATE 및 DELETE 명령)이 아닌 메서드를 사용 합니다.
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>기본 키로 개체 가져오기
 

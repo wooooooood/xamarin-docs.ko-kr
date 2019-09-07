@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: 341689e53d6654cb68316c17e2f263062cfc1fd5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ac6ce31ad851e90f7781cffdb3cd3d1d905a8733
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292693"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769778"
 ---
 # <a name="xamarinmac-troubleshooting"></a>Xamarin.ios 문제 해결 
 
@@ -26,4 +26,3 @@ _이 섹션의 문서에서는 Xamarin.ios를 사용 하 여 문제를 해결 �
 ## <a name="errors-messages-mmpmactroubleshootingmmp-errorsmd"></a>[오류 메시지 (mmp)](~/mac/troubleshooting/mmp-errors.md)
 
 Xamarin.ios 응용 프로그램을 작성할 때 발생할 수 있는 가장 일반적인 오류를 보여 주는 오류 참조 가이드입니다.
-

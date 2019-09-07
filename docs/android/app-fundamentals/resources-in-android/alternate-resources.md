@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 05c3816d0cc01beb3ed99994788b58e5f187171a
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3f1e2ef06fb439f4b3ef290b1a7f80856b126a8d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225773"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755194"
 ---
 # <a name="alternate-resources"></a>대체 리소스
 
@@ -25,13 +25,12 @@ ms.locfileid: "70225773"
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![대체 리소스](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![대체 리소스](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 리소스 형식에 한정자를 추가 하는 경우 다음 규칙이 적용 됩니다.
 
@@ -103,7 +102,6 @@ ms.locfileid: "70225773"
 
   - `12key`&ndash; 12 개의 키 하드웨어 키보드가 있습니다.
 
-
 - **탐색 키 가용성** &ndash; 5 방향 또는 d-패드 (방향 패드) 탐색을 사용할 수 있는 경우. 이는 응용 프로그램의 수명 동안 변경 될 수 있습니다. 가능한 값은
 
   - `navexposed`&ndash; 사용자가 탐색 키를 사용할 수 있습니다.
@@ -122,9 +120,7 @@ ms.locfileid: "70225773"
 
 - **플랫폼 버전 (API 수준)** V n 형식의 장치에서 지원 되는 api 수준으로, 여기서 *N* 은 대상으로 하는 api 수준입니다. &ndash; 예를 들어 v11는 API 레벨 11 (Android 3.0) 장치를 대상으로 합니다.
 
-
 리소스 한정자에 대 한 자세한 내용은 Android 개발자 웹 사이트에서 [리소스 제공](https://developer.android.com/guide/topics/resources/providing-resources.html) 을 참조 하세요.
-
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Android에서 사용할 리소스를 결정 하는 방법
 

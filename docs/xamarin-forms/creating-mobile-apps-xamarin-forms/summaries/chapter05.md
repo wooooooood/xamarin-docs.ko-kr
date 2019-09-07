@@ -1,18 +1,18 @@
 ---
 title: 요약 5 장입니다. 크기를 사용 하 여 처리
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 5 장입니다. 크기를 사용 하 여 처리
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 5 장입니다. 크기를 사용 하 여 처리'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: fd6694de756938ff564bed0923427fe62153116a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c082bdb10732e42b37511cf050e50f46990a5b5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334390"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771148"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>요약 5 장입니다. 크기를 사용 하 여 처리
 
@@ -80,15 +80,13 @@ Windows 휴대폰 및 모바일 장치 160 장치 독립적인 1/96 인치 단�
 
 ## <a name="accessibility-issues"></a>액세스 가능성 문제
 
-합니다 **EstimatedFontSize** 프로그램 및 **FitToSizeClock** 두 프로그램 결함이 있다는 포함: 사용자가 Android 또는 Windows 10 Mobile 휴대폰의 내게 필요한 옵션 설정을 변경 하면 프로그램 이상 예측할 수 얼마나 큰 텍스트를 렌더링 하 글꼴 크기를 기준으로 합니다. 합니다 [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) 샘플에서는이 문제를 보여 줍니다.
+**EstimatedFontSize** 프로그램과 **FitToSizeClock** 프로그램에는 모두 미묘한 결함이 포함 되어 있습니다. 사용자가 Android 또는 Windows 10 Mobile에서 휴대폰의 접근성 설정을 변경 하는 경우 프로그램에서 글꼴 크기에 따라 텍스트가 렌더링 되는 크기를 더 이상 예상할 수 없습니다. 합니다 [ **AccessibilityTest** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/AccessibilityTest) 샘플에서는이 문제를 보여 줍니다.
 
 ## <a name="empirically-fitting-text"></a>경험적으로 맞춤 텍스트
 
 텍스트 사각형에 맞게 다른 방법은 알려지고 실험적으로 렌더링 된 텍스트 크기를 계산 하 고 위나 아래로 조정 하는 것입니다. 책 호출에서 프로그램 [ `GetSizeRequest` ](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double)) 원하는 크기를 요소의 시각적 요소에 있습니다. 메서드는 더 이상 사용 되지 않습니다을 프로그램 대신 호출 해야 [ `Measure` ](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags))합니다.
 
 에 대 한는 `Label`인수를 설정 해야 하지만 두 번째, 첫 번째 인수에 줄 바꿈을 허용) (컨테이너의 너비를 해야 합니다.를 `Double.PositiveInfinity` 비제한 높이 확인 합니다. 합니다 [ **EmpiricalFontSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) 샘플에는이 기술을 보여 줍니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

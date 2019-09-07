@@ -1,18 +1,18 @@
 ---
 title: 요약 23 장입니다. 트리거 및 동작
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 23 장입니다. 트리거 및 동작
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 23 장입니다. 트리거 및 동작'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a1274a8447f49ce39f9c92703bbaec9e875b9e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61332134"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760591"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>요약 23 장입니다. 트리거 및 동작
 
@@ -183,8 +183,6 @@ ms.locfileid: "61332134"
 최종 샘플 [ **MultiColorSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/MultiColorSliders) 라디오 단추를 사용 하 여 세 가지 서로 다른 색 선택 뷰 간에 전환할 수 있습니다. 세 가지 보기 페이드 인 및 체크 아웃 사용 하는 [ `FadeEnableAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/FadeEnableAction.cs) 에 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리.
 
 프로그램에도 방향 사용 하 여 가로 세로 간에 변경 내용에 응답을 [ `GridOrientationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) 에 **Xamarin.FormsBook.Toolkit** 라이브러리입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

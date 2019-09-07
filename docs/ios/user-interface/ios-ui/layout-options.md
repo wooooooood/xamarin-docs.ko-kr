@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: eb20c73ab66af5ca07bf2efb31d631d9fa9776dc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 335c385b5be77736f0e19852eb71f2a2329eb9a2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287036"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768251"
 ---
 # <a name="layout-options-in-xamarinios"></a>Xamarin.ios의 레이아웃 옵션
 
@@ -40,7 +40,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 자동 크기 조정 설정을 테스트 하려면 프로젝트의 옵션에서 **지원 되는 다른 장치 방향을** 사용 하도록 설정 합니다.
 
  [![](layout-options-images/image43a.png "자동 크기 조정 설정")](layout-options-images/image43a.png#lightbox)
@@ -53,7 +52,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 디자이너를 사용 하 여 컨트롤을 조정할 수도 있습니다. 아래에 표시 된 대로 struts를 선택 하면 이미지는 보기의 아래쪽에서 잘리지 않고 오른쪽에 맞춰집니다.
 
  [![](layout-options-images/autoresize.png "Autorotation")](layout-options-images/autoresize.png#lightbox)
@@ -63,10 +61,6 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
  [![](layout-options-images/image44a.png "Autorotation")](layout-options-images/image44a.png#lightbox)
 
 텍스트 보기와 텍스트 필드가 모두 확장 되어 `FlexibleWidth` 설정으로 인해 왼쪽과 오른쪽 여백이 동일 하 게 유지 됩니다. 이미지의 위쪽과 왼쪽 여백이 유연 합니다. 즉, 화면을 회전할 때 이미지를 보기에 유지 합니다. 일반적으로 복잡 한 레이아웃은 사용자 인터페이스를 일관 되 게 유지 하기 위해 표시 되는 모든 컨트롤에 이러한 설정을 조합 하 여 사용 해야 하며, 회전 또는 기타 크기 조정 이벤트로 인해 뷰의 경계가 변경 될 때 컨트롤이 겹치지 않도록 합니다.
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

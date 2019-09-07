@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 22c3217eec1b2e531ad4534fc1cb35a701a06e34
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a9d239140cee9eb600414a1bfb0733c9af6488bc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524080"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761420"
 ---
 # <a name="java-integration-with-xamarinandroid"></a>Xamarin.ios와 Java 통합
 
@@ -38,12 +38,9 @@ JNI를 사용 하는 두 번째 기술은 매우 낮은 수준에서 작동 하�
 
 세 번째 기술은 이전 두 가지 방법 (Java에서로 C#코드 포팅)과 완전히 다릅니다. 코드를 한 언어에서 다른 언어로 이식 하는 것은 매우 힘든 프로세스 일 수 있지만, *선명*하 게 하는 도구를 사용 하 여 이러한 작업을 줄일 수 있습니다. 선명 효과는 Java에서C# 변환기 인 오픈 소스 도구입니다. 
 
-
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin Android 응용 프로그램에서 Java의 라이브러리를 다시 사용할 수 있는 여러 가지 방법에 대 한 개략적인 개요를 제공 했습니다. 바인딩 및 관리 되는 호출 가능 래퍼의 개념과 Java 코드를로 C#이식 하기 위한 옵션에 대해 소개 했습니다. 
-
 
 ## <a name="related-links"></a>관련 링크
 

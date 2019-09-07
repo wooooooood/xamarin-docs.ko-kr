@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 3b940199a1384540bcc9f7134dabf8b69ac3767e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de70eda2898f29a1e7afed9440d5f5fae496e069
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285010"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765106"
 ---
 # <a name="general-frequently-asked-questions"></a>일반적인 질문과 대답
 
@@ -42,7 +42,6 @@ Mac용 Visual Studio & Visual Studio에는 이전 버전의 패키지를 선택 
 ### <a name="where-are-the-components-stored-on-my-machinecomponent-storagemd"></a>[컴퓨터에 구성 요소가 저장된 위치는 어디인가요?](component-storage.md)
 Xamarin 구성 요소를 앱 프로젝트에 설치할 때마다이 가이드에 나열 된 두 위치에 배치 됩니다.
 
-
 ## <a name="troubleshooting"></a>문제 해결
 ### <a name="where-can-i-find-my-version-information-and-logsversion-logsmd"></a>[버전 정보 및 로그는 어디에서 확인할 수 있나요?](version-logs.md)
 이 가이드에서는 Xamarin 문제를 해결 하는 데 사용할 수 있는 대부분의 진단 정보를 찾을 수 있는 위치에 대해 자세히 설명 합니다.
@@ -55,4 +54,3 @@ Jenkins은 오픈 소스 CI 도구 모음입니다. 이러한 문제 때문에 J
 
 ### <a name="what-project-settings-are-required-for-the-debuggerdebugger-settingsmd"></a>[디버거에 필요한 프로젝트 설정은 무엇인가요?](debugger-settings.md)
 디버거가 정상적으로 작동 하려면 (중단점 적중, 디버그 로그 표시 등), 개발자 계측 및 디버그 정보 표시를 모두 사용 하도록 설정 해야 합니다. 이 가이드에서는 이러한 설정을 찾고 활성화 하는 방법에 대해 자세히 설명 합니다.
-

@@ -6,12 +6,12 @@ ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: ccad60f749732ae2d0bf8e9852859b13af3a629e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284916"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765342"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Razor 템플릿을 사용 하 여 HTML 뷰 빌드
 
@@ -198,7 +198,6 @@ webView.EvaluateJavascript (js);
 - 코드에서 C# 탐색 요청을 가로챌 수 있는 기능
 - 코드에서 C# JavaScript를 호출 하는 기능입니다.
 
-
 다음 섹션에서는 Razor를 소개 하며,이를 통해 하이브리드 앱에서 사용할 HTML을 쉽게 만들 수 있습니다.
 
 ## <a name="what-is-razor"></a>Razor 란?
@@ -235,7 +234,6 @@ Razor 템플릿 파일의 확장명은 **cshtml** 입니다. **새 파일** 대�
 - IDE는 템플릿 (확장명이 **cshtml** 인 파일)에 대 한 partial 클래스를 자동으로 생성 합니다. 이 코드는 볼 수 있지만 편집할 수는 없습니다.
  ![Razorview. cshtml](images/image6_125x34.png) partial 클래스의 이름을 razorview로 지정 하 여. cshtml 템플릿 파일 이름과 일치 시킵니다. 이 이름은 코드에서 C# 템플릿을 참조 하는 데 사용 됩니다.
 - `@using`문을 Razor 템플릿 맨 위에 포함 하 여 추가 네임 스페이스를 포함할 수도 있습니다.
-
 
 그런 다음 다음 C# 코드를 사용 하 여 최종 HTML 출력을 생성할 수 있습니다. 모델은 렌더링 된 템플릿 출력에 포함 되는 "Hello World" 문자열로 지정 됩니다.
 
@@ -379,8 +377,6 @@ var page = template.GenerateString ();
 - **iOS > 앱 > 웹 보기 응용 프로그램**
 - **ASP.NET MVC 프로젝트**
 
-
-
 **새 솔루션** 창은 IPhone 및 Android 프로젝트에 대 한 것 처럼 보입니다. 오른쪽에 있는 솔루션 설명에는 Razor 템플릿 엔진에 대 한 지원이 강조 표시 되어 있습니다.
 
  ![IPhone 및 Android 솔루션 만들기](images/image13_1139x959.png)
@@ -399,7 +395,6 @@ IPhone 및 Android 프로젝트에 대 한 기본 템플릿 솔루션 콘텐츠�
 - Razor. cshtml 템플릿 파일 (예: **Razorview. cshtml** )
 - **ExampleModel.cs** 와 같은 Razor 템플릿에서 참조 되는 모델 클래스입니다.
 - `MainActivity` Android`iPhoneHybridViewController` 및 iOS의에서 웹 뷰를 만들고 템플릿을 렌더링 하는 플랫폼별 클래스입니다.
-
 
 다음 섹션에서는 프로젝트의 작동 방식에 대해 설명 합니다.
 
@@ -494,7 +489,6 @@ HTML은 프로토타입 제작에 적합 하 고, 다양 한 텍스트 및 응�
 - **Razortodo** -Razor 템플릿을 사용 하는 완전히 HTML 기반 앱입니다.
 - **RazorNativeTodo** -IOS 및 Android 용 네이티브 목록 뷰 컨트롤을 사용 하지만 HTML 및 Razor를 사용 하 여 편집 화면을 표시 합니다.
 
-
 이러한 Xamarin 앱은 iOS 및 Android에서 실행 되며, PCLs (이식 가능한 클래스 라이브러리)를 활용 하 여 데이터베이스 및 모델 클래스와 같은 공통 코드를 공유 합니다. Razor **파일** 은 여러 플랫폼에서 쉽게 공유할 수 있도록 PCL에 포함 될 수도 있습니다.
 
 두 샘플 앱은 네이티브 플랫폼에서 Twitter 공유 및 텍스트 음성 변환 Api를 통합 하며, Xamarin을 사용 하는 하이브리드 응용 프로그램은 HTML Razor 템플릿 기반 뷰에서 모든 기본 기능에 액세스할 수 있다는 것을 보여 줍니다.
@@ -507,7 +501,6 @@ HTML은 프로토타입 제작에 적합 하 고, 다양 한 텍스트 및 응�
 
 - 성능-기본 스크롤 컨트롤은 가상화를 사용 하 여 매우 긴 데이터 목록이 있더라도 빠르고 부드러운 스크롤을 보장 합니다.
 - 네이티브 환경-iOS 및 Android의 빠른 스크롤 인덱스 지원과 같이 플랫폼 관련 UI 요소를 쉽게 사용할 수 있습니다.
-
 
 Xamarin을 사용 하 여 하이브리드 앱을 빌드하는 경우의 주요 혜택은 처음 샘플과 같이 완전히 HTML 기반의 사용자 인터페이스로 시작한 다음 필요할 때 플랫폼별 기능을 추가할 수 있습니다 (두 번째 샘플에서 볼 수 있음). IOS 및 Android의 기본 목록 화면 및 HTML Razor 편집 화면은 아래와 같습니다.
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 6ff697964cbc057b4a3f905394d147d7c132d79b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4db5718394c3835861f3dfa8b99a4bac70e26981
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281947"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767011"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Xamarin.ios의 사용자 기본값 작업
 
 _이 문서에서는 NSUserDefault를 사용 하 여 Xamarin.ios 앱 또는 확장의 기본 설정을 저장 하는 방법을 설명 합니다._
-
 
 클래스 `NSUserDefaults` 를 사용 하면 iOS 앱 및 확장이 시스템 차원의 기본값 시스템과 프로그래밍 방식으로 상호 작용 하는 방법을 제공 합니다. 사용자는 기본값 시스템을 사용 하 여 앱의 동작 또는 스타일을 구성 하 여 앱의 디자인에 따라 기본 설정을 충족 시킬 수 있습니다. 예를 들어 메트릭 및 왕정 측정의 데이터를 표시 하거나 지정 된 UI 테마를 선택 합니다.
 
@@ -129,14 +128,11 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > 앱이 처음으로 실행 될 `NSUserDefaults` 때는 앱의 사용자 기본값 데이터베이스에서 키와 값을 읽어 메모리에 캐시 하 여 값이 필요할 때마다 데이터베이스를 열고 읽지 못하게 합니다.
 
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 `NSUserDefaults` 클래스와 클래스를 사용 하 여 최종 사용자가 xamarin.ios 앱을 구성 하는 데 사용할 수 있는 옵션 집합을 제공 하는 방법에 대해 설명 했습니다. 또한 앱 그룹을 사용 하 여 확장과 부모 앱 간에 통신 하거나 그룹의 앱 간에 통신 하는 방법을 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

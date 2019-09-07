@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: e49f12dd656d5e07feccd34e231a00124d81048a
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8d4dcedae6298d9a56ba52d4da3d081d4d69afe1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524279"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757566"
 ---
 # <a name="specialized-fragment-classes"></a>특수화된 조각 클래스
 
@@ -23,14 +23,11 @@ ms.locfileid: "69524279"
 
 - **PreferenceFragment** &ndash; 이 조각은 기본 설정 개체를 목록으로 표시 하는 데 사용 됩니다.
 
-
-
 ## <a name="the-listfragment"></a>ListFragment
 
 는의 개념 및 기능과 `ListActivity`매우 유사 합니다. 조각에서를 `ListView` 호스팅하는 래퍼입니다. `ListFragment` 아래 이미지는 태블릿 및 `ListFragment` 휴대폰에서 실행 되는을 보여 줍니다.
 
 [![태블릿 및 휴대폰에서 ListFragment의 스크린샷](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png#lightbox)
-
 
 ### <a name="binding-data-with-the-listadapter"></a>ListAdapter를 사용 하 여 데이터 바인딩
 
@@ -48,8 +45,6 @@ public override void OnActivityCreated(Bundle savedInstanceState)
 ```
 
 를 설정 `ListAdapter`하는 경우 `ListView.ListAdapter` 속성이 아닌 `ListFragment.ListAdapter` 속성을 사용 하는 것이 중요 합니다. 를 `ListView.ListAdapter` 사용 하면 중요 한 초기화 코드를 건너뛸 수 있습니다.
-
-
 
 ### <a name="responding-to-user-selection"></a>사용자 선택에 응답
 
@@ -81,8 +76,6 @@ public override void OnListItemClick(ListView l, View v, int index, long id)
 
 위의 코드에서 사용자가의 항목 `ListFragment`을 선택 하면 호스팅 활동에 새 조각이 표시 되어 선택한 항목에 대 한 세부 정보가 표시 됩니다.
 
-
-
 ## <a name="dialogfragment"></a>DialogFragment
 
 *Dialogfragment* 는 활동의 창 위에 배치 될 조각 내부에 대화 상자 개체를 표시 하는 데 사용 되는 조각입니다. 이는 관리 되는 대화 상자 Api (Android 3.0에서 시작)를 대체 하기 위한 것입니다. 다음 스크린샷에서는 `DialogFragment`의 예를 보여 줍니다.
@@ -100,8 +93,6 @@ public override void OnListItemClick(ListView l, View v, int index, long id)
 - **Oncreateview** &ndash; 이렇게 하면 뷰가 생성 되 고 반환 됩니다.
 
 - **Oncreatedialog** &ndash; 그러면 사용자 지정 대화 상자가 만들어집니다. 일반적으로 *Alertdialog*를 표시 하는 데 사용 됩니다. 이 메서드를 재정의할 때는를 재정의할 `OnCreateView` 필요가 없습니다.
-
-
 
 ### <a name="a-simple-dialogfragment"></a>간단한 DialogFragment
 
@@ -140,7 +131,6 @@ public class MyDialogFragment : DialogFragment
 }
 ```
 
-
 ### <a name="displaying-a-fragment"></a>조각 표시
 
 모든 조각과 `DialogFragment` 마찬가지로는 `FragmentTransaction`의 컨텍스트에서 표시 됩니다.
@@ -158,12 +148,10 @@ public void ShowDialog()
 }
 ```
 
-
 ### <a name="dismissing-a-fragment"></a>조각 해제
 
 인스턴스에서 `Dismiss()` 를`DialogFragment` 호출 하면 조각이 활동에서 제거 되 고 해당 트랜잭션이 커밋됩니다.
 조각의 소멸과 관련 된 표준 조각 수명 주기 메서드가 호출 됩니다.
-
 
 ### <a name="alert-dialog"></a>경고 대화 상자
 
@@ -187,15 +175,12 @@ public class AlertDialogFragment : DialogFragment
 }
 ```
 
-
-
 ## <a name="preferencefragment"></a>PreferenceFragment
 
 기본 설정 관리를 돕기 위해 조각 API는 하위 `PreferenceFragment` 클래스를 제공 합니다. `PreferenceFragment`는[PreferenceActivity](xref:Android.Preferences.PreferenceActivity) 유사하게 &ndash;사용자에게 기본 설정의 계층 구조를 표시합니다. 사용자가 기본 설정과 상호 작용 하면 자동으로 [Sharedpreferences 설정](https://developer.android.com/reference/android/content/SharedPreferences.html)에 저장 됩니다.
 Android 3.0 이상 응용 프로그램에서를 사용 `PreferenceFragment` 하 여 응용 프로그램에서 기본 설정을 처리 합니다. 다음 그림에서는의 `PreferenceFragment`예를 보여 줍니다.
 
 [![인라인, 대화 상자 및 시작 기본 설정을 사용 하는 예제 PreferencesFragment](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
-
 
 ### <a name="create-a-preference-fragment-from-a-resource"></a>리소스에서 기본 설정 조각 만들기
 
@@ -266,8 +251,6 @@ public class PrefFragment : PreferenceFragment
     }
 }
 ```
-
-
 
 ### <a name="querying-activities-to-create-a-preference-fragment"></a>작업을 쿼리하여 기본 설정 조각 만들기
 

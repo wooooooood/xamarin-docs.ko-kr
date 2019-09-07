@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: d409787661491a6922434a12157c494851644412
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d180345c36531b58c13eebbd97dc4f7555b8f13c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291626"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768862"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Xamarin.ios의 데이터로 테이블 채우기
 
@@ -25,7 +25,6 @@ ms.locfileid: "70291626"
 - 인덱스 추가
 - 머리글 및 바닥글 추가
 
-
 <a name="Subclassing_UITableViewSource" />
 
 ## <a name="subclassing-uitableviewsource"></a>UITableViewSource 서브클래싱
@@ -36,7 +35,6 @@ ms.locfileid: "70291626"
 
 - **Rowsinsection** – 테이블에 [`nint`](~/cross-platform/macios/nativetypes.md) 표시 해야 하는 총 데이터 행 수를 반환 합니다.
 - **Getcell** – 메서드에 전달 `UITableCellView` 된 해당 행 인덱스의 데이터로 채워진을 반환 합니다.
-
 
 BasicTable 샘플 파일 **TableSource.cs** 에는의 `UITableViewSource`가장 간단한 구현이 있습니다. 아래 코드 조각에서 확인할 수 있습니다. 아래 코드 조각에서는 테이블에 표시 되는 문자열의 배열을 허용 하 고 각 문자열이 포함 된 기본 셀 스타일을 반환 합니다.
 
@@ -139,13 +137,9 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-
 이제 사용자가 행을 터치 할 수 있으며 경고가 표시 됩니다.
 
-
-
  [![](populating-a-table-with-data-images/image4.png "선택한 행 경고")](populating-a-table-with-data-images/image4.png#lightbox)
-
 
 ## <a name="cell-reuse"></a>셀 다시 사용
 
@@ -246,7 +240,6 @@ keys = indexedTableItems.Keys.ToArray ();
 - **Rowsinsection** – 지정 된 섹션의 행 수를 반환 합니다.
 - **섹션 Indextitles** – 인덱스를 표시 하는 데 사용 되는 문자열의 배열을 반환 합니다. 샘플 코드는 문자 배열을 반환 합니다.
 
-
 샘플 파일 **Basictableindex/Tableource. cs** 의 업데이트 된 메서드는 다음과 같습니다.
 
 ```csharp
@@ -266,7 +259,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 인덱스는 일반적으로 일반 테이블 스타일 에서만 사용 됩니다.
 
-
 <a name="Adding_Headers_and_Footers" />
 
 ## <a name="adding-headers-and-footers"></a>머리글 및 바닥글 추가
@@ -280,7 +272,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 - **TitleForHeader** – 헤더로 사용할 텍스트를 반환 합니다.
 - **TitleForFooter** – 바닥글로 사용할 텍스트를 반환 합니다.
-
 
 샘플 파일 **Basictableheaderfooter/Code/Tableource. cs** 의 업데이트 된 메서드는 다음과 같습니다.
 
@@ -296,7 +287,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 ```
 
 에서 `GetViewForHeader` `GetViewForFooter` 및 메서드재정의를사용하여뷰개체를사용하여머리글및바닥글의모양을사용자지정할수있습니다.`UITableViewSource`
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 52c4f6b45a44eaa9df253e9d049d1016de4a6e30
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: ef94c90cec11c374b24ddfb159674adb468e72de
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199360"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765784"
 ---
 # <a name="binding-types-reference-guide"></a>바인딩 형식 참조 가이드
 
@@ -52,7 +52,6 @@ interface UITextField : UITextInput {
 ```
 
 [`[BaseType]`](#BaseTypeAttribute) 특성을 구성 하는 것 뿐만 아니라 인터페이스에 다른 특성을 적용 하 여 코드 생성의 다른 여러 측면을 제어할 수 있습니다.
-
 
 ### <a name="generating-events"></a>이벤트 생성
 
@@ -114,7 +113,7 @@ public delegate bool UIScrollViewCondition (UIScrollView scrollView);
 
 바인딩 `UIScrollView` 생성기는와 같이 `UIScrollViewDelegate` 클래스를 연결 하는 이벤트 및 속성 생성을 지원 합니다. (이러한 모델 클래스를 사용 [`[BaseType]`](#BaseTypeAttribute) `Events` `Delegates`하여)정의에주석을추가하여이작업을수행합니다.매개 변수 (아래 설명 참조). 이러한 매개 변수를 사용 [`[BaseType]`](#BaseTypeAttribute) 하 여에 주석을 추가 하는 것 외에도 몇 가지 추가 구성 요소를 생성기에 알려야 합니다.
 
-둘 이상의 매개 변수를 사용 하는 이벤트의 경우 (즉, 대리자 클래스의 첫 번째 매개 변수가 발신자 개체의 인스턴스인 경우) 생성 `EventArgs` 된 클래스에 대해 원하는 이름을 제공 해야 합니다. 이 작업은 모델 클래스 [`[EventArgs]`](#EventArgsAttribute) 의 메서드 선언에서 특성을 사용 하 여 수행 됩니다. 예를 들어:
+둘 이상의 매개 변수를 사용 하는 이벤트의 경우 (즉, 대리자 클래스의 첫 번째 매개 변수가 발신자 개체의 인스턴스인 경우) 생성 `EventArgs` 된 클래스에 대해 원하는 이름을 제공 해야 합니다. 이 작업은 모델 클래스 [`[EventArgs]`](#EventArgsAttribute) 의 메서드 선언에서 특성을 사용 하 여 수행 됩니다. 예:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -207,7 +206,6 @@ public interface UIAccelerometer {
 public interface UIAccelerometerDelegate {
 }
 ```
-
 
 #### <a name="basetypekeeprefuntil"></a>BaseType.KeepRefUntil
 
@@ -511,7 +509,7 @@ public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 
 둘 이상의 매개 변수를 사용 하는 이벤트의 경우 (즉, 대리자 클래스의 첫 번째 매개 변수가 보낸 사람 개체의 인스턴스인 경우) 생성 된 EventArgs 클래스에 대해 원하는 이름을 제공 해야 합니다. 클래스의 메서드 선언에서 `[EventArgs]` 특성을 사용 하 여 수행 됩니다. `Model`
 
-예를 들어:
+예:
 
 ```csharp
 [BaseType (typeof (UINavigationControllerDelegate))]
@@ -537,7 +535,6 @@ public partial class UIImagePickerImagePickedEventArgs : EventArgs {
 ```csharp
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
 ```
-
 
 ### <a name="eventnameattribute"></a>EventNameAttribute
 
@@ -706,11 +703,9 @@ interface Robot : SpeakProtocol {
 }
 ```
 
-
 ## <a name="member-definitions"></a>멤버 정의
 
 이 섹션의 특성은 속성 및 메서드 선언 형식의 개별 멤버에 적용 됩니다.
-
 
 ### <a name="alignattribute"></a>AlignAttribute
 
@@ -724,7 +719,6 @@ public interface GLKBaseEffect {
     Vector4 ConstantColor { [Align (16)] get; set;  }
 }
 ```
-
 
 ### <a name="appearanceattribute"></a>AppearanceAttribute
 
@@ -803,7 +797,7 @@ interface NSUrlSession {
 
 반환 값에 대 한 메서드, 매개 변수 및 속성 `BindAs`을에 데코레이팅 할 수 있습니다. 유일한 제한 사항은 멤버가 `[Protocol]` 또는 [`[Model]`](#ModelAttribute) 인터페이스 내에 **있지 않아야** 한다는 것입니다.
 
-예:
+예를 들어:
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -914,7 +908,7 @@ CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 
 메서드 또는 속성에 사용 되는 경우 `[Bind]` 특성의 효과는 지정 된 선택기를 호출 하는 메서드를 생성 하는 것입니다. 그러나 생성 된 결과로 생성 된 메서드는 [`[Export]`](#ExportAttribute) 특성으로 데코 레이트 되지 않습니다. 즉, 메서드 재정의에 참여할 수 없습니다. 일반적으로이 `[Target]` 특성은 목표-C 확장 메서드를 구현 하기 위한 특성과 함께 사용 됩니다.
 
-예를 들어:
+예:
 
 ```csharp
 public interface UIView {
@@ -1163,7 +1157,6 @@ public NSObject this [NSObject idx] {
 
 현재는 몇 개의 `objc_msgSend` 서명만 지원 됩니다. (바인딩을 사용 하는 앱의 네이티브 링크가 누락 된 monotouch_ *_atec_ssend* 기호와 함께 실패 하는 경우 서명이 지원 되지 않는 경우), 요청 시 추가 될 수 있습니다.
 
-
 ### <a name="newattribute"></a>NewAttribute
 
 이 특성은 생성기가 선언 앞에 키워드를 `new` 생성 하도록 하는 메서드 및 속성에 적용 됩니다.
@@ -1405,7 +1398,6 @@ NSObject GetAndRetainObject ();
 
 또한이 특성은 생성 된 코드에 전파 되므로 Xamarin.ios 런타임에서는 이러한 함수의 목표 C로 반환 될 때 개체를 유지 해야 한다는 것을 알 수 있습니다.
 
-
 ### <a name="sealedattribute"></a>SealedAttribute
 
 생성 된 메서드를 sealed로 플래그 지정 하도록 생성기에 지시 합니다. 이 특성을 지정 하지 않으면 기본값은 가상 메서드 (가상 메서드, 추상 메서드 또는 다른 특성이 사용 되는 방법에 따라 재정의)를 생성 하는 것입니다.
@@ -1415,7 +1407,6 @@ NSObject GetAndRetainObject ();
 ### <a name="staticattribute"></a>StaticAttribute
 
 `[Static]` 특성이 메서드나 속성에 적용 되 면 정적 메서드 또는 속성이 생성 됩니다. 이 특성을 지정 하지 않으면 생성기는 인스턴스 메서드 또는 속성을 생성 합니다.
-
 
 ### <a name="transientattribute"></a>TransientAttribute
 
@@ -1475,7 +1466,7 @@ var strongDemo = new Demo ();
 demo.Delegate = new MyDelegate ();
 ```
 
-`[Wrap]` 특성을 사용 하는 또 다른 방법은 강력한 형식의 메서드 버전을 지 원하는 것입니다.  예:
+`[Wrap]` 특성을 사용 하는 또 다른 방법은 강력한 형식의 메서드 버전을 지 원하는 것입니다.  예를 들어:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -1634,7 +1625,6 @@ public class RetainAttribute {
 }
 ```
 
-
 ### <a name="retainlistattribute"></a>RetainListAttribute
 
 매개 변수에 대 한 관리 되는 참조를 유지 하거나 매개 변수에 대 한 내부 참조를 제거 하도록 생성기에 지시 합니다. 개체를 참조 하는 데 사용 됩니다.
@@ -1651,7 +1641,6 @@ public class RetainListAttribute: Attribute {
 
 예제는 [foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) 및 [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs) 를 참조 하세요.
 
-
 ### <a name="transientattribute"></a>TransientAttribute
 
 이 특성은 매개 변수에 적용 되며, 목표-C에서로 전환 하는 경우 C#에만 사용 됩니다.  이러한 전환 중 다양 한 목표 C `NSObject` 매개 변수는 개체의 관리 되는 표현으로 래핑됩니다.
@@ -1665,7 +1654,6 @@ public class RetainListAttribute: Attribute {
 규칙은 단순 합니다. 런타임이 네이티브 개체에서 관리 되는 새 표현을 만들어야 하는 경우에는 함수 끝에서 네이티브 개체의 보존 횟수가 삭제 되 고 관리 되는 개체의 Handle 속성이 지워집니다.   즉, 관리 되는 개체에 대 한 참조를 유지 하는 경우 해당 참조는 쓸모 없게 됩니다 .이에 대 한 메서드를 호출 하면 예외가 throw 됩니다.
 
 전달 된 개체를 만들지 않았거나 개체의 관리 되는 관리 되는 표현이 이미 있는 경우 강제 삭제가 수행 되지 않습니다. 
-
 
 ## <a name="property-attributes"></a>속성 특성
 
@@ -2020,7 +2008,7 @@ Xamarin.ios 8.0을 사용 하면 래핑하 `NSDictionaries`는 강력한 형식�
 
 이 특성은 사전의 요소에 액세스 하는 데 사용 되는 키를 포함 하는 클래스의 이름인 하나의 매개 변수를 사용 합니다.   기본적으로 특성을 사용 하는 인터페이스의 각 속성은 지정 된 형식의 멤버를 "Key" 접미사를 사용 하는 이름으로 조회 합니다.
 
-예를 들어:
+예:
 
 ```csharp
 [StrongDictionary ("MyOptionKeys")]

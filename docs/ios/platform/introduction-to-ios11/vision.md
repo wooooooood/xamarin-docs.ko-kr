@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2017
-ms.openlocfilehash: b0f6647ff92c8d8d0b8d2769c85aa24572d1464e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: efe3f2d4c79dc6e5e2a7f13408de52e05006e10a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285737"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752269"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Xamarin.ios의 비전 프레임 워크
 
@@ -102,7 +102,6 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 사각형 검색은 종종 작업 체인에서 첫 번째 단계입니다. [예를 들어 사각형이 CoreML](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision)모델에 전달 되어 필기 숫자를 구문 분석 합니다.
 
-
 <a name="faces" />
 
 ## <a name="face-detection"></a>얼굴 감지
@@ -175,7 +174,6 @@ private void HandleRectangles(VNRequest request, NSError error){
 ### <a name="5-further-processing"></a>5. 추가 처리
 
 시각 프레임 워크에는 눈동자 및 입 등의 얼굴 기능을 검색 하는 추가 기능이 포함 되어 있습니다. 위의 3 단계에서와 같이 결과 `VNFaceObservation` 를 반환 하 고 추가 `VNFaceLandmark` 데이터를 사용 하 여 결과를 반환 하는 형식을사용합니다.`VNDetectFaceLandmarksRequest`
-
 
 ## <a name="related-links"></a>관련 링크
 

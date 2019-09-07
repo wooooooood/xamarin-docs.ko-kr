@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: 6da32e22fbdb3b5b7d96d7ee93c2f25bba84cd78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286619"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752426"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Xamarin.ios의 핵심 NFC
 
@@ -141,7 +141,6 @@ Session?.BeginSession();
 - `queue`– 콜백이 처리 되는 큐입니다. 이 경우 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 `DispatchQueue.MainQueue` 때를 사용 해야 합니다. `null`
 - `invalidateAfterFirstRead`– 인 `true`경우 검색을 처음 성공한 `false` 후 검색을 중지 하 고, 검색을 취소 하거나 60 초 시간 제한에 도달할 때까지 검색을 계속 하 고 여러 결과를 반환 합니다.
 
-
 ### <a name="3-cancel-the-scanning-session"></a>3. 검사 세션 취소
 
 사용자는 사용자 인터페이스에서 시스템이 제공 하는 단추를 통해 검색 세션을 취소할 수 있습니다.
@@ -159,7 +158,6 @@ Session.InvalidateSession();
 ## <a name="summary"></a>요약
 
 CoreNFC를 사용 하면 앱에서 NFC 태그의 데이터를 읽을 수 있습니다. 다양 한 태그 형식 (NDEF 형식 1 ~ 5)을 읽을 수 있지만 쓰기 또는 서식 지정은 지원 하지 않습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

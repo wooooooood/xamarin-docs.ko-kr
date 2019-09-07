@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 93e6797f2b00df32b8d3ae361f40fd487b7adac3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647723"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758310"
 ---
 # <a name="working-with-screen-sizes"></a>화면 크기 작업
 
@@ -45,13 +45,11 @@ Android 장치는 사각형 또는 둥근 표시를 포함할 수 있으며 크�
 
 ![리소스/레이아웃 아래에 표시 되는 파일](screen-sizes-images/solution.png)
 
-
 ### <a name="boxinsetlayout"></a>BoxInsetLayout
 
 각 화면 유형에 대해 서로 다른 레이아웃을 작성 하는 대신 사각형 또는 둥근 화면에 맞게 조정 되는 단일 보기를 만들 수도 있습니다.
 
 이 [Google 예제](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) 에서는를 `BoxInsetLayout` 사용 하 여 사각형 및 원형 화면에서 동일한 레이아웃을 사용 하는 방법을 보여 줍니다.
-
 
 ## <a name="wear-ui-designer"></a>마모 UI 디자이너
 
@@ -66,7 +64,6 @@ Xamarin Android Designer는 사각형 및 원형 화면을 모두 지원 합니�
 다음과 같이 둥근 스타일의 디자인 화면이 표시 됩니다.
 
 ![둥근 스타일의 디자인 화면](screen-sizes-images/design-round.png)
-
 
 ## <a name="wear-simulator"></a>마모 시뮬레이터
 
@@ -85,4 +82,3 @@ Xamarin Android Designer는 사각형 및 원형 화면을 모두 지원 합니�
 ## <a name="video"></a>비디오
 
 [Developers.google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw)에서 [Android를 위한 전체 화면 앱](https://www.youtube.com/watch?v=naf_WbtFAlY) 입니다.
-

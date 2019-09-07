@@ -7,12 +7,12 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 39de35c8e43ebf2b3db25724ad761e3576ba5057
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d9c153f8da44c525b8851afb48682bd7a14a8c47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644951"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770501"
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp 변환
 
@@ -84,7 +84,6 @@ SkiaSharp 그래픽 이동할 좌표 이동 변환을 사용 하는 방법에 �
 ## <a name="3d-rotation3d-rotationmd"></a>[3D 회전](3d-rotation.md)
 
 비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 15f5705fcf625d7c9aa6901cc919cea399f252e9
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 08d12a58b4a0d8a8f757df965bd9dfb73f1639b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197704"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755382"
 ---
 # <a name="android-localization"></a>Android 지역화
 
@@ -174,7 +174,7 @@ Android 문자열 리소스를 사용 하면 번역자가 다음과 같은 다�
  </plurals>
 ```
 
-전체 문자열을 렌더링 하려면 메서드를 `GetQuantityString` 사용 하 여 리소스 ID와 표시 될 값 (두 번 전달 됨)을 전달 합니다. 두 번째 매개 변수는 Android에서 사용할 `quantity` 문자열을 결정 하는 데 사용 되 고, 세 번째 매개 변수는 실제로 문자열을 대체 하는 값 (둘 다 필요)입니다.
+전체 문자열을 렌더링 하려면 메서드를 `GetQuantityString` 사용 하 여 리소스 ID와 표시 될 값 (두 번 전달 됨)을 전달 합니다. 두 번째 매개 변수는 Android에서 사용할 `quantity` 문자열 *을 결정 하* 는 데 사용 되 고, 세 번째 매개 변수는 실제로 문자열을 대체 하는 값 (둘 다 필요)입니다.
 
 ```csharp
 var translated = Resources.GetQuantityString (
@@ -196,12 +196,11 @@ var translated = Resources.GetQuantityString (
 
 지역화 된 이미지는 문자열 파일과 동일한 규칙을 따릅니다. 응용 프로그램에서 참조 되는 모든 이미지는 **그릴** 수 있는 디렉터리에 배치 해야 합니다.
 
-그런 다음 로캘별 이미지를 그릴 수 있는 특수 폴더에 배치 해야 합니다 (예: **그릴** 수 있는 경우).
+그런 다음 로캘별 이미지를 **그릴** 수 있는 특수 폴더에 배치 해야 합니다 (예: 그릴 수 있는 **경우).**
 
 이 스크린샷에서는 네 개의 이미지가 **그릴** 수 있는 디렉터리에 저장 되지만, **플래그 .png**하나는 다른 디렉터리에 지역화 된 복사본을 갖습니다.
 
 ![각각 하나 이상의 지역화 된 .png 파일이 포함 된 여러 개의 그릴 때 있는 폴더의 스크린샷](localization-images/drawable.png)
-
 
 #### <a name="other-resource-types"></a>기타 리소스 유형
 
@@ -210,7 +209,6 @@ var translated = Resources.GetQuantityString (
 Android 4.2는 응용 프로그램 설정을 `android:supportsRtl="true"`설정 하는 경우 [RTL (오른쪽에서 왼쪽) 언어](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) 를 지원 합니다. 리소스 한정자 `"ldrtl"` 는 RTL 표시를 위해 디자인 된 사용자 지정 레이아웃을 포함 하기 위해 디렉터리 이름에 포함 될 수 있습니다.
 
 리소스 디렉터리 이름 지정 및 대체 방법에 대 한 자세한 내용은 [대체 리소스를 제공](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources)하는 Android 문서를 참조 하세요.
-
 
 ### <a name="app-name"></a>앱 이름
 
@@ -256,12 +254,9 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 > [!TIP]
 > 언어를 원래 설정으로 되돌릴 수 있도록 메뉴 항목의 아이콘과 위치를 기록해 둡니다.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 기본 제공 리소스 처리를 사용 하 여 Android 응용 프로그램을 지역화 하는 기본 사항을 설명 합니다. [이 플랫폼 간 가이드](~/cross-platform/app-fundamentals/localization.md)에서 IOS, Android 및 플랫폼 간 (xamarin.ios 포함) 앱에 대 한 I18n 및 L10n에 대해 자세히 알아볼 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

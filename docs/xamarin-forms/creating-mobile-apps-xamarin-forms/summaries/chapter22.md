@@ -1,18 +1,18 @@
 ---
 title: 요약 22 장입니다. 애니메이션
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 22 장입니다. 애니메이션
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 22 장입니다. 애니메이션'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 7b3695ce145c2ca58238e2c9a601923cbcefa182
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 935be5bd6696600644463eb4ec26410b546f42a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333211"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771003"
 ---
 # <a name="summary-of-chapter-22-animation"></a>요약 22 장입니다. 애니메이션
 
@@ -197,8 +197,6 @@ Xamarin.Forms 애니메이션 시스템을 약간 혼동 될 수 있습니다. �
 ## <a name="structuring-your-animations"></a>애니메이션을 구성
 
 경우에 따라 XAML의 애니메이션 express MVVM과 함께에서 사용 하는 것이 유용 합니다. 다음 장에서 설명 [ **23 장입니다. 트리거 및 동작**](chapter23.md)합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

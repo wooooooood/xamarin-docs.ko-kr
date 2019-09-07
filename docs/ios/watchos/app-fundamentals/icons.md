@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/26/2018
-ms.openlocfilehash: b3968f211ff5445e8b704bbd7897f4c46ecc2be9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e0bf9ec1553e6638398695157a11242b9885b168
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292587"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768105"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Xamarin에서 watchOS 아이콘 사용
 
@@ -82,7 +82,6 @@ IPhone 시뮬레이터에서 [Apple Watch 설정 앱](~/ios/watchos/app-fundamen
 
 > [!NOTE]
 > 아이콘에는 알파 채널이 있을 수 없습니다. 알파 채널이 있으면 앱 스토어를 제출 하는 동안 앱이 거부 됩니다. 알파 채널이 있는지 확인 하 고 [Mac OS X의 미리 보기 앱을 사용 하 여](~/ios/watchos/troubleshooting.md#noalpha)제거할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

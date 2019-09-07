@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 03796af880aaef74c2d4b54007ac34ef1c5dc180
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7328792e0d921beb09389d9a0400ea97766b2246
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119832"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756441"
 ---
 # <a name="creating-a-cryptoobject"></a>CryptoObject 만들기
 
@@ -154,8 +154,6 @@ protected void FingerPrintAuthenticationExample()
 ```
 
 이제를 만드는 `CryptoObject`방법을 살펴보았으므로 이제를 사용 하 여 `FingerprintManager.AuthenticationCallbacks` 지문 스캐너 서비스의 결과를 Android 응용 프로그램으로 전송 하는 방법을 확인할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

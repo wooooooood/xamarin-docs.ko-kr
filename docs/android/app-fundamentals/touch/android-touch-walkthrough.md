@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: d9c8fb7e1045d35fa23c85c689cb0e1f9461d8dd
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fc3fb6e7c3391092b33ce1d162a60ce6528e0ab0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225820"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754860"
 ---
 # <a name="walkthrough---using-touch-in-android"></a>연습-Android에서 Touch 사용
 
@@ -68,7 +68,6 @@ ms.locfileid: "70225820"
 사용자가에 `ImageView`접촉 하는 동안 **터치 시작** 이에 표시 `TextView`됩니다. 사용자가 더 이상에 `ImageView`접촉 하지 않으면 다음 스크린샷에 표시 된 것 처럼 메시지 **터치 끝** 이 `TextView`에 표시 됩니다.
 
 [![터치 엔드가 있는 활동의 스크린샷](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
-
 
 ## <a name="gesture-recognizer-activity"></a>제스처 인식기 작업
 
@@ -352,7 +351,6 @@ ms.locfileid: "70225820"
   [![화면에서 자유롭게 그리고 원래 이미지가 표시 됩니다.](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
 이제 Xamarin.ios를 사용 하 여 Android 응용 프로그램에서 터치 및 제스처를 통합 하는 방법을 이해 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

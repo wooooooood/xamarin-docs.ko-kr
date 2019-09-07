@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 056ab7a9fe4bcb7f07a9a7cd7c841a3d9f7574b6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4c3c0e51348d2435ce5042485b214e6e5fe159b2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648021"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758416"
 ---
 # <a name="hello-wear"></a>Hello, Wear
 
@@ -38,7 +38,6 @@ _첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또는 장치�
 
 -----
 
-
 이 템플릿에는 **Xamarin Android Wearable Library** NuGet (및 종속성)이 자동으로 포함 되므로, 사용자는 마모 된 위젯에 액세스할 수 있습니다. 마모 된 템플릿이 표시 되지 않으면 [설치 및 설정](~/android/wear/get-started/installation.md) 가이드를 검토 하 여 지원 되는 Android SDK를 설치 했는지 확인 합니다. 
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. 올바른 **대상 프레임 워크** 선택
@@ -58,7 +57,6 @@ _첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또는 장치�
 -----
 
 대상 프레임 워크를 설정 하는 방법에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.
-
 
 ### <a name="3-edit-the-mainaxml-layout"></a>3. **주. axml** 레이아웃 편집
 
@@ -137,7 +135,6 @@ Android 마모 된 Smartwatch 같은 Android 장치를 사용할 수 없는 경�
 
 Android 마모 Smartwatch 같은 Android 장치를 사용 하는 경우 에뮬레이터를 사용 하는 대신 장치에서 앱을 실행할 수 있습니다. 마모 된 장치에서 디버깅 하는 방법에 대 한 자세한 내용은 [마모 된 장치에서 디버그](~/android/wear/deploy-test/debug-on-device.md)를 참조 하세요.
 
-
 ### <a name="6-run-the-android-wear-app"></a>6. Android 앱 실행
 
 Android 마모 장치가 장치 풀 다운 메뉴에 표시 됩니다. 디버깅을 시작 하기 전에 올바른 Android 마모 장치 또는 AVD를 선택 해야 합니다. 장치를 선택한 후 재생 단추를 클릭 하 여 에뮬레이터 또는 장치에 앱을 배포 합니다.
@@ -166,13 +163,11 @@ Watch 에뮬레이터를 사용 하는 경우 앱을 시작 하는 데 시간이
 
 [![3 번 클릭 후 착용 앱의 스크린샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-
 ## <a name="next-steps"></a>다음 단계
 
 Android 용 앱을 포함 한 [마모 된 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) 을 확인 하세요.
 
 앱을 배포할 준비가 되 면 [패키징을 사용한 작업](~/android/wear/deploy-test/packaging.md)을 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

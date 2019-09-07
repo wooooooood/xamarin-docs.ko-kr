@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 5272921cade2b9dadd24a4c917e6251ac591e178
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f9f8981325785d69d36ccd9d4de1cd69956a155
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292316"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768747"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Watchos에서 Xamarin 레이아웃 작업
 
@@ -34,7 +34,6 @@ Apple Watch 대 한 레이아웃을 디자인 [화면 크기](~/ios/watchos/app-
 
 - 사용 된 [ `Menu` 컨트롤](~/ios/watchos/user-interface/menu.md) 노출 자주 사용 되는 앱 디자인 깔끔하고 간결 하 게 유지 하는 기능을 합니다.
 
-
 ## <a name="implementation"></a>구현
 
 키트에는 매력적인 watch 앱 레이아웃을 빌드할 수 있도록 다음 컨트롤이 포함 되어 있습니다. 시청 하세요.
@@ -55,7 +54,6 @@ Apple Watch 대 한 레이아웃을 디자인 [화면 크기](~/ios/watchos/app-
 
 ![](layout-images/button-attributes.png "오프셋된 조정 및 비율 값을 제공 합니다.")
 
-
 ### <a name="group"></a>그룹화
 
 `WKInterfaceGroup` 가로 또는 세로로 단순형 레이아웃 컨테이너에 있는 stack 구성할 수 있는 컨트롤입니다. 기본적으로 각 컨트롤 사이의 간격을 포함 하지만에서 간격 (및 음각)를 수정할 수 있습니다 합니다 **특성** 검사기입니다.
@@ -65,7 +63,6 @@ Apple Watch 대 한 레이아웃을 디자인 [화면 크기](~/ios/watchos/app-
 그룹 자체 크기 및 수, 그와 관련 컨트롤을 기준으로 배치 하 고 복잡 한 레이아웃을 만들 그룹 중첩 될 수 있습니다.
 
 ![](layout-images/group-scene.png "복잡 한 레이아웃을 만들 그룹 중첩 될 수 있습니다.")
-
 
 ### <a name="separator"></a>구분 기호
 
@@ -79,8 +76,6 @@ Apple Watch 대 한 레이아웃을 디자인 [화면 크기](~/ios/watchos/app-
 
 없는 레이아웃에 없어서는 안 합니다 `Label`, `Image`, `Button`, `Switch`, `Slider`를 `Map`, 및 [다른 컨트롤](~/ios/watchos/user-interface/index.md)합니다.
 사용 하 여 레이아웃에 배치 될 수 있습니다 이러한 **그룹** 또는 각 컨트롤의 위치와 크기로 설정 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

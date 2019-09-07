@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 62dadffbc4b8a5629969203938e4fa0130971664
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a2197a1ff9c37546fd97eb5a2459764ec05d4412
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283338"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768924"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Xamarin.ios의 진행률 및 작업 표시기
 
@@ -46,7 +46,6 @@ IOS Designer를 사용 하 여 UI를 만드는 경우 도구 상자에서 활동
 
 가 호출 된 후 `true` `StopAnimating()` 에 활동 표시기가 사라지게 하려면 속성을로설정합니다.`HidesWhenStopped` 이는 기본적으로 `true` 로 설정 됩니다. 언제 든 지 속성을 `IsAnimating` 확인 하 여 활동 표시기가 회전 된 애니메이션을 실행 하 고 있는지 확인할 수 있습니다. 
 
-
 ### <a name="managing-activity-indicator-appearances"></a>작업 표시기 모양 관리
 
 작업 표시기를 인스턴스화할 때 열거형을매개변수로전달할수있습니다.`UIActivityIndicatorViewStyle` 이를 사용 하 여 비주얼 스타일을, `Gray` `White`또는 `WhiteLarge`로 설정할 수 있습니다. 예를 들면 다음과 같습니다.
@@ -77,7 +76,6 @@ IOS Designer를 사용 하는 경우 UI에 진행률 표시줄을 추가할 수�
 속성 패드에서 다음 속성을 조정할 수 있습니다.
 
 ![Properties Pad](progress-activity-indicator-images/progress-indicator3.png)
-
 
 ### <a name="managing-progress-bar-behavior"></a>진행률 표시줄 동작 관리
 
@@ -110,6 +108,3 @@ progressBar = new UIProgressView(UIProgressViewStyle.Default)
                 TrackTintColor = UIColor.Magenta
             }; 
 ```
-
-
-

@@ -6,12 +6,12 @@ ms.assetid: D8BC4906-805F-4AFB-8D1A-88B7BF87E17F
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: d3f756b1a551c7b6bcbe48129235d537312edff6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73f44acad3e30e4301a69e5f2422cd4dd1a3dbf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766566"
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>NuGet에 대 한 새 플랫폼별 라이브러리 프로젝트 만들기
 
@@ -55,7 +55,6 @@ NuGet에는 iOS 및 Android 관련 코드와 둘 다에 공통적인 .NET 코드
 
     ![](platform-specific-images/create-nuget-package.png "NuGet 패키지 파일은 구성에 따라 디버그 또는 릴리스 중 하나를 bin 폴더에 저장 됩니다.")
 
-
 ## <a name="verifying-the-output"></a>출력 확인
 
 NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부 구조를 검사할 수 있습니다.
@@ -63,7 +62,6 @@ NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부
 이 스크린샷에는 iOS 및 Android를 지 원하는 플랫폼별 NuGet의 내용이 표시 되 고 두 개의 참조 어셈블리가 선택 되어 있습니다.
 
 ![](platform-specific-images/nuget-output.png "NuGet 패키지에 포함 된 파일")
-
 
 ## <a name="related-links"></a>관련 링크
 

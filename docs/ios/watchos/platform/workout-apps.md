@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 57aab95e29911722fc3ad4a56c5486218e07242d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f5a2b17491b026e08abf2262a998576cbb4356c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292844"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767824"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Xamarin에서 watchOS 체력 앱
 
 _이 문서에서는 watchOS 3의 개선 앱에 대 한 Apple의 향상 된 기능 및 Xamarin에서 이러한 앱을 구현 하는 방법을 설명 합니다._
-
 
 WatchOS 3의 새로운 기능으로, 진행 중인 관련 앱은 Apple Watch의 백그라운드에서 실행 하 여 HealthKit 데이터에 액세스할 수 있습니다. 또한 부모 iOS 10 기반 앱은 사용자 개입 없이 watchOS 3 기반 앱을 시작할 수 있습니다.
 
@@ -188,7 +187,6 @@ namespace MonkeyWorkout.MWWatchExtension
     {
       if (this.Failed != null) this.Failed ();
     }
-
 
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
@@ -614,7 +612,6 @@ public HKHealthStore HealthStore { get; private set; }
 public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
 ...
 
-
 private void SaveWorkoutSamples (HKWorkout workout)
 {
   // Add samples to saved workout
@@ -715,7 +712,6 @@ public OutdoorRunDelegate RunDelegate { get; set; }
 #endregion
 ...
 
-
 public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
 {
   // Create workout session
@@ -765,8 +761,6 @@ public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutC
 
 > [!IMPORTANT]
 > 다음 섹션에 표시 된 코드에는 watchOS 3의 체력 앱에 제공 되는 향상 된 새 기능을 구현 하는 데 필요한 부분만 포함 되어 있습니다. UI를 제공 하 고 업데이트 하는 모든 지원 코드와 코드는 포함 되지 않지만 다른 watchOS 설명서를 따라 쉽게 만들 수 있습니다.<p/>
-
-
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
@@ -1209,7 +1203,6 @@ namespace MonkeyWorkout.MWWatchExtension
       if (this.Failed != null) this.Failed ();
     }
 
-
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
     {
@@ -1257,8 +1250,6 @@ Apple은 watchOS 3 및 iOS 10에서 자동으로 진행 되는 앱을 설계 하
 ## <a name="summary"></a>요약
 
 이 문서에서는 watchOS 3의 개선 앱에 대 한 Apple의 향상 된 기능 및 Xamarin에서 이러한 앱을 구현 하는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

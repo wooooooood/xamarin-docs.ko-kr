@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 7e3f871d9d5992429c6f6619b2f5ff7059558045
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 69d5222bb6c50870d0c42bea6ff71236e3d1580c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525953"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754558"
 ---
 # <a name="introduction"></a>소개
 
@@ -38,7 +38,6 @@ ms.locfileid: "69525953"
 - 기존 데이터베이스 기술을 사용 하는 개발자는 자신의 지식을 활용 하 여 데이터베이스 및 데이터 액세스 코드를 디자인할 수 있습니다.
 - 연결 된 응용 프로그램의 서버 구성 요소에 있는 데이터 모델은 모바일 응용 프로그램에서 전체적으로 나 부분적으로 다시 사용 될 수 있습니다.
 
-
 ## <a name="sqlite-database-engine"></a>SQLite 데이터베이스 엔진
 
 SQLite는 모바일 플랫폼용 Google에서 채택 된 오픈 소스 데이터베이스 엔진입니다. SQLite 데이터베이스 엔진은 두 운영 체제에 기본 제공 되므로 개발자가 추가 작업을 사용 하지 않아도 됩니다. SQLite는 다음과 같은 이유 때문에 플랫폼 간 모바일 개발에 적합 합니다.
@@ -48,13 +47,11 @@ SQLite는 모바일 플랫폼용 Google에서 채택 된 오픈 소스 데이터
 - 파일 형식은 32 또는 64 비트, 빅 또는 작은 endian 시스템의 플랫폼에서 쉽게 사용할 수 있습니다.
 - SQL92 표준의 대부분을 구현 합니다.
 
-
 SQLite는 작고 빠르게 설계 되었으므로 사용에 대 한 몇 가지 주의 사항이 있습니다.
 
 - 일부 외부 조인 구문은 지원 되지 않습니다.
 - 테이블 이름 바꾸기 및 ADDCOLUMN만 지원 됩니다. 스키마에 대해 다른 수정 작업을 수행할 수 없습니다.
 - 뷰는 읽기 전용입니다.
-
 
 [SQLite.org](http://SQLite.org) 에서 sqlite에 대해 자세히 알아볼 수 있습니다. 그러나 Xamarin을 사용 하는 데 필요한 모든 정보는이 문서 및 관련 샘플에 포함 되어 있습니다. SQLite 데이터베이스 엔진은 android 2 이후 Android에서 지원 됩니다.
 이 장에서 다루지 않지만 SQLite는 Windows Phone 및 Windows 응용 프로그램 에서도 사용할 수 있습니다.
@@ -63,7 +60,6 @@ SQLite는 작고 빠르게 설계 되었으므로 사용에 대 한 몇 가지 �
 
 이러한 플랫폼은이 문서에서 다루지 않지만 SQLite는 Windows 플랫폼 에서도 사용할 수 있습니다.
 [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) 및 [tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) 사례 연구에서 추가 정보를 읽고 [Tim heuer cda (의 블로그](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx)를 검토 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

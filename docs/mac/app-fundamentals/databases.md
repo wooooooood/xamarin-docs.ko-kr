@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 3bcf52d33ebfaba6117a2089419673e0152cbe88
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289117"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769906"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
 
@@ -2221,8 +2221,6 @@ public override void AwakeFromNib ()
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 SQLite 데이터베이스를 사용 하 여 데이터 바인딩 및 키-값 코딩 작업에 대해 자세히 살펴봅니다. 먼저 KVC (키-값 C# 코딩) 및 키-값 관찰 (KVO)을 사용 하 여 클래스를 목표 C로 노출 하는 방법을 살펴보았습니다. 다음으로 KVO 규격 클래스를 사용 하 고 데이터를 Xcode의 Interface Builder에 있는 UI 요소에 바인딩하는 방법을 보여 주었습니다. 또한이 문서에서는 SQLite.NET ORM을 통해 SQLite 데이터 작업을 수행 하 고 해당 데이터를 테이블 뷰에 표시 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

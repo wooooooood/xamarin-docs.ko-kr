@@ -6,12 +6,12 @@ ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 7657985ce14633140adb0e63a9817ddd0e48841d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284578"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762114"
 ---
 # <a name="part-2---architecture"></a>2부 - 아키텍처
 
@@ -21,11 +21,9 @@ ms.locfileid: "70284578"
 - **책임 분리** – 각 구성 요소 (아키텍처와 클래스 수준 모두)가 명확 하 고 잘 정의 된 용도 인지 확인 합니다. 각 구성 요소는 정의 된 작업을 수행 하 고이 기능을 사용 해야 하는 다른 클래스에서 액세스할 수 있는 API를 통해 해당 기능을 노출 해야 합니다.
 - **다형성** – 여러 구현을 지 원하는 인터페이스 (또는 추상 클래스)에 대 한 프로그래밍은 플랫폼에 상관 없이 기능을 계속 사용 하면서 플랫폼 간에 핵심 코드를 작성 하 고 공유할 수 있음을 의미 합니다.
 
-
 자연 스러운 결과는 실제 또는 별도의 논리적 계층이 있는 추상 엔터티를 사용 하 여 모델링 된 응용 프로그램입니다. 코드를 레이어로 분리 하면 응용 프로그램을 보다 쉽게 이해 하 고 테스트 하 고 유지 관리할 수 있습니다. 각 계층의 코드를 물리적으로 분리 하는 것이 좋습니다 (디렉터리 또는 매우 큰 응용 프로그램을 위한 별도의 프로젝트에 포함). 네임 스페이스를 사용 하 여 논리적으로 분리 하는 것이 좋습니다.
 
  <a name="Typical_Application_Layers" />
-
 
 ## <a name="typical-application-layers"></a>일반적인 응용 프로그램 계층
 
@@ -38,11 +36,9 @@ ms.locfileid: "70284578"
 - **응용 프로그램 계층** – 일반적으로 플랫폼에 따라 달라 지는 코드 (일반적으로 플랫폼 간에 공유 되지 않음) 또는 응용 프로그램과 관련 된 코드 (일반적으로 다시 사용할 수 없음)입니다. 응용 프로그램 계층 및 UI 계층에 코드를 배치할지 여부를 결정 하는 좋은 테스트는 (a) 클래스에 실제 표시 컨트롤이 있는지 또는 (b) 여러 화면 또는 장치 간에 공유할 수 있는지 ( iPhone 및 iPad).
 - 사용자 **인터페이스 (UI) 계층** – 사용자 지향 계층에는 화면, 위젯 및이를 관리 하는 컨트롤러가 포함 됩니다.
 
-
 응용 프로그램에 모든 계층이 반드시 포함 되는 것은 아닙니다. 예를 들어 서비스 액세스 계층이 네트워크 리소스에 액세스 하지 않는 응용 프로그램에 존재 하지 않을 수 있습니다. 매우 간단한 응용 프로그램은 매우 기본적인 작업 이므로 데이터 계층 및 데이터 액세스 계층을 병합할 수 있습니다.
 
  <a name="Common_Mobile_Software_Patterns" />
-
 
 ## <a name="common-mobile-software-patterns"></a>일반적인 모바일 소프트웨어 패턴
 
@@ -54,6 +50,5 @@ ms.locfileid: "70284578"
 - **Singleton** – singleton 패턴은 특정 개체의 단일 인스턴스만 존재할 수 있는 방법을 제공 합니다. 예를 들어 모바일 응용 프로그램에서 SQLite를 사용 하는 경우 데이터베이스의 인스턴스를 하나만 사용할 수 있습니다. Singleton 패턴을 사용 하면이를 쉽게 확인할 수 있습니다.
 - **공급자** – Microsoft에서 연결 설명은 하는 패턴으로, SILVERLIGHT, WPF 및 WinForms 응용 프로그램에서 코드를 다시 사용 하는 것을 권장 합니다. 인터페이스 또는 추상 클래스에 대해 공유 코드를 작성할 수 있으며, 코드를 사용할 때 플랫폼별 구체적 구현이 작성 및 전달 됩니다.
 - **Async** – async 키워드와 혼동 하지 않도록 비동기 패턴은 UI 또는 현재 처리를 유지 하지 않고 장기 실행 작업을 실행 해야 하는 경우에 사용 됩니다. 가장 간단한 형태의 비동기 패턴은 현재 스레드가 백그라운드 프로세스의 응답을 계속 처리 하 고 수신 대기 하는 동안 다른 스레드 (또는 작업과 같은 유사한 스레드 추상화)에서 시작 해야 하는 장기 실행 작업을 설명 합니다. 로 이동한 다음 데이터 및 또는 상태가 반환 될 때 UI를 업데이트 합니다.
-
 
 각 패턴은 사례 연구에서 실제 사용을 보여 주는 것 처럼 자세히 검사 됩니다. 위키백과에는 [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel), [MVC](https://en.wikipedia.org/wiki/Model–view–controller), [외관](https://en.wikipedia.org/wiki/Facade_pattern), [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern), [전략](https://en.wikipedia.org/wiki/Strategy_pattern) 및 [공급자](https://en.wikipedia.org/wiki/Provider_model) 패턴 (일반적으로 [디자인 패턴](https://en.wikipedia.org/wiki/Design_Patterns) )에 대 한 자세한 설명이 있습니다.

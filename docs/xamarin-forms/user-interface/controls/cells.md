@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 1e003a80b58f783829f5af3b74801fc3c91c88e9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 769ff7efedca453734b6db2dd2dcb2ad503ba272
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655613"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759795"
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 셀
 
@@ -57,7 +57,6 @@ Xamarin.Forms 셀 형식을 지원 합니다.
 | --- | --- |
 | 합니다 [ `EntryCell` ](xref:Xamarin.Forms.EntryCell) 정의 [ `Label` ](xref:Xamarin.Forms.EntryCell.Label) 셀과 편집 가능한 텍스트 한 줄을 식별 하는 속성을 [ `Text` ](xref:Xamarin.Forms.EntryCell.Text) 속성입니다. 처리를 [ `Completed` ](xref:Xamarin.Forms.EntryCell.Completed) 이벤트는 사용자가 텍스트 입력을 완료 하는 경우 알림을 받을 수 있습니다.<br /><br />[API 설명서](xref:Xamarin.Forms.EntryCell) / [가이드](~/xamarin-forms/user-interface/tableview.md#entrycell) | [![EntryCell 예제](cells-images/EntryCell.png "EntryCell 예제")](cells-images/EntryCell-Large.png#lightbox "EntryCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryCellDemoPage.xaml) |
 |     |     |
-
 
 ## <a name="related-links"></a>관련 링크
 

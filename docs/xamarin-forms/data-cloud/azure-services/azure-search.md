@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: 2ae78d535edd17d3968d0784194bb7295bb7e889
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ea2c733a9c85662b9286f8e8631b601248dc11de
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292685"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770831"
 ---
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Azure Search 및 Xamarin.ios를 사용 하 여 데이터 검색
 
@@ -275,7 +275,6 @@ async Task AzureSuggestions(string text)
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Forms 응용 프로그램에 Azure Search를 통합 하 여 Microsoft Azure Search 라이브러리를 사용 하는 방법을 보여 줍니다. Azure Search는 인덱싱 및 쿼리 업로드 된 데이터에 대 한 기능을 제공 하는 클라우드 서비스입니다. 인프라 요구 사항 및 응용 프로그램에 검색 기능을 구현 하 여 일반적으로 관련 된 검색 알고리즘 복잡성이 제거 됩니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

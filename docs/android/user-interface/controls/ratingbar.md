@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: de63a0f3f6564671a50594c66b55ed095329c95c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 51f88dba25ca2b4f7e33bb8b5c813c43a214c062
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764848"
 ---
 # <a name="xamarinandroid-ratingbar"></a>Xamarin Android RatingBar
 
 RatingBar는 별 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. 사용자는이 섹션의 별모양에서 눌러 등급을 선택할 수 있습니다. 사용자가 [`RatingBar`](xref:Android.Widget.RatingBar) 위젯을 사용 하 여 등급을 제공할 수 있는 위젯을 만듭니다.
 
 ![RatingBar의 예](ratingbar-images/01-ratingbar.png)
-
 
 ## <a name="creating-a-ratingbar"></a>RatingBar 만들기
 
@@ -50,4 +49,3 @@ RatingBar는 별 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. �
     [`RatingBar`](xref:Android.Widget.RatingBar) [그러면`FindViewById`](xref:Android.App.Activity.FindViewById*) 레이아웃에서 위젯을 캡처한 다음 이벤트 메서드를 설정 하 고 사용자가 등급을 설정 하는 경우 수행할 동작을 정의 합니다. 이 경우 간단한 [`Toast`](xref:Android.Widget.Toast) 메시지에 새 등급이 표시 됩니다.
 
 3. 애플리케이션을 실행합니다.
-

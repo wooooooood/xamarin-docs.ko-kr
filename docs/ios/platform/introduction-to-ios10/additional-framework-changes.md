@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 620b89ba4682d65552fa5555c978b7eb5f437714
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db0ea7720f7b65434c5248fb16456441768e25c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290764"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752521"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>추가 iOS 10 프레임 워크 변경 내용
 
@@ -210,7 +210,6 @@ IOS 10의 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향상 �
 IOS 10에서 WebKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
 - 피킹 (peeking) 및 pop 지원이 `WKWebView` 클래스에 추가 되었습니다. 지정 된 웹 보기에 미리 보기가 표시 되어야 하는지 여부를 확인 하려면 메서드를사용합니다.`ShouldPreviewElement`
-
 
 ## <a name="related-links"></a>관련 링크
 

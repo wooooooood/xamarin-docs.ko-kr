@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ed423a19eabd9c7f1d91457cc1834f28d62b2121
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647311"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759214"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -237,7 +237,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 결과 표시 하는 UWP 스크린샷에서 `SKPointMode.Polygon` 값입니다. 배열에서 연속 점 사이의 줄이 그려집니다 있지만 매우 자세히 살펴보면 이러한 줄 연결 되어 있지 않은 확인할 수 있습니다. 각 이러한 별도 줄 시작 되며 지정된 선 끝 모양을로 끝납니다. 선택 하는 경우는 `Round` 캡이 포함 된 줄 연결 되어 나타날 수 있지만 실제로 연결 되지 않은 합니다.
 
 줄 연결 되거나 연결 되지 있는지 여부를 그래픽 경로 사용 하는 중요 한 측면 이며
-
 
 ## <a name="related-links"></a>관련 링크
 

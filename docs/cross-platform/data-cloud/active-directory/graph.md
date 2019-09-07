@@ -6,12 +6,12 @@ ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 96e0991bb0805e61dfbf91e8479cbf1c9943f212
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fd3d94731f1a2a083be5f0e2f8ab541bc702a521
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287753"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766313"
 ---
 # <a name="accessing-the-graph-api"></a>Graph API에 액세스
 
@@ -27,7 +27,6 @@ Xamarin 응용 프로그램 내에서 Graph API를 사용 하려면 다음 단�
 
 > [!IMPORTANT]
 > 참고: Azure ADAL 3.0은 현재 미리 보기로 제공 되며 최종 버전을 출시 하기 전에 주요 변경 내용이 있을 수 있습니다. 
-
 
 ![](graph-images/06.-adal-nuget-package.jpg "Azure Active Directory 인증 라이브러리에 대 한 참조 추가 (Azure ADAL)")
 
@@ -71,7 +70,6 @@ Android 또는 iOS의 경우에는 매개 변수를 `this` 로 `AuthorizationPar
 ### <a name="handle-continuation-for-android"></a>Android에 대 한 연속 처리
 
 인증이 완료 된 후에는 흐름이 앱으로 돌아옵니다. Android의 경우 **MainActivity.cs**에 추가 해야 하는 다음 코드에 의해 처리 됩니다.
-
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
@@ -118,4 +116,3 @@ request.Headers.Authorization =
 var response = await client.SendAsync(request);
 var content = await response.Content.ReadAsStringAsync();
 ```
-

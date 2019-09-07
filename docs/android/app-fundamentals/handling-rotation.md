@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 394feda6f5a13855be1d1166dc22bb2a5c890d26
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 98acabec7132730304bf5e8b81e99f2727b6d50e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887769"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755576"
 ---
 # <a name="handling-rotation"></a>회전 처리
 
 _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는 방법을 설명 합니다. Android 리소스 시스템을 사용 하 여 특정 장치 방향에 대 한 리소스를 자동으로 로드 하는 방법 뿐만 아니라 방향 변경을 프로그래밍 방식으로 처리 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -29,7 +28,6 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 - **프로그래밍 레이아웃 회전** &ndash; 프로그래밍 방식으로 컨트롤을 추가 하는 방법 뿐만 아니라 방향 변경을 수동으로 처리 하는 방법을 설명 합니다.
 
-
 ## <a name="handling-rotation-declaratively-with-layouts"></a>레이아웃을 사용 하 여 선언적으로 회전 처리
 
 명명 규칙을 따르는 폴더에 파일을 포함 하 여, 해당 방향이 변경 될 때 Android에서 적절 한 파일을 자동으로 로드 합니다.
@@ -38,7 +36,6 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 - *리소스 레이아웃* &ndash; 각 방향에 대해 팽창 되는 레이아웃 파일 지정
 
 - *그릴 때 리소스* &ndash; 각 방향에 대해 로드 되는 drawables 지정 하는 것입니다.
-
 
 ### <a name="layout-resources"></a>리소스 레이아웃
 
@@ -65,7 +62,6 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 장치를 가로 방향으로 회전 하는 경우 아래 스크린샷에 표시 `OnCreate` 된 것 처럼 활동의 메서드가 다시 호출 되 고 동일한 **Main. axml** 파일이 팽창 됩니다.
 
 [![가로 방향으로 동일한 화면](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
-
 
 #### <a name="orientation-specific-layouts"></a>방향 별 레이아웃
 
@@ -103,7 +99,6 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 [![세로 및 가로 스크린샷 세로 모드 인쇄](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
-
 ### <a name="drawable-resources"></a>그릴 때 리소스
 
 회전 하는 동안 Android는 그릴 수 있는 리소스를 레이아웃 리소스와 유사 하 게 처리 합니다. 이 경우 시스템은 각각 **리소스/그릴** 때 및 **리소스/그릴** 때 발생 하는 폴더에서 drawables을 가져옵니다.
@@ -123,11 +118,9 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 [![세로 및 가로 모드에 표시 되는 다른 버전의 원숭이. png](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
-
 ## <a name="handling-rotation-programmatically"></a>프로그래밍 방식으로 회전 처리
 
 코드에 레이아웃을 정의 하는 경우도 있습니다. 이는 기술적 제한, 개발자 기본 설정 등 다양 한 이유로 발생할 수 있습니다. 프로그래밍 방식으로 컨트롤을 추가 하는 경우 응용 프로그램은 XML 리소스를 사용할 때 자동으로 처리 되는 장치 방향에 대해 수동으로 계정을 만들어야 합니다.
-
 
 ### <a name="adding-controls-in-code"></a>코드에 컨트롤 추가
 
@@ -172,7 +165,6 @@ protected override void OnCreate (Bundle bundle)
 이 코드는 `RelativeLayout` 클래스의 인스턴스를 만들고 해당 `LayoutParameters` 속성을 설정 합니다. 클래스 `LayoutParams` 는 다시 사용 가능한 방식으로 컨트롤의 위치를 지정 하는 방법을 캡슐화 하는 Android의 방법입니다. 레이아웃의 인스턴스를 만든 후에는 컨트롤을 만들어 추가할 수 있습니다. 컨트롤에는 `LayoutParameters` `TextView` 이 예제의와 같은도 있습니다. 가 만들어지면를 `RelativeLayout` 에 추가 하 고를 `TextView` 콘텐츠 뷰로 설정 `RelativeLayout` 하면 다음과 같이 응용 프로그램이 표시 됩니다. `TextView`
 
 [![세로 및 가로 모드에서 표시 되는 증가 카운터 단추](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
-
 
 ### <a name="detecting-orientation-in-code"></a>코드의 방향 감지
 
@@ -219,7 +211,6 @@ protected override void OnCreate (Bundle bundle)
 이 코드는 `TextView` 다음과 같이를 화면 왼쪽 위에서 100 픽셀 배치 하도록 설정 하 고, 가로로 회전할 때 새 레이아웃에 자동으로 애니메이션 효과를 줍니다.
 
 [![뷰 상태는 가로 및 세로 모드에서 유지 됩니다.](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
-
 
 ### <a name="preventing-activity-restart"></a>활동 다시 시작 방지
 
@@ -284,13 +275,11 @@ public class CodeLayoutActivity : Activity
 
 응용 프로그램을 실행할 때 Android는 장치 회전이 발생 함에 따라 사용자 인터페이스 변경 사항을 로드 하 고 작업을 다시 시작 하지 않습니다.
 
-
 ## <a name="preventing-activity-restart-for-declarative-layouts"></a>선언 레이아웃에 대 한 작업 다시 시작 방지
 
 XML에서 레이아웃을 정의 하는 경우 장치 회전으로 인 한 작업 다시 시작을 방지할 수도 있습니다. 예를 들어, 성능상의 이유로 작업을 다시 시작 하는 것을 방지 하려는 경우이 방법을 사용할 수 있으며, 다른 방향에 대 한 새 리소스를 로드할 필요가 없습니다.
 
 이렇게 하려면 프로그래밍 방식 레이아웃에 사용 하는 것과 동일한 절차를 따릅니다. 이전에서 `ConfigurationChanges` 했던 `ActivityAttribute`것 처럼에서를 설정 하면 됩니다. `CodeLayoutActivity` 방향 변경을 위해 실행 해야 하는 모든 코드는 `OnConfigurationChanged` 메서드에서 다시 구현할 수 있습니다.
-
 
 ## <a name="maintaining-state-during-orientation-changes"></a>방향 변경 중 상태 유지 관리
 
@@ -298,12 +287,9 @@ XML에서 레이아웃을 정의 하는 경우 장치 회전으로 인 한 작�
 
 Android에서 상태를 유지 하는 방법에 대 한 자세한 내용은 [활동 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md) 가이드를 참조 하세요.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Android의 기본 제공 기능을 사용 하 여 회전 작업을 수행 하는 방법을 살펴보았습니다. 먼저, Android 리소스 시스템을 사용 하 여 방향 인식 응용 프로그램을 만드는 방법을 설명 했습니다. 그런 다음 코드에 컨트롤을 추가 하는 방법 뿐만 아니라 방향 변경을 수동으로 처리 하는 방법을 제공 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

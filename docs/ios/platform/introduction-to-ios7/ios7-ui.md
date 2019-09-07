@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 4568b204989c3ebb89ba4441232a100678657e28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 97542c50041bfe24a3ad9494443ed8a4df85f113
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280651"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752232"
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -69,7 +69,7 @@ UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle
 그러면 아래와 같이 하위 뷰가 무시 되는 표준 경고 보기가 생성 됩니다.
 
  ![](ios7-ui-images/alert.png "샘플 UIAlertView")
- 
+
  참고: UIAlertView는 iOS 8에서 더 이상 사용 되지 않습니다. IOS 8 이상에서 경고 보기를 사용 하 여 [경고 컨트롤러](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) 조리법을 봅니다.
 
 ### <a name="uisegmentedcontrol"></a>UISegmentedControl
@@ -253,7 +253,6 @@ public override bool PrefersStatusBarHidden ()
 
 > [!IMPORTANT]
 > 색조 색은를 사용 하 `UIAppearance`여 설정할 수 없습니다.
-
 
 ### <a name="dynamic-type"></a>동적 형식
 

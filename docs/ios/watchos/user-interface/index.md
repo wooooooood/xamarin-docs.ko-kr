@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/19/2016
-ms.openlocfilehash: cebacf6d845affe017e289fe4522a3b7c76d2942
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7ac96bce706d42d4334004e62762ff21231f0162
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291787"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766863"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>Xamarin의 watchOS 사용자 인터페이스 컨트롤
 
@@ -39,7 +39,6 @@ ms.locfileid: "70291787"
 |텍스트 입력|및 열거형을 사용 `PresentTextInputController`합니다 `WKTextInputMode` .<br />[텍스트 입력 설명서](~/ios/watchos/user-interface/text-input.md)<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Digital Crown|Digital Crown를 사용 하 여 선택기를 구동 하거나 코드에서 회전을 추적할 수 있습니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
 |제스처|장면에 추가할 수 있는 제스처 인식에는 다음 네 가지 유형이 있습니다. 탭, 살짝 밀기, 이동 및 고를 누릅니다.<br />[카탈로그 코드](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
-
 
 ## <a name="related-links"></a>관련 링크
 

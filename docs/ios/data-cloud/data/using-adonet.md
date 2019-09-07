@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3526ee254a3986e1ff59288adeb95a49129b8b60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a9df85a405bc086f86dae73fea615581bf9d28d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290961"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767383"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Xamarin.ios에서 ADO.NET 사용
 
@@ -37,7 +37,6 @@ ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` �
 ## <a name="about-monodatasqlite"></a>Mono 정보. Sqlite
 
 여기서는 `Mono.Data.Sqlite.SqliteConnection` 클래스를 사용 하 여 빈 데이터베이스 파일을 만든 다음 데이터베이스에 `SqliteCommand` 대해 SQL 명령을 실행 하는 데 사용할 수 있는 개체를 인스턴스화합니다.
-
 
 1. **빈 데이터베이스 만들기** -유효한 (쓰기 `CreateFile` 가능) 파일 경로를 사용 하 여 메서드를 호출 합니다. 이 메서드를 호출 하기 전에 파일이 이미 있는지 여부를 확인 해야 합니다. 그렇지 않으면 새 (비어 있는) 데이터베이스가 이전 데이터베이스의 맨 위에 생성 되며 이전 파일의 데이터가 손실 됩니다.
 
@@ -153,7 +152,6 @@ SQLite는 임의의 SQL 명령을 데이터에 대해 실행할 수 있으므로
 - **ExecuteReader** – 행 컬렉션을로 `SqlDataReader` 반환 해야 할 때 사용 됩니다.
 - **ExecuteScalar** – 단일 값 (예: 집계)을 검색 합니다.
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 INSERT, UPDATE 및 DELETE 문에서는 영향을 받는 행의 수를 반환 합니다. 다른 모든 SQL 문은-1을 반환 합니다.
@@ -199,7 +197,6 @@ ExecuteReader 메서드는 SqliteDataReader 개체를 반환 합니다. 예제�
 - **Rowsaffected** – 쿼리의 영향을 받는 행의 수입니다.
 - **Hasrows** – 행이 반환 되었는지 여부입니다.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 단일 값 (예: 집계)을 반환 하는 SELECT 문에 대해이 값을 사용 합니다.
@@ -212,7 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 메서드의 반환 형식은입니다 `object` . 데이터베이스 쿼리에 따라 결과를 캐스팅 해야 합니다. `ExecuteScalar` 결과는 COUNT 쿼리의 정수 이거나 단일 열 SELECT 쿼리의 문자열 일 수 있습니다. 이는 판독기 개체 또는 영향을 받는 행 수의 수를 반환 하는 다른 Execute 메서드와는 다릅니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,18 +1,18 @@
 ---
 title: 요약 19 장입니다. 컬렉션 뷰
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 19 장입니다. 컬렉션 뷰
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 19 장입니다. 컬렉션 뷰'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 795478805b582b956ee491bdfecd84485c1bc30e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bad46bead106304713bae91a7bf752db8080760a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760618"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>요약 19 장입니다. 컬렉션 뷰
 
@@ -113,7 +113,7 @@ XAML에서 설정할 수는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 에 `Dat
 
 ### <a name="grouping-the-listview-items"></a>ListView 항목 그룹화
 
-`ListView` 항목을 그룹화 하 고 해당 그룹 탐색을 지원 합니다. `ItemsSource` 속성 컬렉션의 컬렉션을 설정 해야 합니다. 개체는 `ItemsSource` 반드시로 설정 되어 구현 `IEnumerable`, 컬렉션의 각 항목 속성도 구현 해야 하 고 `IEnumerable`입니다. 각 그룹에는 두 가지 속성이 포함 되어야 합니다. 3 자 약어 및 그룹에 대 한 텍스트 설명을입니다.
+`ListView` 항목을 그룹화 하 고 해당 그룹 탐색을 지원 합니다. 속성 `ItemsSource` 은 컬렉션의 컬렉션으로 설정 해야 합니다. 로 설정 된 `ItemsSource` 개체는를 구현 `IEnumerable`해야 하 고 컬렉션의 각 항목 에서도을 구현 `IEnumerable`해야 합니다. 각 그룹에는 두 가지 속성이 포함 되어야 합니다. 3 자 약어 및 그룹에 대 한 텍스트 설명을입니다.
 
 합니다 [ `NamedColorGroup` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColorGroup.cs) 클래스를 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 7 개의 그룹을 만들어 `NamedColor` 개체입니다. [ **ColorGroupList** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/ColorGroupList) 샘플에 사용 하 여 이러한 그룹을 사용 하는 방법을 보여 줍니다는 [ `IsGroupingEnabled` ](xref:Xamarin.Forms.ListView.IsGroupingEnabled) 속성 `ListView` 로 `true`, 및를 [ `GroupDisplayBinding` ](xref:Xamarin.Forms.ListView.GroupDisplayBinding) 하 고 [ `GroupShortNameBinding` ](xref:Xamarin.Forms.ListView.GroupShortNameBinding) 속성 각 그룹의 속성에 바인딩됩니다.
 
@@ -225,8 +225,6 @@ XAML에서 설정할 수는 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) 에 `Dat
 ### <a name="a-tableview-menu"></a>TableView 메뉴
 
 또 다른 용도 `TableView` 메뉴입니다. 합니다 [ **Menucommand** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/MenuCommands) 샘플 조금 이동할 수 있는 메뉴를 보여 줍니다. `BoxView` 화면.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

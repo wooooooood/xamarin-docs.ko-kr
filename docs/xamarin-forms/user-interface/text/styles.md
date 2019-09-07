@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 3fe189c0ef524a44dcbb71c883b57063748a06e3
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 66d7ae722281d9034cb4cdf1501662a7de396c2d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228015"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770247"
 ---
 # <a name="xamarinforms-text-styles"></a>Xamarin.Forms 텍스트 스타일
 
@@ -144,7 +144,6 @@ label.Style = Device.Styles.TitleStyle;
 ![내게 필요한 옵션 기능이 설정 된 장치 스타일](styles-images/post-access.png)
 
 접근성을 위해 앱 내에서 모든 텍스트 관련 스타일에 대 한 기준으로 기본 제공 스타일을 사용 하 고 스타일을 일관 되 게 사용 중인지를 확인 합니다. 참조 [스타일](~/xamarin-forms/user-interface/styles/index.md) 확장 하 고 스타일을 사용 하 여 일반적인 작동에 대 한 자세한 내용은 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

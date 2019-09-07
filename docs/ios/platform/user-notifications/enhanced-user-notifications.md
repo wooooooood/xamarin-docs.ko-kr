@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: adabf66e008dc2f49d7787d62ebad8aadf263ac7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ec63162a21333d0ff831ded1ab17a3d8bb0efaa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290581"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769371"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.ios에서 향상 된 사용자 알림
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>포그라운드 앱 알림 처리
 
-IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `WillPresentNotification` 메서드를 구현 하 여 앱은 알림을 표시 하는 데 책임이 있습니다. 예를 들어:
+IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `WillPresentNotification` 메서드를 구현 하 여 앱은 알림을 표시 하는 데 책임이 있습니다. 예:
 
 ```csharp
 using System;
@@ -359,7 +359,6 @@ UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 ### <a name="updating-an-existing-notification"></a>기존 알림 업데이트
 
 기존 알림을 업데이트 하려면 원하는 매개 변수를 수정 하 여 새 알림 (예: 새 트리거 시간)을 만들고 수정 해야 하는 알림과 동일한 요청 식별자를 사용 하 여 시스템에 추가 하면 됩니다. 예제:
-
 
 ```csharp
 using UserNotifications;
@@ -561,7 +560,7 @@ Xamarin.ios 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 > [!IMPORTANT]
 > 서비스 확장의 번들 식별자는 끝에 추가 된 `.appnameserviceextension` 주 앱의 번들 식별자와 일치 해야 합니다. 예를 들어 기본 앱에의 `com.xamarin.monkeynotify`번들 식별자가 있는 경우 서비스 확장에는 번들 `com.xamarin.monkeynotify.monkeynotifyserviceextension`식별자가 있어야 합니다. 확장이 솔루션에 추가 될 때 자동으로 설정 됩니다. 
 
-알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예를 들어:
+알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예:
 
 ```csharp
 using System;
@@ -616,7 +615,7 @@ namespace MonkeyChatServiceExtension
 
 ### <a name="triggering-a-service-extension"></a>서비스 확장 트리거
 
-서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예:
+서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예를 들어:
 
 ```csharp
 {
@@ -664,8 +663,6 @@ namespace myApp {
 ## <a name="summary"></a>요약
 
 이 문서에서는 iOS 10에 의해 사용자 알림이 향상 된 모든 방법에 대해 설명 했습니다. 새 사용자 알림 프레임 워크와 Xamarin.ios 앱 또는 앱 확장에서 사용 하는 방법을 제공 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

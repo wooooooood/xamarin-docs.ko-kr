@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 106cadc6fef43c06597cf1e3b846bd48cecb6fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 954e3b8f612fd710dd178cfc296889c9da372183
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768315"
 ---
 # <a name="user-interfaces-in-ios"></a>iOS의 사용자 인터페이스
 
@@ -35,7 +35,3 @@ Apple에서는 관련 기능을 Xamarin.ios 네임 스페이스와 관련 된 "�
 ## <a name="working-with-the-ui-threadiosuser-interfaceios-uiui-threadmd"></a>[UI 스레드 작업](~/ios/user-interface/ios-ui/ui-thread.md)
 
 코드는 주 (또는 UI) 스레드의 사용자 인터페이스 컨트롤만 변경 해야 합니다. 다른 스레드에서 발생 한 모든 UI 업데이트 (예: 콜백 또는 백그라운드 스레드)가 화면에 렌더링 되지 않거나 충돌을 일으킬 수 있습니다.
-
-
-
-

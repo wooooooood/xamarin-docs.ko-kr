@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
-ms.openlocfilehash: 06b4764570205a39734d38e3e118b7dc1fa35d18
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 2da2af2a57fb0ec737927024d497530c2a3aac5b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888727"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759877"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
 
@@ -783,7 +783,6 @@ public partial class MainPage : ContentPage
 ## <a name="conclusion"></a>결론
 
 `BoxView` 첫째, 하지만 때에 간단한 보일 수 다양 한 용도로 수 및 수 거의 재현 하는 시각적 개체 에서만 일반적으로 가능한 벡터 그래픽 살펴봤습니다. 고급 그래픽에 대 한 참조 [Xamarin.Forms에서 SkiaSharp 사용 하 여](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

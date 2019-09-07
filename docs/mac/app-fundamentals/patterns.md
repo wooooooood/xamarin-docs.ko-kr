@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 06/17/2016
-ms.openlocfilehash: 188bc8a04b62c97e9d6f80669fe50da1bf4d9340
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b4934fa82d862ad2e8ab53579137873ed9e4bcca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289544"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770174"
 ---
 # <a name="common-patterns-and-idioms-in-xamarinmac"></a>Xamarin.ios의 일반적인 패턴 및 관용구
 
@@ -54,8 +54,6 @@ Xamarin.ios 응용 프로그램에서 테이블 뷰로 작업 하는 방법에 �
 목표-C의 프로토콜은의 C#인터페이스와 비교할 수 있으며, 대부분의 경우 비슷한 상황에서 사용 됩니다. 예를 들어 `NSTableView` 위의 예제에서 대리자와 데이터 소스는 모두 실제로 프로토콜입니다. Xamarin.ios는 재정의할 수 있는 가상 메서드를 사용 하 여 이러한 클래스를 기본 클래스로 노출 합니다. C# 인터페이스와 객관적인 프로토콜의 주요 차이점은 프로토콜의 일부 메서드를 구현 하는 것이 선택 사항 일 수 있다는 것입니다. 선택 사항인 항목을 확인 하려면 API의 설명서 및/또는 정의를 확인 해야 합니다.
 
 자세한 내용은 [대리인, 프로토콜 및 이벤트 설명서를](~/ios/app-fundamentals/delegates-protocols-and-events.md) 참조 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

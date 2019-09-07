@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 4d9bf7b7a43c7c258bc60e9dfea1626e5c304b03
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9fb5c696e830710e6ad99140477eedcbfe0e8823
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522869"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764685"
 ---
 # <a name="adding-a-second-toolbar"></a>두 번째 도구 모음 추가
-
 
 ## <a name="overview"></a>개요 
 
 는 `Toolbar` 활동 내에서 여러 번 사용할 수 있는 &ndash; 작업 모음을 대체 하는 것 보다 더 많은 작업을 수행할 수 있으며, 화면에서 배치 하도록 사용자 지정 하 고, 화면의 일부 너비로만 구성 될 수 있습니다. 아래 예제에서는 두 번째 `Toolbar` 를 만들어 화면 아래쪽에 넣는 방법을 보여 줍니다. 복사, **잘라내기**및 **붙여넣기** 메뉴 항목을 구현합니다.`Toolbar` 
-
 
 ## <a name="define-the-second-toolbar"></a>두 번째 도구 모음 정의 
 
@@ -78,8 +76,6 @@ android:background="?android:attr/colorAccent
 
 [![화면 아래쪽에 노란색 두 번째 도구 모음이 있는 앱의 스크린샷](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
-
- 
 ## <a name="add-edit-menu-items"></a>편집 메뉴 항목 추가 
 
 이 섹션에서는 아래쪽 `Toolbar`에 편집 메뉴 항목을 추가 하는 방법에 대해 설명 합니다. 
@@ -95,8 +91,6 @@ android:background="?android:attr/colorAccent
 4. 에서 `OnCreate` 새 메뉴 항목에 대 한 클릭 처리기를 구현 합니다. 
 
 다음 섹션에서는이 프로세스에 대해 자세히 설명 합니다. **잘라내기**, **복사**및 **붙여넣기** 메뉴 항목이 아래쪽 `Toolbar`에 추가 됩니다. 
-
-
 
 ### <a name="define-the-edit-menu-resource"></a>편집 메뉴 리소스 정의
 
@@ -125,8 +119,6 @@ android:background="?android:attr/colorAccent
 
 이 XML은 **잘라내기**, **복사**및 **붙여넣기** 메뉴 항목을 만듭니다 .이 메뉴 항목은 `mipmap-` 폴더에 추가 된 아이콘을 사용 하 여 [작업 모음 바꿉니다](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md).
 
-
-
 ### <a name="inflate-the-menus"></a>메뉴를 확장 합니다.
 
 `OnCreate` **MainActivity.cs**의 메서드 끝에 다음 코드 줄을 추가 합니다. 
@@ -140,7 +132,7 @@ editToolbar.MenuItemClick += (sender, e) => {
 };
 ```
 
-이 코드는 늘어납니다 `edit_toolbar` 에 정의 된뷰를 찾고, 해당 제목을 **편집**으로 설정 하 고, **edit_menus**에 정의 된 메뉴 항목을 표시 합니다. 누른 편집 아이콘을 표시 하는 알림 메시지를 표시 하는 메뉴 클릭 처리기를 정의 합니다. 
+이 코드는 늘어납니다 `edit_toolbar` 에 정의 된 **뷰를 찾고, 해당**제목을 **편집**으로 설정 하 고, **edit_menus**에 정의 된 메뉴 항목을 표시 합니다. 누른 편집 아이콘을 표시 하는 알림 메시지를 표시 하는 메뉴 클릭 처리기를 정의 합니다. 
 
 앱을 빌드하고 실행합니다. 앱이 실행 되 면 위에 추가 된 텍스트와 아이콘이 다음과 같이 표시 됩니다. 
 
@@ -154,12 +146,10 @@ editToolbar.MenuItemClick += (sender, e) => {
 
 [![탭 하는 저장, 복사 및 붙여넣기 메뉴 항목에 대 한 알림을 스크린샷](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
-
-
 ## <a name="the-up-button"></a>위쪽 단추 
 
 대부분의 Android 앱은 앱 탐색에 대해 **뒤로** 단추를 사용 합니다. **뒤로** 단추를 누르면 사용자가 이전 화면으로 이동 합니다.
-그러나 사용자가 앱의 주 화면으로 " 위로" 이동할 수 있도록 하는 단추를 제공 하는 것도 좋습니다. 사용자가 **위로** 단추를 선택 하면 사용자가 앱 계층 구조 &ndash; 에서 상위 수준으로 이동 합니다. 즉, 앱이 이전에 방문한 작업을 다시 팝 하지 않고 뒤로 스택에 있는 여러 작업을 다시 팝 합니다. 
+그러나 사용자가 앱의 주 화면으로 "위로" 이동할 수 있도록 하 **는 단추를 제공 하는 것** 도 좋습니다. 사용자가 **위로** 단추를 선택 하면 사용자가 앱 계층 구조 &ndash; 에서 상위 수준으로 이동 합니다. 즉, 앱이 이전에 방문한 작업을 다시 팝 하지 않고 뒤로 스택에 있는 여러 작업을 다시 팝 합니다. 
 
 `Toolbar` 작업 `SetHomeButtonEnabled` 모음으로`OnCreate` 를 사용 하는 두 번째 활동에서 **위로** 단추를 사용 하도록 설정 하려면 두 번째 활동의 메서드에서 및메서드를호출합니다.`SetDisplayHomeAsUpEnabled`
 
@@ -184,8 +174,6 @@ SupportActionBar.SetHomeButtonEnabled (true);
 [![도구 모음에 있는 위로 단추 왼쪽 화살표의 스크린샷 예](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
 이 **위로** 단추를 누르면 앱이로 `MainActivity`돌아옵니다. 계층의 여러 수준을 포함 하는 더 복잡 한 앱에서이 단추를 누르면 사용자가 이전 화면이 아닌 앱에서 가장 높은 수준으로 돌아갑니다. 
-
-
 
 ## <a name="related-links"></a>관련 링크
 

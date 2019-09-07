@@ -1,25 +1,25 @@
 ---
-title: 구성
+title: Configuration
 ms.prod: xamarin
 ms.assetid: 44526226-4E4E-4FFF-9A16-CA7B1E01BB8F
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: f12efdbc0d5bf43a7515603a67fedd180cd87587
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 5ebafa70239305210da631c3e9c34278f83b272b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649645"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754660"
 ---
-# <a name="configuration"></a>구성
+# <a name="configuration"></a>Configuration
 
-Xamarin.Android 응용 프로그램에서 SQLite를 사용 하려면 데이터베이스 파일에 대 한 올바른 파일 위치를 확인 해야 합니다.
+Xamarin Android 응용 프로그램에서 SQLite를 사용 하려면 데이터베이스 파일에 대 한 올바른 파일 위치를 확인 해야 합니다.
 
 ## <a name="database-file-path"></a>데이터베이스 파일 경로
 
-데이터 액세스 방법을 사용 하 여 만들어야 데이터베이스 파일 전에 SQLite를 사용 하 여 데이터를 저장할 수 있습니다. 대상으로 하는 플랫폼에 따라 파일 위치는 이와 다릅니다. Android에 대 한 다음 코드 조각에 표시 된 대로 올바른 경로 생성 하려면으로 Environment 클래스를 사용할 수 있습니다.
+사용 하는 데이터 액세스 방법에 관계 없이 데이터베이스 파일을 만든 후에 SQLite를 사용 하 여 데이터를 저장 해야 합니다. 파일 위치를 대상으로 하는 플랫폼에 따라 달라 집니다. Android의 경우 다음 코드 조각과 같이 환경 클래스를 사용 하 여 유효한 경로를 생성할 수 있습니다.
 
 ```csharp
 string dbPath = Path.Combine (
@@ -28,9 +28,9 @@ string dbPath = Path.Combine (
 // dbPath contains a valid file path for the database file to be stored
 ```
 
-가지 다른 데이터베이스 파일을 저장할 위치를 결정할 때 고려해 야 합니다. 예를 들어 Android에서 내부 또는 외부 저장소를 사용할지 여부를 선택할 수 있습니다.
+데이터베이스 파일을 저장할 위치를 결정할 때 고려해 야 할 다른 사항이 있습니다. 예를 들어 Android에서는 내부 또는 외부 저장소를 사용할지 여부를 선택할 수 있습니다.
 
-플랫폼 간 응용 프로그램에서 각 플랫폼에서 다른 위치를 사용 하려는 경우 사용할 수 컴파일러 지시문 표시 된 것 처럼 각 플랫폼에 대해 다른 경로를 생성 합니다.
+플랫폼 간 응용 프로그램의 각 플랫폼에서 다른 위치를 사용 하려는 경우 표시 된 것 처럼 컴파일러 지시문을 사용 하 여 각 플랫폼에 대해 다른 경로를 생성할 수 있습니다.
 
 ```csharp
 var sqliteFilename = "MyDatabase.db3";
@@ -46,13 +46,13 @@ string libraryPath = Path.Combine (documentsPath, "..", "Library"); // Library f
 var path = Path.Combine (libraryPath, sqliteFilename);
 ```
 
-Android에서 파일 시스템을 사용 하 여 힌트에 대 한 참조를 [파일 찾아보기](https://github.com/xamarin/recipes/tree/master/Recipes/android/data/files/browse_files) 레시피입니다. 참조 된 [크로스 플랫폼 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) 컴파일러 지시문을 사용 하 여 각 플랫폼 특정 코드를 쓸 대 한 자세한 내용은 문서입니다.
+Android에서 파일 시스템을 사용 하는 방법에 대 한 힌트는 [파일 찾아보기](https://github.com/xamarin/recipes/tree/master/Recipes/android/data/files/browse_files) 조리법을 참조 하세요. 컴파일러 지시문을 사용 하 여 각 플랫폼과 관련 된 코드를 작성 하는 방법에 대 한 자세한 내용은 [플랫폼 간 응용 프로그램 빌드](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) 문서를 참조 하세요.
 
 ## <a name="threading"></a>스레딩
 
-여러 스레드에서 동일한 SQLite 데이터베이스 연결을 사용 하지 마십시오. 사용 하 여 열고 다음 동일한 스레드에서 만든 모든 연결을 닫습니다 주의 해야 합니다.
+여러 스레드에서 동일한 SQLite 데이터베이스 연결을 사용 하면 안 됩니다. 를 열고 사용한 다음 동일한 스레드에서 만든 모든 연결을 닫아야 합니다.
 
-코드에 여러 스레드에서 동시에 SQLite 데이터베이스에 액세스 하려고 하지 되도록 수동으로 잠금을 같이 데이터베이스에 액세스 하려는 때마다:
+코드가 여러 스레드에서 동시에 SQLite 데이터베이스에 액세스 하려고 하지 않도록 하려면 다음과 같이 데이터베이스에 액세스할 때마다 수동으로 잠금을 수행 합니다.
 
 ```csharp
 object locker = new object(); // class level private field
@@ -62,12 +62,11 @@ lock (locker){
 }
 ```
 
-모든 데이터베이스 액세스 (읽기, 쓰기, 업데이트 등)는 동일한 잠금을 사용 하 여 래핑되어야 합니다. 잠금 절 내에서 작업을 단순하게 유지 되 고 잠금을 촬영할 수도 있는 다른 방법 호출 하지 않습니다 교착 상태 상황이 발생 하지 않도록 주의 해야 합니다.
-
+모든 데이터베이스 액세스 (읽기, 쓰기, 업데이트 등)는 동일한 잠금으로 래핑해야 합니다. Lock 절 내의 작업을 간단 하 게 유지 하 고 잠금을 사용할 수 있는 다른 메서드를 호출 하지 않도록 하 여 교착 상태 상황을 방지 하려면 주의를 기울여야 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [DataAccess Basic (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
-- [DataAccess 고급 (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Android 데이터 레시피](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Xamarin.Forms 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)
+- [DataAccess Advanced (샘플)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
+- [Android 데이터 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
+- [Xamarin 양식 데이터 액세스](~/xamarin-forms/data-cloud/data/databases.md)

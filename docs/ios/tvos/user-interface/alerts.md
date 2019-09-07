@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 8ab832028d4474bbb3c34805b245638695eae75e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2578272dcd38399f23f2aac67503ea4e1b09a027
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291121"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769073"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 작업
 
@@ -192,7 +192,7 @@ alert.AddTextField ((textField) => {
 
 ## <a name="alert-view-controller-helper-class"></a>경고 뷰 컨트롤러 도우미 클래스
 
-를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들어:
+를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예:
 
 ```csharp
 using System;
@@ -361,14 +361,11 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 #endregion
 ```
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
 이 문서에서는를 사용 하 `UIAlertController` 여 tvOS의 사용자에 게 경고 메시지를 표시 하는 작업에 대해 설명 했습니다. 먼저 간단한 경고를 표시 하 고 단추를 추가 하는 방법을 살펴보았습니다. 다음으로 경고에 텍스트 필드를 추가 하는 방법을 살펴보았습니다. 마지막으로 도우미 클래스를 사용 하 여 경고를 표시 하는 데 필요한 반복적인 코드의 양을 줄이는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

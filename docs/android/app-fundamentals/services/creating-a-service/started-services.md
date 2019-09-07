@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9f3ac33df34f5046fad6d392a6b7edf8a9a7f23f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644135"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755067"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Xamarin Android를 사용 하 여 서비스 시작
 
@@ -42,7 +42,7 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 - `StartCommandFlag.Redelivery`즉, `Intent` 은 이전`Intent`을 다시 배달 하는 것입니다. &ndash; 이 값은 서비스가 반환 `StartCommandResult.RedeliverIntent` 되었지만 제대로 종료 되기 전에 중지 된 경우에 제공 됩니다.
 -`StartCommandFlag.Retry`&dash; 이전 `OnStartCommand` 호출이 실패 하 고 Android에서 이전에 실패 한 시도와 동일한 의도를 사용 하 여 서비스를 다시 시작 하려고 시도 하는 경우이 값이 수신 됩니다.
- 
+
 마지막으로 세 번째 매개 변수는 요청을 식별 하는 응용 프로그램에 고유한 정수 값입니다. 여러 호출자가 동일한 서비스 개체를 호출할 수 있습니다. 이 값은 서비스를 시작 하기 위해 지정 된 요청을 사용 하 여 서비스를 중지 하는 요청을 연결 하는 데 사용 됩니다. 이에 대해서는 [서비스 중지](#Stopping_the_Service)섹션에서 자세히 설명 합니다. 
 
 이 값 `StartCommandResult` 은 서비스에서 리소스 제약 조건으로 인해 서비스가 종료 되는 경우 수행할 작업에 대 한 제안으로 서비스에 의해 반환 됩니다. 에 `StartCommandResult`는 다음과 같은 세 가지 값을 사용할 수 있습니다.

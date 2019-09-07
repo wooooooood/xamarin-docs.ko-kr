@@ -6,18 +6,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: f32f32e56ff4869c003b142f9ad67b0e54cfa353
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 982d5b81a22d6e69227081420a5947aed4d3aab1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197686"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755678"
 ---
 # <a name="accessibility-on-android"></a>Android의 내게 필요한 옵션
 
 이 페이지에서는 Android 접근성 Api를 사용 하 여 [내게 필요한 옵션 검사 목록](~/cross-platform/app-fundamentals/accessibility.md)에 따라 앱을 빌드하는 방법을 설명 합니다.
 다른 플랫폼 Api는 [iOS 접근성](~/ios/app-fundamentals/accessibility.md) 및 [OS X 접근성](~/mac/app-fundamentals/accessibility.md) 페이지를 참조 하세요.
-
 
 ## <a name="describing-ui-elements"></a>UI 요소 설명
 
@@ -66,7 +65,6 @@ XML 레이아웃 파일에서 특성을 `android:hint` 사용 합니다.
     android:id="@+id/someText"
     android:hint="Enter some text" />
 ```
-
 
 ### <a name="labelfor-links-input-fields-with-labels"></a>레이블이 있는 링크 입력 필드에 대 한 label
 
@@ -131,7 +129,6 @@ label.Focusable = false;
 
 일반적으로 레이아웃 axml에서 설정 된 `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` 특성을 사용 하 여 포커스 순서를 제어할 수도 있습니다. 이러한 특성을 사용 하 여 사용자가 화면의 컨트롤을 통해 쉽게 탐색할 수 있도록 합니다.
 
-
 ## <a name="accessibility-and-localization"></a>접근성 및 지역화
 
 위의 예제에서 힌트 및 내용 설명은 표시 값으로 직접 설정 됩니다. 다음과 같이 **문자열 .xml** 파일에 값을 사용 하는 것이 좋습니다.
@@ -171,13 +168,11 @@ saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 
 텍스트를 별도의 파일에 저장 하는 경우의 혜택은 파일의 여러 언어 번역이 앱에서 제공 될 수 있다는 것입니다. 지역화 된 문자열 파일을 응용 프로그램 프로젝트에 추가 하는 방법에 대해 알아보려면 [Android 지역화 가이드](~/android/app-fundamentals/localization.md) 를 참조 하세요.
 
-
 ## <a name="testing-accessibility"></a>접근성 테스트
 
 Android 장치에서 내게 필요한 옵션을 테스트 하려면 [다음 단계](https://developer.android.com/training/accessibility/testing.html#how-to) 를 수행 하 여 TalkBack를 사용 하도록 설정 하 고 터치를 탐색 합니다.
 
 **설정 > 내게 필요한 옵션**에 표시 되지 않는 경우 Google Play에서 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) 를 설치 해야 할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

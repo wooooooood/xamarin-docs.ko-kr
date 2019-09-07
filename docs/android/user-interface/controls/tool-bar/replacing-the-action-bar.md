@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
-ms.openlocfilehash: d59acaec36c63c62fe934f145d06bfbb78d11f6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: df6a479123dfc0fa2e5a47c9210a4bdf24d066e1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522864"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762460"
 ---
 # <a name="replacing-the-action-bar"></a>작업 모음 바꾸기
 
@@ -33,15 +33,11 @@ ms.locfileid: "69522864"
 
 다음 섹션에서는이 프로세스에 대해 자세히 설명 합니다. 간단한 앱이 생성 되 고 해당 작업 모음이 사용자 지정 `Toolbar`된로 바뀝니다. 
 
-
-
 ## <a name="start-an-app-project"></a>앱 프로젝트 시작
 
-새 android 프로젝트 만들기 (새 android 프로젝트 만들기에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md) 참조) 라는 새 android 프로젝트를 만듭니다. 이 프로젝트를 만든 후에는 대상 및 최소 Android API 수준을 **android 5.0 (API 레벨 21-롤리팝)** 이상으로 설정 합니다. Android 버전 수준을 설정 하는 방법에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요. 앱을 빌드하고 실행 하면 다음 스크린샷에 표시 된 것 처럼 기본 작업 모음이 표시 됩니다.
+새 android 프로젝트 만들기 (새 Android 프로젝트 만들기에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md) 참조 **) 라는 새** android 프로젝트를 만듭니다. 이 프로젝트를 만든 후에는 대상 및 최소 Android API 수준을 **android 5.0 (API 레벨 21-롤리팝)** 이상으로 설정 합니다. Android 버전 수준을 설정 하는 방법에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요. 앱을 빌드하고 실행 하면 다음 스크린샷에 표시 된 것 처럼 기본 작업 모음이 표시 됩니다.
 
 [![기본 작업 표시줄의 스크린샷](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
-
-
 
 ## <a name="create-a-custom-theme"></a>사용자 지정 테마 만들기
 
@@ -71,7 +67,7 @@ ms.locfileid: "69522864"
 ```
 
 짙은 녹색 `colorPrimary` 설정은 도구 모음의 배경색에 사용 됩니다. 
- 
+
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
@@ -85,8 +81,6 @@ ms.locfileid: "69522864"
 ```
 
 앱에 사용자 지정 테마를 적용 하는 방법에 대 한 자세한 내용은 [사용자 지정 테마 사용](~/android/user-interface/material-theme.md#customtheme)을 참조 하세요. 
-
-
 
 ## <a name="define-a-toolbar-layout"></a>도구 모음 레이아웃 정의
 
@@ -123,8 +117,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 
 이 설정은 메뉴 항목이 진한 배경색과 대조 되도록 사용 됩니다.
 
-
-
 ## <a name="include-the-toolbar-layout"></a>도구 모음 레이아웃 포함
 
 Layout file **Resources/layout/Main. axml** 을 편집 하 고 내용을 다음 xml로 바꿉니다.
@@ -141,8 +133,6 @@ Layout file **Resources/layout/Main. axml** 을 편집 하 고 내용을 다음 
 ```
 
 이 레이아웃에는 `Toolbar` **도구 모음** 에 정의 된이 포함 되어 `RelativeLayout` 있으며,를 사용 `Toolbar` 하 여이 단추 위에 있는 UI의 맨 위에 배치 되도록 지정 합니다. 
-
-
 
 ## <a name="find-and-activate-the-toolbar"></a>도구 모음 찾기 및 활성화
 
@@ -168,7 +158,6 @@ ActionBar.Title = "My Toolbar";
 
 앱을 실행 하는 동안 예외가 발생 하는 경우 아래의 [문제 해결](#troubleshooting) 섹션을 참조 하세요.
 
- 
 ## <a name="add-menu-items"></a>메뉴 항목 추가 
 
 이 섹션에서는 메뉴를에 추가 `Toolbar`합니다. 메뉴 항목 `ToolBar` &ndash; 에 대해의 오른쪽 위 영역을 예약 합니다. 각 메뉴 항목 ( *작업 항목이*라고도 함)은 현재 활동 내에서 작업을 수행 하거나 전체 앱을 대신 하 여 작업을 수행할 수 있습니다. 
@@ -185,12 +174,9 @@ ActionBar.Title = "My Toolbar";
 
 다음 섹션에서는 사용자 지정 `Toolbar`된에 **편집** 및 **저장** 메뉴 항목을 추가 하 여이 프로세스에 대해 자세히 설명 합니다. 
 
-
-
 ### <a name="install-menu-icons"></a>메뉴 아이콘 설치
 
-`ToolbarFun` 예제 앱을 계속 진행 하 여 앱 프로젝트에 메뉴 아이콘을 추가 합니다. [도구 모음 아이콘](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)을 다운로드 하 고 압축을 풀고 압축을 푼 파일의 콘텐츠를 프로젝트에 포함 된 프로젝트의 *밉 맵* 폴더에 복사 합니다. 여기에는 프로젝트에 추가 된 각 아이콘 파일이 포함 됩니다.
-
+`ToolbarFun` 예제 앱을 계속 진행 하 여 앱 프로젝트에 메뉴 아이콘을 추가 합니다. [도구 모음 아이콘](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons-plus.zip?raw=true)을 다운로드 하 고 압축을 *풀고 압축을 푼 파일* 의 콘텐츠를 프로젝트에 포함 된 프로젝트의 *밉 맵* 폴더에 복사 합니다. 여기에는 프로젝트에 추가 된 각 아이콘 파일이 포함 됩니다.
 
 ### <a name="define-a-menu-resource"></a>메뉴 리소스 정의
 
@@ -226,7 +212,6 @@ ActionBar.Title = "My Toolbar";
 
 &ndash; `ifRoom` **편집 및** **저장** 메뉴 항목의 `Toolbar` 특성을이 설정으로 설정 하면 해당 메뉴 항목이 표시 될 충분 한 공간이 있는 경우에 해당 메뉴 항목이 표시 됩니다. `showAsAction` **기본 설정** 메뉴 항목을 `showAsAction` 로 `never` &ndash; 설정 하면 **기본 설정** 메뉴가 *오버플로* 메뉴 (세로 3 개 점)에 표시 됩니다. 
 
-
 ### <a name="implement-oncreateoptionsmenu"></a>Oncreate메뉴 구현 메뉴
 
 **MainActivity.cs**에 다음 메서드를 추가 합니다.
@@ -240,8 +225,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 ```
 
 Android는 앱 `OnCreateOptionsMenu` 에서 활동에 대 한 메뉴 리소스를 지정할 수 있도록 메서드를 호출 합니다. 이 메서드에서 **top_menus** 리소스는 전달 `menu`된로 팽창 됩니다. 이 코드는 새 **편집**, **저장**및 **기본 설정** 메뉴 `Toolbar`항목이에 표시 되도록 합니다. 
-
-
 
 ### <a name="implement-onoptionsitemselected"></a>OnOptionsItemSelected 구현
 
@@ -271,7 +254,6 @@ public override bool OnOptionsItemSelected(IMenuItem item)
 [![오버플로 메뉴에 표시 되는 기본 설정 메뉴 항목의 스크린샷](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Android 메뉴에 대 한 자세한 내용은 Android Developer [menus](https://developer.android.com/guide/topics/ui/menus.html) 항목을 참조 하세요. 
- 
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -286,7 +268,6 @@ Android 메뉴에 대 한 자세한 내용은 Android Developer [menus](https://
 또한 다음과 같은 오류 메시지가 생성 될 수 있습니다. _Java.Lang.IllegalStateException: 이 작업에는 décor 창에서 제공 하는 작업 표시줄이 이미 있습니다._ 
 
 이 오류를 `android:theme` 해결 하려면 앞서 [사용자 지정 테마 적용](#apply-the-custom-theme)의 설명에 따라 사용자 지정 `<application>` 테마에 대 한 특성이 ( **Properties/androidmanifest**)에 추가 되었는지 확인 합니다. 또한 `Toolbar` 레이아웃이 나 사용자 지정 테마가 제대로 구성 되지 않은 경우이 오류가 발생할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

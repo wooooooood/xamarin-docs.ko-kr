@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 95d4194e0ed1a1da435a233e40a74f506c49b539
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2bfc64626d658cbcb22ba5f2ebd1f1ff069ec19
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119868"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757756"
 ---
 # <a name="android-job-scheduler"></a>Android 작업 스케줄러
 
 _이 가이드에서는 android 5.0 (API 레벨 21) 이상을 실행 하는 Android 장치에서 사용할 수 있는 Android 작업 스케줄러 API를 사용 하 여 백그라운드 작업을 예약 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요 
 
@@ -78,7 +77,6 @@ Android 작업 스케줄러 라이브러리에서 수행 하는 모든 작업은
 4. 작업을 수행 하는 코드를 추가 하 여 메서드를재정의합니다.`OnStartJob` Android는 응용 프로그램의 주 스레드에서이 메서드를 호출 하 여 작업을 실행 합니다. 응용 프로그램이 차단 되는 것을 방지 하기 위해 스레드에서 몇 밀리초를 수행 해야 하는 작업은 더 오래 걸릴 수 있습니다.
 5. 작업이 완료 되 면에서 `JobService` 메서드를 `JobFinished` 호출 해야 합니다. 이 메서드는이 `JobService` 작업을 `JobScheduler` 수행 하는 방법을 나타냅니다. 를 호출 `JobFinished` 하지 않으면 장치에 불필요 `JobService` 한 요청이 발생 하 여 배터리 수명을 단축할 수 있습니다. 
 6. `OnStopJob` 메서드를 재정의 하는 것도 좋습니다. 이 메서드는 작업이 완료 되기 전에 작업이 종료 될 때 Android에서 호출 되며 리소스를 적절 하 게 `JobService` 삭제할 수 있는 기회를 제공 합니다. 작업을 다시 예약 `true` 해야 하는 경우이 메서드는을 반환 하 `false` 고, 작업을 다시 실행 하기 위해 desireable 않으면를 반환 해야 합니다.
-   
 
 다음 코드는 TPL을 사용 하 여 비동기적 `JobService` 으로 작업을 수행 하는 응용 프로그램에 대 한 가장 간단한 예제입니다.
 
@@ -115,7 +113,6 @@ Xamarin Android 응용 프로그램은를 `JobService` 직접 인스턴스화하
 
 - **JobId** 에서 작업을 식별 하는 데 사용 되는 값입니다.`int` `JobScheduler` &ndash; 이 값을 다시 사용 하면 기존 작업이 업데이트 됩니다. 값은 응용 프로그램에 대해 고유 해야 합니다. 
 - **Jobservice** 이 매개 변수 `ComponentName` 는에서 `JobScheduler` 작업을 실행 하는 데 사용 해야 하는 형식을 명시적으로 식별 하는입니다. &ndash; 
-  
 
 이 확장 메서드는 활동과 같은 Android `JobInfo.Builder` `Context`를 사용 하 여를 만드는 방법을 보여 줍니다.
 
@@ -138,7 +135,6 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 Android 작업 Scheduler의 강력한 기능은 작업이 실행 되는 시기 또는 작업이 실행 될 수 있는 상황을 제어 하는 기능입니다. 다음 표에서는 앱이 작업을 실행할 수 `JobInfo.Builder` 있는 경우에 영향을 줄 수 있는의 몇 가지 방법에 대해 설명 합니다.  
 
-
 |  메서드 | Description   |
 |---|---|
 | `SetMinimumLatency`  | 작업이 실행 되기 전에 관찰 해야 하는 지연 (밀리초)을 지정 합니다. |
@@ -150,10 +146,9 @@ Android 작업 Scheduler의 강력한 기능은 작업이 실행 되는 시기 �
 | `SetPeriodic` | 작업이 정기적으로 실행 되도록 지정 합니다. |
 | `SetPersisted` | 작업은 장치 재부팅 간에 perisist 되어야 합니다. | 
 
-
 는 `SetBackoffCriteria` 에서 작업을 다시 실행 하기 전에 `JobScheduler` 대기 해야 하는 시간에 대 한 몇 가지 지침을 제공 합니다. 백오프 조건에는 지연 시간 (밀리초의 기본값은 30 초)과 사용 해야 하는 백오프 유형 ( _백오프 정책이_ 나 _재시도 정책이_라고도 함)이 있습니다. 두 정책은 `Android.App.Job.BackoffPolicy` 열거형에 캡슐화 됩니다.
 
-- `BackoffPolicy.Exponential`&ndash; 지 수 백오프 정책은 각 실패 후에 초기 백오프 값을 지 수로 늘립니다. 작업이 처음으로 실패 하면 라이브러리는 작업을 다시 예약 하기 전에 지정 된 초기 간격을 대기 합니다 (예: 30 초). 작업이 실패 하는 두 번째 경우 라이브러리는 작업을 실행 하기 전에 최소 60 초 정도 기다립니다. 세 번째 실패 후 라이브러리는 120 초 정도 대기 하 게 됩니다. 이것은 기본값입니다.
+- `BackoffPolicy.Exponential`&ndash; 지 수 백오프 정책은 각 실패 후에 초기 백오프 값을 지 수로 늘립니다. 작업이 처음으로 실패 하면 라이브러리는 작업을 다시 예약 하기 전에 지정 된 초기 간격을 대기 합니다 (예: 30 초). 작업이 실패 하는 두 번째 경우 라이브러리는 작업을 실행 하기 전에 최소 60 초 정도 기다립니다. 세 번째 실패 후 라이브러리는 120 초 정도 대기 하 게 됩니다. 기본값입니다.
 - `BackoffPolicy.Linear`&ndash; 이 전략은 작업이 성공할 때까지 설정 된 간격으로 실행 되도록 다시 예약 되어야 하는 선형 백오프. 선형 백오프는 가능한 한 빨리 완료 되어야 하는 작업 또는 자신을 신속 하 게 해결 하는 문제에 가장 적합 합니다. 
 
 `JobInfo` 개체 만들기에 대 한 자세한 내용은 [ `JobInfo.Builder` 클래스에 대 한 Google 설명서](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html)를 참조 하세요.
@@ -206,7 +201,7 @@ else
     snackBar.Show();
 }
 ```
- 
+
 ### <a name="cancelling-a-job"></a>작업 취소
 
 예약 된 모든 작업을 취소 하거나 `JobsScheduler.CancelAll()` 메서드 `JobScheduler.Cancel(jobId)` 또는 메서드를 사용 하 여 단일 작업만 취소할 수 있습니다.

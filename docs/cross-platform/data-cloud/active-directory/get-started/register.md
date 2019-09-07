@@ -6,12 +6,12 @@ ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 2811297e24aac726ae3c91e5354675499d4b9ddb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f93b741f5f091410a7f045a8e2a8538b3340208e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290087"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766328"
 ---
 # <a name="step-1-register-an-app-to-use-azure-active-directory"></a>1단계. Azure Active Directory 사용할 앱 등록
 
@@ -37,8 +37,6 @@ ms.locfileid: "70290087"
 6. 앱이 만들어지면 **구성** 탭으로 이동 합니다. 나중에 응용 프로그램에서 사용할 **클라이언트 ID** 를 적어 보세요. 또한이 화면에서 Active Directory에 대 한 모바일 응용 프로그램 액세스 권한을 부여 하거나, 인증이 완료 되 면 모바일 응용 프로그램에서 사용할 수 있는 Web API 또는 Office365 같은 다른 응용 프로그램을 추가할 수 있습니다.
 
    ![](register-images/05.-configure.jpg "또한이 화면에서 Active Directory에 대 한 모바일 응용 프로그램 액세스 권한을 부여 하거나 Web API 또는 Office365 같은 다른 응용 프로그램을 추가할 수 있습니다.")
-
-
 
 ## <a name="related-links"></a>관련 링크
 

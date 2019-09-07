@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/01/2017
-ms.openlocfilehash: 4c23caade91a1a46d6b2b9bb2425a5bdead40030
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f53108460c4e0799ab6c4078d8bb26788b0bf6e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289242"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752542"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Xamarin.ios에서 ARKit를 사용 하 여 UrhoSharp 사용
 
@@ -114,14 +114,12 @@ ARKit API는 매우 간단 하며, [ARSession](https://developer.apple.com/docum
 
 그러나 두 가지 문제를 함께 결합 하는 두 가지 문제에 직면 하 고 있습니다.
 
-
 1. IOS에서 GPU 질감의 해상도는 2의 거듭제곱 이어야 하지만 카메라에서 가져올 프레임의 해상도는 2의 거듭제곱 이어야 합니다. 예를 들면 다음과 같습니다. 1280x720.
 2. 프레임은 [YUV](https://en.wikipedia.org/wiki/YUV) 형식으로 인코딩되고, 두 이미지 (루마 및 크로마)로 표시 됩니다.
 
 YUV 프레임은 서로 다른 두 가지 해상도로 제공 됩니다.  광도 구성 요소에 대 한 광도 (기본적으로 회색 눈금 이미지)와 훨씬 더 작은 640x360을 나타내는 1280x720 이미지는 다음과 같습니다.
 
 ![Y 및 UV 구성 요소 결합을 보여 주는 이미지](urhosharp-images/image3.png)
-
 
 OpenGL ES를 사용 하 여 색이 지정 된 전체 이미지를 그리려면 질감 슬롯에서 광도 (Y 구성 요소) 및 색차 (UV 평면)를 사용 하는 작은 셰이더를 작성 해야 합니다.  UrhoSharp에는 이름 ("sDiffMap" 및 "Sdiffmap")이 있으며이를 RGB 형식으로 변환 합니다.
 
@@ -165,7 +163,6 @@ CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
 Arkit `-row.Z` 에서 오른손 좌표계를 사용 하기 때문에를 사용 합니다.
-
 
 ### <a name="plane-detection"></a>평면 검색
 
@@ -217,7 +214,6 @@ UrhoSharp는 [모든 주요 운영 체제에서 실행](~/graphics-games/urhosha
 HoloLens는 실행 중인 가장 흥미로운 플랫폼 중 하나입니다.   즉, iOS와 HoloLens 간을 쉽게 전환 하 여 UrhoSharp를 사용 하는 뛰어난 확대 현실 응용 프로그램을 빌드할 수 있습니다.
 
 MutantDemo 소스는 [github.com/EgorBo/ARKitXamarinDemo](https://github.com/EgorBo/ARKitXamarinDemo)에서 찾을 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

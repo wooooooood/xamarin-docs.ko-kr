@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/28/2016
-ms.openlocfilehash: 75180152c3ed7056102038b9019f8017183c17ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279942"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769567"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.ios에서 네이티브 라이브러리 참조
 
@@ -56,7 +56,6 @@ lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a lib
 
 이렇게 하면 `libMyLibrary.a` 모든 iOS 개발 대상에 사용 하기에 적합 한 유니버설 (fat) 라이브러리가 생성 됩니다.
 
-
 ### <a name="missing-required-architecture-i386"></a>필수 아키텍처 i386 누락
 
 IOS 시뮬레이터에서 목표- `does not implement methodSignatureForSelector` C `does not implement doesNotRecognizeSelector` 라이브러리를 사용 하려고 할 때 런타임 출력에 또는 메시지가 표시 되는 경우 라이브러리는 i386 아키텍처에 대해 컴파일되지 않았을 수 있습니다 ( [유니버설 네이티브 빌드 참조). 라이브러리](#building_native) 섹션).
@@ -80,7 +79,6 @@ lipo -info /full/path/to/libraryname.a
 - 라이브러리를 프로젝트로 가져오기
 - 라이브러리를 연결 하는 Xamarin.ios 구성
 - 라이브러리에서 메서드에 액세스 합니다.
-
 
 **라이브러리를 프로젝트로 가져오려면**솔루션 탐색기에서 프로젝트를 선택 하 고 **Command + Option + a**를 누릅니다. 라이브러리를 찾아 프로젝트에 추가 합니다. 메시지가 표시 되 면 Mac용 Visual Studio 또는 Visual Studio에 프로젝트에 복사 하도록 지시 합니다. 프로젝트를 추가한 후 프로젝트에서 파일을 찾아 마우스 오른쪽 단추로 클릭 하 고 **빌드 작업** 을 **없음**으로 설정 합니다.
 
@@ -113,7 +111,6 @@ IOS에서 사용할 수 있는 기본 라이브러리에는 두 가지 종류가
 - 운영 체제에 포함 된 공유 라이브러리
 
 - 응용 프로그램과 함께 제공 되는 정적 라이브러리입니다.
-
 
 이러한 방법 중 하나에서 정의 된 메서드에 액세스 하려면 .NET에서 사용 하는 것과 동일한 기술인 [Mono의 P/Invoke 기능](https://www.mono-project.com/docs/advanced/pinvoke/) 을 사용 합니다 .이는 대략적으로 다음과 같이 사용 됩니다.
 
@@ -174,4 +171,3 @@ public static extern double AnimalLibraryVersion();
 IOS에서 정적 라이브러리를 사용할 수 있기 때문에와 연결할 외부 공유 라이브러리가 없으므로 DllImport 특성의 path 매개 변수는 특수 이름을 `__Internal` 사용 해야 합니다 (이름의 시작 부분에 있는 이중 밑줄 문자를 참조). 경로 이름입니다.
 
 이렇게 하면 DllImport는 공유 라이브러리에서 로드 하는 대신 현재 프로그램에서 참조 하는 메서드의 기호를 조회 합니다.
-

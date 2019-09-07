@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 72a1fe3541eb4ece67dd137ebcd33f8e81ae9553
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dcadb5146df39aa4887e28b65078acc9454f3d34
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292261"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767982"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Xamarin에서 watchOS 프로젝트 참조
 
@@ -32,12 +32,9 @@ WatchOS 솔루션의 세 프로젝트는 watchOS 3 앱이 올바르게 빌드되
 
   ![](project-references-images/catalog-reference2.png "iPhone 앱 참조 시청 앱")
 
-
 - **Watch 앱 확장이** 다른 프로젝트 중 하나를 참조 하지 않습니다.
 
   ![](project-references-images/catalog-reference3.png "Watch 앱 확장이 다른 프로젝트를 참조 하지 않습니다.")
-
-
 
 ## <a name="bundle-identifiers"></a>번들 식별자
 
@@ -76,4 +73,3 @@ WatchOS 솔루션의 세 프로젝트는 watchOS 3 앱이 올바르게 빌드되
 ![](project-references-images/infoplist-watchapp.png "Watch info.plist 파일")
 
 Watch 앱의 배포 대상은 조사식 확장 및 iOS 앱과 다를 수 있습니다.
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 845257bc11d24865a01a992e99d39ad6c578b42c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 00a973e670ff5100a44ba158fe50f134781a97e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291455"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769502"
 ---
 # <a name="search-with-core-spotlight-in-xamarinios"></a>Xamarin.ios에서 핵심 스포트라이트를 사용 하 여 검색
 
@@ -132,8 +132,6 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 - **Batch 업데이트 지원** – 앱에서 동시에 많은 인덱스 그룹을 만들거나 수정 해야 하는 경우 한 번의 호출로 `Index` 전체 일괄 처리를 `CSSearchableIndex` 클래스의 메서드로 보낼 수 있습니다.
 - **인덱스 변경 내용에 응답** – 앱 `CSSearchableIndexDelegate` 을 사용 하면 검색 가능한 인덱스에서 변경 내용 및 알림에 응답할 수 있습니다.
 - **데이터 보호 적용** – 데이터 보호 클래스를 사용 하 여 핵심 스포트라이트를 사용 하 여 검색 가능한 인덱스에 추가 하는 항목에 대 한 보안을 구현할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

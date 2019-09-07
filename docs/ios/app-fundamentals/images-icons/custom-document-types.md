@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2017
-ms.openlocfilehash: 683587e4857ede20096be731b3cfa3b88b3a668d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 25b4e5a564c8dabf4cb44881c25e0a10ade47350
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282527"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767734"
 ---
 # <a name="custom-document-icons-in-xamarinios"></a>Xamarin.ios의 사용자 지정 문서 아이콘
 
@@ -30,7 +30,7 @@ Xamarin.ios 앱에서 특정 문서 유형 로드를 지 원하는 경우 개발
 Mac용 Visual Studio에서 이러한 값을 할당 하려면 `Info.plist` 편집기의 **고급** 탭에서 **문서 형식** 섹션을 사용 하 여 문서 유형을 추가 하 고 이미지 아이콘을 할당 합니다. 예를 들어 다음은 PDF 지원 등록을 보여 주는 스크린샷입니다.
 
  [![](custom-document-types-images/18.png "' Info.plist ' 편집기의 고급 탭에 있는 문서 유형 섹션")](custom-document-types-images/18.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 이러한 값을 할당 하려면의 **고급** `Info.plist`탭에서 **문서 형식** 섹션을 사용 합니다.
@@ -43,9 +43,7 @@ Visual Studio에서 이러한 값을 할당 하려면의 **고급** `Info.plist`
 
 -----
 
-
 문서 형식에 대 한 자세한 내용은 Apple의 [일관적인 형식 식별자 참조](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) 및 [IOS 용 문서 상호 작용 프로그래밍 항목](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html)을 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

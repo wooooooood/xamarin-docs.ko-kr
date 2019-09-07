@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: fa78a596495b22ebb2c8b148aadb76261845ccdc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b1fa8cd69a2255d462066be88ad7ef695b71076e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281257"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753114"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>Xamarin.ios의 iOS 게임 Api
 
@@ -191,7 +191,6 @@ namespace FieldBehaviorExplorer
         static GKBehavior flockingBehavior;
         static GKGoal seekGoal;
 
-
         public FlockingScene (CGSize size) : base (size)
         {
             AddRandomBoids (20);
@@ -226,7 +225,6 @@ namespace FieldBehaviorExplorer
             var loc = touch.LocationInNode (this);
             trackingAgent.Position = new Vector2((float) loc.X, (float) loc.Y);
         }
-
 
         private void AddRandomBoids (int count)
         {
@@ -468,8 +466,6 @@ Apple은 iOS 9 용 SpriteKit에 다음과 같은 새 기능을 추가 했습니�
 
 이 문서에서는 iOS 9에서 Xamarin.ios 앱에 대해 제공 하는 새로운 게임 기능에 대해 살펴보았습니다.
 GameplayKit 및 모델 i/o를 소개 했습니다. 금속의 주요 개선 사항 SceneKit 및 SpriteKit의 새로운 기능을 제공 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

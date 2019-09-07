@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: d6440518149a4fab8e9667a2a41d3df818e2a879
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 7b465391958a6e862bfed9fde8d9da1fdd52bee5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120521"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759765"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.Forms에서 CocosSharp 사용
 
@@ -94,7 +94,6 @@ Xamarin.Forms는 모든 컨테이너에서 CocosSharp는 호스팅할 수 있습
 
 포함 하도록 페이지를 먼저 설정 된 `Grid` 두 개의 `Button` 인스턴스:
 
-
 ```csharp
 public class HomePage : ContentPage
 {
@@ -147,7 +146,6 @@ Ios의 경우는 `HomePage` 다음 이미지와 같이 표시 됩니다.
 
 `CocosSharpView` 클래스 CocosSharp Xamarin.Forms 앱에 포함 하는 데 사용 됩니다. 이후 `CocosSharpView` 에서 상속 되는 [Xamarin.Forms.View](xref:Xamarin.Forms.View) 클래스 레이아웃에 대 한 친숙 한 인터페이스를 제공 하 고 같은 레이아웃 컨테이너 내에서 사용할 수 있습니다 [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid)합니다. 새 `CocosSharpView` 를 완료 하 여 프로젝트에는 `CreateTopHalf` 메서드:
 
-
 ```csharp
 void CreateTopHalf(Grid grid)
 {
@@ -165,7 +163,6 @@ void CreateTopHalf(Grid grid)
 ```
 
 CocosSharp 초기화가 즉시 없으므로 시기에 대 한 이벤트를 등록 합니다 `CocosSharpView` 생성을 완료 합니다. 이 작업을 수행 합니다 `HandleViewCreated` 메서드:
-
 
 ```csharp
 void HandleViewCreated (object sender, EventArgs e)
@@ -203,7 +200,6 @@ void HandleViewCreated (object sender, EventArgs e)
 
 처음에 `GameScene` 클래스는 거의 비어 있게 됩니다 – 방금 만들어에 대 한 참조를 충족 시키기 위해 `HomePage`합니다. 새 클래스 라는.NET Standard 라이브러리 프로젝트에 추가할 `GameScene`합니다. 상속 해야 합니다 `CCScene` 다음과 같이 클래스:
 
-
 ```csharp
 public class GameScene : CCScene
 {
@@ -215,7 +211,6 @@ public class GameScene : CCScene
 ```
 
 이제 `GameScene` 는 정의 돌아갈 수 있습니다 `HomePage` 필드를 추가 합니다.
-
 
 ```csharp
 // Keep the GameScene at class scope
@@ -234,7 +229,6 @@ GameScene gameScene;
 앱은 현재 비어 있는 표시 CocosSharp 엔진의 실행 중인 인스턴스에 `CCScene`입니다. 그런 다음 시각적 개체 추가: 원입니다. 합니다 `CCDrawNode` 에 설명 된 대로 다양 한 기 하 도형에 그릴 클래스를 사용할 수 있습니다 합니다 [CCDrawNode 가이드를 사용 하 여 기 하 도형 그리기](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md)합니다.
 
 에 원을 추가 우리의 `GameScene` 클래스 및 다음 코드와 같이 생성자에서 인스턴스화할:
-
 
 ```csharp
 public class GameScene : CCScene
@@ -262,7 +256,6 @@ public class GameScene : CCScene
 
 ![](cocossharp-images/image6.png "GameScene 원")
 
-
 #### <a name="understanding-designresolution"></a>DesignResolution 이해
 
 CocosSharp 시각적 개체 표시 되는 이제 조사할 수 있습니다는 `DesignResolution` 속성입니다.
@@ -287,7 +280,6 @@ CocosSharp 시각적 개체 표시 되는 이제 조사할 수 있습니다는 `
 
 CocosSharp 시각적 요소 (같은 `CCDrawNode`)에서 상속 된 `CCNode` 클래스입니다. `CCNode` 부모를 기준으로 개체를 배치에 사용할 수 있는 두 개 속성도 제공 합니다. `PositionX` 고 `PositionY`입니다. 이 코드 조각에 나와 있는 것 처럼 코드는 원의 중심을 배치 하려면 이러한 두 속성을 사용 하는 현재:
 
-
 ```csharp
 circle.PositionX = 20;
 circle.PositionY = 50;
@@ -296,7 +288,6 @@ circle.PositionY = 50;
 CocosSharp 개체는 해당 부모 레이아웃 컨트롤의 동작에 따라 자동으로 배치 되는 대부분의 Xamarin.Forms 뷰 달리 명시적 위치 값을 배치 됩니다 하는 것이 반드시 합니다.
 
 사용자가 10 (픽셀이 아닌, 원을 그립니다 CocosSharp world 단위 공간에 있으므로) 단위로 왼쪽 또는 오른쪽에 원의 이동 하려면 두 개의 단추 중 하나를 클릭 하도록 허용 하는 코드를 추가 하겠습니다. 처음에 두 개의 public 메서드가 만듭니다는 `GameScene` 클래스:
-
 
 ```csharp
 public void MoveCircleLeft()
@@ -311,7 +302,6 @@ public void MoveCircleRight()
 ```
 
 그런 다음 처리기 두 개의 단추를 추가 `HomePage` 클릭에 응답 합니다. 완료 되 면이 `CreateBottomHalf` 메서드에 다음 코드를 포함 합니다.
-
 
 ```csharp
 void CreateBottomHalf(Grid grid)

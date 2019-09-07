@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 89b7f70ae69987edbd465d669f1bac17ddebc7c8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bea058a1f275d6f02fe4cbdf70f8e47a11d1cf8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522448"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764116"
 ---
 # <a name="recyclerview-parts-and-functionality"></a>RecyclerView 파트 및 기능
-
 
 `RecyclerView`는 일부 작업 (예: 뷰의 스크롤 및 재생)을 내부적으로 처리 하지만, 기본적으로 도우미 클래스를 조정 하 여 컬렉션을 표시 하는 관리자입니다. `RecyclerView`다음 도우미 클래스에 작업을 위임 합니다.
 
@@ -51,7 +50,6 @@ ms.locfileid: "69522448"
 
 `RecyclerView` 및 `ItemDecoration` 를`ItemAnimator`확장 하지 않으면에서 기본 구현을 사용 합니다. 이 가이드에서는 사용자 `ItemDecoration` 지정 및 `ItemAnimator` 클래스를 만드는 방법에 대해서는 설명 하지 않습니다. 이러한 클래스에 대 한 자세한 내용은 [RecyclerView 데코레이션](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemDecoration.html) 및 [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html)를 참조 하세요.
 
-
 <a name="recycling" />
 
 ### <a name="how-view-recycling-works"></a>보기 재활용 작동 방법
@@ -74,8 +72,6 @@ ms.locfileid: "69522448"
 6. 사용자가 목록에서 다음 항목 `RecyclerView` 으로를 스크롤하면 재활용 된 보기가 화면에 표시 됩니다. 한편, 다른 보기는 위 단계에 따라 표시 되지 않으며 재활용 됩니다.
 
 항목 뷰 다시 사용 `RecyclerView` 뿐만 아니라도 다른 효율성 최적화를 사용 합니다. 뷰 소유자. *뷰 보유자* 는 뷰 참조를 캐시 하는 간단한 클래스입니다. 어댑터는 항목 레이아웃 파일을 늘어납니다 때마다 해당 하는 뷰 보유자를 만듭니다. 뷰 보유자는를 `FindViewById` 사용 하 여 팽창 된 항목 레이아웃 파일 내의 뷰에 대 한 참조를 가져옵니다. 이러한 참조는 새 데이터를 표시 하기 위해 레이아웃을 재활용할 때마다 새 데이터를 뷰에 로드 하는 데 사용 됩니다.
- 
-
 
 ### <a name="the-layout-manager"></a>레이아웃 관리자
 
@@ -96,7 +92,6 @@ ms.locfileid: "69522448"
 
 레이아웃 관리자에 대 한 자세한 내용은 [RecyclerView manager 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html)를 참조 하세요.
 
-
 ### <a name="the-view-holder"></a>보기 홀더
 
 뷰 보유자는 뷰 참조를 캐시 하기 위해 정의 하는 클래스입니다. 어댑터는 이러한 뷰 참조를 사용 하 여 각 뷰를 해당 내용에 바인딩합니다. 의 모든 항목 `RecyclerView` 에는 해당 항목에 대 한 뷰 참조를 캐시 하는 연결 된 뷰 홀더 인스턴스가 있습니다. 뷰 홀더를 만들려면 다음 단계를 사용 하 여 항목당 정확한 뷰 집합을 보유할 클래스를 정의 합니다.
@@ -107,7 +102,6 @@ ms.locfileid: "69522448"
 
 `ViewHolder` 구현에 대 한 자세한 예제는 [기본 RecyclerView 예제](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)에 나와 있습니다.
 에 대 한 `RecyclerView.ViewHolder`자세한 내용은 [RecyclerView. ViewHolder 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html)를 참조 하세요.
-
 
 ### <a name="the-adapter"></a>어댑터
 
@@ -131,8 +125,6 @@ ms.locfileid: "69522448"
 
 레이아웃 관리자는 내에서 항목의 `RecyclerView`위치를 지정 하는 동안 이러한 메서드를 호출 합니다. 
 
-
-
 ### <a name="notifying-recyclerview-of-data-changes"></a>RecyclerView 데이터 변경 알림
 
 `RecyclerView`는 해당 데이터 소스의 내용이 변경 될 때 자동으로 표시를 업데이트 하지 않습니다. 어댑터는 데이터 집합이 `RecyclerView` 변경 된 경우에 알려야 합니다. 데이터 집합은 여러 가지 방법으로 변경 될 수 있습니다. 예를 들어 항목 내의 내용이 변경 되거나 전체 데이터 구조가 변경 될 수 있습니다.
@@ -155,7 +147,6 @@ ms.locfileid: "69522448"
 데이터 집합이 변경 된 방식을 정확히 알고 있는 경우 위의 적절 한 메서드를 호출 하 여 가장 효율적인 방식 `RecyclerView` 으로 새로 고칠 수 있습니다. 데이터 집합이 변경 된 방식을 정확 하 게 알 수 없는 경우을 (를) `NotifyDataSetChanged`호출할 수 있습니다 .이는 사용자 `RecyclerView` 에 게 표시 되는 모든 보기를 새로 고쳐야 하기 때문에 더 효율적입니다. 이러한 메서드에 대 한 자세한 내용은 [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html)를 참조 하세요.
 
 다음 항목인 [기본 RecyclerView 예제](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)에서는 위에 설명 된 파트 및 기능의 실제 코드 예제를 보여 주기 위해 예제 앱을 구현 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

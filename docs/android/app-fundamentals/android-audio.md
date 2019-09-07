@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 960b4eb058209547c65a3b438bed541c3ade257c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8719d521fe512f348aade0a3d43d2f0b0d3bf0ec
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521260"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755622"
 ---
 # <a name="android-audio"></a>Android Audio
 
 _Android OS는 오디오 및 비디오를 모두 제공 하는 멀티미디어를 광범위 하 게 지원 합니다. 이 가이드는 Android의 오디오를 중심으로 하 고 기본 제공 오디오 플레이어와 레코더 클래스를 사용 하 여 오디오를 재생 하 고 기록 하는 방법 및 하위 수준 오디오 API에 대해 다룹니다. 또한 개발자가 잘 작동 하는 응용 프로그램을 빌드할 수 있도록 다른 응용 프로그램에서 브로드캐스팅하는 오디오 이벤트를 사용 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -33,7 +32,6 @@ Android는 멀티미디어를 광범위 하 게 지원 합니다. 이 문서에�
 
 4. **하위 수준 오디오 작업** 메모리 버퍼에 직접 `AudioTrack` 기록 하 여 클래스를 사용 하 여 오디오 재생 &ndash; 클래스를 `AudioRecord` 사용 하 여 오디오를 기록 하 고 메모리 버퍼에서 직접 읽습니다.
 
-
 ## <a name="requirements"></a>요구 사항
 
 이 가이드를 사용 하려면 Android 2.0 (API 레벨 5) 이상이 필요 합니다. Android에서 오디오 디버깅은 장치에서 수행 해야 합니다.
@@ -42,14 +40,10 @@ Android는 멀티미디어를 광범위 하 게 지원 합니다. 이 문서에�
 
 ![녹화\_오디오가 활성화 된 Android 매니페스트의 필수 사용 권한 섹션](android-audio-images/image01.png)
 
-
-
 ## <a name="playing-audio-with-the-mediaplayer-class"></a>MediaPlayer 클래스를 사용 하 여 오디오 재생
 
 Android에서 오디오를 재생 하는 가장 간단한 방법은 기본 제공 [MediaPlayer](xref:Android.Media.MediaPlayer) 클래스를 사용 하는 것입니다.
 `MediaPlayer`는 파일 경로를 전달 하 여 로컬 또는 원격 파일을 재생할 수 있습니다. `MediaPlayer` 그러나는 상태를 구분 하 고 잘못 된 상태에서 해당 메서드 중 하나를 호출 하면 예외가 throw 됩니다. 오류를 방지 하려면 아래에 `MediaPlayer` 설명 된 순서 대로와 상호 작용 하는 것이 중요 합니다.
-
-
 
 ### <a name="initializing-and-playing"></a>초기화 및 재생
 
@@ -62,7 +56,6 @@ Android에서 오디오를 재생 하는 가장 간단한 방법은 기본 제�
 1. [Prepare](xref:Android.Media.MediaPlayer.Prepare) 메서드를 호출 하 여 플레이어를 초기화 합니다.
 
 1. [시작](xref:Android.Media.MediaPlayer.Start) 메서드를 호출 하 여 오디오 재생을 시작 합니다.
-
 
 아래 코드 샘플에서는이 사용법을 보여 줍니다.
 
@@ -80,7 +73,6 @@ public void StartPlayer(String  filePath)
   }
 }
 ```
-
 
 ### <a name="suspending-and-resuming-playback"></a>재생 일시 중단 및 다시 시작
 
@@ -109,12 +101,9 @@ player.Stop();
 player.Release();
 ```
 
-
-
 ## <a name="using-the-mediarecorder-class-to-record-audio"></a>MediaRecorder 클래스를 사용 하 여 오디오 기록
 
 Android에서 오디오 `MediaPlayer` 를 기록 하는 필연적인 결과로는 [mediarecorder](xref:Android.Media.MediaRecorder) 클래스입니다. `MediaPlayer`와 마찬가지로 상태를 구분 하 고 여러 상태를 전환 하 여 기록을 시작할 수 있는 지점으로 이동 합니다. 오디오를 `RECORD_AUDIO` 기록 하려면 사용 권한을 설정 해야 합니다. 응용 프로그램 사용 권한을 설정 하는 방법에 대 한 지침은 [AndroidManifest 작업](~/android/platform/android-manifest.md)을 참조 하세요.
-
 
 ### <a name="initializing-and-recording"></a>초기화 및 기록
 
@@ -126,14 +115,13 @@ Android에서 오디오 `MediaPlayer` 를 기록 하는 필연적인 결과로�
 
 3. [SetOutputFormat](xref:Android.Media.MediaRecorder.SetOutputFormat*) 메서드를 사용 하 여 출력 파일 오디오 형식을 설정 합니다. 지원 되는 오디오 유형 목록은 [Android 지원 미디어 형식](https://developer.android.com/guide/appendix/media-formats.html)을 참조 하세요.
 
-4. Setaudio [encoder](xref:Android.Media.MediaRecorder.SetAudioEncoder*) 메서드를 호출 하 여 오디오 인코딩 유형을 설정 합니다.
+4. [Setaudio encoder](xref:Android.Media.MediaRecorder.SetAudioEncoder*) 메서드를 호출 하 여 오디오 인코딩 유형을 설정 합니다.
 
 5. [SetOutputFile](xref:Android.Media.MediaRecorder.SetOutputFile*) 메서드를 호출 하 여 오디오 데이터가 기록 되는 출력 파일의 이름을 지정 합니다.
 
 6. [Prepare](xref:Android.Media.MediaRecorder.Prepare) 메서드를 호출 하 여 레코더를 초기화 합니다.
 
 7. [Start](xref:Android.Media.MediaRecorder.Start) 메서드를 호출 하 여 기록을 시작 합니다.
-
 
 다음 코드 샘플에서는이 시퀀스를 보여 줍니다.
 
@@ -164,7 +152,6 @@ void RecordAudio (String filePath)
 }
 ```
 
-
 ### <a name="stopping-recording"></a>기록 중지
 
 기록을 중지 하려면에서 `Stop` 메서드를 호출 합니다. `MediaRecorder`
@@ -172,8 +159,6 @@ void RecordAudio (String filePath)
 ```csharp
 recorder.Stop();
 ```
-
-
 
 ### <a name="cleaning-up"></a>정리 중
 
@@ -189,16 +174,11 @@ recorder.Reset();
 recorder.Release();
 ```
 
-
 ## <a name="managing-audio-notifications"></a>오디오 알림 관리
-
-
 
 ### <a name="the-audiomanager-class"></a>오디오 관리자 클래스
 
 오디오 [관리자](xref:Android.Media.AudioManager) 클래스는 오디오 이벤트가 발생 하는 경우 응용 프로그램에서 알 수 있도록 오디오 알림에 대 한 액세스를 제공 합니다. 이 서비스는 볼륨 및 벨소리 모드 제어와 같은 다른 오디오 기능에도 액세스할 수 있도록 합니다. 를 `AudioManager` 사용 하면 응용 프로그램에서 오디오 재생을 제어 하는 오디오 알림을 처리할 수 있습니다.
-
-
 
 ### <a name="managing-audio-focus"></a>오디오 포커스 관리
 
@@ -212,8 +192,6 @@ recorder.Release();
 
 오디오 포커스에 대 한 자세한 내용은 [오디오 포커스 관리](https://developer.android.com/training/managing-audio/audio-focus.html)를 참조 하세요.
 
-
-
 #### <a name="registering-the-callback-for-audio-focus"></a>음성 포커스에 대 한 콜백 등록
 
 에서 콜백을 등록 하면 오디오 포커스를 가져오고 해제 하는 것 이중요한부분입니다.`IOnAudioChangeListener` `FocusChangeListener` 그 이유는 오디오 포커스가 이후 시간까지 지연 될 수 있기 때문입니다. 예를 들어, 응용 프로그램에서 전화 통화를 진행 하는 동안 음악 재생을 요청할 수 있습니다. 전화 호출이 완료 될 때까지 오디오 포커스가 부여 되지 않습니다.
@@ -221,8 +199,6 @@ recorder.Release();
 이러한 이유로 콜백 개체는 `GetAudioFocus` `AudioManager`의 메서드에 매개 변수로 전달 되며이 호출은 콜백을 등록 합니다. 처음에 오디오 포커스가 거부 되었지만 나중에 부여 된 경우에는 콜백에서를 호출 `OnAudioFocusChange` 하 여 응용 프로그램에 알립니다. 응용 프로그램에 오디오 포커스를 사용 하 고 있음을 알리기 위해 동일한 메서드가 사용 됩니다.
 
 응용 프로그램이 오디오 리소스 사용을 마치면 `AbandonFocus` `AudioManager`의 메서드를 호출 하 고 콜백을 다시 전달 합니다. 이렇게 하면 콜백이 등록 취소 오디오 리소스가 해제 되어 다른 응용 프로그램이 오디오 포커스를 받을 수 있습니다.
-
-
 
 #### <a name="requesting-audio-focus"></a>오디오 포커스 요청
 
@@ -237,7 +213,6 @@ recorder.Release();
 4. 요청이 부여 `playMusic` 되 면 메서드가 즉시 호출 되 고 오디오가 재생 되기 시작 합니다.
 
 5. 요청이 거부 되 면 추가 작업을 수행 하지 않습니다. 이 경우에는 요청이 나중에 부여 된 경우에만 오디오가 재생 됩니다.
-
 
 아래 코드 샘플에서는 이러한 단계를 보여 줍니다.
 
@@ -257,11 +232,9 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 }
 ```
 
-
 #### <a name="releasing-audio-focus"></a>오디오 포커스 해제
 
 트랙 재생이 완료 `AbandonFocus` 되 면의 `AudioManager` 메서드가 호출 됩니다. 이렇게 하면 다른 응용 프로그램에서 장치의 오디오 리소스를 얻을 수 있습니다. 다른 응용 프로그램은 자체 수신기를 등록 한 경우이 오디오 포커스 변경에 대 한 알림을 받게 됩니다.
-
 
 ## <a name="low-level-audio-api"></a>낮은 수준 오디오 API
 
@@ -273,11 +246,9 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 
 3. 오디오 스트리밍.
 
-
 ### <a name="audiotrack-class"></a>오디오 트랙 클래스
 
 오디오 [트랙](xref:Android.Media.AudioTrack) 클래스는 기록에 하위 수준 오디오 api를 사용 하 고,는 `MediaPlayer` 클래스에 해당 하는 하위 수준의 오디오 api를 사용 합니다.
-
 
 #### <a name="initializing-and-playing"></a>초기화 및 재생
 
@@ -294,7 +265,6 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 5. 버퍼 크기 &ndash; (바이트)입니다.
 
 6. 버퍼 모드 &ndash; 스트리밍 또는 정적입니다.
-
 
 생성 후의 `AudioTrack` [재생](xref:Android.Media.AudioTrack.Play) 메서드를 호출 하 여 재생을 시작 하도록 설정 합니다. 오디오 버퍼 `AudioTrack` 를에 쓰면 재생이 시작 됩니다.
 
@@ -320,7 +290,6 @@ void PlayAudioTrack(byte[] audioBuffer)
 }
 ```
 
-
 #### <a name="pausing-and-stopping-the-playback"></a>재생 일시 중지 및 중지
 
 [Pause](xref:Android.Media.AudioTrack.Pause) 메서드를 호출 하 여 재생을 일시 중지 합니다.
@@ -335,7 +304,6 @@ audioTrack.Pause();
 audioTrack.Stop();
 ```
 
-
 #### <a name="cleanup"></a>정리
 
 `AudioTrack`가 더 이상 필요 하지 않은 경우 [릴리스](xref:Android.Media.AudioTrack.Release)를 호출 하 여 해당 리소스를 해제 해야 합니다.
@@ -344,11 +312,9 @@ audioTrack.Stop();
 audioTrack.Release();
 ```
 
-
 ### <a name="the-audiorecord-class"></a>AudioRecord 클래스
 
 [AudioRecord](xref:Android.Media.AudioRecord) 클래스 `AudioTrack` 는 기록 측의에 해당 합니다. 와 `AudioTrack`마찬가지로, 파일 및 uri 대신 메모리 버퍼를 직접 사용 합니다. `RECORD_AUDIO` 매니페스트에 사용 권한을 설정 해야 합니다.
-
 
 #### <a name="initializing-and-recording"></a>초기화 및 기록
 
@@ -365,7 +331,6 @@ audioTrack.Release();
 5. 오디오 형식 &ndash; 8 비트 또는 16 비트 인코딩입니다.
 
 6. 버퍼 크기 (바이트)
-
 
 `AudioRecord`가 생성 되 면 해당 [startrecording](xref:Android.Media.AudioRecord.StartRecording) 메서드가 호출 됩니다. 이제 기록을 시작할 준비가 되었습니다. 는 `AudioRecord` 입력에 대 한 오디오 버퍼를 지속적으로 읽고 오디오 파일에이 입력을 씁니다.
 
@@ -400,7 +365,6 @@ void RecordAudio()
 }
 ```
 
-
 #### <a name="stopping-the-recording"></a>기록을 중지 하는 중
 
 [Stop](xref:Android.Media.AudioRecord.Stop) 메서드를 호출 하면 기록이 종료 됩니다.
@@ -408,7 +372,6 @@ void RecordAudio()
 ```csharp
 audRecorder.Stop();
 ```
-
 
 #### <a name="cleanup"></a>정리
 
@@ -418,11 +381,9 @@ audRecorder.Stop();
 audRecorder.Release();
 ```
 
-
 ## <a name="summary"></a>요약
 
 Android OS는 오디오를 재생, 기록 및 관리 하기 위한 강력한 프레임 워크를 제공 합니다. 이 문서에서는 상위 수준 `MediaPlayer` 및 `MediaRecorder` 클래스를 사용 하 여 오디오를 재생 하 고 기록 하는 방법을 설명 했습니다. 다음으로 오디오 알림을 사용 하 여 서로 다른 응용 프로그램 간에 장치의 오디오 리소스를 공유 하는 방법을 살펴보았습니다. 마지막으로 메모리 버퍼와 직접 상호 작용 하는 하위 수준 Api를 사용 하 여 오디오를 재생 하 고 기록 하는 방법을 처리 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

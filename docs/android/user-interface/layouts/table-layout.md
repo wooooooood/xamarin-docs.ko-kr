@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 1c477f030dc69394ba601b31d71a772f5037af48
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522303"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758394"
 ---
 # <a name="xamarinandroid-tablelayout"></a>Xamarin Android TableLayout
 
@@ -123,8 +123,6 @@ protected override void OnCreate (Bundle savedInstanceState)
 애플리케이션을 실행합니다. 다음이 표시 됩니다.
 
 [![여러 테이블 행을 표시 하는 TableLayout 앱의 예제 스크린샷](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
-
-
 
 ## <a name="references"></a>참조 항목
 

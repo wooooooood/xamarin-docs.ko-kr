@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 26dfc4f9327f12d6854d72349dc46e0b4427fa72
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6dd3bf848d38f0211dcda100994f6f7ec8831fce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643923"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754687"
 ---
 # <a name="multi-touch-finger-tracking"></a>멀티 터치 핑거 추적
 
@@ -196,7 +196,6 @@ public override bool OnTouchEvent(MotionEvent args)
 [![FingerPaint 예제에서 스크린샷 예제](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 이제 화면에서 개별 손가락을 추적 하 고 서로 구별할 수 있는 방법을 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

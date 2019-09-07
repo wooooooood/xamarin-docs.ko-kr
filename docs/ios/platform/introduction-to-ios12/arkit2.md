@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/22/2018
-ms.openlocfilehash: 17995f61d92856a88769e2cd7ac8ed7445cf9782
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 36779446a132dc696f28903c3f0b27329bcd4aaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281137"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752113"
 ---
 # <a name="arkit-2-in-xamarinios"></a>Xamarin.ios의 ARKit 2
 
@@ -319,7 +319,6 @@ var configuration = new ARWorldTrackingConfiguration
 ```
 
 위의 코드 조각에 표시 된 완벽 하 게 반사 된 질감이 샘플에서 재미 있지만, 환경 질감은 강화 목록와 함께 사용 하는 것이 좋습니다 .이는 "uncanny 유역" 응답을 트리거합니다 (질감이 카메라를 기준으로 하는 추정치 임). 기록 됨).
-
 
 ### <a name="shared-and-persistent-ar-experiences"></a>공유 및 영구 AR 환경
 

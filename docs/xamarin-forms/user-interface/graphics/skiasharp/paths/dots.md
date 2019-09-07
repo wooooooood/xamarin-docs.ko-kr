@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9e12e901a4224580f72a4b92a4319e02a60efe46
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2d02e79ff51468572250d1a7ce7c6d3da103c03a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643012"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770524"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>점 및 대시 SkiaSharp에서
 
@@ -165,7 +165,6 @@ float[] GetPickerArray(Picker picker)
 지금까지 언급 되지 된 내용이 두 번째 매개 변수는 `SKPathEffect.CreateDash` 메서드. 이 매개 변수의 이름은 `phase` 줄의 시작 부분에 대 한 점 및 대시 패턴 내의 오프셋을 지칭 합니다. 예를 들어 dash 배열은 {10, 10} 및 `phase` 은 10이 고 다음 줄 점 보다는 간격을 시작 합니다.
 
 한 가지 흥미로운 적용 된 `phase` 매개 변수는 애니메이션입니다. **애니메이션 나선형** 비슷합니다는 **Archimedean 나선형** 는 제외 하 고 페이지를 [ `AnimatedSpiralPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) 클래스가 애니메이션을 적용를 `phase` 매개 변수를 사용 하 여를 Xamarin.Forms `Device.Timer` 메서드:
-
 
 ```csharp
 public class AnimatedSpiralPage : ContentPage

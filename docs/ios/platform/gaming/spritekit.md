@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: dfda8b1ec3e7cfbdec3fe313d305d78422487f08
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d2466de4891c289f4686c37bc9fe73c24a5a48ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753058"
 ---
 # <a name="spritekit-in-xamarinios"></a>Xamarin.ios의 SpriteKit
 
@@ -26,7 +26,7 @@ SpriteKit에는 2 개의 엄격한 본문 물리학 API가 포함 되어 있습�
 이제 SpriteKit는 질감에서 스프라이트의 물리학 본문을 파생 시키는 것을 지원 합니다. 이렇게 하면 보다 자연스럽 게 보이는 충돌을 쉽게 구현할 수 있습니다.
 
 예를 들어 다음 충돌은 바나나 및 원숭이가 각 이미지의 표면에서 거의 충돌 하는 방식을 확인 합니다.
- 
+
 ![](spritekit-images/image13.png "바나나 및 원숭이는 거의 각 이미지의 표면에서 충돌 합니다.")
 
 SpriteKit를 사용 하면 코드 한 줄에서 이러한 물리학 본문을 만들 수 있습니다. 단순히 텍스처 `SKPhysicsBody.Create` 와 크기: 스프라이트를 사용 하 여를 호출 합니다. PhysicsBody = SKPhysicsBody (스프라이트. 텍스처, 스프라이트. 크기);
@@ -44,7 +44,7 @@ sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
 이와 같이 알파 임계값을 조정 하는 것은 바나나와 충돌 하는 경우 원숭이가 넘는 이전 충돌을 세밀 하 게 조정 하는 효과입니다.
 
 ![](spritekit-images/image14.png "바나나와 충돌 하는 경우 원숭이가 됩니다.")
- 
+
 ## <a name="physics-fields"></a>물리 필드
 
 SpriteKit 추가 하는 또 다른 좋은 방법은 새로운 물리학 필드 지원입니다. 이를 통해 소용돌이 필드, 방사형 무게 필드 및 스프링 필드와 같은 항목을 추가 하 여 이름을 지정할 수 있습니다.
@@ -86,7 +86,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 이로 인해 bananas는 field 노드 주위의 스프링 처럼 oscillate 됩니다.
 
 ![](spritekit-images/image15.png "Bananas oscillate는 필드 노드 주위의 스프링 처럼")
- 
+
 ## <a name="radial-gravity-field"></a>방사형 중력 필드
 
 다른 필드를 추가 하는 것도 유사 합니다. 예를 들어 다음 코드는 방사형 무게 필드를 만듭니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c23515c7fc7a3fef836cba76ec30279c94150da2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f48f84c704fa8ce20ce24dfbfaca2df23a8494eb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281531"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752713"
 ---
 # <a name="purchasing-consumable-products-in-xamarinios"></a>Xamarin.ios에서 소비재 제품 구매
 
@@ -41,24 +41,14 @@ ms.locfileid: "70281531"
 ## <a name="consumable-products-example"></a>사용할 때 제품 예
 
 [InAppPurchaseSample 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) 에는 기본 ' 게임 내 통화 ' ("원숭이 크레딧" 이라고 함)를 구현 하는 *소모품* 이라는 프로젝트가 포함 되어 있습니다. 이 샘플에서는 사용자가 원하는 수 만큼 "원숭이 크레딧"을 구입할 수 있도록 두 개의 앱 내 구매 제품을 구현 하는 방법을 보여 줍니다. 실제 응용 프로그램에서는 이러한 기능을 사용 하는 방법도 있습니다.   
-   
-   
-   
- 응용 프로그램은 이러한 스크린샷에 표시 됩니다. 각 구매는 사용자 잔액에 "원숭이 크레딧"을 추가 합니다.   
-   
-   
-   
- [![각 구매는 사용자 잔액에 더 많은 원숭이 크레딧을 추가 합니다.](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
-   
-   
-   
- 사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용은 다음과 같습니다.   
-   
-   
-   
- [![사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
-&nbsp;
+응용 프로그램은 이러한 스크린샷에 표시 됩니다. 각 구매는 사용자 잔액에 "원숭이 크레딧"을 추가 합니다.   
+
+ [![각 구매는 사용자 잔액에 더 많은 원숭이 크레딧을 추가 합니다.](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
+
+사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용은 다음과 같습니다.   
+
+ [![사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 ### <a name="viewcontroller-methods"></a>ViewController 메서드
 
@@ -69,10 +59,8 @@ NSObject succeededObserver, failedObserver;
 ```
 
 생성자는 또한 `SKProductsRequestDelegate` `SKPaymentTransactionObserver` ( `InAppPurchaseManager` )`CustomPaymentObserver`을 만들고 등록 하는 하위 클래스 ()를 만듭니다.   
-   
-   
-   
- 앱 내 구매 트랜잭션을 처리 하는 첫 번째 단계는 샘플 응용 프로그램의 다음 코드와 같이 사용자가 무언가를 구매 하려는 경우 단추 누르기를 처리 하는 것입니다.
+
+앱 내 구매 트랜잭션을 처리 하는 첫 번째 단계는 샘플 응용 프로그램의 다음 코드와 같이 사용자가 무언가를 구매 하려는 경우 단추 누르기를 처리 하는 것입니다.
 
 ```csharp
 buy5Button.TouchUpInside += (sender, e) => {
@@ -83,9 +71,7 @@ buy10Button.TouchUpInside += (sender, e) => {
 };
 ```
 
-   
-   
- 사용자 인터페이스의 두 번째 부분에서는 트랜잭션이 성공 했다는 알림을 처리 합니다 .이 경우에는 표시 된 잔액을 업데이트 합니다.
+사용자 인터페이스의 두 번째 부분에서는 트랜잭션이 성공 했다는 알림을 처리 합니다 .이 경우에는 표시 된 잔액을 업데이트 합니다.
 
 ```csharp
 priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
@@ -118,10 +104,8 @@ public void PurchaseProduct(string appStoreProductId)
 ```
 
 큐에 지불을 추가 하는 작업은 비동기 작업입니다. 응용 프로그램은 트랜잭션을 처리 하 고 Apple의 서버에 전송 하는 동안 제어를 다시 가집니다. 이 시점에서 iOS는 사용자가 앱 스토어에 로그인 했는지 확인 하 고 필요한 경우 Apple ID 및 암호를 입력 하 라는 메시지를 표시 합니다.   
-   
-   
-   
- 사용자가 응용 프로그램 저장소를 사용 하 여 성공적으로 인증 하 고 트랜잭션에 동의한 `SKPaymentTransactionObserver` 경우은 (는)이 사용자 키트의 응답을 수신 하 고 다음 메서드를 호출 하 여 트랜잭션을 수행 하 고 종료 합니다.
+
+사용자가 응용 프로그램 저장소를 사용 하 여 성공적으로 인증 하 고 트랜잭션에 동의한 `SKPaymentTransactionObserver` 경우은 (는)이 사용자 키트의 응답을 수신 하 고 다음 메서드를 호출 하 여 트랜잭션을 수행 하 고 종료 합니다.
 
 ```csharp
 public void CompleteTransaction (SKPaymentTransaction transaction)
@@ -250,10 +234,8 @@ requestObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseM
 ### <a name="purchase-transactions"></a>트랜잭션 구매
 
 저장소 키트 지불 큐는 가능 하면 구매 요청을 저장 하 고 전달 하므로 네트워크 중단의 영향은 구매 프로세스 중에 네트워크에 오류가 발생 한 시기에 따라 달라 집니다.   
-   
-   
-   
- 트랜잭션을 `SKPaymentTransactionObserver` 수행 하는 동안 오류가 발생 하는 경우 하위 클래스 `CustomPaymentObserver`()에는 `UpdatedTransactions` 라는 메서드가 포함 되 `SKPaymentTransaction` 고 클래스는 실패 상태가 됩니다.
+
+트랜잭션을 `SKPaymentTransactionObserver` 수행 하는 동안 오류가 발생 하는 경우 하위 클래스 `CustomPaymentObserver`()에는 `UpdatedTransactions` 라는 메서드가 포함 되 `SKPaymentTransaction` 고 클래스는 실패 상태가 됩니다.
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -307,14 +289,10 @@ Applications may detect and respond to specific error codes, or handle them in t
 ## <a name="handling-restrictions"></a>처리 제한
 
 IOS의 **일반 > 제한 기능 > 설정** 에 따라 사용자는 장치의 특정 기능을 잠글 수 있습니다.   
-   
-   
-   
- 사용자가 메서드를 `SKPaymentQueue.CanMakePayments` 통해 앱에서 바로 구매를 수행할 수 있는지 여부를 쿼리할 수 있습니다. False를 반환 하는 경우 사용자는 앱 내 구매에 액세스할 수 없습니다. 사용자를 구매 하려고 하면 자동으로 사용자에 게 오류 메시지가 표시 됩니다. 이 값을 선택 하면 응용 프로그램에서 대신 구매 단추를 숨기 거 나 사용자에 게 도움을 주는 다른 작업을 수행할 수 있습니다.   
-   
-   
-   
- `InAppPurchaseManager.cs` 파일에서메서드는다음과같이파일형식`CanMakePayments` 키트 함수를 래핑합니다.
+
+사용자가 메서드를 `SKPaymentQueue.CanMakePayments` 통해 앱에서 바로 구매를 수행할 수 있는지 여부를 쿼리할 수 있습니다. False를 반환 하는 경우 사용자는 앱 내 구매에 액세스할 수 없습니다. 사용자를 구매 하려고 하면 자동으로 사용자에 게 오류 메시지가 표시 됩니다. 이 값을 선택 하면 응용 프로그램에서 대신 구매 단추를 숨기 거 나 사용자에 게 도움을 주는 다른 작업을 수행할 수 있습니다.   
+
+`InAppPurchaseManager.cs` 파일에서메서드는다음과같이파일형식`CanMakePayments` 키트 함수를 래핑합니다.
 
 ```csharp
 public bool CanMakePayments()
@@ -324,14 +302,10 @@ public bool CanMakePayments()
 ```
 
 이 방법을 테스트 하려면 iOS의 **제한** 기능을 사용 하 여 **앱에서 바로 구매**를 사용 하지 않도록 설정 합니다.   
-   
-   
-   
+
  [![IOS의 제한 기능을 사용 하 여 앱에서 바로 구매를 사용 하지 않도록 설정](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
-   
-   
-   
- 의 `ConsumableViewController` 이 예제 코드는 사용 `CanMakePayments` 안 함 단추에 **appstore 사용 안 함** 텍스트를 표시 하 여 false를 반환 하도록 반응 합니다.
+
+의 `ConsumableViewController` 이 예제 코드는 사용 `CanMakePayments` 안 함 단추에 **appstore 사용 안 함** 텍스트를 표시 하 여 false를 반환 하도록 반응 합니다.
 
 ```csharp
 // only if we can make payments, request the prices
@@ -348,21 +322,11 @@ if (iap.CanMakePayments()) {
 ```
 
 **앱에서 바로 구매** 기능이 제한 되는 경우 응용 프로그램은 다음과 같이 표시 됩니다. 구매 단추를 사용할 수 없습니다.   
-   
-   
-   
+
  [![응용 프로그램은 앱에서 바로 구매 기능이 제한 되 면 구매 단추를 사용할 수 없는 것 처럼 보입니다.](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
-   
-   
-   
 
 가 false 인 경우 `CanMakePayments` 에도 제품 정보를 요청할 수 있으므로 앱에서 가격을 검색 하 고 표시할 수 있습니다. 즉, 코드에서 `CanMakePayments` 확인을 제거 했을 때 구매 단추는 활성 상태 이지만 구매를 시도할 때 사용자에 게는 **앱에서의 구매가 허용 되지** 않는다는 메시지가 표시 됩니다 (지불 큐가 액세스):   
-   
-   
-   
- [![앱에서 바로 구매는 허용 되지 않습니다.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
-   
-   
-   
- 실제 응용 프로그램에서는 단추를 모두 숨기는 것과 같은 다른 방법을 사용 하 여 기능을 자동으로 표시 하는 경고 보다 더 자세한 메시지를 제공할 수 있습니다.
 
+ [![앱에서 바로 구매는 허용 되지 않습니다.](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
+
+실제 응용 프로그램에서는 단추를 모두 숨기는 것과 같은 다른 방법을 사용 하 여 기능을 자동으로 표시 하는 경고 보다 더 자세한 메시지를 제공할 수 있습니다.

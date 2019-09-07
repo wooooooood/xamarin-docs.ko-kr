@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2017
-ms.openlocfilehash: f9d49fc4bff91939c9924dc42a11ef31ffd87362
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e70cf426b2357570585c1c8f1cf21715858cb6f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289218"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758163"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>기존 라이브러리 프로젝트에서 NuGet 만들기
 
@@ -43,7 +43,6 @@ NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부
 이 스크린샷에서는 PCL 기반 NuGet의 내용을 보여 줍니다. 단일 PCL 어셈블리만 포함 됩니다.
 
 ![](existing-library-images/nuget-output.png "NuGet 패키지에 포함 된 파일")
-
 
 ## <a name="related-links"></a>관련 링크
 

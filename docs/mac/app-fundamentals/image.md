@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: b014c84a7bb23e723fbfbb7ead5e8dc9d9fdc549
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281696"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770318"
 ---
 # <a name="images-in-xamarinmac"></a>Xamarin.ios의 이미지
 
@@ -36,7 +36,6 @@ MacOS (이전의 Mac OS X) 응용 프로그램 내에서 이미지 자산을 사
 [![응용 프로그램의 예제 실행](image-images/intro01.png "응용 프로그램의 예제 실행")](image-images/intro01-large.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지 및 아이콘을 사용 하는 기본 사항을 설명 합니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
-
 
 ## <a name="adding-images-to-a-xamarinmac-project"></a>Xamarin.ios 프로젝트에 이미지 추가
 
@@ -101,7 +100,6 @@ Xcode의 Interface Builder에서 **이미지 집합** 을 사용 하는 경우 *
 
 여기에서 기본 **assets.xcassets** 컬렉션이 프로젝트에 자동으로 포함 되는 것과 동일한 방식으로 컬렉션을 사용할 수 있습니다.
 
-
 ### <a name="adding-images-to-resources"></a>리소스에 이미지 추가
 
 > [!IMPORTANT]
@@ -132,7 +130,6 @@ Xamarin.ios 응용 프로그램의 원본 이미지로 png, jpg 또는 pdf 파�
 
 Xamarin.ios 응용 프로그램 (아이콘, 사용자 지정 컨트롤, 사용자 지정 커서, 사용자 지정 아트 워크 등)에 추가 하는 모든 그래픽 자산은 표준 해상도 버전 외에도 고해상도 버전이 있어야 합니다. 이는 응용 프로그램이 레 티 나 Display 장착 된 Mac 컴퓨터에서 실행 될 때 가장 적합 한 것을 확인 하는 데 필요 합니다.
 
-
 ### <a name="adopt-the-2x-naming-convention"></a>@2x 명명 규칙 채택
 
 > [!IMPORTANT]
@@ -150,7 +147,6 @@ Xamarin.ios 응용 프로그램 (아이콘, 사용자 지정 컨트롤, 사용�
 이미지가 Interface Builder의 UI 요소에 할당 되 면 _ImageName_에서 파일을 선택 하기만 하면 됩니다 **.** _파일 이름-확장명_ 형식 (예: **tags .png**) 코드에서 C# 이미지를 사용 하는 경우와 마찬가지로 ImageName에서 파일을 선택 합니다 **.** _파일 이름-확장명_ 형식입니다.
 
 Xamarin.ios 응용 프로그램이 Mac에서 실행 되는 경우 _ImageName_ **.** _파일 이름-확장_ 형식 이미지는 표준 해상도 디스플레이에서 사용 되며, **ImageName@2x.filename-extension** 레 티 나 디스플레이 기반 mac에서 이미지가 자동으로 선택 됩니다.
-
 
 ## <a name="using-images-in-interface-builder"></a>Interface Builder에서 이미지 사용
 
@@ -345,7 +341,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="using-images-with-outline-views"></a>개요 보기가 포함 된 이미지 사용
 
-`NSOutlineView`에서 셀의 일부로 이미지를 포함 하려면 개요 `NSTableViewDelegate's` `GetView` 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 일반적인 `NSTextField`대신를 `NSTableCellView` 사용 해야 합니다. 예를 들어:
+`NSOutlineView`에서 셀의 일부로 이미지를 포함 하려면 개요 `NSTableViewDelegate's` `GetView` 뷰의 메서드에서 데이터를 반환 하는 방법을 변경 하 여 일반적인 `NSTextField`대신를 `NSTableCellView` 사용 해야 합니다. 예:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -444,12 +440,9 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 개요 보기를 사용 하는 방법에 대 한 자세한 내용은 [개요 보기](~/mac/user-interface/outline-view.md) 설명서를 참조 하세요.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지 및 아이콘을 사용 하는 방법에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 이미지와 아이콘을 사용 하는 방법 및 코드에서 C# 이미지와 아이콘을 사용 하는 방법에 대 한 다양 한 형식 및 사용 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

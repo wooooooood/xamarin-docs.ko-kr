@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 758134b0c5171e46c47ff6fd8071b13a44d5789b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b341ee5ee72c3a89ab14161862896585ed498fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291617"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772697"
 ---
 # <a name="table-views-in-xamarinmac"></a>Xamarin.ios의 테이블 뷰
 
@@ -407,7 +407,6 @@ public override void SortDescriptorsChanged (NSTableView tableView, NSSortDescri
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-
 그런 다음 `ProductTableDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
 
 ```csharp
@@ -435,7 +434,6 @@ public override bool ShouldSelectRow (NSTableView tableView, nint row)
 [![](table-view-images/select02.png "특성 검사자")](table-view-images/select02.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
-
 
 그런 다음 `ProductTableDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
 

@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 8bdef9bff975365172a4c215b21cbb07a37e8492
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1f2fce14f1839e3d9aff4c68dc0dffc0e8059e6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227730"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766811"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>MonoGame에서 꼭 짓 점을 사용 하 여 3D 그래픽 그리기
 
@@ -117,7 +117,6 @@ protected override void Initialize ()
 
 먼저 위치 및 조명과 같은 렌더링을 위한 `BasicEffect` 매개 변수를 보관할 인스턴스를 정의 해야 합니다. 이렇게 하려면 `floorVerts` 필드가 정의 된 아래 `BasicEffect` `Game1` 클래스에 멤버를 추가 합니다.
 
-
 ```csharp
 ...
 VertexPositionTexture[] floorVerts;
@@ -168,7 +167,6 @@ void DrawGround()
 
     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
     foreach (var pass in effect.CurrentTechnique.Passes)
     {
@@ -246,7 +244,6 @@ Texture2D checkerboardTexture;
 
 다음과 `Game1.LoadContent` 같이 수정 합니다.
 
-
 ```csharp
 protected override void LoadContent()
 {
@@ -306,7 +303,6 @@ void DrawGround()
 
 마지막으로, 꼭지점에 질감 좌표 `Game1.Initialize` 를 할당 하도록 메서드를 수정 해야 합니다.
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -349,7 +345,6 @@ MonoGame는 0과 1 사이의 좌표를 갖는 정규화 된 질감 좌표를 사
 
 반복 횟수에 대 한 단일 변수를 사용 하도록 텍스처 좌표 할당을 변경할 수 있습니다.
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -382,7 +377,6 @@ protected override void Initialize ()
 이로 인해 질감이 20 번 반복 됩니다.
 
 ![](part2-images/image10.png "이로 인해 질감이 20 번 반복 됩니다.")
-
 
 ## <a name="rendering-vertices-with-models"></a>모델을 사용 하 여 꼭 짓 점 렌더링
 

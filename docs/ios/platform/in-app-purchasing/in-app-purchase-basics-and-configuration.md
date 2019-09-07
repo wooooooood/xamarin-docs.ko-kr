@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 9347a801c939fd715101253c6953eeec840af47d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fc76a642c27b7a2c7f3483911be596f8d6cdd1ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288582"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752868"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>앱 내 구매 기본 사항 및 Xamarin.ios의 구성
 
@@ -26,7 +26,6 @@ ms.locfileid: "70288582"
 - **IOS 프로 비전 포털** – 번들 식별자를 만들고 앱에 대 한 앱 스토어 액세스를 사용 하도록 설정 합니다.
 - **매장 키트** – 제품을 표시 하 고, 제품을 구매 하 고, 트랜잭션을 복원 하기 위해 앱에 코드를 추가 합니다.
 - **사용자 지정 코드** – 고객이 구매한 구매를 추적 하 고 구매한 제품이 나 서비스를 제공 합니다. 제품이 서버에서 다운로드 된 콘텐츠 (예: 책 및 잡지 문제)로 구성 되어 있는지 확인 하기 위해 서버 쪽 프로세스를 구현 해야 할 수도 있습니다.
-
 
 "서버 환경"의 두 가지 저장소 키트는 다음과 같습니다.
 
@@ -54,7 +53,6 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 - **IOS 프로 비전 포털** – 앱에 유효한 앱 ID (별표 *가 있는 와일드 카드 아님)가 있고 앱 구매를 사용 하도록 설정 되어 있는지 확인 합니다.
 - **ITunes Connect 응용 프로그램 관리** – 응용 프로그램에 제품을 추가 합니다.
 
-
 ### <a name="apple-developer-account"></a>Apple 개발자 계정
 
 무료 앱을 빌드 및 배포 하려면 [ITunes Connect](https://itunesconnect.apple.com)에서 매우 적은 구성이 필요 하지만 유료 앱 또는 앱 내 구매를 판매 하려면 금융 및 세금 정보를 사용 하 여 Apple에 제공 해야 합니다. 여기에 표시 된 주 메뉴에서 **계약, 세금 및 뱅킹** 을 클릭 합니다.
@@ -70,7 +68,6 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 ### <a name="ios-provisioning-portal"></a>iOS 프로비전 포털
 
 새 응용 프로그램은 **IOS 프로 비전 포털**의 **앱 id** 섹션에 설정 되어 있습니다. 새 앱 ID를 만들려면 [Ios 프로 비전 포털의 구성원 센터](https://developer.apple.com/membercenter/index.action)로 이동 하 여 포털의 **인증서, 식별자 및 프로필** 섹션으로 이동 하 고 *ios 앱*에서 **식별자** 를 클릭 합니다. 그런 다음 오른쪽 위에 있는 "+"를 클릭 하 여 새 앱 ID를 생성 합니다.
-
 
 새 **앱 id** 를 만들기 위한 양식
 
@@ -114,7 +111,6 @@ ITunes Connect에서 **내 앱** 을 클릭 하 여 iOS 응용 프로그램 항�
 
 각 앱 내 구매 제품에 필요한 필드는 아래에 설명 되어 있습니다.
 
-
 ### <a name="reference-name"></a>참조 이름
 
 참조 이름은 사용자에 게 표시 되지 않습니다. 내부 사용을 위한 것 이며 iTunes Connect에만 표시 됩니다.
@@ -148,7 +144,6 @@ com.xamarin.storekit.testing.greyscale
 1. **무료 구독** – Newsstand 사용 앱 에서만 제공할 수 있으며, 고객은 모든 장치에서 구독 콘텐츠에 액세스할 수 있습니다. 무료 구독은 만료 되지 않습니다.
 1. **갱신 되지 않는 구독** – 한 달의 사진 보관에 대 한 액세스와 같이 고정 콘텐츠에 시간 제한 된 액세스를 판매 하는 데 사용 해야 합니다.
 
-
  *이 문서에는 현재 처음 두 가지 제품 유형 (사용할 때 사용할 경우)만 포함 되어 있습니다.*
 
  <a name="Price_Tiers" />
@@ -176,10 +171,8 @@ Apple은 Newsstand apps에 대해 특별 한 무료 구독 옵션을 제공 했�
 ITunes Connect에서 지원 되는 여러 언어에 대해 다른 이름 및 설명 텍스트를 입력할 수 있습니다. 팝업을 통해에서 각 언어를 추가 하거나 편집할 수 있습니다.
 
  [![](in-app-purchase-basics-and-configuration-images/image12.png "각 언어는 팝업을 통해에서 추가/편집할 수 있습니다.")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
-   
-   
-   
- 앱에 제품 정보를 표시 하면 사용자가 사용자 키트 키트를 통해 지역화 된 텍스트를 표시할 수 있습니다. 올바른 기호 및 10 진수 형식을 표시 하도록 통화 표시도 지역화 해야 합니다 .이 형식은 문서의 뒷부분에서 다룹니다.
+
+앱에 제품 정보를 표시 하면 사용자가 사용자 키트 키트를 통해 지역화 된 텍스트를 표시할 수 있습니다. 올바른 기호 및 10 진수 형식을 표시 하도록 통화 표시도 지역화 해야 합니다 .이 형식은 문서의 뒷부분에서 다룹니다.
 
 ### <a name="app-store-review"></a>앱 스토어 검토
 
@@ -188,10 +181,8 @@ ITunes Connect에서 지원 되는 여러 언어에 대해 다른 이름 및 설
 앱을 처음으로 구매할 때 앱을 처음으로 제출 하는 경우 (새 앱이 든, 기존 앱에 기능이 추가 되었는지 여부에 관계 없이) 다른 제품을 사용 하 여 제출할 수도 있습니다. ITunes Connect 포털에는 다음 스크린샷에 표시 된 것 처럼이 작업을 수행 하 라는 메시지가 표시 됩니다.
 
  [![](in-app-purchase-basics-and-configuration-images/image13.png "ITunes Connect 포털에 일부 제품을 제출 하 라는 메시지가 표시 됩니다.")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
-   
-   
-   
- 응용 프로그램 및 앱 내 구매는 함께 검토 되므로 앱이 승인 된 제품이 없으면 앱이 스토어로 이동 하지 않습니다.
+
+응용 프로그램 및 앱 내 구매는 함께 검토 되므로 앱이 승인 된 제품이 없으면 앱이 스토어로 이동 하지 않습니다.
 
 앱 내 구매 기능이 포함 된 첫 번째 버전이 승인 된 후에는 언제 든 지 추가 제품을 추가 하 고 제출할 수 있습니다. 표시 된 것 처럼 **버전 세부 정보** 페이지를 사용 하 여 특정 앱 내 구매 제품과 함께 새 버전을 제출 하도록 선택할 수도 있습니다.
 

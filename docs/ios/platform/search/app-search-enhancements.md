@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 2a2475bcc5eea48584c4aa128aafeeb326e41f8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8c3ea0e190bc75d771adf587f5b1bcf27d906f02
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280365"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769527"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Xamarin.ios의 앱 검색 향상 기능
 
@@ -115,8 +115,6 @@ Xamarin.ios 앱에서 검색을 사용 하는 방법에 대 한 자세한 내용
 ## <a name="summary"></a>요약
 
 이 문서에서는 iOS 10의 앱 검색에 대 한 Apple의 향상 된 기능과 Xamarin.ios에서 앱을 구현 하는 방법에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

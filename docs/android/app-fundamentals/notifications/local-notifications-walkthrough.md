@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 61dedca1b89237bdd4669a63173b1c6e4fde072b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: caef124228ab4ec4356b10c0559d2abe33d1531f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644300"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755274"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
 _이 연습에서는 Xamarin Android 응용 프로그램에서 로컬 알림을 사용 하는 방법을 보여 줍니다. 로컬 알림 만들기 및 게시의 기본 사항을 보여 줍니다. 사용자가 알림 영역에서 알림을 클릭 하면 두 번째 작업을 시작 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -35,7 +34,6 @@ _이 연습에서는 Xamarin Android 응용 프로그램에서 로컬 알림을 
 먼저 **Android 앱** 템플릿을 사용 하 여 새 android 프로젝트를 만들어 보겠습니다. **Localnotifications**프로젝트를 호출 해 보겠습니다. Xamarin Android 프로젝트를 만드는 방법을 잘 모르는 경우 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md)를 참조 하세요.
 
 알림 채널을 만들 때 사용 되는 두 개의 추가 문자열 리소스를 포함 하도록 리소스 파일 **값/문자열 .xml** 을 편집 합니다.
-
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,7 +102,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 ### <a name="define-the-notification-id"></a>알림 ID 정의
 
 알림 및 알림 채널에 대 한 고유 ID가 필요 합니다. **MainActivity.cs** 를 편집 하 고 `MainActivity` 클래스에 다음 정적 인스턴스 변수를 추가 해 보겠습니다.
@@ -117,7 +114,7 @@ internal static readonly string COUNT_KEY = "count";
 
 ### <a name="add-code-to-generate-the-notification"></a>알림을 생성 하는 코드를 추가 합니다.
 
-다음으로 단추 `Click` 이벤트에 대 한 새 이벤트 처리기를 만들어야 합니다. 다음 메서드를에 `MainActivity`추가 합니다.
+다음으로 단추 `Click` 이벤트에 대 한 새 이벤트 처리기를 만들어야 합니다. `MainActivity`에 다음 메서드를 추가합니다.
 
 ```csharp
 void ButtonOnClick(object sender, EventArgs eventArgs)
@@ -173,7 +170,6 @@ protected override void OnCreate(Bundle bundle)
     button.Click += ButtonOnClick;
 }
 ```
-
 
 ### <a name="create-a-second-activity"></a>두 번째 활동 만들기
 
@@ -231,11 +227,9 @@ namespace LocalNotifications
 </LinearLayout>
 ```
 
-
 ### <a name="add-a-notification-icon"></a>알림 추가 아이콘
 
 마지막으로, 알림이 시작 될 때 알림 영역에 표시 되는 작은 아이콘을 추가 합니다. [이 아이콘](local-notifications-walkthrough-images/ic-stat-button-click.png) 을 프로젝트에 복사 하거나 사용자 지정 아이콘을 직접 만들 수 있습니다. 아이콘 파일 **ic\_stat\_단추\_이름을 .png를 클릭** 하 고 **리소스/그릴** 수 있는 폴더에 복사 합니다. **> 기존 항목 추가** ...를 사용 하 여 프로젝트에이 아이콘 파일을 포함 해야 합니다.
-
 
 ### <a name="run-the-application"></a>애플리케이션 실행
 
@@ -257,11 +251,9 @@ namespace LocalNotifications
 
 지금까지 이 시점에서 Android 로컬 알림 연습을 완료 하 고 참조할 수 있는 작업 샘플을 사용할 수 있습니다. 여기에 표시 된 것 보다 더 많은 알림이 제공 되므로 자세한 정보를 보려는 경우 [에는 Google의 알림에 대 한 설명서](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)를 살펴보세요.
 
-
 ## <a name="summary"></a>요약
 
 이 연습은 알림을 `NotificationCompat.Builder` 만들고 표시 하는 데 사용 됩니다. 이 예에서는 알림과의 사용자 상호 작용에 응답 하는 방법으로 두 번째 작업을 시작 하는 방법에 대 한 기본 예를 보여 주고 첫 번째 작업에서 두 번째 작업으로의 데이터 전송에 대해 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

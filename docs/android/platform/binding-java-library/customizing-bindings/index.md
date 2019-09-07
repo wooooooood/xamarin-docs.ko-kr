@@ -7,20 +7,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: e29432504f3b8554c387d277004d3cc779aade95
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524647"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756637"
 ---
 # <a name="customizing-bindings"></a>바인딩 사용자 지정
 
 _바인딩 프로세스를 제어 하는 메타 데이터를 편집 하 여 Xamarin Android 바인딩을 사용자 지정할 수 있습니다. 이러한 수동 수정은 일반적으로 C#빌드 오류를 해결 하 고 생성 된 API를 셰이핑 하는 데 필요 합니다. 이러한 가이드에서는이 메타 데이터의 구조, 메타 데이터를 수정 하는 방법 및 JavaDoc를 사용 하 여 메서드 매개 변수의 이름을 복구 하는 방법을 설명 합니다._
 
-
 ## <a name="overview"></a>개요
- 
+
 Xamarin Android는 대부분의 바인딩 프로세스를 자동화 합니다. 그러나 다음과 같은 문제를 해결 하기 위해 수동으로 수정 해야 하는 경우도 있습니다.
 
 - 누락 된 형식, 난독 처리 된 형식, 중복 이름, 클래스 표시 유형 문제 및 Xamarin.ios 도구에서 해결할 수 없는 기타 상황에 의해 발생 하는 빌드 오류를 해결 합니다. 
@@ -33,7 +32,6 @@ Xamarin Android는 대부분의 바인딩 프로세스를 자동화 합니다. �
 
 바인딩 프로세스를 제어 하는 메타 데이터를 수정 하 여 이러한 변경 내용의 일부나 전부를 만들 수 있습니다.
 
-
 ## <a name="guides"></a>가이드
 
 다음 가이드에서는 바인딩 프로세스를 제어 하는 메타 데이터를 설명 하 고 이러한 문제를 해결 하기 위해이 메타 데이터를 수정 하는 방법을 설명 합니다.
@@ -42,7 +40,3 @@ Xamarin Android는 대부분의 바인딩 프로세스를 자동화 합니다. �
     Java 바인딩 라이브러리를 완료 하는 데 필요한 여러 수동 단계를 설명 하 고, 바인딩에 의해 노출 되는 API를 표시 하 여 .NET 디자인 지침을 보다 자세히 설명 하는 방법을 설명 합니다.
 
 - [Javadoc를 사용 하 여 매개 변수 이름 지정](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md) 은 바인딩된 java 프로젝트에서 생성 된 Javadoc을 사용 하 여 Java 바인딩 프로젝트에서 매개 변수 이름을 복구 하는 방법을 설명 합니다.
-
-
- 
-

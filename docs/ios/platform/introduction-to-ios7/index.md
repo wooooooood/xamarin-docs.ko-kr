@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 69f43df64ccf7de75b00e1a0b3f6e2ececc5bbb3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d3a3c28e30e38562035b4d0c7c05366865157dd5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292021"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752069"
 ---
 # <a name="introduction-to-ios-7"></a>iOS 7 소개
 
@@ -30,7 +30,6 @@ iOS 7은 UIKit에서 애니메이션 지원을 보강 하 여 응용 프로그�
 
 - `springWithDampingRatio`– 진동 범위가가 더 작은 값에 대해 늘리는 0에서 1 사이의 값입니다.
 - `initialSpringVelocity`– 초기 스프링 속도는 초당 총 애니메이션 거리의 백분율로 나타낸 것입니다.
-
 
 다음 코드는 이미지 뷰의 중심이 변경 될 때 스프링 효과를 생성 합니다.
 
@@ -104,13 +103,11 @@ API는 본질적으로 선언적입니다. 무게, 충돌, 스프링 등의 물�
 - `UIPushBehavior`– Force를 동적 항목에 적용 합니다.
 - `UISnapBehavior`– 스프링 효과를 사용 하 여 동적 항목을 위치에 맞출 수 있습니다.
 
-
 여러 가지 기본 형식이 있지만 UIKit Dynamics를 사용 하 여 보기에 물리학 기반 상호 작용을 추가 하는 일반적인 프로세스는 동작 간에 일관 됩니다.
 
 1. 동적 애니메이터를 만듭니다.
 1. 동작을 만듭니다.
 1. 동적 애니메이터에 동작을 추가 합니다.
-
 
 ### <a name="dynamics-example"></a>Dynamics 예제
 
@@ -233,7 +230,6 @@ iOS 7은 백그라운드 작업 수행 시와 방법을 변경 합니다. 작업
 - 백그라운드 페치 – 응용 프로그램에서 정기적인 간격으로 백그라운드에서 콘텐츠를 업데이트할 수 있습니다.
 - 원격 알림-푸시 알림을 받을 때 응용 프로그램에서 콘텐츠를 업데이트할 수 있습니다. 알림은 자동 이거나 잠금 화면에 배너를 표시할 수 있습니다.
 - 백그라운드 전송 서비스 – 고정 된 시간 제한이 없는 대량 파일 등의 데이터를 업로드 및 다운로드할 수 있습니다.
-
 
 새 멀티태스킹 기능에 대 한 자세한 내용은 Xamarin [Backgrounding guide](~/ios/app-fundamentals/backgrounding/index.md)의 iOS 섹션을 참조 하세요.
 

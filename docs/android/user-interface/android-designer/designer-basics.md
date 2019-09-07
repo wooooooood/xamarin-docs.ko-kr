@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
-ms.openlocfilehash: ebe8f483e501c4e34295a889f0d9ae06df8ba1d9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523708"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761415"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Android Designer 기본 사항
 
 _이 항목에서는 Xamarin.ios Android Designer 기능을 소개 하 고, 디자이너를 시작 하는 방법을 설명 하 고, Design Surface에 대해 설명 하며, 속성 창을 사용 하 여 위젯 속성을 편집 하는 방법에 대해 설명 합니다._
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -112,7 +111,6 @@ Designer를 사용 하면 도구 상자에서 **Design Surface**로 위젯을 �
 
 - 마우스 오른쪽단추 클릭 &ndash; 에적용되는삭제,복사및`TextView`잘라내기 작업입니다.
 
-
 ### <a name="zoom-controls"></a>확대/축소 컨트롤
 
 **Design Surface** 는 다음과 같이 여러 컨트롤을 통한 확대/축소를 지원 합니다.
@@ -154,7 +152,7 @@ Designer를 사용 하면 도구 상자에서 **Design Surface**로 위젯을 �
 - **창 축소** 이 단추 (오른쪽 꺾쇠 괄호 두 개와 유사)는 디자인 및 **소스의** 이중 창 표시를 이러한 창 중 하나의 단일 뷰로 "축소" 합니다. &ndash;
     이 단추는 두 개의 왼쪽 꺾쇠 괄호와 비슷하게 **확장 창** 단추를 클릭 하 여 이중 창 (**디자인** 및 **원본**) 표시 모드로 다시 돌아갈 수 있습니다.
 
-**축소 창을** 클릭 하면 **디자인** 창만 표시 됩니다. 그러나 소스 단추를 클릭 하 여 대신 **원본** 창만 볼 수 있습니다. 디자인 단추 를 다시 클릭 하 여 **디자인** 창으로 돌아갑니다.
+**축소 창을** 클릭 하면 **디자인** 창만 표시 됩니다. 그러나 **소스 단추를** 클릭 하 여 대신 **원본** 창만 볼 수 있습니다. **디자인 단추를** 다시 클릭 하 여 **디자인** 창으로 돌아갑니다.
 
 ## <a name="source-pane"></a>소스 창
 
@@ -165,7 +163,6 @@ Designer를 사용 하면 도구 상자에서 **Design Surface**로 위젯을 �
 XML 원본에 대 한 변경 내용은 **Design Surface**에 즉시 렌더링 됩니다. **Design Surface** 에 대 한 변경 내용으로 인해 **소스** 창에 표시 되는 XML 소스가 그에 따라 업데이트 됩니다. **소스** 창에서 xml을 변경 하는 경우 다음에 설명 된 대로 자동 완성 및 IntelliSense 기능을 사용 하 여 XML 기반 UI 개발을 빠르게 수행할 수 있습니다.
 
 긴 XML 파일로 작업할 때 쉽게 탐색할 수 있도록 **소스** 창에서 Visual Studio 스크롤 막대를 지원 합니다 (이전 스크린샷에서 오른쪽에 표시 됨). 스크롤 막대에 대 한 자세한 내용은 [스크롤 막대를 사용자 지정 하 여 코드를 추적 하는 방법](https://msdn.microsoft.com/library/dn237345.aspx)을 참조 하세요.
-
 
 ### <a name="autocompletion"></a>완성
 
@@ -183,8 +180,6 @@ XML 원본에 대 한 변경 내용은 **Design Surface**에 즉시 렌더링 �
 
 위의 스크린 샷에서 빨간색으로 표시 된 두 개의 단추가이 팝업의 아래쪽에 표시 됩니다. 왼쪽의 **프로젝트 리소스** 단추를 클릭 하면 앱 프로젝트에 포함 되는 리소스로 목록이 제한 되지만 오른쪽의 **프레임 워크 리소스** 단추를 클릭 하면 프레임 워크에서 사용할 수 있는 리소스를 표시 하도록 목록이 제한 됩니다.
 이러한 단추를 설정 하거나 해제 합니다 .이 단추를 다시 클릭 하 여 각에서 제공 하는 필터링 작업을 사용 하지 않도록 설정할 수 있습니다.
-
-
 
 ## <a name="properties-pane"></a>속성 창
 
@@ -216,7 +211,6 @@ XML 원본에 대 한 변경 내용은 **Design Surface**에 즉시 렌더링 �
 [![ImageView의 리소스 선택기 목록 아이콘 리소스](designer-basics-images/vs/10-src-resource-sml.png)](designer-basics-images/vs/10-src-resource.png#lightbox)
 
 `Src` 속성의 오른쪽에 있는 빈 사각형을 클릭 하면 **리소스 선택** 대화 상자가 열리고, 위에 표시 된 색에서 drawables에 이르는 리소스 목록이 표시 됩니다.
-
 
 ### <a name="boolean-property-references"></a>부울 속성 참조
 
@@ -276,7 +270,6 @@ Android Designer **Design Surface** 의 특정 속성에 대 한 직접 편집�
 
 ![크기 조정 핸들 없음](designer-basics-images/vs/20-no-resize-handles.png)
 
-
 ## <a name="document-outline"></a>문서 개요
 
 **문서 개요** 는 레이아웃의 위젯 계층 구조를 표시 합니다.
@@ -286,10 +279,7 @@ Android Designer **Design Surface** 의 특정 속성에 대 한 직접 편집�
 
 선택한 위젯의 개요 (이 경우 `LinearLayout`)도 **Design Surface**강조 표시 됩니다. 문서 개요에서 선택한 위젯은 **Design Surface**와 동기화 된 상태로 유지 됩니다. 이는 보기 그룹을 선택 하는 데 유용 하며 **Design Surface**에서 선택 하기가 쉽지 않습니다.
 
-**문서 개요** 는 복사 및 붙여넣기를 지원 하거나 끌어서 놓기를 사용할 수 있습니다. 끌어서 놓기는 문서 개요에서 **Design Surface** 뿐만 아니라 **문서 개요**의 **Design Surface** 에서 지원 됩니다. 또한 **문서 개요** 에서 항목을 마우스 오른쪽 단추로 클릭 하면 해당 항목에 대 한 상황에 맞는 메뉴가 표시 됩니다. 즉, **Design Surface**에서 동일한 위젯을 마우스 오른쪽 단추로 클릭 하면 표시 되는 상황에 맞는 메뉴가 표시 됩니다.
-
-
-
+**문서 개요** 는 복사 및 붙여넣기를 지원 하거나 끌어서 놓기를 사용할 수 있습니다. 끌어서 놓기는 **문서 개요에서** **Design Surface** 뿐만 아니라 **문서 개요**의 **Design Surface** 에서 지원 됩니다. 또한 **문서 개요** 에서 항목을 마우스 오른쪽 단추로 클릭 하면 해당 항목에 대 한 상황에 맞는 메뉴가 표시 됩니다. 즉, **Design Surface**에서 동일한 위젯을 마우스 오른쪽 단추로 클릭 하면 표시 되는 상황에 맞는 메뉴가 표시 됩니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -445,7 +435,6 @@ Design Surface는 다음과 같이 여러 컨트롤을 통한 확대/축소를 �
 *부울* 속성은 일반적으로 속성 패드에 확인란으로 표시 됩니다. `Boolean` 속성이 리소스 참조를 지 원하는 경우 속성 옆에 작은 확인란이 표시 됩니다. 선택 된 확인란 `true` 은이 고 빈 상자는 `false`를 의미 합니다. `true` 또는`false`와 같은 값을 직접 입력할 수도 있습니다. 입력 위로 마우스를 가져가면 작은 텍스트 필드 아이콘이 표시 됩니다. 값을 수동으로 입력 하려는 경우이를 클릭 하면 됩니다.
 
 [![부울 속성을 설정 하는 예](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
-
 
 ## <a name="grouped-properties"></a>그룹화 된 속성
 

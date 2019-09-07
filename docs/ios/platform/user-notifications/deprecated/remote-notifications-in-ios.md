@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ee2c54f2369682571520370e09d6d39c2cd86fa5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31c3c629686d6c7be03b95d7bfe0740599228bbd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290587"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769406"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
 
@@ -35,7 +35,6 @@ Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을
 - **256 바이트 메시지 제한** -알림의 전체 메시지 크기는 256 바이트를 초과 하면 안 됩니다.
 - **수신 확인 안 함** -APNS는 보낸 사람에 게 메시지를 보낸 사람에 게 보낸 알림을 제공 하지 않습니다. 장치에 연결할 수 없고 여러 순차적 알림이 전송 되는 경우 가장 최근 알림을 제외한 모든 알림이 손실 됩니다. 가장 최근의 알림만 장치에 전달 됩니다.
 - **각 응용 프로그램에는 보안 인증서가 필요** 합니다. APNS와의 통신은 SSL을 통해 수행 해야 합니다.
-
 
 ## <a name="creating-and-using-certificates"></a>인증서 만들기 및 사용
 
@@ -174,7 +173,6 @@ public override void FailedToRegisterForRemoteNotifications (UIApplication appli
 ## <a name="summary"></a>요약
 
 이 섹션에서는 iOS의 푸시 알림을 둘러싼 주요 개념을 소개 합니다. APNS (Apple Push Notification Gateway) 서비스의 역할에 대해 설명 했습니다. 그런 다음 APNS에 필수적인 보안 인증서의 생성 및 사용에 대해 설명 했습니다. 마지막으로,이 문서에서는 응용 프로그램 서버에서 *피드백 서비스* 를 사용 하 여 만료 된 장치 토큰 추적을 중지 하는 방법에 대해 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

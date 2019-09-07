@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: c684efe9bcb292869eb25b36067fcaa42b546a04
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 65c8466e2649c6d48cf5651f25d14c073dbcf5e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525930"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754426"
 ---
 # <a name="using-sqlitenet-with-android"></a>Android에서 SQLite.NET 사용
 
@@ -61,7 +61,6 @@ SQLite.NET 라이브러리를 사용할 수 있게 되 면 다음 세 단계를 
 ## <a name="basic-data-access-sample"></a>기본 데이터 액세스 샘플
 
 이 문서에 대 한 *DataAccess_Basic* 샘플 코드는 Android에서 실행 하는 경우와 같습니다. 이 코드에서는 간단한 SQLite.NET 작업을 수행 하 고 결과를 응용 프로그램의 주 창에 텍스트로 표시 하는 방법을 보여 줍니다.
-
 
 **Android**
 
@@ -140,7 +139,6 @@ public static void DoSomeDataAccess () {
 
 - **[고유]** &ndash; 기본 데이터베이스 열의 값이 고유한 지 확인 합니다.
 
-
 이러한 특성의 대부분은 선택 사항이 며, SQLite는 테이블 및 열 이름에 기본값을 사용 합니다. 데이터에 대해 선택 및 삭제 쿼리를 효율적으로 수행할 수 있도록 항상 정수 기본 키를 지정 해야 합니다.
 
 ## <a name="more-complex-queries"></a>더 복잡 한 쿼리
@@ -158,7 +156,6 @@ public static void DoSomeDataAccess () {
 - **쿼리&lt;T&gt;는여러 행을** 개체로반환하는SQL쿼리를수행합니다.&ndash;
 
 - **실행** SQL에서 행을 반환 하지 `Query`않을 경우 (예: INSERT, UPDATE 및 DELETE 명령)이 아닌이 메서드를 사용 합니다. &ndash;
-
 
 ### <a name="getting-an-object-by-the-primary-key"></a>기본 키로 개체 가져오기
 

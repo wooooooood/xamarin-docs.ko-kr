@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 492682b1f7647201f15678a5162281e0a7a916d6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 577bc7af34c463aec65148bd97dc5dd49262d699
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280091"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767092"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Xamarin.ios의 터치 이벤트 및 제스처
 
@@ -41,7 +41,6 @@ imgTouchMe.UserInteractionEnabled = true;
 - `TouchesBegan`– 화면이 처음으로 작업 될 때 호출 됩니다.
 - `TouchesMoved`– 사용자가 화면 주위에서 손가락을 이동할 때 터치 위치가 변경 될 때 호출 됩니다.
 - `TouchesEnded`또는 `TouchesCancelled` –`TouchesEnded` 사용자의 손가락이 화면에서 리프트 될 때 호출 됩니다.  `TouchesCancelled`iOS가 터치를 취소 하는 경우 호출 됩니다. 예를 들어 사용자가 단추에서 손가락을 이동 하 여 누르기를 취소 하는 경우를 예로 들 수 있습니다.
-
 
 터치 이벤트는 UIViews의 스택에서 재귀적으로 이동 하 여 터치 이벤트가 뷰 개체의 범위 내에 있는지 확인 합니다. 이를 종종 _적중 테스트_라고 합니다. 이러한 항목은 `UIView` 먼저 맨 위에 있는 또는 `UIViewController` 에서 호출 된 `UIView` 다음 뷰 계층 구조에 있는 `UIViewControllers` 및에서 호출 됩니다.
 
@@ -126,7 +125,6 @@ Xamarin.ios는 다음과 같은 기본 제공 `UIGestureRecognizer` 제스처 �
 - *UIRotationGestureRecognizer* – 시계 방향으로 두 손가락을 회전 하거나 시계 반대 방향으로 동작 합니다.
 - *UILongPressGestureRecognizer* – 길게 누르기 또는 긴 클릭이 라고도 하는 누르고 있습니다.
 
-
 제스처 인식기를 사용 하는 기본 패턴은 다음과 같습니다.
 
 1. **제스처 인식기 인스턴스화** – 먼저 `UIGestureRecognizer` 서브 클래스를 인스턴스화합니다. 인스턴스화된 개체는 뷰에 연결 되며 뷰가 삭제 되 면 가비지 수집 됩니다. 이 뷰를 클래스 수준 변수로 만들 필요는 없습니다.
@@ -152,7 +150,6 @@ _tapGesture.Recognizer.CancelsTouchesInView = false;
 1. *불연속* – 이러한 제스처는 처음 인식 될 때만 발생 합니다.
 1. *연속* – 이러한 제스처는 인식 되는 동안 계속 해 서 발생 합니다.
 
-
 제스처 인식기는 다음 상태 중 하나에 있습니다.
 
 - *가능* -모든 제스처 인식기의 초기 상태입니다. 상태 속성의 기본값입니다.
@@ -162,7 +159,6 @@ _tapGesture.Recognizer.CancelsTouchesInView = false;
 - *인식* 됨 – 제스처 인식기가 접촉 집합과 일치 하는 경우 상태가 설정 되며, 제스처가 완료 되었음을 구독자에 게 알립니다.
 - *종료* 됨 – 인식 된 상태에 대 한 별칭입니다.
 - *실패* -제스처 인식기가 수신 하는 터치와 더 이상 일치 하지 않을 경우 상태가 Failed로 변경 됩니다.
-
 
 Xamarin.ios는 `UIGestureRecognizerState` 열거형의 이러한 값을 나타냅니다.
 
@@ -178,7 +174,6 @@ IOS에서 제스처를 사용 하지 않도록 설정할 수도 있습니다. �
 
 1. *ShouldReceiveTouch* –이 대리자는 제스처 인식기가 터치 이벤트를 전달 하기 바로 전에 호출 되며 터치를 검사 하 고 제스처 인식기에서 처리할 터치를 결정할 수 있는 기회를 제공 합니다.
 1. *Shouldbegin* – 인식기가 상태를 가능한 다른 상태로 변경 하려고 할 때 호출 됩니다. False를 반환 하면 제스처 인식기의 상태가 실패로 변경 됩니다.
-
 
 다음 코드 조각에 나와 있는 것 처럼 강력한 `UIGestureRecognizerDelegate`형식의 약한 대리자 또는 이벤트 처리기 구문을 통해 바인딩할 수 있습니다.
 
@@ -199,6 +194,5 @@ IOS에서는 몇 가지 기본 제스처 인식자를 제공 하지만 특정 �
 1. 서브 `UIGestureRecognizer` 클래스입니다.
 1. 적절 한 터치 이벤트 메서드를 재정의 합니다.
 1. 기본 클래스의 State 속성을 통해 인식 상태를 버블링 합니다.
-
 
 이에 대 한 실질적인 예는 [iOS에서 Touch 사용](ios-touch-walkthrough.md) 연습에서 설명 합니다.

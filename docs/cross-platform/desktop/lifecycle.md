@@ -5,12 +5,12 @@ description: 이 문서에서는 Xamarin.ios 및 WPF 응용 프로그램에 대 
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: 8c009c079842a6a110212693a56489ca2ad5d263
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d1c207672baf37c91d39fca1d9f628d85971577
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290381"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765898"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>WPF 및 Xamarin.Forms 앱 수명 주기
 
@@ -87,7 +87,6 @@ Xamarin.ios는 주로 모바일 시나리오를 중심으로 합니다. 따라�
 |일시 중단/포커스 손실|Window.OnDeactivated|Page.OnSleep|
 |활성화/포커스를 가져왔습니다.|Window.OnActivated|Page.OnResume|
 |Closed|창. OnClosing + 창. Onclosing|n/a|
-
 
 두 가지 모두 자식 컨트롤을 숨기 거 나 표시 하는 기능을 지원 합니다. WPF에서는 `IsVisible` 세 가지 상태 속성 (visible, hidden 및 축소)입니다. Xamarin.ios에서는 `IsVisible` 속성을 통해 표시 하거나 숨길 수 있습니다.
 

@@ -1,18 +1,18 @@
 ---
 title: 요약 4 장입니다. 스택 스크롤
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 4 장입니다. 스택 스크롤
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 4 장입니다. 스택 스크롤'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66e4f52e87a4398dd2e09d2d128f43de9a71a665
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334597"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760835"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>요약 4 장입니다. 스택 스크롤
 
@@ -110,8 +110,6 @@ ms.locfileid: "61334597"
 트릭을 제공 하는 것을 `ScrollView` 자식의 `StackLayout` 는 `VerticalOptions` 설정 `FillAndExpand`합니다. 에 설명 되어이 [ **BlackCat** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCat) 샘플입니다.
 
 합니다 **BlackCat** 샘플 정의 공유 라이브러리에 포함 된 프로그램 리소스에 액세스 하는 방법을 보여 줍니다. 또한 공유 자산 프로젝트 SAPs ()를 사용 하 여 수행할 수 있습니다 하지만 프로세스는으로 조금 더 까다롭습니다 합니다 [ **BlackCatSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) 샘플을 보여 줍니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

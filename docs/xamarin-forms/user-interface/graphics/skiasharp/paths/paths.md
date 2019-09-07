@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 370fec5b9323187f6345d3e6bf9d3e38145cedff
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eee338461593ad131f679d32cadf63fe3b1a4c40
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652777"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759339"
 ---
 # <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
@@ -194,7 +194,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 [![](paths-images/strokejoins-small.png "선 조인 페이지 스크린샷 삼중")](paths-images/strokejoins-large.png#lightbox "삼중 스트로크 조인 페이지 스크린샷")
 
 마이터 조인을 줄에 연결 하는 # 지점으로 구성 됩니다. 두 줄에 작은 각도로 가입 마이터 조인을 상당히 길어질 수 있습니다. 지나치게 긴 마이터 조인을 방지 하려면 마이터 조인 길이의 값을 기준으로 제한 됩니다 합니다 [ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter) 속성의 `SKPaint`합니다. 이 길이 초과 하는 음 빗면 조인 되도록 잘려 됩니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

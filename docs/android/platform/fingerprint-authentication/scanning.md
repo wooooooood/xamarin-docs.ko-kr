@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/23/2016
-ms.openlocfilehash: 15afd5b1812e0423097e889cd8c2558ca01a8074
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4ead912b55790caf3e2e1f22e149f5682e6bb697
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119749"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761214"
 ---
 # <a name="scanning-for-fingerprints"></a>지문을 검색 하는 중
 
@@ -59,9 +59,6 @@ protected void FingerPrintAuthenticationExample()
 사용자 (또는 응용 프로그램)가 시작 된 후 지문 검색을 취소 해야 할 수도 있습니다. 이 경우 지문 검사를 시작 [`IsCancelled`](https://developer.android.com/reference/android/os/CancellationSignal.html#isCanceled()) 하기 위해 호출 [`CancellationSignal`](https://developer.android.com/reference/android/os/CancellationSignal.html) 될 때에 `FingerprintManager.Authenticate` 대해 제공 된에서 메서드를 호출 합니다.
 
 이제 `Authenticate` 메서드를 살펴보았으므로 이제 더 중요 한 매개 변수 중 일부를 좀 더 자세히 살펴보겠습니다. 먼저 [인증 콜백에 응답](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md)하 여 Android 응용 프로그램이 지문 스캐너에서 제공 하는 결과에 반응할 수 있도록 [FingerprintManager 콜백을](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)서브 클래스 하는 방법을 설명 합니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

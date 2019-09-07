@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ac1ded56137cf85ec5852358f75240176dbc7671
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 35c35e702b7f992e0661630783edd4f00abce5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286798"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767370"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Xamarin.ios에서 속성 목록 작업
 
@@ -32,7 +32,6 @@ Mac용 Visual Studio에는 앱 속성과 기능을 보다 쉽게 편집할 수 �
 - **고급 패널** -고급 패널은 지원 되는 문서 유형, UTIS 및 URL 유형을 지정 하는 장소입니다.
 - **원본 패널** -원본 패널은 응용 프로그램에 대 한 사용자 지정 속성 뿐만 아니라 더 낮은 공용 속성을 제어 합니다.
 
-
 다음 세 개의 섹션에서는 각 패널의 기능을 자세히 조사 합니다.
 
 ## <a name="application-panel"></a>응용 프로그램 패널
@@ -46,11 +45,9 @@ Mac용 Visual Studio는 응용 프로그램의 공통 `Info.plist` 항목을 편
 1. 아이콘 및 시작 화면
 1. 지도 및 백그라운드 모드
 
-
 이러한 내용은 다음 섹션에 자세히 설명 되어 있습니다.
 
  <a name="iOS_Application_Target" />
-
 
 ### <a name="ios-application-target"></a>iOS 응용 프로그램 대상
 
@@ -77,13 +74,9 @@ Mac용 Visual Studio는 응용 프로그램의 공통 `Info.plist` 항목을 편
 
  <a name="Icons" />
 
-
 ### <a name="icons-launch-images-and-itunes-artwork"></a>아이콘, 시작 이미지 및 iTunes 아트 워크
 
 Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 방법에 대 한 정보는 [이미지 작업](~/ios/app-fundamentals/images-icons/index.md) 가이드에서 찾을 수 있습니다.
-
-
-
 
 ### <a name="maps-integration-and-background-modes"></a>지도 통합 및 백그라운드 모드
 
@@ -104,7 +97,6 @@ Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 
  [![](property-lists-images/image34.png "고급 패널")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
-
 
 ## <a name="document-types"></a>문서 유형
 
@@ -127,8 +119,6 @@ Info.plist 파일에서 아이콘, 이미지 및 아트 워크를 사용 하는 
 Url 체계 이름 (프로토콜이 라고도 함)은 URL의 첫 번째 부분입니다. 예를 `http://` 들어 및 `https://` 는 일반적인 URL 체계입니다. 응용 프로그램에 대 한 사용자 지정 URL 체계를 만들 수 있습니다. 사용자 지정 URL 체계는 다른 응용 프로그램과 주고받는 데이터를 주고받는 데 사용 됩니다. 다음 스크린샷에서는 이라는 `monkeys://`새 사용자 지정 URL 구성표를 만드는 방법을 보여 줍니다.
 
  [![](property-lists-images/url.png "사용자 지정 Url")](property-lists-images/url.png#lightbox)
-
-
 
 사용자 지정 URL 체계를 구현 하는 방법에 대 한 자세한 내용은 [이 가이드의 Apple의 사용자 지정 Url 구성표 구현 섹션](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html) 을 참조 하세요.
 
@@ -153,7 +143,6 @@ Mac용 Visual Studio는 다음과 같이 속성 형식도 검색 합니다.
 ## <a name="summary"></a>요약
 
 이 문서에서는 그래픽 및 info.plist 편집기를 사용 하 여 일반 앱 구성을 편집 하 고 아이콘을 지정 하 고 이미지를 시작 하는 방법을 보여 주었습니다. 응용 프로그램 기능을 `Entitlements.plist` 추가 하 고 관리 하기 위한도 도입 되었습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

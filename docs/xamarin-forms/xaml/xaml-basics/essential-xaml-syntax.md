@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: b55c9d8a65dbb4e44605295043d1b302295030ce
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f79a07a04eddeea1441f7938fdef210a37fb920a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228068"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772885"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>2부. 필수 XAML 구문
 
@@ -85,7 +85,6 @@ XAML에서 클래스의 속성은 일반적으로 다음과 같이 XML 특성으
 - `Label`은 *개체 요소*입니다. XML 요소로 표현된 Xamarin.Forms 개체입니다.
 - `Text`, `VerticalOptions`, `FontAttributes` 및 `FontSize`는 *속성 특성* 입니다. 이들은 XML 특성으로 표현된 Xamarin.Forms 속성입니다.
 - 해당 마지막 조각에서 `TextColor`는 *속성 요소*가 되었습니다. 이는 Xamarin.Forms 속성이지만 이제 XML 요소입니다.
-
 
 속성 요소의 정의는 처음에는 XML 구문을 위반하는 것처럼 보일 수 있지만 그렇지 않습니다. 마침표는 XML에서 특별한 의미가 없습니다. XML 디코더에서 `Label.TextColor`는 단순히 일반적인 자식 요소입니다.
 

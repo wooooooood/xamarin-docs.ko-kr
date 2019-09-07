@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 4301022ae665498eaf90ca1e1786afbd6d19094a
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198389"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763971"
 ---
 # <a name="packaging-wear-apps"></a>패키지 마모 앱
 
@@ -47,8 +47,7 @@ Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 
 
 -----
 
-
-마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예를 들어:
+마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예:
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -75,7 +74,6 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
     ```
 
 - 푸시 응용 프로그램을 Hpc 프로젝트에 **원시** 리소스로 추가 합니다. 
-
 
 ## <a name="manual-packaging"></a>수동 패키징
 
@@ -105,4 +103,3 @@ Android 용 앱은 버전 5.0 이전에 Xamarin.ios에서 작성할 수 있지�
     ```
 
 Android 개발자 사이트의 [manual packging 지침](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually)도 참조 하세요.
-

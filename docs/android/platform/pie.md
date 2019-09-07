@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: d4d7379e1d4d2dd605331b30d692df299f5f5c13
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6475cd0f27e41321902b57dd28f59bfb250e0c8f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523669"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757456"
 ---
 # <a name="android-pie-features"></a>Android 원형 기능
 
@@ -69,7 +69,7 @@ Xamarin. Android 9.0를 사용 하 여 프로젝트를 만들려면 먼저 Andro
 
     [![리포지토리를 Google으로 설정](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
-3. 플랫폼 탭에 **Android SDK Platform 28** 로 나열 된 **Android 원형** SDK 패키지를 설치 합니다 (SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 [Android SDK 설치](~/android/get-started/installation/android-sdk.md)참조).
+3. **플랫폼 탭에** **Android SDK Platform 28** 로 나열 된 **Android 원형** SDK 패키지를 설치 합니다 (SDK Manager를 사용 하는 방법에 대 한 자세한 내용은 [Android SDK 설치](~/android/get-started/installation/android-sdk.md)참조).
 
     [![Android 원형 패키지 설치](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
@@ -81,15 +81,12 @@ Xamarin. Android 9.0를 사용 하 여 프로젝트를 만들려면 먼저 Andro
 
 Android 프로젝트를 만들 때 Android 9.0 이상 버전을 대상으로 하도록 버전 설정을 구성 해야 합니다. 예를 들어 Android 원형 용 프로젝트를 대상으로 하려면 프로젝트의 대상 Android API 수준을 **android 9.0** (API 28)로 구성 해야 합니다. 대상 프레임 워크 수준을 API 28 이상으로 설정 하는 것이 좋습니다. Android API 수준 구성에 대 한 자세한 내용은 [ANDROID Api 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.
 
-
 ### <a name="configure-a-device-or-emulator"></a>장치 또는 에뮬레이터 구성
 
 Nexus 또는 픽셀과 같은 물리적 장치를 사용 하는 경우 [nexus 및 픽셀 장치용 팩터리 이미지](https://developers.google.com/android/images)의 지침에 따라 Android 원형으로 장치를 업데이트할 수 있습니다.
 
 에뮬레이터를 사용 하는 경우 API 레벨 28 용 가상 장치를 만들고 x86 기반 이미지를 선택 합니다. Android Device Manager를 사용 하 여 가상 장치를 만들고 관리 하는 방법에 대 한 자세한 내용은 Android Device Manager를 사용 하 여 [가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md)를 참조 하세요.
 테스트 및 디버깅에 Android 에뮬레이터를 사용 하는 방법에 대 한 자세한 내용은 [Android Emulator의 디버깅](~/android/deploy-test/debugging/debug-on-emulator.md)을 참조 하세요.
-
-
 
 ## <a name="new-features"></a>새 기능
 
@@ -102,7 +99,6 @@ Android 원형에는 다양 한 새로운 기능이 도입 되었습니다. 이�
 - **실내 위치 지정** &ndash; Wifi 왕복 시간 프로토콜에 대 한 플랫폼 지원으로 앱에서 실내 설정 탐색에 wifi 장치를 사용할 수 있습니다.
 
 - **다중 카메라 지원** &ndash; 에서는 여러 실제 카메라 (예: 이중 전면 카메라 및 이중 후면 카메라)에서 스트림에 동시에 액세스할 수 있는 기능을 제공 합니다.
-
 
 다음 섹션에서는 이러한 기능을 강조 하 고 응용 프로그램에서 사용을 시작 하는 데 도움이 되는 간단한 코드 예제를 제공 합니다.
 
@@ -138,8 +134,6 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 장치의 오려내기 영역에 대 한 자세한 정보가 필요한 경우 새 [Displaycutout](https://developer.android.com/reference/android/view/DisplayCutout.html) 클래스를 사용할 수 있습니다. `DisplayCutout`콘텐츠를 표시 하는 데 사용할 수 없는 디스플레이 영역을 나타냅니다. 이 정보를 사용 하 여 앱이 기능을 사용 하지 않는 영역에 콘텐츠를 표시 하지 않도록 잘라낸 위치와 셰이프를 검색할 수 있습니다.
 
 Android P의 새로운 컷아웃 기능에 대 한 자세한 내용은 [잘라낸 부분 표시 지원](https://developer.android.com/about/versions/pie/android-9.0#cutout)을 참조 하세요.
-
-
 
 ### <a name="notifications-enhancements"></a>알림 기능 향상
 
@@ -206,7 +200,6 @@ Android 원형은 다음과 같은 향상 된 기능을 제공 하 여 메시징
 
 알림을 만드는 방법에 대 한 자세한 내용은 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)을 참조 하세요.
 
-
 ### <a name="indoor-positioning"></a>실내 위치 지정
 
 Android 원형은 IEEE 802.11 mc ( _wifi 왕복 시간_ 또는 _wifi RTT_라고도 함)에 대 한 지원을 제공 하 여 앱이 하나 이상의 wi-fi 액세스 지점과의 거리를 검색할 수 있도록 합니다. 이 정보를 사용 하 여 앱이 1 ~ 2 미터의 정확도로 *실내 배치* 를 활용할 수 있습니다. IEEE 801.11 mc에 대 한 하드웨어 지원을 제공 하는 Android 장치에서 앱은 스마트 어플라이언스의 위치 기반 제어와 같은 탐색 기능을 제공 하거나 스토어를 통해 단계별 지침을 수행할 수 있습니다.
@@ -214,7 +207,6 @@ Android 원형은 IEEE 802.11 mc ( _wifi 왕복 시간_ 또는 _wifi RTT_라고�
 [![WiFi RTT를 사용 하는 실내 탐색의 예](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 새 [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) 클래스와 여러 도우미 클래스는 wi-fi 장치에 대 한 거리를 측정 하는 방법을 제공 합니다. Android P에서 도입 된 실내 위치 지정 Api에 대 한 자세한 내용은 [android .net.](https://developer.android.com/reference/android/net/wifi/rtt/package-summary)
-
 
 ### <a name="multi-camera-support"></a>다중 카메라 지원
 
@@ -224,7 +216,6 @@ Android 원형은 IEEE 802.11 mc ( _wifi 왕복 시간_ 또는 _wifi RTT_라고�
 Android 원형에는 초기 캡처 시 지연을 줄이고 카메라 스트림을 시작 하 고 시작할 필요가 없도록 하는 데 사용할 수 있는 새로운 [SessionConfiguration](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) 클래스도 포함 되어 있습니다.
 
 Android P의 다중 카메라 지원에 대 한 자세한 내용은 [다중 카메라 지원 및 카메라 업데이트](https://developer.android.com/about/versions/pie/android-9.0#camera)를 참조 하세요.
-
 
 ### <a name="other-features"></a>기타 기능
 
@@ -240,7 +231,6 @@ Android P의 다중 카메라 지원에 대 한 자세한 내용은 [다중 카�
 
 최신 Android 원형 기능에 대 한 자세한 내용은 [android 9의 기능 및 api](https://developer.android.com/about/versions/pie/android-9.0)를 참조 하세요.
 
-
 ## <a name="behavior-changes"></a>동작 변경
 
 대상 Android 버전이 API 수준 28로 설정 된 경우 위에 설명 된 새로운 기능을 구현 하지 않는 경우에도 앱의 동작에 영향을 줄 수 있는 몇 가지 플랫폼 변경이 있습니다. 다음 목록은 이러한 변경 내용에 대 한 간략 한 요약입니다.
@@ -253,17 +243,14 @@ Android P의 다중 카메라 지원에 대 한 자세한 내용은 [다중 카�
 
 Android P를 대상으로 하는 앱의 동작 변경에 대 한 자세한 내용은 [동작 변경](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps)을 참조 하세요.
 
-
 ## <a name="sample-code"></a>샘플 코드
 
 [AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo) 는 디스플레이 컷아웃 모드를 설정 하는 방법, 새 `Person` 클래스를 사용 하는 방법 및 이미지를 포함 하는 알림을 보내는 방법을 보여 주는 android 용 Xamarin 샘플 앱입니다.
-
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Android 원형을 소개 하 고 Android 원형을 사용 하 여 Xamarin Android 개발용 최신 도구 및 패키지를 설치 하 고 구성 하는 방법을 설명 했습니다. Android 원형에서 사용할 수 있는 주요 기능에 대 한 개요를 제공 했으며 이러한 기능 중 몇 가지에 대 한 소스 코드를 예로 들 수 있습니다.
 Android 용 앱 만들기를 시작 하는 데 도움이 되는 API 설명서 및 Android 개발자 항목에 대 한 링크가 포함 되어 있습니다. 또한 기존 앱에 영향을 줄 수 있는 가장 중요 한 Android 원형 동작 변경 내용도 강조 표시 되어 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

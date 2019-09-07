@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: c0a35414cce6ff9981ad7825c8158a2f6f707585
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cb7e8aaca13405aedd422288421d497653ddbfe8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119503"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761200"
 ---
 # <a name="firebase-job-dispatcher"></a>Firebase 작업 디스패처
 
 _이 가이드에서는 Google에서 Firebase 작업 디스패처 라이브러리를 사용 하 여 백그라운드 작업을 예약 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -66,7 +65,6 @@ Firebase 작업 디스패처를 시작 하려면 먼저 xamarin.ios 프로젝트
 
 Firebase Job 디스패처 라이브러리를 추가한 후 `JobService` 클래스를 만든 다음 인스턴스 `FirebaseJobDispatcher`를 사용 하 여 실행 되도록 예약 합니다.
 
-
 ### <a name="creating-a-jobservice"></a>JobService 만들기
 
 Firebase 작업 디스패처 라이브러리에서 수행 하는 모든 작업은 추상 클래스를 `Firebase.JobDispatcher.JobService` 확장 하는 형식에서 수행 해야 합니다. 를 `JobService` 만드는 것은 Android framework를 사용 `Service` 하 여을 만드는 것과 매우 비슷합니다. 
@@ -108,7 +106,7 @@ public class DemoJob : JobService
 ### <a name="creating-a-firebasejobdispatcher"></a>FirebaseJobDispatcher 만들기
 
 작업을 예약 하려면 먼저 `Firebase.JobDispatcher.FirebaseJobDispatcher` 개체를 만들어야 합니다. 는를 예약 하 `JobService`는 일을담당합니다.`FirebaseJobDispatcher` 다음 코드 조각은 인스턴스 `FirebaseJobDispatcher`를 만드는 한 가지 방법입니다. 
- 
+
  ```csharp
 // This is the "Java" way to create a FirebaseJobDispatcher object
 IDriver driver = new GooglePlayDriver(context);
@@ -163,7 +161,7 @@ int scheduleResult = dispatcher.Schedule(myJob);
 - `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable`잘못 된이 사용 되었거나를 `IDriver` 사용할 수 없습니다. `IDriver` &ndash; 
 - `FirebaseJobDispatcher.ScheduleResultUnsupportedTrigger`&ndash; 은`Trigger` 지원 되지 않습니다.
 - `FirebaseJobDispatcher.ScheduleResultBadService`&ndash; 서비스가 올바르게 구성 되지 않았거나 사용할 수 없습니다.
- 
+
 ### <a name="configuring-a-job"></a>작업 구성
 
 작업을 사용자 지정할 수 있습니다. 작업을 사용자 지정할 수 있는 방법의 예는 다음과 같습니다.
@@ -243,7 +241,7 @@ Job myJob = dispatcher.NewJobBuilder()
 #### <a name="setting-a-retrystrategy"></a>RetryStrategy 설정
 
 는 실패 한 작업을 다시 실행 하기 전에 장치에서 사용 해야 하는 지연의 양을 지정 하는 데 사용 됩니다.`Firebase.JobDispatcher.RetryStrategy` 에 `RetryStrategy` 는 실패 한 작업을 다시 예약 하는 데 사용 되는 시간 기준 알고리즘과 작업을 예약 해야 하는 창을 지정 하는 실행 기간을 정의 하는 _정책이_있습니다. 이러한 다시 _예약 창은_ 두 값으로 정의 됩니다. 첫 번째 값은 작업을 다시 예약 하기 전까지 대기 하는 시간 (초) ( _초기 백오프_ 값)이 고, 두 번째 값은 작업을 실행 해야 하는 최대 시간 (초) ( _최대 백오프_ 값)입니다. 
- 
+
 두 가지 유형의 재시도 정책은 다음 int 값으로 식별 됩니다.
 
 - `RetryStrategy.RetryPolicyExponential`지 수 백오프 정책은 각 실패 후에 초기 백오프 값을 지 수로 늘립니다. &ndash; 작업이 처음으로 실패 하면 라이브러리는 작업 &ndash; 예제를 30 초 간격으로 다시 예약 하기 전에 지정 된 초기 간격을 대기 합니다 (_m). 작업이 실패 하는 두 번째 경우 라이브러리는 작업을 실행 하기 전에 최소 60 초 정도 기다립니다. 세 번째 실패 후 라이브러리는 120 초 정도 대기 하 게 됩니다. Firebase 작업 `RetryStrategy` 디스패처 라이브러리의 기본값은 `RetryStrategy.DefaultExponential` 개체로 표시 됩니다. 초기 백오프 30 초이 고 최대 백오프는 3600 초입니다.
@@ -286,7 +284,6 @@ int cancelResult = dispatcher.Cancel("unique-tag-for-job");
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Firebase 작업 디스패처를 사용 하 여 백그라운드에서 작업을 지능적으로 수행 하는 방법에 대해 설명 했습니다. 에서 수행 `JobService` 되는 작업을 캡슐화 하는 방법과를 `FirebaseJobDispatcher` 사용 하 여 해당 작업을 예약 하는 방법을 설명 하 고를 사용 하 `JobTrigger` 여 조건을 지정 하 `RetryStrategy`고 오류를로 처리 하는 방법을 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

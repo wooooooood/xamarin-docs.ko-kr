@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 46db28dab32f14fa476b9fbb42b788feb669aa74
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3a0737a5a28ced1ec55246d0586d4cfe28363f3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291859"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753446"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Xamarin.ios의 3D 터치 소개
 
@@ -66,9 +66,6 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 
 > [!IMPORTANT]
 > 압력을 변경 하면 X/ `TouchesMoved` Y 좌표가 변경 되지 않은 경우에도 이벤트가 발생 합니다. 이러한 동작 변경으로 인해 `TouchesMoved` 이벤트를 더 자주 호출 하 고 X/Y 좌표가 마지막 `TouchesMoved` 호출과 동일 하도록 iOS 앱을 준비 해야 합니다.
-
-
-
 
 자세한 내용은 Apple의 [TouchCanvas를 참조 하세요. UITouch 효율적이 고 효과적](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/) 으로 샘플 앱 및 [UITouch 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/)를 사용 합니다.
 
@@ -210,7 +207,6 @@ public override void ViewDidLoad ()
 
 [![](3d-touch-images/quickactions01.png "빠른 작업 메뉴의 예")](3d-touch-images/quickactions01.png#lightbox)
 
-
 ### <a name="defining-static-quick-actions"></a>정적 빠른 작업 정의
 
 앱에 필요한 빠른 작업 중 하나 이상이 정적이 고 변경 하지 않아도 되는 경우 앱의 `Info.plist` 파일에서 정의할 수 있습니다. 외부 편집기에서이 파일을 편집 하 고 다음 키를 추가 합니다.
@@ -282,10 +278,6 @@ public override void ViewDidLoad ()
 
 > [!IMPORTANT]
 > `Info.plist` 파일에 설정 된 빠른 작업 바로 가기 항목은 `Application.ShortcutItems` 속성을 사용 하 여 액세스할 수 없습니다. `HandleShortcutItem` 이벤트 처리기에만 전달 됩니다.
-
-
-
-
 
 ### <a name="identifying-quick-action-items"></a>빠른 작업 항목 식별
 
@@ -387,7 +379,6 @@ public override void PerformActionForShortcutItem (UIApplication application, UI
 
 마지막으로, 앱이 이미 실행 중인 `PerformActionForShortcutItem` 경우에는 메서드를 호출 하 여 빠른 작업 항목을 처리 하 고이를 재정의 하 고 여기에서 `HandleShortcutItem` 메서드를 호출 해야 합니다.
 
-
 ### <a name="creating-dynamic-quick-action-items"></a>동적 빠른 작업 항목 만들기
 
 앱의 `Info.plist` 파일에서 정적 빠른 작업 항목을 정의 하는 것 외에 동적 빠른 작업을 신속 하 게 만들 수 있습니다. 두 개의 새로운 동적 작업을 정의 하려면 `AppDelegate.cs` 파일을 다시 편집 하 고 `FinishedLaunching` 메서드를 다음과 같이 수정 합니다.
@@ -446,8 +437,6 @@ Xcode 및 트랙 패드를 사용 하 Force Touch 여 호환 가능한 Mac에서
 ## <a name="summary"></a>요약
 
 이 문서에서는 iPhone 6s 및 iPhone 6s Plus에 대해 iOS 9에서 사용할 수 있는 새로운 3D Touch Api를 소개 했습니다. 앱에 압력 민감도를 추가 하는 것을 설명 합니다. 피킹 (Peeking) 및 Pop를 사용 하 여 탐색 없이 현재 컨텍스트에서 앱 내 정보를 신속 하 게 표시 합니다. 빠른 작업을 사용 하 여 앱의 가장 일반적으로 사용 되는 기능에 대 한 바로 가기를 제공 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

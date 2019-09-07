@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08738a751fd630c6a413b1c7393f8007f5c97060
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4d406b492e2f55604daf8a1c6b4be32f23b63f54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643554"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761229"
 ---
 # <a name="fingerprint-authentication-guidance"></a>지문 인증 지침
 
@@ -34,8 +34,6 @@ Android 6.0 지문 인증을 둘러싼 개념 및 Api를 살펴보았으므로 �
 먼저 지문 API 자체 `FingerprintManager` (및 `FingerprintManagerCompat`)에 대해 설명 했습니다. 응용 프로그램에서 추상 `FingerprintManager.AuthenticationCallbacks` 클래스를 확장 하 고 지문 하드웨어와 응용 프로그램 자체 사이에 중개자로 사용 하는 방법을 살펴보았습니다. 그런 다음 Java `Cipher` 개체를 사용 하 여 지문 스캐너 결과의 무결성을 확인 하는 방법을 살펴보았습니다. 마지막으로, 장치에 지문을 등록 하 고 **adb** 를 사용 하 여 에뮬레이터에서 지문 살짝 밀기를 시뮬레이션 하는 방법을 설명 하는 테스트에 대해 약간의 노력을 했습니다. 
 
 아직 수행 하지 않은 경우이 가이드와 함께 제공 되는 [샘플 응용 프로그램](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) 을 확인 해야 합니다. [지문 대화 상자 샘플](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) 은 Java에서 xamarin.ios로 이식 되었으며 android 응용 프로그램에 지문 인증을 추가 하는 방법에 대 한 또 다른 예제를 제공 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

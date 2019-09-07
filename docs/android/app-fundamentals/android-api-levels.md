@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 8c4050f439f3499289063c286afd255241bf0343
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6e2e4cd854e60f6147104b6b1361d0ab7b234370
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521461"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755817"
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
 _Xamarin.ios에는 여러 버전의 Android와 앱의 호환성을 결정 하는 몇 가지 Android API 수준 설정이 있습니다. 이 가이드에서는 이러한 설정의 의미, 구성 방법 및 런타임에 응용 프로그램에 미치는 영향에 대해 설명 합니다._
-
 
 ## <a name="quick-start"></a>빠른 시작
 
@@ -67,15 +66,11 @@ Xamarin Android는 다음과 같은 세 가지 Android API 수준 프로젝트 �
 
 -----
 
-
 앱이 여러 Android 버전을 지 원하는 경우 코드에 런타임 검사를 포함 하 여 앱이 최소 Android 버전 설정으로 작동 하는지 확인 해야 합니다 (자세한 내용은 아래의 [Android 버전에 대 한 런타임 검사](#runtimechecks) 참조). 라이브러리를 사용 하거나 만드는 경우 라이브러리에 대 한 API 수준 설정 구성의 모범 사례는 아래의 [API 수준 및 라이브러리](#libraries) 를 참조 하세요.
-
-
 
 ## <a name="android-versions-and-api-levels"></a>Android 버전 및 API 수준
 
 Android 플랫폼이 진화 하 고 새로운 Android 버전이 출시 됨에 따라 각 Android 버전에는 *API 수준*이라는 고유한 정수 식별자가 할당 됩니다. 따라서 각 Android 버전은 단일 Android API 수준에 해당 합니다. 사용자가 최신 버전의 Android 뿐만 아니라 이전 버전의 앱을 설치 하기 때문에, 실제 Android 앱은 여러 Android API 수준에서 작동 하도록 설계 되어야 합니다.
-
 
 ### <a name="android-versions"></a>Android 버전
 
@@ -93,7 +88,6 @@ Android 코드 이름은 다음 표에 표시 된 것 처럼 여러 버전 및 A
 
 이 표에 나와 있는 것 처럼 새 Android 버전은 &ndash; 종종 연간 릴리스를 두 개 이상 릴리스 합니다. 따라서 앱을 실행할 수 있는 Android 장치에는 다양 한 이전 버전 및 최신 Android 버전이 포함 됩니다. 앱이 여러 다른 버전의 Android에서 일관 되 고 안정적으로 실행 되도록 보장 하려면 어떻게 해야 하나요? Android의 API 수준은이 문제를 관리 하는 데 도움이 될 수 있습니다.
 
-
 ### <a name="android-api-levels"></a>Android API 수준
 
 각 android 장치는 정확히 *하나의* api 수준 &ndash; 에서 실행 됩니다 .이 api 수준은 Android 플랫폼 버전에 따라 고유 하 게 보장 됩니다. API 수준은 앱이 호출할 수 있는 API 집합의 버전을 정확 하 게 식별 합니다. 개발자로 코딩 하는 매니페스트 요소, 권한 등의 조합을 식별 합니다. Android의 API 수준 시스템은 장치에 응용 프로그램을 설치 하기 전에 android에서 응용 프로그램이 Android 시스템 이미지와 호환 되는지 확인 하는 데 도움이 됩니다.
@@ -106,11 +100,9 @@ Android 코드 이름은 다음 표에 표시 된 것 처럼 여러 버전 및 A
 
 이러한 설정은 설치 시 Android 장치에서 앱을 올바르게 실행 하는 데 필요한 기능을 사용할 수 있는지 확인 하는 데 사용 됩니다. 그렇지 않은 경우 해당 장치에서 앱이 실행 되지 않도록 차단 됩니다. 예를 들어 Android 장치의 API 수준이 앱에 대해 지정한 최소 API 수준 보다 낮으면 Android 장치에서 사용자가 앱을 설치 하지 못하게 됩니다.
 
-
 ## <a name="project-api-level-settings"></a>프로젝트 API 수준 설정
 
 다음 섹션에서는 SDK Manager를 사용 하 여 대상으로 지정할 API 수준에 대 한 개발 환경을 준비 하는 방법에 대해 설명 하 고, *대상 프레임 워크*, *최소 Android 버전*및 *를 구성 하는 방법에 대 한 자세한 설명을 설명 합니다. Xamarin android의 대상 Android 버전* 설정입니다.
-
 
 ### <a name="android-sdk-platforms"></a>Android SDK 플랫폼
 
@@ -120,7 +112,7 @@ Xamarin.ios에서 대상 또는 최소 API 수준을 선택 하려면 먼저 해
 
 ### <a name="target-framework"></a>대상 프레임워크
 
-*대상 프레임 워크* (라고도 함 `compileSdkVersion`)는 빌드할 때 앱이 컴파일되는 특정 Android Framework 버전 (API 수준)입니다. 이 설정은 앱을 실행할 때 앱 에서 사용 해야 하는 api를 지정 하지만, 앱이 설치 될 때 앱에서 실제로 사용할 수 있는 api에는 영향을 주지 않습니다. 따라서 대상 프레임 워크 설정을 변경 해도 런타임 동작은 변경 되지 않습니다.
+*대상 프레임 워크* (라고도 함 `compileSdkVersion`)는 빌드할 때 앱이 컴파일되는 특정 Android Framework 버전 (API 수준)입니다. 이 설정은 앱을 실행할 때 앱에서 사용 해야 하는 Api를 지정 하지만, 앱이 설치 될 *때 앱에서* 실제로 사용할 수 있는 api에는 영향을 주지 않습니다. 따라서 대상 프레임 워크 설정을 변경 해도 런타임 동작은 변경 되지 않습니다.
 
 대상 프레임 워크는 응용 프로그램이 연결 &ndash; 된 라이브러리 버전을 식별 하 여 앱에서 사용할 수 있는 api를 결정 합니다. 예를 들어 Android 5.0 롤리팝에서 도입 된 [Notificationbuilder. SetCategory](xref:Android.App.Notification.Builder.SetCategory*) 메서드를 사용 하려면 대상 프레임 워크를 **API 수준 21 (롤리팝)** 이상으로 설정 해야 합니다. 프로젝트의 대상 프레임 워크를 **api 수준 19 (KitKat)** 와 같은 api 수준으로 설정 하 고 코드에서 `SetCategory` 메서드를 호출 하려고 하면 컴파일 오류가 발생 합니다.
 
@@ -144,7 +136,6 @@ Mac용 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면
 
 -----
 
-
 <a name="minimum" />
 
 ### <a name="minimum-android-version"></a>최소 Android 버전
@@ -153,7 +144,6 @@ Mac용 Visual Studio에서 대상 프레임 워크 설정에 액세스 하려면
 
 앱이이 범위 내에서 성공적으로 빌드 및 설치 될 수 있지만 이러한 플랫폼 모두에서 성공적으로 *실행* 되는 것은 아닙니다. 예를 들어 앱이 **android 5.0 (롤리팝)** 에 설치 되어 있고 코드가 **Android 7.1 (Nougat)** 이상 에서만 사용할 수 있는 API를 호출 하는 경우 앱에서 런타임 오류가 발생 하 고 충돌이 발생할 수 있습니다. 따라서 코드는 런타임에 &ndash; &ndash; 실행 중인 Android 장치에서 지 원하는 api만 호출 하는지 확인 해야 합니다. 즉, 앱에서 최신 Api를 지원 하기에 충분 한 장치에 대해서만 최신 Api를 사용 하도록 코드에 명시적 런타임 검사를 포함 해야 합니다.
 이 가이드의 뒷부분에 나오는 [Android 버전에 대 한 런타임 검사](#runtimechecks)에서는 이러한 런타임 검사를 코드에 추가 하는 방법을 설명 합니다.
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -173,7 +163,6 @@ Mac용 Visual Studio에서 최소 Android 버전에 액세스 하려면 프로�
 **자동&ndash; 사용 대상 프레임 워크 버전**을 선택 하는 경우 최소 Android 버전은 대상 프레임 워크 설정과 동일 합니다.
 
 -----
-
 
 <a name="target" />
 
@@ -206,7 +195,6 @@ Mac용 Visual Studio에서이 설정에 액세스 하려면 프로젝트 이름�
 **최소 Android 버전 < = 대상 Android 버전 < = 대상 프레임 워크**
 
 SDK 수준에 대 한 자세한 내용은 Android 개발자 [사용-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html) 설명서를 참조 하세요.
-
 
 <a name="runtimechecks" />
 
@@ -269,11 +257,9 @@ Xamarin android 라이브러리 프로젝트를 만들 때 최소 android 버전
 
 이러한 모범 사례는 라이브러리에서 런타임에 사용할 수 없는 API를 호출 하려고 하는 상황을 방지 하는 데 도움이 됩니다 (응용 프로그램의 작동이 중단 될 수 있음). 라이브러리 개발자는 API 호출 사용을 전체 API 노출 영역의 작고 잘 구성 된 하위 집합으로 제한 하도록 노력 해야 합니다. 이렇게 하면 더 광범위 한 Android 버전에서 라이브러리를 안전 하 게 사용할 수 있습니다.
 
-
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Android API 수준을 사용 하 여 여러 버전의 Android에서 앱 호환성을 관리 하는 방법을 설명 했습니다. Xamarin Android *대상 프레임 워크*, *최소 Android 버전*및 *대상 android 버전* 프로젝트 설정을 구성 하는 자세한 단계를 제공 했습니다. Android SDK Manager를 사용 하 여 SDK 패키지를 설치 하는 방법에 대 한 지침을 제공 하 고, 런타임에 다른 API 수준을 처리 하는 코드를 작성 하는 방법에 대 한 예제를 제공 하며, Android 라이브러리를 만들거나 사용할 때 API 수준을 관리 하는 방법을 설명 했습니다. 또한 API 수준을 Android 버전 번호 (예: Android 4.4), Android 버전 이름 (예: Kitkat) 및 Xamarin Android 빌드 버전 코드와 관련 된 포괄적인 목록을 제공 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

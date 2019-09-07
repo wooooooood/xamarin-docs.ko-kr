@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 13b19d60569884f244f2ea9c79aaa6989838d0d3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290703"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770037"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
@@ -45,7 +45,6 @@ Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 
     [![](extensions-images/extension02.png "시스템 로그")](extensions-images/extension02.png#lightbox)
 - 위에서 설명한 것 처럼 확장 호스트 응용 프로그램을 실행 하면 시스템에 등록 됩니다. 응용 프로그램 번들을 삭제 하 고 등록을 취소 합니다. 
 - 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾아서 삭제할 수 있습니다.`plugin kit -mv`
-
 
 <a name="Walkthrough-and-Sample-App" />
 

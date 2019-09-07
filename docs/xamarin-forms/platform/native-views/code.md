@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: e2d3a3590e8006c745d28026f3a359350f7ce940
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: a759569f9faf7c8e13768a68b203a8221d3b31cb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621071"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770710"
 ---
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
@@ -319,7 +319,6 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 ## <a name="summary"></a>요약
 
 이 문서에서는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 네이티브 뷰를 추가 하는 방법 및 해당 측정 API 사용을 수정 하려면 사용자 지정 보기 레이아웃을 재정의 하는 방법을 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

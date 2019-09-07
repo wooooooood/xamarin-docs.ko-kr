@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bc2990ef82e1bccd4f9e530eb67265eeae528a9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6fd6484e547f22f1dc7f27578834b5292d6d2d2a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292147"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770017"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.ios 문제 해결 팁
 
@@ -32,7 +32,6 @@ ms.locfileid: "70292147"
 - 가능 하면 문제를 보여 주는 작은 예제 프로그램을 제공 합니다. 문제를 찾는 소스 코드 페이지를 살펴보면 더 많은 시간과 노력이 필요 합니다.
 
 - 응용 프로그램에서 문제가 발생 하는 것으로 인 한 변경 내용을 알면 문제의 원인을 빠르게 좁힐 수 있습니다. 최신 버전의 Xamarin.ios를 최근에 업그레이드 한 경우 응용 프로그램의 섹션을 확장 하 여 문제의 원인이 되는 파트를 찾거나 이전 빌드를 테스트 하 여 문제가 발생 하는 변경 내용을 확인 하는 것이 매우 유용할 수 있습니다.
-
 
 ### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>출력 없이 앱이 충돌 하는 경우 수행할 작업
 
