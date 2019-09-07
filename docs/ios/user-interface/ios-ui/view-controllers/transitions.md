@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/14/2017
-ms.openlocfilehash: 45d9580899ac42dba300086b5d5694c07d177871
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bbba1cbb907e3744677ff6bbe39b97fb62616e33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287830"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768163"
 ---
 # <a name="view-controller-transitions-in-xamarinios"></a>Xamarin.ios에서 컨트롤러 전환 보기
 
@@ -28,7 +28,6 @@ IOS 7에서 보기 컨트롤러 간의 애니메이션 전환은 완전히 사�
 2. `UIViewControllerTransitioningDelegate` 의`UIViewControllerAnimatedTransitioning` 인스턴스인 애니메이터 클래스를 만들려면를 구현 합니다.
 3. 표시 될 컨트롤러 에서도 `UIViewControllerTransitioningDelegate` 속성을의인스턴스로설정합니다.`TransitioningDelegate`
 4. 뷰 컨트롤러를 표시 합니다.
-
 
 예를 들어 다음 코드는-a `ControllerTwo` `UIViewController` 하위 클래스 형식의 뷰 컨트롤러를 제공 합니다.
 
@@ -83,7 +82,6 @@ public class TransitioningDelegate : UIViewControllerTransitioningDelegate
 1. `TransitionDuration`– 애니메이션의 기간 (초)을 반환 합니다.
 1. `AnimateTransition`– 실제 애니메이션을 수행 합니다.
 
-
 예를 들어 다음 클래스는 컨트롤러 `UIViewControllerAnimatedTransitioning` 뷰의 프레임에 애니메이션 효과를 주기 위해를 구현 합니다.
 
 ```csharp
@@ -129,7 +127,6 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 - **탐색 컨트롤러** – 두 `UICollectionViewController` 인스턴스 간의 애니메이션 전환을 관리 하는 `UINavigationController` 경우 선택적으로 자동으로 처리할 수 있습니다.
 - **전환 레이아웃** – 새 `UICollectionViewTransitionLayout` 클래스를 사용 하면 레이아웃 간의 대화형 전환을 수행할 수 있습니다.
 
-
 ### <a name="navigation-controller-transitions"></a>탐색 컨트롤러 전환
 
 탐색 컨트롤러 내에서 사용 하는 경우 `UICollectionViewController` 에는 컨트롤러 간의 애니메이션 전환에 대 한 지원이 포함 됩니다. 이 지원은 기본적으로 제공 되며 다음과 같은 몇 가지 간단한 단계를 구현 해야 합니다.
@@ -138,7 +135,6 @@ public class CustomTransitionAnimator : UIViewControllerAnimatedTransitioning
 1. 의 `UICollectionViewController` 인스턴스를 탐색 컨트롤러 스택의 루트에 추가 합니다.
 1. 초 `UICollectionViewController` 를 만들고 해당 `UseLayoutToLayoutNavigtionTransitions` 속성을로 `true` 설정 합니다.
 1. 두 번째 `UICollectionViewController` 를 탐색 컨트롤러의 스택에 푸시합니다.
-
 
 다음 코드는 `UICollectionViewController` `UseLayoutToLayoutNavigationTransitions` 속성이로 `ImagesCollectionViewController` 설정된탐색컨트롤러스택의루트에이라는하위클래스를추가합니다.`false`
 
@@ -216,7 +212,6 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 1. `StartInteractiveTransition` 메서드의 완료 처리기에서 전환 완료를 처리 합니다.
 1. 컬렉션 뷰에 제스처 인식기를 추가 합니다.
 
-
 다음 코드는 손가락을 발생 하는 제스처 인식기 내에서 대화형 레이아웃 전환을 구현 합니다.
 
 ```csharp
@@ -260,9 +255,6 @@ imagesController.CollectionView.AddGestureRecognizer (pinch);
 ```
 
 컬렉션 보기 `TransitionProgress` 의 사용자 인 경우는의 눈금을 기준으로 설정 됩니다. 이 구현에서 전환이 50% 완료 되기 전에 사용자가를 종료 하면 전환이 취소 됩니다. 그렇지 않으면 전환이 완료 된 것입니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

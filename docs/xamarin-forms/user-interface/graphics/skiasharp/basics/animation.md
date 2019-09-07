@@ -7,12 +7,12 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: e9af5a78900fce714b214dfd3b3e0e83e17bbce2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648738"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759742"
 ---
 # <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본적인 애니메이션
 
@@ -245,7 +245,6 @@ public class ExpandingCirclesPage : ContentPage
 결과 동일한 경우에는 이미지에 표시 되는지 `t` 이 0 인 경우와 `t` 1 이면 및 원 계속 영원히 확장 것 같습니다.
 
 [![](animation-images/expandingcircles-small.png "삼중 원 확장 페이지 스크린샷")](animation-images/expandingcircles-large.png#lightbox "삼중 원 확장 페이지 스크린샷")
-
 
 ## <a name="related-links"></a>관련 링크
 

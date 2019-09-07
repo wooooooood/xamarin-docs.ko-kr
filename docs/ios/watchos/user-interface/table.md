@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: d1e5602643ba5578c4bc2a26e6db2d9f49033469
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291688"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766963"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Xamarin의 watchOS Table 컨트롤
 
@@ -39,9 +39,6 @@ WatchOS `WKInterfaceTable` 컨트롤은 해당 iOS에 해당 하는 것 보다 �
 
 행의 컨트롤러에 대 한 클래스를 설정 하면 IDE에서 프로젝트에 해당 C# 하는 파일을 만듭니다. 컨트롤 (예: 레이블)을 행에 끌어다 놓고 코드에서 참조할 수 있도록 이름을 지정 합니다.
 
-
-
-
 ## <a name="create-and-populate-rows"></a>행 만들기 및 채우기
 
 `SetNumberOfRows`는 `Identifier` 를 사용 하 여 올바른 항목을 선택 하 여 각 행에 대 한 행 컨트롤러 클래스를 만듭니다. 행 컨트롤러에 사용자 지정 `Identifier`을 지정한 경우 아래 코드 조각의 **기본값** 을 사용한 식별자로 변경 합니다. 가 호출 되 고 테이블이 표시 될 `SetNumberOfRows` 때 *모든 행에 대 한* 가 만들어집니다. `RowController`
@@ -65,7 +62,6 @@ for (var i = 0; i < rows.Count; i++) {
 
 > [!IMPORTANT]
 > 및를 사용 하 여 루프 `GetRowController` 를 수행 하면 전체 테이블이 시계로 전송 됩니다. `SetNumberOfRows` 테이블의 후속 뷰에서 특정 행을 추가 하거나 제거 해야 하는 경우 및 `InsertRowsAt` `RemoveRowsAt` 성능 향상을 위해를 사용 합니다.
-
 
 ## <a name="respond-to-taps"></a>탭에 응답
 
@@ -142,7 +138,6 @@ for (var i = 0; i < rows.Count; i++) {
 }
 ```
 
-
 ## <a name="vertical-detail-paging"></a>세로 세부 정보 페이징
 
 watchOS 3에는 테이블에 대 한 새로운 기능이 도입 되었습니다. 테이블로 돌아가서 다른 행을 선택 하지 않고도 각 행과 관련 된 세부 정보 페이지를 스크롤할 수 있습니다. 위쪽 및 아래쪽으로 살짝 밀거나 Digital Crown를 사용 하 여 세부 정보 화면을 스크롤할 수 있습니다.
@@ -210,8 +205,6 @@ namespace WatchTables.OnWatchExtension
 ```
 
 그런 다음 여기에 선언 된 출 선 및 작업을 코드에서 참조할 수 있지만 **designer.cs** 파일은 직접 편집 하면 안 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

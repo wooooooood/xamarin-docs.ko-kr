@@ -7,12 +7,12 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 09f2c2c0367b50146a564b370f555a1ed804371e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 49888dd32ee1cbfed6f9c9268c8dc7a106bec83e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642552"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770582"
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 
@@ -51,7 +51,6 @@ SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡�
 ## <a name="path-information-and-enumerationinformationmd"></a>[경로 정보 및 열거형](information.md)
 
 경로 대 한 정보를 가져오고 내용을 열거 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0b11f5c290f07debb61d511bdd27ad1a7ad0b0b0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526089"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754714"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Xamarin Android의 터치 및 제스처
 
@@ -39,8 +39,6 @@ Android 또는 iOS에 대 한 작업을 수행 하는 경우 터치 및 제스�
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Android에서 touch를 검사 했습니다. 두 운영 체제의 경우 터치를 사용 하도록 설정 하는 방법과 터치 이벤트에 응답 하는 방법을 배웠습니다. 다음으로 몇 가지 일반적인 시나리오를 처리 하기 위해 Android 및 iOS에서 제공 하는 제스처와 제스처에 대해 알아보았습니다. 사용자 지정 제스처를 만들어 응용 프로그램에서 구현 하는 방법을 살펴보았습니다. 연습에서는 각 운영 체제의 동작에 대 한 개념 및 Api를 보여 주고 개별 손가락을 추적 하는 방법도 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

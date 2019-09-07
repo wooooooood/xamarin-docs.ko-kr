@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 16a37c7544f7ea364c13789fdc7bb42d89a74f5c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4f1f1333c35a72e7243e892e7aac8d98603c973
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287250"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772597"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Xamarin.ios의 개요 보기
 
@@ -447,7 +447,6 @@ public override void SortDescriptorsChanged (NSOutlineView outlineView, NSSortDe
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-
 그런 다음 `ProductOutlineDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
 
 ```csharp
@@ -469,7 +468,6 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 [![](outline-view-images/select02.png "특성 검사자")](outline-view-images/select02.png#lightbox)
 
 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
-
 
 그런 다음 `ProductOutlineDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
 

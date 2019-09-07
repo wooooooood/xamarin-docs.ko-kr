@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
-ms.openlocfilehash: 45008e127286d14ef62c5212976bfd3a8aac651f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 667de4d579f43558d9a811c386e355433f526077
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529180"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760465"
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
@@ -477,7 +477,6 @@ EShopOnContainers 모바일 앱이 웹 요청을 만드는 방법에 대 한 자
 ASP.NET MVC 웹 응용 프로그램과 통신 하는 Xamarin. Forms 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer는 ASP.NET Core Id와 통합 되어 전달자 토큰 인증을 수행 하는 ASP.NET Core에 대 한 오픈 소스 Openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
 
 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. 리소스에 액세스할 때 권한 부여를 필요로 하는 Api에 대 한 요청에 액세스 토큰을 포함 해야 합니다. IdentityServer의 미들웨어는 들어오는 액세스 토큰의 유효성을 검사 하 여 신뢰할 수 있는 발급자 로부터 보내고이를 수신 하는 API에서 사용할 수 있는지 확인 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

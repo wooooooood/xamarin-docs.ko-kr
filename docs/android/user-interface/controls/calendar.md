@@ -6,32 +6,28 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 610f9be346b761c4d20e4bbf97ecfcda74c0bee0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 63796fc46b126c1e7f99cd1754b58e28f5e36767
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523057"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762423"
 ---
 # <a name="xamarinandroid-calendar"></a>Xamarin Android 일정
-
 
 ## <a name="calendar-api"></a>일정 API
 
 Android 4에서 도입 된 새로운 일정 Api 집합은 일정 공급자의 데이터를 읽거나 쓰기 위해 디자인 된 응용 프로그램을 지원 합니다. 이러한 Api는 이벤트, 참석자 및 미리 알림을 읽고 쓰는 기능을 포함 하 여 일정 데이터를 통해 다양 한 상호 작용 옵션을 지원 합니다. 응용 프로그램에서 달력 공급자를 사용 하 여 API를 통해 추가 하는 데이터는 Android 4와 함께 제공 되는 기본 제공 일정 앱에 표시 됩니다.
 
-
 ## <a name="adding-permissions"></a>권한 추가
 
 응용 프로그램에서 새로운 일정 Api를 사용할 때 가장 먼저 해야 할 일은 Android 매니페스트에 적절 한 권한을 추가 하는 것입니다. 추가 `android.permisson.READ_CALENDAR` 해야 하는 권한은 및/또는 `android.permission.WRITE_CALENDAR`달력 데이터를 읽고 있는지 여부에 따라 및입니다.
-
 
 ## <a name="using-the-calendar-contract"></a>달력 계약 사용
 
 사용 권한을 설정한 후에는 클래스를 `CalendarContract` 사용 하 여 달력 데이터와 상호 작용할 수 있습니다. 이 클래스는 응용 프로그램이 달력 공급자와 상호 작용할 때 사용할 수 있는 데이터 모델을 제공 합니다. 를 `CalendarContract` 사용 하면 응용 프로그램에서 일정 엔터티 (예: 달력 및 이벤트)에 대 한 uri를 확인할 수 있습니다. 또한 달력의 이름, ID, 이벤트의 시작 및 종료 날짜와 같은 각 엔터티의 다양 한 필드와 상호 작용 하는 방법을 제공 합니다.
 
 Calendar API를 사용 하는 예를 살펴보겠습니다. 이 예제에서는 일정 및 해당 이벤트를 열거 하는 방법 뿐만 아니라 일정에 새 이벤트를 추가 하는 방법을 살펴보겠습니다.
-
 
 ## <a name="listing-calendars"></a>일정 나열
 
@@ -119,8 +115,6 @@ ListAdapter = adapter;
 다음은 `ListView`에 표시 되는 달력 정보가 있는 최종 결과를 보여 주는 스크린샷입니다.
 
 [![두 개의 일정 항목을 표시 하는 에뮬레이터에서 실행 되는 CalendarDemo](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
-
-
 
 ## <a name="listing-calendar-events"></a>일정 이벤트 나열
 
@@ -218,8 +212,6 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 [![3 개의 일정 이벤트를 표시 하는 예제 앱의 스크린샷](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
-
-
 ## <a name="adding-a-calendar-event"></a>일정 이벤트 추가
 
 일정 데이터를 읽는 방법을 알아보았습니다. 이제 일정에 이벤트를 추가 하는 방법을 살펴보겠습니다. 이 작업을 수행 하려면 앞에서 언급 한 `android.permission.WRITE_CALENDAR` 권한을 포함 해야 합니다. 일정에 이벤트를 추가 하려면 다음을 수행 합니다.
@@ -228,7 +220,6 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 1. `CalendarContract.Events.InterfaceConsts` 클래스의 키를 사용 하 여 `ContentValues` 인스턴스를 채웁니다.
 1. 이벤트 시작 시간과 종료 시간에 대 한 표준 시간대를 설정 합니다.
 1. 을 `ContentResolver` 사용 하 여 이벤트 데이터를 일정에 삽입 합니다.
-
 
 아래 코드에서는 이러한 단계를 보여 줍니다.
 
@@ -281,7 +272,6 @@ long GetDateTimeMS (int yr, int month, int day, int hr, int min)
 [![선택한 일정 이벤트를 표시 하는 일정 앱의 스크린샷](calendar-images/14.png)](calendar-images/14.png#lightbox)
 
 여기에서 볼 수 있듯이 Android를 사용 하면 쉽고 간편 하 게 일정 데이터를 검색 및 유지할 수 있으므로 응용 프로그램에서 일정 기능을 원활 하 게 통합할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

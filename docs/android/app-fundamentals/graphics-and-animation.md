@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 0a9921706acc4da076e98b1c42c0624c7f56e62f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ea713b2b56f18c435f3ec676b42d0aa4802abc6a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755430"
 ---
 # <a name="android-graphics-and-animation"></a>Android 그래픽 및 애니메이션
 
@@ -43,11 +43,9 @@ Android는 이러한 2D 그래픽 기술 외에도 다양 한 방법으로 애�
 
 - **속성 애니메이션** Android 3.0에는 *속성 애니메이션*이라는 새로운 애니메이션 API 집합이 도입 되었습니다. &ndash; 이러한 새 API에는 뷰 개체 뿐만 아니라 개체의 속성에 애니메이션 효과를 주는 데 사용할 수 있는 확장 가능 하 고 유연한 시스템이 도입 되었습니다. 이러한 유연성을 통해 애니메이션은 코드를 보다 쉽게 공유할 수 있는 고유한 클래스로 캡슐화 할 수 있습니다.
 
-
 보기 애니메이션은 이전의 Android 이전 3.0 API (API 수준 11)를 지원 해야 하는 응용 프로그램에 더 적합 합니다. 그렇지 않으면 위에서 설명한 이유로 응용 프로그램에서 최신 속성 애니메이션 API를 사용 해야 합니다.
 
 이러한 프레임 워크는 모두 사용할 수 있는 옵션 이지만 가능 하면 속성 애니메이션에 대 한 우선 순위를 지정 해야 합니다 .이는 작업을 수행 하는 더 유연한 API입니다. 속성 애니메이션을 사용 하면 코드를 보다 쉽게 공유 하 고 코드 유지 관리를 간소화 하는 고유한 클래스에서 애니메이션 논리를 캡슐화 할 수 있습니다.
-
 
 ## <a name="accessibility"></a>액세스 가능성
 
@@ -58,8 +56,6 @@ Android는 이러한 2D 그래픽 기술 외에도 다양 한 방법으로 애�
 
 Android의 접근성 Api를 활용 하는 방법에 대 한 자세한 내용은 [Google의 접근성 가이드](https://developer.android.com/guide/topics/ui/accessibility/) 를 참조 하세요.
 
-
-
 ## <a name="2d-graphics"></a>2D 그래픽
 
 그릴 수 있는 리소스는 Android 응용 프로그램의 인기 있는 기술입니다. 다른 리소스와 마찬가지로 그릴 수 있는 리소스는 &ndash; 선언적으로 XML 파일에 정의 됩니다. 이 방법을 사용 하면 리소스에서 코드를 명확 하 게 분리할 수 있습니다. 이렇게 하면 Android 응용 프로그램에서 그래픽을 업데이트 하거나 변경 하기 위해 코드를 변경할 필요가 없으므로 개발 및 유지 관리가 간단해 집니다. 그러나 그릴 수 있는 리소스는 간단 하 고 일반적인 그래픽 요구 사항에 유용 하지만 Canvas API의 기능과 제어는 없습니다.
@@ -67,7 +63,6 @@ Android의 접근성 Api를 활용 하는 방법에 대 한 자세한 내용은 
 [Canvas](xref:Android.Graphics.Canvas) 개체를 사용 하는 다른 기술은 시스템 Drawing 또는 IOS의 핵심 드로잉과 같은 기존의 다른 API 프레임 워크와 매우 비슷합니다. Canvas 개체를 사용 하 여 2D 그래픽이 생성 되는 방식을 가장 많이 제어할 수 있습니다. 그릴 수 있는 리소스가 작동 하지 않거나 작업 하기가 어려운 상황에 적합 합니다. 예를 들어 슬라이더의 값과 관련 된 계산에 따라 모양이 변경 되는 사용자 지정 슬라이더 컨트롤을 그려야 할 수 있습니다.
 
 먼저 그릴 수 있는 리소스를 살펴보겠습니다. 가장 간단 하 고 가장 일반적인 사용자 지정 그리기 사례를 포함 합니다.
-
 
 ### <a name="drawable-resources"></a>그릴 때 리소스
 
@@ -85,9 +80,9 @@ Android는 여러 가지 형식의 그릴 수가 있는 리소스를 정의 합�
 
 - [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) 이는 LayerDrawable 하지만 한 가지 차이점이 있습니다. &ndash; *TransitionDrawable* 는 한 레이어에 애니메이션 효과를 줄 수 있습니다.
 
-- [Levellistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) 때 이는 특정 조건에 따라 이미지를 표시 한다는 점에서 사용 가능한 statelistdrawable 매우 비슷합니다. &ndash; 그러나 *Statelistdrawable*때와 달리 *levellistdrawable* 때는 정수 값을 기준으로 이미지가 표시 됩니다. *Levellistdrawable* 수 있는 예제는 WiFi 신호의 강도를 표시 하는 것입니다. WiFi 신호의 강도가 변경 되 면 표시 되는 그릴 수 있는 것이 그에 따라 변경 됩니다.
+- [Levellistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) 때 이는 특정 조건에 따라 이미지를 표시 한다는 점에서 사용 가능한 *statelistdrawable* 매우 비슷합니다. &ndash; 그러나 *Statelistdrawable*때와 달리 *levellistdrawable* 때는 정수 값을 기준으로 이미지가 표시 됩니다. *Levellistdrawable* 수 있는 예제는 WiFi 신호의 강도를 표시 하는 것입니다. WiFi 신호의 강도가 변경 되 면 표시 되는 그릴 수 있는 것이 그에 따라 변경 됩니다.
 
-- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)는 &ndash;이름이 암시 하므로 이러한 drawables 크기 조정 및 클리핑 기능을 모두 제공 합니다. *ScaleDrawable* 는 다른 그릴 수 있는 다른 것으로 크기를 조정할 수 있습니다.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)는 &ndash;이름이 암시 하므로 이러한 drawables 크기 조정 및 클리핑 기능을 모두 제공 합니다. *ScaleDrawable* 는 다른 그릴 *수 있는 다른* 것으로 크기를 조정할 수 있습니다.
 
 - [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; 이 경우 그릴 수 있는 다른 리소스의 측면에 음각이 적용 됩니다. 보기의 실제 범위 보다 작은 배경이 보기에 필요할 때 사용 됩니다.
 
@@ -147,7 +142,6 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 ![그라데이션 및 모퉁이가 둥근 모퉁이가 있는 사용자 지정 배경을 사용 하는 Textview](graphics-and-animation-images/image1.png)
 
 XML 요소 및 그릴 수가 있는 리소스의 구문에 대 한 자세한 내용은 [Google 설명서](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)를 참조 하세요.
-
 
 ### <a name="using-the-canvas-drawing-api"></a>Canvas Drawing API 사용
 
@@ -209,7 +203,6 @@ public class MyView : View
 
 ![빨간색 그리기 및 녹색 그리기 개체가 있는 화면](graphics-and-animation-images/image3.png)
 
-
 ## <a name="animation"></a>애니메이션
 
 응용 프로그램에서 이동 하는 등의 사용자 애니메이션은 응용 프로그램의 사용자 환경을 개선 하 고 확장 하는 데 도움이 되는 유용한 방법입니다. 가장 좋은 애니메이션은 자연스럽 게 생각 하기 때문에 사용자가 확인 하지 않는 애니메이션입니다. Android는 애니메이션에 대해 다음과 같은 세 가지 API를 제공 합니다.
@@ -221,7 +214,6 @@ public class MyView : View
 - **그릴 때 애니메이션** &ndash; 이는 레이아웃에 매우 간단한 애니메이션 효과를 적용 하는 데 사용 되는 특별 한 그릴 수 있는 리소스입니다.
 
 일반적으로 속성 애니메이션은 더 유연 하 고 더 많은 기능을 제공 하므로 사용할 기본 설정 시스템입니다.
-
 
 ### <a name="view-animations"></a>애니메이션 보기
 
@@ -249,7 +241,6 @@ public class MyView : View
 - `BounceInterpolator`&ndash; 변경 내용이 끝에 바운스 됩니다.
 
 - `LinearInterpolator`&ndash; 변경 비율은 일정 합니다.
-
 
 다음 XML에서는 이러한 몇 가지 요소를 결합 하는 애니메이션 파일의 예를 보여 줍니다.
 
@@ -308,7 +299,6 @@ myImage.StartAnimation(myAnimation);
 
 이제 보기 애니메이션의 작동 방식에 대 한 기본적인 내용을 이해 했으므로 속성 애니메이션으로 이동할 수 있습니다.
 
-
 ### <a name="property-animations"></a>속성 애니메이션
 
 속성 애니메이터는 Android 3.0에 도입 된 새로운 API입니다.
@@ -321,7 +311,6 @@ myImage.StartAnimation(myAnimation);
 - [Objectanimator](xref:Android.Animation.ObjectAnimator) 이 클래스는의 `ValueAnimator` 서브 클래스입니다. &ndash; 업데이트를 위해 대상 개체 및 속성을 허용 하 여 개체에 애니메이션 효과를 주는 프로세스를 간소화 합니다.
 
 - [애니메이션 집합](xref:Android.Animation.AnimatorSet) &ndash; 이 클래스는 애니메이션이 서로 관련 하 여 실행 되는 방식을 오케스트레이션 하는 일을 담당 합니다. 애니메이션은 동시에 또는 순차적으로 실행 되거나 지정 된 지연 시간 동안 실행 될 수 있습니다.
-
 
 *계산기* 는 애니메이터에서 애니메이션 중에 새 값을 계산 하는 데 사용 하는 특수 클래스입니다. Android에서 제공 하는 기본 제공 되는 계산기는 다음과 같습니다.
 
@@ -385,7 +374,6 @@ animator.Start();
 
 위의 코드 조각 `ObjectAnimator` 에서 볼 수 있듯이는 개체에 애니메이션 효과를 주는 데 필요한 코드를 줄이고 단순화할 수 있습니다.
 
-
 ### <a name="drawable-animations"></a>그릴 때 애니메이션
 
 최종 애니메이션 API는 그릴 수 있는 애니메이션 API입니다. 그릴 수 있는 애니메이션은 그릴 수 있는 일련의 리소스를 차례로 로드 하 고 대칭 이동 하는 만화와 비슷하게 순차적으로 표시 합니다.
@@ -429,12 +417,9 @@ protected override void OnCreate(Bundle bundle)
 
 이 시점에서는 Android 응용 프로그램에서 사용할 수 있는 애니메이션 Api의 기초에 대해 설명 했습니다.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에는 Android 응용 프로그램에 그래픽을 추가 하는 데 도움이 되는 많은 새로운 개념과 API가 도입 되었습니다. 먼저 다양 한 2D 그래픽 API에 대해 설명 하 고 Android에서 캔버스 개체를 사용 하 여 응용 프로그램을 화면에 직접 그리는 방법을 보여 주었습니다. 또한 XML 파일을 사용 하 여 그래픽을 선언적으로 만들 수 있도록 하는 몇 가지 다른 기법을 살펴보았습니다. 그런 다음 Android에서 애니메이션을 만들기 위한 이전 및 새 API에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

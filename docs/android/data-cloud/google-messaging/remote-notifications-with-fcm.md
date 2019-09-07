@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: a7276b6a3269c012ad57e13510b6479266c43209
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c76b22c84851c8952dc4e9181966632cf6e38041
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119793"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754674"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 클라우드 메시징으로 원격 알림
 
@@ -35,7 +35,6 @@ _이 연습에서는 Firebase 클라우드 메시징을 사용 하 여 Xamarin A
 이 연습을 수행 하는 동안 **Fcmclient** 에 기능을 증분 방식으로 추가 하 고 장치 또는 에뮬레이터에서 실행 하 여 FCM와 상호 작용 하는 방식을 이해 합니다. FCM 서버를 사용 하 여 라이브 앱 트랜잭션을 미러링 모니터 하는 데 로깅을 사용 하 고, Firebase Console Notification GUI에 입력 하는 FCM 메시지에서 알림이 생성 되는 방법을 관찰 합니다.
 
 ## <a name="requirements"></a>요구 사항
-
 
 Firebase 클라우드 메시징에서 보낼 수 있는 [다양 한 유형의 메시지](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) 를 숙지 하는 것이 좋습니다. 메시지 페이로드에 따라 클라이언트 앱에서 메시지를 수신 하 고 처리 하는 방법이 결정 됩니다.
 
@@ -192,7 +191,6 @@ using Android.Util;
 
 **Google-** GoogleServicesJson가 프로젝트에 추가 되 고 (그리고 빌드 작업이 설정 된 경우) 빌드 프로세스는 클라이언트 ID와 [API 키](./firebase-cloud-messaging.md#fcm-in-action-api-key) 를 추출한 다음 병합/생성 **된에 이러한 자격 증명을 추가 합니다.**  **Obj/Debug/Android/androidmanifest**에 상주 하는 AndroidManifest .xml입니다. 이 병합 프로세스는 FCM 서버에 연결 하는 데 필요한 모든 권한 및 기타 FCM 요소를 자동으로 추가 합니다.
 
-
 ## <a name="check-for-google-play-services-and-create-a-notification-channel"></a>Google Play 서비스 확인 및 알림 채널 만들기
 
 Google은 Google Play 서비스 기능에 액세스 하기 전에 Android 앱이 Google Play 서비스 APK가 있는지 확인 하는 것이 좋습니다. 자세한 내용은 [Google Play Services 확인](https://firebase.google.com/docs/cloud-messaging/android/client#sample-play)을 참조 하세요.
@@ -218,7 +216,6 @@ Google은 Google Play 서비스 기능에 액세스 하기 전에 Android 앱이
 
 `TextView` Google Play 서비스 설치 여부를 나타내는 메시지를 표시 하는 데 사용 됩니다. **주. axml**에 변경 내용을 저장 합니다.
 
-
 **MainActivity.cs** 를 편집 하 고 다음 인스턴스 변수를 `MainActivity` 클래스에 추가 합니다.
 
 ```csharp
@@ -233,7 +230,6 @@ public class MainActivity : AppCompatActivity
 ```
 
 및 `CHANNEL_ID` [`CreateNotificationChannel`](#create-notification-channel-code) `MainActivity` 변수는이 연습의 뒷부분에서에 추가 될 메서드에서 사용 됩니다. `NOTIFICATION_ID`
-
 
 다음 예제에서 메서드는 `OnCreate` 앱이 FCM Services를 사용 하려고 시도 하기 전에 Google Play 서비스를 사용할 수 있는지 확인 합니다.
 `MainActivity` 클래스에 다음 메서드를 추가 합니다.
@@ -310,7 +306,6 @@ protected override void OnCreate (Bundle bundle)
 
 이 결과를 얻지 못한 경우 Google Play 서비스 APK가 장치에 설치 되어 있는지 확인 합니다 (자세한 내용은 [Google Play 서비스 설정](https://developers.google.com/android/guides/setup)참조).
 또한 앞에서 설명한 대로 **Fcmclient** 프로젝트에 **xamarin.ios** 패키지를 추가 했는지 확인 합니다.
-
 
 ## <a name="add-the-instance-id-receiver"></a>인스턴스 ID 수신기 추가
 
@@ -463,7 +458,6 @@ if (Intent.Extras != null)
 
 앱의 시작 관리자 `Intent` 는 사용자가 알림 메시지를 탭 할 때 발생 하므로,이 코드는에 있는 모든 데이터 `Intent` 를 출력 창에 기록 합니다. 다른 `Intent` 가 발생 `click_action` 해야 하는 경우 알림 메시지의 필드를로 `Intent` 설정 해야 합니다 .를 지정 하지 `click_action` 않으면 `Intent` 시작 관리자가 사용 됩니다.
 
-
 ## <a name="background-notifications"></a>백그라운드 알림
 
 **Fcmclient** 앱을 빌드하고 실행 합니다. **로그 토큰** 단추가 표시 됩니다.
@@ -509,9 +503,8 @@ Android 장치 (또는 에뮬레이터)에서 Android **개요** 단추를 탭 �
 
 [![키, 메시지 ID 및 축소 키의 목적 목록](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png#lightbox)
 
-이 예제에서 **from** 키는 앱의 Firebase 프로젝트 번호 (이 예제 `41590732`에서는)로 설정 되 고 collapse_key는 패키지 이름 ( )으로 설정 됩니다.
+이 예제에서 **from** 키는 앱의 Firebase 프로젝트 번호 (이 예제 `41590732`에서는)로 설정 되 고 collapse_key는 패키지 이름 ( )으로 설정**됩니다.**
 메시지가 수신 되지 않으면 장치 (또는 에뮬레이터)에서 **Fcmclient** 앱을 삭제 하 고 위의 단계를 반복 합니다.
-
 
 > [!NOTE]
 > 앱을 강제로 닫으면 FCM에서 알림 배달이 중지 됩니다. Android는 백그라운드 서비스 브로드캐스트가 실수로 중지 된 응용 프로그램의 구성 요소를 시작 하거나 불필요 하 게 시작 하지 않도록 합니다. 이 동작에 대 한 자세한 내용은 중지 된 [응용 프로그램에서 컨트롤 시작](https://developer.android.com/about/versions/android-3.1.html#launchcontrols)을 참조 하세요. 이러한 이유로 응용 프로그램을 실행 하 고 디버그 세션 &ndash; 에서 중지할 때마다 수동으로 제거 해야 합니다. 이렇게 하면 FCM는 메시지를 계속 받을 수 있도록 새 토큰을 생성 합니다.
@@ -648,7 +641,6 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 > [!NOTE]
 > 에서 중단점을 설정 하 `FirebaseMessagingService`는 경우 FCM에서 메시지를 배달 하는 방법 때문에 디버깅 세션이 이러한 중단점에 도달 하거나 적중 하지 않을 수 있습니다.
 
-
 ### <a name="send-another-message"></a>다른 메시지 보내기
 
 앱을 제거 하 고 다시 빌드하고 다시 실행 한 후 다음 단계에 따라 다른 메시지를 보냅니다.
@@ -668,7 +660,6 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 6. 들어오는 메시지는 IDE 출력 창에 기록 됩니다.
 
     [![출력 창에 인쇄 되는 메시지 본문](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
-
 
 ### <a name="add-a-local-notification-sender"></a>로컬 알림 보낸 사람 추가
 
@@ -759,7 +750,6 @@ public override void OnMessageReceived(RemoteMessage message)
 
 [![전경 알림이 전경 아이콘으로 표시 됨](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
 
-
 ## <a name="disconnecting-from-fcm"></a>FCM에서 연결 끊기
 
 토픽에서 구독을 취소 하려면 [FirebaseMessaging](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging) 클래스에서 [UnsubscribeFromTopic](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessaging.html#unsubscribeFromTopic%28java.lang.String%29) 메서드를 호출 합니다. 예를 들어 이전에 구독 한 _뉴스_ 항목에서 구독을 취소 하려면 다음 처리기 코드를 사용 하 여 **구독 취소** 단추를 레이아웃에 추가할 수 있습니다.
@@ -772,14 +762,13 @@ unSubscribeButton.Click += delegate {
 };
 ```
 
-FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예를 들어:
+FCM에서 장치 등록을 취소 하려면 [FirebaseInstanceId](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId) 클래스에서 [deleteinstanceid](https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId.html#deleteInstanceId%28%29) 메서드를 호출 하 여 인스턴스 ID를 삭제 합니다. 예:
 
 ```csharp
 FirebaseInstanceId.Instance.DeleteInstanceId();
 ```
 
 이 메서드 호출은 인스턴스 ID와 연결 된 데이터를 삭제 합니다. 결과적으로, 장치에 대 한 FCM 데이터의 주기적인 보내기가 중단 됩니다.
-
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -799,7 +788,6 @@ Make sure to call FirebaseApp.initializeApp(Context) first.
 ## <a name="summary"></a>요약
 
 이 연습에서는 Xamarin.ios 응용 프로그램에서 Firebase 클라우드 메시징 원격 알림을 구현 하는 단계를 자세히 설명 합니다. FCM 통신에 필요한 필수 패키지를 설치 하는 방법에 대해 설명 하 고 FCM 서버에 액세스 하기 위해 Android 매니페스트를 구성 하는 방법을 설명 했습니다. Google Play 서비스 있는지 확인 하는 방법을 보여 주는 예제 코드를 제공 했습니다. 등록 토큰에 대해 FCM를 사용 하 여 협상 하는 인스턴스 ID 수신기 서비스를 구현 하는 방법과이 코드가 앱을 backgrounded 하는 동안 백그라운드 알림을 만드는 방법을 설명 했습니다. 토픽 메시지를 구독 하는 방법에 대해 설명 하 고, 응용 프로그램이 포그라운드에서 실행 되는 동안 원격 알림을 수신 하 고 표시 하는 데 사용 되는 메시지 수신기 서비스의 예제 구현을 제공 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

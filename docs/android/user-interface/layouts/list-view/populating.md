@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: e92aada7be8a296baeaa9eebfb18fe906b5c3b63
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e934dd0f35b7c734228d637fe646d0e2c20e9dad
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758633"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Xamarin Android ListView를 데이터로 채우기
 
@@ -21,7 +21,7 @@ ms.locfileid: "69522546"
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Listactivity 및 arrayadapter&lt;문자열 사용&gt;
 
-다음 예 에서는 이러한 클래스를 사용 하 여 몇 줄의 코드만으로를 `ListView` 표시 하는 방법을 보여 줍니다.
+다음 예 **에서는** 이러한 클래스를 사용 하 여 몇 줄의 코드만으로를 `ListView` 표시 하는 방법을 보여 줍니다.
 
 ```csharp
 [Activity(Label = "BasicTable", MainLauncher = true, Icon = "@drawable/icon")]
@@ -36,7 +36,6 @@ public class HomeScreen : ListActivity {
    protected override void OnListItemClick(ListView l, View v, int position, long id)
 }
 ```
-
 
 ### <a name="handling-row-clicks"></a>행 클릭 처리
 
@@ -55,7 +54,6 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 이제 사용자가 행을 터치 할 수 있으며 `Toast` 경고가 표시 됩니다.
 
 [![행이 작업 될 때 표시 되는 알림 스크린샷](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
-
 
 ## <a name="implementing-a-listadapter"></a>ListAdapter 구현
 
@@ -102,7 +100,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
 ### <a name="using-a-custom-adapter"></a>사용자 지정 어댑터 사용
 
 사용자 지정 어댑터를 사용 하는 것은 기본 제공 `ArrayAdapter`된 `context` 와 비슷하며, 표시할 값 `string[]` 의 및를 전달 합니다.
@@ -112,7 +109,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 ```
 
 이 예제에서는 동일한 행 레이아웃 (`SimpleListItem1`)을 사용 하기 때문에 결과 응용 프로그램은 이전 예제와 동일 하 게 보입니다.
-
 
 ### <a name="row-view-re-use"></a>행 뷰 다시 사용
 
@@ -137,7 +133,6 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 일부 어댑터 구현 ( `CursorAdapter`예:)에는 `GetView` 메서드가 없으므로의 `GetView` 역할을 두 가지로 구분 하 `NewView` 여 `BindView` 행을 다시 사용 해야 합니다. 메서드. 문서의 뒷부분에 예제가 있습니다. `CursorAdapter`
 
-
 ## <a name="enabling-fast-scrolling"></a>빠른 스크롤 사용
 
 빠른 스크롤을 사용 하면 목록의 일부에 직접 액세스 하는 스크롤 막대 역할을 하는 추가 ' 핸들 '을 제공 하 여 긴 목록을 스크롤할 수 있습니다. 이 스크린샷은 빠른 스크롤 핸들을 보여 줍니다.
@@ -149,7 +144,6 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 ```csharp
 ListView.FastScrollEnabled = true;
 ```
-
 
 ### <a name="adding-a-section-index"></a>섹션 인덱스 추가
 
@@ -164,7 +158,6 @@ ListView.FastScrollEnabled = true;
 - **Getpositionforsection** &ndash; 지정 된 섹션 인덱스의 첫 번째 행 위치를 반환 합니다.
 
 - **Get섹션 Forposition** &ndash; 지정 된 행에 대해 표시할 섹션 인덱스를 반환 합니다.
-
 
 예제 `SectionIndex/HomeScreenAdapter.cs` 파일은 이러한 메서드를 구현 하 고 생성자에 몇 가지 추가 코드를 구현 합니다. 생성자는 모든 행을 반복 하 고 제목의 첫 번째 문자를 추출 하 여 섹션 인덱스를 작성 합니다 .이 작업을 수행 하려면 항목이 이미 정렬 되어 있어야 합니다.
 
@@ -213,8 +206,6 @@ public int GetSectionForPosition(int position)
 
 섹션 인덱스 제목은 실제 섹션에 1:1을 매핑할 필요가 없습니다. 이는 메서드가 존재 `GetPositionForSection` 하는 이유입니다.
 `GetPositionForSection`는 인덱스 목록에 있는 모든 인덱스를 목록 뷰에 있는 섹션에 매핑할 수 있는 기회를 제공 합니다. 예를 들어 인덱스에 "z"가 있지만 모든 문자에 대 한 테이블 섹션이 없을 수 있으므로 26에 매핑되는 "z" 대신 25 또는 24로 매핑하거나 "z"가 매핑될 모든 섹션 인덱스를 매핑할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

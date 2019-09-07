@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 4e488f43f966ca8efd58de4d2bb8f16997d1322e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bf6853ef94ff0be5382bab02192070a20884c31e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290952"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769692"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Xamarin.ios의 고급 메시지 앱 확장
 
 _이 문서에서는 메시지 앱과 통합 되 고 사용자에 게 새로운 기능을 제공 하는 Xamarin.ios 솔루션에서 메시지 앱 확장을 사용 하는 고급 기술을 보여 줍니다._
-
 
 IOS 10의 새로운 기능으로, 메시지 앱 확장은 **메시지** 앱과 통합 되며 사용자에 게 새로운 기능을 제공 합니다. 확장은 텍스트, 스티커, 미디어 파일 및 대화형 메시지를 보낼 수 있습니다.
 
@@ -55,7 +54,6 @@ IOS 10 에서도 새로 추가 된 Apple에는 사용자가 앱을 쉽게 검색
 받는 사용자는 메시지 기록에서 메시지 거품형을 탭 하 여 대화형 메시지에 회신할 수 있습니다. 메시지 앱 확장을 로드 합니다. 확장은 전체 화면으로 시작 되며 사용자가 회신을 작성 하 여 원래 사용자에 게 다시 보낼 수 있습니다.
 
 [![](advanced-message-app-extensions-images/interactive02.png "전체 화면으로 시작 된 확장")](advanced-message-app-extensions-images/interactive02.png#lightbox)
-
 
 다음 항목에 대해서는 아래에서 자세히 설명 합니다.
 
@@ -419,14 +417,13 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 
 두 경우 모두 사용자가 메시지 앱 확장에 속하는 메시지 거품형을 탭 할 때의 `MSMessage` `SelectedMessage` `MSConversation`속성을 사용 하 여 탭 한에 대 한 액세스 권한을 얻어야 합니다.
 
-예를 들어:
+예:
 
 ```csharp
 using System;
 using Foundation;
 using Messages;
 using UIKit;
-
 
 namespace MessageExtension
 {
@@ -547,7 +544,7 @@ public override void DidSelectMessage (MSMessage message, MSConversation convers
 - 확장은 사용자 로부터 메시지를 받으면 보낸 사람 식별자를 추적할 수 있습니다. 동일한 보낸 사람 식별자를 가진 다른 메시지를 수신 하는 경우 확장은 동일한 사용자의 것임을 인식 합니다.
 - 대화의 특정 사용자를 식별 하는 데 사용할 수 있습니다.
 
-보낸 사람 식별자는의 `MSMessageTemplateLayout` 텍스트 필드에 달러 기호 (`$`)를 접두사로 사용 하 여 사용할 수 있습니다. 예를 들어:
+보낸 사람 식별자는의 `MSMessageTemplateLayout` 텍스트 필드에 달러 기호 (`$`)를 접두사로 사용 하 여 사용할 수 있습니다. 예:
 
 ```csharp
 // Pass along the sender identifier
@@ -605,7 +602,6 @@ WatchOS에서 메시지 앱은 사용자가 회신을 작성할 수 있는 첨�
 ## <a name="summary"></a>요약
 
 이 문서에는 **메시지** 앱과 통합 되 고 사용자에 게 새로운 기능을 제공 하는 xamarin.ios 솔루션에서 메시지 앱 확장을 사용 하기 위한 고급 기술이 제시 되어 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

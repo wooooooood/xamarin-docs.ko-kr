@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 3e27cffa9e2605c3697536f226fe87fbbf1bfbbd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 47a07959bcfabc0980ccb90f2ae7a489e5e71223
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286888"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756239"
 ---
 # <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Xamarin.ios의 백그라운드 전송 및 NSURLSession
 
@@ -56,12 +56,10 @@ public partial class SimpleBackgroundTransferViewController : UIViewController
 - *DidReceiveChallenge* -권한 부여가 필요한 경우 자격 증명을 요청 하기 위해 호출 됩니다.
 - *DidBecomeInvalidWithError* -가 `NSURLSession` 무효화 되 면 호출 됩니다.
 
-
 백그라운드 세션에는 실행 중인 작업의 유형에 따라 보다 특수화 된 대리자가 필요 합니다. 백그라운드 세션은 다음과 같은 두 가지 유형의 작업으로 제한 됩니다.
 
 - *작업 업로드* -형식의 `NSUrlSessionUploadTask` 작업은 `NSUrlSessionTaskDelegate` 에서 `NSUrlSessionDelegate` 상속 되는를 사용 합니다. 이 대리자는 업로드 진행률을 추적 하 고, HTTP 리디렉션을 처리 하는 등의 추가 메서드를 제공 합니다.
 - *다운로드 작업* -형식의 `NSUrlSessionDownloadTask` 작업에서 `NSUrlSessionTaskDelegate` 상속 되 `NSUrlSessionDownloadDelegate` 는를 사용 합니다. 이 대리자는 다운로드 작업의 모든 메서드 뿐만 아니라 다운로드 진행률을 추적 하 고 다운로드 작업을 다시 시작 하거나 완료 한 시간을 결정 하는 다운로드 관련 방법을 제공 합니다.
-
 
 다음 코드는 URL에서 이미지를 다운로드 하는 데 사용할 수 있는 작업을 정의 합니다. 백그라운드 세션에서를 호출 `CreateDownloadTask` 하 고 URL 요청을 전달 하 여 작업을 시작 합니다.
 
@@ -96,7 +94,6 @@ public class MySessionDelegate : NSUrlSessionDownloadDelegate
 
 > [!IMPORTANT]
 > 백그라운드 세션은 백그라운드 스레드에서 시작 되므로 앱을 종료 하지 않도록를 호출 `InvokeOnMainThread` 하 여 ui 스레드에서 ui를 업데이트 하는 모든 호출을 명시적으로 실행 해야 합니다. 
-
 
 ## <a name="handling-transfer-completion"></a>전송 완료 처리
 
@@ -141,8 +138,6 @@ public override void DidFinishEventsForBackgroundSession (NSUrlSession session) 
 ```
 
 이 연습에서는 iOS 7에서 백그라운드 전송 서비스를 구현 하는 기본 단계를 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

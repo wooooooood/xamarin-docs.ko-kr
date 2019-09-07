@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 04bcf1012800ef2883fef80580bcec869bd8e5a3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4be5670829b2b8c1a5a73f564b4c031b6a26bd54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291476"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769853"
 ---
 # <a name="building-modern-macos-apps"></a>최신 macOS 앱 빌드
 
@@ -853,7 +853,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 
 [![](modern-cocoa-apps-images/content11.png "어두운 Mac 창 UI의 예")](modern-cocoa-apps-images/content11.png#lightbox)
 
-이 작업은 창이 표시 되기 전에 코드 줄 하나를 추가 하 여 수행할 수 있습니다. 예를 들어:
+이 작업은 창이 표시 되기 전에 코드 줄 하나를 추가 하 여 수행할 수 있습니다. 예:
 
 ```csharp
 using System;
@@ -951,8 +951,6 @@ Apple은 개발자가 다음과 같은 대부분의 Mac 플랫폼을 만들 수 
 ## <a name="summary"></a>요약
 
 이 문서에서는 개발자가 Xamarin.ios에서 최신 macOS 앱을 빌드하는 데 사용할 수 있는 몇 가지 팁, 기능 및 기술에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 8537e075c4ac1dba8362ec9ce5fc77ee0935503c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: af32f4af3951eff3b8b5412908e35c4cdef09ae4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757263"
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>Windows VM에서 Mac에서 실행 중인 Android 에뮬레이터에 연결할 수 있나요?
 
@@ -104,4 +104,3 @@ Mac에서 _원격 로그인_ 를 사용 하도록 설정한 경우 포트 전달
 
 기술이 더 이상 작동 하지 않거나 문서에서 다른 오류가 발생 하는 경우 포럼 스레드 ( [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm))의 토론에 자유롭게 추가할 수 있습니다.
 감사합니다.
-

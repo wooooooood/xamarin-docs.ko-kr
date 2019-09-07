@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: a937de27fc032b0d88dfdf717339b47e0df8e58d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e8ffe337e1f5c74bc348b9600a466f1232f40b0b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644627"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758837"
 ---
 # <a name="xamarinandroid-edit-text"></a>Xamarin Android 편집 텍스트
 
@@ -65,7 +65,6 @@ using Android.Views;
 [![텍스트를 편집 텍스트로 입력 하는 예](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
 *이 페이지의 일부는 생성 된 작업을 기반으로 하 여 수정 됩니다* . [*Android 오픈 소스 프로젝트에서 공유*](http://code.google.com/policies.html) 에 *설명 된 용어에 따라 사용 됩니다* . [*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/) *. 이 자습서는* [*Android 양식 제품 자습서*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) 를 기반으로 *합니다.*
-
 
 ## <a name="related-links"></a>관련 링크
 

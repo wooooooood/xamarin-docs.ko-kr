@@ -6,12 +6,12 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: c81ef4e07a90f09d6e06d0d1f565febfcaacf922
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 180db6789ab9cc665ad815b943013b117a562709
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288390"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757062"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>설치 후 Visual Studio 확장 누락
 
@@ -44,7 +44,6 @@ Visual Studio 2017 (Community, Professional 또는 Enterprise) 이상이 설치 
     `C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Xamarin\Xamarin\3.1.228.0`
 
     3\.1.228 버전에 대 한 확장이 올바르게 설치 된 경우 폴더에는 60 개의 항목이 있습니다.
-
 
     ![](missing-vs-extensions-images/folder.png "탐색기에서 ' Xamarin\3.1.228.0 ' 폴더 내용 목록")
 

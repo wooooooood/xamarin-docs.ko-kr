@@ -7,19 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d3046479282ef1535677f6712e487ab80bbf9d1b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 71972f13f991bc5ad3ddf3c1c631fa7413290204
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656799"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759899"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Xamarin.Forms에서 간단한 애니메이션 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _ViewExtensions 클래스는 간단한 애니메이션을 만드는 데 사용할 수 있는 확장 메서드를 제공합니다. 이 문서에서는 ViewExtensions 클래스를 사용하여 애니메이션을 생성하고 취소하는 방법을 보여 줍니다._
-
 
 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 클래스는 아래와 같이 간단한 애니메이션을 만드는 데 사용할 수 있는 확장 메서드를 제공합니다.
 
@@ -229,7 +228,6 @@ ViewExtensions.CancelAnimations (image);
 ## <a name="summary"></a>요약
 
 이 문서에서는 설명 만들기 및 사용 하 여 애니메이션을 취소 합니다 [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions) 클래스입니다. 이 클래스는 회전, 크기 조정, 변환 및 페이드 인 되는 간단한 애니메이션을 만드는 데 사용할 수 있는 확장 메서드를 제공 [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) 인스턴스.
-
 
 ## <a name="related-links"></a>관련 링크
 

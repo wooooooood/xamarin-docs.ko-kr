@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 19998f685955ce118ffe37e7624fd43b082ab994
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
-ms.translationtype: HT
+ms.openlocfilehash: 0d5cde38c9bb9ef4771ec17ef34ebf7e1b8cf74c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644427"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755506"
 ---
 # <a name="local-notifications-on-android"></a>Android의 로컬 알림
 
@@ -30,9 +30,9 @@ Android는 알림 아이콘과 알림 정보를 사용자에 게 표시 하는 �
 
 Android 알림은 다음과 같은 두 가지 유형의 레이아웃을 사용 합니다.
 
--   ***기본 레이아웃*** &ndash; 간결한 고정 프레젠테이션 형식입니다.
+- ***기본 레이아웃*** &ndash; 간결한 고정 프레젠테이션 형식입니다.
 
--   ***확장 된 레이아웃*** &ndash; 추가 정보를 표시 하기 위해 더 큰 크기로 확장할 수 있는 프레젠테이션 형식입니다.
+- ***확장 된 레이아웃*** &ndash; 추가 정보를 표시 하기 위해 더 큰 크기로 확장할 수 있는 프레젠테이션 형식입니다.
 
 다음 섹션에서는 이러한 각 레이아웃 유형과 이러한 레이아웃을 만드는 방법에 대해 설명 합니다.
 
@@ -43,13 +43,13 @@ Android 알림은 다음과 같은 두 가지 유형의 레이아웃을 사용 �
 
 모든 Android 알림은 기본 레이아웃 형식으로 빌드됩니다. 여기에는 최소한 다음 요소가 포함 됩니다.
 
-1.  원본 앱을 나타내는 *알림 아이콘*또는 앱에서 다양 한 유형의 알림을 지 원하는 경우 알림 유형입니다.
+1. 원본 앱을 나타내는 *알림 아이콘*또는 앱에서 다양 한 유형의 알림을 지 원하는 경우 알림 유형입니다.
 
-2.  알림 *제목*또는 알림이 개인 메시지 인 경우 보낸 사람의 이름입니다.
+2. 알림 *제목*또는 알림이 개인 메시지 인 경우 보낸 사람의 이름입니다.
 
-3.  알림 메시지입니다.
+3. 알림 메시지입니다.
 
-4.  *타임 스탬프*입니다.
+4. *타임 스탬프*입니다.
 
 이러한 요소는 다음 다이어그램에 나와 있는 것 처럼 표시 됩니다.
 
@@ -75,15 +75,14 @@ Android 5.0에는 우선 순위가 높은 알림 프레젠테이션 형식이 �
 
 Android에는 알림을 지능적으로 정렬 하 고 표시할 수 있도록 알림 메타 데이터에 대 한 지원이 포함 되어 있습니다. 알림 메타 데이터는 또한 잠금 화면 및 준비 형식에 알림이 표시 되는 방식을 제어 합니다. 응용 프로그램은 다음과 같은 유형의 알림 메타 데이터를 설정할 수 있습니다.
 
--   **우선 순위** &ndash; 우선 순위 수준은 알림이 표시 되는 방법 및 시기를 결정 합니다. 예를 들어 Android 5.0에서는 우선 순위가 높은 알림이 준비 알림으로 표시 됩니다.
+- **우선 순위** &ndash; 우선 순위 수준은 알림이 표시 되는 방법 및 시기를 결정 합니다. 예를 들어 Android 5.0에서는 우선 순위가 높은 알림이 준비 알림으로 표시 됩니다.
 
--   **표시 유형** &ndash; 잠금 화면에 알림이 표시 될 때 표시 되는 알림 콘텐츠 크기를 지정 합니다.
+- **표시 유형** &ndash; 잠금 화면에 알림이 표시 될 때 표시 되는 알림 콘텐츠 크기를 지정 합니다.
 
--   **범주** 장치가 방해 금지 모드에 있을 때와 같이 다양 한 상황에서 알림을 처리 하는 방법을 시스템에 알립니다. &ndash;
+- **범주** 장치가 방해 금지 모드에 있을 때와 같이 다양 한 상황에서 알림을 처리 하는 방법을 시스템에 알립니다. &ndash;
 
 > [!NOTE]
 > **표시 유형** 및 **범주** 는 android 5.0에서 도입 되었으며 이전 버전의 android에서 사용할 수 없습니다. Android 8.0부터 [알림 채널](#notif-chan) 은 사용자에 게 알림이 표시 되는 방식을 제어 하는 데 사용 됩니다.
-
 
 ### <a name="expanded-layouts"></a>확장 된 레이아웃
 
@@ -97,11 +96,11 @@ Android 4.1 부터는 사용자가 알림의 높이를 확장 하 여 더 많은
 
 Android는 단일 이벤트 알림에 대해 3 가지 확장 된 레이아웃 스타일을 지원 합니다.
 
--   ***큰 텍스트*** &ndash; 계약 된 모드에서는 메시지의 첫 번째 줄에 두 개의 마침표가 있는 발췌를 표시 합니다. 확장 모드에서는 전체 메시지를 표시 합니다 (위 예제에 표시 된 대로).
+- ***큰 텍스트*** &ndash; 계약 된 모드에서는 메시지의 첫 번째 줄에 두 개의 마침표가 있는 발췌를 표시 합니다. 확장 모드에서는 전체 메시지를 표시 합니다 (위 예제에 표시 된 대로).
 
--   ***수신함*** &ndash; 계약 된 모드에서 새 메시지 수를 표시 합니다. 확장 된 모드에서 첫 번째 전자 메일 메시지 또는 수신함의 메시지 목록을 표시 합니다.
+- ***수신함*** &ndash; 계약 된 모드에서 새 메시지 수를 표시 합니다. 확장 된 모드에서 첫 번째 전자 메일 메시지 또는 수신함의 메시지 목록을 표시 합니다.
 
--   ***이미지*** &ndash; 계약 된 모드에서는 메시지 텍스트만 표시 합니다. 확장 모드에서 텍스트와 이미지를 표시 합니다.
+- ***이미지*** &ndash; 계약 된 모드에서는 메시지 텍스트만 표시 합니다. 확장 모드에서 텍스트와 이미지를 표시 합니다.
 
 [기본 알림 이상](#beyond-the-basic-notification) (이 문서 뒷부분에서는) *큰 텍스트*, *수신함*및 *이미지* 알림을 만드는 방법을 설명 합니다.
 
@@ -121,15 +120,15 @@ Android Oreo와 함께 설치 되는 **YouTube** 앱은 다음과 같은 두 가
 
 이 화면에서 사용자는 다음을 수행 하 여 **다운로드** 알림 채널의 동작을 수정할 수 있습니다.
 
--   중요도 수준을 **긴급**, **높음**, **중간**또는 **낮음**으로 설정 하 여 사운드 및 시각적 중단의 수준을 구성 합니다.
+- 중요도 수준을 **긴급**, **높음**, **중간**또는 **낮음**으로 설정 하 여 사운드 및 시각적 중단의 수준을 구성 합니다.
 
--   알림 점을 설정 하거나 해제 합니다.
+- 알림 점을 설정 하거나 해제 합니다.
 
--   깜박이는 조명을 설정 하거나 해제 합니다.
+- 깜박이는 조명을 설정 하거나 해제 합니다.
 
--   잠금 화면에 알림을 표시 하거나 숨깁니다.
+- 잠금 화면에 알림을 표시 하거나 숨깁니다.
 
--   **방해 금지** 설정을 재정의 합니다.
+- **방해 금지** 설정을 재정의 합니다.
 
 **일반 알림** 채널의 설정은 다음과 유사 합니다.
 
@@ -144,19 +143,19 @@ Android에서 알림을 만들려면 [Xamarin.Android.Support.v4](https://www.nu
 
 `NotificationCompat.Builder`알림에서 다음과 같은 다양 한 옵션을 설정 하는 메서드를 제공 합니다.
 
--   제목, 메시지 텍스트 및 알림 아이콘이 포함 된 콘텐츠입니다.
+- 제목, 메시지 텍스트 및 알림 아이콘이 포함 된 콘텐츠입니다.
 
--   *큰 텍스트*, *수신함*또는 *이미지* 스타일과 같은 알림 스타일입니다.
+- *큰 텍스트*, *수신함*또는 *이미지* 스타일과 같은 알림 스타일입니다.
 
--   알림의 우선 순위는 minimum, low, default, high 또는 maximum입니다. Android 8.0 이상에서 우선 순위는 [_알림 채널_](#notification-channels)을 통해 설정 됩니다.
+- 알림의 우선 순위는 minimum, low, default, high 또는 maximum입니다. Android 8.0 이상에서 우선 순위는 [_알림 채널_](#notification-channels)을 통해 설정 됩니다.
 
--   잠금 화면에 표시 되는 알림 (공개, 개인 또는 암호)입니다.
+- 잠금 화면에 표시 되는 알림 (공개, 개인 또는 암호)입니다.
 
--   Android에서 알림을 분류 하 고 필터링 하는 데 도움이 되는 범주 메타 데이터입니다.
+- Android에서 알림을 분류 하 고 필터링 하는 데 도움이 되는 범주 메타 데이터입니다.
 
--   알림을 누를 때 시작할 활동을 나타내는 선택적 의도입니다.
+- 알림을 누를 때 시작할 활동을 나타내는 선택적 의도입니다.
 
--   알림이 게시 될 알림 채널의 ID입니다 (Android 8.0 이상).
+- 알림이 게시 될 알림 채널의 ID입니다 (Android 8.0 이상).
 
 작성기에서 이러한 옵션을 설정한 후에는 설정을 포함 하는 알림 개체를 생성 합니다. 알림을 게시 하려면이 알림 개체를 *알림 관리자*에 게 전달 합니다. Android는 알림 게시 및 사용자에 게 표시를 담당 하는 [Notificationmanager](xref:Android.App.NotificationManager) 클래스를 제공 합니다. 활동 또는 서비스와 같은 모든 컨텍스트에서이 클래스에 대 한 참조를 가져올 수 있습니다.
 
@@ -200,21 +199,21 @@ void CreateNotificationChannel()
 
 Android에서 알림을 생성 하려면 다음 단계를 수행 합니다.
 
-1.  개체를 `NotificationCompat.Builder` 인스턴스화합니다.
+1. 개체를 `NotificationCompat.Builder` 인스턴스화합니다.
 
-2.  `NotificationCompat.Builder` 개체에 대 한 다양 한 메서드를 호출 하 여 알림 옵션을 설정 합니다.
+2. `NotificationCompat.Builder` 개체에 대 한 다양 한 메서드를 호출 하 여 알림 옵션을 설정 합니다.
 
-3.  `NotificationCompat.Builder` 개체의 [빌드](xref:Android.App.Notification.Builder.Build) 메서드를 호출 하 여 알림 개체를 인스턴스화합니다.
+3. `NotificationCompat.Builder` 개체의 [빌드](xref:Android.App.Notification.Builder.Build) 메서드를 호출 하 여 알림 개체를 인스턴스화합니다.
 
-4.  알림 관리자의 [알림 메서드를](xref:Android.App.NotificationManager.Notify*) 호출 하 여 알림을 게시 합니다.
+4. 알림 관리자의 [알림 메서드를 호출 하 여 알림을](xref:Android.App.NotificationManager.Notify*) 게시 합니다.
 
 각 알림에 대해 최소한 다음 정보를 제공 해야 합니다.
 
--   작은 아이콘 (24x24 dp 크기)
+- 작은 아이콘 (24x24 dp 크기)
 
--   짧은 제목
+- 짧은 제목
 
--   알림 텍스트
+- 알림 텍스트
 
 다음 코드 예제에서는를 사용 `NotificationCompat.Builder` 하 여 기본 알림을 생성 하는 방법을 보여 줍니다. 메서드는 `NotificationCompat.Builder` [메서드 체인](https://en.wikipedia.org/wiki/Method_chaining)을 지원 합니다. 즉, 각 메서드는 빌더 개체를 반환 하므로 마지막 메서드 호출의 결과를 사용 하 여 다음 메서드 호출을 호출할 수 있습니다.
 
@@ -321,14 +320,13 @@ notificationManager.Notify (notificationId, notification);
 
 다음 세 가지 중 하나가 발생할 때까지 알림이 계속 표시 됩니다.
 
--   사용자가 알림을 해제 하거나 [ *모두 지우기*]를 탭 합니다.
+- 사용자가 알림을 해제 하거나 [ *모두 지우기*]를 탭 합니다.
 
--   응용 프로그램은를 `NotificationManager.Cancel`호출 하 여 알림이 게시 될 때 할당 된 고유한 알림 ID를 전달 합니다.
+- 응용 프로그램은를 `NotificationManager.Cancel`호출 하 여 알림이 게시 될 때 할당 된 고유한 알림 ID를 전달 합니다.
 
--   응용 프로그램에서 `NotificationManager.CancelAll`를 호출 합니다.
+- 응용 프로그램에서 `NotificationManager.CancelAll`를 호출 합니다.
 
 Android 알림 업데이트에 대 한 자세한 내용은 [알림 수정](https://developer.android.com/training/notify-user/managing.html#Updating)을 참조 하세요.
-
 
 ### <a name="starting-an-activity-from-a-notification"></a>알림에서 작업 시작
 
@@ -604,22 +602,22 @@ builder.SetStyle (inboxStyle);
 
 Android 7.1에서 실행 되는 앱은 알림 자체에서 직접 우선 순위를 설정 해야 합니다. 알림의 우선 순위 설정은 알림이 게시 될 때 두 가지 결과를 결정 합니다.
 
--   다른 알림과 관련 하 여 알림이 표시 되는 위치입니다.
+- 다른 알림과 관련 하 여 알림이 표시 되는 위치입니다.
     예를 들어 우선 순위가 높은 알림은 각 알림이 게시 된 시기에 관계 없이 알림 서랍의 낮은 우선 순위 알림 위에 표시 됩니다.
 
--   알림이 준비 알림 형식 (Android 5.0 이상)에 표시 되는지 여부입니다. *높음* 및 *최대* 우선 순위 알림만 준비 알림으로 표시 됩니다.
+- 알림이 준비 알림 형식 (Android 5.0 이상)에 표시 되는지 여부입니다. *높음* 및 *최대* 우선 순위 알림만 준비 알림으로 표시 됩니다.
 
 Xamarin.ios는 알림 우선 순위를 설정 하기 위해 다음 열거형을 정의 합니다.
 
--   `NotificationPriority.Max`&ndash; 사용자에 게 긴급 또는 위험 조건 (예: 들어오는 전화, 턴 턴 방향 또는 비상 경고)을 알립니다. Android 5.0 이상 장치에서는 최대 우선 순위 알림이 준비 형식으로 표시 됩니다.
+- `NotificationPriority.Max`&ndash; 사용자에 게 긴급 또는 위험 조건 (예: 들어오는 전화, 턴 턴 방향 또는 비상 경고)을 알립니다. Android 5.0 이상 장치에서는 최대 우선 순위 알림이 준비 형식으로 표시 됩니다.
 
--   `NotificationPriority.High`&ndash; 중요 한 이벤트 (예: 중요 한 전자 메일 또는 실시간 채팅 메시지 도착)를 사용자에 게 알립니다. Android 5.0 이상 장치에서는 높은 우선 순위 알림이 준비 형식으로 표시 됩니다.
+- `NotificationPriority.High`&ndash; 중요 한 이벤트 (예: 중요 한 전자 메일 또는 실시간 채팅 메시지 도착)를 사용자에 게 알립니다. Android 5.0 이상 장치에서는 높은 우선 순위 알림이 준비 형식으로 표시 됩니다.
 
--   `NotificationPriority.Default`&ndash; 보통 중요도의 조건을 사용자에 게 알립니다.
+- `NotificationPriority.Default`&ndash; 보통 중요도의 조건을 사용자에 게 알립니다.
 
--   `NotificationPriority.Low`&ndash; 사용자에 게 알림을 받아야 하는 긴급 하지 않은 정보 (예: 소프트웨어 업데이트 미리 알림 또는 소셜 네트워크 업데이트)
+- `NotificationPriority.Low`&ndash; 사용자에 게 알림을 받아야 하는 긴급 하지 않은 정보 (예: 소프트웨어 업데이트 미리 알림 또는 소셜 네트워크 업데이트)
 
--   `NotificationPriority.Min`&ndash; 사용자가 알림 (예: 위치 또는 날씨 정보)을 볼 때만 확인 하는 배경 정보
+- `NotificationPriority.Min`&ndash; 사용자가 알림 (예: 위치 또는 날씨 정보)을 볼 때만 확인 하는 배경 정보
 
 알림의 우선 순위를 설정 하려면 `NotificationCompat.Builder` 개체의 [setpriority](xref:Android.App.Notification.Builder.SetPriority*) 메서드를 호출 하 여 우선 순위 수준으로 전달 합니다. 예를 들어:
 
@@ -649,11 +647,11 @@ builder.SetPriority (NotificationPriority.High);
 Android 5.0부터 *표시 유형* 설정을 사용 하 여 보안 잠금 화면에 표시 되는 알림 콘텐츠의 크기를 제어할 수 있습니다.
 Xamarin Android는 알림 표시 여부를 설정 하기 위해 다음 열거형을 정의 합니다.
 
--   `NotificationVisibility.Public`&ndash; 알림의 전체 콘텐츠가 보안 잠금 화면에 표시 됩니다.
+- `NotificationVisibility.Public`&ndash; 알림의 전체 콘텐츠가 보안 잠금 화면에 표시 됩니다.
 
--   `NotificationVisibility.Private`&ndash; 중요 한 정보만 보안 잠금 화면에 표시 됩니다 (예: 알림 아이콘 및 게시 된 앱의 이름). 그러나 나머지 알림의 세부 정보는 숨겨집니다. 모든 알림은 기본적으로 `NotificationVisibility.Private`입니다.
+- `NotificationVisibility.Private`&ndash; 중요 한 정보만 보안 잠금 화면에 표시 됩니다 (예: 알림 아이콘 및 게시 된 앱의 이름). 그러나 나머지 알림의 세부 정보는 숨겨집니다. 모든 알림은 기본적으로 `NotificationVisibility.Private`입니다.
 
--   `NotificationVisibility.Secret`&ndash; 알림 아이콘이 아니라 보안 잠금 화면에 아무 것도 표시 되지 않습니다. 알림 콘텐츠는 사용자가 장치를 잠금 해제 한 후에만 사용할 수 있습니다.
+- `NotificationVisibility.Secret`&ndash; 알림 아이콘이 아니라 보안 잠금 화면에 아무 것도 표시 되지 않습니다. 알림 콘텐츠는 사용자가 장치를 잠금 해제 한 후에만 사용할 수 있습니다.
 
 알림 표시 여부를 설정 하기 위해 앱은 `SetVisibility` `NotificationCompat.Builder` 개체의 메서드를 호출 하 여 표시 유형 설정을 전달 합니다. 예를 들어를 `SetVisibility` 호출 하면 알림이 `Private`수행 됩니다.
 
@@ -671,33 +669,33 @@ builder.SetVisibility (NotificationVisibility.Private);
 
 Android 5.0 부터는 미리 정의 된 범주를 순위 및 필터링 알림에 사용할 수 있습니다. Xamarin Android는 이러한 범주에 대해 다음과 같은 열거형을 제공 합니다.
 
--   `Notification.CategoryCall`&ndash; 들어오는 전화 통화입니다.
+- `Notification.CategoryCall`&ndash; 들어오는 전화 통화입니다.
 
--   `Notification.CategoryMessage`&ndash; 들어오는 문자 메시지입니다.
+- `Notification.CategoryMessage`&ndash; 들어오는 문자 메시지입니다.
 
--   `Notification.CategoryAlarm`&ndash; 경보 조건 또는 타이머 만료입니다.
+- `Notification.CategoryAlarm`&ndash; 경보 조건 또는 타이머 만료입니다.
 
--   `Notification.CategoryEmail`&ndash; 받는 전자 메일 메시지입니다.
+- `Notification.CategoryEmail`&ndash; 받는 전자 메일 메시지입니다.
 
--   `Notification.CategoryEvent`&ndash; 일정 이벤트입니다.
+- `Notification.CategoryEvent`&ndash; 일정 이벤트입니다.
 
--   `Notification.CategoryPromo`&ndash; 프로 모션 메시지 또는 광고.
+- `Notification.CategoryPromo`&ndash; 프로 모션 메시지 또는 광고.
 
--   `Notification.CategoryProgress`&ndash; 백그라운드 작업의 진행률입니다.
+- `Notification.CategoryProgress`&ndash; 백그라운드 작업의 진행률입니다.
 
--   `Notification.CategorySocial`&ndash; 소셜 네트워킹 업데이트.
+- `Notification.CategorySocial`&ndash; 소셜 네트워킹 업데이트.
 
--   `Notification.CategoryError`&ndash; 백그라운드 작업이 나 인증 프로세스가 실패 했습니다.
+- `Notification.CategoryError`&ndash; 백그라운드 작업이 나 인증 프로세스가 실패 했습니다.
 
--   `Notification.CategoryTransport`&ndash; 미디어 재생 업데이트.
+- `Notification.CategoryTransport`&ndash; 미디어 재생 업데이트.
 
--   `Notification.CategorySystem`&ndash; 시스템에서 사용 하도록 예약 되었습니다 (시스템 또는 장치 상태).
+- `Notification.CategorySystem`&ndash; 시스템에서 사용 하도록 예약 되었습니다 (시스템 또는 장치 상태).
 
--   `Notification.CategoryService`&ndash; 백그라운드 서비스가 실행 중임을 나타냅니다.
+- `Notification.CategoryService`&ndash; 백그라운드 서비스가 실행 중임을 나타냅니다.
 
--   `Notification.CategoryRecommendation`&ndash; 현재 실행 중인 앱과 관련 된 권장 사항 메시지입니다.
+- `Notification.CategoryRecommendation`&ndash; 현재 실행 중인 앱과 관련 된 권장 사항 메시지입니다.
 
--   `Notification.CategoryStatus`&ndash; 장치에 대 한 정보입니다.
+- `Notification.CategoryStatus`&ndash; 장치에 대 한 정보입니다.
 
 알림이 정렬 되 면 알림 우선 순위가 해당 범주 설정 보다 우선 적용 됩니다. 예를 들어 우선 순위가 높은 알림은 `Promo` 범주에 속한 경우에도 준비로 표시 됩니다. 알림의 범주를 설정 하려면 `SetCategory` `NotificationCompat.Builder` 개체의 메서드를 호출 하 여 범주 설정을 전달 합니다. 예를 들어:
 
@@ -709,7 +707,7 @@ builder.SetCategory (Notification.CategoryCall);
 
 ![화면 스위치를 방해 하지 않음](local-notifications-images/26-do-not-disturb.png)
 
-위의 스크린샷에 나와 있는 것 처럼 사용자가 전화 통화를 제외 하 고 모든 인터럽트를 차단 하도록 *방해* 금지를 구성 하는 경우 Android에서 범주가로 설정 `Notification.CategoryCall` 된 알림이 표시 되도록 허용 합니다.  *방해* 모드입니다. 알림은 방해 금지 모드에서 차단 되지 않습니다. `Notification.CategoryAlarm`
+위의 스크린샷에 나와 있는 것 처럼 사용자가 전화 통화를 제외 하 고 모든 인터럽트를 차단 하도록 *방해* 금지를 구성 하는 경우 `Notification.CategoryCall` Android에서 범주가로 설정 된 알림이 표시 되도록 허용 합니다.  *방해* 모드입니다. 알림은 방해 금지 모드에서 차단 되지 않습니다. `Notification.CategoryAlarm`
 
 [Localnotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) 샘플에서는를 사용 `NotificationCompat.Builder` 하 여 알림에서 두 번째 활동을 시작 하는 방법을 보여 줍니다. 이 샘플 코드는 [xamarin.ios 연습의 로컬 알림 사용](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) 에서 설명 합니다.
 

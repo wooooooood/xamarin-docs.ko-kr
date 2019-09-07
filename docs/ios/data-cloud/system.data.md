@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 36eeb517fee69742f900a0cf18e1d19d093dfc52
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 44d2e468efeacea919af2d243588d0da6d72945d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290124"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766546"
 ---
 # <a name="systemdata-in-xamarinios"></a>Xamarin.ios의 system.object
 
@@ -110,7 +110,6 @@ class Demo {
 > [!IMPORTANT]
 > 위의 코드 샘플에 설명 된 것 처럼 sql 명령에 문자열을 포함 하는 것은 코드를 [sql 삽입](https://en.wikipedia.org/wiki/SQL_injection)에 취약 하 게 만드는 것이 좋습니다.
 
-
 ### <a name="using-command-parameters"></a>Command 매개 변수 사용
 
 다음 코드에서는 명령 매개 변수를 사용 하 여 사용자가 입력 한 텍스트를 데이터베이스에 안전 하 게 삽입 하는 방법을 보여 줍니다 (텍스트에 단일 아포스트로피와 같은 특수 SQL 문자가 포함 된 경우에도).
@@ -149,7 +148,6 @@ using (var addCmd = conn.CreateCommand ()) {
 - [System.Data.Odbc](xref:System.Data.Odbc)
 - 종속성이 에서`System.Data.dll` 제거 되었으므로 [SqlConnection. EnlistDistributedTransaction (ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) 메서드가 제거 됩니다. `System.EnterpriseServices.dll`
 
-
 <a name="Mono.Data.Sqlite" />
 
 ### <a name="monodatasqlite"></a>Mono.Data.Sqlite
@@ -170,4 +168,3 @@ using (var addCmd = conn.CreateCommand ()) {
 ## <a name="data-binding"></a>데이터 바인딩
 
 지금은 데이터 바인딩이 지원 되지 않습니다.
-

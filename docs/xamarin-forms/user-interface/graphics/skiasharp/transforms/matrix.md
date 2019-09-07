@@ -7,12 +7,12 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
-ms.openlocfilehash: e44dfd85d9d4480d56ac75d61fd379b04fb8fb12
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6e78e3930ec731bc970ef39ddb7fe7051d62f63a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648619"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770436"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>SkiaSharp의 행렬 변환
 
@@ -649,7 +649,6 @@ public partial class ShowAffineMatrixPage : ContentPage
 </pre>
 
 0이 아닌 값 `Persp0` 고 `Persp1` Z = 1 2 차원 평면 해제 하는 개체를 이동 하는 변환에서 발생 합니다. 문서에 대해서는 해당 개체를 평면 다시 이동할 때 어떻게 될까요 [ **비 관계 변환**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md)합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

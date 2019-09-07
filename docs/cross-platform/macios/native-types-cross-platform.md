@@ -6,17 +6,16 @@ ms.assetid: B9C56C3B-E196-4ADA-A1DE-AC10D1001C2A
 author: conceptdev
 ms.author: crdun
 ms.date: 04/07/2016
-ms.openlocfilehash: dde5b2429622c967fa4419700ce8fe9860afbb10
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 273b7f2eb40f1fa8495e0a0e8e18fa947241f389
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290846"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765410"
 ---
 # <a name="working-with-native-types-in-cross-platform-apps"></a>플랫폼 간 앱에서의 네이티브 형식 작업
 
 _이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치와 코드를 공유 하는 플랫폼 간 응용 프로그램에서 새로운 iOS Unified API 네이티브 형식 (nint, nuint, nint)을 사용 하는 방법을 설명 합니다._
-
 
 64 형식의 네이티브 형식은 iOS 및 Mac Api에서 작동 합니다. Android 또는 Windows에서 실행 되는 공유 코드를 작성 하는 경우에는 공유할 수 있는 일반 .NET 형식으로 통합 형식을 변환 해야 합니다.
 
@@ -211,10 +210,9 @@ namespace NativeShared
 
 코드가 컴파일되고 Unified API 되지 않은 장치에서 실행 되는 경우은 `using nfloat = global::System.Single;` 를 사용 하는 프런트 엔드 응용 프로그램이를 사용 하지 않고 `float` `CalculateArea` 메서드를 호출할 수 있도록 암시적으로 변환 되는에 `nfloat` 매핑합니다 `Single` . 수정과.
 
-
 #### <a name="using-type-conversions-in-the-front-end-app"></a>프런트 엔드 앱에서 형식 변환 사용
 
-프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예를 들어:
+프런트 엔드 응용 프로그램에서 공유 코드 라이브러리에 대해 몇 개의 호출만 수행 하는 경우 다른 해결 방법은 기존 루틴을 호출할 때 라이브러리를 변경 하지 않고, Xamarin.ios 또는 Xamarin.ios 응용 프로그램에서 형식 캐스팅을 수행 하는 것입니다. 예:
 
 ```csharp
 using NativeShared;
@@ -227,7 +225,6 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 소비 하는 응용 프로그램에서 공유 코드 라이브러리를 수백 번 호출 하는 경우에는이 방법이 좋은 솔루션이 아닐 수 있습니다.
 
 응용 프로그램의 아키텍처에 따라 위의 솔루션 중 하나 이상을 사용 하 여 플랫폼 간 코드에서 네이티브 데이터 형식 (필요한 경우)을 지원할 수 있습니다.
-
 
 ## <a name="xamarinforms-applications"></a>Xamarin Forms 응용 프로그램
 
@@ -243,8 +240,6 @@ Console.WriteLine ("Rectangle Area: {0}", Transformations.CalculateArea ((Rectan
 ## <a name="summary"></a>요약
 
 이 문서에서는 Unified API 응용 프로그램에서 네이티브 데이터 형식을 사용 하는 시기와 플랫폼 간 영향을 살펴보았습니다. 플랫폼 간 라이브러리에서 새 네이티브 데이터 형식을 사용 해야 하는 경우에 사용할 수 있는 여러 가지 솔루션을 제공 합니다. 또한 Xamarin. Forms 플랫폼 간 응용 프로그램에서 통합 Api를 지 원하는 간단한 가이드를 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

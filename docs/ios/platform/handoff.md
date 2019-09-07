@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fa0d51e02382458535b065377af55542d87913a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 52ee92eca5fa0b3108b2ef96ef81bfb939e61a6c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290752"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752916"
 ---
 # <a name="handoff-in-xamarinios"></a>Xamarin.ios의 핸드 오프
 
@@ -409,7 +409,7 @@ public void PerformHandoff(NSUserActivity activity) {
 completionHandler (new NSObject[]{Tab4});
 ```
 
-전달 된 `RestoreUserActivityState` 각 개체에 대해 메서드가 호출 됩니다. 그런 다음 각 개체는 `UserInfo` 사전의 데이터를 사용 하 여 자체 상태를 복원할 수 있습니다. 예를 들어:
+전달 된 `RestoreUserActivityState` 각 개체에 대해 메서드가 호출 됩니다. 그런 다음 각 개체는 `UserInfo` 사전의 데이터를 사용 하 여 자체 상태를 복원할 수 있습니다. 예:
 
 ```csharp
 public override void RestoreUserActivityState (NSUserActivity activity)
@@ -453,7 +453,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 
 지정 된 도메인이 `WebpageURL` 속성의 값과 일치 하면 핸드 오프는 해당 도메인의 웹 사이트에서 승인 된 앱 id 목록을 다운로드 합니다. 웹 사이트는 **apple 앱 사이트-연결** (예: `https://company.com/apple-app-site-association`) 이라는 서명 된 JSON 파일에 승인 된 id 목록을 제공 해야 합니다.
 
-이 JSON 파일에는 형식의 `<team identifier>.<bundle identifier>`앱 id 목록을 지정 하는 사전이 포함 되어 있습니다. 예를 들어:
+이 JSON 파일에는 형식의 `<team identifier>.<bundle identifier>`앱 id 목록을 지정 하는 사전이 포함 되어 있습니다. 예:
 
 ```csharp
 {
@@ -464,7 +464,7 @@ public override void DidFailToContinueUserActivitiy (UIApplication application, 
 }
 ```
 
-의 `Content-Type` [https://support.apple.com/kb/ht5012](https://support.apple.com/kb/ht5012) `openssl` 올바른를 갖도록 JSON 파일에 서명 하려면 터미널 앱 및 iOS에서 신뢰 하는 인증 기관에서 발급 한 키 (목록 참조)를 사용 하 여 명령을 사용 합니다. `application/pkcs7-mime` 예를 들어:
+의 `Content-Type` [https://support.apple.com/kb/ht5012](https://support.apple.com/kb/ht5012) `openssl` 올바른를 갖도록 JSON 파일에 서명 하려면 터미널 앱 및 iOS에서 신뢰 하는 인증 기관에서 발급 한 키 (목록 참조)를 사용 하 여 명령을 사용 합니다. `application/pkcs7-mime` 예:
 
 ```csharp
 echo '{"activitycontinuation":{"apps":["YWBN8XTPBJ.com.company.FirstApp",
@@ -487,7 +487,7 @@ https://example.com/apple-app-site-association.
 
 ## <a name="supporting-handoff-in-document-based-apps"></a>문서 기반 앱에서 핸드 오프 지원
 
-위에서 설명한 것 처럼 iOS 및 OS X에서 문서 기반 앱은 앱의 **info.plist** 파일에의 `CFBundleDocumentTypes` `NSUbiquitousDocumentUserActivityType`키가 포함 된 경우 iCloud 기반 문서의 전달 기능을 자동으로 지원 합니다. 예를 들어:
+위에서 설명한 것 처럼 iOS 및 OS X에서 문서 기반 앱은 앱의 **info.plist** 파일에의 `CFBundleDocumentTypes` `NSUbiquitousDocumentUserActivityType`키가 포함 된 경우 iCloud 기반 문서의 전달 기능을 자동으로 지원 합니다. 예:
 
 ```xml
 <key>CFBundleDocumentTypes</key>
@@ -523,7 +523,7 @@ https://example.com/apple-app-site-association.
 
 는 작업을 계속 하는 데 필요한 정보의 양이 초기 전달 페이로드에 의해 효율적으로 전송 되지 않는 경우가 있을 수 있습니다. 이러한 상황에서 수신 앱은 데이터를 전송 하기 위해 자신과 원래 앱 간에 하나 이상의 스트림을 설정할 수 있습니다.
 
-원본 응용 프로그램은 `SupportsContinuationStreams` `NSUserActivity` 인스턴스의 속성을로 `true`설정 합니다. 예를 들어:
+원본 응용 프로그램은 `SupportsContinuationStreams` `NSUserActivity` 인스턴스의 속성을로 `true`설정 합니다. 예:
 
 ```csharp
 // Create a new user Activity to support this tab
@@ -626,8 +626,6 @@ Xamarin.ios 앱에서 핸드 오프를 사용 하는 예로이 가이드에 [**M
 ## <a name="summary"></a>요약
 
 이 문서에는 사용자의 Apple 장치 간에 사용자 활동을 계속 하는 데 사용 되는 핸드 오프 프레임 워크에 대 한 소개를 제공 합니다. 다음으로 Xamarin.ios 앱에서 핸드 오프를 사용 하도록 설정 하 고 구현 하는 방법을 살펴보았습니다. 마지막으로, 다양 한 유형의 전달 연속 사용 가능 및 전달 모범 사례에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

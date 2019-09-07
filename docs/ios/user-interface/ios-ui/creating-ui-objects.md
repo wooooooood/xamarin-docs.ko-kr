@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: a153c6115605ca2a58df233186fa45d200d8b99f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c1e7d6cbb2598f64a331257c9b14ecfa119193f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287305"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768790"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.ios에서 사용자 인터페이스 개체 만들기
 
@@ -43,11 +43,11 @@ IOS 디자이너에서 사용자 인터페이스 만들기를 시작 하려면 �
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  [![](creating-ui-objects-images/image2b.png "도구 상자 패드")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  [![](creating-ui-objects-images/image2b-vs.png "도구 상자 패드-Visual Studio")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 -----
 
 디자인 화면에서 컨트롤을 선택 하면 **Properties Pad** 해당 컨트롤에 대 한 특성이 표시 됩니다. 아래 스크린샷에서 채워지는 **위젯 > id > 이름** 필드가 *콘센트* 이름으로 사용 됩니다. 에서 C#컨트롤을 참조 하는 방법은 다음과 같습니다.
@@ -65,7 +65,7 @@ Xcode에서 Storyboard를 열려면 마우스 오른쪽 단추를 클릭 하 여
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
  [![](creating-ui-objects-images/imagexcode.png "스토리 보드 상황에 맞는 메뉴-Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
- 
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](creating-ui-objects-images/imagexcode-vs.png "스토리 보드 상황에 맞는 메뉴-Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
@@ -168,8 +168,6 @@ Partial 클래스의 이러한 요소를 사용 하면 코드에서 컨트롤을
 파일 `designer.cs` 을 수동으로 편집 하면 안 됩니다. IDE (Mac용 Visual Studio 또는 Visual Studio)는 스토리 보드와 동기화 된 상태를 유지 해야 합니다.
 
 사용자 인터페이스 개체가 `View` 또는 `ViewController`에 프로그래밍 방식으로 추가 되는 경우 개체 참조를 직접 인스턴스화하고 관리 하므로 디자이너 파일이 필요 하지 않습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

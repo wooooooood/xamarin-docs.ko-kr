@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: 77cd5ac86a24769947eefb6941229c56efc3297b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fa1fb0656384455322a2d0a3562fc0ee3ca52397
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524566"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757597"
 ---
 # <a name="naming-parameters-with-javadoc"></a>Javadoc를 사용 하 여 매개 변수 명명
 
 _이 문서에서는 java 프로젝트에서 생성 된 Javadoc를 사용 하 여 Java 바인딩 프로젝트에서 매개 변수 이름을 복구 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -35,12 +34,9 @@ Javadoc HTML을 Java 바인딩 프로젝트에 통합 하는 작업은 다음 �
 
 이 작업을 완료 한 후에는 Java 바인딩 프로젝트에 의해 바인딩된 Api에 원래 Java 매개 변수 이름이 있어야 합니다. 
 
-
 > [!NOTE]
 > JavaDoc 출력에는 상당한 차이가 있습니다. 여. JAR 바인딩 도구 체인는 가능한 모든 단일 순열을 지원 하지 않으므로 일부 매개 변수의 이름이 제대로 지정 되지 않을 수 있습니다.
-
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Java 바인딩 프로젝트에서 Javadoc를 사용 하 여 바인딩된 Api에 대 한 매개 변수 이름을 제공 하는 방법에 대해 설명 했습니다. 
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: f0889ecc428c595509fb23710bf3110c1bacad4e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: be737dfb92cf2ce90dc64dd527f908d52cf2c580
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290286"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770349"
 ---
 # <a name="xib-files-in-xamarinmac"></a>Xamarin.ios의 xib 파일
 
@@ -33,11 +33,9 @@ Xib 파일은 macOS에서 Xcode의 Interface Builder에 그래픽으로 만들�
 
 참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-C 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
 
-
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Xcode 및 Interface Builder 소개
 
 Xcode의 일부로 Apple은 디자이너에서 시각적으로 사용자 인터페이스를 만들 수 있도록 하는 Interface Builder 이라는 도구를 만들었습니다. Xamarin.Mac 통합 fluently 작성기 인터페이스를 Objective-C 사용자가 수행 하는 같은 도구로 UI를 만들 수 있습니다.
-
 
 ### <a name="components-of-xcode"></a>Xcode 구성 요소
 
@@ -47,23 +45,19 @@ Mac용 Visual Studio에서 Xcode의 xib 파일을 열면 왼쪽에는 **프로�
 
 이러한 각 Xcode 섹션의 기능과이를 사용 하 여 Xamarin.ios 응용 프로그램에 대 한 인터페이스를 만드는 방법을 살펴보겠습니다.
 
-
 #### <a name="project-navigation"></a>프로젝트 탐색
 
 Xcode에서 편집을 위해 xib 파일을 열면 Mac용 Visual Studio은 백그라운드에서 Xcode 프로젝트 파일을 만들어 자체와 Xcode 간의 변경 내용을 전달 합니다. 나중에 Xcode에서 Mac용 Visual Studio로 다시 전환 하면이 프로젝트에 대 한 변경 내용이 Mac용 Visual Studio 하 여 Xamarin.ios 프로젝트와 동기화 됩니다.
 
 **프로젝트 탐색** 섹션에서이 _shim_ Xcode 프로젝트를 구성 하는 모든 파일을 탐색할 수 있습니다. 일반적으로이 목록에 있는 xib 파일 (예: **xib** 및 **mainwindow.xaml**)에만 관심이 있습니다.
 
-
 #### <a name="interface-hierarchy"></a>인터페이스 계층 구조
 
 **인터페이스 계층 구조** 섹션에서 **자리 표시자** 및 주 **창과**같은 사용자 인터페이스의 여러 가지 주요 속성에 쉽게 액세스할 수 있습니다. 이 섹션을 사용 하 여 사용자 인터페이스를 구성 하는 개별 요소 (보기)에 액세스 하 고 계층 구조 내에서 해당 요소를 끌어서 중첩 하는 방법을 조정할 수도 있습니다.
 
-
 #### <a name="interface-editor"></a>인터페이스 편집기
 
 **인터페이스 편집기** 섹션에서는 사용자 인터페이스를 그래픽으로 레이아웃 하는 화면을 제공 합니다. **속성 & 유틸리티** 섹션의 **라이브러리** 섹션에서 요소를 끌어 디자인을 만듭니다. 디자인 화면에 사용자 인터페이스 요소 (뷰)를 추가 하면 인터페이스 **편집기**에 표시 되는 순서 대로 **인터페이스 계층 구조** 섹션에 추가 됩니다.
-
 
 #### <a name="properties--utilities"></a>속성 & 유틸리티
 
@@ -93,7 +87,6 @@ Xcode에서 편집을 위해 xib 파일을 열면 Mac용 Visual Studio은 백그
 ![라이브러리 검사기의 예](xib-images/xcode06.png "라이브러리 검사기의 예")
 
 이제 Xcode IDE 및 Interface Builder에 대해 잘 알고 있으므로이를 사용 하 여 사용자 인터페이스를 만드는 방법을 살펴보겠습니다.
-
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Xcode에서 windows 만들기 및 유지 관리
 
@@ -176,7 +169,6 @@ namespace MacXib
 
 [![Mainwindow.xaml xib를 편집 합니다.](xib-images/edit02.png "Mainwindow.xaml xib를 편집 합니다.")](xib-images/edit02-large.png#lightbox)
 
-
 ### <a name="standard-window-workflow"></a>표준 창 워크플로
 
 Xamarin.ios 응용 프로그램에서 만들고 사용 하는 모든 창의 경우 프로세스는 기본적으로 동일 합니다.
@@ -188,7 +180,6 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 모든 창의 경�
 5. **크기 검사기** 를 사용 하 여 UI 요소의 크기 조정을 처리 합니다.
 6. 콘센트 및 작업을 통해 코드에 C# 창의 UI 요소를 노출 합니다.
 7. 변경 내용을 저장 하 고 다시 Mac용 Visual Studio로 전환 하 여 Xcode와 동기화 합니다.
-
 
 ### <a name="designing-a-window-layout"></a>창 레이아웃 디자인
 
@@ -240,11 +231,9 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 모든 창의 경�
 
 Xamarin.ios 응용 프로그램에서 Windows를 사용 하는 방법에 대 한 자세한 내용은 [windows](~/mac/user-interface/window.md) 설명서를 참조 하세요.
 
-
 ## <a name="exposing-ui-elements-to-c-code"></a>코드에 C# UI 요소 노출
 
 Interface Builder에서 사용자 인터페이스의 모양과 느낌을 파악 했으면 코드에서 C# 액세스할 수 있도록 UI의 요소를 노출 해야 합니다. 이렇게 하려면 작업과 콘센트가 사용 됩니다.
-
 
 ### <a name="setting-a-custom-main-window-controller"></a>사용자 지정 주 창 컨트롤러 설정
 
@@ -266,7 +255,6 @@ UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으�
 
     [![Xcode의 일치 하는 .h 파일](xib-images/windowcontroller03.png "Xcode의 일치 하는 .h 파일")](xib-images/windowcontroller03-large.png#lightbox)
 
-
 ### <a name="outlets-and-actions"></a>출 선 및 작업
 
 따라서 콘센트 및 작업은 무엇 인가요? 전통적인 .NET 사용자 인터페이스 프로그래밍에서, 사용자 인터페이스의 컨트롤은 추가될 때 자동으로 속성으로 노출됩니다. Mac에서는 동작이 약간 다릅니다. 보기에 컨트롤을 추가하기만 해서는 코드에 액세스할 수 없습니다. 개발자가 UI 요소를 코드에 명시적으로 노출해야 합니다. 이 작업을 위해 Apple에서는 다음 두 가지 옵션을 제공 합니다.
@@ -281,7 +269,6 @@ Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하�
 [![Xcode에 있는 .h 파일의 예](xib-images/xcode16.png "Xcode에 있는 .h 파일의 예")](xib-images/xcode16-large.png#lightbox)
 
 이 **MainWindow.designer.cs** 파일은 새 `NSWindow` 가 만들어질 때 xamarin.ios 프로젝트에 자동으로 추가 되는를 미러링합니다. 이 파일은 Interface Builder에서 변경한 내용을 동기화 하는 데 사용 되며, UI 요소가 코드에 C# 노출 되도록 콘센트 및 작업을 만듭니다.
-
 
 #### <a name="adding-an-outlet"></a>콘센트 추가
 
@@ -312,7 +299,6 @@ Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하�
     ![완료 된 콘센트](xib-images/outlet06.png "완료 된 콘센트")
 10. 파일의 변경 내용을 저장합니다.
 
-
 #### <a name="adding-an-action"></a>작업 추가
 
 다음으로, UI 요소와의 사용자 상호 작용을 C# 코드에 노출 하는 작업을 만드는 방법을 살펴보겠습니다.
@@ -335,7 +321,6 @@ Xamarin.Mac 개발자를 위한 콘센트 또는 동작을 만들려면 원하�
 6. 파일의 변경 내용을 저장합니다.
 
 사용자 인터페이스를 연결 하 여 코드에 C# 노출 하 고 Mac용 Visual Studio 다시 전환 하 여 Xcode 및 Interface Builder의 변경 내용을 동기화 할 수 있습니다.
-
 
 ### <a name="writing-the-code"></a>코드 작성
 
@@ -400,7 +385,6 @@ void OpenDialog (NSObject sender)
 
 메뉴 사용에 대 한 자세한 내용은 [메뉴](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
-
 ## <a name="synchronizing-changes-with-xcode"></a>Xcode와 변경 내용 동기화
 
 Xcode에서 Mac용 Visual Studio로 다시 전환 하면 Xcode에서 변경한 내용이 자동으로 Xamarin.ios 프로젝트와 동기화 됩니다.
@@ -432,7 +416,6 @@ Xcode의 **mainwindow.xaml** 파일에 있는 정의를 사용 하 여 다음을
 
 > [!IMPORTANT]
 > 대부분의 경우 Mac용 Visual Studio는 Xcode에서 변경 된 내용을 자동으로 확인 하 고 Xamarin.ios 프로젝트와 동기화 합니다. 동기화가 자동으로 수행되지 않는 경우 Xcode로 돌아가서 다시 Mac용 Visual Studio로 돌아갑니다. 대부분 이렇게 하면 동기화 주기가 시작됩니다.
-
 
 ## <a name="adding-a-new-window-to-a-project"></a>프로젝트에 새 창 추가
 
@@ -471,7 +454,6 @@ void ShowPreferences (NSObject sender)
 ![샘플 앱 실행](xib-images/new04.png "샘플 앱 실행")
 
 Xamarin.ios 응용 프로그램에서 Windows를 사용 하는 방법에 대 한 자세한 내용은 [windows](~/mac/user-interface/window.md) 설명서를 참조 하세요.
-
 
 ## <a name="adding-a-new-view-to-a-project"></a>프로젝트에 새 뷰 추가
 
@@ -581,11 +563,9 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 Xamarin.ios 응용 프로그램에서 Windows를 사용 하는 방법에 대 한 자세한 내용은 [windows](~/mac/user-interface/window.md) 및 [대화 상자](~/mac/user-interface/dialog.md) 설명서를 참조 하세요.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 xib 파일을 사용 하는 방법에 대해 자세히 살펴봅니다. Xib 파일을 사용 하 여 응용 프로그램의 사용자 인터페이스를 만드는 방법, Xcode의 Interface Builder xib 파일을 만들고 유지 관리 하는 방법 및 코드에서 C# xib 파일을 사용 하는 방법에 대해 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

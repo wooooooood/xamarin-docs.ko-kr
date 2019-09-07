@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: e8277ff92c2ac1891c60b8da385a904af1bd299d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a1f2016af3bcac338f47b7315a26fe50ae76fee7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526286"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755097"
 ---
 # <a name="default-resources"></a>기본 리소스
 
@@ -35,7 +35,7 @@ ms.locfileid: "69526286"
 
 - **그릴** 때 &ndash; 그릴 수 있는 리소스는 응용 프로그램으로 컴파일된 다음 API 호출을 통해 액세스 하거나 다른 XML 리소스에서 참조할 수 있는 그래픽의 일반적인 개념입니다.
    Drawables의 몇 가지 예로는 비트맵 파일 (.png, .gif, .jpg), [9 개 패치](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch), 상태 목록, XML로 정의 된 일반 도형 등의 크기 조정 가능한 특수 한 비트맵이 있습니다.
- 
+
 - **레이아웃** &ndash; 작업 또는 목록의 행과 같은 사용자 인터페이스 레이아웃을 설명 하는 XML 파일입니다.
 
 - **메뉴** 옵션 메뉴, *상황에 맞는 메뉴*및 *하위 메뉴*와 같은 응용 프로그램 메뉴를 설명 하는 XML 파일입니다. &ndash; 메뉴의 예제는 [팝업 메뉴 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) 또는 [표준 컨트롤](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) 샘플을 참조 하세요.
@@ -45,7 +45,6 @@ ms.locfileid: "69526286"
 - **값** &ndash; 단순 값을 포함 하는 XML 파일입니다. Values 디렉터리의 XML 파일은 단일 리소스를 정의 하지 않고, 대신 여러 리소스를 정의할 수 있습니다. 예를 들어 하나의 XML 파일에는 문자열 값 목록이 포함 될 수 있지만 다른 XML 파일에는 색 값 목록이 포함 될 수 있습니다.
 
 - .net 구성 파일과 유사 하 게 작동 하는 **xml** &ndash; xml 파일입니다. 응용 프로그램에서 런타임에 읽을 수 있는 임의 XML입니다.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

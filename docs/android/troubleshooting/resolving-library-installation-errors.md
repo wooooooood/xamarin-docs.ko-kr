@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: d3face5db37e22fe7acceaa975c3327bb02b78ab
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8107a26e090aa920d71146d5f2af8b8365697d6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523329"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757207"
 ---
 # <a name="resolving-library-installation-errors"></a>라이브러리 설치 오류 해결
 
@@ -23,8 +23,6 @@ _일부 경우에 Android 지원 라이브러리를 설치 하는 동안 오류�
 
 Xamarin Android 앱 프로젝트를 빌드하는 동안 Visual Studio 또는 Mac용 Visual Studio 종속성 라이브러리를 다운로드 하 고 설치 하려고 할 때 빌드 오류가 발생할 수 있습니다. 이러한 오류의 상당수는 네트워크 연결 문제, 파일 손상 또는 버전 관리 문제로 인해 발생 합니다. 이 가이드에서는 가장 일반적인 지원 라이브러리 설치 오류에 대해 설명 하 고 이러한 문제를 해결 하 고 앱 프로젝트 빌드를 다시 시작 하는 단계를 제공 합니다. 
 
- 
- 
 ## <a name="errors-while-downloading-m2repository"></a>M2Repository를 다운로드 하는 동안 오류 발생
 
 Android 지원 라이브러리 또는 Google Play 서비스의 NuGet 패키지를 참조할 때 **m2repository** 오류가 표시 될 수 있습니다. 오류 메시지는 다음과 유사합니다.
@@ -34,8 +32,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 ```
 
 이 예제는 **\_android m2repository\_r16**에 대 한 것 이지만 **\_android m2repository\_r18** 또는 **android\_ 와 같은 다른 버전에 대해 동일한 오류 메시지가 표시 될 수 있습니다. m2repository\_r25**. 
-
-
 
 ### <a name="automatic-recovery-from-m2repository-errors"></a>M2repository 오류에서 자동 복구 
 
@@ -60,8 +56,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 4. 프로젝트 &ndash; 를 다시 빌드하면 빌드 프로세스에서 누락 된 라이브러리를 다시 다운로드 하 게 됩니다.
 
 대부분의 경우 이러한 단계를 수행 하면 빌드 오류가 해결 되어 계속 진행할 수 있습니다. 이 라이브러리를 삭제 해도 빌드 오류가 해결 되지 않으면 다음 섹션에 설명 된 대로 **\_android m2repository\_r_nn_** 파일을 수동으로 다운로드 하 여 설치 해야 합니다. 
-
-
 
 ### <a name="manually-downloading-m2repository"></a>수동으로 m2repository 다운로드
 
@@ -119,9 +113,7 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 
     [![0595E577D19D31708195A83087881EE6로 이름이 변경 되는 r16 리포지토리의 예](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
-
 이 절차를 수행 해도 빌드 오류가 해결 되지 않으면 **\_android m2repository\_r_nn_** 파일을 수동으로 다운로드 하 고 압축을 푼 후 다음 섹션에 설명 된 대로 해당 콘텐츠를 설치 해야 합니다. 
-
 
 ### <a name="manually-downloading-and-installing-m2repository-files"></a>수동으로 m2repository 파일 다운로드 및 설치
 
@@ -165,9 +157,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 9. **Aar** 파일의 콘텐츠를 **포함** 된 디렉터리에 압축을 풉니다. Windows에서는 **.zip** 확장명을 **aar** 파일에 추가 하 고 열고 해당 내용을 **포함** 된 디렉터리에 복사 합니다.
     MacOS에서 터미널의 **압축 풀기** 명령을 사용 하 여 **aar** 파일의 압축을 풉니다 (예: **aar 압축 풀기**).
 
-이제 누락 된 구성 요소를 수동으로 설치 하 고 프로젝트를 오류 없이 빌드해야 합니다. 그렇지 않은 경우 오류 메시지의 버전에 해당 하는 **m2repository** 보관 버전을 다운로드 했는지 확인 하 고 위의 단계에 설명 된 대로 올바른 위치에 해당 콘텐츠를 설치 했는지 확인 합니다. 
-
-
+이제 누락 된 구성 요소를 수동으로 설치 하 고 프로젝트를 오류 없이 빌드해야 합니다. 그렇지 않은 경우 오류 메시지의 버전에 해당 하는 **m2repository** **보관 버전** 을 다운로드 했는지 확인 하 고 위의 단계에 설명 된 대로 올바른 위치에 해당 콘텐츠를 설치 했는지 확인 합니다. 
 
 ## <a name="summary"></a>요약 
 

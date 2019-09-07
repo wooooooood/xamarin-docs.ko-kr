@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 9ca50171e43ef98e5b4e5fbd7bd236f74d35da8f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ae6a4fb45eb53c514c888d671780a5ceaeba6624
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286773"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768607"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>watchOS에서 Xamarin 알림
 
@@ -34,7 +34,6 @@ ms.locfileid: "70286773"
 
 ![](notifications-images/notifications-segue.png "알림 속성")
 
-
 알림의 다음과 같은 두 종류가 있습니다.
 
 - 시스템에서 정의한 스크롤할 때 스크롤할 때 정적 뷰가 아닙니다.
@@ -46,7 +45,6 @@ ms.locfileid: "70286773"
 앱 아이콘만, 앱 이름 및 알림 제목 문자열의 짧은 모양을 UI 구성 됩니다.
 
 사용자는 알림을 무시 하지 않으면, 시스템 자세한 정보를 제공 하는 장기 모양의 알림을 자동으로 전환 합니다.
-
 
 ### <a name="long-look-notification-controller"></a>알림 컨트롤러 장기-확인
 
@@ -63,7 +61,6 @@ OS를 다양 한 요인 기준으로 정적 또는 동적 보기를 표시할지
 동적 뷰는 더 많은 데이터를 표시 하 고 더 많은 대화형 기능을 제공할 수 있습니다.
 
 ![](notifications-images/notification-dynamic.png "동적 뷰")
-
 
 ## <a name="generating-notifications"></a>알림 생성
 
@@ -146,8 +143,6 @@ Visual Studio를 마우스 오른쪽 단추로 클릭에서 편집 하려면 조
         "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to choose between them in when selecting to debug the notification interface of your Watch App."
     }
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

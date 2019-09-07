@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: a012d8f166a287dfde4247a2df6d1e82091d9d70
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad0200d083f7b190184f631de51483f4f651d17
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290454"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769747"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinios"></a>연습-Xamarin.ios에서 로컬 알림 사용
 
@@ -24,7 +24,6 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
 ## <a name="walkthrough"></a>연습
 
 로컬 알림을 작동 중인 것으로 표시 하는 간단한 응용 프로그램을 만듭니다. 이 응용 프로그램에는 단일 단추가 있습니다. 단추를 클릭 하면 로컬 알림이 생성 됩니다. 지정 된 기간이 경과 된 후 알림이 표시 됩니다.
-
 
 1. Mac용 Visual Studio에서 새 단일 뷰 iOS 솔루션을 만들고 호출 `Notifications`합니다.
 1. `Main.storyboard` 파일을 열고 단추를 뷰로 끌어 옵니다. 단추 **단추의**이름을 지정 하 고 제목 **추가 알림을**지정 합니다. 이 시점에서 단추에 몇 가지 [제약 조건을](~/ios/user-interface/designer/designer-auto-layout.md) 설정할 수도 있습니다. 
@@ -88,7 +87,6 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
 
 1. 로컬 알림으로 인해 알림이 시작 된 경우를 처리 해야 합니다. 에서 메서드 `FinishedLaunching` 를 편집 하여다음코드조각을포함합니다.`AppDelegate`
 
-
     ```csharp
     // check for a notification
 
@@ -119,7 +117,6 @@ _이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사�
 ## <a name="summary"></a>요약
 
 이 연습에서는 iOS에서 알림을 만들고 게시 하기 위해 다양 한 API를 사용 하는 방법을 살펴보았습니다. 또한 응용 프로그램 아이콘을 배지로 업데이트 하 여 사용자에 게 몇 가지 응용 프로그램별 피드백을 제공 하는 방법을 보여 주었습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

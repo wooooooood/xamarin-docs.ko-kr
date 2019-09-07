@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/18/2017
-ms.openlocfilehash: 79183963e59a7ca167ffbc3c0cc4b3628595389e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522656"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764471"
 ---
 # <a name="xamarinandroid-layouts"></a>Xamarin Android 레이아웃
 
@@ -49,4 +49,3 @@ ms.locfileid: "69522656"
 - [탭 레이아웃](~/android/user-interface/layouts/tab-layout/index.md) 은 간단 하 고 유용성으로 모바일 응용 프로그램에서 널리 사용 되는 사용자 인터페이스 패턴입니다. 응용 프로그램의 다양 한 화면을 탐색 하는 일관적이 고 간단한 방법을 제공 합니다.
 
     ![예제 탭 레이아웃](images/tabbed-layout.png)
- 

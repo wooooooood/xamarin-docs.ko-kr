@@ -7,12 +7,12 @@ ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 985510caa78733d1a53aceb41371839f544daa73
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: fd4014fa4db4e90596c100d454cf0467512240a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511645"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760498"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>요약 27 장입니다. 사용자 지정 렌더러
 
@@ -113,8 +113,6 @@ UWP [ `ViewRenderer<TElement, TNativeElement>` ](https://github.com/xamarin/Xama
 된 렌더러 네이티브 컨트롤에 변경 내용을 검색 하 고 호출 하 `SetValueFromRenderer`에 정의 된 바인딩 가능한 속성을 참조 하는 합니다 `StepSlider`는 원인에 대 한 변경을 `StepSlider` 시키려면를 `ValueChanged` 이벤트입니다.
 
 합니다 [ **StepSliderDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) 샘플에서는이 새 슬라이더를 보여 줍니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,18 +1,18 @@
 ---
 title: 요약 15 장입니다. 대화형 인터페이스
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 15 장입니다. 대화형 인터페이스
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 15 장입니다. 대화형 인터페이스'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1c30f87b9173d2ca4de0b2d91ad13145031e9b0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61335296"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760766"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>요약 15 장입니다. 대화형 인터페이스
 
@@ -24,12 +24,12 @@ ms.locfileid: "61335296"
 
 파생 되는 20 인스턴스화할 수 있는 클래스를 포함 하는 Xamarin.Forms `View` 있지만 `Layout`합니다. 이러한 6 이전 챕터에서 설명 되었을:
 
-- `Label`: [**2 장입니다. 앱 분석**](chapter02.md)
-- `BoxView`: [**3 장입니다. 스택 스크롤**](chapter03.md)
-- `Button`: [**6 장입니다. 단추 클릭**](chapter06.md)
-- `Image`: [**13 장입니다. Bitmaps**](chapter13.md)
-- `ActivityIndicator`: [**13 장입니다. Bitmaps**](chapter13.md)
-- `ProgressBar`: [**14 장입니다. AbsoluteLayout**](chapter14.md)
+- `Label`: [**2 장. 앱 분석**](chapter02.md)
+- `BoxView`: [**3 장. 스택 스크롤**](chapter03.md)
+- `Button`: [**6 장. 단추 클릭**](chapter06.md)
+- `Image`: [**13 장. Bitmaps**](chapter13.md)
+- `ActivityIndicator`: [**13 장. Bitmaps**](chapter13.md)
+- `ProgressBar`: [**14 장. AbsoluteLayout**](chapter14.md)
 
 이 챕터에 8 뷰는 기본.NET 데이터 유형과 상호 작용할 수를 효과적으로 허용:
 
@@ -44,12 +44,12 @@ ms.locfileid: "61335296"
 
 나머지 6 개의 뷰가 다음 챕터에서 적용 됩니다.
 
-- `WebView`: [**16 장입니다. 데이터 바인딩**](chapter16.md)
-- `Picker`: [**19 장입니다. 컬렉션 뷰**](chapter19.md)
-- `ListView`: [**19 장입니다. 컬렉션 뷰**](chapter19.md)
-- `TableView`: [**19 장입니다. 컬렉션 뷰**](chapter19.md)
-- `Map`: [**28 장입니다. 위치 및 지도**](chapter28.md)
-- `OpenGLView`: 이 책 (및 Windows 플랫폼에 대 한 지원 되지 않습니다)에 적용 되지 않습니다.
+- `WebView`: [**16 장. 데이터 바인딩**](chapter16.md)
+- `Picker`: [**19 장. 컬렉션 뷰**](chapter19.md)
+- `ListView`: [**19 장. 컬렉션 뷰**](chapter19.md)
+- `TableView`: [**19 장. 컬렉션 뷰**](chapter19.md)
+- `Map`: [**28 장. 위치 및 지도**](chapter28.md)
+- `OpenGLView`: 이 설명서에서 다루지 않음 (Windows 플랫폼에 대 한 지원 없음)
 
 ## <a name="slider-and-stepper"></a>슬라이더 및 스텝 퍼
 
@@ -238,8 +238,6 @@ Xamarin.Forms는 사용자가 입력 하 고 텍스트를 편집할 수 있는 �
 [ **SetTimer** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/SetTimer) 프로그램을 사용 하는 방법에 설명 합니다 `TimePicker` 타이머에 대 한 시간을 지정 하 합니다. 프로그램을 전경에 유지 하는 경우에 작동 합니다.
 
 **SetTimer** 를 사용 하 여 보여 줍니다는 [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) 메서드의 `Page` 경고 상자를 표시 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

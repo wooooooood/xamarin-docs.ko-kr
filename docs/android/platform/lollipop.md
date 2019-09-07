@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 7cc7eeabebbfbcd4b264202235307638b88842d8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a14ac0be141a473855dd2e9e19a57fd2d01649bb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524218"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761927"
 ---
 # <a name="lollipop-features"></a>롤리팝 기능
 
@@ -40,7 +40,6 @@ Android 5.0에는 재질 테마를 통해 제공 되는 UI 개선 사항 외에�
 
 - **새 api** &ndash; Android 5.0은 여러 네트워크 지원, 향상 된 Bluetooth 연결, 더 쉬운 저장소 관리 및 멀티미디어 플레이어와 카메라 장치를 유연 하 게 제어 하기 위한 새 api를 추가 합니다. 새 작업 예약 기능을 사용 하 여 예약 된 시간에 작업을 비동기적으로 실행할 수 있습니다. 이 기능을 사용 하면 장치가 연결 되 고 충전 될 때 작업을 예약 하는 등의 방법으로 배터리 수명을 향상할 수 있습니다.
 
-
 ## <a name="requirements"></a>요구 사항
 
 Xamarin 기반 앱에서 새로운 Android 5.0 기능을 사용 하려면 다음이 필요 합니다.
@@ -52,7 +51,6 @@ Xamarin 기반 앱에서 새로운 Android 5.0 기능을 사용 하려면 다음
 - **Java 개발자 키트** API 수준 24 이상에 대해 개발 하는 경우 xamarin.ios는 [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이상이 필요 합니다 (jdk 1.8은 롤리팝을 포함 하 여 24 이전 API 수준도 지원 합니다). &ndash; 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우 64 비트 버전의 JDK 1.8이 필요 합니다.
 
 API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 을 계속 사용할 수 있습니다.
-
 
 ## <a name="setting-up-an-android-50-project"></a>Android 5.0 프로젝트 설정
 
@@ -101,7 +99,6 @@ Android 5.0에서는 새 Android Runtime (ART)을 기본 런타임으로 사용 
 
 기존 앱은 아트에서 작동 하지 않을 &ndash; 수 있는 이전 dalvik 런타임에 고유한 기술을 활용 하는 앱을 제외 하 고 art에서 변경 하지 않고 작동 해야 합니다. 이러한 변경에 대 한 자세한 내용은 [Android Runtime에서 앱 동작 확인 (ART)](https://developer.android.com/guide/practices/verifying-apps-art.html)을 참조 하세요.
 
-
 ### <a name="notification-changes"></a>알림 변경
 
 Android 5.0에서 알림이 크게 변경 되었습니다.
@@ -142,11 +139,9 @@ Android 5.0는 왼쪽에 표시 되는 홈 화면을 인사말 합니다. 센터
 
 Xamarin Android 앱에서 재질 테마 기능을 사용 하는 방법에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요.
 
-
 ## <a name="animations"></a>애니메이션
 
 Android 5.0는 터치 피드백 애니메이션, 작업 전환 애니메이션 및 뷰 상태 전환 애니메이션을 제공 하 여 앱 인터페이스를 보다 직관적으로 사용할 수 있도록 합니다. 또한 Android 5.0 앱은 표시 *효과* 애니메이션을 사용 하 여 보기를 숨기 거 나 표시할 수 있습니다. *곡선 동작* 설정을 사용 하 여 속도가 빠른 애니메이션이 렌더링 되는 방식을 구성할 수 있습니다.
-
 
 ### <a name="touch-feedback-animations"></a>터치 피드백 애니메이션
 
@@ -157,7 +152,6 @@ Android 5.0는 터치 피드백 애니메이션, 작업 전환 애니메이션 �
 왼쪽의 첫 번째 이미지에서 단추가 있는 초기 터치 접촉이 발생 하는 반면, 나머지 시퀀스 (왼쪽에서 오른쪽)는 ripple 효과가 단추 가장자리까지 어떻게 확산 되어 있음을 보여 줍니다. Ripple 애니메이션이 종료 되 면 뷰가 원래 모양으로 돌아갑니다. 기본 ripple 애니메이션은 초 단위로 발생 하지만 애니메이션의 길이는 더 길거나 짧은 시간 길이에 맞게 사용자 지정할 수 있습니다.
 
 Android 5.0의 터치 피드백 애니메이션에 대 한 자세한 내용은 [터치 피드백 사용자 지정](https://developer.android.com/training/material/animations.html#Touch)을 참조 하세요.
-
 
 ### <a name="activity-transition-animations"></a>작업 전환 애니메이션
 
@@ -207,7 +201,6 @@ Enter 전환의 경우 Android 5.0은 세 가지 유형의 애니메이션을 �
 
 Android 5.0의 작업 전환 애니메이션에 대 한 자세한 내용은 [작업 전환 사용자 지정](https://developer.android.com/training/material/animations.html#Transitions)을 참조 하세요.
 
-
 ### <a name="view-state-transition-animations"></a>뷰 상태 전환 애니메이션
 
 Android 5.0을 사용 하면 뷰 상태가 변경 될 때 애니메이션을 실행할 수 있습니다. 다음 방법 중 하나를 사용 하 여 뷰 상태 전환에 애니메이션 효과를 적용할 수 있습니다.
@@ -217,7 +210,6 @@ Android 5.0을 사용 하면 뷰 상태가 변경 될 때 애니메이션을 실
 - 뷰의 상태가 변경 될 때 실행 되는 애니메이션 기능을 정의 합니다. 새 `StateListAnimator` 클래스를 사용 하면 뷰의 상태가 변경 될 때 실행 되는 애니메이터를 정의할 수 있습니다.
 
 Android 5.0의 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 [뷰 상태 변경에 애니메이션 효과 주기](https://developer.android.com/training/material/animations.html#ViewState)를 참조 하세요.
-
 
 ### <a name="reveal-effect"></a>효과 표시
 
@@ -233,7 +225,6 @@ Android 5.0의 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 
 
 에서 Android 5.0 표시 효과에 대 한 자세한 내용은 표시 [효과 사용](https://developer.android.com/training/material/animations.html#Reveal)을 참조 하세요.
 
-
 ### <a name="curved-motion"></a>곡선 동작
 
 이러한 애니메이션 기능 외에도 Android 5.0는 애니메이션의 시간 및 동작 곡선을 지정할 수 있는 새로운 Api를 제공 합니다. Android 5.0은 이러한 곡선을 사용 하 여 애니메이션 중에 임시 및 공간 이동을 보간합니다. Android 5.0에는 세 가지 곡선이 정의 되어 있습니다.
@@ -245,7 +236,6 @@ Android 5.0의 뷰 상태 전환 애니메이션에 대 한 자세한 내용은 
 - **의 선형\_속도는 최고 속도로 시작 하 고 애니메이션의 끝까지 천천히 감속 합니다.\_\_** &ndash;
 
 새 `PathInterpolator` 클래스를 사용 하 여 동작 보간을 수행 하는 방법을 지정할 수 있습니다. `PathInterpolator`지정 된 제어점 및 동작 곡선에 따라 애니메이션 경로를 트래버스하는 보간 기입니다. Android 5.0에서 곡선 동작 설정을 지정 하는 방법에 대 한 자세한 내용은 [곡선 동작 사용](https://developer.android.com/training/material/animations.html#CurvedMotion)을 참조 하세요.
-
 
 ## <a name="view-shadows--elevation"></a>그림자 & 권한 상승 보기
 
@@ -259,7 +249,6 @@ Android 5.0에서는 새 `Z` 속성을 설정 하 여 뷰의 *권한 상승을* 
 
 Android 5.0의 그림자 보기에 대 한 자세한 내용은 [그림자 및 클리핑 뷰 정의](https://developer.android.com/training/material/shadows-clipping.html)를 참조 하세요.
 
-
 ## <a name="color-features"></a>색 기능
 
 Android 5.0는 앱에서 색을 관리 하기 위한 두 가지 새로운 기능을 제공 합니다.
@@ -267,7 +256,6 @@ Android 5.0는 앱에서 색을 관리 하기 위한 두 가지 새로운 기능
 - *그릴* 수 있는 색조를 사용 하면 레이아웃 특성을 변경 하 여 이미지 자산의 색을 변경할 수 있습니다.
 
 - *두드러진 색 추출을* 사용 하면 표시 된 이미지의 색상표와 어울리도록 앱 색 테마를 동적으로 사용자 지정할 수 있습니다.
-
 
 ### <a name="drawable-tinting"></a>그릴 때 색조
 
@@ -282,7 +270,6 @@ Android 5.0 레이아웃은 다양 한 `tint` 색을 표시 하기 위해 여러
 ![다른 색조 설정이 있는 위의 로고의 예](lollipop-images/drawable-tinting.png)
 
 Android 5.0의 그릴 때 색조에 대 한 자세한 내용은 [그릴 때 색조](https://developer.android.com/training/material/drawables.html#DrawableTint)를 참조 하세요.
-
 
 ### <a name="prominent-color-extraction"></a>두드러진 색 추출
 
@@ -308,7 +295,6 @@ Android 5.0의 그릴 때 색조에 대 한 자세한 내용은 [그릴 때 색�
 
 Android 5.0에서 색 추출에 대 한 자세한 내용은 [이미지에서 두드러진 색 추출](https://developer.android.com/training/material/drawables.html#ColorExtract)을 참조 하세요.
 
-
 ## <a name="new-ui-widgets"></a>새 UI 위젯
 
 Android 5.0에는 두 가지 새로운 UI 위젯이 도입 되었습니다.
@@ -322,7 +308,6 @@ Android 5.0에는 두 가지 새로운 UI 위젯이 도입 되었습니다.
 [![RecyclerView로 빌드된 앱의 스크린샷](lollipop-images/recyclerview-cardview-sml.png)](lollipop-images/recyclerview-cardview.png#lightbox)
 
 왼쪽의 스크린샷은 전자 메일 앱에서 사용 `RecyclerView` 되는 예제 이며 오른쪽의 스크린샷은 여행 예약 앱에서 사용 되는의 `CardView` 예입니다.
-
 
 ### <a name="recyclerview"></a>RecyclerView
 
@@ -342,7 +327,6 @@ Android 5.0에는 두 가지 새로운 UI 위젯이 도입 되었습니다.
 
 에 대 `RecyclerView`한 자세한 내용은 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)를 참조 하세요.
 
-
 ### <a name="cardview"></a>CardView
 
 `CardView`는 모퉁이가 둥근 부동 카드를 시뮬레이션 하는 간단한 뷰입니다. 에 `CardView` 는 기본 제공 보기 그림자가 있으므로 앱에 시각적 깊이를 추가 하는 쉬운 방법을 제공 합니다. 다음 스크린샷에는의 `CardView`세 가지 텍스트 지향 예제가 나와 있습니다.
@@ -352,7 +336,6 @@ Android 5.0에는 두 가지 새로운 UI 위젯이 도입 되었습니다.
 위의 예제에서 각 카드에는가 `TextView`포함 되어 있습니다. 배경색은 `cardBackgroundColor` 특성을 통해 설정 됩니다.
 
 에 대 `CardView`한 자세한 내용은 [CardView](~/android/user-interface/controls/card-view.md)를 참조 하세요.
-
 
 ## <a name="enhanced-notifications"></a>향상 된 알림
 
@@ -389,7 +372,6 @@ Android 5.0에서 알림 메타 데이터를 제공 하 여 Android에서 알림
 알림 범주는 장치가 *방해* 금지 모드에 있을 때 표시할 수 있는 알림을 필터링 하는 데 사용 됩니다.
 
 최신 Android 5.0 기능을 사용 하 여 알림을 만들고 시작 하는 방법에 대 한 자세한 내용은 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)을 참조 하세요.
-
 
 ## <a name="new-apis"></a>새로운 API
 
@@ -485,8 +467,6 @@ Android 5.0의 새로운 작업 예약 Api에 대 한 자세한 내용은 [작�
 
 Xamarin Android 개발을 처음 접하는 경우에는 Xamarin android를 시작 하는 데 도움이 되는 [설정 및 설치](~/android/get-started/installation/index.md) 를 참조 하세요.
 [Hello, android](~/android/get-started/hello-android/index.md) 는 android 프로젝트를 만드는 방법을 배우는 데 유용한 소개입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

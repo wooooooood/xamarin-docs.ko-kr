@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/25/2017
-ms.openlocfilehash: aabbbb706d4b6fcd022e30f726696b5d4f46167f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f15d586a0ca209fec088fc48ca975efae4ab8fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279512"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768360"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.ios에서 행 작업 사용
 
@@ -26,7 +26,6 @@ iOS에서는 테이블 `UISwipeActionsConfiguration` 에 대 한 작업을 수�
 
 `UITableViewRowAction` 클래스는 사용자가 테이블 뷰의 행에서 가로로 swipes 때 발생 하는 동작을 정의 하는 데 사용 됩니다.
 예를 들어 테이블을 편집 하는 경우 행을 왼쪽으로 살짝 밀어 놓으면 **삭제** 단추가 기본적으로 표시 됩니다. `UITableViewRowAction` 클래스의 여러 인스턴스를에 `UITableView`연결 하 여 각각 고유한 텍스트, 서식 지정 및 동작을 포함 하는 여러 사용자 지정 작업을 정의할 수 있습니다.
-
 
 ## <a name="uiswipeactionsconfiguration"></a>UISwipeActionsConfiguration
 
@@ -43,7 +42,6 @@ iOS에서는 테이블 `UISwipeActionsConfiguration` 에 대 한 작업을 수�
 `UITableViewController``UITableViewSource` (및 `UITableViewDelegate` )에`GetTrailingSwipeActionsConfiguration`는 및 라는 두 가지 메서드가 포함 되어 있습니다 .이 메서드는 테이블 뷰 행에 대해 살짝 밀기 동작 집합을 구현 하는 데 사용 됩니다. `GetLeadingSwipeActionsConfiguration` 선행 살짝 밀기 동작은 화면 왼쪽에서 오른쪽으로, 오른쪽에서 왼쪽으로 진행 되는 언어의 화면 오른쪽에서 살짝 밀기를 나타냅니다.
 
 다음 예제에서는 ( [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) 샘플에서) 선행 살짝 밀기 구성을 구현 하는 방법을 보여 줍니다. 두 작업은 [아래](#create-uicontextualaction)에서 설명 하는 상황별 동작에서 만들어집니다. 이러한 작업은 반환 값으로 사용 되는 새로 [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations)초기화 된에 전달 됩니다.
-
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -180,8 +178,6 @@ table.Delegate = tableDelegate;
 [![](row-action-images/action01.png "[삭제] 단추 대신 표시 되는 안녕하세요.")](row-action-images/action01.png#lightbox)
 
 사용자 `Hello World!` **가 단추를** 탭 하면 응용 프로그램이 디버그 모드에서 실행 될 때가 Mac용 Visual Studio 또는 Visual Studio에서 콘솔에 기록 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

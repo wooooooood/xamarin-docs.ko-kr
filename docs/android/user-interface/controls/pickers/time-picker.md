@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: dfee003ba327b199974ae277a93cb1ca55a81b0d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1f55e5d97058d07926233e8b116663e6674a441c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522887"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764953"
 ---
 # <a name="android-time-picker"></a>Android 시간 선택
 
@@ -213,7 +213,6 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
         DateTime currentTime = DateTime.Now;
         DateTime selectedTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hourOfDay, minute, 0);
     ```
-
 
 - 이 `DateTime` 개체는 생성 시 `TimePickerFragment` 개체 `timeSelectedHandler` 에 등록 된에 전달 됩니다. `OnTimeSet`활동의 시간 표시를 선택한 시간으로 업데이트 하기 위해이 처리기를 호출 합니다 (이 처리기는 다음 섹션에서 구현 됨).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 9ca14ff360fb3f1d7fdc8df277a93b0d30c4394c
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119687"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757727"
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -177,7 +177,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     - **`Domain`** &ndash; 응용 프로그램에서 웹 링크를 처리 하는 도메인 (공백으로 구분)입니다.
     - **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 `android:autoVerify=true` 를 선언 하 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
 
-    예를 들어:
+    예:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -191,7 +191,6 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Android 6.0에서 앱 연결이 작동 하는 방식에 대해 설명 했습니다. 그런 다음 앱 링크를 지원 하 고 응답 하도록 Android 6.0 응용 프로그램을 구성 하는 방법을 살펴보았습니다. Android 응용 프로그램에서 앱 링크를 테스트 하는 방법에 대해서도 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

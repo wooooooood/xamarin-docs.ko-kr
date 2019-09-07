@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 005f858408ec4d10563e3d945cadb0f1af65a407
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dd9d93572ac10622345b1dff4145b737baf8aaae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292978"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769005"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>탭 표시줄 및 Xamarin.iOS에 탭 표시줄 컨트롤러
 
@@ -28,7 +28,6 @@ ms.locfileid: "70292978"
 
 - 여러 컨트롤러를를 추가할 수 있습니다.
 - 탭된 사용자 인터페이스를 통해 제공 된 `UITabBar` 사용자가 뷰와 컨트롤러 사이 전환할 수 있도록 클래스입니다. 
-
 
 컨트롤러에 추가 됩니다는 `UITabBarController` 를 통해 해당 `ViewControllers` 속성을 `UIViewController` 배열입니다. `UITabBarController` 적절 한 컨트롤러를 로드 하 고 선택한 탭에 따라 해당 뷰를 제공 합니다. 자체 처리 합니다.
 
@@ -46,7 +45,6 @@ ms.locfileid: "70292978"
 
  <a name="Creating_the_Application" />
 
-
 ### <a name="creating-the-application"></a>애플리케이션 작성
 
 새 응용 프로그램을 만들어 시작 해 보겠습니다.
@@ -56,8 +54,6 @@ ms.locfileid: "70292978"
 [![](creating-tabbed-applications-images/newsolution1.png "빈 프로젝트 템플릿 선택")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
 [![](creating-tabbed-applications-images/newsolution2.png "TabbedApplication 프로젝트 이름을")](creating-tabbed-applications-images/newsolution2.png#lightbox)
-
-
 
 ### <a name="adding-the-uitabbarcontroller"></a>UITabBarController 추가
 
@@ -72,7 +68,6 @@ ms.locfileid: "70292978"
 1. 기본 클래스를 설정 `TabController` 에 `UITabBarController` 입니다. 
 1. 만들 `UIViewController` 에 추가할 인스턴스는 `TabController` 합니다. 
 1. 추가 `UIViewController` 에 할당 된 배열에는 인스턴스를 `ViewControllers` 의 속성을 `TabController` 입니다. 
-
 
 다음 코드를 추가 합니다 `TabController` 다음이 단계를 달성 하기 위해 클래스:
 
@@ -146,13 +141,11 @@ public partial class AppDelegate : UIApplicationDelegate
 
  <a name="Modifying_TabBarItems" />
 
-
 ### <a name="modifying-tabbaritems"></a>TabBarItems 수정
 
 실행 중인 응용 프로그램 탭에서 수정 해 보겠습니다 만들었으므로 `TabBarItem` 표시 되는 텍스트와 이미지를 변경 하려면 뿐만 아니라 탭 중 하나에 배지를 추가 하려면.
 
  <a name="Setting_a_System_Item" />
-
 
 #### <a name="setting-a-system-item"></a>시스템 항목을 설정합니다.
 
@@ -167,7 +160,6 @@ tab1.TabBarItem = new UITabBarItem (UITabBarSystemItem.Favorites, 0);
  ![](creating-tabbed-applications-images/04a-tabimage.png "별 모양 아이콘을 사용 하 여 첫 번째 탭")
 
  <a name="Setting_the_Title_and_Image" />
-
 
 #### <a name="setting-the-title-and-image"></a>제목 및 이미지 설정
 
@@ -201,7 +193,6 @@ tab2.View.BackgroundColor = UIColor.Orange;
 
  <a name="Setting_the_Badge_Value" />
 
-
 #### <a name="setting-the-badge-value"></a>배지 값 설정
 
 탭에 배지를 표시할 수도 있습니다. 예를 들어, 세 번째 탭에 배지를 설정 하는 코드의 다음 줄을 추가 합니다.
@@ -222,13 +213,11 @@ tab3.TabBarItem.BadgeValue = null;
 
  <a name="Tabs_in_Non-RootViewController_Scenarios" />
 
-
 ## <a name="tabs-in-non-rootviewcontroller-scenarios"></a>비 RootViewController 시나리오에서 탭
 
 위의 예제에서 사용 하는 방법을 살펴보았습니다를 `UITabBarController` 되었을 때를 `RootViewController` 창입니다. 이 예제를 사용 하는 방법을 살펴보겠습니다를 `UITabBarController` 있지 않은 경우는 `RootViewController` 스토리 보드를 사용 하 여이 만드는 방법을 보여 줍니다.
 
  <a name="Initial_Screen_Example" />
-
 
 ### <a name="initial-screen-example"></a>초기 화면 예제
 
@@ -237,7 +226,6 @@ tab3.TabBarItem.BadgeValue = null;
 [![](creating-tabbed-applications-images/inital-screen-application.png "응용 프로그램 흐름을 보여 주는이 스크린샷")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 이 예제에 대 한 새 응용 프로그램을 시작 해 보겠습니다. 다시 사용 하 여 합니다 **iPhone > 앱 > 빈 프로젝트 (C#)** 이 이번에는 프로젝트를 명명 템플릿에서 `InitialScreenDemo`합니다.
-
 
 이 예제에서이 뷰 컨트롤러를 보유 하는 스토리 보드를 해야 합니다. 스토리 보드를 추가 합니다.
 
@@ -251,7 +239,6 @@ tab3.TabBarItem.BadgeValue = null;
 
 몇 가지 중요 한 단계에 나와 있는 이전에 비-스토리 보드 파일에 스토리 보드를 추가 하는 경우에 [스토리 보드 소개](~/ios/user-interface/storyboards/index.md) 가이드입니다. 이러한 항목은 다음과 같습니다.
 
- 
 1. 스토리 보드 이름을 추가 합니다 **주 인터페이스** 섹션을 `Info.plist`:
 
     [![](creating-tabbed-applications-images/project-options.png "기본 인터페이스 MainStoryboard로 설정")](creating-tabbed-applications-images/project-options.png#lightbox)
@@ -276,7 +263,6 @@ Mac 용 visual Studio는 클래스 및 필요한 디자이너 파일에 자동�
 
  <a name="Creating_the_UI" />
 
-
 #### <a name="creating-the-ui"></a>UI 만들기
 
 다음으로 만들겠습니다 간단한 사용자 인터페이스를 각 ViewController의 보기에 대 한 Xamarin iOS 디자이너를 사용 하 여 합니다.
@@ -285,7 +271,6 @@ Mac 용 visual Studio는 클래스 및 필요한 디자이너 파일에 자동�
 
 - **레이블** : `Text` = **일회성**
 - **단추** : `Title` = **사용자가 초기 작업을 수행 합니다.**
-
 
 이 단추의 표시 여부를 제어할 수는 것을 `TouchUpInside` 이벤트를 코드 숨김에 참조 하는 데 필요 합니다. 보겠습니다 식별 하는 **이름을** `aButton` 다음 스크린샷에 표시 된 것 처럼 Properties Pad에서:
 
@@ -329,7 +314,7 @@ partial void InitialActionCompleted (UIButton sender)
 이 스토리 보드를 TabBarController 및 우리의 보기 컨트롤러 간의 전환을 처리 하 고 Segues를 사용할 수 있습니다. 초기 보기와 상호 작용을 후 사용자에 게 TabBarController에 로드 하려고 합니다. 설정 해 보겠습니다이 디자이너에서.
 
 **Ctrl + 클릭** 하 고 **끌어서** 는 TabBarController 단추에서. 마우스 놓기에서 상황에 맞는 메뉴가 표시 됩니다. 모달 segue를 사용 하려고 합니다. 
- 
+
 이 탭의 각 설정 하려면 **Ctrl-클릭** 에서 1 ~ 3 차원 및 선택 관계 순서는 뷰 컨트롤러의 각 TabBarController **탭** 아래 그림과 같이 상황에 맞는 메뉴에서:
 
 [![](creating-tabbed-applications-images/context-menu.png "탭 관계를 선택 합니다.")](creating-tabbed-applications-images/context-menu.png#lightbox)
@@ -366,7 +351,6 @@ public override void ViewDidLoad ()
 ## <a name="summary"></a>요약
 
 이 문서에서는 사용 하는 방법을 설명를 `UITabBarController` 응용 프로그램에서 합니다. 이러한 제목, 이미지 및 배지 탭에서 속성을 설정 하는 방법 뿐만 아니라 각 탭에 컨트롤러를 로드 하는 방법을 살펴보았습니다. 에서는 다음 검사를 스토리 보드를 사용 하 여 로드 하는 방법을 `UITabBarController` 없는 경우 런타임에 `RootViewController` 창의 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

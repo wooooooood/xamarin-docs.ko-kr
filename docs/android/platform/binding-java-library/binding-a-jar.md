@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: 6aa9367495ba00138a38816ffab51c1ab43eec94
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9a9e7e9c5d189527d4fbdcc2001d6f003fa63dd7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524812"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757872"
 ---
 # <a name="binding-a-jar"></a>JAR 바인딩
 
@@ -33,7 +33,6 @@ Xamarin 도구는 하나 이상의 입력에서 바인딩 라이브러리를 생
 이 가이드에서는 단일에 대 한 바인딩 라이브러리를 만드는 기본 사항을 단계별로 설명 합니다. JAR 파일. 모든 항목이 오른쪽 &ndash; 으로 이동 하는 예를 살펴보겠습니다. 여기에서 바인딩 사용자 지정 이나 디버깅이 필요 하지 않습니다. 
 [메타 데이터를 사용 하 여 바인딩을 만들면](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md) 바인딩 프로세스가 완전히 자동으로 수행 되지 않고 약간의 수동 작업이 필요한 고급 시나리오의 예가 제공 됩니다. 일반적인 Java 라이브러리 바인딩에 대 한 개요는 기본 코드 예제와 함께 [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)을 참조 하세요. 
 
- 
 ## <a name="walkthrough"></a>연습
 
 다음 연습에서는 인기 있는 Android 인 [Picasso](http://square.github.io/picasso/)에 대 한 바인딩 라이브러리를 만듭니다. 이미지 로드 및 캐싱 기능을 제공 하는 JAR입니다. **Picasso-2** 를 바인딩하려면 다음 단계를 사용 하 여 xamarin.ios 프로젝트에서 사용할 수 있는 새 .net 어셈블리를 만듭니다. 
@@ -63,7 +62,7 @@ public class Picasso
 }
 ```
 
-**Picasso-2**에 대 한 바인딩 라이브러리를 생성 한 후에서 C#이 메서드를 호출할 수 있습니다. 예:
+**Picasso-2**에 대 한 바인딩 라이브러리를 생성 한 후에서 C#이 메서드를 호출할 수 있습니다. 예를 들어:
 
 ```csharp
 using Com.Squareup.Picasso;
@@ -73,7 +72,6 @@ Picasso.With (this)
     .Into (imageView);
 
 ```
-
 
 ### <a name="creating-the-bindings-library"></a>바인딩 라이브러리 만들기
 
@@ -113,10 +111,7 @@ Java 바인딩 라이브러리 프로젝트를 만드는 경우에는를 지정 
 
 [![API 19로 설정 되는 대상 API 수준](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
-
 마지막으로 바인딩 라이브러리를 빌드합니다. 일부 경고 메시지가 표시 될 수 있지만 바인딩 라이브러리 프로젝트를 성공적으로 빌드하고 출력을 생성 해야 합니다. 다음 위치의 DLL: **JarBinding/bin/Debug/JarBinding.dll**
-    
-
 
 ### <a name="using-the-bindings-library"></a>바인딩 라이브러리 사용
 
@@ -191,13 +186,10 @@ public class MainActivity : Activity
 [![BindingTest를 실행 하는 스크린샷](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 축하합니다. Java 라이브러리를 성공적으로 바인딩 했습니다. JAR 및 Xamarin Android 앱에서 사용 합니다.
- 
- 
+
 ## <a name="summary"></a>요약
 
 이 연습에서는 타사에 대 한 바인딩 라이브러리를 만들었습니다. JAR 파일을 열고, 최소 테스트 앱에 바인딩 라이브러리를 추가한 다음, 앱을 실행 하 여 C# 코드에서에 상주 하는 Java 코드를 호출할 수 있는지 확인 합니다. JAR 파일. 
-
-
 
 ## <a name="related-links"></a>관련 링크
 

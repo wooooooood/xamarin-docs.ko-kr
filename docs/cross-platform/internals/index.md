@@ -7,12 +7,12 @@ ms.assetid: 0bec99a9-ab79-4f10-8d7b-35f9338c0728
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 43e06ec1baccefa6184ca19409cf6646d33408d9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 72c4931c8e09ddae18109757fbbb7da6f0d8b31a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277587"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765870"
 ---
 # <a name="xamarin-internals"></a>Xamarin – 내부
 
@@ -23,6 +23,3 @@ ms.locfileid: "70277587"
 Xamarin.ios, Xamarin Android 및 Xamarin.ios는 모두 수십 개 이상의 어셈블리와 함께 제공 됩니다. Silverlight가 데스크톱 .NET 어셈블리의 확장 된 하위 집합인 것 처럼 Xamarin 플랫폼도 여러 Silverlight 및 데스크톱 .NET 어셈블리의 확장 된 하위 집합입니다.
 
 이 가이드에서는 각 플랫폼과 함께 제공 되는 사용 가능한 모든 어셈블리의 목록을 제공 하며 각 플랫폼에서 사용할 수 있는 방법을 보여 줍니다.
-
-
-

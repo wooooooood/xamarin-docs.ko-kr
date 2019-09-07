@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 4673b178512a886e5fdb154c57c8d659276bb392
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d37537f345a1532e38ab4d016cfbd5b26eae8b3a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522334"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758541"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>ActionBar를 사용 하는 탭 레이아웃
 
 _이 가이드에서는 ActionBar Api를 사용 하 여 Xamarin Android 응용 프로그램에서 탭 사용자 인터페이스를 만드는 방법을 소개 하 고 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -25,15 +24,11 @@ _이 가이드에서는 ActionBar Api를 사용 하 여 Xamarin Android 응용 �
 
 는 대신를 사용 해야 하는 보다 최신의 `ActionBar` 일반화 된 작업 모음 구성 요소입니다 (`Toolbar` 를 대체 `ActionBar`하도록 설계 됨). `Toolbar` 자세한 내용은 [도구 모음](~/android/user-interface/controls/tool-bar/index.md)을 참조 하세요. 
 
-
-
 ## <a name="requirements"></a>요구 사항
 
 API 수준 11 (Android 3.0) 이상을 대상으로 하는 Xamarin Android 응용 프로그램은 네이티브 Android Api의 일부로 ActionBar Api에 액세스할 수 있습니다. 
 
 일부 ActionBar Api는 API 수준 7 (Android 2.1)으로 다시 이식 되었으며 [V7 AppCompat 라이브러리](https://developer.android.com/tools/support-library/features.html#v7-appcompat)를 통해 사용할 수 있습니다 .이는 [Xamarin android 지원 라이브러리-V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) 패키지를 통해 xamarin android 앱에서 사용할 수 있습니다.
-
-
 
 ## <a name="introducing-tabs-in-the-actionbar"></a>ActionBar 탭 소개
 
@@ -59,8 +54,6 @@ Xamarin.ios는 `ActionBar.Tab` 클래스의 이벤트 `ActionBar.ITabListener` �
 - TabReselected
 - TabUnselected 취소
 
-
-
 ### <a name="adding-tabs-to-the-actionbar"></a>ActionBar에 탭 추가
 
 ActionBar는 Android 3.0 (API 수준 11) 이상으로 기본 제공 되며이 API를 대상으로 하는 모든 Xamarin Android 응용 프로그램에서 사용할 수 있습니다. 
@@ -79,7 +72,6 @@ ActionBar는 Android 3.0 (API 수준 11) 이상으로 기본 제공 되며이 AP
 3. 이벤트 처리기를 할당 하거나 사용자가 `ActionBar.ITabListener` ActionBar 탭과 상호 작용할 때 발생 하는 이벤트에 응답 하는 사용자 지정 구현을 제공 합니다.
 
 4. 이전 단계 `ActionBar`에서 만든 탭을에 추가 합니다.
-
 
 다음 코드는 이러한 단계를 사용 하 여 상태 변경에 응답 하는 이벤트 처리기를 사용 하는 응용 프로그램에 탭을 추가 하는 한 가지 예입니다. 
 
@@ -107,14 +99,11 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 #### <a name="event-handlers-vs-actionbaritablistener"></a>이벤트 처리기 vs ActionBar
 
 응용 프로그램은 다양 한 시나리오 `ActionBar.ITabListener` 에서 이벤트 처리기 및를 사용 해야 합니다. 이벤트 처리기는 특정 양의 구문을 편리 하 게 제공 합니다. 클래스를 만들고를 구현 `ActionBar.ITabListener`하지 않아도 됩니다. 이 편의를 위해 Xamarin은 무료로 &ndash; 제공 됩니다. Android는이 변환을 수행 하 여 클래스를 만들고 구현 `ActionBar.ITabListener` 합니다. 응용 프로그램에 제한 된 수의 탭이 있으면 괜찮습니다. 
 
 많은 탭을 처리 하거나 ActionBar 탭 간의 일반적인 기능을 공유 하는 경우,를 구현 `ActionBar.ITabListener`하 고 클래스의 단일 인스턴스를 공유 하는 사용자 지정 클래스를 만드는 것이 메모리와 성능 측면에서 더 효율적일 수 있습니다. 이렇게 하면 Xamarin Android 응용 프로그램에서 사용 하는 GREF의 수가 줄어듭니다. 
-
-
 
 ### <a name="backwards-compatibility-for-older-devices"></a>이전 장치에 대 한 이전 버전과의 호환성
 
@@ -171,11 +160,9 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-
 ## <a name="summary"></a>요약
 
 이 가이드에서는 ActionBar를 사용 하 여 Xamarin Android에서 탭 사용자 인터페이스를 만드는 방법에 대해 설명 했습니다. ActionBar에 탭을 추가 하는 방법과 활동에서 인터페이스를 `ActionBar.ITabListener` 통해 탭 이벤트와 상호 작용 하는 방법에 대해 살펴보았습니다. Android 지원 라이브러리 v7 AppCompat 패키지에서 ActionBar 탭을 이전 버전의 Android로 포트 하는 방법도 살펴보았습니다. 
-
 
 ## <a name="related-links"></a>관련 링크
 

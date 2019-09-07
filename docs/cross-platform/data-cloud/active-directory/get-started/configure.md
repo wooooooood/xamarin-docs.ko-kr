@@ -6,12 +6,12 @@ ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f0cdec005dc210600977d5c8f5606cff6570989
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ec5dd15ffb838d7062c8c769375289e7b07b24d2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290022"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766376"
 ---
 # <a name="step-2-configure-service-access-for-mobile-application"></a>2단계. 모바일 응용 프로그램에 대 한 서비스 액세스 구성
 
@@ -30,8 +30,6 @@ ms.locfileid: "70290022"
    ![](configure-images/2.3-permissions.png "응용 프로그램을 선택한 후에는 다른 응용 프로그램에 대 한 사용 권한 섹션에서 새로 추가 된 응용 프로그램을 선택 하 고 적절 한 권한을 부여 합니다.")
 
 4. 마지막으로 구성을 **저장** 합니다. 이제 모바일 응용 프로그램에서 이러한 서비스를 사용할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

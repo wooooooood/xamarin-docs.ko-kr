@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 2a6de91772b1b6135a5b3567f691b8cd3522a924
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 14cce06399b804ba8fd982a40347fb3146b281c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643245"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757425"
 ---
 # <a name="android-speech"></a>Android 음성
 
@@ -206,7 +206,6 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 
 다운로드를 완료 한 후이 데이터의 설치가 자동으로 수행 됩니다.
 
-
 ### <a name="step-5---the-ioninitlistener"></a>5 단계-이 기능 수신기
 
 활동에서 텍스트를 음성으로 변환 하려면 인터페이스 메서드 `OnInit` 를 구현 해야 합니다 .이는 `TextToSpeech` 클래스의 인스턴스화에 대해 지정 된 두 번째 매개 변수입니다. 수신기를 초기화 하 고 결과를 테스트 합니다.
@@ -229,8 +228,6 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 ## <a name="summary"></a>요약
 
 이 가이드에서는 텍스트를 음성으로 변환 하는 기본 사항과 음성으로 텍스트를 변환 하는 방법에 대 한 기본 사항을 살펴보고 자신의 앱 내에 이러한 항목을 포함 하는 방법에 대해 알아봅니다. 모든 특정 사례를 포함 하지는 않지만 이제 음성이 해석 되는 방법, 새 언어를 설치 하는 방법 및 앱 inclusivity를 늘리는 방법에 대 한 기본적인 내용을 이해 해야 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

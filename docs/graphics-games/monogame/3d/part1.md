@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 013e169770fa2e52f89915d1b74c7292a049f87e
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197823"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766828"
 ---
 # <a name="using-the-model-class"></a>모델 클래스 사용
 
@@ -38,7 +38,6 @@ MonoGame API에는 콘텐츠 `Model` 파일에서 로드 된 데이터를 저장
 이동 하기 전에 프로젝트가 제대로 열리고 배포 되는지 확인 해야 합니다. 배포 되 면 빈 파란색 화면이 표시 됩니다.
 
 ![빈 파란색 게임 화면](part1-images/image2.png)
-
 
 ## <a name="including-the-xnbs-in-the-game-project"></a>게임 프로젝트에 XNBs 포함
 
@@ -210,7 +209,6 @@ var cameraPosition = new Vector3 (0, 30, 0);
 ## <a name="rendering-multiple-models"></a>여러 모델 렌더링
 
 위에서 설명한 것 처럼 단일 `Model` 을 여러 번 그릴 수 있습니다. 이 작업을 더 쉽게 수행 하기 위해 원하는 `Model` `Model` 위치를 매개 변수로 사용 하는 자체 메서드로 그리기 코드를 이동 하 게 됩니다. 완료 `Draw` 되 면 및 `DrawModel` 메서드는 다음과 같습니다.
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)

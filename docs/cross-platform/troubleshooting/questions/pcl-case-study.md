@@ -6,12 +6,12 @@ ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: e3ced3c989a88c6e759a5bc497147128b0a79868
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9fc90ad5987dcedf720068694533f4f9f38f99a8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288202"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757046"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 할까요?
 
@@ -92,7 +92,6 @@ Mac (Mono):`/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild-
 Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll`
 
 Mac (Mono):`/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
-
 
 ### <a name="will-it-help-if-i-manually-add-a-reference-to-the-systemdiagnosticstracing-facade-assembly"></a>"시스템 진단" 외관 어셈블리에 대 한 참조를 수동으로 추가 하는 경우 도움이 되나요?
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: f33e3f4f27afe7e0b98c4a1f71d77c4a1c7195ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 73474aaeb138d52536dd8ad5a7dca9be566475af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289075"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769085"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Xamarin에서 tvOS 탐색 모음 사용
 
@@ -48,9 +48,7 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
     [![](navigation-bars-images/navbar05.png "막대 단추 항목 동작")](navigation-bars-images/navbar05.png#lightbox)
 1. 변경 내용을 저장합니다.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. **솔루션 탐색기**에서 파일을 두 번 클릭 `Main.storyboard` 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **탐색 모음** 을 끌어 화면 위쪽의 뷰에 놓습니다.
@@ -66,7 +64,6 @@ TvOS 앱에서 탐색 모음으로 작업 하는 가장 쉬운 방법은 iOS Des
 
     [![](navigation-bars-images/navbar05-vs.png "막대 단추 항목 동작")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
-
 
 -----
 
@@ -133,8 +130,6 @@ namespace MySingleView
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 탐색 모음을 디자인 하 고 사용 하는 방법에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

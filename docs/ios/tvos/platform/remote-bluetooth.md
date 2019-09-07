@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 32deee1ea1e47438f4f671ac3ccaa09f4218a88b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 71a74d8f9046cd978a40b03da1921cd1fac9405f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290750"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769174"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Xamarin에서 tvOS 용 siri 원격 및 Bluetooth 컨트롤러
 
@@ -364,8 +364,6 @@ TvOS에서 게임 컨트롤러 입력을 직접 처리 하려면 `GCEventViewCon
 ## <a name="summary"></a>요약
 
 이 문서에서는 Apple TV, 터치 Surface 제스처 및 Siri 원격 단추와 함께 제공 되는 새 Siri 원격에 대해 설명 했습니다. 다음으로는 제스처와 스토리 보드, 제스처, 코드 및 하위 수준 이벤트 작업을 다룹니다. 마지막으로, 게임 컨트롤러 작업에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

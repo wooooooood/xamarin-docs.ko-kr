@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87037c8c3797c7c305ce2689172bda1babbc26bd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 52da0cfcab56c0acd339f4f0a0f2456a66d002a8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769473"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Xamarin.ios에서 웹 태그를 사용 하 여 검색
 
@@ -63,7 +63,7 @@ IOS 9를 처음 접하는 경우에는 다음을 제공 하 여 범용 링크를
 
 ## <a name="using-twitter-cards"></a>Twitter 카드 사용
 
-Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예를 들어:
+Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예:
 
 ```html
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -87,7 +87,7 @@ Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제
 
 ## <a name="opening-deep-links"></a>딥 링크 열기
 
-Xamarin.ios 앱에서 딥 링크를 열고 표시 하기 위한 지원을 추가 해야 합니다. **AppDelegate.cs** 파일을 편집 하 고 메서드 `OpenURL` 를 재정의 하 여 사용자 지정 URL 형식을 처리 합니다. 예를 들어:
+Xamarin.ios 앱에서 딥 링크를 열고 표시 하기 위한 지원을 추가 해야 합니다. **AppDelegate.cs** 파일을 편집 하 고 메서드 `OpenURL` 를 재정의 하 여 사용자 지정 URL 형식을 처리 합니다. 예:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -202,8 +202,6 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 ```
 
 자세한 내용은 Apple의 [앱 검색 개발자 사이트](https://developer.apple.com/ios/search/)를 참조 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

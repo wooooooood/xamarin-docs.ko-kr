@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2017
-ms.openlocfilehash: b01fbbe813b778d3c2e1cabeba620ed48a46ecac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e0336e65532c4487e3ec8c1984b132544b5b547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287152"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768657"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Xamarin에서 백그라운드 작업 watchOS
 
@@ -109,7 +109,6 @@ watchOS 3에는 앱이 정보를 업데이트 하는 데 사용할 수 있는 �
 
 작업의 런타임 내에서 앱은 복잡 한 타임 라인을 업데이트 하거나를 사용 하 여 필요한 데이터를 `NSUrlSession`인출 하는 등의 모든 종류의 로컬 처리를 수행할 수 있습니다.
 
-
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### <a name="wkurlsessionrefreshbackgroundtask"></a>WKURLSessionRefreshBackgroundTask
@@ -142,9 +141,6 @@ WatchOS 3에서 Apple은 사용자가 즐겨 찾는 앱을 고정 하 고 신속
 
 > [!IMPORTANT]
 > 앱에서 새 데이터를 수신 하 `WKSnapshotRefreshBackgroundTask` 고 해당 사용자 인터페이스를 업데이트 한 후에는 항상를 예약 하는 것이 중요 합니다. 그렇지 않으면 사용자에 게 수정 된 정보가 표시 되지 않습니다.
-
-
-
 
 또한 사용자가 앱에서 알림을 수신 하 고 탭 하 여 응용 프로그램을 포그라운드로 가져올 때 스냅숏은 시작 화면으로 작동 하므로 최신 상태 여야 합니다.
 
@@ -700,8 +696,6 @@ Apple의 제안 사항은 다음과 같습니다.
 ## <a name="summary"></a>요약
 
 이 문서에서는 watchOS의 향상 된 기능 및이를 사용 하 여 시청 앱을 최신 상태로 유지 하는 방법에 대해 설명 했습니다. 먼저 watchOS 3에 추가 된 Apple의 모든 새 백그라운드 작업에 대해 설명 했습니다. 그런 다음 백그라운드 API 수명 주기와 Xamarin watchOS 앱에서 백그라운드 작업을 구현 하는 방법을 살펴보았습니다. 마지막으로, 예약의 작동 방식에 대해 설명 하 고 몇 가지 모범 사례를 제공 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 6eb942c0276bda28cb4be14fb31cdf820b9ccd5e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e81504b3411674c8f8f92bf9018d617dd1c4bc4c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291349"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768908"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Xamarin.ios에서 테이블 모양 사용자 지정
 
@@ -26,7 +26,6 @@ ms.locfileid: "70291349"
 - **부제** – 및 부제목 `UIImageView` 을 지원 합니다.
 - **Value1** – 오른쪽 맞춤 부제목은를 `UIImageView`지원 합니다.
 - **Value2** – 제목은 오른쪽 맞춤 되 고 부제목은 왼쪽 맞춤 되지만 이미지는 그렇지 않습니다.
-
 
 이러한 스크린샷에는 각 스타일이 표시 되는 방식이 나와 있습니다.
 
@@ -57,7 +56,6 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 - **DetailButton** – 셀의 나머지 부분과 독립적으로 터치에 응답 하 여 다른 기능을 수행 하 여 셀 자체를 터치 합니다 (예: 팝업 또는 `UINavigationController` 스택의 일부가 아닌 새 창 열기).
 - **DisclosureIndicator** – 일반적으로 셀을 터치 하면 다른 뷰를 열도록 나타내는 데 사용 됩니다.
 - **DetailDisclosureButton** – `DetailButton` 및 `DisclosureIndicator`의 조합입니다.
-
 
 이는 다음과 같습니다.
 
@@ -128,7 +126,6 @@ Cellcustomtable 예제는 및의 `UITableViewCell` `UILabel`사용자 지정 레
 - **UpdateCell** –에서 셀의 `UITableView.GetCell` 속성을 설정 하는 데 사용할 메서드입니다.
 - **LayoutSubviews** – UI 컨트롤의 위치를 설정 합니다. 예제에서 모든 셀의 레이아웃은 동일 하지만 보다 복잡 한 셀 (특히 크기를 변경 하는 셀)은 표시 되는 콘텐츠에 따라 다른 레이아웃 위치를 필요로 할 수 있습니다.
 
-
 **Cellcustomtable > CustomVegeCell.cs** 의 전체 샘플 코드는 다음과 같습니다.
 
 ```csharp
@@ -184,8 +181,6 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
     return cell;
 }
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 97aa8c321362ebccc954a79f99b7bc69b5a0ad63
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 453da8c1b943591c331950ecb433bf0055faf85d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657070"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770358"
 ---
 # <a name="layout-compression"></a>레이아웃 압축
 
@@ -116,8 +116,7 @@ Android에서이 인해 14 뷰 중첩된 보기 계층 구조에서:
 
 ## <a name="summary"></a>요약
 
-레이아웃 압축 페이지 렌더링 성능을 향상 하기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다. 이로 인해 얻을 수 있는 성능 이점은 페이지의 복잡성, 사용 중인 운영 체제의 버전, 그리고 애플리케이션이 실행 중인 디바이스에 따라 다릅니다. 하지만 가장 큰 성능 이점은 이전 버전의 디바이스에서 볼 수 있습니다.
-
+레이아웃 압축 페이지 렌더링 성능을 향상 하기 위해 시각적 트리에서 지정 된 레이아웃을 제거 합니다. 이로 인해 얻을 수 있는 성능 이점은 페이지의 복잡성, 사용 중인 운영 체제의 버전, 그리고 응용 프로그램이 실행 중인 디바이스에 따라 다릅니다. 하지만 가장 큰 성능 이점은 이전 버전의 디바이스에서 볼 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

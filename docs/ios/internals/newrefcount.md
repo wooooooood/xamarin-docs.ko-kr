@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 8b1b82a1707a4aa58ef1e3dadbaeb79ada1ad6a1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 56e35662230a3c529eb48a0ae742c2b063c1ac10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291881"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753339"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Xamarin.ios의 새 참조 계산 시스템
 
@@ -46,10 +46,8 @@ Xamarin.ios 7.2.1 이상에서는 새 참조 횟수 시스템의 향상 된 미�
 
  새 참조 계산 확장 프로그램은 Unified API에 필요 하며 기본적으로 사용 하도록 설정 해야 합니다. 이전 버전의 IDE에서는이 값을 자동으로 확인 하지 못할 수 있으며 직접 검사를 수행 해야 할 수도 있습니다.
 
-
 > [!IMPORTANT]
 > 이 기능의 이전 버전은 Monotouch.dialog 5.2부터 발생 했지만 **sgen** 에는 실험적 미리 보기로만 제공 되었습니다. 이제이 새로운 향상 된 버전을 **Boehm** 가비지 수집기 에서도 사용할 수 있습니다.
-
 
 지금까지 Xamarin.ios에서 관리 하는 두 가지 종류의 개체가 있습니다. 즉, 네이티브 개체 (피어 개체)에 대 한 래퍼입니다 .이는 단순히 추가 메모리 내 상태를 유지 하 여 새 기능 (파생 개체)을 확장 하거나 통합 하는 개체입니다. 이전에는 C# 이벤트 처리기를 추가 하는 등의 상태를 사용 하 여 피어 개체를 확대할 수도 있지만 개체를 참조 하지 않고 수집 하는 것을 허용 했습니다. 이렇게 하면 나중에 충돌이 발생할 수 있습니다 (예: 목표-C 런타임이 관리 되는 개체로 다시 호출 된 경우).
 

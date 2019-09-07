@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 1aa4e6dcf5137d12647fb2a5531218839b6db9a1
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 6f3df1c7c4664f4138e0f399419ac95e15231916
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225805"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757524"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
 
@@ -29,7 +29,6 @@ Android 4.4 (API 레벨 19) ("KitKat" 라고도 함)는 2013에 릴리스 되었
 - [하드웨어](#hardware) Nfc 호스트 기반 카드 에뮬레이션을 사용 하 여 앱을 nfc 카드로 전환 하 고를 `SensorManager` 사용 하 여 저전력 센서를 실행 합니다. &ndash;
 
 - [개발자 도구](#developer_tools) &ndash; Android Debug Bridge 클라이언트를 사용 하 여 동영상 가이드 응용 프로그램을 Android SDK 일부로 사용할 수 있습니다.
-
 
 이 가이드에서는 기존 Xamarin.ios 응용 프로그램을 KitKat로 마이그레이션하기 위한 지침 뿐만 아니라 Xamarin.ios 개발자를 위한 KitKat에 대 한 개략적인 개요를 제공 합니다.
 
@@ -248,10 +247,8 @@ sceneButton.Click += (o, e) => {
 
 [![애니메이션이 완료 된 후의 앱 스크린샷](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
-
 > [!NOTE]
 > Android 전환 라이브러리에는 사용자가 두 번째로 활동을 탐색할 때를 사용 `GetSceneForLayout` 하 여 만든 장면을 중단 시키는 [알려진 버그가](https://code.google.com/p/android/issues/detail?id=62450) 있습니다. Java 해결 방법은 [여기](http://www.doubleencore.com/2013/11/new-transitions-framework/)에 설명 되어 있습니다.
-
 
 ##### <a name="custom-transitions-in-scenes"></a>사용자 지정 전환 장면
 
@@ -289,7 +286,6 @@ KitKat를 사용 하면 선택적 반투명 상태 및 탐색 모음으로 앱�
 - `windowTranslucentNavigation`-True로 설정 하면 아래쪽 탐색 막대가 반투명 하 게 표시 됩니다.
 
 - `fitsSystemWindows`-위쪽 또는 아래쪽 막대를 transcluent로 설정 하면 기본적으로 투명 UI 요소에서 콘텐츠가 이동 합니다. 이 속성을로 `true` 설정 하는 것은 콘텐츠가 반투명 시스템 UI 요소와 겹치지 않도록 하는 간단한 방법입니다.
-
 
 다음 코드에서는 반투명 상태와 탐색 모음이 있는 테마를 정의 합니다.
 
@@ -405,11 +401,8 @@ KitKat와 함께 제공 되는 대부분의 장치는 Google Cloud 인쇄 앱 �
 
 [![인쇄 설정 화면의 예제 스크린샷](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
-
 > [!NOTE]
 > 인쇄 Api는 기본적으로 Google Cloud Print와 함께 작동 하도록 설정 되어 있지만 개발자가 새 Api를 사용 하 여 인쇄 콘텐츠를 준비 하 고 다른 응용 프로그램에 보내 인쇄를 처리할 수 있습니다.
-
-
 
 #### <a name="printing-html-content"></a>HTML 콘텐츠 인쇄
 
@@ -425,7 +418,6 @@ KitKat는를 사용 [`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAda
 사용자는 옵션 메뉴를 사용 하 여 활동에 대 한 작업을 수행할 수 있습니다. 화면의 오른쪽 위 모서리에 있으며 다음과 같이 표시 됩니다.
 
 [![화면의 오른쪽 위 모서리에 표시 되는 인쇄 메뉴 항목의 예제 스크린샷](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
-
 
 *리소스*의 *메뉴*디렉터리에서 추가 메뉴 항목을 정의할 수 있습니다. 아래 코드는 [Print](xref:Android.Print.PrintManager)라는 샘플 메뉴 항목을 정의 합니다.
 
@@ -541,7 +533,6 @@ Hce를 사용 하려면 `Nfc` `AndroidManifest.xml`다음과 같이 hce 기능�
 
 - *Ondeactivated* `HostAdpuService` 됨-hce 서비스가 더 이상 NFC 판독기와 통신 하지 않는 경우 비활성화 됩니다.
 
-
 또한 HCE 서비스는 응용 프로그램의 매니페스트에 등록 하 고 적절 한 권한, 의도 필터 및 메타 데이터로 데코 레이트 되어야 합니다. 다음 코드는 `Service` 특성을 사용 하 여 `HostApduService` android Manifest에 등록 된의 예제입니다. 특성에 대 한 자세한 내용은 [android 매니페스트](~/android/platform/android-manifest.md) 를 사용 하 여 Xamarin 작업 가이드를 참조 하세요.
 
 ```csharp
@@ -645,10 +636,8 @@ protected override void OnPause()
 
 장치를 다시 부팅 하면 단계 수가 0으로 다시 설정 됩니다. 센서 또는 장치의 상태를 사용 하는 다른 응용 프로그램에 관계 없이 응용 프로그램에 대 한 정확한 카운트를 보고 하도록 앱에 추가 코드가 필요 합니다.
 
-
 > [!NOTE]
 > 단계 검색 및 계산에 대 한 API는 KitKat와 함께 제공 되지만 모든 전화가 센서와 outfitted 않습니다. 을 실행 `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`하 여 센서를 사용할 수 있는지 확인 하거나, `null`의 `GetDefaultSensor` 반환 된 값이이 아닌지 확인 합니다.
-
 
 <a name="developer_tools" />
 
@@ -672,7 +661,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 ```
 
 장치에서 비디오를 찾을 수 있습니다. 기록이 완료 되 면 갤러리에 표시 됩니다.
-
 
 ## <a name="other-kitkat-additions"></a>기타 KitKat 추가
 
@@ -705,11 +693,9 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 위의 API 변경 내용에 대 한 자세한 내용은 Google [Android 4.4 api](https://developer.android.com/about/versions/android-4.4.html) 개요를 참조 하세요.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Android 4.4 (API 수준 19)에서 사용할 수 있는 몇 가지 새로운 Api 및 응용 프로그램을 KitKat로 전환할 때 제공 되는 모범 사례를 소개 했습니다. *전환 프레임 워크* 및 *테마*에 대 한 새 옵션을 포함 하 여 사용자 환경에 영향을 주는 api에 대 한 변경 내용이 요약 되어 있습니다. 그런 다음 *저장소 액세스 프레임 워크* 및 `DocumentsProvider` 클래스와 새 *인쇄 api*를 도입 했습니다. *NFC 호스트 기반 카드 에뮬레이션* 및 사용자의 단계를 추적 하기 위한 두 개의 새 센서를 비롯 한 *저전력 센서*를 사용 하는 방법을 살펴보았습니다. 마지막으로, *화면 녹화*를 사용 하 여 응용 프로그램의 실시간 데모를 캡처하고 자세한 KitKat API 변경 내용 및 추가 목록을 제공 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

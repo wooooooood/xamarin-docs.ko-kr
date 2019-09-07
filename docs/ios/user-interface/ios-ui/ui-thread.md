@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 76733d4efd4ce292da2781c97aef963fb68e3974
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287867"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768175"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Xamarin.ios에서 UI 스레드 사용
 
@@ -40,7 +40,6 @@ Xamarin.ios 응용 프로그램을 디버깅 하는 동안 코드에서 잘못 �
 
  <a name="Background_Thread_Example" />
 
-
 ## <a name="background-thread-example"></a>백그라운드 스레드 예제
 
 다음은 간단한 스레드를 사용 하 여 백그라운드 스레드에서 사용자 인터페이스 컨트롤 ( `UILabel`)에 액세스 하려고 시도 하는 예제입니다.
@@ -64,7 +63,6 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 이 문서의 나머지 예제에서는이를 사용할 필요가 없지만, 앱에서 네트워크 요청을 할 때, 알림 센터 또는 다른 방법으로 실행 되는 완료 처리기를 필요로 하는 다른 방법을 사용 하는 경우 기억해 야 할 중요 한 개념입니다. 스레드.
 
  <a name="Async_Await_Example" />
-
 
 ## <a name="asyncawait-example"></a>Async/Wait 예
 
@@ -92,7 +90,6 @@ async partial void button2_TouchUpInside (UIButton sender)
 ```
 
 비동기 메서드가 주 UI 스레드가 `InvokeOnMainThread` 아닌 백그라운드 스레드에서 호출 되는 경우에는 여전히 필요 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

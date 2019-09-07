@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 052d81ccaefe123eb375ddcd92bee0b1f2a395e2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770295"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.ios 앱 샌드 박싱
 
@@ -562,8 +562,6 @@ Xamarin.ios 앱에 필요한 자격을 확인 하려면 다음을 수행 합니�
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램 샌드 박싱에 대해 자세히 살펴봅니다. 먼저 앱 Sandbox의 기본 사항을 보여 주는 간단한 Xamarin.ios 앱을 만들었습니다. 다음으로 sandbox 위반을 해결 하는 방법을 살펴보았습니다. 그런 다음 앱 샌드박스를 자세히 살펴보고 앱 샌드박스에 대해 Xamarin.ios 앱을 디자인 하는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

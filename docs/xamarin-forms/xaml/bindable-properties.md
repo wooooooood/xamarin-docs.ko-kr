@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 59ec82c222208ff0e73b0b7b5226d416d3a53398
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 50efd6b37d70fa835436c28c73b3d4f9fc6c7c83
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656607"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758090"
 ---
 # <a name="bindable-properties"></a>바인딩 가능한 속성
 
@@ -221,7 +221,6 @@ public static readonly BindableProperty SizeProperty =
 ## <a name="summary"></a>요약
 
 이 문서는 바인딩 가능한 속성에 대 한 소개를 제공 하 고 만들고이 사용 하는 방법을 보여 줍니다. 바인딩 가능한 속성을 속성의 값 Xamarin.Forms 속성 시스템에서 추적 되는 속성의 특수 형식입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

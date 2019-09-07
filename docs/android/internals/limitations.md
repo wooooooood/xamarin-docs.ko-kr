@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 57d9d6a91f88d117f0889a8dba9e6198ec6b7f62
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524775"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757779"
 ---
 # <a name="limitations"></a>제한 사항
 
@@ -84,11 +84,9 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### <a name="generic-c-classes"></a>제네릭 C# 클래스
 
 제네릭 C# 클래스는 부분적 으로만 지원 됩니다. 다음과 같은 제한 사항이 있습니다.
-
 
 - 제네릭 형식은 또는를 `[Export]` `[ExportField`사용할 수 없습니다. 이렇게 하려고 하면 `XA4207` 오류가 생성 됩니다.
 

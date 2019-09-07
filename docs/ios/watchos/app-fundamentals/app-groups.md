@@ -7,15 +7,14 @@ ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: c75db8bd29b7a57c46610abdd5e4024938fc9e1b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fec6cef22ddbc47aca0027aa026e0524b38bec4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280325"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768058"
 ---
 # <a name="working-with-watchos-app-groups-in-xamarin"></a>Xamarin에서 watchOS 앱 그룹 작업
-
 
 앱 그룹을 사용하면 서로 다른 애플리케이션(또는 애플리케이션과 해당 확장 프로그램)이 공유 파일 저장소 위치에 액세스할 수 있습니다. 앱 그룹은 다음과 같은 데이터에 사용할 수 있습니다.
 
@@ -39,14 +38,11 @@ ms.locfileid: "70280325"
 
 [![](app-groups-images/entitlements-sml.png "Info.plist를 구성 하 고 ID를 입력 합니다.")](app-groups-images/entitlements.png#lightbox)
 
-
 ### <a name="deployment"></a>배포
 
 [배포](~/ios/watchos/deploy-test/index.md#App_Groups) 프로 비전에서 앱 그룹을 올바르게 구성 했는지 확인 합니다.
 
-
 자세한 내용은 참조 하십시오 합니다 [앱 그룹 기능](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) 설명서.
-
 
 ## <a name="related-links"></a>관련 링크
 

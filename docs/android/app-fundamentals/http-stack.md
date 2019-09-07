@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 9f66764fef5c54563ffd03274b1f86a8c0bcc637
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3b74acee34c367814fbd2a948fe490f4225aee00
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522151"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755388"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Android 용 HttpClient 스택 및 SSL/TLS 구현 선택기
 
@@ -32,7 +32,6 @@ Xamarin.ios HttpClient 구성은 **Android 옵션 > 프로젝트 옵션**에 있
 다음은 TLS 1.2 지원에 권장 되는 설정입니다.
 
 [![Visual Studio Android 옵션](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -75,8 +74,6 @@ AndroidClientHandler는 관리 코드에서 모든 항목을 구현 하는 대�
 - 일반적으로 훨씬 느립니다 (예: 암호화)를 기본 API로 합니다.
 - 더 큰 응용 프로그램을 만드는 관리 코드가 더 필요 합니다.
 
-
-
 ### <a name="choosing-a-handler"></a>처리기 선택
 
 `AndroidClientHandler` 와`HttpClientHandler` 중에서 선택 하는 것은 응용 프로그램의 요구 사항에 따라 달라 집니다. `AndroidClientHandler`는 최신 보안 지원 (예:)을 위해 권장 됩니다.
@@ -98,7 +95,6 @@ Xamarin Android 8.3 `HttpClientHandler` 부터는 기본 TLS 공급자로 보링
 
 Xamarin Android 8.3부터 기본 TLS 공급자는 지루한 SSL (`btls`)입니다. 보링 ssl을 사용 하지 않으려는 경우 `$(AndroidTlsProvider)` 속성을로 `legacy` 설정 하 여 관리 되는 관리 SSL 구현으로 되돌릴 수 있습니다. 빌드 속성 설정에 대 한 자세한 내용은 [빌드 프로세스](~/android/deploy-test/building-apps/build-process.md)를 참조 하세요.
 
-
 ### <a name="programatically-using-androidclienthandler"></a>프로그래밍 방식으로`AndroidClientHandler`
 
 는 `Xamarin.Android.Net.AndroidClientHandler`xamarin.ios 전용 구현입니다.`HttpMessageHandler`
@@ -113,7 +109,6 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 > [!NOTE]
 > 기본 Android 장치는 TLS 1.2 (ie)를 지원 해야 합니다. Android 4.1 이상). TLS 1.2에 대 한 공식적인 지원은 Android 5.0 이상에서 제공 됩니다. 그러나 일부 장치는 Android 4.1 이상에서 TLS 1.2를 지원 합니다.
-
 
 ## <a name="ssltls-implementation-build-option"></a>SSL/TLS 구현 빌드 옵션
 
@@ -155,7 +150,7 @@ Xamarin Android 응용 프로그램에서 TLS 설정을 제어할 수 있는 방
 
 Xamarin에서 TLS를 사용 하는 것과 관련 된 두 가지 환경 변수는 다음과 같습니다.
 
-- `XA_HTTP_CLIENT_HANDLER_TYPE`이 환경 변수는 응용 프로그램 `HttpMessageHandler` 에서 사용할 기본값을 선언 합니다. &ndash; 예:
+- `XA_HTTP_CLIENT_HANDLER_TYPE`이 환경 변수는 응용 프로그램 `HttpMessageHandler` 에서 사용할 기본값을 선언 합니다. &ndash; 예를 들어:
 
     ```csharp
     XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
@@ -180,7 +175,6 @@ Xamarin에서 TLS를 사용 하는 것과 관련 된 두 가지 환경 변수는
 -----
 
 환경 변수 및 Xamarin.ios에 대 한 자세한 내용은 [Xamarin Android 환경](~/android/deploy-test/environment.md) 가이드를 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

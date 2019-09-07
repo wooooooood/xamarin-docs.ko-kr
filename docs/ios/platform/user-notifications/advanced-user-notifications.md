@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: a22e0d6979173ca29596687da8a0b54c6fc565a7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8bca2b47212b9effe637dcd2e116630579609b39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769412"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Xamarin.ios의 고급 사용자 알림
 
@@ -65,7 +65,7 @@ IOS 10의 새로운 기능인 사용자 알림 UI API를 사용 하면 Xamarin.i
 
 그러나 작은 이미지를 전송 하는 것과 관련 된 크기 때문에 원격 알림 페이로드에 연결 하는 것은 실용적이 지 않습니다. 이러한 상황을 처리 하기 위해 개발자는 iOS 10의 새로운 서비스 확장을 사용 하 여 다른 원본 (예: CloudKit 데이터 저장소)에서 이미지를 다운로드 하 고 사용자에 게 표시 하기 전에 알림 콘텐츠에 연결할 수 있습니다.
 
-서비스 확장에서 원격 알림을 수정 하려면 해당 페이로드를 변경 가능으로 표시 해야 합니다. 예를 들어:
+서비스 확장에서 원격 알림을 수정 하려면 해당 페이로드를 변경 가능으로 표시 해야 합니다. 예:
 
 ```csharp
 {
@@ -203,7 +203,6 @@ using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
 
-
 namespace MonkeyChatNotifyExtension
 {
     public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
@@ -266,7 +265,7 @@ namespace MonkeyChatNotifyExtension
 
 -----
 
-알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`)는 알림 작업을 등록 하는 데 사용 되는 것과 동일한 범주 값을 사용 합니다. 앱에서 여러 범주에 대해 동일한 UI를 사용 하는 경우를 형식 **배열로** 전환 `UNNotificationExtensionCategory` 하 고 필요한 모든 범주를 제공 합니다. 예:
+알림 콘텐츠 확장 범주 (`UNNotificationExtensionCategory`)는 알림 작업을 등록 하는 데 사용 되는 것과 동일한 범주 값을 사용 합니다. 앱에서 여러 범주에 대해 동일한 UI를 사용 하는 경우를 형식 **배열로** 전환 `UNNotificationExtensionCategory` 하 고 필요한 모든 범주를 제공 합니다. 예를 들어:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -307,7 +306,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {
@@ -453,7 +451,7 @@ namespace MonkeyChatNotifyExtension
 
 사용자가 사용자 지정 작업 **수락** 단추를 탭 할 때 수락 된 날짜를 표시 하는 것과 같은 사용자 지정 작업 중 하나를 호출 하는 경우 알림 콘텐츠 확장에도 UI를 업데이트할 수 있습니다. 또한 알림 콘텐츠 확장은 알림이 종결 되기 전에 사용자가 작업의 영향을 확인할 수 있도록 알림 UI의 해제 지연 하도록 시스템에 지시할 수 있습니다.
 
-완료 처리기를 포함 하는 `DidReceiveNotification` 메서드의 두 번째 버전을 구현 하 여이 작업을 수행 합니다. 예:
+완료 처리기를 포함 하는 `DidReceiveNotification` 메서드의 두 번째 버전을 구현 하 여이 작업을 수행 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -546,7 +544,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {

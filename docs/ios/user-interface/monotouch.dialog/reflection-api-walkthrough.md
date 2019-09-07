@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 27f025d80b3259da32581811ae6c900358a07e4e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7acd43597d033b4c6daac59016a9bdf41ade6f68
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278510"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768137"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>리플렉션 API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -29,7 +29,6 @@ MT입니다. D 리플렉션 API를 사용 하면 클래스를 MT 인 특성으�
 1. MT로 데코레이팅된 클래스 만들기 D 특성.
 1. 인스턴스를 `BindingContext` 만들고 위의 클래스의 인스턴스를 전달 합니다. 
 1. 를 만들고를 전달 `BindingContext’s` `RootElement` 합니다. `DialogViewController` 
-
 
 리플렉션 API를 사용 하는 방법을 보여 주는 예를 살펴보겠습니다. 이 예에서는 아래와 같이 간단한 데이터 입력 화면을 작성 합니다.
 
@@ -138,11 +137,9 @@ public class Expense
 
  <a name="Summary" />
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 리플렉션 API에 대 한 연습을 제공 했습니다. 클래스에 특성을 추가 하 여 표시 되는 항목을 제어 하는 방법을 살펴보았습니다. 또한를 `BindingContext` 사용 하 여 클래스의 데이터를 만들어진 요소 계층 구조와 MT를 사용 하는 방법에 바인딩하는 방법에 대해 설명 했습니다. D가 있는 `UINavigationController`D입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

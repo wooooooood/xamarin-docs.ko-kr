@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: eb88f7c1de12eee59ea4c2a271079e6b96c29b09
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e64ae5e04fbdd5b4c69a0b00c2bbc087b7cdf62a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286596"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769498"
 ---
 # <a name="search-apis-in-xamarinios"></a>Xamarin.ios에서 Api 검색
 
@@ -89,8 +89,6 @@ iOS 10은 시스템이 적절 한 시간에 자동으로 유용한 정보를 사
 ## <a name="summary"></a>요약
 
 이 문서에서는 iOS 9에서 Xamarin.ios 앱에 대해 제공 하는 새로운 검색 API 기능에 대해 살펴보았습니다. 콘텐츠 인덱싱에 대 한 [NSUserActivity](nsuseractivity.md), [핵심 스포트라이트](corespotlight.md) 및 [웹 마크업](web-markup.md) 메서드를 다룹니다. 지정 된 검색 방법이 사용 되어야 하는 경우와 인덱싱되는 콘텐츠 형식에 대 한 간단한 설명으로 완료 되었습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

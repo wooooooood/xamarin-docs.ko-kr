@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: c5032bfa49fb1cee63c48ea8fa3e98bcd5748c31
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d8c2cc4f31b148ee3181629e5b3b5faf01016617
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657181"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772532"
 ---
 # <a name="xamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
@@ -226,7 +226,6 @@ Title="RelativeLayout">
 ![](relative-layout-images/relative.png "복잡 한 RelativeLayout")
 
 `RelativeLayouts`s 중첩 된 경우에 따라 레이아웃 중첩 수 있으므로 동일한 레이아웃 내에서 모든 요소를 제공 하는 것 보다 쉽습니다. 일부 요소가 되었다는 `RelativeToView`뷰 간의 관계 가이드 위치를 지정 하는 경우 더욱 쉽고 레이아웃에 허용 되는 때문입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

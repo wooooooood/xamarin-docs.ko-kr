@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: f453e6a7d4f516ee87dda25141cfd9ff81b9110d
-ms.sourcegitcommit: 21182d07d4bbddc26cd36f1c5b86b79011f6984a
+ms.openlocfilehash: 843aeda14ad8c47014b577bdce8004872b12865d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169245"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753461"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.ios API 디자인
 
@@ -552,7 +552,6 @@ Interface Builder를 사용 하 여 사용자 인터페이스를 디자인 하�
 1. UI와 연결을 XIB/NIB 파일에 저장 합니다.
 1. 런타임에 NIB 파일을 로드 합니다.
 1. 콘센트 변수에 액세스 합니다.
-
 
 단계 (1) ~ (3)는 Interface Builder를 사용 하 여 인터페이스를 빌드하기 위한 Apple 설명서에서 다룹니다.
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ac373d20cbe08719fd7aa8e3888bbd608d8549c7
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: a58242e89033d6cd2652495f9466379f63f498f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119518"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761242"
 ---
 # <a name="fingerprint-authentication"></a>지문 인증
 
 _이 가이드에서는 Android 6.0에 도입 된 지문 인증을 Xamarin Android 응용 프로그램에 추가 하는 방법을 설명 합니다._
-
 
 ## <a name="fingerprint-authentication-overview"></a>지문 인증 개요
 
@@ -51,11 +50,6 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
 지문 인증에는 Android 6.0 (API 수준 23) 이상 및 지문 스캐너가 있는 장치가 필요 합니다. 
 
 인증할 각 사용자의 장치에는 지문이 이미 등록 되어 있어야 합니다. 여기에는 암호, PIN, 살짝 밀기 패턴 또는 얼굴 인식을 사용 하는 화면 잠금을 설정 하는 작업이 포함 됩니다. Android Emulator에서 일부 지문 인증 기능을 시뮬레이션할 수 있습니다.  이러한 두 항목에 대 한 자세한 내용은 [지문 등록](enrolling-fingerprint.md) 섹션을 참조 하세요. 
-
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

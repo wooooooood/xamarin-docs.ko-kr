@@ -7,19 +7,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: 9b3e4177d6be5854e80952d091aa78787d9645bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8a808e6ea49338de5b6bd1618fc2227e6cf5f0b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644931"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764892"
 ---
 # <a name="xamarinandroid-popup-menu"></a>Xamarin Android 팝업 메뉴
 
 [PopupMenu](xref:Android.Widget.PopupMenu) ( _바로 가기 메뉴_라고도 함)는 특정 뷰에 고정 된 메뉴입니다. 다음 예제에서 단일 활동에는 단추가 포함 되어 있습니다. 사용자가 단추를 누르면 세 개의 항목 팝업 메뉴가 표시 됩니다.
 
 [![단추 및 3 항목 팝업 메뉴를 사용 하는 앱의 예](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
-
 
 ## <a name="creating-a-popup-menu"></a>팝업 메뉴 만들기
 
@@ -47,7 +46,7 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-마지막으로 팝업 메뉴는 앞에서 만든 메뉴 리소스와 *팽창* 되어야 합니다. 다음 예제에서는 메뉴의 [팽창](xref:Android.Views.LayoutInflater.Inflate*) 메서드에 대 한 호출을 추가 하 고 [표시 메서드를](xref:Android.Widget.PopupMenu.Show) 호출 하 여 표시 합니다.
+마지막으로 팝업 메뉴는 앞에서 만든 메뉴 리소스와 *팽창* 되어야 합니다. 다음 예제에서는 메뉴의 [팽창](xref:Android.Views.LayoutInflater.Inflate*) 메서드에 대 한 호출을 추가 하 고 표시 메서드를 호출 하 [여 표시 합니다](xref:Android.Widget.PopupMenu.Show) .
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -56,7 +55,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
 
 ## <a name="handling-menu-events"></a>메뉴 이벤트 처리
 
@@ -77,8 +75,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

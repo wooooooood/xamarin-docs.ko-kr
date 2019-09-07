@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 37bc5bf32bc1d218179ef1176e1632239b1cb45f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758494"
 ---
 # <a name="introduction-to-android-wear"></a>Android Wear 소개
 
 _Google의 Android 마모가 도입 되면서 뛰어난 Android 앱을 개발 하는 경우 휴대폰 및 태블릿으로 더 이상 국한 되지 않습니다. Android 용 Xamarin 지원 덕분에 손목에서 코드를 실행할 C# 수 있습니다. 이 소개에서는 Android에서 제공 하는 기본 개요를 제공 하 고, 주요 기능에 대해 설명 하며, Android 출시 2.0에서 사용 가능한 기능에 대 한 개요를 제공 합니다. 이 문서에는 널리 사용 되는 Android 마모 장치 중 일부가 나열 되어 있으며, 추가 정보를 제공 하기 위해 필수 Google Android 마모 된 설명서의 링크를 제공 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -27,29 +26,21 @@ Android 마모는 최초의 차세대 Motorola 360, LG의 G watch 및 Samsung �
 
 Xamarin Android 5.0 이상 버전에서는 Android 4.4 W (API 20) 지원 및 추가 마모 별 UI 컨트롤을 추가 하는 NuGet 패키지를 통해 Android를 사용할 수 있습니다. Xamarin Android 5.0 이상에는 마모 앱을 패키징하는 기능도 포함 되어 있습니다. NuGet 패키지는이 가이드의 뒷부분에 설명 된 대로 Android 마모 2.0에도 사용할 수 있습니다.
 
-
 ## <a name="android-wear-basics"></a>Android 마모 기본 사항
 
 Android 마모에는 Android 핸드헬드 앱과 다른 사용자 인터페이스 패러다임이 있습니다. 첫 번째 마모 된 앱은 다른 방식으로 도우미 핸드헬드 앱을 확장 하도록 설계 되었지만 Android 마모 2.0부터 시작 하 여 앱을 독립 실행형으로 사용할 수 있습니다. 마모 된 앱을 배포 하는 경우이 앱은 도우미 핸드헬드 앱과 함께 패키지 됩니다. 대부분의 마모 된 앱은 핸드헬드 앱을 기반으로 하기 때문에 핸드헬드 앱과 통신 하는 방법이 필요 합니다. 다음 섹션에서는 이러한 사용 시나리오를 설명 하 고 필수 Android 마모 기능을 간략하게 설명 합니다. 
-
-
 
 ### <a name="usage-scenarios"></a>사용 시나리오
 
 Android의 첫 번째 버전은 현재 hpc 응용 프로그램을 향상 된 알림으로 확장 하 고 핸드헬드 앱과 wearable 앱 간에 데이터를 동기화 하는 데 주로 초점을 두었습니다. 따라서 이러한 시나리오는 비교적 간단 하 게 구현할 수 있습니다.
 
-
 #### <a name="wearable-notifications"></a>Wearable 알림
 
 Android 마모를 지 원하는 가장 간단한 방법은 핸드헬드 장치와 wearable 장치 간에 알림의 공유 특성을 활용 하는 것입니다. Support v4 notification API 및 `WearableExtender` 클래스 ( [Xamarin Android 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)에서 사용 가능)를 사용 하 여 수신함 스타일 카드 또는 음성 입력과 같은 플랫폼의 기본 기능을 활용할 수 있습니다. [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) 샘플은 Android 마모 장치에 알림 목록을 보내는 방법을 보여 주는 예제 코드를 제공 합니다. 
 
-
-
 #### <a name="companion-applications"></a>도우미 응용 프로그램
 
 또 다른 전략은 wearable 장치에서 고유 하 게 실행 되는 완전 한 응용 프로그램을 만들고 도우미 핸드헬드 앱과 쌍을 만드는 것입니다. 이 방법의 좋은 예로는 핸드헬드 장치에서 실행 되 고 wearable 장치에서 퀴즈 질문을 요청 하는 퀴즈를 만드는 방법을 보여 주는 [퀴즈](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-quiz) 샘플 앱이 있습니다. 
-
-
 
 ### <a name="user-interface"></a>사용자 인터페이스
 
@@ -60,8 +51,6 @@ Android 마모를 지 원하는 가장 간단한 방법은 핸드헬드 장치�
 또한 아래와 같이 작은 설명 텍스트를 포함 하는 큰 색 원으로 구성 된 작업 단추를 사용 합니다.  [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) 샘플에서는 마모 된 앱에서 `GridViewPager` 및 `GridPagerAdapter` 를 사용 하는 방법을 보여 줍니다.
 
 Android 마모 2.0은 마모 된 사용자 인터페이스에 탐색 서랍, 작업 서랍 및 인라인 작업 단추를 추가 합니다. Android 마모 2.0 사용자 인터페이스 요소에 대 한 자세한 내용은 Android [분석](https://www.google.com/design/spec-wear/system-overview/anatomy.html) 항목을 참조 하세요. 
-
-
 
 ### <a name="communications"></a>통신
 
@@ -77,14 +66,10 @@ Android wearable는 두 가지 통신 Api를 제공 하 여 apps와 도우미 �
 이 서비스는 Android 마모에 의해 자동으로 인스턴스화됩니다.
 [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) 샘플에서는을 `WearableListenerService`구현 하는 방법을 보여 줍니다.
 
-
-
 ### <a name="deployment"></a>배포
 
 각 wearable 앱은 기본 응용 프로그램 APK 내에 포함 된 자체 APK 파일을 사용 하 여 배포 됩니다. 이 패키징은 Xamarin Android 5.0 이상에서 자동으로 처리 되지만 버전 5.0 이전 버전의 Xamarin.ios의 경우 수동으로 수행 해야 합니다. 
 [패키징 작업](~/android/wear/deploy-test/packaging.md) 은 배포에 대해 자세히 설명 합니다. 
-
-
 
 ## <a name="going-further"></a>자세히 살펴보기 
 
@@ -103,13 +88,9 @@ Android 마모에 익숙해지는 가장 좋은 방법은 첫 번째 앱을 빌�
 첫 번째 마모 된 앱을 만든 후에는 Android 마모를 위한 사용자 지정 시계 얼굴을 빌드 해 볼 수 있습니다. 
 [Watch 얼굴을 만드는](~/android/wear/platform/creating-a-watchface.md) 방법에 대 한 단계별 지침과 예제 코드를 제공 하 고, 추가 기능을 제공 하는 아날로그 스타일의 조사식에 더 많은 코드를 추가 하 여 제거 된 digital Watch face 서비스를 개발 합니다. 
 
-
-
 ## <a name="android-wear-20"></a>Android 마모 2.0
 
 Android 마모 2.0에는 *복잡*한 레이아웃, 탐색 및 작업 서랍, 확장 된 알림과 같은 다양 한 새로운 기능 및 기능이 도입 되었습니다. 또한, 2.0을 사용 하면 핸드헬드 앱과 독립적으로 작동 하는 독립 실행형 앱을 빌드할 수 있습니다. 새 *손목 제스처* 기능을 사용 하면 앱과의 단방향 상호 작용을 사용할 수 있습니다. 다음 섹션에서는 이러한 기능을 강조 하 고 앱에서 사용을 시작 하는 데 도움이 되는 링크를 제공 합니다.
-
-
 
 ### <a name="install-wear-20-packages"></a>마모 2.0 패키지 설치
 
@@ -123,11 +104,9 @@ Xamarin.ios를 사용 하 여 마모 된 2.0 앱을 빌드하려면 프로젝트
 
 [![Xamarin.googleplayservices.base. Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Xamarin.googleplayservices.base. Wearable NuGet을 설치 합니다.")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-
 ### <a name="key-features-of-wear-20"></a>2\.0의 주요 기능
 
 Android 마모 2.0은 2014에서 초기 출시 이후 Android 출시에 대 한 가장 큰 업데이트입니다. 다음 섹션에서는 Android 용 2.0의 주요 기능을 강조 하 고 앱에서 이러한 새 기능을 사용 하 여 시작 하는 데 도움이 되는 링크를 제공 합니다. 
-
 
 #### <a name="complications"></a>컴플리케이션
 
@@ -137,8 +116,6 @@ Android 마모 2.0은 2014에서 초기 출시 이후 Android 출시에 대 한 
 
 복잡 한 상황에 대 한 자세한 내용은 Android [Watch 얼굴](https://developer.android.com/wear/preview/features/complications.html) 상황에 맞는 항목을 참조 하세요. 
 
-
-
 #### <a name="navigation-and-action-drawers"></a>탐색 및 작업 서랍 
 
 새 서랍 2 개가 착용 2.0에 포함 되어 있습니다. 화면 맨 위에 표시 되는 *탐색 서랍*을 사용 하면 사용자가 아래 왼쪽에 표시 된 것 처럼 앱 보기 간을 탐색할 수 있습니다. 화면 맨 아래에 표시 되는 *작업 서랍*(오른쪽에 표시 됨)은 사용자가 작업 목록에서 선택할 수 있도록 합니다. 
@@ -146,8 +123,6 @@ Android 마모 2.0은 2014에서 초기 출시 이후 Android 출시에 대 한 
 ![탐색 및 작업 서랍](intro-to-wear-images/drawers.png "탐색 및 작업 서랍")
 
 이러한 두 개의 새로운 대화형 서랍에 대 한 자세한 내용은 Android [마모 된 탐색 및 작업](https://developer.android.com/wear/preview/features/ui-nav-actions.html) 항목을 참조 하세요. 
-
-
 
 #### <a name="curved-layouts"></a>곡선 레이아웃 
 
@@ -157,13 +132,9 @@ Android 마모 2.0은 2014에서 초기 출시 이후 Android 출시에 대 한 
 
 `WearableRecyclerView`곡선 레이아웃 및 원형 스크롤 제스처를 지원 하도록 클래스를확장합니다.`RecyclerView` 자세한 내용은 Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) API 설명서를 참조 하세요. 
 
-
-
 #### <a name="standalone-apps"></a>독립 실행형 앱 
 
 Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있습니다. 즉, 예를 들어, wearable 장치에서 동반 되는 핸드헬드 장치가 꺼져 있거나 멀리 떨어져 있는 경우에도 스마트 watch를 통해 전체 기능을 계속 제공할 수 있습니다. 이 기능에 대 한 자세한 내용은 Android [독립 실행형 앱](https://developer.android.com/wear/preview/features/standalone-apps.html) 항목을 참조 하세요.
-
-
 
 #### <a name="wrist-gestures"></a>손목 제스처 
 
@@ -174,10 +145,7 @@ Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있�
 
 자세한 내용은 Android [손목 제스처](https://developer.android.com/wear/preview/features/gestures.html) 항목을 참조 하세요. 
 
-
 인라인 동작, 스마트 회신, 원격 입력, 확장 된 알림 및 알림에 대 한 새로운 브리징 모드와 같은 더 많은 마모 된 2.0 기능이 있습니다. 새 마모 된 2.0 기능에 대 한 자세한 내용은 Android [API 개요](https://developer.android.com/wear/preview/api-overview.html)를 참조 하세요. 
-
-
 
 ## <a name="devices"></a>장치
 
@@ -190,8 +158,6 @@ Android를 실행할 수 있는 장치의 몇 가지 예는 다음과 같습니�
 - [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 - [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
-
-
 ## <a name="further-reading"></a>추가 정보
 
 Google의 Android 마모 설명서를 확인 하세요.
@@ -201,12 +167,9 @@ Google의 Android 마모 설명서를 확인 하세요.
 - [wearable 라이브러리](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [Android 마모 2.0](https://developer.android.com/wear/preview/index.html)
 
-
-
 ## <a name="summary"></a>요약
 
 이 소개에서는 Android 마모의 개요를 제공 했습니다. Android에서 제공 하는 기본 기능에 대해 간략하게 설명 하 고 Android 출시 2.0에 도입 된 기능에 대 한 개요를 제공 했습니다. 개발자가 Xamarin Android 마모 된 개발을 시작 하는 데 도움이 되는 필수 읽기의 링크를 제공 했으며, 현재 시장에서 제공 되는 일부 Android 장치에 대 한 예제를 소개 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

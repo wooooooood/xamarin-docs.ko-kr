@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: cae0196fc29944ba8ae87fe43d256da090942f3a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 919eff45e11f60db51109904269addeec1038558
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286113"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752870"
 ---
 # <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Xamarin.ios에서 핵심 그래픽 및 핵심 애니메이션 사용
 
@@ -25,7 +25,6 @@ ms.locfileid: "70286113"
 이 가이드와 함께 제공 되는 *GraphicsDemo* 샘플을 다운로드 하기 시작 합니다. [여기](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation) 에서 다운로드할 수 있으며 **GraphicsWalkthrough** 디렉터리 내에 있는 **GraphicsDemo_starter** 프로젝트를 두 번 클릭 하 여 시작 하 고 `DemoView` 클래스를 엽니다.
 
 ## <a name="drawing-a-path"></a>패스 그리기
-
 
 1. 에서 `DemoView` 클래스에 `CGPath` 변수를 추가 하 고 생성자에서 인스턴스화합니다. 또한 경로를 `CGPoint` 생성 하 `initialPoint` 는 `latestPoint`터치 지점을 캡처하기 위해 사용할 두 변수 및를 선언 합니다.
 
@@ -179,7 +178,6 @@ ms.locfileid: "70286113"
 ## <a name="summary"></a>요약
 
 이 문서에서는 그래픽 및 애니메이션 개념을 함께 연결 하는 예제를 단계별로 설명 했습니다. 먼저 핵심 그래픽을 사용 하 여 사용자 터치에 대 한 응답 `UIView` 으로에서 경로를 그리는 방법을 살펴보았습니다. 그런 다음 핵심 애니메이션을 사용 하 여 해당 경로를 따라 이미지를 이동 하는 방법을 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

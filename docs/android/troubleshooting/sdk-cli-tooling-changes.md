@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
-ms.openlocfilehash: 5446f8e7bbdf2a5f625852bb61637be392bc6bc2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 897daef3aba1166018a0ac796e9c7956c5f0c711
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523208"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761894"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Android SDK Tools에 대한 변경 내용
 
@@ -65,7 +65,6 @@ Android SDK의 **tools/bin** 폴더에 **avdmanager** 라는 새 프로그램이
 ### <a name="using-the-old-gui"></a>이전 GUI 사용
 
 **Android SDK Tools** 버전 **25.2.5** 이하인 경우 **도구** 폴더 내에서 **ANDROID** 프로그램을 실행 하 여 원본 GUI를 계속 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

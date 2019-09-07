@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: e16aa1b96749047554b4f8e6887791d8ed4ff63b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f72baaa4c74eb4bf0bb5eec64211d6ea2b18076c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643689"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756672"
 ---
 # <a name="creating-a-custom-contentprovider"></a>사용자 지정 ContentProvider 만들기
 
@@ -28,7 +28,6 @@ _이전 섹션에서는 기본 제공 ContentProvider 구현에서 데이터를 
 
 Android 용 Mono에서 콘텐츠 공급자 클래스 `[ContentProvider]` 에는 **androidmanifest**에 추가 해야 하는 uri를 지정 하는 특성이 있어야 합니다.
 
-
 ### <a name="mime-type"></a>Mime 형식
 
 MIME 형식에 대 한 일반적인 형식은 두 부분으로 구성 됩니다. Android `ContentProviders` 는 일반적으로 MIME 형식의 첫 번째 부분에 이러한 두 문자열을 사용 합니다.
@@ -39,7 +38,6 @@ MIME 형식에 대 한 일반적인 형식은 두 부분으로 구성 됩니다.
 
 MIME 형식의 두 번째 부분은 응용 프로그램에 고유 하며 `vnd.` 접두사와 함께 역방향 DNS 표준을 사용 해야 합니다. 샘플 코드에서는를 `vnd.com.xamarin.sample.Vegetables`사용 합니다.
 
-
 ### <a name="data-model-metadata"></a>데이터 모델 메타 데이터
 
 응용 프로그램을 사용 하려면 다양 한 형식의 데이터에 액세스 하는 Uri 쿼리를 구성 해야 합니다. 기본 Uri는 특정 데이터 테이블을 참조 하도록 확장할 수 있으며 결과를 필터링 하는 매개 변수도 포함할 수 있습니다. 결과 커서와 함께 데이터를 표시 하는 데 사용 되는 열과 절도 선언 해야 합니다.
@@ -47,7 +45,6 @@ MIME 형식의 두 번째 부분은 응용 프로그램에 고유 하며 `vnd.` 
 유효한 Uri 쿼리만 생성 되도록 하려면 유효한 문자열을 상수 값으로 제공 하는 것이 일반적인 방법입니다. 이렇게 하면 코드 완성을 통해 값 `ContentProvider` 을 검색 가능 하 게 만들고 문자열의 오타를 방지할 수 있으므로에 쉽게 액세스할 수 있습니다.
 
 이전 예제에서 클래스는 `android.provider.ContactsContract` 연락처 데이터에 대 한 메타 데이터를 노출 했습니다. 사용자 지정 `ContentProvider` 의 경우 클래스 자체에 대 한 상수만 노출 합니다.
-
 
 ## <a name="implementation"></a>구현
 
@@ -60,7 +57,6 @@ MIME 형식의 두 번째 부분은 응용 프로그램에 고유 하며 `vnd.` 
 3. **`ContentProvider`**  Uri를 통해 액세스 `ContentProvider`되는를 `CursorAdapter` 사용 하 여에 액세스 합니다 &ndash; .
 
 앞에서 설명한 `ContentProviders` 것 처럼는 정의 된 위치 이외의 응용 프로그램에서 사용 될 수 있습니다. 이 예제에서 데이터는 동일한 응용 프로그램에서 사용 되지만 스키마 (일반적으로 상수 값으로 노출 됨)에 대 한 정보를 알고 있는 한 다른 응용 프로그램 에서도 액세스할 수 있다는 점을 명심 해야 합니다.
-
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 
@@ -94,11 +90,9 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 데이터베이스 `ContentProvider`구현 자체에는를 사용 하 여 노출 해야 하는 특별 한 고려 사항이 필요 하지 않지만 `ContentProvider's` 데이터를 `ListView` 컨트롤에 바인딩하려면 라는 `_id` 고유한 정수 열이의 일부 여야 합니다. 결과 집합. `ListView` 컨트롤 사용에 대 한 자세한 내용은 [listview and 어댑터](~/android/user-interface/layouts/list-view/index.md) 문서를 참조 하세요.
 
-
 ## <a name="create-the-contentprovider"></a>ContentProvider 만들기
 
 이 섹션의 나머지 부분에서는 **SimpleContentProvider/VegetableProvider** 예제 클래스를 빌드하는 방법에 대 한 단계별 지침을 제공 합니다.
-
 
 ### <a name="initialize-the-database"></a>데이터베이스 초기화
 
@@ -117,8 +111,6 @@ public class VegetableProvider : ContentProvider
 ```
 
 코드의 나머지 부분에서는 데이터를 검색 하 고 쿼리할 수 있는 실제 콘텐츠 공급자 구현을 구성 합니다.
-
-
 
 ## <a name="add-metadata-for-consumers"></a>소비자에 대 한 메타 데이터 추가
 
@@ -158,7 +150,6 @@ public class VegetableProvider : ContentProvider
 }
 ```
 
-
 ## <a name="implement-the-uri-parsing-helper"></a>URI 구문 분석 도우미 구현
 
 코드를 사용 하면 uri를 사용 하 여에 `ContentProvider`대 한 요청을 수행 하므로 반환할 데이터를 결정 하기 위해 해당 요청을 구문 분석할 수 있어야 합니다. 클래스 `UriMatcher` 는에서 `ContentProvider` 지 원하는 uri 패턴으로 초기화 된 후 uri를 구문 분석 하는 데 도움이 될 수 있습니다.
@@ -186,7 +177,6 @@ static UriMatcher BuildUriMatcher()
 ```
 
 이 코드는 `ContentProvider` 클래스에 대 한 모든 private입니다. 자세한 내용은 [Google의 UriMatcher 설명서](xref:Android.Content.UriMatcher) 를 참조 하세요.
-
 
 ## <a name="implement-the-querymethod"></a>QueryMethod 구현
 
@@ -232,7 +222,6 @@ public override String GetType(Android.Net.Uri uri)
 }
 ```
 
-
 ## <a name="implement-the-other-overrides"></a>다른 재정의 구현
 
 간단한 예제에서는 데이터를 편집 하거나 삭제할 수 없지만 삽입, 업데이트 및 삭제 메서드를 구현 하 여 구현 없이 추가 해야 합니다.
@@ -254,11 +243,9 @@ public override int Update(Android.Net.Uri uri, ContentValues values, string sel
 
 그러면 기본 `ContentProvider` 구현이 완료 됩니다. 응용 프로그램을 설치한 후에는 응용 프로그램 내에서 제공 하는 데이터를 응용 프로그램 내에서 사용할 수 있으며이를 참조 하는 Uri를 알고 있는 다른 응용 프로그램 에서도 사용할 수 있습니다.
 
-
 ## <a name="access-the-contentprovider"></a>ContentProvider 액세스
 
 `VegetableProvider` 가 구현 된 후에는이 문서의 시작 부분에 있는 연락처 공급자와 동일한 방식으로 액세스 합니다. 지정 된 Uri를 사용 하 여 커서를 가져온 다음 어댑터를 사용 하 여 데이터에 액세스 합니다.
-
 
 ## <a name="bind-a-listview-to-a-contentprovider"></a>콘텐츠 공급자에 ListView 바인딩
 
@@ -285,8 +272,6 @@ listView.Adapter = adapter;
 결과 응용 프로그램은 다음과 같습니다.
 
 [![앱 목록 야채, 과일, 꽃 Buds, Legumes, 전구, Tubers의 스크린샷](custom-contentprovider-images/api11-contentprovider2.png)](custom-contentprovider-images/api11-contentprovider2.png#lightbox)
-
-
 
 ## <a name="retrieve-a-single-item-from-a-contentprovider"></a>ContentProvider에서 단일 항목을 검색 합니다.
 
@@ -315,7 +300,6 @@ protected void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
   vegeCursor.Close();
 }
 ```
-
 
 ## <a name="related-links"></a>관련 링크
 

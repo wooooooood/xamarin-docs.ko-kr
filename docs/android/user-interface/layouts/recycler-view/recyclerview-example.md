@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: ca80dc9a064e81d9b81b1cd53237df818d409576
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 0c6568f9283491f0e55c79c77fb8efb2ae75f33c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887538"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758614"
 ---
 # <a name="a-basic-recyclerview-example"></a>기본 RecyclerView 예제
 
@@ -21,7 +21,6 @@ ms.locfileid: "69887538"
 [![사진 표시를 위해 RecyclerView 보기를 사용 하는 두 가지 스크린샷](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **RecyclerViewer** 는 [CardView](~/android/user-interface/controls/card-view.md) 를 사용 하 여 `RecyclerView` 레이아웃에서 각 사진 항목을 구현 합니다. `RecyclerView`성능상의 장점 때문에이 샘플 앱은 크게 지연 되지 않고 많은 사진을 원활 하 게 신속 하 게 스크롤할 수 있습니다.
-
 
 ### <a name="an-example-data-source"></a>예제 데이터 원본
 
@@ -46,7 +45,6 @@ mPhotoAlbum.RandomSwap ();
 ```
 
 의 `PhotoAlbum` 구현 세부 정보는 이해 `RecyclerView` `PhotoAlbum` 와 관련이 없으므로 소스 코드는 여기에 표시 되지 않습니다. 소스 코드 `PhotoAlbum` 는 [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱의 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) 에서 사용할 수 있습니다.
-
 
 ### <a name="layout-and-initialization"></a>레이아웃 및 초기화
 
@@ -150,7 +148,6 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
 
 에 대 한 `RecyclerView.ViewHolder`자세한 내용은 [RecyclerView. ViewHolder 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html)를 참조 하세요.
 
-
 ### <a name="adapter"></a>어댑터
 
 어댑터는 특정 사진 `RecyclerView` 에 대 한 데이터가 포함 된 각 행을 로드 합니다. 예를 들어, 행 위치 *p*의 지정 된 사진에 대해 어댑터는 데이터 원본 내에서 위치 *p* 의 연결 된 데이터를 찾고이 데이터를 `RecyclerView` 컬렉션의 *p* 위치에 있는 행 항목에 복사 합니다. 어댑터는 보기 소유자를 사용 하 여 해당 `ImageView` 위치에서 및 `TextView` 에 대 한 참조를 조회 하므로 사용자가 사진 컬렉션 `FindViewById` 을 스크롤하고 뷰를 다시 사용할 때 해당 보기에 대해를 반복적으로 호출할 필요가 없습니다.
@@ -179,7 +176,6 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 - **`ItemCount`** &ndash; 데이터 소스의 항목 수를 반환 합니다.
 
 레이아웃 관리자는 내에서 항목의 `RecyclerView`위치를 지정 하는 동안 이러한 메서드를 호출 합니다. 이러한 메서드의 구현은 다음 섹션에서 검사 합니다.
-
 
 #### <a name="oncreateviewholder"></a>OnCreateViewHolder
 
@@ -243,7 +239,6 @@ public override RecyclerView.ViewHolder
 
 결과 뷰 보유자 인스턴스 `vh`는 호출자 (레이아웃 관리자)로 다시 반환 됩니다.
 
-
 #### <a name="onbindviewholder"></a>OnBindViewHolder
 
 레이아웃 관리자가 화면에 표시 되는 화면 영역에 `RecyclerView`특정 뷰를 표시할 준비가 되 면 어댑터의 `OnBindViewHolder` 메서드를 호출 하 여 지정 된 행 위치의 항목을 데이터 소스의 콘텐츠로 채웁니다. `OnBindViewHolder`지정 된 행 위치 (사진의 이미지 리소스 및 사진의 캡션에 대 한 문자열)에 대 한 사진 정보를 가져오고이 데이터를 연결 된 보기에 복사 합니다. 뷰는 `holder` 매개 변수를 통해 전달 되는 뷰 보유자 개체에 저장 된 참조를 통해 찾을 수 있습니다.
@@ -267,7 +262,6 @@ public override void
 
 `OnBindViewHolder` 는 데이터의 구조를 직접 처리 하는 코드입니다. 이 경우에서는 `OnBindViewHolder` 데이터 소스의 연결 된 데이터 항목 `RecyclerView` 에 항목 위치를 매핑하는 방법을 이해 합니다. 이 경우에는 위치를 사진 앨범에 배열 인덱스로 사용할 수 있기 때문에 매핑이 간단 합니다. 그러나 더 복잡 한 데이터 원본에는 이러한 매핑을 설정 하기 위해 추가 코드가 필요할 수 있습니다.
 
-
 #### <a name="itemcount"></a>ItemCount
 
 메서드 `ItemCount` 는 데이터 컬렉션의 항목 수를 반환 합니다. 예제 사진 뷰어 앱에서 항목 수는 사진 앨범의 사진 수입니다.
@@ -280,7 +274,6 @@ public override int ItemCount
 ```
 
 에 대 한 `RecyclerView.Adapter`자세한 내용은 [RecyclerView 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html)를 참조 하세요.
-
 
 ### <a name="putting-it-all-together"></a>모두 함께 배치
 
@@ -377,9 +370,6 @@ android:hardwareAccelerated="true"
 
 이 기본 앱은 사진 앨범의 탐색만 지원 합니다. 항목 터치 이벤트에 응답 하지 않으며 기본 데이터의 변경 내용도 처리 하지 않습니다. 이 기능은 [RecyclerView 예제 확장](~/android/user-interface/layouts/recycler-view/extending-the-example.md)에 추가 되었습니다.
 
-
-
-
 ### <a name="changing-the-layoutmanager"></a>LayoutManager 변경
 
 `RecyclerView`의 유연성으로 인해 다른 레이아웃 관리자를 사용 하도록 앱을 쉽게 수정할 수 있습니다. 다음 예제에서는 세로 선형 레이아웃이 아니라 가로로 스크롤되는 그리드 레이아웃을 사용 하 여 사진 앨범을 표시 하도록 수정 되었습니다. 이렇게 하려면 레이아웃 관리자 인스턴스화가 다음과 같이를 `GridLayoutManager` 사용 하도록 수정 됩니다.
@@ -396,8 +386,6 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 레이아웃 스타일을 변경 하기 위해 어댑터 코드와 레이아웃 XML을 수정 하지 않았습니다. 
 
 다음 항목에서 [RecyclerView 예제를 확장](~/android/user-interface/layouts/recycler-view/extending-the-example.md)하면이 기본 샘플 앱이 확장 되어 항목 클릭 이벤트를 처리 하 고 기본 데이터 `RecyclerView` 소스가 변경 될 때 업데이트 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

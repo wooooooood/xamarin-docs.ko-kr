@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/05/2017
-ms.openlocfilehash: 1bc7ba07676c66c411357b5ad043258fea611d71
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 790e32131822e83f092b352b91b4461392150657
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293120"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768054"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>설치 및 watchOS에서 Xamarin 사용
 
@@ -47,7 +47,6 @@ Watch 앱의 세 프로젝트로 구성 됩니다.
 
 다운로드 및 실행 합니다 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플으로 시작 합니다.
 샘플에서 화면에서 찾을 수 있습니다 합니다 [컨트롤](~/ios/watchos/user-interface/index.md) 페이지입니다.
-
 
 ## <a name="creating-a-new-project"></a>새 프로젝트 만들기
 
@@ -103,7 +102,6 @@ Watch 앱을 두 번 클릭 **Interface.storyboard** iOS 디자이너를 사용 
 
 만들기에서 segue **Ctrl + 드래그** 다른 인터페이스 컨트롤러에 단추, 테이블 또는 인터페이스 컨트롤러에서.
 
-
 ### <a name="using-xcode-on-the-mac"></a>Mac에서 Xcode를 사용 하 여
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
@@ -123,7 +121,6 @@ Xcode를 사용 하는 경우 보통의 경우 watch 앱에 대 한 동일한 �
 
 저장 하면 스토리 보드를 자동으로 추가 하는 Xcode Interface Builder에서 출 선 및 작업을 만들기는 C# **. designer.cs** 조사식 확장 프로젝트에서 파일.
 
-
 ### <a name="adding-additional-screens-in-xcode"></a>Xcode에서 추가 화면을 추가합니다.
 
 Xcode Interface Builder를 사용 하 여 스토리 보드를 기본적으로 서식 파일에 포함 된 항목) (이외 추가 화면을 추가 하면 **수동으로 추가 해야 합니다 C# 코드 파일** 각각의 새 인터페이스 컨트롤러에 대 한 합니다.
@@ -132,11 +129,9 @@ Xcode Interface Builder를 사용 하 여 스토리 보드를 기본적으로 �
 
 *Xamarin iOS 디자이너에서는이 자동으로, 수동 단계가 필요 하지 않습니다.*
 
-
 ## <a name="building"></a>빌드
 
 다른 iOS 프로젝트와 같은 watch 앱을 포함 하는 프로젝트를 빌드합니다. 빌드 프로세스에서 코드를 사용 하지 않는 watch 응용 프로그램 (.app)를 포함 하는 watch 확장 (.appex)를 포함 하는 iPhone 응용 프로그램 (.app) 발생 합니다.
-
 
 ## <a name="launching"></a>시작
 
@@ -167,7 +162,6 @@ error HE0020: Could not find a paired Watch device for the iOS device 'iPhone 6'
 
 가리킵니다 [Apple 포럼](https://forums.developer.apple.com/thread/7783) 기본값 작동 하지 않을 경우 시뮬레이터를 구성 하기 위한 지침은 합니다.
 
-
 <a name="xcode6" />
 
 ### <a name="xcode-6-and-watchos-1"></a>Xcode 6 및 watchOS 1
@@ -188,23 +182,15 @@ Xcode 6을 사용 하는 경우 iPhone 5, iPhone 5, 6, iPhone 및 iPhone 6 Plus�
 
 참조 된 [알림 페이지](~/ios/watchos/platform/notifications.md) 정보에 대 한 코드에서 알림을 처리 하는 방법.
 
-
 Mac 용 visual Studio 알림이 watch 앱을 시작할 수 _시작 모드_ 알림에 대 한 합니다.
-
-
 
 Watch 앱 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **사용 하 여 실행 > 사용자 지정 구성...** :
 
-
 [![](installation-images/runwith-customparams-sml.png "사용자 지정 구성을 실행합니다.")](installation-images/runwith-customparams.png#lightbox)
-
 
 열립니다는 **사용자 지정 매개 변수** 선택할 수 있는 창 **알림** (및 JSON 페이로드를 제공) 키를 누릅니다 **실행** 시뮬레이터에서 watch 앱을 시작 하려면:
 
-
 [![](installation-images/runwith-execargs-sml.png "알림 및 페이로드를 설정합니다.")](installation-images/runwith-execargs.png#lightbox)
-
-
 
 ## <a name="debugging"></a>디버깅
 
@@ -227,8 +213,6 @@ To test the functionality in your  and
 -->
 
 WatchOS 템플릿 파일 (같은 `InterfaceController`, `ExtensionDelegate`를 `NotificationController`, 및 `ComplicationController`) 이미 구현 하는 필수 수명 주기 메서드를 사용 하 여 제공 합니다. 추가 `Console.WriteLine` 호출과 읽기 합니다 **응용 프로그램 출력** 이벤트 수명 주기를 더 잘 이해 하려면.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

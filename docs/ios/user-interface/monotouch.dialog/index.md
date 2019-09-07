@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: cfa82ccec8149acfc7ddd69bff2f68e0e11894d1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cbe1b374b97f64e0c28b2f89ca9f6d510511b74d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282426"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768839"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Xamarin.ios에 대 한 Monotouch.dialog 소개
 
@@ -57,7 +57,6 @@ IOS에서 테이블을 사용 하는 경우 종종 반복적인 코드가 있습
 - **하위 수준 요소 api** – *elements api* 는 화면과 해당 구성 요소를 나타내는 요소의 계층적 트리를 만드는 방법을 기반으로 합니다. 요소 API를 사용 하면 개발자는 Ui를 만들 때 가장 유연 하 고 유연 하 게 제어할 수 있습니다. 또한 Elements API에는 JSON을 통한 선언적 정의에 대 한 고급 지원이 포함 되어 있으므로 서버에서 동적 UI를 생성 하는 것 뿐만 아니라 매우 빠른 선언을 모두 사용할 수 있습니다. 
 - **높은 수준의 리플렉션 API** – 라고도 합니다 *바인딩*  *API* , UI 힌트와 다음 산 주석이 지정 된 클래스에서 D 화면 개체를 기반으로 자동으로 만들고 간에 새로운 바인딩을 표시 (및 필요에 따라 편집) 화면에서 및 백업 원본 개체를 제공 합니다. 위의 예제에서는 리플렉션 API를 사용 하는 방법을 보여 줍니다. 이 API는 요소 API에서 수행 하는 세분화 된 제어를 제공 하지 않지만 클래스 특성을 기반으로 요소 계층 구조를 자동으로 작성 하 여 복잡성을 더욱 줄입니다. 
 
-
 휴먼. D는 화면 생성을 위해 기본 제공 되는 다양 한 UI 요소 집합을 제공 하지만 사용자 지정 된 요소 및 고급 화면 레이아웃에 대 한 필요성도 인식 합니다. 따라서 확장성은 API에 대 한 최고 수준의 주요 구운입니다. 개발자는 기존 요소를 확장 하거나 새 요소를 만든 다음 원활 하 게 통합할 수 있습니다.
 
 또한 MT. D에는 "끌어오기-새로 고침" 지원, 비동기 이미지 로드, 검색 지원 등의 다양 한 일반 iOS UX 기능이 내장 되어 있습니다.
@@ -82,7 +81,6 @@ IOS에서 테이블을 사용 하는 경우 종종 반복적인 코드가 있습
 - **RootElement**
 - **섹션**
 - **요소**
-
 
 ### <a name="dialogviewcontroller"></a>DialogViewController
 
@@ -249,7 +247,6 @@ new StringElement ("Click me", () => {
 - 자리 표시자 텍스트 (사용자에 게 힌트를 제공 하는 회색으로 표시 된 텍스트)입니다. 
 - 텍스트의 값입니다.
 
-
 자리 표시자와 값은 null 일 수 있습니다. 그러나 캡션이 필요 합니다.
 
 어떤 지점에서 든 해당 Value 속성에 액세스 하면의 `EntryElement`값을 검색할 수 있습니다.
@@ -260,7 +257,6 @@ new StringElement ("Click me", () => {
 - 전화
 - URL
 - EMail
-
 
 ### <a name="boolean-element"></a>부울 요소
 
@@ -427,7 +423,6 @@ dvc.ReloadComplete ();
 - `FinishSearch`
 - `PerformFilter`
 
-
 시스템이 확장 가능 하므로 원하는 경우이 동작을 변경할 수 있습니다.
 
 ### <a name="background-image-loading"></a>배경 이미지 로드
@@ -575,7 +570,6 @@ public override Source CreateSizingSource (bool unevenRows)
 ## <a name="summary"></a>요약
 
 이 문서에서는 Monotouch.dialog에 대 한 많은 정보를 설명 했습니다. 여기서는 MT의 기본 사항에 대해 설명 했습니다. D는 MT를 구성 하는 다양 한 구성 요소에 적용 됩니다. 2. 또한 MT에서 지 원하는 다양 한 요소 및 테이블 사용자 지정을 보여 줍니다. D. MT에 대해 설명 했습니다. D는 사용자 지정 요소로 확장할 수 있습니다. 또한 MT에서 JSON 지원에 대해 설명 했습니다. D를 사용 하 여 JSON에서 동적으로 요소를 만들 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

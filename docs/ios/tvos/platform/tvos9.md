@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 2da3e919ec792297f26670c43275bb0c54040835
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290716"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769115"
 ---
 # <a name="introduction-to-tvos-9"></a>tvOS 9 소개
 
@@ -175,11 +175,6 @@ Top 선반 이미지는 단일 정적 `.png` 또는 `.lsr` 파일로 제공 될 
 정적 최상위 선반 이미지를 표시 하는 대신 동적 행 또는 포커스를 받을 수 있는 항목 또는 동적 스크롤 배너 집합을 포함할 수 있습니다. 이러한 동적 스타일을 사용 하면 앱에서 제공 하는 콘텐츠를 강조 표시 하거나 가장 많이 사용 하는 기능으로 바로 이동할 수 있습니다.
 
 자세한 내용은 [아이콘 및 이미지 작업](~/ios/tvos/app-fundamentals/icons-images.md) 설명서 및 Apple의 [Tvservices 프레임 워크 참조](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) 를 참조 하세요. 앱에 최상위 선반 확장을 추가 하 여 동적 최고 선반 콘텐츠를 제공 하는 방법에 대 한 자세한 내용은을 참조 하세요.
-
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
-ms.openlocfilehash: ee29f54ac68f370cb9499d315116a030247f6044
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 291547f7d0fa77edf77b29762576494de0b1abb4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225721"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757808"
 ---
 # <a name="binding-an-aar"></a>.AAR 바인딩
 
 _이 연습에서는 Android에서 Xamarin.ios Java 바인딩 라이브러리를 만드는 방법에 대 한 단계별 지침을 제공 합니다. AAR 파일입니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -31,10 +30,8 @@ _이 연습에서는 Android에서 Xamarin.ios Java 바인딩 라이브러리를
 
 이 가이드에서는 단일에 대 한 바인딩 라이브러리를 만드는 기본 사항을 단계별로 설명 합니다. AAR 파일입니다. 일반적인 Java 라이브러리 바인딩에 대 한 개요는 기본 코드 예제와 함께 [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)을 참조 하세요.
 
-
 > [!IMPORTANT]
 > 바인딩 프로젝트는 하나만 포함할 수 있습니다. AAR 파일입니다. 이면이 고, 그렇지 않으면입니다. 다른에 대 한 종속성을 AAR 합니다. AAR 이러한 종속성은 자체의 바인딩 프로젝트에 포함 된 다음 참조 되어야 합니다. [버그 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573)을 참조 하세요.
-
 
 ## <a name="walkthrough"></a>연습
 
@@ -75,8 +72,6 @@ public class TextCounter
 
 이 이미지 리소스는 **textanalyzer. aar**의 **res/그릴 때/원숭이 .png** 에 있습니다.
 
-
-
 ### <a name="creating-the-bindings-library"></a>바인딩 라이브러리 만들기
 
 아래 단계를 시작 하기 전에 [aar](https://github.com/xamarin/monodroid-samples/blob/master/JavaIntegration/AarBinding/Resources/textanalyzer.aar?raw=true) Android 보관 파일 예제를 다운로드 하세요.
@@ -89,11 +84,9 @@ public class TextCounter
 
     [![기존 항목 추가](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
-
 3. 이전에 다운로드 한 **textanalyzer. aar** 파일로 이동 하 여 선택 하 고 **추가**를 클릭 합니다.
 
     [![Textanalayzer. aar를 추가 합니다.](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
-
 
 4. **Textanalyzer** 파일이 프로젝트에 성공적으로 추가 되었는지 확인 합니다.
 
@@ -110,8 +103,6 @@ public class TextCounter
     [![대상 수준을 API 23으로 설정](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
 7. 바인딩 라이브러리를 빌드합니다. 바인딩 라이브러리 프로젝트가 성공적으로 작성 되 고 출력을 생성 해야 합니다. 다음 위치의 DLL: **AarBinding/bin/Debug/AarBinding.dll**
-
-
 
 ### <a name="using-the-bindings-library"></a>바인딩 라이브러리 사용
 
@@ -133,14 +124,11 @@ public class TextCounter
 
     [![AarBinding은 참조 아래에 나열 됩니다.](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
-
 바인딩 라이브러리 프로젝트의 콘텐츠를 보려면 참조를 두 번 클릭 하 여 **개체 브라우저**에서 열 수 있습니다. `Com.Xamarin.Textcounter` 네임 스페이스의 매핑된 콘텐츠 (Java `com.xamarin.textanalyzezr` 패키지에서 매핑됨)를 확인 하 고 `TextCounter` 클래스의 멤버를 볼 수 있습니다.
 
 [![개체 브라우저 보기](binding-an-aar-images/11-object-browser-vs-sml.png)](binding-an-aar-images/11-object-browser-vs.png#lightbox)
 
 위의 스크린샷은 예제 `TextAnalyzer` 앱이 `NumConsonants` 호출 하는 두 가지 메서드 (기본 java `numConsonants` 메서드를 래핑하는) 및 `NumVowels` (기본 java `numVowels` 메서드를 래핑하는)를 강조 표시 합니다.
-
-
 
 ### <a name="accessing-aar-types"></a>하. AAR 형식
 
@@ -264,8 +252,6 @@ namespace BindingTest
 
 **개수 자음** 단추를 누르면 됩니다. 또한 텍스트 줄을 수정 하 고이 단추를 다시 탭 하 여 여러 모음 및 자음 수를 테스트할 수 있습니다.
 
-
-
 ### <a name="accessing-aar-resources"></a>하. AAR 리소스
 
 Xamarin 도구는에서 **R** 데이터를 병합 합니다. 앱의 **리소스** 클래스에 AAR. 따라서에 액세스할 수 있습니다. 프로젝트의 **리소스** 경로에 있는 리소스에 액세스 하는 것과 동일한 방식으로 레이아웃 (및 코드 숨김으로)에서 리소스를 AAR 합니다.
@@ -276,7 +262,7 @@ Xamarin 도구는에서 **R** 데이터를 병합 합니다. 앱의 **리소스*
 <ImageView android:src="@drawable/image" ... />
 ```
 
-에 있는 리소스 레이아웃에도 액세스할 수 있습니다. AAR. 이렇게 하려면 내에 패키지 된 레이아웃에 대 한 **리소스. 레이아웃** 이름을 사용 합니다. AAR. 예:
+에 있는 리소스 레이아웃에도 액세스할 수 있습니다. AAR. 이렇게 하려면 내에 패키지 된 레이아웃에 대 한 **리소스. 레이아웃** 이름을 사용 합니다. AAR. 예를 들어:
 
 ```csharp
 var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
@@ -302,16 +288,12 @@ var a = new ArrayAdapter<string>(this, Resource.Layout.row_layout, ...);
 
 [![자음 수를 표시 하는 BindingTest](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
-
 축하합니다. Java 라이브러리를 성공적으로 바인딩 했습니다. AAR!
-
-
 
 ## <a name="summary"></a>요약
 
 이 연습에서는에 대 한 바인딩 라이브러리를 만들었습니다. AAR 파일을 열고, 최소 테스트 앱에 바인딩 라이브러리를 추가 하 고, 앱을 실행 하 여 C# 코드에서에 상주 하는 Java 코드를 호출할 수 있는지 확인 합니다. AAR 파일입니다.
 또한 응용 프로그램을 확장 하 여에 있는 이미지 리소스에 액세스 하 고이를 표시 합니다. AAR 파일입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

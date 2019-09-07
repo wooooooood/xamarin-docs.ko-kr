@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 7180ccd03429e3a23633744bae35f35b4d9a6678
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 579f2afd8e52251973900f35ef91ac086adf7603
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292226"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768645"
 ---
 # <a name="apple-pay-on-watchos-in-xamarin"></a>Xamarin에서 watchOS의 Apple Pay
 
 Apple은 watchOS 3의 Apple Pay에 대 한 몇 가지 향상 된 기능을 제공 하 여 앱 내 지불액에 대 한 지원을 추가 합니다. 이를 통해 사용자는 지불 및 연락처 정보를 안전 하 게 제공 하 여 Apple Watch에서 직접 물리적 상품 및 서비스에 대 한 비용을 지불할 수 있습니다.
-
 
 ## <a name="about-apple-pay-enhancements"></a>Apple Pay 향상 정보
 

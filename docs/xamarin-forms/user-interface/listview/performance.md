@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dabbd21a2ad2ef3c77017ea92704ccdf69f7b36c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: f92a338b58dfb82ff5d442ed856e246f4a8a5a8f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228208"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761852"
 ---
 # <a name="listview-performance"></a>ListView 성능
 
@@ -181,7 +181,6 @@ public class CustomListView : ListView
 `AbsoluteLayout` 단일 측정값 호출 하지 않고 레이아웃 하는 데 있습니다. 이렇게 하면 성능에 대 한 매우 강력 합니다. 하는 경우 `AbsoluteLayout` 일 수 없습니다를 사용 하는 것이 좋습니다 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout)합니다. 사용 하는 경우 `RelativeLayout`, 식 API를 사용 하 여 보다 크게 향상 되는 제약 조건에 직접 전달 합니다. 이것은 JIT에 사용 되는 식 API 하며 iOS에서 트리를 해석할 수는 느립니다. API 식에 적합 한 페이지 레이아웃 위치만 필요할 초기 레이아웃과 회전에서 `ListView`스크롤을 하는 동안 지속적으로 실행 되는 경우, 성능 문제가 발생 합니다.
 
 빌드에 대 한 사용자 지정 렌더러를 [ `ListView` ](xref:Xamarin.Forms.ListView) 해당 셀의 스크롤 성능에 대 한 레이아웃 계산이 영향을 줄이는 한 가지 방법은 또는 합니다. 자세한 내용은 [는 ListView의 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) 하 고 [Viewcell 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

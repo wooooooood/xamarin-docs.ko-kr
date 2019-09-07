@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 94ab5ca9fa34487457b93758dfac0ab514e702c8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2091e710352b25167b740e409955787ffec99e1c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286283"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768955"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Xamarin.ios의 주석 및 오버레이
 
@@ -25,7 +25,6 @@ ms.locfileid: "70286283"
 먼저 새 **IOS 빈 프로젝트**를 만들고 관련 이름을 지정 합니다. 먼저 뷰 컨트롤러에 MapView를 표시 하는 코드를 추가 하 고 Mapview 및 사용자 지정 주석에 대 한 새 클래스를 만듭니다. 이렇게 하려면 아래 단계를 수행합니다.
 
 ## <a name="viewcontroller"></a>ViewController
-
 
 1. 에 다음 네임 스페이스를 추가 `ViewController`합니다.
 
@@ -110,9 +109,7 @@ ms.locfileid: "70286283"
 
     `Maps Walkthrough Docs Sample`.
 
-
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs – 사용자 지정 주석에 대 한 클래스입니다.
-
 
 1. 이라는 `ConferenceAnnotation`주석에 대해 사용자 지정 클래스를 사용할 예정입니다. 프로젝트에 다음 클래스를 추가 합니다.
 
@@ -180,7 +177,6 @@ ms.locfileid: "70286283"
     ```
 
 그러면의 `ViewDidLoad`코드가 완성 됩니다. 이제 `MapDelegate` 클래스를 구현 하 여 각각 주석과 오버레이 뷰를 만드는 과정을 처리 해야 합니다.
-
 
 ## <a name="mapdelegate"></a>MapDelegate
 
@@ -287,7 +283,6 @@ ms.locfileid: "70286283"
 ## <a name="summary"></a>요약
 
 이 문서에서는 지도에 주석을 추가 하는 방법 뿐만 아니라 지정 된 다각형에 대 한 오버레이를 추가 하는 방법을 살펴보았습니다. 또한 지도 위에 이미지에 애니메이션 효과를 주는 주석에 터치 지원을 추가 하는 방법도 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

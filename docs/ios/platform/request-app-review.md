@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 146dc66974f6e0c6e6a8f7bf9f46b570025eaead
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f8dc533d1428d622d9b01b8b8dd879653f78fd56
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280385"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769523"
 ---
 # <a name="request-app-review-in-xamarinios"></a>Xamarin.ios에서 앱 검토 요청
 
@@ -68,8 +68,6 @@ namespace iOSTenThree
 ## <a name="summary"></a>요약
 
 이 문서에서는 Apple에서 iOS 10에 추가 하 고 Xamarin.ios에서 구현 하는 방법에 대 한 RequestReview 방법에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

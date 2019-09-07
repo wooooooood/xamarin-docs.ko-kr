@@ -7,12 +7,12 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 0592f80b7d7352463ba22d7d371cc1b18ac3e0be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: bfc1bec06c773039529cd85aac604a9a9031cb54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655574"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70773023"
 ---
 # <a name="the-skew-transform"></a>기울이기 변환
 
@@ -249,7 +249,6 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 이제 이러한 디센더와 맨 아래에서 그림자를 확장합니다.
 
 [![](skew-images/skewshadowtext3-small.png "삼중 하강 조정 기울이기 섀도 텍스트 페이지 스크린샷")](skew-images/skewshadowtext3-large.png#lightbox "삼중 하강 조정 기울이기 섀도 텍스트 페이지 스크린샷")
-
 
 ## <a name="related-links"></a>관련 링크
 

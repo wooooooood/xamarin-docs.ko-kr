@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: 59d02db9fa2787e93ad88e4b6f37e0fef50572a5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df1177d55510571da3369d298bd05aa9bd0734a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293107"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767935"
 ---
 # <a name="introduction-to-watchos"></a>WatchOS 소개
 
@@ -102,7 +102,6 @@ Apple Watch는 다음과 같은 두 개의 글꼴 크기를 가집니다. 38mm �
 
 에 대해 자세히 알아보세요 [화면 크기를 사용 하 여 작업](~/ios/watchos/app-fundamentals/screen-sizes.md)합니다.
 
-
 ## <a name="limitations-of-watchos"></a>WatchOS의 제한 사항
 
 WatchOS watchOS 앱을 개발할 때 알아야 할 몇 가지 제한이 있습니다.
@@ -119,7 +118,6 @@ WatchOS watchOS 앱을 개발할 때 알아야 할 몇 가지 제한이 있습�
 
 - 연결 된 휴대폰에서 iTunes를 제어 하려면 시계를 허용 하는 Api는 private입니다.
 
-
 ## <a name="further-reading"></a>추가 정보
 
 Apple의 설명서를 확인해 보세요.
@@ -129,7 +127,6 @@ Apple의 설명서를 확인해 보세요.
 - [키트 프로그래밍 가이드를 시청 하세요.](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
 - [Apple Watch 휴먼 인터페이스 지침](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
-
 
 ## <a name="related-links"></a>관련 링크
 

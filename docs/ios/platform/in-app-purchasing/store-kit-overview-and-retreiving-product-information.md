@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 4a68526187271c00332548764850783531391c73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08cb1ab2c2a1e75776675ad20da9e3bdfd77be5d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752805"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Xamarin.ios에서 제품 정보를 보관 하 고 검색 합니다.
 
 앱 내 구매의 사용자 인터페이스는 아래 스크린샷에 표시 됩니다.
 트랜잭션이 발생 하기 전에 응용 프로그램은 표시를 위해 제품의 가격과 설명을 검색 해야 합니다. 그런 다음 사용자가 **구매**를 누르면 응용 프로그램은 확인 대화 상자 및 Apple ID 로그인을 관리 하는 사용자 키트에 요청을 만듭니다. 트랜잭션이 성공 했다고 가정 하면, 사용자는 트랜잭션 결과를 저장 하 고 해당 구매에 대 한 액세스 권한을 사용자에 게 제공 해야 하는 응용 프로그램 코드에 알립니다.   
 
-   
  [![](store-kit-overview-and-retreiving-product-information-images/image14.png "저장소 키트는 응용 프로그램 코드에 알립니다 .이 코드는 트랜잭션 결과를 저장 하 고 사용자에 게 해당 구매에 대 한 액세스를 제공 해야 합니다.")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## <a name="classes"></a>클래스
@@ -37,39 +36,27 @@ ms.locfileid: "70292184"
 - **SKPaymentTransactionObserver** – 사용자 키트 지불 큐에 의해 생성 된 이벤트에 응답 하는 사용자 지정 하위 클래스입니다. 
 - 사용자 **키트 작업은 비동기적** 으로 수행 됩니다.-가 나 제품 요청이 시작 되거나 큐에 대기 중인 지불이 추가 된 후에는 컨트롤이 코드로 반환 됩니다. 데이터 파일 키트는 Apple 서버에서 데이터를 받을 때 SKProductsRequestDelegate 또는 SKPaymentTransactionObserver 하위 클래스에서 메서드를 호출 합니다. 
 
-
 다음 다이어그램에서는 다양 한 사용자 키트 클래스 간의 관계를 보여 줍니다 (추상 클래스는 응용 프로그램에서 구현 해야 함).   
-   
-   
-   
+
  [![](store-kit-overview-and-retreiving-product-information-images/image15.png "다양 한 클래스 키트 클래스 간 관계 추상 클래스는 앱에서 구현 해야 합니다.")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
-   
-   
-   
- 이러한 클래스는이 문서의 뒷부분에서 자세히 설명 합니다.
+
+이러한 클래스는이 문서의 뒷부분에서 자세히 설명 합니다.
 
 ## <a name="testing"></a>테스트
 
 대부분의 기능 키트 작업에는 테스트용 실제 장치가 필요 합니다. 제품 정보 검색 (ie. 가격 &amp; 설명)은 시뮬레이터에서 작동 하지만 구매 및 복원 작업은 오류를 반환 합니다 (예: failedtransaction Code = 5002 unknown 오류가 발생 함).
 
 참고: 지 수 키트는 iOS 시뮬레이터에서 작동 하지 않습니다. IOS 시뮬레이터에서 응용 프로그램을 실행 하는 경우 응용 프로그램에서 지불 큐를 검색 하려고 하면이 사용자 키트는 경고를 기록 합니다. 저장소 테스트는 실제 장치에서 수행 해야 합니다.   
-   
-   
-   
- 중요: 설정 응용 프로그램에서 테스트 계정으로 로그인 하지 마십시오. 설정 응용 프로그램을 사용 하 여 기존 Apple ID 계정에서 로그 아웃할 수 있습니다. *앱 내 구매 시퀀스 내* 에서 테스트 Apple id를 사용 하 여 로그인 하 라는 메시지가 표시 될 때까지 기다려야 합니다.   
-   
-   
-   
+
+중요: 설정 응용 프로그램에서 테스트 계정으로 로그인 하지 마십시오. 설정 응용 프로그램을 사용 하 여 기존 Apple ID 계정에서 로그 아웃할 수 있습니다. *앱 내 구매 시퀀스 내* 에서 테스트 Apple id를 사용 하 여 로그인 하 라는 메시지가 표시 될 때까지 기다려야 합니다.   
 
 테스트 계정을 사용 하 여 실제 저장소에 로그인 하려고 하면 자동으로 실제 Apple ID로 변환 됩니다. 이 계정은 더 이상 테스트에 사용할 수 없습니다.
 
 저장소 키트 코드를 테스트 하려면 일반 iTunes 테스트 계정에서 로그 아웃 하 고 테스트 저장소에 연결 된 특수 테스트 계정 (iTunes Connect에서 만들어짐)을 사용 하 여 로그인 해야 합니다. 현재 계정에서 로그 아웃 하려면 다음에 표시 된 것 처럼 **iTunes 및 App Store > 설정** 을 방문 하세요.
 
  [![](store-kit-overview-and-retreiving-product-information-images/image16.png "현재 계정에서 로그 아웃 하려면 설정 iTunes 및 App Store를 방문 하세요.")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
- 
+
 그런 다음 *앱 내의 사용자 키트 키트에서 요청*하는 경우 테스트 계정으로 로그인 합니다.
-
-
 
 ITunes Connect에서 테스트 사용자를 만들려면 기본 페이지에서 **사용자 및 역할** 을 클릭 합니다.
 
@@ -90,10 +77,8 @@ ITunes Connect에서 테스트 사용자를 만들려면 기본 페이지에서 
 ## <a name="retrieving-product-information"></a>제품 정보 검색
 
 앱에서 구매한 제품을 판매 하는 첫 번째 단계는 표시 하기 위해 앱 스토어에서 현재 가격 및 설명 검색을 표시 하는 것입니다.   
-   
-   
-   
- 앱에서 판매 하는 제품 유형 (사용할 수 있는 제품 또는 구독 유형)에 관계 없이 표시를 위한 제품 정보를 검색 하는 프로세스는 동일 합니다. 이 문서와 함께 제공 되는 InAppPurchaseSample 코드에는 표시를 위해 프로덕션 정보를 검색 하는 방법을 보여 주는 *소모품* 이라는 프로젝트가 포함 되어 있습니다. 다음 작업을 수행 하는 방법을 보여 줍니다.
+
+앱에서 판매 하는 제품 유형 (사용할 수 있는 제품 또는 구독 유형)에 관계 없이 표시를 위한 제품 정보를 검색 하는 프로세스는 동일 합니다. 이 문서와 함께 제공 되는 InAppPurchaseSample 코드에는 표시를 위해 프로덕션 정보를 검색 하는 방법을 보여 주는 *소모품* 이라는 프로젝트가 포함 되어 있습니다. 다음 작업을 수행 하는 방법을 보여 줍니다.
 
 - 의 `SKProductsRequestDelegate` 구현을 만들고 추상 메서드를 `ReceivedResponse` 구현 합니다. 예제 코드는이 클래스를 `InAppPurchaseManager` 호출 합니다. 
 - 을 사용 하 여 지불이 허용 되는지 (사용 `SKPaymentQueue.CanMakePayments` ) 확인 합니다. 
@@ -108,15 +93,10 @@ ITunes Connect에서 테스트 사용자를 만들려면 기본 페이지에서 
 ### <a name="displaying-product-information-example"></a>제품 정보 표시 예
 
 [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) *소모품* 샘플 코드는 제품 정보를 검색 하는 방법을 보여 줍니다. 샘플의 주 화면은 앱 스토어에서 검색 된 두 제품에 대 한 정보를 표시 합니다.   
-   
-   
-   
- [![](store-kit-overview-and-retreiving-product-information-images/image23.png "주 화면은 앱 스토어에서 검색 된 정보 제품을 표시 합니다.")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
-   
-   
-   
- 제품 정보를 검색 하 고 표시 하는 샘플 코드에 대해서는 아래에서 자세히 설명 합니다.
 
+ [![](store-kit-overview-and-retreiving-product-information-images/image23.png "주 화면은 앱 스토어에서 검색 된 정보 제품을 표시 합니다.")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
+
+제품 정보를 검색 하 고 표시 하는 샘플 코드에 대해서는 아래에서 자세히 설명 합니다.
 
 #### <a name="viewcontroller-methods"></a>ViewController 메서드
 
@@ -151,9 +131,7 @@ priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (
 }
 ```
 
-   
-   
- `ViewWillAppear` 메서드 끝에서 `RequestProductData` 메서드를 호출 하 여 복사본 키트 요청을 시작 합니다. 이 요청을 만든 후에는 사용자가 Apple의 서버에 비동기적으로 연결 하 여 정보를 가져오고 앱에 다시 피드 합니다. 이는 다음 섹션에서 `SKProductsRequestDelegate` 설명 하 `InAppPurchaseManager`는 하위 클래스 ()에 의해 수행 됩니다.
+`ViewWillAppear` 메서드 끝에서 `RequestProductData` 메서드를 호출 하 여 복사본 키트 요청을 시작 합니다. 이 요청을 만든 후에는 사용자가 Apple의 서버에 비동기적으로 연결 하 여 정보를 가져오고 앱에 다시 피드 합니다. 이는 다음 섹션에서 `SKProductsRequestDelegate` 설명 하 `InAppPurchaseManager`는 하위 클래스 ()에 의해 수행 됩니다.
 
 ```csharp
 iap.RequestProductData(products);
@@ -202,10 +180,8 @@ public void RequestProductData (List<string> productIds)
 ```
 
 iOS는 응용 프로그램이 실행 되는 프로 비전 프로필에 따라 앱 스토어의 ' sandbox ' 또는 ' 프로덕션 ' 버전으로 요청을 자동으로 라우팅합니다. 따라서 앱을 개발 하거나 테스트 하는 경우 요청에 모든 제품에 대 한 액세스 권한이 포함 됩니다. iTunes Connect에서 구성 됩니다 (Apple에서 아직 제출 하거나 승인 하지 않은 경우에도). 응용 프로그램이 프로덕션 환경에 있는 경우 사용자 키트 요청은 **승인** 된 제품에 대 한 정보만 반환 합니다.   
-   
-   
-   
- 재정의 `ReceivedResponse` 된 메서드는 Apple의 서버에서 데이터에 응답 한 후에 호출 됩니다. 이는 백그라운드에서 호출 되기 때문에 코드는 유효한 데이터를 구문 분석 하 고 알림을 사용 하 여 해당 알림에 대 한 ' 수신 ' 인 모든 ViewControllers로 제품 정보를 전송 해야 합니다. 유효한 제품 정보를 수집 하 고 알림을 보내는 코드는 다음과 같습니다.
+
+재정의 `ReceivedResponse` 된 메서드는 Apple의 서버에서 데이터에 응답 한 후에 호출 됩니다. 이는 백그라운드에서 호출 되기 때문에 코드는 유효한 데이터를 구문 분석 하 고 알림을 사용 하 여 해당 알림에 대 한 ' 수신 ' 인 모든 ViewControllers로 제품 정보를 전송 해야 합니다. 유효한 제품 정보를 수집 하 고 알림을 보내는 코드는 다음과 같습니다.
 
 ```csharp
 public override void ReceivedResponse (SKProductsRequest request, SKProductsResponse response)
@@ -241,10 +217,8 @@ public override void RequestFailed (SKRequest request, NSError error)
 ## <a name="invalid-products"></a>잘못 된 제품
 
 는 `SKProductsRequest` 잘못 된 제품 id의 목록을 반환할 수도 있습니다. 잘못 된 제품은 일반적으로 다음 중 하나로 인해 반환 됩니다.   
-   
-   
-   
- **제품 id의 철자가** 잘못 되었습니다. 유효한 제품 id만 허용 됩니다.   
+
+**제품 id의 철자가** 잘못 되었습니다. 유효한 제품 id만 허용 됩니다.   
    
  **제품이 승인 되지** 않았습니다 `SKProductsRequest`. 테스트 하는 동안에서 판매를 지우는 모든 제품은에서 반환 되어야 하지만 프로덕션 환경에서는 승인 된 제품만 반환 됩니다.   
    
@@ -294,16 +268,9 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
 ```
 
 서로 다른 두 iTunes 테스트 계정 (아메리카 스토어 및 일본어 스토어 용 하나)을 사용 하면 다음과 같은 스크린샷을 생성 합니다.   
-   
-   
-   
- [![](store-kit-overview-and-retreiving-product-information-images/image25.png "언어별 결과를 표시 하는 두 가지 iTunes 테스트 계정")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
-   
-   
-   
- 저장소는 제품 정보 및 가격 통화에 사용 되는 언어에 영향을 주지만 장치의 언어 설정은 레이블 및 기타 지역화 된 콘텐츠에 영향을 줍니다.   
-   
-   
-   
- 다른 저장소 테스트 계정을 사용 하려면 **iTunes 및 App store > 설정** 에서 **로그 아웃** 하 고 다른 계정으로 로그인 하도록 응용 프로그램을 다시 시작 해야 합니다. 장치의 언어를 변경 하려면 **설정 > 일반 > 국가별 > 언어**로 이동 합니다.
 
+ [![](store-kit-overview-and-retreiving-product-information-images/image25.png "언어별 결과를 표시 하는 두 가지 iTunes 테스트 계정")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
+
+저장소는 제품 정보 및 가격 통화에 사용 되는 언어에 영향을 주지만 장치의 언어 설정은 레이블 및 기타 지역화 된 콘텐츠에 영향을 줍니다.   
+
+다른 저장소 테스트 계정을 사용 하려면 **iTunes 및 App store > 설정** 에서 **로그 아웃** 하 고 다른 계정으로 로그인 하도록 응용 프로그램을 다시 시작 해야 합니다. 장치의 언어를 변경 하려면 **설정 > 일반 > 국가별 > 언어**로 이동 합니다.

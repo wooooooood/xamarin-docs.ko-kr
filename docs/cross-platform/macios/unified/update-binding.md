@@ -6,12 +6,12 @@ ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: dcee5c6d5324be11f424739a20ba673817553e36
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: da877cc10829c4067596263b2a3676413103282d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287375"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765421"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>바인딩을 Unified API로 마이그레이션
 
@@ -134,7 +134,6 @@ IntPtr Constructor (CGRect frame);
 
 통합 api를 사용 하도록 바인딩 프로젝트를 업데이트 하는 마지막 단계로, 프로젝트를 빌드하는 데 사용 하 `MakeFile` 는, 또는 Xamarin 프로젝트 형식 (Mac용 Visual Studio 내에서 바인딩하는 경우)을 수정 하 고, _btouch_ 에 연결 하도록 지시 해야 합니다. 기본 Api 대신 통합 Api에 대 한 것입니다.
 
-
 ### <a name="updating-a-makefile"></a>메이크파일 업데이트
 
 메이크파일을 사용 하 여 Xamarin에 바인딩 프로젝트를 빌드하는 경우 DLL의 `--new-style` `btouch-native` 경우명령줄옵션을포함하고대신를`btouch`호출 해야 합니다.
@@ -149,7 +148,6 @@ PROJECT_ROOT=XMBindingLibrarySample
 PROJECT=$(PROJECT_ROOT)/XMBindingLibrarySample.xcodeproj
 TARGET=XMBindingLibrarySample
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
 
 all: XMBindingLibrary.dll
 
@@ -214,8 +212,6 @@ Mac용 Visual Studio 바인딩 프로젝트 템플릿을 사용 하 여 API를 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 새로운 통합 Api 및 64 비트 장치를 지원 하기 위해 기존 Xamarin 바인딩 프로젝트에 적용 해야 하는 변경 내용과 새 64 비트 호환 버전의 API를 빌드하는 데 필요한 단계를 보여 줍니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

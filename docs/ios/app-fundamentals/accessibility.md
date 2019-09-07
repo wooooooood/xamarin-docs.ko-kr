@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/18/2016
-ms.openlocfilehash: 4a04f0ed4cbb336e331528c3d8265efb31388328
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766744"
 ---
 # <a name="accessibility-on-ios"></a>IOS의 내게 필요한 옵션
 
@@ -74,7 +74,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## <a name="accessibility-and-localization"></a>접근성 및 지역화
 
 레이블 및 힌트와 같은 내게 필요한 옵션 속성은 사용자 인터페이스의 다른 텍스트와 마찬가지로 지역화할 수 있습니다.
@@ -122,7 +121,6 @@ VoiceOver은 **일반 > 내게 필요한 옵션 > voiceover**으로 이동 하 �
 
 다음 [VoiceOver 지침](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) 에 따라 iOS 장치에서 액세스 가능성을 테스트 합니다.
 
-
 ## <a name="simulator-testing"></a>시뮬레이터 테스트
 
 시뮬레이터에서 테스트할 때 접근성 **검사기** 를 사용 하 여 내게 필요한 옵션 속성 및 이벤트가 올바르게 구성 되었는지 확인 하는 데 도움이 됩니다. **일반 > 내게 필요한 옵션 > 접근성 검사기**로 이동 하 여 **설정** 앱에서 검사기를 설정 합니다.
@@ -135,8 +133,6 @@ VoiceOver은 **일반 > 내게 필요한 옵션 > voiceover**으로 이동 하 �
 ![](accessibility-images/tableview-a11y-sml.png "접근성 검사자 사용")
 
 검사기가 표시 되는 동안 왼쪽 위에 있는 "X" 아이콘을 사용 하 여 오버레이를 임시로 표시 하 고 숨기고 접근성 설정을 사용/사용 하지 않도록 설정 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

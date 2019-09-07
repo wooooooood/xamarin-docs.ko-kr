@@ -7,12 +7,12 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: b4fae33f7de8c6022b2298c462ea510ec8ed623f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 6e108852b2978903fb74686ad60cf419bbe4e3c0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657202"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772959"
 ---
 # <a name="the-translate-transform"></a>좌표 이동 변환
 
@@ -302,7 +302,6 @@ public class HendecagramAnimationPage : ContentPage
 [![](translate-images/hendecagramanimation-small.png "삼중 Hendecagram 애니메이션 페이지 스크린샷")](translate-images/hendecagramanimation-large.png#lightbox "삼중 Hendecagram 애니메이션 페이지 스크린샷")
 
 이 페이지의 가운데를 중심으로 하는 대로 별 동일한 방향을 유지 함을 알 수 있습니다. 이 작업은 전혀 회전 하지 않습니다. 회전 변환에 대 한 작업입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

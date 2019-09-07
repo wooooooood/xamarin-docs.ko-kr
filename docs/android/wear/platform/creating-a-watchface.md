@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: a3b38a77f045c17b66c65a14eda32f5a7fcd5fc5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a6dfab949eb19708f69d838a7c792f2e7bbd76b3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522243"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758512"
 ---
 # <a name="creating-a-watch-face"></a>시계 모드 만들기
 
@@ -41,7 +41,6 @@ Watch face 서비스를 구현 하려면 다음이 필요 합니다.
 
 Android 5.0는 시청 얼굴 서비스를 구현 하는 데 필요한 최소 API 수준이 긴 하지만 Android 5.1 이상이 권장 됩니다. Android 5.1 (API 22) 이상을 실행 하는 android 장치는 장치를 저전력 *주변* 모드에 있는 동안 앱에서 화면에 표시 되는 내용을 제어할 수 있습니다. 장치가 저전력 *주변* 모드에서 벗어나면 *대화형* 모드입니다. 이러한 모드에 대 한 자세한 내용은 [앱 표시 유지](https://developer.android.com/training/wearables/apps/always-on.html)를 참조 하세요.
 
-
 ## <a name="start-an-app-project"></a>앱 프로젝트 시작
 
 **WatchFace** 라는 새 Android 마모 1.0 프로젝트를 만듭니다. 새 xamarin.ios 프로젝트를 만드는 방법에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md)를 참조 하세요.
@@ -55,7 +54,6 @@ Android 5.0는 시청 얼굴 서비스를 구현 하는 데 필요한 최소 API
 [![새 프로젝트 대화 상자](creating-a-watchface-images/03-wear-project-xs-sml.png "새 프로젝트 대화 상자에서 마모 된 앱 선택")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
-
 
 패키지 이름을 `com.xamarin.watchface`다음과 같이 설정 합니다.
 
@@ -84,8 +82,7 @@ Android **5.1 (API 수준 22)** 의 최소 android 버전을 설정 합니다.
 
 -----
 
-다음으로, [preview .png](creating-a-watchface-images/preview.png) &ndash; 를 다운로드 합니다 .이 연습의 뒷부분 에 나오는 drawables 폴더에 추가 됩니다.
-
+다음으로, [preview .png](creating-a-watchface-images/preview.png) &ndash; 를 다운로드 합니다 .이 연습의 뒷부분에 나오는 **drawables** 폴더에 추가 됩니다.
 
 ## <a name="add-the-xamarinandroid-wear-package"></a>Xamarin Android 패키지 추가
 
@@ -107,13 +104,11 @@ NuGet 패키지 관리자를 시작 합니다. Mac용 Visual Studio의 **솔루�
 
 -----
 
-
 마모 된 장치 또는 에뮬레이터에서 앱을 빌드하고 실행 합니다 .이 작업을 수행 하는 방법에 대 한 자세한 내용은 [시작](~/android/wear/get-started/index.md) 가이드를 참조 하세요. 다음 앱 화면이 마모 장치에 표시 됩니다.
 
 [![앱 스크린샷](creating-a-watchface-images/08-app-screen.png "장치 마모의 앱 화면")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 이 시점에서 기본 마모 된 앱은 아직 watch 얼굴 서비스 구현을 제공 하지 않기 때문에 조사식 얼굴 기능을 제공 하지 않습니다. 이 서비스는 다음에 추가 될 예정입니다.
-
 
 ## <a name="canvaswatchfaceservice"></a>CanvasWatchFaceService
 
@@ -142,7 +137,6 @@ Android 마모는 클래스를 통해 조사식 `CanvasWatchFaceService` 얼굴�
 
 에 대 한 `CanvasWatchFaceService`자세한 내용은 Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) API 설명서를 참조 하세요.
 마찬가지로 [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) 는 시계 모양의 실제 구현을 설명 합니다.
-
 
 ### <a name="add-the-canvaswatchfaceservice"></a>CanvasWatchFaceService 추가
 
@@ -190,7 +184,6 @@ namespace WatchFace
 
 `MyWatchFaceEngine`실제 조사식 얼굴 구현 &ndash; 에는 조사식 얼굴을 그리는 코드가 포함 됩니다. 또한 화면 변경 (주변/대화형 모드, 화면 끄기 등) 등의 시스템 이벤트도 처리 합니다.
 
-
 ### <a name="implement-the-engine-oncreate-method"></a>엔진 OnCreate 메서드 구현
 
 메서드 `OnCreate` 는 조사식 표면을 초기화 합니다. 다음 필드를에 `MyWatchFaceEngine`추가 합니다.
@@ -232,7 +225,6 @@ public override void OnCreate(ISurfaceHolder holder)
 
 이 `SetWatchFaceStyle` 완료 되 `OnCreate` 면는 `Paint` 개체 (`hoursPaint`)를 인스턴스화하고 해당 색을 흰색으로, 텍스트 크기를 48 픽셀 ([TextSize](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) 로 지정 해야 함)로 설정 합니다.
 
-
 ### <a name="implement-the-engine-ondraw-method"></a>엔진 OnDraw 메서드 구현
 
 메서드 `OnDraw` 는 숫자 및 시계 표면 바늘 `CanvasWatchFaceService.Engine` 과 &ndash; 같은 실제로 조사식 얼굴 요소를 그리는 메서드인 경우에 가장 중요 한 메서드입니다.
@@ -253,7 +245,6 @@ Android는를 `OnDraw`호출할 때 `Canvas` 인스턴스 및 얼굴을 그릴 �
 
 `OnDraw` 메서드에 대 한 자세한 내용은 Android [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) API 설명서를 참조 하세요.
 
-
 ### <a name="implement-the-engine-ontimetick-method"></a>엔진 OnTimeTick 메서드 구현
 
 Android는 주기적으로 `OnTimeTick` 메서드를 호출 하 여 시계 면에서 표시 되는 시간을 업데이트 합니다. 1 분에 한 번 이상 (주변 모드와 대화형 모드에서) 또는 날짜/시간 또는 표준 시간대가 변경 된 경우에 호출 됩니다. `MyWatchFaceEngine`에 다음 메서드를 추가합니다.
@@ -268,7 +259,6 @@ public override void OnTimeTick()
 의 `OnTimeTick` 이 구현은를 단순히 `Invalidate`호출 합니다. 메서드 `Invalidate` 는 조사식 `OnDraw` 얼굴을 다시 그리도록 예약 합니다.
 
 `OnTimeTick` 메서드에 대 한 자세한 내용은 Android [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) API 설명서를 참조 하세요.
-
 
 ## <a name="register-the-canvaswatchfaceservice"></a>CanvasWatchFaceService 등록
 
@@ -306,7 +296,6 @@ public override void OnTimeTick()
 
 기본 `WatchFace` 예제에 대 한 코드를 완료 합니다. 다음 단계는 필요한 리소스를 추가 하는 것입니다.
 
-
 ## <a name="add-resource-files"></a>리소스 파일 추가
 
 Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 보기 이미지를 추가 해야 합니다. 먼저 **Resources/XML/watch_face** 에서 새 xml 파일을 만들고 해당 내용을 다음 xml로 바꿉니다.
@@ -333,7 +322,6 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 아직 수행 하지 않은 경우 [preview .png](creating-a-watchface-images/preview.png)를 다운로드 합니다.
 **Resources/그릴 수 있는/preview .png**에 설치 합니다. 이 파일을 `WatchFace` 프로젝트에 추가 해야 합니다. 이 미리 보기 이미지는 사용자에 게 마모 된 장치에 대 한 조사식 얼굴 선택기에 표시 됩니다. 사용자 고유의 watch에 대 한 미리 보기 이미지를 만들기 위해 실행 되는 동안에는 시계 모양의 스크린 샷을 사용할 수 있습니다. (착용 장치에서 스크린샷 받는 방법에 대 한 자세한 내용은 [스크린샷 수행](~/android/wear/deploy-test/debug-on-device.md#screenshots)을 참조 하세요.)
 
-
 ## <a name="try-it"></a>사용해 보세요!
 
 앱을 빌드하여 마모 된 장치에 배포 합니다. 마모 된 앱 화면이 이전과 같이 표시 되어야 합니다. 새 조사식 얼굴을 사용 하도록 설정 하려면 다음을 수행 합니다.
@@ -359,7 +347,6 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 다음 섹션에서이 조사식 얼굴은 보다 정교한 구현으로 업그레이드 됩니다.
 
-
 ## <a name="upgrading-the-watch-face"></a>Watch 얼굴 업그레이드
 
 이 연습의 `MyWatchFaceService` 나머지 부분에서는 아날로그 스타일의 조사식을 표시 하도록 업그레이드 되 고 더 많은 기능을 지원 하도록 확장 됩니다. 업그레이드 된 watch 얼굴을 만들기 위해 다음과 같은 기능이 추가 됩니다.
@@ -375,7 +362,6 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 5. 표준 시간대 변경이 발생 하는 시간을 자동으로 업데이트 합니다.
 
 아래 코드 변경을 구현 하기 전에, 그릴 수 있는 [.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true)파일을 다운로드 하 고 압축을 풀고 압축을 푼 .png 파일을 **리소스/그릴** 수 있는 .png로 이동 합니다 (이전 **preview .png**덮어쓰기). 새 .png 파일을 `WatchFace` 프로젝트에 추가 합니다.
-
 
 ### <a name="update-engine-features"></a>업데이트 엔진 기능
 
@@ -413,13 +399,11 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 6. 각 손을 조사식 화면에 그립니다. 조사식이 앰비언트 모드인 경우 두 번째 손은 그려지지 않습니다.
 
-
 #### <a name="onpropertieschanged"></a>OnPropertiesChanged
 
 이 메서드는 마모 된 장치의 `MyWatchFaceEngine` 속성 (예: 낮은 비트 앰비언트 모드 및 굽기 방지)에 대해 알리기 위해 호출 됩니다. 에서 `MyWatchFaceEngine`이 메서드는 낮은 비트 앰비언트 모드 (하위 비트 앰비언트 모드에서는 각 색에 대해 적은 비트를 지원함)만 확인 합니다.
 
 이 메서드에 대 한 자세한 내용은 Android [On등록 변경](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29) API 설명서를 참조 하세요.
-
 
 #### <a name="onambientmodechanged"></a>OnAmbientModeChanged
 
@@ -427,13 +411,11 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 이 메서드에 대 한 자세한 내용은 Android [onAmbientModeChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) API 설명서를 참조 하세요.
 
-
 #### <a name="onvisibilitychanged"></a>OnVisibilityChanged
 
 이 메서드는 조사식이 표시 되거나 숨겨질 때마다 호출 됩니다. 에서 `MyWatchFaceEngine`이 메서드는 표시 상태에 따라 표준 시간대 수신기 (아래 설명)를 등록/등록 취소 합니다.
 
 이 메서드에 대 한 자세한 내용은 Android [onVisibilityChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29) API 설명서를 참조 하세요.
-
 
 ### <a name="time-zone-feature"></a>표준 시간대 기능
 
@@ -485,11 +467,9 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 이 스크린샷에서 두 번째 손은 초당 한 번 이동 합니다. 마모 된 장치에서이 코드를 실행 하면 조사식이 앰비언트 모드로 전환 될 때 두 번째 손가 사라집니다.
 
-
 ## <a name="summary"></a>요약
 
 이 연습에서는 사용자 지정 Android 마모 1.0 watchface이 구현 되 고 테스트 되었습니다. `CanvasWatchFaceService` 및`CanvasWatchFaceService.Engine` 클래스가 도입 되었으며 엔진 클래스의 필수 메서드는 간단한 디지털 조사식을 만들기 위해 구현 되었습니다. 이 구현은 아날로그 시청 얼굴을 만들기 위한 더 많은 기능으로 업데이트 되었으며 표시 유형, 앰비언트 모드 및 장치 속성의 차이점을 처리 하기 위해 추가 메서드가 구현 되었습니다. 마지막으로 표준 시간대 브로드캐스트 수신기가 구현 되어 표준 시간대를 초과 하는 시간이 자동으로 업데이트 됩니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

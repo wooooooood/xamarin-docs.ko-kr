@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c631ca73d69ea630592920a32804512f89d5baaf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0fb63c650e73bce5a08b204f942f0c19583e4899
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529077"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770680"
 ---
 # <a name="unit-testing-enterprise-apps"></a>엔터프라이즈 앱 유닛 테스트
 
@@ -225,7 +225,6 @@ public void CheckValidationFailsWhenOnlyForenameHasDataTest()
 종속 개체를 종속 개체의 동작을 시뮬레이트하는 모의 개체로 바꿔서 테스트 중인 개체의 동작을 격리할 수 있습니다. 이렇게 하면 웹 서비스, 데이터베이스 등의 리소스를 사용 하지 않고도 단위 테스트를 실행할 수 있습니다.
 
 MVVM 응용 프로그램에서 모델을 테스트 하 고 모델을 확인 하는 것은 다른 클래스를 테스트 하는 것과 동일 하며, 동일한 도구와 기법을 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

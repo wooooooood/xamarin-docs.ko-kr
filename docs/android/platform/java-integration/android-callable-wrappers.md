@@ -6,22 +6,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: a8bd3f11698260b944bd29fcd9551825cb76e506
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: b55cffc19eec5ae95a0a0aba8053bdaaa49e7747
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761473"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Xamarin android 용 android 호출 가능 래퍼
 
 Android 런타임에서 관리 코드를 호출할 때마다 ACWs (android 호출 가능 래퍼)가 필요 합니다. 이러한 래퍼는 런타임에 클래스 (Android 런타임)를 사용 하 여 클래스를 등록할 방법이 없기 때문에 필요 합니다. 특히 [JNI 정의 eclass () 함수](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) 는 Android 런타임에서 지원 되지 않습니다.} Android 호출 가능 래퍼를 통해 런타임 형식 등록을 지원 하지 않습니다. 
 
-매번 Android 코드는 관리 코드에서 `virtual` 구현 `overridden` 되거나 구현 된 또는 인터페이스 메서드를 실행 해야 합니다. Xamarin. android는이 메서드가 적절 한 관리 되는 형식으로 디스패치되는 Java 프록시를 제공 해야 합니다. 이러한 Java 프록시 형식은 동일한 생성자를 구현 하 고 재정의 된 기본 클래스 및 인터페이스 메서드를 선언 하는 "동일한" 기본 클래스 및 Java 인터페이스 목록을 관리 되는 형식으로 포함 하는 Java 코드입니다. 
+*매번* Android 코드는 관리 코드에서 `virtual` 구현 `overridden` 되거나 구현 된 또는 인터페이스 메서드를 실행 해야 합니다. Xamarin. android는이 메서드가 적절 한 관리 되는 형식으로 디스패치되는 Java 프록시를 제공 해야 합니다. 이러한 Java 프록시 형식은 동일한 생성자를 구현 하 고 재정의 된 기본 클래스 및 인터페이스 메서드를 선언 하는 "동일한" 기본 클래스 및 Java 인터페이스 목록을 관리 되는 형식으로 포함 하는 Java 코드입니다. 
 
 Android 호출 가능 래퍼는 [빌드 프로세스](~/android/deploy-test/building-apps/build-process.md)중에 **monodroid** 프로그램에 의해 생성 됩니다. (직접 또는 간접적으로)이 [를 상속 하](xref:Java.Lang.Object)는 모든 형식에 대해 생성 됩니다. 
-
-
 
 ## <a name="android-callable-wrapper-naming"></a>Android 호출 가능 래퍼 이름 지정
 
@@ -40,7 +38,7 @@ java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivit
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-이름으로 형식에 *액세스 해야 하* 는 경우 특성 선언에서 해당 형식의 이름을 선언할 수 있습니다. 예를 들어 다음은 정규화 된 이름을 `My.ActivityType`사용 하 여 활동을 선언 하는 코드입니다.
+이름으로 형식에 액세스 해야 하는 경우 특성 선언에서 해당 형식의 이름을 선언할 *수 있습니다.* 예를 들어 다음은 정규화 된 이름을 `My.ActivityType`사용 하 여 활동을 선언 하는 코드입니다.
 
 ```csharp
 namespace My {
@@ -64,15 +62,13 @@ namespace My {
 
 이 속성 설정이 추가 `my.ActivityType` 된 후는 외부 코드 `adb` 및 스크립트에서 이름으로 액세스할 수 있습니다. 특성 `Name` 은,,, 및 `Activity` `Application` `Service` 를비롯`BroadcastReceiver`한 다양 한 형식에 대해 설정할 수 있습니다. `ContentProvider` 
 
--   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
--   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
--   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
--   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
--   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
+- [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+- [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+- [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+- [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+- [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
 MD5SUM 기반 ACW 이름은 Xamarin. Android 5.0에서 도입 되었습니다. 특성 명명에 대 한 자세한 내용은 [Registerattribute](xref:Android.Runtime.RegisterAttribute)를 참조 하십시오. 
-
-
 
 ## <a name="implementing-interfaces"></a>인터페이스 구현
 
@@ -94,7 +90,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
     }
 }
 ```
-
 
 ## <a name="implementation-details"></a>구현 세부 정보
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: 191d037d12d27e2c6ab475467853023f440c71d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 255f308078c892605b9ce20b17fd737c5582eaed
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291373"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768986"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Xamarin.ios를 사용 하 여 이미지 표시
 
@@ -50,7 +50,6 @@ Mac용 Visual Studio은 일반적으로 올바른 **빌드 작업** 을 자동�
 
 - 기본 시작 이미지 및 응용 프로그램 아이콘과 같이 응용 프로그램의 속성에 구성 된 이미지를 저장 합니다.
 - 다른 이미지 및 파일을 코드와 별도로 저장 하므로 관리 하기가 더 쉽습니다. 하위 디렉터리는 리소스 디렉터리 콘텐츠가 복사 될 때 유지 됩니다.
-
 
 **리소스** 디렉터리는 라이브러리 프로젝트에서 특히 유용 합니다. 코드는 해당 이미지가 소비 응용 프로그램의 루트에 복사 되는 것으로 가정할 수 있으므로 이미지, 사운드, 비디오, XML 또는를 필요로 하는 공유 코드 라이브러리를 더 쉽게 작성할 수 있기 때문입니다. 기타 파일.
 

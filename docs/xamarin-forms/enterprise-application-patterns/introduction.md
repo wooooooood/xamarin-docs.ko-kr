@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bf50bdee9243141d1f266a88f82770d9503969
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529105"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760230"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
 
@@ -163,7 +163,6 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 Xamarin의 플랫폼 간 모바일 앱 개발 도구 및 플랫폼은 모든 대상 플랫폼 (iOS, Android 및 Windows)에서 코드를 공유 하는 기능을 제공 하 고 B2E, B2B 및 B2C 모바일 클라이언트 앱을 위한 종합적인 솔루션을 제공 하 고 총 소유 비용입니다. 앱은 네이티브 플랫폼 모양과 느낌을 유지 하면서 사용자 인터페이스와 앱 논리 코드를 공유할 수 있습니다.
 
 엔터프라이즈 앱 개발자는 개발 중에 앱의 아키텍처를 변경할 수 있는 몇 가지 문제를 직면 하 고 있습니다. 따라서 시간이 지남에 따라 앱을 수정 하거나 확장할 수 있도록 앱을 빌드하는 것이 중요 합니다. 이러한 적응성 설계는 어려울 수 있지만 일반적으로 앱에 쉽게 통합 될 수 있는 느슨하게 결합 된 개별 구성 요소로 앱을 분할 해야 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

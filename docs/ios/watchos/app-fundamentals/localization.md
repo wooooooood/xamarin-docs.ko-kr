@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 10f240a8e245f24d4b8f646eb972cbe21d28b75c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 008858f987a5a3f83b518b98a0647ac5a68b0672
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289932"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768735"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Watchos에서 Xamarin 지역화 작업
 
@@ -200,8 +200,6 @@ Translator 번역 될 내용을 알 수 있도록 파일에는 원본 텍스트�
 조사식을 사용 하 여 테스트할 때에서 시계의 언어를 변경 합니다 **Apple Watch** 쌍을 이루는 iPhone 앱.
 
   ![](localization-images/phone-settings-sml.png "쌍을 이루는 iPhone의 Apple Watch 앱에서 시계의 언어 변경")
-
-
 
 ## <a name="related-links"></a>관련 링크
 

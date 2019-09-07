@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: conceptdev
 ms.author: crdun
 ms.date: 10/09/2017
-ms.openlocfilehash: 0979a0b65cc3d5b4944dadaf67aaa14cf1b3cf73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287596"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766097"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure 및 Xamarin
 
@@ -40,7 +40,6 @@ Azure [모바일 클라이언트](https://www.nuget.org/packages/Microsoft.Azure
 Microsoft Web API는 Xamarin 응용 프로그램에서 쉽게 사용할 수 있는 REST와 유사한 인터페이스를 제공 합니다.
 [Azure 웹 사이트](https://trywebsites.azurewebsites.net/) 를 쉽게 스핀 하 고 WebAPI 기반 앱을 빌드하여 Xamarin 앱에 연결할 수 있습니다.
 
-
 ### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[웹 서비스 소개](~/cross-platform/data-cloud/web-services/index.md)
 
 이 자습서에서는 REST, WCF 및 SOAP 웹 서비스 기술을 Xamarin mobile 응용 프로그램과 통합 하는 방법을 소개 합니다. 다양 한 서비스 구현을 검사 하 고, 사용 가능한 도구 및 라이브러리를 평가 하 여 통합 하 고, 서비스 데이터를 사용 하기 위한 샘플 패턴을 제공 합니다. 마지막으로, Xamarin 모바일 응용 프로그램을 사용 하기 위해 RESTful 웹 서비스를 만드는 기본적인 개요를 제공 합니다.
@@ -56,7 +55,6 @@ Microsoft Web API는 Xamarin 응용 프로그램에서 쉽게 사용할 수 있�
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) – Ebooks의 [아키텍처 시리즈](https://www.microsoft.com/net/learn/architecture) 에 대 한 샘플입니다.
 - [Mydriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT 샘플 (2016 빌드)
-
 
 ## <a name="related-links"></a>관련 링크
 

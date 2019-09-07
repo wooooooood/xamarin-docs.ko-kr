@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d23b29b7e49c210dc44163e41735fa96b55d12f2
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526322"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755011"
 ---
 # <a name="android-resources"></a>Android 리소스
 
 _이 문서에서는 Xamarin.ios의 Android 리소스에 대 한 개념을 소개 하 고이를 사용 하는 방법을 설명 합니다. Android 응용 프로그램에서 리소스를 사용 하 여 응용 프로그램 지역화를 지 원하는 방법 및 다양 한 화면 크기와 밀도를 비롯 한 여러 장치를 사용 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -40,13 +39,13 @@ Android 응용 프로그램은 거의 소스 코드 일 뿐입니다. 응용 프
 ![리소스 폴더 및 내용](images/resources-folder-vs.png)
 
 위의 이미지에서 응용 프로그램 리소스는 해당 형식에 따라 이러한 하위 디렉터리에 구성 됩니다. 이미지가 **그릴** 수 있는 디렉터리로 이동 합니다. 뷰는 **레이아웃** 하위 디렉터리 등으로 이동 합니다.
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![리소스 폴더 및 내용](images/resources-folder-xs.png)
 
 위의 이미지에서 응용 프로그램 리소스는 해당 형식에 따라 이러한 하위 디렉터리에 구성 됩니다. 이미지는 **밉 맵** 디렉터리로 이동 합니다. 뷰는 **레이아웃** 하위 디렉터리 등으로 이동 합니다.
- 
+
 -----
 
 Xamarin Android 응용 프로그램에서 이러한 리소스에 액세스 하는 방법에는 코드에서 *프로그래밍 방식* 으로 액세스 하 고 특수 xml 구문을 사용 하 여 xml에서 *선언적* 으로 액세스할 수 있습니다.
@@ -66,7 +65,6 @@ Xamarin Android 응용 프로그램에서 이러한 리소스에 액세스 하�
 - **장치별 구성** &ndash; 응용 프로그램의 다양 한 화면 해상도 및 밀도 지원.
 
 - **지역화** &ndash; 리소스를 사용 하 여 여러 지역을 지 원하는 경우 응용 프로그램을 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

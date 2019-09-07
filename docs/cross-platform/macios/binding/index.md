@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: conceptdev
 ms.author: crdun
 ms.date: 01/25/2016
-ms.openlocfilehash: 8975bb899127d0761359bec695cd084f89c12972
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290566"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765763"
 ---
 # <a name="binding-objective-c"></a>Objective-C 바인딩
 
@@ -29,7 +29,6 @@ C Api만 바인딩하는 경우에는 P/Invoke 프레임 워크로 표준 .NET �
 ## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[바인딩 정의 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
 
 바인딩 생성 프로세스를 구동 하기 위해 바인딩 작성자가 사용할 수 있는 모든 특성을 설명 하는 참조 가이드입니다.
-
 
 ## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 

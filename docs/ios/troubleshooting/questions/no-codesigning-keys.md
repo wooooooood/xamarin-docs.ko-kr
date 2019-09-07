@@ -7,28 +7,25 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 9d589af6249063add3dc9b085463fde9edd8e449
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: aa2f52be4e485fb55a949a0327161bd1c301334c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278430"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769711"
 ---
 # <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>키 집합에 유효한 iPhone 코드 서명 키가 없다는 오류와 함께 iOS 빌드에 실패하는 이유는 무엇인가요?
 
 ## <a name="cause-of-the-error"></a>오류의 원인
 이 오류 메시지는 해당 프로젝트가 유효한 코드 서명 자격 증명을 찾고 있지만 찾을 수 없는 경우에 발생 합니다. 물리적 iOS 장치에서 테스트 및 배포에는 코드 서명이 필요 합니다. 임시 & App store 빌드도 있습니다. 
 
-
 ### <a name="provisioning-devices"></a>프로 비전 장치
 이전에 iOS 장치를 프로 비전 하지 않은 경우 다음 가이드에서 전체 단계별 프로세스를 수행 합니다. [장치 프로 비전 가이드](~/ios/get-started/installation/device-provisioning/index.md)
-
 
 ## <a name="bug-when-using-ios-simulator"></a>IOS 시뮬레이터를 사용 하는 경우 버그
 
 > [!NOTE]
 > 이 문제는 최신 버전의 Visual Studio 용 Xamarin에서 해결 되었습니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
-
 
 Xamarin. Visual Studio 3.11에 버그가 있습니다 .이로 인해 Xamarin.ios 템플릿에서 iOS 프로젝트를 info.plist 하 여 시뮬레이터 빌드에 추가 했습니다. 시뮬레이터를 사용 하 여 테스트를 효과적으로 차단 합니다.
 

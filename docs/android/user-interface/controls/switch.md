@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: 7fe4ffc733a71ed0f372da8288c7f1b63a961442
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 82271711864363bbaf593e8c44e31632048399dc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642573"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764873"
 ---
 # <a name="xamarinandroid-switch"></a>Xamarin Android 스위치
 
@@ -45,8 +45,6 @@ ms.locfileid: "68642573"
         android:textOff="NO" />
 ```
 
-
-
 ## <a name="providing-a-title"></a>제목 제공
 
 또한 위젯은 다음과 같이 특성을 `text` 설정 하 여 텍스트 레이블 포함을 지원 합니다. `Switch`
@@ -76,7 +74,6 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
     toast.Show ();
 };
 ```
-
 
 ## <a name="related-links"></a>관련 링크
 

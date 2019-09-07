@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ecb745f2f50b5aa0e22e331a4def0be9d8f86aa5
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 4504045eb1692d95ee1e981bbec3da3a45699db3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510393"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758922"
 ---
 # <a name="custom-button"></a>사용자 지정 단추
 
@@ -35,7 +35,6 @@ ms.locfileid: "68510393"
 ```
 
 이는 단추의 현재 상태에 따라 해당 이미지를 변경 하는 그릴 수 있는 단일 리소스를 정의 합니다. 첫 `<item>` 번째는 단추를 누를 때 (활성화 된) **android_pressed** 를 이미지로 정의 하 고, 두 번째 `<item>` 는 단추가 포커스를 가질 때 **android_focused** 를 이미지로 정의 합니다. 트랙볼 또는 방향 패드를 사용 하 여 강조 표시 됨). 그리고 세 번째 `<item>` 는 **android_normal** 를 표준 상태에 대 한 이미지로 정의 합니다 (누르거나 포커스가 지정 되지 않은 경우). 이 XML 파일은 이제 그릴 수 있는 단일 리소스를 나타내며, 해당 [`Button`](xref:Android.Widget.Button) 배경에 대해에서 참조 될 때 표시 되는 이미지는 이러한 세 가지 상태에 따라 변경 됩니다.
-
 
 > [!NOTE]
 > `<item>` 요소의 순서는 중요 합니다. 이 그릴 수 있는이를 참조 `<item>`하는 경우 현재 단추 상태에 적합 한 항목을 확인 하기 위해가 차례로 트래버스 됩니다.
@@ -68,7 +67,6 @@ button.Click += (o, e) => {
 그러면 레이아웃 [`Button`](xref:Android.Widget.Button) 에서가 캡처되고 [`Button`](xref:Android.Widget.Button) 가 클릭 될 때 표시 [`Toast`](xref:Android.Widget.Toast) 될 메시지를 추가 합니다.
 
 이제 응용 프로그램을 실행 합니다.
-
 
 *이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고*
 [*Creative Commons 2.5 특성 라이선스*](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다.

@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 71784e18b9becf9851ad9ed9d4730a82d0ff94f7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523655"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761447"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Xamarin. Android Designer 사용
 
 _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라우저 앱에 대 한 사용자 인터페이스를 만드는 방법을 보여 줍니다. 이 사용자 인터페이스는 전적으로 디자이너에 생성 됩니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -33,7 +32,6 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 
 이 연습의 목적은 Android Designer를 사용 하 여 예제 색 브라우저 앱에 대 한 사용자 인터페이스를 만드는 것입니다. 색 브라우저 앱은 색, 이름 및 RGB 값의 목록을 제공 합니다. 이러한 위젯을 시각적으로 레이아웃 하는 방법 뿐만 아니라 **Design Surface** 에 위젯을 추가 하는 방법을 알아봅니다. 그런 다음 **Design Surface** 에서 또는 디자이너의 **속성** 창을 사용 하 여 대화형으로 위젯을 수정 하는 방법에 대해 알아봅니다. 마지막으로 장치 또는 에뮬레이터에서 앱을 실행할 때 디자인의 모양을 확인할 수 있습니다.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ### <a name="creating-a-new-project"></a>새 프로젝트 만들기
@@ -46,7 +44,6 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 **새 Android 앱** 대화 상자에서 비어 있는 **앱** 을 선택 하 고 **확인**을 클릭 합니다.
 
 [![Android 빈 앱 템플릿 선택](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
-
 
 ### <a name="adding-a-layout"></a>레이아웃 추가
 
@@ -99,7 +96,6 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 [![디자이너 레이아웃](designer-walkthrough-images/vs/14-raw-layout-w158-sml.png)](designer-walkthrough-images/vs/14-raw-layout-w158.png#lightbox)
 
 두 `textView` 위젯이 내부가 `linearLayout1`아니면 **문서 개요** 에서로 `linearLayout1` `linearLayout1` 끌어 오고 앞의 스크린샷에 표시 된 것 처럼 나타나도록 할 수 있습니다 (아래 들여쓰기).
-
 
 ### <a name="arranging-the-user-interface"></a>사용자 인터페이스 정렬
 
@@ -283,8 +279,6 @@ namespace DesignerWalkthrough
 
 [![최종 스크린샷](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ### <a name="creating-a-new-project"></a>새 프로젝트 만들기
@@ -352,7 +346,6 @@ Mac용 Visual Studio에서 **Solution** Pad의 **리소스/레이아웃** 을 �
 
 두 `textView` 위젯이 내부가 `linearLayout1`아니면 **문서 개요** 에서로 `linearLayout1` `linearLayout1` 끌어 오고 앞의 스크린샷에 표시 된 대로 나타나도록 지정할 수 있습니다 (아래 들여쓰기).
 
-
 ### <a name="arranging-the-user-interface"></a>사용자 인터페이스 정렬
 
 다음 단계는 왼쪽 `ImageView` 에를 표시 하도록 UI를 수정 하 고 오른쪽 `ImageView`에 두 개의 `TextView` 위젯을 누적 하는 것입니다.
@@ -376,7 +369,6 @@ Mac용 Visual Studio에서 **Solution** Pad의 **리소스/레이아웃** 을 �
 루트 `LinearLayout` 를 선택한 상태에서 **속성** 탭으로 돌아가서 **위젯을**클릭 합니다. 아래와 같이 `horizontal`설정을로 변경 합니다. `Orientation` 이 시점에서 **Design Surface** 는 다음 스크린샷에서와 비슷해야 합니다. `TextView` 위젯은 의오른쪽으로이동된것을`ImageView`볼 수 있습니다.
 
 [![가로 방향 선택](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
-
 
 ### <a name="modifying-the-spacing"></a>간격 수정
 
@@ -528,7 +520,6 @@ namespace DesignerWalkthrough
 [![최종 스크린샷](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 -----
-
 
 ## <a name="summary"></a>요약
 

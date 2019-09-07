@@ -7,18 +7,17 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 0049d69caabce545b2813dbd2b3905fe96f28fed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0f3e56ab90d5205318539994bae7f4db153bb163
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292735"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768083"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>WatchOS에서 Xamarin 부모 응용 프로그램 사용
 
 > [!IMPORTANT]
 > WatchOS 1 watch 앱에서 작동만 아래 예제를 사용 하 여 부모 응용 프로그램에 액세스 합니다.
-
 
 Watch 앱 및 번들로 제공 되는 iOS 앱 간에 통신 하는 방법은 여러 가지:
 
@@ -30,7 +29,6 @@ Watch 앱 및 번들로 제공 되는 iOS 앱 간에 통신 하는 방법은 여
 
 부모 앱 되기도 컨테이너 앱 이라고 합니다.
 
-
 <a name="code" />
 
 ## <a name="run-code"></a>코드를 실행 합니다.
@@ -39,8 +37,6 @@ Watch 앱 및 번들로 제공 되는 iOS 앱 간에 통신 하는 방법은 여
 조사식 확장 상위 iOS 앱을 사용 하 여 해당 대신 일부 처리를 요청할 수는 `OpenParentApplication` 메서드.
 
 IOS 앱 작업 (포함 하 여 네트워크 요청)-부모만을 장기 실행 활용할 수 있습니다 이러한 작업을 완료 하 고 조사식 확장에 액세스할 수 있는 위치에서 검색된 된 데이터를 저장 하기 위해 백그라운드 처리에 대 한 특히 유용 합니다.
-
-
 
 ### <a name="watch-kit-app-extension"></a>조사식 키트 앱 확장
 
@@ -57,12 +53,10 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 });
 ```
 
-
 ### <a name="ios-app"></a>iOS 앱
 
 Watch 앱 확장의 모든 호출은 iPhone 앱을 통해 라우팅됩니다 `HandleWatchKitExtensionRequest` 메서드.
 Watch 앱에서 다른 요청을 변경 하는 경우이 메서드를 쿼리할 필요는 `userInfo` 사전 요청을 처리 하는 방법을 결정 합니다.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -81,7 +75,6 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 }
 ```
-
 
 <a name="storage" />
 
@@ -142,8 +135,6 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
 다운로드는 C# 버전 [WormHoleSharp](https://github.com/Clancey/WormHoleSharp)합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

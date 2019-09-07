@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 722e09cc292bad682a49ee0cba4ff0ca0f39a844
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ff29ac58db618d4a644bbaa5a95ac8624726827f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291638"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770057"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -111,7 +111,6 @@ SourceWriter 코드는 완벽하게 주석 처리되어 있으며, 가능한 경
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 앱에서 Storyboard를 사용 하는 방법을 간략히 살펴보겠습니다. 스토리 보드를 사용 하 여 새 앱을 만드는 방법 및 사용자 인터페이스를 정의 하는 방법을 살펴보았습니다. 또한 segue를 사용 하 여 서로 다른 창 및 뷰 상태 사이를 탐색 하는 방법도 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

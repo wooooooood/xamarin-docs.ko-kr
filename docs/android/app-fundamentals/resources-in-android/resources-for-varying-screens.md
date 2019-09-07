@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 49e0de909e2255d850211e51596efdaa43f293ae
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509364"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755051"
 ---
 # <a name="creating-resources-for-varying-screens"></a>다양 한 화면에 대 한 리소스 만들기
 
 Android 자체는 각각 다양 한 해상도, 화면 크기 및 화면 밀도를 포함 하는 다양 한 장치에서 실행 됩니다. Android는 이러한 장치에서 응용 프로그램이 작동 하도록 크기 조정 및 크기 조정을 수행 하지만이로 인해 사용자 환경이 매우 최적이 될 수 있습니다. 예를 들어 이미지가 흐리게 표시 되거나 뷰에서 예상 대로 배치 될 수 있습니다.
-
 
 ## <a name="concepts"></a>개념
 
@@ -38,7 +37,6 @@ Android 자체는 각각 다양 한 해상도, 화면 크기 및 화면 밀도�
 
 이러한 복잡성을 해결 하기 위해 Android framework는 화면 레이아웃에 대 한 *dp (밀도 독립적 픽셀)* 를 사용 하는 것이 선호 됩니다. 밀도 독립 픽셀을 사용 하면 UI 요소가 사용자에 게 표시 되어 다른 밀도를 사용 하는 화면에서 동일한 실제 크기를 갖게 됩니다.
 
-
 ## <a name="supporting-various-screen-sizes-and-densities"></a>다양 한 화면 크기 및 밀도 지원
 
 Android는 각 화면 구성에 맞게 레이아웃을 올바르게 렌더링 하는 작업의 대부분을 처리 합니다. 그러나 시스템을 확장 하는 데 사용할 수 있는 몇 가지 작업이 있습니다.
@@ -46,7 +44,6 @@ Android는 각 화면 구성에 맞게 레이아웃을 올바르게 렌더링 �
 대부분의 경우 밀도 독립성을 보장 하기 위해 레이아웃에 실제 픽셀 대신 밀도 독립적 픽셀을 사용 하는 것도 충분 합니다.
 Android는 런타임에 적합 한 크기로 확장 가능 합니다.
 그러나 크기를 조정 하면 비트맵이 흐리게 표시 될 수 있습니다. 이 문제를 해결 하려면 다양 한 밀도에 대 한 대체 리소스를 제공 합니다. 여러 해상도 및 화면 밀도를 위해 장치를 설계할 때 더 높은 해상도 또는 밀도 이미지를 사용 하 여 시작 하 고 축소 하는 것이 더 쉽습니다.
-
 
 ### <a name="declare-the-supported-screen-size"></a>지원 되는 화면 크기 선언
 
@@ -87,7 +84,6 @@ Android는 런타임에 적합 한 크기로 확장 가능 합니다.
 
 ### <a name="provide-alternate-layouts-for-different-screen-sizes"></a>여러 화면 크기에 대 한 대체 레이아웃 제공
 
-
 대체 레이아웃을 사용 하면 구성 요소 UI 요소의 위치 또는 크기를 변경 하 여 특정 된 화면 크기에 대 한 뷰를 사용자 지정할 수 있습니다.
 
 API 수준 13 (Android 3.2) 부터는 sw*N*dp 한정자를 사용 하기 위해 화면 크기가 더 이상 사용 되지 않습니다. 이 새 한정자는 지정 된 레이아웃에 필요한 공간의 크기를 선언 합니다. Android 3.2 이상에서 실행 되는 응용 프로그램은 이러한 최신 한정자를 사용 하는 것이 좋습니다.
@@ -104,7 +100,6 @@ API 수준 13 (Android 3.2) 부터는 sw*N*dp 한정자를 사용 하기 위해 
 
 -----
 
-
 다음은 다양 한 장치에 대 한 몇 가지 지침입니다.
 
 - **일반 전화** &ndash; 320 dp: 일반 전화
@@ -115,7 +110,7 @@ API 수준 13 (Android 3.2) 부터는 sw*N*dp 한정자를 사용 하기 위해 
 
 - **10 "태블릿** &ndash; 720 dp: Motorola xoom 등
 
-최대 12 개 (Android 3.1)의 API 수준을 대상으로 하는 응용 프로그램의 경우 레이아웃은 /// 대부분의 장치에서 사용할 수 있는 다양 한 화면 크기. 예를 들어 아래 이미지에는 4 개의 다른 화면 크기에 대 한 대체 리소스가 있습니다.
+최대 12 개 (Android 3.1)의 API 수준을**대상으로 하** 는 응용 프로그램의 경우 레이아웃은/// 대부분의 장치에서 사용할 수 있는 다양 한 화면 크기. 예를 들어 아래 이미지에는 4 개의 다른 화면 크기에 대 한 대체 리소스가 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -150,8 +145,6 @@ API 수준 13 이상에서 최신 화면 크기 한정자는 API 수준 12 이�
 
 -----
 
-
-
 ### <a name="provide-different-bitmaps-for-different-screen-densities"></a>화면 밀도 마다 다른 비트맵 제공
 
 Android는 장치에 필요한 대로 비트맵 크기를 조정 하지만, 비트맵 자체의 크기를 조정 하거나 원활 하지 않을 수 있습니다 .이는 유사 하거나 흐린 것일 수 있습니다. 화면 밀도에 적절 한 비트맵을 제공 하면이 문제를 완화할 수 있습니다.
@@ -164,7 +157,6 @@ Android는 장치에 필요한 대로 비트맵 크기를 조정 하지만, 비�
 
 ![밀도 관련 리소스가 있는 스크린샷](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-
 ### <a name="create-varying-density-resources-with-android-asset-studio"></a>Android Asset Studio를 사용 하 여 다양 한 밀도 리소스 만들기
 
 다양 한 밀도의 이러한 비트맵을 만드는 것이 다소 지루한 일 수 있습니다. 따라서 Google은 [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/)라는 이러한 비트맵 만들기와 관련 된 일부 번거로움을를 줄일 수 있는 온라인 유틸리티를 만들었습니다.
@@ -172,7 +164,6 @@ Android는 장치에 필요한 대로 비트맵 크기를 조정 하지만, 비�
 [![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 이 웹 사이트는 하나의 이미지를 제공 하 여 네 가지 일반적인 화면 밀도를 대상으로 하는 비트맵을 만드는 데 도움이 됩니다. 그러면 Android Asset Studio에서 일부 사용자 지정 항목을 사용 하 여 비트맵을 만든 다음 zip 파일로 다운로드할 수 있습니다.
-
 
 ## <a name="tips-for-multiple-screens"></a>여러 화면에 대 한 팁
 
@@ -182,13 +173,12 @@ Android는 놀랄만한 수의 장치에서 실행 되며 화면 크기와 화�
 
 - **픽셀 대신 DPs를 사용** 하면 화면 밀도가 변경 될 때 문제가 됩니다. 픽셀 값을 하드 코딩 하지 마십시오. Dp (밀도 독립적 픽셀)를 사용 하 여 픽셀을 방지 합니다.
 
-- **방지** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) 가능 하면 API 수준 3 (Android 1.5)에서 더 이상 사용 되지 않으며 레이아웃이 불안정 됩니다.  
+- **방지** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) 가능 하면 API 수준 3 (Android 1.5)에서 더 이상 사용 되지 않으며 레이아웃이 불안정 됩니다. 
    &ndash; 사용 하면 안 됩니다. 대신 [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)또는 새 [**GridLayout**](xref:Android.Widget.GridLayout)와 같은 더 유연한 레이아웃 위젯을 사용 합니다.
 
-- **기본 레이아웃 방향 선택**    예를 들어 대체 리소스를 제공 하는 대신, 레이아웃 및 레이아웃-포트를 제공 하는 대신 레이아웃에 가로 및 세로의 리소스를 레이아웃-포트에 배치 합니다. &ndash;
+- **기본 레이아웃 방향 선택**예를 들어 대체 리소스를 제공 하는 대신, 레이아웃 및 레이아웃-포트를 제공 하는 대신 레이아웃에 가로 및 세로의 리소스를 레이아웃-포트에 배치 합니다. &ndash;
 
 - **Height 및 Width에 대해 LayoutParams 사용** -XML 레이아웃 파일에서 UI 요소를 정의 하는 경우 **wrap_content** 및 **fill_parent** 값을 사용 하는 Android 응용 프로그램은 더 많은 성공을 보장 합니다. 픽셀 또는 밀도 독립적 단위 사용. 이러한 차원 값으로 인해 Android에서 비트맵 리소스를 적절 하 게 확장할 수 있습니다. 이와 같은 이유로, 밀도 독립적 단위는 UI 요소의 여백 및 안쪽 여백을 지정 하는 경우에 적합 합니다.
-
 
 ## <a name="testing-multiple-screens"></a>여러 화면 테스트
 

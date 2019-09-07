@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2794a1d23cd7c1eab9cf4e94eaa805ad2b8bca61
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 5429f260399602b7ef15e8263bc74cb8ae940f4f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119127"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754880"
 ---
 # <a name="running-android-services-in-remote-processes"></a>원격 프로세스에서 Android 서비스 실행
 
@@ -83,7 +83,7 @@ _일반적으로 Android 응용 프로그램의 모든 구성 요소는 동일�
 
 서비스가 실행 되는 프로세스의 종류는 `Process` 속성의 값에 따라 달라 집니다. Android는 다음과 같은 세 가지 유형의 프로세스를 식별 합니다.
 
-- **개인 프로세스** &ndash; 개인 프로세스는 해당 프로세스를 시작한 응용 프로그램에만 사용할 수 있는 프로세스입니다. 프로세스를 개인으로 식별 하려면 해당 이름이 (세미콜론)로 시작 해야 합니다. 이전 코드 조각과 스크린샷에 표시 된 서비스는 개인 프로세스입니다. 다음 코드 조각은의 `ServiceAttribute`예제입니다.
+- **개인 프로세스** &ndash; 개인 프로세스는 해당 프로세스를 시작한 응용 프로그램에만 사용할 수 있는 프로세스입니다. 프로세스를 개인으로 식별 하려면 해당 **이름이 (세미콜론** )로 시작 해야 합니다. 이전 코드 조각과 스크린샷에 표시 된 서비스는 개인 프로세스입니다. 다음 코드 조각은의 `ServiceAttribute`예제입니다.
 
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
@@ -312,7 +312,6 @@ msg.Data = serviceParameters;
 messenger.Send(msg);
 ```
 
-
 > [!NOTE]
 > 일반적으로에는 `Message` 1mb 보다 큰 페이로드가 없어야 합니다. 크기 제한은 Android 버전에 따라 다르며, 공급 업체에서 장치와 함께 제공 되는 AOSP (Android 오픈 소스 프로젝트)의 구현에 대해 수행할 수 있는 모든 소유 변경 내용에 따라 달라질 수 있습니다.
 
@@ -475,7 +474,6 @@ Android 권한으로 서비스를 보호 하는 일반적인 방법에는 다음
 ## <a name="summary"></a>요약
 
 이 가이드는 원격 프로세스에서 Android 서비스를 실행 하는 방법에 대 한 고급 설명입니다. 로컬 서비스와 원격 서비스 간의 차이점은 원격 서비스가 Android 앱의 안정성과 성능에 도움이 될 수 있는 몇 가지 이유를 설명 했습니다. 원격 서비스를 구현 하는 방법 및 클라이언트가 서비스와 통신 하는 방법에 대해 설명 하 고 나면 인증 된 클라이언트만 서비스에 대 한 액세스를 제한 하는 한 가지 방법을 제공 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

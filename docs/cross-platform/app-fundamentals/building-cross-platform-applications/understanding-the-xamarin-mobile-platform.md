@@ -6,12 +6,12 @@ ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 5398d99a64e7f6b75c8b9e418da252852aff1322
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: af2b8cd39d5fb1b0ce6c12f7d6ad87e245b9a594
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288673"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761965"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>1 부-Xamarin Mobile Platform 이해
 
@@ -36,7 +36,6 @@ Xamarin을 사용 하 여에서 C#앱을 작성 하 고 동일한 코드를 여�
 - **Android** – C# IL로 컴파일되고 MonoVM + JIT'ing로 패키지 됩니다. 프레임 워크에서 사용 되지 않는 클래스는 연결 중에 제거 됩니다. 응용 프로그램은 Java/ART (Android 런타임)와 나란히 실행 되며 JNI를 통해 네이티브 형식과 상호 작용 합니다 ( [Xamarin.ios 제한](~/android/internals/limitations.md) 참조).
 - **Windows** – C# IL로 컴파일되고 기본 제공 런타임에 의해 실행 되며 Xamarin 도구가 필요 하지 않습니다. Xamarin의 지침에 따라 Windows 응용 프로그램을 디자인 하면 iOS 및 Android에서 코드를 보다 간단 하 게 다시 사용할 수 있습니다.
   또한 유니버설 Windows 플랫폼에는 Xamarin.ios ' AOT 컴파일과 유사 하 게 작동 하는 **.NET 네이티브** 옵션이 있습니다.
-
 
 [Xamarin.ios](~/ios/deploy-test/linker.md) 및 [xamarin.ios](~/android/deploy-test/linker.md) 에 대 한 링커 설명서는 컴파일 프로세스의이 부분에 대 한 자세한 정보를 제공 합니다.
 

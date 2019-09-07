@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: f8a542b58fa891b63f43d1c87dea911b83e01949
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: e3b7ccf74773e5a391b8f133ccc241ca0e18bfcb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509316"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755151"
 ---
 # <a name="using-android-assets"></a>Android 자산 사용
 
@@ -19,7 +19,6 @@ _자산은_ 텍스트, xml, 글꼴, 음악, 비디오 등의 임의의 파일을
 
 프로젝트에 추가 된 자산은 [Assetmanager](xref:Android.Content.Res.AssetManager)를 사용 하 여 응용 프로그램에서 읽을 수 있는 파일 시스템과 똑같이 표시 됩니다.
 이 간단한 데모에서는 텍스트 파일 자산을 프로젝트에 추가 하 고,을 사용 하 여 `AssetManager`읽고,이를 TextView에 표시 하겠습니다.
-
 
 ## <a name="add-asset-to-project"></a>프로젝트에 자산 추가
 
@@ -40,7 +39,6 @@ Visual Studio에서이 파일에 대 한 **빌드 작업** 을 **Androidasset**�
 -----
 
 올바른 **빌드** 를 선택 하면 컴파일 타임에 파일이 apk로 패키지 됩니다.
-
 
 ## <a name="reading-assets"></a>자산 읽기
 
@@ -69,13 +67,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-
-## <a name="running-the-application"></a>애플리케이션 실행
+## <a name="running-the-application"></a>응용 프로그램 실행
 
 응용 프로그램을 실행 하면 다음이 표시 됩니다.
 
 ![예제 스크린 샷](android-assets-images/screenshot.png)
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: e9c27233e0905435e14505195b7b0e4d3283790b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b50ba09488f1f052f3e41302a42c691089727ff
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283821"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769646"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Xamarin에서 리소스 및 데이터 저장소 tvOS
 
@@ -36,9 +36,6 @@ IOS 장치와 달리 새로운 Apple TV는 tvOS apps 또는 데이터에 대해 
 
 > [!IMPORTANT]
 > 필요에 따라 다른 자산 및 리소스를 다운로드 하는 기능을 사용 하는 경우 Apple은 예기치 않은 결과를 일으킬 수 있으므로 앱 캐시의 모든 공간을 사용 하지 않도록 경고 합니다.
-
-
-
 
 <a name="Managing-Resources" />
 
@@ -75,16 +72,11 @@ Xcode를 사용 하 여 리소스 태그 부여와 관련 된 관련 콘텐츠 (
 > [!IMPORTANT]
 > 앱이 요청 시 리소스를 다운로드 해야 하는 횟수와 개별 다운로드의 크기 간에 적절 한 균형을 맞추도록 주의 해야 합니다. 게임 플레이를 지속적으로 중단 하 여 새 콘텐츠를 다운로드 하거나 단일 다운로드에 너무 많은 시간이 소요 되는 경우 사용자가 앱을 사용 하지 못할 수 있습니다.
 
-
-
-
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 시스템에 의해 tvOS 앱에 배치 된 크기, 리소스 및 데이터 저장소 제한 사항에 대해 설명 했습니다. 이러한 제한 사항 및 제안 사항을 해결 하는 옵션을 제공 하 여 앱에 대 한 뛰어난 사용자 환경을 만들 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

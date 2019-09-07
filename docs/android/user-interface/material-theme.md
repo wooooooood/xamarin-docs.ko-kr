@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: fca8ee02fc48979db1d29716374ba300a0e8bbbf
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: aa84c13c51e459f93ee9e122a410cb957c390261
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522369"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758378"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -36,7 +36,6 @@ Android는 다음과 같은 세 가지 재질 테마를 제공 합니다.
 
 재질 테마는 Android 5.0 이상 에서만 지원 되므로이 테마를 사용 하 여 이전 버전의 Android에서 실행할 수 있도록 앱에 테마를 적용할 수 없습니다. 그러나 Android 5.0 장치에서 재질 테마를 사용 하도록 앱을 구성 하 고 이전 버전의 Android에서 실행 하는 경우 이전 테마를 정상적으로 대체할 수 있습니다. 자세한 내용은이 문서의 [호환성](#compatibility) 섹션을 참조 하세요.
 
-
 ## <a name="requirements"></a>요구 사항
 
 Xamarin 기반 앱에서 새로운 Android 5.0 재질 테마 기능을 사용 하려면 다음이 필요 합니다.
@@ -49,11 +48,9 @@ Xamarin 기반 앱에서 새로운 Android 5.0 재질 테마 기능을 사용 �
 
 Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android 5.0 프로젝트 설정](~/android/platform/lollipop.md)을 참조 하세요.
 
-
 ## <a name="using-the-built-in-themes"></a>기본 제공 테마 사용
 
 재질 테마를 사용 하는 가장 쉬운 방법은 사용자 지정 없이 기본 제공 테마를 사용 하도록 앱을 구성 하는 것입니다. 테마를 명시적으로 구성 하지 않으려는 경우 앱은 기본적으로 (짙은 테마 `Theme.Material` )로 설정 됩니다. 앱에 활동이 하나만 있는 경우 활동 수준에서 테마를 구성할 수 있습니다. 앱에 여러 활동이 있는 경우 모든 활동에서 동일한 테마를 사용 하도록 응용 프로그램 수준에서 테마를 구성 하거나 다른 활동에 다른 테마를 할당할 수 있습니다. 다음 섹션에서는 앱 수준 및 활동 수준에서 테마를 구성 하는 방법을 설명 합니다.
-
 
 ### <a name="theming-an-application"></a>응용 프로그램 테마
 
@@ -80,7 +77,6 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 ```
 
 응용 프로그램 테마가로 `@android:style/Theme.Material.Light`설정 된 경우 *MyApp* 의 모든 작업은를 사용 하 여 `Theme.Material.Light`표시 됩니다.
-
 
 ### <a name="theming-an-activity"></a>활동 테마
 
@@ -120,7 +116,6 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 [![특성 및 관련 된 화면 영역 다이어그램](material-theme-images/screen-attributes-sml.png)](material-theme-images/screen-attributes.png#lightbox)
 
 기본적 `statusBarColor` 으로는의 `colorPrimaryDark`값으로 설정 됩니다. 단색으로 설정 `statusBarColor` 하거나로 `@android:color/transparent` 설정 하 여 상태 표시줄을 투명 하 게 만들 수 있습니다. 을로 설정 `navigationBarColor` 하 여 탐색 모음을 투명 하 게 `@android:color/transparent`만들 수도 있습니다.
-
 
 ### <a name="creating-a-custom-app-theme"></a>사용자 지정 앱 테마 만들기
 
@@ -220,7 +215,6 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 이 예제에서 사용자 지정 `CardView` 은 `my_blue` 배경색과 18 dp 모퉁이 반지름이 표시 됩니다.
 
-
 ## <a name="compatibility"></a>호환성
 
 Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 하향 호환 스타일로 자동으로 전환 하도록 앱의 스타일을 설정 하려면 다음 단계를 사용 합니다.
@@ -269,8 +263,6 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Android 5.0 (롤리팝)에 포함 된 새로운 재질 테마 사용자 인터페이스 스타일을 소개 했습니다. 응용 프로그램의 스타일을 지정 하는 데 사용할 수 있는 세 가지 기본 제공 재질 테마의 기능을 설명 하 고, 앱에 브랜딩 하기 위한 사용자 지정 테마를 만드는 방법에 대해 설명 하 고, 개별 뷰에 테마를 지정 하는 방법에 대 한 예제를 제공 했습니다. 마지막으로,이 문서에서는 이전 버전의 Android와의 하향 호환성을 유지 하면서 앱에서 재질 테마를 사용 하는 방법을 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: a43a2ed4498be76a99ab4b6b54d3048f2f80af5c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 107fcd39a64ef1d7758d211ab47a07e1ece52f4e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887653"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757235"
 ---
 # <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>Xamarin.Android.Support 패키지에 필요한 Android 지원 라이브러리를 수동으로 설치하려면 어떻게 할까요?
 
@@ -109,7 +109,7 @@ csharp -e 'var url = "https://dl-ssl.google.com/android/repository/android_m2rep
 F16A3455987DBAE5783F058F19F7FCDF
 ```
 
-**Android\_m2repository** 을 **$HOME/.local/share/xamarin/zips/** 폴더에 복사 합니다. 이전 MD5 해시 계산 단계의 MD5 해시를 사용 하도록 파일의 이름을 바꿉니다. 예:
+**Android\_m2repository** 을 **$HOME/.local/share/xamarin/zips/** 폴더에 복사 합니다. 이전 MD5 해시 계산 단계의 MD5 해시를 사용 하도록 파일의 이름을 바꿉니다. 예를 들어:
 
 **$HOME/.local/share/Xamarin/zips/F16A3455987DBAE5783F058F19F7FCDF.zip**
 
@@ -127,7 +127,6 @@ F16A3455987DBAE5783F058F19F7FCDF
 
 -----
 
-
 ## <a name="additional-references"></a>추가 참조
 
 - [버그 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) – 부정확 한 "다운로드에 실패 했습니다. 다운로드 {0} 하 여 {1} 디렉터리에 저장 하세요. " 그리고 "패키지 설치:{0}SDK 설치 관리자에서 사용 가능" 오류 메시지에 대 한 자세한 내용은 Xamarin. 지원 패키지를 참조 하십시오.
@@ -137,4 +136,3 @@ F16A3455987DBAE5783F058F19F7FCDF
 이 문서에서는 8 월 2016 현재 동작에 대해 설명 합니다. 이 문서에서 설명 하는 기술은 Xamarin 용 안정적인 테스트 제품군의 일부가 아니므로 나중에 중단 될 수 있습니다.
 
 추가 지원이 필요 하면 microsoft에 문의 하거나, 위의 정보를 사용한 후에도이 문제가 계속 발생 하는 경우 [Xamarin에 사용할 수 있는 지원 옵션](~/cross-platform/troubleshooting/support-options.md) 을 참조 하세요. 연락처 옵션, 제안 사항 및 필요한 경우 새 버그를 제출 하는 방법에 대 한 자세한 내용은을 참조 하세요. .
-
