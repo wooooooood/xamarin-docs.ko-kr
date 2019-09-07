@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 1355f65a192cf8f7f119a2ee77f334c115650578
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: fc0664ff32e63af5d0c80f69ff69f4992ad0c708
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770316"
 ---
 # <a name="customizing-listview-appearance"></a>ListView 모양 사용자 지정
 
@@ -294,12 +294,10 @@ XAML:
 
 ![](customizing-list-appearance-images/height-custom.png "고정된 행 높이 사용 하 여 ListView")
 
-
 ### <a name="uneven-rows"></a>균등 하지 않은 행
 
 개별 행 높이가 다른 원하는 경우 설정할 수 있습니다 합니다 `HasUnevenRows` 속성을 `true`입니다.
 행 높이 되 면 수동으로 설정할 필요가 없습니다 유의 `HasUnevenRows` 로 설정 된 `true`이므로 Xamarin.Forms에서 높이 자동으로 계산 됩니다.
-
 
 C#:
 
@@ -337,8 +335,6 @@ void OnImageTapped (object sender, EventArgs args)
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "런타임 행 크기 조정 된 ListView")
 
 이 기능은 초과 사용 되 면 강력한 성능 저하가 발생할 수는 note 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

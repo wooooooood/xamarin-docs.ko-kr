@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
-ms.openlocfilehash: 0447bd643f359b21ec58bb8bdd79f8482fdb8955
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 275acd02e6cece0842344d8e5833c23af1014a0f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286308"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768943"
 ---
 # <a name="labels-in-xamarinios"></a>Xamarin.ios의 레이블
 
@@ -101,8 +101,3 @@ label.ShadowOffset = new CoreGraphics.CGSize(1.0f, 1.0f);
 ![텍스트에 강조 표시 및 그림자 설정](labels-images/image4.png)
 
 UILabel 글꼴을 변경 하는 방법에 대 한 자세한 내용은 글꼴 조리법 [변경](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) 을 참조 하세요.
-
-
-
-
-

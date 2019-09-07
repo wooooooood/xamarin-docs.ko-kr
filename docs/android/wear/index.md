@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 13a9a02984828781cc6402e982a4b5151c077c52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648340"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758325"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -42,8 +42,6 @@ Android 앱을 android 장치 또는 android 용으로 구성 된 android 장치
 
 Android 개발자 사이트에서는 [Wearable 활동](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html), [의도](https://developer.android.com/reference/com/google/android/wearable/intent/package-summary.html), [인증](https://developer.android.com/reference/android/support/wearable/authentication/package-summary.html), [복잡](https://developer.android.com/reference/android/support/wearable/complications/package-summary.html)한, [복잡 한 렌더링](https://developer.android.com/reference/android/support/wearable/complications/rendering/package-summary.html), [알림](https://developer.android.com/reference/android/support/wearable/notifications/package-summary.html)등과 같은 키 마모 api에 대 한 자세한 정보를 [제공 합니다. 보기](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)및 [WatchFace](https://developer.android.com/reference/android/support/wearable/watchface/package-summary.html).
 
-
-
 ## <a name="samples"></a>샘플
 
 Android 마모를 사용 하 여 다양 한 [샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) 을 찾을 수 있습니다 (또는 [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)로 직접 이동).
@@ -57,7 +55,6 @@ Android 마모를 사용 하 여 다양 한 [샘플](https://docs.microsoft.com/
 |[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager는 사용자가 세로 방향으로 swipes 다음 가로 방향으로 탐색 하 여 옵션 및 콘텐츠를 탐색 하는 2D 탐색 패턴을 구현 합니다.|![GridViewPager의 스크린샷](images/gridviewpager.png)|
 |[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace는 아날로그 스타일의 시간, 분 및 초 바늘이 있는 사용자 지정 시청 얼굴입니다. 이 샘플에서는 현재 시간을 그리고 앰비언트 모드와 표시 유형 변경 이벤트를 처리 하는 조사식 얼굴 서비스를 만드는 방법을 보여 줍니다. 표준 시간대 변경을 수신 대기 하 고 그에 따라 시간을 자동으로 업데이트 하는 브로드캐스트 수신기가 포함 됩니다.|![WatchFace의 스크린샷](images/gridviewpager.png)|
 
-
 ## <a name="videos"></a>비디오
 
 Xamarin Android를 지 원하는 다음 비디오 링크를 확인 하세요.
@@ -67,7 +64,6 @@ Xamarin Android를 지 원하는 다음 비디오 링크를 확인 하세요.
 |[Android L](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) 등 &ndash; Android L Developer Preview에는 재질 디자인, 알림, 새 애니메이션 등을 활용 하는 개발자를 위한 새로운 api 다양 한 도입 되었습니다.|![프레젠테이션 비디오 스크린샷](images/video-android-l.png)|
 |[C#내 귀와 내 눈에 있습니다. Google 유리 및 Android](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; Wearable 컴퓨팅은 미래 (또는 검사기 가젯 에피소드)와 같은 것 처럼 보일 수 있지만, 많은 사람들이 이미 미래를 수용 하 고 있습니다. C#개발자는이를 알고 있으며, wearable 장치의 강력한 기능을 활용 하는 도구와 기술을 이미 갖추고 있습니다 (2014).|![프레젠테이션 비디오 스크린샷](images/video-eyes-ears.png)|
 |[Xamarin Android의 새로운 기능](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, android 마모, android TV, android 자동, 자재 디자인 및 아트, Xamarin developer로 무엇을 의미 하나요? 2014.|![프레젠테이션 비디오 스크린샷](Images/video-whats-new.png)|
-
 
 <!--
 

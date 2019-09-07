@@ -6,12 +6,12 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun
 ms.date: 04/08/2017
-ms.openlocfilehash: ff40ed55c06df41c418b694d02f7d6e9c1c5316c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a5a9ddfe92bd8f5b743da2c535a93c282542c860
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291446"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756778"
 ---
 # <a name="uninstalling-xamarin"></a>Xamarin 제거
 
@@ -266,7 +266,6 @@ Visual Studio 2017을 완전히 제거하려면 **시작** 단추 옆에 있는 
 >
 >Visual Studio 설치 관리자에서 **복구** 옵션을 실행하여 해결합니다. 그러면 누락된 구성 요소가 다시 설치됩니다.
 
-
 ## <a name="uninstalling-older-and-unsupported-products"></a>이전 버전 및 지원되지 않는 제품 제거
 
 <a name="uninstallvs2015"></a>
@@ -361,7 +360,6 @@ rm -rf ~/Library/XamarinStudio-*
 ## <a name="summary"></a>요약
 
 이 문서에서는 터미널 명령을 통해 Mac에서 Xamarin을 완전히 제거하는 방법을 설명했습니다. 또한 Windows 컴퓨터에서 **프로그램 및 기능** 옵션(Visual Studio 2015 및 이전 버전)을 통하거나 및 **Visual Studio 설치 관리자**(Visual Studio 2017)를 사용하여 Xamarin을 제거하는 방법도 설명했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

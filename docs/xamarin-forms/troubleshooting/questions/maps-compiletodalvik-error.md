@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: efa21d3547167996e1a7dcc533caa00e0b1262e6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2872cc7b54e26d07b388f08d650048e8d3861930
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529037"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759963"
 ---
 # <a name="why-does-my-xamarinformsmaps-android-project-fail-with-compiletodalvik-unexpected-top-level-error"></a>COMPILETODALVIK Android 프로젝트가 예기치 않은 최상위 오류를 표시 하며 실패 하는 이유는 무엇 인가요?
 
@@ -37,4 +37,3 @@ ms.locfileid: "69529037"
 4. 프로젝트를 다시 빌드합니다.  
 
 ![Mac용 Visual Studio 프로젝트 옵션의 스크린샷](maps-compiletodalvik-error-images/xsjavaheap.png "Mac용 Visual Studio의 Android 빌드 옵션")
-

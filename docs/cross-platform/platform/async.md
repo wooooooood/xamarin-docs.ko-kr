@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 90c391f79d7aa0ffdee0072c84cbdba0c504d551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b88d6c33671f36d2d4106f45a267322320639c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280628"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765333"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -124,7 +124,6 @@ public async Task<int> DownloadHomepage()
 - 반환 형식은를 `Task<int>` 호출 하는 코드가이 메서드에서 계산 `int` 된 값에 액세스할 수 있도록 합니다.
 - Return 문은 `return exampleInt;` 정수 개체입니다. 메서드가 반환 `Task<int>` 하는 사실은 언어 개선의 일부입니다.
 
-
 ### <a name="calling-an-async-method-1"></a>비동기 메서드 호출 1
 
 Android 샘플 응용 프로그램에서 위에 설명 된 메서드를 호출 하는이 단추 클릭 이벤트 처리기를 찾을 수 있습니다.
@@ -153,7 +152,6 @@ GetButton.Click += async (sender, e) => {
 - SizeTask 변수에 대 한 기다립니다 코드입니다.  *이* 위치는 메서드가 일시 중단 되 고 비동기 작업이 자체 스레드에서 완료 될 때까지 제어를 호출 코드로 반환 하는 위치입니다.
 - 작업을 만들 때에도 메서드의 첫 번째 줄에 작업이 생성 되 면 실행이 일시 중지 *되지* 않습니다. Wait 키워드는 실행이 일시 중지 된 위치를 나타냅니다.
 - 비동기 작업이 완료 되 면 intResult가 설정 되 고 wait 줄에서 원래 스레드에서 실행이 계속 됩니다.
-
 
 ### <a name="calling-an-async-method-2"></a>비동기 메서드 2 호출
 
@@ -185,14 +183,11 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 - 메서드의 코드 `await` `intResult` 는 중간 변수`Task<int>` 를 사용 하 여 작업을 참조 하는 이전 예제와 달리 변수 ()에 대 한 할당에 직접 사용 됩니다. `DownloadHomepage`  *이* 위치는 비동기 메서드가 다른 스레드에서 완료 될 때까지 제어가 호출자에 게 반환 되는 위치입니다.
 - 비동기 메서드가 완료 되 고를 반환 하면에서 실행이 다시 `await` 시작 되어 정수 결과가 반환 된 다음 UI 위젯에 렌더링 됩니다.
 
-
 ## <a name="summary"></a>요약
 
 Async 및 wait를 사용 하면 주 스레드를 차단 하지 않고 백그라운드 스레드에서 장기 실행 작업을 생성 하는 데 필요한 코드를 크게 간소화할 수 있습니다. 또한 작업이 완료 되 면 결과에 쉽게 액세스할 수 있도록 합니다.
 
 이 문서에는 Xamarin.ios 및 Xamarin.ios의 새로운 언어 키워드와 예제에 대 한 개요가 제공 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

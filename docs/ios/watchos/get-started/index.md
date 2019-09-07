@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: d7de124dd032bd63a10d6a273bc86489df007832
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a82bba575031fa7b7c0011ee639e66aec4862179
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293072"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767943"
 ---
 # <a name="getting-started-with-watchos-in-xamarin"></a>Xamarin에서 watchOS 시작 하기
 
@@ -30,4 +30,3 @@ WatchOS 솔루션에 대해 특별히 구성 된 [프로젝트 참조 및 식별
 ## <a name="hello-watchioswatchosget-startedhello-watchmd"></a>[안녕하세요, Watch](~/ios/watchos/get-started/hello-watch.md)
 
 및 Xamarin을 사용 하 여 C# 첫 번째 watchOS 앱을 빌드합니다.
-

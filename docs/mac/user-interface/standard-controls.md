@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 2701b1f8bf343c653da33fd587c9da3302f52335
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18ce7eb4dcd68596027f739579fd5a4b70497829
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292244"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772699"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Xamarin.ios의 표준 컨트롤
 
@@ -215,7 +215,6 @@ AppKit 컨트롤을 코드에서 C# 액세스 하려면 먼저 **콘센트** 또
 
 [![](standard-controls-images/edit13.png "콘센트 또는 작업 구성")](standard-controls-images/edit13.png#lightbox)
 
-
 **콘센트** 및 **작업**으로 작업 하는 방법에 대 한 자세한 내용은 [Xcode 및 Interface Builder 소개](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 설명서의 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 참조 하세요.
 
 <a name="Synchronizing_Changes_with_Xcode" />
@@ -324,7 +323,6 @@ DisclosureButton.Activated += (sender, e) => {
 AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 유형의 확인란 및 라디오 단추 그룹을 제공 합니다. 자세한 내용은 Apple의 [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)의 [단추](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) 섹션을 참조 하세요. 
 
 [![](standard-controls-images/buttons02.png "사용 가능한 checkbox 형식의 예")](standard-controls-images/buttons02.png#lightbox)
-
 
 확인란 및 라디오 단추 ( **콘센트**를 통해 노출 됨) **의** 상태 (예: 설정 및 **해제**)를 `State` `NSCellStateValue` 사용 하 여 상태를 확인 하거나 열거형에 대해 속성을 사용 하 여 설정할 수 있습니다. 예를 들어:
 
@@ -528,7 +526,7 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 유
 
 [![](standard-controls-images/level01.png "예제 지표 컨트롤")](standard-controls-images/level01.png#lightbox)
 
-표시기 컨트롤이 사용자 상호 작용을 **수행** `Activated` 하는 **시기를 추적** 하는 방법에는 두 가지가 있습니다. 예:
+표시기 컨트롤이 사용자 상호 작용을 **수행** `Activated` 하는 **시기를 추적** 하는 방법에는 두 가지가 있습니다. 예를 들어:
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
@@ -536,13 +534,13 @@ LevelIndicator.Activated += (sender, e) => {
 };
 ```
 
-표시기 컨트롤의 값을 읽거나 설정 하려면 `DoubleValue` 속성을 사용 합니다. 예를 들어:
+표시기 컨트롤의 값을 읽거나 설정 하려면 `DoubleValue` 속성을 사용 합니다. 예:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("Rating: {0:###}",Rating.DoubleValue);
 ```
 
-표시 되지 않는 경우 미정 및 비동기 진행률 표시기를 애니메이션으로 적용 해야 합니다. 애니메이션을 표시할 때 애니메이션을 시작 하려면 메서드를사용합니다.`StartAnimation` 예를 들어:
+표시 되지 않는 경우 미정 및 비동기 진행률 표시기를 애니메이션으로 적용 해야 합니다. 애니메이션을 표시할 때 애니메이션을 시작 하려면 메서드를사용합니다.`StartAnimation` 예:
 
 ```csharp
 Indeterminate.StartAnimation (this);
@@ -565,7 +563,7 @@ AppKit는 사용자 인터페이스 디자인에 사용할 수 있는 여러 형
 - **EditingBegan** -사용자가 편집할 필드를 선택 하면 발생 합니다.
 - **EditingEnded** -사용자가 필드에서 Enter 키를 누르거나 필드를 벗어날 때
 
-필드의 값을 읽거나 설정 하려면 속성을사용합니다.`StringValue` 예를 들어:
+필드의 값을 읽거나 설정 하려면 속성을사용합니다.`StringValue` 예:
 
 ```csharp
 FeedbackLabel.StringValue = string.Format("User ID: {0}",UserField.StringValue);
@@ -637,7 +635,6 @@ Xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기
 KVC (키-값 코딩)는 키 (특수 형식의 문자열)를 사용 하 여 개체의 속성에 간접적으로 액세스 하 고 인스턴스 변수 또는 접근자 메서드 (`get/set`)를 통해 액세스 하는 대신 속성을 식별 하는 메커니즘입니다. Xamarin.ios 응용 프로그램에서 키-값 코딩 규격 접근자를 구현 하 여 키-값 관찰 (KVO), 데이터 바인딩, 코어 데이터, Cocoa 바인딩, scriptability 등의 다른 macOS 기능에 액세스할 수 있습니다.
 
 자세한 내용은 [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 설명서의 [단순 데이터 바인딩](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) 섹션을 참조 하세요.
-
 
 <a name="Summary" />
 

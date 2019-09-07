@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 42ac6c9c729498ad4b70e1e209d63c1ec2e11f8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291230"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769933"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.ios에서 복사 하 여 붙여넣기
 
@@ -603,7 +603,7 @@ namespace MacCopyPaste
 이번에는 현재 최상위 창을 가져오고 해당 `ImageDocument` 클래스 인스턴스를 사용 하 여 필요한 이미지 데이터가 있는지 확인 합니다. 그런 다음 메서드를 `MenuWillHighlightItem` 사용 하 여이 상태를 기반으로 각 항목을 활성화 하거나 비활성화 합니다.
 
 **AppDelegate.cs** 파일을 편집 하 고 메서드 `DidFinishLaunching` 를 다음과 같이 만듭니다.
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
@@ -703,7 +703,7 @@ Less 명백한 대지의 경우에는 찾기, 끌기, 끌어서 놓기 및 응�
 
 처음에는 대/소문자에 액세스 하 고, 기존 콘텐츠를 지우고, 대지의에 필요한 만큼의 데이터 표현을 작성 하 여 복사 작업을 수행 합니다.
 
-예를 들어:
+예:
 
 ```csharp
 // Get the standard pasteboard
@@ -1275,8 +1275,6 @@ if (ok) {
 ## <a name="summary"></a>요약
 
 이 문서에서는 복사 및 붙여넣기 작업을 지원 하기 위해 Xamarin.ios 응용 프로그램의 대지의 사용에 대해 자세히 살펴봅니다. 먼저 표준 pasteboards 작업에 익숙해질 수 있는 간단한 예제를 소개 했습니다. 다음으로, 대지의 데이터를 읽고 쓰는 방법에 대해 자세히 살펴봅니다. 마지막으로, 사용자 지정 데이터 형식을 사용 하 여 앱 내에서 복잡 한 데이터 형식의 복사 및 붙여넣기를 지원 하는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: b846d034c31069c02e3c97fba0ac0d68e6df2e23
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 66bea7d2a9660018c7cec9b7bafeadafd5029ed9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292530"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769431"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.ios의 음성 인식
 
@@ -116,7 +116,7 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. 파일을 `Info.plist` 두 번 클릭 하 여 편집용으로 엽니다.
-2. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
+2. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
 
     [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
 3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
@@ -128,9 +128,6 @@ Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여
 
 > [!IMPORTANT]
 > 위의 `Info.plist` 키 (`NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription`) 중 하나를 제공 하지 못하면 음성 인식 또는 라이브 오디오의 마이크에 액세스 하려고 할 때 경고 없이 앱에 오류가 발생할 수 있습니다.
-
-
-
 
 ### <a name="requesting-authorization"></a>권한 부여 요청
 
@@ -243,7 +240,7 @@ public void RecognizeFile (NSUrl url)
 
 ### <a name="recognizing-live-speech"></a>라이브 음성 인식
 
-앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예를 들어:
+앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예:
 
 ```csharp
 using System;
@@ -398,8 +395,6 @@ Apple에는 iOS 앱에서 음성 인식을 포함 하 여 사용자의 개인 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 새로운 Speech API를 소개 하 고 Xamarin.ios 앱에서이를 구현 하 여 연속 음성 인식과 높여줄 음성 (라이브 또는 기록 오디오 스트림)을 텍스트로 변환 하는 방법을 살펴보았습니다. 
-
-
 
 ## <a name="related-links"></a>관련 링크
 

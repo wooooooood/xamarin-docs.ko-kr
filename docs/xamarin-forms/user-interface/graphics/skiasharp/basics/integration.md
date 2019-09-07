@@ -7,12 +7,12 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 586cf0eaa7b0f38af61c9f7d619b30a39023a19e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 33ed7f3477f44662f3392d2125b61818b3ed885f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652967"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759445"
 ---
 # <a name="integrating-with-xamarinforms"></a>Xamarin.Forms와 통합
 
@@ -238,7 +238,6 @@ HSV 모델에서 순수 색 채도 값은 100 때 발생 합니다. 값이 다�
 하지만 두 모델에 대 한 이해를 위한 가장 좋은 방법은 상호 실험:
 
 [![](integration-images/colorexplore-large.png "삼중 색 탐색 페이지 스크린샷")](integration-images/colorexplore-small.png#lightbox "삼중 색 탐색 페이지 스크린샷")
-
 
 ## <a name="related-links"></a>관련 링크
 

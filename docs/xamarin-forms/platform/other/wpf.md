@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: 35652c0fc0e64686a79b2ea0fe96a1fca0b2825d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8fcad4799cd53892106b3e221cff0dfbc737e10d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652844"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760048"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설정
 
@@ -152,4 +152,3 @@ Title="BoxViewClock" Height="450" Width="800"
 ## <a name="issues"></a>문제
 
 이는 미리 보기 이므로 프로덕션이 준비 되지 않은 것으로 간주 됩니다. Xamarin에 대 한 모든 NuGet 패키지는 WPF에 대해 준비 되는 것이 아니라 일부 기능이 제대로 작동 하지 않을 수 있습니다.
-

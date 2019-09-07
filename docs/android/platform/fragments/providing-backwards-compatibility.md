@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: f1f886f0e4c14f2da29342a2a651f91ed510fd25
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 838f8bdcf3bd82a31bf0d033eee628bd19ad1c30
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524268"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757545"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Android 지원 패키지와의 이전 버전과의 호환성 제공
 
@@ -19,7 +19,6 @@ ms.locfileid: "69524268"
 
 > [!NOTE]
 > `ListFragment` 및만Android지원패키지를`DialogFragment` 통해 사용할 수 있습니다. 와 같은 다른 조각 서브 클래스는 Android 지원 패키지 `PreferenceFragment,` 에서 지원 되지 않습니다. Android 이전 3.0 응용 프로그램에서는 작동 하지 않습니다. 
-
 
 ## <a name="adding-the-support-package"></a>지원 패키지 추가
 
@@ -37,7 +36,7 @@ Android 지원 패키지는 Xamarin Android 응용 프로그램에 자동으로 
 
 - **네임 스페이스 업데이트** 에서 상속 되는 클래스는 이제에서 `Android.Support.V4.App.Fragment` 상속 되어야 합니다. `Android.App.Fragment` &ndash; 소스 코드 파일의 맨 `using Android.App;` 위에 있는 using 문 ""을 제거 하 고 " `using Android.Support.V4.App` "로 바꿉니다. 
 
-- **SupportFragmentManager 사용** 에 대 한 참조를 가져오는 데 사용 해야 하는 속성을 `SupportingFragmentManager` 노출 합니다. `FragmentManager` &ndash; `Android.Support.V4.App.FragmentActivity` 예: 
+- **SupportFragmentManager 사용** 에 대 한 참조를 가져오는 데 사용 해야 하는 속성을 `SupportingFragmentManager` 노출 합니다. `FragmentManager` &ndash; `Android.Support.V4.App.FragmentActivity` 예를 들어: 
 
 ```csharp
 FragmentTransaction fragmentTx = this.SupportingFragmentManager.BeginTransaction();
@@ -47,7 +46,6 @@ fragmentTx.Commit();
 ```
 
 이러한 변경 내용을 적용 한 후에는 Android 1.6 또는 2.x 뿐만 아니라 Honeycomb 및 아이스크림의 샌드위치에서 조각 기반 응용 프로그램을 실행할 수 있습니다. 
-
 
 ## <a name="related-links"></a>관련 링크
 

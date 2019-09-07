@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/13/2018
-ms.openlocfilehash: 8039482175465a67867f3c70f17518dee8b9500b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 150a4e3c1deafbabea892d5adb786374c3d97d12
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70277863"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769585"
 ---
 # <a name="passkit-in-xamarinios"></a>Xamarin.ios의 PassKit
 
@@ -74,7 +74,6 @@ Pass는 티켓, 쿠폰 또는 카드를 나타내는 데이터의 컬렉션입�
 - **매장 카드** – 신용 카드 또는 직불 카드와 같이 위쪽으로 반올림 됩니다.
 - **쿠폰** – 위쪽을 따라 perforated.
 - **Generic** – 매장 카드와 같으며 위쪽으로 반올림 됩니다.
-
 
 5 개의 패스 형식이이 스크린샷에서 표시 됩니다 (순서: 쿠폰, 일반, 매장 카드, 전달 패스 및 이벤트 티켓).
 
@@ -204,10 +203,8 @@ ISO-8859-1 인코딩은 가장 일반적 이며, 패스를 읽을 검색 시스�
 1. 인증서를 사용 하 여 `manifest.json` 파일에 서명 하 고 결과를 라는 `signature` 파일에 기록 합니다.
 1. 모든 파일을 압축 하 고 결과 파일에 파일 `.pkpass` 확장명을 제공 합니다.
 
-
 Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사용자가 제어 하는 보안 서버 에서만 수행 해야 합니다. 응용 프로그램에서 패스를 시도 하 고 생성 하기 위해 키를 배포 하지 마십시오.
 
- 
 ## <a name="configuration-and-setup"></a>구성 및 설정
 
 이 섹션에서는 프로 비전 세부 정보를 설정 하 고 첫 번째 단계를 만드는 데 도움이 되는 지침을 제공 합니다.
@@ -229,7 +226,6 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 
 2. 패스에 대 한 **설명** (이름) 및 **식별자** (고유 문자열)를 제공 합니다. 모든 패스 형식 id는이 예제에서 다음을 사용 `pass.` `pass.com.xamarin.coupon.banana` 하는 문자열로 시작 해야 합니다. [![](passkit-images/register.png "설명 및 식별자를 제공 합니다.")](passkit-images/register.png#lightbox)
 
-
 3. **등록** 단추를 눌러 패스 ID를 확인 합니다.
 
 #### <a name="generate-a-certificate"></a>인증서 생성
@@ -242,13 +238,11 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 
     [![](passkit-images/cert-dist.png "인증서 만들기 선택")](passkit-images/cert-dist.png#lightbox)
 
-
 2. 단계에 따라 CSR (인증서 서명 요청)을 만듭니다.
   
 3. 개발자 포털에서 **계속** 단추를 누르고 CSR을 업로드 하 여 인증서를 생성 합니다.
 
 4. 인증서를 다운로드 하 고 키를 두 번 클릭 하 여 키 집합에 설치 합니다.
-
 
 이제이 패스 유형 ID에 대 한 인증서를 만들었으므로 다음 섹션에서는 패스를 수동으로 빌드하는 방법을 설명 합니다.
 
@@ -264,7 +258,6 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 - 폴더의 모든 파일에 대 한 SHA1 해시를 계산 하 고,. n a s. json에 씁니다.
 - 다운로드 한 인증서. p12 파일을 사용 하 여 매니페스트를 서명 합니다.
 - 디렉터리의 내용을 압축 하 고. pkpass 확장으로 이름을 바꿉니다.
-
 
 이 문서의 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) 에는 패스를 생성 하는 데 사용할 수 있는 몇 가지 소스 파일이 있습니다. Createapassmanually 디렉터리 `CouponBanana.raw` 의 디렉터리에 있는 파일을 사용 합니다. 다음 파일이 표시 됩니다.
 
@@ -338,7 +331,6 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 - **Safari** – 패스 URL 링크를 클릭 하면 pass Content-type을 인식 합니다.
 - **기타 사용자 지정 앱** -첨부 파일 또는 오픈 링크 (소셜 미디어 클라이언트, 메일 읽기 권한자 등)를 수신 하는 앱입니다.
 
-
 이 스크린샷은 iOS 6의 메일이 메시지 첨부 파일을 인식 하 고 (작업 시) **전자 메일을 통해 전자 메일을 전자 메일** 에 **추가** 하는 방법을 보여 줍니다.
 
  [![](passkit-images/image22.png "이 스크린샷은 iOS 6의 메일이 pass 첨부 파일을 인식 하는 방법을 보여 줍니다.")](passkit-images/image22.png#lightbox)
@@ -350,7 +342,6 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 - **파일 확장명** -pkpass
 - **MIME 형식** -application/vnd. apple pkpass
 - **UTI** – .com. pkpass
-
 
 통로 응용 프로그램의 기본 작업은 pass 파일을 검색 하 고 PassKit `PKAddPassesViewController` 를 호출 하 여 사용자에 게 해당 사용자에 게 pass를 추가할 수 있는 옵션을 제공 하는 것입니다. 이 뷰 컨트롤러의 구현은 다음에 나오는 **응용 프로그램**의 섹션에서 설명 합니다.
 
@@ -383,7 +374,6 @@ Solution Pad에서 **info.plist** 파일을 두 번 클릭 하 여 info.plist �
 전자 지갑 섹션에서 전자 **지갑 사용** 옵션을 선택 합니다.
 
 ![](passkit-images/image32.png "작은 자격 사용")
-
 
 기본 옵션은 앱에서 모든 패스 유형을 허용 하는 것입니다. 그러나 앱을 제한 하 고 팀 패스 유형의 하위 집합만 허용할 수 있습니다. 이를 사용 하도록 설정 하려면 **팀 패스 유형의 하위 집합 허용** 을 선택 하 고 허용할 하위 집합의 패스 유형 식별자를 입력 합니다.
 

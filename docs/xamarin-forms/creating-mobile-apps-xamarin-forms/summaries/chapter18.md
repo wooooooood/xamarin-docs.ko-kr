@@ -1,18 +1,18 @@
 ---
 title: 요약 18 장입니다. MVVM
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 18 장입니다. MVVM
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 18 장입니다. MVVM'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6379bafb8c879237171951756441d1227f65b825
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 32c16409f30d6b6d502b7cc074eafb182898594a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334637"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771070"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>요약 18 장입니다. MVVM
 
@@ -92,8 +92,6 @@ ViewModel 형식의 각 속성을 설정 하는 내부적으로 `ICommand` 구�
 ## <a name="viewmodels-and-the-application-lifecycle"></a>Viewmodel 및 응용 프로그램 수명 주기
 
 `AdderViewModel` 에 사용 되는 합니다 **AddingMachine** 샘플에는 또한 라는 두 개의 메서드도 정의 `SaveState` 및 `RestoreState`합니다. 이러한 메서드는 절전 모드로 전환 하 고 다시 시작할 때 응용 프로그램에서 호출 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

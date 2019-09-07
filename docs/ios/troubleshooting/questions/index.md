@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 57908027c6e9215504f410c0f9c989d6fbe3adad
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a8549e03c96a5e21f7a235064ebd72fc671cf2b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290515"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769289"
 ---
 # <a name="ios-frequently-asked-questions"></a>iOS faq (질문과 대답)
 
@@ -35,7 +35,6 @@ Ios 버그가 발생 하면 ios 버전을 업데이트 한 후 개발자 옵션�
 
 ### <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logssymbolicate-ios-crashmd"></a>[iOS 크래시 로그를 기호로 표시하는 .dSYM 파일을 어디에서 찾을 수 있나요?](symbolicate-ios-crash.md)
 이 가이드에서는 충돌을 진단 하는 데 도움이 되도록 iOS 크래시 로그를 symbolicating 하는 기본 단계에 대해 설명 합니다. 또한 고급 기호에 대 한 추가 리소스에 대 한 링크를 제공 하 여 iOS 크래시 로그 해석에 대 한 정보를 & 합니다.
-
 
 ### <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studioxs-mono-runtimemd"></a>[Xamarin Studio에서 iOS 프로젝트에 대한 Mono 런타임 환경 변수를 설정하려면 어떻게 해야 하나요?](xs-mono-runtime.md)
 Mono에 대 한 런타임 환경 변수를 설정 해야 하는 경우 **프로젝트 옵션에서 > 일반 페이지 실행 >** 설정할 수 있습니다.
@@ -61,7 +60,6 @@ Xamarin 4를 기준으로 이제 `.xcarchive` `ArchiveOnBuild` 속성을로 `tru
 ### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[다음 메시지가 표시되며 내 앱 제출에 실패한 이유는 무엇인가요? "...에서 허용되지 않는 경로("iTunesMetadata.plist")를 발견했습니다."](itunesmetadata-disallowed-paths.md)
 이 오류는 Apple 앱 스토어 확인 프로세스의 변경에 대 한 결과입니다. 이 특정 오류는 설치한 Xamarin의 특정 _버전과 관련이 없으므로 다운 그레이드는 도움이_ _되지_ 않습니다. 이 가이드는 문제를 해결 하는 방법에 대 한 자세한 정보로 연결 됩니다.
 
-
 ## <a name="diagnosing-specific-error-messages"></a>특정 오류 메시지 진단
 
 ### <a name="ios-designer-error-with-registerserviceporterror-registerserviceportmd"></a>[RegisterServicePort에 발생하는 iOS Designer 오류](error-registerserviceport.md)
@@ -83,8 +81,6 @@ IOS 9의 API 변경에는 이제 기본 API에서 예상 하는 것 처럼 비�
 
 > [!IMPORTANT]
 > 다음 문서는 최신 버전의 Xamarin에서 해결 된 문제에 적용 됩니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
-
-
 
 ### <a name="ipa-file-is-0-bytesipa-zero-bytesmd"></a>[IPA 파일이 0바이트입니다.](ipa-zero-bytes.md)
 이전 버전의 Xamarin에서는 Windows의 IPA 파일을 0 바이트로 만드는 몇 가지 알려진 문제가 있었습니다.

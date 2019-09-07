@@ -7,12 +7,12 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 133d7ffdeafdced3f909c21cf08f2241666015fa
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1daf4822dd7debe98aabd58d42cb6ed29f95b90d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228264"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759352"
 ---
 # <a name="clipping-with-paths-and-regions"></a>경로 및 지역 클리핑
 
@@ -56,7 +56,6 @@ public class MonkeyThroughKeyholePage : ContentPage
 ```
 
 하지만 `keyholePath` 는 구멍의 개요를 설명 하는 개체, 좌표를 완전히 임의적 이며 경로 데이터 고안 된 경우 무엇 이었습니까 편리 하 게 반영 합니다. 이러한 이유로 합니다 `PaintSurface` 처리기는이 경로 호출의 범위를 가져옵니다 `Translate` 및 `Scale` 화면 가운데에 경로 이동 하 고 거의 화면으로 길게 설정:
-
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -510,7 +509,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 네-잎 클로버 처럼 실제로 표시 되지 않습니다 이지만 하드 클리핑 없이 렌더링 될 수 있는 이미지:
 
 [![네 리프 클로버 페이지의 삼중 스크린샷](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
-
 
 ## <a name="related-links"></a>관련 링크
 

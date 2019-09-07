@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: c8be9220f17a0f0f046f09ff61ae76d1fed7e15f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b5d1ddc4cf3a6817851d22aba920abb29d9f746f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644781"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767644"
 ---
 # <a name="attached-properties"></a>연결된 속성
 
@@ -141,7 +141,6 @@ ShadowEffect.SetHasShadow (label, true);
 ## <a name="summary"></a>요약
 
 이 문서에서는 연결 된 속성에 대 한 소개를 제공 하 고 만들고이 사용 하는 방법을 보여 줍니다. 연결된 된 속성에 속성 이름과 마침표로 구분 된 클래스를 포함 하는 특성으로 다른 개체에 연결 되 고 XAML에서 인식할 수 있지만 하나의 클래스에 정의 된 바인딩 가능한 속성의 특수 형식입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

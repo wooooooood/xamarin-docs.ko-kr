@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 2d62651f85aab49c8e28b54053aba4882961c35b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6dbd0b3e7d14307a3b9e7de552e2d59e0fbbcaa4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292494"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768553"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Xamarin에서 tvOS 텍스트 및 검색 필드 작업
 
@@ -781,8 +781,6 @@ public override void ViewDidAppear (bool animated)
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 텍스트 및 검색 필드를 디자인 하 고 작업 하는 방법에 대해 설명 했습니다. 인터페이스 디자이너에서 텍스트를 만들고 컬렉션 콘텐츠를 검색 하는 방법을 보여 주었습니다. tvOS에서 사용자에 게 검색 필드를 표시 하는 두 가지 다른 방법을 보여 주었습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

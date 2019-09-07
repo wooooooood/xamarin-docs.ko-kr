@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 750cf801d8ae9dfe63f9b2259d4a3f6a386a4404
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523240"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762614"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>리소스 한정자 및 시각화 옵션
 
 _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 되는 리소스를 정의 하는 방법을 설명 합니다. 간단한 예제는 언어에 한정 된 문자열 리소스입니다. 문자열 리소스는 추가 언어에 사용 하도록 정의 된 다른 대체 리소스를 사용 하 여 기본값으로 정의할 수 있습니다. 모든 리소스 종류는 레이아웃 자체를 포함 하 여 정규화 될 수 있습니다._
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -45,7 +44,7 @@ _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 �
 
 ![언어 목록](resource-qualifiers-images/vs/10-languages.png "언어 목록")
 
-이 예제에서는 언어에 대해 **fr (프랑스어)** 를 선택 하 고 프랑스어 지역 언어의 경우 (벨기에)로 설정 했습니다. 특정 지역에 관계 없이 많은 언어를 지정할 수 있으므로 **지역** 필드는 선택 사항입니다. **언어** 풀 다운 메뉴가 다시 열리면 새로 추가 된 언어/지역 리소스가 표시 됩니다.
+이 예제에서는 언어에 대해 **fr (프랑스어)** **를 선택 하 고 프랑스어** 지역 언어의 경우 (벨기에)로 설정 했습니다. 특정 지역에 관계 없이 많은 언어를 지정할 수 있으므로 **지역** 필드는 선택 사항입니다. **언어** 풀 다운 메뉴가 다시 열리면 새로 추가 된 언어/지역 리소스가 표시 됩니다.
 
 ![선택한 언어 및 지역](resource-qualifiers-images/vs/11-language-region-added.png "선택한 언어 및 지역")
 
@@ -55,10 +54,9 @@ _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 �
 
 **UI 모드** 풀 다운 메뉴를 클릭 하면 모드 목록 (예: **정상**, **자동차 도크**, **책상 도크**, **텔레비전**, **어플라이언스**및 **조사식**)이 표시 됩니다.
 
-
 [![UI 모드 메뉴](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
-이 목록 아래에는 야간 모드 와 **야간**모드, **왼쪽** 에서 오른쪽 및 오른쪽에서 왼쪽으로의 레이아웃 방향이 차례로 표시 됩니다 (왼쪽에서 **오른쪽** 및 **오른쪽에서 왼쪽** 으로의 옵션에 대 한 자세한 내용은 참조 [). LayoutDirection](xref:Android.Util.LayoutDirection)).
+이 목록 아래에는 **야간 모드와** **야간**모드, **왼쪽** 에서 오른쪽 및 오른쪽에서 왼쪽으로의 레이아웃 방향이 차례로 표시 **됩니다 (** 왼쪽에서 **오른쪽** 및 **오른쪽에서 왼쪽** 으로의 옵션에 대 한 자세한 내용은 참조 [). LayoutDirection](xref:Android.Util.LayoutDirection)).
 **리소스 한정자 옵션** 대화 상자의 마지막 항목은 라운드 **화면** (Android 마모와 함께 사용) 또는 **라운드 스크린이 아닌 화면**입니다.
 라운드 및 비연속 화면에 대 한 자세한 내용은 [레이아웃](https://developer.android.com/training/wearables/ui/layouts.html)을 참조 하세요.
 Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.App.UiModeManager)를 참조 하세요.
@@ -99,8 +97,6 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 리소스 유형에 대 한 자세한 내용은 [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md)를 참조 하세요.
 
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="resource-qualifier-options"></a>리소스 한정자 옵션
@@ -127,7 +123,7 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 [![언어 목록](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
-이 예제에서는 언어에 대해 **fr (프랑스어)** 를 선택 하 고 프랑스어 지역 언어의 경우 (벨기에)로 설정 했습니다. 특정 지역에 관계 없이 많은 언어를 지정할 수 있으므로 **지역** 필드는 선택 사항입니다. **언어** 풀 다운 메뉴가 다시 열리면 새로 추가 된 언어/지역 리소스가 표시 됩니다.
+이 예제에서는 언어에 대해 **fr (프랑스어)** **를 선택 하 고 프랑스어** 지역 언어의 경우 (벨기에)로 설정 했습니다. 특정 지역에 관계 없이 많은 언어를 지정할 수 있으므로 **지역** 필드는 선택 사항입니다. **언어** 풀 다운 메뉴가 다시 열리면 새로 추가 된 언어/지역 리소스가 표시 됩니다.
 
 [![선택한 언어 및 지역](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
@@ -139,11 +135,10 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 [![UI 모드 메뉴](resource-qualifiers-images/xs/12-ui-mode-m75-sml.png)](resource-qualifiers-images/xs/12-ui-mode-m75.png#lightbox)
 
-이 목록 아래에는 야간 모드 와 야간 모드, **왼쪽에서 오른쪽** 및 **오른쪽으로**의 레이아웃 방향이 차례로 표시 됩니다. 마지막 옵션 쌍을 사용 하 여 **원형 화면** 또는 **사각형 화면** (Android 착용 장치에 유용)을 선택할 수 있습니다.
+이 목록 아래에는 **야간 모드와 야간** 모드 **,** **왼쪽에서 오른쪽** 및 **오른쪽으로**의 레이아웃 방향이 차례로 표시 됩니다. 마지막 옵션 쌍을 사용 하 여 **원형 화면** 또는 **사각형 화면** (Android 착용 장치에 유용)을 선택할 수 있습니다.
 
 Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.App.UiModeManager)를 참조 하세요.
 **왼쪽에서 오른쪽** 및 **오른쪽에서 왼쪽** 으로의 옵션에 대 한 자세한 내용은 [layoutdirection](xref:Android.Util.LayoutDirection)을 참조 하세요.
-
 
 ## <a name="action-bar-settings"></a>작업 모음 설정
 

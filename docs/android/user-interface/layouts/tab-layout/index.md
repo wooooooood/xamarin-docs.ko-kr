@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5f67ec30ce04993701634387f7c2023a0f92004f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 1e0632eb921b25fef40b8f0483ab80d62c9e1235
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522352"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762184"
 ---
 # <a name="tabbed-layouts"></a>탭 레이아웃
-
 
 ## <a name="overview"></a>개요
 
@@ -29,8 +28,6 @@ ms.locfileid: "69522352"
 - **도구 모음** 는를 대체`ActionBar`하는 더 빠르고 유연한 작업 모음 구성 요소입니다. &ndash; `Toolbar` `Toolbar`는 Android 5.0 롤리팝 이상에서 사용할 수 있으며 [Android 지원 라이브러리 v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet 패키지를 통해 이전 버전의 android 에서도 사용할 수 있습니다. 
     `Toolbar`는 현재 Android 앱에서 사용 하도록 권장 되는 작업 모음 구성 요소입니다.
     자세한 내용은 [도구 모음](~/android/user-interface/controls/tool-bar/index.md)을 참조 하세요. 
-
-
 
 ## <a name="related-links"></a>관련 링크
 

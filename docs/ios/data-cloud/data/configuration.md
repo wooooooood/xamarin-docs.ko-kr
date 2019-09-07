@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: c0a8f57e3f4f351cf5b874ded2639b975ea71cad
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b60c8f306ad815cd3292cc94bd80f87b49df547
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281908"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766990"
 ---
 # <a name="configuring-sqlite-in-xamarinios"></a>Xamarin.ios에서 SQLite 구성
 
@@ -64,7 +64,6 @@ lock (locker){
 ```
 
 모든 데이터베이스 액세스 (읽기, 쓰기, 업데이트 등)는 동일한 잠금으로 래핑해야 합니다. Lock 절 내의 작업을 간단 하 게 유지 하 고 잠금을 사용할 수 있는 다른 메서드를 호출 하지 않도록 하 여 교착 상태 상황을 방지 하려면 주의를 기울여야 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

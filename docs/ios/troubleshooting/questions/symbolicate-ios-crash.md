@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/09/2018
-ms.openlocfilehash: edd5a2c1ed2efdffc9bd28bb06ac19348615eefc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cc681e94187530c5442ad4fb12557017b92b2bb4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292105"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769215"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>iOS 크래시 로그를 기호로 표시하는 .dSYM 파일을 어디에서 찾을 수 있나요?
 
@@ -30,7 +30,7 @@ Mac용 Visual Studio 또는 Visual Studio 2017을 사용 하 여 iOS 앱을 빌�
 
     **&lt;프로젝트 디렉터리&gt;/l i&lt;/&gt;플랫폼/구성&lt;&gt;/**
 
-    예:
+    예를 들어:
 
     **TestApp/bin/iPhone/Release/**
 
@@ -41,4 +41,3 @@ Mac용 Visual Studio 또는 Visual Studio 2017을 사용 하 여 iOS 앱을 빌�
 
 - [Symbolicating iOS 크래시 파일 (Xamarin.ios)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
 - [전문가가 제공 자세히 iOS 응용 프로그램 크래시 로그](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
-

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e6f26fb96c0a538543c8e0b0574461ea99709631
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c6534067388b59c1e191426011fd0e6b8560348f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119485"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759731"
 ---
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
@@ -52,7 +52,6 @@ Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트�
 
 > [!IMPORTANT]
 > 또한 iOS `AppDelegate` 및 Android `MainActivity`에 일부 상용구 코드를 추가 하 여 [테마 어셈블리를 로드](#loadtheme) 하는 단계를 수행 해야 합니다. 향후 미리 보기 릴리스에서 개선 됩니다.
-
 
 ## <a name="3-add-a-xaml-page"></a>3. XAML 페이지 추가
 
@@ -175,9 +174,7 @@ C# XAML에 데이터를 만들 수 있습니다를 선호 하는 개발자가 �
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
-
 테마를 처음부터 만드는 데 더 많은 작업이 필요 하지만 이후 미리 보기 릴리스에서는이 작업을 보다 쉽게 수행할 수 있습니다.
-
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -206,8 +203,6 @@ var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
 x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

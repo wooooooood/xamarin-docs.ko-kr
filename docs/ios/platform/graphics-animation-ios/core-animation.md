@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 366932e32443a7284f15f51a7a9a437d4b177438
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 730359824ec5a51a53261fbfc9519ac8560a77f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286249"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753069"
 ---
 # <a name="core-animation-in-xamarinios"></a>Xamarin.ios의 핵심 애니메이션
 
@@ -44,7 +44,6 @@ UIKit는 응용 프로그램에 애니메이션을 쉽게 추가할 수 있도�
 - 뷰 간 전환
 - 속성 애니메이션 보기
 
-
 ### <a name="view-controller-transitions"></a>뷰 컨트롤러 전환
 
  `UIViewController`에서는 메서드를 `PresentViewController` 통해 뷰 컨트롤러를 전환 하는 기능을 기본적으로 지원 합니다. 를 사용 `PresentViewController`하는 경우 두 번째 컨트롤러에 대 한 전환은 선택적으로 애니메이션을 적용할 수 있습니다.
@@ -62,7 +61,6 @@ SecondViewController vc2 = new SecondViewController {
 - `CoverVertical`– 화면 아래쪽에서 위쪽으로 슬라이드
 - `CrossDissolve`– 이전 뷰에서 새 보기가 페이드 인 & 페이드 아웃 됩니다.
 - `FlipHorizontal`-가로 오른쪽에서 왼쪽으로 대칭 이동 합니다. 해제에서는 전환이 왼쪽에서 오른쪽으로 대칭 이동 됩니다.
-
 
 전환에 애니메이션 효과를 주려면 `true` 의 두 번째 인수로를 `PresentViewController`전달 합니다.
 
@@ -106,7 +104,6 @@ Uikit는 다음을 포함 하 여 `UIView` 클래스에서 다양 한 속성에 
 - 알파
 - 변환
 - 색
-
 
 이러한 애니메이션은 정적 `NSAction` `UIView.Animate` 메서드에 전달 된 대리자의 속성 변경 내용을 지정 하 여 암시적으로 발생 합니다. 예를 들어 다음 코드는의 `UIImageView`중심점에 애니메이션 효과를 적용 합니다.
 
@@ -233,7 +230,7 @@ public override void ViewDidAppear (bool animated)
 다음 스크린샷에서는 지정 된 경로를 통해 애니메이션 효과를 주는 이미지를 포함 하는 계층을 보여 줍니다.
 
  ![](core-animation-images/12-explicit-animation.png "이 스크린샷에서는 지정 된 경로를 통해 애니메이션 효과를 주는 이미지를 포함 하는 계층을 보여 줍니다.")
- 
+
 ## <a name="summary"></a>요약
 
 이 문서에서는 *핵심 애니메이션* 프레임 워크를 통해 제공 되는 애니메이션 기능을 살펴보았습니다. UIKit에서 애니메이션을 구동 하는 방법과 하위 수준 애니메이션 컨트롤에 대해 직접 사용할 수 있는 방법을 모두 보여 주는 핵심 애니메이션을 검사 했습니다.

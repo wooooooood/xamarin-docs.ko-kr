@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/03/2017
-ms.openlocfilehash: 6831fa9a660a55eccd8584dccb1f81ae9953aee5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a4d96b9a092dfc534f40e3e62737af2a3a0004f5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282345"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768623"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Xamarin에서 watchOS의 복잡 한 문제
 
@@ -179,7 +179,6 @@ public class ComplicationController : CLKComplicationDataSource
 }
 ```
 
-
 <a name="templates" />
 
 ## <a name="complication-templates"></a>복잡 한 템플릿
@@ -234,8 +233,6 @@ public class ComplicationController : CLKComplicationDataSource
 
 이 복잡 한 스타일 `CLKComplicationTemplateUtilitarianLargeFlat`에는 템플릿이 하나만 있습니다.
 단일 이미지와 일부 텍스트를 한 줄에 표시 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

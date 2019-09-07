@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 5c891943d0d23c24169a6d226a10f83964c9257a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290646"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769793"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.ios에서 SiriKit 구현
 
@@ -50,7 +50,6 @@ MonkeyChat는 각각 화면 이름 (예: Bobo)과 연결 된 사용자의 친구
 3. **앱** -siri를 사용 하 여 작업 하는 데 사용할 수 있는 사용자별 어휘를 앱에 제공 합니다. 
 
 이러한 모든 요소 및 이러한 요소를 앱에 포함 하는 단계는 아래 섹션에서 자세히 설명 합니다.
-
 
 ## <a name="preparing-the-app"></a>앱 준비
 
@@ -156,7 +155,6 @@ namespace MonkeyChat
 두 옵션 중 하나를 선택 하는 데 도움이 되도록 모든 의도를 자연스럽 게 함께 포함 하는 경우를 참조 하세요. 예를 들어, 오디오 및 비디오 호출을 수행 하는 앱은 유사한 작업을 처리 하 고 대부분의 코드 재사용을 제공할 수 있으므로 이러한 의도를 단일 의도 확장에 포함 하는 것이 좋습니다.
 
 기존 그룹에 맞지 않는 의도 또는 의도 그룹의 경우 앱의 솔루션에 새 의도 확장을 만들어 해당 항목을 포함 합니다.
-
 
 ### <a name="setting-the-required-entitlements"></a>필요한 자격 설정
 
@@ -266,7 +264,6 @@ Mac에서 다음을 수행 합니다.
 
 앱이 `RequestSiriAuthorization` 처음 시작 될 `INPreferences` 때 클래스의 메서드를 호출 합니다. 클래스를 `AppDelegate.cs` 편집 하 고 메서드 `FinishedLaunching` 를 다음과 같이 만듭니다.
 
-
 ```csharp
 using Intents;
 ...
@@ -289,7 +286,6 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
         }
     });
 
-
     return true;
 }
 ```
@@ -300,7 +296,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 ### <a name="localization-and-siri"></a>지역화 및 Siri
 
-IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 `SiriLanguageCode` `INPreferences` 클래스의 메서드를 사용 하 여 siri에서 언어 코드를 가져와야 합니다. 예:
+IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 `SiriLanguageCode` `INPreferences` 클래스의 메서드를 사용 하 여 siri에서 언어 코드를 가져와야 합니다. 예를 들어:
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -324,7 +320,7 @@ if (language == "en-US") {
 
 사용자 지정 어휘로 등록 하는 용어를 선택 하는 경우 앱에 익숙하지 않은 사람이 잘못 해석 될 수 있는 용어를 선택 합니다. "내 체력" 또는 "내 앨범"과 같은 일반적인 용어를 등록 하지 마십시오. 예를 들어 MonkeyChat 앱은 사용자 주소록의 각 연락처와 연결 된 애칭을 등록 합니다.
 
-앱은 `SetVocabularyStrings` `INVocabulary` 클래스의 메서드를 호출 하 고 주 앱에서 컬렉션을 `NSOrderedSet` 전달 하 여 사용자별 어휘를 제공 합니다. 새 용어를 추가 하기 전에 `RemoveAllVocabularyStrings` 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예:
+앱은 `SetVocabularyStrings` `INVocabulary` 클래스의 메서드를 호출 하 고 주 앱에서 컬렉션을 `NSOrderedSet` 전달 하 여 사용자별 어휘를 제공 합니다. 새 용어를 추가 하기 전에 `RemoveAllVocabularyStrings` 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예를 들어:
 
 ```csharp
 using System;
@@ -684,12 +680,11 @@ namespace MonkeyChat
 
 -----
 
-
 사용 가능한 의도 도메인의 전체 목록은 Apple의 [의도 된 도메인 참조](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2)를 참조 하세요.
 
 ### <a name="configuring-the-main-class"></a>주 클래스 구성
 
-다음으로 개발자는 내재 된 확장의 기본 진입점 역할을 하는 주 클래스를 Siri로 구성 해야 합니다. 이는 `IINIntentHandler` 대리자를 준수 하 `INExtension` 는의 서브 클래스 여야 합니다. 예를 들어:
+다음으로 개발자는 내재 된 확장의 기본 진입점 역할을 하는 주 클래스를 Siri로 구성 해야 합니다. 이는 `IINIntentHandler` 대리자를 준수 하 `INExtension` 는의 서브 클래스 여야 합니다. 예:
 
 ```csharp
 using System;
@@ -743,7 +738,6 @@ MonkeyChat 앱 예제에서 의도 확장은 메시지를 보낼 수신자가 �
 또한 MonkeyChat는 메시지 본문에 대 한 콘텐츠가 필요 합니다. 사용자가이를 제공 하지 않은 경우 Siri는 사용자에 게 콘텐츠를 입력 하 라는 메시지를 표시 해야 합니다.
 
 의도 확장은 이러한 각 사례를 정상적으로 처리 해야 합니다.
-
 
 ```csharp
 [Export ("resolveRecipientsForSearchForMessages:withCompletion:")]
@@ -810,7 +804,6 @@ public void ConfirmSendMessage (INSendMessageIntent intent, Action<INSendMessage
 ### <a name="processing-the-intent"></a>의도 처리
 
 이는 의도 확장이 실제로 사용자 요청을 처리 하기 위해 작업을 수행 하 고, 사용자에 게 알릴 수 있도록 결과를 Siri에 다시 전달 하는 지점입니다.
-
 
 ```csharp
 public void HandleSendMessage (INSendMessageIntent intent, Action<INSendMessageIntentResponse> completion)
@@ -935,7 +928,7 @@ public void HandleSetMessageAttribute (INSetMessageAttributeIntent intent, Actio
 
 ### <a name="configuring-the-main-class"></a>주 클래스 구성
 
-내재 된 UI 확장의 기본 진입점 역할을 하는 주 클래스를 Siri에 구성 합니다. 인터페이스를 준수 하는의 `UIViewController` 서브 클래스 여야 합니다. `IINUIHostedViewController` 예를 들어:
+내재 된 UI 확장의 기본 진입점 역할을 하는 주 클래스를 Siri에 구성 합니다. 인터페이스를 준수 하는의 `UIViewController` 서브 클래스 여야 합니다. `IINUIHostedViewController` 예:
 
 ```csharp
 using System;
@@ -1064,9 +1057,6 @@ Apple은 의도 UI 확장을 디자인 하 고 구현할 때 개발자가 다음
 ## <a name="summary"></a>요약
 
 이 문서에서는 SiriKit에 대해 설명 하 고 iOS 장치에서 Siri 및 Maps 앱을 사용 하 여 사용자에 게 액세스할 수 있는 서비스를 제공 하기 위해 Xamarin.ios 앱에 추가 하는 방법을 보여 줍니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,30 +7,29 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ff2a586773e33a1f4cf78657c3c69c22e79ed047
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b8961c9e58d4336a952649ce8181ca6ebdfe3165
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153376"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757229"
 ---
 # <a name="androidsupportv7appcompat---no-resource-found-that-matches-the-given-name-attr-androidactionmodesharedrawable"></a>Android.Support.v7.AppCompat - 제공된 이름과 일치하는 리소스를 찾을 수 없습니다. attr ‘android:actionModeShareDrawable’
 
-1. Android 5.0 (API 21) SDK는 Android SDK Manager를 통해 뿐만 아니라 최신 추가 기능을 다운로드 했는지 확인 합니다.
+1. Android SDK 관리자를 통해 최신 버전 및 Android 5.0 (API 21) SDK를 다운로드 해야 합니다.
 
-2. CompileSdkVersion 21로 설정 된 응용 프로그램을 컴파일하는 있는지 확인 합니다. 필요에 따라 21도로 targetSdkVersion를 설정할 수 있습니다.
+2. CompileSdkVersion가 21로 설정 된 응용 프로그램을 컴파일 하는지 확인 합니다. 필요에 따라 targetSdkVersion를 21로 설정할 수 있습니다.
 
-3. API 19와 같은 이전 버전에 필요한 경우 Nuget 페이지에서 발견 된 각 버전을 다운로드 하세요.
+3. API 19와 같은 이전 버전이 필요한 경우 Nuget 페이지에 있는 해당 버전을 다운로드 하세요.
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
-*참고*: 수동으로 설치한 경우이 패키지 관리자 콘솔을 통해, Xamarin.Android.Support.v4의 동일한 버전을 설치할 수도 있습니다 있는지 확인
+*참고*: 패키지 관리자 콘솔을 통해이를 수동으로 설치 하는 경우 동일한 버전의 Xamarin.ios도 설치 해야 합니다.
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 
-스택 오버플로 참조: [https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
+Stack Overflow 참조:[https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro](https://stackoverflow.com/questions/26431676/appcompat-v721-0-0-no-resource-found-that-matches-the-given-name-attr-andro)
 
 ## <a name="see-also"></a>참고 항목
 
 - [어떤 Android SDK 패키지를 설치해야 하나요?](~/android/troubleshooting/questions/install-android-sdk-packages.md)
-

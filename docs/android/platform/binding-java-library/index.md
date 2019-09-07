@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: b795a53fc78adee19e1e2d1c57c9c4344aa4281b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e829c953278d8edeb697d27da8e3707ee1c91784
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119643"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757594"
 ---
 # <a name="binding-a-java-library"></a>Java 라이브러리 바인딩
 
@@ -65,7 +65,6 @@ com.company.package
 using Com.Company.Package;
 ```
 
-
 기존 Android 라이브러리를 바인딩할 때는 다음 사항을 염두에 두어야 합니다.
 
 - **라이브러리에 대 한 외부 종속성이 있나요?** &ndash;Android 라이브러리에 필요한 모든 Java 종속성은 **ReferenceJar** 프로젝트에 포함 되거나 **EmbeddedReferenceJar**로 포함 되어야 합니다. 모든 네이티브 어셈블리를 바인딩 프로젝트에 **EmbeddedNativeLibrary**로 추가 해야 합니다.  
@@ -73,7 +72,6 @@ using Com.Company.Package;
 - **Android 라이브러리 대상의 Android API 버전은 무엇 인가요?** &ndash;Android API 수준을 "다운 그레이드" 할 수 없습니다. Xamarin Android 바인딩 프로젝트가 Android 라이브러리와 동일한 API 수준 (또는 그 이상)을 대상으로 하는지 확인 합니다.
 
 - **라이브러리를 컴파일하는 데 사용 된 JDK 버전은 무엇 인가요?** &ndash;Android 라이브러리가 Xamarin.ios에서 사용 하는 것과 다른 버전의 JDK로 빌드된 경우 바인딩 오류가 발생할 수 있습니다. 가능 하면 Xamarin.ios 설치에 사용 되는 것과 동일한 버전의 JDK를 사용 하 여 Android 라이브러리를 다시 컴파일하십시오.
-
 
 ## <a name="build-actions"></a>빌드 작업
 
@@ -85,11 +83,11 @@ using Com.Company.Package;
 
 - `LibraryProjectZip`&ndash; 을 포함 합니다. AAR 파일을 결과 바인딩 라이브러리로 변환 합니다. GDIPLUS.DLL. 이는 바인딩된의 코드 및 리소스에 액세스할 수 있다는 점을 제외 하 고 EmbeddedJar와 비슷합니다. AAR 파일입니다. 을 포함 하려는 경우이 옵션을 사용 합니다. 바인딩 라이브러리로 AAR.
 
-- `ReferenceJar` 참조를 지정 합니다. jar: 참조 jar는 바인딩된 jar 또는입니다. &ndash; AAR 파일은에 따라 달라 집니다. 이 참조 **jar** 는 컴파일 타임 종속성을 충족 하는 데만 사용 됩니다. 이 빌드 작업을 사용 하는 C# 경우 참조 **jar** 에 대 한 바인딩이 생성 되지 않으며 결과 바인딩 라이브러리에 포함 되지 않습니다. GDIPLUS.DLL. 참조에 대 한 바인딩 라이브러리를 만들지만 아직 수행 하지 않은 경우 이 옵션을 사용 합니다. 이 빌드 작업은 여러 **.jar**s (및/또는)를 패키징하는 데 유용 합니다. AARs)를 상호 의존적인 여러 바인딩 라이브러리로 변환 합니다.
+- `ReferenceJar`참조를 지정 합니다. jar: 참조 jar는 바인딩된 jar 또는입니다. &ndash; AAR 파일은에 따라 달라 집니다. 이 참조 **jar** 는 컴파일 타임 종속성을 충족 하는 데만 사용 됩니다. 이 빌드 작업을 사용 하는 C# 경우 참조 **jar** 에 대 한 바인딩이 생성 되지 않으며 결과 바인딩 라이브러리에 포함 되지 않습니다. GDIPLUS.DLL. 참조에 대 한 바인딩 라이브러리를 만들지만 아직 수행 하지 않은 경우이 옵션을 사용 **합니다.** 이 빌드 작업은 여러 **.jar**s (및/또는)를 패키징하는 데 유용 합니다. AARs)를 상호 의존적인 여러 바인딩 라이브러리로 변환 합니다.
 
 - `EmbeddedReferenceJar`결과 바인딩 라이브러리에 참조 jar를 포함 합니다. &ndash; GDIPLUS.DLL. 입력 C# **jar** (또는)에 대 한 바인딩을 만들려는 경우이 빌드 작업을 사용 합니다. AAR) 및 모든 참조 **jar**를 바인딩 라이브러리에 있습니다.
 
-- `EmbeddedNativeLibrary`Native를 바인딩에 포함 합니다. &ndash; 이 빌드 작업은에 사용 **되므로** **jar** 파일에 필요한 파일을 바인딩합니다. Java 라이브러리에서 코드를 실행 하기 전에 라이브러리를 수동으로 로드 해야 할 수도 있습니다. 이 내용은 아래에 설명 되어 있습니다.
+- `EmbeddedNativeLibrary`Native를 바인딩에 포함 **합니다.** &ndash; 이 빌드 작업은에 사용 **되므로** **jar** 파일에 필요한 파일을 바인딩합니다. Java 라이브러리에서 코드를 실행 하기 전에 **라이브러리를** 수동으로 로드 해야 할 수도 있습니다. 이 내용은 아래에 설명 되어 있습니다.
 
 이러한 빌드 작업은 다음 가이드에 자세히 설명 되어 있습니다.
 
@@ -125,8 +123,6 @@ Xamarin Android 바인딩 생성기는 .NET 패턴에 해당 하는 일부 Java 
 
 - Java의 _내부 클래스_ 는의 C#인스턴스 생성자를 사용 하는 _중첩 클래스_ 입니다.
 
-
-
 ## <a name="binding-scenarios"></a>바인딩 시나리오
 
 다음 바인딩 시나리오 가이드를 참조 하 여 앱에 통합 하기 위해 Java 라이브러리 (또는 라이브러리)를 바인딩할 수 있습니다.
@@ -140,7 +136,6 @@ Xamarin Android 바인딩 생성기는 .NET 패턴에 해당 하는 일부 Java 
 - [바인딩을 사용자 지정](~/android/platform/binding-java-library/customizing-bindings/index.md) 하는 방법에 대 한 자세한C#내용은 바인딩을 수동으로 수정 하 여 빌드 오류를 해결 하 고 결과 API를 모양을 지정 하는 방법을 설명 합니다.
 
 - [바인딩 문제 해결](~/android/platform/binding-java-library/troubleshooting-bindings.md) 에서는 일반적인 바인딩 오류 시나리오를 나열 하 고, 가능한 원인을 설명 하 고, 이러한 오류를 해결 하기 위한 제안 사항을 제공 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

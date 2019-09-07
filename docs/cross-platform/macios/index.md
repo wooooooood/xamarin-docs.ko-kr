@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: b6ac960770320ed100e8b082cabf8240efed070b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10ab9b379344ab6c514eba84f1ef3fd9c7400b73
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290831"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765541"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple 플랫폼 (iOS 및 Mac)
 
@@ -31,7 +31,6 @@ IOS 및 Mac 프로젝트에 대 한 Unified API 프레임 워크에 동일한 �
 > **클래식 프로필 사용 중단:** 새 플랫폼이 Xamarin.ios에 추가 되 면 클래식 프로필 (monotouch.dialog)에서 점진적으로 사용 중단 기능을 시작 합니다. 예를 들어 NRC (새-ref-count) 옵션이 제거 되었습니다. NRC는 항상 모든 통합 응용 프로그램에 대해 사용 하도록 설정 되어 있습니다. 즉, NRC가 옵션으로 설정 되지 않은 경우에는 알려진 문제가 없습니다. 이후 릴리스에서는 가비지 수집기로 Boehm를 사용 하는 옵션이 제거 됩니다. 이는 통합 응용 프로그램에서 사용할 수 없는 옵션 이기도 했습니다. 클래식 지원의 전체 제거는 Xamarin.ios 10.0의 릴리스와 2016에 대해 예약 되어 있습니다.
 
 기본 프레임 워크 `MonoTouch.` 에는 또는 `MonoMac.` 네임 스페이스 접두사가 있기 때문에 원본 (비 통합) xamarin.ios 및 xamarin.ios api에서 코드 공유를 더 어렵게 만들었습니다.  개발자가 동일한 파일에서 MonoMac 및 monotouch.dialog 네임 스페이스를 모두 참조 `using` 하는 문을 추가 하 여 코드를 공유할 수 있도록 하는 몇 가지 빈 네임 스페이스를 제공 했습니다. Classic API은 내부적으로 배포 되는 레거시 앱 에서만 사용 해야 합니다 (Unified API로 업그레이드 하는 것이 권장 됨).
-
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>클래식에서 Unified API로 업데이트
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a14930d52b551b35dcf5a36e2475b021e5bf27d1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ad7e2e16784a309286d42d4562a52ef57671e477
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646586"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764560"
 ---
 # <a name="xamarinandroid-gridlayout"></a>Xamarin Android GridLayout
 
@@ -20,7 +20,6 @@ ms.locfileid: "68646586"
  [![네 개의 셀이 표시 되는 잘린 GridLayout](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout`는 플랫 뷰 계층 구조와 함께 작동 합니다. 여기서 자식 뷰는 행과 열을 지정 하 여 그리드에서 해당 위치를 설정 합니다. 이러한 방식으로 *GridLayout* 는 중간 뷰가 TableLayout에서 사용 되는 테이블 행에 표시 되는 것과 같은 테이블 구조를 제공 하지 않고도 그리드에 뷰를 배치할 수 있습니다. *GridLayout* 는 플랫 계층을 유지 관리 하 여 자식 뷰를 더 빠르게 레이아웃 할 수 있습니다. 실제로 코드에서이 개념의 의미를 설명 하는 예제를 살펴보겠습니다.
-
 
 ## <a name="creating-a-grid-layout"></a>그리드 레이아웃 만들기
 
@@ -56,8 +55,6 @@ ms.locfileid: "68646586"
 
  [![4 개 셀을 표시 하는 GridLayoutDemo 앱의 스크린샷](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
-
-
 ## <a name="specifying-orientation"></a>방향 지정
 
 위의 XML에서 각 `TextView` 는 행 이나 열을 지정 하지 않습니다. 이러한 지정을 지정 하지 않으면는 `GridLayout` 방향에 따라 각 자식 뷰를 순서 대로 할당 합니다. 예를 들어 GridLayout의 방향을 기본값인 가로에서 다음과 같이 세로로 변경 하겠습니다.
@@ -79,8 +76,6 @@ ms.locfileid: "68646586"
 이렇게 하면 런타임 시 다음 사용자 인터페이스가 생성 됩니다.
 
  [![세로 방향으로 배치 된 셀이 있는 GridLayoutDemo의 스크린샷](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
-
-
 
 ### <a name="specifying-explicit-position"></a>명시적 위치 지정
 
@@ -115,8 +110,6 @@ ms.locfileid: "68646586"
             android:layout_column="1"  />
 </GridLayout>
 ```
-
-
 
 ### <a name="specifying-spacing"></a>간격 지정
 
@@ -175,8 +168,6 @@ ms.locfileid: "68646586"
  [![간격이 있는 큰 셀을 보여 주는 GridLayoutDemo의 스크린샷](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 새 `Space` 보기를 사용 하면 간격을 허용 하 고 모든 자식 보기에서 특성을 설정할 필요가 없다는 이점도 있습니다.
-
-
 
 ### <a name="spanning-columns-and-rows"></a>열 및 행 확장
 
@@ -241,7 +232,6 @@ ms.locfileid: "68646586"
 이렇게 하면 아래와 `TextViews` `GridLayout` 같이의 아래쪽에 단추가 추가 된 상태로 이전에 있던 레이아웃과 유사한의 레이아웃이 만들어집니다.
 
  [![두 열을 모두 확장 하는 단추가 있는 GridLayoutDemo의 스크린샷](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
-
 
 ## <a name="related-links"></a>관련 링크
 

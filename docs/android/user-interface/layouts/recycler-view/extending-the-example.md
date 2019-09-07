@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/13/2018
-ms.openlocfilehash: ea3bfccd9133f6bb4cdf2e2a72bd20a307fb80d1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2fc2eabb26a9635b569cc6d3a51195fb554ca950
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522498"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758608"
 ---
 # <a name="extending-the-recyclerview-example"></a>RecyclerView 예제 확장
 
-
 [기본 RecyclerView 예제](~/android/user-interface/layouts/recycler-view/recyclerview-example.md) 에 설명 된 기본 앱은 실제로 &ndash; 는 간단 하 게 스크롤할 수 없으며, 쉽게 탐색할 수 있도록 고정 된 사진 항목 목록을 표시 합니다. 실제 응용 프로그램에서 사용자는 디스플레이에서 항목을 탭 하 여 앱과 상호 작용할 수 있는 것으로 간주 합니다. 또한 기본 데이터 원본은 변경 되거나 앱에서 변경 될 수 있으며, 표시의 내용이 이러한 변경 내용과 일관 되 게 유지 되어야 합니다. 다음 섹션에서는 항목 클릭 이벤트를 처리 하 고 기본 데이터 소스가 변경 될 때 업데이트 `RecyclerView` 하는 방법에 대해 알아봅니다.
-
 
 ### <a name="handling-item-click-events"></a>항목 클릭 이벤트 처리
 
@@ -164,7 +162,6 @@ randomPickBtn.Click += delegate
 [![교환 전 첫 번째 스크린샷, 교환 후 두 번째 스크린샷](extending-the-example-images/02-random-pick-sml.png)](extending-the-example-images/02-random-pick.png#lightbox)
 
 물론, `NotifyDataSetChanged` 에 대 `NotifyItemChanged`한 두 호출을 수행 하는 대신를 호출할 수도 `RecyclerView` 있지만 이렇게 하면 컬렉션의 두 항목만 변경 된 경우에도 전체 컬렉션을 새로 고칠 수 있습니다. 호출은를 호출 `NotifyDataSetChanged`하는 것 보다 훨씬 더 효율적입니다. `NotifyItemChanged`
-
 
 ## <a name="related-links"></a>관련 링크
 

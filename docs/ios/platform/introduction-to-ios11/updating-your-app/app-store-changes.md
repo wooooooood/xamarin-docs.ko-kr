@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/13/2016
-ms.openlocfilehash: fa44ba260a62a6e0bd036c08c62371734b38d82d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286581"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752323"
 ---
 # <a name="app-store-changes-in-ios-11"></a>IOS 11의 앱 스토어 변경 내용
 
@@ -33,7 +33,6 @@ IOS 앱 스토어는 사용자가 저장소를 효율적으로 탐색할 수 있
 저장소 아이콘 (또는 마케팅 아이콘)은 더 이상 iTunes Connect에서 관리 되지 않으며, 대신 앱 아이콘과 마찬가지로 앱 이진에 [자산 카탈로그로](~/ios/app-fundamentals/images-icons/app-icons.md) 포함 되어야 합니다. IOS 11 앱을 성공적으로 제출 하려면 PNG 형식의 1024 x 1024 저장소 아이콘이 자산 카탈로그에 포함 되어 있어야 합니다.
 
 앱 thinning이 추가 asset catalog가 앱 크기를 늘리지 않도록 합니다.
-
 
 ## <a name="in-app-purchases-promoted-in-the-app-store"></a>앱 스토어에서 승격 된 앱 내 구매
 
@@ -96,7 +95,6 @@ IOS 11을 사용 하 여 Apple은 앱의 업데이트에 대 한 단계적 릴�
 ![자동 업데이트에 대 한 단계별 릴리스를 표시 하는 옵션](app-store-changes-images/image6.png)
 
 앱 스토어의 업데이트 탭에서 즉시 업데이트를 다운로드할 수 있습니다. 단계적 릴리스는 자동 다운로드를 선택한 사용자 에게만 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

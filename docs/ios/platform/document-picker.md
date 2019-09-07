@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 67ee8f1ef7f254eb77cfb186a478993b6fd3847c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 11c022298cbac60b86f4ef549e30cef3aa4d4660
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280032"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753415"
 ---
 # <a name="document-picker-in-xamarinios"></a>Xamarin.ios의 문서 선택기
 
@@ -202,7 +202,6 @@ IOS 8 이전에는 `NSMetadataQuery` 삭제, 생성 및 이름 변경 등의 픽
 1. 응용 프로그램은 응용 프로그램 컨테이너에 새 파일을 만듭니다.
 1. 이전에는 응용 프로그램 `NSMetadataQuery` 컨테이너에 대 한 수정 내용을 확인 하 고 필요한 `NSMetadata` 레코드를 만들기 전에 지연이 발생 합니다.
 
-
 `NSMetadata` 레코드 생성의 지연으로 인해 응용 프로그램에는 로컬 파일 변경과 클라우드 기반 변경에 대 한 두 개의 데이터 원본이 열려 있어야 했습니다.
 
 ### <a name="stitching"></a>중철
@@ -218,14 +217,10 @@ IOS 8 `NSMetadataQuery` 에서는 중철 이라는 새 기능을 사용 하 여 
 1. 응용 프로그램 컨테이너의 후크가 수정 사항을 확인 하 고 필요한 `NSMetadataQuery` `NSMetadata` 레코드를 만들기 위한 호출을 확인 합니다.
 1. 레코드 `NSMetadata` 는 파일 바로 뒤에 생성 되며 응용 프로그램에서 사용할 수 있게 됩니다.
 
-
 중철를 사용 하 여 응용 프로그램은 더 이상 로컬 및 클라우드 기반 파일 변경 내용을 모니터링 하기 위해 데이터 원본을 열 필요가 없습니다. 이제 응용 프로그램에서 직접를 `NSMetadataQuery` 사용할 수 있습니다.
 
 > [!IMPORTANT]
 > 중철는 응용 프로그램이 위의 섹션에서 설명한 대로 파일 조정을 사용 하는 경우에만 작동 합니다. 파일 조정을 사용 하지 않는 경우 Api는 기존 사전 iOS 8 동작을 기본값으로 사용 합니다.
-
-
-
 
 ### <a name="new-ios-8-metadata-features"></a>새 iOS 8 메타 데이터 기능
 
@@ -236,12 +231,10 @@ IOS 8의에 `NSMetadataQuery` 는 다음과 같은 새로운 기능이 추가 �
 - 로컬에서 사용 가능한 `NSUrl_PromisedItems` 콘텐츠를 사용 하거나 사용 하지 않을 수 있는 파일의 파일 특성에 액세스 하는 새로운 API가 있습니다.
 - 메서드를 사용 하 여 지정 된 파일에 대 한 정보를 `GetPromisedItemResourceValues` 가져오거나 메서드를 사용 하 여 한 번에 두 개 이상의 파일에 대 한 정보를 가져옵니다. `GetPromisedItemResourceValue`
 
-
 메타 데이터를 처리 하기 위해 두 개의 새로운 파일 조정 플래그가 추가 되었습니다.
 
 - `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
 - `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
-
 
 위의 플래그를 사용 하면 문서 파일의 콘텐츠를 사용 하기 위해 로컬에서 사용할 필요가 없습니다.
 
@@ -256,7 +249,6 @@ using Foundation;
 using UIKit;
 using ObjCRuntime;
 using System.IO;
-
 
 #region Static Properties
 public const string TestFilename = "test.txt"; 
@@ -439,7 +431,6 @@ API, `GetPromisedItemResourceValue` `GetPromisedItemResourceValues` a`NSUrlThumb
 
 기존 API에 대 한 수정 사항과 함께 iCloud 기반 문서로 작업 하는 기본 사항을 사용 하 여 Xamarin iOS 8 모바일 응용 프로그램에서 문서 선택 보기 컨트롤러를 구현할 준비가 되었습니다.
 
-
 ## <a name="enabling-icloud-in-xamarin"></a>Xamarin에서 iCloud 사용
 
 문서 선택기를 Xamarin.ios 응용 프로그램에서 사용할 수 있으려면 먼저 응용 프로그램과 Apple을 통해 iCloud 지원을 사용 하도록 설정 해야 합니다. 
@@ -451,8 +442,6 @@ API, `GetPromisedItemResourceValue` `GetPromisedItemResourceValues` a`NSUrlThumb
 3. 이 앱 ID를 포함 하는 프로 비전 프로필을 만듭니다.
 
 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 가이드는 처음 두 단계를 안내 합니다. 프로 비전 프로필을 만들려면 프로 [비전 프로필](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) 가이드의 단계를 따릅니다.
-
-
 
 다음 단계에서는 iCloud 용 응용 프로그램을 구성 하는 프로세스를 설명 합니다.
 
@@ -539,7 +528,6 @@ namespace DocPicker
             Query.StartQuery ();
             Console.WriteLine ("Querying: {0}", Query.IsGathering);
         }
-
 
         [Export("queryDidFinishGathering:")]
         public void DidFinishGathering (NSNotification notification) {
@@ -833,7 +821,6 @@ IOS 8 이전의 외부 문서에 액세스 하는 방법을 살펴보겠습니�
 1. 문서를 선택 하 고 `UIDocumentInteractionController` 를 사용 하 여 문서를 새 응용 프로그램으로 보냅니다.
 1. 마지막으로, 원래 문서의 복사본이 새 응용 프로그램의 컨테이너에 배치 됩니다.
 
-
 이 문서에서 두 번째 응용 프로그램을 열고 편집할 수 있습니다.
 
 ### <a name="discovering-documents-outside-of-an-apps-container"></a>앱 컨테이너 외부에서 문서 검색
@@ -910,20 +897,19 @@ if (presentationPopover!=null) {
 다음은 iPhone 장치에서 실행 될 때 위의 코드가 문서 선택기를 표시 하는 방법의 예입니다.
 
 1. 사용자가 응용 프로그램을 시작 하면 기본 인터페이스가 표시 됩니다.   
- 
+
     [![](document-picker-images/image33.png "기본 인터페이스가 표시 됩니다.")](document-picker-images/image33.png#lightbox)
 1. 사용자가 화면 위쪽에 있는 **작업** 단추를 탭 하면 사용 가능한 공급자 목록에서 **문서 공급자** 를 선택 하 라는 메시지가 표시 됩니다.   
- 
+
     [![](document-picker-images/image34.png "사용 가능한 공급자 목록에서 문서 공급자를 선택 합니다.")](document-picker-images/image34.png#lightbox)
 1. 선택한 **문서 공급자**에 대해 **문서 선택기 보기 컨트롤러가** 표시 됩니다.   
- 
+
     [![](document-picker-images/image35.png "문서 선택기 보기 컨트롤러가 표시 됩니다.")](document-picker-images/image35.png#lightbox)
 1. 사용자는 **문서 폴더** 를 탭 하 여 해당 내용을 표시 합니다.   
- 
+
     [![](document-picker-images/image36.png "문서 폴더 내용")](document-picker-images/image36.png#lightbox)
 1. 사용자가 **문서** 를 선택 하면 **문서 선택** 이 닫힙니다.
 1. 주 인터페이스는 다시 표시 되 고, **문서** 는 외부 컨테이너에서 로드 되 고 콘텐츠는 표시 됩니다.
-
 
 문서 선택기 보기 컨트롤러의 실제 표시는 사용자가 장치에 설치 하 고 문서 선택기 모드가 구현 된 문서 공급자에 따라 달라 집니다. 위의 예에서는 Open 모드를 사용 하 고 있으며, 다른 모드 유형에 대해서는 아래에서 자세히 설명 합니다.
 
@@ -1021,13 +1007,12 @@ if (Bookmark != null) {
 문서 선택기 뷰 컨트롤러는 두 가지 작업 모드를 제공 합니다.
 
 1. **열기 모드** –이 모드에서 사용자가 및 외부 문서를 선택 하면 문서 선택기는 응용 프로그램 컨테이너에 보안 범위가 지정 된 책갈피를 만듭니다.   
- 
+
     [![](document-picker-images/image37.png "응용 프로그램 컨테이너의 보안 범위 책갈피")](document-picker-images/image37.png#lightbox)
 1. **가져오기 모드** –이 모드에서 사용자가 및 외부 문서를 선택 하면 문서 선택기에서 책갈피를 만들지 않고 파일을 임시 위치에 복사한 다음이 위치의 문서에 대 한 액세스를 응용 프로그램에 제공 합니다.   
- 
+
     [![](document-picker-images/image38.png "문서 선택은 파일을 임시 위치에 복사 하 고 응용 프로그램에이 위치에 있는 문서에 대 한 액세스를 제공 합니다.")](document-picker-images/image38.png#lightbox)   
  응용 프로그램이 어떤 이유로 든 종료 되 면 임시 위치가 비워지고 파일이 제거 됩니다. 응용 프로그램은 파일에 대 한 액세스를 유지 해야 하는 경우 복사본을 만들어 응용 프로그램 컨테이너에 저장 해야 합니다.
-
 
 열기 모드는 응용 프로그램에서 다른 응용 프로그램과 공동 작업을 수행 하 고 문서의 모든 변경 내용을 해당 응용 프로그램과 공유 하려는 경우에 유용 합니다. 가져오기 모드는 응용 프로그램에서 다른 응용 프로그램과의 문서 수정 내용을 공유 하지 않으려는 경우에 사용 됩니다.
 
@@ -1042,7 +1027,6 @@ if (Bookmark != null) {
 1. 새 문서 선택기 뷰 컨트롤러를 열고의 `NSUrl` `MoveToService` 모드를 사용 하 여이를 전달 합니다. 
 1. 사용자가 새 위치를 선택 하면 문서가 현재 위치에서 새 위치로 이동 됩니다.
 1. 응용 프로그램을 만드는 중에도 파일에 액세스할 수 있도록 참조 문서는 앱의 응용 프로그램 컨테이너에 기록 됩니다.
-
 
 다음 코드를 사용 하 여 문서를 외부 위치로 이동할 수 있습니다.`var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
 
@@ -1067,7 +1051,6 @@ IOS 8을 사용 하는 경우 Apple은 최종 사용자가 실제로 존재 하�
 - **문서 선택기 확장** – 사용자가 `UIViewController` 대체 저장소 위치에서 문서를 선택할 수 있는 그래픽 인터페이스를 제공 하는 하위 클래스를 제공 합니다. 이 하위 클래스는 문서 선택기 보기 컨트롤러의 일부로 표시 됩니다.
 - **파일 제공 확장명** – 실제로 파일 내용을 제공 하는 것을 처리 하는 비 UI 확장입니다. 이러한 확장은 파일 조정 ( `NSFileCoordinator` )을 통해 제공 됩니다. 이는 파일 조정이 필요한 또 다른 중요 한 사례입니다.
 
-
 다음 다이어그램에서는 문서 공급자 확장을 사용 하는 경우 일반적인 데이터 흐름을 보여 줍니다.
 
  [![](document-picker-images/image39.png "이 다이어그램은 문서 공급자 확장 작업 시 일반적인 데이터 흐름을 보여 줍니다.")](document-picker-images/image39.png#lightbox)
@@ -1082,7 +1065,6 @@ IOS 8을 사용 하는 경우 Apple은 최종 사용자가 실제로 존재 하�
 1. 파일 코디네이터는 사용자 지정 파일 공급자 확장명을 호출 하 여 파일을 검색 합니다.
 1. 파일의 내용이 파일 코디네이터로 반환 됩니다.
 1. 파일의 내용이 응용 프로그램에 반환 됩니다.
-
 
 ### <a name="security-and-bookmarks"></a>보안 및 책갈피
 
@@ -1108,7 +1090,6 @@ IOS 8을 사용 하는 경우 Apple은 최종 사용자가 실제로 존재 하�
 1. `NSUrl`파일의 URL을 사용 하 여 파일 공급자 확장명을 호출 합니다.
 1. 파일 확장명 공급자는 파일에 액세스 하 고 파일의 위치를로 `NSUrl` 반환 합니다.
 1. 파일 위치는 보안 정보와 함께 제공 되며 응용 프로그램으로 반환 됩니다.
-
 
 여기에서 응용 프로그램은 파일에 액세스 하 고 정상적으로 작업할 수 있습니다.
 

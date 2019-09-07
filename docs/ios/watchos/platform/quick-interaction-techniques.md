@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: a0719dce3b7f5484168dc5679237b01286f5de78
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286752"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768599"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin의 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -98,7 +98,7 @@ WatchOS 3에서 제스처 인식기를 사용 하 여 작업 하는 경우 Apple
 - 일부 제스처는 다음과 같은 다른 제스처 형식 보다 우선적으로 적용 됩니다.
   - 스크롤
   - Force Touch
- 
+
 ### <a name="digital-crown-rotation"></a>Digital Crown 회전
 
 개발자는 watchOS 3 앱에서 Digital Crown 지원을 구현 하 여 사용자에 게 향상 된 탐색 속도 및 전체 자릿수 상호 작용을 제공할 수 있습니다.
@@ -120,7 +120,7 @@ Digital Crown 액세스는 다음 요소에 의해 제공 됩니다.
 
 #### <a name="rotations-per-second"></a>초당 회전
 
-Digital Crown에서 초당 회전에 액세스 하면 물리학 기반 애니메이션을 사용할 때 유용 합니다. 초당 회전에 액세스 하려면 조사식 확장 `CrownSequencer` `WKInterfaceController` 의의 속성을 사용 합니다. 예를 들어:
+Digital Crown에서 초당 회전에 액세스 하면 물리학 기반 애니메이션을 사용할 때 유용 합니다. 초당 회전에 액세스 하려면 조사식 확장 `CrownSequencer` `WKInterfaceController` 의의 속성을 사용 합니다. 예:
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -128,7 +128,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>회전 델타
 
-Digital Crown의 회전 델타를 사용 하 여 회전 수를 계산 합니다. 의 override 메서드를 사용 하여회전델타에액세스합니다.`WKCrownDelegate` `CrownDidRotate` 예를 들어:
+Digital Crown의 회전 델타를 사용 하 여 회전 수를 계산 합니다. 의 override 메서드를 사용 하여회전델타에액세스합니다.`WKCrownDelegate` `CrownDidRotate` 예:
 
 ```csharp
 using System;
@@ -169,7 +169,6 @@ Apple은 업데이트 되는 UI 요소의 변경 내용 민감도에 따라 회�
 회전 델타의`+/-`부호 ()는 사용자가 Digital Crown를 설정 하는 방향을 나타냅니다.
 
 [![](quick-interaction-techniques-images/quick03.png "회전 델타의 부호는 사용자가 Digital Crown를 설정 하는 방향을 나타냅니다.")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 사용자가 스크롤하면 WatchKit는 긍정 델타를 반환 하 고 아래로 스크롤하면 사용자가 감시를 제공 하는 방향에 관계 없이 음수 델타가 반환 됩니다.
 

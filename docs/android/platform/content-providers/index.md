@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 2533ad80571e2c8fe94cb4a2dcb0ec0ff0dd68cb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3dd321840c4be0729b843897ad51cf5bd2b61196
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643593"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758914"
 ---
 # <a name="intro-to-contentproviders"></a>ContentProviders 소개
 
 _Android 운영 체제는 콘텐츠 공급자를 사용 하 여 미디어 파일, 연락처 및 일정 정보와 같은 공유 데이터에 쉽게 액세스할 수 있습니다. 이 문서에서는 ContentProvider 클래스를 소개 하 고이를 사용 하는 방법에 대 한 두 가지 예를 제공 합니다._
-
 
 ## <a name="content-providers-overview"></a>콘텐츠 공급자 개요
 
@@ -40,8 +39,6 @@ _Android 운영 체제는 콘텐츠 공급자를 사용 하 여 미디어 파일
 사용자 `ContentProviders` 지정은 자신의 앱 내에서 사용 하거나 다른 응용 프로그램에서 사용할 수 있도록 데이터를 패키지 하는 편리한 방법입니다 (사용자 지정 검색 및 복사/붙여넣기와 같은 특수 한 사용 포함).
 
 이 단원의 항목에서는 코드를 사용 하 고 작성 `ContentProvider` 하는 몇 가지 간단한 예제를 제공 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/09/2018
-ms.openlocfilehash: 1d0341af35d3c580141c5bfc76e9f170cd7ff4c5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4d91ba7b71f2eb61d003700269675c785cbfb0c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119099"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755036"
 ---
 # <a name="fonts"></a>글꼴
 
@@ -262,7 +262,7 @@ FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.googl
 를 `FontContractCompat.RequestFont` 메서드에 전달 `FontRequest` 하기 전에 다음 두 개체를 만들어야 합니다.
 
 - **`FontsContractCompat.FontRequestCallback`** &ndash; 확장 해야 하는 추상 클래스입니다. 가 완료 되 면 `RequestFont` 호출 되는 콜백입니다. Xamarin Android 앱은 `FontsContractCompat.FontRequestCallback` `OnTypefaceRequestFailed` 및 `OnTypefaceRetrieved`를 하위 클래스 하 고 재정의 해야 하며, 각각 다운로드에 실패 하거나 성공할 경우 수행할 작업을 제공 해야 합니다.
-- **`Handler`** 이는 필요한 `Handler` 경우에서 `RequestFont` 스레드에 글꼴을 다운로드 하는 데 사용 하는입니다. &ndash; UI 스레드에서 글꼴을 다운로드 해서는 안 됩니다.
+- **`Handler`** 이는 필요한 `Handler` 경우에서 `RequestFont` 스레드에 글꼴을 다운로드 하는 데 사용 하는입니다. &ndash; UI 스레드에서 **글꼴을 다운로드 해서는 안** 됩니다.
 
 이 코드 조각은 Google Fonts Open Source C# collection에서 비동기적으로 글꼴을 다운로드 하는 클래스의 예입니다. `FontRequestCallback` 인터페이스를 구현 하 고이 완료 되 C# 면 `FontRequest` 이벤트를 발생 시킵니다.
 
@@ -278,7 +278,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
     {
         // just an empty delegate to avoid null reference exceptions.  
     };
-
 
     public void DownloadFonts(Context context)
     {

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: c162912d6762ac1ee9d2896f96bbb35e9fef06f4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285203"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752004"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
@@ -67,7 +67,6 @@ IOS 9가 도입 됨에 따라 Apple은 iOS 8 및 이전 버전에서 사용 하�
 
 자세한 내용은 [연락처 및 연락처 UI](~/ios/platform/contacts.md) 설명서를 참조 하세요.
 
-
 ## <a name="new-search-apis"></a>새 검색 Api
 
 검색은 Xamarin.ios 앱 내의 정보에 액세스 하는 뛰어난 새 방법을 제공 하기 위해 iOS 9에서 확장 되었습니다. 새 검색 Api를 사용 하 여 스포트라이트 및 Safari 검색 결과, 전달 및 Siri 미리 알림 및 제안을 통해 앱의 콘텐츠를 검색 가능 하도록 만들 수 있습니다. 그러면 사용자가 앱 내에서 작업 및 정보에 빠르게 액세스할 수 있습니다.
@@ -83,7 +82,6 @@ IOS 9가 도입 됨에 따라 Apple은 iOS 8 및 이전 버전에서 사용 하�
 스택 뷰 컨트롤을 사용 하면 사용자 인터페이스를 레이아웃 하는 데 필요한 작업 양이 크게 줄어듭니다. 스택 보기에 연결 된 모든 하위 뷰의 레이아웃은 축, 분포, 맞춤 및 간격과 같은 개발자 정의 속성에 따라 자동으로 관리 됩니다.
 
 자세한 내용은 [Stack 뷰 소개](~/ios/user-interface/controls/uistackview.md) 설명서를 참조 하세요.
-
 
 ## <a name="collection-view-changes"></a>컬렉션 뷰 변경 내용
 
@@ -145,7 +143,6 @@ IOS 9에서 Apple은 다음과 같이 Secure Enclave 및 기타 항목 보호 �
 
 자세한 내용은 [TOUCH ID 소개 설명서를](~/ios/platform/touchid.md) 참조 하세요.
 
-
 ## <a name="right-to-left-language-support"></a>오른쪽에서 왼쪽으로 쓰기 언어 지원
 
 IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음이 포함됩니다.
@@ -155,8 +152,6 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 - [Uiimage](xref:UIKit.UIImage) 클래스의 [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) 속성을 사용 하 여 프로그래밍 방식으로 이미지를 대칭 이동 하는 기능입니다.
 
 자세한 내용은 Apple의 [지원 오른쪽에서 왼쪽 언어](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) 설명서를 참조 하세요.
-
-
 
 ## <a name="additional-framework-changes"></a>추가 프레임 워크 변경
 
@@ -205,8 +200,6 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: a2487fd0f7d90b70ec0dc1fb1978ca06a3108822
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 2787e814d330bf8262ba05e38c7827211e07fd72
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522608"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764255"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Xamarin.ios를 사용 하 여 ListView의 모양 사용자 지정
 
 ListView의 모양은 표시 되는 행의 레이아웃에 따라 결정 됩니다. 의 `ListView`모양을 변경 하려면 다른 행 레이아웃을 사용 합니다.
-
 
 ## <a name="built-in-row-views"></a>기본 제공 행 뷰
 
@@ -82,8 +81,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 
 그러면 위에서 설명한 대로 표준 `Text1` 및 `Text2` 컨트롤 식별자를 참조 하 여 그룹 보기 및 자식 뷰에 대 한 속성을 설정할 수 있습니다. SimpleExpandableListItem 스크린 샷 (위에 표시 됨)에서는 한 줄 그룹 보기 (SimpleExpandableListItem1) 및 2 줄 자식 보기 (SimpleExpandableListItem2)의 예를 제공 합니다. 또는 두 줄 (SimpleExpandableListItem2)에 대해 그룹 보기를 구성 하 고 자식 보기를 한 줄 (SimpleExpandableListItem1)에 대해 구성 하거나, 두 그룹 보기와 자식 보기 모두의 줄 수를 지정할 수 있습니다. 
 
-
-
 ## <a name="accessories"></a>Accessories
 
 행에는 선택 상태를 나타내는 보조 프로그램이 보기의 오른쪽에 추가 될 수 있습니다.
@@ -105,7 +102,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 ```
 
 자체 `ListView` 는 표시 되는 액세서리에 관계 없이 다양 한 선택 모드를 지원 합니다. 혼동을 피하려면 `SingleChoice` 보조 프로그램 `Single` 에서 선택 모드를 사용 하 `Checked` 고 `Multiple` `MultipleChoice` 스타일을 사용 하 여 또는 모드를 사용 합니다. 선택 모드는 `ChoiceMode` `ListView`의 속성에 의해 제어 됩니다.
-
 
 ### <a name="handling-api-level"></a>API 수준 처리
 
@@ -129,7 +125,6 @@ lv.ChoiceMode = 1; // Single
 //lv.ChoiceMode = 3; // MultipleModal
 */
 ```
-
 
 ### <a name="selecting-items-programmatically"></a>프로그래밍 방식으로 항목 선택
 
@@ -157,7 +152,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-
 ## <a name="creating-custom-row-layouts"></a>사용자 지정 행 레이아웃 만들기
 
 네 개의 기본 제공 행 뷰는 매우 간단 합니다. 더 복잡 한 레이아웃을 표시 하려면 (예: 메일 목록, 트 윗 또는 연락처 정보) 사용자 지정 보기가 필요 합니다. 일반적으로 사용자 지정 뷰는 **리소스/레이아웃** 디렉터리에서 axml 파일로 선언 된 다음 사용자 지정 어댑터에서 해당 리소스 Id를 사용 하 여 로드 됩니다. 보기에는 사용자 지정 색, 글꼴 및 레이아웃을 사용 하 여 여러 표시 클래스 (예: TextViews, ImageViews 및 기타 컨트롤)를 포함할 수 있습니다.
@@ -176,9 +170,7 @@ Console.WriteLine();
 
 - `ItemClick`는 다르게 선언 해야 합니다. 이벤트 처리기는에서 `ListView.ItemClick` `ListActivity`재정의 `OnListItemClick` 되는 대신에 연결 됩니다.
 
-
 이러한 변경 내용은 활동의 뷰 및 사용자 지정 행 뷰를 만든 다음 어댑터 및이를 렌더링 하기 위한 작업에 대 한 수정 사항을 포함 하 여 아래에 자세히 설명 되어 있습니다.
-
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>활동 레이아웃에 ListView 추가
 
@@ -209,7 +201,6 @@ Console.WriteLine();
 ```
 
 사용자 지정 레이아웃을 사용 `Activity` 하 여를 `ListActivity`사용 하는 경우의 장점 (대신)은이 예의 머리글과 `TextView` 같이 화면에 컨트롤을 더 추가할 수 있습니다.
-
 
 ### <a name="creating-a-custom-row-layout"></a>사용자 지정 행 레이아웃 만들기
 
@@ -256,7 +247,6 @@ Console.WriteLine();
 
 사용자 지정 행 레이아웃에는 다양 한 컨트롤이 포함 될 수 있지만 스크롤 성능은 복잡 한 디자인 및 이미지 (특히 네트워크를 통해 로드 해야 하는 경우)의 영향을 받을 수 있습니다. 스크롤 성능 문제 해결에 대 한 자세한 내용은 Google의 문서를 참조 하세요.
 
-
 ### <a name="referencing-a-custom-row-view"></a>사용자 지정 행 뷰 참조
 
 사용자 지정 어댑터 예의 구현은에 `HomeScreenAdapter.cs`있습니다. 키 메서드 `GetView` 는 리소스 ID `Resource.Layout.CustomView`를 사용 하 여 사용자 지정 axml을 로드 한 다음 반환 하기 전에 뷰의 각 컨트롤에 대 한 속성을 설정 하는 위치입니다. 전체 어댑터 클래스가 표시 됩니다.
@@ -297,7 +287,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>활동에서 사용자 지정 ListView 참조
 
 이제 클래스 `HomeScreen` 는에서 `Activity`상속 되므로 axml에 선언 된 컨트롤에 대 한 참조를 포함 하기 위해 클래스에서 필드가선언됩니다.`ListView`
@@ -331,8 +320,6 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 결과 화면은 다음과 같습니다.
 
 [![결과 CustomRowView의 스크린샷](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
-
-
 
 ### <a name="customizing-the-row-selector-color"></a>행 선택기 색 사용자 지정
 
@@ -374,13 +361,9 @@ android:background="@drawable/CustomSelector"
 
 [![선택한 행의 이름을 표시 하는 알림 메시지가 포함 된 주황색의 선택 된 행](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
-
-
 ### <a name="preventing-flickering-on-custom-layouts"></a>사용자 지정 레이아웃에 대 한 깜박임 방지
 
 Android는 레이아웃 정보를 캐싱하여 `ListView` 스크롤 성능을 향상 시 키 려 고 합니다. 데이터의 스크롤 목록이 긴 경우 작업의 axml 정의에서 `android:cacheColorHint` `ListView` 선언에 대 한 속성을 사용자 지정 행 레이아웃의 배경과 동일한 색 값으로 설정 해야 합니다. 사용자가 사용자 지정 행 배경색이 있는 목록을 스크롤할 때이 힌트를 포함 하지 않으면 ' 깜박임 '이 발생할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

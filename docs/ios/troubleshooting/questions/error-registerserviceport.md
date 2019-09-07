@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: 68c87355a2a6a081e0fff741ffe8a4466abb540a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 815eb638b3e394dcfe4b60d716820c610b01f8a1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292598"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769317"
 ---
 # <a name="ios-designer-error-with-registerserviceport"></a>RegisterServicePort에 발생하는 iOS 디자이너 오류
 
@@ -30,4 +30,3 @@ ms.locfileid: "70292598"
 위의 결과에 관계 없이 해당 파일이 존재 하는 경우 앞에서 언급 한 스파이웨어/맬웨어 문제가 컴퓨터에 표시 됩니다.  
 
 다음 링크에는이 스파이웨어/맬웨어를 제거 하는 단계가 있습니다.[http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
-

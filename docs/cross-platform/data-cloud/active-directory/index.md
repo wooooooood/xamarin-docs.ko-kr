@@ -6,15 +6,14 @@ ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: c8fa3e6f9e941e0c48570f5d691e7ef83eeffae8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 271d66ef952718654a2e45eb0d3901e2962ae31b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287633"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766266"
 ---
 # <a name="microsoft-azure-active-directory"></a>Microsoft Azure Active Directory
-
 
 Azure Active Directory를 통해 개발자는 직원 들이 시스템에 로그인 하거나 전자 메일을 확인 하는 데 사용 하는 것과 동일한 조직 계정을 사용 하 여 파일, 링크, 웹 Api, Office 365 등과 같은 리소스를 보호할 수 있습니다.
 
@@ -33,4 +32,3 @@ Azure Active Directory를 통해 개발자는 직원 들이 시스템에 로그�
 ## <a name="graph-api"></a>Graph API
 
 Xamarin을 사용 하 여 [Graph API](~/cross-platform/data-cloud/active-directory/graph.md) 에 액세스 하는 방법을 알아봅니다 ( [블로그](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)에서도 설명).
-

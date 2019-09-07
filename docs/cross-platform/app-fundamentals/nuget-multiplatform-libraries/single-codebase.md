@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 966d7a21da0112383c08e862a357c3c1d4fb9c22
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fb30b07e958bddfcf0e0545ae17b925d7163c38a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766460"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
 
@@ -50,7 +50,6 @@ PCL 또는 .NET Standard를 사용 하는 다중 플랫폼 라이브러리 프�
 
    ![](single-codebase-images/create-nuget-package.png "NuGet 패키지 파일은 구성에 따라 디버그 또는 릴리스 중 하나를 bin 폴더에 저장 됩니다.")
 
-
 ## <a name="verifying-the-output"></a>출력 확인
 
 NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부 구조를 검사할 수 있습니다.
@@ -75,7 +74,6 @@ PCL 기반 프로젝트 및 .NET Standard 기반 프로젝트는 플랫폼별 �
 
 공유 프로젝트로 변환한 후 **프로젝트 옵션 > nuget 패키지 > 참조 어셈블리**
 [섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 여 nuget이 프로젝트와 계속 호환 되도록 필요한 프로필을 선택 했는지 확인 합니다. 이전에는에서 사용 되었습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

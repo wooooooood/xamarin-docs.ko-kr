@@ -7,12 +7,12 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
-ms.openlocfilehash: 407fe78618c5e5fcd8732d9ff3cea50561ca78f3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4e51c1a201ce91b2b376b802f0f45e8aad4b712f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655546"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772974"
 ---
 # <a name="touch-manipulations"></a>터치 조작
 
@@ -757,7 +757,6 @@ class TouchManipulationManager
     ...
 }
 ```
-
 
 그러나 원할 것을 방지 하는 `AnisotropicScale` 옵션입니다. 0 요소 중 하나는 크기 조정 되도록 비트맵을 조작 하려면이 옵션을 사용 하 여 매우 쉽습니다. 비트맵을에서 반환 하는 적용 되지 않고 sight 사라질 수 있습니다. 실제로 필요가 없는 경우 이방성 크기 조정, 바람직하지 않은 결과 방지 하려면 논리를 강화 합니다.
 

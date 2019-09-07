@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: b6b370ebbcad04dfe829379685a3a9c5a6b5662b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df623efcc1da617ac6b700b42d3ac058dea817ca
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291542"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772647"
 ---
 # <a name="windows-in-xamarinmac"></a>Xamarin.ios의 Windows
 
@@ -747,7 +747,6 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 다른 유형의 �
 - **스타일** -패널의 스타일을 다음과 같이 조정할 수 있습니다. 일반 패널 (표준 창 처럼 보임), 유틸리티 패널 (더 작은 제목 표시줄 있음), HUD 패널 (반투명 이며 제목 표시줄은 배경의 일부)입니다.
 - **활성화 되지 않음** -패널의 키 창이 됩니다.
 - **문서 모달** -문서 모달 인 경우 패널은 응용 프로그램 창 위에만 고정 되 고, 다른 창에는 부동으로 배치 됩니다.
-
 
 새 패널을 추가 하려면 다음을 수행 합니다.
 

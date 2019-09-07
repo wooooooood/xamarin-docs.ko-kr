@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 4ae8834427580c387de7a38a69d711207b04821e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a612c2c23ceff13ea1d602465573514547628e55
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290882"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769802"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Xamarin.ios 용 대상 프레임 워크
 
@@ -53,7 +53,6 @@ Xamarin.ios 프로젝트에 대 한 대상 프레임 워크 형식으로 변경 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램에 사용할 수 있는 다양 한 대상 프레임 워크 (기본 클래스 라이브러리)와 각 유형의 프레임 워크를 사용 해야 하는 경우에 대해 간략하게 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

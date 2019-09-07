@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2017
-ms.openlocfilehash: a44f0921b959c6b8fd6f076fd119ea52345f821f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a0c5821b91c6394b8bae4a090899fa81eb4756e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282650"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763756"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.ios의 응용 프로그램 아이콘
 
@@ -98,7 +98,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
  4. 스포트라이트 아이콘과 동일한 이미지 및 크기를 사용 합니다.
  5. IPhone과 동일한 크기의 아이콘을 사용 합니다.
  6. 자산 카탈로그 이미지 집합 에서만 지원 됩니다.
- 
+
  아이콘에 대 한 자세한 내용은 Apple의 [아이콘 및 이미지 크기](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) 설명서를 참조 하세요.
 
 <a name="managing" />

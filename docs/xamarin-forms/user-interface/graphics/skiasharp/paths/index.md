@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 14b92bb576679dee3408c5805c6b698addd9bd8a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f9964d68e33e84dff789a4ad34443782f22ea821
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657452"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759159"
 ---
 # <a name="skiasharp-lines-and-paths"></a>SkiaSharp 선 및 경로
 
@@ -49,7 +49,6 @@ SkiaSharp에서 점선과 파선 선 그리기의 복잡성을 마스터입니�
 ## <a name="finger-paintingfinger-paintmd"></a>[손가락으로 그리기](finger-paint.md)
 
 캔버스에 그릴 손가락을 사용 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

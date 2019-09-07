@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 9104d1c7c92ac9de9cb6ae44197b4f16851563bb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 651df247e3b5616a3baa38e85159c6a6d5247807
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287317"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768798"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>iOS 디자이너에서 사용자 지정 컨트롤 사용
 
@@ -26,7 +26,6 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
 > [!IMPORTANT]
 > Xamarin Studio 5.5부터 사용자 지정 컨트롤이 생성 되는 방식은 이전 버전과 약간 다릅니다. 사용자 지정 컨트롤 `IComponent` 을 만들려면 연결 된 구현 메서드를 사용 하 여 인터페이스가 필요 하거나로 `[DesignTimeVisible(true)]`클래스에 주석을 추가할 수 있습니다. 후자 메서드는 다음 연습 예제에서 사용 됩니다.
-
 
 1. **IOS > 앱 > 단일 뷰 응용 프로그램 > C#**  템플릿에서 새 솔루션을 만들고, 이름을 `ScratchTicket`로 만들고, 새 프로젝트 마법사를 계속 진행 합니다.
 
@@ -157,23 +156,19 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
     }
     ```
 
-
 1. `FillTexture.png`, 및파일`Monkey.png` ( [GitHub에서](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)사용 가능)을 Resources 폴더에 추가 합니다. `FillTexture2.png`
 
 1. 디자이너에서 `Main.storyboard` 파일을 두 번 클릭 하 여 엽니다.
 
     [![](ios-designable-controls-walkthrough-images/03new.png "IOS 디자이너")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
-
 1. **도구 상자** 의 **이미지 뷰** 를 스토리 보드의 뷰로 끌어 놓습니다.
 
     [![](ios-designable-controls-walkthrough-images/04new.png "레이아웃에 추가 된 이미지 뷰")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
-
 1. **이미지 뷰** 를 선택 하 고 **이미지** 속성을로 `Monkey.png`변경 합니다.
 
     [![](ios-designable-controls-walkthrough-images/05new.png "이미지 보기 이미지 속성을 원숭이 .png로 설정")](ios-designable-controls-walkthrough-images/05new.png#lightbox)
-
 
 1. Size 클래스를 사용할 때이 이미지 뷰를 제한 해야 합니다. 이미지를 두 번 클릭 하 여 제약 조건 모드로 전환 합니다. 중심 고정 핸들을 클릭 하 여 가운데로 제한 하 고 가로 및 세로로 정렬 합니다.
 
@@ -183,16 +178,13 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 
     [![](ios-designable-controls-walkthrough-images/07new.png "제약 조건 추가")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
-
 1. 도구 모음에서 업데이트 단추를 클릭 하 여 제약 조건에 따라 프레임을 업데이트 합니다.
 
     [![](ios-designable-controls-walkthrough-images/08new.png "제약 조건 도구 모음")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
-
 1. 그런 다음 도구 상자의 **사용자 지정 구성 요소** 아래에 **스크래치 티켓 보기가** 표시 되도록 프로젝트를 빌드합니다.
 
     [![](ios-designable-controls-walkthrough-images/09new.png "사용자 지정 구성 요소 도구 상자")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
-
 
 1. 원숭이 이미지 위에 나타나도록 **스크래치 티켓 보기** 를 끌어서 놓습니다. 아래와 같이 스크래치 티켓 보기가 원숭이 전체를 포괄 하도록 끌기 핸들을 조정 합니다.
 
@@ -201,7 +193,6 @@ Xamarin Designer for iOS는 Windows의 Mac용 Visual Studio 및 Visual Studio 20
 1. 두 뷰를 모두 선택 하는 경계 사각형을 그려 이미지 뷰로 스크래치 티켓 보기를 제한 합니다. 아래와 같이 제약 조건에 따라 너비, 높이, 가운데 및 중간 및 업데이트 프레임으로 제한 하는 옵션을 선택 합니다.
 
     [![](ios-designable-controls-walkthrough-images/11new.png "제약 조건 가운데 맞춤 및 추가")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
-
 
 1. 응용 프로그램을 실행 하 고 이미지를 "스크래치" 하 여 원숭이를 표시 합니다.
 
@@ -272,8 +263,6 @@ public override void Draw(CGRect rect)
 ## <a name="summary"></a>요약
 
 이 문서에서는 사용자 지정 컨트롤을 만드는 방법과 iOS 디자이너를 사용 하 여 iOS 응용 프로그램에서 사용자 지정 컨트롤을 사용 하는 방법을 살펴보았습니다. 디자이너의 **도구 상자**에서 응용 프로그램에 사용할 수 있도록 컨트롤을 만들고 빌드하는 방법에 대해 살펴보았습니다. 또한 디자인 타임 및 런타임 모두에서 적절히 렌더링 하 고 디자이너에서 사용자 지정 컨트롤 속성을 노출 하는 방법에 맞게 컨트롤을 구현 하는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

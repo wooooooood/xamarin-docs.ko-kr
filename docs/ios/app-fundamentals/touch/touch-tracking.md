@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 00fa1a65d2a73220675d8142e70ac904a93e3042
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eca8a1bdc3c60ae4dbaabf022a9dbe91f7e30402
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281980"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767033"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Xamarin.ios의 멀티 터치 핑거 추적
 
@@ -41,7 +41,6 @@ class FingerPaintPolyline
 ```
 
 각 다중선에는 그릴 때 선의 여러 요소를 누적 및 렌더링 [`CGPath`](xref:CoreGraphics.CGPath) 하기 위한 색, 스트로크 너비 및 iOS 그래픽 개체가 있습니다.
-
 
 아래에 표시 된 나머지 코드는 모두 이라는 `UIView` `FingerPaintCanvasView`파생물에 포함 되어 있습니다. 이 클래스는 하나 이상의 손가락으로 현재 그릴 `FingerPaintPolyline` 때 형식의 개체 사전을 유지 관리 합니다.
 
@@ -187,8 +186,6 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 [![](touch-tracking-images/image01.png "개별 손가락 추적 및 화면에 결과 그리기")](touch-tracking-images/image01.png#lightbox)
 
 이제 화면에서 개별 손가락을 추적 하 고 서로 구별할 수 있는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

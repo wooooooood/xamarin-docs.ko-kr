@@ -6,17 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 4a0d0e46147a37da4787224e797d403ab7b1097e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f472f19429f21c659e28ba1c7a8d2670e22ea6a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643047"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758950"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Xamarin Android 용 ActionBar
 
 를 사용 `TabActivity`하는 경우 Android 4.0 프레임 워크에 대해 실행 하는 경우에는 탭 아이콘을 만드는 코드가 영향을 받지 않습니다. 2\.3 이전 버전의 Android에서와 같이 작동 하지만 클래스 자체는 `TabActivity` 4.0에서 더 이상 사용 되지 않습니다. 다음에 설명 하는 작업 모음 사용 하는 탭 인터페이스를 만드는 새로운 방법이 도입 되었습니다.
-
 
 ## <a name="action-bar-tabs"></a>작업 모음 탭
 
@@ -56,7 +55,6 @@ class SampleTabFragment: Fragment
             view.FindViewById<TextView> (Resource.Id.sampleTextView);            
         sampleTextView.Text = "sample fragment text";
 
-
         return view;
     }
 }
@@ -79,11 +77,9 @@ this.ActionBar.AddTab (tab);
 
 전체 예제는이 문서에 대 한 샘플 코드의 *HelloTabsICS* 프로젝트를 참조 하세요.
 
-
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
 `ShareActionProvider` 클래스를 사용 하면 작업 모음에서 공유 작업을 수행할 수 있습니다. 공유 의도를 처리할 수 있는 앱 목록을 사용 하 여 작업 보기를 만들고 나중에 작업 모음에서 나중에 쉽게 액세스할 수 있도록 이전에 사용한 응용 프로그램의 기록을 유지할 수 있습니다. 이를 통해 응용 프로그램은 Android 전체에서 일관 된 사용자 환경을 통해 데이터를 공유할 수 있습니다.
-
 
 ### <a name="image-sharing-example"></a>이미지 공유 예제
 
@@ -91,11 +87,9 @@ this.ActionBar.AddTab (tab);
 
 [![작업 모음의 메시징 응용 프로그램 아이콘 스크린샷](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
-
 사용자가 작업 모음의 항목을 클릭 하면 아래와 같이 공유 이미지가 포함 된 메시징 앱이 시작 됩니다.
 
 [![원숭이 이미지를 표시 하는 메시징 앱의 스크린샷](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
-
 
 ### <a name="specifying-the-action-provider-class"></a>동작 공급자 클래스 지정
 
@@ -110,7 +104,6 @@ this.ActionBar.AddTab (tab);
       android:actionProviderClass="android.widget.ShareActionProvider" />
 </menu>
 ```
-
 
 ### <a name="inflating-the-menu"></a>메뉴 않아서
 
@@ -128,7 +121,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 }
 ```
 
-
 ### <a name="creating-the-intent"></a>의도 만들기
 
 는 `ShareActionProvider` 위의 코드에서 `SetShareIntent` 메서드로 전달 되는 의도를 사용 하 여 적절 한 작업을 시작 합니다. 이 경우 다음 코드를 사용 하 여 이미지를 보낼 의도를 만듭니다.
@@ -145,8 +137,6 @@ Intent CreateIntent ()
 ```
 
 위의 코드 예제에서 이미지는 응용 프로그램과 함께 자산으로 포함 되 고 활동이 만들어질 때 공개적으로 액세스할 수 있는 위치에 복사 되므로 메시징 앱과 같은 다른 응용 프로그램에서 액세스할 수 있습니다. 이 문서와 함께 제공 되는 샘플 코드는이 예제의 전체 소스를 포함 하 여 사용을 보여 주고 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

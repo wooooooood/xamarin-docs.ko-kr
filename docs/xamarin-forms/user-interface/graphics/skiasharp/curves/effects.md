@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: f43c4dac1811a54ee0ceeb70e2b2b1835a5ca030
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 82755a6a87ec0a47c10aac7078beeab6e14c218d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228249"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759376"
 ---
 # <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
 
@@ -943,7 +943,6 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 
 마지막 인수는 효과에 사용 하는 의사 (pseudo) 난수 시퀀스를 생성 하는 데 초기값입니다. 지터 효과 다른 초기값에 대 한 약간 다르게 표시 됩니다. 인수가 0 효과 동일 프로그램을 실행할 때마다 이며, 기본값은입니다. 화면을 다시 때마다 다른 지터를 하려는 경우 초기값을 설정할 수 있습니다는 `Millisecond` 의 속성을 `DataTime.Now` 예를 들어 값입니다.
 
-
 합니다 **실험 지터** 페이지 사각형 선 그리기는 서로 다른 값을 실험할 수 있습니다.
 
 [![JitterExperiment 페이지의 세 번째 스크린샷](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
@@ -1086,7 +1085,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 처음 두 인수에만 필수 이며 참조 경로 액세스 하는 메서드를 `src` 의 스트로크 속성을 기반으로 경로 데이터를 수정 하는 인수를를 `SKPaint` 개체 (포함 하 여는 `PathEffect` 속성), 다음 결과를 씁니다는 `dst` 경로입니다. 합니다 `resScale` 매개 변수를 더 작은 대상 경로 만드는 전체 자릿수를 줄일 수 있습니다 및 `cullRect` 인수 사각형 외부 윤곽을 제거할 수 있습니다.
 
-이 메서드의 기본 사용에는 항상 경로 효과가 포함 되지 않습니다. `SKPaint` 개체 `PathEffect` 의 속성이로 설정되어`GetFillPath` 있고 해당 집합이 없는 경우는 소스 경로에 대 한 개요를 나타내는 경로를 만듭니다. `SKPaintStyle.Stroke` `Style` paint 속성입니다.
+이 메서드의 기본 사용에는 항상 경로 효과가 포함 되지 않습니다. 개체 `SKPaint` `PathEffect` 의 속성이로 `SKPaintStyle.Stroke`설정 되어`GetFillPath` 있고 해당 집합이 없는 경우는 소스 경로에 대 한 개요를 나타내는 경로를 만듭니다. `Style` paint 속성입니다.
 
 예를 들어 경우는 `src` 경로가 500 반지름의 단순 원 및 `SKPaint` 100 스트로크 너비를 지정 하는 개체는 `dst` 경로 두 동심원 반지름은 550 450 및 다른 반지름 하나 됩니다. 메서드를 호출 `GetFillPath` 이 채우기 때문에 `dst` 경로 선 그리기와 동일 합니다 `src` 경로입니다. 스트로크도 수 있지만 `dst` 경로를 경로 윤곽선을 참조 하세요.
 
@@ -1412,8 +1411,6 @@ public class DashedHatchLinesPage : ContentPage
 [![파선 해치 선 페이지의 삼중 스크린샷](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 이제 지금까지 살펴본 경로 효과 이상한 조합에 해당 범위에서 간단한 점 및 대시 상상력을 사용 하 여을 만들 수 있습니다를 참조 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

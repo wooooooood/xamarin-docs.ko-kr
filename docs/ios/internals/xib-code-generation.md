@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 367f0b6a44482762f8609eb959e154c942ff14f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 474e8ba772773f437bc30a07a34f6bfbb286cd82
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768497"
 ---
 # <a name="xib-code-generation-in-xamarinios"></a>Xamarin.ios의 xib 코드 생성
 
@@ -72,7 +72,6 @@ Xib.designer.cs 디자이너 파일  **옆{0}** 에 있는  **{0}xib.cs** 파일
 
 1. 비 디자이너 클래스 `partial` 파트의 클래스 본문에를 입력 하는 경우에는에서 구현 되지 않은 모든 부분 메서드 (partial method)의 시그니처를 자동 완성 하는 Mac용 Visual Studio 제공 합니다.
 2. 부분 메서드 시그니처에서는를 목표 C 세계에 노출 하는 특성을 적용 하 여 해당 작업으로 처리 될 수 있도록 합니다.
-
 
 원하는 경우 부분 메서드를 무시 하 고 특성을 다른 메서드에 적용 하거나 기본 클래스로 이동 하 여 동작을 구현할 수 있습니다.
 

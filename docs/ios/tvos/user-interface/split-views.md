@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 9f770eaf3fcb68c17a7692e5b6433081234951e6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5c147b43caf3018cde8870adb25bb73cb08f53ee
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286373"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768506"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Xamarin에서 tvOS 분할 뷰 컨트롤러 작업
 
@@ -171,8 +171,6 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 분할 뷰 컨트롤러를 디자인 하 고 사용 하는 방법에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

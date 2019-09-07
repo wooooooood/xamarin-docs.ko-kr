@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 3e5ce4496b4a2deb86bb2b7dd6d36e5e9b3f446c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f914a158135d34b59fa3d1b95972c988a44dd36b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765976"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -181,7 +181,6 @@ client.GetAsync<CustomersResponse>("",
 
 > [!IMPORTANT]
 > ServiceStack 및 RestSharp와 같은 도구를 사용 하 여 REST 서비스를 쉽게 호출 하 고 사용할 수 있지만 표준 _DataContract_ serialization 규칙을 따르지 않는 XML 또는 JSON을 사용 하는 것은 어려울 수 있습니다. 필요한 경우 요청을 호출 하 고 아래에서 설명 하는 ServiceStack. 텍스트 라이브러리를 사용 하 여 적절 한 serialization을 명시적으로 처리 합니다.
-
 
 <a name="Options_for_consuming_RESTful_data" />
 

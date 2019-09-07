@@ -1,18 +1,18 @@
 ---
 title: 요약 3 장입니다. 텍스트 더 자세히
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 3 장입니다. 텍스트 더 자세히
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 3 장입니다. 텍스트 더 자세히'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e37175240825c0fed350589649469c99f1bbf69a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334656"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771220"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>요약 3 장입니다. 텍스트 더 자세히
 
@@ -28,7 +28,7 @@ ms.locfileid: "61334656"
 
 경우는 `HorizontalOptions` 및 `VerticalOptions` 속성 이외의 값으로 설정 됩니다 `LayoutOptions.Fill`의 크기를 `Label` 최대 크기가 해당 컨테이너를 사용할 수 있도록 하는 텍스트를 렌더링 하는 데 필요한 공간에 의해 관리 됩니다는 `Label`. 합니다 `Label` 이라고 *비제한* 와 자체 크기를 결정 합니다.
 
-(참고: 용어 *제한* 하 고 *비제한* 때문일, 직관적이 지는 무제한 뷰는 일반적으로 제약 된 뷰를 보다 작습니다. 또한 이러한 용어는 사용 되지 않음 일관 되 게 책의 초기 챕터에서.)
+(참고: *제한* *및 제한* 되지 않은 조건은 일반적으로 제한 된 보기 보다 더 작기 때문에 매우 직관적입니다. 또한 이러한 용어는 사용 되지 않음 일관 되 게 책의 초기 챕터에서.)
 
 같은 보기를 `Label` 하나 이상의 차원을 제한 되며 다른 비제한 수 있습니다. `Label` 가로 방향으로 제한 되는 텍스트 여러 줄에 배치만 됩니다.
 
@@ -99,9 +99,9 @@ ms.locfileid: "61334656"
 
 `Color.Default` 플랫폼의 색 구성표를 적용 하기 위한 것 및 결과적으로 서로 다른 플랫폼에서 다양 한 상황에서 다른 의미를 갖습니다. 기본적으로 플랫폼 색 구성표는 다음과 같습니다.
 
-- iOS: 밝은 배경에 어두운 텍스트
-- Android: (책)에 있는 어두운 배경에 텍스트 또는 어두운는 밝은 배경의 텍스트 light (AppCompat의을 통해 자료 디자인에 대 한 합니다 **마스터** 샘플 코드 리포지토리의 분기)
-- UWP: 밝은 배경에 어두운 텍스트
+- iOS: 밝은 배경의 짙은 텍스트
+- Android: 어두운 배경의 밝은 텍스트 또는 밝은 배경의 어두운 텍스트 (샘플 코드 리포지토리의 **마스터** 분기에 있는 AppCompat을 통한 재질 디자인의 경우)
+- UWP: 밝은 배경의 짙은 텍스트
 
 `Color.Accent` 결과 어둡게 또는 밝게 배경에 표시 되는 플랫폼 특정 (및 경우에 따라 사용자가 선택할 수 있는) 색 값입니다.
 
@@ -134,8 +134,6 @@ Windows 플랫폼에서 색 테마 일반적으로 사용자가 선택 되어 �
 [![변수의 세 번 스크린 샷 단락 서식이 지정 된](images/ch03fg06-small.png "변수 형식이 지정 된 레이블 텍스트")](images/ch03fg06-large.png#lightbox "변수 형식이 지정 된 레이블 텍스트")
 
 합니다 [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 프로그램에서는 단일 `Label` 및 `FormattedString` 모든 각 플랫폼에 대해 명명 된 글꼴 크기를 표시 하는 개체입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

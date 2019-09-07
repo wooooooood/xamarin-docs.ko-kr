@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/07/2017
-ms.openlocfilehash: aa1dd0b503dd59a89f526fef53d7d7756a3883de
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 869e2e5c3b074c928f3c49ca87c1c1801154df91
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291102"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769972"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Xamarin에서 tvOS 단추 사용
 
@@ -63,7 +63,6 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **라이브러리** 에서 **단추** 를 끌어서 뷰에 놓습니다. 
 
@@ -82,7 +81,6 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
     [![](buttons-images/storyboard05.png "코드 편집기")](buttons-images/storyboard05.png#lightbox)
 1. 모든 파일의 변경 내용을 저장 합니다.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
@@ -97,10 +95,7 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
     [![](buttons-images/storyboard03vs.png "이벤트 탭")](buttons-images/storyboard03vs.png#lightbox)
 1. 모든 파일의 변경 내용을 저장 합니다.
 
-
-
 보기 컨트롤러 (예제 `ViewController.cs`) 파일을 편집 하 고 다음 코드를 추가 하 여 선택한 단추를 처리 합니다.
-
 
 ```
 
@@ -129,16 +124,13 @@ namespace tvRemote
 > [!IMPORTANT]
 > IOS 디자이너 `UIButton` 에서 **이벤트 처리기**를 만들 때와 `TouchUpInside` 같은 작업을에 할당할 수 있지만 Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되지 않으므로 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 대 한 **작업** 을 만들 때는 항상 기본 **작업 형식을** 사용 해야 합니다.
 
-
-
-
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
 <a name="Buttons-and-Code" />
 
 ## <a name="buttons-and-code"></a>단추 및 코드
 
-필요에 따라 `UIButton` 코드에서 C# 를 만들어 tvOS 앱의 뷰에 추가할 수 있습니다. 예:
+필요에 따라 `UIButton` 코드에서 C# 를 만들어 tvOS 앱의 뷰에 추가할 수 있습니다. 예를 들어:
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -190,9 +182,6 @@ View.AddSubview (button);
 > [!IMPORTANT]
 > 에와 `TouchUpInside` `UIButton`같은 작업을 할당할 수는 있지만 Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. **AllEvents** 또는 **primaryactiontriggered**이벤트와 같은 이벤트를 항상 사용 해야 합니다.
 
-
-
-
 <a name="Styling-a-Button" />
 
 ## <a name="styling-a-button"></a>단추 스타일 지정
@@ -215,7 +204,7 @@ button.SetTitle ("Hello", UIControlState.Normal);
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-를 사용 하 여 `SetTitleShadowColor`제목의 그림자를 조정할 수도 있습니다. 예:
+를 사용 하 여 `SetTitleShadowColor`제목의 그림자를 조정할 수도 있습니다. 예를 들어:
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -262,8 +251,6 @@ button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 단추 디자인 및 작업에 대해 설명 했습니다. IOS 디자이너에서 단추를 사용 하는 방법 및 코드에서 C# 단추를 만드는 방법을 살펴보았습니다. 마지막으로, 단추의 제목을 수정 하 고 스타일 및 모양을 변경 하는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

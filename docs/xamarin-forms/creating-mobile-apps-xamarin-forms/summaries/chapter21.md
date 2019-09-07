@@ -1,18 +1,18 @@
 ---
 title: 요약 21 장입니다. 변환
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 21 장입니다. 변환
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 21 장입니다. 변환'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 313348952b87d94db63d1682f8e1b9413d56714d
-ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
+ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67513023"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760574"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 21 장입니다. 변형
 
@@ -122,8 +122,6 @@ iOS에서 기본값이 아닌 `AnchorX` 및 `AnchorY` 속성을 사용하면 일
 Xamarin.Forms 사용 권한에 포함 된 3D 좌표 시스템의 왼쪽입니다. 가리키는 경우 증가 x 방향의 왼쪽 손 엄지와 (오른쪽)를 조정 하 고 손가락은 증가 y 방향에서 (아래쪽), 다음에 thumb 포인트 Z 좌표 (화면)에서 증가 하는 방향으로 조정 합니다.
 
 또한 세 개의 축에 대해 왼쪽 엄지 손가락 값 증가 방향을 가리키면 다음 손가락의 곡선의 방향을 나타냅니다 양의 회전 각도 회전 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

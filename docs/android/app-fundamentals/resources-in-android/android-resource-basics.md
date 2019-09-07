@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 1df10c4b8eaa30ce417feb2abae7f52b2494edf6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: c248949024d0e13a24863368e88aa559fa496806
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526375"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755254"
 ---
 # <a name="android-resource-basics"></a>Android 리소스 기본 사항
 
@@ -20,11 +20,11 @@ ms.locfileid: "69526375"
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![리소스 파일](android-resource-basics-images/01-resource-files-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![리소스 파일](android-resource-basics-images/01-resource-files-xs.png)
- 
+
 -----
 
 기본 리소스를 구성 하는 5 개의 파일이 Resources 폴더에 만들어집니다.
@@ -39,7 +39,6 @@ ms.locfileid: "69526375"
 
 - Resource.designer.cs&ndash; 이 파일은 자동으로 생성 되 고 xamarin.ios에서 유지 관리 되며 각 리소스에 할당 된 고유 ID를 보유 합니다. 이는 Java 응용 프로그램에서 Java로 작성 한 R 파일에 대해 매우 비슷하며 동일한 용도입니다. Xamarin Android 도구를 통해 자동으로 생성 되며, 시간에 따라 다시 생성 됩니다.
 
-
 ## <a name="creating-and-accessing-resources"></a>리소스 만들기 및 액세스
 
 리소스를 만드는 것은 문제의 리소스 종류에 대 한 디렉터리에 파일을 추가 하는 것 만큼 간단 합니다. 아래 스크린샷은 독일어 로캘에 대 한 문자열 리소스를 프로젝트에 추가 하는 방법을 보여 줍니다. .Xml이 파일에 추가 되 면 **빌드 작업이** xamarin.ios 도구에 의해 **Androidresource** 로 자동 설정 **됩니다** .
@@ -47,20 +46,18 @@ ms.locfileid: "69526375"
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![문자열에 대 한 빌드 작업은 AndroidResource로 설정 됩니다.](android-resource-basics-images/02-build-action-vs.png)
- 
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ![문자열에 대 한 빌드 작업은 AndroidResource로 설정 됩니다.](android-resource-basics-images/02-build-action-xs.png)
- 
+
 -----
- 
 
 이를 통해 Xamarin Android 도구를 사용 하 여 리소스를 APK 파일에 올바르게 컴파일하고 포함할 수 있습니다. 어떤 이유로 든 **빌드 작업** 을 **Android 리소스로**설정 하지 않으면 파일이 apk에서 제외 되 고, 리소스를 로드 하거나 액세스 하려고 하면 런타임 오류가 발생 하 고 응용 프로그램의 작동이 중단 됩니다.
 
 또한 Android는 리소스 항목에 대해 소문자 파일 이름만 지원 하는 반면, Xamarin. Android는 약간 더 많은 기능을 제공 합니다. 대문자 및 소문자 파일을 모두 지원 합니다. 이미지 이름에 대 한 규칙은 밑줄을 구분 기호로 사용 하는 소문자 (예 **:\_my\_image name .png**)를 사용 하는 것입니다. 대시 또는 공백을 구분 기호로 사용 하는 경우에는 리소스 이름을 처리할 수 없습니다.
 
 리소스를 프로젝트에 추가한 후에는 응용 프로그램 &ndash; 에서 프로그래밍 방식으로 (코드 내부) 또는 XML 파일에서 두 가지 방법을 사용할 수 있습니다.
-
 
 ## <a name="referencing-resources-programmatically"></a>프로그래밍 방식으로 리소스 참조
 
@@ -105,7 +102,6 @@ public partial class Resource
 - **ResourceType** &ndash; 이는 위에 설명 된 리소스 클래스 내에 있는 중첩 된 리소스 형식입니다.
 
 - **리소스 이름** &ndash; 리소스의 파일 이름 (확장명 없음) 또는 XML 요소에 있는 리소스에 대 한 android: name 특성 값입니다.
-
 
 ## <a name="referencing-resources-from-xml"></a>XML에서 리소스 참조
 

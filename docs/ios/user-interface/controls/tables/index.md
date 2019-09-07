@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/06/2016
-ms.openlocfilehash: 7d4ad4ca7f15e20bed3cd9bb4050c5a0a9cba63a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1d888cbc779cbb4fcaf8312b87627f1bd18fe719
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284175"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768400"
 ---
 # <a name="working-with-tables-and-cells-in-xamarinios"></a>Xamarin.ios의 테이블 및 셀 작업
 
@@ -36,11 +36,11 @@ Xamarin.ios를 사용 하 여 플랫폼 간 응용 프로그램에서 작업 하
  [테이블 모양 사용자 지정](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [편집](~/ios/user-interface/controls/tables/editing.md)
- 
+
  [행 작업](~/ios/user-interface/controls/tables/row-action.md)
 
  [스토리 보드에 테이블 만들기](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
- 
+
  [행 높이 자동 크기 조정](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 ## <a name="related-links"></a>관련 링크

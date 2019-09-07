@@ -6,12 +6,12 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: e129a8c37e6b8780a57636730c072b230354b8b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288379"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758103"
 ---
 # <a name="building-cross-platform-applications-overview"></a>플랫폼 간 응용 프로그램 빌드 개요
 
@@ -45,11 +45,9 @@ Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios X
 1. Xamarin 프로젝트와 호환 되는 [NuGet 패키지](https://nuget.org) (예: [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/))
 1. 네트워킹, 웹 서비스, IO 등에 .NET framework 기능 사용.
 
-
 이러한 구성 요소 중 일부는 *Tasky* 사례 연구에서 구현 됩니다.
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
-
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>재사용 가능한 코드를 핵심 라이브러리로 분리
 
@@ -58,7 +56,6 @@ Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios X
  ![](overview-images/layers2.png "응용 프로그램 아키텍처를 계층화 한 후 플랫폼의 핵심 기능을 재사용 가능한 핵심 라이브러리로 이동 하 여 책임 분리 원칙에 따라 플랫폼 간 코드 공유를 최대화할 수 있습니다.")
 
  <a name="Case_Studies" />
-
 
 ## <a name="case-studies"></a>사례 연구
 

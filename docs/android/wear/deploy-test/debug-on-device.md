@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 2a0c21f5a985e7a0bbe5b2afac1520280a0bd5e8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9596ff34352337d892fc22df5651b2f78f8c33f6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522136"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762170"
 ---
 # <a name="debug-on-a-wear-device"></a>Wear 디바이스에서 디버그
 
 _이 문서에서는 마모 된 장치에서 Xamarin Android 마모 응용 프로그램을 디버그 하는 방법을 설명 합니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -37,11 +36,9 @@ Android 마모 장치에서 디버깅을 사용 하도록 설정 하려면 다�
 
 5. **Adb 디버깅이** 사용 되는지 확인 합니다.
 
-
 ## <a name="debugging-over-usb"></a>USB를 통한 디버깅
 
 사용자의 장치에 USB 포트가 있는 경우, Android 휴대폰을 사용 하는 것 처럼 장치를 컴퓨터에 연결 하 여 배포 하 고 앱을 실행/디버그할 수 있습니다. 자세한 내용은 [장치에서 디버그](~/android/deploy-test/debugging/debug-on-device.md)를 참조 하세요.
-
 
 ## <a name="debugging-over-bluetooth"></a>Bluetooth를 통한 디버깅
 
@@ -121,7 +118,6 @@ adb -s 127.0.0.1:4444 pull /sdcard/DCIM/screencap.png
 adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 ```
 
-
 ### <a name="uninstalling-an-app"></a>앱 제거
 
 다음 명령을 입력 하 여 마모 장치에서 앱을 제거할 수 있습니다.
@@ -138,7 +134,6 @@ adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 
 Bluetooth를 통해 Android 장치를 디버그 하는 방법에 대 한 자세한 내용은 [bluetooth를 통한 디버그](https://developer.android.com/training/wearables/apps/bt-debugging.html)를 참조 하세요.
 
-
 ## <a name="debugging-a-wear-app-with-a-companion-phone-app"></a>동반 휴대폰 앱을 사용 하 여 마모 된 앱 디버그
 
 Android 제품 앱은 Google Play에 배포할 수 있도록 도우미 Android 휴대폰 앱과 함께 패키지 됩니다. 자세한 내용은 [패키징을 사용한 작업](~/android/wear/deploy-test/packaging.md)을 참조 하세요. 그러나 개발 앱 및 해당 도우미 앱은 별도로 개발 합니다. Google Play 스토어를 통해 앱을 릴리스할 때, 앱이 함께 제공 되는 앱과 함께 패키지 되 고 가능 하면 자동으로 설치 됩니다.
@@ -153,7 +148,6 @@ Android 제품 앱은 Google Play에 배포할 수 있도록 도우미 Android �
 
 4. 장치에서 마모 된 앱을 실행 하 고 디버그 합니다.
 
- 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Bluetooth를 통해 Visual Studio에서 마모 된 디버그를 위해 Android 장치를 구성 하는 방법 및 자매 phone 앱을 사용 하 여 마모 된 앱을 디버그 하는 방법을 설명 했습니다. 또한 Bluetooth를 통해 마모 된 앱을 디버깅 하기 위한 일반적인 디버깅 팁을 제공 합니다.

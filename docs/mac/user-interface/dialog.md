@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 723f751b93af304c7d70fb1250dbda2f0220e77e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 555ee8131c4d18988a7f208154d358a61a9773c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292207"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770591"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Xamarin.ios의 대화 상자
 
@@ -63,7 +63,6 @@ _시트_ 는 지정 된 문서 창에 연결 되어 사용자가 대화 상자�
 열기 대화 상자를 사용 하면 응용 프로그램에서 항목을 찾고 열 수 있는 일관 된 방법을 사용자에 게 제공 합니다.
 
 [![](dialog-images/dialog03.png "열기 대화 상자")](dialog-images/dialog03.png#lightbox)
-
 
 ### <a name="print-and-page-setup-dialogs"></a>인쇄 및 페이지 설정 대화 상자
 

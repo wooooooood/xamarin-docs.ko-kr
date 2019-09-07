@@ -6,30 +6,26 @@ ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: f8b8f13f323f404554ca73c3e75c23713e0fbe35
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288840"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758148"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>3 부-Xamarin 플랫폼 간 솔루션 설정
 
 사용 중인 플랫폼에 관계 없이 Xamarin 프로젝트는 모두 동일한 솔루션 파일 형식 (Visual Studio **.sln** 파일 형식)을 사용 합니다. 개별 프로젝트를 로드할 수 없는 경우 (예: Mac용 Visual Studio의 Windows 프로젝트)에도 개발 환경에서 솔루션을 공유할 수 있습니다.
 
-
-
 새 플랫폼 간 응용 프로그램을 만들 때 첫 번째 단계는 빈 솔루션을 만드는 것입니다. 이 섹션에서는 플랫폼 간 모바일 앱을 빌드하기 위한 프로젝트 설정에서 수행 되는 작업에 대해 설명 합니다.
 
  <a name="Sharing_Code" />
-
 
 ## <a name="sharing-code"></a>코드 공유
 
 플랫폼 간 코드 공유를 구현 하는 방법에 대 한 자세한 내용은 [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md) 문서를 참조 하세요.
 
  <a name="Shared_Asset_Projects" />
-
 
 ### <a name="shared-projects"></a>공유 프로젝트
 
@@ -39,7 +35,6 @@ ms.locfileid: "70288840"
 
  <a name="Portable_Class_Libraries" />
 
-
 ### <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
 
 지금까지 .NET 프로젝트 파일 (및 결과 어셈블리)은 특정 프레임 워크 버전을 대상으로 합니다. 이렇게 하면 다른 프레임 워크에서 프로젝트 또는 어셈블리를 공유할 수 없습니다.
@@ -48,17 +43,13 @@ PCL (이식 가능한 클래스 라이브러리)은 Xamarin.ios 및 Xamarin.ios�
 
 [이식 가능한 클래스 라이브러리에 대 한 Xamarin 지원](~/cross-platform/app-fundamentals/pcl.md) 에 대 한 자세한 내용을 읽고 여기에 설명 된 지침에 따라 [Taskyportable 샘플이](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) 작동 하는 방식을 확인할 수 있습니다.
 
-
 ### <a name="net-standard"></a>.NET Standard
 
 2016에 도입 된 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 프로젝트는 플랫폼 간에 코드를 공유 하 고, Windows, Xamarin 플랫폼 (IOS, Android, Mac) 및 Linux에서 사용할 수 있는 어셈블리를 생성 하는 쉬운 방법을 제공 합니다.
 
 각 버전에서 사용 가능한 Api (1.0 ~ 1.6)가 더 쉽게 검색 되 고 각 버전이 더 낮은 버전 번호와 이전 버전과 호환 되는 경우를 제외 하 고 .NET Standard 라이브러리는 PCLs와 같이 만들고 사용할 수 있습니다.
 
-
-
  <a name="Populating_the_Solution" />
-
 
 ## <a name="populating-the-solution"></a>솔루션 채우기
 
@@ -68,9 +59,7 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 - **핵심 프로젝트** – 한 곳에서 다시 사용할 수 있는 코드를 작성 하 여 여러 플랫폼에서 공유 합니다. 캡슐화 원칙을 사용 하 여 가능한 모든 구현 세부 정보를 숨깁니다.
 - **플랫폼별 응용 프로그램 프로젝트** – 최대한의 결합으로 재사용 가능한 코드를 사용 합니다. 플랫폼별 기능은이 수준에서 추가 되며 핵심 프로젝트에 노출 되는 구성 요소를 기반으로 빌드됩니다.
 
-
  <a name="Core_Project" />
-
 
 ### <a name="core-project"></a>핵심 프로젝트
 
@@ -83,9 +72,7 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 - **서비스 액세스 계층** – 응용 프로그램에 클라우드 서비스를 제공 하는 선택적 계층입니다. 원격 네트워크 리소스 (웹 서비스, 이미지 다운로드 등)에 액세스 하 고 결과를 캐시할 수 있는 코드를 포함 합니다.
 - **비즈니스 계층** – 플랫폼 특정 응용 프로그램에 기능을 노출 하는 모델 클래스 및 외관 또는 관리자 클래스의 정의입니다.
 
-
  <a name="Platform-Specific_Application_Projects" />
-
 
 ### <a name="platform-specific-application-projects"></a>플랫폼별 응용 프로그램 프로젝트
 
@@ -96,9 +83,7 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 - **응용 프로그램 계층** – 비즈니스 계층 개체와 사용자 인터페이스 간의 플랫폼 특정 기능 및 바인딩/변환입니다.
 - **사용자 인터페이스 계층** – 화면, 사용자 지정 사용자 인터페이스 컨트롤, 유효성 검사 논리 표시
 
-
 <a name="Example" />
-
 
 ### <a name="example"></a>예제
 
@@ -110,9 +95,7 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 
  ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "공유 프로젝트에는 각 아키텍처 계층 (비즈니스, 서비스, 데이터 및 데이터 액세스 코드)과 관련 된 코드가 포함 되어 있습니다.")
 
-
  <a name="Project_References" />
-
 
 ## <a name="project-references"></a>프로젝트 참조
 
@@ -123,16 +106,13 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 
 ![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트")
 
-
 프로젝트를 구성 하는 방법에 대 한 구체적인 예제는 사례 연구에서 제공 됩니다.
 
  <a name="Adding_Files" />
 
-
 ## <a name="adding-files"></a>파일 추가
 
  <a name="Build_Action" />
-
 
 ### <a name="build-action"></a>빌드 작업
 
@@ -145,11 +125,9 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 - **Windows 프로젝트의 XAML 파일** -빌드 작업: Page
 - **Xamarin FORMS XAML 파일** – 빌드 작업: EmbeddedResource
 
-
 일반적으로 IDE는 파일 형식을 검색 하 고 올바른 빌드 작업을 제안 합니다.
 
  <a name="Case_Sensitivity" />
-
 
 ### <a name="case-sensitivity"></a>대/소문자 구분
 

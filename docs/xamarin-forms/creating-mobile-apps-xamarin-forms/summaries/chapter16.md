@@ -1,18 +1,18 @@
 ---
 title: 요약 16 장입니다. 데이터 바인딩
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 16 장입니다. 데이터 바인딩
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 16 장입니다. 데이터 바인딩'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: df3cee3fe71553b63bf4b050cad141b66ad98a06
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771100"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>요약 16 장입니다. 데이터 바인딩
 
@@ -138,8 +138,6 @@ MVVM의 바인딩을 정의 하는 방법을 비슷합니다 이며 이러한 �
 대신 합니다 [ `NewCheckBox.cs.xaml` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NewCheckBox.xaml) 파일에서 데이터 바인딩을 통해 컨트롤의 시각적 개체에 대 한 모든 태그를 포함 합니다 `Label` 코드 숨김 파일에 정의 된 속성을 기반으로 하는 요소입니다.
 
 합니다 [ **NewCheckBoxDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) 샘플과 `NewCheckBox` 사용자 지정 컨트롤입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

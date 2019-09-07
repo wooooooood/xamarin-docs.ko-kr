@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: d85c199f6243fc49c1ca924bbd60cfef48b6d91f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120000"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762233"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -45,7 +45,6 @@ Xamarin.ios를 설치한 후 다음 단계를 수행 하 여 Android 앱을 빌�
 
 이러한 단계는 다음 섹션에 설명 되어 있습니다.
 
-
 ### <a name="install-android-sdk-and-tools"></a>Android SDK 및 도구 설치 
 
 **Android SDK 관리자**를 시작 합니다. 
@@ -59,7 +58,6 @@ Xamarin.ios를 설치한 후 다음 단계를 수행 하 여 Android 앱을 빌�
 ![Mac용 Visual Studio에서 Android SDK 관리자를 시작 하는 방법](installation-images/xs/sdk-menu.png)
 
 -----
-
 
 다음 Android SDK 및 도구가 설치 되어 있는지 확인 합니다.
 
@@ -79,11 +77,9 @@ Xamarin.ios를 설치한 후 다음 단계를 수행 하 여 Android 앱을 빌�
 
 -----
 
-
 ## <a name="configuration"></a>Configuration
 
 앱 테스트를 사용 하려면 먼저 Android 마모 에뮬레이터 또는 실제 Android 장치를 구성 해야 합니다. 
-
 
 ### <a name="android-wear-emulator"></a>Android 마모 에뮬레이터
 
@@ -101,16 +97,13 @@ Android 마모 에뮬레이터를 사용 하려면 먼저 **Google Emulator Mana
 
 Android 마모 에뮬레이터를 설정 하는 방법에 대 한 자세한 내용은 [에뮬레이터에서 Android 마모 디버그](~/android/wear/deploy-test/debug-on-emulator.md)를 참조 하세요.
 
-
 ### <a name="android-wear-device"></a>Android 장치
 
 Android 마모 Smartwatch 같은 Android 장치를 사용 하는 경우 에뮬레이터를 사용 하는 대신이 장치에서 앱을 디버그할 수 있습니다. 마모 된 장치를 사용 하 여 개발 하는 방법에 대 한 자세한 내용은 [마모 된 장치에서 디버그](~/android/wear/deploy-test/debug-on-device.md)를 참조 하세요.
 
-
 ## <a name="create-your-first-android-wear-app"></a>첫 번째 Android 앱 만들기
 
 [Hello, 마모](~/android/wear/get-started/hello-wear.md) 된 지침에 따라 첫 번째 시청 앱을 빌드 하세요.
-
 
 ## <a name="packaging-your-app"></a>앱 패키징
 
@@ -119,7 +112,6 @@ Android 마모 응용 프로그램은 항상 자매 Android 휴대폰 앱과 함
 Android 마모 응용 프로그램을 주 Android 응용 프로그램에 대 한 참조로 추가 하면 자동으로 Android 마모 프로젝트로 간주 되 고 필요한 모든 XML 및 메타 데이터가 생성 됩니다. 또한 패키지와 버전 번호가 일치 하는지 확인 하 여 앱을 쉽게 Google Play 수 있습니다. 
 
 패키지 사용 앱에 대 한 자세한 내용은 [패키징 작업](~/android/wear/deploy-test/packaging.md)을 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

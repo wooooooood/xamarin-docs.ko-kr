@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 63f815cc974315735220a99fd4cce2af408a8c2f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 4cec06287963fb607ba2f523c6f47e56c08e655f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119054"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754901"
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
@@ -104,7 +104,6 @@ Android가 암시적 의도에 대해 둘 이상의 가능한 일치 항목을 �
 
 의도를 디스패치 하는 방법은 서비스 유형에 따라 다르며, 각 서비스 유형과 관련 된 가이드에서 나중에 자세히 설명 합니다.
 
-
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>암시적 의도에 대 한 의도 필터 만들기
 
 서비스를 암시적 의도에 연결 하려면 Android 앱에서 서비스의 기능을 식별 하는 메타 데이터를 제공 해야 합니다. 이 메타 데이터는 _의도 필터_에 의해 제공 됩니다. 의도 필터에는 서비스를 시작 하기 위해 제공 해야 하는 작업 또는 데이터 유형과 같은 일부 정보가 포함 되어 있습니다. Xamarin Android에서 의도 필터는 서비스를로 [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute)데코레이팅하는 방법으로 **androidmanifest** 에 등록 됩니다. 예를 들어 다음 코드는의 `com.xamarin.DemoService`연결 된 작업을 사용 하 여 의도 필터를 추가 합니다.
@@ -128,7 +127,6 @@ public class DemoService : Service
 ```
 
 Xamarin Android 서비스의 기본 사항을 사용 하 여 다양 한 서비스 하위 유형을 더 자세히 살펴보겠습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,22 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ef73b8e1cf9747c9ba426894f37aab620ac0095f
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 550883de571951bb05f0634632fd6b7688e1ab8c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119149"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755293"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Xamarin Android의 사용 권한
-
 
 ## <a name="overview"></a>개요
 
 Android 응용 프로그램은 자체 샌드박스에서 실행 되며, 보안상의 이유로 장치의 특정 시스템 리소스 또는 하드웨어에 액세스할 수 없습니다. 사용자는 이러한 리소스를 사용 하기 전에 앱에 대 한 권한을 명시적으로 부여 해야 합니다. 예를 들어 응용 프로그램은 사용자가 명시적으로 사용 하지 않고 장치에서 GPS에 액세스할 수 없습니다. 앱이 권한 없이 `Java.Lang.SecurityException` 보호 된 리소스에 액세스 하려고 하면 Android에서을 throw 합니다.
 
 앱을 개발할 때 응용 프로그램 개발자가 사용 권한을 **Androidmanifest** 에서 선언 합니다. Android에는 해당 권한에 대 한 사용자의 동의를 얻기 위한 두 가지 워크플로가 있습니다.
- 
+
 - Android 5.1 (API 수준 22)를 대상으로 하는 앱의 경우 앱을 설치할 때 사용 권한 요청이 발생 합니다. 사용자가 권한을 부여 하지 않은 경우 앱이 설치 되지 않습니다. 앱이 설치 되 면 앱을 제거 하는 경우를 제외 하 고는 권한을 취소할 수 없습니다.
 - Android 6.0 (API 수준 23)부터 사용자에 게 사용 권한을 보다 세부적으로 제어할 수 있습니다. 앱이 장치에 설치 되어 있는 한 사용 권한을 부여 하거나 취소할 수 있습니다. 이 스크린샷에서는 Google 연락처 앱에 대 한 권한 설정을 보여 줍니다. 다양 한 사용 권한을 나열 하 고 사용자가 사용 권한을 설정 하거나 해제할 수 있습니다.
 
@@ -47,17 +46,14 @@ Android 지원 라이브러리 백에서 이전 버전의 Android에 대 한 사
 
 이 문서에서는 Xamarin.ios 응용 프로그램에 사용 권한을 추가 하는 방법과 Android 6.0 (API 수준 23) 이상을 대상으로 하는 앱이 런타임 권한 검사를 수행 하는 방법을 설명 합니다.
 
-
 > [!NOTE]
 > 하드웨어에 대 한 권한이 Google Play으로 앱을 필터링 하는 방법에 영향을 줄 수 있습니다. 예를 들어 앱에 카메라에 대 한 권한이 필요한 경우 Google Play는 카메라를 설치 하지 않은 장치에서 Google Play 스토어 앱을 표시 하지 않습니다.
-
 
 <a name="requirements" />
 
 ## <a name="requirements"></a>요구 사항
 
 Xamarin Android 프로젝트에는 [xamarin.ios](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) 패키지를 포함 하는 것이 좋습니다. 이 패키지는 앱이 실행 되는 Android 버전을 지속적으로 확인할 필요 없이 일반적인 인터페이스 하나를 제공 하는 이전 버전의 Android에 대 한 사용 권한 특정 Api를 제공 합니다.
-
 
 ## <a name="requesting-system-permissions"></a>시스템 사용 권한 요청
 
@@ -67,7 +63,6 @@ Android 6.0 이상을 대상으로 하는 앱은 사용자에 게 과거의 특�
 
 > [!NOTE]
 > 응용 프로그램은 필요한 권한만 요청 해야 합니다.
-
 
 ### <a name="declaring-permissions-in-the-manifest"></a>매니페스트에서 권한 선언
 
@@ -115,7 +110,6 @@ Mac용 Visual Studio에 기본 제공 되는 도구 지원을 사용 하 여 사
 Xamarin.ios는 빌드 시 빌드를 디버그 하는 데 일부 권한을 자동으로 추가 합니다. 이렇게 하면 응용 프로그램을 더 쉽게 디버그할 수 있습니다. 특히, 두 가지 주목할 만한 권한은 `INTERNET` 및 `READ_EXTERNAL_STORAGE`입니다. 이러한 자동 설정 권한은 **필요한 사용 권한** 목록에서 사용 하도록 설정 된 것으로 표시 되지 않습니다. 그러나 릴리스 빌드는 **필요한 사용 권한** 목록에 명시적으로 설정 된 권한만 사용 합니다. 
 
 Android 5.1 (API 수준 22)이 하를 대상으로 하는 앱의 경우 수행 해야 할 작업이 없습니다. Android 6.0 (API 23 수준 23) 이상에서 실행 되는 앱은 런타임 권한 검사를 수행 하는 방법에 대 한 다음 섹션을 진행 해야 합니다. 
-
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Android 6.0의 런타임 권한 검사
 
@@ -209,11 +203,9 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Android 장치에서 사용 권한을 추가 하 고 확인 하는 방법에 대해 설명 했습니다. 이전 Android 앱 (API 수준 < 23)과 새 Android 앱 (API 레벨 > 22) 사이에서 사용 권한이 작동 하는 방식의 차이입니다. Android 6.0에서 런타임 권한 검사를 수행 하는 방법에 대해 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 63530595d9892ed99b7eace3d248e1bc0d0b37d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0cc04896b5c6e9b620b24c84d5c9d2a09b9cf4a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288398"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752632"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Xamarin.ios의 앱 내 구매
 
@@ -55,7 +55,6 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 - **스토어 키트** – 앱에서의 구매 기능을 빌드하는 데 사용 되는 클래스에 대 한 설명입니다.
 - **구매를 위해 앱 코딩** – 앱 내 구매를 xamarin.ios 앱으로 빌드하는 방법에 대 한 예제입니다.
 - **보고** -iTunes Connect를 통해 사용할 수 있는 통계에 대 한 개요입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

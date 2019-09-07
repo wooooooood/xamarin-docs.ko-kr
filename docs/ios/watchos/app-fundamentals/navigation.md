@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 7502998e8e8da5e011ef1ec0ab7dcc6e3d892d3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768728"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>WatchOS에서 Xamarin 탐색 사용
 
@@ -97,7 +97,6 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 ![](navigation-images/paged-1.png "샘플의 첫 번째 페이지") ![](navigation-images/paged-2.png "샘플 두 번째 페이지") ![](navigation-images/paged-5.png "샘플 다섯 번째 페이지")
 
-
 페이지 기반 인터페이스를 watch 앱에 대 한 기본 UI를 사용 하 여 `ReloadRootControllers` 배열 인터페이스 컨트롤러 및 컨텍스트를 사용 하 여:
 
 ```csharp
@@ -113,8 +112,6 @@ var controllerNames = new [] { "pageController", "pageController", "pageControll
 var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 PresentController (controllerNames, contexts);
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

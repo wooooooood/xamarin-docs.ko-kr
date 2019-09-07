@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 350cd7e2d0dd79b876a6c1277d40a9c96d97c102
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4dface536504b0a79d376ab0979443a5ed19e901
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769243"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV App Store에 게시
 
@@ -24,7 +24,6 @@ Apple TV 앱 스토어에 응용 프로그램을 제출 하는 프로세스는 �
 2. *배포 프로비전 프로필*을 만듭니다.
 3. 이 프로필을 사용 하 여 앱을 빌드합니다.
 4. *ITunes Connect*를 통해 앱을 제출 합니다.
-
 
 이 문서에서는 Apple TV 앱 스토어 배포용 앱을 프로 비전, 빌드 및 제출 하는 데 필요한 모든 단계를 다룹니다.
 
@@ -39,7 +38,6 @@ Apple TV 앱 스토어에 게시 하기 위해 앱을 제출한 후 apple에서 
 
 1. 앱의 설명이 앱에 포함 된 기능과 일치 하는지 확인 합니다.
 2. 정상적인 사용에서 앱이 충돌하지 않는지 테스트합니다. 여기에는 지원 되는 모든 Apple TV 장치에 대 한 사용이 포함 됩니다.
-
 
 Apple은 Apple TV 앱 스토어 제출 팁의 목록도 유지 관리 합니다. 이러한 목록은 [앱 스토어에서 배포](https://developer.apple.com/appstore/resources/submission/tips.html)에서 참조할 수 있습니다.
 
@@ -121,7 +119,6 @@ tvOS는 *프로 비전 프로필* 을 사용 하 여 특정 응용 프로그램 
 
 자세한 지침은 [배포 프로필 만들기](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) 및 [Xamarin.iOS 프로젝트에서 배포 프로필 선택](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile)을 참조하세요. 이 두 문서는 모두 iOS에만 적용 되지만 동일한 기술이 tvOS apps에 사용 됩니다.
 
-
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>애플리케이션에 대한 빌드 구성 설정
@@ -137,7 +134,6 @@ tvOS는 *프로 비전 프로필* 을 사용 하 여 특정 응용 프로그램 
 5. 또한 tvOS apps에서 bitcode를 사용 해야 합니다. **릴리스** 구성 아래에서 `--bitcode=asmonly` **추가 mtouch 인수** 상자에를 추가 합니다.
 6. **IOS에 대 한 PNG 이미지 파일 최적화** 확인란을 선택 하면 앱의 결과물 크기를 더 줄일 수 있습니다.
 7. 빌드를 불필요 하 게 더 크게 만들기 때문에 디버깅을 사용 하도록 *설정 하면 안* 됩니다.
-
 
 <a name="Building_and_Submitting_the_Distributable" />
 
@@ -189,7 +185,6 @@ TvOS 앱이 올바르게 구성 되 면 이제 검토 및 릴리스를 위해 Ap
 
 배포 빌드가 완료되면 iOS 애플리케이션을 Apple에 제출하여 앱 스토어에서 검토하고 릴리스할 준비가 됩니다.
 
-
 Mac용 Visual Studio의 보관 워크플로는 `.ipa`다음을 저장 하면 응용 프로그램 로더가 자동으로 열립니다.
 
 1. *앱 배달*을 선택하고 *선택* 단추를 클릭합니다.
@@ -225,7 +220,6 @@ Apple TV 앱 스토어에 tvOS 앱을 제출 하는 데 문제가 있는 경우 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Apple TV 앱 스토어 게시용 앱을 구성, 빌드 및 제출 하는 단계별 가이드를 제공 합니다. 먼저, 배포 프로비전 프로필을 만들고 설치하는 데 필요한 단계에 대해 설명했습니다. 다음으로 Mac용 Visual Studio를 사용 하 여 배포 빌드를 만드는 방법을 살펴보았습니다. 마지막으로, iTunes Connect 및 Xcode Archive 도구를 사용 하 여 Apple TV 앱 스토어에 응용 프로그램을 제출 하는 방법을 보여 주었습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

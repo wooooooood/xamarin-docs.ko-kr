@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: f81a9d232e1702d112e837a80d35403162e3adca
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 116225165b8ee27b896d3de8598f8fbf39400f52
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529334"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767525"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>5장. 데이터 바인딩부터 MVVM까지
 
@@ -707,7 +707,6 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 ## <a name="summary"></a>요약
 
 XAML은 특히 데이터 바인딩 및 MVVM을 사용할 때 Xamarin.Forms 응용 프로그램에서 사용자 인터페이스를 정의하는 강력한 도구입니다. 결과는 코드에서 모든 배경을 지원하는 사용자 인터페이스를 깔끔하고 세련되며, 잠재적으로 도구화하여 표현할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

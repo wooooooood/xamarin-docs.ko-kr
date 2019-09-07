@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 4b1e232259d7b1816e64298b5c0b8853d8385c20
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6d3756f4215174e17ec45518f430dc38270e3289
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283860"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768697"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Apple Watch 장치에서 테스트
 
@@ -64,7 +64,6 @@ Watch의 UDID를 알고 있으면 개발자 센터의 장치 목록에 추가 �
 
 ![](device-images/options-selectprofile.png "프로 비전 프로필 목록")
 
-
 <a name="testing" />
 
 ## <a name="testing-on-a-watch-device"></a>시청 장치에서 테스트
@@ -88,7 +87,6 @@ Watch의 UDID를 알고 있으면 개발자 센터의 장치 목록에 추가 �
 
 8. Watch 앱이 성공적으로 설치 된 경우 아이콘이 조사식 화면에 그대로 남아 있습니다. 앱 테스트를 시작 하는 데 터치 합니다.
 
-
 ## <a name="troubleshooting"></a>문제 해결
 
 배포 하는 동안 오류가 발생 하는 경우 **보기 > 패드** 를 사용 하 여 오류에 대 한 자세한 정보를 확인 > 합니다. 일부 오류 및 원인은 다음과 같습니다.
@@ -103,11 +101,9 @@ Apple Watch 장치에 배포 하기 위해 디버그 모드에서 빌드할 때 
 
 이 문제는 향후 릴리스에서 수정 될 예정 이며, 그 후에는 증분 빌드를 다시 사용 하도록 설정 하 여 더 빠른 빌드 시간을 활용할 수 있습니다.
 
-
 ### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>장치에서 디버깅 하는 동안 감시 앱이 시작 되지 않음
 
 물리적 장치에서 조사식 응용 프로그램을 디버깅 하려고 할 때 & 로딩 회전자 아이콘이 표시 됩니다 (결과적으로 시간 초과 됨). 이 문제는 향후 릴리스에서 해결 될 예정입니다. 해결 방법은 디버깅을 허용 하지 않는 릴리스 빌드를 실행 하는 것입니다.
-
 
 ### <a name="invalid-application-executable-or-application-verification-failed"></a>응용 프로그램 실행 파일이 잘못 되었거나 응용 프로그램을 확인 하지 못했습니다.
 
@@ -131,8 +127,6 @@ Invalid executable/Application Verification Failed
 
 - Watch 앱의 **앱 ID** 가 개발자 센터에서 포함 되지 않은 권한 (예: 앱 그룹)을 잘못 사용 했습니다.
 
-
-
 ### <a name="install-never-finished"></a>설치 완료 안 함
 
 ```csharp
@@ -142,7 +136,6 @@ SPErrorGizmoInstallNeverFinishedErrorMessage
 이 오류는 Watch 앱의 **info.plist** 파일에서 불필요 한 키 (및 유효 하지 않음)를 나타낼 수 있습니다. IOS 앱 또는 조사식 확장에 대 한 키를 시청 앱에 포함 해서는 안 됩니다.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
-
 
 ### <a name="waiting-for-debugger-to-connect"></a>"디버거가 연결 되기를 기다리는 중"
 
@@ -156,4 +149,3 @@ waiting for debugger to connect
 
 **.Csproj** 에 추가 된 **Microsoft .targets. Build .targets** 파일은 배포 중에 iOS 확장의 패키징을 방해할 수 있습니다. [버그](https://bugzilla.xamarin.com/show_bug.cgi?id=29912)를 추적할 수 있습니다.
 가능한 해결 방법은 .csproj 파일을 편집 하 고 수동으로 **Microsoft. .targets. .targets** 를 마지막 요소로 이동 하는 것입니다.
-

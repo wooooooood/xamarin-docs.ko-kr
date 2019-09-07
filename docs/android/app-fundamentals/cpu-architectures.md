@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 16e805488969aadb0d0b8aa5c892248b7fa403c9
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 59047b8564db6415ea3c47d7dcb72b5d0c66d1dd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69521213"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755584"
 ---
 # <a name="cpu-architectures"></a>CPU 아키텍처
 
@@ -22,7 +22,6 @@ _Xamarin Android는 32 비트 및 64 비트 장치를 비롯 한 몇 가지 CPU 
 
 릴리스를 위해 앱을 준비할 때 앱이 지 원하는 플랫폼 CPU 아키텍처를 지정 해야 합니다. 단일 APK가 여러 서로 다른 아키텍처를 지원하는 머신 코드를 포함할 수 잇습니다. 아키텍처 관련 코드의 각 컬렉션은 ABI ( *응용 프로그램 이진 인터페이스* )와 연결 됩니다. 각 ABI는 런타임에이 컴퓨터 코드가 Android와 상호 작용 하는 방법을 정의 합니다.
 작동 방식에 대 한 자세한 내용은 참조는 [다중 코어 장치 &amp; Xamarin. Android](~/android/deploy-test/multicore-devices.md)합니다.
-
 
 ## <a name="how-to-specify-supported-architectures"></a>지원 되는 아키텍처를 지정 하는 방법
 
@@ -43,7 +42,6 @@ Mac용 Visual Studio의 **Solution** pad에서 프로젝트를 찾고 프로젝�
 [![Armeabi-v7a 및 armeabi-v7a-armeabi-v7a 선택](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 Xamarin.Android는 다음과 같은 아키텍처를 지원합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/26/2017
-ms.openlocfilehash: b6bf2aa8925e29ed5120de5cc2d3146704259d87
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e0b899e69405874f381c3ab6f9a9200a856d7402
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282402"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767306"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Xamarin.ios의 앱 스토어 아이콘
 
@@ -49,9 +49,6 @@ Xcode 9 이전에는 모든 앱 스토어 아이콘이 iTunes Connect를 통해 
     ![App Store 아이콘](app-store-icon-images/image2.png)
 
 3. 아이콘을 클릭 하 고 1024 x 1024 픽셀 이미지를 찾습니다. 자산 카탈로그를 저장 합니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

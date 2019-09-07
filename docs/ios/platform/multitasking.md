@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 87de42504081374f830a4fe286476ad822eeed99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f38200e8274a36783ac7bd1aec4b695036f83e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280155"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769631"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.ios의 iPad 용 멀티태스킹
 
@@ -40,7 +40,6 @@ iOS 9는 특정 iPad 하드웨어에서 두 앱을 동시에 실행 하기 위�
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
 **IPad 용 멀티태스킹 비디오**
-
 
 <a name="Multitasking-QuickStart" />
 
@@ -251,8 +250,6 @@ PIP 비디오 재생을 옵트아웃 하려면 앱에서 다음을 수행 합니
 ## <a name="summary"></a>요약
 
 이 문서에서는 Ipad에 대 한 iOS 9의 새로운 멀티태스킹 기능에서 Xamarin.ios 앱이 실행 되 고 제대로 작동 하는지 확인 하는 데 필요한 단계에 대해 설명 했습니다. 또한 잘 맞지 않는 앱에 대 한 멀티태스킹의 옵트아웃에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 96dbb60b8754223203394745bc86af2297cb5ff3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa2e287775e6669bd8bdf2728d9c676c451af69b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278532"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753291"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Xamarin.ios의 연락처 및 연락처
 
@@ -31,9 +31,6 @@ Ios 9가 도입 되면서 Apple은 ios 8 및 이전 버전에서 사용 `Contact
 
 > [!IMPORTANT]
 > Ios 8 `AddressBook` ( `AddressBookUI` 및 이전 버전)에서 사용 하는 기존 및 프레임 워크는 ios 9에서 더 이상 사용 되지 않으며, `Contacts` 기존 `ContactsUI` xamarin.ios 앱의 경우 가능한 한 빨리 새 및 프레임 워크로 바꾸어야 합니다. 새 프레임 워크에 대해 새 앱을 작성 해야 합니다.
-
-
-
 
 다음 섹션에서는 이러한 새 프레임 워크와 Xamarin.ios 앱에서 이러한 프레임 워크를 구현 하는 방법을 살펴보겠습니다.
 
@@ -111,7 +108,7 @@ else
 }
 ```
 
-이 코드가 iOS 9 장치에서 실행 되는 경우 새 연락처가 사용자의 컬렉션에 추가 됩니다. 예:
+이 코드가 iOS 9 장치에서 실행 되는 경우 새 연락처가 사용자의 컬렉션에 추가 됩니다. 예를 들어:
 
 [![](contacts-images/add01.png "사용자의 컬렉션에 추가 된 새 연락처입니다.")](contacts-images/add01.png#lightbox)
 
@@ -124,7 +121,7 @@ Console.WriteLine(CNContactFormatter.GetStringFrom(contact, CNContactFormatterSt
 Console.WriteLine(CNPostalAddressFormatter.GetStringFrom(workAddress, CNPostalAddressFormatterStyle.MailingAddress));
 ```
 
-응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예:
+응용 프로그램의 UI에 표시 되는 속성 레이블의 경우 Contact framework에도 이러한 문자열을 지역화 하는 메서드가 있습니다. 이는 앱이 실행 되는 iOS 장치의 현재 로캘을 기반으로 합니다. 예를 들어:
 
 ```csharp
 // Localized properties
@@ -176,7 +173,7 @@ var contacts = store.GetUnifiedContacts(predicate, fetchKeys, out error);
 
 일부 _연락처_ 는의 연락처 저장소에서 사용 가능한 속성 중 일부만 인출 된 연락처입니다. 이전에 인출 되지 않은 속성에 액세스 하려고 하면 예외가 발생 합니다.
 
-`IsKeyAvailable` 인스턴스의 또는`AreKeysAvailable` 메서드 중 하나를 사용 하 여 지정 된 연락처에 desired 속성이 있는지 쉽게 확인할 수 있습니다. `CNContact` 예:
+`IsKeyAvailable` 인스턴스의 또는`AreKeysAvailable` 메서드 중 하나를 사용 하 여 지정 된 연락처에 desired 속성이 있는지 쉽게 확인할 수 있습니다. `CNContact` 예를 들어:
 
 ```csharp
 // Does the contact contain the requested key?
@@ -227,7 +224,7 @@ if (store.ExecuteSaveRequest(saveRequest, out error)) {
 
 를 `CNSaveRequest` 사용 하 여 여러 연락처 및 그룹 변경 내용을 단일 작업으로 캐시 하 고 이러한 수정 `CNContactStore`내용을에 일괄 처리할 수도 있습니다.
 
-Fetch 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 변경 가능한 복사본을 요청한 다음 수정 하 고 연락처 저장소에 다시 저장 해야 합니다. 예를 들어:
+Fetch 작업에서 가져온 변경할 수 없는 연락처를 업데이트 하려면 먼저 변경 가능한 복사본을 요청한 다음 수정 하 고 연락처 저장소에 다시 저장 해야 합니다. 예:
 
 ```csharp
 // Get mutable copy of contact
@@ -281,7 +278,7 @@ Apple의 기본 제공 컨트롤을 사용 하면 Xamarin.ios 앱에서 연락�
 
 `CNContactPickerViewController` 클래스를 호출 하기 전에 사용자가 선택할 수 있는 속성을 정의 하 고 연락처 속성의 표시 및 선택을 제어 하는 조건자를 정의 합니다.
 
-에서 `CNContactPickerDelegate` 상속 되는 클래스의 인스턴스를 사용 하 여 선택기와의 사용자 상호 작용에 응답 합니다. 예를 들어:
+에서 `CNContactPickerDelegate` 상속 되는 클래스의 인스턴스를 사용 하 여 선택기와의 사용자 상호 작용에 응답 합니다. 예:
 
 ```csharp
 using System;
@@ -359,7 +356,6 @@ PresentViewController(view, true, null);
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 연락처 및 연락처 UI 프레임 워크를 사용 하는 방법에 대해 자세히 살펴봅니다. 먼저, 연락처 프레임 워크에서 제공 하는 다양 한 유형의 개체와 이러한 개체를 사용 하 여 새 사용자를 만들거나 기존 연락처에 액세스 하는 방법을 설명 했습니다. 또한 연락처 UI 프레임 워크를 검토 하 여 기존 연락처를 선택 하 고 연락처 정보를 표시 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

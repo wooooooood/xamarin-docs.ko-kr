@@ -1,18 +1,18 @@
 ---
 title: 요약 17 장입니다. 눈금 마스터
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 17 장입니다. 눈금 마스터
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 17 장입니다. 눈금 마스터'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333736"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760636"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>요약 17 장입니다. 눈금 마스터
 
@@ -101,8 +101,6 @@ XAML에서 이러한 값을 설정 하는 것에 대 한 다음과 같은 특성
 `Grid` 방향 변경에 응답 하는 프로그램을 구성 하는 데 도움이 됩니다. 합니다 [ **GridRgbSliders** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridRgbSliders) 샘플 세로 방향의 휴대폰의 두 번째 행에서 가로 방향 휴대폰의 두 번째 열 사이의 요소를 이동 하는 방법을 보여 줍니다.
 
 프로그램 초기화 `Slider` 다양 한 0 ~ 255 및 슬라이더의 값을 16 진수에서 표시를 사용 하 여 데이터 바인딩 요소입니다. 때문에 합니다 `Slider` 값은 부동 소수점, 정수, 16 진수 에서만 작동에 대 한 문자열의 형식을 지정 하는.NET을 [ `DoubleToIntConvert` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) 클래스를 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) out 라이브러리를 사용 하면 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

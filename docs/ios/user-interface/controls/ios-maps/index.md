@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 60bf25d7d88a1772e8b742a336a5faaebdf964fa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1a91b92cc3e82bad02d630dde8ced1d1ba63e3fd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290809"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768482"
 ---
 # <a name="maps-in-xamarinios"></a>Xamarin.ios의 Maps
 
@@ -52,7 +52,6 @@ map.MapType = MKMapType.Hybrid;
 
 - 손가락을 사용한 확대/축소 제스처
 - 이동 제스처를 통해 패닝
-
 
 `ZoomEnabled` 인스턴스의 및`ScrollEnabled` 속성을 설정 하 여 이러한 기능을 사용 하거나 사용 하지 않도록 설정할 수 있습니다. 여기서 기본값은 두 경우 모두 true입니다. `MKMapView` 예를 들어 정적 맵을 표시 하려면 적절 한 속성을 false로 설정 하면 됩니다.
 
@@ -100,7 +99,6 @@ map.ShowsUserLocation = true;
 
 - 주석의 제목 및 위치와 같은 주석에 대 한 모델 데이터를 포함 하는 개체입니다.`MKAnnotation`
 - `MKAnnotationView` 표시할 이미지를 포함 하는와 사용자가 주석을 누를 때 표시 되는 선택적 설명선입니다.
-
 
 지도 키트는 iOS 위임 패턴을 사용 하 여 맵에 주석을 추가 합니다 `Delegate` `MKMapViewDelegate`. 여기서 `MKMapView` 의 속성은의 인스턴스로 설정 됩니다. 주석에 대 한를 `MKAnnotationView` 반환 하는이 대리자의 구현입니다.
 
@@ -183,7 +181,6 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 - 다중선-경로를 표시할 때 주로 표시 됩니다.
 - 원-지도의 원형 영역을 강조 표시 하는 데 사용 됩니다.
 
-
 또한 세부적인 사용자 지정 그리기 코드를 사용 하 여 임의 기 하 도형을 표시 하도록 사용자 지정 오버레이를 만들 수 있습니다. 예를 들어 날씨 레이더는 사용자 지정 오버레이의 좋은 후보가 됩니다.
 
 #### <a name="adding-an-overlay"></a>오버레이 추가
@@ -192,7 +189,6 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 - 오버레이의 모델 개체를 만들어에 추가 `MKMapView` 합니다.
 - 에서 오버레이의 보기를 만듭니다 `MKMapViewDelegate` .
-
 
 오버레이에 대 한 모델은 모든 `MKShape` 하위 클래스일 수 있습니다. Xamarin.ios에는 `MKPolygon`, `MKShape` `MKPolyline` 및`MKCircle` 클래스를 통해 다각형, 폴리라인 및 원의 서브 클래스가 포함 됩니다.
 
@@ -231,7 +227,6 @@ iOS에는 지정 된 지역에서 관심 지점의 비동기 검색을 허용 �
 1. 에서 개체를 만듭니다. `MKLocalSearchRequest` `MKLocalSearch`
 1. 개체에서 메서드를 `Start` 호출 합니다. `MKLocalSearch`
 1. 콜백에서 개체 `MKLocalSearchResponse` 를 검색 합니다.
-
 
 로컬 검색 API 자체는 사용자 인터페이스를 제공 하지 않습니다. 지도를 사용 하지 않아도 됩니다. 그러나 로컬 검색을 효과적으로 사용 하려면 응용 프로그램에서 검색 쿼리를 지정 하 고 결과를 표시 하는 몇 가지 방법을 제공 해야 합니다. 또한 결과에 위치 데이터가 포함 되므로 맵에 표시 하는 것이 좋습니다.
 
@@ -279,8 +274,6 @@ NavigationItem.TitleView = searchController.SearchBar;
 그러면 아래와 같이 지도 위에 검색 표시줄이 표시 됩니다.
 
  ![](images/07-searchbar.png "지도 위에 표시 되는 검색 표시줄")
-
-
 
 ### <a name="displaying-the-search-results"></a>검색 결과 표시
 
@@ -351,7 +344,6 @@ public class SearchResultsViewController : UITableViewController
             }
         });
 
-
     }
 }
 ```
@@ -382,7 +374,6 @@ public void Search (string forSearchString)
         }
     });
 
-
 }
 ```
 
@@ -406,8 +397,6 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
 > [!IMPORTANT]
 > `UISearchController`는 iOS 8에서 구현 되었습니다. 이전 장치를 지원 하려는 경우를 사용 `UISearchDisplayController`해야 합니다.
-
-
 
 ## <a name="summary"></a>요약
 

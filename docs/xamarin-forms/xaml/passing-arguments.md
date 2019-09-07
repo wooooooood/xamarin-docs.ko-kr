@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 065c7284970ececacbdb298d773b19f654280513
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 80f332e45d6c46ad49543923e85cbb2eceadb378
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228096"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767590"
 ---
 # <a name="passing-arguments-in-xaml"></a>XAML의 인수 전달
 
@@ -168,7 +168,6 @@ _이 문서에서는 기본이 아닌 생성자, 팩터리 메서드를 호출 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 기본이 아닌 생성자, 팩터리 메서드를 호출 하 고 제네릭 인수의 형식을 지정 하 여 인수를 전달할 수 있는 XAML 특성을 사용 하 여 보여 줍니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

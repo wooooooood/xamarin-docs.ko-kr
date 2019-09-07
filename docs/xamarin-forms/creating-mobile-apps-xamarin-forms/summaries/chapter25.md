@@ -1,18 +1,18 @@
 ---
 title: 요약 25 장입니다. 페이지 종류
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 25 장입니다. 페이지 종류
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 25 장입니다. 페이지 종류'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: db6c329c029f52180fe508f277a1cf4834ab493a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b86f2d7216a6344b14fc4d8c538ea68871eda5ae
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61331825"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760542"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>요약 25 장입니다. 페이지 종류
 
@@ -111,8 +111,6 @@ Xamarin.Forms는 마스터 / 세부 뷰 간의 전환에 대 한 사용자 인�
 합니다 [ **MultiTabbedColor** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25/MultiTabbedColors) 샘플에서는 합니다 [ `NamedColor` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NamedColor.cs) 클래스의 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리입니다. [MultiTabbedColorsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter25/MultiTabbedColors/MultiTabbedColors/MultiTabbedColors/MultiTabbedColorsPage.xaml) 파일 집합을 `DataTemplate` 속성을 `TabbedPage` 로 시작 하는 시각적 트리를 `ContentPage` 의 속성에 대 한 바인딩을 포함 하는 `NamedColor` (합니다 에대한바인딩을포함합니다.`Title` 속성).
 
 그러나 iOS의 경우 문제가 됩니다. 항목 중 일부만 표시할 수 있습니다 이며 아이콘 제공 방법이 없습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

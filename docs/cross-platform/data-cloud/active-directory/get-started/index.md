@@ -6,12 +6,12 @@ ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: f51c6af9ed38910f44db2c0886c474deafa096d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b28fcea37d991879df0231609d09eeb2eca49505
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289987"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766346"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
 
@@ -32,12 +32,9 @@ Azure Active Directory 인증할 수 있는 모바일 응용 프로그램 개발
 - Web API
 - Office365
 
-
 ## <a name="conclusion"></a>결론
 
 위의 단계를 사용 하 여 Azure Active Directory에 대해 모바일 앱을 인증할 수 있습니다. Active Directory 인증 라이브러리 (ADAL)를 사용 하면 코드의 줄 수를 줄이고, 대부분의 코드를 동일 하 게 유지 하는 동시에 플랫폼 간에 공유할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

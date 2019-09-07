@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8fb0b5136cc75463fc35ced2336e0ea321e8aecd
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 9d8710b3b88b59871b88a1d42ec4f4bb3e515ff5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524424"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756515"
 ---
 # <a name="how-content-providers-work"></a>콘텐츠 공급자의 작동 방식
 
@@ -23,12 +23,9 @@ ms.locfileid: "69524424"
 
 콘텐츠 공급자는 일반적으로 SQLite 데이터베이스에서 지원 되지만 API는 코드를 사용 하 여 기본 SQL에 대 한 정보를 알 필요가 없음을 의미 합니다. 쿼리는 상수를 사용 하 여 열 이름을 참조 하는 Uri를 통해 수행 되며 (기본 데이터 구조에 대 한 종속성 `ICursor` 을 줄이기 위해)를 사용 하 여 반복 되는 코드에 대해이 반환 됩니다.
 
-
 ## <a name="consuming-a-contentprovider"></a>ContentProvider 사용
 
 `ContentProviders`데이터를 게시 하는 응용 프로그램의 .xml에 등록 된 Uri를 통해 해당 기능을 노출 합니다 **.** 노출 되는 Uri 및 데이터 열을 상수로 사용 하 여 데이터에 쉽게 바인딩할 수 있는 규칙이 있습니다. Android의 기본 `ContentProviders` 제공는 [`Android.Providers`](xref:Android.Provider) 네임 스페이스의 데이터 구조를 참조 하는 상수를 사용 하 여 편리한 클래스를 제공 합니다.
-
-
 
 ### <a name="built-in-providers"></a>기본 제공 공급자
 
@@ -47,8 +44,6 @@ Android는 다음을 사용 하 여 `ContentProviders`광범위 한 시스템 �
 - *Userdictionary* &ndash; 예측 텍스트 입력에 사용 되는 사용자 정의 사전의 내용입니다.
 
 - *음성 메일* &ndash; 음성 메시지의 기록입니다.
-
-
 
 ## <a name="classes-overview"></a>클래스 개요
 
@@ -79,4 +74,3 @@ API `ContentProvider` 를 통해 소비자는 다음과 같은 다양 한 데이
 - 레코드를 삭제 합니다.
 
 이 문서에는 시스템 제공 `ContentProvider`를 사용 하는 예제와 사용자 지정 `ContentProvider`을 구현 하는 간단한 읽기 전용 예가 포함 되어 있습니다.
-

@@ -7,12 +7,12 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: a645ef4ed55c8b4c78bad94865777088f62f1175
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647399"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770568"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>SkiaSharp에서 SVG 경로 데이터
 
@@ -428,7 +428,6 @@ public class PrettyAnalogClockPage : ContentPage
 그러나 한편으로 두 번째를 사용 하 여 수행 됩니다 특별 한. 시계는 업데이트 되므로 16 밀리초 마다를 `Millisecond` 의 속성을 `DateTime` 값의 개별 점프 이동 하는 대신 스윕을 수동으로 두 번째 애니메이션 효과를 잠재적으로 사용할 수 있습니다 초 초에서. 하지만이 코드 이어갈 수 하는 움직임을 허용 하지 않습니다. 대신를 사용 하 여 Xamarin.Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) 하 고 [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) 애니메이션 감속/가속 함수는 다른 종류의 이동에 대 한 합니다. 감속/가속 함수가 양식 화면 떨림 방식으로 이동할 초침 &mdash; 끌어오기 다시 작은 이동한 다음 약간 과도 하 게 해결 목적지 효과 안타깝게도 재현할 수 없는 정적이 스크린 샷에 전에:
 
 [![](path-data-images/prettyanalogclock-small.png "삼중 아날로그 시계 매우 페이지 스크린샷")](path-data-images/prettyanalogclock-large.png#lightbox "삼중 아날로그 시계 매우 페이지 스크린샷")
-
 
 ## <a name="related-links"></a>관련 링크
 

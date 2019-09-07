@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e934059f5428780ea19917068503b58961ac5673
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 51afbdf79248af6f76426dd0e0c862e506a0a22f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284176"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768776"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS의 사용자 지정 컨트롤
 
@@ -41,7 +41,6 @@ Xamarin Designer for iOS는 응용 프로그램의 사용자 인터페이스를 
 1. 속성에는 [Exportattribute](xref:Foundation.ExportAttribute) 뿐만 아니라 [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) 가 True로 설정 되어 있습니다.
 1. 속성 형식은 숫자 형식, 열거형 형식, 문자열, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor)또는 [uiimage](xref:UIKit.UIImage)입니다. 지원 되는 형식 목록은 나중에 확장할 수 있습니다.
 
-
 속성은 속성 패널에서 표시 되는 레이블을 지정 하기 위해 [Displaynameattribute](xref:System.ComponentModel.DisplayNameAttribute) 로 데코레이팅 될 수도 있습니다.
 
 ## <a name="initialization"></a>초기화
@@ -49,7 +48,6 @@ Xamarin Designer for iOS는 응용 프로그램의 사용자 인터페이스를 
 서브 `UIViewController` 클래스의 경우 디자이너에서 만든 뷰에 따라 달라 지는 코드에 [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) 메서드를 사용 해야 합니다.
 
 및 `UIView` 기타 `NSObject` 서브 클래스의 경우 [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) 메서드는 레이아웃 파일에서 로드 된 후 사용자 지정 컨트롤의 초기화를 수행 하는 데 권장 되는 장소입니다. 이는 컨트롤의 생성자가 실행 될 때 속성 패널에 설정 된 사용자 지정 속성은 설정 되지 않지만가 호출 되기 전에 `AwakeFromNib` 설정 되기 때문입니다.
-
 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
@@ -131,7 +129,6 @@ public class CustomView : UIView {
 - 메서드가 실행 되 고 `Initialize` 구성 요소의 메서드에 대 한 호출이 수행 됩니다. `AwakeFromNib`
 - 속성의`Counter` 값이 0으로 `Initialize` 다시 설정 됩니다.
 
-
 위의 상황을 해결 하려면 다른 위치에서 속성 `Counter` 을 초기화 하거나 (예: 구성 요소 생성자에서), 메서드를 `AwakeFromNib` 재정의 하지 말고, `Initialize` 구성 요소에서 더 이상 초기화가 필요 하지 않은 경우를 호출 합니다. 가 현재 생성자에 의해 처리 되 고 있습니다.
 
 ## <a name="design-mode"></a>디자인 모드
@@ -140,7 +137,6 @@ public class CustomView : UIView {
 
 - 응용 프로그램 번들 리소스는 디자인 모드에서 사용할 수 없습니다. [Uiimage 메서드](xref:UIKit.UIImage) 를 통해 로드할 때 이미지를 사용할 수 있습니다.
 - 웹 요청과 같은 비동기 작업은 디자인 모드에서 수행 하면 안 됩니다. 디자인 화면은 컨트롤의 UI에 대 한 애니메이션 또는 기타 비동기 업데이트를 지원 하지 않습니다.
-
 
 사용자 지정 컨트롤은 [IComponent](xref:System.ComponentModel.IComponent) 를 구현 하 고 [designmode](xref:System.ComponentModel.ISite.DesignMode) 속성을 사용 하 여 디자인 화면에 있는지 확인할 수 있습니다. 이 예제에서 레이블은 디자인 화면에 "디자인 모드"를 표시 하 고 런타임에는 "런타임"을 표시 합니다.
 

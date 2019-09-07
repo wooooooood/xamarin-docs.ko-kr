@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 92ad0353268c414a1394e98a7b2d23d23dc4df07
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b80573a728e1868254b5a89254ebc385b3baa12
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285375"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768071"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>앱 스토어에 watchOS Apps 배포
 
@@ -82,7 +82,6 @@ ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린�
 312x390 픽셀 이어야 하 고 작동 중인 시청 앱을 보여 줍니다.
 이 크기에서 스크린샷을 사용할 수 있습니다.
 
-
 <a name="xamarin_studio" />
 
 ## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
@@ -128,7 +127,6 @@ Xcode는 Mac용 Visual Studio에서 만든 보관 파일을 자동으로 표시 
    [![](appstore-images/itc-prerelease-sml.png "ITunes Connect의 앱 구성 페이지")](appstore-images/itc-prerelease.png#lightbox)
 
 그런 다음 **버전** 페이지에서 승인을 위해 앱을 제출할 수 있습니다. 자세한 내용은 [iOS 앱 배포 개요](~/ios/deploy-test/app-distribution/index.md) 를 참조 하세요.
-
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -179,10 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 > [!IMPORTANT]
 > Mac용 Visual Studio의 조사식 아이콘 지원에 알려진 버그가 있습니다. **29x29@3x** 이미지에는 88x88 픽셀 이미지 (픽셀 87x87)가 필요 합니다.
 
-
 Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 [이 샘플과](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)일치 하도록 **콘텐츠. json** 파일을 수동으로 편집 합니다.
-
-
 
 ### <a name="invalid-watchkit-support"></a>잘못 된 WatchKit 지원
 
@@ -198,10 +193,7 @@ Ensure you are using the latest version of Xcode and Xamarin's tools.
 > [!IMPORTANT]
 > 앱을 Mac용 Visual Studio에 **보관** 한 다음 Xcode 6.2 +로 전환 하 여 유효성을 검사 하 고 iTunes Connect에 업로드 해야 합니다.
 
-
 안정적인 Xamarin 채널 및 Xcode 6.2 +를 사용 합니다.
-
-
 
 ### <a name="invalid-provisioning-profile"></a>잘못 된 프로 비전 프로필
 
@@ -261,8 +253,6 @@ Error MT5309: Native linking error: clang: error: no such file or directory:
 ```
 
 이 오류는 **Xcode**에서 Xcode 설치의 이름을 변경한 결과일 수 있습니다. 예를 들어 설치의 이름을 **XCode 6.2. app**으로 바꾸면이 오류가 발생 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

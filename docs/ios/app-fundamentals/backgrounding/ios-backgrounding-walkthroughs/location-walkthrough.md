@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: b95f60676a1c58463fc6e384ea3738122a1c76fe
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9f4708b56b8cf8a243785816440c63b743059cf5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286818"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756273"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>연습-Xamarin.ios의 백그라운드 위치
 
@@ -21,7 +21,6 @@ ms.locfileid: "70286818"
 이 연습에서는 앱을 백그라운드에서 필요한 응용 프로그램으로 등록 하 고, 앱이 backgrounded 때 UI 업데이트를 일시 중단 하 고, `WillEnterBackground` 및 `WillEnterForeground` `AppDelegate` 메서드를 사용 하는 등의 몇 가지 주요 backgrounding 개념을 설명 합니다. .
 
 ## <a name="application-set-up"></a>응용 프로그램 설정
-
 
 1. 먼저 **단일 뷰 응용 프로그램 > 새 iOS > 앱을 만듭니다 (C#)** . It _위치_ 를 호출 하 고 IPad와 iPhone을 모두 선택 했는지 확인 합니다.
 
@@ -84,7 +83,6 @@ ms.locfileid: "70286818"
 1. 위치 데이터 액세스 `NSLocationAlwaysUsageDescription` 를 `NSLocationWhenInUseUsageDescription` 요청 하는 경고에서 사용자에 게 표시 되는 문자열이 나 키를 추가 합니다.
 
 1. iOS 9에서는 info.plist를 사용 `AllowsBackgroundLocationUpdates` 하는 경우 값 `location`이 포함 된 `UIBackgroundModes` 키를 포함 해야 **합니다.** 이 연습의 2 단계를 완료 한 경우 info.plist 파일에 이미 포함 되어 있어야 합니다.
-
 
 1. 클래스 내에서 다음 코드를 사용 하 `StartLocationUpdates` 여 라는 메서드를 만듭니다. `LocationManager` 이 코드는에서 `CLLocationManager`위치 업데이트 수신을 시작 하는 방법을 보여 줍니다.
 
@@ -202,7 +200,6 @@ public override void ViewDidLoad ()
 }
 ```
 
-
 이제 응용 프로그램이 실행 될 때 다음과 같이 표시 됩니다.
 
 [![](location-walkthrough-images/image5.png "예제 앱 실행")](location-walkthrough-images/image5.png#lightbox)
@@ -278,7 +275,6 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 이제 응용 프로그램이 처음 시작 될 때 UI가 업데이트를 시작 하 고 앱이 포그라운드로 다시 들어올 때마다 업데이트를 다시 시작 합니다.
 
 이 연습에서는 화면 및 응용 프로그램 출력 창에 위치 데이터를 출력 하는 잘 작동 하는 백그라운드 인식 iOS 응용 프로그램을 빌드 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

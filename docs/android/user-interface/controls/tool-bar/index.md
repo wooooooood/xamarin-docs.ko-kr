@@ -7,18 +7,17 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 065c68ce6fbe816e503ace0ab42b3e86aa6916a7
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a0ca1aa42d9173abbc86a38ae26b14bfb4865a58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522839"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764616"
 ---
 # <a name="toolbar"></a>도구 모음
 
 _도구 모음은 기본 작업 모음 보다 더 많은 유연성을 제공 하는 작업 모음 구성 요소입니다 .이 구성 요소는 앱의 어느 위치에 나 배치 될 수 있으며, 크기를 변경할 수 있으며, 앱의 테마와 다른 색 구성표를 사용할 수 있습니다. 또한 각 앱 화면에는 여러 도구 모음이 있을 수 있습니다._
 
- 
 ## <a name="overview"></a>개요
 
 모든 Android 작업의 핵심 디자인 요소는 *작업 모음*입니다. 작업 모음은 Android 앱의 탐색, 검색, 메뉴 및 브랜딩에 사용 되는 UI 구성 요소입니다. Android 5.0 롤리팝 이전 Android 버전에서는이 기능을 제공 하기 위한 작업 모음 ( *앱 바*라고도 함)이 권장 구성 요소 였습니다. 
@@ -69,15 +68,10 @@ Google의 [재질 디자인 지침은](https://material.google.com/) 이러한 �
 
 - **Android Support library v7 appcompat** 라이브러리 (이 가이드의 나머지 부분에서는 *appcompat* 이라고 함)를 사용 하 여 이전 `Toolbar` 버전의 android에서 배포 합니다. 
 
- 
- 
 ## <a name="requirements"></a>요구 사항
 
 `Toolbar`Android 5.0 롤리팝 (API 21) 이상에서 사용할 수 있습니다. Android 5.0 이전 버전의 android 릴리스를 대상으로 하는 경우 NuGet 패키지에서 이전 버전과 호환 되 `Toolbar` 는 지원을 제공 하는 [android 지원 라이브러리 v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)을 사용 합니다. 
 [도구 모음 호환성](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md) 에서는이 라이브러리를 사용 하는 방법을 설명 합니다. 
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

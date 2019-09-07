@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: d1464ca3accf53a9362d00e279ff9e158d7e34d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b829cf3f440b1c94c5232d258c86b6ea4b0f181
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281642"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767520"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Xamarin.iOS에서 코드로 iOS 사용자 인터페이스 만들기
 
@@ -59,16 +59,13 @@ IOS 앱의 사용자 인터페이스는 storefront – 응용 프로그램은 �
 1. **Info.plist** -응용 프로그램 구성 정보를 포함 하는 속성 목록 파일.
 1. **Entitlements.plist** – 응용 프로그램의 권한과 기능에 대 한 정보를 포함 하는 속성 목록 파일입니다.
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 ## <a name="ios-templates"></a>iOS 템플릿
 
-
 Mac 용 visual Studio에는 빈 템플릿을 제공 하지 않습니다. 모든 템플릿에 UI를 만들기 위한 기본 방법으로 Apple이 권장 하는 스토리 보드가 지원 제공 됩니다. 그러나 코드에서 완전히 UI를 만들 수 것입니다.
 
 아래 단계를 안내 응용 프로그램에서 스토리 보드를 제거 합니다.
-
 
 1. 단일 뷰 앱 템플릿을 사용 하 여 새 iOS 프로젝트를 만듭니다.
 

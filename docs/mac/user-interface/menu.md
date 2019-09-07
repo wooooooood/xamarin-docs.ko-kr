@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 27eb5679bbc4825ab2bf0e1990b00d97ab207619
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292431"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770983"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.ios의 메뉴
 
@@ -226,7 +226,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 앱에서을 사용 `NSDocuments`하지 않는 경우에도를 `SharedDocumentController` `NSDocumentController` 사용 하 여의 `NoteNewRecentDocumentURL` 메서드에 파일의 위치를 포함 하 `NSUrl` 는를 전송 하 여 **최근 열기** 메뉴를 유지 관리 합니다.
 
-그런 다음 사용자가 `OpenFile` 최근 항목 **열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예:
+그런 다음 사용자가 `OpenFile` 최근 항목 **열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예를 들어:
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -1071,7 +1071,6 @@ public override void DidFinishLaunching (NSNotification notification)
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 메뉴 및 메뉴 항목을 사용 하는 방법에 대해 자세히 살펴봅니다. 먼저 응용 프로그램의 메뉴 모음을 검사 한 다음 상황에 맞는 메뉴 및 사용자 지정 도킹 메뉴를 검사 한 다음 상황에 맞는 메뉴를 살펴보았습니다. 마지막으로 팝업 메뉴와 풀 다운 목록에 대해 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

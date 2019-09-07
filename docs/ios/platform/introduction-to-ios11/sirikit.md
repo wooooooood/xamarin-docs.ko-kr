@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: d4fab992121ad6a2b272012f7249df5ed8427513
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8983ac0c860dafb3a3a0e4c90bd82bdf87c4c4f8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286734"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752391"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>IOS 11의 SiriKit 업데이트
 
@@ -210,7 +210,6 @@ IOS 앱이 `NSUserActivityTypes` **info.plist**의 키를 통해 지 원하는 �
 - " _Monkeynotes_에서 사과, bananas 및 배를 사용 하 여 식료품 목록 만들기"
 - " _Monkeytodo_에서 작업 wwdc 추가"
 
-
 ## <a name="troubleshooting"></a>문제 해결
 
 샘플을 실행 하거나 사용자 응용 프로그램에 SiriKit를 추가 하는 동안 발생할 수 있는 몇 가지 오류는 다음과 같습니다.
@@ -225,7 +224,6 @@ _목표-C 예외가 throw 되었습니다.  이름: NSInternalInconsistencyExcep
   [![자격을 올바르게 설정 하는 프로젝트 옵션](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (장치 배포의 경우) 앱 ID에서 SiriKit를 사용 하도록 설정 하 고 프로 비전 프로필을 다운로드 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

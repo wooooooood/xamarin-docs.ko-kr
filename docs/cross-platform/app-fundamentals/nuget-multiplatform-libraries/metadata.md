@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: bf8efad28c7ec6acfd0e43403e8db14639a3c755
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 125412ec229f07c4515f42e4df7996d90f87a67b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289404"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766552"
 ---
 # <a name="editing-nuget-metadata"></a>NuGet 메타 데이터 편집
 
@@ -50,7 +50,6 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리의 NuGet
 
 > [!NOTE]
 > NuGet 패키지를 [NuGet.org](https://www.nuget.org) 에 배포 하는 경우 최대한 많은 정보를 제공 하는 것이 좋습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

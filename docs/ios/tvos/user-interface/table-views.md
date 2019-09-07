@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 28dfdbd7837f87d003e5b949ea3f7421613997f7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 10f065d6e7b1cacb217cb510c57707662a196664
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288296"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768564"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Xamarin에서 tvOS 테이블 뷰 작업
 
@@ -731,7 +731,7 @@ namespace tvTable
 
 ## <a name="pulling-it-all-together"></a>모두 함께 끌어오기
 
-이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예: 
+이 문서의 시작 부분에서 설명한 것 처럼 테이블 뷰는 일반적으로 [분할 보기](~/ios/tvos/user-interface/split-views.md) 의 한쪽에 탐색으로 표시 되 고 반대쪽에는 선택한 항목의 세부 정보가 표시 됩니다. 예를 들어: 
 
 [![](table-views-images/intro01.png "샘플 앱 실행")](table-views-images/intro01.png#lightbox)
 
@@ -952,8 +952,6 @@ TvOS는 iOS의 기반 이므로 테이블 뷰와 테이블 뷰 컨트롤러는 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 테이블 뷰를 디자인 하 고 작업 하는 방법에 대해 설명 했습니다. 및는 tvOS 앱에서 테이블 뷰의 일반적인 사용 인 분할 뷰 내의 테이블 뷰로 작업 하는 예를 제공 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

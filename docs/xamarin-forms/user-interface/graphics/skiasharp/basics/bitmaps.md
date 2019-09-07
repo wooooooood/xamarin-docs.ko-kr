@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 47fd6323e309353446c707730679a191cb8e923c
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 80f2b686e9802a93b0cf32420ccaef3e8877727c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738884"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759547"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>SkiaSharp의 비트맵 기본 사항
 
@@ -68,7 +68,6 @@ HttpClient httpClient = new HttpClient();
 사용 하는 경우 `HttpClient` iOS 및 Android 응용 프로그램에서 문서에 설명 된 대로 프로젝트 속성을 설정 하려는  **[전송 계층 보안 (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md)** 합니다.
 
 사용 하는 데 가장 편리한 이기 때문에 `await` 연산자 `HttpClient`, 코드를 실행할 수 없습니다는 `BasicBitmapsPage` 생성자입니다. 대신의 일부임을 `OnAppearing` 재정의 합니다. 여기에 URL 영역에 일부 샘플 비트맵을 사용 하 여 Xamarin 웹 사이트를 가리킵니다. 웹 사이트에서 패키지를 특정 너비로 비트맵 크기 조정에 대 한 사양을 추가 허용 합니다.
-
 
 ```csharp
 protected override async void OnAppearing()

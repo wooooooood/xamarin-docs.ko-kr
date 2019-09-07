@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d001c39b2111785911d678bdeb2e83d761fba11
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7596f79119f28997cbcda6e7057e682edfd760b8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286995"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756352"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>작업이 있는 iOS Backgrounding
 
@@ -23,7 +23,6 @@ IOS에서 backgrounding를 수행 하는 가장 간단한 방법은 backgroundin
 1. **백그라운드 안전 작업** -응용 프로그램이 백그라운드에 들어가기 위해 중단 하지 않으려는 태스크가 있는 응용 프로그램의 모든 위치에서 호출 됩니다.
 1. **DidEnterBackground 작업** -정리 및 상태 `DidEnterBackground` 저장을 지원 하기 위해 응용 프로그램 수명 주기 메서드를 실행 하는 동안 호출 됩니다.
 1. **백그라운드 전송 (ios 7 이상)** -ios 7에서 네트워크 전송을 수행 하는 데 사용 되는 특수 한 유형의 백그라운드 작업입니다. 일반 작업과 달리 백그라운드 전송에는 미리 결정 된 시간 제한이 없습니다.
-
 
 백그라운드 안전 및 `DidEnterBackground` 작업은 ios 6 및 ios 7 모두에서 사용 해도 되며 약간의 차이가 있습니다. 이러한 두 가지 유형의 작업을 더 자세히 살펴보겠습니다.
 
@@ -47,7 +46,6 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 > [!IMPORTANT]
 > 백그라운드 안전 작업은 응용 프로그램의 요구 사항에 따라 주 스레드나 백그라운드 스레드에서 실행 될 수 있습니다.
 
-
 ## <a name="performing-tasks-during-didenterbackground"></a>DidEnterBackground 중 작업 수행
 
 장기 실행 작업을 백그라운드에서 안전 하 게 만드는 것 외에도, 응용 프로그램을 백그라운드에 배치 하는 동안 등록을 사용 하 여 작업을 시작할 수 있습니다. iOS는 응용 프로그램이 백그라운드에 들어가기 전에 응용 프로그램 `DidEnterBackground` 상태를 저장 하 고, 사용자 데이터를 저장 하 고, 중요 한 콘텐츠를 암호화 하는 데 사용할 수 있는 라는 AppDelegate 클래스의 이벤트 메서드를 제공 합니다. 응용 프로그램은이 메서드에서 반환 하는 데 약 5 초를 포함 하거나 종료 됩니다. 따라서 완료 하는 데 5 초 이상이 소요 될 수 있는 정리 작업을 `DidEnterBackground` 메서드 내에서 호출할 수 있습니다. 이러한 작업은 별도의 스레드에서 호출 해야 합니다.
@@ -68,7 +66,6 @@ public override void DidEnterBackground (UIApplication application) {
 
 > [!IMPORTANT]
 > iOS는 [감시 메커니즘](https://developer.apple.com/library/ios/qa/qa1693/_index.html) 을 사용 하 여 응용 프로그램의 UI가 응답성을 유지 하도록 합니다. 에서 `DidEnterBackground` 너무 많은 시간을 소비 하는 응용 프로그램은 UI에서 응답 하지 않게 됩니다. 백그라운드에서 실행 하는 시작 off 작업을 `DidEnterBackground` 사용 하면 UI 응답성을 유지 하 고 watchdog이 응용 프로그램을 중단 하지 않도록 하는 시기 적절 한 방식으로를 반환할 수 있습니다.
-
 
 ## <a name="handling-background-task-time-limits"></a>백그라운드 작업 시간 제한 처리
 
@@ -133,7 +130,6 @@ IOS 7의 백그라운드 전송 백본은 새로운 `NSURLSession` API입니다.
 1. 네트워크 및 장치 중단을 통해 콘텐츠를 전송 합니다.
 1. 대량 파일 ( *백그라운드 전송 서비스* )을 업로드 하 고 다운로드 합니다.
 
-
 이것이 어떻게 작동 하는지 자세히 살펴보겠습니다.
 
 ### <a name="nsurlsession-api"></a>NSURLSession API
@@ -157,7 +153,6 @@ else {
 > [!IMPORTANT]
 > IOS 6은 백그라운드 UI 업데이트를 지원 하지 않고 응용 프로그램을 종료 하므로 iOS 6 규격 코드의 백그라운드에서 UI를 업데이트 하는 호출을 피합니다.
 
-
 API `NSURLSession` 에는 인증을 처리 하 고, 실패 한 전송을 관리 하 고, 서버 쪽 오류는 보고 하지 않는 풍부한 기능 집합이 포함 되어 있습니다. IOS 7에 도입 된 작업 실행 시간의 중단을 연결 하는 데 도움이 되며, 대량 파일을 빠르고 안정적으로 전송할 수 있는 지원도 제공 합니다. 다음 섹션에서는이 두 번째 기능을 살펴봅니다.
 
 ### <a name="background-transfer-service"></a>백그라운드 전송 서비스
@@ -167,4 +162,3 @@ IOS 7 이전에는 백그라운드에서 파일을 업로드 하거나 다운로
 백그라운드 전송 서비스를 사용 하 여 시작 된 전송은 운영 체제에서 관리 하며 인증 및 오류를 처리 하는 Api를 제공 합니다. 전송은 임의 시간 제한에 의해 바인딩되지 않으므로 대량 파일을 업로드 또는 다운로드 하 고 백그라운드에서 콘텐츠를 자동으로 업데이트 하는 데 사용할 수 있습니다. 서비스를 구현 하는 방법에 대 한 자세한 내용은 [백그라운드 전송 연습](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) 을 참조 하세요.
 
 백그라운드 전송 서비스는 응용 프로그램이 백그라운드에서 콘텐츠를 새로 고칠 수 있도록 백그라운드 가져오기 또는 원격 알림과 쌍을 이룹니다. 다음 두 섹션에서는 iOS 6 및 iOS 7 모두에서 백그라운드에서 실행 되도록 전체 응용 프로그램을 등록 하는 개념을 소개 합니다.
-

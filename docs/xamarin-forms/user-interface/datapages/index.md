@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 9dc34f412549c4be6099b373ddae7cbd2e8d21c8
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 1dc62066b71842e1d3b07495912fa35a549c0f1e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980780"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759677"
 ---
 # <a name="xamarinforms-datapages"></a>Xamarin. 양식 DataPages
 
@@ -33,7 +33,7 @@ DataPages 빠르고 쉽게 미리 작성된 된 보기에 데이터 소스를 �
 
 개발자는 데이터 원본 및 연결 된 데이터 페이지를 사용 하 여 지원 되는 데이터 원본을 빠르고 쉽게 사용 하 고 테마를 사용 하 여 사용자 지정할 수 있는 기본 제공 UI 스 캐 폴딩을 사용 하 여 렌더링할 수 있습니다.
 
-DataPages는 xamarin.ios Nuget 패키지를 포함 하 여 Xamarin.ios 응용 프로그램 에 추가 됩니다.
+DataPages **는 Xamarin.ios Nuget 패키지** 를 포함 하 여 xamarin.ios 응용 프로그램에 추가 됩니다.
 
 ### <a name="data-sources"></a>Data Sources
 
@@ -44,7 +44,6 @@ DataPages는 xamarin.ios Nuget 패키지를 포함 하 여 Xamarin.ios 응용 �
 * **AzureEasyTableDataSource** (별도의 Nuget)
 
 을`JsonDataSource`사용 하는 예제는 [시작 가이드](get-started.md) 를 참조 하세요.
-
 
 ### <a name="pages--controls"></a>페이지 & 컨트롤
 
@@ -59,8 +58,6 @@ DataPages는 xamarin.ios Nuget 패키지를 포함 하 여 Xamarin.ios 응용 �
 * **ListItem** – 기본 IOS 및 Android 목록 항목과 비슷한 레이아웃이 포함 된 미리 작성 된 뷰입니다.
 
 예제는 [Datapages 컨트롤 참조](controls.md) 를 참조 하세요.
-
-
 
 ### <a name="under-the-hood"></a>내부적으로
 

@@ -7,12 +7,12 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 4e8c909ce7dfd9c8f6dccbf2685ff2658931b6a5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 74335de66e74f6adc7c9488a1b78c31d36d03f14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656351"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759414"
 ---
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
 
@@ -139,7 +139,6 @@ paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 애니메이션 두 단어, 긴급 "자세히 code" 사용자 (또는 "더 많은 코드"를 요청 하는 것)이 번갈아:
 
 [![더 많은 코드를 코드](transparency-images/CodeMoreCode.png "더 많은 코드를 코드")](transparency-images/CodeMoreCode-Large.png#lightbox)
-
 
 에 대 한 이전 문서에서 [ **SkiaSharp의 비트맵 기본 사항**](bitmaps.md), 중 하나를 사용 하 여 비트맵을 표시 하는 방법을 살펴보았습니다 합니다 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap*) 의 메서드 `SKCanvas`합니다. 모든는 `DrawBitmap` 메서드로 `SKPaint` 마지막 매개 변수로 개체입니다. 기본적으로이 매개 변수 설정 `null` 및 무시할 수 있습니다. 
 

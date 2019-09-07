@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 34f192938ac583e39232312377142015aa6d3811
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd4bc8dbc02a44807ec197d39349971d8f9cd6f9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287560"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768576"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>추가 watchOS 3 프레임 워크 변경 내용
 
 _이 문서에서는 watchOS 3의 기존 프레임 워크에 대 한 추가, 사소한 변경 또는 향상 된 기능을 설명 합니다._
 
 Apple에서는 iOS의 주요 변경 사항 외에도 watchOS 3의 여러 기존 프레임 워크를 수정 하 고 향상 시켰습니다.
-
 
 ## <a name="core-data"></a>핵심 데이터
 
@@ -33,14 +32,12 @@ Apple에서는 iOS의 주요 변경 사항 외에도 watchOS 3의 여러 기존 
 
 자세한 내용은 Apple의 [핵심 데이터 프레임 워크 참조](https://developer.apple.com/reference/coredata)를 참조 하세요.
 
-
 ## <a name="core-motion"></a>핵심 동작
 
 다음은 조사식 OS 3의 핵심 동작 프레임 워크에 대 한 향상 된 기능입니다.
 
 - 새 장치 동작 이벤트는가 속도계 및 자이로스코프가를 사용 하 여 동작 및 방향 업데이트를 제공 합니다. 앱은이 업데이트를 등록할 수 있습니다 (최대 100Hz).
 - 새 Pedometer 이벤트를 사용 하면 사용자가 일시 중지 하 고 실행을 다시 시작할 때 실시간으로 신속 하 게 알림을 받을 수 있습니다. [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) 를 사용 하 여 포그라운드 또는 background pedometer 이벤트에 등록 합니다.
-
 
 ## <a name="foundation"></a>Mfc
 
@@ -52,7 +49,6 @@ Apple에서는 iOS의 주요 변경 사항 외에도 watchOS 3의 여러 기존 
 - 새 [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) 클래스를 사용 하 여 최종 사용자에 게 표시 하기 위해 지역화 된 측정값의 서식을 지정 합니다.
 - 새 [Nsunit](https://developer.apple.com/reference/foundation/nsunit) 및 [nsunit](https://developer.apple.com/reference/foundation/nsdimension) 클래스를 사용 하 여 특정 uoms를 나타냅니다.
 
-
 ## <a name="healthkit"></a>HealthKit
 
 Watch OS 3 용 HealthKit 프레임 워크에 대 한 다음과 같은 향상 된 기능이 향상 되었습니다.
@@ -60,7 +56,6 @@ Watch OS 3 용 HealthKit 프레임 워크에 대 한 다음과 같은 향상 된
 - 새 [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) 클래스를 사용 하 여 체력 `ActivityType` 의 `LocationType` 및를 지정 합니다.
 - 휠체어 관련 상태 데이터를 `WheelchairUse` 사용 하기 위해 새 [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) 및 [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) 클래스의 메서드가 추가 되었습니다.
 - 날씨 유형 (예 `HKWeatherConditionClear` : 및 `HKWeatherConditionCloudy`)에 대 한 새 메타 데이터 키가 추가 되 고 `HKWorkoutActivityTypeFlexibility` , 및 등 `HKWorkoutActivityTypeWheelchairRunPace`의 체력 유형 (예: 및)이 추가 되었습니다.
-
 
 ## <a name="homekit"></a>HomeKit
 
@@ -70,7 +65,6 @@ Watch OS 3 용 HomeKit 프레임 워크에 대 한 다음과 같은 향상 된 �
 - 몇 가지 새로운 서비스와 특성이 추가 되었습니다.
 - 기본 서비스 및 링크 서비스의 보조 프로그램에 대 한 추가 컨텍스트와 구성이 추가 되었습니다.
 
-
 ## <a name="passkit"></a>PassKit
 
 Watch OS 3 용 PassKit 프레임 워크에 대 한 다음과 같은 향상 된 기능이 향상 되었습니다.
@@ -78,14 +72,12 @@ Watch OS 3 용 PassKit 프레임 워크에 대 한 다음과 같은 향상 된 �
 - 는 물리적 상품 및 서비스의 Apple Watch에 대 한 안전한 앱 내 지불을 지원 하도록 프레임 워크를 확장 합니다.
 - 이제 다음 클래스를 사용할 수 있습니다. [Pkpayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) 및 [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
-
 ## <a name="uikit"></a>UIKit
 
 다음은 watch OS 3 용 UIKit 프레임 워크에 대 한 향상 된 기능입니다.
 
 - 레이블에서 동적 형식을 지원 하기 위해 텍스트 필드와 텍스트 상자는 `PreferredFontForTextStyle` `UIFont` 클래스의 새 메서드를 사용 합니다.
 - 와이드 색을 지원 하기 위해 메서드가추가되었습니다.`ColorWithDisplayP3`
-
 
 ## <a name="related-links"></a>관련 링크
 

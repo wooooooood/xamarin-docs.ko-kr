@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 9d83be4eec793f571fe3d308c80ca9c023828f56
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f0633b0f91bf39d10ad42e1ee41997213ca3047e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288916"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769039"
 ---
 # <a name="building-tvos-user-interfaces-with-xamarin"></a>Xamarin을 사용 하 여 tvOS 사용자 인터페이스 빌드
 
@@ -69,8 +69,6 @@ Xamarin 기반 tvOS C# 에서 및 .net을 사용 하는 경우 목표-C 또는 S
 ## <a name="working-with-text-and-search-fieldsiostvosuser-interfacetext-fields-and-searchmd"></a>[텍스트 및 검색 필드 작업](~/ios/tvos/user-interface/text-fields-and-search.md)
 
 이 문서에서는 tvOS 앱 내에서 텍스트 및 검색 필드를 디자인 하 고 사용 하는 방법을 설명 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

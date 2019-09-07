@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 6cb001a42f0cc98d0054523dffa0772b29188d73
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a56405aaed84be5015e5d58ef9a13ba8e270ea58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523827"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757533"
 ---
 # <a name="obtaining-a-google-maps-api-key"></a>Google Maps API 키 가져오기
 
@@ -23,7 +23,6 @@ Maps API v2 키 가져오기에는 다음 단계가 포함 됩니다.
 1. 응용 프로그램에 서명 하는 데 사용 되는 키 저장소의 SHA-1 지문을 검색 합니다.
 2. Google Api 콘솔에서 프로젝트를 만듭니다.
 3. API 키를 가져옵니다.
-
 
 ## <a name="obtaining-your-signing-key-fingerprint"></a>서명 키 지문 가져오기
 
@@ -52,7 +51,6 @@ JDK에서 `keytool` 명령을 실행하면 키 저장소에 대한 정보를 가
 
 -----
 
-
 다음 명령을 사용 하 여 keytool을 실행 합니다 (위에 표시 된 파일 경로 사용).
 
 ```shell
@@ -76,7 +74,6 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 ```
 
 -----
-
 
 ### <a name="production-keys"></a>프로덕션 키
 

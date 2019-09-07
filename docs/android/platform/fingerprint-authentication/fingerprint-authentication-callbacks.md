@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: f1fc484931ba7a574ac660b4856f20b1cb1e08a3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 57e6ed2c01e382d7daee2933ac49c8282199a3fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119592"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758860"
 ---
 # <a name="responding-to-authentication-callbacks"></a>인증 콜백에 응답
 
@@ -24,7 +24,6 @@ ms.locfileid: "70119592"
 
 를 `CryptoObject` 호출할 `Authenticate`때가 사용 된 경우에서 `OnAuthenticationSuccessful`를 호출 `Cipher.DoFinal` 하는 것이 좋습니다.
 `DoFinal`는 암호가 변조 되었거나 잘못 초기화 된 경우에 예외를 throw 합니다 .이 경우 지문 스캐너의 결과가 응용 프로그램 외부에서 변조 되었을 수 있습니다.
-
 
 > [!NOTE]
 > 콜백 클래스를 비교적 경량으로 유지 하 고 응용 프로그램 관련 논리를 사용 하지 않는 것이 좋습니다. 콜백은 Android 응용 프로그램과 지문 스캐너의 결과 간에 "트래픽 복사"로 작동 해야 합니다.
@@ -103,55 +102,29 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
 FingerprintManager 클래스에 대 한 [Android SDK 설명서](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) 에는 오류 코드와 도움말 코드의 목록과 설명이 나와 있습니다. Xamarin.ios는 `Android.Hardware.Fingerprints.FingerprintState` 열거형을 사용 하 여 이러한 값을 나타냅니다.
 
-
 - **`AcquiredGood`** &ndash; (값 0) 얻은 이미지가 양호 합니다.
-
 
 - **`AcquiredImagerDirty`** &ndash; (값 3) 센서에서 의심 되거나 검색 된 것으로 인해 지문 이미지가 너무 소음이 발생 했습니다. 예를 들어 센서 (걸린 픽셀, swaths 등) `AcquiredInsufficient` 에 대 한 여러 또는 실제 검색 후이를 반환 하는 것이 합리적입니다. 사용자는이 반환 될 때 센서를 정리 하기 위한 조치를 취해야 합니다.
 
-
 - **`AcquiredInsufficient`** (값 2) 지문 이미지는 검색 된 조건 (예: 마른 스킨) 또는 변경 가능한 센서 `AcquiredImagerDirty`(예: &ndash;
-
-
 
 - **`AcquiredPartial`** &ndash; (값 1) 부분 지문 이미지만 검색 되었습니다. 등록 하는 동안 사용자에 게이 문제를 해결 하기 위해 수행 해야 하는 사항에 대 한 &ldquo;정보가 있어야 합니다. 예를 들어, 센서를 힘껏 누릅니다.&rdquo;
 
-
-
 - **`AcquiredTooFast`** &ndash; (값 5) 빠른 동작으로 인해 지문 이미지가 불완전 합니다. 선형 배열 센서에는 대부분 적절 하지만, 인수를 획득 하는 동안 손가락을 이동한 경우에도이 문제가 발생할 수 있습니다. 사용자에 게 손가락을 느리게 이동 하거나 (선형), 계속 해 서 센서에서 손가락을 이동 하도록 요청 해야 합니다.
-
-
-
 
 - **`AcquiredToSlow`** &ndash; (값 4) 동작 부족으로 인해 지문 이미지를 읽을 수 없습니다. 이는 살짝 밀기 동작이 필요한 선형 배열 센서에 가장 적합 합니다.
 
-
-
 - **`ErrorCanceled`** &ndash; (값 5) 지문 센서를 사용할 수 없기 때문에 작업이 취소 되었습니다. 예를 들어 사용자가 전환 되거나 장치가 잠겨 있거나 다른 보류 중인 작업에서이를 방지 하거나 사용 하지 않도록 설정 하는 경우이 문제가 발생할 수 있습니다.
-
-
 
 - **`ErrorHwUnavailable`** &ndash; (값 1) 하드웨어를 사용할 수 없습니다. 나중에 다시 시도하십시오.
 
-
-
-
 - **`ErrorLockout`** &ndash; (값 7) 너무 많은 시도로 인해 API가 잠기기 때문에 작업이 취소 되었습니다.
-
-
-
 
 - **`ErrorNoSpace`** &ndash; (값 4) 등록 등의 작업에 대해 오류 상태가 반환 되었습니다. 작업을 완료 하기 위해 남은 저장소 공간이 부족 하 여 작업을 완료할 수 없습니다.
 
-
-
 - **`ErrorTimeout`** &ndash; (값 3) 현재 요청이 너무 오래 실행 되었을 때 오류 상태가 반환 됩니다. 이는 프로그램에서 지문 센서를 무기한 대기 하지 않도록 하기 위한 것입니다. 제한 시간은 플랫폼 및 센서 전용 이지만 일반적으로 30 초입니다.
 
-
-
 - **`ErrorUnableToProcess`** &ndash; (값 2) 센서가 현재 이미지를 처리할 수 없는 경우 오류 상태가 반환 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

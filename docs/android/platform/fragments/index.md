@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: b04ecf0685e78b73346ea5af815ed46f98b5da0f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f25c587f6a51a6b196f201c1b5060ff401f8cad2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524349"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761871"
 ---
 # <a name="fragments"></a>조각
 
@@ -46,7 +46,6 @@ _Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 다양 한 �
 - **조각 관리 및 트랜잭션** – 런타임에 조각을 조작 하는 방법입니다.
 - **Android 지원 패키지** – 이전 버전의 Android에서 조각을 사용할 수 있도록 하는 라이브러리를 사용 하는 방법입니다.
 
-
 ## <a name="requirements"></a>요구 사항
 
 다음 스크린샷에 표시 된 것 처럼 API 수준 11 (Android 3.0)부터 시작 하는 Android SDK에서 조각을 사용할 수 있습니다.
@@ -58,7 +57,6 @@ _Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 다양 한 �
 [![프로젝트 옵션에서 대상 프레임 워크 API 수준 설정](images/03-sml.png)](images/03.png#lightbox)
 
 Android 지원 패키지 및 Xamarin Android 4.2 이상을 사용 하 여 이전 버전의 Android에서 조각을 사용할 수 있습니다. 이 작업을 수행 하는 방법은이 섹션의 문서에 자세히 설명 되어 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

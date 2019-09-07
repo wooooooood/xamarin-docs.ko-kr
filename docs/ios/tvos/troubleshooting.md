@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 3fb479321686e4b956fc6ffee90dd5b0b2c16d9c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f54edead87459282ccd6a44225269542fad9d0e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291190"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769097"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Xamarin으로 빌드된 tvOS apps 문제 해결
 
@@ -146,7 +146,6 @@ _"Arm64 조각만 포함 된 앱은 info.plist의 UIRequiredDeviceCapabilities �
 
 게임 컨트롤러 지원이 포함 된 tvOS 앱을 Apple TV 앱 스토어에 제출 하는 경우 다음과 같은 형식으로 오류 메시지를 가져옵니다.
 
-
 _"앱 이름"에 대 한 최근 배달에서 하나 이상의 문제를 발견 했습니다. 배달에 성공 했지만 다음 배달 시 다음 문제를 해결할 수 있습니다._
 
 _잘못 된 번들 – 게임 컨트롤러를 지 원하는 앱은 Apple TV 원격도 지원 해야 합니다._
@@ -200,8 +199,6 @@ _호환 되지 않는 대상 프레임 워크:. NetPortable 가능, 버전 = v 4
 경로의 프로필 번호는 PCL의 프로필 번호와 일치 해야 합니다.
 
 이 파일이 준비 되 면 tvOS 프로젝트에 PCL 파일을 성공적으로 추가할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 2a62ff12869f886e63fc5c78050e9870431e58bb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 34a77f15391a0f4e10c1902046d8bd37806c14ec
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280615"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765275"
 ---
 # <a name="c-6-new-features-overview"></a>C#6 새 기능 개요
 
@@ -337,4 +337,3 @@ async void SomeMethod()
 ## <a name="related-links"></a>관련 링크
 
 - [6의 C# 새로운 언어 기능](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6)
-

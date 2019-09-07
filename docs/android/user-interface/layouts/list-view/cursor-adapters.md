@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
-ms.openlocfilehash: ce2f62869057fc83b04b58af37d6ffffd5ad7fb8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 084e1e9a4af8d7e27bee955ff4f27af28f9db08a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646479"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758681"
 ---
 # <a name="using-cursoradapters-with-xamarinandroid"></a>Xamarin Android에서 CursorAdapters 사용
 
@@ -22,7 +22,6 @@ Android는 SQLite 데이터베이스 쿼리의 데이터를 표시 하는 어댑
  **CursorAdapter** – 레이아웃 컨트롤에 대 한 데이터 값의 바인딩 (예: 컨트롤 숨기기/표시 또는 속성 변경)에 대 한 더 많은 제어가 필요한 경우 상속할 수 있는 기본 클래스입니다.
 
 커서 어댑터는 SQLite에 저장 된 긴 데이터 목록을 스크롤 하는 고성능 방법을 제공 합니다. 소비 하는 코드는 `Cursor` 개체에서 SQL 쿼리를 정의한 다음 각 행에 대 한 뷰를 만들고 채우는 방법을 설명 해야 합니다.
-
 
 ## <a name="creating-an-sqlite-database"></a>SQLite 데이터베이스 만들기
 
@@ -56,8 +55,7 @@ class VegetableDatabase  : SQLiteOpenHelper {
 
 이 `VegetableDatabase` 클래스는 `HomeScreen` 활동의 `OnCreate` 메서드에서 인스턴스화됩니다. 기본 `SQLiteOpenHelper` 클래스는 데이터베이스 파일의 설치를 관리 하 고 해당 `OnCreate` 메서드의 SQL이 한 번만 실행 되도록 합니다. 이 클래스는 및 `SimpleCursorAdapter` `CursorAdapter`에 대 한 다음 두 가지 예제에서 사용 됩니다.
 
-커서 *쿼리에는* `_id` `CursorAdapter` 가 작동 하려면 정수 열이 있어야 합니다. 기본 테이블에 라는 `_id` 정수 열이 없으면 커서를 구성 `RawQuery` 하는의 다른 고유한 정수에 대해 열 별칭을 사용 합니다. 자세한 내용은 [Android 문서](xref:Android.Widget.CursorAdapter) 를 참조 하세요.
-
+커서 쿼리에는 `_id` `CursorAdapter` 가 작동 하려면 정수 열 *이 있어야 합니다* . 기본 테이블에 라는 `_id` 정수 열이 없으면 커서를 구성 `RawQuery` 하는의 다른 고유한 정수에 대해 열 별칭을 사용 합니다. 자세한 내용은 [Android 문서](xref:Android.Widget.CursorAdapter) 를 참조 하세요.
 
 ### <a name="creating-the-cursor"></a>커서 만들기
 
@@ -78,7 +76,6 @@ cursor.Close();
 ```
 
 응용 프로그램이 사용할 수 있는 SQLite 데이터베이스를 사용 하 고 표시 된 것 처럼 커서 개체를 만든 후에는 `SimpleCursorAdapter` 또는의 `CusorAdapter` 서브 클래스를 사용 `ListView`하 여에 행을 표시할 수 있습니다.
-
 
 ## <a name="using-simplecursoradapter"></a>SimpleCursorAdapter 사용
 
@@ -112,7 +109,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 
 `SimpleCursorAdapter`는 SQLite 데이터 `ListView`를에 표시 하는 빠르고 간단한 방법입니다. 주요 제한 사항은 열 값을 표시 하는 컨트롤에만 바인딩할 수 있으며, 컨트롤을 표시 하거나 숨기 거 나 속성을 변경 하는 등의 방법으로 행 레이아웃의 다른 측면을 변경할 수 없다는 것입니다.
 
-
 ## <a name="subclassing-cursoradapter"></a>CursorAdapter 하위 클래스
 
 하위 클래스는 SQLite의 데이터를 표시 하 `SimpleCursorAdapter` 는 데 사용 하는와 동일한 성능상의 이점을 제공 하지만 각 행 뷰의 생성 및 레이아웃을 완벽 하 게 제어할 수 있습니다. `CursorAdapter` `GetView` `BaseAdapter` 구현은,`this[]` 또는 인덱서 를`GetItemId`재정의하지않으므로 서브클래싱과 매우 다릅니다. `Count` `CursorAdapter`
@@ -124,7 +120,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 - **Newview** –가 `ListView` 새 보기를 표시 해야 할 때 호출 됩니다. 는 `CursorAdapter` 일반 어댑터의 `GetView` 메서드와 달리 뷰를 재활용 합니다.
 
 이전 예제의 어댑터 서브 클래스에는 행의 수를 반환 하 고 현재 항목 `CursorAdapter` 을 검색 하는 메서드가 있습니다 .이 정보는 커서 자체에서 통해 수집할 수 있으므로 이러한 메서드가 필요 하지 않습니다. 각 뷰의 생성 및 채우기를 이러한 두 메서드로 `CursorAdapter` 분할 하면 뷰가 다시 사용 됩니다. 이는 `convertView` `BaseAdapter.GetView` 메서드의 매개 변수를 무시할 수 있는 일반 어댑터와는 대조적입니다.
-
 
 ### <a name="implementing-the-cursoradapter"></a>CursorAdapter 구현
 
@@ -150,7 +145,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-
 ### <a name="assigning-the-cursoradapter"></a>CursorAdapter 할당
 
 가 표시 되는에서 커서 `CursorAdapter` 를 만든 다음 목록 뷰에 할당 합니다. `ListView` `Activity`
@@ -168,8 +162,6 @@ listView.Adapter = (IListAdapter)new HomeScreenCursorAdapter(this, cursor, false
 ```
 
 메서드에 `OnDestroy` 는 앞에서 `StopManagingCursor` 설명한 메서드 호출이 포함 되어 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

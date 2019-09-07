@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: a3adbf18e18e4f2a42ed3c89162455040a9fe699
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bde76891b4b01800384ee0579e3fbe14987c5420
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282695"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768382"
 ---
 # <a name="stack-views-in-xamarinios"></a>Xamarin.ios의 스택 뷰
 
@@ -270,8 +270,6 @@ UIView.Animate(0.25, ()=>{
 
 이 문서에서는 xamarin.ios 앱에서 `UIStackView` 가로 또는 세로로 정렬 된 스택에서 하위 뷰 집합을 관리 하기 위해 새로운 컨트롤인 (iOS 9의 경우)에 대해 살펴보았습니다.
 스택 뷰를 사용 하 여 UI를 만드는 간단한 예제부터 시작 하 여 스택 뷰와 해당 속성 및 기능에 대해 자세히 살펴봅니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: a48e7bd780783a7b33008a5d86011f5497b042d5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 194f1a260adc49083a8d4365a310447acbcc96f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287971"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769028"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Xamarin에서 tvOS 누적 보기 사용
 
@@ -74,9 +74,6 @@ TvOS 앱에서 `UIStackView` 를 사용 하는 경우 개발자는 iOS 디자이
 
 > [!IMPORTANT]
 > 기준선 맞춤은 잘못 된 위치로 계산 되기 때문에 스트레치 되었거나 압축 된 하위 뷰 크기에서는 작동 하지 않습니다. 기준선 맞춤의 경우 하위 뷰의 **높이가** 내장 콘텐츠 뷰의 **높이**와 일치 하는지 확인 합니다.
-
-
-
 
 <a name="Common-Stack-View-Uses" />
 
@@ -309,8 +306,6 @@ UIView.Animate(0.25, ()=>{
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내부에서 누적 보기를 디자인 하 고 작업 하는 방법에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

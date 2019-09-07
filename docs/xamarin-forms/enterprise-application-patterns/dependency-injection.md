@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 6cbcd6612323acc8619004d56fff82461e005e9e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 72ffa4508f2c8f050f505313a28ce8278f2570b4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760261"
 ---
 # <a name="dependency-injection"></a>종속성 주입
 
@@ -197,7 +197,6 @@ Autofac는 추가 인스턴스 범위를 포함 합니다. 자세한 내용은 r
 종속성 주입을 통해 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리할 수 있습니다. 일반적으로 인터페이스와 추상 형식 간의 등록 및 매핑 목록과 이러한 형식을 구현 하거나 확장 하는 구체적인 형식을 포함 하는 컨테이너를 사용 합니다.
 
 Autofac는 느슨하게 결합 된 앱 빌드를 용이 하 게 하 고, 형식 매핑 및 개체 인스턴스를 등록 하 고, 개체를 확인 하 고, 개체 수명을 관리 하 고, 삽입 하는 메서드를 포함 하 여 종속성 주입 컨테이너에서 일반적으로 발견 되 종속 개체를 확인 하는 개체의 생성자로 변환 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,12 +6,12 @@ ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 44ba9188a059cc28c7b4d89143cef1921a0b1701
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 2c290ac7d66147342087342bda5e5a19b4e6e6f7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978478"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763628"
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>2 부-WalkingGame 구현
 
@@ -151,7 +151,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input.Touch;
 
-
 namespace WalkingGame
 {
     public class CharacterEntity
@@ -255,7 +254,6 @@ protected override void LoadContent()
 
 마지막으로 그리기 메서드를 다음과 같이 수정할 수 있습니다.
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
@@ -312,7 +310,6 @@ namespace WalkingGame
 
 `Animation` 클래스를 추가 하려면 **WalkingGame** 공유 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 마우스 오른쪽 단추로 클릭 하 고 **새 파일 > 추가**...를 선택 합니다. 이름 **애니메이션** 을 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 다음 코드를 포함 `Animation.cs` 하도록 파일을 수정 합니다.
 
-
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -355,7 +352,6 @@ namespace WalkingGame
         {
             double secondsIntoAnimation = 
                 timeIntoAnimation.TotalSeconds + gameTime.ElapsedGameTime.TotalSeconds;
-
 
             double remainder = secondsIntoAnimation % Duration.TotalSeconds;
 
@@ -461,7 +457,6 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 ```
 
 앞서 언급 했 듯이 시간 기반 애니메이션을 `Animation.Update` 재생 하려면를 호출 해야 합니다. 또한도 할당 `currentAnimation`해야 합니다. 지금은 `currentAnimation` 를에 `walkDown`할당 하지만 이동 논리를 구현할 때 나중에이 코드를 바꿀 예정입니다. 다음과 같이에 `CharacterEntity` 메서드 `Update` 를 추가 합니다.
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -661,7 +656,6 @@ public void Update(GameTime gameTime)
 
     this.X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
     this.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
 
     if (velocity != Vector2.Zero)
     {

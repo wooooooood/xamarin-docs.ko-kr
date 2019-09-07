@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2018
-ms.openlocfilehash: d0d5452c2b79fb674e473efd50aaf587d64c4544
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18d33dfcef109fd29f32969b9bdd15b8a2dc475a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290247"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764049"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.ios 앱에 대 한 시작 화면
 
@@ -131,7 +131,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
     - 스토리 보드 파일을 편집 하려면 Visual Studio에서 Mac 빌드 호스트에 대 한 활성 연결이 필요 합니다. 자세한 내용은 [Mac에 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 가이드를 참조 하세요.
 
 7. IOS 디자이너에서 시작 화면 스토리 보드를 미리 볼 장치와 방향을 선택 합니다. 아래쪽 도구 모음에서 장치 선택 패널을 열고 **IPhone 4S** 및 **세로**를 선택 합니다. 
- 
+
     ![장치 선택 도구 모음](launch-screens-images/launch07-vs.png)
 
     - 장치 및 방향 선택은 iOS 디자이너가 디자인을 미리 보는 방법만 변경 합니다. 여기에서 선택한 항목에 관계 없이 새로 추가 된 제약 조건은 모든 장치 및 방향에 적용 됩니다. 그렇지 않으면 **특성 편집** 단추를 사용 하 여 지정 된 경우 
@@ -196,7 +196,6 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 그런 다음 `Info.plist` **솔루션 탐색기** 파일을 두 번 클릭 하 여 편집용으로 엽니다. **시작 화면**에서 위에서 만든 새 스토리 보드 파일을 선택 합니다.
 
 ![](launch-screens-images/storyboard09.png "위에서 만든 새 스토리 보드 파일을 선택 합니다.")
-
 
 새 스토리 보드를 시작 화면으로 사용 하려면 다음을 수행 합니다.
 

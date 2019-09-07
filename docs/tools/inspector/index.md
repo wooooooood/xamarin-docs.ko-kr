@@ -6,12 +6,12 @@ ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 5aa35c53af39df63f0b6e0f960432cbc43dadc8a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b89a39329754d375ee69d677eb8088c2eeac662f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292469"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772242"
 ---
 # <a name="xamarin-inspector"></a>Xamarin Inspector
 
@@ -28,5 +28,3 @@ Mac 또는 Windows 컴퓨터에 설치 Xamarin Inspector를 가져오는 방법�
 ## <a name="inspecting-live-applicationstoolsinspectorinspectmd"></a>[라이브 애플리케이션 검사](~/tools/inspector/inspect.md)
 
 검사기를 사용 하 여 IDE에서 실행 되는 동안 앱에 연결 하 여 해당 상태를 일시 중지 하지 않고 탐색 하 고 조작할 수 있도록 하는 방법을 설명 합니다.
-
-

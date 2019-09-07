@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 2e4fa5f1fb96077b0237dbeac9074006e761bc09
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 63c8cb285c51d7c10e2109c9d0b7cffbd0fb0898
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655299"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770338"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Xamarin.forms에서 레이아웃 옵션
 
@@ -155,8 +155,6 @@ Content = new StackLayout
 ## <a name="summary"></a>요약
 
 이 문서에서는 설명 효과 각 [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) 구조체 값 맞춤 및 부모를 기준으로 보기의 확장에 있습니다. `Start`, `Center`, `End`, 및 `Fill` 필드를 사용 하 여를 부모 레이아웃 내에서 보기의 맞춤을 정의 및 `StartAndExpand`를 `CenterAndExpand`를 `EndAndExpand`, 및 `FillAndExpand` 필드를 사용 하 여 정의할 수 맞춤 우선, 및 보기 내에서 사용 가능한 경우 더 많은 공간을 차지 합니다 있는지 여부를 결정 하는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

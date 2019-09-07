@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: c9980dff866a176d4a4a1f1f6bc1bd8c92bd7097
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8fcedd4f7dca4527b37c6b83fbd205014cffcaaf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280213"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769128"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Xamarin에서 tvOS Collection 뷰 작업
 
@@ -59,7 +59,7 @@ TvOS에서 컬렉션 뷰를 사용 하는 경우 응용 프로그램은 데이�
 - `DequeueReusableCell`-지정 된 형식의 셀을 만들거나 반환 합니다 (앱의 스토리 보드에 지정 된 대로).
 - `DequeueReusableSupplementaryView`-지정 된 형식의 보충 뷰 (앱의 스토리 보드에 지정 된)를 만들거나 반환 합니다.
 
-이러한 메서드 중 하나를 호출 하기 전에 컬렉션 뷰를 사용 하 여 셀 `.xib` 의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예:
+이러한 메서드 중 하나를 호출 하기 전에 컬렉션 뷰를 사용 하 여 셀 `.xib` 의 뷰를 만드는 데 사용 되는 클래스, Storyboard 또는 파일을 등록 해야 합니다. 예를 들어:
 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
@@ -96,7 +96,6 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-    
 1. Mac용 Visual Studio에서 새 **단일 뷰 TvOS 앱** 을 시작 합니다.
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 엽니다.
 1. 기존 뷰에 이미지 뷰, 레이블 및 단추를 추가 하 고 다음과 같이 구성 합니다. 
@@ -132,11 +131,9 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 
     [![](collection-views-images/collection11.png "Id를 CityCell로 설정 합니다.")](collection-views-images/collection11.png#lightbox)
 1. 변경 내용을 저장합니다.
-    
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-    
 1. Visual Studio에서 새 **단일 뷰 TvOS 앱** 을 시작 합니다.
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 엽니다.
 1. 기존 뷰에 이미지 뷰, 레이블 및 단추를 추가 하 고 다음과 같이 구성 합니다. 
@@ -170,7 +167,6 @@ TvOS 앱에서 컬렉션 뷰를 사용 하는 가장 쉬운 방법은 스토리 
 
     [![](collection-views-images/collection11vs.png "Id를 CityCell로 설정 합니다.")](collection-views-images/collection11vs.png#lightbox)
 1. 변경 내용을 저장합니다.
-    
 
 -----
 
@@ -286,7 +282,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 탐색 및 포커스에 대 한 자세한 내용은 [탐색 및 포커스](~/ios/tvos/app-fundamentals/navigation-focus.md) 및 [Siri 원격 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 사용 설명서를 참조 하세요.
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -469,7 +464,6 @@ public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning 
 ### <a name="the-collection-view-delegate"></a>컬렉션 뷰 대리자
 
 다음으로 프로젝트에 새 `CityViewDelegate` 클래스를 추가 하 고 다음과 같이 만듭니다.
-
 
 ```csharp
 using System;
@@ -684,7 +678,6 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 포커스를 잃은 이전 항목의 transparence을 0으로 설정 하면 다음 항목의 transparence이 100%로 포커스를 얻습니다. 이러한 전환에도 애니메이션 효과가 적용 됩니다.
 
-
 ## <a name="configuring-the-collection-view-controller"></a>컬렉션 뷰 컨트롤러 구성
 
 이제 컬렉션 뷰에서 최종 구성을 수행 하 고 컨트롤러에서 사용자가 선택 하 고 나면 컬렉션 뷰를 닫을 수 있도록 정의한 속성을 설정할 수 있도록 해야 합니다.
@@ -824,14 +817,11 @@ public override void ViewWillAppear (bool animated)
 
 최근 iOS 9에 대 한 컬렉션 보기에 추가 된 컬렉션의 항목 다시 정렬을 쉽게 허용할 수 있는 기능입니다. TvOS 9는 iOS 9의 하위 집합 이므로 동일한 방식으로 수행 됩니다. 자세한 내용은 [컬렉션 뷰 변경 내용](~/ios/user-interface/controls/uicollectionview.md) 문서를 참조 하세요.
 
-
 <a name="Summary" />
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 컬렉션 보기를 디자인 하 고 작업 하는 방법에 대해 설명 했습니다. 먼저 컬렉션 뷰를 구성 하는 모든 요소에 대해 설명 했습니다. 다음으로 Storyboard를 사용 하 여 컬렉션 뷰를 디자인 하 고 구현 하는 방법을 살펴보았습니다. 마지막으로,에는 사용자 지정 레이아웃을 만들고 항목을 다시 정렬 하는 정보에 대 한 링크가 제공 됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

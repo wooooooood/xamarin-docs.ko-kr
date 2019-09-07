@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ac23ae6fe094b8049ac1b3460d327716e4ece
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291686"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766798"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Xamarin의 watchOS Menu 컨트롤 (Force Touch)
 
@@ -28,7 +28,6 @@ Watch 키트는 감시 앱 화면에서 구현 될 때 메뉴를 트리거하는
 Force 접촉은 화면의 특정 요소와 연결 되지 않습니다. 인터페이스 컨트롤러에는 하나의 메뉴만 연결 될 수 있으며 화면에서 Force Touch 키가 발생 하는 위치에 관계 없이 표시 됩니다.
 
 1 ~ 4 개의 메뉴 옵션이 표시 될 수 있습니다.
-
 
 ## <a name="adding-a-menu"></a>메뉴 추가
 
@@ -56,7 +55,6 @@ partial void MenuItemTapped ()
 IOS의 탭 이미지와 마찬가지로 메뉴 항목 이미지에는 배경을 통해 표시할 수 있는 알파 채널의 불투명 패턴이 필요 합니다.
 
 최상의 성능을 위해 메뉴에 사용 되는 이미지를 watch 앱 확장 프로젝트가 아닌 watch 앱 프로젝트에 추가 해야 합니다.
-
 
 ## <a name="changing-the-menu-items"></a>메뉴 항목 변경
 
@@ -90,8 +88,6 @@ void MenuItemTapped ()
 메서드 `ClearAllMenuItems` 를 호출 하 여 *프로그래밍 방식으로 추가* 된 모든 메뉴 항목을 제거할 수 있습니다.
 
 스토리 보드에서 구성 된 메뉴 항목은 지울 수 없습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

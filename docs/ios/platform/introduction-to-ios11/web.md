@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/12/2017
-ms.openlocfilehash: b90673559d0b8a3728898b7d8dbc3207bb22520b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6068dd148bfc3c2a778ca34753374bcecccb55d9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280073"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752226"
 ---
 # <a name="webkit-and-safari-changes-in-ios-11"></a>IOS 11의 WebKit 및 Safari 변경 내용
 
@@ -43,7 +43,6 @@ sfViewController.DismissButtonStyle = SFSafariViewControllerDismissButtonStyle.C
 
 가 표시 되는 동안 `SFSafariViewController` 이 값을 변경할 수 있습니다.
 
-
 Safari 뷰 컨트롤러 내에 표시 되는 콘텐츠에 따라 사용자가 스크롤하면 메뉴 모음이 축소 되지 않도록 해야 할 수도 있습니다. 새 `BarCollapsedEnabled` 속성을로 `false`설정 하 여이 작업을 수행할 수 있습니다.
 
 ```csharp
@@ -58,7 +57,6 @@ var sfViewController = new SFSafariViewController(url, config);
 또한 Apple은 iOS 11의 Safari 보기 컨트롤러에서 개인 정보를 업데이트 했습니다. 이제 쿠키 및 로컬 저장소와 같은 데이터 검색은 Safari 뷰 컨트롤러의 모든 인스턴스가 아닌 앱 별로 존재 합니다. 그러면 앱 내에서 사용자 검색 작업을 비공개로 유지 합니다.
 
 Url에 대 한 끌어서 놓기 지원 및에 대 `window.open()` 한 지원 등의 추가 기능도 iOS 11에서에 `SFSafariViewController` 추가 되었습니다. 이러한 새로운 기능에 대 한 자세한 내용은 [Apple의 SFSafariViewController 설명서](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor)에서 확인할 수 있습니다.
-
 
 ## <a name="webkit"></a>WebKit
 
@@ -106,4 +104,3 @@ config.SetUrlSchemeHandler(new MyHandler(), "xamarin-asset");
 webView = new WKWebView (View.Frame, config);
 webView.LoadRequest (new NSUrlRequest("xamarin-asset://xamarin.com"));
 ```
-

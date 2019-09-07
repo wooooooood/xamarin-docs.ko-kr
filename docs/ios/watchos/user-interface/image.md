@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 18e7873eede87e9bb81c1c0b304bfc87c317c27a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291509"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769956"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Xamarin의 watchOS 이미지 컨트롤
 
@@ -32,7 +32,6 @@ Asset catalog 이미지를 사용 하 여 시청 키트 앱에 이미지를 추�
 
 ![](image-images/asset-watch-sml.png "자산 카탈로그 이미지에서 감시 키트 크기 38mm 및 42mm를 사용 하 여 각 표시 크기에 대해 서로 다른 이미지를 지정할 수 있습니다.")
 
-
 ## <a name="images-on-the-watch"></a>조사식 이미지
 
 이미지를 표시 하는 가장 효율적인 방법은 *조사식 앱 프로젝트에* 이미지를 포함 하 고 메서드를 `SetImage(string imageName)` 사용 하 여 표시 하는 것입니다.
@@ -51,7 +50,6 @@ myOtherImageControl.SetImage("Worry");
 ### <a name="background-images"></a>배경 이미지
 
 `Button`, `SetBackgroundImage (string imageName)` 및`Group`클래스의에 동일한 논리가 적용 됩니다. `InterfaceController` 시청 앱 자체에 이미지를 저장 하 여 최상의 성능을 얻을 수 있습니다.
-
 
 ## <a name="images-in-the-watch-extension"></a>조사식 확장의 이미지
 
@@ -74,7 +72,6 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 }
 ```
 
-
 ## <a name="animations"></a>애니메이션
 
 이미지 집합에 애니메이션 효과를 주려면 모두 동일한 접두사로 시작 하 고 숫자 접미사가 있어야 합니다.
@@ -95,7 +92,6 @@ animatedImage.StartAnimating ();
 ```csharp
 animatedImage.StopAnimating ();
 ```
-
 
 <a name="cache" />
 
@@ -122,12 +118,9 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 를 사용 하 여 `WKInterfaceDevice.CurrentDevice.WeakCachedImages`코드에서 이미지 캐시의 내용을 쿼리할 수 있습니다.
 
-
 ### <a name="managing-the-cache"></a>캐시 관리
 
 캐시 크기는 20mb입니다. 앱을 다시 시작 하는 동안 유지 되 고이를 채우면 `RemoveCachedImage` `WKInterfaceDevice.CurrentDevice` 개체의 또는 `RemoveAllCachedImages` 메서드를 사용 하 여 파일을 지울 책임이 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

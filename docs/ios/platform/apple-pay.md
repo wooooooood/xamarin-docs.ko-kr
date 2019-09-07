@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 1cf28f83302d5035652df05aee26a6646df29fc0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: f264f210a9228fd213f0c041abb5b26023c796f4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291808"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753262"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.ios의 Apple Pay
 
@@ -81,7 +81,6 @@ IOS 10을 처음 사용 하는 개발자는 전 세계의 웹 사이트에 Apple
 ### <a name="passkit-framework-enhancements"></a>PassKit Framework의 향상 된 기능
 
 IOS 10에서 PassKit 프레임 워크는 외부 `UIKit` Apple Pay를 지원 하도록 확장 되었으며 카드 발급자가 자신의 앱 내에서 자신의 카드를 제공할 수 있도록 합니다.
-
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>UIKit 외부에서 Apple Pay 지원
 

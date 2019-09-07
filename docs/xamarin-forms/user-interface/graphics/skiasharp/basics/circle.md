@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 876379a1d515517054d9e0fa2657e8bc10dc749f
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888514"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759537"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 단순 원 그리기
 
@@ -157,7 +157,6 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 중인 프로그램
 원 윤곽선의 너비가 25 픽셀 &mdash; 또는 원 &mdash; 반지름의 1/4로 지정 되어 있지만 더 가늘게 보이는 것 처럼 보이지만 다음과 같은 이유가 있습니다. 선의 너비는 파란색 원으로 가려져 있습니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 가장 가까운 픽셀에 해당 차원에 파란색 내부 크기가 있지만 25 픽셀 너비 윤곽선 포괄 기하학적 원 &mdash; 내부 및 외부의 절반에 반 합니다.
 
 다음 샘플은 [Xamarin.Forms를 사용 하 여 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) 문서 시각적으로이에서는 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

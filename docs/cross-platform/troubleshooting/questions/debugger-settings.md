@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 1abf166e35688790bb0b059793c8929495eeea02
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 343f8d37d77726d2cdc06a74c44e476af00dde27
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285041"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765154"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>디버거에 필요한 프로젝트 설정은 무엇인가요?
 
@@ -32,4 +32,3 @@ ms.locfileid: "70285041"
 3. 각 플랫폼에 대 한 설정:
     - **빌드 > Android 빌드 > 디버깅 옵션**으로 이동 합니다. [ **개발자 계측 사용** ] 상자를 사용 합니다.
     - **빌드 > IOS 디버그**로 이동 합니다. **디버깅 사용** 상자를 사용 합니다.
-

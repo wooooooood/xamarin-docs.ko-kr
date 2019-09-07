@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 706efdd9cb39db63ab0c7b9cd4404b7b84f4c14b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb16ad3889453f866f3dc9e66f5bcc8860bd094a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292413"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751992"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -55,9 +55,6 @@ CloudKit 프레임 워크는 iCloud에 액세스 하는 응용 프로그램 개�
 
 > [!IMPORTANT]
 > CloudKit JS를 사용 하 여 CloudKit 데이터베이스에서 콘텐츠를 액세스, 표시 또는 업데이트 하려면 먼저 해당 데이터베이스의 스키마를 정의 해야 합니다.
-
-
-
 
 자세한 내용은 다음 문서를 참조 하세요.
 
@@ -261,8 +258,6 @@ IOS 9에서는 이러한 자동 크기 조정이 더 이상 발생 하지 않으
 ### <a name="new-uitextinputassistantitem-class"></a>새 UITextInputAssistantItem 클래스
 
 새 `UITextInputAssistantItem` 클래스를 사용 하 여 _바로 가기 표시줄_의 레이아웃 막대 단추 그룹을 만듭니다. 바로 가기 모음은 소프트 키보드에서 입력 바로 가기 키를 제공 하는 데 사용할 수 있는 새로운 영역입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

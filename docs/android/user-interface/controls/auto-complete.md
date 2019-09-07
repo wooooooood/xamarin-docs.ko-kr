@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 186dab1d48d928426d223c8961ce21846c351107
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 575235569351d0856c7fbffbf38a981ede1a35ce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523085"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762433"
 ---
 # <a name="auto-complete-for-xamarinandroid"></a>Xamarin Android의 자동 완성
 
@@ -47,7 +47,6 @@ ms.locfileid: "69523085"
 
 [`TextView`](xref:Android.Widget.TextView) 는 다음을 소개 하는 레이블입니다.[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 위젯.
-
 
 ## <a name="tutorial"></a>자습서
 
@@ -166,8 +165,6 @@ static string[] COUNTRIES = new string[] {
 
 [!["Ca"가 포함 된 이름을 나열 하는 자동 완성 스크린샷 예](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## <a name="more-information"></a>추가 정보
 
 하드 코드 된 문자열 배열을 사용 하는 것은 응용 프로그램 코드가 콘텐츠가 아닌 동작에 중점을 두기 때문에 권장 되는 디자인 습관은 아닙니다. 콘텐츠를 더 쉽게 수정 하 고 콘텐츠를 지역화 하는 것을 돕기 위해 문자열과 같은 응용 프로그램 콘텐츠를 코드에서 표면화 된 해야 합니다. 하드 코드 된 문자열은이 자습서에서 간단 하 고 집중 하는 데만 사용 됩니다.[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
@@ -195,7 +192,6 @@ static string[] COUNTRIES = new string[] {
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
-
 
 ### <a name="references"></a>참조 항목
 

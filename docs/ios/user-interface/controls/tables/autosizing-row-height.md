@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 00c2284a12d17e0dcd5a89cb0c39c1064665c6d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 03d79c93821737afb1f8e1946ebb3b6380d7a527
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288439"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768445"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Xamarin.ios의 행 높이 자동 크기 조정
 
@@ -108,7 +108,6 @@ public override void ViewWillAppear (bool animated)
 이 코드를 사용 하면 앱이 실행 될 때 각 행이 셀 프로토타입에서 마지막 레이블의 높이를 기준으로 축소 되 고 증가 합니다. 예를 들어:
 
 [![](autosizing-row-height-images/table07.png "예제 테이블 실행")](autosizing-row-height-images/table07.png#lightbox)
-
 
 ## <a name="related-links"></a>관련 링크
 

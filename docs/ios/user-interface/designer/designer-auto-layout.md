@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: f931397f50b6b7aece099efb775a6dda560bf0eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279998"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768411"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
 
@@ -47,7 +47,6 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
     ![](designer-auto-layout-images/image01.png "속성 패널의 자동 레이아웃 사용 확인란")
 
-
 기본적으로 화면에는 제약 조건이 만들어지거나 표시 되지 않습니다. 대신 컴파일 시간에 프레임 정보에서 자동으로 유추 됩니다. 제약 조건을 추가 하려면 디자인 화면에서 요소를 선택 하 고 여기에 제약 조건을 추가 해야 합니다. **제약 조건 도구 모음**을 사용 하 여이 작업을 수행할 수 있습니다.
 
 ## <a name="constraints-toolbar"></a>제약 조건 도구 모음
@@ -63,7 +62,6 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 - **"제약 조건 업데이트" 단추:** 제약 조건 편집 모드에 있는지에 따라 변경 내용이 적용 되는 것을 확인 하는 것이 중요 합니다.
   - 제약 조건 편집 모드에서이 단추는 요소 프레임과 일치 하도록 제약 조건을 조정 합니다.
   - 프레임 편집 모드에서이 단추는 제약 조건이 정의 하는 위치와 일치 하도록 요소 프레임을 조정 합니다.
-
 
 ## <a name="surface-based-constraint-editing"></a>화면 기반 제약 조건 편집
 
@@ -87,8 +85,6 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 
 > [!IMPORTANT]
 > 레이아웃 안내선은 상태 표시줄 또는 도구 모음과 같은 시스템 바의 존재를 고려 하는 상위 및 하위 제약 조건을 만들 수 있도록 하는 특별 한 유형의 제약 조건 대상입니다. 주된 용도 중 하나는 최신 버전의 컨테이너 보기가 상태 표시줄 아래에서 확장 되기 때문에 iOS 6 및 iOS 7 사이에 앱이 호환 되도록 하는 것입니다. 위쪽 레이아웃 가이드에 대 한 자세한 내용은 [Apple 설명서](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2)를 참조 하세요.
-
-
 
 다음 세 단원에서는 다양 한 유형의 제약 조건을 사용 하는 방법을 소개 합니다.
 
@@ -129,7 +125,6 @@ IOS Designer 도구는 디자인 화면에서 요소를 조작 하기 위한 두
 - **충돌 하는 제약 조건** -여러 제약 조건에서 요소에 충돌 하는 특성 값이 적용 되 고 제약 조건 엔진이이를 조정할 수 없는 경우에 발생 합니다.
 - 제약 조건이 가장 많은 **항목** -요소의 속성 (위치 + 크기)은 제약 조건 집합 및 제약 조건이 유효 하도록 기본 크기에 완전히 포함 되어야 합니다. 이러한 값이 모호한 경우 항목의 제약을 받는 것으로 간주 됩니다.
 - **프레임 잘못 배치** -이는 요소의 프레임과 제약 조건 집합이 서로 다른 두 개의 결과 사각형을 정의 하는 경우에 발생 합니다.
-
 
 이 섹션에서는 위에 나열 된 세 가지 문제를 대해 중점적 처리 하는 방법에 대 한 세부 정보를 제공 합니다.
 

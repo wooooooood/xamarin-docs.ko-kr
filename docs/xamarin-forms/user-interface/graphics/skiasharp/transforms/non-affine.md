@@ -7,12 +7,12 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: f526be2156c4d74cf695b6b11706e3bbb7f355bb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642996"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772775"
 ---
 # <a name="non-affine-transforms"></a>비아핀(Non-Affine) 변환
 
@@ -468,7 +468,6 @@ W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환을 `S` 
 합니다 `a` 고 `b` 세 번째 변환이 유사 변환이 있도록 값이 계산 됩니다. 코드는 유사 변환의 역함수 값을 가져옵니다 하 고 오른쪽 아래 모서리를 매핑하는. (A, b) 지점입니다.
 
 3 차원 그래픽을 모방 하는 데 비 관계 변환의 다른 사용이 됩니다. 다음 문서에서는 [ **3D 회전** ](3d-rotation.md) 3D 공간에서 2 차원 그래픽을 회전 하는 방법을 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

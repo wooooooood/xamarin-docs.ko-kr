@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 7e8230af1e9d4eef43b4142834afc0e90973c768
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eb944b062f75ceec8ca8dbe22cde64b0fdd15625
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288665"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752951"
 ---
 # <a name="healthkit-in-xamarinios"></a>Xamarin.ios의 HealthKit
 
@@ -43,9 +43,6 @@ ms.locfileid: "70288665"
 > [!IMPORTANT]
 > 상태 키트는 iOS 8에서 도입 되었습니다. 현재는 상태 키트를 iOS 시뮬레이터에서 사용할 수 없으며, 디버깅 하려면 실제 iOS 장치에 연결 해야 합니다.
 
-
-
-
 ## <a name="creating-and-provisioning-a-health-kit-app"></a>상태 키트 앱 만들기 및 프로 비전
 Xamarin iOS 8 응용 프로그램은 HealthKit API를 사용할 수 있기 전에 적절 하 게 구성 하 고 프로 비전 해야 합니다. 이 섹션에서는 Xamarin 응용 프로그램을 올바르게 설정 하는 데 필요한 단계를 다룹니다.
 
@@ -66,16 +63,14 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 보려면 
 명시적인 **앱 ID** 및 적절 한 **프로 비전 프로필** 생성은 Apple의 [iOS 개발자 센터](https://developer.apple.com/devcenter/ios/index.action)내에서 수행 됩니다. 
 
 현재 **앱 id** 는 개발자 센터의 [인증서, 식별자 & 프로필](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) 섹션에 나열 됩니다. 일반적으로이 목록에는 **앱 id** - **이름을** 임의의 수의 접미사로 사용할 수 있음을 나타내는의 `*` **id** 값이 표시 됩니다. 이러한 *와일드 카드 앱 id* 는 상태 키트와 함께 사용할 수 없습니다.
- 
-명시적인 **앱 id**를 만들려면 오른쪽 위에 있는 **+** 단추를 클릭 하 여 **iOS 앱 id 등록** 페이지로 이동 합니다.
 
+명시적인 **앱 id**를 만들려면 오른쪽 위에 있는 **+** 단추를 클릭 하 여 **iOS 앱 id 등록** 페이지로 이동 합니다.
 
 [![](healthkit-images/image02.png "Apple 개발자 포털에서 앱 등록")](healthkit-images/image02.png#lightbox)
 
 위의 그림에 나와 있는 것 처럼 앱 설명을 만든 후 **Explicit 앱 id** 섹션을 사용 하 여 응용 프로그램에 대 한 id를 만듭니다. **App Services** 섹션의 **서비스 사용** 섹션에서 **Health Kit** 를 선택 합니다.
 
 완료 되 면 **계속** 단추를 눌러 계정에 **앱 ID** 를 등록 합니다. **인증서, 식별자 및 프로필** 페이지로 돌아갑니다. 프로 **비전 프로필** 을 클릭 하 여 현재 프로 비전 프로필의 목록으로 이동 하 고 오른쪽 **+** 위 모퉁이에 있는 단추를 클릭 하 여 **iOS 프로 비전 프로필 추가** 페이지로 이동 합니다. **IOS 앱 개발** 옵션을 선택 하 고 **계속** 을 클릭 하 여 **앱 ID 선택** 페이지로 이동 합니다. 여기에서 이전에 지정한 명시적 **앱 ID** 를 선택 합니다.
-
 
 [![](healthkit-images/image03.png "명시적 앱 ID 선택")](healthkit-images/image03.png#lightbox)
 
@@ -171,7 +166,6 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 ### <a name="permissions-walkthrough"></a>권한 연습
 
 상태 키트 프로 비전 된 `AppDelegate.cs` 프로젝트에서 파일을 엽니다. 파일의 맨 위에 `HealthKit`있는를 사용 하 여 문을 확인 합니다.
-
 
 다음 코드는 상태 키트 권한과 관련이 있습니다.
 
@@ -410,11 +404,9 @@ IOS 시뮬레이터는 상태 키트를 지원 하지 않습니다. 디버그는
 
 프로 비전이 올바르게 설정 되었다고 가정 하면 응용 프로그램이 시작 됩니다. 해당 `OnActivated` 메서드에 도달 하면 상태 키트 권한 부여를 요청 합니다. 운영 체제에서이 작업을 처음으로 발생 하면 사용자에 게 다음과 같은 대화 상자가 표시 됩니다.
 
-
 [![](healthkit-images/image12.png "사용자에 게이 대화 상자가 표시 됩니다.")](healthkit-images/image12.png#lightbox)
 
 앱에서 하트 요금 데이터를 업데이트할 수 있도록 설정 하면 앱이 다시 나타납니다. 콜백은 `ReactToHealthCarePermissions` 비동기적으로 활성화 됩니다. `HeartRateModel’s` `HKPermissionsViewController.OnEnabledChanged()` 이렇게 하면 이벤트가 발생 하 여 이벤트 처리기가 실행 되 고이로 인해 `StoreData` 단추가 활성화 됩니다. `EnabledChanged` `Enabled` 다음 다이어그램에서는이 시퀀스를 보여 줍니다.
-
 
 [![](healthkit-images/image13.png "이 다이어그램에서는 이벤트의 시퀀스를 보여 줍니다.")](healthkit-images/image13.png#lightbox)
 

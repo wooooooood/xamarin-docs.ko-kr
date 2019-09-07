@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 72c233dc492fe1c93546121bc9103e666c2127ac
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65ccbe397093833e3af58d1165bc1dad8287ba5d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286256"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752939"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Xamarin.ios의 핵심 그래픽
 
@@ -28,7 +28,6 @@ iOS에는 하위 수준의 그리기 지원 기능을 제공 하는 [*핵심 그
 - [메모리 나 화면에 이미지를 그립니다](#Drawing_Images_and_Text).
 - PDF 만들기 및 그리기
 - 기존 PDF를 읽고 그립니다.
-
 
 ## <a name="geometric-space"></a>기 하 도형 공간
 
@@ -276,7 +275,6 @@ public override void Draw (RectangleF rect)
 - 컨텍스트에서 이미지 가져오기
 - 컨텍스트 제거
 
-
 뷰가에서 컨텍스트를 제공 하는 메서드와달리이경우다음두가지방법중하나로컨텍스트를만듭니다.`Draw`
 
 1. (또는 `UIGraphics.BeginImageContext` `BeginImageContextWithOptions`)를 호출 하 여
@@ -422,7 +420,6 @@ UIGraphics.EndPDFContent ();
 ```
 
 결과 텍스트는 PDF에 그려지며,이는 저장 하 고, 업로드 하 `NSData` 고, 전자 메일로 보낼 수 있는에 포함 되어 있습니다.
-
 
 ## <a name="summary"></a>요약
 

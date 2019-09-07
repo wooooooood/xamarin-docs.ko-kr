@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: conceptdev
 ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: ca26edc0311de2028af529dc43ea1ffde2383cf4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 745c59ad50f0e8ad50a8ec56549d99b7b5e72228
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283661"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772471"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -307,7 +307,6 @@ C# 및 F# 관리 코드를 사용 하면 매우 일반적 일 수 있으며, 삭
 현재는 기본 디버그 구성만 프로 파일링 할 수 있습니다.
 
 다른 구성으로 앱을 프로 파일링 하는 경우 다음과 같은 메시지 대화 상자가 표시 됩니다.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

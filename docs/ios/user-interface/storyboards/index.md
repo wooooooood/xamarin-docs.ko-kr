@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: 145c616cc0af8156f10b9db1d3fa36264cecd18b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284323"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768886"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -21,7 +21,6 @@ ms.locfileid: "70284323"
 Apple에서 iOS 응용 프로그램 UI의 시각적 표현으로 Storyboard 파일 형식을 도입 하기 전에 개발자는 각 뷰 컨트롤러에 대 한 XIB 파일을 만들고 각 뷰 간의 탐색을 수동으로 프로그래밍 했습니다.  스토리 보드를 사용 하면 개발자가 두 뷰 컨트롤러를 모두 정의 하 고 디자인 화면에서 뷰 컨트롤러 간을 탐색할 수 있으며 응용 프로그램의 사용자 인터페이스에 대 한 WYSIWYG 편집 기능을 제공 합니다.
 
 Xamarin iOS Designer를 사용 하 여 스토리 보드를 만들고 열고 편집할 수 있습니다. 이 가이드에서는를 사용 C# 하 여 탐색을 프로그래밍할 때 디자이너를 사용 하 여 스토리 보드를 만드는 방법에 대해서도 설명 합니다.
-
 
 ## <a name="requirements"></a>요구 사항
 
@@ -77,7 +76,7 @@ Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아�
 ### <a name="adaptive-segue-types"></a>적응 Segue 형식
 
  ios 8에는 iOS storyboard 파일이 사용 가능한 모든 화면 크기에서 작동할 수 있도록 하는 [크기 클래스가](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 도입 되어 개발자가 모든 ios 장치에 대해 하나의 UI를 만들 수 있습니다. 기본적으로 모든 새 Xamarin.ios 응용 프로그램은 size 클래스를 사용 합니다. 이전 프로젝트의 크기 클래스를 사용 하려면 [통합 된 스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드를 참조 하세요. 
- 
+
 Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응 segue*](~/ios/user-interface/storyboards/unified-storyboards.md)사용 합니다. Size 클래스를 사용 하는 경우 iPhone 또는 iPad를 사용 하 고 있다는 것을 직접 지정 하는 것은 아닙니다. 즉, 작업 해야 하는 부동산의 양에 관계 없이 항상 동일한 것으로 보이는 하나의 UI를 만듭니다. 적응 Segue는 환경을 심사 하 고 콘텐츠를 표시 하는 데 가장 적합 한 방법을 결정 합니다. 적응 Segue 다음과 같이 표시 됩니다. 
 
 [![](images/adaptivesegue.png "적응 Segue 드롭다운")](images/adaptivesegue.png#lightbox)
@@ -92,7 +91,6 @@ Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응
 ### <a name="transferring-data-with-segues"></a>Segue를 사용 하 여 데이터 전송
 
 Segue의 이점은 전환으로 끝나지 않습니다. 또한 뷰 컨트롤러 간의 데이터 전송을 관리 하는 데 사용할 수 있습니다. 이는 초기 뷰 컨트롤러에서 `PrepareForSegue` 메서드를 재정의 하 고 데이터를 처리 하 여 수행 됩니다. 예를 들어 단추 누르기를 사용 하 여 segue를 트리거할 때 응용 프로그램은이 메서드를 호출 하 여 탐색이 발생 *하기 전에* 새 뷰 컨트롤러를 준비할 수 있는 기회를 제공 합니다. [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) 샘플에서 아래 코드는이를 보여 줍니다. 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -252,7 +250,6 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-
 디자이너를 사용 하 여 스토리 보드를 만들 때 IDE는 `designer.cs` 클래스 맨 위에 [[Register]](xref:Foundation.RegisterAttribute) 특성을 자동으로 추가 하 고 이전 단계에서 지정한 Storyboard ID와 동일한 문자열 식별자를 전달 합니다. 이렇게 하면 C# 가 스토리 보드의 관련 장면에 연결 됩니다.
 
 특정 시점에 디자이너에서 만들지 **않은** 기존 클래스를 추가 하는 것이 좋습니다. 이 경우이 클래스를 정상적으로 등록 합니다.
@@ -340,7 +337,6 @@ public partial class MainViewController : UIViewController
 3. Segue을 클릭 하 고 *id* `SegueToPink`를 지정 합니다.
 
     [![](images/namesegue.png "Segue을 클릭 하 고 SegueToPink를 지정 합니다.")](images/namesegue.png#lightbox)  
-    
 
 4. 마지막으로 다음 ShouldPerformSegue 메서드를 `MainViewController` 클래스에 추가 합니다.
 
@@ -489,8 +485,6 @@ SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Storyboard의 개념과 iOS 응용 프로그램 개발에 도움이 되는 방법에 대해 소개 합니다. 이 예에서는 장면, 뷰 컨트롤러, 보기 및 보기 계층 구조와 다른 유형의 Segue와의 장면을 연결 하는 방법을 설명 합니다.  또한 storyboard에서 뷰 컨트롤러를 수동으로 인스턴스화하고 조건부 Segue 만드는 방법을 살펴봅니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

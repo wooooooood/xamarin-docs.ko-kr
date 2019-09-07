@@ -7,12 +7,12 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/27/2018
-ms.openlocfilehash: 620a986ea9c5a6792d321b0c89dae936ffa256da
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 3eb02dbc4e77fcd8b237b85e21e577d0c4566794
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227918"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772736"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>3부. XAML 태그 확장
 
@@ -556,8 +556,6 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ## <a name="summary"></a>요약
 
 문서에 표시된 XAML 태그 확장은 XAML 파일에 대한 중요한 지원을 제공합니다. 하지만 가장 중요 한 XAML 태그 확장은 아마도 `Binding`,이 시리즈의 다음 부분에 나와 있는 [4 부입니다. 데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)에서 논의합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

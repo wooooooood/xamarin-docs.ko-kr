@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 7c6e395a353dcfd737ad244df9d169edc5b08f1c
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 1c093d3d67ace3b0f9186fca8226d4ef631d9af0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510300"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762303"
 ---
 # <a name="xamarinandroid-listview-and-the-activity-lifecycle"></a>Xamarin Android ListView 및 작업 수명 주기
 
@@ -24,7 +24,6 @@ ms.locfileid: "68510300"
 
 어댑터에서 메모리 또는 관리 되는 커서와 같은 리소스를 사용 하는 경우 보완 메서드에서 해당 리소스를 인스턴스화한 위치로 릴리스 해야 합니다 (예: 에서 `OnStart` 만든 개체는에서 `OnStop`삭제할 수 있습니다.
 
-
 ## <a name="configuration-changes"></a>구성 변경
 
 특히 화면 회전 및 키보드 표시 유형 &ndash; &ndash; 변경으로 인해 현재 작업이 제거 되 고 다시 생성 될 수 있다는 것을 명심 해야 합니다. 그렇지 않으면를 `ConfigurationChanges` 사용 하 여 지정 하지 않으면 특성). 즉, 정상 조건에서 장치 `ListView` 를 회전 하면 및 `Adapter` 가 다시 생성 되 고 및에 `OnPause` `OnResume`코드를 작성 하지 않은 경우 스크롤 위치 및 행 선택 상태가 손실 됩니다.
@@ -36,4 +35,3 @@ ms.locfileid: "68510300"
 ```
 
 그런 다음 작업은를 `OnConfigurationChanged` 재정의 하 여 해당 변경 내용에 적절 하 게 응답 해야 합니다. 구성 변경 내용을 처리 하는 방법에 대 한 자세한 내용은 설명서를 참조 하세요.
-

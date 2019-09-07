@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 12/14/2016
-ms.openlocfilehash: c5527db543a0b0d5218c37f0d75e22afcd59297a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 292734c0622ab35d5e48eec47593c3ffe4dc27e6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293155"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768684"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchOS – 연습
 
@@ -42,7 +42,6 @@ ms.locfileid: "70293155"
 
 Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 합니다. (Mac을 사용 하는 경우 마우스 오른쪽 단추를 클릭 하 고 **Interface Builder >를 사용 하 여 열**수도 있습니다.)
 
-
 1. **도구 상자** 및 **속성** 패드가 표시 되는지 확인 합니다.
 1. 인터페이스 컨트롤러를 클릭 하 여 선택 합니다.
 1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
@@ -62,7 +61,6 @@ Visual Studio에서 Xamarin iOS Designer를 사용 하 여 편집 하려면 Watc
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.")
 
 -----
-
 
 UI를 만듭니다.
 
@@ -154,7 +152,6 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 축 하 합니다. 이제 시청 앱을 만들었습니다.
 
 ![](hello-watch-images/running.png "시뮬레이터에서 실행 중인 앱")
-
 
 ## <a name="related-links"></a>관련 링크
 

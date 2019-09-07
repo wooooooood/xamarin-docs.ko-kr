@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: e5b23973d7784a9116d4c82ef6d892aacbf584a1
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 0784fe5fe42fc82d7067c976bdda6f0436e140b5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524477"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757573"
 ---
 # <a name="using-the-contacts-contentprovider"></a>연락처 ContentProvider 사용
 
@@ -30,7 +30,6 @@ Uri에서 커서를 만드는 방법에는 다음 세 가지가 있습니다.
 1. **CursorLoader ().**  &ndash; Android 3.0 (API 수준 `CursorLoader` 11)에 도입 된 loadinbackground ()는 이제를 사용 `ContentProvider` 하는 데 선호 되는 방법입니다. `CursorLoader`UI가 `ContentResolver` 차단 되지 않도록 백그라운드 스레드에서을 쿼리 합니다.
    이 클래스는 v4 호환성 라이브러리를 사용 하 여 이전 버전의 Android에서 액세스할 수 있습니다.
 
-
 이러한 각 메서드에는 동일한 기본 입력 집합이 있습니다.
 
 - **Uri** 의 정규화 된 이름입니다. `ContentProvider` &ndash;
@@ -38,8 +37,6 @@ Uri에서 커서를 만드는 방법에는 다음 세 가지가 있습니다.
 - **선택** &ndash; SQL`WHERE` 절과 유사 합니다.
 - **Selectionargs** &ndash; 선택 영역에서 대체 되는 매개 변수입니다.
 - **SortOrder** &ndash; 정렬할 열입니다.
-
-
 
 ## <a name="creating-inputs-for-a-query"></a>쿼리에 대 한 입력 만들기
 
@@ -58,13 +55,9 @@ string[] projection = {
 
 이 예 `selection` `sortOrder` 에서는를 로`null`설정 하 여 및를무시합니다.`selectionArgs`
 
-
-
 ## <a name="creating-a-cursor-from-a-content-provider-uri"></a>콘텐츠 공급자 Uri에서 커서 만들기
 
 매개 변수 개체를 만든 후에는 다음 세 가지 방법 중 하나로 사용할 수 있습니다.
-
-
 
 ### <a name="using-a-managed-query"></a>관리 되는 쿼리 사용
 
@@ -75,8 +68,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 ```
 
 이 커서는 Android에서 관리 되므로 닫을 필요가 없습니다.
-
-
 
 ### <a name="using-contentresolver"></a>ContentResolver 사용
 
@@ -95,8 +86,6 @@ cursor.Close();
 
 또는를 호출 `StartManagingCursor()` `StopManagingCursor()` 하 여 커서를 ' 관리 ' 할 수도 있습니다. 작업이 중지 되었다가 다시 시작 되 면 관리 되는 커서가 자동으로 비활성화 되 고 다시 쿼리 됩니다.
 
-
-
 ### <a name="using-cursorloader"></a>CursorLoader 사용
 
 Android 3.0 (API 수준 11) 용으로 빌드된 응용 프로그램은이 메서드를 사용 해야 합니다.
@@ -109,8 +98,6 @@ var cursor = (ICursor)loader.LoadInBackground();
 는 `CursorLoader` 백그라운드 스레드에서 모든 커서 작업이 수행 되도록 하 고, 데이터를 다시 로드 하는 대신 활동이 다시 시작 될 때 활동 인스턴스 간에 기존 커서를 지능적으로 다시 사용할 수 있도록 합니다.
 
 이전 Android 버전은 `CursorLoader` [v4 지원 라이브러리](https://developer.android.com/tools/support-library/index.html)를 사용 하 여 클래스를 사용할 수도 있습니다.
-
-
 
 ## <a name="displaying-the-cursor-data-with-a-custom-adapter"></a>사용자 지정 어댑터를 사용 하 여 커서 데이터 표시
 
@@ -188,8 +175,6 @@ public override View GetView (int position, View convertView, ViewGroup parent)
 응용 프로그램은 비슷한 코드 패턴을 사용 하 여 사용자의 사진, 비디오 및 음악을 비롯 한 다양 한 시스템 데이터에 액세스할 수 있습니다.
 일부 데이터 형식에는 프로젝트의 **Androidmanifest**에서 특정 권한을 요청 해야 합니다.
 
-
-
 ## <a name="displaying-the-cursor-data-with-a-simplecursoradapter"></a>SimpleCursorAdapter를 사용 하 여 커서 데이터 표시
 
 커서는와 함께 `SimpleCursorAdapter` 표시 될 수도 있습니다 (사진만 아닌 이름만 표시 됨). 이 코드에서는와 함께 `ContentProvider` `SimpleCursorAdapter` 를 사용 하는 방법을 보여 줍니다 (이 코드는 샘플에 표시 되지 않음).
@@ -209,7 +194,6 @@ listView.Adapter = adapter;
 ```
 
 구현`SimpleCursorAdapter`에 대 한 자세한 내용은 [listview 및 어댑터](~/android/user-interface/layouts/list-view/index.md) 를 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

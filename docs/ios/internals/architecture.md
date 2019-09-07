@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d59a295961c25ecfcc99bb54fdc188c957cf3ee
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b0cece7f553d0169c311e6614428ed37c5c77813
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291947"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768530"
 ---
 # <a name="ios-app-architecture"></a>iOS 앱 아키텍처
 
@@ -93,7 +93,6 @@ Required `[Export]` 특성에는 생성 된 목표-C 클래스에서 사용 되�
 
 Xamarin.ios에서 사용 되는 등록 기관에는 동적 및 정적 이라는 두 가지 유형이 있습니다.
 
-
 - **동적 등록 기관** – 동적 등록자는 런타임에 어셈블리의 모든 형식에 대해 등록을 수행 합니다. 이는 [목표-C의 런타임 API](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/)에서 제공 하는 함수를 사용 하 여 수행 합니다. 따라서 동적 등록자는 시작 속도가 느리고 빌드 시간을 단축 합니다. 이는 iOS 시뮬레이터에 대 한 기본값입니다. Trampolines 라고 하는 네이티브 함수 (일반적으로 C)는 동적 등록 기관를 사용할 때 메서드 구현으로 사용 됩니다. 아키텍처는 서로 다릅니다.
 
 - **정적 등록 기관** – 정적 등록자는 빌드 중에 목표 C 코드를 생성 합니다 .이 코드는 정적 라이브러리로 컴파일되고 실행 파일에 연결 됩니다. 이렇게 하면 더 빨리 시작할 수 있지만 빌드 시간 동안 시간이 오래 걸립니다. 이는 기본적으로 장치 빌드에 사용 됩니다. 정적 등록자는 다음과 같이 프로젝트의 빌드 옵션에서 `--registrar:static` `mtouch` 특성으로 전달 하 여 iOS 시뮬레이터에서 사용할 수도 있습니다.
@@ -114,7 +113,6 @@ Xamarin.ios에서 사용 하는 iOS 유형 등록 시스템의 세부 정보에 
 이 시작 시퀀스는 모두 정적 라이브러리로 컴파일되며 최종 실행 파일에 연결 됩니다. 그러면 앱에서 그라운드를 끄는 방법을 알 수 있습니다.
 
 앱이 시작 되 고 Mono가 실행 되 고 있으며,이 시점에서 관리 코드를 실행 하 고 네이티브 코드를 호출 하 고 다시 호출 하는 방법을 알고 있습니다. 다음으로 수행 해야 하는 작업은 실제로 컨트롤 추가를 시작 하 고 앱을 대화형으로 만드는 것입니다.
-
 
 ## <a name="generator"></a>Generator
 
@@ -165,7 +163,6 @@ Xamarin.ios를 만든 후에는 mtouch에서 모든 구성 요소를 함께 번�
 - 링크를 사용 하는 경우 관리 되는 링커를 실행 하 여 사용 되지 않은 부분을 복사 하 여 어셈블리를 최적화 합니다.
 - AOT 컴파일
 - 네이티브 실행 파일에 연결 된 일련의 정적 라이브러리 (각 어셈블리에 대해 하나씩)를 출력 하는 네이티브 실행 파일을 만듭니다. 기본 실행 파일은 시작 관리자 코드, 등록자 코드 (정적) 및 AOT의 모든 출력으로 구성 됩니다. 컴파일러나
-
 
 링커에 대 한 자세한 내용 및 사용 방법에 대 한 자세한 내용은 [링커](~/ios/deploy-test/linker.md) 가이드를 참조 하세요.
 

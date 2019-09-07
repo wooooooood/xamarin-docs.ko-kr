@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 05/25/2017
-ms.openlocfilehash: 3a2ba8f56604dcf42604c2cb653931d0397a0d82
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 24ddd71fe1468edc70ec4d487dc2cb2dbd4da1b6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287723"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769818"
 ---
 # <a name="how-xamarinmac-works"></a>Xamarin.Mac 작동 방법
 
@@ -104,7 +104,7 @@ AOT에서 Xamarin.ios 앱을 지원할 수 있는 두 가지 주요 영역은 �
 
 ### <a name="enabling-aot-compilation"></a>AOT 컴파일 사용
 
-AOT는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고, **mac 빌드** 로 이동 하 고, `--aot:[options]` **추가 mmp 인수:** 필드 (여기서 `[options]` 는 하나 이상)에 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. AOT 유형을 제어 하는 옵션은 아래 참조). 예를 들어:
+AOT는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고, **mac 빌드** 로 이동 하 고, `--aot:[options]` **추가 mmp 인수:** 필드 (여기서 `[options]` 는 하나 이상)에 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. AOT 유형을 제어 하는 옵션은 아래 참조). 예:
 
 ![추가 mmp 인수에 AOT 추가](how-it-works-images/aot01.png "추가 mmp 인수에 AOT 추가")
 
@@ -146,7 +146,7 @@ Xamarin.ios 8.13에 처음 도입 된 부분 정적 등록은 개발자에 게 �
 
 ### <a name="enabling-the-partial-static-registrar"></a>부분 정적 등록자 사용
 
-부분 정적 등록자는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고 **mac 빌드** 로 이동한 다음 `--registrar:static` **추가 mmp arguments:** 필드에 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. 예를 들어:
+부분 정적 등록자는 **솔루션 탐색기**에서 **프로젝트 이름을** 두 번 클릭 하 고 **mac 빌드** 로 이동한 다음 `--registrar:static` **추가 mmp arguments:** 필드에 추가 하 여 xamarin.ios에서 사용 하도록 설정 됩니다. 예:
 
 ![추가 mmp 인수에 부분 정적 등록자 추가](how-it-works-images/psr01.png "추가 mmp 인수에 부분 정적 등록자 추가")
 
@@ -160,4 +160,3 @@ Xamarin.ios 8.13에 처음 도입 된 부분 정적 등록은 개발자에 게 �
 - [Theading 기본 사항](~/ios/app-fundamentals/threading.md)
 - [대리자, 프로토콜 및 이벤트](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [에 대 한`newrefcount`](~/ios/internals/newrefcount.md)
-

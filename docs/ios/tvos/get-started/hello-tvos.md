@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 30fcf586a280688834e1ae9af61630c2611964a5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9ad1c63dae312546315406d40858ce24802c6a58
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281816"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769306"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hello, tvOS 빠른 시작 가이드
 
@@ -489,7 +489,6 @@ TvOS와 관련 된 문제가 발생 하는 경우 문제 및 해결 방법에 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 간단한 Hello, tvOS 앱을 만들어 Mac용 Visual Studio으로 tvOS 앱을 개발 하는 빠른 시작을 제공 했습니다. TvOS 장치 프로 비전, 인터페이스 생성, tvOS 코딩, tvOS 시뮬레이터에서의 테스트에 대 한 기본 사항에 대해 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

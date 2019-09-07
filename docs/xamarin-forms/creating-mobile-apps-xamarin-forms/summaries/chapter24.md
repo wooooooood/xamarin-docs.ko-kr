@@ -1,18 +1,18 @@
 ---
 title: 요약 24 장입니다. 페이지 탐색
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 24 장입니다. 페이지 탐색
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 24 장입니다. 페이지 탐색'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: ce56c30cd631e87d39c9c5bda101b67252a0762a
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: 340aa8c7327ba75986b960d5e0f6bda66c116fc5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65926901"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770920"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>요약 24 장입니다. 페이지 탐색
 
@@ -170,8 +170,6 @@ Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) 클래�
 ### <a name="something-like-a-real-life-app"></a>실제 앱 같은
 
 합니다 [ **NoteTaker** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) 활용 샘플 `MultiPageRestorableApp` 입력 하 고 저장 된 정보를 편집할 수 있도록 하 고는 `Properties` 사전입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

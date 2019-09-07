@@ -7,12 +7,12 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
-ms.openlocfilehash: 9c1ee2e036fc903c7fe8422a32fba44cc93d43f9
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228277"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759426"
 ---
 # <a name="three-types-of-bzier-curves"></a>3가지 형식의 Bézier 곡선
 
@@ -552,7 +552,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 하지만 180도 수학 실패 하는 각도 설정 합니다.
 
 이 경우에 상당히 아쉬운 점입니다 `ConicTo` (파라메트릭 수식에 따라) 이론적으로 원을를 호출 하 여 완료할 수 있습니다 때문에 음수 가중치를 지원 하지 않습니다 `ConicTo` 선만 같지만 가중치 값이 음수입니다. 그러면 두를 사용 하 여 전체 원 만들기 `ConicTo` 곡선 사이 (포함 되지 않음) 모든 각도에 따라 0도 180도 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

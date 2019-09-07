@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 91e49c387818ca4d7472325efa665a5c2bfd9e64
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 8ebc52936dfdcb6b5262424eba5652de0b8908e0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755605"
 ---
 # <a name="activity-lifecycle"></a>활동 수명 주기
 
@@ -32,7 +32,6 @@ _활동은 Android 응용 프로그램의 기본 구성 요소 이며 다양 한
 - 활동 상태
 - 수명 주기 메서드
 - 응용 프로그램의 상태 유지
-
 
 이 단원에는 활동 수명 주기 중에 상태를 효율적으로 저장 하는 방법에 대 한 실용적인 예제를 제공 하는 [연습이](~/android/app-fundamentals/activity-lifecycle/saving-state.md) 포함 되어 있습니다. 이 챕터의 끝 부분에서는 작업 수명 주기와 Android 응용 프로그램에서이를 지 원하는 방법을 이해 해야 합니다.
 
@@ -56,7 +55,6 @@ Android OS는 해당 상태에 따라 활동을 조정 합니다. 이렇게 하�
     중지 된 활동은 가능한 한 오랫동안 상태 및 회원 정보를 유지 하려고 시도 하지만 중지 된 활동은 세 가지 상태의 가장 낮은 우선 순위로 간주 됩니다. 따라서 OS는이 상태의 활동을 먼저 중지 하 여 리소스를 충족 합니다. 우선 순위가 더 높은 활동의 요구 사항
 
 1. *다시 시작* 됨 &ndash; Android에서 메모리에서 제거 하기 위해 수명 주기에 일시 중지 됨에서 중지 됨으로 나타나는 활동은 가능 합니다. 사용자가 작업으로 다시 이동 하는 경우 다시 시작 하 고 이전에 저장 된 상태로 복원한 다음 사용자에 게 표시 해야 합니다.
-
 
 ### <a name="activity-re-creation-in-response-to-configuration-changes"></a>구성 변경에 대 한 응답으로 활동 다시 만들기
 
@@ -122,7 +120,6 @@ protected override void OnCreate(Bundle bundle)
 - 관련 경고 또는 대화 상자 표시
 - 외부 이벤트 처리기 연결
 
-
 예를 들어 다음 코드 조각에서는 카메라를 초기화 하는 방법을 보여 줍니다.
 
 ```csharp
@@ -174,7 +171,6 @@ public void OnPause()
 1. `OnResume`작업이 포그라운드로 반환 될 경우가 호출 됩니다.
 1. `OnStop`활동을 백그라운드에 배치 하는 경우가 호출 됩니다.
 
-
 #### <a name="onstop"></a>OnStop
 
 작업이 더 이상 사용자에 게 표시 되지 않을 때 [OnStop](xref:Android.App.Activity.OnStop) 가 호출 됩니다. 이는 다음 중 하나가 발생할 때 발생 합니다.
@@ -182,7 +178,6 @@ public void OnPause()
 - 새 활동이 시작 되 고 있으며이 활동을 처리 하 고 있습니다.
 - 기존 작업을 포그라운드로 가져오는 중인 경우
 - 활동을 제거 하 고 있습니다.
-
 
 `OnStop`는 Android가 리소스에 대해 않다거나 하 고 작업을 올바르게 백그라운드에서 사용할 수 없는 경우와 같이 메모리 부족 상황에서 항상 호출 될 수 있습니다. 따라서 소멸을 위해 활동을 준비할 때 호출을 사용 `OnStop` 하지 않는 것이 좋습니다. 이 `OnDestroy` 작업 후에 호출 될 수 있는 다음 수명 주기 메서드는 활동이 사라질 때 또는 `OnRestart` 활동이 사용자와 상호 작용 하는 경우에 반환 됩니다.
 
@@ -325,7 +320,6 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 
 을 `Bundle`사용 하 여 상태를 저장 하는 예제는 [연습-작업 상태 저장](saving-state.md)을 참조 하세요.
 
-
 #### <a name="bundle-limitations"></a>번들 제한 사항
 
 에서는 `OnSaveInstanceState` 임시 데이터를 쉽게 저장할 수 있지만 다음과 같은 몇 가지 제한 사항이 있습니다.
@@ -337,7 +331,6 @@ protected override void OnRestoreInstanceState(Bundle savedState)
 - 번들을 사용 하 여 저장 된 데이터는 serialize 되며이로 인해 지연이 발생할 수 있습니다.
 
 번들 상태는 많은 메모리를 사용 하지 않는 단순 데이터에 유용 하지만 *구성 되지 않은 인스턴스 데이터* 는 보다 복잡 한 데이터 또는 검색 비용이 많이 드는 데이터 (예: 웹 서비스 호출 또는 복잡 한 데이터베이스 쿼리)에 유용 합니다. 구성 되지 않은 인스턴스 데이터는 필요에 따라 개체에 저장 됩니다. 다음 섹션에서는 구성 `OnRetainNonConfigurationInstance` 변경을 통해 더 복잡 한 데이터 형식을 유지 하는 방법을 소개 합니다.
-
 
 ### <a name="persisting-complex-data"></a>복합 데이터 유지
 
@@ -477,7 +470,6 @@ public override Java.Lang.Object OnRetainNonConfigurationInstance ()
 ## <a name="summary"></a>요약
 
 Android 작업 수명 주기는 응용 프로그램 내에서 활동의 상태 관리를 위한 강력한 프레임 워크를 제공 하지만 이해 하 고 구현 하기는 어려울 수 있습니다. 이 장에서는 활동이 수명 중에 발생할 수 있는 다양 한 상태와 이러한 상태와 연결 된 수명 주기 방법을 소개 했습니다. 다음으로 이러한 각 방법에서 수행 해야 하는 논리 종류에 대 한 지침을 제공 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

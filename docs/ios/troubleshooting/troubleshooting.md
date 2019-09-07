@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: a888c29a6409fc803b8a0d06bcc6f8a668e64f5e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e6a1b6f4d35a6b8774901ed5a505b5333511c848
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292060"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769699"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁 
 
@@ -26,7 +26,6 @@ ms.locfileid: "70292060"
 - **Visual Studio 2017 업데이트 2** (버전 15.2 이상)은 **System.valuetuple NuGet 4.3.1** 이상과만 호환 됩니다.
 
 Visual Studio 2017 설치에 해당 하는 올바른 System.valuetuple NuGet을 선택 하세요.
-
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>' 업데이트 정보를 검색 하는 동안 오류 발생 ' 오류 메시지를 받고 있습니다.
 
@@ -143,7 +142,6 @@ public Bar (IntPtr handle) : base (handle) { }
 1. Mac OS X Leopard 사용 (10.5)
 1. 시뮬레이터 내에서 앱을 실행 합니다.
 
-
 문제는 Mono가 드롭다운에서 iphonesimulator 대상을의 `libsqlite3.dylib` `libsqlite3.dylib` 파일이 아니라 OS X를 선택 하는 것입니다. 앱 *이* 장치에서 작동 하지만 시뮬레이터는 작동 하지 않습니다.
 
 ## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>시스템에서 장치에 배포 하지 못했습니다. 예외: AMDeviceInstallApplication에서 3892346901 반환
@@ -209,8 +207,6 @@ int count = ((ICollection<Foo>) array).Count;
 1. "Quartz.dll 디버그" 개발자 도구 (스포트라이트를 사용 하 여 찾을 수 있음)를 사용 하 여 "빔 동기화"를 사용 하지 않도록 설정 하 고 원본 편집기 성능이 정상으로 복원 되었는지 확인 합니다.
 1. 빔 동기화를 사용 하지 않도록 설정 하 여 (1) 단계를 반복 해 보세요.
 1. 몇 초 넘게 편집기가 중단 되 면 터미널에서 "killall [Mac용 Visual Studio]"를 실행 해 보십시오. 편집기가 정지 되는 동안 kill 명령이 실행 되는 것은 어려울 수 있지만 이렇게 하는 것이 중요 합니다. 명령을 사용 하면 Mono가 모든 스레드의 스택 추적을 MD 로그에 쓰도록 합니다 .이는를 사용 하 여 XS가 정지 된 상태에서 스레드가 있는 상태를 검색 하는 데 사용할 수 있기 때문입니다.
-
-
 
 XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp} .log** 를 연결 하세요. 이전 버전의 XS/MonoDevelop에서 **~/library/logs를 전송 합니다. /MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
 
@@ -293,7 +289,6 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 솔루션 또는 프로젝트를 저장 하는 프로젝트 이름이 나 디렉터리에 공백이 포함 되어 있으면 최신 버전의 Xamarin.ios 및 Mac용 Visual Studio가 실패 합니다.
 이 문제를 해결하려면
 
-
 - 프로젝트 또는 저장 된 디렉터리에 공간이 포함 되어 있지 않은지 확인 합니다.
 - 프로젝트 "기본 설정"에서 프로젝트 이름에 공백이 포함 되어 있지 않은지 확인 합니다.
 
@@ -324,11 +319,9 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 
 이 예외는 다음 세 가지 중 하나로 인해 발생 합니다.
 
-
 1. 해당 [Export] 특성을 메서드에 적용 하지 않고 목표-C 런타임에 대 한 선택기를 제공 했습니다.
 1. 전체 링크를 사용 하도록 설정 하 고 [Export] 특성을 [Export] ed 메서드에 적용 하지 않았습니다.
 1. [Export] 특성을 상속 된 형식의 private 메서드에 적용 했습니다.
-
 
 ## <a name="mainwindowxibdesignercs-file-is-not-updated"></a>MainWindow.xib.designer.cs 파일이 업데이트 되지 않았습니다.
 
@@ -414,7 +407,6 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
 이 문제는 여러 형식으로 매니페스트 될 수 있으며 항상 일관 된 오류를 생성 하지는 않습니다. 응용 프로그램에. xib이 포함 된 경우 xib에 대 한 **빌드 작업이** **정의**로 설정 되었는지 확인 합니다. Xib에 대 한 기본 빌드 작업입니다.
 
 빌드 작업을 확인 하려면 xib 파일을 마우스 오른쪽 단추로 클릭 하 고 **빌드 작업**을 선택 합니다.
-
 
 ## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: 인코딩 437에 사용할 수 있는 데이터가 없습니다.
 

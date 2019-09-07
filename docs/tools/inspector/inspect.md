@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 2ce4b0366e85580b6d9d816bd91f9ced93997b63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2ccf6966e85eddaa10b5651e1b0b48dec9203b28
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291482"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772211"
 ---
 # <a name="inspecting-live-applications"></a>라이브 애플리케이션 검사
 
@@ -52,4 +52,3 @@ del.Database.AddCustomer (...)
 - Mac에서는 속성 그리드를 편집할 수 없으며 Windows에서는 몇 가지 데이터 형식으로 제한 됩니다. 더 강력한 편집을 위해 REPL을 사용 합니다.
 - 검사기 추가/확장이 IDE에서 설치 되 고 사용 하도록 설정 되어 있으면 디버그 모드에서 시작 될 때마다 앱에 코드를 삽입 합니다. 앱에서 이상한 동작이 발생 하는 경우 검사기 추가/확장을 사용 하지 않도록 설정 하거나 제거 하 고, IDE를 다시 시작 하 고, rechecking를 시도 하세요. [버그](~/tools/inspector/install.md#reporting-bugs) 를 알려 주세요.
 - UI 요소를 검사 하 여 해당 요소를 변경 하는 경우 버그를 나타낼 수 [있으므로 알려주세요.](~/tools/inspector/install.md#reporting-bugs)
-

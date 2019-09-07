@@ -6,12 +6,12 @@ ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: 093e2ad9cf18abecc4eb1b63690c016e8ed21a0c
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b94bae8fb1b7c990c5b2478a0da143960a0bcc55
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227783"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765969"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Microsoft Azure Mobile Apps
 
@@ -31,7 +31,6 @@ Get started with authentication http://go.microsoft.com/fwlink/p/?LinkId=331328
 Get started with Notification Hubs http://go.microsoft.com/fwlink/p/?LinkId=331329
 Validate and modify data  http://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
-
 
 이러한 링크는 [Azure Mobile Apps](https://docs.microsoft.com/azure/app-service-mobile/) 웹 사이트에서 사용할 수 있는 Xamarin 설명서를 위한 것입니다.
 [Azure 모바일 클라이언트](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)를 다운로드 하 여 Xamarin 앱에 azure 기능을 추가 합니다.
@@ -74,13 +73,11 @@ Azure Mobile Services을 사용 하 여 로그인 화면을 구성 하 고 코�
 - [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
 - [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
-
 ## <a name="authorize-users-in-scripts"></a>스크립트에서 사용자 권한 부여
 
 Javascript 백 엔드에 대 한 일부 샘플 코드
 
 - [Todo.js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
-
 
 ## <a name="get-started-with-push"></a>푸시 시작
 
@@ -89,15 +86,12 @@ Apple 및 Google websites에서 푸시 알림을 구성 하는 방법에 대 한
 - [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
 - [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
 
-
 ## <a name="get-started-with-notification-hubs"></a>Notification Hubs 시작
 
 Apple 및 Google websites에서 푸시 알림을 구성 하 고, Azure 알림 허브를 구성한 다음, 장치에 푸시 알림을 생성 하는 방법에 대 한 지침을 완료 합니다.
 
 - [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
 - [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
-
-
 
 ## <a name="related-links"></a>관련 링크
 

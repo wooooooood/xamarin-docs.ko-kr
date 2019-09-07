@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 531d0b2b6141cc0e1f4014f1d3422af3c6f8643a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 136efbd936bc39563c419a87ed48f6fc5436efa9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291973"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768540"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Xamarin.ios에서 NSObject의 일반 서브 클래스
 
@@ -220,4 +220,3 @@ class Generic<T> : NSObject where T : NSObject
 ## <a name="performance"></a>성능
 
 정적 등록 기관은 일반적으로 빌드 시 제네릭 형식의 내보낸 멤버를 확인할 수 없습니다 .이 멤버는 런타임에 조회 되어야 합니다. 즉,이 메서드를 목표 C에서 호출 하는 것은 제네릭이 아닌 클래스의 멤버를 호출 하는 것 보다 약간 느립니다.
-

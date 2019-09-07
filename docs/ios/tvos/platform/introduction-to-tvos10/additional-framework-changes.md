@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 88039da5faf911386232d2b189b27a2921f8144c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 99ee654b260a3a89b58578d352dd066a41753295
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289570"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769147"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경 내용
 
@@ -194,8 +194,6 @@ TvOS 10에서 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 - 클래스의 메서드는 이제 비동기 방식으로 호출 되어 open이 완료 된 후 호출 되는 완료 처리기를 지원 합니다. `OpenURL` `UIApplication`
 - 새 `UICloudSharingController` 및`UICloudSharingControllerDelegate` 클래스를 사용 하 여 cloudkit 공유를 시작 하 고 해당 속성을 수정 합니다.
 - 프리페치된 셀을 활용 하 여 새 `UICollectionViews` `UICollectionViewDataSourcePrefetching` 대리자로의 스크롤 환경을 향상 시킵니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,18 +1,18 @@
 ---
 title: 요약 20 장입니다. 비동기 및 파일 I/O
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 20 장입니다. 비동기 및 파일 I/O
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 20 장입니다. 비동기 및 파일 I/O'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 283273e6ee28cc5cd1a61169f38bfcd1dd1726d8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650460"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771047"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>요약 20 장입니다. 비동기 및 파일 I/O
 
@@ -166,8 +166,6 @@ Windows 런타임에서 실행 되는 프로그램의 클래스를 사용 합니
 ## <a name="back-to-the-web"></a>웹 돌아가기
 
 합니다 [ `WebRequest` ](xref:System.Net.WebRequest) APM을 비동기 프로그래밍 모델을 호출 하는 해당 비동기 프로토콜을 사용 하 여 몇 가지 샘플에 사용 되는 클래스입니다. 이러한 클래스 중 하나를 사용 하 여 최신 탭 프로토콜을 변환할 수 있습니다는 `FromAsync` 의 메서드를 [ `TaskFactory` ](xref:System.Threading.Tasks.TaskFactory`1) 클래스입니다. 합니다 [ **ApmToTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap) 샘플에서는이 방법을 보여 줍니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

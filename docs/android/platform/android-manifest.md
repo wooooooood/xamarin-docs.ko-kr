@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 1aaacae8cebed2396661a28c189af44c25238e7b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: f1cc2f4685354687390866c0922a802591c7c054
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887837"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757701"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
 **Androidmanifest** 은 android 플랫폼에서 응용 프로그램의 기능 및 요구 사항을 설명 하는 데 사용할 수 있는 강력한 파일입니다. 그러나이 작업을 수행 하는 것은 쉽지 않습니다. Xamarin.ios를 사용 하면 사용자 지정 특성을 클래스에 추가 하 여 사용자가 매니페스트를 자동으로 생성 하는 데 사용할 수 있으므로 이러한 문제를 최소화할 수 있습니다. Microsoft의 목표는 사용자의 99%가 수동으로 **Androidmanifest .xml**을 수정할 필요가 없다는 것입니다. 
 
 **Androidmanifest** 은 빌드 프로세스의 일부로 생성 되며 **Properties/androidmanifest .xml** 내에 있는 xml은 사용자 지정 특성에서 생성 된 xml과 병합 됩니다. 결과 병합 된 **Androidmanifest** 은 **obj** 하위 디렉터리에 상주 합니다. 예를 들어, 디버그 빌드에 대 한 **obj/debug/android/AndroidManifest .xml** 에 상주 합니다. 병합 프로세스는 간단 합니다. 코드 내에서 사용자 지정 특성을 사용 하 여 XML 요소를 생성 하 고 이러한 요소를 **Androidmanifest**에 *삽입* 합니다. 
-
-
 
 ## <a name="the-basics"></a>기본 사항
 
@@ -55,8 +53,6 @@ namespace Demo
 
 특성 `[Activity]` 은 형식에 `abstract` 영향을 주지 않습니다. `abstract` 형식은 무시 됩니다.
 
-
-
 ### <a name="activity-name"></a>작업 이름
 
 Xamarin.ios 5.1부터 작업의 형식 이름은 내보낼 형식의 어셈블리 정규화 된 이름에 대 한 MD5SUM을 기반으로 합니다. 이렇게 하면 서로 다른 두 어셈블리에서 동일한 정규화 된 이름을 제공할 수 있으며 패키징 오류가 발생 하지 않습니다. (Xamarin Android 5.1 이전에는 활동의 기본 형식 이름이 lowercased 네임 스페이스 및 클래스 이름에서 생성 되었습니다.) 
@@ -78,7 +74,6 @@ public class MyActivity : Activity
 
 *참고*: 이러한 이름을 바꾸면 런타임에 `Name` 형식 조회가 느려질 수 있으므로 이전 버전과의 호환성을 위해서만 속성을 사용 해야 합니다. Lowercased 네임 스페이스와 클래스 이름을 기반으로 하는 활동의 기본 형식 이름을 필요로 하는 레거시 코드가 있는 경우 호환성 유지 관리에 대 한 팁은 [Android 호출 가능 래퍼 이름 지정](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 을 참조 하세요. 
 
-
 ### <a name="activity-title-bar"></a>활동 제목 표시줄
 
 기본적으로 Android는 실행 될 때 응용 프로그램에 제목 표시줄을 제공 합니다. 이에 사용 되는 값 [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label)은입니다. 대부분의 경우이 값은 클래스 이름과 다릅니다. 제목 표시줄에 앱의 레이블을 지정 하려면 [`Label`](xref:Android.App.ActivityAttribute.Label) 속성을 사용 합니다.
@@ -97,7 +92,6 @@ public class MyActivity : Activity
 <activity android:label="Awesome Demo App" 
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
-
 
 ### <a name="launchable-from-application-chooser"></a>응용 프로그램 선택에서 시작 가능한
 
@@ -122,8 +116,6 @@ public class MyActivity : Activity
 </activity>
 ```
 
-
-
 ### <a name="activity-icon"></a>활동 아이콘
 
 기본적으로 작업에는 시스템에서 제공 하는 기본 시작 관리자 아이콘이 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 **리소스/그릴**수 있는 **.png에 .png** 를 추가 하 고 빌드 작업을 **androidresource**로 설정한 다음 [`Icon`](xref:Android.App.ActivityAttribute.Icon) 속성을 사용 하 여 사용할 아이콘을 지정 합니다. 예: 
@@ -147,7 +139,6 @@ public class MyActivity : Activity
 </activity>
 ```
 
-
 ### <a name="permissions"></a>사용 권한
 
 Android 매니페스트에 권한 [추가](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest)에 설명 된 대로 android 매니페스트에 권한을 추가 하는 경우 이러한 사용 권한은 **Properties/AndroidManifest .xml**에 기록 됩니다. 예를 들어 `INTERNET` 사용 권한을 설정 하면 다음 요소가 **Properties/androidmanifest**에 추가 됩니다. 
@@ -167,18 +158,14 @@ Android 매니페스트에 권한 [추가](https://github.com/xamarin/recipes/tr
 
 매니페스트의 릴리스 빌드 버전 ( **obj/Debug/android/AndroidManifest**)에서 이러한 사용 권한은 자동으로 구성 *되지 않습니다* . 릴리스 빌드로 전환 하면 앱이 디버그 빌드에서 사용할 수 있는 권한을 상실 하 게 되 면 앱에 대 한 **필요한 권한** 설정에서이 사용 권한을 명시적으로 설정 했는지 확인 합니다 ( **빌드 > Android 참조 Mac용 Visual Studio의 응용 프로그램** **속성 > Android Manifest** In Visual Studio)를 참조 하세요. 
 
-
-
-
 ## <a name="advanced-features"></a>고급 기능
-
 
 ### <a name="intent-actions-and-features"></a>의도 작업 및 기능
 
 Android 매니페스트는 활동의 기능을 설명 하는 방법을 제공 합니다. 이것은 [의도](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 를 통해 수행 되며[`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
 사용자 지정 특성입니다. 을 사용 하 여 작업에 적절 한 작업을 지정할 수 있습니다.[`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
 생성자 및에 적합 한 범주[`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-속성의 값에 따라 달라집니다. 활동을 생성자에 제공 하는 것과 같은 활동을 하나 이상 제공 해야 합니다. `[IntentFilter]`는 여러 번 제공 될 수 있으며, 각를 사용 하면 `<intent-filter/>` `<activity/>`내에서 별도의 요소가 생성 됩니다. 예:
+속성의 값에 따라 달라집니다. 활동을 생성자에 제공 하는 것과 같은 활동을 하나 이상 제공 해야 합니다. `[IntentFilter]`는 여러 번 제공 될 수 있으며, 각를 사용 하면 `<intent-filter/>` `<activity/>`내에서 별도의 요소가 생성 됩니다. 예를 들어:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -205,7 +192,6 @@ public class MyActivity : Activity
   </intent-filter>
 </activity>
 ```
-
 
 ### <a name="application-element"></a>Application 요소
 
@@ -234,8 +220,6 @@ public class MyActivity : Activity
 
 `<application>` 요소에서 구성할 수 있는 응용 프로그램 차원의 많은 특성이 있습니다. 이러한 설정에 대 한 자세한 내용은 [applicationattribute](xref:Android.App.ApplicationAttribute)의 [Public 속성](xref:Android.App.ApplicationAttribute) 섹션을 참조 하세요. 
 
-
-
 ## <a name="list-of-custom-attributes"></a>사용자 지정 특성 목록
 
 - [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : [/Manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML 조각을 생성 합니다. 
@@ -252,4 +236,3 @@ public class MyActivity : Activity
 - [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : [/Manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML 조각을 생성 합니다. 
 - [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : [/Manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML 조각을 생성 합니다. 
 - [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : [/Manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML 조각을 생성 합니다.
-

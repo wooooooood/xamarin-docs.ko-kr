@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0067a9e576e695a308e4326955b540be2ff46f61
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7b073e0233fb9c5511593ed80313f402c888c811
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657223"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771007"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스 및 Xamarin.ios를 사용 하 여 사용자 인증
 
@@ -267,7 +267,6 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Forms 응용 프로그램에서 해당 문서 데이터베이스 문서에만 액세스할 수 있도록 분할 된 컬렉션을 사용 하 여 액세스 제어를 결합 하는 방법을 설명 합니다. 사용자의 id를 파티션 키로 지정 하면 분할 된 컬렉션을 해당 사용자에 대 한 문서에만 저장할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

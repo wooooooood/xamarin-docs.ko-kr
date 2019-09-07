@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 614a0e3952db42d2587930b66bf71ce4c703d035
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 7fa116f716c3c30e8d41dd19cbc09477a7709e49
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524069"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761545"
 ---
 # <a name="jelly-bean-features"></a>Jelly Bean 기능
 
 _이 문서에서는 Android 4.1에 도입 된 개발자를 위한 새로운 기능에 대 한 개략적인 개요를 제공 합니다. 이러한 기능으로는 향상 된 알림, Android 무선 업데이트를 사용 하 여 대량 파일 공유, 멀티미디어 업데이트, 피어 투 피어 네트워크 검색, 애니메이션, 새 권한 등이 있습니다._
-
-
 
 ## <a name="overview"></a>개요
 
@@ -30,19 +28,13 @@ Bonjour, UPnP 또는 멀티 캐스트 DNS 기반 서비스를 사용 하는 네�
 
 마지막으로 Android 4.1에 몇 가지 새로운 권한이 추가 되었습니다.
 
-
-
 ## <a name="requirements"></a>요구 사항
 
 Jelly Bean을 사용 하 여 Xamarin Android 응용 프로그램을 개발 하려면 다음 스크린샷에 표시 된 것 처럼 Xamarin. Android 4.2.6 이상 및 Android 4.1 (API 수준 16)을 Android SDK Manager를 통해 설치 해야 합니다.
 
 [![Android SDK Manager에서 Android 4.1 선택](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
-
-
 ## <a name="whats-new"></a>새로운 기능
-
-
 
 ### <a name="animations"></a>애니메이션
 
@@ -51,7 +43,6 @@ Jelly Bean을 사용 하 여 Xamarin Android 응용 프로그램을 개발 하�
 - `MakeScaleUpAnimation`– 작업 창을 화면에서 시작 위치와 크기에서 확장 하는 애니메이션을 만듭니다.
 - `MakeThumbnailScaleUpAnimation`– 화면에서 지정 된 위치에서 축소판 이미지를 확대 하는 애니메이션을 만듭니다.
 - `MakeCustomAnimation`– 응용 프로그램의 리소스에서 애니메이션을 만듭니다. 활동을 열 때와 활동이 중지 될 때에 대해 다른 애니메이션이 하나씩 있습니다.
-
 
 새 `TimeAnimator` 클래스는 애니메이션에서 프레임이 `TimeAnimator.ITimeListener` 변경 될 때마다 응용 프로그램에 알릴 수 있는 인터페이스를 제공 합니다. 예를 들어 다음 구현을 `TimeAnimator.ITimeListener`고려 하십시오.
 
@@ -75,8 +66,6 @@ animator.Start();
 
 인스턴스가 실행 되는 동안는를 호출 `ITimeAnimator.ITimeListener`하며,이는 애니메이터가 실행 된 시간 및 마지막으로 메서드가 호출 된 이후 경과한 시간을 기록 합니다. `TimeAnimator`
 
-
-
 ### <a name="application-stack-navigation"></a>응용 프로그램 스택 탐색
 
 Android 4.1는 Android 3.0에 도입 된 응용 프로그램 스택 탐색을 개선 합니다. Android는 `ParentName` `ParentName` 의 속성을 지정 하 여 사용자가 작업 모음에서 [위로 단추](https://developer.android.com/design/patterns/navigation.html#up-vs-back) 를 누를 때 적절 한 부모 작업을 열 수 있습니다.-android는 속성에 지정 된 작업을 인스턴스화합니다. `ActivityAttribute` 이렇게 하면 응용 프로그램에서 지정 된 작업을 수행 하는 작업 계층 구조를 유지할 수 있습니다.
@@ -91,9 +80,6 @@ Android 4.1는 Android 3.0에 도입 된 응용 프로그램 스택 탐색을 �
 - `ShouldUpRecreateTask`–이 메서드는 부모 작업까지 탐색 하기 위해 가상 뒤로 스택을 만들어야 하는지 여부를 쿼리 하는 데 사용 됩니다. 가상 `true` 스택을 만들어야 하는 경우를 반환 합니다. 
 - `FinishAffinity`–이 메서드를 호출 하면 현재 작업과 작업 선호도가 같은 현재 작업에서 해당 작업 아래에 있는 모든 작업이 완료 됩니다.
 - `OnCreateNavigateUpTaskStack`–이 메서드는 가상 스택을 만드는 방법을 완전히 제어 해야 하는 경우에 재정의 됩니다.
-
-
-
 
 ### <a name="camera"></a>카메라
 
@@ -125,7 +111,6 @@ public class AutoFocusCallbackActivity : Activity, Camera.IAutoFocusCallback
 - `MediaActionSoundType.StartVideoRecording`–이 소리는 비디오 녹음의 시작을 나타내는 데 사용 됩니다.
 - `MediaActionSoundType.StopVideoRecording`–이 소리는 비디오 녹음의 끝을 나타내기 위해 재생 됩니다.
 
-
 클래스를 `MediaActionSound` 사용 하는 방법에 대 한 예제는 다음 코드 조각에서 확인할 수 있습니다.
 
 ```csharp
@@ -143,17 +128,11 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
-
-
 ### <a name="connectivity"></a>연결
-
-
 
 #### <a name="android-beam"></a>Android Beam
 
 Android 무선은 두 Android 장치가 서로 통신할 수 있도록 하는 NFC 기반 기술입니다. Android 4.1은 많은 파일의 전송에 대 한 향상 된 지원을 제공 합니다. 새 메서드 `NfcAdapter.SetBeamPushUris()` 를 사용 하는 경우 Android는 빠른 전송 속도를 얻기 위해 대체 전송 메커니즘 (예: Bluetooth) 간을 전환 합니다.
-
-
 
 #### <a name="network-services-discovery"></a>Network Services 검색
 
@@ -164,13 +143,9 @@ Android 4.1에는 멀티 캐스트 DNS 기반 서비스 검색용 새 API가 포
 
 네트워크에서 서비스를 검색 하 고에 `Nsd.DiscoveryListener` `NsdManager.discoverServices()`전달 되는 구현입니다.
 
-
-
 #### <a name="network-usage"></a>네트워크 사용량
 
 새 방법으로 `ConnectivityManager.IsActiveNetworkMetered` 장치에서 요금제 네트워크에 연결 되어 있는지 확인할 수 있습니다. 이 메서드를 사용 하 여 데이터 작업에 비용이 많이 들 수 있음을 사용자에 게 정확 하 게 알려 데이터 사용을 쉽게 관리할 수 있습니다.
-
-
 
 #### <a name="wifi-direct-service-discovery"></a>WiFi Direct 서비스 검색
 
@@ -183,14 +158,9 @@ Jelly Bean에서는 `WifiP2pManager` *Bonjour* 또는 *Upnp*를 사용 하 여 �
 - `SetDnsSdResponseListeners()`–이 메서드는 Bonjour의 검색 요청에 대 한 응답을 받을 때 호출 되는 콜백을 등록 하는 데 사용 됩니다.
 - `SetUpnpServiceResponseListener()`–이 메서드는 Upnp를 검색 요청에 대 한 응답을 받을 때 호출 되는 콜백을 등록 하는 데 사용 됩니다.
 
-
-
-
 ### <a name="content-providers"></a>콘텐츠 공급자
 
 클래스가 새 메서드인를 `AcquireUnstableContentProvider`받았습니다. `ContentResolver` 이 방법을 사용 하면 응용 프로그램에서 "불안정 한" 콘텐츠 공급자를 가져올 수 있습니다. 일반적으로 응용 프로그램에서 콘텐츠 공급자를 획득 하 고 해당 콘텐츠 공급자가 충돌 하면 응용 프로그램이 됩니다. 이 메서드를 호출 하면 콘텐츠 공급자가 충돌 하는 경우 응용 프로그램이 작동 하지 않습니다. 대신 콘텐츠 공급자에 대 한 호출에서 콘텐츠 공급자가 사라졌습니다 .를 응용 프로그램에 알리기 위해가 throw 됩니다.`Android.OS.DeadObjectionException` "불안정 한" 콘텐츠 공급자는 다른 응용 프로그램의 콘텐츠 공급자와 상호 작용할 때 유용 합니다. 다른 응용 프로그램의 버그가 있는 코드가 다른 응용 프로그램에 영향을 줄 가능성이 낮습니다.
-
-
 
 ### <a name="copy-and-paste-with-intents"></a>의도를 사용 하 여 복사 및 붙여넣기
 
@@ -200,13 +170,9 @@ Jelly Bean에서는 `WifiP2pManager` *Bonjour* 또는 *Upnp*를 사용 하 여 �
 - **의도** -모든 `Intent` 개체입니다.
 - **Uri** – HTTP 책갈피 또는 콘텐츠 공급자에 대 한 uri와 같은 모든 uri가 될 수 있습니다.
 
-
-
-
 ### <a name="isolated-services"></a>Isolated 서비스
 
 Isolated 서비스는 자체의 특별 한 프로세스에서 실행 되 고 자체의 권한은 없는 서비스입니다. 서비스와의 통신은 서비스를 시작 하 고 서비스 API를 통해 해당 서비스에 바인딩하는 경우에만 사용할 수 있습니다. 서비스 클래스를 원으로 `IsolatedProcess="true"` `ServiceAttribute` 하는의 속성을 설정 하 여 서비스를 격리 된 것으로 선언할 수 있습니다.
-
 
 ### <a name="media"></a>미디어
 
@@ -218,7 +184,6 @@ Isolated 서비스는 자체의 특별 한 프로세스에서 실행 되 고 자
 - `Android.Media.Audiofx.AutomaticGainControl`–이 클래스는 출력 신호가 일정 하도록 입력 신호를 늘리거나 줄여 캡처된 신호를 정규화 하는 데 사용 됩니다.
 - `Android.Media.Audiofx.NoiseSuppressor`–이 클래스는 캡처된 신호에서 배경 노이즈를 제거 합니다.
 
-
 모든 장치가 이러한 효과를 지 원하는 것은 아닙니다. 응용 프로그램 `AudioEffect.IsAvailable` 을 실행 하는 장치에서 문제의 오디오 효과가 지원 되는지 확인 하기 위해 응용 프로그램에서 메서드를 호출 해야 합니다.
 
 이제 `MediaPlayer` 클래스는 `SetNextMediaPlayer()` 메서드를 사용 하 여 gapless 재생을 지원 합니다. 이 새 메서드는 현재 미디어 플레이어가 재생을 완료할 때 시작할 다음 MediaPlayer를 지정 합니다.
@@ -228,25 +193,19 @@ Isolated 서비스는 자체의 특별 한 프로세스에서 실행 되 고 자
 - `MediaRouter`–이 클래스를 통해 응용 프로그램은 장치에서 외부 스피커나 기타 장치로의 미디어 채널 라우팅을 제어할 수 있습니다.
 - `MediaRouterActionProvider`및 `MediaRouteButton` – 이러한 클래스를 통해 미디어를 선택 하 고 재생 하는 일관 된 UI를 제공할 수 있습니다.
 
-
-
-
 ### <a name="notifications"></a>알림
 
 Android 4.1을 사용 하면 응용 프로그램에서 보다 유연 하 고 알림을 표시 하 여 제어할 수 있습니다. 이제 응용 프로그램은 더 크고 더 나은 알림을 사용자에 게 표시할 수 있습니다. 새 메서드로, `NotificationBuilder.SetStyle()` 알림에 대해 새로운 세 가지 새 스타일 중 하나를 설정할 수 있습니다.
 
 - `Notification.BigPictureStyle`– 이미지를 포함 하는 알림을 생성 하는 도우미 클래스입니다. 다음 이미지는 큰 이미지를 사용 하는 알림의 예를 보여 줍니다.
 
-
  [![이상 및 스타일 알림의 예제 스크린샷](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 - `Notification.BigTextStyle`– 전자 메일과 같이 여러 줄의 텍스트를 포함 하는 알림을 생성 하는 도우미 클래스입니다. 다음 스크린샷에서는이 새 알림 스타일의 예를 볼 수 있습니다.
 
-
  [![이상 텍스트 알림 예제 스크린샷](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 - `Notification.InboxStyle`–이 스크린샷에 표시 된 것 처럼 전자 메일 메시지의 조각과 같은 문자열 목록을 포함 하는 알림을 생성 하는 도우미 클래스입니다.
-
 
  [![InboxStyle 알림의 예제 스크린샷](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
@@ -256,8 +215,6 @@ Android 4.1을 사용 하면 응용 프로그램에서 보다 유연 하 고 알
  [![알림 메시지 아래에 표시 되는 작업 단추의 예 스크린샷](jelly-bean-images/image5.png)](jelly-bean-images/image5.png#lightbox)
 
 클래스 `Notification` 는 개발자가 알림의 5 가지 우선 순위 수준 중 하나를 지정할 수 있도록 하는 새 상수를 받았습니다. 이러한 속성은 속성을 `Priority` 사용 하 여 알림에 설정할 수 있습니다.
-
-
 
 ### <a name="permissions"></a>사용 권한
 
@@ -269,17 +226,13 @@ Android 4.1을 사용 하면 응용 프로그램에서 보다 유연 하 고 알
 - `WRITE_CALL_LOG`-응용 프로그램이 휴대폰의 통화 로그에 쓸 수 있도록 허용 합니다.
 - `WRITE_USER_DICTIONARY`-응용 프로그램이 사용자의 word 사전에 쓸 수 있도록 허용 합니다.
 
-
 중요 한 변경 `READ_EXTERNAL_STORAGE` 사항-현재이 권한은 Android에서 자동으로 부여 됩니다. 이후 버전의 Android에서는 사용 권한을 부여 하기 전에 응용 프로그램에서이 권한을 요청 해야 합니다.
-
-
 
 ## <a name="summary"></a>요약
 
 이 문서에서는 Android 4.1 (API 수준 16)에서 사용할 수 있는 몇 가지 새로운 API를 소개 했습니다. 애니메이션에 대 한 일부 변경 내용을 강조 표시 하 고 작업 시작에 애니메이션을 적용 하 고, Bonjour 또는 UPnP와 같은 프로토콜을 사용 하 여 다른 장치의 네트워크 검색을 위한 새 API를 도입 했습니다. 의도를 통해 데이터를 잘라내거나 붙여 넣는 기능, 격리 된 서비스 또는 "불안정 한" 콘텐츠 공급자를 사용 하는 기능 등 API에 대 한 기타 변경 내용도 강조 되었습니다.
 
 이 문서에서는 알림에 대 한 업데이트를 소개 하 고 Android 4.1에 도입 된 새로운 사용 권한 중 일부에 대해 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

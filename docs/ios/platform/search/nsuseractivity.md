@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 314b341b7cfb40c62a5d6469ca22d2889f5a8057
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9714d78419754413ae5f1d0e5015a418fa8ab884
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291763"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769553"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.ios에서 NSUserActivity를 사용 하 여 검색
 
@@ -165,8 +165,6 @@ activity.BecomeCurrent();
 - **핸드** 오프-앱 검색은 전달 (`NSUserActivity`)과 동일한 메커니즘을 사용 하 여 콘텐츠, 탐색 및/또는 기능을 노출 하므로 앱 사용자가 한 장치에서 작업을 시작 하 고 다른 장치에서 계속 작업을 수행할 수 있습니다.
 - **Siri 제안** -siri 제안이 일반적으로 수행 하는 표준 제안과 함께 앱에서 근무 중인 자동으로 제안 될 수 있습니다.
 - **Siri 스마트 미리 알림** -사용자가 앱의 활동에 대해 알리도록 siri를 요청할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

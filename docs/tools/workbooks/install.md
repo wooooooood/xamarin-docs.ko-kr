@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2018
-ms.openlocfilehash: 5292a052d4f93af9b21cc7cbc51891c99d6f9403
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4638d599d72ea2a6375aa2afff5974ef8c09308d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285244"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772130"
 ---
 # <a name="workbooks-installation-and-requirements"></a>통합 문서 설치 및 요구 사항
 
@@ -50,7 +50,6 @@ ms.locfileid: "70285244"
 |WPF|Windows 에서만 지원 됨|
 |콘솔 (.NET Framework)|Mac 및 Windows에서 지원 됨|
 |콘솔 (.NET Core)|Mac 및 Windows에서 지원 됨|
-
 
 ## <a name="reporting-bugs"></a>버그 보고
 

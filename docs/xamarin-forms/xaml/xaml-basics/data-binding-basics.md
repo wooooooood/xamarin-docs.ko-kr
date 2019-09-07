@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 3fdc251d3ed24c96d7d3fa9620e483ad47a8491e
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 7b34e7658ad38f80cffa22d99eea42901a905a38
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227936"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767625"
 ---
 # <a name="part-4-data-binding-basics"></a>4부. 데이터 바인딩 기본 사항
 
@@ -405,8 +405,6 @@ namespace XamlSamples
 ## <a name="summary"></a>요약
 
 데이터 바인딩은 페이지 내의 두 개체 간, 또는 시각적 개체와 기본 데이터 사이의 속성을 연결하는 강력한 메커니즘을 제공합니다. 그러나 응응 프로그램이 데이터 원본(sources)으로 작업하기 시작하면, 인기 있는 응용 프로그램 아키텍처 패턴이 유용한 패러다임으로 부상하기 시작합니다. 이에 대해서는 [5부. 데이터 바인딩부터 MVVM까지](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)에서 다룹니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 9ca931058f15c2ff6f1b46810196d9ea2bb964e0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: deac7c5eee4ac0276c9d1a67cbfede8fc41378d6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291390"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769058"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
 
@@ -42,7 +42,7 @@ Apple은 검색을 위한 돋보기와 같이 세그먼트 아이콘에 대해 �
 
 Apple은 세그먼트 텍스트 작업에 대해 다음과 같은 제안을 합니다.
 
-- **의미 있는 단기 명사를 사용** 합니다. 세그먼트 제목은 지정 된 세그먼트를 선택할 때 사용자가 필요로 하는 콘텐츠 형식을 명확 하 게 명시 해야 합니다. 예를 들어: 음악 또는 동영상.
+- **의미 있는 단기 명사를 사용** 합니다. 세그먼트 제목은 지정 된 세그먼트를 선택할 때 사용자가 필요로 하는 콘텐츠 형식을 명확 하 게 명시 해야 합니다. 예: 음악 또는 동영상.
 - **제목-대/소문자 표기 사용** -세그먼트 제목의 모든 단어는 4 자 미만의 접속사 및 전치사 문서를 제외 하 고 대문자로 표시 되어야 합니다.
 - **짧은 중심의 제목을 사용** 합니다. 즉, 세그먼트를 선택할 때 사용할 콘텐츠 형식에 대 한 제목을 짧게 유지 합니다.
 
@@ -232,8 +232,6 @@ SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlStat
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내부에서 분할 된 컨트롤을 디자인 하 고 작업 하는 방법에 대해 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

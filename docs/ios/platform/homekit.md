@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f98cd3110719827d8cfeceef4dc9e73776c79f3f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a004ea539bab264f6a1418826be451ffb7d43d47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292722"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753042"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.ios의 HomeKit
 
@@ -267,7 +267,6 @@ Home이 성공적으로 만들어진 경우 `UpdatePrimaryHome` 메서드를 호
 > [!IMPORTANT]
 > 위의 샘플 코드에 사용 되는 메서드는HomeKitIntro응용프로그램의도우미클래스로,iOS경고를보다쉽게사용할수있도록합니다.`AlertView.PresentOKAlert`
 
-
 ## <a name="finding-new-accessories"></a>새 액세서리 찾기
 
 Home Manager에서 기본 홈을 정의 하거나 로드 한 후 xamarin.ios 앱은를 `HMAccessoryBrowser` 호출 하 여 새 홈 automation 액세서리를 찾고 홈에 추가할 수 있습니다.
@@ -318,7 +317,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 이 예에서는 작업을 간단 하 게 유지 하 고 홈의 액세서리로 직접 작업 하는 것이 좋습니다.
 
-개체 `HMHome` 는 해당 `Accessories` 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다. 예를 들어:
+개체 `HMHome` 는 해당 `Accessories` 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다. 예:
 
 [![](homekit-images/accessory04.png "예제 액세서리")](homekit-images/accessory04.png#lightbox)
 
@@ -667,7 +666,7 @@ HomeKit 액세서리 시뮬레이터에서 광원의 상태를 변경 해야 합
 이 문서에서는 Xamarin.ios 앱에서 HomeKit 액세서리를 사용 하는 데 필요한 기본 기능에 대해 설명 했습니다. 그러나이 소개에서 다루지 않는 HomeKit의 몇 가지 고급 기능이 있습니다.
 
 - HomeKit 사용 액세서리는 필요에 따라 최종 사용자 **가 대화방으로** 구성할 수 있습니다. 이를 통해 HomeKit는 사용자가 쉽게 이해 하 고 사용할 수 있는 방식으로 액세서리를 제공할 수 있습니다. 대화방을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmroom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) 설명서를 참조 하세요.
-- **영역** -대화방은 최종 사용자가 선택적으로 영역으로 구성할 수 있습니다. 영역은 사용자가 단일 단위로 처리할 수 있는 대화방 컬렉션을 참조 합니다. 예: Upstairs, Downstairs 또는 지하실입니다. 이를 통해 HomeKit는 최종 사용자에 게 적합 한 방식으로 액세서리를 제공 하 고 작업을 수행할 수 있습니다. 영역을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmzone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서를 참조 하세요.
+- **영역** -대화방은 최종 사용자가 선택적으로 영역으로 구성할 수 있습니다. 영역은 사용자가 단일 단위로 처리할 수 있는 대화방 컬렉션을 참조 합니다. 예를 들어: Upstairs, Downstairs 또는 지하실입니다. 이를 통해 HomeKit는 최종 사용자에 게 적합 한 방식으로 액세서리를 제공 하 고 작업을 수행할 수 있습니다. 영역을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmzone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) 설명서를 참조 하세요.
 - 작업 **및 동작 집합** -작업은 액세서리 서비스 특성을 수정 하 고 집합으로 그룹화 할 수 있습니다. 작업은 프로그램 그룹을 제어 하 고 작업을 조정 하는 스크립트 역할을 합니다. 예를 들어 "TV 시청" 스크립트는 블라인드를 닫고 조명을 희미하게 하 고 텔레비전 및 사운드 시스템을 켤 수 있습니다. 작업 및 작업 집합을 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmaction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) 및 [hmactionset](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) 설명서를 참조 하세요.
 - **트리거** -지정 된 조건 집합이 충족 될 때 트리거는 하나 이상의 작업 집합을 활성화할 수 있습니다. 예를 들어, portch 라이트를 켜고 외부 문이 어두운 곳에 있을 때 모든 외부 도어를 잠급니다. 트리거를 만들고 유지 관리 하는 방법에 대 한 자세한 내용은 Apple의 [Hmtrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) 설명서를 참조 하세요.
 
@@ -705,8 +704,6 @@ IOS 9에서 HomeKit의 새로운 기능에 대 한 자세한 내용은 Apple의 
 ## <a name="summary"></a>요약
 
 이 문서에는 Apple의 HomeKit home automation 프레임 워크가 도입 되었습니다. HomeKit 액세서리 시뮬레이터를 사용 하 여 테스트 장치를 설정 및 구성 하는 방법 및 HomeKit를 사용 하 여 홈 automation 장치를 검색 하 고, 통신 하 고, 제어 하는 간단한 Xamarin.ios 앱을 만드는 방법을 살펴보았습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

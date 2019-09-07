@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 6a5c06d64a06d8b1a7bcbf32e99905494cd06180
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: b750dd4eebb4e181e3a1d3a33c6505bb58b3848b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225487"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757076"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
-
 
 ## <a name="getting-diagnostic-information"></a>진단 정보 가져오기
 
@@ -25,7 +24,6 @@ Xamarin.ios에는 다양 한 버그를 추적할 때 살펴볼 몇 가지 위치
 1. 진단 MSBuild 출력입니다.
 2. 장치 배포 로그.
 3. Android 디버그 로그 출력입니다.
-
 
 <a name="Diagnostic_MSBuild_Output" />
 
@@ -42,7 +40,6 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 5. 패키지를 지우고 다시 빌드합니다.
 6. 진단 출력이 출력 패널에 표시 됩니다.
 
-
 Mac용 Visual Studio/OS X 내에서 진단 MSBuild 출력을 사용 하려면 다음을 수행 합니다.
 
 1. **Mac용 Visual Studio > 기본 설정** ...을 클릭 합니다.
@@ -53,9 +50,6 @@ Mac용 Visual Studio/OS X 내에서 진단 MSBuild 출력을 사용 하려면 �
 6. 패키지를 지우고 다시 빌드합니다.
 7. 빌드 출력 단추를 클릭 하 여 오류 패드 (**보기 > 패드 > 오류** ) 내에 진단 출력이 표시 됩니다.
 
-
-
-
 ## <a name="device-deployment-logs"></a>장치 배포 로그
 
 Visual Studio 내에서 장치 배포 로깅을 사용 하도록 설정 하려면
@@ -65,14 +59,10 @@ Visual Studio 내에서 장치 배포 로깅을 사용 하도록 설정 하려�
 3. 오른쪽 패널에서 [X] **확장 디버그 로깅 (바탕 화면에 monodroid 쓰기)** 확인란을 사용 하도록 설정 합니다.
 4. 로그 메시지는 데스크톱의 monodroid 파일에 기록 됩니다.
 
-
 Mac용 Visual Studio는 항상 장치 배포 로그를 작성 합니다. 찾기는 약간 더 어렵습니다. *AndroidUtils* 로그 파일은 다음과 같이 배포가 발생 하는 매일 + 시간 마다 생성 됩니다. **AndroidTools-2012-10-24_12-35-45.log**.
 
 - Windows에서는 로그 파일이에 `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`기록 됩니다.
 - OS X에서 로그 파일은에 `$HOME/Library/Logs/XamarinStudio-{VERSION}`기록 됩니다.
-
-
-
 
 ## <a name="android-debug-log-output"></a>Android 디버그 로그 출력
 
@@ -84,8 +74,6 @@ adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 ```
 
 시스템 속성은 프로세스를 시작 하는 동안 읽혀집니다. 따라서 응용 프로그램을 시작 하기 전에 설정 하거나 시스템 속성을 변경한 후 응용 프로그램을 다시 시작 해야 합니다.
-
-
 
 ### <a name="xamarinandroid-system-properties"></a>Xamarin.Android 시스템 속성
 
@@ -146,7 +134,6 @@ Xamarin Android는 다음과 같은 상황에서 과거에 발생 했습니다.
 
 Visual Studio 2017 설치에 해당 하는 올바른 System.valuetuple NuGet을 선택 하세요.
 
-
 ## <a name="gc-messages"></a>GC 메시지
 
 Gc 구성 요소 메시지는 gc를 포함 하는 값으로 설정 하 여 볼 수 있습니다.
@@ -177,11 +164,9 @@ D/Mono ( 2073): GC_MAJOR: (user request) pause 2.17ms, total 2.47ms, bridge 28.7
 
  *일반적*으로 값 `num_hash_entries`이 `bridge` 클수록 컬렉션이 소요 되는 시간이 커지고 수집 하는 데 소요 되는 `total` 시간이 더 커집니다.
 
-
-
 ## <a name="global-reference-messages"></a>전역 참조 메시지
 
-GREF (Global Reference loggig) 로깅을 사용 하도록 설정 하려면 *GREF*(예:)를 포함 해야 합니다.
+GREF (Global Reference loggig) 로깅을 사용 하도록 설정 하려면 *GREF*(예:)를 포함 해야 *합니다.*
 
 ```shell
 adb shell setprop debug.mono.log gref
@@ -219,7 +204,6 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 - 전역 참조 소멸: *-g-* 로 시작 하는 줄 이며 전역 참조의 코드 경로 삭제에 대 한 스택 추적을 제공할 수 있습니다. GC가 gref를 삭제 하는 경우 스택 추적이 제공 되지 않습니다.
 - 약한 전역 참조 만들기: *+ w +* 로 시작 하는 줄입니다.
 - 약한 전역 참조 소멸: *-w-* 로 시작 하는 선입니다.
-
 
 모든 메시지에서 *grefc* 값은 xamarin.ios가 만든 전역 참조의 수이 고 *Grefwc* 값은 xamarin.ios가 만든 약한 전역 참조의 수입니다. *핸들* 또는 *obj 핸들* 값은 JNI handle 값이 고, */* ' ' 뒤의 문자는 핸들 값의 형식입니다. 로컬 참조의 경우 */l* , 전역 참조의 경우 */g* , 약한 전역 참조의 경우 */w*
 
@@ -268,13 +252,9 @@ I/monodroid-gref(27679): -w- grefc 1914 gwrefc 296 handle 0xde68f95f/W from take
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount`-Weak 참조 횟수
 
-
-
 ## <a name="android-debug-logs"></a>Android 디버그 로그
 
 [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 는 표시 되는 모든 런타임 오류에 대 한 추가 컨텍스트를 제공할 수 있습니다.
-
-
 
 ## <a name="floating-point-performance-is-terrible"></a>부동 소수점 성능은 매우 형편 없습니다.
 
@@ -290,16 +270,12 @@ Xamarin.ios는 *armeabi-v7a*, *armeabi-v7a-armeabi-v7a*및 *x 86*과 같은 여�
 
 앱에 적절 한 부동 소수점 성능 (예: 게임)이 필요한 경우 *armeabi-Armeabi-v7a* ABI를 사용 하도록 설정 해야 합니다. *Armeabi-v7a-armeabi-v7a* runtime만 지원할 수 있습니다. 즉, *armeabi-v7a* 만 지 원하는 이전 장치에서는 앱을 실행할 수 없습니다.
 
-
-
 ## <a name="could-not-locate-android-sdk"></a>Android SDK를 찾을 수 없습니다.
 
 Google에서 Windows 용 Android SDK에 대해 2 개의 다운로드를 사용할 수 있습니다.
 .Exe 설치 관리자를 선택 하는 경우 설치 된 위치에 Xamarin.ios를 지시 하는 레지스트리 키를 작성 합니다. .Zip 파일을 선택 하 고 압축을 풀면 Xamarin.ios는 SDK를 찾을 위치를 알 수 없습니다. **Xamarin > Android 설정 > 도구 > 옵션**으로 이동 하 여 SDK가 Visual Studio에 있는 경우 xamarin.ios에 지시할 수 있습니다.
 
 [![Xamarin Android 설정의 Android SDK 위치](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
-
-
 
 ## <a name="ide-does-not-display-target-device"></a>IDE에서 대상 장치를 표시 하지 않음
 
@@ -320,11 +296,9 @@ adb start-server
 
 HTC Sync 소프트웨어로 인해 **adb 시작 서버가** 제대로 작동 하지 않을 수 있습니다. **Adb 시작-서버** 명령이 시작 중인 포트를 인쇄 하지 않는 경우 HTC Sync 소프트웨어를 종료 하 고 adb 서버를 다시 시작 해 보세요.
 
-
 ## <a name="the-specified-task-executable-keytool-could-not-be-run"></a>지정한 작업 실행 파일 "keytool"을 (를) 실행할 수 없습니다.
 
 즉, 경로에 Java SDK bin 디렉터리가 있는 디렉터리가 포함 되어 있지 않습니다. [설치](~/android/get-started/installation/index.md) 가이드의 단계를 따르고 있는지 확인 합니다.
-
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid 또는 aresgen가 코드 1로 종료 되었습니다.
 
@@ -342,7 +316,6 @@ emulator -partition-size 512 -avd MonoDroid
 
 [시뮬레이터를 구성할 때 사용한 이름](~/android/get-started/installation/windows.md#device)(예: 올바른 시뮬레이터 이름)을 사용 해야 합니다.
 
-
 ## <a name="install_failed_invalid_apk-when-installing-a-package"></a>패키지\_를\_설치\_하는 동안 잘못 된 설치 실패 apk
 
 Android 패키지 이름은 마침표 (' *.* ')를 포함 *해야* 합니다. 마침표를 포함 하도록 패키지 이름을 편집 합니다.
@@ -357,9 +330,6 @@ Android 패키지 이름은 마침표 (' *.* ')를 포함 *해야* 합니다. �
   - 빌드/Android 응용 프로그램 섹션으로 이동 합니다.
   - 패키지 이름 필드를 '. '를 포함 하도록 변경 합니다.
 
-
-
-
 ## <a name="install_failed_missing_shared_library-when-installing-a-package"></a>패키지를 설치할\_때\_\_누락 된 공유 라이브러리 설치\_
 
 이 컨텍스트의 "공유 라이브러리"는*libfoo.so*(네이티브 공유 라이브러리) 파일이 *아닙니다* . 대신 Google Maps와 같이 대상 장치에 별도로 설치 해야 하는 라이브러리입니다.
@@ -370,8 +340,6 @@ Android 패키지는 `<uses-library/>` 요소에 필요한 공유 라이브러�
 된**androidmanifest .xml** 파일 (예: **obj\\Debug\\android\\androidmanifest .xml**) 을보고`<uses-library/>` 요소. `<uses-library/>`요소는 프로젝트의 **Properties\\androidmanifest .xml** 파일에서 수동으로 추가 하 고, [사용자 지정 특성](xref:Android.App.UsesLibraryAttribute)을 통해 사용할 수 있습니다.
 
 예를 들어 *GoogleMaps* 에 어셈블리 참조를 추가 하면 Google Maps 공유 라이브러리에 대해가 `<uses-library/>` 암시적으로 추가 됩니다.
-
-
 
 ## <a name="install_failed_update_incompatible-when-installing-a-package"></a>패키지\_를\_설치할\_때 실패 한 업데이트 설치 실패
 
@@ -387,7 +355,6 @@ Android 패키지에는 세 가지 요구 사항이 있습니다.
 2. 서명 키를 변경 합니다. 예를 들어,를 릴리스 앱으로 사용 하거나 기본 제공 디버그 서명 키를 사용 하지 않는 것이 좋습니다.
 3. 응용 프로그램을 먼저 제거 하지 않고 설치 합니다. 예를 들어 Visual Studio 내에서 디버깅을 사용 하지 않고 디버그 > 시작 합니다.
 
-
 이 경우 패키지 이름은 서명 키가 변경 되지 않았기 때문\_에\_패키지\_설치가 실패 한 업데이트 설치 실패 오류와 함께 실패 합니다. [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 에는 다음과 유사한 메시지도 포함 됩니다.
 
 ```shell
@@ -395,7 +362,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 ```
 
 이 오류를 해결 하려면 다시 설치 하기 전에 장치에서 응용 프로그램을 완전히 제거 합니다.
-
 
 ## <a name="install_failed_uid_changed-when-installing-a-package"></a>패키지를 설치할\_때 변경 된\_UID설치변경\_
 
@@ -418,8 +384,6 @@ $ adb uninstall @PACKAGE_NAME@
 ```
 
 **사용 안 함** 이로 인해 응용 프로그램 데이터가 유지 되므로 대상 장치에서 충돌 하는 UID를 유지 합니다. `adb uninstall -k`
-
-
 
 ## <a name="release-apps-fail-to-launch-on-device"></a>장치에서 릴리스 앱이 시작 되지 않음
 
@@ -467,7 +431,6 @@ Visual Studio 또는 Mac용 Visual Studio을 다시 시작 하 고 다시 빌드
 
 Xamarin Android 4.x에서는 중첩 된 제네릭 형식을 제대로 마샬링할 필요가 없습니다. 예를 들어 [SimpleExpandableListAdapter](xref:Android.Widget.SimpleExpandableListAdapter)를 사용 하\# 는 다음 C 코드를 살펴보세요.
 
-
 ```csharp
 // BAD CODE; DO NOT USE
 var groupData = new List<IDictionary<string, object>> () {
@@ -496,7 +459,6 @@ mAdapter = new SimpleExpandableListAdapter (
         new int[] { Android.Resource.Id.Text1, Android.Resource.Id.Text2 }
 );
 ```
-
 
 문제는 Xamarin.ios에서 중첩 된 제네릭 형식을 잘못 마샬링하는 것입니다. 이 `List<IDictionary<string, object>>`은 [java.lang.ArrrayList](xref:Java.Util.ArrayList)로 마샬링될 때, `ArrayList`는 [java.util.Map](xref:Java.Util.IMap)을 구현 하는 항목 대신 `Dictionary<string, object>`인스턴스를 참조 하는 `mono.android.runtime.JavaObject` 인스턴스를 포함 합니다. 다음 예외가 발생 합니다.
 
@@ -547,7 +509,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [이 문제는 향후 릴리스에서 수정 될 예정](https://bugzilla.xamarin.com/show_bug.cgi?id=5401)입니다.
 
-
 ## <a name="unexpected-nullreferenceexceptions"></a>예기치 않은 NullReferenceExceptions
 
 때때로 [android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 에는 발생할 &ldquo;수 없는 nullreferenceexceptions가 있거나,&rdquo; 앱이 중단 되기 직전에 android 런타임 코드의 Mono에서 제공 됩니다.
@@ -577,7 +538,6 @@ E/mono    ( 4176): at Android.Util.Log.Info (string,string)
 ```shell
 E/dalvikvm(  123): VM aborting
 ```
-
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>전역 참조 고갈로 인해 중단 됩니다.
 
@@ -661,13 +621,11 @@ E/dalvikvm(  602): Excessive JNI global references (2001)
 E/dalvikvm(  602): VM aborting
 ```
 
-
 위의 예제 (여기서는 [버그 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)에서 제공 됨)에서 문제가 너무 많은 Android. Point 인스턴스가 생성 되 고 있는 것입니다. 이 특정 버그의 수정 목록은 [설명 \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) 를 참조 하세요.
 
 일반적으로 유용 하 게 사용할 수 있는 솔루션은 위의 덤프 &ndash; &ndash; 에서 너무 많은 인스턴스를 할당 한 형식을 찾은 다음 소스 코드에서 생성 된 위치를 찾아서 적절 하 게 삭제 하는 것입니다. Java-개체 수명이 짧아집니다. 이는 항상 적절 한 것\#은 아닙니다. (685215은 다중 스레드 이므로 trivial 솔루션은 Dispose 호출을 방지 하지만, 가장 먼저 고려해 야 할 사항입니다.
 
 [GREF 로깅을](~/android/troubleshooting/index.md) 사용 하도록 설정 하 여 grefs가 생성 된 시기와 존재 하는 수를 확인할 수 있습니다.
-
 
 ## <a name="abort-due-to-jni-type-mismatch"></a>JNI 형식 불일치로 인해 중단 됩니다.
 
@@ -693,7 +651,6 @@ E/dalvikvm( 123): VM aborting
   - 동적 코드는 항상 비용을 지불 해야 합니다. 효율적인 코드가 필요한 경우 동적 코드를 사용 하지 않는 것이 좋습니다.
 
 - 첫 번째 미리 보기에서는 각 어셈블리의 형식을 응용 프로그램 코드에서 명시적으로 사용 하지 않는 한 해당 어셈블리가 제외 되었습니다. 해결 방법은 다음을 참조 하세요.[http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
-
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>X86 장치에서 AOT + LLVM crash로 빌드된 프로젝트
 

@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: conceptdev
 ms.author: crdun
 ms.date: 11/25/2015
-ms.openlocfilehash: 3b0e5d12f47ffb46ad009530bcc9c0b373496f63
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279788"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765591"
 ---
 # <a name="overview-of-objective-c-bindings"></a>목적-C 바인딩 개요
 
@@ -37,7 +37,6 @@ Xamarin과 함께 사용 하기 위해 목표-C 라이브러리를 바인딩하�
 
 Xamarin.ios `btouch-native` 에 대해 (또는 `bmac-native` xamarin.ios를 사용 하는 경우)를 사용 하 여 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 (또는 목적 Sharpie를 사용 하 여)를 명령줄 도구 (`btouch-native` iOS 또는 `bmac-native` Mac 용)에 전달 하는 방식으로 작동 합니다.
 
-
 이러한 도구를 호출 하는 일반적인 구문은 다음과 같습니다.
 
 ```csharp
@@ -51,7 +50,6 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
 위의 명령은 현재 디렉터리에 파일 `cocos2d.dll` 을 생성 하 고 프로젝트에서 사용할 수 있는 완전히 바인딩된 라이브러리를 포함 합니다. 바인딩 프로젝트를 사용 하는 경우 바인딩을 만드는 데 사용 하 Mac용 Visual Studio는 도구입니다 ( [아래](#bindingproject)설명 참조).
-
 
 <a name="bindingproject" />
 

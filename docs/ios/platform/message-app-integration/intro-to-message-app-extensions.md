@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 1d6edb9107c3d6ae04c91ebcf874fb92a7f911b3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ca782e57964adadd85412030db2247f0de690a6b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280037"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769661"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Xamarin.ios의 메시지 앱 확장 기본 사항
 
@@ -337,7 +337,6 @@ namespace MonkeyStickers
         public override void ViewDidLoad ()
         {
             base.ViewDidLoad ();
-
 
             // Create new browser and configure it
             BrowserViewController = new StickerBrowserViewController (MSStickerSize.Regular);
@@ -707,8 +706,6 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 ## <a name="summary"></a>요약
 
 이 문서에서는 **메시지** 앱과 통합 되 고 사용자에 게 새로운 기능을 제공 하는 xamarin.ios 솔루션에 메시지 앱 확장을 포함 합니다. 여기서는 확장을 사용 하 여 텍스트, 스티커, 미디어 파일 및 대화형 메시지를 보냈습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

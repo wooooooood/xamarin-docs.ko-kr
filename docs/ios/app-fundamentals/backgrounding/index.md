@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 161fda52002e8bb757db23c9b2a20a6befd132f5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5afb87eb3f84e00427072ef6c4e2c19b46de0186
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289335"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766577"
 ---
 # <a name="backgrounding-in-xamarinios"></a>Xamarin.ios의 Backgrounding
 
@@ -35,8 +35,6 @@ IOS에서 backgrounding는 응용 프로그램 상태로 인식 되며 앱과 �
 ## <a name="summary"></a>요약
 
 이 가이드에서는 iOS에서 백그라운드 처리를 수행 하는 다양 한 방법을 소개 했습니다. Ios 응용 프로그램 상태를 검사 하 고 iOS 응용 프로그램 수명 주기에 backgrounding가 재생 되는 역할을 검사 했습니다. 또한 iOS의 백그라운드에서 작동 하도록 개별 작업 또는 전체 응용 프로그램을 등록 하는 방법을 배웠습니다. 마지막으로, 백그라운드에서 업데이트를 수행 하는 응용 프로그램을 빌드하여 iOS에서 backgrounding에 대 한 이해를 강화 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

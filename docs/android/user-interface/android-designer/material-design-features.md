@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: 77b0bc28bc4156092cb2b12d0c8b234d3f021239
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 67755baf18ad5277e7c2fe8be705522a9b668ff3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523443"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756817"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Xamarin. Android Designer 재질 디자인 기능
 
@@ -54,10 +54,9 @@ Android Designer에는 재질 디자인 호환 레이아웃을 보다 쉽게 만
 
 [![표, keyline 및 간격 구성](material-design-features-images/vs/03-grid-configuration-w158-sml.png)](material-design-features-images/vs/03-grid-configuration-w158.png#lightbox)
 
-새 keyline을 추가 하려면 **오프셋** 상자에 새 오프셋 값을 입력 하 고 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택한 다음 + 아이콘을 클릭 하 여 새 keyline를 추가 합니다. 마찬가지로, 새 간격을 추가 하려면 크기와 오프셋 상자에 각각 크기와 오프셋 (dp의 경우) 을 입력 합니다. 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고 + 아이콘을 클릭 하 여 새 간격을 추가 합니다.
+새 keyline을 추가 하려면 **오프셋** 상자에 새 오프셋 값을 입력 하 고 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택한 다음 + 아이콘을 클릭 하 여 새 keyline를 추가 합니다. 마찬가지로, 새 간격을 추가 **하려면 크기와** **오프셋 상자에 각각 크기와 오프셋** (dp의 경우)을 입력 합니다. 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고 + 아이콘을 클릭 하 여 새 간격을 추가 합니다.
 
 이러한 구성 값을 변경 하면 레이아웃 XML 파일에 저장 되 고 레이아웃을 다시 열 때 다시 사용 됩니다.
-
 
 ## <a name="theme-editor"></a>테마 편집기
 
@@ -158,9 +157,6 @@ Android Designer에는 재질 디자인 호환 레이아웃을 보다 쉽게 만
 이 항목에서는 Android Designer에서 사용할 수 있는 재질 디자인 기능에 대해 설명 했습니다. 재질 디자인 그리드를 사용 하도록 설정 하 고 구성 하는 방법에 대해 설명 하 고, 테마 편집기를 사용 하 여 재질 디자인 지침을 따르는 새 사용자 지정 테마를 만드는 방법을 설명 했습니다.
 재질 디자인을 위한 Xamarin Android 지원에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요.
 
-
-
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 이 가이드에서는 다음과 같은 디자이너 기능을 살펴보겠습니다.
@@ -197,7 +193,7 @@ Android Designer에는 재질 디자인 호환 레이아웃을 보다 쉽게 만
 
 [![표, keyline 및 간격 구성](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
-새 keyline을 추가 하려면 **오프셋** 상자에 새 오프셋 값을 입력 하 고, 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고, + 아이콘 (값이 입력 될 때 오른쪽에 표시 됨)을 클릭 하 여 새 keyline를 추가 합니다. 마찬가지로, 새 간격을 추가 하려면 크기와 오프셋 상자에 각각 크기와 오프셋 (dp의 경우) 을 입력 합니다. 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고 + 아이콘을 클릭 하 여 새 간격을 추가 합니다.
+새 keyline을 추가 하려면 **오프셋** 상자에 새 오프셋 값을 입력 하 고, 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고, + 아이콘 (값이 입력 될 때 오른쪽에 표시 됨)을 클릭 하 여 새 keyline를 추가 합니다. 마찬가지로, 새 간격을 추가 **하려면 크기와** **오프셋 상자에 각각 크기와 오프셋** (dp의 경우)을 입력 합니다. 위치 (**왼쪽**, **위쪽**, **오른쪽**또는 **아래쪽**)를 선택 하 고 + 아이콘을 클릭 하 여 새 간격을 추가 합니다.
 
 이러한 구성 값을 변경 하면 레이아웃 XML 파일에 저장 되 고 레이아웃을 다시 열 때 다시 사용 됩니다.
 
@@ -279,7 +275,6 @@ Android Designer에는 재질 디자인 호환 레이아웃을 보다 쉽게 만
 
 [![색 선택](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
-
 이 예제에서는 다양 한 방법을 통해 **배경색** 을 원하는 값으로 변경할 수 있습니다.
 
 - 색을 직접 클릭 합니다.
@@ -320,13 +315,11 @@ Android Designer에는 재질 디자인 호환 레이아웃을 보다 쉽게 만
 
 - **&#8984; + S** 를 눌러 **사용자 지정**이라는 새 테마에 변경 내용을 저장 합니다.
 
-
 ## <a name="summary"></a>요약
 
 이 항목에서는 Android Designer에서 사용할 수 있는 재질 디자인 기능에 대해 설명 했습니다. 재질 디자인 그리드를 사용 하도록 설정 하 고 구성 하는 방법, 재질 디자인 색상표를 사용 하 여 색 속성을 편집 하는 방법 및 인쇄 크기 조정 선택기를 사용 하 여 텍스트 속성을 구성 하는 방법을 설명 했습니다. 또한 테마 편집기를 사용 하 여 재질 디자인 지침을 따르는 새 사용자 지정 테마를 만드는 방법도 보여 줍니다. 재질 디자인을 위한 Xamarin Android 지원에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요.
 
 -----
-
 
 ## <a name="related-links"></a>관련 링크
 

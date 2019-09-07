@@ -6,19 +6,19 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: de34dcdd194bd3777214d23fded7e5f42ec5141c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1ad7a98b92c34cf956e50ebc7a6cec73580f8f04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287552"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765499"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>IOS, Mac 및 바인딩 프로젝트의 네이티브 참조
 
 _네이티브 참조를 사용 하면 네이티브 프레임 워크를 Xamarin.ios 또는 Xamarin.ios 프로젝트 또는 바인딩 프로젝트에 포함할 수 있습니다._
 
 IOS 8.0부터 앱 확장과 Xcode의 주 앱 간에 코드를 공유 하는 임베디드 프레임 워크를 만들 수 있습니다. 네이티브 참조 기능을 사용 하면 Xamarin.ios에서 이러한 포함 프레임 워크 (Xcode로 만든)를 사용할 수 있습니다.
- 
+
 > [!IMPORTANT]
 > 모든 형식의 Xamarin.ios 또는 Xamarin.ios 프로젝트에서 포함 된 프레임 워크를 만들 수는 없습니다. 네이티브 참조는 기존 네이티브 (목적-C) 프레임 워크를 사용 하는 경우에만 사용할 수 있습니다.
 
@@ -98,4 +98,3 @@ IOS를 대상으로 하는 확장 및 앱이 없는 앱
 ## <a name="summary"></a>요약
 
 이 문서에서는 네이티브 프레임 워크를 Xamarin.ios 또는 Xamarin.ios 응용 프로그램에 포함 하는 방법을 자세히 살펴봅니다.
-

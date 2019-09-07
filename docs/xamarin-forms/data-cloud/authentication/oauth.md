@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 12f34e7bc77fd3978ccfdfb57cc95747123c5603
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3bc001c048129851a3604752fdfbd45d72d4c3d3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657238"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760493"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
 
@@ -263,7 +263,6 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법을 설명 합니다. Xamarin.Auth 제공 합니다 `OAuth2Authenticator` 고 `OAuth2Request` Xamarin.Forms 응용 프로그램에서 Google, Microsoft, Facebook 및 Twitter와 같은 id 공급자를 사용 하는 데 사용 되는 클래스입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

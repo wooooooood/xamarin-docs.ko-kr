@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2017
-ms.openlocfilehash: 799e117e3a4cb6e3071680da90e6432f389c6682
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2857033c5cd69e9696d2ce82feaf8212300da2c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642565"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764807"
 ---
 # <a name="xamarinandroid-textureview"></a>Xamarin Android TextureView
 
@@ -70,8 +70,6 @@ public class TextureViewActivity : Activity,
 [![장치에서 실행 되는 앱의 예, 이미지 표시](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
 을 사용 `TextureView`하려면 하드웨어 가속을 사용 하도록 설정 해야 합니다 .이 기능은 기본적으로 API 수준 14로 설정 됩니다. 또한이 예제에서는 카메라를 사용 하기 때문에 `android.permission.CAMERA` 권한과 `android.hardware.camera` 기능 모두 **androidmanifest**에서 설정 해야 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

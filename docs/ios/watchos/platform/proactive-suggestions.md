@@ -7,20 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: 68ba09ce74f161c728f0a58276a0b0d98fec7d8c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 42284ded0bbb5dab36470b7d2f291df64c6df264
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281281"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767772"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Xamarin의 사전 예방적 제안 watchOS
 
 _이 문서에서는 watchOS 3 앱에서 자동 관리 제안을 사용 하 여 시스템에서 자동으로 유용한 정보를 사용자에 게 자동으로 제공할 수 있도록 하 여 engagement를 구동 하는 방법을 보여 줍니다._
 
-
 WatchOS 3을 처음 사용 하는 경우 자동으로 사용자에 게 유용한 정보를 사용자에 게 자동으로 제공 하 여 사용자가 Xamarin.ios 앱에 참여할 수 있는 뉴스 방법을 제공 합니다.
-
 
 ## <a name="about-proactive-suggestions"></a>자동 관리 제안 정보
 
@@ -300,7 +298,6 @@ Apple은 활동 작업을 수행할 때 다음과 같은 모범 사례를 제안
 
 Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 경우 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예를 들어:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -362,7 +359,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 ## <a name="summary"></a>요약
 
 이 문서에서는 사전 권장 사항에 대해 설명 하 고 개발자가 watchOS 앱에 대 한 트래픽을 구동 하는 데 사용할 수 있는 방법을 보여 주었습니다. 사전 제안 및 제시 된 사용 지침을 구현 하는 단계를 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

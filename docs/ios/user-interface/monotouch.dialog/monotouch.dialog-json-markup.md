@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: conceptdev
 ms.author: crdun
-ms.openlocfilehash: 5fc5e6c1df911963ab765f5d49016eace8e2733f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d9174e9b2d6c056c94b405033a25eeb787c92f9f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284139"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768759"
 ---
 # <a name="monotouchdialog-json-markup"></a>MonoTouch.Dialog Json 태그
 
@@ -91,7 +91,6 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="Root_Element_Syntax" />
 
-
 ## <a name="root-element-syntax"></a>Root 요소 구문
 
 Root 요소는 다음 값을 포함 합니다.
@@ -99,11 +98,9 @@ Root 요소는 다음 값을 포함 합니다.
 - `title`
 - `sections` (선택 사항)
 
-
 루트 요소는 중첩 된 컨트롤러를 만들기 위한 요소로 섹션 안에 나타날 수 있습니다. 이 경우 추가 속성 `"type"` 을로 설정 해야 합니다.`"root"`
 
  <a name="url" />
-
 
 ### <a name="url"></a>url
 
@@ -111,13 +108,11 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="group" />
 
-
 ### <a name="group"></a>그룹(group)
 
 설정 하는 경우 루트 요소의 groupname을 설정 합니다. 그룹 이름은 요소의 중첩 된 요소 중 하나에서 루트 요소의 값으로 표시 되는 요약을 선택 하는 데 사용 됩니다. 이 값은 확인란 또는 라디오 단추의 값입니다.
 
  <a name="radioselected" />
-
 
 ### <a name="radioselected"></a>radioselected
 
@@ -125,13 +120,11 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="title" />
 
-
 ### <a name="title"></a>title
 
 있는 경우 RootElement에 사용 되는 제목입니다.
 
  <a name="type" />
-
 
 ### <a name="type"></a>type
 
@@ -139,13 +132,11 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="sections" />
 
-
 ### <a name="sections"></a>섹션
 
 개별 섹션이 포함 된 Json 배열입니다.
 
  <a name="Section_Syntax" />
-
 
 ## <a name="section-syntax"></a>섹션 구문
 
@@ -155,9 +146,7 @@ Root 요소는 다음 값을 포함 합니다.
 - `footer` (선택 사항)
 - `elements` 배열
 
-
  <a name="header" />
-
 
 ### <a name="header"></a>헤더
 
@@ -165,13 +154,11 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="footer" />
 
-
 ### <a name="footer"></a>바닥글
 
 있는 경우 바닥글은 섹션의 아래쪽에 표시 됩니다.
 
  <a name="elements" />
-
 
 ### <a name="elements"></a>요소
 
@@ -182,11 +169,9 @@ Root 요소는 다음 값을 포함 합니다.
 - `entry`줄 (일반 또는 암호)
 - `boolean`값 (스위치 또는 이미지 사용)
 
-
 사용자가 셀 또는 액세서리에서 탭 할 때 호출할 메서드를 제공 하 여 문자열 요소를 단추로 사용할 수 있습니다.
 
  <a name="Rendering_Elements" />
-
 
 ## <a name="rendering-elements"></a>렌더링 요소
 
@@ -230,7 +215,6 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="accessory" />
 
-
 ### <a name="accessory"></a>액세서리
 
 렌더링 요소에 표시할 액세서리 종류를 결정 합니다. 가능한 값은 다음과 같습니다.
@@ -239,11 +223,9 @@ Root 요소는 다음 값을 포함 합니다.
 - `detail-disclosure`
 - `disclosure-indicator`
 
-
 값이 없는 경우에는 액세서리는 표시 되지 않습니다.
 
  <a name="background" />
-
 
 ### <a name="background"></a>배경
 
@@ -251,20 +233,17 @@ Root 요소는 다음 값을 포함 합니다.
 
  <a name="caption" />
 
-
 ### <a name="caption"></a>캡션의
 
 렌더링 요소에 표시할 주 문자열입니다. `"textcolor"` 및`"font"` 속성을 설정 하 여 글꼴 및 색을 사용자 지정할 수 있습니다. 렌더링 스타일은 속성에 `"style"` 의해 결정 됩니다.
 
  <a name="color_and_detailcolor" />
 
-
 ### <a name="color-and-detailcolor"></a>color 및 detailcolor
 
 주 텍스트 또는 세부 텍스트에 사용할 색입니다.
 
  <a name="detailfont_and_font" />
-
 
 ### <a name="detailfont-and-font"></a>detailfont 및 글꼴
 
@@ -274,9 +253,7 @@ Root 요소는 다음 값을 포함 합니다.
 - Helvetica
 - "Helvetica-14"
 
-
  <a name="linebreak" />
-
 
 ### <a name="linebreak"></a>linebreak
 
@@ -289,11 +266,9 @@ Root 요소는 다음 값을 포함 합니다.
 - `tail-truncation`
 - `word-wrap`
 
-
 및 `character-wrap` `"lines"` 는 모두 0으로 설정 된 속성을 사용 하 여 렌더링 요소를 여러 줄 요소로 변환할 수 있습니다. `word-wrap`
 
  <a name="ontap_and_onaccessorytap" />
-
 
 ### <a name="ontap-and-onaccessorytap"></a>ontap 및 onaccessorytap
 
@@ -316,13 +291,11 @@ class Foo {
 
  <a name="lines" />
 
-
 ### <a name="lines"></a>선
 
 이 값을 0으로 설정 하면 포함 된 문자열의 내용에 따라 요소가 자동으로 크기가 지정 됩니다. 이 작업을 수행 하려면 `"linebreak"` 속성을 또는 `"word-wrap"`로 `"character-wrap"` 설정 해야 합니다.
 
  <a name="style" />
-
 
 ### <a name="style"></a>스타일
 
@@ -334,9 +307,7 @@ class Foo {
 - `"value2"`
 - `"subtitle"`: 부제목이 있는 텍스트입니다.
 
-
  <a name="subtitle" />
-
 
 ### <a name="subtitle"></a>제목
 
@@ -345,20 +316,17 @@ class Foo {
 
  <a name="textcolor" />
 
-
 ### <a name="textcolor"></a>textcolor
 
 텍스트에 사용할 색입니다.
 
  <a name="value" />
 
-
 ### <a name="value"></a>value
 
 렌더링 요소에 표시할 보조 값입니다. 이의 레이아웃은 `"style"` 설정의 영향을 받습니다. 글꼴과 색은 및 `"detailfont"` `"detailcolor"`를 설정 하 여 사용자 지정할 수 있습니다.
 
  <a name="Boolean_Elements" />
-
 
 ## <a name="boolean-elements"></a>부울 요소
 
@@ -382,13 +350,11 @@ class Foo {
 
  <a name="type" />
 
-
 ### <a name="type"></a>type
 
 형식은 `"boolean"` 또는`"checkbox"`로 설정할 수 있습니다. 부울로 설정 하는 경우 uislider 또는 이미지를 사용 합니다 (및 `"on"` `"off"` 가 모두 설정 된 경우). Checkbox로 설정 되 면 확인란을 사용 합니다. `"group"` 속성을 사용 하 여 부울 요소에 특정 그룹에 속하는 것으로 태그를 지정할 수 있습니다. 이 방법은 포함 하는 루트에도 동일한 그룹 `"group"` 에 속하는 모든 부울 (또는 확인란) 수를 사용 하 여 결과를 요약 하는 루트가 포함 된 속성을 포함 하는 경우에 유용 합니다.
 
  <a name="Entry_Elements" />
-
 
 ## <a name="entry-elements"></a>Entry 요소
 
@@ -423,13 +389,11 @@ class Foo {
 
  <a name="autocorrect" />
 
-
 ### <a name="autocorrect"></a>고침은
 
 항목에 사용할 자동 수정 스타일을 결정 합니다. 가능한 값은 true 또는 false (또는 문자열 `"yes"` 및 `"no"`)입니다.
 
  <a name="capitalization" />
-
 
 ### <a name="capitalization"></a>대/소문자
 
@@ -440,16 +404,13 @@ class Foo {
 - `sentences`
 - `words`
 
-
  <a name="caption" />
-
 
 ### <a name="caption"></a>캡션의
 
 항목에 사용할 캡션입니다.
 
  <a name="keyboard" />
-
 
 ### <a name="keyboard"></a>Keyboard
 
@@ -465,16 +426,13 @@ class Foo {
 - `twitter`
 - `url`
 
-
  <a name="placeholder" />
-
 
 ### <a name="placeholder"></a>자리 표시자(placeholder)
 
 항목에 빈 값이 있을 때 표시 되는 힌트 텍스트입니다.
 
  <a name="return-key" />
-
 
 ### <a name="return-key"></a>return-key
 
@@ -492,9 +450,7 @@ class Foo {
 - `send`
 - `yahoo`
 
-
  <a name="value" />
-
 
 ### <a name="value"></a>value
 
@@ -502,14 +458,12 @@ class Foo {
 
  <a name="Radio_Elements" />
 
-
 ## <a name="radio-elements"></a>Radio 요소
 
 Radio 요소는 형식 `"radio"`입니다. 선택한 항목은 포함 하는 루트 요소의 `radioselected` 속성에 의해 선택 됩니다.
 또한 `"group"` 속성에 값이 설정 된 경우이 라디오 단추는 해당 그룹에 속합니다.
 
  <a name="Date_and_Time_Elements" />
-
 
 ## <a name="date-and-time-elements"></a>날짜 및 시간 요소
 
@@ -535,7 +489,6 @@ Radio 요소는 형식 `"radio"`입니다. 선택한 항목은 포함 하는 루
 ```
 
  <a name="Html/Web_Element" />
-
 
 ## <a name="htmlweb-element"></a>Html/Web 요소
 

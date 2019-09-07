@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: edc5ec51499116fc2fabeb03327b32a689dc0c49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279337"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768348"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Xamarin.ios의 테이블 파트 및 기능
 
@@ -67,7 +67,6 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 - 애니메이션을 사용 하 여 새 셀 삽입
 
 이 문서의 나머지 부분에서는 Xamarin.ios를 사용 하 여 이러한 모든 UITableView 기능을 구현 하는 방법을 보여 줍니다.
-
 
 ## <a name="classes-overview"></a>클래스 개요
 

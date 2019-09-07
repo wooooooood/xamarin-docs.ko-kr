@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: 3171a89678e88a924198c3921d197c0f0378d29b
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 14e9b352a309de94a374b52141e3fd61715d8f75
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522629"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764375"
 ---
 # <a name="xamarinandroid-linearlayout"></a>Xamarin Android LinearLayout
 
@@ -128,7 +128,6 @@ protected override void OnCreate (Bundle savedInstanceState)
 
 XML 특성이 각 뷰의 동작을 정의 하는 방법을 확인 합니다. 에 대해 `android:layout_weight` 다른 값을 시험해 보고 각 요소의 가중치를 기준으로 화면 부동산을 분산 하는 방법을 확인 합니다. 방법에 대 한 자세한 내용은 [일반 레이아웃 개체](https://developer.android.com/guide/topics/ui/declaring-layout.html) 문서를 참조 하세요.[`LinearLayout`](xref:Android.Widget.LinearLayout)
 특성을 `android:layout_weight` 처리 합니다.
-
 
 ## <a name="references"></a>참조 항목
 

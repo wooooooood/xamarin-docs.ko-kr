@@ -1,18 +1,18 @@
 ---
 title: 요약 14 장입니다. 절대 레이아웃
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 14 장입니다. 절대 레이아웃
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 14 장입니다. 절대 레이아웃'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 7371f134944d7492e51aa2d02247c0ab48345a47
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c489bf244396cf180ed8e1272308048a14b67300
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771125"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 14 장입니다. 절대 레이아웃
 
@@ -98,8 +98,6 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1-layoutBounds.Height))
 [![삼중 스크린샷 도트 매트릭스 클록](images/ch14fg08-small.png "도트 매트릭스 클록")](images/ch14fg08-large.png#lightbox "도트 매트릭스 시계")
 
 합니다 [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) 두 프로그램 애니메이션 `Label` 화면 가로 및 세로로 반송 하는 개체입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

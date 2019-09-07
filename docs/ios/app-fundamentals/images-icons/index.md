@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: af7dbad29c156964f154053dac00255b1b32e4ff
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6940e07c51dbc19615454e0c51188152db22c63f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289090"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767223"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Xamarin.ios의 이미지 및 아이콘
 
@@ -33,7 +33,6 @@ IOS 앱 내에서 이미지 자산을 사용 하는 방법에는 여러 가지�
 
 IOS 앱에 대 한 이미지 자산을 만들 때 고려해 야 할 몇 가지 고려 사항 및 이러한 자산이 사용 되는 여러 위치가 있습니다. 이러한 각 항목은 필요한 이미지 자산의 수 뿐만 아니라 해당 자산을 만드는 방법에도 영향을 줍니다. 다음 항목에서는 필요한 이미지 자산 유형, 응용 프로그램 번들에 이러한 자산이 포함 되는 방법 및 필요한 기능을 제공 하기 위해 이미지 자산을 사용 하는 방법에 대해 설명 합니다.
 
-
 ## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[이미지 표시](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
 이 문서에서는 Xamarin.ios 앱에 이미지 자산을 포함 하 고 코드를 사용 C# 하거나 iOS 디자이너의 컨트롤에 해당 이미지를 할당 하 여 해당 이미지를 표시 하는 방법에 대해 설명 합니다.
@@ -51,7 +50,6 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 - `AlternateIconName`-현재 선택한 대체 아이콘의 이름을 반환 하거나 `null` 기본 아이콘을 사용 하는 경우을 반환 합니다.
 - `SetAlternameIconName`-이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환할 수 있습니다.
 
-
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 이 문서에서는 특수 한 유형의 Storyboard를 사용 하 여 모든 iOS 장치 크기 및 해상도에 대 한 범용 시작 화면을 제공 하는 방법을 설명 합니다.
@@ -59,8 +57,6 @@ Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지
 ## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[사용자 지정 문서 형식](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
 이 문서에서는 사용자 지정 문서 형식 아이콘으로 사용할 Xamarin.ios 앱의 이미지 자산을 포함 하 고 관리 하는 방법을 설명 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

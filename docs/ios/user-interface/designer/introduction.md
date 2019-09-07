@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: f37905f483ad31d05276383718a3295d4a288f28
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285873"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768933"
 ---
 # <a name="ios-designer-basics"></a>iOS 디자이너 기본 사항
 
@@ -194,7 +194,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 인터페이스에 컨트롤을 추가 하려면 **도구 상자** 에서 컨트롤을 끌어 디자인 화면에 놓습니다. 세로 및 가로 안내선은 컨트롤을 추가 하거나 위치를 지정 하는 경우 세로 가운데, 가로 가운데 및 여백과 같이 일반적으로 사용 되는 레이아웃 위치를 강조 표시 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
- 
+
 ![디자인 화면에서 지침은 일반적으로 사용 되는 레이아웃 위치를 강조 표시 합니다] . (introduction-images/9-layoutguides-vsmac.png "디자인 화면에서 지침은 일반적으로 사용 되는 레이아웃 위치를 강조 표시 합니다") .
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -220,7 +220,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 ### <a name="constraints-toolbar"></a>제약 조건 도구 모음
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
- 
+
 [![제약 조건 도구 모음](introduction-images/11-constraintstoolbar-vsmac.png "제약 조건 도구 모음")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -316,7 +316,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 디자인 화면에서는 여러 컨트롤을 통한 확대/축소를 지원 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
- 
+
 ![아래쪽 도구 모음의 확대/축소 컨트롤](introduction-images/16-zoomcontrols-vsmac.png "아래쪽 도구 모음의 확대/축소 컨트롤")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)

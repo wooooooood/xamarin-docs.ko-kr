@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: b53799f4b1c8d9299ab23191f6a702c2ec0983fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1cf22f070864492e14e1865c1cbbf8cf32e0df29
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285769"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753910"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS Objective-C 라이브러리 바인딩
 
@@ -56,15 +56,11 @@ Xamarin.ios에서이 특정 목표-C API를 사용 하는 데 필요한 모든 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-
 위에서 설명한 것 처럼이 연습에서는 Xcode 명령줄 도구 (특히 `make` 및 `lipo`)를 사용 합니다. 명령은 프로그램을 빌드하는 방법을 지정 하는 메이크파일을 사용 하 여 실행 프로그램 및 라이브러리의 컴파일을 자동화 하는 매우 일반적인 Unix 유틸리티입니다. `make` 명령은 다중 아키텍처 파일을 만들기 위한 OS X 명령줄 유틸리티 이며, 여러 `.a` 파일을 모든 하드웨어 아키텍처에서 사용할 수 있는 하나의 파일로 결합 합니다. `lipo`
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 위에서 설명한 것 처럼이 연습에서는 **Mac 빌드 호스트** (특히 `make` 및 `lipo`)에서 Xcode 명령줄 도구를 사용 합니다. 명령은 메이크파일을 사용 하 여 프로그램을 빌드하는 방법을 지정 하는 실행 프로그램 및 라이브러리의 컴파일을 자동화 하는 매우 일반적인 Unix 유틸리티입니다. `make` 명령은 다중 아키텍처 파일을 만들기 위한 OS X 명령줄 유틸리티 이며, 여러 `.a` 파일을 모든 하드웨어 아키텍처에서 사용할 수 있는 하나의 파일로 결합 합니다. `lipo`
-
 
 -----
 
@@ -272,9 +268,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 ![](walkthrough-images/bind03.png "솔루션 탐색기의 솔루션 구조")
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
 
 1. Visual Studio를 시작합니다.
 
@@ -336,7 +330,6 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 파일이 프로젝트에 추가 되 면 Xamarin.ios **는 파일의** **빌드 작업** 을 자동으로 **ObjcBindingNativeLibrary**로 설정 하 고 라는 `libInfColorPickerSDK.linkwith.cs`특수 파일을 만듭니다.
 
-
 이 파일에는 `LinkWith` xamarin.ios에서 방금 추가한 정적 라이브러리를 처리 하는 방법을 설명 하는 특성이 포함 되어 있습니다. 이 파일의 내용은 다음 코드 조각에 나와 있습니다.
 
 ```csharp
@@ -347,7 +340,6 @@ using ObjCRuntime;
 
 특성 `LinkWith` 은 프로젝트의 정적 라이브러리 및 몇 가지 중요 한 링커 플래그를 식별 합니다.
 
-
 다음으로 수행 해야 하는 작업은 InfColorPicker 프로젝트에 대 한 API 정의를 만드는 것입니다. 이 연습에서는 목적 Sharpie을 사용 하 여 **ApiDefinition.cs**파일을 생성 합니다.
 
 <a name="Using_Objective_Sharpie"/>
@@ -356,15 +348,11 @@ using ObjCRuntime;
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-
 목표 Sharpie는 타사 목표-C 라이브러리를에 C#바인딩하는 데 필요한 정의를 만드는 데 도움이 될 수 있는 명령줄 도구 (Xamarin에서 제공)입니다. 이 섹션에서는 Sharpie를 사용 하 여 InfColorPicker 프로젝트에 대 한 초기 **ApiDefinition.cs** 를 만듭니다.
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 목표 Sharpie는 타사 목표-C 라이브러리를에 C#바인딩하는 데 필요한 정의를 만드는 데 도움이 될 수 있는 명령줄 도구 (Xamarin에서 제공)입니다. 이 섹션에서는 **Mac 빌드 호스트** 의 목적 Sharpie를 사용 하 여 InfColorPicker 프로젝트에 대 한 초기 **ApiDefinition.cs** 를 만듭니다.
-
 
 -----
 
@@ -466,17 +454,13 @@ Europa:Resources kmullins$
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-
 위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 `namespace ...` 기존 코드 블록을 **InfColorPicker.cs** 파일 `using` 의 내용으로 바꿉니다. 그대로 유지):
 
 ![](walkthrough-images/os07.png "InfColorPickerControllerDelegate 파일")
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **Mac 빌드 호스트**에서 **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 기존 `namespace ...` 코드 블록을 **InfColorPicker.cs** 파일의 내용으로 바꿉니다 ( `using` 문을 그대로 유지 합니다.)
-
 
 -----
 
@@ -503,17 +487,13 @@ Europa:Resources kmullins$
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-
 이 시점에서 바인딩 프로젝트를 완료 하 고 빌드할 준비가 완료 되어야 합니다. 바인딩 프로젝트를 빌드하고 오류 없이 종료 되었는지 확인 합니다.
 
 [바인딩 프로젝트를 빌드하고 오류가 없는지 확인 합니다.](walkthrough-images/os12.png)
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-
 이 시점에서 바인딩 프로젝트를 완료 하 고 빌드할 준비가 완료 되어야 합니다. 바인딩 프로젝트를 빌드하고 오류 없이 종료 되었는지 확인 합니다.
-
 
 -----
 
@@ -702,7 +682,6 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
 ```
 
 **ViewDidLoad 업데이트** -방금 만든 이벤트 `ViewDidLoad` 처리기를 사용 하도록 변경 해야 합니다. 를 `ViewController` 편집 하 `ViewDidLoad` 고 다음 코드 조각과 유사 하 게 변경 합니다.
-
 
 ```csharp
 public override void ViewDidLoad ()

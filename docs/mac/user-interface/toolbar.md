@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: de0db40fb678bf88a18c6be42d89644d41583b99
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cd2490bfad880d128f5eaeebd4aac58ad3a4d8fa
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280109"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772719"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Xamarin.ios의 도구 모음
 
@@ -357,7 +357,6 @@ public override void AwakeFromNib ()
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.ios 응용 프로그램의 도구 모음 및 도구 모음 항목 작업에 대해 자세히 살펴봅니다. Xcode의 Interface Builder에서 도구 모음을 만들고 유지 관리 하는 방법, 일부 UI 컨트롤이 도구 모음 항목에서 자동으로 작동 하는 방법, 코드 C# 에서 도구 모음을 사용 하도록 설정 및 해제 하는 방법에 대해 설명 했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

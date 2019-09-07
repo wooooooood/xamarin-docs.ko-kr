@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: 797bc4199b79944c7b2b6e9c939e2584bb21246a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3b99e4485bfb621b32fa001a49d75038b2072775
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292559"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769464"
 ---
 # <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해하기
 
 _이 문서에서는 Xamarin.ios 앱에서 SiriKit를 사용 하는 데 필요한 핵심 개념을 설명 합니다._
-
 
 IOS 10의 새로운 기능으로 SiriKit를 사용 하면 Xamarin.ios 앱에서 Siri를 사용 하는 사용자에 게 액세스 가능한 서비스와 iOS 장치에서 맵 앱을 제공할 수 있습니다. 이 기능은 새 **의도** 및 **의도 UI** 프레임 워크를 사용 하 여 하나 이상의 앱 확장에서 제공 됩니다.
 
@@ -403,7 +402,7 @@ Siri에는 앱을 대신 하 여 사용자와 대화가 있음을 항상 명심 
 
 앱에 해당 하는 단일 값이 표시 되 면이를 처리 하는 기본 방법은 Siri에서 사용자에 게 확인을 요청 하는 것입니다. 예를 들어 *"Bobo?"* 라는 간단한 예를 사용 하 여 회신할 수 있습니다.
 
-단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예:
+단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예를 들어:
 
 ```csharp
 Who do you want to send the message to?
@@ -461,9 +460,6 @@ Siri를 사용 하 여 대화 (앱 대신)를 사용 하도록 하는 것은 유
 ## <a name="summary"></a>요약
 
 이 문서에서는 SiriKit를 사용 하는 데 필요한 핵심 개념을 설명 했으며, Xamarin.ios 앱과 상호 작용 하 여 iOS 장치에서 Siri 및 Maps 앱을 사용 하는 사용자에 게 액세스할 수 있는 서비스를 제공할 수 있습니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

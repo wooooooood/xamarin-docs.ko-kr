@@ -7,12 +7,12 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 846b7fa3c905b208771a110a013283bd77214b72
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 8c0b60a5064bbcf605f66a7b9dcce5da1f84a015
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511695"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770894"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
 
@@ -234,8 +234,6 @@ Ios의 경우는 **info.plist** 파일에는 해당 사용자의 위치를 가�
 [ **Xamarin.Forms.Maps** ](xref:Xamarin.Forms.Maps) 어셈블리 포함는 [ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 [ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) 변환 하는 메서드 0 또는 보다 가능한 지리적 위치 및 다른 메서드는 텍스트 주소 [ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) 반대 방향에서으로 변환 하는 합니다.
 
 합니다 [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) 파일 및 [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) 코드 숨김 파일에서이 기능을 보여 줍니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: bf9b630613dcc5c25dac96cad71e54022ead1812
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3c4fa085c9fdf17cdc256d9710c23911bb60d584
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649592"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770641"
 ---
 # <a name="native-views-in-xaml"></a>XAML의 네이티브 뷰
 
@@ -486,7 +486,6 @@ class MySpinner : Spinner
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법을 보여 줍니다. 속성과 이벤트 핸들러는 네이티브 뷰에서 설정할 수 있으며, Xamarin.Forms 뷰와 상호작용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

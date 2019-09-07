@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: c40d21a95db564d0fdcbea5772a88e94446c07ce
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 5c9a11073a7e65d90e0776d0b43c9e3bd100a10d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758635"
 ---
 # <a name="xamarinandroid-listview"></a>Xamarin Android ListView
 
@@ -214,11 +214,9 @@ ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countri
 - [ContentProvider 사용](~/android/user-interface/layouts/list-view/content-provider.md)
 - [ListView 및 작업 수명 주기](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-
 ## <a name="summary"></a>요약
 
 이 항목 집합에서는 `ListView` `ListActivity`의 기본 제공 기능을 사용 하는 방법에 대 한 몇 가지 예제를 소개 하 고 제공 했습니다. 또한 다채로운 레이아웃 및 SQLite `ListView` 데이터베이스 사용이 허용 되는의 사용자 지정 구현에 대해 설명 하 고, `ListView` 구현에 대 한 작업 수명 주기의 관련성을 간략하게 설명 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

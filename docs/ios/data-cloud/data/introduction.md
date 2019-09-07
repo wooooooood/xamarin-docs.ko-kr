@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: 71a1b4df1d57d489efd7f3171a8c36aac1017cca
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281711"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767026"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Xamarin.ios 앱의 데이터 저장소 소개
 
@@ -25,7 +25,6 @@ ms.locfileid: "70281711"
 - **직렬화 된 데이터 파일** – 파일 시스템에서 개체를 XML 또는 JSON으로 유지할 수 있습니다. .NET framework에는 개체를 쉽게 직렬화 및 역직렬화 하는 라이브러리가 포함 되어 있습니다. 적절 한 이름을 사용 하 여 데이터 파일을 구성 합니다.
 - **데이터베이스** – SQLite 데이터베이스 엔진은 iOS에서 사용할 수 있으며, 쿼리, 정렬 또는 달리 조작 해야 하는 구조화 된 데이터를 저장 하는 데 유용 합니다. 데이터베이스 저장소는 많은 속성이 있는 데이터 목록에 적합 합니다.
 - **이미지 파일** – 모바일 장치에서 데이터베이스에 이진 데이터를 저장할 수 있지만 파일 시스템에 직접 저장 하는 것이 좋습니다. 필요한 경우 이미지를 다른 데이터와 연결 하기 위해 데이터베이스에 파일 이름을 저장할 수 있습니다. 큰 이미지 또는 많은 이미지를 처리 하는 경우 파일을 삭제 하는 캐싱 전략을 계획 하는 것이 좋습니다 .이는 더 이상 사용자의 저장소 공간을 더 이상 사용 하지 않아도 됩니다.
-
 
 데이터베이스가 앱에 대 한 올바른 저장소 메커니즘인 경우이 문서의 나머지 부분에서는 Xamarin 플랫폼에서 SQLite를 사용 하는 방법을 설명 합니다.
 
@@ -40,7 +39,6 @@ ms.locfileid: "70281711"
 - 기존 데이터베이스 기술을 사용 하는 개발자는 자신의 지식을 활용 하 여 데이터베이스 및 데이터 액세스 코드를 디자인할 수 있습니다.
 - 연결 된 응용 프로그램의 서버 구성 요소에 있는 데이터 모델은 모바일 응용 프로그램에서 전체적으로 나 부분적으로 다시 사용 될 수 있습니다.
 
-
 ## <a name="sqlite-database-engine"></a>SQLite 데이터베이스 엔진
 
 SQLite는 모바일 플랫폼용 Apple에서 채택 된 오픈 소스 데이터베이스 엔진입니다. SQLite 데이터베이스 엔진은 iOS에 기본 제공 되므로 개발자는이를 활용 하 여 추가 작업을 수행할 필요가 없습니다. SQLite는 다음과 같은 이유 때문에 플랫폼 간 모바일 개발에 적합 합니다.
@@ -50,13 +48,11 @@ SQLite는 모바일 플랫폼용 Apple에서 채택 된 오픈 소스 데이터�
 - 파일 형식은 32 또는 64 비트, 빅 또는 작은 endian 시스템의 플랫폼에서 쉽게 사용할 수 있습니다.
 - SQL92 표준의 대부분을 구현 합니다.
 
-
 SQLite는 작고 빠르게 설계 되었으므로 사용에 대 한 몇 가지 주의 사항이 있습니다.
 
 - 일부 외부 조인 구문은 지원 되지 않습니다.
 - 테이블 이름 바꾸기 및 ADDCOLUMN만 지원 됩니다. 스키마에 대해 다른 수정 작업을 수행할 수 없습니다.
 - 뷰는 읽기 전용입니다.
-
 
 [SQLite.org](http://SQLite.org) 에서 sqlite에 대해 자세히 알아볼 수 있습니다. 그러나 Xamarin을 사용 하는 데 필요한 모든 정보는이 문서 및 관련 샘플에 포함 되어 있습니다. SQLite 데이터베이스 엔진은 모든 버전의 iOS에 기본 제공 됩니다.
 이 장에서 다루지 않지만 SQLite는 Windows Phone 및 Windows 응용 프로그램 에서도 사용할 수 있습니다.
@@ -65,8 +61,6 @@ SQLite는 작고 빠르게 설계 되었으므로 사용에 대 한 몇 가지 �
 
 이러한 플랫폼은이 문서에서 다루지 않지만 SQLite는 Windows 플랫폼 에서도 사용할 수 있습니다.
 [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) 및 [tasky Pro](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) 사례 연구에서 추가 정보를 읽고 [Tim heuer cda (의 블로그](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx)를 검토 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

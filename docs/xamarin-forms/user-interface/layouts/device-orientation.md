@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: dccae3b3da4ab84c8ba14f204263e4230f31e833
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d988be9163c0a6e12735425a139c03d9641fa95c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656781"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772757"
 ---
 # <a name="device-orientation"></a>장치 방향
 
@@ -225,7 +225,6 @@ protected override void OnSizeAllocated (double width, double height){
 
 - `outerStack` 가로 또는 세로 방향으로 가장 잘 활용 하기 위해 사용 가능한 공간에 따라 스택으로 이미지 및 컨트롤을 제공 하도록 조정 됩니다.
 
-
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 세로에 표시 된 다음 응용 프로그램을 고려해 야 합니다.
@@ -277,7 +276,6 @@ Title="AbsoluteLayout - XAML" BackgroundImageSource="deer.jpg">
 
 - 페이지에 배치 된 방식으로 인해 응답성을 소개 하는 절차적 코드에 대 한 않아도가 됩니다.
 - `ScrollView` 레이블이 표시 되도록 화면의 높이 경우에 고정된 단추와 이미지 높이의 합계 보다 작을 수 있도록 사용 되는 합니다.
-
 
 ### <a name="relativelayout"></a>RelativeLayout
 
@@ -471,7 +469,6 @@ protected override void OnSizeAllocated (double width, double height){
 다음 사항에 유의하십시오.
 
 - 페이지에 배치 된 방식으로 인해 컨트롤의 눈금 위치를 변경 하는 방법이 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

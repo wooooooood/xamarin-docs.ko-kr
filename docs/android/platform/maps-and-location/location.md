@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: 8366796af47e8915bf0bd9ba680e6144e1cfaebc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61532eb1e31db6a862275180394b2b5ba9b05f8e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280603"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761724"
 ---
 # <a name="location-services-on-android"></a>Android의 위치 서비스
 
@@ -75,11 +75,10 @@ else
 
 앱은 사용자가 권한을 부여 하지 않거나 사용 권한을 취소 하 고 해당 상황을 적절 하 게 처리할 수 있는 시나리오를 허용 해야 합니다. Xamarin.ios에서 런타임 권한 검사를 구현 하는 방법에 대 한 자세한 내용은 [사용 권한 가이드](~/android/app-fundamentals/permissions.md) 를 참조 하세요.
 
-
 ## <a name="using-the-fused-location-provider"></a>퓨즈 위치 공급자 사용
 
 퓨즈 위치 공급자는 Android 응용 프로그램이 장치에서 위치 업데이트를 수신 하는 기본 방법입니다 .이는 런타임 중에 위치 공급자를 효율적으로 선택 하 여 배터리 효율적인 방식으로 최상의 위치 정보를 제공 하기 때문입니다. 예를 들어, 전 세계적으로 이동 하는 사용자는 GPS를 사용 하 여 가장 적합 한 위치를 가져옵니다. 그런 다음 GPS가 제대로 작동 하지 않는 경우 (예를 들어), 퓨즈 위치 공급자가 자동으로 WiFi로 전환 될 수 있으며,이는 실내에서 잘 작동 합니다.
- 
+
 퓨즈 위치 공급자 API는 지 오 펜싱 및 작업 모니터링을 포함 하 여 위치 인식 응용 프로그램을 위한 다양 한 기타 도구를 제공 합니다. 이 섹션에서는를 설정 `LocationClient`하 고, 공급자를 설정 하 고, 사용자의 위치를 가져오는 기본 사항에 대해 중점적으로 설명 합니다.
 
 퓨즈 위치 공급자는 [Google Play 서비스](https://developer.android.com/google/play-services/index.html)의 일부입니다.

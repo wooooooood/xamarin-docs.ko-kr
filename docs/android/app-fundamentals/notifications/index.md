@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7d153491802a74ff06b3a5cd63e585b7fd18ff03
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 57c77b5d8d6a4763dc7b5c7a62a51ffe3137827d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644313"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755361"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Xamarin Android의 알림
 
@@ -22,7 +22,7 @@ ms.locfileid: "68644313"
 이 섹션에서는 Xamarin.ios에서 로컬 알림을 구현 하는 방법을 설명 합니다. Android 알림의 다양 한 UI 요소를 설명 하 고 알림을 만들고 표시 하는 데 사용 되는 Api에 대해 설명 합니다.
 
 ## <a name="walkthrough---using-local-notifications-in-xamarinandroidlocal-notifications-walkthroughmd"></a>[연습-Xamarin.ios에서 로컬 알림 사용](local-notifications-walkthrough.md)  
- 
+
 이 연습에서는 Xamarin Android 응용 프로그램에서 로컬 알림을 사용 하는 방법을 설명 합니다. 알림을 만들고 게시 하는 기본 사항을 보여 줍니다. 사용자가 알림 서랍에서 알림을 클릭 하면 두 번째 작업을 시작 합니다. 
 
 ## <a name="further-reading"></a>추가 정보

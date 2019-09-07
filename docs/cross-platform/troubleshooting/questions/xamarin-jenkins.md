@@ -7,12 +7,12 @@ ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4f09f4ca97dcf50891aa0a0415e47d474297c411
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a8dc27574dc9959cc375a98fc0d7a18aac8bd6b7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282773"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756964"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Microsoft에서 Jenkins을 지원 하지 않는 이유는 무엇 인가요?
 
@@ -36,13 +36,10 @@ Jenkins은 오픈 소스 CI 도구 모음입니다. 이러한 문제 때문에 J
 
 SDK 위치를 설정 하는 옵션은 사용 중인 정확한 Jenkins Android 플러그 인에 따라 달라질 수 있습니다. 이를 설정 하는 방법에 대 한 좋은 위치는 플러그 인 가이드에 있습니다. 예를 들면 [Android Emulator 플러그 인](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) 은 SDK를 자동으로 검색 하지만 찾을 수 없는 경우 해당 플러그 인에 대 한 Jenkins 시스템 구성 페이지를 통해 위치를 설정할 수도 있습니다. 
 
-
 ## <a name="deprecated-errors"></a>사용 되지 않는 오류
 
 > [!IMPORTANT]
 > 이 문제는 최신 버전의 Xamarin에서 해결 되었습니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
-
-
 
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins에서 잘못 된 Xamarin 라이선스를 보고 합니다.
 이 문제에 대 한 오류 메시지는 일반적으로 다음과 같습니다.

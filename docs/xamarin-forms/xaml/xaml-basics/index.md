@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: a7e98f64672788f13b247aa6cbba8adca84bb319
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 0b30a0167b72ebeb4c53481c6d2d9d9344296894
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121543"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767356"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.Forms XAML 기본 사항
 
@@ -34,7 +34,6 @@ XAML(eXtensible Application Markup Language)은 개발자가 코드가 아닌 �
 [![](images/cover-sml.png "책 표지")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 
 다음을 비롯한 XAML 주제를 책의 여러 장에서 좀 더 깊이 다룹니다.
-
 
 | 장 | 다운로드 | 요약 |
 |---------|---------|---------|

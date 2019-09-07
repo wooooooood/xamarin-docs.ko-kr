@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 5776855039120b0c856a76a31334420ded2a2d65
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283327"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770153"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
 
@@ -45,7 +45,6 @@ _이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없
 이제를 더 이상 사용 하지 않으므로 창의 레이아웃을 정의 하 고 **ViewController.cs** 또는 **MainWindowController.cs** 파일을 수정 하 여 `MainWindow` 클래스의 인스턴스를 만들도록 **MainWindow.cs** 파일을 수정 해야 합니다. 스토리 보드 또는. xib 파일.
 
 사용자 인터페이스에 대해 Storyboard를 사용 하는 최신 Xamarin.ios 앱은 **MainWindow.cs**, **ViewController.cs** 또는 **MainWindowController.cs** 파일을 자동으로 포함 하지 않을 수 있습니다. C# 필요한 경우 프로젝트에 새 빈 클래스를 추가 하기만 하면 됩니다.**새 파일** 을**추가** > 합니다.  > 일반빈 > **클래스**)와 이름이 누락 된 파일과 동일 하 게 합니다.
-
 
 ### <a name="defining-the-window-in-code"></a>코드에서 창 정의
 
@@ -178,7 +177,6 @@ Macos는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 �
 
 이 메서드는 `ContentView.AddSubview (ClickMeLabel)` 응용 프로그램을 `NSTextField` 실행 하 고 창을 열 때 화면에 표시 되도록를 콘텐츠 뷰에 추가 합니다.
 
-
 ### <a name="adjusting-the-window-controller"></a>창 컨트롤러 조정
 
 의 `MainWindow` 디자인이 storyboard 또는 xib 파일에서 더 이상 로드 되지 않으므로 창 컨트롤러를 몇 가지 조정 해야 합니다. **MainWindowController.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
@@ -268,7 +266,6 @@ Window.AwakeFromNib ();
 
 이렇게 하면 storyboard 또는 xib 파일에서 로드 된 표준 창과 마찬가지로 창에 대해 코딩할 수 있습니다.
 
-
 ### <a name="displaying-the-window"></a>창 표시
 
 Xib 파일을 제거 하 고 **MainWindow.cs** 및 **MainWindowController.cs** 파일을 수정한 경우 Xcode의 Interface Builder. xib 파일로 만든 표준 창과 마찬가지로 창을 사용 하 게 됩니다.
@@ -287,7 +284,6 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 ![예제 앱 실행](xibless-ui-images/run01.png "예제 앱 실행")
 
-
 ## <a name="adding-a-code-only-window"></a>코드 전용 창 추가
 
 Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해당 **Solution Pad** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다. **새 파일** 대화 상자에서 아래 > 그림과 같이**컨트롤러를 사용 하 여 xamarin.ios cocoa 창을**선택 합니다.
@@ -296,10 +292,9 @@ Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해
 
 이전과 마찬가지로 프로젝트에서 xib 파일 (이 경우 **SecondWindow. xib**)을 삭제 하 고 위의 [코드를 사용 하](#Switching_a_Window_to_use_Code) 여 창 전환 섹션의 단계에 따라 창의 정의를 코드에 포함 합니다.
 
-
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에 UI 요소 추가
 
-코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 예를 들어:
+코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 예:
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -309,7 +304,6 @@ MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
 위의 코드는 새 `NSButton` 를 만들어 표시 하기 위해 `MyWindow` 창 인스턴스에 추가 합니다. 기본적으로 storyboard 또는 xib 파일에서 Xcode의 Interface Builder에 정의할 수 있는 모든 UI 요소는 코드에서 만들고 창에 표시할 수 있습니다.
-
 
 ## <a name="defining-the-menu-bar-in-code"></a>코드에서 메뉴 모음 정의
 
@@ -359,12 +353,9 @@ public override void DidFinishLaunching (NSNotification notification)
 
 위에서는 코드에서 상태 표시줄 메뉴를 만들고 응용 프로그램이 시작 될 때이를 표시 합니다. 메뉴 사용에 대 한 자세한 내용은 [메뉴](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xcode 또는 xib 파일과 함께의 Interface Builder 사용 하는 대신 코드에서 C# xamarin.ios 응용 프로그램의 사용자 인터페이스를 만드는 방법에 대해 자세히 살펴봅니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

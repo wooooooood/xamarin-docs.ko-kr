@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2018
-ms.openlocfilehash: 53dce7cc6cc614cde252aa34248fa299c89fafa3
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: e96f9a0ce4d1eec9bf853faceeb85a2acb4840af
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887704"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761017"
 ---
 # <a name="how-do-i-automate-an-android-nunit-test-project"></a>Android NUnit 테스트 프로젝트를 자동화하려면 어떻게 할까요?
 
@@ -59,7 +59,7 @@ adb shell am instrument
 
 2. `TestInstrumentation` 생성자`AddTests` 와 메서드를 구현 합니다. 메서드 `AddTests` 는 실제로 실행 되는 테스트를 제어 합니다.
 
-3. **TestInstrumentation.cs를**추가 하도록 파일을수정`.csproj` 합니다. 예를 들어:
+3. **TestInstrumentation.cs를**추가 하도록 파일을수정`.csproj` 합니다. 예:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -91,10 +91,8 @@ adb shell am instrument
 
 `adb shell am instrument` 명령을 사용 하 여 단위 테스트를 실행 하는 방법에 대 한 자세한 내용은 Android 개발자가 [adb를 사용 하 여 테스트 실행](https://developer.android.com/studio/test/command-line.html#RunTestsDevice) 항목을 참조 하세요.
 
-
 > [!NOTE]
 > [Xamarin android 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 릴리스를 사용 하는 경우 Android 호출 가능 래퍼의 기본 패키지 이름은 내보내는 형식의 어셈블리 정규화 된 이름에 대 한 MD5SUM을 기반으로 합니다. 이렇게 하면 서로 다른 두 어셈블리에서 동일한 정규화 된 이름을 제공할 수 있으며 패키징 오류가 발생 하지 않습니다. 따라서 `Name` `Instrumentation` 특성의 속성을 사용 하 여 읽을 수 있는 acw/클래스 이름을 생성 해야 합니다.
 
 _`adb` Acw 이름은 위의 명령에 사용 해야 합니다_.
 따라서 클래스의 C# 이름을 바꾸고 리팩터링 하면 올바른 acw `RunTests` 이름을 사용 하도록 명령을 수정 해야 합니다.
-

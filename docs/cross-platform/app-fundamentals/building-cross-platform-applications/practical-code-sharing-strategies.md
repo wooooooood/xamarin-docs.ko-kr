@@ -6,24 +6,21 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 9f0a4d0367142be500aeae67041feb8cd3bbca76
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3ce2530c6f9c81c287ff6c51c96fde12f3902cb8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288799"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762084"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5부 - 실제 코드 공유 전략
 
 이 섹션에서는 일반적인 응용 프로그램 시나리오에 대 한 코드를 공유 하는 방법의 예제를 제공 합니다.
 
-
-
 ## <a name="data-layer"></a>데이터 계층
 
 데이터 계층 정보 읽기 및 쓰기 방법 및 저장소 엔진으로 구성 됩니다. 성능, 유연성 및 플랫폼 간 호환성을 SQLite에 대 한 데이터베이스 엔진은 Xamarin 플랫폼 간 응용 프로그램에 권장 됩니다.
 다양 한 Windows, Android, iOS 및 Mac.를 비롯 하 여 플랫폼에서 실행
-
 
 ### <a name="sqlite"></a>SQLite
 
@@ -33,10 +30,7 @@ SQLite는 오픈 소스 데이터베이스 구현입니다. 소스 및 설명서
 - **Android** – Android 2.2 (API 수준 10) 이후 운영 체제에 기본 제공 합니다.
 - **Windows** – 참조 합니다 [유니버설 Windows 플랫폼 확장에 대 한 SQLite](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936)합니다.
 
-
 모든 플랫폼에서 사용할 수 있는 데이터베이스 엔진을 사용 하더라도 데이터베이스에 액세스 하는 네이티브 메서드는 다릅니다. 하지만 IOS 및 Android Xamarin.iOS 또는 Xamarin.Android에서 사용할 수 있는 SQLite에 액세스 하는 기본 제공 Api를 제공, (아마도 SQL 쿼리 자체에 문자열로 저장 된 것으로 가정)이 아닌 코드를 공유 하는 기능이 없습니다 제공 네이티브 SDK 메서드를 사용 하 여 모두 . 네이티브 데이터베이스 기능 검색에 대 한 자세한 내용은 `CoreData` iOS 또는 Android의 `SQLiteOpenHelper` 클래스에 불과하며 이러한 옵션이 플랫폼 간 되지 않으므로이 문서의 범위를 벗어납니다.
-
-
 
 ### <a name="adonet"></a>ADO.NET
 
@@ -87,8 +81,6 @@ connection.Close ();
 
 ADO.NET의 실제 구현은 분명히 다른 메서드 및 클래스 (이 예제는 데모용 으로만 제공)으로 분리 되어 있습니다.
 
-
-
 ### <a name="sqlite-net--cross-platform-orm"></a>SQLite-NET-플랫폼 간 ORM
 
 ORM (개체 관계형 매퍼 또는) 클래스에서 모델링 하는 데이터의 저장소를 단순화 하려고 합니다. 대신 수동으로 추출 된 데이터를 삽입 및 삭제 클래스 필드 하 고 해당 작업을 수행 하는 코드의 레이어를 추가 하는 속성을 ORM 수동으로 해당 테이블 만들기 또는 선택에는 SQL 쿼리를 작성 합니다. 리플렉션을 사용 하 여 클래스의 구조를 검사, ORM을 자동으로 만들 수는 클래스와 일치 하 고 쿼리 된 데이터 읽기 및 쓰기를 생성 하는 테이블 및 열입니다. 이 응용 프로그램 코드가 단순히 보내고 개체 인스턴스 내부에서 모든 SQL 작업을 처리 하는 ORM 검색할 수 있습니다.
@@ -101,7 +93,6 @@ SQLite-NET의 기능은 다음과 같습니다.
 - 데이터베이스 인스턴스가의 서브 클래스를 나타내는 `SQLiteConnection` , SQLite Net 라이브러리의 기본 클래스입니다.
 - 쿼리 및 삭제 된 개체를 사용 하 여 데이터를 삽입할 수 있습니다. SQL 문이 없습니다는 (하지만 필요한 경우 SQL 문을 작성할 수 있습니다)에 필요 합니다.
 - SQLite-NET 반환한 컬렉션에 대해 기본 Linq 쿼리를 수행할 수 있습니다.
-
 
 소스 코드 및 SQLite NET 용 설명서에서 제공 됩니다 [SQLite-Net github](https://github.com/praeclarum/sqlite-net) 고는 두 사례 연구에서 구현 되었습니다. SQLite-NET 코드의 간단한 예 (에서 합니다 *Tasky Pro* 사례 연구) 아래에 표시 됩니다.
 
@@ -135,8 +126,6 @@ Table<TodoItem>.ToList(); // returns all rows in a collection
 
 전체 예제에 대 한 사례 연구 소스 코드를 참조 하세요.
 
-
-
 ## <a name="file-access"></a>파일 액세스
 
 파일 액세스는 특정 응용 프로그램의 핵심 부분입니다. 응용 프로그램의 일부일 수도 있는 파일의 일반적인 예제:
@@ -144,9 +133,6 @@ Table<TodoItem>.ToList(); // returns all rows in a collection
 - SQLite 데이터베이스 파일입니다.
 - 사용자 생성 데이터 (텍스트, 이미지, 사운드, 비디오).
 - 캐싱 (이미지, html 또는 PDF 파일)에 대 한 다운로드 한 데이터입니다.
-
-
-
 
 ### <a name="systemio-direct-access"></a>System.IO 직접 액세스
 
@@ -174,8 +160,6 @@ Console.WriteLine (System.IO.ReadAllText (filePath));
 
 참조는 xamarin.ios [파일 시스템 작업](~/ios/app-fundamentals/file-system.md) iOS 관련 파일 시스템 기능에 대 한 자세한 내용은 문서. 플랫폼 간 파일 액세스 코드를 작성 하는 경우에 일부 파일 시스템 대 소문자를 구분 하 고 다른 디렉터리 구분 기호가 해야 합니다. 항상 파일 이름에 대 한 동일한 대/소문자를 사용 하는 것이 좋습니다 하며 `Path.Combine()` 파일 또는 디렉터리 경로 생성할 때 메서드.
 
-
-
 ### <a name="windowsstorage-for-windows-8-and-windows-10"></a>Windows 8 및 Windows 10에 대 한 Windows.Storage
 
 합니다 *Creating Mobile Apps with Xamarin.Forms* [책](https://developer.xamarin.com/r/xamarin-forms/book/)
@@ -192,7 +176,6 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 참조 된 [서적 발췌 단원](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 대 한 자세한 내용은 합니다.
 
-
 <a name="Isolated_Storage" />
 
 ### <a name="isolated-storage-on-windows-phone-7--8-silverlight"></a>Windows Phone 7 및 8 (Silverlight)에서 격리 된 저장소
@@ -205,12 +188,9 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 격리 된 저장소 Api에서 사용할 수 없는 [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)합니다. PCL에 대 한 한 가지 대안은 [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
-
-
 ### <a name="cross-platform-file-access-in-pcls"></a>Pcl에서 플랫폼 간 파일 액세스
 
 PCL 호환 Nuget – 이기도 [PCLStorage](https://www.nuget.org/packages/PCLStorage/) – Xamarin 지원 되는 플랫폼 및 최신 Windows Api에 대 한 해당 시설 플랫폼 간 파일 액세스 합니다.
-
 
 ## <a name="network-operations"></a>네트워크 작업
 
@@ -220,7 +200,6 @@ PCL 호환 Nuget – 이기도 [PCLStorage](https://www.nuget.org/packages/PCLSt
 - (예: 문서를 다운로드합니다. HTML, PDF)입니다.
 - 사용자 데이터 (예: 사진 또는 텍스트)를 업로드 합니다.
 - 웹 서비스 또는 제 3 자 (포함 하 여 SOAP, XML 또는 JSON) Api에 액세스합니다.
-
 
 네트워크 리소스에 액세스 하기 위한 몇 가지 다른 클래스를 제공 하는.NET Framework: `HttpClient`하십시오 `WebClient`, 및 `HttpWebRequest`합니다.
 
@@ -283,7 +262,6 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 
  <a name="Reachability" />
 
-
 ### <a name="reachability"></a>연결 가능성
 
 모바일 장치에서 빠른 Wi-fi 네트워크 조건의 다양 한 또는 4g 연결 저하 비치 및 느린 지 데이터 연결을 작동합니다. 이 인해 것이 네트워크를 사용할 수 있는지와, 어떤 유형의 네트워크는 경우 원격 서버에 연결 하기 전에 검색 하는 것이 좋습니다.
@@ -294,9 +272,7 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 - 응용 프로그램을 다르게 동작할 수 있습니다 3g 연결을 사용 하는 경우 (예를 들어 Apple 없도록 앱 3g 개 다운로드 20mb 보다 큰). 응용 프로그램이이 정보를 사용 하 여 과도 한 다운로드에 대 한 사용자에 게 알립니다 수 큰 파일을 검색할 때 시간입니다.
 - 네트워크를 사용할 수 있는 경우에 것 다른 요청을 시작 하기 전에 대상 서버를 사용 하 여 연결을 확인 하는 것이 좋습니다. 앱의 네트워크 작업 시간 초과 반복적으로 방지 되 고도 사용자에 게 표시 되는 자세한 오류 메시지를 허용 됩니다.
 
-
 [Xamarin.iOS 샘플](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) 사용할 수 있습니다 (Apple의 기준으로 하는 [거치도록 샘플 코드](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) 네트워크 가용성을 검색 하는 데 합니다.
-
 
 ## <a name="webservices"></a>웹 서비스
 
@@ -319,7 +295,6 @@ Xamarin.iOS 및 Xamarin.Android 예제를 제공 하는 RestSharp [github](https
 
  <a name="ServiceStack" />
 
-
 ### <a name="servicestack"></a>ServiceStack
 
 RestSharp, 달리 ServiceStack는 모두는 서버 쪽 솔루션 해당 서비스에 액세스 하는 모바일 응용 프로그램에서 구현 될 수 있는 클라이언트 라이브러리 뿐만 아니라 웹 서비스 호스트입니다.
@@ -327,7 +302,6 @@ RestSharp, 달리 ServiceStack는 모두는 서버 쪽 솔루션 해당 서비�
 합니다 [ServiceStack 웹 사이트](http://servicestack.net/) 문서 및 코드 샘플에 있는 프로젝트 및 링크의 용도 설명 합니다. 예제에 액세스할 수 있는 다양 한 클라이언트 쪽 응용 프로그램 뿐만 아니라 웹 서비스의 완전 한 서버 쪽 구현을 포함 됩니다.
 
 [Xamarin.iOS 예제](http://www.servicestack.net/monotouch/remote-info/) ServiceStack 웹 사이트의 코드 조각에 우리의 [웹 서비스 설명서](~/cross-platform/data-cloud/web-services/index.md)합니다.
-
 
 ### <a name="wcf"></a>WCF
 
@@ -337,7 +311,6 @@ Xamarin 도구는 일부 Windows Communication Foundation (WCF) 서비스를 사
 
  <a name="Threading" />
 
-
 ## <a name="threading"></a>스레딩
 
 응용 프로그램 응답성은 모바일 응용 프로그램에 대 한 중요 한 – 사용자가 예상 응용 프로그램을 로드 하 고 신속 하 게 수행 합니다. 사용자 입력을 수락 하는 중지 하도록 지정 하는 응용 프로그램에서 반복적인 충돌이 발생, 네트워크 요청과 같은 장기 실행 차단 호출 또는 느린 로컬 작업 (예: 파일 압축을 푸는)를 사용 하 여 UI 스레드를 연결할 필요가 반드시 표시 되는 '고정된' 화면입니다. 특히 시작 프로세스에는 장기 실행 작업 없어야 합니다.-모든 모바일 플랫폼을 로드 하는 데 오랜를 사용 하는 앱을 종료 합니다.
@@ -345,7 +318,6 @@ Xamarin 도구는 일부 Windows Communication Foundation (WCF) 서비스를 사
 즉, '진행률 표시기' 또는 '사용'이 고, 그렇지 되는 UI를 표시 하려면 빠른 및 비동기 작업 백그라운드 작업을 수행 하려면 사용자 인터페이스 구현 해야 합니다. 백그라운드 작업 실행 완료 될 때 또는 백그라운드 작업 요구 사항 진행률을 나타내는 주 스레드로 다시 통신 하는 방법이 즉 스레드를 사용을 해야 합니다.
 
  <a name="Parallel_Task_Library" />
-
 
 ### <a name="parallel-task-library"></a>병렬 작업 라이브러리
 
@@ -373,7 +345,6 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
  <a name="Invoking_on_the_UI_Thread" />
 
-
 ### <a name="invoking-on-the-ui-thread"></a>UI 스레드에서 호출
 
 병렬 작업 라이브러리를 활용 하지 않습니다 하는 코드에 대 한 각 플랫폼에 UI 스레드로 다시 마샬링 작업에 대 한 자체 구문이 있습니다.
@@ -382,8 +353,6 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 - **Android** – `owner.RunOnUiThread(action)`
 - **Xamarin.Forms** – `Device.BeginInvokeOnMainThread(action)`
 - **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
-
-
 
 IOS 및 Android 구문 즉,이 개체에 필요한 UI 스레드에서 콜백 메서드를 전달 해야 하는 코드를 사용할 수는 '컨텍스트' 클래스에 필요 합니다.
 
@@ -425,7 +394,6 @@ public class DispatchAdapter : IDispatchOnUIThread {
 Xamarin.Forms 개발자 사용할지 [ `Device.BeginInvokeOnMainThread` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) 일반적인 코드 (공유 프로젝트 또는 PCL).
 
  <a name="Platform_and_Device_Capabilities_and_Degradation" />
-
 
 ## <a name="platform-and-device-capabilities-and-degradation"></a>플랫폼 및 장치 기능 및 성능 저하
 

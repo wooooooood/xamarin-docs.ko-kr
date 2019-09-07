@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 8f7dd6f0a2e6db2580982a877cab2137cf28fab2
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: 9266d8c4e1723adfb7e5e55dce7ede6d47f6f116
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68508711"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755488"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Xamarin Android의 브로드캐스트 수신기
 
@@ -62,7 +62,7 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 Xamarin Android가 클래스를 컴파일하는 경우에는 필요한 메타 데이터로 AndroidManifest도 업데이트 하 여 수신기를 등록 합니다. 정적으로 등록 된 브로드캐스트 수신기 `Enabled` 의 경우 적절 한를로 `true`설정 해야 합니다. 그렇지 않으면 Android에서 수신기의 인스턴스를 만들 수 없습니다.
- 
+
 속성 `Exported` 은 브로드캐스트 수신기가 응용 프로그램 외부에서 메시지를 수신할 수 있는지 여부를 제어 합니다. 속성이 명시적으로 설정 되지 않은 경우 속성의 기본값은 브로드캐스트 수신기에 연결 된 의도 필터가 있는지 여부를 기반으로 Android에 의해 결정 됩니다. 브로드캐스트 수신기에 대해 하나 이상의 의도 필터가 있는 경우 Android에서 `Exported` 속성이 인 `true`것으로 가정 합니다. 브로드캐스트 수신기와 연결 된 의도 필터가 없는 경우 Android에서는 값이 인 `false`것으로 가정 합니다. 
 
 메서드 `OnReceive` 는 브로드캐스트 수신기에 디스패치 된 `Intent` 에 대 한 참조를 수신 합니다. 이렇게 하면 발신자가 브로드캐스트 수신기에 값을 전달할 수 있습니다.

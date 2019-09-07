@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c1dabfcd481dccf50075c02c54019ee27499769f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68510362"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758820"
 ---
 # <a name="radiobutton"></a>RadioButton
 
 이 섹션에서는 다음을 사용 하 여 두 개의 상호 배타적인 라디오 단추를 만듭니다. 하나를 사용 하지 않도록 설정 합니다.[`RadioGroup`](xref:Android.Widget.RadioGroup)
 하거나[`RadioButton`](xref:Android.Widget.RadioButton)
 위젯. 라디오 단추 중 하나를 누르면 알림 메시지가 표시 됩니다.
-
 
 **Resources/layout/Main. axml** 파일을 열고에 중첩 된 [`RadioButton`](xref:Android.Widget.RadioButton) [`RadioGroup`](xref:Android.Widget.RadioGroup) 두 개의를 추가 합니다 [`LinearLayout`](xref:Android.Widget.LinearLayout)(내).
 

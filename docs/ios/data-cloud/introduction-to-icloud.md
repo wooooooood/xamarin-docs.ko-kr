@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/09/2016
-ms.openlocfilehash: 364775ae8e8874d87022b5e45bd23ea29e82382d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df91699e0880bfae780b69f4b30be6667e8d64d9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292415"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763119"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Xamarin.ios에서 iCloud 사용
 
@@ -63,7 +63,6 @@ ICloud에 액세스 하도록 응용 프로그램을 올바르게 구성 하려�
 - **ICloud를 테스트 하려면 장치를 사용 해야** 합니다. 시뮬레이터에서는 작동 하지 않습니다.
 실제로 동일한 Apple ID를 사용 하 여 로그인 한 장치를 둘 이상 사용 하 여 iCloud를 실행 하 고 있는지 확인 해야 합니다.
 
-
 ## <a name="key-value-storage"></a>키-값 저장소
 
 키-값 저장소는 책 이나 잡지에서 마지막으로 본 페이지와 같이 사용자가 장치 간에 지속 될 수 있는 소량의 데이터를 위한 것입니다. 키-값 저장소는 데이터를 백업 하는 데 사용 하면 안 됩니다.
@@ -81,8 +80,6 @@ ICloud에 액세스 하도록 응용 프로그램을 올바르게 구성 하려�
 **ICloudKeyValue** 예제에서는 작동 방식을 보여 줍니다. 샘플 코드는 각 장치에 대해 라는 키를 만듭니다. 한 장치에이 키를 설정 하 고 다른 사용자에 게 전파 되는 값을 볼 수 있습니다. 또한 모든 장치에서 편집할 수 있는 "공유" 라는 키를 만듭니다. 한 번에 많은 장치를 편집 하는 경우 iCloud는 변경 타임 스탬프를 사용 하 여 "wins" 값을 결정 하 고 전파 됩니다.
 
 이 스크린샷에서는 사용 중인 샘플을 보여 줍니다. ICloud에서 변경 알림이 수신 되 면 화면 아래쪽의 스크롤 텍스트 보기에 인쇄 되 고 입력 필드에서 업데이트 됩니다.
-
-
 
  [![](introduction-to-icloud-images/icloud-kv-arrows.png "장치 간 메시지 흐름")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
@@ -406,8 +403,6 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
  [![](introduction-to-icloud-images/icloudstorage.png "ICloud 문서 관리 워크플로")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
-
-
 사용자는 장치에서 iCloud 지원 응용 프로그램을 제거 하려고 할 때 다른 경고를 수신 하 여 해당 응용 프로그램과 관련 된 iCloud 문서의 상태를 알립니다.
 
  [![](introduction-to-icloud-images/icloud-delete1.png "사용자가 장치에서 iCloud 지원 응용 프로그램을 제거 하려고 하는 경우의 샘플 대화 상자")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
@@ -430,8 +425,6 @@ Apple은 개발자가 iOS 응용 프로그램에서 수행할 수 있는 [Ios �
 키-값 저장소 예에서는 iCloud를 사용 하 여 NSUserPreferences 설정이 저장 되는 방식과 비슷한 소량의 데이터를 저장 하는 방법을 보여 줍니다. UIDocument 예제에서는 iCloud를 통해 여러 장치에 더 복잡 한 데이터를 저장 하 고 동기화 하는 방법을 보여 주었습니다.
 
 마지막으로 응용 프로그램 디자인에 영향을 주는 iCloud 백업 추가 방법에 대 한 간략 한 설명이 포함 되어 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

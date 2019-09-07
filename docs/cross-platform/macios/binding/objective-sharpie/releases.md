@@ -6,12 +6,12 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: b5362c0a809423e2782ee60faa96658cf132d752
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fa50ae16b69436936f0a7a8a5cf0aeaa54dfedfb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290867"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765669"
 ---
 # <a name="objective-sharpie-release-history"></a>목표 Sharpie 릴리스 내역
 
@@ -142,4 +142,3 @@ ms.locfileid: "70290867"
 [V 1.1.1 다운로드](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
 1.1.1은 1.5 년 4 2013 월의 초기 목표 미리 보기에 따라 Xamarin에서 년 내부 사용 및 개발의 첫 번째 주요 릴리스입니다. 이 릴리스는 일반적으로 안정적이 고 다양 한 네이티브 라이브러리에서 사용할 수 있는 첫 번째 이며 새로운 Clang 백엔드를 특징으로 합니다.
-

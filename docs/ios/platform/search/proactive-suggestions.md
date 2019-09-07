@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: ecc31fa6aab9e2be1c33f16d2f424b397f4a9a73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b79f64f154dbd7dde623d13385f111d3d5a5d3f2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769545"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Xamarin.ios의 사전 권장 사항 소개
 
@@ -534,7 +534,6 @@ textField.TextContentType = UITextContentType.FullStreetAddress;
 
 Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 경우 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예를 들어:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -607,7 +606,6 @@ IOS 10을 사용 하 여 앱이 포드캐스트 앱 이나 오디오 또는 비�
   - 집 또는 직장에 도착 한 후 
 
 개발자는 iOS 10에 간단한 API 호출을 포함 하 여 미디어 앱의 사용자에 게 더욱 매력적인 잠금 화면 환경을 만들 수 있습니다. 미디어 재생을 `MPPlayableContentManager` 관리 하기 위해 클래스를 사용 하 여 전체 미디어 컨트롤 (음악 앱에서 제공 하는 것과 같은)이 앱의 잠금 화면에 표시 됩니다.
-
 
 ```csharp
 using System;
@@ -682,8 +680,6 @@ namespace MonkeyPlayer
 ## <a name="summary"></a>요약
 
 이 문서에서는 사전 권장 사항에 대해 설명 하 고 개발자가 Xamarin.ios 앱에 대 한 트래픽을 구동 하는 데 사용할 수 있는 방법을 살펴보았습니다. 사전 제안 및 제시 된 사용 지침을 구현 하는 단계를 설명 했습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

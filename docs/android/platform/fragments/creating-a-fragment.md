@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/07/2018
-ms.openlocfilehash: 1948c700827f1cc235de5857cde9a2a149af8412
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: f7dd62af7cfa37f136b4c72c7c34907ad8ebf36f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524370"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761186"
 ---
 # <a name="creating-a-fragment"></a>조각 만들기
 
@@ -25,7 +25,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 ```
 
 위의 코드는 뷰 `Resource.Layout.Example_Fragment`를 확장 하 고 `ViewGroup` 컨테이너에 자식 뷰로 추가 합니다.
-
 
 > [!NOTE]
 > 조각 하위 클래스에는 public default no argument 생성자가 있어야 합니다.
@@ -102,14 +101,12 @@ Android에서는 패키지 이름에 대문자를 사용할 수 없습니다. �
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-
 ## <a name="fragment-lifecycle"></a>조각 수명 주기
 
 조각에는 [호스팅 활동의 수명 주기와](~/android/app-fundamentals/activity-lifecycle/index.md)약간 독립적 이지만 여전히 영향을 받는 자체 수명 주기가 있습니다.
 예를 들어 작업이 일시 중지 되 면 연결 된 모든 조각이 일시 중지 됩니다. 다음 다이어그램에서는 조각의 수명 주기를 간략하게 설명 합니다.
 
 [![조각 수명 주기를 보여 주는 흐름 다이어그램](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
-
 
 ### <a name="fragment-creation-lifecycle-methods"></a>조각 생성 수명 주기 메서드
 
@@ -132,7 +129,6 @@ Android에서는 패키지 이름에 대문자를 사용할 수 없습니다. �
 
 - **`OnResume()`** &ndash; 사용자가 조각과 상호 작용할 수 있기 전에 호출 되는 마지막 메서드입니다. 이 방법에서 수행 해야 하는 코드 종류의 예로는 위치 서비스에 해당 하는 카메라와 같이 사용자가 조작할 수 있는 장치의 기능을 사용 하도록 설정 해야 합니다. 이러한 서비스는 과도 한 배터리 소모를 일으킬 수 있으며, 응용 프로그램은 배터리 수명을 보존 하는 데 사용을 최소화 해야 합니다.
 
-
 ### <a name="fragment-destruction-lifecycle-methods"></a>조각 소멸 수명 주기 메서드
 
 다음 목록에서는 조각이 소멸 될 때 호출 되는 수명 주기 메서드에 대해 설명 합니다.
@@ -147,11 +143,9 @@ Android에서는 패키지 이름에 대문자를 사용할 수 없습니다. �
 
 - **`OnDetach()`** &ndash; 이 메서드는 조각이 더 이상 활동과 연결 되지 않기 바로 전에 호출 됩니다. 조각의 뷰 계층 구조는 더 이상 존재 하지 않으며 조각에서 사용 하는 모든 리소스를이 시점에서 해제 해야 합니다.
 
-
 ### <a name="using-setretaininstance"></a>SetRetainInstance 사용
 
 작업을 다시 만들 때 조각이 완전히 제거 되지 않도록 지정할 수 있습니다. 클래스 `Fragment` 는이 용도로 메서드 `SetRetainInstance` 를 제공 합니다. 이 `true` 메서드에 전달 된 경우 활동이 다시 시작 되 면 조각의 동일한 인스턴스가 사용 됩니다. 이 경우 `OnCreate` 및 `OnDestroy` 수명 주기 콜백을 제외 하 고 모든 콜백 메서드가 호출 됩니다. 이 프로세스는 위에 표시 된 수명 주기 다이어그램 (녹색 점선으로 표시)에 나와 있습니다.
-
 
 ## <a name="fragment-state-management"></a>조각 상태 관리
 
@@ -189,7 +183,6 @@ public override void OnActivityCreated(Bundle savedInstanceState)
 
 컨트롤 `EditText` `OnSaveInstanceState` 에가 할당 되어 있으므로이 호출 되 면 조각이 자동으로 위젯에 데이터를 저장 합니다. `id`
 
-
 ### <a name="bundle-limitations"></a>번들 제한 사항
 
 를 사용 `OnSaveInstanceState` 하면 임시 데이터를 쉽게 저장할 수 있지만이 메서드를 사용 하면 몇 가지 제한 사항이 있습니다.
@@ -197,7 +190,6 @@ public override void OnActivityCreated(Bundle savedInstanceState)
 - 조각이 백 스택에 추가 되지 않은 경우 사용자가 **뒤로** 단추를 누르면 상태가 복원 되지 않습니다.
 
 - 번들을 사용 하 여 데이터를 저장 하는 경우 해당 데이터는 serialize 됩니다. 이로 인해 처리가 지연 될 수 있습니다.
-
 
 ## <a name="contributing-to-the-menu"></a>메뉴에 기여
 

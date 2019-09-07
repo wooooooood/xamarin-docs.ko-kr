@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
-ms.openlocfilehash: bcb719451529cd5a9ca829b8693c425d752cc93b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 743e6550f75ff8319ba1c880da7ef43408f0d318
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283217"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768713"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Xamarin에서 watchOS 설정 작업
 
@@ -43,7 +43,6 @@ Apple Watch 앱은 iOS 앱과 동일한 설정 기능을 사용할 수 있습니
 
   [![](settings-images/rootplist-sml.png "Settings-Watch/Root. info.plist를 편집 합니다.")](settings-images/rootplist.png#lightbox)
 
-
 ## <a name="use-settings-in-the-watch-app"></a>시청 앱에서 설정 사용
 
 사용자가 선택한 값에 액세스 하려면 앱 그룹을 사용 `NSUserDefaults` 하 여 인스턴스를 만들고 다음을 `NSUserDefaultsType.SuiteName`지정 합니다.
@@ -64,8 +63,6 @@ var userName = shared.StringForKey ("name_preference");
 사용자는 iPhone에서 새로운 **Apple Watch** 앱을 통해 설정과 상호 작용 합니다. 이 앱을 사용 하면 사용자가 조사식에 앱을 표시 하거나 숨길 수 있으며, **설정-watch. 번들**을 사용 하 여 노출 된 설정을 편집할 수도 있습니다.
 
 ![](settings-images/applewatch-1.png "앱 설정의 예") ![](settings-images/applewatch-2.png "앱 설정의 예")
-
-
 
 ## <a name="related-links"></a>관련 링크
 

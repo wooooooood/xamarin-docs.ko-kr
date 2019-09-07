@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b135f916225f896680cfb73175ba0568928be06
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 40a50ecf93c8b77577e8e74df2e134b0ce3f80b6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655751"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70767547"
 ---
 # <a name="xaml-markup-extensions"></a>XAML 태그 확장
 
@@ -55,8 +55,6 @@ Xamarin.Forms에 정의된 XAML 태그 확장을 사용합니다.
 ## <a name="creating-xaml-markup-extensionscreatingmd"></a>[XAML 태그 확장 만들기](creating.md)
 
 사용자 고유의 사용자 지정 XAML 태그 확장을 작성합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

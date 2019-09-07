@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/09/2018
-ms.openlocfilehash: 1d6f4dc20a32810bb218ce3aa2281fa1355a584d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291899"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753330"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.ios의 제한 사항
 
@@ -21,7 +21,6 @@ Xamarin.ios를 사용 하는 응용 프로그램은 정적 코드로 컴파일�
 다음은 데스크톱 Mono와 비교할 때 Xamarin.ios의 제한 사항입니다.
 
  <a name="Limited_Generics_Support" />
-
 
 ## <a name="limited-generics-support"></a>제한 된 제네릭 지원
 
@@ -32,7 +31,6 @@ Mono의 [전체 AOT](https://www.mono-project.com/docs/advanced/aot/#full-aot) �
 개발자가 실행 하는 일반적인 문제 중 몇 가지는 다음과 같습니다.
 
  <a name="Generic_Subclasses_of_NSObjects_are_limited" />
-
 
 ### <a name="generic-subclasses-of-nsobjects-are-limited"></a>NSObjects의 일반 서브 클래스가 제한 됩니다.
 
@@ -47,9 +45,7 @@ class Foo<T> : UIView {
 > [!NOTE]
 > NSObjects의 일반 서브 클래스가 가능 하지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [NSObject 문서의 일반 서브 클래스](~/ios/internals/api-design/nsobject-generics.md) 를 참조 하세요.
 
-
  <a name="No_Dynamic_Code_Generation" />
-
 
 ## <a name="no-dynamic-code-generation"></a>동적 코드 생성 안 함
 
@@ -60,10 +56,7 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 - 형식을 동적으로 만들 수 없습니다 (예: gettype ("MyType ' 1")). 예를 들어, 기존 형식 (예: GetType ("System.string"))을 조회 하는 것은 제대로 작동 합니다.
 - 역방향 콜백은 컴파일 시간에 런타임에 등록 해야 합니다.
 
-
-
  <a name="System.Reflection.Emit" />
-
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
@@ -72,7 +65,6 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 - 동적 언어 런타임입니다.
 - 동적 언어 런타임 위에 빌드된 모든 언어
 - Remoting의 TransparentProxy 또는 런타임에서 코드를 동적으로 생성 하 게 하는 기타 항목입니다.
-
 
   > [!IMPORTANT]
   > 리플렉션과 **리플렉션을 혼동**해서는 안 **됩니다.** JITed는 코드를 동적으로 생성 하 고 해당 코드를 네이티브 코드로 컴파일하고 컴파일하는 방법에 대 한 것입니다. IOS에 대 한 제한 사항 (JIT 컴파일 없음)으로 인해이는 지원 되지 않습니다.
@@ -94,7 +86,6 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
  <a name="Reverse_Callbacks" />
 
-
 ### <a name="reverse-callbacks"></a>역방향 콜백
 
 표준 Mono에서는 함수 포인터 대신 대리자 인스턴스 C# 를 비관리 코드에 전달할 수 있습니다. 런타임은 일반적으로 이러한 함수 포인터를 관리 되지 않는 코드가 관리 코드로 다시 호출할 수 있도록 하는 작은 썽크로 변환 합니다.
@@ -110,9 +101,7 @@ Mono에서 이러한 브리지는 Just-in-time 컴파일러에 의해 구현 됩
 
 Xamarin.ios에서 원격 스택을 사용할 수 없습니다.
 
-
  <a name="Runtime_Disabled_Features" />
-
 
 ## <a name="runtime-disabled-features"></a>런타임 사용 안 함 기능
 
@@ -125,14 +114,10 @@ Mono의 iOS 런타임에서 다음 기능이 사용 하지 않도록 설정 되�
 - JIT 엔진
 - 메타 데이터 검증 도구 (JIT가 없기 때문)
 
-
  <a name=".NET_API_Limitations" />
-
 
 ## <a name="net-api-limitations"></a>.NET API 제한 사항
 
 제공 되는 .NET API는 모든 것이 iOS에서 제공 되는 것이 아니라 전체 프레임 워크의 하위 집합입니다. [현재 지원 되는 어셈블리 목록은](~/cross-platform/internals/available-assemblies.md)FAQ를 참조 하십시오.
-
-
 
 특히 Xamarin.ios에서 사용 하는 API 프로필에는 System.object가 포함 되어 있지 않으므로 외부 XML 파일을 사용 하 여 런타임의 동작을 구성할 수 없습니다.

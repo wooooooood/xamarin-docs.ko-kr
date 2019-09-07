@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 114d00b0d79b497201b3185a1443b8c8f9699c31
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8c338f8a5b2f1d41b1ea0f61778a1c14eb84ce08
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283551"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769150"
 ---
 # <a name="introduction-to-tvos-10"></a>tvOS 10 소개
 
@@ -83,8 +83,6 @@ Apple은 위에 나열 된 주요 프레임 워크 변경 및 추가 사항 외�
 ## <a name="deprecated-apis"></a>사용되지 않는 API
 
 Api 또는 프레임 워크는 tvOS 10에서 더 이상 사용 되지 않습니다. API 수정의 전체 목록은 Apple의 [tvOS 10 Api 차이점](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) 설명서를 참조 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

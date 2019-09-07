@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: 7f455d2164573d68db0a9c764f2b2cef5cc6d739
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284034"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752671"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Xamarin.ios의 구독 및 보고
 
@@ -28,7 +28,6 @@ ms.locfileid: "70284034"
 - 구현 개요
 - 갱신 되지 않은 구독은 일반적으로 서버에서 제공 하는 워크플로를 사용 하 여 구현 되 고 사용 가능한 제품과 같이 관리 됩니다. 
 
-
 ## <a name="about-free-subscriptions"></a>무료 구독 정보
 
 개발자는 무료 구독을 통해 Newsstand apps에 무료 콘텐츠를 배치할 수 있습니다 (Newsstand 않는 앱에서 사용할 수 없음). 무료 구독을 시작한 후에는 모든 사용자의 장치에서 사용할 수 있습니다. 무료 구독은 만료 되지 않습니다. 응용 프로그램이 제거 될 때만 종료 됩니다.
@@ -36,7 +35,6 @@ ms.locfileid: "70284034"
 ### <a name="implementation-overview"></a>구현 개요
 
 무료 구독은 자동 갱신 가능 구독과 매우 유사 하 게 작동 합니다. 응용 프로그램에는 iTunes Connect에서 ' 구매 '에 사용할 수 있는 무료 구독 제품이 있어야 합니다. 사용자가 구매할 때 무료 구독 구입은 자동 갱신 가능 구독 제품과 같이 유효성을 검사 해야 합니다. 무료 구독 트랜잭션을 복원할 수 있습니다.
-
 
 ## <a name="about-auto-renewable-subscriptions"></a>자동 갱신 가능한 구독 정보
 
@@ -53,7 +51,7 @@ ms.locfileid: "70284034"
 ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.   
    
  [![](subscriptions-and-reporting-images/image2.png "내 앱 선택")](subscriptions-and-reporting-images/image2.png#lightbox)  
- 
+
 응용 프로그램을 선택 하 고 **앱에서 바로 구매** 탭을 클릭 합니다.
 
 [![](subscriptions-and-reporting-images/image6.png "앱에서 바로 구매 탭을 클릭 합니다.")](subscriptions-and-reporting-images/image6.png#lightbox)
@@ -63,10 +61,8 @@ ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.
  [![](subscriptions-and-reporting-images/image40.png "공유 암호 보기 또는 생성을 선택 합니다.")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "공유 암호 생성")](subscriptions-and-reporting-images/image41.png#lightbox)   
-   
-   
-   
- 공유 암호를 사용 하려면 다음과 같이 자동 갱신 가능한 구독에 대 한 앱 내 구매 수령의 유효성을 검사할 때 Apple 서버에 전송 되는 JSON 페이로드에 해당 암호를 포함 합니다.
+
+공유 암호를 사용 하려면 다음과 같이 자동 갱신 가능한 구독에 대 한 앱 내 구매 수령의 유효성을 검사할 때 Apple 서버에 전송 되는 JSON 페이로드에 해당 암호를 포함 합니다.
 
 ```csharp
 {
@@ -95,10 +91,8 @@ ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.
 #### <a name="restoring-auto-renewable-subscriptions"></a>자동 갱신 가능한 구독 복원
 
 원본 구매 트랜잭션과 구독이 갱신 된 각 기간에 대 한 별도의 트랜잭션으로 여러 트랜잭션을 다시 받게 됩니다. 유효 기간을 이해 하려면 시작 날짜와 조건을 추적 해야 합니다.   
-   
-   
-   
- SKPaymentTransaction 개체는 구독 기간을 포함 하지 않습니다. 각 용어에 대해 다른 제품 ID를 사용 하 고 트랜잭션 구매 날짜 로부터 구독 기간을 예측할 수 있는 코드를 작성 해야 합니다.
+
+SKPaymentTransaction 개체는 구독 기간을 포함 하지 않습니다. 각 용어에 대해 다른 제품 ID를 사용 하 고 트랜잭션 구매 날짜 로부터 구독 기간을 예측할 수 있는 코드를 작성 해야 합니다.
 
 #### <a name="testing-auto-renewal"></a>자동 갱신 테스트
 

@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 049f01d47d303f07edd57c659361d9a123993ede
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288651"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761976"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>6부 - 테스트 및 App Store 승인
 
@@ -39,7 +39,6 @@ Windows phone, 태블릿 및 데스크톱 장치에서 .NET이 지 원하는 기
 
 - **배포** – 프로 비전 프로세스 (특히 iOS 장치)를 관리 하 고 업데이트 된 버전의 소프트웨어를 테스터에 게 제공 합니다.
 - **사용자 의견** – 응용 프로그램 사용에 대 한 정보 및 발생할 수 있는 오류에 대 한 자세한 정보를 수집 합니다.
-
 
 사용 및 오류를 수집 하 고 보고 하는 응용 프로그램에 기본 제공 인프라를 제공 하 고, 테스터와 해당 장치를 등록 하 고 관리 하는 데 도움이 되는 프로 비전 프로세스를 간소화 하 여 이러한 문제를 해결 하는 데 도움이 되는 많은 서비스가 있습니다. .
 

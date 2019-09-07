@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: b34c769eaa3aef5bf47a9bfa891859289b195f03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283779"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769202"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Xamarin에서 AvtvOS Player를 사용 하 여 소리 재생
 
@@ -33,8 +33,6 @@ ms.locfileid: "70283779"
 ## <a name="playing-sounds-in-tvos"></a>TvOS에서 소리 재생
 
 TvOS는 iOS와 동일한 오디오 도구 상자 클래스를 지원 하기 때문에 tvOS 앱에서 오디오를 재생 하는 방법에 대 한 자세한 내용은 [Avaudio player를 사용 하](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) 는 ios 재생 문서를 참조 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

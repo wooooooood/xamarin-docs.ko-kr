@@ -7,31 +7,30 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: 65f7c6d8a573501ffec4aa1b8eaf28ff1e6479e8
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: c175c533e437736849eac6be1f4a90a783123812
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864231"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757144"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>내 Android Resource.designer.cs 파일이 업데이트되지 않습니다.
 
 > [!NOTE]
-> Xamarin Studio 5.1.4 및 이상 버전에서이 문제가 해결 되었습니다. 그러나 Mac 용 Visual Studio에서 문제가 발생 하는 경우를 보내주세요를 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 정보 및 전체 빌드 로그 출력 전체 버전을 사용 하 여 합니다.
+> 이 문제는 Xamarin Studio 5.1.4 이상 버전에서 해결 되었습니다. 그러나 Mac용 Visual Studio에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
 
-Xamarin.Studio 5.1의 버그는 이전에 부분적으로 또는 완전히.csproj 파일의 xml 코드를 삭제 하 여.csproj 파일을 손상입니다. 이 인해 중요 한 부분 Android 빌드 시스템 (예: Android Resource.designer.cs 업데이트)에 실패 합니다. 안정적인 5.1.4 일부 터 7 월 15 일에 릴리스,이 버그가 수정 되었습니다. 하지만 대부분의 프로젝트 파일에 수동으로 아래 설명 된 대로 복구 해야 합니다.
+.Csproj 파일에서 xml 코드를 부분적으로 또는 완전히 삭제 하 여 이전에 손상 된 .csproj 파일의 버그를 5.1 합니다. 이로 인해 android 빌드 시스템의 중요 한 부분 (예: Android Resource.designer.cs 업데이트)이 실패할 수 있습니다. 7 월 15 일에 5.1.4 안정적인 릴리스를 기준으로이 버그가 수정 되었습니다. 하지만 대부분의 경우 아래 설명 된 대로 프로젝트 파일은 수동으로 복구 해야 합니다.
 
+## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>프로젝트 파일을 수정 하는 두 가지 방법을 사용할 수 있습니다.
 
-## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>프로젝트 파일을 수정 하는 다음 두 가지 가능한 방법
+**또는**
 
-**중 하나:**
-
-1. 이전 프로젝트와 일치 프로그램 리소스, 소스 파일 등의 모든 프로젝트에 다시 추가 하는 모든 프로젝트 속성을 설정, 새로운 Xamarin.Android 응용 프로그램 프로젝트를 만듭니다.
+1. 새 Xamarin Android 응용 프로그램 프로젝트를 만들고, 이전 프로젝트와 일치 하도록 모든 프로젝트 속성을 설정 하 고, 모든 리소스, 소스 파일 등을 다시 프로젝트에 추가 합니다.
 
    **OR**
 
-2. 원래 프로젝트의.csproj 파일의 백업 복사본, 텍스트 편집기에서 엽니다 및 완전히 생성 된.csproj 파일에서 누락 된 요소를 다시 추가 합니다.
+2. 원본 프로젝트의 .csproj 파일의 백업 복사본을 만든 다음 텍스트 편집기에서 열고 완전히 생성 된 .csproj 파일에서 누락 된 요소를 다시 추가 합니다.
 
-### <a name="if-this-does-not-solve-the-problem"></a>이 문제가 해결 되지 않는 경우
+### <a name="if-this-does-not-solve-the-problem"></a>그래도 문제가 해결 되지 않으면
 
-이러한 요소를 사용 하 여 실험을 한 후 표시 될 수도 있습니다는 Resource.designer.cs 파일이 업데이트는 다시 요소를 추가 하 고 프로젝트를 다시 빌드한 후 다음 계속 해야를 닫고 다시 인식 코드 완성 기능을 가져오려면 솔루션을 엽니다. Resource.designer.cs에 포함 된 새 형식입니다. 
+이러한 요소를 실험 한 후에는 요소를 다시 추가 하 고 프로젝트를 다시 빌드한 후 Resource.designer.cs 파일이 업데이트 되지만, 코드 완성을 인식 하기 위해 솔루션을 닫았다가 다시 열어야 할 수도 있습니다. Resource.designer.cs에 포함 된 새 형식입니다. 

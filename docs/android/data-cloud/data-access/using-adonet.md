@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 76a66b4dbde65a3fc44d3490e0147ff66b088466
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ff29b51cec6f612f4dac497e75eddba4dbd4c1e2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525973"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754464"
 ---
 # <a name="using-adonet-with-android"></a>Android에서 ADO.NET 사용
 
@@ -30,7 +30,6 @@ ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` �
 ![Mac용 Visual Studio의 Android 참조](using-adonet-images/image5.png "Mac용 Visual Studio의 Android 참조") 
 
 -----
-
 
 참조 > 마우스 오른쪽 단추로 클릭 하 고 참조 **편집** ...을 클릭 하 여 필요한 어셈블리를 선택 합니다.
 
@@ -151,7 +150,6 @@ SQLite는 임의의 SQL 명령을 데이터에 대해 실행할 수 있으므로
 
 - **ExecuteScalar** &ndash; 단일 값 (예: 집계)을 검색 합니다.
 
-
 ### <a name="executenonquery"></a>EXECUTENONQUERY
 
 `INSERT`, `UPDATE` 및`DELETE` 문은 영향을 받는 행의 수를 반환 합니다. 다른 모든 SQL 문은-1을 반환 합니다.
@@ -199,7 +197,6 @@ public static string MoreComplexQuery ()
 
 - **Hasrows** &ndash; 반환 된 행이 있는지 여부를 나타냅니다.
 
-
 ### <a name="executescalar"></a>EXECUTESCALAR
 
 단일 값 ( `SELECT` 예: 집계)을 반환 하는 문에 대해 사용 합니다.
@@ -212,8 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 `ExecuteScalar` 메서드의 반환 `object` 형식은데이터베이스쿼리에따라결과를&ndash; 캐스팅 해야 합니다. 결과는 `COUNT` 쿼리의 정수 이거나 단일 열 `SELECT` 쿼리의 문자열 일 수 있습니다. 이는 판독기 개체 또는 영향을 `Execute` 받는 행 수의 수를 반환 하는 다른 메서드와는 다릅니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: e593a594bbf0fd6398c277d531258f6fded515f1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bc97f14066456a07ee7ce62131985194bbe83811
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282543"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768378"
 ---
 # <a name="web-views-in-xamarinios"></a>Xamarin.ios의 웹 보기
 
@@ -27,9 +27,9 @@ iOS 11에는 `WKWebView` 및에 대 한 `SFSafariViewController`새로운 변경
 `UIWebView`앱에서 웹 콘텐츠를 제공 하는 Apple의 기존 방식입니다. IOS 2.0에 출시 되었으며 8.0부터 사용 되지 않습니다.
 
 8\.0 이전의 iOS 버전을 지원 하려는 경우에는를 사용 `UIWebView`해야 합니다. 다른 방법 `UIWebView` 보다 성능에 최적화 되지 않으므로 사용자의 iOS 버전을 확인 하는 것이 좋습니다. 8\.0 이상이 면 아래 설명 된 옵션 중 하나를 사용 하 여 더 나은 사용자 환경을 만들 수 있습니다.
- 
+
 Xamarin.ios 앱에 UIWebView 보기를 추가 하려면 다음 코드를 사용 합니다.
- 
+
 ```
 webView = new UIWebView (View.Bounds);
 View.AddSubview(webView);
@@ -43,7 +43,6 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 [![](uiwebview-images/webview.png "ScalesPagesToFit의 효과")](uiwebview-images/webview.png#lightbox)
 
 사용 `UIWebView`에 대 한 자세한 내용은 다음 조리법을 참조 하세요.
-
 
 - [웹 페이지 로드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
 - [로컬 콘텐츠 로드](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
@@ -79,11 +78,11 @@ Javascript [경고 처리](https://github.com/xamarin/recipes/tree/master/Recipe
 <a name="safariviewcontroller" />
 
 ## <a name="sfsafariviewcontroller"></a>SFSafariViewController
- 
+
  `SFSafariViewController`는 앱에서 웹 콘텐츠를 제공 하는 최신 방법이 며 iOS 9 이상에서 사용할 수 있습니다. `UIWebView` 또는`WKWebView`와달리 는뷰컨트롤러이므로다른뷰에서`SFSafariViewController` 사용할 수 없습니다. 뷰 컨트롤러를 `SFSafariViewController` 표시 하는 것과 동일한 방식으로 새 뷰 컨트롤러로 표시 되어야 합니다.
- 
+
  `SFSafariViewController`는 기본적으로 앱에 포함할 수 있는 ' 미니 safari '입니다. WKWebView와 마찬가지로 동일한 Nitro Javascript 엔진을 사용 하지만 자동 채우기, 판독기 및 모바일 Safari와 쿠키 및 데이터를 공유 하는 기능과 같은 추가 Safari 기능을 제공 합니다. 사용자와 `SFSafariViewController` 간의 상호 작용은 앱에 액세스할 수 없습니다. 앱은 기본 Safari 기능에 액세스할 수 없습니다.
- 
+
 또한 기본적으로 사용자가 앱으로 쉽게 돌아갈 수 있도록 하 고 사용자가 웹 페이지의 스택을 탐색할 수 있도록 하 여 사용자가 앱으로 쉽게 돌아가 **탐색 단추를 전달 하는 데** 사용할 수 있습니다. 또한 사용자에 게 예상 되는 웹 페이지에 있다는 점에 대 한 평화를 제공 하는 주소 표시줄을 제공 합니다. 주소 표시줄에서 사용자가 url을 변경할 수 없습니다. 
 
 이러한 구현은 변경할 `SFSafariViewController` 수 없으므로 앱이 사용자 지정 없이 웹 페이지를 제공 하려는 경우에는 기본 브라우저로 사용 하는 것이 좋습니다.

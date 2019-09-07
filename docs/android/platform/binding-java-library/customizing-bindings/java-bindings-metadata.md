@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: d6cb1e407740fa4c182639a77e3725baec4286ac
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 046c392709f2c94664120e9fac3f4198e9f50dbf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119849"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756600"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
 _C#Xamarin.ios의 코드는 JNI (Java Native Interface)에 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘인 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.ios는 이러한 바인딩을 생성 하는 도구를 제공 합니다. 개발자는이 도구를 사용 하 여 메타 데이터를 사용 하 여 바인딩을 만드는 방법을 제어할 수 있습니다 .이를 통해 네임 스페이스 수정과 멤버 이름 바꾸기와 같은 절차를 수행할 수 있습니다 이 문서에서는 메타 데이터가 작동 하는 방법을 설명 하 고, 메타 데이터에서 지 원하는 특성을 요약 하 고,이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는_
-
 
 ## <a name="overview"></a>개요
 
@@ -73,7 +72,6 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 
 **메타 데이터** 에 대 한 자세한 내용을 설명 하기 위해 이동 합니다.
 
-
 ## <a name="metadataxml-transform-file"></a>Metadata .xml 변환 파일
 
 이미 학습 한 대로 바인딩 생성기에서 파일 **메타 데이터** 를 사용 하 여 바인딩 어셈블리 생성에 영향을 줍니다.
@@ -111,8 +109,6 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 
 - `parameter`&ndash; 메서드에 대 한 매개 변수를 식별 합니다. 예: `/parameter[@name='p0']`
 
-
-
 ### <a name="adding-types"></a>형식 추가
 
 요소 `add-node` 는 xamarin.ios 바인딩 프로젝트에 새 래퍼 클래스를 **api .xml**에 추가 하도록 지시 합니다. 예를 들어 다음 코드 조각에서는 생성자와 단일 필드를 사용 하 여 클래스를 만들도록 바인딩 생성기에 지시 합니다.
@@ -125,7 +121,6 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
     </class>
 </add-node>
 ```
-
 
 ### <a name="removing-types"></a>형식 제거
 
@@ -180,15 +175,13 @@ NavigationManager.2DSignNextManueverEventArgs
 ```
 
 올바른 C# 클래스 이름이 아닙니다. 이 문제를 해결 하려면 바인딩 작성자는 `argsType` 특성을 사용 하 고 `EventArgs` 하위 클래스에 C# 대 한 올바른 이름을 제공 해야 합니다.
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
     method[@name='on2DSignNextManeuver']" 
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
-
- 
 
 ## <a name="supported-attributes"></a>지원 되는 특성
 
@@ -339,12 +332,9 @@ Android 라이브러리가 정수 상수를 사용 하 여 라이브러리의 �
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin Android에서 메타 데이터를 사용 하 여 *Google* *AOSP 형식의*API 정의를 변환 하는 방법을 설명 했습니다. *Metadata .xml*을 사용 하 여 가능한 변경 내용을 적용 한 후에는 멤버 이름을 바꿀 때 발생 하는 제한 사항을 검사 하 고 각 특성을 사용 해야 하는 경우를 설명 하는 지원 되는 xml 특성 목록을 제공 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 
