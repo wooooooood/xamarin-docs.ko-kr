@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c81cc7ff176ab4863498a03169a2c6a3711a0ded
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b505f4a4f7a8f50a6044d01a327eef76a7b1ce3b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525100"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758043"
 ---
 |속성|설명|옵션|
 |--- |--- |--- |
@@ -65,4 +65,3 @@ ms.locfileid: "69525100"
 |`skin.name`|**스킨 이름** &ndash; Android Emulator 스킨의 이름입니다. 스킨은 에뮬레이터 디스플레이의 시각적 개체 요소 및 컨트롤 요소를 정의하는 파일의 모음입니다. 개발 컴퓨터에 표시되는 AVD 창의 모양을 설명합니다. 스킨은 화면 크기, 단추 및 전체 디자인을 설명하지만 앱 작동에는 영향을 주지 않습니다.||
 |`skin.path`|**스킨 경로** &ndash; skin.name에 지정된 에뮬레이터 스킨 파일이 포함된 디렉터리 경로입니다. 이 디렉터리에는 hardware.ini 레이아웃 파일 및 스킨의 표시 요소 이미지 파일이 포함되어 있습니다.||
 |`skin.dynamic`|**동적 스킨** &ndash; 동적 스킨인지의 여부입니다. 에뮬레이터에서 지정된 너비와 높이에 따라 지정된 크기의 스킨을 생성하는 경우 에뮬레이터 스킨은 동적 스킨입니다.|no|
-
