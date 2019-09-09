@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 638840bafd43961cdce6ebe0fa2fb6cbe8b33e16
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 960be485f6997ed8c861d47181fa89397cff9c0a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291527"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753144"
 ---
 # <a name="eventkit-in-xamarinios"></a>Xamarin.ios의 EventKit
 
@@ -24,7 +24,6 @@ EventKit 프레임 워크는 일정 데이터베이스에서 저장 하는 일�
 
 - **Eventkit 기본 사항** – 주요 클래스를 통해 기본 제공 되는 eventkit를 소개 하 고 사용법을 이해 합니다. 이 섹션은 문서의 다음 부분을 주요 당면 하기 전에 읽어야 합니다. 
 - **일반 작업** – 일반 작업 섹션은와 같은 일반적인 작업을 수행 하는 방법에 대 한 빠른 참조를 제공 하기 위한 것입니다. 캘린더 이벤트를 만들고 수정 하는 데 기본 제공 컨트롤러를 사용 하는 것 뿐만 아니라 달력 열거, 일정 이벤트와 미리 알림 만들기, 저장 및 검색 이 섹션은 특정 작업에 대 한 참조 이므로 앞으로 읽기가 필요 하지 않습니다. 
-
 
 이 가이드의 모든 태스크는 부록 샘플 응용 프로그램에서 사용할 수 있습니다.
 
@@ -376,7 +375,6 @@ App.Current.EventStore.FetchReminders (
 ## <a name="summary"></a>요약
 
 이 문서는 EventKit 프레임 워크의 중요 한 부분과 가장 일반적인 몇 가지 작업에 대 한 개요를 제공 했습니다. 그러나 EventKit 프레임 워크는 매우 크고 강력 하며 여기에 소개 되지 않은 기능 (예: batch 업데이트, 경보 구성, 이벤트에 대 한 되풀이 구성, 일정 데이터베이스의 변경 내용 등록 및 수신 대기)을 포함 합니다. 지역 구분 등을 설정 합니다.  자세한 내용은 Apple의 [일정 및 미리 알림 프로그래밍 가이드](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)를 참조 하세요.
-
 
 ## <a name="related-links"></a>관련 링크
 

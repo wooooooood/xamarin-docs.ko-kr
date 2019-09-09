@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 2bd704b17f5aff1b4d3f2da1813d1eb19ef29e59
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
+ms.openlocfilehash: d6c9b74c9abc1a2c493c31699b52969a7d129429
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620677"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760206"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>모델 뷰-ViewModel 패턴
 
@@ -363,7 +363,6 @@ public class EventToCommandBehavior : BindableBehavior<View>
 MVVM (모델-뷰-ViewModel) 패턴은 응용 프로그램의 비즈니스 및 프레젠테이션 논리를 UI (사용자 인터페이스)와 완전히 분리 하는 데 도움이 됩니다. 응용 프로그램 논리와 UI를 명확 하 게 분리 하면 수많은 개발 문제를 해결 하 고 응용 프로그램을 더 쉽게 테스트 하 고 유지 관리 하 고 진화 시킬 수 있습니다. 또한 코드 다시 사용 기회를 크게 향상 시킬 수 있으며, 개발자와 UI 디자이너는 앱의 각 부분을 개발할 때 더 쉽게 공동 작업을 수행할 수 있습니다.
 
 MVVM 패턴을 사용 하 여 앱의 UI와 기본 프레젠테이션 및 비즈니스 논리는 세 개의 개별 클래스로 구분 됩니다. 뷰는 UI와 UI 논리를 캡슐화 합니다. 프레젠테이션 논리 및 상태를 캡슐화 하는 뷰 모델 그리고 모델은 앱의 비즈니스 논리 및 데이터를 캡슐화 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

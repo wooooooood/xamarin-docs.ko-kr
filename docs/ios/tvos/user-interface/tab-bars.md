@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 799dd40caae0323b71cae2c6715bf8cd16f78356
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: df19dcf542bd3a62a696c0d7d533b4e14390336e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283972"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769001"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Xamarin에서 tvOS 탭 모음 컨트롤러 작업
 
@@ -121,7 +121,6 @@ TvOS 앱에서 탭 모음을 작업 하는 가장 쉬운 방법은 iOS Designer�
 
 의 속성을 사용`UITabBarItems` 하 여이 컬렉션에 포함 된 컬렉션에 액세스 합니다 (0). `UITabBar` `Items` 이 `SelectedItem` 속성은 현재 선택 된 탭 (범주) `UITabBarItem`을으로 반환 합니다.
 
-
 <a name="Working-with-Tab-Bar-Items" />
 
 ## <a name="working-with-tab-bar-items"></a>탭 모음 항목 작업
@@ -144,9 +143,6 @@ TabBar.Items [2].BadgeValue = "10";
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱 내에서 탭 모음 컨트롤러를 디자인 하 고 사용 하는 방법에 대해 설명 했습니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

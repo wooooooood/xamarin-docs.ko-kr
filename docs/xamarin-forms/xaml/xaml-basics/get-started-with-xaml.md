@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 14f7692c88f5047f1250707940e3871371aecc8b
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: fde0a5145f82e75fd6d75280c1cd2230f35a4c29
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70227960"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772809"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1장. XAML 시작하기
 
@@ -448,8 +448,6 @@ public partial class XamlPlusCodePage : ContentPage {
 ## <a name="summary"></a>요약
 
 이 소개 글로 XAML 파일과 코드 파일이 클래스 정의에 어떻게 기여하는지, 그리고 XAML 및 코드 파일이 상호 작용하는 방식을 살펴보았습니다. 하지만 XAML에는 매우 유연한 방식으로 사용할 수 있는 자체적인 고유 구문 기능이 있습니다. [2장. 필수 XAML 구문 ](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)에서 해당 내용을 살펴볼 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

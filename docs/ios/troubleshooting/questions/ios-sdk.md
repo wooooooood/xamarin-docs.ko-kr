@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 22bc1184bba93ac03be55db4f948603b6fbfc718
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7ef5a693adac7e81474a473d4dadd14b939378fc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291082"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769303"
 ---
 # <a name="where-can-i-set-my-ios-sdk-locations"></a>IOS SDK 위치는 어디에서 설정할 수 있나요?
 
@@ -30,4 +30,3 @@ Xcode (Apple SDK &)는 위치 상자를 비워 둘 때 기본 위치를 갖게 �
 
 - Xcode`/Applications/Xcode.app`
 - Xamarin.ios (Mac용 Visual Studio):`/Library/Frameworks/Xamarin.iOS.framework/Versions/Current`
-

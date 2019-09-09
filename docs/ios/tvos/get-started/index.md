@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2016
-ms.openlocfilehash: 0e8e8a119d619faee25a44b0462df4ac08e909b2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ebdbbfd0e8195f35755cb849129452fe40f82950
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291596"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769166"
 ---
 # <a name="getting-started-with-tvos-in-xamarin"></a>Xamarin에서 tvOS 시작 하기
 
@@ -25,7 +25,6 @@ Xamarin을 사용 하 여 tvOS apps를 빌드하려면 tvOS 11 및 watchOS 4를 
 ## <a name="hello-tvos-quick-start-guideiostvosget-startedhello-tvosmd"></a>[tvOS 빠른 시작 가이드 시작](~/ios/tvos/get-started/hello-tvos.md)
 
 이 문서에서는 간단한 "Hello, tvOS" 앱을 만들어 tvOS 용 앱을 신속 하 게 개발할 수 있습니다. TvOS 장치 프로 비전, 인터페이스 생성, tvOS에 대 한 코딩, tvOS 시뮬레이터 및 실제 tvOS 하드웨어에서의 테스트에 대 한 기본 사항을 다룹니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

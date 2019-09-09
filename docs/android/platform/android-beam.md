@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 83fa64ca207358b712341e1923a3a9a67a449e1f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 4d294b7aee9d4a6c2118a5ff12968a7f95fb981c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757866"
 ---
 # <a name="android-beam"></a>Android Beam
 
@@ -27,9 +27,7 @@ Android는 Android 빔을 사용 하 여 메시지를 설정 하는 두 가지 �
 
 - `SetNdefPushMessageCallback`-Android 빔이 시작 되 면 응용 프로그램은 콜백을 처리 하 여 NdefMessage를 만들 수 있습니다. 이 메커니즘을 사용 하면 장치가 범위 내에 있을 때까지 메시지를 만들 수 있습니다. 응용 프로그램에서 발생 하는 상황에 따라 메시지가 달라질 수 있는 시나리오를 지원 합니다.
 
-
 두 경우 모두 Android 빔를 사용 하 여 데이터를 전송 하기 위해 응용 `NdefMessage`프로그램은를 전송 하 고 `NdefRecords`데이터를 여러 패키지로 패키지화 합니다. Android 보를 트리거하기 전에 해결 해야 하는 주요 요소에 대해 살펴보겠습니다. 먼저를 만드는 `NdefMessage`콜백 스타일을 사용 합니다.
-
 
 ## <a name="creating-a-message"></a>메시지 만들기
 
@@ -65,7 +63,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## <a name="receiving-a-message"></a>메시지 받기
 
 받는 쪽에서 시스템은 다음과 같이 ndefmessage를 추출할 `ActionNdefDiscovered` 수 있는 작업을 사용 하 여 의도를 호출 합니다.
@@ -78,8 +75,6 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 아래 스크린샷에서 실행 되는 Android 보를 사용 하는 전체 코드 예제는 샘플 갤러리의 [Android 빔 데모](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) 를 참조 하세요.
 
 [![Android 빔 데모의 예제 스크린샷](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
-
-
 
 ## <a name="related-links"></a>관련 링크
 

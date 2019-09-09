@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/05/2017
-ms.openlocfilehash: a5dea7358e48ebb1961c1fa3253ad096d041c0cf
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 936c5b91a27fed1c00f3cf0c61d0184d5532c25a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279689"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753081"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Xamarin.ios의 예외 마샬링
 
@@ -330,7 +330,6 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 목표-C 예외를 catch 하려고 할 `objc_msgSend` 때 함수 제품군에 대 한 P/invoke만 가로챕니다. 즉, 모든 목표-C 예외를 throw 하는 다른 C 함수에 대 한 P/Invoke는 여전히 이전 및 정의 되지 않은 동작으로 실행 됩니다 .이는 나중에 향상 될 수 있습니다.
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: fdf675e37bec07ef03576313befbaa9309ab9349
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b84150c8fdca04a9b21c28d126d221d2a9bc5a3f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291582"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769260"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>TvOS 탐색 및 Xamarin에서 포커스 사용
 
 _이 문서에서는 tvOS 앱 내부에서의 탐색을 제공 하 고 처리 하는 데 중점의 개념과 사용 방법을 설명 합니다._
-
 
 이 문서에서는 tvOS 앱의 사용자 인터페이스에서 [탐색](#Navigation) 을 처리 하는 데 [중점](#Focus-and-Selection) 의 개념과이를 사용 하는 방법을 설명 합니다. 기본 제공 tvOS 탐색 컨트롤이 포커스, 강조 표시 및 선택 항목을 사용 하 여 tvOS 앱의 사용자 인터페이스 탐색을 제공 하는 방법을 살펴보겠습니다.
 
@@ -125,9 +124,6 @@ playButton.PreferredFocusedView = true;
 > [!IMPORTANT]
 > 호출 `SetNeedsUpdateFocus` 중인 뷰 컨트롤러에 현재 포커스가 있는 뷰가 포함 된 경우에만를 호출 하면 효과가 있습니다.
 
-
-
-
 <a name="Working-with-Focus-Guides" />
 
 ### <a name="working-with-focus-guides"></a>포커스 가이드 작업
@@ -139,7 +135,7 @@ TvOS에 기본 제공 되는 포커스 엔진은 가로 및 세로 모눈에 속
 예를 들어 다음 UI 레이아웃을 사용 합니다.
 
  [![](navigation-focus-images/guide01.png "포커스 가이드 작업 예제")](navigation-focus-images/guide01.png#lightbox)
- 
+
 **추가 정보** 단추는 **구매** 단추를 사용 하 여 가로 및 세로 모눈에 속하지 않으므로 사용자는 액세스할 수 없습니다. 그러나 포커스 엔진에 이동 힌트를 제공 하기 위해 _포커스 가이드_ 를 사용 하 여 쉽게 수정할 수 있습니다. 
 
 포커스 가이드 (`UIFocusGuide`)는 포커스 엔진에 포커스를 이동할 수 있는 뷰의 보이지 않는 영역을 노출 하므로 포커스를 다른 뷰로 리디렉션할 수 있습니다.
@@ -208,7 +204,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 첫째,이 코드는 ( `NextFocusedView` `context`)에 전달 `UIFocusUpdateContext` 된의을 가져옵니다. 이 뷰가 `null`이면 처리가 필요 하지 않으며 메서드가 종료 됩니다.
 
-그런 다음이 평가 됩니다. `nextFocusableItem` **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 `PreferredFocusedView` 속성을 사용 하 여 반대 단추에 포커스를 보냅니다. 예를 들어:
+그런 다음이 평가 됩니다. `nextFocusableItem` **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 `PreferredFocusedView` 속성을 사용 하 여 반대 단추에 포커스를 보냅니다. 예:
 
 ```csharp
 // Move from the More Info to Buy button
@@ -277,9 +273,6 @@ myImageView.AdjustsImageWhenAncestorFocused = true;
 ## <a name="summary"></a>요약
 
 이 문서에서는 tvOS 앱의 사용자 인터페이스에서 탐색을 처리 하는 데 사용 되는 방법 및 포커스의 개념에 대해 설명 했습니다. 기본 제공 tvOS 탐색 컨트롤이 포커스, 강조 표시 및 선택 영역을 사용 하 여 탐색을 제공 하는 방법을 검토 합니다. 다음으로, 시차 및 계층화 된 이미지에서 포커스를 사용 하 여 최종 사용자에 게 현재 탐색 상태를 시각적으로 파악할 수 있는 방법을 살펴보았습니다. 마지막으로, 포커스, 포커스 업데이트, 컬렉션에 포커스를 사용 하 고 시차를 사용 하도록 설정 하는 작업을 검사 했습니다.
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

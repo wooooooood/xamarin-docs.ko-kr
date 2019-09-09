@@ -7,12 +7,12 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: c6a600b7ae05df626d4315796c7a5e425639e2f8
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 60f09b2e60708df6b1e6b68be7ce0792bc8cd9b0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652793"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759192"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
@@ -534,7 +534,6 @@ public class AnimatedRotation3DPage : ContentPage
 회전 중심을 화면의 센터로 이동 하 고 화면와 동일한 너비가 되도록 텍스트 문자열의 크기를 조정할 몇 가지 2D 변환을 사용 하 여이 3D 회전 묶 였는:
 
 [![](3d-rotation-images/animatedrotation3d-small.png "삼중 애니메이션 회전 3D 페이지 스크린샷")](3d-rotation-images/animatedrotation3d-large.png#lightbox "삼중 애니메이션 회전 3D 페이지 스크린샷")
-
 
 ## <a name="related-links"></a>관련 링크
 

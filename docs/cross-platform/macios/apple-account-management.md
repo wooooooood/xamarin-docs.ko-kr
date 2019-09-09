@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 9629d775b45951279178dffa3600e7cd5073dd38
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290625"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766131"
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -55,7 +55,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
     ![fastlane 대화 상자.](apple-account-management-images/image2.png)
 
 3. Apple ID와 암호를 입력 하 고 **로그인** 단추를 클릭 합니다. 그러면이 컴퓨터의 보안 키 집합에 자격 증명이 저장 됩니다. [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) 은 자격 증명을 안전 하 게 처리 하 고 Apple의 개발자 포털에 전달 하는 데 사용 됩니다.
- 
+
 4. 경고 대화 상자에서 **항상 허용** 을 선택 하 여 Visual Studio에서 자격 증명을 사용할 수 있도록 합니다.
 
     ![경고 항상 허용 대화 상자](apple-account-management-images/image4.png)
@@ -81,13 +81,12 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
     ![사용자 이름 및 암호 대화 상자](apple-account-management-images/prov1a.png)
 
 1. 계정이 성공적으로 추가 되 면 apple id 및 Apple ID가 포함 된 모든 팀이 표시 됩니다.
- 
+
 1. 팀을 선택 하 고 **세부 정보 보기** ...를 누릅니다. 단추를 선택합니다. 컴퓨터에 설치 된 모든 서명 Id 및 프로 비전 프로필의 목록이 표시 됩니다.
 
     ![사용자 이름 및 암호 대화 상자](apple-account-management-images/prov2.png)
 
 -----
-
 
 ## <a name="managing-signing-identities-and-provisioning-profiles"></a>서명 Id 및 프로 비전 프로필 관리
 

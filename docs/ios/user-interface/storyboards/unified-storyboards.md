@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: cf3a3f6638547acf8d22854b6d8a32622c304932
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 07a61eb9d0c16f82d6c367cefc9e3050ca8dfc25
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280857"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768827"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.ios의 통합 스토리 보드
 
@@ -31,7 +31,6 @@ IOS 8 이전에는 개발자가 및 `UIInterfaceOrientation` `UIInterfaceIdiom` 
 - **Regular** – 큰 화면 크기 (예: iPad) 또는 큰 크기의 느낌을 제공 하는 가젯 (예:`UIScrollView`
 - **Compact** – 작은 장치 (예: iPhone)에 대 한 것입니다. 이 크기는 장치의 방향을 고려 합니다.
 
-
 두 가지 개념을 함께 사용 하는 경우 결과는 다음 다이어그램에 표시 된 것 처럼 서로 다른 방향으로 사용할 수 있는 다양 한 크기를 정의 하는 2 x 2 그리드입니다.
 
  [![](unified-storyboards-images/sizeclassgrid.png "일반 및 컴팩트 방향에서 사용할 수 있는 여러 가지 가능한 크기를 정의 하는 2 x 2 표")](unified-storyboards-images/sizeclassgrid.png#lightbox)
@@ -43,7 +42,6 @@ IOS 8 이전에는 개발자가 및 `UIInterfaceOrientation` `UIInterfaceIdiom` 
 크기 때문에 iPad는 양쪽 방향에 대 한 **일반** 클래스 크기를 가집니다.
 
  [![](unified-storyboards-images/image1.png "iPad 크기 클래스")](unified-storyboards-images/image1.png#lightbox)
-
 
 ### <a name="iphone-size-classes"></a>iPhone 크기 클래스
 
@@ -97,7 +95,6 @@ IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래�
 - 뷰 컨트롤러 ( `UIViewController` )
 - Views ( `UIView` ).
 - 프레젠테이션 컨트롤러 ( `UIPresentationController` )
-
 
 개발자는 성분 환경에서 반환 된 특성 컬렉션을 사용 하 여 사용자 인터페이스의 레이아웃을 지정 하는 방법을 결정 합니다.
 
@@ -234,14 +231,12 @@ iOS 8은 다음 표와 같이 개발자가 특성 변경에 참여 하는 데 �
 - 기본적으로 분할 뷰 컨트롤러는 축소 발생 후 기본 뷰 컨트롤러를 뷰로 사용 합니다. 개발자는 `GetPrimaryViewControllerForCollapsingSplitViewController` `UISplitViewControllerDelegate` 의 메서드를 재정의 하 고 축소 된 상태로 표시 하려는 뷰 컨트롤러를 제공 하 여이 동작을 재정의할 수 있습니다.
 - 보조 뷰 컨트롤러를 기본 뷰 컨트롤러에 병합 해야 합니다. 일반적으로 개발자는이 단계에서 어떤 작업도 수행할 필요가 없습니다. 분할 뷰 컨트롤러에는 하드웨어 장치에 따라이 단계를 자동으로 처리 하는 작업이 포함 됩니다. 그러나 개발자가이 변경과 상호 작용 하는 특별 한 경우가 있을 수 있습니다. 의 메서드 `CollapseSecondViewController` 를 호출 하면축소가수행될때자세히보기대신마스터뷰컨트롤러를표시할수있습니다.`UISplitViewControllerDelegate`
 
-
 ### <a name="expanding-the-split-view-controller"></a>분할 뷰 컨트롤러 확장
 
 이제 분할 뷰 컨트롤러가 축소 된 상태에서 확장 될 때 발생 하는 상황을 자세히 살펴보겠습니다. 다시 한 번 수행 해야 하는 두 단계가 있습니다.
 
 - 먼저 새 기본 뷰 컨트롤러를 정의 합니다. 기본적으로 분할 뷰 컨트롤러는 축소 된 보기에서 기본 뷰 컨트롤러를 자동으로 사용 합니다. 또한 개발자는 `GetPrimaryViewControllerForExpandingSplitViewController` `UISplitViewControllerDelegate` 의 메서드를 사용 하 여이 동작을 재정의할 수 있습니다.
 - 기본 뷰 컨트롤러를 선택한 후에는 보조 뷰 컨트롤러를 다시 만들어야 합니다. 다시, 분할 보기 컨트롤러에는 하드웨어 장치에 따라이 단계를 자동으로 처리 하는 작업이 포함 됩니다. 개발자는 `SeparateSecondaryViewController` `UISplitViewControllerDelegate` 의 메서드를 호출 하 여이 동작을 재정의할 수 있습니다.
-
 
 분할 뷰 컨트롤러에서 기본 뷰 컨트롤러는의 `CollapseSecondViewController` `UISplitViewControllerDelegate`및 `SeparateSecondaryViewController` 메서드를 구현 하 여 뷰의 확장 및 축소 둘 다에서 파트를 재생 합니다. `UINavigationController`는 이러한 메서드를 구현 하 여 보조 뷰 컨트롤러를 자동으로 푸시 및 팝 합니다.
 
@@ -253,7 +248,6 @@ Apple에서 iOS 8을 변경 하는 또 다른 변경 내용은 개발자가 보�
 
 - `ShowViewController`– 환경을 기반으로 새 뷰 컨트롤러를 표시 하도록 조정 합니다. 예를 들어, `UINavigationController` 에서는 단순히 새 뷰를 스택에 푸시합니다. 분할 뷰 컨트롤러에서 새 뷰 컨트롤러는 새 기본 뷰 컨트롤러로 왼쪽에 표시 됩니다. 컨테이너 뷰 컨트롤러가 없는 경우 새 보기가 모달 뷰 컨트롤러로 표시 됩니다.
 - `ShowDetailViewController`–와 비슷한 방식 `ShowViewController`으로 작동 하지만, 분할 뷰 컨트롤러에서 구현 되어 세부 정보 보기를 전달 되는 새 뷰 컨트롤러로 바꿉니다. IPhone 응용 프로그램에서 볼 수 있는 것 처럼 분할 뷰 컨트롤러를 축소 하면 호출이 `ShowViewController` 메서드로 리디렉션되고 새 뷰가 기본 뷰 컨트롤러로 표시 됩니다. 컨테이너 뷰 컨트롤러가 없는 경우에도 새 보기가 모달 뷰 컨트롤러로 표시 됩니다.
-
 
 이러한 메서드는 리프 뷰 컨트롤러에서 시작 하 고 새 뷰의 표시를 처리할 올바른 컨테이너 뷰 컨트롤러를 찾을 때까지 뷰 계층 구조를 탐색 하는 방식으로 작동 합니다.
 
@@ -269,7 +263,6 @@ Apple에서 iOS 8을 변경 하는 또 다른 변경 내용은 개발자가 보�
 
 1. `ShowViewController` 메서드가 호출 되 면이 메서드를 구현 하는 체인의 첫 번째 뷰 컨트롤러가 탐색 컨트롤러 이므로 새 뷰의 부모로 사용 됩니다.
 1. `ShowDetailViewController` 대신 메서드를 호출한 경우 분할 뷰 컨트롤러는이를 구현 하기 위한 첫 번째 뷰 컨트롤러 이므로 부모로 사용 됩니다.
-
 
 메서드 `GetTargetForAction` 는 지정 된 동작을 구현 하는 뷰 컨트롤러를 찾은 다음 해당 작업을 받으려는 경우 해당 뷰 컨트롤러를 요청 하는 방식으로 작동 합니다. 이 메서드는 공용 이므로 개발자는 기본 제공 `ShowViewController` 및 `ShowDetailViewController` 메서드와 동일한 방식으로 작동 하는 고유한 사용자 지정 메서드를 만들 수 있습니다.
 
@@ -690,7 +683,6 @@ IPhone 시뮬레이터에서 응용 프로그램을 실행 하는 경우 요소�
 모든 기존 iphone 및 iPad 장치에서 새로운 iphone 6 및 iPhone 6 Plus 장치와 장치 (및 예정 된 Apple Watch)를 구분 하는 것은 다양 한 크기, 방향 및 `Default.png` 시작 화면 이미지 자산의 해상도의 해상도를 나타냅니다. 만들고 유지 관리 해야 합니다. 또한 이러한 파일은 매우 클 수 있으며, iTunes 앱 스토어에서 응용 프로그램을 다운로드 하는 데 필요한 시간을 증가 시켜 서 앱 번들을 "확장" 합니다 (셀룰러 네트워크를 통해 전달 되지 않도록 할 수 있음). 최종 사용자의 장치에 필요한 저장소 용량을 늘립니다.
 
 IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래스를 `.xib` 사용 하 여 모든 장치, 해상도 및 방향에 대해 작동 하는 *동적 시작 화면* 을 만드는 Xcode에서 단일 원자성 파일을 만들 수 있습니다. 이렇게 하면 개발자가 필요한 모든 이미지 자산을 만들고 유지 관리 하는 데 필요한 작업량을 줄일 수 있을 뿐만 아니라 응용 프로그램의 설치 된 번들 크기를 크게 줄일 수 있습니다.
-
 
 동적 시작 화면에는 다음과 같은 제한 사항이 있습니다.
 

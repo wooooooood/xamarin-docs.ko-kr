@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: ae909827df5cc8f4ed5192d88ad067a5e69ce5d4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 29483ca184786f8f0d2a7d0d9345608542d30e61
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282856"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768852"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.ios의 컬렉션 뷰
 
@@ -43,7 +43,6 @@ iOS는 추가 작업 없이 그리드 `UICollectionViewFlowLayout` 와 같은 �
 - `ContentView`–이 보기에는 셀에 표시 되는 내용이 포함 됩니다. 화면의 맨 위 z 순서에서 렌더링 됩니다.
 - `SelectedBackgroundView`– 셀에는 기본적으로 선택이 지원 됩니다. 이 보기는 셀이 선택 되어 있음을 시각적으로 나타내는 데 사용 됩니다. 셀이 선택 될 때 바로 `ContentView` 아래에 렌더링 됩니다.
 - `BackgroundView`– 셀은에서 `BackgroundView` 제공 하는 배경을 표시할 수도 있습니다. 이 뷰는 아래에 `SelectedBackgroundView` 렌더링 됩니다.
-
 
 `ContentView` 이러한 값을 `BackgroundView` 및 `SelectedBackgroundView` 보다작게설정하면`SelectedBackgroundView` 를 사용 하 여 콘텐츠를 시각적으로 프레임으로 지정할수있습니다.반면에는아래와같이셀이선택될때표시됩니다.`BackgroundView`
 
@@ -85,7 +84,6 @@ public class AnimalCell : UICollectionViewCell
 
  <a name="Supplementary_Views" />
 
-
 ## <a name="supplementary-views"></a>보조 뷰
 
 보조 보기는의 `UICollectionView`각 섹션과 관련 된 정보를 표시 하는 보기입니다. 셀과 마찬가지로 보조 뷰도 데이터를 기반으로 합니다. 셀에서 데이터 원본의 항목 데이터를 제공 하는 경우 보충 보기는 bookshelf의 책 범주 또는 음악 라이브러리의 음악 장르와 같은 섹션 데이터를 제공 합니다.
@@ -117,7 +115,6 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
 
  <a name="Decoration_Views" />
 
-
 ## <a name="decoration-views"></a>장식 뷰
 
 장식 보기는에 `UICollectionView`표시 될 수 있는 전적으로 시각적 뷰입니다. 셀 및 보충 뷰와 달리 데이터를 기반으로 하지 않습니다. 이러한 항목은 항상 레이아웃의 하위 클래스 내에 생성 되며, 이후에 콘텐츠의 레이아웃으로 변경 될 수 있습니다. 예를 들어 다음과 같이 데코레이션 뷰를 사용 하 여의 콘텐츠로 `UICollectionView`스크롤되는 배경 뷰를 표시할 수 있습니다.
@@ -136,7 +133,6 @@ public override UICollectionReusableView GetViewForSupplementaryElement (UIColle
     }
   }
  ```
-
 
 ## <a name="data-source"></a>데이터 원본
 
@@ -188,7 +184,6 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 
  <a name="Delegate" />
 
-
 ### <a name="delegate"></a>대리자
 
 클래스 `UICollectionView` 는 형식의 `UICollectionViewDelegate` 대리자를 사용 하 여의 콘텐츠와의 `UICollectionView`상호 작용을 지원 합니다. 이렇게 하면 다음을 제어할 수 있습니다.
@@ -197,11 +192,9 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 - **셀 강조 표시** – 셀이 현재 작업 중인지 확인 합니다.
 - **셀 메뉴** – 긴 누름 제스처에 대 한 응답으로 셀에 대해 표시 되는 메뉴입니다.
 
-
 데이터 소스 `UICollectionViewController` 와 마찬가지로은 기본적으로에 `UICollectionView`대 한 대리자로 구성 됩니다.
 
  <a name="Cell_HighLighting" />
-
 
 #### <a name="cell-highlighting"></a>셀 강조 표시
 
@@ -227,7 +220,6 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
  <a name="Disabling_Selection" />
 
-
 #### <a name="disabling-selection"></a>선택 영역을 사용 하지 않도록 설정
 
 에서 `UICollectionView`선택은 기본적으로 사용 하도록 설정 되어 있습니다. 선택을 사용 하지 않도록 설정 `ShouldHighlightItem` 하려면 아래와 같이를 재정의 하 고 false를 반환 합니다.
@@ -245,7 +237,6 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
  <a name="Cell_Menus" />
 
-
 #### <a name="cell-menus"></a>셀 메뉴
 
 의 각 셀 `UICollectionView` 은 선택적으로 지원 되는 잘라내기, 복사 및 붙여넣기를 허용 하는 메뉴를 표시할 수 있습니다. 셀에 대 한 편집 메뉴를 만들려면 다음을 수행 합니다.
@@ -254,13 +245,11 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 1. 항목 `CanPerformAction` 에서 수행할 수 있는 모든 작업 (잘라내기, 복사 또는 붙여넣기)에 대해 true를 재정의 하 고 반환 합니다.
 1. 붙여넣기 `PerformAction` 작업의 편집, 복사를 수행 하려면를 재정의 합니다.
 
-
 다음 스크린샷은 셀을 길게 누르면 표시 되는 메뉴를 보여 줍니다.
 
  [![](uicollectionview-images/04a-menu.png "이 스크린샷은 셀을 길게 누르면 표시 되는 메뉴를 보여 줍니다.")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
-
 
 ## <a name="layout"></a>레이아웃
 
@@ -269,7 +258,6 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
  <a name="Layout_Basics" />
 
-
 ### <a name="layout-basics"></a>레이아웃 기본 사항
 
 의 `UICollectionView` 레이아웃은에서 `UICollectionViewLayout`상속 되는 클래스에서 정의 됩니다. 레이아웃 구현은의 모든 항목 `UICollectionView`에 대 한 레이아웃 특성을 만드는 역할을 합니다. 다음 두 가지 방법으로 레이아웃을 만들 수 있습니다.
@@ -277,9 +265,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 - 기본 제공 `UICollectionViewFlowLayout` 을 사용 합니다.
 - 에서 `UICollectionViewLayout` 상속 하 여 사용자 지정 레이아웃을 제공 합니다.
 
-
  <a name="Flow_Layout" />
-
 
 ### <a name="flow-layout"></a>선형 레이아웃
 
@@ -289,13 +275,11 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 - 다음의 `UICollectionViewFlowLayout` 인스턴스를 만듭니다.
 
-
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
 - 인스턴스를의 `UICollectionView` 생성자에 전달 합니다.
-
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
@@ -306,7 +290,6 @@ simpleCollectionViewController = new SimpleCollectionViewController (layout);
  [![](uicollectionview-images/05-layout-orientation.png "방향 변경의 예")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
-
 
 #### <a name="section-inset"></a>섹션 인세트
 
@@ -323,7 +306,6 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
-
 #### <a name="subclassing-uicollectionviewflowlayout"></a>UICollectionViewFlowLayout 하위 클래스
 
 Edition에서 직접를 `UICollectionViewFlowLayout` 사용 하는 경우에는 줄을 따라 콘텐츠의 레이아웃을 추가로 사용자 지정 하기 위해 서브클래싱 할 수도 있습니다. 예를 들어이를 사용 하 여 셀을 그리드로 줄 바꿈하지 않는 레이아웃을 만들 수 있습니다. 대신 아래와 같이 가로 스크롤 효과가 있는 단일 행을 만듭니다.
@@ -336,7 +318,6 @@ Edition에서 직접를 `UICollectionViewFlowLayout` 사용 하는 경우에는 
 - 를 `ShouldInvalidateLayoutForBoundsChange` 재정의 하 여 `UICollectionView` 의 범위가 변경 될 때 셀 레이아웃이 다시 계산 되도록 true를 반환 합니다. 이 경우에는 가운데 대부분 셀에 적용 되는 변환에 대 한 코드가 스크롤 중에 적용 되도록 합니다.
 - 를 `TargetContentOffset` 재정의 하면 스크롤이 중지 `UICollectionView` 될 때 대부분의 셀 가운데 맞춤을 설정 합니다.
 - 를 `LayoutAttributesForElementsInRect` 재정의 하 여의 `UICollectionViewLayoutAttributes` 배열을 반환 합니다. 각 `UICollectionViewLayoutAttribute` 에는 `Center` , `Size` , `ZIndex` 등의속성을포함하여특정항목을레이아웃하는방법에대한정보가`Transform3D` 포함 되어 있습니다.
-
 
 다음 코드는 이러한 구현을 보여 줍니다.
 
@@ -409,7 +390,6 @@ namespace SimpleCollectionView
 
  <a name="Custom_Layout" />
 
-
 ### <a name="custom-layout"></a>사용자 지정 레이아웃
 
 를 사용 `UICollectionViewFlowLayout`하는 것 외에도에서 `UICollectionViewLayout`직접 상속 하 여 레이아웃을 완전히 사용자 지정할 수 있습니다.
@@ -420,16 +400,13 @@ namespace SimpleCollectionView
 - `CollectionViewContentSize`– 콘텐츠를 표시 하는 데 사용 되는 영역의 크기를 반환 합니다.
 - `LayoutAttributesForElementsInRect`– 앞에서 설명한 UICollectionViewFlowLayout 예제와 마찬가지로이 메서드는 각 항목을 레이아웃 하는 방법 `UICollectionView` 에 대 한 정보를에 제공 하는 데 사용 됩니다. 그러나와는 달리 `UICollectionViewFlowLayout` 사용자 지정 레이아웃을 만들 때 선택한 항목의 위치를 지정할 수 있습니다.
 
-
 예를 들어 아래와 같이 동일한 콘텐츠가 원형 레이아웃으로 표시 될 수 있습니다.
 
  [![](uicollectionview-images/08-circle-layout.png "다음과 같이 원형 사용자 지정 레이아웃")](uicollectionview-images/08-circle-layout.png#lightbox)
 
 레이아웃에 대 한 강력한 점은 표 형식 레이아웃에서 가로 스크롤 레이아웃으로 변경 하 고 이후에이 원형 레이아웃으로 변경 해야 하는 경우 `UICollectionView` 에 제공 되는 레이아웃 클래스만 변경 하는 것입니다. 의 대리자 또는 `UICollectionView`데이터 소스 코드는 전혀 변경 되지 않습니다.
 
-
 ## <a name="changes-in-ios-9"></a>IOS 9의 변경 내용
-
 
 IOS 9에서 컬렉션 뷰 (`UICollectionView`)는 이제 새 기본 제스처 인식자와 몇 가지 새로운 지원 메서드를 추가 하 여 항목을 즉시 다시 정렬 하는 것을 지원 합니다.
 
@@ -453,7 +430,7 @@ IOS 9에서 컬렉션 뷰 (`UICollectionView`)는 이제 새 기본 제스처 �
 
 IOS 9에서 컬렉션 뷰에 다시 정렬을 추가 하는 가장 빠른 방법은를 `UICollectionViewController`사용 하는 것입니다.
 이제 컬렉션 뷰 컨트롤러에는 컬렉션 `InstallsStandardGestureForInteractiveMovement` 의 항목을 다시 정렬 하기 위해 끌기를 지 원하는 표준 *제스처 인식기* 를 추가 하는 속성이 있습니다.
-기본값은 이므로, 다시 `true`정렬을 지원 하도록 `UICollectionViewDataSource` 클래스의 `MoveItem` 메서드를 구현 하기만 하면 됩니다. 예를 들어:
+기본값은 이므로, 다시 `true`정렬을 지원 하도록 `UICollectionViewDataSource` 클래스의 `MoveItem` 메서드를 구현 하기만 하면 됩니다. 예:
 
 ```csharp
 public override void MoveItem (UICollectionView collectionView, NSIndexPath sourceIndexPath, NSIndexPath destinationIndexPath)
@@ -694,7 +671,7 @@ namespace CollectionView
 
 UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 사용자가 목록에서 항목을 선택 하 여 새 위치로 끌면 항목을 이동할 때 다른 항목이 자동으로 애니메이션 효과를 적용 합니다.
-사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예를 들어:
+사용자가 새 위치에서 항목을 삭제 하면 해당 위치에 그대로 유지 됩니다. 예:
 
 [![](uicollectionview-images/intro01.png "항목을 새 위치로 끌어 오는 예")](uicollectionview-images/intro01.png#lightbox)
 
@@ -702,7 +679,7 @@ UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 
 ### <a name="using-a-custom-gesture-recognizer"></a>사용자 지정 제스처 인식기 사용
 
-을 `UICollectionViewController` 사용할 수 없고 정기적 `UIViewController`으로 사용 해야 하는 경우 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예를 들어:
+을 `UICollectionViewController` 사용할 수 없고 정기적 `UIViewController`으로 사용 해야 하는 경우 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -1045,7 +1022,6 @@ namespace CollectionView
       var end = unionRects.Count;
       List<UICollectionViewLayoutAttributes> attrs = new List<UICollectionViewLayoutAttributes> ();
 
-
       for (int i = 0; i < end; i++) {
         if (rect.IntersectsWith(unionRects[i])) {
           begin = i * (int)unionSize;
@@ -1235,7 +1211,6 @@ IOS 9에서 `UICollectionViewController` 클래스가 다음과 같이 변경 �
 - `GetTargetContentOffset`– 지정 된 컬렉션 뷰 항목의 오프셋을 가져오는 데 사용 됩니다.
 - `GetTargetIndexPathForMove`– 끌기 작업 `indexPath` 에 대해 지정 된 항목의를 가져옵니다.
 - `MoveItem`– 목록에서 지정 된 항목의 순서를 이동 합니다.
-
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 

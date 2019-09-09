@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 193f9f92f112608908d2feb50f815a670d48b39c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: d3f4c602f7e581cab74b61072e248a22eede9a22
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762026"
 ---
 # <a name="how-do-i-update-the-java-development-kit-jdk-version"></a>JDK(Java Development Kit) 버전을 업데이트하려면 어떻게 할까요?
 
@@ -55,9 +55,8 @@ Microsoft Mobile OpenJDK로 업데이트 하려면 [Microsoft Mobile Openjdk Pre
 
     ![MacOS에서 JDK 설치 관리자 실행](update-jdk-images/image5.png)
 
-**/System/Library/Frameworks/JavaVM.framework/Versions/Current**를 업데이트 하 여 Mac OS는 새 JDK 버전을 기본값으로 자동 설정 합니다. 그런 다음 **Mac용 Visual Studio > 기본 설정 > 프로젝트 > SDK 위치 > Android > 위치 > JAVA sdk (jdk) 위치**에 따라 **JDK (java sdk)** 위치가 예상 되는 기본값으로 설정 되어 있는지 다시 확인할 수 있습니다.
+**/System/Library/Frameworks/JavaVM.framework/Versions/Current**를 업데이트 하 여 Mac OS는 새 JDK 버전을 기본값으로 자동 설정 합니다. 그런 다음 **Mac용 Visual Studio > 기본 설정 > 프로젝트 > SDK 위치 > Android > 위치 > JAVA sdk (jdk) 위치** **에 따라** **jdk (java sdk)** 위치가 예상 되는 기본값으로 설정 되어 있는지 다시 확인할 수 있습니다.
 
 [![Android 위치 탭에서 JDK 위치 설정](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----
-

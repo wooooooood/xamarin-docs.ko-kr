@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: ef9067f3a0694c66d21d6614277e8543aebbc299
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8f47ebdd8c1ba220229c6e652af99e8fa3ae2960
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279351"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768812"
 ---
 # <a name="text-input-in-xamarinios"></a>Xamarin.ios의 텍스트 입력
 
@@ -27,7 +27,6 @@ ms.locfileid: "70279351"
 콘센트의 이름을 지정 하 고 스토리 보드 파일을 저장 한 후에는 Mac용 Visual Studio `.designer.cs` partial 클래스를 업데이트 하 고 C# 컨트롤을 참조 하는 코드를 클래스 파일에 추가할 수 있습니다. 각 컨트롤에는 C# 코드에서 액세스할 수 있는 고유한 속성 및 이벤트가 있습니다.
 
  <a name="UITextField" />
-
 
 ## <a name="uitextfield"></a>UITextField
 
@@ -46,7 +45,6 @@ ms.locfileid: "70279351"
 - **모양** – 키보드의 모양 스타일을 제어 하며 어둡거나 밝은 테마가 적용 됩니다.
 - **키 반환** -반환 키의 레이블을 변경 하 여 수행할 작업을 보다 잘 반영 합니다. 지원 되는 값에는 Go, Join, Next, Route, Done 및 Search가 있습니다.
 - **Secure** – 입력이 마스킹 되는지 여부를 식별 합니다 (예: 암호 입력).
-
 
 라는 `textfield1` uitextfield가 디자이너를 사용 하 여 화면에 추가 된 경우에서 C# 다음과 같이 해당 속성을 설정 하거나 변경할 수 있습니다.
 
@@ -72,7 +70,6 @@ View.Add(textfield1);
 
  <a name="UITextView" />
 
-
 ## <a name="uitextview"></a>UITextView
 
 컨트롤 `UITextView` 은 읽기 전용 텍스트를 표시 하거나 여러 줄 텍스트 입력을 허용 하는 데 사용할 수 있습니다. 에는 `UITextField` (대문자 표시, 수정 등)와 같은 많은 옵션이 있습니다.
@@ -84,7 +81,6 @@ View.Add(textfield1);
 - **Behavior** – 텍스트를 편집 가능 또는 읽기 전용인 지 여부를 지정 합니다.
 - **검색** – 입력 데이터를 검색 하 고 호출을 트리거할 수 있는 전화 번호, 지도에 링크 되는 주소, Safari에서 연 Url, 캘린더의 이벤트가 되는 날짜 및 시간 등의 클릭 가능한 요소로 변환 합니다.
 
-
 디자이너를 사용 하 여 UITextView를 화면에 추가한 경우 다음과 같이 해당 속성을 설정 하거나 변경할 수 있습니다.
 
 ```csharp
@@ -92,8 +88,6 @@ textview1.Text = "Lorem ipsum..."; // lots of text can go here
 textview1.Editable = true;
 textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorType.Link;
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

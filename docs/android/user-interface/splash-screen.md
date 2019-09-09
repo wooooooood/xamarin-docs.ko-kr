@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: 4d8f467b4dcc5e6c4628ed7afa43779cc48b7ef5
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b05ab7ee835a97f13af618332baec7a5ebf404ec
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69522184"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70764093"
 ---
 # <a name="splash-screen"></a>시작 화면
 
 _특히 앱이 장치에서 처음 시작 될 때 Android 앱을 시작 하는 데 시간이 오래 걸립니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -33,20 +32,17 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 
 [![예제 Xamarin 로고 시작 화면 및 앱 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
 ## <a name="requirements"></a>요구 사항
 
 이 가이드에서는 Android API 레벨 15(Android 4.0.3) 또는 그 이상을 대상으로 하는 응용 프로그램을 가정합니다. 또한 응용 프로그램은 프로젝트에 추가된 **Xamarin.Android.Support.v4** 및 **Xamarin.Android.Support.v7.AppCompat** NuGet 패키지가 있어야 합니다.
 
 이 가이드에 있는 모든 코드 및 XML은 이 가이드에 대한 샘플 프로젝트인 [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)에 포함되어 있습니다.
 
-
 ## <a name="implementing-a-splash-screen"></a>시작 화면 구현
 
 시작 화면을 렌더링하고 표시하는 가장 빠른 방법은 사용자 정의 테마를 생성하고 시작 화면을 표시하는 액티비티에 그것을 적용하는 것입니다. 액티비티는 렌더링될 때 테마를 로드하고 액티비티의 배경에 그림 리소스(테마에 의해 참조 됨)를 적용합니다. 이 방법은 레이아웃 파일을 만들 필요가 없습니다.
 
 시작 화면은 브랜드 그림 표시, 모든 초기화 수행 및 모든 작업 시작 액티비티로 구현됩니다. 앱이 부트스트랩되면 시작 화면 액티비티는 메인 액티비티를 시작하고 응용 프로그램 백 스택에서 자신을 제거합니다.
-
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>시작 화면용 그림 생성
 
@@ -69,10 +65,9 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 </layer-list>
 ```
 
-이렇게 `layer-list` 하면 시작 이미지를 `@color/splash_background` 리소스로 지정 된 배경에 가운데에 배치 합니다. 이 XML 파일을 Resources/ **그릴** 폴더 (예: **resources/그릴/splash_screen**)에 저장 합니다.
+이렇게 `layer-list` 하면 **시작 이미지를** `@color/splash_background` 리소스로 지정 된 배경에 가운데에 배치 합니다. 이 XML 파일을 Resources/ **그릴** 폴더 (예: **resources/그릴/splash_screen**)에 저장 합니다.
 
 시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
-
 
 ### <a name="implementing-a-theme"></a>테마 구현
 
@@ -95,7 +90,6 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 ```
 
 **MyTheme.Splash**은 엄격한 스파르타식입니다. 창 배경을 선언, 명시적으로 창에서 제목 표시줄을 제거하고 전체 화면임을 선언합니다. 액티비티의 첫 번째 레이아웃을 올리기 전에 응용 프로그램의 UI를 에뮬레이트하는 시작 화면을 만들려는 경우, 자신의 스타일 정의에 `windowContentOverlay` 대신 `windowBackground`를 사용할 수 있습니다. 이 경우 UI 에뮬레이션이 표시되도록 **splash_screen.xml** 그리기를 수정해야 합니다.
-
 
 ### <a name="create-a-splash-activity"></a>시작 액티비티 생성
 
@@ -217,14 +211,11 @@ public class MainActivity : AppCompatActivity
 
     [![시작 화면에서 가로 모드로 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
-
 참고로 가로 모드 시작 화면을 사용하면 항상 매끄럽지 못한 환경을 제공합니다. 기본적으로 Android 앱은 장치가 이미 가로 모드일지라도 세로 모드로 시작하고 그것을 가로 모드로 전환합니다. 결과적으로, 장치가 가로 모드에 있는 동안 앱을 실행하는 경우, 장치는 세로 시작 화면을 간략하게 표시한 다음 세로에서 가로 시작 화면으로 애니메이션하면서 회전합니다. 불행하게도, 이 초기 세로-가로 전환은 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape`이 시작 액티비티의 플래그에 지정되어 있을지라도 일어납니다. 이 제한을 해결하는 가장 좋은 방법은 가로 세로 모드 모두 제대로 렌더링 가능한 단일 시작 화면 이미지를 만드는 것입니다.
-
 
 ## <a name="summary"></a>요약
 
 이 가이드는 Xamarin.Android 응용 프로그램의 시작 화면을 구현하는 한 가지 방법, 다시 말해 시작 액티비티에 사용자 정의 테마 적용하기를 설명하였습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

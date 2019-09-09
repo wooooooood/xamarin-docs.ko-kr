@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 07bb1f7024f3518e0e547563d1bd611b2a37d474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dc71da512519cdd7fcc56df1ff987ffbc1354663
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529166"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760402"
 ---
 # <a name="containerized-microservices"></a>컨테이너화된 마이크로 서비스
 
@@ -149,7 +149,6 @@ RabbitMQ를 사용 하 여 구현 된 eShopOnContainers 이벤트 버스는 일�
 마이크로 서비스는 최신 클라우드 응용 프로그램의 민첩성, 확장성 및 안정성 요구 사항에 적합 한 응용 프로그램 개발 및 배포에 대 한 접근 방식을 제공 합니다. 마이크로 서비스의 주요 이점 중 하나는 독립적으로 확장 될 수 있다는 것입니다. 즉, 필요에 따라의 영역을 불필요 하 게 확장 하지 않고도 요구를 지원 하기 위해 더 많은 처리 능력과 네트워크 대역폭이 필요한 특정 기능 영역을 확장할 수 있습니다. 요구가 증가 하지 않은 응용 프로그램입니다.
 
 컨테이너는 다른 컨테이너 또는 호스트의 리소스를 건드리지 않고도 응용 프로그램을 실행할 수 있는 격리 된 리소스 제어 및 휴대용 운영 환경입니다. 마이크로 서비스 기반 응용 프로그램을 구현할 때 기업이 점점 더 많은 컨테이너를 채택 하 고 있으며 Docker가 대부분의 소프트웨어 플랫폼과 클라우드 공급 업체에서 채택 하는 표준 컨테이너 구현이 되었습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

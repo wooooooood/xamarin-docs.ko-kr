@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: a537926ab28bc355af5c5c4993ccff4a736b15aa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ffaa6553830a64589818c991e8f729ff7232e367
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288569"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70752840"
 ---
 # <a name="core-image-in-xamarinios"></a>Xamarin.ios의 핵심 이미지
 
@@ -25,7 +25,6 @@ _핵심 이미지는 이미지 처리와 라이브 비디오 기능 향상 기�
 - 얼굴 감지.
 - 이미지에 필터 적용
 - 사용 가능한 필터를 나열 합니다.
-
 
 이러한 예제는 Xamarin.ios 응용 프로그램에 핵심 이미지 기능을 통합 하기 시작 하는 데 도움이 됩니다.
 
@@ -55,7 +54,6 @@ CIFeature[] features = detector.FeaturesInImage(ciImage);
 - MouthPosition –이 면에 대 한 입/군/시의 좌표입니다.
 - LeftEyePosition –이 면의 왼쪽 눈동자 좌표입니다.
 - RightEyePosition –이 면의 올바른 눈동자 좌표입니다.
-
 
 이러한 모든 속성의 좌표는 왼쪽 위를 원본으로 사용 하는 UIKit와는 달리 왼쪽 아래에 원점이 있습니다. 좌표를 사용 하는 `CIFaceFeature` 경우 해당 좌표를 ' 대칭 이동 ' 해야 합니다. CoreImage\CoreImageViewController.cs의이 매우 기본적인 사용자 지정 이미지 뷰는 이미지에 ' face 표시기 ' 삼각형을 그리는 방법을 보여 줍니다 ( `FlipForBottomOrigin` 메서드 참고).
 

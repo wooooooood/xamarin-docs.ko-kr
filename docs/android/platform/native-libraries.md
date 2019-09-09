@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: fa0a3a75a4cc2cfd04b607f17206faa822af0474
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: fad17bdda9566eeabcbe173c19c4d951bed630a7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69523635"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761276"
 ---
 # <a name="using-native-libraries"></a>네이티브 라이브러리 사용
 
@@ -26,7 +26,6 @@ Android는 여러 응용 프로그램 이진 인터페이스 (ABIs)를 지원 �
 
 1. 경로 "스니핑"
 1. 프로젝트 파일 내 `AndroidNativeLibrary/Abi` 에서 요소 사용
-
 
 경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 프로젝트에를 추가 `lib/armeabi/libfoo.so` 하는 경우 ABI는로 `armeabi`"스니핑" 됩니다.
 
@@ -54,8 +53,6 @@ C++ C++ **동적 공유 라이브러리 (Android)** 프로젝트에 프로젝트
 3. **디버거** 드롭다운 메뉴에서 기본 **C++** **.net (Xamarin)** 대신를 선택 합니다.
 
 Visual Studio C++ 개발자가 visual studio 2019 또는 visual studio 2017 C++ 에서 Xamarin을 사용 하 여 디버깅을 시도 하는 [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) 샘플을 볼 수 있습니다. 자세한 내용은 [블로그 게시물](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) 을 참조 하세요.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

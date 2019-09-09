@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: f326a2ef449b7c807be150a002a4afc600d9908d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f635e6e20a4cec9b8cc735bc733b678263cd024a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652698"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70759172"
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
@@ -120,7 +120,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 [![](polylines-images/archimedeanspiral-small.png "삼중 Archimedean 나선형 페이지 스크린샷")](polylines-images/archimedeanspiral-large.png#lightbox "삼중 Archimedean 나선형 페이지 스크린샷")
 
 있음을 합니다 `SKPath` 만들어집니다는 `using` 블록입니다. 이 `SKPath` 보다 더 많은 메모리를 사용 합니다 `SKPath` 제안 하는 이전 프로그램에서 개체를 `using` 블록은 모든 관리 되지 않는 리소스를 삭제 하는 것이 적합 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 
