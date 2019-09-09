@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 40a44b2748b29b21a1456c55cb75514f18506dd7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d4a3ba0ae860f2e6b42fc4cf349ec1bc8e83979e
+ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68648567"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69527066"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -44,7 +44,7 @@ Xamarin.Forms를 사용 합니다 [ `Image` ](xref:Xamarin.Forms.Image) 페이�
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -을 측면을 유지 하면서 표시 영역을 채우도록 이미지를 자릅니다 (ie. 왜곡).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -레터 박스 이미지 (필요한 경우) 여부에 따라 양쪽 위쪽/아래쪽에 추가 공백이 있는 가로 또는 세로 이미지는 전체 이미지에 표시 영역에 적합 한 수 있도록 합니다.
 
-이미지를 로드할 수는 [로컬 파일](#local-images), [포함 리소스](#embedded-images), 또는 [다운로드](#downloading-images)합니다. 또한 [`Image`](xref:Xamarin.Forms.Image) 개체`FontImageSource` 에 글꼴 아이콘 데이터를 지정 하 여 보기에서 글꼴 아이콘을 표시할 수 있습니다. 자세한 내용은 [글꼴 가이드](~/xamarin-forms/user-interface/text/fonts.md) 에서 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 를 참조 하세요.
+이미지를 로드할 수는 [로컬 파일](#local-images), [포함 리소스](#embedded-images), 또는 [다운로드](#downloading-images)합니다. 또한 [`Image`](xref:Xamarin.Forms.Image) 개체`FontImageSource` 에 글꼴 아이콘 데이터를 지정 하 여 보기에서 글꼴 아이콘을 표시할 수 있습니다. 자세한 내용은 글꼴 가이드에서 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) [를 참조](~/xamarin-forms/user-interface/text/fonts.md) 하세요.
 
 ## <a name="local-images"></a>로컬 이미지
 
@@ -204,7 +204,7 @@ public class ImageResourceExtension : IMarkupExtension
 
 #### <a name="debugging-code"></a>코드 디버깅
 
-특정 이미지 리소스 로드 되지 이유를 이해 하기 어려운 경우가 있기 때문에 리소스를 올바르게 구성 되었는지 확인 하는 데 응용 프로그램에 일시적으로 다음 디버그 코드를 추가할 수 있습니다. 지정된 된 어셈블리에 포함 된 알려진된 모든 리소스를 출력 합니다 <span class="UIItem">콘솔</span> 리소스 로드 문제를 디버깅 하는 데 있습니다.
+특정 이미지 리소스 로드 되지 이유를 이해 하기 어려운 경우가 있기 때문에 리소스를 올바르게 구성 되었는지 확인 하는 데 응용 프로그램에 일시적으로 다음 디버그 코드를 추가할 수 있습니다. 지정된 된 어셈블리에 포함 된 알려진된 모든 리소스를 출력 합니다 **콘솔** 리소스 로드 문제를 디버깅 하는 데 있습니다.
 
 ```csharp
 using System.Reflection;
@@ -298,7 +298,7 @@ webImage.Source = new UriImageSource
 
 참조를 [iOS 이미지 작업](~/ios/app-fundamentals/images-icons/index.md)를 [Google의도 해](https://developer.android.com/design/style/iconography.html), 및 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) 이러한 응용 프로그램 리소스를 만드는 대 한 자세한 내용은 합니다.
 
-또한 [`Image`](xref:Xamarin.Forms.Image) 개체`FontImageSource` 에 글꼴 아이콘 데이터를 지정 하 여 보기에서 글꼴 아이콘을 표시할 수 있습니다. 자세한 내용은 [글꼴 가이드](~/xamarin-forms/user-interface/text/fonts.md) 에서 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) 를 참조 하세요.
+또한 [`Image`](xref:Xamarin.Forms.Image) 개체`FontImageSource` 에 글꼴 아이콘 데이터를 지정 하 여 보기에서 글꼴 아이콘을 표시할 수 있습니다. 자세한 내용은 글꼴 가이드에서 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) [를 참조](~/xamarin-forms/user-interface/text/fonts.md) 하세요.
 
 ## <a name="splash-screens"></a>시작 화면
 
