@@ -41,7 +41,7 @@ ms.locfileid: "69888527"
 
 <a name="Usage" />
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 <a name="Proportional_Layouts" />
 

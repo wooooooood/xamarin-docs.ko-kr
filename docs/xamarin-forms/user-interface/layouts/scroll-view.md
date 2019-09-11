@@ -34,7 +34,7 @@ ms.locfileid: "70770281"
 
 `ScrollView` 더 큰 뷰 작은 휴대폰에서 잘 표시에 사용할 수 있습니다. 예를 들어 iPhone 6s에서 작동 하는 레이아웃을 iPhone 4 초에서 잘릴 수도 있습니다. 사용 하는 `ScrollView` 잘린된 부분 레이아웃을 더 작은 화면에 표시 될 수 있습니다.
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 > [!NOTE]
 > `ScrollView`s는 중첩 될 수 없습니다. 또한 `ScrollView`s 해야 같은 스크롤을 제공 하는 다른 컨트롤을 사용 하 여 중첩 될 수 없습니다 `ListView` 고 `WebView`입니다.

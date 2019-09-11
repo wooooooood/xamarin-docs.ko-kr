@@ -21,7 +21,7 @@ ORM은 개체 관계형 매핑을 사용 합니다. 즉, SQL 문을 작성 하�
 
 <a name="Usage"/>
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 Xamarin 앱에 SQLite.NET 라이브러리를 포함 하려면 다음 NuGet 패키지를 프로젝트에 추가 합니다.
 

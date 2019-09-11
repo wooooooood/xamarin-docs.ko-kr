@@ -28,7 +28,7 @@ ms.locfileid: "70772532"
 
 ![](relative-layout-images/flag.png "RelativeLayout 탐색")
 
-## <a name="usage"></a>사용법
+## <a name="usage"></a>사용
 
 ### <a name="understanding-constraints"></a>제약 조건 이해
 
