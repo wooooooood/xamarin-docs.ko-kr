@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: cf79f586e5b0ff71c109ea9664d3cb7a6aa91a02
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 72e0c27502c10fe3522d80c6345a847ca424d49f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292371"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762784"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Xamarin.iOS에서 앱 그룹 기능
 
@@ -73,7 +73,7 @@ _애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설�
 12. 앱 그룹을 사용할 앱(또는 확장 프로그램)에 대해 이 단계를 반복합니다.
 
 ## <a name="next-steps"></a>다음 단계
- 
+
 아래 목록에는 필요할 수도 있는 추가 단계가 설명되어 있습니다.
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.

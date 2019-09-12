@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 58621701d832660b125d7589762cc033811eb69b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9982f9102166aa6892be0819615f329a65fffbb
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281850"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756437"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Xamarin.iOS에서 IPA 지원
 
@@ -66,7 +66,6 @@ IPA 만들기는 이제 새 게시 워크플로에 내장됩니다. 이렇게 �
 
 IPA를 빌드하려면 애플리케이션의 릴리스 빌드에 대한 _보관_을 만들어야 합니다. 이 보관에는 앱 및 이를 식별하는 정보가 포함됩니다.
 
-
 1. Mac용 Visual Studio에서 **릴리스 | 디바이스** 구성을 선택합니다.
 
     ![](ipa-support-images/buildxs01new.png "릴리스 | 디바이스 구성 선택")
@@ -79,7 +78,6 @@ IPA를 빌드하려면 애플리케이션의 릴리스 빌드에 대한 _보관_
 
     ![](ipa-support-images/buildxs03new.png "표시된 보관 보기")
 
-
 ### <a name="sign-and-distribute-your-app"></a>앱 서명 및 배포
 
 보관용 애플리케이션을 빌드할 때마다 **보관 보기**가 자동으로 열리고, 보관된 모든 프로젝트가 솔루션별로 그룹화되어 표시됩니다. 이 보기에는 기본적으로 현재 열려 있는 솔루션만 표시됩니다. 보관이 있는 솔루션을 모두 보려면 **모든 보관 표시** 옵션을 클릭합니다.
@@ -89,7 +87,6 @@ IPA를 빌드하려면 애플리케이션의 릴리스 빌드에 대한 _보관_
 앱 스토어가 아닌 경우 **iTunesMetadata.plist** 파일을 빌드하고, iTunes 아트워크 집합이 보관에 있는 경우 IPA에 자동으로 포함됩니다.
 
 앱에 서명하고 배포할 준비를 하려면 다음을 수행합니다.
-
 
 1. 아래 그림과 같이 **서명 및 배포...** 단추를 선택합니다.
 
@@ -111,11 +108,9 @@ IPA를 빌드하려면 애플리케이션의 릴리스 빌드에 대한 _보관_
 
     ![](ipa-support-images/distribute04.png "컴퓨터에 IPA 저장")
 
-
 ### <a name="building-via-the-command-line-on-mac"></a>명령줄을 통한 빌드(Mac에서)
 
 CI 환경과 같은 경우에는 명령줄을 통해 IPA를 빌드해야 할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
-
 
 1. **프로젝트 옵션 > iOS IPA 옵션> iTunesArtwork 이미지 포함** 및 **임시/엔터프라이즈 패키지(IPA) 빌드**가 선택되어 있는지 확인합니다.
 
@@ -251,7 +246,6 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 ## <a name="summary"></a>요약
 
 이 문서에서는 앱 스토어 이외의 빌드를 위한 Xamarin.iOS 애플리케이션을 준비하는 데 필요한 설정에 대해 설명했습니다. IPA 패키지를 만드는 방법 및 테스트 또는 사내 배포를 위해 최종 사용자의 iOS 디바이스에 결과 iOS 애플리케이션을 설치하는 방법을 보여 주었습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

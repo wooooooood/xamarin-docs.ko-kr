@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/15/2017
-ms.openlocfilehash: 5f56a99e341f58bc06e8bf49305b5527a92f0413
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c190e92c8366644c00e0f03c314d535f43f8046b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289720"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768632"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
@@ -265,7 +265,6 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 
 4. 빌드 구성이 시뮬레이터가 아닌 **iPhone** 또는 **iPad**로 설정되어 있는지 확인합니다.
 5. Visual Studio에서 **실행**을 클릭하여 디바이스에서 실행되는 앱을 봅니다.
-
 
 -----
 

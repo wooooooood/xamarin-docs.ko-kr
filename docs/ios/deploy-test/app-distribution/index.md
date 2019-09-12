@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: c7b31e05a5b9d75559fae14f467312f5abc8fe94
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7a261d1fc86fac16cf48575616359b083daebf47
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289802"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756552"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Xamarin.iOS 앱 배포 개요
 
@@ -20,9 +20,7 @@ _이 문서는 Xamarin.iOS 애플리케이션에 사용할 수 있는 배포 기
 
 Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 단계는 아래 다이어그램에서 강조 표시된 부분과 같이 사용자에게 앱을 배포하는 것입니다.
 
-
 [![](images/publishingdiagram.png "iOS 앱을 개발한 후 사용자에게 해당 앱을 배포(다이어그램에서 강조 표시된 섹션)")](images/publishingdiagram.png#lightbox)
-
 
 Xamarin.iOS에서 지원하는 iOS 애플리케이션을 배포하기 위해 Apple에서 제공하는 방법은 다음과 같습니다.
 

@@ -6,19 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: b976f540fb5b9aa7ea86cabb5b50276e53bed9a6
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755960"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
-앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다.
+앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다. 
 
 이 섹션에서는 게시자가 되기 위한 등록, Google Play의 애플리케이션 판촉 및 광고를 위한 자산 수집, Google Play 애플리케이션 등급 지침, 필터를 사용하여 특정 디바이스에 대한 애플리케이션 배포 제한 등과 같은 Google Play 특정 항목을 다룹니다.
-
 
 ## <a name="requirements"></a>요구 사항
 
@@ -29,8 +28,6 @@ Google Play를 통해 애플리케이션을 배포하려면 개발자 계정을 
 Google Play에 게시하는 APK의 최대 크기는 100MB입니다. 애플리케이션이 이 크기를 초과할 경우 Google Play에서는 *APK 확장 파일*을 통한 추가 자산의 제공을 허용합니다. Android 확장 파일에서는 APK에 추가 파일 2개를 허용하며 각 파일은 최대 2GB 크기까지 가능합니다. Google Play는 무료로 이 파일을 호스트 및 배포합니다. 확장 파일은 다른 섹션에서 설명합니다.
 
 Google Play를 전세계에서 사용할 수 있는 것은 아닙니다. 일부 위치에서는 애플리케이션 배포가 지원되지 않을 수 있습니다.
-
-
 
 ## <a name="becoming-a-publisher"></a>게시자 되기
 
@@ -43,30 +40,24 @@ Google play에서 애플리케이션을 게시하려면 게시자 계정이 있�
 1. 이메일을 통해 확인합니다.
 1. 계정이 만들어진 후 Google Play를 사용하여 애플리케이션을 게시할 수 있습니다.
 
-
 Google Play가 전 세계의 모든 국가를 지원하지는 않습니다. 가장 최신 국가 목록은 다음 링크에서 제공합니다.
 
 1. [지원되는 개발자 위치 &amp; 판매자 등록](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324)&ndash; 개발자가 판매자로 등록하고 유료 애플리케이션을 판매할 수 있는 모든 국가의 목록입니다.
 
 1. [Google Play 사용자에 대한 배포 지원 위치](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294)&ndash; 애플리케이션을 배포할 수 있는 모든 국가의 목록입니다.
 
-
-
 ### <a name="preparing-promotional-assets"></a>프로모션 자산 준비
 
 Google Play에서 애플리케이션을 효과적으로 프로모션 및 광고할 수 있게 Google에서는 개발자들이 스크린 샷, 그래픽, 비디오 같은 프로모션 자산을 제출할 수 잇게 허용하고 있습니다. 그러면 Google Play가 해당 자산을 사용하여 애플리케이션을 광고 및 프로모션합니다.
 
-
-
 #### <a name="launcher-icons"></a>시작 아이콘
 
-*시작 아이콘*은 애플리케이션을 나타내는 그래픽입니다. 각 시작 아이콘은 투명 알파 채널이 있는 32비트 PNG여야 합니다. 애플리케이션에는 아래 목록에서 설명한 대로 모든 일반 화면 밀도에 대한 아이콘이 있어야 합니다.
+*시작 아이콘*은 애플리케이션을 나타내는 그래픽입니다. 각 시작 아이콘은 투명 알파 채널이 있는 32비트 PNG여야 합니다. 애플리케이션에는 아래 목록에서 설명한 대로 모든 일반 화면 밀도에 대한 아이콘이 있어야 합니다. 
 
 - **ldpi** (120dpi) &ndash; 36 x 36 px
 - **mdpi** (160dpi) &ndash; 48 x 48 px
 - **hdpi** (240dpi) &ndash; 72 x 72 px
 - **xhdpi** (320dpi) &ndash; 96 x 96 px
-
 
 시작 아이콘은 사용자가 Google Play에서 처음으로 보게 되는 애플리케이션의 모습이므로 시각적으로 의미 있고 매력적인 아이콘이 되도록 주의가 필요합니다.
 
@@ -78,8 +69,6 @@ Google Play에서 애플리케이션을 효과적으로 프로모션 및 광고�
 
 1. **알파 채널 사용** &ndash; 아이콘은 전체 프레임 이미지가 아니면서 알파 채널을 사용해야 합니다.
 
-
-
 #### <a name="high-resolution-application-icons"></a>고해상도 애플리케이션 아이콘
 
 Google Play의 애플리케이션에는 충실도 높은 애플리케이션 아이콘 버전이 필요합니다. Google Play에서만 사용되며 애플리케이션 실행 아이콘을 대신하지 않습니다. 고해상도 아이콘의 사양은 다음과 같습니다.
@@ -90,8 +79,6 @@ Google Play의 애플리케이션에는 충실도 높은 애플리케이션 아�
 
 [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)는 적합한 실행 아이콘과 고해상도 애플리케이션 아이콘을 만드는 데 유용한 도구입니다.
 
-
-
 #### <a name="screen-shots"></a>스크린 샷
 
 Google Play에서는 한 애플리케이션에 최소 2개, 최대 8개의 스크린 샷을 요구합니다. 이 스크린 샷은 Google Play에서 애플리케이션의 세부 정보 페이지에 표시됩니다.
@@ -101,16 +88,12 @@ Google Play에서는 한 애플리케이션에 최소 2개, 최대 8개의 스�
 1. 알파 채널이 없는 24비트 JPG 또는 PNG
 1. 320w x 480h, 480w x 800h 또는 480w x 854h 가로 이미지는 잘립니다.
 
-
-
 #### <a name="promotional-graphic"></a>프로모션 그래픽
 
 Google Play에서 사용하는 선택적 이미지입니다.
 
 1. 알파 채널이 없는 180w x 120h 24비트 PNG 또는 JPG
 1. 아트에 테두리 없음
-
-
 
 #### <a name="feature-graphic"></a>추천 그래픽
 
@@ -120,13 +103,9 @@ Google Play의 추천 섹션에서 사용합니다. 이 그래픽은 애플리�
 1. 모든 중요한 콘텐츠는 924 x 500 프레임 안에 있어야 합니다. 이 프레임 외부의 픽셀은 스타일을 위해 잘릴 수 있습니다.
 1. 이 그래픽은 축소될 수 있으므로 큰 텍스트를 사용하고 그래픽은 간단하게 유지합니다.
 
-
-
 #### <a name="video-link"></a>비디오 링크
 
 애플리케이션을 보여 주는 YouTube 동영상 URL입니다. 비디오는 30초에서 2분 길이까지 가능하며 애플리케이션의 장점을 보여 줍니다.
-
-
 
 ### <a name="publishing-to-google-play"></a>Google Play에 게시
 
@@ -186,7 +165,6 @@ Visual Studio for Mac에는 Google Play에 앱을 게시하는 통합 워크플�
 
 -----
 
-
 #### <a name="create-a-google-api-project"></a>Google API 프로젝트 만들기
 
 먼저 [Google Play 개발자 계정](https://play.google.com/apps/publish)에 로그인합니다.
@@ -218,12 +196,11 @@ OAuth 클라이언트의 기본 이름은 *Google Play Android Developer*입니�
 
 [![표시된 클라이언트 ID와 암호](images/06-client-id-and-secret-sml.png)](images/06-client-id-and-secret.png#lightbox)
 
-**저장**을 클릭하여 변경 내용을 저장합니다. 그러면 **JSON 다운로드** 아이콘을 클릭하여 자격 증명을 다운로드할 수 있는**자격 증명** 페이지로 돌아갑니다.
+**저장**을 클릭하여 변경 내용을 저장합니다. 그러면 **JSON 다운로드** 아이콘을 클릭하여 자격 증명을 다운로드할 수 있는**자격 증명** 페이지로 돌아갑니다. 
 
 [![JSON 다운로드 아이콘](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
 JSON 파일에는 잘라서 다음 단계의 **서명 및 배포** 대화 상자에 붙여 넣을 수 있는 클라이언트 ID과 클라이언트 암호가 있습니다.
-
 
 #### <a name="register-google-api-access"></a>Google API 액세스 등록
 
@@ -240,7 +217,7 @@ JSON 파일에는 잘라서 다음 단계의 **서명 및 배포** 대화 상자
 
 #### <a name="publish"></a>게시
 
-**허용**을 클릭하면 브라우저가 _확인 코드 받음. 닫는 중..._  메시지가 표시되며 앱이 Visual Studio의 Google Play 계정 목록에 추가됩니다. **Google Play 계정** 대화 상자에서 **계속**을 클릭합니다.
+**허용**을 클릭하면 브라우저가 _확인 코드 받음. 닫는 중... _ 메시지가 표시되며 앱이 Visual Studio의 Google Play 계정 목록에 추가됩니다. **Google Play 계정** 대화 상자에서 **계속**을 클릭합니다.
 
 [![Google Play 계정에 추가된 계정](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
@@ -269,7 +246,6 @@ Google Play 테스트 및 단계별 출시에 대한 자세한 내용은 [알파
 업로드가 완료되면 완료 상태가 Visual Studio의 왼쪽 아래에 표시됩니다.
 
 [![프로젝트 게시 완료 메시지](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
-
 
 ### <a name="troubleshooting"></a>문제 해결
 

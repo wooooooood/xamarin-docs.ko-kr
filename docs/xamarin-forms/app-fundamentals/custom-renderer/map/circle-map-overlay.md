@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: db666fc6a547e3fa089475ba5912774c1af3be0d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 551dea5455ffd060d808aa11e8996c5984745fda
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650756"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771906"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>맵의 원형 영역 강조 표시
 
@@ -305,7 +305,6 @@ namespace MapOverlay.UWP
 - 원은 `MapPolygon` 개체를 인스턴스화하여 만들어집니다. `MapPolygon` 클래스는 해당 `Path` 속성을 셰이프 좌표를 포함하는 `Geopath` 개체로 설정하여 맵에 다중 지점 셰이프를 표시하는 데 사용됩니다.
 - 다각형은 `MapControl.MapElements` 컬렉션에 추가하여 맵에서 렌더링됩니다.
 
-
 ```
 List<Position> GenerateCircleCoordinates(Position position, double radius)
 {
@@ -331,7 +330,6 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 ## <a name="summary"></a>요약
 
 이 문서에서는 원형 오버레이를 맵에 추가하여 맵의 원형 영역을 강조 표시하는 방법을 설명했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,17 +7,16 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 6a4ea3950b9657e4e04c6465cc0a64ac3c1d266c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291569"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770147"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 애플리케이션 아이콘
 
 _이 문서에서는 Xamarin.Mac 애플리케이션의 아이콘에 필요한 이미지를 만들고, 그 이미지를 .icns 파일로 묶고, Xamarin.Mac 프로젝트에 아이콘을 포함하는 방법을 다룹니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -27,11 +26,9 @@ Xamarin.Mac 애플리케이션에서 C# 및 .NET을 작업할 때 개발자는 *
 
 ![AppIcon.appiconset 편집기](app-icon-images/intro01.png "AppIcon.appiconset 편집기")
 
-
 ## <a name="application-icon"></a>애플리케이션 아이콘
 
 좋은 아이콘이란 Xamarin.Mac 앱의 주 목적을 달성해야 하며 사용자가 앱을 사용할 때 예상하는 경험을 제공해야 합니다. 모든 macOS 앱은 Finder, Dock, 실행 패드 및 컴퓨터의 다른 위치에 표시할 수 있도록 여러 가지 아이콘 크기를 포함해야 합니다.
-
 
 ## <a name="designing-the-icon"></a>아이콘 디자인
 
@@ -48,7 +45,6 @@ Apple에서는 애플리케이션의 아이콘을 디자인할 때 다음 팁을
 - 아이콘에 Apple 아이콘의 복제본을 사용하지 않습니다.
 
 Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)에서 [앱 아이콘 갤러리](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Gallery.html#//apple_ref/doc/uid/20000957-CH88-SW1) 및 [앱 아이콘 디자인](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Designing.html#//apple_ref/doc/uid/20000957-CH87-SW1) 섹션을 읽어보세요.
-
 
 ## <a name="required-image-sizes-and-filenames"></a>필요한 이미지 크기 및 파일 이름
 
@@ -76,7 +72,6 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 자세한 내용은 Apple의 [모든 앱 그래픽 리소스의 고해상도 버전 제공](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3) 설명서를 참조하세요.
 
-
 ## <a name="packaging-the-icon-resources"></a>아이콘 리소스 패키징
 
 아이콘을 디자인하고 필요한 파일 크기 및 이름으로 저장하면 Mac용 Visual Studio에서 해당 아이콘을 Xamarin.Mac에 사용할 이미지 자산에 쉽게 할당할 수 있습니다.
@@ -90,7 +85,6 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
     [![아이콘 이미지 선택](app-icon-images/intro02.png "아이콘 이미지 선택")](app-icon-images/intro02-large.png#lightbox)
 3. 변경 내용을 저장합니다.
-
 
 ## <a name="using-the-icon"></a>아이콘 사용
 
@@ -108,11 +102,9 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 ![macOS dock의 앱 아이콘 예제](app-icon-images/icon04.png "macOS dock의 앱 아이콘 예제")
 
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 macOS 앱 아이콘을 만드는 데 필요한 이미지를 작업하고, 아이콘을 패키징하고, Xamarin.Mac 프로젝트에 아이콘을 포함하는 방법을 자세히 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

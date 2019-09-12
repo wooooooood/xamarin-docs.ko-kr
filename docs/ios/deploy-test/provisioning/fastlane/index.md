@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 290c90820bad2d213f8f3a978437a55f7ca6069e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c26d912a4684f6ddbee46ae953ce5cf1a3db67bd
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285792"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762729"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>iOS에 대한 Fastlane 소개
 
@@ -80,18 +80,15 @@ fastlane은 다양한 방식으로 사용할 수 있습니다: 그러한 방식�
 
 8. `which fastlane`을 다시 실행하여 `/Users/[user]/.fastlane/bin`과 같이 보이는 경로를 확인합니다.
 
-
 ## <a name="updating-fastlane"></a>fastlane 업데이트
 
 fastlane는 정기적으로 새 릴리스를 푸시하는 매우 활성화된 오픈 소스 프로젝트입니다. 새 버전의 fastlane이 사용 가능하게 된다면 fastlane 명령을 실행할 때 알림을 받을 것입니다.
 
 [![](images/fastlane-image0.png "패스트 레인 업데이트 프롬프트")](images/fastlane-image0.png#lightbox)
 
-
 Fastlane의 새 버전으로 업데이트하려면 [여기](https://download.fastlane.tools)서 최신 패키지를 다운로드하여 설치 패키지를 두 번 클릭하여 실행합니다.
 
 [![](images/fastlane-image0a.png "설치 패키지 실행")](images/fastlane-image0a.png#lightbox)
-
 
 ## <a name="contents"></a>목차
 

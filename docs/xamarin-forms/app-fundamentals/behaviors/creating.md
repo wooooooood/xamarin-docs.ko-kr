@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 37403b9e33ccd54baac4fd36afbe50504e0380f0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a3b9653651e3000b954cb6d16154cddc8d5d363a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528960"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772094"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
 
@@ -207,7 +207,6 @@ entry.Behaviors.Clear();
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 설명했습니다. Xamarin.Forms 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되어 만들어집니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

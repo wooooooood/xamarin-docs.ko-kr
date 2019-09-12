@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 959b2091e88adde5bb3f64c2cdb5d5b0748aa0be
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 384ad20cc1456f3de01ddbe241bf2d8b58de387f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650813"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771925"
 ---
 # <a name="customizing-a-listview"></a>ListView 사용자 지정
 
@@ -563,7 +563,6 @@ protected override void OnElementPropertyChanged(object sender, System.Component
 ## <a name="summary"></a>요약
 
 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

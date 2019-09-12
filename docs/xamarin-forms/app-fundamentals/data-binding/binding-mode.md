@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 20a6dab34f290c6e5f170d861183dabbfe382970
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 1991be6961cbc296501a1df92fe3c89dda01d190
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650217"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771683"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
@@ -680,7 +680,6 @@ public partial class SampleSettingsPage : ContentPage
 다른 스크린샷은 변경된 설정을 보여 줍니다. 이 페이지로 실험할 때는 프로그램을 절전 상태로 두거나 실행 중인 디바이스나 에뮬레이터에서 종료해야 합니다. Visual Studio 디버거에서 프로그램을 종료하면 `App` 클래스의 `OnSleep` 재정의가 호출되지 않습니다.
 
 다음 문서에서는 `Label`의 `Text` 속성에 설정된 데이터 바인딩의 [**문자열 서식**](string-formatting.md)을 지정하는 방법을 알아봅니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

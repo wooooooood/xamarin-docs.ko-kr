@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 35596d5231f7e485cf8217e35a5641277dcab11d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ca524e9ff3c1d3c938905093f55a6482ea085963
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285593"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763199"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 임시 배포
 
@@ -24,7 +24,7 @@ iTunes Connect는 앱 테스트를 관리하기 위한 하나의 옵션이며, [
 
 Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer Enterprise Program 모두에서 사용할 수 있는 *임시* 배포를 통해 사용자가 테스트할 수 있으며, 최대 100개의 iOS 디바이스를 테스트하도록 허용합니다.
 
-임시 배포는 App Store 승인을 요구하지 않는 이점이 있으며, 웹 서버 또는 iTunes를 통해 무선으로 설치할 수 있습니다. 그러나 개발 및 배포 모두에 대해 **100**개 디바이스로 제한되며 이러한 디바이스는 Member Center에서 UDID를 통해 수동으로 추가해야 합니다. 디바이스 추가에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#adddevice) 가이드를 참조하세요.
+임시 배포는 앱 스토어 승인을 요구하지 않는 이점이 있으며, 웹 서버 또는 iTunes를 통해 무선으로 설치할 수 있습니다. 그러나 개발 및 배포 모두에 대해 **100**개 디바이스로 제한되며 이러한 디바이스는 Member Center에서 UDID를 통해 수동으로 추가해야 합니다. 디바이스 추가에 대한 자세한 내용은 [디바이스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#adddevice) 가이드를 참조하세요.
 
 임시 배포를 사용하려면 애플리케이션 ID 및 이 애플리케이션을 설치할 수 있는 디바이스뿐만 아니라 코드 서명 정보가 포함된 임시 *프로비전 프로필*도 사용하여 해당 애플리케이션을 프로비전해야 합니다.
 
@@ -45,11 +45,10 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 ## <a name="create-a-distribution-certificate"></a>배포 인증서 만들기
 
-
 1. Apple Developer Member Center의 *인증서, 식별자 및 프로필* 섹션으로 이동합니다.
 2. *인증서* 아래에서 **프로덕션**을 선택합니다.
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
-4. *프로덕션* 제목 아래에서 프로그램 구성원 자격에 따라 **사내 및 임시** 또는 **App Store 및 임시**를 선택합니다.
+4. *프로덕션* 제목 아래에서 프로그램 구성원 자격에 따라 **사내 및 임시** 또는 **앱 스토어 및 임시**를 선택합니다.
 
    [![사내 및 임시 선택 또는 App Store 및 임시 선택](ad-hoc-distribution-images/cert-first-small.png)](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
@@ -69,7 +68,7 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![팀 선택](ad-hoc-distribution-images/selectteam.png)](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS App Store**를 선택합니다.  [![iOS App Store 선택](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
+2. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.  [![iOS App Store 선택](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -79,7 +78,6 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 
 ### <a name="create-an-app-id"></a>앱 ID 만들기
 만든 다른 프로비전 프로필과 마찬가지로 앱 ID는 사용자의 디바이스에 배포되는 앱을 식별하는 데 필요합니다. 앱 ID를 아직 만들지 않았으면 다음 단계에 따라 만듭니다.
-
 
 1. [Apple Developer Center](https://developer.apple.com/account/overview.action)에서 *인증서, 식별자 및 프로필* 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
 2. **+** 단추를 클릭하고 포털에서 식별할 수 있는 **이름**을 제공합니다.
@@ -179,7 +177,6 @@ IPA 만들기에 대한 자세한 내용은 [IPA 지원](~/ios/deploy-test/app-d
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.iOS 애플리케이션을 테스트하는 데 필요한 임시 배포 메커니즘에 대해 설명했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

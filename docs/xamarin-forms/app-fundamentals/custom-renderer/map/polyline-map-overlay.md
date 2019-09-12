@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 19da0de80819a48259a28b30e003c32923d37378
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: af6e491725ac3dad843238c1adb547ac76a9c9ea
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650693"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771862"
 ---
 # <a name="highlighting-a-route-on-a-map"></a>맵의 경로 강조 표시
 
@@ -300,7 +300,6 @@ namespace MapOverlay.UWP
 ## <a name="summary"></a>요약
 
 이 문서에서는 맵에 폴리라인 오버레이를 추가하여 맵에 경로를 표시하거나 필요한 모든 모양을 형성하는 방법을 설명했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

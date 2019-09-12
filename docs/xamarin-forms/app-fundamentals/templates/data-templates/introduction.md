@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 7308222e64d64efdbad218186bb9a6e4dca3b26e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651918"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771273"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿 소개
 
@@ -133,7 +133,6 @@ public class Person
 - 애플리케이션 수준에서 정의된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 애플리케이션 전체의 유효한 컨트롤에 적용할 수 있습니다.
 
 보기 계층 구조의 하단에 위치한 데이터 템플릿은 `x:Key` 특성을 공유할 때 상단에 정의된 데이터 템플릿보다 우선권을 갖습니다. 예를 들어 애플리케이션 수준 데이터 템플릿은 페이지 수준 데이터 템플릿에 의해 재정의되고, 페이지 수준 데이터 템플릿은 컨트롤 수준 데이터 템플릿 또는 인라인 데이터 템플릿에 의해 재정의됩니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

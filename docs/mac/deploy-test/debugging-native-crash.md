@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 10/19/2016
-ms.openlocfilehash: bb33d9f85dfc1215e91caa20fab3800645e13111
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282183"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769880"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Xamarin.Mac 앱에서 네이티브 크래시 디버깅
 
@@ -251,4 +251,3 @@ C# 예외가 관리 코드를 호출하는 Objective-C 메서드로 "이스케�
 기술적 이유로 인한 어려움이 없다면, 모든 관리/네이티브 경계에서 관리 예외를 catch하도록 인프라를 설정하면 비용이 적지 않게 소모되며 여러 일반 작업에서 발생하는 _많은_ 전환이 있습니다. 많은 작업, 특히 UI 스레드와 관련된 작업은 신속하게 완료되어야 합니다. 그렇지 않으면 앱이 느려지고 성능이 저하됩니다. 이러한 콜백의 상당수는 throw 가능성이 별로 없는 간단한 작업만 하기 때문에 이와 같은 상황에서 이 오버헤드는 비용이 많이 들고 불필요합니다.
 
 따라서 try/catch를 설정하지 않습니다. 코드가 사소하지 않은 작업(부울 반환 또는 간단한 수학 이상)을 수행하는 경우 사용자가 직접 catch를 시도할 수 있습니다. 
-

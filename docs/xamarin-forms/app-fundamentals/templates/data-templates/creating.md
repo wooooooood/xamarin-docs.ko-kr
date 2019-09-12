@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 1163f264fc54a461d8d95854524439589cdc81f5
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 399f411acd497b9d55ca81f670556430fe5f5503
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646979"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771295"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Xamarin.Forms DataTemplate 만들기
 
@@ -288,7 +288,6 @@ public class WithDataTemplatePageCS : ContentPage
 ## <a name="summary"></a>요약
 
 이 문서에서는 사용자 지정 형식 또는 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에서 데이터 템플릿, 인라인을 만드는 방법에 대해 설명했습니다. 다른 곳에서 데이터 템플릿을 다시 사용할 필요가 없으면 인라인 템플릿을 사용해야 합니다. 또는 데이터 템플릿을 사용자 지정 유형으로 정의하거나 컨트롤 수준, 페이지 수준 또는 애플리케이션 수준 리소스로 정의하여 다시 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

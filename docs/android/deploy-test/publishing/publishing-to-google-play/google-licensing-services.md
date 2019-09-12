@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/20/2017
-ms.openlocfilehash: 47b9d76cb0b7b2fc48fe83d291479f7d1ed00eb8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 934cc5124c71f631def0d534420cf75a12ee4079
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525207"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753596"
 ---
 # <a name="google-licensing-services"></a>Google 라이선스 서비스
 
@@ -35,7 +35,6 @@ Google 라이선스를 구현하는 애플리케이션은 디바이스에서 Goo
 - Google Play는 Google 계정과 같은 정보와 IMSI 번호 같은 디바이스 자체 정보를 제공합니다. 
 
 Google 라이선스 서비스도 APK 확장 파일의 핵심 구성 요소입니다(이 문서의 후반부에서 논의). APK 확장 파일은 Google 라이선스 서비스를 사용하여 다운로드되는 확장 파일의 URL을 가져옵니다.
-
 
 ## <a name="requirements"></a>요구 사항
 

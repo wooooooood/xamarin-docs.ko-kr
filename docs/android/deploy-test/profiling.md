@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
-ms.openlocfilehash: d2999a21debefb05e5aa3cdaace56cb4f3ac2d81
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 44bed11e4d2ccf7baa39734a1b20e49b9ecf5f10
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525572"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753988"
 ---
 # <a name="profiling-android-apps"></a>Android 앱 프로파일링
 
@@ -24,14 +24,13 @@ ms.locfileid: "69525572"
 
 이 가이드는 Xamarin Profiler를 소개하고 Android Profiler의 사용을 시작하기 위한 자세한 정보를 제공합니다.
 
- 
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
 Xamarin Profiler는 IDE 내에서 Xamarin 앱을 프로파일링하기 위해 Visual Studio 및 Mac용 Visual Studio와 통합되는 독립 실행형 애플리케이션입니다. Xamarin Profiler 사용에 대한 자세한 내용은 [Xamarin Profiler](~/tools/profiler/index.md)를 참조하세요.
 
 > [!NOTE]
 > Windows의 Visual Studio Enterprise 또는 Mac용 Visual Studio에서 Xamarin Profiler 기능을 잠금 해제하려면 [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 구독자여야 합니다.
- 
+
 ## <a name="android-studio-profiler"></a>Android Studio Profiler
 
 Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android Profiler를 사용하여 Visual Studio Enterprise 라이선스의 필요 없이 Visual Studio로 빌드된 Xamarin Android 앱의 성능을 측정할 수 있습니다. 그러나 Xamarin Profiler와 달리 Android Profiler는 Visual Studio와 통합되지 않으며 미리 빌드되고 Android Profiler로 가져온 APK(Android 애플리케이션 패키지)를 프로파일링하는 데만 사용할 수 있습니다.
@@ -100,7 +99,6 @@ Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android
 15. **XamagonXuzzle**에서 **RANDOMIZE** 단추를 탭하는 경우(타일을 이동하고, 임의로 지정하도록 함) 앱의 임의 간격 동안 CPU 사용량이 표시됩니다.
 
     [![RANDOMIZE 단추를 탭한 경우 CPU 사용량](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
-
 
 ### <a name="using-the-android-profiler"></a>Android Profiler 사용
 

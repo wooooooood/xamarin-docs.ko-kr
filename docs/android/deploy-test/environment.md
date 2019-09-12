@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 14be0fec50138aed7b2b3e8d48d49cad86abbb2b
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 80e338319e4eeddcb3df287f86bcf89397d423f1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119425"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754039"
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -41,7 +41,6 @@ Xamarin.Android 4.6부터 시스템 속성 및 환경 변수는 모두 앱별로
 ## <a name="xamarinandroid-environment-variables"></a>Xamarin.Android 환경 변수
 
 Xamarin.Android는 `adb shell setprop debug.mono.env` 또는 `$(AndroidEnvironment)` 빌드 동작을 통해 설정할 수 있는 `XA_HTTP_CLIENT_HANDLER_TYPE` 변수를 지원합니다.
-
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
@@ -100,7 +99,6 @@ Xamarin.Android가 `adb logcat`에 로깅할 추가 정보를 제어합니다.
     만듭니다.
 - `timing`: 일부 메서드 타이밍 정보를 인쇄합니다. 이는 또한 `.__override__/methods.txt` 및 `.__override__/counters.txt` 파일도 만듭니다.
 
-
 ### `debug.mono.max_grefc`
 
 `debug.mono.max_grefc` 시스템 속성의 값은 정수입니다.
@@ -151,13 +149,11 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 > 기본 Android 디바이스가 TLS 1.2를 지원해야 합니다.
 Android 5.0 이상은 TLS 1.2를 지원합니다.
 
-
 ## <a name="example"></a>예
 
 ```shell
 ## Comments are lines which start with '#'
 ## Blank lines are ignored.
-
 
 ## Enable GREF messages to `adb logcat`
 debug.mono.log=gref
@@ -165,8 +161,6 @@ debug.mono.log=gref
 ## Clear out a Mono environment variable to decrease logging
 MONO_LOG_LEVEL=
 ```
-
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: 49370813f50e3b5f1a9193c542b9f5f13d65a8e1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67829951"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753951"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 디바이스 및 Xamarin.Android
 
@@ -93,9 +93,9 @@ Android 애플리케이션 패키지는 Android 애플리케이션에 필요한 
 
 - **AndroidManifest.xml** &ndash; 이는 이진 XML 형식의 `AndroidManifest.xml` 파일입니다.
 
-- **classes.dex** &ndash; 여기에는 Android 런타임 VM에서 사용하는 `dex` 파일 형식으로 컴파일된 응용 프로그램 코드가 포함됩니다.
+- **classes.dex**&ndash; 여기에는 Android 런타임 VM에서 사용하는 `dex` 파일 형식으로 컴파일된 애플리케이션 코드가 포함됩니다.
 
-- **resources.arsc** &ndash; 이 파일에는 응용 프로그램의 미리 컴파일된 리소스가 모두 포함됩니다.
+- **resources.arsc**&ndash; 이 파일에는 애플리케이션의 미리 컴파일된 리소스가 모두 포함됩니다.
 
 - **lib** &ndash; 이 디렉터리에는 각 ABI의 컴파일된 코드가 저장됩니다. 이전 섹션에서 설명된 각 ABI당 하나의 하위 폴더가 포함됩니다. 위의 스크린샷에서 해당 `.apk`에는 `armeabi-v7a` 및 `x86` 모두를 위한 네이티브 라이브러리가 있습니다.
 
@@ -191,7 +191,6 @@ $APP/lib/libtwo.so # armeabi, NOT armeabi-v7a!
 ```
 
 따라서 `armeabi-v7a` `libmonodroid.so`가 있고 대상에 최적화되어 있더라도 `.apk` 내에서 `armeabi` `libmonodroid.so`가 먼저 발견되고, `armeabi` `libmonodroid.so`가 추출됩니다. 또한 `armeabi`는 SMP로부터 안전하지 않으므로 이로 인해 모호한 런타임 오류가 발생할 수도 있습니다.
-
 
 ##### <a name="installing-native-libraries-android-404-and-later"></a>네이티브 라이브러리 설치: Android 4.0.4 이상
 

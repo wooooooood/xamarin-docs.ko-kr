@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: aab10d434461521825fd633369ffa3c6331e905b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d1a4d73242e9701ff9ffcfc58791986bca89a095
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68643970"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755840"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
@@ -215,7 +215,6 @@ Mac용 Visual Studio에서 **Phoneword** 프로젝트를 열고 **솔루션 패�
 **변환 기록** 단추 텍스트는 새 문자열 값을 반영하도록 업데이트되어야 합니다.
 
 [![새 문자열 값을 반영하는 단추](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
-
 
 디자인 화면에서 선택한 **변환 기록** 단추를 사용하여 **속성 패드**에서 **동작** 탭을 열고, **사용함** 확인란을 두 번 클릭하여 단추를 비활성화합니다. 그러면 단추의 색깔이 디자인 화면에서 짙어집니다.
 

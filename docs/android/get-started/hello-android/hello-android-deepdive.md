@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 2595ff23dcc0688c141f943d4ea61e13c970b7aa
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509573"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756716"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 
@@ -26,7 +26,7 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 ::: zone pivot="windows"
 
-- **Visual Studio 소개** &ndash; Visual Studio 및 새로운 Xamarin.Android 응용 프로그램 만들기를 소개합니다.
+- **Visual Studio 소개**&ndash; Visual Studio 및 새로운 Xamarin.Android 애플리케이션 만들기를 소개합니다.
 
 - **Xamarin.Android 애플리케이션 분석** - Xamarin.Android 애플리케이션의 핵심 부분을 안내합니다.
 
@@ -36,14 +36,14 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 - **작업 및 작업 수명 주기** &ndash; 작업 수명 주기를 소개하고 코드로 사용자 인터페이스를 연결합니다.
 
-- **테스트, 배포 및 마무리** &ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 응용 프로그램을 완성합니다.
+- **테스트, 배포 및 마무리**&ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 애플리케이션을 완성합니다.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **Mac용 Visual Studio 소개** &ndash; Mac용 Visual Studio 및 새로운 Xamarin.Forms 응용 프로그램 만들기를 소개합니다.
+- **Mac용 Visual Studio 소개**&ndash; Mac용 Visual Studio 및 새로운 Xamarin.Forms 애플리케이션 만들기를 소개합니다.
 
-- **Xamarin.Android 응용 프로그램 분석** &ndash; Xamarin.Android 응용 프로그램의 핵심 부분을 안내합니다.
+- **Xamarin.Android 애플리케이션 분석**&ndash; Xamarin.Android 애플리케이션의 핵심 부분을 안내합니다.
 
 - **앱 기본 항목 및 아키텍처 기본 사항** &ndash; 작업, Android 매니페스트 및 일반 버전의 Android 개발을 소개합니다.
 
@@ -51,7 +51,7 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 - **작업 및 작업 수명 주기** &ndash; 작업 수명 주기를 소개하고 코드로 사용자 인터페이스를 연결합니다.
 
-- **테스트, 배포 및 마무리** &ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 응용 프로그램을 완성합니다.
+- **테스트, 배포 및 마무리**&ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 애플리케이션을 완성합니다.
 
 ::: zone-end
 
@@ -116,7 +116,6 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 - **drawable** &ndash; 드로어블 디렉터리는 이미지 및 비트맵과 같은 [드로어블 리소스](https://developer.android.com/guide/topics/resources/drawable-resource.html)를 보관합니다.
 
 - **mipmap** &ndash; mipmap 디렉터리는 다른 시작 관리자 아이콘 밀도에 대한 드로어블 리소스를 저장합니다. 기본 템플릿에서 드로어블 디렉터리는 애플리케이션 아이콘 파일인 **Icon.png**를 보관합니다.
-
 
 ::: zone pivot="windows"
 
@@ -238,9 +237,9 @@ Android에서 작업은 사용자와의 상호 작용에 따라 수명 주기의
 
 - **OnCreate** &ndash; 뷰를 만들고, 변수를 초기화하고, 사용자에게 작업을 표시하기 전에 수행해야 하는 기타 준비 작업을 수행합니다. 이 메서드는 작업을 메모리에 로드할 때 한 번만 호출됩니다. 
 
-- **OnResume** &ndash; 작업이 장치 화면에 반환될 때마다 발생해야 하는 모든 작업을 수행합니다.
+- **OnResume**&ndash; 작업이 디바이스 화면에 반환될 때마다 발생해야 하는 모든 작업을 수행합니다.
 
-- **OnPause** &ndash; 작업이 장치 화면을 벗어날 때마다 발생해야 하는 모든 작업을 수행합니다.
+- **OnPause**&ndash; 작업이 디바이스 화면을 벗어날 때마다 발생해야 하는 모든 작업을 수행합니다.
 
 `Activity`의 수명 주기 메서드에 사용자 지정 코드를 추가하는 경우 해당 수명 주기 메서드의 *기본 구현*을 *재정의*합니다. 기존 수명 주기 메서드(일부 코드가 이미 연결되어 있음)를 누르고 고유한 코드를 사용하여 해당 메서드를 확장합니다. 새 코드 앞에 원래 코드가 실행되도록 메서드 내에서 기본 구현을 호출합니다. 다음 섹션에서 이러한 예제를 설명합니다.
 

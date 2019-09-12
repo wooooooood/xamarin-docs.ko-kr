@@ -6,12 +6,12 @@ ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
-ms.openlocfilehash: f0d51d9aa5cde17498124b74cc35011a6d942fae
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284839"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765936"
 ---
 # <a name="custom-linker-configuration"></a>사용자 지정 링커 구성
 
@@ -26,7 +26,6 @@ ms.locfileid: "70284839"
 
 - **Android의 경우** : **빌드 작업**을 **LinkDescription**으로 설정
 - **iOS의 경우** : **빌드 작업**을 **LinkDescription**으로 설정
-
 
 다음 예에서는 XML 파일의 모습을 보여줍니다.
 
@@ -60,8 +59,6 @@ ms.locfileid: "70284839"
 `My.Own.Assembly.dll`에 대한 두 번째 섹션은 `Foo` 형식이 모든 필드(즉, `preserve="fields"` 특성) 및 모든 생성자(즉, IL에 있는 `.ctor`이라는 이름의 모든 메서드)를 유지하도록 보장합니다. `Bar` 형식은 한 생성자(단일 문자열 매개 변수를 허용하는) 및 특정 문자열 필드 `_blah`에 대한 특정 서명(이름이 아닌)을 유지합니다.
 `My.Own.Namespace` 네임스페이스는 포함된 모든 형식을 유지합니다.
 마지막으로, 전체 이름(네임스페이스 포함)이 와일드카드 패턴 "My.Other\*"와 일치하는 형식은 모든 필드와 메서드를 유지합니다. 와일드카드 문자 `*`는 "type fullname" 패턴에 여러 번 포함할 수 있습니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

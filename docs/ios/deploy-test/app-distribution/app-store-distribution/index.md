@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2017
-ms.openlocfilehash: 5cf57a42092535363071acffe993cd38a91b9805
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 05034989c60868f8bff8164da7da90a7ff8788a3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290988"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763214"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -70,7 +70,6 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 3. 팀 권한에 따라 아래와 같이 서명 ID가 생성되거나 팀 에이전트 또는 관리자가 승인할 때까지 기다려야 할 수 있습니다.  [ ![](images/generated.png "서명 ID 생성 및 대화 상자 표시")](images/generated.png#lightbox)
 
-
 <a name="creatingprofile" />
 
 ## <a name="creating-a-distribution-profile"></a>배포 프로필 만들기
@@ -81,7 +80,6 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 만든 다른 프로비전 프로필과 마찬가지로 앱 ID는 사용자의 디바이스에 배포되는 앱을 식별하는 데 필요합니다. 앱 ID를 아직 만들지 않았으면 다음 단계에 따라 만듭니다.
 
-
 1. [Apple Developer Center](https://developer.apple.com/account/overview.action)에서 *인증서, 식별자 및 프로필* 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
 2. **+** 단추를 클릭하고 포털에서 식별할 수 있는 **이름**을 제공합니다.
 3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, 다음과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다.
@@ -89,7 +87,6 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
     - **와일드카드 앱 ID**: com.[DomainName].*
 4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices)를 선택합니다.
 5. **계속** 단추를 클릭하고 화면의 지침에 따라 새 앱 ID를 만듭니다.
-
 
 ### <a name="creating-a-provisioning-profile"></a>프로비전 프로필 만들기
 
@@ -120,7 +117,6 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
     [![](images/distribute06.png "새 배포 프로필에 대한 이름 입력")](images/distribute06.png#lightbox)
 
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

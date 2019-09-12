@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/06/2018
-ms.openlocfilehash: 6014bb0889c84c35edc991011bae46065d4ff8d7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d7a2f14b55d9f8de2ea01bdfa5c68c5c9f8f2555
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287109"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756146"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
@@ -113,7 +113,6 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 -----
 
-
 <a name="devcenter" />
 
 ## <a name="using-the-developer-center"></a>개발자 센터 사용
@@ -146,7 +145,6 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
     ![앱 ID 확인](images/image9.png)
 
 9. **등록** 및 **완료**를 차례로 클릭합니다. 새로 생성된 앱 ID가 iOS 앱 ID 목록에 표시됩니다.
-
 
 <a name="provisioningprofile" />
 

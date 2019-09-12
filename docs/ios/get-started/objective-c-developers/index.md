@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: 96a7e6b9587d696479afd084613c79e2b03f956c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2970253ec15ca207b9f69e2b764e0a69f8037938
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292010"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753508"
 ---
 # <a name="xamarin-for-objective-c-developers"></a>Objective-C 개발자용 Xamarin
 
@@ -30,7 +30,6 @@ Xamarin은 iOS를 대상으로 하는 개발자가 비 사용자 인터페이스
 
 - [Objective-C 개발자용 C# 입문서](primer.md) - 이 문서는 Xamarin 및 C# 언어로 이동하려는 Objective-C 개발자를 위한 간단한 입문서입니다. 
 - [연습: Objective-C 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md) - Xamarin.iOS 애플리케이션에서 기존 Objective-C 코드를 다시 사용하는 방법을 단계별로 연습합니다. 
-
 
 ## <a name="binding-objective-c"></a>Objective-C 바인딩
 

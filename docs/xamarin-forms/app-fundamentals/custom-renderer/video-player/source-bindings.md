@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8a83fd7fca15214711dd90dcbf80eb0d56a3df34
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 3dfdb83f99e7b15866abcc4980473ddf075dff69
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650451"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771775"
 ---
 # <a name="binding-video-sources-to-the-player"></a>플레이어에 비디오 소스 바인딩
 
@@ -138,7 +138,6 @@ namespace VideoPlayerDemos
 `VideoPlayer`의 `Source` 속성은 `ListView`에 바인딩됩니다. 바인딩의 `Path`는 `SelectedItem.VideoSource`로 지정되며 이는 두 속성으로 구성된 복합 경로입니다. `SelectedItem`은 `ListView`의 속성입니다. 선택한 항목은 `VideoInfo` 형식이며 여기에는 `VideoSource` 속성이 포함됩니다.
 
 처음 **웹 비디오 선택** 페이지에서처럼 초기에는 `ListView`에서 항목이 선택되지 않으므로 재생을 시작하기 전에 비디오 중 하나를 선택해야 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

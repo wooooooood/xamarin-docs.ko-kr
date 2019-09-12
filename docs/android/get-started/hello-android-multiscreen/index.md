@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
-ms.openlocfilehash: 170bd30d65b9f5947bdb9d23d3100a8048f73ac7
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 4bbfbaf2b7efc7e1d2f75a7462d6a2559ed7a9c0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864064"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755708"
 ---
 # <a name="hello-android-multiscreen"></a>Hello, Android 멀티스크린
 
@@ -26,7 +26,6 @@ _두 부분으로 구성된 이 가이드에서는 Hello, Android 가이드에�
 ## <a name="part-2-deep-diveandroidget-startedhello-android-multiscreenhello-android-multiscreen-deepdivemd"></a>[2부: 심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)
 
 이 문서의 두 번째 부분에서는 빌드한 내용에 대해 검토하고, 진행하면서 나오는 아키텍처, 탐색 및 다른 새 Android 개념에 대해 설명합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b9658aa0a4222fb9d257299ea3c6fd69016abdb4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ca27b0ba0f9e434809250a78047f3bd503f80b50
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646744"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771653"
 ---
 # <a name="xamarinforms-binding-path"></a>Xamarin.Forms 바인딩 경로
 
@@ -162,8 +162,6 @@ XAML에서 생성자 인수를 지정하는 방법에 대한 자세한 내용은
 Xamarin.Forms에서 바인딩 경로를 처리하면 경로의 개체에 `PropertyChanged` 처리기를 설치하여 `INotifyPropertyChanged` 인터페이스를 구현합니다. 예를 들어 `Text` 속성이 변경되기 때문에 마지막 바인딩은 첫 번째 `Label`의 변경 내용을 적용합니다.
 
 바인딩 경로의 속성이 `INotifyPropertyChanged`를 구현하지 않는 경우 해당 속성에 대한 변경 내용이 무시됩니다. 일부 변경 내용이 바인딩 경로를 무효화할 수 있으므로 속성 및 하위 속성의 문자열이 잘못되지 않은 경우에만 이 기술을 사용해야 합니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

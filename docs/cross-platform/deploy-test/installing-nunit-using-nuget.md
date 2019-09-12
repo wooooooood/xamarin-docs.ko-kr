@@ -6,12 +6,12 @@ ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 8fc4ca3063e88f17fc1e22ad35667b2086e63e89
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2437a26ae0f9187d3042ef6e6064ddafa808804c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280471"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70766007"
 ---
 # <a name="installing-nunit-264-using-nuget"></a>NuGet을 사용하여 NUnit 2.6.4 설치하기
 
@@ -39,7 +39,6 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 다음 단계는 NUnit 2.6.4를 설치하는 방법을 설명합니다.
 
-
 1. **패키지 관리자 열기** - **패키지**를 마우스 오른쪽 단추로 클릭하고 팝업 메뉴에서 **패키지 추가**를 선택합니다.
 
     [![](installing-nunit-using-nuget-images/add-packages-xs.png "패키지를 마우스 오른쪽 단추로 클릭하고 팝업 메뉴에서 패키지 추가를 선택합니다.")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
@@ -47,7 +46,6 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 1. **`NUnit version:2.6.4`를 검색함** - Mac용 Visual Studio는 NUnit 3.0을 제거(필요한 경우)하고 NUnit 2.6.4를 다운로드하여 설치합니다. **패키지 추가** 대화 상자에서 텍스트 `nunit version:2.6.4`를 오른쪽 위 모서리에 있는 **검색** 필드에 입력합니다. 검색 결과에서 **NUnit**을 선택하고 **패키지 추가** 단추를 클릭합니다.
 
     [![](installing-nunit-using-nuget-images/nunit-search-xs.png "검색 결과에서 NUnit를 선택하고 패키지 추가 단추를 클릭합니다.")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
-
 
 솔루션 패드에서 NUnit 패키지의 버전 번호를 검사하여 NUnit 2.6.4이 설치되었는지 확인할 수 있습니다.
 
@@ -57,13 +55,11 @@ Mac용 Visual Studio로 테스트를 작성하거나 또는 Xamarin.UITest를 �
 
 이 가이드는 패키지 관리자 콘솔을 사용하여 Mac용 Visual Studio에서 NUnit 3.0을 NUnit 2.6.4로 다운그레이드하는 방법을 설명합니다.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ## <a name="installing-nunit-264-in-visual-studio"></a>NUnit 2.6.4를 Visual Studio에 설치함
 
 이 섹션에서는 Visual Studio 2015 이상에서 _NuGet 패키지 관리자 콘솔_을 사용하여 NUnit 3.0을 제거하고 NUnit 2.6.4를 설치하는 방법에 중점을 둡니다.
-
 
 1. **NuGet 패키지 관리자 콘솔 시작하기** - **도구 > NuGet 패키지 관리자 > 패키지 관리자 콘솔**을 선택합니다.
 

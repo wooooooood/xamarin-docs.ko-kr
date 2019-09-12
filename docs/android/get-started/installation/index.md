@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: b9cecc8863cb4e68338d3226c5bf3744b7010e43
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: c561ab94d8cae28ac180c201795f67518aa2d8f9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757984"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
 이 섹션의 항목에서는 Windows 및 macOS에서 Visual Studio를 사용하도록 Xamarin.Android를 설치하고 구성하는 방법, Android SDK Manager를 사용하여 앱을 빌드하고 테스트하는 데 필요한 Android SDK 도구 및 구성 요소를 다운로드하고 설치하는 방법, 디버깅하기 위해 Android 에뮬레이터를 구성하는 방법 및 앱을 디버깅하고 최종 테스트하기 위해 개발 컴퓨터에 물리적 Android 디바이스를 연결하는 방법에 대해 설명합니다.
-
 
 ## <a name="windows-installationandroidget-startedinstallationwindowsmd"></a>[Windows 설치](~/android/get-started/installation/windows.md)
 
@@ -35,7 +34,7 @@ Visual Studio에는 Google의 독립 실행형 Android SDK Manager를 대체하�
 
 이 아티클에서는 Xamarin.Android 애플리케이션을 테스트하고 설정하기 위해 Android Emulator를 디버깅하는 방법을 설명합니다.
 
-## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Android 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
+## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Android 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)
 
 이 문서에서는 디바이스를 사용하여 Xamarin.Android 애플리케이션을 실행하고 디버깅할 수 있도록 물리적 Android 디바이스를 설정하고 개발 컴퓨터에 연결하는 방법을 설명합니다.
 

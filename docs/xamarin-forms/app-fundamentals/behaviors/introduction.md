@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 176f41d4b7349af2cf7cc49de8ba0789ad2f8c11
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: d62ba6b025b2fe9865df8279a5e98eba254bb5a2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995816"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772054"
 ---
 # <a name="introduction-to-behaviors"></a>동작 소개
 
@@ -33,8 +33,6 @@ Xamarin.Forms는 동작의 두 가지 다른 스타일을 지원합니다.
 - **연결된 동작** – 첨부된 속성이 하나 이상 있는 `static` 클래스입니다. 연결된 동작에 대한 자세한 내용은 [연결된 동작](~/xamarin-forms/app-fundamentals/behaviors/attached.md)을 참조하세요.
 
 이 가이드는 Xamarin.Forms 동작에 집중합니다. 이는 동작 구성에 선호되는 접근 방식이기 때문입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

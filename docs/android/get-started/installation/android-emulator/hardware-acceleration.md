@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 230c72539388028aaf8f05d200d8779105102644
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: add9c602f4c04f1d95db4cee578fdadf0b41cf33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225626"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758000"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -86,7 +86,6 @@ systeminfo
 
 [![systeminfo 출력 예제](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
-
 ### <a name="enabling-hyper-v-acceleration"></a>Hyper-V 가속 사용
 
 컴퓨터가 위의 조건을 충족하는 경우 다음 단계를 수행하여 Hyper-V로 Android 에뮬레이터를 가속화합니다.
@@ -103,9 +102,7 @@ systeminfo
 
     [![Android SDK 및 도구 대화 상자](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
-
 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) **x86** 기반 시스템 이미지를 선택해야 합니다. ARM 기반 시스템 이미지를 사용하면 가상 디바이스가 가속화되지 않고 느리게 실행됩니다.
-
 
 ## <a name="accelerating-with-haxm"></a>HAXM을 통한 가속화
 
@@ -141,7 +138,6 @@ Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manage
 2. **intelhaxm-android.exe**를 실행하여 HAXM 설치 관리자를 시작합니다. 설치 관리자 대화 상자에서 기본값을 적용합니다.
 
    ![Intel Hardware Accelerated Execution Manager 설치 창](hardware-acceleration-images/win/06-haxm-installer.png)
-
 
 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) **x86** 기반 시스템 이미지를 선택해야 합니다. ARM 기반 시스템 이미지를 사용하면 가상 디바이스가 가속화되지 않고 느리게 실행됩니다.
 
@@ -227,7 +223,6 @@ HAXM이 설치되지 않은 경우 다음 섹션의 단계에 따라 HAXM을 설
 ### <a name="installing-haxm"></a>HAXM 설치
 
 macOS용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager) 페이지에서 사용할 수 있습니다. HAXM을 다운로드하여 설치하려면 다음 단계를 수행합니다.
-
 
 1. Intel 웹 사이트에서 최신 macOS용 [HAXM 가상화 엔진](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) 설치 관리자를 다운로드합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 6979b4d3e0d750ee962346a94dd832c86c92d995
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: f8f2fc489c10d404b5864ea13c438e3e5508eabe
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68652944"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771366"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Xamarin.Forms TabbedPage
 
@@ -257,7 +257,6 @@ public class TabbedPageDemoPageCS : TabbedPage
 ## <a name="summary"></a>요약
 
 이 문서에서는 페이지의 컬렉션을 검색하는 데 TabbedPage를 사용하는 방법을 설명합니다. Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

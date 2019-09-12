@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 45eda150b0cff9462cfe5f09be4b04ea64ec391d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5508636905acbb513aec4c6e065e9296293310d3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284556"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70768668"
 ---
 # <a name="hello-ios--quickstart"></a>Hello, iOS - 빠른 시작
 
@@ -329,7 +329,6 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 
     ![](hello-ios-quickstart-images/vs-image14.png "단추가 텍스트 필드 및 레이블과 같은 너비가 되도록 조정")
 
-
 1. 디자인 화면에서 **단추**를 선택한 채로 **속성**의 **ID** 섹션에서 **이름** 속성을 `TranslateButton`으로 변경합니다. **제목** 속성을 "변환"으로 변경합니다.
 
     ![](hello-ios-quickstart-images/vs-image15.png "제목 속성을 변환으로 변경")
@@ -424,7 +423,6 @@ Xamarin.iOS는 다음 설치를 사용하여 작동합니다.
 1. **솔루션 탐색기**에서 **ViewController.cs**를 두 번 클릭하여 단추와의 상호 작용을 처리하는 논리를 추가할 수 있습니다.
 
     ![](hello-ios-quickstart-images/vs-image20.png "단추와의 상호 작용을 처리하는 논리 추가")
-
 
 1. `TranslateButton`을 연결하여 시작합니다. **ViewController** 클래스에서 `ViewDidLoad` 메서드를 찾습니다. `ViewDidLoad` 내의 `base.ViewDidLoad()` 호출 아래에 다음 단추 코드를 추가합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 2080961e2741ea0d0f0316918c55f3c2a194a00a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289974"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756204"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -22,9 +22,7 @@ _TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베
 
 TestFlight는 Apple의 iOS 앱용 베타 테스트 서비스이며, [iTunes Connect](https://itunesconnect.apple.com/)를 통해서만 액세스할 수 있습니다. 현재 iOS 8.0 이상 앱에서 사용할 수 있습니다. TestFlight는 내부 및 외부 사용자 모두와 함께 베타 테스트를 수행할 수 있으며, 외부 사용자에 대한 베타 앱 검토로 인해 앱 스토어에 게시할 때 최종 검토에서 훨씬 쉽게 처리할 수 있습니다.
 
-
 이전에는 이진 파일이 Mac용 Visual Studio 내에서 생성되고, 테스터에게 배포하기 위해 TestFlightApp 웹 사이트에 업로드되었습니다. 새 프로세스에는 앱 스토어에서 완전하게 테스트된 고품질 응용 프로그램을 사용할 수 있도록 하는 여러 가지 향상된 기능이 있습니다. 예:
-
 
 - 외부 테스트에 필요한 베타 앱 검토는 최종 앱 스토어 검토에 대한 성공 가능성을 높여주지만, 두 검토 모두 Apple의 지침을 준수해야 합니다.
 - 업로드하기 전에 앱을 iTunes Connect에 등록해야 합니다. 이렇게 하면 프로비전 프로필, 이름 및 인증서 간에 불일치가 발생하지 않습니다.
@@ -44,7 +42,6 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 아래 그림과 같이 [Xcode에서 빌드의 유효성을 검사](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)할 때 배포 프로필에 베타 자격이 포함되어 있는지 확인할 수 있습니다.
 
 [![](testflight-images/validate-build.png "Apple에 앱 제출")](testflight-images/validate-build.png#lightbox)
-
 
 ## <a name="testflight-workflow"></a>TestFlight 워크플로
 
@@ -68,14 +65,11 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 
     [![](testflight-images/my-apps.png "내 앱 선택")](testflight-images/my-apps.png#lightbox)
 
-
 3. **My Apps** 화면의 왼쪽 위 모서리에 있는 **+** 단추를 클릭하여 새 앱을 추가합니다. Mac 및 iOS 개발자 계정이 있는 경우 여기서 새 앱 유형을 선택하라는 메시지가 표시됩니다.
 
 앱의 Info.plist와 정확히 동일한 정보를 포함해야 하는 **새 iOS 앱** 제출 창이 표시됩니다.
 
 새 iTunes Connect 레코드를 만드는 방법에 대한 자세한 내용은 [iTunes Connect 레코드 만들기](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) 가이드를 참조하세요.
-
-
 
 ### <a name="completing-the-new-ios-app-submission-form"></a>새 iOS 앱 제출 양식 완성
 
@@ -91,7 +85,6 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 - **버전** - 업로드되는 앱의 버전 번호입니다. 이 항목은 개발자가 선택합니다.
 - **SKU** - 사용자에게 표시되지 않는 앱의 고유 ID입니다. 제품 ID와 비슷한 방식으로 생각할 수 있습니다. 위의 예제에서는 해당 날짜에 대한 버전 번호와 함께 날짜를 선택했습니다.
 
-
 ## <a name="upload-your-app"></a>앱 업로드
 
 iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있습니다. 빌드에는 새 베타 자격이 있어야 합니다.
@@ -105,7 +98,6 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
  Mac용 Visual Studio에서 이진 파일을 빌드하려면 _보관_ 기능을 사용해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 아래 그림과 같이 **게시를 위해 보관**을 선택합니다.
 
  [![](testflight-images/new-archive.png "게시를 위해 보관 선택")](testflight-images/new-archive.png#lightbox)
-
 
  자세한 내용은 [배포 가능한 파일 빌드](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 가이드를 참조하세요.
 
@@ -144,7 +136,6 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
 -----
-
 
 [앱 스토어에 게시](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 가이드에서는 위의 모든 단계를 자세히 설명합니다. 앱 스토어 제출 프로세스에 대한 자세한 내용은 이 문서를 참조하세요.
 
@@ -217,7 +208,6 @@ TestFlight를 사용하여 시작하려면 앱의 **시험판** 탭으로 이동
 내부 테스터 페이지의 상태 열에서 초대 상태를 확인할 수 있습니다.
 
 [![](testflight-images/status-added.png "초대 상태")](testflight-images/status-added.png#lightbox)
-
 
 ### <a name="external-testers"></a>외부 테스터
 

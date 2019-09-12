@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 8afe9e703d357c246ec46756a87a7337859d5888
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1844136bb62930341cf00ec871fdd2ff8ff8fe1f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287021"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762736"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Wallet 기능
 
@@ -54,13 +54,12 @@ Wallet에 사용할 새 프로비전 프로필을 만들려면 다음을 수행�
 
 ![새로 만든 앱 ID를 사용하여 프로비전 프로필 만들기](wallet-capabilities-images/image20.png)
 
-
 Wallet 사용에 대한 자세한 내용은 다음 가이드를 참조하세요.
 
 * [PassKit 소개](~/ios/platform/passkit.md)
- 
+
 ## <a name="next-steps"></a>다음 단계
- 
+
 아래 목록에는 필요할 수도 있는 추가 단계가 설명되어 있습니다.
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.

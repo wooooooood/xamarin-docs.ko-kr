@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108433"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771875"
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -92,7 +92,6 @@ var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere
 ## <a name="summary"></a>요약
 
 이 문서에서는 사용자 지정 렌더러를 소개했으며 사용자 지정 렌더러를 만드는 과정을 간략하게 설명했습니다. 사용자 지정 렌더러는 Xamarin.Forms 컨트롤의 모양과 동작을 사용자 지정하는 강력한 방법을 제공합니다. 작은 스타일 변경 또는 정교한 플랫폼별 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

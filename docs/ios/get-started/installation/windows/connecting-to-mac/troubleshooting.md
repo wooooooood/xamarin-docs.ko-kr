@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a6cdd5ccec0d2c60eba18418327fd786201f11b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 41a5a30cdd5017046415f1d678abf1d44e83e678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285641"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753681"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -25,11 +25,9 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 로그 파일은 Visual Studio에서 **도움말 &gt; Xamarin &gt; Zip 로그**로 이동하여 찾을 수 있습니다.
 
-
 ## <a name="wheres-the-xamarin-build-host-app"></a>Xamarin 빌드 호스트 앱의 위치
 
 오래된 Xamarin.iOS 버전의 Xamarin 빌드 호스트는 더 이상 필요 없습니다. 이제 Visual Studio는 원격 로그인을 통해 자동으로 에이전트를 배포하고 백그라운드에서 실행합니다. Mac 또는 Windows 컴퓨터에서 실행되는 추가 앱은 없습니다.
-
 
 ## <a name="troubleshooting-remote-login"></a>원격 로그인 문제 해결
 
@@ -64,7 +62,6 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
     예를 들어 아래 스크린샷에서 계정 이름은 **Amy Burns**가 아닌 **amyb**입니다.
 
     [![](troubleshooting-images/troubleshooting-image5a.png "터미널 앱에서 계정 이름 가져오기")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
-
 
 6. Mac에 사용하는 IP 주소가 올바른지 확인합니다. IP 주소는 Mac의 **시스템 기본 설정 > 공유 > 원격 로그인**에서 찾을 수 있습니다.
 
@@ -373,7 +370,6 @@ killall mono
 2. 컨트롤 키를 누른 상태로 **mtbs** 폴더를 클릭하고 **휴지통으로 이동**을 선택합니다.
 
     [![](troubleshooting-images/troubleshooting-image9.png "mtbs 폴더를 휴지통으로 이동")](troubleshooting-images/troubleshooting-image9.png#lightbox)
-
 
 ## <a name="related-links"></a>관련 링크
 

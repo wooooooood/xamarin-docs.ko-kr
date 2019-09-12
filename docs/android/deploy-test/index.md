@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: ff2b481fda34bc7a75c88c72a5e30f00c4b70d9d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864208"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754009"
 ---
 # <a name="deployment-and-testing"></a>배포 및 테스트
 
 이 섹션에는 애플리케이션을 테스트하고, 해당 성능을 최적화하고, 릴리스할 준비를 하고, 인증서를 사용하여 서명하고, 앱 스토어에 게시하는 방법을 설명하는 가이드가 포함되어 있습니다.
-
 
 ## <a name="application-package-sizesapp-package-sizemd"></a>[애플리케이션 패키지 크기](app-package-size.md)
 
@@ -62,7 +61,6 @@ Xamarin.Android로 빌드된 애플리케이션의 성능을 높이기 위한 �
 ## <a name="profiling-android-appsandroiddeploy-testprofilingmd"></a>[Android 앱 프로파일링](~/android/deploy-test/profiling.md)
 
 이 가이드에서는 프로파일러 도구를 사용하여 Android 앱의 성능 및 메모리 사용을 검사하는 방법을 설명합니다.
-
 
 ## <a name="preparing-an-application-for-releaseandroiddeploy-testrelease-prepindexmd"></a>[릴리스할 애플리케이션 준비](~/android/deploy-test/release-prep/index.md)
 

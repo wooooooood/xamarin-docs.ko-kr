@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 676523e461737d7820278ca8c319794d3347088d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289801"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771263"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿 소개
 
@@ -51,7 +51,6 @@ _Xamarin.Forms 컨트롤 템플릿은 런타임 시 애플리케이션 페이지
 - 애플리케이션 수준에서 정의한 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) 인스턴스는 애플리케이션 전체 페이지에 적용할 수 있습니다.
 
 보기 계층 구조에서 하위 컨트롤 템플릿은 보다 상위에 정의된 것보다 우선합니다. 예를 들어 페이지 수준에서 정의된 `DarkTheme`라는 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)은 애플리케이션 수준에서 정의된 동일한 이름의 템플릿보다 우선합니다. 따라서 애플리케이션의 각 페이지에 적용할 테마를 정의하는 컨트롤 템플릿은 애플리케이션 수준에서 정의되어야 합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

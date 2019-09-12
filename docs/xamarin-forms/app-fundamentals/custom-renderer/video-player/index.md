@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 8e6f37fb607f4b0bc0ddfd41ad86dfe7ecbc03df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650536"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771817"
 ---
 # <a name="implementing-a-video-player"></a>비디오 플레이어 구현
 
@@ -65,10 +65,6 @@ Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 �
 ## <a name="custom-video-positioningcustom-positioningmd"></a>[사용자 지정 비디오 위치 지정](custom-positioning.md)
 
 플랫폼 비디오 플레이어마다 비디오의 진행률을 나타내는 위치 지정 막대가 있으며 이것을 사용하여 앞쪽이나 뒤쪽의 특정 위치로 건너뛸 수 있습니다. 이 문서에서는 이 위치 지정 막대를 사용자 지정 컨트롤로 바꾸는 방법을 보여줍니다.
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

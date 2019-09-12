@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/30/2018
-ms.openlocfilehash: 4e9a7df9ef418eb9a671979da6d61f7afe03a49f
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525425"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753850"
 ---
 # <a name="linking-on-android"></a>Android의 연결
 
@@ -25,8 +25,6 @@ Xamarin.Android 애플리케이션은 *링커*를 사용하여 애플리케이�
 |연결 없이 릴리스:|4.2MB|2.9MB|
 
 연결 결과 1.2.0에서 원래(연결되지 않은) 패키지 크기의 30%, 4.0.1에서 연결되지 않은 패키지 크기의 18%에 해당하는 패키지가 생성됩니다.
-
-
 
 ## <a name="control"></a>컨트롤
 
@@ -50,7 +48,6 @@ public class MyActivity {
 }
 ```
 
-
 ### <a name="linker-behavior"></a>링커 동작
 
 링커 제어의 기본 메커니즘은 **프로젝트 옵션** 대화 상자 내 **링커 동작**(Visual Studio의 *연결*) 드롭다운입니다. 여기에는 세 가지 옵션이 있습니다.
@@ -58,7 +55,6 @@ public class MyActivity {
 1. **연결하지 않음**(Visual Studio의 *없음*)
 1. **SDK 어셈블리 연결**(*SDK 어셈블리만*)
 1. **모든 어셈블리 연결**(*SDK 및 사용자 어셈블리*)
-
 
 **연결하지 않음** 옵션은 링커를 해제합니다. 위의 "연결 없이 릴리스" 애플리케이션 크기 예제에서는 이 동작을 사용했습니다. 이는 런타임 오류를 해결할 때 링커가 원인인지 파악하는 데 유용합니다. 이 설정은 일반적으로 프로덕션 빌드에 권장되지 않습니다.
 
@@ -86,7 +82,6 @@ E/mono    (17755):   at LinkerScratch2.Activity1.OnCreate (Android.OS.Bundle bun
 E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_savedInstanceState) [0x00000] in <filename unknown>:0
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
-
 
 ### <a name="preserving-code"></a>코드 유지
 
@@ -149,8 +144,6 @@ namespace Android.Runtime
 
 위의 예에서 `Preserve` 특성은 `Android.Runtime` 네임스페이스에 선언되어 있습니다. 그러나 링커가 형식 이름별로 이 특성을 조회하기 때문에 임의의 네임스페이스에서 `Preserve` 특성을 사용할 수 있습니다.
 
-
-
 ### <a name="falseflag"></a>falseflag
 
 [Preserve] 특성을 사용할 수 없는 경우에는 링커가 해당 형식이 사용된다고 믿도록 코드 블록을 제공하는 한편 이 코드 블록이 런타임에 실행되지 않도록 하면 유용합니다. 이 기법을 활용하려면 다음과 같이 할 수 있습니다.
@@ -173,8 +166,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### <a name="linkskip"></a>linkskip
 
 사용자가 제공한 어셈블리 집합을 절대 연결해서는 안 된다고 지정하고, [AndroidLinkSkip MSBuild 속성](~/android/deploy-test/building-apps/build-process.md)을 사용하여 *SDK 어셈블리 연결* 동작으로 다른 사용자 어셈블리를 건너뛸 수 있게 할 수 있습니다.
@@ -185,14 +176,11 @@ class MyActivity {
 </PropertyGroup>
 ```
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 [사용자 지정 링커 구성 파일](~/cross-platform/deploy-test/linker.md)을 포함한 파일에서 [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
 **빌드 동작**을 사용할 수 있습니다.
 추가합니다. 사용자 지정 링커 구성 파일은 유지해야 하는 `internal` 또는 `private` 멤버를 유지하는 데 필요할 수 있습니다.
-
-
 
 ### <a name="custom-attributes"></a>사용자 지정 특성
 
@@ -207,7 +195,6 @@ class MyActivity {
 - System.MonoTODOAttribute
 - System.Xml.MonoFIXAttribute
 
-
 어셈블리가 연결되면 릴리스 빌드의 모든 멤버에서 다음 사용자 지정 특성 형식이 제거됩니다.
 
 - System.Diagnostics.DebuggableAttribute
@@ -219,7 +206,6 @@ class MyActivity {
 - System.Diagnostics.DebuggerStepThroughAttribute
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
-
 
 ## <a name="related-links"></a>관련 링크
 

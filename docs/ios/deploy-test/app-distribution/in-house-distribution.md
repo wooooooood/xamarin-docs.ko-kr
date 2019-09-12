@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: f81e5a24957d4af1cd2ce27b39d1f398797cce73
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289883"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70763061"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 사내 배포
 
@@ -94,7 +94,6 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 만든 다른 프로비전 프로필과 마찬가지로 앱 ID는 사용자의 디바이스에 배포되는 앱을 식별하는 데 필요합니다. 앱 ID를 아직 만들지 않았으면 다음 단계에 따라 만듭니다.
 
-
 1. [Apple Developer Center](https://developer.apple.com/account/overview.action)에서 *인증서, 식별자 및 프로필* 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
 2. **+** 단추를 클릭하고 포털에서 식별할 수 있는 **이름**을 제공합니다.
 3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, 다음과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다. **명시적 앱**: com.[DomainName].[AppName] **Wildcard**:com.[DomainName].*
@@ -150,13 +149,11 @@ Apple Developer Enterprise Program에서 정식 사용자는 애플리케이션�
 
 이러한 방법 중 하나를 사용하여 앱을 배포하려면 다음 섹션에서 설명하는 대로 먼저 IPA 파일을 만들어야 합니다.
 
-
 ### <a name="creating-an-ipa-for-in-house-deployment"></a>사내 배포를 위한 IPA 만들기
 
 프로비전된 애플리케이션은 *IPA*라는 파일로 패키지할 수 있습니다. 이는 추가 메타데이터 및 아이콘과 함께 애플리케이션이 포함된 Zip 파일입니다. IPA는 프로비전 프로필에 포함된 디바이스에 직접 동기화할 수 있도록 애플리케이션을 iTunes에 로컬로 추가하는 데 사용됩니다.
 
 IPA 만들기에 대한 자세한 내용은 [IPA 지원](~/ios/deploy-test/app-distribution/ipa-support.md) 가이드를 참조하세요.
-
 
 ## <a name="summary"></a>요약
 

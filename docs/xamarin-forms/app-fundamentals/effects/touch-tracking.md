@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 94a10213f8ae42d6e8f3407b18051021d92be5bc
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 5fda0b78a80a25d122fbc58ef61fbeab22a547a0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978557"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771349"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출
 
@@ -803,7 +803,6 @@ void OnTouchEffectAction(object sender, TouchActionEventArgs args)
 ## <a name="summary"></a>요약
 
 이 문서에서는 효과에서 이벤트를 호출하는 방법과 하위 수준 멀티 터치 처리를 구현하는 효과를 작성하고 사용하는 방법을 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

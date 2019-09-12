@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 269d9d1ff658217a49ff56057c01c011f920b5df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 4573d58f80b9c168f5d0a8a3f72beb64c29b1703
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650523"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771846"
 ---
 # <a name="loading-application-resource-videos"></a>애플리케이션 리소스 비디오 로드
 
@@ -180,7 +180,6 @@ iOS 리소스를 **Resources** 폴더에 저장한 경우 및 UWP 리소스를 �
 [![비디오 리소스 재생](loading-resources-images/playvideoresource-small.png "비디오 리소스 재생")](loading-resources-images/playvideoresource-large.png#lightbox "리소스 비디오 재생")
 
 이제 [웹 URI에서 비디오를 로드](web-videos.md)하는 방법 및 포함 리소스를 재생하는 방법을 살펴보았습니다. 또한 [디바이스의 비디오 라이브러리에서 비디오를 로드](accessing-library.md)할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

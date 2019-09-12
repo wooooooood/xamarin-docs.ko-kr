@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
-ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
-ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.openlocfilehash: 0a60031481f16a3a600cca090d39ec47cbb8ca9a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58506995"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756052"
 ---
 # <a name="signing-the-android-application-package"></a>Android 애플리케이션 패키지에 서명
 
@@ -85,7 +85,6 @@ Android 애플리케이션에 서명하는 데 사용할 수 있는 새로운 �
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
-
 > [!NOTE]
 > 결과 키 저장소 파일 및 암호는 솔루션에 포함되지 않으므로 안전한 장소 &ndash;에 백업해야 합니다. 다른 컴퓨터로 이동하거나 macOS를 다시 설치한 이유 등으로 키 저장소 파일을 잃어버린 경우 이전 버전과 동일한 인증서로 앱에 서명할 수 없게 됩니다.
 
@@ -121,7 +120,6 @@ Android 애플리케이션에 서명하는 데 사용할 수 있는 새로운 �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-
 여기 표시된 것처럼 새 인증서가 키 저장소에 추가되었습니다. Google Play에서 앱을 게시하려면 **취소**를 클릭하고 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)로 이동합니다.
 그렇지 않으면 이 예에 표시된 것처럼 **다음**을 클릭하여 *ad-hoc* 앱을 (개별 배포용으로) 게시합니다.
 
@@ -150,8 +148,6 @@ Finder에 서명된 APK 파일의 위치가 열립니다.
 APK가 Finder에서 복사하여 최종 대상으로 보낼 수 있습니다. Android 디바이스에 APK를 설치하고 배포하기 전에 사용해 보는 것이 좋습니다. *임시* APK를 게시하는 방법에 대한 자세한 내용은 [독립적으로 게시](~/android/deploy-test/publishing/publishing-independently.md)를 참조하세요.
 
 -----
-
-
 
 ## <a name="next-steps"></a>다음 단계
 

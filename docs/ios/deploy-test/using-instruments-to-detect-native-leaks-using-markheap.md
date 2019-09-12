@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 9492c90274e28f14dee0e8cbcb2aaa1a55de2420
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 866ebd2a66557cda5372c5bc3d7a909e18c762d7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282741"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756099"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>계측을 사용하여 Xamarin.iOS 애플리케이션 프로파일링
 
@@ -32,7 +32,6 @@ Xcode 계측은 Mac에서만 실행됩니다.
 3. 컴퓨터에 iOS 디바이스를 연결합니다.
 4. **실행** 메뉴에서 **디바이스에 업로드**를 선택합니다. 이제 애플리케이션이 빌드되어 디바이스에 업로드됩니다.
 5. **도구** 메뉴에서 **계측 시작**을 선택합니다.
-
 
 이제 계측이 열리고 다음 대화 상자가 표시됩니다.
 

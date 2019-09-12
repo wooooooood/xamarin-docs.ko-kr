@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3c30beadf7c2de618952bdf0cd5c03e7ceee2845
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e2542a95ce7b62a017161da4fe206b83202c9085
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109707"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754140"
 ---
 # <a name="debug-on-device"></a>디바이스에서 디버그
 
@@ -21,7 +21,6 @@ _이 아티클에서는 물리적 Android 디바이스에서 Xamarin.Android 애
 ## <a name="debug-on-device-overview"></a>디바이스에서 디버그 개요
 
 Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 디바이스에서 Xamarin.Android 앱을 디버그할 수 있습니다. 디바이스에서 디버그가 가능하려면 먼저 [개발을 위해 설정](~/android/get-started/installation/set-up-device-for-development.md)되고 PC나 MAC에 연결되어야 합니다.
-
 
 ## <a name="debug-application"></a>애플리케이션 디버그
 
@@ -53,14 +52,11 @@ Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 디바이스�
 
 -----
 
-
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 중단점을 설정하고 대상 디바이스를 선택하여 Xamarin.Android 애플리케이션을 디버그하는 방법에 대해 논의했습니다.
 
-
 ## <a name="related-links"></a>관련 링크
 
-- [개발용 장치 설정](~/android/get-started/installation/set-up-device-for-development.md)
+- [개발용 디바이스 설정](~/android/get-started/installation/set-up-device-for-development.md)
 - [디버깅 가능한 특성 설정](~/android/deploy-test/debuggable-attribute.md)

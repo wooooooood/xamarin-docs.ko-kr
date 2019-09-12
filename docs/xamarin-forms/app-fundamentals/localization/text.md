@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 54a1f32d4e2102654a6111dc1fb27bc1ba9aabcc
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 8e347d5d0c80f7aaac121ca1e68eec618ff2ff88
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119107"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760992"
 ---
 # <a name="localization"></a>지역화
 
@@ -77,7 +77,6 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 이 빌드 도구가 구성되는 위치를 확인하려면 **AppResources.resx** 파일을 선택하고 **속성** 패드를 표시합니다. 아래 스크린샷에서는 **사용자 지정 도구: ResXFileCodeGenerator**를 보여 줍니다.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-internal-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-internal.png#lightbox)
@@ -90,7 +89,6 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 강력한 형식의 문자열 속성을 `public`으로 만들려면 아래 스크린샷에 표시된 것처럼 수동으로 구성을 **사용자 지정 도구: PublicResXFileCodeGenerator**로 변경해야 합니다.
 
-
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-public-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-public.png#lightbox)
@@ -98,7 +96,6 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
-
 
 [![](text-images/xs-resx-public-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-public.png#lightbox)
 
@@ -156,7 +153,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 일반적인 패턴은 2글자 언어 코드를 사용하는 것이지만 다른 형식을 사용하는 일부 예제(예: 중국어) 및 4글자 로캘 식별자가 필요한 다른 예제(예: 브라질 포르투갈어)도 있습니다.
 
- 이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요’하지 않기’ 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
+이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요’하지 않기’ 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
 
 ![](text-images/appresources-langs.png "언어별 리소스 파일")
 
@@ -464,7 +461,7 @@ namespace UsingResxLocalization.iOS
 
 > [!NOTE]
 > Apple에서는 기대했던 것과 약간 다르게 포르투갈어를 처리합니다.
-> [해당 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"브라질에서 사용되는 포르투갈어에 대한 언어 ID로 pt를 사용하고 포르투갈에서 사용되는 포르투갈어에 대한 언어 ID로 pt-PT를 사용합니다"_ .
+> [해당 docs](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"브라질에서 사용되는 포르투갈어에 대한 언어 ID로 pt를 사용하고 포르투갈에서 사용되는 포르투갈어에 대한 언어 ID로 pt-PT를 사용합니다"_.
 > 즉 포르투갈어가 비표준 로캘에서 선택되는 경우 iOS에서 대체 언어는 코드가 이 동작(예: 위의 `ToDotnetFallbackLanguage`)을 변경하도록 작성되지 않는 경우 브라질 포르투갈어입니다.
 
 iOS 지역화에 대한 자세한 내용은 [iOS 지역화](~/ios/app-fundamentals/localization/index.md)를 참조하세요.

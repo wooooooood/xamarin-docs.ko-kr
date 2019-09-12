@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c5271aab5342f065694e598bd5c2892ef1f18aeb
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 04d96dad455cbcf8360f12ee97a0540e7e746d62
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656670"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771465"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>공용 언어 런타임 속성으로 효과 매개 변수 전달
 
@@ -237,7 +237,6 @@ namespace EffectsDemo.UWP
 ## <a name="summary"></a>요약
 
 이 문서에서는 CLR 속성을 사용하여 매개 변수를 효과에 전달하는 방법을 설명했습니다. CLR 속성은 런타임 속성 변경 내용에 응답하지 않는 효과 매개 변수를 정의하는 데 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

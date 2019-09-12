@@ -7,19 +7,18 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: e24f450c16e144b313d5f8e3da0221fccdaa145b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dd6fac2434c5205acfec10e4830dc72ea42aa340
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285408"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756156"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Xamarin.iOS에서 다른 디바이스용으로 컴파일
 
 프로젝트의 **iOS 빌드** 속성 페이지에서 실행 파일의 빌드 속성을 구성할 수 있으며, 이 페이지는 Mac용 Visual Studio에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **옵션 > iOS 빌드**를 찾거나 Visual Studio의 **속성**에서 찾을 수 있습니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
-
 
 [![](compiling-for-different-devices-images/image1.png "프로젝트 iOS 빌드 속성 페이지")](compiling-for-different-devices-images/image1.png#lightbox) 
 
@@ -35,7 +34,6 @@ UI에서 사용할 수 있는 구성 옵션 외에도, 개발자 고유의 명�
 
  <a name="SDK_Options" />
 
-
 ## <a name="sdk-options"></a>SDK 옵션
 
 Mac용 Visual Studio를 사용하면 SDK와 관련된 두 가지 중요한 속성인 소프트웨어를 빌드하는 데 사용되는 iOS SDK 버전 및 배포 대상(또는 필요한 최소 iOS 버전)을 구성할 수 있습니다.
@@ -48,13 +46,11 @@ iOS **SDK 버전** 옵션을 통해 Apple에서 게시한 다른 SDK 버전을 �
 
  <a name="Linking" />
 
-
 ## <a name="linking"></a>연결
 
 링커로 실행 파일의 크기를 줄이는 방법 및 링커를 효율적으로 사용하는 방법에 대한 자세한 내용은 [링커](~/ios/deploy-test/linker.md)에 대한 전용 페이지를 참조하세요.
 
  <a name="Code_Generation_Engine" />
-
 
 ## <a name="code-generation-engine"></a>코드 생성 엔진
 
@@ -71,7 +67,6 @@ LLVM 최적화 백 엔드 엔진은 Mono 엔진보다 빠르고 엄격한 코드
 [![](compiling-for-different-devices-images/image2a.png "LLVM 사용")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
-
 
 ## <a name="architecture-support"></a>아키텍처 지원
 
@@ -114,13 +109,11 @@ ARMv7s 프로세서만 대상으로 하는 경우 생성된 코드는 약간 더
 
  <a name="ARM_Thumb_Support" />
 
-
 ### <a name="arm-thumb-2-support"></a>ARM Thumb-2 지원
 
 Thumb는 ARM 프로세서에서 사용하는 보다 간단한 명령 집합입니다. Thumb을 지원하면 실행 파일의 크기를 줄일 수 있지만, 실행 시간이 느려집니다. Thumb은 ARMv7 및 ARMv7s에서 지원됩니다.
 
  <a name="Conditional_framwork_useage" />
-
 
 ## <a name="conditional-framework-usage"></a>조건부 프레임워크 사용
 
@@ -131,13 +124,9 @@ Thumb는 ARM 프로세서에서 사용하는 보다 간단한 명령 집합입�
 - **프로젝트 옵션**을 열고 **iOS 빌드** 창으로 이동합니다.
 - 약하게 연결하려는 각 구성의 **추가 옵션**에 `'-gcc_flags "-weak_framework iAd"'`를 추가합니다.
 
-
 [![](compiling-for-different-devices-images/image3.png "추가 옵션")](compiling-for-different-devices-images/image3.png#lightbox)
 
-
 그 외에도 사용하는 유형이 존재하지 않는 이전 iOS 버전에서 실행되지 않도록 보호해야 합니다. 이렇게 하는 여러 가지 방법이 있는데, 그 중 하나는 `UIDevice.CurrentDevice.SystemVersion`을 구문 분석하는 것입니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

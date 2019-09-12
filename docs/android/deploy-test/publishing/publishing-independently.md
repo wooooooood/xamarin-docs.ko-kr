@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 7d324d1faa045dcfbb2b3e6dcc3000a67b5f9e10
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: bd505e97ce4fcca2197f6c7da2de8411931900ab
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525384"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753785"
 ---
 # <a name="publishing-independently"></a>독립적으로 게시
 
@@ -29,18 +29,14 @@ Xamarin.Android 앱의 개발, 배포 및 보급에 많은 라이선스를 사�
 
 Community Edition을 다운로드하거나 Professional 및 Enterprise Edition 구매에 대한 자세한 내용을 알아보려면 [visualstudio.com](https://visualstudio.microsoft.com/xamarin/)을 방문하세요.
 
-
 ## <a name="allow-installation-from-unknown-sources"></a>알 수 없는 원본에서의 설치 허용
 
 기본적으로 Android는 사용자가 Google Play 이외의 위치에서 애플리케이션을 다운로드하여 설치하는 것을 차단합니다. 마켓플레이스 이외 원본에서의 설치를 허용하려면 사용자가 애플리케이션을 설치하기 전에 먼저 디바이스에서 *알 수 없는 원본* 설정을 사용하도록 설정해야 합니다. 이에 대한 설정은 다음 그림처럼 **설정 > 보안**에 있습니다.
 
 [![보안 설정 화면](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
-
 > [!IMPORTANT]
 > 일부 네트워크 공급자는 이 설정과 관계없이 알 수 없는 원본의 애플리케이션 설치를 차단할 수 있습니다.
-
-
 
 ## <a name="publishing-by-e-mail"></a>이메일로 게시
 
@@ -50,11 +46,9 @@ Community Edition을 다운로드하거나 Professional 및 Enterprise Edition �
 
 이메일을 통한 배포는 간단하지만 개인 정보나 무단 배포에 대한 보호가 부족합니다. 애플리케이션의 받는 사람이 극소수이며 해당 애플리케이션을 배포하지 않는다고 확신하는 경우에만 이 방법이 적합합니다.
 
-
 ## <a name="publishing-by-web"></a>웹으로 게시
 
 웹 서버를 통해 애플리케이션을 배포할 수 있습니다. 이 작업은 웹 서버에 애플리케이션을 업로드한 다음 사용자에게 다운로드 링크를 제공하여 수행합니다. Android 지원 디바이스가 이 링크로 이동하면 애플리케이션을 다운로드하면 다운로드 완료 후 애플리케이션이 자동으로 설치됩니다.
-
 
 ## <a name="manually-installing-an-apk"></a>수동으로 APK 설치
 

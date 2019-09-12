@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 8ab7f24d69e4f20cb1a732f32d220c85b178deef
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 72e421e088a582e4d2de1cf830a0978cca9f45c8
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288714"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762650"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -76,11 +76,9 @@ Phoneword 애플리케이션에서는 여러 화면 간 탐색을 관리하는 �
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "이 다이어그램은 카드의 스택으로 탐색을 보여줍니다.")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
-
 - **필요한 경우 뒤로 단추를 제공합니다.** - 새 항목을 탐색 스택으로 푸시할 때 제목 표시줄은 사용자를 뒤로 탐색할 수 있도록 하는 *뒤로 단추*를 자동으로 표시할 수 있습니다. 뒤로 단추를 누르면 탐색 스택에서 현재 뷰 컨트롤러를 *꺼내고* 이전 콘텐츠 뷰 계층 구조를 창으로 로드합니다.  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "이 다이어그램은 스택에서 카드 '꺼내기'를 보여줍니다.")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
-
 
 - **제목 표시줄을 제공합니다.** – 탐색 컨트롤러의 윗 부분은 *제목 표시줄*이라고 합니다. 아래 다이어그램에 표시된 것처럼 뷰 컨트롤러 제목을 표시합니다.  
 

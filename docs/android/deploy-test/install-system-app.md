@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 5a6f950ec7c9af0422beeb2d1af2be602fcaf947
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9ef13816dc1bc11eab0105ec223c2ef98366e4e5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113809"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753996"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>시스템 앱으로 Xamarin.Android 설치
 
-_이 가이드에서는 시스템 앱과 사용자 앱의 차이점, 그리고 Xamarin.Android 응용 프로그램을 시스템 응용 프로그램으로 설치하는 방법을 설명합니다. 이 가이드는 사용자 지정 Android ROM 이미지 작성자에게 적용됩니다. 사용자 지정 ROM을 만드는 방법은 설명하지 않습니다._
+_이 가이드에서는 시스템 앱과 사용자 앱의 차이점, 그리고 Xamarin.Android 애플리케이션을 시스템 애플리케이션으로 설치하는 방법을 설명합니다. 이 가이드는 사용자 지정 Android ROM 이미지 작성자에게 적용됩니다. 사용자 지정 ROM을 만드는 방법은 설명하지 않습니다._
 
 ## <a name="system-app"></a>시스템 앱
 
@@ -42,7 +42,7 @@ Xamarin.Android 앱은 시스템 애플리케이션으로 배포할 수 있습�
 
 다음 단계에는 시스템 앱으로 Xamarin.Android 앱을 설치하는 방법을 설명합니다.
 
-1. **Xamarin.Android 앱의 릴리스 APK 패키징** &ndash; 이는 [응용 프로그램 게시](~/android/deploy-test/publishing/index.md) 가이드에 자세히 설명되어 있습니다.
+1. **Xamarin.Android 앱의 릴리스 APK 패키징**&ndash; 이는 [애플리케이션 게시](~/android/deploy-test/publishing/index.md) 가이드에 자세히 설명되어 있습니다.
 
 2. **APK에서 공유 라이브러리 추출** &ndash; ZIP 유틸리티 프로그램을 사용하여 APK 파일을 열고 **/lib/** 폴더의 콘텐츠를 살펴봅니다. 이 폴더에는 애플리케이션에서 지원하는 각 ABI(_애플리케이션 이진 인터페이스_)의 하위 디렉터리가 있습니다. 이 폴더의 콘텐츠에는 특정 ABI의 앱에 필요한 모든 공유 라이브러리가 포함됩니다.
 
@@ -54,16 +54,13 @@ Xamarin.Android 앱은 시스템 애플리케이션으로 배포할 수 있습�
 
 4. **APK 파일을 /system/app에 복사** &ndash; 마지막 단계는 APK 파일을 ROM의 **/system/app** 폴더로 복사하는 것입니다.
 
-
 ## <a name="summary"></a>요약
 
 이 가이드에서는 _시스템 앱_과 _사용자 앱_의 차이점, 그리고 Xamarin.Android 애플리케이션을 시스템 앱으로 설치하는 방법을 설명했습니다.
 
-
-
 ## <a name="related-links"></a>관련 링크
 
-- [응용 프로그램 게시](~/android/deploy-test/publishing/index.md)
+- [애플리케이션 게시](~/android/deploy-test/publishing/index.md)
 - [CPU 아키텍처](~/android/app-fundamentals/cpu-architectures.md)
 - [BLUETOOTH_PRIVILEGED](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)
 - [ABI 관리](https://developer.android.com/ndk~/abis.html)

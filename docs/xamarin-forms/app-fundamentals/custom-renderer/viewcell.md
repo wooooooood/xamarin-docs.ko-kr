@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 6fd952fc929fc11d19d8ceb0153aa8d7702a21a7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889236"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771703"
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
@@ -573,7 +573,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤 내부에 호스팅되는 [`ViewCell`](xref:Xamarin.Forms.ViewCell)에 대한 사용자 지정 렌더러를 만드는 방법을 설명했습니다. 이렇게 하면 `ListView`를 스크롤하는 동안 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되지 않습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

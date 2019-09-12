@@ -7,22 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 9bff233b5507e3456ba3620315bd967d0ac7018d
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 6d391bd804e1c59d06d78dd7cffe3f11f9276468
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525786"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754631"
 ---
 # <a name="application-package-size"></a>애플리케이션 패키지 크기
 
 _이 아티클에서는 배포의 디버그 및 릴리스 단계에서 효율적인 패키지 배포에 사용할 수 있는 관련 전략과 Xamarin.Android 애플리케이션 패키지의 구성 요소를 살펴봅니다._
 
-
 ## <a name="overview"></a>개요
 
 Xamarin.Android는 다양한 메커니즘을 사용하여 패키지 크기를 최소화하는 한편 효율적인 디버그 및 릴리스 배포 프로세스를 유지합니다. 이 아티클에서는 Xamarin.Android 릴리스 및 디버그 배포 워크플로를 살펴보고, Xamarin.Android 플랫폼으로 소형 애플리케이션 패키지를 빌드하고 릴리스하하는 방법을 살펴봅니다.
-
 
 ## <a name="release-packages"></a>릴리스 패키지
 
@@ -41,7 +39,6 @@ Xamarin.Android는 다양한 메커니즘을 사용하여 패키지 크기를 �
 ![연결 후 ApiDemo 패키지 크기](app-package-size-images/api-demo-package-size-after-linker.png)
 
 여기에 설명된 것처럼 애플리케이션 패키지 크기는 일반적으로 애플리케이션과 종속성보다 큰 약 2.9MB가 됩니다.
-
 
 ## <a name="debug-packages"></a>디버그 패키지
 
@@ -75,11 +72,9 @@ Android는 상대적으로 패키지를 복사하고 설치하는 속도가 느�
 
 4. **확인** 단추를 클릭하여 변경 내용을 저장하고 프로젝트 옵션 대화 상자를 닫습니다.
 
-
 다음에 애플리케이션이 디버그용으로 빌드될 때 어셈블리가 디바이스에 바로 설치되고(아직 설치되지 않은 경우) 소형 애플리케이션 패키지(어셈블리를 포함하지 않는)가 디바이스에 설치됩니다. 따라서 테스트를 위해 실행 중인 애플리케이션에 변경 내용이 적용되는 데 걸리는 시간이 단축됩니다.
 
 공유 런타임 및 공유 플랫폼의 긴 첫 배포를 완료하면 애플리케이션을 변경할 때마다 새 버전을 쉽고 빠르게 배포할 수 있으므로 변경/배포/실행 주기가 단축됩니다.
-
 
 ## <a name="summary"></a>요약
 

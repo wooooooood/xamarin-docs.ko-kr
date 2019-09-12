@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 9272c522383251a54aff5093c20e4b6b6131e2b2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 925a110025092ce6efa4e4d5f8e80b640b7f3dd1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293041"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770095"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>개발자 ID를 사용하여 Xamarin.Mac 앱 서명
 
@@ -25,7 +25,6 @@ Apple 웹 사이트에서 [개발자 ID 및 게이트키퍼](https://developer.a
 사용자에게 직접 배포할(Mac 앱 스토어를 통하지 않고) 앱을 빌드하려면 **개발자 ID**를 사용하도록 **서명 설정**을 지정합니다. **릴리스** 구성을 편집합니다.
 
  [![](signing-images/config02.png "Mac 서명 옵션")](signing-images/config02.png#lightbox)
-
 
 ## <a name="build"></a>빌드
 

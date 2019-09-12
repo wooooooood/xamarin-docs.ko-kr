@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 421d51cbb1ae3adb80aef6e4bf3cf1da38d6de8e
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: d5de743cdbef1358450a2f358acb86dce2d373c7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887830"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758022"
 ---
 # <a name="android-emulator-troubleshooting"></a>Android 에뮬레이터 문제 해결
 
@@ -48,11 +48,9 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 5. 에뮬레이터가 이 목록에 나타나지 않는 경우 **Android SDK Manager**를 시작하고 모든 업데이트를 적용한 다음, 다시 에뮬레이터를 시작해 봅니다.
 
-
 ### <a name="mmio-access-error"></a>MMIO 액세스 오류
 
 **MMIO 액세스 오류가 발생 했습니다.** 라는 메시지가 표시되면 에뮬레이터를 다시 시작하세요.
-
 
 <a name="gps-win" />
 
@@ -69,7 +67,6 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 > [!NOTE]
 > Google Play 스토어 이미지는 픽셀, 픽셀 2, Nexus 5 및 Nexus 5X와 같은 몇 가지 기본 디바이스 유형에만 사용할 수 있습니다.
-
 
 <a name="perf-win" />
 
@@ -91,13 +88,11 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 이 오류 메시지가 표시되면 하드웨어 가속을 확인하고 사용하도록 설정할 수 있는 단계에 대한 아래의 [하드웨어 가속 문제](#accel-issues-win)를 참조하세요.
 
-
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>가속을 사용할 수 있지만 에뮬레이터가 너무 느리게 실행됩니다. 
 
 이 문제의 일반적인 원인은 가상 디바이스(AVD)에서 x86 기반 이미지를 사용하지 않기 때문입니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) x86 기반 시스템 이미지를 선택해야 합니다.
 
 [![가상 디바이스용 x86 시스템 이미지 선택](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
-
 
 <a name="accel-issues-win" />
 
@@ -148,7 +143,6 @@ VT feature disabled in BIOS/UEFI
 
 하드웨어 가속이 활성화되어 있고 BIOS가 제대로 구성되어 있으면 에뮬레이터가 하드웨어 가속을 사용하여 성공적으로 실행되어야 합니다.
 그러나 다음에 설명된 대로 Hyper-V 및 HAXM과 관련된 문제로 인해 문제가 계속 발생할 수 있습니다.
-
 
 ### <a name="hyper-v-issues"></a>Hyper-V 문제
 
@@ -203,7 +197,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
 
 Hyper-V를 사용하도록 설정하는 방법에 대한 자세한 내용(배포 이미지 서비스 및 관리 도구를 사용하여 Hyper-V를 사용하도록 설정하는 기술 포함)은 [Hyper-V 설치](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)를 참조하세요.
 
-
 ### <a name="haxm-issues"></a>HAXM 문제
 
 HAXM 문제는 다른 가상화 기술과의 충돌, 잘못된 설정 또는 만료된 HAXM 드라이버 때문인 경우가 많습니다.
@@ -231,7 +224,6 @@ SERVICE_NAME: intelhaxm
 
 `STATE`가 `RUNNING`으로 설정되지 않은 경우 [인텔 Hardware Accelerated Execution Manager 사용 방법](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator)을 참조하여 문제를 해결합니다.
 
-
 <a name="virt-conflicts" />
 
 #### <a name="haxm-virtualization-conflicts"></a>HAXM 가상화 충돌
@@ -243,7 +235,6 @@ HAXM은 Hyper-v, Windows Device Guard 및 일부 바이러스 백신 소프트�
 - **Device Guard** &ndash;Device Guard 및 Credential Guard는 Windows 컴퓨터에서 Hyper-V가 비활성화되지 못하게 방지할 수 있습니다. Device Guard 및 Credential Guard를 사용하지 않으려면 [Device Guard 사용 안 함](#disable-devguard)을 참조하세요.
 
 - **바이러스 백신 소프트웨어** &ndash; 하드웨어 지원 가상화(예: Avast)를 사용하는 바이러스 백신 소프트웨어를 실행 중인 경우 이 소프트웨어를 사용하지 않게 설정하거나 제거하고, 다시 부팅하고, Android 에뮬레이터를 다시 시도합니다.
-
 
 #### <a name="incorrect-bios-settings"></a>잘못된 BIOS 설정
 
@@ -326,7 +317,6 @@ Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니�
 
 Hyper-V가 아직 비활성화되지 않은 경우 도메인 가입 컴퓨터의 정책으로 인해 Device Guard 또는 Credential Guard가 비활성화되지 않을 수 있습니다. 이 경우 도메인 관리자에게 Credential Guard의 옵트아웃할 수 있도록 예외를 요청할 수 있습니다. 또는 HAXM을 사용해야 하는 경우 도메인에 조인되지 않은 컴퓨터를 사용할 수 있습니다.
 
-
 ## <a name="additional-troubleshooting-tips"></a>추가 문제 해결 팁
 
 다음 제안 사항은 Android 에뮬레이터 문제를 진단하는 데 유용한 경우가 많습니다.
@@ -364,8 +354,6 @@ emulator: CPU Acceleration status: HAXM version 6.2.1 (4) is installed and usabl
 Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel Corporation)] not present on the system
 ```
 
-
-
 ::: zone-end
 ::: zone pivot="macos"
 
@@ -396,7 +384,6 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 5. 에뮬레이터가 이 목록에 나타나지 않는 경우 **Android SDK Manager**를 시작하고 모든 업데이트를 적용한 다음, 다시 에뮬레이터를 시작해 봅니다.
 
-
 ### <a name="mmio-access-error"></a>MMIO 액세스 오류
 
 **MMIO 액세스 오류가 발생 했음**이 표시되면 에뮬레이터를 다시 시작하세요.
@@ -417,7 +404,6 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 > [!NOTE]
 > Google Play 스토어 이미지는 픽셀, 픽셀 2, Nexus 5 및 Nexus 5X와 같은 몇 가지 기본 디바이스 유형에만 사용할 수 있습니다.
 
-
 <a name="perf-mac" />
 
 ## <a name="performance-issues"></a>성능 문제
@@ -433,7 +419,6 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 ### <a name="hardware-acceleration-is-not-enabled"></a>하드웨어 가속을 사용할 수 없습니다.
 
 하드웨어 가속을 사용하지 않으면 Android 에뮬레이터에 앱을 배포할 때 **디바이스가 가속 없이 실행됨**과 같은 메시지가 포함된 대화 상자가 팝업될 수 있습니다. 컴퓨터에서 하드웨어 가속이 활성화되어 있는지(또는 가속을 제공하는 기술을 알고 싶다면) 확실하지 않은 경우, 하드웨어 가속을 확인하고 활성화할 수 있는 단계에 대한 아래의 [하드웨어 가속 문제](#accel-issues-mac)를 참조하세요.
-
 
 ### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>가속을 사용할 수 있지만 에뮬레이터가 너무 느리게 실행됩니다. 
 
@@ -467,11 +452,9 @@ kern.hv_support: 1
 
 Mac에서 하이퍼바이저 프레임워크를 사용할 수 없는 경우 [HAXM을 사용하여 가속화](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#haxm-mac)의 단계를 수행하여 가속화에 대해 HAXM을 대신 사용할 수 있습니다.
 
-
 ### <a name="haxm-issues"></a>HAXM 문제
 
 Android Emulator가 제대로 시작되지 않는 경우 이 문제는 HAXM 관련 문제로 인해 자주 발생합니다. HAXM 문제는 다른 가상화 기술과의 충돌, 잘못된 설정 또는 만료된 HAXM 드라이버 때문인 경우가 많습니다. [HAXM 설치](~/android/get-started/installation/android-emulator/hardware-acceleration.md?tabs=vsmac#install-haxm-mac)에서 설명한 단계를 통해 HAXM 드라이버를 다시 설치해 봅니다.
-
 
 ## <a name="additional-troubleshooting-tips"></a>추가 문제 해결 팁
 

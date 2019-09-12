@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 219f6498dc1349d32c8f0b247a187df75f2a523a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2f9de881621b6634b95bdca56a0aa9e7b9f2bb98
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650696"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771849"
 ---
 # <a name="accessing-the-devices-video-library"></a>디바이스의 비디오 라이브러리에 액세스
 
@@ -385,8 +385,6 @@ namespace FormsVideoLibrary.UWP
 ```
 
 각 플랫폼마다 파일이 디바이스에 있어서 다운로드할 필요가 없기 때문에 비디오 소스가 설정된 직후에 비디오 재생이 시작됩니다.
-
-
 
 ## <a name="related-links"></a>관련 링크
 

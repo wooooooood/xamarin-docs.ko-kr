@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 34b449aa358874f06a495ec52578dcca2dd13767
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654734"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771618"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
 
@@ -463,7 +463,6 @@ binding.ConverterParameter = 255;
 결과는 다음과 같습니다.
 
 [![RGB 색 선택기](converters-images/rgbcolorselector-small.png "RGB 색 선택기")](converters-images/rgbcolorselector-large.png#lightbox "RGB 색 선택기")
-
 
 ## <a name="related-links"></a>관련 링크
 

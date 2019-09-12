@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: 8cec67ec582edad506aecb0945257b9baae3da90
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: d981307ae96f75c67442d3898255c8bed62f1cf7
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650344"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771711"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
@@ -328,7 +328,6 @@ XAML 태그 확장은 일반적으로 중괄호로 구분되지만, 개체 요�
 [![바인딩 컨텍스트 상속](basic-bindings-images/bindingcontextinheritance-small.png "바인딩 컨텍스트 상속")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "바인딩 컨텍스트 상속")
 
 [다음 문서](binding-mode.md)에서는 *바인딩 모드*에서 대상 개체와 원본 개체 간의 데이터 흐름을 변경하는 방법을 보여 줍니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

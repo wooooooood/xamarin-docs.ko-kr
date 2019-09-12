@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: f31fd699aad95ff785ff887b2a2a8b6f2601ad7b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290183"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765938"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -173,7 +173,6 @@ public class Subscriber : IDisposable
 
 초기화 지연은 개체를 처음 사용할 때까지 생성을 지연하는 데 사용될 수 있습니다. 이 방법을 통해 기본적으로 성능을 향상시키고, 계산을 방지하고, 메모리 요구 사항을 줄입니다.
 
-
 다음과 같은 두 가지 시나리오에서 만드는 데 비용이 많이 드는 개체에 초기화 지연을 사용하는 것이 좋습니다.
 
 - 애플리케이션이 개체를 사용하지 않을 수 있습니다.
@@ -246,8 +245,6 @@ public class FaceDetection
 
 > [!IMPORTANT]
 > `CancellationTokenSource` 클래스가 `IDisposable` 인터페이스를 구현하므로 `CancellationTokenSource` 인스턴스가 완료되면 `CancellationTokenSource.Dispose` 메서드는 한 번만 호출되어야 합니다.
-
-
 
 자세한 내용은 [동기 지원 개요](~/cross-platform/platform/async.md)를 참조하세요.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: bc2c1c26bcb3dcf99a5598b6dccb6aad02513a28
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 0599b2374addf461e59948a1926de06e6e1e746a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197564"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754052"
 ---
 # <a name="gdb"></a>GDB
 
@@ -27,7 +27,6 @@ Xamarin.Android 4.10은 `_Gdb` MSBuild 대상을 통해 `gdb`를 사용하는 �
 1. [빠른 배포가 활성화된 디버그 빌드](#Debug_Builds_with_Fast_Deployment).
 1. [빠른 배포가 비활성화된 디버그 빌드](#Debug_Builds_without_Fast_Deployment).
 1. [릴리스 빌드](#Release_Builds).
-
 
 문제가 발생할 경우 [문제 해결](#Troubleshooting) 섹션을 참조하세요.
 
@@ -56,7 +55,6 @@ $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 `_Gdb` 대상이 `AndroidManifest.xml` 파일 내에 선언된 임의의 시작 관리자 작업을 시작합니다. 실행할 작업을 명시적으로 지정하려면 `RunActivity` MSBuild 속성을 사용합니다. 이때 서비스 및 다른 Android 구문은 지원되지 않습니다.
 
 `_Gdb` 대상은 `gdb-symbols` 디렉터리를 만들고 대상의 `/system/lib` 및 `$APPDIR/lib` 디렉터리의 콘텐츠를 복사합니다.
-
 
 > [!NOTE]
 > `gdb-symbols` 디렉터리의 콘텐츠는 사용자가 배포한 Android 대상에 연결되고, 사용자가 대상을 변경하지 않는 한 자동으로 바뀌지 않습니다. (이는 버그로 간주하세요.) Android 대상 디바이스를 변경할 경우 이 디렉터리를 수동으로 삭제해야 합니다.
@@ -107,7 +105,6 @@ GNU gdb (GDB) 7.3.1-gg2
 ...
 (gdb) c
 ```
-
 
 ### <a name="including-gdbserver-in-your-app"></a>앱에 `gdbserver` 포함
 

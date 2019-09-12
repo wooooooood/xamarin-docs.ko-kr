@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: cd29e284c45bfe59633dde924e27d8022e8416ba
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7a4c67f067b73873c3d1de4499abda2703217ddf
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645930"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760821"
 ---
 # <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
 
@@ -257,7 +257,6 @@ public class DetailPageCS : ContentPage
 ## <a name="summary"></a>요약
 
 이 문서에서는 모달 페이지를 탐색하는 방법을 설명했습니다. 모달 페이지는 사용자가 작업이 완료되거나 취소될 때까지 다른 부분으로 이동할 수 없는 자체 포함된 작업을 완료하도록 권장합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

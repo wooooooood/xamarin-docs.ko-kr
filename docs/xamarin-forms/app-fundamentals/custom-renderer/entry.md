@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: 2deee2bd7fa07f562bee02409d1a7a19cdac0be9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650856"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772013"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
 
@@ -212,7 +212,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>요약
 
 이 문서에서는 개발자가 자체적인 플랫폼별 렌더링을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 하는 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. 사용자 지정 렌더러는 Xamarin.Forms 컨트롤의 모양을 사용자 지정하는 강력한 방법을 제공합니다. 작은 스타일 변경 또는 정교한 플랫폼별 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

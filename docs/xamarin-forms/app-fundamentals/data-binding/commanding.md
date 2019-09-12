@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 9c6edddd70fa7a74a72857a94dbed613b5b0d66d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 7d442d14589b35632bce2b6caec09235138ec585
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657145"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771631"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
@@ -338,7 +338,6 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 `NewCommand`의 `execute` 메서드에서 `RefreshCanExecutes`를 호출하면 `NewCommand` 속성이 `ChangeCanExecute`에 대한 호출을 가져오고, `Button`이 `canExecute` 메서드를 호출하고, `IsEditing` 속성이 현재 `true`이므로 `false`를 반환합니다.
 
 새 `PersonViewModel` 개체에 대한 `PropertyChanged` 처리기에서 `SubmitCommand`의 `ChangeCanExecute` 메서드를 호출합니다. 명령 속성이 구현되는 방법은 다음과 같습니다.
-
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged

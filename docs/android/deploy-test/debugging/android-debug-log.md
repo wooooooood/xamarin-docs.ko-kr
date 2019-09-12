@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: fd28143a2d4678a240d9d6f9f1cc3b1c5da80222
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: ef3ba27b9056e1de92aabb87f86416b2985d6e1d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525703"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754218"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 
@@ -29,7 +29,6 @@ ms.locfileid: "69525703"
 > **디버그 로그** 도구는 Xamarin Live Player에서 작동하지 않습니다.
 
 **디버그 로그**는 앱이 디바이스에서 독립형으로 실행 중인 동안(즉 Visual Studio에서 연결이 끊어진 동안)에는 로그 메시지를 표시하지 않습니다.
-
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Visual Studio에서 디버그 로그에 액세스
 
@@ -60,13 +59,11 @@ ms.locfileid: "69525703"
 
 - **검색 상자** &ndash; 이 상자에 검색 문자열을 입력하여 로그 항목의 하위 집합을 필터링합니다.
 
-
 **디버그 로그** 도구 창이 표시되면 디바이스 풀다운 메뉴를 사용하여 모니터링할 Android 디바이스를 선택합니다.
 
 [![디바이스 선택기의 위치](android-debug-log-images/vswin-02-devices-combo-sml.png)](android-debug-log-images/vswin-02-devices-combo.png#lightbox)
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -104,7 +101,6 @@ ms.locfileid: "69525703"
 
 -----
 
-
 ## <a name="accessing-from-the-command-line"></a>명령줄에서 액세스
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -129,11 +125,9 @@ $ ./adb logcat
 
 -----
 
-
 연결된 디바이스가 둘 이상이면 디바이스를 분명히 식별해야 합니다. 예를 들어 **adb -d logcat**은 연결된 물리적 디바이스의 로그만 보여주고, **adb -e logcat**은 실행 중인 에뮬레이터의 로그만 보여줍니다.
 
 **adb**를 입력하고 도움말 메시지를 읽어서 더 많은 명령을 찾을 수 있습니다.
-
 
 ## <a name="writing-to-the-debug-log"></a>디버그 로그에 쓰기
 

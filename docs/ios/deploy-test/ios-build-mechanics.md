@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/18/2017
-ms.openlocfilehash: ec510d46bf1b46cf8fd70c8f4d43b3108f46a010
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 58bf8325a0fab17411dd7a4f857fdad8bdc6b016
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284783"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756266"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -23,7 +23,6 @@ _이 가이드에서는 앱의 시간을 맞추는 방법 및 빠른 빌드를 �
 기본 옵션은 안전하고 빠르지만 모든 상황에 최적인 것은 아닙니다. 또한 개별 프로젝트에 따라 다양한 옵션이 개발 주기를 느리게 하거나 단축할 수 있습니다. 예를 들어 기본 제거에는 시간이 걸리지만, 매우 작은 크기를 얻는다면 제거에 걸린 시간은 신속한 배포를 통해 복구되지 않습니다. 반면, 기본 제거로 앱을 현저하게 축소할 수 있으며, 이 경우 더 빠르게 배포됩니다. 이는 프로젝트마다 다르며, 이것을 알 수 있는 유일한 방법은 테스트입니다.
 
 Xamarin 빌드 속도는 프로세서 기능, 버스 속도, 실제 메모리의 양, 디스크 속도, 네트워크 속도 등 성능에 영향을 미칠 수 있는 컴퓨터의 다양한 용량과 기능의 영향을 받을 수 있습니다. 이러한 성능 제한은 이 문서의 범위를 벗어나며 개발자의 책임입니다.
-
 
 ## <a name="timing-apps"></a>타이밍 앱
 
@@ -38,7 +37,6 @@ Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드
 7. 빌드 출력 단추를 클릭하여 오류 패드 내에서 진단 출력 보기(보기 > 패드 > 오류)
-
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -71,12 +69,10 @@ Total time: 1554 ms
 
 연결이 끊어진 상태에서는 Windows의 Visual Studio가 C# 컴파일 단계만 수행하고 연결 또는 AOT 컴파일을 수행하거나 앱을  _.app_  번들로 패키지하거나 앱 번들을 서명하려는 시도를 하지 않습니다. (C# 컴파일 단계에서는 거의 성능 병목 현상이 거의 발생하지 않습니다.) Mac용 Visual Studio의 Mac 빌드 호스트에서 바로 빌드하여 파이프라인에서 빌드 속도가 느려지는 지점을 찾아보세요.
 
-
 뿐만 아니라, 응답 속도가 느려지는 보다 일반적인 위치 중 하나는 Windows 컴퓨터와 Mac 빌드 호스트 간의 네트워크 연결입니다. 그 원인은 네트워크상의 물리적 제한일 수도 있고(무선 연결을 사용하는 경우) 또는 포화된 컴퓨터(예: 클라우드 서비스의 Mac)를 통과해야 하기 때문일 수도 있습니다.
 
 ## <a name="simulator-tricks"></a>시뮬레이터 트릭
 
- 
 모바일 애플리케이션을 개발할 때에는 코드를 신속하게 배포하는 것이 중요합니다. 속도 및 디바이스 프로비전 요구 사항 미충족을 비롯한 다양한 이유로, 개발자가 사전 설치된 시뮬레이터 또는 에뮬레이터에 배포하기로 선택하는 경우가 종종 있습니다. 개발자 도구를 생산하는 제조업체의 입장에서 시뮬레이터 또는 에뮬레이터를 제공하기 위한 의사 결정을 한 마디로 요약하자면, 속도와 호환성 사이에서 적당한 타협이 필요합니다. 
 
 Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 속도를 우선하는 iOS 개발용 시뮬레이터를 제공합니다. 제한이 적은 이 환경에서는 Xamarin이 시뮬레이터에 JIT(Just Time) 컴파일러를 사용할 수 있으며(디바이스의 [AOT](~/ios/internals/architecture.md)와는 반대로), 따라서 런타임에 빌드가 네이티브 코드로 컴파일됩니다. Mac이 디바이스보다 훨씬 빠르기 때문에 이렇게 하면 성능이 향상됩니다.
@@ -84,7 +80,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 시뮬레이터는 공유 애플리케이션 시작 관리자를 사용하며, 매번 시작 관리자를 빌드하는 대신 디바이스에서 필요할 때 다시 사용할 수 있습니다.
 
 위의 정보를 염두에 두고, 아래 목록에서 최적의 성능을 제공하기 위해 시뮬레이터에서 앱을 빌드하고 배포할 때 수행해야 하는 단계에 대한 정보를 확인하세요.
- 
+
 ### <a name="tips"></a>팁
 
 - 빌드 시: 
@@ -116,14 +112,12 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 - Release
   - 릴리스 빌드는 사용자에게 제공되는 빌드이며 무엇보다도 성능에 초점을 맞춰야 합니다. 릴리스 구성을 사용할 때 LLVM 최적화 컴파일러를 사용하여 PNG 파일을 최적화할 수 있습니다.
 
- 
 빌드와 배포 간의 관계를 이해하는 것이 중요합니다. 배포 시간은 애플리케이션 크기의 함수입니다. 애플리케이션이 클수록 배포 시간이 길어집니다. 앱 크기를 최소화하면 배포 시간을 줄일 수 있습니다.
 
 앱 크기를 줄이면 빌드 시간도 줄일 수 있습니다. 애플리케이션에서 코드를 제거하는 것이 사용되지 않는 코드를 컴파일하는 것보다 시간이 적게 걸리기 때문입니다. 개체 파일 크기가 작으면 연결 속도가 빠르고, 따라서 생성할 기호 수가 적은 작은 실행 파일이 만들어집니다. 따라서 공간이 절약되는 추가적인 장점이 있으며, 이러한 이유로 모든 디바이스 빌드에 기본적으로 **SDK 연결**이 사용됩니다. 
 
 > [!NOTE]
 > 사용되는 IDE에 따라 **SDK 연결** 옵션이 링크 프레임워크 SDK 전용 또는 SDK 연결 어셈블리 전용으로 표시될 수 있습니다.
- 
 
 ### <a name="tips"></a>팁
 
@@ -133,7 +127,6 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
   - 모든 어셈블리를 연결하는 방안을 고려해 봅니다. 모든 어셈블리를 최적화 
   -  `--dsym=false`를 사용하여 디버그 기호 생성을 해제합니다. 그러나 디버그 기호 생성을 해제하면 앱이 제거되지 않은 경우에만, 앱을 빌드한 컴퓨터에서만 크래시 보고서가 기호화됩니다.
 
- 
 다음과 같은 항목을 피해야 합니다.
 
 - Fat 이진 파일(디버그) 
@@ -141,7 +134,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 - 제거 사용 안 함 
   - 기호 `--nosymbolstrip` 
   - IL(릴리스) `--nostrip`.  
- 
+
 추가 팁 
 
 - 시뮬레이터와 마찬가지로, 다시 빌드보다는 빌드를 사용합니다. 
@@ -176,7 +169,6 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 
 소스 코드에 대한 액세스 권한이 없는 경우 또는 소스 코드가 도구에서 생성되며 소스 코드를 변경할 생각이 없는 경우 보존해야 하는 모든 형식 및 구성원에 대해 설명하는 XML 파일을 만들어서 소스 코드를 연결할 수 있습니다. 그런 후 마치 Attributes를 사용하는 것처럼 코드를 정확하게 처리하는 `--xml={file.name}.xml` 플래그를 프로젝트 옵션에 추가할 수 있습니다.
 
-
 ### <a name="partially-linking-applications"></a>애플리케이션을 부분적으로 연결 
 
 애플리케이션을 부분적으로 연결하는 것도 가능하며, 이렇게 하면 애플리케이션의 빌드 시간을 최적화하는 데 도움이 됩니다.
@@ -185,11 +177,11 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
   - 애플리케이션 크기 최적화 중 일부는 손실됩니다.
   - 소스 코드에 액세스할 필요가 없습니다.
   - `--linkall --linkskip=fieldserviceiOS`를 예로 들 수 있습니다.
- 
+
 - 필요한 어셈블리에 대한 `Link SDK` 옵션 및 `[LinkerSafe]` 특성 사용 
   - 소스 코드에 액세스해야 합니다.
   - 어셈블리를 연결해도 안전하며 어셈블리가 마치 Xamarin SDK인 것처럼 처리된다는 사실을 시스템에 알려줍니다.
- 
+
 ### <a name="objective-c-bindings"></a>Objective-C 바인딩 
 
 - 바인딩에 대한 `[Assembly: LinkerSafe]` 특성을 사용하면 시간과 크기를 줄일 수 있습니다.
@@ -208,110 +200,81 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 # Benchmarks
 
 ## Layer 1: building again after making modifications, but _without_ cleaning should be faster 
- 
+
 The app should build a bit more quickly if you have only made changes to a subset of the libraries and you do not clean the build before re-deploying. 
- 
- 
- 
+
 ### Clean build time 
 178 seconds 
- 
- 
+
 ### Build again (without cleaning) after making _no changes_ 
 12.5 seconds 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 3 trials: 45 seconds, 43 seconds, 43 seconds 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in each of the following files 
- 
+
 - ViewIOS/ImageResourcesHelper.cs 
 - Sales.Native.Core.Tools/UIComponents/ListView/IListView.cs 
 - View.Models/Mailing/MailingModel.cs 
- 
+
 3 trials: 45 seconds, 45 seconds, 45 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in each of the following files 
- 
+
 - ViewIOS/ImageResourcesHelper.cs 
 - Sales.Native.Core.Tools/UIComponents/ListView/IListView.cs 
 - View.Models/Mailing/MailingModel.cs 
 - Sales.Native.Core.IOS.Ext/ServiceInterfaces/AlertDialog/Dialog.cs 
 - Sales.Native.Core.Tools.IOS.Ext/BaseViews/BaseNavigationViewController.cs 
 - View.Common/Services/DataTransferResult.cs 
- 
+
 45 seconds 
- 
- 
- 
- 
- 
- 
+
 ## Layer 2: "app thinning" aka "device specific builds" 
- 
+
 The idea of "app thinning" is that the IDE will only build the 1 architecture needed for the specific device that you're deploying to (rather than _both_ 32-bit and 64-bit architectures). 
- 
+
 As of the latest "Xamarin 4" builds, you can now enable "app thinning" in Visual Studio via the "Project Options -> iOS Build -> Enable device-specific builds" setting. 
- 
+
 Or if you prefer you can achieve a similar result by changing the "Project Options -> iOS Build -> Advanced [tab] -> Supported architectures" to select just _one_ architecture (for example ARM64 if you are developing on a 64-bit device). 
- 
- 
- 
+
 (Caveat: I ran the following builds in Visual Studio for Mac on the Mac rather than on the command line.) 
- 
+
 ### Clean build time without "device specific builds" 
 177 seconds 
- 
- 
- 
+
 ### Clean build time _with_ "device specific builds"  
 2 trials: 106 seconds, 98 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 2 trials: 31 seconds, 31 seconds 
- 
- 
+
 * * * 
- 
- 
+
 ## Using the same strategy, but explicitly setting "Supported architectures" to select ARM64 _only_ (rather than using "device specific builds") 
- 
+
 (These builds were again run on the command line using `xbuild`.) 
- 
- 
- 
+
 ### Clean build time with "Supported architectures" set to ARM64 _only_ 
 2 trials: 80 seconds, 91 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 2 trials: 26 seconds, 26 seconds 
- 
- 
- 
- 
- 
+
 [1] Mac system used for testing: MacBookAir5,2 
- 
+
 - 2.0 GHz Core i7 (I7-3667U) 
- 
+
 2 Cores with hyper-threading 
- 
+
 L2 Cache (per Core): 256 KB 
 L3 Cache: 4 MB 
- 
+
 - Standard MacBook soldered-in solid-state storage 
- 
+
 - 8 GB RAM 
 ---->
-
 
 ## <a name="related-links"></a>관련 링크
 

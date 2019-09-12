@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 11/10/2017
-ms.openlocfilehash: 00d5d5cf9cda38fbfc09fcfe8b4dcb56d00dee5b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4b538df5e8e615f8594bd38cb13d9b45b0961dac
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291420"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770134"
 ---
 # <a name="xamarinmac-linker-options"></a>Xamarin.Mac 링커 옵션
 
@@ -53,7 +53,6 @@ Xamarin.Mac 프로젝트에 대한 링커 구성을 변경하려면 다음을 �
 
 4. 전체 대상 프레임워크에 대한 플랫폼 연결은 향후 업데이트될 때까지 IDE에 나타나지 않습니다. 그 전에는 **추가 mmp 인수**에 `--linkplatform`을 추가합니다.
 5. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: 430f4fedc8e988c89826e3ae023fc25b7b798727
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 818b6afef395b081768f8bdd6538d5a8ecbad178
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525344"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753736"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Amazon App Store에 게시
 
@@ -20,7 +20,6 @@ Amazon Mobile App Distribution Program을 사용하면 모바일 앱 개발자�
 [![Amazon App Store 화면](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
 Amazon은 APK의 크기를 제한하지 않습니다. 그러나 APK가 30MB를 초과하면 Amazon 모바일 앱 배포 포털이 아닌 FTP를 배포에 사용하게 됩니다.
-
 
 ## <a name="submitting-apps-binary-info"></a>앱 제출: 이진 정보
 
@@ -31,8 +30,6 @@ Amazon App Store에 애플리케이션을 제출하는 것은 Google Play에 애
 - **스크린 샷** &ndash; Amazon에서는 최소 3개, 최대 10개의 스크린 샷을 요구합니다. 스크린샷은 1024w x 600h 픽셀 또는 800w x 480h 픽셀이어야 합니다. .png 및 .jpg 형식 모두 사용할 수 있습니다.
 - **프로모션 이미지**&ndash; 애플리케이션이 홈 페이지 같은 프로모션 위치에 표시되려면 프로모션 이미지를 선택적으로 제출해야 할 수 있습니다. 이 이미지는 1024w x 500h 픽셀 .png 또는 .jpg 파일로, 가로 방향이어야 합니다. 애니메이션은 포함되면 안 됩니다.
 - 5개 비디오에 대한 업데이트가 제공될 수 잇습니다.
-
-
 
 ## <a name="approval-process"></a>승인 프로세스
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 0972b7c6fa686f40ca548f8267f8e514e9244f05
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3fd3ec0207ac3ae1e5fcaa7d11d91247cd73666d
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286148"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762901"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS에서 iCloud 기능
 
@@ -92,7 +92,7 @@ iCloud 기능을 애플리케이션에 추가하는 것은 _컨테이너_ 때문
     ![컨테이너 선택 화면](icloud-capabilities-images/image34.png)
 
 10. 컨테이너 할당을 확인하고 **할당**을 누릅니다.
- 
+
 [기능 사용](~/ios/deploy-test/provisioning/capabilities/index.md) 가이드의 설명에 따라, 이 앱 ID를 사용하여 새 프로비전 프로필을 생성하거나 다시 생성할 수 있습니다. 
 
 iCloud 사용에 대한 자세한 내용은 다음 가이드를 참조하세요.
@@ -102,7 +102,7 @@ iCloud 사용에 대한 자세한 내용은 다음 가이드를 참조하세요.
 * [문서 선택기 소개](~/ios/platform/document-picker.md)
 
 ## <a name="next-steps"></a>다음 단계
- 
+
 아래 목록에는 필요할 수도 있는 추가 단계가 설명되어 있습니다.
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.

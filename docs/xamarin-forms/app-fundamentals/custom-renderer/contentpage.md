@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 73d57c632cfcd36bd7f38865c39acb7fecb55e3e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650927"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772021"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
 
@@ -253,7 +253,6 @@ UWP에서 `PageRenderer`로부터 파생되는 사용자 지정 렌더러를 구
 ## <a name="summary"></a>요약
 
 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 설명했습니다. `ContentPage`는 단일 보기를 표시하고 화면 대부분을 차지하는 시각적 요소입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

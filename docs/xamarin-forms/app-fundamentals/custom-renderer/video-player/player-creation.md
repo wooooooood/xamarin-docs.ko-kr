@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e14008341e531844851452daeee4c730565a2843
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 177a7f9017559daad528885da90edbc8a0760920
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650488"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771783"
 ---
 # <a name="creating-the-platform-video-players"></a>플랫폼 비디오 플레이어 만들기
 
@@ -155,7 +155,6 @@ Xamarin.Forms 2.5부터 Android 렌더러에는 `Context` 인수가 있는 생�
 
 `OnElementChanged` 재정의는 `VideoView` 및 `RelativeLayout`를 모두 만들고, `VideoView`에 대한 레이아웃 매개 변수를 설정하여 `RelativeLayout` 내에서 가운데에 맞춥니다.
 
-
 ```csharp
 namespace FormsVideoLibrary.Droid
 {
@@ -284,7 +283,6 @@ namespace FormsVideoLibrary.UWP
 플랫폼에 포함된 모든 비디오 플레이어는 재생 및 일시 중지 단추 및 비디오 내에서 현재 위치를 나타내고 새 위치로 이동하는 막대를 포함하는 일련의 기본 전송 컨트롤을 지원합니다.
 
 `VideoPlayer` 클래스는 `AreTransportControlsEnabled`라는 속성을 정의하고 기본값을 `true`로 설정합니다.
-
 
 ```csharp
 namespace FormsVideoLibrary
@@ -463,7 +461,6 @@ namespace FormsVideoLibrary.UWP
 ```
 
 비디오 재생을 시작하려면 속성이 하나 더 필요합니다. 이것은 비디오 파일을 참조하는 데 중요한 `Source` 속성입니다. `Source` 속성을 구현하는 방법은 다음 문서인 [웹 비디오 재생](web-videos.md)에 설명되어 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

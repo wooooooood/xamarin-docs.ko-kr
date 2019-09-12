@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 133550bab03c4d2e3826ea59cf231ac3d85f29cc
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 761b1a8b2c3fd97ca3f1560b79b042e0fd89da92
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525657"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754180"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Android Emulator에서 디버깅
 
@@ -21,7 +21,6 @@ _이 가이드에서는 앱을 디버그하고 테스트하기 위해 Android Em
 ## <a name="overview"></a>개요
 
 Android Emulator( **.NET을 사용한 모바일 개발** 워크로드의 일부로 설치됨)를 다양한 구성으로 실행하여 다양한 Android 디바이스를 시뮬레이션할 수 있습니다. 이러한 구성은 각각 _가상 디바이스_로 생성됩니다. 이 가이드에서는 Visual Studio에서 에뮬레이터를 시작하고, 가상 디바이스에서 앱을 실행하는 방법을 알아봅니다. Android Emulator를 구성하고 새 가상 디바이스를 만드는 방법에 대한 자세한 내용은 [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)을 참조하세요.
-
 
 ## <a name="using-a-pre-configured-virtual-device"></a>미리 구성된 가상 디바이스 사용
 
@@ -65,7 +64,6 @@ Visual Studio for Mac에는 디바이스 드롭다운 메뉴에 표시되는 미
 ## <a name="editing-virtual-devices"></a>가상 디바이스 편집
 
 가상 디바이스를 수정하려면(또는 새로 만들려면) [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)를 사용해야 합니다.
-
 
 <a name="launching" />
 
@@ -113,11 +111,9 @@ Visual Studio 위에는 **디버그** 또는 **릴리스** 모드를 선택하�
 
 ![다시 시작 시 상태 로드](debug-on-emulator-images/loading-state.png)
 
-
 ## <a name="troubleshooting"></a>문제 해결
 
 에뮬레이터의 일반적인 문제에 대한 팁 및 해결 방법은 [Android Emulator 문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md)을 참조하세요.
-
 
 ## <a name="summary"></a>요약
 

@@ -6,36 +6,31 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d20ec990253ff86e7b426baad8da5a919a91ef6c
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 3be55c2149aa58bf6d8462e5c1ff24166078355f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525015"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755895"
 ---
 # <a name="manually-signing-the-apk"></a>수동으로 APK 서명
 
-
 애플리케이션이 릴리스용으로 빌드된 후 배포 전에 APK에 서명해야 Android 디바이스에서 실행할 수 있습니다. 이 프로세스는 일반적으로 IDE로 처리되지만 명령줄에서 수동으로 APK에 서명하기 위해 필요한 경우가 있습니다. APK 서명과 관련된 단계는 다음과 같습니다.
 
-1. **개인 키 만들기** &ndash; 이 단계는 한 번만 수행해야 합니다. 프라이빗 키는 APK에 디지털 방식으로 서명하는 데 필요합니다.
+1. **프라이빗 키 만들기**&ndash; 이 단계는 한 번만 수행해야 합니다. 프라이빗 키는 APK에 디지털 방식으로 서명하는 데 필요합니다.
     프라이빗 키가 준비되면 이후 릴리스 빌드에서 이 단계를 건너뛸 수 있습니다.
 
 2. **APK Zipalign**&ndash;*Zipalign*은 애플리케이션에서 수행되는 최적화 프로세스입니다. 런타임에 Android가 APK와 보다 효율적으로 상호 작용할 수 있게 해줍니다. Xamarin.Android는 런타임에 검사를 수행하고 APK가 Zipalign 되지 않은 경우 애플리케이션 실행을 허용하지 않습니다.
 
-3. **APK 서명** &ndash; 이 단계에서는 Android SDK의 **apksigner** 유틸리티를 사용하고, 이전 단계에서 생성된 개인 키로 APK에 서명합니다. v24.0.3 이전 버전의 오래된 Android SDK 빌드 도구를 사용하여 개발된 애플리케이션은 JDK의 **jarsigner** 앱을 사용합니다. 이러한 도구는 아래에서 자세히 설명합니다. 
+3. **APK 서명**&ndash; 이 단계에서는 Android SDK의 **apksigner** 유틸리티를 사용하고, 이전 단계에서 생성된 프라이빗 키로 APK에 서명합니다. v24.0.3 이전 버전의 오래된 Android SDK 빌드 도구를 사용하여 개발된 애플리케이션은 JDK의 **jarsigner** 앱을 사용합니다. 이러한 도구는 아래에서 자세히 설명합니다. 
 
 단계의 순서는 중요하며 APK에 서명하는 데 사용되는 도구에 따라 달라집니다. **apksigner**를 사용할 경우 먼저 애플리케이션 **zipalign**을 수행한 후 **apksigner**로 서명하는 것이 중요합니다.  **jarsigner**를 사용하여 APK에 서명해야 하며, 먼저 APK에 서명한 후 **zipalign**을 실행하는 것이 중요합니다. 
-
-
 
 ## <a name="prerequisites"></a>전제 조건
 
 이 가이드에서는 Android SDK 빌드 도구 v24.0.3 이상 버전의 **apksigner**를 사용하는 방법을 중점적으로 설명합니다. APK가 이미 빌드되었다고 가정합니다.
 
 이전 버전의 Android SDK 빌드 도구를 사용하여 빌드된 애플리케이션은 아래의 [jarsigner로 APK 서명](#Sign_the_APK_with_jarsigner)에 설명된 대로 **jarsigner**를 사용해야 합니다.
-
-
 
 ## <a name="create-a-private-keystore"></a>프라이빗 키 저장소 만들기
 
@@ -48,8 +43,6 @@ ms.locfileid: "69525015"
 
 이 키 저장소를 보호하는 것은 중요합니다. 이 키 저장소를 분실할 경우 Google Play에서 애플리케이션에 업데이트를 게시할 수 없기 때문입니다.
 키 저장소 분실로 인해 발생하는 문제를 해결하는 유일한 방법은 새 키 저장소를 만들고, 새 키로 APK에 다시 서명한 후, 새 애플리케이션을 제출하는 것입니다. 그런 다음, 기존 애플리케이션을 Google Play에서 제거해야 합니다. 마찬가지로, 이 새 키 스토리지가 손상되거나 공개적으로 배포될 경우 애플리케이션의 비공식 또는 악성 버전이 배포될 가능성이 있습니다.
-
-
 
 ### <a name="create-a-new-keystore"></a>새 키 저장소 만들기
 
@@ -95,7 +88,6 @@ Re-enter new password:
 $ keytool -list -keystore xample.keystore
 ```
 
-
 ## <a name="zipalign-the-apk"></a>APK Zipalign
 
 **apksigner**를 사용하여 APK에 서명하기 전에 먼저 Android SDK의 **zipalign** 도구를 사용하여 파일을 최적화하는 것이 중요합니다. **zipalign**은 4바이트 경계를 따라 APK의 리소스를 재구성합니다. 이러한 정렬 방법은 Android가 APK에서 리소스를 빠르게 로드하여 애플리케이션의 성능을 높이고 메모리 사용량을 줄일 수 있게 해줍니다. Xamarin.Android는 런타임 검사를 수행하여 APK가 zipalign 되었는지 확인합니다. APK가 zipalign 되지 않은 경우 애플리케이션이 실행되지 않습니다.
@@ -105,7 +97,6 @@ $ keytool -list -keystore xample.keystore
 ```shell
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
-
 
 ## <a name="sign-the-apk"></a>APK 서명
 
@@ -129,7 +120,6 @@ $ apksigner sign --ks xample.keystore --ks-key-alias publishingdoc mono.samples.
 > [!NOTE]
 > [Google 문제 62696222](https://issuetracker.google.com/issues/62696222)에 따르면 Android SDK에 **apksigner**가 "없습니다". 이 문제를 해결하는 방법은 Android SDK 빌드 도구 v25.0.3을 설치하고 해당 버전의 **apksigner**를 사용하는 것입니다.  
 
-
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### <a name="sign-the-apk-with-jarsigner"></a>jarsigner를 사용하여 APK에 서명
@@ -147,8 +137,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 
 > [!NOTE]
 > **jarsigner**를 사용하는 경우 APK에 _먼저_ 서명한 후 **zipalign**을 사용하는 것이 중요합니다.  
-
-
 
 ## <a name="related-links"></a>관련 링크
 

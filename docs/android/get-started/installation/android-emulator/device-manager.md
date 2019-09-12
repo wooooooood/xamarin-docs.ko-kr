@@ -9,12 +9,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 200ee3fdee3274063becec19fbc6d1504e132a88
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 60dcbd6f59e622fe5a1272bd2d61540b03e510e4
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226649"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70758438"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 디바이스 관리
 
@@ -56,7 +56,6 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 
   [![Android SDK Tools 설치](device-manager-images/win/02-sdk-tools-sml.png)](device-manager-images/win/02-sdk-tools.png#lightbox)
 
-
 ## <a name="launching-the-device-manager"></a>디바이스 관리자 실행
 
 **도구 > Android > Android Device Manager**를 클릭하여 **도구** 메뉴에서 Android Device Manager를 시작합니다.
@@ -66,7 +65,6 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 시작 시 다음 오류 대화 상자가 표시되면 [문제 해결](#troubleshooting) 섹션에서 해결 방법 지침을 참조하세요.
 
 ![Android SDK 인스턴스 오류 대화 상자](device-manager-images/win/04-sdk-error.png)
-
 
 ## <a name="main-screen"></a>주 화면
 
@@ -145,7 +143,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
     [![실행할 준비가 된 새로 생성된 디바이스](device-manager-images/win/20-created-device-sml.png)](device-manager-images/win/20-created-device.png#lightbox)
 
-
 ### <a name="edit-device"></a>디바이스 편집
 
 기존 가상 디바이스를 편집하려면 디바이스를 선택하고 (화면 오른쪽 상단에 있는) **편집** 단추를 클릭합니다.
@@ -165,7 +162,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 필요한 구성을 변경했으면 **저장** 단추를 클릭합니다.
 가상 디바이스 속성을 변경하는 방법에 대한 자세한 내용은 [Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)을 참조하세요.
-
 
 ### <a name="additional-options"></a>추가 옵션
 
@@ -190,7 +186,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 - **삭제**&ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
 
   ![디바이스 삭제 대화 상자](device-manager-images/win/28-delete-device-w158.png)
-
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -225,7 +220,6 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 
   [![Android SDK Tools 설치](device-manager-images/mac/02-sdk-tools-sml.png)](device-manager-images/mac/02-sdk-tools.png#lightbox)
 
-
 ## <a name="launching-the-device-manager"></a>디바이스 관리자 실행
 
 **도구 &gt; 디바이스 관리자**를 클릭하여 Android Device Manager를 시작합니다.
@@ -235,7 +229,6 @@ Android Device Manager를 사용하려면 다음 항목이 필요합니다.
 시작 시 다음 오류 대화 상자가 표시되면 [문제 해결](#troubleshooting) 섹션에서 해결 방법 지침을 참조하세요.
 
 ![Android SDK 인스턴스 오류 대화 상자](device-manager-images/mac/04-sdk-instance-error.png)
-
 
 ## <a name="main-screen"></a>주 화면
 
@@ -316,7 +309,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
     [![실행할 준비가 된 새로 생성된 디바이스](device-manager-images/mac/20-created-device-m76-sml.png)](device-manager-images/mac/20-created-device-m76.png#lightbox)
 
-
 ### <a name="edit-device"></a>디바이스 편집
 
 기존 가상 디바이스를 편집하려면 **추가 옵션** 풀 다운 메뉴(기어 아이콘)을 선택하고 **편집**을 선택합니다.
@@ -336,7 +328,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 필요한 구성을 변경했으면 **저장** 단추를 클릭합니다.
 가상 디바이스 속성을 변경하는 방법에 대한 자세한 내용은 [Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)을 참조하세요.
-
 
 ### <a name="additional-options"></a>추가 옵션
 
@@ -365,7 +356,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
   ![디바이스 삭제 대화 상자](device-manager-images/mac/28-delete-device-m76.png)
 
 -----
-
 
 <a name="troubleshooting" />
 
@@ -405,7 +395,6 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 **user.config**를 이와 같이 변경한 후에는 Android Device Manager를 실행할 수 있어야 합니다.
 
-
 ### <a name="wrong-version-of-android-sdk-tools"></a>Android SDK Tools의 잘못된 버전
 
 Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이러한 오류 대화 상자가 표시됩니다.
@@ -417,7 +406,6 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 - **Android SDK Tools 26.1.1** 이상
 - **Android SDK 플랫폼 도구 27.0.1** 이상
 - **Android SDK 빌드 도구 27.0.3** 이상
-
 
 ### <a name="snapshot-disables-wifi-on-android-oreo"></a>스냅샷이 Android Oreo에서 WiFi를 사용하지 않음
 
@@ -438,7 +426,6 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 5. AVD를 다시 시작합니다.
 
 이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
-
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -484,7 +471,6 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 [![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 위의 문제 해결 팁을 사용하여 해결할 수 없는 Android Device Manager 관련 문제를 발견할 경우 **도움말 > 문제 보고**를 클릭하여 버그 보고서를 제출하세요.
@@ -496,7 +482,6 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 ## <a name="summary"></a>요약
 
 이 가이드에서는 Xamarin용 Visual Studio Tools 및 Mac용 Visual Studio에서 사용할 수 있는 Android Device Manager를 소개했습니다. Android 에뮬레이터를 시작 및 중지하고, 실행할 AVD(Android 가상 디바이스)를 선택하고, 새 가상 디바이스를 만드는 기능과 같은 필수 기능과 가상 디바이스를 편집하는 방법을 설명했습니다. 추가 사용자 지정에 대한 프로필 하드웨어 속성을 편집하는 방법을 설명하고 일반적인 문제에 대한 문제 해결 팁을 제공했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

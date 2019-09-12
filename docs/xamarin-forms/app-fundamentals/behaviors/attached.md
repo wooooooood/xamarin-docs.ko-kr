@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 094f980922762ff33c19af6c9210e2e533bf5196
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab39c79c59855c9f78184614176b1658ee0e29b2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651024"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772109"
 ---
 # <a name="attached-behaviors"></a>연결된 동작
 
@@ -128,7 +128,6 @@ NumericValidationBehavior.SetAttachBehavior (entry, false);
 ## <a name="summary"></a>요약
 
 이 문서에서는 연결된 동작을 만들고 사용하는 방법을 설명했습니다. 연결된 동작은 연결된 속성이 하나 이상 있는 `static` 클래스입니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

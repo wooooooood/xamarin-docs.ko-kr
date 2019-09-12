@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6cada2c7426cc50723321d77e21852a92fe64d63
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112469"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70755792"
 ---
 # <a name="finding-your-keystores-signature"></a>키 저장소의 서명 찾기
 
@@ -23,7 +23,7 @@ Xamarin.Android는 동일한 **debug.keystore** 파일을 사용하여 모든 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 응용 프로그램의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
+앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 애플리케이션의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\debug.keystore**
 
@@ -59,13 +59,11 @@ Certificate fingerprints:
          Version: 3
 ```
 
-
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 응용 프로그램의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
+앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 애플리케이션의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
 **~/.local/share/Xamarin/Mono for Android/debug.keystore**
-
 
 JDK에서 **keytool** 명령을 실행하면 키 저장소에 대한 정보를 가져올 수 있습니다. 이 도구는 일반적으로 다음 위치에 있습니다.
 
@@ -124,8 +122,7 @@ Visual Studio **배포** 마법사를 사용하여 Xamarin.Android 앱에 서명
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
-Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 응용 프로그램 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
-
+Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 애플리케이션 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -137,7 +134,6 @@ Mac용 Visual Studio **서명 및 배포...** 마법사를 사용하여 앱에 �
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
-Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 응용 프로그램 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
-
+Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 애플리케이션 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
 
 -----

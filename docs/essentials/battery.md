@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d5408894a9eda6b782f1f790ed8f1d0bb138a2f3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120149"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756931"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
 
@@ -161,7 +161,6 @@ public class EnergySaverTest
 ```
 
 절전 상태가 `On`으로 변경되면 애플리케이션에서 후순위 처리 수행을 중지해야 합니다. 상태가 `Unknown` 또는 `Off`로 변경되면 애플리케이션에서 후순위 처리를 다시 시작할 수 있습니다.
-
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 

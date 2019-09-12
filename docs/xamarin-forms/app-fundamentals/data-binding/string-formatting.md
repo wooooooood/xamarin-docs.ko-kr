@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 87972df2b15a5bc1f6323a6953f809379cae4a50
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644519"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771575"
 ---
 # <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 형식 지정
 
@@ -183,7 +183,6 @@ RGB(빨강, 녹색, 파랑) 값을 기존의 2자리 16진수 형식으로 표�
 다른 방식은 더 일반적입니다. [**바인딩 값 변환기**](converters.md) 문서 뒷부분의 설명대로 ‘바인딩 값 변환기’를 작성할 수 있습니다. 
 
 하지만 다음 문서에서는 [**바인딩 경로**](binding-path.md)에 대해 더 자세히 살펴보고 이것을 사용하여 컬렉션의 하위 속성과 항목을 참조하는 방법을 보여줍니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

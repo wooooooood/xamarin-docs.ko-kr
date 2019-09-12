@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: 3560c58c6fbb9920cfaf9c3830cd442bca443571
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70119626"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756115"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -92,7 +92,6 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 ## <a name="shrink-the-apk"></a>APK 축소
 
 불필요한 *관리* 코드를 제거하는 Xamarin.Android 링커와, 사용하지 않는 *Java 바이트코드*를 제거하는 Android SDK *ProGuard* 도구 조합을 통해 Xamarin.Android APK를 더 작게 만들 수 있습니다. 빌드 프로세스에서는 먼저 Xamarin.Android 링커를 사용하여 관리 코드(C#) 수준에서 앱을 최적화한 다음 ProGuard(사용하도록 설정된 경우)를 사용하여 Java 바이트코드 수준에서 APK를 최적화합니다.
-
 
 ### <a name="configure-the-linker"></a>링커 구성
 
@@ -229,7 +228,6 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 
 _LLVM 최적화 컴파일러_는 더 작고 빠른 컴파일 코드를 만들며 AOT 컴파일 어셈블리를 네이티브 코드로 변환하지만 빌드 시간이 느려집니다. LLVM 컴파일러는 기본적으로 사용하지 않게 설정되어 있습니다. LLVM 컴파일러를 사용하려면 먼저 **AOT 컴파일** 옵션을 사용하도록 설정해야 합니다([패키지 속성](#Set_Packaging_Properties) 페이지).
 
-
 > [!NOTE]
 > **LLVM 최적화 컴파일러** 옵션에는 엔터프라이즈 라이선스가 필요합니다.  
 
@@ -364,7 +362,6 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 여기에서는 배포 채널을 선택할 수 있습니다.
 
 - **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있게 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, &ldquo;임시&rdquo; 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
-
 
 - **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다.
     계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: dac059576b8821d218cca44ae1c049010e364cfc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: 71e509d87dc2a2947821084aea5668055f6f4678
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739356"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771501"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
@@ -214,7 +214,6 @@ namespace DependencyServiceDemos.Droid
 ## <a name="uwp-implementation"></a>UWP 구현
 
 iOS 및 Android 구현과 달리 유니버설 Windows 플랫폼에 대한 사진 선택기 구현에는 `TaskCompletionSource` 클래스가 필요하지 않습니다. [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.UWP/Services/PhotoPickerService.cs) 클래스는 [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) 클래스를 사용하여 사진 라이브러리에 액세스합니다. `FileOpenPicker`의 `PickSingleFileAsync` 메서드 자체는 비동기이므로 `GetImageStreamAsync` 메서드는 해당 메서드(및 다른 비동기 메서드)를 통해 `await`를 사용하고 `Stream` 개체를 반환할 수 있습니다.
-
 
 ```csharp
 [assembly: Dependency(typeof(PhotoPickerService))]

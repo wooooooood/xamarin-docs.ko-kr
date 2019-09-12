@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 38ecd765b1c6bc81054b2c42426b6c15bb99b9d9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771992"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
 
@@ -164,7 +164,6 @@ label.Behaviors.Add (new EffectBehavior {
 ## <a name="summary"></a>요약
 
 이 문서에서는 동작을 사용하여 컨트롤에 효과를 추가하는 방법을 보여 주었습니다. `EffectBehavior` 클래스는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다. 즉 동작이 컨트롤에 연결되면 [`Effect`](xref:Xamarin.Forms.Effect) 인스턴스를 컨트롤에 추가하고, 동작이 컨트롤에서 분리되면 `Effect` 인스턴스를 제거합니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

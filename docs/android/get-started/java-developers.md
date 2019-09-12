@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 5edde7cff0867161394270250a8fe622e8e03ee3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: dfd6c9d6419f663b1ef474066f7918859d42b3c5
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69524907"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70757295"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 
 _Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, 두 언어 모두에서 매우 비슷한 기능을 제공합니다. 또한 C# 고유의 기능을 통해 개발 작업을 더 쉽게 수행할 수 있습니다._
-
 
 ## <a name="overview"></a>개요
 
@@ -61,7 +60,6 @@ Java 및 C#는 모두 관리되는 실행 환경에서 실행되는 중간 언�
 
 - C#은 데이터베이스 쿼리와 비슷한 방식으로 `from`, `select` 및 `where` 예약어를 사용하여 컬렉션에 대한 쿼리를 작성할 수 있는 LINQ(Language-Integrated Query)를 지원합니다.
 
-
 물론 C#과 Java 사이에는 이 문서에서 설명하는 것보다 더 많은 차이점이 있습니다. 또한 Android 도구 체인에 아직 없는 Java 8에서 C# 스타일의 람다 식을 지원하는 것처럼 Java와 C# 모두는 계속 진화하고 있으므로 시간이 지남에 따라 이러한 차이점은 변합니다. 현재 Xamarin.Android를 처음 사용하는 Java 개발자가 직면하는 가장 중요한 차이점만 여기서 설명합니다.
 
 - [Java에서 C#으로 개발 이동](#fundamentals)에서는 C#과 Java의 근본적인 차이점을 소개합니다.
@@ -81,7 +79,6 @@ C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Androi
 - [비동기 프로그래밍](#async) &ndash; C#의 비동기 프로그래밍 기능(`async`/`await`)은 응용 프로그램이 즉시 응답할 수 있도록 합니다.
     이 기능의 언어 수준 지원을 통해 비동기 프로그래밍을 쉽게 구현할 수 있으며 오류가 발생할 가능성이 적습니다.
 
-
 마지막으로, Xamarin에서는 *바인딩*으로 알려진 기술을 통해 [기존 Java 자산을 활용할 수 있습니다](#interop). Xamarin의 자동 바인딩 생성기를 사용하여 C#에서 기존 Java 코드, 프레임워크 및 라이브러리를 호출할 수 있습니다. 이렇게 하려면 Java에서 정적 라이브러리를 만들고 바인딩을 통해 C#에 노출하면 됩니다.
 
 <a name="fundamentals" />
@@ -90,14 +87,11 @@ C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Androi
 
 다음 섹션에서는 C#과 Java의 기본적인 "시작" 차이점에 대해 설명하고, 이후 섹션에서는 이러한 언어 간의 개체 지향 차이점에 대해 설명합니다.
 
-
-
 ### <a name="libraries-vs-assemblies"></a>라이브러리 및 어셈블리
 
 Java는 일반적으로 **.jar** 파일에 관련 클래스를 패키지합니다. 그러나 C# 및 .NET에서는 미리 컴파일된 코드의 재사용 가능한 비트가 일반적으로 *.dll* 파일이라는 *어셈블리*에 패키지됩니다. 어셈블리는 C#/.NET 코드의 배포 단위이며, 각 어셈블리는 일반적으로 C# 프로젝트와 연결됩니다. 어셈블리에는 런타임에 컴파일된 JIT(Just-In-Time)인 IL(중간 코드)이 포함되어 있습니다.
 
 어셈블리에 대한 자세한 내용은 [어셈블리와 글로벌 어셈블리 캐시](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/) 항목을 참조하세요.
-
 
 ### <a name="packages-vs-namespaces"></a>패키지 대 네임스페이스
 
@@ -108,7 +102,6 @@ namespace WeatherApp
 {
     ...
 ```
-
 
 ### <a name="importing-types"></a>형식 가져오기
 
@@ -142,8 +135,6 @@ using System.Threading.Tasks;
 
 이러한 명령문은 `System`, `Android.App`, `Android.Content` 등의 네임스페이스에서 기능을 가져옵니다.
 
-
-
 ### <a name="generics"></a>제네릭
 
 Java와 C#은 모두 *제네릭*을 지원하며, 이는 컴파일 시간에 다른 형식을 플러그 인할 수 있는 자리 표시자입니다. 그러나 C#에서는 제네릭이 약간 다르게 작동합니다. Java에서 [형식 지우기](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)는 컴파일 시간에만 형식 정보를 사용할 수 있게 하지만, 런타임에는 그렇지 않습니다. 반대로 .NET CLR(공용 언어 런타임)은 제네릭 형식을 명시적으로 지원하며, 이에 따라 C#에서 런타임에 형식 정보에 액세스할 수 있습니다. 일상적인 Xamarin.Android 개발에서 이 구분의 중요성은 명확하지 않지만, [리플렉션](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection)을 사용하는 경우 이 기능을 사용하여 런타임에 형식 정보에 액세스할 수 있게 됩니다.
@@ -158,7 +149,6 @@ TextView label = FindViewById<TextView> (Resource.Id.Label);
 
 제네릭에 대한 자세한 내용은 [제네릭](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index) 항목을 참조하세요.
 제네릭 C# 클래스에 대한 Xamarin.Android 지원에는 몇 가지 제한 사항이 있습니다. 자세한 내용은 [제한 사항](~/android/internals/limitations.md)을 참조하세요.
-
 
 <a name="oopfeatures" />
 
@@ -192,8 +182,6 @@ Java와 C# 모두는 다음과 같이 매우 비슷한 개체 지향 프로그�
 
 - C#은 C++ 스타일 소멸자 구문을 사용하여 종료자를 표현합니다. 이 구문은 Java의 `finalize` 메서드와 다르지만 의미는 거의 같습니다. (`super.finalize`에 대한 명시적 호출이 사용되는 Java와 달리, C#에서는 소멸자가 기본 클래스 소멸자를 자동으로 호출합니다.)
 
-
-
 ### <a name="class-inheritance"></a>클래스 상속
 
 Java에서 클래스를 확장하려면 `extends` 키워드를 사용합니다. C#에서 클래스를 확장하려면 콜론(`:`)을 사용하여 파생을 나타냅니다. 예를 들어 Xamarin.Android 앱에는 종종 다음 코드 조각과 비슷한 클래스 파생이 표시됩니다.
@@ -220,7 +208,6 @@ C#에서 클래스가 더 이상 서브클래싱되지 않도록 하려면, 클�
 
 C# 클래스 정의에 대한 자세한 내용은 [클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) 및 [상속](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance) 항목을 참조하세요.
 
-
 <a name="properties" />
 
 ### <a name="properties"></a>속성
@@ -244,8 +231,6 @@ rulerView.DrawingCacheEnabled = true;
 속성에 대한 액세스는 읽기/쓰기, 읽기 전용 또는 쓰기 전용일 수 있습니다. 또한 읽기 및 쓰기에 대해 다른 액세스 한정자를 사용할 수 있습니다. 예를 들어 공용 읽기 액세스 권한이 있지만 개인 쓰기 액세스 권한이 있는 속성을 정의할 수 있습니다.
 
 C# 속성에 대한 자세한 내용은 [속성](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties) 항목을 참조하세요.
-
-
 
 ### <a name="calling-base-class-methods"></a>기본 클래스 메서드 호출
 
@@ -280,8 +265,6 @@ public class MainActivity : Activity
 
 이 경우 파생 클래스(`MainActivity`)에서 정의된 `OnCreate` 메서드는 기본 클래스(`Activity`)의 `OnCreate` 메서드를 호출합니다.
 
-
-
 ### <a name="access-modifiers"></a>액세스 한정자
 
 Java 및 C#은 모두 `public`, `private` 및 `protected` 액세스 한정자를 지원합니다. 그러나 C#은 다음 두 가지 액세스 한정자를 추가로 지원합니다.
@@ -291,8 +274,6 @@ Java 및 C#은 모두 `public`, `private` 및 `protected` 액세스 한정자를
 - **`protected internal`** &ndash; 클래스 멤버는 정의 어셈블리, 정의 클래스 및 파생 클래스(어셈블리 내부와 외부 모두에서 파생된 클래스에 액세스할 수 있음) 내에서 액세스할 수 있습니다.
 
 C# 액세스 한정자에 대한 자세한 내용은 [액세스 한정자](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers) 항목을 참조하세요.
-
-
 
 ### <a name="virtual-and-override-methods"></a>가상 및 재정의 메서드
 
@@ -308,7 +289,6 @@ Java와 마찬가지로 C#은 `abstract` 클래스와 메서드를 지원합니�
 - C# 파생 클래스는 `override` 키워드를 사용하여 가상 기본 클래스 메서드가 재정의되고 있음을 명시적으로 나타내야 합니다.
 
 C#의 다형성 지원에 대한 자세한 내용은 [다형성](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism) 항목을 참조하세요.
-
 
 <a name="lambdas" />
 
@@ -339,7 +319,6 @@ button.Click += (sender, args) => {
 이 예제에서 람다 식 코드(중괄호 안의 코드)는 클릭 수를 늘리고 `button` 텍스트를 업데이트하여 클릭 수를 표시합니다. 이 람다 식은 단추를 탭할 때마다 호출되는 클릭 이벤트 처리기로 `button` 개체에 등록됩니다. (이벤트 처리기에 대한 자세한 내용은 아래에서 설명합니다.) 이 간단한 예제에서 `sender` 및 `args` 매개 변수는 람다 식 코드에서 사용하지 않지만, 이러한 매개 변수는 이벤트 등록에 대한 메서드 시그니처 요구 사항을 충족하기 위해 람다 식에 필요합니다. 내부적으로 C# 컴파일러는 람다 식을 단추 클릭 이벤트가 발생할 때마다 호출되는 무명 메서드로 변환합니다.
 
 C# 및 람다 식에 대한 자세한 내용은 [람다 식](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) 항목을 참조하세요.
-
 
 <a name="events" />
 
@@ -389,7 +368,6 @@ startActivityButton.Click += (sender, e) => {
 
 일반적으로 람다 식은 Xamarin.Android 코드에서 이벤트 처리기를 선언하는 데 사용됩니다. 이벤트 처리기를 선언하는 이 간단한 방법은 처음에는 신비롭게 보일 수 있지만, 코드를 작성하고 읽을 때 엄청난 시간을 절약합니다. 숙련도가 높아짐에 따라 Xamarin.Android 코드에서 자주 발생하는 이 패턴을 인식하는 데 익숙해지고, 애플리케이션의 비즈니스 논리를 고려하는 데 더 많은 시간을 들이고 구문 오버헤드에 걸리는 시간을 줄일 수 있습니다.
 
-
 <a name="async" />
 
 ## <a name="asynchronous-programming"></a>비동기 프로그래밍
@@ -402,7 +380,6 @@ C#에는 `async` 및 `await` 키워드를 통한 비동기 프로그래밍에 �
 Xamarin.Android 애플리케이션에서 `async`과 `await`는 일반적으로 UI 스레드를 해제하여 백그라운드 작업에서 장시간 실행되는 동안 사용자 입력(예: **취소** 단추 태핑)에 응답할 수 있도록 하는 데 사용됩니다.
 
 다음 예제에서는 단추 클릭 이벤트 처리기에서 비동기 작업으로 인해 웹에서 이미지를 다운로드합니다.
-
 
 ```csharp
 downloadButton.Click += downloadAsync;
@@ -426,7 +403,6 @@ async void downloadAsync(object sender, System.EventArgs e)
 C#의 `async`/`await`에 대한 소개는 [Async 및 Await를 사용한 비동기 프로그래밍](https://docs.microsoft.com/dotnet/csharp/async) 항목을 참조하세요.
 Xamarin의 비동기 프로그래밍 기능 지원에 대한 자세한 내용은 [비동기 지원 개요](~/cross-platform/platform/async.md)를 참조하세요.
 
-
 <a name="keywords" />
 
 ## <a name="keyword-differences"></a>키워드 차이점
@@ -446,7 +422,6 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 |`T...`|[params T](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/params)|가변 개수의 인수를 사용하는 메서드 매개 변수를 지정합니다.|
 |`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|파생 클래스 내에서 부모 클래스의 멤버에 액세스하는 데 사용됩니다.|
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.|
-
 
 또한 C#에 고유하고 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)를 읽을 때 유용하게 참조할 수 있습니다.
 
@@ -476,7 +451,6 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|클라이언트 코드에서 속성에 할당하려는 값을 참조합니다.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|파생 클래스에서 메서드를 재정의할 수 있도록 합니다.|
 
-
 <a name="interop" />
 
 ## <a name="interoperating-with-existing-java-code"></a>기존 Java 코드와의 상호 운용
@@ -489,8 +463,6 @@ C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.A
 
 이러한 방법에 대한 자세한 내용은 [Java 통합 개요](~/android/platform/java-integration/index.md)를 참조하세요.
 
-
-
 ## <a name="for-further-reading"></a>추가 정보
 
 MSDN [C# 프로그래밍 가이드](https://docs.microsoft.com/dotnet/csharp/programming-guide/)는 C# 프로그래밍 언어 학습을 시작할 수 있는 좋은 방법이며, [C# 참조](https://docs.microsoft.com/dotnet/csharp/language-reference/)를 사용하여 특정 C# 언어 기능을 조회할 수 있습니다.
@@ -499,12 +471,9 @@ Java 지식에서 최소한 Java 언어를 알고 있는 만큼 Java 클래스 �
 
 C#에서 첫 번째 Xamarin.Android 프로젝트를 시작할 준비가 되면, [Hello, Android](~/android/get-started/hello-android/index.md) 시리즈를 통해 첫 번째 Xamarin.Android 애플리케이션을 빌드하고 Xamarin을 사용하여 Android 애플리케이션 개발의 기본 사항에 대한 이해를 높일 수 있습니다.
 
-
-
 ## <a name="summary"></a>요약
 
 이 문서에서는 Java 개발자의 관점에서 Xamarin.Android C# 프로그래밍 환경을 소개했습니다. 실용적인 차이점을 설명하면서 C#과 Java 사이의 유사성을 지적했습니다. 어셈블리와 네임스페이스를 소개하고, 외부 형식을 가져오는 방법을 설명하고, 액세스 한정자, 제네릭, 클래스 파생, 호출 기본 클래스 메서드, 메서드 재정의 및 이벤트 처리의 차이점에 대한 개요를 제공했습니다. Java에서 사용할 수 없는 C# 기능(예: 속성, `async`/`await` 비동기 프로그래밍, 람다, C# 대리자 및 C# 이벤트 처리 시스템)을 소개했습니다. 중요한 C# 키워드 표가 있으며, 기존 Java 라이브러리와 상호 운용하는 방법에 대해 설명하고, 추가 정보와 관련된 설명서에 대한 링크를 제공했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 45a85c8ac2f40e92078d46f5765aaf2af1518b77
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 103d4f40a1c368f576276c4cdcbdc585d2a1536a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650737"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771898"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>맵의 지역 강조 표시
 
@@ -304,7 +304,6 @@ namespace MapOverlay.UWP
 ## <a name="summary"></a>요약
 
 이 문서에서는 다각형 오버레이를 맵에 추가하여 맵의 영역을 강조 표시하는 방법을 설명했습니다. 다각형은 닫힌 모양이며 내부는 채워져 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

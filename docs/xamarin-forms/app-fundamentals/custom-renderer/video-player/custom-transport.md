@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: ab3ed8895a4f7c6b44c978e52e0b00fc32850f75
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771823"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
@@ -656,7 +656,6 @@ namespace VideoPlayerDemos
 [![사용자 지정 전송 일시 중지됨](custom-transport-images/customtransportpaused-small.png "사용자 지정 전송 일시 중지됨")](custom-transport-images/customtransportpaused-large.png#lightbox "사용자 지정 전송 일시 중지됨")
 
 프로덕션 애플리케이션에서는 시각적 일관성을 유지하기 위해 단추에 자체 비트맵 이미지를 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

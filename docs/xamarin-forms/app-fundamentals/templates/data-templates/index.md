@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 6cb828f59505159c972d40905f22995055f207df
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 5d130a6644af4e5831263c6de137513c021e0b6a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68646851"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70760797"
 ---
 # <a name="xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿
 
@@ -31,7 +31,6 @@ Xamarin.Forms 데이터 템플릿은 지원되는 컨트롤의 데이터 표현�
 ## <a name="creating-a-datatemplateselectorselectormd"></a>[DataTemplateSelector 만들기](selector.md)
 
 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)는 데이터 바인딩된 속성의 값에 기반하여 런타임 시 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 선택하는 데 사용됩니다. 이렇게 하면 여러 `DataTemplate` 인스턴스를 같은 유형의 개체에 적용하여 특정 개체의 모양을 사용자 지정할 수 있습니다. 이 문서에서는 `DataTemplateSelector`를 만들고 사용하는 방법을 보여줍니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

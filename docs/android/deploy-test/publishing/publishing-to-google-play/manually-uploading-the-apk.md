@@ -6,18 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3852e2a1460cb5659cf5a00dcc17fb9a6e9c26a8
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69525306"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70756063"
 ---
 # <a name="manually-uploading-the-apk"></a>수동으로 APK 업로드
 
-
 APK가 Google Play에 처음으로 제출될 경우(또는 초기 버전의 Xamarin.Android를 사용할 경우) [Google Play 개발자 콘솔](https://play.google.com/apps/publish)을 통해 수동으로 APK를 업로드해야 합니다. 이 가이드에서는 이 프로세스에 필요한 단계를 설명합니다. 
-
 
 ## <a name="google-play-developer-console"></a>Google Play 개발자 콘솔
 
@@ -54,13 +52,11 @@ APK를 업로드한 후에 테스트 메서드를 선택할 수 있습니다.
 
 APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명한 것처럼 추가 세부 정보가 Google Play에 제공되기 전까지는 게시할 수 없습니다.
 
-
 ## <a name="store-listing"></a>스토어 목록
 
 **Google Play 개발자 콘솔**에서 **스토어 목록**을 클릭하여 Google Play가 해당 애플리케이션의 미래 사용자에게 표시할 정보를 입력합니다. 
 
 [![스토어 목록 대화 상자](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
-
 
 ### <a name="graphics-assets"></a>그래픽 자산
 
@@ -70,7 +66,6 @@ APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명�
 
 앞에서 준비된 모든 프로모션 자산이 이 섹션에서 업로드됩니다. 어떤 프로모션 자산을 어떤 형식으로 제공해야 하는지에 관한 지침이 제공됩니다.
 
-
 ### <a name="categorization"></a>분류
 
 **그래픽 자산** 섹션이 **분류** 섹션이 되면 애플리케이션 종류와 범주를 선택합니다.
@@ -79,7 +74,6 @@ APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명�
 
 콘텐츠 등급은 다음 섹션 뒤에서 다룹니다.
 
-
 ### <a name="contact-details"></a>연락처 세부 정보
 
 이 페이지의 마지막 섹션은 **연락처 세부 정보** 섹션입니다. 이 섹션을 사용하여 애플리케이션 개발자에 관한 연락처 정보를 수집합니다.
@@ -87,7 +81,6 @@ APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명�
 [![연락처 세부 정보 섹션](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 앞에서 표시한 것처럼 **개인 정보 취급 방침** 섹션에서 앱의 개인 정보 취급 방침 정책에 대한 URL을 제공할 수 있습니다.
-
 
 ## <a name="content-rating"></a>콘텐츠 등급
 
@@ -103,14 +96,13 @@ Google Play의 모든 애플리케이션은 Google Play 등급 시스템에 따�
 
 - **하**&ndash; 위치 데이터를 액세스하지만 공유하지 않는 애플리케이션입니다. 가볍거나 만화 수준의 폭력 묘사 
 
-- **중** &ndash; 마약, 주류 또는 담배에 대 한 언급 도박 테마 또는 시뮬레이션 적의가 있는 콘텐츠 불경스럽거나 외설적인 유머 도발적 또는 성적 언급 
-    강한 수준의 판타지 폭력 현실적인 폭력 사용자가 서로 찾을 수 있음 사용자가 서로 커뮤니케이션할 수 있음 
+- **중** &ndash; 마약, 주류 또는 담배에 대 한 언급 도박 테마 또는 시뮬레이션 적의가 있는 콘텐츠 불경스럽거나 외설적인 유머  도발적 또는 성적 언급 
+    강한 수준의 판타지 폭력  현실적인 폭력  사용자가 서로 찾을 수 있음 사용자가 서로 커뮤니케이션할 수 있음 
     사용자 위치 데이터 공유 
 
-- **상** &ndash; 주류, 담배 또는 약물 사용 도는 판매에 초점 도발적 또는 성적 언급에 초점 그래픽 폭력 
+- **상** &ndash; 주류, 담배 또는 약물 사용 도는 판매에 초점 도발적 또는 성적 언급에 초점 그래픽 폭력  
 
 중 목록의 항목은 주관적인 판단이 필요하므로, 중 등급에 해당하는 것처럼 보이는 지침이 상 등급 만큼 강도가 있을 수 있습니다. 
-
 
 ## <a name="pricing-amp-distribution"></a>&amp; 배포 가격 책정
 
@@ -122,13 +114,11 @@ Google Play에서는 무료 애플리케이션이 유료 앱으로 변경되는 
 
 [![가격 및 배포 대화 상자](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-
-### <a name="manage-countries"></a>국가 관리
+### <a name="manage-countries"></a>국가 관리 
 
 **국가 관리** 섹션에서는 앱이 배포될 수 있는 국가를 제어합니다.
 
 [![국가 관리 대화 상자](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
-
 
 ### <a name="other-information"></a>기타 정보
 
@@ -137,7 +127,6 @@ Google Play에서는 무료 애플리케이션이 유료 앱으로 변경되는 
 [![광고 포함 섹션](manually-uploading-the-apk-images/14-contains-ads-sml.png)](manually-uploading-the-apk-images/14-contains-ads.png#lightbox)
 
 이 섹션 다음에는 **가족용으로 지정**, 교육용 Google Play를 통해 배포 등을 선택할 수 있는 추가 옵션이 있습니다.
-
 
 ### <a name="consent"></a>동의
 
@@ -148,8 +137,6 @@ Google Play에서는 무료 애플리케이션이 유료 앱으로 변경되는 
 
 Xamarin.Android 앱 게시에는 이 가이드에서 다루는 내용보다 훨씬 더 많은 사항을 고려해야 합니다.
 Google Play 앱 게시에 대한 자세한 내용은 [Google Play 개발자 콘솔 도움말 센터 시작](https://support.google.com/googleplay/android-developer#topic=3450769)을 참조하세요.
-
-
 
 ## <a name="google-play-filters"></a>Google Play 필터
 

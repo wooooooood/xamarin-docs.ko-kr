@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2017
-ms.openlocfilehash: c0a4766abf8ded591bf348f2c2a7ba2283cdde00
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b2d9d49e37b195dadf3aa89fefb0911e4215d14
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290237"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70769922"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 프로비저닝 프로필
 
@@ -90,7 +90,6 @@ ms.locfileid: "70290237"
 7. 프로비전 프로필도 목록에 표시됩니다. 
 
     [![](profiles-images/certif26.png "설치된 프로필 표시")](profiles-images/certif26.png#lightbox)
-
 
 개발자가 앱 ID로 사용 중인 기능(예: iCloud 또는 푸시 알림을 사용하도록 설정)을 변경하면 해당 앱 ID에 대한 프로비전 프로필을 다시 만들어야 합니다.
 

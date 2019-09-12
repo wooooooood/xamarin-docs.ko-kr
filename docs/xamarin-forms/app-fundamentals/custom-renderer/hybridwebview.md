@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 0277a5abd4e34d092b231cd42746f9e05c91b8df
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 66e26704f22a73559eef04608726ab3b4a935385
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199954"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771916"
 ---
 # <a name="implementing-a-hybridwebview"></a>HybridWebView 구현
 
@@ -507,7 +507,6 @@ namespace CustomRenderer.UWP
 ## <a name="summary"></a>요약
 
 이 문서에서는 JavaScript에서 C # 코드를 호출할 수 있도록 플랫폼별 웹 컨트롤을 향상시키는 방법을 보여주는 `HybridWebView` 사용자 지정 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 살펴보았습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

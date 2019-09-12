@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d7d6bf128d3814917633bdd69e3c9c54c8d6a20c
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70197513"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753816"
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 성능
 
@@ -34,7 +34,6 @@ Xamarin.Android로 빌드된 애플리케이션의 성능과 인식 성능을 �
 - [사용되지 않는 이미지 리소스 삭제](#disposeimages)
 - [부동 소수점 연산 방지](#avoidfloats)
 - [대화 상자 해제](#dismissdialogs)
-
 
 > [!NOTE]
 > 이 아티클을 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 애플리케이션의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
@@ -246,7 +245,6 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 
 삭제 가능한 리소스를 릴리스하는 방법에 대한 자세한 내용은 [IDisposable 리소스 릴리스](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable)를 참조하세요.  
 
-
 <a name="avoidfloats" />
 
 ## <a name="avoid-floating-point-arithmetic"></a>부동 소수점 연산 방지
@@ -265,7 +263,6 @@ Android 디바이스에서 부동 소수점 연산은 정수 연산보다 2배 �
 ## <a name="summary"></a>요약
 
 이 문서에서는 Xamarin.Android로 빌드된 애플리케이션의 성능을 높이는 기술에 대해 설명했습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

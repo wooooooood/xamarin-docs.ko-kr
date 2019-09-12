@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2019
-ms.openlocfilehash: 84910bd499aa6894d86778a9bc4eb1467f063134
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: c331747677ee56f87458f51ef36a9bb2034beab1
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225742"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70754258"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -44,7 +44,6 @@ Xamarin.Android 빌드 시스템이 생성할 수 있는 Android 애플리케이
 빠른 배포는 `adb`가 `/data/data/@PACKAGE_NAME@/files/.__override__` 디렉터리에 동기화되지 않게 차단하는 디바이스에서 실패하는 것으로 알려져 있습니다.
 
 빠른 배포는 기본적으로 활성화되며, 디버그 빌드에서 `$(EmbedAssembliesIntoApk)` 속성을 `True`로 설정하여 비활성화할 수 있습니다.
-
 
 ## <a name="msbuild-projects"></a>MSBuild 프로젝트
 
@@ -128,7 +127,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
   # Use `/Library/Frameworks/Mono.framework/Commands/msbuild` on OS X
   MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
   ```
-
 
 ### <a name="packaging-properties"></a>패키징 속성
 
@@ -530,7 +528,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   - **West**: *서유럽어(Mac)* \[macintosh, CP10000\], *아이슬란드어(Mac)* \[x-mac-icelandic, CP10079\], *중앙 유럽어(Windows)* \[iso-8859-2, CP1250\], *서유럽어(Windows)* \[iso-8859-1, CP1252\], *그리스어(Windows)* \[iso-8859-7, CP1253\], *중앙 유럽어(ISO)* \[iso-8859-2, CP28592\], *라틴어 3(ISO)* \[iso-8859-3, CP28593\], *그리스어(ISO)* \[iso-8859-7, CP28597\], *라틴어 9 (ISO)* \[iso-8859-15, CP28605\], *OEM 미국* \[CP437\], *서유럽어(DOS)* \[CP850\], *포르투갈어(DOS)* \[CP860\], *아이슬란드어(DOS)* \[CP861\], *프랑스어(캐나다)(DOS)* \[CP863\] 및 *북유럽어(DOS)* \[CP865\] 같은 서부 인코딩을 포함합니다.
 
-
   ```xml
   <MandroidI18n>West</MandroidI18n>
   ```
@@ -548,7 +545,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 - **AndroidClassParser** &ndash; `.jar` 파일이 구문 분석되는 방법을 제어하는 문자열 속성입니다. 가능한 값은 다음과 같습니다.
 
   - **클래스 구문 분석**: JVM의 보조 없이 `class-parse.exe`를 사용하여 Java 바이트코드의 구문 분석을 바로 수행합니다. 이 값은 실험적입니다.
-
 
   - **jar2xml**: `jar2xml.jar`을 통해 Java 리플렉션을 사용하여 `.jar` 파일에서 형식과 멤버를 추출합니다.
 
@@ -579,7 +575,6 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
     - 관리되는 서브클래스를 위한 Java Callable Wrapper 생성자 `jmethodID` 캐싱.
 
     기본값은 `XAJavaInterop1`입니다.
-
 
 ### <a name="resource-properties"></a>리소스 속성
 
@@ -680,13 +675,11 @@ Enter key password for keystore.alias
 
 *빌드 동작*은 프로젝트 내 [파일에 적용](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)되며, 파일이 처리되는 방식을 제어합니다.
 
-
 ### <a name="androidaarlibrary"></a>AndroidAarLibrary
 
 .aar 파일을 직접 참조하려면 `AndroidAarLibrary`의 빌드 동작을 사용해야 합니다. 이 빌드 동작은 Xamarin 구성 요소에서 가장 일반적으로 사용됩니다. 즉 Google Play 및 기타 서비스를 작동하는 데 필요한 .aar 파일에 대한 참조를 포함합니다.
 
 이 빌드 동작을 사용하는 파일은 라이브러리 프로젝트에 있는 포함 리소스와 비슷한 방식으로 처리됩니다. .aar은 중간 디렉터리로 추출됩니다. 그런 다음, 모든 자산, 자원 및 .jar 파일이 적절한 항목 그룹에 포함됩니다.
-
 
 ### <a name="androidboundlayout"></a>AndroidBoundLayout
 
@@ -696,7 +689,6 @@ Enter key password for keystore.alias
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
 
-
 <a name="AndroidEnvironment" />
 
 ### <a name="androidenvironment"></a>AndroidEnvironment
@@ -704,28 +696,23 @@ Enter key password for keystore.alias
 빌드 동작이 `AndroidEnvironment`인 파일은 [프로세스 시작 시 환경 변수 및 시스템 속성을 초기화](~/android/deploy-test/environment.md)하는 데 사용됩니다.
 `AndroidEnvironment` 빌드 동작은 여러 파일에 적용될 수 있으며, 특정 순서로 평가되지 않습니다(따라서 여러 파일에 동일한 환경 변수나 시스템 속성을 지정해서는 안 됨).
 
-
 ### <a name="androidfragmenttype"></a>AndroidFragmentType
 
 레이아웃 바인딩 코드를 생성할 때 모든 `<fragment>` 레이아웃 요소에 사용할 기본 정규화된 형식을 지정합니다. 이 속성의 기본값은 표준 Android `Android.App.Fragment` 형식입니다.
-
 
 ### <a name="androidjavalibrary"></a>AndroidJavaLibrary
 
 빌드 동작이 `AndroidJavaLibrary`인 파일은 최종 Android 패키지에 포함될 Java 아카이브(`.jar` 파일)입니다.
 
-
 ### <a name="androidjavasource"></a>AndroidJavaSource
 
 빌드 동작이 `AndroidJavaSource`인 파일은 최종 Android 패키지에 포함될 Java 소스 코드입니다.
-
 
 ### <a name="androidlintconfig"></a>AndroidLintConfig
 
 빌드 작업 'AndroidLintConfig'는 `AndroidLintEnabled` 빌드 속성과 함께 사용해야 합니다. 이 빌드 작업이 포함된 파일은 함께 병합되어 Android `lint` 도구에 전달됩니다. 테스트를 활성화/비활성화할 정보가 포함된 XML 파일이어야 합니다.
 
 자세한 내용은 [lint 설명서](https://developer.android.com/studio/write/lint)를 참조하세요.
-
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -738,7 +725,6 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 
 경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 빌드에 `lib/armeabi-v7a/libfoo.so`를 추가하면 ABI가 `armeabi-v7a`로 "검색"됩니다.
 
-
 #### <a name="item-attribute-name"></a>항목 특성 이름
 
 **Abi** &ndash; 네이티브 라이브러리의 ABI를 지정합니다.
@@ -750,7 +736,6 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
-
 
 ### <a name="androidresource"></a>AndroidResource
 
@@ -789,18 +774,15 @@ Android는 여러 ABI(애플리케이션 이진 인터페이스)를 지원하므
 </ItemGroup>
 ```
 
-
 ### <a name="content"></a>콘텐츠
 
 일반적인 `Content` 빌드 동작이 지원되지 않습니다(비용이 많이 드는 최초 실행 단계 없이 지원하는 방법을 파악하지 못했기 때문).
 
 Xamarin.Android 5.1부터 `@(Content)` 빌드 작업을 사용하려고 하면 `XA0101` 경고가 표시됩니다.
 
-
 ### <a name="linkdescription"></a>LinkDescription
 
 빌드 동작이 *LinkDescription*인 파일은 [링커 동작을 제어](~/cross-platform/deploy-test/linker.md)하는 데 사용됩니다.
-
 
 <a name="ProguardConfiguration" />
 
@@ -809,7 +791,6 @@ Xamarin.Android 5.1부터 `@(Content)` 빌드 작업을 사용하려고 하면 `
 빌드 동작이 *ProguardConfiguration*인 파일에는 `proguard` 동작을 제어하는 데 사용되는 옵션이 포함됩니다. 이 빌드 동작에 대한 자세한 내용은 [ProGuard](~/android/deploy-test/release-prep/proguard.md)를 참조하세요.
 
 `$(EnableProguard)` MSBuild 속성이 `True`가 아닐 경우 이러한 파일이 무시됩니다.
-
 
 ## <a name="target-definitions"></a>대상 정의
 

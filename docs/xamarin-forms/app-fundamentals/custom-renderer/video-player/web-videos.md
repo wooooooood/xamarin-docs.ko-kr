@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 9beff615c39fc34b5a58a93d309bb20543cad77f
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771755"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생
 
@@ -518,10 +518,6 @@ namespace FormsVideoLibrary.UWP
 ```
 
 또는 다음 문서 [플레이어에 비디오 원본 바인딩](source-bindings.md)에 설명된 대로 `ListView`에서 비디오 파일의 `Source` 속성을 설정할 수 있습니다.
-
-
-
-
 
 ## <a name="related-links"></a>관련 링크
 

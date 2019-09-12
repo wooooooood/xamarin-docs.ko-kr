@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
-ms.openlocfilehash: 283a057723ae399ead65c0c3e40347dbbd1e189e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 129ba01a41f9e5f58802c4d4da65d1662a103adc
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281176"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70770117"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Mac 앱 스토어용으로 묶기
 
@@ -42,7 +42,6 @@ ms.locfileid: "70281176"
 애플리케이션을 빌드한 후 개발자는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **상위 폴더 열기**를 선택하여 패키지 파일을 찾습니다(아래에 표시된 예제의 `bin/x86/AppStore` 디렉터리에서).  이 패키지 파일에는 Mac 앱 스토어에 포함하기 위해 Apple에 제출할 수 있는 앱의 설치 관리자가 들어 있습니다.
 
  ![Finder에서 빌드 패키지 선택](bundling-images/image64.png "Finder에서 빌드 패키지 선택")
-
 
 ## <a name="related-links"></a>관련 링크
 

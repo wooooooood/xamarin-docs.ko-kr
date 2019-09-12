@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: d40e1657eb39543023490892b8765ee1fe956ec4
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645364"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771479"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결된 속성으로 효과 매개 변수 전달
 
@@ -432,7 +432,6 @@ public class LabelShadowEffect : PlatformEffect
 ## <a name="summary"></a>요약
 
 이 문서에서는 연결된 속성을 사용하여 효과에 매개 변수를 전달하고 런타임 시 매개 변수를 변경하는 방법을 설명했습니다. 연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매개 변수를 정의하는 데 사용할 수 있습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

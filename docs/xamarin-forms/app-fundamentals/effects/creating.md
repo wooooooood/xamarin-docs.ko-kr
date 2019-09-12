@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: f1c18c30a2da019fb9d1c09fac17c9f095dafedc
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.openlocfilehash: c07848b808d023439c88117924e69c336984630b
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739340"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70771504"
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -265,7 +265,6 @@ public HomePageCS ()
 ## <a name="summary"></a>요약
 
 이 문서에서는 컨트롤에 포커스가 있을 때 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤의 배경색을 변경하는 효과를 만드는 방법을 설명했습니다.
-
 
 ## <a name="related-links"></a>관련 링크
 

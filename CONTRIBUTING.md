@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 14d4f5de500c8e8ced6cbeb67019f9152ed63df3
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70118908"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70751917"
 ---
 # <a name="contributing"></a>참여
 
@@ -32,10 +32,8 @@ Xamarin 설명서에 기여하는 데 관심을 가져주셔서 감사합니다!
 
 6. 피드백이 적용되고 변경 내용이 적합하면 유지 관리자는 PR을 병합합니다. 직후에 Docs.microsoft.com에 나타납니다.
 
-
 > [!NOTE]
 > PR이 기존 문제를 해결하는 경우 `Fixes #Issue_Number` 키워드를 커밋 메시지 또는 PR 설명에 추가합니다. 그러면 PR이 병합될 때 문제가 자동으로 닫힐 수 있습니다. 자세한 내용은 [커밋 메시지를 통해 문제 닫기](https://help.github.com/articles/closing-issues-via-commit-messages/)를 참조하세요.
-
 
 ### <a name="big-changes-or-new-content"></a>큰 변경 또는 새 콘텐츠
 
@@ -80,5 +78,3 @@ Xamarin 팀은 PR을 검토하고 승인하기 위해 변경 내용이 적합하
 
 > [!NOTE]
 > 현재 일부 항목이 여기 및 [스타일 가이드](contributing-guidelines/template.md)에 지정된 모든 지침에 따르지 않는다는 점을 확인할 수 있습니다. 사이트 전체에서 일관성을 달성하기 위해 노력하고 있습니다. 
-
-

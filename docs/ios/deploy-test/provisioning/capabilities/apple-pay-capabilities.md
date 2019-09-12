@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
-ms.openlocfilehash: 78270ee181f56f4b82637ed74a10a916d8fa4a77
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9d0ffbd0da99134dfae3e42fe8baf4111c80935f
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285458"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70762999"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay 기능
 
@@ -35,7 +35,7 @@ Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품�
 가맹점 ID는 지불을 수락할 수 있음을 Apple Pay에 알리는 데 사용되며 PassKit의 `PaymentRequest` 메서드로 전달되어 Apple Pay 자격에 사용됩니다.
 
 1. [Apple Developer Center](https://developer.apple.com/account/)로 이동하여 Certificates, Identifier, and Profiles(인증서, 식별자 및 프로필) 섹션으로 이동합니다. 
- 
+
     ![개발자 센터에서 가맹점 ID 선택](apple-pay-capabilities-images/image57.png)
 
 2. **식별자** 아래에서 **가맹점 ID**를 선택한 다음, **+** 를 선택하여 새 가맹점 ID를 만듭니다.  
@@ -149,7 +149,7 @@ Apple Pay 사용에 대한 자세한 내용은 다음 가이드를 참조하세�
 * [Apple Pay 소개](~/ios/platform/apple-pay.md)
 
 ## <a name="next-steps"></a>다음 단계
- 
+
 아래 목록에는 필요할 수도 있는 추가 단계가 설명되어 있습니다.
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.
