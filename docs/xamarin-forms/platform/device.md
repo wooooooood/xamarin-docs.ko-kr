@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
-ms.openlocfilehash: eb1358f039cc5d5a200f929fcc7dfa71ca863d2a
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 77cc414cd9b15f99f95d4a54f7af5ce6f028c41a
+ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121311"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887451"
 ---
 # <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
@@ -114,7 +114,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 합니다 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 검색 값을 [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) 장치에서 사용 중인 현재 흐름 방향을 나타내는 열거형 값입니다. 흐름 방향은 페이지의 UI 요소를 육안으로 흝어보는 방향입니다. 열거형 값은 다음과 같습니다.
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 XAML에 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 값을 사용 하 여 검색할 수는 `x:Static` 태그 확장:
@@ -191,11 +191,11 @@ IOS, Android 및 유니버설 Windows 플랫폼를 비롯 한 대부분의 운�
 | 메서드 | 인수 | 반환 값 | 용도 |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | `Action` 주 스레드에서를 호출 하 고 완료 될 때까지 기다리지 않습니다. |
-| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 주 스레드에서 `Func<T>` 를 호출 하 고 완료 될 때까지 기다립니다. |
-| `InvokeOnMainThreadAsync` | `Action` | `Task` | `Action` 주 스레드에서를 호출 하 고 완료 될 때까지 기다립니다. |
-| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | 주 스레드에서 `Func<Task<T>>` 를 호출 하 고 완료 될 때까지 기다립니다. |
-| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | 주 스레드에서 `Func<Task>` 를 호출 하 고 완료 될 때까지 기다립니다. |
-| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | 주 스레드에 `SynchronizationContext` 대 한를 반환 합니다. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | 주 스레드에서 `Func<T>`를 호출하고 완료될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | 주 스레드에서 `Action`을 호출하고 완료될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | 주 스레드에서 `Func<Task<T>>`를 호출하고 완료될 때까지 기다립니다. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | 주 스레드에서 `Func<Task>`를 호출하고 완료될 때까지 기다립니다. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | 주 스레드의 `SynchronizationContext`를 반환합니다. |
 
 다음 코드에서는 메서드를 `BeginInvokeOnMainThread` 사용 하는 예제를 보여 줍니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
-ms.openlocfilehash: ac32e340212dd42c373a39df138436e7ee313958
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 376e35c8b82973ea1343966fad814db2d3a5e673
+ms.sourcegitcommit: e83035c746f165ee6d03f2e9fd0066ee4f20a9fb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976539"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70906458"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.ios CollectionView 레이아웃
 
@@ -528,7 +528,7 @@ CollectionView collectionView = new CollectionView
 
 이 코드는 세로 2 열 그리드를 생성 하 고 각 항목 주위에는 세로 방향으로 20을, 각 항목 주위에는 가로 간격으로 30을 만듭니다.
 
-[ ![항목 간격이 있는 CollectionView의 스크린샷 (IOS 및 Android](layout-images/vertical-grid-spacing.png "CollectionView 항목 간격") ] ) (layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView 항목 간격")
+[ ![항목 간격이 있는 CollectionView의 스크린샷, Android](layout-images/vertical-grid-spacing.png "CollectionView 항목 간격") ] (layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView 항목 간격")
 
 ## <a name="item-sizing"></a>항목 크기 조정
 
