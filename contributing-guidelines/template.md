@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 50bcdcc23d1291071a6045544faad9388755116b
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 69682372e2b1ac84db2c6464ac3b05a58645a9e3
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70225468"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70753559"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -72,8 +72,6 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 - Markdown 파일 및 .md 파일 확장명을 사용해야 합니다.
 - 파일 이름은 비교적 짧게 유지합니다. 문서의 URL에 파일 이름이 포함되기 때문입니다.
 
-
-
 ## <a name="headings"></a>제목
 
 문장 스타일 대/소문자를 사용합니다. 다음 항목은 항상 대문자로 표기합니다.
@@ -84,7 +82,7 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 
 항목에는 수준 1 제목(H1)이 **하나만** 있어야 합니다. 이 제목이 페이지의 제목으로 표시됩니다.
 
-제목이 `#` 문자로 끝나는 경우에는 제목이 올바르게 렌더링되도록 끝에 여분의 `#` 문자를 추가해야 합니다. 예를 들어, `# Async Programming in F# #`을 입력합니다.
+제목이 `#` 문자로 끝나는 경우에는 제목이 올바르게 렌더링되도록 끝에 여분의 `#` 문자를 추가해야 합니다. 예: `# Async Programming in F# #`.
 
 수준 2 제목은 페이지 제목 아래의 "문서 내용" 섹션에 표시되는 페이지 TOC를 생성합니다.
 
@@ -158,7 +156,6 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 1. Ordered
 1. 목록
 
-
 #### <a name="ordered-list-with-an-embedded-list"></a>포함된 목록이 있는 순서가 지정된 목록
 
 1. 여기
@@ -170,7 +167,6 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 1. ordered
 1. list
 
-
 ### <a name="unordered-lists"></a>순서가 지정되지 않은 목록
 
 - This
@@ -178,7 +174,6 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 - a
 - 글머리 기호
 - list
-
 
 ##### <a name="unordered-list-with-an-embedded-list"></a>포함된 목록이 있는 순서가 지정되지 않은 목록
 
@@ -193,7 +188,6 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
     1. 안예은
 - 목록
 
-
 ## <a name="horizontal-rule"></a>가로줄
 
 ---
@@ -207,7 +201,6 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 | 1열은 기본값 | 왼쪽 맞춤     |    $1 |
 
 [Markdown 테이블 생성기 도구](http://www.tablesgenerator.com/markdown_tables)를 사용하면 테이블을 보다 쉽게 만들 수 있습니다.
-
 
 ### <a name="inline-code-blocks-with-language-identifier"></a>언어 식별자가 포함된 인라인 코드 블록
 
