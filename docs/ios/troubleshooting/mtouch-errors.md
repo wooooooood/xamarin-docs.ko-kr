@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: b8a7353ee67ee0686ad97428222c69dd095ee83a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290432"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985958"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -557,7 +557,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 <a name="MT0099" />
 
-### <a name="mt0099-internal-error--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0099: 내부 오류 *. 테스트 사례 ()http://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
+### <a name="mt0099-internal-error--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0099: 내부 오류 *. 테스트 사례 ( http://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
 
 이 오류 메시지는 Xamarin.ios에서 내부 일관성 검사가 실패할 때 보고 됩니다.
 
@@ -565,7 +565,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 <a name="MT0100" />
 
-### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0100: 어셈블리 빌드 대상이 잘못 되었습니다. ' * '. 테스트 사례 ()http://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
+### <a name="mt0100-invalid-assembly-build-target--please-file-a-bug-report-with-a-test-case-httpbugzillaxamarincom"></a>MT0100: 어셈블리 빌드 대상이 잘못 되었습니다. ' * '. 테스트 사례 ( http://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
 
 이 오류 메시지는 Xamarin.ios에서 내부 일관성 검사가 실패할 때 보고 됩니다.
 
@@ -854,7 +854,7 @@ class Program {
 
 이 오류를 해결 하는 권장 방법은 Xcode를 업그레이드 하 여 필요한 SDK를 가져오는 것입니다. 여러 버전의 Xcode가 설치 되어 있거나 기본이 아닌 위치에서 Xcode를 사용 하려는 경우에는 IDE의 기본 설정에서 올바른 Xcode 위치를 설정 해야 합니다.
 
-또는 관리 되는 [링커가](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) 지정 된 라이브러리를 필요로 하는 새 api (대부분의 경우)를 포함 하 여 사용 하지 않는 api를 제거할 수 있도록 합니다. 그러나 프로젝트에 Xcode에서 제공 하는 것 보다 최신 SDK에 도입 된 Api가 필요한 경우에는이 작업이 수행 되지 않습니다.
+또는 관리 되는 [링커가](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) 지정 된 라이브러리를 필요로 하는 새 api (대부분의 경우)를 포함 하 여 사용 하지 않는 api를 제거할 수 있도록 합니다. 그러나 프로젝트에 Xcode에서 제공 하는 것 보다 최신 SDK에 도입 된 Api가 필요한 경우에는이 작업이 수행 되지 않습니다.
 
 Straw 솔루션으로, 빌드 프로세스 중에 이러한 새 Sdk를 제공 하지 않아도 되는 이전 버전의 Xamarin.ios를 사용 합니다.
 

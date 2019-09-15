@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: d1047ae8cae6a8e86b72690fe5d80d0ba9e752a4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a2f637677620f9bfb2bd26a5af55fb9fb56a7af9
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768411"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985685"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
 
@@ -63,9 +63,23 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
   - 제약 조건 편집 모드에서이 단추는 요소 프레임과 일치 하도록 제약 조건을 조정 합니다.
   - 프레임 편집 모드에서이 단추는 제약 조건이 정의 하는 위치와 일치 하도록 요소 프레임을 조정 합니다.
 
+## <a name="constraints-editing-popover"></a>제약 조건 편집 팝 오버
+
+제약 조건 편집기 팝업을 사용 하면 선택 뷰에 대해 여러 제약 조건을 한 번에 추가 하 고 업데이트할 수 있습니다. 여러 개의 간격, 가로 세로 비율 및 맞춤 제약 조건을 만들 수 있습니다. 예를 들어 뷰를 두 보기의 왼쪽 가장자리에 맞춥니다.
+
+선택한 뷰에서 제약 조건을 편집 하려면 줄임표를 클릭 하 여 팝 오버: constraints 편집 팝 오버 ![를 표시 합니다.](designer-auto-layout-images/constraints-popup.png)
+
+제약 조건을 열 팝 오버 뷰에서 미리 설정 된 제약 조건을 표시 합니다. 모든 간격 제약 조건을 설정 하려면 오른쪽 위 모서리의 combobox에서 모든 **면** 을 선택 하 고 **모두 지우기** 를 선택 하 여 제거 합니다. 
+
+**W** 는 Width와 **H** 를 설정 하 여 height 제약 조건을 설정 합니다. **가로 세로 비율**을 확인 하는 경우 뷰 높이 및 너비가 다른 화면 크기로 제어 됩니다. 뷰의 너비는 r의 분자로 사용 되 고 높이는 분모로 사용 됩니다.
+
+![제약 조건 간격](designer-auto-layout-images/constraints-spacing.png)
+
+간격 제약 조건에 대 한 네 개의 콤보 상자에 인접 뷰가 나열 되어 제약 조건을 고정 합니다.
+
 ## <a name="surface-based-constraint-editing"></a>화면 기반 제약 조건 편집
 
-이전 섹션에서는 제약 조건 도구 모음을 사용 하 여 기본 제약 조건을 추가 하 고 제약 조건을 제거 하는 방법을 배웠습니다. 보다 세부적으로 조정 된 제약 조건 편집을 위해 디자인 화면에서 직접 제약 조건과 상호 작용할 수 있습니다. 이 섹션에서는 pin 간격 컨트롤, 끌어 놓기 영역, 다양 한 형식의 제약 조건 작업을 포함 하 여 화면 기반 제약 조건 편집의 기본 사항을 소개 합니다.
+보다 세부적으로 조정 된 제약 조건 편집을 위해 디자인 화면에서 직접 제약 조건과 상호 작용할 수 있습니다. 이 섹션에서는 pin 간격 컨트롤, 끌어 놓기 영역, 다양 한 형식의 제약 조건 작업을 포함 하 여 화면 기반 제약 조건 편집의 기본 사항을 소개 합니다.
 
 ### <a name="creating-constraints"></a>제약 조건 만들기
 
@@ -196,7 +210,7 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 ### <a name="animating-constraint-changes"></a>제약 조건 변경 내용 적용
 
-제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들어:
+제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예:
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");

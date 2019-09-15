@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: ea7ebdf5e589f3c24f8c607d1464e86678012f23
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: 48e7f97bf37ec5204ec1798ec1fdd7dfe5954cc5
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120627"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985990"
 ---
 # <a name="introduction-to-ios-13"></a>iOS 13 소개
 
@@ -23,6 +23,10 @@ ms.locfileid: "70120627"
 ## <a name="dark-modedark-modemd"></a>[어둡게 모드](dark-mode.md)
 
 iOS 13에는 개발자가 자신의 앱을 쉽게 수용할 수 있는 수단을 제공 하는 새로운 짙은 모드가 도입 되었습니다. 새 도구를 사용 하면 밝은 테마와 어두운 테마를 모두 사용 하 여 앱을 동시에 디자인할 수 있습니다.
+
+## <a name="sign-in-with-applesign-inmd"></a>[Apple으로 로그인](sign-in.md)
+
+iOS 13은 Apple 장치를 사용 하 여 로그인을 사용 하 여 앱에 로그인 하는 새로운 기능을 제공 하므로, 2FA를 활용 하 여 제공 되는 제한 된 집합을 활용 하 여 개인 정보가 도난 또는 수집 되지 않는다는 확신을 얻을 수 있습니다. 내용을.
 
 ## <a name="augmented-reality"></a>확대 현실
 
@@ -41,10 +45,6 @@ Siri는 오디오 콘텐츠를 처리할 수 있을 뿐 아니라 바로 가기 
 iPadOS는 iPad를 염두에 둔 iOS의 확장입니다.
 
 IPadOS를 사용 하면 새 제스처와 함께 PencilKit를 사용 하 여 Apple 연필을 더욱 효율적으로 사용 하 고, 여러 창을 사용할 수 있으며, 앱 간에 다양 한 콘텐츠를 끌어서 놓을 수 있습니다. iPadOS를 사용 하면 앱이 시스템 차원 글꼴을 제공할 수도 있습니다.
-
-## <a name="privacy-and-security"></a>개인 정보 및 보안
-
-iOS 13은 Apple 장치를 사용 하 여 로그인을 사용 하 여 앱에 로그인 하는 새로운 기능을 제공 하므로, 2FA를 활용 하 여 제공 되는 제한 된 집합을 활용 하 여 개인 정보가 도난 또는 수집 되지 않는다는 확신을 얻을 수 있습니다. 내용을.
 
 ## <a name="related-links"></a>관련 링크
 
