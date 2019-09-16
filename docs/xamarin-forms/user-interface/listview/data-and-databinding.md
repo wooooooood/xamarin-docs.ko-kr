@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 9855255464b32b99d78d7a1cdb24acce22d01648
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: aa968562470a1e3405bf68be7eb0294273970386
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654753"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998019"
 ---
 # <a name="listview-data-sources"></a>ListView 데이터 원본
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
-A [ `ListView` ](xref:Xamarin.Forms.ListView) 데이터의 목록을 표시 하기 위해 사용 됩니다. 데이터 및 선택한 항목에 바인딩할 수 있습니다 하는 방법을 사용 하 여 ListView를 채우는 방법에 대 한 알아보겠습니다.
+Xamarin.ios는 데이터 목록을 [`ListView`](xref:Xamarin.Forms.ListView) 표시 하는 데 사용 됩니다. 이 문서에서는 데이터를 데이터로 채우는 `ListView` 방법 및 선택한 항목에 데이터를 바인딩하는 방법을 설명 합니다.
 
 ## <a name="itemssource"></a>ItemsSource
 
@@ -62,7 +62,7 @@ listView.ItemsSource = new string[]
 
 ![](data-and-databinding-images/itemssource-simple.png "ListView 문자열의 목록 표시")
 
-위의 접근 방식을 채워집니다는 `ListView` 문자열 목록으로 합니다. 기본적으로 `ListView` 를 호출 합니다 `ToString` 결과를 표시 하 고는 `TextCell` 각 행에 대 한 합니다. 참조 데이터 표시 방법을 사용자 지정할 [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)합니다.
+이 방법을 `ListView` 사용 하면가 문자열 목록으로 채워집니다. 기본적으로 `ListView` 를 호출 합니다 `ToString` 결과를 표시 하 고는 `TextCell` 각 행에 대 한 합니다. 참조 데이터 표시 방법을 사용자 지정할 [셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)합니다.
 
 때문에 `ItemsSource` 보냈습니다를 배열에 기본 목록 또는 배열로 변경 되 면 콘텐츠 업데이트 되지 것입니다. 사용 해야 항목 추가, 제거 및 내부 목록에서 변경할 때 자동으로 업데이트 하는 ListView를 하려는 경우는 `ObservableCollection`합니다. [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) 에 정의 된 `System.Collections.ObjectModel` 마찬가지로 이며 `List`단 알릴 수 있습니다, `ListView` 변경:
 
@@ -74,16 +74,16 @@ listView.ItemsSource = employees;
 employees.Add(new Employee(){ DisplayName="Mr. Mono"});
 ```
 
-<a name="Data_Binding" />
-
 ## <a name="data-binding"></a>데이터 바인딩
-데이터 바인딩은 프로그램 ViewModel 클래스와 같은 일부 CLR 개체의 속성에는 사용자 인터페이스 개체의 속성 "고리로"입니다. 데이터 바인딩 많은 지루한 상용구 코드를 대체 하 여 사용자 인터페이스 개발을 단순화할 수 있으므로 유용 합니다.
 
-데이터 바인딩은 해당 바인딩된 값이 변경 될 개체를 동기화 상태로 유지 하 여 작동 합니다. 컨트롤의 값이 변경 될 때마다에 대 한 이벤트 처리기를 작성 하는 대신 바인딩을 설정 하 고 ViewModel에 바인딩을 사용 하도록 설정 합니다.
+데이터 바인딩은 사용자 인터페이스 개체의 속성을 viewmodel의 클래스와 같은 일부 CLR 개체의 속성에 바인딩하는 "glue"입니다. 데이터 바인딩 많은 지루한 상용구 코드를 대체 하 여 사용자 인터페이스 개발을 단순화할 수 있으므로 유용 합니다.
+
+데이터 바인딩은 해당 바인딩된 값이 변경 될 개체를 동기화 상태로 유지 하 여 작동 합니다. 컨트롤의 값이 변경 될 때마다에 대 한 이벤트 처리기를 작성 하는 대신, viewmodel에서 바인딩을 설정 하 고 바인딩을 사용 하도록 설정 합니다.
 
 데이터 바인딩에 대 한 자세한 내용은 참조 하세요. [데이터 바인딩 기본 사항](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) 일부인 중 4 개는 [Xamarin.Forms XAML 기본 사항 연재 기사](~/xamarin-forms/xaml/xaml-basics/index.md)합니다.
 
 ### <a name="binding-cells"></a>셀 바인딩
+
 셀 (및 셀의 자식) 속성에서 개체의 속성에 바인딩할 수 있습니다는 `ItemsSource`합니다. 예를 들어는 `ListView` 직원 목록을 표시 하는 데 사용할 수 있습니다.
 
 Employee 클래스:
@@ -95,7 +95,7 @@ public class Employee
 }
 ```
 
-가 만들어지고 `ListView` 의`ItemsSource`로설정됩니다. `ObservableCollection<Employee>`
+`ObservableCollection<Employee>` 가 만들어지고 `ListView` 로설정되며`ItemsSource`목록이 데이터로 채워집니다.
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -103,26 +103,21 @@ public ObservableCollection<Employee> Employees { get { return employees; }}
 
 public EmployeeListPage()
 {
-  //defined in XAML to follow
-  EmployeeView.ItemsSource = employees;
-  ...
+    EmployeeView.ItemsSource = employees;
+
+    // ObservableCollection allows items to be added after ItemsSource
+    // is set and the UI will react to changes
+    employees.Add(new Employee{ DisplayName="Rob Finnerty"});
+    employees.Add(new Employee{ DisplayName="Bill Wrestler"});
+    employees.Add(new Employee{ DisplayName="Dr. Geri-Beth Hooper"});
+    employees.Add(new Employee{ DisplayName="Dr. Keith Joyce-Purdy"});
+    employees.Add(new Employee{ DisplayName="Sheri Spruce"});
+    employees.Add(new Employee{ DisplayName="Burt Indybrick"});
 }
 ```
 
-이 목록은 데이터로 채워집니다.
-
-```csharp
-public EmployeeListPage()
-{
-  ...
-  employees.Add(new Employee{ DisplayName="Rob Finnerty"});
-  employees.Add(new Employee{ DisplayName="Bill Wrestler"});
-  employees.Add(new Employee{ DisplayName="Dr. Geri-Beth Hooper"});
-  employees.Add(new Employee{ DisplayName="Dr. Keith Joyce-Purdy"});
-  employees.Add(new Employee{ DisplayName="Sheri Spruce"});
-  employees.Add(new Employee{ DisplayName="Burt Indybrick"});
-}
-```
+> [!WARNING]
+> `ObservableCollection` 하지 스레드로부터 안전 합니다. `ObservableCollection` 을 수정 하면 UI 업데이트가 수정 작업을 수행한 동일한 스레드에서 수행 됩니다. 스레드가 기본 UI 스레드가 아닌 경우 예외를 발생 시킵니다.
 
 다음 조각은 `ListView` 직원의 목록에 바인딩된:
 
@@ -154,13 +149,13 @@ public EmployeeListPage()
 
 ```xaml
 <ListView x:Name="listView"
- SelectedItem="{Binding Source={x:Reference SomeLabel},
- Path=Text}">
+          SelectedItem="{Binding Source={x:Reference SomeLabel},
+          Path=Text}">
  …
 </ListView>
 ```
 
-가정 `listView`의 `ItemsSource` 문자열 목록은 `SomeLabel` 해당 텍스트 속성은 바인딩되는 `SelectedItem`합니다.
+`listView` 가문자열`SomeLabel`목록 이라고 가정 하면의 `SelectedItem`속성이에 바인딩됩니다. `Text` `ItemsSource`
 
 ## <a name="related-links"></a>관련 링크
 
