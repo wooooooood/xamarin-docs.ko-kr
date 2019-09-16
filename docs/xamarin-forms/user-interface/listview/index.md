@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/04/2019
-ms.openlocfilehash: 5d09d76a44a6322285a143230173d244848ba4a6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9d7dd98b98c7722d6fcdcb49c10e326732fa9f0b
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770208"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70997991"
 ---
 # <a name="xamarinforms-listview"></a>Xamarin.Forms ListView
 
@@ -36,6 +36,7 @@ ms.locfileid: "70770208"
 인스턴스에 데이터를 바인딩하는 `ListView` 방법에 대 한 자세한 내용은 [ListView 데이터 원본](~/xamarin-forms/user-interface/listview/data-and-databinding.md)을 참조 하세요.
 
 ## <a name="components"></a>구성 요소
+
 `ListView` 컨트롤에는 각 플랫폼의 기본 기능을 실행 하는 데 사용할 수 있는 여러 가지 구성 요소가 있습니다. 이러한 구성 요소는 다음 섹션에 정의 되어 있습니다.
 
 ### <a name="headers-and-footerscustomizing-list-appearancemdheaders-and-footers"></a>[머리글 및 바닥글](customizing-list-appearance.md#headers-and-footers)
@@ -55,7 +56,7 @@ ms.locfileid: "70770208"
 - [기본 제공 셀](customizing-cell-appearance.md#built-in-cells)(예: `TextCell` 및 `ImageCell`)은 네이티브 컨트롤에 해당 하며 특히 유용 합니다.
   - 는 [`TextCell`](customizing-cell-appearance.md#textcell) 텍스트 문자열을 표시 하 고 선택적으로 정보 텍스트를 표시 합니다. 세부 정보 텍스트를 강조 색을 사용 하 여 필요한 경우 작은 글꼴로 두 번째 줄으로 렌더링 됩니다.
   - 는 [`ImageCell`](customizing-cell-appearance.md#imagecell) 텍스트가 있는 이미지를 표시 합니다. 왼쪽에 이미지 `TextCell` 를 포함 하는로 표시 됩니다.
-- [사용자 지정 셀](customizing-cell-appearance.md#customcells) 은 복잡 한 데이터를 표시 하는 데 사용 됩니다. 예를 들어 사용자 지정 셀을 사용 하 여 앨범 및 음악가를 포함 하는 노래 목록을 표시할 수 있습니다.
+- [사용자 지정 셀](customizing-cell-appearance.md#custom-cells) 은 복잡 한 데이터를 표시 하는 데 사용 됩니다. 예를 들어 사용자 지정 셀을 사용 하 여 앨범 및 음악가를 포함 하는 노래 목록을 표시할 수 있습니다.
 
 다음 스크린샷은 ImageCell 항목을 `ListView` 보여 줍니다.
 
@@ -64,11 +65,12 @@ ms.locfileid: "70770208"
 에서 `ListView`셀 사용자 지정에 대해 자세히 알아보려면 [ListView 셀 모양 사용자 지정](customizing-cell-appearance.md)을 참조 하세요.
 
 ## <a name="functionality"></a>기능
+
 클래스 `ListView` 는 다양 한 상호 작용 스타일을 지원 합니다.
 
 - [끌어오기-새로 고침](interactivity.md#pull-to-refresh) 을 사용 하 여 콘텐츠를 새로 `ListView` 고칠 수 있습니다.
 - 개발자는 [컨텍스트 작업](interactivity.md#context-actions) 을 통해 개별 목록 항목에 대해 사용자 지정 작업을 지정할 수 있습니다. 예를 들어, iOS에서 안쪽으로 살짝 밀어-작업을 구현 하거나 길게 누른 Android에 대 한 작업입니다.
-- [선택](interactivity.md#selectiontaps) 기능을 통해 개발자는 목록 항목의 선택 및 deselection 이벤트에 기능을 연결할 수 있습니다.
+- [선택](interactivity.md#selection-and-taps) 기능을 통해 개발자는 목록 항목의 선택 및 deselection 이벤트에 기능을 연결할 수 있습니다.
 
 다음 스크린샷은 컨텍스트 작업을 `ListView` 포함 하는을 보여 줍니다.
 

@@ -6,54 +6,54 @@ ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/07/2016
-ms.openlocfilehash: ecb9e84473778f5185276a854bfbf2fdfcbb6528
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 09/12/2019
+ms.openlocfilehash: ab54b54c9f2f7d6d7748137ea079439b7c3ddfca
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68654841"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998088"
 ---
 # <a name="customizing-listview-cell-appearance"></a>ListView 셀 모양 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
-[`ListView`](xref:Xamarin.Forms.ListView)를 사용 `ViewCell`하 여 사용자 지정할 수 있는 스크롤 가능한 목록을 제공 합니다. `ViewCells` 텍스트 및 이미지를 표시 하 고, true/false 상태를 나타내는, 사용자 입력을 받고 사용할 수 있습니다.
-
-<a name="Built_in_Cells" />
+Xamarin.ios [`ListView`](xref:Xamarin.Forms.ListView) 클래스는 `ViewCell` 요소를 사용 하 여 사용자 지정할 수 있는 스크롤 가능한 목록을 표시 하는 데 사용 됩니다. 요소 `ViewCell` 는 텍스트와 이미지를 표시 하 고, true/false 상태를 표시 하 고, 사용자 입력을 받을 수 있습니다.
 
 ## <a name="built-in-cells"></a>기본 제공된 셀
-Xamarin.Forms는 대부분의 간단한 응용 프로그램에 대해 작동 하는 기본 제공 셀으로 제공 됩니다.
+Xamarin.ios는 여러 응용 프로그램에 대해 작동 하는 기본 제공 셀과 함께 제공 됩니다.
 
-- **TextCell** &ndash; 텍스트 표시
-- **ImageCell** &ndash; 텍스트를 사용 하 여 이미지를 표시 합니다.
+- [`TextCell`](#textcell)컨트롤은 텍스트를 표시 하는 데 사용 됩니다 (선택 사항 텍스트의 경우 두 번째 줄).
+- [`ImageCell`](#imagecell)컨트롤은 `TextCell`s와 비슷하지만 텍스트 왼쪽에 이미지를 포함 합니다.
+- `SwitchCell`컨트롤은 on/off 또는 true/false 상태를 표시 하 고 캡처하는 데 사용 됩니다.
+- `EntryCell`컨트롤은 사용자가 편집할 수 있는 텍스트 데이터를 표시 하는 데 사용 됩니다.
 
-두 개의 추가 셀 [ `SwitchCell` ](~/xamarin-forms/user-interface/tableview.md#switchcell) 하 고 [ `EntryCell` ](~/xamarin-forms/user-interface/tableview.md#entrycell) 일반적으로 사용 되지 않지만 사용할 수 있는 `ListView`합니다. 참조 [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) 이러한 셀에 대 한 자세한 내용은 합니다.
-
-<a name="TextCell" />
+및 컨트롤은의 컨텍스트에서 보다 일반적으로 사용 됩니다. [`TableView`](~/xamarin-forms/user-interface/tableview.md) [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) [`EntryCell`](~/xamarin-forms/user-interface/tableview.md#entrycell)
 
 ### <a name="textcell"></a>TextCell
 
-[`TextCell`](xref:Xamarin.Forms.TextCell) 두 번째 줄을 세부 정보 텍스트를 사용 하 여 필요에 따라 텍스트를 표시 하는 것에 대 한 셀이 됩니다.
+[`TextCell`](xref:Xamarin.Forms.TextCell) 두 번째 줄을 세부 정보 텍스트를 사용 하 여 필요에 따라 텍스트를 표시 하는 것에 대 한 셀이 됩니다. 다음 스크린샷에서는 iOS `TextCell` 및 Android에 대 한 항목을 보여 줍니다.
 
-성능은 매우 좋은 사용자 지정 비교 하므로 TextCells 런타임에 네이티브 컨트롤로 렌더링 됩니다 `ViewCell`합니다. TextCells은 사용자 지정 가능한, 설정할 수 있습니다.
+![](customizing-cell-appearance-images/text-cell-default.png "기본 TextCell 예제")
+
+성능은 매우 좋은 사용자 지정 비교 하므로 TextCells 런타임에 네이티브 컨트롤로 렌더링 됩니다 `ViewCell`합니다. TextCells은 사용자 지정이 가능 하므로 다음 속성을 설정할 수 있습니다.
 
 - `Text` &ndash; 큰 글꼴로 첫 번째 줄에 표시 되는 텍스트입니다.
 - `Detail` &ndash; 첫 번째 줄을 더 작은 글꼴을 아래 표시 되는 텍스트입니다.
 - `TextColor` &ndash; 텍스트의 색입니다.
 - `DetailColor` &ndash; 세부 정보 텍스트의 색
 
-![](customizing-cell-appearance-images/text-cell-default.png "기본 TextCell 예제")
+다음 스크린샷은 사용자 지정 `TextCell` 된 색 속성의 항목을 보여 줍니다.
 
-![](customizing-cell-appearance-images/text-cell-custom.png "사용자 지정된 TextCell 예제")
-
-<a name="ImageCell" />
+![](customizing-cell-appearance-images/text-cell-custom.png "사용자 지정 TextCell 예제")
 
 ### <a name="imagecell"></a>ImageCell
 
 [`ImageCell`](xref:Xamarin.Forms.ImageCell)같은 `TextCell`, 텍스트 및 보조 정보 텍스트를 표시 하기 위해 사용할 수 있으며 각 플랫폼의 네이티브 컨트롤을 사용 하 여 뛰어난 성능을 제공 합니다. `ImageCell` 다른 `TextCell` 텍스트의 왼쪽에 이미지를 표시 합니다.
 
-`ImageCell` 연락처의 영화 목록 등의 시각적 측면이 사용 하 여 데이터의 목록을 표시 해야 할 때 유용 합니다. ImageCells은 사용자 지정 가능한, 설정할 수 있습니다.
+다음 스크린샷에서는 iOS `ImageCell` 및 Android에 대 한 항목을 보여 줍니다. !["Default ImageCell Example"](customizing-cell-appearance-images/image-cell-default.png "기본 ImageCell 예제")
+
+`ImageCell` 연락처의 영화 목록 등의 시각적 측면이 사용 하 여 데이터의 목록을 표시 해야 할 때 유용 합니다. `ImageCell`를 사용자 지정할 수 있으므로를 설정할 수 있습니다.
 
 - `Text` &ndash; 큰 글꼴로 첫 번째 줄에 표시 되는 텍스트
 - `Detail` &ndash; 첫 번째 줄을 더 작은 글꼴을 아래 표시 되는 텍스트
@@ -61,25 +61,21 @@ Xamarin.Forms는 대부분의 간단한 응용 프로그램에 대해 작동 하
 - `DetailColor` &ndash; 세부 정보 텍스트의 색
 - `ImageSource` &ndash; 텍스트 옆에 표시할 이미지를
 
-![](customizing-cell-appearance-images/image-cell-default.png "기본 ImageCell 예제")
-
-![](customizing-cell-appearance-images/image-cell-custom.png "사용자 지정된 ImageCell 예제")
-
-<a name="customcells" />
+다음 스크린샷은 사용자 지정 `ImageCell` 된 색 속성의 항목을 보여 줍니다. !["사용자 지정 된 ImageCell 예제"](customizing-cell-appearance-images/image-cell-custom.png "사용자 지정 된 ImageCell 예제")
 
 ## <a name="custom-cells"></a>사용자 지정 셀
-기본 제공 셀 필요한 레이아웃을 제공 하지 않습니다, 경우 사용자 지정 셀 필요한 레이아웃을 구현 합니다. 예를 들어, 다음 동일한 가중치는 두 개의 레이블을 사용 하 여 셀을 표시 하는 것이 좋습니다. `TextCell` 충분 한 것 때문에 `TextCell` 작은 하나 레이블이 있습니다. 대부분의 셀 사용자 지정 추가 읽기 전용 데이터 (예: 추가 레이블, 이미지 또는 기타 표시 정보)를 추가합니다.
+사용자 지정 셀을 사용 하면 기본 제공 셀에서 지원 하지 않는 셀 레이아웃을 만들 수 있습니다. 예를 들어, 다음 동일한 가중치는 두 개의 레이블을 사용 하 여 셀을 표시 하는 것이 좋습니다. `TextCell` 충분 한 것 때문에 `TextCell` 작은 하나 레이블이 있습니다. 대부분의 셀 사용자 지정 추가 읽기 전용 데이터 (예: 추가 레이블, 이미지 또는 기타 표시 정보)를 추가합니다.
 
 모든 사용자 지정 셀에서 파생 되어야 합니다 [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)를 사용 하 여 유형의 모든 기본 제공 셀 동일한 기본 클래스입니다.
 
-Xamarin.Forms 2에 새로 도입 [캐싱 동작](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) 에 `ListView` 일부 유형의 사용자 지정 셀의 스크롤 성능 향상을 위해 설정할 수 있는 컨트롤입니다.
+Xamarin.ios는 `ListView` 컨트롤에 대 한 [캐싱 동작](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy) 을 제공 하 여 일부 사용자 지정 셀 형식의 스크롤 성능을 향상 시킬 수 있습니다.
 
-사용자 지정 셀의 예로 다음과 같습니다.
+다음 스크린샷은 사용자 지정 셀의 예를 보여 줍니다.
 
-![](customizing-cell-appearance-images/custom-cell.png "사용자 지정 셀 예제")
+!["사용자 지정 셀 예제"](customizing-cell-appearance-images/custom-cell.png "사용자 지정 셀 예제")
 
 ### <a name="xaml"></a>XAML
-위의 레이아웃을 만들려면 XAML은 다음과 같습니다.
+다음 XAML을 사용 하 여 이전 스크린샷에 표시 된 사용자 지정 셀을 만들 수 있습니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -110,18 +106,18 @@ x:Class="demoListView.ImageCellPage">
 </ContentPage>
 ```
 
-위의 XAML 많이 수행 하는 합니다. 알아봅시다.
+XAML은 다음과 같이 작동 합니다.
 
-- 사용자 지정 셀 내에 중첩 되어는 `DataTemplate`, 내부는 `ListView.ItemTemplate`합니다. 이 다른 셀을 사용 하 여 프로세스와 동일 합니다.
-- `ViewCell` 사용자 지정 셀의 유형이입니다. 자식 합니다 `DataTemplate` 요소 이어야 하거나 형식에서 파생 해야 `ViewCell`합니다.
-- 내부를 확인 합니다 `ViewCell`, 레이아웃에서 관리 하는 `StackLayout`합니다. 이 레이아웃을 사용 하면 배경 색을 사용자 지정할 수 있습니다. 모든 속성 `StackLayout` 바인딩할 수 있습니다 즉 여기 표시 되지 않습니다 하지만 사용자 지정 셀 내에서 바인딩할 수 있습니다.
-- 내에서 레이아웃은 모든 xamarin.ios 레이아웃 을통해관리할수있습니다.`ViewCell` 
+- 사용자 지정 셀 내에 중첩 되어는 `DataTemplate`, 내부는 `ListView.ItemTemplate`합니다. 이는 기본 제공 셀을 사용 하는 프로세스와 동일 합니다.
+- `ViewCell` 사용자 지정 셀의 유형이입니다. `DataTemplate` 요소의 자식은 `ViewCell` 클래스 이거나 클래스에서 파생 되어야 합니다.
+- 내에서 레이아웃은 모든 xamarin.ios 레이아웃 을통해관리할수있습니다.`ViewCell` 이 예제에서 레이아웃은에 `StackLayout`의해 관리 되며,이를 통해 배경색을 사용자 지정할 수 있습니다.
 
-### <a name="cnum"></a>C&num;
+> [!NOTE]
+> 바인딩 가능한의 `StackLayout` 모든 속성은 사용자 지정 셀 내에 바인딩할 수 있습니다. 그러나이 기능은 XAML 예제에는 표시 되지 않습니다.
 
-C#에서 사용자 지정 셀을 지정 하는 것은 XAML에 해당 하는 보다 조금 더 자세한 정보입니다. 이 형식에 대해 살펴보겠습니다.
+### <a name="code"></a>코드
 
-먼저 사용자 지정 셀 클래스를 사용 하 여 정의 `ViewCell` 기본 클래스:
+코드에서 사용자 지정 셀을 만들 수도 있습니다. 먼저에서 `ViewCell` 파생 되는 사용자 지정 클래스를 만들어야 합니다.
 
 ```csharp
 public class CustomCell : ViewCell
@@ -157,7 +153,7 @@ public class CustomCell : ViewCell
     }
 ```
 
-페이지에 대 한 생성자에는 `ListView`, ListView의 설정 `ItemTemplate` 속성을 새 `DataTemplate`:
+페이지 생성자에서 ListView의 `ItemTemplate` 속성은 지정 된 `CustomCell` 형식의로 설정 `DataTemplate` 됩니다.
 
 ```csharp
 public partial class ImageCellPage : ContentPage
@@ -169,10 +165,6 @@ public partial class ImageCellPage : ContentPage
         }
     }
 ```
-
-생성자 `DataTemplate` 형식을 사용 합니다. Typeof 연산자에 대 한 CLR 형식을 가져옵니다 `CustomCell`합니다.
-
-<a name="binding-context-changes" />
 
 ### <a name="binding-context-changes"></a>바인딩 컨텍스트 변경
 
@@ -190,17 +182,20 @@ public class CustomCell : ViewCell
     public static readonly BindableProperty LocationProperty =
         BindableProperty.Create ("Location", typeof(string), typeof(CustomCell), "Location");
 
-    public string Name {
+    public string Name
+    {
         get { return(string)GetValue (NameProperty); }
         set { SetValue (NameProperty, value); }
     }
 
-    public int Age {
+    public int Age
+    {
         get { return(int)GetValue (AgeProperty); }
         set { SetValue (AgeProperty, value); }
     }
 
-    public string Location {
+    public string Location
+    {
         get { return(string)GetValue (LocationProperty); }
         set { SetValue (LocationProperty, value); }
     }
@@ -210,7 +205,8 @@ public class CustomCell : ViewCell
     {
         base.OnBindingContextChanged ();
 
-        if (BindingContext != null) {
+        if (BindingContext != null)
+        {
             nameLabel.Text = Name;
             ageLabel.Text = Age.ToString ();
             locationLabel.Text = Location;
@@ -248,13 +244,14 @@ customCell.SetBinding (CustomCell.NameProperty, "Name");
 customCell.SetBinding (CustomCell.AgeProperty, "Age");
 customCell.SetBinding (CustomCell.LocationProperty, "Location");
 
-var listView = new ListView {
+var listView = new ListView
+{
     ItemsSource = people,
     ItemTemplate = customCell
 };
 ```
 
-IOS 및 Android의 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 요소 재활용 되 및 사용자 지정 셀 사용자 지정 렌더러를 사용 하 여, 사용자 지정 렌더러 속성 변경 알림을 올바르게 구현 해야 합니다. 셀 재사용 되는 바인딩 컨텍스트를 사용할 수 있는 셀의 업데이트 된 경우 해당 속성 값 변경 됩니다 `PropertyChanged` 이벤트 발생 합니다. 자세한 내용은 [Viewcell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)합니다. 참조 셀을 재활용 하는 방법에 대 한 자세한 내용은 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)합니다.
+IOS 및 Android의 경우는 [ `ListView` ](xref:Xamarin.Forms.ListView) 요소 재활용 되 및 사용자 지정 셀 사용자 지정 렌더러를 사용 하 여, 사용자 지정 렌더러 속성 변경 알림을 올바르게 구현 해야 합니다. 셀 재사용 되는 바인딩 컨텍스트를 사용할 수 있는 셀의 업데이트 된 경우 해당 속성 값 변경 됩니다 `PropertyChanged` 이벤트 발생 합니다. 자세한 내용은 [Viewcell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)합니다. 참조 셀을 재활용 하는 방법에 대 한 자세한 내용은 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy)합니다.
 
 ## <a name="related-links"></a>관련 링크
 

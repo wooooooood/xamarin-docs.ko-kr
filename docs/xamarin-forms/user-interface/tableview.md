@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2018
-ms.openlocfilehash: 195ed82325ed681f31f9963d5ff0ca0a7fef48ab
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 558eb9f476fd6b566f1f161c01fc809498a4c4a8
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228145"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998002"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -90,7 +90,7 @@ Content = new TableView
 
 Xamarin.Forms를 수집 하 고 정보를 표시 하는 기본 제공 셀 수반 됩니다. 및 [`ListView`](xref:Xamarin.Forms.ListView) [`EntryCell`](xref:Xamarin.Forms.EntryCell) `TableView` [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) 는 동일한 셀을 모두 사용할 수 있지만는 시나리오와 가장 관련이 있습니다. [`TableView`](xref:Xamarin.Forms.TableView)
 
-참조 [ListView 셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) 에 대 한 자세한 설명은 [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) 하 고 [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell)합니다.
+참조 [ListView 셀 모양](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) 에 대 한 자세한 설명은 [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) 하 고 [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell)합니다.
 
 <a name="switchcell" />
 

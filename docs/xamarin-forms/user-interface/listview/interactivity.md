@@ -7,22 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: 3949dd85492a8181ee53e23b3ba2e986e59f8f47
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: e2d51f42339b1ff2a99f2a00bb5a9e662fb01d87
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121618"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998074"
 ---
 # <a name="listview-interactivity"></a>ListView 대화형 작업
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
-[`ListView`](xref:Xamarin.Forms.ListView)는 제공 하는 데이터와 상호 작용을 지원 합니다.
+Xamarin.ios [`ListView`](xref:Xamarin.Forms.ListView) 클래스는 표시 되는 데이터와의 사용자 상호 작용을 지원 합니다.
 
-<a name="selectiontaps" />
-
-## <a name="selection--taps"></a>선택 및 탭
+## <a name="selection-and-taps"></a>선택 및 탭
 
 [ `ListView` ](xref:Xamarin.Forms.ListView) 선택 모드를 설정 하 여 제어 합니다 [ `ListView.SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) 속성 값을를 [ `ListViewSelectionMode` ](xref:Xamarin.Forms.ListViewSelectionMode) 열거형:
 
@@ -49,7 +47,7 @@ ms.locfileid: "70121618"
 
 ![](interactivity-images/selection-default.png "사용 하도록 설정 하는 선택 된 ListView")
 
-### <a name="disabling-selection"></a>선택 영역을 사용 하지 않도록 설정
+### <a name="disable-selection"></a>선택 사용 안 함
 
 사용 하지 않으려면 [ `ListView` ](xref:Xamarin.Forms.ListView) 선택 집합을 [ `SelectionMode` ](xref:Xamarin.Forms.ListView.SelectionMode) 속성을 [ `None` ](xref:Xamarin.Forms.ListViewSelectionMode.None):
 
@@ -61,9 +59,7 @@ ms.locfileid: "70121618"
 var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 ```
 
-<a name="Context_Actions" />
-
-## <a name="context-actions"></a>상황에 맞는 작업
+## <a name="context-actions"></a>컨텍스트 작업
 
 사용자는 항목에 대해 작업을 수행 하려면 종종는 `ListView`합니다. 예를 들어 메일 앱에서 전자 메일 목록을 것이 좋습니다. Ios의 경우 메시지를 삭제 하려면 살짝::
 
@@ -71,42 +67,13 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 C# 및 XAML의 상황에 맞는 작업을 구현할 수 있습니다. 아래 있습니다 특정 가이드 둘 다에 대 한 우선 보겠습니다 둘 다에 대 한 몇 가지 중요 한 구현 세부 정보를 살펴보세요.
 
-상황에 맞는 작업을 사용 하 여 만들어집니다 `MenuItem`s입니다. ListView 하지 MenuItem 자체에서 MenuItems에 대 한 탭 이벤트가 발생 합니다. 셀에는 ListView 셀 대신 이벤트를 발생 하는 위치 탭 이벤트 처리 방법에서 다릅니다. ListView의 이벤트를 발생 시킨 때문에 해당 이벤트 처리기는 같은 항목을 선택 하거나 탭 한 키 정보가 제공 됩니다.
+요소를 사용 하 여 `MenuItem` 컨텍스트 작업을 만듭니다. 개체에 대 `MenuItems` 한 탭 이벤트는가 `MenuItem` 아닌 `ListView`자체에서 발생 합니다. 이는 셀에 대해 탭 이벤트를 처리 하는 방법과 다릅니다. `ListView` 여기서는 셀이 아닌 이벤트를 발생 시킵니다. 에서 `ListView` 이벤트를 발생 시키기 때문에 해당 이벤트 처리기에는 선택 하거나 탭 하는 항목과 같은 키 정보가 제공 됩니다.
 
-기본적으로 MenuItem에 속하는 셀을 알 수 없습니다. `CommandParameter` 사용할 수 있습니다 `MenuItem` 로 MenuItem의 ViewCell 뒤의 개체가 같은 개체를 저장 합니다. `CommandParameter` XAML과 C# 모두에서 설정할 수 있습니다.
-
-### <a name="c"></a>C\#
-
-있는 상황에 맞는 작업을 구현할 수 있습니다 `Cell` 서브 클래스 (한 그룹 헤더로 사용 되 고 있지)를 만들어 `MenuItem`s에 추가 하는 `ContextActions` 셀에 대 한 컬렉션입니다. 다음과 같은 상황에 맞는 작업에 대 한 속성을 구성할 수 있습니다.
-
-- **텍스트** &ndash; 메뉴 항목에 표시 되는 문자열입니다.
-- **클릭할** &ndash; 항목을 클릭할 때 이벤트입니다.
-- **IsDestructive** &ndash; true (선택 사항) 항목에서 다르게 렌더링 됩니다 iOS입니다.
-
-하지만 여러 상황에 맞는 작업 하나만 있어야 셀에 추가할 수 있습니다 `IsDestructive` 로 `true`합니다. 다음 코드는 상황에 맞는 작업에 추가 되는 방법을 보여 줍니다는 `ViewCell`:
-
-```csharp
-var moreAction = new MenuItem { Text = "More" };
-moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-moreAction.Clicked += async (sender, e) => {
-    var mi = ((MenuItem)sender);
-    Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
-};
-
-var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
-deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
-deleteAction.Clicked += async (sender, e) => {
-    var mi = ((MenuItem)sender);
-    Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
-};
-// add to the ViewCell's ContextActions property
-ContextActions.Add (moreAction);
-ContextActions.Add (deleteAction);
-```
+기본적으로에는 `MenuItem` 자신이 속한 셀을 알 수 있는 방법이 없습니다. 속성 `CommandParameter` 은의 개체 `MenuItem` `MenuItem` 와같은개체를`ViewCell`저장 하기 위해에서 사용할 수 있습니다. 속성 `CommandParameter` 은 XAML 및 C#에서 설정할 수 있습니다.
 
 ### <a name="xaml"></a>XAML
 
-`MenuItem`s는 XAML 컬렉션에서 선언적으로 만들 수도 있습니다. 아래의 XAML 구현 하는 두 가지 상황에 맞는 작업을 사용 하 여 사용자 지정 셀을 보여 줍니다.
+`MenuItem`XAML 컬렉션에서 요소를 만들 수 있습니다. 아래의 XAML 구현 하는 두 가지 상황에 맞는 작업을 사용 하 여 사용자 지정 셀을 보여 줍니다.
 
 ```xaml
 <ListView x:Name="ContextDemoList">
@@ -114,10 +81,12 @@ ContextActions.Add (deleteAction);
     <DataTemplate>
       <ViewCell>
          <ViewCell.ContextActions>
-            <MenuItem Clicked="OnMore" CommandParameter="{Binding .}"
-               Text="More" />
-            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}"
-               Text="Delete" IsDestructive="True" />
+            <MenuItem Clicked="OnMore"
+                      CommandParameter="{Binding .}"
+                      Text="More" />
+            <MenuItem Clicked="OnDelete"
+                      CommandParameter="{Binding .}"
+                      Text="Delete" IsDestructive="True" />
          </ViewCell.ContextActions>
          <StackLayout Padding="15,0">
               <Label Text="{Binding title}" />
@@ -131,12 +100,14 @@ ContextActions.Add (deleteAction);
 코드 숨김 파일에서 확인 된 `Clicked` 메서드가 구현 됩니다.
 
 ```csharp
-public void OnMore (object sender, EventArgs e) {
+public void OnMore (object sender, EventArgs e)
+{
     var mi = ((MenuItem)sender);
     DisplayAlert("More Context Action", mi.CommandParameter + " more context action", "OK");
 }
 
-public void OnDelete (object sender, EventArgs e) {
+public void OnDelete (object sender, EventArgs e)
+{
     var mi = ((MenuItem)sender);
     DisplayAlert("Delete Context Action", mi.CommandParameter + " delete context action", "OK");
 }
@@ -145,11 +116,40 @@ public void OnDelete (object sender, EventArgs e) {
 > [!NOTE]
 > 합니다 `NavigationPageRenderer` Android에는 재정의 가능한 `UpdateMenuItemIcon` 사용자 지정에서 아이콘을 로드 하는 메서드 `Drawable`합니다. 이 재정의 가능 하도록 SVG 이미지 아이콘으로 사용할 `MenuItem` Android에서 인스턴스.
 
-<a name="Pull_to_Refresh" />
+### <a name="code"></a>코드
 
-## <a name="pull-to-refresh"></a>고치려면 당김
+컨텍스트 작업은 인스턴스를 만들고 `Cell` `MenuItem` 해당 셀의 `ContextActions` 컬렉션에 추가 하 여 모든 하위 클래스 (그룹 헤더로 사용 되지 않는 한)에서 구현 될 수 있습니다. 다음과 같은 상황에 맞는 작업에 대 한 속성을 구성할 수 있습니다.
 
-사용자는 데이터 목록을 아래로 끌어서 새로 고쳐집니다 목록 예상 제대로 찾아 오셨습니다. [`ListView`](xref:Xamarin.Forms.ListView)에서이 기능을 지원 합니다. 끌어오기-새로 고침 기능을 사용 하려면를로 [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) `true`설정 합니다.
+- **텍스트** &ndash; 메뉴 항목에 표시 되는 문자열입니다.
+- **클릭할** &ndash; 항목을 클릭할 때 이벤트입니다.
+- **Isdestructive** &ndash; (선택 사항) true 이면 항목이 iOS에서 다르게 렌더링 됩니다.
+
+하지만 여러 상황에 맞는 작업 하나만 있어야 셀에 추가할 수 있습니다 `IsDestructive` 로 `true`합니다. 다음 코드는 상황에 맞는 작업에 추가 되는 방법을 보여 줍니다는 `ViewCell`:
+
+```csharp
+var moreAction = new MenuItem { Text = "More" };
+moreAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+moreAction.Clicked += async (sender, e) =>
+{
+    var mi = ((MenuItem)sender);
+    Debug.WriteLine("More Context Action clicked: " + mi.CommandParameter);
+};
+
+var deleteAction = new MenuItem { Text = "Delete", IsDestructive = true }; // red background
+deleteAction.SetBinding (MenuItem.CommandParameterProperty, new Binding ("."));
+deleteAction.Clicked += async (sender, e) =>
+{
+    var mi = ((MenuItem)sender);
+    Debug.WriteLine("Delete Context Action clicked: " + mi.CommandParameter);
+};
+// add to the ViewCell's ContextActions property
+ContextActions.Add (moreAction);
+ContextActions.Add (deleteAction);
+```
+
+## <a name="pull-to-refresh"></a>새로 고치려면 끌어오기
+
+사용자는 데이터 목록을 아래로 끌어서 새로 고쳐집니다 목록 예상 제대로 찾아 오셨습니다. 컨트롤 [`ListView`](xref:Xamarin.Forms.ListView) 은이 기본 기능을 지원 합니다. 끌어오기-새로 고침 기능을 사용 하려면를로 [`IsPullToRefreshEnabled`](xref:Xamarin.Forms.ListView.IsPullToRefreshEnabled) `true`설정 합니다.
 
 ```xaml
 <ListView ...

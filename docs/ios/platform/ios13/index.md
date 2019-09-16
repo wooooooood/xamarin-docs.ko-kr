@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: 48e7f97bf37ec5204ec1798ec1fdd7dfe5954cc5
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: b8a5e8f42c44287a1d60f43784c3e42a9e7fc0ff
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985990"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70997970"
 ---
 # <a name="introduction-to-ios-13"></a>iOS 13 소개
 
@@ -48,4 +48,4 @@ IPadOS를 사용 하면 새 제스처와 함께 PencilKit를 사용 하 여 Appl
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.ios 미리 보기 릴리스 정보](/xamarin/ios/release-notes/12/12.99)
+- [Xamarin.ios 13 릴리스 정보](/xamarin/ios/release-notes/13/13.0)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 769ff7efedca453734b6db2dd2dcb2ad503ba272
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 289d47a700762caa8e41baef23818be6c684c61a
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759795"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998060"
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 셀
 
@@ -34,14 +34,14 @@ Xamarin.Forms 셀 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| A [ `TextCell` ](xref:Xamarin.Forms.TextCell) 하나 또는 두 개의 텍스트 문자열을 표시 합니다. 설정 합니다 [ `Text` ](xref:Xamarin.Forms.TextCell.Text) 속성 및 필요에 따라 합니다 [ `Detail` ](xref:Xamarin.Forms.TextCell.Detail) 속성 이러한 텍스트 문자열을 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TextCell) / [가이드](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) | [![TextCell 예제](cells-images/TextCell.png "TextCell 예제")](cells-images/TextCell-Large.png#lightbox "TextCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TextCellDemoPage.xaml) |
+| A [ `TextCell` ](xref:Xamarin.Forms.TextCell) 하나 또는 두 개의 텍스트 문자열을 표시 합니다. 설정 합니다 [ `Text` ](xref:Xamarin.Forms.TextCell.Text) 속성 및 필요에 따라 합니다 [ `Detail` ](xref:Xamarin.Forms.TextCell.Detail) 속성 이러한 텍스트 문자열을 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TextCell) / [가이드](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) | [![TextCell 예제](cells-images/TextCell.png "TextCell 예제")](cells-images/TextCell-Large.png#lightbox "TextCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TextCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="imagecell"></a>ImageCell
 
 |     |     |
 | --- | --- |
-| 합니다 [ `ImageCell` ](xref:Xamarin.Forms.ImageCell) 와 동일한 정보를 표시 [ `TextCell` ](#textCell) 사용 하 여 설정 하는 비트맵을 포함 하지만 합니다 [ `Source` ](xref:Xamarin.Forms.Image.Source) 속성입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ImageCell) / [가이드](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell) | [![ImageCell 예제](cells-images/ImageCell.png "ImageCell 예제")](cells-images/ImageCell-Large.png#lightbox "ImageCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
+| 합니다 [ `ImageCell` ](xref:Xamarin.Forms.ImageCell) 와 동일한 정보를 표시 [ `TextCell` ](#textCell) 사용 하 여 설정 하는 비트맵을 포함 하지만 합니다 [ `Source` ](xref:Xamarin.Forms.Image.Source) 속성입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ImageCell) / [가이드](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![ImageCell 예제](cells-images/ImageCell.png "ImageCell 예제")](cells-images/ImageCell-Large.png#lightbox "ImageCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="switchcell"></a>SwitchCell
