@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 088ba2d82b7bfbe770a41ce19208a8e95d477edb
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: c852a80136c8aae3a4da0fd3d8a8fa259e08aa4d
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986131"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021160"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Xamarin에서 Apple에 로그인 사용
 
@@ -240,13 +240,14 @@ public class WebAppleSignInService : IAppleSignInService
 
         return await tcsAccount.Task;
     }
-}```
+}
+```
 
-## Summary
+## <a name="summary"></a>요약
 
-This article described the steps necessary to setup Sign In with Apple for use in your Xamarin.Forms applications.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 사용 하기 위해 Apple에 로그인을 설정 하는 데 필요한 단계에 대해 설명 했습니다.
 
-## Related links
+## <a name="related-links"></a>관련 링크
 
-- [XamarinFormsAppleSignIn (Sample)](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
-- [Sign In with Apple Guidelines](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
+- [XamarinFormsAppleSignIn (샘플)](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+- [Apple 지침을 사용 하 여 로그인](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)

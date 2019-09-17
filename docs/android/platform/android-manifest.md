@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: f1cc2f4685354687390866c0922a802591c7c054
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d65f0c8e717e8e8c995209f7dda1e8a44ee621c
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757701"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021106"
 ---
 # <a name="working-with-the-android-manifest"></a>Android 매니페스트 사용
 
@@ -72,12 +72,13 @@ public class MyActivity : Activity
 <activity android:name="awesome.demo.activity" />
 ```
 
-*참고*: 이러한 이름을 바꾸면 런타임에 `Name` 형식 조회가 느려질 수 있으므로 이전 버전과의 호환성을 위해서만 속성을 사용 해야 합니다. Lowercased 네임 스페이스와 클래스 이름을 기반으로 하는 활동의 기본 형식 이름을 필요로 하는 레거시 코드가 있는 경우 호환성 유지 관리에 대 한 팁은 [Android 호출 가능 래퍼 이름 지정](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 을 참조 하세요. 
+> [!NOTE]
+> 속성은 `Name` 이전 버전과의 호환성을 위해서만 사용 해야 합니다. 이러한 이름을 바꾸면 런타임에 형식 조회 속도가 느려질 수 있습니다. Lowercased 네임 스페이스와 클래스 이름을 기반으로 하는 활동의 기본 형식 이름을 필요로 하는 레거시 코드가 있는 경우 호환성 유지 관리에 대 한 팁은 [Android 호출 가능 래퍼 이름 지정](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 을 참조 하세요. 
 
 ### <a name="activity-title-bar"></a>활동 제목 표시줄
 
 기본적으로 Android는 실행 될 때 응용 프로그램에 제목 표시줄을 제공 합니다. 이에 사용 되는 값 [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label)은입니다. 대부분의 경우이 값은 클래스 이름과 다릅니다. 제목 표시줄에 앱의 레이블을 지정 하려면 [`Label`](xref:Android.App.ActivityAttribute.Label) 속성을 사용 합니다.
-예를 들어: 
+예: 
 
 ```csharp
 [Activity (Label="Awesome Demo App")]
@@ -118,7 +119,7 @@ public class MyActivity : Activity
 
 ### <a name="activity-icon"></a>활동 아이콘
 
-기본적으로 작업에는 시스템에서 제공 하는 기본 시작 관리자 아이콘이 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 **리소스/그릴**수 있는 **.png에 .png** 를 추가 하 고 빌드 작업을 **androidresource**로 설정한 다음 [`Icon`](xref:Android.App.ActivityAttribute.Icon) 속성을 사용 하 여 사용할 아이콘을 지정 합니다. 예: 
+기본적으로 작업에는 시스템에서 제공 하는 기본 시작 관리자 아이콘이 제공 됩니다. 사용자 지정 아이콘을 사용 하려면 먼저 **리소스/그릴**수 있는 **.png에 .png** 를 추가 하 고 빌드 작업을 **androidresource**로 설정한 다음 [`Icon`](xref:Android.App.ActivityAttribute.Icon) 속성을 사용 하 여 사용할 아이콘을 지정 합니다. 예를 들어: 
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
@@ -165,7 +166,7 @@ Android 매니페스트에 권한 [추가](https://github.com/xamarin/recipes/tr
 Android 매니페스트는 활동의 기능을 설명 하는 방법을 제공 합니다. 이것은 [의도](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 를 통해 수행 되며[`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
 사용자 지정 특성입니다. 을 사용 하 여 작업에 적절 한 작업을 지정할 수 있습니다.[`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
 생성자 및에 적합 한 범주[`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
-속성의 값에 따라 달라집니다. 활동을 생성자에 제공 하는 것과 같은 활동을 하나 이상 제공 해야 합니다. `[IntentFilter]`는 여러 번 제공 될 수 있으며, 각를 사용 하면 `<intent-filter/>` `<activity/>`내에서 별도의 요소가 생성 됩니다. 예를 들어:
+속성의 값에 따라 달라집니다. 활동을 생성자에 제공 하는 것과 같은 활동을 하나 이상 제공 해야 합니다. `[IntentFilter]`는 여러 번 제공 될 수 있으며, 각를 사용 하면 `<intent-filter/>` `<activity/>`내에서 별도의 요소가 생성 됩니다. 예:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 
