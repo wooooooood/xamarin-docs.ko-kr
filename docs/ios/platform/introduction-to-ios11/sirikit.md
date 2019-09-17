@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2017
-ms.openlocfilehash: 8983ac0c860dafb3a3a0e4c90bd82bdf87c4c4f8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27adc8aa2ed0fec09fe38b9ea31834ea6e75f845
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752391"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033095"
 ---
 # <a name="sirikit-updates-in-ios-11"></a>IOS 11의 SiriKit 업데이트
 
@@ -147,6 +147,7 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 클래스는에서 `INExtension`상속 해야 하며,이 샘플은 목록 및 메모 의도를 처리 하기 때문에도 구현 `IINNotebookDomainHandling`합니다.
 
 > [!NOTE]
+>
 > - .Net에는 인터페이스에 대 한 순서를 지정할 수 `I`있는 규칙이 있습니다 .이는 Xamarin에서 iOS SDK의 프로토콜을 바인딩할 때 준수 하는 것입니다.
 > - 또한 Xamarin은 iOS에서 형식 이름을 유지 하며, Apple은 형식이 속한 프레임 워크를 반영 하기 위해 형식 이름에 처음 두 문자를 사용 합니다.
 > - 프레임 워크의 경우 형식에 `IN*` 접두사 (예: `Intents` `INExtension`)는 인터페이스가 _아닙니다_ .

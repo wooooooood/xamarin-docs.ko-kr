@@ -6,12 +6,12 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 75177daa2f8bd1faa271940713ff8543db3b97c0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cc27b3162c03f0292d3910f86fac9ed89b117f6f
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287385"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033318"
 ---
 # <a name="unified-api-overview"></a>Unified API 개요
 
@@ -19,6 +19,7 @@ Xamarin의 Unified API를 사용 하면 Mac과 iOS 간에 코드를 공유 하 �
 
 > [!IMPORTANT]
 > Unified API 앞에 있는 Xamarin Classic API은 더 이상 사용 되지 않습니다. 
+>
 > - Classic API (monotouch.dialog)를 지원 하기 위한 최신 버전의 Xamarin.ios는 Xamarin.ios 9.10입니다.
 > - Xamarin.ios는 여전히 Classic API을 지원 하지만 더 이상 업데이트 되지 않습니다. 개발자는 더 이상 사용 되지 않으므로 응용 프로그램을 Unified API로 이동 해야 합니다.
 

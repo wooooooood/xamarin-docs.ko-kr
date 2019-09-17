@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2017
-ms.openlocfilehash: b8006b1ffe253ac57c1ab435690c5b378cc709fb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 030f1ba87dde958aef156731de926427676163dc
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278666"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71033490"
 ---
 # <a name="can-i-change-the-output-path-of-the-ipa-file"></a>IPA 파일의 출력 경로를 변경할 수 있나요?
 
@@ -45,6 +45,7 @@ ms.locfileid: "70278666"
 2. DestinationFolder를 원하는 출력 폴더로 설정 합니다. 일반적으로 원하는 경우이 인수 내에서 MSBuild 속성 (예: $ (OutputPath))을 사용할 수 있습니다.
 
 ## <a name="notes"></a>참고
+
 - 속성은 xamarin.ios의 일부인 `Xamarin.iOS.Common.targets` 파일에 정의 되어 있습니다. `CreateIpaDependsOn` 이는 방법: 다음 [문서의 [미리 정의 된 대상 재정의](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) 섹션에 설명 된 대로 동작 합니다. Visual Studio 빌드 프로세스](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)를 확장 합니다.
 
 - 선호 하는 경우 **복사** 작업 대신 **이동** 태스크를 사용할 수 있습니다. 이 옵션을 선택 하 고 Windows에서 빌드하는 경우 XamarinVS 빌드 작업의 모호성을 피하기 위해 정규화 된 작업 이름을 `<Microsoft.Build.Tasks.Move>` 사용 해야 합니다.
@@ -79,6 +80,7 @@ ms.locfileid: "70278666"
 2. 을 `DestinationFolder` 원하는 출력 폴더로 설정 합니다. 일반적으로 원하는 경우이 인수 내에서 MSBuild `$(OutputPath)`속성 (예:)을 사용할 수 있습니다.
 
 ## <a name="notes"></a>참고
+
 - 속성은 xamarin.ios의 일부인 `Xamarin.iOS.Common.targets` 파일에 정의 되어 있습니다. `CreateIpaDependsOn` 는 방법:이 문서의 [ [미리 정의 된 대상 재정의](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process#overriding-predefined-targets) 섹션에 설명 된 대로 동작 합니다. Visual Studio 빌드 프로세스](https://docs.microsoft.com/visualstudio/msbuild/how-to-extend-the-visual-studio-build-process)를 확장 합니다.
 
 - 선호 하는 경우 **복사** 작업 대신 **이동** 태스크를 사용할 수 있습니다. 이 옵션을 선택 하 고 Windows에서 빌드하는 경우 XamarinVS 빌드 작업의 모호성을 피하기 위해 정규화 된 작업 이름을 `<Microsoft.Build.Tasks.Move>` 사용 해야 합니다.
