@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c33db7de63a585cb6fb47aa1145aa724c9eb790f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037563"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004149"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -43,7 +43,7 @@ ms.locfileid: "61037563"
 
     두 이벤트 처리기에 중단점을 설정하고 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 항목을 탭니다. [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트는 [`ListView`](xref:Xamarin.Forms.ListView)에서 새 항목을 선택할 때만 발생하고, [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트는 항목을 탭할 때마다 발생합니다.
 
-    항목 선택 및 탭에 대한 자세한 내용은 [ListView 대화형 작업](~/xamarin-forms/user-interface/listview/interactivity.md) 안내서의 [선택 및 탭](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps)을 참조하세.
+    항목 선택 및 탭에 대한 자세한 내용은 [ListView 대화형 작업](~/xamarin-forms/user-interface/listview/interactivity.md) 안내서의 [선택 및 탭](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps)을 참조하세.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
 
@@ -82,4 +82,4 @@ ms.locfileid: "61037563"
 
     두 이벤트 처리기에 중단점을 설정하고 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 항목을 탭니다. [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트는 [`ListView`](xref:Xamarin.Forms.ListView)에서 새 항목을 선택할 때만 발생하고, [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트는 항목을 탭할 때마다 발생합니다.
 
-    항목 선택 및 탭에 대한 자세한 내용은 [ListView 대화형 작업](~/xamarin-forms/user-interface/listview/interactivity.md) 안내서의 [선택 및 탭](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps)을 참조하세.
+    항목 선택 및 탭에 대한 자세한 내용은 [선택 & 탭]을 참조하세요.(~/xamarin-forms/user-interface/listview/interactivity.md#selection-and

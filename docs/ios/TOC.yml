@@ -252,6 +252,8 @@
               href: platform/ios13/get-started.md
             - name: 어둡게 모드
               href: platform/ios13/dark-mode.md
+            - name: Apple을 사용하여 로그인
+              href: platform/ios13/sign-in.md
             - name: 문제 해결
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
