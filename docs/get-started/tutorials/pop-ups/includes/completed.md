@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: 030321c63b9c3494027fc79d010c8b5888871822
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e01d661d5481c59175b5a9f747b2a11cb4a6301a
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669748"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059741"
 ---
 이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.
 
 > [!div class="checklist"]
+>
 > - 사용자에게 선택하도록 경고를 표시합니다.
 > - 작업 시트를 표시하여 사용자에게 작업을 안내합니다.
 

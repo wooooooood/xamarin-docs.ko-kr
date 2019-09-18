@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bb85c69b13fa052f33186a3153be266ef87a7925
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cbf301b341f78ae8d8826580d30a13393716f56c
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277338"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059736"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -13,6 +13,7 @@ ms.locfileid: "67277338"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Grid`](xref:Xamarin.Forms.Grid)를 만듭니다.
 > - `Grid`에 대한 열과 행을 지정합니다.
 > - `Grid`의 여러 열 또는 여러 행에 콘텐츠를 스패닝합니다.

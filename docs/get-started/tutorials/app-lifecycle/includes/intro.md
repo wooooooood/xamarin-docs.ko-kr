@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9143b65b2e7cb9b85195e3c20695e3034295b2d2
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: cae1ec70880fe694584e14b732608725bcbb1d91
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277344"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059738"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -15,6 +15,7 @@ ms.locfileid: "67277344"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - 애플리케이션 시작, 일시 중지 또는 다시 시작에 응답합니다.
 > - 수명 주기 상태 변경에서 데이터를 유지합니다.
 

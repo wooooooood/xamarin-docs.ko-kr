@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ab8d29e876b96049cd4cfeb734b33724cba30624
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 4416eddfab4bfcf2b3274054db9bcfc60ed8fdec
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277341"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059742"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -14,6 +14,7 @@ ms.locfileid: "67277341"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Editor`](xref:Xamarin.Forms.Editor)를 만듭니다.
 > - 변경 중인 `Editor`에 있는 텍스트에 응답합니다.
 > - `Editor`의 동작을 사용자 지정합니다.

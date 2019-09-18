@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: c3e78badbea16205565757058e9226b5dc7606cd
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 9f22de73ded5bce1a257ba22c288d58b09a18003
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669744"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059739"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
+>
 > - 애플리케이션 시작, 일시 중지 또는 다시 시작에 응답합니다.
 > - 수명 주기 상태 변경에서 데이터를 유지합니다.
 

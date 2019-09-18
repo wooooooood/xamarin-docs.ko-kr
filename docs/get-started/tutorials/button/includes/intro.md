@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6d4be81bac872177cb15bad004b581702b17b9ac
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 42b42e8013032b684b31e8bd974c433ef176be52
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277337"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059734"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -14,6 +14,7 @@ ms.locfileid: "67277337"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Button`](xref:Xamarin.Forms.Button)을 만듭니다.
 > - 눌러진 `Button`에 응답합니다.
 > - `Button`의 모양을 변경합니다.

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 98eb75948ec2b53919b8de7cdc80d39d7c3ebf4c
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 19276826e1996e68fd27107d23e0def76a1025a5
+ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277357"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71059740"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -15,6 +15,7 @@ ms.locfileid: "67277357"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - 사용자에게 선택하도록 경고를 표시합니다.
 > - 작업 시트를 표시하여 사용자에게 작업을 안내합니다.
 
