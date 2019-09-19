@@ -7,18 +7,21 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 59b72daecdc1159494d069bec044ee1891916d11
-ms.sourcegitcommit: fd349a121164c85545f4b0881940eefdd0cf3b65
+ms.openlocfilehash: 2a47876b7b53cf557014c772333e651146afe53f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896399"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106007"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Xamarin.ios에 대 한 XAML 핫 다시 로드 (미리 보기)
 
 ![미리 보기 기능](~/media/shared/preview.png)
 
 XAML 핫 다시 로드는 기존 워크플로에 연결 하 여 생산성을 높이고 시간을 절약 합니다. XAML 핫 다시 로드를 사용 하지 않으면 XAML 변경 내용을 확인할 때마다 앱을 빌드하고 배포 해야 합니다. 핫 다시 로드를 사용 하 여 XAML 파일을 저장 하면 변경 내용이 실행 중인 앱에 라이브 반영 됩니다. 또한 탐색 상태와 데이터가 유지 되므로 앱에서 사용자의 자리를 잃지 않고도 UI를 신속 하 게 반복할 수 있습니다. 따라서 XAML 핫 다시 로드를 사용 하 여 UI 변경의 유효성을 검사 하기 위해 앱을 다시 작성 하 고 배포 하는 시간을 줄일 수 있습니다.
+
+> [!NOTE]
+> WPF 또는 UWP 앱을 작성 하는 경우 [uwp 및 WPF에 대해 XAML 핫 다시 로드](/visualstudio/debugger/xaml-hot-reload)를 참조 하세요.
 
 ## <a name="system-requirements"></a>시스템 요구 사항
 
@@ -62,4 +65,4 @@ XAML 핫 다시 로드에서 다시 로드할 수 없는 변경 작업을 수행
 - XAML 파일을 저장할 때 아무 작업도 수행 되지 않으면 IDE에서 핫 다시 로드를 사용 하도록 설정 해야 합니다.
 - 실제 iPhone에서 디버깅 하 고 앱이 응답 하지 않는 경우 인터프리터를 사용 하도록 설정 되었는지 확인 합니다. 이 기능을 설정 하려면 **--인터프리터** 를 iOS 빌드 설정의 **추가 mtouch 인수** 필드에 추가 합니다.
 
-버그를 보고 하려면 Windows의**사용자 의견** > 보내기**문제 보고** 메뉴와 Mac > 의**문제 보고** **도움말** > 메뉴에서 피드백 도구를 사용 합니다.
+버그를 보고 하려면 Windows의**사용자 의견** > 보내기**문제 보고** 메뉴와 Mac의**문제 보고** **도움말** >  **메뉴에서** > 피드백 도구를 사용 합니다.

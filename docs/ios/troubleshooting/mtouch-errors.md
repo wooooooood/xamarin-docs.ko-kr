@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 870765a7a32874dfa17a9b0cf7176e4a721abf47
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: e001f22759ac70bbf81a10bf5e56790497dab767
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985958"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105984"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -1598,6 +1598,7 @@ Parameter name: instruction
 생성 된 바인딩 코드를 최적화 하는 동안 예기치 않은 오류가 발생 했습니다. 문제의 원인이 되는 요소는 오류 메시지에 이름이 지정 됩니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉 `-v -v -v -v` , **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 에서 새 문제를 제공 해야 합니다.
 
 마지막 숫자 `x` 는 다음과 같습니다.
+
 - `0`어셈블리 이름
 - `1`형식 이름
 - `3`메서드 이름

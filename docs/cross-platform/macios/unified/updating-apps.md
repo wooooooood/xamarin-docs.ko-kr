@@ -6,17 +6,18 @@ ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 3379b9672b344e8e424f95e273683f4c5e241b71
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7742622bae16e874411fad1374c3ee522dba183
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280795"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106056"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Unified API에 기존 앱 업데이트
 
 > [!IMPORTANT]
 > Unified API 앞에 있는 Xamarin Classic API은 더 이상 사용 되지 않습니다.
+>
 > - Classic API (monotouch.dialog)를 지원 하기 위한 최신 버전의 Xamarin.ios는 Xamarin.ios 9.10입니다.
 > - Xamarin.ios는 여전히 Classic API을 지원 하지만 더 이상 업데이트 되지 않습니다. 개발자는 더 이상 사용 되지 않으므로 응용 프로그램을 Unified API로 이동 해야 합니다.
 

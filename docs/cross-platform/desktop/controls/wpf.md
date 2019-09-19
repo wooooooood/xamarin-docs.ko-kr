@@ -5,12 +5,12 @@ description: 이 문서에서는 WPF를 Xamarin.ios와 비교 하 고 대조 합
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
-ms.openlocfilehash: d23b449382183b0385eac38c0b9205e48dbe0a34
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290401"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106037"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 Xamarin.Forms: 유사성 & 차이점
 
@@ -65,6 +65,7 @@ WPF와 마찬가지로, 단일 필수 메서드 `ProvideValue` 는 태그 확장
 ### <a name="defining-bindable-properties"></a>바인딩 가능한 속성 정의
 
 Xamarin.ios의 바인딩 가능한 속성에 대 한 정의는 WPF와 동일 합니다.
+
 1. 개체는에서 `BindableObject`파생 되어야 합니다.
 2. 속성에 대 한 지원 저장소 키를 정의 `BindableProperty` 하려면 선언 된 형식의 public 정적 필드가 있어야 합니다.
 3. `GetValue` 및`SetValue` 를 사용 하 여 속성 값을 검색 하 고 변경 하는 공용 인스턴스 속성 래퍼가 있어야 합니다.

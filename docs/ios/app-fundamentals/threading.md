@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: d8267d4def0f7c24c660dfb4d301c111a92bb0b9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d3f00f3abd13d2edf8b827a881768fbd54d6379
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767149"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106019"
 ---
 # <a name="threading-in-xamarinios"></a>Xamarin.ios의 스레딩
 
 Xamarin.ios 런타임을 통해 개발자는 .net 스레딩 api에 대 한 액세스를 명시적으로 사용 하는 경우 (`System.Threading.Thread, System.Threading.ThreadPool`), 비동기 대리자 패턴 또는 BeginXXX 메서드를 사용 하는 경우 암시적으로, 그리고를 지 원하는 모든 api의 전체 범위를 사용할 수 있습니다. 작업 병렬 라이브러리.
 
 Xamarin은 몇 가지 이유로 응용 프로그램을 빌드하기 위해 TPL ( [작업 병렬 라이브러리](https://msdn.microsoft.com/library/dd460717.aspx) )을 사용 하는 것이 좋습니다.
+
 - 기본 TPL 스케줄러는 스레드 풀에 작업 실행을 위임 합니다. 그러면 프로세스가 수행 될 때까지 필요한 스레드 수가 동적으로 증가 하 고 CPU 시간에 대해 경쟁 하는 스레드가 너무 많이 발생 하는 시나리오는 피할 수 있습니다. 
 - TPL 작업 측면에서 작업에 대해 생각 하는 것이 더 쉽습니다. 쉽게 조작 하 고, 일정을 예약 하 고, 실행을 직렬화 하거나, 다양 한 Api를 사용 하 여 여러 가지를 병렬로 실행할 수 있습니다. 
 - 새 C# 비동기 언어 확장을 사용 하 여 프로그래밍 하는 데 사용 됩니다. 

@@ -6,12 +6,12 @@ ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2018
-ms.openlocfilehash: 343f8d37d77726d2cdc06a74c44e476af00dde27
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3677117e30538c4df8c9b797acce0be602c3b59
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765154"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106083"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>디버거에 필요한 프로젝트 설정은 무엇인가요?
 
@@ -20,6 +20,7 @@ ms.locfileid: "70765154"
 다음 단계를 수행 하 여 환경 설정을 확인 하세요.
 
 ## <a name="visual-studio"></a>Visual Studio
+
 1. 프로젝트 옵션 열기
 2. **빌드 > 고급** 으로 이동 ... 디버그 정보를 **Full** 로 설정
 3. 각 플랫폼에 대 한 설정:
@@ -27,6 +28,7 @@ ms.locfileid: "70765154"
    - **IOS 디버그 > 디버깅 & 계측**으로 이동 합니다. **디버깅 사용** 상자를 사용 합니다.
 
 ## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
+
 1. 프로젝트 옵션 열기
 2. **빌드 > 컴파일러 > 일반 옵션**으로 이동 합니다. 디버그 정보를 **Full** 로 설정
 3. 각 플랫폼에 대 한 설정:

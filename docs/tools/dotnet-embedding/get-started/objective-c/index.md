@@ -6,12 +6,12 @@ ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: conceptdev
 ms.author: crdun
 ms.date: 11/14/2017
-ms.openlocfilehash: 66b99e0da574c50df32afedb1dd6dc9de315b347
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9c97e871791b633c65e9d374edfe446874567e9
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278458"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106096"
 ---
 # <a name="getting-started-with-objective-c"></a>목표 시작-C
 
@@ -28,6 +28,7 @@ ms.locfileid: "70278458"
 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/) 를 설치 하 여 C# 코드를 편집 하 고 컴파일할 수 있습니다.
 
 > [!NOTE]
+>
 > - 이전 버전의 macOS, Xcode 및 Mono는 작동할 수 있지만 테스트 되지 _않았거나_ 지원 되지 않습니다.
 > - Windows에서 코드 생성을 수행할 수 있지만 Xcode가 설치 된 Mac 컴퓨터 에서만 코드를 컴파일할 수 있습니다.
 

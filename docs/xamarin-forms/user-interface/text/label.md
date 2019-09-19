@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
-ms.openlocfilehash: 24ab8f4b988277cbbf1162a08e5641332a58bd81
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 19cc24c3937921f4f4d95584e1cd656c37b4155f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228155"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105972"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.Forms 레이블
 
@@ -230,6 +230,7 @@ public class LabelPageCode : ContentPage
 세로 높이 [ `Label` ](xref:Xamarin.Forms.Label) 와 [ `Span` ](xref:Xamarin.Forms.Span) 설정 하 여 사용자 지정할 수 있습니다 합니다 [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) 속성 또는 [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) 에 `double` 값입니다. IOS 및 Android에서 이러한 값은 원래 줄 높이 및 유니버설 Windows 플랫폼 (UWP)에서 승수는 `Label.LineHeight` 속성 값이 레이블 글꼴 크기의 승수입니다.
 
 > [!NOTE]
+>
 > - Ios의 경우는 [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) 하 고 [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) 단일 줄에 적합 한 텍스트 및 여러 줄으로 줄 바꿈됩니다는 텍스트 줄 높이 변경 하는 속성입니다.
 > - Android에서 합니다 [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) 하 고 [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) 속성만 여러 줄으로 줄 바꿈됩니다 텍스트 줄 높이 변경 합니다.
 > - UWP에는 [ `Label.LineHeight` ](xref:Xamarin.Forms.Label.LineHeight) 여러 줄으로 줄 바꿈됩니다 텍스트 줄 높이 변경 하는 속성 및 [ `Span.LineHeight` ](xref:Xamarin.Forms.Span.LineHeight) 속성이 적용 되지 않습니다.

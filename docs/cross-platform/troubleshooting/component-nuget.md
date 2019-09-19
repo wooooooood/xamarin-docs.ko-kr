@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 6d40555c70072a4c057739b39cc24a4f885f2dc9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e9bd54523fa46625e9a9e6e46247b92987f3d427
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765289"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106070"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조 업데이트
 
@@ -202,6 +202,7 @@ NuGet 패키지는 종속성과 함께 프로젝트에 추가 됩니다.
 많은 구성 요소 공급 업체는 아직 NuGet으로 마이그레이션하는 작업을 수행 하 고 있으며 기타 (상업적으로 제공 되는 제품 포함)는 대체 배달 옵션을 조사할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
+
 - [인기 있는 Xamarin 플러그 인 및 라이브러리 목록](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [NuGet 패키지 설치 및 사용 (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [NuGet 패키지 포함 (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

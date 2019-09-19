@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 5b87c631574f159230e1dc23285b9087bcc94255
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 57c0fd540ef42c18462b4f989b21bac5ed05dc04
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767327"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105990"
 ---
 # <a name="render-custom-controls-in-the-xaml-previewer"></a>XAML 미리 보기에서 사용자 지정 컨트롤 렌더링
 
@@ -51,6 +51,7 @@ namespace MyProject
 
 ### <a name="even-with-designtimevisibletrue-my-custom-control-isnt-rendering-properly"></a>를 사용 `[DesignTimeVisible(true)]`하는 경우에도 사용자 지정 컨트롤이 제대로 렌더링 되지 않습니다.
 코드 숨김이 나 백 엔드 데이터를 많이 사용 하는 사용자 지정 컨트롤은 XAML 미리 보기에서 항상 작동 하지는 않습니다. 다음을 시도할 수 있습니다.
+
 * [디자인 모드를 사용 하는](index.md#detect-design-mode) 경우 컨트롤을 초기화 하지 않도록 이동
 * 백 엔드에서 가짜 데이터를 표시 하도록 [디자인 타임 데이터](design-time-data.md) 설정
 

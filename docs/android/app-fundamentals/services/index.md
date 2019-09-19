@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 7123d7d491bb32a8a506b308cac5ecb6458a1add
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 042878fa8d30acb55de68f63e3491aacb5dbdfb5
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754867"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105884"
 ---
 # <a name="creating-android-services"></a>Android 서비스 만들기
 
@@ -66,6 +66,7 @@ Android 8.0 (API 레벨 26)부터 Android 응용 프로그램은 더 이상 백�
 * 다른 앱은 포그라운드로 사용 되며 백그라운드에서 달리 구성 요소를 앱에서 사용 하 고 있습니다. 이에 대 한 예는 응용 프로그램 b가 포그라운드에서 제공 하는 서비스에 바인딩되는 응용 프로그램 A가 응용 프로그램 B에서 제공 하는 서비스에 바인딩되는 경우입니다. 응용 프로그램 B는 포그라운드로 고려 되 고 백그라운드에 있도록 Android에서 종료 되지 않습니다.
 
 앱이 백그라운드에 있더라도 Android는 앱의 절전 모드를 해제 하 고 몇 분 동안 이러한 제한을 완화 하므로 앱에서 일부 작업을 수행할 수 있습니다.
+
 * 앱에서 우선 순위가 높은 Firebase 클라우드 메시지를 수신 합니다.
 * 앱에서 브로드캐스트를 수신 합니다. 
 * 응용 프로그램은 알림에 대 한 `PendingIntent` 응답으로를 수신 하 고 실행 합니다.
