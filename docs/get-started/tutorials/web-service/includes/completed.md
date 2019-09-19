@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: 2c9895f36faccb0d0c82b0e7884cc04b8c4273bf
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e0f7e89be5de282daf10f941d0f0b8d0175df81a
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669745"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107305"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
+>
 > - NuGet 패키지 관리자를 사용하여 Newtonsoft.Json을 Xamarin.Forms 프로젝트에 추가합니다.
 > - 웹 서비스 클래스를 만듭니다.
 > - 웹 서비스 클래스를 사용합니다.
@@ -17,7 +18,7 @@ ms.locfileid: "68669745"
 
 이 일련의 자습서에서는 Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 사항을 다룹니다. Xamarin.Forms 개발에 대한 자세한 내용은 다음과 같은 기능을 참고하세요.
 
-- Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주요 컨트롤 그룹이 있습니다. 자세한 내용은 [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)를 참조하세요.
+- Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주 컨트롤 그룹이 있습니다. 자세한 내용은 [컨트롤 참조](~/xamarin-forms/user-interface/controls/index.md)를 참조하세요.
 - 데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변경 내용이 다른 속성에 자동으로 반영되도록 하는 기술입니다. 자세한 내용은 [데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 - Xamarin.Forms는 사용되는 페이지 형식에 따라 다양한 페이지 탐색 환경을 제공합니다. 자세한 내용은 [탐색](~/xamarin-forms/app-fundamentals/navigation/index.md)을 참조하세요.
 - 스타일을 통해 반복 태그를 줄이고, 애플리케이션 모양을 쉽게 변경할 수 있습니다. 자세한 내용은 [Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/index.md)을 참조하세요.

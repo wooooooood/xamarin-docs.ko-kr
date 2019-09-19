@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b89c0ba1b865eecab304e8aebb06bc72568cc97
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277355"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107304"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -17,6 +17,7 @@ ms.locfileid: "67277355"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - NuGet 패키지 관리자를 사용하여 Newtonsoft.Json을 Xamarin.Forms 프로젝트에 추가합니다.
 > - 웹 서비스 클래스를 만듭니다.
 > - 웹 서비스 클래스를 사용합니다.

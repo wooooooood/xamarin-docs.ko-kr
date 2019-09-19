@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: b01edc9807b63613a66f5c24706eb694fef6dfbc
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: e9c20f8ca0656f6bad72e1e09fbe873a9208be2b
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669747"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107298"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry)를 만듭니다.
 > - 변경 중인 `Entry`에 있는 텍스트에 응답합니다.
 > - `Entry`의 동작을 사용자 지정합니다.

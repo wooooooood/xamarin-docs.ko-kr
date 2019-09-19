@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f171a3f56c7fc516d409400aefa7e097e6ccbff6
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 8820d52a2a41ce3c5de9cf1176d5a8a90a987900
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277356"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107303"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -13,6 +13,7 @@ ms.locfileid: "67277356"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 만듭니다.
 > - `StackLayout`의 방향을 지정합니다.
 > - `StackLayout` 내에서 자식 뷰 맞춤 및 확장을 제어합니다.

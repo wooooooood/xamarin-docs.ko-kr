@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 164befeb08d7cb6691cb037b1f6b7f31c390afea
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 552251490665b673e02eb58c50c643daed9c1aed
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277346"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107296"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -17,6 +17,7 @@ ms.locfileid: "67277346"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView)를 만듭니다.
 > - `ListView`를 데이터로 채웁니다.
 > - 선택된 `ListView` 항목에 응답합니다.

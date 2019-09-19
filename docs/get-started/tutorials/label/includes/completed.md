@@ -1,14 +1,15 @@
 ---
-ms.openlocfilehash: b2a15ab67cdf6498a2ca92b29bebda2998349314
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b1c6e031d30dc4c30007e04cd8e883c8ddf2e6a0
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68669742"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107292"
 ---
 축하합니다. 자습서를 마쳤습니다. 여기서는 다음과 같은 방법을 알아보았습니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Label`](xref:Xamarin.Forms.Label)을 만듭니다.
 > - `Label`의 모양을 변경합니다.
 > - 단일 `Label`에서 여러 형식을 포함하는 텍스트를 표시합니다.

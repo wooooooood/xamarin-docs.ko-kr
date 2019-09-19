@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ce6714014db66dff3a87e50c73dc77afb962cc5c
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: e05a20149d33eed58918382371e8bc333d4a5f8d
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277340"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107297"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -14,6 +14,7 @@ ms.locfileid: "67277340"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry)를 만듭니다.
 > - 변경 중인 `Entry`에 있는 텍스트에 응답합니다.
 > - `Entry`의 동작을 사용자 지정합니다.

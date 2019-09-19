@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9bda76a477973bb06eb018abbf4ad53dc3e8c1e7
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 85404d5aceb525a77c98bf2d86ebc4b464f5796f
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277339"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107293"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
 
@@ -14,6 +14,7 @@ ms.locfileid: "67277339"
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 살펴봅니다.
 
 > [!div class="checklist"]
+>
 > - XAML에서 Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image)를 만듭니다.
 > - `Image` 모양을 사용자 지정합니다.
 > - 각 플랫폼 프로젝트에서 로컬 이미지 파일을 표시합니다.
