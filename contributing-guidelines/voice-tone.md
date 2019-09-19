@@ -1,7 +1,16 @@
+---
+ms.openlocfilehash: 4d045c0025effae4f5e4cd30e03f8776be0c1270
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105751"
+---
 # <a name="voice-and-tone-guidelines"></a>어투 및 어조 지침
 
 개발자는 Xamarin을 알아보고 일상적인 작업에서 사용하기 위해 문서의 내용을 확인합니다.
 따라서 개발자의 개발 작업을 지원하는 유용한 설명서를 작성해야 합니다. 아래의 지침을 따르면 이러한 설명서를 작성할 수 있습니다. 스타일 가이드에는 다음의 4가지 권장 사항이 포함되어 있습니다.
+
 - [대화형 어조 사용](#use-a-conversational-tone)
 - [2인칭 시점으로 작성](#write-in-2nd-person)
 - [능동태 사용](#use-active-voice)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 406d65145017e4c82743bc920ff19696a90afc33
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
+ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771703"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "70998050"
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
@@ -146,7 +146,7 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 통해 채워지는 데이터 목록을 표시하는 데 사용됩니다. [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략은 목록 셀을 재활용하여 `ListView` 메모리 공간 및 실행 속도를 최소화하려고 시도합니다. 자세한 내용은 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy)을 참조하세요.
+Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 통해 채워지는 데이터 목록을 표시하는 데 사용됩니다. [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) 캐싱 전략은 목록 셀을 재활용하여 `ListView` 메모리 공간 및 실행 속도를 최소화하려고 시도합니다. 자세한 내용은 [캐싱 전략](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy)을 참조하세요.
 
 목록의 각 행에는 이름, 범주 및 이미지 파일 이름의 세 가지 데이터 항목이 있습니다. 목록의 각 행 레이아웃은 [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 바인딩 가능 속성을 통해 참조되는 `DataTemplate`에서 정의됩니다. `DataTemplate`은 목록의 각 데이터 행이 데이터 바인딩을 통해 `Name`, `Category` 및 `ImageFilename` 속성을 표시하는 `NativeCell`이 되도록 정의합니다. `ListView` 컨트롤에 대한 자세한 내용은 [ListView](~/xamarin-forms/user-interface/listview/index.md)를 참조하세요.
 

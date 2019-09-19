@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: dfd6c9d6419f663b1ef474066f7918859d42b3c5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f4c8c8b19d7738478cdc2c8f83c6fc8d1f361466
+ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757295"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985655"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
 
@@ -240,7 +240,7 @@ C#에서 기본 클래스 생성자를 호출하려면 콜론(`:`) 뒤에 `base`
 public class PictureLayout : ViewGroup
 {
     ...
-    public class PictureLayout (Context context)
+    public PictureLayout (Context context)
            : base (context)
     {
         ...

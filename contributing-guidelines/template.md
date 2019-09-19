@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 69682372e2b1ac84db2c6464ac3b05a58645a9e3
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8374e90ea6d460a0e0c22763db023654c3008b32
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753559"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105748"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -65,6 +65,7 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 ## <a name="file-name"></a>파일 이름
 
 파일 이름은 다음 규칙을 사용합니다.
+
 - 소문자, 숫자 및 하이픈만 포함할 수 있습니다.
 - 공백 또는 문장 부호 문자는 포함할 수 없습니다. 하이픈을 사용하여 파일 이름의 단어와 숫자를 구분합니다.
 - 개발, 구매, 빌드, 문제 해결 등의 구체적인 작업 동사를 사용합니다. 현재 진행형 단어는 사용하지 않습니다.
@@ -75,6 +76,7 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 ## <a name="headings"></a>제목
 
 문장 스타일 대/소문자를 사용합니다. 다음 항목은 항상 대문자로 표기합니다.
+
 - 제목의 첫단어
 - 제목에서 콜론 뒤에 오는 단어(예: “방법: 배열 정렬”)입니다.
 
@@ -131,6 +133,7 @@ URL은 Markdown 파일에 표시되는 경우 클릭 가능한 링크로 변환�
 API에 연결할 때는 소스 코드에서 자동 생성되는 해당 UID(고유 식별자)를 사용할 수 있습니다.
 
 다음 구문 중 하나를 사용할 수 있습니다.
+
 1. Markdown 링크: `[link_text](xref:UID)`
 2. 자동 링크: `<xref:UID>`
 3. 축약형: `@UID`
@@ -143,6 +146,7 @@ API에 연결할 때는 소스 코드에서 자동 생성되는 해당 UID(고�
 > 현재로서는 쉽게 UID를 찾을 수 있는 방법이 없습니다. API의 UID를 찾는 가장 효율적인 방법은 [docascode/coreapi](https://github.com/docascode/coreapi) 리포지토리에서 UID를 검색하는 것입니다. Microsoft는 향후 보다 나은 시스템을 제공하기 위한 작업을 진행하고 있습니다.
 
 UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에서와 같이 UID 값을 각각 %60 및 %23으로 HTML 인코딩해야 합니다.
+
 - 예제: @System.Threading.Tasks.Task\`1은 `@System.Threading.Tasks.Task%601`이 됩니다.
 - 예: @System.Exception.\#ctor은 `@System.Exception.%23ctor`이 됩니다.
 

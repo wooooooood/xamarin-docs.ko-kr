@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2018
-ms.openlocfilehash: aea82b5946d12bc75aef18953d61cd88e5329329
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: adedb10f3baf7faa97260ebbc94e3d1802b7d847
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68511380"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105939"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 
@@ -57,6 +57,7 @@ Visual Studio 2019 및 Visual Studio 2017 설치 관리자에는 Xamarin을 자�
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
+>
 > - Visual Studio용 Xamarin은 Visual Studio 2019 또는 Visual Studio 2017(Community, Professional 및 Enterprise)을 지원합니다.
 > - UWP(유니버설 Windows 플랫폼)용 Xamarin.Forms 앱을 개발하려면 Visual Studio 2017이 설치된 Windows 10이 필요합니다. Visual Studio 2019를 사용하는 것이 좋습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 51e802b1e142955fb3988432f9d9c7393f2ee0ea
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5d299112da87207f7486247e0ed6f00c35a35fe5
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292324"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106052"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
@@ -21,6 +21,7 @@ ms.locfileid: "70292324"
 이 가이드에서는 앱 스토어를 위해 앱을 준비하고 검토를 위해 Apple에 전송하는 단계를 설명합니다. 특히, 다음과 같은 내용을 설명합니다.
 
 > [!div class="checklist"]
+>
 > - 앱 스토어 검토 지침 따르기
 > - 앱 ID 및 자격 설정
 > - 앱 스토어 아이콘 및 앱 아이콘 제공
@@ -316,12 +317,11 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
        <MtouchFloat32>true</MtouchFloat32>
        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
        <MtouchLink>SdkOnly</MtouchLink>
-       <MtouchArch>;ARMv7, ARM64</MtouchArch>
+       <MtouchArch>ARMv7, ARM64</MtouchArch>
        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
        <MtouchTlsProvider>Default</MtouchTlsProvider>
-       <PlatformTarget>x86&</PlatformTarget>
        <BuildIpa>true</BuildIpa>
-       <IpaPackageDir>$(OutputPath</IpaPackageDir>
+       <IpaPackageDir>$(OutputPath)</IpaPackageDir>
     </PropertyGroup>
     ```
 
