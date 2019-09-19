@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2017
-ms.openlocfilehash: 29483ca184786f8f0d2a7d0d9345608542d30e61
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 078d5a2d5c05f39a9c6d8d081b08faa7b4b8ec67
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768852"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71106117"
 ---
 # <a name="collection-views-in-xamarinios"></a>Xamarin.ios의 컬렉션 뷰
 
@@ -180,7 +180,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, F
 
 을 `DequeReusableCell` 호출 하면 다시 사용 큐에서 셀이 큐에서 제거 되거나, `CollectionView.RegisterClassForCell`호출에 등록 된 형식에 따라 생성 된 큐에서 셀을 사용할 수 없는 경우이 호출 됩니다.
 
-이 경우 `AnimalCell` 클래스를 등록 하면 iOS는 새 `AnimalCell` 를 만든 다음, 셀을 큐에서 제거 하는 호출이 수행 될 때이를 반환 하 고, 그 후에는 animal 클래스에 포함 된 이미지를 사용 하 여 구성 되 고에 표시 하기위해반환됩니다`UICollectionView`.
+이 경우 `AnimalCell` 클래스를 등록 하면 iOS는 새 `AnimalCell` 를 만든 다음, 셀을 큐에서 제거 하는 호출이 수행 될 때이를 반환 하 고, 그 후에는 animal 클래스에 포함 된 이미지를 사용 하 여 구성 되 고에 표시 하기위해반환됩니다 `UICollectionView`.
 
  <a name="Delegate" />
 
@@ -459,6 +459,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 [![](uicollectionview-images/quick04.png "컬렉션 뷰 크기 설정")](uicollectionview-images/quick04.png#lightbox)
 
 다음으로 기본 셀을 편집 합니다.
+
 - 배경색을 파란색으로 변경
 - 셀 제목으로 사용할 레이블 추가
 - 다시 사용 식별자를 **셀** 로 설정
@@ -679,7 +680,7 @@ UI에 대 한 변경 내용을 저장 하 고 앱을 실행 합니다.
 
 ### <a name="using-a-custom-gesture-recognizer"></a>사용자 지정 제스처 인식기 사용
 
-을 `UICollectionViewController` 사용할 수 없고 정기적 `UIViewController`으로 사용 해야 하는 경우 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예:
+을 `UICollectionViewController` 사용할 수 없고 정기적 `UIViewController`으로 사용 해야 하는 경우 또는 끌어서 놓기 제스처를 더 많이 제어 하려는 경우에는 사용자 지정 제스처 인식기를 만들어 뷰가 로드 될 때 컬렉션 뷰에 추가할 수 있습니다. 예를 들어:
 
 ```csharp
 public override void ViewDidLoad ()
