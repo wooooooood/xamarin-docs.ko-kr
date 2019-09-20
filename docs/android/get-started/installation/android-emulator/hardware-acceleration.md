@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: add9c602f4c04f1d95db4cee578fdadf0b41cf33
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5c6eb6e49c7c8a4071591e46a5afc02a6ff6b4e6
+ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758000"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105903"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -22,19 +22,27 @@ _이 아티클에서는 컴퓨터의 하드웨어 가속 기능을 사용하여 
 Visual Studio를 통해 Android 디바이스가 지원되지 않거나 실용적이지 않은 경우 Android 에뮬레이터를 사용하여 개발자가 Xamarin.Android 애플리케이션을 쉽게 테스트하고 디버그할 수 있습니다.
 그러나 Android 에뮬레이터는 실행되는 컴퓨터에서 하드웨어 가속을 사용할 수 없는 경우 너무 늦게 실행됩니다. 컴퓨터의 가상화 기능과 함께 특별한 x86 가상 디바이스 이미지를 사용하여 Android 에뮬레이터의 성능을 상당히 개선할 수 있습니다.
 
+| 시나리오    | HAXM        | WHPX       | Hypervisor.Framework |
+| ----------- | ----------- | -----------| ----------- |
+| Intel 프로세서가 있습니다. | X | X | X |
+| AMD 프로세서가 있습니다.   |   | X |   |
+| Hyper-V를 지원하려고 합니다. |   | X |   |
+| 중첩된 가상화를 지원하려고 합니다. |   | 제한됨 |   |
+| Docker와 같은 기술을 사용하려고 합니다.  |   | X | X |
+
 ::: zone pivot="windows"
 
 ## <a name="accelerating-android-emulators-on-windows"></a>Windows에서 Android 에뮬레이터 가속화
 
 다음 가상화 기술은 Android 에뮬레이터를 가속화하는 데 사용할 수 있습니다.
 
-1. **Microsoft의 Hyper-V 및 하이퍼바이저 플랫폼**.
+1. **Microsoft의 Hyper-V 및 Windows 하이퍼바이저 플랫폼(WHPX)**
    [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/)는 물리적 호스트 컴퓨터에서 가상화된 컴퓨터 시스템을 실행할 수 있게 해 주는 Windows의 가상화 기능입니다.
 
 2. **Intel의 HAXM(Hardware Accelerated Execution Manager)**
    HAXM은 Intel CPU를 실행하는 컴퓨터에 대한 가상화 엔진입니다.
 
-최적의 성능을 위해 Hyper-V를 사용하여 Android 에뮬레이터를 가속화하는 것이 좋습니다. Hyper-V를 컴퓨터에서 사용할 수 없는 경우 HAXM을 사용할 수 있습니다. Android 에뮬레이터는 다음 기준이 충족되는 경우 자동으로 하드웨어 가속을 사용합니다.
+Windows에서 최상의 경험을 위해서는 Android 에뮬레이터를 가속화하는데 HAXM를 사용하는 것이 좋습니다. 컴퓨터에서 HAXM을 사용할 수 없는 경우 Windows 하이퍼바이저 플랫폼(WHPX)을 사용할 수 있습니다. Android 에뮬레이터는 다음 기준이 충족되는 경우 자동으로 하드웨어 가속을 사용합니다.
 
 - 개발 컴퓨터에서 하드웨어 가속을 사용하고 활성화할 수 있습니다.
 
@@ -158,7 +166,7 @@ Windows용 HAXM 설치 패키지는 [Intel Hardware Accelerated Execution Manage
 2. **Intel의 HAXM(Hardware Accelerated Execution Manager)**
    [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm)은 Intel CPU를 실행하는 컴퓨터에 대한 가상화 엔진입니다.
 
-최적의 성능을 위해 하이퍼바이저 프레임워크를 사용하여 Android 에뮬레이터를 가속화하는 것이 좋습니다. Mac에서 하이퍼바이저 프레임워크를 사용할 수 없는 경우 HAXM을 사용할 수 있습니다. Android 에뮬레이터는 다음 기준이 충족되는 경우 자동으로 하드웨어 가속을 사용합니다.
+하이퍼바이저 프레임워크를 사용하여 Android 에뮬레이터를 가속화하는 것이 좋습니다. Mac에서 하이퍼바이저 프레임워크를 사용할 수 없는 경우 HAXM을 사용할 수 있습니다. Android 에뮬레이터는 다음 기준이 충족되는 경우 자동으로 하드웨어 가속을 사용합니다.
 
 - 개발 컴퓨터에서 하드웨어 가속을 사용하고 활성화할 수 있습니다.
 
@@ -180,7 +188,7 @@ Android 에뮬레이터를 시작하고 디버깅하는 방법에 대한 자세�
 
 - Mac의 CPU가 하이퍼바이저 프레임워크를 지원할 수 있어야 합니다.
 
-Mac이 이러한 조건을 충족하는 경우 Android 에뮬레이터는 가속을 위해 자동으로 하이퍼바이저 프레임워크를 사용합니다(HAXM이 설치된 경우에도 해당). 하이퍼바이저 프레임워크가 Mac에서 지원되는지 확실하지 않은 경우 Mac이 하이퍼바이저를 지원하는지 확인하는 방법에 대한 [문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#hypervisor-issues) 가이드를 참조하세요.
+Mac이 이러한 조건을 충족하는 경우 Android 에뮬레이터는 가속을 위해 자동으로 하이퍼바이저 프레임워크를 사용합니다. 하이퍼바이저 프레임워크가 Mac에서 지원되는지 확실하지 않은 경우 Mac이 하이퍼바이저를 지원하는지 확인하는 방법에 대한 [문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#hypervisor-issues) 가이드를 참조하세요.
 
 하이퍼바이저 프레임워크가 Mac에서 지원되지 않는 경우 HAXM을 사용하여 Android 에뮬레이터를 가속화할 수 있습니다(다음 설명 참조).
 

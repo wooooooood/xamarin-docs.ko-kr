@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 80e338319e4eeddcb3df287f86bcf89397d423f1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 076e6bfd1155c0eba4045af59a599a34b0fca1d5
+ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754039"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71021173"
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
 
@@ -93,10 +93,11 @@ Xamarin.Android가 `adb logcat`에 로깅할 추가 정보를 제어합니다.
 - `assembly`: `.apk` 및 어셈블리 구문 분석 메시지를 인쇄합니다.
 - `gc`: GC 관련 메시지를 인쇄합니다.
 - `gref`: JNI 전역 참조 메시지를 인쇄합니다.
-- `lref`: JNI 로컬 참조 메시지를 인쇄합니다.  
-    *참고*: 이는 ‘실제로’ `adb logcat`을 스팸 처리합니다.   
-    Xamarin.Android 5.1에서는 *gigantic*.Avoid를 받을 수 있는 `.__override__/lrefs.txt` 파일도  
-    만듭니다.
+- `lref`: JNI 로컬 참조 메시지를 인쇄합니다.
+  > [!NOTE]
+  > 이는 ‘실제로’ `adb logcat`을 스팸 처리합니다. 
+  > Xamarin.Android 5.1에서는 *gigantic*.Avoid를 받을 수 있는 `.__override__/lrefs.txt` 파일도
+  > 만듭니다.
 - `timing`: 일부 메서드 타이밍 정보를 인쇄합니다. 이는 또한 `.__override__/methods.txt` 및 `.__override__/counters.txt` 파일도 만듭니다.
 
 ### `debug.mono.max_grefc`
