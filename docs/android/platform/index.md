@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 40fa2d93b7fd756c284727566e8043f5084bd483
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
+ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757484"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119229"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -41,6 +41,10 @@ Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 다양 한 화
 ## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
 
 이 가이드에서는 Android 6.0이 _앱 연결_을 지 원하는 방법에 대해 설명 합니다. 모바일 앱이 웹 사이트의 url에 응답할 수 있는 기술입니다. Android 6.0 응용 프로그램에서 앱 연결을 구현 하는 방법 및 도메인에 대 한 앱 링크를 처리 하는 모바일 앱에 권한을 부여 하도록 웹 사이트를 구성 하는 방법을 설명 합니다.
+
+## <a name="android-10androidplatformandroid-10md"></a>[Android 10](~/android/platform/android-10.md)
+
+이 문서에서는 android 10의 새로운 기능에 대 한 개요를 제공 하 고, Android 10 개발용 Xamarin Android를 준비 하는 방법을 설명 하 고, Xamarin.ios 앱에서 Android Oreo 기능을 사용 하는 방법을 설명 하는 샘플 응용 프로그램에 대 한 링크를 제공 합니다.
 
 ## <a name="android-9-pieandroidplatformpiemd"></a>[Android 9 원형](~/android/platform/pie.md)
 
