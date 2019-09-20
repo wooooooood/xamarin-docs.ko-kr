@@ -141,7 +141,7 @@ ms.locfileid: "70282163"
 
 <a name="EM0099" />
 
-### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: 내부 오류 *. 테스트 사례 ()https://github.com/mono/Embeddinator-4000/issues) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
+### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: 내부 오류 *. 테스트 사례 (https://github.com/mono/Embeddinator-4000/issues) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
 
 이 오류 메시지는 .NET 포함의 내부 일관성 검사가 실패할 때 보고 됩니다.
 
