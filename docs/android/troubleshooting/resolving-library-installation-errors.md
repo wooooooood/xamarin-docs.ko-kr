@@ -125,7 +125,7 @@ Unzipping failed. Please download https://dl-ssl.google.com/android/repository/a
 
 다음 단계를 사용 하 여 **m2repository** 를 다운로드 하 고 해당 콘텐츠를 설치 합니다.
 
-1. 오류 메시지에 해당 하는 라이브러리 폴더의 내용을 삭제 합니다. 예를 들어 위의 오류 메시지에서 **C:\\Users\\\\\\사용자***이름***\\AppData Local Xamarin\\Android. 지원 v4의내용을삭제합니다.23.1.1.0\\** . 
+1. 오류 메시지에 해당 하는 라이브러리 폴더의 내용을 삭제 합니다. 예를 들어 위의 오류 메시지에서 **C:\\Users\\***사용자 이름***\\AppData\\Local\\Xamarin\\Android. 지원 v4의내용을삭제합니다.23.1.1.0\\** . 
     앞에서 설명한 대로이 디렉터리의 전체 내용을 삭제 해야 합니다.
 
     [![23.1.1.0 폴더에서 content, embedded 및 android_m2repository 폴더를 삭제 하는 중](resolving-library-installation-errors-images/04-delete-contents-vs.png)](resolving-library-installation-errors-images/04-delete-contents-vs.png#lightbox)
