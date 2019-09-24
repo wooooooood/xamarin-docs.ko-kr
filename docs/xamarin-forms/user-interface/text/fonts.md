@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/28/2019
-ms.openlocfilehash: c18c4e63831a03cbe28accfe10f4c7da31130803
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b2918dde7524a02aa318164933063a5546db031a
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529314"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198481"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -155,7 +155,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 ### <a name="ios"></a>iOS
 
 먼저 로드 됨을 보장 다음 Xamarin.Forms를 사용 하 여 이름으로 참조 하 여 사용자 지정 글꼴을 표시 하는 것이 불가능 `Font` 메서드.
-지침을 따릅니다 [이 블로그 게시물](https://blog.xamarin.com/custom-fonts-in-ios/):
+지침을 따릅니다 [이 블로그 게시물](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
 
 1. 빌드 작업을 사용 하 **여 글꼴 파일 추가: BundleResource**, and
 2. 업데이트를 **Info.plist** 파일 (**응용 프로그램에서 제공 하는 글꼴**, 또는 `UIAppFonts`키,), 한 다음
@@ -196,7 +196,7 @@ new Label
 > [!NOTE]
 > 글꼴 이름과 글꼴 파일에 있는 참고 달라질 수 있습니다. Windows에서 글꼴 이름을 검색할.ttf 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **미리 보기**합니다. 글꼴 이름은 미리 보기 창에서 다음 확인할 수 있습니다.
 
-애플리케이션에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
+응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
 
 ### <a name="xaml"></a>XAML
 

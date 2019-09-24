@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 0e513ecb67f5b902afd91546b1de6720cb0369c1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761976"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198427"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>6부 - 테스트 및 App Store 승인
 
@@ -100,7 +100,7 @@ Apple 및 Microsoft는 각각 앱 스토어 및 Marketplace의 플랫폼에서 �
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>지침은 ' 가이드 ' 뿐입니다.
 
-Apple은 해당 플랫폼의 핵심 수준 중 하나가 일관성을 유지 하 고 유용성을 높일 수 있으므로 인간 인터페이스 지침을 준수 하는 것에 대 한 엄격히 사용 됩니다. Microsoft는 Metro 스타일의 UI를 구현 하는 Windows 응용 프로그램과 유사한 접근 방식을 수행 했습니다. 두 플랫폼 모두에 대 한 승인 프로세스에는 관련 디자인 원칙을 준수 하기 위해 앱을 평가 하는 작업이 포함 됩니다.
+Apple은 해당 플랫폼의 핵심 수준 중 하나가 일관성을 유지 하 고 유용성을 높일 수 있으므로 인간 인터페이스 지침을 준수 하는 것에 대 한 엄격히 사용 됩니다. Microsoft는 [흐름 디자인 시스템](https://microsoft.com/design/fluent)을 구현 하는 Windows 응용 프로그램과 유사한 접근 방식을 수행 했습니다. 두 플랫폼 모두에 대 한 승인 프로세스에는 관련 디자인 원칙을 준수 하기 위해 앱을 평가 하는 작업이 포함 됩니다.
 
 이는 사용자 인터페이스 혁신이 지원 되지 않거나 권장 되지 않는다는 것을 말하는 것이 아니라 "단순히 수행 해서는 안 됩니다." 또는 앱이 거부 되는 것을 말합니다.
 

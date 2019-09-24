@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2019
-ms.openlocfilehash: d2a2146a0b7345475e2eb93d52fb02387c833224
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: e03990a74ac8477b56b109e26a97b05ad13dba53
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200040"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198452"
 ---
 # <a name="troubleshooting-tips-for-ios-13-and-xamarinios"></a>IOS 13 및 Xamarin.ios에 대 한 문제 해결 팁
 
@@ -32,6 +32,7 @@ ms.locfileid: "70200040"
 
 > [!NOTE]
 > 이러한 단계에서는 두 개의 Xcode 응용 프로그램이 있다고 가정 합니다.
+>
 > - **Xcode11-beta1** – 시뮬레이터 및 Mac용 Visual Studio에서 작동 하지 않는 베타 버전입니다.
 > - **Xcode102** – 안정적인 버전의 Xcode 10입니다. **Xcode**을 호출할 수도 있습니다.
 >

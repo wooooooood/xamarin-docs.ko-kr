@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 6c529c8df7ef1e4372285a157f489941d795d7f6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b735541d51321231775b025745e68c54552697d3
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655229"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198488"
 ---
 # <a name="xamarinforms-material-visual"></a>Xamarin.ios 재질 시각적 개체
 
@@ -53,18 +53,18 @@ Xamarin.ios 재질 시각적 개체를 사용 하 여 iOS 및 Android에서 동�
 
 [Xamarin.ios](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet 패키지를 설치한 후에는 각 플랫폼 프로젝트에서 재질 렌더러를 초기화 해야 합니다.
 
-IOS에서 메서드를 호출한 *후* `Xamarin.Forms.Forms.Init` 메서드 를 `FormsMaterial.Init` 호출 하 여 AppDelegate.cs에서 발생 해야 합니다.
+IOS에서 메서드를 호출한 *후* `Xamarin.Forms.Forms.Init` 메서드 를 `Xamarin.Forms.FormsMaterial.Init` 호출 하 여 AppDelegate.cs에서 발생 해야 합니다.
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
-FormsMaterial.Init();
+global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-Android에서 메서드를 호출한 *후* `Xamarin.Forms.Forms.Init` 메서드 를 `FormsMaterial.Init` 호출 하 여 MainActivity.cs에서 발생 해야 합니다.
+Android에서 메서드를 호출한 *후* `Xamarin.Forms.Forms.Init` 메서드 를 `Xamarin.Forms.FormsMaterial.Init` 호출 하 여 MainActivity.cs에서 발생 해야 합니다.
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-FormsMaterial.Init(this, savedInstanceState);
+global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
 ## <a name="consume-material-renderers"></a>재질 렌더러 사용

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2017
-ms.openlocfilehash: f264f210a9228fd213f0c041abb5b26023c796f4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1d9a65ab34cb0c02368f53679d38f1d07ec1f257
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753262"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198562"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.ios의 Apple Pay
 
@@ -43,8 +43,7 @@ Apple Pay를 사용 하는 경우 Apple은 사용자, 상인 또는 개발자가
 
 ## <a name="using-a-payment-processor-platform"></a>지불 프로세서 플랫폼 사용
 
-Apple Pay의 기본적인 부분 중 하나는 지불액의 처리입니다. 이 작업을 직접 수행할 수는 있지만 암호화에 대 한 중요 한 지식이 필요 합니다.
-- Apple의 [결제 처리 가이드](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html)에 자세히 설명 되어 있습니다.
+Apple Pay의 기본적인 부분 중 하나는 지불액의 처리입니다. 이 작업을 직접 수행할 수 있지만 Apple의 [결제 처리 가이드](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html)에 설명 된 것 처럼 암호화에 대 한 중요 한 지식이 필요 합니다.
 반면 지불 처리 플랫폼은 이러한 작업을 처리 하 여 앱 빌드에 집중할 수 있도록 합니다.
 
 두 가지 옵션은 다음과 같습니다.

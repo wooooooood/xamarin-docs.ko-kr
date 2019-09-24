@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 0828d780ed075a6e3b18ba5020f5908fb8c06189
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 9442116bf053768fe22d123d1c7e3d146f9b2834
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292580"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198502"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Xamarin.ios에서 사용자 지정 레이아웃 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Forms 4 레이아웃 클래스 – StackLayout, AbsoluteLayout, RelativeLayout, 및 그리드를 정의 하 고 자식을 다른 방식으로 정렬 하는 각 키를 누릅니다. 그러나 경우에 Xamarin.Forms에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 합니다. 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법에 설명 하 고 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
+_Xamarin은 5 가지 레이아웃 클래스 (StackLayout, AbsoluteLayout, RelativeLayout, Grid 및 Layout)를 정의 하 고 각각은 다른 방식으로 자식을 정렬 합니다. 그러나 경우에 Xamarin.Forms에서 제공 하지 않는 레이아웃을 사용 하 여 페이지 콘텐츠를 구성 해야 합니다. 이 문서는 사용자 지정 레이아웃 클래스를 작성 하는 방법에 설명 하 고 페이지에 걸쳐 가로로 자식을 정렬 하 고 그런 다음 후속 자식이 추가 행을 표시 하는 방향에 민감한 WrapLayout 클래스를 보여 줍니다._
 
 Xamarin.forms에 모든 레이아웃 클래스에서 파생 된 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) 클래스 및 제네릭 형식 제약 [ `View` ](xref:Xamarin.Forms.View) 및 파생된 형식입니다. 차례로 합니다 `Layout<T>` 클래스에서 파생 되는 [ `Layout` ](xref:Xamarin.Forms.Layout) 요소 배치 및 크기 조정 자식 메커니즘을 제공 하는 클래스입니다.
 
@@ -427,7 +427,7 @@ async Task<ImageList> GetImageListAsync()
 
 - [WrapLayout (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [사용자 지정 레이아웃](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Xamarin.Forms에서 사용자 지정 레이아웃 (비디오) 만들기](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
+- [Xamarin.Forms에서 사용자 지정 레이아웃 (비디오) 만들기](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [레이아웃\<T >](xref:Xamarin.Forms.Layout`1)
 - [레이아웃](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)
