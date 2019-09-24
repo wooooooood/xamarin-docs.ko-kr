@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: d88832dd4fd69019f9905fb779c5572ba9a689eb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c6385ff193c54fdab8f252c757cad810751b3f08
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281032"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206296"
 ---
 # <a name="ios-platform-features-overview"></a>iOS 플랫폼 기능 개요
 
@@ -22,7 +22,7 @@ ms.locfileid: "70281032"
 
 |  |  |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [IOS 13 Preview 소개](~/ios/platform/ios13/index.md) | 이 문서에서는 Xamarin.ios 13 Preview에 대해 설명 합니다.|
+| [IOS 13 소개](~/ios/platform/ios13/index.md) | 이 문서에서는 Xamarin.ios 13에 대해 설명 합니다.|
 | [iOS 12 소개](~/ios/platform/introduction-to-ios12/index.md) | 이 문서에서는 Xamarin.ios 응용 프로그램을 빌드할 때 사용할 수 있는 iOS 12 기능에 대해 설명 합니다.|
 | [iOS 11 소개](~/ios/platform/introduction-to-ios11/index.md) | 이 문서에서는 ARKit, Core ML, Core NFC, 끌어서 놓기, MapKit, PDFKit, SiriKit 및 비전과 같이 iOS 11 및 Xcode 9의 새로운 기능 및 업데이트 된 기능에 대해 설명 합니다. Xamarin.ios에서 이러한 기능을 사용 하는 방법을 설명 하는 가이드로 연결 됩니다. |
 | [iOS 10 소개](~/ios/platform/introduction-to-ios10/index.md) | iOS 10에는 새로운 기능과 기능으로 앱을 개발할 수 있는 몇 가지 새로운 Api 및 서비스가 포함 되어 있습니다. IOS 10을 사용 하는 앱에는 지도, 메시지, 전화, Siri 확장 등의 새로운 기능이 있습니다. 이 섹션에서는 xamarin.ios 앱에서 이러한 기능을 활용 하기 위한에서는를 보여 줍니다. |

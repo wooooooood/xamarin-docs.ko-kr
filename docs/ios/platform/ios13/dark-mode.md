@@ -7,16 +7,14 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019
-ms.openlocfilehash: d21afcc7d7b130528e9cceac47840acd49b91f59
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.openlocfilehash: be487ab839e2fb4d21b85719a56dc34303317a5f
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70129975"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206393"
 ---
 # <a name="dark-mode-in-xamarinios"></a>Xamarin.ios의 어두운 모드
-
-![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 어두운 모드는 밝은 테마와 어두운 테마에 대 한 시스템 차원의 옵션입니다. 이제 iOS 사용자가 테마를 선택 하거나, 환경 및 시간에 따라 iOS에서 동적으로 모양을 변경할 수 있습니다.
 

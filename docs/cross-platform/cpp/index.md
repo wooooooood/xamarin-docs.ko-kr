@@ -5,12 +5,12 @@ description: Xamarin 및C++ C#를 사용 하 여 플랫폼 간 C/코드를 빌�
 author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
-ms.openlocfilehash: 685d4f5de197c6b3664d63306fa206bea17409e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a10d63e8ed152fae3c9e87cbae7bacb25a0d019c
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766358"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206384"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Xamarin에서 CC++ /라이브러리 사용
 
@@ -132,7 +132,7 @@ extern "C" {
 
 ## <a name="wrapping-the-native-library-stage-2"></a>네이티브 라이브러리 래핑 (2 단계)
 
-이 단계를 수행 하려면 [이전 섹션](##creating-the-native-libraries-stage-1)에서 설명 하는 [미리 컴파일된 라이브러리가](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) 필요 합니다.
+이 단계를 수행 하려면 [이전 섹션](#creating-the-native-libraries-stage-1)에서 설명 하는 [미리 컴파일된 라이브러리가](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) 필요 합니다.
 
 ### <a name="creating-the-visual-studio-solution"></a>Visual Studio 솔루션 만들기
 

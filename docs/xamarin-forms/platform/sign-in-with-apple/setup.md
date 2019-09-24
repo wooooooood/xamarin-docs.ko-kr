@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c46da6b4ed877cc85f98e6ef0ab2b9a28d811723
-ms.sourcegitcommit: cf56d2bae34dc0f8e94c2d3d28d5f460d59807bf
+ms.openlocfilehash: c1f75f4872d787e261ab6bbac3624e31538c6ff0
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986125"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206532"
 ---
 # <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Xamarin을 사용 하 여 Apple에 로그인 설정
-
-![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 이 가이드에서는 Apple을 사용 하 여 로그인 하기 위해 플랫폼 간 응용 프로그램을 설정 하는 데 필요한 일련의 단계를 다룹니다. Apple 개발자 포털에서 Apple 설정이 바로 진행 되는 동안에는 Android와 Apple 간에 보안 관계를 만들기 위해 추가 단계가 필요 합니다. 
 

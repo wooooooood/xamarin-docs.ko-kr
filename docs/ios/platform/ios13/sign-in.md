@@ -7,30 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: a8ea06d81fcc79a24f155a1562818daea3ba982a
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021394"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206371"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Xamarin.ios에서 Apple에 로그인 합니다.
-
-![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 Apple로 로그인은 타사 인증 서비스 사용자에 게 id 보호를 제공 하는 새로운 서비스입니다. IOS 13부터 Apple에서는 타사 인증 서비스를 사용 하는 새 앱 에서도 Apple에 로그인을 제공 해야 합니다. 업데이트 되는 기존 앱은 4 월 2020 일까 지 Apple에 로그인을 추가할 필요가 없습니다.
 
 이 문서에서는 Apple에서 로그인을 iOS 13 응용 프로그램에 추가할 수 있는 방법을 소개 합니다.
-
-## <a name="requirements"></a>요구 사항
-
-이 기능에는 다음이 필요 합니다.
-
-* iOS 13
-* Xamarin.ios 12.99
-* Xcode 11을 지 원하는 visual Studio 2019 또는 Mac 용 Visual Studio 2019.
-
-자세한 내용은 [시작](get-started.md) 을 참조 하세요.
 
 ## <a name="apple-developer-setup"></a>Apple developer 설치
 

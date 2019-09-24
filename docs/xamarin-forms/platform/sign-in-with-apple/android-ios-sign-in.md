@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: c852a80136c8aae3a4da0fd3d8a8fa259e08aa4d
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
+ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021160"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206517"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Xamarin에서 Apple에 로그인 사용
-
-![이 API는 현재 미리 보기로 제공 됩니다.](~/media/shared/preview.png)
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
 
