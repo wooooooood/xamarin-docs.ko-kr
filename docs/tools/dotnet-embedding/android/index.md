@@ -1,104 +1,100 @@
 ---
-title: Android를 포함 하는.NET
+title: Android에 .NET 포함
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/15/2018
-ms.openlocfilehash: 6917267896cff796af4e5cff095720eaeccc7652
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61215536"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70772216"
 ---
-# <a name="net-embedding-on-android"></a>Android를 포함 하는.NET
+# <a name="net-embedding-on-android"></a>Android에 .NET 포함
 
-일부 경우에는 기존 네이티브 Android 프로젝트에는 Xamarin.NET 라이브러리를 추가 하는 것이 좋습니다. 이 위해 사용할 수 있습니다 합니다 [Embeddinator 4000](https://www.nuget.org/packages/Embeddinator-4000/) 도구를 네이티브 Java 기반 Android 앱에 통합할 수 있는 네이티브 라이브러리를.NET 라이브러리를 설정 합니다.
+일부 경우에 기존 네이티브 Android 프로젝트에 Xamarin .NET 라이브러리를 추가 하는 것이 좋습니다. 이렇게 하려면 [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/) 도구를 사용 하 여 네이티브 Java 기반 Android 앱에 통합할 수 있는 네이티브 라이브러리로 .net 라이브러리를 전환할 수 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-## <a name="xamarinandroid-requirements"></a>Xamarin.Android 요구 사항
+## <a name="xamarinandroid-requirements"></a>Xamarin Android 요구 사항
 
-.NET 포함 하려면 Xamarin.Android에 대 한 다음이 필요 합니다.
+Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
--   **Xamarin.Android** &ndash; [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) 나중에 설치 해야 합니다.
+- **Xamarin android** &ndash; [xamarin. android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상이 설치 되어 있어야 합니다.
 
--   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) 나중에 설치 해야 합니다.
+- **Android Studio** &ndash;   [Android Studio 3.x](https://developer.android.com/studio/) 이상 버전을 설치해야 합니다.
 
--   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 해야 합니다.
+- **Java 개발자 키트** &ndash;   [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이상을 설치해야 합니다.
 
+## <a name="using-embeddinator-4000"></a>Embeddinator 사용-4000
 
-## <a name="using-embeddinator-4000"></a>Embeddinator 4000을 사용 하 여
+네이티브 Android 프로젝트에서 .NET 라이브러리를 사용 하려면 다음 단계를 사용 합니다.
 
-네이티브 Android 프로젝트의.NET 라이브러리를 사용 하려면 다음 단계를 사용 합니다.
+1. Android 라이브러리 C# 프로젝트를 만듭니다.
 
-1.  만들기는 C# Android 라이브러리 프로젝트.
+2. [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/)을 설치 합니다.
 
-2.  설치할 [Embeddinator 4000](https://www.nuget.org/packages/Embeddinator-4000/)합니다.
-
-3.  찾습니다 **Embeddinator 4000.exe** 에 추가 하 여 **경로**합니다. 예를 들어:
+3. **Embeddinator-4000** 를 찾아서 **경로**에 추가 합니다. 예를 들어:
 
     ```cmd
     set PATH=%PATH%;C:\Users\USERNAME\.nuget\packages\embeddinator-4000\0.4.0\tools
     ```
 
-4.  라이브러리 어셈블리에 Embeddinator 4000을 실행 합니다. 예를 들어:
+4. 라이브러리 어셈블리에서 Embeddinator-4000를 실행 합니다. 예를 들어:
 
     ```cmd
     Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
     ```
 
-5.  Android Studio에서 Java 프로젝트에서 생성된 된 AAR 파일을 사용 합니다.
-
+5. Android Studio의 Java 프로젝트에서 생성 된 AAR 파일을 사용 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-## <a name="xamarinandroid-requirements"></a>Xamarin.Android 요구 사항
+## <a name="xamarinandroid-requirements"></a>Xamarin Android 요구 사항
 
-.NET 포함 하려면 Xamarin.Android에 대 한 다음이 필요 합니다.
+Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
--   **Xamarin.Android** &ndash; [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) 나중에 설치 해야 합니다.
+- **Xamarin android** &ndash; [xamarin. android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상이 설치 되어 있어야 합니다.
 
--   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/) 나중에 설치 해야 합니다.
+- **Android Studio** &ndash;   [Android Studio 3.x](https://developer.android.com/studio/) 이상 버전을 설치해야 합니다.
 
--   **Java Developer Kit** &ndash; [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 나중에 설치 해야 합니다.
+- **Java 개발자 키트** &ndash;   [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이상을 설치해야 합니다.
 
--   **Mono** &ndash; [Mono 5.0](https://www.mono-project.com/download/) 나중에 설치 해야 합니다 (mono는 Mac 용 Visual Studio와 함께 설치 됨).
+- **Mono** &ndash;   [Mono 5.0](https://www.mono-project.com/download/) 이상이 설치되어 있어야 합니다(mono는 Mac용 Visual Studio와 함께 설치됨).
 
+## <a name="using-embeddinator-4000"></a>Embeddinator 사용-4000
 
-## <a name="using-embeddinator-4000"></a>Embeddinator 4000을 사용 하 여
+네이티브 Android 프로젝트에서 .NET 라이브러리를 사용 하려면 다음 단계를 사용 합니다.
 
-네이티브 Android 프로젝트의.NET 라이브러리를 사용 하려면 다음 단계를 사용 합니다.
+1. Android 라이브러리 C# 프로젝트를 만듭니다.
 
-1.  만들기는 C# Android 라이브러리 프로젝트.
+2. [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/)을 설치 합니다.
 
-2.  설치할 [Embeddinator 4000](https://www.nuget.org/packages/Embeddinator-4000/)합니다.
-
-3.  찾습니다 **Embeddinator 4000.exe** 추가한 **mono** 경로에 있습니다. 예를 들어:
+3. **Embeddinator-4000** 를 찾고 경로에 **mono** 를 추가 합니다. 예를 들어:
 
     ```bash
     export TOOLS=~/.nuget/packages/embeddinator-4000/0.4.0/tools
     export PATH=$PATH:/Library/Frameworks/Mono.framework/Commands
     ```
 
-4.  라이브러리 어셈블리에 Embeddinator 4000을 실행 합니다. 예를 들어:
+4. 라이브러리 어셈블리에서 Embeddinator-4000를 실행 합니다. 예를 들어:
 
     ```bash
     mono $TOOLS/Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
     ```
 
-5.  Android Studio에서 Java 프로젝트에서 생성된 된 AAR 파일을 사용 합니다.
+5. Android Studio의 Java 프로젝트에서 생성 된 AAR 파일을 사용 합니다.
 
 -----
 
-사용량 및 명령줄 옵션에 설명 되어는 [Embeddinator 4000](https://github.com/mono/Embeddinator-4000/blob/master/Usage.md#java--c) 설명서.
-
+사용 및 명령줄 옵션은 [Embeddinator-4000](https://github.com/mono/Embeddinator-4000/blob/master/Usage.md#java--c) 설명서에 설명 되어 있습니다.
 
 ## <a name="callbacks"></a>콜백
 
-에 대 한 자세한 [간의 호출 C# 및 Java](callbacks.md)합니다.
+[및 Java를 호출 하는 방법에 대해 알아봅니다. C# ](callbacks.md)
 
 ## <a name="samples"></a>샘플
 
-* [날씨 샘플 앱](https://github.com/jamesmontemagno/embeddinator-weather)
+- [날씨 샘플 앱](https://github.com/jamesmontemagno/embeddinator-weather)

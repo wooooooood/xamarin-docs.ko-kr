@@ -1,58 +1,56 @@
 ---
 title: 시작 하기F#
-description: 이 문서에서는 설명 하는 방법을 설명 F# mac 용 Visual Studio 2019 및 Visual Studio를 사용 하 여 Xamarin 응용 프로그램을 구축 하는 데 사용
+description: 이 문서에서는 Visual Studio 2019 F# 및 Mac용 Visual Studio를 사용 하 여 Xamarin 응용 프로그램을 빌드하는 방법에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2f67983addd03a065383a2940d6e6dfc7076f2be
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 074670045a8e0d02b719e4c361b1bf351759f335
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036461"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765446"
 ---
-# <a name="getting-started-with-f35"></a>F # 시작&#35;
+# <a name="getting-started-with-f35"></a>F 시작&#35;
 
 ## <a name="requirements"></a>요구 사항
 
-F#mac 용 Visual Studio에서 기본적으로 포함 됩니다.
+F#는 기본적으로 Mac용 Visual Studio에 포함 되어 있습니다.
 
-Windows에서 독립 실행형 설치 해야 합니다 F# 의 지침에 따라 컴파일러 도구 [FSharp.org 사이트](http://fsharp.org/use/windows/)합니다.
+Windows에서는 [FSharp.org 사이트](http://fsharp.org/use/windows/)의 지침에 F# 따라 독립 실행형 컴파일러 도구를 설치 해야 합니다.
 
-## <a name="creating-an-f35-project"></a>F를 만드는&#35; 프로젝트
+## <a name="creating-an-f35-project"></a>F&#35; 프로젝트 만들기
 
-새 F# 응용 프로그램 같은 이루어집니다 **새 프로젝트** 창에 사용 되는 C#합니다.
+새 F# 응용 프로그램 만들기는에 C#사용 되는 것과 동일한 **새 프로젝트** 창에서 수행 됩니다.
 
-Mac 용 Visual studio **파일 > 새 솔루션**합니다. 에 **새 프로젝트** 대화 상자에서 프로젝트 템플릿을 선택 합니다. 사용 하려는 언어를 선택 하려면 템플릿의 오른쪽에 드롭다운을 사용 합니다.
+Mac용 Visual Studio에서 **파일 > 새 솔루션**을 선택 합니다. **새 프로젝트** 대화 상자에서 프로젝트 템플릿을 선택 합니다. 템플릿 오른쪽의 드롭다운을 사용 하 여 사용할 언어를 선택 합니다.
 
- [![](overview-images/choosefsharp.png "템플릿의 오른쪽에 드롭다운을 사용 하 여 사용 하려는 언어를 선택 합니다.")](overview-images/choosefsharp.png#lightbox)
+ [![](overview-images/choosefsharp.png "템플릿 오른쪽의 드롭다운을 사용 하 여 사용할 언어를 선택 합니다.")](overview-images/choosefsharp.png#lightbox)
 
-프로젝트 형식 선택 하 고 클릭 **다음** 이름을 지정 하 고 만들어야 합니다.
+프로젝트 형식을 선택 하 고 **다음** 을 클릭 하 여 이름을 선택 하 고 만듭니다.
 
+이제 뛰어난 F# 응용 프로그램을 만들 준비가 되었습니다.
 
-준비가 이제 일부 훌륭한 만들기를 시작 하려면 F# 응용 프로그램.
+## <a name="learning-to-use-f35"></a>F 사용 학습&#35;
 
-## <a name="learning-to-use-f35"></a>F를 사용 하는 학습&#35;
+Mac용 Visual Studio F# 의 **새 솔루션** 대화 상자 내에서 자습서를 만들 수도 있습니다. 아래 이미지에 설명 된 대로 **다른 > .net F# > 자습서**로 이동 합니다.
 
-F# 자습서에서 만들 수도 있습니다는 **새 솔루션** mac 용 Visual Studio의 대화 상자 이동할 **기타 >.NET > F# 자습서**아래 이미지에 설명 된 대로,:
+ [![](overview-images/fsharptutorial.png "다른/.NET/ F# 자습서로 이동")](overview-images/fsharptutorial.png#lightbox)
 
- [![](overview-images/fsharptutorial.png "다른 이동 /.NET / F# 자습서")](overview-images/fsharptutorial.png#lightbox)
+그러면 새 대화형 솔루션이 열립니다. 이는 언어의 기본 사항을 그립 하는 좋은 방법입니다.
 
-이 새 대화형 솔루션을 엽니다. 이 작업을 지금 좋은 언어의 기본 사항 배우기 위한 방법 이며
+ [![](overview-images/newtutorial-sml.png "이를 탐색 하는 것은 언어의 기본 사항을 그립 하는 좋은 방법입니다.")](overview-images/newtutorial.png#lightbox)
 
- [![](overview-images/newtutorial-sml.png "탐색이 방법이 유용한 언어의 기본 사항 배우기 위한 가져오기")](overview-images/newtutorial.png#lightbox)
+작업을 F# 보려면 [샘플 목록을](~/cross-platform/platform/fsharp/samples.md) 확인 하세요.
 
-체크 아웃 합니다 [샘플 목록을](~/cross-platform/platform/fsharp/samples.md) 보려는 F# 작업에서.
+## <a name="references"></a>참조 항목
 
-## <a name="references"></a>참조
+모든 proficiencies에 대해 설명 하는 F# 언어에 대 한 최신 정보를 온라인으로 다양 한 있습니다. 다음은 몇 가지 권장 사항입니다.
 
-다양 한 정보를 신속 하 게 시작 하는 것에 대 한 온라인는 F# 언어에서 다루는 모든 proficiencies 합니다. 몇 가지 권장 되는 다음과 같습니다.
-
--  [F# Software Foundation](http://fsharp.org)
--  [Visual F# 개발 포털](http://go.microsoft.com/fwlink/?LinkID=234174)
--  [Visual F# 코드 갤러리](http://go.microsoft.com/fwlink/?LinkID=124614)
--  [Visual F# 수학/통계 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=235173)
--  [Visual F# 차트](http://go.microsoft.com/fwlink/?LinkId=235176)
-
+- [F# Software Foundation](http://fsharp.org)
+- [Visual F# Development 포털](http://go.microsoft.com/fwlink/?LinkID=234174)
+- [시각적 F# 코드 갤러리](http://go.microsoft.com/fwlink/?LinkID=124614)
+- [Visual F# Math/Stats 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=235173)
+- [시각적 F# 차트](http://go.microsoft.com/fwlink/?LinkId=235176)

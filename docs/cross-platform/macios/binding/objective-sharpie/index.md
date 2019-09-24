@@ -1,52 +1,51 @@
 ---
 title: 목표 Sharpie를 사용 하 여 바인딩 만들기
-description: 이 섹션에서는 목표 Sharpie, Objective-c 라이브러리 바인딩 만들기 프로세스를 자동화 하는 데 Xamarin의 명령줄 도구를 소개
+description: 이 섹션에서는 목적 Sharpie 라이브러리에 대 한 바인딩을 만드는 프로세스를 자동화 하는 데 사용 되는 Xamarin의 명령줄 도구인 목표를 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/11/2017
-ms.openlocfilehash: c298d3dc772929a123b6b65b0efe929f023a6563
-ms.sourcegitcommit: 7dbfac5f68c55f40dd726aa1b03cff62082fe711
+ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866362"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70765707"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>목표 Sharpie를 사용 하 여 바인딩 만들기
 
-_이 섹션에서는 목표 Sharpie, Objective-c 라이브러리 바인딩 만들기 프로세스를 자동화 하는 데 Xamarin의 명령줄 도구를 소개_
+_이 섹션에서는 목적 Sharpie 라이브러리에 대 한 바인딩을 만드는 프로세스를 자동화 하는 데 사용 되는 Xamarin의 명령줄 도구인 목표를 소개 합니다._
 
 - [개요](#overview) & [기록](#history)
 - [시작](get-started.md)
 - [도구 및 명령](tools.md)
 - [기능](platform/index.md)
 - [예제](examples/index.md)
-- [연습을 완료](~/ios/platform/binding-objective-c/walkthrough.md)
+- [연습 완료](~/ios/platform/binding-objective-c/walkthrough.md)
 - [릴리스 기록](releases.md)
 
 ## <a name="overview"></a>개요
 
-목표 Sharpie는 바인딩의 첫 번째 패스를 부트스트랩 하는 데는 명령줄 도구입니다.
-공용 API에 매핑할 네이티브 라이브러리의 헤더 파일을 구문 분석 하 여 작동 합니다 [바인딩 정의](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) (이전에 수동으로 수행한 프로세스).
+목표 Sharpie는 첫 번째 바인딩 패스를 부트스트랩 하는 데 도움이 되는 명령줄 도구입니다.
+네이티브 라이브러리의 헤더 파일을 구문 분석 하 여 공용 API를 [바인딩 정의](~/cross-platform/macios/binding/objective-c-libraries.md#The_API_definition_file) 에 매핑합니다 (이전에 수동으로 수행한 프로세스).
 
-목표 Sharpie 바인딩을으로 정확 하 게 하 고 최대한 철저 한 이므로 헤더 파일을 구문 분석 하는 Clang을 사용 합니다. 이 품질 바인딩을 생성 하는 데 걸리는 시간과 크게 줄일 수 있습니다.
+목표 Sharpie는 Clang 구문 분석 헤더 파일을 사용 하므로 바인딩은 정확히 정확 하 고 철저 하 게 사용할 수 있습니다. 그러면 품질 바인딩을 생성 하는 데 소요 되는 시간과 노력을 크게 줄일 수 있습니다.
 
 > [!IMPORTANT]
-> 목표 Sharpie는 고급 기술 자료의 Objective C (및 확장명, C)를 사용 하 여 숙련 된 Xamarin 개발자를 위한 도구. Objective-c 라이브러리 바인딩 하기 전에 명령줄 (및 네이티브 라이브러리의 작동 방식을 이해)에서 네이티브 라이브러리를 빌드하는 방법 확실히 알고가 있어야 합니다.
+> 목표 Sharpie는 목표에 대 한 고급 지식을 갖춘 숙련 된 Xamarin 개발자를 위한 도구입니다 (및 확장, C). 목표-C 라이브러리를 바인딩하려면 먼저 명령줄에서 네이티브 라이브러리를 빌드하는 방법에 대 한 확실 한 지식이 있어야 합니다 (그리고 네이티브 라이브러리가 작동 하는 방식을 이해 하는 것이 좋습니다).
 
 ## <a name="history"></a>기록
 
-된 진화 하 고 사용 하 여 목표 Sharpie 내부적으로 Xamarin에서 지난 3 년에 대 한 합니다. 목표 Sharpie 활용, 어차피 iOS 8, Mac OS X 10.10부터 Xamarin.iOS 및 Xamarin.Mac에 도입 된 Api 및 watchOS 2.0 목표 Sharpie 전체적으로 부트스트랩 된 합니다. Xamarin에 크게 의존 목표 Sharpie 내부적으로 자체 제품을 구축 하기 위한
+지난 3 년간 Xamarin에서 내부적으로 Sharpie 목표를 달성 하 고 노력 했습니다. Sharpie의 결집에 대 한 자세한 내용은 iOS 8, Mac OS X 10.10 및 watchOS 2.0 이후로 Xamarin.ios 및 Xamarin.ios에 도입 된 Api는 전적으로 목표 Sharpie를 사용 하 여 부트스트랩 되었습니다. Xamarin은 자체 제품을 빌드하기 위해 내부적으로 목표 Sharpie을 많이 사용 합니다.
 
-그러나 목표 Sharpie Objective-c 및 C, clang 컴파일러 명령줄에서 사용 하는 방법 및 결합 하는 방법을 일반적으로 네이티브 라이브러리는에 대 한 고급 지식이 필요한 고급 도구 이며 이 높은 표시줄 때문에 생각 했던 GUI 있으면 해당 잘못 기대치를 설정 하는 마법사 및 이와 같이 목표 Sharpie 전용인 현재 명령줄 도구를 사용할 수 있습니다.
+그러나 목표 Sharpie는 목표에 대 한 고급 지식이 필요 하 고, 명령줄에서 clang 컴파일러를 사용 하는 방법, 일반적으로 네이티브 라이브러리를 함께 배치 하는 방법 등의 고급 도구입니다. 이 고급 막대 때문에 GUI 마법사를 사용 하 여 잘못 된 기대치를 설정 하는 것으로 생각 하는 것 처럼 목표 Sharpie는 현재 명령줄 도구로만 제공 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [목표 Sharpie 다운로드](https://aka.ms/objective-sharpie)
-- [연습: Objective-c 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
+- [연습: 목표-C 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Objective-C 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
-- [바인딩 유형 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
+- [바인딩 형식 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Objective-C 개발자용 Xamarin](~/ios/get-started/objective-c-developers/index.md)
-

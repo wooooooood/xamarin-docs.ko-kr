@@ -1,105 +1,102 @@
 ---
-title: 응용 프로그램에서 Google Maps API를 사용 하 여
-description: Xamarin.Android 응용 프로그램에서 Google Maps API v2 기능을 구현 하는 방법입니다.
+title: 응용 프로그램에서 Google Maps API 사용
+description: Xamarin Android 응용 프로그램에서 Google Maps API v2 기능을 구현 하는 방법입니다.
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 1889154a12a701fb4ce57ef8644699dd978f768e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a640e1d6accdfa9184a29127bf4b3c7eeefe9b64
+ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61186296"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70761827"
 ---
-# <a name="using-the-google-maps-api-in-your-application"></a>Google Maps API를 사용 하 여 응용 프로그램에서
+# <a name="using-the-google-maps-api-in-your-application"></a>응용 프로그램에서 Google Maps API 사용
 
-Maps 응용 프로그램을 사용 하는 것은 유용 하지만 응용 프로그램에서 직접 지도 포함 하려는 경우가 있습니다. 맵 응용 프로그램을 기본 제공 하는 것 외에도 Google도 제공 합니다.는 [Android 용 네이티브 매핑 API](https://developers.google.com/maps/documentation/android-sdk/intro)합니다.
-Maps API를 통한 매핑 환경 더 많은 제어를 유지 관리 하려는 경우에 적합 합니다. Maps API를 사용할 수 있는 사항은 다음과 같습니다.
+Maps 응용 프로그램을 사용 하는 것이 좋지만 응용 프로그램에 맵을 직접 포함 하려는 경우가 있습니다. 기본 제공 맵 응용 프로그램 외에도 Google은 [Android 용 네이티브 매핑 API](https://developers.google.com/maps/documentation/android-sdk/intro)를 제공 합니다.
+Maps API는 매핑 환경에 대해 더 많은 제어를 유지 하려는 경우에 적합 합니다. Maps API에서 수행할 수 있는 작업은 다음과 같습니다.
 
--  Map의 관점을 프로그래밍 방식으로 변경 합니다.
--  추가 및 표식을 사용자 지정 합니다.
--  오버레이 사용 하 여 맵의 주석을 추가 합니다.
+- 프로그래밍 방식으로 지도의 관점 변경
+- 표식을 추가 하 고 사용자 지정 합니다.
+- 오버레이를 사용 하 여 지도에 주석을 추가 합니다.
 
-이제 사용 되지 않는 Google Maps Android API v1 달리 Google Maps Android API v2의 일부인 [Google Play Services](https://developers.google.com/android/guides/overview)합니다.
-Xamarin.Android 앱을 Google Maps Android API를 사용할 수 있기 전에 몇 가지 필수 조건 충족 해야 합니다.
-
+현재 사용 되지 않는 Google Maps Android API v1과 달리 Google Maps Android API v2는 [Google Play 서비스](https://developers.google.com/android/guides/overview)의 일부입니다.
+Google Maps Android API를 사용 하려면 먼저 Xamarin Android 앱이 몇 가지 필수 구성 요소를 충족 해야 합니다.
 
 ## <a name="google-maps-api-prerequisites"></a>Google Maps API 필수 조건
 
-몇 가지 단계를 Maps API를 사용 하기 전에 수행 해야 합니다. 포함 하 여:
+Maps API를 사용 하려면 다음을 포함 하 여 몇 가지 단계를 수행 해야 합니다.
 
--  [Maps API 키를 얻으려면](#obtain-maps-key)
--  [Google Play Services SDK 설치](#install-gps-sdk)
--  [NuGet에서 Xamarin.GooglePlayServices.Maps 패키지를 설치 합니다.](#install-gpsmaps-nuget)
--  [필요한 사용 권한을 지정 합니다.](#declare-permissions)
--  [필요에 따라 Google Api를 사용 하 여 에뮬레이터를 만들기](#create-emulator-with-google-api)
+- [맵 API 키 가져오기](#obtain-maps-key)
+- [Google Play 서비스 SDK 설치](#install-gps-sdk)
+- [NuGet에서 Xamarin.googleplayservices.base 패키지를 설치 합니다.](#install-gpsmaps-nuget)
+- [필요한 권한 지정](#declare-permissions)
+- [필요에 따라 Google Api를 사용 하 여 에뮬레이터를 만듭니다.](#create-emulator-with-google-api)
 
+### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Google Maps API 키 가져오기
 
-### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Google Maps API 키를 가져오려면
+첫 번째 단계는 Google Maps API 키를 가져오는 것입니다 (레거시 Google Maps v1 API에서 API 키를 다시 사용할 수 없음). Xamarin. Android에서 API 키를 가져오고 사용 하는 방법에 대 한 자세한 내용은 [Google MAPS API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)를 참조 하세요.
 
-첫 번째 단계 (참고 레거시 Google Maps v1 API에서 API 키를 다시 사용할 수 없습니다) Google Maps API 키를 가져오는 것입니다. Xamarin.Android를 사용 하 여 API 키를 사용 하는 방법에 대 한 정보를 참조 하세요 [는 Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)합니다.
+### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" />Google Play 서비스 SDK 설치
 
+Google Play 서비스는 Android 응용 프로그램에서 Google +, 인앱 결제, 지도 등의 다양 한 Google 기능을 활용할 수 있도록 지 원하는 Google의 기술입니다. 이러한 기능은 Android 장치에서 [Google Play 서비스 APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)에 포함 된 백그라운드 서비스로 액세스할 수 있습니다.
 
-### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Google Play Services SDK 설치
+Android 응용 프로그램은 Google Play 서비스 클라이언트 라이브러리를 통해 Google Play 서비스와 상호 작용 합니다. 이 라이브러리에는 맵과 같은 개별 서비스에 대 한 인터페이스와 클래스가 포함 되어 있습니다. 다음 다이어그램에서는 Android 응용 프로그램과 Google Play 서비스 간의 관계를 보여 줍니다.
 
-Google Play Services에 Google +, 앱 내 청구, 및 지도 같은 다양 한 Google 기능을 활용 하려면 Android 응용 프로그램을 허용 하는 Google에서 기술입니다. 이러한 기능에 포함 된 백그라운드 서비스로 Android 장치에서 액세스할 수 합니다 [Google Play Services APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)합니다.
+![Google Play 서비스 APK를 업데이트 Google Play 스토어를 보여 주는 다이어그램](maps-api-images/play-services-diagram.png)
 
-Google Play Services 클라이언트 라이브러리를 통해 Google Play 서비스를 사용 하 여 android 응용 프로그램 상호 작용 합니다. 이 라이브러리는 인터페이스 및 맵과 같은 개별 서비스에 대 한 클래스를 포함합니다. 다음 다이어그램은 Android 응용 프로그램 및 Google Play 서비스 간의 관계를 보여줍니다.
+Android Maps API는 Google Play 서비스 일부로 제공 됩니다.
+Xamarin Android 응용 프로그램에서 Maps API를 사용 하려면 먼저 [Android SDK 관리자](~/android/get-started/installation/android-sdk.md)를 사용 하 여 Google Play 서비스 SDK를 설치 해야 합니다. 다음 스크린샷은 Android SDK Manager에서 Google Play services 클라이언트를 찾을 수 있는 위치를 보여 줍니다.
 
-![Google Play Services APK를 업데이트 하는 Google Play 스토어를 보여 주는 다이어그램](maps-api-images/play-services-diagram.png)
-
-Android Maps API는 Google Play 서비스의 일부로 제공 됩니다.
-사용 하 여 Google Play Services SDK을 설치 해야 하는지 Xamarin.Android 응용 프로그램 맵 API를 사용 하려면 먼저 합니다 [Android SDK Manager](~/android/get-started/installation/android-sdk.md)합니다. 다음 스크린샷에서 Google Play 서비스 클라이언트를 찾을 수 있습니다 Android SDK Manager의 위치를 보여줍니다.
-
-![Google Play 서비스 추가 Android SDK Manager의 아래에 나타납니다.](maps-api-images/image01.png)
+![Google Play 서비스은 Android SDK 관리자의 추가 기능 아래에 나타납니다.](maps-api-images/image01.png)
 
 > [!NOTE]
-> Google Play services APK는 모든 장치에 있을 수 있는 사용이 허가 된 제품. 이 설치 되어 있지 않으면 장치에서 Google Maps 작동 하지 않습니다.
+> Google Play services APK는 모든 장치에 없을 수 있는 사용이 허가 된 제품입니다. 설치 되지 않은 경우에는 Google Maps가 장치에서 작동 하지 않습니다.
 
-### <a name="a-nameinstall-gpsmaps-nuget--install-the-xamaringoogleplayservicesmaps-package-from-nuget"></a><a name="install-gpsmaps-nuget" /> NuGet에서 Xamarin.GooglePlayServices.Maps 패키지를 설치 합니다.
+### <a name="a-nameinstall-gpsmaps-nuget--install-the-xamaringoogleplayservicesmaps-package-from-nuget"></a><a name="install-gpsmaps-nuget" />NuGet에서 Xamarin.googleplayservices.base 패키지를 설치 합니다.
 
-합니다 [Xamarin.GooglePlayServices.Maps 패키지](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps) Google Play Services Maps API에 대 한 Xamarin.Android 바인딩을 포함 합니다.
-Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단추로 클릭 합니다 **참조가** 고 솔루션 탐색기에서 프로젝트의 폴더 **NuGet 패키지 관리...** :
+[Xamarin.googleplayservices.base 패키지](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps) 에는 GOOGLE PLAY 서비스 Maps API에 대 한 xamarin.ios 바인딩이 포함 되어 있습니다.
+Google Play 서비스 맵 패키지를 추가 하려면 솔루션 탐색기에서 프로젝트의 **참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리 ...** 를 클릭 합니다.
 
-![참조에서 보여주는 솔루션 탐색기 NuGet 패키지 관리 상황에 맞는 메뉴 항목](maps-api-images/image02.png)
+![참조 아래의 NuGet 패키지 관리 상황에 맞는 메뉴 항목을 보여 주는 솔루션 탐색기](maps-api-images/image02.png)
 
-열립니다는 **NuGet 패키지 관리자**합니다. 클릭 **찾아보기** enter **Xamarin Google Play 서비스 맵** 검색 필드에 있습니다. 선택 **Xamarin.GooglePlayServices.Maps** 누릅니다 **설치**합니다. (이 패키지는 이전에 설치 되어 있던, 클릭 **업데이트**.):
+그러면 **NuGet 패키지 관리자**가 열립니다. **찾아보기** 를 클릭 하 고 검색 필드에 **Xamarin Google Play 서비스 지도** 를 입력 합니다. **Xamarin.googleplayservices.base** 를 선택 하 고 **설치**를 클릭 합니다. 이 패키지가 이전에 설치 된 경우 **업데이트**를 클릭 합니다.
 
-[![선택한 Xamarin.GooglePlayServices.Maps 패키지를 사용 하 여 NuGet 패키지 관리자](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
+[![Xamarin.googleplayservices.base 패키지를 선택한 NuGet 패키지 관리자](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
-다음 종속성 패키지도 설치 되어 있는지 확인 합니다.
+다음 종속성 패키지도 설치 되어 있습니다.
 
--   **Xamarin.GooglePlayServices.Base**
--   **Xamarin.GooglePlayServices.Basement**
--   **Xamarin.GooglePlayServices.Tasks**
+- **Xamarin.GooglePlayServices.Base**
+- **Xamarin.GooglePlayServices.Basement**
+- **Xamarin.GooglePlayServices.Tasks**
 
-### <a name="a-namedeclare-permissions--specify-the-required-permissions"></a><a name="declare-permissions" /> 필요한 사용 권한을 지정 합니다.
+### <a name="a-namedeclare-permissions--specify-the-required-permissions"></a><a name="declare-permissions" />필요한 권한 지정
 
-앱에는 Google Maps API를 사용 하려면 하드웨어 및 사용 권한 요구 사항을 식별 해야 합니다.  Google Play Services SDK에서 일부 사용 권한을 자동으로 부여 됩니다 및 개발자를 명시적으로 추가할 필요는 없습니다 **AndroidManfest.XML**:
+앱은 Google Maps API를 사용 하기 위해 하드웨어 및 사용 권한 요구 사항을 확인 해야 합니다.  일부 권한은 Google Play 서비스 SDK에서 자동으로 부여 되며 개발자가 명시적으로 **Androidmanfest**에 추가 하는 데는 필요 하지 않습니다.
 
--  **네트워크 상태에 대 한 액세스** &ndash; Maps API 지도 타일을 다운로드할 수 하는 경우를 확인할 수 있어야 합니다.
+- **네트워크 상태에 대 한 액세스** &ndash; Maps API에서 지도 타일을 다운로드할 수 있는지 확인할 수 있어야 합니다.
 
--  **인터넷에 액세스할** &ndash; 인터넷 액세스는 맵 타일을 다운로드 하 고 API 액세스에 대 한 Google Play 서버와 통신 하는 데 필요한 합니다.
+- **인터넷 액세스** &ndash; 지도 타일을 다운로드 하 고 API 액세스를 위해 Google Play 서버와 통신 하려면 인터넷에 액세스 해야 합니다.
 
-에 다음 사용 권한 및 기능을 지정 해야 합니다 **AndroidManifest.XML** Google Maps Android API에 대 한 합니다.
+Google Maps Android API에 대해 **Androidmanifest** 에 다음 사용 권한 및 기능을 지정 해야 합니다.
 
--  **OpenGL ES v2** &ndash; 응용 프로그램에는 OpenGL ES v2에 대 한 요구 사항을 선언 해야 합니다.
+- **OPENGL ES v2** &ndash; 응용 프로그램은 OpenGL ES v 2에 대 한 요구 사항을 선언 해야 합니다.
 
--  **Google Maps API 키** &ndash; 응용 프로그램이 등록 되 고 Google Play 서비스를 사용할 수 있는 권한이 있는지 확인 하려면 API 키가 사용 됩니다. 참조 [Google Maps API 키를 가져오는](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md) 이 키에 대 한 세부 정보에 대 한 합니다.
+- **Google MAPS API 키** &ndash; API 키는 응용 프로그램이 등록 되었으며 Google Play 서비스 사용할 수 있는 권한이 있는지 확인 하는 데 사용 됩니다. 이 키에 대 한 자세한 내용은 [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md) 참조 하세요.
 
-- **레거시 Apache HTTP 클라이언트 요청** &ndash; Android 9.0 (API 레벨 28)를 대상으로 하는 앱 또는 위에 임을 지정 해야 기존 Apache HTTP 클라이언트를 사용 하는 선택적 라이브러리입니다.
+- **레거시 APACHE HTTP 클라이언트 요청** &ndash; Android 9.0 (API 수준 28) 이상을 대상으로 하는 앱은 레거시 Apache HTTP 클라이언트를 사용할 선택적 라이브러리로 지정 해야 합니다.
 
--  **Google 웹 기반 서비스에 액세스할** &ndash; 응용 프로그램에는 Android Maps API를 지 Google의 웹 서비스에 액세스할 수 있는 권한이 필요 합니다.
+- **Google 웹 기반 서비스에** 대 한 액세스 &ndash; 응용 프로그램에 Android Maps API를 실행 하는 Google 웹 서비스에 액세스할 수 있는 권한이 필요 합니다.
 
--  **Google Play 서비스 알림에 대 한 사용 권한** &ndash; 응용 프로그램에 Google Play 서비스에서 원격 알림을 받을 수 있는 권한을 부여 해야 합니다.
+- **Google Play 서비스 알림에 대 한 사용 권한** &ndash; 응용 프로그램은 Google Play 서비스에서 원격 알림을 받을 수 있는 권한을 부여 받아야 합니다.
 
--  **위치 공급자에 대 한 액세스** &ndash; 권한은 선택 사항입니다.
-   이러한 자습서를 통해 여 `GoogleMap` 맵에 장치 위치를 표시 하는 클래스입니다.
+- **위치 공급자에 대 한 액세스** &ndash; 이러한 권한은 선택적 권한입니다.
+   이를 통해 클래스 `GoogleMap` 는 맵의 장치 위치를 표시할 수 있습니다.
 
-또한 Android 9가 bootclasspath에서 Apache HTTP 클라이언트 라이브러리를 제거 및 이므로 이상의 API 28를 대상으로 하는 응용 프로그램에 사용할 수 없습니다. 에 다음 줄을 추가 해야 합니다 `application` 노드의 하 **AndroidManifest.xml** 28 이상 API를 대상으로 하는 응용 프로그램에서 Apache HTTP 클라이언트를 사용 하 여 계속 하려면 파일:
+또한 Android 9는 bootclasspath에서 Apache HTTP 클라이언트 라이브러리를 제거 했으므로 API 28 이상을 대상으로 하는 응용 프로그램에서는 사용할 수 없습니다. API 28 이상을 대상으로 하는 응용 `application` 프로그램에서 Apache HTTP 클라이언트를 계속 사용 하려면 다음 줄을 **androidmanifest .xml** 파일의 노드에 추가 해야 합니다.
 
 ```xml
 <application ...>
@@ -109,9 +106,9 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
 ```
 
 > [!NOTE]
-> Google Play SDK의 아주 오래 된 버전에서는 앱이 요청은 `WRITE_EXTERNAL_STORAGE` 권한. 이 요구 사항을 Google Play 서비스에 대 한 최근 Xamarin 바인딩을 사용 하 여 필요한 경우 더 이상
+> Google Play SDK의 이전 버전에서는 `WRITE_EXTERNAL_STORAGE` 사용 권한을 요청 하는 앱이 필요 했습니다. Google Play 서비스에 대 한 최근 Xamarin 바인딩에는이 요구 사항이 더 이상 필요 하지 않습니다.
 
-다음 코드 조각에 추가 되어야 하는 설정의 한 예로 **AndroidManifest.XML**:
+다음 코드 조각은 **Androidmanifest**에 추가 해야 하는 설정의 예입니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -124,7 +121,6 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
-
     <!-- Permission to receive remote notifications from Google Play Services -->
     <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
     <uses-permission android:name="<PACKAGE NAME>.permission.MAPS_RECEIVE" />
@@ -133,7 +129,6 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
     <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application android:label="@string/app_name">
         <!-- Put your Google Maps V2 API Key here. -->
@@ -145,44 +140,42 @@ Google Play 서비스 맵 패키지를 추가 하려면 마우스 오른쪽 단�
 </manifest>
 ```
 
-사용 권한을 요청 하는 것 외에도 **AndroidManifest.XML**를 앱에 대 한 런타임 권한을 검사도 수행 해야 합니다는 `ACCESS_COARSE_LOCATION` 및 `ACCESS_FINE_LOCATION` 권한. 참조를 [Xamarin.Android 권한을](~/android/app-fundamentals/permissions.md) 런타임 권한 검사를 수행 하는 방법에 대 한 자세한 내용은 가이드입니다.
-
+권한 **androidmanifest**을 요청 하는 것 외에도 앱에서 `ACCESS_COARSE_LOCATION` 및 `ACCESS_FINE_LOCATION` 사용 권한에 대 한 런타임 권한 검사를 수행 해야 합니다. 런타임 권한 검사를 수행 하는 방법에 대 한 자세한 내용은 [Xamarin Android 사용 권한](~/android/app-fundamentals/permissions.md) 가이드를 참조 하세요.
 
 ### <a name="a-namecreate-emulator-with-google-api-create-an-emulator-with-google-apis"></a><a name="create-emulator-with-google-api" />Google Api를 사용 하 여 에뮬레이터 만들기
 
-Google Play 서비스를 사용 하 여 물리적 Android 장치가 설치 되어 있지는 개발에 대 한 에뮬레이터 이미지를 만들 수 것입니다. 자세한 내용은 참조는 [장치 관리자](~/android/get-started/installation/android-emulator/device-manager.md)합니다.
-
+Google Play services를 사용 하는 물리적 Android 장치가 설치 되지 않은 경우 개발용 에뮬레이터 이미지를 만들 수 있습니다. 자세한 내용은 [Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)를 참조 하세요.
 
 ## <a name="the-googlemap-class"></a>GoogleMap 클래스
 
-필수 조건이 충족 되 면 응용 프로그램 개발을 시작 하 여 Android Maps API를 사용 하 여 차례입니다. 합니다 [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap) 클래스는 Xamarin.Android 응용 프로그램을 표시 하 고 Android 용 Google 지도와 상호 작용에 사용할 기본 API입니다. 이 클래스에는 다음 책임이 있습니다.
+필수 구성 요소가 충족 되 면 응용 프로그램 개발을 시작 하 고 Android Maps API를 사용할 차례입니다. [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap) 클래스는 Xamarin android 응용 프로그램이 Android 용 Google Maps를 표시 하 고 상호 작용 하는 데 사용 하는 기본 API입니다. 이 클래스에는 다음과 같은 책임이 있습니다.
 
--  Google 웹 서비스를 사용 하 여 응용 프로그램을 인증 하려면 Google Play 서비스와 상호 작용 합니다.
+- Google 웹 서비스를 사용 하 여 응용 프로그램에 권한을 부여 하기 위해 Google Play 서비스와 상호 작용 합니다.
 
--  다운로드, 캐싱, 및 지도 타일을 표시 합니다.
+- 지도 타일을 다운로드 하 고, 캐시 하 고, 표시 합니다.
 
--  와 같은 UI 컨트롤을 표시 하는 이동 및 사용자에 게 확대/축소 합니다.
+- 사용자에 게 이동 및 확대와 같은 UI 컨트롤을 표시 합니다.
 
--  지도에 표식 및 기 하 도형을 그리기입니다.
+- 지도에서 표식 및 기하학적 모양을 그립니다.
 
-`GoogleMap` 활동에 두 가지 방법 중 하나에 추가 됩니다.
+는 `GoogleMap` 다음 두 가지 방법 중 하나로 활동에 추가 됩니다.
 
--  **MapFragment** - [MapFragment](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment) 역할을 호스트 하는 특수화 된 조각는 `GoogleMap` 개체입니다. `MapFragment` Android API 수준 12 이상이 필요 합니다.
-   이전 버전의 Android에서 사용할 수는 [SupportMapFragment](https://developers.google.com/android/reference/com/google/android/gms/maps/SupportMapFragment)합니다.  이 가이드를 사용 하 여 중점을 `MapFragment` 클래스입니다.
+- **Mapfragment** - [mapfragment](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment) 는 `GoogleMap` 개체에 대 한 호스트 역할을 하는 특수 한 조각입니다. 에 `MapFragment` 는 Android API 수준 12 이상이 필요 합니다.
+   이전 버전의 Android에서는 [Supportmapfragment](https://developers.google.com/android/reference/com/google/android/gms/maps/SupportMapFragment)를 사용할 수 있습니다.  이 가이드는 `MapFragment` 클래스 사용에 중점을 둡니다.
 
--  **MapView** - [MapView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView) 특수화 된 보기 하위 클래스에 대 한 호스트 역할을 수행할 수 있는를 `GoogleMap` 개체입니다. 이 클래스의 사용자는 모든 활동 수명 주기 메서드를 전달 해야 합니다는 `MapView` 클래스입니다.
+- **Mapview** - [mapview](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView) 는 `GoogleMap` 개체에 대 한 호스트 역할을 할 수 있는 특수화 된 View 하위 클래스입니다. 이 클래스의 사용자는 모든 작업 수명 주기 메서드를 `MapView` 클래스에 전달 해야 합니다.
 
-각이 컨테이너를 노출 하는 `Map` 의 인스턴스를 반환 하는 속성 `GoogleMap`합니다. 기본 설정에 부여 해야 합니다 [MapFragment](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment) 개발자 수동으로 구현 해야 하는 상용구 코드 양을 줄일 수 있는 간단한 API를 그대로 클래스입니다.
+이러한 각 컨테이너는의 `Map` `GoogleMap`인스턴스를 반환 하는 속성을 제공 합니다. 개발자가 수동으로 구현 해야 하는 상용구 코드의 크기를 줄이는 단순한 API 이므로 기본 설정은 [Mapfragment](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment) 클래스에 부여 해야 합니다.
 
-### <a name="adding-a-mapfragment-to-an-activity"></a>활동을 MapFragment 추가
+### <a name="adding-a-mapfragment-to-an-activity"></a>작업에 MapFragment 추가
 
-다음 스크린샷에서 간단한 예가 `MapFragment`:
+다음 스크린샷에서는 간단한 `MapFragment`예제입니다.
 
 [![Google 지도 조각을 표시 하는 장치의 스크린샷](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
 
-다른 조각 클래스와 마찬가지로 두 가지 추가 하는 `MapFragment` 활동:
+다른 조각 클래스와 마찬가지로를 `MapFragment` 활동에 추가 하는 방법에는 두 가지가 있습니다.
 
--   **선언적** - `MapFragment` 활동에 대 한 XML 레이아웃 파일을 통해 추가할 수 있습니다. 다음 XML 코드 조각을 사용 하는 방법의 예를 보여 줍니다.는 `fragment` 요소:
+- **선언적** -활동 `MapFragment` 에 대 한 XML 레이아웃 파일을 통해를 추가할 수 있습니다. 다음 XML 코드 조각에서는 `fragment` 요소를 사용 하는 방법의 예를 보여 줍니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -193,7 +186,7 @@ Google Play 서비스를 사용 하 여 물리적 Android 장치가 설치 되�
               class="com.google.android.gms.maps.MapFragment" />
     ```
 
--   **프로그래밍 방식으로** - `MapFragment` 사용 하 여 프로그래밍 방식으로 인스턴스화할 수 있습니다 합니다 [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) 메서드 후 활동에 추가 합니다. 이 조각을 인스턴스화하는 가장 간단한 방법은 사용 하는 `MapFragment` 활동에 추가 합니다.
+- **프로그래밍 방식** 으로 `MapFragment` 는 메서드를 [`MapFragment.NewInstance`](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) 사용 하 여 프로그래밍 방식으로 인스턴스화한 다음 활동에 추가할 수 있습니다. 이 코드 조각에서는 개체를 `MapFragment` 인스턴스화하고 활동에 추가 하는 가장 간단한 방법을 보여 줍니다.
 
     ```csharp
         var mapFrag = MapFragment.NewInstance();
@@ -203,11 +196,12 @@ Google Play 서비스를 사용 하 여 물리적 Android 장치가 설치 되�
 
     ```
 
-    구성 하는 것이 불가능 합니다 `MapFragment` 전달 하 여 개체를 [ `GoogleMapOptions` ](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) 개체를 `NewInstance`입니다. 이 섹션에 설명 되어 [GoogleMap 속성](#googlemap_object) 이 가이드에 나중에 표시 됩니다.
+    개체를에 `MapFragment` [`GoogleMapOptions`](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) 전달하여개체를구성할수있습니다.`NewInstance` 이에 대해서는이 가이드의 뒷부분에 나오는 [GoogleMap 속성](#googlemap_object) 섹션에 설명 되어 있습니다.
 
-`MapFragment.GetMapAsync` 메서드 초기화를 사용 하는 [ `GoogleMap` ](#googlemap_object) 조각에서 호스트 되는 및에서 호스트 되는 map 개체에 대 한 참조는 `MapFragment`합니다. 이 메서드는 구현 하는 개체는 `IOnMapReadyCallback` 인터페이스입니다.
+메서드 `MapFragment.GetMapAsync` 는 조각에서 호스트 되는 [`GoogleMap`](#googlemap_object) 를 초기화 하 고에서 호스팅하 `MapFragment`는 맵 개체에 대 한 참조를 가져오는 데 사용 됩니다. 이 메서드는 인터페이스를 `IOnMapReadyCallback` 구현 하는 개체를 사용 합니다.
 
-이 인터페이스에는 단일 메서드 `IMapReadyCallback.OnMapReady(MapFragment map)` 상호 작용 하는 앱에 대 한 가능한 경우 호출 되는 여 `GoogleMap` 개체입니다. 다음 코드 조각은 Android 활동을 초기화할 수는 방법을 보여 줍니다.는 `MapFragment` 하 고 구현 된 `IOnMapReadyCallback` 인터페이스:
+이 인터페이스에는 응용 프로그램이 `IMapReadyCallback.OnMapReady(MapFragment map)` `GoogleMap` 개체와 상호 작용할 수 있을 때 호출 되는 단일 메서드가 있습니다. 다음 코드 조각에서는 Android 작업에서를 `MapFragment` 초기화 하 고 인터페이스를 `IOnMapReadyCallback` 구현 하는 방법을 보여 줍니다.
+
 ```csharp
 public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 {
@@ -229,26 +223,25 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 }
 ```
 
-### <a name="map-types"></a>맵 유형
+### <a name="map-types"></a>지도 유형
 
-Google Maps API에서 사용할 수 있는 5 가지 유형의 지도:
+Google Maps API에서 사용할 수 있는 지도에는 5 가지 유형이 있습니다.
 
--  **보통** -기본 지도 형식입니다. 도 및 중요 한 자연 스러운 기능 (예: 건물 및 브리지) 관심 임의의 점수와 함께 보여 줍니다.
+- **Normal** -기본 지도 유형입니다. 이 도구는 빌딩 및 브리지와 같은 몇 가지 인공 점과 함께도로와 중요 한 자연 기능을 보여 줍니다.
 
--  **위성** -이 맵은 위성 사진을 보여 줍니다.
+- **위성** -이 지도는 위성 사진을 보여 줍니다.
 
--  **하이브리드** -이 맵에 위성 사진 표시 하 고도 매핑합니다.
+- **하이브리드** -이 지도는 위성 사진 및도로 지도를 표시 합니다.
 
--  **지형** -주로 일부도 사용 하 여 지형적 특징을 보여 줍니다.
+- **지형** -주로 일부도로 topographical 기능을 보여 줍니다.
 
--  **None** -빈 그리드가으로 렌더링 하므로,이 맵은 모든 타일을 로드 하지 않습니다.
+- **없음** -이 맵은 타일을 로드 하지 않으며 빈 그리드로 렌더링 됩니다.
 
+아래 이미지에는 왼쪽에서 오른쪽 (보통, 하이브리드, 지형)의 다양 한 지도 유형이 나와 있습니다.
 
-아래 이미지에서는 왼쪽에서 오른쪽 (보통, 하이브리드, 지형)에서 다양 한 유형의 지도 중 3 개를 보여 줍니다.
+[![3 개의 지도 예제 스크린샷: 보통, 하이브리드 및 지형](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
-[![세 가지 지도 예제 스크린샷. 보통, 하이브리드 및 지형](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
-
-`GoogleMap.MapType` 속성은 설정 하거나 표시 되는 지도 유형을 변경 하려면 사용 합니다. 다음 코드 조각에는 위성 지도 표시 하는 방법을 보여 줍니다.
+`GoogleMap.MapType` 속성은 표시 되는 맵의 유형을 설정 하거나 변경 하는 데 사용 됩니다. 다음 코드 조각에서는 위성 지도를 표시 하는 방법을 보여 줍니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -257,10 +250,9 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
+### <a name="a-namegooglemap_object-googlemap-properties"></a><a name="googlemap_object" />GoogleMap 속성
 
-### <a name="a-namegooglemapobject-googlemap-properties"></a><a name="googlemap_object" />GoogleMap 속성
-
-`GoogleMap` map의 모양과 기능을 제어할 수 있는 몇 가지 속성을 정의 합니다. 초기 상태를 구성 하는 한 가지 방법은 `GoogleMap` 전달 하는 것을 [GoogleMapOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) 만들면 개체를 `MapFragment`입니다. 다음 코드 조각은 사용 하는 한 가지 예는 `GoogleMapOptions` 만들 때 개체를 `MapFragment`:
+`GoogleMap`맵의 기능과 기능을 제어할 수 있는 여러 속성을 정의 합니다. 의 `GoogleMap` 초기 상태를 구성 하는 한 가지 방법은를 `MapFragment`만들 때 [GoogleMapOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMapOptions) 개체를 전달 하는 것입니다. 다음 코드 조각은를 `GoogleMapOptions` `MapFragment`만들 때 개체를 사용 하는 한 가지 예입니다.
 
 ```csharp
 GoogleMapOptions mapOptions = new GoogleMapOptions()
@@ -274,7 +266,7 @@ fragTx.Add(Resource.Id.map, mapFragment, "map");
 fragTx.Commit();
 ```
 
-구성 하는 다른 방법은 `GoogleMap` 에서 속성을 조작 하는 것은 [UiSettings](https://developers.google.com/android/reference/com/google/android/gms/maps/UiSettings) 지도 개체의 합니다. 다음 코드 샘플을 구성 하는 방법을 보여 줍니다는 `GoogleMap` 컴퍼스 및 확대/축소 컨트롤 표시 하려면:
+를 `GoogleMap` 구성 하는 다른 방법은 map 개체의 [uisettings](https://developers.google.com/android/reference/com/google/android/gms/maps/UiSettings) 에서 속성을 조작 하는 것입니다. 다음 코드 샘플은 확대/축소 컨트롤 및 `GoogleMap` 나침반을 표시 하도록를 구성 하는 방법을 보여 줍니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -284,17 +276,17 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-## <a name="interacting-with-the-googlemap"></a>GoogleMap 상호 작용
+## <a name="interacting-with-the-googlemap"></a>GoogleMap와 상호 작용
 
-Android Maps API 관점 변경, 표식, 사용자 지정 오버레이 배치 하거나 기 하 도형을 그리기 작업을 허용 하는 Api를 제공 합니다. 이 섹션에서는 Xamarin.Android에서 이러한 태스크 중 일부를 수행 하는 방법을 설명 합니다.
+Android Maps API는 활동에서 시점을 변경 하거나, 표식을 추가 하거나, 사용자 지정 오버레이를 추가 하거나, 도형을 그릴 수 있는 Api를 제공 합니다. 이 섹션에서는 Xamarin Android에서 이러한 작업 중 일부를 수행 하는 방법을 설명 합니다.
 
 ### <a name="changing-the-viewpoint"></a>관점 변경
 
-맵 기반 메 르 카 토르 도법으로 화면의 평면으로 모델링 됩니다. 지도 보기에는 메시지를 표시 합니다는 *카메라* 바로 아래로이 평면에서 보기. 위치, 확대/축소, 기울기, 변경 하 고 포함 하 여 카메라의 위치를 제어할 수 있습니다. 합니다 [CameraUpdate](https://developers.google.com/android/reference/com/google/android/gms/maps/CameraUpdate) 클래스 카메라 위치를 이동 하는 데 사용 됩니다. `CameraUpdate` 개체는 직접 인스턴스화되지, Maps API를 제공 하는 대신 합니다 [CameraUpdateFactory](https://developers.google.com/android/reference/com/google/android/gms/maps/CameraUpdateFactory) 클래스입니다.
+지도는 Mercator 프로젝션을 기반으로 화면에서 평면 평면으로 모델링할 됩니다. 지도 보기는이 평면에서 바로 작동 하는 *카메라* 의 뷰입니다. 위치, 확대/축소, 기울기 및 베어링을 변경 하 여 카메라의 위치를 제어할 수 있습니다. [CameraUpdate](https://developers.google.com/android/reference/com/google/android/gms/maps/CameraUpdate) 클래스는 카메라 위치를 이동 하는 데 사용 됩니다. `CameraUpdate`개체가 직접 인스턴스화되지 않고 맵 API가 [CameraUpdateFactory](https://developers.google.com/android/reference/com/google/android/gms/maps/CameraUpdateFactory) 클래스를 제공 합니다.
 
-한 번을 `CameraUpdate` 개체가 생성 되었음을을 매개 변수로 전달 합니다 [GoogleMap.MoveCamera](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap#moveCamera(com.google.android.gms.maps.CameraUpdate)) 또는 [GoogleMap.AnimateCamera](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap#animateCamera(com.google.android.gms.maps.CameraUpdate)) 메서드. 합니다 `MoveCamera` 메서드는 동안 즉시 맵 업데이트는 `AnimateCamera` 메서드 원활 하 고 애니메이션 전환을 제공 합니다.
+개체를 만든 후에는 [GoogleMap MoveCamera](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap#moveCamera(com.google.android.gms.maps.CameraUpdate)) 또는 [GoogleMap AnimateCamera](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap#animateCamera(com.google.android.gms.maps.CameraUpdate)) 메서드에 매개 변수로 전달 됩니다. `CameraUpdate` 메서드는 부드러운 애니메이션 전환을 제공 `AnimateCamera` 하지만 메서드는 맵을 즉시 업데이트 합니다. `MoveCamera`
 
-이 코드 조각은 사용 하는 방법의 간단한 예는 `CameraUpdateFactory` 만들려면는 `CameraUpdate` 하나의 확대/축소 수준에 따라 지도의 확대/축소 수준을 증가 하는:
+이 코드 조각은을 사용 `CameraUpdateFactory` 하 여 지도의 확대/축소 수준을 1 확대/축소 수준으로 높이는를 `CameraUpdate` 만드는 방법에 대 한 간단한 예제입니다.
 
 ```csharp
 MapFragment mapFrag = (MapFragment) FragmentManager.FindFragmentById(Resource.Id.my_mapfragment_container);
@@ -307,8 +299,8 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-Maps API를 제공 된 [CameraPosition](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) 카메라 위치에 대 한 가능한 값의 모든 집계는 합니다. 이 클래스의 인스턴스를 지정할 수는 [CameraUpdateFactory.NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) 반환 하는 메서드를 `CameraUpdate` 개체입니다. Maps API도 포함 되어 있습니다 합니다 [CameraPosition.Builder](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) 클래스를 만들기 위한 fluent API를 제공 하는 `CameraPosition` 개체입니다.
-다음 코드 조각을 만드는 예를 보여 줍니다.는 `CameraUpdate` 에서 `CameraPosition` 는에서 카메라 위치를 변경 하는 데 사용 된 `GoogleMap`:
+Maps API는 카메라 위치에 대해 가능한 모든 값을 집계 하는 [CameraPosition](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.html) 을 제공 합니다. 개체를 `CameraUpdate` 반환 하는 [NewCameraPosition](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/CameraUpdateFactory#newCameraPosition%28com.google.android.gms.maps.model.CameraPosition%29) 메서드에이 클래스의 인스턴스를 제공할 수 있습니다. 지도 api에는 `CameraPosition`개체를 만들기 위한 흐름 api를 제공하는 [CameraPosition.Builder](https://developer.android.com/reference/com/google/android/gms/maps/model/CameraPosition.Builder.html) 클래스도 포함되어 있습니다.
+다음 코드 조각에서는 `CameraUpdate` `CameraPosition` 에서을 만들고이를 사용 하 여의 카메라 위치 `GoogleMap`를 변경 하는 예제를 보여 줍니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -329,30 +321,27 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-맵에서 특정 위치를 나타내는 이전 코드 조각에는 [LatLng](https://developers.google.com/android/reference/com/google/android/gms/maps/model/LatLng) 클래스입니다. 확대/축소 수준은 측정 하는 임의의 Google Maps에서 사용 하는 확대/축소는 18로 설정 됩니다. 베어링 나침반 북쪽에서 시계 방향으로 측정 됩니다. 기울기 속성 각도 컨트롤과 세로에서 25 각도의 각도 지정 합니다. 다음 스크린 샷에 표시 된 `GoogleMap` 앞의 코드를 실행 한 후:
+위의 코드 조각에서 map의 특정 위치는 [LatLng](https://developers.google.com/android/reference/com/google/android/gms/maps/model/LatLng) 클래스로 나타냅니다. 확대/축소 수준은 Google Maps에서 사용 하는 확대/축소의 임의 측정 인 18로 설정 됩니다. 베어링은 북쪽에서 시계 방향으로 나침반입니다. 기울기 속성은 보기 각도를 제어 하 고 세로에서 25도의 각도를 지정 합니다. 다음 스크린샷에서는 위의 코드 `GoogleMap` 를 실행 한 후을 보여 줍니다.
 
-[![기운를 사용 하 여 지정된 된 위치를 표시 하는 예제 Google 맵입니다 보는 각도](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
+[![기울어진 보기 각도를 사용 하 여 지정 된 위치를 보여 주는 예제 Google 지도](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
+### <a name="drawing-on-the-map"></a>지도에 그리기
 
-### <a name="drawing-on-the-map"></a>지도 그리기
+Android Maps API는 맵에 다음 항목을 그리기 위한 API를 제공 합니다.
 
-Android Maps API를 지도에 다음 항목을 그리기 위한 API를 제공 합니다.
+- **표식** -지도에서 단일 위치를 식별 하는 데 사용 되는 특수 아이콘입니다.
 
--  **표식** -이들은 맵에서 단일 위치를 식별 하는 데 사용 되는 특수 아이콘이 있습니다.
+- **오버레이** -맵의 위치나 영역 컬렉션을 식별 하는 데 사용할 수 있는 이미지입니다.
 
--  **오버레이** -위치 또는 영역 맵의 컬렉션을 식별 하는 이미지입니다.
-
--  **선, 다각형 및 원** -도형 맵에 추가 하는 작업을 허용 하는 Api는 합니다.
-
+- **선, 다각형 및 원** -활동에서 지도에 셰이프를 추가할 수 있도록 하는 api입니다.
 
 #### <a name="markers"></a>Markers
 
-Maps API를 제공 된 [표식](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) 맵에서 단일 위치에 대 한 데이터를 모두 캡슐화 하는 클래스입니다. 표식은 기본적으로 클래스는 Google Maps에서 제공 하는 표준 아이콘을 사용 합니다. 표식의 모양을 사용자 지정할 수 있으며 사용자가 클릭에 응답 하는 것입니다.
+Maps API는 맵의 단일 위치에 대 한 모든 데이터를 캡슐화 하는 [표식](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) 클래스를 제공 합니다. 기본적으로 표식 클래스는 Google Maps에서 제공 하는 표준 아이콘을 사용 합니다. 표식의 모양을 사용자 지정 하 고 사용자 클릭에 응답할 수 있습니다.
 
+##### <a name="adding-a-marker"></a>표식 추가
 
-##### <a name="adding-a-marker"></a>마커 추가
-
-표식에 지도를 추가 하려면 새 [MarkerOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) 개체를 호출 합니다 [AddMarker](https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) 메서드를를 `GoogleMap` 인스턴스. 이 메서드는 반환 된 [표식](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) 개체입니다.
+지도에 표식을 추가 하려면 새 [markeroptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/MarkerOptions) 개체를 만든 다음 `GoogleMap` 인스턴스에서 [addmarker](https://developer.android.com/reference/com/google/android/gms/maps/GoogleMap.html#addMarker%28com.google.android.gms.maps.model.MarkerOptions%29) 메서드를 호출 해야 합니다. 이 메서드는 [표식](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker) 개체를 반환 합니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -365,27 +354,26 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-표식의 제목에 표시 됩니다는 *정보 창의* 사용자 표식에가 하는 경우. 다음 스크린샷은이 표식 모양을 보여 줍니다.
+마커 제목은 사용자가 표식을 누를 때 *정보 창* 에 표시 됩니다. 다음 스크린샷은이 표식을 보여 줍니다.
 
-[![Vimy Ridge에 대 한 정보 창과 마커를 사용 하 여 Google 지도 예](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
+[![표식 및 Vimy 볼록에 대 한 정보 창을 포함 하는 Google 지도 예](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
+##### <a name="customizing-a-marker"></a>표식 사용자 지정
 
-##### <a name="customizing-a-marker"></a>표식을 사용자 지정
+지도에 표식을 추가할 때 메서드를 `MarkerOptions.InvokeIcon` 호출 하 여 마커에 사용 되는 아이콘을 사용자 지정할 수 있습니다.
+이 메서드는 아이콘을 렌더링 하는 데 필요한 데이터를 포함 하는 [BitmapDescriptor](https://developers.google.com/android/reference/com/google/android/gms/maps/model/BitmapDescriptor) 개체를 사용 합니다. [BitmapDescriptorFactory](https://developers.google.com/android/reference/com/google/android/gms/maps/model/BitmapDescriptorFactory) 클래스는 만들기 `BitmapDescriptor`를 간소화 하는 도우미 메서드를 제공 합니다. 다음 목록에서는 이러한 메서드 중 일부를 소개 합니다.
 
-호출 하 여 마커로 사용 하는 아이콘을 사용자 지정할 수 있기를 `MarkerOptions.InvokeIcon` 메서드 표식 지도에 추가 하는 경우.
-이 메서드는 [BitmapDescriptor](https://developers.google.com/android/reference/com/google/android/gms/maps/model/BitmapDescriptor) 아이콘을 렌더링 하는 데 필요한 데이터를 포함 하는 개체입니다. 합니다 [BitmapDescriptorFactory](https://developers.google.com/android/reference/com/google/android/gms/maps/model/BitmapDescriptorFactory) 생성을 간소화 하기 위해 일부 도우미 메서드를 제공 하는 클래스는 `BitmapDescriptor`합니다. 다음은 이러한 메서드 중 일부를 제공합니다.
+- `DefaultMarker(float colour)`&ndash; 기본 Google 지도 마커를 사용 하지만 색을 변경 합니다.
 
--   `DefaultMarker(float colour)` &ndash; 기본 Google 지도 표식에 사용 되지만 컬러를 변경 합니다.
+- `FromAsset(string assetName)`&ndash; 자산 폴더에서 지정 된 파일의 사용자 지정 아이콘을 사용 합니다.
 
--   `FromAsset(string assetName)` &ndash; Assets 폴더에 지정된 된 파일에서 사용자 지정 아이콘을 사용 합니다.
+- `FromBitmap(Bitmap image)`&ndash; 지정 된 비트맵을 아이콘으로 사용 합니다.
 
--   `FromBitmap(Bitmap image)` &ndash; 지정한 비트맵에서 아이콘으로 사용 합니다.
+- `FromFile(string fileName)`&ndash; 지정 된 경로에 있는 파일에서 사용자 지정 아이콘을 만듭니다.
 
--   `FromFile(string fileName)` &ndash; 지정된 된 경로에 파일에서 사용자 지정 아이콘을 만듭니다.
+- `FromResource(int resourceId)`&ndash; 지정 된 리소스에서 사용자 지정 아이콘을 만듭니다.
 
--   `FromResource(int resourceId)` &ndash; 지정된 된 리소스에서 사용자 지정 아이콘을 만듭니다.
-
-다음 코드 조각은 녹청 색이 지정 된 기본 표식을 만드는 예제를 보여 줍니다.
+다음 코드 조각에서는 사이안 coloured default 표식을 만드는 예를 보여 줍니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -401,29 +389,29 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-#### <a name="info-windows"></a>Windows 정보
+#### <a name="info-windows"></a>정보 창
 
-*정보 windows* 특별 한 windows 특정 표식 탭 할 때 사용자에 게 정보를 표시 하는 팝업 됩니다. 기본적으로 표식의 제목 내용의 정보 창에 표시 됩니다. 제목을 할당 되지 않은 경우 정보 창이 표시 됩니다. 한 번에 하나만 정보 창의 표시 될 수 있습니다.
+*정보 창은* 특정 마커를 누를 때 사용자에 게 정보를 표시 하는 특수 창입니다. 기본적으로 정보 창에 표식 제목의 내용이 표시 됩니다. 제목이 할당 되지 않은 경우에는 정보 창이 표시 되지 않습니다. 한 번에 하나의 정보 창만 표시할 수 있습니다.
 
-구현 하 여 정보 창을 사용자 지정할 수는 [GoogleMap.IInfoWindowAdapter](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.InfoWindowAdapter) 인터페이스입니다. 이 인터페이스에서 두 가지 중요 한 메서드는
+[GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.InfoWindowAdapter) 을 구현 하 여 정보 창을 사용자 지정할 수 있습니다. 이 인터페이스에는 다음과 같은 두 가지 중요 한 메서드가 있습니다.
 
--  `public View GetInfoWindow(Marker marker)` &ndash; 이 메서드는 사용자 지정 정보 창의 표식에 가져오려는 호출 됩니다. 반환 하는 경우 `null` , 기본 창 렌더링이 사용 됩니다. 이 메서드는 뷰를 반환 하는 경우 해당 보기 정보 창 프레임 내에서 배치 됩니다.
+- `public View GetInfoWindow(Marker marker)`&ndash; 이 메서드는 표식의 사용자 지정 정보 창을 가져오기 위해 호출 됩니다. 가 반환 `null` 되 면 기본 창 렌더링이 사용 됩니다. 이 메서드가 뷰를 반환 하면 해당 뷰가 정보 창 프레임 내에 배치 됩니다.
 
--  `public View GetInfoContents(Marker marker)` &ndash; 이 메서드 GetInfoWindow 반환 하는 경우에 호출할 수 `null` 입니다. 이 메서드가 반환할 수는 `null` 정보 창 내용의 기본 렌더링 하는 데 값입니다. 그렇지 않은 경우이 메서드 정보 창의 콘텐츠를 사용 하 여 뷰를 반환 해야 합니다.
+- `public View GetInfoContents(Marker marker)`이 메서드는 getinfowindow가를 반환 `null` 하는 경우에만 호출 됩니다. &ndash; 정보 창 내용의 기본 렌더링이 `null` 사용 되는 경우이 메서드는 값을 반환할 수 있습니다. 그렇지 않으면이 메서드는 정보 창의 내용이 포함 된 뷰를 반환 해야 합니다.
 
-정보 창에는 라이브 뷰입니다-Android는 뷰의 정적 비트맵으로 변환 하 고 이미지에 표시 하는 대신 합니다. 즉, 하는 정보 창의 제스처를 나 터치 이벤트에 응답할 수 없습니다 나이 자동으로 자동으로 업데이트 됩니다. 정보 창에는 업데이트를 호출 하는 데 필요한 것은 [GoogleMap.ShowInfoWindow](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker.html#showInfoWindow()) 메서드.
+정보 창은 라이브 보기가 아닙니다. 대신 Android에서 뷰를 정적 비트맵으로 변환 하 고 이미지에 표시 합니다. 즉, 정보 창이 터치 이벤트 나 제스처에 응답할 수 없고 자동으로 업데이트 되지 않습니다. 정보 창을 업데이트 하려면 [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker.html#showInfoWindow()) 메서드를 호출 해야 합니다.
 
-다음 이미지에는 몇 가지 예가 일부 사용자 지정된 정보 창 보여 줍니다. 왼쪽 이미지에는 오른쪽에 있는 이미지에 해당 창에 있는 동안 사용자 지정 내용 및 둥근된 모서리를 사용 하 여 사용자 지정 하는 내용:
+다음 이미지는 일부 사용자 지정 된 정보 창의 몇 가지 예를 보여 줍니다. 왼쪽 이미지에는 사용자 지정 된 내용이 있고 오른쪽 이미지에는 모퉁이가 둥근 모퉁이가 지정 된 창 및 내용이 있습니다.
 
-![표식 windows 멜버른, 아이콘 등 모집단에 대 한 예제입니다. 오른쪽 창 모서리가 둥근 합니다.](maps-api-images/marker-infowindows.png)
+![아이콘 및 채우기를 포함 하는 멜버른의 예제 표식 창입니다. 오른쪽 창에 모퉁이가 둥근 경우](maps-api-images/marker-infowindows.png)
 
 #### <a name="groundoverlays"></a>GroundOverlays
 
-맵에서 특정 위치를 식별 하는 마커 달리를 [GroundOverlay](https://developers.google.com/android/reference/com/google/android/gms/maps/model/GroundOverlay) 위치나 맵에서 영역 컬렉션을 식별 하는 데 사용 되는 이미지입니다.
+지도에서 특정 위치를 식별 하는 표식과 달리 [GroundOverlay](https://developers.google.com/android/reference/com/google/android/gms/maps/model/GroundOverlay) 은 위치의 컬렉션 또는 지도의 영역을 식별 하는 데 사용 되는 이미지입니다.
 
 ##### <a name="adding-a-groundoverlay"></a>GroundOverlay 추가
 
-지도에 처음부터 오버레이 추가 하는 것을 표식 지도에 추가 하는 것과 비슷합니다. 첫 번째는 [GroundOverlayOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/GroundOverlayOptions) 개체가 만들어집니다. 이 개체를 매개 변수로 전달 되는 [ `GoogleMap.AddGroundOverlay` ](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addGroundOverlay(com.google.android.gms.maps.model.GroundOverlayOptions)) 반환 하는 메서드를 `GroundOverlay` 개체입니다. 이 코드 조각은 다음과 같습니다. 지도를 처음부터 오버레이 추가 하는 예제
+지도에 접지 오버레이를 추가 하는 것은 지도에 표식을 추가 하는 것과 비슷합니다. 먼저 [GroundOverlayOptions](https://developers.google.com/android/reference/com/google/android/gms/maps/model/GroundOverlayOptions) 개체가 생성 됩니다. 그런 다음이 개체는 [`GoogleMap.AddGroundOverlay`](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addGroundOverlay(com.google.android.gms.maps.model.GroundOverlayOptions)) `GroundOverlay` 개체를 반환 하는 메서드에 매개 변수로 전달 됩니다. 이 코드 조각은 지도에 접지 오버레이를 추가 하는 예제입니다.
 
 ```csharp
 BitmapDescriptor image = BitmapDescriptorFactory.FromResource(Resource.Drawable.polarbear);
@@ -433,25 +421,23 @@ GroundOverlayOptions groundOverlayOptions = new GroundOverlayOptions()
 GroundOverlay myOverlay = googleMap.AddGroundOverlay(groundOverlayOptions);
 ```
 
-다음 스크린 샷에서 맵에서이 오버레이 보여 줍니다.
+다음 스크린샷에는 맵에이 오버레이가 표시 됩니다.
 
-[![예제는 북극곰의 오버레이할 이미지 맵으로](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
-
+[![극좌표 형 오버레이할 이미지를 사용 하는 예제 맵](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
 #### <a name="lines-circles-and-polygons"></a>선, 원 및 다각형
 
-기하학적 도형 맵에 추가할 수 있는 간단한에 세 가지 종류가 있습니다.
+지도에 추가할 수 있는 세 가지 간단한 형식의 기하학적 수치가 있습니다.
 
--  **다중선** -일련의 연결 된 선 세그먼트입니다. 지도에 경로 표시 하거나는 기 하 도형을 만들 수 있습니다.
+- **다중선** -일련의 연결 된 선 세그먼트입니다. 지도에서 경로를 표시 하거나 기 하 도형을 만들 수 있습니다.
 
--  **원** -이 맵에 원 그리기 됩니다.
+- **원** -지도에 원을 그립니다.
 
--  **다각형** -지도의 영역을 표시 하기 위한 닫힌된 도형입니다.
+- **Polygon** -지도에 영역을 표시 하기 위한 닫힌 셰이프입니다.
 
+##### <a name="polylines"></a>폴리라인의 선을
 
-##### <a name="polylines"></a>다중선
-
-A [다중선](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Polyline) 연속 목록이 `LatLng` 각 선 세그먼트의 꼭 짓 점을 지정 하는 개체입니다. 첫 번째 만들어 다중선 만들어집니다는 `PolylineOptions` 개체 및 요소를 추가 합니다. 합니다 `PolylineOption` 개체를 전달 합니다는 `GoogleMap` 호출 하 여 개체를 `AddPolyline` 메서드.
+[다중선](https://developers.google.com/android/reference/com/google/android/gms/maps/model/Polyline) 은 각 선 세그먼트의 꼭 `LatLng` 짓 점을 지정 하는 연속 개체의 목록입니다. 먼저 `PolylineOptions` 개체를 만들고이 개체에 요소를 추가 하 여 다중선을 만듭니다. 그런 다음 메서드를 `GoogleMap` `AddPolyline` 호출 하 여 개체를 개체에 전달 합니다. `PolylineOption`
 
 ```csharp
 PolylineOption rectOptions = new PolylineOption();
@@ -464,10 +450,10 @@ rectOptions.Add(new LatLng(37.35, -122.0)); // close the polyline - this makes a
 googleMap.AddPolyline(rectOptions);
 ```
 
-##### <a name="circles"></a>원
+##### <a name="circles"></a>원이
 
-원 첫 번째 인스턴스화하여 생성 되는 [CircleOption](https://developers.google.com/android/reference/com/google/android/gms/maps/model/CircleOptions) metres의 가운데와 원의 반지름을 지정 하는 개체입니다. 원을 호출 하 여 지도에 그릴 [GoogleMap.AddCircle](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addCircle(com.google.android.gms.maps.model.CircleOptions))합니다.
-다음 코드 조각은 원을 그리는 방법을 보여 줍니다.
+원은 metres에서 원의 중심과 반지름을 지정 하는 [CircleOption](https://developers.google.com/android/reference/com/google/android/gms/maps/model/CircleOptions) 개체를 먼저 인스턴스화하여 생성 됩니다. [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addCircle(com.google.android.gms.maps.model.CircleOptions))를 호출 하 여 지도에 원이 그려집니다.
+다음 코드 조각에서는 원을 그리는 방법을 보여 줍니다.
 
 ```csharp
 CircleOptions circleOptions = new CircleOptions ();
@@ -477,13 +463,12 @@ circleOptions.InvokeRadius (1000);
 googleMap.AddCircle (circleOptions);
 ```
 
-
 ##### <a name="polygons"></a>다각형
 
-`Polygon`하지만 동일 `Polyline`s 열려 있지 않은 종료 합니다. `Polygon`s 폐쇄형된 루프 되며 채워진 해당 내부를 갖습니다.
-`Polygon`정확히 동일한 방식으로 만들어진를 `Polyline`를 제외 하 고는 [GoogleMap.AddPolygon](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addPolygon(com.google.android.gms.maps.model.PolygonOptions)) 메서드를 호출 합니다.
+`Polygon`s는와 유사 `Polyline`하지만 열려 있지 않습니다. `Polygon`s는 닫힌 루프 이며 내부를 채웁니다.
+`Polygon`는 `Polyline`호출 된 [GoogleMap](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.html#addPolygon(com.google.android.gms.maps.model.PolygonOptions)) 메서드를 제외 하 고와 정확히 같은 방식으로 생성 됩니다.
 
-와 달리를 `Polyline`, `Polygon` 자체 닫는 중입니다. 다각형을 닫습니다 해제는 `AddPolygon` 의 첫 번째 및 마지막 지점을 연결 하는 선을 그려 메서드. 다음 코드 조각은 이전 코드 조각에서와 동일한 영역을 통해 실선의 사각형이 만들어집니다는 `Polyline` 예제입니다.
+와 달리은 `Polygon` 자체적으로 닫힙니다. `Polyline` 첫 번째 및 마지막 요소를 연결 하 `AddPolygon` 는 선을 그려 메서드가 다각형을 닫습니다. 다음 코드 조각은 `Polyline` 예제의 이전 코드 조각과 동일한 영역에 실선 사각형을 만듭니다.
 
 ```csharp
 PolygonOptions rectOptions = new PolygonOptions();
@@ -496,30 +481,27 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 googleMap.AddPolygon(rectOptions);
 ```
 
-
 ## <a name="responding-to-user-events"></a>사용자 이벤트에 응답
 
-맵을 사용 하 여 사용자가 상호 작용 하는 방법은 세 종류가 있습니다.
+사용자에 게는 다음과 같은 세 가지 유형의 상호 작용이 있습니다.
 
--  **표식 클릭** -사용자가 표식을 클릭 합니다.
+- **표식 클릭** -사용자가 표식을 클릭 합니다.
 
--  **표식 끌어서** -사용자가 장기-클릭을 mparger에서
+- **표식 드래그** -사용자가 mparger를 길게 클릭 했습니다.
 
--  **정보 창 클릭** -사용자가 정보 창에서를 클릭 합니다.
+- **정보 창 클릭** -사용자가 정보 창을 클릭 했습니다.
 
-이러한 각 이벤트 아래에서 자세히 설명 합니다.
+이러한 각 이벤트는 아래에서 자세히 설명 합니다.
 
+### <a name="marker-click-events"></a>표식 클릭 이벤트
 
-### <a name="marker-click-events"></a>표식 이벤트를 클릭 합니다.
+사용자가 표식을 누르면 이벤트가발생합니다.`MarkerClicked` 이 이벤트는 개체 `GoogleMap.MarkerClickEventArgs` 를 매개 변수로 받아들입니다. 이 클래스에는 두 가지 속성이 있습니다.
 
-`MarkerClicked` 표식에서 사용자가 누를 때 이벤트가 발생 합니다. 이 이벤트는는 `GoogleMap.MarkerClickEventArgs` 개체를 매개 변수로 합니다. 이 클래스에는 두 가지 속성이 포함 됩니다.
+- `GoogleMap.MarkerClickEventArgs.Handled`이벤트 처리기가 이벤트를 사용 `true` 했음을 나타내려면이 속성을로 설정 해야 합니다. &ndash; 로 `false` 설정 되 면 이벤트 처리기의 사용자 지정 동작 외에도 기본 동작이 수행 됩니다.
 
--  `GoogleMap.MarkerClickEventArgs.Handled` &ndash; 이 속성에 설정할 `true` 를 나타내는 이벤트 처리기가 이벤트를 사용 했습니다. 이 값을 설정 하는 경우 `false` 기본 동작 이벤트 처리기의 사용자 지정 동작 외에도 발생 합니다.
+- `Marker`이 속성은 `MarkerClick` 이벤트를 발생 시킨 표식에 대 한 참조입니다. &ndash;
 
--  `Marker` &ndash; 이 속성이 발생 시킨 표식에 대 한 참조를 `MarkerClick` 이벤트입니다.
-
-
-이 코드 예제는 `MarkerClick` 카메라 위치를 지도에 새 위치로 바뀝니다는:
+이 코드 조각은 지도의 새 위치로 카메라 위치 `MarkerClick` 를 변경 하는의 예를 보여 줍니다.
 
 ```csharp
 void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickEventArgs)
@@ -545,27 +527,25 @@ void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickE
 }
 ```
 
+### <a name="marker-drag-events"></a>표식 끌기 이벤트
 
-### <a name="marker-drag-events"></a>끌기 이벤트 표식
+이 이벤트는 사용자가 표식을 끌 때 발생 합니다. 기본적으로 표식을 끌 수 없습니다. 속성을로 `true` 설정 `MarkerOptions.Draggable` 하거나를 매개 변수로 사용 하 여 메서드를 호출 하 여 마커를 끌기 가능으로 설정할 수 있습니다. `true` `Marker.Draggable`
 
-이 이벤트는 사용자 표식을 끕니다 하고자 할 때 발생 합니다. 기본적으로 표식 draggable 되지 않습니다. 설정 하 여으로 draggable 표식의 설정할 수 있습니다는 `Marker.Draggable` 속성을 `true` 호출 하 여 합니다 `MarkerOptions.Draggable` 메서드를 `true` 매개 변수로 합니다.
+표식을 끌어 오면 사용자는 먼저 마커를 길게 클릭 해야 합니다. 그런 다음 해당 손가락을 지도에 그대로 두어야 합니다. 화면 위에서 사용자의 손가락을 끌면 마커가 이동 합니다. 사용자의 손가락이 화면에서 리프트 될 때 마커는 그대로 유지 됩니다.
 
-마커를 끌기, 사용자 해야 먼저 장기-클릭 표식에 대 고 해당 손가락 지도 켜져 있어야 합니다. 주위 화면에서 사용자의 손가락을 끌 때 표식 이동 합니다. 사용자의 손가락을 화면 리프트, 표식 위치에 유지 됩니다.
+다음 목록에서는 끌기 가능한 마커에 대해 발생 하는 다양 한 이벤트에 대해 설명 합니다.
 
-다음 목록에는 draggable 표식에 발생할 수 있는 다양 한 이벤트를 설명 합니다.
+- `GoogleMap.MarkerDragStart(object sender, GoogleMap.MarkerDragStartEventArgs e)`&ndash; 이 이벤트는 사용자가 표식을 처음 끌 때 발생 합니다.
 
--   `GoogleMap.MarkerDragStart(object sender, GoogleMap.MarkerDragStartEventArgs e)` &ndash; 이 이벤트는 처음으로 가져왔을 표식의 경우 발생 합니다.
+- `GoogleMap.MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)`&ndash; 이 이벤트는 표식을 끌 때 발생 합니다.
 
--   `GoogleMap.MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)` &ndash; 마커를 끄는 대로 이벤트가 발생 합니다.
+- `GoogleMap.MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)`&ndash; 이 이벤트는 사용자가 표식 끌기를 완료 했을 때 발생 합니다.
 
--   `GoogleMap.MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)` &ndash; 이 이벤트는 사용자가 완료 되 면 발생 합니다. 표식을 끌어 합니다.
+각에 `EventArgs` 는 끌고 있는 `Marker` 개체에 대 `P0` 한 참조 인 라는 단일 속성이 포함 되어 있습니다.
 
-각 합니다 `EventArgs` 라는 단일 속성을 포함 `P0` 에 대 한 참조는는 `Marker` 끄는 개체입니다.
+### <a name="info-window-click-events"></a>정보 창 클릭 이벤트
 
-
-### <a name="info-window-click-events"></a>정보 창에서 클릭 이벤트
-
-한 번에 하나만 정보 창을 표시할 수 있습니다. Map 개체에서 발생 하는 지도에 정보 창에서 사용자가는 `InfoWindowClick` 이벤트입니다. 다음 코드 조각에는 이벤트 처리기를 연결 하는 방법을 보여 줍니다.
+한 번에 하나의 정보 창만 표시할 수 있습니다. 사용자가 지도의 정보 창을 클릭 하면 map 개체가 `InfoWindowClick` 이벤트를 발생 시킵니다. 다음 코드 조각에서는 이벤트에 처리기를 연결 하는 방법을 보여 줍니다.
 
 ```csharp
 public void OnMapReady(GoogleMap map)
@@ -580,15 +560,14 @@ private void MapOnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEvent
 }
 ```
 
-정보 창에는 정적은 `View` 맵에서 이미지로 렌더링 되는 합니다. 정보 창에 위치한 텍스트 뷰 단추, 확인란 등 위젯을 버려지는 단순한 되 고 해당 정수 계열 사용자 이벤트에 응답할 수 없습니다.
-
+정보 창은 지도의 이미지로 렌더링 되는 정적 `View` 임을 기억 하세요. 정보 창 내에 배치 되는 단추, 확인란 또는 텍스트 뷰와 같은 모든 위젯을 버려지는 단순한 하 고 해당 정수 사용자 이벤트에 응답할 수 없습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [SimpleMapDemo](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3/SimpleMapDemo)
 - [Google Play 서비스](https://developers.google.com/android/guides/overview)
-- [Google Android API v2 맵](https://developers.google.com/maps/documentation/android-sdk/intro)
-- [Google Play는 APK를 서비스](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
+- [Google Maps Android API v2](https://developers.google.com/maps/documentation/android-sdk/intro)
+- [Google Play 서비스 APK](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
 - [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element)
 - [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element)
