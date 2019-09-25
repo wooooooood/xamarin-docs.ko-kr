@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7f41d65c8981d4ef6ffcf1b812fbbbb7e72e7719
-ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
+ms.openlocfilehash: bcee9c7e09a9470cbf80e99c047a7c52f61f888a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68509743"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249801"
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 비트 플랫폼 고려 사항
 
@@ -33,6 +33,8 @@ Xamarin의 Classic API (`XamMac.dll` 및 `monotouch.dll`)는 32 비트 응용 �
 > 이 섹션은 과거의 이유로 포함 되었으며 이전 Xamarin.ios 프로젝트를 Unified API로 이동 하 고 64 비트를 지원 합니다. 모든 새 Xamarin.ios 프로젝트는 기본적으로 Unified API 및 대상 64 비트를 사용 합니다.
 
 Unified API로 변환 된 Xamarin.ios 모바일 응용 프로그램의 경우 개발자는 빌드 설정을 64 비트 대상으로 수동으로 업데이트 해야 합니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

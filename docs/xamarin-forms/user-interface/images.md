@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: d4a3ba0ae860f2e6b42fc4cf349ec1bc8e83979e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 96d2fe0b03ad7067d6fece072742ea2796224f8b
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69527066"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250117"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -73,7 +73,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 다음 스크린샷에서 각 플랫폼에서 로컬 이미지를 표시 하는 결과 보여 줍니다.
 
-[![로컬 ImageSource](images-images/local-sml.png "로컬 이미지를 표시 하는 응용 프로그램 예제")](images-images/local.png#lightbox "로컬 이미지를 표시 하는 응용 프로그램 샘플")
+[![로컬 ImageSource](images-images/local-sml.png "로컬 이미지를 표시 하는 샘플 응용 프로그램")](images-images/local.png#lightbox "로컬 이미지를 표시 하는 샘플 응용 프로그램")
 
 보다 유연 하 게 여 `Device.RuntimePlatform` 속성 사용할 수 있습니다 다른 이미지 파일 또는 일부 또는 모든 플랫폼에 대 한 경로 선택 하려면이 코드 예제 에서처럼:
 
@@ -116,6 +116,8 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 
 이미지를 프로젝트에 포함 하려면 마우스 오른쪽 단추를 새 항목을 추가 하 고 추가 하려는 이미지/s를 선택 합니다. 기본적으로 이미지에는 빌드 **작업이 있습니다. 없음**.이 작업은 빌드 작업으로 **설정 해야 합니다. EmbeddedResource**를 확인합니다.
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](images-images/vs-buildaction.png "빌드 작업 설정: EmbeddedResource")
@@ -154,7 +156,7 @@ var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithIm
 
 다음 스크린샷은 각 플랫폼에 포함 된 이미지를 표시 하는 결과 보여 줍니다.
 
-[![ResourceImageSource](images-images/resource-sml.png "포함 된 이미지를 표시 하는 응용 프로그램 예제")](images-images/resource.png#lightbox "포함 된 이미지를 표시 하는 응용 프로그램 샘플")
+[![ResourceImageSource](images-images/resource-sml.png "포함 된 이미지를 표시 하는 샘플 응용 프로그램")](images-images/resource.png#lightbox "포함 된 이미지를 표시 하는 샘플 응용 프로그램")
 
 ### <a name="using-xaml"></a>XAML을 사용 하 여
 
@@ -260,7 +262,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 다음 스크린샷에서 각 플랫폼에서 원격 이미지를 표시 하는 결과 보여 줍니다.
 
-[![다운로드 ImageSource](images-images/download-sml.png "샘플을 다운로드 한 이미지를 표시 하는 응용 프로그램")](images-images/download.png#lightbox "샘플 응용 프로그램을 다운로드 한 이미지를 표시 합니다.")
+[![다운로드 한 ImageSource](images-images/download-sml.png "다운로드 한 이미지를 표시 하는 샘플 응용 프로그램")](images-images/download.png#lightbox "다운로드 한 이미지를 표시 하는 샘플 응용 프로그램")
 
 ### <a name="downloaded-image-caching"></a>다운로드 한 이미지 캐싱
 

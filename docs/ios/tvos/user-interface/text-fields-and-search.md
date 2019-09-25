@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dbd0b3e7d14307a3b9e7de552e2d59e0fbbcaa4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 71efb000b3f78283863193e0cc1db5dc45100c0a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768553"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250156"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Xamarin에서 tvOS 텍스트 및 검색 필드 작업
 
@@ -95,6 +95,8 @@ Apple에는 검색 필드 작업에 대 한 다음과 같은 제안이 있습니
 TvOS 앱에서 텍스트 필드를 사용 하는 가장 쉬운 방법은 iOS Designer를 사용 하 여 사용자 인터페이스 디자인에 추가 하는 것입니다.
 
 다음을 수행합니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

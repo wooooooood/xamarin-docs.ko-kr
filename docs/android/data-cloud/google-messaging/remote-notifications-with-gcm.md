@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2019
-ms.openlocfilehash: 813bb59cf11f35f69620c30e8ba12281df08df75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a59f824e1d97966d8d0af92bc9bbcc8d80fcfa4d
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754513"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249922"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging로 원격 알림
 
@@ -116,7 +116,7 @@ Android 매니페스트에서 이러한 사용 권한을 설정 합니다. **And
 </manifest>
 ```
 
-위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. [http://amstest.streaming.mediaservices.windows.net/61b3da1d-96c7-489e-bd21-c5f8a7494b03/scott.ism/manifest](`com.xamarin.gcmexample`)을 입력합니다. 
+위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. 예: `com.xamarin.gcmexample`. 
 
 ### <a name="check-for-google-play-services"></a>Google Play 서비스 확인
 
@@ -312,7 +312,7 @@ public RegistrationIntentService() : base ("RegistrationIntentService") { }
 
 `RegistrationIntentService` 의`OnHandleIntent` 핵심 기능은 메서드에 있습니다. 이 코드를 살펴보고 GCM을 사용 하 여 앱을 등록 하는 방법을 살펴봅니다.
 
-##### <a name="request-a-registration-token"></a>등록 토큰 요청
+#### <a name="request-a-registration-token"></a>등록 토큰 요청
 
 `OnHandleIntent`먼저 Google의 [InstanceID. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) 메서드를 호출 하 여 GCM에서 등록 토큰을 요청 합니다. 에서 `lock` 이 코드를 래핑하여 동시 &ndash; 에 여러 번 발생 하는 경우를 방지 하기 위해에서 `lock` 이러한 의도를 순차적으로 처리할 수 있도록 합니다. 등록 토큰을 가져오지 못하면 예외가 throw 되 고 오류를 기록 합니다. 등록이 성공 `token` 하면가 GCM에서 반환 된 등록 토큰으로 설정 됩니다. 
 
@@ -334,7 +334,7 @@ catch (Exception e)
     Log.Debug ...
 ```
 
-##### <a name="forward-the-registration-token-to-the-app-server"></a>앱 서버에 등록 토큰 전달
+#### <a name="forward-the-registration-token-to-the-app-server"></a>앱 서버에 등록 토큰 전달
 
 등록 토큰을 가져오는 경우 (예외가 throw 되지 않음)를 호출 `SendRegistrationToAppServer` 하 여 사용자의 등록 토큰을 응용 프로그램에 의해 유지 관리 되는 서버 쪽 계정 (있는 경우)에 연결 합니다. 이 구현은 앱 서버 디자인에 따라 달라 지므로 다음과 같은 빈 방법이 제공 됩니다. 
 
@@ -347,7 +347,7 @@ void SendRegistrationToAppServer (string token)
 
 경우에 따라 앱 서버에 사용자의 등록 토큰이 필요 하지 않습니다. 이 경우에는이 메서드를 생략할 수 있습니다. 등록 토큰이 앱 서버에 전송 되 면에서 `SendRegistrationToAppServer` 토큰을 서버에 보냈는지 여부를 나타내는 부울을 유지 해야 합니다. 이 부울이 false 이면에서 `SendRegistrationToAppServer` 앱 서버로 &ndash; 토큰을 보내고, 그렇지 않으면 이전 호출에서 토큰을 이미 앱 서버에 보냈습니다. 
 
-##### <a name="subscribe-to-the-notification-topic"></a>알림 항목 구독
+#### <a name="subscribe-to-the-notification-topic"></a>알림 항목 구독
 
 그런 다음, `Subscribe` 메서드를 호출 하 여 알림 항목을 구독 하려는 GCM을 표시 합니다. 에서 `Subscribe` [gcmpubsub. 구독](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) API를 호출 하 여 아래 `/topics/global`에 있는 모든 메시지에 클라이언트 앱을 구독 합니다.
 
@@ -398,7 +398,7 @@ namespace ClientApp
 
 #### <a name="test-registration-with-gcm"></a>GCM을 사용한 테스트 등록
 
-앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예를 들어: 
+앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예: 
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2
@@ -501,7 +501,7 @@ GCM에서 메시지를 받으려면 먼저 Android 매니페스트에서 GCM 수
 
 이 XML의 각 설정에서 수행 하는 작업을 살펴보겠습니다.
 
-|설정|Description|
+|설정|설명|
 |---|---|
 |`com.google.android.gms.gcm.GcmReceiver`|앱이 들어오는 푸시 알림 메시지를 캡처하고 처리 하는 GCM 수신기를 구현 하도록 선언 합니다.|
 |`com.google.android.c2dm.permission.SEND`|GCM 서버만 앱에 직접 메시지를 보낼 수 있음을 선언 합니다.|

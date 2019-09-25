@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/31/2018
-ms.openlocfilehash: c76b22c84851c8952dc4e9181966632cf6e38041
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ece503ee305fc1319e766ee5ad52ad86cee122bc
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754674"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249933"
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Firebase 클라우드 메시징으로 원격 알림
 
@@ -51,6 +51,8 @@ Firebase 클라우드 메시징에서 보낼 수 있는 [다양 한 유형의 �
 ### <a name="set-the-package-name"></a>패키지 이름 설정
 
 [Firebase 클라우드 메시징](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)에서 FCM 사용 앱에 대 한 패키지 이름을 지정 했습니다. 이 패키지 이름은 [API 키](firebase-cloud-messaging.md#fcm-in-action-api-key)와 연결 된 [*응용 프로그램 ID*](./firebase-cloud-messaging.md#fcm-in-action-app-id) 로도 사용 됩니다. 이 패키지 이름을 사용 하도록 앱을 구성 합니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

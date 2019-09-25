@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: 0a82c84b334cbfcf3ab978b5ebd0e256bcd64815
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6db927409e07b97ef5b7b1e7f54b6bcbdc60e115
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755051"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249670"
 ---
 # <a name="creating-resources-for-varying-screens"></a>다양 한 화면에 대 한 리소스 만들기
 
@@ -50,6 +50,8 @@ Android는 런타임에 적합 한 크기로 확장 가능 합니다.
 화면 크기를 선언 하면 지원 되는 장치만 응용 프로그램을 다운로드할 수 있습니다. 이렇게 하려면 **Androidmanifest .xml** 파일의 [지원 화면](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) 요소를 설정 합니다. 이 요소는 응용 프로그램에서 지원 되는 화면 크기를 지정 하는 데 사용 됩니다. 지정 된 화면은 응용 프로그램에서 해당 레이아웃을 화면에 올바르게 삽입할 수 있는 경우 지원 되는 것으로 간주 됩니다. 이 매니페스트 요소를 사용 하면 화면 사양을 충족 하지 않는 장치에 대 한 [*Google Play*](https://play.google.com/) 에 응용 프로그램이 표시 되지 않습니다. 그러나 응용 프로그램은 지원 되지 않는 화면을 사용 하는 장치에서 계속 실행 되지만 레이아웃은 흐린 및 모자이크로 표시 될 수 있습니다.
 
 지원 되는 화면 sixes 솔루션의 **속성/AndroidManifest .xml** 파일에 선언 됩니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

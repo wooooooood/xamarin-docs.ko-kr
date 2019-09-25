@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 6e2e4cd854e60f6147104b6b1361d0ab7b234370
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fba49e21ac75ec1ebb00614f3891bebaa57a3ed5
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755817"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249756"
 ---
 # <a name="understanding-android-api-levels"></a>Android API 수준 이해
 
@@ -33,6 +33,8 @@ Xamarin Android는 다음과 같은 세 가지 Android API 수준 프로젝트 �
 > [!NOTE]
 > 2018 년 8 월부터 Google Play 콘솔에 새 앱의 대상 API 수준 26 (Android 8.0) 이상이 필요 합니다.
 기존 앱은 11 월 2018부터 API 레벨 26 이상을 대상으로 해야 합니다. 자세한 내용은 [Google Play 년 동안 앱 보안 및 성능 향상](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html)을 참조 하세요.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -215,7 +217,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
 
 이 예제에서는 앱의 대상 프레임 워크가 **android 5.0 (Api 수준 21)** 로 설정 되 고 최소 Android 버전이 **ANDROID 4.1 (api 수준 16)** 로 설정 됩니다. 는 `SetCategory` api 수준 `Android.OS.BuildVersionCodes.Lollipop` 이상에서 사용할 수 있기 때문에이 예제 코드는 `SetCategory` 실제로 사용할 수 있는 &ndash; 경우에만를 호출 합니다 .이 `SetCategory` 코드는 api 수준이 16, 17, 18, 19 또는 20 인 경우 호출을 시도 하지 않습니다. 이러한 이전 Android 버전에서는 알림이 제대로 정렬 되지 않은 상태 (유형별로 분류 되지 않았기 때문)에 대해서만이 기능이 축소 되어 있지만 사용자에 게 경고를 보내도록 알림이 게시 됩니다. 앱은 계속 작동 하지만 해당 기능이 약간 감소 합니다.
 
-일반적으로 빌드 버전 검사를 사용 하면 코드를 런타임에 결정 하는 데 도움이 됩니다. 예를 들어:
+일반적으로 빌드 버전 검사를 사용 하면 코드를 런타임에 결정 하는 데 도움이 됩니다. 예:
 
 ```csharp
 if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)

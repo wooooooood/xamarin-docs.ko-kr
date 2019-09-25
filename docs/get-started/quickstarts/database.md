@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: ff07af00e1e647255ac56318c0685552823f510c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653504"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249675"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
 
@@ -27,10 +27,10 @@ ms.locfileid: "68653504"
 
 이 빠른 시작은 로컬 SQLite.NET 데이터베이스에 데이터를 저장 하는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[ ![(database-images/screenshots1-sml.png " ")]메모 페이지] (database-images/screenshots1.png#lightbox "메모 페이지") 참고 항목 페이지(database-images/screenshots2.png#lightbox "메모 입력 페이지") [ ![(database-images/screenshots2-sml.png " ")]] 
+[![](database-images/screenshots1-sml.png "메모")](database-images/screenshots1.png#lightbox "메모 페이지")페이지
+[(database-images/screenshots2-sml.png "메모 입력") 페이지![]](database-images/screenshots2.png#lightbox "메모 입력 페이지")
 
-
-### <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 빠른 시작을 시도 하기 전에 [이전 퀵 스타트](multi-page.md) 를 성공적으로 완료 해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) 을 다운로드 하 고이 빠른 시작의 시작 지점으로 사용 합니다.
 

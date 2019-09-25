@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 0387cd91bd24080417a5e9763410d68b6e688555
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 31e4073df70ced0cc9729c6dc292500264ad7fce
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757502"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249948"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -35,7 +35,7 @@ Xamarin 기반 앱에서 Android Oreo 기능을 사용 하려면 다음이 필�
 
 - **Android SDK** &ndash; Android SDK Manager를 통해 Android SDK 8.0 (API 26) 이상을 설치 해야 합니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 Android Oreo에서 android 사용을 시작 하려면 Android Oreo 프로젝트를 만들기 전에 최신 도구 및 SDK 패키지를 다운로드 하 여 설치 해야 합니다.
 
@@ -52,6 +52,8 @@ Android Oreo에서 android 사용을 시작 하려면 Android Oreo 프로젝트�
 ### <a name="update-visual-studio-and-xamarinandroid"></a>Visual Studio 및 Xamarin Android 업데이트
 
 Visual Studio에 Android Oreo 지원을 추가 하려면 다음을 수행 합니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

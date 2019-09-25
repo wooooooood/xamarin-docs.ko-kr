@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: conceptdev
 ms.author: crdun
 ms.date: 06/03/2018
-ms.openlocfilehash: 745c59ad50f0e8ad50a8ec56549d99b7b5e72228
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b567985fcfd9e133587c5c285e17d21465fda659
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772471"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250086"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -50,6 +50,8 @@ Xamarin Profiler는 독립 실행형 응용 프로그램으로, IDE 내에서 �
 ## <a name="xamarin-profiler"></a>Xamarin Profiler
 
 Xamarin Profiler는 개발자에 게 Mac용 Visual Studio 또는 Visual Studio 내부에서 응용 프로그램을 프로 파일링 하는 방법을 제공 합니다. 프로파일러는 응용 프로그램의 동작을 분석 하는 데 사용할 수 있는 앱에 대 한 정보를 수집 하 고 표시 합니다. 응용 Xamarin Profiler 프로그램을 프로 파일링 하는 방법에는 메모리 프로 파일링 및 통계 샘플링과 같은 여러 가지 방법이 있습니다. 이러한 설정은 각각 할당 및 시간 프로파일러 계측을 통해 수행 됩니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 

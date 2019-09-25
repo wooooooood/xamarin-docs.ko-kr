@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 798dd1b5df2ea05eb428c9465e996d606c22009b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 246ee002404fdf6fe1120c19701aceb3c2dee7db
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281205"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249782"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -475,7 +475,7 @@ TaskDetailsPage에 정의 된 xaml `TaskViewModel` 에를 바인딩하여 각 �
 
  <a name="iOS" />
 
-#### <a name="ios"></a>iOS
+### <a name="ios"></a>iOS
 
 응용 프로그램은 탐색 모음에 배치 되는 ' 추가 ' 단추와 기본 제공 **더하기 (+)** 아이콘을 사용 하 여 iOS 표준 사용자 인터페이스 디자인을 사용 합니다. 또한 기본 `UINavigationController` ' 뒤로 ' 단추 동작을 사용 하며 테이블에서 ' 살짝 밀기-삭제 '를 지원 합니다.
 
@@ -483,7 +483,7 @@ TaskDetailsPage에 정의 된 xaml `TaskViewModel` 에를 바인딩하여 각 �
 
  <a name="Android" />
 
-#### <a name="android"></a>Android
+### <a name="android"></a>Android
 
 Android 앱은 ' 틱 '이 표시 되어야 하는 행의 기본 제공 레이아웃을 포함 하는 기본 제공 컨트롤을 사용 합니다. 하드웨어/시스템 뒤로 동작은 화상 뒤로 단추 외에도 지원 됩니다.
 
@@ -491,7 +491,7 @@ Android 앱은 ' 틱 '이 표시 되어야 하는 행의 기본 제공 레이아
 
  <a name="Windows_Phone" />
 
-#### <a name="windows-phone"></a>Windows Phone
+### <a name="windows-phone"></a>Windows Phone
 
 Windows Phone 앱은 표준 레이아웃을 사용 하 여 위쪽의 탐색 모음 대신 화면 아래쪽에 있는 앱 표시줄을 채웁니다.
 

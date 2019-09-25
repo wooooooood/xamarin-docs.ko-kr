@@ -6,12 +6,12 @@ ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: f3c30e8edc36c6d92b6fac0bd0e199aa26e16993
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 305c0c939d99207e39a469f7e8c5370cc5555d38
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280920"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249973"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>IOS/macOS에 대 한 HttpClient 및 SSL/TLS 구현 선택기
 
@@ -24,7 +24,7 @@ Xamarin.ios, tvOS 및 xamarin.ios에 대 한 **httpclient 구현 선택기** 는
 >
 > 앱이 이러한 서버 및 서비스를 계속 사용할 수 있도록 하려면  **`NSUrlSession` 아래 표시 된 설정으로 Xamarin 프로젝트를 업데이트 한 다음 사용자에 게 앱을 다시 빌드하고 다시 배포 해야** 합니다.
 
-### <a name="selecting-an-httpclient-stack"></a>HttpClient 스택 선택
+## <a name="selecting-an-httpclient-stack"></a>HttpClient 스택 선택
 
 앱에서 사용 `HttpClient` 중인를 조정 하려면 다음을 수행 합니다.
 

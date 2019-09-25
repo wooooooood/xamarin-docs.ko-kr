@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/03/2018
-ms.openlocfilehash: 40bea05c86e83a0b96ad35b49b25bdada89f4201
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 27bf22403c9411d300e67bfdaef4aa4dfe74f6e0
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769793"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250191"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Xamarin.ios에서 SiriKit 구현
 
@@ -43,7 +43,7 @@ MonkeyChat는 각각 화면 이름 (예: Bobo)과 연결 된 사용자의 친구
 
 [![](implementing-sirikit-images/elements01.png "SiriKit 다이어그램으로 앱 확장")](implementing-sirikit-images/elements01.png#lightbox)
 
-이러한 개체는 다음과 같습니다.
+여기에는 다음이 포함됩니다.
 
 1. 인 텐트 **확장** -사용자 응답을 확인 하 고, 앱에서 요청을 처리할 수 있는지 확인 하 고 실제로 사용자의 요청을 처리 하는 작업을 수행 합니다.
 2. **인 텐트 ui 확장** - *옵션인*siri 환경의 응답에 사용자 지정 ui를 제공 하 고, 앱 UI 및 브랜딩을 siri로 가져와서 사용자 환경을 보강 할 수 있습니다.
@@ -66,6 +66,8 @@ SiriKit는 확장을 기반으로 하지만 앱에 확장을 추가 하기 전�
 예제 앱 MonkeyChat의 경우 네트워크 및 데이터베이스 액세스와 같은 데이터 모델 및 처리 코드가 네이티브 라이브러리로 이동 됩니다.
 
 다음을 수행합니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -296,7 +298,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 
 ### <a name="localization-and-siri"></a>지역화 및 Siri
 
-IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 `SiriLanguageCode` `INPreferences` 클래스의 메서드를 사용 하 여 siri에서 언어 코드를 가져와야 합니다. 예를 들어:
+IOS 장치에서 사용자는 시스템 기본값과 다른 Siri에 대 한 언어를 선택할 수 있습니다. 지역화 된 데이터로 작업 하는 경우 응용 프로그램은 `SiriLanguageCode` `INPreferences` 클래스의 메서드를 사용 하 여 siri에서 언어 코드를 가져와야 합니다. 예:
 
 ```csharp
 var language = INPreferences.SiriLanguageCode();
@@ -320,7 +322,7 @@ if (language == "en-US") {
 
 사용자 지정 어휘로 등록 하는 용어를 선택 하는 경우 앱에 익숙하지 않은 사람이 잘못 해석 될 수 있는 용어를 선택 합니다. "내 체력" 또는 "내 앨범"과 같은 일반적인 용어를 등록 하지 마십시오. 예를 들어 MonkeyChat 앱은 사용자 주소록의 각 연락처와 연결 된 애칭을 등록 합니다.
 
-앱은 `SetVocabularyStrings` `INVocabulary` 클래스의 메서드를 호출 하 고 주 앱에서 컬렉션을 `NSOrderedSet` 전달 하 여 사용자별 어휘를 제공 합니다. 새 용어를 추가 하기 전에 `RemoveAllVocabularyStrings` 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예를 들어:
+앱은 `SetVocabularyStrings` `INVocabulary` 클래스의 메서드를 호출 하 고 주 앱에서 컬렉션을 `NSOrderedSet` 전달 하 여 사용자별 어휘를 제공 합니다. 새 용어를 추가 하기 전에 `RemoveAllVocabularyStrings` 응용 프로그램에서 항상 메서드를 먼저 호출 하 여 기존 용어를 제거 해야 합니다. 예:
 
 ```csharp
 using System;

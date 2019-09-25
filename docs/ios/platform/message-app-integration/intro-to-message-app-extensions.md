@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 05/02/2017
-ms.openlocfilehash: ca782e57964adadd85412030db2247f0de690a6b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 37f2942c97f7604fbd72a6dd38de518d3668ee9e
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769661"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250128"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Xamarin.ios의 메시지 앱 확장 기본 사항
 
@@ -37,7 +37,7 @@ IOS 10의 새로운 기능으로, 이제 메시지 앱은 자체의 전용 기�
 
 IOS 10 에서도 새로 추가 된 Apple에는 사용자가 앱을 쉽게 검색할 수 있도록 하는 인라인 앱 특성이 추가 되었습니다. 예를 들어 한 사용자가 두 번째 사용자가 설치 하지 않은 앱에서 다른 사용자에 게 콘텐츠를 전송 하는 경우 (예: 스티커) 보내는 앱의 이름이 메시지 기록의 내용에 나열 됩니다. 사용자가 앱의 이름을 탭 하면 메시지 앱 스토어가 열리고 앱이 스토어에서 선택 됩니다.
 
-메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 예를 들어:
+메시지 앱 확장은 개발자가 작성 하는 데 익숙한 기존 iOS 앱과 비슷하며 표준 iOS 앱의 모든 표준 프레임 워크 및 기능에 액세스할 수 있습니다. 예:
 
 - 앱 내 구매에 액세스할 수 있습니다.
 - Apple Pay에 대 한 액세스 권한이 있습니다.
@@ -115,9 +115,11 @@ Xcode의 Attributes Inspector를 사용 하 여 전체 스티커 팩의 크기�
 
 사용자 지정 스티커 환경을 만들려면 다음을 수행 합니다.
 
+<!-- markdownlint-disable MD001 -->
+
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. Mac용 Visual Studio를 시작 합니다.
+1. Mac용 Visual Studio를 시작합니다.
 2. 솔루션을 열어에 메시지 앱 확장을 추가 합니다.
 3. **IOS** > **확장** iMessage 확장을 선택 하 고 다음 단추를 클릭 합니다. > 
 

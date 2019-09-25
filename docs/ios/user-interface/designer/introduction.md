@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 01/31/2018
-ms.openlocfilehash: fa772add96eb17b0a80470210f42b4d9df220a9c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bb772d2b0cd50c1bac9b1d119adf4e9a04a341a3
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768933"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250148"
 ---
 # <a name="ios-designer-basics"></a>iOS 디자이너 기본 사항
 
@@ -35,6 +35,8 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 개발자는 iOS Designer를 사용 하 여 응용 프로그램의 사용자 인터페이스를 시각적으로 디자인할 수 있습니다. 스토리 보드 [소개](~/ios/user-interface/storyboards/index.md) 가이드에 설명 된 대로 storyboard는 앱을 구성 하는 화면 (보기 컨트롤러), 해당 뷰 컨트롤러에 배치 되는 인터페이스 요소 (뷰) 및 앱의 전반적인 탐색 흐름을 설명 합니다. 
 
 뷰 컨트롤러에는 iOS 디자이너의 시각적 표현과 연결 된 C# 클래스의 두 부분이 있습니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -296,7 +298,7 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 
 장치 및 방향 선택은 iOS 디자이너가 디자인을 미리 보는 방법에만 적용 됩니다. **특성 편집** 단추를 사용 하 여 달리 지정 하지 않는 한, 현재 선택 항목에 관계 없이 새로 추가 된 제약 조건이 모든 장치 및 방향에 적용 됩니다.
 
-[Size 클래스](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 를 [사용](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes)하는 경우 **특성 편집** 단추가 확장 된 아래쪽 도구 모음에 표시 됩니다.  **특성 편집** 단추를 클릭 하면 선택한 장치와 방향이 나타내는 size 클래스에 따라 인터페이스 변형을 만드는 옵션이 표시 됩니다. 다음 예를 참조하세요.
+[Size 클래스](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 를 [사용](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes)하는 경우 **특성 편집** 단추가 확장 된 아래쪽 도구 모음에 표시 됩니다.  **특성 편집** 단추를 클릭 하면 선택한 장치와 방향이 나타내는 size 클래스에 따라 인터페이스 변형을 만드는 옵션이 표시 됩니다. 다음 예제를 살펴보세요.
 
 - **IPhone SE** / **세로**를 선택 하는 경우 팝 오버는 컴팩트 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다. 
 - **IPad Pro 9.7 "**  / **가로** / **전체 화면** 을 선택 하면 팝 오버는 일반 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: a4867ef779e55d16ef49b2f8ad0dc5bd0ec7024f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f696e8159d929bf41596c4dc9498e682e361f412
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761447"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249995"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Xamarin. Android Designer 사용
 
@@ -31,6 +31,8 @@ _이 문서는 Xamarin. Android Designer의 연습입니다. 작은 색 브라�
 ## <a name="walkthrough"></a>연습
 
 이 연습의 목적은 Android Designer를 사용 하 여 예제 색 브라우저 앱에 대 한 사용자 인터페이스를 만드는 것입니다. 색 브라우저 앱은 색, 이름 및 RGB 값의 목록을 제공 합니다. 이러한 위젯을 시각적으로 레이아웃 하는 방법 뿐만 아니라 **Design Surface** 에 위젯을 추가 하는 방법을 알아봅니다. 그런 다음 **Design Surface** 에서 또는 디자이너의 **속성** 창을 사용 하 여 대화형으로 위젯을 수정 하는 방법에 대해 알아봅니다. 마지막으로 장치 또는 에뮬레이터에서 앱을 실행할 때 디자인의 모양을 확인할 수 있습니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
