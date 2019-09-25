@@ -9,8 +9,6 @@
         - name: 요구 사항
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Xamarin이란?
-          href: get-started/introduction-to-mobile-development.md
         - name: 모바일 소프트웨어 개발 수명 주기
           href: get-started/introduction-to-mobile-sdlc.md
         - name: 플랫폼 간 앱 빌드 연습
