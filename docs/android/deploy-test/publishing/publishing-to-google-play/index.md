@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c6559db8cc2e3e18ec48dd85ea2d68455336bdd8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755960"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250018"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
-앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다. 
+앱을 배포할 수 있는 여러 앱 마켓이 있지만 Google Play가 당연히 세게에서 가장 크고 많은 사용자들이 찾는 Android 앱 스토어입니다. Google Play는 Android 애플리케이션의 배포, 광고, 판매 및 판매 분석을 위한 단일 플랫폼을 제공합니다.
 
 이 섹션에서는 게시자가 되기 위한 등록, Google Play의 애플리케이션 판촉 및 광고를 위한 자산 수집, Google Play 애플리케이션 등급 지침, 필터를 사용하여 특정 디바이스에 대한 애플리케이션 배포 제한 등과 같은 Google Play 특정 항목을 다룹니다.
 
@@ -52,7 +52,7 @@ Google Play에서 애플리케이션을 효과적으로 프로모션 및 광고�
 
 #### <a name="launcher-icons"></a>시작 아이콘
 
-*시작 아이콘*은 애플리케이션을 나타내는 그래픽입니다. 각 시작 아이콘은 투명 알파 채널이 있는 32비트 PNG여야 합니다. 애플리케이션에는 아래 목록에서 설명한 대로 모든 일반 화면 밀도에 대한 아이콘이 있어야 합니다. 
+*시작 아이콘*은 애플리케이션을 나타내는 그래픽입니다. 각 시작 아이콘은 투명 알파 채널이 있는 32비트 PNG여야 합니다. 애플리케이션에는 아래 목록에서 설명한 대로 모든 일반 화면 밀도에 대한 아이콘이 있어야 합니다.
 
 - **ldpi** (120dpi) &ndash; 36 x 36 px
 - **mdpi** (160dpi) &ndash; 48 x 48 px
@@ -108,6 +108,8 @@ Google Play의 추천 섹션에서 사용합니다. 이 그래픽은 애플리�
 애플리케이션을 보여 주는 YouTube 동영상 URL입니다. 비디오는 30초에서 2분 길이까지 가능하며 애플리케이션의 장점을 보여 줍니다.
 
 ### <a name="publishing-to-google-play"></a>Google Play에 게시
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -196,7 +198,7 @@ OAuth 클라이언트의 기본 이름은 *Google Play Android Developer*입니�
 
 [![표시된 클라이언트 ID와 암호](images/06-client-id-and-secret-sml.png)](images/06-client-id-and-secret.png#lightbox)
 
-**저장**을 클릭하여 변경 내용을 저장합니다. 그러면 **JSON 다운로드** 아이콘을 클릭하여 자격 증명을 다운로드할 수 있는**자격 증명** 페이지로 돌아갑니다. 
+**저장**을 클릭하여 변경 내용을 저장합니다. 그러면 **JSON 다운로드** 아이콘을 클릭하여 자격 증명을 다운로드할 수 있는**자격 증명** 페이지로 돌아갑니다.
 
 [![JSON 다운로드 아이콘](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
@@ -217,7 +219,7 @@ JSON 파일에는 잘라서 다음 단계의 **서명 및 배포** 대화 상자
 
 #### <a name="publish"></a>게시
 
-**허용**을 클릭하면 브라우저가 _확인 코드 받음. 닫는 중... _ 메시지가 표시되며 앱이 Visual Studio의 Google Play 계정 목록에 추가됩니다. **Google Play 계정** 대화 상자에서 **계속**을 클릭합니다.
+**허용**을 클릭하면 브라우저가 _확인 코드 받음. 닫는 중..._  메시지가 표시되며 앱이 Visual Studio의 Google Play 계정 목록에 추가됩니다. **Google Play 계정** 대화 상자에서 **계속**을 클릭합니다.
 
 [![Google Play 계정에 추가된 계정](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 

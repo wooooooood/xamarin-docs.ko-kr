@@ -244,7 +244,7 @@
       items:
         - name: 개요
           href: platform/index.md
-        - name: iOS 13 미리 보기
+        - name: iOS 13
           items:
             - name: iOS 13 소개
               href: platform/ios13/index.md
@@ -254,6 +254,8 @@
               href: platform/ios13/dark-mode.md
             - name: Apple을 사용하여 로그인
               href: platform/ios13/sign-in.md
+            - name: IPad용 다중 창
+              href: platform/ios13/multi-window-ipad.md
             - name: 문제 해결
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
@@ -590,7 +592,7 @@
           items:
             - name: 소개
               href: data-cloud/data/introduction.md
-            - name: 구성
+            - name: Configuration
               href: data-cloud/data/configuration.md
             - name: SQLite.NET ORM 사용
               href: data-cloud/data/using-sqlite-orm.md
@@ -729,7 +731,7 @@
                       href: ~/cross-platform/macios/binding/objective-sharpie/platform/native-frameworks.md?context=xamarin/ios
                     - name: 특성 확인
                       href: ~/cross-platform/macios/binding/objective-sharpie/platform/verify.md?context=xamarin/ios
-                - name: 예제
+                - name: 예
                   href: ~/cross-platform/macios/binding/objective-sharpie/examples/index.md?context=xamarin/ios
                   items:
                     - name: Xcode

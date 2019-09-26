@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: e5c8e02397e778cf3e71a0c8b4aa544074521cac
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b85289d9dbd60d5ee0238540e67773ed9085b672
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755933"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249963"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -313,6 +313,8 @@ Unknown option '-keep' in line 1 of file 'proguard.cfg'
 ```
 
 이 문제는 일반적으로 Windows에서 `.cfg` 파일에 잘못된 인코딩이 있는 경우에 발생합니다. ProGuard는 텍스트 파일에 있는 _바이트 순서 표시_(BOM)를 처리할 수 없습니다. BOM이 있는 경우 ProGuard는 위의 오류와 함께 종료됩니다. 
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

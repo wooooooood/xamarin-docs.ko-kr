@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: 8374e90ea6d460a0e0c22763db023654c3008b32
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105748"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249562"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -147,7 +147,7 @@ API에 연결할 때는 소스 코드에서 자동 생성되는 해당 UID(고�
 
 UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에서와 같이 UID 값을 각각 %60 및 %23으로 HTML 인코딩해야 합니다.
 
-- 예제: @System.Threading.Tasks.Task\`1은 `@System.Threading.Tasks.Task%601`이 됩니다.
+- 예: @System.Threading.Tasks.Task\`1은 `@System.Threading.Tasks.Task%601`이 됩니다.
 - 예: @System.Exception.\#ctor은 `@System.Exception.%23ctor`이 됩니다.
 
 ## <a name="lists"></a>목록
@@ -179,7 +179,7 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 - 글머리 기호
 - list
 
-##### <a name="unordered-list-with-an-embedded-list"></a>포함된 목록이 있는 순서가 지정되지 않은 목록
+#### <a name="unordered-list-with-an-embedded-list"></a>포함된 목록이 있는 순서가 지정되지 않은 목록
 
 - This
 - 글머리 기호
@@ -210,7 +210,7 @@ UID에 특수 문자를 \` 또는 \#이 포함되어 있으면 다음 예제에�
 
 3개의 backtick(\`\`\`) + 언어 ID를 사용항여 코드 블록에 언어별 색 코딩을 적용합니다. [GFM 언어 ID](https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs)의 전체 목록은 다음과 같습니다.
 
-##### <a name="c9839"></a>C&#9839;
+#### <a name="c9839"></a>C&#9839;
 
 ```c#
 using System;
@@ -333,7 +333,7 @@ docs.microsoft는 GitHub Flavored Markdown에 대해 몇 가지 추가 확장을
 > This is a NOTE
 ```
 
-#### <a name="warning"></a>경고
+#### <a name="warning"></a>Warning
 
 ```
 > [!WARNING]

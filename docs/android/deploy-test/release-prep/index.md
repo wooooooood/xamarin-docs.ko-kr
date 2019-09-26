@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: b3e34022af4e83b172b7ae7cedfb13e95e92beba
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5113255d8776987783ad5e8f023e7b2b30924ea4
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756115"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249998"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -40,6 +40,8 @@ ms.locfileid: "70756115"
 ## <a name="specify-the-application-icon"></a>애플리케이션 아이콘 지정
 
 각각의 Xamarin.Android 애플리케이션마다 애플리케이션 아이콘을 지정하는 것이 좋습니다. 일부 애플리케이션 마켓플레이스에서는 아이콘 없이 Android 애플리케이션을 게시하지 못합니다. `Application` 특성의 `Icon` 속성은 Xamarin.Android 프로젝트의 애플리케이션 아이콘을 지정하는 데 사용됩니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

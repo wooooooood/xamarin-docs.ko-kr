@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2017
-ms.openlocfilehash: 43dce7fe6d2a4a976879b1f583711d767dcacc7c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8267c49302a755dcc433345b6a53aa9f2e2c71e6
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756204"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250170"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -90,6 +90,8 @@ TestFlight를 사용하여 빌드를 테스트하려면 새 베타 자격으로 
 iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있습니다. 빌드에는 새 베타 자격이 있어야 합니다.
 
 먼저 IDE에서 [최종 배포 가능한 파일](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)을 빌드한 다음, 애플리케이션 로더 또는 Xcode의 보관 기능을 통해 [Apple에 앱을 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)합니다.
+
+<!-- markdownlint-disable MD001 -->
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
