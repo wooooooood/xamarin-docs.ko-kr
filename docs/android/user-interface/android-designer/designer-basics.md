@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: 0089f8681142b1d3d3446c21ba89ab2648e4a638
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70761415"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Android Designer 기본 사항
@@ -248,7 +248,7 @@ Android Designer **Design Surface** 의 특정 속성에 대 한 직접 편집�
 
 ![단추 주위의 공간을 표시 하는 점선 예](designer-basics-images/vs/16-margins-set.png)
 
-### <a name="size"></a>Size
+### <a name="size"></a>크기
 
 앞에서 설명한 것 처럼 이미 선택 되어 있는 위젯을 클릭 하 여 크기 편집 모드로 전환할 수 있습니다. 삼각형 핸들을 클릭 하 여 표시 된 차원의 크기를로 `wrap_content`설정 합니다.
 
@@ -318,7 +318,7 @@ Android Designer **Design Surface** 의 특정 속성에 대 한 직접 편집�
 
 - **문서 개요** &ndash; 레이아웃을 구성 하는 위젯의 트리를 표시 합니다. 트리의 항목을 클릭 하 여 디자이너에서 선택 되도록 할 수 있습니다. 또한 트리에서 항목을 클릭 하면 항목의 속성이 속성 패드에 로드 됩니다.
 
-## <a name="toolbar"></a>도구 모음
+## <a name="toolbar"></a>Toolbar
 
 도구 모음 (Design Surface 위에 배치)은 구성 선택기 및 도구 메뉴를 제공 합니다.
 
@@ -472,7 +472,7 @@ Android Designer Design Surface의 특정 속성에 대 한 직접 편집을 지
 
 [![단추 주위의 공간을 표시 하는 점선 예](designer-basics-images/xs/17-margins-set-sml.png)](designer-basics-images/xs/17-margins-set.png#lightbox)
 
-### <a name="size"></a>Size
+### <a name="size"></a>크기
 
 앞에서 설명한 것 처럼 이미 선택 되어 있는 위젯을 클릭 하 여 크기 편집 모드로 전환할 수 있습니다. 삼각형 핸들을 클릭 하 여 표시 된 차원의 크기를로 `wrap_content`설정 합니다.
 

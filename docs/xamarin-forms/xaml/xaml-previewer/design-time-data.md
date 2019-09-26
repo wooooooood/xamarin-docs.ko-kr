@@ -8,10 +8,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
 ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887851"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>XAML 미리 보기에서 디자인 타임 데이터 사용

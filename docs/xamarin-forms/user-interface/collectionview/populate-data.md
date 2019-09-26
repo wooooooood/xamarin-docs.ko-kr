@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 6942baed6af2a2e9b2c713a8fe08cf4c8ed4416b
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888538"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.ios CollectionView 데이터
@@ -76,7 +76,7 @@ collectionView.ItemsSource = new string[]
 
 기본적으로는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 다음 스크린샷에 표시 된 것 처럼 세로 목록에 항목을 표시 합니다.
 
-[(populate-data-images/text.png "CollectionView의") ![iOS 및 Android 텍스트 항목에 대 한 텍스트 항목을 포함 하는 CollectionView의 스크린샷]] (populate-data-images/text-large.png#lightbox "CollectionView의 텍스트 항목")
+[![IOS 및 Android에서 텍스트 항목을 포함 하는 CollectionView의 스크린샷](populate-data-images/text.png "CollectionView의 텍스트 항목")](populate-data-images/text-large.png#lightbox "CollectionView의 텍스트 항목")
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 레이아웃을 변경 하는 방법에 대 한 자세한 내용은 [레이아웃 지정](layout.md)을 참조 하세요. 에서 `CollectionView`각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 [항목 모양 정의](#define-item-appearance)를 참조 하세요.
 
@@ -98,7 +98,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 이 예제에서 속성 데이터 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 는 연결 된 viewmodel의 `Monkeys` 속성에 바인딩됩니다.
 
 > [!NOTE]
-> 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하십시오.
+> 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
@@ -186,7 +186,7 @@ public class Monkey
 
 다음 스크린샷에는 목록의 각 항목에 대 한 템플릿 결과가 나와 있습니다.
 
-[(populate-data-images/datatemplate.png "CollectionView의") ![iOS 및 Android 템플릿 항목에서 각 항목이 템플릿 인 CollectionView의 스크린샷]] (populate-data-images/datatemplate-large.png#lightbox "CollectionView의 템플릿 항목")
+[![IOS 및 Android에서 각 항목이 템플릿 인 CollectionView의 스크린샷](populate-data-images/datatemplate.png "CollectionView의 템플릿 항목")](populate-data-images/datatemplate-large.png#lightbox "CollectionView의 템플릿 항목")
 
 데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
@@ -243,7 +243,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 클래스 `MonkeyDataTemplateSelector` 는 다른 `AmericanMonkey` 데이터 `OtherMonkey` 템플릿으로 설정 된 및 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. 재정의 `OnSelectTemplate` 는 원숭이 이름 `AmericanMonkey` 및 위치를 청록색으로 표시 하는 템플릿 (원숭이 이름에 "아메리카"가 포함 된 경우)을 반환 합니다. 원숭이 이름에 "아메리카"가 포함 되어 있지 않으면 `OnSelectTemplate` 재정의는 다음 `OtherMonkey` 의 원숭이 이름과 위치를 은색에 표시 하는 템플릿을 반환 합니다.
 
-[CollectionView에서 iOS 및 Android(populate-data-images/datatemplateselector.png "런타임 항목 템플릿 선택") 의 ![CollectionView 런타임 항목 템플릿 선택 스크린샷]] (populate-data-images/datatemplateselector-large.png#lightbox "CollectionView의 런타임 항목 템플릿 선택")
+[![IOS 및 Android에서 CollectionView 런타임 항목 템플릿 선택의 스크린샷](populate-data-images/datatemplateselector.png "CollectionView의 런타임 항목 템플릿 선택")](populate-data-images/datatemplateselector-large.png#lightbox "CollectionView의 런타임 항목 템플릿 선택")
 
 데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
 

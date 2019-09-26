@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70758494"
 ---
 # <a name="introduction-to-android-wear"></a>Android Wear 소개
@@ -147,7 +147,7 @@ Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있�
 
 인라인 동작, 스마트 회신, 원격 입력, 확장 된 알림 및 알림에 대 한 새로운 브리징 모드와 같은 더 많은 마모 된 2.0 기능이 있습니다. 새 마모 된 2.0 기능에 대 한 자세한 내용은 Android [API 개요](https://developer.android.com/wear/preview/api-overview.html)를 참조 하세요. 
 
-## <a name="devices"></a>장치
+## <a name="devices"></a>디바이스
 
 Android를 실행할 수 있는 장치의 몇 가지 예는 다음과 같습니다.
 

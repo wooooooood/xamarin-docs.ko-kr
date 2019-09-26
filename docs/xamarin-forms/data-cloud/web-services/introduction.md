@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
 ms.openlocfilehash: bbeab6a6ab0d4a9d0e3a962240317fc0d54f9e25
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68656646"
 ---
 # <a name="xamarinforms-web-services-introduction"></a>Xamarin Forms 웹 서비스 소개
@@ -29,7 +29,7 @@ _이 항목에서는 다른 웹 서비스와 통신 하는 방법을 보여 주�
 
 모든 경우에는 작업은 웹 서비스를 통해 액세스 되는 백 엔드에 저장 됩니다.
 
-응용 프로그램을 시작할 때 웹 서비스에서 검색 된 모든 작업을 나열 하 고 새 작업을 만들 수 있도록 하는 페이지가 표시 됩니다. 작업을 클릭 하면 두 번째 페이지는 태스크를 편집, 저장, 삭제 및 수 음성 응용 프로그램을 이동 합니다. 최종 애플리케이션은 다음과 같습니다.
+응용 프로그램을 시작할 때 웹 서비스에서 검색 된 모든 작업을 나열 하 고 새 작업을 만들 수 있도록 하는 페이지가 표시 됩니다. 작업을 클릭 하면 두 번째 페이지는 태스크를 편집, 저장, 삭제 및 수 음성 응용 프로그램을 이동 합니다. 최종 응용 프로그램은 다음과 같습니다.
 
 ![](introduction-images/app-example-1.png "Todo 응용 프로그램-첫 번째 페이지")
 ![](introduction-images/app-example-2.png "Todo 응용 프로그램-두 번째 페이지")

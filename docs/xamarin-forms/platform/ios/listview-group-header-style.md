@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: f40737799f63c6e0c61fcc6f4f59584222a49d6d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68648316"
 ---
 # <a name="listview-group-header-style-on-ios"></a>IOS의 ListView 그룹 머리글 스타일
@@ -50,7 +50,7 @@ listView.On<iOS>().SetGroupHeaderStyle(GroupHeaderStyle.Grouped);
 
 그러면 지정 `GroupHeaderStyle` 된 값이에 적용 되어 스크롤 중에 [`ListView`](xref:Xamarin.Forms.ListView)머리글 셀의 float 여부를 제어 합니다.
 
-부동 및 부동이 아닌 머리글 [(listview-group-header-style-images/group-header-styles.png "셀을 포함 하") 는 ![iOS listview의 부동 및 부동 Listview 머리글 셀의 스크린샷]] (listview-group-header-style-images/group-header-styles-large.png#lightbox "부동 및 비 부동 머리글 셀이 있는 ListView")
+[![IOS의 부동 및 비 부동 ListView 머리글 셀의 스크린샷](listview-group-header-style-images/group-header-styles.png "부동 및 비 부동 머리글 셀이 있는 ListView")](listview-group-header-style-images/group-header-styles-large.png#lightbox "부동 및 비 부동 머리글 셀이 있는 ListView")
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,6 +1,6 @@
 ---
 title: XAML 태그 확장 사용
-description: 이 문서에서는 다양한 원본에서 요소 특성을 설정할 수 있도록 함으로써 XAML의 성능과 유연성을 향상시키는 Xamarin.Forms XAML 태그 확장 사용 방법을 설명합니다.
+description: 이 문서에서는 다양 한 원본에서에서 설정할 요소 특성을 허용 하 여 성능과 XAML의 유연성을 강화 하기 위해 Xamarin.Forms XAML 태그 확장을 사용 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
@@ -8,44 +8,44 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69887897"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
-XAML 태그 확장은 다양한 원본에서 요소 특성을 설정할 수 있도록 함으로써 XAML의 성능과 유연성 향상을 도와줍니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. XAML 태그 확장은 일반적으로 `x` 네임 스페이스 접두사를 사용하여 XAML 파일에 표시되고, 흔히 해당 접두사로 참조됩니다. 이 문서에서는 다음 태그 확장에 대해 설명합니다.
+XAML 태그 확장 다양 한 원본에서에서 설정할 요소 특성을 허용 하 여 성능과 XAML의 유연성을 향상 하도록 도와줍니다. 몇 가지 XAML 태그 확장은 XAML 2009 사양의 일부입니다. 이러한 일반적인 XAML 파일에서 표시 `x` 되며 네임 스페이스 접두사를 흔히이 접두사를 사용 하 여 합니다. 다음 태그 확장에 설명 합니다.
 
-- [`x:Static`](#static) – 정적 속성, 필드 또는 열거형 멤버를 참조합니다.
-- [`x:Reference`](#reference) – 페이지의 명명된 요소를 참조합니다.
-- [`x:Type`](#type) – `System.Type` 개체로 특성을 설정합니다.
-- [`x:Array`](#array) – 특정 유형의 개체 배열을 생성합니다.
-- [`x:Null`](#null) – `null` 값으로 특성을 설정합니다.
-- [`OnPlatform`](#onplatform) – 플랫폼별 기준에서 UI 모양을 사용자 지정합니다.
-- [`OnIdiom`](#onidiom) – 응용 프로그램이 실행 중인 장치의 관용구를 기반으로 UI 모양을 사용자 지정합니다.
+- [`x:Static`](#static) – 정적 속성, 필드 또는 열거형 멤버 참조 합니다.
+- [`x:Reference`](#reference) – 명명 된 페이지의 요소 참조 합니다.
+- [`x:Type`](#type) – 특성으로는 `System.Type` 개체입니다.
+- [`x:Array`](#array) – 특정 형식의 개체 배열을 생성 합니다.
+- [`x:Null`](#null) – 특성으로는 `null` 값입니다.
+- [`OnPlatform`](#onplatform) – 플랫폼별 기준 UI 모양을 사용자 지정 합니다.
+- [`OnIdiom`](#onidiom) – 응용 프로그램에서 실행 중인 장치의 관용구를 기반으로 하는 UI 모양을 사용자 지정 합니다.
 - [`DataTemplate`](#datatemplate-markup-extension)-형식을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 변환 합니다.
 - [`FontImage`](#fontimage-markup-extension)-를 `ImageSource`표시할 수 있는 모든 보기에 글꼴 아이콘을 표시 합니다.
 
-추가적인 XAML 태그 확장은 지금까지 다른 XAML 구현에서 지원되었으며, Xamarin.Forms에서도 지원됩니다. 해당 내용은 다음과 같이 다른 글에서 더 자세히 설명합니다.
+추가 XAML 태그 확장 지금까지 다른 XAML 구현에서 지 원하는 및 Xamarin.Forms 에서도 지원 됩니다. 이러한 다른 문서에 자세히 설명 된:
 
-- `StaticResource` &ndash; [**리소스 사전**](~/xamarin-forms/xaml/resource-dictionaries.md) 문서에서 설명된 것처럼 리소스 사전에서 개체를 참조합니다.
-- `DynamicResource` &ndash; [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md) 문서에 설명된 것처럼 리소스 사전에 있는 개체 변경에 응답합니다.
-- `Binding` &ndash; [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서에 설명된 것처럼 두 개체의 속성 간의 연결을 설정합니다.
-- `TemplateBinding` &ndash; [**컨트롤 템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md) 문서에 설명된 것처럼 컨트롤 템플릿에서 데이터 바인딩을 수행합니다.
+- `StaticResource` &ndash; 이 문서에 설명 된 대로 리소스 사전에서 개체를 참조 [ **리소스가**](~/xamarin-forms/xaml/resource-dictionaries.md)합니다.
+- `DynamicResource` &ndash; 이 문서에 설명 된 대로 리소스 사전에 있는 개체에 대 한 변경 내용에 응답할 [ **동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)합니다.
+- `Binding` &ndash; 이 문서에 설명 된 대로 두 개체의 속성 사이의 연결을 설정할 [ **데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)합니다.
+- `TemplateBinding` &ndash; 문서에 설명 된 대로 데이터 바인딩 컨트롤 템플릿에서 수행 [ **바인딩 컨트롤 템플릿에서**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md)합니다.
 
-[ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 레이아웃은 사용자 지정 태그 확장 [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)을 사용합니다. 해당 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md) 문서에서 설명합니다.
+합니다 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 레이아웃 사용자 지정 태그 확장 사용 [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)합니다. 이 태그 확장은 문서에서 설명한 [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md)합니다.
 
 <a name="static" />
 
-## <a name="xstatic-markup-extension"></a>x:Static 태그 확장
+## <a name="xstatic-markup-extension"></a>x:Static 태그 확장명
 
-`x:Static` 태그 확장은 [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) 클래스에서 지원됩니다. 이 클래스에는 공용 상수, 정적 속성, 정적 필드 또는 열거형 멤버의 이름으로 설정되는 `string` 유형의 [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member)라는 단일 속성이 있습니다.
+합니다 `x:Static` 태그 확장 되는 [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) 클래스입니다. 클래스에 라는 단일 속성만 [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) 형식의 `string` 공용 상수, 정적 속성, 정적 필드 또는 열거형 멤버의 이름으로 설정 하는 합니다.
 
-`x:Static`을 사용하는 일반적인 방법 중 하나는 [ **MarkupExtensions** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) 프로그램에 있는 다음과 같은 작은 `AppConstants` 클래스처럼 몇 가지 상수 또는 정적 변수를 가진 클래스를 먼저 정의하는 것입니다.
+사용 하 여 한 가지 일반적인 방법 `x:Static` 와 같은 일부 상수 또는 정적 변수를 사용 하 여 클래스를 먼저 정의 하는 것이 작은 `AppConstants` 클래스는 [ **MarkupExtensions** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions) 프로그램:
 
 ```csharp
 static class AppConstants
@@ -54,7 +54,7 @@ static class AppConstants
 }
 ```
 
-**x:Static Demo** 페이지는 `x:Static` 태그 확장을 사용하는 몇 가지 방법을 보여줍니다. 가장 장황한 방법은 다음과 같이 `Label.FontSize` 속성-요소 태그 사이에 `StaticExtension` 클래스를 인스턴스화하는 것입니다.
+합니다 **X:static 데모** 페이지를 사용 하는 여러 방법을 보여 줍니다는 `x:Static` 태그 확장 합니다. 가장 자세한 정보 표시 방법 인스턴스화하는 `StaticExtension` 간의 클래스 `Label.FontSize` 속성 요소 태그:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -76,7 +76,7 @@ static class AppConstants
 </ContentPage>
 ```
 
-XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`으로 축약하도록 허용합니다.
+XAML 파서에서 허용 합니다 `StaticExtension` 로 축약할 수 클래스 `x:Static`:
 
 ```xaml
 <Label Text="Label No. 2">
@@ -93,9 +93,9 @@ XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`
        FontSize="{x:StaticExtension Member=local:AppConstants.NormalFontSize}" />
 ```
 
-중괄호 안의 따옴표가 *없다*는 것에 주의하십시오. `StaticExtension`의 `Member` 속성은 더 이상 XML 특성이 아닙니다. 대신 태그 확장에 대한 표현식의 일부입니다.
+있으며 *없습니다* 중괄호 안의 따옴표입니다. 합니다 `Member` 속성의 `StaticExtension` 은 더 이상 XML 특성입니다. 대신의 일부인 태그 확장에 대 한 식입니다.
 
-개체 요소로 사용할 때 `x:StaticExtension`을 `x:Static`으로 축약할 수 있는 것처럼, 다음과 같이 중괄호 내의 표현식에서 이를 줄여 쓸 수도 있습니다.
+축약할 수와 마찬가지로 `x:StaticExtension` 에 `x:Static` 개체 요소를 사용 하면 축약할 수 있습니다도 중괄호 내에서 식에서:
 
 ```xaml
 <Label Text="Label No. 4"
@@ -109,15 +109,15 @@ XAML 파서는 또한 다음과 같이 `StaticExtension` 클래스를 `x:Static`
        FontSize="{x:Static local:AppConstants.NormalFontSize}" />
 ```
 
-이것은 `x:Static` 태그 확장의 가장 일반적인 형태입니다.
+이것은 가장 일반적인 형태의 `x:Static` 태그 확장 합니다.
 
-**Static Demo** 페이지에는 두 가지 다른 예가 포함되어 있습니다. XAML 파일의 루트 태그에는 다음과 같이 .NET `System` 네임스페이스에 대한 XML 네임스페이스 선언이 포함되어 있습니다.
+합니다 **정적 데모** 페이지에 두 가지 예제가 포함 되어 있습니다. XAML 파일의 루트 태그는.NET에 대 한 XML 네임 스페이스 선언을 포함 `System` 네임 스페이스:
 
 ```xaml
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-이로 인해 `Label`의 글꼴 크기를 정적 필드 `Math.PI`로 설정 가능합니다. 그 결과 텍스트가 다소 작아지며, `Scale` 속성은 `Math.E`로 설정됩니다.
+따라서 합니다 `Label` 정적 필드에 설정할 글꼴 크기 `Math.PI`합니다. 결과는 작은 텍스트 이므로 `Scale` 속성이 `Math.E`:
 
 ```xaml
 <Label Text="&#x03C0; &#x00D7; E sized text"
@@ -126,7 +126,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
        HorizontalOptions="Center" />
 ```
 
-마지막 예는 `Device.RuntimePlatform` 값을 표시합니다. `Environment.NewLine` 정적 속성은 다음과 같이 두 개의 `Span` 개체 사이에 개행 문자를 삽입하는 데 사용됩니다.
+마지막 예에서는 표시 된 `Device.RuntimePlatform` 값입니다. 합니다 `Environment.NewLine` 정적 속성은 둘 사이의 줄 바꿈 문자를 삽입 데 `Span` 개체:
 
 ```xaml
 <Label HorizontalTextAlignment="Center"
@@ -141,9 +141,9 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </Label>
 ```
 
-샘플 실행은 다음과 같습니다.
+샘플이 실행 되는 다음과 같습니다.
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
+[![X:Static Demo](consuming-images/staticdemo-small.png "X:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
 <a name="reference" />
 
@@ -151,7 +151,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 `x:Reference` 태그 확장은 [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스에서 지원됩니다. 클래스에는 `x:Name`으로 이름이 붙여진 페이지 상의 요소 이름을 설정하는 `string` 유형의 [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name)이라는 단일 속성을 가지고 있습니다. `Name` 속성은 `ReferenceExtension`의 콘텐츠 속성이므로 `x:Reference`가 중괄호 안에 나타날 때 `Name=`은 필요 없습니다.
 
-`x:Reference` 태그 확장은 [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서에서 자세히 설명하는 데이터 바인딩과 함께 독점적으로 사용됩니다.
+합니다 `x:Reference` 태그 확장을 사용 하 여 문서에서 자세히 설명 하는 데이터 바인딩을 사용 하 여 단독으로 [ **데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)합니다.
 
 다음의 **x:Reference Demo** 페이지는 데이터 바인딩을 사용하는 `x:Reference`의 두 가지 사용법을 보여줍니다. 첫 번째는 `Binding` 개체의 `Source` 속성을 설정하는 데 사용되고, 두 번째는 두 개의 데이터 바인딩을 위한 `BindingContext` 속성을 설정하는 데 사용되었습니다.
 
@@ -185,23 +185,23 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 </ContentPage>
 ```
 
-두 `x:Reference` 표현식은 모두 `ReferenceExtension` 클래스 이름의 축약된 버전을 사용하고 표현식의 `Name=` 부분을 제거하였습니다. 첫 번째 예에서 `x:Reference` 태그 확장은 `Binding` 태그 확장에 내장되어 있습니다. `Source`와 `StringFormat` 설정은 쉼표로 구분됩니다. 프로그램 실행 화면은 다음과 같습니다.
+둘 다 `x:Reference` 식의 약식된 버전을 사용 합니다 `ReferenceExtension` 클래스 이름 및 제거는 `Name=` 식의 일부입니다. 첫 번째 예에서는 합니다 `x:Reference` 태그 확장에 포함 되어는 `Binding` 태그 확장 합니다. 에 `Source` 및 `StringFormat` 설정 쉼표로 구분 됩니다. 실행 중인 프로그램은 다음과 같습니다.
 
-[![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
+[![X:reference 데모](consuming-images/referencedemo-small.png "X:reference 데모")](consuming-images/referencedemo-large.png#lightbox "x:Reference 데모")
 
 <a name="type" />
 
 ## <a name="xtype-markup-extension"></a>x:Type 태그 확장
 
-`x:Type` 태그 확장은 C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) 키워드와 동등한 XAML입니다. 클래스 또는 구조체 이름으로 설정된 `string` 유형의 [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName)이라는 하나의 속성을 정의하는 [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) 클래스에서 지원됩니다. `x:Type` 태그 확장은 해당 클래스 또는 구조체의 [ `System.Type` ](xref:System.Type) 개체를 반환합니다. `TypeName`은 `TypeExtension`의 콘텐츠 속성이므로 중괄호로 `x:Type`을 표시할 때 `TypeName=`이 필요하지 않습니다.
+합니다 `x:Type` 태그 확장은 XAML에 해당 하는 C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) 키워드입니다. 클래스 또는 구조체 이름으로 설정된 `string` 유형의 [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName)이라는 하나의 속성을 정의하는 [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) 클래스에서 지원됩니다. 합니다 `x:Type` 태그 확장 반환 합니다 [ `System.Type` ](xref:System.Type) 해당 클래스 또는 구조체의 개체입니다. `TypeName` 콘텐츠 속성인 `TypeExtension`이므로 `TypeName=` 필요 없는 경우 `x:Type` 중괄호를 사용 하 여 표시 됩니다.
 
-Xamarin.Forms에는 `Type` 유형의 인수를 갖는 여러 속성이 있습니다. 예제는 `Style`의 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성과 [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) 특성은 제네릭 클래스에서 인수를 지정하는 데 사용됩니다. 그러나 XAML 파서는 자동으로 `typeof` 연산을 수행하며, 이 경우에는 `x:Type` 태그 확장이 사용되지 않습니다.
+에서는 Xamarin.Forms 내의 여러 가지 속성 형식의 인수가 있는 `Type`합니다. 예로 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 속성을 `Style`, 및 [X:typearguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) 제네릭 클래스에서 인수를 지정 하는 데 사용 되는 특성입니다. 그러나 XAML 파서를 수행 합니다 `typeof` 작업 자동으로 및 `x:Type` 이러한 경우 태그 확장 사용 되지 않습니다.
 
 `x:Type`이 *필수*인 한 곳은 [다음 절](#array)에서 설명하는 `x:Array` 태그 확장입니다.
 
-`x:Type` 태그 확장은 각 메뉴 항목이 특정 유형의 개체에 해당하는 메뉴를 구성할 때도 유용합니다. `Type` 개체를 각 메뉴 항목과 연결한 다음 메뉴 항목이 선택될 때 개체를 인스턴스화할 수 있습니다.
+`x:Type` 메뉴 특정 형식의 개체에 각 메뉴 항목을 해당 하는 위치를 생성할 때 태그 확장 유용한 이기도 합니다. 연결할 수는 `Type` 각 메뉴 항목을 사용 하 여 개체 및 메뉴 항목이 선택 될 때 개체를 인스턴스화해야 합니다.
 
-이것이 **Markup Extensions** 프로그램의 `MainPage`에 있는 탐색 메뉴가 작동하는 방식입니다. 다음과 같이 **MainPage.xaml** 파일에는 프로그램의 특정 페이지에 해당하는 각 `TextCell`이 있는 `TableView`가 들어 있습니다.
+이것이 어떻게 탐색 메뉴에서 `MainPage` 에 **태그 확장** 프로그램 작동 합니다. **MainPage.xaml** 파일에는 `TableView` 각 `TextCell` 프로그램의 특정 페이지에 해당:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -240,11 +240,11 @@ Xamarin.Forms에는 `Type` 유형의 인수를 갖는 여러 속성이 있습니
 </ContentPage>
 ```
 
-**Markup Extensions**의 기본 페이지는 다음과 같습니다.
+여기는 첫 주 페이지 **태그 확장**:
 
 [![기본 페이지](consuming-images/mainpage-small.png "기본 페이지")](consuming-images/mainpage-large.png#lightbox "기본 페이지")
 
-각 `CommandParameter` 속성은 다른 페이지 중 하나를 참조하는 `x:Type` 태그 확장으로 설정됩니다. `Command` 속성은 `NavigateCommand`라는 속성에 바인딩됩니다. 해당 속성은 `MainPage` 코드 숨김 파일에 다음과 같이 정의되어 있습니다.
+각 `CommandParameter` 속성을 `x:Type` 다른 페이지 중 하나를 참조 하는 태그 확장 합니다. 합니다 `Command` 속성은 명명 된 속성에 바인딩할 `NavigateCommand`합니다. 이 속성에 정의 된는 `MainPage` 코드 숨김 파일:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -268,7 +268,7 @@ public partial class MainPage : ContentPage
 
 `NavigateCommand` 속성은 `CommandParameter`의 값인 `Type` 유형의 인수를 사용하여 execute 명령을 구현하는 `Command` 개체입니다. 해당 메서드는 페이지 인스턴스화를 위해 `Activator.CreateInstance`를 사용한 다음 해당 페이지로 이동합니다. 생성자는 `Command`의 `Binding`이 동작 가능하도록 페이지의 `BindingContext`를 자신으로 설정하여 완료됩니다. 해당 종류의 코드에 대한 더 자세한 내용은 [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md) 문서와 특히 [**명령**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) 문서를 참조하십시오.
 
-**x:Type Demo** 페이지는 유사한 기술을 사용하여 Xamarin.Forms 요소를 인스턴스화하고 해당 인스턴스를 `StackLayout`에 추가합니다. 다음 XAML 파일은 처음에는 `Command` 속성이 `Binding`으로 설정되고 `CommandParameter` 속성이 세 개의 Xamarin.Forms 뷰 유형으로 설정된 `Button` 요소 세 개로 구성됩니다.
+합니다 **X:type 데모** 페이지를 사용 하 여 유사한 기술을 Xamarin.Forms 요소를 인스턴스화하고을 추가 하는 `StackLayout`합니다. XAML 파일을 처음에 세 개인으로 구성 됩니다 `Button` 요소 해당 `Command` 속성으로 설정 된 `Binding` 및 `CommandParameter` 속성이 세 Xamarin.Forms 뷰 형식으로 설정:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -300,7 +300,7 @@ public partial class MainPage : ContentPage
 </ContentPage>
 ```
 
-코드 숨김 파일은 다음과 같이 `CreateCommand` 속성을 정의하고 초기화합니다.
+코드 숨김 파일을 정의 하 고 초기화 된 `CreateCommand` 속성:
 
 ```csharp
 public partial class TypeDemoPage : ContentPage
@@ -323,22 +323,22 @@ public partial class TypeDemoPage : ContentPage
 }
 ```
 
-`Button`을 누를 때 실행되는 메서드는 인수의 새로운 인스턴스를 만들고, 버튼의 `VerticalOptions` 속성을 설정하고 `StackLayout`에 추가합니다. 세 개의 `Button` 요소는 동적으로 생성된 뷰를 사용하여 다음과 같이 페이지를 공유합니다.
+메서드는 될 때 실행 되는 `Button` 눌러져 인수의 새 인스턴스를 만들고, 설정 해당 `VerticalOptions` 속성에 추가 `StackLayout`합니다. 세 가지 `Button` 요소가 동적으로 생성된 된 뷰를 사용 하 여 다음 페이지를 공유 합니다.
 
-[![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
+[![X:Type 데모](consuming-images/typedemo-small.png "X:Type 데모")](consuming-images/typedemo-large.png#lightbox "x:Type 데모")
 
 <a name="array" />
 
 ## <a name="xarray-markup-extension"></a>x:Array 태그 확장
 
-`x:Array` 태그 확장은 태그에서 배열을 정의할 수 있도록 해줍니다. 이는 다음의 두 속성을 정의하는 [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) 클래스에서 지원됩니다.
+`x:Array` 태그 확장을 사용 하면 태그 배열을 정의할 수 있습니다. 지원 되는 [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) 두 속성을 정의 하는 클래스:
 
-- 배열에 있는 요소의 유형을 가리키는 `Type` 유형의 `Type`.
-- 항목 자체의 컬렉션인 `IList` 유형의 `Items`. 이는 `ArrayExtension`의 컨텐츠 속성입니다.
+- `Type` 형식의 `Type`, 배열에 있는 요소의 형식을 나타냅니다.
+- `Items` 형식의 `IList`을 항목 자체의 컬렉션인 합니다. 콘텐츠 속성인 `ArrayExtension`합니다.
 
-`x:Array` 태그 확장 자체는 절대 중괄호 안에 나타나지 않습니다. 대신, `x:Array` 시작과 끝 태그는 항목의 목록을 구분합니다. `Type` 속성을 `x:Type` 태그 확장으로 설정하십시오.
+`x:Array` 중괄호로 나타나지 않으며 자체 태그 확장 합니다. 대신 `x:Array` 시작 및 끝 태그 항목 목록을 구분 합니다. 설정 된 `Type` 속성을는 `x:Type` 태그 확장 합니다.
 
-다음 **x:Array Demo** 페이지는 `ItemsSource` 속성을 배열로 설정하여 `ListView`에 항목을 추가하는 `x:Array`를 사용하는 방법을 보여줍니다.
+합니다 **X:array 데모** 페이지를 사용 하는 방법을 보여 줍니다 `x:Array` 항목을 추가 하는 `ListView` 설정 하 여는 `ItemsSource` 배열에 대 한 속성:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -380,37 +380,37 @@ public partial class TypeDemoPage : ContentPage
 </ContentPage>        
 ```
 
-`ViewCell`은 다음과 같이 각 색상 항목에 대한 단순 `BoxView`를 생성합니다.
+합니다 `ViewCell` 간단한 만듭니다 `BoxView` 각 색 항목에 대 한 합니다.
 
-[![x:Array Demo](consuming-images/arraydemo-small.png "x:Array Demo")](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
+[![X:Array Demo](consuming-images/arraydemo-small.png "X:Array Demo")](consuming-images/arraydemo-large.png#lightbox "x:Array Demo")
 
-해당 배열에 개별적인 `Color` 항목을 지정하는 여러 가지 방법이 있습니다. 다음과 같이 `x:Static` 태그 확장을 사용할 수 있습니다.
+개별을 지정 하는 방법은 여러 가지 `Color` 이 배열의 항목입니다. 사용할 수는 `x:Static` 태그 확장:
 
 ```xaml
 <x:Static Member="Color.Blue" />
 ```
 
-또는 다음과 같이 리소스 사전에서 색상을 검색하는 `StaticResource`을 사용할 수 있습니다.
+사용할 수 있습니다 또는 `StaticResource` 리소스 사전에서 색을 검색 하려면:
 
 ```xaml
 <StaticResource Key="myColor" />
 ```
 
-이 문서의 끝 부분으로 가면서 다음과 같이 새로운 색상 값을 만드는 사용자 지정 XAML 태그 확장 또한 보게 될 것입니다.
+이 문서의 끝도 새 색 값을 만들고 사용자 지정 XAML 태그 확장을 볼 수 있습니다.
 
 ```xaml
 <local:HslColor H="0.5" S="1.0" L="0.5" />
 ```
 
-문자열이나 숫자와 같은 일반적인 유형의 배열을 정의할 때는 [ **생성자 인수 전달** ](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) 문서에 나열된 태그를 사용하여 값을 구분하십시오.
+문자열이 나 숫자와 같은 일반적인 형식 배열을 정의할 때에 나열 된 태그를 사용 합니다 [ **생성자 인수 전달** ](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) 값을 구분 하는 문서입니다.
 
 <a name="null" />
 
-## <a name="xnull-markup-extension"></a>x:Null 태그 확장
+## <a name="xnull-markup-extension"></a>x:Null 태그 확장명
 
 `x:Null` 태그 확장은 [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) 클래스에서 지원됩니다. 속성이 없고 단순히 C# [`null`](/dotnet/csharp/language-reference/keywords/null/) 키워드에 해당하는 XAML 입니다.
 
-`x:Null` 태그 확장은 거의 필요하지 않으며 드물게 사용되지만, 필요한 순간이 오면 그것이 존재한다는 것에 기뻐할 것입니다.
+`x:Null` 필요를 찾을 경우 반갑게도 존재 하는 태그 확장은 거의 필요 하 고 거의 사용 되지만 합니다.
 
 **x:Null Demo** 페이지는 `x:Null`이 편리하게 사용되는 시나리오를 보여줍니다. 다음과 같이 `FontFamily` 속성을 플랫폼 의존적인 글꼴 가족 이름으로 설정하는 `Setter`를 포함하는 `Label`에 대한 암시적 `Style`을 정의한다고 가정해 보겠습니다.
 
@@ -451,42 +451,42 @@ public partial class TypeDemoPage : ContentPage
 </ContentPage>   
 ```
 
-그러면 `Label` 요소 중 하나에 `FontFamily`를 제외하고 모든 암시적 `Style`의 속성 설정을 기본 값이 되도록 하고 싶어 한다는 것을 알게 됩니다. 해당 목적을 위해 또 하나의 `Style`을 정의할 수 있지만, 좀 더 간단한 접근법은 가운데 `Label`에서 보이는 것처럼 특정 `Label`의 `FontFamily` 속성을 `x:Null`로 설정하는 것입니다.
+중 하나에를 검색 한 다음 합니다 `Label` 요소를 암시적의 모든 속성 설정을 `Style` 제외 하 고는 `FontFamily`, 기본값을 합니다. 다른 정의할 수 있습니다 `Style` 간단 하지만 해당 용도 설정 합니다 `FontFamily` 특정 속성 `Label` 에 `x:Null`센터에서 설명한 것 처럼 `Label`합니다.
 
-프로그램 실행 화면은 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![x:Null Demo](consuming-images/nulldemo-small.png "x:Null Demo")](consuming-images/nulldemo-large.png#lightbox "x:Null Demo")
+[![X:Null 데모](consuming-images/nulldemo-small.png "X:Null 데모")](consuming-images/nulldemo-large.png#lightbox "x:Null 데모")
 
-`Label` 요소 중 네 개는 serif 글꼴을 갖고 있지만, 가운데 `Label`은 기본 sans-serif 글꼴을 갖습니다.
+에 대 한 공지는 4 합니다 `Label` 요소를 가질 가운데 있지만 serif 글꼴을 `Label` 기본 굴림 글꼴에.
 
 <a name="onplatform" />
 
 ## <a name="onplatform-markup-extension"></a>OnPlatform 태그 확장
 
-`OnPlatform` 태그 확장은 플랫폼별로 UI 모양을 사용자 지정할 수 있게 해줍니다. 해당 태그 확장은 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 및 [ `On` ](xref:Xamarin.Forms.On) 클래스와 동일한 기능을 제공하지만 보다 간결한 표현을 제공합니다.
+`OnPlatform` 태그 확장을 사용 하면 플랫폼별 기준 UI 모양을 사용자 지정할 수 있습니다. 동일한 기능을 제공 합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 및 [ `On` ](xref:Xamarin.Forms.On) 클래스 하지만 보다 간결 하 게 표현 합니다.
 
-`OnPlatform` 태그 확장은 다음 속성을 정의하는 [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 클래스에서 지원됩니다.
+합니다 `OnPlatform` 태그 확장 되는 [ `OnPlatformExtension` ](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 다음 속성을 정의 하는 클래스:
 
-- 플랫폼을 나타내는 속성에 적용할 기본 값으로 설정하는 `object` 유형의 `Default`.
-- Android에 적용할 값으로 설정하는 `object` 유형의 `Android`.
-- GTK 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `GTK`.
-- iOS에서 적용할 값으로 설정하는 `object` 유형의 `iOS`.
-- macOS에서 적용할 값으로 설정하는 `object` 유형의 `macOS`.
-- Tizen 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Tizen`.
-- UWP(Universal Windows Platform) 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `UWP`.
-- WPF(Windows Presentation Foundation) 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `WPF`.
-- `IValueConverter` 구현에 설정하는 `IValueConverter` 유형의 `Converter`.
+- `Default` 형식의 `object`, 플랫폼을 나타내는 속성에 적용할 기본 값으로 설정 합니다.
+- `Android` 형식의 `object`, Android에 적용할 값으로 설정 합니다.
+- `GTK` 형식의 `object`, GTK 플랫폼에 적용할 값으로 설정 합니다.
+- `iOS` 형식의 `object`, iOS에서 적용할 값으로 설정 합니다.
+- `macOS` 형식의 `object`를 macOS에서 적용할 값으로 설정 합니다.
+- `Tizen` 형식의 `object`, Tizen 플랫폼에 적용할 값으로 설정 합니다.
+- `UWP` 형식의 `object`, 유니버설 Windows 플랫폼에 적용할 값으로 설정 합니다.
+- `WPF` 형식의 `object`, Windows Presentation Foundation 플랫폼에 적용할 값으로 설정 합니다.
+- `Converter` 형식의 `IValueConverter`, 설정 하는 `IValueConverter` 구현 합니다.
 - `IValueConverter` 구현에 전달할 값으로 설정하는 `object` 유형의 `ConverterParameter`.
 
 > [!NOTE]
 > XAML 파서는 [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 클래스를 `OnPlatform`으로 축약하는 것을 허용합니다.
 
-`Default` 속성은 `OnPlatformExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Default=` 부분을 제거할 수 있습니다.
+합니다 `Default` 속성의 콘텐츠 속성은 `OnPlatformExtension`합니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Default=` 부분을 제거할 수 있습니다.
 
 > [!IMPORTANT]
-> XAML 파서는 올바른 유형의 값이 `OnPlatform` 태그 확장을 사용하는 속성에 제공될 것으로 예상합니다. 유형 변환이 필요한 경우, `OnPlatform` 태그 확장은 Xamarin.Forms에서 제공하는 기본 변환기를 사용하여 변환을 수행하려고 합니다. 그러나 기본 변환기로는 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
+> XAML 파서를 사용 하는 속성에 올바른 형식의 값을 제공할 것는 예상 된 `OnPlatform` 태그 확장 합니다. 형식 변환이 필요한 경우는 `OnPlatform` Xamarin.Forms 제공한 기본 변환기를 사용 하 여 수행 하는 데 태그 확장 하려고 합니다. 그러나 이러한 경우 기본 변환기에서 수행할 수 없는 일부 형식 변환이 있습니다.는 `Converter` 속성에 설정할는 `IValueConverter` 구현 합니다.
 
-**OnPlatform Demo** 페이지는 다음과 같이 `OnPlatform` 태그 확장을 사용하는 방법을 보여줍니다.
+합니다 **OnPlatform 데모** 페이지를 사용 하는 방법을 보여 줍니다는 `OnPlatform` 태그 확장:
 
 ```xaml
 <BoxView Color="{OnPlatform Yellow, iOS=Red, Android=Green, UWP=Blue}"
@@ -495,36 +495,36 @@ public partial class TypeDemoPage : ContentPage
          HorizontalOptions="Center" />
 ```
 
-이 예제에서 세 개의 `OnPlatform` 표현식 모두가 `OnPlatformExtension` 클래스 이름의 축약된 버전을 사용합니다. 세 가지 `OnPlatform` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) iOS, Android 및 UWP에서 서로 다른 값으로. 또한 태그 확장은 지정되지 않은 플랫폼에서 해당 속성들에 대한 기본값을 제공하며, 표현식의 `Default=` 부분은 제거합니다. 설정되는 태그 확장 속성은 쉼표로 구분합니다.
+이 예제에서는 모든 세 `OnPlatform` 식의 약식된 버전을 사용 합니다 `OnPlatformExtension` 클래스 이름입니다. 세 가지 `OnPlatform` 태그 확장 집합을 [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), 및 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 의 속성을 [ `BoxView` ](xref:Xamarin.Forms.BoxView) iOS, Android 및 UWP에서 서로 다른 값으로. 또한 태그 확장을 제거 하는 동안 지정 되지 않은 플랫폼에서 이러한 속성에 대 한 기본값을 제공 합니다 `Default=` 식의 일부입니다. 알림 설정 되는 태그 확장 속성은 쉼표로 구분 합니다.
 
-프로그램 실행 화면은 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![OnPlatform Demo](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
+[![Onplatform Demo](consuming-images/onplatformdemo-small.png "Onplatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
 
 <a name="onidiom" />
 
 ## <a name="onidiom-markup-extension"></a>OnIdiom 태그 확장
 
-태그 `OnIdiom` 확장을 사용 하면 응용 프로그램이 실행 되 고 있는 장치를 기준으로 UI 모양을 사용자 지정할 수 있습니다. 다음 속성을 정의하는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스에서 지원됩니다.
+태그 `OnIdiom` 확장을 사용 하면 응용 프로그램이 실행 되 고 있는 장치를 기준으로 UI 모양을 사용자 지정할 수 있습니다. 지원 되는 [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 다음 속성을 정의 하는 클래스:
 
-- 장치 관용구를 나타내는 속성에 적용할 기본 값으로 설정하는 `object` 유형의 `Default`.
-- 휴대폰에 적용할 값으로 설정하는 `object` 유형의 `Phone`.
-- 태블릿에 적용할 값으로 설정하는 `object` 유형의 `Tablet`.
-- 데스크톱 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Desktop`.
-- TV 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `TV`.
-- 조사식 플랫폼에 적용할 값으로 설정하는 `object` 유형의 `Watch`.
+- `Default` 형식의 `object`, 장치 관용구를 나타내는 속성에 적용할 기본 값으로 설정 합니다.
+- `Phone` 형식의 `object`, 휴대폰에 적용할 값으로 설정 합니다.
+- `Tablet` 형식의 `object`, 태블릿에 적용할 값으로 설정 합니다.
+- `Desktop` 형식의 `object`, 데스크톱 플랫폼에 적용할 값으로 설정 합니다.
+- `TV` 형식의 `object`, TV 플랫폼에 적용할 값으로 설정 합니다.
+- `Watch` 형식의 `object`, 조사식 플랫폼에 적용할 값으로 설정 합니다.
 - `IValueConverter` 구현에 설정하는 `IValueConverter` 유형의 `Converter`.
 - `IValueConverter` 구현에 전달할 값으로 설정하는 `object` 유형의 `ConverterParameter`.
 
 > [!NOTE]
 > XAML 파서는 [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) 클래스를 `OnIdiom`으로 축약하는 것을 허용합니다.
 
-`Default` 속성은 `OnIdiomExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Default=` 부분을 제거할 수 있습니다.
+합니다 `Default` 속성의 콘텐츠 속성은 `OnIdiomExtension`합니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Default=` 부분을 제거할 수 있습니다.
 
 > [!IMPORTANT]
-> XAML 파서는 올바른 유형의 값이 `OnIdiom` 태그 확장을 사용하는 속성에 제공될 것으로 예상합니다. 유형 변환이 필요한 경우, `OnIdiom` 태그 확장은 Xamarin.Forms에서 제공하는 기본 변환기를 사용하여 변환을 수행하려고 합니다. 그러나 기본 변환기에서 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
+> XAML 파서를 사용 하는 속성에 올바른 형식의 값을 제공할 것는 예상 된 `OnIdiom` 태그 확장 합니다. 형식 변환이 필요한 경우는 `OnIdiom` Xamarin.Forms 제공한 기본 변환기를 사용 하 여 수행 하는 데 태그 확장 하려고 합니다. 그러나 기본 변환기에서 수행할 수 없는 일부 유형 변환이 있으며 이러한 경우 `Converter` 속성은 `IValueConverter` 구현으로 설정되어야 합니다.
 
-**OnIdiom Demo** 페이지는 다음과 같이 `OnIdiom` 태그 확장을 사용하는 방법을 보여 줍니다.
+합니다 **OnIdiom 데모** 페이지를 사용 하는 방법을 보여 줍니다는 `OnIdiom` 태그 확장:
 
 ```xaml
 <BoxView Color="{OnIdiom Yellow, Phone=Red, Tablet=Green, Desktop=Blue}"
@@ -533,15 +533,15 @@ public partial class TypeDemoPage : ContentPage
          HorizontalOptions="Center" />
 ```
 
-이 예제에서 세 개의 `OnIdiom` 표현식은 모두 `OnIdiomExtension` 클래스 이름의 축약된 버전을 사용합니다. 세 개의 `OnIdiom` 태그 확장은 [`BoxView`](xref:Xamarin.Forms.BoxView)의 [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성을 휴대폰, 태블릿 및 데스크톱 관용구에서 달라지는 값으로 설정합니다. 또한 태그 확장은 지정되지 않은 관용구의 해당 속성에 대한 기본값을 제공하며, 표현식의 `Default=` 부분은 제거합니다. 설정되는 태그 확장 속성은 쉼표로 구분합니다.
+이 예제에서 세 개의 `OnIdiom` 표현식은 모두 `OnIdiomExtension` 클래스 이름의 축약된 버전을 사용합니다. 세 개의 `OnIdiom` 태그 확장은 [`BoxView`](xref:Xamarin.Forms.BoxView)의 [`Color`](xref:Xamarin.Forms.BoxView.Color), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성을 휴대폰, 태블릿 및 데스크톱 관용구에서 달라지는 값으로 설정합니다. 또한 태그 확장은 지정되지 않은 관용구의 해당 속성에 대한 기본값을 제공하며, 표현식의 `Default=` 부분은 제거합니다. 알림 설정 되는 태그 확장 속성은 쉼표로 구분 합니다.
 
-프로그램 실행 화면은 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
+[![Ononedemo](consuming-images/onidiomdemo-small.png "Ononedemo")](consuming-images/onidiomdemo-large.png#lightbox "Ononedemo")
 
 ## <a name="datatemplate-markup-extension"></a>DataTemplate 태그 확장
 
-태그 확장을 사용 하 여 형식을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 변환할 수 있습니다. `DataTemplate` `DataTemplateExtension` 로 변환할 `TypeName` 형식의이름`string`으로 설정 된 형식의 속성을 정의 하는 클래스에서 지원 됩니다. `DataTemplate` `TypeName` 속성은 `DataTemplateExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표현 된 XAML 태그 식의 경우 식의 `TypeName=` 일부를 제거할 수 있습니다.
+태그 확장을 사용 하 여 형식을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 변환할 수 있습니다. `DataTemplate` `DataTemplateExtension` 로 변환할 `TypeName` 형식의이름`string`으로 설정 된 형식의 속성을 정의 하는 클래스에서 지원 됩니다. `DataTemplate` 합니다 `TypeName` 속성의 콘텐츠 속성은 `DataTemplateExtension`합니다. 따라서 중괄호로 표현 된 XAML 태그 식의 경우 식의 `TypeName=` 일부를 제거할 수 있습니다.
 
 > [!NOTE]
 > XAML 파서는 `DataTemplateExtension` 클래스를 약식으로 `DataTemplate`지정할 수 있습니다.
@@ -572,7 +572,7 @@ public partial class TypeDemoPage : ContentPage
 > [!NOTE]
 > XAML 파서는 `FontImageExtension` 클래스를 약식으로 `FontImage`지정할 수 있습니다.
 
-`Glyph` 속성은 `FontImageExtension`의 콘텐츠 속성입니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Glyph=` 부분을 제거할 수 있습니다.
+합니다 `Glyph` 속성의 콘텐츠 속성은 `FontImageExtension`합니다. 따라서 중괄호로 표시되는 XAML 태그 표현식의 경우, 첫 번째 인수인 경우 표현식의 `Glyph=` 부분을 제거할 수 있습니다.
 
 **FontImage Demo** 페이지에서는 `FontImage` 태그 확장을 사용 하는 방법을 보여 줍니다.
 
@@ -585,13 +585,13 @@ public partial class TypeDemoPage : ContentPage
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[ ![FontImage 태그 확장](consuming-images/fontimagedemo.png "FontImage Demo") 의 스크린샷] (consuming-images/fontimagedemo-large.png#lightbox "FontImage 데모")
+[![FontImage 태그 확장의 스크린샷](consuming-images/fontimagedemo.png "FontImage 데모")](consuming-images/fontimagedemo-large.png#lightbox "FontImage 데모")
 
 `FontImageSource` 개체에서 글꼴 아이콘 데이터를 지정 하 여 글꼴 아이콘을 표시 하는 방법에 대 한 자세한 내용은 [글꼴 아이콘 표시](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons)를 참조 하세요.
 
-## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장 정의
+## <a name="define-your-own-markup-extensions"></a>사용자 고유의 태그 확장을 정의 합니다.
 
-Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장이 필요하다면 [직접 만들기](creating.md)를 참조하십시오.
+Xamarin.Forms에서 사용할 수 없는 XAML 태그 확장에 대 한 필요를 알리는 경우 할 수 있습니다 [직접 만들어보십시오](creating.md)합니다.
 
 ## <a name="related-links"></a>관련 링크
 

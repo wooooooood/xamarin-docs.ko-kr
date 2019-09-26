@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2019
 ms.openlocfilehash: f08146d4439ff1fc22edea71ab1cbb337f64c037
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68984395"
 ---
 # <a name="xamarinforms-controls-class-hierarchy"></a>Xamarin.ios Controls 클래스 계층 구조
@@ -22,7 +22,7 @@ Xamarin.ios는 여러 네임 스페이스에 대해 수백 개의 형식으로 �
 
 다음 클래스 다이어그램은 일반적으로 Xamarin.ios에서 사용자 인터페이스를 작성 하는 데 사용 되는 형식의 계층 구조를 보여 줍니다.
 
-[ ![Xamarin.ios 컨트롤 클래스 다이어그램](class-hierarchy-images/class-diagram.png "xamarin. forms controls 클래스 다이어그램") ] (class-hierarchy-images/class-diagram-large.png#lightbox "Xamarin.ios controls 클래스 다이어그램")
+[![Xamarin.ios Controls 클래스 다이어그램](class-hierarchy-images/class-diagram.png "Xamarin.ios controls 클래스 다이어그램")](class-hierarchy-images/class-diagram-large.png#lightbox "Xamarin.ios controls 클래스 다이어그램")
 
 > [!NOTE]
 > 클래스 다이어그램의 고해상도 버전은 [여기](class-hierarchy-images/class-diagram-high-resolution.png)에서 다운로드할 수 있습니다. 그러나 다이어그램에는 현재 `CarouselView` 및 `CollectionView` 형식이 표시 되지 않습니다. 이러한 설정은 컨트롤이 미리 보기 상태를 벗어난 후에 추가 됩니다. 또한 다이어그램은 단일 셸 유형만 표시 합니다.

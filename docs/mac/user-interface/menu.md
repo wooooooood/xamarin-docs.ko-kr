@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770983"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.ios의 메뉴
@@ -226,7 +226,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 앱에서을 사용 `NSDocuments`하지 않는 경우에도를 `SharedDocumentController` `NSDocumentController` 사용 하 여의 `NoteNewRecentDocumentURL` 메서드에 파일의 위치를 포함 하 `NSUrl` 는를 전송 하 여 **최근 열기** 메뉴를 유지 관리 합니다.
 
-그런 다음 사용자가 `OpenFile` 최근 항목 **열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예를 들어:
+그런 다음 사용자가 `OpenFile` 최근 항목 **열기** 메뉴에서 선택한 파일을 열도록 앱 대리자의 메서드를 재정의 해야 합니다. 예:
 
 ```csharp
 public override bool OpenFile (NSApplication sender, string filename)
@@ -425,7 +425,7 @@ NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 
 표준 메뉴 항목으로 연결 되는 기본 제공 **첫 번째 응답자** 작업과 마찬가지로 새 사용자 지정 작업을 만들고 Interface Builder의 메뉴 항목에 연결할 수 있습니다.
 
-먼저 앱의 창 컨트롤러 중 하나에 대 한 사용자 지정 작업을 정의 합니다. 예를 들어:
+먼저 앱의 창 컨트롤러 중 하나에 대 한 사용자 지정 작업을 정의 합니다. 예:
 
 ```csharp
 [Action("defineKeyword:")]

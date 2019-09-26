@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: a4ee81f7d59c9fb680dfd371a7aaba7660fb3343
-ms.sourcegitcommit: f255aa286bd52e8a80ffa620c2e93c97f069f8ec
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68681069"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL(이식 가능한 클래스 라이브러리)
@@ -56,7 +56,7 @@ Xamarin 열은 Xamarin.ios 및 Xamarin이 Visual Studio와 함께 제공 되는 
 
 [Microsoft 웹 사이트](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) 에서 다양 한 프로필 기능에 대 한 자세한 내용을 읽고 지원 되는 프레임 워크 정보 및 기타 메모를 포함 하는 다른 커뮤니티 구성원의 [PCL 프로필 요약](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 을 확인할 수 있습니다.
 
-**이점**
+**혜택**
 
 1. 중앙 집중식 코드 공유 – 다른 라이브러리나 응용 프로그램에서 사용할 수 있는 단일 프로젝트에서 코드를 작성 하 고 테스트 합니다.
 2. 리팩터링 작업은 솔루션에 로드 된 모든 코드 (이식 가능한 클래스 라이브러리 및 플랫폼별 프로젝트)에 영향을 줍니다.

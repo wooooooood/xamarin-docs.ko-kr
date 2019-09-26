@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70760230"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
@@ -34,7 +34,7 @@ ms.locfileid: "70760230"
 - 응용 프로그램의 가로 기능 (예: 인증 및 데이터 액세스), 앱 특정 비즈니스 기능 등의 세로 기능 간의 문제를 완전히 분리 하 고 재사용을 촉진 합니다. 이렇게 하면 응용 프로그램 구성 요소 간의 종속성 및 상호 작용을 보다 쉽게 관리할 수 있습니다.
 - 다른 개인 이나 팀이 자신의 전문 지식에 따라 특정 작업 또는 기능에 초점을 맞출 수 있도록 하 여 역할의 분리를 유지 하는 데 도움이 됩니다. 특히 사용자 인터페이스와 앱의 비즈니스 논리를 명확 하 게 구분 합니다.
 
-그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 이러한 개체는 다음과 같습니다.
+그러나 느슨하게 결합 된 불연속 구성 요소로 앱을 분할할 때 해결 해야 하는 많은 문제가 있습니다. 여기에는 다음이 포함됩니다.
 
 - 사용자 인터페이스 컨트롤과 해당 논리 간의 문제를 명확 하 게 분리 하는 방법을 결정 합니다. Xamarin.ios 엔터프라이즈 앱을 만들 때 가장 중요 한 결정 사항 중 하나는 코드 숨김으로 비즈니스 논리를 배치할지 여부 또는 사용자 인터페이스 컨트롤과 논리 간의 문제를 명확 하 게 분리 하 여 앱을 더 쉽게 만들 수 있는지 여부입니다. 유지 관리 가능 하 고 테스트 가능. 자세한 내용은 [모델-뷰-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md)을 참조 하세요.
 - 종속성 주입 컨테이너를 사용할지 여부를 결정 합니다. 종속성 주입 컨테이너는 종속성이 주입 된 클래스의 인스턴스를 생성 하 고 컨테이너의 구성에 따라 수명 주기를 관리 하는 기능을 제공 하 여 개체 간의 종속성 결합을 줄입니다. 자세한 내용은 [종속성 주입](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)을 참조 하세요.
@@ -89,7 +89,7 @@ ms.locfileid: "70760230"
 
 이 가이드에서는 Xamarin.ios를 사용 하 여 플랫폼 간 엔터프라이즈 앱을 빌드하는 데 중점을 eShopOnContainers 모바일 앱을 예로 사용 합니다. 그림 1-2에서는 앞에서 설명한 기능을 제공 하는 eShopOnContainers 모바일 앱의 페이지를 보여 줍니다.
 
-[ ![(introduction-images/screenshots.png " ")]EShopOnContainers 모바일 앱] (introduction-images/screenshots-large.png#lightbox "EShopOnContainers 모바일 앱")
+[![](introduction-images/screenshots.png "EShopOnContainers 모바일 앱")](introduction-images/screenshots-large.png#lightbox "EShopOnContainers 모바일 앱")
 
 **그림 1-2**: EShopOnContainers 모바일 앱
 
@@ -119,7 +119,7 @@ EShopOnContainers 모바일 앱은 다음과 같은 Xamarin Forms 기능을 연�
 
 EShopOnContainers 모바일 앱 솔루션은 소스 코드 및 기타 리소스를 프로젝트로 구성 합니다. 모든 프로젝트는 폴더를 사용 하 여 소스 코드 및 기타 리소스를 범주로 구성 합니다. 다음 표에서는 eShopOnContainers 모바일 앱을 구성 하는 프로젝트를 간략히 설명 합니다.
 
-|Project|Description|
+|프로젝트|설명|
 |--- |--- |
 |eShopOnContainers.Core|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 PCL (이식 가능한 클래스 라이브러리) 프로젝트입니다.|
 |eShopOnContainers.Droid|이 프로젝트는 android 관련 코드를 저장 하며 Android 앱의 진입점입니다.|
@@ -136,7 +136,7 @@ EShopOnContainers 모바일 앱의 클래스는 거의 수정 하지 않고 모�
 
 EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습니다.
 
-|폴더|Description|
+|폴더|설명|
 |--- |--- |
 |애니메이션|XAML에서 애니메이션을 사용 하도록 설정 하는 클래스를 포함 합니다.|
 |동작|뷰 클래스에 노출 되는 동작을 포함 합니다.|
@@ -152,7 +152,7 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |트리거|XAML에서 애니메이션을 호출 하는 데 사용 되는 트리거를포함합니다.`BeginAnimation`|
 |유효성 검사|데이터 입력의 유효성 검사와 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
-|뷰|앱에 대 한 페이지를 포함 합니다.|
+|보기|앱에 대 한 페이지를 포함 합니다.|
 
 ##### <a name="platform-projects"></a>플랫폼 프로젝트
 

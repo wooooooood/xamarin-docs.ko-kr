@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68653792"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin Forms 응용 프로그램에서 탐색 수행
@@ -28,10 +28,10 @@ ms.locfileid: "68653792"
 
 이 빠른 시작에서는 단일 페이지를 여러 개의 노트를 저장할 수 있는 다중 페이지 응용 프로그램에 저장할 수 있는 단일 페이지 플랫폼 간 Xamarin.ios 응용 프로그램을 설정 하는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[ ![(multi-page-images/screenshots1-sml.png " ")]메모 페이지] (multi-page-images/screenshots1.png#lightbox "메모 페이지") 참고 항목 페이지(multi-page-images/screenshots2.png#lightbox "메모 입력 페이지") [ ![(multi-page-images/screenshots2-sml.png " ")]] 
+[![](multi-page-images/screenshots1-sml.png "메모")](multi-page-images/screenshots1.png#lightbox "메모 페이지")페이지
+[(multi-page-images/screenshots2-sml.png "메모 입력") 페이지![]](multi-page-images/screenshots2.png#lightbox "메모 입력 페이지")
 
-
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 이 빠른 시작을 시도 하기 전에 [이전 퀵 스타트](single-page.md) 를 성공적으로 완료 해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) 을 다운로드 하 고이 빠른 시작의 시작 지점으로 사용 합니다.
 

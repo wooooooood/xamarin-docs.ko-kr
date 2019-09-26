@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: f1a3e8bb8959588e64339f70268370440f356be9
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68738967"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Xamarin.ios CollectionView 선택
 
-![](~/media/shared/preview.png "이 API는 현재 시험판")
+![](~/media/shared/preview.png "이 API는 현재 시험판임")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -55,7 +55,7 @@ ms.locfileid: "68738967"
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -82,7 +82,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 다음 스크린샷은의 단일 항목 선택 항목을 [`CollectionView`](xref:Xamarin.Forms.CollectionView)보여 줍니다.
 
-단일 선택 항목이 있는 [ ![IOS 및 Android](selection-images/single-selection.png "CollectionView 세로 목록의") CollectionView 세로 목록 스크린샷] (selection-images/single-selection-large.png#lightbox "단일 선택 영역을 포함 하는 CollectionView 세로 목록")
+[![IOS 및 Android에서 단일 항목이 선택 된 CollectionView 세로 목록의 스크린샷](selection-images/single-selection.png "단일 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/single-selection-large.png#lightbox "단일 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="multiple-selection"></a>다중 선택
 
@@ -98,7 +98,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -125,7 +125,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 
 다음 스크린샷은에서 여러 항목을 [`CollectionView`](xref:Xamarin.Forms.CollectionView)선택 하 여 보여 줍니다.
 
-다중 선택 항목이 있는 [ ![IOS 및 Android](selection-images/multiple-selection.png "CollectionView 세로 목록의") CollectionView 세로 목록 스크린샷] (selection-images/multiple-selection-large.png#lightbox "여러 선택 영역을 포함 하는 CollectionView 세로 목록")
+[![IOS 및 Android에서 여러 항목이 선택 된 CollectionView 세로 목록 스크린샷](selection-images/multiple-selection.png "여러 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/multiple-selection-large.png#lightbox "여러 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="single-pre-selection"></a>단일 사전 선택
 
@@ -139,7 +139,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -188,7 +188,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 따라서가 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 표시 되 면 목록의 네 번째 항목이 미리 선택 됩니다.
 
-단일 [사전 선택이 있는 iOS 및 Android(selection-images/single-pre-selection.png "CollectionView 세로 목록") ![에서 단일 사전 선택이 포함 된 CollectionView 세로 목록의 스크린샷]] (selection-images/single-pre-selection-large.png#lightbox "단일 사전 선택 영역을 포함 하는 CollectionView 세로 목록")
+[![IOS 및 Android에서 단일 사전 선택이 포함 된 CollectionView 세로 목록 스크린샷](selection-images/single-pre-selection.png "단일 사전 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/single-pre-selection-large.png#lightbox "단일 사전 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="multiple-pre-selection"></a>다중 미리 선택
 
@@ -203,7 +203,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -256,7 +256,7 @@ namespace CollectionViewDemos.ViewModels
 
 따라서 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 가 표시 되 면 목록에서 두 번째, 네 번째 및 다섯 번째 항목이 미리 선택 됩니다.
 
-[여러 사전 선택이 있는 iOS 및 Android(selection-images/multiple-pre-selection.png "CollectionView 세로 목록") ![에서 여러 미리 선택 된 CollectionView 세로 목록의 스크린샷]] (selection-images/multiple-pre-selection-large.png#lightbox "여러 사전 선택 영역을 포함 하는 CollectionView 세로 목록")
+[![IOS 및 Android에서 여러 미리 선택 된 CollectionView 세로 목록 스크린샷](selection-images/multiple-pre-selection.png "여러 사전 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/multiple-pre-selection-large.png#lightbox "여러 사전 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="clearing-selections"></a>선택 영역 지우기
 
@@ -305,7 +305,7 @@ namespace CollectionViewDemos.ViewModels
 
 이 예제 [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) 에서는의 `Grid` [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 루트 [요소가이므로속성값이로설정됩니다.`Grid`](xref:Xamarin.Forms.Grid) `Selected` [는의`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목이 선택 될때`LightSkyBlue`항목 [의이로설정되도록지정합니다.`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) [`VisualState`](xref:Xamarin.Forms.VisualState)
 
-[(selection-images/single-selection-color.png "사용자 지정 단일 선택 색을 사용") 하는 ![iOS 및 Android CollectionView 세로 목록에서 사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록의 스크린샷]] (selection-images/single-selection-color-large.png#lightbox "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")
+[![IOS 및 Android에서 사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록의 스크린샷](selection-images/single-selection-color.png "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")](selection-images/single-selection-color-large.png#lightbox "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")
 
 시각적 상태에 대 한 자세한 내용은 [Xamarin. Forms 시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
 
@@ -318,7 +318,7 @@ namespace CollectionViewDemos.ViewModels
                 SelectionMode="None" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

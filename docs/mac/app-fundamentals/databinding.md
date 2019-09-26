@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70769997"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Xamarin.ios의 데이터 바인딩 및 키-값 코딩
@@ -70,7 +70,7 @@ namespace MacDatabinding
 
 먼저, 특성 `[Register("PersonModel")]` 은 클래스를 등록 하 고 목표-C에 노출 합니다. 그런 다음 클래스는 (또는에서 `NSObject` `NSObject`상속 되는 서브 클래스)에서 상속 해야 하며,이는 클래스가 kvc 규격이 될 수 있도록 하는 몇 가지 기본 메서드를 추가 합니다. 그런 다음 `Name` 특성은 속성을 노출 하 고 나중에 kvc 및 KVO 기술을 통해 속성에 액세스 하는 데 사용 되는 키 값을 정의 합니다. `[Export("Name")]`
 
-마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` `Export` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 `DidChangeValue` 해당 값에 대 한 변경 내용을 래핑해야 합니다.  예를 들어:
+마지막으로 속성의 값에 대 한 키 값이 변경 될 수 있도록 접근자는 `WillChangeValue` `Export` 특성과 동일한 키를 지정 하 여 및 메서드 호출에서 `DidChangeValue` 해당 값에 대 한 변경 내용을 래핑해야 합니다.  예:
 
 ```csharp
 set {
@@ -159,7 +159,7 @@ Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 
 ### <a name="observing-value-changes"></a>값 변경 관찰
 
-키-값 관찰 (KVO)을 사용 하 여, 관찰자를 KVC 규격 클래스의 특정 키에 연결 하 고, 해당 키에 대 한 값이 수정 될 때마다 (KVC 기술을 사용 하거나 코드에서 C# 지정 된 속성에 직접 액세스 하는 경우) 알리도록 할 수 있습니다. 예를 들어:
+키-값 관찰 (KVO)을 사용 하 여, 관찰자를 KVC 규격 클래스의 특정 키에 연결 하 고, 해당 키에 대 한 값이 수정 될 때마다 (KVC 기술을 사용 하거나 코드에서 C# 지정 된 속성에 직접 액세스 하는 경우) 알리도록 할 수 있습니다. 예:
 
 ```csharp
 // Watch for the name value changing

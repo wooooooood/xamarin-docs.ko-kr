@@ -7,10 +7,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
 ms.openlocfilehash: a4d0f5c5ceefcfe9a36a5fcf10c6fb4937c1db90
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739220"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Xamarin.ios를 사용 하는 Azure SignalR Service
@@ -28,7 +28,7 @@ ASP.NET Core SignalR는 응용 프로그램에 실시간 통신을 추가 하는
 1. 모바일 응용 프로그램은 **Negotiate** Azure 함수를 호출 하 여 SignalR hub에 대 한 정보를 가져옵니다.
 1. 모바일 응용 프로그램은 협상 정보를 사용 하 여 SignalR hub에 자신을 등록 하 고 연결을 형성 합니다.
 1. 등록 후 모바일 응용 프로그램은 메시지를 **통신** 하는 Azure 함수에 게시 합니다.
-1. SignalR 허브에 들어오는 메시지를 전달 하는 함수입니다.
+1. SignalR 허브에 들어오는 메시지를 **전달 하는 함수입니다** .
 1. SignalR hub는 원래 발신자를 비롯 하 여 연결 된 모든 모바일 응용 프로그램 인스턴스에 메시지를 브로드캐스트합니다.
 
 > [!NOTE]

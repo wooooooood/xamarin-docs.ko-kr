@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655004"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin. Forms 응용 프로그램 만들기
@@ -28,11 +28,11 @@ ms.locfileid: "68655004"
 
 이 빠른 시작은 메모를 입력 하 고 장치 저장소에 보관할 수 있는 플랫폼 간 Xamarin.ios 응용 프로그램을 만드는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[![](single-page-images/screenshots-sml.png "Notes 애플리케이션")](single-page-images/screenshots.png#lightbox "Notes 애플리케이션")
+[![](single-page-images/screenshots-sml.png "Notes 응용 프로그램")](single-page-images/screenshots.png#lightbox "Notes 응용 프로그램")
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 - .NET 워크 로드를 **사용한 모바일 개발** 이 설치 된 Visual Studio 2019 (최신 릴리스)
 - 에 대 C#한 지식.
@@ -177,7 +177,7 @@ ms.locfileid: "68655004"
 
     ![](single-page-images/vs/ios-start.png "Visual Studio iOS 도구 모음")
 
-    [IOS 시뮬레이터의 참고 사항 ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "IOS 시뮬레이터의 참고 사항")
+    [![](single-page-images/vs/notes-ios.png "IOS 시뮬레이터의 참고 사항")](single-page-images/vs/notes-ios-large.png#lightbox "IOS 시뮬레이터의 참고 사항")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -186,7 +186,7 @@ ms.locfileid: "68655004"
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 - .NET 워크 로드를 **사용한 모바일 개발** 이 설치 된 Visual Studio 2017.
 - 에 대 C#한 지식.
@@ -327,7 +327,7 @@ ms.locfileid: "68655004"
 
     ![](single-page-images/vs/ios-start.png "Visual Studio iOS 도구 모음")
 
-    [IOS 시뮬레이터의 참고 사항 ![(single-page-images/vs/notes-ios.png " ")]] (single-page-images/vs/notes-ios-large.png#lightbox "IOS 시뮬레이터의 참고 사항")
+    [![](single-page-images/vs/notes-ios.png "IOS 시뮬레이터의 참고 사항")](single-page-images/vs/notes-ios-large.png#lightbox "IOS 시뮬레이터의 참고 사항")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
@@ -468,7 +468,7 @@ ms.locfileid: "68655004"
 
       ![](single-page-images/vsmac/start.png "Visual Studio for Mac 도구 모음")
 
-      [IOS 시뮬레이터의 참고 사항 ![(single-page-images/vsmac/notes-ios.png " ")]] (single-page-images/vsmac/notes-ios-large.png#lightbox "IOS 시뮬레이터의 참고 사항")
+      [![](single-page-images/vsmac/notes-ios.png "IOS 시뮬레이터의 참고 사항")](single-page-images/vsmac/notes-ios-large.png#lightbox "IOS 시뮬레이터의 참고 사항")
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: 2142882add91d613263d11fa4c1e6d7ad142c7c7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68655995"
 ---
 # <a name="webview-zoom-on-android"></a>Android에서 웹 보기 확대/축소
@@ -47,7 +47,7 @@ webView.On<Android>()
 
 결과적으로에 대 [`WebView`](xref:Xamarin.Forms.WebView)한 확대/축소를 사용 하도록 설정 하 고 확대/축소 컨트롤을에 중첩 `WebView`시킬 수 있습니다.
 
-[ ![Android 확대 된 웹 보기에서 확대 된 웹 보기의 스크린샷](webview-zoom-controls-images/webview-zoom.png "") ] (webview-zoom-controls-images/webview-zoom-large.png#lightbox "확대/축소 웹 보기")
+[![Android에서 확대 된 웹 보기의 스크린샷](webview-zoom-controls-images/webview-zoom.png "확대/축소 웹 보기")](webview-zoom-controls-images/webview-zoom-large.png#lightbox "확대/축소 웹 보기")
 
 > [!IMPORTANT]
 > 확대/축소 컨트롤은에 중첩 [`WebView`](xref:Xamarin.Forms.WebView)될 바인딩 가능한 각 속성 또는 메서드를 통해 사용 하도록 설정 되 고 표시 되어야 합니다.

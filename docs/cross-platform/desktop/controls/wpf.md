@@ -6,10 +6,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2017
 ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71106037"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 Xamarin.Forms: 유사성 & 차이점
@@ -72,7 +72,7 @@ Xamarin.ios의 바인딩 가능한 속성에 대 한 정의는 WPF와 동일 합
 
 전체 예제는 [xamarin.ios의 바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)을 참조 하세요.
 
-### <a name="attached-properties"></a>연결된 속성
+### <a name="attached-properties"></a>연결 된 속성
 
 연결 된 속성은 바인딩 가능한 속성의 하위 집합이 며 WPF에서와 동일한 방식으로 작동 합니다. 주요 차이점은 속성 래퍼가이 사례에서 생략 소유 하는 클래스에 대 한 정적 get/set 메서드 집합으로 대체 된다는 것입니다. 자세한 내용은 [xamarin.ios의 연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 을 참조 하세요.
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
 ms.openlocfilehash: f78ca9d2cf7a9e57b81c5d923c64b36a7982c4b0
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739150"
 ---
 # <a name="xamarinforms-checkbox"></a>Xamarin.ios 확인란
@@ -108,7 +108,7 @@ checkBox.CheckedChanged += (sender, e) =>
 
 다음 [`Label`](xref:Xamarin.Forms.Label) 스크린샷에는 `CheckBox` 이 비어 있을 때 iOS 스크린샷에서 서식 지정이 표시 `CheckBox` 되 고 Android 스크린샷에는를 선택 하면 `Label` 형식이 표시 됩니다.
 
-[ ![IOS 및 Android](checkbox-images/checkbox-databinding.png "데이터 바인딩된 확인란") 의 데이터 바인딩된 확인란 스크린샷] (checkbox-images/checkbox-databinding-large.png#lightbox "데이터 바인딩 확인란")
+[![IOS 및 Android에 대 한 데이터 바인딩된 확인란의 스크린샷](checkbox-images/checkbox-databinding.png "데이터 바인딩 확인란")](checkbox-images/checkbox-databinding-large.png#lightbox "데이터 바인딩 확인란")
 
 트리거에 대 한 자세한 내용은 [Xamarin.ios 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
 

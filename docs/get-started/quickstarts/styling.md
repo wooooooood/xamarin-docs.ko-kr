@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
 ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70756752"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin Forms 응용 프로그램 스타일
@@ -26,10 +26,10 @@ ms.locfileid: "70756752"
 
 퀵 스타트는 XAML 스타일을 사용 하 여 플랫폼 간 Xamarin.ios 응용 프로그램의 스타일을 만드는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[ ![(styling-images/screenshots1-sml.png " ")]메모 페이지] (styling-images/screenshots1.png#lightbox "메모 페이지") 참고 항목 페이지(styling-images/screenshots2.png#lightbox "메모 입력 페이지") [ ![(styling-images/screenshots2-sml.png " ")]] 
+[![](styling-images/screenshots1-sml.png "메모")](styling-images/screenshots1.png#lightbox "메모 페이지")페이지
+[(styling-images/screenshots2-sml.png "메모 입력") 페이지![]](styling-images/screenshots2.png#lightbox "메모 입력 페이지")
 
-
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 이 빠른 시작을 시도 하기 전에 [이전 퀵 스타트](database.md) 를 성공적으로 완료 해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) 을 다운로드 하 고이 빠른 시작의 시작 지점으로 사용 합니다.
 

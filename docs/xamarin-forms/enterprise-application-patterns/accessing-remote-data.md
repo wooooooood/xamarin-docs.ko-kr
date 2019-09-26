@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770810"
 ---
 # <a name="accessing-remote-data"></a>원격 데이터에 액세스
@@ -53,7 +53,7 @@ EShopOnContainers 모바일 앱은 `HttpClient` 클래스를 사용 하 여 HTTP
 
 그림 10-1에서는 `CatalogView`에서 표시 하기 위해 카탈로그 마이크로 서비스에서 카탈로그 데이터를 읽는 클래스의 상호 작용을 보여 줍니다.
 
-[카탈로그 마이크로 서비스에서 데이터 검색 ![(accessing-remote-data-images/catalogdata.png " ")]] (accessing-remote-data-images/catalogdata-large.png#lightbox "카탈로그 마이크로 서비스에서 데이터 검색")
+[![](accessing-remote-data-images/catalogdata.png "카탈로그 마이크로 서비스에서 데이터 검색")](accessing-remote-data-images/catalogdata-large.png#lightbox "카탈로그 마이크로 서비스에서 데이터 검색")
 
 **그림 10-1**: 카탈로그 마이크로 서비스에서 데이터 검색
 
@@ -158,7 +158,7 @@ public async Task<IActionResult> Items(
 
 그림 10-2에서는 바구니 마이크로 서비스에 게 표시 되 `BasketView`는 바구니 데이터를 보내는 클래스의 상호 작용을 보여 줍니다.
 
-바구니 마이크로 서비스 데이터 보내기 [ ![(accessing-remote-data-images/basketdata.png " ")]] (accessing-remote-data-images/basketdata-large.png#lightbox "바구니 마이크로 서비스 데이터 보내기")
+[![](accessing-remote-data-images/basketdata.png "바구니 마이크로 서비스 데이터 보내기")](accessing-remote-data-images/basketdata-large.png#lightbox "바구니 마이크로 서비스 데이터 보내기")
 
 **그림 10-2**: 바구니 마이크로 서비스 데이터 보내기
 

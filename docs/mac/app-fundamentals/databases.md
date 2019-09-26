@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70769906"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
@@ -532,7 +532,7 @@ public void Create(SqliteConnection conn) {
 command.CommandText = "INSERT INTO [People] (ID, Name, Occupation, isManager, ManagerID) VALUES (@COL1, @COL2, @COL3, @COL4, @COL5)";
 ```
 
-나중에 `Parameters.AddWithValue` `SQLiteCommand`에서 메서드를 사용 하 여 매개 변수의 값을 설정 합니다. 매개 변수를 사용 하 여 값 (예: 작은따옴표)이 SQLite로 전송 되기 전에 제대로 인코딩 되는지 확인 합니다. 예제:
+나중에 `Parameters.AddWithValue` `SQLiteCommand`에서 메서드를 사용 하 여 매개 변수의 값을 설정 합니다. 매개 변수를 사용 하 여 값 (예: 작은따옴표)이 SQLite로 전송 되기 전에 제대로 인코딩 되는지 확인 합니다. 예:
 
 ```csharp
 command.Parameters.AddWithValue ("@COL1", ID);

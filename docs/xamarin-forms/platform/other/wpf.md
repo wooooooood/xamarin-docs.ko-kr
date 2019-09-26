@@ -9,15 +9,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: 8fcad4799cd53892106b3e221cff0dfbc737e10d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70760048"
 ---
 # <a name="wpf-platform-setup"></a>WPF 플랫폼 설정
 
-![Preview](~/media/shared/preview.png)
+![미리 보기](~/media/shared/preview.png)
 
 이제 xamarin.ios는 WPF (Windows Presentation Foundation)에 대 한 미리 보기를 지원 합니다. 이 문서에서는 Xamarin.ios 솔루션에 WPF 프로젝트를 추가 하는 방법을 보여 줍니다.
 

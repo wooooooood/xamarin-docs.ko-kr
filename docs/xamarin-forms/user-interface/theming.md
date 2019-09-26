@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2019
 ms.openlocfilehash: 3e0f508a9c980c02681f1be581846f9f2f25e2d0
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69529282"
 ---
 # <a name="theming-a-xamarinforms-application"></a>Xamarin Forms 응용 프로그램 테마
@@ -29,7 +29,7 @@ Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로�
 
 다음 스크린샷은 테마 페이지를 표시 하며, 진한 테마를 사용 하 여 밝은 테마와 Android 응용 프로그램을 사용 하는 iOS 응용 프로그램입니다.
 
-[![IOS 및 Android에서 테마가 적용 된 앱의 기본 페이지 스크린샷] (theming-images/main-page-both-themes.png "테마가 적용 된 앱의 기본 페이지") ] (theming-images/main-page-both-themes-large.png#lightbox "테마가 적용 된 앱의 기본 페이지") 테마가 적용 된 앱의 테마 앱(theming-images/detail-page-both-themes-large.png#lightbox "세부") 정보 페이지에서 테마가 적용 된 앱 세부 정보 페이지의 [ ![스크린샷](theming-images/detail-page-both-themes.png "")] 
+[![IOS 및 Android에서 테마가 적용 된 앱의 기본 페이지 스크린샷] (theming-images/main-page-both-themes.png "테마가 적용 된 앱의 기본 페이지") ](theming-images/main-page-both-themes-large.png#lightbox "테마가 적용 된 앱의 기본 페이지") 테마가 적용 된 앱 [의 iOS 및 Android(theming-images/detail-page-both-themes.png "세부 정보 페이지") ![에서 테마가 적용 된 앱의 세부 정보 페이지 스크린샷]](theming-images/detail-page-both-themes-large.png#lightbox "테마가 적용 된 앱의 세부 정보 페이지") 
 
 
 ## <a name="define-themes"></a>테마 정의
@@ -217,6 +217,6 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [테마 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
-- [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Xamarin.ios의 동적 스타일](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

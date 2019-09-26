@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/21/2018
 ms.openlocfilehash: 161da8948f356fef997a411855598bc99d2f49b7
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69894000"
 ---
 # <a name="choose-a-xamarinforms-layout"></a>Xamarin 양식 레이아웃 선택
@@ -22,7 +22,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 
 다음 이미지는 기본 Xamarin.ios 레이아웃 클래스를 사용 하 여 얻을 수 있는 일반적인 레이아웃을 보여 줍니다.
 
-[ ![Xamarin.ios의 주 레이아웃 클래스는](images/layouts.png "xamarin. forms 레이아웃 클래스") ] (images/layouts-large.png#lightbox "Xamarin Forms 레이아웃 클래스")
+[![Xamarin.ios의 주 레이아웃 클래스](images/layouts.png "Xamarin Forms 레이아웃 클래스")](images/layouts-large.png#lightbox "Xamarin Forms 레이아웃 클래스")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -75,7 +75,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 
 자세한 내용은 [Xamarin.ios StackLayout](stack-layout.md)을 참조 하세요.
 
-## <a name="grid"></a>표 형태
+## <a name="grid"></a>표
 
 는 [`Grid`](xref:Xamarin.Forms.Grid) 비례 또는 절대 크기를 가질 수 있는 행 및 열에 요소를 표시 하는 데 사용 됩니다. 표의 행과 열은 [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) 및 [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) 속성을 사용 하 여 지정 됩니다.
 

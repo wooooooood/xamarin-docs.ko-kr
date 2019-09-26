@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2017
 ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70770318"
 ---
 # <a name="images-in-xamarinmac"></a>Xamarin.ios의 이미지
@@ -41,8 +41,8 @@ MacOS (이전의 Mac OS X) 응용 프로그램 내에서 이미지 자산을 사
 
 Xamarin.ios 응용 프로그램에서 사용할 이미지를 추가 하는 경우 개발자가 프로젝트 소스에 이미지 파일을 포함할 수 있는 몇 가지 위치와 방법이 있습니다.
 
-- **주 프로젝트 트리 [사용 되지 않음]** -프로젝트 트리에 직접 이미지를 추가할 수 있습니다. 코드에서 주 프로젝트 트리에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예를 들어 `NSImage image = NSImage.ImageNamed("tags.png");`을 참조하십시오. 
-- **리소스 폴더 [사용 되지 않음]** -특수 **리소스** 폴더는 아이콘, 시작 화면 또는 일반 이미지 (또는 개발자가 추가 하려는 다른 이미지 또는 파일)와 같은 응용 프로그램 번들의 일부가 될 파일에 대 한 것입니다. 주 프로젝트 트리에 저장 된 이미지와 마찬가지로 코드에서 **Resources** 폴더에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예를 들어 `NSImage.ImageNamed("tags.png")`을 참조하십시오.
+- **주 프로젝트 트리 [사용 되지 않음]** -프로젝트 트리에 직접 이미지를 추가할 수 있습니다. 코드에서 주 프로젝트 트리에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예: `NSImage image = NSImage.ImageNamed("tags.png");` 
+- **리소스 폴더 [사용 되지 않음]** -특수 **리소스** 폴더는 아이콘, 시작 화면 또는 일반 이미지 (또는 개발자가 추가 하려는 다른 이미지 또는 파일)와 같은 응용 프로그램 번들의 일부가 될 파일에 대 한 것입니다. 주 프로젝트 트리에 저장 된 이미지와 마찬가지로 코드에서 **Resources** 폴더에 저장 된 이미지를 호출 하는 경우에는 폴더 위치가 지정 되지 않습니다. 예: `NSImage.ImageNamed("tags.png")`
 - **사용자 지정 폴더 또는 하위 폴더 [사용 되지 않음]** -개발자가 프로젝트 소스 트리에 사용자 지정 폴더를 추가 하 고 여기에 이미지를 저장할 수 있습니다. 프로젝트를 구성 하는 데 도움이 되도록 파일이 추가 된 위치를 하위 폴더에 중첩 시킬 수 있습니다. 예를 들어 `Card` 개발자가 프로젝트에 폴더를 추가 하 고 해당 폴더 `Hearts` 에 하위 폴더를 추가한 경우 이미지에 `Hearts` `NSImage.ImageNamed("Card/Hearts/Jack.png")` **.png** 이미지를 저장 하 여 런타임에 이미지를 로드 합니다.
 - **Asset Catalog 이미지 집합 [기본 설정]** -OS X El Capitan에 추가 됨, **자산 카탈로그 이미지 집합** 은 응용 프로그램에 대 한 다양 한 장치 및 크기 조정 요소를 지 원하는 데 필요한 이미지의 모든 버전 또는 표현을 포함 합니다. 이미지 자산 파일 이름 ( **@1x** , **@2x** )에 의존 하지 않습니다.
 
@@ -243,7 +243,7 @@ MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 
 ## <a name="using-images-with-table-views"></a>테이블 뷰에서 이미지 사용
 
-에 `NSTableView`있는 셀의 일부로 이미지를 포함 하려면 테이블 `NSTableViewDelegate's` `GetViewForItem` 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 일반적인 `NSTextField`대신를 `NSTableCellView` 사용 해야 합니다. 예를 들어:
+에 `NSTableView`있는 셀의 일부로 이미지를 포함 하려면 테이블 `NSTableViewDelegate's` `GetViewForItem` 뷰의 메서드에서 데이터가 반환 되는 방법을 변경 하 여 일반적인 `NSTextField`대신를 `NSTableCellView` 사용 해야 합니다. 예:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)

@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70769933"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.ios에서 복사 하 여 붙여넣기
@@ -541,7 +541,7 @@ void PasteImage (NSObject sender)
 var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 ```
 
-여기에서 해당 창의 `ImageDocument` 클래스 인스턴스를 호출 하 여 복사 및 붙여넣기 작업을 처리 합니다. 예를 들어: 
+여기에서 해당 창의 `ImageDocument` 클래스 인스턴스를 호출 하 여 복사 및 붙여넣기 작업을 처리 합니다. 예: 
 
 ```csharp
 window.Document.CopyImage (sender);
@@ -617,7 +617,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 자세한 내용은 [메뉴](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
-### <a name="testing-the-app"></a>앱 테스트
+### <a name="testing-the-app"></a>앱 테스트하기
 
 모든 것이 준비 되 면 응용 프로그램을 테스트할 준비가 된 것입니다. 앱을 빌드하고 실행 하면 기본 인터페이스가 표시 됩니다.
 
@@ -937,7 +937,7 @@ public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboar
 ...
 ```
 
-또한 클래스는 `Register` 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 사용 하 여 `Export`필요한 속성이 나 메서드를 노출 해야 합니다. 예를 들어:
+또한 클래스는 `Register` 지시문을 사용 하 여 목표 C에 노출 되어야 하며를 사용 하 여 `Export`필요한 속성이 나 메서드를 노출 해야 합니다. 예:
 
 ```csharp
 [Export("name")]

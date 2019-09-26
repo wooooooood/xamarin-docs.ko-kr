@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 9178e2e689f027212ea3e623b556b312985d79fe
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69658032"
 ---
 # <a name="xamarinforms-searchbar"></a>Xamarin.ios SearchBar
@@ -20,7 +20,7 @@ ms.locfileid: "69658032"
 
 Xamarin.ios는 검색을 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. 컨트롤 `SearchBar` 은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다. 다음 스크린샷에서는 `ListView`에 결과가 `SearchBar` 표시 된 쿼리를 보여 줍니다.
 
-Ios 및 Android의 [ ![Ios 및 android searchbar에 대 한 Searchbar의 스크린샷](searchbar-images/device-searchbars-cropped.png "") ] (searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 Searchbar")
+[![IOS 및 Android에 대 한 SearchBar의 스크린샷](searchbar-images/device-searchbars-cropped.png "IOS 및 Android의 Searchbar")](searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 SearchBar")
 
 클래스 `SearchBar` 는 다음 속성을 정의 합니다.
 
@@ -82,7 +82,7 @@ SearchBar searchBar = new SearchBar
 
 다음 스크린샷은 결과 `SearchBar` 컨트롤을 보여 줍니다.
 
-Ios 및 android에서 사용자 지정 [ ![된 Searchbar의 스크린샷 및 android](searchbar-images/device-searchbars-styled-cropped.png "사용자 지정 searchbar") ] (searchbar-images/device-searchbars-styled.png#lightbox "IOS 및 Android의 사용자 지정 된 SearchBar")
+[![IOS 및 Android에서 사용자 지정 된 SearchBar의 스크린샷](searchbar-images/device-searchbars-styled-cropped.png "IOS 및 Android의 사용자 지정 된 SearchBar")](searchbar-images/device-searchbars-styled.png#lightbox "IOS 및 Android의 사용자 지정 된 SearchBar")
 
 ## <a name="perform-a-search-with-event-handlers"></a>이벤트 처리기를 사용 하 여 검색 수행
 

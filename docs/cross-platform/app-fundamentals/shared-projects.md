@@ -1,16 +1,16 @@
 ---
 title: 공유 프로젝트를 사용 하 여 코드 공유
-description: 공유 프로젝트를 사용 하면 다양 한 응용 프로그램 프로젝트에서 참조 하는 공통 코드를 작성할 수 있습니다. 이 코드는 각 참조 하는 프로젝트의 일부로 컴파일되며 플랫폼 특정 기능을 공유 코드 베이스에 통합 하는 데 도움이 되는 컴파일러 지시문을 포함할 수 있습니다.
+description: 공유 프로젝트를 사용 하면 다양 한 응용 프로그램 프로젝트에서 참조 하는 공통 코드를 작성할 수 있습니다. 코드는 각 참조하는 프로젝트의 일부로 컴파일되며 플랫폼 특정 기능을 공유 코드 베이스에 통합하는 데 도움이 되는 컴파일러 지시문을 포함할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
 ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68739054"
 ---
 # <a name="shared-projects-code-sharing"></a>공유 프로젝트 코드 공유

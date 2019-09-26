@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2019
 ms.openlocfilehash: 303266f44664f7f57aeaf36869a3a06c8eb91870
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69888646"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.ios CollectionView 스크롤
@@ -115,12 +115,12 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 이 예제 코드는 항목을 뷰로 스크롤 하는 데 필요한 최소한의 스크롤이 발생 합니다.
 
-항목이 [ ![표시 된 CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/scrolltoposition-makevisible.png "CollectionView 세로 목록에서 항목 스크롤") ] (scrolling-images/scrolltoposition-makevisible-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-makevisible.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 > [!NOTE]
 > 메서드를 호출할 때 인수를 `position` 지정 [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) 하지 않으면 기본적으로 멤버가 `ScrollTo` 사용 됩니다.
 
-### <a name="start"></a>시작
+### <a name="start"></a>Start
 
 멤버 [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) 는 항목을 뷰의 시작 부분으로 스크롤 해야 함을 나타냅니다.
 
@@ -130,7 +130,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 이 예제 코드를 실행 하면 항목이 뷰의 시작 부분으로 스크롤됩니다.
 
-항목이 [ ![표시 된 CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/scrolltoposition-start.png "CollectionView 세로 목록에서 항목 스크롤") ] (scrolling-images/scrolltoposition-start-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-start.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-start-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 ### <a name="center"></a>가운데 맞춤
 
@@ -142,9 +142,9 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 이 예제 코드는 항목을 뷰의 가운데로 스크롤합니다.
 
-항목이 [ ![표시 된 CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/scrolltoposition-center.png "CollectionView 세로 목록에서 항목 스크롤") ] (scrolling-images/scrolltoposition-center-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-center.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-center-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
-### <a name="end"></a>종료
+### <a name="end"></a>끝
 
 멤버 [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) 는 항목을 뷰의 끝으로 스크롤 해야 함을 나타냅니다.
 
@@ -154,7 +154,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 이 예제 코드는 항목을 뷰의 끝으로 스크롤합니다.
 
-항목이 [ ![표시 된 CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/scrolltoposition-end.png "CollectionView 세로 목록에서 항목 스크롤") ] (scrolling-images/scrolltoposition-end-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
+[![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-end.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-end-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 ## <a name="disable-scroll-animation"></a>스크롤 애니메이션 사용 안 함
 
@@ -211,7 +211,7 @@ CollectionView collectionView = new CollectionView
 
 기본적 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 으로 속성은 다음 스크린샷에 표시 된 `SnapPointsType.None`것 처럼 스크롤이 항목을 맞추지 않도록 하는로 설정 됩니다.
 
-[ ![CollectionView 세로 목록 (snap points 불포함), IOS 및 Android](scrolling-images/snappoints-none.png "CollectionView 세로 목록 (snap Points 불포함") )의 스크린샷] (scrolling-images/snappoints-none-large.png#lightbox "CollectionView 세로 목록 (맞춤 지점이 없음") )
+[![IOS 및 Android에서 스냅 지점이 없는 CollectionView 세로 목록의 스크린샷](scrolling-images/snappoints-none.png "CollectionView 세로 목록 (맞춤 지점이 없음") )](scrolling-images/snappoints-none-large.png#lightbox "CollectionView 세로 목록 (맞춤 지점이 없음)")
 
 ### <a name="snap-points-alignment"></a>맞춤 지점의 맞춤
 
@@ -220,7 +220,7 @@ CollectionView collectionView = new CollectionView
 > [!IMPORTANT]
 > 속성의 [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 값은 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성이 `Mandatory` 또는`MandatorySingle`로 설정 된 경우에만 적용 됩니다.
 
-#### <a name="start"></a>시작
+#### <a name="start"></a>Start
 
 멤버 `SnapPointsAlignment.Start` 는 맞춤 지점이 항목의 선행 가장자리에 맞춰지도록 지정 합니다.
 
@@ -264,7 +264,7 @@ CollectionView collectionView = new CollectionView
 
 사용자가 스크롤을 시작 하는 데 swipes 위쪽 항목은 뷰의 위쪽에 정렬 됩니다.
 
-시작 snap 지점이 [있는 ![CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/snappoints-start.png "CollectionView 세로 목록에 시작 맞춤 지점이") ] 있습니다. (scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CollectionView 세로 목록")
+[![IOS 및 Android의 시작 CollectionView 세로 목록 스크린샷](scrolling-images/snappoints-start.png "시작 스냅 지점이 있는 CollectionView 세로 목록")](scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CollectionView 세로 목록")
 
 #### <a name="center"></a>가운데 맞춤
 
@@ -308,9 +308,9 @@ CollectionView collectionView = new CollectionView
 
 사용자가 스크롤을 시작 하는 데 swipes 위쪽 항목은 보기의 위쪽에 정렬 됩니다.
 
-중앙 맞춤 지점이 있는 [ ![CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/snappoints-center.png "CollectionView 세로 목록 (가운데 맞춤 지점의") 경우] ) (scrolling-images/snappoints-center-large.png#lightbox "가운데 맞춤 지점이 있는 CollectionView 세로 목록")
+[![IOS 및 Android에서 가운데 맞춤 지점이 있는 CollectionView 세로 목록의 스크린샷](scrolling-images/snappoints-center.png "가운데 맞춤 지점이 있는 CollectionView 세로 목록")](scrolling-images/snappoints-center-large.png#lightbox "가운데 맞춤 지점이 있는 CollectionView 세로 목록")
 
-#### <a name="end"></a>종료
+#### <a name="end"></a>끝
 
 멤버 `SnapPointsAlignment.End` 는 맞춤 지점이 항목의 끝 가장자리에 맞춰지도록 지정 합니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
@@ -352,7 +352,7 @@ CollectionView collectionView = new CollectionView
 
 사용자가 스크롤 시작을 swipes 하는 경우 아래쪽 항목이 보기의 아래쪽에 정렬 됩니다.
 
-[최종 맞춤 지점이 있는 ![CollectionView 세로 목록의 스크린샷, IOS 및 Android](scrolling-images/snappoints-end.png "CollectionView 세로 목록") ] (scrolling-images/snappoints-end-large.png#lightbox "CollectionView 세로 목록에 끝 맞추기 지점이") 있습니다.
+[![IOS 및 Android의 CollectionView 세로 목록에 끝 맞춤 지점이 있는 스크린샷](scrolling-images/snappoints-end.png "CollectionView 세로 목록에 끝 맞추기 지점이") 있습니다.](scrolling-images/snappoints-end-large.png#lightbox "CollectionView 세로 목록에 끝 맞추기 지점이 있습니다.")
 
 ## <a name="related-links"></a>관련 링크
 

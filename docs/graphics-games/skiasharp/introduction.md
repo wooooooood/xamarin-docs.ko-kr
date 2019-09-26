@@ -1,6 +1,6 @@
 ---
-title: SkiaSharp 플랫폼 독립적인 예제
-description: 이 문서에서는 핵심 SkiaSharp 개념에 대 한 간략 한 소개를 제공 합니다. 특히, 가져오기 및 SKCanvas를 토대로 설명 합니다.
+title: SkiaSharp 플랫폼 독립적인 예
+description: 이 문서에서는 핵심 SkiaSharp 개념을 간략하게 소개 합니다. 특히, 고 대 중 캔버스를 가져오고 그리는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
@@ -8,23 +8,23 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
 ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61158891"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "64749925"
 ---
-# <a name="skiasharp-platform-independent-examples"></a>SkiaSharp 플랫폼 독립적인 예제
+# <a name="skiasharp-platform-independent-examples"></a>SkiaSharp 플랫폼 독립적인 예
 
-_SkiaSharp 개념에 플랫폼 독립적인 간략하게 제공_
+_이는 SkiaSharp의 개념에 대 한 간단한 플랫폼 독립적인 소개를 제공 합니다._
 
-SkiaSharp 풍부 하 고 강력한 2D 그래픽 2D 버퍼로 렌더링에 사용할 수 있는 API를 제공 합니다.  사용자 지정 사용자 인터페이스 요소 및 응용 프로그램에 통합할 수 있는 2 차원 그래픽을 구현 하려면 사용할 수 있습니다. SkiaSharp 바인딩됩니다.NET 합니다 [Skia](https://skia.org) 라이브러리 기능 및이 라이브러리의 기능을 상속 합니다.
+SkiaSharp는 2D 버퍼로 렌더링 하는 데 사용할 수 있는 풍부 하 고 강력한 2D 그래픽 API를 제공 합니다.  이러한 요소를 사용 하 여 응용 프로그램에 통합할 수 있는 사용자 지정 사용자 인터페이스 요소 및 2D 그래픽을 구현할 수 있습니다. SkiaSharp는 기능 및 [해당 라이브러리의](https://skia.org) 기능을 상속 하는 .NET의 .net 바인딩입니다.
 
-플랫폼 간 라이브러리 현재 제품은 [NuGet 패키지](https://www.nuget.org/packages/SkiaSharp), NuGet 참조를 추가 하 여 프로젝트에 추가할 수 있습니다.
+라이브러리는 현재 플랫폼 간 [Nuget 패키지로](https://www.nuget.org/packages/SkiaSharp)사용할 수 있으며, nuget 참조를 추가 하 여 프로젝트에 추가할 수 있습니다.
 
-그릴 코드 만들어집니다는 `SkCanvas` 그리기 작업이 수행 되는 화면을 설명 하는 합니다.
+그리기를 위해 코드에서 그리기 작업을 `SkCanvas` 수행할 화면을 설명 하는를 만듭니다.
 
-## <a name="obtaining-an-skcanvas"></a>SKCanvas 가져오기
+## <a name="obtaining-an-skcanvas"></a>가 나 캔버스 가져오기
 
 ```csharp
 using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.PlatformColorType, SKAlphaType.Premul)) {
@@ -34,15 +34,15 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 }
 ```
 
-## <a name="drawing-on-skcanvas"></a>SKCanvas에 그리기
+## <a name="drawing-on-skcanvas"></a>가 나 캔버스에서 그리기
 
-`SKCanvas` 알고 있을 수는 사용 하 여 비슷하며 다른 그리기 그리기 모델을 모델, 선택적 투명도 채널을 사용 하 여 색을 사용 하며 선, 타원, 텍스트 및 이미지를 그릴 수 있습니다.
+는 `SKCanvas` 사용자가 익숙한 다른 그리기 모델에 대 한 스피릿와 비슷한 그리기 모델을 사용 하며, 선택적 투명도 채널에서 색을 사용 하 고 선, 원호, 텍스트 및 이미지를 그릴 수 있습니다.
 
-SkiaSharp를 사용 하 여 수행할 수 있는 여러 다른 기능 중 일부에 지나지가 같습니다.  변수 아래 예제에서는 `canvas` SKCanvas 형식입니다.
+다음은 SkiaSharp를 사용 하 여 수행할 수 있는 몇 가지 다양 한 작업입니다.  아래 예제에서 변수 `canvas` 는가 나 canvas 형식입니다.
 
 ### <a name="drawing-xamagon"></a>Xamagon 그리기
 
-이 예제에서는 Xamarin의 로고를 Xamagon를 그립니다.
+이 예제에서는 Xamagon에 Xamarin 로고를 그립니다.
 
 ```csharp
 // clear the canvas / fill with white
@@ -111,7 +111,7 @@ using (var paint = new SKPaint()) {
 }
 ```
 
-### <a name="drawing-with-image-filters"></a>이미지 필터를 사용 하 여 그리기
+### <a name="drawing-with-image-filters"></a>이미지 필터로 그리기
 
 ```csharp
 Stream fileStream = File.OpenRead ("MyImage.png"); // open a stream to an image file
@@ -135,4 +135,4 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>추가 정보
 
-SkiaSharp 사용에 대 한 자세한 정보를 찾을 수 있습니다는 [API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp)
+SkiaSharp 사용에 대 한 자세한 내용은 [API 설명서](https://docs.microsoft.com/dotnet/api/skiasharp) 에서 찾을 수 있습니다.

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 242673efb38931eb678432a28f24db0ad9b8cb7d
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228222"
 ---
 # <a name="xamarinforms-map"></a>Xamarin.Forms 맵
@@ -25,7 +25,7 @@ Xamarin.Forms.Maps 각 플랫폼에 기본 지도 Api를 사용합니다. 이를
 
 지도 컨트롤에서 사용 된 합니다 [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) 아래 나와 있는 샘플입니다.
 
- [![MobileCRM 예제의 maps](map-images/maps-zoom-sml.png "지도 컨트롤 예제")](map-images/maps-zoom.png#lightbox "지도 컨트롤 예제")
+ [![MobileCRM 샘플의 Maps](map-images/maps-zoom-sml.png "맵 컨트롤 예제")](map-images/maps-zoom.png#lightbox "맵 컨트롤 예제")
 
 맵 기능을 만들어 더 향상 시킬 수 있습니다는 [사용자 지정 렌더러를 매핑할](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)합니다.
 
@@ -201,7 +201,7 @@ slider.ValueChanged += (sender, e) =>
 };
 ```
 
-[![확대/축소를 사용 하 여 maps](map-images/maps-zoom-sml.png "지도 컨트롤 확대/축소")](map-images/maps-zoom.png#lightbox "지도 컨트롤 확대/축소")
+[![확대/축소 맵](map-images/maps-zoom-sml.png "맵 컨트롤 확대/축소")](map-images/maps-zoom.png#lightbox "맵 컨트롤 확대/축소")
 
 또한 클래스에 [`Map`](xref:Xamarin.Forms.Maps.Map) 는 바인딩 가능한 속성에 의해 지원 `bool`되는 형식의 `MoveToLastRegionOnLayoutChange` 속성이 있습니다. 기본적으로이 속성은 `true`입니다 .이 속성은 표시 된 지도 지역이 장치 회전과 같은 레이아웃 변경이 발생할 때 현재 영역에서 이전 집합 영역으로 이동 함을 나타냅니다. 이 속성을로 `false`설정 하면 레이아웃 변경이 발생할 때 표시 되는 맵 지역이 가운데에 그대로 유지 됩니다. 다음 예제에서는이 속성을 설정 하는 방법을 보여 줍니다.
 
@@ -324,7 +324,7 @@ MyMap.MoveToRegion(
 
 다음 스크린샷에는 데이터 바인딩을 [`Map`](xref:Xamarin.Forms.Maps.Map) 사용 하 [`Pin`](xref:Xamarin.Forms.Maps.Pin) 여 컬렉션을 표시 하는 방법을 보여 줍니다.
 
-데이터 바인딩된 pin을 사용 하 여 [ ![데이터 바인딩된 핀이 있는 Map의 스크린샷 및](map-images/pins-itemssource.png "데이터 바인딩된 pin이 있는 Android 맵") ] (map-images/pins-itemssource-large.png#lightbox "데이터 바인딩된 pin을 사용 하는 맵")
+[![IOS 및 Android에서 데이터 바인딩된 핀이 있는 지도의 스크린샷](map-images/pins-itemssource.png "데이터 바인딩된 pin을 사용 하는 맵")](map-images/pins-itemssource-large.png#lightbox "데이터 바인딩된 pin을 사용 하는 맵")
 
 ### <a name="choose-item-appearance-at-runtime"></a>런타임에 항목 모양 선택
 

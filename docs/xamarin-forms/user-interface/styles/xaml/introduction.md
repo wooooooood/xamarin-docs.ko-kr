@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 35f8dad3590c07ceb3c93aa735b8c02d75098498
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70228163"
 ---
 # <a name="introduction-to-xamarinforms-styles"></a>Xamarin.ios 스타일 소개
@@ -137,6 +137,6 @@ public class NoStylesPageCS : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [스타일](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)
