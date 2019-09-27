@@ -7,14 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 5c5191a6a7490ec0301bdea7b7f5aa2217b80c96
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206371"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319534"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Xamarin.ios에서 Apple에 로그인 합니다.
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Apple로 로그인은 타사 인증 서비스 사용자에 게 id 보호를 제공 하는 새로운 서비스입니다. IOS 13부터 Apple에서는 타사 인증 서비스를 사용 하는 새 앱 에서도 Apple에 로그인을 제공 해야 합니다. 업데이트 되는 기존 앱은 4 월 2020 일까 지 Apple에 로그인을 추가할 필요가 없습니다.
 
@@ -204,10 +206,6 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 #endregion
 ```
-
-## <a name="summary"></a>요약
-
-이 문서에서는 iOS 용 Apple에 로그인 했습니다.
 
 ## <a name="related-links"></a>관련 링크
 

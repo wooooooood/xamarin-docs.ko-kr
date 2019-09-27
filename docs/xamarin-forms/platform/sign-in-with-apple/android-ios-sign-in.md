@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: 105088b612ffc35d18bdf800b48cc700ce6f4a48
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: df011a6eb72b6eb30af0a197d4be48b0f2494384
+ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206517"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71319516"
 ---
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Xamarin에서 Apple에 로그인 사용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)
 
 Apple로 로그인은 타사 인증 서비스를 사용 하는 iOS 13의 모든 새 응용 프로그램을 위한 것입니다. IOS와 Android의 구현 세부 정보는 매우 다릅니다. 이 가이드에서는 지금 Xamarin.ios에서이 작업을 수행 하는 방법을 안내 합니다.
 
