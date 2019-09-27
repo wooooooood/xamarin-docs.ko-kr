@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 96d2fe0b03ad7067d6fece072742ea2796224f8b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: baf5d7a348c96cc2c43fd909bcc543fbfbfe81ce
+ms.sourcegitcommit: 58b21bf0eda3a7cea91a95b479f499c9d499b6d5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250117"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71310784"
 ---
 # <a name="images-in-xamarinforms"></a>Xamarin.Forms의 이미지
 
@@ -274,7 +274,7 @@ A [ `UriImageSource` ](xref:Xamarin.Forms.UriImageSource) 는 또한 다음 속�
 캐싱 기본적으로 활성화 되 고 24 시간 동안 로컬 이미지를 저장 합니다. 특정 이미지에 대 한 캐싱을 사용 하지 않으려면 이미지 소스를 다음과 같이 인스턴스화하십시오.
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri="http://server.com/image" };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
 ```
 
 특정 캐시 기간 (예: 5 일)을 설정 하려면 이미지 소스를 다음과 같이 인스턴스화하십시오.
