@@ -1,4 +1,4 @@
-# [Xamarin 설명서](index.md)
+# [Xamarin 설명서](index.yml)
 ## [Android](android/index.yml)
 ## [iOS](ios/index.yml)
 ## [Mac](mac/index.yml)
