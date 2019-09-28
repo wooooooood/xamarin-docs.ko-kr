@@ -56,29 +56,29 @@ sections:
         style: cards
         className: cardsB
         items:
-          - href: ~/xamarin-forms/app-fundamentals/
+          - href: ~/xamarin-forms/app-fundamentals/index.yml
             html: '탐색, 제스처, 데이터 바인딩을 비롯해 Xamarin.Forms 앱을 개발하는 데 필요한 모든 것을 알아봅니다.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/xamarin-forms/app-fundamentals/
+              href: ~/xamarin-forms/app-fundamentals/index.yml
             title: 애플리케이션 기본 사항
-          - href: ~/xamarin-forms/user-interface
+          - href: ~/xamarin-forms/user-interface/index.yml
             html: Xamarin.Forms XAML에서 사용할 수 있는 사용자 인터페이스 컨트롤을 모두 알아봅니다.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/xamarin-forms/user-interface/
+              href: ~/xamarin-forms/user-interface/index.yml
             title: 사용자 인터페이스
-          - href: ~/xamarin-forms/xaml/
+          - href: ~/xamarin-forms/xaml/index.yml
             html: 사용자 인터페이스를 선언적으로 만들고 모바일 및 데스크톱 플랫폼에서 공유합니다.
             image:
               src: ~/media/icons/i_xaml-forms.svg
-              href: ~/xamarin-forms/xaml/
+              href: ~/xamarin-forms/xaml/index.yml
             title: XAML
-          - href: ~/xamarin-forms/platform/
+          - href: ~/xamarin-forms/platform/index.yml
             html: 사용자 지정 렌더러와 같이 Xamarin.Forms 플랫폼 기능 및 각 릴리스의 기타 중요한 기능 작업입니다.
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/xamarin-forms/platform/
+              href: ~/xamarin-forms/platform/index.yml
             title: 플랫폼 기능
           - href: ~/essentials/index.md?context=xamarin/xamarin-forms
             html: '파일 액세스, 디바이스 정보, 하드웨어 기능 등의 공통 작업을 위한 교차 플랫폼 API입니다.'
@@ -86,23 +86,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/xamarin-forms
             title: Xamarin.Essentials
-          - href: ~/xamarin-forms/data-cloud/
+          - href: ~/xamarin-forms/data-cloud/index.yml
             html: 로컬 및 원격 데이터 스토리지와 검색 및 기타 Azure 클라우드 기반 서비스입니다.
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/xamarin-forms/data-cloud/
+              href: ~/xamarin-forms/data-cloud/index.yml
             title: 데이터 및 Azure Cloud Services
-          - href: ~/xamarin-forms/deploy-test/
+          - href: ~/xamarin-forms/deploy-test/index.yml
             html: 앱을 빌드하고 배포하는 방법 및 해당 앱을 미리 테스트하는 데 유용한 팁입니다!
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/xamarin-forms/deploy-test/
+              href: ~/xamarin-forms/deploy-test/index.yml
             title: 배포 및 테스트
-          - href: ~/xamarin-forms/internals/
+          - href: ~/xamarin-forms/internals/index.yml
             html: Xamarin.Forms 내부 요소에 대한 추가 정보 및 지역화와 액세스 가능성 등의 기능에 대한 도움말입니다.
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/xamarin-forms/internals/
+              href: ~/xamarin-forms/internals/index.yml
             title: 고급 개념 및 내부 요소
   - title: 참조
     items:
