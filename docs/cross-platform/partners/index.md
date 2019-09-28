@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 1cb4080be2bcb421db1e9db08a18b49ad95c4fb7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 40cfa7925f1617486a83134dd94626a0f11e80f3
+ms.sourcegitcommit: 709072506f0bb6abc1d6046ec15f6bf66b282d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765312"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71344622"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>모바일 솔루션을 제공 하는 인증 된 컨설팅 파트너
 
@@ -32,7 +32,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="usa"></a>USA
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[10 Pearls](http://10pearls.com/get-in-touch/)|Herndon, VA; Toronto, ON, Canada; Dubai - United Arab Emirates; Karachi, Pakistan|10 Pearls 대기업, 소규모 & 중간 규모 비즈니스 및 높은 성장 시작을 포함 한 다양 한 클라이언트를 위한 사용자 지정 종단 간 기술 솔루션을 구축 합니다.|
 |[첫 번째 버전, i n c.](http://www.1stversion.com)|Miami, FL|1\. 버전은 혁신적인 인력이 있는 디지털 컨설팅 에이전시 이며 고객에 게 효과적인 솔루션을 제공 하 고 구축 합니다.|
@@ -135,7 +135,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 |[Motis 컨설팅](http://www.motisconsulting.com/)|Dubuque, 아이오|Motis 컨설팅이 도움이 될 수 있습니다. 모바일 또는 데스크톱 소프트웨어 응용 프로그램과 관련 된 제품 전략, 아키텍처 또는 개발 요구 사항에 대 한 자세한 내용은 Motis 솔루션 및 microsoft에 문의 하세요.|
 |[Nebbia 기술](http://www.nebbiatech.com/)|플로리다|Microsoft 기술에 초점을 맞춘 클라우드 우선 소프트웨어 회사입니다. DevOps에서 모범 사례를 적용 하는 동안 Azure를 활용 하는 놀라운 제품을 구축 합니다. 클라우드 우선 초점이 있으며, 클라우드로 전환 하 고 클라우드 투자를 최대한 활용할 수 있도록 클라이언트와 협력 하 고 있습니다.|
 |[회사](http://www.ness.com/)|San Jose, CA, 미국|기능 디지털 엔지니어링은 조직이 디지털 플랫폼을 구상, 빌드 및 지속적으로 발전 시켜 새로운 시장에 진입 하 고, 새로운 수익을 캡처하고, 운영을 얻기 위해 디지털 변환 및 사용자 지정 소프트웨어 제품 엔지니어링 서비스를 제공 합니다. 들. |
-|[Neudesic](http://www.neudesic.com)|Irvine, CA; 애틀랜타, GA; 오스틴, TX; 시카고, IL; 달라스, TX; 덴버, CO; Houston, TX; 로스앤젤레스, CA; 뉴욕, 필라델피아, PA; Phoenix, AZ; 포틀랜드 또는; 시애틀, WA|Neudesic는 Microsoft 기술에 대 한 Microsoft의 기능과 전문 지식을 위해 독립적인 연구 회사에서 인정 하는 최고의 국내 시스템 통합자와 신뢰할 수 있는 Microsoft 파트너입니다. 또한 Theobald, AWS, Dell, Xamarin, Metalogix, Nintex 등의 다른 업계 선두 업체와 전략적 제휴를 유지 관리 합니다. 동맹 &ndash; 파트너와의 긴밀 한 협력을 통해 작업 하 여 해당 도구 및 기술 &ndash; 에 대 한 전문 지식을 활용 하 여 모든 비즈니스 과제에 최대한 Neudesic 솔루션을 제공할 수 있습니다.|
+|[Neudesic](http://www.neudesic.com)|Irvine, CA; 애틀랜타, GA; 오스틴, TX; 시카고, IL; 달라스, TX; 덴버, CO; Houston, TX; 로스앤젤레스, CA; 뉴욕, 필라델피아, PA; Phoenix, AZ; 포틀랜드 또는; 시애틀, WA|Neudesic는 Microsoft 기술에 대 한 Microsoft의 기능과 전문 지식을 위해 독립적인 연구 회사에서 인정 하는 최고의 국내 시스템 통합자와 신뢰할 수 있는 Microsoft 파트너입니다. 또한 Theobald, AWS, Dell, Xamarin, Metalogix, Nintex 등의 다른 업계 선두 업체와 전략적 제휴를 유지 관리 합니다. 동맹 파트너와의 긴밀 한 협력을 통해 작업 하 여 &ndash;은 도구 및 기술에 대 한 전문 지식을 혼합 &ndash; Neudesic는 모든 비즈니스 과제에 가장 적합 한 솔루션을 제공할 수 있습니다.|
 |[NIIT 기술](http://www.niit-tech.com)|애틀랜타, GA, USA; Noida, Uttar Pradesh, 인도; 런던, 영국 마드리드, 스페인; 싱가포르|NIIT 기술은 미국, 유럽, 아시아 및 오스트레일리아에서 클라이언트의 요구 사항을 해결 하는 글로벌 IT 솔루션 조직입니다. NIIT 기술은 여행 및 교통, 은행 및 금융 서비스, 보험, 제조 및 미디어 감축할의 서비스를 제공 하며 다양 한 서비스를 제공 합니다. 디지털 서비스에 초점을 맞춘이 회사는 민첩 하 고 확장 가능 하며 디지털 운영 모델을 설계 하는 데 도움이 됩니다.  경험, 분석 및 통합을 포함 하 여 디지털 서비스 값 체인에 걸쳐 분산 된 다양 한 최고의 솔루션 및 효과적인 서비스를 제공 합니다.|
 |[Nous Infosystems](http://nousinfosystems.com)|Edison, NJ & San Ramon, CA, USA; Bentford, UK; Mississauga, ON, Canada; Mainz, Germany; Bengaluru, Coimbatore, India; Dubai, UAE|최고의 Xamarin 파트너인 nous는 고객이 강력한 Xamarin 플랫폼을 쉽게 채택 하 고 기존 비즈니스 팀, 도구 및 C#/.net 코드를 효율적으로 활용 하 여 모바일에서 사용할 수 있도록 합니다. & 설계, Xamarin 자문 서비스, 응용 프로그램 개발 서비스, 테스트 및 지원 서비스를 제공 하는 종단 간 enterprise mobility services 사용자 환경을 제공 합니다.|
 |[Noutash 컨설팅 i n c.](http://www.noutashconsulting.ca/)|Scarborough, 설정|컨설턴트는 뛰어난 기능을 갖춘 원래 독창적인 모바일 응용 프로그램을 만들 수 있습니다.|
@@ -164,8 +164,8 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 |[Seamgen, LLC](http://www.seamgen.com)|San Diego, CA|서비스에서 전체 스택 웹 및 모바일 응용 프로그램 개발 팀입니다. Seamgen의 열정적인 기술 전문가 팀은 모바일 응용 프로그램부터 응답성이 뛰어난 웹 사이트부터 클라우드 기반 서비스까지 필요한 모든 항목을 만들 수 있습니다. 개발 프로세스의 모든 단계에서 기술 파트너 이며, 기존 시스템 아키텍처를 보완 하 고 개선 하는 솔루션을 디자인 하 고 개발 하는 데 사용할 수 있으며, 모바일 및 웹에 사용 되는 모든 최신 기술을 익숙한. 앱 개발.|
 |[그룹 sel](http://www.selagroup.com)|Bellevue, WA; Arlington, VA; Bnei Brak, 이스라엘; 푸 네, 인도; 전, 캐나다, 싱가포르|Sela는 2000 이후 학습 솔루션 (CPLS)에 대 한 Microsoft 인증 파트너입니다. Sela 및 55 선임 교육 담당자가 개발한 교육 과정을 300 개 이상 사용 하는 기술 대학에서는 IT 업계에 대 한 강력한 과정 및 인증을 제공 합니다. Sela에는 Microsoft, SAP, NCR, Motorola, HP, BMC 소프트웨어, ECI, Comverse, IBM 등 전 세계 800 대의 클라이언트가 있습니다.|
 |[Shout Digital 제한 됨](http://www.shoutdigital.com)|필라델피아, PA|Shout Digital은 2009에서 구성 되었으며, 뛰어난 클라이언트 솔루션의 후면에는 약 30의 팀이 작성 되었으며 많은 양의 작업을 수행 했습니다. Microsoft는 장기적이 고 신뢰할 수 있는 클라이언트와의 파트너 관계를 구축 하 고 있다고 생각 합니다. Microsoft에서 제공 하는 모든 기능을 제공 합니다. Microsoft의 전문 지식은 원대한 클라이언트의 디지털 미래를 혁신 하는 데 도움이 됩니다. |
-|[Skyline 기술](http://www.skylinetechnologies.com)|사과 eton, WI|고유한 통찰력과 기술 전문 지식을 제공 하 여 비즈니스에 뛰어난 가치를 제공 하 고 Skyline 목표는 가장 까다로운 비즈니스 과제를 해결 하 고 기술을 통해 가능한 작업을 구상 하는 것입니다. 모든 클라이언트 참여에서는 적절 한 사용자를 테이블 &ndash; 에 연결 하 여 사용자가 원하는 위치에서의 격차를 연결 하는 기술을 통해 대화를 상승 시킬 수 있습니다.|
-|[M 컨설팅](http://www.slalom.com)|시애틀, WA; 보스턴, MA, 시카고, IL; 덴버, CO; Houston, TX; 로스앤젤레스, CA; 뉴욕, 포틀랜드 또는; 샌프란시스코, CA; 요새 가치가, TX, USA; 달라스, TX, USA; Phoenix, AZ, USA; Boise, ID, USA; 솔트 도시 도시, 전 세계, 미국 전, 온, 캐나다, 디트로이트, MI, USA; 워싱턴, DC, USA; 필라델피아, PA, USA; Hartford, CT, USA; 애틀랜타, GA, USA; 세인트 Louis, MO, USA; San Jose, CA, 미국 Minneapolis, MN, USA; San Diego, CA, 미국 런던, 영국|사용자가 고유 하 게 만드는 모든 작업 중에는 목록 맨 위에 있습니다. Theyre 숙련 된 컨설턴트는 해당 클라이언트의 비즈니스와 살고 있는 커뮤니티의 차이를 완전히 하는, 선택 된 필드에서 심층적 전문 지식을 갖추고 있습니다. 그 밖 &ndash; &ndash; 의 흥미로운 항목이 있습니다. 한 번의 클라이언트 중 하나는 웃는 단체의 직원 들에 해당 합니다. 미국 및 런던의 16 개 사무실에서 3000 개 이상의 컨설턴트에 게 성장 하 고 있으므로 사용자가 정확 하 게 작업을 수행할 수 있도록 하는 데 주력 하 고 있습니다.|
+|[Skyline 기술](http://www.skylinetechnologies.com)|사과 eton, WI|고유한 통찰력과 기술 전문 지식을 제공 하 여 비즈니스에 뛰어난 가치를 제공 하 고 Skyline 목표는 가장 까다로운 비즈니스 과제를 해결 하 고 기술을 통해 가능한 작업을 구상 하는 것입니다. 모든 클라이언트 참여에서는 적절 한 사용자를 테이블에 @no__t 합니다. 즉, 기술을 통해 대화의 수준을 높이는 것이 좋습니다.|
+|[M 컨설팅](http://www.slalom.com)|시애틀, WA; 보스턴, MA, 시카고, IL; 덴버, CO; Houston, TX; 로스앤젤레스, CA; 뉴욕, 포틀랜드 또는; 샌프란시스코, CA; 요새 가치가, TX, USA; 달라스, TX, USA; Phoenix, AZ, USA; Boise, ID, USA; 솔트 도시 도시, 전 세계, 미국 전, 온, 캐나다, 디트로이트, MI, USA; 워싱턴, DC, USA; 필라델피아, PA, USA; Hartford, CT, USA; 애틀랜타, GA, USA; 세인트 Louis, MO, USA; San Jose, CA, 미국 Minneapolis, MN, USA; San Diego, CA, 미국 런던, 영국|사용자가 고유 하 게 만드는 모든 작업 중에는 목록 맨 위에 있습니다. Theyre 숙련 된 컨설턴트는 해당 클라이언트의 비즈니스와 살고 있는 커뮤니티의 차이를 완전히 하는, 선택 된 필드에서 심층적 전문 지식을 갖추고 있습니다. @No__t-0 다른 @no__t 웃는 얼굴입니다. 한 번의 클라이언트 중 하나는 웃는 단체의 직원 들에 해당 합니다. 미국 및 런던의 16 개 사무실에서 3000 개 이상의 컨설턴트에 게 성장 하 고 있으므로 사용자가 정확 하 게 작업을 수행할 수 있도록 하는 데 주력 하 고 있습니다.|
 |[SmartBridge](http://smartbridge.com)|Houston, TX, USA|Smartbridge에서 엔터프라이즈 솔루션을 평가, 구현, 만들기 및 관리 합니다. |
 |[Softeq](http://www.softeq.com/)|Houston, TX, USA|Softeq Development Inc.는 클라이언트에서 B2B 또는 B2C 시장을 위한 새 제품을 디자인, 개발 및 실행 하는 데 도움이 되는 전체 스택 개발 회사입니다. Softeq은 IoT 솔루션 개발 프로젝트를 위해 고유 하 게 배치 되며, PCB 및 인클로저 디자인에서 클라우드 백 엔드 및 모바일 클라이언트로의 모든 제품 개발 주기 단계를 처리할 수 있도록 하는 하드웨어 및 응용 프로그램 수준 기술을 모두 제공 합니다. app. Softeq는 Nike, NVIDIA, Intel 및 Disney에 대 한 장기적인 모바일 개발 파트너 이며 Xamarin 개발에서 입증 된 역량을 제공 합니다.|
 |[Softjourn](https://softjourn.com/en#1)|Fremont, CA, USA; Ivano-Frankivsk, 우크라이나; Wroc ≈ Çaw, 폴란드|카드 및 지불, 선불, 미디어 및 티켓 응용 프로그램에 대 한 사용자 지정 소프트웨어 개발 전문가|
@@ -182,12 +182,12 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 |[SunDial 기술](http://www.sundialer.com)|Tampa, FL|SunDial 기술은 1990 년 요새 Lauderdale에서 sprang 됩니다. SunDial은 최고의 Dialogic 컴퓨터 전화 통신 통합, 인터넷, Windows 및 SQL Server 기술을 병합 하기 위해 설립 되었습니다. SunDial은 미국 및 전 세계 콜 센터 시장에 도달 하는 최초의 Windows Dialogic 기반 예측 전화 걸기 였습니다.|
 |[Syrinx 컨설팅](http://www.syrinx.com)|Needham, MA, USA|Syrinx의 모바일 개발 팀은 모바일 기술을 이해 하 고 회사와 직접 협력 하 여 조직에 적합 한 고유한 대상 앱 또는 앱을 만들고 배포 하는 전문가로 구성 됩니다. 이는 작동 해야 하는 기술이 아니라는 것을 이해 하 고 있습니다. 통합, 민첩성, 확장성, 재고, 마케팅 및 고객 환경 요소입니다.|
 |[Tallan]( http://www.tallan.com)|달라스, TX|Tallan는 조직에 게 Hartford, 뉴욕, 보스턴, 애틀랜타, 주황색 관할지, CA, Tampa, 달라스, 워싱턴 D.C의 사무실로 전국을 제공 합니다.|
-|[Technossus](http://www.technossus.com/)|Irvine, CA, 미국|Technossus는 개인적으로 유지 되 고 뛰어난 소프트웨어 솔루션 및 기술 컨설팅 회사입니다. 업계 전문가 들이 거의 10 년 전에 설립 한 기업은 혁신적인 소프트웨어 솔루션을 설계, 개발 및 구현 하는 데 도움이 됩니다. Microsoft의 핵심 가치에는 항상 모든 클라이언트 &ndash; 에 게 예외적인 가치 및 품질을 제공 하는 약정을 포함 합니다. 비즈니스를 변환 하 고 비용 효율적으로 운영 성능을 향상 하는 솔루션을 제공 하 고 기대 수준을 초과 합니다.|
+|[Technossus](http://www.technossus.com/)|Irvine, CA, 미국|Technossus는 개인적으로 유지 되 고 뛰어난 소프트웨어 솔루션 및 기술 컨설팅 회사입니다. 업계 전문가 들이 거의 10 년 전에 설립 한 기업은 혁신적인 소프트웨어 솔루션을 설계, 개발 및 구현 하는 데 도움이 됩니다. Microsoft의 핵심 가치에는 모든 클라이언트 &ndash;에 대 한 예외적인 가치 및 품질을 제공 하는 약정을 포함 합니다. 비즈니스를 변환 하 고 비용 효율적으로 운영 성능을 향상 하는 솔루션을 제공 하 고 기대 수준을 초과 합니다.|
 |[Tecknoworks](http://www.tecknoworks.com)||기술에 대 한 열정과 우리의 궁금한에 따라 매일 새로운 작업을 학습 하 고, 사용자와 조직이 15 년 넘게 기술을 통해 성공 하도록 지원 해 왔습니다. |
 |[Tecordeon Inc.](http://www.tecordeon.com)|로스앤젤레스, CA; Hyderabad, 인도|Tecordeon Inc.은 가장 빠르게 성장 하는 소프트웨어 개발 및 아웃소싱 회사 중 하나로, 클라이언트에 포괄적인 소프트웨어 솔루션을 제공 합니다. 회사는 모바일 응용 프로그램 개발, 웹 응용 프로그램 개발, 리치 인터넷 응용 프로그램 개발, 모바일 응용 프로그램 테스트, 시스템 통합, 소프트웨어 테스트 및 유효성 검사 서비스, 품질 보증을 전문적으로 제공 합니다. 서비스 등. 또한 Tecordeon Inc에는 기술, 엔터테인먼트, 의료, 미디어, 금융 및 기타 많은 섹터에 대 한 산업별 소프트웨어 전문 지식이 있습니다.|
 |[Terrace 소프트웨어](http://www.terrace.com)|샌프란시스코, CA|우리의 회사 저자명는 ' Microsoft와의 빌드 '입니다. 이 문구는 미션을 정확 하 게 설명 합니다. 간단 합니다. 클라이언트와 긴밀 하 게 협력 하 고, 비전을 듣고, 종합적인 계획을 작성 하 고, 최신 기술을 사용 하 여 혁신적인 솔루션을 구현 합니다.|
 |[앱 전문가](http://www.TheAppPros.com)|스프링 필드, MO|중소 규모 기업을 대상으로 하는 모바일 응용 프로그램의 중요성이 증가 하는 것을 인식 하는 것은 특히 뛰어난 응용 프로그램을 개발 하 여 확장 하는 데 도움이 되는 복잡 한 응용 프로그램을 개발 하 여 로컬 기업과 시작을 최대한 활용 하는 데 비즈니스 운영을 유지 관리 하 고 개선 합니다.|
-|[검증 된 방법](http://www.provenmethod.com)|애틀랜타, GA|비즈니스 목표에 대 한 전략적으로 생각 하 고 비즈니스 목표에 대 한 정보를 활용 하 여 비즈니스 목표를 달성 하는 것으로 시작 하 고 유연 하 고 효율적인 솔루션을 빠르게 개발 및 구현 이러한 솔루션은 숙련 된 숙련 된 장기적인 it 전문가 들에 의해 제공 됩니다 .이는 비즈니스 목표를 달성 하기 위해 &ndash; 25 년간 IT 비즈니스 성공을 지원 합니다.|
+|[검증 된 방법](http://www.provenmethod.com)|애틀랜타, GA|비즈니스 목표에 대 한 전략적으로 생각 하 고 비즈니스 목표에 대 한 정보를 활용 하 여 비즈니스 목표를 달성 하는 것으로 시작 하 고 유연 하 고 효율적인 솔루션을 빠르게 개발 및 구현 이러한 솔루션은 숙련 된 숙련 된 장기적인 IT 전문가 들이 제공 하며,이는 25 년간 IT 비즈니스 성공을 지원 &ndash;은 모두 비즈니스 목표를 충족 하는 데 사용 됩니다.|
 |[삼중-I Corporation](http://triplei.com)||작업을 제대로 수행 하거나 꿈을 실현 작업을 가져오면 비즈니스 성공을 달성 하는 데 도움이 될 수 있습니다. 전화를 걸어 의견을 보내 주시기 바랍니다. 여러분의 의견을 기다리고 있습니다.  |
 |[Software LLC를 미리 생각](http://www.thinkaheadsoftware.com)|동부 Windsor, CT|Microsoft는 소프트웨어 개발, 컨설팅 및 응용 프로그램 호스팅 서비스를 제공 하는 인터넷 비즈니스 솔루션 공급자입니다. 우리의 전문성에는 웹에 대 한 비즈니스 응용 프로그램 개발 및 iOS 및 Android 플랫폼용 모바일 응용 프로그램이 포함 됩니다. |
 |[ThinkPower Information Corporation](http://www.thinkpower.info)|뉴욕,|ThinkPower은 2005에서 설립 되었으며 사내 직원 150은 사용자 지정 된 웹/모바일 앱 소프트웨어 개발 서비스를 제공 합니다. |
@@ -214,13 +214,13 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="argentina"></a>아르헨티나
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[D-Genix](http://d-genix.com/)|Rosario, 아르헨티나|DGenix는 전 세계에 있는 클라이언트에 게 포괄적인 고품질 솔루션을 제공 하는 데 중점을 둔 매우 전문화 된 소프트웨어 개발 회사입니다.|
 
 ## <a name="australia"></a>오스트레일리아
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[로밍 인 pty l t d.](http://www.builttoroam.com)|시드니, 오스트레일리아|로밍 시에는 플랫폼 간 앱과 클라우드 기술 전문가 이지만 문제 해결을 위해 노력 하 고 있습니다. |
 |[CommerceLab](http://www.commercelab.com.au)|시드니, 오스트레일리아|Microsoft의 시드니 기반 앱 개발은 최신 marketplace에서 경쟁 하는 중소기업, 온라인 및 오프 라인을 제공 합니다.|
@@ -239,7 +239,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="belgium"></a>벨기에
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[3factr](http://3factr.be/)|Edegem, 벨기에|3factr는 divers API 통합을 사용한 Xamarin 모바일 개발에 초점을 맞춘 100%입니다. Theyprovide는 Xamarin iOS, Android 및 UWP 앱의 소프트웨어 팩터리 사내 개발을 모두 컨설팅 합니다.|
 |[CaveBirdLabs](http://www.cavebirdlabs.com/)|Antwerp, 벨기에|CaveBirdLabs는 멋진 대화형 모바일 응용 프로그램을 개발 하는 데 중점을 둔 벨기에 기반 모바일 개발 스튜디오입니다.|
@@ -251,14 +251,14 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="brazil"></a>브라질
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Grupo Viceri](http://www.viceri.com.br)|Jundiaí, 브라질|웹, 모바일 앱 개발 및 비즈니스 인텔리전스 서비스를 제공 합니다.|
 |[슈퍼 활성 솔루션](http://www.superactive.com.br/)|브라질|슈퍼 활성 é uma emespecializada em a는 soluções tecnológicas inovadoras com foco na TI Estratégica, otimizando processos, de 형식의 a fornecer resultados rápidos e seguros 지역 os seus clientes입니다. |
 
 ## <a name="canada"></a>캐나다
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Apcurium](http://www.apcurium.com)|몬트리올, 캐나다|Apcurium는 특정 비즈니스 전략과 사용자의 기대에 맞게 오늘날의 모바일 장치, 플랫폼 및 기술을 연결 하는 모바일 솔루션을 개발 합니다.|
 |[BSI 랩](https://bsilabs.ca/)|전, 캐나다|BSI Labs는 모바일 전략, UX/UI 디자인, 모바일 앱 개발 및 시스템 통합을 전문적으로 하는 전체 서비스 컨설팅.|
@@ -294,15 +294,15 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="costa-rica"></a>코스타리카
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Apptividad](http://apptividad.com/)|San Jose, 코스타리카|Apptividad는 웹 채널, AR 및 모바일 응용 프로그램을 통해 비즈니스 또는 브랜드에 대해 더 많은 노출을 제공할 수 있습니다. 또한 내부 시스템 및 비즈니스 파트너에 대 한 강력한 API 통합을 사용 합니다.|
 
 ## <a name="cyprus"></a>키프로스
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
-|[Datatech I.T. 솔루션 이란](http://www.datatech.com.cy)|키프로스|Datatech I.T. Solutions l i n은 엔터프라이즈 콘텐츠 관리, 공급망 관리 및 모바일 솔루션의 필드에서 제공 되는 기술 솔루션의 선두 업체입니다.|
+|[Datatech I.T. Solutions l @ no__t-0|키프로스|Datatech I.T. Solutions l i n은 엔터프라이즈 콘텐츠 관리, 공급망 관리 및 모바일 솔루션의 필드에서 제공 되는 기술 솔루션의 선두 업체입니다.|
 
 ## <a name="czech-republic"></a>체코
 
@@ -312,7 +312,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="denmark"></a>덴마크
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[앱 Bureauet](https://appbureauet.dk/)|Svendborg, 덴마크|앱 Bureauet 앱 개발 회사입니다.|
 |[Bluefragments](http://www.bluefragments.com)|코펜하겐, 덴마크|Bluefragments는 앱 개발에서 전문적 이며 인증 된 Microsoft 파트너입니다.|
@@ -322,21 +322,21 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="dominican-republic"></a>도미니카 공화국
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Maven S.R.L.](http://www.maven.do)|도미니카 공화국|Maven는 큰 꿈을 실현 있는 작은 회사입니다. 도미니카 공화국에서 새로운, 최고 품질 및 다양 한 소프트웨어 솔루션을 제공 하는 방법으로 2012에서 설립 되었습니다. Microsoft는 고객에 게 소프트웨어 개발 품질을 보장 하는 것을 목표로 하며, 이렇게 하면 신뢰 및 책임을 필요성 책임 관계를 조성 합니다.|
 |[Solvex Dominicana](http://www.solvex.com.do)||Solvex 값 전문가 환경을 제공 합니다. 2014에 설정 된 회사에는 이제 80% 이상 소프트웨어를 제공 하는 5 년 이상의 경험을 갖춘 200 소프트웨어 엔지니어가 있습니다. |
 
 ## <a name="egypt"></a>이집트
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[ITWorx](http://www.itworx.com)|카이로, 이집트|ITWORX는 고급 분석, 엔터프라이즈 이동성, 성능 관리 및 CRM에 중점을 둔 세계 최고의 조직에 클라우드 기반 및 온-프레미스 솔루션을 제공 하는 글로벌 IT 서비스 회사입니다.|
 |[Jios 개발](https://www.jiosdev.com/)|이집트|Jios 개발은 사용자 지정 응용 프로그램 개발, 클라우드 서비스 및 모바일 응용 프로그램에서 전문 기술 컨설팅 및 아웃소싱 서비스를 제공 하는 안정적인 고속 성장 회사입니다. |
 
 ## <a name="france"></a>프랑스
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Altran 프랑스](http://www.altran.fr/)|파리, 프랑스|Altran은 엔지니어링 및 R & D 서비스의 세계 선두 업체입니다.|
 |[Arolla](http://www.arolla.fr/)|파리, 프랑스|Arolla는 소프트웨어 개발의 가장 고급 기술에서 특수화 된 컨설팅 회사입니다.|
@@ -350,7 +350,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 |[La Mobile IT](http://www.la-mobile-it.com)|Grenoble, 프랑스|Nous sommes spécialisés depuis 10 ans dans le mobile et avades 관계 étroites avons nos partenaires, client et fournisseurs abtout ce touche à la mobilité. Nous n'avons aucune exclusivité, si vous désirez obtenir des conseils, nous présenter une solution ou encore devenir partenaire, ez-nous!|
 |[Matelli Services](http://www.matelli.fr/english/)|파리, 프랑스|Matelli는 클라이언트에 대해 사용자 지정 된 비즈니스 웹 및 모바일 응용 프로그램을 만들기 위해 2008에서 설립 된 정보 서비스 회사입니다.|
 |[멘 탈](http://www.mentalworks.fr)|파리, 프랑스|Mentalworks는 이례적인 기술 디지털 기관입니다. 웹 에이전시 e-마케팅 에이전시와 컨설팅 회사/e n n입니다. 이 전문 지식을 통해 웹 사이트, 모바일 앱 또는 사용자 지정 비즈니스 응용 프로그램을 만들고 핵심 기술 솔루션을 통합할 수 있습니다.|
-|[비즈니스를 위한 주황색 응용 프로그램](http://www.orange-business.com/en/contact-us)|파리, 프랑스; 취리히, 스위스|주황색 비즈니스 서비스는 글로벌 통신 운영자 및 IT 서비스 회사입니다. 해당 2만 직원은 디지털 변환의 모든 측면에서 회사, 지방 정부 기관 및 공공 부문 조직을 지원 합니다. 이를 통해 회사는 보다 효율적으로 공동 작업 하 고, 더 효율적으로 &ndash; 작동 하며, 사용자, 사이트 및 컴퓨터를 안전 하 고 안정적으로 연결 하는 고객에 게 더 효율적으로|
+|[비즈니스를 위한 주황색 응용 프로그램](http://www.orange-business.com/en/contact-us)|파리, 프랑스; 취리히, 스위스|주황색 비즈니스 서비스는 글로벌 통신 운영자 및 IT 서비스 회사입니다. 해당 2만 직원은 디지털 변환의 모든 측면에서 회사, 지방 정부 기관 및 공공 부문 조직을 지원 합니다. 이를 통해 회사는 보다 효율적으로 공동 작업 하 고, 더 효율적으로 작동 하 고, @no__t 고객에 게 더 효율적으로 작업 하 여 사용자, 사이트 및 컴퓨터를 안전 하 고 안정적으로 연결|
 |[페이지 위로](http://www.pageup.fr)|Dijon, 프랑스||
 |[Rayonnance 기술](http://rayonnance.fr)|파리, 프랑스|Rayonnance 그룹은 Windows 터미널 비즈니스 (Windows Mobile, Windows Phone 8.1, Windows 8), Android, IOS에서 추적 기능 및 모바일 응용 프로그램을 구현 하는 데 13 년이 넘는 최고의 프랑스어 통합자입니다.|
 |[SFEIR](http://www.sfeir.com)|Ne성-Seine, 프랑스; Strasbourg, 프랑스; Lille, 프랑스; Leudelange, 룩셈부르크|SFEIR est une communauté façonnée pet는 des développeurs talentueux에 대 한 것입니다. Nous créons des 응용 프로그램 de pointe et relevons avec nos 클라이언트 leurs défis 기술 les와 ambitieux.|
@@ -359,7 +359,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="germany"></a>독일
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[27interactive](http://27interactive.com)|Düsseldorf, 독일; 함부르크, 독일|Android, iOS, Windows 및 macOS를 사용 하 여 스마트폰 및 태블릿에 대 한 플랫폼 간 솔루션을 만들 수 있습니다.|
 |[AIT](http://www.aitgmbh.de)|Stuttgart, 독일|AIT는 .NET 플랫폼을 기반으로 하는 최고의 개발자 및 소프트웨어 컨설턴트 중 하나입니다. 수많은 Microsoft 골드 파트너에 게 많은 경력을가지고 있습니다.|
@@ -384,19 +384,19 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="greece"></a>그리스
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[S 소프트 SA](https://www.entersoft.eu)|Kallithea, 그리스|서비스는 혁신적이 고 완전 한 품질의 서비스를 제공 하 고 고객에 대해 최적화 된 효율성을 보장 하는 최고의 비즈니스 entreprise 소프트웨어 및 서비스 공급자입니다.|
 
 ## <a name="hong-kong"></a>홍콩
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Unissoft Technology Co. Ltd.](http://www.inas.online/en/Index.php)|홍콩|Microsoft의 핵심 기술 Hua 아카이브 관리 소프트웨어 (또는 그 밖의 AMS™)는 오랜 시간 동안 중국의 상태 보관 관리에 권장 되는 제품으로, 정부에서 널리 사용 되 고 있습니다. petroleum 및 화학; 기존 온-프레미스 라이선스 모델을 통해 관개 metallurgy,, 텔레콤 및 부동산---와 같은 다양 한 비즈니스에서 사용할 경우 |
 
 ## <a name="hungary"></a>헝가리
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Grape 솔루션](http://grape.hu/)|부다페스트, 헝가리|Grape 솔루션은 2006에서 설정 된 동적 소프트웨어 개발 회사입니다. 주로 로컬 및 국제 고객을 위한 사용자 지정 비즈니스 응용 프로그램을 개발 합니다. |
 
@@ -418,13 +418,13 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="ireland"></a>아일랜드
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Greenfinch 기술](https://greenfinch.ie/)|더블린, 아일랜드|소프트웨어 엔지니어링 회사는 혁신 & 품질에 중점을 두었습니다. 오늘날의 빠른 변화 세계에서 비즈니스의 과제를 충족 하는 데 도움이 되는 디자인, 빌드 & 관리 서비스를 클라이언트에 제공 합니다.|
 
 ## <a name="italy"></a>이탈리아
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Cortis Lentini](http://www.cortislentini.com)|Milan, 이탈리아; 로마, 이탈리아; Bergamo; 이탈리아|Cortis Lentini provices 혁신적인 인프라 및 기술 oursourcing 서비스|
 |[Dataexpert S.r.l.](http://www.dataexpert.it)|Milan, 이탈리아|Dataexpert는 기존 기술 인프라와 신속 하 고 간단한 구현으로 쉽게 통합할 수 있는 높은 가치의 혁신적인 서비스 지향 IT 서비스를 제공 하는 선두 업체입니다.|
@@ -446,7 +446,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="latvia"></a>라트비아
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Diatom 기업](http://www.diatomenterprises.com/)|리가, 라트비아|클라이언트의 수준을 individuality 하는 개별 웹, 모바일 및 데스크톱 시스템을 개발 합니다.|
 
@@ -470,7 +470,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="mexico"></a>멕시코
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Alset](http://alset.com.mx)|멕시코 시티, 멕시코|ALSET은 IT (정보 기술)에서 제공 하는 광범위 하 고 안정적인 고급 기능을 갖춘 업계를 제공 하는 풍부한 환경을 제공 하는 회사입니다.|
 |[Gigigo 그룹](http://www.gigigo.com)|멕시코 시티, 멕시코; San 파울로, 브라질; 마드리드, 스페인|2004에서 설립 된 이러한 연도 동안 Gigigo은 견고한 안정적인 디지털 동맹으로 제공 되며, 해당 경로를 통해 디지털 전환에 대 한 경로를 통해 제공 되는 대기업에 게 제공 될 수 있습니다.|
@@ -483,7 +483,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="middle-east"></a>중동
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Agile 기술](http://www.agiletz.com)|Dubai, 아랍에미리트 쿠웨이트 오만 바레인 카타르 카이로, 이집트|Agile 기술은 DevOps, 개발 및 테스트 서비스를 중심으로 컨설팅, 교육 및 서비스를 제공 하는 엔터프라이즈 IT 솔루션 공급자입니다.|
 |[CodeValue](http://www.codevalue.net)|Herzliya, 이스라엘; Yokne'am Illit, 이스라엘|CodeValue는 고객이 핵심 비즈니스 활동에 집중할 수 있도록 하는 소프트웨어 서비스의 전체 기능을 제공 하는 선도적인 소프트웨어 회사입니다.|
@@ -523,7 +523,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="new-zealand"></a>뉴질랜드
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[디자인 간소화](https://www.enlighten.co.nz)|오클랜드, 뉴질랜드|실제로 설계 되 고 혁신적인 혁신적인 고객 중심 기술 솔루션을 개발 하는 것은 매우 밝게 합니다. Microsoft 기술을 사용 하 여 iOS, Android 및 C# Windows 용에서 응용 프로그램을 만듭니다.|
 |[Hydrogen Apps l t d](http://www.hydrogenapps.com)|오클랜드, 뉴질랜드|전 세계에서 대규모 플랫폼을 성공적으로 제공 하는 데 많은 경험을 활용 함으로써 Hydrogen는 새로운 앱 사용 기간, 이동성 및 게임 개발에 뛰어난 소프트웨어 제공 환경을 제공 합니다.|
@@ -532,13 +532,13 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="oman"></a>오만
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[고급 시스템 기술](http://www.astechoman.com/)|무스카트, 오만|AstechOman는 IT 솔루션 공급자입니다. |
 
 ## <a name="philippines"></a>필리핀
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Haiyan Group Inc.](http://www.haiyan.com.ph)|마닐라, 필리핀|IOS 및 Android 용 Haiyan Group Inc. developes 웹 및 모바일 앱|
 
@@ -555,7 +555,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="portugal"></a>포르투갈
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Agap2](http://www.agap2.com)|리스본, 포르투갈|Agap2 – 업계의 유럽 운영 컨설팅 및 엔지니어링 그룹 다루고|
 |[굵게 표시](http://www.carbonbybold.com/)|리스본, 포르투갈|여기서 굵게는 모바일 컨설팅 서비스에 중점을 두었습니다. 회사에서 모바일을 비즈니스 전략에 통합 하는 데 도움이 됩니다. |
@@ -563,20 +563,20 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="russia"></a>러시아
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[적합 합니다.](https://www.binwell.com)|상트페테르부르크, 러시아|잘 설계 된 솔루션을 제공 하는 사용자 지정 소프트웨어를 설계 하 고 구축 합니다. 비즈니스 요구 사항부터 시작 하 여 각 단계에서 클라이언트에 가져오는 정확한 ' 가치 '를 이해 하기 시작 합니다.|
 |[Notissimus](http://notissimus.com)|상트페테르부르크, 러시아|회사에서 판매 또는 서비스를 사용 하나요? 올바른 위치로 이동 했습니다. 새 프로젝트는 항상 시작 됩니다. |
 
 ## <a name="serbia"></a>세르비아
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[INSSIO](http://inssio.com)|베오그라드, 세르비아|Project conception에서 응용 프로그램 롤아웃으로 INSSIO 비즈니스 아이디어를 비즈니스를 구동 하는 소프트웨어로 전환 합니다.|
 
 ## <a name="singapore"></a>싱가포르
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[CyanSYS](http://www.cyansys.com)|싱가포르 콸라룸푸르, 말레이시아; Makati, 필리핀; 홍콩 (홍콩) Kota Kinabalu, 사바, 말레이시아; 자카르타, 인도네시아|CyanSYS는 중소 규모의 기업에 확장 가능한 & 품질 솔루션을 제공 하 여 정보 기술을 통해 & 증가 하는 것을 가능 하 게 합니다.|
 |[Xamariners](http://xamariners.com/)|싱가포르|단일 코드 베이스를 사용 하 여 iOS, Android, Windows 및 Mac에서 고유 하 게 실행 되는 응용 프로그램 뿐만 아니라 친숙 한 봇 및 보강 된 현실 앱을 빌드합니다.|
@@ -602,9 +602,10 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="spain"></a>스페인
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[DevsDNA](http://www.devsdna.com)|Seville, 스페인|DevsDNA에서 비즈니스를 수행 하 고 소프트웨어를 만드는 다른 방법을 사용할 수 있다고 생각 합니다. 아쉽게도 현대 사회에는 투명도, 윤리, 원리 및 도덕적 나침반이 부족 합니다.|
+|[Itequia](https://itequia.com)|바르셀로나, 스페인|Itequia는 최신 웹, 모바일 및 사용자 지정 소프트웨어 응용 프로그램을 개발 합니다. Microsoft는 다양 한 소프트웨어 솔루션 간에 상위 인터넷 웹 사이트, 실시간 응용 프로그램, 널리 사용 되는 모바일 앱, 중요 프로세스 및 자동화 포털을 구축 하는 데 10 년간의 최고 및 중간 규모 조직에서 작업 하 고 있습니다.|
 |[KutirTech](http://www.kutirtech.com)|Malaga, 스페인  |13 년 이상 규모의 경우 대기업 클라이언트를 위한 웹 및 모바일 응용 프로그램을 빌드하고 지 원하는 것입니다. 최고의 도구와 기술을 사용 하 여 지속적으로 탐색 하 고 실험 하며, 엔터프라이즈 클라이언트를 성공적으로 만들 수 있도록 도구와 기술의 올바른 조합을 제공 합니다.|
 |[컨설팅 S. L](http://www.pasiona.com)|바르셀로나, 스페인|2007 microsoft는 고객의 요구에 맞게 조정 되는 혁신적인 기술 솔루션을 제공 하는 가장 좋은 방법입니다. Raison d'etre입니다. 각 클라이언트는 서로 다르며 고유 하 고 독점적인 처리가 필요 하기 때문에 각 회사에 대 한 사용자 지정 솔루션을 개발 하는 데 특화 된 컨설팅 회사입니다. Microsoft는 혁신, 고품질의 작업, 진행 중인 교육 및 인간 teaRegional 프리미어 가치에 최선을 다하고 있습니다.|
 |[TalentoMobile](http://www.talentomobile.com/)|스페인 |디지털 natives. Microsoft는 귀하의 비즈니스 프로세스와 고객과의 연결을 microsoft의 솔루션 및 제품에 디지털화.|
@@ -612,7 +613,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="sweden"></a>스웨덴
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[BITZEAL](http://www.bitzeal.se)|Gothenburg, 스웨덴|Bitzeal 웹 기반 응용 프로그램, 휴대폰 및 gnome 앱 및 펌웨어를 만듭니다.|
 |[Conevo IT 컨설팅 AB](http://www.conevo.se)|스톡홀름, 스웨덴|Conevo는 클라이언트의 비즈니스에 뛰어난 응답성을 통해 효율적이 고 변변치 방식으로 최고의 IT 솔루션을 만드는 IT 컨설팅 회사입니다.|
@@ -620,7 +621,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="switzerland"></a>스위스
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Arendi](http://www.arendi.ch/)|Hombrechtikon, 스위스|Arendi는 앱 개발, 하드웨어 및 펌웨어 개발 및 프로젝트 관리 등 다양 한 서비스를 제공 합니다. |
 |[BBV Software Services AG](http://www.bbv.ch)|Zürich, 스위스|BBV 소프트웨어 서비스는 스위스 소프트웨어 및 컨설팅 회사입니다. 사용자는 특정 비즈니스 요구 사항 및 복잡 한 비즈니스 요구 사항에 맞게 조정 되는 모바일 솔루션을 개발할 수 있습니다.|
@@ -630,7 +631,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="taiwan"></a>대만
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[iScreen Corporation](http://www.iscreen.com)|타이베이, 대만|iScreen는 웹 및 모바일 플랫폼 앱에 대 한 컨설팅, 디자인 및 빌드에 대 한 비즈니스 집중으로 견고한 기술의 기초가 구축 되었습니다.|
 |[JetFusion Information Co., Ltd.](http://www.jetfusion.com.tw/)|타이베이|Microsoft는 매우 유연한 실시간 이며 전문적인 소프트웨어 개발 및 시스템 생성 서비스를 제공 하며 전체 엔터프라이즈 정보 시스템 솔루션도 제공 합니다.|
@@ -644,7 +645,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="uk"></a>UK
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[적응 금융 컨설팅 제한](http://weareadaptive.com)|런던, 영국|적응 금융 컨설팅은 금융 업계에서 광범위 한 경험을 갖춘 컨설팅입니다.|
 |[Apptelic l t d](http://Apptelic.com)|런던, 영국|Apptelic l t d .는 iOS, Android, Windows 및 Xbox One 용 모바일 및 데스크톱 앱을 개발 하는 전문 소프트웨어 개발 회사입니다.|
@@ -689,7 +690,7 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="ukraine"></a>우크라이나
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[FreezePro Software](http://freezeprosoftware.com)|Lviv, 우크라이나|FreezePro Software는 사용자 지정 해외 소프트웨어 개발 및 아웃소싱 회사입니다. 강력한 IT 배경의 enterprising 전문가 들이 설정 했습니다.|
 |[GUI의 혁신적인 제한](http://www.gui-innovations.com)|키예프, 우크라이나|모바일 환경을 위한 소프트웨어 솔루션을 제공 합니다. 많은 플랫폼을 위한 소프트웨어 디자인, 개발 및 지원에 대 한 전문 전문 지식을 보유 하 고 있습니다.|
@@ -697,13 +698,13 @@ _기본 위치에 나열 된 많은 파트너는 경계를 넘어 서비스를 �
 
 ## <a name="uruguay"></a>우루과이
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[Nareia](http://nareia.com.uy)|우루과이|모바일 환경에 대 한 열정적인, microsoft는 iOS 및 Android 용 멋진 앱을 개발 하 고 Xamarin을 사용한 모바일 개발에 뛰어난 환경을 제공 하 고 있습니다.  |
 
 ## <a name="vietnam"></a>베트남
 
-| 파트너 | 위치 | Description |
+| 파트너 | 위치 | 설명 |
 | --- | --- | --- |
 |[DVLUP](http://www.dvlup.net/)|호 카이 호치민 시티, 베트남|Dev는 개발자 커뮤니티 리더가 개발자에 게 수준 베트남 개발자를 위한 임무를 설립 했습니다.|
 |[FPT Software 하노이 회사 제한](http://www.fpt-software.com/)|하노이, 베트남|베트남의 가장 큰 기능과 가장 빠르게 증가 하는 디지털 변환 서비스 공급자 중 하나입니다.|
