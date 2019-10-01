@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
-ms.openlocfilehash: 48af81856ebe92a712b5d41d8d856bb00a526982
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
+ms.sourcegitcommit: bb6a103de620386187a08151a4cdc29a4dc53a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "68655004"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679979"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin. Forms 응용 프로그램 만들기
 
@@ -26,13 +26,13 @@ ms.locfileid: "68655004"
 - XAML (eXtensible Application Markup Language)을 사용 하 여 페이지에 대 한 사용자 인터페이스를 정의 합니다.
 - 코드에서 XAML 사용자 인터페이스 요소와 상호 작용 합니다.
 
-이 빠른 시작은 메모를 입력 하 고 장치 저장소에 보관할 수 있는 플랫폼 간 Xamarin.ios 응용 프로그램을 만드는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
+이 빠른 시작은 메모를 입력 하 고 장치 저장소에 보관할 수 있는 플랫폼 간 Xamarin.ios 응용 프로그램을 만드는 방법을 안내 합니다. 최종 응용 프로그램은 다음과 같습니다.
 
 [![](single-page-images/screenshots-sml.png "Notes 응용 프로그램")](single-page-images/screenshots.png#lightbox "Notes 응용 프로그램")
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>사전 요구 사항
 
 - .NET 워크 로드를 **사용한 모바일 개발** 이 설치 된 Visual Studio 2019 (최신 릴리스)
 - 에 대 C#한 지식.
@@ -46,7 +46,7 @@ ms.locfileid: "68655004"
 
     ![](single-page-images/vs/new-solution-2019.png "새 프로젝트")
 
-2. **새 프로젝트 만들기** 창의 **프로젝트 형식** 드롭다운에서 **모바일** 을 선택 하 고 **모바일 앱 (Xamarin.ios** 템플릿)을 선택 하 고 **다음** 단추를 클릭 합니다.
+2. **새 프로젝트 만들기** 창의 **프로젝트 형식** 드롭다운에서 **모바일** 을 선택 하 고 **모바일 앱 (xamarin.ios)** 템플릿을 선택 하 고 **다음** 단추를 클릭 합니다.
 
     ![](single-page-images/vs/new-project-2019.png "플랫폼 간 프로젝트 템플릿")
 
@@ -186,7 +186,7 @@ ms.locfileid: "68655004"
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>사전 요구 사항
 
 - .NET 워크 로드를 **사용한 모바일 개발** 이 설치 된 Visual Studio 2017.
 - 에 대 C#한 지식.
@@ -336,7 +336,7 @@ ms.locfileid: "68655004"
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="prerequisites"></a>전제 조건
+### <a name="prerequisites"></a>사전 요구 사항
 
 - IOS 및 Android 플랫폼 지원이 설치 된 Mac용 Visual Studio (최신 릴리스)
 - Xcode (최신 릴리스).

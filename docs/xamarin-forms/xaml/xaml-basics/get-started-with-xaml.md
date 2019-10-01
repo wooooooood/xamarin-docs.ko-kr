@@ -6,13 +6,13 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/10/2018
-ms.openlocfilehash: 32f809c5b21e56497328ce00bf49a7337ac0270a
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.date: 09/30/2019
+ms.openlocfilehash: a35a3750957073168bca4903e1cef79ed53a3de9
+ms.sourcegitcommit: bb6a103de620386187a08151a4cdc29a4dc53a10
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250036"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679969"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>1 부입니다. XAML을 사용 하 여 시작
 
@@ -30,17 +30,19 @@ _Xamarin.Forms 응용 프로그램에서 XAML 페이지의 시각적 콘텐츠�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Windows에서는 Visual Studio를 사용하여 메뉴에서  **파일 > 새로 만들기 > 프로젝트** 를 선택합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C# > Cross-Platform** 을 선택한 다음 가운데 있는 목록에서  **모바일 앱(Xamarin.Forms)** 을 선택합니다.
+Windows에서 Visual Studio 2019를 시작 하 고, 시작 창에서 **새 프로젝트 만들기** 를 클릭 하 여 새 프로젝트를 만듭니다.
 
-![새 프로젝트 대화 상자](get-started-with-xaml-images/win/newprojectdialog.w157.png)
+![새 솔루션 창](get-started-with-xaml-images/win/new-solution-2019.png)
 
-솔루션에 대 한 위치를 선택의 이름을 지정 **XamlSamples** (또는 원하는) 키를 누릅니다 **확인**합니다.
+**새 프로젝트 만들기** 창의 **프로젝트 형식** 드롭다운에서 **모바일** 을 선택 하 고 **모바일 앱 (xamarin.ios)** 템플릿을 선택 하 고 **다음** 단추를 클릭 합니다.
 
-다음 화면에서 선택 합니다 **비어 있는 앱** 템플릿 및 **.NET 표준** 코드 공유 전략:
+![새 프로젝트 창](get-started-with-xaml-images/win/new-project-2019.png)
 
-![새 응용 프로그램 대화 상자](get-started-with-xaml-images/win/newcrossplatformapp.png)
+**새 프로젝트 구성** 창에서 **프로젝트 이름을** **xamlsamples** (또는 원하는 경우)로 설정 하 고 **만들기** 단추를 클릭 합니다.
 
-**확인**을 누릅니다.
+**새 플랫폼 간 앱** 대화 상자에서 **비어 있음**을 클릭 하 고 **확인** 단추를 클릭 합니다.
+
+![새 응용 프로그램 대화 상자](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
 솔루션에 다음과 같은 4개의 프로젝트가 생성됩니다. **XamlSamples** .NET Standard 라이브러리 **XamlSamples.Android**, **XamlSamples.iOS**, 및 UWP(Universal Windows Platform) 솔루션  **XamlSamples.UWP**.
 
@@ -151,9 +153,9 @@ Visual Studio는 프로젝트를 빌드할 때 XAML 파일을 C# 코드 파일�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-프로젝트에 다른 XAML 기반 `ContentPage` 를 추가하려면 **XamlSamples** .NET Standard 라이브러리 프로젝트를 선택하고 **프로젝트 > 새 항목 추가** 메뉴 항목을 실행합니다. **새 항목 추가** 대화 상자에서 왼쪽에 있는 **Visual C#**  및 **Xamarin.Forms**를 선택합니다. 목록에서 **콘텐츠 페이지**(코드 전용 페이지를 생성하는  **콘텐츠 페이지 (C#)** 또는 페이지가 아닌**콘텐츠 뷰**가 아님)를 선택합니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage.xaml**로 입력합니다.
+다른 XAML 기반 `ContentPage` 클래스를 프로젝트에 추가 하려면 **Xamlsamples** .NET Standard library 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **새 항목 > 추가**...를 선택 합니다. **새 항목 추가** 대화 상자에서 **> > 시각적 C# 항목** 을 선택 합니다 .이 페이지는 **콘텐츠 페이지 (C#)** 가 아니라 코드 전용 페이지 또는 **콘텐츠 뷰**를 만드는 콘텐츠 페이지를 만듭니다. 페이지 이름을 예를 들어 다음과 같이 **HelloXamlPage**로 입력합니다.
 
-![새 항목 추가 대화 상자](get-started-with-xaml-images/win/addnewitemdialog.w157.png)
+![새 항목 추가 대화 상자](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
