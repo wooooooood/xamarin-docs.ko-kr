@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 31dfcc26121b0683db476b0c4be9a420efe5b66f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
+ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771244"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198572"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -144,7 +144,7 @@ ms.locfileid: "70771244"
 
 - 트리거 조건이 충족될 때마다 호출되는 `Invoke` 메서드를 재정의합니다.
 
-- 필요에 따라 트리거를 선언할 때 XAML에서 설정할 수 있는 속성(예: 이 예제의 경우 `Anchor`, `Scale` 및 `Length`)을 공개합니다.
+- 필요에 따라 트리거를 선언할 때 XAML에서 설정할 수 있는 속성을 공개합니다. 이에 대한 예제는 함께 제공되는 애플리케이션 예제의 `VisualElementPopTriggerAction` 클래스를 참조하세요.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -158,7 +158,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-트리거 작업으로 공개되는 속성은 XAML 선언에서 다음과 같이 설정할 수 있습니다.
+그런 다음 XAML에서 이벤트 트리거를 사용할 수 있습니다.
 
 ```xaml
 <EventTrigger Event="TextChanged">

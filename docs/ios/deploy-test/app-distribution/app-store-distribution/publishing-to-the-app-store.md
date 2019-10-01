@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: 5d299112da87207f7486247e0ed6f00c35a35fe5
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 9f9504890b12f6a3d8046e98ce537cc0d742f2ed
+ms.sourcegitcommit: 159f250ae7535fca7ab3bc4dc7395dc4cc2af93f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106052"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71278143"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
@@ -180,50 +180,27 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
     ![빌드 구성 및 플랫폼 선택](publishing-to-the-app-store-images/chooseConfig-m157.png "빌드 구성 및 플랫폼 선택")
 
 2. **빌드** 메뉴에서 **게시를 위해 보관**을 선택합니다.
-3. 보관이 만들어지면 **보관** 보기가 표시됩니다.
+3. 보관이 만들어지면 **보관** 보기가 표시됩니다. **서명 및 배포**를 클릭하여 게시 마법사를 엽니다.
 
-    ![보관 보기](publishing-to-the-app-store-images/archives-m157.png "보관 보기")
+
+    ![보관 보기의 서명 및 배포 단추 위치 스크린샷](publishing-to-the-app-store-images/archives-mac.png "보관 보기의서명 및 배포 단추 위치 스크린샷")
 
     > [!NOTE]
     > 기본적으로는 **보관** 보기는 열려 있는 솔루션의 보관만 표시합니다. 보관이 있는 솔루션을 모두 보려면 **모든 보관 표시** 체크박스를 체크합니다. 포함한 디버그 정보가 필요한 경우 충돌 보고서를 기호화하여 사용될 수 있도록 이전 보관을 보관하는 것이 좋습니다.
 
-4. **서명 및 배포**를 클릭하여 게시 마법사를 엽니다.
-5. **앱 스토어** 배포 채널을 선택합니다. **다음**을 클릭합니다.
+4. **앱 스토어** 배포 채널을 선택합니다. **다음**을 클릭합니다.
 
-    ![배포 채널 선택](publishing-to-the-app-store-images/distChannel-m157.png "배포 채널 선택")
+5. 대상으로 **업로드**를 선택합니다. **다음**을 클릭합니다.
 
 6. **프로비전 프로필** 창에서 서명 ID, 앱 및 프로비전 프로필을 선택합니다. **다음**을 클릭합니다.
 
-    ![프로비전 프로필 선택](publishing-to-the-app-store-images/provProfileSelect-m157.png "프로비전 프로필 선택")
+    ![유효한 서명 ID, 앱 및 프로비저닝 프로필 선택을 보여 주는 프로비저닝 프로필 마법사 페이지의 스크린샷.](publishing-to-the-app-store-images/provProfileSelect-mac.png "유효한 서명 ID, 앱 및 프로비저닝 프로필이 선택된 프로비저닝 프로필 마법사 페이지의 스크린샷.")
 
-7. 패키지 세부 정보를 확인하고 **게시**를 클릭하여 앱을 위해 .ipa 파일을 저장합니다.
+7. **App Store 연결 정보** 창의 메뉴에서 Apple ID 사용자 이름을 선택하고 [앱별 암호](https://support.apple.com/ht204397)를 입력합니다. **다음**을 클릭합니다.
 
-    ![앱 세부 정보 확인](publishing-to-the-app-store-images/publish-m157.png "앱 세부 정보 확인")
+    ![선택한 Apple ID 사용자 이름을 보여 주는 App Store 연결 정보 마법사 페이지의 스크린샷.](publishing-to-the-app-store-images/connectInfo-mac.png "선택한 Apple ID 사용자 이름을 보여 주는 App Store 연결 정보 마법사 페이지의 스크린샷.")
 
-8. .ipa 파일이 저장되면 앱이 iTunes Connect에 업로드될 준비가 됩니다.
-
-    ![제출 준비됨](publishing-to-the-app-store-images/readyToGo-m157.png "제출 준비됨")
-
-9. **애플리케이션 로더 열기**를 클릭하여 로그인합니다(반드시 Apple ID에 대한 [앱 특정 암호 만들기](https://support.apple.com/ht204397)를 해야 함).
-
-    > [!NOTE]
-    > 도구에 대한 자세한 내용은 [애플리케이션 로더에 대한 Apple 문서](https://help.apple.com/itc/apploader/#/apdS673accdb)를 참조합니다.
-
-10. **앱 배달**을 선택하고 **선택** 단추를 클릭합니다.
-
-    ![앱 배달 선택](publishing-to-the-app-store-images/publishvs01.png "앱 배달 선택")
-
-11. 위에서 만든 .ipa 파일을 선택하고 **확인** 버튼을 클릭합니다.
-12. 애플리케이션 로더에서 파일의 유효성을 검사합니다.
-
-    ![유효성 검사 화면](publishing-to-the-app-store-images/publishvs02.png "유효성 검사 화면")
-
-13. **다음** 단추를 클릭합니다. 그러면 앱 스토어에 대한 애플리케이션의 유효성이 검사됩니다.
-
-    ![앱 스토어에 대한 유효성 검사](publishing-to-the-app-store-images/publishvs03.png "앱 스토어에 대한 유효성 검사")
-
-14. **보내기** 단추를 클릭하여 검토를 위해 애플리케이션을 Apple에 보냅니다.
-15. 파일이 성공적으로 업로드되면 애플리케이션 로더에서 알려줍니다.
+8. 패키지의 세부 정보를 확인하고 **게시**를 클릭합니다. .ipa 파일을 저장할 위치를 선택하면 마법사가 앱을 App Store 연결에 업로드합니다.
 
     > [!NOTE]
     > Apple은 .ipa 파일에 포함된 **iTunesMetadata.plist**가 있는 앱을 거부할 수 있으며 다음과 같은 오류가 발생합니다.
