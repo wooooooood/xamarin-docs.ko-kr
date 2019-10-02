@@ -56,23 +56,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/android/get-started/index.md
             title: 시작
-          - href: ~/android/app-fundamentals/
+          - href: ~/android/app-fundamentals/index.md
             html: 'Android 앱을 제작하는 데 알아야 할 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/android/app-fundamentals/
+              href: ~/android/app-fundamentals/index.md
             title: 애플리케이션 기본 사항
-          - href: ~/android/user-interface
+          - href: ~/android/user-interface/index.md
             html: Android에서 사용할 수 있는 사용자 인터페이스 컨트롤 위젯을 모두 알아봅니다.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/android/user-interface/
+              href: ~/android/user-interface/index.md
             title: 사용자 인터페이스
-          - href: ~/android/platform/
+          - href: ~/android/platform/index.md
             html: 'Android 플랫폼 기능 작업(예: 지문 인증) 및 Android 8.0 Oreo의 최신 기능 작업입니다.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/android/platform/
+              href: ~/android/platform/index.md
             title: 플랫폼 기능
           - href: ~/essentials/index.md?context=xamarin/android
             html: 모바일 애플리케이션을 위한 플랫폼 간 API.
@@ -80,29 +80,29 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/android
             title: Xamarin.Essentials
-          - href: ~/android/data-cloud/
+          - href: ~/android/data-cloud/index.md
             html: 로컬 및 원격 데이터 스토리지과 검색 및 기타 클라우드 기반 서비스입니다.
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/android/data-cloud/
+              href: ~/android/data-cloud/index.md
             title: 데이터 및 클라우드 서비스
-          - href: ~/android/deploy-test/
+          - href: ~/android/deploy-test/index.md
             html: Google Play에 앱을 빌드하고 배포하는 방법 및 해당 앱을 미리 테스트하는 데 유용한 팁입니다!
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/android/deploy-test/
+              href: ~/android/deploy-test/index.md
             title: 배포 및 테스트
-          - href: ~/android/internals/
+          - href: ~/android/internals/index.md
             html: Xamarin.Android 내부 요소에 대한 추가 정보 및 지역화와 액세스 가능성 등의 기능에 대한 도움말입니다.
             image:
               src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
-              href: ~/android/internals/
+              href: ~/android/internals/index.md
             title: 고급 개념 및 내부 요소
-          - href: ~/android/wear/
+          - href: ~/android/wear/index.md
             html: Android Wear용 앱을 제작합니다.
             image:
               src: ~/media/icons/i_android-wear.svg
-              href: ~/android/wear/
+              href: ~/android/wear/index.md
             title: Android Wear
   - title: 참조
     items:

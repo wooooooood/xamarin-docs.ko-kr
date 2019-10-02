@@ -56,23 +56,23 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/ios/get-started/index.md
             title: 시작
-          - href: ~/ios/app-fundamentals/
+          - href: ~/ios/app-fundamentals/index.md
             html: 'iOS 앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/ios/app-fundamentals/
+              href: ~/ios/app-fundamentals/index.md
             title: 애플리케이션 기본 사항
-          - href: ~/ios/user-interface
+          - href: ~/ios/user-interface/index.md
             html: UIKit의 iOS에서 사용할 수 있는 사용자 인터페이스 컨트롤을 모두 알아봅니다.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: ~/ios/user-interface/
+              href: ~/ios/user-interface/index.md
             title: 사용자 인터페이스
-          - href: ~/ios/platform/
+          - href: ~/ios/platform/index.md
             html: 'iOS 플랫폼 기능(예: ARKit 및 CoreML) 및 iOS 11의 기타 새로운 기능 작업입니다.'
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/ios/platform/
+              href: ~/ios/platform/index.md
             title: 플랫폼 기능
           - href: ~/essentials/index.md?context=xamarin/ios
             html: 모바일 애플리케이션을 위한 플랫폼 간 API.
@@ -80,35 +80,35 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
               href: ~/essentials/index.md?context=xamarin/ios
             title: Xamarin.Essentials
-          - href: ~/ios/data-cloud/
+          - href: ~/ios/data-cloud/index.md
             html: 로컬 및 원격 데이터 스토리지과 검색 및 기타 클라우드 기반 서비스입니다.
             image:
               src: ~/media/icons/i_data-cloud.svg
-              href: ~/ios/data-cloud/
+              href: ~/ios/data-cloud/index.md
             title: 데이터 및 클라우드 서비스
-          - href: ~/ios/deploy-test/
+          - href: ~/ios/deploy-test/index.md
             html: App Store에 앱을 빌드하고 배포하는 지침과 앱을 미리 테스트하는 데 유용한 팁입니다!
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/ios/deploy-test/
+              href: ~/ios/deploy-test/index.md
             title: 배포 및 테스트
-          - href: ~/ios/internals/
+          - href: ~/ios/internals/index.md
             html: Xamarin.iOS의 작동 방법에 대한 자세한 정보입니다.
             image:
               src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/ios/internals/
+              href: ~/ios/internals/index.md
             title: 고급 개념 및 내부 요소
-          - href: ~/ios/watchos/
+          - href: ~/ios/watchos/index.md
             html: Apple Watch용 앱을 빌드하세요!
             image:
               src: ~/media/icons/i_watchos.svg
-              href: ~/ios/watchos/
+              href: ~/ios/watchos/index.md
             title: watchOS
-          - href: ~/ios/tvos/
+          - href: ~/ios/tvos/index.md
             html: Apple TV용 앱을 빌드하세요!
             image:
               src: ~/media/icons/i_tvos.svg
-              href: ~/ios/tvos/
+              href: ~/ios/tvos/index.md
             title: tvOS
   - title: 참조
     items:

@@ -45,8 +45,8 @@ sections:
         className: cardsD
         items:
           - title: Xamarin.Forms
-            href: ~/xamarin-forms/index.md
-            html: <p><a href="~/get-started/quickstarts/index.md">시작</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/xamarin-forms/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/xamarin-forms/platform/index.md">플랫폼 기능</a><br /><a href="~/xamarin-forms/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">데이터 및 Azure Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.yml">고급 개념 및 내부 요소</a></p>
+            href: ~/xamarin-forms/index.yml
+            html: <p><a href="~/get-started/quickstarts/index.yml">시작</a><br /><a href="~/xamarin-forms/app-fundamentals/index.yml">앱 기본 사항</a><br /><a href="~/xamarin-forms/user-interface/index.yml">사용자 인터페이스</a><br /><a href="~/xamarin-forms/platform/index.yml">플랫폼 기능</a><br /><a href="~/xamarin-forms/deploy-test/index.yml">배포 및 테스트</a><br /><a href="~/xamarin-forms/xaml/index.yml">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.yml">데이터 및 Azure Cloud Services</a><br /><a href="~/xamarin-forms/internals/index.yml">고급 개념 및 내부 요소</a></p>
           - title: Android
             href: ~/android/index.md
             html: <p><a href="~/android/get-started/index.md">시작</a><br /><a href="~/android/app-fundamentals/index.md">앱 기본 사항</a><br /><a href="~/android/user-interface/index.md">사용자 인터페이스</a><br /><a href="~/android/platform/index.md">플랫폼 기능</a><br /><a href="~/android/deploy-test/index.md">배포 및 테스트</a><br /><a href="~/android/data-cloud/index.md">데이터 및 클라우드 서비스</a><br /><a href="~/android/internals/index.md">고급 개념 및 내부 요소</a></p>

@@ -16,7 +16,7 @@ abstract:
       - href: /visualstudio/
         text: Visual Studio
       - href: /visualstudio/mac/
-        text: Visual Studio for Mac
+        text: Mac용 Visual Studio
 sections:
   - title: 시작
     items:
@@ -32,7 +32,7 @@ sections:
           - image:
               src: ~/media/icons/i_desktop-phone.svg
             text: Xamarin.Forms
-            href: ~/get-started/quickstarts/index.md
+            href: ~/get-started/quickstarts/index.yml
           - image:
               src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
             text: Android
@@ -57,17 +57,17 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
               href: ~/cross-platform/get-started/index.md
             title: 모바일 앱 빌드
-          - href: ~/cross-platform/platform
+          - href: ~/cross-platform/platform/index.md
             html: 'Xamarin은 C#, F# 및 Razor 템플릿 엔진을 지원합니다.'
             image:
               src: ~/media/icons/i_app-build.svg
-              href: ~/cross-platform/platform
+              href: ~/cross-platform/platform/index.md
             title: 언어 지원
-          - href: ~/cross-platform/app-fundamentals/
+          - href: ~/cross-platform/app-fundamentals/index.md
             html: 앱을 빌드하는 데 필요한 모든 항목입니다.
             image:
               src: ~/media/icons/i_platform.svg
-              href: ~/cross-platform/app-fundamentals/
+              href: ~/cross-platform/app-fundamentals/index.md
             title: 코드 공유
           - href: ~/cross-platform/deploy-test/performance.md
             html: 앱 성능 및 보안에 대한 지침입니다.
@@ -75,15 +75,15 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
               href: ~/cross-platform/deploy-test/performance.md
             title: 성능 및 보안
-          - href: ~/cross-platform/deploy-test/
+          - href: ~/cross-platform/deploy-test/index.md
             html: 디버깅 및 배포에 대한 팁입니다.
             image:
               src: ~/media/icons/i_deploy-test.svg
-              href: ~/cross-platform/deploy-test/
+              href: ~/cross-platform/deploy-test/index.md
             title: 배포 및 디버깅
-          - href: ~/cross-platform/desktop/
+          - href: ~/cross-platform/desktop/index.md
             html: 모바일 앱 빌드에 관심이 있는 .NET 데스크톱 개발자를 위한 지침입니다.
             image:
               src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: ~/cross-platform/desktop/
+              href: ~/cross-platform/desktop/index.md
             title: 데스크톱 개발자
