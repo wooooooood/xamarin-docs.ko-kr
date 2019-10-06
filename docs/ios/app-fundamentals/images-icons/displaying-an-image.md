@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 04/24/2018
-ms.openlocfilehash: 8e06b03e0acb129f1eb0c3c793d0b4a05c11ce2b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: eaef454de77387ea2a6732fa00797a6a4f0e3cd1
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282384"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975876"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Xamarin.ios에서 이미지 표시
 
@@ -75,18 +75,18 @@ IOS 디자이너에서 **이미지 집합** 을 사용 하는 경우 속성 편�
 
 -----
 
-코드에서 **이미지 집합** 을 사용 하는 경우 `FromBundle` `UIImage` 클래스의 메서드를 호출 하 여 이름을 기준으로이를 참조 합니다. 예를 들면 다음과 같습니다.
+코드에서 **이미지 집합** 을 사용 하는 경우 `UIImage` 클래스의 `FromBundle` 메서드를 호출 하 여 이름으로 참조 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 ```
 
 > [!IMPORTANT]
-> 이미지 집합에 할당 된 이미지가 제대로 표시 되지 않는 경우 올바른 파일 이름이 `FromBundle` 메서드와 함께 사용 되 고 있는지 확인 합니다 ( **이미지 집합** 및 부모 **자산 카탈로그** 이름이 아님). PNG 이미지 `.png` 의 경우 확장을 생략할 수 있습니다. 다른 이미지 형식의 경우 확장이 필요 합니다 (예: `PurpleMonkey.jpg`).
+> 이미지 집합에 할당 된 이미지가 제대로 표시 되지 않는 경우 올바른 파일 이름이 `FromBundle` 메서드 ( **이미지 집합** 및 부모 **자산 카탈로그** 이름이 아님)와 함께 사용 되 고 있는지 확인 합니다. PNG 이미지의 경우 `.png` 확장을 생략할 수 있습니다. 다른 이미지 형식의 경우 확장이 필요 합니다 (예: `PurpleMonkey.jpg`).
 
 ### <a name="using-vector-images-in-asset-catalogs"></a>자산 카탈로그에서 벡터 이미지 사용
 
-IOS 8부터 개발자가 다양 한 해상도에서 개별 비트맵 파일을 포함 하는 대신 카세트에 **PDF** 형식의 벡터 이미지를 포함할 수 있도록 하는 특수 **벡터** 클래스가 **이미지 집합** 에 추가 되었습니다. 이 메서드를 사용 하 여 `@1x` 해상도에 대 한 단일 벡터 파일 (벡터 PDF 파일로 서식 지정)을 제공 하면 및 `@3x` 파일의 버전은 `@2x` 컴파일 시간에 생성 되 고 응용 프로그램의 번들에 포함 됩니다.
+IOS 8부터 개발자가 다른 해상도의 개별 비트맵 파일을 포함 하는 대신 카세트에 **PDF** 형식의 벡터 이미지를 포함할 수 있도록 하는 **이미지 집합** 에 특수 **vector** 클래스가 추가 되었습니다. 이 메서드를 사용 하 여 `@1x` 해상도 (벡터 PDF 파일로 서식 지정)에 대 한 단일 벡터 파일을 제공 하면 파일의 @no__t 1 및 `@3x` 버전이 컴파일 시간에 생성 되 고 응용 프로그램의 번들에 포함 됩니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -98,7 +98,7 @@ IOS 8부터 개발자가 다양 한 해상도에서 개별 비트맵 파일을 �
 
 -----
 
-예를 들어 개발자가 150px x 150px `MonkeyIcon.pdf` 의 해상도를 사용 하 여 자산 카탈로그의 벡터로 파일을 포함 하는 경우 컴파일할 때 다음 비트맵 자산이 최종 앱 번들에 포함 됩니다.
+예를 들어 개발자가 150px x 150px의 해상도를 사용 하 여 자산 카탈로그의 벡터로 `MonkeyIcon.pdf` 파일을 포함 하는 경우 컴파일된 후 다음 비트맵 자산이 최종 앱 번들에 포함 됩니다.
 
 - `MonkeyIcon@1x.png`-150px x 150px resolution.
 - `MonkeyIcon@2x.png`-300px x 300px 해상도입니다.
@@ -155,24 +155,24 @@ if (MyIcon.Image != null) {
 }
 ```
 
-의 속성은 읽기 전용 이므로 메서드를 사용 하 여 원하는 렌더링 모드 설정을 사용 하 여 이미지의 새 인스턴스를 만듭니다. `ImageWithRenderingMode` `RenderMode` `UIImage`
+@No__t-1의 `RenderMode` 속성은 읽기 전용 이므로 `ImageWithRenderingMode` 메서드를 사용 하 여 원하는 렌더링 모드 설정을 사용 하 여 이미지의 새 인스턴스를 만듭니다.
 
-열거형`UIImageRenderingMode` 을 `UIImage.RenderMode` 통해 다음과 같은 세 가지 설정이 있을 수 있습니다.
+@No__t-1 열거형을 통해 `UIImage.RenderMode`에 대 한 세 가지 설정이 있습니다.
 
-- `AlwaysOriginal`-이미지를 변경 하지 않고 원래 원본 이미지 파일로 렌더링 합니다.
-- `AlwaysTemplate`-지정 된 색으로 픽셀의 색을 지정 `Tint` 하 여 이미지가 템플릿 이미지로 렌더링 되도록 합니다.
-- `Automatic`-이미지를 템플릿 또는 원본으로 사용 되는 환경을 기반으로 렌더링 합니다. 예를 `UIToolBar`들어, `UITabBar` 또는 `UINavigationBar` 에서이미지를사용하는경우에는템플릿으로처리됩니다.`UISegmentControl`
+- @no__t-이미지를 변경 하지 않고 원래 원본 이미지 파일로 렌더링 합니다.
+- @no__t-지정 된 @no__t 색으로 픽셀의 색을 지정 하 여 이미지가 템플릿 이미지로 렌더링 되도록 합니다.
+- `Automatic`-이미지를 템플릿 또는 원본으로 사용 되는 환경을 기반으로 하는 원본으로 렌더링 합니다. 예를 들어 이미지가 `UIToolBar` `UINavigationBar`, `UITabBar` 또는 `UISegmentControl`에 사용 되는 경우 템플릿으로 처리 됩니다.
 
 ## <a name="adding-new-assets-collections"></a>새 자산 컬렉션 추가
 
-자산 카탈로그에서 이미지 작업을 수행 하는 경우 `Assets.xcassets` 컬렉션에 앱의 모든 이미지를 추가 하는 대신 새 컬렉션이 필요한 경우가 있을 수 있습니다. 예를 들어 주문형 리소스를 디자인할 때입니다.
+자산 카탈로그에서 이미지 작업을 수행 하는 경우 모든 앱의 이미지를 `Assets.xcassets` 컬렉션에 추가 하는 대신 새 컬렉션이 필요한 경우가 있을 수 있습니다. 예를 들어 주문형 리소스를 디자인할 때입니다.
 
 프로젝트에 새 자산 카탈로그를 추가 하려면 다음을 수행 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. **솔루션 탐색기** 에서 **프로젝트 이름을** 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.
-2. **IOS**자산 카탈로그를 선택 하 고, 컬렉션의 이름을 입력 하 고, 새로 만들기 단추를 클릭 합니다. > 
+1. **솔루션 탐색기** 에서 **프로젝트 이름을** 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일** ...을 선택 합니다.
+2. **IOS** > **자산 카탈로그**를 선택 하 고, 컬렉션의 **이름을** 입력 하 고, **새로 만들기** 단추를 클릭 합니다.
 
     ![](displaying-an-image-images/asset01.png "새 자산 카탈로그 만들기")
 
@@ -185,7 +185,7 @@ if (MyIcon.Image != null) {
 
 -----
 
-여기에서 컬렉션은 프로젝트에 자동으로 포함 되는 기본 `Assets.xcassets` 컬렉션과 같은 방식으로 작업을 수행할 수 있습니다.
+여기에서 컬렉션은 프로젝트에 자동으로 포함 되는 기본 `Assets.xcassets` 컬렉션과 동일한 방식으로 작업할 수 있습니다.
 
 ## <a name="using-images-with-controls"></a>컨트롤과 함께 이미지 사용
 
@@ -193,21 +193,21 @@ IOS는 이미지를 사용 하 여 앱을 지 원하는 것 외에도 탭 모음
 
 ### <a name="frombundle"></a>FromBundle
 
-`FromBundle` 메서드 호출은 다양 한 해상도를 위한 캐싱 지원 및 이미지 파일 자동 처리와 같이 여러 이미지 로드 및 관리 기능을 기본 제공 하는 동기 (차단) 호출입니다.
+@No__t-0 메서드 호출은 다양 한 해상도를 위한 캐싱 지원 및 이미지 파일 자동 처리와 같이 여러 이미지 로드 및 관리 기능을 기본 제공 하는 동기 (차단) 호출입니다.
 
-다음 예제에서는의 `UITabBarItem` `UITabBar`이미지를 설정 하는 방법을 보여 줍니다.
-
-```csharp
-TabBarItem.Image = UIImage.FromBundle ("MyImage");
-```
-
-`MyImage` 가 위의 자산 카탈로그에 추가 된 이미지 자산의 이름 이라고 가정 합니다. 자산 카탈로그 이미지를 사용 하는 경우에는 `FromBundle` **PNG** 형식 이미지에 대해 메서드에 설정 된 이미지의 이름만 지정 하면 됩니다.
+다음 예제에서는 `UITabBar`에서 `UITabBarItem`의 이미지를 설정 하는 방법을 보여 줍니다.
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage");
 ```
 
-다른 이미지 형식의 경우 이름으로 확장을 포함 합니다. 예:
+@No__t-0이 위의 자산 카탈로그에 추가 된 이미지 자산의 이름 이라고 가정 합니다. 자산 카탈로그 이미지를 작업할 때 **PNG** 형식의 이미지에 대 한 `FromBundle` 메서드에서 이미지 집합의 이름을 지정 하면 됩니다.
+
+```csharp
+TabBarItem.Image = UIImage.FromBundle ("MyImage");
+```
+
+다른 이미지 형식의 경우 이름으로 확장을 포함 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
@@ -217,7 +217,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>스토리 보드에 이미지 표시
 
-자산 카탈로그를 사용 하 여 xamarin.ios 프로젝트에 이미지를 추가 하면 ios 디자이너에서를 `UIImageView` 사용 하 여 스토리 보드에 쉽게 표시할 수 있습니다. 예를 들어 다음 이미지 자산이 추가 된 경우:
+자산 카탈로그를 사용 하 여 Xamarin.ios 프로젝트에 이미지를 추가한 후에는 iOS 디자이너에서 `UIImageView`을 사용 하 여 스토리 보드에 쉽게 표시할 수 있습니다. 예를 들어 다음 이미지 자산이 추가 된 경우:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -225,7 +225,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 스토리 보드에 표시 하려면 다음을 수행 합니다.
 
-1. `Main.storyboard` **솔루션 탐색기** 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집할 수 있도록 엽니다.
+1. **솔루션 탐색기** 에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집할 수 있도록 엽니다.
 2. **도구 상자**에서 **이미지 뷰** 를 선택 합니다.
 
      ![](displaying-an-image-images/display02.png "도구 상자에서 이미지 뷰를 선택 합니다.")
@@ -248,7 +248,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 스토리 보드에 표시 하려면 다음을 수행 합니다.
 
-1. `Main.storyboard` **솔루션 탐색기** 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집할 수 있도록 엽니다.
+1. **솔루션 탐색기** 에서 `Main.storyboard` 파일을 두 번 클릭 하 여 iOS 디자이너에서 편집할 수 있도록 엽니다.
 2. **도구 상자**에서 **이미지 뷰** 를 선택 합니다.
 
      ![](displaying-an-image-images/display02vs.png "도구 상자에서 이미지 뷰를 선택 합니다.")
@@ -285,7 +285,7 @@ imageView.Image = UIImage.FromBundle ("Kemah");
 View.AddSubview (imageView);
 ```
 
-이 코드는 새 `UIImageView` 를 만들고 초기 크기와 위치를 제공 합니다. 그런 다음 프로젝트에 추가 된 이미지 자산에서 이미지를 로드 하 고를 부모 `UIImageView` `UIView` 에 추가 하 여 표시 합니다.
+이 코드는 새 `UIImageView`을 만들어 초기 크기와 위치를 제공 합니다. 그런 다음 프로젝트에 추가 된 이미지 자산에서 이미지를 로드 하 고 부모 `UIView`에 @no__t을 추가 하 여이를 표시 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

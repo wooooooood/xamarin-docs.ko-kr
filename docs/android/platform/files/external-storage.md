@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: e30f726cfb783fc47bc09f7590a523eb0e487105
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5992be5963c315c4f93fc4e03c24e3776087d418
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756524"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975806"
 ---
 # <a name="external-storage"></a>외부 저장소
 
@@ -32,7 +32,7 @@ ms.locfileid: "70756524"
 
 * **개인** 파일 &ndash; 개인 파일은 응용 프로그램과 관련 된 파일이 며, 전 세계에서 읽고 쓸 수 있는 파일입니다. Android에서는 개인 파일이 외부 저장소의 특정 디렉터리에 저장 되어야 합니다. 파일이 "개인" 이라고 하더라도 장치에 있는 다른 앱에서 계속 표시 되 고 액세스할 수 있으며, Android에서 특별 한 보호를 사용할 수 없습니다.
 
-* **공용** 파일 &ndash; 이러한 파일은 응용 프로그램에 특정 한 것으로 간주 되지 않으며 자유롭게 공유할 수 있는 파일입니다.
+* **공용** 파일 &ndash;은 응용 프로그램에 특정 한 것으로 간주 되지 않으며 자유롭게 공유할 수 있는 파일입니다.
 
 이러한 파일 간의 차이점은 주로 개념입니다. 개인 파일은 응용 프로그램의 일부로 간주 되는 반면 전용 파일은 외부 저장소에 있는 다른 모든 파일입니다. Android는 개인 및 공용 파일의 경로를 확인 하는 두 가지 Api를 제공 합니다. 그렇지 않으면 동일한 .NET Api를 사용 하 여 이러한 파일을 읽고 쓸 수 있습니다. 이러한 Api는 [읽기 및 쓰기](~/android/platform/files/index.md#reading-or-writing-to-files-on-internal-storage)에 대 한 섹션에서 설명 하는 것과 동일한 api입니다.
 
@@ -40,15 +40,15 @@ ms.locfileid: "70756524"
 
 개인 외부 파일은 응용 프로그램에 특정 한 것으로 간주 되지만 (내부 파일과 유사) 여러 가지 이유로 외부 저장소에 유지 됩니다 (예: 내부 저장소에 비해 너무 큼). 내부 파일과 마찬가지로 이러한 파일은 사용자가 앱을 제거 하면 삭제 됩니다.
 
-메서드 `Android.Content.Context.GetExternalFilesDir(string type)`를 호출 하 여 전용 외부 파일의 기본 위치를 찾을 수 있습니다. 이 메서드는 앱에 `Java.IO.File` 대 한 개인 외부 저장소 디렉터리를 나타내는 개체를 반환 합니다. 이 `null` 메서드에 전달 하면 응용 프로그램의 사용자 저장소 디렉터리에 대 한 경로가 반환 됩니다. 예를 들어 패키지 이름을 `com.companyname.app`사용 하는 응용 프로그램의 경우 개인 외부 파일의 "root" 디렉터리는 다음과 같습니다.
+전용 외부 파일의 기본 위치는-0 @no__t 메서드를 호출 하 여 찾을 수 있습니다. 이 메서드는 앱에 대 한 개인 외부 저장소 디렉터리를 나타내는 @no__t 0 개체를 반환 합니다. 이 메서드에 `null`을 전달 하면 응용 프로그램의 사용자 저장소 디렉터리에 대 한 경로가 반환 됩니다. 예를 들어 패키지 이름이 `com.companyname.app` 인 응용 프로그램의 경우 개인 외부 파일의 "root" 디렉터리는 다음과 같습니다.
 
 ```bash
 /storage/emulated/0/Android/data/com.companyname.app/files/
 ```
 
-이 문서에서는 외부 저장소에 있는 개인 파일의 저장소 디렉터리를 _\_개인 외부\_저장소_로 참조 합니다.
+이 문서는 외부 저장소에 있는 개인 파일의 저장소 디렉터리를 _개인 @ no__t-1EXTERNAL @ no__t-2STORAGE_로 참조 합니다.
 
-에 대 한 `GetExternalFilesDir()` 매개 변수는 _응용 프로그램 디렉터리_를 지정 하는 문자열입니다. 이 디렉터리는 논리적 파일 구성에 대 한 표준 위치를 제공 하기 위한 것입니다. 문자열 값은 `Android.OS.Environment` 클래스의 상수를 통해 사용할 수 있습니다.
+@No__t-0에 대 한 매개 변수는 _응용 프로그램 디렉터리_를 지정 하는 문자열입니다. 이 디렉터리는 논리적 파일 구성에 대 한 표준 위치를 제공 하기 위한 것입니다. 문자열 값은 `Android.OS.Environment` 클래스의 상수를 통해 사용할 수 있습니다.
 
 | `Android.OS.Environment` | 디렉터리 |
 |-|-|
@@ -61,46 +61,46 @@ ms.locfileid: "70756524"
 | DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
 | DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
 | DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
-| DirectoryPictures | **_개인\_외부\_저장소_/사진** |
+| DirectoryPictures | **_PRIVATE @ no__t-2EXTERNAL @ no__t-3STORAGE_/Pictures** |
 
-외부 저장소 파티션이 여러 개인 장치의 경우 각 파티션에는 개인 파일용 디렉터리가 포함 됩니다. 이 메서드 `Android.Content.Context.GetExternalFilesDirs(string type)` 는의 `Java.IO.Files`배열을 반환 합니다. 각 개체는 응용 프로그램이 소유 하는 파일을 저장할 수 있는 모든 공유/외부 저장 장치에서 개인 응용 프로그램별 디렉터리를 나타냅니다.
+외부 저장소 파티션이 여러 개인 장치의 경우 각 파티션에는 개인 파일용 디렉터리가 포함 됩니다. @No__t-0은-1 @no__t의 배열을 반환 합니다. 각 개체는 응용 프로그램이 소유 하는 파일을 저장할 수 있는 모든 공유/외부 저장 장치에서 개인 응용 프로그램별 디렉터리를 나타냅니다.
 
 > [!IMPORTANT]
-> 개인 exteral 저장소 디렉터리에 대 한 정확한 경로는 장치에서 장치 및 Android 버전 사이에서 다를 수 있습니다. 이로 인해 앱은이 디렉터리의 경로를 하드 코딩 해서는 안 되며, 대신 Xamarin.ios Api를 `Android.Content.Context.GetExternalFilesDir()`사용 해야 합니다.
+> 개인 외부 저장소 디렉터리에 대 한 정확한 경로는 장치 마다 다르며 Android 버전 사이에 다를 수 있습니다. 이로 인해 앱은이 디렉터리의 경로를 하드 코딩 해서는 안 되며, 대신 Xamarin.ios Api (예: `Android.Content.Context.GetExternalFilesDir()`)를 사용 해야 합니다.
 
 ### <a name="public-external-files"></a>공용 외부 파일
 
-공용 파일은 Android에서 전용 파일에 대해 할당 하는 디렉터리에 저장 되지 않은 외부 저장소에 있는 파일입니다. 앱을 제거 하면 공용 파일이 삭제 되지 않습니다. Android 앱에는 공용 파일을 읽거나 쓸 수 있는 권한이 부여 되어야 합니다. 공용 파일은 외부 저장소의 어디에 나 존재할 수 있지만, Android 규칙에 따라 속성 `Android.OS.Environment.ExternalStorageDirectory`으로 식별 되는 디렉터리에 공용 파일이 존재할 것으로 예상 합니다. 이 속성은 기본 외부 `Java.IO.File` 저장소 디렉터리를 나타내는 개체를 반환 합니다. 예를 `Android.OS.Environment.ExternalStorageDirectory` 들어는 다음 디렉터리를 참조할 수 있습니다.
+공용 파일은 Android에서 전용 파일에 대해 할당 하는 디렉터리에 저장 되지 않은 외부 저장소에 있는 파일입니다. 앱을 제거 하면 공용 파일이 삭제 되지 않습니다. Android 앱에는 공용 파일을 읽거나 쓸 수 있는 권한이 부여 되어야 합니다. 공용 파일은 외부 저장소의 어디에 나 존재할 수 있지만, Android 규칙에 따라 속성으로 식별 되는 디렉터리에 공용 파일이 있는 것으로 예상 됩니다 (`Android.OS.Environment.ExternalStorageDirectory`). 이 속성은 기본 외부 저장소 디렉터리를 나타내는 @no__t 0 개체를 반환 합니다. 예를 들어 `Android.OS.Environment.ExternalStorageDirectory`은 다음 디렉터리를 참조할 수 있습니다.
 
 ```bash
 /storage/emulated/0/
 ```
 
-이 문서에서는 외부 저장소에서 공용 _\_\_외부 저장소_로 공용 파일의 저장소 디렉터리를 참조 합니다.
+이 문서에서는 외부 저장소에 있는 공용 파일의 저장소 디렉터리를 _public @ no__t-1EXTERNAL @ no__t-2STORAGE_로 참조 합니다.
 
-또한 Android는 _\_공용 외부\_저장소_에서 응용 프로그램 디렉터리의 개념을 지원 합니다. 이러한 디렉터리는의 `_PRIVATE\_EXTERNAL\_STORAGE_` 응용 프로그램 디렉터리와 동일 하며 이전 섹션의 표에 설명 되어 있습니다. 메서드 `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` 는 public 응용 프로그램 `Java.IO.File` 디렉터리에 해당 하는 개체를 반환 합니다. 매개 변수는 필수 매개 변수 이며 일 `null`수 없습니다. `directoryType`
+또한 Android는 _공용 @ no__t-1EXTERNAL @ no__t-2STORAGE_에서 응용 프로그램 디렉터리의 개념을 지원 합니다. 이러한 디렉터리는 `_PRIVATE\_EXTERNAL\_STORAGE_`에 대 한 응용 프로그램 디렉터리와 동일 하며 이전 섹션의 표에 설명 되어 있습니다. @No__t-0은 public 응용 프로그램 디렉터리에 해당 하는 `Java.IO.File` 개체를 반환 합니다. @No__t-0 매개 변수는 필수 매개 변수 이며-1 @no__t 수 없습니다.
 
-예를 들어를 `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` 호출 하면 다음과 같은 문자열이 반환 됩니다.
+예를 들어 `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`을 호출 하면 다음과 같은 문자열이 반환 됩니다.
 
 ```bash
 /storage/emulated/0/Documents
 ```
 
 > [!IMPORTANT]
-> 공용 외부 저장소 디렉터리에 대 한 정확한 경로는 장치 마다 다르며 Android 버전 사이에 다를 수 있습니다. 이로 인해 앱은이 디렉터리의 경로를 하드 코딩 해서는 안 되며, 대신 Xamarin.ios Api를 `Android.OS.Environment.ExternalStorageDirectory`사용 해야 합니다.
+> 공용 외부 저장소 디렉터리에 대 한 정확한 경로는 장치 마다 다르며 Android 버전 사이에 다를 수 있습니다. 이로 인해 앱은이 디렉터리의 경로를 하드 코딩 해서는 안 되며, 대신 Xamarin.ios Api (예: `Android.OS.Environment.ExternalStorageDirectory`)를 사용 해야 합니다.
 
 ## <a name="working-with-external-storage"></a>외부 저장소 작업
 
 Xamarin Android 앱은 파일에 대 한 전체 경로를 가져온 후 파일 생성, 읽기, 쓰기 또는 삭제를 위해 표준 .NET Api를 활용 해야 합니다. 앱에 대 한 플랫폼 간 호환 코드의 양을 최대화 합니다. 그러나 파일에 액세스를 시도 하기 전에 Xamarin Android 앱에서 해당 파일에 액세스할 수 있는지 확인 해야 합니다.
 
-1. **외부 저장소 확인** &ndash; 외부 저장소의 특성에 따라 앱에서 탑재 및 사용 가능 하지 않을 수 있습니다. 모든 앱은 사용을 시도 하기 전에 외부 저장소의 상태를 확인 해야 합니다.
-2. **런타임 권한 검사를 수행 합니다** . &ndash; Android 앱은 외부 저장소에 액세스 하기 위해 사용자의 권한을 요청 해야 합니다. 이는 파일 액세스 전에 실행 시간 권한 요청을 수행 해야 함을 의미 합니다. [Xamarin Android의 가이드 권한에](~/android/app-fundamentals/permissions.md) 는 android 사용 권한에 대 한 자세한 내용이 포함 되어 있습니다.
+1. 외부 저장소 @no__t를 **확인** 합니다.-1은 외부 저장소의 특성에 따라 앱에서 탑재 하 고 사용할 수 없는 것일 수 있습니다. 모든 앱은 사용을 시도 하기 전에 외부 저장소의 상태를 확인 해야 합니다.
+2. **런타임 권한 검사를 수행** 합니다. 1 @no__t Android 앱은 외부 저장소에 액세스 하기 위해 사용자의 권한을 요청 해야 합니다. 이는 파일 액세스 전에 실행 시간 권한 요청을 수행 해야 함을 의미 합니다. [Xamarin Android의 가이드 권한에](~/android/app-fundamentals/permissions.md) 는 android 사용 권한에 대 한 자세한 내용이 포함 되어 있습니다.
 
 이러한 두 가지 작업에 대해서는 아래에서 설명 합니다.
 
 ### <a name="verifying-that-external-storage-is-available"></a>외부 저장소를 사용할 수 있는지 확인 하는 중
 
-외부 저장소에 쓰기 전에 첫 번째 단계는 읽기 또는 쓰기 가능한 지 확인 하는 것입니다. 속성 `Android.OS.Environment.ExternalStorageState` 에는 외부 저장소의 상태를 식별 하는 문자열이 포함 됩니다. 이 속성은 상태를 나타내는 문자열을 반환 합니다. 이 테이블은에서 `ExternalStorageState` `Environment.ExternalStorageState`반환 될 수 있는 값의 목록입니다.
+외부 저장소에 쓰기 전에 첫 번째 단계는 읽기 또는 쓰기 가능한 지 확인 하는 것입니다. @No__t-0 속성은 외부 저장소의 상태를 식별 하는 문자열을 포함 합니다. 이 속성은 상태를 나타내는 문자열을 반환 합니다. 이 테이블은 `Environment.ExternalStorageState`에서 반환 될 수 있는 `ExternalStorageState` 값의 목록입니다.
 
 | ExternalStorageState | 설명  |
 |----------------------|---|
@@ -127,7 +127,7 @@ bool isWriteable = Environment.MediaMounted.Equals(Environment.ExternalStorageSt
 
 Android는 외부 저장소에 대 한 액세스를 일반적으로 사용자가 리소스에 대 한 액세스 권한을 부여 해야 하는 _위험한 사용 권한_으로 간주 합니다. 사용자는 언제 든 지이 사용 권한을 해지할 수 있습니다.  이는 파일 액세스 전에 실행 시간 권한 요청을 수행 해야 함을 의미 합니다. 앱에는 자신의 개인 파일을 읽고 쓸 수 있는 권한이 자동으로 부여 됩니다. 앱이 사용자의 [권한을 부여 받은](~/android/app-fundamentals/permissions.md) 후 다른 앱에 속하는 개인 파일을 읽고 쓸 수 있습니다.
 
-모든 Android 앱은 **Androidmanifest** 에서 외부 저장소에 대 한 두 가지 권한 중 하나를 선언 해야 합니다. 권한을 식별 하려면 다음 두 `uses-permission` 요소 중 하나를 **androidmanifest**에 추가 해야 합니다.
+모든 Android 앱은 **Androidmanifest** 에서 외부 저장소에 대 한 두 가지 권한 중 하나를 선언 해야 합니다. 권한을 식별 하려면 다음 두 `uses-permission` 요소 중 하나를 **Androidmanifest**에 추가 해야 합니다.
 
 ```xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -135,7 +135,7 @@ Android는 외부 저장소에 대 한 액세스를 일반적으로 사용자가
 ```
 
 > [!NOTE]
-> 사용자가 권한을 부여 `WRITE_EXTERNAL_STORAGE` `READ_EXTERNAL_STORAGE` 하는 경우에는도 암시적으로 부여 됩니다. **Androidmanifest**에서 두 권한을 모두 요청할 필요는 없습니다.
+> 사용자가 `WRITE_EXTERNAL_STORAGE`을 부여 하는 경우 `READ_EXTERNAL_STORAGE`도 암시적으로 부여 됩니다. **Androidmanifest**에서 두 권한을 모두 요청할 필요는 없습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -169,7 +169,7 @@ $ adb shell pm revoke com.companyname.app android.permission.WRITE_EXTERNAL_STOR
 
 ## <a name="deleting-files"></a>파일 삭제
 
-표준 C# api를 사용 하 여와 [`System.IO.File.Delete`](xref:System.IO.File.Delete*)같은 외부 저장소에서 파일을 삭제할 수 있습니다. 또한 코드 이식성을 위해 Java Api를 사용할 수 있습니다. 예를 들어:
+표준 C# api를 사용 하 여 [`System.IO.File.Delete`](xref:System.IO.File.Delete*)와 같은 외부 저장소에서 파일을 삭제할 수 있습니다. 또한 코드 이식성을 위해 Java Api를 사용할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```csharp
 System.IO.File.Delete("/storage/emulated/0/Android/data/com.companyname.app/files/count.txt");

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: 1f190ef2f99e71c8cf21680f9902caccf3454450
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ed9eb5dc80935c8401f5bd8c9be1c301af3480f5
+ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206329"
+ms.lasthandoff: 10/06/2019
+ms.locfileid: "71975755"
 ---
 # <a name="get-started-with-ios-13"></a>IOS 13 시작
 
@@ -22,9 +22,9 @@ ms.locfileid: "71206329"
 
 1. **Xcode 11 설치** – 등록 된 apple 개발자는 [apple 개발자 포털](https://developer.apple.com/download/) 또는 **앱 스토어**에서 최신 버전의 Xcode 11을 다운로드 하 여 설치할 수 있습니다.
 
-2. **Xcode 11 실행** – Xamarin에서 요구 하는 일부 도구를 설치 하기 때문에 Mac용 Visual Studio를 업데이트 하 고 실행 하기 전에 Xcode 11을 실행 합니다.
+2. **Xcode 11 실행** – Xamarin에서 요구 하는 일부 도구를 설치 하기 때문에 Mac용 Visual Studio 또는 Visual Studio 2019을 업데이트 하 고 실행 하기 전에 Xcode 11을 실행 합니다.
 
-3. Mac용 Visual Studio에서 **Visual Studio > 업데이트 확인**...을 선택 하 고, **안정적인** 채널을 선택 하 고, 사용 가능한 업데이트를 설치 합니다.
+3. **업데이트 Mac용 Visual Studio 및 Visual Studio 2019** – 안정적인 최신 버전의 Xamarin이 있는지 확인 합니다.
 
 4. 필드 Ios **장치에 ios 13 설치** – Xcode 11에서 도입 된 api를 사용 하는 앱의 장치 테스트용으로 등록 된 Apple 개발자는 장치에 운영 체제를 [다운로드](https://developer.apple.com/download) 하 여 설치할 수 있습니다. 
 
