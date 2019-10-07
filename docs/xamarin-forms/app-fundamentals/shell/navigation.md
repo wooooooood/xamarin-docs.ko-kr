@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c65a1aed79199106d2a754329dd38d87feda66a2
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
+ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888962"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71674561"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
@@ -302,7 +302,7 @@ public partial class ElephantDetailPage : ContentPage
 
 - `ICommand` 형식의 `Command` - [뒤로] 단추를 누를 때 실행됩니다.
 - `object` 형식의 `CommandParameter` - `Command`에 전달되는 매개 변수입니다.
-- [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식의 `IconOveride` - [뒤로] 단추에 사용되는 아이콘입니다.
+- [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식의 `IconOverride` - [뒤로] 단추에 사용되는 아이콘입니다.
 - `boolean` 형식의 `IsEnabled` - [뒤로] 단추를 사용할 수 있는지 여부를 나타냅니다. 기본값은 `true`입니다.
 - `string` 형식의 `TextOverride` - [뒤로] 단추에 사용되는 텍스트입니다.
 
