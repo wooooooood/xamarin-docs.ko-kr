@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5992be5963c315c4f93fc4e03c24e3776087d418
-ms.sourcegitcommit: 621649fb4a119981290fed7a1061cbae30b982a6
+ms.openlocfilehash: c67f58a4b1886d3f89f7bd1639e1cd687d329869
+ms.sourcegitcommit: 4ff181101d76f048b949c9613b2c72cf02618f8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71975806"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994810"
 ---
 # <a name="external-storage"></a>외부 저장소
 
@@ -78,7 +78,7 @@ ms.locfileid: "71975806"
 
 이 문서에서는 외부 저장소에 있는 공용 파일의 저장소 디렉터리를 _public @ no__t-1EXTERNAL @ no__t-2STORAGE_로 참조 합니다.
 
-또한 Android는 _공용 @ no__t-1EXTERNAL @ no__t-2STORAGE_에서 응용 프로그램 디렉터리의 개념을 지원 합니다. 이러한 디렉터리는 `_PRIVATE\_EXTERNAL\_STORAGE_`에 대 한 응용 프로그램 디렉터리와 동일 하며 이전 섹션의 표에 설명 되어 있습니다. @No__t-0은 public 응용 프로그램 디렉터리에 해당 하는 `Java.IO.File` 개체를 반환 합니다. @No__t-0 매개 변수는 필수 매개 변수 이며-1 @no__t 수 없습니다.
+또한 Android는 _공용 @ no__t-1EXTERNAL @ no__t-2STORAGE_에서 응용 프로그램 디렉터리의 개념을 지원 합니다. 이러한 디렉터리는 `PRIVATE_EXTERNAL_STORAGE`에 대 한 응용 프로그램 디렉터리와 동일 하며 이전 섹션의 표에 설명 되어 있습니다. @No__t-0은 public 응용 프로그램 디렉터리에 해당 하는 `Java.IO.File` 개체를 반환 합니다. @No__t-0 매개 변수는 필수 매개 변수 이며-1 @no__t 수 없습니다.
 
 예를 들어 `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath`을 호출 하면 다음과 같은 문자열이 반환 됩니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: 8d30cdd4a50e912208d29e2171ef4c3db174718a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760561"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997161"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
 
@@ -58,7 +58,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 이러한 작업은 텍스트 저장하고 로드하는 페이지가 포함된 샘플 앱에서 보여 줍니다.
 
-[![텍스트 저장 및 로드](files-images/saveandload-sml.png "앱에 파일 저장 및 로드")](files-images/saveandload.png#lightbox "앱에 파일 저장 및 로드")
+[![텍스트 저장 및 로드](files-images/saveandload-sml.png "앱에서 파일 저장 및 로드")](files-images/saveandload.png#lightbox "앱에서 파일 저장 및 로드")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
@@ -68,34 +68,35 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![포함 리소스 빌드 작업 구성](files-images/vs-embeddedresource-sml.png "EmbeddedResource BuildAction 설정")](files-images/vs-embeddedresource.png#lightbox "EmbeddedResource BuildAction 설정")
+[![포함 리소스 빌드 작업 구성](files-images/vs-embeddedresource-sml.png "EmbeddedResource") 빌드](files-images/vs-embeddedresource.png#lightbox "EmbeddedResource 빌드 설정")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![PCL로 작성된 포함된 텍스트 파일, 포함 리소스 빌드 작업 구성](files-images/xs-embeddedresource-sml.png "EmbeddedResource BuildAction 설정")](files-images/xs-embeddedresource.png#lightbox "EmbeddedResource BuildAction 설정")
+[![.Net 표준 라이브러리에 포함 된 텍스트 파일, 포함 리소스 빌드 작업 구성](files-images/xs-embeddedresource-sml.png "EmbeddedResource") 빌드](files-images/xs-embeddedresource.png#lightbox "EmbeddedResource 빌드 설정")
 
 -----
 
-`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함된 프로젝트에 대한 기본 네임스페이스 접두사가 앞에 붙는 파일 이름입니다. 이 경우 어셈블리는 **WorkingWithFiles**이고 파일 이름은 **PCLTextResource.txt**이므로 리소스 ID는 `WorkingWithFiles.PCLTextResource.txt`입니다.
+`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 WorkingWithFiles이 고 파일 이름은 **입니다. 따라서**리소스 @no__t id는-2가 됩니다.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibTextResource.txt");
 string text = "";
-using (var reader = new System.IO.StreamReader (stream)) {
+using (var reader = new System.IO.StreamReader (stream))
+{  
     text = reader.ReadToEnd ();
 }
 ```
 
 그러면 `text` 변수를 사용하여 텍스트를 표시하거나 그렇지 않은 경우 코드에서 사용할 수 있습니다. [샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)의 다음 스크린샷에서는 `Label` 컨트롤에서 렌더링된 텍스트를 보여 줍니다.
 
- [![PCL로 작성된 포함된 텍스트 파일](files-images/pcltext-sml.png "PCL로 작성된 포함된 텍스트 파일, 앱에 표시됨")](files-images/pcltext.png#lightbox "PCL로 작성된 포함된 텍스트 파일, 앱에 표시됨")
+ [(files-images/pcltext-sml.png "앱에 표시 되는 .NET Standard 라이브러리에 포함 된 텍스트") 파일을 ![.net standard 라이브러리에 포함 된 텍스트 파일]](files-images/pcltext.png#lightbox "앱에 표시 되는 .NET Standard 라이브러리의 포함 텍스트 파일")
 
 XML을 로드하고 역직렬화하는 것도 마찬가지로 간단합니다. 다음 코드에서는 리소스에서 로드 및 역직렬화된 다음, 표시할 `ListView`에 바인딩되는 XML 파일을 보여 줍니다. XML 파일에는 `Monkey` 개체의 배열이 포함되어 있습니다(클래스는 샘플 코드에서 정의됨).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
-Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
+Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.LibXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
     var serializer = new XmlSerializer(typeof(List<Monkey>));
@@ -105,7 +106,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![PCL로 작성된 포함된 Xml 파일, ListView에 표시됨](files-images/pclxml-sml.png "PCL로 작성된 포함된 XML 파일, ListView에 표시됨")](files-images/pclxml.png#lightbox "PCL로 작성된 포함된 XML 파일, ListView에 표시됨")
+ [![Xml 파일이 .net standard 라이브러리에 포함 되어]있습니다. Listview(files-images/pclxml-sml.png "에 표시 되는 .net 표준 라이브러리의 Listview embedded Xml 파일") 에 표시 됩니다.](files-images/pclxml.png#lightbox "ListView에 표시 되는 .NET 표준 라이브러리의 포함 XML 파일")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -139,9 +140,9 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>리소스 구성
 
-위의 예제에서는 파일이 .NET Standard 라이브러리 프로젝트의 루트에 포함되어 있다고 가정합니다. 이 경우 리소스 ID는 **Namespace.Filename.Extension** 형식입니다(예: `WorkingWithFiles.PCLTextResource.txt` 및 `WorkingWithFiles.iOS.SharedTextResource.txt`).
+위의 예제에서는 파일이 .NET Standard 라이브러리 프로젝트의 루트에 포함되어 있다고 가정합니다. 이 경우 리소스 ID는 **Namespace.Filename.Extension** 형식입니다(예: `WorkingWithFiles.LibTextResource.txt` 및 `WorkingWithFiles.iOS.SharedTextResource.txt`).
 
-포함 리소스는 폴더에 구성할 수 있습니다. 포함 리소스가 폴더에 배치되면 폴더 이름이 리소스 ID의 일부가 되며(마침표로 구분됨), 리소스 ID 형식은 **Namespace.Folder.Filename.Extension**이 됩니다. 샘플 앱에 사용된 파일이 **MyFolder** 폴더에 배치되면 해당 리소스 ID(`WorkingWithFiles.MyFolder.PCLTextResource.txt` 및 `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`)가 됩니다.
+포함 리소스는 폴더에 구성할 수 있습니다. 포함 리소스가 폴더에 배치되면 폴더 이름이 리소스 ID의 일부가 되며(마침표로 구분됨), 리소스 ID 형식은 **Namespace.Folder.Filename.Extension**이 됩니다. 샘플 앱에 사용된 파일이 **MyFolder** 폴더에 배치되면 해당 리소스 ID(`WorkingWithFiles.MyFolder.LibTextResource.txt` 및 `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`)가 됩니다.
 
 <a name="Debugging_Embedded_Resources" />
 

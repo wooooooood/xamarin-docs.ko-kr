@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
-ms.openlocfilehash: 294b538b0e73344ffe9109a1e1091bc9b7591f63
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.openlocfilehash: 59c6f9e7ec6c40c938fda2665bbae5685e7de830
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976481"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997218"
 ---
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
 
@@ -22,7 +22,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 합니다 [ `Layout` ](xref:Xamarin.Forms.Layout) 하 고 [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) Xamarin.Forms의 클래스는 특수 한 하위 뷰 및 기타 레이아웃 컨테이너 역할을 하는 뷰의 합니다. 합니다 `Layout` 자체 클래스에서 파생 되며 [ `View` ](views.md)합니다. `Layout` 파생 클래스에는 일반적으로 Xamarin.Forms 응용 프로그램에서 자식 요소의 크기와 위치를 설정 하기 위한 논리가 포함 됩니다.
 
-[![Xamarin.Forms 레이아웃 형식](layouts-images/layouts-sml.png "Xamarin.Forms 레이아웃 형식을")](layouts-images/layouts.png#lightbox "Xamarin.Forms 레이아웃 형식")
+[![Xamarin.ios 레이아웃 형식](layouts-images/layouts-sml.png "Xamarin. forms 레이아웃 형식")](layouts-images/layouts.png#lightbox "Xamarin.ios 레이아웃 형식")
 
 파생 된 클래스는 `Layout` 두 가지 범주로 나눌 수 있습니다.
 
@@ -36,7 +36,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`ContentView`](xref:Xamarin.Forms.ContentView) 으로 설정 된 단일 자식이 포함 되어는 [ `Content` ](xref:Xamarin.Forms.ContentView.Content) 속성입니다. 합니다 `Content` 속성에 설정할 수 있습니다 `View` 파생 개체를 비롯 한 다른 `Layout` 파생 합니다. `ContentView` 구조적 요소와 주로 사용 되 고를 기본 클래스로 사용 됩니다 [ `Frame` ](#frame)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ContentView) / [가이드](~/xamarin-forms/user-interface/layouts/contentview.md) /[샘플] (https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/ | [![ContentView 예제](layouts-images/ContentView.png "ContentView 예제")](layouts-images/ContentView-Large.png#lightbox "ContentView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
+| [`ContentView`](xref:Xamarin.Forms.ContentView) 으로 설정 된 단일 자식이 포함 되어는 [ `Content` ](xref:Xamarin.Forms.ContentView.Content) 속성입니다. 합니다 `Content` 속성에 설정할 수 있습니다 `View` 파생 개체를 비롯 한 다른 `Layout` 파생 합니다. `ContentView` 구조적 요소와 주로 사용 되 고를 기본 클래스로 사용 됩니다 [ `Frame` ](#frame)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ContentView) / [가이드](~/xamarin-forms/user-interface/layouts/contentview.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-cardview/) | [![Contentview 예제](layouts-images/ContentView.png "contentview 예제")](layouts-images/ContentView-Large.png#lightbox "ContentView 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
 <a named="frame" />
@@ -45,7 +45,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| 클래스 [`Frame`](xref:Xamarin.Forms.Frame) 는에서 [`ContentView`](#contentView) 파생 되 고 자식 주위에 테두리 또는 프레임을 표시 합니다. [`Padding`](xref:Xamarin.Forms.Layout.Padding) [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)클래스의 기본값은 20이 고, 및 [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 속성도 정의 합니다. `Frame`<br /><br />[API 설명서](xref:Xamarin.Forms.Frame) / [가이드](~/xamarin-forms/user-interface/layouts/frame.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![예제에서는 프레임](layouts-images/Frame.png "예제에서는 프레임")](layouts-images/Frame-Large.png#lightbox "예제 프레임")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| [@No__t-1](xref:Xamarin.Forms.Frame) 클래스는 [`ContentView`](#contentView) 에서 파생 되며 자식 주위에 테두리 또는 프레임을 표시 합니다. @No__t-0 클래스는 기본 [`Padding`](xref:Xamarin.Forms.Layout.Padding) 값 20을 가지 며 [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor), [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)및 [@no__t](xref:Xamarin.Forms.Frame.HasShadow) 속성을 정의 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Frame) / [가이드](~/xamarin-forms/user-interface/layouts/frame.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![프레임 예제](layouts-images/Frame.png "프레임 예제")](layouts-images/Frame-Large.png#lightbox "프레임 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
 
 <a name="scrollView" />
@@ -81,7 +81,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`StackLayout`](xref:Xamarin.Forms.StackLayout) 가로 또는 세로로에 따라 스택에 자식 요소를 배치 합니다 [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) 속성입니다. 합니다 [ `Spacing` ](xref:Xamarin.Forms.StackLayout.Spacing) 속성 자식 사이의 간격을 제어 되며 기본값은 6입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.StackLayout) / [가이드](~/xamarin-forms/user-interface/layouts/stack-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)| [![예제 StackLayout](layouts-images/StackLayout.png "StackLayout 예제")](layouts-images/StackLayout-Large.png#lightbox "StackLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
+| [`StackLayout`](xref:Xamarin.Forms.StackLayout) 가로 또는 세로로에 따라 스택에 자식 요소를 배치 합니다 [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) 속성입니다. 합니다 [ `Spacing` ](xref:Xamarin.Forms.StackLayout.Spacing) 속성 자식 사이의 간격을 제어 되며 기본값은 6입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.StackLayout) / [가이드](~/xamarin-forms/user-interface/layouts/stack-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)| [![Stacklayout 예제](layouts-images/StackLayout.png "stacklayout 예제")](layouts-images/StackLayout-Large.png#lightbox "StackLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
 |     |     |
 
 <a name="grid" />
@@ -90,7 +90,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`Grid`](xref:Xamarin.Forms.Grid) 행 및 열 표에 해당 자식 요소를 배치합니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) [ `Row` ](xref:Xamarin.Forms.Grid.RowProperty)를 [ `Column` ](xref:Xamarin.Forms.Grid.ColumnProperty)를 [ `RowSpan` ](xref:Xamarin.Forms.Grid.RowSpanProperty), 및 [ `ColumnSpan` ](xref:Xamarin.Forms.Grid.ColumnSpanProperty)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Grid) / [가이드](~/xamarin-forms/user-interface/layouts/grid.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![그리드 예제](layouts-images/Grid.png "그리드 예제")](layouts-images/Grid-Large.png#lightbox "Grid 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/GridDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/GridDemoPage.xaml) |
+| [`Grid`](xref:Xamarin.Forms.Grid) 행 및 열 표에 해당 자식 요소를 배치합니다. 자식의 위치를 사용 하 여 표시 됩니다는 [연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) [ `Row` ](xref:Xamarin.Forms.Grid.RowProperty)를 [ `Column` ](xref:Xamarin.Forms.Grid.ColumnProperty)를 [ `RowSpan` ](xref:Xamarin.Forms.Grid.RowSpanProperty), 및 [ `ColumnSpan` ](xref:Xamarin.Forms.Grid.ColumnSpanProperty)합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Grid) / [가이드](~/xamarin-forms/user-interface/layouts/grid.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![표 형태 예제](layouts-images/Grid.png "표 예")](layouts-images/Grid-Large.png#lightbox "표 예")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/GridDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/GridDemoPage.xaml) |
 |     |     |
 
 ### <a name="absolutelayout"></a>AbsoluteLayout
@@ -111,7 +111,7 @@ _Xamarin.Forms 레이아웃은 visual 구조로 사용자 인터페이스 컨트
 
 |     |     |
 | --- | --- |
-| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) CSS를 기반으로 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)일반적으로 알려진 _레이아웃 flex_ 또는 _flex 박스_합니다. `FlexLayout` 여섯 개의 바인딩 가능한 속성 및 누적 하거나 많은 맞춤 및 방향 옵션을 사용 하 여 래핑된 자식을 사용할 수 있는 5 개의 연결 된 바인딩 가능 속성을 정의 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.FlexLayout) / [가이드](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos) | [![FlexLayout 예제](layouts-images/FlexLayout.png "FlexLayout 예제")](layouts-images/FlexLayout-Large.png#lightbox "FlexLayout 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
+| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) CSS를 기반으로 [유연한 상자 레이아웃 모듈](http://www.w3.org/TR/css-flexbox-1/)일반적으로 알려진 _레이아웃 flex_ 또는 _flex 박스_합니다. `FlexLayout` 여섯 개의 바인딩 가능한 속성 및 누적 하거나 많은 맞춤 및 방향 옵션을 사용 하 여 래핑된 자식을 사용할 수 있는 5 개의 연결 된 바인딩 가능 속성을 정의 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.FlexLayout) / [가이드](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos) | [는 안 ![레이아웃 예제],가 나(layouts-images/FlexLayout.png "레이아웃 예제")](layouts-images/FlexLayout-Large.png#lightbox "안 면 레이아웃 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>관련 링크
