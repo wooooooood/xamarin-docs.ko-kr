@@ -7,12 +7,12 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 110b2646fb7e1bda00c628749489c14a540e2b54
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a3eca2036b0e4c2722e034e48ad4ca3054343a89
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759537"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032574"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 단순 원 그리기
 
@@ -26,7 +26,7 @@ SkiaSharp, 만드는 등을 사용 하 여 Xamarin.Forms에서 그래픽 그리�
 
 ![](circle-images/circleexample.png "빨간색 윤곽선이 있는 파란색 원")
 
-합니다 [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page 클래스에서 파생 `ContentPage` 에 두 개의 및 `using` SkiaSharp 네임 스페이스에 대 한 지시문:
+합니다 [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page 클래스에서 파생 `ContentPage` 에 두 개의 및 `using` SkiaSharp 네임 스페이스에 대 한 지시문:
 
 ```csharp
 using SkiaSharp;
@@ -143,7 +143,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 IOS, Android 및 유니버설 Windows 플랫폼에서 실행 중인 프로그램이 다음과 같습니다.
 
-[![](circle-images/simplecircle-small.png "단순 원 페이지 스크린샷 삼중")](circle-images/simplecircle-large.png#lightbox "삼중 단순 원 페이지 스크린샷")
+[![](circle-images/simplecircle-small.png "단순 원 페이지의 삼중 스크린샷")](circle-images/simplecircle-large.png#lightbox "단순 원 페이지의 삼중 스크린샷")
 
 프로그램을 직접 실행 하는 경우 휴대폰 또는 그래픽을 다시 그리면 하는 방법을 보려면 옆으로 돌려 시뮬레이터를 설정할 수 있습니다. 그래픽을 다시 그려야 할 때마다는 `PaintSurface` 이벤트 처리기가 다시 호출 합니다.
 
@@ -154,7 +154,7 @@ IOS, Android 및 유니버설 Windows 플랫폼에서 실행 중인 프로그램
 > [!NOTE]
 > 합니다 `SKPaint` 클래스 정의 [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) 앤티 앨리어싱을 그래픽 렌더링에 사용할 수 있도록 합니다. 앤티 앨리어싱을 시각적으로 부드러운 가장자리에서이 속성을 설정 하 고 싶을 하므로 일반적으로 발생 `true` 대부분의 프로그램 `SKPaint` 개체입니다. 에서는 편의 위해가이 속성은 _되지_ 대부분의 샘플 페이지에서 설정 합니다.
 
-원 윤곽선의 너비가 25 픽셀 &mdash; 또는 원 &mdash; 반지름의 1/4로 지정 되어 있지만 더 가늘게 보이는 것 처럼 보이지만 다음과 같은 이유가 있습니다. 선의 너비는 파란색 원으로 가려져 있습니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 가장 가까운 픽셀에 해당 차원에 파란색 내부 크기가 있지만 25 픽셀 너비 윤곽선 포괄 기하학적 원 &mdash; 내부 및 외부의 절반에 반 합니다.
+원 윤곽선의 너비가 25 픽셀로 지정 되어 있지만, 원 반경 &mdash; 은 더 가늘게 보이는 것 처럼 보이지만이에 대 한 좋은 이유가 있습니다. 선의 너비는 파란색 원으로 가려져 있습니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 가장 가까운 픽셀에 해당 차원에 파란색 내부 크기가 있지만 25 픽셀 너비 윤곽선 포괄 기하학적 원 &mdash; 내부 및 외부의 절반에 반 합니다.
 
 다음 샘플은 [Xamarin.Forms를 사용 하 여 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) 문서 시각적으로이에서는 합니다.
 

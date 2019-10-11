@@ -200,6 +200,7 @@
 ### [ProgressBar](user-interface/progressbar.md)
 ### [SearchBar](user-interface/searchbar.md)
 ### [슬라이더](user-interface/slider.md)
+### [시작 화면](user-interface/splashscreen.md)
 ### [Stepper](user-interface/stepper.md)
 ### [스타일](user-interface/styles/index.md)
 #### [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](user-interface/styles/xaml/index.md)

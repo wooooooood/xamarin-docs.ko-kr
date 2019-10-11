@@ -6,17 +6,19 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/06/2018
-ms.openlocfilehash: b05ab7ee835a97f13af618332baec7a5ebf404ec
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 10/02/2019
+ms.openlocfilehash: 4633811b2c0b001ab220f5fedaf116b1b269344a
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764093"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032558"
 ---
 # <a name="splash-screen"></a>시작 화면
 
-_특히 앱이 장치에서 처음 시작 될 때 Android 앱을 시작 하는 데 시간이 오래 걸립니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+
+@no__t-특히 앱이 장치에서 처음 시작 될 때 Android 앱을 시작 하는 데 시간이 오래 걸립니다. 시작 화면(Splash screen)은 사용자에게 시작 진행률을 표시하거나 브랜드를 보여주기 위해 표시할 수 있습니다._
 
 ## <a name="overview"></a>개요
 
@@ -30,11 +32,11 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 
 3. 이전 단계에서 만든 테마에서 정의한 시작 화면으로 사용할 새 작업을 응용 프로그램에 추가 합니다.
 
-[![예제 Xamarin 로고 시작 화면 및 앱 화면](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
+[![Example 로고 시작 화면, 앱 화면에 대 한 예제](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
 ## <a name="requirements"></a>요구 사항
 
-이 가이드에서는 Android API 레벨 15(Android 4.0.3) 또는 그 이상을 대상으로 하는 응용 프로그램을 가정합니다. 또한 응용 프로그램은 프로젝트에 추가된 **Xamarin.Android.Support.v4** 및 **Xamarin.Android.Support.v7.AppCompat** NuGet 패키지가 있어야 합니다.
+이 가이드에서는 응용 프로그램이 Android API level 21 이상을 대상으로 한다고 가정 합니다. 또한 응용 프로그램은 프로젝트에 추가된 **Xamarin.Android.Support.v4** 및 **Xamarin.Android.Support.v7.AppCompat** NuGet 패키지가 있어야 합니다.
 
 이 가이드에 있는 모든 코드 및 XML은 이 가이드에 대한 샘플 프로젝트인 [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)에 포함되어 있습니다.
 
@@ -48,7 +50,7 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 
 시작 화면은 시작 화면 액티비티의 배경에 XML 그림을 표시합니다. 그렇게 하려면 이미지 표시를 위해 비트맵 이미지(예: JPG 또는 PNG)를 사용해야 합니다.
 
-이 가이드에서는 응용 프로그램의 시작 화면 이미지를 가운데 표시하기 위해 [Layer List](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)를 사용합니다. 다음 코드 조각은 `layer-list`를 사용하는 `drawable` 리소스의 예제입니다.
+샘플 응용 프로그램은 **splash_screen**이라는 그릴을 정의 합니다. 이 예에서는 다음 xml에 표시 된 것 처럼 [계층 목록을](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) 사용 하 여 응용 프로그램의 시작 화면 이미지를 가운데에 맞춥니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -58,16 +60,24 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
   </item>
   <item>
     <bitmap
-        android:src="@drawable/splash"
+        android:src="@drawable/splash_logo"
         android:tileMode="disabled"
         android:gravity="center"/>
   </item>
 </layer-list>
 ```
 
-이렇게 `layer-list` 하면 **시작 이미지를** `@color/splash_background` 리소스로 지정 된 배경에 가운데에 배치 합니다. 이 XML 파일을 Resources/ **그릴** 폴더 (예: **resources/그릴/splash_screen**)에 저장 합니다.
+이 `layer-list`은 시작 이미지를 @no__t 1 리소스로 지정 된 배경색으로 가운데 맞춤 합니다. 샘플 응용 프로그램은 **Resources/values/color .xml** 파일에서이 색을 정의 합니다.
 
-시작 화면 그림을 만들고 난 후, 다음 단계는 시작 화면에 대한 테마를 만드는 것입니다.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  ...
+  <color name="splash_background">#FFFFFF</color>
+</resources>
+```
+
+@No__t-0 개체에 대 한 자세한 내용은 [Android에서 사용할 Google 설명서](https://developer.android.com/reference/android/graphics/drawable/Drawable)를 참조 하세요.
 
 ### <a name="implementing-a-theme"></a>테마 구현
 
@@ -78,13 +88,15 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-  <style name="MyTheme" parent="MyTheme.Base">
+    <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/splash_screen</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowFullscreen">true</item>  
+    <item name="android:windowContentOverlay">@null</item>  
+    <item name="android:windowActionBar">true</item>  
   </style>
 </resources>
 ```
@@ -126,8 +138,8 @@ public class SplashActivity : AppCompatActivity
 }
 ```
 
-`SplashActivity`이전 섹션에서 만든 테마를 명시적으로 사용 하 여 응용 프로그램의 기본 테마를 재정의 합니다.
-테마에서 그릴 수 있는를 배경으로 선언 `OnCreate` 하므로 레이아웃을 로드할 필요가 없습니다.
+`SplashActivity`은 이전 섹션에서 만든 테마를 명시적으로 사용 하 여 응용 프로그램의 기본 테마를 재정의 합니다.
+테마가 그릴 수 있는를 배경으로 선언 하므로 `OnCreate`의 레이아웃을 로드할 필요가 없습니다.
 
 백 스택에서 액티비티를 제거하기 위한 `NoHistory=true` 특성을 설정하는 것이 중요합니다. 시작 프로세스를 취소시키는 뒤로 가기 버튼을 막기 위해서 `OnBackPressed` 역시 재정의하고 아무 작업도 수행하지 않습니다.
 
@@ -209,7 +221,7 @@ public class MainActivity : AppCompatActivity
 
 7. 빌드하고 앱을 다시 실행합니다. 시작 화면이 계속 표시되는 동안 가로 모드로 장치를 회전합니다. 다음과 같이 시작 화면이 가로 버전으로 변경됩니다.
 
-    [![시작 화면에서 가로 모드로 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [![ 시작 화면을 가로 모드로 회전](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 참고로 가로 모드 시작 화면을 사용하면 항상 매끄럽지 못한 환경을 제공합니다. 기본적으로 Android 앱은 장치가 이미 가로 모드일지라도 세로 모드로 시작하고 그것을 가로 모드로 전환합니다. 결과적으로, 장치가 가로 모드에 있는 동안 앱을 실행하는 경우, 장치는 세로 시작 화면을 간략하게 표시한 다음 세로에서 가로 시작 화면으로 애니메이션하면서 회전합니다. 불행하게도, 이 초기 세로-가로 전환은 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape`이 시작 액티비티의 플래그에 지정되어 있을지라도 일어납니다. 이 제한을 해결하는 가장 좋은 방법은 가로 세로 모드 모두 제대로 렌더링 가능한 단일 시작 화면 이미지를 만드는 것입니다.
 
