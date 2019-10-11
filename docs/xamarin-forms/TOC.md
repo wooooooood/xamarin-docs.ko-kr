@@ -253,7 +253,7 @@
 #### [항목 커서 색](platform/ios/entry-cursor-color.md)
 #### [항목 글꼴 크기](platform/ios/entry-font-size.md)
 #### [서식](platform/ios/formatting.md)
-#### [iPad 모달 페이지 프레젠테이션 스타일](platform/ios/ipad-page-presentation-style.md)
+#### [모달 페이지 프레젠테이션 스타일](platform/ios/page-presentation-style.md)
 #### [대용량 페이지 제목](platform/ios/page-large-title.md)
 #### [ListView 그룹 헤더 스타일](platform/ios/listview-group-header-style.md)
 #### [ListView 행 애니메이션](platform/ios/listview-row-animations.md)
