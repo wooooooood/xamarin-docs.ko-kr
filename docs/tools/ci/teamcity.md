@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
-ms.openlocfilehash: 6ffd1c3e42dbaf0a82b07cd9e0a00228c5fa0604
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70293132"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273134"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin과 함께 팀 도시 사용
 
@@ -134,7 +134,7 @@ Xamarin Android 응용 프로그램을 컴파일하려면 **xbuild** 에서 프�
 
 #### <a name="submitting-xamarinuitests-to-test-cloud"></a>Test Cloud에 Uitest을 제출 하는 중
 
-다음 코드 조각과 같이 uitest `test-cloud.exe` 는 응용 프로그램을 사용 하 여 제출 됩니다.
+Uitest는 다음 코드 조각과 같이 `test-cloud.exe` 응용 프로그램을 사용 하 여 제출 됩니다.
 
 ```bash
 test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <device-selection-id> --assembly-dir <path-to-tests-containing-test-assemblies> --nunit-xml report.xml --user <email>
@@ -142,11 +142,11 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 테스트를 실행 하면 테스트 결과가 NUnit 스타일 XML 파일 ( **report .xml**)의 형태로 반환 됩니다. TeamCity는 빌드 로그에 정보를 표시 합니다.
 
-Test Cloud에 Uitest을 제출 하는 방법에 대 한 자세한 내용은 Uitest을 [업로드 하기 위해](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest/)이 가이드를 참조 하세요.
+Test Cloud에 Uitest를 제출 하는 방법에 대 한 자세한 내용은 [Xamarin Android 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) 또는 [xamarin.ios 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)를 참조 하세요.
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Test Cloud에 Calabash 테스트 제출
 
-다음 코드 조각과 같이 calabash 테스트 `test-cloud` 는 보석을 사용 하 여 제출 됩니다.
+Calabash 테스트는 다음 코드 조각에 표시 된 것 처럼 `test-cloud`의 보석을 사용 하 여 제출 됩니다.
 
 ```bash
 test-cloud submit /path/to/APK-or-IPA <test-cloud-team-api-key> --devices <device-id> --user <email>
@@ -167,35 +167,35 @@ TeamCity가 설치 되어 Mac용 Visual Studio 프로젝트를 빌드할 수 있
 
 1. 웹 브라우저를 통해 TeamCity에 로그인 하 여 시작 합니다. 루트 프로젝트로 이동 합니다.
 
-    ![루트 프로젝트로 이동](teamcity-images/image2.png "루트 프로젝트로 이동") 루트 프로젝트 아래에서 새 하위 프로젝트를 만듭니다.
+    루트 ![프로젝트로 이동]루트 프로젝트 아래의(teamcity-images/image2.png "루트 프로젝트로 이동") 하 여 새 하위 프로젝트를 만듭니다.
 
-    ![루트 프로젝트 아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다] . (teamcity-images/image3.png "루트 프로젝트 아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다") .
+    루트 프로젝트 ![아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다].(teamcity-images/image3.png "루트 프로젝트 아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다") .
 2. 하위 프로젝트를 만든 후 새 빌드 구성을 추가 합니다.
 
-    ![하위 프로젝트를 만든 후 새 빌드 구성을 추가] 합니다. (teamcity-images/image5.png "하위 프로젝트를 만든 후 새 빌드 구성을 추가") 합니다.
+    ![하위 프로젝트를 만든 후](teamcity-images/image5.png "하위 프로젝트를 만든 후 새 빌드 구성을 추가 하 고 새 빌드 구성을 추가") 합니다.
 3. 빌드 구성에 VCS 프로젝트를 연결 합니다. 이 작업은 버전 제어 설정 화면을 통해 수행 됩니다.
 
-    ![이 작업은 버전 제어 설정 화면을 통해 수행 됩니다] . (teamcity-images/image6.png "이 작업은 버전 제어 설정 화면을 통해 수행 됩니다") .
+    버전 제어 설정 화면을 ![통해 수행]됩니다.(teamcity-images/image6.png "이 작업은 버전 제어 설정 화면을 통해 수행") 됩니다.
 
     생성 된 VCS 프로젝트가 없는 경우 아래에 표시 된 새 VCS 루트 페이지에서 만들 수 있습니다.
 
-    ![생성 된 vcs 프로젝트가 없는 경우 새 Vcs 루트 페이지에서 만들 수 있는 옵션이 있습니다] . (teamcity-images/image7.png "생성 된 vcs 프로젝트가 없는 경우 새 Vcs 루트 페이지에서 만들 수 있는 옵션이 있습니다") .
+    생성 된 VCS 프로젝트가 없는 경우 ![새 Vcs 루트 페이지에서 만들 수 있는 옵션이 있습니다].(teamcity-images/image7.png "vcs 프로젝트가 생성 되지 않은 경우 새 vcs 루트 페이지에서 만들 수 있는 옵션이 있습니다") .
 
     VCS 루트가 연결 되 면 TeamCity는 프로젝트를 체크 아웃 하 고 빌드 단계를 자동 검색 합니다. TeamCity에 익숙한 경우 검색 된 빌드 단계 중 하나를 선택할 수 있습니다. 지금은 검색 된 빌드 단계를 무시 해도 됩니다.
 
 4. 다음으로 빌드 트리거를 구성 합니다. 이렇게 하면 사용자가 리포지토리에 코드를 커밋하는 경우와 같이 특정 조건이 충족 될 때 빌드를 큐에 대기 합니다. 다음 스크린샷은 빌드 트리거를 추가 하는 방법을 보여 줍니다.
 
-    ![이 스크린샷에서는 빌드 트리거를 추가 하는 방법을 보여 줍니다] . (teamcity-images/image8.png "이 스크린샷에서는 빌드 트리거를 추가 하는 방법을 보여 줍니다") . 빌드 트리거를 구성 하는 예는 다음 스크린샷에서 볼 수 있습니다.
+    ![이 스크린샷에서는 빌드 트리거를 추가 하는 방법을 보여 줍니다].이 스크린샷은 빌드 트리거를(teamcity-images/image8.png "추가 하는 방법을 보여") 줍니다. 빌드 트리거를 구성 하는 예제는 다음 스크린샷에서 볼 수 있습니다.
 
-    ![이 스크린샷에서 빌드 트리거를 구성 하는 예제를 볼 수 있습니다] . (teamcity-images/image9.png "이 스크린샷에서 빌드 트리거를 구성 하는 예제를 볼 수 있습니다") .
+    ![이 스크린샷에서 빌드 트리거를 구성]하는 예제를 볼 수 있습니다.(teamcity-images/image9.png "이 스크린샷에서 빌드 트리거를 구성") 하는 예제를 볼 수 있습니다.
 
 5. 이전 섹션인 빌드 스크립트를 매개 변수화 하 여 일부 값을 환경 변수로 저장 하는 것이 좋습니다. 이러한 변수는 매개 변수 화면을 통해 빌드 구성에 추가할 수 있습니다. 아래 스크린샷에 표시 된 것 처럼 Test Cloud API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가 합니다.
 
-    ![TEST CLOUD API 키, iOS 장치 id 및 Android 장치 id에 대 한 변수를 추가] 합니다. (teamcity-images/image11.png "TEST CLOUD API 키, iOS 장치 id 및 Android 장치 id에 대 한 변수를 추가") 합니다.
+    ![TEST CLOUD Api 키, ios 장치 id 및 Android 장치 id에 대 한 변수를 추가]하 여(teamcity-images/image11.png "Test Cloud Api 키, ios 장치 Id 및 android 장치 id에 대 한 변수를 추가") 합니다.
 
 6. 최종 단계는 빌드 스크립트를 호출 하 여 응용 프로그램을 컴파일하고 응용 프로그램을 Test Cloud에 큐에 추가 하는 빌드 단계를 추가 하는 것입니다. 다음 스크린샷은 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예입니다.
 
-    ![이 스크린샷은 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예] 입니다. (teamcity-images/image12.png "이 스크린샷은 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예") 입니다.
+    ![이 스크린샷에는 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예가 나와 있습니다].(teamcity-images/image12.png "이 스크린샷은 rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예") 입니다.
 
 7. 이때 빌드 구성이 완료 됩니다. 빌드를 트리거하여 프로젝트가 제대로 구성 되어 있는지 확인 하는 것이 좋습니다. 이 작업을 수행 하는 좋은 방법은 리포지토리에 작은 사소한 변경을 커밋하는 것입니다. TeamCity는 커밋을 검색 하 고 빌드를 시작 해야 합니다.
 
@@ -209,5 +209,6 @@ TeamCity가 설치 되어 Mac용 Visual Studio 프로젝트를 빌드할 수 있
 
 ## <a name="related-links"></a>관련 링크
 
-- [Uitest 함 업로드 준비](/appcenter/test-cloud/preparing-for-upload/uitest/)
+- [Xamarin Android 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
+- [Xamarin.ios 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [TeamCity 설치 및 구성](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

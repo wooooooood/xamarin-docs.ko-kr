@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2019
-ms.openlocfilehash: a79f22fa96c4c34d2a9704e9aa3be3825895a15b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e4584867e457661b2dfaa43fcbde7b1adcabeb85
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291591"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273098"
 ---
 # <a name="xamarinforms-requirements"></a>Xamarin.Forms 요구 사항
 
@@ -24,9 +24,11 @@ _Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항._
 
 다음 운영 체제에 대한 Xamarin.Forms 애플리케이션을 작성할 수 있습니다.
 
-- iOS 8 이상
-- Android 5.0 (API 21) 이상 ([자세한 내용](#android))
+- iOS 9 이상
+- Android 4.4(API 19) 이상([자세한 내용](#android))
 - Windows 10 UWP(Universal Windows Platform)([자세한 내용)](#windows10))
+
+그러나 Android 5.0 (API 21)는 최소 API로 권장 됩니다. 이렇게 하면 대부분의 Android 장치를 대상으로 하면서 모든 Android 지원 라이브러리와 완벽 하 게 호환 됩니다.
 
 개발자가 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)에 대해 잘 알고 있다고 가정 합니다.
 
