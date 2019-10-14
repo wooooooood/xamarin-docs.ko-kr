@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: ba29e57008bfea420562d88ab1612c09f4460e85
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: b8c6ed9e803b8dec05b2279ed93f956ed11a1c07
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651067"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997113"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Xamarin.Forms에서의 키보드 접근성
 
@@ -121,11 +121,11 @@ ms.locfileid: "68651067"
 
 컨트롤의 탭 순서를 설정하는 것 외에 탭 순서에서 컨트롤을 제외해야 할 수도 있습니다. 이를 달성하는 한 가지 방법은 컨트롤의 [`IsEnabled`](xref:Xamarin.Forms.VisualElement) 속성을 `false`로 설정하는 것입니다. 사용할 수 없는 컨트롤은 탭 순서에서 제외되기 때문입니다.
 
-그러나 컨트롤을 사용할 수 없는 경우에도 탭 순서에서 컨트롤을 제외해야 할 수 있습니다. 이 작업은 [`VisualElement`](xref:Xamarin.Forms.VisualElement)가 탭 탐색에 포함됐는지 여부를 나타내는 `VisualElement.IsTapStop` 속성을 통해 달성할 수 있습니다. 해당 기본값은 `true`이며, 해당 값이 `false`인 경우 컨트롤은 `TabIndex`가 설정됐는지 여부에 관계 없이 탭 탐색 인프라에서 무시됩니다.
+그러나 컨트롤을 사용할 수 없는 경우에도 탭 순서에서 컨트롤을 제외해야 할 수 있습니다. 이 작업은 [`VisualElement`](xref:Xamarin.Forms.VisualElement)가 탭 탐색에 포함됐는지 여부를 나타내는 `VisualElement.IsTabStop` 속성을 통해 달성할 수 있습니다. 해당 기본값은 `true`이며, 해당 값이 `false`인 경우 컨트롤은 `TabIndex`가 설정됐는지 여부에 관계 없이 탭 탐색 인프라에서 무시됩니다.
 
 ## <a name="supported-controls"></a>지원되는 컨트롤
 
-`TabIndex` 및 `IsTapStop` 속성은 하나 이상의 플랫폼에서 키보드 입력을 허용하는 다음 컨트롤에 대해 지원됩니다.
+`TabIndex` 및 `IsTabStop` 속성은 하나 이상의 플랫폼에서 키보드 입력을 허용하는 다음 컨트롤에 대해 지원됩니다.
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 9e49dfa99ccb6aae49a72ce044bb8071c210336e
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
+ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198572"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71997145"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -278,6 +278,11 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
 
 트리거가 발생할 때 변경 내용을 구현하는 또 다른 방법은 `EnterActions` 및 `ExitActions` 컬렉션을 추가하고 `TriggerAction<T>` 구현을 지정하는 것입니다.
 
+[`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) 컬렉션은 트리거 조건이 충족될 때 호출되는 [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) 개체의 `IList`를 정의하는 데 사용됩니다. [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) 컬렉션은 트리거 조건이 더 이상 충족되지 않을 때 호출되는 `TriggerAction` 개체의 `IList`를 정의하는 데 사용됩니다.
+
+> [!NOTE]
+> `EnterActions` 및 `ExitActions` 컬렉션에 정의된 [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) 개체는 [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) 클래스에 의해 무시됩니다.    
+
 트리거에서 `Setter`뿐만 아니라 `EnterActions` 및 `ExitActions`도 *모두* 제공할 수 있지만, `Setter`가 즉시 호출된다는 점에 주의하세요(`EnterAction` 또는 `ExitAction`이 완료될 때까지 기다리지 않음). 또는 코드에 있는 모든 작업을 수행할 수 있으며 `Setter`는 전혀 사용하지 않습니다.
 
 ```xaml
@@ -292,7 +297,7 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -327,8 +332,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
-
-참고: `EnterActions` 및 `ExitActions`는 **이벤트 트리거**에서 무시됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

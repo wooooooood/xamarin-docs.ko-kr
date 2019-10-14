@@ -6,19 +6,21 @@ ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2019
-ms.openlocfilehash: a4d246419c7449c2395759cf5a8b04469e7a2309
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.date: 10/08/2019
+ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
+ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820995"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72170970"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 게시-구독 패턴은 게시자가 구독자로 알려진 수신자를 몰라도 메시지를 보내는 메시징 패턴입니다. 마찬가지로 구독자는 게시자를 전혀 알지 못해도 특정 메시지를 수신 대기합니다.
+
+.NET의 이벤트는 게시-구독 패턴을 구현하는데, 이는 컨트롤과 컨트롤을 포함하는 페이지처럼 느슨한 결합이 필요하지 않은 경우 구성 요소 간의 통신 레이어를 위한 가장 간단한 접근 방식입니다. 그러나 게시자 수명과 구독자 수명은 상호 개체 참조에 의해 결합되어 있으며, 구독자 유형에는 게시자 유형에 대한 참조가 있어야 합니다. 이로 인해 특히 정적 이벤트를 구독하는 수명이 짧은 개체 또는 수명이 긴 개체가 있는 경우 메모리 관리 문제가 발생할 수 있습니다. 이벤트 처리기가 제거되지 않은 경우, 구독자는 게시자에 있는 해당 구독자에 대한 참조에 의해 활성 상태로 유지되고, 이로 인해 구독자의 가비지 수집이 방지 또는 지연됩니다.
 
 Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스는 게시-구독 패턴을 구현하여 개체 및 형식 참조로 연결하기 불편한 구성 요소 사이의 메시지 기반 통신을 허용합니다. 이 메커니즘을 통해 게시자와 구독자가 서로를 참조하지 않고 통신할 수 있으므로 둘 사이의 종속성을 줄일 수 있습니다.
 

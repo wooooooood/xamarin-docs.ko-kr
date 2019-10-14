@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 71e509d87dc2a2947821084aea5668055f6f4678
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 335fb03cd190752d488f047bdf22f67d72f30c2e
+ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771501"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72032567"
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
 
@@ -85,7 +85,7 @@ namespace DependencyServiceDemos.iOS
 
 이 시점에서 `GetImageStreamAsync` 메서드는 `Task<Stream>` 개체를 호출하는 코드에 해당 개체를 반환해야 합니다. 이 태스크는 사용자가 사진 라이브러리와 상호 작용을 완료하고 이벤트 처리기 중 하나를 호출하는 경우에만 완료됩니다. 이와 같은 경우에 [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) 클래스는 필수입니다. 클래스는 `GetImageStreamAsync` 메서드에서 반환할 적절한 제네릭 형식의 `Task` 개체를 제공하며, 해당 클래스는 태스크를 완료한 경우 나중에 신호를 받을 수 있습니다.
 
-`FinishedPickingMedia` 이벤트 처리기는 사용자가 사진을 선택한 경우 호출됩니다. 하지만 해당 처리기는 `UIImage` 개체를 제공하고 `Task`는 .NET `Stream` 개체를 반환해야 합니다. 이 반환은 두 단계로 수행됩니다. 먼저 `UIImage` 개체가 `NSData` 개체에 저장된 메모리에서 JPEG 파일로 변환된 다음, `NSData` 개체가 .NET `Stream` 개체로 변환됩니다. `TaskCompletionSource` 개체의 `SetResult` 메서드에 대한 호출은 `Stream` 개체를 제공하여 태스크를 완료합니다.
+`FinishedPickingMedia` 이벤트 처리기는 사용자가 사진을 선택한 경우 호출됩니다. 하지만 해당 처리기는 `UIImage` 개체를 제공하고 `Task`는 .NET `Stream` 개체를 반환해야 합니다. 이 반환은 두 단계로 수행됩니다. 먼저 `UIImage` 개체가 `NSData` 개체에 저장된 메모리 내 PNG 또는 JPEG 파일로 변환된 다음, `NSData` 개체가 .NET `Stream` 개체로 변환됩니다. `TaskCompletionSource` 개체의 `SetResult` 메서드에 대한 호출은 `Stream` 개체를 제공하여 태스크를 완료합니다.
 
 ```csharp
 namespace DependencyServiceDemos.iOS
@@ -102,7 +102,15 @@ namespace DependencyServiceDemos.iOS
             if (image != null)
             {
                 // Convert UIImage to .NET Stream object
-                NSData data = image.AsJPEG(1);
+                NSData data;
+                if (args.ReferenceUrl.PathExtension.Equals("PNG") || args.ReferenceUrl.PathExtension.Equals("png"))
+                {
+                    data = image.AsPNG();
+                }
+                else
+                {
+                    data = image.AsJPEG(1);
+                }
                 Stream stream = data.AsStream();
 
                 UnregisterEventHandlers();
