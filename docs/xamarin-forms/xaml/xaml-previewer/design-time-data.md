@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: a6a34615adc9cf290ff6bf9dd344487e5f29cfa2
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
+ms.sourcegitcommit: 43423d4018cc0d4b0b8c98a4b3da0704495eb0cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69887851"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72303248"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>XAML 미리 보기에서 디자인 타임 데이터 사용
 
-_일부 레이아웃은 데이터 없이 시각화 하기가 어렵습니다. 이러한 팁을 사용 하 여 XAML 미리 보기에서 데이터를 많이 사용 하는 페이지의 미리 보기를 최대한 활용할 수 있습니다._
+@no__t-일부 레이아웃은 데이터 없이 시각화 하기가 어렵습니다. 이러한 팁을 사용 하 여 XAML 미리 보기에서 데이터를 많이 사용 하는 페이지의 미리 보기를 최대한 활용할 수 있습니다. _
 
 ## <a name="design-time-data-basics"></a>디자인 타임 데이터 기본 사항
 
@@ -28,7 +28,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-네임 스페이스를 추가한 후에는 특성 `d:` 또는 컨트롤 앞에 배치 하 여 XAML 미리 보기에 표시할 수 있습니다. 가 있는 `d:` 요소는 런타임에 표시 되지 않습니다.
+네임 스페이스를 추가한 후에는 특성 또는 컨트롤 앞에 `d:`을 추가 하 여 XAML 미리 보기에 표시할 수 있습니다. @No__t-0 인 요소는 런타임에 표시 되지 않습니다.
 
 예를 들어 일반적으로 데이터가 바인딩된 레이블에 텍스트를 추가할 수 있습니다.
 
@@ -36,17 +36,17 @@ mc:Ignorable="d"
 <Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
-[![레이블에 텍스트를 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-label-sm.png "텍스트를 사용 하 여 시간 데이터 디자인")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
+[레이블(xaml-previewer-images/designtimedata-label-sm.png "디자인 타임 데이터") ![의 텍스트를 사용 하 여 시간 데이터를 디자인]합니다.](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-이 예제에서를 사용 `d:Text`하지 않으면 XAML 미리 보기에서 레이블에 아무것도 표시 되지 않습니다. 대신 "이름!"이 표시 됩니다. 여기서 레이블에는 런타임에 실제 데이터가 포함 됩니다.
+이 예제에서 `d:Text`이 없으면 XAML 미리 보기에서 레이블에 아무 것도 표시 되지 않습니다. 대신 "이름!"이 표시 됩니다. 여기서 레이블에는 런타임에 실제 데이터가 포함 됩니다.
 
-색, 글꼴 `d:` 크기 및 간격과 같은 xamarin.ios 컨트롤의 특성과 함께를 사용할 수 있습니다. 컨트롤 자체에 추가할 수도 있습니다.
+색, 글꼴 크기 및 간격과 같이 Xamarin.ios 컨트롤의 특성과 함께 `d:`을 사용할 수 있습니다. 컨트롤 자체에 추가할 수도 있습니다.
 
 ```xaml
 <d:Button Text="Design Time Button" />
 ```
 
-[![단추 컨트롤을 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-controls-sm.png "단추 컨트롤을 사용 하 여 시간 데이터 디자인")](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
+[단추 컨트롤을 사용 하 여 단추 컨트롤(xaml-previewer-images/designtimedata-controls-sm.png "디자인 타임 데이터") 를 ![사용 하 여 시간 데이터 디자인]](xaml-previewer-images/designtimedata-controls-lg.png#lightbox)
 
 이 예제에서 단추는 디자인 타임에만 표시 됩니다. 이 메서드를 사용 하 여 [XAML 미리 보기에서 지원 되지 않는 사용자 지정 컨트롤](render-custom-controls.md)에 대 한 자리 표시자를에 삽입할 수 있습니다.
 
@@ -58,7 +58,7 @@ mc:Ignorable="d"
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 
-[![이미지를 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-image-sm.png "Iamges를 사용 하 여 디자인 타임 데이터")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
+[(xaml-previewer-images/designtimedata-image-sm.png "Iamges를 사용 하 여") ![이미지를 사용 하 여]디자인 타임 데이터 디자인 타임 데이터](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## <a name="design-time-data-for-listviews"></a>Listview에 대 한 디자인 타임 데이터
 
@@ -84,15 +84,54 @@ Listview은 모바일 앱에 데이터를 표시 하는 인기 있는 방법입�
 </StackLayout>
 ```
 
-[![ListView를 사용 하 여 디자인 타임 데이터](xaml-previewer-images/designtimedata-itemssource-sm.png "ListView를 사용 하 여 디자인 타임 데이터")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
+[Listview를 사용 하 여 ListView(xaml-previewer-images/designtimedata-itemssource-sm.png "디자인 타임 데이터") 를 ![사용 하 여 시간 데이터 디자인]](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
-이 예제에서는 XAML 미리 보기에서 3 개의 TextCells의 ListView를 표시 합니다. 프로젝트의 기존 `x:String` 데이터 모델로 변경할 수 있습니다.
+이 예제에서는 XAML 미리 보기에서 3 개의 TextCells의 ListView를 표시 합니다. @No__t-0을 프로젝트의 기존 데이터 모델로 변경할 수 있습니다.
 
-더 복잡 한 예제는 [James Montemagno 'S Hanselman 앱](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) 을 참조 하세요.
+데이터 개체의 배열을 만들 수도 있습니다. 예를 들어 `Monkey` 데이터 개체의 public 속성은 디자인 타임 데이터로 생성 될 수 있습니다.
+
+```csharp
+namespace Monkeys.Models
+{
+    public class Monkey
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+    }
+}
+```
+
+XAML에서 클래스를 사용 하려면 루트 노드의 네임 스페이스를 가져와야 합니다.
+
+```xaml
+xmlns:models="clr-namespace:Monkeys.Models"
+```
+
+```xaml
+<StackLayout>
+    <ListView ItemsSource="{Binding Items}">
+        <d:ListView.ItemsSource>
+            <x:Array Type="{x:Type models:Monkey}">
+                <models:Monkey Name="Baboon" Location="Africa and Asia"/>
+                <models:Monkey Name="Capuchin Monkey" Location="Central and South America"/>
+                <models:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
+            </x:Array>
+        </d:ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:Monkey">
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Location}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>
+```
+
+여기서는 사용 하려는 실제 모델에 바인딩할 수 있다는 이점도 있습니다.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>대안과 정적 ViewModel 하드 코딩
 
-디자인 타임 데이터를 개별 컨트롤에 추가 하지 않으려는 경우에는 해당 페이지에 바인딩할 모의 데이터 저장소를 설정할 수 있습니다. XAML에서 정적 ViewModel에 바인딩하는 방법을 보려면 James Montemagno의 [디자인 시 데이터 추가에 대한 블로그 게시물](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data)을 참조하십시오.
+디자인 타임 데이터를 개별 컨트롤에 추가 하지 않으려는 경우에는 해당 페이지에 바인딩할 모의 데이터 저장소를 설정할 수 있습니다. XAML에서 정적 ViewModel에 바인딩하는 방법을 보려면 James Montemagno의 [디자인 시 데이터 추가에 대한 블로그 게시물](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/)을 참조하십시오.
 
 ## <a name="troubleshooting"></a>문제 해결
 
