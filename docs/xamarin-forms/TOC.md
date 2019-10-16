@@ -101,6 +101,7 @@
 #### [손가락 모으기](app-fundamentals/gestures/pinch.md)
 #### [이동](app-fundamentals/gestures/pan.md)
 #### [살짝 밀기](app-fundamentals/gestures/swipe.md)
+### [로컬 알림](app-fundamentals/local-notifications.md)
 ### [지역화](app-fundamentals/localization/index.md)
 #### [문자열 및 이미지 지역화](app-fundamentals/localization/text.md)
 #### [오른쪽에서 왼쪽으로 지역화](app-fundamentals/localization/right-to-left.md)
