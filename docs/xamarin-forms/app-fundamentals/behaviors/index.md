@@ -20,9 +20,9 @@ _동작(Behavior)을 사용하면 서브클래스 없이도 사용자 인터페�
 
 ## <a name="introduction-to-behaviorsintroductionmd"></a>[동작 소개](introduction.md)
 
-동작을 사용하면 코드가 컨트롤에 간결하게 첨부될 수 있도록 컨트롤의 API와 직접 상호 작용하기 때문에, 대개 코드 비하인드에서 작성해야 하는 코드를 구현할 수 있습니다. 이 문서에는 동작을 소개합니다.
+동작을 사용하면 코드가 컨트롤에 간결하게 첨부될 수 있도록 컨트롤의 API와 직접 상호 작용하기 때문에, 대개 코드 숨김으로 작성해야 하는 코드를 구현할 수 있습니다. 이 문서에는 동작을 소개합니다.
 
-## <a name="attached-behaviorsattachedmd"></a>[첨부된 동작](attached.md)
+## <a name="attached-behaviorsattachedmd"></a>[연결된 동작](attached.md)
 
 첨부된 동작은 첨부된 속성이 하나 이상 있는 `static` 클래스입니다. 이 문서에서는 첨부된 동작을 만들고 사용하는 방법을 보여줍니다.
 
@@ -32,4 +32,4 @@ Xamarin.Forms 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behav
 
 ## <a name="reusable-behaviorsreusableindexmd"></a>[재사용 가능한 동작](reusable/index.md)
 
-동작은 하나 이상의 애플리케이션에서 다시 사용할 수 있습니다. 이 문서에서는 일반적으로 사용되는 기능을 수행하는 유용한 동작을 만드는 방법을 설명합니다.
+동작은 둘 이상의 애플리케이션에서 다시 사용할 수 있습니다. 이 문서에서는 일반적으로 사용되는 기능을 수행하는 유용한 동작을 만드는 방법을 설명합니다.
