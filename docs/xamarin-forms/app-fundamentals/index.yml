@@ -79,6 +79,12 @@ sections:
               src: 'https://docs.microsoft.com/media/common/i_form.svg'
               href: gestures/index.md
             title: 제스처
+          - href: local-notifications.md
+            html: Xamarin.Froms에서 로컬 알림을 보내고 받는 방법에 대해 알아봅니다.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_push-notification.svg'
+              href: local-notifications.md
+            title: 로컬 알림
           - href: localization/index.md
             html: Xamarin.Forms를 사용하여 다국어 애플리케이션을 개발하는 방법을 알아봅니다.
             image:
