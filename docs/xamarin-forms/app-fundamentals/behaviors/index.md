@@ -16,7 +16,7 @@ ms.locfileid: "38997161"
 ---
 # <a name="xamarinforms-behaviors"></a>Xamarin.Forms 동작
 
-_동작(Behavior)을 사용하면 서브클래스 없이도 사용자 인터페이스 컨트롤에 기능을 추가할 수 있습니다. 동작은 코드로 작성되고 XAML 또는 코드 내의 컨트롤에 추가됩니다._
+_동작을 사용하면 서브클래스 없이도 사용자 인터페이스 컨트롤에 기능을 추가할 수 있습니다. 동작은 코드로 작성되고 XAML 또는 코드의 컨트롤에 추가됩니다._
 
 ## <a name="introduction-to-behaviorsintroductionmd"></a>[동작 소개](introduction.md)
 
