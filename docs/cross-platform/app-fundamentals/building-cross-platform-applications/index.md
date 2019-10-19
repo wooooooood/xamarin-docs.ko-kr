@@ -7,15 +7,15 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/28/2016
 ms.openlocfilehash: 2c630e58ff5a1221ec9e95099df4781041ecf2b4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70288051"
 ---
 # <a name="building-cross-platform-applications"></a>플랫폼 간 애플리케이션 빌드
 
-플랫폼 간 모바일 응용 프로그램 간에 코드를 공유 하는 두 가지 옵션이 있습니다. 공유 자산 프로젝트 및 이식 가능한 클래스 라이브러리. 이러한 옵션은 [여기에 설명](~/cross-platform/app-fundamentals/code-sharing.md)되어 있습니다. [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md) 및 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md) 에 대 한 자세한 정보도 제공 됩니다.
+플랫폼 간 모바일 응용 프로그램 간에 코드를 공유 하는 두 가지 옵션이 있습니다. 공유 자산 프로젝트와 이식 가능한 클래스 라이브러리입니다. 이러한 옵션은 [여기에 설명](~/cross-platform/app-fundamentals/code-sharing.md)되어 있습니다. [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md) 및 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md) 에 대 한 자세한 정보도 제공 됩니다.
 
 <a name="Sections" />
 
@@ -46,7 +46,7 @@ ms.locfileid: "70288051"
 Tasky는 iOS, Android 및 Windows Phone에 대 한 간단한 할 일 목록 응용 프로그램입니다.
 Xamarin을 사용 하 여 플랫폼 간 응용 프로그램을 만들고 로컬 SQLite 데이터베이스를 사용 하는 기본 사항을 보여 줍니다.
 
- tasky 목록 [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) tasky 목록 [ ![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ 목록 [![tasky 목록](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [![tasky](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 [Tasky 사례 연구](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)를 읽습니다.
 
@@ -65,6 +65,6 @@ Xamarin을 사용 하 여 플랫폼 간 응용 프로그램을 만들고 로컬 
 - [코드 공유 옵션](~/cross-platform/app-fundamentals/code-sharing.md)
 - [사례 연구: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Tasky 샘플 앱 (github)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Xamarin 모바일 응용 프로그램 개발: 플랫폼 C# 간 및 Xamarin 기본 형식 (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Xamarin 모바일 응용 프로그램 개발: 플랫폼 C# 간 및 Xamarin.ios 기본 사항 (Amazon)](http://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Greg Shackles를 사용한 C# 모바일 개발 (O'Reilly)](http://shop.oreilly.com/product/0636920024002.do)
 - [Scott Olson, John 헌터, C# 이혜준 Horgen, Kenny Goers (Wrox)의 전문 플랫폼 간 모바일 개발](http://www.wrox.com/WileyCDA/WroxTitle/Professional-Cross-Platform-Mobile-Development-in-C-.productCd-1118157702.html)

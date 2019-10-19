@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70758494"
 ---
 # <a name="introduction-to-android-wear"></a>Android Wear 소개
@@ -36,7 +36,7 @@ Android의 첫 번째 버전은 현재 hpc 응용 프로그램을 향상 된 알
 
 #### <a name="wearable-notifications"></a>Wearable 알림
 
-Android 마모를 지 원하는 가장 간단한 방법은 핸드헬드 장치와 wearable 장치 간에 알림의 공유 특성을 활용 하는 것입니다. Support v4 notification API 및 `WearableExtender` 클래스 ( [Xamarin Android 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)에서 사용 가능)를 사용 하 여 수신함 스타일 카드 또는 음성 입력과 같은 플랫폼의 기본 기능을 활용할 수 있습니다. [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) 샘플은 Android 마모 장치에 알림 목록을 보내는 방법을 보여 주는 예제 코드를 제공 합니다. 
+Android 마모를 지 원하는 가장 간단한 방법은 핸드헬드 장치와 wearable 장치 간에 알림의 공유 특성을 활용 하는 것입니다. Support v4 notification API 및 `WearableExtender` 클래스 ( [Xamarin Android 지원 라이브러리](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)에서 사용 가능)를 사용 하 여 수신함 스타일 카드 또는 음성 입력과 같은 플랫폼의 기본 기능을 탭 할 수 있습니다. [RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) 샘플은 Android 마모 장치에 알림 목록을 보내는 방법을 보여 주는 예제 코드를 제공 합니다. 
 
 #### <a name="companion-applications"></a>도우미 응용 프로그램
 
@@ -44,11 +44,11 @@ Android 마모를 지 원하는 가장 간단한 방법은 핸드헬드 장치�
 
 ### <a name="user-interface"></a>사용자 인터페이스
 
-마모를 위한 기본 탐색 패턴은 세로로 정렬 된 일련의 카드입니다. 이러한 각 카드에는 동일한 행에 계층화 된 관련 작업이 있을 수 있습니다. 클래스 `GridViewPager` 는이 기능을 제공 하며와 `ListView`동일한 어댑터 개념을 준수 합니다. 일반적으로를 각 `GridViewPager` 행과 `FragmentGridPagerAdaptor` 열 셀 `GridPagerAdaptor`을 `Fragment`로 나타낼 수 있는 (또는)와 연결 합니다. 
+마모를 위한 기본 탐색 패턴은 세로로 정렬 된 일련의 카드입니다. 이러한 각 카드에는 동일한 행에 계층화 된 관련 작업이 있을 수 있습니다. @No__t_0 클래스는이 기능을 제공 합니다. `ListView`와 동일한 어댑터 개념을 준수 합니다. 일반적으로 `GridViewPager`를 각 행과 열 셀을 `Fragment`로 나타낼 수 있는 `FragmentGridPagerAdaptor` (또는 `GridPagerAdaptor`)와 연결 합니다. 
 
 [![마모 탐색](intro-to-wear-images/2d-picker-sml.png "마모 탐색")](intro-to-wear-images/2d-picker.png#lightbox)
 
-또한 아래와 같이 작은 설명 텍스트를 포함 하는 큰 색 원으로 구성 된 작업 단추를 사용 합니다.  [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) 샘플에서는 마모 된 앱에서 `GridViewPager` 및 `GridPagerAdapter` 를 사용 하는 방법을 보여 줍니다.
+또한 아래와 같이 작은 설명 텍스트를 포함 하는 큰 색 원으로 구성 된 작업 단추를 사용 합니다.  [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) 샘플에서는 마모 된 앱에서 `GridViewPager` 및 `GridPagerAdapter`를 사용 하는 방법을 보여 줍니다.
 
 Android 마모 2.0은 마모 된 사용자 인터페이스에 탐색 서랍, 작업 서랍 및 인라인 작업 단추를 추가 합니다. Android 마모 2.0 사용자 인터페이스 요소에 대 한 자세한 내용은 Android [분석](https://www.google.com/design/spec-wear/system-overview/anatomy.html) 항목을 참조 하세요. 
 
@@ -56,15 +56,15 @@ Android 마모 2.0은 마모 된 사용자 인터페이스에 탐색 서랍, 작
 
 Android wearable는 두 가지 통신 Api를 제공 하 여 apps와 도우미 핸드헬드 앱 간의 통신을 용이 하 게 합니다. 
 
-**데이터 API** &ndash; 이 API는 wearable 장치와 핸드헬드 장치 간에 동기화 된 데이터 저장소와 비슷합니다. Android는이 작업을 수행 하는 것이 최적이 면 wearable와 핸드헬드 간의 변경 내용을 전파 합니다. Wearable가 범위를 벗어나는 경우 동기화는 나중에 큐에 대기 합니다. 이 API `WearableClass.DataApi`에 대 한 주 진입점은입니다. 이 API에 대 한 자세한 내용은 Android [데이터 항목 동기화](https://developer.android.com/training/wearables/data-layer/data-items.html) 항목을 참조 하세요. 
+이 API &ndash; **데이터 api** 는 wearable 장치와 핸드헬드 장치 간에 동기화 된 데이터 저장소와 비슷합니다. Android는이 작업을 수행 하는 것이 최적이 면 wearable와 핸드헬드 간의 변경 내용을 전파 합니다. Wearable가 범위를 벗어나는 경우 동기화는 나중에 큐에 대기 합니다. 이 API에 대 한 주 진입점은 `WearableClass.DataApi`입니다. 이 API에 대 한 자세한 내용은 Android [데이터 항목 동기화](https://developer.android.com/training/wearables/data-layer/data-items.html) 항목을 참조 하세요. 
 
-**메시지 API** &ndash; 이 API를 통해 하위 수준 통신 경로를 사용할 수 있습니다. 소형 페이로드는 핸드헬드 앱과 wearable 앱 간의 동기화 없이 단방향으로 전송 됩니다.
-이 API `WearableClass.MessageApi`에 대 한 주 진입점은입니다.
+이 API &ndash; **메시지 api** 를 통해 하위 수준 통신 경로를 사용할 수 있습니다. 소형 페이로드는 핸드헬드 앱과 wearable 앱 간의 동기화 없이 단방향으로 전송 됩니다.
+이 API에 대 한 주 진입점은 `WearableClass.MessageApi`입니다.
 이 API에 대 한 자세한 내용은 Android [메시지 보내기 및 받기](https://developer.android.com/training/wearables/data-layer/messages.html) 항목을 참조 하세요.
 
-각 API 수신기 인터페이스를 통해 이러한 메시지를 수신 하기 위한 콜백을 등록 하거나에서 `WearableListenerService`파생 되는 응용 프로그램에서 서비스를 구현할 수 있습니다.
+각 API 수신기 인터페이스를 통해 이러한 메시지를 수신 하기 위한 콜백을 등록 하거나, `WearableListenerService`에서 파생 되는 응용 프로그램에서 서비스를 구현할 수 있습니다.
 이 서비스는 Android 마모에 의해 자동으로 인스턴스화됩니다.
-[FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) 샘플에서는을 `WearableListenerService`구현 하는 방법을 보여 줍니다.
+[FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) 샘플에서는 `WearableListenerService`을 구현 하는 방법을 보여 줍니다.
 
 ### <a name="deployment"></a>배포
 
@@ -96,7 +96,7 @@ Android 마모 2.0에는 *복잡*한 레이아웃, 탐색 및 작업 서랍, 확
 
 Xamarin.ios를 사용 하 여 마모 된 2.0 앱을 빌드하려면 프로젝트에 **xamarin.ios** 패키지를 추가 해야 합니다 ( **찾아보기 탭**클릭).
 
-[![Xamarin. Android.](intro-to-wear-images/wear-nuget-2.0-sml.png "Xamarin.ios를 설치") 합니다.](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
+[![Xamarin. Android.](intro-to-wear-images/wear-nuget-2.0-sml.png "Xamarin.ios를 설치 합니다.")](intro-to-wear-images/wear-nuget-2.0.png#lightbox)
 
 이 NuGet 패키지에는 Android Support Wearable 및 마모 된 호환 라이브러리 모두에 대 한 바인딩이 포함 되어 있습니다.
 
@@ -130,7 +130,7 @@ Android 마모 2.0은 2014에서 초기 출시 이후 Android 출시에 대 한 
 
 ![곡선 레이아웃 예](intro-to-wear-images/curved-layout.png "곡선 레이아웃 예")
 
-`WearableRecyclerView`곡선 레이아웃 및 원형 스크롤 제스처를 지원 하도록 클래스를확장합니다.`RecyclerView` 자세한 내용은 Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) API 설명서를 참조 하세요. 
+`WearableRecyclerView`는 곡선 레이아웃과 원형 스크롤 제스처를 지원 하기 위해 `RecyclerView` 클래스를 확장 합니다. 자세한 내용은 Android [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) API 설명서를 참조 하세요. 
 
 #### <a name="standalone-apps"></a>독립 실행형 앱 
 
@@ -138,7 +138,7 @@ Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있�
 
 #### <a name="wrist-gestures"></a>손목 제스처 
 
-손목 제스처를 사용 하면 사용자가 터치 스크린 &ndash; 을 사용 하지 않고 앱과 상호 작용할 수 있으므로 사용자는 단일 손으로 앱에 응답할 수 있습니다. 지원 되는 두 가지 손목 제스처는 다음과 같습니다. 
+손목 제스처를 사용 하면 사용자가 터치 &ndash; 스크린을 사용 하지 않고 앱과 상호 작용할 수 있으므로 사용자는 단일 손으로 앱에 응답할 수 있습니다. 지원 되는 두 가지 손목 제스처는 다음과 같습니다. 
 
 - 긋기 손목
 - 긋기 손목
@@ -147,13 +147,13 @@ Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있�
 
 인라인 동작, 스마트 회신, 원격 입력, 확장 된 알림 및 알림에 대 한 새로운 브리징 모드와 같은 더 많은 마모 된 2.0 기능이 있습니다. 새 마모 된 2.0 기능에 대 한 자세한 내용은 Android [API 개요](https://developer.android.com/wear/preview/api-overview.html)를 참조 하세요. 
 
-## <a name="devices"></a>디바이스
+## <a name="devices"></a>장치
 
 Android를 실행할 수 있는 장치의 몇 가지 예는 다음과 같습니다.
 
 - [Motorola 360](https://moto360.motorola.com/)
-- [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-- [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
+- [LG G 조사식](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
+- [LG G 보기 R](http://www.lg.com/us/smartwatch/g-watch-r)
 - [Samsung 기어 라이브](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
 - [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
 - [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)

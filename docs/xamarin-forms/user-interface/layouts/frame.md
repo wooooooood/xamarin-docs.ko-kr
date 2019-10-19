@@ -8,10 +8,10 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/06/2019
 ms.openlocfilehash: 619b29a9d65594b1badd805c3361fe1a174d7174
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69976497"
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.ios 프레임
@@ -20,24 +20,24 @@ ms.locfileid: "69976497"
 
 Xamarin.ios [`Frame`](xref:Xamarin.Forms.Frame) 클래스는 색, 그림자 및 기타 옵션으로 구성할 수 있는 테두리를 사용 하 여 뷰를 래핑하는 데 사용 되는 레이아웃입니다. 프레임은 일반적으로 컨트롤 주위에 테두리를 만드는 데 사용 되지만 보다 복잡 한 UI를 만드는 데 사용할 수 있습니다. 자세한 내용은 [고급 프레임 사용](#advanced-frame-usage)을 참조 하세요.
 
-다음 스크린샷에서는 iOS `Frame` 및 Android의 컨트롤을 보여 줍니다.
+다음 스크린샷에서는 iOS 및 Android의 `Frame` 컨트롤을 보여 줍니다.
 
-(frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "Ios 및 android의") ["ios 및 android의 프레임 예제" 프레임 예제 ![]
+[![ "iOS 및 Android의 프레임 예제"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "IOS 및 Android의 프레임 예제")
 
-클래스 `Frame` 는 다음 속성을 정의 합니다.
+@No__t_0 클래스는 다음 속성을 정의 합니다.
 
-* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)테두리의 색을 결정 하는 값입니다.`Color` `Frame`
-* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)모퉁이의 둥근 반경을 결정 하는 값입니다.`float`
-* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow)프레임에 그림자가 있는지 여부를 결정 하는 값입니다.`bool`
+* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) `Frame` 테두리의 색을 결정 하는 `Color` 값입니다.
+* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) 는 모퉁이의 둥근 반경을 결정 하는 `float` 값입니다.
+* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 은 프레임에 그림자가 있는지 여부를 결정 하는 `bool` 값입니다.
 
-이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. `Frame` 즉,이 데이터 바인딩의 대상이 될 수 있습니다.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, `Frame` 데이터 바인딩의 대상이 될 수 있습니다.
 
 > [!NOTE]
-> `HasShadow` 속성 동작은 플랫폼에 따라 다릅니다. 기본값은 모든 플랫폼 `true` 에 있습니다. 그러나 UWP 드롭 그림자는 렌더링 되지 않습니다. 그림자는 Android 및 iOS에서 렌더링 되지만 iOS의 그림자는 더 어둡고 더 많은 공간을 차지 합니다.
+> @No__t_0 속성 동작은 플랫폼에 따라 다릅니다. 모든 플랫폼에서 기본값은 `true`입니다. 그러나 UWP 드롭 그림자는 렌더링 되지 않습니다. 그림자는 Android 및 iOS에서 렌더링 되지만 iOS의 그림자는 더 어둡고 더 많은 공간을 차지 합니다.
 
 ## <a name="create-a-frame"></a>프레임 만들기
 
-는 `Frame` XAML에서 인스턴스화될 수 있습니다. 기본 `Frame` 개체에는 흰색 배경, 그림자 및 테두리 없음이 있습니다. 일반적 `Frame` 으로 개체는 다른 컨트롤을 래핑합니다. 다음 예제에서는 개체를 `Frame` `Label` 기본적으로 래핑하는 방법을 보여 줍니다.
+@No__t_0는 XAML에서 인스턴스화할 수 있습니다. 기본 `Frame` 개체에는 흰색 배경, 그림자 및 테두리 없음이 있습니다. 일반적으로 `Frame` 개체는 다른 컨트롤을 래핑합니다. 다음 예에서는 `Label` 개체를 래핑하는 기본 `Frame` 보여 줍니다.
 
 ```xaml
 <Frame>
@@ -45,7 +45,7 @@ Xamarin.ios [`Frame`](xref:Xamarin.Forms.Frame) 클래스는 색, 그림자 및 
 </Frame>
 ```
 
-코드 `Frame` 에서를 만들 수도 있습니다.
+@No__t_0 코드에서 만들 수도 있습니다.
 
 ```csharp
 Frame defaultFrame = new Frame
@@ -54,7 +54,7 @@ Frame defaultFrame = new Frame
 };
 ```
 
-`Frame`XAML에서 속성을 설정 하 여 모퉁이가 둥근 모퉁이, 색이 지정 된 테두리 및 그림자를 사용 하 여 개체를 사용자 지정할 수 있습니다. 다음 예제에서는 사용자 지정 `Frame` 된 개체를 보여 줍니다.
+XAML에서 속성을 설정 하 여 모퉁이가 둥근 모퉁이, 색이 지정 된 테두리 및 그림자를 사용 하 여 `Frame` 개체를 사용자 지정할 수 있습니다. 다음 예제에서는 사용자 지정 된 `Frame` 개체를 보여 줍니다.
 
 ```xaml
 <Frame BorderColor="Orange"
@@ -78,13 +78,13 @@ Frame frame = new Frame
 
 ## <a name="advanced-frame-usage"></a>고급 프레임 사용
 
-클래스 `Frame` 는에서 `ContentView`상속 합니다. 즉, 개체를 비롯 한 `Layout` 모든 `View` 형식의 개체를 포함할 수 있습니다. 이 기능 `Frame` 을 사용 하면를 사용 하 여 카드와 같은 복잡 한 UI 개체를 만들 수 있습니다.
+@No__t_0 클래스는 `ContentView`에서 상속 하며,이는 `Layout` 개체를 비롯 한 모든 형식의 `View` 개체를 포함할 수 있음을 의미 합니다. 이 기능을 사용 하면 `Frame`를 사용 하 여 카드와 같은 복잡 한 UI 개체를 만들 수 있습니다.
 
 ### <a name="create-a-card-with-a-frame"></a>프레임을 사용 하 여 카드 만들기
 
-개체를 개체`StackLayout` 와 같은 `Layout` 개체와 결합 하면 더 복잡 한 UI를 만들 수 있습니다. `Frame` 다음 스크린샷은 `Frame` 개체를 사용 하 여 만든 예제 카드를 보여줍니다.
+@No__t_0 개체를 `StackLayout` 개체와 같은 `Layout` 개체와 결합 하면 더 복잡 한 UI를 만들 수 있습니다. 다음 스크린샷은 `Frame` 개체를 사용 하 여 만든 예제 카드를 보여줍니다.
 
-"프레임을 사용 하 여 만든 카드 [의 스크린샷" 프레임을 사용 하 여 만든 카드의 스크린샷 ![](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "")
+["프레임을 사용 하 여 만든 카드의 스크린샷" ![](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "프레임을 사용 하 여 만든 카드의 스크린샷")
 
 다음 XAML은 `Frame` 클래스를 사용 하 여 카드를 만드는 방법을 보여 줍니다.
 
@@ -139,9 +139,9 @@ Frame cardFrame = new Frame
 
 ### <a name="round-elements"></a>Round 요소
 
-컨트롤의 속성을 사용 하 여 원 이미지를 만들 수 있습니다. `CornerRadius` `Frame` 다음 스크린샷은 `Frame` 개체를 사용 하 여 만든 라운드 이미지의 예를 보여 줍니다.
+@No__t_1 컨트롤의 `CornerRadius` 속성을 사용 하 여 원 이미지를 만들 수 있습니다. 다음 스크린샷은 `Frame` 개체를 사용 하 여 만든 라운드 이미지의 예를 보여 줍니다.
 
-"프레임을 사용 하 여 만든 [원 이미지의 스크린샷" 프레임을 사용 하 여 만든 원 이미지의 스크린샷 ![](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "")
+[![ "프레임으로 만든 원 이미지의 스크린샷"](frame-images/circle-image-cropped.png)](frame-images/frame-full.png#lightbox "프레임을 사용 하 여 만든 원 이미지의 스크린샷")
 
 다음 XAML은 XAML로 원 이미지를 만드는 방법을 보여 줍니다.
 
@@ -189,7 +189,7 @@ Frame circleImageFrame = new Frame
 각 플랫폼 프로젝트에는 **실외 .jpg** 이미지가 추가 되어야 하며,이는 플랫폼에 따라 달라 집니다. 자세한 내용은 [xamarin.ios의 이미지](~/xamarin-forms/user-interface/images.md)를 참조 하세요.
 
 > [!NOTE]
-> 모퉁이가 둥근 모퉁이는 플랫폼에서 약간 다르게 동작 합니다. 개체의 `Margin` 너비는 이미지 너비와 부모 프레임 너비의 1/2 사이 여야 하며 `Frame` 개체 내에서 이미지를 균등 하 게 맞추려면 음수 여야 합니다. `Image` 그러나 요청 된 너비와 높이는 보장 되지 않으므로 사용자의 `Margin` `HeightRequest` 이미지 크기와 `WidthRequest` 기타 레이아웃 선택 항목에 따라 및 속성을 변경 해야 할 수 있습니다.
+> 모퉁이가 둥근 모퉁이는 플랫폼에서 약간 다르게 동작 합니다. @No__t_0 개체의 `Margin`는 이미지 너비와 부모 프레임 너비의 차이 중 절반 이어야 하며, `Frame` 개체 내에서 이미지를 균등 하 게 맞추려면 음수 여야 합니다. 그러나 요청 된 너비와 높이는 보장 되지 않으므로 이미지 크기 및 기타 레이아웃 선택 항목에 따라 `Margin`, `HeightRequest` 및 `WidthRequest` 속성을 변경 해야 할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

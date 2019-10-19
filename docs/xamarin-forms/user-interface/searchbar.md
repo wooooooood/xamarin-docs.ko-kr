@@ -8,45 +8,45 @@ author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
 ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69658032"
 ---
 # <a name="xamarinforms-searchbar"></a>Xamarin.ios SearchBar
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-Xamarin.ios는 검색을 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. 컨트롤 `SearchBar` 은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다. 다음 스크린샷에서는 `ListView`에 결과가 `SearchBar` 표시 된 쿼리를 보여 줍니다.
+Xamarin.ios [`SearchBar`](xref:Xamarin.Forms.SearchBar) 는 검색을 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. @No__t_0 컨트롤은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다. 다음 스크린샷은 `ListView`에 결과가 표시 되는 `SearchBar` 쿼리를 보여 줍니다.
 
-[![IOS 및 Android에 대 한 SearchBar의 스크린샷](searchbar-images/device-searchbars-cropped.png "IOS 및 Android의 Searchbar")](searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 SearchBar")
+[![IOS 및 Android에 대 한 SearchBar의 스크린샷](searchbar-images/device-searchbars-cropped.png "IOS 및 Android의 SearchBar")](searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 SearchBar")
 
-클래스 `SearchBar` 는 다음 속성을 정의 합니다.
+@No__t_0 클래스는 다음 속성을 정의 합니다.
 
-* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor)는 취소 단추의 색을 정의 하는입니다.`Color`
-* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes)글꼴이 굵게, 기울임꼴로 또는 둘 다 `FontAttributes` 인지 여부를 결정 하는 열거형 `SearchBar` 값입니다.
-* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily)는에서 사용 `SearchBar`하는 글꼴 패밀리를 결정 하는입니다.`string`
-* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize)는 `NamedSize` 열거형 값 `double` 이거나 여러 플랫폼에서 특정 글꼴 크기를 나타내는 값일 수 있습니다.
-* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment)쿼리 텍스트의 가로 맞춤을 정의 하는 열거형값입니다.`TextAlignment`
-* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder)는 "Search ..."와 같은 자리 표시자 텍스트를 정의 하는입니다.`string`
-* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor)자리 표시자 텍스트의 색을 정의 하는입니다.`Color`
-* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand)는 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는입니다.`ICommand`
-* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter)는에 전달 `SearchCommand`되어야 하는 매개 변수를 지정 하는입니다.`object`
-* [`Text`](xref:Xamarin.Forms.SearchBar.Text)는의 쿼리 텍스트 `SearchBar`를 포함하는입니다.`string`
-* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor)는 쿼리 텍스트 색을 정의 하는입니다.`Color`
+* [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) 은 취소 단추의 색을 정의 하는 `Color`입니다.
+* [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) 은 `SearchBar` 글꼴이 굵게, 기울임꼴로 또는 둘 다 인지 여부를 결정 하는 `FontAttributes` 열거형 값입니다.
+* [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) 은 `SearchBar`에서 사용 하는 글꼴 패밀리를 결정 하는 `string`입니다.
+* [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) 은 `NamedSize` 열거형 값 이거나 플랫폼 전체의 특정 글꼴 크기를 나타내는 `double` 값일 수 있습니다.
+* [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) 는 쿼리 텍스트의 가로 맞춤을 정의 하는 `TextAlignment` 열거형 값입니다.
+* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) 는 "Search ..."와 같은 자리 표시자 텍스트를 정의 하는 `string`입니다.
+* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) 은 자리 표시자 텍스트의 색을 정의 하는 `Color`입니다.
+* [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) 는 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는 `ICommand`입니다.
+* [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) 는 `SearchCommand`에 전달 되어야 하는 매개 변수를 지정 하는 `object`입니다.
+* [`Text`](xref:Xamarin.Forms.SearchBar.Text) 은 `SearchBar`의 쿼리 텍스트를 포함 하는 `string`입니다.
+* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor) 은 쿼리 텍스트 색을 정의 하는 `Color`입니다.
 
-이러한 속성은 개체에 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 의해 지원 됩니다. 즉 `SearchBar` ,를 사용자 지정 하 고 데이터 바인딩의 대상으로 지정할 수 있습니다. 에서 `SearchBar` 글꼴 속성을 지정 하는 것은 다른 [xamarin.ios 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)에서 텍스트를 사용자 지정 하는 것과 일치 합니다. 자세한 내용은 [xamarin.ios의 글꼴](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하세요.
+이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, `SearchBar` 사용자 지정 하 고 데이터 바인딩의 대상이 될 수 있습니다. @No__t_0의 글꼴 속성을 지정 하는 것은 다른 [Xamarin.ios 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)에서 텍스트를 사용자 지정 하는 것과 일치 합니다. 자세한 내용은 [xamarin.ios의 글꼴](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하세요.
 
 ## <a name="create-a-searchbar"></a>SearchBar 만들기
 
-는 `SearchBar` XAML에서 인스턴스화될 수 있습니다. 쿼리 입력 `Placeholder` 상자에 힌트 텍스트를 정의 하기 위해 선택적 속성을 설정할 수 있습니다. 의 기본값은 빈 문자열 `Placeholder` 이므로 설정 되지 않은 경우에는 자리 표시 자가 표시 되지 않습니다. 다음 예제에서는 선택적 `SearchBar` `Placeholder` 속성 집합을 사용 하 여 XAML에서를 인스턴스화하는 방법을 보여 줍니다.
+@No__t_0는 XAML에서 인스턴스화할 수 있습니다. 쿼리 입력 상자에서 힌트 텍스트를 정의 하기 위해 선택적 `Placeholder` 속성을 설정할 수 있습니다. @No__t_0의 기본값은 빈 문자열 이므로 설정 되지 않은 경우에는 자리 표시 자가 표시 되지 않습니다. 다음 예제에서는 선택적 `Placeholder` 속성 집합을 사용 하 여 XAML에서 `SearchBar`를 인스턴스화하는 방법을 보여 줍니다.
 
 ```xaml
 <SearchBar Placeholder="Search items..." />
 ```
 
-코드 `SearchBar` 에서를 만들 수도 있습니다.
+@No__t_0 코드에서 만들 수도 있습니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
@@ -54,7 +54,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
 
 ### <a name="searchbar-appearance-properties"></a>SearchBar 모양 속성
 
-컨트롤 `SearchBar` 은 컨트롤의 모양을 사용자 지정 하는 다양 한 속성을 정의 합니다. 다음 예제에서는 여러 속성을 지정 하 `SearchBar` 여 XAML에서를 인스턴스화하는 방법을 보여 줍니다.
+@No__t_0 컨트롤은 컨트롤의 모양을 사용자 지정 하는 다양 한 속성을 정의 합니다. 다음 예제에서는 여러 속성을 지정 하 여 XAML에서 `SearchBar`를 인스턴스화하는 방법을 보여 줍니다.
 
 ```xaml
 <SearchBar Placeholder="Search items..."
@@ -66,7 +66,7 @@ SearchBar searchBar = new SearchBar{ Placeholder = "Search items..." };
            FontAttributes="Italic" />
 ```
 
-이러한 속성은 코드에서 개체를 `SearchBar` 만들 때에도 지정할 수 있습니다.
+이러한 속성은 코드에서 `SearchBar` 개체를 만들 때에도 지정할 수 있습니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -80,32 +80,32 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-다음 스크린샷은 결과 `SearchBar` 컨트롤을 보여 줍니다.
+다음 스크린샷에서는 결과 `SearchBar` 컨트롤을 보여 줍니다.
 
 [![IOS 및 Android에서 사용자 지정 된 SearchBar의 스크린샷](searchbar-images/device-searchbars-styled-cropped.png "IOS 및 Android의 사용자 지정 된 SearchBar")](searchbar-images/device-searchbars-styled.png#lightbox "IOS 및 Android의 사용자 지정 된 SearchBar")
 
 ## <a name="perform-a-search-with-event-handlers"></a>이벤트 처리기를 사용 하 여 검색 수행
 
-다음 이벤트 중 하나에 이벤트 처리기 `SearchBar` 를 연결 하 여 컨트롤을 사용 하 여 검색을 실행할 수 있습니다.
+다음 이벤트 중 하나에 이벤트 처리기를 연결 하 여 `SearchBar` 컨트롤을 사용 하 여 검색을 실행할 수 있습니다.
 
-* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed)사용자가 검색 단추를 클릭 하거나 enter 키를 누를 때 호출 됩니다.
-* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged)쿼리 상자의 텍스트가 변경 될 때마다이 호출 됩니다.
+* [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) 은 사용자가 검색 단추를 클릭 하거나 enter 키를 누를 때 호출 됩니다.
+* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged) 는 쿼리 상자의 텍스트가 변경 될 때마다 호출 됩니다.
 
-다음 예제에서는 XAML의 `TextChanged` 이벤트에 연결 된 이벤트 처리기를 보여 주고를 `ListView` 사용 하 여 검색 결과를 표시 합니다.
+다음 예제에서는 XAML의 `TextChanged` 이벤트에 연결 된 이벤트 처리기를 보여 주고 `ListView`를 사용 하 여 검색 결과를 표시 합니다.
 
 ```xaml
 <SearchBar TextChanged="OnTextChanged" />
 <ListView x:Name="searchResults" >
 ```
 
-이벤트 처리기를 코드에서 `SearchBar` 만든에 연결할 수도 있습니다.
+이벤트 처리기를 코드에서 만든 `SearchBar`에 연결할 수도 있습니다.
 
 ```csharp
 SearchBar searchBar = new SearchBar {/*...*/};
 searchBar.TextChanged += OnTextChanged;
 ```
 
-코드 숨김이 XAML 또는 코드를 통해 생성 `SearchBar` 되었는지 여부에 관계 없이 코드 숨김이 파일의 이벤트처리기는동일합니다.`TextChanged`
+@No__t_1 XAML 또는 코드를 통해 생성 되는지에 관계 없이 코드 숨김이 파일의 `TextChanged` 이벤트 처리기는 동일 합니다.
 
 ```csharp
 void OnTextChanged(object sender, EventArgs e)
@@ -115,13 +115,13 @@ void OnTextChanged(object sender, EventArgs e)
 }
 ```
 
-이전 예제에서는 쿼리와 일치 하는 항목 `DataService` 을 반환할 수 `GetSearchResults` 있는 메서드가 포함 된 클래스가 있음을 의미 합니다. `ItemsSource` `ListView` 컨트롤의 `Text` 속성`GetSearchResults` 값이 메서드에 전달 되 고 결과는 컨트롤의 속성을 업데이트 하는 데 사용 됩니다. `SearchBar` 전반적인 효과는 검색 결과가 `ListView` 컨트롤에 표시 되는 것입니다.
+앞의 예제에서는 쿼리와 일치 하는 항목을 반환할 수 있는 `GetSearchResults` 메서드를 사용 하 여 `DataService` 클래스가 있음을 의미 합니다. @No__t_0 컨트롤의 `Text` 속성 값이 `GetSearchResults` 메서드에 전달 되 고 결과는 `ListView` 컨트롤의 `ItemsSource` 속성을 업데이트 하는 데 사용 됩니다. 전반적인 효과는 검색 결과가 `ListView` 컨트롤에 표시 되는 것입니다.
 
-샘플 응용 프로그램은 검색 `DataService` 기능을 테스트 하는 데 사용할 수 있는 클래스 구현을 제공 합니다.
+샘플 응용 프로그램은 검색 기능을 테스트 하는 데 사용할 수 있는 `DataService` 클래스 구현을 제공 합니다.
 
 ## <a name="perform-a-search-using-a-viewmodel"></a>Viewmodel을 사용 하 여 검색 수행
 
-`SearchCommand` `ICommand` 및 속성을구현에바인딩하여이벤트처리기없이검색을실행할수있습니다.`SearchCommandParameter` 샘플 프로젝트는 MVVM (모델-뷰-ViewModel) 패턴을 사용 하 여 이러한 구현을 보여 줍니다. MVVM를 사용한 데이터 바인딩에 대 한 자세한 내용은 [MVVM를 사용 하 여 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)을 참조 하세요.
+@No__t_0 및 `SearchCommandParameter` 속성을 `ICommand` 구현에 바인딩하여 이벤트 처리기 없이 검색을 실행할 수 있습니다. 샘플 프로젝트는 MVVM (모델-뷰-ViewModel) 패턴을 사용 하 여 이러한 구현을 보여 줍니다. MVVM를 사용한 데이터 바인딩에 대 한 자세한 내용은 [MVVM를 사용 하 여 데이터 바인딩](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)을 참조 하세요.
 
 샘플 응용 프로그램의 viewmodel에는 다음 코드가 포함 되어 있습니다.
 
@@ -157,9 +157,9 @@ public class SearchViewModel : INotifyPropertyChanged
 ```
 
 > [!NOTE]
-> Viewmodel은 검색을 수행할 수 있는 `DataService` 클래스의 존재를 가정 합니다. 예제 데이터를 포함 하는 클래스는샘플응용프로그램에서사용할수있습니다.`DataService`
+> Viewmodel은 검색을 수행할 수 있는 `DataService` 클래스의 존재를 가정 합니다. 예제 데이터를 비롯 한 `DataService` 클래스는 샘플 응용 프로그램에서 사용할 수 있습니다.
 
-다음 XAML은 검색 결과를 표시 하 `SearchBar` 는 `ListView` 컨트롤을 사용 하 여를 예제 viewmodel에 바인딩하는 방법을 보여 줍니다.
+다음 XAML은 검색 결과를 표시 하는 `ListView` 컨트롤을 사용 하 여 `SearchBar`를 예제 viewmodel에 바인딩하는 방법을 보여 줍니다.
 
 ```xaml
 <ContentPage ...>
@@ -178,9 +178,9 @@ public class SearchViewModel : INotifyPropertyChanged
 </ContentPage>
 ```
 
-이 예제에서는을 `BindingContext` `SearchViewModel` 클래스의 인스턴스로 설정 합니다. `SearchCommand` `Text` `SearchBar` Viewmodel의에 속성 `PerformSearch` 을바인딩하고속성을속성에바인딩합니다.`SearchCommandParameter` `ICommand` 속성은 viewmodel의 `SearchResults` 속성에 바인딩됩니다. `ListView.ItemsSource`
+이 예제에서는 `BindingContext`를 `SearchViewModel` 클래스의 인스턴스로 설정 합니다. 이 메서드는 viewmodel의 `PerformSearch` `ICommand`에 `SearchCommand` 속성을 바인딩하고 `SearchBar` `Text` 속성을 `SearchCommandParameter` 속성에 바인딩합니다. @No__t_0 속성은 viewmodel의 `SearchResults` 속성에 바인딩됩니다.
 
-`ICommand` 인터페이스 및 바인딩에 대 한 자세한 내용은 [xamarin.ios 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md) 및 [ICommand 인터페이스](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)를 참조 하세요.
+@No__t_0 인터페이스 및 바인딩에 대 한 자세한 내용은 [xamarin.ios 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md) 및 [ICommand 인터페이스](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

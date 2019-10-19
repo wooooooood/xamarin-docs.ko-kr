@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/11/2017
 ms.openlocfilehash: 36e339139a0a7f853a770fdb188b5f03ee93f7ee
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70283352"
 ---
 # <a name="search-bars-in-xamarinios"></a>Xamarin.ios의 검색 창
@@ -57,7 +57,7 @@ TableView.TableHeaderView = searchBar;
 
 ![검색 창 속성](searchbar-images/image6.png)
 
-검색 단추 `SearchButtonClicked` 를 누르면 이벤트를 발생 시킵니다. 검색 논리를 호출 합니다.
+검색 단추를 누를 때 `SearchButtonClicked` 이벤트를 발생 시킵니다. 검색 논리를 호출 합니다.
 
 ```csharp
 searchBar.SearchButtonClicked += (sender, e) => {
@@ -88,7 +88,7 @@ searchBar.SearchButtonClicked += (sender, e) => {
   - 검색 결과/책갈피 단추를 표시 합니다. 검색 창에 검색 결과 또는 책갈피 아이콘이 표시 됩니다.
   - 사용자가 검색 기능을 종료할 수 있도록 취소 단추를 표시 합니다. 이를 선택 하는 것이 좋습니다.
   - 범위 표시줄 표시-사용자가 검색 범위를 제한할 수 있습니다. 예를 들어 음악 앱에서 검색할 때 사용자는 특정 노래 또는 음악가에 대해 Apple Music 또는 해당 라이브러리를 검색할지 여부를 선택할 수 있습니다. 다양 한 옵션을 표시 하려면 제목 배열을 **ScopeBarTitles** 속성에 추가 합니다.
-  ![검색 막대 범위 제목](searchbar-images/image4.png)
+  ![Search 막대 범위 제목 ](searchbar-images/image4.png)
 
 - **텍스트 동작** – 이러한 옵션은 사용자 입력 시 형식이 지정 되는 방식을 처리 하는 데 사용 됩니다. 대/소문자를 설정 하면 각 단어나 문장의 시작 또는 모든 문자를 대문자로 설정 합니다. 사용자에 게 입력할 때 단어의 제안 된 철자를 표시 하 여 수정 및 맞춤법 검사를 수행 합니다.
 - **키보드** -입력에 대해 표시 되는 키보드 스타일을 제어 하므로 키보드에서 사용할 수 있는 키가 있습니다. 여기에는 숫자 패드, 휴대폰 패드, 전자 메일, URL 및 기타 옵션이 포함 됩니다.
