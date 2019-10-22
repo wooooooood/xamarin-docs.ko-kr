@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/26/2019
 ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70289704"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Windows용 원격 iOS 시뮬레이터
@@ -34,7 +34,7 @@ Windows 용 원격 iOS 시뮬레이터는 Visual Studio 2019 및 Visual Studio 2
 
 - **Home** – iOS 장치에서 홈 단추를 시뮬레이션 합니다.
 - **잠금** – 시뮬레이터를 잠급니다 (잠금 해제로 살짝 밀기).
-- **스크린샷** – 시뮬레이터의 스크린샷 ( **Pictures\Xamarin\iOS 시뮬레이터\\** 에 저장)을 저장 합니다.
+- **스크린샷** – 시뮬레이터의 스크린샷 ( **Pictures\Xamarin\iOS 시뮬레이터 \\** 에 저장)을 저장 합니다.
 - [**설정**](#settings) – 키보드, 위치 및 기타 설정을 표시 합니다.
 - [**기타 옵션**](#other-options) – 회전, 흔들기 제스처 및 터치식 ID와 같은 다양 한 시뮬레이터 옵션을 표시 합니다.
 

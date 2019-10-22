@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
 ms.openlocfilehash: 982d5b81a22d6e69227081420a5947aed4d3aab1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70755678"
 ---
 # <a name="accessibility-on-android"></a>Android의 내게 필요한 옵션
@@ -20,7 +20,7 @@ ms.locfileid: "70755678"
 
 ## <a name="describing-ui-elements"></a>UI 요소 설명
 
-Android는 화면 `ContentDescription` 읽기 api에서 컨트롤의 용도에 대 한 액세스 가능한 설명을 제공 하는 데 사용 하는 속성을 제공 합니다.
+Android는 화면 읽기 Api에서 컨트롤의 용도에 대 한 액세스 가능한 설명을 제공 하는 데 사용 하는 `ContentDescription` 속성을 제공 합니다.
 
 내용 설명은 C# 또는 axml 레이아웃 파일에서 설정할 수 있습니다.
 
@@ -34,7 +34,7 @@ saveButton.ContentDescription = "Save data";
 
 **AXML 레이아웃**
 
-XML 레이아웃에서는 특성을 `android:contentDescription` 사용 합니다.
+XML 레이아웃에서는 `android:contentDescription` 특성을 사용 합니다.
 
 ```xml
 <ImageButton
@@ -45,7 +45,7 @@ XML 레이아웃에서는 특성을 `android:contentDescription` 사용 합니�
 
 ### <a name="use-hint-for-textview"></a>TextView에 대 한 use 힌트
 
-`EditText` 및 `ContentDescription` 데이터입력`Hint` 에 대 한 컨트롤의 경우 속성을 사용 하 여가 아니라 예상 되는 입력에 대 한 설명을 제공 합니다. `TextView`
+데이터 입력에 대 한 `EditText` 및 `TextView` 컨트롤의 경우 `Hint` 속성을 사용 하 여 `ContentDescription` 대신 필요한 입력에 대 한 설명을 제공 합니다.
 일부 텍스트를 입력 한 경우에는 힌트 대신 텍스트 자체가 "읽기" 됩니다.
 
 **C#**
@@ -58,7 +58,7 @@ someText.Hint = "Enter some text"; // displays (and is "read") when control is e
 
 **AXML 레이아웃**
 
-XML 레이아웃 파일에서 특성을 `android:hint` 사용 합니다.
+XML 레이아웃 파일에서는 `android:hint` 특성을 사용 합니다.
 
 ```xml
 <EditText
@@ -68,11 +68,11 @@ XML 레이아웃 파일에서 특성을 `android:hint` 사용 합니다.
 
 ### <a name="labelfor-links-input-fields-with-labels"></a>레이블이 있는 링크 입력 필드에 대 한 label
 
-데이터 입력 컨트롤과 레이블을 연결 하려면 속성을 사용 합니다 `LabelFor` .
+데이터 입력 컨트롤과 레이블을 연결 하려면 `LabelFor` 속성을 사용 합니다.
 
 **C#**
 
-에서 C#이 콘텐츠가 설명 `LabelFor` 하는 컨트롤의 리소스 ID로 속성을 설정 합니다. 일반적으로이 속성은 레이블에 설정 되 고 다른 입력 컨트롤을 참조 합니다.
+에서 C#`LabelFor` 속성을이 콘텐츠가 설명 하는 컨트롤의 리소스 ID로 설정 합니다. 일반적으로이 속성은 레이블에 설정 되어 있고 다른 입력 컨트롤을 참조 합니다.
 
 ```csharp
 EditText edit = FindViewById<EditText> (Resource.Id.editFirstName);
@@ -82,7 +82,7 @@ tv.LabelFor = Resource.Id.editFirstName;
 
 **AXML 레이아웃**
 
-레이아웃 XML에서 속성을 `android:labelFor` 사용 하 여 다른 컨트롤의 식별자를 참조 합니다.
+레이아웃 XML에서 `android:labelFor` 속성을 사용 하 여 다른 컨트롤의 식별자를 참조 합니다.
 
 ```xml
 <TextView
@@ -96,9 +96,9 @@ tv.LabelFor = Resource.Id.editFirstName;
 
 ### <a name="announce-for-accessibility"></a>내게 필요한 옵션에 대 한 알림
 
-접근성이 설정 된 경우 모든 뷰 컨트롤에서 메서드를사용하여이벤트또는상태변경내용을사용자에게전달합니다.`AnnounceForAccessibility` 이 방법은 기본 제공 설명이 충분 한 피드백을 제공 하지만 사용자에 게 유용한 추가 정보를 제공 하는 대부분의 작업에는 필요 하지 않습니다.
+접근성이 설정 된 경우 모든 뷰 컨트롤에서 `AnnounceForAccessibility` 메서드를 사용 하 여 이벤트 또는 상태 변경 내용을 사용자에 게 전달 합니다. 이 방법은 기본 제공 설명이 충분 한 피드백을 제공 하지만 사용자에 게 유용한 추가 정보를 제공 하는 대부분의 작업에는 필요 하지 않습니다.
 
-아래 코드에서는를 호출 `AnnounceForAccessibility`하는 간단한 예제를 보여 줍니다.
+아래 코드는 `AnnounceForAccessibility`를 호출 하는 간단한 예제를 보여 줍니다.
 
 ```csharp
 button.Click += delegate {
@@ -109,11 +109,11 @@ button.Click += delegate {
 
 ## <a name="changing-focus-settings"></a>포커스 설정 변경
 
-액세스 가능 탐색은 사용자가 사용 가능한 작업을 이해 하는 데 도움이 되는 컨트롤에 의존 합니다. Android는 탐색 `Focusable` 하는 동안 포커스를 받을 수 있는 컨트롤에 태그를 지정할 수 있는 속성을 제공 합니다.
+액세스 가능 탐색은 사용자가 사용 가능한 작업을 이해 하는 데 도움이 되는 컨트롤에 의존 합니다. Android는 탐색 하는 동안 포커스를 받을 수 있는 컨트롤에 태그를 지정할 수 있는 `Focusable` 속성을 제공 합니다.
 
 **C#**
 
-컨트롤이 포커스 C#를 얻지 못하게 하려면 속성을로 `Focusable` `false`설정 합니다.
+컨트롤이 포커스 C#를 얻지 못하게 하려면 `Focusable` 속성을 `false`로 설정 합니다.
 
 ```csharp
 label.Focusable = false;
@@ -121,13 +121,13 @@ label.Focusable = false;
 
 **AXML 레이아웃**
 
-레이아웃 XML 파일에서 특성을 `android:focusable` 설정 합니다.
+레이아웃 XML 파일에서 `android:focusable` 특성을 설정 합니다.
 
 ```xml
 <android:focusable="false" />
 ```
 
-일반적으로 레이아웃 axml에서 설정 된 `nextFocusDown`, `nextFocusLeft`, `nextFocusRight`, `nextFocusUp` 특성을 사용 하 여 포커스 순서를 제어할 수도 있습니다. 이러한 특성을 사용 하 여 사용자가 화면의 컨트롤을 통해 쉽게 탐색할 수 있도록 합니다.
+일반적으로 레이아웃 AXML에서 설정 된 `nextFocusDown`, `nextFocusLeft`, `nextFocusRight` `nextFocusUp` 특성으로 포커스 순서를 제어할 수도 있습니다. 이러한 특성을 사용 하 여 사용자가 화면의 컨트롤을 통해 쉽게 탐색할 수 있도록 합니다.
 
 ## <a name="accessibility-and-localization"></a>접근성 및 지역화
 
@@ -145,16 +145,16 @@ C# 및 axml 레이아웃 파일에서 문자열 파일의 텍스트를 사용 �
 
 **C#**
 
-코드에 문자열 리터럴을 사용 하는 대신 다음을 사용 하 여 문자열 파일에서 `Resources.GetText`번역 된 값을 조회 합니다.
+코드에 문자열 리터럴을 사용 하는 대신 `Resources.GetText`를 사용 하 여 문자열 파일에서 번역 된 값을 조회 합니다.
 
 ```csharp
 someText.Hint = Resources.GetText (Resource.String.enter_info);
 saveButton.ContentDescription = Resources.GetText (Resource.String.save_info);
 ```
 
-**AXML**
+**MAIN.AXML**
 
-레이아웃에서 및와 `hint` `contentDescription` 같은 내게 필요한 옵션 특성은 문자열 식별자로 설정할 수 있습니다.
+레이아웃에서 XML 액세스 가능성 특성은 `hint` 및 `contentDescription`와 같은 문자열 식별자로 설정할 수 있습니다.
 
 ```xml
 <TextView

@@ -1,35 +1,35 @@
 ---
-title: Xamarin.Forms 편집기
-description: 이 문서에서는 Xamarin.Forms 편집기 컨트롤을 사용 하 여 응용 프로그램에서 여러 줄 텍스트 입력을 허용 하는 방법에 설명 합니다.
+title: Xamarin Forms 편집기
+description: 이 문서에서는 Xamarin.ios 편집기 컨트롤을 사용 하 여 응용 프로그램에서 여러 줄 텍스트 입력을 허용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
-ms.openlocfilehash: 684bdb21309028e02362dcc6bfd8c91c539430bd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 09/26/2019
+ms.openlocfilehash: 0c610d7bdecc5d3454079be38c7e6ede5f0596e1
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770178"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696804"
 ---
-# <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
+# <a name="xamarinforms-editor"></a>Xamarin Forms 편집기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _여러 줄 텍스트 입력_
 
-합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 컨트롤은 여러 줄 입력을 허용 하는 데 사용 합니다. 이 문에서는 다음과 같은 내용을 설명합니다.
+[@No__t_1](xref:Xamarin.Forms.Editor) 컨트롤은 여러 줄 입력을 허용 하는 데 사용 됩니다. 이 문에서는 다음과 같은 내용을 설명합니다.
 
-- **[사용자 지정](#customization)**  &ndash; 키보드 및 색 옵션입니다.
-- **[상호 작용](#interactivity)**  &ndash; 에 대 한 상호 작용을 위해 수신 대기할 수 있는 이벤트입니다.
+- **[사용자 지정](#customization)** &ndash; 키보드 및 색 옵션입니다.
+- 대화형 작업을 제공 하기 위해 수신 대기 될 수 있는 **[대화형](#interactivity)** &ndash; 이벤트입니다.
 
 ## <a name="customization"></a>사용자 지정
 
-### <a name="setting-and-reading-text"></a>텍스트를 읽고 설정
+### <a name="setting-and-reading-text"></a>텍스트 설정 및 읽기
 
-[ `Editor` ](xref:Xamarin.Forms.Editor), 기타 텍스트 표시 보기와 같이 표시를 `Text` 속성입니다. 이 속성을 설정 하 고 제공한 텍스트 읽기를 사용할 수 있습니다는 `Editor`합니다. 다음 예제에서는 설정 된 `Text` XAML에서 속성:
+다른 텍스트 표시 뷰와 마찬가지로 [`Editor`](xref:Xamarin.Forms.Editor)`Text` 속성을 노출 합니다. 이 속성을 사용 하 여 `Editor` 표시 되는 텍스트를 설정 하 고 읽을 수 있습니다. 다음 예제에서는 XAML에서 `Text` 속성을 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -41,15 +41,15 @@ C#:
 var MyEditor = new Editor { Text = "I am an Editor" };
 ```
 
-텍스트를 읽으려면 액세스는 `Text` C#의 속성:
+텍스트를 읽으려면의 C#`Text` 속성에 액세스 합니다.
 
 ```csharp
 var text = MyEditor.Text;
 ```
 
-### <a name="setting-placeholder-text"></a>자리 표시자 텍스트를 설정합니다.
+### <a name="setting-placeholder-text"></a>자리 표시자 텍스트 설정
 
-합니다 [ `Editor` ](xref:Xamarin.Forms.Editor) 사용자 입력을 저장 하지 않는 경우 자리 표시자 텍스트를 표시 하도록 설정할 수 있습니다. 설정 하 여 이렇게를 [ `Placeholder` ](xref:Xamarin.Forms.Editor.Placeholder) 속성을을 `string`에 적절 한 콘텐츠의 형식을 지정 하기 위해 자주 사용 되는 `Editor`합니다. 자리 표시자 텍스트 색을 설정 하 여 제어할 수 또한 합니다 [ `PlaceholderColor` ](xref:Xamarin.Forms.Editor.PlaceholderColor) 속성을 [ `Color` ](xref:Xamarin.Forms.Color):
+사용자 입력을 저장 하지 않을 경우 자리 표시자 텍스트를 표시 하도록 [`Editor`](xref:Xamarin.Forms.Editor) 를 설정할 수 있습니다. 이렇게 하려면 [`Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) 속성을 `string` 설정 하 고 `Editor`에 적절 한 콘텐츠 형식을 나타내는 데 자주 사용 됩니다. 또한 [`PlaceholderColor`](xref:Xamarin.Forms.Editor.PlaceholderColor) 속성을 [`Color`](xref:Xamarin.Forms.Color)설정 하 여 자리 표시자 텍스트 색을 제어할 수 있습니다.
 
 ```xaml
 <Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
@@ -61,7 +61,7 @@ var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Co
 
 ### <a name="preventing-text-entry"></a>텍스트 입력 방지
 
-[`Editor`](xref:Xamarin.Forms.Editor) 사용자는 `IsReadOnly` 속성을 `false` 로`true`설정 하 여의 텍스트를 수정할 수 없도록 할 수 있습니다 .이 속성의 기본값은입니다.
+사용자는 기본값인 `false` 인 `IsReadOnly` 속성을 `true`로 설정 하 여 [`Editor`](xref:Xamarin.Forms.Editor) 의 텍스트를 수정할 수 없습니다.
 
 ```xaml
 <Editor Text="This is a read-only Editor"
@@ -73,11 +73,11 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 ```
 
 > [!NOTE]
-> 속성은의 시각적 모양을 회색 `Editor` 으로 변경 하는 [`Editor`](xref:Xamarin.Forms.Editor) `IsEnabled` 속성과 달리의 시각적 모양을 변경 하지 않습니다. `IsReadonly`
+> @No__t_0 속성은 `Editor`의 시각적 모양을 회색으로 변경 하는 `IsEnabled` 속성과 달리 [`Editor`](xref:Xamarin.Forms.Editor)의 시각적 모양을 변경 하지 않습니다.
 
-### <a name="limiting-input-length"></a>입력된 길이 제한
+### <a name="limiting-input-length"></a>입력 길이 제한
 
-합니다 [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 에 허용 되는 입력된 길이도 제한 속성을 사용할 수 있습니다 합니다 [ `Editor` ](xref:Xamarin.Forms.Editor)합니다. 이 속성을 양수로 설정 되어야 합니다.
+[@No__t_1](xref:Xamarin.Forms.InputView.MaxLength) 속성을 사용 하 여 [`Editor`](xref:Xamarin.Forms.Editor)에 대해 허용 되는 입력 길이를 제한할 수 있습니다. 이 속성은 양의 정수로 설정 해야 합니다.
 
 ```xaml
 <Editor ... MaxLength="10" />
@@ -87,16 +87,36 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 var editor = new Editor { ... MaxLength = 10 };
 ```
 
-A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력 하지 않고 사용할 수 있습니다 값 `int.MaxValue`에 대 한 기본 값인는 [ `Editor` ](xref:Xamarin.Forms.Editor), 중임을 나타냅니다 없습니다 효과적인 입력할 수 있는 문자 수가 제한 됩니다.
+[@No__t_1](xref:Xamarin.Forms.InputView.MaxLength) 속성 값이 0 이면 입력이 허용 되지 않고 [`Editor`](xref:Xamarin.Forms.Editor)에 대 한 기본값인 `int.MaxValue` 값이 입력 될 수 있는 문자 수에 대 한 유효 한도가 없음을 나타냅니다.
 
-### <a name="auto-sizing-an-editor"></a>자동 크기 조정 편집기
+### <a name="character-spacing"></a>문자 간격
 
-[ `Editor` ](xref:Xamarin.Forms.Editor) 설정 하면 크기를 자동으로 해당 콘텐츠를 지정할 수는 [ `Editor.AutoSize` ](xref:Xamarin.Forms.Editor.AutoSize) 속성을 [ `TextChanges` ](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges), 합니다 의값인[ `EditoAutoSizeOption` ](xref:Xamarin.Forms.EditorAutoSizeOption) 열거형입니다. 이 열거형에는 두 값에 있습니다.
+@No__t_2 속성을 `double` 값으로 설정 하 여 [`Editor`](xref:Xamarin.Forms.Editor) 에 문자 간격을 적용할 수 있습니다.
 
-- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) 자동 크기 조정을 해제 되 고 값은 기본값을 나타냅니다.
-- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) 자동 크기 조정 사용 됨을 나타냅니다.
+```xaml
+<Editor ...
+        CharacterSpacing="10" />
+```
 
-이렇게 하려면 코드에서 다음과 같이 합니다.
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+Editor editor = new editor { CharacterSpacing = 10 };
+```
+
+그 결과 [`Editor`](xref:Xamarin.Forms.Editor) 표시 되는 텍스트의 문자는 장치 독립적 단위 `CharacterSpacing` 간격이 떨어져 있습니다.
+
+> [!NOTE]
+> @No__t_0 속성 값은 `Text` 및 `Placeholder` 속성에 의해 표시 되는 텍스트에 적용 됩니다.
+
+### <a name="auto-sizing-an-editor"></a>편집기 자동 크기 조정
+
+[@No__t_1](xref:Xamarin.Forms.Editor) [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) 속성을 [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges)( [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) 열거형의 값)로 설정 하 여 해당 콘텐츠에 자동 크기를 설정할 수 있습니다. 이 열거형에는 두 개의 값이 있습니다.
+
+- [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) 는 자동 크기 조정을 사용 하지 않도록 설정 하 고 기본값을 나타냅니다.
+- [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) 자동 크기 조정이 사용 하도록 설정 되었음을 나타냅니다.
+
+이러한 작업은 다음과 같이 코드에서 수행할 수 있습니다.
 
 ```xaml
 <Editor Text="Enter text here" AutoSize="TextChanges" />
@@ -106,16 +126,16 @@ A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) 속성 값 0은 입력
 var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOption.TextChanges };
 ```
 
-자동 크기 조정 설정 된 경우, 높이 [ `Editor` ](xref:Xamarin.Forms.Editor) 사용자 텍스트를 사용 하 여 채웁니다 고 높이 사용자는 텍스트를 삭제 하는 경우 늘어납니다.
+자동 크기 조정을 사용 하도록 설정 하면 사용자가 텍스트를 채울 때 [`Editor`](xref:Xamarin.Forms.Editor) 높이가 증가 하 고, 사용자가 텍스트를 삭제할 때 높이가 감소 됩니다.
 
 > [!NOTE]
-> [ `Editor` ](xref:Xamarin.Forms.Editor) 는 자동 크기가 아닌 경우는 [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성이 설정 되어 있습니다.
+> [@No__t_3](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성이 설정 된 경우 [`Editor`](xref:Xamarin.Forms.Editor) 는 자동으로 크기가 조정 되지 않습니다.
 
 ### <a name="customizing-the-keyboard"></a>키보드 사용자 지정
 
-사용자가 상호 작용할 때 표시 되는 키보드를 [ `Editor` ](xref:Xamarin.Forms.Editor) 를 통해 프로그래밍 방식으로 설정할 수 있습니다 합니다 [ `Keyboard` ](xref:Xamarin.Forms.InputView.Keyboard) 합니다 에서다음속성중하나에속성을[ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스:
+사용자가 [`Editor`](xref:Xamarin.Forms.Editor) 와 상호 작용할 때 제공 되는 키보드는 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 클래스에서 다음 속성 중 하나로 [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) 속성을 통해 프로그래밍 방식으로 설정할 수 있습니다.
 
-- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – 문자 보내기에 대 한 사용을 모 지 유용 합니다.
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – 텍스트 작성 및 이모티콘이 유용한 경우에 사용합니다.
 - [`Default`](xref:Xamarin.Forms.Keyboard.Default) – 기본 키보드입니다.
 - [`Email`](xref:Xamarin.Forms.Keyboard.Email) – 전자 메일 주소를 입력할 때 사용합니다.
 - [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – 숫자를 입력할 때 사용합니다.
@@ -124,21 +144,21 @@ var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOpt
 - [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 텍스트를 입력할 때 사용합니다.
 - [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 파일 경로 및 웹 주소를 입력하는 데 사용합니다.
 
-이렇게 하려면 XAML에서 다음과 같이 합니다.
+이렇게 하면 다음과 같이 XAML로 수행할 수 있습니다.
 
 ```xaml
 <Editor Keyboard="Chat" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var editor = new Editor { Keyboard = Keyboard.Chat };
 ```
 
-각 키보드의 예제를 찾을 수 있습니다 우리의 [레시피](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) 리포지토리.
+각 키보드의 예제는 [조리법](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) 리포지토리에서 찾을 수 있습니다.
 
-합니다 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 클래스에는 [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) 키보드 첫 글자를 대문자로, spellcheck, 및 제안 동작을 지정 하 여 사용자 지정 하는 팩터리 메서드. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값은 사용자 지정된 `Keyboard`가 반환되는 메서드에 대한 인수로 지정됩니다. `KeyboardFlags` 열거는 다음 값을 포함합니다.
+또한 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 클래스에는 대소문자, 맞춤법 검사 및 제안 동작을 지정하여 키보드를 사용자 지정하는 데 사용할 수 있는 [`Create`](xref:Xamarin.Forms.Keyboard.Create*) 팩터리 메서드가 있습니다. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) 열거형 값은 사용자 지정된 `Keyboard`가 반환되는 메서드에 대한 인수로 지정됩니다. `KeyboardFlags` 열거는 다음 값을 포함합니다.
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – 키보드에 추가되는 기능이 없습니다.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – 입력된 각 문장의 첫 번째 단어의 첫 문자가 자동으로 대문자로 시작함을 나타냅니다.
@@ -163,18 +183,18 @@ var editor = new Editor { Keyboard = Keyboard.Chat };
 </Editor>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 var editor = new Editor();
 editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-### <a name="enabling-and-disabling-spell-checking"></a>설정 및 맞춤법 검사 사용 안 함
+### <a name="enabling-and-disabling-spell-checking"></a>맞춤법 검사 사용 및 사용 안 함
 
-합니다 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성 컨트롤 여부 맞춤법 검사 사용 가능 합니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 맞춤법 오류가 표시 됩니다.
+[@No__t_1](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성은 맞춤법 검사 사용 여부를 제어 합니다. 기본적으로 속성은 `true`로 설정 됩니다. 사용자가 텍스트를 입력 하면 맞춤법 오류가 표시 됩니다.
 
-그러나 사용자 이름을 입력 하는 등의 일부 텍스트 항목 시나리오에 대 한 맞춤법 검사에서는 음수 환경 등을 설정 하 여 비활성화 해야 합니다 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성을 `false`:
+그러나 사용자 이름을 입력 하는 것과 같은 일부 텍스트 입력 시나리오의 경우에는 [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성을 `false`으로 설정 하 여 맞춤법 검사에 부정적인 환경을 제공 하므로 사용 하지 않도록 설정 해야 합니다.
 
 ```xaml
 <Editor ... IsSpellCheckEnabled="false" />
@@ -185,13 +205,13 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 ```
 
 > [!NOTE]
-> 경우는 [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성이 `false`, 사용자 지정 키보드를 사용 하지 않을, 네이티브 맞춤법 검사기를 사용할 수 없습니다. 그러나 경우에 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 가 된 맞춤법 검사를 사용 하지 않도록 설정 하는 집합 검사와 같은 [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), `IsSpellCheckEnabled` 속성은 무시 됩니다. 에 대 한 맞춤법 검사를 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
+> [@No__t_1](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) 속성이 `false`로 설정 되 고 사용자 지정 키보드를 사용 하지 않는 경우 네이티브 맞춤법 검사기가 비활성화 됩니다. 그러나 [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat)와 같이 맞춤법 검사를 사용 하지 않도록 설정 하는 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 설정 된 경우에는 `IsSpellCheckEnabled` 속성이 무시 됩니다. 따라서 속성을 사용 하 여 명시적으로 사용 하지 않도록 설정 하는 `Keyboard`에 대 한 맞춤법 검사를 사용 하도록 설정할 수 없습니다.
 
-### <a name="enabling-and-disabling-text-prediction"></a>설정 및 텍스트 자동 완성을 사용 하지 않도록 설정
+### <a name="enabling-and-disabling-text-prediction"></a>텍스트 예측 사용 및 사용 안 함
 
-속성 `IsTextPredictionEnabled` 은 텍스트 예측과 자동 텍스트 교정이 사용 되는지 여부를 제어 합니다. 기본적으로 속성 설정 `true`합니다. 사용자가 텍스트를 입력 하는 대로 word 예측 표시 됩니다.
+@No__t_0 속성은 텍스트 예측 및 자동 텍스트 수정을 사용 하도록 설정할지 여부를 제어 합니다. 기본적으로 속성은 `true`로 설정 됩니다. 사용자가 텍스트를 입력 하면 단어 예측이 표시 됩니다.
 
-그러나 사용자 이름을 입력 하는 것과 같은 일부 텍스트 입력 시나리오의 경우 텍스트 예측 및 자동 텍스트 수정이 부정적 환경을 제공 하므로 `IsTextPredictionEnabled` 속성을로 `false`설정 하 여 사용 하지 않도록 설정 해야 합니다.
+그러나 사용자 이름을 입력 하는 경우와 같은 일부 텍스트 입력 시나리오에서는 텍스트 예측 및 자동 텍스트 수정이 부정적 환경을 제공 하므로 `IsTextPredictionEnabled` 속성을 `false`으로 설정 하 여 사용 하지 않도록 설정 해야 합니다.
 
 ```xaml
 <Editor ... IsTextPredictionEnabled="false" />
@@ -202,11 +222,11 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 ```
 
 > [!NOTE]
-> `IsTextPredictionEnabled` 속성이 로`false`설정 되 고 사용자 지정 키보드를 사용 하지 않는 경우 텍스트 예측 및 자동 텍스트 수정을 사용할 수 없습니다. 그러나 경우는 [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) 사용 하지 않도록 설정 텍스트 예측, 설정한는 `IsTextPredictionEnabled` 속성은 무시 됩니다. 에 대 한 텍스트 자동 완성을 사용 하도록 설정 하려면 속성을 사용할 수 없습니다 따라서는 `Keyboard` 는 명시적으로 사용 되지 않습니다.
+> @No__t_0 속성이 `false`로 설정 되어 있고 사용자 지정 키보드를 사용 하지 않는 경우 텍스트 예측 및 자동 텍스트 수정을 사용할 수 없습니다. 그러나 텍스트 예측을 사용 하지 않도록 설정 하는 [`Keyboard`](xref:Xamarin.Forms.Keyboard) 설정 된 경우에는 `IsTextPredictionEnabled` 속성이 무시 됩니다. 따라서 속성을 사용 하 여 명시적으로 사용 하지 않도록 설정 하는 `Keyboard`에 대해 텍스트 예측을 사용 하도록 설정할 수 없습니다.
 
 ### <a name="colors"></a>색
 
-`Editor` 통해 사용자 지정 배경 색을 사용 하도록 설정할 수는 `BackgroundColor` 속성입니다. 특별 한 주의 색 각 플랫폼에서 사용할 수 있는지 확인 하는 데 필요한 경우 각 플랫폼에 텍스트 색에 대 한 다른 기본값에 있으므로 각 플랫폼에 대 한 사용자 지정 배경 색을 설정 해야 합니다. 참조 [플랫폼 조정 작업](~/xamarin-forms/platform/device.md) 각 플랫폼에 대 한 UI를 최적화 하는 방법에 대 한 자세한 내용은 합니다.
+`Editor` `BackgroundColor` 속성을 통해 사용자 지정 배경색을 사용 하도록 설정할 수 있습니다. 각 플랫폼에서 색을 사용할 수 있도록 하려면 특별 한 주의가 필요 합니다. 각 플랫폼에는 텍스트 색의 기본값이 다르기 때문에 각 플랫폼에 대 한 사용자 지정 배경색을 설정 해야 할 수도 있습니다. 각 플랫폼에 대 한 UI를 최적화 하는 방법에 대 한 자세한 내용은 [플랫폼 조정 작업](~/xamarin-forms/platform/device.md) 을 참조 하세요.
 
 C#:
 
@@ -225,7 +245,7 @@ public partial class EditorPage : ContentPage
 }
 ```
 
-XAML:
+XAML에서:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -248,23 +268,23 @@ XAML:
 </ContentPage>
 ```
 
-![](editor-images/textbackgroundcolor.png "BackgroundColor 예제를 사용 하 여 편집기")
+![](editor-images/textbackgroundcolor.png "Editor with BackgroundColor Example")
 
-배경색과 텍스트 색을 선택 하면 각 플랫폼에서 사용할 수 하 고 자리 표시자 텍스트를가 려 서 없는 있는지 확인 합니다.
+선택한 배경색과 텍스트 색을 각 플랫폼에서 사용할 수 있으며 자리 표시자 텍스트가 모호 하지 않은지 확인 합니다.
 
 ## <a name="interactivity"></a>대화형 작업
 
-`Editor` 두 이벤트를 노출 합니다.
+`Editor`는 두 개의 이벤트를 노출 합니다.
 
-- [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; 텍스트 편집기에서 변경 될 때 발생 합니다. 전과 변경 후에 텍스트를 제공합니다.
-- [완료](xref:Xamarin.Forms.Editor.Completed) &ndash; 사용자 입력 키보드의 return 키를 눌러 종료 될 때 발생 합니다.
+- 편집기에서 텍스트가 변경 될 때 [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; 발생 합니다. 변경 전후에 텍스트를 제공 합니다.
+- 사용자가 키보드에서 return 키를 눌러 입력을 종료 하면 [완료](xref:Xamarin.Forms.Editor.Completed) 된 &ndash; 발생 합니다.
 
 > [!NOTE]
-> 에서 상속 하는 [`Entry`](xref:Xamarin.Forms.Entry) [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) 클래스에도 및 [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) 이벤트가 있습니다. [`VisualElement`](xref:Xamarin.Forms.VisualElement)
+> [@No__t_3](xref:Xamarin.Forms.Entry) 를 상속 하는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스에도 [`Focused`](xref:Xamarin.Forms.VisualElement.Focused) 및 [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused) 이벤트가 있습니다.
 
 ### <a name="completed"></a>완료
 
-합니다 `Completed` 이벤트와의 상호 작용을 완료 하 react를 사용 하는 `Editor`합니다. `Completed`사용자가 키보드에서 return 키를 입력 하거나 UWP에서 Tab 키를 눌러 입력을 끝낼 때 발생 합니다. 이벤트 처리기는 보낸 사람을 수행 하 여 제네릭 이벤트 처리기를 및 `EventArgs`:
+@No__t_0 이벤트는 `Editor` 상호 작용이 완료 될 때 대응 하는 데 사용 됩니다. 사용자가 키보드에 return 키를 입력 하거나 UWP에서 Tab 키를 눌러 필드에 입력을 끝내 면 `Completed` 발생 합니다. 이벤트에 대 한 처리기는 일반 이벤트 처리기로, 발신자 및 `EventArgs`을 수행 합니다.
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -273,7 +293,7 @@ void EditorCompleted (object sender, EventArgs e)
 }
 ```
 
-Completed 이벤트 코드 및 XAML을 구독할 수 있습니다.
+완료 된 이벤트는 코드 및 XAML에서 구독할 수 있습니다.
 
 C#:
 
@@ -292,7 +312,7 @@ public partial class EditorPage : ContentPage
 }
 ```
 
-XAML:
+XAML에서:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -310,9 +330,9 @@ Title="Editor Demo">
 
 ### <a name="textchanged"></a>TextChanged
 
-`TextChanged` 이벤트 필드의 내용 변경에 대응 하는 데 사용 됩니다.
+@No__t_0 이벤트는 필드 내용의 변경에 대응 하는 데 사용 됩니다.
 
-`TextChanged` 때마다 발생 합니다 `Text` 의 `Editor` 변경 합니다. 인스턴스를 사용 하는 이벤트에 대 한 처리기 `TextChangedEventArgs`합니다. `TextChangedEventArgs` 이전 및 새 값에 대 한 액세스를 제공 합니다 `Editor` `Text` 를 통해 합니다 `OldTextValue` 및 `NewTextValue` 속성:
+`Editor`의 `Text` 변경 될 때마다 `TextChanged` 발생 합니다. 이벤트 처리기는 `TextChangedEventArgs`의 인스턴스를 사용 합니다. `TextChangedEventArgs`는 `OldTextValue` 및 `NewTextValue` 속성을 통해 `Editor` `Text`의 이전 값과 새 값에 대 한 액세스를 제공 합니다.
 
 ```csharp
 void EditorTextChanged (object sender, TextChangedEventArgs e)
@@ -322,7 +342,7 @@ void EditorTextChanged (object sender, TextChangedEventArgs e)
 }
 ```
 
-Completed 이벤트 코드 및 XAML을 구독할 수 있습니다.
+완료 된 이벤트는 코드 및 XAML에서 구독할 수 있습니다.
 
 코드
 
@@ -341,7 +361,7 @@ public partial class EditorPage : ContentPage
 }
 ```
 
-XAML:
+XAML에서:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
