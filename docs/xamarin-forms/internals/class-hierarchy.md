@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2019
 ms.openlocfilehash: f08146d4439ff1fc22edea71ab1cbb337f64c037
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68984395"
 ---
 # <a name="xamarinforms-controls-class-hierarchy"></a>Xamarin.ios Controls 클래스 계층 구조
 
-Xamarin.ios는 여러 네임 스페이스에 대해 수백 개의 형식으로 구성 됩니다. 개발자는 `Xamarin.Forms` 네임 스페이스에 상주 하는 xamarin.ios 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 형식의 계층 구조에 대해 가장 잘 알고 있어야 합니다.
+Xamarin.ios는 여러 네임 스페이스에 대해 수백 개의 형식으로 구성 됩니다. 개발자는 `Xamarin.Forms` 네임 스페이스에 상주 하는 Xamarin.ios 응용 프로그램의 사용자 인터페이스를 만드는 데 사용 되는 형식의 계층 구조에 대해 가장 잘 알고 있어야 합니다.
 
-이러한 형식은 페이지, 레이아웃, 보기 및 셀로 나눌 수 있습니다. Xamarin Forms 페이지는 일반적으로 전체 화면을 차지 하며 모든 페이지 형식은 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 파생 됩니다. 페이지는 일반적으로 레이아웃을 포함 하 고 모든 레이아웃 형식은 [`Layout`](xref:Xamarin.Forms.Layout) 클래스에서 파생 됩니다. 레이아웃은 일반적으로 뷰와 다른 레이아웃을 포함 하며 모든 뷰 형식은 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생 됩니다. 마지막으로 셀은 [`TableView`](xref:Xamarin.Forms.TableView) 및 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤의 표시 데이터에 사용 되는 특수 컨트롤입니다. 페이지, 레이아웃, 보기 및 셀은 모두 궁극적으로 [`Element`](xref:Xamarin.Forms.Element) 클래스에서 파생 됩니다.
+이러한 형식은 페이지, 레이아웃, 보기 및 셀로 나눌 수 있습니다. Xamarin Forms 페이지는 일반적으로 전체 화면을 차지 하며 모든 페이지 형식은 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 파생 됩니다. 페이지는 일반적으로 레이아웃을 포함 하 고 모든 레이아웃 형식은 [`Layout`](xref:Xamarin.Forms.Layout) 클래스에서 파생 됩니다. 레이아웃에는 일반적으로 뷰 및 다른 레이아웃이 포함 되어 있으며 모든 뷰 형식이 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생 됩니다. 마지막으로 셀은 [`TableView`](xref:Xamarin.Forms.TableView) 및 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤의 표시 데이터에 사용 되는 특수 컨트롤입니다. 페이지, 레이아웃, 보기 및 셀은 모두 [`Element`](xref:Xamarin.Forms.Element) 클래스에서 궁극적으로 파생 됩니다.
 
 다음 클래스 다이어그램은 일반적으로 Xamarin.ios에서 사용자 인터페이스를 작성 하는 데 사용 되는 형식의 계층 구조를 보여 줍니다.
 

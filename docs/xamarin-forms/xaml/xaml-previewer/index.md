@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms 용 XAML 미리 보기
-description: 이 문서에서는 XAML 미리 보기를 사용하여 표시되는 Xamarin.Forms 레이아웃을 확인하는 방법을 설명합니다. XAML 미리 보기는 Visual Studio 2019 및 Mac 용 Visual Studio 2019에서 사용할 수 있습니다.
+title: Xamarin에 대 한 XAML 미리 보기
+description: 이 문서에서는 XAML 미리 보기를 사용 하 여 사용자가 입력 한 대로 렌더링 된 Xamarin.ios 레이아웃을 보는 방법을 설명 합니다. XAML 미리 보기는 Visual Studio 2019 및 Mac 용 Visual Studio 2019에서 사용할 수 있습니다.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
@@ -9,13 +9,13 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: b287d523101bb8ca7faca8ea95ee898ccf9c0bb1
-ms.sourcegitcommit: e02b725e48af867eb2c53ac9e17805f778fbbc8c
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68757257"
 ---
-# <a name="xaml-previewer-for-xamarinforms"></a>Xamarin.Forms 용 XAML 미리 보기
+# <a name="xaml-previewer-for-xamarinforms"></a>Xamarin에 대 한 XAML 미리 보기
 
 _사용자가 입력 한 대로 렌더링 된 Xamarin.ios 레이아웃을 참조 하세요._
 
@@ -39,20 +39,20 @@ XAML 파일을 열면 편집기에서 **도구 > 옵션 > Xamarin > 양식 미�
 
 분할 뷰 창에서 이러한 단추를 선택 하 여 코드를 표시할지, XAML 미리 보기를 표시할지 또는 두 항목을 모두 표시할지를 선택 합니다. 가운데 단추는 미리 보기와 코드의 측면을 바꿉니다.
 
-[![Visual Studio에서 디자인, 소스 및 분할 뷰 간을 전환 하는 Xamarin.ios 미리 보기 컨트롤](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Visual Studio에서 디자인, 소스 및 분할 뷰 간을 전환 하는 Xamarin.ios 미리 보기 컨트롤")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Visual Studio에서 디자인, 소스 및 분할 뷰 간을 전환 하는 xamarin.ios 미리 보기 컨트롤](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "Visual Studio에서 디자인, 소스 및 분할 뷰 간을 전환 하는 xamarin.ios 미리 보기 컨트롤")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 화면이 세로 또는 가로로 분할 되는지 여부를 변경 하거나 한 창을 완전히 축소할 수 있습니다.
 
-[![Visual Studio의 Xamarin.ios 미리 보기 창 방향 컨트롤](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Visual Studio의 Xamarin.ios 미리 보기 창 방향 컨트롤")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Visual Studio의 xamarin.ios 미리 보기 창 방향 컨트롤](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "Visual Studio의 xamarin.ios 미리 보기 창 방향 컨트롤")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
+### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
-XAML 페이지를 열면 편집기에 **미리 보기** 단추가 표시됩니다. XAML 문서 창의 왼쪽 아래에 있는 **미리 보기** 또는 **분할** 단추를 눌러 미리 보기를 표시 하거나 숨깁니다.
+**미리 보기** 단추는 XAML 페이지를 열 때 편집기에 표시 됩니다. XAML 문서 창의 왼쪽 아래에 있는 **미리 보기** 또는 **분할** 단추를 눌러 미리 보기를 표시 하거나 숨깁니다.
 
-[![미리 보기 또는 분할 단추를 사용 하 여 Xamarin 폼 미리 보기 사용](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Xamarin 미리 보기 또는 분할 단추를 사용 하 여 폼 미리 보기 사용](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > 이전 버전의 Mac용 Visual Studio에서는 **미리 보기** 단추가 창의 오른쪽 위에 있습니다.
@@ -64,14 +64,14 @@ XAML 페이지를 열면 편집기에 **미리 보기** 단추가 표시됩니�
 미리 보기 창의 위쪽에 있는 옵션은 다음과 같습니다.
 
 * **Android** – 화면의 android 버전 표시
-* **ios** – 화면의 iOS 버전을 표시 합니다 (*참고: Windows에서 Visual Studio를 사용 하 [는](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 경우이 모드*를 사용 하려면 Mac과 쌍을 이루어야 합니다.
+* **ios** – 화면의 ios 버전을 표시 합니다 (*참고: Windows에서 Visual Studio를 사용 하는 경우이 모드를 사용 하려면 [Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md) 해야 함).*
 * 해상도 및 화면 크기를 포함 하는 Android 또는 iOS 장치의 **장치** 드롭다운 목록
 * **세로 (아이콘)** – 미리 보기에 세로 방향을 사용 합니다.
 * **가로 (아이콘)** – 미리 보기에 가로 방향을 사용 합니다.
 
 ## <a name="detect-design-mode"></a>디자인 모드 검색
 
-Static [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) 속성은 미리 보기에서 응용 프로그램이 실행 되 고 있는지를 알려 줍니다. 이를 사용 하 여 미리 보기에서 응용 프로그램이 실행 되 고 있지 않을 때만 실행 되는 코드를 지정할 수 있습니다.
+정적 [`DesignMode.IsDesignModeEnabled`](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) 속성은 미리 보기에서 응용 프로그램이 실행 되 고 있는지를 알려 줍니다. 이를 사용 하 여 미리 보기에서 응용 프로그램이 실행 되 고 있지 않을 때만 실행 되는 코드를 지정할 수 있습니다.
 
 ```csharp
 if (DesignMode.IsDesignModeEnabled)
@@ -95,10 +95,10 @@ if (!DesignMode.IsDesignModeEnabled)
 
 * 미리 보기를 시작 하는 데 다소 시간이 걸릴 수 있습니다. 준비가 될 때까지 "렌더링 초기화 중"이 표시 됩니다.
 * XAML 파일을 닫았다가 다시 열어 보세요.
-* `App` 클래스가 매개 변수 없는 생성자를 가지고 있는지 확인합니다.
+* @No__t_0 클래스에 매개 변수가 없는 생성자가 있는지 확인 합니다.
 * Xamarin.ios 버전을 확인 합니다. Xamarin. 양식 3.6 이상 이어야 합니다. NuGet을 통해 최신 Xamarin.ios 버전으로 업데이트할 수 있습니다.
 * JDK 설치 확인-Android를 미리 보려면 [jdk 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html)이상이 필요 합니다.
-* 에 있는 C# `if (!DesignMode.IsDesignModeEnabled)`페이지의 코드에서 초기화 된 클래스를 래핑 해 보세요.
+* @No__t_1에 있는 페이지의 C# 코드에서 초기화 된 클래스를 래핑 해 보세요.
 
 ### <a name="custom-controls-arent-rendering"></a>사용자 지정 컨트롤이 렌더링 되지 않습니다.
 

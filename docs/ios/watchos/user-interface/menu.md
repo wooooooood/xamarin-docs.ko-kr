@@ -8,22 +8,22 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766798"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Xamarin의 watchOS Menu 컨트롤 (Force Touch)
 
 Watch 키트는 감시 앱 화면에서 구현 될 때 메뉴를 트리거하는 Force Touch 제스처를 제공 합니다.
 
-![](menu-images/menu.png "메뉴를 표시 하 Apple Watch")
+![](menu-images/menu.png "Apple Watch showing a menu")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="responding-to-force-touch"></a>Force Touch에 응답
 
-`Menu` 가 인터페이스 컨트롤러에 대해 구현 된 경우 사용자가 Force Touch을 수행 하면 메뉴가 표시 됩니다. 메뉴를 구현 하지 않은 경우 화면에 잠시 애니메이션 효과가 적용 됩니다.
+인터페이스 컨트롤러에 대 한 `Menu` 구현 된 경우 사용자가 Force Touch를 수행 하면 메뉴가 표시 됩니다. 메뉴를 구현 하지 않은 경우 화면에 잠시 애니메이션 효과가 적용 됩니다.
 
 Force 접촉은 화면의 특정 요소와 연결 되지 않습니다. 인터페이스 컨트롤러에는 하나의 메뉴만 연결 될 수 있으며 화면에서 Force Touch 키가 발생 하는 위치에 관계 없이 표시 됩니다.
 
@@ -31,17 +31,17 @@ Force 접촉은 화면의 특정 요소와 연결 되지 않습니다. 인터페
 
 ## <a name="adding-a-menu"></a>메뉴 추가
 
-디자인 타임에 스토리 보드 `InterfaceController` 의에를 추가 해야합니다.`Menu` 메뉴 컨트롤을 인터페이스 컨트롤러에 끌어 놓으면 storyboard 미리 보기에 시각적 표시가 없지만 **문서 개요** 패드에 **메뉴가** 나타납니다.
+디자인 타임에 스토리 보드의 `InterfaceController`에 `Menu`를 추가 해야 합니다. 메뉴 컨트롤을 인터페이스 컨트롤러에 끌어 놓으면 storyboard 미리 보기에 시각적 표시가 없지만 **문서 개요** 패드에 **메뉴가** 나타납니다.
 
-![](menu-images/menu-action.png "디자인 타임에 메뉴 편집")
+![](menu-images/menu-action.png "Editing a menu at design time")
 
 메뉴 항목을 메뉴 컨트롤에 최대 4 개까지 추가할 수 있습니다. 이러한 **속성은 속성** 패드에서 구성할 수 있습니다. 다음 특성을 설정할 수 있습니다.
 
 - 제목 및
 - 사용자 지정 이미지 또는
-- 시스템 이미지: 수락, 추가, 차단, 거부, 정보, 기타, 음소거, 일시 중지, 재생, 반복, 다시 시작, 공유, 순서 섞기, 발표자, 휴지통.
+- 시스템 이미지: 수락, 추가, 차단, 거부, 정보, 없음, 추가, 음소거, 일시 중지, 재생, 반복, 다시 시작, 공유, 순서 섞기, 발표자, 휴지통.
 
-속성 패드 `Action` 의 **이벤트** 섹션을 선택 하 고 동작 메서드의 이름을 입력 하 여를 만듭니다. 다음과 같이 인터페이스 컨트롤러 클래스에서 구현할 수 있는 코드에서 부분 메서드가 생성 됩니다.
+**속성** 패드의 **이벤트** 섹션을 선택 하 고 동작 메서드의 이름을 입력 하 여 `Action`를 만듭니다. 다음과 같이 인터페이스 컨트롤러 클래스에서 구현할 수 있는 코드에서 부분 메서드가 생성 됩니다.
 
 ```csharp
 partial void MenuItemTapped ()
@@ -66,14 +66,14 @@ Menu items added the storyboard can be shown and hidden programmatically.
 
 ### <a name="adding-at-runtime"></a>런타임에 추가
 
-를 프로그래밍 방식으로 `Menu` 변경할 *수* 있지만 `MenuItem`런타임에를 인터페이스 컨트롤러에 추가할 수는 없습니다.
+@No__t_1s의 컬렉션을 프로그래밍 방식으로 변경할 *수* 있지만 런타임에 인터페이스 컨트롤러에 `Menu`를 추가할 수는 없습니다.
 다음과 같이 `AddMenuItem` 메서드를 사용 합니다.
 
 ```csharp
 AddMenuItem (WKMenuItemIcon.Accept, "Yes", new ObjCRuntime.Selector ("tapped"));
 ```
 
-Xamarin.ios Watch 키트 API는 현재 `selector` `AdMenuItem` 메서드에 대 한가 필요 하며,이는 다음과 같이 선언 해야 합니다.
+Xamarin.ios Watch 키트 API는 현재 다음과 같이 선언 되어야 하는 `AdMenuItem` 메서드에 대 한 `selector` 필요 합니다.
 
 ```csharp
 [Export("tapped")]
@@ -85,7 +85,7 @@ void MenuItemTapped ()
 
 ### <a name="removing-at-runtime"></a>런타임에 제거
 
-메서드 `ClearAllMenuItems` 를 호출 하 여 *프로그래밍 방식으로 추가* 된 모든 메뉴 항목을 제거할 수 있습니다.
+@No__t_0 메서드를 호출 하 여 *프로그래밍 방식으로 추가* 된 모든 메뉴 항목을 제거할 수 있습니다.
 
 스토리 보드에서 구성 된 메뉴 항목은 지울 수 없습니다.
 

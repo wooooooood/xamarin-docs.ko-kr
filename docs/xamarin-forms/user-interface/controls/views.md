@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/11/2019
-ms.openlocfilehash: 0094fbc73e88dc4e84d8bf415db30c17f955ddcc
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
-ms.translationtype: MT
+ms.date: 10/11/2019
+ms.openlocfilehash: 71b917cc6b090d78c9d9bdd7373b9bba74babee9
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69976596"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697009"
 ---
 # <a name="xamarinforms-views"></a>Xamarin 양식 보기
 
@@ -63,7 +63,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| [`Map`](xref:Xamarin.Forms.Maps.Map) 지도를 표시 합니다. **Xamarin.ios** Nuget 패키지를 설치 해야 합니다. Android 및 유니버설 Windows 플랫폼에는 맵 인증 키가 필요 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Maps.Map)  / [가이드](~/xamarin-forms/user-interface/map.md)  / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![지도 예제](views-images/Map.png "지도 예제")](views-images/Map-Large.png#lightbox "지도 예제")<br />이 페이지  / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) |
+| [`Map`](xref:Xamarin.Forms.Maps.Map) 지도를 표시 합니다. **Xamarin.ios** Nuget 패키지를 설치 해야 합니다. Android 및 유니버설 Windows 플랫폼에는 맵 인증 키가 필요 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Maps.Map)  / [가이드](~/xamarin-forms/user-interface/map/index.md)  / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![지도 예제](views-images/Map.png "지도 예제")](views-images/Map-Large.png#lightbox "지도 예제")<br />이 페이지  / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) |
 |     |     |
 
 ## <a name="views-that-initiate-commands"></a>명령을 시작 하는 뷰
@@ -80,6 +80,13 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 |     |     |
 | --- | --- |
 | `ImageButton`는 이미지를 표시 하 고 눌린 `Clicked` 이벤트를 발생 시키는 사각형 개체입니다.<br /><br /> [가이드](~/xamarin-forms/user-interface/imagebutton.md)  / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![ImageButton 예제](views-images/ImageButton.png "ImageButton 예제")](views-images/ImageButton-Large.png#lightbox "ImageButton 예제")<br /> [코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml)  /  [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) |
+|     |     |
+
+### <a name="refreshview"></a>RefreshView
+
+|     |     |
+| --- | --- |
+| `RefreshView`은 스크롤할 수 있는 콘텐츠에 대 한 끌어오기-새로 고침 기능을 제공 하는 컨테이너 컨트롤입니다. @No__t_1 속성으로 정의 된 `ICommand`는 새로 고침이 트리거될 때 실행 되 고, `IsRefreshing` 속성은 컨트롤의 현재 상태를 나타냅니다.<br /><br /> [가이드](~/xamarin-forms/user-interface/refreshview.md)  / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![RefreshView 예제](views-images/RefreshView.png "RefreshView 예제")](views-images/RefreshView-Large.png#lightbox "RefreshView Example")<br /> [코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml)  /  [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs) |
 |     |     |
 
 ### <a name="searchbar"></a>SearchBar
@@ -176,6 +183,13 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 |     |     |
 
 ## <a name="views-that-display-collections"></a>컬렉션을 표시 하는 뷰
+
+### <a name="carouselview"></a>CarouselView
+
+|     |     |
+| --- | --- |
+| [`CarouselView`](xref:Xamarin.Forms.CarouselView) 스크롤 가능한 데이터 항목 목록을 표시 합니다. @No__t_0 속성을 개체의 컬렉션으로 설정 하 고 `ItemTemplate` 속성을 항목의 형식을 지정 하는 방법을 설명 하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체로 설정 합니다. @No__t_0 이벤트는 현재 표시 된 항목이 변경 되었음을 신호로 보냅니다 .이는 `CurrentItem` 속성으로 사용할 수 있습니다.<br /><br />[가이드](~/xamarin-forms/user-interface/carouselview/index.md)  / [샘플](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/) | [![CarouselView 예제](views-images/CarouselView.png "CarouselView 예제")](views-images/CarouselView-Large.png#lightbox "CarouselView 예제")<br />이 페이지  / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselViewDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselViewDemoPage.cs) |
+|     |     |
 
 ### <a name="collectionview"></a>CollectionView
 

@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70762614"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>리소스 한정자 및 시각화 옵션
@@ -24,13 +24,13 @@ _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 �
 
 **가로** 모드 단추 오른쪽에 있는 줄임표 아이콘을 클릭 하 여 **리소스 한정자 옵션** 에 액세스할 수 있습니다.
 
-[![리소스 한정자 옵션](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[![Resource 한정자 옵션](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 이 대화 상자에는 다음과 같은 리소스 한정자의 풀 다운 메뉴가 표시 됩니다.
 
 - **언어** &ndash; 사용 가능한 언어 리소스를 표시 하 고 새 언어/지역 리소스를 추가 하는 옵션을 제공 합니다.
 
-- **UI 모드** 표시 모드 (예: **자동차 도크** 및 **책상 도크**) 뿐만 아니라 레이아웃 방향을 나열 합니다. &ndash;
+- **UI 모드** &ndash;는 디스플레이 모드 (예: **자동차 도크** 및 **책상 도크**) 뿐만 아니라 레이아웃 방향을 나열 합니다.
 
 이러한 각 풀 다운 메뉴에는 다음에 설명 된 대로 리소스 한정자를 선택 하 고 구성할 수 있는 새 대화 상자가 열립니다.
 
@@ -38,7 +38,7 @@ _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 �
 
 **언어** 풀 다운 메뉴에는 정의 된 리소스가 있는 언어 (또는 기본값 인 **모든 언어**)만 나열 됩니다. 그러나 목록에 새 언어를 추가 하는 데 사용할 수 있는 **언어/지역 추가** ... 옵션도 있습니다.
 
-[![언어/지역 추가](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[![Add 언어/지역](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 **언어/지역 추가 ...** 를 클릭 하면 사용 가능한 언어 및 지역의 드롭다운 목록을 표시 하는 **언어 선택** 대화 상자가 열립니다.
 
@@ -69,11 +69,11 @@ Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.Ap
 
 이 아이콘은 세 가지 작업 모음 모드 중 하나를 선택 하는 방법을 제공 하는 대화 상자 팝 오버 엽니다.
 
-- **표준** &ndash; 는 선택 부제목이 있는 로고 또는 아이콘 및 제목 텍스트로 구성 됩니다.
+- **표준** &ndash;는 로고가 나 아이콘 및 제목 텍스트로 구성 됩니다 (선택 사항).
 
 - **목록** &ndash; 목록 탐색 모드입니다. 이 모드는 정적 제목 텍스트 대신 활동 내 탐색을 위한 목록 메뉴를 표시 합니다 (즉, 사용자에 게 드롭다운 목록으로 표시 될 수 있음).
 
-- **탭** &ndash; 탭 탐색 모드입니다. 이 모드는 정적 제목 텍스트 대신 활동 내 탐색을 위한 일련의 탭을 제공 합니다.
+- **탭 &ndash; 탭** 탐색 모드입니다. 이 모드는 정적 제목 텍스트 대신 활동 내 탐색을 위한 일련의 탭을 제공 합니다.
 
 ## <a name="themes"></a>테마
 
@@ -83,7 +83,7 @@ Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.Ap
 
 테마를 선택 하면 새 테마의 효과를 표시 하도록 Design Surface 업데이트 됩니다. 이 변경은 **테마** 대화 상자에서 **확인** 단추를 클릭 한 경우에만 영구적으로 적용 됩니다. 테마를 선택 하면 아래와 같이 **테마** 드롭다운 메뉴에 포함 됩니다.
 
-![이제 밝은 테마를 사용할 수 있습니다] . (resource-qualifiers-images/vs/16-light-theme.png "이제 밝은 테마를 사용할 수 있습니다") .
+![이제 밝은 테마를 사용할 수 있습니다.](resource-qualifiers-images/vs/16-light-theme.png "이제 밝은 테마를 사용할 수 있습니다.")
 
 ## <a name="android-version"></a>Android 버전
 
@@ -93,7 +93,7 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 대상 프레임 워크 버전은 프로젝트의 설정 **> 응용 프로그램 > Android 버전을 사용 하 여 컴파일을 사용 하**여 설정할 수 있습니다. 대상 프레임 워크 버전에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.
 
-도구 상자에서 사용할 수 있는 위젯 집합은 프로젝트의 대상 프레임 워크 버전에 따라 결정 됩니다. **속성 창**에서 사용할 수 있는 속성에도 마찬가지입니다. 사용 가능한 위젯 목록은 도구 모음의 **버전** 선택기에서 선택한 값에 따라 결정 *되지 않습니다* . 예를 들어 프로젝트의 대상 버전을 Android 4.4로 설정 하는 경우 도구 모음 버전 선택기에서 Android 6.0를 선택 하 여 Android 6.0에서 프로젝트가 표시 되는 모양을 확인할 수 있지만 Android 6.0 &ndash; 에 특정 된 위젯을 추가할 수는 없습니다.  여전히 Android 4.4에서 사용할 수 있는 위젯로 제한 됩니다.
+도구 상자에서 사용할 수 있는 위젯 집합은 프로젝트의 대상 프레임 워크 버전에 따라 결정 됩니다. **속성 창**에서 사용할 수 있는 속성에도 마찬가지입니다. 사용 가능한 위젯 목록은 도구 모음의 **버전** 선택기에서 선택한 값에 따라 결정 *되지 않습니다* . 예를 들어, 프로젝트의 대상 버전을 Android 4.4로 설정 하는 경우 도구 모음 버전 선택기에서 Android 6.0를 선택 하 여 Android 6.0에서 프로젝트가 표시 되는 모양을 확인할 수 있지만 Android 6.0에 특정 된 위젯을 추가할 수는 없습니다. &ndash; Android 4.4에서 사용할 수 있는 위젯을 아직 제한 하지 않습니다.
 
 리소스 유형에 대 한 자세한 내용은 [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md)를 참조 하세요.
 
@@ -103,13 +103,13 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 **가로** 모드 단추 오른쪽에 있는 줄임표 아이콘을 클릭 하 여 **리소스 한정자 옵션** 에 액세스할 수 있습니다.
 
-[![리소스 한정자 옵션](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[![Resource 한정자 옵션](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 이 대화 상자에는 다음과 같은 리소스 한정자의 풀 다운 메뉴가 표시 됩니다.
 
 - **언어** &ndash; 사용 가능한 언어 리소스를 표시 하 고 새 언어/지역 리소스를 추가 하는 옵션을 제공 합니다.
 
-- **UI 모드** 표시 모드 (예: **자동차 도크** 및 **책상 도크**) 뿐만 아니라 레이아웃 방향을 나열 합니다. &ndash;
+- **UI 모드** &ndash;는 디스플레이 모드 (예: **자동차 도크** 및 **책상 도크**) 뿐만 아니라 레이아웃 방향을 나열 합니다.
 
 이러한 각 풀 다운 메뉴에는 다음에 설명 된 대로 리소스 한정자를 선택 하 고 구성할 수 있는 새 대화 상자가 열립니다.
 
@@ -117,15 +117,15 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 **언어** 풀 다운 메뉴에는 정의 된 리소스가 있는 언어 (또는 기본값 인 **모든 언어**)만 나열 됩니다. 그러나 목록에 새 언어를 추가 하는 데 사용할 수 있는 **언어/지역 추가** ... 옵션도 있습니다.
 
-[![언어/지역 추가](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[![Add 언어/지역](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 **언어/지역 추가 ...** 를 클릭 하면 사용 가능한 언어 및 지역의 드롭다운 목록을 표시 하는 **언어 선택** 대화 상자가 열립니다.
 
-[![언어 목록](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[언어 ![List](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 이 예제에서는 언어에 대해 **fr (프랑스어)** **를 선택 하 고 프랑스어** 지역 언어의 경우 (벨기에)로 설정 했습니다. 특정 지역에 관계 없이 많은 언어를 지정할 수 있으므로 **지역** 필드는 선택 사항입니다. **언어** 풀 다운 메뉴가 다시 열리면 새로 추가 된 언어/지역 리소스가 표시 됩니다.
 
-[![선택한 언어 및 지역](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[선택한 ![Language 및 지역](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 새 언어를 추가 하지만 새 언어에 대 한 리소스를 만들지 않는 경우 추가 된 언어는 다음에 프로젝트를 열 때 더 이상 표시 되지 않습니다.
 
@@ -144,35 +144,35 @@ Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.Ap
 
 **작업 모음 설정** 아이콘은 페인트 브러시 (테마 편집기) 아이콘 왼쪽에 있습니다.
 
-[![작업 모음 설정](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[![Action 모음 설정](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 이 아이콘은 세 가지 작업 모음 모드 중 하나를 선택 하는 방법을 제공 하는 대화 상자 팝 오버 엽니다.
 
-- **표준** &ndash; 는 선택 부제목이 있는 로고 또는 아이콘 및 제목 텍스트로 구성 됩니다.
+- **표준** &ndash;는 로고 또는 아이콘과 부제목 (선택 사항)이 포함 된 제목 텍스트로 구성 됩니다.
 
 - **목록** &ndash; 목록 탐색 모드입니다. 이 모드는 정적 제목 텍스트 대신 활동 내 탐색을 위한 목록 메뉴를 표시 합니다 (즉, 사용자에 게 드롭다운 목록으로 표시 될 수 있음).
 
-- **탭** &ndash; 탭 탐색 모드입니다. 이 모드는 정적 제목 텍스트 대신 활동 내 탐색을 위한 일련의 탭을 제공 합니다.
+- **탭 &ndash; 탭** 탐색 모드입니다. 이 모드는 정적 제목 텍스트 대신 활동 내 탐색을 위한 일련의 탭을 제공 합니다.
 
 ## <a name="themes"></a>테마
 
 **테마** 드롭다운 메뉴는 프로젝트에 정의 된 모든 테마를 표시 합니다. **추가 테마** 를 선택 하면 아래와 같이 설치 된 Android SDK에서 사용할 수 있는 모든 테마 목록이 포함 된 대화 상자가 열립니다.
 
-[![추가 테마 목록](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[![More 테마 목록](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 테마를 선택 하면 새 테마의 효과를 표시 하도록 Design Surface 업데이트 됩니다. 이 변경은 **테마** 대화 상자에서 **확인** 단추를 클릭 한 경우에만 영구적으로 적용 됩니다. 테마를 선택 하면 아래와 같이 **테마** 드롭다운 메뉴에 포함 됩니다.
 
-[![이제 밝은 테마를 사용할 수 있습니다.](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[이제 ![Light 테마를 사용할 수 있습니다.](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## <a name="android-version"></a>Android 버전
 
 Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하는 데 사용 되는 android 버전을 설정 합니다. 선택기는 프로젝트의 대상 프레임 워크 버전과 호환 되는 모든 버전을 표시 합니다.
 
-[![Android 버전 목록](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[Android 버전의 ![List](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 대상 프레임 워크 버전은 프로젝트의 설정 **> 빌드 > 일반** 섹션에서 설정할 수 있습니다. 대상 프레임 워크 버전에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.
 
-도구 상자에서 사용할 수 있는 위젯 집합은 프로젝트의 대상 프레임 워크 버전에 따라 결정 됩니다. **속성 패드**에서 사용할 수 있는 속성에도 마찬가지입니다. 사용 가능한 위젯 목록은 도구 모음의 **버전** 선택기에서 선택한 값에 따라 결정 *되지 않습니다* . 예를 들어 프로젝트의 대상 버전을 Android 4.4로 설정 하는 경우 도구 모음 버전 선택기에서 Android 6.0를 선택 하 여 Android 6.0에서 프로젝트가 표시 되는 모양을 확인할 수 있지만 Android 6.0 &ndash; 에 특정 된 위젯을 추가할 수는 없습니다.  여전히 Android 4.4에서 사용할 수 있는 위젯로 제한 됩니다.
+도구 상자에서 사용할 수 있는 위젯 집합은 프로젝트의 대상 프레임 워크 버전에 따라 결정 됩니다. **속성 패드**에서 사용할 수 있는 속성에도 마찬가지입니다. 사용 가능한 위젯 목록은 도구 모음의 **버전** 선택기에서 선택한 값에 따라 결정 *되지 않습니다* . 예를 들어, 프로젝트의 대상 버전을 Android 4.4로 설정 하는 경우 도구 모음 버전 선택기에서 Android 6.0를 선택 하 여 Android 6.0에서 프로젝트가 표시 되는 모양을 확인할 수 있지만 Android 6.0에 특정 된 위젯을 추가할 수는 없습니다. &ndash; Android 4.4에서 사용할 수 있는 위젯을 아직 제한 하지 않습니다.
 
 리소스 유형에 대 한 자세한 내용은 [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md)를 참조 하세요.
 

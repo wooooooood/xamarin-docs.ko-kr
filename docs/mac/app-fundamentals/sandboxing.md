@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 4558a9bd19810f8759010861d8a2e4b8cab09c56
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770295"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Xamarin.ios 앱 샌드 박싱
@@ -26,7 +26,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 샌드 박싱을 사용 하는 기본 사항과 샌드 박싱으로 이동 하는 모든 요소 (컨테이너 디렉터리, 자격, 사용자 결정 권한, 권한 분리 및 커널 적용)에 대해 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
 
-참조 하려는 경우는 [노출 C# 클래스 / Objective-c 하는 메서드를](~/mac/internals/how-it-works.md) 의 섹션은 [Xamarin.Mac 내부](~/mac/internals/how-it-works.md) 설명도 문서는 `Register` 및 `Export` 특성 요소 Objective-C 개체 및 UI에 C# 클래스를 연결 하는 데 사용 합니다.
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 C# 클래스/메서드를](~/mac/internals/how-it-works.md) 표시 하는 방법에 대 한 자세한 내용을 확인할 수 있습니다 .이 항목에서는 C# 클래스를 목표에 연결 하는 데 사용 되는 `Register` 및 `Export` 특성에 대해 설명 합니다. 개체 및 UI 요소
 
 ## <a name="about-the-app-sandbox"></a>앱 샌드박스 정보
 
@@ -68,10 +68,10 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 다음을 수행 하 여 샘플 프로젝트를 만들어 보겠습니다.
 
 1. Mac용 Visual Studio를 시작 하 고 **새 솔루션** 을 클릭 합니다. 추가합니다.
-2. **새 프로젝트** 대화 상자에서 **Mac** > **앱** > **cocoa 앱**을 선택 합니다.
+2. **새 프로젝트** 대화 상자에서 **Mac**  > **앱**  > **cocoa 앱**을 선택 합니다.
 
     [![새 Cocoa 앱 만들기](sandboxing-images/sample01.png "새 Cocoa 앱 만들기")](sandboxing-images/sample01-large.png#lightbox)
-3. **다음** 단추를 클릭 하 고 `MacSandbox` 프로젝트 이름으로를 입력 한 다음 **만들기** 단추를 클릭 합니다.
+3. **다음** 단추를 클릭 하 고 프로젝트 이름에 `MacSandbox`를 입력 한 다음 **만들기** 단추를 클릭 합니다.
 
     [![앱 이름 입력](sandboxing-images/sample02.png "앱 이름 입력")](sandboxing-images/sample02-large.png#lightbox)
 4. **Solution Pad**에서 **주 storyboard** 파일을 두 번 클릭 하 여 Xcode에서 편집할 수 있도록 엽니다.
@@ -80,12 +80,12 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 5. **웹 뷰** 를 창으로 끌어 놓고 크기를 조정 하 여 콘텐츠 영역을 채운 다음 창에서 확대/축소로 설정 합니다.
 
     [![웹 보기 추가](sandboxing-images/sample04.png "웹 보기 추가")](sandboxing-images/sample04-large.png#lightbox)
-6. 이라는 `webView`웹 보기에 대 한 콘센트를 만듭니다.
+6. @No__t_0 이라는 웹 보기의 콘센트를 만듭니다.
 
     [![새 콘센트 만들기](sandboxing-images/sample05.png "새 콘센트 만들기")](sandboxing-images/sample05-large.png#lightbox)
 7. Mac용 Visual Studio로 돌아가서 **Solution Pad** **ViewController.cs** 파일을 두 번 클릭 하 여 편집을 위해 엽니다.
-8. 다음 using 문을 추가 합니다.`using WebKit;`
-9. 다음과 같이 `ViewDidLoad` 메서드를 만듭니다.
+8. 다음 using 문을 추가 합니다. `using WebKit;`
+9. @No__t_0 메서드를 다음과 같이 만듭니다.
 
     ```csharp
     public override void AwakeFromNib ()
@@ -114,7 +114,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
     [![Apple 개발자 포털에 로그인](sandboxing-images/sign01.png "Apple 개발자 포털에 로그인")](sandboxing-images/sign01-large.png#lightbox)
 2. **인증서, 식별자 & 프로필을 선택 합니다**.
 
-    [![인증서, 식별자 및 프로필 선택](sandboxing-images/sign02.png "인증서, 식별자 및 프로필 선택")](sandboxing-images/sign02-large.png#lightbox)
+    [![인증서, 식별자 & 프로필 선택](sandboxing-images/sign02.png "인증서, 식별자 & 프로필 선택")](sandboxing-images/sign02-large.png#lightbox)
 3. **Mac 앱**에서 **식별자**:를 선택 합니다.
 
     [![식별자 선택](sandboxing-images/sign03.png "식별자 선택")](sandboxing-images/sign03-large.png#lightbox)
@@ -138,7 +138,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
     [![허용 된 컴퓨터 선택](sandboxing-images/sign09.png "허용 된 컴퓨터 선택")](sandboxing-images/sign09-large.png#lightbox)
 10. 프로필에 이름을 지정 합니다.
 
-    [![프로필에 이름] 지정 (sandboxing-images/sign10.png "프로필에 이름") 지정](sandboxing-images/sign10-large.png#lightbox)
+    [![프로필에 이름 지정](sandboxing-images/sign10.png "프로필에 이름 지정")](sandboxing-images/sign10-large.png#lightbox)
 11. **완료** 단추를 클릭 합니다.
 
 > [!IMPORTANT]
@@ -161,7 +161,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 2. **번들 식별자** 가 위에서 만든 앱 ID와 일치 하는지 확인 합니다 (예: `com.appracatappra.MacSandbox`).
 
     [![번들 식별자 편집](sandboxing-images/sign13.png "번들 식별자 편집")](sandboxing-images/sign13-large.png#lightbox)
-3. 그런 다음 **info.plist** 파일을 두 번 클릭 하 고 **Icloud 키-값 저장소** 와 **Icloud 컨테이너** 모두 위에서 만든 앱 ID와 일치 하는지 확인 합니다 (예: `com.appracatappra.MacSandbox`).
+3. 그런 다음 info.plist 파일을 두 번 클릭 하 고 **Icloud 키-값 저장소** 와 **icloud 컨테이너** 모두 위에서 만든 앱 ID와 일치 하는지 확인 **합니다** (예: `com.appracatappra.MacSandbox`).
 
     [![Info.plist 파일 편집](sandboxing-images/sign17.png "Info.plist 파일 편집")](sandboxing-images/sign17-large.png#lightbox)
 4. 변경 내용을 저장합니다.
@@ -208,19 +208,19 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 
 리소스 차단 동작 외에도 다음과 같은 세 가지 주요 방법으로 Xamarin.ios 응용 프로그램이 성공적으로 샌드 박싱 되었는지 확인할 수 있습니다.
 
-1. Finder에서 `~/Library/Containers/` 폴더의 콘텐츠를 확인 합니다.-앱이 샌드 박싱 되 면 앱의 번들 식별자와 같은 라는 폴더가 있습니다 (예: `com.appracatappra.MacSandbox`).
+1. Finder에서 `~/Library/Containers/` 폴더의 콘텐츠를 확인 합니다. 앱이 샌드 박싱 되 면 앱의 번들 식별자와 같은 폴더 (예: `com.appracatappra.MacSandbox`)가 있습니다.
 
     [![앱의 번들 열기](sandboxing-images/sample09.png "앱의 번들 열기")](sandboxing-images/sample09-large.png#lightbox)
 2. 시스템은 작업 모니터에서 앱이 샌드 박싱된로 표시 됩니다.
-    - 작업 모니터 (아래 `/Applications/Utilities`)를 시작 합니다.
-    - **열** **보기** > 를 선택 하 고 **Sandbox** 메뉴 항목이 선택 되어 있는지 확인 합니다.
-    - 응용 프로그램에 대 한 샌드박스 `Yes` 열이 읽기 인지 확인 합니다.
+    - 작업 모니터 (`/Applications/Utilities`)를 시작 합니다.
+    - @No__t_1**열** **보기** 를 선택 하 고 **Sandbox** 메뉴 항목이 선택 되어 있는지 확인 합니다.
+    - 샌드박스 열이 응용 프로그램에 대 한 `Yes`를 읽도록 합니다.
 
     [![작업 모니터에서 앱을 확인 하는 중](sandboxing-images/sample10.png "작업 모니터에서 앱을 확인 하는 중")](sandboxing-images/sample10-large.png#lightbox)
 3. 앱 이진 파일이 샌드 박싱 되었는지 확인 합니다.
     - 터미널 앱을 시작 합니다.
     - 응용 프로그램 `bin` 디렉터리로 이동 합니다.
-    - 이 명령을 실행 합니다 `codesign -dvvv --entitlements :- executable_path` . 여기서 `executable_path` 는 응용 프로그램의 경로입니다.
+    - 다음 명령을 실행 합니다. `codesign -dvvv --entitlements :- executable_path` (여기서 `executable_path`는 응용 프로그램의 경로).
 
     [![명령줄에서 앱을 확인 하는 중](sandboxing-images/sample11.png "명령줄에서 앱을 확인 하는 중")](sandboxing-images/sample11-large.png#lightbox)
 
@@ -230,7 +230,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 목�
 
 [![필수 옵션 설정](sandboxing-images/debug01.png "필수 옵션 설정")](sandboxing-images/debug01-large.png#lightbox)
 
-디버거를 사용 하도록 설정 하는 데 필요한 **송신 네트워크 연결 허용 (클라이언트)** 권한이 디버거를 사용 하도록 설정 하는 것이 일반적입니다. 이 없이 디버그할 수 없으므로 디버그 빌드 전용으로 샌드 박싱된 `CompileEntitlements` 앱에 `msbuild` 대 한 자격에 해당 권한을 자동으로 추가 하도록 대상이 업데이트 되었습니다. 릴리스 빌드에서는 자격 파일에 지정 된 자격을 수정 되지 않은 상태로 사용 해야 합니다.
+디버거를 사용 하도록 설정 하는 데 필요한 **송신 네트워크 연결 허용 (클라이언트)** 권한이 디버거를 사용 하도록 설정 하는 것이 일반적입니다. 이 없이 디버그할 수 없으므로 디버그 빌드 전용으로 샌드 박싱된 앱에 대 한 자격에 해당 권한을 자동으로 추가 하도록 `msbuild`에 대 한 `CompileEntitlements` 대상을 업데이트 했습니다. 릴리스 빌드에서는 자격 파일에 지정 된 자격을 수정 되지 않은 상태로 사용 해야 합니다.
 
 ### <a name="resolving-an-app-sandbox-violation"></a>앱 샌드박스 위반 해결
 
@@ -245,12 +245,12 @@ Xamarin.ios 응용 프로그램에서 앱 샌드박스 위반이 발생 하는 �
 다음을 수행합니다.
 
 1. 문제의 앱을 컴파일하고 Mac용 Visual Studio에서 실행 합니다.
-2. **콘솔** 응용 프로그램 (에서 `/Applications/Utilties/`)을 엽니다.
-3. 사이드바에서 **모든 메시지** 를 선택 하 고 `sandbox` 검색에 입력 합니다.
+2. @No__t_1에서 **콘솔** 응용 프로그램을 엽니다.
+3. 사이드바에서 **모든 메시지** 를 선택 하 고 검색에 `sandbox`을 입력 합니다.
 
     [![콘솔의 샌드 박싱 문제의 예](sandboxing-images/resolve01.png "콘솔의 샌드 박싱 문제의 예")](sandboxing-images/resolve01-large.png#lightbox)
 
-위의 예제 앱에서는 해당 권한을 요청 하지 않았으므로 응용 프로그램 샌드박스에서 kernal에서 `network-outbound` 트래픽을 차단 하 고 있음을 확인할 수 있습니다.
+위의 예제 앱에서는 해당 권한을 요청 하지 않았으므로 응용 프로그램 샌드박스에서 Kernal이 `network-outbound` 트래픽을 차단 하 고 있음을 알 수 있습니다.
 
 #### <a name="fixing-app-sandbox-violations-with-entitlements"></a>자격으로 앱 샌드박스 위반 수정
 
@@ -293,7 +293,7 @@ Xamarin.ios 응용 프로그램에서 앱 샌드박스를 사용 하는 경우 �
 - **앱 컨테이너 디렉터리** -처음 실행 하는 경우 OS는 해당 리소스가 모두 이동 하는 특수 _컨테이너 디렉터리_ 를 만들어 액세스할 수 있습니다. 앱에는이 디렉터리에 대 한 전체 읽기/쓰기 권한이 있습니다.
 - **앱 그룹 컨테이너 디렉터리** -앱에 동일한 그룹의 앱 간에 공유 되는 하나 이상의 _그룹 컨테이너_ 에 대 한 액세스 권한을 부여할 수 있습니다.
 - **사용자 지정 파일** -응용 프로그램은 사용자가 명시적으로 열거나 끌어 응용 프로그램에 끌어 놓은 파일에 대 한 액세스 권한을 자동으로 가져옵니다.
-- **관련 항목** -적절 한 자격을 가진 응용 프로그램은 이름이 같지만 확장명이 다른 파일에 액세스할 수 있습니다. 예를 들어 `.txt` 파일 `.pdf`및로 저장 된 문서입니다.
+- **관련 항목** -적절 한 자격을 가진 응용 프로그램은 이름이 같지만 확장명이 다른 파일에 액세스할 수 있습니다. 예를 들어 `.txt` 파일 및 `.pdf` 저장 된 문서입니다.
 - **임시 디렉터리, 명령줄 도구 디렉터리 및 특정 세계에서 읽을 수 있는 위치** -앱은 시스템에 지정 된 대로 잘 정의 된 다른 위치에 있는 파일에 대 한 다양 한 액세스 권한을 가집니다.
 
 #### <a name="the-app-container-directory"></a>앱 컨테이너 디렉터리
@@ -302,13 +302,13 @@ Xamarin.ios 응용 프로그램의 앱 컨테이너 디렉터리에는 다음과
 
 - 사용자의 홈 디렉터리 (일반적으로 `~Library/Containers`)의 숨겨진 위치에 있으며, 응용 프로그램 내에서 `NSHomeDirectory` 함수 (아래 참조)를 사용 하 여 액세스할 수 있습니다. 홈 디렉터리에 있기 때문에 각 사용자는 앱에 대 한 자체 컨테이너를 얻게 됩니다.
 - 앱에는 컨테이너 디렉터리와 그 안에 포함 된 모든 하위 디렉터리 및 파일에 대 한 제한 없는 읽기/쓰기 권한이 있습니다.
-- 대부분의 macOS 경로-Api 검색은 앱의 컨테이너를 기준으로 합니다. 예를 들어 컨테이너에는 자체 **라이브러리** (를 통해 `NSLibraryDirectory`액세스 됨), **응용 프로그램 지원** 및 **기본 설정** 하위 디렉터리가 있습니다.
+- 대부분의 macOS 경로-Api 검색은 앱의 컨테이너를 기준으로 합니다. 예를 들어 컨테이너에는 자체 **라이브러리** (`NSLibraryDirectory`을 통해 액세스), **응용 프로그램 지원** 및 **기본 설정** 하위 디렉터리가 있습니다.
 - macOS는 코드 서명을 통해 및 앱과 해당 컨테이너 간의 연결을 설정 하 고 적용 합니다. 다른 앱에서 **번들 식별자**를 사용 하 여 앱을 스푸핑 하려고 시도 하더라도 코드 서명으로 인해 컨테이너에 액세스할 수 없습니다.
 - 사용자가 생성 한 파일에 대 한 컨테이너가 아닙니다. 대신 응용 프로그램에서 사용 하는 파일 (예: 데이터베이스, 캐시 또는 다른 특정 데이터 형식)에 대 한 것입니다.
 - _Shoebox_ 유형의 앱 (예: Apple Photo 앱)의 경우 사용자 콘텐츠가 컨테이너로 이동 합니다.
 
 > [!IMPORTANT]
-> 불행 하 게 xamarin.ios는 아직 100% api를 제공 하지 않습니다 (xamarin.ios와 달리) .이로 인해 `NSHomeDirectory` api가 현재 버전의 xamarin.ios에서 매핑되지 않았습니다.
+> 불행 하 게 Xamarin.ios는 아직 100% API를 제공 하지 않습니다 (Xamarin.ios와 달리). 따라서 `NSHomeDirectory` API는 현재 버전의 Xamarin.ios에서 매핑되지 않았습니다.
 
 임시 해결 방법으로 다음 코드를 사용할 수 있습니다.
 
@@ -325,9 +325,9 @@ public static string ContainerDirectory {
 
 #### <a name="the-app-group-container-directory"></a>앱 그룹 컨테이너 디렉터리
 
-Mac macos 10.7.5 이상에서 시작 하는 응용 프로그램은 `com.apple.security.application-groups` 자격을 사용 하 여 그룹의 모든 응용 프로그램에 공통 되는 공유 컨테이너에 액세스할 수 있습니다. 데이터베이스 또는 기타 지원 파일 유형 (예: 캐시)과 같이 사용자가 작성 하지 않은 콘텐츠에 대해이 공유 컨테이너를 사용할 수 있습니다.
+Mac macOS 10.7.5 이상 (이상)부터 응용 프로그램은 `com.apple.security.application-groups` 자격을 사용 하 여 그룹의 모든 응용 프로그램에 공통 된 공유 컨테이너에 액세스할 수 있습니다. 데이터베이스 또는 기타 지원 파일 유형 (예: 캐시)과 같이 사용자가 작성 하지 않은 콘텐츠에 대해이 공유 컨테이너를 사용할 수 있습니다.
 
-그룹 컨테이너는 그룹의 일부인 경우 각 앱의 샌드박스 컨테이너에 자동으로 추가 되 고에 `~/Library/Group Containers/<application-group-id>`저장 됩니다. 그룹 ID는 개발 팀 ID 및 마침표로 시작 _해야 합니다_ . 예를 들면 다음과 같습니다.
+그룹 컨테이너는 그룹의 일부인 경우 각 앱의 샌드박스 컨테이너에 자동으로 추가 되 고 `~/Library/Group Containers/<application-group-id>`에 저장 됩니다. 그룹 ID는 개발 팀 ID 및 마침표로 시작 _해야 합니다_ . 예를 들면 다음과 같습니다.
 
 ```plist
 <team-id>.com.company.<group-name>
@@ -343,7 +343,7 @@ Mac macos 10.7.5 이상에서 시작 하는 응용 프로그램은 `com.apple.se
 - 특정 파일 시스템 위치 (예: `/bin` 또는 `/usr/lib`)에 대 한 자격을 사용 합니다.
 - 파일 시스템 위치가 세계에서 읽을 수 있는 특정 디렉터리에 있는 경우 (예: 공유)
 
-_Powerbox_ 는 사용자와 상호 작용 하 여 샌드박스가 적용 된 xamarin.ios 앱의 파일 액세스 권한을 확장 하는 macos 보안 기술입니다. Powerbox에는 API가 없지만 앱에서 또는 `NSOpenPanel` `NSSavePanel`를 호출할 때 투명 하 게 활성화 됩니다. Powerbox 액세스는 Xamarin.ios 응용 프로그램에 대해 설정한 자격을 통해 사용 하도록 설정 됩니다.
+_Powerbox_ 는 사용자와 상호 작용 하 여 샌드박스가 적용 된 xamarin.ios 앱의 파일 액세스 권한을 확장 하는 macos 보안 기술입니다. Powerbox에는 API가 없지만 앱이 `NSOpenPanel` 또는 `NSSavePanel`를 호출할 때 투명 하 게 활성화 됩니다. Powerbox 액세스는 Xamarin.ios 응용 프로그램에 대해 설정한 자격을 통해 사용 하도록 설정 됩니다.
 
 샌드박스가 적용 된 앱이 열기 또는 저장 대화 상자를 표시 하는 경우,이 창은 AppKit가 아닌 Powerbox에 의해 제공 되므로 사용자가 액세스할 수 있는 모든 파일이 나 디렉터리에 액세스할 수 있습니다.
 
@@ -363,7 +363,7 @@ _Powerbox_ 는 사용자와 상호 작용 하 여 샌드박스가 적용 된 xam
   - `/usr/sbin`
   - `/usr/share`
   - `/System`
-- 에서 `NSTemporaryDirectory`만든 디렉터리의 파일을 읽고 씁니다.
+- @No__t_0에서 만든 디렉터리에서 파일을 읽고 씁니다.
 
 기본적으로 샌드 박싱된 앱에서 열거나 저장 한 파일은 앱이 종료 될 때까지 계속 액세스할 수 있습니다 (앱이 종료 될 때 파일이 열려 있지 않은 경우). 열려 있는 파일은 다음에 앱이 시작 될 때 macOS 다시 시작 기능을 통해 앱의 샌드박스에 자동으로 복원 됩니다.
 
@@ -371,25 +371,25 @@ Xamarin.ios 앱 컨테이너 외부에 있는 파일에 지 속성을 제공 하
 
 #### <a name="related-items"></a>관련 항목
 
-앱 샌드박스를 사용 하면 앱에서 파일 이름이 같고 확장명이 다른 관련 항목에 액세스할 수 있습니다. 이 기능에는 앱이 이러한 파일을 사용 하 여 수행할 작업을 샌드박스에 알리기 `Info.plst` 위해 앱의 b () 코드에 있는 관련 확장 프로그램의 두 부분으로 구성 됩니다.
+앱 샌드박스를 사용 하면 앱에서 파일 이름이 같고 확장명이 다른 관련 항목에 액세스할 수 있습니다. 이 기능에는 앱이 이러한 파일을 사용 하 여 수행할 작업을 샌드박스에 알리기 위해 앱의 `Info.plst` 파일 b) 코드에 있는 관련 확장의 목록이 포함 됩니다.
 
 이를 수행 하는 두 가지 시나리오가 있습니다.
 
-1. 앱은 다른 버전의 파일 (새 확장명 사용)을 저장할 수 있어야 합니다. 예를 들어 파일을 `.txt` `.pdf` 파일로 내보냅니다. 이러한 상황을 처리 하려면를 `NSFileCoordinator` 사용 하 여 파일에 액세스 해야 합니다. 먼저 `WillMove(fromURL, toURL)` 메서드를 호출 하 고 파일을 새 확장으로 이동한 다음를 호출 `ItemMoved(fromURL, toURL)`합니다.
-2. 앱은 확장을 여러 개 포함 하는 주 파일 및 확장을 사용 하는 여러 지원 파일을 열어야 합니다. 예를 들어 영화와 부제목 파일이 있습니다. `NSFilePresenter` 보조 파일에 대 한 액세스 권한을 얻으려면를 사용 합니다. 속성에 주 파일 `PrimaryPresentedItemURL` 을 제공 하 고 `PresentedItemURL` 속성에 보조 파일을 제공 합니다. 주 파일이 열리면 `AddFilePresenter` `NSFileCoordinator` 클래스의 메서드를 호출 하 여 보조 파일을 등록 합니다.
+1. 앱은 다른 버전의 파일 (새 확장명 사용)을 저장할 수 있어야 합니다. 예를 들어 `.txt` 파일을 `.pdf` 파일로 내보냅니다. 이러한 상황을 처리 하려면 `NSFileCoordinator`을 사용 하 여 파일에 액세스 해야 합니다. @No__t_0 메서드를 먼저 호출 하 고 파일을 새 확장으로 이동한 다음 `ItemMoved(fromURL, toURL)`를 호출 합니다.
+2. 앱은 확장을 여러 개 포함 하는 주 파일 및 확장을 사용 하는 여러 지원 파일을 열어야 합니다. 예를 들어 영화와 부제목 파일이 있습니다. @No__t_0를 사용 하 여 보조 파일에 액세스할 수 있습니다. @No__t_0 속성에 주 파일을 제공 하 고 `PresentedItemURL` 속성에 보조 파일을 제공 합니다. 주 파일을 열면 `NSFileCoordinator` 클래스의 `AddFilePresenter` 메서드를 호출 하 여 보조 파일을 등록 합니다.
 
-두 시나리오 모두에서 앱의 **info.plist** 파일은 앱이 열 수 있는 문서 형식을 선언 해야 합니다. 모든 파일 형식에 대해 `NSIsRelatedItemType` ( `YES`값이 인)를 `CFBundleDocumentTypes` 배열의 해당 항목에 추가 합니다.
+두 시나리오 모두에서 앱의 **info.plist** 파일은 앱이 열 수 있는 문서 형식을 선언 해야 합니다. 모든 파일 형식에 대해 `CFBundleDocumentTypes` 배열의 항목에 `NSIsRelatedItemType` (`YES` 값 포함)을 추가 합니다.
 
 #### <a name="open-and-save-dialog-behavior-with-sandboxed-apps"></a>샌드박스 앱을 사용 하 여 대화 동작 열기 및 저장
 
-샌드박스가 적용 된 xamarin.ios 앱에서 호출 `NSOpenPanel` 하 `NSSavePanel` 는 경우 및에는 다음과 같은 제한이 적용 됩니다.
+다음 제한은 샌드박스가 적용 된 Xamarin.ios 앱에서 호출할 때 `NSOpenPanel` 및 `NSSavePanel`에 배치 됩니다.
 
 - **확인** 단추를 프로그래밍 방식으로 호출할 수 없습니다.
-- 에서 사용자의 선택 항목을 프로그래밍 방식으로 변경할 `NSOpenSavePanelDelegate`수 없습니다.
+- @No__t_0에서 사용자가 선택한 항목을 프로그래밍 방식으로 변경할 수 없습니다.
 
 또한 다음과 같은 상속 수정이 준비 됩니다.
 
-- **샌드 박싱 되지 않는 앱**  -  `NSOpenPanel``NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
+- **샌드 박싱 되지 않는 앱**  -  `NSOpenPanel` `NSSavePanel``NSPanel``NSWindow``NSResponder``NSObject``NSOpenPanel``NSSavePanel``NSObject``NSOpenPanel``NSSavePanel`
 
 ### <a name="security-scoped-bookmarks-and-persistent-resource-access"></a>보안 범위 책갈피 및 영구 리소스 액세스
 
@@ -403,27 +403,27 @@ _보안 범위 책갈피_를 사용 하면 샌드박스가 적용 된 xamarin.io
 
 - **앱 범위 책갈피는 사용자 지정 파일 또는 폴더에 대 한 영구 액세스를 제공 합니다.**
 
-    예를 들어, 샌드박스가 적용 된 xamarin.ios 응용 프로그램에서를 `NSOpenPanel`사용 하 여 편집을 위해 외부 문서를 열 수 있는 경우 앱은 나중에 동일한 파일에 다시 액세스할 수 있도록 앱 범위 책갈피를 만들 수 있습니다.
+    예를 들어, 샌드박스가 적용 된 Xamarin.ios 응용 프로그램에서를 사용 하 여 편집을 위해 외부 문서를 열 수 있는 경우 (`NSOpenPanel` 사용) 앱은 나중에 동일한 파일에 다시 액세스할 수 있도록 앱 범위 책갈피를 만들 수 있습니다.
 - **문서 범위 책갈피는 하위 파일에 대 한 영구 액세스를 제공 합니다.**
 
 예를 들어, 개별 이미지, 비디오 클립 및 소리 파일에 액세스할 수 있는 프로젝트 파일을 만드는 비디오 편집 앱은 나중에 단일 동영상으로 결합 됩니다.
 
-사용자가를 `NSOpenPanel`통해 프로젝트에 리소스 파일을 가져오면 앱에서 프로젝트에 저장 된 항목에 대 한 문서 범위의 책갈피를 만들어 해당 파일을 앱에서 항상 액세스할 수 있도록 합니다.
+사용자가 프로젝트에 리소스 파일을 가져올 때 (`NSOpenPanel`을 통해) 앱은 파일을 앱에서 항상 액세스할 수 있도록 프로젝트에 저장 된 항목에 대 한 문서 범위의 책갈피를 만듭니다.
 
 문서 범위 책갈피는 책갈피 데이터와 문서 자체를 열 수 있는 모든 응용 프로그램에서 확인할 수 있습니다. 이렇게 하면 이식성이 지원 되므로 사용자가 프로젝트 파일을 다른 사용자에 게 보내고 모든 책갈피를 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> 문서 범위 책갈피는 폴더가 아니라 단일 _파일만 가리킬 수 있으며_ `/private` ,이 파일은 시스템에서 사용 하는 위치 (예: 또는 `/Library`)에 있을 수 없습니다.
+> 문서 범위 책갈피는 폴더가 아니라 단일 _파일만 가리킬 수 있으며 해당_ 파일은 시스템에서 사용 하는 위치 (예: `/private` 또는 `/Library`)에 있을 수 없습니다.
 
 #### <a name="using-security-scoped-bookmarks"></a>보안 범위 책갈피 사용
 
 보안 범위가 지정 된 두 가지 유형의 책갈피를 사용 하 여 다음 단계를 수행 해야 합니다.
 
-1. **보안 범위 책갈피를 사용 해야 하는 xamarin.ios 앱에서 적절 한 자격을 설정** 합니다. 앱 범위 책갈피의 경우 `com.apple.security.files.bookmarks.app-scope` 권한 키를로 `true`설정 합니다. 문서 범위 책갈피의 경우 `com.apple.security.files.bookmarks.document-scope` 자격 키를로 `true`설정 합니다.
-2. **보안 범위 책갈피 만들기** -사용자가 액세스를 제공한 모든 파일이 나 폴더 (예:를 통해 `NSOpenPanel` )에 대해이 작업을 수행 하 여 앱이 영구적으로 액세스할 수 있어야 합니다. 클래스의 메서드를 사용 하 여 책갈피를 만듭니다. `public virtual NSData CreateBookmarkData (NSUrlBookmarkCreationOptions options, string[] resourceValues, NSUrl relativeUrl, out NSError error)` `NSUrl`
-3. **보안 범위 책갈피 해결** -앱에서 리소스에 다시 액세스 해야 하는 경우 (예: 다시 시작 후), 보안 범위 URL로 책갈피를 확인 해야 합니다. 클래스의 메서드를 `public static NSUrl FromBookmarkData (NSData data, NSUrlBookmarkResolutionOptions options, NSUrl relativeToUrl, out bool isStale, out NSError error)` 사용 하 여 책갈피를 확인 합니다. `NSUrl`
-4. **보안 범위 url에서 파일에 액세스 하려는 시스템에 명시적으로 알림** -이 단계는 위의 보안 범위 url을 가져온 후 즉시 수행 해야 하며, 이후에는 나중에 리소스에 대 한 액세스 권한을 다시 확보 하려는 경우에 수행 해야 합니다. 액세스를 하므로. 클래스의 메서드를 `StartAccessingSecurityScopedResource ()` 호출 하 여 보안 범위가 지정 된 URL에 대 한 액세스를 시작 합니다. `NSUrl`
-5. **보안 범위 URL에서 파일에 액세스 하는 작업을 시스템에 명시적으로 알리기** -가능한 한 빨리 앱이 파일에 더 이상 액세스할 필요가 없는 경우 (예: 사용자가 닫은 경우) 시스템에 알려야 합니다. 클래스의 메서드를 `StopAccessingSecurityScopedResource ()` 호출 하 여 보안 범위가 지정 된 URL에 대 한 액세스를 중지 합니다. `NSUrl`
+1. **보안 범위 책갈피를 사용 해야 하는 xamarin.ios 앱에서 적절 한 자격을 설정** 합니다. 앱 범위 책갈피의 경우 `com.apple.security.files.bookmarks.app-scope` 권한 키를 `true`로 설정 합니다. 문서 범위 책갈피의 경우 `com.apple.security.files.bookmarks.document-scope` 권한 키를 `true`로 설정 합니다.
+2. **보안 범위 책갈피 만들기** -사용자가 액세스를 제공한 모든 파일 또는 폴더 (예: `NSOpenPanel`)에 대해이 작업을 수행 하 여 앱이 영구적으로 액세스할 수 있어야 합니다. @No__t_1 클래스의 `public virtual NSData CreateBookmarkData (NSUrlBookmarkCreationOptions options, string[] resourceValues, NSUrl relativeUrl, out NSError error)` 메서드를 사용 하 여 책갈피를 만듭니다.
+3. **보안 범위 책갈피 해결** -앱에서 리소스에 다시 액세스 해야 하는 경우 (예: 다시 시작 후), 보안 범위 URL로 책갈피를 확인 해야 합니다. @No__t_1 클래스의 `public static NSUrl FromBookmarkData (NSData data, NSUrlBookmarkResolutionOptions options, NSUrl relativeToUrl, out bool isStale, out NSError error)` 메서드를 사용 하 여 책갈피를 확인 합니다.
+4. **보안 범위 url에서 파일에 액세스 하려는 시스템에 명시적으로 알림** -이 단계는 위의 보안 범위 url을 가져온 후 즉시 수행 해야 하며, 이후에는 나중에 리소스에 대 한 액세스 권한을 다시 확보 하려는 경우에 수행 해야 합니다. 액세스를 하므로. @No__t_1 클래스의 `StartAccessingSecurityScopedResource ()` 메서드를 호출 하 여 보안 범위가 지정 된 URL에 대 한 액세스를 시작 합니다.
+5. **보안 범위 URL에서 파일에 액세스 하는 작업을 시스템에 명시적으로 알리기** -가능한 한 빨리 앱이 파일에 더 이상 액세스할 필요가 없는 경우 (예: 사용자가 닫은 경우) 시스템에 알려야 합니다. @No__t_1 클래스의 `StopAccessingSecurityScopedResource ()` 메서드를 호출 하 여 보안 범위가 지정 된 URL에 대 한 액세스를 중지 합니다.
 
 리소스에 대 한 액세스를 잃어 한 후 4 단계로 돌아가서 액세스를 다시 설정 해야 합니다. Xamarin.ios 앱을 다시 시작 하는 경우 3 단계로 돌아가서 책갈피를 다시 확인 해야 합니다.
 
@@ -458,9 +458,9 @@ Exception Type:  EXC_BAD_INSTRUCTION (SIGILL)
 
 Apple 서명 된 버전의 Xamarin.ios 앱을 실행 하도록 허용 하려면 다음을 수행 합니다.
 
-1. 터미널 앱 (에서 `/Applications/Utilities`)을 엽니다.
+1. 터미널 앱 (`/Applications/Utilities`)을 엽니다.
 2. Apple 서명 버전의 Xamarin.ios 앱에 대 한 Finder 창을 엽니다.
-3. 터미널 `asctl container acl add -file` 창에서을 입력 합니다.
+3. 터미널 창에 `asctl container acl add -file`을 입력 합니다.
 4. Finder 창에서 Xamarin.ios 앱의 아이콘을 끌어 터미널 창에 놓습니다.
 5. 파일의 전체 경로는 터미널의 명령에 추가 됩니다.
 6. **Enter** 키를 눌러 명령을 실행 합니다.
@@ -471,11 +471,11 @@ Apple 서명 된 버전의 Xamarin.ios 앱을 실행 하도록 허용 하려면 
 
 다음을 수행 하 여 컨테이너의 ACL에서 코드 요구 사항의 목록을 볼 수 있습니다.
 
-1. 터미널 앱 (에서 `/Applications/Utilities`)을 엽니다.
+1. 터미널 앱 (`/Applications/Utilities`)을 엽니다.
 2. `asctl container acl list -bundle <container-name>`을 입력합니다.
 3. **Enter** 키를 눌러 명령을 실행 합니다.
 
-는 `<container-name>` 일반적으로 xamarin.ios 응용 프로그램에 대 한 번들 식별자입니다.
+@No__t_0은 일반적으로 Xamarin.ios 응용 프로그램에 대 한 번들 식별자입니다.
 
 ## <a name="designing-a-xamarinmac-app-for-the-app-sandbox"></a>앱 샌드박스에 대 한 Xamarin Mac 앱 디자인
 
@@ -501,7 +501,7 @@ Xamarin.ios 앱의 번들에 있는 모든 실행 파일의 목록을 보려면 
 find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executable"
 ```
 
-여기서 `[Your-App-Bundle]` 는 응용 프로그램 번들의 이름과 경로입니다.
+여기서 `[Your-App-Bundle]`는 응용 프로그램 번들의 이름과 경로입니다.
 
 ### <a name="determine-whether-a-xamarinmac-app-is-suitable-for-sandboxing"></a>Xamarin.ios 앱이 샌드 박싱에 적합 한지 확인
 
@@ -512,12 +512,12 @@ find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executabl
 - **권한 부여 서비스** -앱 샌드박스를 사용 하면 [권한 부여 서비스 C 참조](https://developer.apple.com/library/prerelease/mac/documentation/Security/Reference/authorization_ref/index.html#//apple_ref/doc/uid/TP30000826)에 설명 된 함수를 사용할 수 없습니다.
 - **내게 필요한 옵션 api** -화면 판독기 또는 다른 응용 프로그램을 제어 하는 앱과 같은 보조 앱은 사용할 수 없습니다.
 - **임의 앱에 Apple 이벤트 보내기** -앱이 apple 이벤트를 알 수 없는 임의 앱으로 보내야 하는 경우 샌드 박싱 할 수 없습니다. 호출 된 앱의 알려진 목록에 대해서는 앱이 계속 샌드 박싱 될 수 있으며, 자격에는 호출 된 앱 목록을 포함 해야 합니다.
-- **다른 작업에 대 한 분산 알림에서 사용자 정보 사전을 보냅니다** . 앱 샌드박스를 사용 하면 다른 작업의 `userInfo` 메시징에 대 한 `NSDistributedNotificationCenter` 개체에 게시할 때 사전을 포함할 수 없습니다.
+- **다른 작업에 대 한 분산 알림에서 사용자 정보 사전을 보냅니다** . 앱 샌드박스를 사용 하는 경우 메시징 다른 작업을 위해 `NSDistributedNotificationCenter` 개체에 게시할 때 `userInfo` 사전을 포함할 수 없습니다.
 - **커널 확장 로드** -커널 확장의 로드는 앱 샌드박스에서 금지 됩니다.
 - **열기 및 저장 대화 상자에서 사용자 입력 시뮬레이션** -사용자 입력을 시뮬레이션 하거나 변경 하기 위해 열기 또는 저장 대화 상자를 프로그래밍 방식으로 조작 하는 것은 앱 샌드박스에서 금지 됩니다.
 - **다른 앱의 기본 설정 액세스 또는 설정** -앱 샌드박스에서 다른 앱의 설정을 조작 하는 것은 금지 됩니다.
 - **네트워크 설정 구성** -네트워크 설정을 조작 하는 것은 앱 샌드박스에서 금지 됩니다.
-- **다른 앱 종료** -앱 샌드박스는를 사용 `NSRunningApplication` 하 여 다른 앱을 종료 하지 못하도록 합니다.
+- **다른 앱 종료** -앱 샌드박스에서 `NSRunningApplication`를 사용 하 여 다른 앱을 종료 하지 못하도록 합니다.
 
 ### <a name="resolving-api-incompatibilities"></a>API 비 호환성 해결
 
@@ -525,10 +525,10 @@ find -H [Your-App-Bundle].app -print0 | xargs -0 file | grep "Mach-O .*executabl
 
 다음은 문제를 해결 하기 위해 수행할 수 있는 몇 가지 일반적인 문제입니다.
 
-- **문서 열기, 저장 및 추적** -이외의 `NSDocument`기술을 사용 하 여 문서를 관리 하는 경우 앱 샌드박스에 대 한 기본 제공 지원으로 인해 전환 해야 합니다. `NSDocument`는 PowerBox에서 자동으로 작동 하며 사용자가 Finder에서 문서를 이동 하는 경우 샌드박스 내에서 문서를 유지 하기 위한 지원을 제공 합니다.
+- **문서 열기, 저장 및 추적** -`NSDocument` 이외의 기술을 사용 하 여 문서를 관리 하는 경우 앱 샌드박스에 대 한 기본 제공 지원으로 인해 문서를 전환 해야 합니다. `NSDocument`는 PowerBox에서 자동으로 작동 하며 사용자가 Finder에서 문서를 이동 하는 경우 샌드박스 내에서 문서를 유지 하기 위한 지원을 제공 합니다.
 - **파일 시스템 리소스에 대 한 액세스 유지** -Xamarin.ios 앱이 컨테이너 외부의 리소스에 대 한 영구 액세스에 종속 되는 경우 보안 범위 책갈피를 사용 하 여 액세스를 유지 합니다.
-- **앱에 대 한 로그인 항목 만들기** -앱 샌드박스를 사용 하 여 로그인 항목 `LSSharedFileList` 을 만들 수 없고를 사용 하 `LSRegisterURL`여 시작 서비스의 상태를 조작할 수 없습니다. Apple의 `SMLoginItemSetEnabled` 로그인 항목 추가에 설명 된 대로 함수를 사용 [하 여 서비스 관리 프레임 워크](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) 설명서를 사용 합니다.
-- **사용자 데이터 액세스** -와 `getpwuid` 같은 POSIX 함수를 사용 하 여 디렉터리 서비스에서 사용자의 홈 디렉터리를 가져오는 경우와 `NSHomeDirectory`같은 cocoa 또는 Core Foundation 기호를 사용 하는 것이 좋습니다.
+- **앱에 대 한 로그인 항목 만들기** -앱 샌드박스를 사용 하면 `LSSharedFileList`를 사용 하 여 로그인 항목을 만들 수 없으며 `LSRegisterURL`를 사용 하 여 시작 서비스의 상태를 조작할 수 없습니다. Apple의 [서비스 관리 프레임 워크 설명서를 사용 하 여 로그인 항목 추가](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) 에 설명 된 대로 `SMLoginItemSetEnabled` 함수를 사용 합니다.
+- **사용자 데이터 액세스** -`getpwuid`와 같은 POSIX 함수를 사용 하 여 디렉터리 서비스에서 사용자의 홈 디렉터리를 가져오는 경우 `NSHomeDirectory`와 같은 cocoa 또는 Core Foundation 기호를 사용 하는 것이 좋습니다.
 - **다른 앱의 기본 설정에 액세스** -앱 샌드박스는 경로를 검색 하는 api를 앱 컨테이너에 전달 하기 때문에 해당 컨테이너 내에서 기본 설정을 수정 하 고 다른 앱 기본 설정에 액세스 하는 것은 허용 되지 않습니다.
 - **웹 보기에서 HTML5 Embedded 비디오 사용** -Xamarin.ios 앱이 WebKit를 사용 하 여 임베디드 HTML5 비디오를 재생 하는 경우 AV 기반 프레임 워크에 대해 앱을 연결 해야 합니다. 앱 샌드박스에서 이러한 비디오를 재생 하는 것을 CoreMedia 수 있습니다.
 
@@ -542,7 +542,7 @@ Xamarin.ios 앱에 필요한 자격을 확인 하려면 다음을 수행 합니�
 
 1. 앱 샌드박스를 사용 하도록 설정 하 고 Xamarin.ios 앱을 실행 합니다.
 2. 앱의 기능을 실행 합니다.
-3. 콘솔 앱 (에서 `/Applications/Utilities`사용 가능)을 열고 **모든 메시지** 로그에서 위반을 `sandboxd` 찾습니다.
+3. @No__t_0에서 사용할 수 있는 콘솔 앱을 열고 **모든 메시지** 로그에서 `sandboxd` 위반을 찾습니다.
 4. 각 `sandboxd` 위반에 대해 다른 파일 시스템 위치 대신 앱 컨테이너를 사용 하거나 앱 샌드박스 자격을 적용 하 여 제한 된 OS 기능에 액세스할 수 있도록 하는 방법으로 문제를 해결 합니다.
 5. 모든 Xamarin.ios 앱 기능을 다시 실행 하 고 테스트 합니다.
 6. 모든 `sandboxd` 위반이 해결 될 때까지 반복 합니다.

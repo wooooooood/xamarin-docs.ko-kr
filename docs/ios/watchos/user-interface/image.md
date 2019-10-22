@@ -8,39 +8,39 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/17/2017
 ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769956"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Xamarin의 watchOS 이미지 컨트롤
 
-watchOS 제공 된 [`WKInterfaceImage` ](xref:WatchKit.WKInterfaceImage) 간단한 애니메이션 및 이미지를 표시 하도록 컨트롤입니다. 일부 컨트롤에는 배경 이미지 (예: 단추, 그룹 및 인터페이스 컨트롤러)가 있을 수도 있습니다.
+watchOS는 이미지와 단순 애니메이션을 표시 하는 [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) 컨트롤을 제공 합니다. 일부 컨트롤에는 배경 이미지 (예: 단추, 그룹 및 인터페이스 컨트롤러)가 있을 수도 있습니다.
 
-![](image-images/image-walkway.png "Apple Watch 보여 주는 그림") ![](image-images/image-animation.png "간단한 애니메이션으로 Apple Watch")
+![](image-images/image-walkway.png "그림을 보여 주는 Apple Watch") ![](image-images/image-animation.png "단순 애니메이션으로 Apple Watch")
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Asset catalog 이미지를 사용 하 여 시청 키트 앱에 이미지를 추가 합니다.
-모든 시청 장치에 레 티 나가 표시 되기 때문에 **버전만필요합니다.@2x**
+모든 시청 장치에 레 티 나가 표시 되기 때문에 **@2x** 버전만 필요 합니다.
 
-![](image-images/asset-universal-sml.png "모든 시청 장치에 레 티 나 표시 되므로 2x 버전만 필요 합니다.")
+![](image-images/asset-universal-sml.png "Only 2x versions are required, since all watch devices have Retina displays")
 
 이미지 자체를 조사식 표시의 올바른 크기로 유지 하는 것이 좋습니다. 잘못 된 크기의 이미지 (특히 큰 이미지) 및 크기 조정을 사용 하 여 조사식에 표시 *하지 않도록* 합니다.
 
 자산 카탈로그 이미지에서 감시 키트 크기 (38mm 및 42mm)를 사용 하 여 각 표시 크기에 대해 서로 다른 이미지를 지정할 수 있습니다.
 
-![](image-images/asset-watch-sml.png "자산 카탈로그 이미지에서 감시 키트 크기 38mm 및 42mm를 사용 하 여 각 표시 크기에 대해 서로 다른 이미지를 지정할 수 있습니다.")
+![](image-images/asset-watch-sml.png "You can use the Watch Kit sizes 38mm and 42mm in an asset catalog image to specify different images for each display size")
 
 ## <a name="images-on-the-watch"></a>조사식 이미지
 
-이미지를 표시 하는 가장 효율적인 방법은 *조사식 앱 프로젝트에* 이미지를 포함 하 고 메서드를 `SetImage(string imageName)` 사용 하 여 표시 하는 것입니다.
+이미지를 표시 하는 가장 효율적인 방법은 *조사식 앱 프로젝트에* 이미지를 포함 하 고 `SetImage(string imageName)` 메서드를 사용 하 여 표시 하는 것입니다.
 
 예를 들어, [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/) 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.
 
-![](image-images/asset-whale-sml.png "WatchKitCatalog 샘플에는 watch 앱 프로젝트의 자산 카탈로그에 추가 된 많은 이미지가 있습니다.")
+![](image-images/asset-whale-sml.png "The WatchKitCatalog sample has a number of images added to an asset catalog in the watch app project")
 
-문자열 이름 매개 변수와 함께를 사용 하 여 `SetImage` 보기에 효율적으로 로드 하 고 표시할 수 있습니다.
+이러한 작업은 문자열 이름 매개 변수와 함께 `SetImage`를 사용 하 여 효율적으로 로드 되 고 조사식에 표시 될 수 있습니다.
 
 ```csharp
 myImageControl.SetImage("Whale");
@@ -49,17 +49,17 @@ myOtherImageControl.SetImage("Worry");
 
 ### <a name="background-images"></a>배경 이미지
 
-`Button`, `SetBackgroundImage (string imageName)` 및`Group`클래스의에 동일한 논리가 적용 됩니다. `InterfaceController` 시청 앱 자체에 이미지를 저장 하 여 최상의 성능을 얻을 수 있습니다.
+@No__t_1, `Group` 및 `InterfaceController` 클래스의 `SetBackgroundImage (string imageName)`에도 동일한 논리가 적용 됩니다. 시청 앱 자체에 이미지를 저장 하 여 최상의 성능을 얻을 수 있습니다.
 
 ## <a name="images-in-the-watch-extension"></a>조사식 확장의 이미지
 
 Watch 앱 자체에 저장 된 이미지를 로드 하는 것 외에도 확장 번들의 이미지를 시청 앱에 표시 하기 위해 보낼 수 있습니다. 또는 원격 위치에서 이미지를 다운로드 하 여 표시할 수 있습니다.
 
-조사식 확장에서 이미지를 로드 하려면 인스턴스를 `UIImage` 만든 다음 `UIImage` 개체를 `SetImage` 사용 하 여를 호출 합니다.
+조사식 확장에서 이미지를 로드 하려면 `UIImage` 인스턴스를 만든 다음 `UIImage` 개체를 사용 하 여 `SetImage`를 호출 합니다.
 
 예를 들어 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 조사식 확장 프로젝트에 **Bumblebee** 라는 이미지가 있습니다.
 
-![](image-images/asset-bumblebee-sml.png "WatchKitCatalog 샘플에는 조사식 확장 프로젝트에 Bumblebee 라는 이미지가 있습니다.")
+![](image-images/asset-bumblebee-sml.png "The WatchKitCatalog sample has an image named Bumblebee in the watch extension project")
 
 다음 코드에서는이 발생 합니다.
 
@@ -78,16 +78,16 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 **버스** 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.
 
-![](image-images/asset-bus-animation-sml.png "WatchKitCatalog 샘플에는 버스 접두사가 있는 watch 앱 프로젝트에 일련 번호의 이미지가 있습니다.")
+![](image-images/asset-bus-animation-sml.png "The WatchKitCatalog sample has a series of numbered images in the watch app project with the Bus prefix")
 
-이러한 이미지를 애니메이션으로 표시 하려면 먼저 접두사 이름으로를 사용 `SetImage` 하 여 이미지를 로드 한 다음 `StartAnimating`를 호출 합니다.
+이러한 이미지를 애니메이션으로 표시 하려면 먼저 `SetImage`를 사용 하 여 접두사 이름과 함께 이미지를 로드 한 다음 `StartAnimating`를 호출 합니다.
 
 ```csharp
 animatedImage.SetImage ("Bus");
 animatedImage.StartAnimating ();
 ```
 
-이미지 `StopAnimating` 컨트롤에 대해를 호출 하 여 애니메이션 반복을 중지 합니다.
+이미지 컨트롤에서 `StopAnimating`를 호출 하 여 애니메이션 반복을 중지 합니다.
 
 ```csharp
 animatedImage.StopAnimating ();
@@ -102,7 +102,7 @@ animatedImage.StopAnimating ();
 
 응용 프로그램에서 확장에 저장 된 이미지를 반복적으로 사용 하는 경우 (또는 다운로드 한 경우), 조사식의 저장소에 이미지를 캐시 하 여 이후 디스플레이의 성능을 향상 시킬 수 있습니다.
 
-S 메서드를 사용 하 여 이미지를 시계로 전송 하 고 이미지 이름 매개 `SetImage` 변수와 함께를 사용 하 여 이미지를 표시 합니다. `AddCachedImage` `WKInterfaceDevice`
+@No__t_0s `AddCachedImage` 메서드를 사용 하 여 이미지를 조사식으로 전송한 다음 이미지 이름 매개 변수와 함께 `SetImage`를 사용 하 여 이미지를 표시 합니다.
 
 ```csharp
 var device = WKInterfaceDevice.CurrentDevice;
@@ -116,11 +116,11 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 }
 ```
 
-를 사용 하 여 `WKInterfaceDevice.CurrentDevice.WeakCachedImages`코드에서 이미지 캐시의 내용을 쿼리할 수 있습니다.
+@No__t_0를 사용 하 여 코드에서 이미지 캐시의 내용을 쿼리할 수 있습니다.
 
 ### <a name="managing-the-cache"></a>캐시 관리
 
-캐시 크기는 20mb입니다. 앱을 다시 시작 하는 동안 유지 되 고이를 채우면 `RemoveCachedImage` `WKInterfaceDevice.CurrentDevice` 개체의 또는 `RemoveAllCachedImages` 메서드를 사용 하 여 파일을 지울 책임이 있습니다.
+캐시 크기는 20mb입니다. 앱을 다시 시작 하는 동안 유지 되 고,이를 채울 때 `WKInterfaceDevice.CurrentDevice` 개체의 `RemoveCachedImage` 또는 `RemoveAllCachedImages` 메서드를 사용 하 여 파일을 지우는 것은 사용자의 책임입니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
 ms.openlocfilehash: 922b1fa411a176df580050384e7555120fd68137
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70754455"
 ---
 # <a name="using-data-in-an-app"></a>앱에서 데이터 사용
@@ -23,7 +23,7 @@ ms.locfileid: "70754455"
 
 ![Android 샘플 세부 정보](using-data-in-an-app-images/image12.png "Android 샘플 세부 정보")
 
-Android 프로젝트는이 섹션에 &ndash; 표시 된 코드 아래에 있는 **Orm** 디렉터리에 포함 되어 있습니다.
+Android 프로젝트는 &ndash; 아래에 표시 되어 있습니다 .이 섹션에 표시 된 코드는 **Orm** 디렉터리에 포함 되어 있습니다.
 
 ![Android 프로젝트 트리](using-data-in-an-app-images/image14.png "Android 프로젝트 트리")
 
@@ -36,7 +36,7 @@ Android의 활동에 대 한 네이티브 UI 코드는이 문서의 범위를 �
 - 목록 읽기
 - 개별 레코드 읽기
 
-`StockDatabase` 클래스의 두 메서드는 다음과 같습니다.
+@No__t_0 클래스의 두 메서드는 다음과 같습니다.
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -53,11 +53,11 @@ public Stock GetStock (int id)
 }
 ```
 
-Android는 데이터 `ListView`를으로 렌더링 합니다.
+Android는 데이터를 `ListView`으로 렌더링 합니다.
 
 ## <a name="create-and-update"></a>만들기 및 업데이트
 
-응용 프로그램 코드를 간소화 하기 위해 PrimaryKey의 설정 여부에 따라 삽입 또는 업데이트를 수행 하는 단일 save 메서드가 제공 됩니다. 속성은 `[PrimaryKey]` 특성으로 표시 되므로 코드에서 설정 하면 안 됩니다. `Id` 이 메서드는 기본 키 속성을 확인 하 여 값이 이전에 저장 되었는지 여부를 검색 하 고 그에 따라 개체를 삽입 또는 업데이트 합니다.
+응용 프로그램 코드를 간소화 하기 위해 PrimaryKey의 설정 여부에 따라 삽입 또는 업데이트를 수행 하는 단일 save 메서드가 제공 됩니다. @No__t_0 속성은 `[PrimaryKey]` 특성으로 표시 되므로 코드에서 설정 하면 안 됩니다. 이 메서드는 기본 키 속성을 확인 하 여 값이 이전에 저장 되었는지 여부를 검색 하 고 그에 따라 개체를 삽입 또는 업데이트 합니다.
 
 ```csharp
 public int SaveStock (Stock item)
@@ -77,7 +77,7 @@ public int SaveStock (Stock item)
 
 ## <a name="delete"></a>삭제
 
-및 메서드와 달리 `Delete<T>` 메서드는 전체 `Stock` 개체가 아닌 기본 키 값만 수락할 수 있습니다. `Insert` `Update` 이 예제 `Stock` 에서 개체는 메서드에 전달 되지만 Id 속성만 `Delete<T>` 메서드에 전달 됩니다.
+@No__t_0 및 `Update` 메서드와 달리 `Delete<T>` 메서드는 전체 `Stock` 개체가 아닌 기본 키 값만 사용할 수 있습니다. 이 예제에서는 `Stock` 개체가 메서드에 전달 되지만 Id 속성만 `Delete<T>` 메서드에 전달 됩니다.
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -92,13 +92,13 @@ public int DeleteStock(Stock stock)
 
 일부 응용 프로그램은 이미 데이터로 채워진 데이터베이스와 함께 제공 됩니다. 앱에 기존 SQLite 데이터베이스 파일을 전달 하 고 액세스 하기 전에 쓰기 가능한 디렉터리에 복사 하 여 모바일 응용 프로그램에서이를 쉽게 수행할 수 있습니다. SQLite는 대부분의 플랫폼에서 사용 되는 표준 파일 형식 이므로 SQLite 데이터베이스 파일을 만드는 데 사용할 수 있는 여러 도구가 있습니다.
 
-- **SQLite 관리자 Firefox 확장** &ndash; Mac 및 Windows에서 작동 하며 iOS 및 Android와 호환 되는 파일을 생성 합니다.
+- **SQLite 관리자 Firefox 확장** &ndash; Mac 및 Windows에서 작동 하며 IOS 및 Android와 호환 되는 파일을 생성 합니다.
 
 - **명령줄** &ndash;[Www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html)를 참조하세요.
 
 앱과 함께 배포할 데이터베이스 파일을 만들 때 특히 이름이 C# 클래스 및 속성과 일치 해야 하는 SQLite.NET를 사용 하는 경우에는 테이블 및 열의 이름을 지정 하 여 코드에 필요한 내용과 일치 하는지 확인 합니다. 또는 연결 된 사용자 지정 특성을 지정 합니다.
 
-일부 코드가 Android 앱에서 다른 작업 보다 먼저 실행 되도록 하기 위해 첫 번째 작업에 추가 하 여 로드 하거나 작업 전에 로드 되는 `Application` 하위 클래스를 만들 수 있습니다. 아래 코드는 기존 데이터베이스 `Application` 파일 데이터를 복사 하는 하위 클래스를 보여 줍니다 **. sqlite** **/Resources/Raw/** 디렉터리입니다.
+일부 코드가 Android 앱에서 다른 작업 보다 먼저 실행 되도록 하기 위해 첫 번째 작업에 추가 하 여 로드 하거나 작업 이전에 로드 되는 `Application` 하위 클래스를 만들 수 있습니다. 아래 코드는 기존 데이터베이스 파일 데이터를 복사 하는 `Application` 하위 클래스를 보여 줍니다 **. sqlite** 는 **/Resources/Raw/** 디렉터리를 제외 합니다.
 
 ```csharp
 [Application]

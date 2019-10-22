@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
 ms.openlocfilehash: f91d0127d0f2ffe37e3e0ff016dee551a679ad84
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273119"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>태블릿 및 데스크톱 앱의 레이아웃
@@ -42,7 +42,7 @@ Xamarin.ios에서 지 원하는 모든 플랫폼에 대해 더 큰 화면 장치
 IOS 9 이전에 모든 앱은 장치에서 전체 화면을 차지 했지만 일부 Ipad는 이제 [화면 멀티태스킹 분할](~/ios/platform/multitasking.md)을 수행할 수 있습니다.
 즉, 앱에서 화면의 측면에 있는 슬림 한 열, 화면 너비의 50% 또는 전체 화면을 모두 사용할 수 있습니다.
 
-[![](tablet-images/ipad-sml.png "iPad 분할 화면 예제")](tablet-images/ipad.png#lightbox "iPad 분할 화면 예제")
+[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
 
 화면 분할 기능을 사용 하는 경우 320 픽셀 너비 또는 1366 픽셀 너비 만큼 잘 작동 하도록 앱을 디자인 해야 합니다.
 
@@ -59,7 +59,7 @@ Windows를 실행 하는 태블릿 및 데스크톱 컴퓨터를 지원 하려�
 
 Windows 태블릿 및 데스크톱에서 실행 되는 앱은 전체 화면 실행 외에도 임의의 차원으로 크기를 조정할 수 있습니다.
 
-[![](tablet-images/splitscreen-sml.png "Windows 분할 화면 예제")](tablet-images/splitscreen.png#lightbox "Windows 분할 화면 예제")
+[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
 <a name="optimize" />
 
@@ -67,9 +67,9 @@ Windows 태블릿 및 데스크톱에서 실행 되는 앱은 전체 화면 실�
 
 휴대폰 또는 태블릿/데스크톱 장치를 사용 중인지 여부에 따라 Xamarin.ios 사용자 인터페이스를 조정할 수 있습니다. 즉, 태블릿 및 데스크톱 컴퓨터와 같은 대량 화면 장치에 대 한 사용자 환경을 최적화할 수 있습니다.
 
-### <a name="deviceidiom"></a>Device.Idiom
+### <a name="deviceidiom"></a>장치.
 
-[@No__t-1](~/xamarin-forms/platform/device.md) 클래스를 사용 하 여 앱 또는 사용자 인터페이스의 동작을 변경할 수 있습니다. @No__t-0 열거를 사용 하 여 다음을 수행할 수 있습니다.
+[@No__t_1](~/xamarin-forms/platform/device.md) 클래스를 사용 하 여 앱 또는 사용자 인터페이스의 동작을 변경할 수 있습니다. @No__t_0 열거를 사용 하 여 다음을 수행할 수 있습니다.
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone)
@@ -84,9 +84,9 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 ### <a name="leveraging-masterdetailpage"></a>MasterDetailPage 활용
 
-[@No__t-1](xref:Xamarin.Forms.MasterDetailPage) 은 [`UISplitViewController`](xref:UIKit.UISplitViewController) 을 사용 하 여 네이티브 iOS 환경을 제공 하는 iPad에서 특히 큰 화면에 적합 합니다.
+[@No__t_1](xref:Xamarin.Forms.MasterDetailPage) 은 특히 [`UISplitViewController`](xref:UIKit.UISplitViewController) 를 사용 하 여 네이티브 iOS 환경을 제공 하는 iPad에서 큰 화면에 적합 합니다.
 
-[이 Xamarin 블로그 게시물](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) 을 검토 하 여 휴대폰에서 하나의 레이아웃을 사용 하 고 더 큰 화면에서 `MasterDetailPage`과 함께 다른 레이아웃을 사용할 수 있도록 사용자 인터페이스를 조정 하는 방법을 확인할 수 있습니다.
+[이 Xamarin 블로그 게시물](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) 을 검토 하 여 휴대폰에서 하나의 레이아웃을 사용 하 고 더 큰 화면에서 `MasterDetailPage`와 함께 다른 레이아웃을 사용할 수 있도록 사용자 인터페이스를 조정 하는 방법을 확인 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

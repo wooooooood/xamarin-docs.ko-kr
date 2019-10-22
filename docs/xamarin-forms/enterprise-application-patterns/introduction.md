@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 9bde1140f6590daa4b1d40a8b56edec314bfc66d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70760230"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
@@ -62,7 +62,7 @@ ms.locfileid: "70760230"
 
 그림 1-1은 샘플 응용 프로그램의 아키텍처에 대 한 개략적인 개요를 제공 합니다.
 
-![](introduction-images/architecture.png "eShopOnContainers 개략적인 아키텍처")
+![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
 
 **그림 1-1**: eShopOnContainers 상위 수준 아키텍처
 
@@ -83,15 +83,15 @@ ms.locfileid: "70760230"
 
 이러한 백 엔드 서비스는 ASP.NET Core MVC를 사용 하 여 마이크로 서비스로 구현 되 고 단일 Docker 호스트 내에 고유한 컨테이너로 배포 됩니다. 이러한 백 엔드 서비스를 통칭 하 여 eShopOnContainers reference 응용 프로그램 이라고 합니다. 클라이언트 앱은 REST (Representational State Transfer) 웹 인터페이스를 통해 백 엔드 서비스와 통신 합니다. 마이크로 서비스 및 Docker에 대 한 자세한 내용은 [컨테이너 화 된 마이크로 서비스](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md)를 참조 하세요.
 
-백 엔드 서비스 [의 구현에 대 한 자세한 내용은 .net 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](https://aka.ms/microservicesebook)를 참조하세요.
+백 엔드 서비스의 구현에 대 한 자세한 내용은 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
 
 ### <a name="mobile-app"></a>모바일 앱
 
 이 가이드에서는 Xamarin.ios를 사용 하 여 플랫폼 간 엔터프라이즈 앱을 빌드하는 데 중점을 eShopOnContainers 모바일 앱을 예로 사용 합니다. 그림 1-2에서는 앞에서 설명한 기능을 제공 하는 eShopOnContainers 모바일 앱의 페이지를 보여 줍니다.
 
-[![](introduction-images/screenshots.png "EShopOnContainers 모바일 앱")](introduction-images/screenshots-large.png#lightbox "EShopOnContainers 모바일 앱")
+[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
 
-**그림 1-2**: EShopOnContainers 모바일 앱
+**그림 1-2**: eShopOnContainers 모바일 앱
 
 모바일 앱은 eShopOnContainers reference 응용 프로그램에서 제공 하는 백 엔드 서비스를 사용 합니다. 그러나 백 엔드 서비스 배포를 방지 하려는 사용자에 대해 모의 서비스의 데이터를 사용 하도록 구성할 수 있습니다.
 
@@ -121,14 +121,14 @@ EShopOnContainers 모바일 앱 솔루션은 소스 코드 및 기타 리소스�
 
 |프로젝트|설명|
 |--- |--- |
-|eShopOnContainers.Core|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 PCL (이식 가능한 클래스 라이브러리) 프로젝트입니다.|
-|eShopOnContainers.Droid|이 프로젝트는 android 관련 코드를 저장 하며 Android 앱의 진입점입니다.|
-|eShopOnContainers.iOS|이 프로젝트는 ios 관련 코드를 보관 하며 iOS 앱에 대 한 진입점입니다.|
-|eShopOnContainers.UWP|이 프로젝트는 UWP (유니버설 Windows 플랫폼) 관련 코드를 포함 하며 Windows 앱의 진입점입니다.|
-|eShopOnContainers.TestRunner.Droid|이 프로젝트는 eShopOnContainers 테스트 프로젝트에 대 한 Android test runner입니다.|
-|eShopOnContainers.TestRunner.iOS|이 프로젝트는 eShopOnContainers 테스트 프로젝트에 대 한 iOS test runner입니다.|
-|eShopOnContainers.TestRunner.Windows|이 프로젝트는 eShopOnContainers 테스트 프로젝트에 대 한 유니버설 Windows 플랫폼 test runner입니다.|
-|eShopOnContainers.UnitTests|이 프로젝트에는 eShopOnContainers 프로젝트에 대 한 단위 테스트가 포함 되어 있습니다.|
+|eShopOnContainers|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 PCL (이식 가능한 클래스 라이브러리) 프로젝트입니다.|
+|eShopOnContainers|이 프로젝트는 android 관련 코드를 저장 하며 Android 앱의 진입점입니다.|
+|eShopOnContainers|이 프로젝트는 ios 관련 코드를 보관 하며 iOS 앱에 대 한 진입점입니다.|
+|eShopOnContainers|이 프로젝트는 UWP (유니버설 Windows 플랫폼) 관련 코드를 포함 하며 Windows 앱의 진입점입니다.|
+|eShopOnContainers. Testrunner.completed|이 프로젝트는 eShopOnContainers 테스트 프로젝트에 대 한 Android test runner입니다.|
+|eShopOnContainers. Testrunner.completed|이 프로젝트는 eShopOnContainers 테스트 프로젝트에 대 한 iOS test runner입니다.|
+|eShopOnContainers. Testrunner.completed|이 프로젝트는 eShopOnContainers 테스트 프로젝트에 대 한 유니버설 Windows 플랫폼 test runner입니다.|
+|eShopOnContainers 테스트|이 프로젝트에는 eShopOnContainers 프로젝트에 대 한 단위 테스트가 포함 되어 있습니다.|
 
 EShopOnContainers 모바일 앱의 클래스는 거의 수정 하지 않고 모든 Xamarin. Forms 앱에서 다시 사용할 수 있습니다.
 
@@ -142,14 +142,14 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |동작|뷰 클래스에 노출 되는 동작을 포함 합니다.|
 |컨트롤|앱에서 사용 하는 사용자 지정 컨트롤을 포함 합니다.|
 |컨버터|바인딩에 사용자 지정 논리를 적용 하는 값 변환기를 포함 합니다.|
-|효과|`EntryLineColorEffect` 특정`Entry` 컨트롤의 테두리 색을 변경 하는 데 사용 되는 클래스를 포함 합니다.|
-|예외|사용자 지정 `ServiceAuthenticationException`를 포함 합니다.|
-|확장|`VisualElement` 및`IEnumerable` 클래스에 대 한 확장 메서드를 포함 합니다.|
+|효과|특정 `Entry` 컨트롤의 테두리 색을 변경 하는 데 사용 되는 `EntryLineColorEffect` 클래스를 포함 합니다.|
+|예외|사용자 지정 `ServiceAuthenticationException`을 포함 합니다.|
+|확장|@No__t_0 및 `IEnumerable` 클래스에 대 한 확장 메서드를 포함 합니다.|
 |권한만|앱에 대 한 도우미 클래스를 포함 합니다.|
 |모델|앱에 대 한 모델 클래스를 포함 합니다.|
-|속성|.Net `AssemblyInfo.cs`어셈블리 메타 데이터 파일을 포함 합니다.|
+|데이터 액세스|.NET 어셈블리 메타 데이터 파일인 `AssemblyInfo.cs`를 포함 합니다.|
 |서비스|응용 프로그램에 제공 되는 서비스를 구현 하는 인터페이스와 클래스를 포함 합니다.|
-|트리거|XAML에서 애니메이션을 호출 하는 데 사용 되는 트리거를포함합니다.`BeginAnimation`|
+|트리거|XAML에서 애니메이션을 호출 하는 데 사용 되는 `BeginAnimation` 트리거를 포함 합니다.|
 |유효성 검사|데이터 입력의 유효성 검사와 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
 |보기|앱에 대 한 페이지를 포함 합니다.|

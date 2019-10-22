@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71249675"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
@@ -27,10 +27,10 @@ ms.locfileid: "71249675"
 
 이 빠른 시작은 로컬 SQLite.NET 데이터베이스에 데이터를 저장 하는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
 
-[![](database-images/screenshots1-sml.png "메모")](database-images/screenshots1.png#lightbox "메모 페이지")페이지
-[(database-images/screenshots2-sml.png "메모 입력") 페이지![]](database-images/screenshots2.png#lightbox "메모 입력 페이지")
+[![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
+[![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>Prerequisites
 
 이 빠른 시작을 시도 하기 전에 [이전 퀵 스타트](multi-page.md) 를 성공적으로 완료 해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) 을 다운로드 하 고이 빠른 시작의 시작 지점으로 사용 합니다.
 
@@ -42,15 +42,15 @@ ms.locfileid: "71249675"
 
 2. **솔루션 탐색기**에서 **Notes** 프로젝트를 선택 하 고, 마우스 오른쪽 단추를 클릭 하 고, **NuGet 패키지 관리 ...** 를 선택 합니다.
 
-    ![](database-images/vs/add-nuget-packages.png "NuGet 패키지 추가")    
+    ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")    
 
 3. **NuGet 패키지 관리자**에서 **찾아보기** 탭을 선택하고 **sqlite-net-pcl** NuGet 패키지를 검색하여 선택한 다음, **설치** 단추를 클릭하여 프로젝트에 추가합니다.
 
-    ![](database-images/vs/add-package.png "패키지 추가")
+    ![](database-images/vs/add-package.png "Add Package")
 
     > [!NOTE]
     > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
-    > - **작성자:** Frank A. Krueger
+    > - **작성자:** Frank Krueger
     > - **ID:** sqlite-net-pcl
     > - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -76,7 +76,7 @@ ms.locfileid: "71249675"
     }
     ```
 
-    이 클래스는 응용 `Note` 프로그램의 각 메모에 대 한 데이터를 저장 하는 모델을 정의 합니다. 속성 `ID` 은 및 `PrimaryKey`특성으로 표시 되어 SQLite.NET 데이터베이스의 각 `Note` 인스턴스에 SQLite.NET가 제공 하는 고유 id가 있는지 확인 합니다. `AutoIncrement`
+    이 클래스는 응용 프로그램의 각 메모에 대 한 데이터를 저장 하는 `Note` 모델을 정의 합니다. @No__t_0 속성은 `PrimaryKey` 및 `AutoIncrement` 특성으로 표시 되어 SQLite.NET 데이터베이스의 각 `Note` 인스턴스에 SQLite.NET가 제공 하는 고유 id가 있는지 확인 합니다.
 
     **Ctrl + S**를 눌러 변경 내용을 **Note.cs** 에 저장 하 고 파일을 닫습니다.
 
@@ -196,14 +196,14 @@ ms.locfileid: "71249675"
     }
     ```
 
-    이 코드는 새 `Database` `NoteDatabase` 인스턴스를 singleton으로 만들고, 데이터베이스의 파일 이름을 `NoteDatabase` 생성자에 인수로 전달 하는 속성을 정의 합니다. 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
+    이 코드는 새 `NoteDatabase` 인스턴스를 singleton으로 만들고 데이터베이스의 파일 이름을 `NoteDatabase` 생성자에 인수로 전달 하는 `Database` 속성을 정의 합니다. 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
 
     **CTRL+S** 키를 눌러 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
 
     > [!WARNING]
     > 이 시점에서 응용 프로그램을 빌드하려고 하면 이후 단계에서 수정 될 오류가 발생 합니다.
 
-9. **솔루션 탐색기**의 **Notes** 프로젝트에서 **NotesPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 메서드 `OnAppearing` 를 다음 코드로 바꿉니다.
+9. **솔루션 탐색기**의 **Notes** 프로젝트에서 **NotesPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 `OnAppearing` 메서드를 다음 코드로 바꿉니다.
 
     ```csharp
     protected override async void OnAppearing()
@@ -214,14 +214,14 @@ ms.locfileid: "71249675"
     }
     ```    
 
-    이 코드는 데이터베이스 [`ListView`](xref:Xamarin.Forms.ListView) 에 저장 된 메모를 사용 하 여를 채웁니다.
+    이 코드는 데이터베이스에 저장 된 메모를 사용 하 여 [`ListView`](xref:Xamarin.Forms.ListView) 를 채웁니다.
 
     **Ctrl + S**를 눌러 변경 내용을 **NotesPage.xaml.cs** 에 저장 하 고 파일을 닫습니다.
 
     > [!WARNING]
     > 이 시점에서 응용 프로그램을 빌드하려고 하면 이후 단계에서 수정 될 오류가 발생 합니다.
 
-10. **솔루션 탐색기**에서 **NoteEntryPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 및 `OnSaveButtonClicked` `OnDeleteButtonClicked` 메서드를 다음 코드로 바꿉니다.
+10. **솔루션 탐색기**에서 **NoteEntryPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 `OnSaveButtonClicked` 및 `OnDeleteButtonClicked` 메서드를 다음 코드로 바꿉니다.
 
       ```csharp
       async void OnSaveButtonClicked(object sender, EventArgs e)
@@ -240,7 +240,7 @@ ms.locfileid: "71249675"
       }
       ```    
 
-      는 `NoteEntryPage` `Note` 페이지 [의`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 에서 단일 메모를 나타내는 인스턴스를 저장 합니다. 이벤트 처리기가 실행 `Note` 되 면 인스턴스가 데이터베이스에 저장 되 고 응용 프로그램은 이전 페이지로 다시 이동 합니다. `OnSaveButtonClicked` 이벤트 처리기가 실행 될 때 인스턴스는 `Note` 데이터베이스에서 삭제 되 고 응용 프로그램은 이전 페이지로 다시 이동 합니다. `OnDeleteButtonClicked`
+      @No__t_0는 페이지 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 에서 단일 메모를 나타내는 `Note` 인스턴스를 저장 합니다. @No__t_0 이벤트 처리기가 실행 되 면 `Note` 인스턴스가 데이터베이스에 저장 되 고 응용 프로그램에서 이전 페이지로 다시 이동 합니다. @No__t_0 이벤트 처리기가 실행 되 면 `Note` 인스턴스가 데이터베이스에서 삭제 되 고 응용 프로그램에서 이전 페이지로 다시 이동 합니다.
 
       **Ctrl + S**를 눌러 변경 내용을 **NoteEntryPage.xaml.cs** 에 저장 하 고 파일을 닫습니다.
 
@@ -259,15 +259,15 @@ ms.locfileid: "71249675"
 
 2. **Solution Pad**에서 **Notes** 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **추가 > NuGet 패키지 추가**...를 선택 합니다.
 
-    ![](database-images/vsmac/add-nuget-packages.png "NuGet 패키지 추가")    
+    ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")    
 
 3. **패키지 추가** 창에서 **sqlite-net-pcl** NuGet 패키지를 검색하여 선택한 다음, **패키지 추가** 단추를 클릭하여 프로젝트에 추가합니다.
 
-    ![](database-images/vsmac/add-package.png "패키지 추가")
+    ![](database-images/vsmac/add-package.png "Add Package")
 
     > [!NOTE]
     > 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
-    > - **작성자:** Frank A. Krueger
+    > - **작성자:** Frank Krueger
     > - **ID:** sqlite-net-pcl
     > - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -293,7 +293,7 @@ ms.locfileid: "71249675"
     }
     ```
 
-    이 클래스는 응용 `Note` 프로그램의 각 메모에 대 한 데이터를 저장 하는 모델을 정의 합니다. 속성 `ID` 은 및 `PrimaryKey`특성으로 표시 되어 SQLite.NET 데이터베이스의 각 `Note` 인스턴스에 SQLite.NET가 제공 하는 고유 id가 있는지 확인 합니다. `AutoIncrement`
+    이 클래스는 응용 프로그램의 각 메모에 대 한 데이터를 저장 하는 `Note` 모델을 정의 합니다. @No__t_0 속성은 `PrimaryKey` 및 `AutoIncrement` 특성으로 표시 되어 SQLite.NET 데이터베이스의 각 `Note` 인스턴스에 SQLite.NET가 제공 하는 고유 id가 있는지 확인 합니다.
 
     **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **Note.cs** 에 저장 하 고 파일을 닫습니다.
 
@@ -413,14 +413,14 @@ ms.locfileid: "71249675"
     }
     ```
 
-    이 코드는 새 `Database` `NoteDatabase` 인스턴스를 singleton으로 만들고, 데이터베이스의 파일 이름을 `NoteDatabase` 생성자에 인수로 전달 하는 속성을 정의 합니다. 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
+    이 코드는 새 `NoteDatabase` 인스턴스를 singleton으로 만들고 데이터베이스의 파일 이름을 `NoteDatabase` 생성자에 인수로 전달 하는 `Database` 속성을 정의 합니다. 데이터베이스를 싱글톤으로 노출하면 애플리케이션이 실행되는 동안 열린 상태로 유지되는 단일 데이터베이스 연결이 생성되므로 데이터베이스 작업이 수행될 때마다 데이터베이스 파일을 열거나 닫는 비용을 피할 수 있는 이점이 있습니다.
 
     **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **App.xaml.cs**에 저장하고 파일을 닫습니다.
 
     > [!WARNING]
     > 이 시점에서 응용 프로그램을 빌드하려고 하면 이후 단계에서 수정 될 오류가 발생 합니다.
 
-9. **Solution Pad**의 **Notes** 프로젝트에서 **NotesPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 메서드 `OnAppearing` 를 다음 코드로 바꿉니다.
+9. **Solution Pad**의 **Notes** 프로젝트에서 **NotesPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 `OnAppearing` 메서드를 다음 코드로 바꿉니다.
 
     ```csharp
     protected override async void OnAppearing()
@@ -431,14 +431,14 @@ ms.locfileid: "71249675"
     }
     ```    
 
-    이 코드는 데이터베이스 [`ListView`](xref:Xamarin.Forms.ListView) 에 저장 된 메모를 사용 하 여를 채웁니다.
+    이 코드는 데이터베이스에 저장 된 메모를 사용 하 여 [`ListView`](xref:Xamarin.Forms.ListView) 를 채웁니다.
 
     **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **NotesPage.xaml.cs** 에 저장 하 고 파일을 닫습니다.
 
     > [!WARNING]
     > 이 시점에서 응용 프로그램을 빌드하려고 하면 이후 단계에서 수정 될 오류가 발생 합니다.
 
-10. **Solution Pad**에서 **NoteEntryPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 및 `OnSaveButtonClicked` `OnDeleteButtonClicked` 메서드를 다음 코드로 바꿉니다.
+10. **Solution Pad**에서 **NoteEntryPage.xaml.cs** 를 두 번 클릭 하 여 엽니다. 그런 다음 `OnSaveButtonClicked` 및 `OnDeleteButtonClicked` 메서드를 다음 코드로 바꿉니다.
 
       ```csharp
       async void OnSaveButtonClicked(object sender, EventArgs e)
@@ -457,7 +457,7 @@ ms.locfileid: "71249675"
       }
       ```    
 
-      는 `NoteEntryPage` `Note` 페이지 [의`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 에서 단일 메모를 나타내는 인스턴스를 저장 합니다. 이벤트 처리기가 실행 `Note` 되 면 인스턴스가 데이터베이스에 저장 되 고 응용 프로그램은 이전 페이지로 다시 이동 합니다. `OnSaveButtonClicked` 이벤트 처리기가 실행 될 때 인스턴스는 `Note` 데이터베이스에서 삭제 되 고 응용 프로그램은 이전 페이지로 다시 이동 합니다. `OnDeleteButtonClicked`
+      @No__t_0는 페이지 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 에서 단일 메모를 나타내는 `Note` 인스턴스를 저장 합니다. @No__t_0 이벤트 처리기가 실행 되 면 `Note` 인스턴스가 데이터베이스에 저장 되 고 응용 프로그램에서 이전 페이지로 다시 이동 합니다. @No__t_0 이벤트 처리기가 실행 되 면 `Note` 인스턴스가 데이터베이스에서 삭제 되 고 응용 프로그램에서 이전 페이지로 다시 이동 합니다.
 
       **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **NoteEntryPage.xaml.cs** 에 저장 하 고 파일을 닫습니다.
 

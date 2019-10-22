@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/23/2017
 ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "72273134"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin과 함께 팀 도시 사용
@@ -61,12 +61,12 @@ TeamCity 8.1에 대 한 지식이 필요 합니다. TeamCity의 설치는이 문
 3. **Xcode** – Xcode은 iOS 응용 프로그램을 컴파일하고 서명 하는 데 필요 합니다.
 4. **Xcode 명령줄 도구** -이에 대 한 설명은 [r단계별 v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드의 설치 섹션 1 단계에 설명 되어 있습니다.
 5. **서명 id & 프로 비전 프로필** – XCode를 통해 인증서 및 프로 비전 프로필을 가져옵니다. 자세한 내용은 Apple의 [서명 id 및 프로 비전 프로필 내보내기](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) 에 대 한 지침을 참조 하세요.
-6. **Android keystores** – teamcity 사용자가 액세스할 수 있는 디렉터리 (예: `~/Documents/keystores/MyAndroidApp1`)에 필요한 android keystores를 복사 합니다.
+6. **Android keystores** – teamcity 사용자가 액세스할 수 있는 디렉터리 (예:)에 필요한 android keystores를 복사 합니다.  `~/Documents/keystores/MyAndroidApp1`.
 7. **Calabash** – 응용 프로그램에 calabash를 사용 하 여 작성 된 테스트가 있는 경우 선택적 단계입니다. 자세한 내용은 [OS X Mavericks에서 Calabash 설치](https://github.com/calabash/calabash-ios/wiki) 가이드 및 [rguide v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드를 참조 하세요.
 
 다음 다이어그램에서는 이러한 구성 요소를 모두 보여 줍니다.
 
-![](teamcity-images/image1.png "이 다이어그램은 이러한 모든 구성 요소를 보여 줍니다.")
+![](teamcity-images/image1.png "This diagram illustrates all of these components")
 
 모든 소프트웨어가 설치 되 면 사용자 계정에 로그인 하 여 모든 소프트웨어가 올바르게 설치 되어 작동 하는지 확인 합니다. 이렇게 하려면 솔루션을 컴파일하고 응용 프로그램을 Test Cloud에 제출 해야 합니다. 다음 섹션에 설명 된 대로 빌드 스크립트를 실행 하 여이를 크게 간소화할 수 있습니다.
 
@@ -85,7 +85,7 @@ TeamCity는 모바일 응용 Test Cloud 프로그램을 컴파일 및 제출 하
 
 - [**psake**](https://github.com/psake/psake) – 소프트웨어를 빌드하기 위한 Windows Powershell 라이브러리입니다.
 
-- [가짜](http://fsharp.github.io/FAKE/) – 필요에 F# 따라 기존 .net 라이브러리를 활용할 수 있도록 하는 DSL입니다.
+- [**가짜**](http://fsharp.github.io/FAKE/) – 필요에 F# 따라 기존 .net 라이브러리를 활용할 수 있도록 하는 DSL입니다.
 
 사용 되는 스크립팅 언어는 기본 설정 및 요구 사항에 따라 달라 집니다. [Taskypro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) 예제에는 [빌드 스크립트로](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile)Rake를 사용 하는 예가 포함 되어 있습니다.
 
@@ -146,7 +146,7 @@ Test Cloud에 Uitest를 제출 하는 방법에 대 한 자세한 내용은 [Xam
 
 #### <a name="submitting-calabash-tests-to-test-cloud"></a>Test Cloud에 Calabash 테스트 제출
 
-Calabash 테스트는 다음 코드 조각에 표시 된 것 처럼 `test-cloud`의 보석을 사용 하 여 제출 됩니다.
+Calabash 테스트는 다음 코드 조각과 같이 `test-cloud` 보석을 사용 하 여 제출 됩니다.
 
 ```bash
 test-cloud submit /path/to/APK-or-IPA <test-cloud-team-api-key> --devices <device-id> --user <email>
@@ -167,35 +167,35 @@ TeamCity가 설치 되어 Mac용 Visual Studio 프로젝트를 빌드할 수 있
 
 1. 웹 브라우저를 통해 TeamCity에 로그인 하 여 시작 합니다. 루트 프로젝트로 이동 합니다.
 
-    루트 ![프로젝트로 이동]루트 프로젝트 아래의(teamcity-images/image2.png "루트 프로젝트로 이동") 하 여 새 하위 프로젝트를 만듭니다.
+    ![루트 프로젝트로 이동](teamcity-images/image2.png "루트 프로젝트로 이동") 루트 프로젝트 아래에서 새 하위 프로젝트를 만듭니다.
 
-    루트 프로젝트 ![아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다].(teamcity-images/image3.png "루트 프로젝트 아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다") .
+    ![루트 프로젝트 아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다.](teamcity-images/image3.png "루트 프로젝트 아래의 루트 프로젝트로 이동 하 여 새 하위 프로젝트를 만듭니다.")
 2. 하위 프로젝트를 만든 후 새 빌드 구성을 추가 합니다.
 
-    ![하위 프로젝트를 만든 후](teamcity-images/image5.png "하위 프로젝트를 만든 후 새 빌드 구성을 추가 하 고 새 빌드 구성을 추가") 합니다.
+    ![하위 프로젝트를 만든 후 새 빌드 구성을 추가 합니다.](teamcity-images/image5.png "하위 프로젝트를 만든 후 새 빌드 구성을 추가 합니다.")
 3. 빌드 구성에 VCS 프로젝트를 연결 합니다. 이 작업은 버전 제어 설정 화면을 통해 수행 됩니다.
 
-    버전 제어 설정 화면을 ![통해 수행]됩니다.(teamcity-images/image6.png "이 작업은 버전 제어 설정 화면을 통해 수행") 됩니다.
+    ![이 작업은 버전 제어 설정 화면을 통해 수행 됩니다.](teamcity-images/image6.png "이 작업은 버전 제어 설정 화면을 통해 수행 됩니다.")
 
     생성 된 VCS 프로젝트가 없는 경우 아래에 표시 된 새 VCS 루트 페이지에서 만들 수 있습니다.
 
-    생성 된 VCS 프로젝트가 없는 경우 ![새 Vcs 루트 페이지에서 만들 수 있는 옵션이 있습니다].(teamcity-images/image7.png "vcs 프로젝트가 생성 되지 않은 경우 새 vcs 루트 페이지에서 만들 수 있는 옵션이 있습니다") .
+    ![생성 된 VCS 프로젝트가 없는 경우 새 VCS 루트 페이지에서 만들 수 있는 옵션이 있습니다.](teamcity-images/image7.png "생성 된 VCS 프로젝트가 없는 경우 새 VCS 루트 페이지에서 만들 수 있는 옵션이 있습니다.")
 
     VCS 루트가 연결 되 면 TeamCity는 프로젝트를 체크 아웃 하 고 빌드 단계를 자동 검색 합니다. TeamCity에 익숙한 경우 검색 된 빌드 단계 중 하나를 선택할 수 있습니다. 지금은 검색 된 빌드 단계를 무시 해도 됩니다.
 
 4. 다음으로 빌드 트리거를 구성 합니다. 이렇게 하면 사용자가 리포지토리에 코드를 커밋하는 경우와 같이 특정 조건이 충족 될 때 빌드를 큐에 대기 합니다. 다음 스크린샷은 빌드 트리거를 추가 하는 방법을 보여 줍니다.
 
-    ![이 스크린샷에서는 빌드 트리거를 추가 하는 방법을 보여 줍니다].이 스크린샷은 빌드 트리거를(teamcity-images/image8.png "추가 하는 방법을 보여") 줍니다. 빌드 트리거를 구성 하는 예제는 다음 스크린샷에서 볼 수 있습니다.
+    ![이 스크린샷에서는 빌드 트리거를 추가 하는 방법을 보여 줍니다](teamcity-images/image8.png "이 스크린샷에서는 빌드 트리거를 추가 하는 방법을 보여 줍니다.") . 빌드 트리거를 구성 하는 예는 다음 스크린샷에서 볼 수 있습니다.
 
-    ![이 스크린샷에서 빌드 트리거를 구성]하는 예제를 볼 수 있습니다.(teamcity-images/image9.png "이 스크린샷에서 빌드 트리거를 구성") 하는 예제를 볼 수 있습니다.
+    ![이 스크린샷에서 빌드 트리거를 구성 하는 예제를 볼 수 있습니다.](teamcity-images/image9.png "이 스크린샷에서 빌드 트리거를 구성 하는 예제를 볼 수 있습니다.")
 
 5. 이전 섹션인 빌드 스크립트를 매개 변수화 하 여 일부 값을 환경 변수로 저장 하는 것이 좋습니다. 이러한 변수는 매개 변수 화면을 통해 빌드 구성에 추가할 수 있습니다. 아래 스크린샷에 표시 된 것 처럼 Test Cloud API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가 합니다.
 
-    ![TEST CLOUD Api 키, ios 장치 id 및 Android 장치 id에 대 한 변수를 추가]하 여(teamcity-images/image11.png "Test Cloud Api 키, ios 장치 Id 및 android 장치 id에 대 한 변수를 추가") 합니다.
+    ![Test Cloud API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가 합니다.](teamcity-images/image11.png "Test Cloud API 키, iOS 장치 ID 및 Android 장치 ID에 대 한 변수를 추가 합니다.")
 
 6. 최종 단계는 빌드 스크립트를 호출 하 여 응용 프로그램을 컴파일하고 응용 프로그램을 Test Cloud에 큐에 추가 하는 빌드 단계를 추가 하는 것입니다. 다음 스크린샷은 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예입니다.
 
-    ![이 스크린샷에는 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예가 나와 있습니다].(teamcity-images/image12.png "이 스크린샷은 rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예") 입니다.
+    ![이 스크린샷은 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예입니다.](teamcity-images/image12.png "이 스크린샷은 Rakefile을 사용 하 여 응용 프로그램을 빌드하는 빌드 단계의 예입니다.")
 
 7. 이때 빌드 구성이 완료 됩니다. 빌드를 트리거하여 프로젝트가 제대로 구성 되어 있는지 확인 하는 것이 좋습니다. 이 작업을 수행 하는 좋은 방법은 리포지토리에 작은 사소한 변경을 커밋하는 것입니다. TeamCity는 커밋을 검색 하 고 빌드를 시작 해야 합니다.
 

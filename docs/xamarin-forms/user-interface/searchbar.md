@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/12/2019
-ms.openlocfilehash: 41bb9e082f042e7ca2933d72b4b71a4ff6c4fef4
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.openlocfilehash: 4deeab1b2792675033372ccfe2bf343c08794955
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69658032"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696425"
 ---
 # <a name="xamarinforms-searchbar"></a>Xamarin.ios SearchBar
 
@@ -25,10 +25,12 @@ Xamarin.ios [`SearchBar`](xref:Xamarin.Forms.SearchBar) 는 검색을 시작 하
 @No__t_0 클래스는 다음 속성을 정의 합니다.
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) 은 취소 단추의 색을 정의 하는 `Color`입니다.
+* `double` 형식의 `CharacterSpacing`은 `SearchBar` 텍스트 문자 사이의 간격입니다.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) 은 `SearchBar` 글꼴이 굵게, 기울임꼴로 또는 둘 다 인지 여부를 결정 하는 `FontAttributes` 열거형 값입니다.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) 은 `SearchBar`에서 사용 하는 글꼴 패밀리를 결정 하는 `string`입니다.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) 은 `NamedSize` 열거형 값 이거나 플랫폼 전체의 특정 글꼴 크기를 나타내는 `double` 값일 수 있습니다.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) 는 쿼리 텍스트의 가로 맞춤을 정의 하는 `TextAlignment` 열거형 값입니다.
+* `VerticalTextAlignment`는 쿼리 텍스트의 세로 맞춤을 정의 하는 `TextAlignment` 열거형 값입니다.
 * [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) 는 "Search ..."와 같은 자리 표시자 텍스트를 정의 하는 `string`입니다.
 * [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) 은 자리 표시자 텍스트의 색을 정의 하는 `Color`입니다.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) 는 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는 `ICommand`입니다.

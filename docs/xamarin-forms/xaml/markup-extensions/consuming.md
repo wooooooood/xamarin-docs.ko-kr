@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/18/2019
-ms.openlocfilehash: 03aaf471479a5113aade6bd3f34034afadfb538c
-ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
+ms.date: 09/27/2019
+ms.openlocfilehash: a8698975d2609599e1404fbb9c87c617a54f23d7
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69887897"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72696354"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -32,10 +32,11 @@ XAML 태그 확장은 다양 한 소스에서 요소 특성을 설정할 수 있
 
 추가 XAML 태그 확장은 이전에 다른 XAML 구현에서 지원 되었으며 Xamarin.ios 에서도 지원 됩니다. 이에 대해서는 다른 문서에 자세히 설명 되어 있습니다.
 
-- [**리소스 사전 문서에**](~/xamarin-forms/xaml/resource-dictionaries.md)설명 된 대로 리소스 사전에서 참조 개체를 &ndash; `StaticResource` 합니다.
-- `DynamicResource`는 [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)문서에 설명 된 대로 리소스 사전에 있는 개체의 변경 내용에 응답 &ndash;.
-- `Binding` [**데이터 바인딩**](~/xamarin-forms/app-fundamentals/data-binding/index.md)문서에 설명 된 대로 두 개체의 속성 간에 링크를 설정 &ndash; 합니다.
-- `TemplateBinding` &ndash; [**는 컨트롤 템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
+- [**리소스 사전 문서에**](~/xamarin-forms/xaml/resource-dictionaries.md)설명 된 대로 리소스 사전에서 개체를 참조 `StaticResource`.
+- `DynamicResource`- [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)문서에 설명 된 대로 리소스 사전에 있는 개체의 변경 내용에 응답 합니다.
+- `Binding`-아티클 [**데이터 바인딩에**](~/xamarin-forms/app-fundamentals/data-binding/index.md)설명 된 대로 두 개체의 속성 간에 링크를 설정 합니다.
+- `TemplateBinding`-컨트롤 [**템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
+- `RelativeSource`- [상대적인](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)바인딩 문서에 설명 된 대로 바인딩 대상의 위치를 기준으로 바인딩 소스를 설정 합니다.
 
 [@No__t_1](xref:Xamarin.Forms.RelativeLayout) 레이아웃을 사용 하면 [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression)사용자 지정 태그 확장을 사용할 수 있습니다. 이 태그 확장은 [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md)문서에 설명 되어 있습니다.
 
@@ -406,7 +407,7 @@ public partial class TypeDemoPage : ContentPage
 
 <a name="null" />
 
-## <a name="xnull-markup-extension"></a>x:Null 태그 확장명
+## <a name="xnull-markup-extension"></a>x:Null 태그 확장
 
 @No__t_0 태그 확장은 [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) 클래스에서 지원 됩니다. 이 클래스에는 속성이 없으며 단순히 C# [`null`](/dotnet/csharp/language-reference/keywords/null/) 키워드에 해당 하는 XAML이 있습니다.
 
@@ -481,7 +482,7 @@ public partial class TypeDemoPage : ContentPage
 > [!NOTE]
 > XAML 파서는 [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) 클래스를 `OnPlatform`으로 약식으로 지정할 수 있습니다.
 
-@No__t_0 속성은 `OnPlatformExtension`의 content 속성입니다. 따라서 중괄호로 표시 되는 XAML 태그 식의 경우 첫 번째 인수인 경우 식의 `Default=` 부분을 제거할 수 있습니다.
+@No__t_0 속성은 `OnPlatformExtension`의 content 속성입니다. 따라서 중괄호로 표시 되는 XAML 태그 식의 경우 첫 번째 인수인 경우 식의 `Default=` 부분을 제거할 수 있습니다. @No__t_0 속성이 설정 되지 않은 경우 태그 확장이 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)를 대상으로 하는 경우 [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) 속성 값으로 기본 설정 됩니다.
 
 > [!IMPORTANT]
 > XAML 파서는 `OnPlatform` 태그 확장을 사용 하는 속성에 올바른 형식의 값이 제공 될 것으로 예상 합니다. 형식 변환이 필요한 경우 `OnPlatform` 태그 확장에서 Xamarin.ios에서 제공 하는 기본 변환기를 사용 하 여이를 수행 하려고 시도 합니다. 그러나 기본 변환기에서 수행할 수 없는 일부 형식 변환이 있습니다. 이러한 경우에는 `Converter` 속성이 `IValueConverter` 구현으로 설정 되어야 합니다.

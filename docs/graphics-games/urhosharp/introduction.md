@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "67832539"
 ---
 # <a name="introduction-to-urhosharp"></a>UrhoSharp 소개
@@ -68,7 +68,7 @@ Mac용 Visual Studio 또는 Visual Studio의 샘플 솔루션을 열어 Urho 기
 
 ## <a name="basic-structure"></a>기본 구조
 
-게임에서 클래스의 `Application` 서브 클래스를 만들어야 합니다. 여기에서 게임을 설정 `Setup` 하 고 (메서드에서) 게임을 시작 합니다 ( `Start` 메서드에서).  그런 다음 주 사용자 인터페이스를 생성 합니다.  3D 장면을 설정 하 고, 일부 UI 요소를 설정 하 고, 간단한 동작을 연결 하는 Api를 보여 주는 작은 샘플을 살펴보겠습니다.
+게임에서 `Application` 클래스의 서브 클래스를 만들어야 합니다. 여기에서 게임을 설정 (`Setup` 방법) 하 고 게임을 시작 합니다 (`Start` 메서드에서).  그런 다음 주 사용자 인터페이스를 생성 합니다.  3D 장면을 설정 하 고, 일부 UI 요소를 설정 하 고, 간단한 동작을 연결 하는 Api를 보여 주는 작은 샘플을 살펴보겠습니다.
 
 ```csharp
 class MySample : Application {
@@ -135,9 +135,9 @@ class MySample : Application {
 new MySample().Run();
 ```
 
-런타임에 `Setup` 및`Start` 메서드가 호출 됩니다.  을 재정의 `Setup` 하는 경우이 샘플에는 표시 되지 않는 엔진 매개 변수를 구성할 수 있습니다.
+런타임에서 `Setup` 및 `Start` 메서드를 호출 합니다.  @No__t_0를 재정의 하는 경우 엔진 매개 변수를 구성할 수 있습니다 (이 샘플에서는 표시 되지 않음).
 
-게임을 시작 `Start` 하려면를 재정의 해야 합니다.  이 방법에서는 자산을 로드 하 고, 이벤트 처리기를 연결 하 고, 장면을 설정 하 고, 원하는 작업을 시작 합니다.  이 샘플에서는 사용자에 게 표시 되는 약간의 UI를 만들고 3D 장면을 설정 합니다.
+게임을 시작 하기 때문에 `Start`를 재정의 해야 합니다.  이 방법에서는 자산을 로드 하 고, 이벤트 처리기를 연결 하 고, 장면을 설정 하 고, 원하는 작업을 시작 합니다.  이 샘플에서는 사용자에 게 표시 되는 약간의 UI를 만들고 3D 장면을 설정 합니다.
 
 다음 코드 조각에서는 UI 프레임 워크를 사용 하 여 텍스트 요소를 만들고 응용 프로그램에 추가 합니다.
 
@@ -160,7 +160,7 @@ UI 프레임 워크는 매우 간단한 게임 사용자 인터페이스를 제�
 
 샘플의 두 번째 부분에서는 주 장면을 구성 합니다.  여기에는 3D 장면을 만들고, 화면에서 3D 상자를 만들고, 광원, 카메라 및 뷰포트를 추가 하는 여러 단계가 포함 됩니다.  이에 대해서는 [장면, 노드, 구성 요소 및 카메라](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras)섹션에서 자세히 설명 합니다.
 
-샘플의 세 번째 부분에서는 몇 가지 작업을 트리거합니다.  작업은 특정 효과를 설명 하는 조리법 이며, 만든 후에는 `RunActionAsync` `Node`에서 메서드를 호출 하 여 요청 시 노드에 의해 실행 될 수 있습니다.
+샘플의 세 번째 부분에서는 몇 가지 작업을 트리거합니다.  작업은 특정 효과를 설명 하는 요리법 이며 생성 된 후에는 `Node`에서 `RunActionAsync` 메서드를 호출 하 여 요청 시 노드에 의해 실행 될 수 있습니다.
 
 첫 번째 작업은 바운스 효과를 사용 하 여 상자의 크기를 조정 하 고, 두 번째 작업은 상자를 계속 회전 합니다.
 
@@ -169,7 +169,7 @@ await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-위의 예에서는 첫 번째 작업을 만드는 `ScaleTo` 방법을 보여 줍니다 .이는 단순히 노드의 scale 속성 값을 기준으로 두 번째로 크기를 조정 하고자 함을 나타내는 조리법입니다.  이 작업은 감속/가속 작업 인 `EaseBounceOut` 작업으로 래핑됩니다.  감속/가속 동작은 동작의 선형 실행을 왜곡 하 고 효과를 적용 합니다 .이 경우에는 바운스 효과를 제공 합니다.
+위의 예에서는 생성 되는 첫 번째 작업이 `ScaleTo` 작업 인지를 보여 줍니다 .이는 단순히 노드의 scale 속성 값을 기준으로 두 번째로 크기를 조정 하고자 함을 나타내는 조리법입니다.  이 작업은 감속/가속 작업 (`EaseBounceOut` 동작) 주위에 래핑됩니다.  감속/가속 동작은 동작의 선형 실행을 왜곡 하 고 효과를 적용 합니다 .이 경우에는 바운스 효과를 제공 합니다.
 따라서 조리법은 다음과 같이 작성할 수 있습니다.
 
 ```csharp

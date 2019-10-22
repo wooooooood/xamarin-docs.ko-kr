@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: 202ce8d674a39b06fd1b07460dff4bf573062592
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70291411"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Xamarin에서 tvOS 진행률 표시기 사용
@@ -77,8 +77,8 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
 2. **도구 상자** 에서 **활동 표시기** 를 끌어서 뷰에 놓습니다. 
 
-    ![활동 표시기 인 활동 표시기](progress-indicators-images/activity01-vs.png
-    "")
+    ![활동 표시기](progress-indicators-images/activity01-vs.png
+    "활동 표시기")
 
 3. **속성 탐색기**의 **위젯** 탭에서 작업 표시기의 **스타일**, **동작**및 **이름과**같은 몇 가지 속성을 조정할 수 있습니다. 
 
@@ -106,7 +106,7 @@ TvOS 앱에서 진행률 표시기를 사용 하는 가장 쉬운 방법은 iOS 
 
 위에서 설명한 것 처럼 앱이 길이가 정해 지지 않은 긴 프로세스를 실행 하는 경우 활동 표시기가 표시 되어야 합니다.
 
-언제 든 지 해당 `IsAnimating` 속성을 확인 하 여 활동 표시기가 애니메이션 효과를 주는 지 확인할 수 있습니다. `HidesWhenStopped` 속성이 인`true`경우 애니메이션을 중지 하면 작업 표시기가 자동으로 숨겨집니다.
+언제 든 지 `IsAnimating` 속성을 확인 하 여 활동 표시기가 애니메이션 효과를 주는 지 확인할 수 있습니다. @No__t_0 속성이 `true` 이면 애니메이션이 중지 될 때 작업 표시기가 자동으로 숨겨집니다.
 
 애니메이션을 시작 하려면 다음 코드를 사용할 수 있습니다. 
 
@@ -127,7 +127,7 @@ ActivityIndicator.StopAnimating();
 
 앱이 알려진 기간의 장기 실행 작업을 실행할 때 언제 든 지 진행률 표시줄을 사용 해야 합니다. 
 
-`Progress` 속성은 완료 된 작업의 양을 0%에서 100% (0.0에서 1.0)로 설정 하는 데 사용 됩니다. 속성을 사용 하 여 완료 된 막대의 색을 설정 하 `TrackTintColor` 고 속성을 사용 하 여 배경색을 설정 합니다 (완료 되지 않은 금액). `ProgressTintColor`
+@No__t_0 속성은 완료 된 작업의 양을 0%에서 100% (0.0에서 1.0)로 설정 하는 데 사용 됩니다. @No__t_0 속성을 사용 하 여 완료 된 막대의 색을 설정 하 고 `TrackTintColor` 속성을 사용 하 여 배경색을 설정 합니다 (완료 되지 않은 금액).
 
 ## <a name="summary"></a>요약
 

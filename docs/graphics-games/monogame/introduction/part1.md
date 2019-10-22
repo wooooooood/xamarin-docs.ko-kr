@@ -7,10 +7,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: d72c428bb4b8c88365180c5c3c50b107eed2b21d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68978452"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>1 부-플랫폼 간 MonoGame 만들기
@@ -28,11 +28,11 @@ MonoGame를 사용 하면 코드 재사용 부분이 많은 플랫폼 간 게임
 > [!IMPORTANT]
 > MonoGame는 Visual Studio 2019 또는 Mac용 Visual Studio에서 기본적으로 설치 되지 않습니다.
 >
-> 에서 http://www.monogame.net/downloads/ 최신 버전을 수동으로 다운로드 하 여 설치한 후 설치 관리자를 실행 해야 합니다. 템플릿을 표시 하려면 Visual Studio를 다시 시작 해야 할 수 있습니다.
+> @No__t_0에서 최신 버전을 수동으로 다운로드 하 여 설치 하 고 설치 관리자를 실행 해야 합니다. 템플릿을 표시 하려면 Visual Studio를 다시 시작 해야 할 수 있습니다.
 >
 > 그러면 **게임 개발** 섹션이 **추가 기능 관리자**에 표시 됩니다.
 
-Mac용 Visual Studio에 대 한 MonoGame 추가 기능을 사용 하도록 설정 하려면 **Mac용 Visual Studio** > **추가 기능 관리자 ...** 를 선택 합니다. Windows의 Visual Studio 2019의 경우 **도구** > **추가 기능 관리자 ...** 를 선택 합니다. **갤러리** 탭을 선택 하 고, **Game Development** 범주를 확장 하 고, **MonoGame Addin**을 선택 하 고, **설치 ...** 를 클릭 합니다.
+Mac용 Visual Studio에 대 한 MonoGame 추가 기능을 사용 하도록 설정 하려면 **Mac용 Visual Studio**  > **추가 기능 관리자 ...** 를 선택 합니다. Windows의 Visual Studio 2019의 경우 **도구**  > **추가 기능 관리자 ...** 를 선택 합니다. **갤러리** 탭을 선택 하 고, **Game Development** 범주를 확장 하 고, **MonoGame Addin**을 선택 하 고, **설치 ...** 를 클릭 합니다.
 
 ![Mac용 Visual Studio 확장 갤러리 MonoGame 선택](part1-images/image2.png)
 
@@ -54,7 +54,7 @@ Mac용 Visual Studio에서 **파일 > 새 솔루션**을 선택 합니다. **새
 
 ## <a name="fixing-android-compile-errors"></a>Android 컴파일 오류 수정
 
-MonoGame의 현재 버전에는 Android `Activity1.cs` 파일에 몇 가지 구문 오류가 포함 되어 있습니다. 이러한 문제를 해결 하려면 `OnCreate` 함수를 다음으로 바꿉니다.
+MonoGame의 현재 버전에는 Android의 `Activity1.cs` 파일에 몇 가지 구문 오류가 포함 되어 있습니다. 이러한 문제를 해결 하려면 `OnCreate` 함수를 다음으로 바꿉니다.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
