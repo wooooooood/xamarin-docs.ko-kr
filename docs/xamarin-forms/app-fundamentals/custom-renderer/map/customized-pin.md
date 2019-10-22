@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 8df5b373fccdef93a8ffbc66fd53a94378f47a6e
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 94a537c88f28971bf7f2778f33a35e4c251afd38
+ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68650829"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72424852"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -24,7 +24,7 @@ _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 �
 
 다음 다이어그램은 [`Map`](xref:Xamarin.Forms.Maps.Map) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](customized-pin-images/map-classes.png "맵 컨트롤과 네이티브 컨트롤 구현 간의 관계")
+![](customized-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
 
 렌더링 프로세스는 각 플랫폼에서 [`Map`](xref:Xamarin.Forms.Maps.Map)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -142,11 +142,11 @@ public MapPage ()
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](customized-pin-images/solution-structure.png "CustomMap 사용자 지정 렌더러 프로젝트 책임")
+![](customized-pin-images/solution-structure.png "CustomMap Custom Renderer Project Responsibilities")
 
 `CustomMap` 컨트롤은 각 플랫폼의 `MapRenderer` 클래스에서 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `CustomMap` 컨트롤이 플랫폼별 컨트롤로 렌더링됩니다.
 
-![](customized-pin-images/screenshots.png "각 플랫폼의 CustomMap")
+![](customized-pin-images/screenshots.png "CustomMap on each Platform")
 
 `MapRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 맵이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CustomMap` 인스턴스에 대한 참조를 포함합니다.
 
@@ -179,7 +179,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 
 다음 스크린샷은 사용자 지정 전후의 맵을 보여줍니다.
 
-![](customized-pin-images/map-layout-ios.png "사용자 지정 전후의 맵 컨트롤")
+![](customized-pin-images/map-layout-ios.png "Map Control Before and After Customization")
 
 iOS에서 핀을 *주석*이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 핀일 수 있습니다. 주석은 사용자가 주석을 선택하는 것에 응답하여 표시되는 *설명선*을 선택적으로 표시할 수 있습니다. 설명선에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되며 선택적으로 왼쪽 및 오른쪽 액세서리 보기가 표시됩니다. 위의 스크린샷에서 왼쪽 액세서리 보기는 monkey의 이미지이며 오른쪽 액세서리 보기는 *정보* 단추입니다.
 
@@ -352,7 +352,7 @@ void OnDidDeselectAnnotationView (object sender, MKAnnotationViewEventArgs e)
 
 다음 스크린샷은 사용자 지정 전후의 맵을 보여줍니다.
 
-![](customized-pin-images/map-layout-android.png "사용자 지정 전후의 맵 컨트롤")
+![](customized-pin-images/map-layout-android.png "Map Control Before and After Customization")
 
 Android에서 핀을 *표식*이라고 하며, 사용자 지정 이미지 또는 다양한 색의 시스템 정의 표식일 수 있습니다. 표식은 사용자가 표식을 탭핑하는 것에 응답하여 나타내는 *정보 창*을 표시할 수 있습니다. 정보 창에는 `Pin` 인스턴스의 `Label` 및 `Address` 속성이 표시되고 다른 콘텐츠를 포함하도록 지정할 수 있습니다. 그러나 한 번에 하나의 정보 창만 표시할 수 있습니다.
 
@@ -383,7 +383,6 @@ namespace CustomRenderer.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 customPins = formsMap.CustomPins;
-                Control.GetMapAsync(this);
             }
         }
 
@@ -399,7 +398,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 `MapView.GetMapAsync` 메서드를 호출하여 보기에 연결된 내부 `GoogleMap`을 가져옵니다. `GoogleMap` 인스턴스를 사용할 수 있게 되면 `OnMapReady` 재정의가 호출됩니다. 이 메서드는 [정보 창을 클릭할](#Clicking_on_the_Info_Window) 때 발생하는 `InfoWindowClick` 이벤트에 대한 이벤트 처리기를 등록하고, 렌더러가 연결된 요소가 변경될 때만 구독 취소됩니다. `OnMapReady` 재정의는 `SetInfoWindowAdapter` 메서드를 호출하여 `CustomMapRenderer` 클래스 인스턴스가 정보 창을 사용자 지정하는 방법을 제공하도록 지정합니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 컨트롤에서 사용자 지정 핀 목록을 검색합니다. `GoogleMap` 인스턴스를 사용할 수 있게 되면 `OnMapReady` 재정의가 호출됩니다. 이 메서드는 [정보 창을 클릭할](#Clicking_on_the_Info_Window) 때 발생하는 `InfoWindowClick` 이벤트에 대한 이벤트 처리기를 등록하고, 렌더러가 연결된 요소가 변경될 때만 구독 취소됩니다. `OnMapReady` 재정의는 `SetInfoWindowAdapter` 메서드를 호출하여 `CustomMapRenderer` 클래스 인스턴스가 정보 창을 사용자 지정하는 방법을 제공하도록 지정합니다.
 
 `CustomMapRenderer` 클래스가 `GoogleMap.IInfoWindowAdapter` 인터페이스를 구현하여 [정보 창을 사용자 지정](#Customizing_the_Info_Window)합니다. 이 인터페이스는 다음 메서드를 구현해야 한다고 지정합니다.
 
@@ -511,7 +510,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 
 다음 스크린샷은 사용자 지정 전후의 맵을 보여줍니다.
 
-![](customized-pin-images/map-layout-uwp.png "사용자 지정 전후의 맵 컨트롤")
+![](customized-pin-images/map-layout-uwp.png "Map Control Before and After Customization")
 
 UWP에서 핀은 *맵 아이콘*이라고 하며, 사용자 지정 이미지 또는 시스템 정의 기본 이미지일 수 있습니다. 맵 아이콘은 사용자가 맵 아이콘을 탭핑하는 것에 응답하여 나타내는 `UserControl`을 표시할 수 있습니다. `UserControl`은 `Pin` 인스턴스의 `Label` 및 `Address` 속성을 포함한 모든 내용을 표시할 수 있습니다.
 

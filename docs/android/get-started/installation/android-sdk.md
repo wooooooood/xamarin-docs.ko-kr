@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: da0a441be9cd07af456b1600155151e48d44162c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9bdc7b57cee74a91cc3abf69a216ea9913482c94
+ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758055"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72273155"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
@@ -45,7 +45,7 @@ Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치
 
 - API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
-- Visual Studio 15.8 미리 보기 5 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 Mobile OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
+- Visual Studio 15.8 미리 보기 5 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 Mobile OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다.
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.
@@ -137,7 +137,7 @@ Xamarin Android SDK Manager에는 (Xamarin.Android와 함께 자동으로 설치
 
 - API 수준 23 이하를 대상으로 개발하는 경우 [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)을 계속 사용할 수 있습니다.
 
-- Mac용 Visual Studio 7.7 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 Mobile OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다(현재 미리 보기 상태).
+- Mac용 Visual Studio 7.7 이상을 사용하는 경우 JDK 8 대신 [Microsoft의 Mobile OpenJDK 배포](openjdk.md)를 사용해 볼 수 있습니다.
 
 > [!IMPORTANT]
 > Xamarin.Android는 JDK 9를 지원하지 않습니다.

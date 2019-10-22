@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 551dea5455ffd060d808aa11e8996c5984745fda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ecc4686e9966de7a184730589c44a951e4daddb2
+ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771906"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72424868"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>맵의 원형 영역 강조 표시
 
@@ -229,7 +229,6 @@ namespace MapOverlay.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 circle = formsMap.Circle;
-                Control.GetMapAsync(this);
             }
         }
 
@@ -250,7 +249,7 @@ namespace MapOverlay.Droid
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 `MapView.GetMapAsync` 메서드를 호출하여 보기에 연결된 내부 `GoogleMap`을 가져옵니다. `GoogleMap` 인스턴스를 사용할 수 있으면 `OnMapReady` 메서드가 호출됩니다. 여기에서 원은 원의 중심 및 원의 반지름(미터)을 지정하는 `CircleOptions` 개체를 인스턴스화하여 만들어집니다. 그런 다음, 원은 `NativeMap.AddCircle` 메서드를 호출하여 맵에 추가됩니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 `OnElementChanged` 메서드는 사용자 지정 원형 데이터를 검색합니다. `GoogleMap` 인스턴스를 사용할 수 있으면 `OnMapReady` 메서드가 호출됩니다. 여기에서 원은 원의 중심 및 원의 반지름(미터)을 지정하는 `CircleOptions` 개체를 인스턴스화하여 만들어집니다. 그런 다음, 원은 `NativeMap.AddCircle` 메서드를 호출하여 맵에 추가됩니다.
 
 #### <a name="creating-the-custom-renderer-on-the-universal-windows-platform"></a>유니버설 Windows 플랫폼에서 사용자 지정 렌더러 만들기
 
