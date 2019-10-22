@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
 ms.openlocfilehash: d20e27fdbb1f62c2aebb7122d7f0c042b3ac9085
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "71997195"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설정
 
 ![미리 보기](~/media/shared/preview.png)
 
-Xamarin.Forms는 GTK# 앱에 대한 제한적인 지원을 하고 있습니다. GTK #은 GTK + 도구 키트와 다양 한 GNOME 라이브러리를 연결 하는 그래픽 사용자 인터페이스 도구 키트로, Mono 및 .NET을 사용 하 여 완전 한 네이티브 GNOME 그래픽 앱을 개발할 수 있습니다. 이 문서에서는 Xamarin. Forms 솔루션에 GTK # 프로젝트를 추가 하는 방법을 보여 줍니다.
+이제 xamarin.ios는 GTK # 앱에 대 한 미리 보기를 지원 합니다. GTK #은 GTK + 도구 키트와 다양 한 GNOME 라이브러리를 연결 하는 그래픽 사용자 인터페이스 도구 키트로, Mono 및 .NET을 사용 하 여 완전 한 네이티브 GNOME 그래픽 앱을 개발할 수 있습니다. 이 문서에서는 Xamarin. Forms 솔루션에 GTK # 프로젝트를 추가 하는 방법을 보여 줍니다.
 
 > [!IMPORTANT]
 > GTK에 대 한 Xamarin. Forms 지원은 커뮤니티에서 제공 합니다. 자세한 내용은 [Xamarin.ios 플랫폼 지원](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)을 참조 하세요.
@@ -42,19 +42,19 @@ MacOS 및 Linux 용 GTK #은 [Mono](https://www.mono-project.com/download/stable
 
 3. **Gtk** 확장을 사용 하 여 프로젝트의 이름 (예: **GameOfLife**)을 입력 합니다. **찾아보기** 단추를 클릭 하 고 다른 플랫폼 프로젝트를 포함 하는 폴더를 선택한 다음 **폴더 선택**을 누릅니다. 그러면 솔루션의 다른 프로젝트와 동일한 디렉터리에 GTK 프로젝트가 배치 됩니다.
 
-    ![새 gtk 프로젝트 추가](gtk-images/win/add-new-project.png "새 gtk 프로젝트 추가")
+    ![새 GTK 프로젝트 추가](gtk-images/win/add-new-project.png "새 GTK 프로젝트 추가")
 
     **확인** 단추를 클릭 하 여 프로젝트를 만듭니다.
 
 4. **솔루션 탐색기**에서 새 GTK 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리**를 선택 합니다. **찾아보기** 탭을 선택 하 고 **Xamarin. 양식** 3.0 이상을 검색 합니다.
 
-    ![Xamarin Forms nuget 패키지를 선택](gtk-images/win/select-forms-nuget-package.png "하 여 xamarin.ios nuget 패키지를 선택 합니다.")
+    ![Xamarin Forms NuGet 패키지를 선택 합니다.](gtk-images/win/select-forms-nuget-package.png "Xamarin Forms NuGet 패키지를 선택 합니다.")
 
     패키지를 선택 하 고 **설치** 단추를 클릭 합니다.
 
 5. 이제 **xamarin.ios** 3.0 패키지 이상을 검색 합니다.
 
-    ![Xamarin.ios 패키지를 선택]합니다.(gtk-images/win/select-forms-platform-nuget-package.png "xamarin.ios nuget 패키지를 선택") 합니다.
+    ![Xamarin.ios NuGet 패키지를 선택 합니다.](gtk-images/win/select-forms-platform-nuget-package.png "Xamarin.ios NuGet 패키지를 선택 합니다.")
 
     패키지를 선택 하 고 **설치** 단추를 클릭 합니다.
 
@@ -62,11 +62,11 @@ MacOS 및 Linux 용 GTK #은 [Mono](https://www.mono-project.com/download/stable
 
 7. **솔루션 탐색기**에서 GTK 프로젝트의 **참조** 를 마우스 오른쪽 단추로 클릭 합니다. **참조 관리자** 대화 상자에서 왼쪽에 있는 **프로젝트** 를 선택 하 고 .NET Standard 또는 공유 프로젝트 옆에 있는 확인란을 선택 합니다.
 
-    ![]공유 프로젝트 참조 공유(gtk-images/win/reference-shared-project.png "프로젝트") 참조
+    ![공유 프로젝트 참조](gtk-images/win/reference-shared-project.png "공유 프로젝트 참조")
 
 8. **참조 관리자** 대화 상자에서 **찾아보기** 단추를 누르고 **C:\Program files (x86) \GtkSharp\2.12\lib** 폴더로 이동한 다음 **atk-sharp**, **gdk-sharp**, **glade-sharp** **을 선택 합니다. glib-sharp**, **gtk-dotnet**, **gtk-sharp** 파일.
 
-    ![참조]gtk # 라이브러리(gtk-images/win/reference-gtk-libraries.png "참조 gtk # 라이브러리")
+    ![GTK # 라이브러리 참조](gtk-images/win/reference-gtk-libraries.png "GTK # 라이브러리 참조")
 
     **확인** 단추를 클릭 하 여 참조를 추가 합니다.
 
@@ -111,7 +111,7 @@ MacOS 및 Linux 용 GTK #은 [Mono](https://www.mono-project.com/download/stable
 
 13. **솔루션 탐색기**에서 GTK 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **시작 프로젝트로 설정**을 선택 합니다. Windows 바탕 화면에서 Visual Studio 디버거를 사용 하 여 프로그램을 실행 하려면 F5 키를 누릅니다.
 
-    ![Gtk # 수명](gtk-images/win/gtk-gameoflife.png "gtk #") 게임
+    ![GTK # 수명의 게임](gtk-images/win/gtk-gameoflife.png "GTK # 수명의 게임")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -125,17 +125,17 @@ Mac 데스크톱에서 실행 되는 GTK # 앱을 추가 하려면 다음 지침
 
 4. **Solution Pad**에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가** ...를 마우스 오른쪽 단추로 클릭 하 고, Xamarin. Forms 3.0 시험판 NuGet 패키지 이상을 추가 합니다.
 
-    ![Xamarin Forms nuget 패키지를 선택](gtk-images/mac/select-forms-nuget-package.png "하 여 xamarin.ios nuget 패키지를 선택 합니다.")
+    ![Xamarin Forms NuGet 패키지를 선택 합니다.](gtk-images/mac/select-forms-nuget-package.png "Xamarin Forms NuGet 패키지를 선택 합니다.")
 
 5. **Solution Pad**에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가** ...를 마우스 오른쪽 단추로 클릭 하 고, xamarin.ios 3.0 시험판 NuGet 패키지 이상을 추가 합니다.
 
-    ![Xamarin.ios 패키지를 선택]합니다.(gtk-images/mac/select-forms-platform-nuget-package.png "xamarin.ios nuget 패키지를 선택") 합니다.
+    ![Xamarin.ios NuGet 패키지를 선택 합니다.](gtk-images/mac/select-forms-platform-nuget-package.png "Xamarin.ios NuGet 패키지를 선택 합니다.")
 
 6. GTK 프로젝트에서 사용 하는 것과 동일한 Xamarin.ios 버전을 사용 하도록 다른 플랫폼 프로젝트를 업데이트 합니다.
 
 7. **Solution Pad**에서 참조를 마우스 오른쪽 단추로 클릭 하 **> 참조 편집** ...을 마우스 오른쪽 단추로 클릭 하 고, xamarin.ios 프로젝트 (.NET Standard 또는 공유 프로젝트)에 대 한 참조를 추가 합니다.
 
-    ![]공유 프로젝트 참조 공유(gtk-images/mac/reference-shared-project.png "프로젝트") 참조
+    ![공유 프로젝트 참조](gtk-images/mac/reference-shared-project.png "공유 프로젝트 참조")
 
 8. 다음 코드와 비슷하게 GTK 프로젝트의 **Program.cs** 파일을 편집 합니다.
 
@@ -172,7 +172,7 @@ Mac 데스크톱에서 실행 되는 GTK # 앱을 추가 하려면 다음 지침
 
 10. Mac용 Visual Studio 도구 모음에서 **시작** 단추 (재생 단추와 비슷한 삼각형 모양의 단추)를 눌러 앱을 시작 합니다.
 
-    ![Gtk # 수명](gtk-images/mac/gtk-gameoflife.png "gtk #") 게임
+    ![GTK # 수명의 게임](gtk-images/mac/gtk-gameoflife.png "GTK # 수명의 게임")
 
 -----
 
@@ -180,7 +180,7 @@ Mac 데스크톱에서 실행 되는 GTK # 앱을 추가 하려면 다음 지침
 
 ### <a name="platform-specifics"></a>플랫폼별
 
-XAML 또는 코드에서 Xamarin Forms 응용 프로그램이 실행 되는 플랫폼을 확인할 수 있습니다. 이를 통해 GTK #에서 실행 되는 프로그램 특성을 변경할 수 있습니다. 코드에서 @no__t 값을 `Device.GTK` 상수 ("GTK" 문자열과 같음)와 비교 합니다. 일치 하는 항목이 있으면 응용 프로그램이 GTK #에서 실행 됩니다.
+XAML 또는 코드에서 Xamarin Forms 응용 프로그램이 실행 되는 플랫폼을 확인할 수 있습니다. 이를 통해 GTK #에서 실행 되는 프로그램 특성을 변경할 수 있습니다. 코드에서 `Device.RuntimePlatform` 값을 `Device.GTK` 상수 ("GTK" 문자열)와 비교 합니다. 일치 하는 항목이 있으면 응용 프로그램이 GTK #에서 실행 됩니다.
 
 XAML에서 `OnPlatform` 태그를 사용 하 여 플랫폼과 관련 된 속성 값을 선택할 수 있습니다.
 
@@ -214,7 +214,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>네이티브 양식
 
-네이티브 폼을 사용 하면 GTK # 프로젝트를 비롯 한 네이티브 프로젝트에서 Xamarin.ios [`ContentPage`](xref:Xamarin.Forms.ContentPage)파생 페이지를 사용할 수 있습니다. 이 작업을 수행 하려면 [`ContentPage`](xref:Xamarin.Forms.ContentPage)로 파생 된 페이지의 인스턴스를 만든 다음 `CreateContainer` 확장 메서드를 사용 하 여 네이티브 GTK # 형식으로 변환 합니다.
+네이티브 폼을 사용 하면 GTK # 프로젝트를 비롯 한 네이티브 프로젝트에서 Xamarin.ios [`ContentPage`](xref:Xamarin.Forms.ContentPage)파생 페이지를 사용할 수 있습니다. 이 작업을 수행 하려면 [`ContentPage`](xref:Xamarin.Forms.ContentPage)파생 페이지의 인스턴스를 만들고 `CreateContainer` 확장 메서드를 사용 하 여 네이티브 GTK # 형식으로 변환 합니다.
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

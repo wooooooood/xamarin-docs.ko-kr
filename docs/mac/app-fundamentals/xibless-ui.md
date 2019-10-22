@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770153"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
@@ -20,7 +20,7 @@ _이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없
 
 ## <a name="overview"></a>개요
 
-동일한 사용자 인터페이스 요소에 대 한 액세스 권한이 Xamarin.Mac 응용 프로그램에서 C# 및.NET으로 작업을 하는 경우 및 작업 하는 개발자 도구를 *Objective-C* 및 *Xcode* 않습니다. 일반적으로 Xamarin.ios 응용 프로그램을 만들 때 storyboard 또는. xib 파일과 함께 Xcode의 Interface Builder 사용 하 여 응용 프로그램의 사용자 인터페이스를 만들고 유지 관리 합니다.
+Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목표-C* 및 *Xcode* 에서 작업 하는 개발자가 사용 하는 것과 동일한 사용자 인터페이스 요소 및 도구에 액세스할 수 있습니다. 일반적으로 Xamarin.ios 응용 프로그램을 만들 때 storyboard 또는. xib 파일과 함께 Xcode의 Interface Builder 사용 하 여 응용 프로그램의 사용자 인터페이스를 만들고 유지 관리 합니다.
 
 또한 코드에서 C# 직접 xamarin.ios 응용 프로그램 UI의 일부 또는 전부를 만들 수 있습니다. 이 문서에서는 코드에서 C# 사용자 인터페이스 및 UI 요소를 만드는 기본 사항을 설명 합니다.
 
@@ -34,7 +34,7 @@ _이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없
 
 응용 프로그램에 대 한 Xibless 창으로 전환 하려면 다음을 수행 합니다.
 
-1. 또는. xib 파일을 사용 하 여 `.storyboard` 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio에서 사용자 인터페이스를 정의 합니다.
+1. @No__t_0 또는. xib 파일을 사용 하 여 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio 사용자 인터페이스를 정의 합니다.
 2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** **파일을 마우스** 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다.
 
     ![주 storyboard 또는 창 제거](xibless-ui-images/switch01.png "주 storyboard 또는 창 제거")
@@ -42,9 +42,9 @@ _이 문서에서는 storyboard 파일,. xib 파일 또는 Interface Builder 없
 
     ![삭제 확인](xibless-ui-images/switch02.png "삭제 확인")
 
-이제를 더 이상 사용 하지 않으므로 창의 레이아웃을 정의 하 고 **ViewController.cs** 또는 **MainWindowController.cs** 파일을 수정 하 여 `MainWindow` 클래스의 인스턴스를 만들도록 **MainWindow.cs** 파일을 수정 해야 합니다. 스토리 보드 또는. xib 파일.
+이제 **MainWindow.cs** 파일을 수정 하 여 창 레이아웃을 정의 하 고 **ViewController.cs** 또는 **MainWindowController.cs** 파일을 수정 하 여 더 이상. storyboard를 사용 하지 않으므로 `MainWindow` 클래스의 인스턴스를 만들도록 해야 합니다. . xib 파일입니다.
 
-사용자 인터페이스에 대해 Storyboard를 사용 하는 최신 Xamarin.ios 앱은 **MainWindow.cs**, **ViewController.cs** 또는 **MainWindowController.cs** 파일을 자동으로 포함 하지 않을 수 있습니다. C# 필요한 경우 프로젝트에 새 빈 클래스를 추가 하기만 하면 됩니다.**새 파일** 을**추가** > 합니다.  > 일반빈 > **클래스**)와 이름이 누락 된 파일과 동일 하 게 합니다.
+사용자 인터페이스에 대해 Storyboard를 사용 하는 최신 Xamarin.ios 앱은 **MainWindow.cs**, **ViewController.cs** 또는 **MainWindowController.cs** 파일을 자동으로 포함 하지 않을 수 있습니다. 필요 C# 에 따라 프로젝트에 비어 있는 새 클래스를 추가 하 고 ( > **일반** **파일**  > **빈 클래스**)  >  하 고, 누락 된 파일과 동일 하 게 이름을**추가** 하면 됩니다.
 
 ### <a name="defining-the-window-in-code"></a>코드에서 창 정의
 
@@ -130,7 +130,7 @@ public NSButton ClickMeButton { get; set;}
 public NSTextField ClickMeLabel { get ; set;}
 ```
 
-이를 통해 창에 표시 되는 UI 요소에 액세스할 수 있습니다. 이 창은 storyboard 또는 xib 파일에서 팽창 되지 않으므로 `MainWindowController` 클래스를 인스턴스화하는 방법이 필요 합니다. (나중에 클래스에서 볼 것입니다.) 이 새로운 생성자 메서드는 다음과 같습니다.
+이를 통해 창에 표시 되는 UI 요소에 액세스할 수 있습니다. 이 창은 storyboard 또는. xib 파일에서 팽창 되지 않으므로이를 인스턴스화하는 방법이 필요 합니다. (나중에 `MainWindowController` 클래스에서 볼 수 있습니다.) 이 새로운 생성자 메서드는 다음과 같습니다.
 
 ```csharp
 public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
@@ -144,7 +144,7 @@ public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore buffe
 ContentView = new NSView (Frame);
 ```
 
-그러면 창을 채울 콘텐츠 뷰가 생성 됩니다. 이제 창에 첫 번째 UI 요소인 `NSButton`를 추가 합니다.
+그러면 창을 채울 콘텐츠 뷰가 생성 됩니다. 이제 첫 번째 UI 요소인 `NSButton`를 창에 추가 합니다.
 
 ```csharp
 ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
@@ -153,13 +153,13 @@ ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
 ContentView.AddSubview (ClickMeButton);
 ```
 
-여기에서 가장 먼저 기억해 야 할 사항은 iOS와 달리 macOS는 수학 표기법을 사용 하 여 해당 창 좌표계를 정의 한다는 것입니다. 따라서 원점은 창의 왼쪽 아래 모서리에 있으며 값은 창의 오른쪽 위 모퉁이의 오른쪽 위 모퉁이에 있습니다. 새 `NSButton`를 만들 때 화면에서의 위치와 크기를 정의할 때이를 고려 합니다.
+여기에서 가장 먼저 기억해 야 할 사항은 iOS와 달리 macOS는 수학 표기법을 사용 하 여 해당 창 좌표계를 정의 한다는 것입니다. 따라서 원점은 창의 왼쪽 아래 모서리에 있으며 값은 창의 오른쪽 위 모퉁이의 오른쪽 위 모퉁이에 있습니다. 새 `NSButton`을 만들 때 화면에서의 위치와 크기를 정의할 때이를 고려 합니다.
 
-속성 `AutoresizingMask = NSViewResizingMask.MinYMargin` 은 창의 세로 크기를 조정할 때 창 맨 위에서와 동일한 위치에 유지 하려는 단추를 알려 줍니다. 이는 (0, 0)이 창의 왼쪽 아래에 있기 때문에 필요 합니다.
+@No__t_0 속성은 창의 세로 크기를 조정할 때 창 맨 위에서와 동일한 위치에 유지 하려는 단추를 알려 줍니다. 이는 (0, 0)이 창의 왼쪽 아래에 있기 때문에 필요 합니다.
 
-마지막으로 메서드 `ContentView.AddSubview (ClickMeButton)` 는 응용 프로그램이 `NSButton` 실행 되 고 창이 표시 될 때 화면에 표시 되도록 콘텐츠 뷰에를 추가 합니다.
+마지막으로, `ContentView.AddSubview (ClickMeButton)` 메서드는 응용 프로그램이 실행 되 고 창이 표시 될 때 화면에 표시 되도록 콘텐츠 뷰에 `NSButton`를 추가 합니다.
 
-다음으로를 클릭 한 횟수 `NSButton` 를 표시 하는 레이블이 창에 추가 됩니다.
+다음으로 `NSButton` 클릭 한 횟수를 표시 하는 레이블이 창에 추가 됩니다.
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
@@ -173,13 +173,13 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
 ContentView.AddSubview (ClickMeLabel);
 ```
 
-Macos는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 역할을 `NSTextField` 할 수 있도록 특수 스타일이 지정 된를 추가 했습니다. 이전 단추와 마찬가지로 크기 및 위치는 (0, 0)가 창의 왼쪽 아래에 있는 것을 고려 합니다. 속성 `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` 은 **또는** 연산자를 사용 하 여 두 `NSViewResizingMask` 기능을 결합 합니다. 그러면 창의 가로 크기를 조정 하 고 창의 크기를 가로로 조정 하는 경우 창의 위쪽에서 같은 위치에 레이블을 유지 하 게 됩니다.
+MacOS는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 역할을 할 편집할 수 있는 스타일 없는 `NSTextField`을 추가 했습니다. 이전 단추와 마찬가지로 크기 및 위치는 (0, 0)가 창의 왼쪽 아래에 있는 것을 고려 합니다. @No__t_0 속성은 **or** 연산자를 사용 하 여 두 개의 `NSViewResizingMask` 기능을 결합 합니다. 그러면 창의 가로 크기를 조정 하 고 창의 크기를 가로로 조정 하는 경우 창의 위쪽에서 같은 위치에 레이블을 유지 하 게 됩니다.
 
-이 메서드는 `ContentView.AddSubview (ClickMeLabel)` 응용 프로그램을 `NSTextField` 실행 하 고 창을 열 때 화면에 표시 되도록를 콘텐츠 뷰에 추가 합니다.
+또한 `ContentView.AddSubview (ClickMeLabel)` 메서드는 응용 프로그램이 실행 되 고 창이 열릴 때 화면에 표시 될 수 있도록 콘텐츠 뷰에 `NSTextField`를 추가 합니다.
 
 ### <a name="adjusting-the-window-controller"></a>창 컨트롤러 조정
 
-의 `MainWindow` 디자인이 storyboard 또는 xib 파일에서 더 이상 로드 되지 않으므로 창 컨트롤러를 몇 가지 조정 해야 합니다. **MainWindowController.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
+@No__t_0 디자인이 storyboard 또는. xib 파일에서 더 이상 로드 되지 않으므로 창 컨트롤러를 몇 가지 조정 해야 합니다. **MainWindowController.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -233,13 +233,13 @@ CGRect contentRect = new CGRect (0, 0, 1000, 500);
 base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
 ```
 
-를 `CGRect`사용 하 여 화면 창의 위치를 정의 합니다. 창의 좌표계와 마찬가지로 화면에서 왼쪽 아래 모서리로 (0, 0)을 정의 합니다. 다음으로 **또는** 연산자를 사용 하 여 두 개 `NSWindowStyle` 이상의 기능을 결합 하는 창의 스타일을 정의 합니다.
+@No__t_0를 사용 하 여 화면 창의 위치를 정의 합니다. 창의 좌표계와 마찬가지로 화면에서 왼쪽 아래 모서리로 (0, 0)을 정의 합니다. 다음으로 **또는** 연산자를 사용 하 여 두 개 이상의 `NSWindowStyle` 기능을 결합 하는 창의 스타일을 정의 합니다.
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
 ```
 
-사용할 수 있는 기능은 다음과 같습니다. `NSWindowStyle`
+다음 `NSWindowStyle` 기능을 사용할 수 있습니다.
 
 - **테두리 없음-창의** 테두리를 포함 하지 않습니다.
 - **제목이-창** 에 제목 표시줄이 표시 됩니다.
@@ -256,7 +256,7 @@ base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.
 - **Fullscreenwindow** -창이 전체 화면 모드로 전환 될 수 있습니다.
 - **FullSizeContentView** -창의 콘텐츠 뷰가 제목 및 도구 모음 영역 뒤에 있습니다.
 
-마지막 두 속성은 창의 _버퍼링 형식을_ 정의 하 고 창의 그리기가 지연 되는 경우를 정의 합니다. 에 대 `NSWindows`한 자세한 내용은 Apple의 Windows 설명서 [소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) 를 참조 하세요.
+마지막 두 속성은 창의 _버퍼링 형식을_ 정의 하 고 창의 그리기가 지연 되는 경우를 정의 합니다. @No__t_0에 대 한 자세한 내용은 Windows의 Apple [소개 문서를](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) 참조 하세요.
 
 마지막으로 storyboard 또는. xib 파일에서 창이 팽창 않으므로 windows `AwakeFromNib` 메서드를 호출 하 여 **MainWindowController.cs** 에서 시뮬레이션 해야 합니다.
 
@@ -286,7 +286,7 @@ mainWindowController.Window.MakeKeyAndOrderFront (this);
 
 ## <a name="adding-a-code-only-window"></a>코드 전용 창 추가
 
-Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해당 **Solution Pad** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다. **새 파일** 대화 상자에서 아래 > 그림과 같이**컨트롤러를 사용 하 여 xamarin.ios cocoa 창을**선택 합니다.
+Xibless 코드를 추가 하려면 기존 Xamarin.ios 응용 프로그램에 해당 **Solution Pad** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고  > **새 파일** **추가** ...를 선택 합니다. **새 파일** 대화 상자에서 아래 그림과 같이 컨트롤러를**사용 하 여 xamarin.ios  >  cocoa 창을**선택 합니다.
 
 ![새 창 컨트롤러 추가](xibless-ui-images/add01.png "새 창 컨트롤러 추가")
 
@@ -294,7 +294,7 @@ Xibless 코드를 추가 하려면 기존 xamarin.ios 응용 프로그램에 해
 
 ## <a name="adding-a-ui-element-to-a-window-in-code"></a>코드에서 창에 UI 요소 추가
 
-코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 예:
+코드에서 창이 만들어지거나 storyboard 또는. xib 파일에서 로드 되었는지 여부에 관계 없이 코드에서 창에 UI 요소를 추가 하려는 경우가 있을 수 있습니다. 예를 들면,
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
@@ -303,11 +303,11 @@ var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
 MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
-위의 코드는 새 `NSButton` 를 만들어 표시 하기 위해 `MyWindow` 창 인스턴스에 추가 합니다. 기본적으로 storyboard 또는 xib 파일에서 Xcode의 Interface Builder에 정의할 수 있는 모든 UI 요소는 코드에서 만들고 창에 표시할 수 있습니다.
+위의 코드는 새 `NSButton`를 만들어 표시를 위해 `MyWindow` 창 인스턴스에 추가 합니다. 기본적으로 storyboard 또는 xib 파일에서 Xcode의 Interface Builder에 정의할 수 있는 모든 UI 요소는 코드에서 만들고 창에 표시할 수 있습니다.
 
 ## <a name="defining-the-menu-bar-in-code"></a>코드에서 메뉴 모음 정의
 
-Xamarin.ios의 현재 제한 사항 때문에 xamarin.ios 응용 프로그램의 메뉴 모음`NSMenuBar`을 만드는 것은 권장 되지 않습니다. 코드에서는 **기본 storyboard** 또는 **xib** 파일을 사용 하 여 정의 하는 것이 좋습니다. 즉, 코드에서 C# 메뉴 및 메뉴 항목을 추가 하 고 제거할 수 있습니다.
+Xamarin.ios의 현재 제한 사항 때문에 Xamarin.ios 응용 프로그램의 메뉴 모음을 만드는 것은 권장 되지 않습니다. 코드에서 `NSMenuBar` – **기본 storyboard** 또는 **xib** 파일을 사용 하 여 정의 하는 것이 좋습니다. 즉, 코드에서 C# 메뉴 및 메뉴 항목을 추가 하 고 제거할 수 있습니다.
 
 예를 들어 **AppDelegate.cs** 파일을 편집 하 고 `DidFinishLaunching` 메서드를 다음과 같이 만듭니다.
 

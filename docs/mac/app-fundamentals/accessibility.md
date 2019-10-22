@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70769945"
 ---
 # <a name="accessibility-on-macos"></a>MacOS의 접근성
@@ -23,7 +23,7 @@ ms.locfileid: "70769945"
 
 ## <a name="describing-ui-elements"></a>UI 요소 설명
 
-Appkit는 `NSAccessibility` 프로토콜을 사용 하 여 사용자 인터페이스에 액세스할 수 있도록 돕는 api를 노출 합니다. 여기에는 단추의 `AccessibilityLabel`를 설정 하는 것과 같은 내게 필요한 옵션 속성에 대 한 의미 있는 값을 설정 하 려 하는 기본 동작이 포함 됩니다. 레이블은 일반적으로 컨트롤이 나 뷰를 설명 하는 단일 단어나 짧은 문구입니다.
+AppKit는 `NSAccessibility` 프로토콜을 사용 하 여 사용자 인터페이스에 액세스할 수 있도록 돕는 Api를 노출 합니다. 여기에는 단추 `AccessibilityLabel` 설정 하는 것과 같이 내게 필요한 옵션 속성에 대 한 의미 있는 값을 설정 하는 기본 동작이 포함 됩니다. 레이블은 일반적으로 컨트롤이 나 뷰를 설명 하는 단일 단어나 짧은 문구입니다.
 
 ### <a name="storyboard-files"></a>스토리 보드 파일
 
@@ -34,7 +34,7 @@ Xcode Interface Builder를 사용 하 여 스토리 보드 파일을 편집 합�
 
 ### <a name="code"></a>코드
 
-Xamarin.ios는 현재 setter로 `AccessibilityLabel` 노출 되지 않습니다.  다음 도우미 메서드를 추가 하 여 액세스 가능성 레이블을 설정 합니다.
+Xamarin.ios는 현재 `AccessibilityLabel` setter로 노출 되지 않습니다.  다음 도우미 메서드를 추가 하 여 액세스 가능성 레이블을 설정 합니다.
 
 ```csharp
 public static class AccessibilityHelper
@@ -55,10 +55,10 @@ public static class AccessibilityHelper
 AccessibilityHelper.SetAccessibilityLabel (someButton, "New Accessible Description");
 ```
 
-`AccessibilityHelp` 속성은 컨트롤이 나 뷰가 수행 하는 내용에 대 한 설명을 위한 것 이며 레이블이 충분 한 정보를 제공 하지 않을 경우에만 추가 해야 합니다. 도움말 텍스트는 가능한 한 짧게 유지 되어야 합니다 (예: "문서 삭제").
+@No__t_0 속성은 컨트롤이 나 뷰가 수행 하는 작업에 대 한 설명을 위한 것 이며, 레이블에 충분 한 정보를 제공 하지 않을 경우에만 추가 해야 합니다. 도움말 텍스트는 가능한 한 짧게 유지 되어야 합니다 (예: "문서 삭제").
 
 일부 사용자 인터페이스 요소는 액세스 가능한 액세스와 관련이 없습니다 (예: 고유한 접근성 레이블 및 도움말이 있는 입력 옆에 있는 레이블).
-이러한 경우를 설정 하 `AccessibilityElement = false` 여 이러한 컨트롤이 나 뷰를 화면 판독기나 다른 접근성 도구에서 건너뛰도록 설정 합니다.
+이러한 경우 화면 판독기 또는 다른 접근성 도구에서 이러한 컨트롤이 나 뷰를 건너뛰도록 `AccessibilityElement = false`를 설정 합니다.
 
 Apple은 접근성 레이블 및 도움말 텍스트에 대 한 모범 사례를 설명 하는 [내게 필요한 옵션 지침](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/EnhancingtheAccessibilityofStandardAppKitControls.html) 을 제공 합니다.
 

@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 9ea105b27aacef9ca9d63af0c57de880d039ff53
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "68739173"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-_Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용하여 데이터베이스 기반 애플리케이션을 지원하기 때문에 공유 코드로 개체를 로드하고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 애플리케이션이 SQLite.Net을 사용하여 데이터를 읽고 로컬 SQLite 데이터베이스에 데이터를 기록하는 방법을 설명합니다._
+_Xamarin.ios는 SQLite 데이터베이스 엔진을 사용 하는 데이터베이스 기반 응용 프로그램을 지원 하므로 공유 코드에서 개체를 로드 하 고 저장할 수 있습니다. 이 문서에서는 Xamarin.ios 응용 프로그램이 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
@@ -26,7 +26,7 @@ Xamarin.Forms 애플리케이션은 [SQLite.NET PCL NuGet](https://www.nuget.org
 
 함께 제공되는 [애플리케이션 예제](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)는 간단한 할 일 목록 애플리케이션입니다. 다음 스크린샷에서는 각 플랫폼에서 샘플이 어떻게 나타나는지를 보여 줍니다.
 
-[![Xamarin Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷") ](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷") [ ![Xamarin Forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 페이지 스크린샷") ](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷")
+[![Xamarin.ios 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷") [ ![xamarin. forms 데이터베이스 예제 스크린샷](databases-images/todo-list-sml.png "TodoList 첫 번째 페이지 스크린샷")](databases-images/todo-list.png#lightbox "TodoList 첫 번째 페이지 스크린샷")
 
 <a name="Using_SQLite_with_PCL" />
 

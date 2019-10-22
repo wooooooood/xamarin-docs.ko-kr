@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2017
 ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70768886"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
@@ -30,7 +30,7 @@ Xamarin iOS Designer를 사용 하 여 스토리 보드를 만들고 열고 편�
 
 스토리 보드는 응용 프로그램의 모든 화면에 대 한 시각적 표현입니다. 각 장면에는 *뷰 컨트롤러* 및 *뷰*를 나타내는 일련의 장면이 포함 되어 있습니다. 이러한 보기에는 사용자가 응용 프로그램과 상호 작용할 수 있도록 하는 개체 및 [컨트롤이](~/ios/user-interface/controls/index.md) 포함 될 수 있습니다. 이 뷰 및 컨트롤 컬렉션 (또는 *하위 뷰*)을 *콘텐츠 뷰 계층 구조*라고 합니다. 장면은 뷰 컨트롤러 간의 전환을 나타내는 segue 개체로 연결 됩니다. 이는 일반적으로 초기 뷰의 개체와 연결 하는 뷰 간에 segue을 만드는 방식으로 수행 됩니다. 디자인 화면의 관계는 아래 이미지에 나와 있습니다.
 
- [![](images/storyboardsview.png "디자인 화면의 관계는이 이미지에 나와 있습니다.")](images/storyboardsview.png#lightbox)
+ [![](images/storyboardsview.png "The relationships on the design surface are illustrated in this image")](images/storyboardsview.png#lightbox)
 
 표시 된 것 처럼 storyboard는 이미 렌더링 된 콘텐츠를 사용 하 여 각 장면을 레이아웃 하 고 두 항목 간의 연결을 보여 줍니다.  이 시점에서 iPhone에서 장면에 대해 설명할 때 storyboard의 한 *장면이* 장치에 있는 콘텐츠의 한 *화면* 과 같다고 가정 하는 것이 좋습니다. 그러나 iPad를 사용 하면 팝 오버 view controller를 사용 하는 경우와 같이 한 번에 여러 장면이 표시 될 수 있습니다.
 
@@ -38,40 +38,40 @@ Xamarin iOS Designer를 사용 하 여 스토리 보드를 만들고 열고 편�
 
 특히 iOS Designer를 사용 하는 경우 Storyboard를 사용 하 여 이벤트를 보다 쉽게 관리할 수 있습니다. 대부분의 UI 컨트롤에는 Properties Pad에서 가능한 이벤트 목록이 포함 됩니다. 이벤트 처리기는 여기에 추가 하 고, 뷰 컨트롤러 클래스의 부분 메서드 (partial method)에서 완료할 수 있습니다.
 
-스토리 보드의 내용은 XML 파일로 저장 됩니다. 빌드 시 모든 `.storyboard` 파일은 nibs 라는 이진 파일로 컴파일됩니다. 런타임에 이러한 nibs이 초기화 되 고 인스턴스화되어 새 뷰를 만듭니다.
+스토리 보드의 내용은 XML 파일로 저장 됩니다. 빌드 시 `.storyboard` 파일은 nibs 라고 하는 이진 파일로 컴파일됩니다. 런타임에 이러한 nibs이 초기화 되 고 인스턴스화되어 새 뷰를 만듭니다.
 
 ## <a name="segues"></a>Segue
 
 *Segue*또는 *Segue 개체*는 iOS 개발에서 장면 간 전환을 나타내는 데 사용 됩니다. Segue를 만들려면 **Ctrl** 키를 누른 채 한 장면에서 다른 장면으로를 클릭 합니다. 마우스를 끌면 파란색 커넥터가 나타나고 아래 이미지에 나와 있는 것 처럼 segue가 이어질 위치를 나타냅니다.
 
- [![](images/createsegue.png "Segue가이 이미지에 표시 된 것 처럼 이어질 위치를 나타내는 파란색 커넥터가 표시 됩니다.")](images/createsegue.png#lightbox)
+ [![](images/createsegue.png "A blue connector appears, indicating where the segue will lead as demonstrated in this image")](images/createsegue.png#lightbox)
 
 Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아래 이미지와 유사할 수 있습니다. 
 
 **IOS 전 8 및 크기 클래스**:
 
-[![](images/segue1.png "Size 클래스가 없는 Action Segue dropdown")](images/segue1.png#lightbox)
+[![](images/segue1.png "The Action Segue dropdown without Size Classes")](images/segue1.png#lightbox)
 
 **Size 클래스 및 적응 segue를 사용 하는 경우**:
 
-[![](images/16new.png "Size 클래스를 사용 하는 Action Segue dropdown")](images/16new.png#lightbox)
+[![](images/16new.png "The Action Segue dropdown with Size Classes")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
-> Windows 가상 머신에 대해 VMWare를 사용 하는 경우 Ctrl + 클릭은 기본적으로 마우스 _오른쪽 단추 클릭_ 으로 매핑됩니다. Segue을 만들려면 **기본 설정** > **키보드 & 마우스** > **마우스 바로 가기** 를 통해 키보드 기본 설정을 편집 하 고 아래 그림과 같이 **보조 단추** 를 다시 매핑합니다.
+> Windows 가상 머신에 대해 VMWare를 사용 하는 경우 Ctrl + 클릭은 기본적으로 마우스 _오른쪽 단추 클릭_ 으로 매핑됩니다. Segue을 만들려면 **기본 설정**  > **키보드 &** 마우스  > **마우스 바로 가기** 를 통해 키보드 기본 설정을 편집 하 고 아래 그림과 같이 **보조 단추** 를 다시 매핑합니다.
 > 
-> [![](images/image22.png "키보드 및 마우스 기본 설정")](images/image22.png#lightbox)
+> [![](images/image22.png "Keyboard and Mouse preference settings")](images/image22.png#lightbox)
 > 
 > 이제 뷰 컨트롤러 간에 segue를 정상적으로 추가할 수 있습니다.
 
 전환 유형에는 여러 가지가 있으며, 각각은 새 뷰 컨트롤러를 사용자에 게 표시 하는 방법과 Storyboard의 다른 뷰 컨트롤러와 상호 작용 하는 방식을 제어 합니다. 이러한 사항은 아래에 설명 되어 있습니다. Segue 개체를 하위 클래스로 지정 하 여 사용자 지정 전환을 구현할 수도 있습니다.
 
-- **Show/push** – push segue는 뷰 컨트롤러를 탐색 스택에 추가 합니다. 이 클래스는 뷰가 스택에 추가 될 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 것으로 가정 합니다. 이는와 `pushViewController` 동일한 작업을 수행 하며, 일반적으로 화면에 있는 데이터 간의 관계가 있는 경우에 사용 됩니다. Push segue를 사용 하면 뷰 계층 구조를 통해 드릴 다운 탐색을 허용 하는 뒤로 단추와 제목 (스택의 각 뷰에 추가 됨)이 포함 된 탐색 모음이 있는 luxury 제공 됩니다.
-- **Modal** – 모달 segue 표시 되는 애니메이션 전환의 옵션을 사용 하 여 프로젝트의 두 뷰 컨트롤러 간에 관계를 만듭니다. 자식 뷰 컨트롤러는 표시 될 때 부모 뷰 컨트롤러를 완전히 숨깁니다. 후면 단추를 추가 하는 push segue와는 달리 모달 segue `DismissViewController` 을 사용 하는 경우 이전 뷰 컨트롤러에 반환 하기 위해 사용 해야 합니다.
-- **사용자 지정** -사용자 지정 segue을의 `UIStoryboardSegue`하위 클래스로 만들 수 있습니다.
+- **Show/push** – push segue는 뷰 컨트롤러를 탐색 스택에 추가 합니다. 이 클래스는 뷰가 스택에 추가 될 뷰 컨트롤러와 동일한 탐색 컨트롤러의 일부인 것으로 가정 합니다. 이는 `pushViewController`와 동일한 작업을 수행 하며, 화면에 있는 데이터 간의 관계가 있는 경우 일반적으로 사용 됩니다. Push segue를 사용 하면 뷰 계층 구조를 통해 드릴 다운 탐색을 허용 하는 뒤로 단추와 제목 (스택의 각 뷰에 추가 됨)이 포함 된 탐색 모음이 있는 luxury 제공 됩니다.
+- **Modal** – 모달 segue 표시 되는 애니메이션 전환의 옵션을 사용 하 여 프로젝트의 두 뷰 컨트롤러 간에 관계를 만듭니다. 자식 뷰 컨트롤러는 표시 될 때 부모 뷰 컨트롤러를 완전히 숨깁니다. 후면 단추를 추가 하는 push segue와는 달리 모달 segue를 사용 하는 경우 `DismissViewController`를 사용 하 여 이전 뷰 컨트롤러에 반환 해야 합니다.
+- **사용자 지정** -사용자 지정 segue는 `UIStoryboardSegue`의 서브 클래스로 만들 수 있습니다.
 - **해제** – 해제 segue를 사용 하 여 push 또는 modal segue를 통해 다시 탐색할 수 있습니다. 예를 들어, 모달로 제공 된 뷰 컨트롤러를 해제할 수 있습니다. 이 외에도 한 번만 사용 하 고 일련의 푸시 및 모달 segue을 해제 하 고 단일 해제 작업으로 탐색 계층 구조에서 여러 단계를 되돌릴 수 있습니다. IOS에서 해제 segue를 사용 하는 방법을 이해 하려면 [해제 Segue 만들기](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) 조리법을 읽어 보세요.
 - **원본 없는** – A 원본 없는 segue는 초기 뷰 컨트롤러를 포함 하는 장면을 나타내며 사용자에 게 먼저 표시 되는 보기입니다. 이는 아래에 표시 된 segue 나타냅니다.  
 
-    [![](images/sourcelesssegue.png "원본 없는 segue")](images/sourcelesssegue.png#lightbox)
+    [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
 
 ### <a name="adaptive-segue-types"></a>적응 Segue 형식
 
@@ -79,9 +79,9 @@ Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아�
 
 Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응 segue*](~/ios/user-interface/storyboards/unified-storyboards.md)사용 합니다. Size 클래스를 사용 하는 경우 iPhone 또는 iPad를 사용 하 고 있다는 것을 직접 지정 하는 것은 아닙니다. 즉, 작업 해야 하는 부동산의 양에 관계 없이 항상 동일한 것으로 보이는 하나의 UI를 만듭니다. 적응 Segue는 환경을 심사 하 고 콘텐츠를 표시 하는 데 가장 적합 한 방법을 결정 합니다. 적응 Segue 다음과 같이 표시 됩니다. 
 
-[![](images/adaptivesegue.png "적응 Segue 드롭다운")](images/adaptivesegue.png#lightbox)
+[![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
-|Segue|Description|
+|Segue|설명|
 |--- |--- |
 |표시|이는 푸시 segue 매우 유사 하지만 화면의 내용을 고려 합니다.|
 |세부 정보 표시|앱이 마스터 및 세부 정보 보기를 표시 하는 경우 (예: iPad의 분할 보기 컨트롤러에서) 콘텐츠가 자세히 보기를 대체 합니다. 앱에 마스터 또는 세부 정보만 표시 되는 경우 콘텐츠는 뷰 컨트롤러 스택의 맨 위를 대체 합니다.|
@@ -107,13 +107,13 @@ NSObject sender)
 }
 ```
 
-이 예제 `PrepareForSegue` 에서는 사용자가 segue를 트리거할 때 메서드가 호출 됩니다. 먼저 ' 수신 ' 뷰 컨트롤러의 인스턴스를 만들고이를 segue의 대상 뷰 컨트롤러로 설정 해야 합니다. 다음 코드 줄에서이 작업을 수행 합니다.
+이 예제에서는 사용자가 segue를 트리거할 때 `PrepareForSegue` 메서드가 호출 됩니다. 먼저 ' 수신 ' 뷰 컨트롤러의 인스턴스를 만들고이를 segue의 대상 뷰 컨트롤러로 설정 해야 합니다. 다음 코드 줄에서이 작업을 수행 합니다.
 
 ```csharp
 var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
-이제 메서드에서 속성 `DestinationViewController`을 설정할 수 있습니다. 이 예제에서는 라는 `PhoneNumbers` 목록을에 전달 하 고 같은 이름의 개체에 할당 하 여이를 활용 합니다. `CallHistoryController`
+이제 메서드는 `DestinationViewController`에 대 한 속성을 설정할 수 있습니다. 이 예제에서는 `PhoneNumbers` 이라는 목록을 `CallHistoryController`에 전달 하 고 같은 이름의 개체에 할당 하 여이를 활용 합니다.
 
 ```csharp
 if (callHistoryController != null) {
@@ -121,7 +121,7 @@ if (callHistoryController != null) {
     }
 ```
 
-전환이 완료 되 면 사용자에 게 채워진 목록이 `CallHistoryController` 포함 된이 표시 됩니다.
+전환이 완료 되 면 사용자에 게 채워진 목록과 `CallHistoryController` 표시 됩니다.
 
 ## <a name="adding-a-storyboard-to-a-non-storyboard-project"></a>Storyboard가 아닌 프로젝트에 스토리 보드 추가
 
@@ -131,15 +131,15 @@ if (callHistoryController != null) {
 
 1. 아래 그림과 같이 **파일 > 새 파일 > iOS > 스토리 보드**를 검색 하 여 새 스토리 보드 파일을 만듭니다. 
     
-    [![](images/new-storyboard-xs.png "새 파일 대화 상자")](images/new-storyboard-xs.png#lightbox)
+    [![](images/new-storyboard-xs.png "The new file dialog")](images/new-storyboard-xs.png#lightbox)
 
 2. 아래와 같이 **info.plist**의 **Main Interface** 섹션에 스토리 보드 이름을 추가 합니다.
     
-    [![](images/infoplist.png "Info.plist 편집기")](images/infoplist.png#lightbox)
+    [![](images/infoplist.png "The Info.plist editor")](images/infoplist.png#lightbox)
     
-    이는 앱 대리자 내 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 스토리 보드를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 다음을 수행 합니다. 화면에 표시 되는 창입니다.
+    이는 앱 대리자 내의 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 storyboard를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 화면에 표시 되는 창입니다.
 
-3. 에서 windows 속성을 구현 하 `Window` 는 다음 코드를 사용 하 여 기본 메서드를 재정의 합니다. `AppDelegate`
+3. @No__t_0에서 window 속성을 구현 하는 다음 코드를 사용 하 여 기본 `Window` 메서드를 재정의 합니다.
 
     ```csharp
     public override UIWindow Window {
@@ -152,15 +152,15 @@ if (callHistoryController != null) {
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 새 파일 > 추가 하 고 아래 그림과 같이 **새 파일 > iOS > 빈 스토리 보드에 추가**하 여 새 스토리 보드 파일을 만듭니다. 
     
-    [![](images/new-storyboard-vs.png "새 항목 대화 상자")](images/new-storyboard-vs.png#lightbox)
+    [![](images/new-storyboard-vs.png "The new item dialog")](images/new-storyboard-vs.png#lightbox)
 
 2. 아래와 같이 iOS 응용 프로그램의 **주 인터페이스** 섹션에 스토리 보드 이름을 추가 합니다.
     
-    [![](images/ios-app.png "Info.plist 편집기")](images/ios-app.png#lightbox)
+    [![](images/ios-app.png "The Info.plist editor")](images/ios-app.png#lightbox)
     
-    이는 앱 대리자 내 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 스토리 보드를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 다음을 수행 합니다. 화면에 표시 되는 창입니다.
+    이는 앱 대리자 내의 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 storyboard를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 화면에 표시 되는 창입니다.
 
-3. 에서 windows 속성을 구현 하 `Window` 는 다음 코드를 사용 하 여 기본 메서드를 재정의 합니다. `AppDelegate`
+3. @No__t_0에서 window 속성을 구현 하는 다음 코드를 사용 하 여 기본 `Window` 메서드를 재정의 합니다.
 
     ```csharp
     public override UIWindow Window {
@@ -179,43 +179,43 @@ IOS Designer를 사용 하 여 스토리 보드를 만들려면 [Hello, Ios 멀�
 
 ## <a name="instantiate-storyboards-manually"></a>수동으로 스토리 보드 인스턴스화
 
-스토리 보드는 프로젝트에서 개별 XIB 파일을 완전히 대체 하지만 Storyboard의 개별 뷰 컨트롤러는를 사용 하 여 `Storyboard.InstantiateViewController`계속 인스턴스화할 수 있습니다.
+스토리 보드는 프로젝트에서 개별 XIB 파일을 완전히 대체 하지만 Storyboard의 개별 뷰 컨트롤러는 `Storyboard.InstantiateViewController`를 사용 하 여 인스턴스화할 수 있습니다.
 
 경우에 따라 응용 프로그램에는 디자이너에서 제공 하는 기본 제공 storyboard 전환을 사용 하 여 처리할 수 없는 특별 한 요구 사항이 있습니다. 예를 들어 응용 프로그램의 현재 상태에 따라 동일한 단추에서 다른 화면을 시작 하는 응용 프로그램을 만드는 경우 뷰 컨트롤러를 수동으로 인스턴스화하고 전환을 프로그래밍 하는 것이 좋습니다.
 
 아래 스크린샷은 디자인 화면에서 두 개의 뷰 컨트롤러를 표시 합니다. 이러한 컨트롤러 사이에는 segue 없습니다. 다음 섹션에서는 코드에서 전환을 설정할 수 있는 방법에 대해 살펴봅니다.
 
- [![](images/viewcontrollerspink.png "이 스크린샷은 디자인 화면에서 두 개의 뷰 컨트롤러를 표시 합니다. segue")](images/viewcontrollerspink.png#lightbox)
+ [![](images/viewcontrollerspink.png "This screenshot shows two view controllers on the design surface with no segue between them")](images/viewcontrollerspink.png#lightbox)
 
 1. 기존 프로젝트 프로젝트에 _빈 IPhone Storyboard_ 를 추가 합니다.
     
-    [![](images/add-storyboard1.png "스토리 보드 추가")](images/add-storyboard1.png#lightbox)
+    [![](images/add-storyboard1.png "Adding storyboard")](images/add-storyboard1.png#lightbox)
 
 2. 새로 만든 storyboard를 두 번 클릭 하 여 열고 디자인 화면에 새 **탐색 컨트롤러** 를 추가 합니다. 탐색 컨트롤러는 UI를 사용 하지 않으므로 기본적으로 아래 그림과 같이 루트 뷰 컨트롤러와 함께 제공 됩니다.
 
-    [![](images/uinavigationcontroller.png "Segue를 사용 하 여 컨트롤러 보기")](images/uinavigationcontroller.png#lightbox)
+    [![](images/uinavigationcontroller.png "View Controllers with Segues")](images/uinavigationcontroller.png#lightbox)
 
-3. 아래쪽에 있는 검은색 표시줄을 클릭 하 여 _뷰 컨트롤러_ 를 선택 합니다. 디자이너의 **속성 패드**에서 **id** 아래에 사용자 지정 클래스와 뷰 컨트롤러의 고유 ID를 지정할 수 있습니다. **클래스 이름** 및 **스토리 보드 ID** 를로 `MainViewController`설정 합니다.
+3. 아래쪽에 있는 검은색 표시줄을 클릭 하 여 _뷰 컨트롤러_ 를 선택 합니다. 디자이너의 **속성 패드**에서 **id** 아래에 사용자 지정 클래스와 뷰 컨트롤러의 고유 ID를 지정할 수 있습니다. **클래스 이름** 및 **스토리 보드 ID** 를 `MainViewController`로 설정 합니다.
 
-    [![](images/identitypanelnew.png "사용자 지정 클래스 지정")](images/identitypanelnew.png#lightbox)
+    [![](images/identitypanelnew.png "Specify custom class")](images/identitypanelnew.png#lightbox)
 
 4. 나중에 스토리 보드에서 뷰 컨트롤러를 인스턴스화해야 하 고 스토리 보드 ID를 사용 하 여 코드에서이를 참조 합니다. 복원 ID를 스토리 보드 ID와 일치 하도록 설정 하면 상태를 복원 해야 하는 경우 뷰 컨트롤러를 올바르게 다시 만들 수 있습니다.
 
-5. 현재 하나의 뷰 컨트롤러만 있습니다. 다른 뷰 컨트롤러를 디자인 화면으로 끌어 옵니다. **속성 패드**의 id에서 아래 그림과 같이 클래스 및 스토리 보드 ID를로 `PinkViewController`설정 합니다.
+5. 현재 하나의 뷰 컨트롤러만 있습니다. 다른 뷰 컨트롤러를 디자인 화면으로 끌어 옵니다. **속성 패드**의 id에서 아래 그림과 같이 클래스 및 스토리 보드 id를 `PinkViewController`으로 설정 합니다.
 
-    [![](images/pinkvcnew.png "속성 패드")](images/pinkvcnew.png#lightbox)
+    [![](images/pinkvcnew.png "The Property Pad")](images/pinkvcnew.png#lightbox)
     
     IDE에서 뷰 컨트롤러에 대 한 이러한 사용자 지정 클래스를 만듭니다. 아래 스크린샷에 나와 있는 것 처럼 **Solution Pad**에서 볼 수 있습니다.
     
     [![](images/solution-pad.png "Solution Pad")](images/solution-pad.png#lightbox)
 
-6. `PinkViewController`에서 컨트롤러 프레임의 중심을 클릭 하 여 보기를 선택 합니다. Properties Pad의 보기 아래에서 **배경색** 을 자홍색으로 변경 합니다.
+6. @No__t_0에서 컨트롤러 프레임의 중심을 클릭 하 여 보기를 선택 합니다. Properties Pad의 보기 아래에서 **배경색** 을 자홍색으로 변경 합니다.
     
-    [![](images/pinkcontroller.png "배경색 설정")](images/pinkcontroller.png#lightbox)
+    [![](images/pinkcontroller.png "Set Background color")](images/pinkcontroller.png#lightbox)
 
-7. 마지막으로 **도구 상자** 에서 단추를로 `MainViewController`끌어 옵니다. Properties Pad에서 아래 그림과 같이 이름과 `PinkButton` 제목 gotopink를 지정 합니다.
+7. 마지막으로 **도구 상자** 의 단추를 `MainViewController` 끌어 옵니다. Properties Pad에서 아래 그림과 같이 이름 `PinkButton` 및 제목 GoToPink를 지정 합니다.
 
-    [![](images/pinkbutton.png "단추 이름 설정")](images/pinkbutton.png#lightbox)
+    [![](images/pinkbutton.png "Set Button Name")](images/pinkbutton.png#lightbox)
 
 스토리 보드가 완성 되지만 지금 프로젝트를 배포 하면 빈 화면이 표시 됩니다. 이는 여전히 IDE에 스토리 보드를 사용 하도록 지시 하 고 첫 번째 뷰로 사용할 루트 뷰 컨트롤러를 설정 해야 하기 때문입니다. 일반적으로이 작업은 위에 표시 된 것 처럼 프로젝트 옵션을 통해 수행할 수 있습니다. 그러나이 예제에서는 **AppDelegate**에 다음을 추가 하 여 코드에서 동일한 결과를 얻을 수 있습니다.
 
@@ -240,9 +240,9 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 ```
 
-코드는 많지만 몇 줄만 알지 못합니다. 먼저 storyboard의 이름인 **mainstoryboard.storyboard**를 전달 하 여 스토리 보드를 **AppDelegate** 에 등록 합니다. 다음에는 스토리 보드에서를 호출 `InstantiateInitialViewController` 하 여 스토리 보드에서 초기 뷰 컨트롤러를 인스턴스화하기 위해 응용 프로그램에 지시 하 고 해당 뷰 컨트롤러를 응용 프로그램의 루트 뷰 컨트롤러로 설정 합니다. 이 메서드는 사용자에 게 표시 되는 첫 번째 화면을 확인 하 고 해당 뷰 컨트롤러의 새 인스턴스를 만듭니다.
+코드는 많지만 몇 줄만 알지 못합니다. 먼저 storyboard의 이름인 **mainstoryboard.storyboard**를 전달 하 여 스토리 보드를 **AppDelegate** 에 등록 합니다. 다음으로, storyboard에서 `InstantiateInitialViewController`를 호출 하 여 스토리 보드에서 초기 뷰 컨트롤러를 인스턴스화하기 위해 응용 프로그램에 지시 하 고 해당 뷰 컨트롤러를 응용 프로그램의 루트 뷰 컨트롤러로 설정 합니다. 이 메서드는 사용자에 게 표시 되는 첫 번째 화면을 확인 하 고 해당 뷰 컨트롤러의 새 인스턴스를 만듭니다.
 
-솔루션 창에서 IDE가 `MainViewcontroller.cs` 클래스를 `corresponding designer.cs` 만들었으며 4 단계에서 클래스 이름을 Properties Pad에 추가한 경우를 확인 합니다. 이 클래스는 기본 클래스를 포함 하는 특수 생성자를 통해 생성 된 것을 볼 수 있습니다.
+솔루션 창에서 IDE는 `MainViewcontroller.cs` 클래스를 만들었으며 4 단계에서 Properties Pad 클래스 이름을 추가할 때 해당 `corresponding designer.cs`를 만들었습니다. 이 클래스는 기본 클래스를 포함 하는 특수 생성자를 통해 생성 된 것을 볼 수 있습니다.
 
 ```csharp
 public MainViewController (IntPtr handle) : base (handle) 
@@ -268,7 +268,7 @@ public MainViewController (IntPtr handle) : base (handle)
 
 클래스 및 메서드를 등록 하는 방법에 대 한 자세한 내용은 [등록자 형식](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) 설명서를 참조 하세요.
 
-이 클래스의 마지막 단계는 단추를 연결 하 고 분홍색 보기 컨트롤러에 전환 하는 것입니다. 스토리 보드에서을 `PinkViewController` (를) 인스턴스화하면 아래 예제 코드에 표시 된 대로를 사용 `PushViewController`하 여 push segue를 프로그래밍 합니다.
+이 클래스의 마지막 단계는 단추를 연결 하 고 분홍색 보기 컨트롤러에 전환 하는 것입니다. 스토리 보드에서 `PinkViewController`를 인스턴스화합니다. 그런 다음 아래 예제 코드에 표시 된 대로 `PushViewController`를 사용 하 여 push segue를 프로그래밍 합니다.
 
 ```csharp
 public partial class MainViewController : UIViewController
@@ -308,7 +308,7 @@ public partial class MainViewController : UIViewController
 
 응용 프로그램을 실행 하면 2 화면 응용 프로그램이 생성 됩니다.
 
-![](images/finishedstoryboard.png "샘플 앱 실행 화면")
+![](images/finishedstoryboard.png "Sample app run screens")
 
 ## <a name="conditional-segues"></a>조건부 Segue
 
@@ -318,27 +318,27 @@ public partial class MainViewController : UIViewController
 
 시작 하기 전에 위의 1 – 8 단계를 수행 합니다. 이 단계에서는 스토리 보드를 만들고, UI 만들기를 시작 하 고, RootViewController로 사용할 뷰 컨트롤러를 앱 대리자에 게 알립니다.
 
-1. 이제 UI를 빌드하여 아래 스크린샷에 표시 `MainViewController` 된 것 처럼 보이도록 추가 뷰를 추가 하겠습니다.
+1. 이제 UI를 빌드하여 아래 스크린샷에 표시 된 것 처럼 보이도록 `MainViewController`에 나열 된 추가 뷰를 추가 하겠습니다.
 
     - UITextField
         - 이름: PasswordTextField
-        - Placeholder ' 비밀 암호 입력 '
+        - 자리 표시자: ' 비밀 암호 입력 '
     - UILabel
-        - 본문 메시지가 잘못 된 암호입니다. ! '을 (를) 전달 하지 않아야 합니다.
-        - 색: 빨강
-        - 할당 가운데 맞춤
-        - 가로줄 2
+        - 텍스트: ' 오류: 암호가 잘못 되었습니다. ! '을 (를) 전달 하지 않아야 합니다.
+        - 색: 빨간색
+        - 맞춤: 가운데
+        - 줄: 2
         - ' 숨김 ' 확인란이 선택 됨    
         
-    [![](images/passwordvc.png "가운데 선")](images/passwordvc.png#lightbox)
+    [![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
     
 2. *PinkButton* 에서 *PinkViewController*로 이동 하 고 마우스 위로 **누름** 을 선택 하 여 분홍색으로 이동 단추와 뷰 컨트롤러 사이에 Segue를 만듭니다. 
 
-3. Segue을 클릭 하 고 *id* `SegueToPink`를 지정 합니다.
+3. Segue을 클릭 하 고 `SegueToPink` *식별자* 를 제공 합니다.
 
-    [![](images/namesegue.png "Segue을 클릭 하 고 SegueToPink를 지정 합니다.")](images/namesegue.png#lightbox)  
+    [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
 
-4. 마지막으로 다음 ShouldPerformSegue 메서드를 `MainViewController` 클래스에 추가 합니다.
+4. 마지막으로 `MainViewController` 클래스에 다음 ShouldPerformSegue 메서드를 추가 합니다.
 
     ```csharp
     public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
@@ -358,9 +358,9 @@ public partial class MainViewController : UIViewController
     }
     ```
 
-이 코드에서는 segueIdentifier와 `SegueToPink` segue를 비교 하 여 조건을 테스트할 수 있습니다 .이 경우 유효한 암호입니다. 조건에서을 반환 `true`하는 경우 Segue은를 수행 하 고를 `PinkViewController`표시 합니다. 이면 `false`새 뷰 컨트롤러가 표시 되지 않습니다.
+이 코드에서는 segueIdentifier를 `SegueToPink` segue와 일치 시켜 조건을 테스트할 수 있습니다. 이 경우 유효한 암호입니다. 조건에 `true` 반환 되는 경우 Segue는를 수행 하 고 `PinkViewController`를 표시 합니다. @No__t_0 경우 새 뷰 컨트롤러는 표시 되지 않습니다.
 
-SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 컨트롤러의 모든 Segue에이 방법을 적용할 수 있습니다. 이 경우 하나의 Segue identifier `SegueToPink`만 있습니다.
+SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 컨트롤러의 모든 Segue에이 방법을 적용할 수 있습니다. 이 경우에는 `SegueToPink` Segue 식별자가 하나만 있습니다.
 
 작업 예제를 보려면 [수동 storyboard 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) 에서 Storyboard. 조건부 솔루션을 참조 하십시오.
 
@@ -378,31 +378,31 @@ SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 
 
 외부 스토리 보드에 대 한 참조를 추가 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 합니다.  > iOS스토리 > **보드**. 새 스토리 보드의 **이름을** 입력 하 고 **새로 만들기** 단추를 클릭 합니다.
+1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가**  > **새 파일** ...  > **iOS**  > **스토리 보드**를 선택 합니다. 새 스토리 보드의 **이름을** 입력 하 고 **새로 만들기** 단추를 클릭 합니다.
     
-    [![](images/ref01.png "새 파일 대화 상자")](images/ref01.png#lightbox)
+    [![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
     
 2. 일반적인 방법으로 새 Storyboard의 배경 레이아웃을 디자인 하 고 변경 내용을 저장 합니다. 
     
-    [![](images/ref02.png "새 장면의 레이아웃")](images/ref02.png#lightbox)
+    [![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
     
 3. IOS 디자이너에서 참조를 추가할 스토리 보드를 엽니다.
 
 4. **도구 상자** 의 **스토리 보드 참조** 를 Design Surface 끌어 옵니다. 
     
-    [![](images/ref03.png "스토리 보드 참조")](images/ref03.png#lightbox)
+    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
     
 5. **속성 탐색기**의 **위젯** 탭에서 위에서 만든 **Storyboard** 의 이름을 선택 합니다. 
 
-    [![](images/ref04.png "위젯 탭")](images/ref04.png#lightbox)
+    [![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
     
 6. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다. 
 
-    [![](images/ref05.png "Segue 만들기")](images/ref05.png#lightbox) 
+    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox) 
     
 7. 팝업 메뉴에서 **표시** 를 선택 하 여 Segue를 완료 합니다. 
 
-    [![](images/ref06.png "표시를 선택 하 여 Segue 완료")](images/ref06.png#lightbox) 
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
     
 8. 스토리 보드에 변경 내용을 저장 합니다.
 
@@ -418,29 +418,29 @@ SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 
 
 2. 새 장면을 추가 하 고 일반적으로 다음과 같이 레이아웃을 디자인 합니다. 
 
-    [![](images/ref07.png "새 장면 레이아웃")](images/ref07.png#lightbox)
+    [![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
     
 3. **속성 탐색기**의 **위젯** 탭에서 새 장면의 뷰 컨트롤러에 대 한 **스토리 보드 ID** 를 입력 합니다. 
 
-    [![](images/ref08.png "새 장면 보기 컨트롤러의 스토리 보드 ID 입력")](images/ref08.png#lightbox)
+    [![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
     
 4. IOS 디자이너에서 참조를 추가할 스토리 보드를 엽니다.
 
 5. **도구 상자** 의 **스토리 보드 참조** 를 Design Surface 끌어 옵니다. 
 
-    [![](images/ref03.png "스토리 보드 참조")](images/ref03.png#lightbox)
+    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
     
 6. **속성 탐색기**의 **위젯** 탭에서, **스토리 보드** 의 이름과 위에서 만든 장면의 **참조 ID** (storyboard id)를 선택 합니다. 
 
-    [![](images/ref09.png "위젯 탭")](images/ref09.png#lightbox)
+    [![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
     
 7. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다. 
 
-    [![](images/ref10.png "Segue 만들기")](images/ref10.png#lightbox) 
+    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox) 
     
 8. 팝업 메뉴에서 **표시** 를 선택 하 여 Segue를 완료 합니다. 
 
-    [![](images/ref06.png "표시를 선택 하 여 Segue 완료")](images/ref06.png#lightbox) 
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
     
 9. 스토리 보드에 변경 내용을 저장 합니다.
 
@@ -456,27 +456,27 @@ SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 
 
 2. 새 장면을 추가 하 고 일반적으로 다음과 같이 레이아웃을 디자인 합니다. 
 
-    [![](images/ref11.png "새 장면 레이아웃")](images/ref11.png#lightbox)
+    [![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
 
 3. **속성 탐색기**의 **위젯** 탭에서 새 장면의 뷰 컨트롤러에 대 한 **스토리 보드 ID** 를 입력 합니다. 
 
-    [![](images/ref12.png "위젯 탭")](images/ref12.png#lightbox)
+    [![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
     
 4. **도구 상자** 의 **스토리 보드 참조** 를 Design Surface 끌어 옵니다. 
 
-   [![](images/ref03.png "스토리 보드 참조")](images/ref03.png#lightbox)
+   [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
     
 5. **속성 탐색기**의 **위젯** 탭에서 위에서 만든 장면의 **참조 id** (Storyboard id)를 선택 합니다. 
 
-    [![](images/ref13.png "위젯 탭")](images/ref13.png#lightbox)
+    [![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
     
 6. 기존 장면에서 UI 위젯 (예: 단추)을 클릭 하 고 방금 만든 **스토리 보드 참조** 에 새 Segue을 만듭니다. 
 
-    [![](images/ref14.png "Segue 만들기")](images/ref14.png#lightbox) 
+    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox) 
     
 7. 팝업 메뉴에서 **표시** 를 선택 하 여 Segue를 완료 합니다. 
 
-    [![](images/ref06.png "표시를 선택 하 여 Segue 완료")](images/ref06.png#lightbox) 
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
     
 8. 스토리 보드에 변경 내용을 저장 합니다.
 

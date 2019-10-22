@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/14/2017
 ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70770037"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
@@ -38,13 +38,13 @@ ms.locfileid: "70770037"
 
 Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 하 게 사용할 수 있습니다.
 
-- Xamarin.ios는 현재 디버깅 확장을 지원 하지 않으므로 디버깅 환경은 주로 실행과 `printf` 같은 문에 따라 달라 집니다. 그러나 확장은 샌드박스 프로세스에서 실행 되므로 `Console.WriteLine` 다른 xamarin.ios 응용 프로그램에서 수행 되는 것 처럼 작동 하지 않습니다. 을 [ `NSLog` 직접](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) 호출 하면 디버깅 메시지가 시스템 로그에 출력 됩니다.
-- Catch 되지 않은 예외는 확장 프로세스를 중단 하 여 **시스템 로그**에 적은 양의 유용한 정보만 제공 합니다. 다시 throw 하기 전의 `try/catch` (예외) 블록에 문제가 있는 코드를 래핑하는 것이 `NSLog`유용할 수 있습니다.
-- **시스템 로그** 는 **응용 프로그램** > **유틸리티**아래의 **콘솔** 앱에서 액세스할 수 있습니다.
+- Xamarin.ios는 현재 디버깅 확장을 지원 하지 않으므로 디버깅 환경은 주로 실행 및 `printf`와 같은 문에 따라 달라 집니다. 그러나 확장은 sandbox 프로세스에서 실행 되므로 `Console.WriteLine` 다른 Xamarin.ios 응용 프로그램에서 수행 되는 것 처럼 작동 하지 않습니다. [@No__t_1를 직접](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) 호출 하면 디버깅 메시지가 시스템 로그에 출력 됩니다.
+- Catch 되지 않은 예외는 확장 프로세스를 중단 하 여 **시스템 로그**에 적은 양의 유용한 정보만 제공 합니다. 다시 throw 하기 전에 `NSLog`의 `try/catch` (예외) 블록에 문제가 있는 코드를 래핑하는 것이 유용할 수 있습니다.
+- **시스템 로그** 는 **응용 프로그램**  > **유틸리티**의 **콘솔** 앱에서 액세스할 수 있습니다.
 
-    [![](extensions-images/extension02.png "시스템 로그")](extensions-images/extension02.png#lightbox)
+    [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
 - 위에서 설명한 것 처럼 확장 호스트 응용 프로그램을 실행 하면 시스템에 등록 됩니다. 응용 프로그램 번들을 삭제 하 고 등록을 취소 합니다. 
-- 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾아서 삭제할 수 있습니다.`plugin kit -mv`
+- 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾습니다 (삭제할 수 있음). `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App" />
 

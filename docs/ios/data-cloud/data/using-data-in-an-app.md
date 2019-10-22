@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
 ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70766854"
 ---
 # <a name="using-data-in-an-ios-app"></a>IOS 앱에서 데이터 사용
@@ -20,13 +20,13 @@ ms.locfileid: "70766854"
 
 일부 데이터를 추가한 후 응용 프로그램 화면은 iOS에서 다음과 같이 표시 됩니다.
 
- ![](using-data-in-an-app-images/image9.png "iOS 샘플 목록")
+ ![](using-data-in-an-app-images/image9.png "iOS sample list")
 
- ![](using-data-in-an-app-images/image10.png "iOS 샘플 세부 정보")
+ ![](using-data-in-an-app-images/image10.png "iOS sample detail")
 
 IOS 프로젝트는 아래와 같습니다 .이 섹션에 표시 된 코드는 **Orm** 디렉터리에 포함 되어 있습니다.
 
- ![](using-data-in-an-app-images/image13.png "iOS 프로젝트 트리")
+ ![](using-data-in-an-app-images/image13.png "iOS project tree")
 
 IOS에서 ViewControllers의 기본 UI 코드는이 문서의 범위를 벗어났습니다.
 UI 컨트롤에 대 한 자세한 내용은 [IOS 테이블 및 셀 작업](~/ios/user-interface/controls/tables/index.md) 가이드를 참조 하세요.
@@ -38,7 +38,7 @@ UI 컨트롤에 대 한 자세한 내용은 [IOS 테이블 및 셀 작업](~/ios
 - 목록 읽기
 - 개별 레코드 읽기
 
-`StockDatabase` 클래스의 두 메서드는 다음과 같습니다.
+@No__t_0 클래스의 두 메서드는 다음과 같습니다.
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -55,11 +55,11 @@ public Stock GetStock (int id)
 }
 ```
 
-iOS는와 다른 방식으로 `UITableView`데이터를 렌더링 합니다.
+iOS는 데이터를 `UITableView`와 다르게 렌더링 합니다.
 
 ## <a name="create-and-update"></a>만들기 및 업데이트
 
-응용 프로그램 코드를 간소화 하기 위해 PrimaryKey의 설정 여부에 따라 삽입 또는 업데이트를 수행 하는 단일 save 메서드가 제공 됩니다. 속성은 `[PrimaryKey]` 특성으로 표시 되므로 코드에서 설정 하면 안 됩니다. `Id`
+응용 프로그램 코드를 간소화 하기 위해 PrimaryKey의 설정 여부에 따라 삽입 또는 업데이트를 수행 하는 단일 save 메서드가 제공 됩니다. @No__t_0 속성은 `[PrimaryKey]` 특성으로 표시 되므로 코드에서 설정 하면 안 됩니다.
 이 메서드는 기본 키 속성을 확인 하 여 값이 이전에 저장 되었는지 여부를 검색 하 고 그에 따라 개체를 삽입 또는 업데이트 합니다.
 
 ```csharp
@@ -81,8 +81,8 @@ public int SaveStock (Stock item)
 
 ## <a name="delete"></a>삭제
 
-및 메서드와 달리 `Delete<T>` 메서드는 전체 `Stock` 개체가 아닌 기본 키 값만 수락할 수 있습니다. `Insert` `Update`
-이 예제 `Stock` 에서 개체는 메서드에 전달 되지만 Id 속성만 `Delete<T>` 메서드에 전달 됩니다.
+@No__t_0 및 `Update` 메서드와 달리 `Delete<T>` 메서드는 전체 `Stock` 개체가 아닌 기본 키 값만 사용할 수 있습니다.
+이 예제에서는 `Stock` 개체가 메서드에 전달 되지만 Id 속성만 `Delete<T>` 메서드에 전달 됩니다.
 
 ```csharp
 public int DeleteStock(Stock stock)
@@ -103,7 +103,7 @@ public int DeleteStock(Stock stock)
 
 앱과 함께 배포할 데이터베이스 파일을 만들 때 특히 이름이 C# 클래스 및 속성과 일치 해야 하는 SQLite.NET를 사용 하는 경우에는 테이블 및 열의 이름을 지정 하 여 코드에 필요한 내용과 일치 하는지 확인 합니다. 또는 연결 된 사용자 지정 특성을 지정 합니다.
 
-IOS의 경우 응용 프로그램에 sqlite 파일을 포함 하 고 빌드 작업으로 **표시 되어 있는지 확인 합니다. 콘텐츠**. 데이터 메서드를 호출 `FinishedLaunching` *하기 전에* 에 코드를 저장 하 여 쓰기 가능한 디렉터리에 파일을 복사 합니다. 다음 코드는 이미 존재 하지 않는 경우에만 **data. sqlite**라는 기존 데이터베이스를 복사 합니다.
+IOS의 경우 응용 프로그램에 sqlite 파일을 포함 하 고 **빌드 작업: 콘텐츠**로 표시 되었는지 확인 합니다. 데이터 메서드를 호출 *하기 전에* 파일을 쓸 수 있는 디렉터리로 복사 하려면 `FinishedLaunching`에 코드를 저장 합니다. 다음 코드는 이미 존재 하지 않는 경우에만 **data. sqlite**라는 기존 데이터베이스를 복사 합니다.
 
 ```csharp
 // Copy the database across (if it doesn't exist)
