@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: a29cc650d9aa3976b6fd7aaaa82e233317684335
-ms.sourcegitcommit: 20c645f41620d5124da75943de1b690261d00660
+ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
+ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72426566"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526814"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>iOS 시뮬레이터 및 Android Emulator에서 로컬 웹 서비스에 연결
 
@@ -27,7 +27,7 @@ iOS 시뮬레이터 또는 Android Emulator에서 실행되는 모바일 애플�
 그러나 iOS 시뮬레이터 또는 Android Emulator에서 실행 중인 애플리케이션이 HTTPS를 통해 노출되는 로컬 웹 서비스를 사용하려면 추가 작업이 필요합니다. 이 시나리오에서 해당 프로세스는 다음과 같습니다.
 
 1. 머신에 자체 서명된 개발 인증서를 만듭니다. 자세한 내용은 [개발 인증서 만들기](#create-a-development-certificate)를 참조하세요.
-1. 디버그 빌드를 위해 관리형 `HttpClient` 네트워크 스택을 사용하도록 프로젝트를 구성합니다. 자세한 내용은 [프로젝트 구성](#configure-your-project)을 참조하세요.
+1. 디버그 빌드를 위해 적절한 `HttpClient` 네트워크 스택을 사용하도록 프로젝트를 구성합니다. 자세한 내용은 [프로젝트 구성](#configure-your-project)을 참조하세요.
 1. 로컬 머신의 주소를 지정합니다. 자세한 내용은 [로컬 머신 주소 지정](#specify-the-local-machine-address)을 참조하세요.
 1. 로컬 개발 인증서 보안 검사를 무시합니다. 자세한 내용은 [인증서 보안 검사 무시](#bypass-the-certificate-security-check)를 참조하세요.
 
@@ -66,7 +66,7 @@ iOS에서 실행되는 Xamarin 애플리케이션은 관리형 네트워크 스�
 
 ### <a name="android"></a>Android
 
-Android에서 실행되는 Xamarin 애플리케이션은 관리형 `HttpClientHandler` 네트워크 스택이나 네이티브 `AndroidClientHandler` 네트워크 스택을 사용할 수 있습니다. 기본적으로 새 Android 플랫폼 프로젝트는 TLS 1.2를 지원하려는 경우에는 `AndroidClientHandler` 네트워크 스택을 사용하고, 성능을 높이고 실행 파일 크기를 줄이려는 경우에는 네이티브 API를 사용합니다. Android 네트워크 스택에 대한 자세한 내용은 [Android용 HttpClient 스택 및 SSL/TLS 구현 선택기](~/android/app-fundamentals/http-stack.md)를 참조하세요.
+Android에서 실행되는 Xamarin 애플리케이션은 관리형 `HttpClient` 네트워크 스택이나 네이티브 `AndroidClientHandler` 네트워크 스택을 사용할 수 있습니다. 기본적으로 새 Android 플랫폼 프로젝트는 TLS 1.2를 지원하려는 경우에는 `AndroidClientHandler` 네트워크 스택을 사용하고, 성능을 높이고 실행 파일 크기를 줄이려는 경우에는 네이티브 API를 사용합니다. Android 네트워크 스택에 대한 자세한 내용은 [Android용 HttpClient 스택 및 SSL/TLS 구현 선택기](~/android/app-fundamentals/http-stack.md)를 참조하세요.
 
 ## <a name="specify-the-local-machine-address"></a>로컬 머신 주소 지정
 

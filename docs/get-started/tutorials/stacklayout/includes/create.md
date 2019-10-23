@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ea10a3cc4eca0708d1de1aee68bed74c960cbc2
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.openlocfilehash: 80688c0796a112bcb444a15cd96a6b176b8c16e0
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67560009"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72715241"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -15,7 +15,7 @@ ms.locfileid: "67560009"
     > [!IMPORTANT]
     > 이 자습서의 C# 및 XAML 코드 조각에서 솔루션의 이름이 **StackLayoutTutorial**이어야 합니다. 이 자습서의 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
-    생성된 .NET 표준 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](~/get-started/first-app/index.md)에서 [Xamarin.Forms 애플리케이션 분석](~/get-started/first-app/index.md)을 참조하세요.
+    생성된 .NET 표준 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](~/get-started/quickstarts/deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](~/get-started/quickstarts/deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
 1. **솔루션 탐색기**의 **StackLayoutTutorial** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -39,7 +39,7 @@ ms.locfileid: "67560009"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 StackLayout 자식 보기의 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
+    [![iOS 및 Android에서 StackLayout의 자식 보기 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
 
@@ -76,7 +76,7 @@ ms.locfileid: "67560009"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 StackLayout 자식 보기의 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
+    [![iOS 및 Android에서 StackLayout의 자식 보기 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
 

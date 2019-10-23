@@ -19,6 +19,12 @@ sections:
         style: cards
         className: cardsB
         items:
+          - href: 2019-10.md
+            html: '2019년 10월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.3 릴리스 및 기타 업데이트.'
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_article.svg'
+              href: 2019-10.md
+            title: 2019년 10월
           - href: 2019-08.md
             html: '2019년 8월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.2 릴리스, 사용자 인터페이스 업데이트 및 기타 업데이트.'
             image:

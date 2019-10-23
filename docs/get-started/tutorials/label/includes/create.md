@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ec74a049adaa72010bf0566691e4d1f066058d4a
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
+ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277345"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678728"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67277345"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Label`](xref:Xamarin.Forms.Label)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Label.Text`](xref:Xamarin.Forms.Button.Text) 속성은 표시할 텍스트를 지정하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 텍스트가 수평 가운데에 배치되도록 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Label`](xref:Xamarin.Forms.Label)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Label.Text`](xref:Xamarin.Forms.Button.Text) 속성은 표시할 텍스트를 지정하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 `Label`이(가) 수평 가운데에 배치되도록 지정합니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
