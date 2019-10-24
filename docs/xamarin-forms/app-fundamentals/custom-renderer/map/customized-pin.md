@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 94a537c88f28971bf7f2778f33a35e4c251afd38
-ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
+ms.openlocfilehash: 98def647c38f69ec4f942a06e2187841c4e04459
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72424852"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697162"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
 
@@ -35,7 +35,7 @@ _이 문서에서는 각 플랫폼에서 사용자 지정된 핀과 사용자 �
 이제 각 항목을 차례로 설명하여, 사용자 지정된 핀이 있는 네이티브 맵과 각 플랫폼에 있는 핀 데이터의 사용자 지정된 보기를 표시하는 `CustomMap` 랜더러를 구현합니다.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)는 사용 전에 초기화되고 구성되어야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map.md)를 참조하세요.
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)는 사용 전에 초기화되고 구성되어야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map/index.md)를 참조하세요.
 
 <a name="Creating_the_Custom_Map" />
 
@@ -654,7 +654,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [맵 컨트롤](~/xamarin-forms/user-interface/map.md)
+- [맵 컨트롤](~/xamarin-forms/user-interface/map/index.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [지도 API](~/android/platform/maps-and-location/maps/maps-api.md)
 - [사용자 지정된 Pin(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

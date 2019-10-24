@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ecc4686e9966de7a184730589c44a951e4daddb2
-ms.sourcegitcommit: 403e3ec789d075cf1ca23473190aeb6b87220d52
+ms.openlocfilehash: 1fe2611e26d357d910cc85800355b42d11e1104b
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72424868"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697177"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>맵의 원형 영역 강조 표시
 
@@ -33,7 +33,7 @@ Xamarin.Forms 애플리케이션에서 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨�
 1. 각 플랫폼의 맵에 대한 사용자 지정 렌더러를 만들어 맵을 [사용자 지정합니다](#Customizing_the_Map).
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)는 사용 전에 초기화되고 구성되어야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map.md)을 참조하세요.
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)는 사용 전에 초기화되고 구성되어야 합니다. 자세한 내용은 [`Maps Control`](~/xamarin-forms/user-interface/map/index.md)을 참조하세요.
 
 사용자 지정 렌더러를 사용하여 맵 사용자 지정에 대한 내용은 [맵 핀 사용자 지정](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)을 참조하세요.
 
