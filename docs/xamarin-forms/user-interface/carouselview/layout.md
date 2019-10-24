@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: 7aa0c5833682518b02fca9fe73a9f69b168e60eb
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.openlocfilehash: 051bbc1732dc1b074d27080f74621a57a80aaaa4
+ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696957"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749816"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.ios CarouselView 레이아웃
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 레이아웃을 제어 하는 다음 속성을 정의 합니다.
 
@@ -290,6 +290,6 @@ void OnImageTapped(object sender, EventArgs e)
 
 ## <a name="related-links"></a>관련 링크
 
-- [CarouselView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+- [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.ios CarouselView 스크롤](scrolling.md)

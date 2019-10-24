@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
-ms.openlocfilehash: 0df3b082d6a3a4ebd64627082b2ac56dd0836e81
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.openlocfilehash: 3a0fe7159e6af24d58e49dea4166d012605c9985
+ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696724"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749801"
 ---
 # <a name="xamarinforms-collectionview-grouping"></a>Xamarin.ios CollectionView 그룹화
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 자주 발생 하는 데이터 집합은 계속 해 서 스크롤 목록에 표시 될 때 어려울 수 있습니다. 이 시나리오에서 데이터를 그룹으로 구성 하면 데이터를 쉽게 탐색할 수 있으므로 사용자 환경을 개선할 수 있습니다.
 
@@ -249,5 +249,5 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
 
 ## <a name="related-links"></a>관련 링크
 
-- [CollectionView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+- [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

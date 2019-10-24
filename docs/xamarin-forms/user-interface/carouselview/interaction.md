@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: d020cf809369596076d67b68bdd6b3319e629f1e
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.openlocfilehash: fd85876b38c21c7ff1ea85d7a61c1449395d56f5
+ms.sourcegitcommit: e71474f91639bb43159b22f5d534325c3270ba93
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697820"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749796"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin Forms CarouselView 상호 작용
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 은 사용자 상호 작용을 제어 하는 다음 속성을 정의 합니다.
 
@@ -273,4 +273,4 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 ## <a name="related-links"></a>관련 링크
 
-- [CarouselView (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+- [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
