@@ -22,7 +22,7 @@ Xamarin.ios [`Frame`](xref:Xamarin.Forms.Frame) 클래스는 색, 그림자 및 
 
 다음 스크린샷에서는 iOS 및 Android의 `Frame` 컨트롤을 보여 줍니다.
 
-[![ "iOS 및 Android의 프레임 예제"](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "IOS 및 Android의 프레임 예제")
+[![iOS 및 Android의 프레임 예제](frame-images/frame-cropped.png)](frame-images/frame-full.png#lightbox "IOS 및 Android의 프레임 예제")
 
 @No__t_0 클래스는 다음 속성을 정의 합니다.
 
@@ -84,7 +84,7 @@ Frame frame = new Frame
 
 @No__t_0 개체를 `StackLayout` 개체와 같은 `Layout` 개체와 결합 하면 더 복잡 한 UI를 만들 수 있습니다. 다음 스크린샷은 `Frame` 개체를 사용 하 여 만든 예제 카드를 보여줍니다.
 
-["프레임을 사용 하 여 만든 카드의 스크린샷" ![](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "프레임을 사용 하 여 만든 카드의 스크린샷")
+[![프레임을 사용 하 여 만든 카드의 스크린샷](frame-images/frame-card-cropped.png)](frame-images/frame-full.png#lightbox "프레임을 사용 하 여 만든 카드의 스크린샷")
 
 다음 XAML은 `Frame` 클래스를 사용 하 여 카드를 만드는 방법을 보여 줍니다.
 
