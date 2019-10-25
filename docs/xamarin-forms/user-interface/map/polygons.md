@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/20/2019
-ms.openlocfilehash: b45a7af917e9147f519056ee5a9e5d06da51113a
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 42c00a060e0477aff4ea02f6213fa751b2adf4dd
+ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697664"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810486"
 ---
 # <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.ios 지도 다각형 및 다중선
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-["iOS 및 Android에서 Polygon 및 다중선 데모"를 ![ 합니다.](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
+["iOS 및 Android에서 Polygon 및 다중선 데모"를![합니다.](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
 
 `Polygon` 및 `Polyline` 요소를 사용 하면 지도의 특정 영역을 강조 표시할 수 있습니다. @No__t_0는 스트로크 및 채우기 색을 가질 수 있는 완전히 둘러싸인 도형입니다. @No__t_0는 영역을 완전히 묶지 않는 줄입니다.
 
@@ -40,9 +40,41 @@ ms.locfileid: "72697664"
 
 ## <a name="create-a-polygon"></a>다각형 만들기
 
-@No__t_0 개체를 인스턴스화하고 맵의 `MapElements` 컬렉션에 추가 하 여 맵에 추가할 수 있습니다.
+`Polygon` 개체를 인스턴스화하고 맵의 `MapElements` 컬렉션에 추가 하 여 맵에 추가할 수 있습니다. 이렇게 하면 다음과 같이 XAML로 수행할 수 있습니다.
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+     <maps:Map>
+         <maps:Map.MapElements>
+             <maps:Polygon StrokeColor="#FF9900"
+                           StrokeWidth="8"
+                           FillColor="#88FF9900">
+                 <maps:Polygon.Geopath>
+                     <maps:Position>
+                         <x:Arguments>
+                             <x:Double>47.6368678</x:Double>
+                             <x:Double>-122.137305</x:Double>
+                         </x:Arguments>
+                     </maps:Position>
+                     ...
+                 </maps:Polygon.Geopath>
+             </maps:Polygon>
+         </maps:Map.MapElements>
+     </maps:Map>
+</ContentPage>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map
+{
+  // ...
+};
+
 // instantiate a polygon
 Polygon polygon = new Polygon
 {
@@ -61,32 +93,10 @@ Polygon polygon = new Polygon
         new Position(47.6384943, -122.1361248),
         new Position(47.6372943, -122.1376912)
     }
-}
+};
 
 // add the polygon to the map's MapElements collection
 map.MapElements.Add(polygon);
-```
-
-@No__t_0를 XAML로 만들 수도 있습니다.
-
-```xaml
-<maps:Map x:Name="map">
-    <maps:Map.MapElements>
-        <maps:Polygon StrokeColor="#FF9900"
-                      StrokeWidth="8"
-                      FillColor="#88FF9900">
-            <maps:Polygon.Geopath>
-                <maps:Position>
-                    <x:Arguments>
-                        <x:Double>47.6368678</x:Double>
-                        <x:Double>-122.137305</x:Double>
-                    </x:Arguments>
-                </maps:Position>
-                ...
-            </maps:Polygon.Geopath>
-        </maps:Polygon>
-    </maps:Map.MapElements>
-</maps:Map>
 ```
 
 다각형의 윤곽선을 사용자 지정 하기 위해 `StrokeColor` 및 `StrokeWidth` 속성이 지정 됩니다. @No__t_0 속성 값은 `StrokeColor` 속성 값과 일치 하지만 투명 하 게 만들기 위해 지정 된 알파 값이 있으므로 셰이프를 통해 기본 지도를 볼 수 있습니다. @No__t_0 속성에는 다각형 지점의 지리적 좌표를 정의 하는 `Position` 개체의 목록이 포함 되어 있습니다. @No__t_0 개체는 `Map`의 `MapElements` 컬렉션에 추가 된 경우 맵에 렌더링 됩니다.
@@ -96,9 +106,37 @@ map.MapElements.Add(polygon);
 
 ## <a name="create-a-polyline"></a>다중선 만들기
 
-@No__t_0 개체를 인스턴스화하고 맵의 `MapElements` 컬렉션에 추가 하 여 맵에 추가할 수 있습니다.
+`Polyline` 개체를 인스턴스화하고 맵의 `MapElements` 컬렉션에 추가 하 여 맵에 추가할 수 있습니다. 이렇게 하면 다음과 같이 XAML로 수행할 수 있습니다.
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+     <maps:Map>
+         <maps:Map.MapElements>
+             <maps:Polyline StrokeColor="Blue"
+                            StrokeWidth="12">
+                 <maps:Polyline.Geopath>
+                     <maps:Position>
+                         <x:Arguments>
+                             <x:Double>47.6381401</x:Double>
+                             <x:Double>-122.1317367</x:Double>
+                         </x:Arguments>
+                     </maps:Position>
+                     ...
+                 </maps:Polyline.Geopath>
+             </maps:Polyline>
+         </maps:Map.MapElements>
+     </maps:Map>
+</ContentPage>
+```
 
 ```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map
+{
+  // ...
+};
 // instantiate a polyline
 Polyline polyline = new Polyline
 {
@@ -123,30 +161,8 @@ Polyline polyline = new Polyline
 map.MapElements.Add(polyline);
 ```
 
-@No__t_0를 XAML로 만들 수도 있습니다.
-
-```xaml
-<maps:Map x:Name="map">
-    <maps:Map.MapElements>
-        <maps:Polyline StrokeColor="Blue"
-                       StrokeWidth="12">
-            <maps:Polyline.Geopath>
-                <maps:Position>
-                    <x:Arguments>
-                        <x:Double>47.6381401</x:Double>
-                        <x:Double>-122.1317367</x:Double>
-                    </x:Arguments>
-                </maps:Position>
-                ...
-            </maps:Polyline.Geopath>
-        </maps:Polyline>
-    </maps:Map.MapElements>
-</maps:Map>
-```
-
 @No__t_0 및 `StrokeWidth` 속성을 지정 하 여 줄을 사용자 지정 합니다. @No__t_0 속성에는 다중선 점의 지리적 좌표를 정의 하는 `Position` 개체의 목록이 포함 되어 있습니다. @No__t_0 개체는 `Map`의 `MapElements` 컬렉션에 추가 된 경우 맵에 렌더링 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [샘플 맵 프로젝트](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Xamarin.ios 맵](~/xamarin-forms/user-interface/map/index.md)
+- [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
