@@ -7,13 +7,13 @@ ms.technology: xamarin-ios
 ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
-ms.date: 10/05/2018
-ms.openlocfilehash: 1b43598cc8df31d8a113adbfe90e368aab233334
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.date: 10/16/2019
+ms.openlocfilehash: f8193dfbb68634702fdb12e330970d4a83d8e601
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287360"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584322"
 ---
 # <a name="get-started-with-xamarinios"></a>Xamarin.iOS 시작
 
@@ -23,13 +23,16 @@ Xamarin.iOS를 사용하는 경우 최신 언어(C#)의 유연성과 간결함, 
 
 Xamarin.iOS를 빌드하려면 다음이 필요합니다.
 
+- 최신 버전의 Visual Studio
 - 최신 iOS SDK
 - 최신 Xcode 버전
-- macOS High Sierra(10.13) 이상
+- Xcode에 필요한 최소 버전의 macOS
+
+구체적인 버전 요구 사항은 [최신 Xamarin.iOS 릴리스 정보](/xamarin/ios/release-notes/)를 참조하세요.
 
 최신 버전의 Xcode는 [iOS 개발자 센터](https://developer.apple.com/devcenter/ios/index.action#downloads)(로그인 필요) 또는 Mac 앱 스토어를 통해 다운로드할 수 있습니다.
 
-![Mac App Store에서 Xcode 목록 페이지의 스크린샷](installation/images/xcode.png "Mac App Store의 Xcode")
+![Mac App Store의 Xcode 항목 페이지 스크린샷](installation/images/xcode.png "Mac App Store의 Xcode")
 
 ## <a name="getting-started-series"></a>시리즈 시작
 

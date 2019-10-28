@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: 70646999154297592137c6966626b318fb73897c
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771263"
 ---
 # <a name="introduction-to-xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿 소개
@@ -26,7 +26,7 @@ _Xamarin.Forms 컨트롤 템플릿은 런타임 시 애플리케이션 페이지
 
 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)은 페이지 또는 보기의 모양을 지정하고, 루트 레이아웃을 포함하며 레이아웃 내에서 템플릿을 구현하는 컨트롤을 포함합니다. 일반적으로 `ControlTemplate`은 [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)를 활용하여 페이지 또는 보기로 표시할 콘텐츠가 나타나는 위치를 표시합니다. `ControlTemplate`을 사용하는 페이지 또는 보기는 `ContentPresenter`에 의해 표시될 콘텐츠를 정의합니다. 다음 다이어그램은 파란색 직사각형으로 표시된 `ContentPresenter`를 비롯하여 여러 컨트롤이 포함된 페이지의 `ControlTemplate`을 보여 줍니다.
 
-![](introduction-images/control-template.png "페이지에 대한 컨트롤 템플릿")
+![](introduction-images/control-template.png "Control Template for a Page")
 
 [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate)은 해당 `ControlTemplate` 속성을 설정하여 다음 형식에 적용할 수 있습니다.
 

@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 78288680a1a522b2c6c413e1f8a2cec2a07835d6
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: a6eb3167fd0880984a74245c4653642ea3979354
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656975"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72678835"
 ---
 # <a name="right-to-left-localization"></a>오른쪽에서 왼쪽으로 쓰는 언어 지역화
 
@@ -32,7 +32,7 @@ _오른쪽에서 왼쪽으로 쓰는 언어 지역화는 Xamarin.Forms 애플리
 
 요소에서 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)로 설정하면 정렬은 오른쪽으로, 읽기 순서는 오른쪽에서 왼쪽으로, 컨트롤의 레이아웃은 오른쪽에서 왼쪽으로 설정됩니다.
 
-[![오른쪽에서 왼쪽 흐름 방향인 아랍어 TodoItemPage](rtl-images/TodoItemPage-Arabic.png "오른쪽에서 왼쪽 흐름 방향인 아랍어 TodoItemPage")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "오른쪽에서 왼쪽 흐름 방향인 아랍어 TodoItemPage")
+[![오른쪽에서 왼쪽 흐름 방향의 아랍어로 된 TodoItemPage](rtl-images/TodoItemPage-Arabic.png "오른쪽에서 왼쪽 흐름 방향의 아랍어로 된 TodoItemPage")](rtl-images/TodoItemPage-Arabic-Large.png#lightbox "오른쪽에서 왼쪽 흐름 방향의 아랍어로 된 TodoItemPage")
 
 > [!TIP]
 > 초기 레이아웃에서만 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 설정해야 합니다. 런타임에 이 값을 변경하면 성능에 영향을 주는 비용이 많이 드는 레이아웃 프로세스가 발생합니다.
@@ -72,7 +72,7 @@ this.FlowDirection = Device.FlowDirection;
 </array>
 ```
 
-![Info.plist 지원 언어](rtl-images/ios-locales.png "Info.plist 지원 언어")
+![Info.plist에서 지원하는 언어](rtl-images/ios-locales.png "Info.plist에서 지원하는 언어")
 
 자세한 내용은 [iOS의 지역화 기본 사항](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios)을 참조하세요.
 
@@ -145,6 +145,46 @@ using System.Resources;
 - [`Editor`](xref:Xamarin.Forms.Editor) 텍스트 맞춤이 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성이 아닌 디바이스 로캘에 의해 제어됩니다.
 - [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성이 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 자식에 상속되지 않습니다.
 - [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) 텍스트 맞춤이 [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성이 아닌 디바이스 로캘에 의해 제어됩니다.
+
+## <a name="force-right-to-left-layout"></a>오른쪽에서 왼쪽 레이아웃 강제 적용
+
+Xamarin.iOS 및 Xamarin.Android 애플리케이션은 각 플랫폼 프로젝트를 수정함으로써 디바이스 설정과 관계없이 항상 오른쪽에서 왼쪽 레이아웃이 사용되도록 강제할 수 있습니다.
+
+### <a name="ios"></a>iOS
+
+Xamarin.iOS 애플리케이션은 다음과 같이 **AppDelegate** 클래스를 수정함으로써 항상 오른쪽에서 왼쪽 레이아웃이 사용되도록 강제할 수 있습니다.
+
+1. `IntPtr_objc_msgSend` 함수를 `AppDelegate` 클래스의 첫 번째 줄로 선언합니다.
+
+   ```csharp
+   [System.Runtime.InteropServices.DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
+   internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
+   ```
+
+1. `FinshedLaunching` 메서드에서 반환하기 전에 먼저 `FinishedLaunching` 메서드에서 `IntPtr_objc_msgSend` 함수를 호출합니다.
+
+   ```csharp
+   bool result = base.FinishedLaunching(app, options);
+
+   ObjCRuntime.Selector selector = new ObjCRuntime.Selector("setSemanticContentAttribute:");
+   IntPtr_objc_msgSend(UIView.Appearance.Handle, selector.Handle, UISemanticContentAttribute.ForceRightToLeft);
+
+   return result;
+   ```
+
+이 방법은 항상 오른쪽에서 왼쪽 레이아웃이 필요한 애플리케이션에 유용하며, [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 설정해야 한다는 요구 사항을 제거합니다.
+
+`IntrPtr_objc_msgSend` 메서드에 대한 자세한 내용은 [Xamarin.iOS의 Objective-C 선택기](~/ios/internals/objective-c-selectors.md)를 참조하세요.
+
+### <a name="android"></a>Android
+
+Xamarin.Android 애플리케이션은 다음 줄을 포함하도록 **MainActivity** 클래스를 수정함으로써 항상 오른쪽에서 왼쪽 레이아웃이 사용되도록 강제할 수 있습니다.
+
+```csharp
+Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
+```
+
+이 방법은 항상 오른쪽에서 왼쪽 레이아웃이 필요한 애플리케이션에 유용하며, [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 속성을 설정해야 한다는 요구 사항을 제거합니다.
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Xamarin.University를 통한 오른쪽에서 왼쪽 쓰기 언어 지원
 

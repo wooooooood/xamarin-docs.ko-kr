@@ -6,13 +6,13 @@ ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
-ms.date: 10/05/2018
-ms.openlocfilehash: 8b73ec7e3429f3c4ddf53be6196772c51df888e1
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.date: 10/16/2019
+ms.openlocfilehash: ce37fa50440f6b35536f1225d7540baea182f9f5
+ms.sourcegitcommit: dad4dfcd194b63ec9e903363351b6d9e543d4888
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289646"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584300"
 ---
 # <a name="xamarinios-installation"></a>Xamarin.iOS 설치
 
@@ -20,13 +20,16 @@ ms.locfileid: "70289646"
 
 Xamarin.iOS를 빌드하려면 다음이 필요합니다.
 
+- 최신 버전의 Visual Studio
 - 최신 iOS SDK
 - 최신 Xcode 버전
-- macOS High Sierra(10.13) 이상
+- Xcode에 필요한 최소 버전의 macOS
+
+구체적인 버전 요구 사항은 [최신 Xamarin.iOS 릴리스 정보](/xamarin/ios/release-notes/)를 참조하세요.
 
 최신 버전의 Xcode는 [iOS 개발자 센터](https://developer.apple.com/devcenter/ios/index.action#downloads)(로그인 필요) 또는 Mac 앱 스토어를 통해 다운로드할 수 있습니다.
 
-![Mac App Store에서 Xcode 목록 페이지의 스크린샷](images/xcode.png "Mac App Store의 Xcode")
+![Mac App Store의 Xcode 항목 페이지 스크린샷](images/xcode.png "Mac App Store의 Xcode")
 
 ## <a name="mac-installation"></a>Mac 설치
 

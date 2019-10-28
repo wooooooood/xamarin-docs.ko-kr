@@ -6,13 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
-ms.openlocfilehash: ace1129397251c02c5ffb682344ff2308a24c62a
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 09/27/2019
+ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653362"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697138"
 ---
 # <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
 
@@ -35,7 +35,7 @@ Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 �
 - 대개 같은 페이지에 있는, 다른 `View` 파생 개체
 - 코드 파일의 개체
 
-[**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플에 포함된 것과 같은 데모 프로그램에서 두 `View` 파생 개체 간의 데이터 바인딩은 명확성과 간소함을 위해 표시되는 경우가 많습니다. 단, `View`와 다른 개체 간의 데이터 바인딩에 동일한 원칙이 적용될 수 있습니다. 애플리케이션이 MVVM(Model-View-ViewModel) 아키텍처를 사용하여 구축되는 경우, 기본 데이터가 있는 클래스를 ViewModel이라고 합니다.
+[**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) 샘플에 포함된 것과 같은 데모 프로그램에서 두 `View` 파생 개체 간의 데이터 바인딩은 명확성과 간소함을 위해 표시되는 경우가 많습니다. 단, `View`와 다른 개체 간의 데이터 바인딩에 동일한 원칙이 적용될 수 있습니다. 애플리케이션이 MVVM(Model-View-ViewModel) 아키텍처를 사용하여 빌드된 경우, 기본 데이터가 있는 클래스를 viewmodel이라고 합니다.
 
 데이터 바인딩은 다음과 같은 문서 시리즈를 통해 살펴봅니다.
 
@@ -58,6 +58,10 @@ Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 �
 ## <a name="binding-value-convertersconvertersmd"></a>[바인딩 값 변환기](converters.md)
 
 바인딩 값 변환기를 사용하여 데이터 바인딩 내에서 값을 변경합니다.
+
+## <a name="relative-bindingsrelative-bindingsmd"></a>[상대 바인딩](relative-bindings.md)
+
+상대 바인딩을 사용하여 바인딩 대상의 위치에 상대적으로 바인딩 소스를 설정합니다.
 
 ## <a name="binding-fallbacksbinding-fallbacksmd"></a>[바인딩 대체](binding-fallbacks.md)
 

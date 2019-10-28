@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: 9e3acf1c5b101f021b0071947e91f0c9fc3dafcb
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 09/25/2019
+ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739260"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72695930"
 ---
 # <a name="xamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
@@ -20,11 +20,11 @@ ms.locfileid: "68739260"
 
 Xamarin.Forms Shell에는 `SearchHandler` 클래스에서 제공되는 통합 검색 기능이 포함됩니다. `Shell.SearchHandler` 연결된 속성을 서브클래스 `SearchHandler` 개체로 설정하여 검색 기능을 페이지에 추가할 수 있습니다. 이를 통해 검색 상자가 페이지 위쪽에 추가됩니다.
 
-[![iOS 및 Android에 있는 셸 SearchHandler의 스크린샷](search-images/searchhandler.png "셸 SearchHandler")](search-images/searchhandler-large.png#lightbox "셸 SearchHandler")
+[![iOS 및 Android의 셸 SearchHandler 스크린샷](search-images/searchhandler.png "셸 SearchHandler")](search-images/searchhandler-large.png#lightbox "셸 SearchHandler")
 
 검색 상자에 쿼리가 입력되면 `Query` 속성이 업데이트되고 업데이트될 때마다 `OnQueryChanged` 메서드가 실행됩니다. 데이터를 사용하여 검색 제안 영역을 채우도록 이 메서드를 재정의할 수 있습니다.
 
-[![iOS 및 Android에서 셸 SearchHandler에 있는 검색 결과의 스크린샷](search-images/search-suggestions.png "셸 SearchHandler 검색 결과")](search-images/search-suggestions-large.png#lightbox "셸 SearchHandler 검색 결과")
+[![iOS 및 Android의 셸 SearchHandler 검색 결과 스크린샷](search-images/search-suggestions.png "셸 SearchHandler 검색 결과")](search-images/search-suggestions-large.png#lightbox "셸 SearchHandler 검색 결과")
 
 그런 다음 검색 제안 영역에서 결과가 선택되면 다음 `OnItemSelected` 메서드가 실행됩니다. 이 메서드는 세부 정보 페이지 탐색 등의 방법으로 응답이 적절히 이루어지도록 재정의할 수 있습니다.
 
@@ -99,15 +99,15 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 `ShowsResults` 속성은 `true`로 설정되므로 사용자가 검색 쿼리를 입력할 때 검색 제안이 표시됩니다.
 
-[![iOS 및 Android에서 셸 SearchHandler에 있는 검색 결과의 스크린샷](search-images/search-results.png "셸 SearchHandler 검색 결과")](search-images/search-results-large.png#lightbox "셸 SearchHandler 검색 결과")
+[![iOS 및 Android의 셸 SearchHandler 검색 결과 스크린샷](search-images/search-results.png "셸 SearchHandler 검색 결과")](search-images/search-results-large.png#lightbox "셸 SearchHandler 검색 결과")
 
 검색 쿼리가 변경되면 검색 제안 영역이 업데이트됩니다.
 
-[![iOS 및 Android에서 셸 SearchHandler에 있는 검색 결과의 스크린샷](search-images/search-results-change.png "셸 SearchHandler 검색 결과")](search-images/search-results-change-large.png#lightbox "셸 SearchHandler 검색 결과")
+[![iOS 및 Android의 셸 SearchHandler 검색 결과 스크린샷](search-images/search-results-change.png "셸 SearchHandler 검색 결과")](search-images/search-results-change-large.png#lightbox "셸 SearchHandler 검색 결과")
 
 검색 결과가 선택되면 `MonkeyDetailPage`로 이동되고 선택된 원숭이에 대한 데이터가 표시됩니다.
 
-[![iOS 및 Android에 있는 원숭이 세부 정보의 스크린샷](search-images/detailpage.png "원숭이 세부 정보")](search-images/detailpage-large.png#lightbox "원숭이 세부 정보")
+[![iOS 및 Android의 상세한 원숭이 스크린샷](search-images/detailpage.png "원숭이 세부 정보")](search-images/detailpage-large.png#lightbox "원숭이 세부 정보")
 
 ## <a name="define-search-results-item-appearance"></a>검색 결과 항목 모양 정의
 
@@ -172,7 +172,7 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 다음 스크린샷은 제안 영역에서 각 항목을 템플릿화한 결과를 보여 줍니다.
 
-[![iOS 및 Android에서 셸 SearchHandler에 있는 템플릿 기반 검색 결과의 스크린샷](search-images/search-results-template.png "셸 SearchHandler 템플릿 기반 검색 결과")](search-images/search-results-template-large.png#lightbox "셸 SearchHandler 템플릿 기반 검색 결과")
+[![iOS 및 Android의 템플릿화된 셸 SearchHandler 검색 결과 스크린샷](search-images/search-results-template.png "템플릿화된 셸 SearchHandler 검색 결과")](search-images/search-results-template-large.png#lightbox "템플릿화된 셸 SearchHandler 검색 결과")
 
 데이터 템플릿에 대한 자세한 내용은 [Xamarin.Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)을 참조하세요.
 
@@ -211,12 +211,14 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 
 - `Color` 형식의 `BackgroundColor`는 검색 상자 텍스트의 배경색입니다.
 - `Color` 형식의 `CancelButtonColor`는 취소 단추의 색입니다.
+- `double` 형식의 `CharacterSpacing`은 `SearchHandler` 텍스트를 구성하는 문자 사이의 간격입니다.
 - `FontAttributes` 형식의 `FontAttributes`는 검색 상자 텍스트가 기울임꼴인지 볼드인지를 나타냅니다.
 - `string` 형식의 `FontFamily`는 검색 상자 텍스트에 사용되는 글꼴 패밀리입니다.
 - `double` 형식의 `FontSize`는 검색 상자 텍스트의 크기입니다.
 - `TextAlignment` 형식의 `HorizontalTextAlignment`는 검색 상자 텍스트의 가로 맞춤입니다.
 - `Color` 형식의 `PlaceholderColor`는 자리 표시자 검색 상자 텍스트의 색입니다.
 - `Color` 형식의 `TextColor`는 검색 상자 텍스트의 색입니다.
+- `TextAlignment` 형식의 `VerticalTextAlignment`는 검색 상자 텍스트의 세로 맞춤입니다.
 
 ## <a name="searchhandler-keyboard"></a>SearchHandler 키보드
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 10bba38de1dc8908ad853d5e4ca2bb845b4ac8c6
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/21/2019
 ms.locfileid: "70771273"
 ---
 # <a name="introduction-to-xamarinforms-data-templates"></a>Xamarin.Forms 데이터 템플릿 소개
@@ -90,7 +90,7 @@ public WithoutDataTemplatePageCS()
 
 [`ListView`](xref:Xamarin.Forms.ListView)는 컬렉션의 개체를 표시할 때 `ToString`을 호출합니다. `Person.ToString` 재정의가 없기 때문에 `ToString`은 다음 스크린샷에 표시된 것처럼 각 개체의 형식 이름을 반환합니다.
 
-![](introduction-images/no-data-template.png "데이터 템플릿 없는 ListView")
+![](introduction-images/no-data-template.png "ListView without a Data Template")
 
 `Person` 개체는 다음 코드 예제처럼 의미 있는 데이터를 표시하도록 `ToString` 메서드를 재정의할 수 있습니다.
 
@@ -107,7 +107,7 @@ public class Person
 
 이렇게 하면 다음 스크린샷처럼 [`ListView`](xref:Xamarin.Forms.ListView)는 컬렉션의 각 개체에 대한 `Person.Name` 속성 값을 표시합니다.
 
-![](introduction-images/override-tostring.png "데이터 템플릿을 사용하는 ListView")
+![](introduction-images/override-tostring.png "ListView with a Data Template")
 
 `Person.ToString` 재정의는 `Name`, `Age` 및 `Location` 속성으로 구성되는 형식이 지정된 문자열을 반환할 수 있습니다. 그러나 이 방법은 데이터의 각 항목이 표시되는 모양을 제한적으로 제어할 수 있습니다. 유연성을 높이려면 데이터의 모양을 정의하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)을 만들어야 합니다.
 
