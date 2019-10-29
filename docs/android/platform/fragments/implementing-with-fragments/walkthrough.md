@@ -4,17 +4,17 @@ ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: ED368FA9-A34E-DC39-D535-5C34C32B9761
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 4471f5ec199ef52a2dcb68ab85cc9a1209eb4802
-ms.sourcegitcommit: 9a2a21974d35353c3765eb683ef2fd7161c1d94a
+ms.openlocfilehash: 043ad02f9ca9148910364ac82917551ee58d72ba
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329983"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027398"
 ---
-# <a name="fragments-walkthrough-ndash-phone"></a>조각 연습 &ndash; 전화
+# <a name="fragments-walkthrough-ndash-phone"></a>조각 연습 &ndash; 휴대폰
 
 이는 Android 장치를 세로 방향으로 대상으로 하는 Xamarin Android 앱을 만드는 연습의 첫 번째 부분입니다. 이 연습에서는 Xamarin.ios에서 조각을 만드는 방법 및 샘플에 추가 하는 방법에 대해 설명 합니다.
 
@@ -22,21 +22,21 @@ ms.locfileid: "68329983"
 
 이 앱에 대해 생성 되는 클래스는 다음과 같습니다.
 
-1. `PlayQuoteFragment`&nbsp; 이 조각에는 play by William 셰익스피어의 견적이 표시 됩니다. 에서 `PlayQuoteActivity`호스트 됩니다.
-1. `Shakespeare`&nbsp; 이 클래스는 두 개의 하드 코딩 된 배열을 속성으로 보유 합니다.
-1. `TitlesFragment`&nbsp; 이 조각은 William 셰익스피어에서 작성 한 재생 제목의 목록을 표시 합니다. 에서 `MainActivity`호스트 됩니다.
-1. `PlayQuoteActivity`는 사용자가 `PlayQuoteActivity` 재생을 선택 하는 것에 대 한 `TitlesFragment`응답으로를 시작 합니다. &nbsp; `TitlesFragment`
+1. 이 조각이 &nbsp; `PlayQuoteFragment` William 셰익스피어의 견적이 표시 됩니다. `PlayQuoteActivity`에서 호스트 됩니다.
+1. 이 클래스 &nbsp; `Shakespeare`는 두 개의 하드 코딩 된 배열을 속성으로 보유 합니다.
+1. 이 조각 &nbsp; `TitlesFragment` William 셰익스피어에서 작성 한 재생 제목의 목록을 표시 합니다. `MainActivity`에서 호스트 됩니다.
+1. &nbsp; `TitlesFragment` `PlayQuoteActivity`는 사용자가 `TitlesFragment`에서 재생을 선택 하는 것에 대 한 응답으로 `PlayQuoteActivity`를 시작 합니다.
 
 ## <a name="1-create-the-android-project"></a>1. Android 프로젝트 만들기
 
 **FragmentSample**라는 새 Xamarin Android 프로젝트를 만듭니다.
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![새 Xamarin Android 프로젝트 만들기](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
+[새 Xamarin Android 프로젝트를![만듭니다.](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![새 Xamarin Android 프로젝트 만들기](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
+[새 Xamarin Android 프로젝트를 만드는![](./walkthrough-images/01-newproject.m742-sml.png)](./walkthrough-images/01-newproject.m742.png#lightbox)
 
 이 연습에서 **최신 개발** 을 선택 하는 것이 좋습니다.
 
@@ -46,12 +46,12 @@ ms.locfileid: "68329983"
 
 ## <a name="2-add-the-data"></a>2. 데이터 추가
 
-이 응용 프로그램의 데이터는 클래스 이름의 `Shakespeare`속성인 두 개의 하드 코드 된 문자열 배열에 저장 됩니다.
+이 응용 프로그램의 데이터는 클래스 이름의 속성인 두 개의 하드 코드 된 문자열 배열에 저장 됩니다 `Shakespeare`.
 
-* `Shakespeare.Titles`&nbsp; 이 배열에는 William 셰익스피어의 재생 목록이 포함 됩니다. 의 데이터 원본 `TitlesFragment`입니다.
-* `Shakespeare.Dialogue`이 배열에는에 `Shakespeare.Titles`포함 된 재생 중 하나에서 견적 목록이 포함 됩니다. &nbsp; 의 데이터 원본 `PlayQuoteFragment`입니다.
+* 이 배열을 &nbsp; `Shakespeare.Titles` William 셰익스피어의 재생 목록이 포함 됩니다. `TitlesFragment`에 대 한 데이터 원본입니다.
+* 이 배열 &nbsp; `Shakespeare.Dialogue` `Shakespeare.Titles`에 포함 된 재생 중 하나에서 견적 목록을 포함 합니다. `PlayQuoteFragment`에 대 한 데이터 원본입니다.
 
-FragmentSample 프로젝트에 C# 새 클래스를  추가 하 고 이름을 **Shakespeare.cs**로 만듭니다. 이 파일 내에서 다음 내용으로 C# 라는 `Shakespeare` 새 클래스를 만듭니다.
+FragmentSample 프로젝트에 C# 새 클래스를 추가 하 고 이름을 **Shakespeare.cs**로 만듭니다. 이 파일 내에서 다음 내용이 포함 C# 된`Shakespeare`이라는 새 클래스를 만듭니다.
 
 ```csharp
 class Shakespeare
@@ -82,15 +82,15 @@ class Shakespeare
 
 ## <a name="3-create-the-playquotefragment"></a>3. PlayQuoteFragment 만들기
 
-는 `PlayQuoteFragment` 응용 프로그램에서 이전에 사용자가 선택한 셰익스피어 play에 대 한 견적을 표시 하는 android 조각입니다 .이 조각은 android 레이아웃 파일을 사용 하지 않으며 대신 동적으로 사용자 인터페이스를 만듭니다. 프로젝트에 라는 `Fragment` `PlayQuoteFragment` 새 클래스를 추가 합니다.
+`PlayQuoteFragment`는 응용 프로그램에서 이전에 사용자가 선택한 셰익스피어 play에 대 한 견적을 표시 하는 Android 조각입니다 .이 조각은 Android 레이아웃 파일을 사용 하지 않습니다. 대신 사용자 인터페이스를 동적으로 만듭니다. `PlayQuoteFragment` 라는 새 `Fragment` 클래스를 프로젝트에 추가 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![새 C# 클래스 추가](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
+[새 C# 클래스를 추가![](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/02-addclass.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![새 C# 클래스 추가](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
+[새 C# 클래스를 추가![](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/02-addclass.m742.png#lightbox)
 
 -----
 
@@ -129,28 +129,28 @@ public class PlayQuoteFragment : Fragment
 }
 ```
 
-이는 조각을 인스턴스화하는 팩터리 메서드를 제공 하는 Android 앱의 일반적인 패턴입니다. 이렇게 하면 적절 한 작동을 위해 필요한 매개 변수를 사용 하 여 조각이 생성 됩니다. 이 연습에서는 견적을 선택할 때마다 응용 프로그램에서 `PlayQuoteFragment.NewInstance` 메서드를 사용 하 여 새 조각을 만들어야 합니다. 이 `NewInstance` 메서드는 단일 매개 변수 &ndash; 를 사용 하 여 표시할 따옴표의 인덱스를 만듭니다.
+이는 조각을 인스턴스화하는 팩터리 메서드를 제공 하는 Android 앱의 일반적인 패턴입니다. 이렇게 하면 적절 한 작동을 위해 필요한 매개 변수를 사용 하 여 조각이 생성 됩니다. 이 연습에서는 응용 프로그램에서 `PlayQuoteFragment.NewInstance` 메서드를 사용 하 여 견적을 선택할 때마다 새 조각을 만들어야 합니다. `NewInstance` 메서드는 표시할 따옴표의 인덱스 &ndash; 단일 매개 변수를 사용 합니다.
 
-메서드 `OnCreateView` 는 화면에서 조각을 렌더링할 때 Android에서 호출 됩니다. 조각 인 Android `View` 개체를 반환 합니다. 이 조각은 레이아웃 파일을 사용 하 여 뷰를 만들지 않습니다. 대신, 따옴표를 포함 하는 **TextView** 를 인스턴스화하여 뷰를 프로그래밍 방식으로 만들고 **ScrollView**에 해당 위젯을 표시 합니다.
+`OnCreateView` 메서드는 화면에서 조각을 렌더링할 때 Android에서 호출 됩니다. 이는 조각 인 Android `View` 개체를 반환 합니다. 이 조각은 레이아웃 파일을 사용 하 여 뷰를 만들지 않습니다. 대신, 따옴표를 포함 하는 **TextView** 를 인스턴스화하여 뷰를 프로그래밍 방식으로 만들고 **ScrollView**에 해당 위젯을 표시 합니다.
 
 > [!NOTE]
 > 조각 하위 클래스에는 매개 변수가 없는 공용 기본 생성자가 있어야 합니다.
 
 ## <a name="4-create-the-playquoteactivity"></a>4. PlayQuoteActivity 만들기
 
-조각은 활동 내에서 호스팅되어야 하므로이 앱에는를 `PlayQuoteFragment`호스팅하는 활동이 필요 합니다. 작업은 런타임에 조각을 해당 레이아웃에 동적으로 추가 합니다. 응용 프로그램에 새 작업을 추가 하 고 이름을 `PlayQuoteActivity`로 추가 합니다.
+조각은 활동 내에서 호스팅되어야 하므로이 앱에는 `PlayQuoteFragment`를 호스팅하는 활동이 필요 합니다. 작업은 런타임에 조각을 해당 레이아웃에 동적으로 추가 합니다. 응용 프로그램에 새 활동을 추가 하 고 이름을 `PlayQuoteActivity`로 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![프로젝트에 Android 작업 추가](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
+[Android 작업을 프로젝트에 추가![](./walkthrough-images/03-addactivity.w157-sml.png)](./walkthrough-images/03-addactivity.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![프로젝트에 Android 작업 추가](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
+[Android 작업을 프로젝트에 추가![](./walkthrough-images/03-addactivity.m742-sml.png)](./walkthrough-images/03-addactivity.m742.png#lightbox)
 
 -----
 
-에서 `PlayQuoteActivity`코드를 편집 합니다.
+`PlayQuoteActivity`에서 코드를 편집 합니다.
 
 ```csharp
 [Activity(Label = "PlayQuoteActivity")]
@@ -170,21 +170,21 @@ public class PlayQuoteActivity : Activity
 }
 ```
 
-가 만들어지면 새 `PlayQuoteFragment` 를 인스턴스화하고의 `FragmentTransaction`컨텍스트에서 루트 뷰에 해당 조각을 로드 합니다. `PlayQuoteActivity` 이 활동은 사용자 인터페이스에 대 한 Android 레이아웃 파일을 로드 하지 않습니다. 대신 새 `PlayQuoteFragment` 이 응용 프로그램의 루트 뷰에 추가 됩니다. 리소스 식별자 `Android.Resource.Id.Content` 는 특정 식별자를 알지 못해도 활동의 루트 뷰를 참조 하는 데 사용 됩니다.
+`PlayQuoteActivity` 만들어질 때 새 `PlayQuoteFragment` 인스턴스화하고 `FragmentTransaction`의 컨텍스트에서 해당 조각을 루트 뷰에 로드 합니다. 이 활동은 사용자 인터페이스에 대 한 Android 레이아웃 파일을 로드 하지 않습니다. 대신 새 `PlayQuoteFragment` 응용 프로그램의 루트 뷰에 추가 됩니다. 리소스 식별자 `Android.Resource.Id.Content`는 특정 식별자를 몰라도 활동의 루트 뷰를 참조 하는 데 사용 됩니다.
 
 ## <a name="5-create-titlesfragment"></a>5. TitlesFragment 만들기
 
-는 `TitlesFragment` 조각에 `ListFragment` 를`ListView` 표시 하는 논리를 캡슐화 하는 이라는 특수화 된 조각을 하위 클래스로 만듭니다. `OnListItemClick` `ListAdapter` `ListView` 는에서 해당 내용을 표시 하는 데 사용 하는 속성을 `ListView` 노출하고,가에의해표시되는행의클릭에응답할수있도록하는라는이벤트처리기를노출합니다.`ListFragment`
+`TitlesFragment`는 조각에 `ListView`를 표시 하는 논리를 캡슐화 하는 `ListFragment` 라는 특수 한 조각을 서브 클래스로 합니다. `ListFragment`은 `ListAdapter` 속성 (해당 내용을 표시 하는 `ListView` 데 사용 됨) 및 `OnListItemClick` 이라는 이벤트 처리기를 노출 하 여 `ListView`에서 표시 하는 행의 클릭에 응답할 수 있도록 합니다.
 
 시작 하려면 프로젝트에 새 조각을 추가 하 고 이름을 **TitlesFragment**로 표시 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![프로젝트에 Android 조각 추가](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
+[Android 조각을 프로젝트에 추가![](./walkthrough-images/04-addfragment.w157-sml.png)](./walkthrough-images/04-addfragment.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![프로젝트에 Android 조각 추가](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
+[Android 조각을 프로젝트에 추가![](./walkthrough-images/04-addfragment.m742-sml.png)](./walkthrough-images/04-addfragment.m742.png#lightbox)
 
 -----
 
@@ -231,11 +231,11 @@ public class TitlesFragment : ListFragment
 }
 ```
 
-활동을 만들 때 Android는 조각의 메서드를 `OnActivityCreated` 호출 합니다 .이는의 `ListView` 목록 어댑터가 생성 되는 위치입니다.  메서드 `ShowQuoteFromPlay` 는`PlayQuoteActivity` 의 인스턴스를 시작 하 여 선택한 재생에 대 한 견적을 표시 합니다.
+활동을 만들면 Android는 조각의 `OnActivityCreated` 메서드를 호출 합니다. `ListView`에 대 한 목록 어댑터가 생성 되는 위치입니다.  `ShowQuoteFromPlay` 메서드는 `PlayQuoteActivity` 인스턴스를 시작 하 여 선택한 재생에 대 한 견적을 표시 합니다.
 
 ## <a name="display-titlesfragment-in-mainactivity"></a>MainActivity에 TitlesFragment 표시
 
-최종 단계는 내 `TitlesFragment` `MainActivity`에를 표시 하는 것입니다. 활동은 조각을 동적으로 로드 하지 않습니다. 대신 요소를 `fragment` 사용 하 여 활동의 레이아웃 파일에 조각이 선언 되어 정적으로 로드 됩니다. 로드할 조각은 `android:name` 특성을 조각 클래스 (형식의 네임 스페이스 포함)로 설정 하 여 식별 합니다. 예를 들어를 사용 `TitlesFragment` `android:name` 하려면를로 `FragmentSample.TitlesFragment`설정 합니다.
+마지막 단계는 `MainActivity`내에 `TitlesFragment`를 표시 하는 것입니다. 활동은 조각을 동적으로 로드 하지 않습니다. 대신 `fragment` 요소를 사용 하 여 활동의 레이아웃 파일에서 조각을 선언 하 여 정적으로 로드 됩니다. 로드할 조각은 `android:name` 특성을 조각의 클래스 (형식의 네임 스페이스 포함)로 설정 하 여 식별 합니다. 예를 들어 `TitlesFragment`을 사용 하려면 `android:name` `FragmentSample.TitlesFragment`로 설정 됩니다.
 
 **Activity_main**레이아웃 파일을 편집 하 여 기존 XML을 다음으로 바꿉니다.
 
@@ -256,7 +256,7 @@ public class TitlesFragment : ListFragment
 ```
 
 > [!NOTE]
-> 특성은에 대 한 `android:name`올바른 대체입니다. `class` 기본으로 사용 되는 폼에 대 한 공식적인 지침은 없으며와 같은 `class` `android:name`의미로 사용 되는 코드 베이스의 많은 예가 있습니다.
+> `class` 특성은 `android:name`에 대 한 올바른 대체입니다. 선호 되는 폼에 대 한 공식적인 지침은 없으며, `android:name`와 상호 교환 `class`를 사용 하는 코드 베이스의 많은 예가 있습니다.
 
 MainActivity에는 코드 변경이 필요 하지 않습니다. 해당 클래스의 코드는이 코드 조각과 매우 유사 해야 합니다.
 
@@ -276,6 +276,6 @@ public class MainActivity : Activity
 
 이제 코드가 완료 되 면 장치에서 앱을 실행 하 여 작동 하는지 확인 합니다.
 
-[![휴대폰에서 실행 되는 응용 프로그램의 스크린샷](./walkthrough-images/05-app-screenshots-sml.png)](./walkthrough-images/05-app-screenshots.png#lightbox)
+[휴대폰에서 실행 되는 응용 프로그램의 스크린샷![합니다.](./walkthrough-images/05-app-screenshots-sml.png)](./walkthrough-images/05-app-screenshots.png#lightbox)
 
 [이 연습의 2 부](./walkthrough-landscape.md) 에서는 가로 모드로 실행 되는 장치에 대해이 응용 프로그램을 optimtize 합니다.

@@ -3,15 +3,15 @@ title: 아키텍처
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 06817c563f12425e5c339cb8f2560f37f9ace0b5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fe0903eca5c907fc104728ca0ad7c676a45a5180
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756685"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027920"
 ---
 # <a name="architecture"></a>아키텍처
 
@@ -22,7 +22,7 @@ Xamarin Android 응용 프로그램은 Mono 실행 환경에서 실행 됩니다
 
 Android에서 오디오, 그래픽, OpenGL 및 전화 통신과 같은 대부분의 시스템 기능은 네이티브 응용 프로그램에 직접 사용할 수 없으며, [java](xref:Java.Lang). * 네임 스페이스 또는 [android](xref:Android). * 네임 스페이스. 중 하나에 있는 Android Runtime java api를 통해서만 노출 됩니다. 아키텍처는 대략적으로 다음과 같습니다.
 
-[![커널 및 기타 .NET/Java + 바인딩 위의 Mono 및 아트 다이어그램](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
+[커널 및 기타 .NET/Java + 바인딩 위에 있는 Mono 및 아트의![다이어그램](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Xamarin Android 개발자는에 의해 노출 되는 Java Api에 대 한 연결을 제공 하는 .NET Api를 호출 하 여 운영 체제의 다양 한 기능에 액세스할 수 있습니다 (낮은 수준 액세스의 경우). Android 런타임입니다.
 
@@ -56,7 +56,7 @@ Xamarin Android 응용 프로그램에는 android에서 관리 코드를 호출�
 
 관리 되는 호출 가능 래퍼에서 node.js [()](xref:Java.Lang.Object.Dispose) 를 호출 하 여 전역 참조를 명시적으로 해제할 수 있습니다. 그러면 Java 인스턴스와 관리 되는 인스턴스 간의 매핑이 제거 되 고 Java 인스턴스를 수집할 수 있습니다. 관리 코드에서 Java 인스턴스를 다시 액세스 하는 경우 관리 되는 호출 가능 래퍼가 새로 생성 됩니다.
 
-인스턴스가 스레드 간에 실수로 공유 될 수 있는 경우 관리 되는 호출 가능 래퍼를 삭제할 때 주의가 필요 합니다. 인스턴스를 삭제 하면 다른 스레드의 참조에 영향을 줍니다. 최대 안전을 `Dispose()` *위해 항상 새* 인스턴스를 할당 하 고 캐시 된 인스턴스가 아닌 새 인스턴스를 할당 하는 인스턴스 `new` *를 통해 할당* 된 인스턴스만 실수로 인스턴스를 공유할 수 있습니다. 임계값.
+인스턴스가 스레드 간에 실수로 공유 될 수 있는 경우 관리 되는 호출 가능 래퍼를 삭제할 때 주의가 필요 합니다. 인스턴스를 삭제 하면 다른 스레드의 참조에 영향을 줍니다. 최대 보안을 위해 항상 새 인스턴스를 할당 하 고 캐시 된 인스턴스가 아닌 새 인스턴스를 할당 하는 메서드 *또는* `new`를 통해 할당 된 인스턴스의 `Dispose()`만 스레드 간에 실수로 인스턴스가 공유 되도록 할 *수 있습니다.*
 
 ## <a name="managed-callable-wrapper-subclasses"></a>관리 되는 호출 가능 래퍼 서브 클래스
 
@@ -92,11 +92,11 @@ Java에서 acw ( [Android 호출 가능 래퍼](~/android/platform/java-integrat
 
 4. *TextView* 생성자는 *Apidemo () getDefaultMovementMethod ()* 를 호출 합니다.
 
-5. *monodroid () apidemo* () *를 호출 하* 는 *TextView ()* [를호출하는getDefaultMovementMethod()를호출합니다.&lt; TextView&gt; (handle, JniHandleOwnership DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
+5. *monodroid () apidemo* 를 호출 하는 *TextView (@no_)* 를 호출 하는 *logtextbox. n_getDefaultMovementMethod (* )를 호출 합니다. [ _t_4_ TextView&gt; (handle, JniHandleOwnership DoNotTransfer)](xref:Java.Lang.Object.GetObject*) .
 
-6. *TextView&gt;()는 핸들에 해당 하는 인스턴스가 이미 있는지 확인 합니다.&lt;* C# 있는 경우 반환 됩니다. 이 시나리오에서는 *개체. GetObject&lt;&gt;t ()* 가 하나를 만들어야 합니다.
+6. *TextView&gt;()&lt;* 은 C# *핸들* 에 대해 해당 인스턴스가 이미 있는지 확인 합니다. 있는 경우 반환 됩니다. 이 시나리오에서는 *개체가 없으므로 GetObject&lt;t&gt;()* 에서 만들어야 합니다.
 
-7. *개체. GetObject&lt;T&gt;()* 는 *logtextbox (IntPtr, JniHandleOwneship)* 생성자를 찾고 호출 하 고, *핸들과* 만든 인스턴스 간에 매핑을 만들고, 만든 인스턴스를 반환 합니다.
+7. *&lt;t&gt;()* 는 *Logtextbox (IntPtr, JniHandleOwneship)* 생성자를 찾고 호출 하 고, *핸들과* 만든 인스턴스 간의 매핑을 만들고, 만든 인스턴스를 반환 합니다.
 
 8. *TextView () n_GetDefaultMovementMethod ()* 는 *Logtextbox. DefaultMovementMethod* 속성 getter를 호출 합니다.
 
@@ -165,8 +165,8 @@ Java 개체가 더 이상 사용 되지 않거나 하위 클래스에 인스턴�
 
 ## <a name="application-startup"></a>응용 프로그램 시작
 
-활동, 서비스 등을 시작 하면 Android는 먼저 활동/서비스를 호스트 하는 프로세스가 이미 실행 중인지 확인 합니다. 이러한 프로세스가 없으면 새 프로세스가 생성 되 고 [androidmanifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) 을 읽고 [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) 특성에 지정 된 형식이 로드 되 고 인스턴스화됩니다. 그런 다음 [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) 특성 값으로 지정 된 모든 형식이 인스턴스화되고 해당 [contentprovider% 28)](xref:Android.Content.ContentProvider.AttachInfo*) 메서드가 호출 됩니다. Xamarin Android는 mono를 추가 하 여이에 후크 합니다 *.* 빌드 프로세스 중에 MonoRuntimeProvider *contentprovider* To AndroidManifest. *Mono입니다. AttachInfo ()* 메서드는 Mono 런타임을 프로세스로 로드 하는 작업을 담당 합니다. MonoRuntimeProvider.
+활동, 서비스 등을 시작 하면 Android는 먼저 활동/서비스를 호스트 하는 프로세스가 이미 실행 중인지 확인 합니다. 이러한 프로세스가 없으면 새 프로세스가 생성 되 고 [Androidmanifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) 을 읽고 [/manifest/application/@android:name](https://developer.android.com/guide/topics/manifest/application-element.html#nm) 특성에 지정 된 형식이 로드 되 고 인스턴스화됩니다. 그런 다음 [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm) 특성 값으로 지정 된 모든 형식이 인스턴스화되고 해당 [contentprovider %28)](xref:Android.Content.ContentProvider.AttachInfo*) 메서드가 호출 됩니다. Xamarin Android는 mono를 추가 하 여이에 후크 합니다 *.* 빌드 프로세스 중에 MonoRuntimeProvider *contentprovider* To AndroidManifest. *Mono입니다. AttachInfo ()* 메서드는 Mono 런타임을 프로세스로 로드 하는 작업을 담당 합니다. MonoRuntimeProvider.
 이 시점 전에 Mono를 사용 하려는 시도는 실패 합니다. ( *참고*: 이러한 이유로 Mono를 초기화 하기 전에 [응용 프로그램 인스턴스가](xref:Android.App.Application) 만들어지기 때문에 JniHandleOwnership 하위 클래스에서 [(IntPtr,) 생성자](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103)를 제공 해야 하는 형식입니다.)
 
-프로세스 초기화가 완료 되 면 `AndroidManifest.xml` 을 (를) 실행 하 여 작업/서비스/등의 클래스 이름을 찾습니다. 예를 들어 [ /manifest/application/activity/@android:name 특성](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) 은 로드할 활동의 이름을 결정 하는 데 사용 됩니다. 활동의 경우이 유형은 [android. Activity](xref:Android.App.Activity)를 상속 해야 합니다.
+프로세스 초기화가 완료 되 면 `AndroidManifest.xml`를 확인 하 여 시작할 작업/서비스/등의 클래스 이름을 찾습니다. 예를 들어 [/manifest/application/activity/@android:name 특성](https://developer.android.com/guide/topics/manifest/activity-element.html#nm) 은 로드할 활동의 이름을 결정 하는 데 사용 됩니다. 활동의 경우이 유형은 [android. Activity](xref:Android.App.Activity)를 상속 해야 합니다.
 지정 된 형식이 클래스를 통해 로드 됩니다 [. forName ()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String)) (형식이 Java 형식 이어야 하며, 따라서 Android 호출 가능 래퍼). Android 호출 가능 래퍼 인스턴스를 만들면 해당 C# 형식의 인스턴스 생성이 트리거됩니다. 그러면 Android에서 [onCreate (번들)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) 를 호출 하 여 해당 [onCreate (번들)](xref:Android.App.Activity.OnCreate*) 이 호출 되 고 경합이 발생 합니다.

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin 개발자를 위해 watchOS 3에서 사
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: b167ddca86148818c534b7a9b0e338f8a4406b15
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5ff315270646389d67b505eef04c1aa11d0029c1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767763"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028260"
 ---
 # <a name="introduction-to-watchos-3"></a>watchOS 3 소개
 
@@ -102,7 +102,7 @@ watchOS 3에는 이전에 사용할 수 없었던 기존 Apple 프레임 워크�
 
 ## <a name="proactive-suggestions"></a>자동 제안
 
-watchOS 3을 사용 하면 앱에서 지정 된 컨텍스트 내에서 사용자에 게 정보를 사전에 제공할 수 있습니다. 이 기능을 지원 하기 위해 [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) 에는 나중 `MapItem` 에 다른 앱에서 사용할 수 있도록 앱에서 위치 정보를 제공할 수 있도록 하는 속성이 포함 되어 있습니다.
+watchOS 3을 사용 하면 앱에서 지정 된 컨텍스트 내에서 사용자에 게 정보를 사전에 제공할 수 있습니다. 이 기능을 지원 하기 위해 [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) 에는 나중에 다른 앱에서 사용할 수 있도록 앱에서 위치 정보를 제공할 수 있도록 하는 `MapItem` 속성이 포함 되어 있습니다.
 
 자세히 알아보려면 [사전 권장 사항 소개 가이드를](~/ios/watchos/platform/proactive-suggestions.md) 참조 하세요.
 
@@ -112,7 +112,7 @@ watchOS 3을 사용 하면 앱에서 지정 된 컨텍스트 내에서 사용자
 
 Apple은 watchOS 3의 보안과 개인 정보 보호에 대 한 몇 가지 향상 된 기능을 통해 개발자가 앱의 보안을 개선 하 고 최종 사용자의 개인 정보를 확인 하는 데 도움이 됩니다.
 
-따라서 watchOS 3 이상에서 실행 되는 앱은 해당 `Info.plist` 파일에 하나 이상의 개인 정보 키를 입력 하 여 특정 기능 또는 사용자 정보에 액세스할 수 있도록 정적으로 선언 해야 합니다.
+따라서 watchOS 3 이상에서 실행 되는 앱은 사용자에 게 액세스 권한을 얻으려고 하는 이유를 설명 하는 개인 정보를 하나 이상 해당 `Info.plist` 파일에 입력 하 여 특정 기능 또는 사용자 정보에 액세스 하는 의도를 정적으로 선언 해야 합니다.
 
 WatchOS 3은 이러한 변경 내용을 iOS 10과 공유 하므로 iOS 10 [보안 및 개인 정보 향상](~/ios/app-fundamentals/security-privacy.md) 가이드를 참조 하 여 자세한 내용을 확인 하세요.
 
@@ -138,7 +138,7 @@ WatchOS 3에 도입 된 사용자 알림 프레임 워크는 Apple Watch에 대 
 
 ## <a name="watch-connectivity-framework-enhancements"></a>연결 프레임 워크의 향상 된 기능 보기
 
-[WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) 클래스의 new `HasContentPending`속성은 세션이 처리 해야 하는 배경에 데이터를 수신 했음을 나타냅니다. 및 속성 `RemainingComplicationUserInfoTransfers` 은 iOS 앱이 watchOS에 대 한 복잡 한 업데이트를 업데이트할 수 있는 남은 시간을 반환 합니다.
+[WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) 클래스의 new `HasContentPending`속성은 세션이 처리 해야 하는 배경에 데이터를 수신 했음을 나타냅니다. `RemainingComplicationUserInfoTransfers` 속성은 iOS 앱이 watchOS의 복잡 한 업데이트를 업데이트할 수 있는 남은 시간을 반환 합니다.
 
 자세히 알아보려면 [백그라운드 작업](~/ios/watchos/platform/background-tasks.md) 가이드를 참조 하세요.
 
@@ -149,8 +149,8 @@ WatchOS 3에 도입 된 사용자 알림 프레임 워크는 Apple Watch에 대 
 watchOS 3에는 다음과 같은 WatchKit 프레임 워크에 대 한 몇 가지 향상 된 기능이 포함 되어 있습니다.
 
 - 앱은 새 [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) 클래스를 사용 하 여 Digital Crown 상태를 가져올 수 있으며, 사용자가 [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) 클래스를 사용 하 여 ccs (crown를 회전 하면 업데이트를 받을 수 있습니다.
-- 이제 [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) 클래스에 앱의 `ApplicationState` 런타임 상태를 추적 하는 데 사용할 수 있는 메서드 및 [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) 상수가 포함 됩니다. `WKExtension`또한에서는 백그라운드 작업을 예약 하는 데 사용할 수 있는 두 가지 새로운 메서드를 제공 합니다.
-- 이제 [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) 에는 응용 프로그램 `ApplicationWillEnterForeground`의 `ApplicationDidEnterBackground` 상태 변경 내용을 모니터링 하 고 백그라운드 작업 업데이트를 처리 하는 새로운 및 `HandleBackgroundTasks` 메서드가 포함 됩니다.
+- 이제 [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) 클래스에 앱의 런타임 상태를 추적 하는 데 사용할 수 있는 `ApplicationState` 메서드 및 [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) 상수가 포함 됩니다. 또한 `WKExtension`에서는 백그라운드 작업을 예약 하는 데 사용할 수 있는 두 가지 새로운 메서드를 제공 합니다.
+- 이제 [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) 에는 새로운 `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` 및 `HandleBackgroundTasks` 메서드가 포함 되어 앱의 상태 변경을 모니터링 하 고 백그라운드 작업 업데이트를 처리 합니다.
 - Watch 앱에 다음과 같은 유형의 제스처 인식을 제공 하기 위해 새 [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) 클래스가 추가 되었습니다. [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) 및 [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer)입니다.
 - 새 [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) 클래스는 모든 HomeKit 연결 된 IP 카메라에 대 한 인터페이스를 제공 합니다.
 - 새 [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) 클래스를 사용 하면 앱에서 사용자가 탭 할 때 실행 중인 동영상으로 교체 되는 영화 "포스터"를 표시할 수 있습니다.
@@ -164,7 +164,7 @@ watchOS 3에는 다음과 같은 WatchKit 프레임 워크에 대 한 몇 가지
 
 ## <a name="workout-app-enhancements"></a>운동 앱 고급 기능
 
-WatchOS 3의 새로운 기능으로, 진행 중인 관련 앱은 Apple Watch의 배경에서 실행할 수 있습니다. 이 기능을 사용 하도록 설정 하 고 HealthKit 데이터에 대 한 액세스 권한을 얻으려면 앱은 `WKBackgroundModes` 값 `workout-processing`을 사용 `Info.plist` 하 여 파일에 키를 포함 해야 합니다.
+WatchOS 3의 새로운 기능으로, 진행 중인 관련 앱은 Apple Watch의 배경에서 실행할 수 있습니다. 이 기능을 사용 하도록 설정 하 고 HealthKit 데이터에 대 한 액세스 권한을 얻으려면 앱은 `workout-processing`값을 사용 하 여 `Info.plist` 파일에 `WKBackgroundModes` 키를 포함 해야 합니다.
 
 또한 개발자는 쌍을 이루는 iPhone의 iOS 앱 버전에서 watchOS 체력 단련 앱을 시작할 수 있습니다.
 
@@ -184,7 +184,7 @@ Apple은 위에 나열 된 주요 프레임 워크 변경 및 추가 사항 외�
 
 WatchOS 3에서 다음 Api는 더 이상 사용 되지 않습니다.
 
-- Uikit 클래스는 `UILocalNotification` 더 이상 사용 되지 않으며 사용자 알림 프레임 워크로 바꾸어야 합니다.
+- UIKit의 `UILocalNotification` 클래스는 더 이상 사용 되지 않으며 사용자 알림 프레임 워크로 바꾸어야 합니다.
 
 결함 및 변경 사항의 전체 목록은 Apple의 [watchOS 2.2 To watchOS 3.0 API 차이점 설명서를](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) 참조 하세요.
 

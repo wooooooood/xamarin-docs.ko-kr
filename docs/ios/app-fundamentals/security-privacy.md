@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS의 보안과 개인 정보 보호 기능에
 ms.prod: xamarin
 ms.assetid: 718C8721-C359-4650-878A-D68E159A3F53
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 7847148551c20dbcf49bcc263bdc50716a6ef14e
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: cdc59c4eb3863435482acf5eb0dcd1368beea693
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70283167"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009657"
 ---
 # <a name="ios-security-and-privacy-features"></a>iOS 보안 및 개인 정보 기능
 
@@ -51,9 +51,9 @@ IOS 10 이상에서 실행 되는 앱은 info.plist 파일에 하나 이상의 �
 - **개인 정보-상태 업데이트 사용 설명** (`NSHealthUpdateUsageDescription`)-개발자가 앱이 사용자의 상태 데이터를 편집 하려는 이유를 설명할 수 있습니다. 자세한 내용은 Apple의 [HKHealthStore 클래스 참조](https://developer.apple.com/reference/healthkit/hkhealthstore)를 참조 하세요.
 - **HomeKit 사용 설명** (`NSHomeKitUsageDescription`)-개발자가 앱이 사용자의 HomeKit 구성 데이터에 액세스 하려는 이유를 설명할 수 있습니다.
 - **개인 정보-위치 항상 사용 설명** (`NSLocationAlwaysUsageDescription`)-개발자가 앱에서 항상 사용자의 위치에 액세스할 수 있는 이유를 설명할 수 있습니다.
-- Mapi **개인 정보-위치 사용 설명** (`NSLocationUsageDescription`)-개발자가 앱이 사용자 위치에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. 대신 `NSLocationAlwaysUsageDescription` 또는 `NSLocationWhenInUseUsageDescription`를 사용 해야 합니다.*
+- Mapi **개인 정보-위치 사용 설명** (`NSLocationUsageDescription`)-개발자가 앱이 사용자 위치에 액세스 하려는 이유를 설명할 수 있습니다. *참고: 이 키는 iOS 8에서 더 이상 사용 되지 않습니다. 대신 `NSLocationAlwaysUsageDescription` 또는 `NSLocationWhenInUseUsageDescription`를 사용 해야 합니다.*
 - **개인 정보-위치 사용 시 사용 설명** (`NSLocationWhenInUseUsageDescription`)-개발자가 앱이 실행 되는 동안 사용자의 위치에 액세스 하려는 이유를 설명할 수 있습니다.
-- Mapi **개인 정보-미디어 라이브러리 사용 설명** -개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다. *참고:이 키는 iOS 8에서 더 이상 사용 되지 않습니다. 대신 `NSAppleMusicUsageDescription`를 사용 해야 합니다.*
+- Mapi **개인 정보-미디어 라이브러리 사용 설명** -개발자가 앱이 사용자의 미디어 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다. *참고: 이 키는 iOS 8에서 더 이상 사용 되지 않습니다. 대신 `NSAppleMusicUsageDescription`를 사용 해야 합니다.*
 - **개인 정보-마이크 사용 설명** (`NSMicrophoneUsageDescription`)-개발자가 앱에서 장치 마이크에 액세스 하려는 이유를 설명할 수 있습니다.
 - **개인 정보-동작 사용 설명** (`NSMotionUsageDescription`)-개발자는 앱이 장치의가 속도계에 액세스 하려는 이유를 설명할 수 있습니다.
 - **개인 정보-사진 라이브러리 사용 설명** (`NSPhotoLibraryUsageDescription`)-개발자가 앱이 사용자의 사진 라이브러리에 액세스 하려는 이유를 설명할 수 있습니다.

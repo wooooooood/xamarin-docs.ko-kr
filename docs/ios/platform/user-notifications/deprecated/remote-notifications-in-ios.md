@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 9 및 이전 버전에서 푸시 알림을 
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 31c3c629686d6c7be03b95d7bfe0740599228bbd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 468d0e16a3bd5745a243b2d7c09e642e3aeffd1d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769406"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031360"
 ---
 # <a name="push-notifications-in-ios"></a>IOS의 푸시 알림
 
@@ -22,11 +22,11 @@ ms.locfileid: "70769406"
 푸시 알림은 간단 하 게 유지 되 고 모바일 응용 프로그램에 업데이트를 위해 서버 응용 프로그램에 알려야 하는 충분 한 데이터만 포함 해야 합니다. 예를 들어 새 전자 메일이 도착할 때 서버 응용 프로그램은 새 전자 메일이 도착 했음을 모바일 응용 프로그램에 알려 줍니다. 알림은 새 전자 메일을 포함 하지 않습니다. 그러면 모바일 응용 프로그램이 적절 한 경우 서버에서 새 전자 메일을 검색 합니다.
 
 IOS의 푸시 알림 중심에는 *APNS (Apple Push Notification Gateway Service)* 가 있습니다. Apple에서 제공 하는 서비스로, 응용 프로그램 서버에서 iOS 장치로 알림을 라우팅하는 역할을 담당 합니다.
-다음 이미지는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다. ![](remote-notifications-in-ios-images/image4.png "이 이미지는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다.")
+다음 이미지는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다.![](remote-notifications-in-ios-images/image4.png "이 이미지는 iOS에 대 한 푸시 알림 토폴로지를 보여 줍니다.")
 
 원격 알림 자체는 [IOS 개발자 설명서](https://developer.apple.com/devcenter/ios/index.action)의 [로컬 및 푸시 알림 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) 의 [알림 페이로드](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) 섹션에 지정 된 형식 및 프로토콜을 준수 하는 JSON 형식 문자열입니다.
 
-Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을 유지 관리 합니다. 샌드박스 환경은 개발 단계 중에 테스트를 위한 것 이며 TCP 포트 2195 `gateway.sandbox.push.apple.com` 에서 확인할 수 있습니다. 프로덕션 환경은 배포 된 응용 프로그램에서 사용 되며 TCP 포트 2195 `gateway.push.apple.com` 에서 찾을 수 있습니다.
+Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을 유지 관리 합니다. 샌드박스 환경은 개발 단계 중에 테스트를 위한 것 이며 TCP 포트 2195의 `gateway.sandbox.push.apple.com`에서 찾을 수 있습니다. 프로덕션 환경은 배포 된 응용 프로그램에서 사용 되 고 `gateway.push.apple.com` TCP 포트 2195에서 찾을 수 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -42,37 +42,37 @@ Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을
 
 1. 인증서를 만들려면 다음 스크린샷에 표시 된 것 처럼 Apple 웹 사이트의 iOS 프로 비전 포털로 이동 합니다 (왼쪽의 앱 Id 메뉴 항목 확인).
 
-    [![](remote-notifications-in-ios-images/image5new.png "Apple 웹 사이트의 iOS 프로 비전 포털")](remote-notifications-in-ios-images/image5new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image5new.png "The iOS Provisioning Portal on Apples website")](remote-notifications-in-ios-images/image5new.png#lightbox)
 
 2. 그런 다음 앱 ID의 섹션으로 이동 하 고 다음 스크린샷에 표시 된 것 처럼 새 앱 ID를 만듭니다.
 
-    [![](remote-notifications-in-ios-images/image6new.png "앱 Id 섹션으로 이동 하 여 새 앱 ID를 만듭니다.")](remote-notifications-in-ios-images/image6new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image6new.png "Navigate to the App IDs section and create a new app ID")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3. 이 **+** 단추를 클릭 하면 다음 스크린샷에 표시 된 것 처럼 앱 ID에 대 한 설명 및 번들 식별자를 입력할 수 있습니다.
+3. **+** 단추를 클릭 하면 다음 스크린샷에 표시 된 것 처럼 앱 ID에 대 한 설명 및 번들 식별자를 입력할 수 있습니다.
 
-    [![](remote-notifications-in-ios-images/image7new.png "앱 ID에 대 한 설명 및 번들 식별자를 입력 합니다.")](remote-notifications-in-ios-images/image7new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image7new.png "Enter the description and a Bundle Identifier for the app ID")](remote-notifications-in-ios-images/image7new.png#lightbox)
 
-4. **명시적 앱 ID** 를 선택 하 고 번들 식별자가으로 끝나지 `*` 않았는지 확인 합니다. 이렇게 하면 여러 응용 프로그램에 적합 한 식별자가 생성 되 고 단일 응용 프로그램에 대 한 푸시 알림 인증서가 필요 합니다.
+4. **명시적 앱 ID** 를 선택 하 고 번들 식별자가 `*`로 끝나지 않는지 확인 합니다. 이렇게 하면 여러 응용 프로그램에 적합 한 식별자가 생성 되 고 단일 응용 프로그램에 대 한 푸시 알림 인증서가 필요 합니다.
 
 5. App Services에서 **푸시 알림**을 선택 합니다.
 
-    [![](remote-notifications-in-ios-images/image8new.png "푸시 알림 선택")](remote-notifications-in-ios-images/image8new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image8new.png "Select Push Notifications")](remote-notifications-in-ios-images/image8new.png#lightbox)
 
 6. **제출을** 눌러 새 앱 ID의 등록을 확인 합니다.
 
-    [![](remote-notifications-in-ios-images/image9new.png "새 앱 ID 등록 확인")](remote-notifications-in-ios-images/image9new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image9new.png "Confirm registration of the new App ID")](remote-notifications-in-ios-images/image9new.png#lightbox)
 
-7. 다음으로, 앱 ID에 대 한 인증서를 만들어야 합니다. 왼쪽 탐색에서 **인증서 모두 >** 로 이동 하 고 다음 스크린샷에 표시 된 `+` 것 처럼 단추를 선택 합니다.
+7. 다음으로, 앱 ID에 대 한 인증서를 만들어야 합니다. 왼쪽 탐색에서 **인증서 모두 >** 로 이동 하 고 다음 스크린샷에 표시 된 것 처럼 `+` 단추를 선택 합니다.
 
-    [![](remote-notifications-in-ios-images/image10new.png "앱 ID에 대 한 인증서 만들기")](remote-notifications-in-ios-images/image8.png#lightbox)
+    [![](remote-notifications-in-ios-images/image10new.png "Create the certificate for the app ID")](remote-notifications-in-ios-images/image8.png#lightbox)
 
 8. 개발 또는 프로덕션 인증서를 사용할지 여부를 선택 합니다.
 
-    [![](remote-notifications-in-ios-images/image11new.png "개발 또는 프로덕션 인증서 선택")](remote-notifications-in-ios-images/image11new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image11new.png "Select a Development or Production certificate")](remote-notifications-in-ios-images/image11new.png#lightbox)
 
 9. 그런 다음 방금 만든 새 앱 ID를 선택 합니다.
 
-    [![](remote-notifications-in-ios-images/image12new.png "지금 만든 새 앱 ID를 선택 합니다.")](remote-notifications-in-ios-images/image12new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image12new.png "Select the new App ID just created")](remote-notifications-in-ios-images/image12new.png#lightbox)
 
 10. 그러면 Mac에서 키 **집합 액세스** 응용 프로그램을 사용 하 여 *인증서 서명 요청* 을 만드는 과정을 안내 하는 지침이 표시 됩니다.
 
@@ -81,10 +81,10 @@ Apple은 *Sandbox* 와 *프로덕션* 환경 이라는 두 가지 APNS 환경을
 12. 개발 프로 비전 프로필을 만들려면 프로 **비전 프로필** 섹션으로 이동 하 고 단계에 따라 방금 만든 앱 Id를 사용 합니다.
 
 13. 프로 비전 프로필을 만들었으면 **Xcode Organizer** 를 열고 새로 고칩니다. 만든 프로 비전 프로필이 표시 되지 않으면 iOS 프로 비전 포털에서 프로필을 다운로드 하 고 수동으로 가져와야 할 수 있습니다. 다음 스크린샷은 프로 비전 프로필이 추가 된 이끌이의 예를 보여 줍니다.  
-    [![](remote-notifications-in-ios-images/image13new.png "이 스크린샷은 프로 비전 프로필이 추가 된 이끌이의 예를 보여 줍니다.")](remote-notifications-in-ios-images/image13new.png#lightbox)
+    [![](remote-notifications-in-ios-images/image13new.png "This screen shot shows an example of the Organizer with the provision profile added")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
 14. 이 시점에서 새로 만든 프로 비전 프로필을 사용 하도록 Xamarin.ios 프로젝트를 구성 해야 합니다. 다음 스크린샷에 표시 된 것 처럼 **IOS 번들 서명** 탭의 **프로젝트 옵션** 대화 상자에서이 작업을 수행할 수 있습니다.  
-    [![](remote-notifications-in-ios-images/image11.png "새로 만든 프로 비전 프로필을 사용 하도록 Xamarin.ios 프로젝트를 구성 합니다.")](remote-notifications-in-ios-images/image11.png#lightbox)
+    [![](remote-notifications-in-ios-images/image11.png "Configure the Xamarin.iOS project to use this newly created provisioning profile")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 이 시점에서 응용 프로그램은 푸시 알림과 함께 작동 하도록 구성 됩니다. 그러나 인증서에는 여전히 몇 가지 단계가 필요 합니다. 이 인증서는 PKCS12 (개인 정보 교환) 인증서가 필요한 PushSharp와 호환 되지 않는 DER 형식입니다. PushSharp에서 사용할 수 있도록 인증서를 변환 하려면 다음 최종 단계를 수행 합니다.
 
@@ -101,9 +101,9 @@ IOS 응용 프로그램이 원격 알림을 받을 수 있으려면 먼저 APNS�
 
 이론적으로 장치 토큰은 iOS 응용 프로그램이 APNS를 사용 하 여 자체적으로 등록 될 때마다 변경 될 수 있지만 실제로는 이런 경우가 발생 하지 않습니다. 최적화로 응용 프로그램은 최신 장치 토큰을 캐시 하 고 변경 되는 경우에만 응용 프로그램 서버를 업데이트할 수 있습니다. 다음 다이어그램에서는 장치 토큰을 등록 하 고 가져오는 과정을 보여 줍니다.
 
- ![](remote-notifications-in-ios-images/image12.png "이 다이어그램에서는 장치 토큰을 등록 하 고 가져오는 과정을 보여 줍니다.")
+ ![](remote-notifications-in-ios-images/image12.png "This diagram illustrates the process of registration and obtaining a device token")
 
-APNS를 사용 하 여 등록은 `FinishedLaunching` 현재 `UIApplication` 개체에 대해를 호출 `RegisterForRemoteNotificationTypes` 하 여 응용 프로그램 대리자 클래스의 메서드에서 처리 됩니다. IOS 응용 프로그램이 APNS에 등록 되 면 수신 하려는 원격 알림 유형도 지정 해야 합니다. 이러한 원격 알림 유형은 열거형 `UIRemoteNotificationType`에서 선언 됩니다. 다음 코드 조각은 iOS 응용 프로그램이 원격 경고 및 배지 알림을 받도록 등록할 수 있는 방법의 예입니다.
+APNS를 사용 하 여 등록은 현재 `UIApplication` 개체에서 `RegisterForRemoteNotificationTypes`를 호출 하 여 응용 프로그램 대리자 클래스의 `FinishedLaunching` 메서드에서 처리 됩니다. IOS 응용 프로그램이 APNS에 등록 되 면 수신 하려는 원격 알림 유형도 지정 해야 합니다. 이러한 원격 알림 유형은 열거형 `UIRemoteNotificationType`선언 됩니다. 다음 코드 조각은 iOS 응용 프로그램이 원격 경고 및 배지 알림을 받도록 등록할 수 있는 방법의 예입니다.
 
 ```csharp
 if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
@@ -119,7 +119,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
 }
 ```
 
-APNS 등록 요청은 백그라운드에서 발생 합니다. 응답이 수신 되 면 iOS는 `RegisteredForRemoteNotifications` `AppDelegate` 클래스의 메서드를 호출 하 고 등록 된 장치 토큰을 전달 합니다. 토큰은 `NSData` 개체에 포함 됩니다. 다음 코드 조각에서는 APNS에서 제공한 장치 토큰을 검색 하는 방법을 보여 줍니다.
+APNS 등록 요청은 백그라운드에서 발생 합니다. 응답이 수신 되 면 iOS는 `AppDelegate` 클래스에서 `RegisteredForRemoteNotifications` 메서드를 호출 하 고 등록 된 장치 토큰을 전달 합니다. 토큰은 `NSData` 개체에 포함 됩니다. 다음 코드 조각에서는 APNS에서 제공한 장치 토큰을 검색 하는 방법을 보여 줍니다.
 
 ```csharp
 public override void RegisteredForRemoteNotifications (
@@ -145,7 +145,7 @@ UIApplication application, NSData deviceToken)
 }
 ```
 
-일부 이유로 등록이 실패 하는 경우 (예: 장치가 인터넷에 연결 되지 않은 경우) iOS는 응용 프로그램 대리자 `FailedToRegisterForRemoteNotifications` 클래스에서를 호출 합니다. 다음 코드 조각에서는 등록에 실패 했다는 알림을 사용자에 게 표시 하는 방법을 보여 줍니다.
+일부 이유로 등록이 실패 하는 경우 (예: 장치가 인터넷에 연결 되지 않은 경우) iOS는 응용 프로그램 대리자 클래스에서 `FailedToRegisterForRemoteNotifications`를 호출 합니다. 다음 코드 조각에서는 등록에 실패 했다는 알림을 사용자에 게 표시 하는 방법을 보여 줍니다.
 
 ```csharp
 public override void FailedToRegisterForRemoteNotifications (UIApplication application , NSError error)
@@ -178,5 +178,5 @@ public override void FailedToRegisterForRemoteNotifications (UIApplication appli
 
 - [알림-로컬 및 원격 알림 시연 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
 - [개발자를 위한 로컬 및 푸시 알림](https://developer.apple.com/notifications/)
-- [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UIRemoteNotificationType](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIRemoteNotificationType)
+- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
+- [UIRemoteNotificationType](https://docs.microsoft.com/dotnet/api/uikit.UIRemoteNotificationType)
