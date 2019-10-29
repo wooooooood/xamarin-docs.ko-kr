@@ -3,15 +3,15 @@ title: Xamarin을 사용한 연속 통합 소개
 description: 이 문서에서는 Xamarin과의 연속 통합에 대해 설명 합니다. 버전 제어와 다양 한 연속 통합 환경에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/19/2017
-ms.openlocfilehash: d335a107d1520db3c76ee602d38adcb129f122b0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2862f05f2d183c9345d2b92268ddf2101cc2492e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293101"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029810"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Xamarin을 사용한 연속 통합 소개
 
@@ -32,13 +32,13 @@ CI (연속 통합)는 일반적으로 개발자가 프로젝트의 공유 코드
 
 다음 다이어그램은이 프로세스를 보여 줍니다.
 
-[![](intro-to-ci-images/intro01-small.png "이 다이어그램은이 프로세스를 보여 줍니다.")](intro-to-ci-images/intro01.png#lightbox)
+[![](intro-to-ci-images/intro01-small.png "This diagram illustrates this process")](intro-to-ci-images/intro01.png#lightbox)
 
 Mobile apps는 연속 통합에 대 한 고유한 문제를 소개 합니다. 앱은 실제 장치 에서만 사용할 수 있는 GPS 또는 카메라와 같은 센서를 요구할 수 있습니다. 또한 시뮬레이터 또는 에뮬레이터는 하드웨어의 근사값 이며 문제를 숨기 거 나 숨길 수 있습니다. 결과적으로 실제 하드웨어에서 모바일 앱을 테스트 하 여 고객에 게는 진정한 준비가 되었다는 것을 확신 하는 것이 필요 합니다.
 
 [App Center 테스트](https://docs.microsoft.com/appcenter/test-cloud) 는 수백 대의 물리적 장치에서 앱을 직접 테스트 하 여이 특정 문제를 해결 합니다. 개발자는 강력한 UI 테스트를 허용 하는 자동화 된 승인 테스트를 작성 합니다. 이러한 테스트를 App Center 업로드 하면 CI 서버는 다음 다이어그램에 표시 된 것 처럼 CI 프로세스의 일부로 자동으로 실행할 수 있습니다.
 
-[![](intro-to-ci-images/intro02-small.png "이러한 테스트가 App Center으로 업로드 되 면이 다이어그램에 표시 된 대로 ci 서버는 CI 프로세스의 일부로 자동으로 실행할 수 있습니다.")](intro-to-ci-images/intro02.png#lightbox)
+[![](intro-to-ci-images/intro02-small.png "Once these tests are uploaded to App Center, the CI server can run them automatically as part of a CI process as shown in this diagram")](intro-to-ci-images/intro02.png#lightbox)
 
 ## <a name="components-of-continuous-integration"></a>연속 통합 구성 요소
 
@@ -65,15 +65,15 @@ Visual Studio, Azure DevOps 및 Team Foundation Server의 모든 ALM (응용 프
 
 #### <a name="git"></a>Git
 
-[Git](http://git-scm.com) 은 원래 Linux 커널의 소스 코드를 관리 하기 위해 개발 된 인기 있는 오픈 소스 버전 제어 솔루션입니다. 모든 규모의 소프트웨어 프로젝트에서 널리 사용 되는 매우 빠르고 유연한 시스템입니다. 인터넷에 연결 되지 않은 단일 개발자에서 전 세계에 걸친 규모가 많은 팀에 쉽게 확장할 수 있습니다. 또한 Git를 사용 하면 분기를 매우 쉽게 만들 수 있으며, 따라서 최소한의 위험으로 개발의 병렬 스트림을 권장 합니다.
+[Git](https://git-scm.com) 은 원래 Linux 커널의 소스 코드를 관리 하기 위해 개발 된 인기 있는 오픈 소스 버전 제어 솔루션입니다. 모든 규모의 소프트웨어 프로젝트에서 널리 사용 되는 매우 빠르고 유연한 시스템입니다. 인터넷에 연결 되지 않은 단일 개발자에서 전 세계에 걸친 규모가 많은 팀에 쉽게 확장할 수 있습니다. 또한 Git를 사용 하면 분기를 매우 쉽게 만들 수 있으며, 따라서 최소한의 위험으로 개발의 병렬 스트림을 권장 합니다.
 
-Git은 웹 브라우저나 Linux, Mac OSX 및 Windows에서 실행 되는 [GUI 클라이언트](http://git-scm.com/downloads/guis) 를 통해 완전히 작동할 수 있습니다. 공용 리포지토리에 무료로 제공 됩니다. 개인 리포지토리에는 [유료 계획이](https://github.com/pricing)필요 합니다.
+Git은 웹 브라우저나 Linux, Mac OSX 및 Windows에서 실행 되는 [GUI 클라이언트](https://git-scm.com/downloads/guis) 를 통해 완전히 작동할 수 있습니다. 공용 리포지토리에 무료로 제공 됩니다. 개인 리포지토리에는 [유료 계획이](https://github.com/pricing)필요 합니다.
 
-최신 버전의 Windows 및 Mac 용 Visual Studio는 Git에 대 한 기본 지원을 제공 합니다. Microsoft는 이전 버전의 Visual Studio에 대해 [Git 용으로 다운로드 가능한 확장](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) 을 제공 합니다. 위에서 설명한 것 처럼 Azure DevOps 및 TFS는 TFVC 대신 버전 제어에 Git을 사용할 수 있습니다.
+최신 버전의 Windows 및 Mac 용 Visual Studio는 Git에 대 한 기본 지원을 제공 합니다. Microsoft는 이전 버전의 Visual Studio에 대해 [Git 용으로 다운로드 가능한 확장](https://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) 을 제공 합니다. 위에서 설명한 것 처럼 Azure DevOps 및 TFS는 TFVC 대신 버전 제어에 Git을 사용할 수 있습니다.
 
 #### <a name="subversion"></a>손상을
 
-[Subversion](http://subversion.apache.org) (SVN)는 2000부터 사용 중인 인기 있는 오픈 소스 버전 제어 시스템입니다. SVN은 OS X, Windows, FreeBSD, Linux 및 Unix의 모든 최신 버전에서 실행 됩니다. Mac용 Visual Studio은 SVN을 기본적으로 지원 합니다. Visual Studio에 대 한 SVN 지원을 가져오는 타사 확장이 있습니다.
+[Subversion (Subversion](https://subversion.apache.org) )은 2000부터 사용 중인 인기 있는 오픈 소스 버전 제어 시스템입니다. SVN은 OS X, Windows, FreeBSD, Linux 및 Unix의 모든 최신 버전에서 실행 됩니다. Mac용 Visual Studio은 SVN을 기본적으로 지원 합니다. Visual Studio에 대 한 SVN 지원을 가져오는 타사 확장이 있습니다.
 
 ### <a name="continuous-integration-environments"></a>연속 통합 환경
 
@@ -97,7 +97,7 @@ Team Foundation Server를 사용 하 여 특정 대상 플랫폼에 대해 빌�
 
 다음 다이어그램은이 토폴로지를 보여 줍니다.
 
-[![](intro-to-ci-images/intro03-small.png "이 다이어그램은이 토폴로지를 보여 줍니다.")](intro-to-ci-images/intro03.png#lightbox)
+[![](intro-to-ci-images/intro03-small.png "This diagram illustrates this topography")](intro-to-ci-images/intro03.png#lightbox)
 
 Azure DevOps 빌드를 로컬 서버에 위임할 수 있도록 로컬 TFS 서버를 Azure DevOps 프로젝트에 연결할 수도 있습니다. 자세한 내용은 [빌드 및 릴리스 에이전트](https://docs.microsoft.com/azure/devops/pipelines/agents/agents/)를 참조 하세요.
 
@@ -105,13 +105,13 @@ Azure DevOps 빌드를 로컬 서버에 위임할 수 있도록 로컬 TFS 서�
 
 Jenkins를 사용 하 여 앱을 빌드하는 경우 Azure DevOps 또는 Team Foundation Server에 코드를 저장 하 고 CI 빌드에 Jenkins을 계속 사용할 수 있습니다. 팀 프로젝트의 Git 리포지토리로 코드를 푸시 하거나 TFVC에 코드를 체크 인할 때 Jenkins 빌드를 트리거할 수 있습니다. 자세한 내용은 [Azure DevOps를 사용 하 여 Jenkins](https://docs.microsoft.com/azure/devops/service-hooks/services/jenkins)를 참조 하세요.
 
-[![](intro-to-ci-images/intro04-small.png "Jenkins를 사용 하 여 앱을 빌드하는 경우 Azure DevOps 또는 Team Foundation Server에 코드를 저장 하 고 CI 빌드에 Jenkins을 계속 사용할 수 있습니다.")](intro-to-ci-images/intro04.png#lightbox)
+[![](intro-to-ci-images/intro04-small.png "If you use Jenkins to build your apps, you can store your code in Azure DevOps or Team Foundation Server and continue to use Jenkins for your CI builds")](intro-to-ci-images/intro04.png#lightbox)
 
 #### <a name="git-and-jenkins"></a>Git 및 Jenkins
 
 또 다른 일반적인 CI 환경은 완전히 OS X를 기반으로 할 수 있습니다. 이 시나리오는 소스 코드 제어에 Git를 사용 하 고 빌드 서버에 Jenkins를 사용 하는 것을 포함 합니다. 이러한 두 가지 모두 Mac용 Visual Studio 설치 된 단일 Mac OS X 컴퓨터에서 실행 됩니다. 이는 이전 섹션에서 설명한 Azure DevOps + Jenkins 환경과 매우 유사 합니다.
 
-[![](intro-to-ci-images/intro05-small.png "이는 이전 섹션에서 설명한 Azure DevOps + Jenkins 환경과 매우 유사 합니다.")](intro-to-ci-images/intro05.png#lightbox)
+[![](intro-to-ci-images/intro05-small.png "This is very similar to the Azure DevOps + Jenkins environment discussed in the previous section")](intro-to-ci-images/intro05.png#lightbox)
 
 > [!IMPORTANT]
 > **Jenkins는 [Microsoft에서 지원 하지 않습니다](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**

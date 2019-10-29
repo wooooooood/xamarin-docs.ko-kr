@@ -4,15 +4,15 @@ description: 전자 지갑 앱을 사용 하면 iOS 사용자가 장치에 디�
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2018
-ms.openlocfilehash: ec44e32c3eb0d0d436a497ddb14c86af1de8d703
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: a51ab165d8eac2e3c881871bc71456c8279c5461
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273168"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031678"
 ---
 # <a name="passkit-in-xamarinios"></a>Xamarin.ios의 PassKit
 
@@ -21,7 +21,7 @@ IOS 전자 지갑 앱을 사용 하면 사용자가 장치에 디지털 패스�
 
 이 문서에서는 PassKit API를 사용 하 여 전자 지갑 및 사용을 소개 합니다.
 
- [![](passkit-images/image1.png "전자 지갑은 휴대폰의 모든 패스를 저장 하 고 구성 합니다.")](passkit-images/image1.png#lightbox)
+ [![](passkit-images/image1.png "The Wallet stores and organizes all the passes on a phone")](passkit-images/image1.png#lightbox)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -49,14 +49,14 @@ PassKit는 코어에서 iOS 장치에 바코드를 저장 하 고 표시 하는 
 
 PassKit는 CocoaTouch 내에서 API가 아니라 바코드 및 기타 데이터를 안전 하 게 공유 하 고 관리할 수 있는 더 큰 앱, 데이터 및 서비스 에코 시스템의 일부입니다. 이 개략적인 다이어그램은 패스를 만들고 사용 하는 데 사용할 수 있는 여러 엔터티를 보여 줍니다.
 
- [![](passkit-images/image2.png "이 개략적인 다이어그램은 패스를 만들고 사용 하는 데 관련 된 엔터티를 보여줍니다.")](passkit-images/image2.png#lightbox)
+ [![](passkit-images/image2.png "This high level diagram shows the entities involved in creating and using passes")](passkit-images/image2.png#lightbox)
 
 에코 시스템의 각 부분에는 명확 하 게 정의 된 역할이 있습니다.
 
 - **전자/** 반자 – Apple의 기본 제공 iOS 앱은 패스를 저장 하 고 표시 합니다. 이 유일한 장소는 실제 환경에서 사용할 수 있도록 렌더링 됩니다 (ie는 해당 패스의 모든 지역화 된 데이터와 함께 바코드를 표시 합니다).
 - **동반 앱** – 저장소 카드에 값을 추가 하 여 탑재 된 패스 또는 다른 비즈니스 관련 함수에서 사용자를 변경 하는 것과 같이 통과 하는 패스의 기능을 확장 하기 위해 pass 공급자가 작성 한 iOS 6 앱입니다. 도우미 앱은 전달에 유용 하 게 사용할 필요가 없습니다.
 - **서버** – 통과를 생성 하 고 배포용으로 서명할 수 있는 보안 서버입니다. 도우미 앱은 새 패스를 생성 하거나 기존 패스에 대 한 업데이트를 요청 하기 위해 서버에 연결할 수 있습니다. 필요에 따라 작은 사용자가 업데이트 통과를 위해 호출 하는 웹 서비스 API를 구현할 수 있습니다.
-- **Apns 서버** – 서버에는 apns를 사용 하 여 지정 된 장치에 대 한 업데이트를 전자 지갑에 알릴 수 있는 기능이 있습니다. 변경 내용에 대 한 세부 정보를 확인 하려면 전자 메일에 전자 메일을 보낼 수 있습니다. 도우미 앱은이 기능에 대해 APNS를 구현할 필요가 없습니다 (`PKPassLibraryDidChangeNotification`으로 수신 대기할 수 있음).
+- **Apns 서버** – 서버에는 apns를 사용 하 여 지정 된 장치에 대 한 업데이트를 전자 지갑에 알릴 수 있는 기능이 있습니다. 변경 내용에 대 한 세부 정보를 확인 하려면 전자 메일에 전자 메일을 보낼 수 있습니다. 도우미 앱은이 기능에 대해 APNS를 구현할 필요가 없습니다 (`PKPassLibraryDidChangeNotification`을 수신할 수 있음).
 - **응용 프로그램** (예: 좋아요 앱)을 직접 조작 하지 않는 응용 프로그램은 패스를 인식 하 고 작은 사람에 게 추가할 수 있도록 허용 하 여 유틸리티를 개선할 수 있는 응용 프로그램입니다. 메일 클라이언트, 소셜 네트워크 브라우저 및 기타 데이터 집계 앱은 모두 첨부 파일이 나 패스에 대 한 링크를 만날 수 있습니다.
 
 전체 에코 시스템은 복잡 하므로 일부 구성 요소는 선택 사항이 며 훨씬 더 간단한 PassKit 구현도 가능 합니다.
@@ -77,7 +77,7 @@ Pass는 티켓, 쿠폰 또는 카드를 나타내는 데이터의 컬렉션입�
 
 5 개의 패스 형식이이 스크린샷에서 표시 됩니다 (순서: 쿠폰, 일반, 매장 카드, 전달 패스 및 이벤트 티켓).
 
- [![](passkit-images/image3.png "이 스크린샷에는 다섯 가지 패스 형식이 나와 있습니다.")](passkit-images/image3.png#lightbox)
+ [![](passkit-images/image3.png "The five pass types are shown in this screenshot")](passkit-images/image3.png#lightbox)
 
 ### <a name="file-structure"></a>파일 구조
 
@@ -85,7 +85,7 @@ Pass는 티켓, 쿠폰 또는 카드를 나타내는 데이터의 컬렉션입�
 
 - **pass** – 필수 항목입니다. 패스에 대 한 모든 정보를 포함 합니다.
 - **manifest.xml** – 필수 항목입니다. 서명 파일 및이 파일 (manifest.xml)을 제외 하 고 pass의 각 파일에 대 한 SHA1 해시를 포함 합니다.
-- **signature** – 필수 항목입니다. IOS 프로 비전 포털에 생성 된 인증서를 사용 하 여 `manifest.json` 파일에 서명 하 여 만듭니다.
+- **signature** – 필수 항목입니다. IOS 프로 비전 포털에서 생성 된 인증서를 사용 하 여 `manifest.json` 파일에 서명 하 여 만듭니다.
 - **로고 .png** – 선택 사항입니다.
 - **background .png** – 선택 사항입니다.
 - **icon .png** – 선택 사항입니다.
@@ -93,15 +93,15 @@ Pass는 티켓, 쿠폰 또는 카드를 나타내는 데이터의 컬렉션입�
 
 패스 파일의 디렉터리 구조는 아래와 같습니다 (ZIP 보관 파일의 내용).
 
- [![](passkit-images/image4.png "여기에는 패스 파일의 디렉터리 구조가 표시 됩니다.")](passkit-images/image4.png#lightbox)
+ [![](passkit-images/image4.png "Directory structure of a pass file is shown here")](passkit-images/image4.png#lightbox)
 
-### <a name="passjson"></a>pass.json
+### <a name="passjson"></a>통과. json
 
 JSON은 일반적으로 패스가 서버에서 만들어지기 때문에 형식입니다. 즉, 생성 코드는 서버에 대 한 플랫폼에 구애 받지 않습니다. 모든 패스의 세 가지 주요 정보는 다음과 같습니다.
 
 - **Teamidentifier** – 앱 스토어 계정에 생성 하는 모든 패스를 연결 합니다. 이 값은 iOS 프로 비전 포털에 표시 됩니다.
 - **passTypeIdentifier** – 프로 비전 포털에 등록 하 여 두 개 이상의 유형을 생성 하는 경우 함께 전달 합니다. 예를 들어 커피숍은 고객이 충성도 크레딧을 획득 하 고 할인 쿠폰을 만들고 배포 하기 위한 별도의 쿠폰 전달 유형을 얻을 수 있도록 매장 카드 패스 유형을 만들 수 있습니다. 동일한 커피숍에서 라이브 음악 이벤트를 보유 하 고 해당 이벤트에 대 한 이벤트 티켓이 전달 될 수도 있습니다.
-- 전체 버전 –이 @no__t 내의 고유한 **문자열-1** 입니다. 값은 작은 값으로 불투명 하지만 서버와 통신할 때 특정 패스를 추적 하는 데 중요 합니다.
+- 단일 **버전 –** 이 `passTypeidentifier` 내의 고유 문자열입니다. 값은 작은 값으로 불투명 하지만 서버와 통신할 때 특정 패스를 추적 하는 데 중요 합니다.
 
 각 패스에는 다음과 같은 여러 가지 다른 JSON 키가 있습니다.
 
@@ -168,7 +168,7 @@ JSON은 일반적으로 패스가 서버에서 만들어지기 때문에 형식�
 
 ### <a name="barcodes"></a>바코드가
 
-2D 형식만 지원 됩니다. PDF417, Aztec, QR. Unsuited은 1D 바코드가 backlit 휴대폰 화면에서 스캔 하는 것을 말합니다.
+2D 형식 (PDF417, 아즈텍, QR)만 지원 됩니다. Unsuited은 1D 바코드가 backlit 휴대폰 화면에서 스캔 하는 것을 말합니다.
 
 바코드 아래에 표시 되는 대체 텍스트는 선택 사항입니다. 일부 상인은 수동으로 읽거나 입력할 수 있습니다.
 
@@ -178,7 +178,7 @@ ISO-8859-1 인코딩은 가장 일반적 이며, 패스를 읽을 검색 시스�
 
 잠금이 화면에 표시 될 수 있는 데이터에는 두 가지 유형이 있습니다.
 
- **Location**:
+ **위치**
 
 패스에는 최대 10 개의 위치를 지정할 수 있습니다. 예를 들어 고객에 게 자주 방문 하는 매장 또는 영화 또는 공항의 위치를 지정할 수 있습니다. 고객은 도우미 앱을 통해 이러한 위치를 설정 하거나 공급자가 사용 현황 데이터 (고객의 권한으로 수집 된 경우)에서 이러한 위치를 결정할 수 있습니다.
 
@@ -192,16 +192,16 @@ ISO-8859-1 인코딩은 가장 일반적 이며, 패스를 읽을 검색 시스�
 
 ### <a name="localization"></a>지역화
 
-Pass를 여러 언어로 변환 하는 것은 iOS 응용 프로그램을 지역화 하는 것과 유사 합니다. `.lproj` 확장을 사용 하 여 언어별 디렉터리를 만들고 내부에 지역화 된 요소를 넣습니다. 텍스트 번역은 `pass.strings` 파일에 입력 해야 하 고, 지역화 된 이미지는 패스 루트에서 대체 하는 이미지의 이름과 같아야 합니다.
+Pass를 여러 언어로 변환 하는 것은 iOS 응용 프로그램을 지역화 하는 것과 유사 합니다. `.lproj` 확장을 사용 하 여 언어별 디렉터리를 만들고 내부에 지역화 된 요소를 넣습니다. 텍스트 번역은 `pass.strings` 파일에 입력 해야 하는 반면, 지역화 된 이미지는 패스 루트에서 대체 하는 이미지의 이름과 같아야 합니다.
 
 ## <a name="security"></a>보안
 
 패스는 iOS 프로 비전 포털에서 생성 하는 개인 인증서를 사용 하 여 서명 됩니다. 패스에 서명 하는 단계는 다음과 같습니다.
 
-1. Pass 디렉터리의 각 파일에 대 한 SHA1 해시를 계산 합니다 (`manifest.json` 또는 `signature` 파일은 포함 하지 않음,이 단계에 존재 하지 않음).
-1. 해시를 사용 하 여 각 파일 이름의 JSON 키/값 목록으로 0 @no__t을 씁니다.
+1. Pass 디렉터리의 각 파일에 대 한 SHA1 해시를 계산 합니다 (이 단계에 존재 하지 않아야 하는 `manifest.json` 또는 `signature` 파일은 포함 하지 않음).
+1. 해시를 사용 하 여 각 파일 이름의 JSON 키/값 목록으로 `manifest.json`을 씁니다.
 1. 인증서를 사용 하 여 `manifest.json` 파일에 서명 하 고 결과를 `signature` 이라는 파일에 씁니다.
-1. 모든 파일을 압축 하 고 결과 파일에 `.pkpass` 파일 확장명을 제공 합니다.
+1. 모든 파일을 압축 하 고 결과 파일을 `.pkpass` 파일 확장명으로 지정 합니다.
 
 Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사용자가 제어 하는 보안 서버 에서만 수행 해야 합니다. 응용 프로그램에서 패스를 시도 하 고 생성 하기 위해 키를 배포 하지 마십시오.
 
@@ -222,9 +222,9 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 
 첫 번째 단계는 지원 되는 각각의 서로 다른 _유형의_ 패스에 대해 패스 유형 ID를 설정 하는 것입니다. 패스 ID (또는 패스 유형 식별자)는 패스에 대 한 고유 식별자를 만듭니다. 이 ID를 사용 하 여 인증서를 사용 하 여 pass를 개발자 계정과 연결 합니다.
 
-1. [IOS 프로 비전 포털의 인증서, 식별자 및 프로필 섹션](https://developer.apple.com/account/overview.action)에서 **식별자** 로 이동 하 여 **Pass 유형 id** 를 선택 합니다. 그런 다음 **+** 단추를 선택 하 여 새 패스 유형을 만듭니다. [![](passkit-images/passid.png "새 패스 유형 만들기")](passkit-images/passid.png#lightbox)
+1. [IOS 프로 비전 포털의 인증서, 식별자 및 프로필 섹션](https://developer.apple.com/account/overview.action)에서 **식별자** 로 이동 하 여 **Pass 유형 id** 를 선택 합니다. 그런 다음 **+** 단추를 선택 하 여 새 패스 유형을 만듭니다.[![](passkit-images/passid.png "새 패스 유형 만들기")](passkit-images/passid.png#lightbox)
 
-2. 패스에 대 한 **설명** (이름) 및 **식별자** (고유 문자열)를 제공 합니다. 모든 패스 유형 Id는 문자열 `pass.`으로 시작 해야 합니다 .이 예제에서는 `pass.com.xamarin.coupon.banana`을 사용 합니다. [![](passkit-images/register.png "설명 및 식별자를 제공 합니다.")](passkit-images/register.png#lightbox)
+2. 패스에 대 한 **설명** (이름) 및 **식별자** (고유 문자열)를 제공 합니다. 모든 패스 형식 Id는 문자열로 시작 해야 합니다 .이 예제에서는 `pass.com.xamarin.coupon.banana`를 사용 `pass.`.[![](passkit-images/register.png "설명 및 식별자를 제공 합니다.")](passkit-images/register.png#lightbox)
 
 3. **등록** 단추를 눌러 패스 ID를 확인 합니다.
 
@@ -232,11 +232,11 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 
 이 패스 유형 ID에 대 한 새 인증서를 만들려면 다음을 수행 합니다.
 
-1. 목록에서 새로 만든 패스 ID를 선택 하 고 **편집** 을 클릭 합니다. [![](passkit-images/pass-done.png "목록에서 새 패스 ID를 선택 합니다.")](passkit-images/pass-done.png#lightbox)
+1. 목록에서 새로 만든 패스 ID를 선택 하 고 **편집** 을 클릭 합니다.[![](passkit-images/pass-done.png "목록에서 새 패스 ID를 선택 합니다.")](passkit-images/pass-done.png#lightbox)
 
     그런 다음 **인증서 만들기** ...를 선택 합니다. :
 
-    [![](passkit-images/cert-dist.png "인증서 만들기 선택")](passkit-images/cert-dist.png#lightbox)
+    [![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png#lightbox)
 
 2. 단계에 따라 CSR (인증서 서명 요청)을 만듭니다.
   
@@ -261,9 +261,9 @@ Pass에 서명 하는 데 개인 키가 필요 하므로이 프로세스는 사�
 
 이 문서의 [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) 에는 패스를 생성 하는 데 사용할 수 있는 몇 가지 소스 파일이 있습니다. CreateAPassManually 디렉터리의 `CouponBanana.raw` 디렉터리에 있는 파일을 사용 합니다. 다음 파일이 표시 됩니다.
 
- [![](passkit-images/image18.png "이러한 파일이 있음")](passkit-images/image18.png#lightbox)
+ [![](passkit-images/image18.png "These files are present")](passkit-images/image18.png#lightbox)
 
-Pass를 열고 JSON을 편집 합니다. @No__t-0을 업데이트 하 고 Apple Developer 계정에 맞게-1을 @no__t 해야 합니다.
+Pass를 열고 JSON을 편집 합니다. Apple Developer 계정에 맞게 `passTypeIdentifier`을 업데이트 하 고 `teamIdentifer` 해야 합니다.
 
 ```json
 "passTypeIdentifier" : "pass.com.xamarin.coupon.banana",
@@ -286,17 +286,17 @@ Pass를 열고 JSON을 편집 합니다. @No__t-0을 업데이트 하 고 Apple 
 
 #### <a name="signing-on-a-mac"></a>Mac에서 서명
 
-[Apple 다운로드](https://developer.apple.com/downloads/index.action?name=Passbook) 사이트에서 전자 **지갑 초기값 지원 자료** 를 다운로드 하세요. @No__t-0 도구를 사용 하 여 폴더를 pass로 전환 합니다 .이 경우 SHA1 해시를 계산 하 고 출력을 pkpass 파일에 압축 합니다.
+[Apple 다운로드](https://developer.apple.com/downloads/index.action?name=Passbook) 사이트에서 전자 **지갑 초기값 지원 자료** 를 다운로드 하세요. `signpass` 도구를 사용 하 여 폴더를 pass로 전환 합니다 .이 경우 SHA1 해시를 계산 하 고 출력을 pkpass 파일에 압축 합니다.
 
 #### <a name="testing"></a>테스트
 
 이러한 도구의 출력을 검토 하 고 (파일 이름을 .zip으로 설정 하 여 여는 경우) 다음 파일이 표시 됩니다 (`manifest.json` 및 `signature` 파일 추가).
 
- [![](passkit-images/image19.png "이러한 도구의 출력 검사")](passkit-images/image19.png#lightbox)
+ [![](passkit-images/image19.png "Examining the output of these tools")](passkit-images/image19.png#lightbox)
 
-서명 된 후 파일의 이름을 바꾸고 (예: `BananaCoupon.pkpass`)를 시뮬레이터로 끌어서 테스트 하거나 실제 장치에서 검색할 수 있도록 자신에 게 전자 메일로 보낼 수 있습니다. 다음과 같이 pass를 **추가** 하는 화면이 표시 됩니다.
+서명 된 후 파일의 이름을 바꾸고 (예: `BananaCoupon.pkpass`)를 시뮬레이터로 끌어와 테스트 하거나 실제 장치에서 검색할 수 있도록 자신에 게 전자 메일로 보낼 수 있습니다. 다음과 같이 pass를 **추가** 하는 화면이 표시 됩니다.
 
- [![](passkit-images/image20.png "Pass 화면 추가")](passkit-images/image20.png#lightbox)
+ [![](passkit-images/image20.png "Add the pass screen")](passkit-images/image20.png#lightbox)
 
 일반적으로이 프로세스는 서버에서 자동으로 수행 되지만, 수동 패스 생성은 백 엔드 서버를 지원 하지 않는 쿠폰만 생성 하는 소규모 기업을 위한 옵션 일 수 있습니다.
 
@@ -304,7 +304,7 @@ Pass를 열고 JSON을 편집 합니다. @No__t-0을 업데이트 하 고 Apple 
 
 PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크린샷에서는 빈 전자 지갑 및 패스 목록과 개별 패스가 어떻게 표시 되는지 보여 줍니다.
 
- [![](passkit-images/image21.png "이 스크린샷에서는 빈 전자 지갑 및 패스 목록과 개별 패스가 어떻게 표시 되는지 보여 줍니다.")](passkit-images/image21.png#lightbox)
+ [![](passkit-images/image21.png "This screenshot shows the empty Wallet, and how the pass list and individual passes look")](passkit-images/image21.png#lightbox)
 
 작은 기능에는 다음이 포함 됩니다.
 
@@ -321,7 +321,7 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 
 - **앱** 을 직접 조작 하지 않는 앱-패스 파일을 로드 하 고 사용자에 게 작은 사용자에 게 추가 하는 옵션을 제공 합니다. 
 
-- **동반 앱** -공급자가 전달 된 앱을 배포 하 고 탐색 하거나 편집 하기 위한 추가 기능을 제공 합니다. Xamarin.ios 응용 프로그램은 PassKit API에 대 한 완전 한 액세스 권한을 가지 며 패스를 만들고 조작 합니다. 그런 다음 `PKAddPassesViewController`을 사용 하 여 작은 쪽에 패스를 추가할 수 있습니다. 이 프로세스는이 문서의 **자매 응용 프로그램** 섹션에서 자세히 설명 합니다.
+- **동반 앱** -공급자가 전달 된 앱을 배포 하 고 탐색 하거나 편집 하기 위한 추가 기능을 제공 합니다. Xamarin.ios 응용 프로그램은 PassKit API에 대 한 완전 한 액세스 권한을 가지 며 패스를 만들고 조작 합니다. 그런 다음 `PKAddPassesViewController`를 사용 하 여 전자 지갑에 패스를 추가할 수 있습니다. 이 프로세스는이 문서의 **자매 응용 프로그램** 섹션에서 자세히 설명 합니다.
 
 ### <a name="conduit-applications"></a>응용 프로그램 통로
 
@@ -333,9 +333,9 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 
 이 스크린샷은 iOS 6의 메일이 메시지 첨부 파일을 인식 하 고 (작업 시) **전자 메일을 통해 전자 메일을 전자 메일** 에 **추가** 하는 방법을 보여 줍니다.
 
- [![](passkit-images/image22.png "이 스크린샷은 iOS 6의 메일이 pass 첨부 파일을 인식 하는 방법을 보여 줍니다.")](passkit-images/image22.png#lightbox)
+ [![](passkit-images/image22.png "This screenshot shows how Mail in iOS 6 recognizes a pass attachment")](passkit-images/image22.png#lightbox)
 
- [![](passkit-images/image23.png "이 스크린샷은 메일에서 전자 메일을 제공 하 여 전자 메일에 전달 하는 방법을 보여 줍니다.")](passkit-images/image23.png#lightbox)
+ [![](passkit-images/image23.png "This screenshot shows how Mail offers to add a pass attachment to Wallet")](passkit-images/image23.png#lightbox)
 
 패스에 대 한 통로가 될 수 있는 앱을 빌드하는 경우 다음에서 인식할 수 있습니다.
 
@@ -343,7 +343,7 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 - **MIME 형식** -application/vnd. apple pkpass
 - **UTI** – .com. pkpass
 
-통로 응용 프로그램의 기본 작업은 pass 파일을 검색 하 고 PassKit의 `PKAddPassesViewController`을 호출 하 여 사용자에 게 해당 사용자에 게 pass를 추가할 수 있는 옵션을 제공 하는 것입니다. 이 뷰 컨트롤러의 구현은 다음에 나오는 **응용 프로그램**의 섹션에서 설명 합니다.
+통로 응용 프로그램의 기본 작업은 pass 파일을 검색 하 고 PassKit의 `PKAddPassesViewController`를 호출 하 여 해당 사용자에 게 해당 사용자에 게 pass를 추가할 수 있는 옵션을 제공 하는 것입니다. 이 뷰 컨트롤러의 구현은 다음에 나오는 **응용 프로그램**의 섹션에서 설명 합니다.
 
 보조 응용 프로그램에서 수행 하는 것과 동일한 방식으로 특정 패스 유형 ID에 대해 통로 응용 프로그램을 프로 비전 할 필요가 없습니다.
 
@@ -369,11 +369,11 @@ PassKit 에코 시스템의 핵심이 되는 작은 부분입니다. 이 스크�
 
 Solution Pad에서 **info.plist** 파일을 두 번 클릭 하 여 info.plist 편집기를 엽니다.
 
-![](passkit-images/image31.png "자격 편집기")
+![](passkit-images/image31.png "Entitlements.plst editor")
 
 전자 지갑 섹션에서 전자 **지갑 사용** 옵션을 선택 합니다.
 
-![](passkit-images/image32.png "작은 자격 사용")
+![](passkit-images/image32.png "Enable wallet entitlement")
 
 기본 옵션은 앱에서 모든 패스 유형을 허용 하는 것입니다. 그러나 앱을 제한 하 고 팀 패스 유형의 하위 집합만 허용할 수 있습니다. 이를 사용 하도록 설정 하려면 **팀 패스 유형의 하위 집합 허용** 을 선택 하 고 허용할 하위 집합의 패스 유형 식별자를 입력 합니다.
 
@@ -381,9 +381,9 @@ Solution Pad에서 **info.plist** 파일을 두 번 클릭 하 여 info.plist �
 
 **Info.plist** 파일을 두 번 클릭 하 여 XML 원본 파일을 엽니다.
 
-전자/반자를 추가 하려면 드롭다운 목록에서 **속성** 을 `Passbook Identifiers`로 설정 합니다. 그러면-3 @no__t **형식이** 자동으로 설정 됩니다. 그런 다음 문자열 **값** 을 `$(TeamIdentifierPrefix)*`로 설정 합니다.
+작은 자격을 추가 하려면 드롭다운 목록에서 `Passbook Identifiers` **속성** 을 설정 하 여 `Array`**유형을** 자동으로 설정 합니다. 그런 다음 `$(TeamIdentifierPrefix)*`문자열 **값** 을 설정 합니다.
 
-![](passkit-images/image33.png "작은 자격 사용")
+![](passkit-images/image33.png "Enable wallet entitlement")
 
 앱에서 모든 패스 유형을 허용할 수 있습니다. 앱을 제한 하 고 팀 패스 유형의 하위 집합만 허용 하려면 문자열 값을로 설정 합니다.
 
@@ -395,7 +395,7 @@ Solution Pad에서 **info.plist** 파일을 두 번 클릭 하 여 info.plist �
 
 ### <a name="debugging"></a>디버깅
 
-응용 프로그램을 배포 하는 데 문제가 있는 경우 올바른 **프로 비전 프로필** 을 사용 하 고 있고 **iPhone 번들 서명** 옵션에서 **사용자 지정 자격** 파일로 `Entitlements.plist`이 선택 되어 있는지 확인 합니다.
+응용 프로그램을 배포 하는 데 문제가 있는 경우 올바른 **프로 비전 프로필** 을 사용 하 고 있고 **iPhone 번들 서명** 옵션에서 **사용자 지정 자격** 파일로 `Entitlements.plist` 선택 되어 있는지 확인 합니다.
 
 배포할 때이 오류가 발생 하는 경우:
 
@@ -449,7 +449,7 @@ var passes = library.GetPasses ();  // returns PKPass[]
 
 시뮬레이터는 반환 되는 패스 목록을 필터링 하지 않으므로이 메서드는 항상 실제 장치에서 테스트 되어야 합니다. 이 목록은 UITableView에 표시 될 수 있습니다. [샘플 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) 은 두 개의 쿠폰이 추가 된 후 다음과 같이 표시 됩니다.
 
- [![](passkit-images/image29.png "두 개의 쿠폰이 추가 된 후 샘플 앱이 다음과 같이 보입니다.")](passkit-images/image29.png#lightbox)
+ [![](passkit-images/image29.png "The sample app look like this after two coupons have been added")](passkit-images/image29.png#lightbox)
 
 ### <a name="displaying-passes"></a>패스 표시
 
@@ -470,9 +470,9 @@ string passInfo =
 
 이 문자열은 [샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit)에서 경고로 표시 됩니다.
 
- [![](passkit-images/image30.png "샘플에서 선택한 쿠폰 경고")](passkit-images/image30.png#lightbox)
+ [![](passkit-images/image30.png "The Coupon Selected alert in the sample")](passkit-images/image30.png#lightbox)
 
-@No__t-0 메서드를 사용 하 여 사용자가 디자인 한 패스의 필드에서 데이터를 검색할 수도 있습니다 (어떤 필드가 있어야 하는지 알 수 있으므로). 예제 코드는이를 표시 하지 않습니다.
+`LocalizedValueForFieldKey()` 메서드를 사용 하 여 사용자가 디자인 한 패스의 필드에서 데이터를 검색할 수도 있습니다 (어떤 필드가 있어야 하는지 알 수 있으므로). 예제 코드는이를 표시 하지 않습니다.
 
 ### <a name="loading-a-pass-from-a-file"></a>파일에서 패스 로드
 
@@ -491,7 +491,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 이 패스는 **추가** 및 **취소** 옵션과 함께 제공 됩니다.
 
- [![](passkit-images/image20.png "추가 및 취소 옵션과 함께 제공 되는 패스")](passkit-images/image20.png#lightbox)
+ [![](passkit-images/image20.png "The pass presented with Add and Cancel options")](passkit-images/image20.png#lightbox)
 
 ### <a name="replace-an-existing-pass"></a>기존 패스 바꾸기
 
@@ -519,7 +519,7 @@ PKPass는 변경할 수 없으므로 코드에서 패스 개체를 업데이트�
 
 ### <a name="receiving-notifications-of-changes"></a>변경 알림 받기
 
-응용 프로그램은 `PKPassLibraryDidChangeNotification`을 사용 하 여 패스 라이브러리에 적용 되는 변경 내용을 수신할 수 있습니다. 백그라운드에서 업데이트를 트리거하는 알림으로 인해 변경 될 수 있으므로 앱에서 수신 대기 하는 것이 좋습니다.
+응용 프로그램은 `PKPassLibraryDidChangeNotification`를 사용 하 여 패스 라이브러리에 적용 되는 변경 내용을 수신할 수 있습니다. 백그라운드에서 업데이트를 트리거하는 알림으로 인해 변경 될 수 있으므로 앱에서 수신 대기 하는 것이 좋습니다.
 
 ```csharp
 noteCenter = NSNotificationCenter.DefaultCenter.AddObserver (PKPassLibrary.DidChangeNotification, (not) => {

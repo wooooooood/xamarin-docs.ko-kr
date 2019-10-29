@@ -4,15 +4,15 @@ description: IOS 12를 사용 하면 응용 프로그램 또는 스레드별로 
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 12d60a193385593bb3ec22186b54a4a809370e2d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 6352de1483aea49a628cbb30d104906fde767afa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291261"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031949"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Xamarin.ios의 그룹화 된 알림
 
@@ -30,7 +30,7 @@ Xamarin.ios를 사용 하 여 그룹화 된 알림을 사용 하는 방법에 �
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>권한 부여 요청 및 포그라운드 알림 허용
 
-앱이 로컬 알림을 보낼 수 있기 전에이에 대 한 권한을 요청 해야 합니다. 샘플 앱의 [`AppDelegate`](xref:UIKit.UIApplicationDelegate)에서 메서드는이 [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) 사용 권한을 요청 합니다.
+앱이 로컬 알림을 보낼 수 있기 전에이에 대 한 권한을 요청 해야 합니다. 샘플 앱의 [`AppDelegate`](xref:UIKit.UIApplicationDelegate)에서 [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) 메서드는이 권한을 요청 합니다.
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,7 +46,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-에 [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) [대한(위`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions}))설정)는에 전달 된 완료 처리기를 호출 하 여 포그라운드 앱에서 들어오는 알림을 표시할지 여부를 [결정합니다.`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter)
+[`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) 에 대 한 [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (위에서 설정)는 [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions}))에 전달 된 완료 처리기를 호출 하 여 포그라운드 앱에서 들어오는 알림을 표시할지 여부를 결정 합니다.
 
 ```csharp
 [Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
@@ -56,7 +56,7 @@ public void WillPresentNotification(UNUserNotificationCenter center, UNNotificat
 }
 ```
 
-매개 [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) 변수는 앱에서 경고를 표시 하지만 소리를 재생 하거나 배지를 업데이트 하지 않음을 나타냅니다.
+[`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) 매개 변수는 앱에서 경고를 표시 하지만 소리를 재생 하거나 배지를 업데이트 하지 않음을 나타냅니다.
 
 ## <a name="threaded-notifications"></a>스레드 알림
 
@@ -80,8 +80,8 @@ void StartNewThread()
 스레드 알림을 보내기 위해 샘플 앱은 다음과 같습니다.
 
 - 앱에 알림을 보낼 수 있는 권한이 있는지 여부를 확인 합니다.
-- 을 만듭니다.[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-알림 콘텐츠에 대 한 개체입니다.[`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier)
+- [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent) 를 만듭니다.
+알림 콘텐츠에 대 한 개체 이며 해당 [`ThreadIdentifier`](xref:UserNotifications.UNMutableNotificationContent.ThreadIdentifier) 을 설정 합니다.
 위에서 만든 스레드 식별자입니다.
 - 요청을 만들고 알림을 예약 합니다.
 
@@ -124,9 +124,9 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 > [!NOTE]
 > 원격 알림에서 스레드 식별자를 설정 하려면 알림의 JSON 페이로드에 `thread-id` 키를 추가 합니다. 자세한 내용은 Apple의 [원격 알림 생성](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) 문서를 참조 하세요.
 
-### <a name="summaryargument"></a>SummaryArgument
+### <a name="summaryargument"></a>요약 인수
 
-`SummaryArgument`알림이 속한 알림 그룹의 왼쪽 아래 모서리에 표시 되는 요약 텍스트에 알림이 영향을 주는 방법을 지정 합니다. iOS는 동일한 그룹의 알림에서 요약 텍스트를 집계 하 여 전체 요약 설명을 만듭니다.
+`SummaryArgument` 알림이 속한 알림 그룹의 왼쪽 아래 모퉁이에 표시 되는 요약 텍스트에 영향을 주는 방법을 지정 합니다. iOS는 동일한 그룹의 알림에서 요약 텍스트를 집계 하 여 전체 요약 설명을 만듭니다.
 
 샘플 앱은 메시지 작성자를 요약 인수로 사용 합니다. 이 방법을 사용 하는 경우 Alice와의 6 가지 알림 그룹에 대 한 요약 텍스트는 **alice 및 Me에서 5 개 이상의 알림을**받을 수 있습니다.
 
@@ -134,8 +134,8 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 
 샘플 앱의 **약속 미리 알림** 단추를 누를 때마다 다양 한 약속 미리 알림 알림 중 하나가 전송 됩니다. 이러한 미리 알림은 스레드 되지 않으므로 잠금 화면과 알림 센터의 응용 프로그램 수준 알림 그룹에 표시 됩니다.
 
-스레드가 없는 알림을 보내기 위해 샘플 앱의 `ScheduleUnthreadedNotification` 메서드는 위와 비슷한 코드를 사용 합니다.
-그러나 `ThreadIdentifier` 개체`UNMutableNotificationContent` 에는를 설정 하지 않습니다.
+스레드 없는 알림을 보내기 위해 샘플 앱의 `ScheduleUnthreadedNotification` 메서드는 위와 비슷한 코드를 사용 합니다.
+그러나 `UNMutableNotificationContent` 개체에는 `ThreadIdentifier` 설정 되지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 

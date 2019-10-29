@@ -4,15 +4,15 @@ description: 이 문서에서는 tvOS 앱에 사용할 수 있는 배포 기술�
 ms.prod: xamarin
 ms.assetid: D5E0F446-C083-4E21-9788-FC84D32D00C4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f47d4228fc1d3ec1b3b428b917f3c774103577d7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d8c9d6fe36b457a000e96d1ad8990debad8ac915
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769192"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030743"
 ---
 # <a name="tvos-app-distribution-overview"></a>tvOS 앱 배포 개요
 
@@ -20,7 +20,7 @@ _이 문서에서는 tvOS 앱에 사용할 수 있는 배포 기술에 대 한 �
 
 TvOS 앱이 개발 되 면 아래 다이어그램의 강조 표시 된 섹션에 표시 된 것 처럼 소프트웨어 개발 수명 주기의 다음 단계는 사용자에 게 앱을 배포 하는 것입니다.
 
-[![소프트웨어 개발 수명 주기 개요](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
+[소프트웨어 개발 수명 주기 개요![](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 Apple에서는 tvOS에서 지 원하는 tvOS 앱을 배포 하는 다음과 같은 방법을 제공 합니다.
 
@@ -63,7 +63,7 @@ Apple TV 앱 스토어에 tvOS 앱을 제출 하는 데 문제가 있는 경우 
 
 ## <a name="in-house-distribution"></a>사내 배포
 
-*엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 응용 프로그램을 설치할 수 있는 디바이스의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
+*엔터프라이즈 배포*라고도 하는 사내 배포를 사용하면 **Apple Developer Enterprise Program**의 구성원이 내부적으로 동일한 조직의 다른 구성원에게 앱을 배포할 수 있습니다. 사내 배포에는 앱 스토어 검토가 필요하지 않으며, 애플리케이션을 설치할 수 있는 디바이스의 수가 제한되지 않는다는 이점이 있습니다. 그러나 **Apple Developer Enterprise Program** 구성원에게는 iTunes Connect에 대한 액세스 권한이 **없으므로** 정식 사용자가 앱을 배포해야 합니다.
 
 설정 및 응용 프로그램을 사내에 배포 하는 방법에 대 한 자세한 내용은 [사내 배포 가이드](~/ios/deploy-test/app-distribution/in-house-distribution.md)를 참조 하세요. 이 문서는 iOS에만 해당 되지만 동일한 기술이 tvOS apps에 사용 됩니다.
 

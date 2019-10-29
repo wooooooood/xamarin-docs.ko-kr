@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11의 새로운 MapKit 기능에 대해 설
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: cef87d68c3b87697ee1f18fc85d185c1cc6d1b9a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 02bd25c4b4e251536dfdabdef109eb659fe3be37
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752467"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032165"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>IOS 11의 MapKit의 새로운 기능
 
@@ -33,9 +33,9 @@ iOS 11은 다음과 같은 새 기능을 MapKit에 추가 합니다.
 
 ### <a name="1-create-an-mkpointannotation-subclass"></a>1. `MKPointAnnotation` 하위 클래스 만들기
 
-Point annotation 클래스는 맵의 각 표식을 나타냅니다. 을 사용 `MapView.AddAnnotation()` `MapView.AddAnnotations()`하 여 또는 배열에서 개별적으로 추가할 수 있습니다.
+Point annotation 클래스는 맵의 각 표식을 나타냅니다. `MapView.AddAnnotation()` 또는 `MapView.AddAnnotations()`를 사용 하 여 배열에서 개별적으로 추가할 수 있습니다.
 
-Point annotation 클래스에는 시각적 표현이 없습니다. 표식 (가장 중요 `Coordinate` 한 것은 지도의 위도 및 경도 인 속성) 및 사용자 지정 속성을 나타내는 데만 필요 합니다.
+Point annotation 클래스는 시각적 표현을 포함 하지 않습니다. 표식에 연결 된 데이터 (가장 중요 한 것은 맵의 위도 및 경도 인 `Coordinate` 속성) 및 사용자 지정 속성을 나타내는 데만 필요 합니다.
 
 ```csharp
 public class Bike : MKPointAnnotation
@@ -57,14 +57,14 @@ public class Bike : MKPointAnnotation
 }
 ```
 
-### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. 단일 표식에 대 한 하위클래스만들기`MKMarkerAnnotationView`
+### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. 단일 표식에 대 한 `MKMarkerAnnotationView` 하위 클래스 만들기
 
 표식 주석 보기는 각 주석의 시각적 표시 이며 다음과 같은 속성을 사용 하 여 스타일이 지정 됩니다.
 
 - **MarkerTintColor** – 표식의 색입니다.
 - **GlyphText** – 표식에 표시 되는 텍스트입니다.
 - **GlyphImage** – 표식에 표시 되는 이미지를 설정 합니다.
-- **DisplayPriority** – map이 표식으로 복잡 한 경우 z 순서 (스택 동작)를 결정 합니다. `Required`, `DefaultHigh`또는 중`DefaultLow`하나를 사용 합니다.
+- **DisplayPriority** – map이 표식으로 복잡 한 경우 z 순서 (스택 동작)를 결정 합니다. `Required`, `DefaultHigh`또는 `DefaultLow`중 하나를 사용 합니다.
 
 자동 클러스터링을 지원 하려면 다음도 설정 해야 합니다.
 
@@ -104,7 +104,7 @@ public class BikeView : MKMarkerAnnotationView
   }
 ```
 
-### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. 표식의 클러스터 `MKAnnotationView` 를 나타내는를 만듭니다.
+### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. 표식의 클러스터를 나타내는 `MKAnnotationView` 만들기
 
 표식의 클러스터를 나타내는 주석 보기는 간단한 이미지인 반면, 사용자는 앱이 그룹화 된 _표식의 수에_ 대 한 시각적 표시를 제공 하는 것으로 간주 합니다.
 
@@ -112,8 +112,8 @@ public class BikeView : MKMarkerAnnotationView
 
 또한 다음과 같이 설정 해야 합니다.
 
-- **DisplayPriority** – map이 표식으로 복잡 한 경우 z 순서 (스택 동작)를 결정 합니다. `Required`, `DefaultHigh`또는 중`DefaultLow`하나를 사용 합니다.
-- **CollisionMode** – `Circle` 또는`Rectangle`입니다.
+- **DisplayPriority** – map이 표식으로 복잡 한 경우 z 순서 (스택 동작)를 결정 합니다. `Required`, `DefaultHigh`또는 `DefaultLow`중 하나를 사용 합니다.
+- **CollisionMode** – `Circle` 또는 `Rectangle`.
 
 ```csharp
 [Register("ClusterView")]
@@ -215,13 +215,13 @@ NavigationItem.RightBarButtonItem = new UIBarButtonItem(compass);
 MapView.ShowsCompass = false; // so we don't have two compasses!
 ```
 
-속성 `ShowsCompass` 은 지도 보기 내에서 기본 나침반의 표시 여부를 제어 하는 데 사용할 수 있습니다.
+`ShowsCompass` 속성을 사용 하 여 지도 보기 내에서 기본 나침반의 표시 여부를 제어할 수 있습니다.
 
 <a name="scale" />
 
 ## <a name="scale-view"></a>눈금 보기
 
-뷰 계층의 다른 곳에 추가 하기 위해 `MKScaleView.FromMapView()` 메서드를 사용 하 여 뷰의 다른 위치에 눈금을 추가 합니다.
+`MKScaleView.FromMapView()` 메서드를 사용 하 여 뷰의 다른 위치에 눈금을 추가 하 여 뷰 계층의 다른 곳에 추가 하는 눈금 뷰의 인스턴스를 가져옵니다.
 
 ![지도에 중첩 된 눈금 보기](mapkit-images/scale-sml.png)
 
@@ -233,13 +233,13 @@ View.AddSubview(scale); // constraints omitted for simplicity
 MapView.ShowsScale = false; // so we don't have two scale displays!
 ```
 
-속성 `ShowsScale` 은 지도 보기 내에서 기본 나침반의 표시 여부를 제어 하는 데 사용할 수 있습니다.
+`ShowsScale` 속성을 사용 하 여 지도 보기 내에서 기본 나침반의 표시 여부를 제어할 수 있습니다.
 
 <a name="user-tracking" />
 
 ## <a name="user-tracking-button"></a>사용자 추적 단추
 
-사용자 추적 단추는 사용자의 현재 위치에 대 한 지도의 가운데 맞춤을 설정 합니다. `MKUserTrackingButton.FromMapView()` 메서드를 사용 하 여 단추의 인스턴스를 가져오고, 형식 변경을 적용 하 고, 뷰 계층의 다른 위치에 추가 합니다.
+사용자 추적 단추는 사용자의 현재 위치에 대 한 지도의 가운데 맞춤을 설정 합니다. `MKUserTrackingButton.FromMapView()` 메서드를 사용 하 여 단추의 인스턴스를 가져오고, 서식 변경 내용을 적용 하 고, 뷰 계층 구조에서 다른 위치에 추가할 수 있습니다.
 
 ![맵에 겹쳐진 사용자 위치 단추](mapkit-images/user-location-sml.png)
 

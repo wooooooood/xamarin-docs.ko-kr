@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱을 빌드할 때 사용 되는 
 ms.prod: xamarin
 ms.assetid: BF0A3517-17D8-453D-87F7-C8A34BEA8FF5
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/17/2016
-ms.openlocfilehash: b4934fa82d862ad2e8ab53579137873ed9e4bcca
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b508cc12f468e5b9dfef91718585f61bfd633816
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770174"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030055"
 ---
 # <a name="common-patterns-and-idioms-in-xamarinmac"></a>Xamarin.ios의 일반적인 패턴 및 관용구
 
@@ -37,21 +37,21 @@ WPF와 같은 다른 라이브러리에서 MVVM (모델 뷰 ViewModel)에 대해
 
 ## <a name="data-source--delegate--subclassing"></a>데이터 원본/대리자/서브클래싱
 
-Cocoa의 또 다른 매우 일반적인 패턴은 UI 요소에 데이터를 제공 하 고 사용자 상호 작용에 반응 하는 것을 다룹니다. 예 `NSTableView` 를 들어를 사용 하 여 각 행에 대 한 데이터, 해당 행을 나타내는 일부 UI 요소 집합, 사용자 상호 작용에 반응 하는 일부 동작 집합 및 일부 사용자 지정 항목을 제공 해야 합니다. 데이터 소스 및 대리자 패턴을 사용 하면 사용자를 서브클래싱 `NSTableView` 하지 않고도 대부분의 경우를 처리할 수 있습니다.
+Cocoa의 또 다른 매우 일반적인 패턴은 UI 요소에 데이터를 제공 하 고 사용자 상호 작용에 반응 하는 것을 다룹니다. 예를 들어 `NSTableView` 사용 하 여 각 행에 대 한 데이터, 해당 행을 나타내는 일부 UI 요소 집합, 사용자 상호 작용에 반응 하는 일부 동작 집합, 사용자 지정의 일부를 제공 해야 합니다. 데이터 소스 및 대리자 패턴을 사용 하면 사용자가 직접 `NSTableView` 서브클래싱 할 필요 없이 대부분의 경우를 처리할 수 있습니다.
 
-- 속성 `DataSource` 에는 `GetRowCount` 및 `NSTableViewDataSource`를통해테이블 에데이터를채우도록호출되는사용자지정하위클래스의인스턴스가할당됩니다.`GetObjectValue`
+- `DataSource` 속성에는 데이터를 사용 하 여 테이블을 채우도록 호출 되는 `NSTableViewDataSource`의 사용자 지정 하위 클래스 인스턴스가 할당 됩니다 (`GetRowCount` 및 `GetObjectValue`를 통해).
 
-- 속성 `Delegate` 에는 지정 된 모델 개체 `GetViewForItem`에 대 한 뷰 `NSTableViewDelegate` 를 제공 하 고, 등을 `MouseDownInHeaderOfTableColumn`통해 `DidClickTableColumn`UI 상호 작용을 처리 하는의 사용자 지정 서브 클래스 인스턴스가 할당 됩니다.
+- `Delegate` 속성에는 지정 된 모델 개체에 대 한 뷰를 제공 하는 `NSTableViewDelegate`의 사용자 지정 하위 클래스 인스턴스가 할당 되 고 (`GetViewForItem`를 통해) UI 상호 작용 (`DidClickTableColumn`, `MouseDownInHeaderOfTableColumn`등을 통해)을 처리 합니다.
 
 경우에 따라 대리자 또는 데이터 소스에 지정 된 후크를 벗어나 컨트롤을 사용자 지정 하 고 뷰를 직접 서브 클래스 할 수 있습니다. 그러나 대부분의 경우 기본 동작을 재정의 하려면 모든 동작을 직접 처리 해야 합니다. 선택 동작을 사용자 지정 하려면 모든 선택 동작을 직접 구현 해야 할 수도 있습니다.
 
-Xamarin.ios에서와 `UITableView` 같은 일부 api는 대리자와 데이터 소스 (`UITableViewSource`)를 모두 구현 하는 속성으로 확장 되었습니다. 이를 통해 단일 C# 클래스가 기본 클래스를 하나만 가질 수 있는 일반적인 제한 사항을 해결할 수 있으며 기본 클래스를 통해 프로토콜을 쉽게 확인할 수 있습니다.
+Xamarin.ios에서 `UITableView`와 같은 일부 Api는 대리자와 데이터 소스 (`UITableViewSource`)를 모두 구현 하는 속성으로 확장 되었습니다. 이를 통해 단일 C# 클래스가 기본 클래스를 하나만 가질 수 있는 일반적인 제한 사항을 해결할 수 있으며 기본 클래스를 통해 프로토콜을 쉽게 확인할 수 있습니다.
 
 Xamarin.ios 응용 프로그램에서 테이블 뷰로 작업 하는 방법에 대 한 자세한 내용은 [테이블 보기](~/mac/user-interface/table-view.md) 설명서를 참조 하세요.
 
 ## <a name="protocols"></a>프로토콜
 
-목표-C의 프로토콜은의 C#인터페이스와 비교할 수 있으며, 대부분의 경우 비슷한 상황에서 사용 됩니다. 예를 들어 `NSTableView` 위의 예제에서 대리자와 데이터 소스는 모두 실제로 프로토콜입니다. Xamarin.ios는 재정의할 수 있는 가상 메서드를 사용 하 여 이러한 클래스를 기본 클래스로 노출 합니다. C# 인터페이스와 객관적인 프로토콜의 주요 차이점은 프로토콜의 일부 메서드를 구현 하는 것이 선택 사항 일 수 있다는 것입니다. 선택 사항인 항목을 확인 하려면 API의 설명서 및/또는 정의를 확인 해야 합니다.
+목표-C의 프로토콜은의 C#인터페이스와 비교할 수 있으며, 대부분의 경우 비슷한 상황에서 사용 됩니다. 예를 들어 위의 `NSTableView` 예제에서 대리자와 데이터 소스는 모두 실제로 프로토콜입니다. Xamarin.ios는 재정의할 수 있는 가상 메서드를 사용 하 여 이러한 클래스를 기본 클래스로 노출 합니다. C# 인터페이스와 객관적인 프로토콜의 주요 차이점은 프로토콜의 일부 메서드를 구현 하는 것이 선택 사항 일 수 있다는 것입니다. 선택 사항인 항목을 확인 하려면 API의 설명서 및/또는 정의를 확인 해야 합니다.
 
 자세한 내용은 [대리인, 프로토콜 및 이벤트 설명서를](~/ios/app-fundamentals/delegates-protocols-and-events.md) 참조 하세요.
 
@@ -60,4 +60,4 @@ Xamarin.ios 응용 프로그램에서 테이블 뷰로 작업 하는 방법에 �
 - [테이블 보기](~/mac/user-interface/table-view.md)
 - [Windows 작업](~/mac/user-interface/window.md)
 - [대리자, 프로토콜 및 이벤트](~/ios/app-fundamentals/delegates-protocols-and-events.md)
-- [Model-View-Controller](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
+- [모델-뷰-컨트롤러](https://developer.apple.com/library/ios/documentation/general/conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)

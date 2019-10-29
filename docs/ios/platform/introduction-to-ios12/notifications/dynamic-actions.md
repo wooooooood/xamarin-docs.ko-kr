@@ -4,15 +4,15 @@ description: IOS 12를 사용 하는 알림 콘텐츠 확장은 알림과 함께
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 5be233e9b07069dc7c9842a3ddd00e7d46d9c22f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cb38d222cecd1a6c5bb65b0fb376888770dd0e49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291280"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031970"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Xamarin.ios의 동적 알림 작업 단추
 
@@ -32,12 +32,12 @@ IOS 12에서 알림은 연결 된 작업 단추를 동적으로 추가, 제거 �
 알림의 범주가 기본 작업 단추를 결정 합니다.
 
 응용 프로그램이 시작 되는 동안 알림 범주를 만들고 등록 합니다.
-예를 들어 [샘플 앱](#sample-app-redgreennotifications)에서의 `AppDelegate` 메서드는 `FinishedLaunching` 다음을 수행 합니다.
+예를 들어 [샘플 앱](#sample-app-redgreennotifications)에서 `AppDelegate`의 `FinishedLaunching` 메서드는 다음을 수행 합니다.
 
 - 빨간색 알림에 대 한 범주 하나를 정의 하 고 다른 범주를 녹색 알림으로 정의 합니다.
-- 다음을 호출 하 여 이러한 범주를 등록 합니다.[`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
-메서드`UNUserNotificationCenter`
-- 단일를 연결 합니다.[`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
+- [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*) 를 호출 하 여 이러한 범주를 등록 합니다.
+`UNUserNotificationCenter`의 메서드
+- 단일 [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction) 연결
 각 범주에
 
 다음 샘플 코드에서는이 작업을 수행 하는 방법을 보여 줍니다.
@@ -74,14 +74,14 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-해당 코드를 기반으로 하는 모든 알림[`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
+이 코드를 기반으로 [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier) 의 모든 알림
 는 "빨간색-범주" 또는 "녹색 범주"는 기본적으로 **20 ° 회전** 동작 단추를 표시 합니다.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>알림 작업 단추의 앱 내 처리
 
-`UNUserNotificationCenter`에는 형식의 [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate) 속성이있습니다.`Delegate`
+`UNUserNotificationCenter`에는 [`IUNUserNotificationCenterDelegate`](xref:UserNotifications.IUNUserNotificationCenterDelegate)형식의 `Delegate` 속성이 있습니다.
 
-샘플 앱에서는 자체 `AppDelegate` 를 사용자 알림 센터의 `FinishedLaunching`대리자로 설정 합니다.
+샘플 앱에서 `AppDelegate`은 `FinishedLaunching`에서 사용자 알림 센터의 대리자로 설정 됩니다.
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-그런 다음 `AppDelegate` 을 구현 합니다.[`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
+그런 다음 `AppDelegate`를 구현 [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 작업 단추 탭을 처리 하려면 다음을 수행 합니다.
 
 ```csharp
@@ -119,27 +119,27 @@ public void DidReceiveNotificationResponse(UNUserNotificationCenter center, UNNo
         }
 ```
 
-이 구현 `DidReceiveNotificationResponse` 에서는 알림의 **20 ° 회전** 동작 단추가 처리 되지 않습니다. 대신 알림의 콘텐츠 확장은이 단추의 탭을 처리 합니다. 다음 섹션에서는 알림 작업 단추 처리에 대해 자세히 설명 합니다.
+이 `DidReceiveNotificationResponse` 구현에서는 알림의 **20 ° 회전** 작업 단추를 처리 하지 않습니다. 대신 알림의 콘텐츠 확장은이 단추의 탭을 처리 합니다. 다음 섹션에서는 알림 작업 단추 처리에 대해 자세히 설명 합니다.
 
 ## <a name="action-buttons-in-the-notification-content-extension"></a>알림 콘텐츠 확장의 작업 단추
 
 알림 콘텐츠 확장은 알림에 대 한 사용자 지정 인터페이스를 정의 하는 보기 컨트롤러를 포함 합니다.
 
-이 뷰 컨트롤러는의 및 `GetNotificationActions` `SetNotificationActions` 메서드를 사용할 수 있습니다.[`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
+이 뷰 컨트롤러는 `GetNotificationActions` 및 `SetNotificationActions` 메서드를 사용할 수 있습니다 [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 알림 작업 단추를 액세스 하 고 수정 하는 속성입니다.
 
 샘플 앱에서 알림 콘텐츠 확장의 뷰 컨트롤러는 이미 존재 하는 작업 단추를 탭 하 여 응답 하는 경우에만 작업 단추를 수정 합니다.
 
 > [!NOTE]
-> 알림 콘텐츠 확장 프로그램은 [iunnotificationcontentextension](xref:UserNotificationsUI.IUNNotificationContentExtension)의 일부로 선언 된 해당 뷰 [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) 컨트롤러의 메서드에 있는 작업 단추 탭에 응답할 수 있습니다.
+> 알림 콘텐츠 확장 프로그램은 해당 뷰 컨트롤러의 [`DidReceiveNotificationResponse`](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) 메서드에서 [Iunnotificationcontentextension](xref:UserNotificationsUI.IUNNotificationContentExtension)의 일부로 선언 된 작업 단추 탭에 응답할 수 있습니다.
 >
-> `DidReceiveNotificationResponse` [위에서 설명한](#in-app-handling-of-notification-action-buttons)메서드와 이름을 공유 하지만이는 다른 메서드입니다.
+> [위에서 설명한](#in-app-handling-of-notification-action-buttons)`DidReceiveNotificationResponse` 메서드와 이름을 공유 하지만이는 다른 메서드입니다.
 >
 > 알림 콘텐츠 확장 프로그램이 단추 탭 처리를 완료 한 후에는 주 응용 프로그램이 동일한 단추 탭을 처리 하도록 지시할 지 여부를 선택할 수 있습니다. 이렇게 하려면 [Unnotificationcontentextensionresponseoption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) 의 적절 한 값을 완료 처리기에 전달 해야 합니다.
 >
-> - `Dismiss`알림 인터페이스를 해제 해야 하며, 기본 앱이 단추 탭을 처리할 필요가 없음을 나타냅니다.
-> - `DismissAndForwardAction`알림 인터페이스를 해제 해야 하며, 기본 앱에서 단추 탭도 처리 해야 함을 나타냅니다.
-> - `DoNotDismiss`알림 인터페이스를 해제 해서는 안 되며 기본 앱이 단추 탭을 처리할 필요가 없음을 나타냅니다.
+> - `Dismiss` 알림 인터페이스를 해제 해야 하며, 기본 앱이 단추 탭을 처리할 필요가 없음을 나타냅니다.
+> - `DismissAndForwardAction` 알림 인터페이스를 해제 해야 하며, 기본 앱에서 단추 탭도 처리 해야 함을 나타냅니다.
+> - `DoNotDismiss` 알림 인터페이스를 해제 해서는 안 되며 기본 앱이 단추 탭을 처리할 필요가 없음을 나타냅니다.
 
 콘텐츠 확장의 `DidReceiveNotificationResponse` 메서드는 탭 된 작업 단추를 확인 하 고, 알림의 인터페이스에서 이미지를 회전 하 고, 작업 **다시 설정** 단추를 표시 하거나 숨깁니다.
 
@@ -184,7 +184,7 @@ public void DidReceiveNotificationResponse(UNNotificationResponse response, Acti
 }
 ```
 
-이 경우 메서드는 완료 처리기에 `UNNotificationContentExtensionResponseOption.DoNotDismiss` 전달 됩니다. 이는 알림의 인터페이스가 열린 상태를 유지 하는 것을 의미 합니다.
+이 경우 메서드는 완료 처리기에 `UNNotificationContentExtensionResponseOption.DoNotDismiss`를 전달 합니다. 이는 알림의 인터페이스가 열린 상태를 유지 하는 것을 의미 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

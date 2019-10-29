@@ -4,25 +4,25 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 OpenTK를
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 908ed187d8d3d341f8d65e3a3d417588492f325f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292962"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029873"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Xamarin.ios의 OpenTK 소개
 
 OpenTK (개방형 도구 키트)는 OpenGL, OpenCL 및 OpenAL C# 작업을 용이 하 게 하는 고급 하위 수준 라이브러리입니다. OpenTK는 3D 그래픽, 오디오 또는 계산 기능을 필요로 하는 게임, 공학용 응용 프로그램 또는 기타 프로젝트에 사용할 수 있습니다. 이 문서에서는 Xamarin.ios 앱에서 OpenTK 사용에 대 한 간략 한 소개를 제공 합니다.
 
-[![](opentk-images/intro01.png "예제 앱 실행")](opentk-images/intro01.png#lightbox)
+[![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램의 OpenTK에 대 한 기본 사항을 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [클래스/메서드를 대상으로 노출 C# -C](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. C# 클래스를 연결 하는 데 사용 되는 `Register` 및 `Export` 명령을 설명 합니다. 목표-C 개체 및 UI 요소입니다.
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 클래스/메서드 노출 C# ](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. 여기에서는 C# 클래스를 목표에 연결 하는 데 사용 되는`Register`및`Export`명령을 설명 합니다. 개체 및 UI 요소
 
 <a name="About_OpenTK" />
 
@@ -36,7 +36,7 @@ OpenTK (개방형 도구 키트)는 OpenGL, OpenCL 및 OpenAL C# 작업을 용�
 - **형식이 안전한 다양 한 바인딩** -OpenTK는 자동 확장 로드, 오류 검사 및 인라인 설명서를 포함 하는 최신 버전의 OpenGL, OPENGL | ES, openal 및 OpenCL를 지원 합니다.
 - **유연한 GUI 옵션** -OpenTK는 게임 및 xamarin.ios 전용으로 특별히 설계 된 고성능 게임 창을 제공 합니다.
 - **완전히 관리 되는 CLS 규격 코드** -OpenTK는 관리 되지 않는 라이브러리가 없는 32 비트 및 64 비트 버전의 macos를 지원 합니다.
-- **3D 수학 도구 키트** OpenTK는 `Vector`3d 수학 `Quaternion` 도구 `Bezier` 키트를 통해, 및 구조체를 `Matrix`제공 합니다.
+- **3D 수학 도구 키트** OpenTK는 3D 수학 도구 키트를 통해 `Vector`, `Matrix`, `Quaternion` 및 `Bezier` 구조체를 제공 합니다.
 
 OpenTK는 3D 그래픽, 오디오 또는 계산 기능을 필요로 하는 게임, 공학용 응용 프로그램 또는 기타 프로젝트에 사용할 수 있습니다.
 
@@ -52,13 +52,13 @@ Xamarin.ios 앱에서 OpenTK를 사용 하는 방법에 대 한 간략 한 소�
 
 ### <a name="starting-a-new-project"></a>새 프로젝트를 시작 하는 중
 
-Mac용 Visual Studio를 시작 하 고 새 Xamarin.ios 솔루션을 만듭니다. **Mac**앱 일반cocoa > 앱을 선택 합니다. >  > 
+Mac용 Visual Studio를 시작 하 고 새 Xamarin.ios 솔루션을 만듭니다. **Mac** > **앱** > **일반** > **cocoa 앱**을 선택 합니다.
 
-[![](opentk-images/sample01.png "새 Cocoa 앱 추가")](opentk-images/sample01.png#lightbox)
+[![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
 
-`MacOpenTK` **프로젝트 이름**으로를 입력 합니다.
+**프로젝트 이름**에 대 한 `MacOpenTK`를 입력 합니다.
 
-[![](opentk-images/sample02.png "프로젝트 이름 설정")](opentk-images/sample02.png#lightbox)
+[![](opentk-images/sample02.png "Setting the project name")](opentk-images/sample02.png#lightbox)
 
 **만들기** 단추를 클릭 하 여 새 프로젝트를 빌드합니다.
 
@@ -68,15 +68,15 @@ Mac용 Visual Studio를 시작 하 고 새 Xamarin.ios 솔루션을 만듭니다
 
 Xamarin.ios 응용 프로그램에서 Open TK를 사용 하려면 먼저 OpenTK 어셈블리에 대 한 참조를 포함 해야 합니다. **솔루션 탐색기**에서 **참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **참조 편집**...을 선택 합니다.
 
-확인 `OpenTK` 을 수행 하 고 **확인** 단추를 클릭 합니다.
+`OpenTK` 하 여 확인을 수행 하 고 **확인** 단추를 클릭 합니다.
 
-[![](opentk-images/sample03.png "프로젝트 참조 편집")](opentk-images/sample03.png#lightbox)
+[![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
 ### <a name="using-opentk"></a>OpenTK 사용
 
-새 프로젝트를 만든 상태에서 `MainWindow.cs` **솔루션 탐색기** 파일을 두 번 클릭 하 여 편집을 위해 엽니다. 클래스가 다음과 `MainWindow` 같이 표시 되도록 합니다.
+새 프로젝트를 만든 후 **솔루션 탐색기** 에서 `MainWindow.cs` 파일을 두 번 클릭 하 여 편집을 위해 엽니다. `MainWindow` 클래스가 다음과 같이 표시 되도록 합니다.
 
 ```csharp
 using System;
@@ -168,7 +168,7 @@ namespace MacOpenTK
 
 ### <a name="required-apis"></a>필수 Api
 
-Xamarin.ios 클래스에서 OpenTK를 사용 하려면 몇 가지 참조가 필요 합니다. 정의의 시작 부분에는 다음 `using` 문이 포함 되었습니다.
+Xamarin.ios 클래스에서 OpenTK를 사용 하려면 몇 가지 참조가 필요 합니다. 정의의 시작 부분에 다음 `using` 문이 포함 되었습니다.
 
 ```csharp
 using System;
@@ -198,7 +198,7 @@ Game = new MonoMacGameView(ContentView.Frame);
 ContentView = Game;
 ```
 
-여기서는 주 Mac 창과 동일한 크기를 게임 보기에 적용 하 고 창의 콘텐츠 뷰를 새 `MonoMacGameView`으로 바꿉니다. 기존 창 내용을 대체 했기 때문에 주 창의 크기를 조정할 때 제공 된 보기의 크기가 자동으로 조정 됩니다.
+여기서는 주 Mac 창과 동일한 크기를 게임 보기에 적용 하 고 창의 콘텐츠 뷰를 새 `MonoMacGameView`로 대체 했습니다. 기존 창 내용을 대체 했기 때문에 주 창의 크기를 조정할 때 제공 된 보기의 크기가 자동으로 조정 됩니다.
 
 <a name="Responding_to_Events" />
 
@@ -210,7 +210,7 @@ ContentView = Game;
 
 ### <a name="the-load-event"></a>Load 이벤트
 
-이벤트 `Load` 는 이미지, 질감이 나 음악과 같은 디스크에서 리소스를 로드 하는 장소입니다. 간단한 테스트 앱의 경우에는 `Load` 이벤트를 사용 하지 않지만 참조용으로 포함 되어 있습니다.
+`Load` 이벤트는 이미지, 질감 또는 음악과 같은 디스크에서 리소스를 로드 하는 장소입니다. 간단한 테스트 앱의 경우 `Load` 이벤트를 사용 하지 않지만 참조용으로 포함 되어 있습니다.
 
 ```csharp
 Game.Load += (sender, e) =>
@@ -223,7 +223,7 @@ Game.Load += (sender, e) =>
 
 ### <a name="the-resize-event"></a>크기 조정 이벤트
 
-게임 `Resize` 보기의 크기를 조정할 때마다 이벤트를 호출 해야 합니다. 샘플 앱의 경우 다음 코드를 사용 하 여 게임 보기 (Mac 주 창에의 한 자동 크기 조정)와 동일한 크기로 GL 뷰포트를 만듭니다.
+게임 보기의 크기를 조정할 때마다 `Resize` 이벤트를 호출 해야 합니다. 샘플 앱의 경우 다음 코드를 사용 하 여 게임 보기 (Mac 주 창에의 한 자동 크기 조정)와 동일한 크기로 GL 뷰포트를 만듭니다.
 
 ```csharp
 Game.Resize += (sender, e) =>
@@ -237,7 +237,7 @@ Game.Resize += (sender, e) =>
 
 ### <a name="the-updateframe-event"></a>UpdateFrame 이벤트
 
-`UpdateFrame` 이벤트는 사용자 입력을 처리 하 고, 개체 위치를 업데이트 하 고, 물리 또는 AI 계산을 실행 하는 데 사용 됩니다. 간단한 테스트 앱의 경우에는 `UpdateFrame` 이벤트를 사용 하지 않지만 참조용으로 포함 되어 있습니다.
+`UpdateFrame` 이벤트는 사용자 입력을 처리 하 고, 개체 위치를 업데이트 하 고, 물리 또는 AI 계산을 실행 하는 데 사용 됩니다. 간단한 테스트 앱의 경우 `UpdateFrame` 이벤트를 사용 하지 않지만 참조용으로 포함 되어 있습니다.
 
 ```csharp
 Game.UpdateFrame += (sender, e) =>
@@ -247,13 +247,13 @@ Game.UpdateFrame += (sender, e) =>
 ```
 
 > [!IMPORTANT]
-> OpenTK의 xamarin.ios 구현에는 `Input API`가 포함 되지 않으므로 키보드 및 마우스 지원을 추가 하려면 Apple에서 제공 하는 api를 사용 해야 합니다. 필요에 따라 `MonoMacGameView` 의 사용자 지정 인스턴스를 만들고 및 `KeyUp` 메서드를 `KeyDown` 재정의할 수 있습니다.
+> OpenTK의 Xamarin.ios 구현에는 `Input API`포함 되지 않으므로 키보드 및 마우스 지원을 추가 하려면 Apple에서 제공 하는 Api를 사용 해야 합니다. 선택적으로 `MonoMacGameView`의 사용자 지정 인스턴스를 만들고 `KeyDown` 및 `KeyUp` 메서드를 재정의할 수 있습니다.
 
 <a name="The_RenderFrame_Event" />
 
 ### <a name="the-renderframe-event"></a>RenderFrame 이벤트
 
-이벤트 `RenderFrame` 에는 그래픽을 렌더링 (그리기) 하는 데 사용 되는 코드가 포함 되어 있습니다. 예제 앱의 경우 간단한 삼각형으로 게임 보기를 채웁니다.
+`RenderFrame` 이벤트에는 그래픽을 렌더링 (그리기) 하는 데 사용 되는 코드가 포함 되어 있습니다. 예제 앱의 경우 간단한 삼각형으로 게임 보기를 채웁니다.
 
 ```csharp
 Game.RenderFrame += (sender, e) =>
@@ -277,10 +277,10 @@ Game.RenderFrame += (sender, e) =>
 };
 ```
 
-일반적으로 렌더링 코드는를 `GL.Clear` 호출 하 여 새 요소를 그리기 전에 기존 요소를 제거 합니다.
+일반적으로 렌더링 코드는 새 요소를 그리기 전에 기존 요소를 제거 하는 `GL.Clear`에 대 한 호출을 수행 합니다.
 
 > [!IMPORTANT]
-> OpenTK의 xamarin.ios 버전의 경우 렌더링 코드의 끝에서 `MonoMacGameView` 인스턴스의 `SwapBuffers` 메서드를 호출 **하지 마십시오** . 이렇게 하면 렌더링 된 뷰를 표시 하는 대신 게임 보기가 섬광에 빠르게 표시 됩니다.
+> OpenTK의 Xamarin.ios 버전에서 렌더링 코드의 끝에 `MonoMacGameView` 인스턴스의 `SwapBuffers` 메서드를 호출 **하지 마십시오** . 이렇게 하면 렌더링 된 뷰를 표시 하는 대신 게임 보기가 섬광에 빠르게 표시 됩니다.
 
 <a name="Running_the_Game_View" />
 
@@ -293,11 +293,11 @@ Game.RenderFrame += (sender, e) =>
 Game.Run(60.0);
 ```
 
-게임 보기를 업데이트 하는 데 필요한 프레임 속도를 전달 합니다. 예를 들어, 초당 프레임을 선택 `60` 했습니다 (일반 TV와 동일한 새로 고침 속도).
+게임 보기를 업데이트 하는 데 필요한 프레임 속도를 전달 합니다. 예를 들어, 예를 들어 초당 프레임 `60` (일반 TV와 동일한 새로 고침 속도)를 선택 했습니다.
 
 앱을 실행 하 고 출력을 확인 하겠습니다.
 
-[![](opentk-images/intro01.png "앱 출력 샘플")](opentk-images/intro01.png#lightbox)
+[![](opentk-images/intro01.png "A sample of the apps output")](opentk-images/intro01.png#lightbox)
 
 창의 크기를 조정 하는 경우 게임 보기만 존재 하며 삼각형의 크기를 조정 하 고 실시간으로 업데이트 합니다.
 
@@ -307,11 +307,11 @@ Game.Run(60.0);
 
 Xamarin.ios 응용 프로그램에서 OpenTk 작업을 수행 하는 기본 사항을 사용 하 여 다음에 사용해 볼 수 있는 몇 가지 제안 사항을 확인할 수 있습니다.
 
-- `Load` 및`RenderFrame` 이벤트에서 게임 보기의 삼각형 색과 배경색을 변경해 보세요.
-- `UpdateFrame` 사용자가 `KeyDown` 및 `RenderFrame` 이벤트에서 키를 누르거나 고유한 사용자 지정 `MonoMacGameView` 클래스를 만들고 및 메서드를 `KeyUp` 재정의 하는 경우 삼각형의 색을 변경 합니다.
+- `Load` 및 `RenderFrame` 이벤트에서 게임 보기의 삼각형 색과 배경색을 변경해 보세요.
+- 사용자가 `UpdateFrame`의 키를 누르고 이벤트를 `RenderFrame` 하거나 사용자 지정 `MonoMacGameView` 클래스를 만들어 `KeyUp` 및 `KeyDown` 메서드를 재정의 하는 경우 삼각형 변경 색을 설정 합니다.
 - `UpdateFrame` 이벤트에서 인식 되는 키를 사용 하 여 삼각형이 화면에서 이동 하도록 합니다. 힌트: `Matrix4.CreateTranslation` 메서드를 사용 하 여 변환 행렬을 만들고 `GL.LoadMatrix` 메서드를 호출 하 여 `RenderFrame` 이벤트에서 로드 합니다.
-- 루프를 `for` 사용 하 여 `RenderFrame` 이벤트에서 여러 삼각형을 렌더링 합니다.
-- 카메라를 회전 하 여 3D 공간에서 삼각형의 다른 보기를 제공 합니다. 힌트: `Matrix4.CreateTranslation` 메서드를 사용 하 여 변환 행렬을 만들고 `GL.LoadMatrix` 메서드를 호출 하 여 로드 합니다. 카메라 `Vector2`조작을 위해 `Vector3` ,및`Matrix4`클래스 를 사용할 수도 있습니다. `Vector4`
+- `for` 루프를 사용 하 여 `RenderFrame` 이벤트에서 여러 삼각형을 렌더링 합니다.
+- 카메라를 회전 하 여 3D 공간에서 삼각형의 다른 보기를 제공 합니다. 힌트: `Matrix4.CreateTranslation` 메서드를 사용 하 여 변환 행렬을 만들고 `GL.LoadMatrix` 메서드를 호출 하 여 로드 합니다. 카메라 조작을 위해 `Vector2`, `Vector3`, `Vector4` 및 `Matrix4` 클래스를 사용할 수도 있습니다.
 
 더 많은 예제는 [OpenTK 샘플 GitHub](https://github.com/opentk/opentk/tree/master/Source/Examples) 리포지토리를 참조 하세요. OpenTK 사용의 공식 예제 목록이 포함 되어 있습니다. OpenTK의 Xamarin.ios 버전과 함께를 사용 하기 위해 이러한 예제를 조정 해야 합니다.
 

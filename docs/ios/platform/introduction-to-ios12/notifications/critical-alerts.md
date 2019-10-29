@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 중요 한 경고를 사용 �
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 54a214215f77b66f6a4b134dcb8d27b26c44fb6c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 43b810b95e4da2927030617e68c0ade824a0beaa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291286"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031971"
 ---
 # <a name="critical-alerts-in-xamarinios"></a>Xamarin.ios의 중요 한 알림
 
@@ -28,7 +28,7 @@ Apple에서이 자격을 수신 하 고 앱을 사용 하도록 구성 하는 �
 
 앱의 알림 권한 부여 요청은 사용자에 게 앱의 알림을 허용 하거나 허용 하지 않도록 요청 하는 메시지를 표시 합니다. 알림 권한 부여 요청에서 중요 한 경고를 보낼 수 있는 권한을 요청 하면 앱은 사용자에 게 중요 한 경고를 옵트인 (opt in) 할 수 있는 기회를 제공 합니다.
 
-다음 코드에서는 적절 한를 전달 하 여 중요 한 경고와 표준 알림 및 소리를 모두 보낼 수 있는 권한을 요청 합니다.[`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
+다음 코드에서는 적절 한를 전달 하 여 중요 한 경고와 표준 알림과 소리를 모두 보낼 수 있는 권한을 요청 [`UNAuthorizationOptions`](xref:UserNotifications.UNAuthorizationOptions)
 [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)값:
 
 ```csharp
@@ -45,13 +45,13 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 
 ## <a name="local-critical-alerts"></a>중요 한 로컬 경고
 
-중요 한 로컬 경고를 보내려면 다음을 만듭니다.[`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent)
-해당 `Sound` 속성을 다음 중 하나로 설정 합니다.
+중요 한 로컬 경고를 보내려면 [`UNMutableNotificationContent`](xref:UserNotifications.UNMutableNotificationContent) 를 만듭니다.
+`Sound` 속성을 다음 중 하나로 설정 합니다.
 
-- `UNNotificationSound.DefaultCriticalSound`기본 중요 알림 소리를 사용 하는입니다.
-- `UNNotificationSound.GetCriticalSound`-앱과 볼륨에 번들로 제공 되는 사용자 지정 사운드를 지정할 수 있습니다.
+- 기본 중요 알림 소리를 사용 하는 `UNNotificationSound.DefaultCriticalSound`.
+- `UNNotificationSound.GetCriticalSound`-앱 및 볼륨과 함께 제공 되는 사용자 지정 사운드를 지정할 수 있습니다.
 
-그런 다음 알림 콘텐츠에서 `UNNotificationRequest` 를 만들고 알림 센터에 추가 합니다.
+그런 다음 알림 콘텐츠에서 `UNNotificationRequest`를 만들고 알림 센터에 추가 합니다.
 
 ```csharp
 var content = new UNMutableNotificationContent()

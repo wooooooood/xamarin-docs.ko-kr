@@ -4,15 +4,15 @@ description: 이 가이드에서는 Android 마모 1.0에 대 한 사용자 지�
 ms.prod: xamarin
 ms.assetid: 4D3F9A40-A820-458D-A12A-D784BB11F643
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/23/2018
-ms.openlocfilehash: a6dfab949eb19708f69d838a7c792f2e7bbd76b3
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 38123e2b1ef20144606bcc77ad33af572aa3707a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70758512"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030380"
 ---
 # <a name="creating-a-watch-face"></a>시계 모드 만들기
 
@@ -122,20 +122,20 @@ Android 마모는 `CanvasWatchFaceService` 클래스를 통해 조사식 얼굴�
 
 다음 섹션에서는 다음 단계를 수행 하 여 사용자 지정 watch face 서비스를 만듭니다.
 
-1. @No__t_1에서 파생 되는 `MyWatchFaceService` 라는 클래스를 정의 합니다.
+1. `CanvasWatchFaceService`에서 파생 되는 `MyWatchFaceService` 라는 클래스를 정의 합니다.
 
-2. @No__t_0 내에서 `CanvasWatchFaceService.Engine`에서 파생 된 `MyWatchFaceEngine` 이라는 중첩 된 클래스를 만듭니다.
+2. `MyWatchFaceService`내에서 `CanvasWatchFaceService.Engine`에서 파생 된 `MyWatchFaceEngine` 이라는 중첩 된 클래스를 만듭니다.
 
-3. @No__t_0에서 `MyWatchFaceEngine`를 인스턴스화하고 반환 하는 `CreateEngine` 메서드를 구현 합니다.
+3. `MyWatchFaceService`에서 `MyWatchFaceEngine`를 인스턴스화하고 반환 하는 `CreateEngine` 메서드를 구현 합니다.
 
-4. @No__t_0에서 `OnCreate` 메서드를 구현 하 여 조사식 얼굴 스타일을 만들고 다른 초기화 작업을 수행 합니다.
+4. `MyWatchFaceEngine`에서 `OnCreate` 메서드를 구현 하 여 조사식 얼굴 스타일을 만들고 다른 초기화 작업을 수행 합니다.
 
-5. @No__t_1의 `OnDraw` 메서드를 구현 합니다. 이 메서드는 조사식 얼굴을 다시 그려야 할 때마다 호출 됩니다 (즉, *무효화*됨). `OnDraw`는 시, 분, 초 등의 조사식 얼굴 요소를 그리고 다시 그리는 메서드입니다.
+5. `MyWatchFaceEngine`의 `OnDraw` 메서드를 구현 합니다. 이 메서드는 조사식 얼굴을 다시 그려야 할 때마다 호출 됩니다 (즉, *무효화*됨). `OnDraw`는 시, 분, 초 등의 조사식 얼굴 요소를 그리고 다시 그리는 메서드입니다.
 
-6. @No__t_1의 `OnTimeTick` 메서드를 구현 합니다.
+6. `MyWatchFaceEngine`의 `OnTimeTick` 메서드를 구현 합니다.
     `OnTimeTick`은 1 분에 한 번 이상 (주변 모드와 대화형 모드에서) 또는 날짜/시간이 변경 된 경우 호출 됩니다.
 
-@No__t_0에 대 한 자세한 내용은 Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) API 설명서를 참조 하세요.
+`CanvasWatchFaceService`에 대 한 자세한 내용은 Android [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.html) API 설명서를 참조 하세요.
 마찬가지로 [CanvasWatchFaceService](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) 는 시계 모양의 실제 구현을 설명 합니다.
 
 ### <a name="add-the-canvaswatchfaceservice"></a>CanvasWatchFaceService 추가
@@ -186,7 +186,7 @@ namespace WatchFace
 
 ### <a name="implement-the-engine-oncreate-method"></a>엔진 OnCreate 메서드 구현
 
-@No__t_0 메서드는 조사식 표면을 초기화 합니다. @No__t_0에 다음 필드를 추가 합니다.
+`OnCreate` 메서드는 조사식 표면을 초기화 합니다. `MyWatchFaceEngine`에 다음 필드를 추가 합니다.
 
 ```csharp
 Paint hoursPaint;
@@ -211,9 +211,9 @@ public override void OnCreate(ISurfaceHolder holder)
 }
 ```
 
-`OnCreate`은 `MyWatchFaceEngine` 시작 된 직후에 호출 됩니다. @No__t_0 (마모 장치가 사용자와 상호 작용 하는 방식을 제어)를 설정 하 고 시간을 표시 하는 데 사용 되는 `Paint` 개체를 인스턴스화합니다.
+`OnCreate`은 `MyWatchFaceEngine` 시작 된 직후에 호출 됩니다. `WatchFaceStyle` (마모 장치가 사용자와 상호 작용 하는 방식을 제어)를 설정 하 고 시간을 표시 하는 데 사용 되는 `Paint` 개체를 인스턴스화합니다.
 
-@No__t_0 호출에서는 다음을 수행 합니다.
+`SetWatchFaceStyle` 호출에서는 다음을 수행 합니다.
 
 1. *피킹 (peeking) 모드* 를 `PeekModeShort`으로 설정 합니다. 그러면 알림이 디스플레이에서 작은 "피킹" 카드로 표시 됩니다.
 
@@ -223,11 +223,11 @@ public override void OnCreate(ISurfaceHolder holder)
 
 이러한 색 및 기타 조사식 얼굴 스타일 옵션에 대 한 자세한 내용은 Android [WatchFaceStyle](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceStyle.Builder.html) API 설명서를 참조 하세요.
 
-@No__t_0 완료 되 면 `OnCreate` `Paint` 개체 (`hoursPaint`)를 인스턴스화하고 해당 색을 흰색으로, 텍스트 크기를 48 픽셀 ([TextSize](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) 를 픽셀 단위로 지정 해야 함)로 설정 합니다.
+`SetWatchFaceStyle` 완료 되 면 `OnCreate` `Paint` 개체 (`hoursPaint`)를 인스턴스화하고 해당 색을 흰색으로, 텍스트 크기를 48 픽셀 ([TextSize](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) 를 픽셀 단위로 지정 해야 함)로 설정 합니다.
 
 ### <a name="implement-the-engine-ondraw-method"></a>엔진 OnDraw 메서드 구현
 
-@No__t_0 메서드는 실제로 숫자 및 시계 표면 바늘과 같은 조사식 얼굴 요소를 그리는 메서드인 &ndash; 가장 중요 한 `CanvasWatchFaceService.Engine` 메서드입니다.
+`OnDraw` 메서드는 실제로 숫자 및 시계 표면 바늘과 같은 조사식 얼굴 요소를 그리는 메서드인 &ndash; 가장 중요 한 `CanvasWatchFaceService.Engine` 메서드입니다.
 다음 예제에서는 조사식 면에 시간 문자열을 그립니다.
 `MyWatchFaceEngine`에 다음 메서드를 추가합니다.
 
@@ -243,7 +243,7 @@ public override void OnDraw (Canvas canvas, Rect frame)
 
 Android에서 `OnDraw`를 호출 하면 `Canvas` 인스턴스 및 얼굴을 그릴 수 있는 범위가 전달 됩니다. 위의 코드 예제에서 `DateTime`를 사용 하 여 현재 시간을 시간 및 분 (12 시간 형식)으로 계산 합니다. 결과 시간 문자열은 `Canvas.DrawText` 메서드를 사용 하 여 캔버스에 그려집니다. 문자열은 왼쪽 가장자리에서 70 픽셀, 위쪽 가장자리부터 80 픽셀까지 표시 됩니다.
 
-@No__t_0 메서드에 대 한 자세한 내용은 Android [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) API 설명서를 참조 하세요.
+`OnDraw` 메서드에 대 한 자세한 내용은 Android [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) API 설명서를 참조 하세요.
 
 ### <a name="implement-the-engine-ontimetick-method"></a>엔진 OnTimeTick 메서드 구현
 
@@ -256,9 +256,9 @@ public override void OnTimeTick()
 }
 ```
 
-이 `OnTimeTick` 구현은 단순히 `Invalidate`를 호출 합니다. @No__t_0 메서드는 `OnDraw`를 예약 하 여 조사식 얼굴을 다시 그립니다.
+이 `OnTimeTick` 구현은 단순히 `Invalidate`를 호출 합니다. `Invalidate` 메서드는 `OnDraw`를 예약 하 여 조사식 얼굴을 다시 그립니다.
 
-@No__t_0 방법에 대 한 자세한 내용은 Android [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) API 설명서를 참조 하세요.
+`OnTimeTick` 방법에 대 한 자세한 내용은 Android [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick()) API 설명서를 참조 하세요.
 
 ## <a name="register-the-canvaswatchfaceservice"></a>CanvasWatchFaceService 등록
 
@@ -286,9 +286,9 @@ public override void OnTimeTick()
 
 이 XML은 다음을 수행 합니다.
 
-1. @No__t_0 사용 권한을 설정 합니다. 이 사용 권한은 장치에서 시스템 배경 화면을 변경할 수 있는 시계 표면 서비스 권한을 제공 합니다. 이 권한은 외부 `<application>` 섹션이 아닌 `<service>` 섹션에서 설정 해야 합니다.
+1. `android.permission.BIND_WALLPAPER` 사용 권한을 설정 합니다. 이 사용 권한은 장치에서 시스템 배경 화면을 변경할 수 있는 시계 표면 서비스 권한을 제공 합니다. 이 권한은 외부 `<application>` 섹션이 아닌 `<service>` 섹션에서 설정 해야 합니다.
 
-2. @No__t_0 리소스를 정의 합니다. 이 리소스는 `wallpaper` 리소스를 선언 하는 간단한 XML 파일입니다 (이 파일은 다음 섹션에서 만들어짐).
+2. `watch_face` 리소스를 정의 합니다. 이 리소스는 `wallpaper` 리소스를 선언 하는 간단한 XML 파일입니다 (이 파일은 다음 섹션에서 만들어짐).
 
 3. 조사식 선택 선택 화면에 표시 되는 `preview` 라는 그릴 수 있는 이미지를 선언 합니다.
 
@@ -379,7 +379,7 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 3. 조사식 표면의 가장자리 둘레의 시간 틱을 그리기 위해 `Paint` 개체를 초기화 합니다.
 
-4. 두 번째 손을 매 초 마다 다시 그리도록 `Invalidate` (다시 그리기) 메서드를 호출 하는 타이머를 만듭니다. @No__t_0는 1 분 마다 한 번만 `Invalidate` 호출 하므로이 타이머가 필요 합니다.
+4. 두 번째 손을 매 초 마다 다시 그리도록 `Invalidate` (다시 그리기) 메서드를 호출 하는 타이머를 만듭니다. `OnTimeTick`는 1 분 마다 한 번만 `Invalidate` 호출 하므로이 타이머가 필요 합니다.
 
 이 예제는 xamarin_background 이미지 **를** 하나만 포함 합니다. 그러나 사용자 지정 시청 얼굴에서 지원할 각 화면 밀도 마다 다른 배경 이미지를 만들 수 있습니다.
 
@@ -401,19 +401,19 @@ Watch 서비스를 실행 하려면 먼저 **watch_face** 리소스와 미리 �
 
 #### <a name="onpropertieschanged"></a>On속성이 변경 됨
 
-이 메서드는 마모 된 장치의 속성 (예: 낮은 비트 주변 모드 및 굽기 방지)에 대 한 `MyWatchFaceEngine` 알리기 위해 호출 됩니다. @No__t_0에서이 메서드는 낮은 비트 앰비언트 모드 (낮음 비트 앰비언트 모드에서는 각 색의 비트 수를 줄일 수 있습니다)를 확인 합니다.
+이 메서드는 마모 된 장치의 속성 (예: 낮은 비트 주변 모드 및 굽기 방지)에 대 한 `MyWatchFaceEngine` 알리기 위해 호출 됩니다. `MyWatchFaceEngine`에서이 메서드는 낮은 비트 앰비언트 모드 (낮음 비트 앰비언트 모드에서는 각 색의 비트 수를 줄일 수 있습니다)를 확인 합니다.
 
 이 메서드에 대 한 자세한 내용은 Android [On등록 변경](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29) API 설명서를 참조 하세요.
 
 #### <a name="onambientmodechanged"></a>OnAmbientModeChanged
 
-이 메서드는 마모 장치가 앰비언트 모드에 들어가거나 종료 될 때 호출 됩니다. @No__t_0 구현에서 조사식은 앰비언트 모드일 때 앤티앨리어싱을 사용 하지 않도록 설정 합니다.
+이 메서드는 마모 장치가 앰비언트 모드에 들어가거나 종료 될 때 호출 됩니다. `MyWatchFaceEngine` 구현에서 조사식은 앰비언트 모드일 때 앤티앨리어싱을 사용 하지 않도록 설정 합니다.
 
 이 메서드에 대 한 자세한 내용은 Android [onAmbientModeChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) API 설명서를 참조 하세요.
 
 #### <a name="onvisibilitychanged"></a>OnVisibilityChanged
 
-이 메서드는 조사식이 표시 되거나 숨겨질 때마다 호출 됩니다. @No__t_0에서이 메서드는 표시 상태에 따라 표준 시간대 수신기 (아래 설명)를 등록/등록 취소 합니다.
+이 메서드는 조사식이 표시 되거나 숨겨질 때마다 호출 됩니다. `MyWatchFaceEngine`에서이 메서드는 표시 상태에 따라 표준 시간대 수신기 (아래 설명)를 등록/등록 취소 합니다.
 
 이 메서드에 대 한 자세한 내용은 Android [onVisibilityChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29) API 설명서를 참조 하세요.
 
@@ -433,7 +433,7 @@ public class TimeZoneReceiver: BroadcastReceiver
 }
 ```
 
-@No__t_0 및 `UnregisterTimezoneReceiver` 메서드는 `OnVisibilityChanged` 메서드에서 호출 됩니다.
+`RegisterTimezoneReceiver` 및 `UnregisterTimezoneReceiver` 메서드는 `OnVisibilityChanged` 메서드에서 호출 됩니다.
 `UnregisterTimezoneReceiver`은 조사식 표면의 표시 상태가 숨김으로 변경 될 때 호출 됩니다. 조사식 얼굴을 다시 표시 하면 `RegisterTimezoneReceiver` 호출 됩니다 (`OnVisibilityChanged` 메서드 참조).
 
 엔진 `RegisterTimezoneReceiver` 메서드는이 표준 시간대 수신기의 `Receive` 이벤트에 대 한 처리기를 선언 합니다. 이 처리기는 표준 시간대를 초과할 때마다 새 시간으로 `time` 개체를 업데이트 합니다.
@@ -453,7 +453,7 @@ IntentFilter filter = new IntentFilter(Intent.ActionTimezoneChanged);
 Application.Context.RegisterReceiver (timeZoneReceiver, filter);
 ```
 
-@No__t_0 메서드는 표준 시간대 수신기의 등록을 취소 합니다.
+`UnregisterTimezoneReceiver` 메서드는 표준 시간대 수신기의 등록을 취소 합니다.
 
 ```csharp
 Application.Context.UnregisterReceiver (timeZoneReceiver);
@@ -469,7 +469,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 ## <a name="summary"></a>요약
 
-이 연습에서는 사용자 지정 Android 마모 1.0 watchface이 구현 되 고 테스트 되었습니다. @No__t_0 및 `CanvasWatchFaceService.Engine` 클래스가 도입 되었으며, 엔진 클래스의 필수 메서드를 구현 하 여 간단한 디지털 watch 얼굴을 만듭니다. 이 구현은 아날로그 시청 얼굴을 만들기 위한 더 많은 기능으로 업데이트 되었으며 표시 유형, 앰비언트 모드 및 장치 속성의 차이점을 처리 하기 위해 추가 메서드가 구현 되었습니다. 마지막으로 표준 시간대 브로드캐스트 수신기가 구현 되어 표준 시간대를 초과 하는 시간이 자동으로 업데이트 됩니다.
+이 연습에서는 사용자 지정 Android 마모 1.0 watchface이 구현 되 고 테스트 되었습니다. `CanvasWatchFaceService` 및 `CanvasWatchFaceService.Engine` 클래스가 도입 되었으며, 엔진 클래스의 필수 메서드를 구현 하 여 간단한 디지털 watch 얼굴을 만듭니다. 이 구현은 아날로그 시청 얼굴을 만들기 위한 더 많은 기능으로 업데이트 되었으며 표시 유형, 앰비언트 모드 및 장치 속성의 차이점을 처리 하기 위해 추가 메서드가 구현 되었습니다. 마지막으로 표준 시간대 브로드캐스트 수신기가 구현 되어 표준 시간대를 초과 하는 시간이 자동으로 업데이트 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

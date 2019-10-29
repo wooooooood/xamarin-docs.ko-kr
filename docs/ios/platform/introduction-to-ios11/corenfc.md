@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11에 도입 된 Api를 사용 하 여 Xama
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: c7a9d359842dde916fc14ffea5ec6e3f453dfee0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752426"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032200"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Xamarin.ios의 핵심 NFC
 
@@ -63,20 +63,20 @@ CoreNFC를 사용 하도록 설정 하려면 프로젝트에서 다음 세 가�
 
 새 **앱 ID** 를 만들고 **NFC 태그 읽기** 서비스가 선택 인지 확인 합니다.
 
-[![개발자 포털 NFC 태그를 선택 하 여 새 앱 ID 페이지 선택](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![개발자 포털 새 앱 ID 페이지와 NFC 태그 읽기가 선택 됨](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 그런 다음이 앱 ID에 대 한 새 프로 비전 프로필을 만든 다음, 개발 Mac에 다운로드 하 여 설치 해야 합니다.
 
 ## <a name="reading-a-tag"></a>태그 읽기
 
-프로젝트가 구성 되 면 파일의 맨 `using CoreNFC;` 위에를 추가 하 고 다음 세 단계를 수행 하 여 NFC 태그 읽기 기능을 구현 합니다.
+프로젝트가 구성 되 면 파일 맨 위에 `using CoreNFC;`를 추가 하 고 다음 세 단계를 수행 하 여 NFC 태그 읽기 기능을 구현 합니다.
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. 구현한`INFCNdefReaderSessionDelegate`
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. `INFCNdefReaderSessionDelegate` 구현
 
 인터페이스에는 다음과 같은 두 가지 메서드를 구현할 수 있습니다.
 
-- `DidDetect`– 태그를 성공적으로 읽으면 호출 됩니다.
-- `DidInvalidate`– 오류가 발생 하거나 60 초 제한 시간에 도달 하면 호출 됩니다.
+- `DidDetect` – 태그를 성공적으로 읽으면 호출 됩니다.
+- `DidInvalidate` – 오류가 발생 하거나 60 초 제한 시간에 도달 하면 호출 됩니다.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -125,7 +125,7 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 
 <a name="step2" />
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. 시작`NFCNdefReaderSession`
+### <a name="2-start-an-nfcndefreadersession"></a>2. `NFCNdefReaderSession` 시작
 
 검색은 단추 누름과 같은 사용자 요청으로 시작 해야 합니다.
 다음 코드는 검색 세션을 만들고 시작 합니다.
@@ -137,17 +137,17 @@ Session?.BeginSession();
 
 `NFCNdefReaderSession` 생성자에 대 한 매개 변수는 다음과 같습니다.
 
-- `delegate`–의 `INFCNdefReaderSessionDelegate`구현입니다. 샘플 코드에서 대리자는 테이블 뷰 컨트롤러에서 구현 되므로 `this` 대리자 매개 변수로 사용 됩니다.
-- `queue`– 콜백이 처리 되는 큐입니다. 이 경우 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 `DispatchQueue.MainQueue` 때를 사용 해야 합니다. `null`
-- `invalidateAfterFirstRead`– 인 `true`경우 검색을 처음 성공한 `false` 후 검색을 중지 하 고, 검색을 취소 하거나 60 초 시간 제한에 도달할 때까지 검색을 계속 하 고 여러 결과를 반환 합니다.
+- `delegate` – `INFCNdefReaderSessionDelegate`의 구현입니다. 샘플 코드에서 대리자는 테이블 뷰 컨트롤러에서 구현 되므로 `this` 대리자 매개 변수로 사용 됩니다.
+- `queue` – 콜백이 처리 되는 큐입니다. `null`수 있으며,이 경우 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 때 `DispatchQueue.MainQueue`를 사용 해야 합니다.
+- `invalidateAfterFirstRead` – `true`하는 경우 첫 번째 검사가 성공한 후 검사가 중지 됩니다. 검색이 취소 되거나 60 초 시간 제한에 도달할 때까지 `false` 검색은 계속 되 고 여러 결과가 반환 됩니다.
 
-### <a name="3-cancel-the-scanning-session"></a>3. 검사 세션 취소
+### <a name="3-cancel-the-scanning-session"></a>3. 검색 세션을 취소 합니다.
 
 사용자는 사용자 인터페이스에서 시스템이 제공 하는 단추를 통해 검색 세션을 취소할 수 있습니다.
 
 ![검사 하는 동안 취소 단추](corenfc-images/scan-cancel-sml.png)
 
-앱은 메서드를 `InvalidateSession` 호출 하 여 프로그래밍 방식으로 검색을 취소할 수 있습니다.
+앱은 `InvalidateSession` 메서드를 호출 하 여 프로그래밍 방식으로 검색을 취소할 수 있습니다.
 
 ```csharp
 Session.InvalidateSession();

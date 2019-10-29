@@ -4,15 +4,15 @@ description: 이 문서는 Xamarin.ios 개발자에 게 제공 되는 다양 한
 ms.prod: xamarin
 ms.assetid: 876B6EC2-E158-43F2-B9C9-03F54F3D2A49
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: f1168378104fd40fa7de78297f1f683d0caa0afa
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7f5303cd63c6ff1433b56b3f47b67d3925b1d1e1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283115"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032789"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>Xamarin.ios의 macOS 사용자 인터페이스 컨트롤
 
@@ -22,7 +22,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 아래에 나열 된 가이드는 Xamarin.ios 응용 프로그램에서 macOS UI 요소를 사용 하는 방법에 대 한 자세한 정보를 제공 합니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 모든 문서
 
-C# 클래스를 연결 하는 데 사용 되는 `Register` 및 `Export` 특성에 대해 설명 하는 대로 [xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [클래스/메서드를 대상으로 노출 C# -C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) 섹션을 살펴볼 수 있습니다. 목적-C 개체 및 UI 요소입니다.
+클래스를 연결 하는 데 사용 되는`Register`및`Export`특성에 대해 설명 하는 대로 [Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [클래스/메서드를 대상으로 C# 노출-C](~/mac/internals/how-it-works.md#exposing-c-classes--methods-to-objective-c) 섹션을 살펴볼 수 있습니다. C# 목표-C 개체 및 UI 요소입니다.
 
 ## <a name="windowsmacuser-interfacewindowmd"></a>[Windows](~/mac/user-interface/window.md)
 
@@ -66,7 +66,7 @@ Xamarin.ios 응용 프로그램에서 단추, 레이블, 텍스트 필드, 확�
 
 ## <a name="creating-custom-controlsmacuser-interfacecustom-controlsmd"></a>[사용자 지정 컨트롤 만들기](~/mac/user-interface/custom-controls.md)
 
-이 문서에서는에서 `NSControl`상속 하 여 사용자 지정 사용자 인터페이스 컨트롤을 만들고, 컨트롤에 대 한 사용자 지정 인터페이스를 그리거나, Xcode의 Interface Builder와 함께 사용할 수 있는 사용자 지정 작업을 만드는 방법을 설명 합니다.
+이 문서에서는 `NSControl`에서 상속 하 여 사용자 지정 사용자 인터페이스 컨트롤을 만들고, 컨트롤에 대 한 사용자 지정 인터페이스를 그리거나, Xcode의 Interface Builder와 함께 사용할 수 있는 사용자 지정 작업을 만드는 방법을 설명 합니다.
 
 ## <a name="mac-samples-gallery"></a>Mac 샘플 갤러리
 

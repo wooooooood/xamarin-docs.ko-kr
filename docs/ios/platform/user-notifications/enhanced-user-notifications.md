@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10에 도입 된 사용자 알림 프레임
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 0ec63162a21333d0ff831ded1ab17a3d8bb0efaa
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 92d62e7ea53893089131a127bf9f2d808c6252b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769371"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031348"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Xamarin.ios에서 향상 된 사용자 알림
 
@@ -84,7 +84,7 @@ IOS 앱에 사용할 수 있는 원격 알림은 다음과 같은 두 가지 유
 
 ### <a name="about-the-existing-notifications-api"></a>기존 알림 API 정보
 
-Ios 10 이전에는 ios 앱이를 사용 `UIApplication` 하 여 시스템에 알림을 등록 하 고 해당 알림이 트리거되는 방법 (시간 또는 위치)을 예약 합니다.
+IOS 10 이전에 iOS 앱은 `UIApplication`를 사용 하 여 시스템에 알림을 등록 하 고 해당 알림이 트리거되는 방법 (시간 또는 위치)을 예약 합니다.
 
 기존 알림 API로 작업할 때 개발자에 게 발생할 수 있는 몇 가지 문제가 있습니다.
 
@@ -127,7 +127,7 @@ IOS 앱이 사용자에 게 알림을 보내기 전에 앱이 시스템에 등�
 
 또한 로컬 알림과 원격 알림 모두에 대해 이러한 승인 수준을 요청 하 고 설정 해야 합니다.
 
-`FinishedLaunching` `UNAuthorizationOptions` 의메서드에다음코드를추가하고원하는알림유형()을설정하여앱이시작되는즉시알림권한을`AppDelegate` 요청 해야 합니다.
+`AppDelegate`의 `FinishedLaunching` 메서드에 다음 코드를 추가 하 고 원하는 알림 유형 (`UNAuthorizationOptions`)을 설정 하 여 앱이 시작 되는 즉시 알림 권한을 요청 해야 합니다.
 
 ```csharp
 using UserNotifications;
@@ -157,38 +157,38 @@ UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
 
 IOS 10의 새로운 기능으로 개발자는 개발 또는 프로덕션 환경에서 실행 되는 환경 푸시 알림을 OS에 알려야 합니다. 이 정보를 제공 하지 않으면 Itunes 앱 스토어에 제출 될 때 앱이 거부 되 고 다음과 같은 알림이 발생할 수 있습니다.
 
-> 푸시 알림 권한 없음-앱에 Apple의 푸시 알림 서비스에 대 한 API가 포함 되어 `aps-environment` 있지만 앱의 서명에 자격이 없습니다.
+> 푸시 알림 권한 없음-앱에 Apple의 푸시 알림 서비스에 대 한 API가 포함 되어 있지만 앱의 서명에 `aps-environment` 자격이 없습니다.
 
 필요한 자격을 제공 하려면 다음을 수행 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. `Entitlements.plist` **Solution Pad** 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. **Solution Pad** 에서 `Entitlements.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 2. **원본** 뷰로 전환 합니다. 
 
-    [![](enhanced-user-notifications-images/setup01.png "원본 뷰")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. 단추를 **+** 클릭 하 여 새 키를 추가 합니다.
-4. 속성 `aps-environment` 에 대해를 입력 하 `String` 고, `development` **형식** 을 그대로 유지 하 `production` 고, **값**에 대해 또는를 입력 합니다. 
+    [![](enhanced-user-notifications-images/setup01.png "The Source view")](enhanced-user-notifications-images/setup01.png#lightbox)
+3. **+** 단추를 클릭 하 여 새 키를 추가 합니다.
+4. **속성**에 대 한 `aps-environment`를 입력 하 고, **형식을** `String` 그대로 두고 **값**에 대해 `development` 또는 `production`를 입력 합니다. 
 
-    [![](enhanced-user-notifications-images/setup02.png "Ap 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
+    [![](enhanced-user-notifications-images/setup02.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. `Entitlements.plist` **솔루션 탐색기** 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-2. 단추를 **+** 클릭 하 여 새 키를 추가 합니다.
-3. 속성 `aps-environment` 에 대해를 입력 하 `String` 고, `development` **형식** 을 그대로 유지 하 `production` 고, **값**에 대해 또는를 입력 합니다. 
+1. **솔루션 탐색기** 에서 `Entitlements.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+2. **+** 단추를 클릭 하 여 새 키를 추가 합니다.
+3. **속성**에 대 한 `aps-environment`를 입력 하 고, **형식을** `String` 그대로 두고 **값**에 대해 `development` 또는 `production`를 입력 합니다. 
 
-    [![](enhanced-user-notifications-images/setup02w.png "Ap 환경 속성")](enhanced-user-notifications-images/setup02.png#lightbox)
+    [![](enhanced-user-notifications-images/setup02w.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 
 -----
 
 ### <a name="registering-for-remote-notifications"></a>원격 알림에 등록 하는 중
 
-앱이 원격 알림을 보내고 받는 경우에도 기존 `UIApplication` API를 사용 하 여 토큰을 _등록_ 해야 합니다. 이 등록을 위해서는 장치에 라이브 네트워크 연결 액세스 APNs가 있어야 하며,이는 앱에 전송 되는 필수 토큰을 생성 합니다. 그러면 앱은 원격 알림을 등록 하기 위해 개발자의 서버 쪽 앱에이 토큰을 전달 해야 합니다.
+앱이 원격 알림을 보내고 받는 경우에도 기존 `UIApplication` API를 사용 하 여 _토큰을 등록_ 해야 합니다. 이 등록을 위해서는 장치에 라이브 네트워크 연결 액세스 APNs가 있어야 하며,이는 앱에 전송 되는 필수 토큰을 생성 합니다. 그러면 앱은 원격 알림을 등록 하기 위해 개발자의 서버 쪽 앱에이 토큰을 전달 해야 합니다.
 
-[![](enhanced-user-notifications-images/token01.png "토큰 등록 개요")](enhanced-user-notifications-images/token01.png#lightbox)
+[![](enhanced-user-notifications-images/token01.png "Token Registration overview")](enhanced-user-notifications-images/token01.png#lightbox)
 
 다음 코드를 사용 하 여 필요한 등록을 초기화 합니다.
 
@@ -198,7 +198,7 @@ UIApplication.SharedApplication.RegisterForRemoteNotifications ();
 
 개발자의 서버 쪽 앱에 전송 되는 토큰은 원격 알림을 보낼 때 서버에서 APNs로 전송 되는 알림 페이로드의 일부로 포함 되어야 합니다.
 
-[![](enhanced-user-notifications-images/token02.png "알림 페이로드의 일부로 포함 된 토큰입니다.")](enhanced-user-notifications-images/token02.png#lightbox)
+[![](enhanced-user-notifications-images/token02.png "The token included as part of the Notification Payload")](enhanced-user-notifications-images/token02.png#lightbox)
 
 토큰은 알림을 열거나 알림에 응답 하는 데 사용 되는 앱과 알림과 함께 연결 되는 키 역할을 합니다.
 
@@ -242,11 +242,11 @@ content.Badge = 1;
 만든 알림의 콘텐츠를 사용 하 여 앱은 *트리거*를 설정 하 여 사용자에 게 알림이 표시 되는 시점을 예약 해야 합니다. iOS 10은 다음과 같은 네 가지 트리거 유형을 제공 합니다.
 
 - **푸시 알림** -원격 알림과 독점적으로 사용 되며 APNs가 장치에서 실행 중인 앱에 알림 패키지를 보낼 때 트리거됩니다.
-- **시간 간격** -시간 간격에서 시작 하 여 일정을 예약 하는 데 사용할 수 있습니다. 예를 들면 `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
+- **시간 간격** -시간 간격에서 시작 하 여 일정을 예약 하는 데 사용할 수 있습니다. 예를 들면 `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`과 같습니다.
 - **일정 날짜** -특정 날짜 및 시간에 대해 로컬 알림이 예약 되도록 허용 합니다.
 - **위치 기반** -iOS 장치에서 특정 지리적 위치를 입력 하거나 종료 하거나 Bluetooth 오류 신호에 대 한 지정 된 근접 위치에 있을 때 로컬 알림을 예약할 수 있습니다.
 
-로컬 알림이 준비 되 면 앱은 `Add` `UNUserNotificationCenter` 개체의 메서드를 호출 하 여 사용자에 게 표시를 예약 해야 합니다. 원격 알림의 경우 서버 쪽 앱은 알림 페이로드를 APNs에 보내고, 그러면이 사용자의 장치에 패킷을 보냅니다.
+로컬 알림이 준비 되 면 앱은 `UNUserNotificationCenter` 개체의 `Add` 메서드를 호출 하 여 사용자에 게 표시를 예약 해야 합니다. 원격 알림의 경우 서버 쪽 앱은 알림 페이로드를 APNs에 보내고, 그러면이 사용자의 장치에 패킷을 보냅니다.
 
 모든 부분을 함께 가져오는 샘플 로컬 알림은 다음과 같습니다.
 
@@ -274,7 +274,7 @@ UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
 
 ## <a name="handling-foreground-app-notifications"></a>포그라운드 앱 알림 처리
 
-IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `WillPresentNotification` 메서드를 구현 하 여 앱은 알림을 표시 하는 데 책임이 있습니다. 예:
+IOS 10을 처음 접하는 앱은 전경에 있고 알림이 트리거될 때 알림을 다르게 처리할 수 있습니다. 앱은 `UNUserNotificationCenterDelegate`를 제공 하 고 `WillPresentNotification` 메서드를 구현 하 여 알림을 표시 하는 데 책임이 있습니다. 예를 들면,
 
 ```csharp
 using System;
@@ -305,15 +305,15 @@ namespace MonkeyNotification
 }
 ```
 
-이 코드는 단순히 응용 프로그램 출력 `UNNotification` 에의 콘텐츠를 작성 하 고 시스템에 알림에 대 한 표준 경고를 표시 하도록 요청 하는 것입니다. 
+이 코드는 단순히 응용 프로그램 출력에 `UNNotification` 콘텐츠를 작성 하 고 시스템에 알림에 대 한 표준 경고를 표시 하도록 요청 하는 것입니다. 
 
-응용 프로그램이 전경에 있을 때 알림 자체를 표시 하 고 시스템 기본값을 사용 하지 않으려는 경우 완료 처리기에 전달 `None` 합니다. 예제:
+응용 프로그램이 전경에 있을 때 알림 자체를 표시 하 고 시스템 기본값을 사용 하지 않으려는 경우 완료 처리기에 `None`를 전달 합니다. 예제:
 
 ```csharp
 completionHandler (UNNotificationPresentationOptions.None);
 ```
 
-이 코드를 저장 하 고 편집을 `AppDelegate.cs` 위해 파일을 열고 메서드를 `FinishedLaunching` 다음과 같이 변경 합니다.
+이 코드를 저장 하 고 편집을 위해 `AppDelegate.cs` 파일을 열고 `FinishedLaunching` 메서드를 다음과 같이 변경 합니다.
 
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -330,13 +330,13 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-이 코드는 앱이 활성 `UNUserNotificationCenterDelegate` 상태이 고 포그라운드에서 알림을 `UNUserNotificationCenter` 처리할 수 있도록 위의 사용자 지정을 현재에 연결 합니다.
+이 코드는 위에 있는 사용자 지정 `UNUserNotificationCenterDelegate`를 현재 `UNUserNotificationCenter`에 연결 하 여 앱이 활성 상태이 고 포그라운드에서 알림을 처리할 수 있도록 합니다.
 
 ## <a name="notification-management"></a>알림 관리
 
 IOS 10의 새로운 기능으로, 알림 관리는 보류 중인 알림과 배달 알림에 대 한 액세스를 제공 하 고 이러한 알림을 제거, 업데이트 또는 승격 하는 기능을 추가 합니다.
 
-알림 관리의 중요 한 부분은 알림이 생성 되 고 시스템에서 예약 될 때 알림에 할당 된 _요청 식별자_ 입니다. 원격 알림의 경우이는 HTTP 요청 헤더의 새 `apps-collapse-id` 필드를 통해 할당 됩니다.
+알림 관리의 중요 한 부분은 알림이 생성 되 고 시스템에서 예약 될 때 알림에 할당 된 _요청 식별자_ 입니다. 원격 알림의 경우 HTTP 요청 헤더의 새 `apps-collapse-id` 필드를 통해 할당 됩니다.
 
 요청 식별자는 앱에서 알림 관리를 수행 하려는 알림을 선택 하는 데 사용 됩니다.
 
@@ -420,9 +420,9 @@ var categories = new UNNotificationCategory [] { category };
 UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotificationCategory>(categories)); 
 ```
 
-새 `UNNotificationAction`를 만들 때 단추에 표시 되는 고유한 ID와 제목이 할당 됩니다. 기본적으로 작업은 백그라운드 작업으로 만들어지므로 작업 동작을 조정 하기 위한 옵션을 지정할 수 있습니다 (예: 전경 작업으로 설정).
+새 `UNNotificationAction`을 만들 때 단추에 표시 되는 고유한 ID와 제목이 할당 됩니다. 기본적으로 작업은 백그라운드 작업으로 만들어지므로 작업 동작을 조정 하기 위한 옵션을 지정할 수 있습니다 (예: 전경 작업으로 설정).
 
-만든 각 작업을 범주와 연결 해야 합니다. 새 `UNNotificationCategory`를 만들 때 범주에 있는 작업의 용도에 대 한 자세한 정보와 범주의 동작을 제어 하기 위한 몇 가지 옵션을 제공 하는 고유한 id, 수행할 수 있는 작업 목록, 의도 id 목록이 할당 됩니다.
+만든 각 작업을 범주와 연결 해야 합니다. 새 `UNNotificationCategory`을 만들 때 범주에 있는 작업의 용도에 대 한 추가 정보를 제공 하는 데 사용할 수 있는 고유 ID, 작업의 목록 및 범주 동작을 제어 하기 위한 몇 가지 옵션이 할당 됩니다.
 
 마지막으로 모든 범주가 `SetNotificationCategories` 메서드를 사용 하 여 시스템에 등록 됩니다.
 
@@ -430,7 +430,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 
 사용자 지정 작업 및 범주 집합을 만들고 시스템에 등록 한 후에는 로컬 또는 원격 알림에서 표시할 수 있습니다.
 
-원격 알림에 대해 위에서 만든 범주 `category` 중 하 나와 일치 하는 원격 알림 페이로드의를 설정 합니다. 예:
+원격 알림에 대해 위에서 만든 범주 중 하 나와 일치 하는 원격 알림 페이로드의 `category` 설정 합니다. 예를 들면,
 
 ```csharp
 {
@@ -441,7 +441,7 @@ UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotifica
 }
 ```
 
-로컬 알림의 경우 `CategoryIdentifier` `UNMutableNotificationContent` 개체의 속성을 설정 합니다. 예를 들어:
+로컬 알림의 경우 `UNMutableNotificationContent` 개체의 `CategoryIdentifier` 속성을 설정 합니다. 예를 들면,
 
 ```csharp
 var content = new UNMutableNotificationContent ();
@@ -457,7 +457,7 @@ content.CategoryIdentifier = "message";
 
 ### <a name="handling-dismiss-actions"></a>작업 해제 처리
 
-위에서 설명한 것 처럼 사용자가 알림을 해제할 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작이 아니기 때문에 범주를 만들 때 옵션을 설정 해야 합니다. 예를 들어:
+위에서 설명한 것 처럼 사용자가 알림을 해제할 때 해제 작업을 앱에 보낼 수 있습니다. 표준 동작이 아니기 때문에 범주를 만들 때 옵션을 설정 해야 합니다. 예를 들면,
 
 ```csharp
 var categoryID = "message";
@@ -470,7 +470,7 @@ var category = UNNotificationCategory.FromIdentifier (categoryID, actions, inten
 
 ### <a name="handling-action-responses"></a>작업 응답 처리
 
-사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 를 `UNUserNotificationCenterDelegate` 제공 하 고 `UserNotificationCenter` 메서드를 구현 하 여이 작업을 수행 합니다. 예를 들어:
+사용자가 위에서 만든 사용자 지정 작업 및 범주와 상호 작용 하는 경우 앱에서 요청 된 작업을 수행 해야 합니다. 이 작업은 `UNUserNotificationCenterDelegate`를 제공 하 고 `UserNotificationCenter` 메서드를 구현 하 여 수행 됩니다. 예를 들면,
 
 ```csharp
 using System;
@@ -508,9 +508,9 @@ namespace MonkeyNotification
 }
 ```
 
-전달 `UNNotificationResponse` 된 클래스 `ActionIdentifier` 에는 기본 작업 또는 해제 작업 중 하나를 사용할 수 있는 속성이 있습니다. 사용자 `response.Notification.Request.Identifier` 지정 작업을 테스트 하는 데 사용 합니다.
+전달 된 `UNNotificationResponse` 클래스에는 기본 작업 또는 해제 작업 중 하나를 사용할 수 있는 `ActionIdentifier` 속성이 있습니다. `response.Notification.Request.Identifier`를 사용 하 여 사용자 지정 작업을 테스트 합니다.
 
-속성 `UserText` 에는 모든 사용자 텍스트 입력 값이 포함 됩니다. 속성 `Notification` 에는 트리거와 알림 콘텐츠를 포함 하는 요청이 포함 된 원래 알림이 포함 됩니다. 앱은 트리거 유형을 기반으로 하는 로컬 또는 원격 알림 인지를 결정할 수 있습니다.
+`UserText` 속성은 모든 사용자 텍스트 입력의 값을 포함 합니다. `Notification` 속성에는 트리거와 알림 콘텐츠를 포함 하는 요청이 포함 된 원래 알림이 포함 됩니다. 앱은 트리거 유형을 기반으로 하는 로컬 또는 원격 알림 인지를 결정할 수 있습니다.
 
 > [!NOTE]
 > iOS 12를 사용 하면 사용자 지정 알림 UI에서 런타임에 작업 단추를 수정할 수 있습니다. 자세한 내용은 [동적 알림 작업 단추](~/ios/platform/introduction-to-ios12/notifications/dynamic-actions.md) 설명서를 참조 하세요.
@@ -519,7 +519,7 @@ namespace MonkeyNotification
 
 원격 알림을 사용 하 여 작업 하는 경우 _서비스 확장_ 은 알림 페이로드 내에서 종단 간 암호화를 사용 하도록 설정 하는 방법을 제공 합니다. 서비스 확장은 사용자에 게 표시 되기 전에 알림의 표시 된 콘텐츠를 확대 하거나 대체 하는 주 목적을 사용 하 여 백그라운드에서 실행 되는 사용자가 아닌 인터페이스 확장 (iOS 10에서 사용 가능)입니다. 
 
-[![](enhanced-user-notifications-images/extension01.png "서비스 확장 개요")](enhanced-user-notifications-images/extension01.png#lightbox)
+[![](enhanced-user-notifications-images/extension01.png "Service Extension overview")](enhanced-user-notifications-images/extension01.png#lightbox)
 
 서비스 확장은 신속 하 게 실행 되며 시스템에서 실행 되는 짧은 시간 동안만 제공 됩니다. 서비스 확장이 할당 된 시간 내에 작업을 완료 하지 못할 경우 대체 (fallback) 메서드가 호출 됩니다. 대체가 실패 하면 원래 알림 콘텐츠가 사용자에 게 표시 됩니다.
 
@@ -536,15 +536,15 @@ Xamarin.ios 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 
 1. Mac용 Visual Studio에서 앱 솔루션을 엽니다.
 2. **Solution Pad** 에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 프로젝트 추가**를 선택 합니다.
-3. **IOS** > **확장** 알림 서비스 확장을 선택 하 고 다음 단추를 클릭 합니다. >  
+3. **알림 서비스 확장** > **iOS** > **확장** 을 선택 하 고 **다음** 단추를 클릭 합니다. 
 
-    [![](enhanced-user-notifications-images/extension02.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension02.png#lightbox)
+    [![](enhanced-user-notifications-images/extension02.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. 확장의 **이름을** 입력 하 고 **다음** 단추를 클릭 합니다. 
 
-    [![](enhanced-user-notifications-images/extension03.png "확장의 이름 입력")](enhanced-user-notifications-images/extension03.png#lightbox)
+    [![](enhanced-user-notifications-images/extension03.png "Enter a Name for the extension")](enhanced-user-notifications-images/extension03.png#lightbox)
 5. 필요한 경우 **프로젝트 이름** 및/또는 **솔루션 이름을** 조정 하 고 **만들기** 단추를 클릭 합니다. 
 
-    [![](enhanced-user-notifications-images/extension04.png "프로젝트 이름 및/또는 솔루션 이름 조정")](enhanced-user-notifications-images/extension04.png#lightbox) 
+    [![](enhanced-user-notifications-images/extension04.png "Adjust the Project Name and/or Solution Name")](enhanced-user-notifications-images/extension04.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -552,15 +552,15 @@ Xamarin.ios 앱에서 서비스 확장을 구현 하려면 다음을 수행 합�
 2. **솔루션 탐색기** 에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가 > 새 프로젝트**...를 선택 합니다.
 3. **C# Visual > IOS 확장 > Notification Service 확장**을 선택 합니다.
 
-    [![](enhanced-user-notifications-images/extension01.w157-sml.png "알림 서비스 확장 선택")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
+    [![](enhanced-user-notifications-images/extension01.w157-sml.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
 4. 확장의 **이름을** 입력 하 고 **확인** 단추를 클릭 합니다.
 
 -----
 
 > [!IMPORTANT]
-> 서비스 확장의 번들 식별자는 끝에 추가 된 `.appnameserviceextension` 주 앱의 번들 식별자와 일치 해야 합니다. 예를 들어 기본 앱에의 `com.xamarin.monkeynotify`번들 식별자가 있는 경우 서비스 확장에는 번들 `com.xamarin.monkeynotify.monkeynotifyserviceextension`식별자가 있어야 합니다. 확장이 솔루션에 추가 될 때 자동으로 설정 됩니다. 
+> 서비스 확장의 번들 식별자는 끝에 `.appnameserviceextension` 추가 된 기본 앱의 번들 식별자와 일치 해야 합니다. 예를 들어 기본 앱에 `com.xamarin.monkeynotify`번들 식별자가 있는 경우 서비스 확장에는 `com.xamarin.monkeynotify.monkeynotifyserviceextension`번들 식별자가 있어야 합니다. 확장이 솔루션에 추가 될 때 자동으로 설정 됩니다. 
 
-알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예:
+알림 서비스 확장에는 필요한 기능을 제공 하기 위해 수정 해야 하는 주 클래스가 하나 있습니다. 예를 들면,
 
 ```csharp
 using System;
@@ -609,13 +609,13 @@ namespace MonkeyChatServiceExtension
 }
 ```
 
-첫 번째 메서드인 `DidReceiveNotificationRequest`는 알림 식별자 뿐만 아니라 `request` 개체를 통해 알림 콘텐츠도 전달 됩니다. 전달 `contentHandler` 된를 호출 하 여 사용자에 게 알림을 제공 해야 합니다.
+첫 번째 메서드인 `DidReceiveNotificationRequest`는 알림 식별자 뿐만 아니라 `request` 개체를 통해 알림 콘텐츠도 전달 됩니다. `contentHandler` 전달 된를 호출 하 여 사용자에 게 알림을 제공 해야 합니다.
 
-두 번째 메서드인 `TimeWillExpire`는 서비스 확장에서 요청을 처리 하기 위해 시간이 실행 되기 직전에 호출 됩니다. 서비스 확장이 할당 된 시간 `contentHandler` 내에를 호출 하지 못하면 원래 콘텐츠가 사용자에 게 표시 됩니다.
+두 번째 메서드인 `TimeWillExpire`는 서비스 확장에서 요청을 처리 하기 위해 시간이 실행 되기 직전에 호출 됩니다. 서비스 확장이 할당 된 시간 내에 `contentHandler`를 호출 하지 못하면 원래 콘텐츠가 사용자에 게 표시 됩니다.
 
 ### <a name="triggering-a-service-extension"></a>서비스 확장 트리거
 
-서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예를 들어:
+서비스 확장을 만들어 앱과 함께 제공 하면 장치에 전송 된 원격 알림 페이로드를 수정 하 여 트리거할 수 있습니다. 예를 들면,
 
 ```csharp
 {
@@ -627,7 +627,7 @@ namespace MonkeyChatServiceExtension
 }
 ```
 
-새 `mutable-content` 키는 원격 알림 콘텐츠를 업데이트 하기 위해 서비스 확장을 시작 해야 함을 지정 합니다. 키 `encrypted-content` 에는 서비스 확장에서 사용자에 게 표시 하기 전에 암호를 해독할 수 있는 암호화 된 데이터가 포함 됩니다.
+새 `mutable-content` 키는 원격 알림 콘텐츠를 업데이트 하기 위해 서비스 확장을 시작 해야 함을 지정 합니다. `encrypted-content` 키에는 서비스 확장에서 사용자에 게 표시 하기 전에 암호를 해독할 수 있는 암호화 된 데이터가 포함 됩니다.
 
 다음 예제 서비스 확장을 살펴보세요.
 
@@ -658,7 +658,7 @@ namespace myApp {
 }
 ```
 
-이 코드는 `encrypted-content` 키에서 암호화 된 콘텐츠를 해독 하 고 새 `UNMutableNotificationContent`를 만든 다음 `Body` `contentHandler` 속성을 해독 된 콘텐츠로 설정 하 고을 사용 하 여 사용자에 게 알림을 표시 합니다.
+이 코드는 `encrypted-content` 키에서 암호화 된 콘텐츠를 해독 하 고, 새 `UNMutableNotificationContent`를 만들고, `Body` 속성을 해독 된 콘텐츠로 설정 하 고, `contentHandler`를 사용 하 여 사용자에 게 알림을 제공 합니다.
 
 ## <a name="summary"></a>요약
 

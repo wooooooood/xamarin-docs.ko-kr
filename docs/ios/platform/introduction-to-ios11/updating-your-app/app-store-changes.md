@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11에서 앱 스토어에 대 한 변경 �
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 0ac9b486defb74cac7ccd946d2b35b283e6aeca5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 356509fb6f588b96a2a1224879675bbad36f8524
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752323"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032130"
 ---
 # <a name="app-store-changes-in-ios-11"></a>IOS 11의 앱 스토어 변경 내용
 
@@ -50,7 +50,7 @@ Apple은 앱 스토어에서 앱 내 구매를 더 검색 가능 하 게 했습�
 
 ![Itunes Connect의 앱 스토어 프로 모션 섹션](app-store-changes-images/image4.png)
 
-또한 응용 프로그램에서 `ShouldAddStorePayment` `SKPaymentTransactionObserver` 프로토콜에 메서드를 추가 해야 합니다.
+또한 응용 프로그램의 `SKPaymentTransactionObserver` 프로토콜에 `ShouldAddStorePayment` 메서드를 추가 해야 합니다.
 
 앱 내 구매 승격에 대 한 자세한 내용은 Apple의 [앱에서 바로 구매 기능 수준 올리기](https://developer.apple.com/app-store/promoting-in-app-purchases/) 페이지를 참조 하세요.
 

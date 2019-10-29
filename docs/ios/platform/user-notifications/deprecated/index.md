@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10에 도입 된 사용자 알림 프레임
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2016
-ms.openlocfilehash: 899d3e33e4722194a53b75eace1f5b03ee07eb40
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: de9a46587a5d1de6f12dd54122b27e53694cdeb8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282363"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031397"
 ---
 # <a name="deprecated-notification-technologies-in-xamarinios"></a>Xamarin.ios에서 사용 되지 않는 알림 기술
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xcode의 Interface Builder에서 UI 요소에 �
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 0caed670e09c268bce4fe66cd5857313ac8ed174
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 81a1f63078a5f7a2a70f731d1790f85f4283d22f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769997"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030216"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Xamarin.ios의 데이터 바인딩 및 키-값 코딩
 
@@ -135,7 +135,7 @@ namespace MacDatabinding
 
 ### <a name="getting-values-using-key-value-coding"></a>키-값 코딩을 사용 하 여 값 가져오기
 
-@No__t_0 메서드는 요청을 받는 KVC 클래스의 인스턴스를 기준으로 지정 된 키 (`NSString`)의 값을 반환 합니다. 예를 들어 `Person`은 위에 정의 된 `PersonModel` 클래스의 인스턴스입니다.
+`ValueForKey` 메서드는 요청을 받는 KVC 클래스의 인스턴스를 기준으로 지정 된 키 (`NSString`)의 값을 반환 합니다. 예를 들어 `Person`은 위에 정의 된 `PersonModel` 클래스의 인스턴스입니다.
 
 ```csharp
 // Read value
@@ -153,7 +153,7 @@ var name = Person.ValueForKey (new NSString("Name"));
 Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 ```
 
-@No__t_0 속성 값을 `Jane Doe`로 변경 합니다.
+`Name` 속성 값을 `Jane Doe`로 변경 합니다.
 
 <a name="Observing_Value_Changes" />
 
@@ -334,7 +334,7 @@ public NSArray People {
 다음 두 가지 사항을 참고 하세요.
 
 1. 이는 **테이블 뷰**, **개요 뷰** 및 C# **컬렉션과**같은 appkit 컨트롤에 데이터를 바인딩하기 위한 요구 사항 이므로 표준 배열 또는 컬렉션 대신 `NSMutableArray`를 사용 했습니다.
-2. 데이터 바인딩을 위해 `NSArray`로 캐스팅 하 고 C# 형식이 지정 된 이름 `People`를 데이터 바인딩에 `personModelArray` 필요한 것으로 변경 하 여 직원의 배열을 표시 합니다. (이는 첫 번째 문자가 만들어졌습니다. 소문자).
+2. 데이터 바인딩을 위해 `NSArray`로 캐스팅 하 고 C# 형식이 지정 된 이름`People`를 데이터 바인딩에`personModelArray`필요한 것으로 변경 하 여 직원의 배열을 ' **class_name} 배열** 형식으로 변경 했습니다. (첫 번째 문자는 소문자)를 생성 합니다.
 
 다음으로 일부 특수 이름 public 메서드를 추가 하 여 **배열 컨트롤러** 및 **트리 컨트롤러**를 지원 해야 합니다.
 
@@ -582,11 +582,11 @@ public override void AwakeFromNib ()
 2. **인터페이스 계층 구조** 에서 **배열 컨트롤러** 를 선택 하 고 **특성 검사자**로 전환 합니다.
 
     [![특성 검사자 선택](databinding-images/table04.png "특성 검사자 선택")](databinding-images/table04-large.png#lightbox)
-3. **클래스 이름**에 대 한 `PersonModel`를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. @No__t_0, `Occupation` 및 `isManager`에 이름을로 합니다.
+3. **클래스 이름**에 대 한 `PersonModel`를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. `Name`, `Occupation` 및 `isManager`에 이름을로 합니다.
 
     ![필수 키 경로 추가](databinding-images/table05.png "필수 키 경로 추가")
 4. 이렇게 하면 배열 컨트롤러에서 배열을 관리 하는 대상과 키를 통해 노출 해야 하는 속성을 알 수 있습니다.
-5. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **테이블 뷰 컨트롤러**를 선택 합니다. @No__t_1의 **모델 키 경로** 를 입력 합니다.
+5. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **테이블 뷰 컨트롤러**를 선택 합니다. `self.personModelArray`의 **모델 키 경로** 를 입력 합니다.
 
     ![키 경로 입력](databinding-images/table06.png "키 경로 입력")
 6. 이렇게 하면 배열 컨트롤러가 보기 컨트롤러에 노출 된 `PersonModels` 배열에 연결 됩니다.
@@ -700,7 +700,7 @@ public override void AwakeFromNib ()
 2. **인터페이스 계층 구조** 에서 **트리 컨트롤러** 를 선택 하 고 **특성 검사자**로 전환 합니다.
 
     [![특성 검사자 선택](databinding-images/outline04.png "특성 검사자 선택")](databinding-images/outline04-large.png#lightbox)
-3. **클래스 이름**에 대 한 `PersonModel`를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. @No__t_0, `Occupation` 및 `isManager`에 이름을로 합니다.
+3. **클래스 이름**에 대 한 `PersonModel`를 입력 하 고 **더하기** 단추를 클릭 한 다음 세 개의 키를 추가 합니다. `Name`, `Occupation` 및 `isManager`에 이름을로 합니다.
 
     ![필수 키 경로 추가](databinding-images/outline05.png "필수 키 경로 추가")
 4. 이를 통해 트리 컨트롤러에서 배열을 관리 하는 대상 및 키를 통해 노출 해야 하는 속성을 알 수 있습니다.
@@ -708,7 +708,7 @@ public override void AwakeFromNib ()
 
     ![트리 컨트롤러 키 경로 설정](databinding-images/outline05.png "트리 컨트롤러 키 경로 설정")
 6. 그러면 트리 컨트롤러에 자식 노드를 찾을 수 있는 위치, 자식 노드 수와 현재 노드에 자식 노드가 있는지 여부를 알 수 있습니다.
-7. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **파일의 소유자**를 선택 합니다. @No__t_1의 **모델 키 경로** 를 입력 합니다.
+7. **바인딩 검사자** 로 전환 하 고 **콘텐츠 배열** 에서 **바인딩을** 선택 하 고 **파일의 소유자**를 선택 합니다. `self.personModelArray`의 **모델 키 경로** 를 입력 합니다.
 
     ![키 경로 편집](databinding-images/outline06.png "키 경로 편집")
 8. 이는 트리 컨트롤러를 뷰 컨트롤러에 노출 된 `PersonModels`의 배열에 연결 합니다.
@@ -865,8 +865,8 @@ For more information on working with Collection Views, please see our [Collectio
 일반적으로 데이터 바인딩 중에 기본 충돌의 네 가지 주요 원인은 다음과 같습니다.
 
 1. 데이터 모델은 `NSObject` 또는 `NSObject`의 서브 클래스에서 상속 되지 않습니다.
-2. @No__t_0 특성을 사용 하 여 속성을 객관적인 C에 노출 하지 않았습니다.
-3. @No__t_0 및 `DidChangeValue` 메서드 호출에서 접근자의 값에 대 한 변경 내용을 줄 바꿈하지 않습니다 (`Export` 특성과 동일한 키 지정).
+2. `[Export("key-name")]` 특성을 사용 하 여 속성을 객관적인 C에 노출 하지 않았습니다.
+3. `WillChangeValue` 및 `DidChangeValue` 메서드 호출에서 접근자의 값에 대 한 변경 내용을 줄 바꿈하지 않습니다 (`Export` 특성과 동일한 키 지정).
 4. Interface Builder의 **바인딩 검사기** 에 잘못 된 키 또는 잘못 된 키가 있습니다.
 
 ### <a name="decoding-a-crash"></a>크래시 디코딩

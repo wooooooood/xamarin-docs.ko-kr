@@ -4,23 +4,23 @@ description: 이 문서에서는 도우미 클래스를 사용 하 여 Xamarin.i
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 57892689eeb5eef9747e19fa167b8598569f3cd1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4dddde8d4408df6a9b9d73c0a3efff62f563591a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769202"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030774"
 ---
 # <a name="playing-sound-in-tvos-with-avaudioplayer-in-xamarin"></a>Xamarin에서 AvtvOS Player를 사용 하 여 소리 재생
 
 ## <a name="about-the-avaudioplayer"></a>Av오디오 플레이어 정보
 
-는 `AVAudioPlayer` 메모리 또는 파일에서 오디오 데이터를 재생 하는 데 사용 됩니다. 네트워크 스트리밍을 수행 하거나 대기 시간이 짧은 오디오 i/o를 요구 하지 않는 한 Apple은이 클래스를 사용 하 여 앱에서 오디오를 재생 하는 것을 권장 합니다.
+`AVAudioPlayer`는 메모리 나 파일에서 오디오 데이터를 재생 하는 데 사용 됩니다. 네트워크 스트리밍을 수행 하거나 대기 시간이 짧은 오디오 i/o를 요구 하지 않는 한 Apple은이 클래스를 사용 하 여 앱에서 오디오를 재생 하는 것을 권장 합니다.
 
-을 사용 `AVAudioPlayer` 하 여 다음을 수행할 수 있습니다.
+`AVAudioPlayer`를 사용 하 여 다음을 수행할 수 있습니다.
 
 - 선택적인 반복이 있는 모든 기간의 소리를 재생 합니다.
 - 선택적 동기화를 사용 하 여 여러 소리를 동시에 재생 합니다.

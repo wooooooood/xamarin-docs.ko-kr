@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 Av오디오 플레이어�
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: b4a5ead3e3c02fbdd2ae5486a6ac637defeb5abd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 18043a88a129d48a1cad3b9ee15b6989d50ad126
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283296"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030051"
 ---
 # <a name="playing-sound-with-avaudioplayer-in-xamarinmac"></a>Xamarin.ios에서 Av오디오 플레이어로 소리 재생
 
@@ -28,7 +28,7 @@ ms.locfileid: "70283296"
 - 빨리 감기 또는 되감기와 같은 기능을 지원 합니다.
 - 재생 수준 계량 데이터를 가져옵니다.
 
-`AVAudioPlayer`는 iOS, tvOS 및 macOS에서 제공 하는 오디오 형식 (예: aif, .wav 또는 mp3)의 소리를 지원 합니다.
+`AVAudioPlayer`은 iOS, tvOS 및 macOS에서 제공 하는 오디오 형식 (예: aif, .wav 또는 mp3)의 소리를 지원 합니다.
 
 ## <a name="playing-sounds-in-macos"></a>MacOS에서 소리 재생
 

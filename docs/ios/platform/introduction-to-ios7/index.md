@@ -4,15 +4,15 @@ description: 이 문서에서는 보기 컨트롤러 전환을 비롯 하 여 iO
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d3a3c28e30e38562035b4d0c7c05366865157dd5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: b405643096699e1d965f485bdc590afa178881d6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70752069"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031815"
 ---
 # <a name="introduction-to-ios-7"></a>iOS 7 소개
 
@@ -53,7 +53,7 @@ void AnimateWithSpring ()
 
 ### <a name="keyframe-animations"></a>키 프레임 애니메이션
 
-이제 `UIView` 클래스에는 `UIView`에서 키 프레임 애니메이션을 만들기 위한 `AnimateWithKeyframes` 메서드가 포함 됩니다. 이 메서드는 다른 `UIView` 애니메이션 메서드와 유사 합니다. 단, 추가 `NSAction`는 키 프레임을 포함 하는 매개 변수로 전달 됩니다. @No__t_0 내에서 `UIView.AddKeyframeWithRelativeStartTime`를 호출 하 여 키 프레임을 추가 합니다.
+이제 `UIView` 클래스에는 `UIView`에서 키 프레임 애니메이션을 만들기 위한 `AnimateWithKeyframes` 메서드가 포함 됩니다. 이 메서드는 다른 `UIView` 애니메이션 메서드와 유사 합니다. 단, 추가 `NSAction`는 키 프레임을 포함 하는 매개 변수로 전달 됩니다. `NSAction`내에서 `UIView.AddKeyframeWithRelativeStartTime`를 호출 하 여 키 프레임을 추가 합니다.
 
 예를 들어 다음 코드 조각에서는 보기의 중심에 애니메이션 효과를 주는 키 프레임 애니메이션을 만들고 뷰를 회전 합니다.
 
@@ -82,7 +82,7 @@ void AnimateViewWithKeyframes ()
 }
 ```
 
-@No__t_0 메서드에 대 한 처음 두 매개 변수는 각각 전체 애니메이션 길이에 대 한 백분율로 키 프레임의 시작 시간과 기간을 지정 합니다. 위의 예제에서는 첫 번째 초 동안 이미지 뷰가 새 중심에 애니메이션 효과를 적용 한 다음, 다음 초 동안 90도를 회전 합니다. 애니메이션은 `UIViewKeyframeAnimationOptions.Autoreverse`를 옵션으로 지정 하므로 두 키프레임이 역순으로도 애니메이션 효과를 적용 합니다. 마지막으로 최종 값은 완료 처리기의 초기 상태로 설정 됩니다.
+`AddKeyframeWithRelativeStartTime` 메서드에 대 한 처음 두 매개 변수는 각각 전체 애니메이션 길이에 대 한 백분율로 키 프레임의 시작 시간과 기간을 지정 합니다. 위의 예제에서는 첫 번째 초 동안 이미지 뷰가 새 중심에 애니메이션 효과를 적용 한 다음, 다음 초 동안 90도를 회전 합니다. 애니메이션은 `UIViewKeyframeAnimationOptions.Autoreverse`를 옵션으로 지정 하므로 두 키프레임이 역순으로도 애니메이션 효과를 적용 합니다. 마지막으로 최종 값은 완료 처리기의 초기 상태로 설정 됩니다.
 
 아래 스크린샷은 키프레임을 통해 결합 된 애니메이션을 보여 줍니다.
 
@@ -111,7 +111,7 @@ API는 본질적으로 선언적입니다. 무게, 충돌, 스프링 등의 물�
 
 ### <a name="dynamics-example"></a>Dynamics 예제
 
-@No__t_0에 중력 및 충돌 경계를 추가 하는 예제를 살펴보겠습니다.
+`UIView`에 중력 및 충돌 경계를 추가 하는 예제를 살펴보겠습니다.
 
 #### <a name="uigravitybehavior"></a>UIGravityBehavior
 
@@ -135,9 +135,9 @@ View.AddSubview (imageView);
 dynAnimator = new UIDynamicAnimator (this.View);
 ```
 
-@No__t_0는 연결 된 동작에 따라 애니메이션이 적용 될 항목을 포함 하는 참조 `UIView` 또는 `UICollectionViewLayout`의 인스턴스를 사용 합니다.
+`UIDynamicAnimator`는 연결 된 동작에 따라 애니메이션이 적용 될 항목을 포함 하는 참조 `UIView` 또는 `UICollectionViewLayout`의 인스턴스를 사용 합니다.
 
-다음으로 `UIGravityBehavior` 인스턴스를 만듭니다. @No__t_1와 같이 `IUIDynamicItem`를 구현 하는 하나 이상의 개체를 전달할 수 있습니다.
+다음으로 `UIGravityBehavior` 인스턴스를 만듭니다. `UIView`와 같이 `IUIDynamicItem`를 구현 하는 하나 이상의 개체를 전달할 수 있습니다.
 
 ```csharp
 var gravity = new UIGravityBehavior (dynItems);
@@ -162,7 +162,7 @@ dynAnimator.AddBehavior (gravity);
 
 먼저 `UICollisionBehavior`를 만들고 `UIGravityBehavior`에 대해 수행한 것 처럼 동적 애니메이터에 추가 합니다.
 
-@No__t_0를 포함 하도록 코드를 수정 합니다.
+`UICollisionBehavior`를 포함 하도록 코드를 수정 합니다.
 
 ```csharp
 using (image = UIImage.FromFile ("monkeys.jpg")) {
@@ -187,7 +187,7 @@ using (image = UIImage.FromFile ("monkeys.jpg")) {
 }
 ```
 
-@No__t_0에 `TranslatesReferenceBoundsIntoBoundry` 라는 속성이 있습니다. 이를 `true`로 설정 하면 참조 뷰의 범위가 충돌 경계로 사용 됩니다.
+`UICollisionBehavior`에 `TranslatesReferenceBoundsIntoBoundry`라는 속성이 있습니다. 이를 `true`로 설정 하면 참조 뷰의 범위가 충돌 경계로 사용 됩니다.
 
 이제 이미지가 중력을 사용 하 여 아래쪽으로 애니메이션 효과를 정착 전에 화면 아래쪽을 약간 벗어나 바운스 합니다.
 
@@ -199,7 +199,7 @@ using (image = UIImage.FromFile ("monkeys.jpg")) {
 
 추가 동작을 사용 하 여 대체 이미지 뷰의 동작을 추가로 제어할 수 있습니다. 예를 들어 `UIDynamicItemBehavior`를 추가 하 여 화면 아래쪽과 충돌 하는 경우 이미지 보기가 더 바운스 되도록 할 수 있습니다.
 
-@No__t_0 추가는 다른 동작과 동일한 단계를 따릅니다. 먼저 동작을 만듭니다.
+`UIDynamicItemBehavior` 추가는 다른 동작과 동일한 단계를 따릅니다. 먼저 동작을 만듭니다.
 
 ```csharp
 var dynBehavior = new UIDynamicItemBehavior (dynItems) {

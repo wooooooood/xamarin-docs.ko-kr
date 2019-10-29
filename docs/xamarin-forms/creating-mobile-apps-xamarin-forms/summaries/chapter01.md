@@ -1,95 +1,95 @@
 ---
-title: 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
+title: 1 장 요약 Xamarin.ios는 어떻게 적합 한가요?
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 1 장 요약 Xamarin.ios는 어떻게 적합 한가요?'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 58d3b3ae067913a85c3ada5f5b35e64511523ff8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6dfa473bdfb4c1dd88ca833dbf5011a0bbdec42a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334675"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032893"
 ---
-# <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1장 요약. Xamarin.Forms는 어떻게 우리의 요구사항을 충족시켜줄까요?
+# <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>1 장 요약 Xamarin.ios는 어떻게 적합 한가요?
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
 
 > [!NOTE]
-> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
+> 이 페이지의 정보는 Xamarin.ios가 책에 제공 된 자료에서 달라져서 있는 영역을 표시 합니다.
 
-프로그래밍에서 가장 즐겁지 않은 작업 중 하나는 다른 플랫폼으로 코드를 포팅하는 작업입니다. 특히 다른 프로그래밍 언어로 포팅하는 작업은 쉽지 않은 작업입니다. 포팅 과정에서 리팩토링 충동을 느낄 수 있으며 포팅된 코드와 기존 코드는 동시에 유지보수 되어야 하기 때문에 두 코드베이스 간의 차이점들은 앞으로의 유지보수 작업을 더욱 힘들게 할 것입니다.
+프로그래밍에서 가장 불쾌 작업 중 하나는 플랫폼 간에 코드 베이스를 이식 하는 것입니다. 특히 해당 플랫폼에서 다른 프로그래밍 언어를 필요로 하는 경우에 해당 합니다. 코드를 리팩터링 하는 데 코드를 이식할 때 하려는 유혹 있지만 두 플랫폼을 동시에 유지 해야 하는 경우에는 두 코드 베이스 간의 차이로 인해 향후 유지 관리가 어려워집니다.
 
-## <a name="cross-platform-mobile-development"></a>크로스 플랫폼 모바일 개발
+## <a name="cross-platform-mobile-development"></a>플랫폼 간 모바일 개발
 
-이 문제는 모바일 플렛폼을 타겟으로 개발할 때 일반적으로 발생합니다. 현재 두개의 메이저 모바일 플렛폼이 존재합니다. iOS 운영체제를 사용하는 아이폰, 아이패드 애플 제품군과 안드로이드 운영체제를 사용하는 수많은 스마트폰과 태블릿이 있습니다. 다른 중요 한 플랫폼은 Microsoft의 Windows 플랫폼 (UWP (유니버설)을 모두 Windows 10을 대상으로 한 개의 프로그램을 수 있습니다.
+이 문제는 모바일 플랫폼을 대상으로 지정할 때 일반적입니다. 현재 iOS 운영 체제를 실행 하는 Apple Iphone 및 Ipad의 두 가지 주요 모바일 플랫폼과 다양 한 휴대폰 및 태블릿에서 실행 되는 Android 운영 체제가 있습니다. 또 다른 중요 한 플랫폼은 단일 프로그램이 Windows 10을 대상으로 할 수 있도록 하는 Microsoft UWP (유니버설 Windows 플랫폼)입니다.
 
-이러한 플랫폼을 대상으로 하려는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 세 가지 다른 개발 환경, 세 개의 서로 다른 프로그래밍 인터페이스를 사용 하 여 처리 해야 하 고&mdash;아마도 가장 이라는&mdash;3 다른 프로그래밍 언어: IPhone 및 iPad, Android 용 Java 용 Objective-c 및 C# Windows에 대 한 합니다.
+이러한 플랫폼을 대상으로 하는 소프트웨어 공급 업체는 다양 한 사용자 인터페이스 패러다임, 3 개의 다른 개발 환경, 3 개의 다른 프로그래밍 인터페이스 및&mdash;가장 awkwardly&mdash;세 가지를 처리 해야 합니다. 프로그래밍 언어: iPhone 및 iPad 용 목적-C, Android 용 Java 및 C# Windows 용입니다.
 
-## <a name="the-c-and-net-solution"></a>C#과 .NET 솔루션
+## <a name="the-c-and-net-solution"></a>C# 및 .net 솔루션
 
-Objective-C, Java 및 C#은 모두 C 프로그래밍 언어에서 파생되었지만, 서로 다른 방향으로 발전하였습니다. C#은 이들 언어 중 가장 최신 언어이며 매우 유용한 방향으로 성장해 왔습니다. 또한 C#은 .NET이라는 프로그래밍 인프라와 밀접하게 관련되어 있습니다. .NET은 수학, 디버깅, 리플렉션, 컬렉션, 세계화, 파일 I/O, 네트워킹, 보안, 스레딩, 웹 서비스, 데이터 처리 및 XML과 JSON 읽기와 쓰기를 지원합니다.
+목적-C, Java 및 C# 은 모두 c 프로그래밍 언어에서 파생 되지만 매우 다른 경로로 발전 했습니다. C#는 이러한 언어 중 최신 버전 이며 매우 유용한 방법으로 없겠지만 되었습니다. 또한 C# 는 수학, 디버깅, 리플렉션, 컬렉션, 세계화, 파일 i/o, 네트워킹, 보안, 스레딩, 웹 서비스, 데이터 처리를 지 원하는 .net 이라는 전체 프로그래밍 인프라와 밀접 하 게 연관 되어 있습니다. 및 XML 및 JSON 읽기/쓰기
 
-현재 Xamarin은 네이티브 Mac, iOS 및 Android API를 지원하는 C#, .NET 도구들을 제공합니다. 이러한 도구는 Xamarin.Mac, Xamarin.iOS 및 Xamarin.Android라고 불리며 Xamarin 플랫폼이라고 통칭합니다. Xamarin은 각 플랫폼의 Native API를 .NET 관용어구로 표현하는 라이브러리와 바인딩을 제공합니다.
+Xamarin은 현재 및 .NET을 사용 하 여 C# 네이티브 Mac, IOS 및 Android api를 대상으로 하는 도구를 제공 합니다. 이러한 도구는 xamarin 플랫폼 이라고 통칭 된 xamarin.ios, Xamarin.ios 및 Xamarin 이라고 합니다. 이러한 플랫폼은 .NET 관용구를 사용 하 여 이러한 플랫폼의 네이티브 Api를 표현 하는 라이브러리 및 바인딩입니다.
 
-개발자는 Mac, iOS 또는 Android 어플리케이션을 개발하기 위해 Xamarin 플랫폼을 사용할 수 있으며 C#언어로 개발할 수 있습니다. 하나 이상의 플랫폼을 타겟으로 개발할 때는 플랫폼 간에 일부 코드를 공유하는 것이 합리적입니다. 따라서 프로그램 코드를 플랫폼 의존적인 코드(주로 사용자 인터페이스와 관계된 코드)와 플랫폼 중립적인 코드(일반적으로 .NET 프레임워크만을 필요로 하는 코드)로 분리해야 합니다. 플랫폼 중립적인 코드는 Portable Class Library(PCL) 또는 공유 프로젝트(Shared Asset Project 또는 SAP)로 관리할 수 있습니다.
-
-> [!NOTE]
-> Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
-
-## <a name="introducing-xamarinforms"></a>Xamarin.Forms 소개
-
-여러 모바일 플랫폼을 대상으로 하는 경우 Xamarin.Forms는 더 많은 코드 공유를 허용합니다. Xamarin.Forms 용으로 작성 된 단일 프로그램 이러한 플랫폼을 대상 수 있습니다.
-
-- iPhone, iPad 및 iPod touch에서 실행되는 프로그램을 지원하는 iOS
-- Android 휴대폰 및 태블릿에서 실행되는 프로그램을 위한 Android
-- 대상 Windows 10 유니버설 Windows 플랫폼
+개발자는 Xamarin 플랫폼을 사용 하 여 Mac, C# IOS 또는 Android를 대상으로 하는 응용 프로그램을 작성할 수 있습니다. 그러나 두 개 이상의 플랫폼을 대상으로 지정 하는 경우 대상 플랫폼에서 일부 코드를 공유 하는 것이 매우 적합 합니다. 여기에는 프로그램을 플랫폼에 종속 된 코드 (일반적으로 사용자 인터페이스 포함)와 플랫폼 독립적인 코드 (일반적으로 기본 .NET framework만 필요 함)로 구분 하는 작업이 포함 됩니다. 이 플랫폼 독립적인 코드는 PCL (이식 가능한 클래스 라이브러리)에 상주할 수도 있고 공유 자산 프로젝트 또는 SAP 라고도 하는 공유 프로젝트에 상주할 수도 있습니다.
 
 > [!NOTE]
-> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다. 또한 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), [Tizen](~/xamarin-forms/platform/other/tizen.md) 플랫폼에 대한 Preview Support도 제공합니다.
+> 이식 가능한 클래스 라이브러리는 .NET Standard 라이브러리로 대체 되었습니다. 이 책의 모든 샘플 코드는 .NET standard 라이브러리를 사용 하도록 변환 되었습니다.
 
-대부분의 Xamarin.Forms 프로그램의 공유 코드는 단일 라이브러리나 SAP에 위치하게 됩니다. 각 플랫폼들은 이러한 공유 코드를 호출하는 작은 프로그램 조각으로 구성됩니다.
+## <a name="introducing-xamarinforms"></a>Xamarin.ios 소개
 
-Xamarin.Forms API는 각 플랫폼의 네이티브 컨트롤에 매핑되며 그 결과 각 플랫폼의 고유한 형태와 느낌을 유지하게 됩니다.
+여러 모바일 플랫폼을 대상으로 하는 경우 Xamarin을 사용 하면 더 많은 코드를 공유할 수 있습니다. Xamarin.ios 용으로 작성 된 단일 프로그램은 다음 플랫폼을 대상으로 할 수 있습니다.
 
-[![공유 플랫폼 시각 효과의 삼중 스크린 샷](images/ch01fg03-small.png "각 플랫폼에서 Xamarin.Forms 컨트롤")](images/ch01fg03-large.png#lightbox "각 플랫폼에서 Xamarin.Forms 컨트롤")
+- iPhone, iPad 및 iPod touch에서 실행 되는 프로그램을 위한 iOS
+- Android 휴대폰 및 태블릿에서 실행 되는 android for 프로그램
+- Windows 10을 대상으로 하는 유니버설 Windows 플랫폼
 
-왼쪽에서 오른쪽 스크린샷을 iPhone 및 Android 휴대폰을 보여 줍니다.
+> [!NOTE]
+> Xamarin.ios는 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 더 이상 지원 하지 않지만 Xamarin.ios 응용 프로그램은 Windows 10 desktop에서 실행 됩니다. [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md)및 [Tizen](~/xamarin-forms/platform/other/tizen.md) 플랫폼에 대 한 미리 보기 지원도 있습니다.
 
-각 화면에서 페이지는 텍스트를 표시하는 Xamarin.Forms [ `Label` ](xref:Xamarin.Forms.Label), 작업을 시작하기 위한 [ `Button` ](xref:Xamarin.Forms.Button), On/Off를 선택하는 [ `Switch` ](xref:Xamarin.Forms.Switch), 범위 내에서 값을 선택할 수 있는 [ `Slider` ](xref:Xamarin.Forms.Slider)를 포함하고 있습니다. 이 4개의 View는 [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) 내에 포함된 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)의 자식들입니다.
+Xamarin Forms 프로그램의 대부분은 라이브러리나 SAP에 있습니다. 각 플랫폼은이 공유 코드를 호출 하는 작은 응용 프로그램 스텁으로 구성 됩니다.
 
-또한 몇 개의 [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem)로 구성된 Xamarin.Forms 도구 모음이 페이지에 연결되어 있습니다. 도구 모음은 iOS 및 Android 화면에서는 맨 위에 나타나 있으며 Windows 10 Mobile에서는 화면 아래쪽에 아이콘으로 표시되어 있습니다.
+Xamarin.ios Api는 각 플랫폼의 네이티브 컨트롤에 매핑되므로 각 플랫폼에서 해당 특성의 모양과 느낌을 유지 합니다.
 
-또한 Xamarin.Forms는 XAML(마이크로소프트에서 개발한 Extensible Application Markup Language)을 지원합니다. 위에 나타난 프로그램들의 시각적인 부분은 XAML로 정의되어 있으며 [ **PlatformVisuals** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01/PlatformVisuals) 샘플에서 확인하실 수 있습니다.
+[![플랫폼 시각적 개체 공유의 삼중 스크린샷](images/ch01fg03-small.png "각 플랫폼의 Xamarin Forms 컨트롤")](images/ch01fg03-large.png#lightbox "각 플랫폼의 Xamarin Forms 컨트롤")
 
-Xamarin.Forms 프로그램은 실행 중인 플랫폼이 어떤 플랫폼인지 식별할 수 있으며, 플랫폼에 따라 서로 다른 코드를 실행할 수 있습니다. 또한 개발자는 각 플랫폼을 위한 커스텀 코드들을 작성할 수 있으며 이렇게 작성한 코드들을 Xamarin.Forms에서 플랫폼 중립적인 방법으로 호출할 수 있습니다. 개발자는 각 플랫폼을 위한 렌더러를 작성함으로써 추가적인 컨트롤을 작성할 수 있습니다.
+왼쪽에서 오른쪽으로 iPhone 및 Android 휴대폰을 표시 합니다.
 
-Xamarin.Forms는 비지니스 어플리케이션을 개발하거나 빠른 개념 증명 데모를 만들거나 프로토타입 어플리케이션에 적합한 솔루션이지만, 벡터 그래픽이나 복잡한 터치 상호 작용을 필요로 하는 응용 프로그램 개발에 대해서는 덜 적합합니다.
+각 화면에서 페이지에는 텍스트를 표시 하기 위한 Xamarin [`Label`](xref:Xamarin.Forms.Label) , 작업 시작에 대 한 [`Button`](xref:Xamarin.Forms.Button) , 설정/해제 값을 선택 하는 [`Switch`](xref:Xamarin.Forms.Switch) 및 연속 범위 내에 값을 지정 하는 [`Slider`](xref:Xamarin.Forms.Slider) 이 포함 됩니다. . 이러한 뷰 중 4 개는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)에서 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 의 자식입니다.
+
+또한 페이지에 연결 된는 여러 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) 개체로 구성 된 xamarin.ios 도구 모음입니다. 이러한 도구는 iOS 및 Android 화면 위쪽 및 Windows 10 Mobile 화면 아래쪽에 아이콘으로 표시 됩니다.
+
+Xamarin.ios는 여러 응용 프로그램 플랫폼에 대해 Microsoft에서 개발한 Extensible Application Markup Language XAML도 지원 합니다. 위에 표시 된 프로그램의 모든 시각적 개체는 [**Platformvisuals 개체**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01/PlatformVisuals) 샘플에서 설명한 대로 XAML로 정의 됩니다.
+
+Xamarin.ios 프로그램은 실행 중인 플랫폼을 확인 하 고 그에 따라 다른 코드를 실행할 수 있습니다. 개발자는 다양 한 플랫폼에 대 한 사용자 지정 코드를 작성 하 고 아주 프로그램에서 플랫폼 독립적 방식으로 해당 코드를 실행할 수 있습니다. 또한 개발자는 각 플랫폼에 대 한 렌더러를 작성 하 여 추가 컨트롤을 만들 수 있습니다.
+
+Xamarin.ios는 lob (기간 업무) 응용 프로그램에 적합 한 솔루션 이거나, 프로토타입 또는 개념 증명 데모를 수행 하는 데 적합 한 솔루션 이지만 벡터 그래픽이 나 복잡 한 터치 조작이 필요한 응용 프로그램에는 적합 하지 않습니다.
 
 ## <a name="your-development-environment"></a>개발 환경
 
-개발 환경은 개발하려는 플렛폼이나 개발에 사용되는 컴퓨터에 따라 달라집니다.
+개발 환경은 대상으로 지정할 플랫폼과 사용 하려는 컴퓨터에 따라 달라 집니다.
 
-iOS 어플리케이션을 개발하려는 경우 XCode와 Xamarin 플랫폼이 설치된 Mac이 필요합니다. 또한 Android를 지원하려면 Java와 필요 SDK가 필요합니다. 그런 다음 Visual Studio for Mac을 사용하면 iOS와 Android 어플리케이션을 모두 개발할 수 있습니다.
+IOS를 대상으로 하려면 Xcode 및 Xamarin 플랫폼이 설치 된 Mac이 필요 합니다. Android도 지원 하려면 Java 및 필수 Sdk를 설치 해야 합니다. 그런 다음 Mac용 Visual Studio를 사용 하 여 iOS 및 Android를 대상으로 지정할 수 있습니다.
 
-PC에 Visual Studio를 설치하면 iOS, Android 및 Windows 플랫폼을 대상으로 개발할 수 있습니다. 그러나 이 경우에도 iOS 개발을 위해서는 XCode와 Xamarin 플랫폼이 설치된 Mac이 필요합니다.
+Visual Studio를 설치 하면 PC에서 iOS, Android 및 모든 Windows 플랫폼을 대상으로 지정할 수 있습니다. 그러나 Visual Studio에서 iOS를 대상으로 하는 경우에도 Xcode 및 Xamarin 플랫폼이 설치 된 Mac이 필요 합니다.
 
-컴퓨터에 USB로 연결된 실제 장치나 시뮬레이터를 통해 프로그램을 테스트할 수 있습니다.
+USB를 통해 컴퓨터 또는 시뮬레이터에 연결 된 실제 장치에서 프로그램을 테스트할 수 있습니다.
 
 ## <a name="installation"></a>설치
 
-Xamarin.Forms 어플리케이션을 생성하고 빌드하기 전에 개발하고자 하는 플렛폼과 개발환경에 맞추어 iOS, Android, UWP 어플리케이션을 각각 분리하여 만들어보는 것이 좋습니다.
+Xamarin Forms 응용 프로그램을 만들고 빌드하기 전에 대상으로 지정 하려는 플랫폼과 개발 환경에 따라 iOS 응용 프로그램, Android 응용 프로그램 및 UWP 응용 프로그램을 별도로 만들고 빌드해야 합니다.
 
-이 작업을 수행하는 방법에 대한 정보를 제공하는 Xamarin과 Microsoft 웹 사이트:
+Xamarin 및 Microsoft 웹 사이트에는이 작업을 수행 하는 방법에 대 한 정보가 포함 되어 있습니다.
 
 - [IOS 시작](~/ios/get-started/index.md)
 - [Android 시작](~/android/get-started/index.md)
-- [Windows 개발자 센터](http://dev.windows.com)
+- [Windows 개발자 센터](https://dev.windows.com)
 
-일단 플랫폼별로 분리하여 프로젝트를 생성하고 실행하는 데 성공했다면 Xamarin.Forms 애플리케이션 개발에도 전혀 문제가 없을 것입니다.
+이러한 개별 플랫폼에 대 한 프로젝트를 만들고 실행할 수 있는 경우에는 Xamarin.ios 응용 프로그램을 만들고 실행 하는 데 문제가 없어야 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

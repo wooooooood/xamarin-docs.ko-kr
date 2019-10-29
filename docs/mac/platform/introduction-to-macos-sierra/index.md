@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 개발자를 위한 macOS Sierra에
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b452d4b0a75a64349692c633a8c1bee6a8770256
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 31aa4d1fb8b77b88fc6b6790147409ff8ec13145
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290929"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029833"
 ---
 # <a name="introduction-to-macos-sierra"></a>macOS Sierra 소개
 
@@ -52,7 +52,7 @@ macOS Sierra에는 개발자가 iOS 및 macOS Safari 기반 웹 사이트에 직
 
 Apple의 Safari 웹 브라우저, 페이지 워드 프로세서 및 숫자 스프레드와 같은 최신 macOS 앱은 여러 가지 새로운 기술을 사용 하 여 부동 패널과 같은 기존 UI 요소와 함께 제공 되는 통합 된 상황에 맞는 사용자 인터페이스를 제공 합니다. windows.
 
-[![탭 Mac 창의 예](images/content08.png)](images/content08.png#lightbox)
+[탭 Mac 창의 예![](images/content08.png)](images/content08.png#lightbox)
 
 [최신 Macos 앱 구축](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) 가이드에서는 개발자가 xamarin.ios에서 최신 macos 앱을 빌드하는 데 사용할 수 있는 몇 가지 팁, 기능 및 기술을 설명 합니다.
 
@@ -83,15 +83,15 @@ Safari 앱 확장을 사용 하면 앱이 macOS Sierra와 긴밀 하 게 통합 
 
 Apple은 앱의 보안을 개선 하 고 최종 사용자의 개인 정보를 다음을 비롯 하 여 앱의 보안을 개선 하는 데 도움이 되는 macOS Sierra의 보안과 개인 정보에 대해 몇 가지 향상 된 기능을 만들었습니다.
 
-- 앱의 `NSAllowsArbitraryLoadsInWebContent` 파일에 새 키를 추가할 수 있으며, 앱의 나머지 부분에 대해 ATS (Apple Transport Security) 보호를 사용 하는 동안 웹 페이지를 올바르게 로드할 수 있습니다. `Info.plist`
+- 새 `NSAllowsArbitraryLoadsInWebContent` 키를 앱의 `Info.plist` 파일에 추가할 수 있으며, ATS (Apple Transport Security) 보호가 아직 나머지 앱에 대해 사용 하도록 설정 되어 있는 동안 웹 페이지를 올바르게 로드할 수 있습니다.
 - CDSA (Common Data Security Architecture) API는 더 이상 사용 되지 않으며, 비대칭 키를 생성 하려면 SecKey API로 바꾸어야 합니다.
 - 모든 SSL/TLS 연결의 경우 이제 RC4 대칭 암호화가 기본적으로 사용 하지 않도록 설정 됩니다. 또한 보안 전송 API는 더 이상 SSLv3을 지원 하지 않으며, 가능한 한 빨리 SHA-1 및 3DES 암호화를 사용 하 여 앱을 중지 하는 것이 좋습니다.
 - IOS 10 및 macOS Sierra의 새 클립보드를 사용 하면 사용자가 장치 간에 복사 하 여 붙여 넣을 수 있기 때문에 클립보드를 특정 장치로 제한 하 고 지정 된 지점에서 자동으로 지울 타임 스탬프를 허용 하도록 API가 확장 되었습니다. 또한 이름이 지정 된 pasteboards는 더 이상 유지 되지 않으며 공유 된 대지의 컨테이너와 바꾸어야 합니다.
-- 앱에서 사용자의 달력과 같은 보호 된 데이터에 액세스 하는 경우 해당 `Info.plist` 파일에서 올바른 용도의 문자열 값 키를 사용 하 여 해당 의도를 선언 _해야_ 합니다 (`NSCalendarUsageDescription` 달력의 경우).
+- 앱에서 사용자의 달력과 같은 보호 된 데이터에 액세스 하는 경우 해당 `Info.plist` 파일에서 올바른 용도의 문자열 값 키를 사용 하 여 해당 의도를 선언 _해야_ 합니다 (달력의 경우`NSCalendarUsageDescription`).
 - Mac 앱 스토어를 통해 제공 되지 않는 개발자 서명 된 앱은 이제 CloudKit, iCloud 키 집합, iCloud 드라이브, 원격 푸시 알림, MapKit 및 VPN 자격을 활용할 수 있습니다.
 - 런타임에 런타임 경로를 알 수 없으므로 zip 보관 파일 또는 서명 되지 않은 디스크 이미지에서 코드 서명자 앱과 함께 외부 코드 또는 데이터 배달을 더 이상 지원 하지 않습니다. macOS Sierra
 
-또한 macOS Sierra (이상)에서 실행 되는 앱은 `Info.plist` 파일에 하나 이상의 개인 정보 키를 입력 하 여 특정 기능 또는 사용자 정보에 액세스 하도록 정적으로 선언 해야 합니다. 액세스.
+또한 macOS Sierra (이상)에서 실행 되는 앱은 사용자에 게 액세스 권한을 얻으려고 하는 이유를 설명 하는 개인 정보 보호 키를 `Info.plist` 파일에 하나 이상 입력 하 여 특정 기능 또는 사용자 정보에 액세스 하는 의도를 정적으로 선언 해야 합니다. .
 
 MacOS Sierra는 이러한 변경 내용을 iOS 10과 공유 하므로 iOS 10 [보안 및 개인 정보 향상](~/ios/app-fundamentals/security-privacy.md) 가이드를 참조 하 여 자세한 내용을 확인 하세요.
 
@@ -99,7 +99,7 @@ MacOS Sierra는 이러한 변경 내용을 iOS 10과 공유 하므로 iOS 10 [�
 
 ### <a name="smart-card-driver-extension-support"></a>스마트 카드 드라이버 확장 지원
 
-MacOS Sierra를 사용 하 여 앱은 `NSExtension` 특정 유형의 스마트 카드에서 콘텐츠에 대 한 읽기 전용 액세스를 허용 하는 기반 스마트 카드 드라이버를 만들 수 있습니다. 이 정보는 사용 되지 않는 Common Data Security Architecture 메서드를 대체 하는 시스템 키 집합 안에 표시 됩니다.
+MacOS Sierra를 사용 하 여 앱은 특정 유형의 스마트 카드에서 콘텐츠에 대 한 읽기 전용 액세스를 허용 하는 `NSExtension` 기반 스마트 카드 드라이버를 만들 수 있습니다. 이 정보는 사용 되지 않는 Common Data Security Architecture 메서드를 대체 하는 시스템 키 집합 안에 표시 됩니다.
 
 자세한 내용은 Apple의 [Cryptotokenkit 프레임 워크 참조](https://developer.apple.com/reference/cryptotokenkit)를 참조 하세요.
 
@@ -123,11 +123,11 @@ macOS Sierra에는 연결 된 장치를 비롯 한 여러 원본의 로그 데�
 
 macOS Sierra는 핵심 그래픽, 핵심 이미지, 금속 및 AVFoundation과 같은 프레임 워크를 포함 하 여 시스템 전체의 확장 범위 픽셀 형식 및 넓은 색 영역 색 공간에 대 한 지원을 확장 합니다. 넓은 색 표시를 사용 하는 장치에 대 한 지원은 전체 그래픽 스택에이 동작을 제공 하 여 추가로 줄어들 됩니다.
 
-또한는 새로운 확장 된 sRGB colorspace에서 작동 하도록 수정 되어 상당한 성능 손실 없이 광범위 한 색 gamuts 색을 더 쉽게 혼합할 수 있게 되었습니다. `AppKit`
+또한 `AppKit`은 새로운 확장 된 **sRGB** colorspace에서 작동 하도록 수정 되었으므로 상당한 성능 손실 없이 넓은 색 gamuts 색을 쉽게 혼합할 수 있습니다.
 
 Apple은 넓은 색으로 작업할 때 다음과 같은 모범 사례를 제공 합니다.
 
-- `NSColor`이제는 sRGB 색 공간을 사용 하며이 값은 더 이상 `0.0` to `1.0` 범위로 값을 클램프 하지 않습니다. 앱이 이전 클램프 동작에 의존 하는 경우 macOS Sierra에 대해 수정 해야 합니다.
+- 이제 `NSColor`는 sRGB 색 공간을 사용 하 고 `1.0` 범위에 대 한 `0.0`에 값을 더 이상 클램프 하지 않습니다. 앱이 이전 클램프 동작에 의존 하는 경우 macOS Sierra에 대해 수정 해야 합니다.
 - 핵심 그래픽 또는 금속과 같은 하위 수준 API를 사용 하 여 이미지 처리를 제공 하는 경우 앱은 16 비트 부동 소수점 값을 지 원하는 확장 된 범위 색 공간과 픽셀 형식을 사용 해야 합니다. 필요한 경우 앱은 색 구성 요소 값을 수동으로 클램프 해야 합니다.
 - 핵심 그래픽, 핵심 이미지 및 금속 성능 셰이더는 모두 두 색상 공간 간을 변환 하기 위한 새로운 방법을 제공 합니다.
 

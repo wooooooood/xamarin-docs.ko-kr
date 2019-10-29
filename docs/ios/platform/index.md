@@ -4,15 +4,15 @@ description: 이 문서는 다양 한 iOS 버전 및 기타 iOS 플랫폼 기능
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: c6385ff193c54fdab8f252c757cad810751b3f08
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: f2f0d44f9c9d2df3c09d98e8d921121ff2af1571
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206296"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032270"
 ---
 # <a name="ios-platform-features-overview"></a>iOS 플랫폼 기능 개요
 
@@ -41,7 +41,7 @@ IOS 10의 새로운 CallKit API는 VOIP 앱이 iPhone UI와 통합 되 게 하 �
 
 ## <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[연락처 및 ContactsUI](~/ios/platform/contacts.md)
 
-Ios 9가 도입 되면서 Apple은 ios 8 및 이전 버전에서 사용 `Contacts` 하 `ContactsUI`는 기존 주소록 및 주소록 UI 프레임 워크를 대체 하는 두 가지 새로운 프레임 워크 및를 출시 했습니다.
+IOS 9가 도입 되면서 Apple은 iOS 8 및 이전 버전에서 사용 하는 기존 주소록 및 주소록 UI 프레임 워크를 대체 하는 두 가지 새로운 프레임 워크 인 `Contacts` 및 `ContactsUI`를 출시 했습니다.
 
 ## <a name="document-pickeriosplatformdocument-pickermd"></a>[문서 선택기](~/ios/platform/document-picker.md)
 
@@ -53,7 +53,7 @@ iOS에는 달력 응용 프로그램 및 미리 알림 응용 프로그램 이�
 
 ## <a name="ios-extensionsiosplatformextensionsmd"></a>[iOS 확장](~/ios/platform/extensions.md)
 
-Ios 8에 도입 된 확장은 사용자가 특수 `UIViewControllers` 입력 또는 기타 컨텍스트를 수행 하기 위해 요청 하는 사용자 지정 키보드 유형으로 **알림 센터**내에서와 같은 표준 컨텍스트 내에서 ios에 의해 제공 되는 특수화입니다. 확장에서 특수 효과 필터를 제공할 수 있는 사진을 편집 하는 것과 같습니다.
+IOS 8에 도입 된 확장은 사용자가 특수 입력 또는 다른 컨텍스트를 수행 하기 위해 요청 하는 사용자 지정 키보드 유형으로 **알림 센터**내에서와 같은 표준 컨텍스트 내에서 iOS에서 제공 되는 특수 `UIViewControllers`입니다. 확장이 특수 효과 필터를 제공할 수 있는 사진 편집
 
 ## <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[IOS의 그래픽 및 애니메이션](~/ios/platform/graphics-animation-ios/index.md)
 
@@ -85,7 +85,7 @@ IOS 10의 새로운 기능으로, 메시지 앱 확장은 **메시지** 앱과 �
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[iPad용 멀티태스킹](~/ios/platform/multitasking.md)
 
-iOS 9는 특정 iPad 하드웨어에서 두 앱을 동시에 실행 하기 위한 멀티태스킹 지원을 추가 합니다. IPad 용 멀티태스킹은 다음 기능을 통해 지원 됩니다. 그림에서 위로 이동, 분할 보기 & 그림을 표시 합니다.
+iOS 9는 특정 iPad 하드웨어에서 두 앱을 동시에 실행 하기 위한 멀티태스킹 지원을 추가 합니다. IPad 용 멀티태스킹은 다음 기능을 통해 지원 됩니다. 밀기, 분할 보기 & 그림의 그림입니다.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 
@@ -99,7 +99,7 @@ Photo Kit는 응용 프로그램이 시스템 이미지 라이브러리를 쿼�
 
 ## <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[앱 검토 요청](~/ios/platform/request-app-review.md)
 
-Ios 10.3의 새로운 기능으로 `RequestReview()` ,이 방법을 사용 하면 ios 앱에서 사용자에 게 평가 또는 검토를 요청할 수 있습니다. 사용자가 앱 스토어에서 설치한 배송 앱에서이 메서드를 호출 하면 iOS 10은 개발자에 대 한 전체 등급 및 검토 프로세스를 처리 합니다. 이 프로세스는 앱 스토어 정책에 의해 제어 되므로 경고가 표시 될 수도 있고 표시 되지 않을 수도 있습니다.
+IOS 10.3의 새로운 기능으로, `RequestReview()` 방법을 사용 하면 iOS 앱에서 사용자에 게 평가 또는 검토를 요청할 수 있습니다. 사용자가 앱 스토어에서 설치한 배송 앱에서이 메서드를 호출 하면 iOS 10은 개발자에 대 한 전체 등급 및 검토 프로세스를 처리 합니다. 이 프로세스는 앱 스토어 정책에 의해 제어 되므로 경고가 표시 될 수도 있고 표시 되지 않을 수도 있습니다.
 
 ## <a name="search-apisiosplatformsearchindexmd"></a>[API 검색](~/ios/platform/search/index.md)
 

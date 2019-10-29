@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin에서 watchOS force touch 제스처를 
 ms.prod: xamarin
 ms.assetid: 5A7F83FB-9BC4-4812-92C5-CEC8DAE8211E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c37d8592b7aadc2c88c31826bc954abfa3c0836d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: f848433a5a668e247142aa4f47374c2c6531b55d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766798"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032690"
 ---
 # <a name="watchos-menu-control-force-touch-in-xamarin"></a>Xamarin의 watchOS Menu 컨트롤 (Force Touch)
 
@@ -66,7 +66,7 @@ Menu items added the storyboard can be shown and hidden programmatically.
 
 ### <a name="adding-at-runtime"></a>런타임에 추가
 
-@No__t_1s의 컬렉션을 프로그래밍 방식으로 변경할 *수* 있지만 런타임에 인터페이스 컨트롤러에 `Menu`를 추가할 수는 없습니다.
+`MenuItem`의 컬렉션을 프로그래밍 방식으로 변경할 *수* 있지만 런타임에 `Menu`를 인터페이스 컨트롤러에 추가할 수 없습니다.
 다음과 같이 `AddMenuItem` 메서드를 사용 합니다.
 
 ```csharp
@@ -85,7 +85,7 @@ void MenuItemTapped ()
 
 ### <a name="removing-at-runtime"></a>런타임에 제거
 
-@No__t_0 메서드를 호출 하 여 *프로그래밍 방식으로 추가* 된 모든 메뉴 항목을 제거할 수 있습니다.
+`ClearAllMenuItems` 메서드를 호출 하 여 *프로그래밍 방식으로 추가* 된 모든 메뉴 항목을 제거할 수 있습니다.
 
 스토리 보드에서 구성 된 메뉴 항목은 지울 수 없습니다.
 

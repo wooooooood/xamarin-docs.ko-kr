@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios를 사용 하 여 macOS Mojave 앱�
 ms.prod: xamarin
 ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 64c1ca0bfee5b98b7842bdc44a46bc40cf2012fc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a7aba55f0470ad44dcce3de56ed15308439785e2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285474"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029848"
 ---
 # <a name="get-started-with-macos-mojave"></a>MacOS Mojave 시작
 
@@ -26,7 +26,7 @@ ms.locfileid: "70285474"
 
 3. **업데이트 Mac용 Visual Studio** – Mac용 Visual Studio 최신 버전의 최신 버전 ( [xamarin.ios 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md) 이상)을 사용 합니다.
 
-4. _(선택 사항)_ **Mac에 macOS Mojave 설치** –
+4. _(선택 사항)_ **Mac에서 Macos mojave 설치** –
 
    > [!TIP]
    > 앱에서 새로운 macOS Mojave Api를 사용 하지 않는 경우에도 macOS Mojave SDK를 사용 하 여 빌드한 다음 테스트 하 여 예상 대로 작동 하는지 확인 해야 합니다. 앱에서 새 Api를 호출 하지 않는 경우 macOS Mojave SDK를 사용 하 여 다시 컴파일한 다음 Mac의 운영 체제를 업그레이드 하지 않고 테스트할 수 있습니다.

@@ -3,15 +3,15 @@ title: 2부 - 아키텍처
 description: 이 문서에서는 플랫폼 간 응용 프로그램을 빌드하는 데 유용한 아키텍처 패턴을 설명 합니다. 일반적인 응용 프로그램 계층 (데이터 계층, 데이터 액세스 계층 등) 및 일반적인 모바일 소프트웨어 패턴 (MVVM, MVC 등)에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: e1b1a98bf06bbd03b382f0b7263e6965d4efad15
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 84a06e23ec7125892701762ab5bad7b86a8faf90
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030272"
 ---
 # <a name="part-2---architecture"></a>2부 - 아키텍처
 
@@ -46,7 +46,7 @@ ms.locfileid: "70762114"
 
 - **Model, View, viewmodel (MVVM)** -모델-뷰-viewmodel 패턴은 xamarin.ios와 같은 데이터 바인딩을 지 원하는 프레임 워크에서 널리 사용 됩니다. Windows Presentation Foundation (WPF) 및 Silverlight와 같은 XAML 사용 Sdk로 mvvm 되었습니다. 여기서 ViewModel은 데이터 바인딩 및 명령을 통해 데이터 (모델)와 사용자 인터페이스 (뷰) 간에 이동 하는 역할을 합니다.
 - **Mvc (모델, 뷰, 컨트롤러)** – 일반적이 고 일반적으로 잘못 해석 되는 패턴입니다. Mvc는 사용자 인터페이스를 빌드할 때 가장 일반적으로 사용 되는 패턴으로, 상호 작용을 처리 하는 (뷰)의 실제 정의를 제공 합니다. Controller)와이를 채우는 데이터 (모델)가 있습니다. 모델은 실제로는 완전히 선택적인 부분 이므로이 패턴을 이해 하는 핵심은 뷰와 컨트롤러에 있습니다. MVC는 iOS 응용 프로그램에 널리 사용 되는 방법입니다.
-- **비즈니스 외관** – 즉, Manager 패턴은 복잡 한 작업에 대 한 단순화 된 진입점을 제공 합니다. 예를 들어 작업 `TaskManager` 추적 응용 프로그램에서는 `GetAllTasks()` , `GetTask(taskID)` `SaveTask (task)` , 등의 메서드가 있는 클래스가 있을 수 있습니다. 클래스 `TaskManager` 는 실제로 작업 개체를 저장/검색 하는 내부 작업에 대 한 외관을 제공 합니다.
+- **비즈니스 외관** – 즉, Manager 패턴은 복잡 한 작업에 대 한 단순화 된 진입점을 제공 합니다. 예를 들어 작업 추적 응용 프로그램에 `GetAllTasks()`, `GetTask(taskID)`, `SaveTask (task)` 등의 메서드가 있는 `TaskManager` 클래스가 있을 수 있습니다. `TaskManager` 클래스는 실제로 작업 개체를 저장/검색 하는 내부 작업에 대 한 외관을 제공 합니다.
 - **Singleton** – singleton 패턴은 특정 개체의 단일 인스턴스만 존재할 수 있는 방법을 제공 합니다. 예를 들어 모바일 응용 프로그램에서 SQLite를 사용 하는 경우 데이터베이스의 인스턴스를 하나만 사용할 수 있습니다. Singleton 패턴을 사용 하면이를 쉽게 확인할 수 있습니다.
 - **공급자** – Microsoft에서 연결 설명은 하는 패턴으로, SILVERLIGHT, WPF 및 WinForms 응용 프로그램에서 코드를 다시 사용 하는 것을 권장 합니다. 인터페이스 또는 추상 클래스에 대해 공유 코드를 작성할 수 있으며, 코드를 사용할 때 플랫폼별 구체적 구현이 작성 및 전달 됩니다.
 - **Async** – async 키워드와 혼동 하지 않도록 비동기 패턴은 UI 또는 현재 처리를 유지 하지 않고 장기 실행 작업을 실행 해야 하는 경우에 사용 됩니다. 가장 간단한 형태의 비동기 패턴은 현재 스레드가 백그라운드 프로세스의 응답을 계속 처리 하 고 수신 대기 하는 동안 다른 스레드 (또는 작업과 같은 유사한 스레드 추상화)에서 시작 해야 하는 장기 실행 작업을 설명 합니다. 로 이동한 다음 데이터 및 또는 상태가 반환 될 때 UI를 업데이트 합니다.

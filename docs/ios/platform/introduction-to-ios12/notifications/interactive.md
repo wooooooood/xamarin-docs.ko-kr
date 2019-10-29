@@ -4,15 +4,15 @@ description: IOS 12를 사용 하면 로컬 및 원격 알림에 대 한 대화�
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 572b369755e37f123fbfdf5850a635e7ada12a9b
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e629cd8f481558991d02c7fb879502ebd54753bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291234"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031935"
 ---
 # <a name="interactive-notification-user-interfaces-in-xamarinios"></a>Xamarin.ios의 대화형 알림 사용자 인터페이스
 
@@ -59,14 +59,14 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
 다음 기능에 유의 하십시오.
 
 - `UNNotificationExtensionCategory` 배열은 콘텐츠 확장에서 처리 하는 알림 범주의 유형을 지정 합니다.
-- 대화형 콘텐츠를 지원 하기 위해 알림 콘텐츠 확장은 `UNNotificationExtensionUserInteractionEnabled` 키를로 `true`설정 합니다.
-- 키 `UNNotificationExtensionInitialContentSizeRatio` 는 콘텐츠 확장의 인터페이스에 대 한 초기 높이/너비 비율을 지정 합니다.
+- 대화형 콘텐츠를 지원 하기 위해 알림 콘텐츠 확장 프로그램은 `UNNotificationExtensionUserInteractionEnabled` 키를 `true`으로 설정 합니다.
+- `UNNotificationExtensionInitialContentSizeRatio` 키는 콘텐츠 확장의 인터페이스에 대 한 초기 높이/너비 비율을 지정 합니다.
 
 ## <a name="interactive-interface"></a>대화형 인터페이스
 
-알림 콘텐츠 확장에 대 한 인터페이스를 정의 하는 **Maininterface**는 단일 뷰 컨트롤러를 포함 하는 표준 스토리 보드입니다. 샘플 앱에서 뷰 컨트롤러는 형식이 `NotificationViewController`며 이미지 뷰, 3 개의 단추 및 슬라이더를 포함 합니다. 스토리 보드는 **NotificationViewController.cs**에 정의 된 처리기와 이러한 컨트롤을 연결 합니다.
+알림 콘텐츠 확장에 대 한 인터페이스를 정의 하는 **Maininterface**는 단일 뷰 컨트롤러를 포함 하는 표준 스토리 보드입니다. 샘플 앱에서 뷰 컨트롤러는 `NotificationViewController`유형이 며 이미지 뷰, 3 개의 단추 및 슬라이더를 포함 합니다. 스토리 보드는 **NotificationViewController.cs**에 정의 된 처리기와 이러한 컨트롤을 연결 합니다.
 
-- **앱 시작** 단추 처리기는 앱을 `PerformNotificationDefaultAction` 시작 하는 `ExtensionContext`에 대 한 작업 메서드를 호출 합니다.
+- **앱 시작** 단추 처리기는 `ExtensionContext`에서 `PerformNotificationDefaultAction` 작업 메서드를 호출 하 여 앱을 시작 합니다.
 
     ```csharp
     partial void HandleLaunchAppButtonTap(UIButton sender)
@@ -75,7 +75,7 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
     }
     ```
 
-    앱에서 사용자 알림 센터 `Delegate` (샘플 앱 `AppDelegate`)는 `DidReceiveNotificationResponse` 메서드의 상호 작용에 응답할 수 있습니다.
+    앱에서 사용자 알림 센터의 `Delegate` (샘플 앱에서는 `AppDelegate`)가 `DidReceiveNotificationResponse` 메서드에서 상호 작용에 응답할 수 있습니다.
 
     ```csharp
     [Export("userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:")]
@@ -87,7 +87,7 @@ IOS 10에 도입 된 [알림 콘텐츠 확장](~/ios/platform/user-notifications
             // ...
     ```
 
-- 알림 **해제** 단추 처리기는 알림을 `DismissNotificationContentExtension` 닫는 `ExtensionContext`에 대해를 호출 합니다.
+- 알림 **해제** 단추 처리기는 `ExtensionContext`에서 `DismissNotificationContentExtension`를 호출 하 여 알림을 닫습니다.
 
     ```csharp
     partial void HandleDismissNotificationButtonTap(UIButton sender)

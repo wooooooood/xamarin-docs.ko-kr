@@ -4,15 +4,15 @@ description: UI (사용자 인터페이스) 컨트롤을 포함 하는 UX (일�
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: f0633b0f91bf39d10ad42e1ee41997213ca3047e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8bf8aad6804fcbbc984b942fdafd12522299998
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769039"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030444"
 ---
 # <a name="building-tvos-user-interfaces-with-xamarin"></a>Xamarin을 사용 하 여 tvOS 사용자 인터페이스 빌드
 
@@ -24,7 +24,7 @@ Xamarin 기반 tvOS C# 에서 및 .net을 사용 하는 경우 목표-C 또는 S
 
 ## <a name="working-with-alertsiostvosuser-interfacealertsmd"></a>[경고 사용](~/ios/tvos/user-interface/alerts.md)
 
-이 문서에서는를 사용 `UIAlertController` 하 여 tvOS의 사용자에 게 경고 메시지를 표시 하는 작업을 설명 합니다.
+이 문서에서는 tvOS에서 사용자에 게 경고 메시지를 표시 하는 `UIAlertController` 작업을 설명 합니다.
 
 ## <a name="working-with-buttonsiostvosuser-interfacebuttonsmd"></a>[단추 작업](~/ios/tvos/user-interface/buttons.md)
 

@@ -3,15 +3,15 @@ title: 대화형 Workbooks
 description: 이 문서에서는 Xamarin Workbooks를 사용 하 여 실험, 학습, C# 학습 또는 탐색을 위한 코드를 포함 하는 라이브 문서를 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 7b3c356460d9427821843dc084b3f306c026ffa0
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a6ca347c231d001cab521d7280a66b714b6a5aef
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293082"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029571"
 ---
 # <a name="interactive-workbooks"></a>대화형 Workbooks
 
@@ -27,25 +27,25 @@ ms.locfileid: "70293082"
 
 코드 편집 창은 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄 문 지원 기능을 제공 합니다.
 
-[![](workbook-images/inspector-0.6.0-repl-small.png "코드 편집 창에서는 코드 완성, 구문 색 지정, 인라인 라이브 진단 및 여러 줄 문 지원 기능을 제공 합니다.")](workbook-images/inspector-0.6.0-repl.png#lightbox)
+[![](workbook-images/inspector-0.6.0-repl-small.png "The code editing window provides code completion, syntax coloring, inline live-diagnostics, and multi-line statement support")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Xamarin Workbooks는 `.workbook` 파일에 저장 됩니다 .이 파일은 맨 위에 일부 메타 데이터가 있는 CommonMark 파일입니다 (통합 문서를 저장 하는 방법에 대 한 자세한 내용은 [통합 문서 파일 형식](#workbooks-files-types) 참조).
+Xamarin Workbooks는 맨 위에 일부 메타 데이터가 포함 된 CommonMark 파일인 `.workbook` 파일에 저장 됩니다 (통합 문서를 저장 하는 방법에 대 한 자세한 내용은 [통합 문서 파일 형식](#workbooks-files-types) 참조).
 
 ### <a name="nuget-package-support"></a>NuGet 패키지 지원
 
-널리 사용 되는 많은 NuGet 패키지는 Xamarin Workbooks에서 직접 지원 됩니다. **파일 > 패키지 추가**로 이동 하 여 패키지를 검색할 수 있습니다. 를 자동으로 가져오므로 `#r` 문 바로 사용할 수 있도록 패키지 어셈블리를 참조 합니다.
+널리 사용 되는 많은 NuGet 패키지는 Xamarin Workbooks에서 직접 지원 됩니다. **파일 > 패키지 추가**로 이동 하 여 패키지를 검색할 수 있습니다. 패키지를 추가 하면 패키지 어셈블리를 참조 하는 `#r` 문이 자동으로 가져와 즉시 사용할 수 있습니다.
 
 패키지 참조가 포함 된 통합 문서를 저장 하면 해당 참조도 저장 됩니다. 다른 사용자와 통합 문서를 공유 하는 경우 참조 된 패키지를 자동으로 다운로드 합니다.
 
 통합 문서에는 NuGet 패키지 지원에 대 한 몇 가지 알려진 제한 사항이 있습니다.
 
 - 네이티브 라이브러리는 iOS 에서만 지원 되며 관리 되는 라이브러리와 연결 된 경우에만 지원 됩니다.
-- 파일이 나 PowerShell 스크립트 `.targets` 에 종속 된 패키지는 예상 대로 작동 하지 않을 수 있습니다.
+- `.targets` 파일이 나 PowerShell 스크립트를 사용 하는 패키지는 정상적으로 작동 하지 않을 수 있습니다.
 - 패키지 종속성을 제거 하거나 수정 하려면 텍스트 편집기를 사용 하 여 통합 문서의 매니페스트를 편집 합니다. 적절 한 패키지 관리는 적절 한 방법입니다.
 
 ### <a name="xamarinforms-support"></a>Xamarin.ios 지원
 
-통합 문서에서 Xamarin.ios NuGet 패키지를 참조 하는 경우 통합 문서 앱은 기본 보기를 Xamarin. Forms 기반으로 변경 합니다. 를 통해 `Xamarin.Forms.Application.Current.MainPage`액세스할 수 있습니다.
+통합 문서에서 Xamarin.ios NuGet 패키지를 참조 하는 경우 통합 문서 앱은 기본 보기를 Xamarin. Forms 기반으로 변경 합니다. `Xamarin.Forms.Application.Current.MainPage`를 통해 액세스할 수 있습니다.
 
 뷰 검사기 탭에는 레이아웃을 이해 하는 데 도움이 되는 Xamarin.ios 뷰 계층 구조를 표시할 수 있는 특별 한 지원도 있습니다.
 
@@ -53,7 +53,7 @@ Xamarin Workbooks는 `.workbook` 파일에 저장 됩니다 .이 파일은 맨 �
 
 아래 그림과 같이 서식 있는 텍스트 편집기를 사용 하 여 코드 주위의 텍스트를 편집할 수 있습니다.
 
-![](workbook-images/inspector-0.6.2-editing.gif "기본 제공 서식 있는 텍스트 편집기를 사용 하 여 코드 주위의 텍스트 편집")
+![](workbook-images/inspector-0.6.2-editing.gif "Edit the text around the code using the built-in rich text editor")
 
 ### <a name="markdown-authoring"></a>Markdown 작성
 
@@ -61,7 +61,7 @@ Xamarin Workbooks는 `.workbook` 파일에 저장 됩니다 .이 파일은 맨 �
 
 통합 문서를 편집 하 고 통합 문서 클라이언트 내에서 저장 하는 경우에는 CommonMark 텍스트의 서식을 다시 지정할 수 있습니다.
 
-통합 문서 파일 `---` 에서 yaml 메타 데이터를 사용 하도록 설정 하는 데 사용 되는 CommonMark 확장으로 인해는 해당 목적을 위해 예약 되어 있습니다. 텍스트에 [테마 나누기](http://spec.commonmark.org/0.27/#thematic-break) 를 만들려면 대신 또는 `***` `___` 를 사용 해야 합니다. 저장 하는 동안 버그로 인해 1.2 이전 버전의 통합 문서에서는 이러한 나누기를 피해 야 합니다.
+통합 문서 파일에서 YAML 메타 데이터를 사용 하도록 설정 하는 데 CommonMark 확장으로 인해 `---`는 해당 목적으로 예약 되어 있습니다. 텍스트에 [테마 나누기](https://spec.commonmark.org/0.27/#thematic-break) 를 만들려면 대신 `***` 또는 `___`를 사용 해야 합니다. 저장 하는 동안 버그로 인해 1.2 이전 버전의 통합 문서에서는 이러한 나누기를 피해 야 합니다.
 
 ### <a name="improvements-in-workbooks-13"></a>통합 문서 1.3의 향상 된 기능
 
@@ -80,11 +80,11 @@ Xamarin Workbooks는 `.workbook` 파일에 저장 됩니다 .이 파일은 맨 �
 1. 영숫자 및 대시를 제외한 모든 문자가 제거 됩니다.
 1. 모든 공백은 대시로 바뀝니다.
 
-즉, "중요 한 헤더"와 같은 헤더는 통합 문서에 `important-header` 에 대 `#important-header` 한 링크를 삽입 하 여의 id를 가져오고 연결할 수 있습니다.
+즉, "중요 한 헤더"와 같은 헤더는 `important-header` id를 가져오고 통합 문서에 `#important-header`에 대 한 링크를 삽입 하 여 연결할 수 있습니다.
 
 ## <a name="document-structure"></a>문서 구조
 
-### <a name="cell"></a>셀
+### <a name="cell"></a>셀씩
 
 실행 코드 또는 markdown를 나타내는 개별 콘텐츠 단위입니다. 코드 셀은 최대 4 개의 하위 구성 요소로 구성 됩니다.
 
@@ -118,29 +118,29 @@ Xamarin Workbooks는 `.workbook` 파일에 저장 됩니다 .이 파일은 맨 �
 
 ### <a name="plain-files"></a>일반 파일
 
-기본적으로 통합 문서는 CommonMark 형식의 텍스트를 포함 `.workbook` 하는 일반 텍스트 파일로 저장 합니다.
+기본적으로 통합 문서는 CommonMark 형식의 텍스트를 포함 하는 일반 텍스트 `.workbook` 파일로 저장 합니다.
 
 ### <a name="packages"></a>패키지
 
-통합 문서 패키지는 `.workbook` 확장명이로 지정 된 디렉터리입니다.
+통합 문서 패키지는 `.workbook` 확장으로 이름이 지정 된 디렉터리입니다.
 Mac의 Finder 및 Xamarin Workbooks 열기 대화 상자 및 최근 파일 메뉴에서이 디렉터리는 파일 처럼 인식 됩니다.
 
-디렉터리에는 Xamarin Workbooks 로드 `index.workbook` 되는 실제 일반 텍스트 통합 문서인 파일이 포함 되어 있어야 합니다. 디렉터리는 이미지 또는 기타 파일을 비롯 `index.workbook`하 여에 필요한 리소스를 포함할 수도 있습니다.
+디렉터리는 Xamarin Workbooks에서 로드 되는 실제 일반 텍스트 통합 문서인 `index.workbook` 파일을 포함 해야 합니다. 디렉터리는 이미지 또는 다른 파일을 포함 하 여 `index.workbook`에 필요한 리소스를 포함할 수도 있습니다.
 
-같은 디렉터리의 리소스 `.workbook` 를 참조 하는 일반 텍스트 파일이 통합 문서 0.99.3 이상에서 열리면 저장 될 때 `.workbook` 패키지로 변환 됩니다. Mac 및 Windows 모두에 적용 됩니다.
+같은 디렉터리의 리소스를 참조 하는 일반 텍스트 `.workbook` 파일이 통합 문서 0.99.3 이상에서 열리면 저장 되 면 `.workbook` 패키지로 변환 됩니다. Mac 및 Windows 모두에 적용 됩니다.
 
 > [!NOTE]
-> Windows 사용자는 `package.workbook\index.workbook` 파일을 직접 열 수 있습니다. 그렇지 않으면 패키지가 Mac에서와 동일 하 게 동작 합니다.
+> Windows 사용자는 `package.workbook\index.workbook` 파일을 직접 열 수 있습니다. 그렇지 않으면 패키지가 Mac에서와 동일 하 게 작동 합니다.
 
 ### <a name="archives"></a>파일과
 
-디렉터리가 되는 통합 문서 패키지는 인터넷을 통해 쉽게 배포 하기가 어려울 수 있습니다. 이 솔루션은 통합 문서 보관입니다. 통합 문서 보관은 `.workbook` 확장명이 인 압축 된 통합 문서 패키지입니다.
+디렉터리가 되는 통합 문서 패키지는 인터넷을 통해 쉽게 배포 하기가 어려울 수 있습니다. 이 솔루션은 통합 문서 보관입니다. 통합 문서 보관은 `.workbook` 확장으로 명명 된 압축 된 통합 문서 패키지입니다.
 
 통합 문서 1.1부터 통합 문서 패키지를 저장 하는 경우 저장 대화 상자는 대신 보관 파일로 저장 하는 옵션을 제공 합니다. 통합 문서 1.0에는 보관 파일을 만들거나 저장할 수 있는 기본 제공 방법이 없습니다.
 
 통합 문서 1.0에서 통합 문서 보관 파일이 열리면 통합 문서 패키지로 투명 하 게 변환 되 고 zip 파일이 손실 됩니다. 통합 문서 1.1에서 zip 파일은 그대로 유지 됩니다. 사용자는 보관 파일을 저장할 때 새 zip 파일로 대체 됩니다.
 
-통합 문서 패키지를 마우스 오른쪽 단추로 클릭 하 고 Mac에서 **압축** 을 선택 하거나 Windows의 **Zip (> 압축) 폴더로 전송** 하 여 통합 문서 보관 파일을 수동으로 만들 수 있습니다. 그런 다음 `.workbook` 파일 확장명을 포함 하도록 zip 파일의 이름을 바꿉니다. 이는 일반 통합 문서 파일이 아닌 통합 문서 패키지 에서만 작동 합니다.
+통합 문서 패키지를 마우스 오른쪽 단추로 클릭 하 고 Mac에서 **압축** 을 선택 하거나 Windows의 **Zip (> 압축) 폴더로 전송** 하 여 통합 문서 보관 파일을 수동으로 만들 수 있습니다. 그런 다음 `.workbook` 파일 확장명을 갖도록 zip 파일의 이름을 바꿉니다. 이는 일반 통합 문서 파일이 아닌 통합 문서 패키지 에서만 작동 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

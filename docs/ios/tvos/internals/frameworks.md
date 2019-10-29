@@ -4,15 +4,15 @@ description: TvOS 응용 프로그램에 사용할 수 있는 기능을 명확 �
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: dddbe8cb834eed7174619926a175adb0f8f0f50a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ab89d6e05b42157ededa3bb01cf22d5cdca130ce
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769607"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030667"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>TvOS에서 지원 되거나 지원 되지 않는 프레임 워크
 
@@ -23,13 +23,13 @@ ms.locfileid: "70769607"
 TvOS 앱에서 사용 하기 위해 Apple에서 제공 하는 프레임 워크의 목록입니다.
 
 - 가속화할
-- AudioToolbox
-- AudioUnit
+- 오디오 도구 상자
+- 오디오
 - AVFoundation
 - AVKit
 - CFNetwork
 - CloudKit
-- CoreBluetooth
+- 이 corebluetooth
 - CoreData
 - CoreFoundation
 - CoreGraphics
@@ -43,7 +43,7 @@ TvOS 앱에서 사용 하기 위해 Apple에서 제공 하는 프레임 워크�
 - Mfc
 - GameController
 - GameKit
-- GamePlay
+- 플레이
 - 글 키트
 - ImageIO
 - MachO
@@ -105,7 +105,7 @@ TvOS 앱에서 사용 하기 위해 Apple에서 제공 하는 프레임 워크�
 - SafariServices
 - 소셜
 - Twitter
-- VideoToolbox
+- 비디오 도구 상자
 - WatchConnectivity
 - WatchKit
 - WebKit

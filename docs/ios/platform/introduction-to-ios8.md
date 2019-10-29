@@ -4,15 +4,15 @@ description: IOS 8을 사용 하 여 Apple은 흥미 및 즐거움 개발자에 
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 713e433f852f3bafc13b3ac32074c574d12ef7f1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2da018b3595850582331280909fa327cee4ff6e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752010"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031813"
 ---
 # <a name="introduction-to-ios-8"></a>iOS 8 소개
 
@@ -48,9 +48,9 @@ HomeKit를 사용 하 여 타사 앱 및 Siri는 액세서리를 검색 하 고 
 
 아래 다이어그램은 HomeKit 액세서리 구성의 기본 계층을 보여 줍니다.
 
-![](introduction-to-ios8-images/image1.png "이 다이어그램은 HomeKit 액세서리 구성의 기본 계층 구조를 보여줍니다.")
+![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
 
-HomeKit을 시작 하려면 개발자가 프로 비전 프로필에 HomeKit 서비스를 선택 했는지 확인 해야 합니다. 또한 Apple은 개발자에 게 Xcode에 대 한 HomeKit 시뮬레이터 추가 기능을 제공 했습니다. 이는 [Apple 개발자 센터](https://developer.apple.com/downloads/index.action) `Hardware IO Tools for Xcode`의에서 찾을 수 있습니다. 
+HomeKit을 시작 하려면 개발자가 프로 비전 프로필에 HomeKit 서비스를 선택 했는지 확인 해야 합니다. 또한 Apple은 개발자에 게 Xcode에 대 한 HomeKit 시뮬레이터 추가 기능을 제공 했습니다. 이는 [Apple 개발자 센터](https://developer.apple.com/downloads/index.action)의 `Hardware IO Tools for Xcode`에서 찾을 수 있습니다. 
 
 자세한 내용은 [HomeKit](~/ios/platform/homekit.md) 가이드를 참조 하세요.
 
@@ -68,9 +68,9 @@ IOS8를 사용 하 여 개발자는 앱을 사용할 수 있는 사용자에 대
 
 앱 확장을 만드는 첫 번째 단계는 올바른 확장 지점을 정의 하는 것입니다 .이는 올바른 Api의 동작과 가용성을 보장 하는 데 중요 합니다. Mac용 Visual Studio에서 앱 확장을 만들려면 솔루션에 새 프로젝트를 추가 하 여 기존 응용 프로그램에 추가 합니다.
 
-아래 스크린샷에 표시 된 것 처럼 **새 프로젝트** 대화 **C#**  > 상자에서 **iOS** > **Unified API** > **확장**으로 이동 합니다.
+아래 스크린샷에 나와 있는 것 처럼 **새 프로젝트** 대화 상자 **C#** 에서 > **iOS** > **Unified API** > **확장**으로 이동 합니다.
 
-![](introduction-to-ios8-images/image2.png "새 확장 만들기")
+![](introduction-to-ios8-images/image2.png "Creating a new extension")
 
 새 프로젝트 대화 상자는 앱 확장을 만들기 위한 7 가지 새 프로젝트 템플릿을 제공 하며 아래에서 설명 합니다. 많은 확장 프로그램이 iOS의 다른 새 Api (예: 문서 선택기)와 관련이 있습니다.
 
@@ -91,7 +91,7 @@ Touch ID는 암호와 유사 하 게 사용자를 인증 하는 수단으로 iOS
 
 첫째, 새 키 집합 Access Control 목록 (Acl)을 사용 하 여 기존 키 집합 서비스를 지원 합니다. 사용자 지문을 성공적으로 인증 하면 키 집합 데이터의 잠금을 해제할 수 있습니다.
 
-두 번째로 LocalAuthentication은 응용 프로그램을 로컬로 인증 하는 두 가지 방법을 제공 합니다. 개발자는를 `CanEvaluatePolicy` 사용 하 여 장치에서 Touch ID를 수락할 수 있는지 확인 한 다음 `EvaluatePolicy` 인증 작업을 시작할 수 있습니다.
+두 번째로 LocalAuthentication은 응용 프로그램을 로컬로 인증 하는 두 가지 방법을 제공 합니다. 개발자는 `CanEvaluatePolicy`를 사용 하 여 장치에서 Touch ID를 수락할 수 있는지 확인 한 다음 `EvaluatePolicy` 하 여 인증 작업을 시작 해야 합니다.
 
 Touch ID에 대 한 자세한 내용과 Xamarin.ios 응용 프로그램에 통합 하는 방법에 대 한 자세한 내용은 [TouchID 가이드 소개](~/ios/platform/touchid.md) 를 참조 하세요.
 
@@ -112,7 +112,7 @@ Touch ID에 대 한 자세한 내용과 Xamarin.ios 응용 프로그램에 통�
 ## <a name="unified-storyboards"></a>통합 Storyboards
 iOS 8에는 사용자 인터페이스를 만드는 데 사용 하는 보다 간단한 새로운 메커니즘인 통합 storyboard가 포함 되어 있습니다. 단일 storyboard를 사용 하 여 다양 한 하드웨어 화면 크기를 모두 포함 하는 경우 "한 번 디자인 하 고 다 수" 스타일로 신속 하 고 응답성이 뛰어난 보기를 만들 수 있습니다.
 
-IOS8 이전에는 개발자가 `UIInterfaceOrientation` 가로 및 세로 모드를 구분 하 고 `UIInterfaceIdiom` iOS 장치를 구분 하는 데 사용 했습니다. IOS8에서는 iPhone 및 iPad 장치에 대 한 별도의 스토리 보드를 만들 필요가 없습니다. 방향 및 장치는 *크기 클래스*를 사용 하 여 결정 됩니다.
+IOS8 이전에는 개발자가 `UIInterfaceOrientation`를 사용 하 여 가로 및 세로 모드를 구분 하 고 `UIInterfaceIdiom` iOS 장치를 구분할 수 있습니다. IOS8에서는 iPhone 및 iPad 장치에 대 한 별도의 스토리 보드를 만들 필요가 없습니다. 방향 및 장치는 *크기 클래스*를 사용 하 여 결정 됩니다.
 
 모든 장치는 가로 및 세로 축에서 크기 클래스로 정의 되며 iOS 8에는 두 가지 유형의 크기 클래스가 있습니다.
 
@@ -121,7 +121,7 @@ IOS8 이전에는 개발자가 `UIInterfaceOrientation` 가로 및 세로 모드
 
 두 가지 개념을 함께 사용 하는 경우 결과는 다음 다이어그램에 표시 된 것 처럼 서로 다른 방향으로 사용할 수 있는 다양 한 크기를 정의 하는 2 x 2 그리드입니다.
 
-![](introduction-to-ios8-images/image3.png "서로 다른 방향으로 사용할 수 있는 여러 가지 가능한 크기를 정의 하는 2 x 2 표를 나타내는 다이어그램입니다.")
+![](introduction-to-ios8-images/image3.png "A diagram representing the 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations")
 
 크기 클래스에 대 한 자세한 내용은 [통합 Storyboard 소개](~/ios/user-interface/storyboards/unified-storyboards.md)를 참조 하세요.
 

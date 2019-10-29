@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 9에서 제공 되는 새 앱 검색 Api를
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: e64ae5e04fbdd5b4c69a0b00c2bbc087b7cdf62a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ec63407189b635a9586b02e848647518aaf0170f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769498"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031558"
 ---
 # <a name="search-apis-in-xamarinios"></a>Xamarin.ios에서 Api 검색
 
@@ -22,7 +22,7 @@ _이 문서에서는 iOS 9에서 제공 하는 앱 검색 Api를 사용 하 여 
 
 또한 새 검색 Api를 사용 하면 사전 검색 구현 환경을 사용 하지 않고도 앱에서 검색을 보다 쉽게 통합할 수 있습니다. 따라서 Apple은 일반적으로 앱 검색을 사용 하 여 iOS 9 앱 콘텐츠를 검색 하는 데 몇 시간 정도 걸립니다.
 
-[![](images/intro01.png "앱 검색을 사용 하 여 범용으로 검색 가능한 iOS 9 앱 콘텐츠의 예")](images/intro01.png#lightbox)
+[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
 
 앱 검색은 세 가지 별도의 Api로 구성 됩니다.
 
@@ -78,7 +78,7 @@ iOS 10은 시스템이 적절 한 시간에 자동으로 유용한 정보를 사
 - 앱 전환기
 - 잠금 화면
 - CarPlay
-- 지도
+- 맵
 - Siri 상호 작용
 - QuickType 제안 
 

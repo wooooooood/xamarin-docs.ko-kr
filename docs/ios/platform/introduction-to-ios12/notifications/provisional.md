@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios를 사용 하 여 provisional 알�
 ms.prod: xamarin
 ms.assetid: 5DCB36B9-2637-48AE-8FC0-F6124F08AC48
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: d321e8061d3091abeaa3cff6a6af9172c981cb60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7d9fe2a651d8d75d8dd9d8c0dd1225350a58373d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291195"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031881"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Xamarin.ios의 Provisional 알림
 
@@ -26,8 +26,8 @@ Provisional 알림을 보내는 [RedGreenNotifications](https://docs.microsoft.c
 
 ## <a name="sending-provisional-notifications"></a>Provisional 알림 보내기
 
-Provisional 알림을 전송 하려면을 옵션 `UNAuthorizationOptions.Provisional` 으로 제공 합니다.[`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
-`UNUserNotificationCenter`메서드:
+Provisional 알림을 보내려면 [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*) 에 옵션으로 `UNAuthorizationOptions.Provisional`를 제공 합니다.
+`UNUserNotificationCenter`의 메서드:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -41,7 +41,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-사용자가 provisional `UNAuthorizationOptions` 알림을 중요 한 배달으로 승격 하는 경우에 `RequestAuthorization` 전달 된 값이 새 알림 배달 설정 (위 코드 `UNAuthorizationOptions.Alert` 에서는 및 `UNAuthorizationOptions.Sound`)을 결정 합니다.
+사용자가 provisional 알림을 중요 한 배달으로 승격 하는 경우 `RequestAuthorization`에 전달 된 `UNAuthorizationOptions` 값이 새 알림 배달 설정 (위 코드에서는 `UNAuthorizationOptions.Alert` 및 `UNAuthorizationOptions.Sound`)을 결정 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 앱에서 t
 ms.prod: xamarin
 ms.assetid: 23AD94CC-E93A-40B1-8E2B-ECD21FA355BE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: deac7c5eee4ac0276c9d1a67cbfede8fc41378d6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0bedd898232b39898e6079a204bd7409587cde82
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769058"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030401"
 ---
 # <a name="working-with-tvos-segmented-controls-in-xamarin"></a>Xamarin에서 tvOS 세그먼트화 된 컨트롤 사용
 
 분할 된 컨트롤은 각각 아이콘이 나 텍스트를 포함할 수 있는 일련의 선형 요소를 제공 하며, 사용자에 게 관련 선택 항목 집합을 제공 하는 데 사용 됩니다.
 
-[![](segmented-controls-images/segment01.png "샘플 세그먼트 컨트롤")](segmented-controls-images/segment01.png#lightbox)
+[![](segmented-controls-images/segment01.png "Sample segment controls")](segmented-controls-images/segment01.png#lightbox)
 
 Apple에는 분할 된 컨트롤을 사용 하기 위한 다음과 같은 제안이 있습니다.
 
@@ -59,15 +59,15 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **세그먼트 컨트롤** 을 끌어 뷰에 놓습니다. 
 
-    [![](segmented-controls-images/segment02.png "세그먼트 컨트롤")](segmented-controls-images/segment02.png#lightbox)
+    [![](segmented-controls-images/segment02.png "A Segment Control")](segmented-controls-images/segment02.png#lightbox)
 1. **속성 패드**의 **위젯 탭** 에서 해당 **스타일** 및 **상태**와 같은 세그먼트 컨트롤의 여러 속성을 조정할 수 있습니다. 
 
-    [![](segmented-controls-images/segment03.png "위젯 탭")](segmented-controls-images/segment03.png#lightbox)
+    [![](segmented-controls-images/segment03.png "The Widget Tab")](segmented-controls-images/segment03.png#lightbox)
 1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
 1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어: 
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들면, 
 
-    [![](segmented-controls-images/segment04.png "이름 할당")](segmented-controls-images/segment04.png#lightbox)
+    [![](segmented-controls-images/segment04.png "Assign a Name")](segmented-controls-images/segment04.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -75,15 +75,15 @@ TvOS 앱에서 세그먼트 컨트롤로 작업 하는 가장 쉬운 방법은 i
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **세그먼트 컨트롤** 을 끌어 뷰에 놓습니다. 
 
-    [![](segmented-controls-images/segment02-vs.png "세그먼트 컨트롤")](segmented-controls-images/segment02-vs.png#lightbox)
+    [![](segmented-controls-images/segment02-vs.png "A Segment Control")](segmented-controls-images/segment02-vs.png#lightbox)
 1. **속성 탐색기**의 **위젯 탭** 에서 해당 **스타일** 및 **상태**와 같은 세그먼트 컨트롤의 여러 속성을 조정할 수 있습니다. 
 
-    [![](segmented-controls-images/segment03-vs.png "위젯 탭")](segmented-controls-images/segment03-vs.png#lightbox)
+    [![](segmented-controls-images/segment03-vs.png "The Widget Tab")](segmented-controls-images/segment03-vs.png#lightbox)
 1. **세그먼트** 필드를 사용 하 여 컨트롤러의 세그먼트 수를 제어 합니다.
 1. **세그먼트 드롭다운에서** 지정 된 세그먼트를 선택 하 여 **제목** 또는 **이미지** 와 같은 개별 속성을 조정 하 고, 컨트롤이 표시 될 때 지정 된 세그먼트가 **활성화** 또는 **선택** 되는지 여부를 제어 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어: 
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들면, 
 
-    [![](segmented-controls-images/segment04-vs.png "이름 할당")](segmented-controls-images/segment04-vs.png#lightbox)
+    [![](segmented-controls-images/segment04-vs.png "Assign a Name")](segmented-controls-images/segment04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 -----
@@ -125,9 +125,9 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 }
 ```
 
-위 예제의 경우 세그먼트 컨트롤이 `PlayerCount` 이름 `PlayerCountChanged` 및 이벤트 작업으로 노출 되었습니다. 작업 및 콘센트 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)의 [콘센트 및 작업을 사용 하 여 코드 작성](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) 섹션을 참조 하세요.
+위 예제의 경우 세그먼트 컨트롤이 `PlayerCount` 이름 및 `PlayerCountChanged` 이벤트 작업으로 노출 되었습니다. 작업 및 콘센트 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)의 [콘센트 및 작업을 사용 하 여 코드 작성](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) 섹션을 참조 하세요.
 
-속성 `SelectedSegment` 은 현재 선택한 세그먼트를 0부터 시작 하는 인덱스를 가져오거나 설정 합니다. 따라서 세그먼트가 5 개 있는 경우 첫 번째 세그먼트의 인덱스는 0 (0)이 고 마지막 인덱스는 4 (4)입니다.
+`SelectedSegment` 속성은 현재 선택한 세그먼트를 0부터 시작 하는 인덱스를 가져오거나 설정 합니다. 따라서 세그먼트가 5 개 있는 경우 첫 번째 세그먼트의 인덱스는 0 (0)이 고 마지막 인덱스는 4 (4)입니다.
 
 <a name="Modifying-Segments" />
 
@@ -157,7 +157,7 @@ SegmentedControl.RemoveSegmentAtIndex(0, true);
 SegmentedControl.RemoveAllSegments();
 ```
 
-마지막 매개 변수가 `true`이면 제거에 애니메이션 효과가 적용 됩니다. 현재 세그먼트 수를 반환 하려면 속성을사용합니다.`NumberOfSegments`
+마지막 매개 변수가 `true`이면 제거에 애니메이션 효과가 적용 됩니다. `NumberOfSegments` 속성을 사용 하 여 현재 세그먼트 수를 반환 합니다.
 
 지정 된 세그먼트의 **제목** 또는 **아이콘** 을 가져오려면 다음을 사용 합니다.
 
@@ -204,17 +204,17 @@ SegmentedControl.SetEnabled(false, 0);
 SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-여기서 `UIControlState` 는 이미지를 설정 하는 컨트롤의 상태를 다음과 같이 지정 합니다.
+여기서 `UIControlState`는 이미지를 설정 하는 컨트롤의 상태를 다음과 같이 지정 합니다.
 
-- 일반
+- 보통
 - 반전
-- 사용 안 함
-- 선택
+- Disabled
+- 선택함
 - 포커스 있음
 
-그리고 `UIBarMetrics` 다음과 같이 사용할 메트릭을 지정 합니다.
+및 `UIBarMetrics` 다음으로 사용할 메트릭을 지정 합니다.
 
-- 기본값
+- 기본
 - 구문
 - DefaultPrompt
 - CompactPrompt
@@ -225,7 +225,7 @@ SegmentedControl.SetBackgroundImage (UIImage.FromFile("background.png"), UIContr
 SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlState.Normal, UIControlState.Normal, UIBarMetrics.Default);
 ```
 
-여기서 첫 `UIControlState` 번째는 분할선의 왼쪽에 있는 세그먼트의 상태를 지정 하 고 두 번째 `UIControlState` 는 세그먼트의 상태를 오른쪽으로 지정 합니다.
+여기서 첫 번째 `UIControlState`는 구분선의 왼쪽에 있는 세그먼트의 상태를 지정 하 고 두 번째 `UIControlState`는 오른쪽에 있는 세그먼트의 상태를 지정 합니다.
 
 <a name="Summary" />
 

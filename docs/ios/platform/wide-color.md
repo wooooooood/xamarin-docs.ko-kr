@@ -4,15 +4,15 @@ description: 이 문서에서는 광범위 한 색과 Xamarin.ios 또는 Xamarin
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: a1f5301d0c5c0674e162b3d7689c83bbb4f6ae90
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e7240a271de1f0199c2c9fc045f5c95745eb98c5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290539"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031255"
 ---
 # <a name="wide-color-in-xamarinios"></a>Xamarin.ios의 넓은 색
 
@@ -50,7 +50,7 @@ Apple에서는 광범위 한 색 지원을 위해 다음과 같은 자산 카탈
 
 - 앱이 최종 사용자에 게 배포 될 때 앱 조각화는 적절 한 콘텐츠 변종이 사용자의 장치에만 배달 되도록 합니다.
 - 넓은 색을 지원 하지 않는 장치에서는 넓은 색 콘텐츠를 포함 하기 위한 페이로드 비용이 없습니다. 장치에는 제공 되지 않습니다.
-- `NSImage`macOS Sierra (이상)에서는 하드웨어 표시에 대 한 최상의 콘텐츠 표현을 자동으로 선택 합니다.
+- macOS Sierra 이상에서 `NSImage` 하면 하드웨어 표시에 대 한 최상의 콘텐츠 표현이 자동으로 선택 됩니다.
 - 표시 된 콘텐츠는 장치 하드웨어의 특징 변경에 의해 자동으로 새로 고쳐집니다.
 
 ### <a name="asset-catalog-storage"></a>Asset Catalog 저장소
@@ -84,7 +84,7 @@ public UIImage DrawWideColorImage ()
     }
 ```
 
-와이드 색 이미지를 그리는 데 사용 _하기 전에_ 해결 해야 하는 표준 코드에 문제가 있습니다. IOS 이미지 그리기를 시작 하는 데 사용 되는 방법에는다음과같은제한사항이있습니다.`UIGraphics.BeginImageContext (size)`
+와이드 색 이미지를 그리는 데 사용 _하기 전에_ 해결 해야 하는 표준 코드에 문제가 있습니다. IOS 이미지 그리기를 시작 하는 데 사용 되는 `UIGraphics.BeginImageContext (size)` 방법에는 다음과 같은 제한 사항이 있습니다.
 
 - 색 채널 당 8 비트 이상으로 이미지 컨텍스트를 만들 수 없습니다.
 - 확장 범위 sRGB 색 공간의 색을 나타낼 수 없습니다.
@@ -123,17 +123,17 @@ public UIImage DrawWideColorImage ()
 - 모든 색은 기본적으로 관리 됩니다.
 - 기본적으로 확장 범위 sRGB 색 공간을 지원 합니다.
 - 앱이 실행 되 고 있는 iOS 장치의 기능에 따라 sRGB 또는 확장 범위 sRGB 색 공간에서 렌더링 해야 하는지 지능적으로 결정 합니다.
-- 개발자가 begin 및 end 컨텍스트 명령 호출에`CGContext`대해 걱정 하지 않아도 되도록 이미지 컨텍스트 () 수명을 완전히 및 자동으로 관리 합니다.
+- 개발자가 begin 및 end 컨텍스트 명령 호출에 대해 걱정할 필요가 없도록`CGContext`(이미지 컨텍스트) 수명을 완전히 및 자동으로 관리 합니다.
 - `UIGraphics.GetCurrentContext()` 메서드와 호환 됩니다.
 
-클래스의 메서드를 호출 하 여 와이드 색 이미지를 만들고, 그릴 이미지 컨텍스트와 함께 완료 처리기를 전달 합니다. `CreateImage` `UIGraphicsImageRenderer` 모든 그리기는 다음과 같이이 완료 처리기 내에서 수행 됩니다.
+`UIGraphicsImageRenderer` 클래스의 `CreateImage` 메서드를 호출 하 여 넓은 색 이미지를 만들고, 그릴 이미지 컨텍스트와 함께 완료 처리기를 전달 합니다. 모든 그리기는 다음과 같이이 완료 처리기 내에서 수행 됩니다.
 
-- 메서드 `UIColor.FromDisplayP3` 는 넓은 색 영역 디스플레이 P3 색 공간에 완전히 포화 된 새 빨강 색을 만들며 사각형의 처음 절반을 그리는 데 사용 됩니다. 
+- `UIColor.FromDisplayP3` 메서드는 넓은 색 영역 디스플레이 P3 색 공간에 완전히 포화 된 새 빨강 색을 만들며 사각형의 처음 절반을 그리는 데 사용 됩니다. 
 - 사각형의 두 번째 절반은 비교를 위해 일반 sRGB 완전 채도 빨강 색으로 그려집니다.
 
 ### <a name="drawing-wide-color-in-macos"></a>MacOS에서 넓은 색 그리기
 
-이 `NSImage` 클래스는 넓은 색 이미지 그리기를 지원 하기 위해 macOS Sierra 확장 되었습니다. 예:
+`NSImage` 클래스는 넓은 색 이미지 그리기를 지원 하기 위해 macOS Sierra 확장 되었습니다. 예를 들면,
 
 ```csharp
 var size = CGSize(250,250);
@@ -157,7 +157,7 @@ var wideColorImage = new NSImage(size, false, (drawRect) =>{
 
 ### <a name="rendering-on-screen-in-ios"></a>IOS에서 화면에 렌더링
 
-앱이 iOS에서 이미지를 광범위 한 화면에 렌더링 해야 하는 경우에는 `Draw` `UIView` 평소와 같이 문제의 메서드를 재정의 합니다. 예를 들어:
+앱이 iOS에서 화면에 와이드 컬러 이미지를 렌더링 해야 하는 경우 일반적인 방법으로 `UIView`의 `Draw` 메서드를 재정의 합니다. 예를 들면,
 
 ```csharp
 using System;
@@ -183,15 +183,15 @@ namespace MonkeyTalk
 }
 ```
 
-IOS 10은 위에 표시 된 `UIGraphicsImageRenderer` 클래스를 사용 하는 경우 `Draw` 메서드가 호출 될 때 앱이 실행 되는 ios 장치의 기능에 따라 srgb 또는 확장 범위 srgb 색 공간에 렌더링 해야 하는지 여부를 지능적으로 결정 합니다. 또한은 `UIImageView` iOS 9.3 이후로도 색으로 관리 되었습니다.
+IOS 10은 위에 표시 된 `UIGraphicsImageRenderer` 클래스를 사용 하는 경우 `Draw` 메서드가 호출 될 때 앱이 실행 되는 iOS 장치의 기능에 따라 sRGB 또는 확장 범위 sRGB 색 공간에 렌더링 해야 하는지 여부를 지능적으로 결정 합니다. 또한 `UIImageView`는 iOS 9.3 이후 색으로도 관리 되었습니다.
 
-응용 프로그램에서 `UIView` 또는 `UIViewController`에서 렌더링이 수행 되는 방식을 알고 있어야 하는 경우 `UITraitCollection` 클래스의 새 `DisplayGamut` 속성을 확인할 수 있습니다. 이 값은 `UIDisplayGamut` 다음의 열거형입니다.
+앱이 `UIView` 또는 `UIViewController`에서 렌더링을 수행 하는 방법을 알고 있어야 하는 경우 `UITraitCollection` 클래스의 새 `DisplayGamut` 속성을 확인할 수 있습니다. 이 값은 다음의 `UIDisplayGamut` 열거형입니다.
 
 - P3
 - Srgb
-- Unspecified
+- 지정 되지 않은
 
-응용 프로그램이 이미지를 그리는 데 사용 되는 색 공간을 제어 하려는 경우 `ContentsFormat` `CALayer` 의 새 속성을 사용 하 여 원하는 색 공간을 지정할 수 있습니다. 이 값은 다음과 같은 `CAContentsFormat` 열거형 일 수 있습니다.
+응용 프로그램이 이미지를 그리는 데 사용 되는 색 공간을 제어 하려는 경우에는 `CALayer`의 새 `ContentsFormat` 속성을 사용 하 여 원하는 색 공간을 지정할 수 있습니다. 이 값은 다음과 같은 `CAContentsFormat` 열거형 일 수 있습니다.
 
 - Gray8Uint
 - Rgba16Float
@@ -199,7 +199,7 @@ IOS 10은 위에 표시 된 `UIGraphicsImageRenderer` 클래스를 사용 하는
 
 ### <a name="rendering-on-screen-in-macos"></a>MacOS에서 화면에 렌더링
 
-응용 프로그램에서 macos에서 이미지를 넓은 색 화면에 렌더링 해야 하는 경우에는 일반적인 `DrawRect` 방법으로 해당 `NSView` 메서드를 재정의 합니다. 예:
+응용 프로그램에서 macOS의 화면을 컬러로 이미지를 렌더링 해야 하는 경우 일반적인 방법으로 해당 `NSView`의 `DrawRect` 메서드를 재정의 합니다. 예를 들면,
 
 ```csharp
 using System;
@@ -226,9 +226,9 @@ namespace MonkeyTalkMac
 }
 ```
 
-또한 `DrawRect` 메서드를 호출할 때 앱이 실행 되는 Mac 하드웨어의 기능을 기반으로 srgb 또는 확장 범위 srgb 색 공간에 렌더링 해야 하는지 지능적으로 결정 합니다.
+다시 말하지만, `DrawRect` 메서드가 호출 될 때 앱이 실행 되는 Mac 하드웨어의 기능을 기반으로 sRGB 또는 확장 범위 sRGB 색 공간에 렌더링 해야 하는지 여부를 지능적으로 결정 합니다.
 
-응용 프로그램이 이미지를 그리는 데 사용 되는 색 공간을 제어 하려는 경우 `DepthLimit` `NSWindow` 클래스의 새 속성을 사용 하 여 원하는 색 공간을 지정할 수 있습니다. 이 값은 다음과 같은 `NSWindowDepth` 열거형 일 수 있습니다.
+응용 프로그램이 이미지를 그리는 데 사용 되는 색 공간을 제어 하려는 경우 `NSWindow` 클래스의 새 `DepthLimit` 속성을 사용 하 여 원하는 색 공간을 지정할 수 있습니다. 이 값은 다음과 같은 `NSWindowDepth` 열거형 일 수 있습니다.
 
 - OneHundredTwentyEightBitRgb
 - SixtyfourBitRgb

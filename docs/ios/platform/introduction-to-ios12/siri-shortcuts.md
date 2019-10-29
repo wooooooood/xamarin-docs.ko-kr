@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 12에서 Siri 바로 가기를 사용 하�
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/08/2018
-ms.openlocfilehash: a2ae80946cb94b6c81b87a88c91cd9bf1706186f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 40b7adbed3489d449e583b22fa477287d11bdf42
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291767"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031879"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Xamarin.ios의 siri 바로 가기
 
@@ -39,7 +39,7 @@ Siri 바로 가기를 더 잘 이해 하려면 [수프 Chef](https://docs.micros
 샘플 앱을 사용 하려면 다음을 수행 합니다.
 
 - IOS 12 시뮬레이터 또는 [장치](#testing-on-device)에서 수프 Chef 샘플 앱을 설치 하 고 실행 합니다.
-- 오른쪽 위에 있는 단추를 클릭 하 여 새 주문을 만듭니다. **+**
+- 오른쪽 위에 있는 **+** 단추를 클릭 하 여 새 주문을 만듭니다.
 - 수프 유형을 선택 하 고, 수량 및 옵션을 지정 하 고, **주문 주문**을 누릅니다.
 - **주문 기록** 화면에서 새로 만든 주문을 탭 하 여 세부 정보를 확인 합니다.
 - 주문 세부 정보 화면 아래쪽에서 **Siri에 추가**를 누릅니다.
@@ -60,7 +60,7 @@ Siri 바로 가기를 더 잘 이해 하려면 [수프 Chef](https://docs.micros
 
 ### <a name="infoplist"></a>Info.plist
 
-**SoupChef** 프로젝트의 **Info.plist** 파일은 **번들 식별자** 를로 `com.xamarin.SoupChef`정의 합니다. 이 번들 식별자는이 문서의 뒷부분에서 설명 하는 의도 및 의도 UI 확장의 번들 식별자에 대 한 접두사로 사용 됩니다.
+**SoupChef** 프로젝트의 **Info.plist** 파일은 **번들 식별자** 를 `com.xamarin.SoupChef`으로 정의 합니다. 이 번들 식별자는이 문서의 뒷부분에서 설명 하는 의도 및 의도 UI 확장의 번들 식별자에 대 한 접두사로 사용 됩니다.
 
 Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
@@ -72,9 +72,9 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 </array>
 ```
 
-이 `NSUserActivityTypes` 키/값 쌍은 수프 Chef이 `OrderSoupIntent` [`ActivityType`](xref:Foundation.NSUserActivity.ActivityType) 를 처리 하는 방법 및 [`NSUserActivity`](xref:Foundation.NSUserActivity) "SoupChef"가 있는를 알고 있음을 나타냅니다.
+이 `NSUserActivityTypes` 키/값 쌍은 수프 Chef에서 `OrderSoupIntent`를 처리 하는 방법 및 ""의 [`ActivityType`](xref:Foundation.NSUserActivity.ActivityType) 있는 [`NSUserActivity`](xref:Foundation.NSUserActivity) 를 인식 함을 나타냅니다.
 
-응용 프로그램 자체에 전달 된 활동 및 사용자 지정 의도는 확장과 달리에서 처리 `AppDelegate` 됩니다 [`UIApplicationDelegate`](xref:UIKit.UIApplicationDelegate) ( [`ContinueUserActivity`](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) 메서드를 통해).
+응용 프로그램 자체에 전달 되는 활동 및 사용자 지정 의도는 확장과는 반대로 `AppDelegate` ( [`ContinueUserActivity`](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) 메서드에서 [`UIApplicationDelegate`](xref:UIKit.UIApplicationDelegate) 처리 됩니다.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -89,21 +89,21 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 <true/>
 ```
 
-이 구성은 앱에서 "SoupChef" 앱 그룹을 사용 함을 나타냅니다. **SoupChefIntents** app 확장은 동일한 앱 그룹을 사용 하 여 두 프로젝트를 공유할 수 있도록 합니다.[`NSUserDefaults`](xref:Foundation.NSUserDefaults)
+이 구성은 앱에서 "SoupChef" 앱 그룹을 사용 함을 나타냅니다. **SoupChefIntents** 앱 확장은이 동일한 앱 그룹을 사용 하 여 두 프로젝트를 공유할 수 있습니다 [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 데이터
 
-`com.apple.developer.siri` 키는 앱이 siri와 상호 작용 함을 나타냅니다.
+`com.apple.developer.siri` 키는 앱이 Siri와 상호 작용 함을 나타냅니다.
 
 > [!NOTE]
 > **SoupChef** 프로젝트의 빌드 구성에서는 **사용자 지정 자격** 을 **info.plist**로 설정 합니다.
 
 ## <a name="using-an-nsuseractivity-shortcut-to-open-an-app"></a>NSUserActivity 바로 가기를 사용 하 여 앱 열기
 
-특정 콘텐츠를 표시 하는 앱을 여는 바로 가기를 만들려면를 만들어 `NSUserActivity` 바로 가기로 열려는 화면에 대 한 뷰 컨트롤러에 연결 합니다.
+특정 콘텐츠를 표시 하는 앱을 여는 바로 가기를 만들려면 `NSUserActivity` 만들고 바로 가기를 열려는 화면에 대 한 보기 컨트롤러에 연결 합니다.
 
 ### <a name="setting-up-an-nsuseractivity"></a>NSUserActivity 설정
 
-메뉴 화면에서를 `SoupMenuViewController` `NSUserActivity` 만들어 뷰 컨트롤러의 [`UserActivity`](xref:UIKit.UIResponder.UserActivity) 속성에 할당 합니다.
+메뉴 화면에서 `SoupMenuViewController` `NSUserActivity` 만들고 뷰 컨트롤러의 [`UserActivity`](xref:UIKit.UIResponder.UserActivity) 속성에 할당 합니다.
 
 ```csharp
 public override void ViewDidLoad()
@@ -113,9 +113,9 @@ public override void ViewDidLoad()
 }
 ```
 
-속성을 donates로 설정 하면 작업이 siri로 설정 됩니다. `UserActivity` 이에 대 한 Siri는이 활동이 사용자와 관련 된 시기와 위치에 대 한 정보를 획득 하 고 나중에 더 잘 제안 하기 위해 학습 합니다.
+`UserActivity` 속성을 설정 하면 활동이 Siri로 _donates_ 됩니다. 이에 대 한 Siri는이 활동이 사용자와 관련 된 시기와 위치에 대 한 정보를 획득 하 고 나중에 더 잘 제안 하기 위해 학습 합니다.
 
-`NSUserActivityHelper`는 **SoupChef** 솔루션의 **SoupKit** 클래스 라이브러리에 포함 된 유틸리티 클래스입니다. 를 만들고 `NSUserActivity` siri 및 검색과 관련 된 다양 한 속성을 설정 합니다.
+`NSUserActivityHelper`는 **SoupKit** 클래스 라이브러리의 **SoupChef** 솔루션에 포함 된 유틸리티 클래스입니다. `NSUserActivity` 만들고 Siri 및 검색과 관련 된 다양 한 속성을 설정 합니다.
 
 ```csharp
 public static string ViewMenuActivityType = "com.xamarin.SoupChef.viewMenu";
@@ -148,13 +148,13 @@ public static NSUserActivity ViewMenuActivity {
 
 특히 다음과 같은 사항에 유의 하십시오.
 
-- `EligibleForPrediction` 로`true` 설정 하면 siri가이 활동을 예측 하 여 바로 가기로 표시할 수 있음을 나타냅니다.
-- 배열은 iOS 검색 결과 `NSUserActivity` 에 [`CSSearchableItemAttributeSet`](xref:CoreSpotlight.CSSearchableItemAttributeSet) 를 포함 하는 데 사용 되는 표준입니다. [`ContentAttributeSet`](xref:Foundation.NSUserActivity.ContentAttributeSet)
-- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase)는 바로 가기에 구를 할당할 때 사용자에 게 적합 한 선택 항목으로 Siri가 제안 하는 문구입니다.
+- `EligibleForPrediction`를 `true`로 설정 하면 Siri가이 작업을 예측 하 고이 작업을 바로 가기로 표시할 수 있음을 나타냅니다.
+- [`ContentAttributeSet`](xref:Foundation.NSUserActivity.ContentAttributeSet) 배열은 iOS 검색 결과에 `NSUserActivity`를 포함 하는 데 사용 되는 표준 [`CSSearchableItemAttributeSet`](xref:CoreSpotlight.CSSearchableItemAttributeSet) 입니다.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) 는 문구를 바로 가기로 할당할 때 사용자에 게 제안 하는 것이 좋습니다.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>NSUserActivity 바로 가기 처리
 
-사용자가 호출 `NSUserActivity` 하는 바로 가기를 처리 하려면 iOS 응용 프로그램이 `AppDelegate` 클래스의 `ContinueUserActivity` 메서드를 재정의 하 여 전달 `NSUserActivity` 된 개체의 `ActivityType` 필드를 기반으로 응답 해야 합니다.
+사용자가 호출 하는 `NSUserActivity` 바로 가기를 처리 하기 위해 iOS 응용 프로그램은 전달 된 `NSUserActivity` 개체의 `ActivityType` 필드에 따라 응답 하 여 `AppDelegate` 클래스의 `ContinueUserActivity` 메서드를 재정의 해야 합니다.
 
 ```csharp
 public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -169,7 +169,7 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 }
 ```
 
-이 메서드는 `HandleUserActivity`를 호출 하 여 메뉴 화면에 segue를 찾고 호출 합니다.
+이 메서드는 메뉴 화면에 segue를 찾고 호출 하는 `HandleUserActivity`를 호출 합니다.
 
 ```csharp
 void HandleUserActivity()
@@ -188,7 +188,7 @@ void HandleUserActivity()
 
 ### <a name="assigning-a-phrase-to-an-nsuseractivity"></a>NSUserActivity에 구 할당
 
-에 `NSUserActivity`구를 할당 하려면 iOS **설정** 앱을 열고 **siri & 선택 하 > 내 바로 가기를 검색**합니다. 그런 다음 바로 가기 (이 경우 "주문 점심")를 선택 하 고 구를 기록 합니다.
+`NSUserActivity`에 구를 할당 하려면 iOS **설정** 앱을 열고 **siri &를 선택 하 > 내 바로 가기를 검색**합니다. 그런 다음 바로 가기 (이 경우 "주문 점심")를 선택 하 고 구를 기록 합니다.
 
 Siri를 호출 하 고이 구를 사용 하면 메뉴 화면에 수프 Chef가 열립니다.
 
@@ -227,18 +227,18 @@ Xcode 10을 사용 하 여 사용자 지정 의도를 만듭니다. [SoupChef �
 이 생성 된 코드를 보려면 다음을 수행 합니다.
 
 - **AppDelegate**를 엽니다.
-- 사용자 지정 의도의 헤더 파일에 가져오기를 추가 합니다.`#import "OrderSoupIntent.h"`
-- 클래스의 모든 메서드에서에 대 `OrderSoupIntent`한 참조를 추가 합니다.
-- 를 마우스 오른쪽 단추로 `OrderSoupIntent` 클릭 하 고 **정의로 이동을**선택 합니다.
+- 사용자 지정 의도의 헤더 파일에 가져오기 추가: `#import "OrderSoupIntent.h"`
+- 클래스의 모든 메서드에서 `OrderSoupIntent`에 대 한 참조를 추가 합니다.
+- `OrderSoupIntent`를 마우스 오른쪽 단추로 클릭 하 고 **정의로 이동**을 선택 합니다.
 - 새로 열린 파일 ( **OrderSoupIntent**)을 마우스 오른쪽 단추로 클릭 하 고 **Finder에 표시**를 선택 합니다.
 - 이렇게 하면 생성 된 코드를 포함 하는 .h 및. m 파일이 포함 된 **Finder** 창이 열립니다.
 
 생성 되는 코드는 다음과 같습니다.
 
-- `OrderSoupIntent`– 사용자 지정 의도를 나타내는 클래스입니다.
-- `OrderSoupIntentHandling`– 의도를 실행 해야 하는지 여부를 확인 하는 데 사용 되는 메서드와 실제로이를 실행 하는 메서드를 정의 하는 프로토콜입니다.
-- `OrderSoupIntentResponseCode`– 다양 한 응답 상태를 정의 하는 열거형입니다.
-- `OrderSoupIntentResponse`– 의도 된 실행에 대 한 응답을 나타내는 클래스입니다.
+- `OrderSoupIntent` – 사용자 지정 의도를 나타내는 클래스입니다.
+- `OrderSoupIntentHandling` – 의도를 실행 해야 하는지 확인 하는 데 사용 되는 메서드와 실제로이를 실행 하는 메서드를 정의 하는 프로토콜입니다.
+- `OrderSoupIntentResponseCode` – 다양 한 응답 상태를 정의 하는 열거형입니다.
+- `OrderSoupIntentResponse` – 의도 된 실행에 대 한 응답을 나타내는 클래스입니다.
 
 ### <a name="creating-a-binding-to-the-custom-intent"></a>사용자 지정 의도에 대 한 바인딩 만들기
 
@@ -269,9 +269,9 @@ Xcode **프로젝트 탐색기**에서 최상위 프로젝트 **OrderSoupIntentS
 
   - Xcode에서 **Xcode > 기본 설정 > 위치** 를 선택 하 고, **명령줄 도구** 를 시스템에서 사용할 수 있는 최신 Xcode 10 설치로 설정 합니다.
 
-- 터미널 `cd` 에서 **OrderSoupIntentStaticLib** 디렉터리를 대상으로 합니다.
+- 터미널에서 **OrderSoupIntentStaticLib** 디렉터리를 `cd` 합니다.
 
-- 다음 `make`을 작성 하는 형식:
+- 다음을 빌드하는 `make`을 입력 합니다.
 
   - 정적 라이브러리 **libOrderSoupIntentStaticLib**
   - **Bo** 출력 디렉터리에서 C# 바인딩 정의:
@@ -296,7 +296,7 @@ Xcode **프로젝트 탐색기**에서 최상위 프로젝트 **OrderSoupIntentS
 - 위에서 빌드한 정적 라이브러리인 **libOrderSoupIntentStaticLib**에 대 한 **네이티브 참조** 입니다.
 
 > [!NOTE]
-> **ApiDefinitions.cs** 및 **StructsAndEnums.cs** 모두와 `[Watch (5,0), iOS (12,0)]`같은 특성을 포함 합니다. 목표 Sharpie에서 생성 된 이러한 특성은이 프로젝트에 필요 하지 않기 때문에 주석으로 처리 되었습니다.
+> **ApiDefinitions.cs** 및 **StructsAndEnums.cs** 모두 `[Watch (5,0), iOS (12,0)]`와 같은 특성을 포함 합니다. 목표 Sharpie에서 생성 된 이러한 특성은이 프로젝트에 필요 하지 않기 때문에 주석으로 처리 되었습니다.
 
 C# 바인딩 라이브러리를 만드는 방법에 대 한 자세한 내용은 [iOS 목표 가져오기-C 라이브러리](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough?tabs=vsmac#create-a-xamarinios-binding-project) 연습을 참조 하세요.
 
@@ -318,7 +318,7 @@ Siri가 바로 가기를 제안 하려면 먼저 바로 가기가 관련 된 경
 Siri를 이해 하기 위해 수프 Chef는 사용자가 수프 주문을 배치할 때마다 Siri에 _대 한 의도_ 를 제공 합니다. 이러한 기부에 기반 하 여 기증 된 곳에서 기증 된 경우 포함 된 매개 변수 – Siri는 나중에 바로 가기를 제안할 시기를 학습 합니다.
 
 **SoupChef** 는 `SoupOrderDataManager` 클래스를 사용 하 여 기부금을 넣습니다.
-사용자에 대 한 수프 순서를 설정 하기 위해 호출 되 `PlaceOrder` 면 메서드는를 [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*)호출 합니다.
+사용자에 대 한 수프 order를 설정 하기 위해 호출 하는 경우 `PlaceOrder` 메서드는 [`DonateInteraction`](xref:Intents.INInteraction.DonateInteraction*)를 호출 합니다.
 
 ```csharp
 void DonateInteraction(Order order)
@@ -332,11 +332,11 @@ void DonateInteraction(Order order)
 }
 ```
 
-의도를 인출 한 후에는에 [`INInteraction`](xref:Intents.INInteraction)래핑됩니다.
-에 `INInteraction` 는이 제공 됩니다.[`Identifier`](xref:Intents.INInteraction.Identifier*)
+의도를 인출 한 후에는 [`INInteraction`](xref:Intents.INInteraction)에 래핑됩니다.
+`INInteraction`에는 [`Identifier`](xref:Intents.INInteraction.Identifier*) 제공 됩니다.
 주문에 대 한 고유 ID와 일치 합니다 .이는 나중에 더 이상 유효 하지 않은 의도 기부를 삭제할 때 유용 합니다. 그런 다음 상호 작용이 Siri에 기증 됩니다.
 
-`order.Intent` Getter에 대 한 호출은 `Quantity`, `Options` `OrderSoupIntent` `Soup`, 및 이미지를 설정 하 여 주문을 나타내는을 페치 하 고, 사용자가 siri가 연결 하기 위한 구를 기록 하는 경우 제안으로 사용할 호출 문구를 가져옵니다. 의도:
+`order.Intent` getter에 대 한 호출은 해당 `Quantity`, `Soup`, `Options`및 이미지를 설정 하 여 주문을 나타내는 `OrderSoupIntent`를 가져오고 사용자가 Siri에 대 한 구를 기록 하 여 의도에 연결 하는 데 사용할 수 있는 호출 문구를 가져옵니다. :
 
 ```csharp
 public OrderSoupIntent Intent
@@ -372,7 +372,7 @@ public OrderSoupIntent Intent
 
 Siri가 유용 하거나 혼동 하지 않는 바로 가기 제안을 하지 않도록 더 이상 유효 하지 않은 기부금을 제거 하는 것이 중요 합니다.
 
-수프 Chef에서는 **구성 메뉴** 화면을 사용 하 여 메뉴 항목을 사용할 수 없는 것으로 표시할 수 있습니다. Siri는 더 이상 사용할 수 없는 메뉴 항목의 순서를 지정 하는 바로 `RemoveDonation` 가기를 제안 `SoupMenuManager` 하지 않습니다. 따라서의 메서드는 더 이상 사용할 수 없는 메뉴 항목에 대 한 기부금을 삭제 합니다. 이렇게 하려면 다음을 수행 합니다.
+수프 Chef에서는 **구성 메뉴** 화면을 사용 하 여 메뉴 항목을 사용할 수 없는 것으로 표시할 수 있습니다. Siri는 더 이상 사용할 수 없는 메뉴 항목의 순서를 지정 하는 바로 가기를 제안 하지 않아야 합니다. 따라서 `SoupMenuManager`의 `RemoveDonation` 메서드는 더 이상 사용할 수 없는 메뉴 항목에 대 한 기부금을 삭제 합니다. 이렇게 하려면 다음을 수행 합니다.
 
 - 현재 사용할 수 없는 메뉴 항목과 연결 된 주문 찾기
 - 식별자를 증명 합니다.
@@ -417,7 +417,7 @@ Siri가 의도를 호출할 때 실행 하는 코드는 수프 Chef 같은 기�
 
 ##### <a name="soupchefintents-infoplist"></a>SoupChefIntents – info.plist
 
-**SoupChefIntents** 프로젝트의 **Info.plist** 는 **번들 식별자** 를로 `com.xamarin.SoupChef.SoupChefIntents`정의 합니다.
+**SoupChefIntents** 프로젝트의 **info.plist** 는 `com.xamarin.SoupChef.SoupChefIntents`으로 **번들 식별자** 를 정의 합니다.
 
 Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
@@ -444,10 +444,10 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
 위의 info.plist에서 다음을 수행 **합니다**.
 
-- `IntentsRestrictedWhileLocked`장치의 잠금이 해제 된 경우에만 처리 해야 하는 의도를 나열 합니다.
-- `IntentsSupported`이 확장에 의해 처리 되는 의도를 나열 합니다.
-- `NSExtensionPointIdentifier`앱 확장의 유형을 지정 합니다. 자세한 내용은 [Apple 설명서](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) 를 참조 하세요.
-- `NSExtensionPrincipalClass`이 확장에서 지 원하는 의도를 처리 하는 데 사용 해야 하는 클래스를 지정 합니다.
+- `IntentsRestrictedWhileLocked`은 장치의 잠금이 해제 될 때만 처리 해야 하는 의도를 나열 합니다.
+- `IntentsSupported`이 확장 프로그램에서 처리 하는 의도를 나열 합니다.
+- `NSExtensionPointIdentifier` 앱 확장의 유형을 지정 합니다. 자세한 내용은 [Apple 설명서](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) 를 참조 하세요.
+- `NSExtensionPrincipalClass`이 확장 프로그램에서 지 원하는 의도를 처리 하는 데 사용 해야 하는 클래스를 지정 합니다.
 
 ##### <a name="soupchefintents-entitlementsplist"></a>SoupChefIntents – info.plist
 
@@ -460,7 +460,7 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 </array>
 ```
 
-수프 Chef는를 사용 `NSUserDefaults`하 여 데이터를 유지 합니다. 앱과 앱 확장 간에 데이터를 공유 하기 위해 **info.plist** 파일에서 동일한 앱 그룹을 참조 합니다.
+수프 Chef는 `NSUserDefaults`을 사용 하 여 데이터를 유지 합니다. 앱과 앱 확장 간에 데이터를 공유 하기 위해 **info.plist** 파일에서 동일한 앱 그룹을 참조 합니다.
 
 > [!NOTE]
 > **SoupChefIntents** 프로젝트의 빌드 구성에서는 **사용자 지정 자격** 을 **info.plist**로 설정 합니다.
@@ -469,7 +469,7 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
 의도 확장은 사용자 지정 의도에 따라 바로 가기에 필요한 백그라운드 작업을 실행 합니다.
 
-Siri는 `IntentHandler` 클래스 [`GetHandler`](xref:Intents.INExtension.GetHandler*) ( **info.plist** `NSExtensionPrincipalClass`에 정의 됨)의 메서드를 호출 하 여를 처리 하는 데 사용할 수 있는를 확장 `OrderSoupIntentHandling` `OrderSoupIntent`하는 클래스의 인스턴스를 가져옵니다.
+Siri는 `OrderSoupIntent`를 처리 하는 데 사용할 수 있는 `OrderSoupIntentHandling`를 확장 하는 클래스의 인스턴스를 가져오기 위해 `IntentHandler` 클래스 ( **info.plist** 에 `NSExtensionPrincipalClass`로 정의 됨)의 [`GetHandler`](xref:Intents.INExtension.GetHandler*) 메서드를 호출 합니다.
 
 ```csharp
 [Register("IntentHandler")]
@@ -488,15 +488,15 @@ public class IntentHandler : INExtension
 }
 ```
 
-`OrderSoupIntentHandler`공유 코드의 **SoupKit** 프로젝트에 정의 된는 다음과 같은 두 가지 중요 한 메서드를 구현 합니다.
+공유 코드의 **SoupKit** 프로젝트에 정의 된 `OrderSoupIntentHandler`는 다음과 같은 두 가지 중요 한 메서드를 구현 합니다.
 
-- `ConfirmOrderSoup`– 의도와 연결 된 작업이 실제로 실행 되어야 하는지 여부를 확인 합니다.
-- `HandleOrderSoup`– 전달 된 완료 처리기를 호출 하 여 수프 순서를 배치 하 고 사용자에 게 응답 합니다.
+- `ConfirmOrderSoup` – 의도와 연결 된 작업이 실제로 실행 되어야 하는지 여부를 확인 합니다.
+- `HandleOrderSoup` – 전달 된 완료 처리기를 호출 하 여 수프 순서를 배치 하 고 사용자에 게 응답 합니다.
 
 #### <a name="handling-an-ordersoupintent-that-opens-the-app"></a>앱을 여는 OrderSoupIntent 처리
 
 앱은 백그라운드에서 실행 되지 않는 의도를 올바르게 처리 해야 합니다.
-이러한 `NSUserActivity` `ContinueUserActivity` 메서드 는다음과같은방법으로바로가기와동일한방식으로처리됩니다.`AppDelegate`
+이러한 작업은 `AppDelegate`의 `ContinueUserActivity` 메서드에서 `NSUserActivity` 바로 가기와 동일한 방식으로 처리 됩니다.
 
 ```csharp
 public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -519,7 +519,7 @@ public override bool ContinueUserActivity(UIApplication application, NSUserActiv
 
 #### <a name="soupchefintentsui-infoplist"></a>SoupChefIntentsUI – info.plist
 
-**SoupChefIntentsUI** 프로젝트의 **Info.plist** 는 **번들 식별자** 를로 `com.xamarin.SoupChef.SoupChefIntentsui`정의 합니다.
+**SoupChefIntentsUI** 프로젝트의 **info.plist** 는 `com.xamarin.SoupChef.SoupChefIntentsui`으로 **번들 식별자** 를 정의 합니다.
 
 Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
@@ -543,9 +543,9 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
 위의 info.plist에서 다음을 수행 **합니다**.
 
-- `IntentsSupported``OrderSoupIntent` 가이 의도 UI 확장에 의해 처리 됨을 나타냅니다.
-- `NSExtensionPointIdentifier`앱 확장의 유형을 지정 합니다. 자세한 내용은 [Apple 설명서](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) 를 참조 하세요.
-- `NSExtensionMainStoryboard`이 확장의 기본 인터페이스를 정의 하는 storyboard를 지정 합니다.
+- `IntentsSupported` `OrderSoupIntent`이 의도 UI 확장에 의해 처리 됨을 나타냅니다.
+- `NSExtensionPointIdentifier` 앱 확장의 유형을 지정 합니다. 자세한 내용은 [Apple 설명서](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AppExtensionKeys.html#//apple_ref/doc/uid/TP40014212-SW15) 를 참조 하세요.
+- 이 확장의 기본 인터페이스를 정의 하는 스토리 보드를 지정 `NSExtensionMainStoryboard`
 
 #### <a name="soupchefintentsui-entitlementsplist"></a>SoupChefIntentsUI – info.plist
 
@@ -553,19 +553,19 @@ Info.plist 파일에는 다음 항목도 포함 **됩니다** .
 
 ### <a name="creating-the-user-interface"></a>사용자 인터페이스 만들기
 
-**SoupChefIntentsUI** 에 대 한 `NSExtensionMainStoryboard` **info.plist** 는 키를로 `MainInterface`설정 하므로 **MainInterace** 파일은 의도 UI 확장에 대 한 인터페이스를 정의 합니다.
+**SoupChefIntentsUI** 에 대 한 **info.plist** 는 `NSExtensionMainStoryboard` 키 `MainInterface`설정 하므로, **MainInterace** 파일은 의도 UI 확장에 대 한 인터페이스를 정의 합니다.
 
 이 스토리 보드에는 **Intentviewcontroller**형식의 단일 뷰 컨트롤러가 있습니다. 두 개의 뷰를 참조 합니다.
 
-- 형식의 **invoiceView**`InvoiceView`
-- 형식의 **confirmationView**`ConfirmOrderView`
+- `InvoiceView` 형식의 **invoiceView**
+- `ConfirmOrderView` 형식의 **confirmationView**
 
 > [!NOTE]
 > **InvoiceView** 및 **confirmationView** 에 대 한 인터페이스는 **기본 storyboard** 에서 보조 뷰로 정의 됩니다. Mac용 Visual Studio 및 Visual Studio 2017의 iOS 디자이너는 보조 뷰를 보거나 편집할 수 있는 기능을 제공 하지 않습니다. 이렇게 하려면 Xcode의 Interface Builder에서 **기본 storyboard** 를 엽니다.
 
-`IntentViewController`을 구현 합니다.[`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling)
-Siri 의도를 사용할 때 사용자 지정 인터페이스를 제공 하는 데 사용 되는 인터페이스입니다. 여[`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
-상호 작용이 확인 되는지 ([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)) 아니면 성공적으로 실행 되었는지 ([`INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus))에 따라 인터페이스를 사용자 지정 하 여 확인 또는 송장을 표시 하는 메서드가 호출 됩니다.
+[`IINUIHostedViewControlling`](xref:IntentsUI.IINUIHostedViewControlling) 구현 `IntentViewController`
+Siri 의도를 사용할 때 사용자 지정 인터페이스를 제공 하는 데 사용 되는 인터페이스입니다. [`ConfigureView`](xref:IntentsUI.INUIHostedViewControlling_Extensions.ConfigureView*)
+상호 작용이 확인 ([`INIntentHandlingStatus.Ready`](xref:Intents.INIntentHandlingStatus)) 되었는지 아니면 성공적으로 실행 되었는지 ([`INIntentHandlingStatus.Success`](xref:Intents.INIntentHandlingStatus))에 따라 인터페이스를 사용자 지정 하 여 확인 또는 송장을 표시 하는 메서드가 호출 됩니다.
 
 ```csharp
 [Export("configureViewForParameters:ofInteraction:interactiveBehavior:context:completion:")]
@@ -594,13 +594,13 @@ public void ConfigureView(
 ```
 
 > [!TIP]
-> `ConfigureView` 방법에 대 한 자세한 내용은 Apple의 wwdc 2017 프레젠테이션, [sirikit의 새로운 기능](https://developer.apple.com/videos/play/wwdc2017/214/)을 시청 하세요.
+> `ConfigureView` 방법에 대 한 자세한 내용은 Apple의 WWDC 2017 프레젠테이션, [SiriKit의 새로운 기능](https://developer.apple.com/videos/play/wwdc2017/214/)을 시청 하세요.
 
 ## <a name="creating-a-voice-shortcut"></a>음성 바로 가기 만들기
 
 수프 Chef는 각 주문에 음성 바로 가기를 할당 하는 인터페이스를 제공 하므로 Siri를 사용 하 여 수프를 주문할 수 있습니다. 실제로 음성 바로 가기를 기록 하 고 할당 하는 데 사용 되는 인터페이스는 iOS에서 제공 되며 사용자 지정 코드가 거의 필요 하지 않습니다.
 
-에서 `OrderDetailViewController`사용자가 테이블의 **siri 행에 추가** 를 탭 하면 메서드는 음성 [`RowSelected`](xref:UIKit.UITableViewSource.RowSelected*) 바로 가기를 추가 하거나 편집할 수 있는 화면을 표시 합니다.
+`OrderDetailViewController`에서 사용자가 테이블의 **Siri 행에 추가** 를 탭 하면 [`RowSelected`](xref:UIKit.UITableViewSource.RowSelected*) 메서드는 음성 바로 가기를 추가 하거나 편집할 수 있는 화면을 표시 합니다.
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
@@ -631,9 +631,9 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 }
 ```
 
-현재 표시 된 주문 `RowSelected` 에 대 한 기존 음성 단축키가 있는지 여부에 따라은 또는 [`INUIAddVoiceShortcutViewController`](xref:IntentsUI.INUIAddVoiceShortcutViewController)유형의 [`INUIEditVoiceShortcutViewController`](xref:IntentsUI.INUIEditVoiceShortcutViewController) 뷰 컨트롤러를 표시 합니다.
-각각의 경우는 `OrderDetailViewController` 자체를 뷰 컨트롤러의 `Delegate`로 설정 합니다 .이 경우에도을 구현 합니다.[`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
-및 [`IINUIEditVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate)입니다.
+현재 표시 되는 순서에 대 한 기존 음성 단축키가 있는지 여부에 따라 `RowSelected` [`INUIEditVoiceShortcutViewController`](xref:IntentsUI.INUIEditVoiceShortcutViewController) 또는 [`INUIAddVoiceShortcutViewController`](xref:IntentsUI.INUIAddVoiceShortcutViewController)형식의 뷰 컨트롤러를 제공 합니다.
+각각의 경우 `OrderDetailViewController`는 자체를 뷰 컨트롤러의 `Delegate`으로 설정 합니다. 따라서는이를 구현 하기도 [`IINUIAddVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIAddVoiceShortcutViewControllerDelegate)
+및를 [`IINUIEditVoiceShortcutViewControllerDelegate`](xref:IntentsUI.IINUIEditVoiceShortcutViewControllerDelegate)합니다.
 
 ## <a name="testing-on-device"></a>장치에서 테스트
 
@@ -645,9 +645,9 @@ public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 
 - 수프 Chef 앱과 해당 확장 간에 데이터를 공유 하는 앱 그룹을 만듭니다. 예를 들면 다음과 같습니다. **SoupChef**
 
-- 응용 프로그램 자체에 대 한 세 가지 앱 Id를 만듭니다. 하나는 의도 확장을 위한 것이 고 다른 하나는 의도 UI 확장에 대 한 Id입니다. 예를 들어:
+- 응용 프로그램 자체에 대 한 세 가지 앱 Id를 만듭니다. 하나는 의도 확장을 위한 것이 고 다른 하나는 의도 UI 확장에 대 한 Id입니다. 예를 들면,
 
-  - App: **com.yourcompanyname.SoupChef**
+  - 앱: **com. SoupChef**
     - 이 앱 ID로 SiriKit 및 **앱 그룹** 기능을 할당 합니다.
 
   - 의도 확장: **com. SoupChef.**
@@ -668,7 +668,7 @@ Mac용 Visual Studio 또는 Visual Studio 2017에서 다음을 수행 합니다.
 
 - 솔루션의 다양 한 **info.plist** 파일을 업데이트 합니다. 앱, 의도 확장 및 의도 UI 확장 **번들 식별자** 를 위에서 정의한 앱 id로 설정 합니다.
 
-  - App: **com.yourcompanyname.SoupChef**
+  - 앱: **com. SoupChef**
   - 의도 확장: **com. SoupChef.**
   - 의도 UI 확장: **com. SoupChef. Intentsui**
 
@@ -679,7 +679,7 @@ Mac용 Visual Studio 또는 Visual Studio 2017에서 다음을 수행 합니다.
 - **SoupChefIntents** 프로젝트에 대 한 **info.plist** 파일을 업데이트 합니다.
   - **앱 그룹** 기능에 대해 위에서 만든 새 앱 그룹으로 그룹을 설정 합니다 (위의 예제에서는 **SoupChef**).
 
-- 마지막으로 **NSUserDefaultsHelper.cs**를 엽니다. 변수를 새 앱 그룹의 값으로 설정 합니다 (예:로 `group.com.yourcompanyname.SoupChef`설정). `AppGroup`
+- 마지막으로 **NSUserDefaultsHelper.cs**를 엽니다. `AppGroup` 변수를 새 앱 그룹의 값으로 설정 합니다 (예: `group.com.yourcompanyname.SoupChef`로 설정).
 
 ### <a name="configuring-the-build-settings"></a>빌드 설정 구성
 

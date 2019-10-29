@@ -4,15 +4,15 @@ description: 이 문서에서는 사진 키트에 대해 설명 하 고, 모델 
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 433e50632ce7334f7a815fb8952dda2dfc110578
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 82cff753e7569c2642c467db692c2d2d84347df0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290519"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031611"
 ---
 # <a name="photokit-in-xamarinios"></a>Xamarin.ios의 사진 키트
 
@@ -20,18 +20,18 @@ ms.locfileid: "70290519"
 
 ## <a name="model-objects"></a>모델 개체
 
-사진 키트는 모델 개체를 호출 하는 항목에서 이러한 자산을 나타냅니다. 사진과 비디오 자체를 나타내는 모델 개체는 형식 `PHAsset`입니다. 에 `PHAsset` 는 자산의 미디어 유형 및 만든 날짜와 같은 메타 데이터가 포함 됩니다.
-마찬가지로 및 `PHAssetCollection` `PHCollectionList` 클래스에는 각각 자산 컬렉션과 컬렉션 목록에 대 한 메타 데이터가 포함 됩니다. 자산 컬렉션은 지정 된 연도의 모든 사진과 비디오와 같은 자산 그룹입니다. 마찬가지로 컬렉션 목록은 연도별로 그룹화 된 사진 및 비디오와 같은 자산 컬렉션 그룹입니다.
+사진 키트는 모델 개체를 호출 하는 항목에서 이러한 자산을 나타냅니다. 사진과 비디오 자체를 나타내는 모델 개체는 `PHAsset`유형입니다. `PHAsset`에는 자산의 미디어 유형 및 만든 날짜와 같은 메타 데이터가 포함 됩니다.
+마찬가지로 `PHAssetCollection` 및 `PHCollectionList` 클래스에는 각각 자산 컬렉션 및 컬렉션 목록에 대 한 메타 데이터가 포함 됩니다. 자산 컬렉션은 지정 된 연도의 모든 사진과 비디오와 같은 자산 그룹입니다. 마찬가지로 컬렉션 목록은 연도별로 그룹화 된 사진 및 비디오와 같은 자산 컬렉션 그룹입니다.
 
 ## <a name="querying-model-data"></a>모델 데이터 쿼리
 
-사진 키트를 사용 하면 다양 한 fetch 메서드를 통해 모델 데이터를 쉽게 쿼리할 수 있습니다. 예를 들어 모든 이미지를 검색 하려면를 호출 `PHAsset.Fetch`하 여 `PHAssetMediaType.Image` 미디어 형식을 전달 합니다.
+사진 키트를 사용 하면 다양 한 fetch 메서드를 통해 모델 데이터를 쉽게 쿼리할 수 있습니다. 예를 들어 모든 이미지를 검색 하려면 `PHAsset.Fetch`를 호출 하 여 `PHAssetMediaType.Image` 미디어 형식을 전달 합니다.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-그러면 `PHFetchResult` 인스턴스는 이미지를 나타내는 `PHAsset` 모든 인스턴스를 포함 합니다. 이미지 자체를 가져오려면 `PHImageManager` (또는 캐싱 `PHCachingImageManager`버전)를 사용 하 여를 호출 `RequestImageForAsset`하 여 이미지에 대 한 요청을 수행 합니다. 예를 들어 다음 코드는 컬렉션 뷰 셀에 표시할의 `PHFetchResult` 각 자산에 대 한 이미지를 검색 합니다.
+그러면 `PHFetchResult` 인스턴스에 이미지를 나타내는 모든 `PHAsset` 인스턴스가 포함 됩니다. 이미지 자체를 가져오려면 `PHImageManager` (또는 캐싱 버전 `PHCachingImageManager`)를 사용 하 여 `RequestImageForAsset`를 호출 하 여 이미지에 대 한 요청을 수행 합니다. 예를 들어 다음 코드는 컬렉션 뷰 셀에 표시할 `PHFetchResult`의 각 자산에 대 한 이미지를 검색 합니다.
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
@@ -51,7 +51,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 이로 인해 아래와 같이 이미지가 표로 표시 됩니다.
 
-![](photokit-images/image4.png "이미지 그리드를 표시 하는 실행 중인 앱")
+![](photokit-images/image4.png "The running app displaying a grid of images")
 
 ## <a name="saving-changes-to-the-photo-library"></a>사진 라이브러리의 변경 내용 저장
 
@@ -123,8 +123,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 사용자가 단추를 선택 하면 필터가 적용 됩니다.
 
-![](photokit-images/image5.png "적용 되는 필터의 예")
+![](photokit-images/image5.png "An example of the filter being applied")
 
 PHPhotoLibraryChangeObserver 덕분에 사용자가 뒤로 이동할 때 변경 내용이 컬렉션 뷰에 반영 됩니다.
 
-![](photokit-images/image6.png "사용자가 다시 탐색할 때 컬렉션 뷰에 변경 내용이 반영 됩니다.")
+![](photokit-images/image6.png "The change is reflected in the collection view when the user navigates back")

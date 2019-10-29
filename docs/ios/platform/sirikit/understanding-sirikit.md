@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 SiriKit로 작업 하는 
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 3b99e4485bfb621b32fa001a49d75038b2072775
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 45dd1a47712de559ddf62ed92347619438b08f9b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769464"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031499"
 ---
 # <a name="understanding-sirikit-concepts"></a>SiriKit 개념 이해하기
 
@@ -56,7 +56,7 @@ Siri와 지도 모두 표준 시스템 인터페이스를 사용 하 여 모든 
 
 이 섹션에서는 SiriKit에서 Siri를 사용 하 여 앱과 상호 작용할 수 있도록 하는 방법에 대 한 개요를 제공 합니다. 이 예제에서는 다음과 같이 가짜 MonkeyChat 앱을 사용 합니다.
 
-[![](understanding-sirikit-images/monkeychat01.png "MonkeyChat 아이콘")](understanding-sirikit-images/monkeychat01.png#lightbox)
+[![](understanding-sirikit-images/monkeychat01.png "The MonkeyChat icon")](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat는 각각 화면 이름 (예: Bobo)과 연결 된 사용자의 친구에 대 한 고유한 연락처 설명서를 유지 하 고 사용자가 화면 이름으로 각 친구에 게 텍스트 채팅을 보낼 수 있도록 합니다.
 
@@ -64,33 +64,33 @@ MonkeyChat는 각각 화면 이름 (예: Bobo)과 연결 된 사용자의 친구
 
 예를 들어 사용자가 friend Bobo에 메시지를 보내려고 하는 경우 Siri를 사용 하 여 다음과 같은 대화를 했을 수 있습니다.
 
-_정의 여기서는 MonkeyChat 메시지를 보냅니다._<br />
-_Siri 누구 인가요?_<br />
-_정의 Bobo._<br />
-_Siri Bobo 무엇을 하 고 싶으세요?_<br />
-_정의 더 많은 Bananas을 보내 주세요._<br />
+_사용자:이 중에는 MonkeyChat 메시지를 보냅니다._<br />
+_Siri: 누구 인가요?_<br />
+_사용자: Bobo._<br />
+_Siri: Bobo 하려는 항목을 선택 하세요._<br />
+_사용자: 더 많은 Bananas를 전송 하세요._<br />
 
 다른 사용자가 다른 대화를 사용 하 여 동일한 요청을 수행할 수 있습니다.
 
-_정의 MonkeyChat의 Bobo에 메시지를 보냅니다._<br />
-_Siri Bobo 무엇을 하 고 싶으세요?_<br />
-_정의 더 많은 bananas을 보내 주세요._<br />
+_사용자: MonkeyChat의 Bobo에 메시지를 보냅니다._<br />
+_Siri: Bobo 하려는 항목을 선택 하세요._<br />
+_사용자: 더 많은 bananas를 전송 하세요._<br />
 
 그리고 다른 사용자가 훨씬 더 짧은 요청을 수행할 수 있습니다.
 
-_정의 MonkeyChat Bobo 더 많은 bananas을 보내 주세요._<br />
-_Siri 확인, 메시지 보내기 bananas에서 Bobo에 더 많은 추가 정보를 보냅니다._<br />
+_사용자: MonkeyChat Bobo 더 많은 bananas을 보내 주세요._<br />
+_Siri: 정상, 메시지 보내기 bananas에서 Bobo에 더 많은 추가 정보를 보냅니다._<br />
 
 또는 동일한 요청을 다른 언어로 만들 수도 있습니다.
 
-_정의 MonkeyChat Bobo의 il vous plaît envoyer plus de bananes._<br />
-_Siri Ouenvoi 메시지, vous, plaît envoyer plus de bananes à Bobo 성 Monkeychat._<br />
+_사용자: MonkeyChat Bobo의 il vous plaît envoyer plus de bananes._<br />
+_Siri: Ouenvoi message의 il vous plaît envoyer plus de bananes à Bobo 성 Monkeychat._<br />
 
 그러나 다른 사용자는 대화에서 매우 자세한 정보를 받을 수 있습니다.
 
-_정의 안녕하세요 .이를 선호 하 고 MonkeyChat 앱을 시작 하 여 메시지가 포함 된 텍스트를 보낼 수 있습니다. 더 많은 bananas을 보내 주세요._<br />
-_Siri 누구 인가요?_<br />
-_정의 내 최고의 pal Bobo._<br />
+_사용자: 안녕하세요?를 선호 하 고 MonkeyChat 앱을 시작 하 여 메시지가 포함 된 텍스트를 보낼 수 있습니다. 더 많은 bananas를 보내세요._<br />
+_Siri: 누구 인가요?_<br />
+_사용자: 내 best pal Bobo._<br />
 
 또한 다음과 같은 여러 가지 방법으로 Siri에서 요청에 응답할 수 있습니다.
 
@@ -103,7 +103,7 @@ Siri는 사용자의 접근성 요구를 충족 하도록 조정 되며, 이러�
 
 사용자가 Siri에 대 한 구두 요청을 수행할 때 Siri가 따라야 하는 단계는 다음과 같습니다.
 
-[![](understanding-sirikit-images/monkeychat02.png "Siri가 따라야 하는 단계")](understanding-sirikit-images/monkeychat02.png#lightbox)
+[![](understanding-sirikit-images/monkeychat02.png "The steps that Siri will follow")](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. 먼저 Siri는 사용자의 **음성** 오디오를 사용 하 고 텍스트로 변환 합니다.
 2. 그런 다음 텍스트는 사용자의 요청에 대 한 구조화 된 **표현으로 변환**됩니다.
@@ -112,7 +112,7 @@ Siri는 사용자의 접근성 요구를 충족 하도록 조정 되며, 이러�
 
 앱이 Siri를 사용 하 여 사용자의 대화에 참여 하는 세 가지 주요 방법이 있습니다.
 
-[![](understanding-sirikit-images/monkeychat03.png "앱이 Siri를 사용 하 여 사용자 대화에 참여 시킬 수 있는 세 가지 주요 방법")](understanding-sirikit-images/monkeychat03.png#lightbox)
+[![](understanding-sirikit-images/monkeychat03.png "The three main ways that the app can take part in the users conversation with Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **어휘** -앱에서 siri에 게 상호 작용 하는 데 필요한 단어를 알리는 방법입니다.
 2. **앱 논리** -지정 된 의도에 따라 앱에서 수행할 작업 및 응답입니다.
@@ -122,27 +122,27 @@ Siri는 사용자의 접근성 요구를 충족 하도록 조정 되며, 이러�
 
 위의 정보를 고려 하 여 다음 대화가 MonkeyChat 앱과 상호 작용 하는 방법을 살펴봅니다.
 
-_정의 Bobo에서 MonkeyChat의 메시지를 전송 합니다._<br />
-_Siri Bobo 무엇을 하 고 싶으세요?_<br />
-_정의 더 많은 bananas을 보내 주세요._<br />
+_사용자: MonkeyChat의 Bobo에 메시지를 보냅니다._<br />
+_Siri: Bobo 하려는 항목을 선택 하세요._<br />
+_사용자: 더 많은 bananas를 전송 하세요._<br />
 
 앱이 대화에 사용 하는 첫 번째 역할은 Siri가 사용자의 음성을 이해 하는 데 도움을 주는 것입니다.
 
-[![](understanding-sirikit-images/monkeychat04.png "Siri의 사용자 음성 이해 지원")](understanding-sirikit-images/monkeychat04.png#lightbox)
+[![](understanding-sirikit-images/monkeychat04.png "Helping Siri understand the users speech")](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri의 데이터베이스에는 "Bobo" 라는 이름이 없지만 앱은 어휘를 통해이 정보를 Siri와 공유 합니다. 또한이 앱은 Siri를 *연락처로*지정 했으므로 siri가 받는 Bobo를 인식 하는 데 도움이 됩니다.
 
-Siri는 받는 사람에 게 메시지를 전송 하는 데 더 많은 작업이 필요 하다는 것을 알고 있으므로 응용 프로그램 확장으로 신속 하 게 확인 하 여 메시지가 콘텐츠를 필요로 하는지 확인 합니다. MonkeyChat가 수행 하므로 Siri는 다음과 같은 질문을 통해 사용자에 게 응답 합니다. *"원하는 항목을 Bobo?"*
+Siri는 받는 사람에 게 메시지를 전송 하는 데 더 많은 작업이 필요 하다는 것을 알고 있으므로 응용 프로그램 확장으로 신속 하 게 확인 하 여 메시지가 콘텐츠를 필요로 하는지 확인 합니다. MonkeyChat가 수행 하므로 Siri는 *"무엇을 Bobo?"* 라는 질문에 따라 사용자에 게 응답 합니다.
 
 위의 예제에서 사용자는 *"더 많은 bananas을 보내 주세요* **.** " 라는 응답을 받았습니다.
 
-[![](understanding-sirikit-images/monkeychat05.png "Siri는 사용자의 응답을 구조적 의도에 번들 합니다.")](understanding-sirikit-images/monkeychat05.png#lightbox)
+[![](understanding-sirikit-images/monkeychat05.png "Siri will bundle the user's response into a structured Intent")](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 구조적 의도에는 다음 정보가 포함 됩니다.
 
-- **도메인** 메시지
+- **도메인:** 메시지가
 - **의도:** sendMessage
-- **수신자** Bobo
+- **받는 사람:** Bobo
 - **콘텐츠:** 더 많은 bananas를 전송 하세요.
 
 모든 도메인은 도메인 및 작업을 기반으로 하 여 수행할 수 있는 알고 있는 *작업* 집합을 가집니다. 앱에 전송 되는 의도에는 0 개 이상의 매개 변수가 포함 될 수 있습니다.
@@ -151,13 +151,13 @@ Siri는 받는 사람에 게 메시지를 전송 하는 데 더 많은 작업이
 
 각 IntentResponse에는 앱에서 요청을 완료할 수 있는 경우 Siri에 게 알리는 **응답 코드도** 포함 됩니다. 일부 도메인에는 전송할 수 있는 매우 구체적인 오류 응답 코드도 있습니다.
 
-마지막으로, intentresponse에는을 `NSUserActivity` (를) 지 원하는 데 사용 되는 것과 같은가 포함 됩니다. 는 `NSUserActivity` 응답에서 siri 환경을 종료 하 고 앱을 입력 하 여 완료 해야 하는 경우 앱을 시작 하는 데 사용 됩니다.
+마지막으로, IntentResponse에는 `NSUserActivity` (손을 지 원하는 데 사용 되는 것과 같은)이 포함 됩니다. 응답에서 Siri 환경을 종료 하 고 앱을 입력 하 여 완료 해야 하는 경우에는 앱을 시작 하는 데 `NSUserActivity` 사용 됩니다.
 
-Siri는 응용 프로그램을 시작 `NSUserActivity` 하는 적절 한을 자동으로 빌드하고 siri 환경에서 사용자가 남겨진 위치를 픽업 합니다. 그러나 필요한 경우 앱에서 사용자 지정 `NSUserActivity` 된 정보를 제공 합니다.
+Siri는 응용 프로그램을 시작 하는 적절 한 `NSUserActivity`를 자동으로 빌드하여 Siri 환경에서 사용자가 남겨진 위치를 시작 합니다. 그러나 필요한 경우 앱은 사용자 지정 된 정보를 사용 하 여 자체 `NSUserActivity`을 제공할 수 있습니다.
 
 앱이 의도를 처리 하 고 Siri에 대 한 응답을 반환한 후에는 결과를 사용자에 게 표시 합니다 (구두로 및 시각적으로).
 
-[![](understanding-sirikit-images/monkeychat06.png "사용자에 게 구두로 및 시각적으로 표시 되는 결과")](understanding-sirikit-images/monkeychat06.png#lightbox)
+[![](understanding-sirikit-images/monkeychat06.png "The results presented to the user both verbally and visually")](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri에는 앱에서 사용할 수 있는 각 도메인에 대 한 몇 가지 기본 제공 응답 사용자 인터페이스가 있습니다. 그러나 MonkeyChat는 선택적인 의도 UI 확장을 제공 했으므로 위의 예제에서 사용자에 게 대화의 결과를 표시 하는 데 사용 됩니다.
 
@@ -165,7 +165,7 @@ Siri에는 앱에서 사용할 수 있는 각 도메인에 대 한 몇 가지 �
 
 의도를 처리할 때 앱 확장이 수행 해야 하는 세 가지 주요 작업은 다음과 같습니다.
 
-[![](understanding-sirikit-images/monkeychat07.png "의도 수명 주기")](understanding-sirikit-images/monkeychat07.png#lightbox)
+[![](understanding-sirikit-images/monkeychat07.png "The Intent Lifecycle")](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. 앱은 이벤트의 모든 매개 변수를 **확인** 해야 합니다. 따라서 앱은 각 매개 변수 마다 한 번씩 확인을 여러 번 호출 하 고, 앱과 사용자가 요청 된 항목에 동의할 때까지 동일한 매개 변수에 여러 번 여러 번 호출 합니다.
 2. 앱은 요청 된 의도를 처리할 수 있는지 **확인** 하 고, 예상 된 결과에 대해 siri에 게 알려 주어 야 합니다.
@@ -238,7 +238,7 @@ IOS 10에서 SiriKit를 사용 하 여 Apple은 다음과 같은 두 개의 새 
 
 의도 확장은 다음과 같이 앱과 Siri 간의 주요 상호 작용을 처리 하는 일을 담당 합니다.
 
-[![](understanding-sirikit-images/intents01.png "의도 확장")](understanding-sirikit-images/intents01.png#lightbox)
+[![](understanding-sirikit-images/intents01.png "The Intents Extension")](understanding-sirikit-images/intents01.png#lightbox)
 
 의도 확장은 하나 이상의 의도를 지원할 수 있으며, 개발자는 앱에서 SiriKit를 구현할 방법을 결정 합니다. 개발자는 처리 해야 할 각 의도에 대 한 별도의 의도 확장을 추가할 수도 있습니다.  즉, Apple은 Siri가 앱에 대해 열린 여러 프로세스를 포함 하지 않도록 의도 확장 수를 제한 하도록 요청 합니다 .이 경우 처리 하는 데 더 많은 메모리와 시간이 필요 합니다.
 
@@ -248,7 +248,7 @@ IOS 10에서 SiriKit를 사용 하 여 Apple은 다음과 같은 두 개의 새 
 
 Apple은 Siri로 작업할 때 사용자 개인 정보를 안전 하 게 보호 하기 위해 많은 조치를 취하 며, 사용자가 iOS 장치에서 로그인 해야 하는 여러 상호 작용이 있습니다. 예를 들어,를 요청 하거나 지불 하는 경우입니다.
 
-또한 앱에서 장치에 로그인 하는 사용자에 게 제한 하려는 특정 동작이 있습니다. 이러한 상황에서 앱은 **잠긴 동안 제한** 동작을 요청할 수 있습니다. 이는 `Info.plist` 파일의 설정을 통해 수행 됩니다.
+또한 앱에서 장치에 로그인 하는 사용자에 게 제한 하려는 특정 동작이 있습니다. 이러한 상황에서 앱은 **잠긴 동안 제한** 동작을 요청할 수 있습니다. 이 작업은 `Info.plist` 파일의 설정을 통해 수행 됩니다.
 
 로컬 인증 프레임 워크는 의도 확장에 사용할 수 있으므로, 장치가 이미 잠금 해제 되어 있는 경우에도 앱에서 사용자에 게 추가 인증 정보를 요청할 수 있습니다.
 
@@ -264,16 +264,16 @@ Apple은 사용자와 자연스럽 게 자연 스런 대화를 수행 하기 위
 
 인 텐트 UI 확장은 응용 프로그램의 UI 및 브랜딩을 Siri 환경으로 전환 하 고 사용자가 앱에 연결 되도록 하는 기회를 제공 합니다. 이 확장을 사용 하 여 앱은 브랜드 뿐만 아니라 시각적 개체 및 기타 정보를 성적 증명서에 가져올 수 있습니다.
 
-[![](understanding-sirikit-images/intents02.png "예제 의도 UI 확장 출력")](understanding-sirikit-images/intents02.png#lightbox)
+[![](understanding-sirikit-images/intents02.png "Example Intents UI Extension output")](understanding-sirikit-images/intents02.png#lightbox)
 
-인 텐트 UI 확장은 항상를 `UIViewController` 반환 하며, 앱은 초기 응답을 초과 하는 추가 정보를 표시 하는 것과 같이 뷰 컨트롤러 내에서 선호 하는 모든 항목을 추가할 수 있습니다. 또한 의도 UI는 긴 실행 이벤트의 상태를 사용 하 여 사용자를 업데이트할 수 있습니다. 예를 들어, 사용자가 해당 위치에 도달 하는 데 사용 하는 것이 얼마나 길 수 있습니다.
+인 텐트 UI 확장은 항상 `UIViewController`을 반환 하 고, 앱은 초기 응답을 초과 하는 추가 정보를 표시 하는 것과 같이 뷰 컨트롤러 내에서 선호 하는 모든 항목을 추가할 수 있습니다. 또한 의도 UI는 긴 실행 이벤트의 상태를 사용 하 여 사용자를 업데이트할 수 있습니다. 예를 들어, 사용자가 해당 위치에 도달 하는 데 사용 하는 것이 얼마나 길 수 있습니다.
 
 인 텐트 UI 확장은 항상 UI의 맨 위에 있는 앱 아이콘 및 이름과 같은 다른 Siri 콘텐츠와 함께 표시 되거나 의도에 따라 단추 (예: 보내기 또는 취소)가 아래쪽에 표시 될 수 있습니다.
 
 앱이 기본 환경을 앱에 맞게 조정 된 상태로 바꿀 수 있는 메시징 또는 맵과 같이 기본적으로 Siri가 사용자에 게 표시 하는 정보를 사용자에 게 교체할 수 있는 몇 가지 인스턴스가 있습니다.
 
 > [!IMPORTANT]
-> 또는 `UIButtons` `UIViewController`와 같은 대화형 요소를 의도 ui 확장에 추가할 수 있지만 비 대화형으로는 의도 ui로 엄격히 사용할 수 없으며 사용자는 상호 작용할 수 없습니다. `UITextFields`
+> `UIButtons` 또는 `UITextFields` 같은 대화형 요소를 의도 UI 확장의 `UIViewController`에 추가할 수 있지만 비 대화형에서 의도 UI로 엄격히 사용할 수 없으며 사용자는 상호 작용할 수 없습니다.
 
 Siri는 각 의도 유형에 대 한 기본 UI 집합을 포함 하기 때문에 앱에서 의도 UI 확장을 제공 하는 것은 전적으로 선택 사항입니다. 또한 의도 UI 인터페이스는 Apple에서 사용자에 게 유용한 특정 의도에 대해서만 사용할 수 있습니다.
 
@@ -285,11 +285,11 @@ SiriKit를 구현 하는 마지막 부분은 필요한 어휘를 제공 하 여 
 
 ### <a name="app-specific-vocabulary"></a>앱 특정 어휘
 
-앱 특정 어휘는 차량 유형 또는 체력 단련 이름과 같은 모든 앱 사용자에 게 알려진 특정 단어 및 구를 정의 합니다. 이러한 `AppIntentVocabulary.plist` 파일은 응용 프로그램의 일부 이기 때문에 주 앱 번들의 일부로 파일에 정의 됩니다. 또한 이러한 단어와 구를 지역화 해야 합니다.
+앱 특정 어휘는 차량 유형 또는 체력 단련 이름과 같은 모든 앱 사용자에 게 알려진 특정 단어 및 구를 정의 합니다. 이러한 파일은 응용 프로그램의 일부 이기 때문에 기본 앱 번들의 일부로 `AppIntentVocabulary.plist` 파일에 정의 됩니다. 또한 이러한 단어와 구를 지역화 해야 합니다.
 
-어휘 `AppIntentVocabulary.plist` 파일에는 다음과 같은 여러 부분이 있습니다.
+어휘 `AppIntentVocabulary.plist` 파일에는 여러 부분이 있습니다.
 
-- **예제 앱 사용** -사용자가 앱을 만들 수 있는 요청에 대 한 일반적인 사용 사례 집합을 제공 합니다. 예를 들어: *"MonkeyFit를 사용 하 여 체력을 시작 합니다."*
+- **예제 앱 사용** -사용자가 앱을 만들 수 있는 요청에 대 한 일반적인 사용 사례 집합을 제공 합니다. 예: *"MonkeyFit를 사용 하 여 체력을 시작 합니다."*
 - **Parameters** -앱과 관련 된 비표준 매개 변수 형식의 집합을 제공 합니다. 예를 들어 MonkeyFit 앱에 대 한 체력 단련 이름입니다. 다음으로 구성 됩니다.
   - **문구** -앱에서 앱에 대 한 고유한 용어를 정의할 수 있습니다. 예: MonkeyFit 앱에 대 한 "Bananarific" 체력 단련 유형입니다.
   - **발음** -지정 된 구에 대 한 간단한 윗주로 siri에 대 한 발음 힌트를 제공 합니다. 예를 들면 "ba nana ri f)"입니다.
@@ -402,7 +402,7 @@ Siri에는 앱을 대신 하 여 사용자와 대화가 있음을 항상 명심 
 
 앱에 해당 하는 단일 값이 표시 되 면이를 처리 하는 기본 방법은 Siri에서 사용자에 게 확인을 요청 하는 것입니다. 예를 들어 *"Bobo?"* 라는 간단한 예를 사용 하 여 회신할 수 있습니다.
 
-단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예를 들어:
+단일 값에 대해 몇 가지 가능한 선택 항목이 올바른 경우에는 명확성을 기본 처리 방법으로 사용할 수 있습니다. 이러한 상황에서 Siri는 선택할 수 있는 최대 10 개의 옵션을 사용자에 게 표시할 수 있습니다. 예를 들면,
 
 ```csharp
 Who do you want to send the message to?
@@ -438,7 +438,7 @@ Siri가 사용자의 요청을 처리 하기 위해 앱을 시작 하는 경우�
 
 Apple에서 대화형 인터페이스의 디자인을 폴란드어로 제안 하는 몇 가지 단계가 있습니다. 첫 번째는 Siri에 clear, 간결한 어휘 및 사용 사례 예제를 제공 하는 것입니다.
 
-사용자가 앱을 검색 하는 방법 중 하나는 Siri를 사용 하 여 대화를 시작 하 고 *"수행할 수 있는* 작업"을 요청 하는 것입니다. Siri는 개발자 앱을 비롯 하 여 수행할 수 있는 여러 가지 작업을 보여 주고, 해당 `plist` 파일을 통해 제공 된 예제 주인공 사용 사례를 보여 줍니다.
+사용자가 앱을 검색 하는 방법 중 하나는 Siri를 사용 하 여 대화를 시작 하 고 *"수행할 수 있는* 작업"을 요청 하는 것입니다. Siri는 개발자의 앱과 `plist` 파일을 통해 제공 된 예제 주인공 사용 사례를 비롯 하 여 수행할 수 있는 여러 가지 작업을 보여 줍니다.
 
 좋은 예제 사용 사례를 작성 하는 방법:
 

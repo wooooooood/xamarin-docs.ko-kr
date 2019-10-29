@@ -3,15 +3,15 @@ title: '플랫폼 간 앱 사례 연구: Tasky'
 description: 이 문서에서는 Tasky 이식 가능한 샘플 응용 프로그램을 플랫폼 간 모바일 응용 프로그램으로 설계 및 구축 하는 방법을 설명 합니다. 응용 프로그램의 요구 사항, 인터페이스, 데이터 모델, 핵심 기능, 구현 등에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 246ee002404fdf6fe1120c19701aceb3c2dee7db
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: e38fc0d23c65189f51f7f8f159a07894b3e1ab72
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71249782"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030329"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -95,7 +95,7 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
 ![](case-study-tasky-images/portable-project.png "When deployed, each native app will reference that library")
 
-아래 클래스 다이어그램에서는 계층 별로 그룹화 된 클래스를 보여 줍니다. @No__t_0 클래스는 Sqlite-NET 패키지의 상용구 코드입니다. 나머지 클래스는 Tasky의 사용자 지정 코드입니다. @No__t_0 및 `TaskItem` 클래스는 플랫폼별 응용 프로그램에 노출 되는 API를 나타냅니다.
+아래 클래스 다이어그램에서는 계층 별로 그룹화 된 클래스를 보여 줍니다. `SQLiteConnection` 클래스는 Sqlite-NET 패키지의 상용구 코드입니다. 나머지 클래스는 Tasky의 사용자 지정 코드입니다. `TaskItemManager` 및 `TaskItem` 클래스는 플랫폼별 응용 프로그램에 노출 되는 API를 나타냅니다.
 
  [![](case-study-tasky-images/classdiagram-core.png "The TaskItemManager and TaskItem classes represent the API that is exposed to the platform-specific applications")](case-study-tasky-images/classdiagram-core.png#lightbox)
 
@@ -115,9 +115,9 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
 데이터 계층에는 데이터베이스, 플랫 파일 또는 기타 메커니즘과 관련 된 데이터의 실제 저장소를 수행 하는 코드가 포함 되어 있습니다. Tasky 데이터 계층은 SQLite 네트워크 라이브러리와 연결에 추가 된 사용자 지정 코드의 두 부분으로 구성 됩니다.
 
-Tasky는 Frank Kreuger에서 게시 한 Sqlite-net nuget 패키지를 사용 하 여 ORM (개체-관계형 매핑) 데이터베이스 인터페이스를 제공 하는 SQLite-NET 코드를 포함 합니다. @No__t_0 클래스는 `SQLiteConnection`에서 상속 되며 SQLite에 데이터를 읽고 쓰는 데 필요한 만들기, 읽기, 업데이트, 삭제 (CRUD) 메서드를 추가 합니다. 다른 프로젝트에서 다시 사용할 수 있는 일반적인 CRUD 메서드의 간단한 상용구 구현입니다.
+Tasky는 Frank Kreuger에서 게시 한 Sqlite-net nuget 패키지를 사용 하 여 ORM (개체-관계형 매핑) 데이터베이스 인터페이스를 제공 하는 SQLite-NET 코드를 포함 합니다. `TaskItemDatabase` 클래스는 `SQLiteConnection`에서 상속 되며 SQLite에 데이터를 읽고 쓰는 데 필요한 만들기, 읽기, 업데이트, 삭제 (CRUD) 메서드를 추가 합니다. 다른 프로젝트에서 다시 사용할 수 있는 일반적인 CRUD 메서드의 간단한 상용구 구현입니다.
 
-@No__t_0는 단일 항목 이므로 동일한 인스턴스에 대 한 모든 액세스가 발생 합니다. 잠금은 여러 스레드의 동시 액세스를 방지 하는 데 사용 됩니다.
+`TaskItemDatabase`는 단일 항목 이므로 동일한 인스턴스에 대 한 모든 액세스가 발생 합니다. 잠금은 여러 스레드의 동시 액세스를 방지 하는 데 사용 됩니다.
 
  <a name="SQLite_on_WIndows_Phone" />
 
@@ -188,7 +188,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
 ### <a name="data-access-layer-dal"></a>DAL (데이터 액세스 계층)
 
-@No__t_0 클래스는 `TaskItem` 개체를 만들고, 삭제 하 고, 검색 하 고, 업데이트할 수 있는 강력한 형식의 API를 사용 하 여 데이터 저장소 메커니즘을 캡슐화 합니다.
+`TaskItemRepository` 클래스는 `TaskItem` 개체를 만들고, 삭제 하 고, 검색 하 고, 업데이트할 수 있는 강력한 형식의 API를 사용 하 여 데이터 저장소 메커니즘을 캡슐화 합니다.
 
  <a name="Using_Conditional_Compilation" />
 
@@ -241,7 +241,7 @@ Tasky에서 모델은 `TaskItem` 클래스 이며 `TaskItemManager` `TaskItems`�
 
 ### <a name="api-for-platform-specific-code"></a>플랫폼별 코드에 대 한 API
 
-공용 코드를 작성 한 후에는 사용자 인터페이스를 빌드하여이를 통해 노출 되는 데이터를 수집 하 고 표시 해야 합니다. @No__t_0 클래스는 응용 프로그램 코드에서 액세스할 수 있는 간단한 API를 제공 하는 외관 패턴을 구현 합니다.
+공용 코드를 작성 한 후에는 사용자 인터페이스를 빌드하여이를 통해 노출 되는 데이터를 수집 하 고 표시 해야 합니다. `TaskItemManager` 클래스는 응용 프로그램 코드에서 액세스할 수 있는 간단한 API를 제공 하는 외관 패턴을 구현 합니다.
 
 각 플랫폼별 프로젝트에서 작성 된 코드는 일반적으로 해당 장치의 네이티브 SDK와 긴밀 하 게 결합 되며 `TaskItemManager`에서 정의한 API를 사용 하 여 공통 코드에만 액세스할 수 있습니다. 여기에는 `TaskItem` 같이 노출 하는 메서드 및 비즈니스 클래스가 포함 됩니다.
 
@@ -267,7 +267,7 @@ Tasky에서 모델은 `TaskItem` 클래스 이며 `TaskItemManager` `TaskItems`�
 
 IOS 앱은 플랫폼별 SDK 라이브러리를 참조 합니다 (예:). Xamarin.ios 및 Monotouch.dialog-1.
 
-@No__t_0 PCL 프로젝트도 참조 해야 합니다.
+`TaskyPortableLibrary` PCL 프로젝트도 참조 해야 합니다.
 참조 목록이 여기에 표시 됩니다.
 
  ![](case-study-tasky-images/taskyios-references.png "The references list is shown here")
@@ -281,9 +281,9 @@ IOS 앱은 플랫폼별 SDK 라이브러리를 참조 합니다 (예:). Xamarin.
 응용 프로그램 계층에는 PCL에서 노출 한 개체를 UI에 ' 바인딩 ' 하는 데 필요한 플랫폼별 클래스가 포함 되어 있습니다. IOS 관련 응용 프로그램에는 작업을 표시 하는 데 도움이 되는 두 가지 클래스가 있습니다.
 
 - **EditingSource** –이 클래스는 작업 목록을 사용자 인터페이스에 바인딩하는 데 사용 됩니다. 작업 목록에 `MonoTouch.Dialog`를 사용 했기 때문에 `UITableView`에서 살짝 밀기-삭제 기능을 사용 하려면이 도우미를 구현 해야 합니다. 살짝 밀기-삭제는 iOS에서 일반적 이지만 Android 또는 Windows Phone에는 적용 되지 않으므로 iOS 관련 프로젝트는이를 구현 하는 유일한 프로젝트입니다.
-- **Taskdialog** –이 클래스는 단일 작업을 UI에 바인딩하는 데 사용 됩니다. @No__t_0 리플렉션 API를 사용 하 여 입력 화면의 형식이 올바르게 지정 될 수 있도록 올바른 특성이 포함 된 클래스를 사용 하 여 `TaskItem` 개체를 ' 래핑 ' 합니다.
+- **Taskdialog** –이 클래스는 단일 작업을 UI에 바인딩하는 데 사용 됩니다. `MonoTouch.Dialog` 리플렉션 API를 사용 하 여 입력 화면의 형식이 올바르게 지정 될 수 있도록 올바른 특성이 포함 된 클래스를 사용 하 여 `TaskItem` 개체를 ' 래핑 ' 합니다.
 
-@No__t_0 클래스는 `MonoTouch.Dialog` 특성을 사용 하 여 클래스의 속성을 기반으로 화면을 만듭니다. 클래스는 다음과 같습니다.
+`TaskDialog` 클래스는 `MonoTouch.Dialog` 특성을 사용 하 여 클래스의 속성을 기반으로 화면을 만듭니다. 클래스는 다음과 같습니다.
 
 ```csharp
 public class TaskDialog {
@@ -310,7 +310,7 @@ public class TaskDialog {
 }
 ```
 
-@No__t_0 특성에는 메서드 이름이 필요 합니다. 이러한 메서드는 `MonoTouch.Dialog.BindingContext`를 만든 클래스 (이 경우 다음 섹션에서 설명 하는 `HomeScreen` 클래스)에 있어야 합니다.
+`OnTap` 특성에는 메서드 이름이 필요 합니다. 이러한 메서드는 `MonoTouch.Dialog.BindingContext`를 만든 클래스 (이 경우 다음 섹션에서 설명 하는 `HomeScreen` 클래스)에 있어야 합니다.
 
  <a name="User_Interface_Layer_(UI)" />
 
@@ -326,7 +326,7 @@ public class TaskDialog {
 
 #### <a name="home-screen"></a>홈 화면
 
-홈 화면은 SQLite 데이터베이스의 작업 목록을 표시 하는 `MonoTouch.Dialog` 화면입니다. @No__t_0에서 상속 하 고 `Root`를 표시 하기 위해 `TaskItem` 개체의 컬렉션을 포함 하도록 설정 하는 코드를 구현 합니다.
+홈 화면은 SQLite 데이터베이스의 작업 목록을 표시 하는 `MonoTouch.Dialog` 화면입니다. `DialogViewController`에서 상속 하 고 `Root`를 표시 하기 위해 `TaskItem` 개체의 컬렉션을 포함 하도록 설정 하는 코드를 구현 합니다.
 
  [![](case-study-tasky-images/ios-taskylist.png "It inherits from DialogViewController and implements code to set the Root to contain a collection of TaskItem objects for display")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
@@ -351,7 +351,7 @@ Tasky는 `MonoTouch.Dialog`의 리플렉션 API를 사용 하 여 화면을 표�
 
 1. **Showtaskdetails** – 화면을 렌더링 하는 `MonoTouch.Dialog.BindingContext`을 만듭니다. 리플렉션을 사용 하 여 `TaskDialog` 클래스에서 속성 이름 및 형식을 검색 하는 입력 화면을 만듭니다. 입력란의 워터 마크 텍스트와 같은 추가 정보는 속성에 대 한 특성으로 구현 됩니다.
 2. **Savetask** -이 메서드는 `OnTap` 특성을 통해 `TaskDialog` 클래스에서 참조 됩니다. **저장** 을 누를 때 호출 되며 `MonoTouch.Dialog.BindingContext`를 사용 하 여 `TaskItemManager`를 사용 하 여 변경 내용을 저장 하기 전에 사용자가 입력 한 데이터를 검색 합니다.
-3. **Deletetask** -이 메서드는 `OnTap` 특성을 통해 `TaskDialog` 클래스에서 참조 됩니다. @No__t_0를 사용 하 여 기본 키 (ID 속성)를 사용 하 여 데이터를 삭제 합니다.
+3. **Deletetask** -이 메서드는 `OnTap` 특성을 통해 `TaskDialog` 클래스에서 참조 됩니다. `TaskItemManager`를 사용 하 여 기본 키 (ID 속성)를 사용 하 여 데이터를 삭제 합니다.
 
  <a name="Android_App" />
 

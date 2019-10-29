@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin을 사용 하 여 간단한 watchOS 응
 ms.prod: xamarin
 ms.assetid: AD1DA488-51AB-420A-A0B7-3AE69A964A40
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: 292734c0622ab35d5e48eec47593c3ffe4dc27e6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768684"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032770"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchOS – 연습
 
@@ -24,17 +24,17 @@ ms.locfileid: "70768684"
 
 부모 앱에 확장에 대 한 참조가 있고 확장에 조사식 앱 [에 대 한](~/ios/watchos/get-started/project-references.md)참조가 있는지 확인 합니다.
 
-번들 식별자가 \*. watchkitextension \*. watchkitapp 규칙을 따르고 확장 프로그램의 info.plist 파일에 감시 앱의 번들 식별자로 설정 된 **WKApp 번들 ID** 값이 있는지 확인 합니다.
+번들 식별자가 \*watchkitextension \*. watchkitapp 규칙을 따르는지 확인 하 고 확장의 info.plist 파일에는 Watch 앱의 번들 식별자로 설정 된 **WKApp 번들 ID** 값이 있는지 확인 합니다.
 
 이제 Watch 앱을 실행할 수 있지만, Watch 앱 내에 있는 스토리 보드 파일이 비어 있으므로 알 수 없습니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![](hello-watch-images/projectstructure.png "솔루션 탐색기")
+![](hello-watch-images/projectstructure.png "The Solution Explorer")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-projectstructure.png "솔루션 탐색기")
+![](hello-watch-images/vs-projectstructure.png "The Solution Explorer")
 
 -----
 
@@ -47,7 +47,7 @@ Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 �
 1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
 1. **클래스가** **InterfaceController** 로 설정 되었는지 확인 합니다.
 
-    ![](hello-watch-images/interfacecontrollerattributes.png "인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.")
+    ![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -58,7 +58,7 @@ Visual Studio에서 Xamarin iOS Designer를 사용 하 여 편집 하려면 Watc
 1. 인터페이스 컨트롤러를 클릭 합니다. 하거나
 1. 인터페이스 컨트롤러의 식별자와 제목을 **interfaceController** 및 **Hi**로 설정 합니다.
 
-    ![](hello-watch-images/vs-interfacecontrollerattributes.png "인터페이스 컨트롤러의 식별자와 제목을 interfaceController 및 Hi로 설정 합니다.")
+    ![](hello-watch-images/vs-interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
 -----
 
@@ -70,24 +70,24 @@ UI를 만듭니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-![](hello-watch-images/draganddrop.png "다음과 같이 컨트롤의 텍스트 및 특성을 설정 합니다.")
+![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-draganddrop.png "다음과 같이 컨트롤의 텍스트 및 특성을 설정 합니다.")
+![](hello-watch-images/vs-draganddrop.png "Set the text and attributes of the controls as shown")
 
 -----
 
-1. 각 컨트롤에 대 한 **속성** 패드에 **이름을** 설정 합니다. 이 예제에서는 및 `myButton` `myLabel`를 사용 했습니다.
+1. 각 컨트롤에 대 한 **속성** 패드에 **이름을** 설정 합니다. 이 예제에서는 `myButton` 및 `myLabel`를 사용 했습니다.
 
 1. 스토리 보드에서 단추를 선택 하 고 **속성** 패드의 **이벤트** 목록으로 이동한 다음
 
-1. 를 입력 하 `OnButtonPress` 고 **enter**키를 눌러 새 작업을 만듭니다.
+1. `OnButtonPress`를 입력 하 고 **enter**키를 눌러 새 **작업** 을 만듭니다.
   작업은 목록에 표시 되 고 부분 메서드는에 C#자동으로 생성 됩니다.
 
-![](hello-watch-images/buttonaction.png "단추에 추가 된 OnButtonPress 작업")
+![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-스토리 보드를 저장 하면 **InterfaceController.designer.cs** 가 컨트롤 이름 및 동작으로 업데이트 됩니다. 이 파일을 업데이트 한 후에이 파일을 열면가 컨트롤러에 `RegisterAttribute` 해당 하는 방법 및 UI 컨트롤이로 표시 된 C# 인스턴스 `OutletAttribute` 변수에 해당 하는 방법 및 작업이로 태그가 지정 `ActionAttribute`된부분메서드에매핑되는방법에대해알수있습니다.:
+스토리 보드를 저장 하면 **InterfaceController.designer.cs** 가 컨트롤 이름 및 동작으로 업데이트 됩니다. 이 파일을 업데이트 한 후에이 파일을 열면 `RegisterAttribute` 컨트롤러에 해당 하는 방법 및 UI 컨트롤이`OutletAttribute`표시 된 C# 인스턴스 변수에 해당 하는 방법 및 작업이`ActionAttribute`태그가 지정 된 부분 메서드에 매핑되는 방법을 확인할 수 있습니다 :
 
 ```csharp
 // WARNING
@@ -136,7 +136,7 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 }
 ```
 
-이 코드는 매우 투명 해야 합니다. 인스턴스 변수 `clickCount` 는 함수가 `OnButtonPress` 호출 될 때마다 증가 합니다. 의 `myLabel` 텍스트는이 횟수를 반영 하도록 변경 됩니다. `myLabel`물론은 XCode에서 만든 콘센트 중 하나의 이름입니다. 함수 `partial` 는 지정한 동작의 이름과 연결 된 함수의 구현입니다.
+이 코드는 매우 투명 해야 합니다. `clickCount` 인스턴스 변수는 함수 `OnButtonPress` 호출 될 때마다 증가 합니다. 이 수를 반영 하도록 `myLabel` 텍스트가 변경 됩니다. 물론 `myLabel`는 XCode에서 만든 콘센트 중 하나의 이름입니다. `partial` 함수는 지정한 동작의 이름과 연결 된 함수의 구현입니다.
 
 아직 시작 프로젝트가 아닌 경우
 
@@ -146,15 +146,15 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 
 1. **디버그** 단추를 눌러 빌드 및 시뮬레이터 시작을 트리거합니다.
 
-    [![](hello-watch-images/readytodebug-sml.png "Visual Studio 인터페이스 요소")](hello-watch-images/readytodebug.png#lightbox)
+    [![](hello-watch-images/readytodebug-sml.png "The Visual Studio interface elements")](hello-watch-images/readytodebug.png#lightbox)
 
 시뮬레이터가 시작 되 면 단추를 눌러 레이블을 늘립니다.
 축 하 합니다. 이제 시청 앱을 만들었습니다.
 
-![](hello-watch-images/running.png "시뮬레이터에서 실행 중인 앱")
+![](hello-watch-images/running.png "The app running in the Simulator")
 
 ## <a name="related-links"></a>관련 링크
 
 - [시작 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [설정 및 설치](~/ios/watchos/get-started/installation.md)
-- [첫 번째 Watch 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [첫 번째 시청 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 tvOS 앱에서 리소�
 ms.prod: xamarin
 ms.assetid: C56B5046-D2C0-4B63-9CE0-ADAA0EFD368A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 4b50ba09488f1f052f3e41302a42c691089727ff
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d84752afd5579216272895f750522a8f38ece34a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769646"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030799"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Xamarin에서 리소스 및 데이터 저장소 tvOS
 
@@ -22,7 +22,7 @@ _이 문서에서는 tvOS 앱에서 리소스 및 영구 데이터 저장소를 
 
 ## <a name="tvos-resource-limitations"></a>tvOS 리소스 제한
 
-IOS 장치와 달리 새로운 Apple TV는 tvOS apps 또는 데이터에 대해 매우 제한 된 영구적 로컬 저장소를 제공 합니다. 매우 작은 항목 (예: 사용자 기본 설정)의 경우 tvOS 앱은 여전히 500의 `NSUserDefaults` 데이터를 [제한](https://forums.developer.apple.com/message/50696#50696)하 여에 액세스할 수 있습니다. 그러나 tvOS 앱이 더 많은 양의 정보를 유지 해야 하는 경우에는 [iCloud](#iCloud-Data-Storage)에서 해당 데이터를 저장 하 고 검색 해야 합니다.
+IOS 장치와 달리 새로운 Apple TV는 tvOS apps 또는 데이터에 대해 매우 제한 된 영구적 로컬 저장소를 제공 합니다. 매우 작은 항목 (예: 사용자 기본 설정)의 경우 tvOS 앱은 [500 KB의 데이터를 제한](https://forums.developer.apple.com/message/50696#50696)하 여 `NSUserDefaults`에 계속 액세스할 수 있습니다. 그러나 tvOS 앱이 더 많은 양의 정보를 유지 해야 하는 경우에는 [iCloud](#iCloud-Data-Storage)에서 해당 데이터를 저장 하 고 검색 해야 합니다.
 
 또한 tvOS는 Apple TV 앱의 크기를 200MB로 제한 합니다. 앱이이 크기를 초과 하는 리소스를 필요로 하는 경우 [요청 시 리소스](#On-Demand-Resources) 를 사용 하 여 패키지 하 고 로드 해야 합니다 (최대 추가 2gb). 이러한 제한 사항이 있을 경우 앱의 사용자에 게 최상의 환경을 제공 하기 위해 추가 자산의 다운로드 시간을 올바르게 지정 하는 것이 중요 합니다. 자세한 내용은 Apple의 [주문형 리소스 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083)를 참조 하세요.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에 다시 연결 되는 웹 기
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 52da0cfcab56c0acd339f4f0a0f2456a66d002a8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3d5db2f060b59fc689bea99141342b0447ac8933
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769473"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031523"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Xamarin.ios에서 웹 태그를 사용 하 여 검색
 
@@ -20,12 +20,12 @@ ms.locfileid: "70769473"
 
 IOS 앱이 이미 모바일 딥 링크를 지원 하 고 웹 사이트에서 앱 내의 콘텐츠에 대 한 딥 링크를 제공 하는 경우 Apple의 _남은 Ebot_ 웹 크롤러는이 콘텐츠를 인덱싱하고 해당 클라우드 인덱스에 자동으로 추가 합니다.
 
-[![](web-markup-images/webmarkup01.png "클라우드 인덱스 개요")](web-markup-images/webmarkup01.png#lightbox)
+[![](web-markup-images/webmarkup01.png "Cloud Index overview")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple은 이러한 결과를 스포트라이트 검색 및 Safari 검색 결과에 노출 합니다.
 사용자가 이러한 결과 중 하나를 탭 하면 (그리고 앱이 설치 된 경우) 앱의 콘텐츠로 이동 합니다.
 
-[![](web-markup-images/webmarkup02.png "검색 결과에서 웹 사이트의 딥 링크")](web-markup-images/webmarkup02.png#lightbox)
+[![](web-markup-images/webmarkup02.png "Deep linking from a website in search results")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>웹 콘텐츠 인덱싱 사용
 
@@ -63,7 +63,7 @@ IOS 9를 처음 접하는 경우에는 다음을 제공 하 여 범용 링크를
 
 ## <a name="using-twitter-cards"></a>Twitter 카드 사용
 
-Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예:
+Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예를 들면,
 
 ```html
 <meta name="twitter:app:name:iphone" content="AppName">
@@ -71,11 +71,11 @@ Twitter 카드를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공�
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-자세한 내용은 Twitter의 [Twitter 카드 프로토콜](http://dev.twitter.com/cards/mobile) 설명서를 참조 하세요.
+자세한 내용은 Twitter의 [Twitter 카드 프로토콜](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) 설명서를 참조 하세요.
 
 ## <a name="using-facebook-app-links"></a>Facebook 앱 링크 사용
 
-Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예:
+Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제공할 수 있습니다. 예를 들면,
 
 ```html
 <meta property="al:ios:app_name" content="AppName">
@@ -83,11 +83,11 @@ Facebook 앱 링크를 사용 하 여 앱 콘텐츠에 대 한 딥 링크를 제
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-자세한 내용은 Facebook의 [앱 링크](http://applinks.org) 설명서를 참조 하세요.
+자세한 내용은 Facebook의 [앱 링크](https://developers.facebook.com/docs/applinks) 설명서를 참조 하세요.
 
 ## <a name="opening-deep-links"></a>딥 링크 열기
 
-Xamarin.ios 앱에서 딥 링크를 열고 표시 하기 위한 지원을 추가 해야 합니다. **AppDelegate.cs** 파일을 편집 하 고 메서드 `OpenURL` 를 재정의 하 여 사용자 지정 URL 형식을 처리 합니다. 예:
+Xamarin.ios 앱에서 딥 링크를 열고 표시 하기 위한 지원을 추가 해야 합니다. **AppDelegate.cs** 파일을 편집 하 고 사용자 지정 URL 형식을 처리 하도록 `OpenURL` 메서드를 재정의 합니다. 예를 들면,
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,7 +113,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-위의 코드에서는를 포함 `/appname` 하는 URL을 찾고 사용자에 게 요청 된 콘텐츠를 표시 하기 위해 앱의 사용자 지정 뷰 컨트롤러에 `query` 값 (`123` 이 예제에서는)을 전달 합니다.
+위의 코드에서 `/appname` 포함 하는 URL을 찾고 사용자에 게 요청 된 콘텐츠를 표시 하기 위해 앱의 사용자 지정 뷰 컨트롤러에 `query` (이 예제에서는`123`) 값을 전달 합니다.
 
 ## <a name="providing-rich-results-with-structured-data"></a>구조화 된 데이터를 사용 하 여 다양 한 결과 제공
 
@@ -121,7 +121,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 다양 한 결과를 활용 하 여 더 많은 사용자가 상호 작용 하도록 enticing 하 여 클라우드 기반 검색 인덱스에서 순위를 향상할 수 있습니다.
 
-구조화 된 데이터 태그를 제공 하는 한 가지 옵션은 Open Graph를 사용 하는 것입니다. 예:
+구조화 된 데이터 태그를 제공 하는 한 가지 옵션은 Open Graph를 사용 하는 것입니다. 예를 들면,
 
 ```html
 <meta property="og:image" content="http://company.com/appname/icon.jpg">
@@ -129,9 +129,9 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-자세한 내용은 Graph 웹 사이트 [열기](http://ogp.me) 를 참조 하세요.
+자세한 내용은 Graph 웹 사이트 [열기](https://ogp.me) 를 참조 하세요.
 
-구조화 된 데이터 태그의 또 다른 일반적인 형식은 schema. org의 마이크로 데이터 형식입니다. 예를 들어:
+구조화 된 데이터 태그의 또 다른 일반적인 형식은 schema. org의 마이크로 데이터 형식입니다. 예를 들면,
 
 ```html
 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -152,7 +152,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 
 다음은 최종 사용자에 게 다양 한 검색 결과를 제공 하는 웹 사이트의 메타 데이터 예를 보여 줍니다.
 
-[![](web-markup-images/deeplink01.png "구조적 데이터 태그를 통한 다양 한 검색 결과")](web-markup-images/deeplink01.png#lightbox)
+[![](web-markup-images/deeplink01.png "Rich search results via Structured Data Markup")](web-markup-images/deeplink01.png#lightbox)
 
 현재 Apple은 schema.org에서 다음 스키마 유형을 지원 합니다.
 
@@ -160,12 +160,12 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 - ImageObject
 - InteractionCount
 - 에서는
-- 조직
+- 직
 - PriceRange
 - 피
 - SearchAction
 
-이러한 구성표 유형에 대 한 자세한 내용은 [schema.org](http://schema.org)를 참조 하세요.
+이러한 구성표 유형에 대 한 자세한 내용은 [schema.org](https://schema.org)를 참조 하세요.
 
 ## <a name="providing-actions-with-structured-data"></a>구조화 된 데이터에 대 한 작업 제공
 

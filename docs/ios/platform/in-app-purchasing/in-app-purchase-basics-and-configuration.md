@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin.ios의 앱에서의 구매에 대해 �
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: fc76a642c27b7a2c7f3483911be596f8d6cdd1ce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 786afa6967731fb1bd508fa3c835b980639eb282
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752868"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032376"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>앱 내 구매 기본 사항 및 Xamarin.ios의 구성
 
 앱에서 바로 구매를 구현 하려면 응용 프로그램이 장치에서 기능 키트 API를 활용 해야 합니다. 서버 키트는 Apple iTunes 서버와의 모든 통신을 관리 하 여 제품 정보를 얻고 트랜잭션을 수행 합니다. 앱 내 구매를 위해 프로 비전 프로필을 구성 해야 하 고, iTunes Connect에 제품 정보를 입력 해야 합니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image1.png "이 차트에 표시 된 것 처럼 기능 키트는 Apple과의 모든 통신을 관리 합니다.")](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image1.png "StoreKit manages all communication with Apple’s as shown in this chart")](in-app-purchase-basics-and-configuration-images/image1.png#lightbox)
 
 앱 스토어를 사용 하 여 앱 내 구매를 제공 하려면 다음 설정 및 구성이 필요 합니다.
 
@@ -45,7 +45,7 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
 ## <a name="configuration"></a>Configuration
 
-앱 내 구매 코드를 작성 하기 전에 iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) 및 IOS 프로 비전 포털 ( [developer.apple.com/iOS](https://developer.apple.com/iOS))에서 일부 설정 작업을 수행 해야 합니다.
+앱 내 구매 코드를 작성 하기 전에 iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) 및 IOS 프로 비전 포털 ( [developer.apple.com/iOS](https://developer.apple.com/iOS))에서 일부 설정 작업을 수행 해야 합니다.
 
 코드를 작성 하기 전에 다음 세 단계를 완료 해야 합니다.
 
@@ -57,11 +57,11 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
 무료 앱을 빌드 및 배포 하려면 [ITunes Connect](https://itunesconnect.apple.com)에서 매우 적은 구성이 필요 하지만 유료 앱 또는 앱 내 구매를 판매 하려면 금융 및 세금 정보를 사용 하 여 Apple에 제공 해야 합니다. 여기에 표시 된 주 메뉴에서 **계약, 세금 및 뱅킹** 을 클릭 합니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image2.png "주 메뉴에서 계약, 세금 및 뱅킹을 클릭 합니다.")](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image2.png "Click on Agreements, Tax and Banking from the main menu")](in-app-purchase-basics-and-configuration-images/image2.png#lightbox)
 
 개발자 계정에는 다음 스크린샷에 표시 된 것 처럼 **IOS 유료 응용 프로그램** 계약이 적용 되어 있어야 합니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image3.png "개발자 계정에 iOS 유료 응용 프로그램 계약이 적용 되어 있어야 합니다.")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image3.png "Your Developer Account should have an iOS Paid Applications contract in effect")](in-app-purchase-basics-and-configuration-images/image3.png#lightbox)
 
 **IOS 유료 응용 프로그램** 계약이 있는 경우에만 모든 기능 키트 기능을 테스트할 수 있습니다.-Apple에서 **계약, 세금 및 뱅킹** 정보를 처리할 때까지 코드에서 사용자 키트 호출이 실패 합니다.
 
@@ -73,7 +73,7 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
  다음과 같습니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image4.png "새 앱 Id를 만들기 위한 양식")](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image4.png "The form for creating new App IDs")](in-app-purchase-basics-and-configuration-images/image4.png#lightbox)
 
 목록에서이 앱 ID를 쉽게 식별할 수 있도록 *설명*에 적절 한 항목을 입력 합니다. *앱 Id 접두사*에서 팀 id를 선택 합니다.
 
@@ -88,7 +88,7 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
 **앱 내 구매** 는 서비스 목록에서 자동으로 사용 하도록 설정 됩니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image5.png "앱 내 구매는 서비스 목록에서 자동으로 사용 하도록 설정 됩니다.")](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image5.png "In-App Purchase will be automatically enabled in the Services list")](in-app-purchase-basics-and-configuration-images/image5.png#lightbox)
 
 #### <a name="provisioning-profiles"></a>프로비전 프로필
 
@@ -98,16 +98,16 @@ Apple은 판매 되기 전에 모든 제품을 승인 해야 합니다.-이름, 
 
 ITunes Connect에서 **내 앱** 을 클릭 하 여 iOS 응용 프로그램 항목을 만들거나 편집 합니다. 응용 프로그램 개요 페이지가 다음과 같이 표시 됩니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image6.png "응용 프로그램 개요 페이지")](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image6.png "The application overview page")](in-app-purchase-basics-and-configuration-images/image6.png#lightbox)
 
 **앱 내 구매** 를 클릭 하 여 판매 제품을 만들거나 편집 합니다. 이 스크린샷에서는 여러 제품이 이미 추가 된 샘플 앱을 보여 줍니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image7.png "여러 제품이 이미 추가 된 샘플 앱")](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image7.png "The sample app with several products already added")](in-app-purchase-basics-and-configuration-images/image7.png#lightbox)
 
 새 제품을 추가 하는 프로세스에는 두 단계가 있습니다.
 
-1. 제품 유형 선택:  [![](in-app-purchase-basics-and-configuration-images/image8.png "제품 유형 선택")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2. 제품 Id, 가격 책정 계층 및 지역화 된 설명을 포함 하 여 제품의 특성을 입력 합니다.  [![](in-app-purchase-basics-and-configuration-images/image9.png "Products 특성 입력")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1. 제품 유형 선택:[![](in-app-purchase-basics-and-configuration-images/image8.png "제품 유형 선택")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2. 제품 Id, 가격 책정 계층 및 지역화 된 설명을 포함 하 여 제품의 특성을 입력 합니다.[![](in-app-purchase-basics-and-configuration-images/image9.png "Products 특성 입력")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 각 앱 내 구매 제품에 필요한 필드는 아래에 설명 되어 있습니다.
 
@@ -154,13 +154,13 @@ com.xamarin.storekit.testing.greyscale
 
 Apple은 원하는 통화/가격에 대 한 올바른 계층을 선택 하는 데 도움이 되는 가격 매트릭스를 제공 합니다. 가격 책정 행렬 (8 월 2012)의 발췌는 다음과 같습니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image10.png "가격 책정 행렬의 발췌 8 월 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image10.png "An excerpt of the price matrix August 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
-(6 월 2013) 작성 시점에 USD 0.99에서 USD 999.99 까지의 87 계층이 있습니다. 가격 책정 매트릭스는 고객이 지불 하는 가격 및 Apple에서 받게 되는 금액을 보여 줍니다 .이 비용은 30% 요금이 적고 수집 하는 데 필요한 모든 지역 세금이 있습니다 (미국 및 캐나다 판매자가 99 c p에 대해 70c를 수신 함). roduct는 반면 오스트레일리아 판매자는 판매 가격의 ' 상품 &amp; 서비스 세금 ' levied 인해 63c만 받습니다.
+(6 월 2013) 작성 시점에 USD 0.99에서 USD 999.99 까지의 87 계층이 있습니다. 가격 책정 매트릭스는 고객이 지불 하는 가격 및 Apple에서 받게 되는 금액을 보여 줍니다 .이 비용은 30% 요금이 적고 수집 하는 데 필요한 모든 지역 세금이 있습니다 (미국 및 캐나다 판매자가 99 c p에 대해 70c를 수신 함). roduct는 반면 오스트레일리아 판매자는 ' 상품 &amp; 서비스 세율 '이 판매 가격에 levied 되어 63c만 받습니다.
 
 향후 날짜에 적용 되는 예정 된 가격 변경을 포함 하 여 언제 든 지 제품의 가격을 업데이트할 수 있습니다. 이 스크린샷에서는 이후 날짜의 가격 변화가 추가 되는 방식을 보여 줍니다. 가격은 9 월에 대 한 계층 1에서 계층 3으로 일시적으로 변경 됩니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image11.png "월의 월에 대 한 가격이 일시적으로 계층 1에서 계층 3으로 변경 되는 이후 날짜가 변경 됨")](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
+ [![](in-app-purchase-basics-and-configuration-images/image11.png "A future-dated price change where the price is being temporarily changed from tier 1 to tier 3 for the month of September only")](in-app-purchase-basics-and-configuration-images/image11.png#lightbox)
 
 ### <a name="free-products-not-supported"></a>무료 제품은 지원 되지 않음
 
@@ -170,7 +170,7 @@ Apple은 Newsstand apps에 대해 특별 한 무료 구독 옵션을 제공 했�
 
 ITunes Connect에서 지원 되는 여러 언어에 대해 다른 이름 및 설명 텍스트를 입력할 수 있습니다. 팝업을 통해에서 각 언어를 추가 하거나 편집할 수 있습니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image12.png "각 언어는 팝업을 통해에서 추가/편집할 수 있습니다.")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
+ [![](in-app-purchase-basics-and-configuration-images/image12.png "Each language can be added/edited in via a popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
 
 앱에 제품 정보를 표시 하면 사용자가 사용자 키트 키트를 통해 지역화 된 텍스트를 표시할 수 있습니다. 올바른 기호 및 10 진수 형식을 표시 하도록 통화 표시도 지역화 해야 합니다 .이 형식은 문서의 뒷부분에서 다룹니다.
 
@@ -180,7 +180,7 @@ ITunes Connect에서 지원 되는 여러 언어에 대해 다른 이름 및 설
 
 앱을 처음으로 구매할 때 앱을 처음으로 제출 하는 경우 (새 앱이 든, 기존 앱에 기능이 추가 되었는지 여부에 관계 없이) 다른 제품을 사용 하 여 제출할 수도 있습니다. ITunes Connect 포털에는 다음 스크린샷에 표시 된 것 처럼이 작업을 수행 하 라는 메시지가 표시 됩니다.
 
- [![](in-app-purchase-basics-and-configuration-images/image13.png "ITunes Connect 포털에 일부 제품을 제출 하 라는 메시지가 표시 됩니다.")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
+ [![](in-app-purchase-basics-and-configuration-images/image13.png "The iTunes Connect portal will prompt you to submit some products as well")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
 
 응용 프로그램 및 앱 내 구매는 함께 검토 되므로 앱이 승인 된 제품이 없으면 앱이 스토어로 이동 하지 않습니다.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin에서 watchOS 테이블 컨트롤을 �
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 2bed40c3ac2853a5f99c2b487e909164e12e676d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 522f90c21c46eaf75a730108cc46fc64769795d7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766963"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032662"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Xamarin의 watchOS Table 컨트롤
 
@@ -61,7 +61,7 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> @No__t_0를 사용한 다음 `GetRowController`를 사용 하 여 반복 하면 전체 테이블이 조사식으로 전송 됩니다. 테이블의 후속 뷰에서 특정 행을 추가 하거나 제거 해야 하는 경우 `InsertRowsAt` 및 `RemoveRowsAt`를 사용 하 여 성능을 향상 시킬 수 있습니다.
+> `SetNumberOfRows`를 사용한 다음 `GetRowController`를 사용 하 여 반복 하면 전체 테이블이 조사식으로 전송 됩니다. 테이블의 후속 뷰에서 특정 행을 추가 하거나 제거 해야 하는 경우 `InsertRowsAt` 및 `RemoveRowsAt`를 사용 하 여 성능을 향상 시킬 수 있습니다.
 
 ## <a name="respond-to-taps"></a>탭에 응답
 
@@ -151,7 +151,7 @@ watchOS 3에는 테이블에 대 한 새로운 기능이 도입 되었습니다.
 
 ![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
 
-[Apple에서 설명한](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) 대로 테이블 탐색은 segue를 사용 하 여 페이징 기능이 작동 해야 합니다. @No__t_0를 사용 하 여 segue를 대신 사용 하는 기존 코드를 다시 작성 합니다.
+[Apple에서 설명한](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) 대로 테이블 탐색은 segue를 사용 하 여 페이징 기능이 작동 해야 합니다. `PushController`를 사용 하 여 segue를 대신 사용 하는 기존 코드를 다시 작성 합니다.
 
 <a name="add_row_controller" />
 

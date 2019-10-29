@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 5995ba06873b2fb5f75c593fbc7136806e50d982
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 0cf44a05f8b40a07dcc099d5789171f4a234a0c2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70290597"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032581"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>Xamarin.ios의 iOS 확장
 
@@ -92,10 +92,10 @@ IOS 8에 도입 된 확장은 사용자가 특수 입력 또는 다른 컨텍스
 - 컨테이너 앱의 번들 식별자로 시작 하는 번들 식별자가 있어야 합니다. 예를 들어 컨테이너 앱의 번들 식별자가 `com.myCompany.ContainerApp` 인 경우 확장의 식별자를 `com.myCompany.ContainerApp.MyExtension` 수 있습니다. 
 
   ![](extensions-images/bundleidentifiers.png) 
-- @No__t_3 파일에서 적절 한 값 (예: **오늘** 알림 센터 위젯에 대 한 `com.apple.widget-extension`)을 사용 하 여 키 `NSExtensionPointIdentifier`를 정의 해야 합니다.
+- `Info.plist` 파일에서 적절 한 값 (예: **오늘** 알림 센터 위젯에 대 한 `com.apple.widget-extension`)을 사용 하 여 키 `NSExtensionPointIdentifier`를 정의 해야 합니다.
 - 또한 `Info.plist` 파일에서 적절 한 값을 사용 하 여 `NSExtensionMainStoryboard` 키 또는 `NSExtensionPrincipalClass` 키 *를 정의 해야* 합니다.
-  - @No__t_0 키를 사용 하 여 확장에 대 한 주 UI를 제공 하는 스토리 보드의 이름을 지정 합니다 (제외 `.storyboard`). 예를 들어 `Main.storyboard` 파일에 대 한 `Main` 합니다.
-  - @No__t_0 키를 사용 하 여 확장이 시작 될 때 초기화 될 클래스를 지정 합니다. 값은 `UIViewController` **등록** 값과 일치 해야 합니다. 
+  - `NSExtensionMainStoryboard` 키를 사용 하 여 확장에 대 한 주 UI를 제공 하는 스토리 보드의 이름을 지정 합니다 (제외 `.storyboard`). 예를 들어 `Main.storyboard` 파일에 대 한 `Main` 합니다.
+  - `NSExtensionPrincipalClass` 키를 사용 하 여 확장이 시작 될 때 초기화 될 클래스를 지정 합니다. 값은 `UIViewController` **등록** 값과 일치 해야 합니다. 
 
   ![](extensions-images/registerandprincipalclass.png)
 
@@ -166,7 +166,7 @@ IOS 8에 도입 된 확장은 사용자가 특수 입력 또는 다른 컨텍스
 3. 화면 맨 아래에서 **원본 뷰** 를 선택 하 고 `NSExtension` 노드를 엽니다. 
 
     [![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
-4. @No__t_0 키를 제거 하 고 `CodeBasedViewController` 값을 사용 하 여 `NSExtensionPrincipalClass`를 추가 합니다. 
+4. `NSExtensionMainStoryboard` 키를 제거 하 고 `CodeBasedViewController`값을 사용 하 여 `NSExtensionPrincipalClass`를 추가 합니다. 
 
     [![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
 5. 변경 내용을 저장합니다.
@@ -207,7 +207,7 @@ namespace DaysRemaining
 }
 ```
 
-@No__t_0은 위의 `NSExtensionPrincipalClass`에 대해 지정한 값과 일치 합니다.
+`[Register("CodeBasedViewController")]`은 위의 `NSExtensionPrincipalClass`에 대해 지정한 값과 일치 합니다.
 
 ### <a name="coding-the-extension"></a>확장 코딩
 
@@ -286,7 +286,7 @@ IOS 시뮬레이터에서 확장을 테스트 하려면 **TodayContainer** 앱�
 
 확장 작업을 수행할 때 UTI (Uniform Type Identifier)를 사용 하 여 앱, 다른 앱 및/또는 서비스 간에 교환 되는 데이터를 만들고 조작 합니다.
 
-@No__t_0 정적 클래스는 Apple의 `kUTType...` 정의와 관련 된 다음과 같은 도우미 속성을 정의 합니다.
+`MobileCoreServices.UTType` 정적 클래스는 Apple의 `kUTType...` 정의와 관련 된 다음과 같은 도우미 속성을 정의 합니다.
 
 - `kUTTypeAlembic` - `Alembic`
 - `kUTTypeAliasFile` - `AliasFile`

@@ -1,56 +1,56 @@
 ---
 title: RESTful 웹 서비스 인증
-description: 기본 인증 자격 증명이 있는 클라이언트만를 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법에 설명 합니다.
+description: 기본 인증은 올바른 자격 증명이 있는 클라이언트에만 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 기본 인증을 사용 하 여 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2018
-ms.openlocfilehash: 5a0e820c8a9f04b7ad9173893852285d53dbe7a6
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: 23516603633116a8e28ae33004bdb6fc8764ec21
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529209"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032819"
 ---
 # <a name="authenticate-a-restful-web-service"></a>RESTful 웹 서비스 인증
 
-_HTTP은 리소스에 대 한 액세스를 제어 하는 몇 가지 인증 메커니즘 사용을 지원 합니다. 기본 인증 자격 증명이 있는 클라이언트만를 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하기 위해 기본 인증을 사용 하는 방법에 설명 합니다._
+_HTTP에서는 여러 인증 메커니즘을 사용 하 여 리소스에 대 한 액세스를 제어할 수 있습니다. 기본 인증은 올바른 자격 증명이 있는 클라이언트에만 리소스에 대 한 액세스를 제공 합니다. 이 문서에서는 기본 인증을 사용 하 여 RESTful 웹 서비스 리소스에 대 한 액세스를 보호 하는 방법을 보여 줍니다._
 
 > [!NOTE]
-> IOS 9 이상, 앱 전송 보안 ATS ()는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간에 보안 연결 하므로 중요 한 정보가 실수로 유출 방지 적용 합니다. ATS는 iOS 9 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되므로 모든 연결이 ATS 보안 요구 사항이 적용 됩니다. 연결에서 이러한 요구를 충족 하지 않는, 예외와 함께 실패 합니다.
-> 사용할 수 없는 경우의 ATS 옵트인 수 있습니다는 `HTTPS` 프로토콜 및 인터넷 리소스에 대 한 통신을 보호 합니다. 이 앱을 업데이트 하 여 수행할 수 있습니다 **Info.plist** 파일입니다. 자세한 내용은 참조 [앱 전송 보안](~/ios/app-fundamentals/ats.md)합니다.
+> IOS 9 이상에서 ATS (App Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 하 여 중요 한 정보가 실수로 공개 되는 것을 방지 합니다. ATS는 iOS 9 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로 모든 연결에 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않으면 예외와 함께 실패 합니다.
+> `HTTPS` 프로토콜을 사용 하 고 인터넷 리소스에 대 한 보안 통신을 할 수 없는 경우 ATS를 옵트아웃 (opt out) 할 수 있습니다. 이는 앱의 **info.plist** 파일을 업데이트 하 여 수행할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md)을 참조 하세요.
 
-## <a name="authenticating-users-over-http"></a>HTTP를 통해 사용자를 인증합니다.
+## <a name="authenticating-users-over-http"></a>HTTP를 통한 사용자 인증
 
-기본 인증 하는 HTTP를 지 원하는 가장 간단한 인증 메커니즘 및 암호화 되지 않은 base64로 인코딩된 텍스트 사용자 이름 및 암호를 보내는 클라이언트를 포함 합니다. 다음과 같이 작동합니다.
+기본 인증은 HTTP에서 지원 되는 가장 간단한 인증 메커니즘으로, 사용자 이름 및 암호를 암호화 되지 않은 base64 인코딩 텍스트로 보내는 클라이언트를 포함 합니다. 다음과 같이 작동 합니다.
 
-- 웹 서비스에 보호 된 리소스에 대 한 요청을 수신 하는 경우 HTTP 상태 코드 401 (액세스가 거부 되었습니다)을 사용 하 여 요청을 거부 하 고 다음 다이어그램과에서 같이 Www-authenticate 응답 헤더를 설정 합니다.
+- 웹 서비스는 보호 된 리소스에 대 한 요청을 수신 하는 경우 다음 다이어그램과 같이 HTTP 상태 코드 401 (액세스 거부 됨)를 사용 하 여 요청을 거부 하 고 WWW-인증 응답 헤더를 설정 합니다.
 
-![](rest-images/basic-authentication-fail.png "기본 인증 실패")
+![](rest-images/basic-authentication-fail.png "Basic Authentication Failing")
 
-- 웹 서비스를 사용 하 여 보호 된 리소스에 대 한 요청을 수신 하는 경우는 `Authorization` 헤더가 올바르게 설정 요청이 성공 했는지 여부를 나타내는 HTTP 상태 코드 200 사용 하 여 웹 서비스 응답 및 응답에서 요청 된 정보를 인지 합니다. 이 시나리오는 다음 다이어그램에 표시 됩니다.
+- 웹 서비스가 `Authorization` 헤더를 올바르게 설정 하 여 보호 된 리소스에 대 한 요청을 수신 하는 경우 웹 서비스는 HTTP 상태 코드 200를 사용 하 여 응답 하며이는 요청이 성공 했으며 요청 된 정보가 응답에 있음을 나타냅니다. 이 시나리오는 다음 다이어그램에 나와 있습니다.
 
-![](rest-images/basic-authentication-success.png "기본 인증 성공")
+![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
 
 > [!NOTE]
-> HTTPS 연결을 통해만 기본 인증을 사용 해야 합니다. HTTP 연결을 통해 사용 하는 경우는 `Authorization` 공격자에 의해 캡처된 HTTP 트래픽을 하는 경우에 쉽게 헤더를 디코딩할 수 있습니다.
+> 기본 인증은 HTTPS 연결을 통해서만 사용 해야 합니다. Http 연결을 통해 사용 되는 경우 HTTP 트래픽이 공격자에 의해 캡처되는 경우 `Authorization` 헤더를 쉽게 디코딩할 수 있습니다.
 
-## <a name="specifying-basic-authentication-in-a-web-request"></a>웹 요청에 지정 기본 인증
+## <a name="specifying-basic-authentication-in-a-web-request"></a>웹 요청에서 기본 인증 지정
 
 기본 인증의 사용은 다음과 같이 지정 됩니다.
 
-1. "기본"에 추가 되는 문자열을 `Authorization` 요청의 헤더입니다.
-1. Username 및 password는 문자열에 "username:password" base64 인코딩되며에 추가 되는 형식을 사용 하 여 결합 됩니다는 `Authorization` 요청의 헤더입니다.
+1. "Basic" 문자열은 요청의 `Authorization` 헤더에 추가 됩니다.
+1. 사용자 이름 및 암호는 "username: password" 형식의 문자열로 결합 되며,이는 base64 인코딩 후 요청의 `Authorization` 헤더에 추가 됩니다.
 
-따라서 'XamarinUser'의 사용자 이름 및 'XamarinPassword'의 암호를 사용 하 여 헤더가 됩니다.
+따라서 ' XamarinUser '의 사용자 이름 및 ' XamarinPassword '의 암호를 사용 하면 헤더가 다음과 같이 됩니다.
 
 ```csharp
 Authorization: Basic WGFtYXJpblVzZXI6WGFtYXJpblBhc3N3b3Jk
 ```
 
-`HttpClient` 클래스에 설정할 수는 `Authorization` 헤더 값에는 `HttpClient.DefaultRequestHeaders.Authorization` 속성. 때문에 `HttpClient` 인스턴스가 여러 개의 요청 전반를 `Authorization` 헤더만 설정 해야 번 경우 대신 다음 코드 예제와 같이 모든 요청:
+`HttpClient` 클래스는 `HttpClient.DefaultRequestHeaders.Authorization` 속성의 `Authorization` 헤더 값을 설정할 수 있습니다. `HttpClient` 인스턴스는 여러 요청에 존재 하기 때문에 다음 코드 예제에 표시 된 것 처럼 `Authorization` 헤더는 모든 요청을 만들 때가 아니라 한 번만 설정 하면 됩니다.
 
 ```csharp
 public class RestService : IRestService
@@ -70,19 +70,19 @@ public class RestService : IRestService
 }
 ```
 
-요청으로 서명 되어 웹 서비스 작업에는 요청이 만들어질 때 다음을 `Authorization` 사용자 작업을 호출할 수 있는 권한이 있는지 여부를 나타내는 헤더입니다.
+그런 다음 웹 서비스 작업에 대 한 요청이 수행 되 면 사용자에 게 작업을 호출할 수 있는 권한이 있는지 여부를 나타내는 `Authorization` 헤더를 사용 하 여 요청을 서명 합니다.
 
 > [!NOTE]
-> 이 코드는 자격 증명을 상수로 저장 하지만 게시 된 응용 프로그램에서는 안전 하지 않은 형식으로 저장 해서는 안 됩니다. 합니다 [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet 자격 증명을 안전 하 게 저장 하는 기능을 제공 합니다. 자세한 내용은 참조 [저장 및 장치에 대 한 계정 정보를 검색](~/xamarin-forms/data-cloud/authentication/oauth.md)합니다.
+> 이 코드는 자격 증명을 상수로 저장 하지만 게시 된 응용 프로그램에서는 안전 하지 않은 형식으로 저장 해서는 안 됩니다. [Xamarith](https://www.nuget.org/packages/Xamarin.Auth/) NuGet은 자격 증명을 안전 하 게 저장 하는 기능을 제공 합니다. 자세한 내용은 [장치에서 계정 정보 저장 및 검색](~/xamarin-forms/data-cloud/authentication/oauth.md)을 참조 하세요.
 
 ## <a name="processing-the-authorization-header-server-side"></a>권한 부여 헤더 서버 쪽 처리
 
-REST 서비스는 각 작업을 `[BasicAuthentication]` 특성으로 데코레이팅 해야 합니다. 이 특성은 헤더를 `Authorization` 구문 분석 하 고 base64 인코딩 자격 증명이 유효한 지를 확인 하는 데 사용 되며,이를 web.config에 저장 된 값과 비교 하 여 확인 합니다. 이 접근 방식은 샘플 서비스에 적합 하지만 공용 웹 서비스를 위해 확장 해야 합니다.
+REST 서비스는 각 작업을 `[BasicAuthentication]` 특성으로 데코레이팅 해야 합니다. 이 특성은 `Authorization` 헤더를 구문 분석 하 고 base64 인코딩 자격 증명이 *web.config*에 저장 된 값과 비교 하 여 유효한 지 여부를 확인 하는 데 사용 됩니다. 이 접근 방식은 샘플 서비스에 적합 하지만 공용 웹 서비스를 위해 확장 해야 합니다.
 
-IIS에서 사용 하는 기본 인증 모듈에서 사용자는 Windows 자격 증명에 대해 인증 됩니다. 따라서 사용자는 서버의 도메인에 계정이 있어야 합니다. 그러나 사용자 계정 데이터베이스와 같은 외부 원본에 대해 인증 됩니다 여기서 사용자 지정 인증을 허용 하는 기본 인증 모델을 구성할 수 있습니다. 자세한 내용은 참조 [ASP.NET Web API에서 기본 인증](http://www.asp.net/web-api/overview/security/basic-authentication) ASP.NET 웹 사이트입니다.
+IIS에서 사용 하는 기본 인증 모듈에서 사용자는 Windows 자격 증명을 사용 하 여 인증 됩니다. 따라서 사용자에 게는 서버 도메인에 대 한 계정이 있어야 합니다. 그러나 사용자 지정 인증을 허용 하도록 기본 인증 모델을 구성할 수 있습니다 .이 경우 사용자 계정은 데이터베이스와 같은 외부 원본에 대해 인증 됩니다. 자세한 내용은 ASP.NET 웹 사이트에서 [ASP.NET Web API의 기본 인증](https://www.asp.net/web-api/overview/security/basic-authentication) 을 참조 하세요.
 
 > [!NOTE]
-> 기본 인증 로그 아웃을 관리 하도록 설계 되지 않았습니다. 따라서 로그 아웃 하기 위한 표준 기본 인증 방법은 세션을 종료 하는 것입니다.
+> 기본 인증은 로그 아웃을 관리 하도록 설계 되지 않았습니다. 따라서 로그 아웃에 대 한 표준 기본 인증 방법은 세션을 종료 하는 것입니다.
 
 ## <a name="related-links"></a>관련 링크
 

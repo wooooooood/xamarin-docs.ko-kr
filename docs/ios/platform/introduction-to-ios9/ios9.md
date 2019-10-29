@@ -4,15 +4,15 @@ description: IOS 9 기능을 앱에 바로 추가할 계획이 없더라도 최�
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 246653cee7917141ddd0f911a7c4d1b21f945360
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cbea7686c2ec96492f9531e1ff30d1686db1a4c0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751973"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031768"
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 호환성
 
@@ -23,7 +23,7 @@ _IOS 9 기능을 앱에 바로 추가할 계획이 없더라도 최신 버전의
 
 첫 번째 iOS 9 베타 버전이 표시 되 면 iOS 9에서 오래 된 앱을 시작할 수 없는 것으로 확인 된 이전 버전의 Xamarin에 대 한 두 가지 문제를 확인 했습니다.
 
-이러한 두 가지 문제 ( [포럼에 자세히 설명](http://forums.xamarin.com/discussion/comment/131529/#Comment_131529))는 다음과 같습니다.
+이러한 두 가지 문제 ( [포럼에 자세히 설명](https://forums.xamarin.com/discussion/comment/131529/#Comment_131529))는 다음과 같습니다.
 
 - IOS 8 또는 이전 버전의 앱 빌드는 32 비트 장치 ( [Unified API](~/cross-platform/macios/unified/index.md)로 빌드된 앱 포함)에서 시작할 수 없습니다.
 - 전체 경로를 지정 하지 않고 P/Invoke가 실패 합니다.
@@ -46,7 +46,7 @@ Visual Studio가 안정적인 최신 버전으로 업데이트 되었는지 여�
 위에서 설명한 두 가지 문제를 해결 하기 위해 사용 하는 구성 요소 또는 Nuget의 새 버전을 기다릴 필요가 **없습니다** .
 이러한 문제는 매우 안정적인 Xamarin.ios의 최신 릴리스로 앱을 다시 빌드하여 간단히 수정할 수 있습니다.
 
-마찬가지로, 구성 요소 공급 업체와 Nuget 작성자는 위에서 언급 한 두 가지 문제를 해결 하기 위해 새 빌드를 제출 하는 데 필요 **하지 않습니다** . 그러나 구성 요소나 Nuget에서 **Xib** 파일의 뷰 `UICollectionView` 를 사용 하거나 로드 하는 경우 아래에 설명 된 iOS 9 호환성 문제를 해결 하기 위해 업데이트가 필요할 수 *있습니다* .
+마찬가지로, 구성 요소 공급 업체와 Nuget 작성자는 위에서 언급 한 두 가지 문제를 해결 하기 위해 새 빌드를 제출 하는 데 필요 **하지 않습니다** . 그러나 구성 요소나 Nuget이 **Xib** 파일의 `UICollectionView` 또는 로드 뷰를 사용 하는 경우 아래에 설명 된 iOS 9 호환성 문제를 해결 하기 위해 업데이트가 필요할 수 *있습니다* .
 
 <a name="compat" />
 
@@ -56,9 +56,9 @@ IOS 9에서 이전 버전의 iOS에서 작업 하는 *데 사용* 되는 몇 가
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell는 생성자에서 null입니다.
 
-**문서화** Ios 9 `initWithFrame:` 에서는 [UICollectionView 설명서 상태로](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)ios 9의 동작 변경으로 인해 생성자가 필요 합니다. 지정 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 이제 해당 `initWithFrame:` 메서드를 호출 하 여 셀을 초기화 합니다.
+**이유:** IOS 9에서는 [UICollectionView 설명서 상태로](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath)ios 9의 동작 변경으로 인해 `initWithFrame:` 생성자가 필요 합니다. 지정 된 식별자에 대 한 클래스를 등록 하 고 새 셀을 만들어야 하는 경우 이제 해당 `initWithFrame:` 메서드를 호출 하 여 셀을 초기화 합니다.
 
-**방법을** 다음과 같이 `initWithFrame:` 생성자를 추가 합니다.
+**해결 방법:** 다음과 같이 `initWithFrame:` 생성자를 추가 합니다.
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -68,13 +68,13 @@ public YourCellClassName (CGRect frame) : base (frame)
 }
 ```
 
-관련 샘플: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
+관련 샘플: [Motiongraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>Xib/Nib에서 뷰를 로드 하는 경우 UIView가 코드 작성자 있는지를 사용 하 여 초기화 되지 않습니다.
 
-**문서화** 생성자 `initWithCoder:` 는 Interface Builder Xib 파일에서 뷰를 로드할 때 호출 되는 생성자입니다. 이 생성자가 내보내지 않는 경우 관리 되지 않는 코드는 관리 되는 버전을 호출할 수 없습니다. 이전 (예: iOS 8) `IntPtr` 에서 뷰를 초기화 하기 위해 생성자가 호출 되었습니다.
+**이유:** `initWithCoder:` 생성자는 Interface Builder Xib 파일에서 뷰를 로드할 때 호출 되는 생성자입니다. 이 생성자가 내보내지 않는 경우 관리 되지 않는 코드는 관리 되는 버전을 호출할 수 없습니다. 이전 (예: iOS 8) `IntPtr` 생성자를 호출 하 여 뷰를 초기화 합니다.
 
-**방법을** 다음과 같이 생성자를 `initWithCoder:` 만들고 내보냅니다.
+**해결 방법:** 다음과 같이 `initWithCoder:` 생성자를 만들고 내보냅니다.
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -95,9 +95,9 @@ Dyld Error Message:
 Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**문서화** 이는 개인 프레임 워크를 공용으로 만들 때 (JavaScriptCore가 전용 프레임 워크 였던 이전에는 iOS 7에서 공용으로 설정 됨), 프레임 워크가 전용 인 경우 앱의 배포 대상이 iOS 버전용입니다. 이 경우 Apple의 링커는 공용 버전 대신 프레임 워크의 전용 버전과 연결 됩니다.
+**이유:** 이는 개인 프레임 워크를 공용으로 만들 때 (JavaScriptCore가 전용 프레임 워크 였던 이전에는 iOS 7에서 공용으로 설정 됨), 프레임 워크가 전용 인 경우 앱의 배포 대상이 iOS 버전용입니다. 이 경우 Apple의 링커는 공용 버전 대신 프레임 워크의 전용 버전과 연결 됩니다.
 
-**방법을** 이는 iOS 9에 대 한 것 이지만 사용자에 게 직접 적용할 수 있는 해결 방법이 있습니다. 프로젝트에서 이후 iOS 버전을 대상으로 합니다 .이 경우 iOS 7을 사용해 볼 수 있습니다. 다른 프레임 워크는 비슷한 문제를 나타낼 수 있습니다. 예를 들어 ios 8에서 WebKit framework가 공용으로 설정 되었으므로 iOS 7을 대상으로 지정 하면이 오류가 발생 합니다. 앱에서 WebKit를 사용 하려면 iOS 8을 대상으로 해야 합니다.
+**해결 방법:** 이는 iOS 9에 대 한 것 이지만 사용자에 게 직접 적용할 수 있는 해결 방법이 있습니다. 프로젝트에서 이후 iOS 버전을 대상으로 합니다 .이 경우 iOS 7을 사용해 볼 수 있습니다. 다른 프레임 워크는 비슷한 문제를 나타낼 수 있습니다. 예를 들어 ios 8에서 WebKit framework가 공용으로 설정 되었으므로 iOS 7을 대상으로 지정 하면이 오류가 발생 합니다. 앱에서 WebKit를 사용 하려면 iOS 8을 대상으로 해야 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

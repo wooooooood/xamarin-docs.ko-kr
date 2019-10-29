@@ -4,15 +4,15 @@ description: 이 문서는 ARKit, CoreML, MapKit, PDFKit, SiriKit, 비전 프레
 ms.prod: xamarin
 ms.assetid: 22C38EA6-6DA9-4B92-B41B-814E589033F6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/19/2017
-ms.openlocfilehash: 0a8963f7c6552e046aee2e75b10bcdb51fc22950
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7262e44fe862e7a5c71f0b1dcfa5d672932fd4ee
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286783"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032180"
 ---
 # <a name="introduction-to-ios-11"></a>iOS 11 소개
 

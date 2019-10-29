@@ -4,15 +4,15 @@ description: 이 문서에서는 네이티브 C 라이브러리를 Xamarin.ios �
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/28/2016
-ms.openlocfilehash: 16e6d66cd41ead7a4d234cf45bb73e53e41aa5eb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8b882430d5d7d02e444acd00cfdacfc7b29a42b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769567"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031630"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.ios에서 네이티브 라이브러리 참조
 
@@ -30,7 +30,7 @@ IOS 개발을 위해 지원 되는 각 플랫폼에 대 한 네이티브 라이�
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphonesimulator -arch i386 -configuration Release clean build
 ```
 
-그러면에서 `MyProject.xcodeproj/build/Release-iphonesimulator/`네이티브 정적 라이브러리가 생성 됩니다. 라이브러리 보관 파일 (arm64)을 나중에 사용 하기 위해 안전한 위치에 복사 (또는 이동) 하 여 다음에 빌드할 동일한 라이브러리의 및 armv7 버전과 충돌 하지 않도록 해당 이름을 해당 이름 (예: **)에 제공 합니다.**
+그러면 `MyProject.xcodeproj/build/Release-iphonesimulator/`에 네이티브 정적 라이브러리가 생성 됩니다. 라이브러리 보관 파일 (arm64)을 나중에 사용 하기 위해 안전한 위치에 복사 (또는 이동) 하 여 다음에 빌드할 동일한 라이브러리의 및 armv7 버전과 충돌 하지 않도록 해당 이름을 해당 이름 (예: **)에 제공 합니다.**
 
 ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을 실행 합니다.
 
@@ -38,7 +38,7 @@ ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphoneos -arch arm64 -configuration Release clean build
 ```
 
-이번에는 빌드된 네이티브 라이브러리가에 `MyProject.xcodeproj/build/Release-iphoneos/`배치 됩니다. 다시 한 번이 파일을 안전한 위치로 복사 (또는 이동) 하 고 **arm64** 와 같은 이름으로 변경 하 여 충돌 하지 않도록 합니다.
+이번에는 빌드된 네이티브 라이브러리가 `MyProject.xcodeproj/build/Release-iphoneos/`에 배치 됩니다. 다시 한 번이 파일을 안전한 위치로 복사 (또는 이동) 하 고 **arm64** 와 같은 이름으로 변경 하 여 충돌 하지 않도록 합니다.
 
 이제 라이브러리의 ARMv7 버전을 빌드합니다.
 
@@ -54,11 +54,11 @@ ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을
 lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a libMyLibrary-armv7.a
 ```
 
-이렇게 하면 `libMyLibrary.a` 모든 iOS 개발 대상에 사용 하기에 적합 한 유니버설 (fat) 라이브러리가 생성 됩니다.
+이렇게 하면 모든 iOS 개발 대상에 사용 하기에 적합 한 유니버설 (fat) 라이브러리가 될 `libMyLibrary.a` 만들어집니다.
 
 ### <a name="missing-required-architecture-i386"></a>필수 아키텍처 i386 누락
 
-IOS 시뮬레이터에서 목표- `does not implement methodSignatureForSelector` C `does not implement doesNotRecognizeSelector` 라이브러리를 사용 하려고 할 때 런타임 출력에 또는 메시지가 표시 되는 경우 라이브러리는 i386 아키텍처에 대해 컴파일되지 않았을 수 있습니다 ( [유니버설 네이티브 빌드 참조). 라이브러리](#building_native) 섹션).
+IOS 시뮬레이터에서 목표 C 라이브러리를 사용 하려고 할 때 런타임 출력에 `does not implement methodSignatureForSelector` 또는 `does not implement doesNotRecognizeSelector` 메시지가 표시 되는 경우 라이브러리는 i386 아키텍처에 대해 컴파일되지 않았을 수 있습니다 ( [유니버설 네이티브 라이브러리 빌드](#building_native) 참조). 섹션).
 
 지정 된 라이브러리에서 지 원하는 아키텍처를 확인 하려면 터미널에서 다음 명령을 사용 합니다.
 
@@ -66,7 +66,7 @@ IOS 시뮬레이터에서 목표- `does not implement methodSignatureForSelector
 lipo -info /full/path/to/libraryname.a
 ```
 
-여기서 `/full/path/to/` 는 사용 되는 라이브러리의 전체 경로이 고 `libraryname.a` 은 해당 라이브러리의 이름입니다.
+여기서 `/full/path/to/`는 사용 되는 라이브러리의 전체 경로이 고 `libraryname.a`는 해당 라이브러리의 이름입니다.
 
 라이브러리에 대 한 소스가 있는 경우 iOS 시뮬레이터에서 앱을 테스트 하려는 경우 i386 아키텍처에 대해서도이를 컴파일 및 번들 해야 합니다.
 
@@ -90,7 +90,7 @@ lipo -info /full/path/to/libraryname.a
 
 위의 예제에서는 **라이브러리를 연결 합니다.**
 
-를 사용 `-gcc_flags` 하 여 실행 파일의 최종 링크를 수행 하는 데 사용 되는 GCC 컴파일러에 전달할 명령줄 인수 집합을 지정할 수 있습니다. 예를 들어이 명령줄은 CFNetwork 프레임 워크도 참조 합니다.
+`-gcc_flags`를 사용 하 여 실행 파일의 최종 링크를 수행 하는 데 사용 되는 GCC 컴파일러에 전달할 명령줄 인수 집합을 지정할 수 있습니다. 예를 들어이 명령줄은 CFNetwork 프레임 워크도 참조 합니다.
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
@@ -119,7 +119,7 @@ IOS에서 사용할 수 있는 기본 라이브러리에는 두 가지 종류가
 - 상주 하는 라이브러리 확인
 - 적절 한 P/Invoke 선언을 작성 합니다.
 
-P/Invoke를 사용 하는 경우 연결 하는 라이브러리의 경로를 지정 해야 합니다. Ios 공유 라이브러리를 사용 하는 경우 경로를 하드 코딩 하거나에서 `Constants`정의한 편리한 상수를 사용할 수 있습니다. 이러한 상수는 ios 공유 라이브러리를 포함 해야 합니다.
+P/Invoke를 사용 하는 경우 연결 하는 라이브러리의 경로를 지정 해야 합니다. IOS 공유 라이브러리를 사용 하는 경우 경로를 하드 코딩 하거나 `Constants`에서 정의한 편리한 상수를 사용할 수 있습니다. 이러한 상수는 iOS 공유 라이브러리를 포함 해야 합니다.
 
 예를 들어 C:에이 서명이 있는 Apple의 UIKit 라이브러리에서 UIRectFrameUsingBlendMode 메서드를 호출 하려는 경우
 
@@ -140,9 +140,9 @@ UIKitLibrary는 "/System/Library/Frameworks/UIKit.framework/UIKit"로 정의 된
 
 ### <a name="accessing-c-dylibs"></a>C Dylibs 액세스
 
-Xamarin.ios 응용 프로그램에서 C Dylib를 사용 해야 하는 경우 특성을 `DllImport` 호출 하기 전에 필요한 약간의 추가 설정이 있습니다.
+Xamarin.ios 응용 프로그램에서 C Dylib를 사용 해야 하는 경우에는 `DllImport` 특성을 호출 하기 전에 약간의 추가 설정이 필요 합니다.
 
-예를 들어 응용 프로그램에서 호출할 `Animal.dylib` `Animal_Version` 메서드가 포함 된가 있는 경우이를 사용 하기 전에 라이브러리의 위치에 대해 xamarin.ios에 알려야 합니다.
+예를 들어 응용 프로그램에서 호출 하는 `Animal_Version` 메서드를 사용 하는 `Animal.dylib` 있는 경우 라이브러리를 사용 하기 전에 라이브러리의 위치에 대해 Xamarin.ios에 알려야 합니다.
 
 이렇게 하려면 `Main.CS` 파일을 편집 하 여 다음과 같이 만듭니다.
 
@@ -157,7 +157,7 @@ static void Main (string[] args)
 }
 ```
 
-여기서 `/full/path/to/` 는 사용 되는 Dylib의 전체 경로입니다. 이 코드가 준비 되 면 다음과 같이 `Animal_Version` 메서드에 연결할 수 있습니다.
+여기서 `/full/path/to/`는 사용 되는 Dylib의 전체 경로입니다. 이 코드가 준비 되 면 다음과 같이 `Animal_Version` 메서드에 연결할 수 있습니다.
 
 ```csharp
 [DllImport("Animal.dylib", EntryPoint="Animal_Version")]
@@ -168,6 +168,6 @@ public static extern double AnimalLibraryVersion();
 
 ### <a name="static-libraries"></a>정적 라이브러리
 
-IOS에서 정적 라이브러리를 사용할 수 있기 때문에와 연결할 외부 공유 라이브러리가 없으므로 DllImport 특성의 path 매개 변수는 특수 이름을 `__Internal` 사용 해야 합니다 (이름의 시작 부분에 있는 이중 밑줄 문자를 참조). 경로 이름입니다.
+IOS에서 정적 라이브러리를 사용할 수 있기 때문에 연결할 외부 공유 라이브러리가 없으므로 DllImport 특성의 path 매개 변수는 `__Internal` 특수 이름을 사용 해야 합니다 (이름 시작 부분에 있는 이중 밑줄 문자를 참조). 경로 이름입니다.
 
 이렇게 하면 DllImport는 공유 라이브러리에서 로드 하는 대신 현재 프로그램에서 참조 하는 메서드의 기호를 조회 합니다.

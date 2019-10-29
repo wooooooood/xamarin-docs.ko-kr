@@ -4,21 +4,21 @@ description: 이 문서는 iOS 6에서 도입 된 기능을 설명 하는 가이
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: dc8f2c3a11dd283db46fd0a2530fcca435da75f9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d30789a33eb8023f4ce77b4a7c2445fabca0f2db
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752049"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031831"
 ---
 # <a name="introduction-to-ios-6"></a>iOS 6 소개
 
 _iOS 6에는 앱을 개발 하기 위한 다양 한 새 기술이 포함 되어 있으며, Xamarin.ios 6 C# 은 개발자에 게 제공 됩니다._
 
-[![](images/ios6-large.jpg "IOS 6 로고")](images/ios6-large.jpg#lightbox)
+[![](images/ios6-large.jpg "The iOS 6 logo")](images/ios6-large.jpg#lightbox)
 
 Ios 6 및 Xamarin.ios 6을 사용 하면 개발자는 iPhone 5를 대상으로 하는 응용 프로그램을 포함 하 여 iOS 응용 프로그램을 만들 수 있는 다양 한 기능이 있습니다.
 이 문서에서는 사용 가능한 흥미로운 새 기능 중 일부와 각 항목에 대 한 문서에 대 한 링크를 제공 합니다. 또한 개발자가 iOS 6으로 이동 하 고 iPhone 5의 새로운 해상도를 사용할 때 중요 한 몇 가지 변경 내용을 다룹니다.
@@ -47,9 +47,9 @@ Apple은 스토어 키트에 두 가지 새로운 기능인 앱 내에서 iTunes
 
 ### <a name="viewwillunload-and-viewdidunload-deprecated"></a>ViewWillUnload 및 ViewDidUnload 사용 되지 않음
 
-의 `ViewWillUnload` 및`UIViewController` 메서드는 더 이상 iOS 6에서 호출 되지 않습니다. `ViewDidUnload` 이전 버전의 iOS에서 이러한 메서드는 응용 프로그램에서 뷰가 언로드 되기 전의 상태를 저장 하는 데 사용 했을 수 있습니다.
+`UIViewController`의 `ViewWillUnload` 및 `ViewDidUnload` 메서드는 iOS 6에서 더 이상 호출 되지 않습니다. 이전 버전의 iOS에서 이러한 메서드는 응용 프로그램에서 뷰가 언로드 되기 전의 상태를 저장 하는 데 사용 했을 수 있습니다.
 
-예를 들어, Mac용 Visual Studio는 아래와 같이 `ReleaseDesignerOutlets`라는 메서드를 만듭니다 .이 메서드는에서 `ViewDidUnload`호출 됩니다.
+예를 들어, Mac용 Visual Studio는 아래와 같이 `ReleaseDesignerOutlets`라는 메서드를 만들어 `ViewDidUnload`에서 호출 됩니다.
 
 ```csharp
 void ReleaseDesignerOutlets ()
@@ -61,9 +61,9 @@ void ReleaseDesignerOutlets ()
 }
 ```
 
-그러나 iOS 6에서는 더 이상를 호출할 `ReleaseDesignerOutlets`필요가 없습니다.   
+그러나 iOS 6에서는 더 이상 `ReleaseDesignerOutlets`를 호출할 필요가 없습니다.   
 
-정리 코드의 경우 iOS 6 응용 프로그램은 `DidReceiveMemoryWarning`를 사용 해야 합니다. 그러나를 호출 `Dispose` 하는 코드는 아래와 같이 메모리를 많이 사용 하는 개체에 대해서만 사용 해야 합니다.
+정리 코드의 경우 iOS 6 응용 프로그램은 `DidReceiveMemoryWarning`를 사용 해야 합니다. 그러나 `Dispose`를 호출 하는 코드는 아래와 같이 메모리를 많이 사용 하는 개체에 대해서만 사용 해야 합니다.
 
 ```csharp
 if (myImageView != null){
@@ -74,25 +74,25 @@ if (myImageView != null){
 }
 ```
 
-다시, 위와 `Dispose` 같이를 호출 하는 것은 거의 필요 하지 않습니다. 일반적으로 대부분의 응용 프로그램은 이벤트 처리기를 제거 하는 것입니다.
+다시, 위와 같이 `Dispose`를 호출 하는 것은 거의 필요 하지 않습니다. 일반적으로 대부분의 응용 프로그램은 이벤트 처리기를 제거 하는 것입니다.
 
-상태를 저장 하는 경우 응용 프로그램은 대신 `ViewWillDisappear` `ViewWillUnload`및 `ViewDidDisappear` 에서이를 수행할 수 있습니다.
+상태를 저장 하는 경우 응용 프로그램은 `ViewWillUnload`대신 `ViewWillDisappear` 및 `ViewDidDisappear`에서이를 수행할 수 있습니다.
 
 ### <a name="iphone-5-resolution"></a>iPhone 5 해상도
 
 iPhone 5 장치에는 640x1136 해상도가 있습니다. 이전 버전의 iOS를 대상으로 하는 응용 프로그램은 아래와 같이 iPhone 5에서 실행 될 때 letterboxed 표시 됩니다.
 
- [![](images/01-letterboxed.png "이전 버전의 iOS를 대상으로 하는 응용 프로그램은 iPhone 5에서 실행 될 때 letterboxed 표시 됩니다.")](images/01-letterboxed.png#lightbox)
+ [![](images/01-letterboxed.png "Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5")](images/01-letterboxed.png#lightbox)
 
-응용 프로그램이 iPhone 5에서 전체 화면에 표시 되도록 하려면 640x1136의 해상도를 가진 `Default-568h@2x.png` 이라는 이미지를 추가 하기만 하면 됩니다. 다음 스크린샷은이 이미지가 포함 된 후 실행 되는 응용 프로그램을 보여 줍니다.
+응용 프로그램이 iPhone 5에서 전체 화면에 표시 되려면 640x1136의 해상도를 가진 `Default-568h@2x.png` 이라는 이미지를 추가 하기만 하면 됩니다. 다음 스크린샷은이 이미지가 포함 된 후 실행 되는 응용 프로그램을 보여 줍니다.
 
- [![](images/02-fullscreen.png "이 스크린샷은이 이미지가 포함 된 후 실행 중인 응용 프로그램을 보여 줍니다.")](images/02-fullscreen.png#lightbox)
+ [![](images/02-fullscreen.png "This screenshot shows the application running after this image has been included")](images/02-fullscreen.png#lightbox)
 
 ### <a name="subclassing-uinavigationbar"></a>UINavigationBar 하위 클래스
 
-IOS 6 `UINavigationBar` 에서는 서브클래싱 할 수 있습니다. 이렇게 하면의 모양과 느낌 `UINavigationBar`을 추가로 제어할 수 있습니다. 예를 들어 응용 프로그램은 하위 뷰를 추가 하 고, 해당 뷰에 애니메이션 효과를 적용 하 `UINavigationBar`고, 범위를 수정할 수 있습니다.
+IOS 6에서는 `UINavigationBar` 서브클래싱 할 수 있습니다. 이렇게 하면 `UINavigationBar`의 모양과 느낌을 더욱 세밀 하 게 제어할 수 있습니다. 예를 들어 응용 프로그램은 하위 뷰를 추가 하 고, 해당 뷰에 애니메이션 효과를 적용 하 고, `UINavigationBar`범위를 수정할 수 있습니다.
 
-아래 코드는를 `UINavigationBar` `UIImageView`추가 하는 서브클래싱된의 예를 보여 줍니다.
+아래 코드는 `UIImageView`를 추가 하는 서브클래싱된 `UINavigationBar`의 예를 보여 줍니다.
 
 ```csharp
 public class CustomNavBar : UINavigationBar
@@ -112,7 +112,7 @@ public class CustomNavBar : UINavigationBar
 }
 ```
 
-`UINavigationBar` 에 서브클래싱된 `UINavigationController` `UINavigationBar` `UIToolbar`를 추가 하려면 아래와 같이 및 형식을 사용 하는 생성자를 사용 합니다. `UINavigationController`
+`UINavigationController`에 서브클래싱된 `UINavigationBar`를 추가 하려면 아래와 같이 `UINavigationBar` 및 `UIToolbar`의 형식을 사용 하는 `UINavigationController` 생성자를 사용 합니다.
 
 ```csharp
 navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolbar));
@@ -120,11 +120,11 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 
 이 `UINavigationBar` 하위 클래스를 사용 하면 다음 스크린샷에 표시 된 것 처럼 이미지 뷰가 표시 됩니다.
 
- [![](images/03-navbar.png "이 UINavigationBar 하위 클래스를 사용 하면 이미지 뷰가이 스크린샷에 표시 된 것 처럼 표시 됩니다.")](images/03-navbar.png#lightbox)
+ [![](images/03-navbar.png "Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>인터페이스 방향
 
-IOS 6 응용 프로그램이를 재정의 `ShouldAutorotateToInterfaceOrientation`하 고 특정 컨트롤러에서 지 원하는 모든 방향에 대해 true를 반환 합니다. 예를 들어 다음 코드는 세로만 지 원하는 데 사용 됩니다.
+IOS 6 응용 프로그램이 `ShouldAutorotateToInterfaceOrientation`를 재정의 하 고 특정 컨트롤러에서 지 원하는 모든 방향에 대해 true를 반환 합니다. 예를 들어 다음 코드는 세로만 지 원하는 데 사용 됩니다.
 
 ```csharp
 public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
@@ -133,8 +133,8 @@ public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientat
     }
 ```
 
-IOS 6 `ShouldAutorotateToInterfaceOrientation` 의는 더 이상 사용 되지 않습니다.
-대신 응용 프로그램은 `GetSupportedInterfaceOrientations` 아래와 같이 루트 뷰 컨트롤러에서를 재정의할 수 있습니다.
+IOS 6 `ShouldAutorotateToInterfaceOrientation`은 더 이상 사용 되지 않습니다.
+대신 응용 프로그램은 아래와 같이 루트 뷰 컨트롤러에서 `GetSupportedInterfaceOrientations`를 재정의할 수 있습니다.
 
 ```csharp
 public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
@@ -143,4 +143,4 @@ public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations ()
     }
 ```
 
-가 구현 되지 않은 경우 `GetSupportedInterfaceOrientation` iPad에서는 기본적으로 네 개의 방향이 모두로 설정 됩니다. IPhone 및 iPod Touch에서 기본값은를 제외한 `PortraitUpsideDown`모든 방향입니다.
+IPad에서는 `GetSupportedInterfaceOrientation` 구현 되지 않은 경우이 기본값은 모두 네 방향으로 설정 됩니다. IPhone 및 iPod Touch에서 기본값은 `PortraitUpsideDown`를 제외한 모든 방향입니다.

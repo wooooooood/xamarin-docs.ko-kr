@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin.ios 개발자를 위한 iOS 9에서 제
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 3ce1c802fb276e271cddc75e8ebabd2237d84d39
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752004"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031778"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
 _이 문서에서는 Xamarin.ios 개발자를 위한 iOS 9에서 제공 되는 새로운 Api 및 수정 된 Api 및 기능을 모두 소개 합니다._
 
-![](images/ios9-sml.png "IOS 9 로고")
+![](images/ios9-sml.png "The iOS 9 logo")
 
 Apple은 기존 기능에 대 한 여러 향상 된 기능을 비롯 하 여 iOS 9에서 몇 가지 새로운 Api 및 서비스를 추가 했습니다.
 
@@ -121,7 +121,7 @@ IOS 9에서 Apple은 다음과 같이 사용 정책을 정의 하 고 지정 된
 
 - **새 오디오 장치 확장 지점** -이 확장 지점을 사용 하 여 오디오 효과, 악기, 사운드 생성기 등을 다른 오디오 단위 호스트 앱 (예: GarageBand) 내에서 사용할 수 있도록 제공 합니다. 이 확장 지점을 사용 하 여 앱 스토어에서 _오디오 장치_ (오디오 플러그 인)를 판매할 수도 있습니다.
 - **새 인덱스 유지 관리 확장 지점** -이 확장 지점을 사용 하 여 앱을 다시 실행할 필요 없이 앱 데이터의 다시 인덱스를 지원할 수 있습니다.
-- **새 네트워크 확장 위치** (Apple의 특별 한 권한이 필요 함):
+- **새 네트워크 확장 점수** (Apple의 특별 한 권한이 필요 함):
   - **앱 프록시 공급자 확장** -이 확장 지점을 사용 하 여 사용자 지정 투명 클라이언트 쪽 네트워크 프록시를 구현 합니다.
   - **필터 Data Provider/필터 컨트롤 공급자 확장** -이러한 확장 요소를 사용 하 여 장치에서 동적 네트워크 콘텐츠 필터링을 구현 합니다.
   - **패킷 터널 공급자 확장** -이 확장 지점을 사용 하 여 사용자 지정 VPN 터널링 프로토콜 클라이언트 쪽을 구현 합니다.
@@ -137,15 +137,15 @@ IOS 9에서 Apple은 다음과 같이 Secure Enclave 및 기타 항목 보호 �
 
 - 지문 데이터베이스가 수정 될 때 키 집합 항목을 무효화 하는 새 Touch ID 제약 조건입니다.
 - Touch ID 또는 암호를 사용 하 여 Access Control 목록 항목을 만들 수 있도록 하는 새 제약 조건입니다.
-- `SecItem` 호출과 별도로 인증을 호출할 수 있도록 하는 새 인증 컨텍스트입니다.
+- `SecItem` 호출과 별개로 인증을 호출할 수 있도록 하는 새 인증 컨텍스트입니다.
 - 앱에서 제공 하는 키 집합 항목 암호화에 대해 엔트로피 (응용 프로그램 암호 옵션 사용)를 Access Control 합니다.
-- 특성을 `kSecAttrTokenIDSecureEnclave` 통해 secure enclave 내에서 키를 생성 하 고 사용할 수 있도록 지원 합니다.
+- 보안 enclave 내에서 키를 생성 하 고 사용할 수 있도록 지원 합니다 (`kSecAttrTokenIDSecureEnclave` 특성을 통해).
 
 자세한 내용은 [TOUCH ID 소개 설명서를](~/ios/platform/touchid.md) 참조 하세요.
 
 ## <a name="right-to-left-language-support"></a>오른쪽에서 왼쪽으로 쓰기 언어 지원
 
-IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음이 포함됩니다.
+IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 한 완전 한 지원을 제공 하 여 이전 보다 더 쉽게 대칭 이동 된 사용자 인터페이스를 제공 했습니다. 여기에는 다음과 같은 사항이 포함됩니다.
 
 - 표준 [Uikit](xref:UIKit) 컨트롤은 iOS 장치 로캘 및 언어 설정에 따라 오른쪽에서 왼쪽으로 자동 전환 됩니다.
 - [Uiview](xref:UIKit.UIView) 클래스는 오른쪽에서 왼쪽으로 대칭 이동 하는 경우 지정 된 뷰가 표시 되는 방법을 정의할 수 있는 특성을 제공 합니다.
@@ -159,7 +159,7 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 
 - AV 기반 프레임 워크
 - AVKit 프레임 워크
-- CloudKit Framework
+- CloudKit 프레임 워크
 - Foundation Framework
 - 핸드 오프 프레임 워크
 - HealthKit 프레임 워크
@@ -168,7 +168,7 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 - MapKit 프레임 워크
 - PassKit 프레임 워크
 - Safari 서비스 프레임 워크
-- UIKit Framework
+- UIKit 프레임 워크
 
 자세한 내용은 [추가 iOS 9 프레임 워크 변경](~/ios/platform/introduction-to-ios9/additional-framework-changes.md) 설명서를 참조 하세요.
 
@@ -177,8 +177,8 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 
 - 주소록 **& 주소록 ui** -이러한 Api는 연락처 및 연락처 UI 프레임 워크로 대체 되었습니다. 자세한 내용은 [연락처 및 연락처 UI](~/ios/platform/contacts.md) 설명서를 참조 하세요.
-- **CBCentralManager** - `RetrievePeripherals` 클래스`CBCentralManager` 의 `RetrieveConnectedPeripherals` 및 메서드는 iOS 9에서 제거 되었습니다. 이러한 메서드를 호출 하면 액세서리를 페어링 하거나 앱을 시작할 때 앱이 충돌 합니다.
-- **FetchAllChanges** - `CKFetchRecordChangesOperation` 클래스 `FetchAllChanges` 의는 사용 되었으며 iOS 9에서 제거 될 예정입니다.
+- **CBCentralManager** -iOS 9에서 `CBCentralManager` 클래스의 `RetrievePeripherals` 및 `RetrieveConnectedPeripherals` 메서드가 제거 되었습니다. 이러한 메서드를 호출 하면 액세서리를 페어링 하거나 앱을 시작할 때 앱이 충돌 합니다.
+- **FetchAllChanges** -`CKFetchRecordChangesOperation` 클래스의 `FetchAllChanges` 사용 되었으며 iOS 9에서 제거 될 예정입니다.
 - **Media Player** -Media Player Framework는 iOS 9에서 더 이상 사용 되지 않습니다. 대신 AVKit 또는 AV 기반 Api를 사용 합니다.
 
 특정 API 결함의 전체 목록은 Apple의 [iOS 9.0 API 차이](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) 설명서를 참조 하세요.
@@ -191,9 +191,9 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
 - [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
 - [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [PhotoProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
+- [사진 진행](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
 - [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
-- [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
+- [System.windows.forms.toolstrip.stackview](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
 또한 이러한 샘플의 iOS 부분을 확인 하세요 (부록 Mac OS X 버전).

@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 앱에서 t
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 8bb517eaa549567ae92695fbad300d055f42771f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 12fe9645ab832db1db37e36b0342664bbd2fe9f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769055"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030410"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Xamarin에서 tvOS 페이지 컨트롤 사용
 
 TvOS 앱에 일련의 페이지 또는 이미지를 표시 해야 하는 경우가 있습니다. 페이지 컨트롤은 사용자가 최대 페이지 수를 벗어난 페이지를 명확 하 게 표시 하도록 디자인 되었습니다. 페이지 컨트롤은 진한 타원 모양의 배경에 대해 일련의 점을 표시 합니다. 현재 페이지에는 채워진 점이 표시 되 고 다른 모든 페이지는 빈 점으로 표시 됩니다. 페이지 컨트롤이 너무 많아 배경 영역에 맞출 수 없는 경우 가장 바깥쪽 점이 잘립니다.
 
-[![](page-controls-images/page01.png "샘플 페이지 컨트롤")](page-controls-images/page01.png#lightbox)
+[![](page-controls-images/page01.png "Sample Page control")](page-controls-images/page01.png#lightbox)
 
 사용자에 게 피드백을 제공 하도록 디자인 된 비 대화형 요소의 페이지 컨트롤입니다. 현재 페이지 번호 (예: 제스처 또는 단추)를 변경 하는 다른 컨트롤을 추가 해야 합니다.
 
@@ -38,14 +38,14 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다.
 
-    [![](page-controls-images/page02.png "페이지 컨트롤")](page-controls-images/page02.png#lightbox)
+    [![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
 1. **Properties Pad**의 **위젯 탭** 에서 **현재 페이지** **및 페이지 수**와 같은 페이지 컨트롤의 몇 가지 속성을 조정할 수 있습니다.
 
-    [![](page-controls-images/page03.png "위젯 탭")](page-controls-images/page03.png#lightbox)
+    [![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들어:
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들면,
 
-    [![](page-controls-images/page04.png "컨트롤 이름")](page-controls-images/page04.png#lightbox)
+    [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -53,22 +53,22 @@ TvOS 앱에서 페이지 컨트롤을 사용 하는 가장 쉬운 방법은 iOS 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **페이지 컨트롤** 을 끌어 뷰에 놓습니다.
 
-    [![](page-controls-images/page02-vs.png "페이지 컨트롤")](page-controls-images/page02-vs.png#lightbox)
+    [![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
 1. **속성 탐색기**의 **위젯 탭** 에서 **현재 페이지** **및 페이지 수**와 같은 페이지 컨트롤의 여러 속성을 조정할 수 있습니다.
 
-    [![](page-controls-images/page03-vs.png "위젯 탭")](page-controls-images/page03-vs.png#lightbox)
+    [![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
 1. 다음으로, 컨트롤 또는 제스처를 뷰에 추가 하 여 페이지의 컬렉션에서 앞뒤로 이동 합니다.
-1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예:
+1. 마지막으로, 코드에서 C# 이에 응답할 수 있도록 컨트롤에 이름을 할당 합니다. 예를 들면,
 
-    [![](page-controls-images/page04-vs.png "컨트롤 이름")](page-controls-images/page04-vs.png#lightbox)
+    [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
 1. 변경 내용을 저장합니다.
 
 -----
 
 > [!IMPORTANT]
-> IOS 디자이너에서 uibutton 등의 UI 요소 `TouchUpInside` 에와 같은 이벤트를 할당할 수 있지만, Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 `Primary Action` 대 한 이벤트 처리기를 만들 때 항상 이벤트를 사용 해야 합니다.
+> IOS 디자이너에서 UIButton 등의 UI 요소에 `TouchUpInside`와 같은 이벤트를 할당할 수 있지만, Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 대 한 이벤트 처리기를 만들 때는 항상 `Primary Action` 이벤트를 사용 해야 합니다.
 
-뷰 컨트롤러 (예제 `ViewController.cs`) 파일을 편집 하 고 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 예를 들어:
+뷰 컨트롤러 (예: `ViewController.cs`) 파일을 편집 하 고 변경 되는 페이지를 처리 하는 코드를 추가 합니다. 예를 들면,
 
 ```csharp
 using System;

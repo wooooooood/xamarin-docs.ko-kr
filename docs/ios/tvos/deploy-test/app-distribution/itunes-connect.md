@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS에 대 한 추가 가이드를 제공 하 �
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ef3d25974f61bb1ac763831ab9a1f6b62d11abbe
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769675"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030760"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>iTunes Connect에서 tvOS 앱 구성
 
@@ -38,11 +38,11 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 
 위의 모든 단계가 완료 되 면 앱의 iTunes Connect 레코드를 열고 왼쪽 세로 막대를 사용 하 여 tvOS 지원을 추가 하도록 선택 합니다.
 
-[![](itunes-connect-images/connect01.png "왼쪽 세로 막대를 사용 하 여 tvOS 지원 추가")](itunes-connect-images/connect01.png#lightbox)
+[![](itunes-connect-images/connect01.png "Add tvOS support using the left hand sidebar")](itunes-connect-images/connect01.png#lightbox)
 
 그러면 지정 된 iTunes Connect 레코드에 대해 tvOS 특정 정보 화면을 사용할 수 있습니다.
 
-[![](itunes-connect-images/connect02.png "TvOS 특정 정보 화면")](itunes-connect-images/connect02.png#lightbox)
+[![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
@@ -50,7 +50,7 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 
 왼쪽 세로 막대의 tvOS 앱 섹션에서 **1.0 제출 준비** 를 선택 합니다.
 
-[![](itunes-connect-images/connect03.png "tvOS 버전 정보")](itunes-connect-images/connect03.png#lightbox)
+[![](itunes-connect-images/connect03.png "tvOS Version Information")](itunes-connect-images/connect03.png#lightbox)
 
 이 화면에서 다음 정보를 제공 합니다.
 
@@ -62,7 +62,7 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 
 필요한 정보를 입력 한 후 화면의 오른쪽 위에 있는 **저장** 단추를 클릭 하 여 변경 내용을 저장 합니다.
 
-[![](itunes-connect-images/connect04.png "tvOS 버전 정보를 제출할 준비가 되었습니다.")](itunes-connect-images/connect04.png#lightbox)
+[![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
@@ -70,7 +70,7 @@ Apple TV 앱 스토어에서 릴리스할 새 앱을 만들거나 기존 iOS 앱
 
 TvOS 앱을 검토를 위해 Apple TV 앱 스토어에 제출할 준비가 되 면 앱의 iTunes Connect 레코드로 돌아가 화면의 오른쪽 위에 있는 **검토를 위해 제출** 단추를 클릭 합니다.
 
-[![](itunes-connect-images/connect05.png "검토를 위해 제출")](itunes-connect-images/connect05.png#lightbox)
+[![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
 <a name="Summary" />
 

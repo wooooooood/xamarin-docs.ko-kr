@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 Touch ID, Apple의 생체
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: bc797d250b4b66ebfd06bad76c3f43759a65e7c3
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 112a2a038be9f749f37d2d3260d08f2e58b0c597
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292507"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031436"
 ---
 # <a name="touch-id-in-xamarinios"></a>Xamarin.ios의 Touch ID
 
@@ -29,7 +29,7 @@ Touch ID와 해당 기능을 완벽 하 게 이해 하려면 키 집합 서비�
 키 집합은 각 행을 키 _집합 항목_이라고 하는 특수 한 데이터베이스입니다. 각 항목은 키 집합 특성으로 설명 되며 암호화 된 값으로 구성 됩니다. 키 집합을 효율적으로 사용할 수 있도록 하기 위해 작은 항목 또는 _비밀_에 최적화 되어 있습니다.
 각 키 집합 항목은 사용자 암호 및 고유한 장치 암호에 의해 보호 됩니다. 사용자가 장치를 사용 하지 않는 경우에도 키 집합 항목을 보호 해야 합니다. 장치를 잠금 해제 한 경우에만 항목을 사용할 수 있도록 허용 하 여 iOS에서 구현 됩니다. 즉, 장치가 잠겨 있으면 사용할 수 없게 됩니다. 암호화 된 백업에 저장할 수도 있습니다. 키 집합의 주요 기능 중 하나는 액세스 제어를 적용 하는 것입니다. 응용 프로그램은 키 집합의 해당 부분에 액세스할 수 있으며 다른 모든 응용 프로그램은 차단 됩니다. 아래 다이어그램에서는 응용 프로그램이 키 집합을 조작 하는 방법을 보여 줍니다.
 
-[![](touchid-images/image1.png "이 다이어그램에서는 응용 프로그램이 키 집합을 조작 하는 방법을 보여 줍니다.")](touchid-images/image1.png#lightbox)
+[![](touchid-images/image1.png "This diagram illustrates how an application interacts with the keychain")](touchid-images/image1.png#lightbox)
 
 ### <a name="secure-enclave"></a>Secure Enclave
 
@@ -46,9 +46,9 @@ Touch ID와 해당 기능을 완벽 하 게 이해 하려면 키 집합 서비�
 
 Access Control 목록은 특정 작업을 수행 하도록 허용 하기 위해 수행 해야 하는 작업에 대 한 정보를 설명 하는 iOS 8의 새로운 키 집합 항목 특성입니다. 이는 경고 대화 상자를 표시 하거나 암호를 요청 하는 형식입니다. ACL을 사용 하면 키 집합 항목에 대 한 액세스 가능성 및 인증을 설정할 수 있습니다. 아래 다이어그램에서는이 새 특성이 키 집합 항목의 나머지 부분과 연결 되는 방법을 보여 줍니다.
 
-[![](touchid-images/image2.png "이 다이어그램에서는이 새 특성이 키 집합 항목의 나머지와 연결 되는 방법을 보여 줍니다.")](touchid-images/image2.png#lightbox)
+[![](touchid-images/image2.png "This diagram shows how this new attribute ties in with the rest of the keychain item")](touchid-images/image2.png#lightbox)
 
-IOS 8을 기준으로 이제 iPhone 5 초 이상에서 보안 enclave 적용 되 `SecAccessControl`는 새로운 사용자의 현재 상태 정책이 있습니다. 아래 표에서는 장치 구성이 정책 평가에 영향을 주는 방법만 확인할 수 있습니다.
+IOS 8을 기준으로, iPhone 5 초 이상의 보안 enclave 적용 되는 새로운 사용자 상태 정책 인 `SecAccessControl`이 있습니다. 아래 표에서는 장치 구성이 정책 평가에 영향을 주는 방법만 확인할 수 있습니다.
 
 |장치 구성|정책 평가|백업 메커니즘|
 |--- |--- |--- |
@@ -63,19 +63,19 @@ _로컬 인증_이라고 하는 iOS 8의 새 프레임 워크는 장치 내에�
 
 이전 섹션에서 설명한 대로 응용 프로그램은 로컬 인증을 사용 하 여 장치에 설정 된 보안 정책을 준수 하는 사용자를 인증할 수 있습니다.
 
-현재 API는 다음과 같은 두 가지 기능만 제공 합니다. 첫째, 새 키 집합 Access Control 목록 (Acl)을 사용 하 여 기존 키 집합 서비스를 지원 합니다. 사용자 지문을 성공적으로 인증 하면 키 집합 데이터의 잠금을 해제할 수 있습니다.
+현재이 API는 두 가지 기능만 제공 합니다. 처음에는 새 키 집합 Access Control 목록 (Acl)을 사용 하 여 기존 키 집합 서비스를 지원 합니다. 사용자 지문을 성공적으로 인증 하면 키 집합 데이터의 잠금을 해제할 수 있습니다.
 
-두 번째로 LocalAuthentication은 응용 프로그램을 로컬로 인증 하는 두 가지 방법을 제공 합니다. 개발자는를 `CanEvaluatePolicy` 사용 하 여 장치에서 Touch ID를 수락할 수 있는지 확인 한 다음 `EvaluatePolicy` 인증 작업을 시작할 수 있습니다.
+두 번째로 LocalAuthentication은 응용 프로그램을 로컬로 인증 하는 두 가지 방법을 제공 합니다. 개발자는 `CanEvaluatePolicy`를 사용 하 여 장치에서 Touch ID를 수락할 수 있는지 확인 한 다음 `EvaluatePolicy` 하 여 인증 작업을 시작 해야 합니다.
 
 두 기능 모두 로컬 인증을 제공 하지만 응용 프로그램이 나 사용자가 원격 서버에 인증 하는 메커니즘을 제공 하지 않습니다.
 로컬 인증은 인증을 위한 새로운 표준 사용자 인터페이스를 제공 합니다. Touch ID의 경우 아래와 같이 두 개의 단추가 있는 경고 보기입니다. 하나는 취소 하 고 다른 하나는 인증 방법 (암호)을 사용 하는 단추입니다. 또한 설정 해야 하는 사용자 지정 메시지도 있습니다. Touch ID 인증이 필요한 이유를 설명 하는 데이 방법을 사용 하는 것이 좋습니다.
 
-[![](touchid-images/image12.png "Touch ID 인증 경고")](touchid-images/image12.png#lightbox)
+[![](touchid-images/image12.png "The Touch ID authentication alert")](touchid-images/image12.png#lightbox)
 
 ### <a name="with-keychain-services"></a>키 집합 서비스 사용
 
 키 집합 항목의 암호를 해독 하는 방법에 대 한 자세한 내용은 보안 enclave을 사용 하 여 암호를 확인 하는 방법을 살펴보았습니다. IOS 8에서 로컬 인증을 사용 하 여 대체 메커니즘의 구현이 나 암호를 제공 하는 Access Control 목록 기능과 함께 Touch ID 확인을 요청할 수 있습니다.
-ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecAccessible.WhenUnlocked`을 사용 하 여 `SecAccessible.WhenPasscodeSetThisDeviceOnly` 장치의 상태를 확인 해야 합니다.
+ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 `SecAccessible.WhenPasscodeSetThisDeviceOnly` 또는 `SecAccessible.WhenUnlocked`를 사용 하 여 장치의 상태를 확인 해야 합니다.
 
 #### <a name="considerations-with-acl"></a>ACL에 대 한 고려 사항
 
@@ -92,7 +92,7 @@ ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecA
 
 이렇게 하기 위해 응용 프로그램은 로컬 인증 내에서 정책 평가를 호출 하 여 Secure Enclave 내에서 작업을 시작 합니다. 이를 활용 하 여 보안 Enclave을 직접 쿼리하거나 액세스 하지 않고도 앱에 대 한 인증을 제공할 수 있습니다.
 
-[![](touchid-images/image13a.png "키 집합 서비스 없이 로컬 인증 사용")](touchid-images/image13a.png#lightbox)
+[![](touchid-images/image13a.png "Using Local Authentication without Keychain Services")](touchid-images/image13a.png#lightbox)
 
 응용 프로그램에서 로컬 인증을 사용 하면 사용자 확인을 간편 하 게 구현할 수 있습니다. 예를 들어, 은행 응용 프로그램 같은 장치 소유자의 눈에만 기능을 잠금 해제 하거나 개별 사용자를 위한 도움이 될 자녀 보호를 사용할 수 있습니다. 프로그램별. 이미 존재 하는 인증을 확장 하는 방법으로 사용할 수도 있습니다. 즉, 사용자의 정보를 안전 하 게 보호 하는 것은 물론 옵션도 있습니다.
 
@@ -102,15 +102,15 @@ ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecA
 
 로컬 인증 API를 활용 하 여 키 집합 없이 Touch ID를 사용 하려면 몇 가지 기능을 사용할 수 있습니다. 이러한 내용은 아래에 자세히 설명 되어 있습니다.
 
-- `CanEvaluatePolicy`– 장치에서 Touch ID를 받아들일 수 있는지만 확인 합니다.
-- `EvaluatePolicy`– 인증 작업을 시작 하 고 UI를 표시 하며 `true` 또는 `false` 대답을 반환 합니다.
-- `DeviceOwnerAuthenticationWithBiometrics`– Touch ID 화면을 표시 하는 데 사용할 수 있는 정책입니다. 여기에는 암호 대체 메커니즘이 없다는 것에 주목 해야 합니다. 대신 사용자가 Touch ID 인증을 건너뛸 수 있도록 응용 프로그램에서이 대체 (fallback)를 구현 해야 합니다.
+- `CanEvaluatePolicy` – 장치에서 Touch ID를 받아들일 수 있는지만 확인 합니다.
+- `EvaluatePolicy` – 인증 작업을 시작 하 고 UI를 표시 하며 `true` 또는 `false` 대답을 반환 합니다.
+- `DeviceOwnerAuthenticationWithBiometrics` – Touch ID 화면을 표시 하는 데 사용할 수 있는 정책입니다. 여기에는 암호 대체 메커니즘이 없다는 것에 주목 해야 합니다. 대신 사용자가 Touch ID 인증을 건너뛸 수 있도록 응용 프로그램에서이 대체 (fallback)를 구현 해야 합니다.
 
 로컬 인증을 사용 하는 경우 다음과 같은 몇 가지 주의 사항이 있습니다.
 
 - 키 집합을 사용 하는 것 처럼 포그라운드에서 실행할 수 있습니다. 이를 백그라운드 스레드에서 호출 하면 오류가 발생 합니다.
 - 정책 평가가 실패할 수 있다는 점에 유의 하세요. 암호 단추를 대체 방법으로 구현 해야 합니다.
-- 인증이 필요한 이유를 `localizedReason` 설명 하기 위해를 제공 해야 합니다. 이렇게 하면 사용자와의 트러스트를 만들 수 있습니다.
+- 인증이 필요한 이유를 설명 하는 `localizedReason`를 제공 해야 합니다. 이렇게 하면 사용자와의 트러스트를 만들 수 있습니다.
 
 다음 섹션에서는 이러한 주의 사항을 고려 하 여 API를 구현 하는 방법을 살펴보겠습니다.
 
@@ -123,19 +123,19 @@ ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecA
 응용 프로그램에 일부 Touch ID 인증을 추가 하는 방법을 살펴보겠습니다. 이 연습에서는 인증 된 사용자가 목록에 작업을 추가할 수 있도록 해 주는 [Storyboard 테이블 – 로컬 인증](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable-localauthentication) 샘플과 같이 작동 하도록 로컬 인증을 추가 하 여 [스토리 보드 테이블](https://docs.microsoft.com/samples/xamarin/ios-samples/data/storyboardtable/) 샘플을 업데이트 하겠습니다.
 
 1. 샘플을 다운로드 하 고 Mac용 Visual Studio에서 실행 합니다.
-2. 을 두 번 `MainStoryboard.Storyboard` 클릭 하 여 iOS 디자이너에서 샘플을 엽니다. 이 샘플에서는 인증을 제어 하는 새 화면을 응용 프로그램에 추가 하려고 합니다. 이는 현재 `MasterViewController`의 앞에 있습니다.
+2. `MainStoryboard.Storyboard`를 두 번 클릭 하 여 iOS 디자이너에서 샘플을 엽니다. 이 샘플에서는 인증을 제어 하는 새 화면을 응용 프로그램에 추가 하려고 합니다. 이는 현재 `MasterViewController`앞에 있습니다.
 3. **도구 상자** 에서 **Design Surface**새 **뷰 컨트롤러** 를 끌어 옵니다. **탐색 컨트롤러**에서 **Ctrl + Drag** 를 수행 하 여이를 **루트 뷰 컨트롤러로** 설정 합니다.
 
-    [![](touchid-images/image4.png "루트 뷰 컨트롤러 설정")](touchid-images/image4.png#lightbox)
-4. 새 뷰 컨트롤러 `AuthenticationViewController`의 이름을로 표시 합니다.
-5. 그런 다음 단추를 끌어서에 놓습니다 `AuthenticationViewController`. 이 `AuthenticateButton`를 호출 하 고 텍스트 `Add a Chore`를 지정 합니다.
-6. `AuthenticateButton` 호출`AuthenticateMe`된에서 이벤트를 만듭니다.
-7. 아래쪽에 있는 검은색 표시줄 `AuthenticationViewController` 을 클릭 하 고 **Ctrl + 끌어서** 를 선택 하 고 **푸시** (또는 size 클래스를 `MasterViewController` 사용 하는 경우 **표시** )를 선택 하 여에서 수동 segue을 만듭니다.
+    [![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
+4. 새 뷰 컨트롤러의 이름을 `AuthenticationViewController`합니다.
+5. 그런 다음 단추를 끌어 `AuthenticationViewController`에 놓습니다. 이 `AuthenticateButton`를 호출 하 고 텍스트 `Add a Chore`제공 합니다.
+6. `AuthenticateButton`에서 `AuthenticateMe`라는 이벤트를 만듭니다.
+7. 아래쪽에 있는 검은색 표시줄을 클릭 하 고, 가로 막대에서 `MasterViewController`으로 **끌고** , **푸시** 를 선택 하거나 크기 클래스를 사용 하는 경우 **표시** 를 선택 하 여 `AuthenticationViewController`에서 수동 segue을 만듭니다.
 
-    [![](touchid-images/image5.png "막대에서 MasterViewController로 끌고 푸시 또는 표시를 선택 합니다.")](touchid-images/image6.png#lightbox)
-8. 새로 만든 segue를 클릭 하 고 아래 그림과 같이 식별자 `AuthenticationSegue`를 제공 합니다.
+    [![](touchid-images/image5.png "Drag from the bar to the MasterViewController and choosing push or show")](touchid-images/image6.png#lightbox)
+8. 새로 만든 segue를 클릭 하 고 아래 그림과 같이 `AuthenticationSegue`식별자를 제공 합니다.
 
-    [![](touchid-images/image7.png "Segue 식별자를 AuthenticationSegue로 설정 합니다.")](touchid-images/image7.png#lightbox)
+    [![](touchid-images/image7.png "Set the segue identifier to AuthenticationSegue")](touchid-images/image7.png#lightbox)
 9. 다음 코드를 `AuthenticationViewController`에 추가합니다.
 
     ```csharp
@@ -166,19 +166,19 @@ ACL을 사용 하려면 `SecAccessControl` 정책을 사용 하 고 또는 `SecA
 
 로컬 인증을 사용 하 여 Touch ID 인증을 구현 하는 데 필요한 모든 코드입니다. 아래 이미지의 강조 표시 된 줄은 로컬 인증의 사용을 보여 줍니다.
 
-[![](touchid-images/image8.png "강조 표시 된 줄은 로컬 인증의 사용을 보여 줍니다.")](touchid-images/image8.png#lightbox)
+[![](touchid-images/image8.png "The highlighted lines show the use of Local Authentication")](touchid-images/image8.png#lightbox)
 
-먼저를 사용 하 `CanEvaluatePolicy` 고 정책 `DeviceOwnerAuthenticationWithBiometrics`에 전달 하 여 장치에서 Touch ID 입력을 허용할 수 있는지 여부를 설정 해야 합니다. True 이면를 사용 하 `EvaluatePolicy`여 Touch ID UI를 표시할 수 있습니다. 전달 `EvaluatePolicy` 해야 하는 정보에는 정책 자체, 인증이 필요한 이유를 설명 하는 문자열 및 회신 처리기의 세 가지가 있습니다. 회신 처리기는 인증에 성공 하거나 실패 한 경우에 수행 해야 하는 작업을 응용 프로그램에 알려 줍니다. 회신 처리기에 대해 자세히 살펴보겠습니다.
+먼저 `CanEvaluatePolicy`를 사용 하 고 정책 `DeviceOwnerAuthenticationWithBiometrics`를 전달 하 여 장치에서 Touch ID 입력을 허용할 수 있는지 여부를 설정 해야 합니다. True 인 경우 `EvaluatePolicy`를 사용 하 여 터치 ID UI를 표시할 수 있습니다. `EvaluatePolicy`에 전달 해야 하는 세 가지 정보, 즉 정책 자체, 인증이 필요한 이유를 설명 하는 문자열 및 회신 처리기가 있습니다. 회신 처리기는 인증에 성공 하거나 실패 한 경우에 수행 해야 하는 작업을 응용 프로그램에 알려 줍니다. 회신 처리기에 대해 자세히 살펴보겠습니다.
 
-[![](touchid-images/image9.png "회신 처리기")](touchid-images/image9.png#lightbox)
+[![](touchid-images/image9.png "The reply handler")](touchid-images/image9.png#lightbox)
 
-`LAContextReplyHandler`회신 처리기는 success `bool` 매개 변수, 값, `NSError` 호출 `error`된를 사용 하는 형식으로 지정 됩니다. 성공적으로 완료 되 면 인증 하려는 모든 항목을 실제로 수행할 것입니다 .이 경우에는 새 chore를 추가할 수 있는 화면이 표시 됩니다. 로컬 인증의 주의 사항 중 하나는 포그라운드에서 실행 해야 하기 때문에 다음을 사용 `InvokeOnMainThread`해야 합니다.
+회신 처리기는 성공 매개 변수를 사용 하는 형식 `LAContextReplyHandler`, `bool` 값 및 `error`이라는 `NSError`로 지정 됩니다. 성공적으로 완료 되 면 인증 하려는 모든 항목을 실제로 수행할 것입니다 .이 경우에는 새 chore를 추가할 수 있는 화면이 표시 됩니다. 로컬 인증의 주의 사항 중 하나는 포그라운드에서 실행 해야 하므로 `InvokeOnMainThread`를 사용 해야 한다는 것입니다.
 
-[![](touchid-images/image10.png "로컬 인증에 InvokeOnMainThread 사용")](touchid-images/image10.png#lightbox)
+[![](touchid-images/image10.png "Use InvokeOnMainThread for Local Authentication")](touchid-images/image10.png#lightbox)
 
-마지막으로, 인증이 성공적으로 완료 되 면로 `MasterViewController`전환 하려고 합니다. `PerformSegue` 메서드를 사용 하 여이 작업을 수행할 수 있습니다.
+마지막으로, 인증이 성공적으로 완료 되 면 `MasterViewController`로 전환 하려고 합니다. `PerformSegue` 메서드를 사용 하 여이 작업을 수행할 수 있습니다.
 
-[![](touchid-images/image11.png "PerformSegue 메서드를 호출 하 여 MasterViewController로 전환 합니다.")](touchid-images/image11.png#lightbox)
+[![](touchid-images/image11.png "Call PerformSegue method to transition to the MasterViewController")](touchid-images/image11.png#lightbox)
 
 ## <a name="summary"></a>요약
 

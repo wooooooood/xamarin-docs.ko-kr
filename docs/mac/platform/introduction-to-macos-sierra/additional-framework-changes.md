@@ -4,15 +4,15 @@ description: 이 문서에서는 macOS Sierra에 도입 된 기존 프레임 워
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 1de3a0a67fb6abbd4423435b38d7712f583ab74d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3db7e456d4321aa7eba415813f8c374b030da4ca
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284446"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029860"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임워크 변경 내용
 
@@ -32,19 +32,19 @@ MacOS Sierra의 가속화 된 프레임 워크에는 다음과 같은 기능이 
 
 MacOS Sierra AppKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- 다음과 `NSCollectionView` 같은 몇 가지 향상 된 기능이 있습니다.
+- 다음과 같이 `NSCollectionView`에 대 한 몇 가지 향상 된 기능이 있습니다.
   - **축소 가능한 섹션** -사용자가 컬렉션 뷰 섹션을 단일 가로 행으로 축소할 수 있습니다.
   - **부동 헤더** -이제 IOS에서 [UICOLLECTIONVIEW](https://developer.apple.com/reference/uikit/uicollectionview) 와 동일한 API를 사용 하 여 헤더 및 바닥글을 선형 레이아웃으로 이동할 수 있습니다.
   - **스크롤 가능한 배경 보기** -이제 콘텐츠와 함께 스크롤하도록 컬렉션 뷰 배경을 설정할 수 있습니다.
 - 지연 된 뷰 레이아웃 패스가 최적화 되 고 확장 되었습니다.
-- 이제 끌어서 놓기 API에는 끌기 flocking 지원 하기 `NSFilePromiseProvider` 위한 `NSFilePromiseReceiver` 새로운 및 클래스가 포함 되어 있습니다.
+- 끌어서 놓기 API는 이제 끌기 flocking 지원 하기 위한 새로운 `NSFilePromiseProvider` 및 `NSFilePromiseReceiver` 클래스를 포함 합니다.
 - 기존 컨트롤에 몇 가지 편리한 생성자를 추가 했습니다.
   - `NSButton`에는 누름 단추, 확인란 및 라디오 단추를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-  - `NSTextField`줄 바꿈 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자를 포함 합니다.
+  - `NSTextField`에는 래핑 및 줄 바꿈하지 않는 레이블, 특성 사용 레이블 및 편집 가능한 텍스트 필드를 만들기 위한 새로운 생성자가 포함 됩니다.
   - `NSSegmentedControl`에는 레이블이나 이미지 그룹에서 분할 된 컨트롤을 만들기 위한 새로운 생성자가 포함 되어 있습니다.
   - `NSSlider`에는 가로 선형 슬라이더를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
-  - `NSImageView`지정 `NSImage`된에서 편집할 수 없는 이미지 뷰를 만들기 위한 새 생성자를 포함 합니다.
-- 동적으로 `NSGridView` 숨기 거 나 표시할 수 있는 가변 크기의 행과 열이 있는 그리드에 하위 뷰의 컬렉션을 자동으로 레이아웃 하기 위해 새가 추가 되었습니다.
+  - `NSImageView`에는 지정 된 `NSImage`에서 편집할 수 없는 이미지 뷰를 만들기 위한 새로운 생성자가 포함 되어 있습니다.
+- 동적으로 숨기 거 나 표시할 수 있는 가변 크기의 행과 열이 있는 표로 하위 뷰의 컬렉션을 자동 레이아웃 하도록 새 `NSGridView` 추가 되었습니다.
 
 <a name="AVFoundation-Framework-Enhancements" />
 
@@ -52,9 +52,9 @@ MacOS Sierra AppKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 
 MacOS Sierra에 대 한 AVFoundation 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- MacOS에서 앱은 더 이상 콘텐츠 형식에 따라 서로 다른 [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) 동작을 구현할 필요가 없습니다. `Rate` 속성을 설정 하기만 하면 상태일 없이 재생할 수 있는 콘텐츠가 충분 한 경우 avfoundation에서 결정 합니다.
-- 새 `AVPlayerLooper` 클래스를 사용 하면 재생 하는 동안 지정 된 미디어 부분을 보다 쉽게 반복할 수 있습니다.
-- 클래스 `AVAssetDownloadURLSession` 를 사용 하면 FairPlay 암호화 된 HLS 스트림을 다운로드 하 고 나중에 재생할 수 있습니다.
+- MacOS에서 앱은 더 이상 콘텐츠 형식에 따라 서로 다른 [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) 동작을 구현할 필요가 없습니다. `Rate` 속성을 설정 하기만 하면 AVFoundation에서 상태일 없이 재생할 수 있는 콘텐츠가 충분 한 경우를 결정 합니다.
+- 새 `AVPlayerLooper` 클래스를 사용 하면 재생 하는 동안 미디어의 지정 된 부분을 보다 쉽게 반복할 수 있습니다.
+- `AVAssetDownloadURLSession` 클래스를 사용 하면 FairPlay 암호화 된 HLS 스트림을 다운로드 하 고 나중에 재생할 수 있습니다.
 
 <a name="Core-Data-Framework-Enhancements" />
 
@@ -65,8 +65,8 @@ MacOS Sierra에 대 한 핵심 데이터 프레임 워크에 대 한 다음과 �
 - Root [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) 개체는 serialization 없이 동시에 오류 및 가져오기를 지원 합니다.
 - [NSPersistentStoreCoordinator](https://developer.apple.com/reference/coredata/nspersistentstorecoordinator) 클래스는 SQLite 데이터 저장소의 풀을 유지 관리 합니다.
 - 모드 (관리 개체 컨텍스트)를 사용 하는 새 쿼리 생성 기능을 사용 하 여 [NSManagedObjectContext](https://developer.apple.com/reference/coredata/nsmanagedobjectcontext) 개체를 WAL 저널 모드에 저장 하면 나중에 인출 하 고 오류를 발생 시킬 수 있습니다.
-- 상위 수준 `NSPersistenceContainer` 을 사용 하 여 `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) 및 기타 핵심 데이터 구성 리소스를 참조 합니다.
-- 더 쉽게 페치를 수행 하 고 하위 `NSManagedObject` 클래스를 만들 수 있도록 몇 가지 새로운 편의 방법이 추가 되었습니다.
+- 상위 수준 `NSPersistenceContainer`를 사용 하 여 `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.apple.com/reference/coredata/nsmanagedobjectmodel) 및 기타 핵심 데이터 구성 리소스를 참조 합니다.
+- Fetch를 더 쉽게 수행 하 고 하위 클래스를 만들 수 있도록 `NSManagedObject`에 몇 가지 새로운 편의 방법이 추가 되었습니다.
 
 자세한 내용은 Apple의 [핵심 데이터 프레임 워크 참조](https://developer.apple.com/reference/coredata)를 참조 하세요.
 
@@ -76,10 +76,10 @@ MacOS Sierra에 대 한 핵심 데이터 프레임 워크에 대 한 다음과 �
 
 MacOS Sierra에 대 한 핵심 이미지 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- [Cifilter](https://developer.apple.com/reference/coreimage/cifilter) 클래스의 메서드를사용하여사용자지정처리를필터작업에삽입할수있습니다.`ImageWithExtent` 핵심 이미지는 출력 또는 표시를 위해 이미지를 처리할 때 필터 사이에 지정 된 콜백을 호출 합니다.
+- [Cifilter](https://developer.apple.com/reference/coreimage/cifilter) 클래스의 `ImageWithExtent` 메서드를 사용 하 여 사용자 지정 처리를 필터 작업에 삽입할 수 있습니다. 핵심 이미지는 출력 또는 표시를 위해 이미지를 처리할 때 필터 사이에 지정 된 콜백을 호출 합니다.
 - 이제 앱은 처리 전후에 색 공간을 변환 하 여 핵심 이미지 컨텍스트의 작업 색 공간 외부에 있는 색 공간에서 이미지를 처리할 수 있습니다.
 - 이제 코어 이미지 커널이 특정 픽셀 출력 형식을 요청할 수 있습니다.
-- `CINinePartTitled` ,`CINinePartStretched`, 및와 같은`CIClamp`새 이미지 필터가 추가 되었습니다. `CIHueSaturationValueGradient` `CIEdgePreserveUpsampleFilter`
+- `CINinePartTitled`, `CINinePartStretched`, `CIHueSaturationValueGradient`, `CIEdgePreserveUpsampleFilter` 및 `CIClamp`와 같은 새 이미지 필터가 추가 되었습니다.
 
 <a name="Foundation-Framework-Enhancements" />
 
@@ -103,7 +103,7 @@ MacOS Sierra에 대 한 GameKit 프레임 워크에 대 한 다음과 같은 기
 
 - **Game Center 앱** 은 macos에서 더 이상 사용 되지 않고 제거 되었습니다. 앱에서 GameKit를 사용 하는 경우 순위표 등과 같은 GameKit 기능을 표시 하는 고유한 인터페이스를 제공 _해야 합니다_ . 
 - 새 iCloud 전용 계정 유형은 [Gkcloudplayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) 클래스에 의해 구현 되었습니다.
-- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`플레이어의 목록을 유지 관리 하 고, 앱이 참가자 날짜를 저장, 검색 또는 교환 하는 방법 및 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
+- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`은 플레이어의 목록을 유지 관리 하 고, 앱은 참가자 날짜가 플레이어 간에 저장, 검색 또는 교환 되는 방법과 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
 
 <a name="GamePlayKit-Framework-Enhancements" />
 
@@ -160,15 +160,15 @@ MacOS Sierra에 대 한 사진 프레임 워크가 다음과 같이 향상 되�
 MacOS Sierra에 대 한 SceneKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
 - 이제에는 더 간단한 자산 제작을 통해 보다 현실적인 결과를 제공 하는 새로운 .PBR (물리적 기반 렌더링) 시스템이 포함 되어 있습니다.
-- 새 [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) 음영 모델을 사용 하 여 세 가지 기본 속성 (`Diffuse` `Metalness` 및 `Roughness`)만 필요 하면서 광범위 한 사실적인 음영 효과를 제품 합니다.
-- .Pbr 음영은 환경 기반 조명에서 가장 잘 작동 하므로 `LightingEnvironment` 속성을 사용 하 여 이미지 기반 조명을 황갈색 전체 장면에 할당 합니다.
-- 속성을 `IESProfileURL` 사용 하 여 강도 (lumens) 및 색 온도 (켈빈)와 같은 실제 값의 조명 기반을 정의 하는 실제 조명 설비를 가져옵니다.
+- 새 [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) 음영 모델을 사용 하 여 세 가지 기본 속성 (`Diffuse`, `Metalness` 및 `Roughness`)만 필요로 하는 동안 광범위 한 사실적인 음영 효과를 제품 합니다.
+- .PBR 음영은 환경 기반 조명에서 가장 잘 작동 하므로 `LightingEnvironment` 속성을 사용 하 여 이미지 기반 조명을 황갈색 전체 장면에 할당 합니다.
+- `IESProfileURL` 속성을 사용 하 여 강도 (lumens) 및 색 온도 (켈빈)와 같은 실제 값의 조명 기반을 정의 하는 실제 조명 설비를 가져옵니다.
 - [Scncamera](https://developer.apple.com/reference/scenekit/scncamera) 클래스는 HDR 기능 및 효과를 사용 하 여 더 큰 현실감를 제공할 수 있습니다. 자동 효과를 만들거나 vignetting, 색 fringing 및 색을 사용 하 여 게임에 filmatic 효과를 추가 하려면 적응 노출을 사용 합니다.
 - .PBR 및 HDR 카메라 기능 모두 기존 렌더링 기술 보다 더 나은 결과를 제공 하므로 이제 SceneKit는 선형 색 공간에서 모든 색 계산을 수행 합니다 (넓은 색 장치 디스플레이에서 P3 색 영역 사용).
 - 색 프로필 정보를 읽어 SceneKit 색이 모든 색과 일치 합니다.
 - SceneKit는 모든 셰이더 형식에 대해 선형 RGB 색 공간의 색 구성 요소 값을 해석 합니다.
 - SceneKit는 질감 이미지에서 색 프로필 정보를 읽고 조정 하므로 모든 이미지에 대 한 자산 카탈로그를 사용 하 여이 정보가 제공 되는지 확인 합니다.
-- 응용 프로그램의 `SCNDisableLinearSpaceRendering` `SCNDisableWideGamut`에서및 키를 지정 하 여 선형 색 공간 렌더링과 와이드 색을 모두 사용 하지 않도록 설정할 수 있습니다. `Info.plist`
+- 앱 `Info.plist`에서 `SCNDisableLinearSpaceRendering` 및 `SCNDisableWideGamut` 키를 지정 하 여 선형 색 공간 렌더링과 와이드 색을 모두 사용 하지 않도록 설정할 수 있습니다.
 - 새 [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) 클래스를 사용 하 여 geometry를 지정 하기 위해 파일에서 로드 되거나 프로그래밍 방식으로 생성 되는 임의의 다각형 primates을 빌드합니다.
 
 <a name="Security-Framework-Enhancements" />
@@ -177,7 +177,7 @@ MacOS Sierra에 대 한 SceneKit 프레임 워크에 대 한 다음과 같은 �
 
 MacOS Sierra에 대 한 보안 프레임 워크의 향상 된 기능은 다음과 같습니다.
 
-- 인터페이스 `SecKey` 는 모든 플랫폼 (iOS, tvOS, watchOS 및 macos)에서 현대화 되 고 통합 되었습니다.
+- `SecKey` 인터페이스는 모든 플랫폼 (iOS, tvOS, watchOS 및 macOS)에서 현대화 되 고 통합 되었습니다.
 
 <a name="SpriteKit-Framework-Enhancements" />
 
@@ -185,9 +185,9 @@ MacOS Sierra에 대 한 보안 프레임 워크의 향상 된 기능은 다음�
 
 MacOS Sierra에 대 한 SpriteKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- 이제 `SKTileMapMode`Tilemaps는 `SKTileGroup` ,및`SKTileSet`클래스 를 사용 하 여 2d, 2.5 d 및 사이드 스크롤 게임에 대해 정사각형, 육각형 및 등각 타일 셰이프를 지원 합니다. `SKTileGroupRule`
+- 이제 Tilemaps는 `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` 및 `SKTileSet` 클래스를 사용 하 여 2D, 2.5 D 및 사이드 스크롤 게임을 위한 정사각형, 육각형 및 등각 타일 셰이프를 지원 합니다.
 - 새 `SKWarpGeometry` 클래스를 사용 하 여 [SKSpriteNode](https://developer.apple.com/reference/spritekit/skspritenode) 또는 [SKEffectNode](https://developer.apple.com/reference/spritekit/skeffectnode) 렌더링을 늘이거나 왜곡할 수 있습니다. 새 고 [기능](https://developer.apple.com/reference/spritekit/skaction) 클래스를 사용 하 여 비틀기 효과 간의 전환에 애니메이션 효과를 적용할 수 있습니다.
-- 사용자 지정 셰이더는 특성 값`SKAttribute`(`SKAttributeValue`)을 제공 하 여 셰이더를 사용 하는 각 노드에서 별도로 구성할 수 있는 특성 ()을 제공할 수 있습니다.
+- 사용자 지정 셰이더는 특성 값 (`SKAttributeValue`)을 제공 하 여 셰이더를 사용 하는 각 노드에서 별도로 구성할 수 있는 특성 (`SKAttribute`)을 제공할 수 있습니다.
 - 지 수 [뷰](https://developer.apple.com/reference/spritekit/skview) 클래스는 장면을 렌더링 하는 시기와 방법을 세밀 하 게 제어할 수 있는 여러 가지 새로운 메서드를 제공 합니다.
 
 <a name="New-Frameworks" />

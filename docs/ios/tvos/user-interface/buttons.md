@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin으로 빌드된 tvOS 앱에서 단추�
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 869e2e5c3b074c928f3c49ca87c1c1801154df91
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 559944e5ae168fd3b45c4d25a86705c5032b2e04
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769972"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030486"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Xamarin에서 tvOS 단추 사용
 
 `UIButton` 클래스의 인스턴스를 사용 하 여 tvOS 창에 포커스를 선택할 수 있는 단추를 만듭니다. 사용자가 단추를 선택 하면 대상 개체에 작업 메시지를 보내 tvOS 앱이 사용자의 입력에 응답할 수 있도록 합니다.
 
-[![](buttons-images/buttons01.png "예제 단추")](buttons-images/buttons01.png#lightbox)
+[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 온라인으로 작업 하 고 Siri 원격으로 이동 하는 방법에 대 한 자세한 내용은 [탐색 및 포커스](~/ios/tvos/app-fundamentals/navigation-focus.md) 및 [Siri 원격 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 사용 설명서를 참조 하세요.
 
@@ -28,7 +28,7 @@ ms.locfileid: "70769972"
 
 TvOS에서 단추는 앱 별 작업에 사용 되며 제목, 아이콘 또는 둘 다를 포함할 수 있습니다. 사용자가 [Siri 원격](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote)을 사용 하 여 앱의 사용자 인터페이스를 탐색할 때 지정 된 단추로 포커스를 이동 하 여 텍스트 및 배경색을 변경 합니다. 그림자는 3D 효과를 추가 하는 단추에도 적용 되므로 사용자 인터페이스의 나머지 부분 위에 표시 됩니다.
 
-[![](buttons-images/buttons01.png "예제 단추")](buttons-images/buttons01.png#lightbox)
+[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
 
 Apple에는 단추 작업에 대 한 다음과 같은 제안이 있습니다.
 
@@ -66,19 +66,19 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **라이브러리** 에서 **단추** 를 끌어서 뷰에 놓습니다. 
 
-    [![](buttons-images/storyboard01.png "단추")](buttons-images/storyboard01.png#lightbox)
+    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
 1. **속성 탐색기**에서 **제목** 및 **텍스트 색**과 같은 단추의 여러 속성을 조정할 수 있습니다. 
 
-    [![](buttons-images/storyboard02.png "단추 속성")](buttons-images/storyboard02.png#lightbox)
-1. 그런 다음 **이벤트 탭** 으로 전환 하 고 `ButtonPressed` **단추** 에서 **이벤트** 를 연결 하 고 호출 합니다. 
+    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+1. 그런 다음 **이벤트 탭** 으로 전환 하 고 **단추** 에서 **이벤트** 를 연결 하 고 `ButtonPressed`호출 합니다. 
 
-    [![](buttons-images/storyboard03.png "이벤트 탭")](buttons-images/storyboard03.png#lightbox)
-1. **위쪽** 및 **아래쪽** 화살표 키를 사용 `ViewController.cs` 하 여 코드에 새 작업을 저장할 수 있는 뷰로 자동 전환 됩니다. 
+    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+1. **위쪽** 및 **아래쪽** 화살표 키를 사용 하 여 코드에 새 작업을 추가할 수 있는 `ViewController.cs` 뷰로 자동 전환 됩니다. 
 
-    [![](buttons-images/storyboard04.png "코드에 새 동작 배치")](buttons-images/storyboard04.png#lightbox)
+    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
 1. **Enter** 키를 눌러 위치를 선택 합니다. 
 
-    [![](buttons-images/storyboard05.png "코드 편집기")](buttons-images/storyboard05.png#lightbox)
+    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. 모든 파일의 변경 내용을 저장 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
@@ -86,16 +86,16 @@ TvOS 앱에서 단추를 사용 하는 가장 쉬운 방법은 Xamarin Designer 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **라이브러리** 에서 **단추** 를 끌어서 뷰에 놓습니다. 
 
-    [![](buttons-images/storyboard01vs.png "단추")](buttons-images/storyboard01vs.png#lightbox)
+    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
 1. **속성 탐색기**에서 **제목** 및 **텍스트 색**과 같은 단추의 여러 속성을 조정할 수 있습니다. 
 
-    [![](buttons-images/storyboard02vs.png "속성 탐색기")](buttons-images/storyboard02vs.png#lightbox)
-1. 그런 다음 **이벤트 탭** 으로 전환 하 고 `ButtonPressed` **단추** 에서 **이벤트** 를 연결 하 고 호출 합니다. 
+    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+1. 그런 다음 **이벤트 탭** 으로 전환 하 고 **단추** 에서 **이벤트** 를 연결 하 고 `ButtonPressed`호출 합니다. 
 
-    [![](buttons-images/storyboard03vs.png "이벤트 탭")](buttons-images/storyboard03vs.png#lightbox)
+    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. 모든 파일의 변경 내용을 저장 합니다.
 
-보기 컨트롤러 (예제 `ViewController.cs`) 파일을 편집 하 고 다음 코드를 추가 하 여 선택한 단추를 처리 합니다.
+보기 컨트롤러 (예: `ViewController.cs`) 파일을 편집 하 고 다음 코드를 추가 하 여 선택한 단추를 처리 합니다.
 
 ```
 
@@ -119,10 +119,10 @@ namespace tvRemote
 
 -----
 
-단추의 `Enabled` 속성이이 `true` 고 다른 컨트롤 또는 뷰에서 포함 되지 않는 한, siri 원격을 사용 하 여 포커스 내 항목으로 만들 수 있습니다. 사용자가 단추를 선택 하 고 터치 표면을 `ButtonPressed` 클릭 하면 위에 정의 된 동작이 실행 됩니다.
+단추의 `Enabled` 속성이 `true` 되 고 다른 컨트롤이 나 뷰에서 다루지 않는 한, Siri 원격을 사용 하 여 포커스 내 항목으로 만들 수 있습니다. 사용자가 단추를 선택 하 고 터치 화면을 클릭 하면 위에 정의 된 `ButtonPressed` 작업이 실행 됩니다.
 
 > [!IMPORTANT]
-> IOS 디자이너 `UIButton` 에서 **이벤트 처리기**를 만들 때와 `TouchUpInside` 같은 작업을에 할당할 수 있지만 Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되지 않으므로 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 대 한 **작업** 을 만들 때는 항상 기본 **작업 형식을** 사용 해야 합니다.
+> IOS 디자이너에서 **이벤트 처리기**를 만들 때 `UIButton`에 `TouchUpInside`와 같은 작업을 할당 하는 것은 가능 하지만, Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. TvOS 사용자 인터페이스 요소에 대 한 **작업** 을 만들 때는 항상 기본 **작업 형식을** 사용 해야 합니다.
 
 스토리 보드 사용에 대 한 자세한 내용은 [Hello, tvOS 빠른 시작 가이드](~/ios/tvos/get-started/hello-tvos.md)를 참조 하세요.
 
@@ -130,7 +130,7 @@ namespace tvRemote
 
 ## <a name="buttons-and-code"></a>단추 및 코드
 
-필요에 따라 `UIButton` 코드에서 C# 를 만들어 tvOS 앱의 뷰에 추가할 수 있습니다. 예를 들어:
+필요에 따라 `UIButton`를 코드에 C# 만들고 tvOS 앱의 뷰에 추가할 수 있습니다. 예를 들면,
 
 ```csharp
 var button = new UIButton(UIButtonType.System);
@@ -143,7 +143,7 @@ button.AllEvents += (sender, e) => {
 View.AddSubview (button);
 ```
 
-코드에서 새 `UIButton` 를 만들 때를 다음 중 하나로 `UIButtonType` 지정 합니다.
+코드에서 새 `UIButton`를 만들 때는 해당 `UIButtonType`를 다음 중 하나로 지정 합니다.
 
 - **시스템** -tvOS에서 제공 하는 표준 형식의 단추 이며 가장 자주 사용 하는 형식입니다.
 - **DetailDisclosure** -자세한 정보를 숨기 거 나 표시 하는 데 사용 되는 "turn" 유형의 단추를 표시 합니다.
@@ -158,13 +158,13 @@ View.AddSubview (button);
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-그런 다음 단추의 제목을 설정 합니다. `UIButtons`는 상태를 포함 `UIKit` 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수 없으므로 지정 `UIControlState`된에 대해 변경 해야 합니다. 예를 들어:
+그런 다음 단추의 제목을 설정 합니다. `UIButtons`은 상태를 포함 하는 대부분의 `UIKit` 컨트롤과 다르며 단순히 제목만 변경할 수 없으며 지정 된 `UIControlState`에 대해 변경 해야 합니다. 예를 들면,
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-그런 다음 `AllEvents` 이벤트를 사용 하 여 사용자가 단추를 클릭 했을 때를 확인 합니다. 예제:
+그런 다음 `AllEvents` 이벤트를 사용 하 여 사용자가 단추를 클릭 했는지 확인 합니다. 예제:
 
 ```csharp
 button.AllEvents += (sender, e) => {
@@ -180,31 +180,31 @@ View.AddSubview (button);
 ```
 
 > [!IMPORTANT]
-> 에와 `TouchUpInside` `UIButton`같은 작업을 할당할 수는 있지만 Apple TV에 터치 스크린이 없거나 터치 이벤트가 지원 되기 때문에 호출 되지 않습니다. **AllEvents** 또는 **primaryactiontriggered**이벤트와 같은 이벤트를 항상 사용 해야 합니다.
+> `TouchUpInside`와 같은 작업을 `UIButton`에 할당할 수 있지만 Apple TV는 터치 스크린이 없거나 터치 이벤트를 지원 하기 때문에 호출 되지 않습니다. **AllEvents** 또는 **primaryactiontriggered**이벤트와 같은 이벤트를 항상 사용 해야 합니다.
 
 <a name="Styling-a-Button" />
 
 ## <a name="styling-a-button"></a>단추 스타일 지정
 
-tvOS는 제목을 제공 하는 `UIButton` 데 사용할 수 있는의 여러 속성을 제공 하 고 배경색 및 이미지와 같은 항목을 스타일로 지정 합니다.
+tvOS는 제목을 제공 하는 데 사용할 수 있는 `UIButton`의 여러 속성을 제공 하 고 배경색 및 이미지와 같은 항목을 스타일로 지정 합니다.
 
 <a name="Button-Titles" />
 
 ### <a name="button-titles"></a>단추 제목
 
-위에서 `UIButtons` 언급 한 것 처럼은 상태를 포함 `UIKit` 하는 대부분의 컨트롤과 다르며 단순히 제목만 변경할 수는 없습니다. 지정 `UIControlState`된에 대해 변경 해야 합니다. 예를 들어:
+위에서 언급 한 것 처럼 `UIButtons`은 상태를 포함 하는 대부분의 `UIKit` 컨트롤과 다르며 단순히 제목만 변경할 수 없으므로 지정 된 `UIControlState`에 대해 변경 해야 합니다. 예를 들면,
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
 ```
 
-`SetTitleColor` 메서드를 사용 하 여 단추에 대 한 제목 색을 설정할 수 있습니다. 예를 들어:
+`SetTitleColor` 메서드를 사용 하 여 단추에 대 한 제목 색을 설정할 수 있습니다. 예를 들면,
 
 ```csharp
 button.SetTitleColor (UIColor.White, UIControlState.Normal);
 ```
 
-를 사용 하 여 `SetTitleShadowColor`제목의 그림자를 조정할 수도 있습니다. 예를 들어:
+`SetTitleShadowColor`를 사용 하 여 제목의 그림자를 조정할 수 있습니다. 예를 들면,
 
 ```csharp
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
@@ -216,7 +216,7 @@ button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 button.ReverseTitleShadowWhenHighlighted = true;
 ```
 
-또한 특성 사용 텍스트를 단추의 제목으로 사용할 수 있습니다. 예를 들어:
+또한 특성 사용 텍스트를 단추의 제목으로 사용할 수 있습니다. 예를 들면,
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString (buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -228,15 +228,15 @@ myButton.SetAttributedTitle (highlightedAttributedTitle, UIControlState.Highligh
 
 ### <a name="button-images"></a>단추 이미지
 
-에 `UIButton` 는 연결 된 이미지가 있을 수 있으며 이미지를 배경으로 사용할 수 있습니다.
+`UIButton`는 이미지에 연결 된 이미지를 포함할 수 있으며 이미지를 배경으로 사용할 수 있습니다.
 
-지정 `UIControlState`된에 대 한 단추의 배경 이미지를 설정 하려면 다음 코드를 사용 합니다.
+지정 된 `UIControlState`단추에 대 한 배경 이미지를 설정 하려면 다음 코드를 사용 합니다.
 
 ```csharp
 button.SetBackgroundImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-단추가 강조 표시 된 `true` 경우 (기본값) 이미지를 더 밝게 그리려면 속성을로설정합니다.`AdjustsImageWhenHiglighted` 단추를 사용할 수 `true` 없을 때 이미지를 더 진하게 그리려면 속성을로설정합니다(기본값).`AdjustsImageWhenDisabled`
+단추가 강조 표시 된 경우 (기본값) 이미지를 더 밝게 그리려면 `AdjustsImageWhenHiglighted` 속성을 `true`로 설정 합니다. 단추를 사용할 수 없을 때 이미지를 더 진하게 그리려면 `AdjustsImageWhenDisabled` 속성을 `true`로 설정 합니다 (기본값).
 
 단추에 표시 되는 이미지를 설정 하려면 다음 코드를 사용 합니다.
 
@@ -244,7 +244,7 @@ button.SetBackgroundImage(UIImage.FromFile("my image.png"), UIControlState.Norma
 button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 ```
 
-제목과 단추의 이미지에 모두 적용 되는 색 농도를 설정 하려면 속성을사용합니다.`TintColor` `Custom` 형식의 단추에 대해이 속성은 아무런 영향을 주지 않으므로 직접 `TintColor` 동작을 구현 해야 합니다.
+`TintColor` 속성을 사용 하 여 제목과 단추의 이미지에 모두 적용 되는 색 농도를 설정 합니다. `Custom` 형식의 단추에는이 속성이 적용 되지 않습니다. `TintColor` 동작을 직접 구현 해야 합니다.
 
 <a name="Summary" />
 

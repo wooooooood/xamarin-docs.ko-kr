@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS에서 기계 학습을 가능 하 게 하�
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 96ea328901beede663c9ed3d8d42979544b041ea
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4319d9ab07682795e8890779a65a0e2289f4501c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292639"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032208"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Xamarin.ios의 CoreML 소개
 
@@ -37,9 +37,9 @@ CoreML는 iOS에 기계 학습을 제공 합니다. 앱은 학습 된 기계 학
 
 모델 파일의 속성에서 해당 **빌드 작업** 은 **Coremlmodel**로 설정 됩니다. 즉, 응용 프로그램을 빌드할 때이 파일은 **mlmodelc** 파일로 컴파일됩니다.
 
-### <a name="2-load-the-model"></a>2. 모델 로드
+### <a name="2-load-the-model"></a>2. 모델을 로드 합니다.
 
-정적 메서드를 `MLModel.Create` 사용 하 여 모델을 로드 합니다.
+`MLModel.Create` 정적 메서드를 사용 하 여 모델을 로드 합니다.
 
 ```csharp
 var assetPath = NSBundle.MainBundle.GetUrlForResource("NameOfModel", "mlmodelc");
@@ -48,9 +48,9 @@ model = MLModel.Create(assetPath, out NSError error1);
 
 ### <a name="3-set-the-parameters"></a>3. 매개 변수 설정
 
-모델 매개 변수는를 구현 `IMLFeatureProvider`하는 컨테이너 클래스를 사용 하 여 전달 및 출력 됩니다.
+모델 매개 변수는 `IMLFeatureProvider`을 구현 하는 컨테이너 클래스를 사용 하 여 전달 및 출력 됩니다.
 
-기능 공급자 클래스는 문자열 및 `MLFeatureValue`의 사전 처럼 동작 합니다. 여기서 각 기능 값은 단순 문자열 또는 숫자, 배열 또는 데이터 또는 이미지를 포함 하는 픽셀 버퍼 일 수 있습니다.
+기능 공급자 클래스는 문자열 및 `MLFeatureValue`s 사전 처럼 동작 합니다. 여기서 각 기능 값은 단순 문자열 또는 숫자, 배열 또는 데이터 또는 이미지를 포함 하는 픽셀 버퍼 일 수 있습니다.
 
 단일 값 기능 공급자에 대 한 코드는 다음과 같습니다.
 
@@ -67,11 +67,11 @@ public class MyInput : NSObject, IMLFeatureProvider
   }
 ```
 
-이 처럼 클래스를 사용 하 여 CoreML에서 인식 하는 방식으로 입력 매개 변수를 제공할 수 있습니다. 기능 이름 (예: `myParam` 코드 예제)은 모델에 필요한 내용과 일치 해야 합니다.
+이 처럼 클래스를 사용 하 여 CoreML에서 인식 하는 방식으로 입력 매개 변수를 제공할 수 있습니다. 기능 이름 (예: 코드 예제의 `myParam`)은 모델에 필요한 내용과 일치 해야 합니다.
 
 ### <a name="4-run-the-model"></a>4. 모델 실행
 
-모델을 사용 하려면 기능 공급자를 인스턴스화하고 매개 변수를 설정 해야 합니다. 그런 다음 `GetPrediction` 메서드를 호출 해야 합니다.
+모델을 사용 하려면 기능 공급자를 인스턴스화해야 하 고 매개 변수를 설정 해야 합니다. 그러면 `GetPrediction` 메서드가 호출 됩니다.
 
 ```csharp
 var input = new MyInput {MyParam = 13};
@@ -80,7 +80,7 @@ var outFeatures = model.GetPrediction(inputFeatures, out NSError error2);
 
 ### <a name="5-extract-the-results"></a>5. 결과 추출
 
-예측 결과도 `outFeatures` 의 `IMLFeatureProvider`인스턴스입니다. 다음 예제와 같이 각 출력 매개 변수의 `theResult`이름 ( `GetFeatureValue` 예:)을 사용 하 여 출력 값에 액세스할 수 있습니다.
+예측 결과 `outFeatures`도 `IMLFeatureProvider`의 인스턴스입니다. 출력 값에는 다음 예제와 같이 각 출력 매개 변수의 이름 (예: `theResult`)과 함께 `GetFeatureValue`를 사용 하 여 액세스할 수 있습니다.
 
 ```csharp
 var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 6227020800
@@ -98,7 +98,7 @@ CoreML를 비전 프레임 워크와 함께 사용 하 여 이미지에 대 한 
 
 ### <a name="1-create-a-vision-coreml-model"></a>1. 시각 CoreML 모델 만들기
 
-Coreml 모델 _MNISTClassifier_ 가 로드 된 후 모델을 비전 작업 `VNCoreMLModel` 에 사용할 수 있도록 하는에 래핑됩니다. 또한이 코드는 두 개의 시각 요청을 만듭니다. 첫 번째는 이미지에서 사각형을 찾은 다음 CoreML 모델을 사용 하 여 사각형을 처리 하는 것입니다.
+CoreML 모델 _MNISTClassifier_ 로드 된 후 모델을 비전 작업에 사용할 수 있도록 하는 `VNCoreMLModel`에 래핑됩니다. 또한이 코드는 두 개의 시각 요청을 만듭니다. 첫 번째는 이미지에서 사각형을 찾은 다음 CoreML 모델을 사용 하 여 사각형을 처리 하는 것입니다.
 
 ```csharp
 // Load the ML model
@@ -113,9 +113,9 @@ RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
 ClassificationRequest = new VNCoreMLRequest(model, HandleClassification);
 ```
 
-클래스는 아래 3 단계 및 4 `HandleRectangles` 단계 `HandleClassification` 에 표시 된 대로 비전 요청에 대 한 및 메서드를 여전히 구현 해야 합니다.
+이 클래스는 아래 3 단계 및 4 단계에 표시 된 대로 비전 요청에 대 한 `HandleRectangles` 및 `HandleClassification` 메서드를 계속 구현 해야 합니다.
 
-### <a name="2-start-the-vision-processing"></a>2. 비전 처리 시작
+### <a name="2-start-the-vision-processing"></a>2. 비전 처리를 시작 합니다.
 
 다음 코드는 요청 처리를 시작 합니다. **Coremlvision** 샘플에서이 코드는 사용자가 이미지를 선택한 후에 실행 됩니다.
 
@@ -127,13 +127,13 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-이 처리기는를 `ciImage` 1 단계에서 만든 `VNDetectRectanglesRequest` 비전 프레임 워크로 전달 합니다.
+이 처리기는 1 단계에서 만든 비전 프레임 워크 `VNDetectRectanglesRequest`에 `ciImage`를 전달 합니다.
 
-### <a name="3-handle-the-results-of-vision-processing"></a>3. 비전 처리의 결과를 처리 합니다.
+### <a name="3-handle-the-results-of-vision-processing"></a>3. 비전 처리 결과를 처리 합니다.
 
-사각형 검색이 완료 되 면 이미지를 잘라 첫 번째 `HandleRectangles` 사각형을 추출 하 고, 사각형 이미지를 회색조로 변환로 변환 하 고, 분류를 위해 coreml 모델에 전달 하는 메서드를 실행 합니다.
+사각형 검색이 완료 되 면 이미지를 잘라 첫 번째 사각형을 추출 하는 `HandleRectangles` 메서드를 실행 하 고, 사각형 이미지를 회색조로 변환 변환 하 고, 분류를 위한 CoreML 모델에 전달 합니다.
 
-이 `request` 메서드에 전달 된 매개 변수는 시각 요청의 세부 정보를 포함 하 고 `GetResults<VNRectangleObservation>()` 메서드를 사용 하 여 이미지에 있는 사각형의 목록을 반환 합니다. 첫 번째 사각형 `observations[0]` 은 추출 되어 coreml 모델에 전달 됩니다.
+이 메서드에 전달 된 `request` 매개 변수에는 비전 요청에 대 한 세부 정보가 포함 되 고 `GetResults<VNRectangleObservation>()` 메서드를 사용 하 여 이미지에 있는 사각형의 목록을 반환 합니다. 첫 번째 사각형 `observations[0]` 추출 되어 CoreML 모델에 전달 됩니다.
 
 ```csharp
 void HandleRectangles(VNRequest request, NSError error) {
@@ -149,11 +149,11 @@ void HandleRectangles(VNRequest request, NSError error) {
 }
 ```
 
-는 `ClassificationRequest` 다음 단계에서 정의 된 `HandleClassification` 메서드를 사용 하도록 1 단계에서 초기화 되었습니다.
+다음 단계에서 정의 된 `HandleClassification` 메서드를 사용 하도록 1 단계에서 `ClassificationRequest` 초기화 되었습니다.
 
 ### <a name="4-handle-the-coreml"></a>4. CoreML를 처리 합니다.
 
-이 `request` 메서드에 전달 된 매개 변수는 coreml 요청의 세부 정보를 포함 하 고 `GetResults<VNClassificationObservation>()` 메서드를 사용 하 여 신뢰도 별로 정렬 된 가능한 결과 목록을 반환 합니다 (최고 신뢰도 우선).
+이 메서드에 전달 된 `request` 매개 변수는 CoreML 요청의 세부 정보를 포함 하 고 `GetResults<VNClassificationObservation>()` 메서드를 사용 하 여 신뢰도에 따라 정렬 된 가능한 결과 목록을 반환 합니다 (최고 신뢰도 우선).
 
 ```csharp
 void HandleClassification(VNRequest request, NSError error){

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 대화 �
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 555ee8131c4d18988a7f208154d358a61a9773c5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a50445307156fc051edbab7abaea6b7bd21aa1fd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770591"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032833"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Xamarin.ios의 대화 상자
 
@@ -22,11 +22,11 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 Windows는 모덜리스 상태 (예: 한 번에 여러 문서를 열 수 있는 텍스트 편집기) 또는 모달 (예: 응용 프로그램을 계속 하기 전에 해제 해야 하는 내보내기 대화 상자)에서 사용할 수 있습니다.
 
-[![](dialog-images/dialog03.png "열기 대화 상자")](dialog-images/dialog03.png#lightbox)
+[![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 대화 상자 및 모달 창 작업의 기본 사항을 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [클래스/메서드를 대상으로 노출 C# -C](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. C# 클래스를 연결 하는 데 사용 되는 `Register` 및 `Export` 명령을 설명 합니다. 목표-C 개체 및 UI 요소입니다.
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 클래스/메서드 노출 C# ](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. 여기에서는 C# 클래스를 목표에 연결 하는 데 사용 되는`Register`및`Export`명령을 설명 합니다. 개체 및 UI 요소
 
 <a name="Introduction_to_Dialogs" />
 
@@ -42,27 +42,27 @@ Apple에 따르면 대화 상자를 표시 하는 세 가지 방법이 있습니
 
 ### <a name="modal-window"></a>모달 창
 
-모든 표준은 `NSWindow` 모달을 표시 하 여 사용자 지정 된 대화 상자로 사용할 수 있습니다.
+모든 표준 `NSWindow`를 모달 형식으로 표시 하 여 사용자 지정 된 대화 상자로 사용할 수 있습니다.
 
-[![](dialog-images/modal01.png "예제 모달 창")](dialog-images/modal01.png#lightbox)
+[![](dialog-images/modal01.png "An example modal window")](dialog-images/modal01.png#lightbox)
 
 ### <a name="document-modal-dialog-sheets"></a>문서 모달 대화 상자 시트
 
 _시트_ 는 지정 된 문서 창에 연결 되어 사용자가 대화 상자를 해제할 때까지 창과 상호 작용할 수 없도록 하는 모달 대화 상자입니다. 시트가 나타나는 창에 연결 되어 있고 한 번에 하나의 시트만 창에 대해 열 수 있습니다.
 
-[![](dialog-images/sheet08.png "예제 모달 시트")](dialog-images/sheet08.png#lightbox)
+[![](dialog-images/sheet08.png "An example modal sheet")](dialog-images/sheet08.png#lightbox)
 
 ### <a name="preferences-windows"></a>기본 설정 창
 
 기본 설정 창은 사용자가 자주 변경 하지 않는 응용 프로그램의 설정을 포함 하는 모덜리스 대화 상자입니다. 기본 설정 창에는 사용자가 여러 설정 그룹 간에 전환할 수 있는 도구 모음이 포함 되는 경우가 많습니다.
 
-[![](dialog-images/dialog02.png "예제 기본 설정 창")](dialog-images/dialog02.png#lightbox)
+[![](dialog-images/dialog02.png "An example preference window")](dialog-images/dialog02.png#lightbox)
 
 ### <a name="open-dialog"></a>대화 상자 열기
 
 열기 대화 상자를 사용 하면 응용 프로그램에서 항목을 찾고 열 수 있는 일관 된 방법을 사용자에 게 제공 합니다.
 
-[![](dialog-images/dialog03.png "열기 대화 상자")](dialog-images/dialog03.png#lightbox)
+[![](dialog-images/dialog03.png "A open dialog box")](dialog-images/dialog03.png#lightbox)
 
 ### <a name="print-and-page-setup-dialogs"></a>인쇄 및 페이지 설정 대화 상자
 
@@ -70,37 +70,37 @@ macOS는 사용자가 사용 하는 모든 응용 프로그램에서 일관 된 
 
 인쇄 대화 상자는 사용 가능한 부동 대화 상자로 모두 표시 될 수 있습니다.
 
-[![](dialog-images/print01.png "인쇄 대화 상자")](dialog-images/print01.png#lightbox)
+[![](dialog-images/print01.png "A print dialog box")](dialog-images/print01.png#lightbox)
 
 또는 다음과 같이 시트로 표시 될 수 있습니다.
 
-[![](dialog-images/print02.png "인쇄 시트")](dialog-images/print02.png#lightbox)
+[![](dialog-images/print02.png "A print sheet")](dialog-images/print02.png#lightbox)
 
 페이지 설정 대화 상자는 사용 가능한 부동 대화 상자로 표시 될 수 있습니다.
 
-[![](dialog-images/print03.png "페이지 설정 대화 상자")](dialog-images/print03.png#lightbox)
+[![](dialog-images/print03.png "A page setup dialog")](dialog-images/print03.png#lightbox)
 
 또는 다음과 같이 시트로 표시 될 수 있습니다.
 
-[![](dialog-images/print04.png "페이지 설정 시트")](dialog-images/print04.png#lightbox)
+[![](dialog-images/print04.png "A page setup sheet")](dialog-images/print04.png#lightbox)
 
 ### <a name="save-dialogs"></a>대화 상자 저장
 
-저장 대화 상자는 사용자에 게 응용 프로그램에 항목을 저장 하는 일관 된 방법을 제공 합니다. 저장 대화 상자에는 두 가지 상태가 있습니다. **최소** (축소 라고도 함):
+저장 대화 상자는 사용자에 게 응용 프로그램에 항목을 저장 하는 일관 된 방법을 제공 합니다. 저장 대화 상자에는 **최소** (축소 라고도 함)의 두 가지 상태가 있습니다.
 
-[![](dialog-images/save01.png "저장 대화 상자")](dialog-images/save01.png#lightbox)
+[![](dialog-images/save01.png "A save dialog")](dialog-images/save01.png#lightbox)
 
 **확장** 된 상태:
 
-[![](dialog-images/save02.png "확장 된 저장 대화 상자")](dialog-images/save02.png#lightbox)
+[![](dialog-images/save02.png "An expanded save dialog")](dialog-images/save02.png#lightbox)
 
 **최소** 저장 대화 상자는 시트로 표시 될 수도 있습니다.
 
-[![](dialog-images/save03.png "최소 저장 시트")](dialog-images/save03.png#lightbox)
+[![](dialog-images/save03.png "A minimal save sheet")](dialog-images/save03.png#lightbox)
 
 **확장** 된 저장 대화 상자에서 다음을 수행할 수 있습니다.
 
-[![](dialog-images/save04.png "확장 된 저장 시트")](dialog-images/save04.png#lightbox)
+[![](dialog-images/save04.png "An expanded save sheet")](dialog-images/save04.png#lightbox)
 
 자세한 내용은 Apple [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) 의 [대화 상자](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) 섹션을 참조 하세요.
 
@@ -112,26 +112,26 @@ macOS는 사용자가 사용 하는 모든 응용 프로그램에서 일관 된 
 
 새 창을 추가 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기**에서 Xcode의 Interface Builder에서 `Main.storyboard` 편집할 파일을 엽니다.
+1. **솔루션 탐색기**에서 편집할 `Main.storyboard` 파일을 Xcode의 Interface Builder에서 엽니다.
 2. 새 **뷰 컨트롤러** 를 Design Surface 끌어 옵니다.
 
-    [![](dialog-images/new01.png "라이브러리에서 보기 컨트롤러 선택")](dialog-images/new01.png#lightbox)
-3. **Identity Inspector**에서 **클래스 이름**으로 `CustomDialogController` 를 입력 합니다. 
+    [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
+3. **Identity Inspector**에서 **클래스 이름**에 `CustomDialogController`을 입력 합니다. 
 
-    [![](dialog-images/new02.png "클래스 이름 설정")](dialog-images/new02.png#lightbox)
+    [![](dialog-images/new02.png "Setting the class name")](dialog-images/new02.png#lightbox)
 4. Mac용 Visual Studio으로 다시 전환 하 여 Xcode와 동기화 하 고 `CustomDialogController.h` 파일을 만듭니다.
 5. Xcode로 돌아가서 인터페이스를 디자인 합니다. 
 
-    [![](dialog-images/new03.png "Xcode에서 UI 디자인")](dialog-images/new03.png#lightbox)
-6. 대화 상자를 대화 상자 창으로 여는 UI 요소에서 컨트롤을 끌어 새 뷰 컨트롤러에 대 한 응용 프로그램의 주 창에서 **모달 Segue** 을 만듭니다. 식별자`ModalSegue`를 할당 합니다. 
+    [![](dialog-images/new03.png "Designing the UI in Xcode")](dialog-images/new03.png#lightbox)
+6. 대화 상자를 대화 상자 창으로 여는 UI 요소에서 컨트롤을 끌어 새 뷰 컨트롤러에 대 한 응용 프로그램의 주 창에서 **모달 Segue** 을 만듭니다. `ModalSegue`**식별자** 를 할당 합니다. 
 
-    [![](dialog-images/new06.png "모달 segue")](dialog-images/new06.png#lightbox)
+    [![](dialog-images/new06.png "A modal segue")](dialog-images/new06.png#lightbox)
 7. **작업** 및 **콘센트**를 연결 합니다. 
 
-    [![](dialog-images/new04.png "작업 구성")](dialog-images/new04.png#lightbox)
+    [![](dialog-images/new04.png "Configuring an Action")](dialog-images/new04.png#lightbox)
 8. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
-파일이 다음과 `CustomDialogController.cs` 같이 표시 되도록 합니다.
+`CustomDialogController.cs` 파일을 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -248,7 +248,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 응용 프로그램을 실행 하 고 사용자 지정 대화 상자를 표시할 수 있습니다.
 
-[![](dialog-images/new05.png "예제 대화 상자")](dialog-images/new05.png#lightbox)
+[![](dialog-images/new05.png "An example dialog")](dialog-images/new05.png#lightbox)
 
 Xamarin.ios 응용 프로그램에서 windows를 사용 하는 방법에 대 한 자세한 내용은 [windows의 작업](~/mac/user-interface/window.md) 설명서를 참조 하세요.
 
@@ -260,22 +260,22 @@ _시트_ 는 지정 된 문서 창에 연결 되어 사용자가 대화 상자�
 
 Xamarin.ios에서 사용자 지정 시트를 만들려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기**에서 Xcode의 Interface Builder에서 `Main.storyboard` 편집할 파일을 엽니다.
+1. **솔루션 탐색기**에서 편집할 `Main.storyboard` 파일을 Xcode의 Interface Builder에서 엽니다.
 2. 새 **뷰 컨트롤러** 를 Design Surface 끌어 옵니다.
 
-    [![](dialog-images/new01.png "라이브러리에서 보기 컨트롤러 선택")](dialog-images/new01.png#lightbox)
+    [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
 3. 사용자 인터페이스 디자인:
 
-    [![](dialog-images/sheet01.png "UI 디자인")](dialog-images/sheet01.png#lightbox)
+    [![](dialog-images/sheet01.png "The UI design")](dialog-images/sheet01.png#lightbox)
 4. 주 창에서 새 뷰 컨트롤러로 **시트 Segue** 를 만듭니다. 
 
-    [![](dialog-images/sheet02.png "Sheet segue 유형 선택")](dialog-images/sheet02.png#lightbox)
-5. **Identity Inspector**에서 뷰 컨트롤러의 **클래스** `SheetViewController`이름을 다음과 같이 표시 합니다. 
+    [![](dialog-images/sheet02.png "Selecting the Sheet segue type")](dialog-images/sheet02.png#lightbox)
+5. **Identity Inspector**에서 뷰 컨트롤러의 **클래스** 이름을 `SheetViewController`합니다. 
 
-    [![](dialog-images/sheet03.png "클래스 이름 설정")](dialog-images/sheet03.png#lightbox)
+    [![](dialog-images/sheet03.png "Setting the class name")](dialog-images/sheet03.png#lightbox)
 6. 필요한 모든 **콘센트** 및 **작업**을 정의 합니다. 
 
-    [![](dialog-images/sheet04.png "필요한 콘센트 및 작업 정의")](dialog-images/sheet04.png#lightbox)
+    [![](dialog-images/sheet04.png "Defining the required Outlets and Actions")](dialog-images/sheet04.png#lightbox)
 7. 변경 내용을 저장 하 고 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
 그런 다음 `SheetViewController.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
@@ -406,13 +406,13 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 응용 프로그램을 실행 하 고 시트를 열면 창에 연결 됩니다.
 
-[![](dialog-images/sheet08.png "예제 시트")](dialog-images/sheet08.png#lightbox)
+[![](dialog-images/sheet08.png "An example sheet")](dialog-images/sheet08.png#lightbox)
 
 <a name="Creating_a_Preferences_Dialog" />
 
 ## <a name="creating-a-preferences-dialog"></a>기본 설정 대화 상자 만들기
 
-Interface Builder에서 기본 설정 보기를 시작 하기 전에 기본 설정 전환을 처리 하는 사용자 지정 segue 형식을 추가 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 호출 `ReplaceViewSeque`합니다. 클래스를 편집 하 고 다음과 같이 만듭니다.
+Interface Builder에서 기본 설정 보기를 시작 하기 전에 기본 설정 전환을 처리 하는 사용자 지정 segue 형식을 추가 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 `ReplaceViewSeque`호출 합니다. 클래스를 편집 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -477,39 +477,39 @@ namespace MacWindows
 
 새 창을 추가 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기**에서 Xcode의 Interface Builder에서 `Main.storyboard` 편집할 파일을 엽니다.
+1. **솔루션 탐색기**에서 편집할 `Main.storyboard` 파일을 Xcode의 Interface Builder에서 엽니다.
 2. 새 **창 컨트롤러** 를 Design Surface 끌어 옵니다.
 
-    [![](dialog-images/pref01.png "라이브러리에서 창 컨트롤러 선택")](dialog-images/pref01.png#lightbox)
+    [![](dialog-images/pref01.png "Select a Window Controller from the Library")](dialog-images/pref01.png#lightbox)
 3. **메뉴 모음** 디자이너 근처에 창을 정렬 합니다.
 
-    [![](dialog-images/pref02.png "새 창 추가")](dialog-images/pref02.png#lightbox)
+    [![](dialog-images/pref02.png "Adding the new Window")](dialog-images/pref02.png#lightbox)
 4. 기본 설정 보기에 탭이 있으므로 연결 된 뷰 컨트롤러의 복사본을 만듭니다.
 
-    [![](dialog-images/pref03.png "필요한 뷰 컨트롤러 추가")](dialog-images/pref03.png#lightbox)
+    [![](dialog-images/pref03.png "Adding the required View Controllers")](dialog-images/pref03.png#lightbox)
 5. **라이브러리**에서 새 **도구 모음 컨트롤러** 를 끌어 옵니다.
 
-    [![](dialog-images/pref04.png "라이브러리에서 도구 모음 컨트롤러 선택")](dialog-images/pref04.png#lightbox)
+    [![](dialog-images/pref04.png "Select a Toolbar Controller from the Library")](dialog-images/pref04.png#lightbox)
 6. Design Surface 창에 놓습니다.
 
-    [![](dialog-images/pref05.png "새 도구 모음 컨트롤러 추가")](dialog-images/pref05.png#lightbox)
+    [![](dialog-images/pref05.png "Adding a new Toolbar Controller")](dialog-images/pref05.png#lightbox)
 7. 도구 모음의 디자인 레이아웃:
 
-    [![](dialog-images/pref06.png "도구 모음 레이아웃")](dialog-images/pref06.png#lightbox)
+    [![](dialog-images/pref06.png "Layout the toolbar")](dialog-images/pref06.png#lightbox)
 8. 컨트롤을 클릭 하 고 각 **도구 모음 단추** 를 위에서 만든 뷰로 끕니다. **사용자 지정** segue 형식 선택:
 
-    [![](dialog-images/pref07.png "Segue 형식 설정")](dialog-images/pref07.png#lightbox)
-9. 새 Segue를 선택 하 고 **클래스** 를로 `ReplaceViewSegue`설정 합니다.
+    [![](dialog-images/pref07.png "Setting the segue type")](dialog-images/pref07.png#lightbox)
+9. 새 Segue를 선택 하 고 **클래스** 를 `ReplaceViewSegue`으로 설정 합니다.
 
-    [![](dialog-images/pref08.png "Segue 클래스 설정")](dialog-images/pref08.png#lightbox)
+    [![](dialog-images/pref08.png "Setting the segue class")](dialog-images/pref08.png#lightbox)
 10. Design Surface에서 메뉴 **모음 디자이너** 의 응용 프로그램 메뉴에서 **기본 설정 ...** 을 선택 하 고, 컨트롤을 클릭 한 다음 기본 설정 창으로 끌어서 **Show** segue을 만듭니다.
 
-    [![](dialog-images/pref09.png "Segue 형식 설정")](dialog-images/pref09.png#lightbox)
+    [![](dialog-images/pref09.png "Setting the segue type")](dialog-images/pref09.png#lightbox)
 11. 변경 내용을 저장 하 고 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
 **응용 프로그램 메뉴**에서 코드를 실행 하 고 **기본 설정 ...** 을 선택 하는 경우 창이 표시 됩니다.
 
-[![](dialog-images/pref10.png "예제 기본 설정 창")](dialog-images/pref10.png#lightbox)
+[![](dialog-images/pref10.png "An example preferences window")](dialog-images/pref10.png#lightbox)
 
 Windows 및 도구 모음 사용에 대 한 자세한 내용은 [windows](~/mac/user-interface/window.md) 및 [도구 모음](~/mac/user-interface/toolbar.md) 설명서를 참조 하세요.
 
@@ -519,7 +519,7 @@ Windows 및 도구 모음 사용에 대 한 자세한 내용은 [windows](~/mac/
 
 일반적인 macOS 앱에서 사용자가 앱의 사용자 기본 설정을 변경 하면 해당 변경 내용이 자동으로 저장 됩니다. Xamarin.ios 앱에서이를 처리 하는 가장 쉬운 방법은 모든 사용자의 기본 설정을 관리 하 고 시스템 전체에서 공유 하는 단일 클래스를 만드는 것입니다.
 
-먼저 새 `AppPreferences` 클래스를 프로젝트에 추가 하 고에서 `NSObject`상속 합니다. 기본 설정은 기본 설정 양식을 만들고 유지 관리 하는 프로세스를 수행 하는 [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 을 사용 하도록 디자인 됩니다. 기본 설정에 적은 양의 단순 데이터 형식이 구성 되므로 기본 제공 `NSUserDefaults` 를 사용 하 여 값을 저장 하 고 검색 합니다.
+먼저 새 `AppPreferences` 클래스를 프로젝트에 추가 하 고 `NSObject`에서 상속 합니다. 기본 설정은 기본 설정 양식을 만들고 유지 관리 하는 프로세스를 수행 하는 [데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 을 사용 하도록 디자인 됩니다. 기본 설정에 적은 양의 단순 데이터 형식이 구성 되므로 기본 제공 `NSUserDefaults`를 사용 하 여 값을 저장 하 고 검색 합니다.
 
 `AppPreferences.cs` 파일을 편집 하 여 다음과 같이 만듭니다.
 
@@ -682,9 +682,9 @@ namespace SourceWriter
 }
 ```
 
-이 클래스에는 `SaveInt` `SaveColor` `LoadColor` `LoadInt` 더`NSUserDefaults` 쉽게 작업할 수 있도록,,, 등의 몇 가지 도우미 루틴이 포함 되어 있습니다. `NSColorFromHexString` `NSColorToHexString` `#RRGGBBAA` `AA` 또한에는를 처리 `NSColors`하는 기본 제공 방법이 없으므로 및 메서드를 사용 하 여 색을 웹 기반 16 진수 문자열 (여기서는 알파 투명도)로 변환 하 여 `NSUserDefaults` 쉽게 저장 하 고 검색 합니다.
+이 클래스에는 `NSUserDefaults`을 보다 쉽게 사용할 수 있도록 `SaveInt`, `LoadInt`, `SaveColor`, `LoadColor`등의 몇 가지 도우미 루틴이 포함 되어 있습니다. 또한 `NSUserDefaults`에는 `NSColors`를 처리 하는 기본 제공 방법이 없으므로 `NSColorToHexString` 및 `NSColorFromHexString` 메서드를 사용 하 여 쉽게 저장 하 고 검색할 수 있는 웹 기반 16 진수 문자열 (`#RRGGBBAA`이 알파 투명도)로 색을 변환 합니다.
 
-파일에서 앱 전체에 사용 되는 **apppreferences 설정** 개체의 인스턴스를 만듭니다. `AppDelegate.cs`
+`AppDelegate.cs` 파일에서 앱 전체에 사용 되는 **Apppreferences 설정** 개체의 인스턴스를 만듭니다.
 
 ```csharp
 using AppKit;
@@ -718,7 +718,7 @@ namespace SourceWriter
 
 그런 다음 기본 설정 창 및 위에서 만든 보기의 UI 요소에 기본 설정 클래스를 연결 합니다. Interface Builder에서 기본 설정 보기 컨트롤러를 선택 하 고 **Id 검사자**로 전환 하 여 컨트롤러에 대 한 사용자 지정 클래스를 만듭니다. 
 
-[![](dialog-images/prefs12.png "Identity Inspector")](dialog-images/prefs12.png#lightbox)
+[![](dialog-images/prefs12.png "The Identity Inspector")](dialog-images/prefs12.png#lightbox)
 
 Mac용 Visual Studio으로 다시 전환 하 여 변경 내용을 동기화 하 고 새로 만든 클래스를 편집용으로 엽니다. 클래스가 다음과 같이 표시 되도록 합니다.
 
@@ -753,11 +753,11 @@ namespace SourceWriter
 }
 ```
 
-이 클래스는 다음 두 가지 작업을 수행 합니다. 먼저 AppDelegate에 더 쉽게 액세스할 `App` 수 있도록 도와주는 도우미 속성이 있습니다. 두 번째로 속성 `Preferences` 은이 뷰에 있는 UI 컨트롤을 사용 하 여 데이터 바인딩에 대 한 전역 **apppreferences 설정** 클래스를 노출 합니다.
+이 클래스는 다음 두 가지 작업을 수행 합니다. 먼저 **AppDelegate** 에 액세스할 수 있는 도우미 `App` 속성이 있습니다. 두 번째로, `Preferences` 속성은이 뷰에 있는 UI 컨트롤을 사용 하 여 데이터 바인딩에 대 한 전역 **Apppreferences 설정** 클래스를 노출 합니다.
 
 그런 다음 Interface Builder 스토리 보드 파일을 두 번 클릭 하 여 다시 엽니다 (위에서 변경한 내용 참조). 기본 설정 인터페이스를 빌드하는 데 필요한 모든 UI 컨트롤을 뷰로 끌어 옵니다. 각 컨트롤에 대해 **바인딩 검사자** 로 전환 하 고 **apppreference 설정** 클래스의 개별 속성에 바인딩합니다.
 
-[![](dialog-images/prefs13.png "바인딩 검사기")](dialog-images/prefs13.png#lightbox)
+[![](dialog-images/prefs13.png "The Binding Inspector")](dialog-images/prefs13.png#lightbox)
 
 필요한 모든 패널 (컨트롤러 보기) 및 기본 설정 속성에 대해 위의 단계를 반복 합니다.
 
@@ -805,7 +805,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-다음으로 `AppDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 하 여 열려 있는 모든 창에 기본 설정 변경 내용을 적용 합니다.
+그런 다음 `AppDelegate.cs` 파일을 편집 하 고 다음 메서드를 추가 하 여 열려 있는 모든 창에 기본 설정 변경 내용을 적용 합니다.
 
 ```csharp
 public void UpdateWindowPreferences() {
@@ -822,7 +822,7 @@ public void UpdateWindowPreferences() {
 }
 ```
 
-다음으로 프로젝트에 `PreferenceWindowDelegate` 클래스를 추가 하 고 다음과 같이 만듭니다.
+다음으로 `PreferenceWindowDelegate` 클래스를 프로젝트에 추가 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -902,7 +902,7 @@ namespace SourceWriter
 
 이러한 모든 변경 내용을 적용 하 여 사용자가 앱의 기본 설정을 편집 하 고 기본 설정 창을 닫으면 변경 내용이 열려 있는 모든 창에 적용 됩니다.
 
-[![](dialog-images/prefs14.png "예제 기본 설정 창")](dialog-images/prefs14.png#lightbox)
+[![](dialog-images/prefs14.png "An example preferences window")](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog" />
 
@@ -939,21 +939,21 @@ if (dlg.RunModal () == 1) {
 
 위의 코드에서 파일의 내용을 표시 하는 새 문서 창을 열고 있습니다. 응용 프로그램에 필요한 기능으로이 코드를 바꾸어야 합니다.
 
-로 작업할 때 사용할 수 있는 속성은 `NSOpenPanel`다음과 같습니다.
+`NSOpenPanel`작업할 때 사용할 수 있는 속성은 다음과 같습니다.
 
-- **CanChooseFiles** - `true` 사용자가 파일을 선택할 수 있습니다.
-- **CanChooseDirectories** -사용자 `true` 가 디렉터리를 선택할 수 있는 경우
-- **AllowsMultipleSelection** - `true` 사용자가 한 번에 둘 이상의 파일을 선택할 수 있습니다.
-- **Resolvealiases** -및 `true` 별칭을 선택 하는 경우 원본 파일의 경로를 확인 합니다.
-- **AllowedFileTypes** -사용자가 확장 또는 _UTI_으로 선택할 수 있는 파일 형식의 문자열 배열입니다. 기본값은입니다. `null`이 경우 모든 파일을 열 수 있습니다.
+- **CanChooseFiles** -`true` 사용자가 파일을 선택할 수 있습니다.
+- **CanChooseDirectories** -`true` 사용자가 디렉터리를 선택할 수 있습니다.
+- **AllowsMultipleSelection** -`true` 사용자가 한 번에 둘 이상의 파일을 선택할 수 있습니다.
+- **Resolvealiases** -및 별칭을 선택 `true` 여 원본 파일의 경로를 확인 합니다.
+- **AllowedFileTypes** -사용자가 확장 또는 _UTI_으로 선택할 수 있는 파일 형식의 문자열 배열입니다. 기본값은 `null`입니다 .이 값은 모든 파일을 열 수 있도록 합니다.
 
-메서드 `RunModal ()` 는 열기 대화 상자를 표시 하 고 사용자가 속성에 지정 된 대로 파일 또는 디렉터리를 선택 하 고 사용자 `1` 가 **열기** 단추를 클릭 하면를 반환 합니다.
+`RunModal ()` 메서드는 열기 대화 상자를 표시 하 고 사용자가 속성에 지정 된 대로 파일 또는 디렉터리를 선택 하 여 사용자가 **열기** 단추를 클릭 하면 `1`를 반환할 수 있도록 합니다.
 
-열기 대화 상자에서는 사용자가 선택한 파일이 나 디렉터리를 `URL` 속성의 url 배열로 반환 합니다.
+열기 대화 상자는 사용자가 선택한 파일 또는 디렉터리를 `URL` 속성의 Url 배열로 반환 합니다.
 
 프로그램을 실행 하 고 **파일** 메뉴에서 **열기 ...** 항목을 선택 하면 다음이 표시 됩니다. 
 
-[![](dialog-images/dialog03.png "열기 대화 상자")](dialog-images/dialog03.png#lightbox)
+[![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 
 <a name="The_Print_and_Page_Setup_Dialogs" />
 
@@ -988,13 +988,13 @@ void ShowDocument (NSObject sender) {
 
 ```
 
-`ShowPrintAsSheet` 속성을로 `false`설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 대화 상자를 표시 하면 다음과 같은 메시지가 표시 됩니다.
+`ShowPrintAsSheet` 속성을 `false`로 설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 대화 상자를 표시 하면 다음과 같은 메시지가 표시 됩니다.
 
-[![](dialog-images/print01.png "인쇄 대화 상자")](dialog-images/print01.png#lightbox)
+[![](dialog-images/print01.png "A print dialog box")](dialog-images/print01.png#lightbox)
 
-`ShowPrintAsSheet` 속성을로 `true`설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 대화 상자를 표시 하면 다음과 같은 메시지가 표시 됩니다.
+`ShowPrintAsSheet` 속성을 `true`로 설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 대화 상자를 표시 하면 다음과 같은 메시지가 표시 됩니다.
 
-[![](dialog-images/print02.png "인쇄 시트")](dialog-images/print02.png#lightbox)
+[![](dialog-images/print02.png "A print sheet")](dialog-images/print02.png#lightbox)
 
 다음 코드에서는 페이지 레이아웃 대화 상자를 표시 합니다.
 
@@ -1019,15 +1019,15 @@ void ShowLayout (NSObject sender) {
 }
 ```
 
-`ShowPrintAsSheet` 속성을로 `false`설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 레이아웃 대화 상자를 표시 하면 다음과 같은 메시지가 표시 됩니다.
+`ShowPrintAsSheet` 속성을 `false`로 설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 레이아웃 대화 상자를 표시 하면 다음이 표시 됩니다.
 
-[![](dialog-images/print03.png "페이지 설정 대화 상자")](dialog-images/print03.png#lightbox)
+[![](dialog-images/print03.png "A page setup dialog")](dialog-images/print03.png#lightbox)
 
-`ShowPrintAsSheet` 속성을로 `true`설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 레이아웃 대화 상자를 표시 하면 다음과 같은 메시지가 표시 됩니다.
+`ShowPrintAsSheet` 속성을 `true`로 설정 하는 경우 응용 프로그램을 실행 하 고 인쇄 레이아웃 대화 상자를 표시 하면 다음이 표시 됩니다.
 
-[![](dialog-images/print04.png "페이지 설정 시트")](dialog-images/print04.png#lightbox)
+[![](dialog-images/print04.png "A page setup sheet")](dialog-images/print04.png#lightbox)
 
-인쇄 및 페이지 설정 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092), [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) 및 [인쇄 설명서 소개](http://sdg.mesonet.org/people/brad/XCode3/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset/Contents/Resources/Documents/#documentation/Cocoa/Conceptual/Printing/Printing.html#//apple_ref/doc/uid/10000083-SW1) 를 참조 하세요.
+인쇄 및 페이지 설정 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092) and [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) 설명서를 참조 하세요.
 
 <a name="The_Save_Dialog" />
 
@@ -1071,23 +1071,23 @@ void ShowSaveAs (NSObject sender)
 }
 ```
 
-`AllowedFileTypes` 속성은 파일을 저장 하기 위해 사용자가 선택할 수 있는 파일 형식의 문자열 배열입니다. 파일 형식은 확장 또는 _UTI_지정할 수 있습니다. 기본값은입니다. `null`이 경우 모든 파일 형식을 사용할 수 있습니다.
+`AllowedFileTypes` 속성은 파일을 저장 하기 위해 사용자가 선택할 수 있는 파일 형식의 문자열 배열입니다. 파일 형식은 확장 또는 _UTI_지정할 수 있습니다. 기본값은 `null`이며 모든 파일 형식을 사용할 수 있습니다.
 
 `ShowSaveAsSheet` 속성을 `false`로 설정 하는 경우 응용 프로그램을 실행 하 고 **파일** 메뉴에서 다른 **이름으로 저장** ...을 선택 하면 다음이 표시 됩니다.
 
-[![](dialog-images/save01.png "저장 대화 상자")](dialog-images/save01.png#lightbox)
+[![](dialog-images/save01.png "A save dialog box")](dialog-images/save01.png#lightbox)
 
 사용자는 대화 상자를 확장할 수 있습니다.
 
-[![](dialog-images/save02.png "확장 된 저장 대화 상자")](dialog-images/save02.png#lightbox)
+[![](dialog-images/save02.png "An expanded save dialog box")](dialog-images/save02.png#lightbox)
 
 `ShowSaveAsSheet` 속성을 `true`로 설정 하는 경우 응용 프로그램을 실행 하 고 **파일** 메뉴에서 다른 **이름으로 저장** ...을 선택 하면 다음이 표시 됩니다.
 
-[![](dialog-images/save03.png "저장 시트")](dialog-images/save03.png#lightbox)
+[![](dialog-images/save03.png "A save sheet")](dialog-images/save03.png#lightbox)
 
 사용자는 대화 상자를 확장할 수 있습니다.
 
-[![](dialog-images/save04.png "확장 된 저장 시트")](dialog-images/save04.png#lightbox)
+[![](dialog-images/save04.png "An expanded save sheet")](dialog-images/save04.png#lightbox)
 
 저장 대화 상자를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [Nssavepanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) 설명서를 참조 하세요.
 

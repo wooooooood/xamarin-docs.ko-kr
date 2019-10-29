@@ -4,15 +4,15 @@ description: 이 문서에서는 tvOS 11의 Xamarin 개발자가 사용할 수 �
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
-ms.openlocfilehash: 23bc8ac638cc9e1165371216473b5c077ad21675
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8069e28dabb804be862334dab5c75b888e23ef74
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283386"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030575"
 ---
 # <a name="introduction-to-tvos-11"></a>tvOS 11 소개
 
@@ -33,7 +33,7 @@ TvOS 앱에서 새로운 tvOS 11 기능에 액세스 합니다.
 - 높은 효율성 이미지 형식 (히 인 경우) 지원
 - 앱 스토어에서 앱에서 바로 구매 기능 승격
 - 최상위 선반 확장에 대 한 밝은 이미지 및 어두운 이미지
-- AirPlay 2
+- 락 재생 2
 - 금속 2
 
 TvOS 11에 도입 된 Apple 변경 내용에 대 한 전체 목록은 [tvOS의 새로운 기능](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html) 문서를 참조 하세요.

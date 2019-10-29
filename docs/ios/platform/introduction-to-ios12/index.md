@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin의 미리 보기 릴리스가 바인딩
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
-ms.openlocfilehash: b3f3db32e87d83ea4e076d439df3342e5ca2ed50
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 39d954626bc9e789446e7f1deac67e2e0fca51c8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284633"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031998"
 ---
 # <a name="introduction-to-ios-12"></a>iOS 12 소개
 
@@ -56,7 +56,7 @@ iOS 12를 사용 하면 사용자와 개발자가 암호를 사용 하 여 쉽�
 
 - 암호 자동 채우기 및 자동 강력한 암호를 통해 응용 프로그램에 등록 하 고 로그인 할 때 iOS 응용 프로그램에서 강력한 암호를 자동으로 생성, 저장 및 사용할 수 있습니다.
 - 보안 코드 자동 채우기를 사용 하면 수동 잘라내기와 붙여넣기 또는 기억할 하지 않고도 SMS 기반 인증 코드를 사용할 수 있습니다.
-- 클래스 `ASWebAuthenticationSession` 는 페더레이션된 인증 서비스로 작업 하는 프로세스를 간소화 합니다.
+- `ASWebAuthenticationSession` 클래스는 페더레이션된 인증 서비스로 작업 하는 프로세스를 간소화 합니다.
 - 자동 채우기 자격 증명 공급자 확장을 사용 하 여 타사 암호 응용 프로그램에서 로그인 필드에 사용자 이름과 암호를 제공할 수 있습니다.
 
 ## <a name="healthkit-updates"></a>HealthKit 업데이트
@@ -69,7 +69,7 @@ IOS 12에서 iMessage apps는 앱이 일반 iMessage 앱 또는 사진 또는 �
 
 ## <a name="network-framework"></a>네트워크 프레임 워크
 
-IOS 응용 프로그램에서 일반적으로 사용 되 `URLSession` 는 api의 기본 네트워크 stack 네트워크 프레임 워크는 이제 독립 실행형 프레임 워크로 제공 되므로 TCP, UDP, TLS, IPv4/IPv6 등의 작업을 더 쉽게 수행할 수 있습니다.
+IOS 응용 프로그램에서 일반적으로 사용 되는 `URLSession` Api를 기반으로 하는 네트워크 stack 네트워크 프레임 워크는 이제 독립 실행형 프레임 워크로 제공 되므로 TCP, UDP, TLS, IPv4/IPv6 등의 작업을 더 쉽게 수행할 수 있습니다.
 
 ## <a name="carplay"></a>CarPlay
 
@@ -80,4 +80,4 @@ IOS 12에서 타사 앱은 새 CarPlay 프레임 워크를 사용 하 여 CarPla
 IOS 12를 사용 하는 경우 Apple은 더 이상 사용 되지 않습니다.
 
 - [개발자가](https://developer.apple.com/ios/whats-new/) 금속을 채택할 수 있도록 하는 OpenGL ES
-- [`UIWebView`](xref:UIKit.UIWebView)에서 [의 `WKWebView`우선 ](https://developer.apple.com/documentation/webkit/wkwebview?language=objc)순위입니다.
+- [`WKWebView`](https://developer.apple.com/documentation/webkit/wkwebview?language=objc)를 [`UIWebView`](xref:UIKit.UIWebView)합니다.

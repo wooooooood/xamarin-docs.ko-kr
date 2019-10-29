@@ -4,15 +4,15 @@ description: 이 문서에서는 새로운 Speech API를 제공 하 고 높여�
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 66bea7d2a9660018c7cec9b7bafeadafd5029ed9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 015be44f60dbf8cd2d70badd7c9edaf4e5a1d2a4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769431"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031451"
 ---
 # <a name="speech-recognition-in-xamarinios"></a>Xamarin.ios의 음성 인식
 
@@ -33,13 +33,13 @@ Apple에 따르면 음성 인식 API는 다음과 같은 기능과 이점을 제
 
 음성 인식은 iOS 앱에서 구현 되며, 라이브 또는 미리 녹음 된 오디오 (API가 지 원하는 음성 언어 중 하나)를 획득 하 고 음성 인식기의 일반 텍스트 기록을 반환 하는 음성 인식기에 전달 합니다.
 
-[![](speech-images/speech01.png "음성 인식 작동 방법")](speech-images/speech01.png#lightbox)
+[![](speech-images/speech01.png "How Speech Recognition Works")](speech-images/speech01.png#lightbox)
 
 ### <a name="keyboard-dictation"></a>키보드 받아쓰기
 
 대부분의 사용자가 iOS 장치에서 음성 인식을 생각해 보면 iPhone 4S을 사용 하 여 iOS 5에서 키보드 받아쓰기와 함께 출시 된 기본 제공 Siri 음성 길잡이가 있다고 생각 합니다.
 
-키보드 받아쓰기는 또는 `UITextField` `UITextArea`와 같은 textkit를 지 원하는 모든 인터페이스 요소에서 지원 되며 iOS 가상 키보드의 받아쓰기 단추 (스페이스바 바로 왼쪽)를 클릭 하 여 사용자가 활성화 합니다.
+키보드 받아쓰기는 TextKit (예: `UITextField` 또는 `UITextArea`)를 지 원하는 모든 인터페이스 요소에서 지원 되며 iOS 가상 키보드의 받아쓰기 단추 (스페이스바 바로 왼쪽)를 클릭 하 여 사용자가 활성화 합니다.
 
 Apple에서 다음 키보드 받아쓰기 통계 (2011 이후 수집 됨)를 해제 했습니다.
 
@@ -66,7 +66,7 @@ IOS 10을 처음 접하는 Apple은 iOS 앱에서 음성 인식을 구현할 수
 
 음성 인식 API에서 제공 하는 결과는 앱이 개인 사용자 데이터를 수집 하거나 액세스 하지 않고도 개별 사용자에 게 투명 하 게 사용자 지정 됩니다.
 
-음성 인식 API는 사용자가 말하는 동안 거의 실시간으로 호출 앱에 결과를 다시 제공 하며, 단순히 텍스트 보다 번역 결과에 대 한 자세한 정보를 제공 합니다. 이러한 개체는 다음과 같습니다.
+음성 인식 API는 사용자가 말하는 동안 거의 실시간으로 호출 앱에 결과를 다시 제공 하며, 단순히 텍스트 보다 번역 결과에 대 한 자세한 정보를 제공 합니다. 여기에는 다음이 포함됩니다.
 
 - 사용자가 말한 작업을 여러 번 해석 합니다.
 - 개별 번역을 위한 신뢰 수준입니다.
@@ -78,56 +78,56 @@ IOS 10을 처음 접하는 Apple은 iOS 앱에서 음성 인식을 구현할 수
 
 Apple에는 지정 된 언어를 현재 시점에서 변환할 수 있는지 여부를 확인 하는 가용성 API가 포함 되어 있습니다. 앱은 직접 인터넷 연결을 테스트 하는 대신이 API를 사용 해야 합니다.
 
-위에서 설명한 것 처럼 음성 인식은 인터넷을 통해 Apple 서버에서 데이터의 전송 및 임시 저장소가 필요 하므로 앱에서 사용자의 권한을 요청 _해야 합니다_ . 파일의 키를 입력 하 고 메서드 `SFSpeechRecognizer.RequestAuthorization` 를 호출 합니다. `NSSpeechRecognitionUsageDescription` `Info.plist` 
+위에서 설명한 것 처럼 음성 인식은 인터넷을 통해 Apple 서버에서 데이터의 전송 및 임시 저장소가 필요 하므로 앱에서 사용자의 권한을 요청 _해야 합니다_ . `Info.plist` 파일의 `NSSpeechRecognitionUsageDescription` 키 이며 `SFSpeechRecognizer.RequestAuthorization` 메서드를 호출 합니다. 
 
-음성 인식에 사용 되는 오디오의 원본에 따라 앱의 `Info.plist` 파일을 다른 방법으로 변경 해야 할 수 있습니다. 자세한 내용은 [보안 및 개인 정보 보호 기능](~/ios/app-fundamentals/security-privacy.md) 설명서를 참조 하세요.
+음성 인식에 사용 되는 오디오의 원본에 따라 앱의 `Info.plist` 파일을 변경 해야 할 수도 있습니다. 자세한 내용은 [보안 및 개인 정보 보호 기능](~/ios/app-fundamentals/security-privacy.md) 설명서를 참조 하세요.
 
 ## <a name="adopting-speech-recognition-in-an-app"></a>앱에서 음성 인식 채택
 
 개발자가 iOS 앱에서 음성 인식을 도입 하기 위해 수행 해야 하는 네 가지 주요 단계가 있습니다.
 
-- 키를 `Info.plist` `NSSpeechRecognitionUsageDescription` 사용 하 여 앱의 파일에 사용 설명을 제공 합니다. 예를 들어 카메라 앱에는 다음 설명이 포함 될 수 있습니다 _. "이를 통해 ' 치즈 ' 라는 단어를 말하여 사진을 가져올 수 있습니다."_
-- 응용 프로그램에서 대화 상자 `SFSpeechRecognizer.RequestAuthorization` 에 있는 사용자에 대 한 음성 인식을 인식 `NSSpeechRecognitionUsageDescription` 하 고 허용 또는 거부 하는 이유에 대 한 설명을 제공 하기 위해 메서드를 호출 하 여 권한 부여를 요청 합니다.
+- `NSSpeechRecognitionUsageDescription` 키를 사용 하 여 앱의 `Info.plist` 파일에 사용 설명을 제공 합니다. 예를 들어 카메라 앱에는 다음 설명이 포함 될 수 있습니다 _. "이를 통해 ' 치즈 ' 라는 단어를 말하여 사진을 가져올 수 있습니다."_
+- 응용 프로그램에서 대화 상자에 있는 사용자에 대 한 음성 인식을 인식 하 고 허용 또는 거부 하는 이유에 대 한 `NSSpeechRecognitionUsageDescription` 설명을 제공 하기 위해 `SFSpeechRecognizer.RequestAuthorization` 메서드를 호출 하 여 권한 부여를 요청 합니다.
 - 음성 인식 요청을 만듭니다.
-  - 디스크에 미리 기록 된 `SFSpeechURLRecognitionRequest` 오디오의 경우 클래스를 사용 합니다.
+  - 디스크에 미리 기록 된 오디오의 경우 `SFSpeechURLRecognitionRequest` 클래스를 사용 합니다.
   - 라이브 오디오 (또는 메모리의 오디오)의 경우 `SFSPeechAudioBufferRecognitionRequest` 클래스를 사용 합니다.
-- 음성 인식 요청을 음성 인식기 (`SFSpeechRecognizer`)에 전달 하 여 인식을 시작 합니다. 앱은 선택적으로 반환 `SFSpeechRecognitionTask` 된을 포함 하 여 인식 결과를 모니터링 하 고 추적할 수 있습니다.
+- 음성 인식 요청을 음성 인식기 (`SFSpeechRecognizer`)에 전달 하 여 인식을 시작 합니다. 앱은 선택적으로 반환 된 `SFSpeechRecognitionTask`을 유지 하 여 인식 결과를 모니터링 하 고 추적할 수 있습니다.
 
 이러한 단계는 아래에 자세히 설명 되어 있습니다.
 
 ### <a name="providing-a-usage-description"></a>사용 설명 제공
 
-파일에 필요한 `NSSpeechRecognitionUsageDescription` 키를 제공 하려면 다음을 수행 합니다. `Info.plist`
+`Info.plist` 파일에 필요한 `NSSpeechRecognitionUsageDescription` 키를 제공 하려면 다음을 수행 합니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-1. 파일을 `Info.plist` 두 번 클릭 하 여 편집용으로 엽니다.
+1. `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 2. **원본** 뷰로 전환 합니다. 
 
-    [![](speech-images/speech02.png "원본 뷰")](speech-images/speech02.png#lightbox)
-3. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예: 
+    [![](speech-images/speech02.png "The Source view")](speech-images/speech02.png#lightbox)
+3. **새 항목 추가**를 클릭 하 고, **형식** 에 대 한 `NSSpeechRecognitionUsageDescription` `String`를 입력 하 **고,** **사용 설명을** **값**으로 입력 합니다. 예를 들면, 
 
-    [![](speech-images/speech03.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03.png#lightbox)
-4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+    [![](speech-images/speech03.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
+4. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고, **형식** 에 대 한 `NSMicrophoneUsageDescription` `String`를 입력 하 **고,** **사용 설명을** **값**으로 입력 합니다. 예를 들면, 
 
-    [![](speech-images/speech04.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04.png#lightbox)
+    [![](speech-images/speech04.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 5. 파일의 변경 내용을 저장합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. 파일을 `Info.plist` 두 번 클릭 하 여 편집용으로 엽니다.
-2. **새 항목 추가**를 클릭 하 고 `NSSpeechRecognitionUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+1. `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+2. **새 항목 추가**를 클릭 하 고, **형식** 에 대 한 `NSSpeechRecognitionUsageDescription` `String`를 입력 하 **고,** **사용 설명을** **값**으로 입력 합니다. 예를 들면, 
 
-    [![](speech-images/speech03w.png "NSSpeechRecognitionUsageDescription 추가")](speech-images/speech03w.png#lightbox)
-3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고 `NSMicrophoneUsageDescription` **형식** 및 **사용 설명** 에 대 한 **속성** `String` 에 **값**을 입력 합니다. 예를 들어: 
+    [![](speech-images/speech03w.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
+3. 앱에서 라이브 오디오 기록을 처리 하는 경우에는 마이크 사용 설명도 필요 합니다. **새 항목 추가**를 클릭 하 고, **형식** 에 대 한 `NSMicrophoneUsageDescription` `String`를 입력 하 **고,** **사용 설명을** **값**으로 입력 합니다. 예를 들면, 
 
-    [![](speech-images/speech04w.png "NSMicrophoneUsageDescription 추가")](speech-images/speech04w.png#lightbox)
+    [![](speech-images/speech04w.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. 파일의 변경 내용을 저장합니다.
 
 -----
 
 > [!IMPORTANT]
-> 위의 `Info.plist` 키 (`NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription`) 중 하나를 제공 하지 못하면 음성 인식 또는 라이브 오디오의 마이크에 액세스 하려고 할 때 경고 없이 앱에 오류가 발생할 수 있습니다.
+> 위의 `Info.plist` 키 (`NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription`) 중 하나를 제공 하지 못하면 음성 인식 또는 라이브 오디오 마이크에 액세스 하려고 할 때 경고 없이 앱이 실패할 수 있습니다.
 
 ### <a name="requesting-authorization"></a>권한 부여 요청
 
@@ -178,9 +178,9 @@ namespace MonkeyTalk
 }
 ```
 
-클래스의 메서드는 `RequestAuthorization` 개발자가 `Info.plist` 파일의 `NSSpeechRecognitionUsageDescription` 키에 제공 된 이유를 사용 하 여 사용자의 음성 인식 액세스 권한을 요청 합니다. `SFSpeechRecognizer`
+`SFSpeechRecognizer` 클래스의 `RequestAuthorization` 메서드는 개발자가 `Info.plist` 파일의 `NSSpeechRecognitionUsageDescription` 키에 제공 된 이유를 사용 하 여 사용자의 음성 인식 액세스 권한을 요청 합니다.
 
-사용자의 권한에 따라 작업을 `RequestAuthorization` 수행 하는 데 사용할 수 있는 메서드의 콜백 루틴에 결과가반환됩니다.`SFSpeechRecognizerAuthorizationStatus` 
+`SFSpeechRecognizerAuthorizationStatus` 결과는 사용자의 사용 권한에 따라 작업을 수행 하는 데 사용할 수 있는 `RequestAuthorization` 메서드의 콜백 루틴으로 반환 됩니다. 
 
 > [!IMPORTANT]
 > Apple은 사용자가 앱에서이 권한을 요청 하기 전에 음성 인식이 필요한 작업을 시작할 때까지 대기를 제안 합니다.
@@ -230,17 +230,17 @@ public void RecognizeFile (NSUrl url)
 }
 ```
 
-이 코드를 자세히 살펴보면 먼저 음성 인식기 (`SFSpeechRecognizer`)를 만들려고 시도 합니다. 기본 언어가 음성 인식을 `null` 지원 하지 않는 경우이 반환 되 고 함수가 종료 됩니다.
+먼저이 코드를 자세히 살펴보면 음성 인식기 (`SFSpeechRecognizer`)를 만들려고 시도 합니다. 기본 언어가 음성 인식을 지원 하지 않는 경우 `null`가 반환 되 고 함수가 종료 됩니다.
 
 음성 인식기를 기본 언어로 사용할 수 있는 경우 앱은 `Available` 속성을 사용 하 여 현재 인식에 사용할 수 있는지 여부를 확인 합니다. 예를 들어 장치에 활성 인터넷 연결이 없는 경우 인식 기능을 사용 하지 못할 수 있습니다.
 
-는 `SFSpeechUrlRecognitionRequest` iOS 장치에서 미리 `NSUrl` 기록 된 파일의 위치에서 만들어지며, 콜백 루틴을 사용 하 여 처리 하기 위해 음성 인식기로 전달 됩니다.
+`SFSpeechUrlRecognitionRequest`은 iOS 장치에서 미리 기록 된 파일의 `NSUrl` 위치에서 만들어지며, 콜백 루틴을 사용 하 여 처리 하기 위해 음성 인식기로 전달 됩니다.
 
-콜백이 호출 `NSError` `null` 되 면가 처리 해야 하는 오류가 없는 것입니다. 음성 인식이 증분 방식으로 수행 되기 때문에 콜백 루틴은 두 번 이상 호출 될 수 `SFSpeechRecognitionResult.Final` 있습니다. 이렇게 하면 변환이 완료 되 고 최상의 번역 버전 (`BestTranscription`)이 기록 되는지 여부를 확인 하는 속성이 테스트 됩니다.
+콜백이 호출 될 때 `NSError` `null` 되지 않으면 처리 해야 하는 오류가 발생 한 것입니다. 음성 인식이 증분 방식으로 수행 되기 때문에 콜백 루틴은 두 번 이상 호출 될 수 있습니다. 따라서 `SFSpeechRecognitionResult.Final` 속성을 테스트 하 여 번역이 완료 되었고 최상의 번역 버전 (`BestTranscription`)을 기록 하는지 확인할 수 있습니다.
 
 ### <a name="recognizing-live-speech"></a>라이브 음성 인식
 
-앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예:
+앱에서 라이브 음성을 인식 하려는 경우 프로세스는 미리 기록 된 음성을 인식 하는 것과 매우 비슷합니다. 예를 들면,
 
 ```csharp
 using System;
@@ -317,7 +317,7 @@ private SFSpeechAudioBufferRecognitionRequest LiveSpeechRequest = new SFSpeechAu
 private SFSpeechRecognitionTask RecognitionTask;
 ```
 
-이는 `SFSpeechAudioBufferRecognitionRequest` AV 기반을 사용 하 여에 전달 되는 오디오를 기록 하 여 인식 요청을 처리 합니다.
+이는 AV를 사용 하 여 인식 요청을 처리 하기 위해 `SFSpeechAudioBufferRecognitionRequest` 전달 되는 오디오를 기록 합니다.
 
 ```csharp
 var node = AudioEngine.InputNode;
@@ -367,10 +367,10 @@ AudioEngine.Stop ();
 RecognitionTask.Cancel ();
 ```
 
-사용자가 변환을 취소 하 `RecognitionTask.Cancel` 여 메모리와 장치의 프로세서를 모두 확보 하는 경우를 호출 하는 것이 중요 합니다.
+사용자가 변환을 취소 하 여 메모리와 장치의 프로세서를 모두 확보 하는 경우 `RecognitionTask.Cancel`를 호출 하는 것이 중요 합니다.
 
 > [!IMPORTANT]
-> `NSSpeechRecognitionUsageDescription` 또는`var node = AudioEngine.InputNode;`키를 제공 하지 못하면 음성 인식 또는 라이브 오디오의 마이크 ()에 액세스 하려고 할 때 경고 없이 앱에 오류가 발생할 수 있습니다. `NSMicrophoneUsageDescription` `Info.plist` 자세한 내용은 위의 **사용 설명 제공** 섹션을 참조 하세요.
+> `NSSpeechRecognitionUsageDescription` 또는 `NSMicrophoneUsageDescription` `Info.plist` 키를 제공 하지 못하면 음성 인식 또는 라이브 오디오 (`var node = AudioEngine.InputNode;`) 마이크에 액세스 하려고 할 때 경고 없이 앱에 오류가 발생할 수 있습니다. 자세한 내용은 위의 **사용 설명 제공** 섹션을 참조 하세요.
 
 ## <a name="speech-recognition-limits"></a>음성 인식 제한
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 macOS 접근성 기능을
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 087dcdc7024026e6a3ed3a05baca3b2648053cc8
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 3f3b9c84fad0bce8939187fcd0c91d18314ce8ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769945"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032635"
 ---
 # <a name="accessibility-on-macos"></a>MacOS의 접근성
 
@@ -55,7 +55,7 @@ public static class AccessibilityHelper
 AccessibilityHelper.SetAccessibilityLabel (someButton, "New Accessible Description");
 ```
 
-@No__t_0 속성은 컨트롤이 나 뷰가 수행 하는 작업에 대 한 설명을 위한 것 이며, 레이블에 충분 한 정보를 제공 하지 않을 경우에만 추가 해야 합니다. 도움말 텍스트는 가능한 한 짧게 유지 되어야 합니다 (예: "문서 삭제").
+`AccessibilityHelp` 속성은 컨트롤이 나 뷰가 수행 하는 작업에 대 한 설명을 위한 것 이며, 레이블에 충분 한 정보를 제공 하지 않을 경우에만 추가 해야 합니다. 도움말 텍스트는 가능한 한 짧게 유지 되어야 합니다 (예: "문서 삭제").
 
 일부 사용자 인터페이스 요소는 액세스 가능한 액세스와 관련이 없습니다 (예: 고유한 접근성 레이블 및 도움말이 있는 입력 옆에 있는 레이블).
 이러한 경우 화면 판독기 또는 다른 접근성 도구에서 이러한 컨트롤이 나 뷰를 건너뛰도록 `AccessibilityElement = false`를 설정 합니다.

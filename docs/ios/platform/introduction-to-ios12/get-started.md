@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin을 사용 하 여 iOS 12, tvOS 12 및 w
 ms.prod: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/19/2018
-ms.openlocfilehash: 480e7c1d5ff0aa7335b3f45d8e05f276bc5be208
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1db249a9e07f178461bcb052508d08f54ecea121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287011"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032014"
 ---
 # <a name="get-started-with-ios-12-tvos-12-and-watchos-5"></a>IOS 12, tvOS 12 및 watchOS 5 시작
 
@@ -26,7 +26,7 @@ ms.locfileid: "70287011"
 
 3. **업데이트 Mac용 Visual Studio 및 Visual Studio 2017** – 안정적인 최신 버전의 Xamarin이 있는지 확인 합니다.
 
-4. _(선택 사항)_ **Ios 장치에 ios 12 설치** –
+4. _(선택 사항)_ **iOS 장치에 ios 12 설치** –
 
    Xcode 10에 도입 된 Api를 사용 하는 앱의 장치 테스트를 위해 등록 된 Apple 개발자는 장치에 운영 체제를 [다운로드](https://developer.apple.com/download) 하 여 설치할 수 있습니다.
 

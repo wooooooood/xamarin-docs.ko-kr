@@ -4,64 +4,64 @@ description: 이 문서에서는 NSUserActivity를 인덱싱하고, 스포트라
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 9714d78419754413ae5f1d0e5015a418fa8ab884
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c6ceb6e10abc4dbd26bffecbb6fefa5835f3d630
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769553"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031550"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Xamarin.ios에서 NSUserActivity를 사용 하 여 검색
 
-`NSUserActivity`는 iOS 8에서 도입 되었으며 전달 데이터를 제공 하는 데 사용 됩니다.
+`NSUserActivity`은 iOS 8에서 도입 되었으며 전달할 데이터를 제공 하는 데 사용 됩니다.
 앱의 특정 부분에서 활동을 만든 다음 다른 iOS 장치에서 실행 되는 앱의 다른 인스턴스로 전달할 수 있습니다. 그러면 수신 장치는 이전 장치에서 시작 된 작업을 계속할 수 있습니다. 그러면 사용자가 남은 위치에서 바로 이동 합니다. 핸드 오프를 사용 하는 방법에 대 한 자세한 내용은 전달 설명서 [소개](~/ios/platform/handoff.md) 를 참조 하세요.
 
-IOS 9의 `NSUserActivity` 새로운 기능과 함께 인덱싱 (공개적 및 개인용) 하 여 스포트라이트 검색 및 Safari에서 검색할 수 있습니다. 를 `NSUserActivity` 검색 가능한 것으로 표시 하 고 인덱싱 가능한 메타 데이터를 추가 하 여 작업을 iOS 장치의 검색 결과에 나열할 수 있습니다.
+IOS 9를 처음 접하는 `NSUserActivity`,이를 공개적으로 개별적으로 인덱싱할 수 있으며 스포트라이트 검색 및 Safari에서 검색할 수 있습니다. `NSUserActivity`를 검색 가능한 것으로 표시 하 고 인덱싱 가능한 메타 데이터를 추가 하 여 해당 활동을 iOS 장치의 검색 결과에 나열할 수 있습니다.
 
-[![](nsuseractivity-images/apphistory01.png "앱 기록 개요")](nsuseractivity-images/apphistory01.png#lightbox)
+[![](nsuseractivity-images/apphistory01.png "The App History overview")](nsuseractivity-images/apphistory01.png#lightbox)
 
-사용자가 앱에서 작업에 속한 검색 결과를 선택 하면 앱이 시작 되 고에 `NSUserActivity` 설명 된 활동이 다시 시작 되어 사용자에 게 표시 됩니다.
+사용자가 앱에서 작업에 속한 검색 결과를 선택 하면 앱이 시작 되 고 `NSUserActivity`에서 설명 하는 활동이 다시 시작 되어 사용자에 게 표시 됩니다.
 
-의 `NSUserActivity` 다음 속성은 앱 검색을 지 원하는 데 사용 됩니다.
+앱 검색을 지 원하는 데 사용 되는 `NSUserActivity`의 속성은 다음과 같습니다.
 
-- `EligibleForHandoff`– 인 `true`경우 전달 작업에이 작업을 사용할 수 있습니다.
-- `EligibleForSearch`– 인 `true`경우이 작업은 장치 인덱스에 추가 되 고 검색 결과에 표시 됩니다.
-- `EligibleForPublicIndexing`– 인 `true`경우이 작업은 Apple의 클라우드 기반 인덱스에 추가 되 고 iOS 장치에 앱을 아직 설치 하지 않은 사용자 (검색을 통해)에 표시 됩니다. 자세한 내용은 아래의 [공용 검색 인덱싱](#public-search-indexing) 섹션을 참조 하세요.
-- `Title`– 활동의 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자는 제목 자체의 텍스트를 검색할 수도 있습니다.
-- `Keywords`– 인덱스 되어 최종 사용자가 검색할 수 있는 작업을 설명 하는 데 사용 되는 문자열 배열입니다.
-- `ContentAttributeSet`– 작업을 `CSSearchableItemAttributeSet` 자세히 설명 하 고 검색 결과에 다양 한 콘텐츠를 제공 하는 데 사용 되는입니다.
-- `ExpirationDate`– 활동이 지정 된 날짜 까지만 표시 되도록 하려면 해당 날짜를 여기에 제공할 수 있습니다.
-- `WebpageURL`– 작업을 웹에서 볼 수 있거나 앱이 Safari의 딥 링크를 지 원하는 경우 여기에서 방문 하도록 링크를 설정할 수 있습니다.
+- `EligibleForHandoff` – `true`인 경우 전달 작업에이 작업을 사용할 수 있습니다.
+- `EligibleForSearch` – `true`하는 경우이 작업은 장치 인덱스에 추가 되 고 검색 결과에 표시 됩니다.
+- `EligibleForPublicIndexing` – `true`경우이 작업은 Apple의 클라우드 기반 인덱스에 추가 되 고 iOS 장치에 앱을 아직 설치 하지 않은 사용자 (검색을 통해)에 게 제공 됩니다. 자세한 내용은 아래의 [공용 검색 인덱싱](#public-search-indexing) 섹션을 참조 하세요.
+- `Title` – 작업의 제목을 제공 하 고 검색 결과에 표시 됩니다. 사용자는 제목 자체의 텍스트를 검색할 수도 있습니다.
+- `Keywords` – 인덱스 되어 최종 사용자가 검색할 수 있도록 작업을 설명 하는 데 사용 되는 문자열 배열입니다.
+- `ContentAttributeSet` – 작업을 자세히 설명 하 고 검색 결과에 다양 한 콘텐츠를 제공 하는 데 사용 되는 `CSSearchableItemAttributeSet`입니다.
+- `ExpirationDate` – 지정 된 날짜 까지만 활동을 표시 하려면 여기에 해당 날짜를 제공할 수 있습니다.
+- `WebpageURL` – 웹에서 활동을 볼 수 있거나 앱에서 Safari의 딥 링크를 지 원하는 경우 여기에서 방문 하도록 링크를 설정할 수 있습니다.
 
 ## <a name="nsuseractivity-quickstart"></a>NSUserActivity 빠른 시작
 
-앱에서 검색 가능한 `NSUserActivity` 를 구현 하려면 다음 지침을 따르세요.
+앱에서 검색 가능한 `NSUserActivity`를 구현 하려면 다음 지침을 따르세요.
 
 - [활동 유형 식별자 만들기](#creatingtypeid)
 - [활동 만들기](#createactivity)
 - [작업에 응답](#respondactivity)
 - [공용 검색 인덱싱](#indexing)
 
-를 사용 `NSUserActivity` 하 여 콘텐츠를 검색할 수 있도록 하는 몇 가지 [추가 이점이](#benefits) 있습니다.
+`NSUserActivity`를 사용 하 여 콘텐츠를 검색할 수 있도록 하는 몇 가지 [추가 이점이](#benefits) 있습니다.
 
 <a name="creatingtypeid" />
 
 ## <a name="creating-activity-type-identifiers"></a>활동 유형 식별자 만들기
 
-검색 활동을 만들려면 먼저 해당 활동 _유형 식별자_ 를 만들어 식별할 수 있어야 합니다. 활동 유형 식별자는 지정 된 사용자 활동 유형을 고유 하 `NSUserActivityTypes` 게 식별 하는 데 사용 되는 앱의 **info.plist** 파일 배열에 추가 된 짧은 문자열입니다. 앱이 지원 하 고 앱 검색에 노출 하는 각 작업에 대해 배열에 하나의 항목이 있습니다. 
+검색 활동을 만들려면 먼저 해당 활동 _유형 식별자_ 를 만들어 식별할 수 있어야 합니다. 활동 유형 식별자는 지정 된 사용자 활동 유형을 고유 하 게 식별 하는 데 사용 되는 앱 **info.plist** 파일의 `NSUserActivityTypes` 배열에 추가 된 짧은 문자열입니다. 앱이 지원 하 고 앱 검색에 노출 하는 각 작업에 대해 배열에 하나의 항목이 있습니다. 
 
-Apple은 충돌을 방지 하기 위해 활동 형식 식별자에 대 한 역방향 DNS 스타일 표기법을 사용 하는 것을 제안 합니다. 예를 들어 `com.company-name.appname.activity` 특정 앱 기반 활동의 경우 `com.company-name.activity` 또는 여러 앱에서 실행할 수 있는 활동의 경우입니다.
+Apple은 충돌을 방지 하기 위해 활동 형식 식별자에 대 한 역방향 DNS 스타일 표기법을 사용 하는 것을 제안 합니다. 예: 특정 앱 기반 활동에 대 한 `com.company-name.appname.activity` 또는 여러 앱에서 실행할 수 있는 활동에 대 한 `com.company-name.activity`.
 
 활동 유형 식별자는 활동 유형을 식별 하는 `NSUserActivity` 인스턴스를 만들 때 사용 됩니다. 사용자가 검색 결과를 누르는 결과로 활동이 계속 되 면 활동 유형 (앱의 팀 ID와 함께)이 활동을 계속 하기 위해 시작할 앱을 결정 합니다.
 
-이 동작을 지원 하기 위해 필요한 활동 형식 식별자를 만들려면 **info.plist** 파일을 편집 하 고 **원본** 뷰로 전환 합니다. 다음 형식 `NSUserActivityTypes` 으로 키를 추가 하 고 식별자를 만듭니다.
+이 동작을 지원 하기 위해 필요한 활동 형식 식별자를 만들려면 **info.plist** 파일을 편집 하 고 **원본** 뷰로 전환 합니다. `NSUserActivityTypes` 키를 추가 하 고 다음 형식으로 식별자를 만듭니다.
 
-[![](nsuseractivity-images/type01.png "Info.plist 편집기의 NSUserActivityTypes 키 및 필수 식별자")](nsuseractivity-images/type01.png#lightbox)
+[![](nsuseractivity-images/type01.png "The NSUserActivityTypes key and required identifiers in the plist editor")](nsuseractivity-images/type01.png#lightbox)
 
-위의 예제에서는 검색 작업 (`com.xamarin.platform`)에 대해 하나의 새 활동 형식 식별자를 만들었습니다. 사용자 고유의 앱을 만들 때 `NSUserActivityTypes` 배열의 내용을 앱이 지 원하는 활동에 특정 한 활동 유형 식별자로 바꿉니다.
+위의 예제에서는 검색 작업 (`com.xamarin.platform`)에 대해 하나의 새 활동 형식 식별자를 만들었습니다. 사용자 고유의 앱을 만들 때 앱이 지 원하는 활동에 맞는 활동 유형 식별자로 `NSUserActivityTypes` 배열의 내용을 바꿉니다.
 
 <a name="createactivity" />
 
@@ -86,17 +86,17 @@ activity.EligibleForSearch = true;
 activity.BecomeCurrent();
 ```
 
-다음과 같이 `ContentAttributeSet` `NSUserActivity` 의 속성을 설정 하 여 자세한 정보를 추가할 수 있습니다.
+다음과 같이 `NSUserActivity`의 `ContentAttributeSet` 속성을 설정 하 여 자세한 정보를 추가할 수 있습니다.
 
-[![](nsuseractivity-images/apphistory02.png "추가 검색 정보 개요")](nsuseractivity-images/apphistory02.png#lightbox)
+[![](nsuseractivity-images/apphistory02.png "Addition Search Details overview")](nsuseractivity-images/apphistory02.png#lightbox)
 
-를 사용 하 `ContentAttributeSet` 여 최종 사용자가 상호 작용할 수 있도록 하는 다양 한 검색 결과를 만들 수 있습니다.
+`ContentAttributeSet`를 사용 하 여 최종 사용자가 상호 작용할 수 있도록 하는 다양 한 검색 결과를 만들 수 있습니다.
 
 <a name="respondactivity" />
 
 ## <a name="responding-to-an-activity"></a>작업에 응답
 
-앱에 대 한 검색 결과 (`NSUserActivity`)를 누르는 사용자에 게 응답 하려면 **AppDelegate.cs** `ContinueUserActivity` 파일을 편집 하 고 메서드를 재정의 합니다. 예를 들어:
+앱에 대 한 검색 결과 (`NSUserActivity`)를 누르는 사용자에 게 응답 하려면 **AppDelegate.cs** 파일을 편집 하 고 `ContinueUserActivity` 메서드를 재정의 합니다. 예를 들면,
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -115,7 +115,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 이는 전달 요청에 응답 하는 데 사용 되는 것과 동일한 메서드 재정의입니다. 이제 사용자가 스포트라이트 검색 결과의 앱에서 링크를 클릭 하면 앱이 포그라운드로 (또는 아직 실행 되지 않은 경우 시작 됨) 해당 링크로 표시 되는 콘텐츠, 탐색 또는 기능이 표시 됩니다.
 
-[![](nsuseractivity-images/apphistory03.png "검색에서 이전 상태 복원")](nsuseractivity-images/apphistory03.png#lightbox)
+[![](nsuseractivity-images/apphistory03.png "Restore Previous State from Search")](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing" />
 
@@ -151,7 +151,7 @@ activity.EligibleForPublicIndexing = true;
 activity.BecomeCurrent();
 ```
 
-에서 작업을 설정 하 여 `EligibleForPublicIndexing = true`공용 인덱싱을 설정 했기 때문에 Apple의 공용 클라우드 인덱스에 자동으로 추가 되는 것을 의미 하지는 않습니다. 먼저 다음 조건을 충족 해야 합니다.
+`EligibleForPublicIndexing = true`를 설정 하 여 공용 인덱싱에 대해 활동을 설정 했기 때문에 Apple의 공용 클라우드 인덱스에 자동으로 추가 되는 것을 의미 하지는 않습니다. 먼저 다음 조건을 충족 해야 합니다.
 
 1. 검색 결과에 표시 되 고 여러 사용자가 선택 해야 합니다. 활동 참여 임계값이 충족 될 때까지 결과가 private으로 유지 됩니다.
 2. 앱 프로 비전은 사용자 관련 데이터가 인덱싱되지 않고 public이 되지 않도록 합니다.
@@ -160,7 +160,7 @@ activity.BecomeCurrent();
 
 ## <a name="additional-benefits"></a>추가 혜택
 
-앱에서을 통해 `NSUserActivity` 앱 검색을 채택 하 여 다음과 같은 기능을 얻을 수도 있습니다.
+앱에서 `NSUserActivity`를 통해 앱 검색을 채택 하 여 다음과 같은 기능을 사용할 수도 있습니다.
 
 - **핸드** 오프-앱 검색은 전달 (`NSUserActivity`)과 동일한 메커니즘을 사용 하 여 콘텐츠, 탐색 및/또는 기능을 노출 하므로 앱 사용자가 한 장치에서 작업을 시작 하 고 다른 장치에서 계속 작업을 수행할 수 있습니다.
 - **Siri 제안** -siri 제안이 일반적으로 수행 하는 표준 제안과 함께 앱에서 근무 중인 자동으로 제안 될 수 있습니다.

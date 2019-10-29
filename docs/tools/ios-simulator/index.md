@@ -3,15 +3,15 @@ title: Windows용 원격 iOS 시뮬레이터
 description: Windows 용 원격 iOS 시뮬레이터를 사용 하면 Visual Studio 2019와 함께 Windows에 표시 된 iOS 시뮬레이터에서 앱을 테스트할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 3067493315c62c46f44fb94aa61a919e1449080b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 8313af47882b1c8c47f1e82f62f0a43e4e9c704c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70289704"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029722"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Windows용 원격 iOS 시뮬레이터
 

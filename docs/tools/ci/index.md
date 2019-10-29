@@ -3,15 +3,15 @@ title: Xamarin을 사용한 연속 통합 소개
 description: 이 문서는 Xamarin과의 연속 통합을 설명 하는 가이드로 연결 됩니다. 연결 된 콘텐츠는 연속 통합에 대 한 개요를 제공 하 고 App Center 빌드, TeamCity 및 Jenkins에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/23/2018
-ms.openlocfilehash: 6e1d90152fa47fef0638c93777f1e7179e97e387
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c59667213f7ecbe5603e638c4b19d54ffdf6dd01
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292548"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029822"
 ---
 # <a name="continuous-integration-with-xamarin"></a>Xamarin을 사용한 연속 통합
 

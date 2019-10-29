@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 10의 기존 프레임 워크에 대 한 �
 ms.prod: xamarin
 ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: db0ea7720f7b65434c5248fb16456441768e25c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c25ea0878906b31028143ff1ad689db56b197458
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752521"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032264"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>추가 iOS 10 프레임 워크 변경 내용
 
@@ -22,15 +22,15 @@ _이 문서에서는 iOS 10의 기존 프레임 워크에 대 한 추가, 사소
 
 AVFoundation 프레임 워크에는 다음과 같은 향상 된 기능이 포함 되어 있습니다.
 
-- IOS 10에서는 개발자가 콘텐츠 형식에 따라 더 이상 다른 [AVPlayerItem](xref:AVFoundation.AVPlayerItem) 동작을 구현할 필요가 없습니다. `Rate` 속성을 설정 하기만 하면 상태일 없이 재생할 수 있는 콘텐츠가 충분 한 경우 avfoundation에서 결정 합니다.
-- 새 [AVCapturePhotoOutput](xref:AVFoundation.AVCaptureFileOutput) 클래스는 더 이상 사용 `AVCaptureStillImageOutput` 되지 않는 클래스를 대체 하며, 캡처 프로세스 및 새로운 지원에 대 한 정교한 제어 및 모니터링을 제공 하 여 모든 사진 워크플로를 처리 하는 통합 방법을 제공 합니다. 라이브 사진 및 원시 캡처 형식과 같은 기능
-- 새 `AVPlayerLooper` 클래스를 사용 하면 재생 하는 동안 지정 된 미디어 부분을 보다 쉽게 반복할 수 있습니다.
-- 클래스 `AVAssetDownloadURLSession` 를 사용 하면 FairPlay 암호화 된 HLS 스트림을 다운로드 하 고 나중에 재생할 수 있습니다.
+- IOS 10에서는 개발자가 콘텐츠 형식에 따라 더 이상 다른 [AVPlayerItem](xref:AVFoundation.AVPlayerItem) 동작을 구현할 필요가 없습니다. `Rate` 속성을 설정 하기만 하면 AVFoundation에서 상태일 없이 재생할 수 있는 콘텐츠가 충분 한 경우를 결정 합니다.
+- 새 [AVCapturePhotoOutput](xref:AVFoundation.AVCaptureFileOutput) 클래스는 더 이상 사용 되지 않는 `AVCaptureStillImageOutput` 클래스를 대체 하 고, 캡처 프로세스에 대 한 정교한 제어 및 모니터링과 같은 새로운 기능에 대 한 지원을 제공 하 여 모든 사진 워크플로를 처리 하는 통합 방법을 제공 합니다. 라이브 사진과 원시 캡처 형식으로 지정 합니다.
+- 새 `AVPlayerLooper` 클래스를 사용 하면 재생 하는 동안 미디어의 지정 된 부분을 보다 쉽게 반복할 수 있습니다.
+- `AVAssetDownloadURLSession` 클래스를 사용 하면 FairPlay 암호화 된 HLS 스트림을 다운로드 하 고 나중에 재생할 수 있습니다.
 - 기본적으로 [AVCaptureSession](xref:AVFoundation.AVCaptureSession) 클래스는 장치 하드웨어에서 지원할 때 와이드 색의 넓은 색 영역 캡처를 자동으로 지원 합니다. 자세한 내용은 Apple의 [IOS 장치 호환성 참조](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) 를 참조 하세요.
 
 ## <a name="avkit-additions"></a>AVKit 추가
 
-이제 avkit 프레임 워크에는 현재 `UpdatesNowPlayingInfoCenter` 재생 중인 정보 센터를 업데이트 해야 하는 경우를 나타내는 새 속성이 포함 됩니다.
+이제 AVKit 프레임 워크에 새 `UpdatesNowPlayingInfoCenter` 속성이 포함 되어 이제 현재 재생 중인 정보 센터를 업데이트 해야 하는 시간을 표시 합니다.
 
 ## <a name="core-data-enhancements"></a>핵심 데이터 향상
 
@@ -39,8 +39,8 @@ iOS 10에는 핵심 데이터 프레임 워크에 대 한 다음과 같은 향�
 - 모드 (관리 개체 컨텍스트)를 사용 하는 새 쿼리 생성 기능을 사용 하 여 [NSManagedObjectContext](xref:CoreData.NSManagedObjectContext) 개체를 WAL 저널 모드에 저장 하면 나중에 인출 하 고 오류를 발생 시킬 수 있습니다.
 - Root [NSManagedObjectContext](xref:CoreData.NSManagedObjectContext) 개체는 serialization 없이 동시에 오류 및 가져오기를 지원 합니다.
 - [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) 클래스는 SQLite 데이터 저장소의 풀을 유지 관리 합니다.
-- 더 쉽게 페치를 수행 하 고 하위 `NSManagedObject` 클래스를 만들 수 있도록 몇 가지 새로운 편의 방법이 추가 되었습니다.
-- 상위 수준 `NSPersistenceContainer` 을 사용 하 여 `NSPersistentStoreCoordinator`, [NSManagedObjectModel](xref:CoreData.NSManagedObjectModel) 및 기타 핵심 데이터 구성 리소스를 참조 합니다.
+- Fetch를 더 쉽게 수행 하 고 하위 클래스를 만들 수 있도록 `NSManagedObject`에 몇 가지 새로운 편의 방법이 추가 되었습니다.
+- 상위 수준 `NSPersistenceContainer`를 사용 하 여 `NSPersistentStoreCoordinator`, [NSManagedObjectModel](xref:CoreData.NSManagedObjectModel) 및 기타 핵심 데이터 구성 리소스를 참조 합니다.
 
 자세한 내용은 Apple의 [핵심 데이터 프레임 워크 참조](https://developer.apple.com/reference/coredata)를 참조 하세요.
 
@@ -49,11 +49,11 @@ iOS 10에는 핵심 데이터 프레임 워크에 대 한 다음과 같은 향�
 iOS 10은 핵심 이미지 프레임 워크에 대해 다음과 같은 향상 된 기능을 만듭니다.
 
 - 이제 개발자는 처리 전후에 색 공간에서를 변환 하 여 핵심 이미지 컨텍스트의 작업 색 공간 외부에 있는 색 공간에서 이미지를 처리할 수 있습니다.
-- A8 또는 A9 Cpu를 사용 하는 iOS 장치의 경우 이제 원시 이미지 형식이 지원 됩니다. 핵심 이미지는 이제 기본 제공 iSight 카메라 또는 타사 카메라에서 원시 이미지를 디코딩하는 기능을 지원 합니다. [Cifilter](xref:CoreImage.CIFilter) 클래스 `FilterWithImageURL` 의 또는메서드를사용하여원시이미지를처리합니다.`FilterWithImageData`
-- 개체에서 `UIImage` `UIImageView` 렌더링 (핵심 이미지 이미지 저장소에서 지원 되는 경우)에 대 한 몇 가지 렌더링 성능이 향상 되었습니다. 
-- `UIImage`넓은 색으로 태그가 지정 된 개체는 넓은 색을 지 원하는 `UIImageView` iOS 장치에서 개체의 넓은 색 영역 색으로 렌더링 됩니다.
+- A8 또는 A9 Cpu를 사용 하는 iOS 장치의 경우 이제 원시 이미지 형식이 지원 됩니다. 핵심 이미지는 이제 기본 제공 iSight 카메라 또는 타사 카메라에서 원시 이미지를 디코딩하는 기능을 지원 합니다. [Cifilter](xref:CoreImage.CIFilter) 클래스의 `FilterWithImageData` 또는 `FilterWithImageURL` 메서드를 사용 하 여 원시 이미지를 처리 합니다.
+- `UIImageView` 개체에서 `UIImage` 렌더링 (핵심 이미지 이미지 저장소에 의해 지원 되는 경우)에 대 한 몇 가지 렌더링 성능이 향상 되었습니다. 
+- 넓은 색 영역으로 태그가 지정 된 `UIImage` 개체는 넓은 색을 지 원하는 iOS 장치에서 `UIImageView` 개체의 넓은 색 영역 색으로 렌더링 됩니다.
 - 핵심 이미지 커널 코드는 이제 특정 픽셀 출력 형식을 요청할 수 있습니다.
-- [Cifilter](xref:CoreImage.CIFilter) 클래스의 메서드를사용하여사용자지정처리를필터작업에삽입할수있습니다.`ImageWithExtent` 핵심 이미지는 출력 또는 표시를 위해 이미지를 처리할 때 필터 사이에 지정 된 콜백을 호출 합니다.
+- [Cifilter](xref:CoreImage.CIFilter) 클래스의 `ImageWithExtent` 메서드를 사용 하 여 사용자 지정 처리를 필터 작업에 삽입할 수 있습니다. 핵심 이미지는 출력 또는 표시를 위해 이미지를 처리할 때 필터 사이에 지정 된 콜백을 호출 합니다.
 
 또한 다음과 같은 새로운 핵심 이미지 필터가 추가 되었습니다.
 
@@ -73,7 +73,7 @@ IOS 10 용 Foundation framework에 대 한 다음과 같은 기능이 향상 되
 
 - 새 [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) 클래스를 사용 하 여 최종 사용자에 게 표시 하기 위해 지역화 된 측정값의 서식을 지정 합니다.
 - 새 [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) 클래스를 사용 하 여 간격을 비교 하 고 간격 교차로 테스트 하는 기간 등의 날짜 및 시간 간격 계산을 수행할 수 있습니다.
-- 새 [Nsmeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) 클래스를 사용하여 다른 Uom (측정 단위) 간에 변환하거나 다른 uom의 값에 대한 계산을 수행합니다.
+- 새 [Nsmeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) 클래스를 사용 하 여 다른 Uom (측정 단위) 간에 변환 하거나 다른 uom의 값에 대 한 계산을 수행 합니다.
 
 - 새 [Nsunit](https://developer.apple.com/reference/foundation/nsunit) 및 [nsunit](https://developer.apple.com/reference/foundation/nsdimension) 클래스를 사용 하 여 특정 uoms를 나타냅니다.
 - 로컬 정보 및 사용 가능한 표시 형식을 얻기 위해 [Nslocal](https://developer.apple.com/reference/foundation/nslocale) 클래스에 몇 가지 새 속성이 추가 되었습니다.
@@ -84,7 +84,7 @@ IOS 10에서 GameKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 
 - **Game Center 앱** 은 더 이상 사용 되지 않으며 iOS에서 제거 되었습니다. 앱에서 GameKit를 사용 하는 경우 순위표 등과 같은 GameKit 기능을 표시 하는 고유한 인터페이스를 제공 _해야 합니다_ . 
 - 새 iCloud 전용 계정 유형은 [Gkcloudplayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) 클래스에 의해 구현 되었습니다.
-- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`플레이어의 목록을 유지 관리 하 고, 앱이 참가자 날짜를 저장, 검색 또는 교환 하는 방법 및 시기를 구현 해야 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
+- 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`은 플레이어의 목록을 유지 관리 하 고, 앱은 참가자 날짜가 플레이어 간에 저장, 검색 또는 교환 되는 방법 및 시기를 구현 해야 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
 
 ## <a name="gameplaykit-enhancements"></a>GameplayKit 향상
 
@@ -102,10 +102,10 @@ IOS 10에서 GameplayKit 프레임 워크에 대 한 다음과 같은 기능이 
 
 IOS 10에서 HealthKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- 날씨 유형 (예 `HKWeatherConditionClear` : 및 `HKWeatherConditionCloudy`)에 대 한 새 메타 데이터 키가 추가 되 고 `HKWorkoutActivityTypeFlexibility` , 및 등 `HKWorkoutActivityTypeWheelchairRunPace`의 체력 유형 (예: 및)이 추가 되었습니다.
-- CDA ( `HKCDADocument` 임상 문서 아키텍처) 형식의 문서를 나타내기 위해 새 클래스가 추가 되었습니다.
-- 새 [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) 클래스를 사용 하 여 체력 `ActivityType` 의 `LocationType` 및를 지정 합니다.
-- 휠체어 관련 상태 데이터를 `WheelchairUse` 사용 하기 위해 새 [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) 및 [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) 클래스의 메서드가 추가 되었습니다.
+- 날씨 유형 (예: `HKWeatherConditionClear` 및 `HKWeatherConditionCloudy`)에 대 한 새 메타 데이터 키가 추가 되었고, 체력 유형 (예: `HKWorkoutActivityTypeFlexibility` 및 `HKWorkoutActivityTypeWheelchairRunPace`)이 추가 되었습니다.
+- 새 `HKCDADocument` 클래스가 CDA (임상 문서 아키텍처) 형식의 문서를 나타내기 위해 추가 되었습니다.
+- 새 [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) 클래스를 사용 하 여 `ActivityType` 및 체력 `LocationType`를 지정 합니다.
+- [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) 클래스의 새 [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) 및 `WheelchairUse` 메서드는 휠체어 관련 상태 데이터를 사용 하기 위해 추가 되었습니다.
 
 ## <a name="homekit-enhancements"></a>HomeKit 향상
 
@@ -158,13 +158,13 @@ IOS 10에서 SceneKit 프레임 워크에 대 한 다음과 같은 기능이 향
 
 - [Scncamera](xref:SceneKit.SCNCamera) 클래스는 HDR 기능 및 효과를 사용 하 여 더 큰 현실감를 제공할 수 있습니다. 자동 효과를 만들거나 vignetting, 색 fringing 및 색을 사용 하 여 게임에 fillmatic 효과를 추가 하려면 적응 노출을 사용 합니다.
 - 이제 SceneKit에는 더 간단한 자산 제작을 통해 보다 현실적인 결과를 제공 하는 새로운 .PBR (물리적 기반 렌더링) 시스템이 포함 되어 있습니다.
-- 새 [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) 음영 모델을 사용 하 여 세 가지 기본 속성 (`Diffuse` `Metalness` 및 `Roughness`)만 필요 하면서 광범위 한 사실적인 음영 효과를 제품 합니다.
-- .Pbr 음영은 환경 기반 조명에서 가장 잘 작동 하므로 `LightingEnvironment` 속성을 사용 하 여 이미지 기반 조명을 전체 장면에 할당 합니다.
-- 속성을 `IESProfileURL` 사용 하 여 강도 (lumens) 및 색 온도 (켈빈)와 같은 실제 값을 기준으로 조명을 정의 하는 실제 조명 설비를 가져옵니다.
+- 새 [SCNLightingModelPhysicallyBased](https://developer.apple.com/reference/scenekit/scnlightingmodelphysicallybased) 음영 모델을 사용 하 여 세 가지 기본 속성 (`Diffuse`, `Metalness` 및 `Roughness`)만 필요로 하는 동안 광범위 한 사실적인 음영 효과를 제품 합니다.
+- .PBR 음영은 환경 기반 조명에서 가장 잘 작동 하므로 `LightingEnvironment` 속성을 사용 하 여 이미지 기반 조명을 전체 장면에 할당 합니다.
+- `IESProfileURL` 속성을 사용 하 여 강도 (lumens) 및 색 온도 (켈빈)와 같은 실제 값을 기준으로 조명을 정의 하는 실제 조명 설비를 가져옵니다.
 - .PBR 및 HDR 카메라 기능 모두 기존 렌더링 기술 보다 더 나은 결과를 제공 하므로 이제 SceneKit는 선형 색 공간에서 모든 색 계산을 수행 합니다 (넓은 색 장치 디스플레이에서 P3 색 영역 사용).
 - 색 프로필 정보를 읽어 SceneKit 색이 모든 색과 일치 합니다.
 - SceneKit는 모든 셰이더 형식에 대해 선형 RGB 색 공간의 색 구성 요소 값을 해석 합니다.
-- 응용 프로그램의 `SCNDisableLinearSpaceRendering` `SCNDisableWideGamut`에서및 키를 지정 하 여 선형 색 공간 렌더링과 와이드 색을 모두 사용 하지 않도록 설정할 수 있습니다. `Info.plist`
+- 앱 `Info.plist`에서 `SCNDisableLinearSpaceRendering` 및 `SCNDisableWideGamut` 키를 지정 하 여 선형 색 공간 렌더링과 와이드 색을 모두 사용 하지 않도록 설정할 수 있습니다.
 - 새 [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) 클래스를 사용 하 여 geometry를 지정 하기 위해 파일에서 로드 되거나 프로그래밍 방식으로 생성 되는 임의의 다각형 primates을 빌드합니다.
 - SceneKit는 질감 이미지에서 색 프로필 정보를 읽고 조정 하므로 모든 이미지에 대 한 자산 카탈로그를 사용 하 여이 정보가 제공 되는지 확인 합니다.
 
@@ -172,8 +172,8 @@ IOS 10에서 SceneKit 프레임 워크에 대 한 다음과 같은 기능이 향
 
 IOS 10에서 SpriteKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- 사용자 지정 셰이더는 특성 값`SKAttribute`(`SKAttributeValue`)을 제공 하 여 셰이더를 사용 하는 각 노드에서 별도로 구성할 수 있는 특성 ()을 제공할 수 있습니다.
-- 이제 `SKTileMapMode`Tilemaps는 `SKTileGroup` ,및`SKTileSet`클래스 를 사용 하 여 2d, 2.5 d 및 사이드 스크롤 게임에 대해 정사각형, 육각형 및 등각 타일 셰이프를 지원 합니다. `SKTileGroupRule`
+- 사용자 지정 셰이더는 특성 값 (`SKAttributeValue`)을 제공 하 여 셰이더를 사용 하는 각 노드에서 별도로 구성할 수 있는 특성 (`SKAttribute`)을 제공할 수 있습니다.
+- 이제 Tilemaps는 `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` 및 `SKTileSet` 클래스를 사용 하 여 2D, 2.5 D 및 사이드 스크롤 게임을 위한 정사각형, 육각형 및 등각 타일 셰이프를 지원 합니다.
 - 새 `SKWarpGeometry` 클래스를 사용 하 여 [SKSpriteNode](xref:SpriteKit.SKSpriteNode) 또는 [SKEffectNode](xref:SpriteKit.SKEffectNode) 렌더링을 늘이거나 왜곡할 수 있습니다. 새 고 [기능](xref:SpriteKit.SKAction) 클래스를 사용 하 여 비틀기 효과 간의 전환에 애니메이션 효과를 적용할 수 있습니다.
 - 지 수 [뷰](xref:SpriteKit.SKView) 클래스는 장면을 렌더링 하는 시기와 방법을 세밀 하 게 제어할 수 있는 여러 가지 새로운 메서드를 제공 합니다.
 
@@ -181,7 +181,7 @@ IOS 10에서 SpriteKit 프레임 워크에 대 한 다음과 같은 기능이 �
 
 IOS 10.3에서 ScrollView 컨트롤에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- `UIScrollView`이제 속성을 `IndexDisplayMode` 포함 하 여 사용자가 `UIScrollViewIndexDisplayMode` 의으로 스크롤 하는 동안 인덱스가 표시 되는 방식을 제어 합니다.
+- 이제 `UIScrollView` `IndexDisplayMode` 속성을 포함 하 여 사용자가 `UIScrollViewIndexDisplayMode`으로 스크롤 하는 동안 인덱스가 표시 되는 방식을 제어할 수 있습니다.
   - `Automatic`-인덱스 표시는 OS에 의해 제어 됩니다.
   - `AlwaysHidden`-인덱스 표시는 항상 숨겨집니다.
 
@@ -193,15 +193,15 @@ IOS 10의 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향상 �
 
 - 새 [uipasteboard](xref:UIKit.UIPasteboard) 본 API는 수명 제한과 같은 새 옵션을 제공 하며 공용 클래스 형식에 대해 호환 되는 콘텐츠 형식을 자동으로 선언 합니다.
 - 완전히 대화형으로 제공 되는 새로운 개체 기반 애니메이션 지원이 추가 되었으며 제스처에 연결할 수 있습니다. Apple의 [Uiviewanimating 프로토콜 참조](https://developer.apple.com/reference/uikit/uiviewanimating), [uiviewproperty애니메이터 클래스 참조](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Uicubic ingparameters 클래스 참조](https://developer.apple.com/reference/uikit/uicubictimingparameters) [를 참조 하세요. 자세한 내용은 UISpringTimingParameter 클래스 참조를 참조](https://developer.apple.com/reference/uikit/uispringtimingparameters) 하세요.
-- 개발자 앱 `UIPreviewInteraction` 이 `UIPreviewInteractionDelegate` 새로운 기능을 사용 하 여 peek 및 pop 작업용 사용자 지정 인터페이스를 제공할 수 있습니다.
+- 새 `UIPreviewInteraction` 및 `UIPreviewInteractionDelegate`를 통해 개발자 앱은 peek 및 pop 작업용 사용자 지정 인터페이스를 제공할 수 있습니다.
 - 새 `UIAccessibilityCustomRotor` 클래스를 사용 하면 앱에서 음성 전달 등의 보조 기술에 대 한 사용자 지정 컨텍스트별 기능을 제공할 수 있습니다.
-- `UIAccessibilityIsAssistiveTouchRunning` 및`UIAccessibilityAssistiveTouchStatusDidChangeNotification` 기호를 사용 하 여 AssistiveTouch를 사용할 수 있는지 확인 합니다.
-- `UIAccessibilityHearingDevicePairedEar` 및`UIAccessibilityHearingDevicePairedEarDidChangeNotification` 기호를 사용 하 여 쌍을 이루는 MFi 청각 지원의 상태를 가져옵니다.
-- 레이블에서 동적 형식을 지원 하기 위해 텍스트 필드와 텍스트 상자는 `PreferredFontForTextStyle` `UIFont` 클래스의 새 메서드를 사용 합니다.
-- 장치가 `UIContentSizeCategory` 변경 될 때 요소가 글꼴을 업데이트 해야 하는지 결정 하려면 `UIContentSizeCategoryAdjusting` 대리자의 `AdjustsFontForContentSizeCategory` 속성을 사용 합니다.
-- 클래스의 메서드는 비동기적으로 호출 되며 이제는 열기 작업이 완료 된 후 호출 되는 완료 처리기를 지원 합니다. `OpenURL` `UIApplication`
-- 새 `UICloudSharingController` 및`UICloudSharingControllerDelegate` 클래스를 사용 하 여 cloudkit 공유를 시작 하 고 해당 속성을 수정 합니다.
-- 프리페치된 셀을 활용 하 여 새 `UICollectionViews` `UICollectionViewDataSourcePrefetching` 대리자로의 스크롤 환경을 향상 시킵니다.
+- `UIAccessibilityIsAssistiveTouchRunning` 및 `UIAccessibilityAssistiveTouchStatusDidChangeNotification` 기호를 사용 하 여 AssistiveTouch 사용 여부를 확인 합니다.
+- `UIAccessibilityHearingDevicePairedEar` 및 `UIAccessibilityHearingDevicePairedEarDidChangeNotification` 기호를 사용 하 여 쌍을 이루는 MFi 청각 지원의 상태를 가져옵니다.
+- 레이블에서 동적 형식을 지원 하기 위해 텍스트 필드와 텍스트 상자에 `UIFont` 클래스의 새 `PreferredFontForTextStyle` 메서드가 사용 됩니다.
+- 장치의 `UIContentSizeCategory` 변경 될 때 요소가 글꼴을 업데이트 해야 하는지 결정 하려면 `UIContentSizeCategoryAdjusting` 대리자의 `AdjustsFontForContentSizeCategory` 속성을 사용 합니다.
+- `UIApplication` 클래스의 `OpenURL` 메서드는 비동기적으로 호출 되며 이제는 열기 작업이 완료 된 후 호출 되는 완료 처리기를 지원 합니다.
+- 새 `UICloudSharingController` 및 `UICloudSharingControllerDelegate` 클래스를 사용 하 여 CloudKit 공유를 시작 하 고 해당 속성을 수정 합니다.
+- 프리페치된 셀을 활용 하 여 새 `UICollectionViewDataSourcePrefetching` 대리자로 `UICollectionViews`의 스크롤 환경을 향상 시킵니다.
 - 이제 개발자는 텍스트, 배경색 등의 탭 모음 항목에 대 한 배지의 모양을 제어할 수 있습니다.
 - 이제 새로 고침 컨트롤이 모든 스크롤 뷰와 스크롤 뷰 서브 클래스 (예: `UICollectionView`)에서 지원 됩니다.
 
@@ -209,7 +209,7 @@ IOS 10의 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향상 �
 
 IOS 10에서 WebKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- 피킹 (peeking) 및 pop 지원이 `WKWebView` 클래스에 추가 되었습니다. 지정 된 웹 보기에 미리 보기가 표시 되어야 하는지 여부를 확인 하려면 메서드를사용합니다.`ShouldPreviewElement`
+- 피킹 (peeking) 및 pop 지원이 `WKWebView` 클래스에 추가 되었습니다. `ShouldPreviewElement` 메서드를 사용 하 여 지정 된 웹 보기에 미리 보기가 표시 되어야 하는지 여부를 확인 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

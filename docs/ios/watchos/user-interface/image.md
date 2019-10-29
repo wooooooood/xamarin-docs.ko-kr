@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 watchOS 응용 프로�
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: f9367eda7651ca61a8a3cb0928ad11cb320faab6
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 7d24286b5d428a571afc7498afafa1171c075110
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769956"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032701"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Xamarin의 watchOS 이미지 컨트롤
 
@@ -49,7 +49,7 @@ myOtherImageControl.SetImage("Worry");
 
 ### <a name="background-images"></a>배경 이미지
 
-@No__t_1, `Group` 및 `InterfaceController` 클래스의 `SetBackgroundImage (string imageName)`에도 동일한 논리가 적용 됩니다. 시청 앱 자체에 이미지를 저장 하 여 최상의 성능을 얻을 수 있습니다.
+`Button`, `Group`및 `InterfaceController` 클래스의 `SetBackgroundImage (string imageName)`에도 동일한 논리가 적용 됩니다. 시청 앱 자체에 이미지를 저장 하 여 최상의 성능을 얻을 수 있습니다.
 
 ## <a name="images-in-the-watch-extension"></a>조사식 확장의 이미지
 
@@ -102,7 +102,7 @@ animatedImage.StopAnimating ();
 
 응용 프로그램에서 확장에 저장 된 이미지를 반복적으로 사용 하는 경우 (또는 다운로드 한 경우), 조사식의 저장소에 이미지를 캐시 하 여 이후 디스플레이의 성능을 향상 시킬 수 있습니다.
 
-@No__t_0s `AddCachedImage` 메서드를 사용 하 여 이미지를 조사식으로 전송한 다음 이미지 이름 매개 변수와 함께 `SetImage`를 사용 하 여 이미지를 표시 합니다.
+`WKInterfaceDevice`s `AddCachedImage` 메서드를 사용 하 여 이미지를 시계로 전송 하 고 이미지 이름 매개 변수와 함께 `SetImage`를 사용 하 여 이미지를 표시 합니다.
 
 ```csharp
 var device = WKInterfaceDevice.CurrentDevice;
@@ -116,7 +116,7 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 }
 ```
 
-@No__t_0를 사용 하 여 코드에서 이미지 캐시의 내용을 쿼리할 수 있습니다.
+`WKInterfaceDevice.CurrentDevice.WeakCachedImages`를 사용 하 여 코드에서 이미지 캐시의 내용을 쿼리할 수 있습니다.
 
 ### <a name="managing-the-cache"></a>캐시 관리
 

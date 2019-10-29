@@ -4,15 +4,15 @@ description: 이 문서에서는 검색 및 홈 화면 위젯의 업데이트를
 ms.prod: xamarin
 ms.assetid: D66FD9E1-9E23-4BB6-825C-ED19B8F72A81
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 969d7fc78af9dd10f7ad57f58a6f4f619d0a201a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ca6ccce934b32fa0d7e48cd8f295d9acefe6e121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769450"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031503"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>IOS 10에서 향상 된 검색 및 홈 화면 위젯
 
@@ -24,7 +24,7 @@ Apple은 위젯 시스템에 몇 가지 향상 된 기능을 도입 하 여 새 
 
 위젯은 항상 사용자 지정이 가능 하며 텍스트, 이미지, 단추 등의 UI 요소를 포함할 수 있습니다. 또한 개발자는 위젯의 레이아웃을 추가로 사용자 지정할 수 있습니다.
 
-[![](widgets-images/widgets01.png "예제 위젯")](widgets-images/widgets01.png#lightbox)
+[![](widgets-images/widgets01.png "Example widgets")](widgets-images/widgets01.png#lightbox)
 
 사용자가 앱의 위젯을 보고 상호 작용할 수 있는 두 가지 주요 위치가 있습니다.
 
@@ -50,14 +50,14 @@ Apple은 위젯 시스템에 몇 가지 향상 된 기능을 도입 하 여 새 
 
 ## <a name="working-with-vibrancy"></a>Vibrancy 사용
 
-Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예를 들어:
+Vibrancy는 위젯의 밝은 배경 (시스템에서 제공 됨)에 표시 될 때 위젯의 텍스트를 이해 하기 쉽게 유지 합니다. IOS 10 이전에는 개발자가 위젯의 vibrancy에 [NotificationCenterVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1613917-notificationcentervibrancyeffect) 를 사용 합니다. 예를 들면,
 
 ```csharp
 // DEPRECATED: Get Widget Vibrancy Effect
 var vibrancy = UIVibrancyEffect.CreateForNotificationCenter ();
 ```
 
-이는 iOS 10에서 더 이상 사용 되지 않으며, [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)로 바꾸어야 합니다. 예:
+이는 iOS 10에서 더 이상 사용 되지 않으며, [WidgetPrimaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771278-widgetprimaryvibrancyeffect) 또는 [WidgetSecondaryVibrancyEffect](https://developer.apple.com/reference/uikit/uivibrancyeffect/1771277-widgetsecondaryvibrancyeffect)로 바꾸어야 합니다. 예를 들면,
 
 ```csharp
 // Get Primary Widget Vibrancy Effect

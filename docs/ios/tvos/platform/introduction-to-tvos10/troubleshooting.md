@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin 앱에서 tvOS 10으로 작업 하기 �
 ms.prod: xamarin
 ms.assetid: EA5564BB-C415-49A2-B70C-3DBF5E0F3FAB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c734bfdd1baaf89cf25d687657e5f14bdbc7834c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: a6588dee675aee3e2580b70dfdea2920c6235775
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70283445"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030609"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Xamarin을 사용 하 여 빌드된 tvOS 10 앱 문제 해결
 
@@ -41,17 +41,17 @@ ms.locfileid: "70283445"
 
 알려진 문제:
 
-- 를 `NSObject.ValueForKey` 호출`null` 하면 키가 예외를 발생 합니다.
-- 를 호출할 `UIFont.WithName` 때 이름을 기준으로 글꼴을 참조 하면 충돌이 발생 합니다.
-- 및 `NSURLSession` `http://` 모두 url에 대 한 TLS 핸드셰이크 중에 더 이상 RC4 암호 그룹을 사용할 필요가 없습니다. `NSURLConnection`
-- `ViewWillLayoutSubviews` 또는`LayoutSubviews` 메서드에서 슈퍼 뷰의 기 하 도형을 수정 하면 앱이 중단 될 수 있습니다.
+- `NSObject.ValueForKey`를 호출 하면 `null` 키가 발생 하 여 예외가 발생 합니다.
+- `UIFont.WithName`를 호출할 때 이름을 기준으로 글꼴을 참조 하면 충돌이 발생 합니다.
+- `NSURLSession` 및 `NSURLConnection`는 모두 `http://` Url에 대 한 TLS 핸드셰이크 중에 더 이상 RC4 암호 그룹을 사용할 필요가 없습니다.
+- 앱이 `ViewWillLayoutSubviews` 또는 `LayoutSubviews` 방법 중 하나에서 슈퍼 뷰의 기 하 도형을 수정 하면 중단 될 수 있습니다.
 - 모든 SSL/TLS 연결의 경우 이제 RC4 대칭 암호화가 기본적으로 사용 하지 않도록 설정 됩니다. 또한 보안 전송 API는 더 이상 SSLv3을 지원 하지 않으며, 가능한 한 빨리 SHA-1 및 3DES 암호화를 사용 하 여 앱을 중지 하는 것이 좋습니다.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
 ## <a name="cfnetwork-http-protocol"></a>CFNetwork HTTP 프로토콜
 
-이후에는이 요구 `NSMutableURLRequest` 사항을 엄격 하 `NSURLSession` 게 적용 하기 때문 `NSURLConnection` 에 클래스의 속성을아직열지않은스트림으로설정해야합니다.`HTTPBodyStream`
+`NSURLConnection` 및 `NSURLSession`에서이 요구 사항을 엄격 하 게 적용 하기 때문에 `NSMutableURLRequest` 클래스의 `HTTPBodyStream` 속성을 열지 않은 스트림으로 설정 해야 합니다.
 
 <a name="CloudKit" />
 
@@ -63,13 +63,13 @@ ms.locfileid: "70283445"
 
 ## <a name="core-image"></a>핵심 이미지
 
-이제 `CIImageProcessor` API는 임의의 입력 이미지 수를 지원 합니다. `CIImageProcessor`TvOS 10 beta 1에 포함 된 API가 제거 됩니다.
+`CIImageProcessor` API는 이제 임의의 입력 이미지 수를 지원 합니다. tvOS 10 beta 1에 포함 된 `CIImageProcessor` API가 제거 됩니다.
 
 <a name="NSUserActivity" />
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-전달 작업 `UserInfo` 후에는 `NSUserActivity` 개체의 속성이 비어 있을 수 있습니다. 현재 해결 `BecomeCurrent` 방법으로 NSUserActivity 개체를 명시적으로 호출 합니다.
+전달 작업 후에 `NSUserActivity` 개체의 `UserInfo` 속성이 비어 있을 수 있습니다. 현재 해결 방법으로 `BecomeCurrent` NSUserActivity ' 개체를 명시적으로 호출 합니다.
 
 <a name="UIKit" />
 
@@ -77,12 +77,12 @@ ms.locfileid: "70283445"
 
 알려진 문제:
 
-- 의 `UINavigationBar` `UIToolBar` 배경 모양이 변경 되거나레이아웃패스가새모양을확인하게됩니다.`UITabBar` `LayoutSubviews`, 또는 이벤트내`UpdateConstraints`에서 이러한 모양새를 수정 하려고 하면 무한 레이아웃 루프가 발생할 수 있습니다. `DidUpdateSubviews` `WillLayoutSubviews`
-- TvOS 10에서 `UIView` 개체의 메서드 `RemoveGestureRecognizer` 를 호출 하면 진행 중인 제스처 인식기가 명시적으로 취소 됩니다.
+- `UINavigationBar`, `UITabBar` 또는 `UIToolBar`의 배경 모양이 변경 되 면 레이아웃 패스가 새 모양을 확인 하 게 됩니다. `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` 또는 `DidUpdateSubviews` 이벤트 내에서 이러한 모양새를 수정 하려고 하면 무한 레이아웃 루프가 발생할 수 있습니다.
+- TvOS 10에서 `UIView` 개체의 `RemoveGestureRecognizer` 메서드를 호출 하면 진행 중인 제스처 인식기가 명시적으로 취소 됩니다.
 - 표시 된 뷰 컨트롤러는 이제 상태 표시줄의 모양에 영향을 줄 수 있습니다.
-- tvOS 10에서는 개발자가 `base.AwakeFromNib` `AwakeFromNib` 메서드를 서브클래싱 `UIViewController` 하 고 재정의할 때를 호출 해야 합니다.
-- 를 호출 `UIView` `LayoutSubviews` 하기`base.LayoutSubviews` 전에 레이아웃을 재정의 하 고 변경 하는 사용자 지정 서브 클래스가 있는 앱은 tvOS 10에서 무한 레이아웃 루프를 트리거할 수 있습니다.
-- 방향 관련 이미지 또는 flippable 이미지 자산은 개체에 `UIButton` 할당 될 때 대칭 이동 하지 않습니다.
+- tvOS 10에서는 `UIViewController`를 서브클래싱 하 고 `AwakeFromNib` 메서드를 재정의할 때 개발자가 `base.AwakeFromNib`를 호출 해야 합니다.
+- `base.LayoutSubviews`를 호출 하기 전에 `LayoutSubviews`를 재정의 하 고 레이아웃을 변경 하는 사용자 지정 `UIView` 서브 클래스가 있는 앱은 tvOS 10에서 무한 레이아웃 루프를 트리거할 수 있습니다.
+- 방향 관련 이미지 또는 flippable 이미지 자산은 `UIButton` 개체에 할당 될 때 대칭 이동 하지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 

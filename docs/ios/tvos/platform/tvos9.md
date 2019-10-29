@@ -4,15 +4,15 @@ description: 이 문서에서는 tvOS 개발자를 위해 tvOS 9에서 제공 �
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ecf5a7cabb03cea92075127d4d5e87350f45619e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 34f332eb712f479f9f9565a3894212e3cdd5aaf6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769115"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030542"
 ---
 # <a name="introduction-to-tvos-9"></a>tvOS 9 소개
 
@@ -49,10 +49,10 @@ Apple TV에서 실행 되는 tvOS apps에는 다음과 같은 지원 되는 기�
 - HealthKit
 - HomeKit
 - 내부 앱 오디오
-- 지도
+- 맵
 - 개인 VPN
 - 푸시 알림
-- Wallet
+- 전자지갑
 - 무선 액세서리 구성
 
 자세한 내용은 [지원 되는 어셈블리](~/ios/tvos/internals/assemblies.md) 및 [지원 되는 프레임 워크](~/ios/tvos/internals/frameworks.md) 설명서를 참조 하세요.
@@ -75,7 +75,7 @@ Apple TV에서 실행 되는 tvOS apps에는 다음과 같은 지원 되는 기�
 
 ### <a name="siri-remote"></a>Siri 원격
 
-제공 된 Apple TV 원격은 지역에 따라 하나의 구성으로 제공 됩니다. Siri 원격 또는 Apple TV 원격.
+제공 된 Apple TV 원격은 지역에 따라 Siri 원격 또는 Apple TV 원격의 한 가지 구성으로 제공 됩니다.
 
 Siri 원격은 현재 다음 국가에서 사용할 수 있습니다.
 
@@ -90,7 +90,7 @@ Siri 원격은 현재 다음 국가에서 사용할 수 있습니다.
 
 다른 모든 국가에서는 Siri 단추를 검색 단추로 대체 하는 Apple TV 원격을 받게 됩니다 .이 단추를 클릭 하면 검색 단추를 사용 하 여 기본 검색 화면에서
 
-[![](tvos9-images/remote02.png "Siri 원격")](tvos9-images/remote02.png#lightbox)
+[![](tvos9-images/remote02.png "Siri Remote")](tvos9-images/remote02.png#lightbox)
 
 자세한 내용은 [Siri 원격 및 Bluetooth 컨트롤러](~/ios/tvos/platform/remote-bluetooth.md) 설명서를 참조 하세요.
 
@@ -154,7 +154,7 @@ IOS 또는 OS X와 달리 Apple TV에는 사용자가 직접 앱 이나 해당 �
 
 Apple TV 홈 화면에는 설치 된 모든 앱이 표시 되며 사용자 기본 설정에 액세스 하는 방법이 제공 됩니다.
 
-[![](tvos9-images/home01.png "홈 화면")](tvos9-images/home01.png#lightbox)
+[![](tvos9-images/home01.png "The Home Screen")](tvos9-images/home01.png#lightbox)
 
 사용자는 포커스를 사용 하는 Siri 원격에서 터치 제스처를 사용 하 여 앱 아이콘 그리드를 탐색 하 여 앱을 선택 하 고 시작 합니다. 앱 아이콘은 잠재적 사용자에 게 훌륭한 인상을 줄 수 있는 첫 번째 기회 이며, 앱의 용도를 한눈에 파악할 수 있습니다.
 
@@ -168,9 +168,9 @@ Apple TV 홈 화면에는 설치 된 모든 앱이 표시 되며 사용자 기�
 
 사용자가 Apple TV 홈 화면의 맨 위 행에 tvOS 앱을 배치 하는 경우 사용자가 앱을 선택 하면 최상위 선반 이미지가 표시 됩니다. 이 이미지는 앱의 기능을 강조 표시 하거나 콘텐츠에 대 한 직접 링크를 제공 해야 합니다.
 
-[![](tvos9-images/topshelf01.png "위쪽 선반")](tvos9-images/topshelf01.png#lightbox)
+[![](tvos9-images/topshelf01.png "The Top Shelf")](tvos9-images/topshelf01.png#lightbox)
 
-Top 선반 이미지는 단일 정적 `.png` 또는 `.lsr` 파일로 제공 될 수도 있고 런타임에 포커스를 받을 수 있는 항목의 단일 행으로 동적으로 만들 수도 있습니다.
+Top 선반 이미지는 단일 정적 `.png` 또는 `.lsr` 파일로 제공 하거나 런타임에 동적으로 실행 가능 항목의 단일 행으로 만들 수 있습니다.
 
 정적 최상위 선반 이미지를 표시 하는 대신 동적 행 또는 포커스를 받을 수 있는 항목 또는 동적 스크롤 배너 집합을 포함할 수 있습니다. 이러한 동적 스타일을 사용 하면 앱에서 제공 하는 콘텐츠를 강조 표시 하거나 가장 많이 사용 하는 기능으로 바로 이동할 수 있습니다.
 

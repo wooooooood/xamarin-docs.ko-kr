@@ -4,15 +4,15 @@ description: 이 문서에서는 키-값 코딩 및 키-값 관찰을 사용 하
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 03886a53e4f737b1e874a756f8801e46c7de4d32
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: a22eca56dcec46e11a67633a8403b57580ed0546
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769906"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032608"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
 
@@ -25,7 +25,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용할 때 Xamarin.ios 
 이 문서에서는 SQLite 데이터에 액세스 하는 두 가지 방법을 설명 합니다.
 
 1. **직접 액세스** -SQLite 데이터베이스에 직접 액세스 하 여 Xcode의 Interface Builder에서 생성 된 UI 요소를 사용 하 여 키-값 코딩 및 데이터 바인딩에 대 한 데이터베이스의 데이터를 사용할 수 있습니다. Xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기술을 사용 하 여 UI 요소를 채우고 사용 하기 위해 작성 하 고 유지 관리 해야 하는 코드의 양을 크게 줄일 수 있습니다. 또한 프런트 엔드 사용자 인터페이스 (_모델-뷰-컨트롤러_)에서 지원 데이터 (_데이터 모델_)를 추가로 분리 하 여 더 쉽게 유지 관리 하 고 더욱 유연한 응용 프로그램을 디자인할 수 있는 이점을 누릴 수 있습니다.
-2. **SQLITE.NET orm** -오픈 소스 orm ( [SQLite.NET](http://www.sqlite.org) Object Relationship Manager)을 사용 하 여 SQLite 데이터베이스에서 데이터를 읽고 쓰는 데 필요한 코드의 양을 크게 줄일 수 있습니다. 그런 다음이 데이터를 사용 하 여 테이블 뷰와 같은 사용자 인터페이스 항목을 채울 수 있습니다.
+2. **SQLITE.NET orm** -오픈 소스 orm ( [SQLite.NET](https://www.sqlite.org) Object Relationship Manager)을 사용 하 여 SQLite 데이터베이스에서 데이터를 읽고 쓰는 데 필요한 코드의 양을 크게 줄일 수 있습니다. 그런 다음이 데이터를 사용 하 여 테이블 뷰와 같은 사용자 인터페이스 항목을 채울 수 있습니다.
 
 [![실행 중인 앱의 예](databases-images/intro01.png "실행 중인 앱의 예")](databases-images/intro01-large.png#lightbox)
 
@@ -476,7 +476,7 @@ public bool isManager {
 }
 ```
 
-이전에 데이터를 저장 한 경우 **Name**, **직업** 또는 **ismanager** 속성에 대 한 변경 내용이 데이터베이스에 전송 됩니다 (예: `_conn` 변수가 `null` 되지 않은 경우). 다음으로, 데이터베이스에서 사용자를 **만들고**, **업데이트**하 고, **로드** 하 고, **삭제** 하는 메서드를 살펴보겠습니다.
+이전에 데이터를 저장 한 경우 **Name**, **직업** 또는 **ismanager** 속성에 대 한 변경 내용이 데이터베이스에 전송 됩니다 (예: `_conn` 변수가 `null`되지 않은 경우). 다음으로, 데이터베이스에서 사용자를 **만들고**, **업데이트**하 고, **로드** 하 고, **삭제** 하는 메서드를 살펴보겠습니다.
 
 #### <a name="create-a-new-record"></a>새 레코드 만들기
 
@@ -526,7 +526,7 @@ public void Create(SqliteConnection conn) {
 }
 ```
 
-@No__t_0를 사용 하 여 데이터베이스에 새 레코드를 만듭니다. @No__t_1를 호출 하 여 메서드로 전달 된 `SQLiteConnection` (conn)에서 새 명령을 가져옵니다. 다음으로, 실제 값에 대 한 매개 변수를 제공 하 여 실제로 새 레코드를 작성 하도록 SQL 명령을 설정 합니다.
+`SQLiteCommand`를 사용 하 여 데이터베이스에 새 레코드를 만듭니다. `CreateCommand`를 호출 하 여 메서드로 전달 된 `SQLiteConnection` (conn)에서 새 명령을 가져옵니다. 다음으로, 실제 값에 대 한 매개 변수를 제공 하 여 실제로 새 레코드를 작성 하도록 SQL 명령을 설정 합니다.
 
 ```csharp
 command.CommandText = "INSERT INTO [People] (ID, Name, Occupation, isManager, ManagerID) VALUES (@COL1, @COL2, @COL3, @COL4, @COL5)";
@@ -1419,7 +1419,7 @@ public ComboBoxDataSource (SqliteConnection conn, string tableName, string displ
 }
 ```
 
-@No__t_0 메서드는 지정 된 테이블의 레코드 수를 반환 합니다.
+`GetRecordCount` 메서드는 지정 된 테이블의 레코드 수를 반환 합니다.
 
 ```csharp
 private nint GetRecordCount ()
@@ -1461,9 +1461,9 @@ private nint GetRecordCount ()
 }
 ```
 
-@No__t_0, `IDField` 또는 `DisplayField` 속성 값이 변경 될 때마다 호출 됩니다.
+`TableName`, `IDField` 또는 `DisplayField` 속성 값이 변경 될 때마다 호출 됩니다.
 
-@No__t_0 메서드는 지정 된 드롭다운 목록 항목 인덱스에 있는 레코드의 고유 ID (`IDField`)를 반환 합니다. 
+`IDForIndex` 메서드는 지정 된 드롭다운 목록 항목 인덱스에 있는 레코드의 고유 ID (`IDField`)를 반환 합니다. 
 
 ```csharp
 public string IDForIndex (nint index)
@@ -1504,7 +1504,7 @@ public string IDForIndex (nint index)
 }
 ```
 
-@No__t_0 메서드는 지정 된 드롭다운 목록 인덱스에 있는 항목에 대 한 값 (`DisplayField`)을 반환 합니다.
+`ValueForIndex` 메서드는 지정 된 드롭다운 목록 인덱스에 있는 항목에 대 한 값 (`DisplayField`)을 반환 합니다.
 
 ```csharp
 public string ValueForIndex (nint index)
@@ -1545,7 +1545,7 @@ public string ValueForIndex (nint index)
 }
 ```
 
-@No__t_0 메서드는 지정 된 값에 대 한 고유 ID (`IDField`)를 반환 합니다 (`DisplayField`).
+`IDForValue` 메서드는 지정 된 값에 대 한 고유 ID (`IDField`)를 반환 합니다 (`DisplayField`).
 
 ```csharp
 public string IDForValue (string value)
@@ -1589,7 +1589,7 @@ public string IDForValue (string value)
 }
 ```
 
-@No__t_0는 `TableName`, `IDField` 또는 `DisplayField` 속성이 변경 될 때 계산 되는 목록에 있는 항목의 사전 계산 수를 반환 합니다.
+`ItemCount`는 `TableName`, `IDField` 또는 `DisplayField` 속성이 변경 될 때 계산 되는 목록에 있는 항목의 사전 계산 수를 반환 합니다.
 
 ```csharp
 public override nint ItemCount (NSComboBox comboBox)
@@ -1598,7 +1598,7 @@ public override nint ItemCount (NSComboBox comboBox)
 }
 ```
 
-@No__t_0 메서드는 지정 된 드롭다운 목록 항목 인덱스의 값 (`DisplayField`)을 제공 합니다.
+`ObjectValueForItem` 메서드는 지정 된 드롭다운 목록 항목 인덱스의 값 (`DisplayField`)을 제공 합니다.
 
 ```csharp
 public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
@@ -1641,7 +1641,7 @@ public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
 
 SQLite 명령의 `LIMIT` 및 `OFFSET` 문을 사용 하 여 필요한 레코드 하나를 제한 합니다.
 
-@No__t_0 메서드는 지정 된 값 (`DisplayField`)의 드롭다운 항목 인덱스를 반환 합니다.
+`IndexOfItem` 메서드는 지정 된 값 (`DisplayField`)의 드롭다운 항목 인덱스를 반환 합니다.
 
 ```csharp
 public override nint IndexOfItem (NSComboBox comboBox, string value)
@@ -1693,7 +1693,7 @@ public override nint IndexOfItem (NSComboBox comboBox, string value)
 
 값을 찾을 수 없는 경우 `NSRange.NotFound` 값이 반환 되 고 드롭다운 목록에서 모든 항목이 선택 취소 됩니다.
 
-@No__t_0 메서드는 부분적으로 형식화 된 항목에 대해 일치 하는 첫 번째 값 (`DisplayField`)을 반환 합니다.
+`CompletedString` 메서드는 부분적으로 형식화 된 항목에 대해 일치 하는 첫 번째 값 (`DisplayField`)을 반환 합니다.
 
 ```csharp
 public override string CompletedString (NSComboBox comboBox, string uncompletedString)
@@ -1858,9 +1858,9 @@ namespace MacDatabase
 }
 ```
 
-@No__t_0 속성은 콤보 상자에 연결 된 `ComboBoxDataSource` (위에서 만든)의 바로 가기를 제공 합니다.
+`DataSource` 속성은 콤보 상자에 연결 된 `ComboBoxDataSource` (위에서 만든)의 바로 가기를 제공 합니다.
 
-@No__t_0 메서드는 지정 된 고유 ID에 대 한 사용자를 데이터베이스에서 로드 합니다.
+`LoadSelectedPerson` 메서드는 지정 된 고유 ID에 대 한 사용자를 데이터베이스에서 로드 합니다.
 
 ```csharp
 private void LoadSelectedPerson (string id)
@@ -1874,7 +1874,7 @@ private void LoadSelectedPerson (string id)
 }
 ```
 
-@No__t_0 메서드 재정의에서 먼저 사용자 지정 콤보 상자 데이터 원본의 인스턴스를 연결 합니다.
+`AwakeFromNib` 메서드 재정의에서 먼저 사용자 지정 콤보 상자 데이터 원본의 인스턴스를 연결 합니다.
 
 ```csharp
 EmployeeSelector.DataSource = new ComboBoxDataSource (Conn, "People", "Name");
@@ -1910,7 +1910,7 @@ Person = new PersonModel (Conn, DataSource.IDForIndex(0));
 
 ## <a name="sqlitenet-orm"></a>ORM SQLite.NET
 
-위에서 설명한 것 처럼 오픈 소스 ORM ( [SQLite.NET](http://www.sqlite.org) Object Relationship Manager)을 사용 하 여 SQLite 데이터베이스에서 데이터를 읽고 쓰는 데 필요한 코드의 양을 크게 줄일 수 있습니다. 키-값 코딩 및 데이터 바인딩이 개체에 적용 되는 몇 가지 요구 사항으로 인해 데이터를 바인딩할 때 가장 적합 한 경로가 아닐 수도 있습니다.
+위에서 설명한 것 처럼 오픈 소스 ORM ( [SQLite.NET](https://www.sqlite.org) Object Relationship Manager)을 사용 하 여 SQLite 데이터베이스에서 데이터를 읽고 쓰는 데 필요한 코드의 양을 크게 줄일 수 있습니다. 키-값 코딩 및 데이터 바인딩이 개체에 적용 되는 몇 가지 요구 사항으로 인해 데이터를 바인딩할 때 가장 적합 한 경로가 아닐 수도 있습니다.
 
 SQLite.Net 웹 사이트에 따라 _"SQLite는 자체 포함 된 서버를 사용 하지 않는 구성의 트랜잭션 SQL database 엔진을 구현 하는 소프트웨어 라이브러리입니다. SQLite는 전 세계에서 가장 널리 배포 되는 데이터베이스 엔진입니다. SQLite의 소스 코드는 공용 도메인에 있습니다. "_
 
@@ -2125,7 +2125,7 @@ namespace MacDatabase
 }
 ```
 
-나중에이 클래스의 인스턴스를 만들 때 open SQLite.NET 데이터베이스 연결을 전달 합니다. @No__t_0 메서드는 데이터베이스를 쿼리하고 `OccupationModel` 데이터 모델을 사용 하 여 검색 된 레코드를 메모리에 복사 합니다.
+나중에이 클래스의 인스턴스를 만들 때 open SQLite.NET 데이터베이스 연결을 전달 합니다. `LoadOccupations` 메서드는 데이터베이스를 쿼리하고 `OccupationModel` 데이터 모델을 사용 하 여 검색 된 레코드를 메모리에 복사 합니다.
 
 ### <a name="creating-the-table-delegate"></a>테이블 대리자 만들기
 

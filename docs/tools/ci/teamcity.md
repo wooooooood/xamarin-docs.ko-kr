@@ -3,21 +3,21 @@ title: Xamarin과 함께 팀 도시 사용
 description: 이 가이드에서는 TeamCity를 사용 하 여 모바일 응용 프로그램을 컴파일한 다음 Xamarin Test Cloud에 제출 하는 단계에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: ee1ef1ecda18ee9817fcf10b7dda0c7b4489bf9f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72273134"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029798"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin과 함께 팀 도시 사용
 
 _이 가이드에서는 TeamCity를 사용 하 여 모바일 응용 프로그램을 컴파일한 다음 Xamarin Test Cloud에 제출 하는 단계에 대해 설명 합니다._
 
-[지속적인 통합 가이드 소개](~/tools/ci/intro-to-ci.md) 에 설명 된 대로 CI (지속적인 통합)는 품질 모바일 응용 프로그램을 개발할 때 유용한 방법입니다. 연속 통합 서버 소프트웨어에 대해 다양 한 옵션을 사용할 수 있습니다. 이 가이드는 JetBrains에서 [Teamcity](http://www.jetbrains.com/teamcity/) 에 집중 합니다.
+[지속적인 통합 가이드 소개](~/tools/ci/intro-to-ci.md) 에 설명 된 대로 CI (지속적인 통합)는 품질 모바일 응용 프로그램을 개발할 때 유용한 방법입니다. 연속 통합 서버 소프트웨어에 대해 다양 한 옵션을 사용할 수 있습니다. 이 가이드는 JetBrains에서 [Teamcity](https://www.jetbrains.com/teamcity/) 에 집중 합니다.
 
 TeamCity 설치의 여러 다른 순열이 있습니다. 다음은 일부 목록입니다.
 
@@ -31,7 +31,7 @@ TeamCity 설치의 여러 다른 순열이 있습니다. 다음은 일부 목록
 
 TeamCity를 설정 하는 데는 몇 가지 단계가 있습니다.
 
-- **TeamCity 설치** –이 가이드에서 teamcity 설치는 다루지 않습니다. 이 가이드에서는 사용자 계정으로 TeamCity가 설치 되어 실행 되 고 있다고 가정 합니다. [Teamcity 설치](http://confluence.jetbrains.com/display/TCD8/Installation) 지침은 JetBrains에서 [teamcity 8 설명서](http://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) 에 나와 있습니다.
+- **TeamCity 설치** –이 가이드에서 teamcity 설치는 다루지 않습니다. 이 가이드에서는 사용자 계정으로 TeamCity가 설치 되어 실행 되 고 있다고 가정 합니다. [Teamcity 설치](https://confluence.jetbrains.com/display/TCD8/Installation) 지침은 JetBrains에서 [teamcity 8 설명서](https://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) 에 나와 있습니다.
 
 - **빌드 서버 준비** -이 단계는 모바일 응용 프로그램을 빌드하는 데 필요한 소프트웨어, 도구 및 인증서를 설치 하 고 배포를 위해 준비 하는 데 포함 됩니다.
 
@@ -85,7 +85,7 @@ TeamCity는 모바일 응용 Test Cloud 프로그램을 컴파일 및 제출 하
 
 - [**psake**](https://github.com/psake/psake) – 소프트웨어를 빌드하기 위한 Windows Powershell 라이브러리입니다.
 
-- [**가짜**](http://fsharp.github.io/FAKE/) – 필요에 F# 따라 기존 .net 라이브러리를 활용할 수 있도록 하는 DSL입니다.
+- [**가짜**](https://fsharp.github.io/FAKE/) – 필요에 F# 따라 기존 .net 라이브러리를 활용할 수 있도록 하는 DSL입니다.
 
 사용 되는 스크립팅 언어는 기본 설정 및 요구 사항에 따라 달라 집니다. [Taskypro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) 예제에는 [빌드 스크립트로](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile)Rake를 사용 하는 예가 포함 되어 있습니다.
 
@@ -211,4 +211,4 @@ TeamCity가 설치 되어 Mac용 Visual Studio 프로젝트를 빌드할 수 있
 
 - [Xamarin Android 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
 - [Xamarin.ios 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [TeamCity 설치 및 구성](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)
+- [TeamCity 설치 및 구성](https://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 11에 도입 된 Api를 사용 하 여 Xama
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2017
-ms.openlocfilehash: 8f1e9cabb78152374ee3eede80dcfc5dcba8dde1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 928936815c89dd74d0ad3775f59ea210702c8857
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752372"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032168"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Xamarin.ios에서 끌어서 놓기
 
@@ -35,20 +35,20 @@ iOS 11에는 iPad의 응용 프로그램 간에 데이터를 복사 하기 위�
 
 ## <a name="drag-and-drop-with-text-controls"></a>텍스트 컨트롤을 사용 하 여 끌어서 놓기
 
-`UITextView`및 `UITextField` 는에서 선택한 텍스트 끌기를 자동으로 지원 하 고에서 텍스트 콘텐츠를 삭제 하도록 지원 합니다.
+`UITextView` 및 `UITextField`에서는 선택한 텍스트를 끌어와에서 텍스트 내용을 끌어 놓는 기능을 자동으로 지원 합니다.
 
 <a name="uitableview" />
 
 ## <a name="drag-and-drop-with-uitableview"></a>UITableView를 사용 하 여 끌어서 놓기
 
-`UITableView`에는 테이블 행과의 끌어서 놓기 상호 작용에 대 한 기본 제공 기능이 있으며,이를 통해 기본 동작을 사용 하도록 설정 하는 몇 가지 메서드만 필요 합니다.
+`UITableView`에는 테이블 행과의 끌어서 놓기 상호 작용에 대 한 기본 제공 처리가 있으므로 몇 가지 메서드만 있으면 기본 동작을 사용 하도록 설정할 수 있습니다.
 
 관련 된 두 가지 인터페이스가 있습니다.
 
-- `IUITableViewDragDelegate`– 테이블 뷰에서 끌기를 시작할 때 정보를 패키지 합니다.
-- `IUITableViewDropDelegate`– 놓기를 시도 하 고 완료할 때 정보를 처리 합니다.
+- `IUITableViewDragDelegate` – 테이블 뷰에서 끌기를 시작할 때 정보를 패키지 합니다.
+- `IUITableViewDropDelegate` – 놓기를 시도 하 고 완료할 때 정보를 처리 합니다.
 
-[DragAndDropTableView 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) 에서 이러한 두 인터페이스는 모두 `UITableViewController` 클래스에서 구현 되며 대리자 및 데이터 소스와 함께 구현 됩니다. `ViewDidLoad` 메서드에 할당 됩니다.
+[DragAndDropTableView 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) 에서는이 두 인터페이스가 모두 `UITableViewController` 클래스에서 구현 되며 대리자 및 데이터 소스와 함께 구현 됩니다. `ViewDidLoad` 메서드에서 할당 됩니다.
 
 ```csharp
 this.TableView.DragDelegate = this;
@@ -59,9 +59,9 @@ this.TableView.DropDelegate = this;
 
 ### <a name="table-view-drag-delegate"></a>테이블 뷰 끌기 대리자
 
-테이블 뷰에서 `GetItemsForBeginningDragSession`행 끌기를 지 원하는 데 _필요한_ 유일한 방법은입니다. 사용자가 행을 끌기 시작 하면이 메서드가 호출 됩니다.
+테이블 뷰에서 행 끌기를 지 원하는 데 _필요한_ 유일한 방법은 `GetItemsForBeginningDragSession`입니다. 사용자가 행을 끌기 시작 하면이 메서드가 호출 됩니다.
 
-구현은 다음과 같습니다. 끌어 온 행과 연결 된 데이터를 검색 하 고 인코딩한 다음, 응용 프로그램 `NSItemProvider` 에서 작업의 "drop" 부분을 처리 하는 방법을 결정 하는을 구성 합니다 (예:이 예제에서는 데이터 `PlainText`형식을 처리할 수 있는지 여부).
+구현은 다음과 같습니다. 끌어 온 행과 연결 된 데이터를 검색 하 고 인코딩한 다음, 응용 프로그램에서 작업의 "삭제" 부분을 처리 하는 방법을 결정 하는 `NSItemProvider` 구성 합니다. 예를 들어이 예제에서는 데이터 형식을 처리할 수 있는지 여부와 같은 작업을 `PlainText`합니다.
 
 ```csharp
 public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
@@ -91,13 +91,13 @@ public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
 
 Drop 대리자의 메서드는 테이블 뷰에서 끌기 작업이 발생 하거나 위에서 완료 될 때 호출 됩니다. 필요한 메서드는 데이터를 삭제할 수 있는지 여부와 삭제가 완료 된 경우 수행할 작업을 결정 합니다.
 
-- `CanHandleDropSession`– 끌기가 진행 중이 고 잠재적으로 응용 프로그램에서 삭제 되는 동안이 메서드는 끌고 있는 데이터를 삭제할 수 있는지 여부를 확인 합니다.
-- `DropSessionDidUpdate`– 끌기를 진행 하는 동안이 메서드를 호출 하 여 의도 한 작업을 결정 합니다. 끌기 세션 및 가능한 인덱스 경로를 통해 끌고 있는 테이블 뷰의 정보는 사용자에 게 제공 되는 동작과 시각적 피드백을 확인 하는 데 모두 사용할 수 있습니다.
-- `PerformDrop`– 사용자가 손가락을 떼는 방법으로 삭제를 완료 하면이 메서드는 끌고 있는 데이터를 추출 하 고 테이블 뷰를 수정 하 여 새 행 (또는 행)에 데이터를 추가 합니다.
+- `CanHandleDropSession` – 끌기가 진행 중이 고 잠재적으로 응용 프로그램에서 삭제 되는 동안이 메서드는 끌고 있는 데이터를 삭제할 수 있는지 여부를 확인 합니다.
+- `DropSessionDidUpdate` – 끌기가 진행 되는 동안이 메서드를 호출 하 여 의도 한 작업을 결정 합니다. 끌기 세션 및 가능한 인덱스 경로를 통해 끌고 있는 테이블 뷰의 정보는 사용자에 게 제공 되는 동작과 시각적 피드백을 확인 하는 데 모두 사용할 수 있습니다.
+- `PerformDrop` – 사용자가 손가락을 떼는 방법으로 삭제를 완료 하면이 메서드는 끌고 있는 데이터를 추출 하 고 테이블 뷰를 수정 하 여 새 행 (또는 행)에 데이터를 추가 합니다.
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession`테이블 뷰에서 끌고 있는 데이터를 허용할 수 있는지 여부를 나타냅니다. 이 코드 조각에서를 `CanLoadObjects` 사용 하 여이 테이블 뷰에 문자열 데이터가 허용 되는지 확인 합니다.
+`CanHandleDropSession` 테이블 뷰에서 끌고 있는 데이터를 허용할 수 있는지 여부를 나타냅니다. 이 코드 조각에서 `CanLoadObjects`를 사용 하 여이 테이블 뷰에서 문자열 데이터를 사용할 수 있는지 확인 합니다.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -108,9 +108,9 @@ public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
 
 #### <a name="dropsessiondidupdate"></a>DropSessionDidUpdate
 
-메서드 `DropSessionDidUpdate` 는 끌기 작업이 진행 되는 동안 사용자에 게 시각적 신호를 제공 하는 동안 반복적으로 호출 됩니다.
+`DropSessionDidUpdate` 메서드는 끌기 작업이 진행 되는 동안 사용자에 게 시각적 신호를 제공 하는 동안 반복적으로 호출 됩니다.
 
-아래 코드에서 `HasActiveDrag` 는 작업이 현재 테이블 뷰에서 발생 했는지 여부를 확인 하는 데 사용 됩니다. 그렇다면 단일 행만 이동할 수 있습니다.
+아래 코드에서 `HasActiveDrag`를 사용 하 여 작업이 현재 테이블 뷰에서 생성 되었는지 여부를 확인 합니다. 그렇다면 단일 행만 이동할 수 있습니다.
 다른 원본에서 끌어온 경우 복사 작업이 표시 됩니다.
 
 ```csharp
@@ -137,7 +137,7 @@ Drop 의도는 새 행을 삽입 하거나 기존 행에 데이터를 추가/추
 
 #### <a name="performdrop"></a>PerformDrop
 
-메서드 `PerformDrop` 는 사용자가 작업을 완료할 때 호출 되 고, 삭제 된 데이터를 반영 하도록 테이블 뷰와 데이터 원본을 수정 합니다.
+`PerformDrop` 메서드는 사용자가 작업을 완료할 때 호출 되며, 삭제 된 데이터를 반영 하도록 테이블 뷰와 데이터 원본을 수정 합니다.
 
 ```csharp
 public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coordinator)

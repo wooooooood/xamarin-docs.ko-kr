@@ -3,15 +3,15 @@ title: Xamarin Android 및 마모 된 OS에서 화면 크기 작업
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 4673bc6898da06f07a624b4aa585e62009a575e1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 86e05dc0e9cd5df325126cc5a339b36dd27c1e45
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758310"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030354"
 ---
 # <a name="working-with-screen-sizes"></a>화면 크기 작업
 
@@ -21,15 +21,15 @@ Android 장치는 사각형 또는 둥근 표시를 포함할 수 있으며 크�
 
 ## <a name="identifying-screen-type"></a>화면 유형 식별
 
-마모 된 지원 라이브러리는 `WatchViewStub` 및 `BoxInsetLayout`와 같은 다양 한 화면 모양을 검색 하 고이에 맞게 조정 하는 데 도움이 되는 몇 가지 컨트롤을 제공 합니다.
+마모 된 지원 라이브러리는 `WatchViewStub` 및 `BoxInsetLayout`와 같이 다양 한 화면 모양을 검색 하 고이에 맞게 조정 하는 데 도움이 되는 몇 가지 컨트롤을 제공 합니다.
 
-다른 지원 라이브러리 컨트롤 (예: `GridViewPager`) 중 일부는 화면 셰이프 자체를 *자동으로* 검색 하 고 아래에서 설명 하는 컨트롤의 자식으로 추가 되어서는 안 됩니다.
+다른 지원 라이브러리 컨트롤 (예: `GridViewPager`)은 화면 셰이프 자체를 *자동으로* 검색 하 고 아래에서 설명 하는 컨트롤의 자식으로 추가 되어서는 안 됩니다.
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
 [WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub) 샘플을 참조 하 여 화면 유형을 검색 하 고 각 유형별로 다른 레이아웃을 표시 하는 방법을 확인 합니다.
 
-주 레이아웃 파일에는 `android.support.wearable.view.WatchViewStub` `app:rectLayout` 및 `app:roundLayout` 특성을 사용 하는 사각형 및 원형 화면에 대해 서로 다른 레이아웃을 참조 하는가 포함 되어 있습니다.
+주 레이아웃 파일에는 `app:rectLayout` 및 `app:roundLayout` 특성을 사용 하 여 사각형 및 원형 화면에 대 한 다양 한 레이아웃을 참조 하는 `android.support.wearable.view.WatchViewStub` 포함 되어 있습니다.
 
 ```xml
 <android.support.wearable.view.WatchViewStub
@@ -49,7 +49,7 @@ Android 장치는 사각형 또는 둥근 표시를 포함할 수 있으며 크�
 
 각 화면 유형에 대해 서로 다른 레이아웃을 작성 하는 대신 사각형 또는 둥근 화면에 맞게 조정 되는 단일 보기를 만들 수도 있습니다.
 
-이 [Google 예제](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) 에서는를 `BoxInsetLayout` 사용 하 여 사각형 및 원형 화면에서 동일한 레이아웃을 사용 하는 방법을 보여 줍니다.
+이 [Google 예제](https://developer.android.com/training/wearables/ui/layouts.html#same-layout) 에서는 `BoxInsetLayout` 사용 하 여 사각형 및 원형 화면에서 동일한 레이아웃을 사용 하는 방법을 보여 줍니다.
 
 ## <a name="wear-ui-designer"></a>마모 UI 디자이너
 

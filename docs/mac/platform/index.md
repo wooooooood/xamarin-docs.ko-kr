@@ -1,18 +1,18 @@
 ---
 title: macOS 플랫폼 기능
-description: 이 문서는 중요 macOS 및 Xamarin.ios 플랫폼 기능을 설명 하는 가이드로 연결 됩니다. OpenTK, Storyboard, 확장 등
+description: 이 문서는 중요 macOS 및 Xamarin.ios 플랫폼 기능 (OpenTK, Storyboard, extensions 등)을 설명 하는 가이드로 연결 됩니다.
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 9587548becf840a06c0cbf198c0afe716a7156a2
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 174ab8493203268cefb6eb638c77c6c96c38c0c0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284451"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029895"
 ---
 # <a name="macos-platform-features"></a>macOS 플랫폼 기능
 

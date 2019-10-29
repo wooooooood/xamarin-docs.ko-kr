@@ -4,15 +4,15 @@ description: 이 문서에서는 현재 Xamarin preview 릴리스가 바인딩�
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: f5028fe6ae7ee726ffd94d7908a089ce3bdcb385
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 94fea1786497d04602ea6cf06d875206cf69eb3e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287946"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030550"
 ---
 # <a name="introduction-to-tvos-12"></a>tvOS 12 소개
 
@@ -26,11 +26,11 @@ tvOS 12에는 tvOS 개발자가 포스터 보기, 캡션 단추, 카드 보기 �
 
 ## <a name="password-autofill"></a>암호 자동 채우기
 
-TvOS 12를 사용 하면 사용자는 자신의 iOS 장치를 사용 하 여 한 번의 탭으로 tvOS 앱에 로그인 할 수 있습니다. 이는 `UITextContentType` 사용을 조합 하 여 사용자 이름 및 암호 필드를 지정 하 고, 연결 된 도메인을 사용 하 여 iOS 앱과 tvOS 앱 간의 관계를 설정 하 고, 사용자가 포커스를 받을 항목을 선택할 수 있는 기본 포커스 환경을 사용 하도록 설정 합니다. 사용자 이름 및 암호를 제공 합니다.
+TvOS 12를 사용 하면 사용자는 자신의 iOS 장치를 사용 하 여 한 번의 탭으로 tvOS 앱에 로그인 할 수 있습니다. `UITextContentType` 사용 하 여 사용자 이름 및 암호 필드를 지정 하 고, 연결 된 도메인을 사용 하 여 iOS 앱과 tvOS 앱 간의 관계를 설정 하 고, 사용자가 포커스를 받을 항목을 선택할 수 있는 기본 포커스 환경을 사용 하 여 사용 하도록 설정 됩니다. 사용자 이름 및 암호를 제공 합니다.
 
 ## <a name="focus-engine-enhancements"></a>포커스 엔진 향상
 
-tvOS 12는 모든 앱이 렌더링 되는 방식에 관계 없이 포커스 엔진과 상호 작용 하도록 허용 합니다. 사용자의 Siri 원격 상호 작용을 통해 포커스 엔진을 모든 앱과 함께 사용 하 여 항목을 선택 하 고, 가능한 포커스 변경에서 힌트를 선택 하 고, 자연스럽 게 업데이트할 수 있습니다. 이 기능은 uikit의 `IUIFocusItemContainer` 인터페이스 `UIFocusMovementHint` , 클래스, `IUIFocusItemScrollableContainer` 인터페이스 및 기타 관련 클래스와 메서드를 통해 사용자 지정 응용 프로그램에서 사용할 수 있습니다.
+tvOS 12는 모든 앱이 렌더링 되는 방식에 관계 없이 포커스 엔진과 상호 작용 하도록 허용 합니다. 사용자의 Siri 원격 상호 작용을 통해 포커스 엔진을 모든 앱과 함께 사용 하 여 항목을 선택 하 고, 가능한 포커스 변경에서 힌트를 선택 하 고, 자연스럽 게 업데이트할 수 있습니다. 이 기능은 UIKit의 `IUIFocusItemContainer` 인터페이스, `UIFocusMovementHint` 클래스, `IUIFocusItemScrollableContainer` 인터페이스 및 기타 관련 클래스와 메서드를 통해 사용자 지정 응용 프로그램에서 사용할 수 있습니다.
 
 ## <a name="vision-framework"></a>비전 프레임 워크
 

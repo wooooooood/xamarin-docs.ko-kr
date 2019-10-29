@@ -4,23 +4,23 @@ description: 이 문서에서는 Xamarin에서 tvOS 경고를 사용 하는 방�
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 2578272dcd38399f23f2aac67503ea4e1b09a027
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 76a9af2a3d845ce3f93b02358901cda8d9d02294
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769073"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030509"
 ---
 # <a name="working-with-tvos-alerts-in-xamarin"></a>Xamarin에서 tvOS 경고 작업
 
 _이 문서에서는 UIAlertController를 사용 하 여 tvOS의 사용자에 게 경고 메시지를 표시 하는 방법을 설명 합니다._
 
-TvOS 사용자의 주의가 나 파괴적인 작업 (예: 파일 삭제)을 수행할 수 있는 권한을 요청 해야 하는 경우 `UIAlertViewController`다음을 사용 하 여 경고 메시지를 표시할 수 있습니다.
+TvOS 사용자의 주의가 나 파괴적인 작업 (예: 파일 삭제)을 수행할 수 있는 권한을 요청 해야 하는 경우 `UIAlertViewController`를 사용 하 여 경고 메시지를 표시할 수 있습니다.
 
-[![](alerts-images/alert01.png "예제 UIAlertViewController")](alerts-images/alert01.png#lightbox)
+[![](alerts-images/alert01.png "An example UIAlertViewController")](alerts-images/alert01.png#lightbox)
 
 메시지를 표시 하는 것 외에도 사용자가 작업에 응답 하 고 피드백을 제공할 수 있도록 경고에 단추 및 텍스트 필드를 추가할 수 있습니다.
 
@@ -30,7 +30,7 @@ TvOS 사용자의 주의가 나 파괴적인 작업 (예: 파일 삭제)을 수�
 
 위에서 설명한 것 처럼 경고는 사용자의 주의를 받고 앱의 상태를 알리거나 피드백을 요청 하는 데 사용 됩니다. 경고는 제목을 제공 해야 하며 메시지 및 하나 이상의 단추 또는 텍스트 필드를 선택적으로 포함할 수 있습니다.
 
-[![](alerts-images/alert04.png "예제 경고")](alerts-images/alert04.png#lightbox)
+[![](alerts-images/alert04.png "An example alert")](alerts-images/alert04.png#lightbox)
 
 Apple에는 경고를 사용 하기 위한 다음과 같은 제안이 있습니다.
 
@@ -55,13 +55,13 @@ Apple에는 경고에 단추를 추가 하는 다음과 같은 제안이 있습�
 
 - **두 개의 단추로 제한** -가능 하면 경고를 최대 2 개의 단추로 제한 합니다. 단일 단추 경고는 정보를 제공 하지만 작업은 제공 하지 않습니다. 두 개의 단추 경고는 간단한 예/아니요 동작을 제공 합니다.
 - **간결한 논리적 단추 제목을 사용** 합니다. 간단한 1 ~ 2 개의 단어 단추를 사용 하 여 단추의 작업에 가장 적합 한 방법을 명확 하 게 설명 합니다. 자세한 내용은 [단추 사용](~/ios/tvos/user-interface/buttons.md) 설명서를 참조 하세요.
-- **명확 하 게 표시** 되는 단추-소거식 작업 (예: 파일 삭제)을 수행 하는 단추에 대해 명확 `UIAlertActionStyle.Destructive` 하 게 스타일로 표시 합니다.
+- **명확 하 게 표시** 되는 단추-소거식 작업 (예: 파일 삭제)을 수행 하는 단추의 경우 `UIAlertActionStyle.Destructive` 스타일로 명확 하 게 표시 합니다.
 
 <a name="Displaying-an-Alert" />
 
 ## <a name="displaying-an-alert"></a>경고 표시
 
-경고를 표시 하려면 인스턴스를 만들고 작업 (단추) `UIAlertViewController` 을 추가 하 고 경고 스타일을 선택 하 여 인스턴스를 구성 합니다. 예를 들어 다음 코드는 확인/취소 경고를 표시 합니다.
+경고를 표시 하려면 `UIAlertViewController`의 인스턴스를 만들고 작업 (단추)을 추가 하 고 경고 스타일을 선택 하 여 구성 합니다. 예를 들어 다음 코드는 확인/취소 경고를 표시 합니다.
 
 ```csharp
 const string title = "A Short Title is Best";
@@ -103,13 +103,13 @@ UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
 );
 ```
 
-열거형 `UIAlertActionStyle` 을 사용 하 여 단추의 스타일을 다음 중 하나로 설정할 수 있습니다.
+`UIAlertActionStyle` 열거형을 사용 하면 단추의 스타일을 다음 중 하나로 설정할 수 있습니다.
 
 - **기본값** -경고가 표시 될 때 단추가 기본 단추로 선택 됩니다.
 - **취소** -경고에 대 한 취소 단추입니다.
 - **파괴적인** -파일 삭제와 같은 파괴적인 작업으로 단추를 강조 표시 합니다. 현재 tvOS는 빨강 배경으로 파괴적인 단추를 렌더링 합니다.
 
-메서드는 지정 된 작업 `UIAlertViewController` 을에 추가 하 고, `PresentViewController (alertController, true, null)` 마지막으로 메서드는 지정 된 경고를 사용자에 게 표시 합니다. `AddAction`
+`AddAction` 메서드는 지정 된 작업을 `UIAlertViewController`에 추가 하 고 마지막으로 `PresentViewController (alertController, true, null)` 메서드는 지정 된 경고를 사용자에 게 표시 합니다.
 
 <a name="Adding-Text-Fields" />
 
@@ -117,11 +117,11 @@ UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
 
 경고에 작업 (단추)을 추가 하는 것 외에도 사용자가 사용자 Id 및 암호와 같은 정보를 입력할 수 있도록 경고에 텍스트 필드를 추가할 수 있습니다.
 
-[![](alerts-images/alert02.png "경고의 텍스트 필드")](alerts-images/alert02.png#lightbox)
+[![](alerts-images/alert02.png "Text Field in an alert")](alerts-images/alert02.png#lightbox)
 
 사용자가 텍스트 필드를 선택 하면 필드 값을 입력할 수 있도록 표준 tvOS 키보드가 표시 됩니다.
 
-[![](alerts-images/alert03.png "텍스트 입력")](alerts-images/alert03.png#lightbox)
+[![](alerts-images/alert03.png "Entering text")](alerts-images/alert03.png#lightbox)
 
 다음 코드는 값을 입력 하기 위한 단일 텍스트 필드를 포함 하는 확인/취소 경고를 표시 합니다.
 
@@ -160,7 +160,7 @@ alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) 
 controller.PresentViewController(alert,true,null);
 ```
 
-메서드 `AddTextField` 는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예를 들어:
+`AddTextField` 메서드는 새 텍스트 필드를 경고에 추가 합니다. 그런 다음 자리 표시자 텍스트 (필드가 비어 있을 때 표시 되는 텍스트), 기본 텍스트 값 및 키보드 형식 등의 속성을 설정 하 여 구성할 수 있습니다. 예를 들면,
 
 ```csharp
 // Initialize field
@@ -186,13 +186,13 @@ alert.AddTextField ((textField) => {
 });
 ```
 
-사용자가 텍스트 필드에 값을 입력 한 후에는 `field` 변수를 사용 하 여 해당 값에 액세스할 수 있습니다.
+사용자가 텍스트 필드에 값을 입력 한 후 `field` 변수를 사용 하 여 해당 값에 액세스할 수 있습니다.
 
 <a name="Alert-View-Controller-Helper-Class" />
 
 ## <a name="alert-view-controller-helper-class"></a>경고 뷰 컨트롤러 도우미 클래스
 
-를 사용 하는 일반적인 유형의 경고는 간단 `UIAlertViewController` 하 게 표시 되기 때문에 약간의 중복 코드가 될 수 있습니다. 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예:
+`UIAlertViewController`를 사용 하 여 간단한 경고 유형을 표시 하기 때문에 약간의 중복 코드가 생성 될 수 있으므로 도우미 클래스를 사용 하 여 반복적인 코드의 양을 줄일 수 있습니다. 예를 들면,
 
 ```csharp
 using System;
@@ -365,7 +365,7 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는를 사용 하 `UIAlertController` 여 tvOS의 사용자에 게 경고 메시지를 표시 하는 작업에 대해 설명 했습니다. 먼저 간단한 경고를 표시 하 고 단추를 추가 하는 방법을 살펴보았습니다. 다음으로 경고에 텍스트 필드를 추가 하는 방법을 살펴보았습니다. 마지막으로 도우미 클래스를 사용 하 여 경고를 표시 하는 데 필요한 반복적인 코드의 양을 줄이는 방법을 살펴보았습니다.
+이 문서에서는 tvOS에서 사용자에 게 경고 메시지를 표시 하는 `UIAlertController` 작업에 대해 설명 했습니다. 먼저 간단한 경고를 표시 하 고 단추를 추가 하는 방법을 살펴보았습니다. 다음으로 경고에 텍스트 필드를 추가 하는 방법을 살펴보았습니다. 마지막으로 도우미 클래스를 사용 하 여 경고를 표시 하는 데 필요한 반복적인 코드의 양을 줄이는 방법을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 

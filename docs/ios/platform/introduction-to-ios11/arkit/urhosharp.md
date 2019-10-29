@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 ARKit 앱을 설정 하는 �
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2017
-ms.openlocfilehash: 7f53108460c4e0799ab6c4078d8bb26788b0bf6e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 67ee62fe18385f3a79f4afcb26299990f4666763
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752542"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032232"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Xamarin.ios에서 ARKit를 사용 하 여 UrhoSharp 사용
 
@@ -36,26 +36,26 @@ IPhone/iPad에서 볼 수 있듯이 전 세계에 3D 콘텐츠가 제공 됩니�
 
 ### <a name="ios-application-launch"></a>iOS 응용 프로그램 시작
 
-IOS 응용 프로그램에서 3d 콘텐츠를 만들고 시작 해야 합니다 `Urho.Application` .이 작업을 수행 하려면의 서브 클래스를 구현 하 고 메서드를 `Start` 재정의 하 여 설치 코드를 제공 합니다.  여기서는 장면을 데이터로 채우고 이벤트 처리기를 설정 하는 등의 방법을 사용 합니다.
+IOS 응용 프로그램은 3D 콘텐츠를 만들고 시작 해야 합니다 .이 작업을 수행 하려면 `Urho.Application`의 서브 클래스를 구현 하 고 `Start` 메서드를 재정의 하 여 설치 코드를 제공 합니다.  여기서는 장면을 데이터로 채우고 이벤트 처리기를 설정 하는 등의 방법을 사용 합니다.
 
-서브 `Urho.ArkitApp` `Start` 클래스와 해당 메서드의 메서드가 많은 리프트를 수행 하는 클래스를 도입 했습니다. `Urho.Application`   기존 urho 응용 프로그램에 대 한 모든 작업을 수행 하려면 기본 클래스를 형식 `Urho.ArkitApp` 으로 변경 하 고 전 세계에서 urho 장면을 실행 하는 응용 프로그램을 만들어야 합니다.
+`Urho.ArkitApp` 클래스가 도입 되었습니다 .이 클래스는 `Urho.Application` 및 해당 `Start` 메서드에서 많은 리프트를 수행 합니다.   기존 Urho 응용 프로그램에 대 한 모든 작업을 수행 하려면 기본 클래스를 `Urho.ArkitApp` 형식으로 변경 해야 하며, 전 세계에서 urho 장면을 실행 하는 응용 프로그램이 있습니다.
 
 ### <a name="the-arkitapp-class"></a>ArkitApp 클래스
 
 이 클래스는 운영 체제에서 제공 하는 ARKit 이벤트의 처리 뿐만 아니라 몇 가지 주요 개체를 포함 하는 장면의 편리한 기본값 집합을 제공 합니다.
 
-설치 프로그램이 `Start` 가상 메서드에서 수행 됩니다.   서브 클래스에서이 메서드를 재정의 하는 경우 고유한 구현에서를 사용 `base.Start()` 하 여 부모에 연결 해야 합니다.
+설치 프로그램이 `Start` 가상 메서드에서 수행 됩니다.   서브 클래스에서이 메서드를 재정의 하는 경우 고유한 구현에서 `base.Start()`를 사용 하 여 부모에 연결 해야 합니다.
 
-메서드 `Start` 는 장면, 뷰포트, 카메라 및 방향성 광원을 설정 하 고 공용 속성으로 표시 합니다.
+`Start` 메서드는 장면, 뷰포트, 카메라 및 방향성 광원을 설정 하 고 공용 속성으로 화면을 표시 합니다.
 
-- 개체를 보유할입니다. `Scene`
-- 그림자가 `Light` 있는 방향성 이며, 속성을 `LightNode` 통해 해당 위치를 사용할 수 있습니다.
-- arkit에서 응용 프로그램에 대 한 업데이트를 전달할 때 구성 요소가 업데이트 되는 `Camera` 입니다.
-- 결과 `ViewPort` 를 표시 하는입니다.
+- 개체를 보유 하는 `Scene`
+- 그림자가 있는 방향 `Light` `LightNode` 속성을 통해 해당 위치를 사용할 수 있습니다.
+- ARKit에서 응용 프로그램에 대 한 업데이트를 전달할 때 구성 요소가 업데이트 되는 `Camera`입니다.
+- 결과를 표시 하 `ViewPort`입니다.
 
 ### <a name="your-code"></a>코드
 
-그런 다음 클래스의 `ArkitApp` 서브 클래스를 만들고 메서드를 `Start` 재정의 해야 합니다.   메서드가 수행 해야 하는 첫 번째 작업은를 호출 `ArkitApp.Start` `base.Start()`하 여에 연결 하는 것입니다.  그런 다음 ArkitApp를 사용 하 여 개체를 장면에 추가 하 고 처리할 광원, 그림자 또는 이벤트를 사용자 지정할 수 있습니다.
+그런 다음 `ArkitApp` 클래스의 서브 클래스를 만들고 `Start` 메서드를 재정의 해야 합니다.   메서드가 수행 해야 하는 첫 번째 작업은 `base.Start()`를 호출 하 여 `ArkitApp.Start`에 연결 하는 것입니다.  그런 다음 ArkitApp를 사용 하 여 개체를 장면에 추가 하 고 처리할 광원, 그림자 또는 이벤트를 사용자 지정할 수 있습니다.
 
 ARKit/UrhoSharp 샘플은 질감이 있는 애니메이션 문자를 로드 하 고 다음 구현을 사용 하 여 애니메이션을 재생 합니다.
 
@@ -98,23 +98,23 @@ Urho를 사용 하 여 3D 응용 프로그램을 만드는 방법에 대해 자�
 > [!NOTE]
 > 이 섹션은 UrhoSharp 및 ARKit의 기본 환경을 사용자 지정 하려는 개발자를 위한 것입니다. 또는 통합이 작동 하는 방식을 심층적으로 파악 하고자 합니다.   이 섹션을 읽을 필요는 없습니다.
 
-ARKit API는 매우 간단 하며, [ARSession](https://developer.apple.com/documentation/arkit/arsession) 개체를 만들고 구성한 다음 [ARFrame](https://developer.apple.com/documentation/arkit/arframe) 개체를 전달 하기 시작 합니다.   여기에는 카메라에 의해 캡처된 이미지와 장치의 예상 실제 위치가 모두 포함 됩니다.
+ARKit API는 매우 간단 하며, [Arkit](https://developer.apple.com/documentation/arkit/arsession) 개체를 만들고 구성한 다음 [arkit](https://developer.apple.com/documentation/arkit/arframe) 개체를 전달 하기 시작 합니다.   여기에는 카메라에 의해 캡처된 이미지와 장치의 예상 실제 위치가 모두 포함 됩니다.
 
 카메라에서 3D 콘텐츠를 사용 하 여 전달 되는 이미지를 작성 하 고, 장치 위치 및 위치에 대 한 기회와 일치 하도록 UrhoSharp의 카메라를 조정 합니다.
 
-다음 다이어그램에서는 `ArkitApp` 클래스에서 수행 되는 작업을 보여 줍니다.
+다음 다이어그램은 `ArkitApp` 클래스에서 수행 되는 작업을 보여 줍니다.
 
-[![ArkitApp의 클래스 및 화면 다이어그램](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
+[ArkitApp의 클래스 및 화면![다이어그램](urhosharp-images/image2.png)](urhosharp-images/image2.png#lightbox)
 
 ### <a name="rendering-the-frames"></a>프레임 렌더링
 
 아이디어는 간단 하며 카메라에서 제공 되는 비디오를 3D 그래픽으로 결합 하 여 결합 된 이미지를 생성 합니다.     이러한 캡처된 이미지를 순서 대로 가져오는 것 이며,이 입력을 Urho 장면으로 혼합 합니다.
 
-이 작업을 수행 하는 가장 간단한 방법은를 `RenderPathCommand` main `RenderPath`에 삽입 하는 것입니다.  단일 프레임을 그리기 위해 수행 하는 일련의 명령입니다.  이 명령은 뷰포트를 전달 하는 모든 질감으로 채웁니다.    이는 처리 되는 첫 번째 프레임에서 설정 하 고 실제 정의는이 시점에서 로드 되는 th **Arrenderpath .xml** 파일에서 수행 됩니다.
+이 작업을 수행 하는 가장 간단한 방법은 기본 `RenderPath`에 `RenderPathCommand`를 삽입 하는 것입니다.  단일 프레임을 그리기 위해 수행 하는 일련의 명령입니다.  이 명령은 뷰포트를 전달 하는 모든 질감으로 채웁니다.    이는 처리 되는 첫 번째 프레임에서 설정 하 고 실제 정의는이 시점에서 로드 되는 th **Arrenderpath .xml** 파일에서 수행 됩니다.
 
 그러나 두 가지 문제를 함께 결합 하는 두 가지 문제에 직면 하 고 있습니다.
 
-1. IOS에서 GPU 질감의 해상도는 2의 거듭제곱 이어야 하지만 카메라에서 가져올 프레임의 해상도는 2의 거듭제곱 이어야 합니다. 예를 들면 다음과 같습니다. 1280x720.
+1. IOS에서 GPU 질감의 해상도는 2의 거듭제곱 이어야 하지만 카메라에서 가져올 프레임의 해상도는 2의 거듭제곱 (예: 1280x720)이 아닙니다.
 2. 프레임은 [YUV](https://en.wikipedia.org/wiki/YUV) 형식으로 인코딩되고, 두 이미지 (루마 및 크로마)로 표시 됩니다.
 
 YUV 프레임은 서로 다른 두 가지 해상도로 제공 됩니다.  광도 구성 요소에 대 한 광도 (기본적으로 회색 눈금 이미지)와 훨씬 더 작은 640x360을 나타내는 1280x720 이미지는 다음과 같습니다.
@@ -151,7 +151,7 @@ cameraUVtexture.SetAddressMode(TextureCoordinate.V, TextureAddressMode.Clamp);
 
 ### <a name="adjusting-the-camera"></a>카메라 조정
 
-또한 `ARFrame` 개체에는 예상 장치 위치도 포함 됩니다.  이제 게임 카메라 ARFrame을 이동 해야 합니다. Arframe는 장치 방향 (roll, 피치 및 요)을 추적 하 고 비디오 위에 고정 된 홀로그램을 렌더링 하는 것은 아닙니다. 하지만 장치를 이동 하는 경우에는 비트 holograms가 드리프트 됩니다.
+`ARFrame` 개체에는 예상 장치 위치도 포함 됩니다.  이제 게임 카메라 ARFrame을 이동 해야 합니다. Arframe는 장치 방향 (roll, 피치 및 요)을 추적 하 고 비디오 위에 고정 된 홀로그램을 렌더링 하는 것은 아닙니다. 하지만 장치를 이동 하는 경우에는 비트 holograms가 드리프트 됩니다.
 
 이는 자이로스코프가 같은 기본 제공 센서가 이동을 추적할 수 없고 가속만 가능 하기 때문에 발생 합니다.  ARKit는 각 프레임을 분석 하 여 추적할 기능 요소를 추출 하므로 이동 및 회전 데이터를 포함 하는 정확한 변환 매트릭스를 제공할 수 있습니다.
 
@@ -162,7 +162,7 @@ var row = arCamera.Transform.Row3;
 CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
-Arkit `-row.Z` 에서 오른손 좌표계를 사용 하기 때문에를 사용 합니다.
+ARKit에서 오른손 좌표계를 사용 하기 때문에 `-row.Z`를 사용 합니다.
 
 ### <a name="plane-detection"></a>평면 검색
 

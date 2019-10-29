@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 복사 �
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: cf6835b99ea70c3922dd68bc21af3e44815cc92e
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 446006b89b82a1f5070a45d7e296e0563d74dbe4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70769933"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032632"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Xamarin.ios에서 복사 하 여 붙여넣기
 
@@ -414,7 +414,7 @@ public ImageDocument Document {
 }
 ```
 
-@No__t_0, `WillChangeValue` 및 `DidChangeValue`를 사용 하 여 Xcode에서 키-값 코딩 및 데이터 바인딩을 허용 하도록 `Document` 속성을 설정 했습니다.
+`Export`, `WillChangeValue` 및 `DidChangeValue`를 사용 하 여 Xcode에서 키-값 코딩 및 데이터 바인딩을 허용 하도록 `Document` 속성을 설정 했습니다.
 
 또한 다음 속성을 사용 하 여 Xcode의 UI에 추가한 이미지의 이미지를 노출 합니다.
 
@@ -643,7 +643,7 @@ MacOS (이전의 OS X)에서 대지의 (`NSPasteboard`)는 복사 & 붙여넣기
 
 ### <a name="what-is-a-pasteboard"></a>대지의 정의
 
-@No__t_0 클래스는 응용 프로그램 간에 또는 지정 된 앱 내에서 정보를 교환 하기 위한 표준화 된 메커니즘을 제공 합니다. 대지의 주요 기능은 복사 및 붙여넣기 작업을 처리 하기 위한 것입니다.
+`NSPasteboard` 클래스는 응용 프로그램 간에 또는 지정 된 앱 내에서 정보를 교환 하기 위한 표준화 된 메커니즘을 제공 합니다. 대지의 주요 기능은 복사 및 붙여넣기 작업을 처리 하기 위한 것입니다.
 
 1. 사용자가 앱에서 항목을 선택 하 고 **잘라내기** 또는 **복사** 메뉴 항목을 사용 하는 경우 선택한 항목에 대 한 하나 이상의 표현이 대지의 위에 배치 됩니다.
 2. 사용자가 동일한 앱 또는 다른 앱 내에서 **붙여넣기** 메뉴 항목을 사용 하는 경우 해당 항목에서 처리할 수 있는 데이터 버전이 대지의 복사 되 고 앱에 추가 됩니다.
@@ -697,7 +697,7 @@ Less 명백한 대지의 경우에는 찾기, 끌기, 끌어서 놓기 및 응�
 
 각 대지의 새 소유자가 선언 될 때마다 증가 하는 _변경 횟수_ 를 유지 합니다. 앱은 변경 개수 값을 확인 하 여 마지막으로 검사 한 후에 대지의 내용이 변경 되었는지 여부를 확인할 수 있습니다.
 
-@No__t_2 클래스의 `ChangeCount` 및 `ClearContents` 메서드를 사용 하 여 지정 된 대지의 변경 횟수를 수정할 수 있습니다.
+`NSPasteboard` 클래스의 `ChangeCount` 및 `ClearContents` 메서드를 사용 하 여 지정 된 대지의 변경 횟수를 수정할 수 있습니다.
 
 ## <a name="copying-data-to-a-pasteboard"></a>대지의 데이터 복사
 
@@ -716,7 +716,7 @@ pasteboard.ClearContents();
 pasteboard.WriteObjects (new NSImage[] {image});
 ```
 
-일반적으로 위의 예제에서 수행한 것 처럼 일반 대 면에만 씁니다. @No__t_0 메서드로 보내는 모든 개체는 `INSPasteboardWriting` 인터페이스를 *따라야 합니다.* @No__t_0, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString` 및 `NSPasteboardItem`)와 같은 몇 가지 기본 제공 클래스는이 인터페이스를 자동으로 준수 합니다.
+일반적으로 위의 예제에서 수행한 것 처럼 일반 대 면에만 씁니다. `WriteObjects` 메서드로 보내는 모든 개체는 `INSPasteboardWriting` 인터페이스를 *따라야 합니다.* `NSString`, `NSImage`, `NSURL`, `NSColor`, `NSAttributedString`및 `NSPasteboardItem`)와 같은 몇 가지 기본 제공 클래스는이 인터페이스를 자동으로 준수 합니다.
 
 사용자 지정 데이터 클래스를 사용자 지정 데이터 클래스에 작성 하는 경우에는 `INSPasteboardWriting` 인터페이스를 준수 하거나 `NSPasteboardItem` 클래스의 인스턴스에 래핑해야 합니다 (아래의 [사용자 지정 데이터 형식](#Custom_Data_Types) 섹션 참조).
 
@@ -726,7 +726,7 @@ pasteboard.WriteObjects (new NSImage[] {image});
 
 ### <a name="simple-paste-operation"></a>단순 붙여넣기 작업
 
-@No__t_0 메서드를 사용 하 여 대지의 데이터를 읽습니다. 두 매개 변수가 필요 합니다.
+`ReadObjectsForClasses` 메서드를 사용 하 여 대지의 데이터를 읽습니다. 두 매개 변수가 필요 합니다.
 
 1. 대지의 읽어 읽으려고 하는 `NSObject` 기반 클래스 형식의 배열입니다. 가장 적합 한 데이터 형식으로 순서를 지정 해야 합니다.
 2. 추가 제약 조건 (예: 특정 URL 콘텐츠 형식으로 제한)을 포함 하는 사전 또는 추가 제약 조건이 필요 하지 않은 경우 빈 사전입니다.
@@ -767,7 +767,7 @@ public void PasteImage(NSObject sender) {
 
 생성 되는 Xamarin.ios 응용 프로그램의 형식에 따라 붙여넣은 데이터의 여러 표현을 처리할 수 있습니다. 이러한 상황에서 데이터를 검색 하는 두 가지 시나리오는 다음과 같습니다.
 
-1. @No__t_0 메서드에 대 한 단일 호출을 수행 하 고 원하는 모든 표현의 배열을 기본 순서로 제공 합니다.
+1. `ReadObjectsForClasses` 메서드에 대 한 단일 호출을 수행 하 고 원하는 모든 표현의 배열을 기본 순서로 제공 합니다.
 2. 매번 다른 형식의 배열을 요청 하는 `ReadObjectsForClasses` 메서드를 여러 번 호출 합니다.
 
 작업 보드에서 데이터를 검색 하는 방법에 대 한 자세한 내용은 위의 **단순 붙여넣기 작업** 섹션을 참조 하세요.
@@ -982,7 +982,7 @@ public ImageInfo(NSCoder decoder) {
 
 #### <a name="writing-to-the-pasteboard"></a>대지의에 쓰기
 
-@No__t_0 인터페이스를 준수 하 여 클래스를 대지의에 쓸 수 있도록 두 개의 메서드와 선택적으로 세 번째 메서드를 노출 해야 합니다.
+`INSPasteboardWriting` 인터페이스를 준수 하 여 클래스를 대지의에 쓸 수 있도록 두 개의 메서드와 선택적으로 세 번째 메서드를 노출 해야 합니다.
 
 먼저 사용자 지정 클래스를 쓸 수 있는 데이터 형식 표현에 대 한 정보를 지시 해야 합니다.
 
@@ -1017,7 +1017,7 @@ public virtual NSObject GetPasteboardPropertyListForType (string type) {
 }
 ```
 
-@No__t_0 형식에 대해 간단한 형식의 `NSString` 개체를 반환 합니다. 사용자 지정 `com.xamarin.image-info` 형식에 대해 `NSKeyedArchiver` 및 `NSCoder` 인터페이스를 사용 하 여 사용자 지정 데이터 클래스를 키/값 쌍 보관으로 인코딩합니다. 인코딩을 실제로 처리 하려면 다음 메서드를 구현 해야 합니다.
+`public.text` 형식에 대해 간단한 형식의 `NSString` 개체를 반환 합니다. 사용자 지정 `com.xamarin.image-info` 형식에 대해 `NSKeyedArchiver` 및 `NSCoder` 인터페이스를 사용 하 여 사용자 지정 데이터 클래스를 키/값 쌍 보관으로 인코딩합니다. 인코딩을 실제로 처리 하려면 다음 메서드를 구현 해야 합니다.
 
 ```csharp
 [Export ("encodeWithCoder:")]
@@ -1057,7 +1057,7 @@ pasteboard.WriteObjects (new ImageInfo[] { Info });
 
 #### <a name="reading-from-the-pasteboard"></a>대지의 읽기
 
-@No__t_0 인터페이스를 준수 하 여 세 가지 메서드를 노출 해야 합니다 .이를 위해 대지의 사용자 지정 데이터 클래스를 읽을 수 있습니다.
+`INSPasteboardReading` 인터페이스를 준수 하 여 세 가지 메서드를 노출 해야 합니다 .이를 위해 대지의 사용자 지정 데이터 클래스를 읽을 수 있습니다.
 
 먼저 사용자 지정 클래스가 클립보드에서 읽을 수 있는 데이터 형식 표현에 대 한 정보를 지시 해야 합니다.
 
@@ -1090,7 +1090,7 @@ public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, 
 }
 ```
 
-@No__t_0 형식에 대해 클래스에 추가한 `initWithCoder:` 생성자를 호출 하 여 클래스를에 쓸 때 `NSKeyedArchiver`를 사용 하 여 만든 키/값 쌍을 디코드 하도록 대지의 지시를 합니다.
+`com.xamarin.image-info` 형식에 대해 클래스에 추가한 `initWithCoder:` 생성자를 호출 하 여 클래스를에 쓸 때 `NSKeyedArchiver`를 사용 하 여 만든 키/값 쌍을 디코드 하도록 대지의 지시를 합니다.
 
 마지막으로, 다음 메서드를 추가 하 여 대지의 다른 UTI 데이터 표현을 읽어야 합니다.
 
@@ -1133,11 +1133,11 @@ if (ok) {
 
 사용자 지정 클래스 만들기를 보증 하지 않는 사용자 지정 항목을에 써야 하는 경우 또는 필요한 경우에만 공통 형식으로 데이터를 제공 하려는 경우가 있습니다. 이러한 경우 `NSPasteboardItem`를 사용할 수 있습니다.
 
-@No__t_0는 대/소문자에 작성 된 데이터에 대 한 세분화 된 제어를 제공 하며 임시 액세스용으로 설계 된 데이터에 대 한 세분화 된 제어를 제공 합니다 .이는 대/소문자에 쓴 후에 삭제 해야 합니다.
+`NSPasteboardItem`는 대/소문자에 작성 된 데이터에 대 한 세분화 된 제어를 제공 하며 임시 액세스용으로 설계 된 데이터에 대 한 세분화 된 제어를 제공 합니다 .이는 대/소문자에 쓴 후에 삭제 해야 합니다.
 
 #### <a name="writing-data"></a>데이터 쓰기
 
-@No__t_0에 사용자 지정 데이터를 쓰려면 사용자 지정 `NSPasteboardItemDataProvider`를 제공 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 **ImageInfoDataProvider.cs**를 호출 합니다. 파일을 편집 하 여 다음과 같이 만듭니다.
+`NSPasteboardItem`에 사용자 지정 데이터를 쓰려면 사용자 지정 `NSPasteboardItemDataProvider`를 제공 해야 합니다. 프로젝트에 새 클래스를 추가 하 고 **ImageInfoDataProvider.cs**를 호출 합니다. 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -1202,7 +1202,7 @@ namespace MacCopyPaste
 
 사용자 지정 데이터 클래스를 사용 하는 것 처럼 `Register` 및 `Export` 지시문을 사용 하 여 목표에 노출 해야 합니다. 클래스는 `NSPasteboardItemDataProvider`에서 상속 해야 하며 `FinishedWithDataProvider` 및 `ProvideDataForType` 메서드를 구현 해야 합니다.
 
-@No__t_0 메서드를 사용 하 여 다음과 같이 `NSPasteboardItem`에 래핑되는 데이터를 제공 합니다.
+`ProvideDataForType` 메서드를 사용 하 여 다음과 같이 `NSPasteboardItem`에 래핑되는 데이터를 제공 합니다.
 
 ```csharp
 [Export ("pasteboard:item:provideDataForType:")]

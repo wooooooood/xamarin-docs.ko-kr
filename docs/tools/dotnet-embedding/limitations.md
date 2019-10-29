@@ -3,15 +3,15 @@ title: .NET 포함 제한 사항
 description: 이 문서에서는 다른 프로그래밍 언어로 .NET 코드를 사용할 수 있도록 하는 도구인 .NET 포함의 제한 사항에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: cf431d4e3d30ac2ec06bfebc9cebe101411faa1c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292703"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029753"
 ---
 # <a name="net-embedding-limitations"></a>.NET 포함 제한 사항
 
@@ -39,11 +39,11 @@ ms.locfileid: "70292703"
 
 ## <a name="objective-c-generated-code"></a>목표-C 생성 된 코드
 
-### <a name="nullability"></a>Null 허용 여부
+### <a name="nullability"></a>여부가
 
-.NET에는 null 참조를 사용할 수 있는지 여부를 나타내는 메타 데이터가 없으므로 API에 대 한 메타 데이터가 없습니다. 대부분의 api는 `ArgumentNullException` `null` 인수를 사용 하 여 처리할 수 없는 경우을 throw 합니다. 이것은 목표-C 예외를 처리 하는 것이 더 좋습니다.
+.NET에는 null 참조를 사용할 수 있는지 여부를 나타내는 메타 데이터가 없으므로 API에 대 한 메타 데이터가 없습니다. 대부분의 Api는 `null` 인수를 처리할 수 없는 경우 `ArgumentNullException`를 throw 합니다. 이것은 목표-C 예외를 처리 하는 것이 더 좋습니다.
 
-헤더 파일에는 정확한 null 허용 여부 주석을 생성할 수 없으며 관리 되는 예외를 최소화 하기 때문에 기본적으로 null이`NS_ASSUME_NONNULL_BEGIN`아닌 인수 ()로 지정 하 고 전체 자릿수가 가능 하면 null 허용 여부 주석을 추가 합니다.
+헤더 파일에서 정확한 null 허용 여부 주석을 생성할 수 없으며 관리 되는 예외를 최소화 하려는 경우 기본적으로 null이 아닌 인수 (`NS_ASSUME_NONNULL_BEGIN`)로 지정 하 고 전체 자릿수가 가능한 경우 null 허용 여부 주석을 추가 합니다.
 
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 

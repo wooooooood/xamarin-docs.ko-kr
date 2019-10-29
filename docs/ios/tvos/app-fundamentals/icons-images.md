@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin으로 빌드된 tvOS 앱에서 아이�
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 7eca637e546324f9282aedcac48dacffa72bf246
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769266"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030847"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Xamarin에서 tvOS 아이콘 및 이미지 작업
 
@@ -26,7 +26,7 @@ Captivating 아이콘과 이미지를 만드는 것은 Apple TV 앱에 대 한 �
 - [TvOS 프로젝트 이미지 설정](#Setting-Xamarin.tvOS-Project-Images) -tvOS 앱에 대 한 시작 이미지 및 앱 아이콘을 설정 하는 데 필요한 단계를 설명 합니다.
 
 > [!IMPORTANT]
-> Apple TV의 모든 이미지는 1x 해상도 (`@1x`) 이며이 크기의 이미지만 사용 _해야 합니다._ 더 크고 해상도가 높은 그래픽을 포함 하면 메모리와 저장소를 다운로드 하 여 사용 하는 데 시간이 소요 될 뿐만 아니라 런타임에 동적으로 재조정 하 고 그리기 성능에 부정적인 영향을 미칠 수 있습니다.
+> Apple TV의 모든 이미지는 1x 해상도 (`@1x`) 이며이 크기의 _이미지만 사용 해야 합니다._ 더 크고 해상도가 높은 그래픽을 포함 하면 메모리와 저장소를 다운로드 하 여 사용 하는 데 시간이 소요 될 뿐만 아니라 런타임에 동적으로 재조정 하 고 그리기 성능에 부정적인 영향을 미칠 수 있습니다.
 
 <a name="Launch-Image" />
 
@@ -38,7 +38,7 @@ Captivating 아이콘과 이미지를 만드는 것은 Apple TV 앱에 대 한 �
 
 시작 이미지는 광고 또는 미술 식의 기회가 아니므로 앱이 신속 하 게 시작 되 고 사용할 준비가 되었다는 느낌을 제공 하기 위해 존재 합니다.
 
-|시작 이미지 크기|참고|
+|시작 이미지 크기|노트|
 |---|---|
 |1920x1080px|계층화 되지 않은 .png 파일만|
 
@@ -55,15 +55,15 @@ Apple은 앱의 시작 이미지를 설계할 때 다음과 같은 제안을 합
 
 TvOS 프로젝트에 대 한 시작 이미지를 설정 하려면 다음을 수행 하십시오.
 
-1. **솔루션 탐색기**에서 편집을 위해 열려면 두 `Assets.xcassets` 번 클릭 합니다. 
+1. **솔루션 탐색기**에서 `Assets.xcassets`를 두 번 클릭 하 여 편집용으로 엽니다. 
 
-    [![](icons-images-images/asset01.png "Assets.xcassets 파일")](icons-images-images/asset01.png#lightbox)
+    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
 2. **자산 편집기**에서 `LaunchImages` 자산을 클릭 합니다. 
 
-    [![](icons-images-images/asset02.png "LaunchImages 자산")](icons-images-images/asset02.png#lightbox)
+    [![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
 3. **1X APPLE TV** 항목을 클릭 하 고 시작 이미지를 선택 하거나 필요에 따라 파일 시스템에서 새 이미지를 끌어 놓습니다. 
 
-    [![](icons-images-images/asset03.png "시작 이미지 선택")](icons-images-images/asset03.png#lightbox)
+    [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
 4. 변경 내용을 저장합니다.
 
 <a name="Layered-Images" />
@@ -74,7 +74,7 @@ Apple TV를 처음 사용 하는 경우 계층화 된 이미지는 시차 효과
 
 계층화 된 이미지에는 완전 한 이미지를 형성 하기 위해 결합 된 별도의 두 계층 (5)이 포함 됩니다. 배경 계층을 제외 하 고 각 계층은 투명도와 함께 Z 순서를 사용 하 여 깊이의 효과를 만듭니다. 사용자가 계층화 된 이미지와 상호 작용 하는 경우 더 높은 Z 순서 계층이 확장 되 고 겹쳐진 효과를 만듭니다.
 
-[![](icons-images-images/layered01.png "계층화 된 이미지 Z-정렬 된 다이어그램")](icons-images-images/layered01.png#lightbox)
+[![](icons-images-images/layered01.png "Layered Images Z-ordered diagram")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
 > 계층화 된 이미지는 앱 아이콘에 필요 하며, 포커스를 받을 수 있는 기타 [항목](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (예: 최상위 선반 이미지)의 경우 선택 사항입니다. 그러나 Apple은 앱에서 포커스를 받을 수 있는 모든 이미지에 대해 계층화 된 이미지를 사용 하도록 제안 합니다.
@@ -88,7 +88,7 @@ Apple은 계층화 된 이미지를 설계할 때 다음과 같은 제안을 합
 - **안전한 영역 포함** -시차 효과 중에 상위 계층을 자를 수 있으므로 각 계층에 안전 영역 테두리를 만들어야 합니다. 콘텐츠를 너무 가까이 만들면 레이어가 잘릴 수 있습니다. 상위 계층에는 하위 계층 보다 더 많은 크기 조정 및 자르기가 발생 합니다. 아래의 [이미지 계층 크기 조정](#Sizing-Image-Layers) 섹션을 참조 하세요.
 - **미리 보기 자주** 계층화 된 이미지는 원하는 3d 효과가 발생 하 고 개별 레이어의 콘텐츠를 잘라내는 것이 없도록 자주 미리 보아야 합니다. 실제 Apple TV 하드웨어에서 계층화 된 이미지를 미리 보고 제대로 렌더링 되는지 확인 해야 합니다.
 
-가능 하면 항상 기본 제공 `UIKit` 컨트롤을 사용 하 여 계층화 된 이미지를 표시 해야 합니다. 시차 효과는 포커스를 받을 때 자동으로 나타납니다.
+가능 하면 항상 기본 제공 `UIKit` 컨트롤을 사용 하 여 계층화 된 이미지를 표시 해야 합니다 .이는 포커스를 받을 때 시차 효과가 자동으로 발생 하기 때문입니다.
 
 <a name="Sizing-Image-Layers" />
 
@@ -96,7 +96,7 @@ Apple은 계층화 된 이미지를 설계할 때 다음과 같은 제안을 합
 
 계층화 된 이미지를 구성 하는 각 계층에 _안전 영역_ 테두리를 포함 해야 합니다. 개별 레이어는 크기를 조정 하 고 시차 효과를 낼 수 있으므로 계층의 가장자리에 너무 가까운 경우에는 레이어의 콘텐츠를 자를 수 있습니다.
 
-[![](icons-images-images/layered02.png "35 픽셀 테두리")](icons-images-images/layered02.png#lightbox)
+[![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png#lightbox)
 
 <a name="Creating-Layered-Images" />
 
@@ -105,19 +105,19 @@ Apple은 계층화 된 이미지를 설계할 때 다음과 같은 제안을 합
 tvOS는 다음과 같은 형식의 계층화 된 이미지와 함께 작동 합니다.
 
 - **CAR 파일** -Apple에서 만든 소유 자산 카탈로그 형식입니다. 직접 자동차 파일을 만들지 않고, 모든 LSR 파일에서 컴파일 시간에 생성 되며, 앱 번들에 포함 됩니다.
-- **Lsr 이미지** -Apple에서 만든 소유 이미지 형식입니다. [시차 내보내기 Adobe Photoshop 플러그 인](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) 또는 [시차 미리 보기](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) 를 사용 하 여 Lsr 형식으로 계층화 된 이미지를 만들고 미리 볼 수 있습니다.
-- **Assets.xcassets** -2 (2)부터 5 (5) 개의 표준 `.png` 형식이 지정 된 이미지에 포함 되어 있습니다 .이 이미지는 컴파일 시간에 CAR 또는 lsr 형식의 계층화 된 이미지로 컴파일됩니다.
-- **LCR 파일** -Apple에서 만든 독점 파일 형식입니다. LCR 파일은 콘텐츠 서버 중 하나에서 다운로드 된 추가 내용으로 사용 됩니다. LCR 파일은 앱 번들에 포함 되어서는 안 됩니다. LCR 파일은 Xcode에 포함 된 명령줄 도구를 `layerutil` 사용 하 여 lsr 또는 Photoshop 파일에서 생성 됩니다.
+- **Lsr 이미지** -Apple에서 만든 소유 이미지 형식입니다. [시차 내보내기 Adobe Photoshop 플러그 인](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) 또는 [시차 미리 보기](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) 를 사용 하 여 Lsr 형식으로 계층화 된 이미지를 만들고 미리 볼 수 있습니다.
+- **Assets.xcassets** -2 (2)에서 5 (5) 표준 `.png` 형식 이미지는 컴파일 시간에 CAR 또는 Lsr 형식의 계층화 된 이미지로 컴파일될 자산 카탈로그에 포함 됩니다.
+- **LCR 파일** -Apple에서 만든 독점 파일 형식입니다. LCR 파일은 콘텐츠 서버 중 하나에서 다운로드 된 추가 내용으로 사용 됩니다. LCR 파일은 앱 번들에 포함 되어서는 안 됩니다. Xcode에 포함 된 `layerutil` 명령줄 도구를 사용 하 여 LSR 또는 Photoshop 파일에서 LCR 파일이 생성 됩니다.
 
 <a name="The-Parallax-Previewer" />
 
 ### <a name="the-parallax-previewer"></a>시차 미리 보기
 
-Apple은 [시차](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) 미리 보기를 만들어 앱 아이콘 및 선택적 포커스 가능한 항목에 필요한 계층화 된 이미지를 미리 보고 만들었습니다. 미리 보기에는 완료 된 계층화 이미지를 형성 하는 모든 계층이 표시 됩니다.
+Apple은 [시차](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) 미리 보기를 만들어 앱 아이콘 및 선택적 포커스 가능한 항목에 필요한 계층화 된 이미지를 미리 보고 만들었습니다. 미리 보기에는 완료 된 계층화 이미지를 형성 하는 모든 계층이 표시 됩니다.
 
-[![](icons-images-images/layered03.png "시차 미리 보기")](icons-images-images/layered03.png#lightbox)
+[![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
-계층화 된 이미지를 미리 보는 동안 마우스를 사용 하 여 이미지를 회전 하 고 시차 효과를 미리 볼 수 있습니다. (더하기) 및 **-** (빼기) 단추를 사용 하 여 레이어를 추가 하 고 제거 합니다. **+**
+계층화 된 이미지를 미리 보는 동안 마우스를 사용 하 여 이미지를 회전 하 고 시차 효과를 미리 볼 수 있습니다. **+** (더하기) 및 **-** (빼기) 단추를 사용 하 여 레이어를 추가 하 고 제거 합니다.
 
 새 계층화 된 이미지를 만들 때 LSR 형식으로 내보내고 앱의 번들에 포함할 수 있습니다.
 
@@ -129,7 +129,7 @@ Apple은 [시차](http://itunespartner.apple.com/assets/downloads/Parallax%20Pre
 
 TvOS 앱에는 Apple TV 홈 화면의 앱 아이콘 뿐만 아니라 앱 스토어에 대 한 아이콘도 필요 합니다. 앱 아이콘은 잠재적 사용자에 게 멋진 느낌을 주는 첫 번째 변경 사항이 며, 앱의 용도를 한눈에 파악할 수 있습니다.
 
-[![](icons-images-images/icon01.png "앱 아이콘")](icons-images-images/icon01.png#lightbox)
+[![](icons-images-images/icon01.png "The App Icon")](icons-images-images/icon01.png#lightbox)
 
 모든 앱은 앱 아이콘의 작은 버전과 많은 버전을 모두 제공 해야 합니다. 앱이 설치 되 면 Apple TV 홈 화면에서 작은 아이콘이 사용 됩니다. 앱 스토어에서 많은 버전이 사용 됩니다. 크게 된 앱 아이콘은 작은 아이콘 버전의 모양과 느낌을 모방 해야 합니다.
 
@@ -160,20 +160,20 @@ Apple은 앱 아이콘을 만들기 위한 다음과 같은 제안 사항을 제
 
 TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수행 하세요.
 
-1. **솔루션 탐색기**에서 편집을 위해 열려면 두 `Assets.xcassets` 번 클릭 합니다. 
+1. **솔루션 탐색기**에서 `Assets.xcassets`를 두 번 클릭 하 여 편집용으로 엽니다. 
 
-    [![](icons-images-images/asset01.png "Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
-2. **자산 편집기**에서 자산을 확장 합니다 `App Icon & Top Shelf Image` . 
+    [![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
+2. **자산 편집기**에서 `App Icon & Top Shelf Image` 자산을 확장 합니다. 
 
-    [![](icons-images-images/asset04.png "최고 선반 이미지 자산 확장")](icons-images-images/asset04.png#lightbox)
-3. 다음으로 자산을 `App Icon - Small` 확장 합니다. 
+    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
+3. 다음으로 `App Icon - Small` 자산을 확장 합니다. 
 
-    [![](icons-images-images/asset05.png "앱 아이콘-작은 자산 확장")](icons-images-images/asset05.png#lightbox)
-4. 그런 다음 자산 `Back` 을 확장 하 고 항목 `Contents` 을 클릭 합니다. 
+    [![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
+4. 그런 다음 `Back` 자산을 확장 하 고 `Contents` 항목을 클릭 합니다. 
 
-    [![](icons-images-images/asset06.png "그런 다음 뒤로 자산을 확장 합니다.")](icons-images-images/asset06.png#lightbox)
+    [![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
 5. **1X APPLE TV 항목** 을 클릭 하 고 이미지 파일을 선택 합니다.
-6. `Front` 및`Middle` 자산에 대해 위의 단계를 반복 합니다.
+6. `Front` 및 `Middle` 자산에 대해 위의 단계를 반복 합니다.
 7. 그런 다음 동일한 단계를 반복 하 여 `App Icon - Large` 자산을 정의 합니다.
 8. 변경 내용을 저장합니다.
 
@@ -183,11 +183,11 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 
 사용자가 Apple TV 홈 화면의 맨 위 행에 tvOS 앱을 배치 하는 경우 사용자가 앱을 선택 하면 최상위 선반 이미지가 표시 됩니다. 이 이미지는 앱의 기능을 강조 표시 하거나 콘텐츠에 대 한 직접 링크를 제공 해야 합니다.
 
-[![](icons-images-images/topshelf01.png "Top 선반 이미지 예제")](icons-images-images/topshelf01.png#lightbox)
+[![](icons-images-images/topshelf01.png "Top Shelf Image example")](icons-images-images/topshelf01.png#lightbox)
 
-Top 선반 이미지는 단일 `.png` 정적 또는 `.lsr` 파일로 제공 될 수 있습니다 (계층화 된 [이미지 만들기](#Creating-Layered-Images)참조). 또는 런타임 시 포커스를 받을 수 있는 항목의 단일 행으로 동적으로 만들 수 있습니다 (아래의 [동적 상위 선반 콘텐츠](#Dynamic-Top-Shelf-Content) 참조).
+최상위 선반 이미지는 단일 정적 `.png` 또는 `.lsr` 파일로 제공 하거나 ( [계층화 된 이미지 만들기](#Creating-Layered-Images)참조) 런타임에 포커스를 받을 수 있는 항목의 단일 행으로 동적으로 만들 수 있습니다 (아래의 [동적 상위 선반 내용](#Dynamic-Top-Shelf-Content) 참조).
 
-|상위 선반 이미지 크기|참고|
+|상위 선반 이미지 크기|노트|
 |---|---|
 |1920x720px|정적 .png 또는 계층화 된 .lsr 파일|
 
@@ -203,15 +203,15 @@ Apple은 최고 선반 이미지를 만들기 위해 다음과 같은 제안 사
 
 TvOS 프로젝트에 필요한 최상위 선반 이미지를 설정 하려면 다음을 수행 하십시오.
 
-1. **솔루션 탐색기**에서 편집을 위해 열려면 두 `Assets.xcassets` 번 클릭 합니다. 
+1. **솔루션 탐색기**에서 `Assets.xcassets`를 두 번 클릭 하 여 편집용으로 엽니다. 
 
-    [![](icons-images-images/asset01.png "Assets.xcassets 파일")](icons-images-images/asset01.png#lightbox)
-2. **자산 편집기**에서 자산을 확장 합니다 `App Icon & Top Shelf Image` . 
+    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
+2. **자산 편집기**에서 `App Icon & Top Shelf Image` 자산을 확장 합니다. 
 
-    [![](icons-images-images/asset04.png "최고 선반 이미지 자산 확장")](icons-images-images/asset04.png#lightbox)
-3. 자산을 클릭 `Top Shelf Image` 합니다. 
+    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
+3. `Top Shelf Image` 자산을 클릭 합니다. 
 
-    [![](icons-images-images/asset07.png "최고 선반 이미지 자산")](icons-images-images/asset07.png#lightbox)
+    [![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
 4. **1X APPLE TV 항목** 을 클릭 하 고 이미지 파일을 선택 합니다.
 5. 변경 내용을 저장합니다.
 
@@ -260,7 +260,7 @@ Apple은 단면화 된 콘텐츠 행에 대해 다음과 같은 제안 사항을
 |포커스가 없는 크기|1740x560px|
 |포커스가 있는 크기|1740x620px|
 
-스크롤 삽입 배너는 정적 `.png` 또는 계층화 `.lsr` 된 파일로 제공 될 수 있습니다.
+스크롤 삽입 배너는 정적 `.png` 또는 계층화 된 `.lsr` 파일로 제공 될 수 있습니다.
 
 Apple은 스크롤 삽입 배너에 대해 다음과 같은 제안 사항을 제공 합니다.
 
@@ -277,15 +277,15 @@ TvOS 앱이 게임 이며 지원 Game Center 포함 된 경우 몇 가지 추가
 
 - **성과 아이콘** -원으로 자동 잘려는 각 성과에 불투명 이미지가 필요 합니다. 업적은 포커스를 받을 수 없는 항목입니다.
 - **대시보드 아트 워크** -Game Center 내에서 앱 대시보드의 맨 위에 표시 되는 선택적 이미지를 제공할 수 있습니다. 이러한 이미지는 포커스를 받을 수 없습니다.
-- **순위표 아트 워크** -앱에서 지 원하는 각 순위표에 대해 1 ~ 3 개의 16:9 가로 세로 비율 이미지를 제공 해야 합니다. 이러한 파일은 정적 `.png` 파일 이거나 계층화 `.lsr` 된 파일 일 수 있습니다. 순위표 아트 워크는 포커스를 받을 수 있습니다.
+- **순위표 아트 워크** -앱에서 지 원하는 각 순위표에 대해 1 ~ 3 개의 16:9 가로 세로 비율 이미지를 제공 해야 합니다. 이러한 파일은 정적 `.png` 또는 계층화 된 `.lsr` 파일 일 수 있습니다. 순위표 아트 워크는 포커스를 받을 수 있습니다.
 
 ||성과 아이콘|대시보드 아트 워크|순위표 아트 워크|
 |---|---|---|---|
-|표시 크기|200x200px|923x150px|n/a|
-|실제 크기|320x320px|n/a|659x371px|
-|안전한 영역 크기|n/a|n/a|618x348px|
-|포커스가 없는 크기|n/a|n/a|548x309px|
-|포커스가 있는 크기|n/a|n/a|618x348px|
+|표시 크기|200x200px|923x150px|N/A|
+|실제 크기|320x320px|N/A|659x371px|
+|안전한 영역 크기|N/A|N/A|618x348px|
+|포커스가 없는 크기|N/A|N/A|548x309px|
+|포커스가 있는 크기|N/A|N/A|618x348px|
 
 Game Center 작업에 대 한 자세한 내용은 Apple의 [Game Center 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)를 참조 하세요.
 
@@ -303,12 +303,12 @@ TvOS 9는 iOS 9의 하위 집합 이므로 Xamarin.ios 앱에 이미지를 포�
 
 다음을 수행합니다.
 
-1. **솔루션 탐색기**에서을 두 번 클릭 `Info.plist` 하 여 편집용으로 엽니다. 
+1. **솔루션 탐색기**에서 `Info.plist`를 두 번 클릭 하 여 편집용으로 엽니다. 
 
-    [![](icons-images-images/info01.png "Info.plist 파일")](icons-images-images/info01.png#lightbox)
+    [![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
 2. **Info.plist 편집기**에서 **앱 아이콘**에 대 한 자산 카탈로그 ( [앱 아이콘 설정](#Setting-the-App-Icons) 섹션에서 위에 구성 됨)를 선택 합니다. 
 
-    [![](icons-images-images/info02.png "Info.plist 편집기")](icons-images-images/info02.png#lightbox)
+    [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. 다음으로 **시작 이미지**에 대 한 자산 카탈로그 ( [시작 이미지 설정](#Setting-the-Launch-Image) 섹션에서 구성 됨)를 선택 합니다.
 4. 변경 내용을 저장합니다.
 
