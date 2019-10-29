@@ -4,15 +4,15 @@ description: 이 문서에서는 상태 관련 정보에 대 한 중앙 집중�
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: eb944b062f75ceec8ca8dbe22cde64b0fdd15625
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 21f10c7771e1c30eabb3f42a161c6d563a5327f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752951"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032393"
 ---
 # <a name="healthkit-in-xamarinios"></a>Xamarin.ios의 HealthKit
 
@@ -30,7 +30,7 @@ ms.locfileid: "70752951"
 
 이 문서에서는 사용자의 하트 요금을 기록 하는 샘플 응용 프로그램을 만듭니다.
 
-[![](healthkit-images/image01.png "사용자의 하트 요금을 기록 하는 샘플 응용 프로그램")](healthkit-images/image01.png#lightbox)
+[![](healthkit-images/image01.png "A sample application to record the users heart rate")](healthkit-images/image01.png#lightbox)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -50,9 +50,9 @@ Xamarin iOS 8 응용 프로그램은 HealthKit API를 사용할 수 있기 전�
 
 - 명시적인 **앱 ID**입니다.
 - 해당 명시적인 **앱 ID** 및 **상태 키트** 사용 권한과 연결 된 **프로 비전 프로필** 입니다.
-- 형식의 `Entitlements.plist` `com.apple.developer.healthkit` 속성이로`Yes`설정 된입니다`Boolean` .
-- 키에 `String` 값 이포함된항목이들어있는입니다`healthkit`. `Info.plist` `UIRequiredDeviceCapabilities`
-- 또한 `Info.plist` 에는 해당 하는 개인 정보 취급 방침 항목이 `String` 있어야 합니다. `String` 앱 `NSHealthUpdateUsageDescription` 이 데이터를 쓰려고 하는 경우 키에 대 한 설명과 앱이 `NSHealthShareUsageDescription` 상태 키트를 읽을 경우 키에 대 한 설명이 있어야 합니다. 데이터로.
+- `Boolean` 형식의 `com.apple.developer.healthkit` 속성이 `Yes`로 설정 된 `Entitlements.plist`입니다.
+- `UIRequiredDeviceCapabilities` 키에 `String` 값이 `healthkit`인 항목이 포함 된 `Info.plist`입니다.
+- `Info.plist`에는 해당 하는 개인 정보 취급 방침 항목이 있어야 합니다. 앱이 데이터를 쓰려는 경우 키 `NSHealthUpdateUsageDescription`에 대 한 `String` 설명과 앱이 상태 키트 데이터를 읽으려고 하는 경우 키 `NSHealthShareUsageDescription`에 대 한 `String` 설명을 포함 해야 합니다.
 
 IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 보려면 Xamarin **시작** 시리즈의 [장치 프로 비전](~/ios/get-started/installation/device-provisioning/index.md) 문서에서 개발자 인증서, 앱 Id, 프로 비전 프로필 및 앱 자격 간의 관계를 설명 합니다.
 
@@ -62,25 +62,25 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 보려면 
 
 명시적인 **앱 ID** 및 적절 한 **프로 비전 프로필** 생성은 Apple의 [iOS 개발자 센터](https://developer.apple.com/devcenter/ios/index.action)내에서 수행 됩니다. 
 
-현재 **앱 id** 는 개발자 센터의 [인증서, 식별자 & 프로필](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) 섹션에 나열 됩니다. 일반적으로이 목록에는 **앱 id** - **이름을** 임의의 수의 접미사로 사용할 수 있음을 나타내는의 `*` **id** 값이 표시 됩니다. 이러한 *와일드 카드 앱 id* 는 상태 키트와 함께 사용할 수 없습니다.
+현재 **앱 id** 는 개발자 센터의 [인증서, 식별자 & 프로필](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) 섹션에 나열 됩니다. 일반적으로이 목록에는 `*`의 **id** 값이 표시 됩니다 .이 값은 **앱 id** - **이름을** 임의의 수의 접미사로 사용할 수 있음을 나타냅니다. 이러한 *와일드 카드 앱 id* 는 상태 키트와 함께 사용할 수 없습니다.
 
-명시적인 **앱 id**를 만들려면 오른쪽 위에 있는 **+** 단추를 클릭 하 여 **iOS 앱 id 등록** 페이지로 이동 합니다.
+명시적인 **앱 id**를 만들려면 오른쪽 위의 **+** 단추를 클릭 하 여 **iOS 앱 id 등록** 페이지로 이동 합니다.
 
-[![](healthkit-images/image02.png "Apple 개발자 포털에서 앱 등록")](healthkit-images/image02.png#lightbox)
+[![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)
 
 위의 그림에 나와 있는 것 처럼 앱 설명을 만든 후 **Explicit 앱 id** 섹션을 사용 하 여 응용 프로그램에 대 한 id를 만듭니다. **App Services** 섹션의 **서비스 사용** 섹션에서 **Health Kit** 를 선택 합니다.
 
-완료 되 면 **계속** 단추를 눌러 계정에 **앱 ID** 를 등록 합니다. **인증서, 식별자 및 프로필** 페이지로 돌아갑니다. 프로 **비전 프로필** 을 클릭 하 여 현재 프로 비전 프로필의 목록으로 이동 하 고 오른쪽 **+** 위 모퉁이에 있는 단추를 클릭 하 여 **iOS 프로 비전 프로필 추가** 페이지로 이동 합니다. **IOS 앱 개발** 옵션을 선택 하 고 **계속** 을 클릭 하 여 **앱 ID 선택** 페이지로 이동 합니다. 여기에서 이전에 지정한 명시적 **앱 ID** 를 선택 합니다.
+완료 되 면 **계속** 단추를 눌러 계정에 **앱 ID** 를 등록 합니다. **인증서, 식별자 및 프로필** 페이지로 돌아갑니다. 프로 **비전 프로필** 을 클릭 하 여 현재 프로 비전 프로필의 목록으로 이동 하 고 오른쪽 위 모서리의 **+** 단추를 클릭 하 여 **iOS 프로 비전 프로필 추가** 페이지로 이동 합니다. **IOS 앱 개발** 옵션을 선택 하 고 **계속** 을 클릭 하 여 **앱 ID 선택** 페이지로 이동 합니다. 여기에서 이전에 지정한 명시적 **앱 ID** 를 선택 합니다.
 
-[![](healthkit-images/image03.png "명시적 앱 ID 선택")](healthkit-images/image03.png#lightbox)
+[![](healthkit-images/image03.png "Select the explicit App ID")](healthkit-images/image03.png#lightbox)
 
 **계속** 을 클릭 하 고 나머지 화면에서 작업 합니다. 여기에서 **개발자 인증서**, **장치**및이 **프로 비전 프로필**에 대 한 **이름을** 지정 합니다.
 
-[![](healthkit-images/image04.png "프로 비전 프로필을 생성 하는 중")](healthkit-images/image04.png#lightbox)
+[![](healthkit-images/image04.png "Generating the Provisioning Profile")](healthkit-images/image04.png#lightbox)
 
 **생성** 을 클릭 하 고 프로필 만들기를 기다립니다. 파일을 다운로드 하 고 두 번 클릭 하 여 Xcode에 설치 합니다. **Xcode > 기본 설정 > 계정 > 세부 정보 보기** ...에서 설치를 확인할 수 있습니다. 방금 설치 된 프로 비전 프로필이 표시 되 고, 해당 **자격** 에 대 한 상태 키트 및 기타 특수 서비스 아이콘이 있어야 합니다.
 
-[![](healthkit-images/image05.png "Xcode에서 프로필 보기")](healthkit-images/image05.png#lightbox)
+[![](healthkit-images/image05.png "Viewing the profile in Xcode")](healthkit-images/image05.png#lightbox)
 
 <a name="associating-appid" />
 
@@ -90,11 +90,11 @@ IOS 앱을 프로 비전 하는 방법에 대 한 자세한 내용을 보려면 
 
 Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대신이 문서에 연결 된 샘플 앱 (미리 작성 된 스토리 보드 및 코드 포함)을 엽니다. 샘플 앱을 상태 키트 사용 **프로 비전 프로필**에 연결 하려면 **Solution Pad**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 해당 **옵션** 대화 상자를 엽니다. **IOS 응용 프로그램** 패널로 전환 하 고 이전에 앱의 **번들 식별자**로 만든 명시적 **앱 ID** 를 입력 합니다.
 
-[![](healthkit-images/image06.png "명시적 앱 ID 입력")](healthkit-images/image06.png#lightbox)
+[![](healthkit-images/image06.png "Enter the explicit App ID")](healthkit-images/image06.png#lightbox)
 
 이제 **IOS 번들 서명** 패널로 전환 합니다. 명시적 **앱 ID**와 연결 된 최근 설치 된 **프로 비전 프로필**은 이제 **프로 비전 프로필로**사용할 수 있습니다.
 
-[![](healthkit-images/image07.png "프로 비전 프로필 선택")](healthkit-images/image07.png#lightbox)
+[![](healthkit-images/image07.png "Select the Provisioning Profile")](healthkit-images/image07.png#lightbox)
 
 **프로 비전 프로필** 을 사용할 수 없는 경우 Ios **응용 프로그램** 패널의 번들 식별자와 **ios 개발자 센터** 에 지정 된 **번들 식별자** 를 두 번 확인 하 고 **프로 비전 프로필이** 설치 되어 있는지 확인 합니다 (**Xcode > 기본 설정 > 계정 > 자세히 보기**...)
 
@@ -102,9 +102,9 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 ### <a name="entitlementsplist-and-infoplist-values"></a>Info.plist 및 info.plist 값
 
-샘플 앱에는 모든 `Entitlements.plist` 프로젝트 템플릿에 포함 되지 않은 파일 (상태 키트 사용 앱에 필요)이 포함 되어 있습니다. 프로젝트에 자격을 포함 하지 않는 경우 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **파일 > 새 파일 ...을 선택 합니다. iOS > info.plist을 >** 하 여 수동으로 추가 합니다.
+샘플 앱에는 모든 프로젝트 템플릿에 포함 되지 않은 `Entitlements.plist` 파일 (상태 키트 사용 앱에 필요)이 포함 되어 있습니다. 프로젝트에 자격을 포함 하지 않는 경우 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **파일 > 새 파일 ...을 선택 합니다. iOS > info.plist을 >** 하 여 수동으로 추가 합니다.
 
-궁극적으로는 `Entitlements.plist` 다음의 키 및 값 쌍이 있어야 합니다.
+궁극적으로 `Entitlements.plist`에는 다음의 키 및 값 쌍이 있어야 합니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -118,7 +118,7 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 ```
 
-마찬가지로, 앱 `Info.plist` 의에는 `UIRequiredDeviceCapabilities` 키와 `healthkit` 연결 된 값이 있어야 합니다.
+마찬가지로, 앱에 대 한 `Info.plist`에는 `UIRequiredDeviceCapabilities` 키와 연결 된 `healthkit` 값이 있어야 합니다.
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -129,7 +129,7 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 ```
 
-이 문서와 함께 제공 되는 샘플 응용 프로그램 `Entitlements.plist` 에는 필요한 모든 키를 포함 하는 미리 구성 된이 포함 되어 있습니다.
+이 문서와 함께 제공 되는 샘플 응용 프로그램에는 필수 키를 모두 포함 하는 미리 구성 된 `Entitlements.plist` 포함 되어 있습니다.
 
 <a name="programming" />
 
@@ -137,17 +137,17 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 상태 키트 데이터 저장소는 응용 프로그램 간에 공유 되는 개인 사용자 관련 데이터 저장소입니다. 상태 정보는 매우 중요 하기 때문에 사용자는 데이터 액세스를 허용 하는 긍정 단계를 수행 해야 합니다. 이 액세스는 부분적 (쓰기는 가능 하지만 읽기는 불가능 하 고 일부 데이터 형식에 대 한 액세스는 아님)이 될 수 있으며 언제 든 지 취소할 수 있습니다. 상태 키트 응용 프로그램은 defensively로 작성 해야 하며,이는 많은 사용자가 상태 관련 정보를 저장 하는 것에 대 한 망설를 이해 합니다.
 
-상태 키트 데이터는 Apple 지정 형식으로 제한 됩니다. 이러한 형식은 엄격 하 게 정의 되어 있습니다. 예를 들어 블러드 형식과 같은 일부는 Apple에서 제공 하는 열거형의 특정 값으로 제한 되 고 다른 값은 크기를 측정 단위 (예: 그램, calories, 리터)와 결합 합니다. 호환 되는 측정 단위를 공유 하는 데이터도에 의해 `HKObjectType`구분 됩니다. 예를 들어 형식 시스템 `HKQuantityTypeIdentifier.NumberOfTimesFallen` `HKQuantityTypeIdentifier.FlightsClimbed` 은 두 가지 모두를 `HKUnit.Count` 사용 하지만 측정 단위입니다.
+상태 키트 데이터는 Apple 지정 형식으로 제한 됩니다. 이러한 형식은 엄격 하 게 정의 되어 있습니다. 예를 들어 블러드 형식과 같은 일부는 Apple에서 제공 하는 열거형의 특정 값으로 제한 되 고 다른 값은 크기를 측정 단위 (예: 그램, calories, 리터)와 결합 합니다. 호환 되는 측정 단위를 공유 하는 데이터는 `HKObjectType`에 의해 구분 됩니다. 예를 들어 형식 시스템은 모두 `HKUnit.Count` 측정 단위를 사용 하는 경우에도 `HKQuantityTypeIdentifier.FlightsClimbed`를 기대 하는 필드에 `HKQuantityTypeIdentifier.NumberOfTimesFallen` 값을 저장 하려는 잘못 된 시도를 catch 합니다.
 
-상태 키트 데이터 저장소의 저장할 형식은의 `HKObjectType`모든 서브 클래스입니다. `HKCharacteristicType`개체는 생물학적 성, 혈압 유형 및 생년월일을 저장 합니다. 보다 일반적으로 `HKSampleType` 는 특정 시간 또는 일정 기간 동안 샘플링 되는 데이터를 나타내는 개체입니다. 
+상태 키트 데이터 저장소의 저장할 형식은 모두 `HKObjectType`의 서브 클래스입니다. `HKCharacteristicType` 개체는 생물학적 성, 혈압 유형 및 생년월일을 저장 합니다. 보다 일반적인 경우는 특정 시간에 또는 일정 기간 동안 샘플링 되는 데이터를 나타내는 개체를 `HKSampleType`는 것입니다. 
 
-[![](healthkit-images/image08.png "HKSampleType 개체 차트")](healthkit-images/image08.png#lightbox)
+[![](healthkit-images/image08.png "HKSampleType objects chart")](healthkit-images/image08.png#lightbox)
 
-`HKSampleType`는 추상적 이며 4 개의 구체적 하위 클래스를 포함 합니다. 현재 절전 모드 분석 인 `HKCategoryType` 데이터 유형은 하나 뿐입니다. 상태 키트의 대부분의 데이터는 형식이 `HKQuantityType` 며, 친숙 한 팩터리 디자인 패턴을 사용 하 여 만든 개체에 `HKQuantitySample` 데이터를 저장 합니다.
+`HKSampleType` 추상적이 고 네 개의 구체적 하위 클래스가 있습니다. 현재 절전 모드 분석 인 `HKCategoryType` 데이터의 한 가지 유형만 있습니다. 상태 키트의 대부분의 데이터는 `HKQuantityType` 형식이 며, 친숙 한 팩터리 디자인 패턴을 사용 하 여 만든 `HKQuantitySample` 개체에 데이터를 저장 합니다.
 
-[![](healthkit-images/image09.png "상태 키트에 있는 대부분의 데이터는 HKQuantityType 형식이 며 데이터를 HKQuantitySample 개체에 저장 합니다.")](healthkit-images/image09.png#lightbox)
+[![](healthkit-images/image09.png "The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects")](healthkit-images/image09.png#lightbox)
 
-`HKQuantityType`형식은에서 `HKQuantityTypeIdentifier.ActiveEnergyBurned` `HKQuantityTypeIdentifier.StepCount`사이입니다. 
+`HKQuantityType` 형식은 `HKQuantityTypeIdentifier.ActiveEnergyBurned`에서 `HKQuantityTypeIdentifier.StepCount`까지입니다. 
 
 <a name="requesting-permission" />
 
@@ -155,17 +155,17 @@ Xamarin iOS 8 프로젝트를 직접 만드는 프로세스를 안내 하는 대
 
 최종 사용자는 앱에서 상태 키트 데이터를 읽거나 쓸 수 있도록 긍정적인 단계를 수행 해야 합니다. 이 작업은 iOS 8 장치에 미리 설치 된 상태 앱을 통해 수행 됩니다. 상태 키트 앱을 처음 실행할 때 사용자에 게 시스템 제어 **상태 액세스** 대화 상자가 표시 됩니다.
 
-[![](healthkit-images/image10.png "사용자에 게 시스템 제어 상태 액세스 대화 상자가 표시 됩니다.")](healthkit-images/image10.png#lightbox)
+[![](healthkit-images/image10.png "The user is presented with a system-controlled Health Access dialog")](healthkit-images/image10.png#lightbox)
 
 나중에 사용자는 상태 앱의 **소스** 대화 상자를 사용 하 여 사용 권한을 변경할 수 있습니다.
 
-[![](healthkit-images/image11.png "사용자는 상태 앱 소스 대화 상자를 사용 하 여 사용 권한을 변경할 수 있습니다.")](healthkit-images/image11.png#lightbox)
+[![](healthkit-images/image11.png "The user can change permissions using Health apps Sources dialog")](healthkit-images/image11.png#lightbox)
 
-상태 정보는 매우 중요 하므로 앱 개발자는 앱을 실행 하는 동안 사용 권한이 거부 및 변경 될 것 이란 가정 하에 defensively 프로그램을 작성 해야 합니다. 가장 일반적인 `UIApplicationDelegate.OnActivated` 방법은 메서드에서 권한을 요청 하 고 사용자 인터페이스를 적절 하 게 수정 하는 것입니다.
+상태 정보는 매우 중요 하므로 앱 개발자는 앱을 실행 하는 동안 사용 권한이 거부 및 변경 될 것 이란 가정 하에 defensively 프로그램을 작성 해야 합니다. 가장 일반적인 방법은 `UIApplicationDelegate.OnActivated` 메서드에서 권한을 요청 하 고 사용자 인터페이스를 적절 하 게 수정 하는 것입니다.
 
 ### <a name="permissions-walkthrough"></a>권한 연습
 
-상태 키트 프로 비전 된 `AppDelegate.cs` 프로젝트에서 파일을 엽니다. 파일의 맨 위에 `HealthKit`있는를 사용 하 여 문을 확인 합니다.
+상태 키트 프로 비전 된 프로젝트에서 `AppDelegate.cs` 파일을 엽니다. `HealthKit`를 사용 하 여 문을 확인 합니다. 파일의 맨 위에 있습니다.
 
 다음 코드는 상태 키트 권한과 관련이 있습니다.
 
@@ -201,20 +201,20 @@ void ReactToHealthCarePermissions (bool success, NSError error)
 
 ```
 
-이러한 메서드의 모든 코드는에서 `OnActivated`인라인으로 수행 될 수 있지만 샘플 앱은 별도의 메서드를 사용 하 여 의도를 명확 하 게 합니다. 작성 중인 특정 형식에 대 한 액세스를 요청 하는 데 필요한 단계를 수행 하 고, 앱을 원하는 경우 읽습니다. `ValidateAuthorization()` 및 `ReactToHealthCarePermissions()` 는 사용자가 응용 프로그램의 사용 권한 대화 상자와 상호 작용 한 후 활성화 되는 콜백입니다.
+이러한 메서드의 모든 코드는 `OnActivated`인라인에서 수행 될 수 있지만 샘플 앱은 별도의 메서드를 사용 하 여 의도를 명확 하 게 합니다. `ValidateAuthorization()` 특정 형식에 대 한 액세스를 요청 하는 데 필요한 단계를 수행 하 고 (필요한 경우 읽고, 앱이 필요한 경우), `ReactToHealthCarePermissions()` 사용자가 응용 프로그램의 사용 권한 대화 상자와 상호 작용 한 후 활성화 되는 콜백입니다.
 
-작업 `ValidateAuthorization()` 은 앱이 쓰고 해당 데이터를 업데이트 `HKObjectTypes` 하기 위한 권한 부여를 요청 하는 집합을 빌드하는 것입니다. 샘플 앱 `HKObjectType` 에서는 키 `KHQuantityTypeIdentifierKey.HeartRate`에 대 한입니다. 이 형식은 집합에 `typesToWrite`추가 되는 반면 집합 `typesToRead` 은 빈 상태로 유지 됩니다. 이러한 집합 및 `ReactToHealthCarePermissions()` 콜백에 대 한 참조는에 `HKHealthStore.RequestAuthorizationToShare()`전달 됩니다.
+`ValidateAuthorization()` 작업은 앱이 쓸 `HKObjectTypes` 집합을 빌드하고 해당 데이터를 업데이트 하기 위한 권한 부여를 요청 하는 것입니다. 샘플 앱에서는 키 `KHQuantityTypeIdentifierKey.HeartRate`에 대 한 `HKObjectType`입니다. 이 형식은 집합 `typesToWrite`에 추가 되는 반면 집합 `typesToRead`는 비어 있습니다. 이러한 집합과 `ReactToHealthCarePermissions()` 콜백에 대 한 참조가 `HKHealthStore.RequestAuthorizationToShare()`에 전달 됩니다.
 
-사용자가 사용 권한 대화 상자와 상호 작용 하 고 두 가지 정보, 즉 사용자가 사용 권한 대화 상자와 `bool` `true` `ReactToHealthCarePermissions()` `NSError`상호작용하는경우값이전달된후콜백이호출됩니다.null이 아닌 경우 사용 권한 대화 상자를 표시 하는 것과 관련 된 일종의 오류를 나타냅니다.
+`ReactToHealthCarePermissions()` 콜백은 사용자가 사용 권한 대화 상자와 상호 작용 하 고 두 가지 정보, 즉 사용자가 사용 권한 대화 `NSError` 상자와 상호 작용 하는 경우 `true` 되 `bool` 값이 전달 된 후에 호출 됩니다. null이 아닌 경우는 사용 권한 대화 상자를 표시 하는 것과 관련 된 일종의 오류를 나타냅니다.
 
 > [!IMPORTANT]
 > 이 함수에 대 한 인수를 명확 하 게 표시 합니다. _성공_ 및 _오류_ 매개 변수는 사용자에 게 Health Kit 데이터에 액세스할 수 있는 권한을 부여 했는지 여부를 나타내지 않습니다. 사용자에 게 데이터에 대 한 액세스를 허용 하는 기회가 제공 되었다는 것만 표시 됩니다.
 
-앱이 데이터에 액세스할 수 있는지 여부를 확인 하려면를 `HKHealthStore.GetAuthorizationStatus()` 사용 하 여를 `HKQuantityTypeIdentifierKey.HeartRate`전달 합니다. 반환 된 상태에 따라 앱은 데이터를 입력할 수 있는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. 액세스 거부를 처리 하는 데 사용할 수 있는 표준 사용자 환경은 없으며 여러 가지 옵션을 사용할 수 있습니다. 예제 앱에서 상태는 `HeartRateModel` 단일 개체에 대해 설정 되 고, 그 후에는 관련 이벤트가 발생 합니다.
+앱이 데이터에 액세스할 수 있는지 여부를 확인 하려면 `HKHealthStore.GetAuthorizationStatus()`를 사용 하 여 `HKQuantityTypeIdentifierKey.HeartRate`를 전달 합니다. 반환 된 상태에 따라 앱은 데이터를 입력할 수 있는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. 액세스 거부를 처리 하는 데 사용할 수 있는 표준 사용자 환경은 없으며 여러 가지 옵션을 사용할 수 있습니다. 예제 앱에서 상태는 `HeartRateModel` singleton 개체에 설정 되어 있으며, 그에 따라 관련 이벤트가 발생 합니다.
 
 ## <a name="model-view-and-controller"></a>모델, 뷰 및 컨트롤러
 
-`HeartRateModel` Singleton 개체를 검토 하려면 다음 `HeartRateModel.cs` 파일을 엽니다.
+`HeartRateModel` singleton 개체를 검토 하려면 `HeartRateModel.cs` 파일을 엽니다.
 
 ```csharp
 using System;
@@ -329,21 +329,21 @@ namespace HKWork
 
 첫 번째 섹션은 일반 이벤트와 처리기를 만들기 위한 상용구 코드입니다. `HeartRateModel` 클래스의 초기 부분은 스레드로부터 안전한 singleton 개체를 만들기 위한 상용구 이기도 합니다.
 
-그런 다음 `HeartRateModel` 은 3 개의 이벤트를 노출 합니다. 
+그런 다음, `HeartRateModel` 3 개의 이벤트를 노출 합니다. 
 
 - `EnabledChanged`-하트 비트 저장소를 사용 하거나 사용 하지 않도록 설정 했음을 나타냅니다 (저장소는 처음에 사용 하지 않도록 설정 됨). 
-- `ErrorMessageChanged`-이 샘플 앱의 경우 매우 간단한 오류 처리 모델 (마지막 오류가 있는 문자열)이 있습니다. 
+- `ErrorMessageChanged`-이 샘플 앱에는 매우 간단한 오류 처리 모델 (마지막 오류가 있는 문자열)이 있습니다. 
 - `HeartRateStored`-하트 비율이 상태 키트 데이터베이스에 저장 될 때 발생 합니다.
 
-이러한 이벤트가 발생 될 때마다 구독자가 UI를 업데이트할 수 있도록 하 `NSObject.InvokeOnMainThread()`는를 통해 수행 됩니다. 또는 이벤트를 백그라운드 스레드에서 발생 하는 것으로 문서화 하 고, 호환성을 유지 하는 책임은 해당 처리기로 유지할 수 있습니다. 스레드 고려 사항은 권한 요청 등의 많은 함수가 비동기 이며 주가 아닌 스레드에서 콜백을 실행 하기 때문에 상태 키트 응용 프로그램에서 중요 합니다.
+이러한 이벤트가 발생 될 때마다 구독자가 UI를 업데이트할 수 있도록 하는 `NSObject.InvokeOnMainThread()`를 통해 수행 됩니다. 또는 이벤트를 백그라운드 스레드에서 발생 하는 것으로 문서화 하 고, 호환성을 유지 하는 책임은 해당 처리기로 유지할 수 있습니다. 스레드 고려 사항은 권한 요청 등의 많은 함수가 비동기 이며 주가 아닌 스레드에서 콜백을 실행 하기 때문에 상태 키트 응용 프로그램에서 중요 합니다.
 
-에서 `HeartRateModel` Heath Kit 관련 코드는 두 개의 함수 `HeartRateInBeatsPerMinute()` 및 `StoreHeartRate()`에 있습니다. 
+`HeartRateModel`의 Heath Kit 관련 코드는 두 개의 함수 `HeartRateInBeatsPerMinute()` 및 `StoreHeartRate()`에 있습니다. 
 
-`HeartRateInBeatsPerMinute()`해당 인수를 강력한 형식의 상태 키트 `HKQuantity`로 변환 합니다. Quantity의 형식은 `HKQuantityTypeIdentifierKey.HeartRate` 에 의해 지정 되 고 `HKUnit.Count` 수량 단위는로 `HKUnit.Minute` 구분 됩니다. 즉, 단위는 *분당 비트*단위입니다. 
+`HeartRateInBeatsPerMinute()`는 해당 인수를 강력한 형식의 상태 키트 `HKQuantity`으로 변환 합니다. 수량 유형은 `HKQuantityTypeIdentifierKey.HeartRate` 지정 하 고 수량 단위는 `HKUnit.Minute` `HKUnit.Count` 나눌 수 있습니다. 즉, 단위는 *분당 비트*단위입니다. 
 
-함수 `StoreHeartRate()` 는를 `HKQuantity` 사용 합니다 (샘플 앱에서는에 의해 `HeartRateInBeatsPerMinute()` 만들어짐). 해당 데이터의 유효성을 검사 하기 위해 `HKQuantity.IsCompatible()` 메서드를 사용 합니다 `true` .이 메서드는 개체의 단위를 인수의 단위로 변환할 수 있는지 여부를 반환 합니다. 이를 `HeartRateInBeatsPerMinute()` 사용 하 여 수량이 생성 된 경우 반환 `true`되는 것은 물론, 수량이 생성 된 경우 (예를 들어 *시간당 비트*수)도 반환 `true` 됩니다. 보다 일반적으로 `HKQuantity.IsCompatible()` 를 사용 하 여 사용자 또는 장치가 하나의 측정 시스템 (예: 왕정 단위)에서 입력 하거나 표시할 수 있지만 다른 시스템 (예: 메트릭 단위)에 저장 될 수 있는 대용량, 거리 및 에너지를 확인할 수 있습니다. 
+`StoreHeartRate()` 함수는 샘플 앱에서 `HeartRateInBeatsPerMinute()`에서 만든 `HKQuantity`를 사용 합니다. 데이터의 유효성을 검사 하기 위해이 메서드는 `HKQuantity.IsCompatible()` 메서드를 사용 합니다 .이 메서드는 개체의 단위를 인수의 단위로 변환할 수 있는 경우 `true`을 반환 합니다. `HeartRateInBeatsPerMinute()`를 사용 하 여 수량을 만든 경우에는 `true`반환 되지만, 수량이 생성 된 경우 (예를 들어 *시간당 비트*수)를 `true` 반환 합니다. 보다 일반적으로 `HKQuantity.IsCompatible()`는 사용자 또는 장치가 하나의 측정 시스템 (예: 왕정 단위)에서 입력 하거나 표시할 수 있지만 다른 시스템 (예: 메트릭 단위)에 저장 될 수 있는 대용량, 거리 및 에너지를 확인 하는 데 사용할 수 있습니다. 
 
-Quantity의 호환성을 확인 `HKQuantitySample.FromType()` 한 후에는 팩터리 메서드를 사용 하 여 강력한 `heartRateSample` 형식의 개체를 만듭니다. `HKSample`개체에는 시작 날짜와 종료 날짜가 있습니다. 즉각적인 판독값의 경우 이러한 값은 예제와 같이 동일 해야 합니다. 이 샘플은 또한 `HKMetadata` 인수에 키-값 데이터를 설정 하지 않지만 다음 코드와 같은 코드를 사용 하 여 센서 위치를 지정할 수 있습니다.
+Quantity의 호환성을 확인 한 후에는 `HKQuantitySample.FromType()` factory 메서드를 사용 하 여 강력한 형식의 `heartRateSample` 개체를 만듭니다. `HKSample` 개체에는 시작 날짜와 종료 날짜가 있습니다. 즉각적인 판독값의 경우 이러한 값은 예제와 같이 동일 해야 합니다. 또한이 샘플은 `HKMetadata` 인수에서 키-값 데이터를 설정 하지 않지만 다음 코드와 같은 코드를 사용 하 여 센서 위치를 지정할 수 있습니다.
 
 ```csharp
 var hkm = new HKMetadata();
@@ -351,9 +351,9 @@ hkm.HeartRateSensorLocation = HKHeartRateSensorLocation.Chest;
 
 ```
 
-`heartRateSample` 가 만들어지면 코드는 using 블록을 사용 하 여 데이터베이스에 대 한 새 연결을 만듭니다. 이 블록 내에서 메서드 `HKHealthStore.SaveObject()` 는 데이터베이스에 대 한 비동기 쓰기를 시도 합니다. 람다 식에 대 한 결과 호출은 `HeartRateStored` 또는 `ErrorMessageChanged`와 관련 이벤트를 트리거합니다.
+`heartRateSample` 만들어지면 코드는 using 블록을 사용 하 여 데이터베이스에 대 한 새 연결을 만듭니다. 이 블록 내에서 `HKHealthStore.SaveObject()` 메서드는 데이터베이스에 대 한 비동기 쓰기를 시도 합니다. 람다 식에 대 한 결과 호출은 `HeartRateStored` 또는 `ErrorMessageChanged`관련 이벤트를 트리거합니다.
 
-이제 모델을 프로그래밍 했으므로 컨트롤러에서 모델의 상태를 반영 하는 방법을 확인할 수 있습니다. 파일을 `HKWorkViewController.cs` 엽니다. 생성자는 `HeartRateModel` 단일 항목을 이벤트 처리 메서드에 적용 하기만 하면 됩니다 .이 메서드는 람다 식으로 인라인으로 수행 될 수 있지만 별도의 메서드를 사용 하면 좀 더 명확 하 게 만들 수 있습니다.
+이제 모델을 프로그래밍 했으므로 컨트롤러에서 모델의 상태를 반영 하는 방법을 확인할 수 있습니다. `HKWorkViewController.cs` 파일을 엽니다. 생성자는 단순히 `HeartRateModel` singleton을 이벤트 처리 메서드에 연결할 수 있습니다 .이 작업은 람다 식으로 인라인으로 수행 될 수 있지만 별도의 메서드를 사용 하면 좀 더 명확 하 게 만들 수 있습니다.
 
 ```csharp
 public HKWorkViewController (IntPtr handle) : base (handle)
@@ -402,17 +402,17 @@ IOS 시뮬레이터는 상태 키트를 지원 하지 않습니다. 디버그는
 > - **프로젝트 옵션** -번들 식별자 (명시적 앱 ID) & 프로 비전 프로필입니다.
 > - **소스 코드** -info.plist & info.plist
 
-프로 비전이 올바르게 설정 되었다고 가정 하면 응용 프로그램이 시작 됩니다. 해당 `OnActivated` 메서드에 도달 하면 상태 키트 권한 부여를 요청 합니다. 운영 체제에서이 작업을 처음으로 발생 하면 사용자에 게 다음과 같은 대화 상자가 표시 됩니다.
+프로 비전이 올바르게 설정 되었다고 가정 하면 응용 프로그램이 시작 됩니다. `OnActivated` 메서드에 도달 하면 상태 키트 권한 부여를 요청 합니다. 운영 체제에서이 작업을 처음으로 발생 하면 사용자에 게 다음과 같은 대화 상자가 표시 됩니다.
 
-[![](healthkit-images/image12.png "사용자에 게이 대화 상자가 표시 됩니다.")](healthkit-images/image12.png#lightbox)
+[![](healthkit-images/image12.png "The user will be presented with this dialog")](healthkit-images/image12.png#lightbox)
 
-앱에서 하트 요금 데이터를 업데이트할 수 있도록 설정 하면 앱이 다시 나타납니다. 콜백은 `ReactToHealthCarePermissions` 비동기적으로 활성화 됩니다. `HeartRateModel’s` `HKPermissionsViewController.OnEnabledChanged()` 이렇게 하면 이벤트가 발생 하 여 이벤트 처리기가 실행 되 고이로 인해 `StoreData` 단추가 활성화 됩니다. `EnabledChanged` `Enabled` 다음 다이어그램에서는이 시퀀스를 보여 줍니다.
+앱에서 하트 요금 데이터를 업데이트할 수 있도록 설정 하면 앱이 다시 나타납니다. `ReactToHealthCarePermissions` 콜백은 비동기적으로 활성화 됩니다. 이렇게 하면 `HeartRateModel’s` `Enabled` 속성을 변경 하 여 `EnabledChanged` 이벤트를 발생 시킵니다 .이로 인해 `HKPermissionsViewController.OnEnabledChanged()` 이벤트 처리기가 실행 되어 `StoreData` 단추가 사용 됩니다. 다음 다이어그램에서는이 시퀀스를 보여 줍니다.
 
-[![](healthkit-images/image13.png "이 다이어그램에서는 이벤트의 시퀀스를 보여 줍니다.")](healthkit-images/image13.png#lightbox)
+[![](healthkit-images/image13.png "This diagram shows the sequence of events")](healthkit-images/image13.png#lightbox)
 
-**기록** 단추를 누릅니다. `HKQuantity` `HeartRateModel.StoreHeartRate()` `HeartRateModel.HeartRateInBeatsPerMinute()` 이렇게 하면 `heartRate` 처리기가 실행 되어 텍스트 필드의 값을 구문 분석 하 고, 앞에서 설명한 함수를 통해로 변환 하 고, 해당 수량을에 전달 합니다. `StoreData_TouchUpInside()` 앞에서 설명한 것 처럼이는 데이터를 저장 하려고 시도 하 고 `HeartRateStored` 또는 `ErrorMessageChanged` 이벤트를 발생 시킵니다.
+**기록** 단추를 누릅니다. 이렇게 하면 `StoreData_TouchUpInside()` 처리기가 실행 되어 `heartRate` 텍스트 필드의 값을 구문 분석 하 고 앞에서 설명한 `HeartRateModel.HeartRateInBeatsPerMinute()` 함수를 통해 `HKQuantity`으로 변환한 다음 해당 수량을 `HeartRateModel.StoreHeartRate()`으로 전달 합니다. 앞에서 설명한 것 처럼이는 데이터 저장을 시도 하 고 `HeartRateStored` 또는 `ErrorMessageChanged` 이벤트를 발생 시킵니다.
 
-장치에서 **홈** 단추를 두 번 클릭 하 고 상태 앱을 엽니다. **원본** 탭을 클릭 하면 샘플 앱이 표시 됩니다. 이를 선택 하 고 하트 rate 데이터를 업데이트할 수 있는 권한을 허용 하지 않습니다. **홈** 단추를 두 번 클릭 하 고 앱으로 다시 전환 합니다. 다시 `ReactToHealthCarePermissions()` 한 번 호출 되지만 이번에는 액세스가 거부 되었기 때문에 사용자 **데이터** 단추를 사용할 수 없게 됩니다 .이는 비동기적으로 수행 되며 최종 사용자에 게 사용자 인터페이스의 변경 내용이 표시 될 수 있습니다.
+장치에서 **홈** 단추를 두 번 클릭 하 고 상태 앱을 엽니다. **원본** 탭을 클릭 하면 샘플 앱이 표시 됩니다. 이를 선택 하 고 하트 rate 데이터를 업데이트할 수 있는 권한을 허용 하지 않습니다. **홈** 단추를 두 번 클릭 하 고 앱으로 다시 전환 합니다. 다시 한 번 `ReactToHealthCarePermissions()` 호출 되지만 이번에는 액세스가 거부 되었기 때문에 사용자 **데이터** 단추를 사용할 수 없게 됩니다 .이는 비동기적으로 수행 되며 최종 사용자에 게 사용자 인터페이스의 변경 내용이 표시 될 수 있습니다.
 
 ## <a name="advanced-topics"></a>고급 항목
 

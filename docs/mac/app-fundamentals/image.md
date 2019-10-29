@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 이미지
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 99604b59e5557ba5a7aa3d5ba61bc1bff414f000
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 233d4429915530dcb44013a9b4ab82cfe7656977
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770318"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030145"
 ---
 # <a name="images-in-xamarinmac"></a>Xamarin.ios의 이미지
 
@@ -130,7 +130,7 @@ Xamarin.ios 응용 프로그램의 원본 이미지로 png, jpg 또는 pdf 파�
 
 Xamarin.ios 응용 프로그램 (아이콘, 사용자 지정 컨트롤, 사용자 지정 커서, 사용자 지정 아트 워크 등)에 추가 하는 모든 그래픽 자산은 표준 해상도 버전 외에도 고해상도 버전이 있어야 합니다. 이는 응용 프로그램이 레 티 나 Display 장착 된 Mac 컴퓨터에서 실행 될 때 가장 적합 한 것을 확인 하는 데 필요 합니다.
 
-### <a name="adopt-the-2x-naming-convention"></a>@No__t_0 명명 규칙 채택
+### <a name="adopt-the-2x-naming-convention"></a>@2x 명명 규칙 채택
 
 > [!IMPORTANT]
 > MacOS 앱에서 이미지를 사용 하는이 방법은 Apple에서 더 이상 사용 되지 않습니다. 대신 [자산 카탈로그 이미지 집합](#asset-catalogs) 을 사용 하 여 앱의 이미지를 관리 해야 합니다.
@@ -154,7 +154,7 @@ Xamarin.ios 프로젝트의 **Resources** 폴더에 추가한 모든 이미지 �
 
 Interface builder에서 이미지를 사용 하려면 다음을 수행 합니다.
 
-1. @No__t_2의 **빌드 작업** 을 사용 하 여 **Resources** 폴더에 이미지를 추가 합니다. 
+1. `BundleResource`의 **빌드 작업** 을 사용 하 여 **Resources** 폴더에 이미지를 추가 합니다. 
 
      ![Solution Pad의 이미지 리소스](image-images/ib00.png "Solution Pad의 이미지 리소스")
 2. **주 storyboard** 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 
@@ -341,7 +341,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 ## <a name="using-images-with-outline-views"></a>개요 보기가 포함 된 이미지 사용
 
-@No__t_0에 있는 셀의 일부로 이미지를 포함 하려면 개요 뷰의 `NSTableViewDelegate's` `GetView` 메서드에서 데이터가 반환 되는 방법을 변경 하 여 일반적인 `NSTextField` 대신 `NSTableCellView`를 사용 해야 합니다. 예를 들면,
+`NSOutlineView`에 있는 셀의 일부로 이미지를 포함 하려면 개요 뷰의 `NSTableViewDelegate's` `GetView` 메서드에서 데이터가 반환 되는 방법을 변경 하 여 일반적인 `NSTextField`대신 `NSTableCellView`를 사용 해야 합니다. 예를 들면,
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
