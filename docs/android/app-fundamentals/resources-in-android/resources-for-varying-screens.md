@@ -3,15 +3,15 @@ title: 다양한 화면에 대한 리소스 만들기
 ms.prod: xamarin
 ms.assetid: 3D17DE45-115C-7192-5685-44F8EEE07DCC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/28/2018
-ms.openlocfilehash: 6db927409e07b97ef5b7b1e7f54b6bcbdc60e115
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: cbd392dcae173eb3baf0fb8f0c3c4ec7c0da23a1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249670"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025125"
 ---
 # <a name="creating-resources-for-varying-screens"></a>다양 한 화면에 대 한 리소스 만들기
 
@@ -21,19 +21,19 @@ Android 자체는 각각 다양 한 해상도, 화면 크기 및 화면 밀도�
 
 여러 화면을 지원 하기 위해 몇 가지 용어와 개념을 이해 하는 것이 중요 합니다.
 
-- **화면 크기** &ndash; 응용 프로그램을 표시 하는 데 필요한 실제 공간의 양
+- **화면 크기** &ndash; 응용 프로그램을 표시 하기 위한 실제 공간의 크기
 
-- **화면 밀도** &ndash; 화면에서 지정 된 영역의 픽셀 수입니다. 일반적인 측정 단위는 dpi (인치당 도트 수)입니다.
+- **화면 밀도** 는 화면에서 지정 된 영역의 픽셀 수를 &ndash; 합니다. 일반적인 측정 단위는 dpi (인치당 도트 수)입니다.
 
-- **해결 방법** &ndash; 화면의 총 픽셀 수입니다. 응용 프로그램을 개발할 때 해상도는 화면 크기 및 밀도 만큼 중요 하지 않습니다.
+- **해상도** &ndash; 화면의 전체 픽셀 수를 표시 합니다. 응용 프로그램을 개발할 때 해상도는 화면 크기 및 밀도 만큼 중요 하지 않습니다.
 
-- **밀도 독립적 픽셀 (dp)** &ndash; 밀도와 독립적으로 레이아웃을 디자인할 수 있는 가상 측정 단위입니다. 이 수식은 dp를 화면 픽셀로 변환 하는 데 사용 됩니다.
+- 밀도 **독립적 픽셀 (dp)** &ndash; 레이아웃을 밀도와 무관 하 게 설계할 수 있도록 하는 가상 측정 단위입니다. 이 수식은 dp를 화면 픽셀로 변환 하는 데 사용 됩니다.
 
-    px &equals; dp &times; dpi 160&divide;
+    px &equals; dp &times; dpi &divide; 160
 
-- **방향** &ndash; 화면의 방향은 너비가 긴 경우 가로로 간주 됩니다. 반면 세로 방향은 화면이 너비가 넓은 경우입니다. 사용자가 장치를 회전할 때 응용 프로그램의 수명 동안 방향이 변경 될 수 있습니다.
+- 화면의 방향이 높이가 긴 경우 화면의 방향이 가로 인 것으로 간주 됩니다 **. &ndash;** 반면 세로 방향은 화면이 너비가 넓은 경우입니다. 사용자가 장치를 회전할 때 응용 프로그램의 수명 동안 방향이 변경 될 수 있습니다.
 
-이러한 개념 중 처음 세 가지는 상호 관련 &ndash; 되어 있으므로 밀도를 늘리지 않고 해상도를 늘리면 화면 크기가 증가 합니다. 그러나 밀도와 해상도를 모두 늘리면 화면 크기가 변경 되지 않은 상태로 유지 될 수 있습니다. 화면 크기, 밀도 및 해상도의 이러한 관계는 화면을 신속 하 게 지원 합니다.
+이러한 개념 중 처음 3 개는 상호 &ndash; 관련 되어 있으며, 밀도를 증가 시 키 지 않고 해상도를 늘리면 화면 크기가 증가 합니다. 그러나 밀도와 해상도를 모두 늘리면 화면 크기가 변경 되지 않은 상태로 유지 될 수 있습니다. 화면 크기, 밀도 및 해상도의 이러한 관계는 화면을 신속 하 게 지원 합니다.
 
 이러한 복잡성을 해결 하기 위해 Android framework는 화면 레이아웃에 대 한 *dp (밀도 독립적 픽셀)* 를 사용 하는 것이 선호 됩니다. 밀도 독립 픽셀을 사용 하면 UI 요소가 사용자에 게 표시 되어 다른 밀도를 사용 하는 화면에서 동일한 실제 크기를 갖게 됩니다.
 
@@ -55,11 +55,11 @@ Android는 런타임에 적합 한 크기로 확장 가능 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[Android 매니페스트![](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[Android 매니페스트![](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
@@ -104,15 +104,15 @@ API 수준 13 (Android 3.2) 부터는 sw*N*dp 한정자를 사용 하기 위해 
 
 다음은 다양 한 장치에 대 한 몇 가지 지침입니다.
 
-- **일반 전화** &ndash; 320 dp: 일반 전화
+- 일반적인 **전화** &ndash; 320 dp: 일반적인 전화
 
-- **5 개의 "태블릿/" tweener "장치** &ndash; 480 dp: Samsung Note 등
+- **5 "태블릿/" tweener "장치** &ndash; 480 dp (예: Samsung Note)
 
-- **7 "태블릿** 600 dp: barnes and &amp; Noble nook 등 &ndash;
+- **7 "태블릿** &ndash; 600 Dp: Barnes and &amp; Noble nook와 같은
 
-- **10 "태블릿** &ndash; 720 dp: Motorola xoom 등
+- Motorola Xoom과 같은 **10 개의 "태블릿** &ndash; 720 dp:
 
-최대 12 개 (Android 3.1)의 API 수준을**대상으로 하** 는 응용 프로그램의 경우 레이아웃은/// 대부분의 장치에서 사용할 수 있는 다양 한 화면 크기. 예를 들어 아래 이미지에는 4 개의 다른 화면 크기에 대 한 대체 리소스가 있습니다.
+API 수준을 최대 12 (Android 3.1)로 지정 하는 응용 프로그램의 경우 레이아웃은 다양 한 화면의 일반화를 사용 하는 한정자 **small**/**normal**/**large**/**초대형** 를 사용 하는 디렉터리로 이동 해야 합니다. 대부분의 장치에서 사용할 수 있는 크기입니다. 예를 들어 아래 이미지에는 4 개의 다른 화면 크기에 대 한 대체 리소스가 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -163,7 +163,7 @@ Android는 장치에 필요한 대로 비트맵 크기를 조정 하지만, 비�
 
 다양 한 밀도의 이러한 비트맵을 만드는 것이 다소 지루한 일 수 있습니다. 따라서 Google은 [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/)라는 이러한 비트맵 만들기와 관련 된 일부 번거로움을를 줄일 수 있는 온라인 유틸리티를 만들었습니다.
 
-[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
+[Android Asset Studio![](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 이 웹 사이트는 하나의 이미지를 제공 하 여 네 가지 일반적인 화면 밀도를 대상으로 하는 비트맵을 만드는 데 도움이 됩니다. 그러면 Android Asset Studio에서 일부 사용자 지정 항목을 사용 하 여 비트맵을 만든 다음 zip 파일로 다운로드할 수 있습니다.
 
@@ -171,14 +171,14 @@ Android는 장치에 필요한 대로 비트맵 크기를 조정 하지만, 비�
 
 Android는 놀랄만한 수의 장치에서 실행 되며 화면 크기와 화면 밀도의 조합을 과도 하 게 볼 수 있습니다. 다음은 다양 한 장치를 지 원하는 데 필요한 노력을 최소화 하는 데 도움이 되는 팁입니다.
 
-- **필요한 항목에 대해서만 디자인 및 개발** &ndash; 다양 한 장치를 사용할 수 있지만,에 대 한 디자인 및 개발에 상당한 노력이 소요 될 수 있는 드문 폼 팩터는 있습니다. [**화면 크기 및 밀도**](https://developer.android.com/resources/dashboard/screens.html) 대시보드는 화면 크기/화면 밀도 행렬의 분석에 대 한 데이터를 제공 하는 Google에서 제공 하는 페이지입니다. 이 분석을 통해 화면 지원에 대 한 개발 노력에 대 한 통찰력을 얻을 수 있습니다.
+- **필요한 &ndash;에 대해서만 디자인 하 고 개발할** 수 있습니다. 그러나 몇 가지 장치를 사용 하는 경우에만 디자인 하 고 개발 하는 데 상당한 노력이 소요 될 수 있는 드문 폼 팩터는 있습니다. [**화면 크기 및 밀도**](https://developer.android.com/resources/dashboard/screens.html) 대시보드는 화면 크기/화면 밀도 행렬의 분석에 대 한 데이터를 제공 하는 Google에서 제공 하는 페이지입니다. 이 분석을 통해 화면 지원에 대 한 개발 노력에 대 한 통찰력을 얻을 수 있습니다.
 
 - **픽셀 대신 DPs를 사용** 하면 화면 밀도가 변경 될 때 문제가 됩니다. 픽셀 값을 하드 코딩 하지 마십시오. Dp (밀도 독립적 픽셀)를 사용 하 여 픽셀을 방지 합니다.
 
-- **방지** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout) 가능 하면 API 수준 3 (Android 1.5)에서 더 이상 사용 되지 않으며 레이아웃이 불안정 됩니다. 
-   &ndash; 사용 하면 안 됩니다. 대신 [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)또는 새 [**GridLayout**](xref:Android.Widget.GridLayout)와 같은 더 유연한 레이아웃 위젯을 사용 합니다.
+- &ndash; **가능** 하면 [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout)
+  사용 **하지** 않는 것이 좋습니다 .이는 API 수준 3 (Android 1.5)에서 더 이상 사용 되지 않으며 불안정 레이아웃을 생성 합니다. 사용 하면 안 됩니다. 대신 [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)또는 새 [**GridLayout**](xref:Android.Widget.GridLayout)와 같은 더 유연한 레이아웃 위젯을 사용 합니다.
 
-- **기본 레이아웃 방향 선택**예를 들어 대체 리소스를 제공 하는 대신, 레이아웃 및 레이아웃-포트를 제공 하는 대신 레이아웃에 가로 및 세로의 리소스를 레이아웃-포트에 배치 합니다. &ndash;
+- **기본 &ndash; 레이아웃 방향을 선택** 합니다. 예를 들어 대체 리소스를 제공 하는 대신 **모양** 및 **레이아웃 포트**를 제공 하 고, **레이아웃**에 가로 및 세로의 리소스를 배치 하는 것이 좋습니다. **layout-포트**
 
 - **Height 및 Width에 대해 LayoutParams 사용** -XML 레이아웃 파일에서 UI 요소를 정의 하는 경우 **wrap_content** 및 **fill_parent** 값을 사용 하는 Android 응용 프로그램은 더 많은 성공을 보장 합니다. 픽셀 또는 밀도 독립적 단위 사용. 이러한 차원 값으로 인해 Android에서 비트맵 리소스를 적절 하 게 확장할 수 있습니다. 이와 같은 이유로, 밀도 독립적 단위는 UI 요소의 여백 및 안쪽 여백을 지정 하는 경우에 적합 합니다.
 

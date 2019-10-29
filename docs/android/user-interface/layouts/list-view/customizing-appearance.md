@@ -3,63 +3,63 @@ title: ListView 모양 사용자 지정
 ms.prod: xamarin
 ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2018
-ms.openlocfilehash: 2787e814d330bf8262ba05e38c7827211e07fd72
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 48b23a1dce66f13efd3ad598cd61684e64e2b03c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764255"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028898"
 ---
 # <a name="customizing-a-listviews-appearance-with-xamarinandroid"></a>Xamarin.ios를 사용 하 여 ListView의 모양 사용자 지정
 
-ListView의 모양은 표시 되는 행의 레이아웃에 따라 결정 됩니다. 의 `ListView`모양을 변경 하려면 다른 행 레이아웃을 사용 합니다.
+ListView의 모양은 표시 되는 행의 레이아웃에 따라 결정 됩니다. `ListView`모양을 변경 하려면 다른 행 레이아웃을 사용 합니다.
 
 ## <a name="built-in-row-views"></a>기본 제공 행 뷰
 
 **Android. Layout**을 사용 하 여 참조할 수 있는 기본 제공 보기는 12 가지가 있습니다.
 
-- **Testlistitem** &ndash; 최소 서식 지정이 적용 된 한 줄의 텍스트입니다.
+- **Testlistitem** 은 최소 서식 지정을 사용 하 여 텍스트 한 줄 &ndash; 합니다.
 
-- **SimpleListItem1** &ndash; 한 줄의 텍스트입니다.
+- **SimpleListItem1** &ndash; 한 줄 텍스트입니다.
 
 - **SimpleListItem2** &ndash; 두 줄의 텍스트입니다.
 
-- **SimpleSelectableListItem** &ndash; 단일 또는 여러 항목 선택 (API 수준 11에서 추가)을 지 원하는 텍스트 한 줄입니다.
+- **SimpleSelectableListItem** 는 단일 또는 여러 항목 선택 (API 수준 11에서 추가)을 지 원하는 텍스트의 한 줄 &ndash;.
 
-- **SimpleListItemActivated1** &ndash; SimpleListItem1와 비슷하지만 배경 색은 행이 선택 된 경우 (API 수준 11에서 추가 됨)를 나타냅니다.
+- **SimpleListItemActivated1** &ndash; SimpleListItem1와 유사 하지만, 배경 색은 행이 선택 된 경우 (API 수준 11에서 추가 됨)를 나타냅니다.
 
-- **SimpleListItemActivated2** &ndash; SimpleListItem2와 비슷하지만 배경 색은 행이 선택 된 경우 (API 수준 11에서 추가 됨)를 나타냅니다.
+- **SimpleListItemActivated2** &ndash; SimpleListItem2와 유사 하지만, 배경 색은 행이 선택 된 경우 (API 수준 11에서 추가 됨)를 나타냅니다.
 
-- **SimpleListItemChecked** &ndash; 선택 영역을 나타내는 확인 표시를 표시 합니다.
+- **SimpleListItemChecked** &ndash; 선택 항목을 나타내는 확인 표시를 표시 합니다.
 
 - **SimpleListItemMultipleChoice** &ndash; 여러 선택 항목을 표시 하는 확인란을 표시 합니다.
 
-- **SimpleListItemSingleChoice** &ndash; 상호 배타적인 선택을 나타내는 라디오 단추를 표시 합니다.
+- **SimpleListItemSingleChoice** &ndash;는 상호 배타적인 선택을 나타내는 라디오 단추를 표시 합니다.
 
-- **Twol(listitem** ) &ndash; 두 줄의 텍스트입니다.
+- **Twol&ndash; listitem** 은 두 줄의 텍스트를 합니다.
 
-- **Activitylistitem** &ndash; 이미지를 사용 하는 한 줄의 텍스트입니다.
+- **Activitylistitem** 은 이미지가 있는 한 줄의 텍스트를 &ndash; 합니다.
 
-- **SimpleExpandableListItem** &ndash; 는 범주별로 행을 그룹화 하 고 각 그룹은 확장 하거나 축소할 수 있습니다.
+- **SimpleExpandableListItem** &ndash;는 범주별로 행을 그룹화 하 고 각 그룹은 확장 하거나 축소할 수 있습니다.
 
 기본 제공 되는 각 행 뷰에는 연결 된 기본 제공 스타일이 있습니다. 이러한 스크린샷에는 각 보기가 표시 되는 방식이 나와 있습니다.
 
-[![TestListItem, SimpleSelectableListItem, SimpleListitem1 및 SimpleListItem2의 스크린샷](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
+[TestListItem, SimpleSelectableListItem, SimpleListitem1 및 SimpleListItem2의![스크린샷](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked 및 SimpleListItemMultipleChecked의 스크린샷](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
+[SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked 및 SimpleListItemMultipleChecked의![스크린샷](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![SimpleListItemSingleChoice, Twol를 Listitem, ActivityListItem 및 SimpleExpandableListItem의 스크린샷](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
+[SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem 및 SimpleExpandableListItem의![스크린샷](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
-**BuiltInViews/HomeScreenAdapter** 샘플 파일 ( **BuiltInViews** 솔루션)에는 확장 가능 하지 않은 목록 항목 화면을 생성 하는 코드가 포함 되어 있습니다. 뷰는 `GetView` 메서드에 다음과 같이 설정 됩니다.
+**BuiltInViews/HomeScreenAdapter** 샘플 파일 ( **BuiltInViews** 솔루션)에는 확장 가능 하지 않은 목록 항목 화면을 생성 하는 코드가 포함 되어 있습니다. 뷰는 `GetView` 메서드에서 다음과 같이 설정 됩니다.
 
 ```csharp
 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
 ```
 
-그런 다음 표준 `Text1`컨트롤 식별자 `Icon` 를 참조 하 여 뷰의 속성을 설정할 수 있으며 `Text2` , 아래 `Android.Resource.Id` (뷰에 포함 되지 않은 속성을 설정 하지 않거나 예외가 throw 됨).
+그런 다음 `Android.Resource.Id` 아래의 표준 컨트롤 식별자 `Text1`, `Text2` 및 `Icon` 참조 하 여 뷰의 속성을 설정할 수 있습니다. 뷰에 포함 되지 않는 속성을 설정 하지 않거나 예외가 throw 됩니다.
 
 ```csharp
 view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Heading;
@@ -67,47 +67,47 @@ view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = item.SubHeading;
 view.FindViewById<ImageView>(Android.Resource.Id.Icon).SetImageResource(item.ImageResourceId); // only use with ActivityListItem
 ```
 
-**BuiltInExpandableViews/ExpandableScreenAdapter** 샘플 파일 ( **BuiltInViews** 솔루션)에는 SimpleExpandableListItem 화면을 생성 하는 코드가 포함 되어 있습니다. 그룹 보기는 `GetGroupView` 메서드에 다음과 같이 설정 됩니다.
+**BuiltInExpandableViews/ExpandableScreenAdapter** 샘플 파일 ( **BuiltInViews** 솔루션)에는 SimpleExpandableListItem 화면을 생성 하는 코드가 포함 되어 있습니다. 그룹 보기는 `GetGroupView` 메서드에서 다음과 같이 설정 됩니다.
 
 ```csharp
 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableListItem1, null);
 ```
 
-자식 뷰는 `GetChildView` 메서드에 다음과 같이 설정 됩니다.
+자식 뷰는 `GetChildView` 메서드에서 다음과 같이 설정 됩니다.
 
 ```csharp
 view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableListItem2, null);
 ```
 
-그러면 위에서 설명한 대로 표준 `Text1` 및 `Text2` 컨트롤 식별자를 참조 하 여 그룹 보기 및 자식 뷰에 대 한 속성을 설정할 수 있습니다. SimpleExpandableListItem 스크린 샷 (위에 표시 됨)에서는 한 줄 그룹 보기 (SimpleExpandableListItem1) 및 2 줄 자식 보기 (SimpleExpandableListItem2)의 예를 제공 합니다. 또는 두 줄 (SimpleExpandableListItem2)에 대해 그룹 보기를 구성 하 고 자식 보기를 한 줄 (SimpleExpandableListItem1)에 대해 구성 하거나, 두 그룹 보기와 자식 보기 모두의 줄 수를 지정할 수 있습니다. 
+그러면 위에서 설명한 대로 표준 `Text1`를 참조 하 고 컨트롤 식별자를 `Text2` 하 여 그룹 보기 및 자식 뷰에 대 한 속성을 설정할 수 있습니다. SimpleExpandableListItem 스크린 샷 (위에 표시 됨)에서는 한 줄 그룹 보기 (SimpleExpandableListItem1) 및 2 줄 자식 보기 (SimpleExpandableListItem2)의 예를 제공 합니다. 또는 두 줄 (SimpleExpandableListItem2)에 대해 그룹 보기를 구성 하 고 자식 보기를 한 줄 (SimpleExpandableListItem1)에 대해 구성 하거나, 두 그룹 보기와 자식 보기 모두의 줄 수를 지정할 수 있습니다. 
 
-## <a name="accessories"></a>Accessories
+## <a name="accessories"></a>부속
 
 행에는 선택 상태를 나타내는 보조 프로그램이 보기의 오른쪽에 추가 될 수 있습니다.
 
-- **SimpleListItemChecked** &ndash; 확인을 표시기로 사용 하 여 단일 선택 목록을 만듭니다.
+- **SimpleListItemChecked** &ndash;은 표시기로 확인을 사용 하 여 단일 선택 목록을 만듭니다.
 
-- **SimpleListItemSingleChoice** &ndash; 하나만 선택할 수 있는 라디오 단추 형식 목록을 만듭니다.
+- **SimpleListItemSingleChoice** &ndash;는 선택할 수 있는 라디오 단추 유형 목록을 만듭니다.
 
-- **SimpleListItemMultipleChoice** &ndash; 여러 항목을 선택할 수 있는 checkbox 유형 목록을 만듭니다.
+- **SimpleListItemMultipleChoice** &ndash;는 여러 선택 항목을 선택할 수 있는 checkbox 유형 목록을 만듭니다.
 
 앞서 언급 한 액세서리는 다음 화면에서 해당 순서로 설명 됩니다.
 
-[![액세서리를 사용 하는 SimpleListItemChecked, SimpleListItemSingleChoice 및 SimpleListItemMultipleChoice의 스크린샷](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
+[액세서리를 사용 하는 SimpleListItemChecked, SimpleListItemSingleChoice 및 SimpleListItemMultipleChoice의![스크린샷](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
-이러한 액세서리 중 하나를 표시 하려면 필요한 레이아웃 리소스 ID를 어댑터에 전달 하 고, 필요한 행에 대 한 선택 상태를 수동으로 설정 합니다. 이 코드 줄에서는 다음 레이아웃 중 하나를 사용 하 `Adapter` 여를 만들고 할당 하는 방법을 보여 줍니다.
+이러한 액세서리 중 하나를 표시 하려면 필요한 레이아웃 리소스 ID를 어댑터에 전달 하 고, 필요한 행에 대 한 선택 상태를 수동으로 설정 합니다. 이 코드 줄에서는 다음 레이아웃 중 하나를 사용 하 여 `Adapter`를 만들고 할당 하는 방법을 보여 줍니다.
 
 ```csharp
 ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItemChecked, items);
 ```
 
-자체 `ListView` 는 표시 되는 액세서리에 관계 없이 다양 한 선택 모드를 지원 합니다. 혼동을 피하려면 `SingleChoice` 보조 프로그램 `Single` 에서 선택 모드를 사용 하 `Checked` 고 `Multiple` `MultipleChoice` 스타일을 사용 하 여 또는 모드를 사용 합니다. 선택 모드는 `ChoiceMode` `ListView`의 속성에 의해 제어 됩니다.
+`ListView` 자체는 표시 되는 액세서리에 관계 없이 다양 한 선택 모드를 지원 합니다. 혼동을 피하려면 `SingleChoice` 액세서리와 `Checked` 또는 `Multiple` 모드에서 `MultipleChoice` 스타일로 `Single` 선택 모드를 사용 합니다. 선택 모드는 `ListView`의 `ChoiceMode` 속성에 의해 제어 됩니다.
 
 ### <a name="handling-api-level"></a>API 수준 처리
 
 이전 버전의 Xamarin Android에서는 열거형을 정수 속성으로 구현 했습니다. 최신 버전에는 잠재적 옵션을 보다 쉽게 검색할 수 있도록 하는 적절 한 .NET 열거형 형식이 도입 되었습니다.
 
-대상으로 `ChoiceMode` 하는 API 수준에 따라은 정수 또는 열거형 중 하나입니다. **AccessoryViews/HomeScreen** 샘플 파일에는 Gingerbread API를 대상으로 하려는 경우 주석 처리 된 블록이 있습니다.
+대상으로 하는 API 수준에 따라 `ChoiceMode`은 정수 또는 열거형 중 하나입니다. **AccessoryViews/HomeScreen** 샘플 파일에는 Gingerbread API를 대상으로 하려는 경우 주석 처리 된 블록이 있습니다.
 
 ```csharp
 // For targeting Gingerbread the ChoiceMode is an int, otherwise it is an
@@ -128,20 +128,20 @@ lv.ChoiceMode = 1; // Single
 
 ### <a name="selecting-items-programmatically"></a>프로그래밍 방식으로 항목 선택
 
-' 선택 ' 된 항목을 `SetItemChecked` 메서드를 사용 하 여 수동으로 설정 (여러 번 선택 하는 경우 여러 번 호출 될 수 있음):
+' 선택 됨 ' 인 항목을 수동으로 설정 하는 작업은 `SetItemChecked` 메서드를 사용 하 여 수행 됩니다. 다중 선택에 대해 여러 번 호출할 수 있습니다.
 
 ```csharp
 // Set the initially checked row ("Fruits")
 lv.SetItemChecked(1, true);
 ```
 
-또한 코드는 여러 선택 항목과 다르게 단일 선택을 검색 해야 합니다. 모드에서 `Single` 선택 된 행을 확인 하려면 정수 속성을 `CheckedItemPosition` 사용 합니다.
+또한 코드는 여러 선택 항목과 다르게 단일 선택을 검색 해야 합니다. `Single` 모드에서 선택 된 행을 확인 하려면 `CheckedItemPosition` 정수 속성을 사용 합니다.
 
 ```csharp
 FindViewById<ListView>(Android.Resource.Id.List).CheckedItemPosition
 ```
 
-모드에서 `Multiple` 선택 된 행을 확인 하려면를 반복 `CheckedItemPositions` `SparseBooleanArray`해야 합니다. 스파스 배열은 값이 변경 된 항목만 포함 하는 사전과 유사 하므로 다음 코드 조각에 나와 있는 것 처럼 목록에서 선택 된 항목을 `true` 확인 하려면 값을 검색 하는 전체 배열을 트래버스 해야 합니다.
+`Multiple` 모드에서 선택 된 행을 확인 하려면 `CheckedItemPositions` `SparseBooleanArray`를 반복 해야 합니다. 스파스 배열은 값이 변경 된 항목만 포함 하는 사전과 유사 하므로 다음 코드 조각에 나와 있는 것 처럼 목록에서 선택한 항목을 확인 하기 위해 `true` 값을 찾기 위해 전체 배열을 트래버스 해야 합니다. :
 
 ```csharp
 var sparseArray = FindViewById<ListView>(Android.Resource.Id.List).CheckedItemPositions;
@@ -158,23 +158,23 @@ Console.WriteLine();
 
 이 예는 다양 한 방법으로 이전 예제와 다릅니다.
 
-- 는이 `Activity` 아니라 `ListActivity` 에서 상속 됩니다. 모든 `ListView` 항목에 대 한 행을 사용자 지정할 수 있지만 다른 컨트롤은 `Activity` 레이아웃 (예: 머리글, 단추 또는 기타 사용자 인터페이스 요소)에 포함 될 수도 있습니다. 이 예제에서는 `ListView` 을 설명 하기 위해 위의 제목을 추가 합니다.
+- `ListActivity`가 아닌 `Activity`에서 상속 됩니다. 모든 `ListView`에 대 한 행을 사용자 지정할 수 있지만 다른 컨트롤은 머리글, 단추 또는 다른 사용자 인터페이스 요소와 같은 `Activity` 레이아웃에 포함 될 수도 있습니다. 이 예에서는 `ListView` 위에 제목을 추가 하 여 보여 줍니다.
 
-- 화면에 대 한 AXML 레이아웃 파일이 필요 합니다. 이전 예제에서에는 `ListActivity` 레이아웃 파일이 필요 하지 않습니다. 이 axml에는 `ListView` 컨트롤 선언이 포함 되어 있습니다.
+- 화면에 대 한 AXML 레이아웃 파일이 필요 합니다. 이전 예제에서는 `ListActivity`에 레이아웃 파일이 필요 하지 않습니다. 이 AXML에는 `ListView` 컨트롤 선언이 포함 되어 있습니다.
 
 - 각 행을 렌더링 하려면 AXML 레이아웃 파일이 필요 합니다. 이 AXML 파일에는 사용자 지정 글꼴 및 색 설정을 사용 하는 텍스트 및 이미지 컨트롤이 포함 되어 있습니다.
 
 - 선택적 사용자 지정 선택기 XML 파일을 사용 하 여 행이 선택 될 때 표시 되는 모양을 설정 합니다.
 
-- `Adapter` 구현은 재정의`GetView` 에서 사용자 지정 레이아웃을 반환 합니다.
+- `Adapter` 구현에서는 `GetView` 재정의에서 사용자 지정 레이아웃을 반환 합니다.
 
-- `ItemClick`는 다르게 선언 해야 합니다. 이벤트 처리기는에서 `ListView.ItemClick` `ListActivity`재정의 `OnListItemClick` 되는 대신에 연결 됩니다.
+- `ItemClick`는 다르게 선언 해야 합니다. 이벤트 처리기는 `ListActivity`의 재정의 `OnListItemClick` 아닌 `ListView.ItemClick`에 연결 됩니다.
 
 이러한 변경 내용은 활동의 뷰 및 사용자 지정 행 뷰를 만든 다음 어댑터 및이를 렌더링 하기 위한 작업에 대 한 수정 사항을 포함 하 여 아래에 자세히 설명 되어 있습니다.
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>활동 레이아웃에 ListView 추가
 
-에서는 `HomeScreen` 더 이상 `ListActivity` 상속 되지 않으므로 기본 뷰가 없으므로 HomeScreen 보기에 대 한 레이아웃 axml 파일을 만들어야 합니다. 이 예의 경우 보기에는 `TextView` `ListView` 를 사용 하 여 데이터를 표시 하는 머리글이 포함 됩니다. 레이아웃은 다음에 표시 된 **Resources/layout/HomeScreen** 파일에서 정의 됩니다.
+`HomeScreen`는 더 이상 `ListActivity`에서 상속 되지 않으므로 기본 뷰가 없으므로 HomeScreen 보기에 대 한 레이아웃 AXML 파일을 만들어야 합니다. 이 예의 경우 보기에는 `TextView`를 사용 하는 머리글 및 데이터를 표시 하는 `ListView`가 있습니다. 레이아웃은 다음에 표시 된 **Resources/layout/HomeScreen** 파일에서 정의 됩니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -200,7 +200,7 @@ Console.WriteLine();
 </LinearLayout>
 ```
 
-사용자 지정 레이아웃을 사용 `Activity` 하 여를 `ListActivity`사용 하는 경우의 장점 (대신)은이 예의 머리글과 `TextView` 같이 화면에 컨트롤을 더 추가할 수 있습니다.
+`ListActivity`대신 사용자 지정 레이아웃을 사용 하 여 `Activity`를 사용 하는 경우의 장점은이 예의 제목 `TextView`와 같이 화면에 컨트롤을 더 추가할 수 있다는 점입니다.
 
 ### <a name="creating-a-custom-row-layout"></a>사용자 지정 행 레이아웃 만들기
 
@@ -249,7 +249,7 @@ Console.WriteLine();
 
 ### <a name="referencing-a-custom-row-view"></a>사용자 지정 행 뷰 참조
 
-사용자 지정 어댑터 예의 구현은에 `HomeScreenAdapter.cs`있습니다. 키 메서드 `GetView` 는 리소스 ID `Resource.Layout.CustomView`를 사용 하 여 사용자 지정 axml을 로드 한 다음 반환 하기 전에 뷰의 각 컨트롤에 대 한 속성을 설정 하는 위치입니다. 전체 어댑터 클래스가 표시 됩니다.
+사용자 지정 어댑터 예의 구현은 `HomeScreenAdapter.cs`입니다. 키 메서드는 리소스 ID `Resource.Layout.CustomView`를 사용 하 여 사용자 지정 AXML을 로드 한 다음 반환 하기 전에 뷰의 각 컨트롤에 대 한 속성을 설정 하는 `GetView` 합니다. 전체 어댑터 클래스가 표시 됩니다.
 
 ```csharp
 public class HomeScreenAdapter : BaseAdapter<TableItem> {
@@ -289,13 +289,13 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>활동에서 사용자 지정 ListView 참조
 
-이제 클래스 `HomeScreen` 는에서 `Activity`상속 되므로 axml에 선언 된 컨트롤에 대 한 참조를 포함 하기 위해 클래스에서 필드가선언됩니다.`ListView`
+`HomeScreen` 클래스는 이제 `Activity`에서 상속 되므로 AXML에 선언 된 컨트롤에 대 한 참조를 포함 하기 위해 클래스에서 `ListView` 필드가 선언 됩니다.
 
 ```csharp
 ListView listView;
 ```
 
-그런 다음 클래스는 메서드를 `SetContentView` 사용 하 여 작업의 사용자 지정 레이아웃 axml을 로드 해야 합니다. 그런 다음 레이아웃에서 컨트롤 `ListView` 을 찾은 다음 어댑터를 만들어 할당 하 고 클릭 처리기를 할당 합니다. OnCreate 메서드에 대 한 코드가 다음과 같이 표시 됩니다.
+그런 다음 클래스는 `SetContentView` 메서드를 사용 하 여 작업의 사용자 지정 레이아웃 AXML을 로드 해야 합니다. 그런 다음 레이아웃에서 `ListView` 컨트롤을 찾은 다음 어댑터를 만들어 할당 하 고 클릭 처리기를 할당 합니다. OnCreate 메서드에 대 한 코드가 다음과 같이 표시 됩니다.
 
 ```csharp
 SetContentView(Resource.Layout.HomeScreen); // loads the HomeScreen.axml as this activity's view
@@ -306,7 +306,7 @@ listView.Adapter = new HomeScreenAdapter(this, tableItems);
 listView.ItemClick += OnListItemClick;  // to be defined
 ```
 
-마지막으로 `ItemClick` 처리기를 정의 해야 합니다 .이 경우에는 다음과 같이 `Toast` 메시지를 표시 하기만 하면 됩니다.
+마지막으로 `ItemClick` 처리기를 정의 해야 합니다. 이 경우 `Toast` 메시지만 표시 합니다.
 
 ```csharp
 void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
@@ -319,7 +319,7 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 결과 화면은 다음과 같습니다.
 
-[![결과 CustomRowView의 스크린샷](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
+[결과 CustomRowView의![스크린 샷](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 ### <a name="customizing-the-row-selector-color"></a>행 선택기 색 사용자 지정
 
@@ -359,11 +359,11 @@ android:background="@drawable/CustomSelector"
 
 선택한 행과 해당 `Toast` 메시지는 이제 다음과 같이 표시 됩니다.
 
-[![선택한 행의 이름을 표시 하는 알림 메시지가 포함 된 주황색의 선택 된 행](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
+[선택 된 행의 이름을 표시 하는 알림 메시지와 함께 선택 된 행을 주황색으로![합니다.](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 ### <a name="preventing-flickering-on-custom-layouts"></a>사용자 지정 레이아웃에 대 한 깜박임 방지
 
-Android는 레이아웃 정보를 캐싱하여 `ListView` 스크롤 성능을 향상 시 키 려 고 합니다. 데이터의 스크롤 목록이 긴 경우 작업의 axml 정의에서 `android:cacheColorHint` `ListView` 선언에 대 한 속성을 사용자 지정 행 레이아웃의 배경과 동일한 색 값으로 설정 해야 합니다. 사용자가 사용자 지정 행 배경색이 있는 목록을 스크롤할 때이 힌트를 포함 하지 않으면 ' 깜박임 '이 발생할 수 있습니다.
+Android는 레이아웃 정보를 캐싱하여 `ListView` 스크롤의 성능을 향상 시 키 려 고 합니다. 데이터의 스크롤 목록이 긴 경우 작업의 AXML 정의에서 `ListView` 선언의 `android:cacheColorHint` 속성도 사용자 지정 행 레이아웃의 배경과 동일한 색 값으로 설정 해야 합니다. 사용자가 사용자 지정 행 배경색이 있는 목록을 스크롤할 때이 힌트를 포함 하지 않으면 ' 깜박임 '이 발생할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

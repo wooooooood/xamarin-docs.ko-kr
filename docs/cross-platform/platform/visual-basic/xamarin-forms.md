@@ -3,15 +3,15 @@ title: Visual Basic.NET를 사용 하는 Xamarin 양식
 description: VB.NET를 사용 하 여 플랫폼 간 모바일 앱을 효율적으로 빌드할 수 있도록 하는 주 어셈블리에 대 한 Visual Basic를 사용 하도록 Xamarin Forms 프로젝트 템플릿을 수정할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: ed7e1d65ed361a94ce72a724d797309b40ef8b6c
-ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.openlocfilehash: e1a540eef2a4d54ead68ae4a9427b0622b668182
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959153"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014544"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Visual Basic.NET를 사용 하는 Xamarin 양식
 
