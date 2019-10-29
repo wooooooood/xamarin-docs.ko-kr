@@ -4,15 +4,15 @@ description: 이 문서에서는 Xcode의 Interface Builder에서 만든 xib 파
 ms.prod: xamarin
 ms.assetid: 6AF3D216-448D-4B2D-9026-74E4FFF5923A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: be737dfb92cf2ce90dc64dd527f908d52cf2c580
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 6d40dd3cc994ef8ab21ffb9658f226d36cd97913
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770349"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021766"
 ---
 # <a name="xib-files-in-xamarinmac"></a>Xamarin.ios의 xib 파일
 
@@ -328,7 +328,7 @@ Xamarin.ios 개발자의 경우 콘센트가 나 동작을 만들려는 C# 파�
 
 [![MainWindow.cs 파일](xib-images/code01.png "MainWindow.cs 파일")](xib-images/code01-large.png#lightbox)
 
-@No__t_0 클래스에 다음 코드를 추가 하 여 위에서 만든 샘플 콘센트를 사용 합니다.
+`MainWindow` 클래스에 다음 코드를 추가 하 여 위에서 만든 샘플 콘센트를 사용 합니다.
 
 ```csharp
 private int numberOfTimesClicked = 0;
@@ -343,7 +343,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-@No__t_0는 Xcode에서 해당 콘센트를 C# 만들 때 Xcode에서 할당 한 직접 이름으로에 액세스 합니다 .이 경우에는 `ClickedLabel` 이라고 합니다. 일반 C# 클래스와 동일한 방식으로 노출 된 개체의 메서드나 속성에 액세스할 수 있습니다.
+`NSLabel`는 Xcode에서 해당 콘센트를 C# 만들 때 Xcode에서 할당 한 직접 이름으로에 액세스 합니다 .이 경우에는`ClickedLabel`이라고 합니다. 일반 C# 클래스와 동일한 방식으로 노출 된 개체의 메서드나 속성에 액세스할 수 있습니다.
 
 > [!IMPORTANT]
 > OS가 xib 파일에서 사용자 인터페이스를 로드 하 고 인스턴스화한 _후_ `AwakeFromNib`가 호출 되기 때문에 `Initialize` 같은 다른 방법 대신 `AwakeFromNib`를 사용 해야 합니다. Xib 파일이 완전히 로드 되어 인스턴스화되기 전에 레이블 컨트롤에 액세스 하려고 하면 레이블 컨트롤이 아직 만들어지지 않았기 때문에 `NullReferenceException` 오류가 발생 합니다.
@@ -381,7 +381,7 @@ void OpenDialog (NSObject sender)
 }
 ```
 
-여기에서 키 줄은 `[Export ("openDocument:")]` 되며, **AppDelegate** 에 `openDocument:` 작업에 응답 하는 메서드 `void OpenDialog (NSObject sender)` 있음을 `NSMenu`에 게 알려 줍니다.
+여기에서 키 줄은 `[Export ("openDocument:")]`되며, **AppDelegate** 에 `openDocument:` 작업에 응답 하는 메서드 `void OpenDialog (NSObject sender)` 있음을 `NSMenu`에 게 알려 줍니다.
 
 메뉴 사용에 대 한 자세한 내용은 [메뉴](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
@@ -447,7 +447,7 @@ void ShowPreferences (NSObject sender)
 }
 ```
 
-@No__t_0 줄에서는 xib 파일에서 창을 로드 하 고 늘어납니다 하는 Window 컨트롤러의 새 인스턴스를 만듭니다. @No__t_0 줄에는 사용자에 게 새 창이 표시 됩니다.
+`var preferences = new PreferencesWindowController ();` 줄에서는 xib 파일에서 창을 로드 하 고 늘어납니다 하는 Window 컨트롤러의 새 인스턴스를 만듭니다. `preferences.Window.MakeKeyAndOrderFront (this);` 줄에는 사용자에 게 새 창이 표시 됩니다.
 
 **응용 프로그램 메뉴**에서 코드를 실행 하 고 **기본 설정 ...** 을 선택 하는 경우 창이 표시 됩니다.
 

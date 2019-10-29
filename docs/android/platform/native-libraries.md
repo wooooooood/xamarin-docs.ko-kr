@@ -3,15 +3,15 @@ title: 네이티브 라이브러리 사용
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: fad17bdda9566eeabcbe173c19c4d951bed630a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7ef9e0415d7d1e5fe75be70e0ccf6e06a5eaf332
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761276"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027069"
 ---
 # <a name="using-native-libraries"></a>네이티브 라이브러리 사용
 
@@ -25,9 +25,9 @@ Android는 여러 응용 프로그램 이진 인터페이스 (ABIs)를 지원 �
 이는 두 가지 방법으로 수행할 수 있습니다.
 
 1. 경로 "스니핑"
-1. 프로젝트 파일 내 `AndroidNativeLibrary/Abi` 에서 요소 사용
+1. 프로젝트 파일 내에서 `AndroidNativeLibrary/Abi` 요소 사용
 
-경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 프로젝트에를 추가 `lib/armeabi/libfoo.so` 하는 경우 ABI는로 `armeabi`"스니핑" 됩니다.
+경로 검색을 사용하면 네이티브 라이브러리의 부모 디렉터리 이름을 사용하여 라이브러리가 대상으로 하는 ABI를 지정할 수 있습니다. 따라서 프로젝트에 `lib/armeabi/libfoo.so`을 추가 하는 경우 ABI는 `armeabi`로 "스니핑" 됩니다.
 
 또는 프로젝트 파일을 편집 하 여 사용할 ABI를 명시적으로 지정할 수 있습니다.
 

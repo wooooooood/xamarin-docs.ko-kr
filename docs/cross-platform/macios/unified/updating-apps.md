@@ -3,15 +3,15 @@ title: Unified API에 기존 앱 업데이트
 description: 이 문서는 Xamarin 응용 프로그램을 Unified API 업데이트 하는 방법을 설명 하는 다양 한 가이드에 연결 됩니다. Xamarin.ios 앱, Xamarin.ios 앱에 대해 설명 합니다. Xamarin Forms 앱, 플랫폼 간 앱 및 바인딩 프로젝트의 네이티브 형식입니다.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: c7742622bae16e874411fad1374c3ee522dba183
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: d4904688302ac7f17c6326249ff08315d929e23c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106056"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015017"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Unified API에 기존 앱 업데이트
 
@@ -37,7 +37,7 @@ ms.locfileid: "71106056"
 
 Mac용 Visual Studio 기본 제공 되는 자동화 된 마이그레이션 도구를 사용 하 여 기존 Xamarin.ios 앱을 Unified API으로 업데이트할 수 있습니다. [이러한 지침](~/cross-platform/macios/unified/updating-ios-apps.md) 및 [팁](~/cross-platform/macios/unified/updating-tips.md)에 설명 된 대로 몇 가지 추가 수정이 필요할 수 있습니다.
 
-### <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
+### <a name="xamarinmac-appscross-platformmaciosunifiedupdating-mac-appsmd"></a>[Xamarin.ios 앱](~/cross-platform/macios/unified/updating-mac-apps.md)
 
 Mac용 Visual Studio 기본 제공 되는 자동화 된 마이그레이션 도구를 사용 하 여 기존 Xamarin.ios 앱을 Unified API으로 업데이트할 수 있습니다. [이러한 지침](~/cross-platform/macios/unified/updating-mac-apps.md) 및 [팁](~/cross-platform/macios/unified/updating-tips.md)에 설명 된 대로 몇 가지 추가 수정이 필요할 수 있습니다.
 

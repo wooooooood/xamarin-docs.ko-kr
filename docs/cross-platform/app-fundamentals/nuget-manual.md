@@ -3,15 +3,15 @@ title: Xamarin에 대 한 NuGet 패키지 수동 만들기
 description: 이 문서에는 Xamarin 플랫폼을 대상으로 하는 NuGet 패키지를 빌드하는 데 유용한 팁이 포함 되어 있습니다. NuGet 패키지 Xamarin 프로필, 플랫폼 종속성이 있는 PCL Nuget 및 다양 한 오픈 소스 샘플에 대 한 링크를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 88feea4c0a638da99a0316d802f04f08f0fea689
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289198"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016772"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin에 대 한 NuGet 패키지 수동 만들기
 
@@ -26,7 +26,7 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 현재 사용 중인 기본 Xamarin 대상 프레임 워크는 다음과 같습니다.
 
-- **MonoAndroid** - Xamarin.Android
+- **MonoAndroid**
 - **Xamarin.ios** -xamarin.ios [Unified API](~/cross-platform/macios/unified/index.md) (64 비트 지원)
 - **Xamarin.ios 및** xamarin.ios의 모바일 프로필. Xamarin.ios 및 xamarin.ios API 화면에 해당 합니다.
 
@@ -63,13 +63,13 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 PCL 프로필은 액세스할 수 있는 .NET framework Api에서 제한적 이며 플랫폼별 코드에 액세스할 수 없습니다. 이러한 타사 링크는 PCL 및 네이티브 Api를 사용 하 여 Xamarin 및 기타 플랫폼에 대 한 호환성을 제공 하는 NuGet 패키지를 만들기 위한 다양 한 접근 방식을 설명 합니다.
 
-- [이식 가능한 클래스 라이브러리를 사용 하도록 설정 하는 방법](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [Bait 및 스위치 PCL 트릭](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Xamarin.ios와 작동 하는 NuGet PCL 만들기](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [이식 가능한 클래스 라이브러리를 사용 하도록 설정 하는 방법](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [Bait 및 스위치 PCL 트릭](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Xamarin.ios와 작동 하는 NuGet PCL 만들기](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-[NuGet 대상 이름이 있는 PCL 프로필의](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) 이 외부 목록도 유용한 참조입니다.
+[NuGet 대상 이름이 있는 PCL 프로필의](https://portablelibraryprofiles.stephencleary.com) 이 외부 목록도 유용한 참조입니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 참조할 수 있는 몇 가지 오픈 소스 예제는 다음과 같습니다.
 

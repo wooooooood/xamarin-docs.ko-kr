@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 Android 리소스에 대 한 개
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2018
-ms.openlocfilehash: ec1cb6fcce320ed5ea9154b42d0a5361940c1015
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1ff4d9d896aaa5f290402a49aa4b4bd1f1e00aaf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755011"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025056"
 ---
 # <a name="android-resources"></a>Android 리소스
 
@@ -26,11 +26,11 @@ Android 응용 프로그램은 거의 소스 코드 일 뿐입니다. 응용 프
 
 리소스는 Android 응용 프로그램에 대 한 여러 가지 이점을 제공 합니다.
 
-- **코드 분리** &ndash; 이미지, 문자열, 메뉴, 애니메이션, 색 등의 소스 코드를 구분 합니다. 이러한 리소스는 지역화할 때 상당히 유용할 수 있습니다.
+- **코드 분리** &ndash;는 이미지, 문자열, 메뉴, 애니메이션, 색 등의 소스 코드를 구분 합니다. 이러한 리소스는 지역화할 때 상당히 유용할 수 있습니다.
 
-- **여러 장치를 대상** 으로 합니다. &ndash; 코드를 변경 하지 않고 다른 장치 구성을 보다 간단 하 게 지원 합니다.
+- **여러 장치를 대상** 으로 하는 &ndash; 코드를 변경 하지 않고도 다양 한 장치 구성을 간편 하 게 지원 합니다.
 
-- **컴파일 시간 검사** &ndash; 리소스는 정적 이며 응용 프로그램으로 컴파일됩니다. 이를 통해 컴파일 시간에 리소스 사용을 검사할 수 있습니다. 이러한 리소스를 쉽게 파악 하 고 수정 하는 것이 더 어려울 때 런타임 뿐만 아니라 오류를 쉽게 파악 하 고 수정할 수 있습니다.
+- **컴파일 타임 검사** &ndash; 리소스가 정적이 고 응용 프로그램으로 컴파일됩니다. 이를 통해 컴파일 시간에 리소스 사용을 검사할 수 있습니다. 이러한 리소스를 쉽게 파악 하 고 수정 하는 것이 더 어려울 때 런타임 뿐만 아니라 오류를 쉽게 파악 하 고 수정할 수 있습니다.
 
 새 Xamarin.ios 프로젝트가 시작 되 면 리소스 라는 특수 디렉터리와 함께 일부 하위 디렉터리를 만듭니다.
 
@@ -60,15 +60,15 @@ Xamarin Android 응용 프로그램에서 이러한 리소스에 액세스 하�
 
 이 문서에서는 리소스를 사용 하는 방법에 대해 포괄적으로 살펴보고 다음 항목을 다룹니다.
 
-- **Android 리소스 기본 사항** &ndash; 응용 프로그램에 이미지 및 글꼴과 같은 리소스 형식을 추가 하 여 프로그래밍 방식으로 및 선언적으로 기본 리소스를 사용 합니다.
+- **Android 리소스** 기본 리소스는 응용 프로그램에 이미지 및 글꼴과 같은 리소스 종류를 추가 하 여 프로그래밍 방식으로 선언적으로 사용 &ndash;.
 
-- **장치별 구성** &ndash; 응용 프로그램의 다양 한 화면 해상도 및 밀도 지원.
+- **장치별 구성은** 응용 프로그램의 다양 한 화면 해상도와 밀도를 지 원하는 &ndash; 합니다.
 
-- **지역화** &ndash; 리소스를 사용 하 여 여러 지역을 지 원하는 경우 응용 프로그램을 사용할 수 있습니다.
+- **지역화** &ndash; 리소스를 사용 하 여 응용 프로그램을 사용할 수 있는 다른 지역을 지원 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Android 자산 사용](~/android/app-fundamentals/resources-in-android/android-assets.md)
 - [애플리케이션 기본 사항](https://developer.android.com/guide/topics/fundamentals.html)
-- [응용 프로그램 리소스](https://developer.android.com/guide/topics/resources/index.html)
+- [애플리케이션 리소스](https://developer.android.com/guide/topics/resources/index.html)
 - [여러 화면 지원](https://developer.android.com/guide/practices/screens_support.html)

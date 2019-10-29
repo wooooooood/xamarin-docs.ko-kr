@@ -3,15 +3,15 @@ title: Razor 템플릿을 사용 하 여 HTML 뷰 빌드
 description: " HTML을 렌더링 하기 위해 전체 화면 웹 페이지를 사용 하는 것은 특히 웹 사이트 프로젝트의 HTML, JavaScript 및 CSS가 이미 있는 경우 플랫폼 간 방식으로 복잡 한 서식을 렌더링 하는 간단 하 고 효과적인 방법입니다."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
-ms.openlocfilehash: 7f9f45976d0d7db42be18fede2f21825a385bea4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5f1b1345f9abbf891cfbea6e45a8ed2abd7c0dac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765342"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014598"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Razor 템플릿을 사용 하 여 HTML 뷰 빌드
 
@@ -41,7 +41,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 ```
 
-UIWebView 보기 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 [IOS UIWebView 보기](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) 조리법을 참조 하세요.
+UIWebView 보기 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 [IOS UIWebView 보기](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/content_controls/web_view) 조리법을 참조 하세요.
 
 ### <a name="android"></a>Android
 
@@ -58,7 +58,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-웹 보기 컨트롤 사용에 대 한 자세한 내용은 [Android 웹 보기](http://docs.xamarin.com/recipes/android/controls/webview/) 조리법을 참조 하세요.
+웹 보기 컨트롤 사용에 대 한 자세한 내용은 [Android 웹 보기](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/controls/webview) 조리법을 참조 하세요.
 
 ### <a name="specifying-the-base-directory"></a>기본 디렉터리 지정
 
@@ -80,7 +80,7 @@ webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8"
 webView.LoadHtmlString (page, NSBundle.MainBundle.BundleUrl);
 ```
 
-기본 디렉터리는 응용 프로그램이 설치 `NSBundle.MainBundle.BundleUrl` 된 디렉터리를 참조 하는로 지정 됩니다. **Resources** 폴더의 모든 파일이 다음 위치에 복사 됩니다. 예를 들어 여기에 표시 된 **스타일 .css 파일입니다** .
+기본 디렉터리는 응용 프로그램이 설치 된 디렉터리를 참조 하는 `NSBundle.MainBundle.BundleUrl`로 지정 됩니다. **Resources** 폴더의 모든 파일이 다음 위치에 복사 됩니다. 예를 들어 여기에 표시 된 **스타일 .css 파일입니다** .
 
  ![iPhoneHybrid 솔루션](images/image1_240x163.png)
 
@@ -167,9 +167,9 @@ class HybridWebViewClient : WebViewClient {
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### <a name="calling-javascript-from-c"></a>C에서 JavaScript 호출\#
+### <a name="calling-javascript-from-c"></a>C\#에서 JavaScript 호출
 
-웹 보기에 새 HTML 페이지를 로드 하는 것 외에도 C# 코드는 현재 표시 된 페이지 내에서 JavaScript를 실행할 수 있습니다. 전체 javascript 코드 블록은 문자열을 사용 C# 하 여 생성 하거나 실행할 수 있습니다. 또는 태그를 통해 `script` 페이지에서 이미 사용할 수 있는 javascript에 대 한 메서드 호출을 만들 수 있습니다.
+웹 보기에 새 HTML 페이지를 로드 하는 것 외에도 C# 코드는 현재 표시 된 페이지 내에서 JavaScript를 실행할 수 있습니다. 전체 JavaScript 코드 블록은 문자열을 사용 C# 하 여 생성 하거나 실행할 수 있습니다. 또는`script`태그를 통해 페이지에서 이미 사용할 수 있는 javascript에 대 한 메서드 호출을 만들 수 있습니다.
 
 #### <a name="android"></a>Android
 
@@ -227,13 +227,13 @@ Razor 템플릿 파일의 확장명은 **cshtml** 입니다. **새 파일** 대�
 
 일반 HTML 파일과 다음과 같은 차이점을 확인 합니다.
 
-- 기호 `@` 는 Razor 템플릿에서 특별 한 의미를 가지 며, 다음 식을 C# 계산 함을 나타냅니다.
-- `@model`지시문은 항상 Razor 템플릿 파일의 첫 번째 줄로 표시 됩니다.
+- `@` 기호는 Razor 템플릿에서 특별 한 의미를 가지 며, 다음 식을 C# 계산 함을 나타냅니다.
+- `@model` 지시문은 항상 Razor 템플릿 파일의 첫 번째 줄로 표시 됩니다.
 - `@model` 지시문 뒤에는 형식이와 야 합니다. 이 예제에서는 간단한 문자열이 템플릿에 전달 되지만 사용자 지정 클래스 일 수도 있습니다.
-- 는 `@Model` 템플릿 전체에서 참조 되는 경우 생성 될 때 템플릿에 전달 되는 개체에 대 한 참조를 제공 합니다 (이 예제에서는 문자열이 됩니다).
+- `@Model` 템플릿 전체에서 참조 되는 경우 템플릿이 생성 될 때 템플릿에 전달 되는 개체에 대 한 참조를 제공 합니다 (이 예제에서는 문자열이 됩니다).
 - IDE는 템플릿 (확장명이 **cshtml** 인 파일)에 대 한 partial 클래스를 자동으로 생성 합니다. 이 코드는 볼 수 있지만 편집할 수는 없습니다.
- ![Razorview. cshtml](images/image6_125x34.png) partial 클래스의 이름을 razorview로 지정 하 여. cshtml 템플릿 파일 이름과 일치 시킵니다. 이 이름은 코드에서 C# 템플릿을 참조 하는 데 사용 됩니다.
-- `@using`문을 Razor 템플릿 맨 위에 포함 하 여 추가 네임 스페이스를 포함할 수도 있습니다.
+ ![RazorView. cshtml](images/image6_125x34.png). cshtml 템플릿 파일 이름과 일치 하도록 partial 클래스의 이름이 RazorView입니다. 이 이름은 코드에서 C# 템플릿을 참조 하는 데 사용 됩니다.
+- 추가 네임 스페이스를 포함 하기 위해 Razor 템플릿 맨 위에 `@using` 문을 포함할 수도 있습니다.
 
 그런 다음 다음 C# 코드를 사용 하 여 최종 HTML 출력을 생성할 수 있습니다. 모델은 렌더링 된 템플릿 출력에 포함 되는 "Hello World" 문자열로 지정 됩니다.
 
@@ -313,13 +313,13 @@ var page = template.GenerateString ();
 </html>
 ```
 
-코드를와 함께 사용 C# `@()`하 여 복잡 한 단일 선 식 (연령 서식 지정)을 작성할 수 있습니다.
+코드를 `@()`와 함께 사용 하 C# 여 복잡 한 단일 줄 식을 작성할 수 있습니다 (예: age 서식 지정).
 
-를 C# 사용 `@{}`하 여 여러 문을 쓸 수 있습니다.
+`@{}`C# 를 사용 하 여 여러 문을 쓸 수 있습니다.
 
 #### <a name="if-else-statements"></a>If else 문
 
-코드 분기는이 템플릿 예제 `@if` 와 같이로 표현 될 수 있습니다.
+코드 분기는이 템플릿 예제에 표시 된 대로 `@if`로 표현 될 수 있습니다.
 
 ```html
 @model Monkey
@@ -340,7 +340,7 @@ var page = template.GenerateString ();
 
 #### <a name="loops"></a>하며
 
-같은 `foreach` 루핑 구문을 추가할 수도 있습니다. 루프 변수 ( `@food` 이 경우)에 접두사를사용하여HTML로렌더링할수있습니다.`@`
+`foreach` 같은 루프 구문을 추가할 수도 있습니다. 루프 변수 (이 경우 `@food`)에서 `@` 접두사를 사용 하 여 HTML로 렌더링할 수 있습니다.
 
 ```html
 @model Monkey
@@ -394,7 +394,7 @@ IPhone 및 Android 프로젝트에 대 한 기본 템플릿 솔루션 콘텐츠�
 - **스타일 .css** 파일 등의 정적 콘텐츠
 - Razor. cshtml 템플릿 파일 (예: **Razorview. cshtml** )
 - **ExampleModel.cs** 와 같은 Razor 템플릿에서 참조 되는 모델 클래스입니다.
-- `MainActivity` Android`iPhoneHybridViewController` 및 iOS의에서 웹 뷰를 만들고 템플릿을 렌더링 하는 플랫폼별 클래스입니다.
+- Android의 `MainActivity` 및 iOS의 `iPhoneHybridViewController`와 같이 웹 뷰를 만들고 템플릿을 렌더링 하는 플랫폼별 클래스입니다.
 
 다음 섹션에서는 프로젝트의 작동 방식에 대해 설명 합니다.
 
@@ -416,7 +416,7 @@ JQuery와 같은 프레임 워크를 포함 하 여 필요한 모든 스타일 �
 
 #### <a name="rendering-the-template"></a>템플릿 렌더링
 
-템플릿에서를 `GenerateString` 호출 하면 웹 뷰에 표시할 준비가 된 HTML이 렌더링 됩니다. 템플릿에서 모델을 사용 하는 경우 렌더링 하기 전에 해당 모델을 제공 해야 합니다. 이 다이어그램에서는 렌더링 작동 방식을 보여 줍니다. 지정 된 파일을 찾기 위해 제공 된 기본 디렉터리를 사용 하 여 런타임에 웹 뷰에서 정적 리소스를 확인 하는 것은 아닙니다.
+템플릿에 대 한 `GenerateString`를 호출 하면 웹 뷰에 표시 될 준비가 된 HTML이 렌더링 됩니다. 템플릿에서 모델을 사용 하는 경우 렌더링 하기 전에 해당 모델을 제공 해야 합니다. 이 다이어그램에서는 렌더링 작동 방식을 보여 줍니다. 지정 된 파일을 찾기 위해 제공 된 기본 디렉터리를 사용 하 여 런타임에 웹 뷰에서 정적 리소스를 확인 하는 것은 아닙니다.
 
  ![Razor 순서도](images/image12_700x421.png)
 
@@ -430,7 +430,7 @@ JQuery와 같은 프레임 워크를 포함 하 여 필요한 모든 스타일 �
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-JavaScript `InvokeCSharpWithFormValues` 함수는 HTML 폼에서 모든 값을 읽고 웹 보기에 대해를 `location.href` 설정 합니다.
+`InvokeCSharpWithFormValues` JavaScript 함수는 HTML 양식에서 모든 값을 읽고 웹 보기의 `location.href`를 설정 합니다.
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -446,7 +446,7 @@ hybrid:UpdateLabel?textbox=SomeValue&UpdateLabel=Click
 
 이러한 두 탐색 인터셉터의 내부는 본질적으로 동일 합니다.
 
-먼저 웹 보기가 로드 하려고 하는 URL을 확인 하 고 사용자 지정 체계 (`hybrid:`)로 시작 하지 않는 경우 정상적으로 탐색을 허용 합니다.
+먼저 웹 보기가 로드 하려고 하는 URL을 확인 하 고, 사용자 지정 스키마 (`hybrid:`)로 시작 하지 않는 경우 정상적으로 탐색을 허용 합니다.
 
 사용자 지정 URL 체계의 경우 체계와 "?" 사이에 있는 모든 URL의 처리할 메서드 이름 (이 경우 "UpdateLabel")입니다. 쿼리 문자열의 모든 항목은 메서드 호출에 대 한 매개 변수로 처리 됩니다.
 
@@ -456,19 +456,19 @@ var method = resources [0];
 var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 ```
 
-`UpdateLabel`이 샘플에서는 textbox 매개 변수 (문자열 앞에 "C# 표시")에서 최소한의 문자열 조작을 수행한 다음 웹 뷰로 다시 호출 합니다.
+이 샘플의 `UpdateLabel` 텍스트 상자 매개 변수에서 최소한의 문자열 조작 (문자열 앞에 "C# 표시")을 수행한 다음 웹 뷰로 다시 호출 합니다.
 
 URL을 처리 한 후 메서드는 웹 뷰가 사용자 지정 URL 탐색을 완료 하지 않도록 탐색을 중단 합니다.
 
-#### <a name="manipulating-the-template-from-c"></a>C에서 템플릿 조작\#
+#### <a name="manipulating-the-template-from-c"></a>C\#에서 템플릿 조작
 
-에서 렌더링 된 HTML 웹 보기와 C# 의 통신은 웹 뷰에서 JavaScript를 호출 하 여 수행 됩니다. IOS에서는 uiwebview 보기에서를 호출 `EvaluateJavascript` 하 여이 작업을 수행 합니다.
+에서 렌더링 된 HTML 웹 보기와 C# 의 통신은 웹 뷰에서 JavaScript를 호출 하 여 수행 됩니다. IOS에서는 UIWebView 보기에서 `EvaluateJavascript`를 호출 하 여이 작업을 수행 합니다.
 
 ```csharp
 webView.EvaluateJavascript (js);
 ```
 
-Android에서는 `"javascript:"` url 스키마를 사용 하 여 javascript를 url로 로드 하 여 웹 보기에서 javascript를 호출할 수 있습니다.
+Android에서는 `"javascript:"` URL 체계를 사용 하 여 JavaScript를 URL로 로드 하 여 웹 보기에서 JavaScript를 호출할 수 있습니다.
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -517,5 +517,5 @@ Xamarin을 사용 하 여 하이브리드 앱을 빌드하는 경우의 주요 �
 ### <a name="related-links"></a>관련 링크
 
 - [RazorTodo 샘플](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
-- [MVC 3-Razor 뷰 엔진 (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
-- [Razor 구문을 사용한 ASP.NET 웹 프로그래밍 소개 (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)
+- [MVC 3-Razor 뷰 엔진 (Microsoft)](https://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
+- [Razor 구문을 사용한 ASP.NET 웹 프로그래밍 소개 (Microsoft)](https://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

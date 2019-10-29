@@ -4,31 +4,31 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/02/2018
-ms.openlocfilehash: 4a3f3849725f0d3b8e8bc8d43c1cd3f87f044616
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9c9b9f5a205a2eef7db9f27e8d09b10ce65a4318
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761044"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027050"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Android Designer용 Java 메모리 매개 변수 조정
 
-Android designer에 대 한 프로세스를 `java` 시작할 때 사용 되는 기본 메모리 매개 변수는 일부 시스템 구성과 호환 되지 않을 수 있습니다.
+Android designer에 대 한 `java` 프로세스를 시작할 때 사용 되는 기본 메모리 매개 변수는 일부 시스템 구성과 호환 되지 않을 수 있습니다.
 
 Xamarin Studio 5.7.2.7 (이상, Mac용 Visual Studio) 및 Xamarin 3.9.344에 대 한 Visual Studio Tools부터 이러한 설정은 프로젝트별로 사용자 지정할 수 있습니다.
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>새 Android designer 속성 및 해당 Java 옵션
 
-다음 속성 이름은 표시 된 java [명령줄 옵션](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html) 에 해당 합니다.
+다음 속성 이름은 표시 된 java [명령줄 옵션](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html) 에 해당 합니다.
 
 - **AndroidDesignerJavaRendererMinMemory** -Xms
 
-- **AndroidDesignerJavaRendererMaxMemory** -Xmx
+- **AndroidDesignerJavaRendererMaxMemory** -xmx
 
-- **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
+- **AndroidDesignerJavaRendererPermSize** : MaxPermSize
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -38,11 +38,11 @@ Xamarin Studio 5.7.2.7 (이상, Mac용 Visual Studio) 및 Xamarin 3.9.344에 대
 
 3. Visual Studio를 종료합니다.
 
-4. 2 단계에서 각 프로젝트에 대 한 파일을찾습니다.`.csproj.user`
+4. 2 단계에서 각 프로젝트에 대 한 `.csproj.user` 파일을 찾습니다.
 
-5. 텍스트 편집기 `.csproj.user` 에서 각 파일을 편집 합니다.
+5. 텍스트 편집기에서 각 `.csproj.user` 파일을 편집 합니다.
 
-6. `<PropertyGroup>` 요소 내에 새 Android designer 메모리 속성의 일부 또는 전부를 추가 합니다. 기존 `<PropertyGroup>` 를 사용 하거나 새 항목을 만들 수 있습니다. 다음은 해당 기본값으로 설정 `.csproj.user` 된 세 가지 특성을 모두 포함 하는 전체 예제 파일입니다.
+6. `<PropertyGroup>` 요소 내에 새 Android designer 메모리 속성의 일부 또는 전부를 추가 합니다. 기존 `<PropertyGroup>`를 사용 하거나 새로 만들 수 있습니다. 다음은 해당 기본값으로 설정 된 세 가지 특성을 모두 포함 하는 전체 예제 `.csproj.user` 파일입니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -58,7 +58,7 @@ Xamarin Studio 5.7.2.7 (이상, Mac용 Visual Studio) 및 Xamarin 3.9.344에 대
     </Project>
     ```
 
-7. 업데이트 `.csproj.user` 된 모든 파일을 저장 하 고 닫습니다.
+7. 업데이트 된 모든 `.csproj.user` 파일을 저장 한 후 닫습니다.
 
 8. Visual Studio를 다시 시작 하 고 솔루션을 다시 엽니다.
 
@@ -68,19 +68,19 @@ Xamarin Studio 5.7.2.7 (이상, Mac용 Visual Studio) 및 Xamarin 3.9.344에 대
 
 2. Mac용 Visual Studio를 종료 합니다.
 
-3. 솔루션 디렉터리 `.userprefs` 에서 파일을 찾습니다.
+3. 솔루션 디렉터리에서 `.userprefs` 파일을 찾습니다.
 
-4. 텍스트 편집기 `.userprefs` 에서 파일을 편집 합니다.
+4. 텍스트 편집기에서 `.userprefs` 파일을 편집 합니다.
 
-5. 다음 형식의 기존 XML 요소를 찾습니다. 이 요소 이름의 마지막 부분은 프로젝트의 이름과 일치 합니다. 이 예에서는 "AndroidApplication1"입니다.
+5. 다음 형식의 기존 XML 요소를 찾습니다. 이 요소 이름의 마지막 부분은 프로젝트의 이름 (이 예에서는 "AndroidApplication1")과 일치 합니다.
 
     ```xml
     <MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >
     ```
 
-6. 요소가 없으면 바깥쪽 `<Properties>` 요소 내의 아무 곳에 나 만듭니다. `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >` "AndroidApplication1"를 프로젝트의 이름으로 바꾸어야 합니다.
+6. `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >` 요소가 없으면 바깥쪽 `<Properties>` 요소 내의 아무 곳에 나 만듭니다. "AndroidApplication1"를 프로젝트의 이름으로 바꾸어야 합니다.
 
-7. 새 Android designer 메모리 속성의 일부 또는 모두를 요소에 대 한 특성으로 추가 합니다. 다음은 해당 기본값으로 설정 `.userprefs` 된 세 가지 특성을 모두 포함 하는 전체 예제 파일입니다.
+7. 새 Android designer 메모리 속성의 일부 또는 모두를 요소에 대 한 특성으로 추가 합니다. 다음은 해당 기본값으로 설정 된 세 가지 특성을 모두 포함 하는 전체 예제 `.userprefs` 파일입니다.
 
     ```xml
     <Properties StartupItem="AndroidApplication1\AndroidApplication1.csproj">
@@ -94,9 +94,9 @@ Xamarin Studio 5.7.2.7 (이상, Mac용 Visual Studio) 및 Xamarin 3.9.344에 대
     </Properties>
     ```
 
-8. `.axml` 레이아웃 파일이 포함 된 솔루션의 각 Android 프로젝트에 대해 5-7 단계를 반복 합니다. 즉, 각 프로젝트에 대해 `<MonoDevelop.Ide.ItemProperties.ProjectName>` 하나의 요소를 추가 합니다.
+8. `.axml` 레이아웃 파일이 포함 된 솔루션의 각 Android 프로젝트에 대해 5-7 단계를 반복 합니다. 즉, 각 프로젝트에 대해 하나의 `<MonoDevelop.Ide.ItemProperties.ProjectName>` 요소를 추가 합니다.
 
-9. 파일을 `.userprefs` 저장 하 고 닫습니다.
+9. `.userprefs` 파일을 저장 한 후 닫습니다.
 
 10. Mac용 Visual Studio를 다시 시작 하 고 솔루션을 다시 엽니다.
 

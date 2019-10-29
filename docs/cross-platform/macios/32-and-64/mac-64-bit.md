@@ -3,15 +3,15 @@ title: Xamarin.ios 통합 응용 프로그램을 64 비트로 업데이트
 description: 이 가이드에서는 Xamarin.ios 응용 프로그램을 64 비트 대상으로 업데이트 하는 방법을 설명 합니다. 또한이 변경 작업을 수행할 때 발생할 수 있는 오류 종류에 대 한 예를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/22/2018
-ms.openlocfilehash: 5539bab417c5efc0064cd1753cb74c7524463ee5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 1ae807869e44ad035d2681cf777af0e66ced8255
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70765918"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016315"
 ---
 # <a name="updating-xamarinmac-unified-applications-to-64-bit"></a>Xamarin.ios 통합 응용 프로그램을 64 비트로 업데이트
 
@@ -25,7 +25,7 @@ ms.locfileid: "70765918"
 
    ![프로젝트에 대 한 상황에 맞는 메뉴](mac-64-bit-images/1-contextual_menu-vsmac.png "프로젝트에 대 한 상황에 맞는 메뉴")
 
-2. **Mac 빌드** 를 선택 하 고 **지원 되는 아키텍처** 를 **x86 \_64**로 설정 합니다.
+2. **Mac 빌드** 를 선택 하 고 **지원 되는 아키텍처** 를 **x86\_64**으로 설정 합니다.
 
    [![지원 되는 아키텍처를 x86_64로 설정](mac-64-bit-images/2-project_options-vsmac.png "지원 되는 아키텍처를 x86_64로 설정")](mac-64-bit-images/2-project_options-vsmac-large.png#lightbox)
 

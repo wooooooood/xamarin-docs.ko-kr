@@ -4,15 +4,15 @@ description: Xamarin Android 사용자 인터페이스를 만들기 위한 구�
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: e3f6524f03612ee39c537f482b1db916ecf08a23
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8c0a2dffbe312cb25258cd2738b661ded2df8d7d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759094"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029270"
 ---
 # <a name="xamarinandroid-controls-widgets"></a>Xamarin Android 컨트롤 (위젯)
 
@@ -20,13 +20,13 @@ Xamarin.ios는 Android에서 제공 하는 모든 네이티브 사용자 인터�
 
 ## <a name="action-barandroiduser-interfacecontrolsaction-barmd"></a>[작업 모음](~/android/user-interface/controls/action-bar.md) 
 
-`ActionBar`는 활동 제목, 탐색 인터페이스 및 기타 대화형 항목을 표시 하는 도구 모음입니다. 일반적으로 작업 모음은 작업 창의 맨 위에 나타납니다.
+`ActionBar`은 작업 제목, 탐색 인터페이스 및 기타 대화형 항목을 표시 하는 도구 모음입니다. 일반적으로 작업 모음은 작업 창의 맨 위에 나타납니다.
 
 ![예 ActionBar](images/action-bar.png)
 
 ## <a name="auto-completeandroiduser-interfacecontrolsauto-completemd"></a>[자동 완성](~/android/user-interface/controls/auto-complete.md)
 
-`AutoCompleteTextView`사용자가 입력 하는 동안 완성 제안을 자동으로 표시 하는 편집 가능한 텍스트 뷰 요소입니다. 사용자가 편집 상자의 내용을 바꿀 항목을 선택할 수 있는 드롭다운 메뉴에 제안 목록이 표시 됩니다.
+`AutoCompleteTextView`은 사용자가 입력 하는 동안 완성 제안을 자동으로 표시 하는 편집 가능한 텍스트 뷰 요소입니다. 사용자가 편집 상자의 내용을 바꿀 항목을 선택할 수 있는 드롭다운 메뉴에 제안 목록이 표시 됩니다.
 
 ![자동 완성 예제](images/auto-complete.png)
 
@@ -38,20 +38,20 @@ Xamarin.ios는 Android에서 제공 하는 모든 네이티브 사용자 인터�
 
 ## <a name="calendarandroiduser-interfacecontrolscalendarmd"></a>[일정](~/android/user-interface/controls/calendar.md)
 
-클래스 `Calendar` 는 특정 인스턴스 (epoch에서 오프셋 되는 밀리초 값)를 연도, 월, 시간, 날짜 및 다음 주 날짜와 같은 값으로 변환 하는 데 사용 됩니다.
-`Calendar`는 이벤트, 참석자 및 미리 알림을 읽고 쓰는 기능을 포함 하 여 일정 데이터를 통해 다양 한 상호 작용 옵션을 지원 합니다. 응용 프로그램에서 달력 공급자를 사용 하 여 API를 통해 추가 하는 데이터는 Android와 함께 제공 되는 기본 제공 일정 앱에 표시 됩니다.
+`Calendar` 클래스는 특정 인스턴스 (epoch에서 오프셋 된 밀리초 값)를 연도, 월, 시간, 날짜 및 다음 주의 날짜와 같은 값으로 변환 하는 데 사용 됩니다.
+`Calendar`는 이벤트, 참석자 및 미리 알림을 읽고 쓰는 기능을 포함 하 여 일정 데이터와 관련 된 다양 한 상호 작용 옵션을 지원 합니다. 응용 프로그램에서 달력 공급자를 사용 하 여 API를 통해 추가 하는 데이터는 Android와 함께 제공 되는 기본 제공 일정 앱에 표시 됩니다.
 
 ![예 달력](images/calendar.png)
 
 ## <a name="cardviewandroiduser-interfacecontrolscard-viewmd"></a>[CardView](~/android/user-interface/controls/card-view.md)
 
-`CardView`는 카드와 유사한 보기에서 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. `CardView`는 모퉁이 및 그림자 `FrameLayout` 가 둥근 위젯에 구현 됩니다. 일반적으로는 `CardView` `ListView` 또는`GridView` 뷰 그룹에 단일 행 항목을 표시 하는 데 사용 됩니다.
+`CardView` 카드와 유사한 보기에서 텍스트 및 이미지 콘텐츠를 표시 하는 UI 구성 요소입니다. `CardView`는 모퉁이가 둥근 `FrameLayout` 위젯 및 그림자로 구현 됩니다. 일반적으로 `CardView`는 `ListView` 또는 `GridView` 뷰 그룹에 단일 행 항목을 표시 하는 데 사용 됩니다.
 
 ![예제 카드 보기](images/cardview.png)
 
 ## <a name="edit-textandroiduser-interfacecontrolsedit-textmd"></a>[텍스트 편집](~/android/user-interface/controls/edit-text.md)
 
-`EditText`텍스트를 입력 하 고 수정 하는 데 사용 되는 UI 요소입니다.
+`EditText`는 텍스트를 입력 하 고 수정 하는 데 사용 되는 UI 요소입니다.
 
 ![텍스트 편집 예](images/edit-text.png)
 
@@ -75,13 +75,13 @@ Xamarin.ios는 Android에서 제공 하는 모든 네이티브 사용자 인터�
 
 ## <a name="popup-menuandroiduser-interfacecontrolspopup-menumd"></a>[팝업 메뉴](~/android/user-interface/controls/popup-menu.md)
 
-`PopupMenu`는 특정 뷰에 연결 된 팝업 메뉴를 표시 하는 데 사용 됩니다.
+`PopupMenu`은 특정 뷰에 연결 된 팝업 메뉴를 표시 하는 데 사용 됩니다.
 
 ![팝업 메뉴 예](images/popup-menu.png)
 
 ## <a name="ratingbarandroiduser-interfacecontrolsratingbarmd"></a>[RatingBar](~/android/user-interface/controls/ratingbar.md)
 
-는 `RatingBar` 별 등급을 표시 하는 UI 요소입니다.
+`RatingBar`는 별 등급을 표시 하는 UI 요소입니다.
 
 ![RatingBar의 예](ratingbar-images/01-ratingbar.png)
 
@@ -93,7 +93,7 @@ Xamarin.ios는 Android에서 제공 하는 모든 네이티브 사용자 인터�
 
 ## <a name="switchandroiduser-interfacecontrolsswitchmd"></a>[스위치](~/android/user-interface/controls/switch.md)
 
-`Switch`사용자가 설정 또는 해제와 같은 두 상태를 토글할 수 있도록 하는 UI 요소입니다. `Switch` 기본값은 OFF입니다.
+`Switch`은 사용자가 설정 또는 해제와 같은 두 상태 간을 전환할 수 있도록 하는 UI 요소입니다. `Switch` 기본값은 OFF입니다.
 
 ![예제 스위치](images/switch.png)
 
@@ -105,18 +105,18 @@ Xamarin.ios는 Android에서 제공 하는 모든 네이티브 사용자 인터�
 
 ## <a name="toolbarandroiduser-interfacecontrolstool-barindexmd"></a>[툴바](~/android/user-interface/controls/tool-bar/index.md)
 
-위젯 `Toolbar` (Android 5.0 롤리팝에 도입 됨)은 작업 모음 인터페이스 &ndash; 의 일반화로 간주할 수 있습니다 .이는 작업 모음을 대체 하기 위한 것입니다. 는 `Toolbar` 앱 레이아웃의 어디에서 나 사용할 수 있으며, 작업 모음 보다 훨씬 더 쉽게 사용자 지정할 수 있습니다.
+`Toolbar` 위젯 (Android 5.0 롤리팝에서 도입 됨)은 작업 모음을 대체 하기 위한 것 &ndash; 작업 모음 인터페이스의 일반화로 간주할 수 있습니다. `Toolbar`는 앱 레이아웃의 어디에서 나 사용할 수 있으며, 작업 모음 보다 훨씬 더 쉽게 사용자 지정할 수 있습니다.
 
 ![예제 도구 모음](images/toolbar.png)
 
 ## <a name="viewpagerandroiduser-interfacecontrolsview-pagerindexmd"></a>[ViewPager](~/android/user-interface/controls/view-pager/index.md) 
 
-는 `ViewPager` 사용자가 데이터 페이지에서 왼쪽과 오른쪽으로 대칭 이동 하는 데 사용할 수 있는 레이아웃 관리자입니다.
+`ViewPager`은 사용자가 데이터 페이지에서 왼쪽과 오른쪽으로 대칭 이동 하는 데 사용할 수 있는 레이아웃 관리자입니다.
 
 ![예제 ViewPager](images/viewpager.png)
 
-## <a name="webviewandroiduser-interfacecontrolsweb-viewmd"></a>[웹 보기](~/android/user-interface/controls/web-view.md)
+## <a name="webviewandroiduser-interfacecontrolsweb-viewmd"></a>[WebView](~/android/user-interface/controls/web-view.md)
 
-`WebView`는 웹 페이지를 볼 수 있는 사용자 고유의 창을 만들 수 있는 UI 요소입니다 (또는 전체 브라우저를 개발할 수도 있음).
+`WebView`은 웹 페이지를 볼 수 있는 사용자 고유의 창을 만들 수 있는 UI 요소입니다 (또는 전체 브라우저를 개발).
 
 ![예제 웹 보기](images/web-view.png)

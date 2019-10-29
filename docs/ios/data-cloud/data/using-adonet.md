@@ -4,31 +4,31 @@ description: 이 문서에서는 ADO.NET 응용 프로그램에서 SQLite에 액
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: a9df85a405bc086f86dae73fea615581bf9d28d0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: db26de8deed9945c6fff2d49f7d12de03fbe38df
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767383"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008232"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Xamarin.ios에서 ADO.NET 사용
 
-Xamarin은 iOS에서 사용할 수 있는 SQLite 데이터베이스를 기본적으로 지원 하며, 친숙 한 ADO.NET와 유사한 구문을 사용 하 여 노출 됩니다. 이러한 api를 사용 하려면 `CREATE TABLE`, `INSERT` 및 `SELECT` 문과 같이 SQLite에 의해 처리 되는 SQL 문을 작성 해야 합니다.
+Xamarin은 iOS에서 사용할 수 있는 SQLite 데이터베이스를 기본적으로 지원 하며, 친숙 한 ADO.NET와 유사한 구문을 사용 하 여 노출 됩니다. 이러한 Api를 사용 하려면 `CREATE TABLE`, `INSERT` 및 `SELECT` 문과 같이 SQLite에서 처리 되는 SQL 문을 작성 해야 합니다.
 
 ## <a name="assembly-references"></a>어셈블리 참조
 
-ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` 같이 `Mono.Data.Sqlite` iOS 프로젝트에 대 한 참조를 추가 해야 합니다 (Mac용 Visual Studio 및 Visual Studio의 샘플).
+ADO.NET를 통해 액세스 SQLite를 사용 하려면 여기에 나와 있는 것 처럼 iOS 프로젝트에 대 한 `System.Data` 및 `Mono.Data.Sqlite` 참조를 추가 해야 합니다 (Mac용 Visual Studio 및 Visual Studio의 샘플).
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
- ![](using-adonet-images/image4.png "Mac용 Visual Studio의 어셈블리 참조")
+ ![](using-adonet-images/image4.png "Assembly References in Visual Studio for Mac")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  ![](using-adonet-images/image6.png "Visual Studio의 어셈블리 참조")
+  ![](using-adonet-images/image6.png "Assembly References in Visual Studio")
 
 -----
 
@@ -36,16 +36,16 @@ ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` �
 
 ## <a name="about-monodatasqlite"></a>Mono 정보. Sqlite
 
-여기서는 `Mono.Data.Sqlite.SqliteConnection` 클래스를 사용 하 여 빈 데이터베이스 파일을 만든 다음 데이터베이스에 `SqliteCommand` 대해 SQL 명령을 실행 하는 데 사용할 수 있는 개체를 인스턴스화합니다.
+`Mono.Data.Sqlite.SqliteConnection` 클래스를 사용 하 여 빈 데이터베이스 파일을 만든 다음 데이터베이스에 대해 SQL 명령을 실행 하는 데 사용할 수 있는 `SqliteCommand` 개체를 인스턴스화합니다.
 
-1. **빈 데이터베이스 만들기** -유효한 (쓰기 `CreateFile` 가능) 파일 경로를 사용 하 여 메서드를 호출 합니다. 이 메서드를 호출 하기 전에 파일이 이미 있는지 여부를 확인 해야 합니다. 그렇지 않으면 새 (비어 있는) 데이터베이스가 이전 데이터베이스의 맨 위에 생성 되며 이전 파일의 데이터가 손실 됩니다.
+1. **빈 데이터베이스 만들기** -유효한 (쓰기 가능) 파일 경로를 사용 하 여 `CreateFile` 메서드를 호출 합니다. 이 메서드를 호출 하기 전에 파일이 이미 있는지 여부를 확인 해야 합니다. 그렇지 않으면 새 (비어 있는) 데이터베이스가 이전 데이터베이스의 맨 위에 생성 되며 이전 파일의 데이터가 손실 됩니다.
 
     `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
 
     > [!NOTE]
-    > 변수 `dbPath` 는이 문서의 앞부분에서 설명한 규칙에 따라 결정 해야 합니다.
+    > `dbPath` 변수는이 문서의 앞부분에서 설명한 규칙에 따라 결정 해야 합니다.
 
-2. **데이터베이스 연결 만들기** -SQLite 데이터베이스 파일이 생성 된 후에는 데이터에 액세스 하는 연결 개체를 만들 수 있습니다. 연결은 다음과 같이의 `Data Source=file_path`형식을 사용 하는 연결 문자열을 사용 하 여 생성 됩니다.
+2. **데이터베이스 연결 만들기** -SQLite 데이터베이스 파일이 생성 된 후에는 데이터에 액세스 하는 연결 개체를 만들 수 있습니다. 연결은 다음과 같이 `Data Source=file_path`형식을 사용 하는 연결 문자열을 사용 하 여 생성 됩니다.
 
     ```csharp
     var connection = new SqliteConnection ("Data Source=" + dbPath);
@@ -71,7 +71,7 @@ ADO.NET를 통해 액세스 SQLite를 사용 하려면 다음과 `System.Data` �
 
 IOS에서 실행 되는 경우이 문서의 *DataAccess_Basic* 샘플 코드는 다음과 같습니다.
 
- ![](using-adonet-images/image9.png "iOS ADO.NET 샘플")
+ ![](using-adonet-images/image9.png "iOS ADO.NET sample")
 
 아래 코드에서는 간단한 SQLite 작업을 수행 하 고 결과를 응용 프로그램의 주 창에 텍스트로 표시 하는 방법을 보여 줍니다.
 
@@ -149,7 +149,7 @@ public static string DoSomeDataAccess ()
 SQLite는 임의의 SQL 명령을 데이터에 대해 실행할 수 있으므로 원하는 모든 CREATE, INSERT, UPDATE, DELETE 또는 SELECT 문을 수행할 수 있습니다. Sqlite 웹 사이트의 SQLite에서 지원 되는 SQL 명령에 대해 알아볼 수 있습니다. SqliteCommand 개체의 세 가지 메서드 중 하나를 사용 하 여 SQL 문을 실행 합니다.
 
 - **ExecuteNonQuery** – 일반적으로 테이블을 만들거나 데이터를 삽입 하는 데 사용 됩니다. 일부 작업의 반환 값은 영향을 받는 행의 수입니다. 그렇지 않으면-1입니다.
-- **ExecuteReader** – 행 컬렉션을로 `SqlDataReader` 반환 해야 할 때 사용 됩니다.
+- **ExecuteReader** – 행 컬렉션을 `SqlDataReader` 반환 해야 할 때 사용 됩니다.
 - **ExecuteScalar** – 단일 값 (예: 집계)을 검색 합니다.
 
 ### <a name="executenonquery"></a>EXECUTENONQUERY
@@ -208,7 +208,7 @@ using (var contents = connection.CreateCommand ()) {
 }
 ```
 
-메서드의 반환 형식은입니다 `object` . 데이터베이스 쿼리에 따라 결과를 캐스팅 해야 합니다. `ExecuteScalar` 결과는 COUNT 쿼리의 정수 이거나 단일 열 SELECT 쿼리의 문자열 일 수 있습니다. 이는 판독기 개체 또는 영향을 받는 행 수의 수를 반환 하는 다른 Execute 메서드와는 다릅니다.
+`ExecuteScalar` 메서드의 반환 형식은 `object`-데이터베이스 쿼리에 따라 결과를 캐스팅 해야 합니다. 결과는 COUNT 쿼리의 정수 이거나 단일 열 SELECT 쿼리의 문자열 일 수 있습니다. 이는 판독기 개체 또는 영향을 받는 행 수의 수를 반환 하는 다른 Execute 메서드와는 다릅니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에 사용할 수 있는 대상 프�
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a612c2c23ceff13ea1d602465573514547628e55
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e07ec4fd4436d951ea4033dbceab2cef47e96218
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769802"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025925"
 ---
 # <a name="target-framework-for-xamarinmac"></a>Xamarin.ios 용 대상 프레임 워크
 
@@ -30,11 +30,11 @@ _이 문서에서는 Xamarin.ios에 사용할 수 있는 대상 프레임 워크
 
 Xamarin.ios에 사용할 수 있는 세 가지 대상 프레임 워크 옵션은 각각 서로 다른 장점과 장단점이 있습니다.
 
-- **최신** (이전 설명서에서 Mobile 이라고 함) – Xamarin. iOS의 성능과 크기에 대해 매우 유사한 하위 집합입니다. 이 대상 프레임 워크는 링커에서 안전 하므로 사용 하지 않는 코드를 제거 하 여 최종 공간을 크게 줄일 수 있습니다.
+- **최신** (이전 설명서에서 Mobile 이라고 함) – xamarin.ios의 성능과 크기에 대해 매우 유사한 하위 집합입니다. 이 대상 프레임 워크는 링커에서 안전 하므로 사용 하지 않는 코드를 제거 하 여 최종 공간을 크게 줄일 수 있습니다.
 
-- **전체** (이전 설명서에서 XM 4.5 이라고 함) – 약간의 제거를 포함 하 여 "데스크톱" BCL과 매우 유사한 하위 집합입니다. 대상 프레임 워크는 net45 이상과 거의 동일 하므로 netstandard2 또는 특정 Xamarin.ios 빌드를 제공 하지 않는 많은 nuget를 쉽게 사용할 수 있습니다. 그러나 System. 구성 사용으로 인해 연결과 호환 되지 않습니다.
+- **Full** (이전 설명서에서 XM 4.5 이라고 함) – 약간의 제거를 포함 하 여 "데스크톱" BCL과 매우 유사한 하위 집합입니다. 대상 프레임 워크는 net45 이상과 거의 동일 하므로 netstandard2 또는 특정 Xamarin.ios 빌드를 제공 하지 않는 많은 nuget를 쉽게 사용할 수 있습니다. 그러나 System. 구성 사용으로 인해 연결과 호환 되지 않습니다.
 
-- **지원 되지 않음** (이전 설명서에서 시스템 이라고 함) – Xamarin.ios에서 제공 하는 BCL에 연결 하는 대신 현재 시스템에 설치 된 mono를 사용 합니다. 이를 통해 문제가 있는 것으로 알려진 일부 (예: Drawing)를 비롯 하 여 어셈블리를 최대한 활용할 수 있습니다. 이 옵션은 "최후의 수단"만을 가지 며 사용 하기 전에 다른 옵션을 사용 하는 것이 좋습니다. 이름에서 알 수 있듯이 공식 지원 채널에서 사용이 지원 되지 않습니다.
+- **지원 되지 않음** (이전 설명서에서 시스템 이라고 함) – xamarin.ios에서 제공 하는 BCL에 연결 하는 대신 현재 시스템에 설치 된 mono를 사용 합니다. 이를 통해 문제가 있는 것으로 알려진 일부 (예: Drawing)를 비롯 하 여 어셈블리를 최대한 활용할 수 있습니다. 이 옵션은 "최후의 수단"만을 가지 며 사용 하기 전에 다른 옵션을 사용 하는 것이 좋습니다. 이름에서 알 수 있듯이 공식 지원 채널에서 사용이 지원 되지 않습니다.
 
 ## <a name="setting-the-target-framework"></a>대상 프레임 워크 설정
 

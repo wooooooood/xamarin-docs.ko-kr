@@ -2,15 +2,15 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: 'WPF 및 Xamarin.ios: 유사성 & 차이점'
 description: 이 문서에서는 WPF를 Xamarin.ios와 비교 하 고 대조 합니다. 컨트롤 템플릿, XAML, 바인딩 인프라, 데이터 템플릿, ItemsControl, UserControl, 탐색 및 URL 탐색에 대해 설명 합니다.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: de8e3445679e185b488311e58221ae5f4c28f85c
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 798839457a418d457bac83e6e20397722423dbac
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71106037"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016480"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 Xamarin.ios: 유사성 & 차이점
 
@@ -68,7 +68,7 @@ Xamarin.ios의 바인딩 가능한 속성에 대 한 정의는 WPF와 동일 합
 
 1. 개체는 `BindableObject`에서 파생 되어야 합니다.
 2. 속성에 대 한 지원 저장소 키를 정의 하려면 선언 된 `BindableProperty` 형식의 공용 정적 필드가 있어야 합니다.
-3. @No__t_0 및 `SetValue`를 사용 하 여 속성 값을 검색 하 고 변경 하는 공용 인스턴스 속성 래퍼가 있어야 합니다.
+3. `GetValue` 및 `SetValue`를 사용 하 여 속성 값을 검색 하 고 변경 하는 공용 인스턴스 속성 래퍼가 있어야 합니다.
 
 전체 예제는 [xamarin.ios의 바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)을 참조 하세요.
 
@@ -102,7 +102,7 @@ Xamarin.ios의 바인딩 가능한 속성에 대 한 정의는 WPF와 동일 합
 
 #### <a name="relativesource"></a>RelativeSource
 
-@No__t_0 바인딩이 지원 되지 않습니다. WPF에서 XAML로 정의 된 다른 시각적 요소에 바인딩할 수 있습니다. Xamarin.ios에서는 `{x:Reference}` 태그 확장을 사용 하 여이 기능을 구현할 수 있습니다. 예를 들어, 텍스트 속성을 포함 하는 "otherControl" 라는 컨트롤이 있는 경우 다음과 같이 바인딩할 수 있습니다.
+`RelativeSource` 바인딩이 지원 되지 않습니다. WPF에서 XAML로 정의 된 다른 시각적 요소에 바인딩할 수 있습니다. Xamarin.ios에서는 `{x:Reference}` 태그 확장을 사용 하 여이 기능을 구현할 수 있습니다. 예를 들어, 텍스트 속성을 포함 하는 "otherControl" 라는 컨트롤이 있는 경우 다음과 같이 바인딩할 수 있습니다.
 
 **WPF**
 
@@ -141,7 +141,7 @@ WPF에는 사용 되는 기본 제공 `RoutedCommand`이 포함 되어 있습니
 또한 두 환경 모두 `SynchronziationContext` 및 `async` / `await`를 지원 하 여 적절 한 스레드 마샬링을 수행 합니다. WPF는 모든 시각적 요소에 `Dispatcher` 클래스를 포함 하며, Xamarin. Forms에는 사용할 수 있는 정적 메서드 `Device.BeginInvokeOnMainThread` 있습니다 (플랫폼 간 코딩에는 `SynchronizationContext`이 선호 됨).
 
 - Xamarin.ios에는 컬렉션 변경 알림을 지 원하는 `ObservableCollection<T>` 포함 되어 있습니다.
-- @No__t_0를 사용 하 여 컬렉션에 대 한 크로스 스레드 업데이트를 사용 하도록 설정할 수 있습니다. API는 WPF 변형과 약간 다릅니다. 자세한 내용은 [문서를 참조](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*)하세요.
+- `BindingBase.EnableCollectionSynchronization`를 사용 하 여 컬렉션에 대 한 크로스 스레드 업데이트를 사용 하도록 설정할 수 있습니다. API는 WPF 변형과 약간 다릅니다. 자세한 내용은 [문서를 참조](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*)하세요.
 
 ## <a name="data-templates"></a>데이터 템플릿
 
@@ -149,7 +149,7 @@ WPF에는 사용 되는 기본 제공 `RoutedCommand`이 포함 되어 있습니
 
 또한 WPF에 상응 하는 것 만큼 유연 하지 않습니다.
 
-1. @No__t_0의 루트 요소는 _항상_ `ViewCell` 개체 여야 합니다.
+1. `DataTemplate`의 루트 요소는 _항상_ `ViewCell` 개체 여야 합니다.
 2. 데이터 트리거는 데이터 템플릿에서 완전히 지원 되지만 트리거와 연결 된 속성의 유형을 나타내는 `DataType` 속성을 포함 해야 합니다.
 3. `DataTemplateSelector`도 지원 되지만 `DataTemplate`에서 파생 되므로 `ItemTemplate` 속성 (vs)에 직접 할당 됩니다.  WPF의 `ItemTemplateSelector`).
 
@@ -174,7 +174,7 @@ WPF에는 "브라우저와 유사한" 탐색 기능을 제공 하는 데 사용�
 |탭|TabbedPage|
 |왼쪽/오른쪽으로 살짝 밀기|CarouselView|
 
-@No__t_0은 가장 일반적인 방법 이며 모든 페이지에는 탐색 스택에서 페이지를 밀거나 끄는 데 사용할 수 있는 `Navigation` 속성이 있습니다. 이는 WPF에서 발견 된 `NavigationService`와 가장 유사한 기능입니다.
+`NavigationPage`은 가장 일반적인 방법 이며 모든 페이지에는 탐색 스택에서 페이지를 밀거나 끄는 데 사용할 수 있는 `Navigation` 속성이 있습니다. 이는 WPF에서 발견 된 `NavigationService`와 가장 유사한 기능입니다.
 
 ### <a name="url-navigation"></a>URL 탐색
 

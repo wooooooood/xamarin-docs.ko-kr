@@ -4,15 +4,15 @@ description: '이 문서에서는 iOS의 backgrounding: 응용 프로그램 상�
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
-ms.openlocfilehash: 9ae1860d127ea87e4db830d8a9d299a66fdd0f67
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 78751f53808ffa62589fdc57fe4cf59912849e00
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766589"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010849"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>iOS의 Backgrounding 소개
 
@@ -28,7 +28,7 @@ IOS에서 백그라운드 처리에 대 한 코드를 살펴보기 전에 backgr
 
 IOS 응용 프로그램 수명 주기는 응용 프로그램 상태와 응용 프로그램 간에 이동 하는 방법을 모아 놓은 것입니다. 응용 프로그램은 사용자의 동작과 응용 프로그램의 backgrounding 요구 사항에 따라 상태 사이를 전환 합니다. 이동은 다음 다이어그램에 나와 있습니다.
 
- [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "응용 프로그램 상태 및 응용 프로그램 대리자 메서드 다이어그램")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
+ [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Application States and Application Delegate Methods diagram")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
 
 - **실행 중이 아님** -장치에서 응용 프로그램이 아직 시작 되지 않았습니다.
 - **실행 중/활성** -응용 프로그램이 화면에 있고 포그라운드에서 코드를 실행 하 고 있습니다.
@@ -45,13 +45,13 @@ IOS 응용 프로그램 수명 주기는 응용 프로그램 상태와 응용 �
 
 - `OnActivated`-응용 프로그램이 처음 시작 될 때와 앱이 포그라운드로 다시 들어올 때마다 호출 됩니다. 앱을 열 때마다 실행 되어야 하는 코드를 저장 하는 위치입니다.
 - `OnResignActivation`-사용자가 텍스트 또는 전화 통화와 같은 중단을 수신 하는 경우이 메서드가 호출 되 고 앱이 일시적으로 비활성화 됩니다. 사용자가 전화 통화를 수락 하면 앱이 백그라운드에 전송 됩니다.
-- `DidEnterBackground`-앱이 backgrounded 상태로 전환 될 때 호출 됩니다 .이 메서드는 가능한 종료를 준비 하는 데 5 초 정도 응용 프로그램을 제공 합니다. 이 시간을 사용 하 여 사용자 데이터 및 작업을 저장 하 고 화면에서 중요 한 정보를 제거 합니다.
-- `WillEnterForeground`-사용자가 backgrounded 또는 suspended 응용 프로그램으로 반환 하 여 포그라운드로 `WillEnterForeground` 시작 하면가 호출 됩니다. 이는 중 `DidEnterBackground` 에 저장 된 모든 상태를 리하이드레이션 하 여 포그라운드를 수행 하도록 응용 프로그램을 준비 하는 시간입니다.  `OnActivated`는이 메서드가 완료 된 직후에 호출 됩니다.
-- `WillTerminate`-응용 프로그램이 종료 되 고 해당 프로세스가 제거 됩니다. 이 메서드는 장치 또는 OS 버전에서 멀티태스킹를 사용할 수 없는 경우, 즉 메모리가 부족 하거나 사용자가 backgrounded 응용 프로그램을 수동으로 종료 하는 경우에만 호출 됩니다. 종료 된 일시 중단 된 응용 프로그램은를 호출 `WillTerminate` 하지 않습니다.
+- `DidEnterBackground`-앱이 backgrounded 상태가 될 때 호출 됩니다 .이 메서드는 가능한 종료를 준비 하는 데 5 초 정도 응용 프로그램을 제공 합니다. 이 시간을 사용 하 여 사용자 데이터 및 작업을 저장 하 고 화면에서 중요 한 정보를 제거 합니다.
+- `WillEnterForeground`-사용자가 backgrounded 또는 suspended 응용 프로그램으로 반환 되 고 포그라운드로 시작 `WillEnterForeground` 호출 됩니다. `DidEnterBackground` 하는 동안 저장 된 상태를 리하이드레이션 하 여 응용 프로그램이 전경을 수행 하도록 준비 하는 시간입니다.  이 메서드가 완료 되 면 즉시 `OnActivated`가 호출 됩니다.
+- `WillTerminate`-응용 프로그램이 종료 되 고 프로세스가 제거 됩니다. 이 메서드는 장치 또는 OS 버전에서 멀티태스킹를 사용할 수 없는 경우, 즉 메모리가 부족 하거나 사용자가 backgrounded 응용 프로그램을 수동으로 종료 하는 경우에만 호출 됩니다. 종료 된 일시 중단 된 응용 프로그램은 `WillTerminate`를 호출 하지 않습니다.
 
 다음 다이어그램에서는 응용 프로그램의 상태 및 수명 주기 방법이 함께 어떻게 연결 되어 있음을 보여 줍니다.
 
- [![](introduction-to-backgrounding-in-ios-images/image2.png "이 다이어그램에서는 응용 프로그램의 상태 및 수명 주기 방법이 함께 작동 하는 방법을 보여 줍니다.")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
+ [![](introduction-to-backgrounding-in-ios-images/image2.png "This diagram illustrates how the application states and lifecycle methods fit together")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
 ## <a name="user-controls-for-backgrounding-in-ios"></a>IOS의 Backgrounding에 대 한 사용자 정의 컨트롤
 
@@ -61,7 +61,7 @@ iOS 7에는 사용자에 게 응용 프로그램의 backgrounded 상태를 보�
 
 앱 전환기는 iOS 7에 도입 된 중요 한 제어 기능입니다. **홈** 단추를 두 번 눌러 시작 되며 프로세스가 활성 상태인 응용 프로그램을 표시 합니다.
 
- [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "앱 전환기를 사용 하 여 앱 간 이동")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
+ [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Moving between apps using the App Switcher")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
 
 사용자는 앱 전환기를 사용 하 여 모든 backgrounded 및 일시 중단 된 응용 프로그램의 스냅숏을 스크롤할 수 있습니다. 응용 프로그램을 누르면 포그라운드로 시작 됩니다. 위로 살짝 밀기는 백그라운드에서 응용 프로그램을 제거 하 고 프로세스를 종료 합니다. 다음 섹션의 [IOS 응용 프로그램 수명 주기 데모](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) 에서 앱 전환기를 좀 더 자세히 살펴보겠습니다.
 
@@ -74,7 +74,7 @@ iOS 7은 사용자가 [백그라운드 처리를 위해 등록 된](~/ios/app-fu
 
 사용자는 **설정 > 일반 > 백그라운드 앱 새로 고침** 으로 이동 하 고 선택한 응용 프로그램에 대 한 backgrounding 권한을 편집 하 여이 설정을 변경할 수 있습니다. 백그라운드 앱 새로 고침이 off로 설정 되 면 응용 프로그램이 백그라운드에서 시작 될 때 즉시 일시 중단 되 고 백그라운드 처리를 수행할 수 없습니다.
 
- [![](introduction-to-backgrounding-in-ios-images/settings-.png "백그라운드 응용 프로그램 새로 고침 설정")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
+ [![](introduction-to-backgrounding-in-ios-images/settings-.png "Background App Refresh Settings")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
 개발자는 `BackgroundRefreshStatus` API를 사용 하 여 백그라운드 새로 고침 응용 프로그램 상태를 확인할 수 있습니다. 예제를 보려면 [백그라운드 새로 고침 설정 확인 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting)을 참조 하십시오.
 

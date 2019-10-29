@@ -4,15 +4,15 @@ description: 이 문서는 Xamarin.ios 앱에서 사용자 인터페이스를 �
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 954e3b8f612fd710dd178cfc296889c9da372183
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 325898b3c934e25ae1610a3437f787476dcd22cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768315"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003335"
 ---
 # <a name="user-interfaces-in-ios"></a>iOS의 사용자 인터페이스
 
@@ -22,11 +22,11 @@ iOS에서는 UIAppearance Api를 사용 하 여 사용자 인터페이스 컨트
 
 ## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[사용자 인터페이스 개체 만들기](~/ios/user-interface/ios-ui/creating-ui-objects.md)
 
-Apple에서는 관련 기능을 Xamarin.ios 네임 스페이스와 관련 된 "프레임 워크"로 그룹화 합니다. `UIKit`는 iOS의 모든 사용자 인터페이스 컨트롤을 포함 하는 네임 스페이스입니다.
+Apple에서는 관련 기능을 Xamarin.ios 네임 스페이스와 관련 된 "프레임 워크"로 그룹화 합니다. `UIKit`은 iOS의 모든 사용자 인터페이스 컨트롤을 포함 하는 네임 스페이스입니다.
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[레이아웃 옵션](~/ios/user-interface/ios-ui/layout-options.md)
 
-뷰의 크기를 조정 하거나 회전할 때 레이아웃을 제어 하는 두 가지 메커니즘이 있습니다. 자동 크기 조정 및 자동 레이아웃.
+뷰의 크기를 조정 하거나 회전할 때 레이아웃을 제어 하는 두 가지 메커니즘 (자동 크기 조정 및 자동 레이아웃)이 있습니다.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[햅틱 피드백 제공](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

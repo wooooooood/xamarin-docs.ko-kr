@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 사용자 입력을 수�
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 9441596cd457c3cc3a881e5db319ec3bbfc5a312
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 060e4b8e7856e0024e6d236652c2b04c1da16f66
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766854"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008246"
 ---
 # <a name="using-data-in-an-ios-app"></a>IOS 앱에서 데이터 사용
 
@@ -38,7 +38,7 @@ UI 컨트롤에 대 한 자세한 내용은 [IOS 테이블 및 셀 작업](~/ios
 - 목록 읽기
 - 개별 레코드 읽기
 
-@No__t_0 클래스의 두 메서드는 다음과 같습니다.
+`StockDatabase` 클래스의 두 메서드는 다음과 같습니다.
 
 ```csharp
 public IEnumerable<Stock> GetStocks ()
@@ -59,7 +59,7 @@ iOS는 데이터를 `UITableView`와 다르게 렌더링 합니다.
 
 ## <a name="create-and-update"></a>만들기 및 업데이트
 
-응용 프로그램 코드를 간소화 하기 위해 PrimaryKey의 설정 여부에 따라 삽입 또는 업데이트를 수행 하는 단일 save 메서드가 제공 됩니다. @No__t_0 속성은 `[PrimaryKey]` 특성으로 표시 되므로 코드에서 설정 하면 안 됩니다.
+응용 프로그램 코드를 간소화 하기 위해 PrimaryKey의 설정 여부에 따라 삽입 또는 업데이트를 수행 하는 단일 save 메서드가 제공 됩니다. `Id` 속성은 `[PrimaryKey]` 특성으로 표시 되므로 코드에서 설정 하면 안 됩니다.
 이 메서드는 기본 키 속성을 확인 하 여 값이 이전에 저장 되었는지 여부를 검색 하 고 그에 따라 개체를 삽입 또는 업데이트 합니다.
 
 ```csharp
@@ -81,7 +81,7 @@ public int SaveStock (Stock item)
 
 ## <a name="delete"></a>삭제
 
-@No__t_0 및 `Update` 메서드와 달리 `Delete<T>` 메서드는 전체 `Stock` 개체가 아닌 기본 키 값만 사용할 수 있습니다.
+`Insert` 및 `Update` 메서드와 달리 `Delete<T>` 메서드는 전체 `Stock` 개체가 아닌 기본 키 값만 사용할 수 있습니다.
 이 예제에서는 `Stock` 개체가 메서드에 전달 되지만 Id 속성만 `Delete<T>` 메서드에 전달 됩니다.
 
 ```csharp
@@ -99,7 +99,7 @@ public int DeleteStock(Stock stock)
 앱에 기존 SQLite 데이터베이스 파일을 전달 하 고 액세스 하기 전에 쓰기 가능한 디렉터리에 복사 하 여 모바일 응용 프로그램에서이를 쉽게 수행할 수 있습니다. SQLite는 대부분의 플랫폼에서 사용 되는 표준 파일 형식 이므로 SQLite 데이터베이스 파일을 만드는 데 사용할 수 있는 여러 도구가 있습니다.
 
 - **SQLite 관리자 Firefox 확장** – Mac 및 Windows에서 작동 하며 IOS 및 Android와 호환 되는 파일을 생성 합니다.
-- **명령줄** – [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) 를 참조 하세요.
+- **명령줄** – [www.sqlite.org/sqlite.html](https://www.sqlite.org/sqlite.html) 를 참조 하세요.
 
 앱과 함께 배포할 데이터베이스 파일을 만들 때 특히 이름이 C# 클래스 및 속성과 일치 해야 하는 SQLite.NET를 사용 하는 경우에는 테이블 및 열의 이름을 지정 하 여 코드에 필요한 내용과 일치 하는지 확인 합니다. 또는 연결 된 사용자 지정 특성을 지정 합니다.
 

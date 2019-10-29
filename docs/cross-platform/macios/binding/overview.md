@@ -3,15 +3,15 @@ title: 목적-C 바인딩 개요
 description: 이 문서에서는 명령줄 바인딩, 바인딩 프로젝트 및 목표 C# Sharpie를 포함 하 여 목표 C 코드에 대 한 바인딩을 만드는 다양 한 방법에 대 한 개요를 제공 합니다. 또한 바인딩의 작동 방식을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: db37a6a912cae3c2d53d8838ba2d2bd0224e8df7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765591"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015876"
 ---
 # <a name="overview-of-objective-c-bindings"></a>목적-C 바인딩 개요
 
@@ -19,7 +19,7 @@ _바인딩 프로세스의 작동 방식에 대 한 세부 정보_
 
 Xamarin과 함께 사용 하기 위해 목표-C 라이브러리를 바인딩하는 데는 세 가지 단계가 사용 됩니다.
 
-1. 기본 API C# 가 .net에 노출 되는 방식과 기본 목표에 매핑되는 방법을 설명 하는 "api 정의"를 작성 합니다. 이러한 작업은 및 다양 C# 한 바인딩 `interface` **특성과** 같은 표준 구문을 사용 하 여 수행 됩니다 (이 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)참조).
+1. 기본 API C# 가 .net에 노출 되는 방식과 기본 목표에 매핑되는 방법을 설명 하는 "api 정의"를 작성 합니다. `interface`및 다양 한 바인딩 C# **특성과** 같은 표준 구문을 사용 하 여 수행 됩니다 (이 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)참조).
 
 2. 에서 C#"API 정의"를 작성 한 후에는이를 컴파일하여 "바인딩" 어셈블리를 생성 합니다. 이 작업은 [**명령줄**](#commandline) 에서 또는 Mac용 Visual Studio 또는 Visual Studio에서 [**바인딩 프로젝트**](#bindingproject) 를 사용 하 여 수행할 수 있습니다.
 
@@ -35,7 +35,7 @@ Xamarin과 함께 사용 하기 위해 목표-C 라이브러리를 바인딩하�
 
 ## <a name="command-line-bindings"></a>명령줄 바인딩
 
-Xamarin.ios `btouch-native` 에 대해 (또는 `bmac-native` xamarin.ios를 사용 하는 경우)를 사용 하 여 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 (또는 목적 Sharpie를 사용 하 여)를 명령줄 도구 (`btouch-native` iOS 또는 `bmac-native` Mac 용)에 전달 하는 방식으로 작동 합니다.
+Xamarin.ios (또는 Xamarin.ios를 사용 하는 경우 `bmac-native`)에 대 한 `btouch-native`를 사용 하 여 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 (또는 목표 Sharpie 사용)를 명령줄 도구`btouch-native`(IOS 또는 Mac 용`bmac-native`)에 전달 하는 방식으로 작동 합니다.
 
 이러한 도구를 호출 하는 일반적인 구문은 다음과 같습니다.
 
@@ -49,7 +49,7 @@ bash$ /Developer/MonoTouch/usr/bin/btouch-native -e cocos2d.cs -s:enums.cs -x:ex
 bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 ```
 
-위의 명령은 현재 디렉터리에 파일 `cocos2d.dll` 을 생성 하 고 프로젝트에서 사용할 수 있는 완전히 바인딩된 라이브러리를 포함 합니다. 바인딩 프로젝트를 사용 하는 경우 바인딩을 만드는 데 사용 하 Mac용 Visual Studio는 도구입니다 ( [아래](#bindingproject)설명 참조).
+위의 명령은 현재 디렉터리에 `cocos2d.dll` 파일을 생성 하 고 프로젝트에서 사용할 수 있는 완전히 바인딩된 라이브러리를 포함 합니다. 바인딩 프로젝트를 사용 하는 경우 바인딩을 만드는 데 사용 하 Mac용 Visual Studio는 도구입니다 ( [아래](#bindingproject)설명 참조).
 
 <a name="bindingproject" />
 
@@ -75,7 +75,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 먼저 바인딩하려는 형식을 찾습니다. 토론 목적 (및 단순성)을 위해 [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 형식 ( [NSEnumerator](xref:Foundation.NSEnumerator)에 이미 바인딩되어 있음)을 바인딩합니다. 아래 구현은 단지 예를 제공 하기 위한 것입니다.
 
-두 번째로, C# 형식을 만들어야 합니다. 네임 스페이스에이를 추가할 수 있습니다. 목표 c는 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성을 사용 하 여 xamarin.ios에서 목표-C 런타임으로 등록 하는 형식 이름을 변경 해야 합니다. 또한 C# 이 형식은 [기본 nsobject](xref:Foundation.NSObject)에서 상속 해야 합니다.
+두 번째로, C# 형식을 만들어야 합니다. 네임 스페이스에이를 추가할 수 있습니다. 목표-C는 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성을 사용 하 여 Xamarin.ios에서 목표-C 런타임으로 등록 하는 형식 이름을 변경 해야 합니다. 또한 C# 이 형식은 [기본 nsobject](xref:Foundation.NSObject)에서 상속 해야 합니다.
 
 ```csharp
 namespace Example.Binding {
@@ -95,7 +95,7 @@ static Selector selAllObjects = new Selector("allObjects");
 static Selector selNextObject = new Selector("nextObject");
 ```
 
-네, 형식은 생성자를 제공 해야 합니다. 생성자 호출을 기본 클래스 생성자에 연결 *해야 합니다* . 특성 `[Export]` 은 지정 된 선택기 이름을 사용 하 여 생성자를 호출 하는 것을 목표로 하는 C 코드를 허용 합니다.
+네, 형식은 생성자를 제공 해야 합니다. 생성자 호출을 기본 클래스 생성자에 연결 *해야 합니다* . `[Export]` 특성은 지정 된 선택기 이름을 사용 하 여 생성자를 호출 하는 것을 목표로 C 코드를 허용 합니다.
 
 ```csharp
 [Export("init")]
@@ -115,7 +115,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-5\.3 단계에서 선언 된 각 선택기에 대해 메서드를 제공 합니다. 이는를 `objc_msgSend()` 사용 하 여 네이티브 개체에서 선택기를 호출 합니다. [런타임. getnsobject ()](xref:ObjCRuntime.Runtime.GetNSObject*) 를 사용 하 여를 적절 하 `IntPtr` 게 형식화 `NSObject` 된 (하위) 형식으로 변환 합니다. 메서드를 목표 C 코드에서 호출할 수 있도록 하려면 멤버가 **virtual** *이어야* 합니다.
+5\.3 단계에서 선언 된 각 선택기에 대해 메서드를 제공 합니다. 이렇게 하면 `objc_msgSend()`를 사용 하 여 네이티브 개체에 대 한 선택기를 호출 합니다. [런타임. GetNSObject ()](xref:ObjCRuntime.Runtime.GetNSObject*) 를 사용 하 여 `IntPtr`를 적절 하 게 형식화 된 `NSObject` (하위) 형식으로 변환 합니다. 메서드를 목표 C 코드에서 호출할 수 있도록 하려면 멤버가 **virtual** *이어야* 합니다.
 
 ```csharp
 [Export("nextObject")]

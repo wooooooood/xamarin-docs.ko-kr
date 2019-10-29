@@ -4,15 +4,15 @@ description: Xamarin Android 앱에 대 한 사용자 인터페이스 만들기
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 405fb0e30881ee64514d3984842ac820d5663382
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a881629c63ea2991b8ea4673811311076fcaabe9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764478"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028987"
 ---
 # <a name="user-interface"></a>사용자 인터페이스
 
@@ -37,7 +37,7 @@ ms.locfileid: "70764478"
 ## <a name="layoutsandroiduser-interfacelayoutsindexmd"></a>[레이아웃](~/android/user-interface/layouts/index.md)
 
 레이아웃은 사용자 인터페이스의 시각적 구조를 정의 하는 데 사용 됩니다.
-`ListView` 및`RecyclerView` 등의 레이아웃은 Android 응용 프로그램의 가장 기본적인 구성 요소입니다. 일반적으로 레이아웃은를 사용 `Adapter` 하 여 레이아웃에서 데이터 항목을 채우는 데 사용 되는 기본 데이터로 레이아웃에서의 브리지로 사용 됩니다. `LinearLayout`이 섹션에서는 ,`RecyclerView` ,,`GridView`및와 같은 레이아웃을 사용 하는 방법을 설명 합니다. `RelativeLayout` `TableLayout`
+`ListView` 및 `RecyclerView`와 같은 레이아웃은 Android 응용 프로그램의 가장 기본적인 구성 요소입니다. 일반적으로 레이아웃은 `Adapter`를 사용 하 여 레이아웃에서 데이터 항목을 채우는 데 사용 되는 기본 데이터로 레이아웃에서의 브리지 역할을 수행 합니다. 이 섹션에서는 `LinearLayout`, `RelativeLayout`, `TableLayout`, `RecyclerView`, `GridView`등의 레이아웃을 사용 하는 방법을 설명 합니다.
 
 ## <a name="controlsandroiduser-interfacecontrolsindexmd"></a>[컨트롤](~/android/user-interface/controls/index.md)
 

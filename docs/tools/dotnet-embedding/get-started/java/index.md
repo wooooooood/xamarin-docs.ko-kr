@@ -3,15 +3,15 @@ title: Java 시작
 description: 이 문서에서는 Java를 사용 하 여 .NET 포함을 시작 하는 방법을 설명 합니다. 시스템 요구 사항, 설치 및 지원 되는 플랫폼에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 8d6bc284d07ce1be11ad273f875b75a70ae14a0f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 09ea33724c2b1184654ce7768ea1cb2525b62c28
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278402"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007371"
 ---
 # <a name="getting-started-with-java"></a>Java 시작
 
@@ -59,7 +59,7 @@ nuget install Embeddinator-4000
 
 Java는 현재 macOS, Windows 및 Android에 대 한 미리 보기 상태입니다.
 
-.Net 포함 도구에 `--platform=<platform>` 명령줄 인수를 전달 하 여 플랫폼을 선택 합니다. 현재 `macOS`, `Windows` 및`Android` 가 지원 됩니다.
+.NET 포함 도구에 `--platform=<platform>` 명령줄 인수를 전달 하 여 플랫폼을 선택 합니다. 현재 `macOS`, `Windows`및 `Android` 지원 됩니다.
 
 ### <a name="macos-and-windows"></a>macOS 및 Windows
 

@@ -3,46 +3,46 @@ title: IOS/macOS에 대 한 HttpClient 및 SSL/TLS 구현 선택기
 description: HttpClient 스택 및 SSL/TLS 구현 선택기는 Xamarin iOS, tvOS 또는 macOS 앱에서 사용 되는 HttpClient 및 SSL/TLS 구현을 결정 합니다.
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: 305c0c939d99207e39a469f7e8c5370cc5555d38
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 3b87eb6ae9e97be4ee34b092efce72c0d97c88b3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249973"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015844"
 ---
 # <a name="httpclient-and-ssltls-implementation-selector-for-iosmacos"></a>IOS/macOS에 대 한 HttpClient 및 SSL/TLS 구현 선택기
 
-Xamarin.ios, tvOS 및 xamarin.ios에 대 한 **httpclient 구현 선택기** 는 사용할 `HttpClient` 구현을 제어 합니다. IOS, tvOS 또는 macos 네이티브 전송 (`NSUrlSession` 또는 `CFNetwork`OS에 따라)을 사용 하는 구현으로 전환할 수 있습니다. 여기서는 TLS 1.2-지원, 작은 이진 파일 및 빠른 다운로드를 지원 합니다. 단점은 비동기 작업을 실행 하기 위해 이벤트 루프를 실행 해야 한다는 것입니다.
+Xamarin.ios, tvOS 및 Xamarin.ios에 대 한 **Httpclient 구현 선택기** 는 사용할 구현 `HttpClient`를 제어 합니다. IOS, tvOS 또는 macOS 네이티브 전송 (OS에 따라`NSUrlSession` 또는 `CFNetwork`)을 사용 하는 구현으로 전환할 수 있습니다. 여기서는 TLS 1.2-지원, 작은 이진 파일 및 빠른 다운로드를 지원 합니다. 단점은 비동기 작업을 실행 하기 위해 이벤트 루프를 실행 해야 한다는 것입니다.
 
 프로젝트는 **시스템 .net. Http** 어셈블리를 참조 해야 합니다.
 
 > [!WARNING]
 > **4 월, 2018** – PCI 규정 준수를 포함 하 여 보안 요구 사항이 증가 함에 따라 주요 클라우드 공급자 및 웹 서버는 1.2 보다 오래 된 TLS 버전 지원을 중지 해야 합니다. 이전 버전의 Visual Studio에서 만든 Xamarin 프로젝트는 이전 버전의 TLS를 사용 합니다.
 >
-> 앱이 이러한 서버 및 서비스를 계속 사용할 수 있도록 하려면  **`NSUrlSession` 아래 표시 된 설정으로 Xamarin 프로젝트를 업데이트 한 다음 사용자에 게 앱을 다시 빌드하고 다시 배포 해야** 합니다.
+> 앱이 이러한 서버 및 서비스를 계속 사용할 수 있도록 하려면 **아래 표시 된 `NSUrlSession` 설정으로 Xamarin 프로젝트를 업데이트 한 다음 사용자에 게 앱을 다시 빌드하고 다시 배포 해야** 합니다.
 
 ## <a name="selecting-an-httpclient-stack"></a>HttpClient 스택 선택
 
-앱에서 사용 `HttpClient` 중인를 조정 하려면 다음을 수행 합니다.
+앱에서 사용 하는 `HttpClient`를 조정 하려면 다음을 수행 합니다.
 
 1. **솔루션 탐색기** 에서 **프로젝트 이름을** 두 번 클릭 하 여 프로젝트 옵션을 엽니다.
 2. 프로젝트에 대 한 **빌드** 설정으로 전환 합니다 (예: xamarin.ios 앱에 대 한 **ios 빌드** ).
-3. **Httpclient 구현** 드롭다운에서 다음 중 하나로 `HttpClient` 형식을 선택 합니다. **NSUrlSession** (권장), **Cfnetwork**또는 **관리**.
+3. **Httpclient 구현** 드롭다운에서 **NSUrlSession** (권장), **cfnetwork**또는 **관리**중 하나로 `HttpClient` 유형을 선택 합니다.
 
-[![관리 되는, CFNetwork 또는 NSUrlSession에서 HttpClient 구현 선택](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
+[![관리, CFNetwork 또는 NSUrlSession에서 HttpClient 구현을 선택 합니다.](http-stack-images/http-xs-sml.png)](http-stack-images/http-xs.png#lightbox)
 
 > [!TIP]
-> TLS 1.2 지원의 경우 `NSUrlSession` 옵션을 선택 하는 것이 좋습니다.
+> TLS 1.2 지원에는 `NSUrlSession` 옵션을 권장 합니다.
 
 ### <a name="nsurlsession"></a>NSUrlSession
 
-기반 처리기는 iOS 7 이상에서 사용할 수 `NSURLSession` 있는 네이티브 프레임 워크를 기반으로 합니다. `NSURLSession` 
+`NSURLSession`기반 처리기는 iOS 7 이상에서 사용할 수 있는 네이티브 `NSURLSession` 프레임 워크를 기반으로 합니다. 
 **권장 설정입니다.**
 
-#### <a name="pros"></a>전문가
+#### <a name="pros"></a>들
 
 - 더 나은 성능과 더 작은 실행 파일 크기를 위해 네이티브 Api를 사용 합니다.
 - TLS 1.2와 같은 최신 표준에 대 한 지원.
@@ -54,9 +54,9 @@ Xamarin.ios, tvOS 및 xamarin.ios에 대 한 **httpclient 구현 선택기** 는
 
 ### <a name="cfnetwork"></a>CFNetwork
 
-기반 처리기는 iOS 6 이상에서 사용할 수 `CFNetwork` 있는 네이티브 프레임 워크를 기반으로 합니다. `CFNetwork`
+`CFNetwork`기반 처리기는 iOS 6 이상에서 사용할 수 있는 네이티브 `CFNetwork` 프레임 워크를 기반으로 합니다.
 
-#### <a name="pros"></a>전문가
+#### <a name="pros"></a>들
 
 - 더 나은 성능과 더 작은 실행 파일 크기를 위해 네이티브 Api를 사용 합니다.
 - TLS 1.2와 같은 최신 표준에 대 한 지원.
@@ -71,7 +71,7 @@ Xamarin.ios, tvOS 및 xamarin.ios에 대 한 **httpclient 구현 선택기** 는
 
 관리 되는 처리기는 이전 버전의 Xamarin과 함께 제공 되는 완전히 관리 되는 HttpClient 처리기입니다.
 
-#### <a name="pros"></a>전문가
+#### <a name="pros"></a>들
 
 - Microsoft .NET 및 이전 Xamarin 버전과 호환 가능한 기능 집합을 포함 합니다.
 
@@ -83,7 +83,7 @@ Xamarin.ios, tvOS 및 xamarin.ios에 대 한 **httpclient 구현 선택기** 는
 
 ### <a name="programmatically-setting-the-httpmessagehandler"></a>프로그래밍 방식으로 HttpMessageHandler 설정
 
-위에 표시 된 프로젝트 전체 구성 외에도, 다음 코드 조각과 같이를 인스턴스화하고 `HttpClient` 생성자를 통해 원하는 `HttpMessageHandler` 을 삽입할 수 있습니다.
+위에 표시 된 프로젝트 전체 구성 외에도 다음 코드 조각과 같이 `HttpClient` 인스턴스화하고 생성자를 통해 원하는 `HttpMessageHandler`을 삽입할 수 있습니다.
 
 ```csharp
 // This will use the default message handler for the application; as
@@ -97,11 +97,11 @@ HttpClient client = new HttpClient(new CFNetworkHandler());
 HttpClient client = new HttpClient(new NSUrlSessionHandler());
 ```
 
-이렇게 하면 **프로젝트 옵션** 대화 상자에서 선언 `HttpMessageHandler` 된 것과 다른를 사용할 수 있습니다.
+이렇게 하면 **프로젝트 옵션** 대화 상자에서 선언 된 것과 다른 `HttpMessageHandler`를 사용할 수 있습니다.
 
 ## <a name="ssltls-implementation"></a>SSL/TLS 구현
 
-SSL (Secure Socket Layer) 및 그 후속 TLS (전송 계층 보안)는을 통해 `System.Net.Security.SslStream`HTTP 및 기타 네트워크 연결에 대 한 지원을 제공 합니다. Xamarin.ios, tvOS 또는 xamarin.ios의 `System.Net.Security.SslStream` 구현은 Mono에서 제공 하는 관리 되는 구현을 사용 하는 대신 Apple의 네이티브 SSL/TLS 구현을 호출 합니다. Apple의 네이티브 구현에서는 TLS 1.2을 지원 합니다.
+SSL (Secure Socket Layer) 및 후속, TLS (전송 계층 보안)는 `System.Net.Security.SslStream`을 통해 HTTP 및 기타 네트워크 연결에 대 한 지원을 제공 합니다. Xamarin.ios, tvOS 또는 Xamarin.ios의 `System.Net.Security.SslStream` 구현은 Mono에서 제공 하는 관리 되는 구현을 사용 하는 대신 Apple의 네이티브 SSL/TLS 구현을 호출 합니다. Apple의 네이티브 구현에서는 TLS 1.2을 지원 합니다.
 
 > [!WARNING]
 > 예정된 Xamarin.Mac 4.8 릴리스는 macOS 10.9 이상만 지원합니다.
@@ -111,7 +111,7 @@ SSL (Secure Socket Layer) 및 그 후속 TLS (전송 계층 보안)는을 통해
 
 Apple의 ATS ( _앱 전송 보안_ )는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 합니다. ATS를 사용 하면 모든 인터넷 통신이 안전한 연결 모범 사례를 준수 하 여 앱 또는 사용 중인 라이브러리를 통해 직접 중요 한 정보가 노출 되지 않도록 방지할 수 있습니다.
 
-ATS는 iOS 9, tvOS 9 및 OS X 10.11 (El Capitan) 이상으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로, 또는 `NSUrlConnection` `NSUrlSession` 를 `CFUrl` 사용 하는 모든 연결에는 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않는 경우 예외가 발생 하 여 실패 합니다.
+ATS는 iOS 9, tvOS 9 및 OS X 10.11 (El Capitan) 이상으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로 `NSUrlConnection`, `CFUrl` 또는 `NSUrlSession`를 사용 하는 모든 연결은 ATS 보안 요구 사항을 따릅니다. 연결이 이러한 요구 사항을 충족 하지 않는 경우 예외가 발생 하 여 실패 합니다.
 
 HttpClient 스택 및 SSL/TLS 구현 선택에 따라 ATS에서 제대로 작동 하도록 앱을 수정 해야 할 수 있습니다.
 
@@ -127,9 +127,9 @@ Xamarin.ios 9.8에는 Xamarin.ios 응용 프로그램에 대 한 **.csproj** 파
 
 ![프로젝트를 로드 하는 동안 발생 한 오류 스크린샷, 요청 된 값 레거시를 찾을 수 없음](http-stack-images/tlserror-xs.png)
 
-이 오류는 xamarin.ios 9.8의 프로젝트 파일에 `MtouchTlsProvider` 대 한 설정이 도입 되어 발생 합니다. Xamarin.ios 9.8 이상으로 업데이트할 수 없는 경우 해결 방법은 **.csproj** 파일 응용 프로그램을 수동으로 편집 하 고 `MtouchTlsprovider` 요소를 제거한 다음 변경 된 프로젝트 파일을 저장 하는 것입니다.
+이 오류는 Xamarin.ios 9.8의 프로젝트 파일에 대 한 `MtouchTlsProvider` 설정이 도입 되어 발생 합니다. Xamarin.ios 9.8 이상으로 업데이트할 수 없는 경우 해결 방법은 **.csproj** 파일 응용 프로그램을 수동으로 편집 하 고 `MtouchTlsprovider` 요소를 제거한 다음 변경 된 프로젝트 파일을 저장 하는 것입니다.
 
-다음 코드 조각은 **.csproj** 파일 내에 설정 된 `MtouchTlsProvider` 것 처럼 보일 수 있는 방법의 예입니다.
+다음 코드 조각은 **.csproj** 파일 내에서 `MtouchTlsProvider` 설정이 어떻게 표시 될 수 있는지에 대 한 예입니다.
 
 ```xml
 <MtouchTlsProvider>Default</MtouchTlsProvider>

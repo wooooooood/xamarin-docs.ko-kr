@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: d5edb5f4e2ce1ca39ba27a1de1a51760ea167e8b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9e36189c771ed0c91a6030fd0ab615ab9af4dd52
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026709"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>어떤 Xamarin.Android 버전에서 Lollipop 지원이 추가되었나요?
 
@@ -22,7 +22,7 @@ ms.locfileid: "70757139"
 - [Xamarin android 4.17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) 는 Android L Preview 지원을 추가 했습니다.
 - [Xamarin android 4.20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) 는 android 롤리팝 지원을 추가 했습니다.
 
-Xamarin은 Xamarin 도구의 현재 안정적인 릴리스만 적극적으로 지원 합니다. 아래 정보는 이전 버전의 도구에 대해 "있는 그대로" 제공 됩니다. Xamarin 릴리스에 대 한 최신 정보는 [여기](http://releases.xamarin.com/)를 확인 하세요.
+Xamarin은 Xamarin 도구의 현재 안정적인 릴리스만 적극적으로 지원 합니다. 아래 정보는 이전 버전의 도구에 대해 "있는 그대로" 제공 됩니다. Xamarin 릴리스에 대 한 최신 정보는 [릴리스 정보](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes)를 확인 하세요.
 
 ## <a name="missing-androidjar-for-api-level-21-in-android-l-preview"></a>Android L Preview의 "API 수준 21 용 android jar 없음"
 
@@ -42,12 +42,12 @@ Error 1 Could not find android.jar for API Level 21.
 
 2. Android-21에서 android-L로 android-21 폴더의 이름을 바꿉니다. (최상의 방법은 임시 수정 으로만 사용 해야 하며 전혀 작동 하지 않을 수 있습니다.)
 
-   **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21**
+   **Android\\% LOCALAPPDATA%\\Android-sdk\\플랫폼\\android-21**
 
 3. 일시적으로 Android API 수준 21 "L" preview [1]로 다시 다운 그레이드:
 
-    1. **\\% LOCALAPPDATA% android\\android\\-sdk platform\\android-21** 을 삭제 합니다. 
-    2. [1]을 **C: Users\\&lt;\\username\\AppData Local android android-sdk\\플랫폼으로 추출 하 여 만듭니다.\\\\&gt;\\** **android-L** 폴더입니다.
+    1. Android- **21\\% LOCALAPPDATA%\\android\\android-sdk\\플랫폼** 을 삭제 합니다. 
+    2. [1]을 **C:\\사용자\\&lt;사용자 이름&gt;\\\\android\\android\\android\\플랫폼** 으로 추출 하 여 **android-L** 폴더를 만듭니다.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -75,4 +75,4 @@ Error: Could not find android.jar for API Level 21.**
 
 -----
 
-[1] - [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)
+[1]- [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)

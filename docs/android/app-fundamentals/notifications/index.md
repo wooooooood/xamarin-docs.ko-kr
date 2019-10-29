@@ -3,15 +3,15 @@ title: Xamarin Android의 알림
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 57c77b5d8d6a4763dc7b5c7a62a51ffe3137827d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755361"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025529"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Xamarin Android의 알림
 
@@ -27,11 +27,11 @@ ms.locfileid: "70755361"
 
 ## <a name="further-reading"></a>추가 정보
 
-[Firebase 클라우드 메시징](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; FCM (Firebase Cloud Messaging)는 모바일 앱과 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. Firebase 클라우드 메시징은 Xamarin Android 응용 프로그램에서 원격 알림 (푸시 알림)을 구현 하는 데 사용할 수 있습니다.
+FCM ( [Firebase Cloud messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase 클라우드 메시징)는 모바일 앱과 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. Firebase 클라우드 메시징은 Xamarin Android 응용 프로그램에서 원격 알림 (푸시 알림)을 구현 하는 데 사용할 수 있습니다.
 
-[알림](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) &ndash; Android 개발자 항목은 android 알림에 대 한 결정적인 가이드입니다. 이 섹션에는 Android 사용자 인터페이스의 지침을 준수 하도록 알림을 디자인 하는 데 도움이 되는 디자인 고려 사항이 포함 되어 있습니다. 활동을 시작할 때 preserviing 탐색에 대 한 자세한 배경 정보를 제공 하 고, 알림에 진행률을 표시 하 고 잠금 화면에서 미디어 재생을 제어 하는 방법을 설명 합니다.
+이 Android 개발자 항목 &ndash; [알림은](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) android 알림에 대 한 결정적인 가이드입니다. 이 섹션에는 Android 사용자 인터페이스의 지침을 준수 하도록 알림을 디자인 하는 데 도움이 되는 디자인 고려 사항이 포함 되어 있습니다. 활동을 시작할 때 preserviing 탐색에 대 한 자세한 배경 정보를 제공 하 고, 알림에 진행률을 표시 하 고 잠금 화면에서 미디어 재생을 제어 하는 방법을 설명 합니다.
 
-[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash; 이 android 서비스를 사용 하면 앱이 수신 하도록 등록 된 알림 뿐만 아니라 android 장치에 게시 된 모든 알림을 앱에서 수신 하 고 상호 작용할 수 있습니다.
+[NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash;이 android 서비스를 사용 하면 앱이 수신 하도록 등록 된 알림 뿐만 아니라 android 장치에 게시 된 모든 알림을 앱에서 수신 하 고 상호 작용할 수 있습니다.
 사용자는 장치에서 알림을 수신할 수 있도록 앱에 대 한 권한을 명시적으로 부여 해야 합니다.
 
 ## <a name="related-links"></a>관련 링크

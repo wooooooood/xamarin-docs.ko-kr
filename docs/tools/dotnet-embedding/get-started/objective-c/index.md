@@ -3,15 +3,15 @@ title: 목표 시작-C
 description: 이 문서에서는 목적-C를 사용 하 여 .NET 포함을 시작 하는 방법을 설명 합니다. 요구 사항, NuGet에서 .NET 포함 설치 및 지원 되는 플랫폼을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: b9c97e871791b633c65e9d374edfe446874567e9
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: bf2f832056c164e199cfb779766f298b2b3817de
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106096"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007085"
 ---
 # <a name="getting-started-with-objective-c"></a>목표 시작-C
 

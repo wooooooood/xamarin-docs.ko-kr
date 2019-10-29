@@ -2,15 +2,15 @@
 title: Android에 .NET 포함
 ms.prod: xamarin
 ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/15/2018
-ms.openlocfilehash: 1369d5cd901207618128da8b0111e488eae7b83e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fef422b799ab5280aef205f4d5e55fd91050da39
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772216"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007333"
 ---
 # <a name="net-embedding-on-android"></a>Android에 .NET 포함
 
@@ -22,7 +22,7 @@ ms.locfileid: "70772216"
 
 Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
-- **Xamarin android** &ndash; [xamarin. android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상이 설치 되어 있어야 합니다.
+- **Xamarin.ios &ndash;** [xamarin. android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상이 설치 되어 있어야 합니다.
 
 - **Android Studio** &ndash;   [Android Studio 3.x](https://developer.android.com/studio/) 이상 버전을 설치해야 합니다.
 
@@ -36,13 +36,13 @@ Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
 2. [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/)을 설치 합니다.
 
-3. **Embeddinator-4000** 를 찾아서 **경로**에 추가 합니다. 예를 들어:
+3. **Embeddinator-4000** 를 찾아서 **경로**에 추가 합니다. 예를 들면,
 
     ```cmd
     set PATH=%PATH%;C:\Users\USERNAME\.nuget\packages\embeddinator-4000\0.4.0\tools
     ```
 
-4. 라이브러리 어셈블리에서 Embeddinator-4000를 실행 합니다. 예를 들어:
+4. 라이브러리 어셈블리에서 Embeddinator-4000를 실행 합니다. 예를 들면,
 
     ```cmd
     Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
@@ -56,7 +56,7 @@ Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
 Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
-- **Xamarin android** &ndash; [xamarin. android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상이 설치 되어 있어야 합니다.
+- **Xamarin.ios &ndash;** [xamarin. android 7.5](https://visualstudio.microsoft.com/xamarin/) 이상이 설치 되어 있어야 합니다.
 
 - **Android Studio** &ndash;   [Android Studio 3.x](https://developer.android.com/studio/) 이상 버전을 설치해야 합니다.
 
@@ -72,14 +72,14 @@ Xamarin.ios가 .NET 포함을 사용 하려면 다음이 필요 합니다.
 
 2. [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/)을 설치 합니다.
 
-3. **Embeddinator-4000** 를 찾고 경로에 **mono** 를 추가 합니다. 예를 들어:
+3. **Embeddinator-4000** 를 찾고 경로에 **mono** 를 추가 합니다. 예를 들면,
 
     ```bash
     export TOOLS=~/.nuget/packages/embeddinator-4000/0.4.0/tools
     export PATH=$PATH:/Library/Frameworks/Mono.framework/Commands
     ```
 
-4. 라이브러리 어셈블리에서 Embeddinator-4000를 실행 합니다. 예를 들어:
+4. 라이브러리 어셈블리에서 Embeddinator-4000를 실행 합니다. 예를 들면,
 
     ```bash
     mono $TOOLS/Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll

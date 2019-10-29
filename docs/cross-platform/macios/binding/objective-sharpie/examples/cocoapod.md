@@ -3,26 +3,26 @@ title: CocoaPods를 사용 하는 실제 예제
 description: 이 문서에서는 목적 Sharpie를 사용 하 여 CocoaPod에서 C# 바인딩 정의를 자동으로 생성 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: 0f730b1c0a0deacdb84c198cfe4af47308a268cc
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cf117880eb46b028d709a44aa453e111b007b441
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290024"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016270"
 ---
 # <a name="real-world-example-using-cocoapods"></a>CocoaPods를 사용 하는 실제 예제
 
 > [!NOTE]
 > 이 예제에서는 [Afnetworking CocoaPod](https://cocoapods.org/pods/AFNetworking)를 사용 합니다.
 
-버전 3.0의 새로운 기능이 며, 목표 Sharpie는 CocoaPods 바인딩을 지원 하며, CocoaPods를`sharpie pod`매우 쉽게 다운로드, 구성 및 빌드하기 위한 명령 ()도 포함 합니다. 이 기능을 사용 하기 전에 [CocoaPods에 대해 잘 알고](https://cocoapods.org) 있어야 합니다.
+버전 3.0의 새로운 기능이 며, 목표 Sharpie는 CocoaPods 바인딩을 지원 하며, CocoaPods를 매우 쉽게 다운로드, 구성 및 빌드하기 위한 명령 (`sharpie pod`)도 포함 합니다. 이 기능을 사용 하기 전에 [CocoaPods에 대해 잘 알고](https://cocoapods.org) 있어야 합니다.
 
 ## <a name="creating-a-binding-for-a-cocoapod"></a>CocoaPod에 대 한 바인딩 만들기
 
-명령 `sharpie pod` 에는 하나의 전역 옵션과 두 개의 하위 명령이 있습니다.
+`sharpie pod` 명령에는 하나의 전역 옵션과 두 개의 하위 명령이 있습니다.
 
 ```bash
 $ sharpie pod -help
@@ -37,7 +37,7 @@ Available Commands:
   bind         Bind an existing Xamarin C# CocoaPods project
 ```
 
-하위 `init` 명령에는 다음과 같은 몇 가지 유용한 도움말이 있습니다.
+`init` 하위 명령에는 다음과 같은 몇 가지 유용한 도움말이 있습니다.
 
 ```bash
 $ sharpie pod init -help
@@ -48,7 +48,7 @@ Init Options:
                    it even if one already exists
 ```
 
-에 `init`는 여러 CocoaPod 이름 및 subspec 이름을 제공할 수 있습니다.
+`init`에 여러 CocoaPod 이름 및 subspec 이름을 제공할 수 있습니다.
 
 ```bash
 $ sharpie pod init ios AFNetworking
@@ -93,4 +93,4 @@ Done.
 
 - [바인딩 목표-C 개요](~/cross-platform/macios/binding/overview.md)
 - [바인딩 목표-C 라이브러리](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [연습: IOS 목표-C 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)
+- [연습: iOS 목표-C 라이브러리 바인딩](~/ios/platform/binding-objective-c/walkthrough.md)

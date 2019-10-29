@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 응용 프로그램의 앱 대리자가 처
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/17/2018
-ms.openlocfilehash: d130d28b6cf0f15dab3a743a9a3fba144b75a67d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 13f34f6287d68736ee509e6fb43e5fc47321b907
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70289429"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011196"
 ---
 # <a name="application-lifecycle-demo-for-xamarinios"></a>Xamarin.ios 용 응용 프로그램 수명 주기 데모
 
@@ -25,7 +25,7 @@ ms.locfileid: "70289429"
 ## <a name="walkthrough"></a>연습
 
 1. **LifecycleDemo** 솔루션에서 **수명 주기** 프로젝트를 엽니다.
-1. @No__t_0 클래스를 엽니다. 응용 프로그램이 상태를 변경 하는 시간을 나타내기 위해 수명 주기 메서드에 로깅이 추가 되었습니다.
+1. `AppDelegate` 클래스를 엽니다. 응용 프로그램이 상태를 변경 하는 시간을 나타내기 위해 수명 주기 메서드에 로깅이 추가 되었습니다.
 
     ```csharp
     public override void OnActivated(UIApplication application)

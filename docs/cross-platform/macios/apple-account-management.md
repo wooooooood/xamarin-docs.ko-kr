@@ -3,15 +3,15 @@ title: Apple 계정 관리
 description: 이 문서에서는 Mac용 Visual Studio 및 Visual Studio 2019에서 Apple 계정 관리 기능을 사용 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 65945a303375863f7b92b20405aa78e6b2edacda
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 81f161442b33eee94f32c506947ed029fd40aadb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766131"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016340"
 ---
 # <a name="apple-account-management"></a>Apple 계정 관리
 
@@ -39,7 +39,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 - 인터넷에 연결 되어 있는지 확인 합니다. Fastlane은 Apple 개발자 포털과 직접 통신 하기 때문입니다.
 - [Fastlane 도구가 설치](~/ios/deploy-test/provisioning/fastlane/index.md#Installation)되어 있는지 확인 합니다.
-- 에서 [https://download.fastlane.tools](https://download.fastlane.tools)최신 fastlane 도구를 사용할 수 있는지 확인 합니다.
+- [https://download.fastlane.tools](https://download.fastlane.tools)에서 최신 fastlane 도구를 사용할 수 있는지 확인 합니다.
 - 시작 하기 전에 [개발자 포털](https://developer.apple.com/account/)에서 사용자 사용권 계약을 수락 해야 합니다.
 
 ## <a name="adding-an-apple-developer-account"></a>Apple 개발자 계정 추가
@@ -50,7 +50,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
     ![Apple 개발자 계정 옵션](apple-account-management-images/image1.png)
 
-2. 아래와 같이 단추를 클릭 하 여 로그인 대화 상자를 표시 합니다. **+** 
+2. 아래와 같이 **+** 단추를 눌러 로그인 대화 상자를 표시 합니다. 
 
     ![fastlane 대화 상자.](apple-account-management-images/image2.png)
 
@@ -64,7 +64,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
     ![계정이 추가 된 Apple 개발자 계정 대화 상자](apple-account-management-images/image5.png)
 
-6. 팀을 선택 하 고 **세부 정보 보기** ...를 누릅니다. 단추를 선택합니다. 컴퓨터에 설치 된 모든 서명 Id 및 프로 비전 프로필의 목록이 표시 됩니다.
+6. 팀을 선택 하 고 **세부 정보 보기** ...를 누릅니다. 클릭합니다. 컴퓨터에 설치 된 모든 서명 Id 및 프로 비전 프로필의 목록이 표시 됩니다.
 
     ![컴퓨터에서 서명 id 및 프로 비전 프로필을 보여 주는 세부 정보 화면 보기](apple-account-management-images/image6.png)
 
@@ -82,7 +82,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 1. 계정이 성공적으로 추가 되 면 apple id 및 Apple ID가 포함 된 모든 팀이 표시 됩니다.
 
-1. 팀을 선택 하 고 **세부 정보 보기** ...를 누릅니다. 단추를 선택합니다. 컴퓨터에 설치 된 모든 서명 Id 및 프로 비전 프로필의 목록이 표시 됩니다.
+1. 팀을 선택 하 고 **세부 정보 보기** ...를 누릅니다. 클릭합니다. 컴퓨터에 설치 된 모든 서명 Id 및 프로 비전 프로필의 목록이 표시 됩니다.
 
     ![사용자 이름 및 암호 대화 상자](apple-account-management-images/prov2.png)
 
@@ -144,7 +144,7 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 ### <a name="if-you-are-experiencing-issues-logging-in-your-account-please-try-the-following"></a>계정에 로그인 하는 동안 문제가 발생 하는 경우 다음을 시도 하세요.
 
-- 키 집합 응용 프로그램을 열고 범주 아래에서 *암호*를 선택 합니다. `deliver.`모든 항목을 검색 하 고 삭제 합니다.
+- 키 집합 응용 프로그램을 열고 범주 아래에서 *암호*를 선택 합니다. `deliver.`를 검색 하 고 모든 항목을 삭제 합니다.
 
 ### <a name="error-adding-account-please-sign-in-with-an-app-specific-password"></a>"계정을 추가 하는 동안 오류가 발생 했습니다. 앱 특정 암호를 사용 하 여 로그인 하세요. "
 
@@ -157,6 +157,6 @@ Apple 계정 관리는 Mac용 Visual Studio, Visual Studio 2019 및 Visual Studi
 
 허용 되는 최대 인증서 수가 생성 되었습니다. 이 문제를 해결 하려면 [Apple 개발자 센터](https://developer.apple.com/account/ios/certificate/distribution) 로 이동 하 여 프로덕션 인증서 중 하나를 해지 합니다.
 
-## <a name="known-issues"></a>알려진 문제
+## <a name="known-issues"></a>알려진 문제점
 
 - 기본적으로 프로비전 프로필 배포는 앱 스토어를 대상으로 합니다. 하우스 또는 임시 프로필은 수동으로 만들어야 합니다.

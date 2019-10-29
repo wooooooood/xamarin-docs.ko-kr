@@ -4,15 +4,15 @@ description: 이 문서에서는 storyboard 파일,. xib 파일 또는 Interface
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: bcc176f8d3eb97751e6957039c2a14ed02aad653
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: b189f80e2875e1e025128fee372e732f3ef28f22
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770153"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021719"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. xib-Xamarin.ios의 less 사용자 인터페이스 디자인
 
@@ -34,7 +34,7 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우 *목�
 
 응용 프로그램에 대 한 Xibless 창으로 전환 하려면 다음을 수행 합니다.
 
-1. @No__t_0 또는. xib 파일을 사용 하 여 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio 사용자 인터페이스를 정의 합니다.
+1. `.storyboard` 또는. xib 파일을 사용 하 여 중지 하려는 응용 프로그램을 열고 Mac용 Visual Studio 사용자 인터페이스를 정의 합니다.
 2. **Solution Pad**에서 **mainwindow.xaml 또는 xib** **파일을 마우스** 오른쪽 단추로 클릭 하 고 **제거**를 선택 합니다.
 
     ![주 storyboard 또는 창 제거](xibless-ui-images/switch01.png "주 storyboard 또는 창 제거")
@@ -155,7 +155,7 @@ ContentView.AddSubview (ClickMeButton);
 
 여기에서 가장 먼저 기억해 야 할 사항은 iOS와 달리 macOS는 수학 표기법을 사용 하 여 해당 창 좌표계를 정의 한다는 것입니다. 따라서 원점은 창의 왼쪽 아래 모서리에 있으며 값은 창의 오른쪽 위 모퉁이의 오른쪽 위 모퉁이에 있습니다. 새 `NSButton`을 만들 때 화면에서의 위치와 크기를 정의할 때이를 고려 합니다.
 
-@No__t_0 속성은 창의 세로 크기를 조정할 때 창 맨 위에서와 동일한 위치에 유지 하려는 단추를 알려 줍니다. 이는 (0, 0)이 창의 왼쪽 아래에 있기 때문에 필요 합니다.
+`AutoresizingMask = NSViewResizingMask.MinYMargin` 속성은 창의 세로 크기를 조정할 때 창 맨 위에서와 동일한 위치에 유지 하려는 단추를 알려 줍니다. 이는 (0, 0)이 창의 왼쪽 아래에 있기 때문에 필요 합니다.
 
 마지막으로, `ContentView.AddSubview (ClickMeButton)` 메서드는 응용 프로그램이 실행 되 고 창이 표시 될 때 화면에 표시 되도록 콘텐츠 뷰에 `NSButton`를 추가 합니다.
 
@@ -173,13 +173,13 @@ ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width 
 ContentView.AddSubview (ClickMeLabel);
 ```
 
-MacOS는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 역할을 할 편집할 수 있는 스타일 없는 `NSTextField`을 추가 했습니다. 이전 단추와 마찬가지로 크기 및 위치는 (0, 0)가 창의 왼쪽 아래에 있는 것을 고려 합니다. @No__t_0 속성은 **or** 연산자를 사용 하 여 두 개의 `NSViewResizingMask` 기능을 결합 합니다. 그러면 창의 가로 크기를 조정 하 고 창의 크기를 가로로 조정 하는 경우 창의 위쪽에서 같은 위치에 레이블을 유지 하 게 됩니다.
+MacOS는 특정 _레이블_ UI 요소를 포함 하지 않으므로 레이블 역할을 할 편집할 수 있는 스타일 없는 `NSTextField`을 추가 했습니다. 이전 단추와 마찬가지로 크기 및 위치는 (0, 0)가 창의 왼쪽 아래에 있는 것을 고려 합니다. `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` 속성은 **or** 연산자를 사용 하 여 두 개의 `NSViewResizingMask` 기능을 결합 합니다. 그러면 창의 가로 크기를 조정 하 고 창의 크기를 가로로 조정 하는 경우 창의 위쪽에서 같은 위치에 레이블을 유지 하 게 됩니다.
 
 또한 `ContentView.AddSubview (ClickMeLabel)` 메서드는 응용 프로그램이 실행 되 고 창이 열릴 때 화면에 표시 될 수 있도록 콘텐츠 뷰에 `NSTextField`를 추가 합니다.
 
 ### <a name="adjusting-the-window-controller"></a>창 컨트롤러 조정
 
-@No__t_0 디자인이 storyboard 또는. xib 파일에서 더 이상 로드 되지 않으므로 창 컨트롤러를 몇 가지 조정 해야 합니다. **MainWindowController.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
+`MainWindow` 디자인이 storyboard 또는. xib 파일에서 더 이상 로드 되지 않으므로 창 컨트롤러를 몇 가지 조정 해야 합니다. **MainWindowController.cs** 파일을 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -233,7 +233,7 @@ CGRect contentRect = new CGRect (0, 0, 1000, 500);
 base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
 ```
 
-@No__t_0를 사용 하 여 화면 창의 위치를 정의 합니다. 창의 좌표계와 마찬가지로 화면에서 왼쪽 아래 모서리로 (0, 0)을 정의 합니다. 다음으로 **또는** 연산자를 사용 하 여 두 개 이상의 `NSWindowStyle` 기능을 결합 하는 창의 스타일을 정의 합니다.
+`CGRect`를 사용 하 여 화면 창의 위치를 정의 합니다. 창의 좌표계와 마찬가지로 화면에서 왼쪽 아래 모서리로 (0, 0)을 정의 합니다. 다음으로 **또는** 연산자를 사용 하 여 두 개 이상의 `NSWindowStyle` 기능을 결합 하는 창의 스타일을 정의 합니다.
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
@@ -256,7 +256,7 @@ base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.
 - **Fullscreenwindow** -창이 전체 화면 모드로 전환 될 수 있습니다.
 - **FullSizeContentView** -창의 콘텐츠 뷰가 제목 및 도구 모음 영역 뒤에 있습니다.
 
-마지막 두 속성은 창의 _버퍼링 형식을_ 정의 하 고 창의 그리기가 지연 되는 경우를 정의 합니다. @No__t_0에 대 한 자세한 내용은 Windows의 Apple [소개 문서를](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) 참조 하세요.
+마지막 두 속성은 창의 _버퍼링 형식을_ 정의 하 고 창의 그리기가 지연 되는 경우를 정의 합니다. `NSWindows`에 대 한 자세한 내용은 Windows의 Apple [소개 문서를](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1) 참조 하세요.
 
 마지막으로 storyboard 또는. xib 파일에서 창이 팽창 않으므로 windows `AwakeFromNib` 메서드를 호출 하 여 **MainWindowController.cs** 에서 시뮬레이션 해야 합니다.
 

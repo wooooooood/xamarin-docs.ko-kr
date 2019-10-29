@@ -3,15 +3,15 @@ title: 목표 Sharpie를 사용 하 여 바인딩 만들기
 description: 이 섹션에서는 목적 Sharpie 라이브러리에 대 한 바인딩을 만드는 프로세스를 자동화 하는 데 사용 되는 Xamarin의 명령줄 도구인 목표를 소개 합니다.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: d5b9fa1edc09b831dbc69ab092dfb5270942e67a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4d6ab6cf48c5c365a4d8d05ef108a4d3a5d16134
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765707"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016187"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>목표 Sharpie를 사용 하 여 바인딩 만들기
 

@@ -3,21 +3,21 @@ title: Microsoft Azure 및 Xamarin
 description: 이 문서는 Mac용 Visual Studio, Azure Mobile Apps, Active Directory 인증 및 WebAPI의 연결된 서비스에 대 한 설명서에 연결 되어 있습니다.
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 11a98b61d958e2e0d0fb226ba4eb05c458b5bbf2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 273a1a8fec4cf40893ff94fef4b1394065a8547b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766097"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016618"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure 및 Xamarin
 
-[![](images/evolve-mikej-azure-sml.png "클라우드 데이터 저장소 및 플랫폼 간 푸시 알림을 포함 하 여 Azure 앱 Services 기능을 Xamarin 앱에 쉽게 추가할 수 있습니다.")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
-[Evolve 2016: Azure 및 Xamarin을 사용 하 여 연결 된 앱 개발](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[진화 2016: Azure 및 Xamarin을 사용 하 여 연결 된 앱 개발](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 연결된 서비스
 
@@ -35,7 +35,7 @@ Azure [모바일 클라이언트](https://www.nuget.org/packages/Microsoft.Azure
 [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md) 는 Xamarin.ios [구성 요소](https://www.nuget.org/packages/Xamarin.Auth/)를 통해 xamarin 앱에서 사용자를 로그인 하는 데 사용할 수 있습니다.
 그러면 앱에서 Office 365와 같은 추가 서비스에 액세스할 수 있습니다.
 
-## <a name="webapi"></a>WebAPI
+## <a name="webapi"></a>webAPI
 
 Microsoft Web API는 Xamarin 응용 프로그램에서 쉽게 사용할 수 있는 REST와 유사한 인터페이스를 제공 합니다.
 [Azure 웹 사이트](https://trywebsites.azurewebsites.net/) 를 쉽게 스핀 하 고 WebAPI 기반 앱을 빌드하여 Xamarin 앱에 연결할 수 있습니다.
@@ -58,6 +58,6 @@ Microsoft Web API는 Xamarin 응용 프로그램에서 쉽게 사용할 수 있�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Azure PCL 예제 (by @paulbatum) (샘플)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
+- [Azure PCL 예제 (@paulbatum) (샘플)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
 - [Azure Portal](https://azure.microsoft.com/)
 - [Xamarin 용 모바일 클라이언트 (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

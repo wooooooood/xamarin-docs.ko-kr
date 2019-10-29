@@ -4,15 +4,15 @@ description: 이 문서에서는 Android 4 API (Ice)를 사용 하는 응용 프
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 8cbb7c9c3da92b1ea5140e6f85accf53dab0bf80
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 382315f755102d7111db1a5c0f71d43bdea97a10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761458"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020177"
 ---
 # <a name="ice-cream-sandwich-features"></a>아이스크림 샌드위치 기능
 
@@ -22,10 +22,10 @@ _이 문서에서는 Android 4 API (Ice)를 사용 하는 응용 프로그램 �
 
 Android OS 버전 4.0 (API 수준 14)은 Android 운영 체제의 주요 수정 사항을 나타내며 다음과 같은 몇 가지 중요 한 변경 및 업그레이드를 포함 합니다.
 
-- **업데이트 된 사용자 인터페이스** -여러 가지 새로운 UI 기능을 통해 개발자는 응용 프로그램 사용자 인터페이스를 만들 때 더 강력한 기능과 유연성을 제공 합니다. 이러한 새로운 기능 `GridLayout` 에는, `PopupMenu` , `Switch` 위젯 및 `TextureView` 가 포함 됩니다. 
+- **업데이트 된 사용자 인터페이스** -여러 가지 새로운 UI 기능을 통해 개발자는 응용 프로그램 사용자 인터페이스를 만들 때 더 강력한 기능과 유연성을 제공 합니다. 이러한 새로운 기능에는 `GridLayout`, `PopupMenu`, `Switch` 위젯 및 `TextureView`가 포함 됩니다. 
 - **향상 된 하드웨어 가속** – 이제 모든 Android 컨트롤에 대해 GPU에서 2d 렌더링이 수행 됩니다. 또한 하드웨어 가속은 Android 4.0 용으로 개발 된 모든 응용 프로그램에서 기본적으로 설정 되어 있습니다. 
 - **새 데이터 api** – 이전에 공식적으로 액세스 하지 않은 데이터 (예: 일정 데이터 및 장치 소유자의 사용자 프로필)에 대 한 새로운 액세스 권한이 있습니다. 
-- **앱 데이터 공유** – 이제와 같은 `ShareActionProvider` 기술을 통해 응용 프로그램과 장치 간에 데이터를 공유 하는 것이 훨씬 더 쉬워졌습니다 .이를 통해 작업 모음에서 공유 작업을 쉽게 만들 수 있고 가까운 현장에서 *Android 보* 를 사용할 수 있습니다.  *NFC (통신)* -서로 가까이 있는 장치 간에 데이터를 공유 하는 스냅으로 만듭니다. 
+- **앱 데이터 공유** -응용 프로그램과 장치 간에 데이터를 공유 하는 작업은 이제 `ShareActionProvider`와 같은 기술을 통해 보다 쉽게 수행할 수 있습니다 .이를 통해 작업 모음에서 공유 *작업을 쉽게* 만들 수 있습니다.  *NFC)* 를 사용 하 여 서로 가까이 있는 장치 간에 데이터를 공유할 수 있습니다. 
 
 이 문서에서는 Android 4.0 API에 대 한 이러한 기능 및 기타 변경 내용을 살펴보고, Xamarin. Android에서 각 기능을 사용 하는 방법을 설명 합니다.
 
@@ -38,7 +38,7 @@ Android 4에서 제공 되는 다양 한 새로운 사용자 인터페이스 기
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** – 보기 내에서 비디오 및 OpenGL 콘텐츠를 사용 하도록 설정 합니다. 
 - **[탐색 모음](~/android/user-interface/controls/navigation-bar.md)** – 뒤로, 홈 및 다중 태스킹에 대 한 가상 단추를 포함 합니다. 
 
-또한 보다 세련 된 모양의 탭과 같이 더 쉽게 작업할 수 `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`있는 등의 다른 UI 요소가 향상 되었습니다.
+또한 더 세련 된 모양의 `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`와 같이 더 간단 하 게 작업할 수 있는 다른 UI 요소가 향상 되었습니다.
 
 ## <a name="sharing-features"></a>기능 공유
 

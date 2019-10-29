@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019
-ms.openlocfilehash: ddf0b96295f7153803db65a1fd741cc5df473730
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
+ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697112"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72971258"
 ---
 # <a name="display-pop-ups"></a>팝업 표시
 
@@ -86,7 +86,7 @@ string result = await DisplayPromptAsync("Question 1", "What's your name?");
 
 확인 단추를 탭 하면 입력 한 응답이 `string` 반환 됩니다. 취소 단추를 탭 하면 `null` 반환 됩니다.
 
-@No__t_0 메서드의 전체 인수 목록은 다음과 같습니다.
+`DisplayPromptAsync` 메서드의 전체 인수 목록은 다음과 같습니다.
 
 - `string` 형식의 `title`는 프롬프트에 표시할 제목입니다.
 - `string` 형식의 `message`는 프롬프트에 표시할 메시지입니다.
@@ -100,7 +100,6 @@ string result = await DisplayPromptAsync("Question 1", "What's your name?");
 
 ```csharp
 string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
-}
 ```
 
 이 코드는 입력할 수 있는 문자 수를 2로 제한 하 고 사용자 입력에 대 한 숫자 키보드를 표시 합니다.
@@ -108,7 +107,7 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLengt
 [![IOS 및 Android의 모달 프롬프트 스크린샷](pop-ups-images/keyboard-prompt.png "모달 프롬프트")](pop-ups-images/keyboard-prompt-large.png#lightbox "모달 프롬프트")
 
 > [!NOTE]
-> @No__t_0 메서드는 현재 iOS 및 Android 에서만 구현 됩니다.
+> `DisplayPromptAsync` 메서드는 현재 iOS 및 Android 에서만 구현 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

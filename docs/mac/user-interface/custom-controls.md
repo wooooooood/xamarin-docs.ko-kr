@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 사용자 지정 컨트롤을
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 24e4113f0437c626ba93f12c1124407c472fef8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 15a117ce2b0ccc84d73909eac183eeb6ea109711
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284952"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025609"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Xamarin.ios에서 사용자 지정 컨트롤 만들기
 
@@ -20,11 +20,11 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용 하는 경우, *Swi
 
 MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만 사용자 지정 컨트롤을 만들어 사용자 지정 컨트롤을 만들어 사용자 지정 UI 테마 (예: 게임 인터페이스)와 사용자 지정 UI 테마를 일치 시 키 지 않도록 해야 할 수 있습니다.
 
-[![](custom-controls-images/intro01.png "사용자 지정 UI 컨트롤의 예")](custom-controls-images/intro01.png#lightbox)
+[![](custom-controls-images/intro01.png "Example of a custom UI control")](custom-controls-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 재사용 가능한 사용자 지정 사용자 인터페이스 컨트롤을 만드는 기본 사항을 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [클래스/메서드를 대상으로 노출 C# -C](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. C# 클래스를 연결 하는 데 사용 되는 `Register` 및 `Export` 명령을 설명 합니다. 목표-C 개체 및 UI 요소입니다.
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 클래스/메서드 노출 C# ](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. 여기에서는 C# 클래스를 목표에 연결 하는 데 사용 되는`Register`및`Export`명령을 설명 합니다. 개체 및 UI 요소
 
 <a name="Introduction-to-Outline-Views" />
 
@@ -32,9 +32,9 @@ MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만
 
 위에서 설명한 것 처럼, 다시 사용할 수 있는 사용자 지정 사용자 인터페이스 컨트롤을 만들어 Xamarin.ios 앱 UI에 고유한 기능을 제공 하거나 사용자 지정 UI 테마 (예: 게임 인터페이스)를 만들어야 하는 경우가 있을 수 있습니다.
 
-이러한 상황에서는 코드를 통해 `NSControl` C# 또는 Xcode의 Interface Builder을 통해 앱의 UI에 추가할 수 있는 사용자 지정 도구를 쉽게 상속 하 고 만들 수 있습니다. 사용자 지정 컨트롤 `NSControl` 에서 상속 하는 경우에는 기본 제공 사용자 인터페이스 컨트롤의 모든 표준 기능 ( `NSButton`예:)이 자동으로 포함 됩니다.
+이러한 경우 `NSControl`에서 쉽게 상속 하 고 코드를 통해 C# 또는 Xcode의 Interface Builder를 통해 앱의 UI에 추가할 수 있는 사용자 지정 도구를 만들 수 있습니다. `NSControl`에서 상속 하 여 사용자 지정 컨트롤에는 기본 제공 사용자 인터페이스 컨트롤의 모든 표준 기능 (예: `NSButton`)이 자동으로 포함 됩니다.
 
-사용자 지정 사용자 인터페이스 컨트롤이 사용자 지정 차트 및 그래픽 도구와 같은 정보를 표시 하는 경우 `NSView` `NSControl`대신에서 상속 하는 것이 좋습니다.
+사용자 지정 사용자 인터페이스 컨트롤이 사용자 지정 차트 및 그래픽 도구와 같은 정보를 표시 하는 경우 `NSControl`대신 `NSView`에서 상속 하는 것이 좋습니다.
 
 사용 되는 기본 클래스에 관계 없이 사용자 지정 컨트롤을 만드는 기본 단계는 동일 합니다.
 
@@ -44,13 +44,13 @@ MacOS는 다양 한 기본 제공 사용자 정의 컨트롤을 제공 하지만
 
 ## <a name="building-the-custom-control"></a>사용자 지정 컨트롤 빌드
 
-만드는 사용자 지정 컨트롤은 사용자 입력에 응답 하 게 되므로 (마우스 왼쪽 단추 클릭)에서 `NSControl`상속 됩니다. 이러한 방식으로 사용자 지정 컨트롤에는 기본 제공 사용자 인터페이스 컨트롤의 모든 표준 기능이 자동으로 포함 되 고 표준 macOS 컨트롤과 같이 응답 합니다.
+만드는 사용자 지정 컨트롤은 사용자 입력에 응답 하 게 되므로 (마우스 왼쪽 단추 클릭) `NSControl`에서 상속 됩니다. 이러한 방식으로 사용자 지정 컨트롤에는 기본 제공 사용자 인터페이스 컨트롤의 모든 표준 기능이 자동으로 포함 되 고 표준 macOS 컨트롤과 같이 응답 합니다.
 
-Mac용 Visual Studio에서 사용자 지정 사용자 인터페이스 컨트롤을 만들 Xamarin.ios 프로젝트를 엽니다 (또는 새 항목을 만듭니다). 새 클래스를 추가 하 고 호출 `NSFlipSwitch`합니다.
+Mac용 Visual Studio에서 사용자 지정 사용자 인터페이스 컨트롤을 만들 Xamarin.ios 프로젝트를 엽니다 (또는 새 항목을 만듭니다). 새 클래스를 추가 하 고 `NSFlipSwitch`호출 합니다.
 
-[![](custom-controls-images/custom01.png "새 클래스 추가")](custom-controls-images/custom01.png#lightbox)
+[![](custom-controls-images/custom01.png "Adding a new class")](custom-controls-images/custom01.png#lightbox)
 
-그런 다음 `NSFlipSwitch.cs` 클래스를 편집 하 고 다음과 같이 만듭니다.
+다음으로 `NSFlipSwitch.cs` 클래스를 편집 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using Foundation;
@@ -126,7 +126,7 @@ namespace MacCustomControl
 }
 ```
 
-에서 사용자 지정 클래스에 대해 알아두어야 할 첫 번째 사항은이 클래스를 Xcode `NSControl` 및의 Interface Builder에 노출 하기 위해 **Register** 명령을 사용 하는 것입니다.
+에서 사용자 지정 클래스에 대 한 첫 번째 작업은 `NSControl`에서 상속 하 고 **Register** 명령을 사용 하 여이 클래스를 객관적인 C 및 Xcode의 Interface Builder에 노출 한다는 것입니다.
 
 ```csharp
 [Register("NSFlipSwitch")]
@@ -139,7 +139,7 @@ public class NSFlipSwitch : NSControl
 
 ### <a name="tracking-the-controls-state"></a>컨트롤 상태 추적
 
-사용자 지정 컨트롤이 스위치 이므로 스위치의 설정/해제 상태를 추적 하는 방법이 필요 합니다. 에서 `NSFlipSwitch`다음 코드를 사용 하 여이를 처리 합니다.
+사용자 지정 컨트롤이 스위치 이므로 스위치의 설정/해제 상태를 추적 하는 방법이 필요 합니다. `NSFlipSwitch`에서 다음 코드를 사용 하 여이를 처리 합니다.
 
 ```csharp
 private bool _value = false;
@@ -155,7 +155,7 @@ public bool Value {
 }
 ```
 
-스위치의 상태가 변경 되 면 UI를 업데이트 하는 방법이 필요 합니다. 이렇게 하려면 컨트롤이로 `NeedsDisplay = true`UI를 다시 그리도록 합니다.
+스위치의 상태가 변경 되 면 UI를 업데이트 하는 방법이 필요 합니다. 이렇게 하려면 컨트롤에서 `NeedsDisplay = true`를 사용 하 여 UI를 다시 그리도록 합니다.
 
 컨트롤이 단일 On/Off 상태 (예: 3 위치를 포함 하는 다중 상태 스위치)를 더 많이 필요로 하는 경우에는 **열거형** 을 사용 하 여 상태를 추적할 수 있습니다. 이 예에서는 간단한 **bool** 을 사용할 수 있습니다.
 
@@ -183,7 +183,7 @@ private void Initialize() {
 }
 ```
 
-이 메서드는 컨트롤이 적절 하 게 구성 되었는지 확인 하기 위해 각 컨트롤의 생성자에서 호출 됩니다. 예를 들어:
+이 메서드는 컨트롤이 적절 하 게 구성 되었는지 확인 하기 위해 각 컨트롤의 생성자에서 호출 됩니다. 예를 들면,
 
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)
@@ -193,7 +193,7 @@ public NSFlipSwitch (IntPtr handle) : base (handle)
 }
 ```
 
-다음에는 `DrawRect` 메서드를 재정의 하 고 핵심 그래픽 루틴을 추가 하 여 컨트롤을 그려야 합니다.
+다음으로 `DrawRect` 메서드를 재정의 하 고 핵심 그래픽 루틴을 추가 하 여 컨트롤을 그려야 합니다.
 
 ```csharp
 public override void DrawRect (CGRect dirtyRect)
@@ -206,13 +206,13 @@ public override void DrawRect (CGRect dirtyRect)
 }
 ```
 
-컨트롤의 상태가 변경 될 때 (예: **On** 에서 **Off**로 전환) 컨트롤에 대 한 시각적 표시를 조정 합니다. 상태가 변경 될 때마다이 `NeedsDisplay = true` 명령을 사용 하 여 컨트롤이 새 상태를 다시 그리도록 강제할 수 있습니다.
+컨트롤의 상태가 변경 될 때 (예: **On** 에서 **Off**로 전환) 컨트롤에 대 한 시각적 표시를 조정 합니다. 상태가 변경 될 때마다 `NeedsDisplay = true` 명령을 사용 하 여 컨트롤이 새 상태를 다시 그리도록 강제할 수 있습니다.
 
 <a name="Responding-to-User-Input" />
 
 ### <a name="responding-to-user-input"></a>사용자 입력에 응답
 
-사용자 지정 컨트롤에 사용자 입력을 추가할 수 있는 두 가지 기본 방법은 다음과 같습니다. **마우스 처리 루틴** 또는 **제스처 인식기**를 재정의 합니다. 사용 되는 메서드는 컨트롤에 필요한 기능을 기반으로 합니다.
+사용자 지정 컨트롤에 사용자 입력을 추가할 수 있는 두 가지 기본 방법은 **마우스 처리 루틴** 또는 **제스처 인식기**를 재정의 하는 것입니다. 사용 되는 메서드는 컨트롤에 필요한 기능을 기반으로 합니다.
 
 > [!IMPORTANT]
 > 사용자가 만드는 모든 사용자 지정 컨트롤에 대해 **재정의 메서드나** **제스처 인식자**를 사용 해야 하지만 서로 충돌할 수 있습니다.
@@ -221,7 +221,7 @@ public override void DrawRect (CGRect dirtyRect)
 
 #### <a name="handling-user-input-with-override-methods"></a>재정의 메서드를 사용 하 여 사용자 입력 처리
 
-(또는 `NSControl` `NSView`)에서 상속 되는 개체에는 마우스나 키보드 입력을 처리 하는 여러 재정의 메서드가 있습니다. 예제 컨트롤의 경우 사용자가 왼쪽 마우스 단추를 사용 하 여 컨트롤을 클릭할 때 스위치 상태를 **설정** 및 **해제** 합니다. 다음 재정의 메서드를 `NSFlipSwitch` 클래스에 추가 하 여이를 처리할 수 있습니다.
+`NSControl` 또는 `NSView`에서 상속 되는 개체에는 마우스 또는 키보드 입력 처리를 위한 몇 가지 재정의 메서드가 있습니다. 예제 컨트롤의 경우 사용자가 왼쪽 마우스 단추를 사용 하 여 컨트롤을 클릭할 때 스위치 상태를 **설정** 및 **해제** 합니다. 다음 재정의 메서드를 `NSFlipSwitch` 클래스에 추가 하 여이를 처리할 수 있습니다.
 
 ```csharp
 #region Mouse Handling Methods
@@ -253,13 +253,13 @@ public override void MouseMoved (NSEvent theEvent)
 ## endregion
 ```
 
-위의 코드에서 메서드 (위에 정의 됨 `FlipSwitchState` )를 호출 하 여 `MouseDown` 메서드에서 스위치의 On/Off 상태를 대칭 이동 합니다. 이렇게 하면 현재 상태를 반영 하도록 컨트롤을 강제로 다시 그릴 수도 있습니다.
+위의 코드에서는 위에 정의 된 `FlipSwitchState` 메서드를 호출 하 여 `MouseDown` 메서드에서 스위치의 On/Off 상태를 대칭 이동 합니다. 이렇게 하면 현재 상태를 반영 하도록 컨트롤을 강제로 다시 그릴 수도 있습니다.
 
 <a name="Handling-User-Input-with-Gesture-Recognizers" />
 
 #### <a name="handling-user-input-with-gesture-recognizers"></a>제스처 인식기를 사용 하 여 사용자 입력 처리
 
-필요에 따라 제스처 인식기를 사용 하 여 컨트롤과 상호 작용 하는 사용자를 처리할 수 있습니다. 위에 추가 된 재정의를 제거 하 고 `Initialize` , 메서드를 편집 하 고 다음과 같이 표시 합니다.
+필요에 따라 제스처 인식기를 사용 하 여 컨트롤과 상호 작용 하는 사용자를 처리할 수 있습니다. 위에서 추가한 재정의를 제거 하 고 `Initialize` 메서드를 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 private void Initialize() {
@@ -277,7 +277,7 @@ private void Initialize() {
 }
 ```
 
-여기서는 새 `NSClickGestureRecognizer` 를 만들고 `FlipSwitchState` 메서드를 호출 하 여 사용자가 마우스 왼쪽 단추로 클릭 했을 때 스위치의 상태를 변경 합니다. 메서드 `AddGestureRecognizer (click)` 는 제스처 인식기를 컨트롤에 추가 합니다.
+여기서는 새 `NSClickGestureRecognizer`를 만들고 `FlipSwitchState` 메서드를 호출 하 여 사용자가 마우스 왼쪽 단추로 클릭 했을 때 스위치의 상태를 변경 합니다. `AddGestureRecognizer (click)` 메서드는 제스처 인식기를 컨트롤에 추가 합니다.
 
 다시, 사용 하는 방법은 사용자 지정 컨트롤을 사용 하 여 수행 하려는 작업에 따라 달라 집니다. 사용자 상호 작용에 대 한 낮은 수준의 액세스 권한이 필요한 경우 재정의 메서드를 사용 합니다. 마우스 클릭과 같이 미리 정의 된 기능을 사용 해야 하는 경우 제스처 인식기를 사용 합니다.
 
@@ -305,7 +305,7 @@ internal void RaiseValueChanged() {
 ## endregion
 ```
 
-그런 다음 `FlipSwitchState` 메서드를 편집 하 여 다음과 같이 만듭니다.
+다음으로 `FlipSwitchState` 메서드를 편집 하 여 다음과 같이 만듭니다.
 
 ```csharp
 private void FlipSwitchState() {
@@ -315,9 +315,9 @@ private void FlipSwitchState() {
 }
 ```
 
-먼저 사용자가 스위치의 `ValueChanged` 상태를 변경할 때 작업을 수행할 수 있도록 C# 코드에서 처리기를 추가할 수 있는 이벤트를 제공 합니다.
+먼저 사용자가 스위치의 상태를 변경할 때 작업을 수행할 수 있도록 코드 C# 에서 처리기를 추가할 수 있는 `ValueChanged` 이벤트를 제공 합니다.
 
-둘째, 사용자 지정 컨트롤은에서 `NSControl`상속 되므로 Xcode의 Interface Builder에서 할당할 수 있는 **동작이** 자동으로 포함 됩니다. 상태가 변경 될 때이 **작업** 을 호출 하려면 다음 코드를 사용 합니다.
+둘째, 사용자 지정 컨트롤은 `NSControl`에서 상속 되므로 Xcode의 Interface Builder에서 할당 될 수 있는 **동작이** 자동으로 포함 됩니다. 상태가 변경 될 때이 **작업** 을 호출 하려면 다음 코드를 사용 합니다.
 
 ```csharp
 if (this.Action !=null)
@@ -332,23 +332,23 @@ if (this.Action !=null)
 
 사용자 지정 컨트롤을 완전히 정의한 상태에서 코드 또는 Xcode의 Interface Builder을 사용 하 여 C# xamarin.ios 앱의 UI에 추가할 수 있습니다.
 
-Interface Builder를 사용 하 여 컨트롤을 추가 하려면 먼저 xamarin.ios 프로젝트의 클린 빌드를 수행 하 고 `Main.storyboard` 파일을 두 번 클릭 하 여 편집을 위해 Interface Builder에서 엽니다.
+Interface Builder를 사용 하 여 컨트롤을 추가 하려면 먼저 Xamarin.ios 프로젝트의 클린 빌드를 수행 하 고 `Main.storyboard` 파일을 두 번 클릭 하 여 편집을 위해 Interface Builder에서 엽니다.
 
-[![](custom-controls-images/custom02.png "Xcode에서 storyboard 편집")](custom-controls-images/custom02.png#lightbox)
+[![](custom-controls-images/custom02.png "Editing the storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
 
-그런 다음를 사용자 `Custom View` 인터페이스 디자인으로 끌어 옵니다.
+다음으로 `Custom View`를 사용자 인터페이스 디자인으로 끌어 옵니다.
 
-[![](custom-controls-images/custom03.png "라이브러리에서 사용자 지정 보기 선택")](custom-controls-images/custom03.png#lightbox)
+[![](custom-controls-images/custom03.png "Selecting a Custom View from the Library")](custom-controls-images/custom03.png#lightbox)
 
-사용자 지정 보기를 선택한 상태에서 **Id 검사기** 로 전환 하 고 뷰의 **클래스** 를로 `NSFlipSwitch`변경 합니다.
+사용자 지정 보기를 선택한 상태에서 **Id 검사기** 로 전환 하 고 뷰의 **클래스** 를 `NSFlipSwitch`로 변경 합니다.
 
-[![](custom-controls-images/custom04.png "뷰의 클래스 설정")](custom-controls-images/custom04.png#lightbox)
+[![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
 
-**길잡이 편집기** 로 전환 하 고 사용자 지정 컨트롤에 대 한 **콘센트** 를 만듭니다 (파일이 아닌 `ViewController.h` 파일에 바인딩되어야 함 `.m` ).
+**길잡이 편집기** 로 전환 하 고 사용자 지정 컨트롤에 대 한 **콘센트** 를 만듭니다 (`.m` 파일이 아닌 `ViewController.h` 파일에 바인딩해야 함).
 
-[![](custom-controls-images/custom05.png "새 콘센트 구성")](custom-controls-images/custom05.png#lightbox)
+[![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
 
-변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아간 다음 변경 내용을 동기화 할 수 있습니다. 파일을 편집 하 고 메서드 `ViewDidLoad` 를 다음과 같이 만듭니다. `ViewController.cs`
+변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아간 다음 변경 내용을 동기화 할 수 있습니다. `ViewController.cs` 파일을 편집 하 고 `ViewDidLoad` 메서드를 다음과 같이 만듭니다.
 
 ```csharp
 public override void ViewDidLoad ()
@@ -363,11 +363,11 @@ public override void ViewDidLoad ()
 }
 ```
 
-여기서는 위에서 `ValueChanged` `NSFlipSwitch` 정의한 이벤트에 응답 하 고 사용자가 컨트롤을 클릭할 때 현재 **값** 을 작성 합니다.
+여기서는 `NSFlipSwitch` 클래스에서 위에서 정의한 `ValueChanged` 이벤트에 응답 하 고 사용자가 컨트롤을 클릭할 때 현재 **값** 을 작성 합니다.
 
 필요에 따라 Interface Builder로 돌아가서 컨트롤에 대 한 **작업** 을 정의할 수 있습니다.
 
-[![](custom-controls-images/custom06.png "새 작업 구성")](custom-controls-images/custom06.png#lightbox)
+[![](custom-controls-images/custom06.png "Configuring a new Action")](custom-controls-images/custom06.png#lightbox)
 
 다시 `ViewController.cs` 파일을 편집 하 고 다음 메서드를 추가 합니다.
 

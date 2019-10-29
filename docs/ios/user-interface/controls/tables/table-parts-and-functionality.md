@@ -4,29 +4,29 @@ description: 이 문서에서는 iOS에서 UITableView의 다양 한 부분에 �
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 158b3575589df5854a32e95ec80c6ef02d21e661
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768348"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021850"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Xamarin.ios의 테이블 파트 및 기능
 
 UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으며 다음과 같은 부분으로 구성 됩니다.
 
 - [섹션 헤더](#Section_Header)
-- [셀](#Cells) (또는 원하는 행을 원하는 경우)
+- [셀](#Cells) (또는 원하는 경우 행)
 - [섹션 바닥글](#Section_Footer)
 - [Index](#Index)
-- [편집 모드](#Edit_Features) (' 안쪽으로 살짝 밀기 ' 및 끌어서 핸들을 행 순서 변경) 
+- [편집 모드](#Edit_Features) (' 살짝 밀기 to delete ' 및 끌어서 핸들을 행 순서 변경) 
 
 이러한 스크린샷에는 섹션 행, 머리글, 바닥글, 편집 컨트롤 및 인덱스가 표시 되는 방식이 나와 있습니다.
 
- [![](table-parts-and-functionality-images/image1a.png "이러한 스크린샷에는 섹션 행, 머리글, 바닥글, 편집 컨트롤 및 인덱스가 표시 되는 방식이 나와 있습니다.")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
 
 이러한 부분에 대해서는 아래에서 자세히 설명 합니다.
 
@@ -50,7 +50,7 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 
 <a name="Index" />
 
-## <a name="index"></a>인덱스
+## <a name="index"></a>Index
 
 인덱스는 테이블의 오른쪽 가장자리 아래에 문자 구획으로 나타납니다.
 인덱스에 대 한 터치 또는 끌기는 테이블의 해당 부분으로 스크롤을 가속화 합니다. 인덱스는 선택 사항 이지만 긴 목록을 탐색 하는 데 도움이 되는 것이 좋습니다. 인덱스는 일반적으로 그룹화 된 스타일과 함께 사용 되지 않습니다.
@@ -72,7 +72,7 @@ UITableView는 ' 그룹화 ' 또는 ' 일반 ' 스타일을 포함할 수 있으
 
 테이블 뷰를 표시 하는 데 사용 되는 기본 클래스는 다음과 같습니다.
 
-[![](table-parts-and-functionality-images/classdiagram.png "테이블 뷰를 표시 하는 데 사용 되는 기본 클래스는 다음과 같습니다.")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 각 클래스의 용도는 아래에 설명 되어 있습니다.
 

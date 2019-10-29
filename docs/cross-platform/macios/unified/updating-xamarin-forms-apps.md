@@ -3,15 +3,15 @@ title: 기존 Xamarin Forms 앱 업데이트
 description: 이 문서에서는 Xamarin. Forms 앱을 Classic API에서 Unified API 업데이트 하기 위해 따라야 하는 단계를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 1820dfa1fb756ede6076fb61ad5eb4f6c9926fe8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: dad1b7173e302931455887fdaa4730347f0e5e55
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280717"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015009"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>기존 Xamarin Forms 앱 업데이트
 
@@ -32,13 +32,13 @@ _Unified API 사용 하 고 버전 1.3.1으로 업데이트 하려면 다음 단
 
     1. Xamarin.ios 1.3.1 NuGet 패키지를 설치 합니다.
 
-    2. 공유 코드 `App` 에서 클래스를 업데이트 합니다.
+    2. 공유 코드에서 `App` 클래스를 업데이트 합니다.
 
-    3. IOS 프로젝트 `AppDelegate` 에서를 업데이트 합니다.
+    3. IOS 프로젝트의 `AppDelegate`를 업데이트 합니다.
 
-    4. Android 프로젝트 `MainActivity` 에서를 업데이트 합니다.
+    4. Android 프로젝트의 `MainActivity`를 업데이트 합니다.
 
-    5. Windows Phone 프로젝트 `MainPage` 에서를 업데이트 합니다.
+    5. Windows Phone 프로젝트에서 `MainPage`를 업데이트 합니다.
 
 ## <a name="1-ios-app-unified-migration"></a>1. iOS 앱 (통합 마이그레이션)
 
@@ -48,13 +48,13 @@ _Unified API 사용 하 고 버전 1.3.1으로 업데이트 하려면 다음 단
 
 IOS 프로젝트를 클릭 하 여 선택 하 고 프로젝트를 선택 하 **> xamarin.ios로 마이그레이션 Unified API** 하 고 표시 되는 경고 메시지에 동의 합니다.
 
-![](updating-xamarin-forms-apps-images/beta-tool1.png "프로젝트 > 선택 하 여 Xamarin.ios Unified API로 마이그레이션 ... 표시 되는 경고 메시지에 동의 합니다.")
+![](updating-xamarin-forms-apps-images/beta-tool1.png "Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears")
 
 그러면 다음이 자동으로 수행 됩니다.
 
 - 통합 64 비트 API를 지원 하도록 프로젝트 형식을 변경 합니다.
 - 프레임 워크 참조를 **xamarin.ios** 로 변경 합니다 (이전 **monotouch.dialog** 참조 대체).
-- 코드에서 네임 스페이스 참조를 변경 하 여 `MonoTouch` 접두사를 제거 합니다.
+- 코드의 네임 스페이스 참조를 변경 하 여 `MonoTouch` 접두사를 제거 합니다.
 - Unified API에 대 한 올바른 빌드 대상을 사용 하도록 **.csproj** 파일을 업데이트 합니다.
 
 프로젝트를 **정리** 하 고 **빌드하여** 수정할 다른 오류가 없는지 확인 합니다. 추가 작업은 필요 하지 않습니다. 이러한 단계는 [Unified API 문서](~/cross-platform/macios/unified/updating-ios-apps.md)에 자세히 설명 되어 있습니다.
@@ -63,18 +63,18 @@ IOS 프로젝트를 클릭 하 여 선택 하 고 프로젝트를 선택 하 **>
 
 추가 iOS 네이티브 코드 (예: 사용자 지정 렌더러 또는 종속성 서비스)를 추가한 경우 추가 수동 코드 수정을 수행 해야 할 수 있습니다. 앱을 다시 컴파일하고, 필요할 수 있는 변경 내용에 대 한 자세한 내용은 [기존 IOS 앱 업데이트 지침](~/cross-platform/macios/unified/updating-ios-apps.md) 을 참조 하세요. 또한 [이러한 팁](~/cross-platform/macios/unified/updating-tips.md) 은 필요한 변경 내용을 식별 하는 데 도움이 됩니다.
 
-## <a name="2-xamarinforms-131-update"></a>2. Xamarin.ios 1.3.1 업데이트
+## <a name="2-xamarinforms-131-update"></a>2. xamarin.ios 1.3.1 업데이트
 
-IOS 앱이 Unified API 업데이트 된 후에는 나머지 솔루션을 Xamarin.ios 버전 1.3.1으로 업데이트 해야 합니다. 다음을 포함합니다.
+IOS 앱이 Unified API 업데이트 된 후에는 나머지 솔루션을 Xamarin.ios 버전 1.3.1으로 업데이트 해야 합니다. 여기에는 다음이 포함됩니다.
 
 - 각 프로젝트에서 Xamarin.ios NuGet 패키지를 업데이트 합니다.
-- 새 xamarin.ios `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android) 및 `FormsApplicationPage` (Windows Phone) 클래스를 사용 하도록 코드를 변경 합니다.
+- 새 Xamarin.ios `Application`, `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android) 및 `FormsApplicationPage` (Windows Phone) 클래스를 사용 하도록 코드를 변경 합니다.
 
 이러한 단계는 아래에 설명 되어 있습니다.
 
 ### <a name="21-update-nuget-in-all-projects"></a>2.1 모든 프로젝트에서 NuGet 업데이트
 
-솔루션에 있는 모든 프로젝트에 대해 NuGet 패키지 관리자를 사용 하 여 1.3.1 시험판으로 Xamarin.ios를 업데이트 합니다. PCL (있는 경우), iOS, Android 및 Windows Phone. 버전 1.3으로 업데이트 하려면 Xamarin.ios NuGet 패키지를 **삭제 하 고 다시 추가** 하는 것이 좋습니다.
+1\.3.1 (있는 경우), iOS, Android 및 Windows Phone 솔루션의 모든 프로젝트에 대해 NuGet 패키지 관리자를 사용 하 여 Xamarin을 업데이트 합니다. 버전 1.3으로 업데이트 하려면 Xamarin.ios NuGet 패키지를 **삭제 하 고 다시 추가** 하는 것이 좋습니다.
 
 > [!NOTE]
 > Xamarin.ios 버전 1.3.1 현재 *시험판*에 있습니다. 즉, 최신 시험판 버전을 보려면 NuGet (Mac용 Visual Studio의 틱 상자를 통해 또는 Visual Studio의 드롭다운 목록)에서 **시험판** 옵션을 선택 해야 합니다.
@@ -88,8 +88,8 @@ NuGet 패키지를 1.3.1로 업데이트 한 후에는 각 프로젝트에서 �
 
 **App.cs** 파일을 다음과 같이 변경 합니다.
 
-- 클래스가 이제에서 `Application`상속 됩니다. `App`
-- `MainPage` 속성은 표시할 첫 번째 콘텐츠 페이지로 설정 됩니다.
+- 이제 `App` 클래스가 `Application`에서 상속 됩니다.
+- `MainPage` 속성은 표시 하려는 첫 번째 콘텐츠 페이지로 설정 됩니다.
 
 ```csharp
 public class App : Application // superclass new in 1.3
@@ -101,18 +101,18 @@ public class App : Application // superclass new in 1.3
     }
 ```
 
-`GetMainPage` 메서드를 완전히 제거 하 고 대신 `Application` 서브 클래스에서 *속성* 을 `MainPage` 설정 합니다.
+`GetMainPage` 메서드를 완전히 제거 하 고 대신 `Application` 하위 클래스에서 `MainPage` *속성* 을 설정 합니다.
 
-이 새로운 `Application` 기본 클래스는 응용 프로그램의 `OnSleep`수명 주기 `OnResume` 를 관리 하는 데 도움이 되는 `OnStart`, 및 재정의도 지원 합니다.
+이 새로운 `Application` 기본 클래스는 응용 프로그램의 수명 주기를 관리 하는 데 도움이 되는 `OnStart`, `OnSleep`및 `OnResume` 재정의도 지원 합니다.
 
-이 클래스는 아래에 설명 된 대로 `LoadApplication` 각 응용 프로그램 프로젝트의 새 메서드에 전달 됩니다. `App`
+그러면 아래에 설명 된 대로 `App` 클래스가 각 응용 프로그램 프로젝트의 새 `LoadApplication` 메서드에 전달 됩니다.
 
 ### <a name="23-ios-app"></a>2.3 iOS 앱
 
 **AppDelegate.cs** 파일을 다음과 같이 변경 합니다.
 
-- 클래스는 `UIApplicationDelegate` 이전이 `FormsApplicationDelegate` 아닌에서 상속 됩니다.
-- `LoadApplication`는의 `App`새 인스턴스를 사용 하 여 호출 됩니다.
+- 클래스는 이전에 `UIApplicationDelegate` 하지 않고 `FormsApplicationDelegate`에서 상속 됩니다.
+- `LoadApplication`는 `App`의 새 인스턴스를 사용 하 여 호출 됩니다.
 
 ```csharp
 [Register ("AppDelegate")]
@@ -134,8 +134,8 @@ public partial class AppDelegate :
 
 **MainActivity.cs** 파일을 다음과 같이 변경 합니다.
 
-- 클래스는 `FormsActivity` 이전이 `FormsApplicationActivity` 아닌에서 상속 됩니다.
-- `LoadApplication`는의 새 인스턴스를 사용 하 여 호출 됩니다.`App`
+- 클래스는 이전에 `FormsActivity` 하지 않고 `FormsApplicationActivity`에서 상속 됩니다.
+- `LoadApplication`는의 새 인스턴스를 사용 하 여 호출 됩니다 `App`
 
 ```csharp
 [Activity (Label = "YOURAPPNAM", Icon = "@drawable/icon", MainLauncher = true,
@@ -160,8 +160,8 @@ public class MainActivity :
 
 다음과 같이 **Mainpage .xaml** 파일을 변경 합니다.
 
-- 루트 XAML 요소는 이어야 `winPhone:FormsApplicationPage`합니다.
-- 특성을로 변경 해야 합니다. `xmlns:phone``xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- 루트 XAML 요소는 `winPhone:FormsApplicationPage`해야 합니다.
+- `xmlns:phone` 특성을로 *변경* 해야 `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 업데이트 된 예제는 다음과 같습니다. 이러한 항목을 편집 하기만 하면 됩니다. 나머지 특성은 동일 하 게 유지 되어야 합니다.
 
@@ -175,8 +175,8 @@ public class MainActivity :
 
 **MainPage.xaml.cs** 파일을 다음과 같이 변경 합니다.
 
-- 클래스는 `PhoneApplicationPage` 이전이 `FormsApplicationPage` 아닌에서 상속 됩니다.
-- `LoadApplication`는 xamarin.ios `App` 클래스의 새 인스턴스를 사용 하 여 호출 됩니다. Windows Phone 자체 `App` 클래스가 이미 정의 되어 있으므로이 참조를 정규화 해야 할 수도 있습니다.
+- 클래스는 이전에 `PhoneApplicationPage` 하지 않고 `FormsApplicationPage`에서 상속 됩니다.
+- `LoadApplication`는 Xamarin.ios `App` 클래스의 새 인스턴스를 사용 하 여 호출 됩니다. Windows Phone 자체 `App` 클래스가 이미 정의 되어 있으므로이 참조를 정규화 해야 할 수도 있습니다.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3
@@ -196,9 +196,9 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 Xamarin.ios NuGet 패키지를 업데이트 한 후에도 이와 유사한 오류가 표시 되는 경우가 있습니다. NuGet 업데이트 프로그램이 **.csproj** 파일에서 이전 버전에 대 한 참조를 완전히 제거 하지 않을 때 발생 합니다.
 
->YOUR\_PROJECT.csproj: 오류: 이 프로젝트는이 컴퓨터에 없는 NuGet 패키지를 참조 합니다. NuGet 패키지 복원을 사용 하도록 설정 하 여 다운로드 합니다.  자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105 을 참조하세요. 누락 된 파일은입니다. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + net45 + wp80 + MonoAndroid10 + MonoTouch10/Xamarin.ios. \_(프로젝트)
+>\_프로젝트 .csproj: 오류:이 프로젝트는이 컴퓨터에 없는 NuGet 패키지를 참조 합니다. NuGet 패키지 복원을 사용 하도록 설정 하 여 다운로드 합니다.  자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105 을 참조하십시오. 누락 된 파일은입니다. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + net45 + wp80 + MonoAndroid10 + MonoTouch10/Xamarin.ios. (\_프로젝트)
 
-이러한 오류를 해결 하려면 텍스트 편집기에서 **.csproj** 파일을 열고 아래에 표시 된 `<Target` 요소와 같은 이전 버전의 xamarin.ios를 참조 하는 요소를 찾습니다. 이 전체 요소를 **.csproj** 파일에서 수동으로 삭제 하 고 변경 내용을 저장 해야 합니다.
+이러한 오류를 해결 하려면 텍스트 편집기에서 **.csproj** 파일을 열고 아래에 표시 된 요소와 같은 이전 버전의 xamarin.ios를 참조 하는 `<Target` 요소를 찾습니다. 이 전체 요소를 **.csproj** 파일에서 수동으로 삭제 하 고 변경 내용을 저장 해야 합니다.
 
 ```csharp
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

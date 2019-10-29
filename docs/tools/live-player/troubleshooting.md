@@ -3,15 +3,15 @@ title: 문제 해결 Xamarin Live Player
 description: 이 문서에서는 Xamarin Live Player에 대 한 알려진 문제 및 잠재적 수정 사항에 대해 설명 합니다. 연결 문제, 구성 문제 등에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 04a377bad42ff680247759036327035d61757b42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d51241bee5f4ddc06032006071fa8296be37f2fb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290173"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005936"
 ---
 # <a name="troubleshooting-xamarin-live-player"></a>문제 해결 Xamarin Live Player
 
@@ -74,7 +74,7 @@ Xamarin Live Player 실행 중인 모바일 장치가 IDE를 실행 하는 컴�
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>IDE에서 "배포를 시도 하는 동안 오류 발생"
 
-**"IOException: 전송 연결에서 데이터를 읽을 수 없습니다. 차단 되지 않는 소켓에 대 한 작업에서 "**
+**"IOException: 전송 연결에서 데이터를 읽을 수 없습니다. 비 블로킹 소켓에 대 한 작업이 차단 됩니다."**
 
 이 오류는 Xamarin Live Player를 실행 하는 모바일 장치가 Visual Studio를 실행 하는 컴퓨터와 동일한 네트워크에 있지 않은 경우에 종종 발생 합니다. 이는 이전에 성공적으로 페어링 된 장치에 연결할 때 주로 발생 합니다.
 
@@ -87,30 +87,30 @@ Xamarin Live Player 실행 중인 모바일 장치가 IDE를 실행 하는 컴�
 
 Wi-fi를 통해 장치에 연결할 수 없는 경우 다음 단계에 따라 구성 파일을 통해 장치를 수동으로 구성할 수 있습니다.
 
-**1단계: 구성 파일 열기**
+**1 단계: 구성 파일 열기**
 
 응용 프로그램 데이터 폴더에 대 한 헤드:
 
 - Windows: **%userprofile%\AppData\Roaming**
-- macOS: **~/Users/$USER/.config**
+- macOS: **~/users/$USER/.config**
 
 이 폴더에는 **PlayerDeviceList** 이 없는 경우 새로 만들어야 합니다.
 
-**2단계: IP 주소 가져오기**
+**2 단계: IP 주소 가져오기**
 
 Xamarin Live Player 앱에서 **정보 > 연결 테스트로 이동 하 > 연결 테스트를 시작**합니다.
 
 IP 주소를 기록해 둡니다. 장치를 구성할 때 표시 되는 IP 주소가 필요 합니다.
 
-**3단계: 페어링 코드 가져오기**
+**3 단계: 페어링 코드 가져오기**
 
 Xamarin Live Player 내에서 **쌍** 또는 쌍을 **다시**탭 한 다음 enter 키를 **수동으로**누릅니다. 구성 파일을 업데이트 하는 데 필요한 숫자 코드가 표시 됩니다.
 
-**4단계: GUID 생성**
+**4 단계: GUID 생성**
 
-다음 https://www.guidgenerator.com/online-guid-generator.aspx 으로 이동 하 여 새 guid를 생성 하 고 대문자가 on 인지 확인 합니다.
+이동: https://www.guidgenerator.com/online-guid-generator.aspx 하 고 새 guid를 생성 하 고 대문자가 on 인지 확인 합니다.
 
-**5단계: 장치 구성**
+**5 단계: 장치 구성**
 
 Visual Studio 또는 Visual Studio Code와 같은 편집기에서 **PlayerDeviceList** 를 엽니다. 이 파일에서 장치를 수동으로 구성 해야 합니다. 기본적으로이 파일은 다음과 같은 빈 `Devices` XML 요소를 포함 해야 합니다.
 
@@ -154,7 +154,7 @@ Visual Studio 또는 Visual Studio Code와 같은 편집기에서 **PlayerDevice
 public class SomeCustomButton : Xamarin.Forms.Button { ... }
 ```
 
-## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. Layout '에 ' Main '의 정의가 포함 되어 있지 않습니다.
+## <a name="mainactivitycs-resourcelayout-does-not-contain-a-definition-for-main"></a>"MainActivity.cs: ' Resource. Layout '에 ' Main '에 대 한 정의가 포함 되어 있지 않습니다."
 
 이 오류는 AXML 파일에 정의 된 사용자 인터페이스를 사용 하는 Android 프로젝트에 대해 발생 합니다.
 AXML 파일은 현재 Xamarin Live Player에서 지원 되지 않습니다.

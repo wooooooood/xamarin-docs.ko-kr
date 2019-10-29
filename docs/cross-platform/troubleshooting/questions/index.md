@@ -3,15 +3,15 @@ title: 일반적인 질문과 대답
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: de70eda2898f29a1e7afed9440d5f5fae496e069
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765106"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013986"
 ---
 # <a name="general-frequently-asked-questions"></a>일반적인 질문과 대답
 
@@ -23,8 +23,8 @@ ms.locfileid: "70765106"
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[PCL 리플렉션 API](pcl-reflection.md)
 Microsoft는 이식 가능한 클래스 라이브러리에서 사용할 새 리플렉션 API를 개발 했습니다. PCL로 이동 하려는 기존 리플렉션 코드가 있으면 작동 하지 않을 수 있습니다.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지에 대 한 시스템 진단과 관련 된 문제를 해결 하려면 어떻게 해야 하나요?](pcl-case-study.md)
-Xamarin.ios 및 Xamarin은 참조로 허용 하는 모든 PCL 프로필의 100%를 구현 하지 않습니다. Mac용 Visual Studio, Visual Studio 및 NuGet 패키지 관리자의 실용적인 편의를 위해 Xamarin 프로젝트를 사용 하면 불완전 한 구현만 있는 여러 프로필을 사용할 수 있습니다. 예를 들어 xamarin.ios와 xamarin은 현재 `System.Diagnostics.Tracing` PCL 네임 스페이스에 있는 형식의 완전 한 구현을 포함 하지 않습니다. Net45 + win8 + wp8 + wpa81 버전의 TPL 데이터 흐름 라이브러리를 참조 하도록 앱 프로젝트를 전환 하면이 문제를 해결할 수 있습니다.
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[PCL 사례 연구: Microsoft TPL 데이터 흐름 NuGet 패키지용 System.Diagnostics.Tracing과 관련된 문제를 해결하려면 어떻게 해야 하나요?](pcl-case-study.md)
+Xamarin.ios 및 Xamarin은 참조로 허용 하는 모든 PCL 프로필의 100%를 구현 하지 않습니다. Mac용 Visual Studio, Visual Studio 및 NuGet 패키지 관리자의 실용적인 편의를 위해 Xamarin 프로젝트를 사용 하면 불완전 한 구현만 있는 여러 프로필을 사용할 수 있습니다. 예를 들어 Xamarin.ios와 Xamarin.ios는 현재 `System.Diagnostics.Tracing` PCL 네임 스페이스에 있는 형식의 완전 한 구현을 포함 하지 않습니다. Net45 + win8 + wp8 + wpa81 버전의 TPL 데이터 흐름 라이브러리를 참조 하도록 앱 프로젝트를 전환 하면이 문제를 해결할 수 있습니다.
 
 ## <a name="nuget-packages--xamarin-components"></a>Xamarin 구성 요소 & NuGet 패키지
 ### <a name="how-can-i-update-nugetnuget-updatemd"></a>[NuGet을 업데이트하려면 어떻게 해야 하나요?](nuget-update.md)

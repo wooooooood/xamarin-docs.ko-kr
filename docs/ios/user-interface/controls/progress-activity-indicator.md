@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin.ios에서 진행률 및 작업 표시�
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: a2197a1ff9c37546fd97eb5a2459764ec05d4412
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 76e1ee54a5e1b729fdcb0b0a2c1f278703b2b4d6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768924"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021964"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Xamarin.ios의 진행률 및 작업 표시기
 
 앱에서 데이터 로드 또는 처리와 같은 장기 실행 작업을 수행 해야 할 수 있으며,이 지연으로 인해 UI 업데이트가 지연 될 수 있습니다. 이 시간 동안에는 항상 진행률 표시기를 사용 하 여 시스템에서 작업을 수행 하는 데 사용 중인 사용자를 reassure 합니다. 이렇게 하면 앱이 요청에 대해 작업 하 고 있는 사용자 정의 컨트롤을 제공 하 고, 입력을 기다리지 않으며, 대기 해야 하는 시간을 정확 하 게 자세히 설명 하는 방법을 제공할 수 있습니다.
 
-iOS는 앱에서 이러한 진행률 표시를 제공 하는 두 가지 주요 방법을 제공 합니다. 활동 표시기 (특정 _네트워크_ 활동 표시기 포함) 및 진행률 표시줄
+iOS는 앱에서 이러한 진행률 표시를 제공 하는 두 가지 주요 방법인 활동 표시기 (특정 _네트워크_ 활동 표시기 포함) 및 진행률 표시줄을 제공 합니다.
 
 ## <a name="activity-indicator"></a>작업 표시기
 
@@ -32,7 +32,7 @@ Apple에는 활동 표시기를 사용 하기 위한 다음과 같은 제안이 
 
 ### <a name="implementing-an-activity-indicator"></a>활동 표시기 구현
 
-활동 표시기는가 수행 됨을 [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) 나타내기 `UIActivity` 위해 클래스를 통해 구현 됩니다.
+활동 표시기는 [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) 클래스를 통해 구현 되어 `UIActivity` 발생 함을 나타냅니다.
 
 ### <a name="activity-indicators-and-storyboards"></a>활동 표시기 및 스토리 보드
 
@@ -42,19 +42,19 @@ IOS Designer를 사용 하 여 UI를 만드는 경우 도구 상자에서 활동
 
 ### <a name="managing-activity-indicator-behavior"></a>활동 표시기 동작 관리
 
-`StartAnimating()` 및`StopAnimating()` 메서드를 사용 하 여 작업 표시기 애니메이션을 시작 및 중지 합니다.
+`StartAnimating()` 및 `StopAnimating()` 메서드를 사용 하 여 작업 표시기 애니메이션을 시작 하 고 중지할 수 있습니다.
 
-가 호출 된 후 `true` `StopAnimating()` 에 활동 표시기가 사라지게 하려면 속성을로설정합니다.`HidesWhenStopped` 이는 기본적으로 `true` 로 설정 됩니다. 언제 든 지 속성을 `IsAnimating` 확인 하 여 활동 표시기가 회전 된 애니메이션을 실행 하 고 있는지 확인할 수 있습니다. 
+`StopAnimating()` 호출 된 후 작업 표시기가 사라지게 하려면 `HidesWhenStopped` 속성을 `true`로 설정 합니다. 이는 기본적으로 `true`로 설정 됩니다. 언제 든 지 `IsAnimating` 속성을 확인 하 여 활동 표시기가 회전 하는 애니메이션을 실행 하 고 있는지 확인할 수 있습니다. 
 
 ### <a name="managing-activity-indicator-appearances"></a>작업 표시기 모양 관리
 
-작업 표시기를 인스턴스화할 때 열거형을매개변수로전달할수있습니다.`UIActivityIndicatorViewStyle` 이를 사용 하 여 비주얼 스타일을, `Gray` `White`또는 `WhiteLarge`로 설정할 수 있습니다. 예를 들면 다음과 같습니다.
+작업 표시기를 인스턴스화할 때 `UIActivityIndicatorViewStyle` 열거형을 매개 변수로 전달할 수 있습니다. 이를 사용 하 여 비주얼 스타일을 `Gray`, `White`또는 `WhiteLarge`로 설정할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
 ```
 
-속성을 `UIActivityIndicatorViewStyle` `Color` 설정 하 여에서 제공 하는 색을 재정의할 수 있습니다.
+`Color` 속성을 설정 하 여 `UIActivityIndicatorViewStyle`에서 제공 하는 색을 재정의할 수 있습니다.
 
 ## <a name="progress-bar"></a>Progress Bar
 
@@ -67,7 +67,7 @@ Apple에는 진행률 표시줄을 사용 하기 위한 다음과 같은 제안�
 
 ### <a name="implementing-an-progress-bar"></a>진행률 표시줄 구현
 
-진행률 표시줄은를 인스턴스화하여 생성 됩니다.[`UIProgressView`](xref:UIKit.UIProgressView)
+진행률 표시줄은를 인스턴스화하여 생성 됩니다 [`UIProgressView`](xref:UIKit.UIProgressView)
 
 ### <a name="progress-bars-and-storyboards"></a>진행률 표시줄 및 Storyboard
 
@@ -79,13 +79,13 @@ IOS Designer를 사용 하는 경우 UI에 진행률 표시줄을 추가할 수�
 
 ### <a name="managing-progress-bar-behavior"></a>진행률 표시줄 동작 관리
 
-처음에는 속성을 `Progress` 사용 하 여 표시줄의 진행 상태를 설정할 수 있습니다.
+`Progress` 속성을 사용 하 여 표시줄의 진행률을 처음으로 설정할 수 있습니다.
 
 ```csharp
 ProgressBar.Progress = 0f;
 ```
 
-애니메이션 변경을 적용 하려면 메서드를 `SetProgress` 사용 하 고 부울 선언을 전달 하 여 진행률을 조정할 수 있습니다.
+`SetProgress` 메서드를 사용 하 여 진행률을 조정 하 고 변경 내용을 애니메이션에 적용 하거나 적용 하지 않으려면 부울 선언을 전달할 수 있습니다.
 
 ```csharp
 ProgressBar.SetProgress(1.0f, true);
@@ -95,7 +95,7 @@ ProgressBar.SetProgress(1.0f, true);
 
 ### <a name="managing-progress-bar-appearance"></a>진행률 표시줄 모양 관리
 
-작업 표시기 `UIProgressViewStyle` 와 마찬가지로 진행률 표시줄을 인스턴스화할 때 열거형을 매개 변수로 전달할 수 있습니다.
+작업 표시기와 마찬가지로 진행률 표시줄을 인스턴스화할 때 `UIProgressViewStyle` 열거형을 매개 변수로 전달할 수 있습니다.
 
 진행률 및 트랙 이미지와 색조 색은 다음 속성을 사용 하 여 조정할 수 있습니다.
 

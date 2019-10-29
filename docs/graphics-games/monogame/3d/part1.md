@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: c5702780b6a0f0732d846a2cd4226aec5e49fc21
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 909594fe86c9718d9922470d7fca36155e33aed3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766828"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005234"
 ---
 # <a name="using-the-model-class"></a>모델 클래스 사용
 
@@ -41,7 +41,7 @@ MonoGame API에는 콘텐츠 파일에서 로드 된 데이터를 저장 하 고
 
 ## <a name="including-the-xnbs-in-the-game-project"></a>게임 프로젝트에 XNBs 포함
 
-.Xnb 파일 형식은 빌드된 콘텐츠 ( [MonoGame 파이프라인 도구로](http://www.monogame.net/documentation/?page=Pipeline)만든 콘텐츠)의 표준 확장입니다. 빌드된 모든 콘텐츠에는 원본 파일 (모델의 경우 fbx 파일) 및 대상 파일 (.xnb 파일)이 있습니다. Fbx 형식은 [Maya](http://www.autodesk.com/products/maya/overview) 및 [Blender](http://www.blender.org/)와 같은 응용 프로그램에서 만들 수 있는 일반적인 3d 모델 형식입니다. 
+.Xnb 파일 형식은 빌드된 콘텐츠 ( [MonoGame 파이프라인 도구로](http://www.monogame.net/documentation/?page=Pipeline)만든 콘텐츠)의 표준 확장입니다. 빌드된 모든 콘텐츠에는 원본 파일 (모델의 경우 fbx 파일) 및 대상 파일 (.xnb 파일)이 있습니다. Fbx 형식은 [Maya](https://www.autodesk.com/products/maya/overview) 및 [Blender](https://www.blender.org/)와 같은 응용 프로그램에서 만들 수 있는 일반적인 3d 모델 형식입니다. 
 
 3D 기 하 도형 데이터가 포함 된 디스크에서 .xnb 파일을 로드 하 여 `Model` 클래스를 생성할 수 있습니다.   이. xnb 파일은 콘텐츠 프로젝트를 통해 생성 됩니다. Monogame 템플릿은 콘텐츠 폴더에 콘텐츠 프로젝트 (mgcp 확장명 포함)를 자동으로 포함 합니다. MonoGame 파이프라인 도구에 대 한 자세한 내용은 [콘텐츠 파이프라인 가이드](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md)를 참조 하세요.
 
@@ -59,9 +59,9 @@ Mac용 Visual Studio 새로 추가 된 XNBs에 대 한 빌드 작업을 자동�
 
 화면에 모델을 표시 하는 데 필요한 마지막 단계는 로드 및 그리기 코드를 추가 하는 것입니다. 구체적으로 다음을 수행 합니다.
 
-- @No__t_1 클래스에서 `Model` 인스턴스 정의
-- @No__t_1에서 `Model` 인스턴스 로드
-- @No__t_0 인스턴스를 `Game1.Draw`에 그립니다.
+- `Game1` 클래스에서 `Model` 인스턴스 정의
+- `Game1.LoadContent`에서 `Model` 인스턴스 로드
+- `Model` 인스턴스를 `Game1.Draw`에 그립니다.
 
 **WalkingGame** PCL에 있는 `Game1.cs` 코드 파일을 다음으로 바꿉니다.
 
@@ -167,15 +167,15 @@ public class Game1 : Game
 
 ### <a name="model-class"></a>모델 클래스
 
-@No__t_0 클래스는 콘텐츠 파일 (예: fbx 파일)에서 3D 렌더링을 수행 하기 위한 핵심 클래스입니다. 여기에는 3D 기 하 도형, 질감 참조, 위치 지정, 조명 및 카메라 값을 제어 하는 `BasicEffect` 인스턴스를 포함 하 여 렌더링에 필요한 모든 정보가 포함 됩니다.
+`Model` 클래스는 콘텐츠 파일 (예: fbx 파일)에서 3D 렌더링을 수행 하기 위한 핵심 클래스입니다. 여기에는 3D 기 하 도형, 질감 참조, 위치 지정, 조명 및 카메라 값을 제어 하는 `BasicEffect` 인스턴스를 포함 하 여 렌더링에 필요한 모든 정보가 포함 됩니다.
 
 이 가이드의 뒷부분에서 설명 하는 것 처럼 단일 모델 인스턴스는 여러 위치에서 렌더링 될 수 있으므로 `Model` 클래스 자체는 위치를 지정 하기 위한 변수를 직접 포함 하지 않습니다.
 
-각 `Model`는 `Meshes` 속성을 통해 노출 되는 하나 이상의 `ModelMesh` 인스턴스로 구성 됩니다. @No__t_0를 단일 게임 개체 (예: 로봇 또는 자동차)로 간주할 수도 있지만 각 `ModelMesh` 다른 `BasicEffect` 값을 사용 하 여 그릴 수 있습니다. 예를 들어 개별 메시 부분은 자동차의 로봇이 나 휠 다리를 나타낼 수 있으며, `BasicEffect` 값을 할당 하 여 휠 회전 또는 다리 이동을 만들 수 있습니다. 
+각 `Model`는 `Meshes` 속성을 통해 노출 되는 하나 이상의 `ModelMesh` 인스턴스로 구성 됩니다. `Model`를 단일 게임 개체 (예: 로봇 또는 자동차)로 간주할 수도 있지만 각 `ModelMesh` 다른 `BasicEffect` 값을 사용 하 여 그릴 수 있습니다. 예를 들어 개별 메시 부분은 자동차의 로봇이 나 휠 다리를 나타낼 수 있으며, `BasicEffect` 값을 할당 하 여 휠 회전 또는 다리 이동을 만들 수 있습니다. 
 
 ### <a name="basiceffect-class"></a>BasicEffect 클래스
 
-@No__t_0 클래스는 렌더링 옵션을 제어 하기 위한 속성을 제공 합니다. @No__t_0에 대 한 첫 번째 수정 내용은 `EnableDefaultLighting` 메서드를 호출 하는 것입니다. 이름에서 알 수 있듯이이 경우 기본 조명이 사용 됩니다 .이는 `Model`이 게임에서 예상 대로 표시 되는지 확인 하는 데 매우 유용 합니다. @No__t_0 호출을 주석으로 처리 하는 경우 해당 텍스처를 사용 하 여 렌더링 된 모델은 표시 되지만 음영 또는 반사 광선은 표시 되지 않습니다.
+`BasicEffect` 클래스는 렌더링 옵션을 제어 하기 위한 속성을 제공 합니다. `BasicEffect`에 대 한 첫 번째 수정 내용은 `EnableDefaultLighting` 메서드를 호출 하는 것입니다. 이름에서 알 수 있듯이이 경우 기본 조명이 사용 됩니다 .이는 `Model`이 게임에서 예상 대로 표시 되는지 확인 하는 데 매우 유용 합니다. `EnableDefaultLighting` 호출을 주석으로 처리 하는 경우 해당 텍스처를 사용 하 여 렌더링 된 모델은 표시 되지만 음영 또는 반사 광선은 표시 되지 않습니다.
 
 ```csharp
 //effect.EnableDefaultLighting ();
@@ -183,7 +183,7 @@ public class Game1 : Game
 
 ![모델은 해당 질감 으로만 렌더링 되지만 음영 또는 반사 광선은 포함 하지 않습니다.](part1-images/image9.png "모델은 해당 질감 으로만 렌더링 되지만 음영 또는 반사 광선은 포함 하지 않습니다.")
 
-@No__t_0 속성은 모델의 위치, 회전 및 배율을 조정 하는 데 사용할 수 있습니다. 위의 코드는 `Matrix.Identity` 값을 사용 합니다. 즉, `Model`는 fbx 파일에 지정 된 대로 게임 내에서 정확 하 게 렌더링 됩니다. [3 부](~/graphics-games/monogame/3d/part3.md)에서는 행렬 및 3d 좌표에 대 한 자세한 내용을 다룹니다. 예를 들어 `World` 속성을 다음과 같이 변경 하 여 `Model` 위치를 변경할 수 있습니다.
+`World` 속성은 모델의 위치, 회전 및 배율을 조정 하는 데 사용할 수 있습니다. 위의 코드는 `Matrix.Identity` 값을 사용 합니다. 즉, `Model`는 fbx 파일에 지정 된 대로 게임 내에서 정확 하 게 렌더링 됩니다. [3 부](~/graphics-games/monogame/3d/part3.md)에서는 행렬 및 3d 좌표에 대 한 자세한 내용을 다룹니다. 예를 들어 `World` 속성을 다음과 같이 변경 하 여 `Model` 위치를 변경할 수 있습니다.
 
 ```csharp
 // Z is up, so changing Z to 3 moves the object up 3 units:
@@ -195,7 +195,7 @@ effect.World = Matrix.CreateTranslation (modelPosition);
 
 ![이 코드를 통해 개체가 3 개의 세계 단위로 이동 합니다.](part1-images/image10.png "이 코드를 통해 개체가 3 개의 세계 단위로 이동 합니다.")
 
-@No__t_0에 할당 된 마지막 두 속성은 `View` 및 `Projection` 됩니다. [3 부에서](~/graphics-games/monogame/3d/part3.md)3d 카메라를 다룰 예정 이지만 예를 들어 로컬 `cameraPosition` 변수를 변경 하 여 카메라의 위치를 수정할 수 있습니다.
+`BasicEffect`에 할당 된 마지막 두 속성은 `View` 및 `Projection`됩니다. [3 부에서](~/graphics-games/monogame/3d/part3.md)3d 카메라를 다룰 예정 이지만 예를 들어 로컬 `cameraPosition` 변수를 변경 하 여 카메라의 위치를 수정할 수 있습니다.
 
 ```csharp
 // The 8 has been changed to a 30 to move the Camera further back

@@ -4,15 +4,15 @@ description: 이 연습에서는 Xamarin Android 응용 프로그램에서 Googl
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2019
-ms.openlocfilehash: a59f824e1d97966d8d0af92bc9bbcc8d80fcfa4d
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 979df7965e6a972ffc80d786a26d36aa0a1a939b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249922"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021609"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Google Cloud Messaging로 원격 알림
 
@@ -56,7 +56,7 @@ Google Cloud Messaging에서 메시지를 수신 하려면 장치에 [Google Pla
 
 Visual Studio에서 참조를 마우스 오른쪽 단추로 클릭 **> NuGet 패키지 관리 ...** ; Mac용 Visual Studio에서 패키지를 마우스 오른쪽 단추로 클릭 하 **> 패키지 추가**...를 클릭 합니다. **Xamarin Google Play 서비스-GCM** 을 검색 하 고이 패키지를 **ClientApp** 프로젝트에 설치 합니다. 
 
-[![Google Play 서비스 설치](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png#lightbox)
+[Google Play 서비스 설치![](remote-notifications-with-gcm-images/1-google-play-services-sml.png)](remote-notifications-with-gcm-images/1-google-play-services.png#lightbox)
 
 **Xamarin Google Play 서비스-GCM**을 설치 하면 **Xamarin Google Play 서비스-Base** 가 자동으로 설치 됩니다. 오류가 발생 하는 경우 프로젝트의 *최소 Android 대상* 설정을 **SDK 버전을 사용 하 여 컴파일** 이외의 값으로 변경 하 고 NuGet 설치를 다시 시도 합니다. 
 
@@ -77,9 +77,9 @@ GCM에서 메시지를 수신 하려면 Google Play 스토어 응용 프로그�
 
 ### <a name="set-the-package-name"></a>패키지 이름 설정
 
-[Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md)에서 GCM 사용 앱에 대 한 패키지 이름을 지정 했습니다 .이 패키지 이름은 API 키 및 보낸 사람 id와 연결 된 *응용 프로그램 id* 로도 사용 됩니다. **ClientApp** 프로젝트에 대 한 속성을 열고 패키지 이름을이 문자열로 설정 하겠습니다. 이 예제에서는 패키지 이름을로 `com.xamarin.gcmexample`설정 합니다.
+[Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md)에서 GCM 사용 앱에 대 한 패키지 이름을 지정 했습니다 .이 패키지 이름은 API 키 및 보낸 사람 id와 연결 된 *응용 프로그램 id* 로도 사용 됩니다. **ClientApp** 프로젝트에 대 한 속성을 열고 패키지 이름을이 문자열로 설정 하겠습니다. 이 예제에서는 패키지 이름을 `com.xamarin.gcmexample`로 설정 합니다.
 
-[![패키지 이름 설정](remote-notifications-with-gcm-images/2-package-name-sml.png)](remote-notifications-with-gcm-images/2-package-name.png#lightbox)
+[패키지 이름을 설정 하는![](remote-notifications-with-gcm-images/2-package-name-sml.png)](remote-notifications-with-gcm-images/2-package-name.png#lightbox)
 
 이 패키지 이름이 Google Developer console에 입력 한 패키지 이름과 *정확 하 게* 일치 하지 않으면 클라이언트 앱은 GCM에서 등록 토큰을 받을 수 없습니다. 
 
@@ -87,14 +87,14 @@ GCM에서 메시지를 수신 하려면 Google Play 스토어 응용 프로그�
 
 Android 응용 프로그램은 Google Cloud Messaging에서 알림을 수신 하기 전에 다음 권한이 구성 되어 있어야 합니다. 
 
-- `com.google.android.c2dm.permission.RECEIVE`&ndash; Google Cloud Messaging에서 메시지를 등록 하 고 받을 수 있도록 앱에 권한을 부여 합니다. 무엇 `c2dm` 을 의미 하나요? 이는 현재 사용 되지 않는 최신 선행 작업 인 _클라우드-장치 메시징을_의미 합니다. 
-    GCM은 여전히 `c2dm` 많은 사용 권한 문자열에서를 사용 합니다. 
+- `com.google.android.c2dm.permission.RECEIVE` &ndash;는 앱에 Google Cloud Messaging 메시지를 등록 하 고 받을 수 있는 권한을 부여 합니다. `c2dm`은 무엇을 의미 하나요? 이는 현재 사용 되지 않는 최신 선행 작업 인 _클라우드-장치 메시징을_의미 합니다. 
+    GCM은 아직 많은 사용 권한 문자열에 `c2dm`를 사용 합니다.) 
 
-- `android.permission.WAKE_LOCK`&ndash; (선택 사항) 메시지를 수신 대기 하는 동안 장치 CPU가 절전 모드로 전환 되지 않도록 합니다. 
+- `android.permission.WAKE_LOCK` &ndash; (선택 사항)는 메시지를 수신 대기 하는 동안 장치 CPU가 절전 모드로 전환 되지 않도록 합니다. 
 
-- `android.permission.INTERNET`&ndash; 클라이언트 앱이 GCM과 통신할 수 있도록 인터넷 액세스를 허용 합니다. 
+- `android.permission.INTERNET` &ndash;는 인터넷 액세스를 허용 하므로 클라이언트 앱이 GCM과 통신할 수 있습니다. 
 
-- *package_name는 Android를* `.permission.C2D_MESSAGE` 사용 하 여 응용 프로그램을 등록 하 고 모든 C2D (클라우드-장치) 메시지를 독점적으로 수신 하는 권한을 요청 합니다. &ndash; *Package_name* 접두사는 응용 프로그램 ID와 동일 합니다. 
+- *package_name*`.permission.C2D_MESSAGE` &ndash;는 Android를 사용 하 여 응용 프로그램을 등록 하 고 모든 C2D (클라우드-장치) 메시지를 독점적으로 수신 하는 권한을 요청 합니다. *Package_name* 접두사는 응용 프로그램 ID와 동일 합니다. 
 
 Android 매니페스트에서 이러한 사용 권한을 설정 합니다. **Androidmanifest** 을 편집 하 고 내용을 다음 xml로 바꿉니다. 
 
@@ -116,11 +116,11 @@ Android 매니페스트에서 이러한 사용 권한을 설정 합니다. **And
 </manifest>
 ```
 
-위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. 예: `com.xamarin.gcmexample`. 
+위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. 예를 들어 `com.xamarin.gcmexample`과 같은 형식입니다. 
 
 ### <a name="check-for-google-play-services"></a>Google Play 서비스 확인
 
-이 연습에서는 UI의 단일 `TextView` 를 사용 하 여 응용 프로그램 뼈 앱을 만듭니다. 이 앱은 GCM과의 상호 작용을 직접 나타내지 않습니다. 대신, 출력 창을 시청 하 여 앱에서 GCM을 사용 하는 방법을 확인 하 고 알림 트레이가 도착할 때 새 알림이 있는지 확인 합니다. 
+이 연습에서는 UI의 단일 `TextView`를 사용 하 여 응용 프로그램 뼈를 만듭니다. 이 앱은 GCM과의 상호 작용을 직접 나타내지 않습니다. 대신, 출력 창을 시청 하 여 앱에서 GCM을 사용 하는 방법을 확인 하 고 알림 트레이가 도착할 때 새 알림이 있는지 확인 합니다. 
 
 먼저 메시지 영역에 대 한 레이아웃을 만들어 보겠습니다. **리소스** 를 편집 하 고 내용을 다음 xml로 바꿉니다. 
 
@@ -143,7 +143,7 @@ Android 매니페스트에서 이러한 사용 권한을 설정 합니다. **And
 
 **Main. axml** 을 저장 하 고 닫습니다.
 
-클라이언트 앱이 시작 되 면 GCM에 연결 하기 전에 Google Play 서비스를 사용할 수 있는지 확인 하려고 합니다. **MainActivity.cs** 를 편집 하 고 ``count`` 인스턴스 변수 선언을 다음 인스턴스 변수 선언으로 바꿉니다. 
+클라이언트 앱이 시작 되 면 GCM에 연결 하기 전에 Google Play 서비스를 사용할 수 있는지 확인 하려고 합니다. **MainActivity.cs** 를 편집 하 고 ``count`` instance 변수 선언을 다음 인스턴스 변수 선언으로 바꿉니다. 
 
 ```csharp
 TextView msgText;
@@ -174,9 +174,9 @@ public bool IsPlayServicesAvailable ()
 }
 ```
 
-이 코드는 장치에서 Google Play 서비스 APK가 설치 되어 있는지 확인 합니다. 설치 되지 않은 경우 사용자가 Google Play 스토어에서 APK를 다운로드 하거나 장치의 시스템 설정에서 사용 하도록 지시 하는 메시지가 메시지 영역에 표시 됩니다. 클라이언트 앱이 시작 될 때이 검사를 실행 하려고 하므로의 `OnCreate`끝에이 메서드에 대 한 호출을 추가 합니다. 
+이 코드는 장치에서 Google Play 서비스 APK가 설치 되어 있는지 확인 합니다. 설치 되지 않은 경우 사용자가 Google Play 스토어에서 APK를 다운로드 하거나 장치의 시스템 설정에서 사용 하도록 지시 하는 메시지가 메시지 영역에 표시 됩니다. 클라이언트 앱이 시작 될 때이 검사를 실행 하려고 하므로 `OnCreate`끝에이 메서드에 대 한 호출을 추가 합니다. 
 
-그런 다음 `OnCreate` 메서드를 다음 코드로 바꿉니다.
+다음으로 `OnCreate` 메서드를 다음 코드로 바꿉니다.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -194,7 +194,7 @@ protected override void OnCreate (Bundle bundle)
 
 앱을 완전히 다시 빌드하고 실행 해 보겠습니다. 다음 스크린샷 처럼 표시 되는 화면이 표시 됩니다. 
 
-[![Google Play 서비스 사용 가능](remote-notifications-with-gcm-images/3-first-screen-sml.png)](remote-notifications-with-gcm-images/3-first-screen.png#lightbox)
+[![Google Play 서비스를 사용할 수 있습니다.](remote-notifications-with-gcm-images/3-first-screen-sml.png)](remote-notifications-with-gcm-images/3-first-screen.png#lightbox)
 
 이 결과를 얻지 못한 경우 Google Play 서비스 APK가 장치에 설치 되어 있는지 확인 하 고, 이전에 설명한 대로 **Xamarin Google Play 서비스-GCM** 패키지가 **ClientApp** 프로젝트에 추가 되었는지 확인 합니다. 빌드 오류가 발생 하는 경우 솔루션을 정리 하 고 프로젝트를 다시 빌드합니다. 
 
@@ -202,7 +202,7 @@ protected override void OnCreate (Bundle bundle)
 
 ### <a name="register-with-gcm"></a>GCM에 등록
 
-앱은 앱 서버에서 원격 알림을 받을 수 있기 전에 GCM에 등록 하 고 등록 토큰을 다시 가져와야 합니다. GCM을 사용 하 여 응용 프로그램을 등록 하는 작업 `IntentService` 은 만드는에 의해 처리 됩니다. 에서 다음 단계를 수행합니다.`IntentService` 
+앱은 앱 서버에서 원격 알림을 받을 수 있기 전에 GCM에 등록 하 고 등록 토큰을 다시 가져와야 합니다. GCM을 사용 하 여 응용 프로그램을 등록 하는 작업은 만든 `IntentService`에 의해 처리 됩니다. `IntentService`는 다음 단계를 수행 합니다. 
 
 1. 는 [InstanceID](https://developers.google.com/instance-id/) API를 사용 하 여 클라이언트 앱이 앱 서버에 액세스 하도록 권한을 부여 하는 보안 토큰을 생성 합니다. 반환 시 GCM에서 등록 토큰을 가져옵니다.
 
@@ -272,13 +272,13 @@ namespace ClientApp
 
 1. [Google Cloud Console](https://console.cloud.google.com/) 에 로그인 하 고 풀 다운 메뉴에서 프로젝트 이름을 선택 합니다. 프로젝트에 대해 표시 되는 **프로젝트 정보** 창에서 **프로젝트 설정으로 이동**을 클릭 합니다.
 
-    [![XamarinGCM 프로젝트 선택](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
+    [XamarinGCM 프로젝트![선택](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
 
-2. **설정** 페이지에서 프로젝트의 보낸 사람 ID 인 **프로젝트 번호** &ndash; 를 찾습니다.
+2. **설정** 페이지에서 프로젝트의 보낸 사람 ID &ndash; **프로젝트 번호** 를 찾습니다.
 
-    [![표시 되는 프로젝트 번호](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
+    [표시 된![프로젝트 번호](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
 
-앱이 실행 되기 시작 `RegistrationIntentService` 하는 경우를 시작 하려고 합니다. **MainActivity.cs** 를 편집 하 고 `OnCreate` Google Play 서비스 있는지 확인 한 `RegistrationIntentService` 후가 시작 되도록 메서드를 수정 합니다. 
+앱이 실행 되기 시작 하면 `RegistrationIntentService`을 시작 하려고 합니다. **MainActivity.cs** 를 편집 하 고 Google Play 서비스 있는지 확인 한 후 `RegistrationIntentService` 시작 되도록 `OnCreate` 메서드를 수정 합니다. 
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -296,25 +296,25 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-이제의 `RegistrationIntentService` 각 섹션을 살펴보고 어떻게 작동 하는지 살펴보겠습니다. 
+이제 `RegistrationIntentService`의 각 섹션을 살펴보고 어떻게 작동 하는지 살펴보겠습니다. 
 
-먼저 다음과 같은 특성에 `RegistrationIntentService` 주석을 추가 하 여 서비스를 시스템에서 인스턴스화하지 않음을 표시 합니다. 
+먼저, 다음 특성을 사용 하 여 `RegistrationIntentService`에 주석을 추가 하 여 서비스가 시스템에서 인스턴스화되지 않도록 지정 합니다. 
 
 ```csharp
 [Service (Exported = false)]
 ```
 
-생성자 `RegistrationIntentService` 는 디버깅을 용이 하 게 하기 위해 작업자 스레드 *registrationintentservice* 의 이름을 지정 합니다. 
+`RegistrationIntentService` 생성자는 디버깅을 용이 하 게 하기 위해 작업자 스레드 *Registrationintentservice* 의 이름을 지정 합니다. 
 
 ```csharp
 public RegistrationIntentService() : base ("RegistrationIntentService") { }
 ```
 
-`RegistrationIntentService` 의`OnHandleIntent` 핵심 기능은 메서드에 있습니다. 이 코드를 살펴보고 GCM을 사용 하 여 앱을 등록 하는 방법을 살펴봅니다.
+`RegistrationIntentService`의 핵심 기능은 `OnHandleIntent` 메서드에 있습니다. 이 코드를 살펴보고 GCM을 사용 하 여 앱을 등록 하는 방법을 살펴봅니다.
 
 #### <a name="request-a-registration-token"></a>등록 토큰 요청
 
-`OnHandleIntent`먼저 Google의 [InstanceID. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) 메서드를 호출 하 여 GCM에서 등록 토큰을 요청 합니다. 에서 `lock` 이 코드를 래핑하여 동시 &ndash; 에 여러 번 발생 하는 경우를 방지 하기 위해에서 `lock` 이러한 의도를 순차적으로 처리할 수 있도록 합니다. 등록 토큰을 가져오지 못하면 예외가 throw 되 고 오류를 기록 합니다. 등록이 성공 `token` 하면가 GCM에서 반환 된 등록 토큰으로 설정 됩니다. 
+`OnHandleIntent` 먼저 Google의 [InstanceID. GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;) 메서드를 호출 하 여 GCM에서 등록 토큰을 요청 합니다. 이러한 의도를 순차적으로 처리 하도록 `lock` &ndash; 동시에 여러 등록 의도를 발생 시킬 수 있는 가능성을 방지 하기 위해이 코드를 `lock` 래핑합니다. 등록 토큰을 가져오지 못하면 예외가 throw 되 고 오류를 기록 합니다. 등록이 성공 하면 GCM에서 반환 된 등록 토큰으로 `token` 설정 됩니다. 
 
 ```csharp
 static object locker = new object ();
@@ -336,7 +336,7 @@ catch (Exception e)
 
 #### <a name="forward-the-registration-token-to-the-app-server"></a>앱 서버에 등록 토큰 전달
 
-등록 토큰을 가져오는 경우 (예외가 throw 되지 않음)를 호출 `SendRegistrationToAppServer` 하 여 사용자의 등록 토큰을 응용 프로그램에 의해 유지 관리 되는 서버 쪽 계정 (있는 경우)에 연결 합니다. 이 구현은 앱 서버 디자인에 따라 달라 지므로 다음과 같은 빈 방법이 제공 됩니다. 
+등록 토큰을 가져오는 경우 (예외가 throw 되지 않음) `SendRegistrationToAppServer`을 호출 하 여 사용자의 등록 토큰을 응용 프로그램에 의해 유지 관리 되는 서버 쪽 계정 (있는 경우)에 연결 합니다. 이 구현은 앱 서버 디자인에 따라 달라 지므로 다음과 같은 빈 방법이 제공 됩니다. 
 
 ```csharp
 void SendRegistrationToAppServer (string token)
@@ -345,11 +345,11 @@ void SendRegistrationToAppServer (string token)
 }
 ```
 
-경우에 따라 앱 서버에 사용자의 등록 토큰이 필요 하지 않습니다. 이 경우에는이 메서드를 생략할 수 있습니다. 등록 토큰이 앱 서버에 전송 되 면에서 `SendRegistrationToAppServer` 토큰을 서버에 보냈는지 여부를 나타내는 부울을 유지 해야 합니다. 이 부울이 false 이면에서 `SendRegistrationToAppServer` 앱 서버로 &ndash; 토큰을 보내고, 그렇지 않으면 이전 호출에서 토큰을 이미 앱 서버에 보냈습니다. 
+경우에 따라 앱 서버에 사용자의 등록 토큰이 필요 하지 않습니다. 이 경우에는이 메서드를 생략할 수 있습니다. 등록 토큰이 앱 서버에 전송 되는 경우 토큰이 서버에 전송 되었는지 여부를 나타내는 부울을 유지 해야 `SendRegistrationToAppServer`. 이 부울이 false 인 경우 `SendRegistrationToAppServer`는 앱 &ndash; 서버에 토큰을 보내고, 그렇지 않으면 이전 호출에서 토큰을 이미 앱 서버에 보냈습니다. 
 
 #### <a name="subscribe-to-the-notification-topic"></a>알림 항목 구독
 
-그런 다음, `Subscribe` 메서드를 호출 하 여 알림 항목을 구독 하려는 GCM을 표시 합니다. 에서 `Subscribe` [gcmpubsub. 구독](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) API를 호출 하 여 아래 `/topics/global`에 있는 모든 메시지에 클라이언트 앱을 구독 합니다.
+다음으로 `Subscribe` 메서드를 호출 하 여 알림 항목을 구독 하려는 GCM을 표시 합니다. `Subscribe`에서 [Gcmpubsub. 구독](https://developers.google.com/android/reference/com/google/android/gms/gcm/GcmPubSub.html#subscribe&#40;java.lang.String,%20java.lang.String,%20android.os.Bundle&#41;) API를 호출 하 여 클라이언트 앱을 `/topics/global`의 모든 메시지에 구독 합니다.
 
 ```csharp
 void Subscribe (string token)
@@ -359,13 +359,13 @@ void Subscribe (string token)
 }
 ```
 
-앱 서버에서 알림 메시지를 수신 해야 `/topics/global` 하는 경우이 메시지를에 보내야 합니다. 앱 서버와 클라이언트 앱이 `/topics` 모두 이러한 이름에 동의 하는 경우 아래의 토픽 이름은 원하는 대로 지정할 수 있습니다. (여기서는 앱 서버에서 지 `global` 원하는 모든 항목에 대 한 메시지를 받도록 표시 하기 위해 이름을 선택 했습니다.) 
+앱 서버는 알림 메시지를 수신 하는 경우 `/topics/global`에이 메시지를 보내야 합니다. 앱 서버와 클라이언트 앱이 모두 이러한 이름에 동의 하는 한 `/topics` 아래의 토픽 이름은 원하는 대로 지정할 수 있습니다. 여기서는 `global` 이름을 선택 하 여 앱 서버에서 지 원하는 모든 토픽에서 메시지를 받을지 여부를 표시 합니다.) 
 
 서버 쪽의 GCM 토픽 메시징에 대 한 자세한 내용은 Google의 [메시지 보내기 항목을](https://developers.google.com/cloud-messaging/topic-messaging)참조 하세요. 
 
 #### <a name="implement-an-instance-id-listener-service"></a>인스턴스 ID 수신기 서비스 구현
 
-등록 토큰은 고유 하 고 안전 합니다. 그러나 클라이언트 앱 (또는 GCM)은 앱을 다시 설치 하거나 보안 문제가 발생 하는 경우 등록 토큰을 새로 고쳐야 할 수도 있습니다. 이러한 이유로 GCM에서 토큰 새로 고침 요청 `InstanceIdListenerService` 에 응답 하는를 구현 해야 합니다. 
+등록 토큰은 고유 하 고 안전 합니다. 그러나 클라이언트 앱 (또는 GCM)은 앱을 다시 설치 하거나 보안 문제가 발생 하는 경우 등록 토큰을 새로 고쳐야 할 수도 있습니다. 이러한 이유로 GCM에서 토큰 새로 고침 요청에 응답 하는 `InstanceIdListenerService`를 구현 해야 합니다. 
 
 **InstanceIdListenerService.cs** 라는 새 파일을 추가 하 고 템플릿 코드를 다음으로 바꿉니다. 
 
@@ -388,17 +388,17 @@ namespace ClientApp
 }
 ```
 
-다음 `InstanceIdListenerService` 특성으로 주석을 추가 하 여 서비스가 시스템에서 인스턴스화되지 않고 GCM 등록 토큰 ( *인스턴스 ID*라고도 함) 새로 고침 요청을 받을 수 있음을 표시 합니다. 
+다음 특성을 사용 하 `InstanceIdListenerService`에 주석을 추가 하 여 서비스가 시스템에서 인스턴스화되지 않고 GCM 등록 토큰 ( *인스턴스 ID*라고도 함) 새로 고침 요청을 받을 수 있음을 표시 합니다. 
 
 ```csharp
 [Service(Exported = false), IntentFilter(new[] { "com.google.android.gms.iid.InstanceID" })]
 ```
 
-서비스 `OnTokenRefresh` 의 메서드는 새 등록 토큰 `RegistrationIntentService` 을 가로챌 수 있도록를 시작 합니다.
+서비스의 `OnTokenRefresh` 메서드는 새 등록 토큰을 가로챌 수 있도록 `RegistrationIntentService`를 시작 합니다.
 
 #### <a name="test-registration-with-gcm"></a>GCM을 사용한 테스트 등록
 
-앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예: 
+앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예를 들면, 
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2
@@ -459,15 +459,15 @@ namespace ClientApp
 }
 ```
 
-의 `GcmListenerService` 각 섹션에 대해 살펴보고 어떻게 작동 하는지 살펴보겠습니다. 
+`GcmListenerService`의 각 섹션을 살펴보고 어떻게 작동 하는지 살펴보겠습니다. 
 
-먼저,이 서비스가 `GcmListenerService` 시스템에서 인스턴스화되지 않음을 나타내는 특성으로 주석을 달고,이 서비스가 GCM 메시지를 수신 함을 나타내는 의도 필터를 포함 합니다. 
+먼저 시스템에서이 서비스를 인스턴스화하지 않음을 나타내는 특성으로 `GcmListenerService`에 주석을 추가 하 고 GCM 메시지를 수신 함을 나타내는 의도 필터를 포함 합니다. 
 
 ```csharp
 [Service (Exported = false), IntentFilter (new [] { "com.google.android.c2dm.intent.RECEIVE" })]
 ```
 
-가 GCM에서 메시지를 `GcmListenerService` 받으면 `OnMessageReceived` 메서드가 호출 됩니다. 이 메서드는 전달 `Bundle`된에서 메시지 콘텐츠를 추출 하 고, 메시지 콘텐츠 (출력 창에서 볼 수 있음)를 기록 하 고,를 호출 `SendNotification` 하 여 받은 메시지 콘텐츠로 로컬 알림을 시작 합니다. 
+GCM에서 메시지를 수신 하는 `GcmListenerService` `OnMessageReceived` 메서드가 호출 됩니다. 이 메서드는 전달 된 `Bundle`에서 메시지 콘텐츠를 추출 하 고, 메시지 콘텐츠를 기록 하 여 (출력 창에서 볼 수 있도록), `SendNotification`를 호출 하 여 받은 메시지 콘텐츠로 로컬 알림을 시작할 수 있습니다. 
 
 ```csharp
 var message = data.GetString ("message");
@@ -476,12 +476,12 @@ Log.Debug ("MyGcmListenerService", "Message: " + message);
 SendNotification (message);
 ```
 
-메서드 `SendNotification` 는를 `Notification.Builder` 사용 하 여 알림을 만든 다음를 사용 `NotificationManager` 하 여 알림을 시작 합니다. 이렇게 하면 원격 알림 메시지를 사용자에 게 표시 되는 로컬 알림으로 변환 합니다.
-`Notification.Builder` 및`NotificationManager`사용에 대 한 자세한 내용은 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)을 참조 하세요.
+`SendNotification` 메서드는 `Notification.Builder`를 사용 하 여 알림을 만든 다음 `NotificationManager`를 사용 하 여 알림을 시작 합니다. 이렇게 하면 원격 알림 메시지를 사용자에 게 표시 되는 로컬 알림으로 변환 합니다.
+`Notification.Builder` 및 `NotificationManager`사용에 대 한 자세한 내용은 [로컬 알림](~/android/app-fundamentals/notifications/local-notifications.md)을 참조 하세요.
 
 #### <a name="declare-the-receiver-in-the-manifest"></a>매니페스트에서 수신기를 선언 합니다.
 
-GCM에서 메시지를 받으려면 먼저 Android 매니페스트에서 GCM 수신기를 선언 해야 합니다. **Androidmanifest .xml** 을 편집 하 고 섹션을 `<application>` 다음 xml로 바꿉니다. 
+GCM에서 메시지를 받으려면 먼저 Android 매니페스트에서 GCM 수신기를 선언 해야 합니다. **Androidmanifest .xml** 을 편집 하 고 `<application>` 섹션을 다음 xml로 바꿉니다. 
 
 ```xml
 <application android:label="RemoteNotifications" android:icon="@drawable/Icon">
@@ -497,7 +497,7 @@ GCM에서 메시지를 받으려면 먼저 Android 매니페스트에서 GCM 수
 </application>
 ```
 
-위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. 연습 예제에서 패키지 이름은 `com.xamarin.gcmexample`입니다. 
+위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. 연습 예제에서는 패키지 이름이 `com.xamarin.gcmexample`됩니다. 
 
 이 XML의 각 설정에서 수행 하는 작업을 살펴보겠습니다.
 
@@ -508,11 +508,11 @@ GCM에서 메시지를 받으려면 먼저 Android 매니페스트에서 GCM 수
 |`com.google.android.c2dm.intent.RECEIVE`|앱이 GCM의 브로드캐스트 메시지를 처리 한다는 의도 필터 광고입니다.|
 |`com.google.android.c2dm.intent.REGISTRATION`|앱이 새로운 등록 의도를 처리 한다는 (즉, 인스턴스 ID 수신기 서비스를 구현 하 여) 의도 필터를 알립니다.|
 
-또는 이러한 특성을 XML `GcmListenerService` 에 지정 하는 대신 데코레이팅 할 수 있습니다. 여기서는 코드 샘플을 보다 쉽게 수행할 수 있도록 **androidmanifest** 에서 지정 합니다. 
+또는 이러한 특성을 XML로 지정 하지 않고 `GcmListenerService` 데코레이팅 할 수 있습니다. 여기서는 코드 샘플을 보다 쉽게 수행할 수 있도록 **Androidmanifest** 에서 지정 합니다. 
 
 ### <a name="create-a-message-sender-to-test-the-app"></a>메시지 보낸 사람을 만들어 앱 테스트
 
-C# 데스크톱 콘솔 응용 프로그램 프로젝트를 솔루션에 추가 하 고 **MessageSender**를 호출 해 보겠습니다. 이 콘솔 응용 프로그램을 사용 하 여 응용 프로그램 서버 &ndash; 를 시뮬레이트하여 GCM을 통해 **ClientApp** 에 게 알림 메시지를 전송 합니다. 
+C# 데스크톱 콘솔 응용 프로그램 프로젝트를 솔루션에 추가 하 고 **MessageSender**를 호출 해 보겠습니다. 이 콘솔 응용 프로그램을 사용 하 여 응용 프로그램 &ndash; 서버를 시뮬레이트하여 GCM을 통해 **ClientApp** 에 게 알림 메시지를 전송 합니다. 
 
 #### <a name="add-the-jsonnet-package"></a>Json.NET 패키지 추가
 
@@ -520,11 +520,11 @@ C# 데스크톱 콘솔 응용 프로그램 프로젝트를 솔루션에 추가 �
 
 **Json.NET** 패키지를 검색 하 여 프로젝트에 설치 해 보겠습니다. 
 
-[![Json.NET 패키지 설치](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png#lightbox)
+[Json.NET 패키지를 설치 하는![](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png#lightbox)
 
 #### <a name="add-a-reference-to-systemnethttp"></a>시스템 .Net에 대 한 참조를 추가 합니다. Http
 
-에서 테스트 메시지를 GCM에 보내기 `System.Net.Http` `HttpClient` 위해 인스턴스화할 수 있도록에 대 한 참조도 추가 해야 합니다. **MessageSender** 프로젝트에서 참조를 마우스 오른쪽 단추로 클릭 하 **>** 참조를 추가 하 고 **시스템 .net. Http**가 표시 될 때까지 아래로 스크롤합니다. **시스템 .net. Http** 옆에 확인 표시를 입력 하 고 **확인**을 클릭 합니다. 
+또한 테스트 메시지를 GCM으로 보내기 위한 `HttpClient`를 인스턴스화할 수 있도록 `System.Net.Http`에 대 한 참조를 추가 해야 합니다. **MessageSender** 프로젝트에서 참조를 마우스 오른쪽 단추로 클릭 하 **>** 참조를 추가 하 고 **시스템 .net. Http**가 표시 될 때까지 아래로 스크롤합니다. **시스템 .net. Http** 옆에 확인 표시를 입력 하 고 **확인**을 클릭 합니다. 
 
 #### <a name="implement-code-that-sends-a-test-message"></a>테스트 메시지를 보내는 코드 구현
 
@@ -601,9 +601,9 @@ namespace MessageSender
 
 ### <a name="try-it"></a>실습
 
-이제 클라이언트 앱을 테스트할 준비가 되었습니다. 에뮬레이터를 사용 하거나 장치가 Wi-fi를 통해 GCM과 통신 하는 경우 GCM 메시지의 경우 방화벽에서 다음 TCP 포트를 열어야 합니다. 5228, 5229 및 5230가 있습니다.
+이제 클라이언트 앱을 테스트할 준비가 되었습니다. 에뮬레이터를 사용 하거나 장치가 Wi-fi를 통해 GCM과 통신 하는 경우에는 GCM 메시지에 대해 5228, 5229 및 5230를 통해 방화벽에서 다음 TCP 포트를 열어야 합니다.
 
-클라이언트 앱을 시작 하 고 출력 창을 봅니다. 가 `RegistrationIntentService` GCM에서 등록 토큰을 성공적으로 받은 후 출력 창에는 다음과 유사한 로그 출력이 포함 된 토큰이 표시 됩니다.
+클라이언트 앱을 시작 하 고 출력 창을 봅니다. `RegistrationIntentService`가 GCM에서 등록 토큰을 수신 하면 출력 창에 다음과 유사한 로그 출력이 포함 된 토큰이 표시 됩니다.
 
 ```shell
 I/RegistrationIntentService(16103): GCM Registration Token: eX9ggabZV1Q:APA91bHjBnQXMUeBOT6JDiLpRt8m2YWtY ...
@@ -633,7 +633,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 또한 알림 트레이에 새 알림 아이콘이 표시 되는 것을 알 수 있습니다. 
 
-[![장치에 알림 아이콘이 표시 됩니다.](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[장치에![알림 아이콘이 표시 됩니다.](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 알림 트레이를 열어 알림을 볼 때 원격 알림이 표시 되어야 합니다.
 

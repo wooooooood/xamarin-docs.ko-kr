@@ -3,15 +3,15 @@ title: 디버거에 필요한 프로젝트 설정은 무엇인가요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3A024E4E-ACA3-4C7A-ADEF-541665D15779
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: a3677117e30538c4df8c9b797acce0be602c3b59
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 856c04d129058e8cbac30dcdf619e8b2b5a66cb6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106083"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014261"
 ---
 # <a name="what-project-settings-are-required-for-the-debugger"></a>디버거에 필요한 프로젝트 설정은 무엇인가요?
 
@@ -27,7 +27,7 @@ ms.locfileid: "71106083"
    - **Android 옵션 > 디버깅 옵션**으로 이동 합니다. [ **개발자 계측 사용** ] 상자를 사용 합니다.
    - **IOS 디버그 > 디버깅 & 계측**으로 이동 합니다. **디버깅 사용** 상자를 사용 합니다.
 
-## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
+## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
 1. 프로젝트 옵션 열기
 2. **빌드 > 컴파일러 > 일반 옵션**으로 이동 합니다. 디버그 정보를 **Full** 로 설정

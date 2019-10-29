@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin.ios에서 파일 시스템을 사용 �
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: daa9625ccbac3661d3678889d4efd6319e0bd424
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: c9e5b2504fd8af8b4232eea0dcf39d9c4760b555
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198136"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010610"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Xamarin.ios의 파일 시스템 액세스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
 
-Xamarin.ios 및 `System.IO` *.net BCL (기본 클래스 라이브러리)* 의 클래스를 사용 하 여 iOS 파일 시스템에 액세스할 수 있습니다. `File` 클래스를 사용하여 파일을 만들고, 삭제하고, 삭제할 수 있으며, `Directory` 클래스를 사용하여 디렉터리의 콘텐츠를 만들거나, 삭제하거나, 열거할 수 있습니다. 또한 파일 작업 ( `Stream` 예: 파일 내의 압축 또는 위치 검색)에 대해 더 많은 제어를 제공할 수 있는 하위 클래스를 사용할 수 있습니다.
+*.NET BCL (기본 클래스 라이브러리)* 의 xamarin.ios 및 `System.IO` 클래스를 사용 하 여 iOS 파일 시스템에 액세스할 수 있습니다. `File` 클래스를 사용하여 파일을 만들고, 삭제하고, 삭제할 수 있으며, `Directory` 클래스를 사용하여 디렉터리의 콘텐츠를 만들거나, 삭제하거나, 열거할 수 있습니다. 또한 파일 작업 (예: 파일 내의 압축 또는 위치 검색)에 대해 더 많은 제어를 제공할 수 있는 `Stream` 서브 클래스를 사용할 수 있습니다.
 
 iOS는 응용 프로그램 데이터의 보안을 유지 하 고 malignant apps에서 사용자를 보호 하기 위해 응용 프로그램에서 파일 시스템으로 수행할 수 있는 작업에 대 한 몇 가지 제한 사항을 부과 합니다. 이러한 제한 사항은 응용 프로그램의 파일, 기본 설정, 네트워크 리소스, 하드웨어 등에 대 한 액세스를 제한 하는 규칙 집합인 *응용 프로그램 샌드박스의* 일부입니다. 응용 프로그램은 홈 디렉터리 (설치 된 위치) 내에서 파일을 읽고 쓰는 것으로 제한 됩니다. 다른 응용 프로그램의 파일에 액세스할 수 없습니다.
 
@@ -26,11 +26,11 @@ iOS에는 일부 파일 시스템 관련 기능도 있습니다. 특정 디렉�
 
 이 문서에서는 iOS 파일 시스템의 기능 및 제한 사항에 대해 설명 하며, Xamarin.ios를 사용 하 여 몇 가지 간단한 파일 시스템 작업을 실행 하는 방법을 보여 주는 샘플 응용 프로그램을 제공 합니다.
 
-[![몇 가지 간단한 파일 시스템 작업을 실행 하는 iOS 샘플](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
+[몇 가지 간단한 파일 시스템 작업을 실행 하는 iOS 샘플![](file-system-images/01-sampleapp-sml.png)](file-system-images/01-sampleapp.png#lightbox)
 
 ## <a name="general-file-access"></a>일반 파일 액세스
 
-Xamarin.ios를 사용 하면 ios에서 파일 시스템 작업 `System.IO` 에 대 한 .net 클래스를 사용할 수 있습니다.
+Xamarin.ios를 사용 하면 iOS에서 파일 시스템 작업에 .NET `System.IO` 클래스를 사용할 수 있습니다.
 
 다음 코드 조각에서는 몇 가지 일반적인 파일 작업을 보여 줍니다. 이 문서에 대 한 샘플 응용 프로그램의 **SampleCode.cs** 파일에서 아래의 모든 항목을 찾을 수 있습니다.
 
@@ -94,7 +94,7 @@ Directory.CreateDirectory(directoryname);
 
 [Json.NET](http://www.newtonsoft.com/json) 는 xamarin.ios와 함께 작동 하는 고성능 Json 프레임 워크로, NuGet에서 사용할 수 있습니다. Mac용 Visual Studio에서 **Nuget 추가** 를 사용 하 여 응용 프로그램 프로젝트에 nuget 패키지를 추가 합니다.
 
-[![](file-system-images/json01.png "응용 프로그램 프로젝트에 NuGet 패키지 추가")](file-system-images/json01.png#lightbox)
+[![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png#lightbox)
 
 다음으로 직렬화/deserialization을 위한 데이터 모델 역할을 할 클래스를 추가 합니다 (이 경우 `Account.cs`).
 
@@ -119,7 +119,7 @@ namespace FileSystem
 }
 ```
 
-마지막으로 `Account` 클래스의 인스턴스를 만들고, json 데이터로 serialize 하 고, 파일에 씁니다.
+마지막으로, `Account` 클래스의 인스턴스를 만들고, json 데이터로 serialize 하 고, 파일에 씁니다.
 
 ```csharp
 // Create a new record
@@ -139,7 +139,7 @@ var filename = Path.Combine (documents, "account.json");
 File.WriteAllText(filename, json);
 ```
 
-.NET 응용 프로그램에서 json 데이터를 사용 하는 방법에 대 한 자세한 내용은 참조. NET의 [설명서](http://www.newtonsoft.com/json/help)를 참조 하세요.
+.NET 응용 프로그램에서 json 데이터를 사용 하는 방법에 대 한 자세한 내용은 참조. NET의 [설명서](https://www.newtonsoft.com/json/help)를 참조 하세요.
 
 ## <a name="special-considerations"></a>특별 고려 사항
 
@@ -149,11 +149,11 @@ Xamarin.ios와 .NET 파일 작업의 유사성에도 불구 하 고, iOS 및 Xam
 
 기본적으로 프로젝트에 파일을 추가 하는 경우이 파일은 최종 어셈블리에 포함 되지 않으므로 응용 프로그램에서 사용할 수 없습니다. 어셈블리에 파일을 포함 하려면 콘텐츠 라는 특수 한 빌드 작업으로 표시 해야 합니다.
 
-파일이 포함 되도록 표시 하려면 파일을 마우스 오른쪽 단추로 클릭 하 고 Mac용 Visual Studio에서  **&gt; 작업 콘텐츠 빌드** 를 선택 합니다. 또한 파일의 **속성** 시트에서 **빌드 작업** 을 변경할 수 있습니다.
+파일에 포함할 파일을 표시 하려면 파일을 마우스 오른쪽 단추로 클릭 하 고 Mac용 Visual Studio에서 **콘텐츠 &gt; 빌드 작업** 을 선택 합니다. 또한 파일의 **속성** 시트에서 **빌드 작업** 을 변경할 수 있습니다.
 
 ### <a name="case-sensitivity"></a>대/소문자 구분
 
-IOS 파일 시스템은 *대/소문자를 구분*한다는 것을 이해 하는 것이 중요 합니다. 대/소문자 구분은 파일 및 디렉터리 이름이 정확 하 게 일치 해야 합니다. readme.txt와 **readme.txt** 는 다른 파일 이름으로 간주 됩니다.
+IOS 파일 시스템은 *대/소문자를 구분*한다는 것을 이해 하는 것이 중요 합니다. 대/소문자 구분은 파일 및 디렉터리 이름이 정확 하 게 일치 해야 **합니다. readme.txt** 와 **readme.txt** 는 다른 파일 이름으로 간주 됩니다.
 
 이는 *대/소문자를 구분* 하지 않는 Windows 파일 시스템에 익숙한 .net 개발자에 게 혼란 스 러 울 수 있습니다. **파일**, **파일**및 **파일** 은 모두 동일한 디렉터리를 참조 합니다.
 
@@ -165,7 +165,7 @@ IOS 파일 시스템은 *대/소문자를 구분*한다는 것을 이해 하는 
 
 iOS는 슬래시 '/'를 경로 구분 기호로 사용 합니다 .이는 백슬래시 ' \ '를 사용 하는 Windows와는 다릅니다.
 
-이러한 혼동 때문에 특정 경로 구분 기호를 하드 코딩 하는 `System.IO.Path.Combine` 대신 현재 플랫폼에 맞게 조정 하는 메서드를 사용 하는 것이 좋습니다. 이는 코드를 다른 플랫폼으로 이식할 수 있게 해 주는 간단한 단계입니다.
+이러한 혼동 때문에 특정 경로 구분 기호를 하드 코딩 하는 대신 현재 플랫폼에 맞게 조정 하는 `System.IO.Path.Combine` 메서드를 사용 하는 것이 좋습니다. 이는 코드를 다른 플랫폼으로 이식할 수 있게 해 주는 간단한 단계입니다.
 
 ## <a name="application-sandbox"></a>응용 프로그램 샌드박스
 
@@ -186,34 +186,34 @@ Mac OS에서 응용 프로그램 번들로 이동 하면 다른 디렉터리에 
 
 이 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **패키지 내용 표시** 를 선택 하 여 응용 프로그램 번들 디렉터리의 내용을 검색 합니다. 콘텐츠는 다음과 같이 일반 디렉터리의 내용과 동일 하 게 표시 됩니다.
 
-[![앱 번들의 콘텐츠](file-system-images/45-bundle-sml.png)](file-system-images/45-bundle.png#lightbox)
+[앱 번들의 내용![](file-system-images/45-bundle-sml.png)](file-system-images/45-bundle.png#lightbox)
 
 응용 프로그램 번들은 테스트 중에 시뮬레이터 나 장치에 설치 되는 것으로, 궁극적으로 앱 스토어에 포함 하기 위해 Apple에 제출 됩니다.
 
 ## <a name="application-directories"></a>응용 프로그램 디렉터리
 
-응용 프로그램이 장치에 설치 되 면 운영 체제는 응용 프로그램의 홈 디렉터리를 만들고 응용 프로그램 루트 디렉터리 내에서 사용할 수 있는 여러 디렉터리를 만듭니다. IOS 8부터 사용자가 액세스할 수 있는 디렉터리는 응용 프로그램 루트에 [없으므로](https://developer.apple.com/library/ios/technotes/tn2406/_index.html) 사용자 디렉터리에서 응용 프로그램 번들의 경로를 파생할 수 없으며 그 반대의 경우도 마찬가지입니다.
+응용 프로그램이 장치에 설치 되 면 운영 체제는 응용 프로그램의 홈 디렉터리를 만들고 응용 프로그램 루트 디렉터리 내에서 사용할 수 있는 여러 디렉터리를 만듭니다. IOS 8부터 사용자가 액세스할 수 있는 디렉터리는 응용 프로그램 루트 [에 없으므로 사용자](https://developer.apple.com/library/ios/technotes/tn2406/_index.html) 디렉터리에서 응용 프로그램 번들의 경로를 파생할 수 없으며 그 반대의 경우도 마찬가지입니다.
 
 이러한 디렉터리, 경로를 확인 하는 방법 및 해당 용도는 아래에 나열 되어 있습니다.
 
 &nbsp;
 
-|디렉터리|Description|
+|디렉터리|설명|
 |---|---|
-|[ApplicationName].app/|**IOS 7 및 이전 버전** `ApplicationBundle` 에서는 응용 프로그램 실행 파일이 저장 되는 디렉터리입니다. 앱에서 만드는 디렉터리 구조는이 디렉터리에 있습니다 (예: Mac용 Visual Studio 프로젝트에서 리소스로 표시 한 이미지 및 기타 파일 형식).<br /><br />응용 프로그램 번들 내에서 콘텐츠 파일에 액세스 해야 하는 경우에는 `NSBundle.MainBundle.BundlePath` 속성을 통해이 디렉터리의 경로를 사용할 수 있습니다.|
-|문서|이 디렉터리를 사용 하 여 사용자 문서 및 응용 프로그램 데이터 파일을 저장 합니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes 파일 공유를 통해 사용자가 사용할 수 있도록 설정할 수 있습니다 (기본적으로 사용 하지 않도록 설정 됨). Info.plist 파일에 부울 키를 추가 하 여 사용자가 이러한 파일에 액세스할 수 있도록 합니다. `UIFileSharingEnabled`<br /><br />응용 프로그램에서 파일 공유를 즉시 사용 하도록 설정 하지 않는 경우에도이 디렉터리의 사용자에 게 서 숨겨지는 파일 (공유 하지 않는 한 데이터베이스 파일)을 배치 하지 않아야 합니다. 중요 한 파일이 숨겨진 상태로 유지 되는 한, 이후 버전에서 파일 공유를 사용 하는 경우 이러한 파일은 노출 되지 않고 iTunes에 의해 이동, 수정 또는 삭제 될 수 있습니다.<br /><br /> 메서드를 `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` 사용 하 여 응용 프로그램에 대 한 문서 디렉터리의 경로를 가져올 수 있습니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에 의해 백업 됩니다.|
+|[ApplicationName]. 앱/|**IOS 7 및 이전 버전**에서는 응용 프로그램 실행 파일이 저장 되는 `ApplicationBundle` 디렉터리입니다. 앱에서 만드는 디렉터리 구조는이 디렉터리에 있습니다 (예: Mac용 Visual Studio 프로젝트에서 리소스로 표시 한 이미지 및 기타 파일 형식).<br /><br />응용 프로그램 번들 내에서 콘텐츠 파일에 액세스 해야 하는 경우이 디렉터리의 경로는 `NSBundle.MainBundle.BundlePath` 속성을 통해 사용할 수 있습니다.|
+|문서|이 디렉터리를 사용 하 여 사용자 문서 및 응용 프로그램 데이터 파일을 저장 합니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes 파일 공유를 통해 사용자가 사용할 수 있도록 설정할 수 있습니다 (기본적으로 사용 하지 않도록 설정 됨). Info.plist 파일에 `UIFileSharingEnabled` 부울 키를 추가 하 여 사용자가 이러한 파일에 액세스할 수 있도록 합니다.<br /><br />응용 프로그램에서 파일 공유를 즉시 사용 하도록 설정 하지 않는 경우에도이 디렉터리의 사용자에 게 서 숨겨지는 파일 (공유 하지 않는 한 데이터베이스 파일)을 배치 하지 않아야 합니다. 중요 한 파일이 숨겨진 상태로 유지 되는 한, 이후 버전에서 파일 공유를 사용 하는 경우 이러한 파일은 노출 되지 않고 iTunes에 의해 이동, 수정 또는 삭제 될 수 있습니다.<br /><br /> `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` 메서드를 사용 하 여 응용 프로그램에 대 한 문서 디렉터리의 경로를 가져올 수 있습니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에 의해 백업 됩니다.|
 |라이브러리|라이브러리 디렉터리는 사용자가 직접 만들지 않은 파일 (예: 데이터베이스 또는 다른 응용 프로그램 생성 파일)을 저장할 수 있는 좋은 장소입니다. 이 디렉터리의 콘텐츠는 iTunes를 통해 사용자에 게 노출 되지 않습니다.<br /><br />라이브러리에서 고유한 하위 디렉터리를 만들 수 있습니다. 그러나 여기에는 기본 설정 및 캐시를 비롯 하 여 알고 있어야 하는 시스템 생성 디렉터리가 이미 있습니다.<br /><br />이 디렉터리의 콘텐츠 (캐시 하위 디렉터리 제외)는 iTunes에 의해 백업 됩니다. 라이브러리에서 만든 사용자 지정 디렉터리를 백업 합니다.|
-|라이브러리/기본 설정/|응용 프로그램별 기본 설정 파일은이 디렉터리에 저장 됩니다. 이러한 파일을 직접 만들지 마십시오. 대신는 `NSUserDefaults` 클래스입니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에 의해 백업 됩니다.|
+|라이브러리/기본 설정/|응용 프로그램별 기본 설정 파일은이 디렉터리에 저장 됩니다. 이러한 파일을 직접 만들지 마십시오. 대신 `NSUserDefaults` 클래스를 사용 합니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에 의해 백업 됩니다.|
 |라이브러리/캐시/|캐시 디렉터리는 응용 프로그램을 실행 하는 데 도움이 되는 데이터 파일을 저장 하는 데 유용 하지만 쉽게 다시 만들 수 있습니다. 응용 프로그램은 필요에 따라 이러한 파일을 만들고 삭제 하며 필요한 경우 이러한 파일을 다시 만들 수 있습니다. iOS 5는 이러한 파일을 삭제할 수도 있습니다 (낮은 저장소 상황에서). 그러나 응용 프로그램이 실행 되는 동안에는이 작업을 수행 하지 않습니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에서 백업 되지 않습니다. 즉, 사용자가 장치를 복원 하는 경우 표시 되지 않으며 업데이트 된 버전의 응용 프로그램을 설치한 후에는 나타나지 않습니다.<br /><br />예를 들어 응용 프로그램에서 네트워크에 연결할 수 없는 경우에는 캐시 디렉터리를 사용 하 여 데이터 또는 파일을 저장 하 여 적절 한 오프 라인 환경을 제공할 수 있습니다. 네트워크 응답을 기다리는 동안 응용 프로그램에서이 데이터를 신속 하 게 저장 하 고 검색할 수 있지만 백업 하지 않아도 되며 복원 또는 버전 업데이트 후에 쉽게 복구 하거나 다시 만들 수 있습니다.|
-|tmp/|응용 프로그램은이 디렉터리의 짧은 기간 동안만 필요한 임시 파일을 저장할 수 있습니다. 공간을 절약 하려면 더 이상 필요 하지 않은 파일을 삭제 해야 합니다. 응용 프로그램이 실행 되 고 있지 않은 경우 운영 체제는이 디렉터리에서 파일을 삭제할 수도 있습니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에서 백업 되지 않습니다.<br /><br />예를 들어, 사용자에 게 표시 하기 위해 다운로드 한 임시 파일 (예: Twitter 아바타 또는 전자 메일 첨부 파일)을 저장 하는 데 tmp 디렉터리를 사용할 수 있지만, 표시 된 후에 삭제할 수 있으며 나중에 필요할 경우 다시 다운로드할 수 있습니다. .|
+|임시|응용 프로그램은이 디렉터리의 짧은 기간 동안만 필요한 임시 파일을 저장할 수 있습니다. 공간을 절약 하려면 더 이상 필요 하지 않은 파일을 삭제 해야 합니다. 응용 프로그램이 실행 되 고 있지 않은 경우 운영 체제는이 디렉터리에서 파일을 삭제할 수도 있습니다.<br /><br />이 디렉터리의 콘텐츠는 iTunes에서 백업 되지 않습니다.<br /><br />예를 들어, 사용자에 게 표시 하기 위해 다운로드 한 임시 파일 (예: Twitter 아바타 또는 전자 메일 첨부 파일)을 저장 하는 데 tmp 디렉터리를 사용할 수 있지만, 표시 된 후에 삭제할 수 있으며 나중에 필요할 경우 다시 다운로드할 수 있습니다. .|
 
 이 스크린샷은 Finder 창의 디렉터리 구조를 보여줍니다.
 
-[![](file-system-images/08-library-directory.png "이 스크린샷은 Finder 창의 디렉터리 구조를 보여줍니다.")](file-system-images/08-library-directory.png#lightbox)
+[![](file-system-images/08-library-directory.png "This screenshot shows the directory structure in a Finder window")](file-system-images/08-library-directory.png#lightbox)
 
 ### <a name="accessing-other-directories-programmatically"></a>프로그래밍 방식으로 다른 디렉터리 액세스
 
-이전 디렉터리 및 파일 예제는 디렉터리에 `Documents` 액세스 했습니다. 다른 디렉터리에 쓰려면 다음과 같이 "..." 구문을 사용 하 여 경로를 생성 해야 합니다.
+이전 디렉터리 및 파일 예제는 `Documents` 디렉터리에 액세스 했습니다. 다른 디렉터리에 쓰려면 다음과 같이 "..." 구문을 사용 하 여 경로를 생성 해야 합니다.
 
 ```csharp
 var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
@@ -231,7 +231,7 @@ var directoryname = Path.Combine (library, "NewLibraryDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-및 디렉터리에 `Caches` 대 `tmp` 한 경로는 다음과 같이 생성할 수 있습니다.
+`Caches` 및 `tmp` 디렉터리에 대 한 경로는 다음과 같이 구성할 수 있습니다.
 
 ```csharp
 var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
@@ -241,7 +241,7 @@ var tmp = Path.Combine (documents, "..", "tmp");
 
 ## <a name="sharing-with-the-files-app"></a>파일 앱과 공유
 
-iOS 11에는 사용자가 iCloud에서 파일을 보고 상호 작용 하 고이를 지 원하는 응용 프로그램 에서도 저장할 수 있도록 하는 ios 용 파일 브라우저 파일이 도입 되었습니다. 사용자가 앱의 파일에 직접 액세스할 수 있도록 하려면 **info.plist** 파일 `LSSupportsOpeningDocumentsInPlace` 에 새 부울 키를 만들고 다음과 같이로 `true`설정 합니다.
+iOS 11에는 사용자가 iCloud에서 파일을 보고 상호 작용 하 고이를 지 원하는 응용 프로그램 에서도 저장할 수 있도록 하는 iOS 용 파일 **브라우저 파일이 도입** 되었습니다. 사용자가 앱의 파일에 직접 액세스할 수 있도록 하려면 **info.plist** 파일 `LSSupportsOpeningDocumentsInPlace`에 새 부울 키를 만들고 다음과 같이 `true`으로 설정 합니다.
 
 ![Info.plist에 LSSupportsOpeningDocumentsInPlace를 설정 합니다.](file-system-images/51-supports-opening.png)
 
@@ -251,13 +251,13 @@ iOS 11에는 사용자가 iCloud에서 파일을 보고 상호 작용 하 고이
 
 ## <a name="sharing-files-with-the-user-through-itunes"></a>ITunes를 통해 사용자와 파일 공유
 
-사용자는 `Info.plist` 다음과 같이 **소스** 뷰에서 iTunes 공유 (`UIFileSharingEnabled`) 항목을 **지 원하는 응용** 프로그램을 편집 하 고 만들어 응용 프로그램의 문서 디렉터리에 있는 파일에 액세스할 수 있습니다.
+사용자는 다음과 같이 `Info.plist` 편집 하 고 **원본** 뷰에서 iTunes 공유 (`UIFileSharingEnabled`) 항목을 **지 원하는 응용** 프로그램을 만들어 응용 프로그램의 문서 디렉터리에 있는 파일에 액세스할 수 있습니다.
 
-[![응용 프로그램을 추가 하면 iTunes 공유 속성이 지원 됩니다.](file-system-images/09-uifilesharingenabled-plist-sml.png)](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
+[응용 프로그램을 추가 하는![iTunes 공유 속성 지원](file-system-images/09-uifilesharingenabled-plist-sml.png)](file-system-images/09-uifilesharingenabled-plist.png#lightbox)
 
-이러한 파일은 장치가 연결 되어 있고 사용자가 탭을 `Apps` 선택할 때 iTunes에서 액세스할 수 있습니다. 예를 들어 다음 스크린샷은 iTunes를 통해 공유 되는 선택 된 앱의 파일을 보여 줍니다.
+이러한 파일은 장치가 연결 되어 있고 사용자가 `Apps` 탭을 선택할 때 iTunes에서 액세스할 수 있습니다. 예를 들어 다음 스크린샷은 iTunes를 통해 공유 되는 선택 된 앱의 파일을 보여 줍니다.
 
-[![이 스크린샷은 iTunes를 통해 공유 되는 선택 된 앱의 파일을 보여줍니다.](file-system-images/10-itunes-file-sharing-sml.png)](file-system-images/10-itunes-file-sharing.png#lightbox)
+[![이 스크린샷은 iTunes를 통해 공유 되는 선택한 앱의 파일을 보여줍니다.](file-system-images/10-itunes-file-sharing-sml.png)](file-system-images/10-itunes-file-sharing.png#lightbox)
 
 사용자는 iTunes를 통해이 디렉터리의 최상위 항목에만 액세스할 수 있습니다. 하위 디렉터리의 콘텐츠를 볼 수 없습니다 (컴퓨터에 복사 하거나 삭제할 수는 있음). 예를 들어 GoodReader를 사용 하면 사용자가 iOS 장치에서 파일을 읽을 수 있도록 PDF 및 EPUB 파일을 응용 프로그램과 공유할 수 있습니다.
 
@@ -265,13 +265,13 @@ iOS 11에는 사용자가 iCloud에서 파일을 보고 상호 작용 하 고이
 
 이 문서의 샘플 코드는 Documents 폴더 ( **SampleCode.cs**)에 파일과 폴더를 모두 만들며 **info.plist** 파일에서 파일 공유를 사용 하도록 설정 합니다. 이 스크린샷에서는 iTunes에 표시 되는 방법을 보여 줍니다.
 
-[![이 스크린샷에서는 파일이 iTunes에 표시 되는 방식을 보여 줍니다.](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
+[이 스크린샷에서는 파일이 iTunes에 표시 되는 방식을 보여![](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 
 응용 프로그램에 대 한 아이콘을 설정 하는 방법 및 사용자가 만드는 모든 사용자 지정 문서 형식에 대 한 자세한 내용은 [이미지 작업](~/ios/app-fundamentals/images-icons/index.md) 문서를 참조 하세요.
 
-`UIFileSharingEnabled` 키가 false 이거나 없는 경우 파일 공유는 기본적으로 사용 하지 않도록 설정 되며 사용자가 Documents 디렉터리와 상호 작용할 수 없습니다.
+`UIFileSharingEnabled` 키가 false 이거나 없는 경우 파일 공유는 기본적으로 사용 하지 않도록 설정 되 고 사용자는 Documents 디렉터리와 상호 작용할 수 없습니다.
 
-## <a name="backup-and-restore"></a>Backup 및 Restore 메서드
+## <a name="backup-and-restore"></a>백업 및 복원
 
 ITunes에서 장치를 백업 하는 경우 응용 프로그램의 홈 디렉터리에 생성 된 모든 디렉터리는 다음 디렉터리를 제외 하 고 저장 됩니다.
 
@@ -290,15 +290,15 @@ ITunes에서 장치를 백업 하는 경우 응용 프로그램의 홈 디렉터
 > [!NOTE]
 > 이 정책은 iOS 5에 처음 도입 되었지만 (오랜 시간 전 처럼 보이지만), 현재 앱에 대 한 지침은 계속 제공 됩니다.
 
-Apple에는 iOS 5와 함께 *ICloud 백업* 기능이 도입 되었습니다. Icloud 백업을 사용 하도록 설정 하면 응용 프로그램의 홈 디렉터리에 있는 모든 파일 (일반적으로 백업 되지 않는 디렉터리 (예: 앱 번들, `Caches`및 `tmp`)이 icloud 서버에 백업 됩니다. 이 기능을 통해 사용자는 장치를 분실 하거나 도난당 하거나 손상 한 경우 전체 백업을 수행할 수 있습니다.
+Apple에는 iOS 5와 함께 *ICloud 백업* 기능이 도입 되었습니다. ICloud 백업을 사용 하도록 설정 하면 응용 프로그램의 홈 디렉터리에 있는 모든 파일 (일반적으로 백업 되지 않는 디렉터리 (예: 앱 번들, `Caches`및 `tmp`)이 iCloud 서버에 백업 됩니다. 이 기능을 통해 사용자는 장치를 분실 하거나 도난당 하거나 손상 한 경우 전체 백업을 수행할 수 있습니다.
 
 ICloud는 각 사용자에 게 5gb의 사용 가능한 공간만 제공 하 고 대역폭을 불필요 하 게 사용 하지 않도록 하기 때문에 Apple에서는 응용 프로그램이 필수적인 사용자 생성 데이터를 백업 해야 합니다. IOS 데이터 저장소 지침을 준수 하려면 다음 항목을 준수 하 여 백업 되는 데이터의 양을 제한 해야 합니다.
 
 - 사용자가 생성 한 데이터 또는 다시 만들 수 없는 데이터를 문서 디렉터리 (백업 됨)에만 저장 합니다.
-- `Library/Caches` 또는`tmp` 에서 쉽게 다시 만들거나 다시 다운로드할 수 있는 다른 데이터를 저장 합니다 .이 데이터는 백업 되지 않으며 ' 치료 ' 될 수 있습니다.
-- `Library/Caches` 또는 `Library/YourData`폴더에 적합 한 파일이 있지만 ' 치료 ' 하지 않으려는 경우 다른 곳에 저장 하 고 ' 백업 안 함 ' 특성을 적용 하 여 파일이 iCloud 백업을 사용 하지 않도록 합니다. `tmp` 대역폭 및 저장소 공간. 이 데이터는 장치에서 공간을 계속 사용 하므로 신중 하 게 관리 하 고 가능한 경우 삭제 해야 합니다.
+- `Library/Caches` 또는 `tmp`에서 쉽게 다시 만들거나 다시 다운로드할 수 있는 다른 데이터를 저장 합니다 .이 데이터는 백업 되지 않으며 ' 치료 ' 될 수 있습니다.
+- `Library/Caches` 또는 `tmp` 폴더에 적합 한 파일이 있지만 ' 정리 ' 하지 않으려는 경우 다른 곳 (예: `Library/YourData`)에 저장 하 고 ' 백업 안 함 ' 특성을 적용 하 여 파일이 iCloud 백업 대역폭 및 stora를 사용 하지 않도록 합니다. ge 공간. 이 데이터는 장치에서 공간을 계속 사용 하므로 신중 하 게 관리 하 고 가능한 경우 삭제 해야 합니다.
 
-' 백업 안 함 ' 특성은 클래스를 `NSFileManager` 사용 하 여 설정 됩니다. 클래스가 `using Foundation` 이 고 다음과 같이를 `SetSkipBackupAttribute` 호출 하는지 확인 합니다.
+' 백업 안 함 ' 특성은 `NSFileManager` 클래스를 사용 하 여 설정 됩니다. 클래스가 `using Foundation` 인지 확인 하 고 다음과 같이 `SetSkipBackupAttribute`를 호출 합니다.
 
 ```csharp
 var documents = Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
@@ -307,7 +307,7 @@ File.WriteAllText(filename, "This file will never get backed-up. It would need t
 NSFileManager.SetSkipBackupAttribute (filename, true); // backup will be skipped for this file
 ```
 
-이 파일이 저장 된 디렉터리 (디렉터리에도 상관 없음)에 관계 없이 백업 되지 않습니다. `Documents` `SetSkipBackupAttribute` `true` `GetSkipBackupAttribute` 메서드를 사용 하 여 특성을 쿼리하면 다음과 같이를 사용 `false`하 여 `SetSkipBackupAttribute` 메서드를 호출 하 여이를 다시 설정할 수 있습니다.
+`SetSkipBackupAttribute` `true` 되는 경우 파일이 저장 되는 디렉터리 (`Documents` 디렉터리)에 관계 없이 파일이 백업 되지 않습니다. `GetSkipBackupAttribute` 메서드를 사용 하 여 특성을 쿼리 하 고 다음과 같이 `false`를 사용 하 여 `SetSkipBackupAttribute` 메서드를 호출 하 여이 특성을 다시 설정할 수 있습니다.
 
 ```csharp
 NSFileManager.SetSkipBackupAttribute (filename, false); // file will be backed-up
@@ -339,7 +339,7 @@ Console.WriteLine ("Group Path: " + appGroupContainerPath);
 ```
 
 > [!IMPORTANT]
-> 반환 된 그룹 경로가 인 `null`경우 자격 및 프로 비전 프로필의 구성이 올바른지 확인 하 고 올바른지 확인 합니다.
+> 반환 된 그룹 경로가 `null`이면 자격 및 프로 비전 프로필의 구성이 올바른지 확인 하 고 올바른지 확인 합니다.
 
 ## <a name="application-version-updates"></a>응용 프로그램 버전 업데이트
 

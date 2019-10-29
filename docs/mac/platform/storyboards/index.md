@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 Storyboard를 사용 하�
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ff29ac58db618d4a644bbaa5a95ac8624726827f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b27a8d65ebaca6009d8310931b9dac3a4d7e12f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770057"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026143"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -20,7 +20,7 @@ _이 문서에서는 Xamarin.ios 앱에서 Storyboard를 사용 하는 방법을
 
 스토리 보드를 사용 하면 창 정의 및 컨트롤을 포함할 뿐만 아니라 다른 창 (segue를 통해) 및 뷰 상태 간의 링크도 포함 하는 Xamarin.ios 앱에 대 한 사용자 인터페이스를 개발할 수 있습니다.
 
-[![](images/intro01.png "Xcode의 샘플 UI")](images/intro01.png#lightbox)
+[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
 
 이 문서에서는 Storyboard를 사용 하 여 Xamarin.ios 앱의 사용자 인터페이스를 정의 하는 방법을 소개 합니다.
 
@@ -36,11 +36,11 @@ Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 �
 
 위에서 설명한 것 처럼 Storyboard는 지정 된 앱에 대 한 모든 UI를 해당 _뷰 컨트롤러_의 기능 개요로 분할 하 여 정의 합니다. Xcode의 Interface Builder에서 이러한 각 컨트롤러는 자체 _장면_에 상주 합니다.
 
-[![](images/intro02.png "예제 뷰 컨트롤러")](images/intro02.png#lightbox)
+[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
 
 각 장면은 UI의 각 장면을 연결 하 여 해당 관계를 표시 하는 일련의 선 (Segue 이라고 함)과 함께 지정 된 뷰 및 뷰 컨트롤러 쌍을 나타냅니다. 일부 Segue는 하나 이상의 자식 뷰나 뷰 컨트롤러를 포함 하는 뷰 컨트롤러를 정의 합니다. 다른 Segue 뷰 컨트롤러 (예: 팝 오버 또는 대화 상자 표시) 간의 전환을 정의 합니다. 
 
-[![](images/intro03.png "샘플 segue")](images/intro03.png#lightbox)
+[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
 
 가장 중요 한 점은 각 Segue는 응용 프로그램 UI의 지정 된 요소 간에 일부 형식의 데이터 흐름을 나타내는 것입니다.
 
@@ -50,11 +50,11 @@ Storyboard를 사용 하 여 모든 Xamarin.ios 앱의 UI는 개별 요소와 �
 
 뷰 컨트롤러는 Mac 앱 내에서 지정 된 정보 보기와 해당 정보를 제공 하는 데이터 모델 간의 관계를 정의 합니다. 스토리 보드의 각 최상위 장면은 Xamarin.ios 앱의 코드에서 하나의 뷰 컨트롤러를 나타냅니다.
 
-[![](images/intro04.png "예제 지연 뷰 컨트롤러")](images/intro04.png#lightbox)
+[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
 
 이러한 방식으로 각 뷰 컨트롤러는 정보의 시각적 표시 (보기)와 해당 정보를 표시 하 고 제어 하는 논리에 대 한 자체 포함 된 재사용 가능한 쌍입니다.
 
-지정 된 장면 내에서 일반적으로 개별 `.xib` 파일을 통해 처리 되는 모든 작업을 수행할 수 있습니다. 
+지정 된 장면 내에서 일반적으로 개별 `.xib` 파일에 의해 처리 되는 모든 작업을 수행할 수 있습니다. 
 
 - 하위 뷰 및 컨트롤 (예: 단추 및 텍스트 상자)을 입력 합니다.
 - 요소 위치 및 자동 레이아웃 제약 조건을 정의 합니다.
@@ -70,7 +70,7 @@ MacOS에서 대부분의 앱은 분할 뷰 및 탭과 같은 UI 요소를 사용
 
 포함에 대 한 macOS 성향을 지정 된 경우 모달 창, 시트 보기 및 Popovers와 같은 _프레젠테이션 segue_ 이 사용 되는 경우가 있습니다.
 
-Presentation segue를 사용 하는 `PrepareForSegue` 경우 프레젠테이션 용 부모 뷰 컨트롤러의 메서드를 재정의 하 여 및 변수를 초기화 하 고 표시 되는 뷰 컨트롤러에 데이터를 제공할 수 있습니다.
+프레젠테이션 Segue를 사용 하는 경우 표시 되는 부모 뷰 컨트롤러의 `PrepareForSegue` 메서드를 재정의 하 고, 변수를 초기화 하 고 표시 되는 뷰 컨트롤러에 데이터를 제공할 수 있습니다.
 
 <a name="Design-and-Run-Times" />
 

@@ -4,15 +4,15 @@ description: 이 섹션의 문서에서는 Android 관련 기능을 다룹니다
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: def8bf236ec25d3b75e435ff525a683343d9b861
-ms.sourcegitcommit: f324193bcfb1c674e421955cf6ee2a4249d61ac3
+ms.openlocfilehash: a0b8b80499854d485b8420adb580c22a74933443
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119229"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020174"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -38,7 +38,7 @@ Android 무선은 응용 프로그램에서 근접 한 경우 NFC를 통해 정�
 
 Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 다양 한 화면 크기에 대해 더 유연한 디자인을 지 원하는 방법을 보여 주는 조각이 도입 되었습니다. 이 문서에서는 조각을 사용 하 여 Xamarin Android 응용 프로그램을 개발 하는 방법과 Android 이전 3.0 (API 수준 11) 장치에서 조각을 지 원하는 방법을 설명 합니다.
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[앱 링크](~/android/platform/app-linking.md)
 
 이 가이드에서는 Android 6.0이 _앱 연결_을 지 원하는 방법에 대해 설명 합니다. 모바일 앱이 웹 사이트의 url에 응답할 수 있는 기술입니다. Android 6.0 응용 프로그램에서 앱 연결을 구현 하는 방법 및 도메인에 대 한 앱 링크를 처리 하는 모바일 앱에 권한을 부여 하도록 웹 사이트를 구성 하는 방법을 설명 합니다.
 

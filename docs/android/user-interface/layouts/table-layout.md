@@ -3,20 +3,20 @@ title: Xamarin Android TableLayout
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 0e09bf2364df9b672a9612829eaa7a8ba343b0e9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4175b1fa62b2bc0e4209d13934c2bdbdd1e2a085
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758394"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028743"
 ---
 # <a name="xamarinandroid-tablelayout"></a>Xamarin Android TableLayout
 
-[`TableLayout`](xref:Android.Widget.TableLayout)는입니다.[`ViewGroup`](xref:Android.Views.ViewGroup)
-자식을 표시 합니다.[`View`](xref:Android.Views.View)
+[`TableLayout`](xref:Android.Widget.TableLayout) [`ViewGroup`](xref:Android.Views.ViewGroup)
+자식 [`View`](xref:Android.Views.View) 를 표시 합니다.
 행 및 열의 요소
 
 **HelloTableLayout**라는 새 프로젝트를 시작 합니다.
@@ -102,12 +102,12 @@ ms.locfileid: "70758394"
 </TableLayout>
 ```
 
-이것은 HTML 테이블의 구조와 유사 합니다. 여[`TableLayout`](xref:Android.Widget.TableLayout)
-요소가 HTML `<table>` 요소와 유사 합니다.[`TableRow`](xref:Android.Widget.TableRow)
-는 `<tr>` 요소와 유사 하지만 셀의 경우 모든 종류의 [`View`](xref:Android.Views.View) 요소를 사용할 수 있습니다. 이 예제에서는[`TextView`](xref:Android.Widget.TextView)
-각 셀에 사용 됩니다. 일부 행 사이에는 가로 선을 그리는 데 사용 되는 [`View`](xref:Android.Views.View)기본도 있습니다.
+이것은 HTML 테이블의 구조와 유사 합니다. [`TableLayout`](xref:Android.Widget.TableLayout)
+요소가 HTML `<table>` 요소와 유사 합니다. [`TableRow`](xref:Android.Widget.TableRow)
+는 `<tr>` 요소와 유사 합니다. 그러나 셀의 경우 모든 종류의 [`View`](xref:Android.Views.View) 요소를 사용할 수 있습니다. 이 예제에서는 [`TextView`](xref:Android.Widget.TextView)
+각 셀에 사용 됩니다. 일부 행에는 가로 선을 그리는 데 사용 되는 기본 [`View`](xref:Android.Views.View)있습니다.
 
-**HelloTableLayout** 활동이 다음에서이 레이아웃을 로드 하는지 확인 합니다.[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+**HelloTableLayout** 활동이 [`OnCreate()`](xref:Android.App.Activity.OnCreate*) 에서이 레이아웃을 로드 하는지 확인 합니다.
 방법이
 
 ```csharp
@@ -118,7 +118,7 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[`Activity`](xref:Android.App.Activity) &mdash;)메서드 는 리소스 ID`Resource.Layout.Main` 로 지정 된에 대 한 레이아웃 파일을 로드 하 고 리소스 **/레이아웃/기본. axml** 레이아웃 파일을 참조 합니다. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+[`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) 메서드는 리소스 ID &mdash;으로 지정 된 [`Activity`](xref:Android.App.Activity)에 대 한 레이아웃 파일을 로드 `Resource.Layout.Main`는 **Resources/layout/Main. axml** 레이아웃 파일을 참조 합니다.
 
 애플리케이션을 실행합니다. 다음이 표시 됩니다.
 
@@ -130,4 +130,4 @@ protected override void OnCreate (Bundle savedInstanceState)
 - [`TableRow`](xref:Android.Widget.TableRow)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._
+_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](https://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._

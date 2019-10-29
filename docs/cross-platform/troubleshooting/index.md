@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin 개발에 대 한 질문과 대답을 �
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 4513D391-9850-4CDC-BE9B-7FF4B14FEFFC
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/10/2018
-ms.openlocfilehash: 318e02d30840ed5031f6df8b19f8143fa7b23a8d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 3c257f7b51deed01e848f3dabbea35c2e4a601e7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285090"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014278"
 ---
 # <a name="xamarin-troubleshooting"></a>Xamarin 문제 해결
 
@@ -28,6 +28,6 @@ Xamarin 플랫폼과 관련 된 질문과 대답 및 Visual Studio에 대 한 �
 
 ## <a name="product-specific-questions"></a>제품별 질문
 
-- [Android](~/android/troubleshooting/questions/index.md)
-- [iOS](~/ios/troubleshooting/questions/index.md)
+- [OWA(Outlook Web Access)](~/android/troubleshooting/questions/index.md)
+- [Android](~/ios/troubleshooting/questions/index.md)
 - [Xamarin.Forms](~/xamarin-forms/troubleshooting/questions/index.md)

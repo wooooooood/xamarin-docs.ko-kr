@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 터치를
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 022602c50386017b178672e20e3e352345feec0b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ad54c97da9ebc9f1c705e99a4a390571d229520a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767202"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009409"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.ios에서 Touch 사용
 
@@ -25,7 +25,7 @@ ms.locfileid: "70767202"
 각 섹션에는 코드를 처음부터 작성 하는 지침이 포함 되어 있습니다.
 [시작 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) 는 이미 전체 스토리 보드 및 메뉴 화면을 포함 합니다.
 
- [![](ios-touch-walkthrough-images/image3.png "이 샘플은 메뉴 화면을 포함 합니다.")](ios-touch-walkthrough-images/image3.png#lightbox)
+ [![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 아래 지침에 따라 스토리 보드에 코드를 추가 하 고 iOS에서 제공 되는 다양 한 유형의 터치 이벤트에 대해 알아보세요. 또는 [완성 된 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) 을 열어 모든 것이 작동 하는지 확인 합니다.
 
@@ -37,9 +37,9 @@ ms.locfileid: "70767202"
 
 1. **Touch_Start**프로젝트를 엽니다. 먼저 프로젝트를 실행 하 여 모든 것이 정상 인지 확인 하 고 **터치 샘플** 단추를 터치 합니다. 다음과 비슷한 화면이 표시 됩니다 (단추가 작동 하지 않음).
 
-    [![](ios-touch-walkthrough-images/image4.png "작업 단추가 아닌 단추를 사용 하 여 샘플 앱 실행")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
 
-1. **TouchViewController.cs** 파일을 편집 하 고 다음 두 인스턴스 변수를 클래스 `TouchViewController`에 추가 합니다.
+1. **TouchViewController.cs** 파일을 편집 하 고 클래스 `TouchViewController`에 다음 두 개의 인스턴스 변수를 추가 합니다.
 
     ```csharp 
     #region Private Variables
@@ -48,7 +48,7 @@ ms.locfileid: "70767202"
     #endregion
     ```
 
-1. 아래 코드 `TouchesBegan` 에 나와 있는 것 처럼 메서드를 구현 합니다.
+1. 아래 코드에 나와 있는 것 처럼 `TouchesBegan` 메서드를 구현 합니다.
 
     ```csharp 
     public override void TouchesBegan(NSSet touches, UIEvent evt)
@@ -91,13 +91,13 @@ ms.locfileid: "70767202"
     }
     ```
     
-    이 메서드는 `UITouch` 개체를 확인 하 고 존재 하는 경우 터치가 발생 한 위치에 따라 동작을 수행 합니다.
+    이 메서드는 `UITouch` 개체를 확인 하 고 존재 하는 경우 터치가 발생 한 위치에 따라 몇 가지 작업을 수행 하는 방식으로 작동 합니다.
 
-    - _TouchImage 내부_ – 레이블에 텍스트 `Touches Began` 를 표시 하 고 이미지를 변경 합니다.
+    - _TouchImage 내부_ – 텍스트 `Touches Began`를 레이블에 표시 하 고 이미지를 변경 합니다.
     - _DoubleTouchImage 내부_ – 제스처가 두 번 누르기로 면 표시 되는 이미지를 변경 합니다.
-    - _DragImage 내부_ – 터치가 시작 되었음을 나타내는 플래그를 설정 합니다. 이 메서드 `TouchesMoved` 는 다음 단계에서 볼 수 있듯이 `DragImage` 이 플래그를 사용 하 여가 화면 주위에서 이동 해야 하는지 여부를 확인 합니다.
+    - _DragImage 내부_ – 터치가 시작 되었음을 나타내는 플래그를 설정 합니다. `TouchesMoved` 메서드는 다음 단계에서 볼 수 있듯이이 플래그를 사용 하 여 `DragImage` 화면 주위로 이동 해야 하는지 여부를 결정 합니다.
 
-    위의 코드는 개별 접촉만 처리 하며 사용자가 화면에서 손가락을 이동 하는 경우에도 여전히 동작 하지 않습니다. 이동에 응답 하려면 아래 코드 `TouchesMoved` 와 같이을 구현 합니다.
+    위의 코드는 개별 접촉만 처리 하며 사용자가 화면에서 손가락을 이동 하는 경우에도 여전히 동작 하지 않습니다. 이동에 응답 하려면 아래 코드와 같이 `TouchesMoved`을 구현 합니다.
 
     ```csharp 
     public override void TouchesMoved(NSSet touches, UIEvent evt)
@@ -126,11 +126,11 @@ ms.locfileid: "70767202"
     }
     ```
 
-    이 메서드는 `UITouch` 개체를 가져온 다음 터치가 발생 한 위치를 확인 합니다. 에서 `TouchImage`터치가 발생 한 경우 이동 된 텍스트가 화면에 표시 됩니다. 
+    이 메서드는 `UITouch` 개체를 가져온 다음 터치가 발생 한 위치를 확인 합니다. `TouchImage`에서 터치가 발생 한 경우 이동 된 텍스트가 화면에 표시 됩니다. 
 
-    이 true 이면 사용자가 `DragImage` 손가락을 사용 하 여 이동 하 고 있음을 알 수 있습니다. `touchStartedInside` 사용자가 화면 주위 `DragImage` 에서 손가락을 움직이면 코드가 이동 합니다.
+    `touchStartedInside` true 이면 사용자에 게 손가락을 `DragImage` 하 고 이동 하는 것입니다. 사용자가 화면 주위에서 손가락을 움직이면 코드가 `DragImage` 이동 합니다.
 
-1. 사용자가 화면에서 손가락을 뗄 때 또는 iOS가 터치 이벤트를 취소 하는 경우를 처리 해야 합니다. 이를 위해 아래와 같이 `TouchesEnded` 및 `TouchesCancelled` 을 구현 합니다.
+1. 사용자가 화면에서 손가락을 뗄 때 또는 iOS가 터치 이벤트를 취소 하는 경우를 처리 해야 합니다. 이를 위해 아래와 같이 `TouchesEnded` 및 `TouchesCancelled`을 구현 합니다.
 
     ```csharp
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
@@ -162,13 +162,13 @@ ms.locfileid: "70767202"
     }
     ```
 
-    이러한 두 메서드는 플래그를 `touchStartedInside` false로 다시 설정 합니다. `TouchesEnded`화면에도 `TouchesEnded` 표시 됩니다.
+    이러한 두 메서드는 모두 `touchStartedInside` 플래그를 false로 다시 설정 합니다. `TouchesEnded` 화면에 `TouchesEnded`도 표시 됩니다.
 
 1. 이제 터치 샘플 화면이 종료 되었습니다. 다음 스크린샷에 표시 된 것 처럼 각 이미지와 상호 작용할 때 화면이 어떻게 달라 지는 지 확인 합니다.
 
-    [![](ios-touch-walkthrough-images/image4.png "앱 시작 화면")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image5.png "사용자가 단추를 끈 후 화면")](ios-touch-walkthrough-images/image5.png#lightbox)
+    [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples" />
 
@@ -177,12 +177,12 @@ ms.locfileid: "70767202"
 [이전 섹션](#Touch_Samples) 에서는 터치 이벤트를 사용 하 여 화면 주위에서 개체를 끄는 방법을 살펴보았습니다.
 이 섹션에서는 터치 이벤트를 제거 하 고 다음 제스처 인식기를 사용 하는 방법을 보여 줍니다.
 
-- 화면 주위에서 이미지를 끌기 위한입니다.`UIPanGestureRecognizer`
-- 화면 `UITapGestureRecognizer` 에서 두 번 탭 할 때 응답 하는입니다.
+- 화면 주위에서 이미지를 끌기 위한 `UIPanGestureRecognizer`입니다.
+- 화면에서 두 번 탭 하 여 응답할 `UITapGestureRecognizer`입니다.
 
 [시작 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) 를 실행 하 고 **제스처 인식기 샘플** 단추를 클릭 하면 다음과 같은 화면이 표시 됩니다.
 
- [![](ios-touch-walkthrough-images/image6.png "제스처 인식기 샘플 단추를 클릭 하면이 화면이 표시 됩니다.")](ios-touch-walkthrough-images/image6.png#lightbox)
+ [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 제스처 인식기를 구현 하려면 다음 단계를 수행 합니다.
 
@@ -196,7 +196,7 @@ ms.locfileid: "70767202"
     ```
 
     이 인스턴스 변수는 이미지의 이전 위치를 추적 하는 데 필요 합니다.
-팬 제스처 인식기는 화면에서 이미지 `originalImageFrame` 를 다시 그리는 데 필요한 오프셋을 계산 하는 데 값을 사용 합니다.
+화면 제스처 인식기는 `originalImageFrame` 값을 사용 하 여 화면에 이미지를 다시 그리는 데 필요한 오프셋을 계산 합니다.
 
 1. 컨트롤러에 다음 메서드를 추가 합니다.
 
@@ -215,7 +215,7 @@ ms.locfileid: "70767202"
     ```
 
     이 코드는 `UIPanGestureRecognizer` 인스턴스를 인스턴스화하고 뷰에 추가 합니다.
-메서드의 `HandleDrag` 형태로 제스처에 대상을 할당 합니다 .이 메서드는 다음 단계에서 제공 됩니다.
+메서드 형식으로 제스처에 대상을 할당 합니다. `HandleDrag` –이 메서드는 다음 단계에서 제공 됩니다.
 
 1. HandleDrag를 구현 하려면 다음 코드를 컨트롤러에 추가 합니다.
 
@@ -243,7 +243,7 @@ ms.locfileid: "70767202"
 
     위의 코드는 먼저 제스처 인식기의 상태를 확인 한 다음 이미지를 화면 주위로 이동 합니다. 이제이 코드를 사용 하면 컨트롤러에서 화면 주위에 있는 이미지 하나를 끌 수 있습니다.
 
-1. DoubleTouchImage에 `UITapGestureRecognizer` 표시 되는 이미지를 변경 하는를 추가 합니다. `GestureViewController` 컨트롤러에 다음 메서드를 추가 합니다.
+1. DoubleTouchImage에 표시 되는 이미지를 변경 하는 `UITapGestureRecognizer`를 추가 합니다. `GestureViewController` 컨트롤러에 다음 메서드를 추가 합니다.
 
     ```csharp
     private void WireUpTapGestureRecognizer()
@@ -277,9 +277,9 @@ ms.locfileid: "70767202"
     }
     ```
 
-    이 코드는에 대 한 `UIPanGestureRecognizer` 코드와 매우 비슷하지만를 `Action`사용 하는 대상에 대해 대리자를 사용 하는 대신를 사용 합니다. 
+    이 코드는 `UIPanGestureRecognizer`에 대 한 코드와 매우 유사 하지만 대상에 대리자를 사용 하는 대신 `Action`를 사용 합니다. 
 
-1. 방금 추가한 메서드를 호출 하도록 수정 `ViewDidLoad` 해야 합니다. ViewDidLoad을 다음 코드와 같이 변경 합니다.
+1. 방금 추가한 메서드를 호출 하도록 `ViewDidLoad` 수정 해야 합니다. ViewDidLoad을 다음 코드와 같이 변경 합니다.
 
     ```csharp
     public override void ViewDidLoad()
@@ -296,24 +296,24 @@ ms.locfileid: "70767202"
     }
     ```
 
-    의 `originalImageFrame`값을 초기화 하는 것도 좋습니다.
+    `originalImageFrame`값을 초기화 하는 것도 좋습니다.
 
 1. 응용 프로그램을 실행 하 고 두 이미지를 조작 합니다.
 다음 스크린샷은 이러한 상호 작용의 한 가지 예입니다.
     
-    [![](ios-touch-walkthrough-images/image7.png "이 스크린샷은 끌기 상호 작용을 보여 줍니다.")](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"/>
 
 ## <a name="custom-gesture-recognizer"></a>사용자 지정 제스처 인식기
 
-이 섹션에서는 이전 섹션의 개념을 적용 하 여 사용자 지정 제스처 인식기를 작성 합니다. 사용자 지정 제스처 인식기는 하위 `UIGestureRecognizer`클래스를 사용 하 여 사용자가 화면에서 "V"를 그린 다음 비트맵을 전환 하는 경우를 인식 합니다. 다음 스크린샷에는이 화면의 예제가 나와 있습니다.
+이 섹션에서는 이전 섹션의 개념을 적용 하 여 사용자 지정 제스처 인식기를 작성 합니다. 사용자 지정 제스처 인식기는 `UIGestureRecognizer`서브 클래스를 만들고, 사용자가 화면에서 "V"를 그린 다음 비트맵을 전환 하는 경우를 인식 합니다. 다음 스크린샷에는이 화면의 예제가 나와 있습니다.
 
- [![](ios-touch-walkthrough-images/image8.png "사용자가 화면에서 ' V '를 그리면 앱이 인식 합니다.")](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![](ios-touch-walkthrough-images/image8.png "The app will recognize when the user draws a `V` on the screen")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 사용자 지정 제스처 인식기를 만들려면 다음 단계를 따르세요.
 
-1. 라는 `CheckmarkGestureRecognizer`프로젝트에 새 클래스를 추가 하 고 다음 코드와 같이 표시 되도록 합니다.
+1. `CheckmarkGestureRecognizer`라는 프로젝트에 새 클래스를 추가 하 고 다음 코드와 같이 표시 되도록 합니다.
 
     ```csharp
     using System;
@@ -428,10 +428,10 @@ ms.locfileid: "70767202"
     }
     ```
 
-    Reset 메서드는 `State` 속성이 `Recognized` 또는 `Ended`로 변경 될 때 호출 됩니다. 사용자 지정 제스처 인식기에서 내부 상태 집합을 다시 설정 하는 시간입니다.
+    Reset 메서드는 `State` 속성이 `Recognized` 또는 `Ended`으로 변경 될 때 호출 됩니다. 사용자 지정 제스처 인식기에서 내부 상태 집합을 다시 설정 하는 시간입니다.
 이제 클래스는 다음에 사용자가 응용 프로그램과 상호 작용 하 고 제스처를 다시 시도할 준비가 될 때 새로 시작할 수 있습니다.
 
-1. 이제 사용자 지정 제스처 인식기 (`CheckmarkGestureRecognizer`)를 정의 했으므로 **CustomGestureViewController.cs** 파일을 편집 하 고 다음 두 인스턴스 변수를 추가 했습니다.
+1. 이제 **CustomGestureViewController.cs** 파일을 편집 하 여 사용자 지정 제스처 인식기 (`CheckmarkGestureRecognizer`)를 정의 하 고 다음 두 인스턴스 변수를 추가 했습니다.
 
     ```csharp
     #region Private Variables
@@ -469,7 +469,7 @@ ms.locfileid: "70767202"
     }
     ```
 
-1. 다음 `ViewDidLoad` 코드 조각과 같이를 `WireUpCheckmarkGestureRecognizer`호출 하도록 편집 합니다.
+1. 다음 코드 조각과 같이 `WireUpCheckmarkGestureRecognizer`를 호출 하도록 `ViewDidLoad`를 편집 합니다.
 
     ```csharp
     public override void ViewDidLoad()
@@ -483,9 +483,9 @@ ms.locfileid: "70767202"
 
 1. 응용 프로그램을 실행 하 고 화면에서 "V" 그리기를 시도 합니다. 다음 스크린샷에 표시 된 것 처럼 표시 되는 이미지가 변경 됩니다.
     
-    [![](ios-touch-walkthrough-images/image9.png "선택 된 단추")](ios-touch-walkthrough-images/image9.png#lightbox)
+    [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
     
-    [![](ios-touch-walkthrough-images/image10.png "선택 취소 된 단추")](ios-touch-walkthrough-images/image10.png#lightbox)
+    [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 위의 세 섹션에서는 터치 이벤트, 기본 제공 제스처 인식기 또는 사용자 지정 제스처 인식기를 사용 하 여 iOS의 터치 이벤트에 응답 하는 다양 한 방법을 보여 주었습니다.
 

@@ -3,15 +3,15 @@ title: 공유 프로젝트를 사용 하 여 코드 공유
 description: 공유 프로젝트를 사용 하면 다양 한 응용 프로그램 프로젝트에서 참조 하는 공통 코드를 작성할 수 있습니다. 코드는 각 참조하는 프로젝트의 일부로 컴파일되며 플랫폼 특정 기능을 공유 코드 베이스에 통합하는 데 도움이 되는 컴파일러 지시문을 포함할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: ed58b0810d3c4fd3a3dd99cddd16227f9ac30273
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eee76c056d05edccd1e039bc5e4cb8107d1aceb5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739054"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016691"
 ---
 # <a name="shared-projects-code-sharing"></a>공유 프로젝트 코드 공유
 
@@ -33,7 +33,7 @@ _공유 프로젝트를 사용 하면 다양 한 응용 프로그램 프로젝�
 
 공유 프로젝트는 자체적으로 컴파일되지 않으며 다른 프로젝트에 포함 될 수 있는 소스 코드 파일의 그룹 으로만 존재 합니다. 다른 프로젝트에서 참조 하는 경우 코드는 해당 프로젝트의 *일부로* 효과적으로 컴파일됩니다. 공유 프로젝트는 다른 프로젝트 형식 (다른 공유 프로젝트 포함)을 참조할 수 없습니다.
 
-Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 프로젝트를 참조할 수 없습니다. 예를 들어 android 단위 테스트 프로젝트는 Android 응용 프로그램 프로젝트를 참조할 수 없습니다. 이 제한 사항에 대 한 자세한 내용은이 [포럼 토론](http://forums.xamarin.com/discussion/comment/98092/)을 참조 하세요.
+Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 프로젝트를 참조할 수 없습니다. 예를 들어 android 단위 테스트 프로젝트는 Android 응용 프로그램 프로젝트를 참조할 수 없습니다. 이 제한 사항에 대 한 자세한 내용은이 [포럼 토론](https://forums.xamarin.com/discussion/comment/98092/)을 참조 하세요.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -111,7 +111,7 @@ Visual Studio 2017에서 **공유 프로젝트** 템플릿을 선택 하 고 프
 
 ## <a name="shared-project-example"></a>공유 프로젝트 예제
 
-[Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) 예제에서는 공유 프로젝트를 사용 하 여 IOS, Android 및 Windows Phone 응용 프로그램 모두에서 사용 되는 공통 코드를 포함 합니다. @No__t_0 및 `TaskRepository.cs` 소스 코드 파일은 모두 컴파일러 지시문을 제품 (예: `#if __ANDROID__`)를 참조 하는 각 응용 프로그램에 대해 서로 다른 출력을 생성 합니다.
+[Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) 예제에서는 공유 프로젝트를 사용 하 여 IOS, Android 및 Windows Phone 응용 프로그램 모두에서 사용 되는 공통 코드를 포함 합니다. `SQLite.cs` 및 `TaskRepository.cs` 소스 코드 파일은 모두 컴파일러 지시문을 제품 (예: `#if __ANDROID__`)를 참조 하는 각 응용 프로그램에 대해 서로 다른 출력을 생성 합니다.
 
 전체 솔루션 구조는 아래에 표시 됩니다 (각각 Mac용 Visual Studio 및 Visual Studio).
 

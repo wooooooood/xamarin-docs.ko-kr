@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 스토리 보드를 소개 합�
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: cf181cf6c27476b7073073467ef186c352645e39
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 494ac624ac4a77c592f358b68aec4429551a49a8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70768886"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002424"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -139,7 +139,7 @@ if (callHistoryController != null) {
     
     이는 앱 대리자 내의 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 storyboard를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 화면에 표시 되는 창입니다.
 
-3. @No__t_0에서 window 속성을 구현 하는 다음 코드를 사용 하 여 기본 `Window` 메서드를 재정의 합니다.
+3. `AppDelegate`에서 window 속성을 구현 하는 다음 코드를 사용 하 여 기본 `Window` 메서드를 재정의 합니다.
 
     ```csharp
     public override UIWindow Window {
@@ -160,7 +160,7 @@ if (callHistoryController != null) {
     
     이는 앱 대리자 내의 `FinishedLaunching` 메서드에서 초기 뷰 컨트롤러를 인스턴스화하는 것과 동일 합니다. 이 옵션을 설정 하면 응용 프로그램은 창을 인스턴스화하고 (아래 참조), 주 storyboard를 로드 하 고, 스토리 보드의 초기 뷰 컨트롤러 (원본 없는 Segue 옆에 있는 인스턴스)의 인스턴스를 창의 `RootViewController` 속성으로 할당 한 후 화면에 표시 되는 창입니다.
 
-3. @No__t_0에서 window 속성을 구현 하는 다음 코드를 사용 하 여 기본 `Window` 메서드를 재정의 합니다.
+3. `AppDelegate`에서 window 속성을 구현 하는 다음 코드를 사용 하 여 기본 `Window` 메서드를 재정의 합니다.
 
     ```csharp
     public override UIWindow Window {
@@ -209,7 +209,7 @@ IOS Designer를 사용 하 여 스토리 보드를 만들려면 [Hello, Ios 멀�
     
     [![](images/solution-pad.png "Solution Pad")](images/solution-pad.png#lightbox)
 
-6. @No__t_0에서 컨트롤러 프레임의 중심을 클릭 하 여 보기를 선택 합니다. Properties Pad의 보기 아래에서 **배경색** 을 자홍색으로 변경 합니다.
+6. `PinkViewController`에서 컨트롤러 프레임의 중심을 클릭 하 여 보기를 선택 합니다. Properties Pad의 보기 아래에서 **배경색** 을 자홍색으로 변경 합니다.
     
     [![](images/pinkcontroller.png "Set Background color")](images/pinkcontroller.png#lightbox)
 
@@ -266,7 +266,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-클래스 및 메서드를 등록 하는 방법에 대 한 자세한 내용은 [등록자 형식](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) 설명서를 참조 하세요.
+클래스 및 메서드를 등록 하는 방법에 대 한 자세한 내용은 [등록자 형식](https://docs.microsoft.com/xamarin/ios/internals/registrar) 설명서를 참조 하세요.
 
 이 클래스의 마지막 단계는 단추를 연결 하 고 분홍색 보기 컨트롤러에 전환 하는 것입니다. 스토리 보드에서 `PinkViewController`를 인스턴스화합니다. 그런 다음 아래 예제 코드에 표시 된 대로 `PushViewController`를 사용 하 여 push segue를 프로그래밍 합니다.
 
@@ -358,7 +358,7 @@ public partial class MainViewController : UIViewController
     }
     ```
 
-이 코드에서는 segueIdentifier를 `SegueToPink` segue와 일치 시켜 조건을 테스트할 수 있습니다. 이 경우 유효한 암호입니다. 조건에 `true` 반환 되는 경우 Segue는를 수행 하 고 `PinkViewController`를 표시 합니다. @No__t_0 경우 새 뷰 컨트롤러는 표시 되지 않습니다.
+이 코드에서는 segueIdentifier를 `SegueToPink` segue와 일치 시켜 조건을 테스트할 수 있습니다. 이 경우 유효한 암호입니다. 조건에 `true` 반환 되는 경우 Segue는를 수행 하 고 `PinkViewController`를 표시 합니다. `false`경우 새 뷰 컨트롤러는 표시 되지 않습니다.
 
 SegueIdentifier 인수를 ShouldPerformSegue 메서드에 확인 하 여이 뷰 컨트롤러의 모든 Segue에이 방법을 적용할 수 있습니다. 이 경우에는 `SegueToPink` Segue 식별자가 하나만 있습니다.
 

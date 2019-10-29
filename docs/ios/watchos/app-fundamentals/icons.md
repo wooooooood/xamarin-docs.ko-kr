@@ -4,15 +4,15 @@ description: 이 문서에서는 watchOS 응용 프로그램에 필요한 다양
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/26/2018
-ms.openlocfilehash: e0bf9ec1553e6638398695157a11242b9885b168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8c5b8d0417fb7fd1069d2bf6fa5d9887d569453
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768105"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001568"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Xamarin에서 watchOS 아이콘 사용
 
@@ -42,7 +42,7 @@ Ios [응용 프로그램 아이콘 가이드](~/ios/app-fundamentals/images-icon
 
 [Apple Watch settings 앱](~/ios/watchos/app-fundamentals/settings.md) 에서 watch 앱 옆에 표시 되는 문자열은 **iOS 앱의 info.plist**에서 구성 됩니다.
 
-`CFBundleDisplayName` **Info.plist** 에 키와 값이 있는지 확인 합니다 (참고:와는 다르며 둘 다를 가질 수 있음). `CFBundleName`
+Info.plist에 `CFBundleName` 키 및 값이 있는지 확인 **합니다** (참고: `CFBundleDisplayName`와 다르며 둘 다 사용할 수 있음).
 
 ```xml
 <key>CFBundleName</key>
@@ -55,21 +55,21 @@ Ios [응용 프로그램 아이콘 가이드](~/ios/app-fundamentals/images-icon
 
 1. Watch 앱 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **파일 > 새 파일 > 추가 ...를 선택 합니다. iOS > Asset Catalog를 >** 하 여 자산 카탈로그를 프로젝트에 추가 합니다.
 
-    ![](icons-images/newasset.png "프로젝트에 자산 카탈로그 추가")
+    ![](icons-images/newasset.png "Add an asset catalog to the project")
 
 2. **Appicons.appiconset/Contents** 파일을 두 번 클릭 합니다.
 
-    ![](icons-images/xcassets-iconset-sml.png "AppIcon 내용")
+    ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
 
 3. 다음 스크린샷에 표시 된 것 처럼 모든 watchOS 이미지를 추가 합니다.
 
-    [![](icons-images/appicons-sml.png "이 스크린샷에 표시 된 것 처럼 모든 watchOS 이미지를 추가 합니다.")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
 
     필요한 크기에 대 한 [Apple의 아이콘 지침](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) (차원이 화면에도 표시 됨)을 참조 하세요. 이러한 아이콘은 원 안에 렌더링 하도록 자동으로 잘립니다.
 
     아이콘 목록이 다음과 같이 표시 됩니다.
 
-    ![](icons-images/xcassets-complete-sml.png "솔루션 탐색기의 아이콘 목록")
+    ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
 
 4. 자산 카탈로그가 앱에 포함 되도록 하려면 **Watch 앱의 info.plist**에 다음 키와 값을 추가 합니다.
 

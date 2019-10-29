@@ -4,15 +4,15 @@ description: 바인딩 프로세스를 제어 하는 메타 데이터를 편집 
 ms.prod: xamarin
 ms.assetid: 63C5078D-9E42-4F70-AF8C-8CEEA84FB6AF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 37e91070ea10defedbeebdbb06220fabbd2554fc
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04f3720d8684129476c955819390e91330a7800a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756637"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020651"
 ---
 # <a name="customizing-bindings"></a>바인딩 사용자 지정
 
@@ -24,7 +24,7 @@ Xamarin Android는 대부분의 바인딩 프로세스를 자동화 합니다. �
 
 - 누락 된 형식, 난독 처리 된 형식, 중복 이름, 클래스 표시 유형 문제 및 Xamarin.ios 도구에서 해결할 수 없는 기타 상황에 의해 발생 하는 빌드 오류를 해결 합니다. 
 
-- Xamarin.ios를 사용 하 여 android API를의 다른 형식에 바인딩하는 경우 (예 C# : 대부분의 개발자는 Java `int` 상수를 상수에 C# `enum` 매핑하는 것을 선호).
+- Xamarin.ios를 사용 하 여 Android API를의 다른 형식에 바인딩하는 것과 같은 C# 매핑을 변경 합니다. 예를 들어 대부분의 개발자는 Java `int`C# 상수를`enum`상수에 매핑하는 것을 선호 합니다.
 
 - 바인딩하지 않아도 되는 사용 되지 않는 형식을 제거 합니다. 
 

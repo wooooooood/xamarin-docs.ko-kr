@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 6fd6484e547f22f1dc7f27578834b5292d6d2d2a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770017"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73001604"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.ios 문제 해결 팁
 
@@ -47,20 +47,20 @@ ms.locfileid: "70770017"
 이러한 프로그램을 디버깅 하는 데 필요한 정보를 찾기가 어려울 수 있기 때문에 어려울 수 있습니다. 다음은 도움이 될 수 있는 몇 가지 방법입니다.
 
 - Info.plist에 나열 된 macOS 버전이 현재 컴퓨터에 설치 된 macOS 버전과 동일 해야 합니다 **.**
-- 출력을 설명할 수 있는 cocoa에서 스택 추적 또는 출력에 대 한 Mac용 Visual Studio 응용 프로그램 출력 (**보기** -> **패드** -> **응용 프로그램 출력**)을 확인 합니다.
+- 출력을 설명할 수 있는 Cocoa에서의 스택 추적 또는 출력에 대 한 Mac용 Visual Studio 응용 프로그램 출력 (**보기** -> **패드** -> **응용 프로그램 출력**)을 확인 합니다.
 - 명령줄에서 응용 프로그램을 실행 하 고 다음을 사용 하 여 **터미널** 앱의 출력을 확인 합니다.
 
-  `MyApp.app/Contents/MacOS/MyApp`(여기서 `MyApp` 는 응용 프로그램의 이름)
+  `MyApp.app/Contents/MacOS/MyApp` (여기서 `MyApp`는 응용 프로그램의 이름)
 - 명령줄에서 명령에 "MONO_LOG_LEVEL"를 추가 하 여 출력을 늘릴 수 있습니다. 예를 들면 다음과 같습니다.
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
 - 프로세스에 네이티브 디버거 (`lldb`)를 연결 하 여 더 많은 정보를 제공 하는지 확인할 수 있습니다 (유료 라이선스 필요). 예를 들어, 다음을 수행 합니다.
 
-  1. 터미널 `lldb MyApp.app/Contents/MacOS/MyApp` 에을 입력 합니다.
-  2. 터미널 `run` 에을 입력 합니다.
-  3. 터미널 `c` 에을 입력 합니다.
+  1. 터미널에 `lldb MyApp.app/Contents/MacOS/MyApp`을 입력 합니다.
+  2. 터미널에 `run`을 입력 합니다.
+  3. 터미널에 `c`을 입력 합니다.
   4. 디버깅이 완료 되 면 종료 합니다.
-- 마지막 수단으로, `NSApplication.Init` `Main` 메서드 (또는 필요한 경우 다른 위치)에서를 호출 하기 전에 실행 중인 시작 단계를 추적 하기 위해 알려진 위치의 파일에 텍스트를 쓸 수 있습니다.
+- 마지막 수단으로, `Main` 메서드 (또는 필요한 경우 다른 위치)에서 `NSApplication.Init`를 호출 하기 전에, 알려진 위치의 파일에 텍스트를 기록 하 여 실행 중인 시작 단계를 추적할 수 있습니다.
 
 ## <a name="known-issues"></a>알려진 문제
 
@@ -72,13 +72,13 @@ ms.locfileid: "70770017"
 
 [![자격 편집](troubleshooting-images/debug01.png "자격 편집")](troubleshooting-images/debug01-large.png#lightbox)
 
-디버거를 사용 하도록 설정 하는 데 필요한 **송신 네트워크 연결 허용 (클라이언트)** 권한이 디버거를 사용 하도록 설정 하는 것이 일반적입니다. 이 없이 디버그할 수 없으므로 디버그 빌드 전용으로 샌드 박싱된 `CompileEntitlements` 앱에 `msbuild` 대 한 자격에 해당 권한을 자동으로 추가 하도록 대상이 업데이트 되었습니다. 릴리스 빌드에서는 자격 파일에 지정 된 자격을 수정 되지 않은 상태로 사용 해야 합니다.
+디버거를 사용 하도록 설정 하는 데 필요한 **송신 네트워크 연결 허용 (클라이언트)** 권한이 디버거를 사용 하도록 설정 하는 것이 일반적입니다. 이 없이 디버그할 수 없으므로 디버그 빌드 전용으로 샌드 박싱된 앱에 대 한 자격에 해당 권한을 자동으로 추가 하도록 `msbuild`에 대 한 `CompileEntitlements` 대상을 업데이트 했습니다. 릴리스 빌드에서는 자격 파일에 지정 된 자격을 수정 되지 않은 상태로 사용 해야 합니다.
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>NotSupportedException: encoding 437에 사용할 수 있는 데이터가 없습니다.
 
-Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 다음과 같은 오류 메시지가 표시 될 수 있습니다. "NotSupportedException: 응용 프로그램을 컴파일하고 실행 하려고 할 때 "encoding 437"에 사용할 수 있는 데이터가 없습니다. 예를 들어와 `Ionic.Zip.ZipFile`같은 라이브러리는 작업 중에이 예외를 throw 할 수 있습니다.
+Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 앱을 컴파일하고 실행 하려고 할 때 "NotSupportedException: encoding 437에 사용할 수 있는 데이터가 없습니다." 라는 형식의 오류가 발생할 수 있습니다. 예를 들어 `Ionic.Zip.ZipFile`와 같은 라이브러리는 작업 중에이 예외를 throw 할 수 있습니다.
 
-이는 mac 프로젝트에 대 한 옵션을 열고, **Mac 빌드** > 로 이동**하 고,** **서 부** 국제화를 확인 하 여 해결할 수 있습니다.
+이는 Mac 프로젝트에 대 한 옵션을 열고, **Mac 빌드** > **국제화** 로 이동 하 고, **서 부** 국제화를 확인 하 여 해결할 수 있습니다.
 
 [![빌드 옵션 편집](troubleshooting-images/issue01.png "빌드 옵션 편집")](troubleshooting-images/issue01-large.png#lightbox)
 
@@ -102,17 +102,17 @@ Xcode의 새 버전을 처음으로 실행 하면 Xamarin.ios에 필요한 몇 �
 
 [![자격 편집](troubleshooting-images/entitlements02.png "자격 편집")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-기존 xamarin.ios 프로젝트의 경우 **Solution Pad** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고**새 파일** **추가** > ...를 선택 하 여 **info.plist** 파일을 수동으로 만들어야 합니다. 그런 다음, **xamarin.ios** > **빈 속성 목록**을 선택 합니다.
+기존 Xamarin.ios 프로젝트의 경우 **Solution Pad** 에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 > **새 파일** **추가** ...를 선택 하 여 **info.plist** 파일을 수동으로 만들어야 합니다. 그런 다음, **xamarin.ios** > **빈 속성 목록**을 선택 합니다.
 
 ![새 속성 목록 추가](troubleshooting-images/entitlements03.png "새 속성 목록 추가")
 
-이름 `Entitlements` 으로를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 이전에 프로젝트에 자격 파일이 포함 되어 있는 경우 새 파일을 만드는 대신 프로젝트에 추가 하 라는 메시지가 표시 됩니다.
+이름에 `Entitlements`를 입력 하 고 **새로 만들기** 단추를 클릭 합니다. 이전에 프로젝트에 자격 파일이 포함 되어 있는 경우 새 파일을 만드는 대신 프로젝트에 추가 하 라는 메시지가 표시 됩니다.
 
 [![파일 덮어쓰기 확인](troubleshooting-images/entitlements04.png "파일 덮어쓰기 확인")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="community-support-on-the-forums"></a>포럼의 커뮤니티 지원
 
-Xamarin 제품을 사용 하는 개발자 커뮤니티는 놀라운 것 이며 많은 [경험을 통해](http://forums.xamarin.com/categories/mac) 경험과 전문 지식을 공유할 수 있습니다. 또한 Xamarin 엔지니어가 포럼을 주기적으로 방문 하 여 도움을 줍니다.
+Xamarin 제품을 사용 하는 개발자 커뮤니티는 놀라운 것 이며 많은 [경험을 통해](https://forums.xamarin.com/categories/mac) 경험과 전문 지식을 공유할 수 있습니다. 또한 Xamarin 엔지니어가 포럼을 주기적으로 방문 하 여 도움을 줍니다.
 
 <a name="filing-a-bug"/>
 

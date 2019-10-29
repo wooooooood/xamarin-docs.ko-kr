@@ -4,15 +4,15 @@ description: Xamarin Android 앱의 시각적 구조 정의
 ms.prod: xamarin
 ms.assetid: 2BA72B0E-230D-4F98-B4D5-4EFB0D479789
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/18/2017
-ms.openlocfilehash: 60752760415bd416d339cc2a3729075b4fca0d32
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f15aeff8590cf6d82168fd3e39ba6f78d649d2ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764471"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028963"
 ---
 # <a name="xamarinandroid-layouts"></a>Xamarin Android 레이아웃
 
@@ -34,7 +34,7 @@ ms.locfileid: "70764471"
 
     ![예제 Recycler 뷰](images/recycler-view.png)
 
-- [ListView](~/android/user-interface/layouts/list-view/index.md) 는 스크롤 가능한 항목 목록을 만드는 뷰 그룹입니다. 목록 항목은 목록 어댑터를 사용 하 여 목록에 자동으로 삽입 됩니다. 는 `ListView` 메뉴 옵션의 짧은 목록에서 긴 연락처 또는 인터넷 즐겨찾기 목록에 이르기까지 모든 곳에서 사용 되기 때문에 Android 응용 프로그램의 중요 한 UI 구성 요소입니다. 기본 제공 스타일로 서식 지정 하거나 광범위 하 게 사용자 지정할 수 있는 행의 스크롤 목록을 표시 하는 간단한 방법을 제공 합니다. ListView 인스턴스에는 행 보기에 포함 된 데이터를 사용 하 여 피드를 제공 하는 어댑터가 필요 합니다.
+- [ListView](~/android/user-interface/layouts/list-view/index.md) 는 스크롤 가능한 항목 목록을 만드는 뷰 그룹입니다. 목록 항목은 목록 어댑터를 사용 하 여 목록에 자동으로 삽입 됩니다. `ListView`는 메뉴 옵션의 짧은 목록에서 긴 연락처 또는 인터넷 즐겨찾기 목록에 이르기까지 모든 곳에서 사용 되기 때문에 Android 응용 프로그램의 중요 한 UI 구성 요소입니다. 기본 제공 스타일로 서식 지정 하거나 광범위 하 게 사용자 지정할 수 있는 행의 스크롤 목록을 표시 하는 간단한 방법을 제공 합니다. ListView 인스턴스에는 행 보기에 포함 된 데이터를 사용 하 여 피드를 제공 하는 어댑터가 필요 합니다.
 
     ![예제 목록 뷰](images/list-view.png)
 

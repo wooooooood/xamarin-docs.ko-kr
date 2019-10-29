@@ -4,21 +4,21 @@ description: 이 문서는 Xamarin.ios 앱에서 터치, 멀티 터치, 제스�
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: dfd1a3c88d2c9c87c84a18736dd0f4c8c7e79005
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7aac9a3e2a86f5cdcfa2d6ab27961dd83998bb0f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282996"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009356"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Xamarin.ios 앱에서 터치 처리
 
 다른 모바일 플랫폼과 마찬가지로 iOS에는 터치를 처리 하는 다양 한 방법이 있습니다. 멀티 터치를 지원할 수 있습니다. 즉, 화면에서 많은 연락처 지점과 복잡 한 제스처가 있습니다. 이 가이드에서는 몇 가지 개념을 소개 하 고 iOS에서 터치 및 제스처를 구현 하는 particularities 합니다.
 
-iOS는 일련의 `UITouch` `UIResponder` 메서드를 통해 응용 프로그램에서 사용할 수 있도록 하는 클래스의 터치 데이터를 캡슐화 합니다. 응용 프로그램은 및 `UIView` `UIViewController`의 서브 클래스에서 이러한 메서드를 재정의할 수 있으며 둘 `UIResponder`다에서 상속 됩니다.
+iOS는 일련의 `UIResponder` 메서드를 통해 응용 프로그램에서 사용할 수 있는 `UITouch` 클래스의 터치 데이터를 캡슐화 합니다. 응용 프로그램은 `UIView` 및 `UIViewController`의 서브 클래스에서 이러한 메서드를 재정의할 수 있으며, 둘 다 `UIResponder`에서 상속 됩니다.
 
 IOS는 터치 데이터를 캡처할 뿐만 아니라 터치의 패턴을 제스처로 해석 하는 수단을 제공 합니다. 이러한 제스처 인식기를 사용 하 여 이미지 회전 또는 페이지 전환 같은 응용 프로그램 관련 명령을 해석할 수 있습니다. iOS는 최소한의 추가 코드를 사용 하 여 일반적인 제스처를 처리 하는 다양 한 클래스 컬렉션을 제공 합니다.
 

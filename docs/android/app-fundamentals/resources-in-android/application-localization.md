@@ -3,15 +3,15 @@ title: 애플리케이션 지역화 및 문자열 리소스
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 45fe5c783e737fb913730082841e0dfafc555684
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7191c37e81da728dfda21da2eaecc95f7b58a401
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755128"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73025087"
 ---
 # <a name="application-localization-and-string-resources"></a>애플리케이션 지역화 및 문자열 리소스
 
@@ -19,7 +19,7 @@ ms.locfileid: "70755128"
 
 예를 들어 아래 이미지는 세 개의 서로 다른 장치 로캘로 실행 되는 동일한 응용 프로그램을 보여 주지만 각 단추에 표시 되는 텍스트는 각 장치가로 설정 된 로캘과 관련이 있습니다.
 
-[![세 가지 로캘의 예](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
+[3 가지 로캘의![예제](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 이 예제에서 레이아웃 파일의 내용 ( **Main. axml** )은 다음과 같습니다.
 

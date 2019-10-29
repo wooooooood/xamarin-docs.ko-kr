@@ -3,15 +3,15 @@ title: 기존 Mac 앱 업데이트
 description: 이 문서에서는 Classic API에서 Unified API로 Xamarin.ios 앱을 업데이트 하기 위해 따라야 하는 단계를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 43498c0609fdbe6dba59b9ed5926c9c58b72d4db
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 4590e5d987acbb5bd97b41477e6aafa7c17d7778
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280877"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015314"
 ---
 # <a name="updating-existing-mac-apps"></a>기존 Mac 앱 업데이트
 
@@ -29,13 +29,13 @@ Xamarin은 Mac용 Visual Studio 및 Visual Studio 모두에서 Classic API Unifi
 
 ## <a name="automated-updating"></a>자동 업데이트
 
-경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 Mac 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예를 들어:
+경고가 수정 되 면 Mac용 Visual Studio 또는 Visual Studio에서 기존 Mac 프로젝트를 선택 하 고 **프로젝트** 메뉴에서 **xamarin.ios로 마이그레이션 Unified API를** 선택 합니다. 예를 들면,
 
-![](updating-mac-apps-images/beta-tool1.png "프로젝트 메뉴에서 Xamarin.ios Unified API로 마이그레이션을 선택 합니다.")
+![](updating-mac-apps-images/beta-tool1.png "Choose Migrate to Xamarin.Mac Unified API from the Project menu")
 
 자동화 된 마이그레이션을 실행 하기 전에이 경고에 동의 해야 합니다 .이 경우에는 형성 전에 백업/원본 제어를 유지 해야 합니다.
 
-![](updating-mac-apps-images/migrate01.png "자동화 된 마이그레이션을 실행 하기 전에이 경고에 동의 합니다.")
+![](updating-mac-apps-images/migrate01.png "Agree to this warning before the automated migration will run")
 
 Xamarin.ios 응용 프로그램에서 Unified API를 사용할 때 선택할 수 있는 두 가지 대상 프레임 워크 형식이 지원 됩니다.
 
@@ -50,15 +50,15 @@ Xamarin.ios 응용 프로그램에서 Unified API를 사용할 때 선택할 수
 
 경고가 수정 되 면 다음 단계에 따라 새 Unified API을 사용 하도록 Xamarin.ios 앱을 수동으로 업데이트 합니다.
 
-### <a name="1-update-project-type--build-target"></a>1. 빌드 대상 & 프로젝트 형식 업데이트
+### <a name="1-update-project-type--build-target"></a>1. 프로젝트 형식 업데이트 & 빌드 대상
 
-**.Csproj** 파일의 프로젝트 버전을에서 `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` 으로 `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`변경 합니다. 텍스트 편집기에서 **.csproj** 파일을 편집 하 여 `<ProjectTypeGuids>` 요소의 첫 번째 항목을 다음과 같이 바꿉니다.
+**.Csproj** 파일의 프로젝트 버전을 `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23`에서 `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`로 변경 합니다. 텍스트 편집기에서 **.csproj** 파일을 편집 하 여 `<ProjectTypeGuids>` 요소의 첫 번째 항목을 다음과 같이 바꿉니다.
 
-![](updating-mac-apps-images/csproj.png "텍스트 편집기에서 .csproj 파일을 편집 하 여 ProjectTypeGuids 요소의 첫 번째 항목을 다음과 같이 바꿉니다.")
+![](updating-mac-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
 
-표시 된 것 처럼를 `Xamarin.Mac.CSharp.targets` 포함 `Xamarin.Mac.targets` 하는 **Import** 요소를 다음과 같이 변경 합니다.
+`Xamarin.Mac.targets`를 포함 하는 **Import** 요소를 `Xamarin.Mac.CSharp.targets`에 다음과 같이 변경 합니다.
 
-![](updating-mac-apps-images/csproj2.png "표시 된 대로 xamarin.ios를 포함 하는 Import 요소를 Xamarin.ios로 변경 합니다.")
+![](updating-mac-apps-images/csproj2.png "Change the Import element that contains Xamarin.Mac.targets to Xamarin.Mac.CSharp.targets as shown")
 
 `<AssemblyName>` 요소 뒤에 다음 코드 줄을 추가 합니다.
 
@@ -70,33 +70,33 @@ Xamarin.ios 응용 프로그램에서 Unified API를 사용할 때 선택할 수
 
 예제:
 
-![AssemblyName > 요소 뒤에 다음 코드 \<줄을 추가 합니다.](updating-mac-apps-images/csproj3.png)
+![\<AssemblyName > 요소 뒤에 다음 코드 줄을 추가 합니다.](updating-mac-apps-images/csproj3.png)
 
 ### <a name="2-update-project-references"></a>2. 프로젝트 참조 업데이트
 
 Mac 응용 프로그램 프로젝트의 **참조** 노드를 확장 합니다. 처음에는 프로젝트 형식을 변경 했기 때문에이 스크린샷 처럼 * **XamMac** 참조를 표시 합니다.
 
-![](updating-mac-apps-images/references.png "처음에는이 스크린샷에서 유사한 XamMac 참조를 표시 합니다.")
+![](updating-mac-apps-images/references.png "It will initially show a broken- XamMac reference similar to this screenshot")
 
 **XamMac** 항목 옆의 **기어 아이콘** 을 클릭 하 고 **삭제** 를 선택 하 여 끊어진 참조를 제거 합니다.
 
 다음으로 **솔루션 탐색기** 에서 **참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **참조 편집**을 선택 합니다. 참조 목록의 맨 아래로 스크롤하여 **xamarin.ios**외에 검사를 수행 합니다.
 
-![](updating-mac-apps-images/references2.png "참조 목록의 맨 아래로 스크롤하여 Xamarin.ios 외에 검사를 수행 합니다.")
+![](updating-mac-apps-images/references2.png "Scroll to the bottom of the list of references and place a check besides Xamarin.Mac")
 
 **확인** 을 눌러 프로젝트 참조 변경 내용을 저장 합니다.
 
 ### <a name="3-remove-monomac-from-namespaces"></a>3. 네임 스페이스에서 MonoMac 제거
 
-`using` 문에서 네임 스페이스의 **MonoMac** 접두사를 제거 하거나 클래스 이름이 정규화 된 위치 (예: `MonoMac.AppKit`만 `AppKit`이 됨).
+`using` 문에서 네임 스페이스의 **MonoMac** 접두사를 제거 하거나 classname이 정규화 된 모든 위치 (예: `MonoMac.AppKit`만 `AppKit`).
 
 ### <a name="4-remap-types"></a>4. 형식 다시 매핑
 
-이전에 사용 된 일부 형식 (예:를 `System.Drawing.RectangleF` 사용 `CoreGraphics.CGRect` 하는 인스턴스)을 대체 하는 [네이티브 형식이](~/cross-platform/macios/nativetypes.md) 도입 되었습니다. 형식에 대 한 전체 목록은 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 페이지에서 찾을 수 있습니다.
+이전에 사용 된 일부 형식 (예: `CoreGraphics.CGRect` `System.Drawing.RectangleF`의 인스턴스)을 대체 하는 [네이티브 형식이](~/cross-platform/macios/nativetypes.md) 도입 되었습니다. 형식에 대 한 전체 목록은 [네이티브 형식](~/cross-platform/macios/nativetypes.md) 페이지에서 찾을 수 있습니다.
 
-### <a name="5-fix-method-overrides"></a>5. 수정 메서드 재정의
+### <a name="5-fix-method-overrides"></a>5. 메서드 재정의 수정
 
-일부 `AppKit` 메서드는의 시그니처가 새 [네이티브 형식](~/cross-platform/macios/nativetypes.md) (예: `nint`)을 사용 하도록 변경 되었습니다. 사용자 지정 하위 클래스가 이러한 메서드를 재정의 하면 서명이 더 이상 일치 하지 않아 오류가 발생 합니다. 네이티브 형식을 사용 하 여 새 시그니처와 일치 하도록 하위 클래스를 변경 하 여 이러한 메서드 재정의를 수정 합니다. 
+일부 `AppKit` 메서드의 서명이 새 [네이티브 형식](~/cross-platform/macios/nativetypes.md) (예: `nint`)을 사용 하도록 변경 되었습니다. 사용자 지정 하위 클래스가 이러한 메서드를 재정의 하면 서명이 더 이상 일치 하지 않아 오류가 발생 합니다. 네이티브 형식을 사용 하 여 새 시그니처와 일치 하도록 하위 클래스를 변경 하 여 이러한 메서드 재정의를 수정 합니다. 
 
 ## <a name="considerations"></a>고려 사항
 

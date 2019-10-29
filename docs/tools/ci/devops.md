@@ -1,18 +1,18 @@
 ---
 title: Xamarin을 사용한 DevOps
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61293689"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73007440"
 ---
 # <a name="devops-with-xamarin"></a>Xamarin을 사용한 DevOps
 
@@ -26,7 +26,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 
 ## <a name="agile-tools"></a>Agile 도구
 
-참조 링크: **[Agile 도구 및 Agile 프로젝트 관리 하는 방법에 대 한](/azure/devops/boards/backlogs/overview?view=vsts)**
+참조 링크:  **[Agile 도구 및 Agile 프로젝트 관리 정보](/azure/devops/boards/backlogs/overview?view=vsts)**
 
 일반 설명: 모든 계획 및 추적 기능은 프로젝트 형식 및 코딩 언어와 독립적입니다.
 
@@ -63,7 +63,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |[Azure Repos에서 Git 시작하기](/azure/devops/repos/git/gitquickstart?view=vsts&tabs=visual-studio)|예||
 |[코드 품질 향상](/visualstudio/test/improve-code-quality)|예||
 |[코드 변경 내용 및 기타 기록 찾기](/visualstudio/ide/find-code-changes-and-other-history-with-codelens)|예|런타임까지 구현이 확인되지 않는 플랫폼 특정 경계를 넘는 경우는 제외됩니다.|
-|[코드 맵을 사용하여 응용 프로그램 디버그](/visualstudio/modeling/use-code-maps-to-debug-your-applications)|예||
+|[코드 맵을 사용하여 애플리케이션 디버그](/visualstudio/modeling/use-code-maps-to-debug-your-applications)|예||
 
 ## <a name="build"></a>빌드
 
@@ -97,12 +97,12 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |[관리 코드 품질 분석](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|예||
 |[코드 복제본 검색을 사용하여 중복 코드 찾기](https://msdn.microsoft.com/library/hh205279.aspx)|예||
 |[관리 코드의 복잡성 및 유지 관리 용이성 측정](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|예||
-|[성능 탐색기](/visualstudio/profiling/performance-explorer)|아니요|사용 된 [Xamarin Profiler](/xamarin/tools/profiler/) Mac 용 Visual Studio를 통해 대신 합니다. Xamarin 프로파일러는 현재 미리 보기로 제공되며 아직 Windows 대상에서 작동하지 않습니다.|
+|[성능 탐색기](/visualstudio/profiling/performance-explorer)|아니요|대신 Mac용 Visual Studio를 통해 [Xamarin Profiler](/xamarin/tools/profiler/) 을 사용 합니다. Xamarin 프로파일러는 현재 미리 보기로 제공되며 아직 Windows 대상에서 작동하지 않습니다.|
 |[.NET Framework 메모리 문제 분석](https://msdn.microsoft.com/library/dn342825.aspx)|아니요|Visual Studio 도구에는 프로파일링을 위한 모노 프레임워크에 대한 후크가 없습니다.|
 
 ## <a name="release-management"></a>릴리스 관리
 
-참조 링크: **[빌드 및 Azure 파이프라인 및 TFS의 릴리스](/azure/devops/pipelines/overview?view=vsts)**
+참조 링크: **[Azure Pipelines 및 TFS에서 빌드 및 릴리스](/azure/devops/pipelines/overview?view=vsts)**
 
 |기능|Xamarin에서 지원 여부|추가 설명|
 |-------------|----------------------------|-------------------------|

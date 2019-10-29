@@ -3,15 +3,15 @@ title: Objective-C 바인딩
 description: 이 문서는 목표-C 코드에 대 한 바인딩을 만드는 C# 방법을 설명 하는 다양 한 가이드의 링크를 제공 하 여 개발자가 Xamarin 응용 프로그램에서 선반 드 라이브러리를 사용할 수 있도록 합니다.
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: d48245ac6939a7b1a1528a7b42ec4a701f062a95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765763"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016274"
 ---
 # <a name="binding-objective-c"></a>Objective-C 바인딩
 

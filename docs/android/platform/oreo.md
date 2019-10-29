@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
 ms.custom: video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/06/2018
-ms.openlocfilehash: 31e4073df70ced0cc9729c6dc292500264ad7fce
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 56430f8c4988c16a31f9806b0ffb8b6355d6340b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249948"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019993"
 ---
 # <a name="oreo-features"></a>Oreo 기능
 
@@ -29,11 +29,11 @@ _Android를 사용 하 여 최신 버전의 Android 용 앱을 개발 하는 방
 
 Xamarin 기반 앱에서 Android Oreo 기능을 사용 하려면 다음이 필요 합니다.
 
-- **Visual Studio** &ndash; Windows를 사용 하는 경우 Visual Studio 버전 15.5 이상이 필요 합니다.  Mac을 사용 하는 경우 Mac용 Visual Studio 버전 7.2.0가 필요 합니다.
+- **Visual studio** &ndash; Windows를 사용 하는 경우 visual studio 버전 15.5 이상이 필요 합니다.  Mac을 사용 하는 경우 Mac용 Visual Studio 버전 7.2.0가 필요 합니다.
 
-- Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 8.0 이상 버전을 설치 하 고 구성 해야 합니다.
+- Visual Studio를 사용 하 여 xamarin **android** &ndash; Xamarin. android 8.0 이상 버전을 설치 하 고 구성 해야 합니다.
 
-- **Android SDK** &ndash; Android SDK Manager를 통해 Android SDK 8.0 (API 26) 이상을 설치 해야 합니다.
+- Android SDK Manager를 통해 **Android SDK** &ndash; Android SDK 8.0 (API 26) 이상을 설치 해야 합니다.
 
 ## <a name="getting-started"></a>시작
 
@@ -83,11 +83,11 @@ Xamarin. Android 8.0를 사용 하 여 프로젝트를 만들려면 먼저 Xamar
 
 2. **Android 8.0-Oreo** 패키지를 설치 합니다. Android SDK 에뮬레이터를 사용 하는 경우 필요한 **x86** 시스템 이미지를 포함 해야 합니다.
 
-    [![Android SDK Manager에서 Android 8.0 패키지 선택](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
+    [Android SDK Manager에서 Android 8.0 패키지를 선택![](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. **Android SDK Tools 26.0.2** 이상, **Android SDK Platform tools 26.0.0** 이상을 설치 하 고 **빌드-도구 26.0.0** 이상 버전을 Android SDK 합니다.
 
-    [![Android SDK 관리자에서 Android SDK Tools 26 선택](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
+    [Android SDK Manager에서 Android SDK Tools 26![선택](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -95,11 +95,11 @@ Xamarin. Android 8.0를 사용 하 여 프로젝트를 만들려면 먼저 Xamar
 
 2. **Android 8.0-Oreo** SDK 패키지를 설치 합니다. Android SDK 에뮬레이터를 사용 하는 경우 필요한 **x86** 시스템 이미지를 포함 해야 합니다.
 
-    [![SDK Manager에서 Android 8.0 패키지 선택](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
+    [SDK Manager에서 Android 8.0 패키지를 선택![](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. **Android SDK Tools 26.0.2** 이상, **Android SDK Platform tools 26.0.0** 이상을 설치 하 고 **빌드-도구 26.0.0** 이상 버전을 Android SDK 합니다.
 
-    [![SDK Manager에서 Android SDK Tools 26 선택](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
+    [SDK Manager에서 Android SDK Tools 26![선택](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
@@ -123,7 +123,7 @@ Android SDK Tools 26.0 이상을 설치한 후 기본 Google GUI 기반 AVD 관�
 
 -----
 
-Google에서 더 이상 API 26.0 이상을 지 원하는 독립 실행형 GUI AVD 관리자를 제공 하지 않기 때문에이 메시지가 표시 됩니다. Android 8.0 Oreo의 경우 Xamarin Android Emulator Manager 또는 명령줄 `avdmanager` 도구를 사용 하 여 android Oreo에 대 한 가상 장치를 만들어야 합니다.
+Google에서 더 이상 API 26.0 이상을 지 원하는 독립 실행형 GUI AVD 관리자를 제공 하지 않기 때문에이 메시지가 표시 됩니다. Android 8.0 Oreo의 경우 Xamarin Android Emulator Manager 또는 명령줄 `avdmanager` 도구를 사용 하 여 Android Oreo에 대 한 가상 장치를 만들어야 합니다.
 
 Android Device Manager를 사용 하 여 가상 장치를 만들고 관리 하려면 [Android Device Manager를 사용 하 여 가상 장치 관리](~/android/get-started/installation/android-emulator/device-manager.md)를 참조 하세요.
 Android Device Manager 없이 가상 장치를 만들려면 다음 섹션의 단계를 수행 합니다.
@@ -134,13 +134,13 @@ Android Device Manager 없이 가상 장치를 만들려면 다음 섹션의 단
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. 명령 프롬프트 창을 열고를 컴퓨터의 `JAVA_HOME` Java SDK 위치로 설정 합니다. 일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
+1. 명령 프롬프트 창을 열고 `JAVA_HOME`를 컴퓨터의 Java SDK 위치로 설정 합니다. 일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
 
     ```cmd
     setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     ```
 
-2. Android SDK `bin` 폴더의 위치 `PATH`를에 추가 합니다.
+2. Android SDK `bin` 폴더의 위치를 `PATH`에 추가 합니다.
     일반적인 Xamarin 설치의 경우 다음 명령을 사용할 수 있습니다.
 
     ```cmd
@@ -157,7 +157,7 @@ Android Device Manager 없이 가상 장치를 만들려면 다음 섹션의 단
 
 **Avdmanager** 를 통해 가상 장치를 만들면 장치 풀 다운 메뉴에 포함 됩니다.
 
-[![새 AVD가 장치 풀 다운 메뉴에 추가 됨](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
+[새 AVD를 장치 풀 다운 메뉴에 추가![](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -177,7 +177,7 @@ Android Device Manager 없이 가상 장치를 만들려면 다음 섹션의 단
 
 **Avdmanager** 를 사용 하 여 가상 장치를 만든 후에는 장치 풀 다운 메뉴에 포함 됩니다.
 
-[![새 AVD가 장치 풀 다운 메뉴에 추가 됨](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
+[새 AVD를 장치 풀 다운 메뉴에 추가![](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -200,9 +200,9 @@ Android Oreo에는 알림 채널, 알림 배지, XML의 사용자 지정 글꼴,
 
 알림 배지는 다음 스크린샷에 표시 된 것 처럼 앱 아이콘 위에 표시 되는 작은 점입니다.
 
-[![앱 아이콘에 대 한 알림 배지 예제](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
+[앱 아이콘에 대 한 예제 알림 배지![](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
-이러한 점은 해당 앱 아이콘 &ndash; 에 연결 된 앱에서 하나 이상의 알림 채널에 대 한 새 알림이 있음을 나타내며, 사용자가 아직 해제 하거나 처리 하지 않은 알림입니다. 사용자는 경고 배지와 연결 된 알림을 한눈에 볼 수 있도록 아이콘을 길게 누를 수 있습니다 .이는 appeaars 하는 긴 누름 메뉴에서 알림을 해제 하거나 동작을 수행 합니다.
+이러한 점은 해당 앱 아이콘에 연결 된 앱에 하나 이상의 알림 채널에 대 한 새 알림이 있음을 나타내며,이는 사용자가 아직 해제 하거나 처리 하지 않은 알림 &ndash;입니다. 사용자는 경고 배지와 연결 된 알림을 한눈에 볼 수 있도록 아이콘을 길게 누를 수 있습니다 .이는 appeaars 하는 긴 누름 메뉴에서 알림을 해제 하거나 동작을 수행 합니다.
 
 알림 배지에 대 한 자세한 내용은 Android 개발자 [알림 배지](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges) 항목을 참조 하세요.
 
@@ -214,9 +214,9 @@ Android Oreo는 *XML의 글꼴*을 도입 하 여 사용자 지정 글꼴을 리
 
 2. 글꼴 파일 (예: **.ttf** 및 **. m f f** 파일)을 **리소스/글꼴**에 복사 합니다. 
 
-3. 필요한 경우 Android 파일 명명 규칙을 준수 하도록 각 글꼴 파일의 이름을 바꿉니다 (즉, 파일 이름에 소문자 *a-z*, *0-9*및 밑줄만 사용). 예를 들어 글꼴 파일 `Pacifico-Regular.ttf` 의 이름을과 같은 `pacifico.ttf`이름으로 바꿀 수 있습니다.
+3. 필요한 경우 Android 파일 명명 규칙을 준수 하도록 각 글꼴 파일의 이름을 바꿉니다 (즉, 파일 이름에 소문자 *a-z*, *0-9*및 밑줄만 사용). 예를 들어 글꼴 파일 `Pacifico-Regular.ttf` `pacifico.ttf`같은 이름으로 바꿀 수 있습니다.
 
-4. 레이아웃 XML에서 새 `android:fontFamily` 특성을 사용 하 여 사용자 지정 글꼴을 적용 합니다. 예를 들어 다음 `TextView` 선언은 추가 된 **pacifico. .ttf** font 리소스를 사용 합니다.
+4. 레이아웃 XML에서 new `android:fontFamily` 특성을 사용 하 여 사용자 지정 글꼴을 적용 합니다. 예를 들어 다음 `TextView` 선언은 추가 된 **pacifico .ttf** font 리소스를 사용 합니다.
 
    ```xml
    <TextView
@@ -232,7 +232,7 @@ Android Oreo는 *XML의 글꼴*을 도입 하 여 사용자 지정 글꼴을 리
 
 Android Oreo부터 앱은 APK에 번들을 포함 하지 않고 공급자에서 글꼴을 요청할 수 있습니다. 필요한 경우에만 글꼴이 네트워크에서 다운로드 됩니다. 이 기능은 APK 크기를 줄이고 휴대폰 메모리와 셀룰러 데이터 사용량을 절약 합니다. Android 지원 라이브러리 26 패키지를 설치 하 여 Android API 버전 14 이상에서이 기능을 사용할 수도 있습니다.
 
-앱에 글꼴이 필요한 경우 다운로드할 글꼴을 지정 하 `FontsRequest` 여 개체를 만든 다음이 `FontsContract` 를 메서드에 전달 하 여 글꼴을 다운로드 합니다. 다음 단계에서는 글꼴 다운로드 프로세스에 대해 자세히 설명 합니다.
+앱에 글꼴이 필요한 경우 다운로드할 글꼴을 지정 하 `FontsRequest` 개체를 만든 다음 `FontsContract` 메서드에 전달 하 여 글꼴을 다운로드 합니다. 다음 단계에서는 글꼴 다운로드 프로세스에 대해 자세히 설명 합니다.
 
 1. [글꼴 요청](https://developer.android.com/reference/android/provider/FontRequest.html) 개체를 인스턴스화합니다. 
 
@@ -244,7 +244,7 @@ Android Oreo부터 앱은 APK에 번들을 포함 하지 않고 공급자에서 
 
 5. [FontsContract](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) 메서드를 호출 하 여 글꼴 공급자에서 글꼴을 검색 합니다. 
 
-`RequestFonts` 메서드를 호출 하면 먼저 해당 글꼴이에 `RequestFont`대해 이전 호출에서 해당 글꼴이 로컬로 캐시 되는지 확인 합니다. 캐시 되지 않은 경우 글꼴 공급자를 호출 하 고, 글꼴을 비동기적으로 검색 한 다음, 메서드를 `OnTypeFaceRetrieved` 호출 하 여 결과를 다시 앱에 전달 합니다.
+`RequestFonts` 메서드를 호출 하면 먼저 글꼴이 로컬로 캐시 되었는지 (`RequestFont`에 대 한 이전 호출에서) 확인 합니다. 캐시 되지 않은 경우 글꼴 공급자를 호출 하 고, 글꼴을 비동기적으로 검색 한 다음 `OnTypeFaceRetrieved` 메서드를 호출 하 여 결과를 다시 앱에 전달 합니다.
 
 [다운로드 가능한 글꼴](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts) 샘플에서는 Android Oreo에 도입 된 다운로드 가능한 글꼴 기능을 사용 하는 방법을 보여 줍니다. 
 
@@ -268,11 +268,11 @@ Android Oreo를 사용 하면 다른 활동의 화면을 겹치게 하는 활동
 android:supportsPictureInPicture
 ```
 
-PIP 모드에 있을 때 활동이 동작 하는 방식을 지정 하려면 새 PIP [Inpip params](https://developer.android.com/reference/android/app/PictureInPictureParams.html) 개체를 사용 합니다. `PictureInPictureParams`PIP 모드에서 활동을 초기화 하 고 업데이트 하는 데 사용 하는 매개 변수 집합을 나타냅니다 (예: 활동의 기본 가로 세로 비율). Android Oreo에서에 `Activity` 추가 된 새로운 PIP 메서드는 다음과 같습니다.
+PIP 모드에 있을 때 활동이 동작 하는 방식을 지정 하려면 새 PIP [Inpip params](https://developer.android.com/reference/android/app/PictureInPictureParams.html) 개체를 사용 합니다. `PictureInPictureParams`은 PIP 모드에서 활동을 초기화 하 고 업데이트 하는 데 사용 하는 매개 변수 집합을 나타냅니다 (예: 활동의 기본 가로 세로 비율). 다음 새 PIP 메서드는 Android Oreo의 `Activity`에 추가 되었습니다.
 
-- [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29) &ndash; 활동을 PIP 모드로 전환 합니다. 작업은 화면의 모퉁이에 배치 되 고 나머지 화면은 화면에 있던 이전 작업으로 채워집니다.
+- [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29) &ndash;는 활동을 PIP 모드로 전환 합니다. 작업은 화면의 모퉁이에 배치 되 고 나머지 화면은 화면에 있던 이전 작업으로 채워집니다.
 
-- [Setpin, Params 매개 변수](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; 활동의 PIP 구성 설정을 업데이트 합니다 (예: 가로 세로 비율 변경).
+- [Setpip inpip params](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29) &ndash; 작업의 PIP 구성 설정 (예: 가로 세로 비율 변경)을 업데이트 합니다.
 
 그림 [샘플에서는](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture) Oreo에 도입 된 핸드헬드 장치에 대 한 PiP (그림-사진) 모드의 기본 사용법을 보여 줍니다. 이 샘플은 표시 모드나 기타 작업 간을 전환 하는 동안 중단 없이 계속 되는 비디오를 재생 합니다.
 
@@ -288,9 +288,9 @@ Android Oreo에는 기존 앱의 기능에 영향을 줄 수 있는 다양 한 �
 
 사용자 환경을 개선 하기 위해 Android Oreo는 백그라운드에서 실행 하는 동안 수행할 수 있는 앱에 대 한 제한을 적용 합니다. 예를 들어 사용자가 비디오를 시청 하거나 게임을 재생 하는 경우 백그라운드에서 실행 중인 앱이 포그라운드에서 실행 되는 비디오 집약적 앱의 성능을 저하 시킬 수 있습니다. 따라서 Android Oreo는 사용자와 직접 상호 작용 하지 않는 앱에 다음과 같은 제한 사항을 적용 합니다.
 
-1. **백그라운드 서비스 제한 사항** &ndash; 앱이 백그라운드에서 실행 되는 경우에도 서비스를 만들고 사용할 수 있는 몇 분의 창이 있습니다. 이 창의 끝에 Android는 앱의 백그라운드 서비스를 중지 하 고 _유휴_상태로 처리 합니다.
+1. **백그라운드 서비스 제한은** 앱이 백그라운드에서 실행 되는 경우에 &ndash; 서비스를 만들고 사용할 수 있는 몇 분의 창이 있습니다. 이 창의 끝에 Android는 앱의 백그라운드 서비스를 중지 하 고 _유휴_상태로 처리 합니다.
 
-2. **브로드캐스트 제한 사항** &ndash; Android 7.0 (API 25) 앱이 수신 하도록 등록 하는 브로드캐스트에 대 한 제한 사항이 있습니다. Android Oreo는 이러한 제한 사항을 보다 엄격 하 게 만듭니다. 예를 들어 Android Oreo apps는 더 이상 매니페스트에 암시적 브로드캐스트에 대 한 브로드캐스트 수신기를 등록할 수 없습니다.
+2. 앱이 수신 하도록 등록 하는 브로드캐스트에는 Android 7.0 (API 25)의 &ndash; **브로드캐스트** 제한 사항이 적용 됩니다. Android Oreo는 이러한 제한 사항을 보다 엄격 하 게 만듭니다. 예를 들어 Android Oreo apps는 더 이상 매니페스트에 암시적 브로드캐스트에 대 한 브로드캐스트 수신기를 등록할 수 없습니다.
 
 새 백그라운드 실행 제한에 대 한 자세한 내용은 Android Developer [Background Execution limits](https://developer.android.com/about/versions/oreo/background.html) 항목을 참조 하세요.
 
@@ -300,9 +300,9 @@ Android Oreo 이상을 대상으로 하는 앱은 해당 하는 경우 다음 �
 
 - Android Oreo는 개별 알림의 우선 순위를 설정 하는 기능을 지지 합니다. 대신 알림 채널을 만들 때 권장 되는 중요도 수준을 설정 합니다. 알림 채널에 할당 하는 중요도 수준은 게시 하는 모든 알림 메시지에 적용 됩니다.
 
-- Android Oreo를 대상으로 하 `PendingIntent.GetService()` 는 앱의 경우 백그라운드에서 시작 된 서비스에 적용 되는 새로운 제한으로 인해가 작동 하지 않습니다. Android Oreo를 대상으로 하는 경우에는 대신 [pendingintent](xref:Android.App.PendingIntent.GetBroadcast*)를 사용 해야 합니다.  
+- Android Oreo를 대상으로 하는 앱의 경우 백그라운드에서 시작 된 서비스에 적용 되는 새로운 제한으로 인해 `PendingIntent.GetService()` 작동 하지 않습니다. Android Oreo를 대상으로 하는 경우에는 대신 [Pendingintent](xref:Android.App.PendingIntent.GetBroadcast*) 를 사용 해야 합니다.  
 
-## <a name="sample-code"></a>예제 코드
+## <a name="sample-code"></a>샘플 코드
 
 Android Oreo 기능을 활용 하는 방법을 보여 주는 몇 가지 Xamarin Android 샘플을 사용할 수 있습니다.
 
@@ -316,7 +316,7 @@ Android Oreo 기능을 활용 하는 방법을 보여 주는 몇 가지 Xamarin 
 
 - [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat) 는 EmojiCompat 지원 라이브러리의 사용법을 보여 줍니다. 이 라이브러리를 사용 하 여 앱이 누락 된 tofu 문자를 "" 문자로 표시 하지 않도록 방지할 수 있습니다.
 
-- [위치 업데이트 보류 중 의도](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) 는를 `PendingIntent`사용 하 여 장치 위치에 대 한 업데이트를 가져오는 location API의 사용법을 보여 줍니다.
+- [보류 중인 위치 업데이트](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent) 는 위치 API를 사용 하 여 `PendingIntent`를 사용 하 여 장치의 위치에 대 한 업데이트를 가져오는 방법을 보여 줍니다.
 
 - [위치 업데이트 포그라운드 서비스](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice) 는 location API를 사용 하 여 바인딩된 및 시작 된 포그라운드 서비스를 사용 하 여 장치 위치에 대 한 업데이트를 가져오는 방법을 보여 줍니다.
 

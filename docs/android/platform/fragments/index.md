@@ -4,15 +4,15 @@ description: Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 �
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: f25c587f6a51a6b196f201c1b5060ff401f8cad2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5d243429fe4f61768568a634b205055c1ad94297
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761871"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020260"
 ---
 # <a name="fragments"></a>조각
 
@@ -28,17 +28,17 @@ _Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 다양 한 �
 
 예를 들어 아래 이미지는 단일 응용 프로그램이 다양 한 장치 폼 팩터에서 조각을 사용 하는 방법을 보여 줍니다.
 
-[![태블릿 및 송수화기에서 조각을 사용 하는 방법에 대 한 다이어그램](images/00.png)](images/00.png#lightbox)
+[태블릿 및 송수화기에서 조각을 사용 하는 방법에 대 한![다이어그램](images/00.png)](images/00.png#lightbox)
 
 *조각 a* 에는 목록이 포함 되 고, *조각 B* 는 해당 목록에서 선택한 항목에 대 한 세부 정보를 포함 합니다. 응용 프로그램을 태블릿에서 실행 하는 경우 동일한 활동에 두 조각이 모두 표시 될 수 있습니다. 동일한 응용 프로그램이 송수화기에서 실행 되는 경우 (더 작은 화면 크기) 조각은 두 개의 개별 작업에서 호스팅됩니다. 조각 A와 조각 B는 두 폼 팩터에서 동일 하지만이를 호스트 하는 활동은 서로 다릅니다.
 
-활동을 조정 하 고 이러한 모든 조각을 관리 하기 위해 Android에서는 *FragmentManager*이라는 새 클래스를 도입 했습니다. 각 활동에는 `FragmentManager` 호스트 된 조각을 추가, 삭제 및 찾기 위한 자체 인스턴스가 있습니다. 다음 다이어그램에서는 조각과 활동 간의 관계를 보여 줍니다.
+활동을 조정 하 고 이러한 모든 조각을 관리 하기 위해 Android에서는 *FragmentManager*이라는 새 클래스를 도입 했습니다. 각 활동에는 호스트 된 조각을 추가, 삭제 및 찾기 위한 자체 `FragmentManager` 인스턴스가 있습니다. 다음 다이어그램에서는 조각과 활동 간의 관계를 보여 줍니다.
 
-[![활동, 조각 관리자 및 조각 간의 관계를 보여 주는 다이어그램](images/01.png)](images/01.png#lightbox)
+[활동, 조각 관리자 및 조각 간의 관계를 보여 주는![다이어그램](images/01.png)](images/01.png#lightbox)
 
 일부 측면에서 조각은 복합 컨트롤이 나 미니 활동으로 간주할 수 있습니다. UI를 다시 사용할 수 있는 모듈에 번들로 묶어 활동의 개발자가 독립적으로 사용할 수 있습니다. 조각은 활동 처럼 뷰 계층 구조를 포함 하지만 활동과 달리 화면에서 공유할 수 있습니다. 조각은 자체 수명 주기를 포함 한다는 점에서 조각과 다릅니다. 뷰는 그렇지 않습니다.
 
-활동은 하나 이상의 조각에 대 한 호스트 이지만 직접 조각을 인식 하지 못합니다. 마찬가지로, 조각은 호스팅 활동의 다른 조각을 직접 인식 하지 못합니다. 그러나 조각 및 활동은 해당 활동 `FragmentManager` 에서을 인식 합니다. 를 사용 `FragmentManager`하 여 작업 또는 조각이 조각의 특정 인스턴스에 대 한 참조를 가져온 다음 해당 인스턴스에서 메서드를 호출할 수 있습니다. 이러한 방식으로 활동 또는 조각은 다른 조각과 통신 하 고 상호 작용할 수 있습니다.
+활동은 하나 이상의 조각에 대 한 호스트 이지만 직접 조각을 인식 하지 못합니다. 마찬가지로, 조각은 호스팅 활동의 다른 조각을 직접 인식 하지 못합니다. 그러나 조각과 활동은 활동의 `FragmentManager`을 인식 합니다. `FragmentManager`를 사용 하 여 작업 또는 조각이 조각의 특정 인스턴스에 대 한 참조를 가져온 다음 해당 인스턴스에서 메서드를 호출할 수 있습니다. 이러한 방식으로 활동 또는 조각은 다른 조각과 통신 하 고 상호 작용할 수 있습니다.
 
 이 가이드에는 다음을 포함 하 여 조각 사용 방법에 대 한 포괄적인 검사가 포함 되어 있습니다.
 
@@ -50,11 +50,11 @@ _Android 3.0에는 휴대폰 및 태블릿에서 찾을 수 있는 다양 한 �
 
 다음 스크린샷에 표시 된 것 처럼 API 수준 11 (Android 3.0)부터 시작 하는 Android SDK에서 조각을 사용할 수 있습니다.
 
-[![Android SDK Manager에서 API 수준 선택](images/02.png)](images/02.png#lightbox)
+[Android SDK 관리자에서 API 수준을 선택할![](images/02.png)](images/02.png#lightbox)
 
 조각은 Xamarin Android 4.0 이상에서 사용할 수 있습니다. Xamarin Android 응용 프로그램은 조각을 사용 하기 위해 최소한 API 수준 11 (Android 3.0) 이상을 대상으로 해야 합니다. 다음과 같이 프로젝트 속성에서 대상 프레임 워크를 설정할 수 있습니다.
 
-[![프로젝트 옵션에서 대상 프레임 워크 API 수준 설정](images/03-sml.png)](images/03.png#lightbox)
+[프로젝트 옵션에서 대상 프레임 워크 API 수준을 설정![](images/03-sml.png)](images/03.png#lightbox)
 
 Android 지원 패키지 및 Xamarin Android 4.2 이상을 사용 하 여 이전 버전의 Android에서 조각을 사용할 수 있습니다. 이 작업을 수행 하는 방법은이 섹션의 문서에 자세히 설명 되어 있습니다.
 
@@ -63,4 +63,3 @@ Android 지원 패키지 및 Xamarin Android 4.2 이상을 사용 하 여 이전
 - [Honeycomb 갤러리 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [조각](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [지원 패키지](https://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV 웹 세미나: 조각 소개](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

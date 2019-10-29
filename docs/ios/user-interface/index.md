@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 앱에서 사용자 인터페이스
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 6715c075c2686eec023948b070a3b49dea779470
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8e52dbce6abd30633ffffa22e24d471fef0500ee
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287113"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003557"
 ---
 # <a name="building-user-interfaces-with-xamarinios"></a>Xamarin.ios를 사용 하 여 사용자 인터페이스 빌드
 

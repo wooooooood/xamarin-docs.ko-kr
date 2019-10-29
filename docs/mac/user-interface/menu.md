@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 메뉴를
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7a19b2e70ff18ae43cb65804c6c125890fa1851b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 7cca5be2ea13deb17b27e5452df389a998c6eb09
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770983"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026179"
 ---
 # <a name="menus-in-xamarinmac"></a>Xamarin.ios의 메뉴
 
@@ -129,7 +129,7 @@ UI 항목 또는 코드를 추가 하기 전에 새로 만든 Xamarin.ios 응용
 
 위에서 설명한 것 처럼 [창 또는 뷰 컨트롤러 사용자 지정 작업](#Working-with-Custom-Window-Actions)에 바인딩된 모든 메뉴 항목에 대해 `validateMenuItem:` 작업을 추가 하 고 메뉴 항목을 수동으로 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
-다음 예제에서는 `Tag` 속성을 사용 하 여 `NSTextView`에서 선택한 텍스트의 상태를 기준으로 `validateMenuItem:` 작업에 사용 하거나 사용 하지 않을 메뉴 항목의 형식을 결정 합니다. @No__t_0 속성은 각 메뉴 항목에 대해 Interface Builder에 설정 되어 있습니다.
+다음 예제에서는 `Tag` 속성을 사용 하 여 `NSTextView`에서 선택한 텍스트의 상태를 기준으로 `validateMenuItem:` 작업에 사용 하거나 사용 하지 않을 메뉴 항목의 형식을 결정 합니다. `Tag` 속성은 각 메뉴 항목에 대해 Interface Builder에 설정 되어 있습니다.
 
 ![Tag 속성 설정](menu-images/validate01.png "Tag 속성 설정")
 
@@ -174,7 +174,7 @@ public bool ValidateMenuItem (NSMenuItem item) {
 
 ![앱 대리자 선택](menu-images/appmenu08.png "앱 대리자 선택")
 
-@No__t_0 메서드 아래에 다음 코드를 추가 합니다.
+`DidFinishLaunching` 메서드 아래에 다음 코드를 추가 합니다.
 
 ```csharp
 [Export ("openDocument:")]
@@ -207,7 +207,7 @@ void OpenDialog (NSObject sender)
 
 ![예제 대화 상자 메시지](menu-images/appmenu11.png "예제 대화 상자 메시지")
 
-여기에서 키 줄은 `[Export ("openDocument:")]` 되었으며,이 **AppDelegate** 에 `openDocument:` 작업에 응답 하는 메서드 `void OpenDialog (NSObject sender)` 있음을 `NSMenu`에 게 알립니다. 위에서 기억할 경우 기본적으로 Interface Builder에서 열기 메뉴 항목이 자동으로이 작업에 **연결** 됩니다.
+여기에서 키 줄은 `[Export ("openDocument:")]`되었으며,이 **AppDelegate** 에 `openDocument:` 작업에 응답 하는 메서드 `void OpenDialog (NSObject sender)` 있음을 `NSMenu`에 게 알립니다. 위에서 기억할 경우 기본적으로 Interface Builder에서 열기 메뉴 항목이 자동으로이 작업에 **연결** 됩니다.
 
 [![연결 된 작업 보기](menu-images/defaultbar03.png "연결 된 작업 보기")](menu-images/defaultbar03-large.png#lightbox)
 
@@ -215,7 +215,7 @@ void OpenDialog (NSObject sender)
 
 ### <a name="working-with-the-open-recent-menu"></a>최근 항목 열기 메뉴 작업
 
-기본적으로 **파일** 메뉴에는 사용자가 앱을 사용 하 여 연 마지막 몇 개의 파일을 추적 하는 **최근 열기** 항목이 포함 되어 있습니다. @No__t_0 기반 Xamarin.ios 앱을 만드는 경우이 메뉴는 자동으로 처리 됩니다. 다른 형식의 Xamarin.ios 앱의 경우에는이 메뉴 항목을 수동으로 관리 하 고 응답할 책임이 있습니다.
+기본적으로 **파일** 메뉴에는 사용자가 앱을 사용 하 여 연 마지막 몇 개의 파일을 추적 하는 **최근 열기** 항목이 포함 되어 있습니다. `NSDocument` 기반 Xamarin.ios 앱을 만드는 경우이 메뉴는 자동으로 처리 됩니다. 다른 형식의 Xamarin.ios 앱의 경우에는이 메뉴 항목을 수동으로 관리 하 고 응답할 책임이 있습니다.
 
 **최근 항목 열기** 메뉴를 수동으로 처리 하려면 다음을 사용 하 여 새 파일이 열리거나 저장 되었음을 먼저 알려 주어 야 합니다.
 
@@ -392,7 +392,7 @@ for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
 }
 ```
 
-@No__t_1 속성의 파일 경로를 포함 하도록 `ViewController` 클래스를 디자인 했습니다. 이제 앱에서 현재 열려 있는 모든 창을 반복 합니다. 파일이 windows 중 하나에서 이미 열려 있는 경우 다음을 사용 하 여 다른 모든 창의 맨 앞으로 가져옵니다.
+`Path` 속성의 파일 경로를 포함 하도록 `ViewController` 클래스를 디자인 했습니다. 이제 앱에서 현재 열려 있는 모든 창을 반복 합니다. 파일이 windows 중 하나에서 이미 열려 있는 경우 다음을 사용 하 여 다른 모든 창의 맨 앞으로 가져옵니다.
 
 ```csharp
 NSApplication.SharedApplication.Windows[n].MakeKeyAndOrderFront(this);
@@ -805,7 +805,7 @@ private void AssembleMenu(NSMenu menu, List<LanguageFormatCommand> commands) {
 }
 ``` 
 
-@No__t_1 속성이 비어 있는 `LanguageFormatCommand` 개체의 경우이 루틴은 메뉴 섹션 사이에 **구분 기호 메뉴 항목** (얇은 회색 선)을 만듭니다.
+`Title` 속성이 비어 있는 `LanguageFormatCommand` 개체의 경우이 루틴은 메뉴 섹션 사이에 **구분 기호 메뉴 항목** (얇은 회색 선)을 만듭니다.
 
 ```csharp
 menuItem = NSMenuItem.SeparatorItem;
@@ -817,7 +817,7 @@ menuItem = NSMenuItem.SeparatorItem;
 menuItem = new NSMenuItem (command.Title);
 ``` 
 
-@No__t_0 개체에 자식 `LanguageFormatCommand` 개체가 포함 되어 있으면 하위 메뉴가 만들어지고 `AssembleMenu` 메서드가 재귀적으로 호출 되어 해당 메뉴를 빌드합니다.
+`LanguageFormatCommand` 개체에 자식 `LanguageFormatCommand` 개체가 포함 되어 있으면 하위 메뉴가 만들어지고 `AssembleMenu` 메서드가 재귀적으로 호출 되어 해당 메뉴를 빌드합니다.
 
 ```csharp
 menuItem.Submenu = new NSMenu (command.Title);
@@ -865,7 +865,7 @@ FormattingCommands.Add(new LanguageFormatCommand("Image","![](",")"));
 FormattingCommands.Add(new LanguageFormatCommand("Image Link","[![](",")](LinkImageHere)"));
 ```
 
-@No__t_0 함수에 전달 된 해당 컬렉션 ( **서식** 메뉴는 기본으로 설정 됨)에서 다음과 같은 동적 메뉴 및 메뉴 항목이 생성 됩니다.
+`AssembleMenu` 함수에 전달 된 해당 컬렉션 ( **서식** 메뉴는 기본으로 설정 됨)에서 다음과 같은 동적 메뉴 및 메뉴 항목이 생성 됩니다.
 
 ![실행 중인 응용 프로그램의 새 메뉴 항목](menu-images/dynamic01.png "실행 중인 응용 프로그램의 새 메뉴 항목")
 
@@ -916,7 +916,7 @@ Xcode에서 **기본 storyboard** 파일을 편집 하 고 **창** 창을 디자
     [![Segue 클래스 설정](menu-images/context10.png "Segue 클래스 설정")](menu-images/context10-large.png#lightbox)
 6. Mac용 Visual Studio으로 다시 전환 하 여 동기화 한 다음 Interface Builder로 돌아갑니다.
 7. **길잡이 편집기** 로 전환 하 고 **PanelViewController** 파일을 선택 합니다.
-8. @No__t_1 이라는 **문서** 메뉴 항목에 대 한 작업을 만듭니다. 
+8. `propertyDocument`이라는 **문서** 메뉴 항목에 대 한 작업을 만듭니다. 
 
     [![작업 구성](menu-images/context06.png "작업 구성")](menu-images/context06-large.png#lightbox)
 9. 나머지 메뉴 항목에 대 한 작업 만들기를 반복 합니다. 

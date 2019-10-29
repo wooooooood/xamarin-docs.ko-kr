@@ -3,19 +3,19 @@ title: .NET 포함
 description: .Net 포함을 사용 하면 다른 프로그래밍 언어로C#작성 F#된 코드에서 기존 .net 코드 (, 및 기타)를 사용할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: af068e5a09cc11eec33508a4f2eb33186168aae6
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 5a0e7eeaee9b3189de63d0b82a3822cc68023505
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290219"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73006940"
 ---
 # <a name="net-embedding"></a>.NET 포함
 
-![Preview](~/media/shared/preview.png)
+![미리 보기](~/media/shared/preview.png)
 
 .Net 포함을 사용 하면 기존 .net 코드C#( F#, 및 기타)를 다른 프로그래밍 언어 및 여러 다른 환경에서 사용할 수 있습니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "70290219"
 
 추가 언어는 나중에 제공 될 예정입니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 시작 하려면 현재 지원 되는 각 언어에 대 한 가이드 중 하나를 확인 하세요.
 

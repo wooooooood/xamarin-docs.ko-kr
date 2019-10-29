@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
-ms.openlocfilehash: 6ea8195d422da3c64175b164c5fbf2885eb234ab
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
-ms.translationtype: HT
+ms.date: 10/28/2019
+ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
+ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696380"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72980868"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.ios 레이블
 
@@ -70,39 +70,13 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 
 그 결과 [`Label`](xref:Xamarin.Forms.Label) 표시 되는 텍스트의 문자는 장치 독립적 단위 `CharacterSpacing` 간격이 떨어져 있습니다.
 
-## <a name="padding"></a>채우기
-
-안쪽 여백은 요소와 자식 요소 사이의 공간을 나타내며 요소를 자체 콘텐츠에서 구분 하는 데 사용 됩니다. `Label.Padding` 속성을 [`Thickness`](xref:Xamarin.Forms.Thickness) 값으로 설정 하 여 [`Label`](xref:Xamarin.Forms.Label) 인스턴스에 패딩을 적용할 수 있습니다.
-
-```xaml
-<Label Text="Padded text"
-       Padding="20" />
-```
-
-해당하는 C# 코드는 다음과 같습니다.
-
-```csharp
-Label label = new Label
-{
-    Text = "Padded text",
-    Padding = new Thickness(20)
-};
-```
-
-> [!IMPORTANT]
-> IOS에서 `Padding` 속성을 설정 하는 [`Label`](xref:Xamarin.Forms.Label) 만들어질 때 패딩이 적용 되 고 패딩 값은 나중에 업데이트할 수 있습니다. 그러나 `Padding` 속성을 설정 하지 않는 `Label`를 만든 경우 나중에 설정 하려는 시도는 영향을 주지 않습니다.
->
-> Android 및 유니버설 Windows 플랫폼에서 `Padding` 속성 값은 `Label`를 만들 때 또는 나중에 지정할 수 있습니다.
-
-안쪽 여백에 대 한 자세한 내용은 [여백 및 안쪽](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)여백을 참조 하세요.
-
 ## <a name="colors"></a>색
 
 바인딩 가능한 [`TextColor`](xref:Xamarin.Forms.Label.TextColor) 속성을 통해 사용자 지정 텍스트 색을 사용 하도록 레이블을 설정할 수 있습니다.
 
 각 플랫폼에서 색을 사용할 수 있도록 하려면 특별 한 주의가 필요 합니다. 각 플랫폼에는 텍스트 및 배경색에 대해 서로 다른 기본값이 있으므로 각각에 대해 작동 하는 기본을 선택 해야 합니다.
 
-다음 XAML 예제에서는 `Label`텍스트 색을 설정 합니다.
+다음 XAML 예제에서는 `Label` 텍스트 색을 설정 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -185,7 +159,6 @@ var label =
 
 ![레이블 MaxLines 예](label-images/label-maxlines.png)
 
-
 ## <a name="display-html"></a>HTML 표시
 
 [`Label`](xref:Xamarin.Forms.Label) 클래스에는 `Label` 인스턴스가 일반 텍스트 또는 HTML 텍스트를 표시 해야 하는지 여부를 결정 하는 `TextType` 속성이 있습니다. 이 속성은 `TextType` 열거형의 멤버 중 하나로 설정 해야 합니다.
@@ -242,7 +215,7 @@ XAML에서 `<` 및 `>` 기호를 추가로 이스케이프 하면 HTML 문자열
 `FormattedText` 속성은 [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) 속성을 통해 설정 된 하나 이상의 [`Span`](xref:Xamarin.Forms.Span) 인스턴스로 구성 되는 [`FormattedString`](xref:Xamarin.Forms.FormattedString)유형입니다. 시각적 효과를 설정 하는 데 사용할 수 있는 `Span` 속성은 다음과 같습니다.
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – span 배경의 색입니다.
-- `double`형식의 `CharacterSpacing`은 `Span` 텍스트 문자 사이의 간격입니다.
+- `double` 형식의 `CharacterSpacing`은 `Span` 텍스트 문자 사이의 간격입니다.
 - [`Font`](xref:Xamarin.Forms.Span.Font) – 범위의 텍스트 글꼴입니다.
 - [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) – 범위의 텍스트에 대 한 글꼴 특성입니다.
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – 범위의 텍스트 글꼴이 속한 글꼴 패밀리입니다.
@@ -390,6 +363,48 @@ var label = new Label
 다음 스크린샷에는 [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) 속성을 1.8로 설정 하는 결과가 나와 있습니다.
 
 ![Span LineHeight 예](label-images/span-lineheight.png)
+
+## <a name="padding"></a>채우기
+
+안쪽 여백은 요소와 자식 요소 사이의 공간을 나타내며 요소를 자체 콘텐츠에서 구분 하는 데 사용 됩니다. `Label.Padding` 속성을 [`Thickness`](xref:Xamarin.Forms.Thickness) 값으로 설정 하 여 [`Label`](xref:Xamarin.Forms.Label) 인스턴스에 패딩을 적용할 수 있습니다.
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> IOS에서 `Padding` 속성을 설정 하는 [`Label`](xref:Xamarin.Forms.Label) 만들어질 때 패딩이 적용 되 고 패딩 값은 나중에 업데이트할 수 있습니다. 그러나 `Padding` 속성을 설정 하지 않는 `Label`를 만든 경우 나중에 설정 하려는 시도는 영향을 주지 않습니다.
+>
+> Android 및 유니버설 Windows 플랫폼에서 `Padding` 속성 값은 `Label`를 만들 때 또는 나중에 지정할 수 있습니다.
+
+안쪽 여백에 대 한 자세한 내용은 [여백 및 안쪽](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)여백을 참조 하세요.
+
 
 ## <a name="hyperlinks"></a>링크
 

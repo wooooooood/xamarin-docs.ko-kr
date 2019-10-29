@@ -4,15 +4,15 @@ description: Android 작업에 RatingBar 위젯을 추가 하는 방법입니다
 ms.prod: xamarin
 ms.assetid: d7a1f9bb-926d-4f93-9e8e-0fa933e330e7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 51f88dba25ca2b4f7e33bb8b5c813c43a214c062
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 529fecb4e24e83ef7b783815843e132347d99262
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764848"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029148"
 ---
 # <a name="xamarinandroid-ratingbar"></a>Xamarin Android RatingBar
 
@@ -22,8 +22,8 @@ RatingBar는 별 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. �
 
 ## <a name="creating-a-ratingbar"></a>RatingBar 만들기
 
-1. **리소스/레이아웃/기본. axml** 파일을 열고 다음을 추가 합니다.[`RatingBar`](xref:Android.Widget.RatingBar)
-   요소 (내 [`LinearLayout`](xref:Android.Widget.LinearLayout)):
+1. **리소스/레이아웃/기본. axml** 파일을 열고 [`RatingBar`](xref:Android.Widget.RatingBar) 를 추가 합니다.
+   요소 ( [`LinearLayout`](xref:Android.Widget.LinearLayout)내):
 
    ```xml
    <RatingBar android:id="@+id/ratingbar"
@@ -33,9 +33,9 @@ RatingBar는 별 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. �
             android:stepSize="1.0"/>
    ```
 
-   특성 `android:numStars` 은 등급 표시줄에 표시할 별 수를 정의 합니다. 특성 `android:stepSize` 은 각 별모양의 세분성을 정의 합니다. 예를 들어의 `0.5` 값은 반쪽 별 등급을 허용 합니다.
+   `android:numStars` 특성은 등급 표시줄에 표시할 별 수를 정의 합니다. `android:stepSize` 특성은 각 별모양의 세분성을 정의 합니다. 예를 들어 `0.5`의 값은 별 등급 등급을 허용 합니다.
 
-2. 새 등급이 설정 된 경우 작업을 수행 하려면 다음 코드를의 끝에 추가 합니다.[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+2. 새 등급이 설정 된 경우 작업을 수행 하려면 [`OnCreate()`](xref:Android.App.Activity.OnCreate*) 의 끝에 다음 코드를 추가 합니다.
    방법이
 
     ```csharp
@@ -46,6 +46,6 @@ RatingBar는 별 1 ~ 5 개의 별 등급을 표시 하는 UI 위젯입니다. �
     };
     ```
 
-    [`RatingBar`](xref:Android.Widget.RatingBar) [그러면`FindViewById`](xref:Android.App.Activity.FindViewById*) 레이아웃에서 위젯을 캡처한 다음 이벤트 메서드를 설정 하 고 사용자가 등급을 설정 하는 경우 수행할 동작을 정의 합니다. 이 경우 간단한 [`Toast`](xref:Android.Widget.Toast) 메시지에 새 등급이 표시 됩니다.
+    그러면 [`FindViewById`](xref:Android.App.Activity.FindViewById*) 를 사용 하 여 레이아웃에서 [`RatingBar`](xref:Android.Widget.RatingBar) 위젯을 캡처한 다음 이벤트 메서드를 설정 하 고 사용자가 등급을 설정 하는 경우 수행할 동작을 정의 합니다. 이 경우 간단한 [`Toast`](xref:Android.Widget.Toast) 메시지는 새 등급을 표시 합니다.
 
 3. 애플리케이션을 실행합니다.

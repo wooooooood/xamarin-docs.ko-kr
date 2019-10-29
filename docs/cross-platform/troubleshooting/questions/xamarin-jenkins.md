@@ -4,15 +4,15 @@ description: 이 문서에서는 높은 수준에서 Xamarin의 Jenkins CI 시�
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: a8dc27574dc9959cc375a98fc0d7a18aac8bd6b7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7be60eaa1135284522ef1e6ce81c911a68ff9915
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756964"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73012222"
 ---
 # <a name="why-isnt-jenkins-supported-by-microsoft"></a>Microsoft에서 Jenkins을 지원 하지 않는 이유는 무엇 인가요?
 
@@ -44,10 +44,10 @@ SDK 위치를 설정 하는 옵션은 사용 중인 정확한 Jenkins Android �
 ### <a name="jenkins-reports-an-invalid-xamarin-license"></a>Jenkins에서 잘못 된 Xamarin 라이선스를 보고 합니다.
 이 문제에 대 한 오류 메시지는 일반적으로 다음과 같습니다.
 
-> XA9008 오류: 명령줄에서 빌드하려면 비즈니스 라이선스가 필요 합니다.
+> XA9008 오류: 명령줄에서 빌드하는 데 비즈니스 라이선스가 필요 합니다.
 
-로 구분하거나 여러
+or
 
 > 오류: Xamarin.ios의 스타터 버전은 Xamarin Studio 외부에서의 빌드를 지원 하지 않습니다. 
 
-이 시나리오의 가장 일반적인 원인은 Xamarin 라이선스와 연결 되지 않은 사용자 계정으로 로그인 하 여 Jenkins를 사용 하는 것입니다. 이 문제를 해결 하는 가장 간단한 방법은 사용자 계정을 통해 직접 Jenkins를 앱으로 설치 하는 것입니다. 해당 프로세스 및 몇 가지 추가 고려 사항은 다음에 설명 되어 있습니다.[https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)
+이 시나리오의 가장 일반적인 원인은 Xamarin 라이선스와 연결 되지 않은 사용자 계정으로 로그인 하 여 Jenkins를 사용 하는 것입니다. 이 문제를 해결 하는 가장 간단한 방법은 사용자 계정을 통해 직접 Jenkins를 앱으로 설치 하는 것입니다. 해당 프로세스 및 몇 가지 추가 고려 사항은 다음에 설명 되어 있습니다. [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

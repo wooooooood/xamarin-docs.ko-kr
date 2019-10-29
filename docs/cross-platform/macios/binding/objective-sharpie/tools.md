@@ -3,15 +3,15 @@ title: 목적 Sharpie 도구 & 명령
 description: 이 문서에서는 Sharpie에 포함 된 도구에 대 한 개요와 함께 사용할 수 있는 명령줄 인수를 제공 합니다.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2015
-ms.openlocfilehash: 13f3000315e91cec7ff2422cff3b520997ba26fd
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 2179154aa6dc78a8b0b6b418d780e7996f8e557d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280918"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015932"
 ---
 # <a name="objective-sharpie-tools--commands"></a>목적 Sharpie 도구 & 명령
 
@@ -55,12 +55,12 @@ Available Tools:
 |--- |--- |
 |**xcode**|현재 Xcode 설치 및 사용할 수 있는 iOS 및 Mac Sdk 버전에 대 한 정보를 제공 합니다. 나중에 바인딩을 생성할 때이 정보를 사용할 예정입니다.|
 |**pod**|로컬 디렉터리에서를 검색, 구성 및 설치 하 고 마스터 사양 리포지토리에서 사용 가능한 목표-C [CocoaPod](https://cocoapods.org/) 라이브러리를 바인딩합니다. 이 도구는 설치 된 CocoaPod를 평가 하 여 아래 `bind` 도구에 전달할 올바른 입력을 자동으로 추론 합니다. 3\.0의 새로운|
-|**bind**|목적-C 라이브러리의`*.h`헤더 파일 ()을 초기 [ApiDefinition.cs 및 StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) 파일로 구문 분석 합니다.|
+|**bind**|목적-C 라이브러리의 헤더 파일 (`*.h`)을 초기 [ApiDefinition.cs 및 StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) 파일로 구문 분석 합니다.|
 |**update**|최신 버전의 목표가 Sharpie을 확인 하 고 다운로드 한 후 설치 관리자를 시작 합니다.|
-|**verify-docs**|특성에 대 한 `[Verify]` 자세한 정보를 표시 합니다.|
+|**확인-문서**|`[Verify]` 특성에 대 한 자세한 정보를 표시 합니다.|
 |**docs**|기본 웹 브라우저에서이 문서를 탐색 합니다.|
 
-특정 목표 Sharpie 도구에 대 한 도움말을 보려면 도구 이름 및 `-help` 옵션을 입력 합니다. 예를 들어 `sharpie xcode -help` 는 다음 출력을 반환 합니다.
+특정 목표 Sharpie 도구에 대 한 도움말을 보려면 도구 이름 및 `-help` 옵션을 입력 합니다. 예를 들어 `sharpie xcode -help`는 다음과 같은 출력을 반환 합니다.
 
 ```
 $ sharpie xcode -help
@@ -74,7 +74,7 @@ Xcode Options:
   -sdks            List all available Xcode SDKs. Pass -verbose for more details.
 ```
 
-바인딩 프로세스를 시작 하기 전에 터미널 `sharpie xcode -sdks`에 다음 명령을 입력 하 여 현재 설치 된 sdk에 대 한 정보를 가져와야 합니다. 출력은 설치한 Xcode 버전에 따라 다를 수 있습니다. 목표 Sharpie `Xcode*.app` `/Applications` 디렉터리 아래에 설치 된 sdk를 찾습니다.
+바인딩 프로세스를 시작 하기 전에 터미널 `sharpie xcode -sdks`에 다음 명령을 입력 하 여 현재 설치 된 Sdk에 대 한 정보를 가져와야 합니다. 출력은 설치한 Xcode 버전에 따라 다를 수 있습니다. 목표 Sharpie는 `/Applications` 디렉터리 아래 `Xcode*.app`에 설치 된 Sdk를 찾습니다.
 
 ```
 $ sharpie xcode -sdks
@@ -87,4 +87,4 @@ sdk: macosx10.10     arch: x86_64  i386
 sdk: watchos2.0      arch: armv7
 ```
 
-위의 항목에서 `iphoneos9.1` SDK가 컴퓨터에 설치 되어 있고 `arm64` 아키텍처를 지원 하는지 확인할 수 있습니다. 이 섹션의 모든 샘플에 대해이 값을 사용 합니다. 이 정보를 사용 하는 경우 목표-C 라이브러리 헤더 파일을 초기 `ApiDefinition.cs` 및 `StructsAndEnums.cs` 바인딩 프로젝트에 대 한 구문 분석할 준비가 된 것입니다.
+위의 항목에서 `iphoneos9.1` SDK가 컴퓨터에 설치 되어 있고 `arm64` 아키텍처를 지원 하는지 확인할 수 있습니다. 이 섹션의 모든 샘플에 대해이 값을 사용 합니다. 이 정보를 사용 하는 경우 목표-C 라이브러리 헤더 파일을 초기 `ApiDefinition.cs`로 구문 분석 하 고 바인딩 프로젝트를 `StructsAndEnums.cs` 수 있습니다.

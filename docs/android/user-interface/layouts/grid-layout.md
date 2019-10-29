@@ -3,21 +3,21 @@ title: GridLayout
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: bd05596ce8c6f8acb81b3ca68c6393a0be47768a
-ms.sourcegitcommit: cb13fadbaa6d19dea94b9005bda20c2efd1b8039
+ms.openlocfilehash: 4b6fcfc3120c3ef09556f3466295f4bee35fad0c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72541920"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029004"
 ---
 # <a name="xamarinandroid-gridlayout"></a>Xamarin Android GridLayout
 
-@No__t_0은 아래와 같이 HTML 테이블과 비슷하게 2D 그리드에서 보기 레이아웃을 지 원하는 새로운 `ViewGroup` 하위 클래스입니다.
+`GridLayout`은 아래와 같이 HTML 테이블과 비슷하게 2D 그리드에서 보기 레이아웃을 지 원하는 새로운 `ViewGroup` 하위 클래스입니다.
 
- [4 개 셀을 표시 하는 ![Cropped GridLayout](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
+ [네 개의 셀을 표시 하는![잘린 GridLayout](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout`는 플랫 뷰 계층 구조와 함께 작동 합니다. 여기서 자식 뷰는 행과 열을 지정 하 여 표에 위치를 설정 합니다. 이러한 방식으로 *GridLayout* 는 중간 뷰가 TableLayout에서 사용 되는 테이블 행에 표시 되는 것과 같은 테이블 구조를 제공 하지 않고도 그리드에 뷰를 배치할 수 있습니다. *GridLayout* 는 플랫 계층을 유지 관리 하 여 자식 뷰를 더 빠르게 레이아웃 할 수 있습니다. 실제로 코드에서이 개념의 의미를 설명 하는 예제를 살펴보겠습니다.
 
@@ -49,11 +49,11 @@ ms.locfileid: "72541920"
 
 다음 다이어그램에 표시 된 것 처럼 레이아웃은 행과 열 크기를 조정 하 여 셀이 해당 내용에 맞게 조정 됩니다.
 
- [왼쪽의 두 셀을 표시 하는 레이아웃의 ![Diagram 오른쪽 보다 작음](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
+ [왼쪽의 두 셀을 표시 하는 레이아웃의![오른쪽 보다 작음](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 그러면 응용 프로그램에서 실행 될 때 다음 사용자 인터페이스가 생성 됩니다.
 
- [4 개 셀을 표시 하는 GridLayoutDemo 앱의 ![Screenshot](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
+ [4 개 셀을 표시 하는 GridLayoutDemo 앱의![스크린샷](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
 ## <a name="specifying-orientation"></a>방향 지정
 
@@ -71,15 +71,15 @@ ms.locfileid: "72541920"
 
 이제 `GridLayout`은 아래와 같이 왼쪽에서 오른쪽이 아니라 각 열에서 위쪽에서 아래쪽으로 셀을 배치 합니다.
 
- [셀이 세로 방향으로 배치 되는 방법을 보여 주는 ![Diagram](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
+ [셀이 세로 방향으로 배치 되는 방식을 보여 주는![다이어그램](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 이렇게 하면 런타임 시 다음 사용자 인터페이스가 생성 됩니다.
 
- [세로 방향으로 배치 된 셀이 있는 GridLayoutDemo의 ![Screenshot](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
+ [세로 방향으로 배치 된 셀이 있는 GridLayoutDemo의![스크린샷](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
 ### <a name="specifying-explicit-position"></a>명시적 위치 지정
 
-@No__t_0에서 자식 뷰의 위치를 명시적으로 제어 하려는 경우 `layout_row` 및 `layout_column` 특성을 설정할 수 있습니다. 예를 들어 다음 XML은 방향에 관계 없이 첫 번째 스크린샷 (위에 표시 됨)에 표시 되는 레이아웃을 생성 합니다.
+`GridLayout`에서 자식 뷰의 위치를 명시적으로 제어 하려는 경우 `layout_row` 및 `layout_column` 특성을 설정할 수 있습니다. 예를 들어 다음 XML은 방향에 관계 없이 첫 번째 스크린샷 (위에 표시 됨)에 표시 되는 레이아웃을 생성 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -113,7 +113,7 @@ ms.locfileid: "72541920"
 
 ### <a name="specifying-spacing"></a>간격 지정
 
-@No__t_0의 자식 보기 사이에 간격을 지정 하는 몇 가지 옵션이 있습니다. 다음과 같이 `layout_margin` 특성을 사용 하 여 각 자식 보기의 여백을 직접 설정할 수 있습니다.
+`GridLayout`의 자식 보기 사이에 간격을 지정 하는 몇 가지 옵션이 있습니다. 다음과 같이 `layout_margin` 특성을 사용 하 여 각 자식 보기의 여백을 직접 설정할 수 있습니다.
 
 ```xml
 <TextView
@@ -165,13 +165,13 @@ ms.locfileid: "72541920"
 
 이 XML은 아래와 같이 `GridLayout` 간격을 만듭니다.
 
- [간격이 있는 큰 셀을 보여 주는 GridLayoutDemo의 ![Screenshot](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
+ [간격이 있는 큰 셀을 보여 주는 GridLayoutDemo의![스크린샷](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 새 `Space` 보기를 사용 하는 경우의 혜택은 간격을 허용 하 고 모든 자식 보기에서 특성을 설정 하지 않아도 된다는 것입니다.
 
 ### <a name="spanning-columns-and-rows"></a>열 및 행 확장
 
-@No__t_0는 여러 열 및 행에 걸쳐 있는 셀도 지원 합니다. 예를 들어 아래와 같이 단추를 포함 하는 다른 행을 `GridLayout`에 추가 한다고 가정 합니다.
+`GridLayout`는 여러 열 및 행에 걸쳐 있는 셀도 지원 합니다. 예를 들어 아래와 같이 단추를 포함 하는 다른 행을 `GridLayout`에 추가 한다고 가정 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -216,7 +216,7 @@ ms.locfileid: "72541920"
 
 그러면 다음과 같이 단추의 크기에 맞게 `GridLayout`의 첫 번째 열이 확장 됩니다.
 
-[첫 번째 열만을 확장 하는 단추가 있는 GridLayoutDemo의 ![Screenshot](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
+[첫 번째 열만으로 확장 된 단추가 있는 GridLayoutDemo의![스크린샷](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 첫 번째 열을 스트레치 하지 않도록 하려면 다음과 같이 columnspan을 설정 하 여 두 열을 확장 하는 단추를 설정할 수 있습니다.
 
@@ -231,10 +231,10 @@ ms.locfileid: "72541920"
 
 이렇게 하면 이전에 있던 레이아웃과 유사한 `TextViews` 레이아웃이 표시 되 고 아래와 같이 `GridLayout` 아래쪽에 단추가 추가 됩니다.
 
- [두 열을 모두 확장 하는 단추가 있는 GridLayoutDemo의 ![Screenshot](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
+ [두 열을 모두 확장 하는 단추가 있는 GridLayoutDemo의![스크린샷](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 
 - [GridLayoutDemo (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [아이스크림 및 사우스 샌드위치](http://www.android.com/about/ice-cream-sandwich/)
+- [아이스크림 및 사우스 샌드위치](https://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

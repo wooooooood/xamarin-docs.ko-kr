@@ -4,15 +4,15 @@ description: 이 문서는 앱 전송 보안, backgrounding, 이벤트 및 스�
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 59257dafc1d92756feb85046df43de7b9da0cc42
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 0ccdde29183645b93831b7261909714f9baf3fa4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290149"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010024"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Xamarin.ios 응용 프로그램 기본 사항
 
@@ -72,4 +72,4 @@ Apple에서는 개발자가 앱의 보안을 개선 하 고 최종 사용자의 
 
 ## <a name="working-with-user-defaultsiosapp-fundamentalsuser-defaultsmd"></a>[사용자 기본값 작업](~/ios/app-fundamentals/user-defaults.md)
 
-클래스 `NSUserDefaults` 는 iOS 앱 및 확장이 시스템 차원의 기본 시스템과 프로그래밍 방식으로 상호 작용 하는 방법을 제공 합니다. 사용자는 기본값 시스템을 사용 하 여 앱의 동작 또는 스타일을 구성 하 여 앱의 디자인에 따라 기본 설정을 충족 시킬 수 있습니다. 예를 들어 메트릭 및 왕정 측정의 데이터를 표시 하거나 지정 된 UI 테마를 선택 합니다.
+`NSUserDefaults` 클래스는 iOS 앱 및 확장이 시스템 차원의 기본 시스템과 프로그래밍 방식으로 상호 작용 하는 방법을 제공 합니다. 사용자는 기본값 시스템을 사용 하 여 앱의 동작 또는 스타일을 구성 하 여 앱의 디자인에 따라 기본 설정을 충족 시킬 수 있습니다. 예를 들어 메트릭 및 왕정 측정의 데이터를 표시 하거나 지정 된 UI 테마를 선택 합니다.

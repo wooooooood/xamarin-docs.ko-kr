@@ -2,15 +2,15 @@
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: UI 컨트롤 비교
 description: 이 문서에서는 Xamarin.ios, Windows Forms 및 WPF 간의 UI 컨트롤을 비교 하 여 설명 합니다. 또한 WPF를 Xamarin.ios와 비교 하는 다른 설명서에 대 한 링크도 제공 합니다.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ac1c7872253f11ddd58e362501827058fd9a28a
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 854d05d004276fa4ce3ccdfc63c541217c6c7acd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290388"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016502"
 ---
 # <a name="ui-controls-comparison"></a>UI 컨트롤 비교
 
@@ -23,7 +23,7 @@ ms.locfileid: "70290388"
 |[BindingNavigator](https://msdn.microsoft.com/library/system.windows.forms.bindingnavigator(v=vs.110).aspx)|-|-|
 |[BindingSource](https://msdn.microsoft.com/library/system.windows.forms.bindingsource(v=vs.110).aspx)|[CollectionViewSource](https://msdn.microsoft.com/library/system.windows.data.collectionviewsource(v=vs.110).aspx)|바인딩 속성 (예:) BindingContext|
 |[Button](https://msdn.microsoft.com/library/system.windows.forms.button(v=vs.110).aspx)|[Button](https://msdn.microsoft.com/library/system.windows.controls.button(v=vs.110).aspx)|단추|
-|[CheckBox](https://msdn.microsoft.com/library/system.windows.forms.checkbox(v=vs.110).aspx)|[CheckBox](https://msdn.microsoft.com/library/system.windows.controls.checkbox(v=vs.110).aspx)|스위치|
+|[CheckBox](https://msdn.microsoft.com/library/system.windows.forms.checkbox(v=vs.110).aspx)|[CheckBox](https://msdn.microsoft.com/library/system.windows.controls.checkbox(v=vs.110).aspx)|전환|
 |[CheckedListBox](https://msdn.microsoft.com/library/system.windows.forms.checkedlistbox(v=vs.110).aspx)|컴퍼지션이 있는 [ListBox](https://msdn.microsoft.com/library/system.windows.controls.listbox(v=vs.110).aspx)|컴퍼지션이 있는 ListView.|
 |[ColorDialog](https://msdn.microsoft.com/library/system.windows.forms.colordialog(v=vs.110).aspx)|-|-|
 |[ComboBox](https://msdn.microsoft.com/library/system.windows.forms.combobox(v=vs.110).aspx)|[ComboBox](https://msdn.microsoft.com/library/system.windows.controls.combobox(v=vs.110).aspx) (자동 완성을 지원 하지 않음)|선택기|
@@ -35,7 +35,7 @@ ms.locfileid: "70290388"
 |[FlowLayoutPanel](https://msdn.microsoft.com/library/system.windows.forms.flowlayoutpanel(v=vs.110).aspx)|[WrapPanel](https://msdn.microsoft.com/library/system.windows.controls.wrappanel(v=vs.110).aspx) 또는 [StackPanel](https://msdn.microsoft.com/library/system.windows.controls.stackpanel(v=vs.110).aspx)|StackLayout 또는가는 레이아웃|
 |[FolderBrowserDialog](https://msdn.microsoft.com/library/system.windows.forms.folderbrowserdialog(v=vs.110).aspx)|-|-|
 |[FontDialog](https://msdn.microsoft.com/library/system.windows.forms.fontdialog(v=vs.110).aspx)|-|-|
-|[양식](https://msdn.microsoft.com/library/system.windows.forms.form(v=vs.110).aspx)|[창](https://msdn.microsoft.com/library/system.windows.window(v=vs.110).aspx)|Page|
+|[양식](https://msdn.microsoft.com/library/system.windows.forms.form(v=vs.110).aspx)|[창](https://msdn.microsoft.com/library/system.windows.window(v=vs.110).aspx)|페이지|
 |[GroupBox](https://msdn.microsoft.com/library/system.windows.forms.groupbox(v=vs.110).aspx)|[GroupBox](https://msdn.microsoft.com/library/system.windows.controls.groupbox(v=vs.110).aspx)|-|
 |[HelpProvider](https://msdn.microsoft.com/library/system.windows.forms.helpprovider(v=vs.110).aspx)|해당 하는 컨트롤 (도구 설명 사용)이 없습니다.|-|
 |[HScrollBar](https://msdn.microsoft.com/library/system.windows.forms.hscrollbar(v=vs.110).aspx)|[ScrollBar](https://msdn.microsoft.com/library/system.windows.controls.primitives.scrollbar(v=vs.110).aspx) (스크롤이 컨테이너 컨트롤에 기본 제공 됨)|ScrollView 사용|
@@ -67,13 +67,13 @@ ms.locfileid: "70290388"
 |[SplitContainer](https://msdn.microsoft.com/library/system.windows.forms.splitcontainer(v=vs.110).aspx)|[GridSplitter](https://msdn.microsoft.com/library/system.windows.controls.gridsplitter(v=vs.110).aspx)|MasterDetailPage 고려|
 |[StatusStrip](https://msdn.microsoft.com/library/system.windows.forms.statusstrip(v=vs.110).aspx)|[StatusBar](https://msdn.microsoft.com/library/system.windows.controls.primitives.statusbar(v=vs.110).aspx)|-|
 |[TabControl](https://msdn.microsoft.com/library/system.windows.forms.tabcontrol(v=vs.110).aspx)|[TabControl](https://msdn.microsoft.com/library/system.windows.controls.tabcontrol(v=vs.110).aspx)|TabbedPage|
-|[TableLayoutPanel](https://msdn.microsoft.com/library/system.windows.forms.tablelayoutpanel(v=vs.110).aspx)|[눈금](https://msdn.microsoft.com/library/system.windows.controls.grid(v=vs.110).aspx)|표 형태|
+|[TableLayoutPanel](https://msdn.microsoft.com/library/system.windows.forms.tablelayoutpanel(v=vs.110).aspx)|[눈금](https://msdn.microsoft.com/library/system.windows.controls.grid(v=vs.110).aspx)|표|
 |[TextBox](https://msdn.microsoft.com/library/system.windows.forms.textbox(v=vs.110).aspx)|[TextBox](https://msdn.microsoft.com/library/system.windows.controls.textbox(v=vs.110).aspx)|편집기에서 서식 있는 서식 있는 텍스트를 지원 하지 않습니다.|
-|[Timer](https://msdn.microsoft.com/library/system.windows.forms.timer(v=vs.110).aspx)|[DispatcherTimer](https://msdn.microsoft.com/library/system.windows.threading.dispatchertimer(v=vs.110).aspx)|Device.StartTime()|
+|[Timer](https://msdn.microsoft.com/library/system.windows.forms.timer(v=vs.110).aspx)|[DispatcherTimer](https://msdn.microsoft.com/library/system.windows.threading.dispatchertimer(v=vs.110).aspx)|Device. StartTime ()|
 |[ToolStrip](https://msdn.microsoft.com/library/system.windows.forms.toolstrip(v=vs.110).aspx)|[툴바](https://msdn.microsoft.com/library/system.windows.controls.toolbar(v=vs.110).aspx)|페이지. 페이지 및 기타 항목|
 |[ToolStripContainer](https://msdn.microsoft.com/library/system.windows.forms.toolstripcontainer(v=vs.110).aspx), [ToolStripDropDown](https://msdn.microsoft.com/library/system.windows.forms.toolstripdropdown(v=vs.110).aspx), [ToolStripDropDownMenu](https://msdn.microsoft.com/library/system.windows.forms.toolstripdropdownmenu(v=vs.110).aspx), [ToolStripPanel](https://msdn.microsoft.com/library/system.windows.forms.toolstrippanel(v=vs.110).aspx)|컴퍼지션이 포함 된 [도구 모음](https://msdn.microsoft.com/library/system.windows.controls.toolbar(v=vs.110).aspx) 입니다.|컴퍼지션을 포함 하는 페이지 및 기타 항목 페이지|
 |[ToolTip](https://msdn.microsoft.com/library/system.windows.forms.tooltip(v=vs.110).aspx)|[ToolTip](https://msdn.microsoft.com/library/system.windows.controls.tooltip(v=vs.110).aspx)|내게 필요한 옵션 기능 사용|
-|[TrackBar](https://msdn.microsoft.com/library/system.windows.forms.trackbar(v=vs.110).aspx)|[슬라이더](https://msdn.microsoft.com/library/system.windows.controls.slider(v=vs.110).aspx)|슬라이더|
+|[녹화](https://msdn.microsoft.com/library/system.windows.forms.trackbar(v=vs.110).aspx)|[슬라이더](https://msdn.microsoft.com/library/system.windows.controls.slider(v=vs.110).aspx)|슬라이더|
 |[TreeView](https://msdn.microsoft.com/library/system.windows.forms.treeview(v=vs.110).aspx)|[TreeView](https://msdn.microsoft.com/library/system.windows.controls.treeview(v=vs.110).aspx)|NavigationPage에서 계층적 ListView 고려|
 |[UserControl](https://msdn.microsoft.com/library/system.windows.forms.usercontrol(v=vs.110).aspx)|[UserControl](https://msdn.microsoft.com/library/system.windows.controls.usercontrol(v=vs.110).aspx)|보기 및 사용자 지정 렌더러|
 |[VScrollBar](https://msdn.microsoft.com/library/system.windows.forms.vscrollbar(v=vs.110).aspx)|[ScrollBar](https://msdn.microsoft.com/library/system.windows.controls.primitives.scrollbar(v=vs.110).aspx)|ScrollView 사용|

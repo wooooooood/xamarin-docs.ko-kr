@@ -3,15 +3,15 @@ title: 6부 - 테스트 및 App Store 승인
 description: 이 문서에서는 장치에서 플랫폼 간 응용 프로그램을 테스트 하 고, 테스트 사례를 관리 하 고, 테스트를 자동화 하 고, 단위 테스트를 실행 하 고, 앱 제출 프로세스를 진행 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: bf6ea18c73226a620ce002797d2d2b04b48c7cc8
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198427"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016849"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>6부 - 테스트 및 App Store 승인
 
@@ -50,15 +50,15 @@ Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-u
 
 ## <a name="unit-testing"></a>단위 테스트
 
-### <a name="touchunit"></a>Touch.Unit
+### <a name="touchunit"></a>터치 단위
 
 Xamarin.ios에는 JUnit/NUnit 스타일을 작성 하는 데 따르는 Touch. Unit 이라는 단위 테스트 프레임 워크가 포함 되어 있습니다.
 
 테스트를 작성 하 고 터치를 실행 하는 방법에 대 한 자세한 내용은 [xamarin.ios를 사용한 단위 테스트](~/ios/deploy-test/touch.unit.md) 설명서를 참조 하세요.
 
-### <a name="andrunit"></a>Andr.Unit
+### <a name="andrunit"></a>Andr. Unit
 
-Android의 경우 Andr. Unit의 Touch와 동일한 오픈 소스가 있습니다. [Github](https://github.com/spouliot/Andr.Unit) 에서이를 다운로드 하 고 [ @spouliot의 블로그](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)에서 도구를 읽을 수 있습니다.
+Android의 경우 Andr. Unit의 Touch와 동일한 오픈 소스가 있습니다. [Github](https://github.com/spouliot/Andr.Unit) 에서이를 다운로드 하 고 [@spouliot의 블로그에서](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)도구를 읽을 수 있습니다.
 
 ## <a name="app-store-approvals"></a>앱 스토어 승인
 
@@ -129,7 +129,7 @@ Windows 개발자는 비슷한 주의를 기울여야 합니다. 일반적인 �
 
 개발 및 테스트에 따라 응용 프로그램의 메타 데이터에 많은 노력을 기울여야 합니다. 응용 프로그램은 메타 데이터에서 사소한 infringements 거부 되므로 적절 한 시간을 가져오는 데 도움이 됩니다.
 
-### <a name="app-stores-not-for-everyone"></a>앱 스토어: 모든 사람에 게 적합 하지 않음
+### <a name="app-stores-not-for-everyone"></a>앱 스토어: 모든 사용자가 아님
 
 각 플랫폼의 저장소에 대 한 주요 초점은 소비자 배포 이며 가능한 한 많은 고객에 게 도달 하는 기능입니다. 그러나 일부 응용 프로그램은 소비자를 대상으로 하는 것이 아니라 직원, 공급자 또는 고객에 게 제한 된 배포를 필요로 하는 사내 및 엑스트라넷 형식의 응용 프로그램을 빠르게 성장 하 고 있습니다. 개발자가 폐쇄 된 사용자 그룹에 대 한 배포를 제어 하므로 이러한 앱은 "판매" 하지 않으며 승인이 필요 하지 않습니다.
 이러한 유형의 배포에 대 한 지원은 플랫폼에 따라 다릅니다.

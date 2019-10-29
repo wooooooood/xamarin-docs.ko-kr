@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램의 다양 한 �
 ms.prod: xamarin
 ms.assetid: B1994468-FD06-4FD9-96B3-FCEBB13A972A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
-ms.openlocfilehash: 4000e4cc5d260457c0e0da275e3a7beecafd1a98
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eefe57abd4ebf4986411a1d717aebd131ebf408f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70767026"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73008346"
 ---
 # <a name="introduction-to-data-storage-in-xamarinios-apps"></a>Xamarin.ios 앱의 데이터 저장소 소개
 
@@ -54,13 +54,13 @@ SQLite는 작고 빠르게 설계 되었으므로 사용에 대 한 몇 가지 �
 - 테이블 이름 바꾸기 및 ADDCOLUMN만 지원 됩니다. 스키마에 대해 다른 수정 작업을 수행할 수 없습니다.
 - 뷰는 읽기 전용입니다.
 
-[SQLite.org](http://SQLite.org) 에서 sqlite에 대해 자세히 알아볼 수 있습니다. 그러나 Xamarin을 사용 하는 데 필요한 모든 정보는이 문서 및 관련 샘플에 포함 되어 있습니다. SQLite 데이터베이스 엔진은 모든 버전의 iOS에 기본 제공 됩니다.
+[SQLite.org](https://SQLite.org) 에서 sqlite에 대해 자세히 알아볼 수 있습니다. 그러나 Xamarin을 사용 하는 데 필요한 모든 정보는이 문서 및 관련 샘플에 포함 되어 있습니다. SQLite 데이터베이스 엔진은 모든 버전의 iOS에 기본 제공 됩니다.
 이 장에서 다루지 않지만 SQLite는 Windows Phone 및 Windows 응용 프로그램 에서도 사용할 수 있습니다.
 
 ## <a name="windows-and-windows-phone"></a>Windows 및 Windows Phone
 
 이러한 플랫폼은이 문서에서 다루지 않지만 SQLite는 Windows 플랫폼 에서도 사용할 수 있습니다.
-[Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) 및 [tasky Pro](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) 사례 연구에서 추가 정보를 읽고 [Tim heuer cda (의 블로그](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx)를 검토 하세요.
+[Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) 사례 연구에서 자세히 읽고 [Tim heuer cda (의 블로그](https://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx)를 검토 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

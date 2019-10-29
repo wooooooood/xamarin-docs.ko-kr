@@ -3,15 +3,15 @@ title: NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
 description: 이 문서에서는 NuGet과 함께 사용할 다중 플랫폼 라이브러리를 만드는 방법을 설명 합니다. 이 기법은 .NET 기본 클래스 라이브러리에서 완전히 표현할 수 있는 비즈니스 논리 및 알고리즘에 적합 하며, 따라서 플랫폼별 코드 없이 모든 대상 플랫폼에서 실행 됩니다.
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fb30b07e958bddfcf0e0545ae17b925d7163c38a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7dabb420aa094e67fae689f47b3b64a8fe1a6ed4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766460"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016703"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>NuGet에 대 한 새 다중 플랫폼 라이브러리 만들기
 
@@ -30,25 +30,25 @@ PCL 또는 .NET Standard를 사용 하는 다중 플랫폼 라이브러리 프�
 
 2. **다중 플랫폼 > 라이브러리** 섹션에서 **다중 플랫폼 라이브러리** 를 선택 합니다.
 
-   [![](single-codebase-images/mulitplatform-library-sml.png "단일 코드 베이스에 대 한 다중 플랫폼 라이브러리 구성")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. **이름** 및 **설명을**입력 하 고 **모든 플랫폼에 대해 단일**을 선택 합니다.
 
-   [![](single-codebase-images/single-configure-sml.png "단일 코드 베이스에 대 한 다중 플랫폼 라이브러리 구성")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/single-configure.png#lightbox)
 
 4. 마법사를 완료합니다. 솔루션에 단일 라이브러리 프로젝트가 생성 됩니다.
 
 5. 새 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음 **옵션**을 선택 합니다. **빌드 > 일반** 섹션에서 **대상 프레임 워크** 를 설정할 수 있습니다. .net 휴대용 PCL 프로필 또는 .NET Standard 버전을 선택 합니다.
 
-   [![](single-codebase-images/single-choose-type-sml.png "라이브러리 형식에 대해 PCL 또는 .NET Standard 선택")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Choose PCL or .NET Standard for library type")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. 또한 **프로젝트 옵션** 창에서 **NuGet 패키지 > 메타 데이터** 섹션을 열고 [필요한 메타](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) 데이터 뿐만 아니라 선택적 메타 데이터를 입력 합니다.
 
-   [![](single-codebase-images/single-metadata-sml.png "필요한 메타 데이터 입력")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Enter required metadata")](single-codebase-images/single-metadata.png#lightbox)
 
 7. 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **Nuget 패키지 만들기** (또는 솔루션 빌드 또는 배포)를 선택 **합니다. nupkg** NuGet 패키지 파일은 구성에 따라/l o b **/** 폴더 (디버그 또는 릴리스)에 저장 됩니다.
 
-   ![](single-codebase-images/create-nuget-package.png "NuGet 패키지 파일은 구성에 따라 디버그 또는 릴리스 중 하나를 bin 폴더에 저장 됩니다.")
+   ![](single-codebase-images/create-nuget-package.png "The NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
 
 ## <a name="verifying-the-output"></a>출력 확인
 
@@ -56,7 +56,7 @@ NuGet 패키지는 ZIP 파일 이기도 하므로 생성 된 패키지의 내부
 
 이 스크린샷에서는 PCL 기반 NuGet의 내용을 보여 줍니다. 단일 PCL 어셈블리만 포함 됩니다.
 
-![](single-codebase-images/nuget-output.png "NuGet 패키지에 포함 된 파일")
+![](single-codebase-images/nuget-output.png "Files contained in the NuGet package")
 
 <a name="add-platforms" />
 
@@ -66,14 +66,14 @@ PCL 기반 프로젝트 및 .NET Standard 기반 프로젝트는 플랫폼별 �
 
 플랫폼 특정 코드를 포함 하도록 기존 PCL 프로젝트 또는 .NET Standard 프로젝트를 확장 해야 하는 경우 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 플랫폼 구현 추가**...를 선택 하 여이 작업을 수행할 수 있습니다.
 
-[![](single-codebase-images/add-later-sml.png "플랫폼 구현 메뉴 추가")](single-codebase-images/add-later.png#lightbox)
+[![](single-codebase-images/add-later-sml.png "Add platform implementation menu")](single-codebase-images/add-later.png#lightbox)
 
 하나 이상의 플랫폼 프로젝트를 솔루션에 추가할 수 있으며, 기존 PCL 또는 .NET Standard 라이브러리를 선택적으로 공유 프로젝트로 변환할 수 있습니다.
 
-[![](single-codebase-images/add-later-platforms-sml.png "IOS, Android 및 공유 프로젝트와 같은 플랫폼 옵션 추가")](single-codebase-images/add-later-platforms-sml.png#lightbox)
+[![](single-codebase-images/add-later-platforms-sml.png "Add platform options such as iOS, Android, and Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
-공유 프로젝트로 변환한 후 **프로젝트 옵션 > nuget 패키지 > 참조 어셈블리**
-[섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 여 nuget이 프로젝트와 계속 호환 되도록 필요한 프로필을 선택 했는지 확인 합니다. 이전에는에서 사용 되었습니다.
+공유 프로젝트로 변환한 후에는 **프로젝트 옵션 > Nuget 패키지 > 참조 어셈블리**
+[섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 여 필요한 프로필이 선택 되었는지 확인 합니다. 이전에에서 사용 됨).
 
 ## <a name="related-links"></a>관련 링크
 

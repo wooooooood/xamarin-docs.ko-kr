@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A6FE770B-A19A-4BF8-95E9-2CF880D4AFC5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 162378c00f3e20574d04dc373fcc492a9407b88d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5996cfa3c0a18fc186ea862a2b3d7910594e1281
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70761039"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027017"
 ---
 # <a name="why-cant-my-android-release-build-connect-to-the-internet"></a>Android 릴리스 빌드를 인터넷에 연결할 수 없는 이유는 무엇인가요?
 
@@ -24,9 +24,9 @@ ms.locfileid: "70761039"
 
 이 문제를 해결 하려면 Android 매니페스트에서 인터넷 권한이 필요할 수 있습니다. 매니페스트 편집기나 매니페스트의 sourcecode을 통해이 작업을 수행할 수 있습니다.
 
-- 편집기의 수정: Android 프로젝트에서 **속성-> AndroidManifest .xml-> 필요한 권한** 으로 이동 하 여 **인터넷** 을 확인 합니다.
+- 편집기에서 수정: Android 프로젝트에서 **속성-> AndroidManifest .xml-> 필요한 권한** 으로 이동 하 여 **인터넷** 을 확인 합니다.
 
-- Sourcecode의 수정: 소스 편집기에서 androidmanifest를 열고 권한 태그를 `<Manifest>` 태그 안에 추가 합니다.
+- Sourcecode의 수정: 소스 편집기에서 AndroidManifest를 열고 `<Manifest>` 태그 안에 권한 태그를 추가 합니다.
 
     ```xml
     <Manifest>

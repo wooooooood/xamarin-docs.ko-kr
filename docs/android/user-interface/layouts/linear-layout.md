@@ -3,25 +3,25 @@ title: Xamarin Android LinearLayout
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2018
-ms.openlocfilehash: 14e9b352a309de94a374b52141e3fd61715d8f75
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b1cff01c66ae2581a68286e62bd8c8c5fb7f9d72
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764375"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028951"
 ---
 # <a name="xamarinandroid-linearlayout"></a>Xamarin Android LinearLayout
 
-[`LinearLayout`](xref:Android.Widget.LinearLayout)는입니다.[`ViewGroup`](xref:Android.Views.ViewGroup)
-자식을 표시 합니다.[`View`](xref:Android.Views.View)
+[`LinearLayout`](xref:Android.Widget.LinearLayout) [`ViewGroup`](xref:Android.Views.ViewGroup)
+자식 [`View`](xref:Android.Views.View) 를 표시 합니다.
 가로 또는 세로로 선형 방향의 요소
 
-을 사용 하는 [`LinearLayout`](xref:Android.Widget.LinearLayout)데 주의 해야 합니다.
-여러 [`LinearLayout`](xref:Android.Widget.LinearLayout)를 중첩 하려면를 사용 하는 것이 좋습니다.[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
-사용합니다.
+[`LinearLayout`](xref:Android.Widget.LinearLayout)를 과도 하 게 사용 하는 데 주의 해야 합니다.
+여러 [`LinearLayout`](xref:Android.Widget.LinearLayout)s를 중첩 하기 시작 하는 경우 [`RelativeLayout`](xref:Android.Widget.RelativeLayout) 사용을 고려할 수 있습니다.
+대신.
 
 **HelloLinearLayout**라는 새 프로젝트를 시작 합니다.
 
@@ -103,13 +103,13 @@ ms.locfileid: "70764375"
 </LinearLayout>
 ```
 
-이 XML을 신중 하 게 검사 합니다. 루트가 있습니다.[`LinearLayout`](xref:Android.Widget.LinearLayout)
-세로 &ndash; 방향으로 모든 자식 [`View`](xref:Android.Views.View)(2 개 포함)을 정의 하는 것은 세로로 누적 됩니다. 첫 번째 자식은 다른 자식입니다.[`LinearLayout`](xref:Android.Widget.LinearLayout)
-가로 방향을 사용 하 고 두 번째 자식은 인 경우[`LinearLayout`](xref:Android.Widget.LinearLayout)
-세로 방향을 사용 하는입니다. 이러한 중첩 [`LinearLayout`](xref:Android.Widget.LinearLayout)된 각에는 여러 개의[`TextView`](xref:Android.Widget.TextView)
-요소-부모 [`LinearLayout`](xref:Android.Widget.LinearLayout)에 의해 정의 된 방식으로 서로 지향 됩니다.
+이 XML을 신중 하 게 검사 합니다. 루트 [`LinearLayout`](xref:Android.Widget.LinearLayout)
+세로 방향으로 해당 방향을 정의 하는 &ndash; 모든 자식 [`View`](xref:Android.Views.View)s (2 개 포함)는 세로로 누적 됩니다. 첫 번째 자식은 다른 [`LinearLayout`](xref:Android.Widget.LinearLayout)
+가로 방향을 사용 하 고 두 번째 자식은 [`LinearLayout`](xref:Android.Widget.LinearLayout)
+세로 방향을 사용 하는입니다. 이러한 각각의 중첩 된 [`LinearLayout`](xref:Android.Widget.LinearLayout)s에는 여러 [`TextView`](xref:Android.Widget.TextView) 포함 되어 있습니다.
+요소는 부모 [`LinearLayout`](xref:Android.Widget.LinearLayout)에서 정의 된 방식으로 서로 지향 됩니다.
 
-이제 **HelloLinearLayout.cs** 을 열고 **리소스/레이아웃/Main. axml** 레이아웃을 로드 해야 합니다.[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+이제 **HelloLinearLayout.cs** 을 열고 **리소스/레이아웃/주. axml** [`OnCreate()`](xref:Android.App.Activity.OnCreate*) 레이아웃을 로드 하도록 합니다.
 방법이
 
 ```csharp
@@ -120,18 +120,18 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-[`Activity`](xref:Android.App.Activity) &ndash;)메서드 는 리소스 ID`Resources.Layout.Main` 로 지정 된에 대 한 레이아웃 파일을 로드 하 고 리소스 **/레이아웃/기본. axml** 레이아웃 파일을 참조 합니다. [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)
+[`SetContentView(int)`](xref:Android.App.Activity.SetContentView*)) 메서드는 리소스 ID &ndash;으로 지정 된 [`Activity`](xref:Android.App.Activity)에 대 한 레이아웃 파일을 로드 `Resources.Layout.Main`는 **Resources/layout/Main. axml** 레이아웃 파일을 참조 합니다.
 
 애플리케이션을 실행합니다. 다음이 표시 됩니다.
 
-[![세로로 정렬 된 app first LinearLayout의 스크린샷, 두 번째 세로](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
+[세로로 정렬 된 앱의![스크린샷, 세로로 두 번째 LinearLayout](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-XML 특성이 각 뷰의 동작을 정의 하는 방법을 확인 합니다. 에 대해 `android:layout_weight` 다른 값을 시험해 보고 각 요소의 가중치를 기준으로 화면 부동산을 분산 하는 방법을 확인 합니다. 방법에 대 한 자세한 내용은 [일반 레이아웃 개체](https://developer.android.com/guide/topics/ui/declaring-layout.html) 문서를 참조 하세요.[`LinearLayout`](xref:Android.Widget.LinearLayout)
-특성을 `android:layout_weight` 처리 합니다.
+XML 특성이 각 뷰의 동작을 정의 하는 방법을 확인 합니다. `android:layout_weight`에 대 한 다양 한 값을 시험해 보고 각 요소의 가중치를 기준으로 화면 부동산을 분산 하는 방법을 확인 합니다. 방법에 대 한 자세한 내용은 [공용 레이아웃 개체](https://developer.android.com/guide/topics/ui/declaring-layout.html) 문서를 참조 하세요 [`LinearLayout`](xref:Android.Widget.LinearLayout)
+`android:layout_weight` 특성을 처리 합니다.
 
 ## <a name="references"></a>참조 항목
 
 - [`LinearLayout`](xref:Android.Widget.LinearLayout)
 - [`TextView`](xref:Android.Widget.TextView)
 
-_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](http://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._
+_이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 [Creative Commons 2.5 특성 라이선스](https://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다._

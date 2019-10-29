@@ -4,15 +4,15 @@ description: 이 문서에서는 사용 가능한 인코딩과 앱에 추가 하
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: c8e82f9261601db48ec48092a5f3f81394a86eec
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2d204aeac18fc08bf6eb2221b6f64ecbbded8121
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763417"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73009998"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Xamarin.ios의 국제화 인코딩
 
@@ -22,17 +22,17 @@ ms.locfileid: "70763417"
 
 이 작업을 수행 하려면 Mac용 Visual Studio 또는 Visual Studio의 iOS 빌드/고급 창에서 추가 인코딩을 선택 합니다.
 
- [![](encodings-images/00.png "추가 인코딩 선택")](encodings-images/00.png#lightbox)
+ [![](encodings-images/00.png "Selecting the extra encodings")](encodings-images/00.png#lightbox)
 
- [![](encodings-images/00a.png "추가 인코딩 선택")](encodings-images/00a.png#lightbox)
+ [![](encodings-images/00a.png "Selecting the extra encodings")](encodings-images/00a.png#lightbox)
 
 다음 중 하나를 선택할 수 있습니다.
 
 - cjk: Chineese, 일본어 및 한국어
 - mideast: 아랍어, 히브리어, 터키어 및 Latin5.
-- 다른 키릴 자모, 발트어, 베트남어, 우크라이나어 및 태국어
-- 하지만 EBCDIC 인코딩 및 기타 드물게 발생 하는 코드 페이지
-- 반원형 라틴 언어, 부활절 및 서유럽
+- 기타: 키릴 자모, 발트어, 베트남어, 우크라이나어 및 태국어
+- 드문 경우: EBCDIC 인코딩 및 기타 드물게 발생 하는 코드 페이지
+- 서 부: 라틴 언어, 부활절 및 서유럽
 - 모두
 
  <a name="cjk" />
@@ -62,7 +62,7 @@ ms.locfileid: "70763417"
 
 ## <a name="other"></a>기타
 
-- CP1251
+- CP1251은
 - CP1257
 - CP1258
 - CP20866
@@ -128,7 +128,7 @@ ms.locfileid: "70763417"
 - CP28597
 - CP28605
 - CP437
-- CP850
+- CP850은
 - CP860
 - CP861
 - CP863

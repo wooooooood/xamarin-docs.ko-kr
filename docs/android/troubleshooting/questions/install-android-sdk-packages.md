@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
-ms.openlocfilehash: bd0f2a7704e5d666f6b32d4ccc489e069ec6ade6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d48767ea29c5f610e02fade20ae92c5e085cc9be
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757245"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026957"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>어떤 Android SDK 패키지를 설치해야 하나요?
 
@@ -50,4 +50,4 @@ Google에서 기본 Android 에뮬레이터를 사용 하려는 경우에만 필
 Android SDK 스페셜는 일반적으로 필요 하지 않습니다. 그러나 사용 사례에 따라 필요할 수 있으므로이에 대해 알고 있으면 유용 합니다.
 
 ## <a name="further-reading"></a>추가 정보
-다음 가이드에서는 이러한 옵션에 대해 설명 하 고 SDK manager가를 통해 다음에 나오는 여러 패키지에 대해 자세히 설명 합니다. [Android SDK 관리자 설치 가이드](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
+다음 가이드에서는 이러한 옵션에 대해 설명 하 고 SDK manager를 통해 다음에는 여러 패키지에 대해 자세히 설명 합니다. [Android SDK Manager 설치 가이드](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)

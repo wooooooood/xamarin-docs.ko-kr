@@ -3,15 +3,15 @@ title: 응용 프로그램 사용자 인터페이스 지역화
 description: 이 문서에서는 국제화 및 지역화의 플랫폼 간 개념을 설명 하 고 응용 프로그램 디자인에 미치는 영향을 검사 합니다.
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 9e0a6569710ca3ad10f57d7145a97af92574427c
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198444"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016802"
 ---
 # <a name="localization"></a>지역화
 
@@ -59,7 +59,7 @@ Xamarin 앱 지역화에 대 한 기술 세부 정보를 바로 건너뛰려면 
 
 IOS 홈 화면의 몇 개 항목에 대 한 문자열 길이를 영어, 독일어 및 일본어로 비교 합니다.
 
-[![](localization-images/language-compare-sml.png "독일어 vs 일본어 문자열 길이")](localization-images/language-compare.png#lightbox)
+[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
 
 영어 (8 자)의 **설정은** 독일어 번역에는 13 자 이지만 일본어에서는 2 자만 필요 합니다.
 
@@ -218,7 +218,7 @@ IOS와 Android는 모두 오른쪽에서 왼쪽 레이아웃 및 글꼴 렌더�
 
 ### <a name="use-multiple-strings-for-cardinality"></a>카디널리티에 여러 문자열 사용
 
-사용자 환경을 개선 `"You have {0} message/s."` 하기 위해 각 상태에 대 한 특정 문자열을 사용 하는 것과 같은 문자열을 사용 하지 마십시오.
+더 나은 사용자 환경을 제공 하기 위해 각 상태에 대 한 특정 문자열을 사용 하 `"You have {0} message/s."` 같은 문자열을 사용 하지 않습니다.
 
 **양호**:
 
@@ -235,7 +235,7 @@ IOS와 Android는 모두 오른쪽에서 왼쪽 레이아웃 및 글꼴 렌더�
 
 경우에 따라 라틴어 기반 언어는 주체의 성별에 따라 다른 단어를 사용 합니다. 앱이 성별을 알고 있는 경우 번역 된 문자열이이를 반영 하도록 허용 해야 합니다.
 
-또한 영어 에서도 문자열이 특정 사용자 또는 앱의 사용자를 참조 하는 보다 명백한 사례가 있습니다. 예를 들어 일부 사이트는 다음과 같은 `"Bob commented on his post"` 메시지를 표시 합니다 .이 경우에는 남성, 여성, 이진 또는 알 수 없는 성별 모두에 대 한 문자열이 필요 합니다.
+또한 영어 에서도 문자열이 특정 사용자 또는 앱의 사용자를 참조 하는 보다 명백한 사례가 있습니다. 예를 들어 일부 사이트는 `"Bob commented on his post"`와 같은 메시지를 표시 하므로 남성, 여성, 이진 또는 알 수 없는 성별 모두에 대 한 문자열이 필요 합니다.
 
 **양호**:
 
@@ -271,7 +271,7 @@ IOS와 Android는 모두 오른쪽에서 왼쪽 레이아웃 및 글꼴 렌더�
 테스트를 위해 여러 온라인 번역 도구 중 하나를 사용 하 여 개발 중에 응용 프로그램에 지역화 된 텍스트를 포함할 수 있습니다.
 
 - [Bing Translator](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Google 번역](https://translate.google.com/)
 
 사용할 수 있는 다른 여러 가지가 있습니다. 컴퓨터 번역의 품질은 일반적으로 전문 변환기 또는 네이티브 스피커로 먼저 검토 하 고 테스트 하지 않고도 응용 프로그램을 릴리스할 만큼 좋은 것은 아닙니다.
 
@@ -279,7 +279,7 @@ IOS와 Android는 모두 오른쪽에서 왼쪽 레이아웃 및 글꼴 렌더�
 
 또한 문자열을 사용 하 여 자체 번역자에 게 배포 하는 전문 번역 서비스도 있으므로 요금에 대 한 번역을 완료할 수 있습니다.
 
-가장 잘 알려진 서비스 중 하나는 [LionBridge](http://www.lionbridge.com/)입니다. 대부분의 전문 서비스는 문자열, XML, RESX 및 p/PO를 비롯 한 모든 일반 파일 형식을 지원 합니다.
+가장 잘 알려진 서비스 중 하나는 [LionBridge](https://www.lionbridge.com/)입니다. 대부분의 전문 서비스는 문자열, XML, RESX 및 p/PO를 비롯 한 모든 일반 파일 형식을 지원 합니다.
 
 ## <a name="summary"></a>요약
 

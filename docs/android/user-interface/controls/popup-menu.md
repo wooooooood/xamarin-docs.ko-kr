@@ -4,21 +4,21 @@ description: 특정 뷰에 고정 된 팝업 메뉴를 추가 하는 방법입�
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/31/2018
-ms.openlocfilehash: 8a808e6ea49338de5b6bd1618fc2227e6cf5f0b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a5370cfb8a5c4950b361e5f58b253c63f4f1e240
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764892"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029170"
 ---
 # <a name="xamarinandroid-popup-menu"></a>Xamarin Android 팝업 메뉴
 
 [PopupMenu](xref:Android.Widget.PopupMenu) ( _바로 가기 메뉴_라고도 함)는 특정 뷰에 고정 된 메뉴입니다. 다음 예제에서 단일 활동에는 단추가 포함 되어 있습니다. 사용자가 단추를 누르면 세 개의 항목 팝업 메뉴가 표시 됩니다.
 
-[![단추 및 3 항목 팝업 메뉴를 사용 하는 앱의 예](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
+[단추 및 3 항목 팝업 메뉴를 사용 하는 앱의![예제](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 ## <a name="creating-a-popup-menu"></a>팝업 메뉴 만들기
 
@@ -36,9 +36,9 @@ ms.locfileid: "70764892"
 </menu>
 ```
 
-그런 다음의 `PopupMenu` 인스턴스를 만들고 해당 뷰에 앵커를 고정 합니다. 의 `PopupMenu`인스턴스를 만들 때 해당 생성자에에 `Context` 대 한 참조와 메뉴가 연결 될 뷰를 전달 합니다. 결과적으로 팝업 메뉴는 생성 중에이 뷰에 고정 됩니다.
+그런 다음 `PopupMenu`의 인스턴스를 만들고 해당 뷰에 고정 합니다. `PopupMenu`인스턴스를 만들 때 해당 생성자에 `Context`에 대 한 참조 및 메뉴가 연결 될 뷰를 전달 합니다. 결과적으로 팝업 메뉴는 생성 중에이 뷰에 고정 됩니다.
 
-다음 예제 `PopupMenu` 에서는 단추에 대 한 click 이벤트 처리기에가 생성 됩니다 (이름이 지정 `showPopupMenu`됨). 이 단추는 다음 코드 예제와 같이이 `PopupMenu` 앵커 되는 뷰입니다.
+다음 예제에서는 단추에 대 한 click 이벤트 처리기 (`showPopupMenu`명명 됨)에서 `PopupMenu`를 만듭니다. 이 단추는 다음 코드 예제와 같이 `PopupMenu` 고정 된 뷰입니다.
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -58,7 +58,7 @@ showPopupMenu.Click += (s, arg) => {
 
 ## <a name="handling-menu-events"></a>메뉴 이벤트 처리
 
-사용자가 메뉴 항목을 선택 하면 [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) click 이벤트가 발생 하 고 메뉴가 해제 됩니다. 메뉴 외부의 아무 곳 이나 누르면 간단히 해제 됩니다. 두 경우 모두 메뉴를 해제 하면 해당 [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) 이 발생 합니다. 다음 코드는 `MenuItemClick` 및 `DismissEvent` 이벤트에 대 한 이벤트 처리기를 추가 합니다.
+사용자가 메뉴 항목을 선택 하면 [MenuItemClick](xref:Android.Widget.PopupMenu.MenuItemClick) click 이벤트가 발생 하 고 메뉴가 해제 됩니다. 메뉴 외부의 아무 곳 이나 누르면 간단히 해제 됩니다. 두 경우 모두 메뉴를 해제 하면 해당 [DismissEvent](xref:Android.Widget.PopupMenu.Dismiss) 이 발생 합니다. 다음 코드는 `MenuItemClick` 및 `DismissEvent` 이벤트 모두에 대 한 이벤트 처리기를 추가 합니다.
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {

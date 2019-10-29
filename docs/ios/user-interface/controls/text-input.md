@@ -4,19 +4,19 @@ description: 이 문서에서는 Xamarin.ios 앱의 텍스트 입력에 대해 �
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 8f47ebdd8c1ba220229c6e652af99e8fa3ae2960
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4833d8a03649341cb5c6d9f2692410b89e6cea4c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768812"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021828"
 ---
 # <a name="text-input-in-xamarinios"></a>Xamarin.ios의 텍스트 입력
 
-사용자 텍스트 수락은 여러 줄의 편집 `UITextField` 가능 텍스트에 대 한 한 줄 입력 및 uitextview에 대해를 사용 하 여 수행 됩니다. 이러한 컨트롤 중 하나를 화면으로 끌어 온 다음 두 번 클릭 하 여 초기 텍스트를 설정할 수 있습니다.
+사용자 텍스트를 허용 하는 것은 여러 줄의 편집 가능 텍스트에 대 한 한 줄 입력 및 UITextView의 `UITextField` 사용 하 여 수행 됩니다. 이러한 컨트롤 중 하나를 화면으로 끌어 온 다음 두 번 클릭 하 여 초기 텍스트를 설정할 수 있습니다.
 
 아래 스크린샷에는 Mac용 Visual Studio의 도구 상자 패드에 있는 이러한 컨트롤의 아이콘이 표시 됩니다.
 
@@ -30,9 +30,9 @@ ms.locfileid: "70768812"
 
 ## <a name="uitextfield"></a>UITextField
 
-컨트롤 `UITextField` 은 사용자 이름 또는 암호와 같은 한 줄의 텍스트 입력을 허용 하는 데 주로 사용 됩니다. 컨트롤을 사용자 지정 하는 데 사용할 수 있는 몇 가지 옵션이 여기에 표시 됩니다.
+`UITextField` 컨트롤은 사용자 이름 또는 암호와 같은 한 줄의 텍스트 입력을 허용 하는 데 주로 사용 됩니다. 컨트롤을 사용자 지정 하는 데 사용할 수 있는 몇 가지 옵션이 여기에 표시 됩니다.
 
- [![](text-input-images/image15a.png "UITextField 속성")](text-input-images/image15a.png#lightbox)
+ [![](text-input-images/image15a.png "UITextField Properties")](text-input-images/image15a.png#lightbox)
 
 이러한 컨트롤은 다음에 설명 되어 있습니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "70768812"
 - **키 반환** -반환 키의 레이블을 변경 하 여 수행할 작업을 보다 잘 반영 합니다. 지원 되는 값에는 Go, Join, Next, Route, Done 및 Search가 있습니다.
 - **Secure** – 입력이 마스킹 되는지 여부를 식별 합니다 (예: 암호 입력).
 
-라는 `textfield1` uitextfield가 디자이너를 사용 하 여 화면에 추가 된 경우에서 C# 다음과 같이 해당 속성을 설정 하거나 변경할 수 있습니다.
+`textfield1` 라는 UITextField가 디자이너를 사용 하 여 화면에 추가 된 경우에서 C# 다음과 같이 해당 속성을 설정 하거나 변경할 수 있습니다.
 
 ```csharp
 textfield1.Placeholder = "type email here...";
@@ -56,11 +56,11 @@ textfield1.MinimumFontSize = 17f;
 textfield1.AdjustsFontSizeToFitWidth = true;
 ```
 
-Xamarin.ios는 위의 코드 조각에서 `UIKeyboardType` 와 `UIReturnKeyType` 같이 원하는 설정을 쉽게 선택할 수 있도록 적절 한 열거형을 제공 합니다.
+Xamarin.ios는 위의 코드 조각에서 `UIKeyboardType` 및 `UIReturnKeyType`와 같이 원하는 설정을 쉽게 선택할 수 있도록 적절 한 열거형을 제공 합니다.
 
 ### <a name="display-text-programmatically"></a>프로그래밍 방식으로 텍스트 표시
 
-디자이너를 사용 하 여 화면을 디자인 하지 않거나 런타임에 텍스트를 동적으로 추가 하려는 경우 다음과 같이 뷰 컨트롤러의 `ViewDidLoad` 메서드에서 프로그래밍 방식으로 uitextfield를 만들고 표시할 수 있습니다.
+디자이너를 사용 하 여 화면을 디자인 하지 않거나 런타임에 텍스트를 동적으로 추가 하려는 경우 다음과 같이 뷰 컨트롤러의 `ViewDidLoad` 메서드에서 UITextField를 프로그래밍 방식으로 만들고 표시할 수 있습니다.
 
 ```csharp
 var frame = new CGRect(10, 10, 300, 40);
@@ -72,9 +72,9 @@ View.Add(textfield1);
 
 ## <a name="uitextview"></a>UITextView
 
-컨트롤 `UITextView` 은 읽기 전용 텍스트를 표시 하거나 여러 줄 텍스트 입력을 허용 하는 데 사용할 수 있습니다. 에는 `UITextField` (대문자 표시, 수정 등)와 같은 많은 옵션이 있습니다.
+`UITextView` 컨트롤은 읽기 전용 텍스트를 표시 하거나 여러 줄 텍스트 입력을 허용 하는 데 사용할 수 있습니다. `UITextField`와 같은 여러 옵션 (예: 대문자 표시, 수정 등)이 있습니다.
 
- [![](text-input-images/image16a.png "UITextView 속성")](text-input-images/image16a.png#lightbox)
+ [![](text-input-images/image16a.png "UITextView Properties")](text-input-images/image16a.png#lightbox)
 
 특정 속성은 다음과 같습니다.
 

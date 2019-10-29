@@ -4,15 +4,15 @@ description: Xamarin Designer for iOS는 프로젝트에서 만들었거나 Xama
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 51afbdf79248af6f76426dd0e0c862e506a0a22f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e8c38ec407d13a99e2990a6d4cf39b5a23728b1d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768776"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003972"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS의 사용자 지정 컨트롤
 
@@ -45,9 +45,9 @@ Xamarin Designer for iOS는 응용 프로그램의 사용자 인터페이스를 
 
 ## <a name="initialization"></a>초기화
 
-서브 `UIViewController` 클래스의 경우 디자이너에서 만든 뷰에 따라 달라 지는 코드에 [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) 메서드를 사용 해야 합니다.
+`UIViewController` 서브 클래스의 경우 디자이너에서 만든 뷰에 따라 달라 지는 코드에 [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) 메서드를 사용 해야 합니다.
 
-및 `UIView` 기타 `NSObject` 서브 클래스의 경우 [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) 메서드는 레이아웃 파일에서 로드 된 후 사용자 지정 컨트롤의 초기화를 수행 하는 데 권장 되는 장소입니다. 이는 컨트롤의 생성자가 실행 될 때 속성 패널에 설정 된 사용자 지정 속성은 설정 되지 않지만가 호출 되기 전에 `AwakeFromNib` 설정 되기 때문입니다.
+`UIView` 및 기타 `NSObject` 서브 클래스의 경우, [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) 메서드는 레이아웃 파일에서 로드 된 후 사용자 지정 컨트롤의 초기화를 수행 하는 데 권장 되는 장소입니다. 이는 컨트롤의 생성자가 실행 될 때 속성 패널에 설정 된 사용자 지정 속성은 설정 되지 않지만 `AwakeFromNib`가 호출 되기 전에 설정 되기 때문입니다.
 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
@@ -122,14 +122,14 @@ public class CustomView : UIView {
 }
 ```
 
-구성 `CustomView` 요소는 개발자 `Counter` 가 iOS 디자이너 내에서 설정할 수 있는 속성을 노출 합니다. 그러나 디자이너 내에 설정 된 값에 관계 없이 `Counter` 속성의 값은 항상 0이 됩니다. 이유는 다음과 같습니다.
+`CustomView` 구성 요소는 개발자가 iOS 디자이너 내에서 설정할 수 있는 `Counter` 속성을 노출 합니다. 그러나 디자이너 내에 설정 된 값에 관계 없이 `Counter` 속성 값은 항상 0이 됩니다. 이유는 다음과 같습니다.
 
-- 의 인스턴스는 스토리 `CustomControl` 보드 파일에서 팽창 됩니다.
-- IOS 디자이너에서 수정 된 모든 속성 (예:의 값 `Counter` 을 2로 설정)이 설정 됩니다 (예:).
-- 메서드가 실행 되 고 `Initialize` 구성 요소의 메서드에 대 한 호출이 수행 됩니다. `AwakeFromNib`
-- 속성의`Counter` 값이 0으로 `Initialize` 다시 설정 됩니다.
+- `CustomControl` 인스턴스는 스토리 보드 파일에서 팽창 됩니다.
+- IOS 디자이너에서 수정 된 모든 속성 (예: `Counter`의 값을 2로 설정)이 설정 됩니다 (예:).
+- `AwakeFromNib` 메서드가 실행 되 고 구성 요소의 `Initialize` 메서드가 호출 됩니다.
+- `Initialize` 내에서 `Counter` 속성의 값이 0으로 다시 설정 됩니다.
 
-위의 상황을 해결 하려면 다른 위치에서 속성 `Counter` 을 초기화 하거나 (예: 구성 요소 생성자에서), 메서드를 `AwakeFromNib` 재정의 하지 말고, `Initialize` 구성 요소에서 더 이상 초기화가 필요 하지 않은 경우를 호출 합니다. 가 현재 생성자에 의해 처리 되 고 있습니다.
+위의 상황을 해결 하려면 `Counter` 속성을 다른 곳에서 초기화 하거나 (예: 구성 요소 생성자에서) `AwakeFromNib` 메서드를 재정의 하지 않고 구성 요소에 현재 있는 것과 같은 추가 초기화가 필요 하지 않은 경우 `Initialize`를 호출 합니다. 생성자에 의해 처리 됩니다.
 
 ## <a name="design-mode"></a>디자인 모드
 
@@ -163,8 +163,8 @@ public class DesignerAwareLabel : UILabel, IComponent {
 }
 ```
 
-모든 멤버에 액세스 하기 `Site` 전에 항상 `null` 에 대 한 속성을 확인 해야 합니다. `Site` 가`null`이면 디자이너에서 컨트롤이 실행 되 고 있지 않다고 가정 하는 것이 안전 합니다.
-디자인 모드 `Site` 에서는 컨트롤의 생성자가 실행 된 후 및가 호출 되기 전에 `AwakeFromNib` 설정 됩니다.
+해당 멤버에 액세스 하기 전에 항상 `null`에 대 한 `Site` 속성을 확인 해야 합니다. `Site` `null`경우 디자이너에서 컨트롤이 실행 되지 않는다고 가정 하는 것이 안전 합니다.
+디자인 모드에서 `Site`는 컨트롤의 생성자가 실행 된 후 `AwakeFromNib` 호출 되기 전에 설정 됩니다.
 
 ## <a name="debugging"></a>디버깅
 
@@ -173,14 +173,14 @@ public class DesignerAwareLabel : UILabel, IComponent {
 
 디자인 화면에서는 다른 컨트롤을 계속 렌더링 하는 동안 개별 컨트롤에서 throw 된 예외를 종종 catch 할 수 있습니다. 잘못 된 컨트롤은 빨간색 자리 표시자로 바뀌고 느낌표 아이콘을 클릭 하 여 예외 추적을 볼 수 있습니다.
 
- ![](ios-designable-controls-overview-images/exception-box.png "빨강 자리 표시자와 예외 세부 정보로 잘못 된 컨트롤")
+ ![](ios-designable-controls-overview-images/exception-box.png "A faulty control as red placeholder and the exception details")
 
 컨트롤에 디버그 기호를 사용할 수 있는 경우 추적에는 파일 이름과 줄 번호가 있습니다.
 스택 추적에서 줄을 두 번 클릭 하면 소스 코드에서 해당 줄로 이동 합니다.
 
 디자이너에서 잘못 된 컨트롤을 격리할 수 없는 경우 디자인 화면 위쪽에 경고 메시지가 표시 됩니다.
 
- ![](ios-designable-controls-overview-images/info-bar.png "디자인 화면 위쪽에 있는 경고 메시지")
+ ![](ios-designable-controls-overview-images/info-bar.png "A warning message at the top of the design surface")
 
 오류가 발생 한 컨트롤이 디자인 화면에서 수정 되거나 제거 되 면 전체 렌더링이 다시 시작 됩니다.
 

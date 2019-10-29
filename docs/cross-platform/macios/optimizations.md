@@ -3,15 +3,15 @@ title: 빌드 최적화
 description: 이 문서에서는 Xamarin.ios 및 Xamarin.ios 앱에 대 한 빌드 시 적용 되는 다양 한 최적화에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: 4fdc40a8aed4b3137e418d6123fc000c2b36b6dd
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: 22028743742a618bd7347d5e49153defecd4e3bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70226208"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015178"
 ---
 # <a name="build-optimizations"></a>빌드 최적화
 
@@ -40,17 +40,17 @@ public virtual void AddChildViewController (UIViewController childController)
 }
 ```
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 기본적으로 릴리스 빌드에 대해 사용 하도록 설정 됩니다.
 
-Mtouch/mmp에 전달 `--optimize=[+|-]remove-uithread-checks` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]remove-uithread-checks`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 [1]: https://docs.microsoft.com/dotnet/api/UIKit.UIApplication.EnsureUIThread
 
-## <a name="inline-intptrsize"></a>Inline IntPtr.Size
+## <a name="inline-intptrsize"></a>인라인 IntPtr 크기
 
-대상 플랫폼에 따라의 `IntPtr.Size` 상수 값을 Inlines 합니다.
+대상 플랫폼에 따라 `IntPtr.Size`의 상수 값을 Inlines 합니다.
 
 이 최적화는 다음 코드 유형을 변경 합니다.
 
@@ -72,19 +72,19 @@ if (8 == 8) {
 }
 ```
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 기본적으로 단일 아키텍처를 대상으로 하거나 플랫폼 어셈블리 (**xamarin.ios**, **TVOS**, **WatchOS** 또는 **xamarin.ios**)를 대상으로 하는 경우 사용 하도록 설정 됩니다.
 
 여러 아키텍처를 대상으로 하는 경우이 최적화는 32 비트 버전 및 64 비트 버전의 앱에 대해 서로 다른 어셈블리를 만들며, 두 버전 모두 앱에 포함 되어야 하므로, 최종 앱 크기를 줄이는 대신 효과적으로 확장 합니다. 메서드.
 
-Mtouch/mmp에 전달 `--optimize=[+|-]inline-intptr-size` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]inline-intptr-size`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="inline-nsobjectisdirectbinding"></a>인라인 NSObject. IsDirectBinding
 
-`NSObject.IsDirectBinding`특정 인스턴스가 래퍼 형식 인지 여부를 확인 하는 인스턴스 속성입니다. 래퍼 형식은 네이티브 형식에 매핑되는 관리 되는 형식입니다. 예를 들어 관리 되 `UIKit.UIView` 는 형식이 네이티브 `UIView` 형식에 매핑되면이는 사용자 형식입니다. 이 경우 `class MyUIView : UIKit.UIView` 은 사용자 형식입니다.
+`NSObject.IsDirectBinding`은 특정 인스턴스가 래퍼 형식 인지 여부를 확인 하는 인스턴스 속성입니다. 래퍼 형식은 네이티브 형식에 매핑되는 관리 되는 형식입니다. 예를 들어 관리 되는 `UIKit.UIView` 형식은 네이티브 `UIView` 형식에 매핑되며, 반대는 사용자 형식입니다. 이 경우 `class MyUIView : UIKit.UIView` 사용자 형식)입니다.
 
-값에 따라 사용할 `IsDirectBinding` `objc_msgSend` 버전이 결정 되기 때문에 목표-C를 호출할 때의 값을 알고 있어야 합니다.
+값에 사용할 `objc_msgSend` 버전이 결정 되기 때문에 목표-C를 호출할 때 `IsDirectBinding`의 값을 알고 있어야 합니다.
 
 다음 코드만 제공 됩니다.
 
@@ -117,7 +117,7 @@ class MyUIView : UIView {
 }
 ```
 
-`UIView.SomeProperty` 의`IsDirectBinding` 값이 상수가 아니고 인라인 될 수 없음을 확인할 수 있습니다.
+`IsDirectBinding`의 값이 상수가 아니고 인라인 될 수 없는 `UIView.SomeProperty`에서 확인할 수 있습니다.
 
 ```csharp
 void uiView = new UIView ();
@@ -126,7 +126,7 @@ void myView = new MyUIView ();
 Console.WriteLine (myView.SomeProperty); // prints 'false'
 ```
 
-그러나 앱의 모든 형식을 확인 하 고에서 `NSUrl`상속 되는 형식이 없는지 확인할 수 있으며, 따라서이 `IsDirectBinding` 값을 상수로 `true`인라인 하는 것이 안전 합니다.
+그러나 앱의 모든 형식을 확인 하 고 `NSUrl`에서 상속 되는 형식이 없는지 확인할 수 있습니다. 따라서 `IsDirectBinding` 값을 상수 `true`인라인 하는 것이 안전 합니다.
 
 ```csharp
 void myURL = new NSUrl ();
@@ -134,7 +134,7 @@ Console.WriteLine (myURL.SomeOtherProperty); // prints 'true'
 // There's no way to make SomeOtherProperty print anything but 'true', since there are no NSUrl subclasses.
 ```
 
-특히이 최적화는 다음 코드 형식을 변경 합니다 (에 대 한 `NSUrl.AbsoluteUrl`바인딩 코드).
+특히이 최적화는 다음 코드 형식을 변경 합니다 (`NSUrl.AbsoluteUrl`의 바인딩 코드).
 
 ```csharp
 if (IsDirectBinding) {
@@ -144,7 +144,7 @@ if (IsDirectBinding) {
 }
 ```
 
-응용 프로그램에의 `NSUrl` 서브 클래스가 없다는 것을 확인할 수 있는 경우 다음과 같이 합니다.
+다음으로 (앱에 `NSUrl`의 서브 클래스가 없음을 확인할 수 있는 경우).
 
 ```csharp
 if (true) {
@@ -154,11 +154,11 @@ if (true) {
 }
 ```
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 항상 Xamarin.ios에 대해 기본적으로 사용 하도록 설정 되며, xamarin.ios의 경우 항상 기본적으로 사용 하지 않도록 설정 되어 있습니다. Xamarin.ios에서 어셈블리를 동적으로 로드할 수 있기 때문에 특정 클래스가 서브클래싱 되지 않는 것을 확인할 수 없습니다.
 
-Mtouch/mmp에 전달 `--optimize=[+|-]inline-isdirectbinding` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]inline-isdirectbinding`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="inline-runtimearch"></a>인라인 런타임.
 
@@ -182,11 +182,11 @@ if (Arch.DEVICE == Arch.DEVICE) {
 }
 ```
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 Xamarin.ios의 경우 항상 기본적으로 사용 하도록 설정 되어 있습니다 (Xamarin.ios에는 사용할 수 없음).
 
-Mtouch에 전달 `--optimize=[+|-]inline-runtime-arch` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch에 `--optimize=[+|-]inline-runtime-arch`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="dead-code-elimination"></a>데드 코드 제거
 
@@ -216,13 +216,13 @@ if (8 == 8) {
 }
 ```
 
-그리고 식이 `8 == 8` 항상 true 인지 확인 하 고 다음과 같이 줄입니다.
+식 `8 == 8` 항상 true 인지 확인 하 고 다음과 같이 줄이십시오.
 
 ```csharp
 Console.WriteLine ("Doing this");
 ```
 
-이는 다음 코드 형식을 변환할 수 있기 때문에 인라인 최적화와 함께 사용 하는 경우의 강력한 최적화입니다 (의 `NFCIso15693ReadMultipleBlocksConfiguration.Range`바인딩 코드).
+이는 다음 형식의 코드를 변환할 수 있기 때문에 인라인 최적화와 함께 사용 하는 경우 강력한 최적화입니다 (`NFCIso15693ReadMultipleBlocksConfiguration.Range`의 바인딩 코드).
 
 ```csharp
 NSRange ret;
@@ -254,7 +254,7 @@ if (IsDirectBinding) {
 return ret;
 ```
 
-(64 비트 장치에 대해 빌드할 때 및 앱에 하위 클래스가 없도록 `NFCIso15693ReadMultipleBlocksConfiguration` 할 수 있는 경우).
+(64 비트 장치에 대해 빌드할 때 그리고 앱에 `NFCIso15693ReadMultipleBlocksConfiguration` 하위 클래스가 없도록 할 수 있는 경우).
 
 ```csharp
 NSRange ret;
@@ -268,15 +268,15 @@ AOT 컴파일러는 이와 같이 데드 코드 제거를 이미 수행할 수 �
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper`
 * `global::ObjCRuntime.Messaging.NSRange_objc_msgSendSuper_stret`
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 링커에서는 항상 기본적으로 사용 하도록 설정 되어 있습니다 (링커를 사용 하는 경우).
 
-Mtouch/mmp에 전달 `--optimize=[+|-]dead-code-elimination` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]dead-code-elimination`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="optimize-calls-to-blockliteralsetupblock"></a>BlockLiteral에 대 한 호출 최적화. SetupBlock
 
-Xamarin.ios/Mac 런타임은 관리 되는 대리자에 대 한 목표-C 블록을 만들 때 블록 시그니처를 알고 있어야 합니다. 이 작업은 비용이 많이 드는 작업 일 수 있습니다. 이 최적화는 빌드 시 블록 시그니처를 계산 하 고, 대신 인수로 시그니처를 사용 하 `SetupBlock` 는 메서드를 호출 하도록 IL을 수정 합니다. 이렇게 하면 런타임에 서명을 계산 하지 않아도 됩니다.
+Xamarin.ios/Mac 런타임은 관리 되는 대리자에 대 한 목표-C 블록을 만들 때 블록 시그니처를 알고 있어야 합니다. 이 작업은 비용이 많이 드는 작업 일 수 있습니다. 이 최적화는 빌드 시 블록 시그니처를 계산 하 고, 대신 인수로 시그니처를 사용 하는 `SetupBlock` 메서드를 호출 하도록 IL을 수정 합니다. 이렇게 하면 런타임에 서명을 계산 하지 않아도 됩니다.
 
 벤치 마크는 10 ~ 15 계수 블록을 호출 하는 속도를 향상 시키는 것을 보여 줍니다.
 
@@ -302,17 +302,17 @@ public static void RequestGuidedAccessSession (bool enable, Action<bool> complet
 }
 ```
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 정적 등록자를 사용 하는 경우 기본적으로 사용 하도록 설정 됩니다. (Xamarin.ios에서 정적 등록자는 장치 빌드에 대해 기본적으로 사용 하도록 설정 되 고, Xamarin.ios에서 정적 등록자는 릴리스 빌드에 대해 기본적으로 사용 하도록 설정 됩니다.)
 
-Mtouch/mmp에 전달 `--optimize=[+|-]blockliteral-setupblock` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]blockliteral-setupblock`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="optimize-support-for-protocols"></a>프로토콜에 대 한 지원 최적화
 
 Xamarin.ios/Mac 런타임에는 관리 되는 형식이 목표-C 프로토콜을 구현 하는 방법에 대 한 정보가 필요 합니다. 이 정보는 인터페이스 (및 이러한 인터페이스의 특성)에 저장 되며,이는 매우 효율적인 형식이 아니며 링커에 친숙 하지 않습니다.
 
-한 가지 예는 이러한 인터페이스가 `[ProtocolMember]` 특성의 모든 프로토콜 멤버에 대 한 정보를 저장 하는 것입니다. 여기에는 해당 멤버의 매개 변수 형식에 대 한 참조가 포함 됩니다. 즉, 이러한 인터페이스를 구현 하기만 하면 앱이 호출 하거나 구현 하지 않는 선택적 멤버에 대해서도 링커에서 해당 인터페이스에서 사용 되는 모든 형식을 유지 하 게 됩니다.
+한 가지 예는 이러한 인터페이스가 `[ProtocolMember]` 특성에 모든 프로토콜 멤버에 대 한 정보를 저장 하는 것입니다. 여기에는 해당 멤버의 매개 변수 형식에 대 한 참조가 포함 됩니다. 즉, 이러한 인터페이스를 구현 하기만 하면 앱이 호출 하거나 구현 하지 않는 선택적 멤버에 대해서도 링커에서 해당 인터페이스에서 사용 되는 모든 형식을 유지 하 게 됩니다.
 
 이러한 최적화를 통해 정적 등록자는 런타임에 쉽고 빠르게 찾을 수 있는 적은 양의 메모리를 사용 하는 효율적인 형식으로 필요한 정보를 저장할 수 있습니다.
 
@@ -324,7 +324,7 @@ Xamarin.ios에서이 최적화는 링커 및 정적 등록자를 모두 사용 �
 
 Xamarin.ios에서이 최적화는 기본적으로 사용 되지 않습니다. Xamarin.ios에서 어셈블리를 동적으로 로드 하는 것을 지원 하기 때문에 이러한 어셈블리는 빌드 시간에 알려지지 않아 최적화 되지 않을 수 있기 때문입니다.
 
-Mtouch/mmp에 전달 `--optimize=-register-protocols` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=-register-protocols`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="remove-the-dynamic-registrar"></a>동적 등록자 제거
 
@@ -336,13 +336,13 @@ Xamarin.ios 및 Xamarin.ios 런타임에는 목표-C 런타임에 [관리 되는
 
 Xamarin.ios는 런타임에 어셈블리를 동적으로 로드 하는 것을 지원 하기 때문에 (빌드 시간에 알려지지 않음) 빌드 시 안전 최적화 인지 여부를 확인할 수 없습니다. 즉, Xamarin.ios 앱에 대해서는이 최적화가 기본적으로 사용 되지 않습니다.
 
-Mtouch/mmp에 전달 `--optimize=[+|-]remove-dynamic-registrar` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]remove-dynamic-registrar`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 동적 등록자를 제거 하도록 기본값을 재정의 하는 경우 링커에서는 안전 하지 않은 것을 감지 하면 경고를 내보냅니다. 그러나 동적 등록자는 여전히 제거 됩니다.
 
 ## <a name="inline-runtimedynamicregistrationsupported"></a>인라인 런타임. DynamicRegistrationSupported
 
-빌드 시간에 결정 `Runtime.DynamicRegistrationSupported` 된 대로의 값을 Inlines 합니다.
+Inlines `Runtime.DynamicRegistrationSupported` 값은 빌드 시 결정 됩니다.
 
 동적 등록자를 제거 하는 경우 ( [동적 등록자 최적화 제거](#remove-the-dynamic-registrar) 참조) 상수 `false` 값이 고, 그렇지 않으면 상수 `true` 값입니다.
 
@@ -368,17 +368,17 @@ throw new Exception ("dynamic registration is not supported");
 Console.WriteLine ("do something");
 ```
 
-이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성을 가진 메서드에만 적용 됩니다.
+이러한 최적화를 위해서는 링커를 사용 하도록 설정 해야 하며 `[BindingImpl (BindingImplOptions.Optimizable)]` 특성이 있는 메서드에만 적용 됩니다.
 
 링커에서는 항상 기본적으로 사용 하도록 설정 되어 있습니다 (링커를 사용 하는 경우).
 
-Mtouch/mmp에 전달 `--optimize=[+|-]inline-dynamic-registration-supported` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]inline-dynamic-registration-supported`를 전달 하 여 기본 동작을 재정의할 수 있습니다.
 
 ## <a name="precompute-methods-to-create-managed-delegates-for-objective-c-blocks"></a>목적-C 블록에 대 한 관리 되는 대리자를 만드는 메서드를 미리 계산 합니다.
 
 목표-C가 블록을 매개 변수로 사용 하는 선택기를 호출 하 고 관리 코드에서 해당 메서드를 재정의 한 경우 Xamarin.ios/Xamarin.ios 런타임에서는 해당 블록에 대 한 대리자를 만들어야 합니다.
 
-바인딩 생성기에 의해 생성 되는 바인딩 코드에는 `[BlockProxy]` 이 작업을 수행할 수 있는 `Create` 메서드를 사용 하 여 형식을 지정 하는 특성이 포함 됩니다.
+바인딩 생성기에 의해 생성 되는 바인딩 코드는이를 수행할 수 있는 `Create` 메서드로 형식을 지정 하는 `[BlockProxy]` 특성을 포함 합니다.
 
 다음과 같은 목표-C 코드를 지정 합니다.
 
@@ -503,15 +503,15 @@ static class Trampolines
 }
 ```
 
-객관적인 C를 호출 `[ObjCBlockTester callClassCallback]`하면 xamarin.ios/xamarin.ios 런타임이 매개 변수의 `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` 특성을 확인 합니다. 그런 다음 해당 형식에서 `Create` 메서드를 조회 하 고 해당 메서드를 호출 하 여 대리자를 만듭니다.
+목표-C가 `[ObjCBlockTester callClassCallback]`를 호출 하면 Xamarin.ios/Xamarin.ios 런타임이 매개 변수의 `[BlockProxy (typeof (Trampolines.NIDActionArity1V0))]` 특성을 확인 합니다. 그런 다음 해당 형식에 대 한 `Create` 메서드를 조회 하 고 해당 메서드를 호출 하 여 대리자를 만듭니다.
 
-이 최적화는 빌드 시 `Create` 메서드를 찾을 수 있으며, 정적 등록자는 특성 및 리플렉션을 사용 하 여 런타임에 메타 데이터 토큰을 사용 하 여 런타임에 메서드를 조회 하는 코드를 생성 합니다 .이는 훨씬 빠르며 링커도 허용 됩니다. 해당 런타임 코드를 제거 하 여 앱을 더 작게 만듭니다.
+이 최적화는 빌드 시에 `Create` 메서드를 찾고, 정적 등록자는 특성 및 리플렉션을 사용 하 여 런타임에 메타 데이터 토큰을 사용 하 여 런타임에 메서드를 조회 하는 코드를 생성 합니다 .이는 훨씬 더 빠르며 링커는 해당 하는 런타임 코드를 제거 하 여 앱을 더 작게 만듭니다.
 
-Mmp/mtouch가 `Create` 메서드를 찾을 수 없는 경우 MT4174/MM4174 경고가 표시 되 고 대신 조회가 런타임에 수행 됩니다.
+Mmp/mtouch가 `Create` 메서드를 찾을 수 없는 경우 MT4174/MM4174 경고가 표시 되 고 대신 런타임에 조회가 수행 됩니다.
 가장 가능성이 높은 원인은 필요한 `[BlockProxy]` 특성이 없는 바인딩 코드를 수동으로 작성 하는 것입니다.
 
 이 최적화를 위해서는 정적 등록자를 사용 하도록 설정 해야 합니다.
 
 정적 등록자를 사용 하도록 설정한 경우 항상 기본적으로 사용 하도록 설정 됩니다.
 
-Mtouch/mmp에 전달 `--optimize=[+|-]static-delegate-to-block-lookup` 하 여 기본 동작을 재정의할 수 있습니다.
+Mtouch/mmp에 `--optimize=[+|-]static-delegate-to-block-lookup`를 전달 하 여 기본 동작을 재정의할 수 있습니다.

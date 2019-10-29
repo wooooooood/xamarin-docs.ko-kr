@@ -6,12 +6,12 @@ ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 37540053cee03a83582fe19ffb1dcf9e1cf4564c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "67832539"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011737"
 ---
 # <a name="introduction-to-urhosharp"></a>UrhoSharp 소개
 
@@ -19,7 +19,7 @@ ms.locfileid: "67832539"
 
 UrhoSharp는 Xamarin 및 .NET 개발자를 위한 강력한 3D 게임 엔진입니다.  이는 Apple의 SceneKit 및 SpriteKit의 경우와 유사 하며, 플랫폼 간 인 경우에도 물리학, 탐색, 네트워킹 등을 포함 합니다.
 
-[Urho3D](http://urho3d.github.io/) 엔진에 대 한 .net 바인딩 이며 개발자는 동일한 코드 베이스를 사용 하 여 Android, IOS, Windows 및 Mac을 대상으로 하는 플랫폼 간 코드를 작성 하 고 OpenGL 및 Direct3D 시스템 모두에 렌더링할 수 있습니다.
+[Urho3D](https://urho3d.github.io/) 엔진에 대 한 .net 바인딩 이며 개발자는 동일한 코드 베이스를 사용 하 여 Android, IOS, Windows 및 Mac을 대상으로 하는 플랫폼 간 코드를 작성 하 고 OpenGL 및 Direct3D 시스템 모두에 렌더링할 수 있습니다.
 
 UrhoSharp는 다양 한 기능을 사용 하는 게임 엔진입니다.
 
@@ -135,7 +135,7 @@ class MySample : Application {
 new MySample().Run();
 ```
 
-런타임에서 `Setup` 및 `Start` 메서드를 호출 합니다.  @No__t_0를 재정의 하는 경우 엔진 매개 변수를 구성할 수 있습니다 (이 샘플에서는 표시 되지 않음).
+런타임에서 `Setup` 및 `Start` 메서드를 호출 합니다.  `Setup`를 재정의 하는 경우 엔진 매개 변수를 구성할 수 있습니다 (이 샘플에서는 표시 되지 않음).
 
 게임을 시작 하기 때문에 `Start`를 재정의 해야 합니다.  이 방법에서는 자산을 로드 하 고, 이벤트 처리기를 연결 하 고, 장면을 설정 하 고, 원하는 작업을 시작 합니다.  이 샘플에서는 사용자에 게 표시 되는 약간의 UI를 만들고 3D 장면을 설정 합니다.
 

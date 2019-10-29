@@ -2,15 +2,15 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: 데스크톱 앱 포팅 지침
 description: 기존 Windows Forms 또는 WPF 앱을 분리 하 여 macOS, iOS, Android 및 UWP/Windows 10에서 실행 되는 플랫폼 간 앱을 만드는 방법에 대 한 간단한 설명입니다.
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 2a678c2b1880cb69b1bece85ed558309aa611a62
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 181034a4936b2da010a2fcd280ded1a3419d43ae
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290341"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016445"
 ---
 # <a name="desktop-app-porting-guidance"></a>데스크톱 앱 포팅 지침
 

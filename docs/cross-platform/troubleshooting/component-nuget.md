@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin 구성 요소 저장소가 더 이상 �
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: e9bd54523fa46625e9a9e6e46247b92987f3d427
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71106070"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73014338"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조 업데이트
 
@@ -41,7 +41,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 2. 언로드된 프로젝트를 마우스 오른쪽 단추로 다시 클릭 하 고 **{프로젝트 이름} .Csproj 편집**을 선택 합니다.
 
-3. 파일에서에 대 한 참조를 `XamarinComponentReference`찾습니다. 다음 예제와 유사 하 게 표시 됩니다.
+3. `XamarinComponentReference`파일에서 참조를 찾습니다. 다음 예제와 유사 하 게 표시 됩니다.
 
     ```xml
     <ItemGroup>
@@ -60,7 +60,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
     </ItemGroup>
     ```
 
-4. 에 대 `XamarinComponentReference` 한 참조를 제거 하 고 파일을 저장 합니다. 위의 예제에서는 전체 `ItemGroup`를 제거 하는 것이 안전 합니다.
+4. `XamarinComponentReference`에 대 한 참조를 제거 하 고 파일을 저장 합니다. 위의 예제에서는 전체 `ItemGroup`를 제거 하는 것이 안전 합니다.
 
 5. 파일이 저장 되 면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 다시 로드**를 선택 합니다.
 
@@ -76,7 +76,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 1. .Csproj 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **도구 > 파일 편집**을 선택 합니다.
 
-2. 파일에서에 대 한 참조를 `XamarinComponentReference`찾습니다. 다음 예제와 유사 하 게 표시 됩니다.
+2. `XamarinComponentReference`파일에서 참조를 찾습니다. 다음 예제와 유사 하 게 표시 됩니다.
 
     ```xml
     <ItemGroup>
@@ -95,7 +95,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
     </ItemGroup>
     ```
 
-3. 에 대 `XamarinComponentReference` 한 참조를 제거 하 고 파일을 저장 합니다. 위의 예제에서 전체를 제거 하는 것이 안전 합니다.`ItemGroup`
+3. `XamarinComponentReference`에 대 한 참조를 제거 하 고 파일을 저장 합니다. 위의 예제에서 전체 `ItemGroup`를 제거 하는 것이 안전 합니다.
 
 4. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다.
 
@@ -159,8 +159,8 @@ _NuGet 종속성을 포함할 수 있지만 무시할 수 있습니다._
 
 예를 들어 다음을 검색 하 여 인기 있는 **sqlite-net-pcl** 패키지를 찾을 수 있습니다.
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl)– 제품 이름입니다.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum)– 작성자의 프로필입니다.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – 제품 이름입니다.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – 작성자의 프로필입니다.
 
 ### <a name="updating-the-solution"></a>솔루션 업데이트
 

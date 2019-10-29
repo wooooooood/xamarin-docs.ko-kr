@@ -3,15 +3,15 @@ title: NuGet 패키지를 다운그레이드하려면 어떻게 할까요?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: daa8159dd7cac1f727904ca5de08908fd3ca1af9
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.openlocfilehash: 0c70859845915a821bb83b0f9d29528634b1a5de
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105676"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73013616"
 ---
 # <a name="how-do-i-downgrade-a-nuget-package"></a>NuGet 패키지를 다운그레이드하려면 어떻게 할까요?
 
@@ -25,16 +25,16 @@ Mac용 Visual Studio & Visual Studio에는 이전 버전의 패키지를 선택 
 
     > 설치 패키지 [PackageName]-버전 [버전 메뉴에 대 한 탭]
 
-패키지의 NuGet 페이지에서 정확한 명령을 복사 하 여 붙여 넣을 수도 있습니다. Xamarin.ios에 대 한 예제:[https://www.nuget.org/packages/Xamarin.Forms/](https://www.nuget.org/packages/Xamarin.Forms/)
+패키지의 NuGet 페이지에서 정확한 명령을 복사 하 여 붙여 넣을 수도 있습니다. Xamarin.ios에 대 한 예제: [https://www.nuget.org/packages/Xamarin.Forms/](https://www.nuget.org/packages/Xamarin.Forms/)
 
-## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
+## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
 1. 프로젝트에서 패키지 폴더를 마우스 오른쪽 단추로 클릭 & **패키지 추가** 를 선택 합니다.
 2. Searchbar에서 다음 구문을 사용 하 여 필요한 패키지를 검색할 수 있습니다.
 
     `[PackageName] version:*`
 
-### <a name="examples"></a>예 
+### <a name="examples"></a>예제 
 
 - 모든 Xamarin Forms 패키지를 나열 합니다. 
 
@@ -45,4 +45,4 @@ Mac용 Visual Studio & Visual Studio에는 이전 버전의 패키지를 선택 
     `Xamarin.Forms version:1.4`
 
 > [!NOTE]
-> 버전 번호 & 사이 `version:` 에 공백을 추가 하는 경우에는 버전이 지정 되지 않은 것 처럼 검색 됩니다.
+> 버전 번호 & `version:` 사이에 공백을 추가 하는 경우 검색은 버전이 지정 되지 않은 것 처럼 동작 합니다.

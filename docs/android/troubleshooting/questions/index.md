@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: c14c03d4f618644382aa80b5e0e7fc5b7a46fa9b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70760871"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026974"
 ---
 # <a name="android-frequently-asked-questions"></a>Android faq (질문과 대답)
 
@@ -36,7 +36,7 @@ Xamarin Android에는 JDK 8 또는 Microsoft Mobile OpenJDK가 필요 합니다.
 
 ### <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packagesinstall-android-support-librarymd"></a>[Xamarin.Android.Support 패키지에 필요한 Android 지원 라이브러리를 수동으로 설치하려면 어떻게 해야 하나요?](install-android-support-library.md)
 
-이 가이드에서는 Windows & Mac에 지원 `Xamarin.Android.Support.v4` 라이브러리를 설치 하는 방법에 대 한 예제 단계를 제공 합니다.
+이 가이드에서는 Windows & Mac에서 `Xamarin.Android.Support.v4` 지원 라이브러리를 설치 하는 방법에 대 한 예제 단계를 제공 합니다.
 
 ### <a name="what-usb-drivers-do-i-need-to-debug-android-on-windowsandroid-drivers-debug-windowsmd"></a>[Windows에서 Android를 디버그해야 하는 USB 드라이버는 무엇인가요?](android-drivers-debug-windows.md)
 
@@ -59,13 +59,13 @@ Windows에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되�
 
 ### <a name="smarter-xamarin-android-support-v4--v13-nuget-packagesandroid-support-v4v13-librariesmd"></a>[더 스마트한 Xamarin Android 지원 v4 / v13 NuGet 패키지](android-support-v4v13-libraries.md)
 
-`Support-v4`및 `Support-v13` 는 동일한 앱에서 함께 사용할 수 없습니다. 즉, 함께 사용할 수 없습니다. 이는 실제로 `Support-v13` 의 `Support-v4`모든 형식 및 구현을 포함 하기 때문입니다. 동일한 프로젝트에서 두 항목을 모두 참조 하는 경우 중복 형식 오류가 발생 합니다.
+`Support-v4` 및 `Support-v13` 동일한 앱에서 함께 사용할 수 없습니다. 즉, 함께 사용할 수 없습니다. 이는 `Support-v13` 실제로 `Support-v4`의 모든 형식 및 구현을 포함 하기 때문입니다. 동일한 프로젝트에서 두 항목을 모두 참조 하는 경우 중복 형식 오류가 발생 합니다.
 
 ### <a name="how-do-i-resolve-a-pathtoolongexception-errorpath-too-long-exceptionmd"></a>[PathTooLongException 오류를 해결 어떻게 할까요??](path-too-long-exception.md)
 
 이 문서에서는 Xamarin Android 프로젝트를 빌드하는 동안 발생할 수 있는 **PathTooLongException** 오류를 해결 하는 방법을 설명 합니다.
 
-## <a name="deprecated"></a>사용되지 않음
+## <a name="deprecated"></a>Mapi
 
 > [!NOTE]
 > 다음 문서는 최신 버전의 Xamarin에서 해결 된 문제에 적용 됩니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
@@ -80,7 +80,7 @@ Windows에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되�
 
 ### <a name="adjusting-java-memory-parameters-for-the-android-designerandroid-designer-java-memorymd"></a>[Android Designer용 Java 메모리 매개 변수 조정](android-designer-java-memory.md)
 
-Android designer에 대 한 프로세스를 `java` 시작할 때 사용 되는 기본 메모리 매개 변수는 일부 시스템 구성과 호환 되지 않을 수 있습니다. Xamarin Studio 5.7.2.7 및 Xamarin for Visual Studio 3.9.344에서 시작 하 여 이러한 설정은 프로젝트별로 사용자 지정할 수 있습니다.
+Android designer에 대 한 `java` 프로세스를 시작할 때 사용 되는 기본 메모리 매개 변수는 일부 시스템 구성과 호환 되지 않을 수 있습니다. Xamarin Studio 5.7.2.7 및 Xamarin for Visual Studio 3.9.344에서 시작 하 여 이러한 설정은 프로젝트별로 사용자 지정할 수 있습니다.
 
 ### <a name="my-android-resourcedesignercs-file-will-not-updateresource-designer-wont-updatemd"></a>[Android Resource.designer.cs 파일이 업데이트되지 않습니다.](resource-designer-wont-update.md)
 

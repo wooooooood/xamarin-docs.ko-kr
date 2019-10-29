@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: d20e27fdbb1f62c2aebb7122d7f0c042b3ac9085
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: cbc3bceffacd9669c1e2e667faadc2939fd4aa1f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "71997195"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73005921"
 ---
 # <a name="gtk-platform-setup"></a>GTK # 플랫폼 설정
 
@@ -26,7 +26,7 @@ ms.locfileid: "71997195"
 시작 하기 전에 새 Xamarin.ios 솔루션을 만들거나 기존 Xamarin.ios 솔루션 (예: [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife))을 사용 합니다.
 
 > [!NOTE]
-> 이 문서에서는 VS2017 및 Mac용 Visual Studio의 Xamarin.ios 솔루션에 GTK # 앱을 추가 하는 데 중점을 둔 반면, Linux 용 [MonoDevelop](http://www.monodevelop.com/) 에서 수행할 수도 있습니다.
+> 이 문서에서는 VS2017 및 Mac용 Visual Studio의 Xamarin.ios 솔루션에 GTK # 앱을 추가 하는 데 중점을 둔 반면, Linux 용 [MonoDevelop](https://www.monodevelop.com/) 에서 수행할 수도 있습니다.
 
 ## <a name="adding-a-gtk-app"></a>GTK # 앱 추가
 

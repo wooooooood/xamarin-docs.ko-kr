@@ -4,21 +4,21 @@ description: 이 섹션에는 Xamarin.ios 앱에서 이미지 작업을 수행 �
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6940e07c51dbc19615454e0c51188152db22c63f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 08698fab2bdd1528e7f532dc02c86219f98fd611
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767223"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73010213"
 ---
 # <a name="images-and-icons-in-xamarinios"></a>Xamarin.ios의 이미지 및 아이콘
 
 _이 섹션에는 Xamarin.ios 앱에서 이미지 작업을 수행 하는 다양 한 문서가 포함 되어 있습니다. 예를 들어 아이콘으로 사용 하거나, 화면을 시작 하거나, 컨트롤에 포함 하 고, 사용자 지정 문서 형식에 대 한 아이콘을 제공 합니다._
 
-IOS 앱 내에서 이미지 자산을 사용 하는 방법에는 여러 가지가 있습니다. 단순히 응용 프로그램 ui의 일부로 이미지를 표시 하 여 `UIButton` 또는 `UIImageView`와 같은 ui 컨트롤에 할당 하 여 아이콘 및 시작 화면을 제공 하는 것부터 xamarin.ios를 사용 하면 다음과 같은 방식으로 ios 앱에 유용한 아트 워크를 쉽게 추가할 수 있습니다. 
+IOS 앱 내에서 이미지 자산을 사용 하는 방법에는 여러 가지가 있습니다. 단순히 응용 프로그램 UI의 일부로 이미지를 표시 하 고, `UIButton` 또는 `UIImageView`같은 UI 컨트롤에 할당 하 여 아이콘 및 시작 화면을 제공 하는 것부터 Xamarin.ios를 사용 하면 다음과 같은 방식으로 iOS 앱에 유용한 아트 워크를 쉽게 추가할 수 있습니다. : 
 
 - **해상도 독립적 이미지** – 다양 한 장치 해상도 및 유형 (IPhone, iPad 등)에서 이미지 작업을 위한 iOS의 기본 제공 지원을 사용 합니다.
 - **자산 카탈로그 이미지 집합** - **자산 카탈로그 이미지 집합** 을 사용 하 여 앱에 필요한 지정 된 이미지 자산의 모든 버전을 관리 하 고 그룹화 합니다.
@@ -46,9 +46,9 @@ IOS 앱에 대 한 이미지 자산을 만들 때 고려해 야 할 몇 가지 �
 Apple은 앱의 아이콘 관리를 허용 하는 iOS 10.3에 대 한 몇 가지 향상 된 기능을 추가 했습니다.
 
 - `ApplicationIconBadgeNumber`-Springboard에서 앱 아이콘의 배지를 가져오거나 설정 합니다.
-- `SupportsAlternateIcons`-앱 `true` 에 대체 아이콘 집합이 있는 경우입니다.
-- `AlternateIconName`-현재 선택한 대체 아이콘의 이름을 반환 하거나 `null` 기본 아이콘을 사용 하는 경우을 반환 합니다.
-- `SetAlternameIconName`-이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환할 수 있습니다.
+- `SupportsAlternateIcons`-`true` 경우 앱에 대체 아이콘 집합이 있습니다.
+- `AlternateIconName`-현재 선택 된 대체 아이콘의 이름을 반환 하거나 기본 아이콘을 사용 하는 경우 `null` 합니다.
+- `SetAlternameIconName`-이 메서드를 사용 하 여 앱의 아이콘을 지정 된 대체 아이콘으로 전환 합니다.
 
 ## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[시작 화면](~/ios/app-fundamentals/images-icons/launch-screens.md)
 

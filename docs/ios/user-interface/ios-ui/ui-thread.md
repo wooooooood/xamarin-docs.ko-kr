@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 UI 스레드를 사용 하는
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ab72034d7b565a31c59d997f03844b6c8c959785
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee7ab7c5d0503cffd2c12a493f314f191d912e92
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768175"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73002842"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Xamarin.ios에서 UI 스레드 사용
 
@@ -24,7 +24,7 @@ ms.locfileid: "70768175"
 
 뷰에서 컨트롤을 만들거나 터치와 같이 사용자가 시작한 이벤트를 처리 하는 경우 코드는 UI 스레드의 컨텍스트에서 이미 실행 되 고 있습니다.
 
-코드가 백그라운드 스레드에서 실행 중인 경우 작업이 나 콜백에서 주 UI 스레드에서 실행 되 고 있지 않을 수 있습니다. 이 경우 다음과 `InvokeOnMainThread` `BeginInvokeOnMainThread` 같이 호출에서 코드를 래핑해야 합니다.
+코드가 백그라운드 스레드에서 실행 중인 경우 작업이 나 콜백에서 주 UI 스레드에서 실행 되 고 있지 않을 수 있습니다. 이 경우 `InvokeOnMainThread`에 대 한 호출에서 코드를 래핑하고 다음과 같이 `BeginInvokeOnMainThread` 합니다.
 
 ```csharp
 InvokeOnMainThread ( () => {
@@ -32,17 +32,17 @@ InvokeOnMainThread ( () => {
 });
 ```
 
-메서드 `InvokeOnMainThread` 는에 `NSObject` 정의 되어 있으므로 모든 uikit 개체 (예: 뷰 또는 뷰 컨트롤러)에 정의 된 메서드 내에서 호출할 수 있습니다.
+`InvokeOnMainThread` 메서드는 `NSObject`에서 정의 되므로 모든 UIKit 개체 (예: 뷰 또는 뷰 컨트롤러)에 정의 된 메서드 내에서 호출할 수 있습니다.
 
 Xamarin.ios 응용 프로그램을 디버깅 하는 동안 코드에서 잘못 된 스레드의 UI 컨트롤에 액세스 하려고 하면 오류가 throw 됩니다. 이렇게 하면 InvokeOnMainThread 메서드를 사용 하 여 이러한 문제를 추적 하 고 해결할 수 있습니다. 이 오류는 디버깅 하는 동안에만 발생 하며 릴리스 빌드에서 오류를 throw 하지 않습니다. 오류 메시지는 다음과 같이 표시 됩니다.
 
- ![](ui-thread-images/image10.png "UI 스레드 실행")
+ ![](ui-thread-images/image10.png "UI Thread Execution")
 
  <a name="Background_Thread_Example" />
 
 ## <a name="background-thread-example"></a>백그라운드 스레드 예제
 
-다음은 간단한 스레드를 사용 하 여 백그라운드 스레드에서 사용자 인터페이스 컨트롤 ( `UILabel`)에 액세스 하려고 시도 하는 예제입니다.
+다음은 간단한 스레드를 사용 하 여 백그라운드 스레드에서 사용자 인터페이스 컨트롤 (`UILabel`)에 액세스 하려고 시도 하는 예제입니다.
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -50,7 +50,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-이 코드는 디버깅 `UIKitThreadAccessException` 하는 동안을 throw 합니다. 문제를 해결 하려면 (그리고 사용자 인터페이스 컨트롤이 주 UI 스레드에서만 액세스할 수 있는지 확인) 다음과 같이 `InvokeOnMainThread` 식 내에서 UI 컨트롤을 참조 하는 코드를 래핑합니다.
+이 코드는 디버깅 하는 동안 `UIKitThreadAccessException`을 throw 합니다. 문제를 해결 하 고 (사용자 인터페이스 컨트롤이 주 UI 스레드에서만 액세스할 수 있는지 확인 하려면) `InvokeOnMainThread` 식 내에서 UI 컨트롤을 참조 하는 코드를 다음과 같이 래핑합니다.
 
 ```csharp
 new System.Threading.Thread(new System.Threading.ThreadStart(() => {
@@ -66,9 +66,9 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 
 ## <a name="asyncawait-example"></a>Async/Wait 예
 
-대기 작업이 완료 C# 되 면 호출 스레드에서 메서드가 `InvokeOnMainThread` 계속 되기 때문에 5 async/wait 키워드를 사용할 필요가 없습니다.
+대기 작업이 완료 C# 될 때 호출 스레드에서 메서드가 계속 실행 되기 때문에 5 개의 async/wait 키워드를 사용 하는 경우`InvokeOnMainThread`필요 하지 않습니다.
 
-이 예제 코드 (데모용 으로만 사용 되는 지연 메서드 호출에 기다립니다)는 UI 스레드에서 호출 되는 비동기 메서드 (TouchUpInside 처리기)를 보여 줍니다. 포함 하는 메서드가 ui 스레드에서 호출 되기 때문에에 대 `UILabel` 한 텍스트를 설정 하거나를 `UIAlertView` 표시 하는 등의 ui 작업은 백그라운드 스레드에서 비동기 작업이 완료 된 후 안전 하 게 호출 될 수 있습니다.
+이 예제 코드 (데모용 으로만 사용 되는 지연 메서드 호출에 기다립니다)는 UI 스레드에서 호출 되는 비동기 메서드 (TouchUpInside 처리기)를 보여 줍니다. 포함 하는 메서드는 UI 스레드에서 호출 되기 때문에 `UILabel` 텍스트를 설정 하거나 `UIAlertView`를 표시 하는 것과 같은 UI 작업을 백그라운드 스레드에서 완료 된 후에 안전 하 게 호출할 수 있습니다.
 
 ```csharp
 async partial void button2_TouchUpInside (UIButton sender)
@@ -89,7 +89,7 @@ async partial void button2_TouchUpInside (UIButton sender)
 }
 ```
 
-비동기 메서드가 주 UI 스레드가 `InvokeOnMainThread` 아닌 백그라운드 스레드에서 호출 되는 경우에는 여전히 필요 합니다.
+비동기 메서드가 주 UI 스레드가 아닌 백그라운드 스레드에서 호출 된 경우에는 `InvokeOnMainThread` 필요 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

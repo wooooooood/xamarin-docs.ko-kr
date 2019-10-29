@@ -3,15 +3,15 @@ title: Apple 플랫폼 (iOS 및 Mac)
 description: 이 문서에서는 Xamarin.ios 및 Xamarin.ios 개발과 관련 된 다양 한 항목 (코드 공유, Unified API, 바인딩 목표-C 라이브러리, 네이티브 참조, 네이티브 형식 등)에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 10ab9b379344ab6c514eba84f1ef3fd9c7400b73
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 76e883ba42ed898188a646a8a43cf1e3f123a7eb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765541"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015608"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Apple 플랫폼 (iOS 및 Mac)
 
@@ -28,9 +28,9 @@ IOS 및 Mac 프로젝트에 대 한 Unified API 프레임 워크에 동일한 �
 ### <a name="classic-apis"></a>클래식 Api
 
 > [!NOTE]
-> **클래식 프로필 사용 중단:** 새 플랫폼이 Xamarin.ios에 추가 되 면 클래식 프로필 (monotouch.dialog)에서 점진적으로 사용 중단 기능을 시작 합니다. 예를 들어 NRC (새-ref-count) 옵션이 제거 되었습니다. NRC는 항상 모든 통합 응용 프로그램에 대해 사용 하도록 설정 되어 있습니다. 즉, NRC가 옵션으로 설정 되지 않은 경우에는 알려진 문제가 없습니다. 이후 릴리스에서는 가비지 수집기로 Boehm를 사용 하는 옵션이 제거 됩니다. 이는 통합 응용 프로그램에서 사용할 수 없는 옵션 이기도 했습니다. 클래식 지원의 전체 제거는 Xamarin.ios 10.0의 릴리스와 2016에 대해 예약 되어 있습니다.
+> **클래식 프로필** 사용 중단: 새 플랫폼이 Xamarin.ios에 추가 되 면 클래식 프로필 (monotouch.dialog)에서 점진적으로 사용 중단 기능을 시작 합니다. 예를 들어 NRC (새-ref-count) 옵션이 제거 되었습니다. NRC는 항상 모든 통합 응용 프로그램에 대해 사용 하도록 설정 되어 있습니다. 즉, NRC가 옵션으로 설정 되지 않은 경우에는 알려진 문제가 없습니다. 이후 릴리스에서는 가비지 수집기로 Boehm를 사용 하는 옵션이 제거 됩니다. 이는 통합 응용 프로그램에서 사용할 수 없는 옵션 이기도 했습니다. 클래식 지원의 전체 제거는 Xamarin.ios 10.0의 릴리스와 2016에 대해 예약 되어 있습니다.
 
-기본 프레임 워크 `MonoTouch.` 에는 또는 `MonoMac.` 네임 스페이스 접두사가 있기 때문에 원본 (비 통합) xamarin.ios 및 xamarin.ios api에서 코드 공유를 더 어렵게 만들었습니다.  개발자가 동일한 파일에서 MonoMac 및 monotouch.dialog 네임 스페이스를 모두 참조 `using` 하는 문을 추가 하 여 코드를 공유할 수 있도록 하는 몇 가지 빈 네임 스페이스를 제공 했습니다. Classic API은 내부적으로 배포 되는 레거시 앱 에서만 사용 해야 합니다 (Unified API로 업그레이드 하는 것이 권장 됨).
+기본 프레임 워크에는 `MonoTouch.` 또는 `MonoMac.` 네임 스페이스 접두사가 있기 때문에 원본 (비 통합) Xamarin.ios 및 Xamarin.ios Api를 통해 코드 공유를 더욱 어렵게 만들었습니다.  개발자가 동일한 파일에서 MonoMac 및 Monotouch.dialog 네임 스페이스를 모두 참조 하는 `using` 문을 추가 하 여 코드를 공유할 수 있도록 하는 몇 가지 빈 네임 스페이스를 제공 했습니다. Classic API은 내부적으로 배포 되는 레거시 앱 에서만 사용 해야 합니다 (Unified API로 업그레이드 하는 것이 권장 됨).
 
 ### <a name="updating-from-classic-to-the-unified-api"></a>클래식에서 Unified API로 업데이트
 
@@ -38,7 +38,7 @@ IOS 및 Mac 프로젝트에 대 한 Unified API 프레임 워크에 동일한 �
 
 ## <a name="binding-objective-c-librariesbindingindexmd"></a>[Objective-C 라이브러리 바인딩](binding/index.md)
 
-Xamarin을 사용 하면 바인딩을 사용 하 여 네이티브 라이브러리를 앱에 가져올 수 있습니다. 이 섹션에 설명합니다.
+Xamarin을 사용 하면 바인딩을 사용 하 여 네이티브 라이브러리를 앱에 가져올 수 있습니다. 이 섹션에서는 다음에 대해 설명 합니다.
 
 - 바인딩 작동 방법
 - 목표-C 코드를 Xamarin으로 가져올 수 있는 바인딩 프로젝트를 수동으로 빌드하는 방법
@@ -56,11 +56,11 @@ Xamarin을 사용 하면 바인딩을 사용 하 여 네이티브 라이브러�
 
 ## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[플랫폼 간 앱에서의 네이티브 형식 작업](native-types-cross-platform.md)
 
-이 문서에서는 Android 또는 Windows Phone os와 같은 비 iOS`nint`장치와 `nuint`코드를 공유 하는 플랫폼 간 응용 프로그램에서 새로운 iOS Unified API 네이티브 형식 (,, `nfloat`)을 사용 하는 방법을 설명 합니다.
+이 문서에서는 Android 또는 Windows Phone Os와 같은 비 iOS 장치와 코드를 공유 하는 플랫폼 간 응용 프로그램에서 새로운 iOS Unified API 네이티브 형식 (`nint`, `nuint`, `nfloat`)을 사용 하는 방법을 설명 합니다.
 네이티브 형식을 사용 해야 하는 경우에 대 한 통찰력을 제공 하 고 플랫폼 간 코드에서 새 형식을 사용 해야 하는 경우에 대 한 몇 가지 가능한 해결 방법을 제공 합니다.
 
 ## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[HttpClient 스택 및 SSL/TLS 구현 선택기](http-stack.md)
 
-새 HttpClient Stack 선택기는 Xamarin.ios, tvOS 및 Xamarin.ios 앱에서 사용할 HttpClient 구현을 제어 합니다. 이제 iOS의, tvOS의 또는 os X의 기본 전송을 사용 하는 구현 (`NSUrlSession` 또는 `CFNetwork` os에 따라)로 전환할 수 있습니다.
+새 HttpClient Stack 선택기는 Xamarin.ios, tvOS 및 Xamarin.ios 앱에서 사용할 HttpClient 구현을 제어 합니다. 이제 iOS의, tvOS의 또는 OS X의 기본 전송 (OS에 따라`NSUrlSession` 또는 `CFNetwork`)을 사용 하는 구현으로 전환할 수 있습니다.
 
-SSL (Secure Socket Layer) 및 그 후속 TLS (전송 계층 보안)는을 통해 `System.Net.Security.SslStream`HTTP 및 기타 네트워크 연결에 대 한 지원을 제공 합니다. 새 SSL/TLS 구현 빌드 옵션은 Mono의 자체 TLS 스택 간에 전환 되 고 하나는 Mac 및 iOS에 있는 Apple의 TLS 스택으로 구동 됩니다.
+SSL (Secure Socket Layer) 및 후속, TLS (전송 계층 보안)는 `System.Net.Security.SslStream`을 통해 HTTP 및 기타 네트워크 연결에 대 한 지원을 제공 합니다. 새 SSL/TLS 구현 빌드 옵션은 Mono의 자체 TLS 스택 간에 전환 되 고 하나는 Mac 및 iOS에 있는 Apple의 TLS 스택으로 구동 됩니다.

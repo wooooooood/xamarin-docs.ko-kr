@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 사용자 인터페이스를 
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 204bf087a51132fdd204990c3b92453ecce96a53
-ms.sourcegitcommit: 20c645f41620d5124da75943de1b690261d00660
+ms.openlocfilehash: 58a1fd68dda2216a62fe6f30cf61d6d2ec7d40d5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72426584"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73003666"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Xamarin.ios에서 사용자 인터페이스 개체 만들기
 
@@ -80,7 +80,7 @@ Interface Builder를 사용 하 여 UI를 디자인 하는 경우 에서 C#참�
 
  [![](creating-ui-objects-images/image6a.png "Assistant Editor button")](creating-ui-objects-images/image6a.png#lightbox)
 
-사용자 인터페이스 개체를 클릭 합니다. 그런 다음 컨트롤을 .h 파일로 **끌어 놓습니다** . **끌기를 제어**하려면 컨트롤 키를 누른 채에 대 한 콘센트가 나 동작을 만들 사용자 인터페이스 개체를 클릭 합니다. 컨트롤 키를 계속 누르고 있으면 헤더 파일로 끌어 놓습니다. @No__t-0 정의 아래로 끌기를 마칩니다. 아래 스크린샷에 표시 된 것 처럼 캡션이 삽입 유출 또는 유출 컬렉션으로 표시 됩니다.
+사용자 인터페이스 개체를 클릭 합니다. 그런 다음 컨트롤을 .h 파일로 **끌어 놓습니다** . **끌기를 제어**하려면 컨트롤 키를 누른 채에 대 한 콘센트가 나 동작을 만들 사용자 인터페이스 개체를 클릭 합니다. 컨트롤 키를 계속 누르고 있으면 헤더 파일로 끌어 놓습니다. `@interface` 정의 아래로 끌기를 마칩니다. 아래 스크린샷에 표시 된 것 처럼 캡션이 삽입 유출 또는 유출 컬렉션으로 표시 됩니다.
 
 클릭 하면 코드에서 참조 될 수 있는 C# 속성을 만드는 데 사용할 수 있는 콘센트의 이름을 입력 하 라는 메시지가 표시 됩니다.
 
@@ -88,7 +88,7 @@ Interface Builder를 사용 하 여 UI를 디자인 하는 경우 에서 C#참�
 
 Xcode의 Interface Builder Mac용 Visual Studio 통합 하는 방법에 대 한 자세한 내용은 [Xib 코드 생성](~/ios/internals/xib-code-generation.md#generated) 문서를 참조 하세요.
 
-## <a name="using-c"></a>Using C @ no__t-0
+## <a name="using-c"></a>C\# 사용
 
 보기 또는 보기 컨트롤러에서를 사용 하 여 C# 프로그래밍 방식으로 사용자 인터페이스 개체를 만들려면 다음 단계를 수행 합니다.
 
@@ -97,7 +97,7 @@ Xcode의 Interface Builder Mac용 Visual Studio 통합 하는 방법에 대 한 
 - 컨트롤의 프레임 (너비와 높이는 물론 화면에서 X 및 Y 좌표)을 정의 하는 `CGRect`을 만듭니다. 이에 대 한 `using CoreGraphics` 지시문이 있는지 확인 해야 합니다.
 - 생성자를 호출 하 여 컨트롤을 만들고 할당 합니다.
 - 속성 또는 이벤트 처리기를 설정 합니다.
-- @No__t-0을 호출 하 여 뷰 계층 구조에 컨트롤을 추가 합니다.
+- `Add()`를 호출 하 여 뷰 계층 구조에 컨트롤을 추가 합니다.
 
 다음은를 사용 하 여 C#뷰 컨트롤러에서 `UILabel`을 만드는 간단한 예입니다.
 
@@ -120,9 +120,9 @@ Design Surface에 뷰 컨트롤러를 추가 하면 프로젝트에 해당 C# �
 
  [![](creating-ui-objects-images/image9b.png "ViewController partial class")](creating-ui-objects-images/image9b.png#lightbox)
 
-@No__t-0 파일은 *코드*를 위한 것입니다. 여기에는 `ViewDidLoad`과 같은 `View` 수명 주기 메서드 및 `ViewWillAppear`가 구현 되며 사용자 고유의 속성, 필드 및 메서드를 추가할 수 있습니다.
+`ControlsViewController.cs` 파일은 *코드*를 위한 것입니다. 여기에는 `ViewDidLoad`과 같은 `View` 수명 주기 메서드 및 `ViewWillAppear`가 구현 되며 사용자 고유의 속성, 필드 및 메서드를 추가할 수 있습니다.
 
-@No__t-0은 partial 클래스를 포함 하는 생성 된 코드입니다. Mac용 Visual Studio의 디자인 화면에서 컨트롤의 이름을 설정 하거나 Xcode에서 콘센트가 나 작업을 만들면 designer.cs (디자이너) 파일에 해당 속성 또는 부분 메서드가 추가 됩니다. 아래 코드에서는 두 개의 단추와 텍스트 뷰에 대해 생성 된 코드의 예제를 보여 줍니다. 여기에는 단추 중 하나에 `TouchUpInside` 이벤트가 포함 됩니다.
+`ControlsViewController.designer.cs`는 partial 클래스를 포함 하는 생성 된 코드입니다. Mac용 Visual Studio의 디자인 화면에서 컨트롤의 이름을 설정 하거나 Xcode에서 콘센트가 나 작업을 만들면 designer.cs (디자이너) 파일에 해당 속성 또는 부분 메서드가 추가 됩니다. 아래 코드에서는 두 개의 단추와 텍스트 뷰에 대해 생성 된 코드의 예제를 보여 줍니다. 여기에는 단추 중 하나에 `TouchUpInside` 이벤트가 포함 됩니다.
 
 Partial 클래스의 이러한 요소를 사용 하면 코드에서 컨트롤을 참조 하 고 디자인 화면에 선언 된 작업에 응답할 수 있습니다.
 
@@ -165,7 +165,7 @@ Partial 클래스의 이러한 요소를 사용 하면 코드에서 컨트롤을
 }
 ```
 
-@No__t-0 파일은 수동으로 편집 하면 안 됩니다. IDE (Mac용 Visual Studio 또는 Visual Studio)는 스토리 보드와 동기화 된 상태로 유지 해야 합니다.
+`designer.cs` 파일을 수동으로 편집 하면 안 됩니다. IDE (Mac용 Visual Studio 또는 Visual Studio)는 스토리 보드와 동기화 된 상태로 유지 해야 합니다.
 
 사용자 인터페이스 개체가 `View` 또는 `ViewController`에 프로그래밍 방식으로 추가 되는 경우 개체 참조를 직접 인스턴스화하고 관리 하므로 디자이너 파일이 필요 하지 않습니다.
 

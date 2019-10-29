@@ -3,15 +3,15 @@ title: Xamarin.ios 및 Xamarin.ios에 대 한 Unified API
 description: 이 문서는 Xamarin의 Unified API를 설명 하는 다양 한 가이드에 연결 됩니다. 연결 된 콘텐츠 Unified API에 대 한 개요를 제공 하 고 기존 프로젝트를 마이그레이션하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 14311617-1BC2-42CC-AF3F-9F97733EE2D0
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
-ms.openlocfilehash: 858f0c67b8c36f6cb2669086efec5f6ac1b4ddcb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2081b383ae47d6b17922c2d83df934b36ad33bd8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765313"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73015156"
 ---
 # <a name="unified-api-for-xamarinios-and-xamarinmac"></a>Xamarin.ios 및 Xamarin.ios에 대 한 Unified API
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS의 접근성에 대해 설명 하 고, 가�
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/18/2016
-ms.openlocfilehash: 943cdfaee07bc4fd4ed3273840036055ad40b89a
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 31cae6d6770b4c8fc4ff722e67f4ddce8ffdd7c6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70766744"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73011298"
 ---
 # <a name="accessibility-on-ios"></a>IOS의 내게 필요한 옵션
 
@@ -44,15 +44,15 @@ displayOnlyText.AccessibilityTraits = UIAccessibilityTrait.Header | UIAccessibil
 
 ### <a name="what-is-accessibilityidentifier"></a>AccessibilityIdentifier 란?
 
-@No__t_0는 UIAutomation API를 통해 사용자 인터페이스 요소를 참조 하는 데 사용할 수 있는 고유 키를 설정 하는 데 사용 됩니다.
+`AccessibilityIdentifier`는 UIAutomation API를 통해 사용자 인터페이스 요소를 참조 하는 데 사용할 수 있는 고유 키를 설정 하는 데 사용 됩니다.
 
-@No__t_0 값은 사용자에 게 음성으로 표시 되거나 표시 되지 않습니다.
+`AccessibilityIdentifier` 값은 사용자에 게 음성으로 표시 되거나 표시 되지 않습니다.
 
 <a name="postnotification" />
 
 ## <a name="postnotification"></a>PostNotification
 
-@No__t_0 메서드를 사용 하면 직접 상호 작용 (예: 특정 컨트롤과 상호 작용 하는 경우) 외부의 사용자에 게 이벤트를 발생 시킬 수 있습니다.
+`UIAccessibility.PostNotification` 메서드를 사용 하면 직접 상호 작용 (예: 특정 컨트롤과 상호 작용 하는 경우) 외부의 사용자에 게 이벤트를 발생 시킬 수 있습니다.
 
 ### <a name="announcement"></a>알림
 
@@ -138,4 +138,4 @@ VoiceOver은 **일반 > 내게 필요한 옵션 > voiceover**으로 이동 하 �
 
 - [플랫폼 간 접근성](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS 접근성 (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS 음성 음성](http://www.apple.com/accessibility/ios/voiceover/)
+- [iOS 음성 음성](https://www.apple.com/accessibility/ios/voiceover/)

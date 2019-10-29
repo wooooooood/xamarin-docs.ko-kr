@@ -1,24 +1,24 @@
 ---
-title: WatchOS에서 Xamarin 탐색 사용
-description: 이 문서에서는 watchOS 응용 프로그램에서 탐색을 사용 하는 방법을 설명 합니다. 모달 인터페이스, 계층적 탐색 및 페이지 기반 인터페이스에 설명 합니다.
+title: Xamarin에서 watchOS 탐색 사용
+description: 이 문서에서는 watchOS 응용 프로그램에서 탐색 작업을 수행 하는 방법을 설명 합니다. 모달 인터페이스, 계층적 탐색 및 페이지 기반 인터페이스에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 05da84949f6613bce24f103df4d86f1bdcd30764
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d3565e359ccbad9f7b779969f4273a8cbae4d438
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768728"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021741"
 ---
-# <a name="working-with-watchos-navigation-in-xamarin"></a>WatchOS에서 Xamarin 탐색 사용
+# <a name="working-with-watchos-navigation-in-xamarin"></a>Xamarin에서 watchOS 탐색 사용
 
-시계에서 사용할 수 있는 가장 간단한 탐색 옵션은 단순 [모달 팝업](#modal) 현재 장면 위에 표시 되는 합니다.
+Watch에서 사용할 수 있는 가장 간단한 탐색 옵션은 현재 장면 위에 표시 되는 간단한 [모달 팝업](#modal) 입니다.
 
-다중 장면 watch 앱에 있는 사용 가능한 두 가지 탐색 패러다임은:
+다중 장면 조사식 응용 프로그램의 경우 다음과 같은 두 가지 탐색 패러다임을 사용할 수 있습니다.
 
 - [계층적 탐색](#Hierarchical_Navigation)
 - [페이지 기반 인터페이스](#Page-Based_Interfaces)
@@ -27,57 +27,57 @@ ms.locfileid: "70768728"
 
 ## <a name="modal-interfaces"></a>모달 인터페이스
 
-사용 된 `PresentController` 인터페이스 컨트롤러를 모달 형식으로 열 수입니다. 인터페이스 컨트롤러에 이미 정의 되어 있어야 합니다 **Interface.storyboard**합니다.
+인터페이스 컨트롤러를 모달로 열려면 `PresentController` 메서드를 사용 합니다. 인터페이스 컨트롤러는 이미 **인터페이스. storyboard**에 정의 되어 있어야 합니다.
 
 ```csharp
 PresentController ("pageController","some context info");
 ```
 
-컨트롤러 모달 형식으로 표시 되는 전체 화면 (이전 장면 포함)를 사용 합니다. 기본적으로 제목 설정 됩니다 **취소** 컨트롤러 해제를 탭 하 고 있습니다.
+모달로 제공 되는 컨트롤러는 전체 화면 (이전 장면 포함)을 사용 합니다. 기본적으로 제목은 **취소** 로 설정 되 고 탭을 누르면 컨트롤러가 해제 됩니다.
 
-모달 형식으로 제공 된 컨트롤러를 프로그래밍 방식으로 닫으려면 호출 `DismissController`합니다.
+모달로 제공 되는 컨트롤러를 프로그래밍 방식으로 닫으려면 `DismissController`를 호출 합니다.
 
 ```csharp
 DismissController();
 ```
 
-단일 장면 또는 페이지 기반 레이아웃을 사용 하 여 모달 화면 수 있습니다.
+모달 화면은 단일 장면 이거나 페이지 기반 레이아웃을 사용할 수 있습니다.
 
 <a name="Hierarchical_Navigation"/>
 
 ## <a name="hierarchical-navigation"></a>계층적 탐색
 
-통해 다시 탐색, 방식과 유사 하 게 될 수 있는 스택 처럼 장면 표시 `UINavigationController` iOS에서 작동 합니다. 백그라운드에서 탐색 스택으로 푸시되 고 (프로그래밍 방식으로 또는 사용자 선택) 팝 수 수 있습니다.
+는 iOS에서 `UINavigationController` 작동 하는 방식과 비슷하게 다시 탐색할 수 있는 스택 처럼 장면을 표시 합니다. 장면을 탐색 스택으로 푸시되 고, 프로그래밍 방식으로 또는 사용자 선택으로 팝 될 수 있습니다.
 
-![](navigation-images/hierarchy-1.png "장면 탐색 스택으로 푸시 될 수 있는") ![](navigation-images/hierarchy-2.png "장면 탐색 스택에서 팝 될 수 있습니다")
+![](navigation-images/hierarchy-1.png "장면을 탐색 스택으로 푸시할 수 있습니다.") ![](navigation-images/hierarchy-2.png "탐색 스택에서 장면을 팝 할 수 있습니다.")
 
-IOS의 경우와 마찬가지로 왼쪽 가장자리 살짝 계층 탐색 스택 부모 컨트롤러를 다시 이동 합니다.
+IOS와 마찬가지로 왼쪽에서 오른쪽으로 살짝 밀기는 계층 탐색 스택의 부모 컨트롤러로 다시 이동 합니다.
 
-모두를 [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 하 고 [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) 샘플 계층적 탐색이 포함 합니다.
+[WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 및 [WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) 샘플에는 모두 계층적 탐색이 포함 됩니다.
 
-### <a name="pushing-and-popping-in-code"></a>푸시 및 팝 코드
+### <a name="pushing-and-popping-in-code"></a>코드 푸시 및 팝
 
-키트에는 과도 하 게 총비율 "탐색 컨트롤러" 필요 하지 않습니다 시청 iOS 않습니다-처럼 만들 푸시할 사용 하 여 컨트롤러를 `PushController` 메서드 및 탐색 스택에서 자동으로 생성 됩니다.
+Arching 메서드 `PushController`를 사용 하 여 컨트롤러를 푸시하는 것과 같이 감시 키트에는 오버 "탐색 컨트롤러"를 만들 필요가 없으며, 탐색 스택이 자동으로 만들어집니다.
 
 ```csharp
 PushController("secondPageController","some context info");
 ```
 
-시계의 화면 포함 됩니다는 **다시** 사용 하 여 탐색 스택의 맨 왼쪽에 단추 장면을 프로그래밍 방식으로 제거할 수 있습니다 `PopController`합니다.
+조사식 화면의 왼쪽 위에 **뒤로** 단추가 포함 되지만 `PopController`를 사용 하 여 탐색 스택에서 장면을 프로그래밍 방식으로 제거할 수도 있습니다.
 
 ```csharp
 PopController();
 ```
 
-IOS를 사용 하 여 이기도 하므로 사용 하 여 탐색 스택의 루트를 반환할 수 `PopToRootController`입니다.
+IOS와 마찬가지로 `PopToRootController`를 사용 하 여 탐색 스택의 루트로 돌아갈 수 있습니다.
 
 ```csharp
 PopToRootController();
 ```
 
-### <a name="using-segues"></a>Segue를 사용 하 여
+### <a name="using-segues"></a>Segue 사용
 
-Segue 계층적 탐색을 정의 하는 스토리 보드의 내부 간에 만들 수 있습니다. 운영 체제 호출 대상 장면에 대 한 컨텍스트를 가져오려고 `GetContextForSegue` 새 인터페이스 컨트롤러를 초기화 합니다.
+Segue는 스토리 보드의 장면 사이에서 계층적 탐색을 정의 하는 데 사용할 수 있습니다. 대상 장면의 컨텍스트를 가져오기 위해 운영 체제는 `GetContextForSegue`를 호출 하 여 새 인터페이스 컨트롤러를 초기화 합니다.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier)
@@ -93,11 +93,11 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 ## <a name="page-based-interfaces"></a>페이지 기반 인터페이스
 
-페이지 기반 인터페이스 살짝 왼쪽-오른쪽, 방식과 유사 하 게 `UIPageViewController` iOS에서 작동 합니다. 표시기 점은 표시할 현재 페이지를 표시할 화면 아래쪽을 따라 표시 됩니다.
+페이지 기반 인터페이스는 `UIPageViewController` iOS에서 작동 하는 방식과 비슷하게 왼쪽에서 오른쪽으로 살짝 밉니다. 표시기 점이 화면 아래쪽에 표시 되어 현재 표시 되는 페이지를 표시 합니다.
 
-![](navigation-images/paged-1.png "샘플의 첫 번째 페이지") ![](navigation-images/paged-2.png "샘플 두 번째 페이지") ![](navigation-images/paged-5.png "샘플 다섯 번째 페이지")
+![](navigation-images/paged-1.png "샘플 첫 페이지")![](navigation-images/paged-2.png "샘플 초 페이지")![](navigation-images/paged-5.png "샘플 5 페이지")
 
-페이지 기반 인터페이스를 watch 앱에 대 한 기본 UI를 사용 하 여 `ReloadRootControllers` 배열 인터페이스 컨트롤러 및 컨텍스트를 사용 하 여:
+페이지 기반 인터페이스를 watch 앱에 대 한 기본 UI로 설정 하려면 인터페이스 컨트롤러 및 컨텍스트의 배열과 함께 `ReloadRootControllers`를 사용 합니다.
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };
@@ -105,7 +105,7 @@ var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 ReloadRootControllers (controllerNames, contexts);
 ```
 
-루트 없는 페이지 기반 컨트롤러를 제공할 수도 있습니다를 사용 하 여 `PresentController` 앱의 다른 내부 중입니다.
+응용 프로그램의 다른 장면 중 하나에서 `PresentController`를 사용 하 여 루트가 아닌 페이지 기반 컨트롤러를 제공할 수도 있습니다.
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };

@@ -4,15 +4,15 @@ description: 이 문서에서는 자산 카탈로그를 사용 하 여 Xamarin.i
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/26/2017
-ms.openlocfilehash: e0b899e69405874f381c3ab6f9a9200a856d7402
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 62253adafcd028f459e8ca0cc11a8eb3e54d52c3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767306"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73004181"
 ---
 # <a name="app-store-icons-in-xamarinios"></a>Xamarin.ios의 앱 스토어 아이콘
 
@@ -25,7 +25,7 @@ Xcode 9 이전에는 모든 앱 스토어 아이콘이 iTunes Connect를 통해 
 - 애플리케이션에 적합한 아이콘을 만듭니다.
 - 애플리케이션의 디자인과 일치하는 간단한 아이콘을 만듭니다.
 - 단어는 아이콘에 사용하지 않습니다.
-- 생각은 세계적으로: 모든 스토어 지역에서 단일 앱 아이콘이 사용됩니다.
+- 전 세계적으로 생각: 단일 앱 아이콘이 모든 스토어 지역에서 사용됩니다.
 
 앱 스토어에 표시할 앱 아이콘에는 1024x1024 픽셀 이미지가 필요합니다.  Apple은 자산 카탈로그의 앱 스토어 아이콘이 투명하거나 알파 채널을 포함할 수 없다고 주장했습니다.
 
