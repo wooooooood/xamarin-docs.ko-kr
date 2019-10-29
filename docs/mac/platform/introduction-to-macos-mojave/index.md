@@ -4,15 +4,15 @@ description: 이 문서에서는 macOS Mojave의 새로운 기능 및 업데이�
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2878d1bea3590b8c3a7aabfebef8a0f2cca67551
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292950"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017039"
 ---
 # <a name="introduction-to-macos-mojave"></a>macOS Mojave 소개
 
@@ -38,7 +38,7 @@ Xamarin을 사용 하 여 macOS Mojave 앱 빌드를 시작 하려면 [xamarin.i
 
 ## <a name="network-framework"></a>네트워크 프레임 워크
 
-IOS 응용 프로그램에서 일반적으로 사용 되 `URLSession` 는 api의 기본 네트워크 stack 네트워크 프레임 워크는 이제 독립 실행형 프레임 워크로 제공 되므로 TCP, UDP, TLS, IPv4/IPv6 등의 작업을 더 쉽게 수행할 수 있습니다.
+IOS 응용 프로그램에서 일반적으로 사용 되는 `URLSession` Api를 기반으로 하는 네트워크 stack 네트워크 프레임 워크는 이제 독립 실행형 프레임 워크로 제공 되므로 TCP, UDP, TLS, IPv4/IPv6 등의 작업을 더 쉽게 수행할 수 있습니다.
 
 ## <a name="deprecations"></a>결함
 

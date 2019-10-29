@@ -4,15 +4,15 @@ description: 이 가이드에서는 Android 6.0이 앱 연결을 지 원하는 �
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: d65e8fabff88489571bba9d03379ff605a6ed0fe
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757727"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027741"
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -20,17 +20,17 @@ _이 가이드에서는 Android 6.0이 앱 연결을 지 원하는 방법에 대
 
 ## <a name="app-linking-overview"></a>앱 연결 개요
 
-모바일 응용 프로그램은 더 이상 사일로 &ndash; 에 살고 있지 않습니다. 대부분의 경우 해당 웹 사이트와 함께 비즈니스의 중요 한 구성 요소입니다. 비즈니스는 모바일 응용 프로그램을 시작 하 고 모바일 앱에 관련 콘텐츠를 표시 하는 웹 사이트의 링크와 함께 웹 상태 및 모바일 응용 프로그램을 원활 하 게 연결 하는 것이 좋습니다. *앱 링크* ( *딥 링크*라고도 함)는 모바일 장치가 uri에 응답 하 고 해당 uri에 해당 하는 모바일 응용 프로그램을 시작할 수 있도록 하는 한 가지 방법입니다.
+모바일 응용 프로그램은 더 이상 사일로 &ndash;에 존재 하지 않습니다. 대부분의 경우 해당 웹 사이트와 함께 비즈니스의 중요 한 구성 요소입니다. 비즈니스는 모바일 응용 프로그램을 시작 하 고 모바일 앱에 관련 콘텐츠를 표시 하는 웹 사이트의 링크와 함께 웹 상태 및 모바일 응용 프로그램을 원활 하 게 연결 하는 것이 좋습니다. *앱 링크* ( *딥 링크*라고도 함)는 모바일 장치가 uri에 응답 하 고 해당 uri에 해당 하는 모바일 응용 프로그램을 시작할 수 있도록 하는 한 가지 방법입니다.
 
-Android는 사용자가 모바일 브라우저에서 링크를 클릭할 때 *의도 시스템* &ndash; 을 통해 앱 링크를 처리 합니다. 모바일 브라우저는 Android가 등록 된 응용 프로그램에 위임할 의도를 디스패치합니다. 예를 들어, 요리 웹 사이트의 링크를 클릭 하면 해당 웹 사이트와 연결 된 모바일 앱이 열리고 사용자에 게 특정 조리법이 표시 됩니다. 해당 의도를 처리 하기 위해 등록 된 응용 프로그램이 두 개 이상 있는 경우 Android는 의도를 처리 해야 하는 응용 프로그램을 선택 하는 응용 프로그램을 사용자에 게 요청 하는 *명확성 대화 상자* 를 생성 합니다. 예를 들면 다음과 같습니다.
+사용자가 모바일 브라우저에서 링크를 클릭 하면 모바일 브라우저가 등록 된 응용 프로그램에 위임할 의도를 디스패치 하는 *의도 시스템* &ndash; 통해 앱 링크를 처리 합니다. 예를 들어, 요리 웹 사이트의 링크를 클릭 하면 해당 웹 사이트와 연결 된 모바일 앱이 열리고 사용자에 게 특정 조리법이 표시 됩니다. 해당 의도를 처리 하기 위해 등록 된 응용 프로그램이 두 개 이상 있는 경우 Android는 의도를 처리 해야 하는 응용 프로그램을 선택 하는 응용 프로그램을 사용자에 게 요청 하는 *명확성 대화 상자* 를 생성 합니다. 예를 들면 다음과 같습니다.
 
 ![명확성 대화 상자의 예제 스크린샷](app-linking-images/01-disambiguation-dialog.png)
 
-Android 6.0는 자동 링크 처리를 사용 하 여이를 개선 합니다. Android는 응용 프로그램을 자동으로 시작 되는 URI &ndash; 의 기본 처리기로 자동으로 등록 하 고 관련 작업으로 직접 이동할 수 있습니다. Android 6.0에서 URI 클릭을 처리 하는 방법은 다음 조건에 따라 달라 집니다.
+Android 6.0는 자동 링크 처리를 사용 하 여이를 개선 합니다. Android에서 자동으로 응용 프로그램을 시작 하 고 관련 작업으로 직접 이동 하는 &ndash; URI에 대 한 기본 처리기로 응용 프로그램을 자동으로 등록할 수 있습니다. Android 6.0에서 URI 클릭을 처리 하는 방법은 다음 조건에 따라 달라 집니다.
 
-1. **기존 앱이 URI와 이미 연결 되어 있습니다** . &ndash; 사용자가 기존 앱과 URI를 이미 연결 했을 수 있습니다. 이 경우 Android는 해당 응용 프로그램을 계속 사용 합니다.
-2. **URI와 연결 된 기존 앱이 없지만 지원 앱이 설치 되어 있습니다** . &ndash; 이 시나리오에서는 사용자가 기존 앱을 지정 하지 않았기 때문에 Android에서 설치 된 지원 응용 프로그램을 사용 하 여 요청을 처리 합니다.
-3. **URI와 연결 된 기존 앱이 없지만 많은 지원 앱이 설치 되어 있습니다** . &ndash; Uri를 지 원하는 여러 응용 프로그램이 있으므로 명확성 대화 상자가 표시 되 고 사용자는 uri를 처리할 앱을 선택 해야 합니다.
+1. **기존 앱이 이미 uri와 연결 되어** &ndash; 사용자는 이미 uri를 사용 하 여 기존 앱을 연결 했을 수 있습니다. 이 경우 Android는 해당 응용 프로그램을 계속 사용 합니다.
+2. **URI와 연결 된 기존 앱이 없지만 지원 앱이 &ndash; 설치 되어** 있습니다 .이 시나리오에서는 사용자가 기존 앱을 지정 하지 않았으므로 Android에서 설치 된 지원 응용 프로그램을 사용 하 여 요청을 처리 합니다.
+3. **Uri와 연결 된 기존 앱은 없지만 여러 지원 앱이 &ndash; 설치 되어** 있습니다. uri를 지 원하는 여러 응용 프로그램이 있으므로 명확성 대화 상자가 표시 되 고 사용자는 uri를 처리할 앱을 선택 해야 합니다.
 
 사용자에 게 URI를 지 원하는 앱이 설치 되어 있지 않고 나중에 설치 되는 경우, Android는 URI와 연결 된 웹 사이트와의 연결을 확인 한 후 URI에 대 한 기본 처리기로 해당 응용 프로그램을 설정 합니다.
 
@@ -46,8 +46,8 @@ Android 6.0는 자동 링크 처리를 사용 하 여이를 개선 합니다. An
 
 Android 6.0에서 앱 링크를 설정 하려면 다음 두 가지 주요 단계를 수행 해야 합니다.
 
-1. **웹 사이트 URI에 대해 하나 이상의 의도 필터 추가** &ndash; 의도 필터 가이드 Android는 모바일 브라우저에서 URL을 처리 하는 방법을 참조 하세요.
-2. **웹 사이트**  &ndash; 에 디지털 자산 링크 JSON 파일 게시 웹 사이트에 업로드 되 고 Android에서 모바일 앱과 웹 사이트 도메인 간의 관계를 확인 하는 데 사용 되는 파일입니다. 이를 사용 하지 않으면 Android에서 앱을 URI의 기본 핸들로 설치할 수 없습니다. 사용자는 수동으로이 작업을 수행 해야 합니다.
+1. **웹 사이트 URI &ndash;에 대 한 하나 이상의 의도 필터 추가-** 모바일 브라우저에서 URL을 처리 하는 방법에 Android 가이드를 참조 하세요.
+2. **웹 사이트의 *디지털 자산 링크 JSON* 파일** &ndash; 웹 사이트에 업로드 되 고 Android에서 모바일 앱과 웹 사이트의 도메인 간의 관계를 확인 하는 데 사용 하는 파일입니다. 이를 사용 하지 않으면 Android에서 앱을 URI의 기본 핸들로 설치할 수 없습니다. 사용자는 수동으로이 작업을 수행 해야 합니다.
 
 <a name="configure-intent-filter" />
 
@@ -55,14 +55,14 @@ Android 6.0에서 앱 링크를 설정 하려면 다음 두 가지 주요 단계
 
 웹 사이트에서 Android 응용 프로그램의 작업에 URI (또는 Uri 집합 가능)를 매핑하는 의도 필터를 구성 해야 합니다. Xamarin.ios에서이 관계는 [Intentfilterattribute](xref:Android.App.IntentFilterAttribute)를 사용 하 여 활동을 표시할 하 여 설정 합니다. 의도 필터는 다음 정보를 선언 해야 합니다.
 
-- **`Intent.ActionView`** &ndash; 이렇게 하면 정보를 보기 위해 요청에 응답 하는 의도 필터를 등록 합니다.
-- **`Categories`** 의도 필터는 두 **[의도](xref:Android.Content.Intent.CategoryBrowsable)** 를 모두 등록 해야 합니다. categorybrowsable 가능 하 고 의도 된 웹 URI를 올바르게 처리할 수 있습니다 **[.](xref:Android.Content.Intent.CategoryDefault)** &ndash;
-- **`DataScheme`** 의도 필터는 and/ `http` or `https`를 선언 해야 합니다. &ndash; 이러한 두 가지 유효한 스키마만 있습니다.
-- **`DataHost`** &ndash; Uri가 생성 되는 도메인입니다.
+- &ndash; **`Intent.ActionView`** 하 여 정보를 보기 위해 요청에 응답 하는 의도 필터를 등록 합니다.
+- **`Categories`** 의도 필터 &ndash;을 등록 해야 합니다 **[. categorybrowsable 가능 하 고](xref:Android.Content.Intent.CategoryBrowsable)** 의도 된 웹 URI를 올바르게 처리할 수 있습니다 **[.](xref:Android.Content.Intent.CategoryDefault)**
+- 의도 필터 &ndash; **`DataScheme`** `http` 및/또는 `https`를 선언 해야 합니다. 이러한 두 가지 유효한 스키마만 있습니다.
+- **`DataHost`** &ndash; uri가 생성 되는 도메인입니다.
 - **`DataPathPrefix`** &ndash; 웹 사이트의 리소스에 대 한 선택적 경로입니다.
-- **`AutoVerify`** 특성은 Android에 응용 프로그램과 웹 사이트 간의 관계를 확인 하도록 지시 합니다 `autoVerify`. &ndash; 이에 대해서는 아래에서 자세히 설명 합니다.
+- `autoVerify` 특성 &ndash; **`AutoVerify`** 는 Android에서 응용 프로그램과 웹 사이트 간의 관계를 확인 하도록 지시 합니다. 이에 대해서는 아래에서 자세히 설명 합니다.
 
-다음 예제에서는 [intentfilterattribute](xref:Android.App.IntentFilterAttribute) 를 사용 하 여에서 `https://www.recipe-app.com/recipes` `http://www.recipe-app.com/recipes`링크를 처리 하는 방법을 보여 줍니다.
+다음 예제에서는 [Intentfilterattribute](xref:Android.App.IntentFilterAttribute) 를 사용 하 여 `https://www.recipe-app.com/recipes` 및 `http://www.recipe-app.com/recipes`의 링크를 처리 하는 방법을 보여 줍니다.
 
 ```csharp
 [IntentFilter(new [] { Intent.ActionView },
@@ -84,15 +84,15 @@ Android는 응용 프로그램을 URI에 대 한 기본 처리기로 등록 하�
 Android 6.0 앱을 연결 하려면 응용 프로그램을 URI에 대 한 기본 처리기로 설정 하기 전에 Android에서 응용 프로그램과 웹 사이트 간의 연결을 확인 해야 합니다. 이 확인은 응용 프로그램을 처음 설치할 때 발생 합니다. *디지털 자산 링크* 파일은 관련 webdomain에서 호스팅하는 JSON 파일입니다.
 
 > [!NOTE]
-> 특성 `android:autoVerify` 은 의도 필터 &ndash; 에 의해 설정 되어야 합니다. 그렇지 않으면 Android에서 확인을 수행 하지 않습니다.
+> `android:autoVerify` 특성은 의도 필터 &ndash; 설정 해야 합니다. 그렇지 않으면 Android에서 확인을 수행 하지 않습니다.
 
-파일은 해당 위치 **https://domain/.well-known/assetlinks.json** 에 있는 도메인의 웹 마스터에 의해 배치 됩니다.
+이 파일은 **https://domain/.well-known/assetlinks.json** 위치에서 도메인의 웹 마스터에 의해 배치 됩니다.
 
 디지털 자산 파일에는 Android에서 연결을 확인 하는 데 필요한 메타 데이터가 포함 되어 있습니다. **Assetlinks. json** 파일의 키-값 쌍은 다음과 같습니다.
 
-- `namespace`&ndash; Android 응용 프로그램의 네임 스페이스입니다.
-- `package_name`&ndash; 응용 프로그램 매니페스트에 선언 된 Android 응용 프로그램의 패키지 이름입니다.
-- `sha256_cert_fingerprints`&ndash; 서명 된 응용 프로그램의 SHA256 지문입니다. 응용 프로그램의 SHA1 지문을 가져오는 방법에 대 한 자세한 내용은 [키 저장소의 MD5 또는 Sha1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md) 가이드를 참조 하세요.
+- Android 응용 프로그램의 네임 스페이스를 &ndash; `namespace` 합니다.
+- `package_name` &ndash; Android 응용 프로그램 (응용 프로그램 매니페스트에 선언 됨)의 패키지 이름입니다.
+- `sha256_cert_fingerprints` 서명 된 응용 프로그램의 SHA256 지문을 &ndash; 합니다. 응용 프로그램의 SHA1 지문을 가져오는 방법에 대 한 자세한 내용은 [키 저장소의 MD5 또는 Sha1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md) 가이드를 참조 하세요.
 
 다음 코드 조각은 단일 응용 프로그램이 나열 된 **assetlinks. json** 의 예입니다.
 
@@ -173,11 +173,11 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     $ adb shell dumpsys package domain-preferred-apps
     ```
 
-    - **`Package`** &ndash; 응용 프로그램의 패키지 이름입니다.
-    - **`Domain`** &ndash; 응용 프로그램에서 웹 링크를 처리 하는 도메인 (공백으로 구분)입니다.
-    - **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 `android:autoVerify=true` 를 선언 하 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
+    - 응용 프로그램의 패키지 이름을 &ndash; **`Package`** 합니다.
+    - 응용 프로그램에서 웹 링크를 처리 하는 도메인을 공백으로 구분 하 여 &ndash; **`Domain`** 합니다.
+    - **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 선언 `android:autoVerify=true` 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
 
-    예:
+    예를 들면,
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -196,6 +196,6 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 
 - [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)
 - [활동 및 의도](https://university.xamarin.com/classes#4)
-- [AppLinks](http://applinks.org/)
+- [사과 잉크](https://developers.facebook.com/docs/applinks)
 - [Google Digital 자산 링크](https://developers.google.com/digital-asset-links/)
 - [문 목록 생성기 및 테스터](https://developers.google.com/digital-asset-links/tools/generator)

@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 사용할 수 없는 제품�
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 50b26e1b37000df3e6cd96c8a3cd2f424dd4f1f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2341d90a297d6241c47a5f03fbe8fffa89dd34b0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752657"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032320"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Xamarin.ios에서 사용할 때 제품이 아닌 제품 구매
 
@@ -24,13 +24,13 @@ ms.locfileid: "70752657"
 
 구매 프로세스는이 일련의 스크린샷에 표시 됩니다. **구입** 단추는 기능 활성화 단추가 됩니다.   
 
- [![](purchasing-non-consumable-products-images/image34.png "구매 프로세스는이 일련의 스크린샷에 표시 됩니다.")](purchasing-non-consumable-products-images/image34.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image34.png "The purchase process is shown in this series of screenshots")](purchasing-non-consumable-products-images/image34.png#lightbox)   
 
 구매 프로세스는 소비재 제품과 동일 합니다. 주요 차이점은 응용 프로그램 코드에서 구매가 추적 되는 방법에 있습니다. 이 예에서는 제품을 아직 구매 하지 않은 경우에만 구입 단추를 사용할 수 있습니다. 그렇지 않으면 단추는 기능 자체를 활성화 합니다.   
 
 다음 다이어그램에서는 사용할 수 없는 제품 구매를 수행 하기 위해 클래스와 App Store 서버 간의 상호 작용을 보여 줍니다.   
 
- [![](purchasing-non-consumable-products-images/image35.png "사용할 수 없는 제품 구매를 수행 하기 위한 클래스와 앱 스토어 서버 간의 상호 작용")](purchasing-non-consumable-products-images/image35.png#lightbox)   
+ [![](purchasing-non-consumable-products-images/image35.png "The interactions between classes and the App Store server to perform a non-consumable product purchase")](purchasing-non-consumable-products-images/image35.png#lightbox)   
 
 사용 가능한 예제와의 주요 차이점은 구매가 완료 되 면 사용자 인터페이스를 업데이트 하 여 다시 구매 하지 않도록 하는 것입니다. 이 예에서 성공한 트랜잭션 알림은 사용자 인터페이스를 업데이트 하 여 **구매** 단추가 기능 자체를 활성화 하는 단추로 변환 되도록 합니다.
 
@@ -47,5 +47,5 @@ ms.locfileid: "70752657"
 이 시나리오에서 코드 경로는 정상적인 구매와 동일 합니다. 유일한 차이점은 다음과 같습니다.
 
 - 사용자가 제품에 대 한 요금이 다시 청구 되지 않습니다.
-- 응용 `SKPaymentTransaction` 프로그램에 전달 되는 개체에는 `OriginalTransaction` 제품을 처음 구입할 때 생성 된 트랜잭션을 참조 하는 속성이 있습니다. 
+- 응용 프로그램에 전달 되는 `SKPaymentTransaction` 개체에는 제품이 처음 구매 될 때 생성 된 트랜잭션을 참조 하는 `OriginalTransaction` 속성이 있습니다. 
 - 지원 되지 않는 제품을 판매 하는 응용 프로그램은 사용자가 기존 구매를 검색할 수 있도록 지 수 키트의 **복원** 기능을 구현 해야 합니다. 

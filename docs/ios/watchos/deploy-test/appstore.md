@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 watchOS app
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 7b80573a728e1868254b5a89254ebc385b3baa12
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768071"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028364"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>앱 스토어에 watchOS Apps 배포
 
@@ -21,7 +21,7 @@ ms.locfileid: "70768071"
 
 - 다음이 있는지 확인 합니다.
   - 프로젝트에 대해 생성 되는 [**배포 프로 비전 프로필**](#provisioning) 입니다.
-  - IOS 부모 앱에`MinimumOSVersion`대 한 **배포 대상** ()이 **8.2** 또는 이전 버전 (8.3은 지원 되지 않음)으로 설정 되어 있습니다.
+  - IOS 부모 앱에 대 한 **배포 대상** (`MinimumOSVersion`)이 **8.2** 이전 (8.3은 지원 되지 않음)로 설정 되어 있습니다.
 
 - [**ITunes Connect**](#iTunes_Connect)에서:
 
@@ -51,17 +51,17 @@ ms.locfileid: "70768071"
 
 와일드 카드 앱 ID가 있는 경우 *프로 비전 프로필은 하나만 필요 합니다*. 하지만 각 프로젝트에 대해 별도의 앱 ID가 있는 경우 각 앱 ID에 대 한 프로 비전 프로필이 필요 합니다.
 
-![](appstore-images/provisioningprofile-distribution-sml.png "앱 스토어 배포 프로필")
+![](appstore-images/provisioningprofile-distribution-sml.png "The App Store Distribution profile")
 
 세 프로필을 모두 만들면 목록에 표시 됩니다. 각 항목을 두 번 클릭 하 여 다운로드 하 고 설치 해야 합니다.
 
-![](appstore-images/provisioningprofiles-sml.png "사용 가능한 프로필 목록")
+![](appstore-images/provisioningprofiles-sml.png "The list of available profiles")
 
 **빌드 > IOS 번들 서명** 화면을 선택 하 고 **Appstore | iPhone** 구성을 선택 하 여 **프로젝트 옵션** 에서 프로 비전 프로필을 확인할 수 있습니다.
 
 **프로 비전 프로필** 목록에 일치 하는 모든 프로필이 표시 됩니다 .이 드롭다운 목록에서 사용자가 만든 일치 하는 프로필을 확인 해야 합니다.
 
-![](appstore-images/options-selectprofile-sml.png "IOS 번들 서명 대화 상자")
+![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
 <a name="iTunes_Connect"/>
 
@@ -74,7 +74,7 @@ ms.locfileid: "70768071"
 
 ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린샷 추가를 잊지 마세요.
 
-![](appstore-images/itunesconnect-watch-sml.png "ITunes Connect의 조사식 아이콘 및 스크린샷")
+![](appstore-images/itunesconnect-watch-sml.png "The Watch icon and screenshots in iTunes Connect")
 
 아이콘 파일은 1024x1024 픽셀 이어야 하며 표시 될 때이에 대 한 원형 마스크가 적용 됩니다. 아이콘에 알파 채널이 없어야 합니다.
 
@@ -84,23 +84,23 @@ ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린�
 
 <a name="xamarin_studio" />
 
-## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
+## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 
 1. IOS 앱이 시작 프로젝트 인지 확인 합니다. 그렇지 않으면 마우스 오른쪽 단추를 클릭 하 여 설정 합니다.
 
-   ![](appstore-images/xs-startup.png "시작 프로젝트 설정")
+   ![](appstore-images/xs-startup.png "Setting the startup project")
 
 2. **Appstore** 빌드 구성을 선택 합니다.
 
-   ![](appstore-images/xs-appstore.png "AppStore 빌드 구성")
+   ![](appstore-images/xs-appstore.png "The AppStore build configuration")
 
 3. **빌드 > 보관** 메뉴 항목을 선택 하 여 보관 프로세스를 시작 합니다.
 
-   ![](appstore-images/xs-archive.png "빌드 메뉴")
+   ![](appstore-images/xs-archive.png "The Build menu")
 
 **> 보관 보기 ...** 메뉴 항목을 선택 하 여 이전에 만든 보관 파일을 볼 수도 있습니다.
 
-  ![](appstore-images/xs-archives-sml.png "보관 보기")
+  ![](appstore-images/xs-archives-sml.png "The Archives view")
 
 <a name="xcode" />
 
@@ -110,21 +110,21 @@ Xcode는 Mac용 Visual Studio에서 만든 보관 파일을 자동으로 표시 
 
 1. Xcode을 시작 하 고 **창 > 구성 도우미**를 선택 합니다.
 
-   ![](appstore-images/xc-organizer.png "창 메뉴")
+   ![](appstore-images/xc-organizer.png "The Window menu")
 
 2. **보관** 탭으로 전환 하 고 Mac용 Visual Studio를 사용 하 여 만든 보관 파일을 선택 합니다.
 
-   ![](appstore-images/xc-archives.png "보관 탭")
+   ![](appstore-images/xc-archives.png "The Archives tab")
 
 3. 필요에 따라 파일의 **유효성을 검사** 하 고, **제출 ...** 을 선택 하 여 앱을 iTunes Connect에 업로드 합니다.
 
 4. 개발 팀 (둘 이상에 속하는 경우)을 선택 하 고 제출을 확인 합니다.
 
-   ![](appstore-images/xc-submit1.png "개발 팀 섹션")
+   ![](appstore-images/xc-submit1.png "The development team section")
 
 5. ITunes Connect를 다시 방문 하 여 업로드 된 이진 파일을 확인 합니다. 앱의 구성 페이지로 이동 하 고 맨 위 메뉴에서 **시험판** 을 선택 하 여 **빌드** 목록을 표시 합니다.
 
-   [![](appstore-images/itc-prerelease-sml.png "ITunes Connect의 앱 구성 페이지")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 그런 다음 **버전** 페이지에서 승인을 위해 앱을 제출할 수 있습니다. 자세한 내용은 [iOS 앱 배포 개요](~/ios/deploy-test/app-distribution/index.md) 를 참조 하세요.
 
@@ -175,7 +175,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 최신 버전의 Mac용 Visual Studio 있는지 확인 하 고 **appicons.appiconset** 에 전체 이미지 집합이 포함 되어 있는지 확인 합니다. 이 오류가 계속 표시 되 면 콘텐츠의 원본을 확인 하 여 필요한 모든 이미지에 대 한 항목이 포함 되어 있는지 확인 **합니다.** 또는 최신 버전의 Xamarin을 사용 하 고 있는지 확인 한 후 **appicons.appiconset**을 삭제 하 고 다시 만듭니다.
 
 > [!IMPORTANT]
-> Mac용 Visual Studio의 조사식 아이콘 지원에 알려진 버그가 있습니다. **29x29@3x** 이미지에는 88x88 픽셀 이미지 (픽셀 87x87)가 필요 합니다.
+> Mac용 Visual Studio의 조사식 아이콘 지원에는 알려진 버그가 있습니다. **29x29@3x** 이미지에는 88x88 픽셀 이미지 (픽셀 87x87)가 필요 합니다.
 
 Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 [이 샘플과](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)일치 하도록 **콘텐츠. json** 파일을 수동으로 편집 합니다.
 

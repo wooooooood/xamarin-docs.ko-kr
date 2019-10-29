@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: a8549e03c96a5e21f7a235064ebd72fc671cf2b8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e79fca8c59ae49d27cd335106ca57945be106031
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769289"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031083"
 ---
 # <a name="ios-frequently-asked-questions"></a>iOS faq (질문과 대답)
 
@@ -41,7 +41,7 @@ Mono에 대 한 런타임 환경 변수를 설정 해야 하는 경우 **프로�
 
 ## <a name="publishing-questions"></a>질문 게시
 
-### <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submissioninvalid-bundle-bitcodemd"></a>[앱 스토어에 제출할 때 오류 발생: "유효 하지 않은 번들-bitcode에 포함할 수 없는 옵션은 제출에서 검색 됩니다."](invalid-bundle-bitcode.md)
+### <a name="error-when-submitting-to-app-store-invalid-bundle---options-not-allowed-to-be-embedded-in-bitcode-are-detected-in-the-submissioninvalid-bundle-bitcodemd"></a>[앱 스토어에 제출 하는 동안 오류 발생: "잘못 된 번들에 포함 될 수 없는 옵션은 전송에서 검색 됩니다."](invalid-bundle-bitcode.md)
 
 WatchOS 및 tvOS apps와 같이 bitcode를 _필요로_ 하는 앱을 제출 하려면 Xcode 9를 사용 하 여 작업을 수행 해야 합니다.
 
@@ -52,32 +52,32 @@ Xamarin 주기 7에서는 사용자 지정 된 MSBuild 대상을 사용 하 여�
 예,이 가이드는 방법에 대해 설명 합니다.
 
 ### <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studiomodify-ipamd"></a>[Visual Studio에서 빌드한 후 파일을 IPA 파일에 추가 하거나 파일을 제거할 수 있나요?](modify-ipa.md)
-예, 가능 하지만 변경을 수행한 후 번들에 `.app` 다시 서명 해야 합니다. 일반적인 사용에서는 파일 `.ipa` 을 수정할 필요가 없습니다. 이 문서는 참고용 으로만 제공 됩니다.
+예, 가능 하지만 변경을 수행한 후에는 `.app` 번들에 다시 서명 해야 합니다. 일반적인 사용에서는 `.ipa` 파일을 수정할 필요가 없습니다. 이 문서는 참고용 으로만 제공 됩니다.
 
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[Visual Studio에서 .xcarchive 보관 파일을 만들 수 있나요?](create-xcarchive.md)
-Xamarin 4를 기준으로 이제 `.xcarchive` `ArchiveOnBuild` 속성을로 `true`설정 하 여 Windows에서을 만들 수 있습니다.
+Xamarin 4를 기준으로 이제 `ArchiveOnBuild` 속성을 `true`로 설정 하 여 Windows에서 `.xcarchive`를 만들 수 있습니다.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[다음 메시지가 표시되며 내 앱 제출에 실패한 이유는 무엇인가요? "...에서 허용되지 않는 경로("iTunesMetadata.plist")를 발견했습니다."](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[“Disallowed paths ( "iTunesMetadata.plist" ) found at ...”(허용되지 않은 경로(“iTunesMetadata.plist”)가 발견되었습니다...) 오류와 함께 앱 제출에 실패하는 이유는 무엇인가요?](itunesmetadata-disallowed-paths.md)
 이 오류는 Apple 앱 스토어 확인 프로세스의 변경에 대 한 결과입니다. 이 특정 오류는 설치한 Xamarin의 특정 _버전과 관련이 없으므로 다운 그레이드는 도움이_ _되지_ 않습니다. 이 가이드는 문제를 해결 하는 방법에 대 한 자세한 정보로 연결 됩니다.
 
 ## <a name="diagnosing-specific-error-messages"></a>특정 오류 메시지 진단
 
 ### <a name="ios-designer-error-with-registerserviceporterror-registerserviceportmd"></a>[RegisterServicePort에 발생하는 iOS Designer 오류](error-registerserviceport.md)
-위와 유사한 `RegisterServicePort` 오류 메시지와 함께 발생 하는 오류는 일반적으로 컴퓨터의 스파이웨어/맬웨어에 문제가 있는 경우에 발생 합니다. 이 가이드에서는 스파이웨어/맬웨어 제거에 대 한 진단 및 정보를 확인 하는 방법에 대해 자세히 설명 합니다.
+위와 같은 `RegisterServicePort` 및 유사한 오류 메시지와 함께 발생 하는 오류는 일반적으로 컴퓨터의 스파이웨어/맬웨어에 문제가 있는 경우에 발생 합니다. 이 가이드에서는 스파이웨어/맬웨어 제거에 대 한 진단 및 정보를 확인 하는 방법에 대해 자세히 설명 합니다.
 
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[키 집합에 유효한 iPhone 코드 서명 키가 없다는 오류와 함께 iOS 빌드에 실패하는 이유는 무엇인가요?](no-codesigning-keys.md)
 이 오류 메시지는 해당 프로젝트가 유효한 코드 서명 자격 증명을 찾고 있지만 찾을 수 없는 경우에 발생 합니다. 물리적 iOS 장치에서 테스트 및 배포에는 코드 서명이 필요 합니다. 임시 & App store 빌드도 있습니다.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[다음 메시지를 표시하며 내 iOS 9 앱이 실패한 이유는 무엇인가요? System.Exception: Objective-C 개체를 마샬링하지 못했습니다.](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[Objective-C 개체를 마샬링하지 못하는 System.Exception 오류와 함께 iOS 9 앱에 실패하는 이유는 무엇인가요?](exception-marshal-obj-c.md)
 IOS 9의 API 변경에는 이제 기본 API에서 예상 하는 것 처럼 비관리 코드를 호출할 때 콜백 생성자를 사용 해야 합니다.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[런타임 오류: 어셈블리 mscorlib.dll을 찾을 수 없거나 로드할 수 없습니다.](error-mscorlib-not-found.md)
-이 문제는 서명/IPA 만들기 `.monotouch-64` `.xcarchive` 에 대해 *숨겨진* `.monotouch-32` 및 폴더를 누락 하 여 런타임 오류를 트리거할 때 발생 합니다.
+이 문제는 서명/IPA 만들기 `.xcarchive`에 *숨겨진* `.monotouch-32` 및 `.monotouch-64` 폴더가 없는 경우에 발생 합니다 .이는 런타임 오류를 트리거합니다.
 
 ### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[컴파일 오류: 분산 재배치에서 오프셋 X를 인코딩할 수 없습니다.](error-encode-offset-scattered-relocation.md)
 이 문제는 ARMv7와 같은 32 비트 아키텍처에 대해 빌드할 때 최종 바이너리가 네이티브 도구 체인에 비해 너무 클 경우 발생 합니다.
 
-## <a name="deprecated"></a>사용되지 않음
+## <a name="deprecated"></a>Mapi
 
 > [!IMPORTANT]
 > 다음 문서는 최신 버전의 Xamarin에서 해결 된 문제에 적용 됩니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
@@ -92,7 +92,7 @@ Apple 은 Xcode 6.1.1에서 이 `ibtool`버그를 [수정](https://developer.app
 이는 Xamarin.ios 7.2.6를 실행 하는 사용자에 게 영향을 줍니다. 이 문제는 Xamarin.ios가 다른 사용자 계정으로 설치 된 후 개발자의 기본 계정을 사용 하 여 더 높은 권한을 필요로 하는 파일 사용 권한 때문에 발생 합니다.
 
 ### <a name="systemexception-amdevicenotificationsubscribe-returned-exception-amddevicenotificationsubscribemd"></a>[System.Exception AMDeviceNotificationSubscribe가 반환되었습니다...](exception-amddevicenotificationsubscribe.md)
-이 메시지는 Mac용 Visual Studio 또는 `mtbserver.log` 파일을 처음 시작할 때 오류 대화 상자에 표시 될 수 있습니다. 일반적이 지 않은 문제입니다. Mac 빌드 호스트에 연결 하는 데 문제가 있는 경우 `mtbserver.log` 파일에 표시 될 가능성이 높은 다른 오류가 있습니다.
+이 메시지는 Mac용 Visual Studio를 처음 시작 하거나 `mtbserver.log` 파일에서 오류 대화 상자에 표시 될 수 있습니다. 일반적이 지 않은 문제입니다. Mac 빌드 호스트에 연결 하는 데 문제가 있는 경우 `mtbserver.log` 파일에 표시 될 가능성이 높은 다른 오류가 있습니다.
 
 ### <a name="mdocarchivetomsxdocconverterexe-not-found-rverbasecommandonrequestmdocarchivetomsxdocconverter-not-foundmd"></a>[MDocArchiveToMsxDocConverter.exe not found rver.BaseCommand.OnRequest](mdocarchivetomsxdocconverter-not-found.md)
-이 오류는 `Mac Server Log` Visual Studio의에 표시 될 수 있습니다.
+이 오류는 Visual Studio의 `Mac Server Log`에 나타날 수 있습니다.

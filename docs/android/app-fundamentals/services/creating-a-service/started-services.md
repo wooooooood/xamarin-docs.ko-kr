@@ -3,15 +3,15 @@ title: Xamarin Android를 사용 하 여 서비스 시작
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b7bed0fc6dba1d9f80524ac3429b7fdcb751ab9
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: f5b5f8cf224c18852a0a0e7e4f591b49905ba026
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70755067"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024768"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Xamarin Android를 사용 하 여 서비스 시작
 
@@ -45,13 +45,13 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 마지막으로 세 번째 매개 변수는 요청을 식별 하는 응용 프로그램에 고유한 정수 값입니다. 여러 호출자가 동일한 서비스 개체를 호출할 수 있습니다. 이 값은 서비스를 시작 하기 위해 지정 된 요청을 사용 하 여 서비스를 중지 하는 요청을 연결 하는 데 사용 됩니다. 이에 대해서는 [서비스 중지](#Stopping_the_Service)섹션에서 자세히 설명 합니다. 
 
-값 `StartCommandResult`는 서비스에서 리소스 제약 조건으로 인해 서비스가 종료 되는 경우 수행할 작업에 대 한 제안으로 반환 됩니다. @No__t_0에 대 한 세 가지 가능한 값은 다음과 같습니다.
+값 `StartCommandResult`는 서비스에서 리소스 제약 조건으로 인해 서비스가 종료 되는 경우 수행할 작업에 대 한 제안으로 반환 됩니다. `StartCommandResult`에 대 한 세 가지 가능한 값은 다음과 같습니다.
 
 - **[Startcommandresult. NotSticky](xref:Android.App.StartCommandResult.NotSticky)** &ndash;이 값은 Android에서 종료 된 서비스를 다시 시작할 필요가 없음을 나타냅니다. 이에 대 한 예로 앱에서 갤러리에 대 한 미리 보기를 생성 하는 서비스를 생각해 보세요. 서비스가 종료 되는 경우 다음에 앱을 실행할 때 미리 보기를 다시 만들 수 &ndash; 미리 보기를 즉시 다시 만드는 것은 중요 하지 않습니다.
 - **[Startcommandresult. 고정](xref:Android.App.StartCommandResult.Sticky)** &ndash;이 작업은 Android에서 서비스를 다시 시작 하도록 지시 하지만 서비스를 시작한 마지막 의도를 제공 하지는 않습니다. 처리할 보류 중인 의도가 없는 경우 의도 매개 변수에 대 한 `null` 제공 됩니다. 이에 대 한 예는 음악 플레이어 앱이 될 수 있습니다. 서비스는 음악을 재생할 준비를 다시 시작 하지만 마지막 노래를 재생 합니다.
 - **[Startcommandresult.](xref:Android.App.StartCommandResult.RedeliverIntent)** 이 값 &ndash; 다시 시작 하면 Android에서 서비스를 다시 시작 하 고 마지막 `Intent`를 다시 배달 하도록 지시 합니다. 이에 대 한 예는 앱에 대 한 데이터 파일을 다운로드 하는 서비스입니다. 서비스가 중지 된 경우에도 데이터 파일을 다운로드 해야 합니다. Android에서 서비스를 다시 시작할 때 `StartCommandResult.RedeliverIntent`을 반환 하 여 서비스에 대 한 의도 (다운로드할 파일의 URL을 보유 함)도 제공 합니다. 이렇게 하면 코드의 정확한 구현에 따라 다운로드를 다시 시작 하거나 다시 시작할 수 있습니다.
 
-@No__t_0 &ndash; `StartCommandResult.ContinuationMask`에 대 한 네 번째 값이 있습니다. 이 값은 `OnStartCommand`에서 반환 되며 Android에서 종료 된 서비스를 어떻게 계속할지 설명 합니다. 일반적으로이 값은 서비스를 시작 하는 데 사용 되지 않습니다.
+`StartCommandResult` &ndash; `StartCommandResult.ContinuationMask`에 대 한 네 번째 값이 있습니다. 이 값은 `OnStartCommand`에서 반환 되며 Android에서 종료 된 서비스를 어떻게 계속할지 설명 합니다. 일반적으로이 값은 서비스를 시작 하는 데 사용 되지 않습니다.
 
 시작 된 서비스의 키 수명 주기 이벤트는 다음 다이어그램에 나와 있습니다. 
 
@@ -77,7 +77,7 @@ public override StartCommandResult OnStartCommand (Android.Content.Intent intent
 
 ### <a name="using-startid-to-stop-a-service"></a>StartId를 사용 하 여 서비스 중지
 
-여러 호출자가 서비스 시작을 요청할 수 있습니다. 처리 중인 시작 요청이 있는 경우 서비스는 `OnStartCommand`에 전달 된 `startId`를 사용 하 여 서비스가 중간에 중지 되지 않도록 할 수 있습니다. @No__t_0는 `StartService`에 대 한 최신 호출에 해당 하며 호출 될 때마다 증가 합니다. 따라서 `StartService`에 대 한 후속 요청에서 아직 `OnStartCommand`를 호출 하지 않은 경우 서비스는 `StopSelfResult`를 호출 하 여 수신 된 `startId`의 최신 값 (단순히 `StopSelf`를 호출 하는 대신)을 전달 합니다. @No__t_0에 대 한 호출로 인해 `OnStartCommand`에 대 한 해당 호출이 아직 발생 하지 않은 경우 `StopSelf` 호출에 사용 되는 `startId`은 최신 `StartService` 호출에 해당 하지 않으므로 시스템에서 서비스를 중지 하지 않습니다.
+여러 호출자가 서비스 시작을 요청할 수 있습니다. 처리 중인 시작 요청이 있는 경우 서비스는 `OnStartCommand`에 전달 된 `startId`를 사용 하 여 서비스가 중간에 중지 되지 않도록 할 수 있습니다. `startId`는 `StartService`에 대 한 최신 호출에 해당 하며 호출 될 때마다 증가 합니다. 따라서 `StartService`에 대 한 후속 요청에서 아직 `OnStartCommand`를 호출 하지 않은 경우 서비스는 `StopSelfResult`를 호출 하 여 수신 된 `startId`의 최신 값 (단순히 `StopSelf`를 호출 하는 대신)을 전달 합니다. `StartService`에 대 한 호출로 인해 `OnStartCommand`에 대 한 해당 호출이 아직 발생 하지 않은 경우 `StopSelf` 호출에 사용 되는 `startId`은 최신 `StartService` 호출에 해당 하지 않으므로 시스템에서 서비스를 중지 하지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 

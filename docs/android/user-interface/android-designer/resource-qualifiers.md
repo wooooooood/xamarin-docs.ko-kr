@@ -4,15 +4,15 @@ description: 이 항목에서는 일부 한정자 값이 일치 하는 경우에
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 6ae10e73c3f41226560beb8cf8c50608fc6adf3f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: ccac795333dff52d35a66e8cd205c7b5bbd1bb2c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70762614"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029410"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>리소스 한정자 및 시각화 옵션
 
@@ -24,7 +24,7 @@ _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 �
 
 **가로** 모드 단추 오른쪽에 있는 줄임표 아이콘을 클릭 하 여 **리소스 한정자 옵션** 에 액세스할 수 있습니다.
 
-[![Resource 한정자 옵션](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
+[![리소스 한정자 옵션](resource-qualifiers-images/vs/08-resource-qual-opt-sml.png)](resource-qualifiers-images/vs/08-resource-qual-opt.png#lightbox)
 
 이 대화 상자에는 다음과 같은 리소스 한정자의 풀 다운 메뉴가 표시 됩니다.
 
@@ -38,7 +38,7 @@ _이 항목에서는 일부 한정자 값이 일치 하는 경우에만 사용 �
 
 **언어** 풀 다운 메뉴에는 정의 된 리소스가 있는 언어 (또는 기본값 인 **모든 언어**)만 나열 됩니다. 그러나 목록에 새 언어를 추가 하는 데 사용할 수 있는 **언어/지역 추가** ... 옵션도 있습니다.
 
-[![Add 언어/지역](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
+[언어/지역 추가![](resource-qualifiers-images/vs/09-add-language-region-sml.png)](resource-qualifiers-images/vs/09-add-language-region.png#lightbox)
 
 **언어/지역 추가 ...** 를 클릭 하면 사용 가능한 언어 및 지역의 드롭다운 목록을 표시 하는 **언어 선택** 대화 상자가 열립니다.
 
@@ -103,7 +103,7 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 **가로** 모드 단추 오른쪽에 있는 줄임표 아이콘을 클릭 하 여 **리소스 한정자 옵션** 에 액세스할 수 있습니다.
 
-[![Resource 한정자 옵션](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
+[![리소스 한정자 옵션](resource-qualifiers-images/xs/08-resource-qual-opt-m75-sml.png)](resource-qualifiers-images/xs/08-resource-qual-opt-m75.png#lightbox)
 
 이 대화 상자에는 다음과 같은 리소스 한정자의 풀 다운 메뉴가 표시 됩니다.
 
@@ -117,15 +117,15 @@ Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하
 
 **언어** 풀 다운 메뉴에는 정의 된 리소스가 있는 언어 (또는 기본값 인 **모든 언어**)만 나열 됩니다. 그러나 목록에 새 언어를 추가 하는 데 사용할 수 있는 **언어/지역 추가** ... 옵션도 있습니다.
 
-[![Add 언어/지역](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
+[언어/지역 추가![](resource-qualifiers-images/xs/09-add-language-region-m75-sml.png)](resource-qualifiers-images/xs/09-add-language-region-m75.png#lightbox)
 
 **언어/지역 추가 ...** 를 클릭 하면 사용 가능한 언어 및 지역의 드롭다운 목록을 표시 하는 **언어 선택** 대화 상자가 열립니다.
 
-[언어 ![List](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
+[![언어 목록](resource-qualifiers-images/xs/10-languages-m75-sml.png)](resource-qualifiers-images/xs/10-languages-m75.png#lightbox)
 
 이 예제에서는 언어에 대해 **fr (프랑스어)** **를 선택 하 고 프랑스어** 지역 언어의 경우 (벨기에)로 설정 했습니다. 특정 지역에 관계 없이 많은 언어를 지정할 수 있으므로 **지역** 필드는 선택 사항입니다. **언어** 풀 다운 메뉴가 다시 열리면 새로 추가 된 언어/지역 리소스가 표시 됩니다.
 
-[선택한 ![Language 및 지역](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
+[![언어 및 지역 선택](resource-qualifiers-images/xs/11-language-region-added-m75-sml.png)](resource-qualifiers-images/xs/11-language-region-added-m75.png#lightbox)
 
 새 언어를 추가 하지만 새 언어에 대 한 리소스를 만들지 않는 경우 추가 된 언어는 다음에 프로젝트를 열 때 더 이상 표시 되지 않습니다.
 
@@ -144,7 +144,7 @@ Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.Ap
 
 **작업 모음 설정** 아이콘은 페인트 브러시 (테마 편집기) 아이콘 왼쪽에 있습니다.
 
-[![Action 모음 설정](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
+[![작업 모음 설정](resource-qualifiers-images/xs/13-action-bar-m75-sml.png)](resource-qualifiers-images/xs/13-action-bar-m75.png#lightbox)
 
 이 아이콘은 세 가지 작업 모음 모드 중 하나를 선택 하는 방법을 제공 하는 대화 상자 팝 오버 엽니다.
 
@@ -158,17 +158,17 @@ Android UI 모드에 대 한 자세한 내용은 [Uimodemanager](xref:Android.Ap
 
 **테마** 드롭다운 메뉴는 프로젝트에 정의 된 모든 테마를 표시 합니다. **추가 테마** 를 선택 하면 아래와 같이 설치 된 Android SDK에서 사용할 수 있는 모든 테마 목록이 포함 된 대화 상자가 열립니다.
 
-[![More 테마 목록](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
+[![더 많은 테마 목록](resource-qualifiers-images/xs/14-theme-menu-m75-sml.png)](resource-qualifiers-images/xs/14-theme-menu-m75.png#lightbox)
 
 테마를 선택 하면 새 테마의 효과를 표시 하도록 Design Surface 업데이트 됩니다. 이 변경은 **테마** 대화 상자에서 **확인** 단추를 클릭 한 경우에만 영구적으로 적용 됩니다. 테마를 선택 하면 아래와 같이 **테마** 드롭다운 메뉴에 포함 됩니다.
 
-[이제 ![Light 테마를 사용할 수 있습니다.](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
+[이제![밝은 테마를 사용할 수 있습니다.](resource-qualifiers-images/xs/15-light-theme-m75-sml.png)](resource-qualifiers-images/xs/15-light-theme-m75.png#lightbox)
 
 ## <a name="android-version"></a>Android 버전
 
 Android **버전** 선택기는 디자이너에서 레이아웃을 렌더링 하는 데 사용 되는 android 버전을 설정 합니다. 선택기는 프로젝트의 대상 프레임 워크 버전과 호환 되는 모든 버전을 표시 합니다.
 
-[Android 버전의 ![List](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
+[Android 버전의![목록](resource-qualifiers-images/xs/16-android-version-m75-sml.png)](resource-qualifiers-images/xs/16-android-version-m75.png#lightbox)
 
 대상 프레임 워크 버전은 프로젝트의 설정 **> 빌드 > 일반** 섹션에서 설정할 수 있습니다. 대상 프레임 워크 버전에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.
 

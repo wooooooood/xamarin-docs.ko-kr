@@ -3,15 +3,15 @@ title: Xamarin Workbooks
 description: 실험, 학습, 가이드 및 교육 지원에 적합 한 문서와 코드를 혼합 하 여 제공 하는 Xamarin Workbooks 합니다.
 ms.prod: xamarin
 ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/23/2018
-ms.openlocfilehash: ea065a0eea9be95b0513acd4ee3950efe9a4e53d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 899431b1d3bdefb5737cb0b4ffc8d53c4ffc39f8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288089"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029639"
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
@@ -25,7 +25,7 @@ Xamarin Workbooks는 오픈 소스 소프트웨어입니다. GitHub의 open에�
 
 사용자에 게 문의 하 여 의견을 알려주세요. 또는 [버그를 실행](~/tools/workbooks/install.md#reporting-bugs)하는 경우 [포럼이](https://forums.xamarin.com/categories/inspector) 있습니다.
 
-[![](images/interactive-1.0.0-urho-planet-earth-small.png "샘플 UrhoSharp 기반 통합 문서")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "A sample UrhoSharp based workbook")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
 ## <a name="installation-and-requirementsinstallmd"></a>[설치 및 요구사항](install.md)
 

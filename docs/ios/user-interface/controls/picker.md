@@ -4,19 +4,19 @@ description: 이 문서에서는 Xamarin.ios 앱에서 선택기 컨트롤을 �
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/14/2018
-ms.openlocfilehash: 9eec99ffe244ffdc290050bd54f083ad6582151d
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: ac96363378e91c60956d28352535733c7e954e6a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70286394"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021990"
 ---
 # <a name="picker-control-in-xamarinios"></a>Xamarin.ios의 선택 컨트롤
 
-[@No__t_1](xref:UIKit.UIPickerView) 를 사용 하면 휠와 유사한 인터페이스의 개별 구성 요소를 스크롤하여 목록에서 값을 선택할 수 있습니다.
+[`UIPickerView`](xref:UIKit.UIPickerView) 를 사용 하면 휠와 유사한 인터페이스의 개별 구성 요소를 스크롤하여 목록에서 값을 선택할 수 있습니다.
 
 선택기는 날짜 및 시간을 선택 하는 데 자주 사용 됩니다. Apple에서 제공 하는 [`UIDatePicker`](xref:UIKit.UIDatePicker)
 이 용도의 클래스입니다.
@@ -59,7 +59,7 @@ public override void ViewDidLoad()
 }
 ```
 
-[@No__t_1](xref:UIKit.UIPickerViewModel) 기본 클래스는 두 개의 인터페이스를 구현 [`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
+[`UIPickerViewModel`](xref:UIKit.UIPickerViewModel) 기본 클래스는 두 개의 인터페이스를 구현 [`IUIPickerDataSource`](xref:UIKit.IUIPickerViewDataSource)
 그리고 [`IUIPickerViewDelegate`](xref:UIKit.IUIPickerViewDelegate)는 선택기의 데이터를 지정 하는 다양 한 메서드와 상호 작용을 처리 하는 방법을 선언 합니다.
 
 ```csharp
@@ -138,7 +138,7 @@ public class PeopleModel : UIPickerViewModel
 
 ### <a name="implementing-a-date-picker"></a>날짜 선택 구현
 
-@No__t_0를 인스턴스화하여 날짜 선택기를 구현 합니다.
+`UIDatePicker`를 인스턴스화하여 날짜 선택기를 구현 합니다.
 
 ```csharp
 UIPickerView pickerView = new UIPickerView(
@@ -174,7 +174,7 @@ datePickerView.MaximumDate = NSDate.Now;
 ```
 
 > [!TIP]
-> @No__t_0를 `NSDate`에 명시적으로 캐스팅할 수 있습니다.
+> `DateTime`를 `NSDate`에 명시적으로 캐스팅할 수 있습니다.
 >
 > ```csharp
 > DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
@@ -183,7 +183,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 #### <a name="minute-interval"></a>분 간격
 
-[@No__t_1](xref:UIKit.UIDatePicker.MinuteInterval) 속성은 선택 기가 분을 표시 하는 간격을 설정 합니다.
+[`MinuteInterval`](xref:UIKit.UIDatePicker.MinuteInterval) 속성은 선택 기가 분을 표시 하는 간격을 설정 합니다.
 
 ```csharp
 datePickerView.MinuteInterval = 10;
@@ -231,7 +231,7 @@ datePickerView.Mode = UIDatePickerMode.DateAndTime;
 
 ![UIDatePickerMode. DateAndTime](picker-images/image6.png "UIDatePickerMode. DateAndTime")
 
-[@No__t_1](#uidatepickermodedate)와 마찬가지로 선택기의 순서와 12 또는 24 시간 시계를 사용 하는 것은 날짜 선택의 로캘에 따라 다릅니다.
+[`UIDatePickerMode.Date`](#uidatepickermodedate)와 마찬가지로 선택기의 순서와 12 또는 24 시간 시계를 사용 하는 것은 날짜 선택의 로캘에 따라 다릅니다.
 
 > [!TIP]
 > 모드 `UIDatePickerMode.Time`, `UIDatePickerMode.Date` 또는 `UIDatePickerMode.DateAndTime`에서 날짜 선택기의 값을 캡처하려면 `Date` 속성을 사용 합니다. 이 값은 `NSDate` 저장 됩니다.
@@ -246,7 +246,7 @@ datePickerView.Mode = UIDatePickerMode.CountDownTimer;
 
 !["UIDatePickerMode. CountDownTimer"](picker-images/image5.png "UIDatePickerMode. CountDownTimer")
 
-@No__t_0 속성은 `UIDatePickerMode.CountDownTimer` 모드에서 날짜 선택기의 값을 캡처합니다. 예를 들어 현재 날짜에 카운트다운 값을 추가 하려면 다음을 수행 합니다.
+`CountDownDuration` 속성은 `UIDatePickerMode.CountDownTimer` 모드에서 날짜 선택기의 값을 캡처합니다. 예를 들어 현재 날짜에 카운트다운 값을 추가 하려면 다음을 수행 합니다.
 
 ```csharp
 var currentTime = NSDate.Now;
@@ -258,9 +258,9 @@ dateLabel.Text = "Alarm set for:" + coundownTimeformat.ToString(finishCountdown)
 
 #### <a name="nsdateformatter"></a>NSDateFormatter
 
-@No__t_0 형식을 지정 하려면 [`NSDateFormatter`](xref:Foundation.NSDateFormatter)를 사용 합니다.
+`NSDate`형식을 지정 하려면 [`NSDateFormatter`](xref:Foundation.NSDateFormatter)를 사용 합니다.
 
-@No__t_0를 사용 하려면 해당 [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) 메서드를 호출 합니다. 예를 들면,
+`NSDateFormatter`를 사용 하려면 해당 [`ToString`](xref:Foundation.NSDateFormatter.ToString(Foundation.NSDate)) 메서드를 호출 합니다. 예를 들면,
 
 ```csharp
 var date = NSDate.Now;
@@ -273,7 +273,7 @@ var formattedDate = formatter.ToString(d);
 
 ##### <a name="dateformat"></a>DateFormat
 
-@No__t_2의 [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat) 속성 (문자열)은 사용자 지정 가능한 날짜 형식 지정을 허용 합니다.
+`NSDateFormatter`의 [`DateFormat`](xref:Foundation.NSDateFormatter.DateFormat) 속성 (문자열)은 사용자 지정 가능한 날짜 형식 지정을 허용 합니다.
 
 ```csharp
 NSDateFormatter dateFormat = new NSDateFormatter();
@@ -282,7 +282,7 @@ dateFormat.DateFormat = "yyyy-MM-dd";
 
 ##### <a name="timestyle"></a>TimeStyle
 
-[@No__t_1](xref:Foundation.NSDateFormatter.TimeStyle) 속성 (`NSDateFormatter`의 [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle) 는 미리 결정 된 스타일을 기준으로 시간 형식을 지정 합니다.
+[`TimeStyle`](xref:Foundation.NSDateFormatter.TimeStyle) 속성 (`NSDateFormatter`의 [`NSDateFormatterStyle`](xref:Foundation.NSDateFormatterStyle) 는 미리 결정 된 스타일을 기준으로 시간 형식을 지정 합니다.
 
 ```csharp
 NSDateFormatter timeFormat = new NSDateFormatter();
@@ -298,7 +298,7 @@ timeFormat.TimeStyle = NSDateFormatterStyle.Short;
 
 ##### <a name="datestyle"></a>DateStyle
 
-@No__t_3의 [`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle) 속성 (`NSDateFormatterStyle`)은 미리 지정 된 스타일을 기준으로 날짜 형식을 지정 합니다.
+`NSDateFormatter`의 [`DateStyle`](xref:Foundation.NSDateFormatter.DateStyle) 속성 (`NSDateFormatterStyle`)은 미리 지정 된 스타일을 기준으로 날짜 형식을 지정 합니다.
 
 ```csharp
 NSDateFormatter dateTimeformat = new NSDateFormatter();

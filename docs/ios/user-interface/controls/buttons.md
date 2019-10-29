@@ -4,19 +4,19 @@ description: UIButton 클래스는 iOS 화면에서 다양 한 종류의 단추�
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: ce0c4579f13311811106a00390f95a20a0abf979
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: a8dfd267fe9f5f838927fc216d53c2475398ed16
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768458"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022108"
 ---
 # <a name="buttons-in-xamarinios"></a>Xamarin.ios의 단추
 
-IOS에서 클래스는 `UIButton` 단추 컨트롤을 나타냅니다.
+IOS에서 `UIButton` 클래스는 단추 컨트롤을 나타냅니다.
 
 단추 속성은 프로그래밍 방식으로 또는 iOS 디자이너의 **Properties Pad** 를 사용 하 여 수정할 수 있습니다.
 
@@ -24,7 +24,7 @@ IOS에서 클래스는 `UIButton` 단추 컨트롤을 나타냅니다.
 
 ## <a name="creating-a-button-programmatically"></a>프로그래밍 방식으로 단추 만들기
 
-는 `UIButton` 코드를 몇 줄만 사용 하 여 만들 수 있습니다.
+몇 줄의 코드를 사용 하 여 `UIButton`를 만들 수 있습니다.
 
 - 단추를 인스턴스화하고 해당 형식을 지정 합니다.
 
@@ -32,14 +32,14 @@ IOS에서 클래스는 `UIButton` 단추 컨트롤을 나타냅니다.
   UIButton myButton = new UIButton(UIButtonType.System);
   ```
 
-  단추의 형식은에 `UIButtonType`의해 지정 됩니다.
+  단추의 형식은 `UIButtonType`에 의해 지정 됩니다.
 
   - `UIButtonType.System`-범용 단추
   - `UIButtonType.DetailDisclosure`-일반적으로 테이블의 특정 항목에 대 한 자세한 정보의 가용성을 나타냅니다.
-  - `UIButtonType.InfoDark`-구성 정보의 가용성을 나타냅니다. 어두운 색
-  - `UIButtonType.InfoLight`-구성 정보의 가용성을 나타냅니다. 밝은 색
+  - `UIButtonType.InfoDark`-구성 정보를 사용할 가용성을 나타냅니다. 어두운 색
+  - `UIButtonType.InfoLight`-구성 정보를 사용할 가용성을 나타냅니다. 밝은 색
   - `UIButtonType..AddContact`-연락처를 추가할 수 있음을 나타냅니다.
-  - `UIButtonType.Custom`-사용자 지정 가능한 단추
+  - `UIButtonType.Custom` 사용자 지정 가능 단추
 
   다른 단추 형식에 대 한 자세한 내용은 다음을 참조 하세요.
   
@@ -53,7 +53,7 @@ IOS에서 클래스는 `UIButton` 단추 컨트롤을 나타냅니다.
   myButton.Frame = new CGRect(25, 25, 300, 150);
   ```
 
-- 단추의 텍스트를 설정 합니다. 텍스트와 값이 필요한 `SetTitle` 메서드를 `UIControlState` 사용 합니다.
+- 단추의 텍스트를 설정 합니다. 텍스트 및 `UIControlState` 값이 필요한 `SetTitle` 메서드를 사용 합니다.
 
   ```csharp
   myButton.SetTitle("Hello, World!", UIControlState.Normal);
@@ -75,7 +75,7 @@ button.TouchUpInside += (sender, e) => {
 ```
 
 > [!NOTE]
-> `TouchUpInside`는 유일 하 게 사용할 수 있는 단추 이벤트입니다. `UIButton`는 다양 한 [이벤트](xref:UIKit.UIControlEvent)를 `UIControl`정의 하는의 자식 클래스입니다.
+> `TouchUpInside` 유일 하 게 사용할 수 있는 단추 이벤트는 아닙니다. `UIButton`은 다양 한 [이벤트](xref:UIKit.UIControlEvent)를 정의 하는 `UIControl`의 자식 클래스입니다.
 
 ### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>IOS 디자이너를 사용 하 여 단추 이벤트 처리기 지정
 
@@ -87,20 +87,20 @@ button.TouchUpInside += (sender, e) => {
 
 ## <a name="styling-a-button"></a>단추 스타일 지정
 
-`UIButton`컨트롤 `UIControlState` 은 각각 `Disabled`값 `Normal` 으로`Focused`지정된,,, 등의 다양 한 상태에 있을 수 있습니다. `Highlighted` 각 상태에는 프로그래밍 방식으로 또는 iOS 디자이너를 사용 하 여 지정 된 고유한 스타일을 지정할 수 있습니다.
+`UIButton` 컨트롤은 각각 `UIControlState` 값 (`Normal`, `Disabled`, `Focused`, `Highlighted`등으로 지정 된 다양 한 상태에 있을 수 있습니다. 각 상태에는 프로그래밍 방식으로 또는 iOS 디자이너를 사용 하 여 지정 된 고유한 스타일을 지정할 수 있습니다.
 
 > [!NOTE]
-> 모든 `UIControlState` 값의 전체 목록을 보려면[`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
+> 모든 `UIControlState` 값의 전체 목록을 보려면를 살펴보세요 [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
 > 설명을.
 
-예를 들어 제목 색 및 그림자 색 `UIControlState.Normal`을 설정 하려면 다음을 수행 합니다.
+예를 들어 `UIControlState.Normal`의 제목 색과 그림자 색을 설정 하려면 다음을 수행 합니다.
 
 ```csharp
 button.SetTitleColor(UIColor.White, UIControlState.Normal);
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-다음 코드에서는 단추 제목을 및 `UIControlState.Normal` `UIControlState.Highlighted`에 대해 특성이 지정 된 (스타일) 문자열로 설정 합니다.
+다음 코드에서는 단추 제목을 `UIControlState.Normal` 및 `UIControlState.Highlighted`에 대 한 특성이 지정 된 (스타일) 문자열로 설정 합니다.
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString(buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -112,7 +112,7 @@ myButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlight
 
 ## <a name="custom-button-types"></a>사용자 지정 단추 유형
 
-`UIButtonType` 가`Custom` 있는 단추에는 기본 스타일이 없습니다. 그러나 다양 한 상태에 대해 이미지를 설정 하 여 단추의 모양을 구성할 수 있습니다.
+`Custom` `UIButtonType` 있는 단추에는 기본 스타일이 없습니다. 그러나 다양 한 상태에 대해 이미지를 설정 하 여 단추의 모양을 구성할 수 있습니다.
 
 ```csharp
 button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
@@ -120,10 +120,10 @@ button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UICont
 button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
-사용자가 단추를 터치 하는지 여부에 따라 다음 이미지 (`UIControlState.Normal` `UIControlState.Highlighted` 및 `UIControlState.Selected` 상태) 중 하나로 렌더링 됩니다.
+사용자가 단추를 터치 하는지 여부에 따라 다음 이미지 (`UIControlState.Normal`, `UIControlState.Highlighted` 및 `UIControlState.Selected` 상태) 중 하나로 렌더링 됩니다.
 
-![UIControlState.Normal](buttons-images/image22.png "UIControlState.Normal")
-![UIControlState.Highlighted](buttons-images/image23.png "UIControlState.Highlighted")
-![UIControlState.Selected](buttons-images/image24.png "UIControlState.Selected")
+![UIControlState](buttons-images/image22.png "UIControlState")
+![UIControlState](buttons-images/image23.png "UIControlState")
+![UIControlState](buttons-images/image24.png "UIControlState")
 
 사용자 지정 단추 작업에 대 한 자세한 내용은 [단추 조리법에 이미지 사용](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button) 을 참조 하세요.

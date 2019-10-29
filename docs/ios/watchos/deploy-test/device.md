@@ -4,15 +4,15 @@ description: 이 문서에서는 실제 Apple Watch를 테스트 하기 위해 X
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 6d3756f4215174e17ec45518f430dc38270e3289
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768697"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028361"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Apple Watch 장치에서 테스트
 
@@ -26,21 +26,21 @@ ms.locfileid: "70768697"
 
 ## <a name="devices"></a>장치
 
-실제 iPhone 또는 iPad에서 iOS 앱을 테스트 하려면 장치를 개발자 센터에 등록 해야 합니다. 장치 목록은 다음과 같습니다. 새 장치를 추가 하려면 더하기 **+** 기호를 클릭 합니다.
+실제 iPhone 또는 iPad에서 iOS 앱을 테스트 하려면 장치를 개발자 센터에 등록 해야 합니다. 장치 목록은 다음과 같이 표시 됩니다 (새 장치를 추가 하려면 더하기 기호 **+** 클릭).
 
-![](device-images/devices-sml.png "장치 목록은 다음과 같습니다.")
+![](device-images/devices-sml.png "The device list looks like this")
 
 Watch는 다르지 않습니다. 이제 앱을 배포 하기 전에 Apple Watch 장치를 추가 해야 합니다. **Xcode** (**Windows > 장치** 목록)를 사용 하 여 watch의 udid를 찾습니다. 쌍을 이루는 전화가 연결 되 면 감시 정보도 표시 됩니다.
 
-[![](device-images/xcode-devices-sml.png "쌍을 이루는 조사식 정보")](device-images/xcode-devices.png#lightbox)
+[![](device-images/xcode-devices-sml.png "Paired Watch Information")](device-images/xcode-devices.png#lightbox)
 
 Watch의 UDID를 알고 있으면 개발자 센터의 장치 목록에 추가 합니다.
 
-![](device-images/devices-watch-sml.png "장치 목록에서 조사식의 UDID")
+![](device-images/devices-watch-sml.png "The Watch's UDID in the device list")
 
 시청 장치를 추가한 후에는 새로 만들거나 기존 개발 또는 임시 프로 비전 프로필에서 해당 장치를 선택 했는지 확인 합니다.
 
-![](device-images/devices-provisioning.png "사용 가능한 장치 목록")
+![](device-images/devices-provisioning.png "Available device list")
 
 다운로드 하 여 다시 설치 하기 위해 기존 프로 비전 프로필을 편집 하는 경우 잊지 마세요.
 
@@ -52,17 +52,17 @@ Watch의 UDID를 알고 있으면 개발자 센터의 장치 목록에 추가 �
 
 와일드 카드 앱 ID가 있는 경우 *프로 비전 프로필은 하나만 필요 합니다*. 하지만 각 프로젝트에 대해 별도의 앱 ID가 있는 경우 각 앱 ID에 대 한 프로 비전 프로필이 필요 합니다.
 
-![](device-images/provisioningprofile-development.png "개발 프로 비전 프로필")
+![](device-images/provisioningprofile-development.png "The Development Provisioning Profile")
 
 세 프로필을 모두 만들면 목록에 표시 됩니다. 각 항목을 다운로드 하 여 설치 해야 합니다.
 
-![](device-images/provisioningprofiles.png "사용 가능한 개발 프로 비전 프로필")
+![](device-images/provisioningprofiles.png "The available Development Provisioning Profiles")
 
 **빌드 > IOS 번들 서명** 화면을 선택 하 고 **릴리스** 또는 **디버그 IPhone** 구성을 선택 하 여 **프로젝트 옵션** 에서 프로 비전 프로필을 확인할 수 있습니다.
 
 **프로 비전 프로필** 목록에 일치 하는 모든 프로필이 표시 됩니다 .이 드롭다운 목록에서 사용자가 만든 일치 하는 프로필을 확인 해야 합니다.
 
-![](device-images/options-selectprofile.png "프로 비전 프로필 목록")
+![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
 <a name="testing" />
 
@@ -97,7 +97,7 @@ Apple Watch 장치에 배포 하기 위해 디버그 모드에서 빌드할 때 
 
 이 문제를 *일시적* 으로 해결 하려면 조사식 확장 **프로젝트 옵션 > 빌드 > watchOS 빌드** 창에서 **증분 빌드** 를 사용 하지 않도록 설정 합니다.
 
-[![](device-images/disable-incremental-sml.png "증분 빌드 확인란")](device-images/disable-incremental.png#lightbox)
+[![](device-images/disable-incremental-sml.png "The Incremental Builds checkbox")](device-images/disable-incremental.png#lightbox)
 
 이 문제는 향후 릴리스에서 수정 될 예정 이며, 그 후에는 증분 빌드를 다시 사용 하도록 설정 하 여 더 빠른 빌드 시간을 활용할 수 있습니다.
 
@@ -112,7 +112,7 @@ Failed to install [APPNAME]
 Invalid executable/Application Verification Failed
 ```
 
-![](device-images/invalid-application-executable.png "응용 프로그램 실행 파일이 잘못 되었습니다. 경고")
+![](device-images/invalid-application-executable.png "Invalid Application Executable alert")
 
 앱이 설치를 시도한 후 이러한 메시지가 *조사식 화면에* 표시 되는 경우 몇 가지 문제가 있을 수 있습니다.
 
@@ -120,7 +120,7 @@ Invalid executable/Application Verification Failed
 
 - 테스트에 사용 되는 개발 프로 비전 프로필에 감시 장치가 포함 되어 있지 않습니다. 또는 프로 비전 프로필에 조사식이 추가 된 후에 다시 다운로드 하 여 다시 설치 하지 않은 것입니다. 지침에 따라 [프로 비전 프로필을 올바르게 구성](#profiles)합니다.
 
-- **IOS 장치 로그** 에이 포함 `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` 되어 있으면 Watch 앱의 **info.plist** 에 잘못 된 값 **osversion** 값이 있습니다.
+- **IOS 장치 로그** 에 `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` 포함 된 경우 Watch 앱의 info.plist에 잘못 된 값 **osversion** 값이 있습니다 **.**
   **8.2** 이어야 합니다. Xcode 6.3를 설치한 경우에는 해당 소스를 수동으로 편집 하 여 8.2로 설정 해야 할 수 있습니다.
 
 - Watch 앱의 **info.plist** 에는 포함 되지 않은 권한 (예: 앱 그룹)이 잘못 포함 되어 있습니다.

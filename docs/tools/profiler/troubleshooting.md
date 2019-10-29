@@ -3,15 +3,15 @@ title: Xamarin Profiler 문제 해결
 description: 이 문서에서는 Xamarin Profiler 관련 된 문제 해결 정보를 제공 합니다. 로깅 및 진단, IDE 및 기타 항목과 관련 된 문제를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: c6a05e332bf0c08f8c7ea328c2793f7d0bf00fb7
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285705"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019207"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 문제 해결
 
@@ -25,9 +25,9 @@ Xamarin 팀은 다음을 비롯 한 정보를 제공 하는 경우 문제를 추
 
 ### <a name="getting-log-outputs"></a>로그 출력 가져오기
 
-Mac의 로그는에 `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`저장 됩니다.
+Mac의 로그는 `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`에 저장 됩니다.
 
-Windows에서는 문제를 제출할 때마다 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` 최신 로그를 포함 하 여에 저장 됩니다.
+Windows에서는 문제를 제출할 때마다 최신 로그를 포함 하는 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log`에 저장 됩니다.
 
 진행 되는 동안 더 많은 로깅을 추가 하 고 있으므로이 출력이 증가 하 고 시간이 지남에 따라 더 유용 하 게 제공 됩니다.
 
@@ -41,13 +41,13 @@ Windows에서는 문제를 제출할 때마다 `%appdata%Local//Xamarin/Log/Xama
 
 **파일 > 다른 이름으로 저장** ...을 선택 하 여 현재 세션에 대 한 **mlpd** 를 저장할 수도 있습니다. Profiler의 메뉴에서 다음을 수행 합니다.
 
-**Visual Studio for Mac**:
+**Mac용 Visual Studio**:
 
-![](troubleshooting-images/image17.png "Mac용 Visual Studio에서 mlpd 파일 저장 중")
+![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Visual Studio에서 mlpd 파일 저장 중")
+![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
 
 **Mlpd** 는 많은 정보를 포함 하며 파일 크기는 커집니다.
 
@@ -73,13 +73,13 @@ Windows에서는 문제를 제출할 때마다 `%appdata%Local//Xamarin/Log/Xama
 
 Visual Studio에서 프로파일러를 사용 하는 경우이 오류 상자가 표시 되 면 다음을 수행 합니다.
 
-![](troubleshooting-images/error.png "Visual Studio에서 프로파일러를 사용 하는 경우의 오류 상자")
+![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
 
 일반적으로 시뮬레이터/에뮬레이터를 시작할 수 없기 때문입니다. 앱을 정상적으로 실행 하 고, 제공 하는 문제를 해결 한 후 프로파일러를 다시 사용 해 보세요.
 
 #### <a name="to-watch-a-specific-thread"></a>특정 스레드를 시청 하려면
 
-특별히 감시 하고자 하는 스레드가 있는 경우 생성 `ThreadName` 이 시작 될 때 `0x0`대신 스레드 이름을로 하는 것이 좋습니다. 예를 들어 스레드 이름을로 `UI`설정 하려면 다음 코드를 사용할 수 있습니다.
+특별히 감시 하고자 하는 스레드가 있는 경우 생성이 시작 될 때 스레드 이름을 `0x0`대신 `ThreadName` 가져오도록 하는 것이 좋습니다. 예를 들어 `UI`스레드 이름을 설정 하려면 다음 코드를 사용할 수 있습니다.
 
 ```csharp
 RunOnUiThread (() => {

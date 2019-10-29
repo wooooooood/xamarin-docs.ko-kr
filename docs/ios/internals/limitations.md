@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 제한 사항, 제네릭 토론,
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/09/2018
-ms.openlocfilehash: 83c71ebf844102a7d3a16969868f187237fb0d04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753330"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022316"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.ios의 제한 사항
 
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>동적 코드 생성 안 함
 
-IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을 방지 하므로 Xamarin.ios는 동적 코드 생성의 형태를 지원 하지 않습니다. 이러한 개체는 다음과 같습니다.
+IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을 방지 하므로 Xamarin.ios는 동적 코드 생성의 형태를 지원 하지 않습니다. 여기에는 다음이 포함됩니다.
 
 - System.object를 사용할 수 없습니다.
 - System.object를 지원 하지 않습니다.
@@ -75,7 +75,7 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 
 C# 대리자를 통해 네이티브 함수를 호출 하려면 대리자의 선언이 다음 특성 중 하나를 사용 하 여 데코 레이트 되어야 합니다.
 
-- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (플랫폼 간 이며 .NET Standard 1.1 +와 호환 되므로 선호 됨)
+- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (플랫폼 간 및 .NET Standard 1.1 +와 호환 되므로 선호 됨)
 - [MonoNativeFunctionWrapperAttribute](xref:ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
 이러한 특성 중 하나를 제공 하지 못하면 런타임 오류가 발생 합니다.

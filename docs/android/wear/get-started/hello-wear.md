@@ -4,15 +4,15 @@ description: 첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2018
-ms.openlocfilehash: ce82f10fdb8159d2007d490747329c1a3b5aeecd
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 0fe08856c70d8a23fb768a5b94b933addd42714b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250064"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028674"
 ---
 # <a name="hello-wear"></a>Hello, Wear
 
@@ -32,37 +32,37 @@ _첫 번째 Android 앱을 만들고, 마모 된 에뮬레이터 또는 장치�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![새 프로젝트 대화 상자에서 새 Android 마모 응용 프로그램 만들기](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[새 프로젝트 대화 상자에서 새 Android 마모 응용 프로그램을 만드는![](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![새 솔루션 대화 상자에서 새 Android 마모 응용 프로그램 만들기](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[새 솔루션 대화 상자에서 새 Android 마모 응용 프로그램을 만드는![](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
 이 템플릿에는 **Xamarin Android Wearable Library** NuGet (및 종속성)이 자동으로 포함 되므로, 사용자는 마모 된 위젯에 액세스할 수 있습니다. 마모 된 템플릿이 표시 되지 않으면 [설치 및 설정](~/android/wear/get-started/installation.md) 가이드를 검토 하 여 지원 되는 Android SDK를 설치 했는지 확인 합니다. 
 
-### <a name="2-choose-the-correct-target-framework"></a>2. 올바른 **대상 프레임 워크** 선택
+### <a name="2-choose-the-correct-target-framework"></a>2. 올바른 **대상 프레임 워크** 를 선택 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 **최소 android 대상** 이 **Android 5.0 (롤리팝)** 이상으로 설정 되어 있는지 확인 합니다. 
 
-[![Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정![](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
 대상 프레임 워크가 **Android 5.0 (롤리팝)** 이상으로 설정 되어 있는지 확인 합니다.
 
-[![Mac용 Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[Mac용 Visual Studio에서 대상 프레임 워크를 Android 5.0로 설정![](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
 대상 프레임 워크를 설정 하는 방법에 대 한 자세한 내용은 [ANDROID API 수준 이해](~/android/app-fundamentals/android-api-levels.md)를 참조 하세요.
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. **주. axml** 레이아웃 편집
+### <a name="3-edit-the-mainaxml-layout"></a>3. **기본 xml** 레이아웃 편집
 
-샘플 `TextView` `Button` 에 대 한 및를 포함 하도록 레이아웃을 구성 합니다. 
+예제에 대 한 `TextView` 및 `Button`를 포함 하도록 레이아웃을 구성 합니다. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -143,11 +143,11 @@ Android 마모 장치가 장치 풀 다운 메뉴에 표시 됩니다. 디버깅
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Visual Studio 장치 메뉴에서 마모 된 AVD 선택](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[Visual Studio 장치 메뉴에서 마모 된 AVD를 선택![](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![Mac용 Visual Studio 장치 메뉴에서 마모 된 AVD 선택](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[Mac용 Visual Studio 장치 메뉴에서 마모 된 AVD![선택](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -159,11 +159,11 @@ Watch 에뮬레이터를 사용 하는 경우 앱을 시작 하는 데 시간이
 
 앱이 성공적으로 배포 되 면 마모 된 장치의 화면에 다음과 같은 화면이 표시 됩니다.
 
-[![마모 된 앱의 초기 화면](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[마모 된 앱의 초기 화면![](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 클릭 하세요 **.** 단추를 클릭 하 고 각 탭에서 카운트 증분을 확인 합니다.
 
-[![3 번 클릭 후 착용 앱의 스크린샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[3 번 클릭 후에 앱의![스크린샷](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 ## <a name="next-steps"></a>다음 단계
 

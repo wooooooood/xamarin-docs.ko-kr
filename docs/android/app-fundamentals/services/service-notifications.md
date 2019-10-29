@@ -4,15 +4,15 @@ description: 이 가이드에서는 Android 서비스에서 로컬 알림을 사
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 5d25604db1f88702f4c24df21b3ebba6c9c2fc95
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b02785863f89ef6a273c52c09f45a99c17cb6242
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754825"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024529"
 ---
 # <a name="service-notifications"></a>서비스 알림
 
@@ -47,7 +47,7 @@ public class MyService: Service
 
 이 스크린샷은 표시 되는 알림의 예입니다.
 
-[![상태 표시줄에 표시 되는 알림 아이콘](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
+[상태 표시줄에 표시 되는![알림 아이콘](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 사용자가 위쪽에서 알림 화면을 아래로 이동 하면 전체 알림이 표시 됩니다.
 

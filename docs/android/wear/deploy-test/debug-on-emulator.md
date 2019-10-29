@@ -4,15 +4,15 @@ description: 이러한 문서에서는 에뮬레이터에서 Xamarin Android 마
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2018
-ms.openlocfilehash: f085aaffbedb2965222b98a22cf6a4bb2393642b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ca0a6884c05686bded25a2e515456ab192002a24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70764032"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028679"
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>에뮬레이터에서 Android 마모 디버그
 
@@ -28,13 +28,13 @@ Android 마모 응용 프로그램을 개발 하려면 물리적 하드웨어에
 
 마모 된 가상 장치를 만들 때 android 마모 된 장치 프로필 (예: **Android 마모 사각형**)을 선택 합니다. 성능 향상을 위해이 예제에서 볼 때와 같이 마모 된 **x86** CPU/ABI를 사용 합니다.
 
-[![가상 장치 구성 예제](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
+[![예제 가상 장치 구성](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 ## <a name="launch-the-wear-virtual-device"></a>마모 된 가상 장치 시작 
 
-Android 마모 된 가상 장치를 만든 후에는 디버깅을 시작 하기 전에 IDE의 장치 풀 다운 메뉴에서 선택할 수 있습니다. 장치 풀 다운에서 가상 장치를 사용할 수 없는 경우 *프로젝트가 android 앱* 프로젝트가 아닌 android 앱 프로젝트이 고 해당 대상 api 수준이 가상 장치와 동일한 API 수준으로 설정 되어 있는지 확인 합니다. 예를 들어:
+Android 마모 된 가상 장치를 만든 후에는 디버깅을 시작 하기 전에 IDE의 장치 풀 다운 메뉴에서 선택할 수 있습니다. 장치 풀 다운에서 가상 장치를 사용할 수 없는 경우 *프로젝트가 android 앱* 프로젝트가 아닌 android 앱 프로젝트이 고 해당 대상 api 수준이 가상 장치와 동일한 API 수준으로 설정 되어 있는지 확인 합니다. 예를 들면,
 
-[![Visual Studio 장치 메뉴에서 마모 된 AVD 선택](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
+[Visual Studio 장치 메뉴에서 마모 된 AVD를 선택![](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Android 에뮬레이터가 시작 된 후 Xamarin Android는 앱을 에뮬레이터에 배포 합니다. 에뮬레이터가 구성된 가상 디바이스 이미지로 앱을 실행합니다.
 

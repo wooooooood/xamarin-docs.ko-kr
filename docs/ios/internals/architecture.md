@@ -4,15 +4,15 @@ description: 이 문서는 낮은 수준의 Xamarin.ios에 대해 설명 하 고
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b0cece7f553d0169c311e6614428ed37c5c77813
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e5dbc04e52aea4307716c343df5757d0fe012b74
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768530"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022395"
 ---
 # <a name="ios-app-architecture"></a>iOS 앱 아키텍처
 
@@ -20,7 +20,7 @@ Xamarin.ios 응용 프로그램은 Mono 실행 환경에서 실행 되며 AOT (�
 
 아래 다이어그램은이 아키텍처의 기본 개요를 보여 줍니다.
 
-[![](architecture-images/ios-arch-small.png "이 다이어그램에서는 AOT (사전) 컴파일 아키텍처의 기본 개요를 보여 줍니다.")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
 
 ## <a name="native-and-managed-code-an-explanation"></a>네이티브 및 관리 코드: 설명
 
@@ -35,7 +35,7 @@ Xamarin 플랫폼 C# 응용 프로그램을 컴파일할 때 Mono (또는 F#) �
 그러나 Apple에 의해 설정 된 iOS에는 장치에서 동적으로 생성 된 코드를 실행할 수 없도록 하는 보안 제한 사항이 있습니다.
 이러한 안전 프로토콜을 준수 하도록 하기 위해 Xamarin.ios는 대신 AOT (사전) 컴파일러를 사용 하 여 관리 코드를 컴파일합니다. 이렇게 하면 Apple의 ARM 기반 프로세서에 배포할 수 있는 기본 iOS 이진 파일이 생성 되 고, 선택적으로 LLVM을 사용 하 여 장치에 최적화 됩니다. 이에 대 한 대략적인 다이어그램은 아래에 나와 있습니다.
 
-[![](architecture-images/aot.png "이러한 방식이 함께 작동 하는 방식을 대략적으로 보여 주는 다이어그램")](architecture-images/aot-large.png#lightbox)
+[![](architecture-images/aot.png "A rough diagram of how this fits together")](architecture-images/aot-large.png#lightbox)
 
 AOT를 사용 하는 [경우 제한 사항 가이드에](~/ios/internals/limitations.md) 자세히 설명 된 여러 가지 제한 사항이 있습니다. 또한 시작 시간을 줄이고 다양 한 성능 최적화를 통해 JIT에 비해 많은 향상 된 기능을 제공 합니다.
 
@@ -52,7 +52,7 @@ Xamarin을 사용 하는 경우 두 개의 개별 에코 시스템 .NET 및 Appl
 
 위에서 언급 했 듯이 등록자는 관리 코드를 목표 C에 노출 하는 코드입니다. NSObject에서 파생 되는 모든 관리 되는 클래스 목록을 만들어이 작업을 수행 합니다.
 
-- 기존 목표-c 클래스를 래핑하는 모든 클래스의 경우에는 [`Export`] 특성을 포함 하는 모든 관리 되는 멤버를 대상으로 하는 모든 관리 되는 멤버를 미러링 하는 새 목표-c 클래스를 만듭니다.
+- 기존 목표-C 클래스를 래핑하는 모든 클래스의 경우,이 클래스는 [`Export`] 특성이 있는 모든 관리 되는 멤버를 사용 하 여 새 목표 c 클래스를 만듭니다.
 
 - 각 목표 – C 멤버에 대 한 구현에서는 미러된 관리 되는 멤버를 호출 하기 위해 코드가 자동으로 추가 됩니다.
 
@@ -69,7 +69,7 @@ Xamarin을 사용 하는 경우 두 개의 개별 에코 시스템 .NET 및 Appl
  }
 ```
 
-**Objective-C:**
+**목표-C:**
 
 ```objectivec
 @interface MyViewController : UIViewController { }
@@ -87,28 +87,28 @@ Xamarin을 사용 하는 경우 두 개의 개별 에코 시스템 .NET 및 Appl
 
 ```
 
-관리 코드에는를 사용 하 여 `[Register]` 개체 `[Export]`를 목표에 노출 해야 한다는 것을 알 수 있도록 등록 기관에서 사용 하는 특성 및이 포함 될 수 있습니다.
+관리 코드에는 개체를 목표 C에 노출 해야 한다는 것을 알 수 있도록 등록 자가 사용 하는 `[Register]` 및 `[Export]`특성이 포함 될 수 있습니다.
 `[Register]` 특성은 생성 된 기본 이름이 적절 하지 않은 경우 생성 된 목표-C 클래스의 이름을 지정 하는 데 사용 됩니다. NSObject에서 파생 된 모든 클래스는 목표-C에 자동으로 등록 됩니다.
-Required `[Export]` 특성에는 생성 된 목표-C 클래스에서 사용 되는 선택기 인 문자열이 포함 됩니다.
+필수 `[Export]` 특성에는 생성 된 목표-C 클래스에서 사용 되는 선택기 인 문자열이 포함 되어 있습니다.
 
 Xamarin.ios에서 사용 되는 등록 기관에는 동적 및 정적 이라는 두 가지 유형이 있습니다.
 
 - **동적 등록 기관** – 동적 등록자는 런타임에 어셈블리의 모든 형식에 대해 등록을 수행 합니다. 이는 [목표-C의 런타임 API](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/)에서 제공 하는 함수를 사용 하 여 수행 합니다. 따라서 동적 등록자는 시작 속도가 느리고 빌드 시간을 단축 합니다. 이는 iOS 시뮬레이터에 대 한 기본값입니다. Trampolines 라고 하는 네이티브 함수 (일반적으로 C)는 동적 등록 기관를 사용할 때 메서드 구현으로 사용 됩니다. 아키텍처는 서로 다릅니다.
 
-- **정적 등록 기관** – 정적 등록자는 빌드 중에 목표 C 코드를 생성 합니다 .이 코드는 정적 라이브러리로 컴파일되고 실행 파일에 연결 됩니다. 이렇게 하면 더 빨리 시작할 수 있지만 빌드 시간 동안 시간이 오래 걸립니다. 이는 기본적으로 장치 빌드에 사용 됩니다. 정적 등록자는 다음과 같이 프로젝트의 빌드 옵션에서 `--registrar:static` `mtouch` 특성으로 전달 하 여 iOS 시뮬레이터에서 사용할 수도 있습니다.
+- **정적 등록 기관** – 정적 등록자는 빌드 중에 목표 C 코드를 생성 합니다 .이 코드는 정적 라이브러리로 컴파일되고 실행 파일에 연결 됩니다. 이렇게 하면 더 빨리 시작할 수 있지만 빌드 시간 동안 시간이 오래 걸립니다. 이는 기본적으로 장치 빌드에 사용 됩니다. 정적 등록자는 다음과 같이 프로젝트의 빌드 옵션에서 `mtouch` 특성으로 `--registrar:static`를 전달 하 여 iOS 시뮬레이터에서 사용할 수도 있습니다.
 
-    [![](architecture-images/image1.png "추가 mtouch 인수 설정")](architecture-images/image1.png#lightbox)
+    [![](architecture-images/image1.png "Setting Additional mtouch arguments")](architecture-images/image1.png#lightbox)
 
 Xamarin.ios에서 사용 하는 iOS 유형 등록 시스템의 세부 정보에 대 한 자세한 내용은 [등록자 유형](~/ios/internals/registrar.md) 가이드를 참조 하세요.
 
 ## <a name="application-launch"></a>응용 프로그램 시작
 
-모든 xamarin.ios 실행 파일의 진입점은 mono를 초기화 하는 라는 `xamarin_main`함수에 의해 제공 됩니다.
+모든 Xamarin.ios 실행 파일의 진입점은 mono를 초기화 하는 `xamarin_main`이라는 함수에서 제공 됩니다.
 
 프로젝트 형식에 따라 다음이 수행 됩니다.
 
-- 일반 iOS 및 tvOS 응용 프로그램의 경우 Xamarin 앱에서 제공 하는 관리 되는 Main 메서드를 호출 합니다. 이 관리 되는 Main 메서드 `UIApplication.Main`는 목표-C의 진입점인를 호출 합니다. Uiapplication. Main은 목표-C의 `UIApplicationMain` 메서드에 대 한 바인딩입니다.
-- 확장의 경우 Apple 라이브러리에서 제공 `NSExtensionMain` 하는`NSExtensionmain` 네이티브 함수 (WatchOS 확장의 경우)가 호출 됩니다. 이러한 프로젝트는 실행 프로젝트가 아닌 클래스 라이브러리 이기 때문에 실행할 관리 되는 기본 메서드가 없습니다.
+- 일반 iOS 및 tvOS 응용 프로그램의 경우 Xamarin 앱에서 제공 하는 관리 되는 Main 메서드를 호출 합니다. 그런 다음이 관리 되는 Main 메서드는 목표-C의 진입점인 `UIApplication.Main`를 호출 합니다. UIApplication. Main은 목표-C의 `UIApplicationMain` 메서드에 대 한 바인딩입니다.
+- 확장의 경우 Apple 라이브러리에서 제공 하는 네이티브 함수 – `NSExtensionMain` 또는 (WatchOS 확장에 대 한`NSExtensionmain`)가 호출 됩니다. 이러한 프로젝트는 실행 프로젝트가 아닌 클래스 라이브러리 이기 때문에 실행할 관리 되는 기본 메서드가 없습니다.
 
 이 시작 시퀀스는 모두 정적 라이브러리로 컴파일되며 최종 실행 파일에 연결 됩니다. 그러면 앱에서 그라운드를 끄는 방법을 알 수 있습니다.
 
@@ -151,8 +151,8 @@ public interface UIToolbar : UIBarPositioning {
 }
 ```
 
-Xamarin.ios에서 호출 [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) 되는 생성기는 이러한 정의 파일을 사용 하 고 .net 도구를 사용 하 여 [임시 어셈블리로 컴파일합니다](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). 그러나이 임시 어셈블리는 목표-C 코드를 호출할 수 없습니다. 그러면 생성기에서 임시 어셈블리를 읽고 런타임에 사용할 C# 수 있는 코드를 생성 합니다.
-예를 들어, 사용자가 정의 .cs 파일에 임의 특성을 추가 하면 출력 코드에 표시 되지 않습니다. 생성기는이 `btouch` 에 대해 알지 않으므로 임시 어셈블리에서이를 검색 하 여 출력을 찾을 수 없습니다.
+Xamarin.ios에서 [`btouch`](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs) 이라는 생성기는 이러한 정의 파일을 사용 하 고 .net 도구를 사용 하 여 [임시 어셈블리로 컴파일합니다](https://github.com/xamarin/xamarin-macios/blob/master/src/btouch.cs#L318). 그러나이 임시 어셈블리는 목표-C 코드를 호출할 수 없습니다. 그러면 생성기에서 임시 어셈블리를 읽고 런타임에 사용할 C# 수 있는 코드를 생성 합니다.
+예를 들어, 사용자가 정의 .cs 파일에 임의 특성을 추가 하면 출력 코드에 표시 되지 않습니다. 생성기는이에 대해 알지 않으므로 임시 어셈블리에서이를 검색 하 여 출력을 `btouch` 알 수 없습니다.
 
 Xamarin.ios를 만든 후에는 mtouch에서 모든 구성 요소를 함께 번들로 만듭니다.
 

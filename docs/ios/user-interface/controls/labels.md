@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios에서 레이블을 사용 하는 �
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 275acd02e6cece0842344d8e5833c23af1014a0f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768943"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022013"
 ---
 # <a name="labels-in-xamarinios"></a>Xamarin.ios의 레이블
 
@@ -20,7 +20,7 @@ ms.locfileid: "70768943"
 
 ## <a name="implementing-a-label"></a>레이블 구현
 
-새 레이블은를 [`UILabel`](xref:UIKit.UILabel)인스턴스화하여 생성 됩니다.
+[`UILabel`](xref:UIKit.UILabel)를 인스턴스화하여 새 레이블을 만듭니다.
 
 ```csharp
 UILabel label = new UILabel();
@@ -74,7 +74,7 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-을 사용 하 여 `NSAttributedString` 텍스트 스타일 지정에 대 한 자세한 내용은 [스타일 텍스트](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) 조리법을 참조 하세요.
+`NSAttributedString` 사용 하 여 텍스트의 스타일을 지정 하는 방법에 대 한 자세한 내용은 [스타일 텍스트](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) 조리법을 참조 하세요.
 
 기본적으로 레이블은 `Enabled` true로 설정 되어 있지만 사용자에 게 특정 컨트롤을 사용할 수 없다는 힌트를 제공 하려면 사용 안 함으로 설정할 수 있습니다.
 

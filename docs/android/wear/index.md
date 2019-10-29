@@ -4,15 +4,15 @@ description: Android wearable 장치용 앱을 빌드하는 중입니다.
 ms.prod: xamarin
 ms.assetid: 3BE4A128-2D88-4500-9E48-20375EA99A49
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2018
-ms.openlocfilehash: 5768a8fb402304d399e619ddb111aea24d975daf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 63fb9c3b1484026cb390a8a475c711562dfd0771
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758325"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028587"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -46,7 +46,7 @@ Android 개발자 사이트에서는 [Wearable 활동](https://developer.android
 
 Android 마모를 사용 하 여 다양 한 [샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) 을 찾을 수 있습니다 (또는 [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)로 직접 이동).
 
-|예제|Description|스크린 샷|
+|예제|설명|스크린 샷|
 |--- |--- |--- |
 |[SkeletonWear](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|GridViewPager 및 대화형 알림을 비롯 한 wearable 프로젝트의 기본 사항에 대 한 간단한 예입니다.|![Skeletonwear의 스크린샷](images/skeleton.png)|
 |[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|화면 모양을 검색 하 고 올바른 레이아웃을 자동으로 로드 하는 WatchViewStub 컨트롤의 간단한 데모입니다. **Resources/layout/main_activity** 레이아웃에서 WatchViewStub이 작동 하는 방식을 확인 합니다.|![WatchViewStub의 스크린샷](images/watchview.png)|
@@ -59,11 +59,11 @@ Android 마모를 사용 하 여 다양 한 [샘플](https://docs.microsoft.com/
 
 Xamarin Android를 지 원하는 다음 비디오 링크를 확인 하세요.
 
-|Description|스크린 샷|
+|설명|스크린 샷|
 |--- |--- |
-|[Android L](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) 등 &ndash; Android L Developer Preview에는 재질 디자인, 알림, 새 애니메이션 등을 활용 하는 개발자를 위한 새로운 api 다양 한 도입 되었습니다.|![프레젠테이션 비디오 스크린샷](images/video-android-l.png)|
-|[C#내 귀와 내 눈에 있습니다. Google 유리 및 Android](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; Wearable 컴퓨팅은 미래 (또는 검사기 가젯 에피소드)와 같은 것 처럼 보일 수 있지만, 많은 사람들이 이미 미래를 수용 하 고 있습니다. C#개발자는이를 알고 있으며, wearable 장치의 강력한 기능을 활용 하는 도구와 기술을 이미 갖추고 있습니다 (2014).|![프레젠테이션 비디오 스크린샷](images/video-eyes-ears.png)|
-|[Xamarin Android의 새로운 기능](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, android 마모, android TV, android 자동, 자재 디자인 및 아트, Xamarin developer로 무엇을 의미 하나요? 2014.|![프레젠테이션 비디오 스크린샷](Images/video-whats-new.png)|
+|Android [l 및 훨씬 더 많은](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; Android l Developer Preview에는 자료 디자인, 알림, 새 애니메이션 등을 활용 하는 개발자를 위한 새로운 api 다양 한 도입 되었습니다.|![프레젠테이션 비디오 스크린샷](images/video-android-l.png)|
+|[내 귀를 내 고 내 눈에 Wearable. Google 투명도와 Android 마모 된&ndash;는 향후 (또는 검사기 가젯 에피소드)와 같은 것 처럼 보일 수 있지만 많은 사람들이 이미 미래를 수용 하 고 있습니다. C# ](https://www.youtube.com/watch?v=80H8tXByZQc) C#개발자는이를 알고 있으며, wearable 장치의 강력한 기능을 활용 하는 도구와 기술을 이미 갖추고 있습니다 (2014).|![프레젠테이션 비디오 스크린샷](images/video-eyes-ears.png)|
+|Xamarin android &ndash; Android L, android 마모, Android TV, Android 자동, 재질 디자인 및 아트 [의 새로운 기능](https://www.youtube.com/watch?v=Gpqc2XZIQfU) 이는 Xamarin developer로 무엇을 의미 하나요? 진화 2014.|![프레젠테이션 비디오 스크린샷](Images/video-whats-new.png)|
 
 <!--
 

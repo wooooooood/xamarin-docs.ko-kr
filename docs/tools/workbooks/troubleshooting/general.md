@@ -3,32 +3,32 @@ title: 알려진 문제 & 해결 방법
 description: 이 문서에서는 Xamarin Workbooks에 대 한 알려진 문제 및 해결 방법을 설명 합니다. CultureInfo 문제, JSON 문제 등에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: b7b73e214af6a5a45426b4e2d2d7e01a436b379e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c7b9f93c2d6339ba1fd26b27742ecfc0f438c5de
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292788"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73018171"
 ---
 # <a name="known-issues--workarounds"></a>알려진 문제 & 해결 방법
 
 ## <a name="persistence-of-cultureinfo-across-cells"></a>셀 간 CultureInfo 지 속성
 
-Mono `System.Threading.CurrentThread.CurrentCulture` 의 `System.Globalization.CultureInfo.CurrentCulture` [구현에서 버그로 인해 mono 기반 통합 문서 대상 (Mac, iOS 및 Android)의 통합 문서 셀 간에 또는를 설정 하지 않습니다. `AppContext.SetSwitch` ][appcontext-bug]
+Mono [의 `AppContext.SetSwitch`구현에서 버그로][appcontext-bug] 인해 Mono 기반 통합 문서 대상 (Mac, IOS 및 Android)의 통합 문서 셀 간에는 `System.Threading.CurrentThread.CurrentCulture` 또는 `System.Globalization.CultureInfo.CurrentCulture`를 설정할 수 없습니다.
 
 ### <a name="workarounds"></a>해결 방법
 
-- 응용 프로그램 도메인 로컬 `DefaultThreadCurrentCulture`을 설정 합니다.
+- 응용 프로그램 도메인 로컬 `DefaultThreadCurrentCulture`를 설정 합니다.
 
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-- 또는에 `System.Threading.CurrentThread.CurrentCulture` 할당을 다시 작성 하 고 `System.Globalization.CultureInfo.CurrentCulture` 원하는 동작 (Mono 버그를 해결 하는)을 제공 하는 통합 문서 1.2.1 이상으로 업데이트 합니다.
+- 또는 통합 문서 1.2.1 이상으로 업데이트 하 여 `System.Threading.CurrentThread.CurrentCulture` 및 `System.Globalization.CultureInfo.CurrentCulture`에 대 한 할당을 다시 작성 하 여 Mono 버그를 해결 하는 데 필요한 동작을 제공 합니다.
 
 ## <a name="unable-to-use-newtonsoftjson"></a>Newtonsoft.json를 사용할 수 없습니다.
 
@@ -37,9 +37,9 @@ CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 - Newtonsoft.json 9.0.1를 설치 하는 통합 문서 1.2.1로 업데이트 합니다.
   현재 알파 채널의 1.3 통합 문서는 버전 10 이상을 지원 합니다.
 
-### <a name="details"></a>세부 정보
+### <a name="details"></a>설명
 
-Newtonsoft.json에서 지원 `dynamic`되는 버전의 통합 문서와 충돌 하는 만큼 증가에 대 한 종속성이 출시 되었습니다. 이 문제는 통합 문서 1.3 미리 보기 릴리스에서 해결 되었지만 지금은 Newtonsoft.json를 버전 9.0.1에 고정 하 여 해결할 수 있습니다.
+Newtonsoft.json에 만큼 증가을 `dynamic`지원 하기 위해 제공 되는 버전 통합 문서와 충돌 하는 10이 릴리스 되었습니다. 이 문제는 통합 문서 1.3 미리 보기 릴리스에서 해결 되었지만 지금은 Newtonsoft.json를 버전 9.0.1에 고정 하 여 해결할 수 있습니다.
 
 Newtonsoft.json 10 이상에 따라 명시적으로 NuGet 패키지는 현재 알파 채널에 있는 통합 문서 1.3 에서만 지원 됩니다.
 

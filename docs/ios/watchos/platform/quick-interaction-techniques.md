@@ -4,15 +4,15 @@ description: 이 문서에서는 watchOS 3에 추가 된 빠른 상호 작용 �
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 6aa5eede658f13a36220398f92192eefa2473bab
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8b851721aa5b2b993ad64b89d90d02b5f2bd0ee3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768599"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028183"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Xamarin의 watchOS 3에 대 한 빠른 상호 작용 기술
 
@@ -67,7 +67,7 @@ watchOS 3은 다음 네 가지 제스처 인식자를 지원 합니다.
   - 탭 제스처 (`WKTapGestureRecognizer`)입니다.
 - 연속 제스처 유형:
   - 이동 제스처 (`WKPanGestureRecognizer`)입니다.
-  - 긴 누름 제스처 (`WKLongPressGestureRecognizer`)입니다.
+  - 길게 누르기 제스처 (`WKLongPressGestureRecognizer`)입니다.
 
 새 제스처 인식기 중 하나를 구현 하려면 Mac용 Visual Studio에서 iOS 디자이너의 디자인 화면으로 끌어 놓고 해당 속성을 구성 하면 됩니다.
 
@@ -75,19 +75,19 @@ watchOS 3은 다음 네 가지 제스처 인식자를 지원 합니다.
 
 #### <a name="discrete-gesture-states"></a>불연속 제스처 상태
 
-불연속 제스처의 경우 제스처가 인식 되 고 상태 (`WKGestureRecognizerState`)가로 할당 될 때 작업이 호출 됩니다.
+불연속 제스처의 경우 동작은 제스처가 인식 되 고 상태 (`WKGestureRecognizerState`)는 다음과 같이 할당 될 때 호출 됩니다.
 
-[![](quick-interaction-techniques-images/quick01.png "불연속 제스처 상태")](quick-interaction-techniques-images/quick01.png#lightbox)
+[![](quick-interaction-techniques-images/quick01.png "Discrete Gesture States")](quick-interaction-techniques-images/quick01.png#lightbox)
 
-모든 불연속 제스처는 `Possible` `Failed` 상태에서 시작 하 고 또는 `Recognized` 상태로 전환 됩니다. 불연속 제스처를 사용 하는 경우 개발자는 일반적으로 상태를 직접 처리 하지 않습니다. 대신 제스처가 인식 될 때 호출 되는 작업에 의존 합니다.
+모든 불연속 제스처는 `Possible` 상태에서 시작 하 여 `Failed` 또는 `Recognized` 상태로 전환 합니다. 불연속 제스처를 사용 하는 경우 개발자는 일반적으로 상태를 직접 처리 하지 않습니다. 대신 제스처가 인식 될 때 호출 되는 작업에 의존 합니다.
 
 #### <a name="continuous-gesture-states"></a>연속 제스처 상태
 
 연속 제스처는 제스처가 인식 될 때 동작을 여러 번 호출 하는 불연속 제스처와 약간 다릅니다.
 
-[![](quick-interaction-techniques-images/quick02.png "연속 제스처 상태")](quick-interaction-techniques-images/quick02.png#lightbox)
+[![](quick-interaction-techniques-images/quick02.png "Continuous Gesture States")](quick-interaction-techniques-images/quick02.png#lightbox)
 
-다시, 연속 제스처가 `Possible` 상태에서 시작 되지만 여러 업데이트를 통해 진행 됩니다. 여기서 개발자는 제스처가 마지막 `Changed` `Recognized` 이거나 `Canceled`될 때까지 단계 중에 인식기의 상태를 고려 하 고 앱의 UI를 업데이트 해야 합니다.
+다시, 연속 제스처가 `Possible` 상태에서 시작 되지만 여러 업데이트를 통해 진행 됩니다. 여기서 개발자는 제스처의 상태를 고려 하 고 제스처를 마지막으로 `Recognized` 하거나 `Canceled`때까지 `Changed` 단계에서 앱의 UI를 업데이트 해야 합니다.
 
 #### <a name="gesture-recognizer-usage-tips"></a>제스처 인식기 사용 팁
 
@@ -103,9 +103,9 @@ WatchOS 3에서 제스처 인식기를 사용 하 여 작업 하는 경우 Apple
 
 개발자는 watchOS 3 앱에서 Digital Crown 지원을 구현 하 여 사용자에 게 향상 된 탐색 속도 및 전체 자릿수 상호 작용을 제공할 수 있습니다.
 
-WatchOS 2부터 Apple Watch 앱은 개체를 `WKInterfacePicker` 사용 하 여 목록과 선택기 스타일 (목록, 누적 또는 이미지 시퀀스)을 제공 `WKPickerItems` 하 여 Digital Crown에 액세스할 수 있습니다. watchOS 사용자가 Digital Crown를 사용 하 여 목록에서 항목을 선택할 수 있습니다.
+WatchOS 2에서 Apple Watch 앱은 `WKInterfacePicker` 개체를 사용 하 여 `WKPickerItems` 목록과 선택기 스타일 (목록, 누적 또는 이미지 시퀀스)을 제공 하 여 Digital Crown에 액세스할 수 있습니다. watchOS 사용자가 Digital Crown를 사용 하 여 목록에서 항목을 선택할 수 있습니다.
 
-을 `WKInterfacePicker`사용 하는 경우 WatchKit는 다음을 수행 하 여 대부분의 작업을 처리 합니다.
+`WKInterfacePicker`사용 하는 경우 WatchKit는 다음을 수행 하 여 대부분의 작업을 처리 합니다.
 
 - 목록과 개별 인터페이스 요소를 그립니다.
 - Digital Crown 이벤트를 처리 하 고 있습니다.
@@ -120,7 +120,7 @@ Digital Crown 액세스는 다음 요소에 의해 제공 됩니다.
 
 #### <a name="rotations-per-second"></a>초당 회전
 
-Digital Crown에서 초당 회전에 액세스 하면 물리학 기반 애니메이션을 사용할 때 유용 합니다. 초당 회전에 액세스 하려면 조사식 확장 `CrownSequencer` `WKInterfaceController` 의의 속성을 사용 합니다. 예:
+Digital Crown에서 초당 회전에 액세스 하면 물리학 기반 애니메이션을 사용할 때 유용 합니다. 초당 회전에 액세스 하려면 조사식 확장 `WKInterfaceController`의 `CrownSequencer` 속성을 사용 합니다. 예를 들면,
 
 ```csharp
 var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
@@ -128,7 +128,7 @@ var rotationsPerSecond = CrownSequencer.RotationsPerSecond;
 
 #### <a name="rotational-deltas"></a>회전 델타
 
-Digital Crown의 회전 델타를 사용 하 여 회전 수를 계산 합니다. 의 override 메서드를 사용 하여회전델타에액세스합니다.`WKCrownDelegate` `CrownDidRotate` 예:
+Digital Crown의 회전 델타를 사용 하 여 회전 수를 계산 합니다. `WKCrownDelegate`의 `CrownDidRotate` override 메서드를 사용 하 여 회전 델타에 액세스 합니다. 예를 들면,
 
 ```csharp
 using System;
@@ -162,13 +162,13 @@ namespace MonkeyWatch.MonkeySeeExtension
 }
 ```
 
-여기서 앱은 회전 수를 결정`AccumulatedRotations`하기 위해 누적기 ()를 유지 관리 합니다. Digital Crown의 전체 회전 하나는의 `1.0` 누적 된 델타와 같으며 절반 회전 `0.5`은입니다.
+여기서 앱은 회전 수를 결정 하는 누적 (`AccumulatedRotations`)을 유지 관리 합니다. Digital Crown의 전체 회전 중 하나가 누적 된 델타 `1.0`와 같으며 절반 회전이 `0.5`됩니다.
 
 Apple은 업데이트 되는 UI 요소의 변경 내용 민감도에 따라 회전 수가 어떻게 달라 지는 지를 개발자에 게 나갔습니다.
 
-회전 델타의`+/-`부호 ()는 사용자가 Digital Crown를 설정 하는 방향을 나타냅니다.
+회전 델타의 부호 (`+/-`)는 사용자가 Digital Crown를 설정 하는 방향을 나타냅니다.
 
-[![](quick-interaction-techniques-images/quick03.png "회전 델타의 부호는 사용자가 Digital Crown를 설정 하는 방향을 나타냅니다.")](quick-interaction-techniques-images/quick03.png#lightbox)
+[![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 사용자가 스크롤하면 WatchKit는 긍정 델타를 반환 하 고 아래로 스크롤하면 사용자가 감시를 제공 하는 방향에 관계 없이 음수 델타가 반환 됩니다.
 
@@ -188,15 +188,15 @@ Apple은 업데이트 되는 UI 요소의 변경 내용 민감도에 따라 회�
 
 사용자가 watchOS 앱의 테이블 뷰를 탐색 하는 표준 방법은 원하는 데이터 조각으로 스크롤하고 특정 행을 탭 하 여 자세한 보기를 표시 하 고 세부 정보를 볼 때 뒤로 단추를 탭 한 다음,이 프로세스를 반복 하 여 y는 테이블 내에서에 관심이 있습니다.
 
-[![](quick-interaction-techniques-images/quick04.png "테이블과 자세히 보기 간 이동")](quick-interaction-techniques-images/quick04.png#lightbox)
+[![](quick-interaction-techniques-images/quick04.png "Moving between a table and the Detail view")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 WatchOS 3의 새로운 기능으로, 개발자는 해당 테이블 뷰 컨트롤에서 수직 페이징을 사용 하도록 설정할 수 있습니다. 이 기능을 사용 하도록 설정 하면 사용자는 스크롤하여 테이블 뷰 행을 찾고 행을 탭 하 여 이전과 같이 세부 정보를 볼 수 있습니다. 그러나 이제는 먼저 테이블 뷰로 돌아갈 필요 없이 테이블의 다음 행을 선택 하거나 아래로 이동 하 여 이전 행을 선택 하거나 Digital Crown를 사용할 수 있습니다.
 
-[![](quick-interaction-techniques-images/quick05.png "테이블과 자세히 보기 사이를 이동 하 여 위아래로 살짝 밀어 다른 행 사이 이동")](quick-interaction-techniques-images/quick05.png#lightbox)
+[![](quick-interaction-techniques-images/quick05.png "Moving between a table and the Detail view and swiping up and down to move between the other rows")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 이 모드를 사용 하도록 설정 하려면 Xcode에서 편집할 watchOS 앱의 스토리 보드를 열고, 테이블 뷰를 선택 하 고, **세로 세부 정보 페이징** 확인란을 선택 합니다.
 
-[![](quick-interaction-techniques-images/quick06.png "세로 세부 정보 페이징 확인란을 선택 합니다.")](quick-interaction-techniques-images/quick06.png#lightbox)
+[![](quick-interaction-techniques-images/quick06.png "Check the Vertical Detail Paging checkbox")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 테이블에서 Segue를 사용 하 여 자세히 보기를 표시 하 고 스토리 보드에 변경 내용을 저장 한 다음 Mac용 Visual Studio로 반환 하 여 동기화 해야 합니다.
 
@@ -244,7 +244,7 @@ WatchOS 3에서 로컬 알림은 Apple Watch 예약할 수 있으며, 시계로�
 
 알림의 Apple Watch 및 iPhone 버전 모두에 대해 동일한 알림 식별자를 포함 하 여, 조사식에 중복 알림이 표시 되지 않도록 합니다. 알림의 Apple Watch 버전은 iPhone 버전 보다 우선적으로 적용 됩니다.
 
-WatchOS 3은 ios 10과 `UINotification` 동일한 API 프레임 워크를 사용 하기 때문에 자세한 내용은 ios 10 [사용자 알림 프레임 워크](~/ios/platform/user-notifications/index.md) 설명서를 참조 하세요.
+WatchOS 3은 iOS 10과 동일한 `UINotification` API 프레임 워크를 사용 하므로 자세한 내용은 iOS 10 [사용자 알림 프레임 워크](~/ios/platform/user-notifications/index.md) 설명서를 참조 하세요.
 
 ### <a name="using-spritekit-and-scenekit"></a>SpriteKit 및 SceneKit 사용
 
@@ -257,7 +257,7 @@ WatchOS 3의 새로운 기능으로 개발자는 이제 앱의 사용자 인터�
 
 이러한 개체를 사용 하려면 Xcode의 Interface Builder에서 watch 앱의 스토리 보드 안쪽에 있는 디자인 화면으로 끌고 **특성 검사자** 를 사용 하 여 구성 하면 됩니다.
 
-이 시점에서 SpriteKit 또는 SceneKit 장면을 사용 하는 작업은 iOS 앱 내에서와 동일 하 게 작동 합니다. Watch 앱은 `Present` 메서드 중 하나 `WKInterfaceSKScene` 를 호출 하 여를 제공 합니다. SceneKit의 경우 `Scene` `WKInterfaceSCNScene` 개체의 속성을 설정 하기만 하면 됩니다.
+이 시점에서 SpriteKit 또는 SceneKit 장면을 사용 하는 작업은 iOS 앱 내에서와 동일 하 게 작동 합니다. Watch 앱은 `Present` 메서드 중 하나를 호출 하 여 `WKInterfaceSKScene`을 제공 합니다. SceneKit의 경우 `WKInterfaceSCNScene` 개체의 `Scene` 속성을 설정 하기만 하면 됩니다.
 
 ## <a name="actionable-complications"></a>조치 가능한 문제
 
@@ -312,7 +312,7 @@ WatchOS 3에 추가 된 새로운 빠른 상호 작용 기능을 결합 하 여 
 
 이는 감시 앱이 모든 유형의 네트워크 연결을 수행 하는 경우 또는 자매 iPhone 앱과 정보를 공유 하는 경우에 특히 문제가 됩니다. 이 경우 트랜잭션이 수행 되는 동안 대기 표시기가 나타날 수 있으며,이는 빠른 상호 작용 중에는 바람직하지 않습니다. 다음 예제를 참조하세요.
 
-[![](quick-interaction-techniques-images/quick07.png "네트워크 연결을 수행 하 고 보조 iPhone 앱과 정보를 공유 하는 시청 앱 다이어그램")](quick-interaction-techniques-images/quick07.png#lightbox)
+[![](quick-interaction-techniques-images/quick07.png "Diagram of the watch app doing a network connection and sharing information with its companion iPhone app")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. 사용자가 시계에서 구매할 항목을 선택 합니다.
 2. 구입 단추를 탭 합니다.
@@ -324,7 +324,7 @@ WatchOS 3에 추가 된 새로운 빠른 상호 작용 기능을 결합 하 여 
 
 Apple의 제안 된 모델을 사용 하 여 동일한 빠른 상호 작용을 다시 살펴보겠습니다.
 
-[![](quick-interaction-techniques-images/quick08.png "사과 제안 모델 다이어그램")](quick-interaction-techniques-images/quick08.png#lightbox)
+[![](quick-interaction-techniques-images/quick08.png "Apples suggested model diagram")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. 사용자가 시계에서 구매할 항목을 선택 합니다.
 2. 구입 단추를 탭 합니다.
@@ -334,7 +334,7 @@ Apple의 제안 된 모델을 사용 하 여 동일한 빠른 상호 작용을 �
 
 이번에는 사용자가 구입 단추를 탭 하면 구매가 시작 되었음을 알리는 메시지가 표시 됩니다. 그러면 손목를 안전 하 게 삭제 하 고이 시점에서 빠른 상호 작용을 종료할 수 있습니다. 나중에 사용자 알림에서 트랜잭션의 성공 또는 실패에 대 한 알림을 받습니다. 이러한 방식으로 사용자는 프로세스의 "활성" 단계 중에 앱과만 상호 작용 합니다.
 
-네트워킹을 수행 하는 앱의 경우 백그라운드 `NSURLSession` 를 사용 하 여 다운로드 작업을 통해 네트워크 통신을 처리할 수 있습니다. 그러면 앱이 백그라운드에서 해제 다운로드 된 정보를 처리할 수 있습니다. 백그라운드 처리가 필요한 앱의 경우 백그라운드 작업 어설션을 사용 하 여 필요한 처리를 처리 합니다.
+네트워킹을 수행 하는 앱의 경우 백그라운드 `NSURLSession`를 사용 하 여 다운로드 작업을 통해 네트워크 통신을 처리할 수 있습니다. 그러면 앱이 백그라운드에서 해제 다운로드 된 정보를 처리할 수 있습니다. 백그라운드 처리가 필요한 앱의 경우 백그라운드 작업 어설션을 사용 하 여 필요한 처리를 처리 합니다.
 
 ## <a name="quick-interaction-design-tips"></a>빠른 상호 작용 디자인 팁
 

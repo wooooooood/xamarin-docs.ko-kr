@@ -3,15 +3,15 @@ title: 3 부-Xamarin 플랫폼 간 솔루션 설정
 description: 이 문서에서는 Xamarin에서 플랫폼 간 솔루션을 설정 하는 방법을 설명 합니다. 공유 프로젝트 및 .NET Standard 같은 다양 한 코드 공유 전략에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2017
-ms.openlocfilehash: acec74585487e9f0a0a13a80c5da49a187a4042f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 843887282c9a5af671d46699ae2f601fd32902e0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758148"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016880"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>3 부-Xamarin 플랫폼 간 솔루션 설정
 
@@ -43,7 +43,7 @@ PCL (이식 가능한 클래스 라이브러리)은 Xamarin.ios 및 Xamarin.ios�
 
 [이식 가능한 클래스 라이브러리에 대 한 Xamarin 지원](~/cross-platform/app-fundamentals/pcl.md) 에 대 한 자세한 내용을 읽고 여기에 설명 된 지침에 따라 [Taskyportable 샘플이](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) 작동 하는 방식을 확인할 수 있습니다.
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>.NET 표준
 
 2016에 도입 된 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) 프로젝트는 플랫폼 간에 코드를 공유 하 고, Windows, Xamarin 플랫폼 (IOS, Android, Mac) 및 Linux에서 사용할 수 있는 어셈블리를 생성 하는 쉬운 방법을 제공 합니다.
 
@@ -63,7 +63,7 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 
 ### <a name="core-project"></a>핵심 프로젝트
 
-공유 코드 프로젝트는 모든 플랫폼 (ie)에서 사용할 수 있는 어셈블리만 참조 해야 합니다. , `System` `System.Core` 및 와같은일반적인프레임워크네임스페이스`System.Xml`
+공유 코드 프로젝트는 모든 플랫폼 (ie)에서 사용할 수 있는 어셈블리만 참조 해야 합니다. `System`, `System.Core` 및 `System.Xml`와 같은 일반적인 프레임 워크 네임 스페이스입니다.
 
 공유 프로젝트는 다음과 같은 계층을 포함 하 여 가능한 한 많은 UI 기능을 구현 해야 합니다.
 
@@ -89,11 +89,11 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 
 응용 프로그램 아키텍처는 다음 다이어그램에 나와 있습니다.
 
- [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "이 다이어그램에는 응용 프로그램 아키텍처가 나와 있습니다.")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 이 스크린샷에서는 shared Core 프로젝트, iOS 및 Android 응용 프로그램 프로젝트를 사용 하 여 솔루션을 설치 하는 방법을 보여 줍니다. 공유 프로젝트에는 각 아키텍처 계층 (비즈니스, 서비스, 데이터 및 데이터 액세스 코드)과 관련 된 코드가 포함 되어 있습니다.
 
- ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "공유 프로젝트에는 각 아키텍처 계층 (비즈니스, 서비스, 데이터 및 데이터 액세스 코드)과 관련 된 코드가 포함 되어 있습니다.")
+ ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code)")
 
  <a name="Project_References" />
 
@@ -104,7 +104,7 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 
 응용 프로그램은 각각 공유 프로젝트를 참조 하 고 다음 스크린샷에 표시 된 것 처럼 사용자에 게 기능을 제공 하는 데 필요한 사용자 인터페이스 코드를 포함 합니다.
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "응용 프로그램에 대 한 각 참조 공유 프로젝트 프로젝트")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "응용 프로그램 프로젝트는 각각 공유 프로젝트를 참조 합니다.") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "응용 프로그램 프로젝트는 각각 공유 프로젝트를 참조 합니다.")
 
 프로젝트를 구성 하는 방법에 대 한 구체적인 예제는 사례 연구에서 제공 됩니다.
 
@@ -120,10 +120,10 @@ Xamarin 방식은 코드를 두 개의 프로젝트 형식으로 그룹화 하�
 
 - **모든 C# 파일** -빌드 작업: 컴파일
 - **Xamarin.ios의 이미지 & Windows** – 빌드 작업: 콘텐츠
-- **Xamarin.ios의 XIB 및 Storyboard 파일** -빌드 작업: InterfaceDefinition
+- **Xamarin.ios의 XIB 및 Storyboard 파일** -빌드 작업: 인터페이스 정의
 - **Android의 이미지 및 AXML 레이아웃** – 빌드 작업: AndroidResource
-- **Windows 프로젝트의 XAML 파일** -빌드 작업: Page
-- **Xamarin FORMS XAML 파일** – 빌드 작업: EmbeddedResource
+- **Windows 프로젝트의 XAML 파일** -빌드 작업: 페이지
+- **Xamarin FORMS XAML 파일** -빌드 작업: EmbeddedResource
 
 일반적으로 IDE는 파일 형식을 검색 하 고 올바른 빌드 작업을 제안 합니다.
 

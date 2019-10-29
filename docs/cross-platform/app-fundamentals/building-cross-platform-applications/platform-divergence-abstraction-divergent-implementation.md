@@ -3,15 +3,15 @@ title: 4부 - 다중 플랫폼 처리
 description: 이 문서에서는 플랫폼 또는 기능에 따라 응용 프로그램 확산을 처리 하는 방법을 설명 합니다. 화면 크기, 탐색 메타포, 터치/제스처, 푸시 알림 및 목록 및 탭과 같은 인터페이스 패러다임에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fb01d0ca56365fa95aa563ca99394dea39dc7d31
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 555723e689a9ba076ee34d49b93cf7141e542832
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70288888"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016885"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>4부 - 다중 플랫폼 처리
 
@@ -108,7 +108,7 @@ ms.locfileid: "70288888"
 
 공유 코드는 각 플랫폼에서 다르게 작동 해야 하는 경우도 있습니다. 이러한 경우 다르게 동작 하는 클래스 또는 기능에 액세스할 수 있습니다. 조건부 컴파일은 동일한 소스 파일이 다른 기호가 정의 된 여러 프로젝트에서 참조 되는 공유 자산 프로젝트에서 가장 잘 작동 합니다.
 
-Xamarin 프로젝트는 항상 `__MOBILE__` iOS 및 Android 응용 프로그램 프로젝트에 대해 true를 정의 합니다. 이러한 기호에 대 한 이중 밑줄 사전 및 사후 픽스를 확인 합니다.
+Xamarin 프로젝트는 항상 iOS 및 Android 응용 프로그램 프로젝트에 대해 true 인 `__MOBILE__`를 정의 합니다. 이러한 기호에 대 한 이중 밑줄 사전 및 사후 픽스를 확인 합니다.
 
 ```csharp
 #if __MOBILE__
@@ -118,7 +118,7 @@ Xamarin 프로젝트는 항상 `__MOBILE__` iOS 및 Android 응용 프로그램 
 
 #### <a name="ios"></a>iOS
 
-Xamarin.ios는 ios 장치 `__IOS__` 를 검색 하는 데 사용할 수 있는를 정의 합니다.
+Xamarin.ios는 iOS 장치를 검색 하는 데 사용할 수 있는 `__IOS__` 정의 합니다.
 
 ```csharp
 #if __IOS__
@@ -148,7 +148,7 @@ Xamarin으로 컴파일해야 하는 코드입니다. Android 응용 프로그�
 #endif
 ```
 
-또한 각 API 버전은 새 컴파일러 지시어를 정의 하므로, 최신 Api를 대상으로 하는 경우 기능을 추가할 수 있습니다. 각 API 수준에는 ' 낮은 ' 수준 기호가 모두 포함 됩니다. 이 기능은 여러 플랫폼을 지 원하는 데 그다지 유용 하지 않습니다. 일반적으로 `__ANDROID__` 기호에는 충분 합니다.
+또한 각 API 버전은 새 컴파일러 지시어를 정의 하므로, 최신 Api를 대상으로 하는 경우 기능을 추가할 수 있습니다. 각 API 수준에는 ' 낮은 ' 수준 기호가 모두 포함 됩니다. 이 기능은 여러 플랫폼을 지 원하는 데 그다지 유용 하지 않습니다. 일반적으로 `__ANDROID__` 기호 면 충분 합니다.
 
 ```csharp
 #if __ANDROID_11__
@@ -158,15 +158,15 @@ Xamarin으로 컴파일해야 하는 코드입니다. Android 응용 프로그�
 
 #### <a name="mac"></a>Mac
 
-현재 Xamarin.ios에 대 한 기본 제공 기호가 없지만, Mac 앱 프로젝트 옵션에서 사용자 고유의 기호를 추가 하거나, **기호 정의** 상자에서 **> 컴파일러를 빌드 >** 하거나, **.csproj** 파일을 편집 하 고 해당 파일을 추가할 수 있습니다 (예: `__MAC__`).
+현재 Xamarin.ios에 대 한 기본 제공 기호가 없지만, Mac 앱 프로젝트 옵션에서 사용자 고유의 기호를 추가 하거나, **기호 정의** 상자에서 **> 컴파일러 > 빌드** 를 추가 하거나, .csproj 파일을 편집 하 고 해당 파일을 추가할 수 있습니다 (예: `__MAC__`) **.**
 
 ```xml
 <PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
 ```
 
-#### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
+#### <a name="universal-windows-platform-uwp"></a>UWP(Universal Windows Platform)
 
-대신 `WINDOWS_UWP`를 Xamarin 플랫폼 기호와 같은 문자열 주위에는 밑줄이 없습니다.
+`WINDOWS_UWP`을 사용하세요. Xamarin 플랫폼 기호와 같은 문자열 주위에는 밑줄이 없습니다.
 
 ```csharp
 #if WINDOWS_UWP
@@ -179,11 +179,11 @@ Xamarin으로 컴파일해야 하는 코드입니다. Android 응용 프로그�
 조건부 컴파일의 간단한 사례 연구 예는 SQLite 데이터베이스 파일에 대 한 파일 위치를 설정 하는 것입니다. 세 플랫폼은 파일 위치를 지정 하기 위한 요구 사항이 약간 다릅니다.
 
 - **iOS** – Apple은 사용자가 지정 하지 않은 데이터를 특정 위치 (라이브러리 디렉터리)에 배치 하도록 선호 하지만이 디렉터리에 대 한 시스템 상수는 없습니다. 올바른 경로를 빌드하려면 플랫폼별 코드가 필요 합니다.
-- **Android** –에서 `Environment.SpecialFolder.Personal` 반환 된 시스템 경로는 데이터베이스 파일을 저장 하는 데 사용할 수 있는 위치입니다.
+- **Android** – `Environment.SpecialFolder.Personal`에서 반환 된 시스템 경로는 데이터베이스 파일을 저장 하는 데 사용할 수 있는 위치입니다.
 - **Windows Phone** – 격리 된 저장소 메커니즘에서 전체 경로를 지정 하는 것은 허용 되지 않습니다. 상대 경로 및 파일 이름입니다.
-- **유니버설 Windows 플랫폼** – api `Windows.Storage` 를 사용 합니다.
+- **유니버설 Windows 플랫폼** – `Windows.Storage` api를 사용 합니다.
 
-다음 코드에서는 조건부 컴파일을 사용 하 여 `DatabaseFilePath` 가 각 플랫폼에 대해 올바른지 확인 합니다.
+다음 코드에서는 조건부 컴파일을 사용 하 여 각 플랫폼에 대 한 `DatabaseFilePath` 올바른지 확인 합니다.
 
 ```csharp
 public static string DatabaseFilePath {

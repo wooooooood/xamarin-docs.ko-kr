@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1176CEA9-C7F1-411B-8F1A-99374E8AFF33
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/31/2017
-ms.openlocfilehash: f8e3855b10a20bd4312420f8faf6c68dedde0c67
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fdd208122934b6fa8194a644592d1e23c4000d57
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292095"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030899"
 ---
 # <a name="how-do-i-set-mono-runtime-environment-variables-for-ios-projects-in-xamarin-studio"></a>Xamarin Studio에서 iOS 프로젝트에 대한 Mono 런타임 환경 변수를 설정하려면 어떻게 해야 하나요?
 
@@ -26,6 +26,6 @@ Mono에 대 한 런타임 환경 변수를 설정 해야 하는 경우 **프로�
    --setenv=NAME=VALUE
 ```
 
-설정할 수 있는 환경 변수를 보려면 Mono 매뉴얼 페이지를 참조 하세요.  [http://docs.go-mono.com/?link=man%3amono(1)](http://docs.go-mono.com/?link=man%3amono(1))다음 섹션을 참조 하십시오.`ENVIRONMENT VARIABLES`
+설정할 수 있는 환경 변수를 보려면 Mono man 페이지를 참조 하세요. [http://docs.go-mono.com/?link=man%3amono(1)](http://docs.go-mono.com/?link=man%3amono(1)) 섹션을 참조 하세요. `ENVIRONMENT VARIABLES`
 
-![](xs-mono-runtime-images/environment-variables.jpg "프로젝트에 대 한 환경 변수 설정")
+![](xs-mono-runtime-images/environment-variables.jpg "Setting environment variables for a project")

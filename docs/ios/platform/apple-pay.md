@@ -4,15 +4,15 @@ description: 이 가이드에서는 Apple Pay와 함께 사용 하기 위해 Xam
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 1d9a65ab34cb0c02368f53679d38f1d07ec1f257
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: 87f81f96e51b6744e37a80819c3c88d1abb644f1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198562"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022230"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Xamarin.ios의 Apple Pay
 
@@ -79,7 +79,7 @@ IOS 10을 처음 사용 하는 개발자는 전 세계의 웹 사이트에 Apple
 
 ### <a name="passkit-framework-enhancements"></a>PassKit Framework의 향상 된 기능
 
-IOS 10에서 PassKit 프레임 워크는 외부 `UIKit` Apple Pay를 지원 하도록 확장 되었으며 카드 발급자가 자신의 앱 내에서 자신의 카드를 제공할 수 있도록 합니다.
+IOS 10에서 PassKit 프레임 워크는 `UIKit` 외부의 Apple Pay을 지원 하도록 확장 되었으며 카드 발급자가 자신의 앱 내에서 자신의 카드를 제공할 수 있도록 합니다.
 
 #### <a name="supporting-apple-pay-outside-of-uikit"></a>UIKit 외부에서 Apple Pay 지원
 
@@ -87,9 +87,9 @@ IOS 10에서 PassKit 프레임 워크는 외부 `UIKit` Apple Pay를 지원 하�
 
 #### <a name="presenting-issuer-cards-from-within-apps"></a>앱 내에서 발급자 카드 제공
 
-IOS 10을 사용 하는 경우 카드 발급자가 자신의 앱 내에서 카드를 제공할 수 있도록 하는 새로운 기능이 PassKit 프레임 워크에 추가 되었습니다. 개발자는 카드에 대 `PKPaymentButtonTypeInStore` 한 Apple Pay 단추를 표시 하는 응용 프로그램의 사용자 인터페이스에 uibutton를 추가할 수 있습니다.
+IOS 10을 사용 하는 경우 카드 발급자가 자신의 앱 내에서 카드를 제공할 수 있도록 하는 새로운 기능이 PassKit 프레임 워크에 추가 되었습니다. 개발자는 카드에 대 한 Apple Pay 단추를 표시 하는 앱의 사용자 인터페이스에 `PKPaymentButtonTypeInStore` UIButton를 추가할 수 있습니다.
 
-[PKPassLibrary 클래스](https://developer.apple.com/reference/passkit/pkpasslibrary) 의 메서드를사용하여프로그래밍방식으로카드를표시할수도`PresentPaymentPass` 있습니다.
+[PKPassLibrary](https://developer.apple.com/reference/passkit/pkpasslibrary) 클래스의 `PresentPaymentPass` 메서드를 사용 하 여 프로그래밍 방식으로 카드를 표시할 수도 있습니다.
 
 ### <a name="new-payment-network-support"></a>새 결제 네트워크 지원
 

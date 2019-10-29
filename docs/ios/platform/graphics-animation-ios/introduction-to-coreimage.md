@@ -4,15 +4,15 @@ description: 핵심 이미지는 이미지 처리와 라이브 비디오 기능 
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ffaa6553830a64589818c991e8f729ff7232e367
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5525373d9bf904f67bdf02d7ec8df72e7bbd3f55
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752840"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032363"
 ---
 # <a name="core-image-in-xamarinios"></a>Xamarin.ios의 핵심 이미지
 
@@ -46,7 +46,7 @@ var ciImage = CIImage.FromCGImage(image.CGImage);
 CIFeature[] features = detector.FeaturesInImage(ciImage);
 ```
 
-기능 배열이 검색 된 경우에는 `CIFaceFeature` 개체로 채워집니다. 각 면 `CIFaceFeature` 에 대 한가 있습니다. `CIFaceFeature`에는 다음과 같은 속성이 있습니다.
+기능 배열은 `CIFaceFeature` 개체로 채워집니다 (얼굴을 발견 한 경우). 각 면에 대 한 `CIFaceFeature` 있습니다. `CIFaceFeature`에는 다음과 같은 속성이 있습니다.
 
 - HasMouthPosition –이 면에 대 한 입/군/시가 검색 되었는지 여부입니다.
 - HasLeftEyePosition –이 면에 대해 왼쪽 눈이 감지 되었는지 여부입니다.
@@ -55,7 +55,7 @@ CIFeature[] features = detector.FeaturesInImage(ciImage);
 - LeftEyePosition –이 면의 왼쪽 눈동자 좌표입니다.
 - RightEyePosition –이 면의 올바른 눈동자 좌표입니다.
 
-이러한 모든 속성의 좌표는 왼쪽 위를 원본으로 사용 하는 UIKit와는 달리 왼쪽 아래에 원점이 있습니다. 좌표를 사용 하는 `CIFaceFeature` 경우 해당 좌표를 ' 대칭 이동 ' 해야 합니다. CoreImage\CoreImageViewController.cs의이 매우 기본적인 사용자 지정 이미지 뷰는 이미지에 ' face 표시기 ' 삼각형을 그리는 방법을 보여 줍니다 ( `FlipForBottomOrigin` 메서드 참고).
+이러한 모든 속성의 좌표는 왼쪽 위를 원본으로 사용 하는 UIKit와는 달리 왼쪽 아래에 원점이 있습니다. `CIFaceFeature` 좌표를 사용 하는 경우 해당 좌표를 ' 대칭 이동 ' 해야 합니다. CoreImage\CoreImageViewController.cs의이 매우 기본적인 사용자 지정 이미지 뷰는 이미지에 ' face 표시기 ' 삼각형을 그리는 방법을 보여 줍니다 (`FlipForBottomOrigin` 메서드 참고).
 
 ```csharp
 public class FaceDetectImageView : UIView
@@ -135,7 +135,7 @@ sepia.Image = ciimage;
 sepia.Intensity = 0.8f;
 ```
 
-셋째, 속성에 `OutputImage` 액세스 하 고 메서드 `CreateCGImage` 를 호출 하 여 최종 결과를 렌더링 합니다.
+셋째, `OutputImage` 속성에 액세스 하 고 `CreateCGImage` 메서드를 호출 하 여 최종 결과를 렌더링 합니다.
 
 ```csharp
 CIImage output = sepia.OutputImage;
@@ -150,9 +150,9 @@ var ui = UIImage.FromImage (cgimage);
 imgview.Image = ui;
 ```
 
-이러한 스크린샷은 CoreImage 샘플 코드에서 보여 `CISepia` 주는 `CIHueAdjust` 및 필터의 결과를 보여 줍니다.
+이러한 스크린샷은 CoreImage 샘플 코드에서 보여 주는 `CISepia` 및 `CIHueAdjust` 필터의 결과를 보여 줍니다.
 
-`CIColorControls` 필터의 예제는 [이미지의 조정 및 밝기 조정 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) 을 참조 하세요.
+`CIColorControls` 필터의 예제는 [이미지의 계약 및 밝기 조정 조리법](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) 을 참조 하세요.
 
 ```csharp
 var uiimage = UIImage.FromFile("photo.JPG");
@@ -212,7 +212,7 @@ foreach (var filter in filters){
 
 목록 범주 출력은 시뮬레이터에서 다음과 같이 표시 됩니다. 목록을 스크롤하여 모든 필터 및 해당 매개 변수를 볼 수 있습니다.
 
- [![](introduction-to-coreimage-images/coreimage05.png "목록 범주 출력은 시뮬레이터에서 다음과 같이 표시 됩니다.")](introduction-to-coreimage-images/coreimage05.png#lightbox)
+ [![](introduction-to-coreimage-images/coreimage05.png "The List Categories output looks like this on the simulator")](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
 나열 된 각 필터는 Xamarin.ios에서 클래스로 노출 되었으므로 어셈블리 브라우저에서 CoreImage API를 탐색 하거나 Mac용 Visual Studio 또는 Visual Studio에서 자동 완성 기능을 사용할 수도 있습니다. 
 

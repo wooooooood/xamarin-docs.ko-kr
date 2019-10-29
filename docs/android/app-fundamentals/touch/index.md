@@ -4,15 +4,15 @@ description: 오늘날의 많은 장치에서 터치 스크린을 사용 하면 
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 54f036b2a845b7d2f6603b6b9f54472ad2af8bcd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 43637d8592631b2732e5922544f52d91947dd3bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754714"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024290"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Xamarin Android의 터치 및 제스처
 
@@ -22,7 +22,7 @@ _오늘날의 많은 장치에서 터치 스크린을 사용 하면 사용자가
 
 iOS와 Android는 터치를 처리 하는 방법과 비슷합니다. 둘 다 화면 및 복잡 한 제스처에서 여러 터치 접점을 지원할 수 있습니다. 이 가이드에서는 개념의 일부 유사성을 소개 하 고 두 플랫폼에서 터치 및 제스처를 구현 하는 particularities 합니다.
 
-Android는 개체 `MotionEvent` 를 사용 하 여 터치 데이터를 캡슐화 하 고 뷰 개체의 메서드를 사용 하 여 터치를 수신 대기 합니다.
+Android는 `MotionEvent` 개체를 사용 하 여 터치 데이터를 캡슐화 하 고 뷰 개체의 메서드를 사용 하 여 터치를 수신 대기 합니다.
 
 터치 데이터를 캡처하는 것 외에도 iOS와 Android 모두 제스처의 패턴을 해석 하는 수단을 제공 합니다. 이러한 제스처 인식기를 사용 하 여 이미지 회전 또는 페이지 전환 같은 응용 프로그램 관련 명령을 해석할 수 있습니다. Android는 복잡 한 사용자 지정 제스처를 쉽게 추가할 수 있는 리소스 뿐만 아니라 지원 되는 몇 가지 제스처를 제공 합니다.
 

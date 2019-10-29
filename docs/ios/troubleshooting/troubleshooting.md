@@ -5,15 +5,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/22/2018
-ms.openlocfilehash: e6a1b6f4d35a6b8774901ed5a505b5333511c848
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 21b1f0c29962b7aeb45a836c976ec2635a39622e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769699"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030876"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁 
 
@@ -21,9 +21,9 @@ ms.locfileid: "70769699"
 
 이 오류는 Visual Studio와의 비 호환성으로 인해 발생 합니다.
 
-- **Visual Studio 2017 업데이트 1** (버전 15.1 이상)는 **System.valuetuple NuGet 4.3.0** (또는 이전 버전)과만 호환 됩니다.
+- **Visual Studio 2017 업데이트 1** (버전 15.1 또는 이전 버전)은 **system.valuetuple NuGet 4.3.0** (또는 이전 버전)와만 호환 됩니다.
 
-- **Visual Studio 2017 업데이트 2** (버전 15.2 이상)은 **System.valuetuple NuGet 4.3.1** 이상과만 호환 됩니다.
+- **Visual Studio 2017 업데이트 2** (버전 15.2 이상)는 **system.valuetuple NuGet 4.3.1** 이상과만 호환 됩니다.
 
 Visual Studio 2017 설치에 해당 하는 올바른 System.valuetuple NuGet을 선택 하세요.
 
@@ -98,7 +98,7 @@ public partial class MyImageView : UIView {
 }
 ```
 
-## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>System.MissingMethodException: Foo. Bar:: ctor (System.web)에 대해 생성자를 찾을 수 없습니다.
+## <a name="systemmissingmethodexception-no-constructor-found-for-foobarctorsystemintptr"></a>MissingMethodException: Foo. Bar:: ctor에 대 한 생성자를 찾을 수 없습니다 (IntPtr).
 
 이 오류는 코드가 Interface Builder 파일에서 참조 한 클래스의 인스턴스를 인스턴스화하려고 할 때 런타임에 생성 됩니다. 즉, 단일 IntPtr을 매개 변수로 사용 하는 생성자를 추가 하지 않습니다.
 
@@ -110,13 +110,13 @@ IntPtr 핸들을 사용 하는 생성자는 관리 되는 개체를 관리 되�
 public Bar (IntPtr handle) : base (handle) { }
 ```
 
-## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>{Foo} 형식에에 대 한 `GetNativeField` 정의가 포함 되어 있지 않으며 {foo} 형식의 확장 메서드 `GetNativeField` 를 찾을 수 없습니다.
+## <a name="type-foo--does-not-contain-a-definition-for-getnativefield-and-no-extension-method-getnativefield-of-type-foo-could-be-found"></a>{Foo} 형식에 `GetNativeField`에 대 한 정의가 포함 되어 있지 않으며 형식 {Foo}의 `GetNativeField` 확장 메서드를 찾을 수 없습니다.
 
 디자이너에서 생성 한 파일 (*. xib.designer.cs)에서이 오류가 발생 하는 경우 다음 두 가지 중 하나를 의미 합니다.
 
  **1) partial 클래스 또는 기본 클래스가 없습니다.**
 
-디자이너에서 생성 된 partial 클래스에는 종종 `NSObject` `UIViewController`의 일부 서브 클래스에서 상속 되는 사용자 코드에 해당 하는 partial 클래스가 있어야 합니다. 오류를 제공 하는 형식에 대 한 클래스가 있는지 확인 합니다.
+디자이너에서 생성 된 partial 클래스는 `NSObject`의 일부 서브 클래스에서 상속 되는 사용자 코드에 해당 partial 클래스를 포함 해야 합니다 (종종 `UIViewController`). 오류를 제공 하는 형식에 대 한 클래스가 있는지 확인 합니다.
 
  **2) 기본 네임 스페이스가 변경 되었습니다.**
 
@@ -124,13 +124,13 @@ public Bar (IntPtr handle) : base (handle) { }
 
 네임 스페이스 설정은 프로젝트 옵션 대화 상자에서 찾을 수 있습니다. 기본 네임 스페이스는 **일반-> 주 설정** 섹션에서 찾을 수 있습니다. 비어 있는 경우 프로젝트의 이름이 기본값으로 사용 됩니다. 고급 네임 스페이스 설정은 **소스 코드-> .Net 명명 정책** 섹션에서 찾을 수 있습니다.
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>동작에 대 한 경고: 전용 메서드 ' Foo '는 사용 되지 않습니다. (CS0169)
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>동작에 대 한 경고: 전용 메서드 ' Foo '은 (는) 사용 되지 않습니다. CS0169
 
 인터페이스 작성기 파일에 대 한 작업은 런타임에 리플렉션에 의해 위젯에 연결 되므로이 경고가 발생 합니다.
 
 이러한 메서드에만이 경고를 표시 하지 않으려면 "#pragma 경고 사용 안 함 0169" "#pragma 경고 사용 0169"을 사용 하거나, 전체 프로젝트에 대해 사용 하지 않도록 설정 하려는 경우 컴파일러 옵션의 "경고 무시" 필드에 0169를 추가 합니다. 권장).
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch가 다음 메시지와 함께 실패 했습니다. '/Path/to/yourproject.exe ' 어셈블리를 열 수 없습니다.
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch이 실패 했습니다. '/path/to/yourproject.exe ' 어셈블리를 열 수 없습니다.
 
 이 오류 메시지가 표시 되는 경우 일반적으로이 문제는 프로젝트의 절대 경로에 공백이 포함 되어 있다는 것입니다. 이 문제는 Xamarin.ios의 이후 버전에서 수정 될 수 있지만 프로젝트를 공백 없이 폴더로 이동 하면 문제를 해결할 수 있습니다.
 
@@ -142,9 +142,9 @@ public Bar (IntPtr handle) : base (handle) { }
 1. Mac OS X Leopard 사용 (10.5)
 1. 시뮬레이터 내에서 앱을 실행 합니다.
 
-문제는 Mono가 드롭다운에서 iphonesimulator 대상을의 `libsqlite3.dylib` `libsqlite3.dylib` 파일이 아니라 OS X를 선택 하는 것입니다. 앱 *이* 장치에서 작동 하지만 시뮬레이터는 작동 하지 않습니다.
+문제는 Mono가 드롭다운에서 iphonesimulator 대상을의 `libsqlite3.dylib` 파일이 아니라 OS X `libsqlite3.dylib`를 선택 하는 것입니다. 앱 *이* 장치에서 작동 하지만 시뮬레이터는 작동 하지 않습니다.
 
-## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>시스템에서 장치에 배포 하지 못했습니다. 예외: AMDeviceInstallApplication에서 3892346901 반환
+## <a name="deploy-to-device-fails-with-systemexception-amdeviceinstallapplication-returned-3892346901"></a>시스템에서 장치에 배포 하지 못했습니다. 예외: AMDeviceInstallApplication에서 3892346901을 반환 했습니다.
 
 이 오류는 인증서/번들 id에 대 한 코드 서명 구성이 장치에 설치 된 프로 비전 프로필과 일치 하지 않음을 의미 합니다.  프로젝트 옵션-> iPhone 번들 서명에서 적절 한 인증서가 선택 되어 있는지 확인 하 고, 프로젝트 옵션-> iPhone 응용 프로그램에 지정 된 올바른 번들 id를 확인 합니다.
 
@@ -152,7 +152,7 @@ public Bar (IntPtr handle) : base (handle) { }
 
 최신 버전의 Mac용 Visual Studio 및 Xamarin.ios를 사용 하 고 있는지 확인 합니다.
 
-문제가 계속 되 면 **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp}** .log 로그 파일을 첨부 하 여 [버그](http://monodevelop.com/Developers#Reporting_Bugs)를 제출 하세요.
+문제가 계속 되 면 **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp}** .log 로그 파일을 첨부 하 여 [버그](https://monodevelop.com/Developers#Reporting_Bugs)를 제출 하세요.
 
 다른 모든 작업이 실패 하는 경우 코드 완료 캐시를 제거 하 여 다시 생성할 수 있습니다.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Thumb 코드를 사용 하 여 컴파일된 정적 라이브러리를 프로젝트에 연결 하는 것을 의미 합니다. IPhone SDK 릴리스 3.1 이상 (이 문서를 작성할 당시 이상)에는 엄지 코드 (정적 라이브러리)가 아닌 코드 (Xamarin.ios)를 연결 하는 경우 Apple에서 버그가 도입 되었습니다. 이 문제를 완화 하기 위해 정적 라이브러리의 Thumb이 아닌 버전에 연결 해야 합니다.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System.ExecutionEngineException: Attempting to JIT compile method (wrapper managed-to-managed) Foo[]:System.Collections.Generic.ICollection`1.get_Count ()
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>ExecutionEngineException: JIT 컴파일 메서드 (래퍼 관리-관리 되는) Foo []: ICollection'1 get_Count ()를 시도 합니다.
 
 [] 접미사는 사용자 또는 클래스 라이브러리가 IEnumerable < >, ICollection < > 또는 IList < > 등의 제네릭 컬렉션을 통해 배열에서 메서드를 호출 하 고 있음을 나타냅니다. 해결 방법으로, 직접 메서드를 호출 하 고 예외를 트리거한 호출 전에이 코드가 실행 되는지 확인 하 여 AOT 컴파일러에 이러한 메서드를 포함 하도록 명시적으로 강제할 수 있습니다. 이 경우 다음을 작성할 수 있습니다.
 
@@ -280,9 +280,9 @@ WiFi 또는 USB 모드가 작동 하지 않는 경우 다른 작업을 쉽게 �
 
 Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검색 하지 않는 버그가 있습니다. Mac용 Visual Studio 2.2.1로 업데이트 하세요.
 
-## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>오류 "AFCFileRefWrite 반환: 1 "업로드 중
+## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>업로드 중 "AFCFileRefWrite 반환 됨: 1" 오류
 
-장치에 앱을 업로드 하는 동안 "AFCFileRefWrite이 반환 되었습니다. 1". 길이가 0 인 파일이 있는 경우이 문제가 발생할 수 있습니다.
+장치에 앱을 업로드 하는 동안 "AFCFileRefWrite 반환 됨: 1" 오류가 표시 될 수 있습니다. 길이가 0 인 파일이 있는 경우이 문제가 발생할 수 있습니다.
 
 ## <a name="error-mtouch-failed-with-no-output"></a>"Mtouch가 출력 없이 실패 했습니다." 오류
 
@@ -309,13 +309,13 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 
 (Ed Anuff에서 기여)
 
-다음 단계를 수행하세요.
+아래 단계를 수행합니다.
 
 - IPhone 빌드에서 SDK 버전을 3.2 또는 iTunes connect로 변경 하면 3.2 보다 작은 SDK 버전을 사용 하 여 빌드된 iPad 호환 앱이 표시 되기 때문에 업로드가 거부 됩니다.
 - 프로젝트에 대 한 사용자 지정 info.plist을 만들고이를 명시적으로 3.0에 설정 합니다.   이렇게 하면 Xamarin.ios로 설정 된 이상 값 Osversion 3.2 값이 재정의 됩니다.   이 작업을 수행 하지 않으면 iPhone에서 앱을 실행할 수 없게 됩니다.
 - ITunes connect에 다시 빌드하고 zip을 업로드 하 고 업로드 합니다.
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>처리되지 않은 예외: System.Exception: 선택기 someSelector: {type}에서 찾지 못했습니다.
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>처리 되지 않은 예외: someSelector: {type}에서 선택기를 찾지 못했습니다.
 
 이 예외는 다음 세 가지 중 하나로 인해 발생 합니다.
 
@@ -368,7 +368,7 @@ SDK 버전은 "최소 OS 버전" 설정과 혼동 해서는 안 됩니다.
 
 이는 XCode 4가 설치 되어 있음을 의미 합니다.   XCode 4에서는 ibtool 도구가 제거 되었으므로 독립 실행형 도구를 사용 하 여 XIB 파일을 더 이상 편집할 수 없습니다.
 
-Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 있는 [XCode 시리즈 3](http://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792)을 설치 합니다.
+Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 있는 [XCode 시리즈 3](https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792)을 설치 합니다.
 
 ## <a name="cant-create-display-binding-for-mime-type-applicationvndapple-interface-builder"></a>"Mime 형식에 대 한 표시 바인딩을 만들 수 없음: application/vnd. apple-interface-builder"
 
@@ -394,13 +394,13 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
 응용 프로그램 이름에 '. '가 포함 된 경우이 문제가 발생할 수 있습니다. 이름에 (점)입니다.
 이는 다른 여러 사례 (예: 장치)에서 작동할 수 있는 경우에도 CFBundleExecutable의 실행 파일 이름으로 사용할 수 없습니다.
 
- \* "값은 이름에 확장명을 포함 하지 않아야 합니다." -[https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+ \* "값은 이름에 확장명을 포함 하지 않아야 합니다." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
-## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>오류: Xib 파일을 두 번 클릭 하면 "사용자 지정 특성 유형 0x43이 지원 되지 않습니다."
+## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>오류: xib 파일을 두 번 클릭 하면 "사용자 지정 특성 유형 0x43이 지원 되지 않습니다."
 
 이 문제는 환경 변수가 잘못 설정 된 경우 xib 파일을 열려고 할 때 발생 합니다. 이는 Mac용 Visual Studio/Xamarin.ios를 정상적으로 사용 하는 경우에는 발생 하지 않아야 하 고/응용 프로그램에서 Mac용 Visual Studio를 다시 여는 문제를 해결 해야 합니다.
 
-소프트웨어를 업데이트 하려고 할 때이 오류 메시지가 표시 되 면 전자 메일을 입력 합니다. *support@xamarin.com*
+소프트웨어를 업데이트 하려고 할 때이 오류 메시지가 표시 되 면 전자 메일을 *support@xamarin.com* 하십시오.
 
 ## <a name="application-runs-on-simulator-but-fails-on-device"></a>응용 프로그램이 시뮬레이터에서 실행 되지만 장치에서 실패 함
 
@@ -408,8 +408,8 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
 
 빌드 작업을 확인 하려면 xib 파일을 마우스 오른쪽 단추로 클릭 하 고 **빌드 작업**을 선택 합니다.
 
-## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System.NotSupportedException: 인코딩 437에 사용할 수 있는 데이터가 없습니다.
+## <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>NotSupportedException: encoding 437에 사용할 수 있는 데이터가 없습니다.
 
-Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 다음과 같은 오류 메시지가 표시 될 수 있습니다. "NotSupportedException: 응용 프로그램을 컴파일하고 실행 하려고 할 때 "encoding 437"에 사용할 수 있는 데이터가 없습니다. 예를 들어와 `Ionic.Zip.ZipFile`같은 라이브러리는 작업 중에이 예외를 throw 할 수 있습니다.
+Xamarin.ios 앱에 타사 라이브러리를 포함 하는 경우 앱을 컴파일하고 실행 하려고 할 때 "NotSupportedException: encoding 437에 사용할 수 있는 데이터가 없습니다." 라는 형식의 오류가 발생할 수 있습니다. 예를 들어 `Ionic.Zip.ZipFile`와 같은 라이브러리는 작업 중에이 예외를 throw 할 수 있습니다.
 
-이는 ios 프로젝트에 대 한 옵션을 열고 **ios** > **국제화** 로 이동 **하 여 국제화 된 국제화** 를 확인 하 여 해결할 수 있습니다.
+이는 **Ios 빌드** > **국제화** 로 이동 하 고 **서 부** 국제화를 확인 하 여 xamarin.ios 프로젝트에 대 한 옵션을 열어 해결할 수 있습니다.

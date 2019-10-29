@@ -1,24 +1,24 @@
 ---
-title: '다음 메시지가 표시되며 내 iOS 9 앱이 실패한 이유는 무엇인가요? System.Exception: Objective-C 개체를 마샬링하지 못했습니다.'
+title: '다음을 사용 하 여 iOS 9 앱이 실패 하는 이유: System. 예외: 목표-C 개체를 마샬링하는 데 실패 했습니까?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: 62a63dc5156d1acf9ad6ca15029978131c151726
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 1bb67eaa884e523e96ef1015daaa6b959ea1512d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290465"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73031100"
 ---
-# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>다음 메시지가 표시되며 내 iOS 9 앱이 실패한 이유는 무엇인가요? System.Exception: Objective-C 개체를 마샬링하지 못했습니다.
+# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>다음을 사용 하 여 iOS 9 앱이 실패 하는 이유: System. 예외: 목표-C 개체를 마샬링하는 데 실패 했습니까?
 
 다음 형식의 오류가 표시 될 수 있습니다.
 
-> System.Exception: 목표-C 개체를 마샬링하는 데 실패 했습니다. 이 개체에 대 한 기존 관리 되는 인스턴스를 찾을 수 없습니다 ...
+> 시스템 예외: 목표-C 개체를 마샬링하는 데 실패 했습니다. 이 개체에 대 한 기존 관리 되는 인스턴스를 찾을 수 없습니다 ...
 
 IOS 9의 API 변경에는 이제 기본 API에서 예상 하는 것 처럼 비관리 코드를 호출할 때 콜백 생성자를 사용 해야 합니다. 다음 줄을 사용 하 여 콜백 생성자를 클래스에 추가 합니다. 
 

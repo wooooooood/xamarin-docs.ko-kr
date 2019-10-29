@@ -4,15 +4,15 @@ description: 이 문서에서는 watchOS 3 앱에서 자동 관리 제안을 사
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 42284ded0bbb5dab36470b7d2f291df64c6df264
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8dc2150dbd07d05d037aa0e0917f49d467f6f1ae
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70767772"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028196"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Xamarin의 사전 예방적 제안 watchOS
 
@@ -22,17 +22,17 @@ WatchOS 3을 처음 사용 하는 경우 자동으로 사용자에 게 유용한
 
 ## <a name="about-proactive-suggestions"></a>자동 관리 제안 정보
 
-WatchOS 3 `NSUserActivity` 의 새로운 기능에는 `MapItem` 앱이 다른 컨텍스트에서 사용할 수 있는 위치 정보를 제공할 수 있도록 하는 속성이 포함 되어 있습니다. 예를 들어 호텔에 표시 된 앱에서 `MapItem` 위치를 검토 하 고 제공 하는 경우 사용자가 Maps 앱으로 전환 된 경우에는 자신이 보는 호텔의 위치를 사용할 수 있습니다.
+WatchOS 3의 새로운 기능으로 `NSUserActivity`에는 앱이 다른 컨텍스트에서 사용할 수 있는 위치 정보를 제공할 수 있도록 하는 `MapItem` 속성이 포함 되어 있습니다. 예를 들어 호텔에 표시 된 앱이 `MapItem` 위치를 검토 하 고 제공 하는 경우 사용자가 Maps 앱으로 전환 하는 경우 보기만 하는 호텔의 위치를 사용할 수 있습니다.
 
-앱은, mapkit, Media Player 및 uikit와 `NSUserActivity`같은 기술 컬렉션을 사용 하 여 시스템에이 기능을 노출 합니다. 또한 앱에 대 한 사전 제안 지원을 제공 하 여 더 심층적인 Siri 통합을 무료로 제공 합니다.
+앱은 `NSUserActivity`, MapKit, Media Player 및 UIKit와 같은 기술 컬렉션을 사용 하 여 시스템에이 기능을 노출 합니다. 또한 앱에 대 한 사전 제안 지원을 제공 하 여 더 심층적인 Siri 통합을 무료로 제공 합니다.
 
 ## <a name="location-based-suggestions"></a>위치 기반 제안
 
-WatchOS 3의 새로운 기능으로 `NSUserActivity` , 클래스에 `MapItem` 는 개발자가 다른 컨텍스트에서 사용할 수 있는 위치 정보를 제공할 수 있는 속성이 포함 되어 있습니다. 예를 들어 앱에서 식당 리뷰를 표시 하는 경우 개발자는 사용자 `MapItem` 가 앱에서 보고 있는 식당의 위치로 속성을 설정할 수 있습니다. 사용자가 Maps 앱으로 전환 하는 경우 식당의 위치를 자동으로 사용할 수 있습니다.
+WatchOS 3의 새로운 기능으로, `NSUserActivity` 클래스에는 개발자가 다른 컨텍스트에서 사용할 수 있는 위치 정보를 제공할 수 있는 `MapItem` 속성이 포함 되어 있습니다. 예를 들어 앱에서 식당 리뷰를 표시 하는 경우 개발자는 사용자가 앱에서 보고 있는 식당의 위치로 `MapItem` 속성을 설정할 수 있습니다. 사용자가 Maps 앱으로 전환 하는 경우 식당의 위치를 자동으로 사용할 수 있습니다.
 
-앱이 앱 검색을 지 원하는 경우 `CSSearchableItemAttributesSet` 클래스의 새 주소 구성 요소를 사용 하 여 사용자가 방문할 수 있는 위치를 지정할 수 있습니다. `MapItem` 속성을 설정 하면 다른 속성이 자동으로 채워집니다.
+앱이 앱 검색을 지 원하는 경우 `CSSearchableItemAttributesSet` 클래스의 새 주소 구성 요소를 사용 하 여 사용자가 방문할 수 있는 위치를 지정할 수 있습니다. `MapItem` 속성을 설정 하 여 다른 속성이 자동으로 채워집니다.
 
-주소 구성 요소 속성의 `Latitude` 및 `Longitude` 를 설정 하는 것 외에도 앱에서 `NamedLocation` 및 `PhoneNumbers` 속성을 제공 하는 것이 좋습니다. 그러면 siri가 해당 위치에 대 한 호출을 시작할 수 있습니다.
+주소 구성 요소 속성의 `Latitude` 및 `Longitude`를 설정 하는 것 외에도 앱에서 `NamedLocation` 및 `PhoneNumbers` 속성을 제공 하는 것이 좋습니다. 그러면 Siri가 해당 위치에 대 한 호출을 시작할 수 있습니다.
 
 ## <a name="contextual-siri-reminders"></a>상황별 Siri 미리 알림
 
@@ -49,29 +49,29 @@ Xamarin.ios 앱에 사전 제안 지원을 추가 하는 것은 일반적으로 
 
 및은 다음을 구현 하 여 앱에서 지원 됩니다.
 
-- IOS 10 `NSUserActivity` 의 **상황별 siri 미리 알림** -siri가 나중에 앱에서 현재 보고 있는 콘텐츠를 확인 하는 미리 알림을 신속 하 게 만들 수 있도록 확장 되었습니다.
-- **위치 제안** -iOS 10은 `NSUserActivity` 앱 내에서 볼 수 있는 캡처 위치를 개선 하 고 시스템 전체의 여러 위치에서 승격 합니다.
-- **컨텍스트 siri 요청**  -  `NSUserActivity` 은 응용 프로그램 내에서 siri에 게 제공 되는 정보에 대 한 컨텍스트를 제공 하므로 사용자는 지침을 얻거나 앱 내에서 siri를 호출 하는 호출을 수행할 수 있습니다.
+- **상황별 Siri 미리 알림** -iOS 10에서는 siri가 나중에 앱에서 현재 보고 있는 콘텐츠를 보기 위해 신속 하 게 미리 알림을 만들 수 있도록 `NSUserActivity` 확장 되었습니다.
+- **위치 제안** -iOS 10은 앱 내부에 표시 되는 위치를 캡처하고 시스템 전체의 여러 위치에서 수준을 올리는 `NSUserActivity` 향상 됩니다.
+- **상황별 Siri 요청** 은 사용자가 지침을 얻거나 앱 내에서 siri를 호출 하는 호출을 수행할 수 있도록 앱 내부에서 siri에 게 제공 된 정보에 대 한 컨텍스트를 제공`NSUserActivity` - 합니다.
 
-이러한 모든 기능은 공통적으로 하나를 사용 `NSUserActivity` 하 여 해당 기능을 제공 합니다. 
+이러한 모든 기능에는 공통적으로 한 가지 형식이 있으며, 모든 기능을 사용 하 여 해당 기능을 제공 하는 `NSUserActivity`. 
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-위에서 설명한 것 처럼 `NSUserActivity` 시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움을 줍니다. `NSUserActivity`는 앱을 탐색할 때 사용자의 작업을 캡처하는 경량 상태 캐싱 메커니즘입니다. 예를 들어 식당 앱을 살펴보면 다음과 같습니다.
+위에서 설명한 것 처럼 `NSUserActivity`는 시스템에서 사용자가 현재 화면에서 작업 하 고 있는 정보를 이해 하는 데 도움이 됩니다. `NSUserActivity`은 사용자가 앱을 탐색할 때 사용자의 작업을 캡처하는 경량 상태 캐싱 메커니즘입니다. 예를 들어 식당 앱을 살펴보면 다음과 같습니다.
 
-[![](proactive-suggestions-images/activity02.png "식당 앱")](proactive-suggestions-images/activity02.png#lightbox)
+[![](proactive-suggestions-images/activity02.png "The restaurant app")](proactive-suggestions-images/activity02.png#lightbox)
 
 다음과 같은 상호 작용을 사용 합니다.
 
-1. 사용자가 앱 `NSUserActivity` 에서 작업할 때 나중에 앱의 상태를 다시 만들기 위해가 만들어집니다.
+1. 사용자가 앱에서 작업할 때 나중에 앱의 상태를 다시 만들기 위해 `NSUserActivity` 만들어집니다.
 2. 사용자가 식당을 검색 하는 경우 동일한 유형의 활동을 만듭니다.
 3. 그리고 사용자가 결과를 볼 때를 다시 사용 합니다. 이 마지막 사례에서 사용자는 위치를 보고 iOS 10에서는 특정 개념 (예: 위치 또는 통신 상호 작용)을 더 잘 인식 합니다.
 
 마지막 화면을 자세히 살펴보겠습니다.
 
-[![](proactive-suggestions-images/activity03.png "NSUserActivity 페이로드")](proactive-suggestions-images/activity03.png#lightbox)
+[![](proactive-suggestions-images/activity03.png "The NSUserActivity payload")](proactive-suggestions-images/activity03.png#lightbox)
 
-여기서 앱은를 `NSUserActivity` 만들고 나중에 상태를 다시 만들기 위한 정보로 채워져 있습니다. 앱에는 위치 이름 및 주소와 같은 메타 데이터도 포함 되어 있습니다. 이 활동을 만든 후 앱에서 iOS에서 사용자의 현재 상태를 나타내는지 알 수 있습니다.
+여기서 앱은 `NSUserActivity`를 만들고 나중에 상태를 다시 만들기 위한 정보로 채워져 있습니다. 앱에는 위치 이름 및 주소와 같은 메타 데이터도 포함 되어 있습니다. 이 활동을 만든 후 앱에서 iOS에서 사용자의 현재 상태를 나타내는지 알 수 있습니다.
 
 그런 다음 앱은 위치 제안에 대 한 임시 값으로 저장 되거나, 검색 결과에 표시 하기 위해 장치에서 스포트라이트 인덱스에 추가 되는 활동을 무선으로 알릴지 여부를 결정 합니다.
 
@@ -79,7 +79,7 @@ Xamarin.ios 앱에 사전 제안 지원을 추가 하는 것은 일반적으로 
 
 ### <a name="creating-an-activity"></a>활동 만들기
 
-활동을 만들기 전에 활동 유형 식별자를 생성 하 여 해당 활동을 식별 해야 합니다. 활동 유형 식별자는 지정 된 사용자 활동 유형을 고유 하 `NSUserActivityTypes` 게 식별 하는 데 `Info.plist` 사용 되는 앱 파일의 배열에 추가 되는 짧은 문자열입니다. 앱이 지원 하 고 앱 검색에 노출 하는 각 작업에 대해 배열에 하나의 항목이 있습니다. 자세한 내용은 [활동 형식 식별자 참조 만들기](~/ios/platform/search/nsuseractivity.md) 를 참조 하세요.
+활동을 만들기 전에 활동 유형 식별자를 생성 하 여 해당 활동을 식별 해야 합니다. 활동 유형 식별자는 지정 된 사용자 활동 유형을 고유 하 게 식별 하는 데 사용 되는 앱 `Info.plist` 파일의 `NSUserActivityTypes` 배열에 추가 된 짧은 문자열입니다. 앱이 지원 하 고 앱 검색에 노출 하는 각 작업에 대해 배열에 하나의 항목이 있습니다. 자세한 내용은 [활동 형식 식별자 참조 만들기](~/ios/platform/search/nsuseractivity.md) 를 참조 하세요.
 
 활동의 예를 살펴보세요.
 
@@ -130,7 +130,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>활동 복원
 
-앱에 대 한 검색 결과 (`NSUserActivity`)를 누르는 사용자에 게 응답 하려면 **AppDelegate.cs** `ContinueUserActivity` 파일을 편집 하 고 메서드를 재정의 합니다. 예:
+앱에 대 한 검색 결과 (`NSUserActivity`)를 누르는 사용자에 게 응답 하려면 **AppDelegate.cs** 파일을 편집 하 고 `ContinueUserActivity` 메서드를 재정의 합니다. 예를 들면,
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -147,7 +147,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-위에서 만든 활동과 동일한 활동 유형 식별자 (`com.xamarin.platform`)를 확인 합니다. 앱은에 저장 `NSUserActivity` 된 정보를 사용 하 여 사용자가 남은 위치로 상태를 다시 복원 합니다.
+위에서 만든 활동과 동일한 활동 유형 식별자 (`com.xamarin.platform`) 인지 확인 합니다. 앱은 `NSUserActivity`에 저장 된 정보를 사용 하 여 사용자가 남은 위치로 상태를 다시 복원 합니다.
 
 ### <a name="benefits-of-creating-an-activity"></a>활동을 만들 때의 이점
 
@@ -164,11 +164,11 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 ### <a name="location-based-suggestions"></a>위치 기반 제안 
 
-위의 식당 검색 앱 예제를 예로 들어 보겠습니다. 메타 데이터와 특성 `NSUserActivity` 을 모두 구현 하 고 올바르게 채우면 사용자가 다음을 수행할 수 있습니다.
+위의 식당 검색 앱 예제를 예로 들어 보겠습니다. `NSUserActivity`를 구현 하 고 모든 메타 데이터와 특성을 올바르게 채우면 사용자가 다음을 수행할 수 있습니다.
 
 1. 앱에서 친구를 충족 하고자 하는 식당을 찾습니다.
 2. 사용자가 Maps 앱으로 전환 하는 경우 식당의 주소가 자동으로 대상으로 제안 됩니다.
-3. 이는 타사 앱 (지원 `NSUserActivity`되는)에도 적용 되므로 사용자가 자동으로 실행 되는 앱으로 전환할 수 있으며 식당의 주소도 자동으로 대상으로 제안 됩니다.
+3. 이는 타사 앱 (`NSUserActivity`지원) 에서도 작동 하므로 사용자는이를 통해 사용자가 타는 공유 앱으로 전환할 수 있으며 식당의 주소도 자동으로 대상으로 제안 됩니다.
 4. 또한 Siri에 대 한 컨텍스트를 제공 하므로 사용자는 식당 앱 내에서 Siri를 호출 하 고 *"방향 가져오기 ..."* 를 요청 하 고 siri는 사용자가 보고 있는 식당에 방향을 제공 합니다.
 
 위의 모든 기능에는 공통적인 내용이 하나 있으며,이는 모두 제안 내용이 원래 제공 되는 위치를 표시 합니다. 위의 예에서는 가상의 식당 리뷰 앱입니다.
@@ -211,7 +211,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 activity.BecomeCurrent();
 ```
 
-앱이 mapkit를 사용 하는 경우 현재 지도 `MKMapItem` 를 활동에 추가 하는 것 만큼 간단 합니다.
+앱이 MapKit를 사용 하는 경우 현재 지도 `MKMapItem`를 활동에 추가 하는 것 만큼 간단 합니다.
 
 ```csharp
 // Save MKMapItem location
@@ -278,7 +278,7 @@ attributes.SupportsNavigation = true;
 
 Apple은 활동 작업을 수행할 때 다음과 같은 모범 사례를 제안 합니다.
 
-- 지연 `NeedsSave` 페이로드 업데이트에 사용 합니다.
+- 지연 페이로드 업데이트에 `NeedsSave`를 사용 합니다.
 - 현재 활동에 대 한 강력한 참조를 유지 해야 합니다.
 - 상태를 복원 하는 데 충분 한 정보만 포함 하는 작은 페이로드를 전송 합니다.
 - 활동 유형 식별자가 고유한 지 확인 하 고 역방향 DNS 표기법을 사용 하 여 지정 합니다. 
@@ -289,14 +289,14 @@ Apple은 활동 작업을 수행할 때 다음과 같은 모범 사례를 제안
 
 ## <a name="routing-apps-and-locations-suggestions"></a>라우팅 앱 및 위치 제안
 
-이 섹션에서는 라우팅 앱 내에서 직접 위치 제안을 사용 하는 방법을 살펴봅니다. 이 기능을 추가 하기 위한 라우팅 앱의 경우 개발자는 다음과 같이 기존 `MKDirectionsRequest` 프레임 워크를 활용 합니다.
+이 섹션에서는 라우팅 앱 내에서 직접 위치 제안을 사용 하는 방법을 살펴봅니다. 이 기능을 추가 하기 위한 라우팅 앱의 경우 개발자는 기존 `MKDirectionsRequest` 프레임 워크를 다음과 같이 활용 합니다.
 
 - 멀티태스킹에서 앱을 승격 합니다.
 - 앱을 라우팅 앱으로 등록 합니다.
-- Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 것을 처리 합니다.
+- MapKit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 것을 처리 합니다.
 - 사용자 참여를 기준으로 앱을 제안 하는 방법에 대 한 watchOS을 제공 합니다.
 
-Mapkit `MKDirectionsRequest` 개체를 사용 하 여 앱을 시작 하는 경우 자동으로 사용자에 게 요청 된 위치에 대 한 지침을 제공 하거나 사용자가 쉽게 지침을 얻기 위해 UI를 제공 해야 합니다. 예를 들어:
+응용 프로그램은 MapKit `MKDirectionsRequest` 개체를 사용 하 여 시작 될 때 사용자에 게 요청 된 위치에 대 한 지침을 자동으로 제공 하거나 사용자가 쉽게 지침을 얻을 수 있도록 UI를 제공 해야 합니다. 예를 들면,
 
 ```csharp
 using System;
@@ -339,7 +339,7 @@ namespace MonkeyChat
 if (MKDirectionsRequest.IsDirectionsRequestUrl(url)) {
 ```
 
-인 경우 URL에서을 `MKDirectionsRequest` 만듭니다.
+인 경우 URL에서 `MKDirectionsRequest`를 만듭니다.
 
 ```csharp
 var request = new MKDirectionsRequest(url);

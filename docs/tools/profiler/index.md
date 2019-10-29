@@ -3,15 +3,15 @@ title: Xamarin Profiler
 description: 이 가이드에서는 Xamarin Profiler의 주요 기능을 살펴봅니다. 프로파일러, 프로 파일링 및 사용 해야 하는 경우 및 Xamarin 응용 프로그램 프로 파일링을 위한 표준 워크플로에서 살펴봅니다.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: b567985fcfd9e133587c5c285e17d21465fda659
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 330d41ea795754388402fbb7c660ba8d77f1aa4b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250086"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019402"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -55,11 +55,11 @@ Xamarin Profiler는 개발자에 게 Mac용 Visual Studio 또는 Visual Studio �
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-현재 Xamarin Profiler를 사용 하 여 Mac에서 Xamarin.ios, Xamarin Android 및 Xamarin.ios 응용 프로그램을 테스트할 수 있습니다 (Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이므로 Mac용 Visual Studio에서 시작 하는 것 외에도 `.mlpd` [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
+현재 Xamarin Profiler를 사용 하 여 Mac에서 Xamarin.ios, Xamarin Android 및 Xamarin.ios 응용 프로그램을 테스트할 수 있습니다 (Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며, Mac용 Visual Studio에서 시작 하는 것 외에도 독립 실행형 응용 프로그램으로 사용 하 여 [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 `.mlpd` 파일을 검사할 수 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-현재 Xamarin Profiler는 Windows에서 Xamarin Android 앱을 테스트 하는 데 사용할 수 있습니다 (Visual Studio 및 Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며 Visual Studio에서 시작 하는 것 외에도 `.mlpd` [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
+현재 Xamarin Profiler는 Windows에서 Xamarin Android 앱을 테스트 하는 데 사용할 수 있습니다 (Visual Studio 및 Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며, Visual Studio에서 시작 하는 것 외에도 [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 `.mlpd` 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
 
 -----
 
@@ -96,7 +96,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 앱을 성공적으로 프로 파일링 하려면 앱의 프로젝트 옵션에서 프로 파일링을 허용 해야 합니다.
 
-- iOS:
+- Io
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -112,7 +112,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 -----
 
-- Android:
+- 용
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -186,11 +186,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[![Mac용 Visual Studio의 프로파일러 섹션](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
+[Mac용 Visual Studio의 프로파일러 섹션![](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Visual Studio의 프로파일러 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
+[Visual Studio의![Profiler 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -198,7 +198,7 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 - **계측 목록** – 프로 파일링 세션에 대해 로드 된 모든 계측을 나열 합니다.
 - **차트 플롯** – 이러한 차트는 계측 목록의 관련 악기에 가로로 관련 됩니다. 슬라이더 (시간 프로파일러 아래에 표시 됨)를 사용 하 여 소수 자릿수를 변경할 수 있습니다.
 - **계측 세부 정보 영역** -현재 계측의 선택 된 보기에 의해 표시 되는 데이터를 포함 합니다. 아래 섹션에서 이러한 보기를 자세히 살펴보겠습니다.
-- **Inspector 보기** – 분할 된 컨트롤에서 선택할 수 있는 섹션이 포함 되어 있습니다. 섹션은 선택한 계측에 따라 다르며, 다음을 포함 합니다. 구성 설정, 통계, 스택 추적 정보 및 루트 경로입니다.
+- **Inspector 보기** – 분할 된 컨트롤에서 선택할 수 있는 섹션이 포함 되어 있습니다. 섹션은 선택한 계측에 따라 다르며 구성 설정, 통계, 스택 추적 정보 및 루트 경로를 포함 합니다.
 
 ### <a name="allocations"></a>피크
 
@@ -268,13 +268,13 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 [![시간 프로파일러 계측](images/time1.png)](images/time1.png#lightbox) 
 
-[![시간 프로파일러 계측 – 샘플 목록](images/time3.png)](images/time3.png#lightbox) 
+[![Time Profiler 계측 – 샘플 목록](images/time3.png)](images/time3.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 [![시간 프로파일러 계측](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
-[![시간 프로파일러 계측 – 샘플 목록](images/time3-vs.png)](images/time3-vs.png#lightbox) 
+[![Time Profiler 계측 – 샘플 목록](images/time3-vs.png)](images/time3-vs.png#lightbox) 
 
 -----
 
@@ -282,11 +282,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-  [![시간 프로파일러 계측 – 호출 트리](images/time2.png)](images/time2.png#lightbox) 
+  [![Time Profiler 계측 – 호출 트리](images/time2.png)](images/time2.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-  [![시간 프로파일러 계측 – 호출 트리](images/time2-vs.png)](images/time2-vs.png#lightbox) 
+  [![Time Profiler 계측 – 호출 트리](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 

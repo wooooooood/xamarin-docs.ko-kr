@@ -4,15 +4,15 @@ description: Google의 Android 마모가 도입 되면서 뛰어난 Android 앱�
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 80c24765022a916fa36e97aaf47b36435b3f7a7b
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 3b1d27b1489cb71d4bd1922c2de993567ddf36bd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70758494"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028617"
 ---
 # <a name="introduction-to-android-wear"></a>Android Wear 소개
 
@@ -44,7 +44,7 @@ Android 마모를 지 원하는 가장 간단한 방법은 핸드헬드 장치�
 
 ### <a name="user-interface"></a>사용자 인터페이스
 
-마모를 위한 기본 탐색 패턴은 세로로 정렬 된 일련의 카드입니다. 이러한 각 카드에는 동일한 행에 계층화 된 관련 작업이 있을 수 있습니다. @No__t_0 클래스는이 기능을 제공 합니다. `ListView`와 동일한 어댑터 개념을 준수 합니다. 일반적으로 `GridViewPager`를 각 행과 열 셀을 `Fragment`로 나타낼 수 있는 `FragmentGridPagerAdaptor` (또는 `GridPagerAdaptor`)와 연결 합니다. 
+마모를 위한 기본 탐색 패턴은 세로로 정렬 된 일련의 카드입니다. 이러한 각 카드에는 동일한 행에 계층화 된 관련 작업이 있을 수 있습니다. `GridViewPager` 클래스는이 기능을 제공 합니다. `ListView`와 동일한 어댑터 개념을 준수 합니다. 일반적으로 `GridViewPager`를 각 행과 열 셀을 `Fragment`로 나타낼 수 있는 `FragmentGridPagerAdaptor` (또는 `GridPagerAdaptor`)와 연결 합니다. 
 
 [![마모 탐색](intro-to-wear-images/2d-picker-sml.png "마모 탐색")](intro-to-wear-images/2d-picker.png#lightbox)
 
@@ -152,17 +152,17 @@ Android 마모 2.0 앱은 핸드헬드 앱과 독립적으로 작동할 수 있�
 Android를 실행할 수 있는 장치의 몇 가지 예는 다음과 같습니다.
 
 - [Motorola 360](https://moto360.motorola.com/)
-- [LG G 조사식](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-- [LG G 보기 R](http://www.lg.com/us/smartwatch/g-watch-r)
-- [Samsung 기어 라이브](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
-- [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-- [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
+- [LG G 조사식](https://www.lg.com/us/smart-watches/lg-W100-g-watch)
+- [LG G 보기 R](https://www.lg.com/us/smartwatch/g-watch-r)
+- [Samsung 기어 라이브](https://www.samsung.com/global/microsite/gear/gearlive_design.html)
+- [Sony SmartWatch 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
+- [ASUS ZenWatch](https://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 ## <a name="further-reading"></a>추가 정보
 
 Google의 Android 마모 설명서를 확인 하세요.
 
-- [Android 마모 정보](http://www.android.com/wear/)
+- [Android 마모 정보](https://www.android.com/wear/)
 - [Android 마모 앱 디자인](https://developer.android.com/design/wear/index.html)
 - [wearable 라이브러리](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 - [Android 마모 2.0](https://developer.android.com/wear/preview/index.html)

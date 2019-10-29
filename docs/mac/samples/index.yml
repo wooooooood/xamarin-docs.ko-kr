@@ -3,8 +3,8 @@ documentType: LandingData
 title: Xamarin.Mac 샘플
 metadata:
   description: 모바일 개발자를 위한 플랫폼 간 Xamarin.Mac 샘플 앱입니다.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 07/30/2019
   ms.topic: sample
 abstract:

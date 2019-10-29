@@ -4,15 +4,15 @@ description: 이 문서에서는 찾기, 공유 및 오늘 확장에 대 한 Xam
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2129281f389c440d9ae746c4b9b06c4ddb32d1dc
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 9a9dbb63b78b00a9bcac9d7833530da02890afc6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770037"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017306"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
@@ -38,7 +38,7 @@ ms.locfileid: "70770037"
 
 Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 하 게 사용할 수 있습니다.
 
-- Xamarin.ios는 현재 디버깅 확장을 지원 하지 않으므로 디버깅 환경은 주로 실행 및 `printf`와 같은 문에 따라 달라 집니다. 그러나 확장은 sandbox 프로세스에서 실행 되므로 `Console.WriteLine` 다른 Xamarin.ios 응용 프로그램에서 수행 되는 것 처럼 작동 하지 않습니다. [@No__t_1를 직접](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) 호출 하면 디버깅 메시지가 시스템 로그에 출력 됩니다.
+- Xamarin.ios는 현재 디버깅 확장을 지원 하지 않으므로 디버깅 환경은 주로 실행 및 `printf`와 같은 문에 따라 달라 집니다. 그러나 확장은 sandbox 프로세스에서 실행 되므로 `Console.WriteLine` 다른 Xamarin.ios 응용 프로그램에서 수행 되는 것 처럼 작동 하지 않습니다. [`NSLog`를 직접](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) 호출 하면 디버깅 메시지가 시스템 로그에 출력 됩니다.
 - Catch 되지 않은 예외는 확장 프로세스를 중단 하 여 **시스템 로그**에 적은 양의 유용한 정보만 제공 합니다. 다시 throw 하기 전에 `NSLog`의 `try/catch` (예외) 블록에 문제가 있는 코드를 래핑하는 것이 유용할 수 있습니다.
 - **시스템 로그** 는 **응용 프로그램**  > **유틸리티**의 **콘솔** 앱에서 액세스할 수 있습니다.
 

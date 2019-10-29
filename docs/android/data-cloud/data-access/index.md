@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Android Data Access
+title: Xamarin Android 데이터 액세스
 description: 대부분의 응용 프로그램에는 장치에 로컬로 데이터를 저장 하기 위한 몇 가지 요구 사항이 있습니다. 데이터 양이 일반적으로 작은 경우에는 데이터베이스 액세스를 관리 하기 위해 응용 프로그램에서 데이터베이스와 데이터 계층이 필요 합니다.  Android에는 SQLite 데이터베이스 엔진 ' 기본 제공 '이 있으며, Xamarin의 플랫폼에서 데이터를 저장 하 고 검색 하는 액세스를 간소화 합니다. 이 문서에서는 플랫폼 간 방식으로 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: 6B47E864-C6E7-4AA2-8DEF-2C8BF551D17C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 2343603199661ea39b1f0af172ce0ccf48a2cd66
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9906e617b7072ebf7b1213a7278d117dc4f560ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754580"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023865"
 ---
-# <a name="xamarinandroid-data-access"></a>Xamarin.Android Data Access
+# <a name="xamarinandroid-data-access"></a>Xamarin Android 데이터 액세스
 
 _대부분의 응용 프로그램에는 장치에 로컬로 데이터를 저장 하기 위한 몇 가지 요구 사항이 있습니다. 데이터 양이 일반적으로 작은 경우에는 데이터베이스 액세스를 관리 하기 위해 응용 프로그램에서 데이터베이스와 데이터 계층이 필요 합니다.  Android에는 SQLite 데이터베이스 엔진 ' 기본 제공 '이 있으며, Xamarin의 플랫폼에서 데이터를 저장 하 고 검색 하는 액세스를 간소화 합니다. 이 문서에서는 플랫폼 간 방식으로 SQLite 데이터베이스에 액세스 하는 방법을 보여 줍니다._
 
@@ -29,9 +29,9 @@ Xamarin Android는 다음과 같은 데이터베이스 액세스 Api를 지원 �
 
 이 섹션에 포함 된 대부분의 코드는 완전히 플랫폼 간 이며 수정 없이 iOS 또는 Android에서 실행 됩니다. 다음 두 가지 샘플 앱이 설명 되어 있습니다.
 
-- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; 간단한 데이터 작업은 텍스트 표시 컨트롤에 결과를 기록 합니다.
+- [**DataAccess_Basic**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; 단순 데이터 작업은 텍스트 표시 컨트롤에 결과를 기록 합니다.
 
-- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; 데이터 작업을 간단한 데이터 구조를 나열 하 고 편집 하는 작은 작업 응용 프로그램에 통합 합니다.
+- [**DataAccess_Advanced**](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash;는 데이터 작업을 간단한 데이터 구조를 나열 하 고 편집 하는 작은 작업 응용 프로그램에 통합 합니다.
 
 두 샘플 솔루션에는 iOS 및 Android 샘플 응용 프로그램 프로젝트가 포함 되어 있습니다.
 

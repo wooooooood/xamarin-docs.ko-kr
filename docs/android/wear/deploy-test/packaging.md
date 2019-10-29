@@ -3,15 +3,15 @@ title: 패키지 마모 앱
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: fa35f6fe2388484875180594f18041947963ef7a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aa4a4f1ab3ae3024de2d969f9325c2efa4db48af
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763971"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028641"
 ---
 # <a name="packaging-wear-apps"></a>패키지 마모 앱
 
@@ -47,7 +47,7 @@ Xamarin Android 5.0부터 사용자가 앱을 휴대 하는 프로젝트에 대 
 
 -----
 
-마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예:
+마모 된 앱의 패키지 이름이 핸드헬드 앱의 패키지 이름과 일치 하지 않는 경우 **XA5211** 오류가 발생 합니다. 예를 들면,
 
 ```shell
 Error XA5211: Embedded wear app package name differs from handheld 
@@ -62,7 +62,7 @@ app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 
 - 패키지 이름이 일치 하는지 확인 합니다. 
 
-- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예를 들어: 
+- XML을 생성 하 고이를 휴대용 앱에 연결 하기 위해 핸드헬드 프로젝트에 추가 합니다. 예를 들면, 
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -95,7 +95,7 @@ Android 용 앱은 버전 5.0 이전에 Xamarin.ios에서 작성할 수 있지�
     </wearableApp>
     ```
 
-5. 새 xml 리소스 `<meta-data />` 를 참조 하는 핸드헬드 프로젝트의 **androidmanifest .xml** `<application>` 요소에 요소를 수동으로 추가 합니다.
+5. 새 XML 리소스를 참조 하는 핸드헬드 프로젝트의 **Androidmanifest** `<application>` 요소에 `<meta-data />` 요소를 수동으로 추가 합니다.
 
     ```xml
     <meta-data android:name="com.google.android.wearable.beta.app"

@@ -3,15 +3,15 @@ title: 포그라운드 서비스
 ms.prod: xamarin
 ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 6f3427641ba4ace3b640fcc970fd33f55087a9c8
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: aaef03d68f4ec374a3bc706daffe636e575e42ff
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68644106"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024753"
 ---
 # <a name="foreground-services"></a>포그라운드 서비스
 
@@ -98,7 +98,7 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 StopForeground(true);
 ```
 
-@No__t_0 또는 `StopService`에 대 한 호출로 서비스가 중지 되 면 상태 표시줄 알림이 제거 됩니다.
+`StopSelf` 또는 `StopService`에 대 한 호출로 서비스가 중지 되 면 상태 표시줄 알림이 제거 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

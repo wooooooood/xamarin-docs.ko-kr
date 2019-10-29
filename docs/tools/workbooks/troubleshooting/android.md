@@ -3,15 +3,15 @@ title: Android에서 Xamarin Workbooks 문제 해결
 description: 이 문서에서는 Android에서 Xamarin Workbooks를 사용 하기 위한 문제 해결 팁을 제공 합니다. 에뮬레이터 지원, 로드 되지 않는 통합 문서 및 기타 항목에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 04f02e6136d9d489a36e994575519e579770ac3d
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: be19005ab1125c060ab0111e9f37568d5f4abe45
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291163"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029586"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Android에서 Xamarin Workbooks 문제 해결
 
@@ -22,7 +22,7 @@ Android 통합 문서를 실행 하려면 Android 에뮬레이터를 사용할 �
 컴퓨터에서 지 원하는 경우 Google의 에뮬레이터가 HAXM와 함께 사용 하는 것이 좋습니다.
 시스템에서 Hyper-v를 사용 하도록 설정 해야 하는 경우 대신 Visual Studio Android Emulator로 이동 합니다.
 
-Android 5.0 이상을 실행 하는 에뮬레이터가 있어야 합니다. ARM 에뮬레이터는 지원 되지 않습니다. `x86` 또는`x86_64` 장치만 사용 합니다.
+Android 5.0 이상을 실행 하는 에뮬레이터가 있어야 합니다. ARM 에뮬레이터는 지원 되지 않습니다. `x86` 또는 `x86_64` 장치만 사용 합니다.
 
 프로세스에 익숙하지 않은 경우 Android 에뮬레이터를 설정 하는 방법 [에 대 한 설명서][android-emu] 를 참조 하세요.
 
@@ -42,7 +42,7 @@ Android 5.0 이상을 실행 하는 에뮬레이터가 있어야 합니다. ARM 
 1. **인터넷에서 Windows의 연결을 일시적으로 끊을 수 있으므로 중요 한 네트워크 작업이 완료 되었는지 확인 합니다.**
 1. 에뮬레이터를 닫습니다.
 1. `Hyper-V Manager`를 엽니다.
-1. 에서 `Actions`를 엽니다 `Virtual Switch Manager...`.
+1. `Actions`에서 `Virtual Switch Manager...`를 엽니다.
 1. 모든 가상 스위치를 삭제 합니다.
 1. `OK`을 클릭합니다.
 1. VS Android Emulator를 시작 합니다. 가상 네트워크 스위치를 다시 만들라는 메시지가 표시 될 것입니다.

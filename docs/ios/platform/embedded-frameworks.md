@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 응용 프로그램에서 포함 �
 ms.prod: xamarin
 ms.assetid: F8C61020-4106-46F1-AECB-B56C909F42CB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
-ms.openlocfilehash: ba3be4fea9999698c5a81faf5b07bec99fb1aa46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: cf74c31b149c24bc6e515c0f00803a60b10d5d1c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753237"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032531"
 ---
 # <a name="embedded-frameworks-in-xamarinios"></a>Xamarin.ios의 포함 프레임 워크
 
@@ -38,13 +38,13 @@ Xamarin.ios에서 프레임 워크를 사용 하는 방법에는 두 가지가 �
 
 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 기본 참조를 찾아 추가 합니다.
 
-![](embedded-frameworks-images/xam-native-refs.png "Mac용 Visual Studio에서 네이티브 참조 추가를 선택 합니다.")
+![](embedded-frameworks-images/xam-native-refs.png "Select Add native references in Visual Studio for Mac")
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 기본 참조를 찾아 추가 합니다.
 
-![](embedded-frameworks-images/vs-native-refs.png "Visual Studio에서 네이티브 참조 추가를 선택 합니다.")
+![](embedded-frameworks-images/vs-native-refs.png "Select Add native references in Visual Studio")
 
 -----
 
@@ -70,7 +70,7 @@ Xamarin.ios에서 프레임 워크를 사용 하는 방법에는 두 가지가 �
 
 이 동작은 프로젝트의 iOS 빌드 옵션에 다음을 추가 mtouch 인수로 추가 하 여 앱 개발자가 재정의할 수 있습니다.
 
-- `--mono:static`: 정적으로 Mono 런타임에 연결 합니다.
+- `--mono:static`: Mono 런타임에 정적으로 링크 합니다.
 - `--mono:framework`: Mono 런타임에 프레임 워크로 링크 합니다.
 
 확장이 없는 앱의 경우에도 Mono 런타임을 프레임 워크로 연결 하는 한 가지 시나리오는 실행 파일 크기를 줄여 실행 파일에 대해 Apple에서 적용 하는 크기 제한을 극복 하는 것입니다. 참조를 위해 Mono 런타임은 아키텍처 당 약 1.7 MB를 추가 합니다 (Xamarin.ios 8.12는 물론 릴리스 간에는 다르며 앱 사이에도 다름). Mono 프레임 워크는 아키텍처 당 약 2.3 MB를 추가 합니다. 즉, 확장이 없는 단일 아키텍처 앱의 경우 앱 링크를 Mono 런타임에 프레임 워크로 사용 하면 실행 파일이 ~ 1.7 MB를 축소 하 고, 결과는 ~ 2.3 MB 프레임 워크를 추가 합니다. ~ 0.6 MB의 큰 앱은 모두 함께 작동 합니다.

@@ -3,15 +3,15 @@ title: Xamarin Live Player 앱
 description: 이 문서에서는 장치에서 라이브 코드 변경을 미리 보는 데 사용할 수 있는 Xamarin Live Player 앱에 대해 설명 합니다. 설정, 샘플, 로그, 설정, 장치 관리 등에 대해 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: d4cf596d70be746e85f21bace3e5ddf662076e6d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f1d3adfad3b9d2a64990ff11f81bf3a1a39825bb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772323"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029654"
 ---
 # <a name="xamarin-live-player-app"></a>Xamarin Live Player 앱
 
@@ -35,11 +35,11 @@ ms.locfileid: "70772323"
 
 ![장치에서 실행 되는 샘플 계산기 앱](player-images/basic-calculator-sml.png)
 
-## <a name="options"></a>변수
+## <a name="options"></a>옵션
 
 앱 **아래쪽의 정보 단추를** 눌러 **옵션** 메뉴를 표시 합니다.
 
-[![옵션 메뉴의 스크린샷](player-images/options-sml.png)](player-images/options.png#lightbox)
+[옵션 메뉴의![스크린샷](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>로그
 
@@ -51,7 +51,7 @@ ms.locfileid: "70772323"
 - 버전 정보입니다.
 - 사용자 의견을 보냅니다.
 
-[![설정의 스크린샷](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[설정의![스크린샷](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>장치 관리
 

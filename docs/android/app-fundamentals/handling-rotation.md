@@ -4,15 +4,15 @@ description: 이 항목에서는 Xamarin Android에서 장치 방향 변경을 �
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 98acabec7132730304bf5e8b81e99f2727b6d50e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 3277dd5eb7600500a5f60b2bbb13621aa237a235
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755576"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019277"
 ---
 # <a name="handling-rotation"></a>회전 처리
 
@@ -26,16 +26,16 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 - **선언적 레이아웃 회전** &ndash; Android 리소스 시스템을 사용 하 여 특정 방향에 대 한 레이아웃 및 drawables을 로드 하는 방법을 비롯 하 여 방향 인식 응용 프로그램을 빌드하는 방법입니다.
 
-- **프로그래밍 레이아웃 회전** &ndash; 프로그래밍 방식으로 컨트롤을 추가 하는 방법 뿐만 아니라 방향 변경을 수동으로 처리 하는 방법을 설명 합니다.
+- 프로그래밍 방식 **레이아웃 회전** 은 컨트롤을 프로그래밍 방식으로 추가 하는 방법 뿐만 아니라 수동으로 방향 변경을 처리 하는 방법 &ndash; 합니다.
 
 ## <a name="handling-rotation-declaratively-with-layouts"></a>레이아웃을 사용 하 여 선언적으로 회전 처리
 
 명명 규칙을 따르는 폴더에 파일을 포함 하 여, 해당 방향이 변경 될 때 Android에서 적절 한 파일을 자동으로 로드 합니다.
 여기에는에 대 한 지원이 포함 됩니다.
 
-- *리소스 레이아웃* &ndash; 각 방향에 대해 팽창 되는 레이아웃 파일 지정
+- 각 방향에 대해 팽창 되는 레이아웃 파일을 지정 하는 &ndash; *레이아웃 리소스* 입니다.
 
-- *그릴 때 리소스* &ndash; 각 방향에 대해 로드 되는 drawables 지정 하는 것입니다.
+- 각 방향에 대해 로드 되는 drawables을 지정 하 &ndash; 그릴 수 있는 *리소스* 입니다.
 
 ### <a name="layout-resources"></a>리소스 레이아웃
 
@@ -43,7 +43,7 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 [![기본 프로젝트 템플릿 구조](handling-rotation-images/00.png)](handling-rotation-images/00.png#lightbox)
 
-이 프로젝트는 **리소스/레이아웃** 폴더에 단일 **Main. axml** 파일을 만듭니다. 활동의 `OnCreate` 메서드가 호출 되 면 아래 xml에 표시 된 것 처럼 단추를 선언 하는 늘어납니다에 정의 된 뷰를 **만듭니다** .
+이 프로젝트는 **리소스/레이아웃** 폴더에 단일 **Main. axml** 파일을 만듭니다. 활동의 `OnCreate` 메서드가 호출 되 면 아래 XML에 표시 된 것 처럼 단추를 선언 하는 늘어납니다에 정의 된 뷰를 **만듭니다** .
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -59,13 +59,13 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 </LinearLayout>
 ```
 
-장치를 가로 방향으로 회전 하는 경우 아래 스크린샷에 표시 `OnCreate` 된 것 처럼 활동의 메서드가 다시 호출 되 고 동일한 **Main. axml** 파일이 팽창 됩니다.
+장치가 가로 방향으로 회전 되는 경우 작업의 `OnCreate` 메서드가 다시 호출 되 고, 아래 스크린샷에 표시 된 것 처럼 동일한 **Main. axml** 파일이 팽창 됩니다.
 
-[![가로 방향으로 동일한 화면](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
+[동일한 화면![가로 방향으로](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
 
 #### <a name="orientation-specific-layouts"></a>방향 별 레이아웃
 
-레이아웃 폴더 외에도 기본적으로 세로를 사용 하 고 이름이 인 `layout-land`폴더를 포함 하 여 *레이아웃-포트* 를 명시적으로 지정할 수 있습니다. 응용 프로그램은 코드를 변경 하지 않고도 가로에서 필요한 뷰를 정의할 수 있습니다.
+레이아웃 폴더 (기본값은 세로이 고 `layout-land`폴더를 포함 하 여 *레이아웃-포트* 의 이름을 명시적으로 지정할 수도 있음) 외에도 응용 프로그램은 코드를 변경 하지 않고도 가로에서 필요한 뷰를 정의할 수 있습니다.
 
 **Main. axml** 파일에 다음 XML이 포함 되어 있다고 가정 합니다.
 
@@ -81,7 +81,7 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 </RelativeLayout>
 ```
 
-추가 **Main. axml** 파일이 포함 된 레이아웃 육지 라는 폴더가 프로젝트에 추가 되 면, 않아서는 레이아웃을 가로 방향으로 지정 하면 이제 Android에서 새로 추가 된 **기본. axml** 을 로드 합니다. 다음 코드가 포함 된 **주. axml** 파일의 가로 버전을 고려 합니다. 간단 하 게 하기 위해이 XML은 코드의 기본 세로 버전과 유사 하지만에서 `TextView`다른 문자열을 사용 합니다.
+추가 **Main. axml** 파일이 포함 된 레이아웃 육지 라는 폴더가 프로젝트에 추가 되 면, 않아서는 레이아웃을 가로 방향으로 지정 하면 이제 Android에서 새로 추가 된 **기본. axml** 을 로드 합니다. 다음 코드를 포함 하는 **주. axml** 파일의 가로 버전을 고려 합니다. 간단 하 게 하기 위해이 XML은 코드의 기본 세로 버전과 유사 하지만 `TextView`에서 다른 문자열을 사용 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -97,13 +97,13 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 이 코드를 실행 하 고 장치를 세로에서 가로 방향으로 회전 하면 다음과 같이 새로운 XML 로드를 보여 줍니다.
 
-[![세로 및 가로 스크린샷 세로 모드 인쇄](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
+[세로 및 가로 스크린샷![세로 모드 인쇄](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
 ### <a name="drawable-resources"></a>그릴 때 리소스
 
 회전 하는 동안 Android는 그릴 수 있는 리소스를 레이아웃 리소스와 유사 하 게 처리 합니다. 이 경우 시스템은 각각 **리소스/그릴** 때 및 **리소스/그릴** 때 발생 하는 폴더에서 drawables을 가져옵니다.
 
-예를 들어, 프로젝트의 **Resources/그릴** 수 있는 폴더에는 원숭이 라는 이미지가 포함 됩니다. 여기에서 그릴 수 있는 이미지는 `ImageView` 다음과 같이 in XML에서 참조 됩니다.
+예를 들어, 프로젝트에는 **Resources/그릴** 수 있는 폴더에 원숭이 라는 이미지가 포함 되어 있습니다. 여기에서 그릴 수 있는 이미지는 다음과 같이 XML의 `ImageView`에서 참조 됩니다.
 
 ```xml
 <ImageView
@@ -116,7 +116,7 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 
 **리소스/그릴**수 있는 다른 버전의 **원숭이 .png** 가 포함 되어 있다고 가정 하겠습니다. 레이아웃 파일을 사용 하는 것과 마찬가지로 장치가 회전 될 때 아래와 같이 그릴 때 지정 된 방향으로 변경 됩니다.
 
-[![세로 및 가로 모드에 표시 되는 다른 버전의 원숭이. png](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
+[세로 및 가로 모드에 표시 되는 다른 버전의 원숭이를![합니다.](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
 ## <a name="handling-rotation-programmatically"></a>프로그래밍 방식으로 회전 처리
 
@@ -133,7 +133,7 @@ _이 항목에서는 Xamarin Android에서 장치 방향 변경을 처리 하는
 - 레이아웃에 컨트롤을 추가 합니다.
 - 레이아웃을 콘텐츠 뷰로 설정 합니다.
 
-예를 들어, 다음 코드와 같이에 추가 `TextView` `RelativeLayout`된 단일 컨트롤로 구성 된 사용자 인터페이스를 살펴보겠습니다.
+예를 들어 다음 코드와 같이 `RelativeLayout`에 추가 된 단일 `TextView` 컨트롤로 구성 된 사용자 인터페이스를 살펴보겠습니다.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -162,13 +162,13 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-이 코드는 `RelativeLayout` 클래스의 인스턴스를 만들고 해당 `LayoutParameters` 속성을 설정 합니다. 클래스 `LayoutParams` 는 다시 사용 가능한 방식으로 컨트롤의 위치를 지정 하는 방법을 캡슐화 하는 Android의 방법입니다. 레이아웃의 인스턴스를 만든 후에는 컨트롤을 만들어 추가할 수 있습니다. 컨트롤에는 `LayoutParameters` `TextView` 이 예제의와 같은도 있습니다. 가 만들어지면를 `RelativeLayout` 에 추가 하 고를 `TextView` 콘텐츠 뷰로 설정 `RelativeLayout` 하면 다음과 같이 응용 프로그램이 표시 됩니다. `TextView`
+이 코드는 `RelativeLayout` 클래스의 인스턴스를 만들고 해당 `LayoutParameters` 속성을 설정 합니다. `LayoutParams` 클래스는 다시 사용 가능한 방식으로 컨트롤의 위치를 지정 하는 방법을 캡슐화 하는 Android의 방법입니다. 레이아웃의 인스턴스를 만든 후에는 컨트롤을 만들어 추가할 수 있습니다. 컨트롤에는이 예제에서 `TextView` 같은 `LayoutParameters`포함 됩니다. `TextView` 생성 된 후 `RelativeLayout`에 추가 하 고 `RelativeLayout`를 콘텐츠 뷰로 설정 하면 다음과 같이 응용 프로그램에 `TextView` 표시 됩니다.
 
-[![세로 및 가로 모드에서 표시 되는 증가 카운터 단추](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
+[세로 및 가로 모드에서 표시 되는![증가 카운터 단추](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
 ### <a name="detecting-orientation-in-code"></a>코드의 방향 감지
 
-가 호출 될 `OnCreate` 때마다 응용 프로그램이 각 방향에 대해 다른 사용자 인터페이스를 로드 하려고 시도 하는 경우 (장치가 회전 될 때마다 발생 함) 방향을 검색 한 다음 원하는 사용자 인터페이스 코드를 로드 해야 합니다. Android에는 `WindowManager`아래와 같이 `WindowManager.DefaultDisplay.Rotation` 속성을 통해 현재 장치 회전을 결정 하는 데 사용할 수 있는 라는 클래스가 있습니다.
+응용 프로그램에서 `OnCreate`가 호출 될 때 각 방향에 대해 다른 사용자 인터페이스를 로드 하려고 시도 하는 경우 (장치가 회전 될 때마다 발생 함) 방향을 검색 한 다음 원하는 사용자 인터페이스 코드를 로드 해야 합니다. Android에는 아래와 같이 `WindowManager.DefaultDisplay.Rotation` 속성을 통해 현재 장치 회전을 결정 하는 데 사용할 수 있는 `WindowManager`이라는 클래스가 있습니다.
 
 ```csharp
 protected override void OnCreate (Bundle bundle)
@@ -208,19 +208,19 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-이 코드는 `TextView` 다음과 같이를 화면 왼쪽 위에서 100 픽셀 배치 하도록 설정 하 고, 가로로 회전할 때 새 레이아웃에 자동으로 애니메이션 효과를 줍니다.
+이 코드 `TextView`는 다음과 같이 화면 왼쪽 위에서 100 픽셀의 위치를 지정 하 여 자동으로 새 레이아웃에 애니메이션을 적용 합니다.
 
-[![뷰 상태는 가로 및 세로 모드에서 유지 됩니다.](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
+[![뷰 상태는 세로 및 가로 모드에서 유지 됩니다.](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
 
 ### <a name="preventing-activity-restart"></a>활동 다시 시작 방지
 
-응용 프로그램은에서 `OnCreate`모든 항목을 처리 하는 것 외에도 다음과 같이를 `ActivityAttribute` 설정 `ConfigurationChanges` 하 여 방향이 변경 될 때 활동이 다시 시작 되지 않도록 할 수 있습니다.
+응용 프로그램은 `OnCreate`의 모든 항목을 처리 하는 것 외에도 다음과 같이 `ActivityAttribute`의 `ConfigurationChanges`를 설정 하 여 작업이 다시 시작 되지 않도록 할 수 있습니다.
 
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 ```
 
-이제 장치가 회전 될 때 활동이 다시 시작 되지 않습니다. 이 경우 방향 변경을 수동으로 처리 하기 위해 활동은 메서드를 `OnConfigurationChanged` 재정의 하 고 아래 활동의 새 구현에서와 같이 전달 되는 `Configuration` 개체에서 방향을 결정할 수 있습니다.
+이제 장치가 회전 될 때 활동이 다시 시작 되지 않습니다. 이 경우 방향 변경을 수동으로 처리 하기 위해 활동은 `OnConfigurationChanged` 메서드를 재정의 하 고 아래 활동의 새 구현과 같이 전달 되는 `Configuration` 개체에서 방향을 결정할 수 있습니다.
 
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
@@ -271,7 +271,7 @@ public class CodeLayoutActivity : Activity
 }
 ```
 
-여기서 레이아웃 `TextView's` 매개 변수는 가로 및 세로 모두에 대해 초기화 됩니다. 방향이 변경 될 때 활동이 다시 생성 되지 않으므로 `TextView` 클래스 변수에는 자체와 함께 매개 변수가 포함 됩니다. 이 코드에서는 여전히의 `surfaceOrientartion` `OnCreate` 를 사용 하 여의 초기 레이아웃 `TextView`을 설정 합니다. 이후에는 `OnConfigurationChanged` 모든 이후 레이아웃 변경 내용을 처리 합니다.
+여기서 `TextView's` 레이아웃 매개 변수는 가로 및 세로 모두에 대해 초기화 됩니다. 방향이 변경 될 때 활동이 다시 생성 되지 않으므로 클래스 변수에는 `TextView` 자체와 함께 매개 변수가 포함 됩니다. 코드는 여전히 `OnCreate`의 `surfaceOrientartion`를 사용 하 여 `TextView`의 초기 레이아웃을 설정 합니다. 이후에는 `OnConfigurationChanged` 모든 후속 레이아웃 변경 내용을 처리 합니다.
 
 응용 프로그램을 실행할 때 Android는 장치 회전이 발생 함에 따라 사용자 인터페이스 변경 사항을 로드 하 고 작업을 다시 시작 하지 않습니다.
 
@@ -279,7 +279,7 @@ public class CodeLayoutActivity : Activity
 
 XML에서 레이아웃을 정의 하는 경우 장치 회전으로 인 한 작업 다시 시작을 방지할 수도 있습니다. 예를 들어, 성능상의 이유로 작업을 다시 시작 하는 것을 방지 하려는 경우이 방법을 사용할 수 있으며, 다른 방향에 대 한 새 리소스를 로드할 필요가 없습니다.
 
-이렇게 하려면 프로그래밍 방식 레이아웃에 사용 하는 것과 동일한 절차를 따릅니다. 이전에서 `ConfigurationChanges` 했던 `ActivityAttribute`것 처럼에서를 설정 하면 됩니다. `CodeLayoutActivity` 방향 변경을 위해 실행 해야 하는 모든 코드는 `OnConfigurationChanged` 메서드에서 다시 구현할 수 있습니다.
+이렇게 하려면 프로그래밍 방식 레이아웃에 사용 하는 것과 동일한 절차를 따릅니다. 이전 `CodeLayoutActivity`에서 했던 것 처럼 `ActivityAttribute`에 `ConfigurationChanges`를 설정 하면 됩니다. 방향 변경을 위해 실행 해야 하는 모든 코드는 `OnConfigurationChanged` 메서드에서 다시 구현할 수 있습니다.
 
 ## <a name="maintaining-state-during-orientation-changes"></a>방향 변경 중 상태 유지 관리
 
@@ -296,4 +296,4 @@ Android에서 상태를 유지 하는 방법에 대 한 자세한 내용은 [활
 - [회전 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-rotationdemo)
 - [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [런타임 변경 내용 처리](https://developer.android.com/guide/topics/resources/runtime-changes.html)
-- [빠른 화면 방향 변경](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)
+- [빠른 화면 방향 변경](https://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

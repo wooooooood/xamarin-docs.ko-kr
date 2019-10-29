@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드한 watchOS app
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: af6d32808e2847c99c4f8a2d90e7dc2d3955ae03
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284670"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028347"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Xamarin을 사용 하 여 watchOS Apps 배포 및 테스트
 
@@ -60,7 +60,7 @@ ms.locfileid: "70284670"
 
 ### <a name="wildcard-app-id"></a>와일드 카드 앱 ID
 
-또는와 `com.xamarin.*`같은 세 개의 프로젝트 모두와 일치 하는 와일드 카드 **앱 ID** 를 만들 수 있습니다.
+또는 `com.xamarin.*`와 같은 세 프로젝트 모두와 일치 하는 와일드 카드 **앱 ID** 를 만들 수 있습니다.
 
 일부 기능은 와일드 카드 앱 ID (예: 푸시 알림)와 함께 사용할 수 없습니다. 앱이 이러한 기능을 필요로 하는 경우 명시적인 앱 Id를 만들어야 합니다.
 
@@ -78,7 +78,7 @@ ms.locfileid: "70284670"
 
 ### <a name="certificates-identifiers--profiles"></a>인증서, 식별자 & 프로필
 
-앱 그룹을 사용 하려면 **앱 그룹** 화면에서 항목을 만듭니다. 아래 예제에서 그룹은 일반적으로 앱 id에 사용 되는 것과 동일한 역방향 DNS 스타일로 이름이 지정 되지만 `group.` 접두사 (필수)가 사용 됩니다.
+앱 그룹을 사용 하려면 **앱 그룹** 화면에서 항목을 만듭니다. 아래 예제에서 그룹은 일반적으로 앱 Id에 사용 되는 것과 동일한 역방향 DNS 스타일로 이름이 지정 되지만 `group.` 접두사 (필수)가 사용 됩니다.
 
 ![식별자입니다.](images/appgroups-new-sml.png)
 
@@ -100,7 +100,7 @@ Apple Watch 앱 ID에서 앱 그룹을 사용 하도록 설정 **하지** 마세
 - iOS 앱 프로젝트
 - 확장 프로젝트 감시
 
-을 선택합니다.![Info.plist 편집기](images/entitlements-plist-sml.png)
+이어야 합니다.![Info.plist 편집기](images/entitlements-plist-sml.png)
 
 Watch 앱 프로젝트에서 자격을 사용 하도록 설정 **하지** 마세요. Watch 자체에서 사용 하도록 설정할 필요는 없습니다.
 

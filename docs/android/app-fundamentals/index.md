@@ -4,15 +4,15 @@ description: 핵심 응용 프로그램 개념
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: af7ba83b9026a91028f4ffa9894d564d5ff13eb8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: eb581d68f3b7e57975b6979fe1005b1fac411ec8
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755294"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73019230"
 ---
 # <a name="xamarinandroid-application-fundamentals"></a>Xamarin Android 응용 프로그램 기본 사항
 
@@ -46,7 +46,7 @@ ms.locfileid: "70755294"
 
 이 가이드에서는 Xamarin Android에서 시스템 수준 브로드캐스트에 응답 하는 Android 구성 요소인 브로드캐스트 수신기를 만들고 사용 하는 방법에 대해 설명 합니다.
 
-## <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[사용 권한](~/android/app-fundamentals/permissions.md)
+## <a name="permissionsandroidapp-fundamentalspermissionsmd"></a>[권한](~/android/app-fundamentals/permissions.md)
 
 Mac용 Visual Studio 또는 Visual Studio에 기본 제공 되는 도구 지원을 사용 하 여 Android 매니페스트에 사용 권한을 만들고 추가할 수 있습니다. 이 문서에서는 Visual Studio 및 Xamarin Studio에서 사용 권한을 추가 하는 방법에 대해 설명 합니다.
 

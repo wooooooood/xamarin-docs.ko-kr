@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios 게임의 그래픽 및 오디오 �
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b1fa8cd69a2255d462066be88ad7ef695b71076e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fd79153520036ae49fd6fd9abe652e2c7459b30d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032508"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>Xamarin.ios의 iOS 게임 Api
 
@@ -21,7 +21,7 @@ _이 문서에서는 Xamarin.ios 게임의 그래픽 및 오디오 기능을 개
 Apple은 Xamarin.ios 앱에서 게임 그래픽과 오디오를 보다 쉽게 구현할 수 있도록 하는 iOS 9의 게임 Api에 대 한 몇 가지 기술적 향상을 만들었습니다.
 여기에는 높은 수준의 프레임 워크를 통한 개발 용이성 및 향상 된 속도 및 그래픽 기능을 위한 iOS 장치의 GPU 활용 포함 됩니다.
 
-[![](images/flocking01.png "Flocking 실행 되는 앱의 예")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "An example of an app running flocking")](images/flocking01.png#lightbox)
 
 여기에는 GameplayKit, ReplayKit, Model i/o, MetalKit 및 메탈 Performance 셰이더가 포함 되며, 이러한 기능에는 금속, SceneKit 및 SpriteKit의 새롭고 향상 된 기능이 포함 됩니다.
 
@@ -56,7 +56,7 @@ Pathfinding는 게임 보드 주위에 있는 게임의 AI 요소에 대 한 기
 
 다음 맵을 고려 하십시오.
 
-[![](images/gkpathfindpath.png "예제 pathfinding 맵")](images/gkpathfindpath.png#lightbox)
+[![](images/gkpathfindpath.png "An example pathfinding map")](images/gkpathfindpath.png#lightbox)
 
 Pathfinding를 사용 C# 하 여이 코드는 맵을 통해 찾을 수 있습니다.
 
@@ -145,7 +145,7 @@ protected Func<GKRuleSystem, bool> mod(int m)
 }
 ```
 
-지정 된 규칙 집합 (`GKRule`) 및 알려진 입력 집합을 기반으로 하는 전문가 시스템 (`GKRuleSystem`)은 위의 예제`fizzbuzz` 에 대 한 예측 가능한 출력을 만듭니다.
+지정 된 규칙 집합 (`GKRule`) 및 알려진 입력 집합에 따라 전문가 시스템 (`GKRuleSystem`)은 예측 가능한 출력 (위 예제에서는`fizzbuzz`)을 만듭니다.
 
 ### <a name="flocking"></a>Flocking
 
@@ -365,13 +365,13 @@ public override void ViewWillLayoutSubviews ()
 
 실행 하면 약간의 애니메이션이 적용 된 _"Boids"_ 는 손가락 탭 주위에 flock 됩니다.
 
-[![](images/flocking01.png "작은 애니메이션 Boids는 손가락 탭 주위에 flock 됩니다.")](images/flocking01.png#lightbox)
+[![](images/flocking01.png "The little animated Boids will flock around the finger taps")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>기타 Apple 예
 
 Apple은 위에 나와 있는 샘플 외에도 및 Xamarin.ios로 C# 트랜스 코딩 될 수 있는 다음과 같은 샘플 앱을 제공 했습니다.
 
-- [FourInARow: GameplayKit Minmax 전략가 (상대 AI) 사용](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
+- [FourInARow: 상대 AI에 GameplayKit Minmax 전략가 사용](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
 - [AgentsCatalog: GameplayKit에서 에이전트 시스템 사용](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
 - [DemoBots: SpriteKit 및 GameplayKit를 사용 하 여 플랫폼 간 게임 빌드](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
@@ -427,7 +427,7 @@ Apple의 모델 i/o 프레임 워크는 3D 자산 (예: 모델 및 관련 리소
 
 Apple의 새 ReplayKit 프레임 워크를 사용 하면 게임 플레이 기록을 iOS 게임에 쉽게 추가 하 고 사용자가 앱 내에서이 비디오를 빠르고 쉽게 편집 하 고 공유할 수 있습니다.
 
-자세한 내용은 Apple의 [replaykit 및 Game Center 비디오](https://developer.apple.com/videos/wwdc/2015/?id=605) 및 해당 [demobots를 참조 하세요. SpriteKit 및 GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 앱을 사용 하 여 플랫폼 간 게임을 빌드하는 중입니다.
+자세한 내용은 Apple의 [ReplayKit 및 Game Center 비디오](https://developer.apple.com/videos/wwdc/2015/?id=605) 및 해당 [Demobots: SpriteKit and GameplayKit 샘플 앱을 사용 하 여 플랫폼 간 게임 빌드](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 를 참조 하세요.
 
 ## <a name="scenekit"></a>SceneKit
 
@@ -440,10 +440,10 @@ Apple의 새 ReplayKit 프레임 워크를 사용 하면 게임 플레이 기록
 Apple은 iOS 9 용 SceneKit에 다음과 같은 새 기능을 추가 했습니다.
 
 - 이제 Xcode는 Xcode 내에서 직접 장면을 직접 편집 하 여 게임 및 대화형 3D 앱을 신속 하 게 빌드할 수 있는 장면 편집기를 제공 합니다.
-- `SCNView` 및`SCNSceneRenderer` 클래스를 사용 하 여 지원 되는 iOS 장치에서 금속 렌더링을 사용 하도록 설정할 수 있습니다.
-- `SCNAudioPlayer` 및`SCNNode` 클래스를 사용 하 여 플레이어 위치를 iOS 앱에 자동으로 추적 하는 공간 오디오 효과를 추가할 수 있습니다.
+- `SCNView` 및 `SCNSceneRenderer` 클래스를 사용 하 여 지원 되는 iOS 장치에서 금속 렌더링을 사용 하도록 설정할 수 있습니다.
+- `SCNAudioPlayer` 및 `SCNNode` 클래스를 사용 하 여 플레이어 위치를 iOS 앱에 자동으로 추적 하는 공간 오디오 효과를 추가할 수 있습니다.
 
-자세한 내용은 [SceneKit 설명서](~/ios/platform/introduction-to-ios8.md#scenekit) 및 Apple의 [SceneKit Framework 참조](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) 및 [Fox를 참조 하세요. Xcode 장면 편집기](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) 샘플 프로젝트를 사용 하 여 SceneKit 게임을 빌드합니다.
+자세한 내용은 [SceneKit 설명서](~/ios/platform/introduction-to-ios8.md#scenekit) 및 Apple의 [SceneKit 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) 및 [Fox: Xcode 장면 편집기를 사용 하 여 SceneKit 게임 빌드](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) 샘플 프로젝트를 참조 하세요.
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -460,7 +460,7 @@ Apple은 iOS 9 용 SpriteKit에 다음과 같은 새 기능을 추가 했습니�
 - 새 카메라 노드 (`SKCameraNode`) 개체를 사용 하 여 손쉬운 스크롤 게임 지원.
 - 금속을 지 원하는 iOS 장치에서 SpriteKit는 사용자 지정 OpenGL ES 셰이더를 이미 사용 하 고 있는 경우에도 렌더링에 자동으로 사용 됩니다.
 
-자세한 내용은 [SpriteKit 설명서](~/ios/platform/introduction-to-ios8.md#spritekit) Apple의 [SpriteKit Framework 참조](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) 및 해당 [demobots를 참조 하세요. SpriteKit 및 GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 샘플 앱을 사용 하 여 플랫폼 간 게임을 빌드하는 중입니다.
+자세한 내용은 [SpriteKit 설명서](~/ios/platform/introduction-to-ios8.md#spritekit) Apple의 [SpriteKit Framework 참조](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) 및 해당 [Demobots: SpriteKit 및 GameplayKit 샘플 앱을 사용 하 여 플랫폼 간 게임 빌드](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) 를 참조 하세요.
 
 ## <a name="summary"></a>요약
 

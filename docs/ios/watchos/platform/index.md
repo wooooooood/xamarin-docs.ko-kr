@@ -4,15 +4,15 @@ description: 이 문서는 Apple Pay, 알림, 복잡, 사전 제안, 체력 앱 
 ms.prod: xamarin
 ms.assetid: 13F23E01-BAED-43EB-A70E-3B30EF53D379
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2b987992bcb3dd4d2575a46e21a2302ed78d8d70
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: e571132b5f1e30bececb8302f2dacfcd908ad42e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282282"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028289"
 ---
 # <a name="watchos-platform-features"></a>watchOS 플랫폼 기능
 
@@ -46,7 +46,7 @@ Watch 앱에서 사용자 지정 알림 처리를 제공 하는 방법을 알아
 
 ## <a name="proactive-suggestionsioswatchosplatformproactive-suggestionsmd"></a>[사전 권장 사항](~/ios/watchos/platform/proactive-suggestions.md)
 
-watchOS 3을 사용 하면 앱에서 지정 된 컨텍스트 내에서 사용자에 게 정보를 사전에 제공할 수 있습니다. 이 기능을 지원 하기 위해 [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) 에는 나중 `MapItem` 에 다른 앱에서 사용할 수 있도록 앱에서 위치 정보를 제공할 수 있도록 하는 속성이 포함 되어 있습니다.
+watchOS 3을 사용 하면 앱에서 지정 된 컨텍스트 내에서 사용자에 게 정보를 사전에 제공할 수 있습니다. 이 기능을 지원 하기 위해 [NSUserActivity](https://developer.apple.com/reference/foundation/nsuseractivity) 에는 나중에 다른 앱에서 사용할 수 있도록 앱에서 위치 정보를 제공할 수 있도록 하는 `MapItem` 속성이 포함 되어 있습니다.
 
 ## <a name="quick-interaction-techniquesioswatchosplatformquick-interaction-techniquesmd"></a>[빠른 상호 작용 기술](~/ios/watchos/platform/quick-interaction-techniques.md)
 
@@ -54,4 +54,4 @@ watchOS 3을 사용 하면 앱에서 지정 된 컨텍스트 내에서 사용자
 
 ## <a name="workout-app-enhancementsioswatchosplatformworkout-appsmd"></a>[향상 된 응용 프로그램 향상](~/ios/watchos/platform/workout-apps.md)
 
-WatchOS 3의 새로운 기능으로, 진행 중인 관련 앱은 Apple Watch의 배경에서 실행할 수 있습니다. 이 기능을 사용 하도록 설정 하 고 HealthKit 데이터에 대 한 액세스 권한을 얻으려면 앱은 `WKBackgroundModes` 값 `workout-processing`을 사용 `Info.plist` 하 여 파일에 키를 포함 해야 합니다.
+WatchOS 3의 새로운 기능으로, 진행 중인 관련 앱은 Apple Watch의 배경에서 실행할 수 있습니다. 이 기능을 사용 하도록 설정 하 고 HealthKit 데이터에 대 한 액세스 권한을 얻으려면 앱은 `workout-processing`값을 사용 하 여 `Info.plist` 파일에 `WKBackgroundModes` 키를 포함 해야 합니다.

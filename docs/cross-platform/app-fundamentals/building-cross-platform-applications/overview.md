@@ -3,15 +3,15 @@ title: 플랫폼 간 응용 프로그램 빌드 개요
 description: 이 문서에서는 플랫폼 간 응용 프로그램을 빌드하기 위한 개략적인 개요를 제공 합니다. 의 C#값, MVC/MVVM와 같은 디자인 패턴, 네이티브 ui를 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: c7673e7cd79844130117963bc56fd6e1b3c2b5c7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d839e0141f14f4ba86897b128bf2a8c0a79548d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70758103"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016919"
 ---
 # <a name="building-cross-platform-applications-overview"></a>플랫폼 간 응용 프로그램 빌드 개요
 
@@ -26,7 +26,7 @@ ms.locfileid: "70758103"
 Xamarin 플랫폼 간 앱을 만들기 위한 핵심 사항은 다음과 같습니다.
 
 - 에서 C#앱을 **사용 C#**  합니다. 에서 C# 작성 된 기존 코드는 Xamarin을 매우 쉽게 사용 하 여 IOS 및 Android로 이식할 수 있으며 Windows 앱에서 사용할 수 있습니다.
-- **MVC 또는 MVVM 디자인 패턴 활용** -모델/뷰/컨트롤러 패턴을 사용 하 여 응용 프로그램의 사용자 인터페이스를 개발 합니다. 모델/뷰/컨트롤러 접근 방식이 나 "모델"과 나머지를 명확 하 게 구분 하는 모델/뷰/ViewModel 방식을 사용 하 여 응용 프로그램을 설계 합니다. 응용 프로그램에서 각 플랫폼 (iOS, Android, Windows, Mac)의 네이티브 사용자 인터페이스 요소를 사용 하는 부분을 확인 하 고 응용 프로그램을 두 개의 구성 요소로 분할 하기 위한 지침으로 사용 합니다. "Core" 및 "사용자 인터페이스"입니다.
+- **MVC 또는 MVVM 디자인 패턴 활용** -모델/뷰/컨트롤러 패턴을 사용 하 여 응용 프로그램의 사용자 인터페이스를 개발 합니다. 모델/뷰/컨트롤러 접근 방식이 나 "모델"과 나머지를 명확 하 게 구분 하는 모델/뷰/ViewModel 방식을 사용 하 여 응용 프로그램을 설계 합니다. 응용 프로그램에서 각 플랫폼 (iOS, Android, Windows, Mac)의 네이티브 사용자 인터페이스 요소를 사용 하는 부분을 확인 하 고 응용 프로그램을 "Core" 및 "사용자 인터페이스"의 두 가지 구성 요소로 분할 하는 지침으로 사용 합니다.
 - **네이티브 Ui 빌드** -각 OS 특정 응용 프로그램은 다른 사용자 인터페이스 계층을 제공 합니다 (네이티브 C# UI 디자인 도구를 사용 하 여에서 구현 됨).
 
 1. IOS에서 UIKit Api를 사용 하 여 네이티브 응용 프로그램을 만들고, 선택적으로 Xamarin의 iOS designer를 활용 하 여 UI를 시각적으로 만듭니다.
@@ -53,7 +53,7 @@ Xamarin Forms 프로젝트는 모든 플랫폼에서 지원 되며 Xamarin.ios X
 
 응용 프로그램 아키텍처를 계층화 한 후 플랫폼의 핵심 기능을 재사용 가능한 핵심 라이브러리로 이동 하 여 책임 분리의 원칙에 따라 아래 그림 처럼 플랫폼 간에 코드 공유를 최대화할 수 있습니다. 예제
 
- ![](overview-images/layers2.png "응용 프로그램 아키텍처를 계층화 한 후 플랫폼의 핵심 기능을 재사용 가능한 핵심 라이브러리로 이동 하 여 책임 분리 원칙에 따라 플랫폼 간 코드 공유를 최대화할 수 있습니다.")
+ ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
  <a name="Case_Studies" />
 

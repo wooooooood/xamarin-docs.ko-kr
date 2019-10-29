@@ -4,19 +4,19 @@ description: 이 문서는 Xamarin.ios에서 핵심 이미지, 핵심 그래픽 
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 84e59c81e08bc354199565cb0a91b0aec0797feb
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 523ecb8d579ca084941a987468ff243595b8c4af
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70286076"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032436"
 ---
 # <a name="graphics-and-animation-in-ios"></a>iOS의 그래픽 및 애니메이션
 
-![이미지/] a s p _ o m p s .png (images/00-final-app.png "예제 앱 실행")
+![이미지/a s p _ o m p s .png](images/00-final-app.png "예제 앱 실행")
 
 ## <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[핵심 이미지](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 

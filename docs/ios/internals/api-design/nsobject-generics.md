@@ -4,21 +4,21 @@ description: 이 문서에서는 NSObject의 일반 서브 클래스를 만드�
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 136efbd936bc39563c419a87ed48f6fc5436efa9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 279fcac1611038613bf442e1b766fda45dd5a429
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768540"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022360"
 ---
 # <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Xamarin.ios에서 NSObject의 일반 서브 클래스
 
 ## <a name="using-generics-with-nsobjects"></a>NSObjects에서 제네릭을 사용 하는 경우
 
-의 `NSObject`서브 클래스에서 제네릭을 사용할 수 있습니다 (예: [uiview](xref:UIKit.UIView):
+`NSObject`의 서브 클래스에서 제네릭을 사용할 수 있습니다 (예: [Uiview](xref:UIKit.UIView)).
 
 ```csharp
 class Foo<T> : UIView {
@@ -30,11 +30,11 @@ class Foo<T> : UIView {
 }
 ```
 
-하위 클래스가 `NSObject` 목표-C 런타임에 등록 되기 때문에 `NSObject` 형식의 제네릭 서브 클래스에서 가능한 작업에 대 한 몇 가지 제한 사항이 있습니다.
+`NSObject` 하위 클래스를 사용 하는 개체는 목적-C 런타임에 등록 되기 때문에 `NSObject` 형식의 제네릭 서브 클래스에서 가능한 몇 가지 제한 사항이 있습니다.
 
 ## <a name="considerations-for-generic-subclasses-of-nsobject"></a>NSObject의 제네릭 서브 클래스에 대 한 고려 사항
 
-이 문서에서는의 `NSObjects`제네릭 서브 클래스에 대해 제한적으로 지원 되는 제한 사항에 대해 자세히 설명 합니다.
+이 문서에서는 `NSObjects`의 제네릭 서브 클래스에 대 한 제한 된 지원의 제한 사항에 대해 자세히 설명 합니다.
 
 ### <a name="generic-type-arguments-in-member-signatures"></a>멤버 시그니처의 제네릭 형식 인수
 
@@ -52,7 +52,7 @@ class Generic<T> : NSObject where T: NSObject
 }
 ```
 
-**이유**: 제네릭 형식 매개 변수 `NSObject`는 이므로에 대 한 `myMethod:` 선택기 시그니처는 목표-C에 안전 하 게 노출 될 수 있습니다 `NSObject` (항상 또는이의 서브 클래스).
+**이유**: 제네릭 형식 매개 변수는 `NSObject`이므로 `myMethod:`에 대 한 선택기 서명이 목적-C에 안전 하 게 노출 될 수 있습니다 (항상 `NSObject` 또는 하위 클래스).
 
 **잘못**됨:
 
@@ -66,7 +66,7 @@ class Generic<T> : NSObject
 }
 ```
 
-**이유**: 시그니처는 제네릭 형식의 `T`정확한 형식에 따라 달라 지므로 목표-c 코드에서 호출할 수 있는 내보낸 멤버에 대 한 목표-c 시그니처를 만들 수는 없습니다.
+**이유**: 시그니처는 `T`제네릭 형식의 정확한 형식에 따라 달라 지므로, 목표-c 코드에서 호출할 수 있는 내보낸 멤버에 대 한 목표-C 시그니처를 만들 수는 없습니다.
 
 **양호**:
 
@@ -97,13 +97,13 @@ class Generic<T, U> : NSObject where T: NSObject
 }
 ```
 
-**이유**: `T` 내보낸 `MyMethod` 목표 C의 매개 변수는로 `NSObject`제한 되 고 제한 되지 않는 형식은 `U` 시그니처의 일부가 아닙니다.
+**이유**: 목표-C에서 내보낸 `MyMethod`의 `T` 매개 변수는 `NSObject`으로 제한 되 고 제한 되지 않는 형식 `U`는 서명의 일부가 아닙니다.
 
 ### <a name="instantiations-of-generic-types-from-objective-c"></a>목표에서 제네릭 형식의 인스턴스화-C
 
 목표-C에서 제네릭 형식의 인스턴스화는 허용 되지 않습니다. 이는 일반적으로 xib 또는 storyboard에서 관리 되는 형식을 사용할 때 발생 합니다.
 
-을 `IntPtr` (를) 사용 하는 생성자를 노출 하는이 클래스 정의를 살펴보겠습니다 (네이티브 목표- C# C 인스턴스에서 개체를 구성 하는 xamarin.ios 방법).
+`IntPtr`를 사용 하는 생성자를 노출 하는이 클래스 정의를 고려 합니다 (네이티브 목표-C 인스턴스에서 C# 개체를 구성 하는 xamarin.ios 방법).
 
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -117,7 +117,7 @@ class Generic<T> : NSObject where T : NSObject
 
 이는 목표 C에 제네릭 형식의 개념이 없고 만들 정확한 제네릭 형식을 지정할 수 없기 때문에 발생 합니다.
 
-이 문제는 제네릭 형식의 특수 한 하위 클래스를 만들어 해결할 수 있습니다. 예:
+이 문제는 제네릭 형식의 특수 한 하위 클래스를 만들어 해결할 수 있습니다. 예를 들면,
 
 ```csharp
 class Generic<T> : NSObject where T : NSObject
@@ -131,7 +131,7 @@ class GenericUIView : Generic<UIView>
 }
 ```
 
-이제 더 이상 모호성이 없으므로 클래스 `GenericUIView` 를 xib 또는 storyboard에서 사용할 수 있습니다.
+이제 모호성이 없으므로 클래스 `GenericUIView` xib 또는 storyboard에서 사용할 수 있습니다.
 
 ## <a name="no-support-for-generic-methods"></a>제네릭 메서드 지원 안 함
 
@@ -149,7 +149,7 @@ class MyClass : NSObject
 }
 ```
 
-**이유**: 이는 메서드가 목표-C에서 호출 될 때 형식 인수 `T` 에 사용할 형식을 알 수 없기 때문에 허용 되지 않습니다.
+**이유**: xamarin.ios에서 메서드가 호출 될 때 `T` 형식 인수에 사용할 형식을 알 수 없으므로이는 허용 되지 않습니다.
 
 대신 특수화 된 메서드를 만들고 대신 내보내는 것이 좋습니다.
 
@@ -169,7 +169,7 @@ class MyClass : NSObject
 
 ### <a name="no-exported-static-members-allowed"></a>내보낸 정적 멤버를 사용할 수 없습니다.
 
-의 `NSObject`제네릭 서브 클래스 내에서 호스팅되는 경우 목표-C에 정적 멤버를 노출할 수 없습니다.
+`NSObject`의 일반 서브 클래스 내에서 호스팅되는 경우 목표-C에 정적 멤버를 노출할 수 없습니다.
 
 지원 되지 않는 시나리오의 예:
 
@@ -186,11 +186,11 @@ class Generic<T> : NSObject where T : NSObject
 }
 ```
 
-**문서화** 제네릭 메서드와 마찬가지로 Xamarin.ios 런타임은 제네릭 형식 인수 `T`에 사용할 형식을 알 수 있어야 합니다.
+**이유:** 제네릭 메서드와 마찬가지로 Xamarin.ios 런타임은 `T`제네릭 형식 인수에 사용할 형식을 알 수 있어야 합니다.
 
-인스턴스 자체를 사용 하는 경우 인스턴스 자체가 사용 `Generic<T>`됩니다. 인스턴스는 아니지만 `Generic<SomeSpecificClass>`항상 이지만 정적 멤버의 경우에는이 정보가 제공 되지 않습니다.
+인스턴스 자체를 사용 하는 경우 인스턴스 자체가 사용 됩니다. 인스턴스는 `Generic<T>`되지 않으므로 항상 `Generic<SomeSpecificClass>`) 이지만 정적 멤버의 경우에는이 정보가 제공 되지 않습니다.
 
-이는 해당 멤버가 어떤 방식으로든 형식 인수 `T` 를 사용 하지 않는 경우에도 적용 됩니다.
+이는 문제의 멤버가 형식 인수 `T` 사용 하지 않는 경우에도 적용 됩니다.
 
 이 경우에는 특수 한 하위 클래스를 만드는 방법이 있습니다.
 
