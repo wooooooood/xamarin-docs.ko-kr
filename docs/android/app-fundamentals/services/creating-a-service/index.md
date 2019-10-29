@@ -3,22 +3,22 @@ title: 서비스 만들기
 ms.prod: xamarin
 ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 4cec06287963fb607ba2f523c6f47e56c08e655f
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: 658bb65c9f9dea2c68b782736de02d95df368dd3
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70754901"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73024863"
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
 Xamarin Android 서비스는 Android 서비스의 두 가지 inviolable 규칙을 준수 해야 합니다.
 
-- [@No__t_1](xref:Android.App.Service)를 확장 해야 합니다.
-- [@No__t_1](xref:Android.App.ServiceAttribute)로 데코 레이트 되어야 합니다.
+- [`Android.App.Service`](xref:Android.App.Service)를 확장 해야 합니다.
+- [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute)로 데코 레이트 되어야 합니다.
 
 Android 서비스의 또 다른 요구 사항은 **Androidmanifest** 에 등록 하 고 고유한 이름을 지정 해야 한다는 것입니다. Xamarin.ios는 빌드 시 필요한 XML 특성을 사용 하 여 매니페스트에 서비스를 자동으로 등록 합니다.
 
@@ -56,7 +56,7 @@ public class DemoService : Service
 
 서비스는 서비스를 만들 때 호출 되는 콜백 메서드를 사용 하 여 자체 수명 주기를 가집니다. 호출 되는 메서드는 서비스 유형에 따라 달라 집니다. 시작 된 서비스는 바인딩된 서비스와 다른 수명 주기 메서드를 구현 해야 하는 반면, 하이브리드 서비스는 시작 된 서비스와 바인딩된 서비스 모두에 대 한 콜백 메서드를 구현 해야 합니다. 이러한 메서드는 모두 `Service` 클래스의 멤버입니다. 서비스를 시작 하는 방법에 따라 호출 되는 수명 주기 방법이 결정 됩니다. 이러한 수명 주기 메서드는 나중에 자세히 설명 합니다.
 
-기본적으로 서비스는 Android 응용 프로그램과 동일한 프로세스에서 시작 됩니다. @No__t_0 속성을 true로 설정 하 여 자체 프로세스에서 서비스를 시작할 수 있습니다.
+기본적으로 서비스는 Android 응용 프로그램과 동일한 프로세스에서 시작 됩니다. `ServiceAttribute.IsolatedProcess` 속성을 true로 설정 하 여 자체 프로세스에서 서비스를 시작할 수 있습니다.
 
 ```csharp
 [Service(IsolatedProcess=true)]

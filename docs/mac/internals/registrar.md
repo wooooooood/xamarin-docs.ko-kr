@@ -1,20 +1,20 @@
 ---
-title: Xamarin.Mac registrar
+title: Xamarin.ios 등록 기관
 description: 이 문서에서는 Xamarin.ios 등록 기관 및 동적, 정적 및 부분 정적 (하이브리드) 사용 구성의 목적을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: d44f445b0c3bcc6fd498372f6cdf3e20be39d5b5
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 991d9b2d911b5aa4ac07225fd1df34877451df49
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290090"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017315"
 ---
-# <a name="xamarinmac-registrar"></a>Xamarin.Mac registrar
+# <a name="xamarinmac-registrar"></a>Xamarin.ios 등록 기관
 
 _이 문서에서는 Xamarin.ios 등록 기관의 용도와 다양 한 사용 구성에 대해 설명 합니다._
 
@@ -44,4 +44,4 @@ Xamarin.ios는 관리 되는 (.NET) 세계와 Cocoa의 런타임 간 격차를 �
 - NSObject에서 파생 된 클래스를 사용 하 여 시작한 후 플러그 인 로드
 - NSObject에서 파생 되는 동적으로 생성 되는 클래스 인스턴스
 
-등록자는 시작 시 일부 형식을 등록 해야 한다는 것을 알 수 없습니다. 이 `ObjCRuntime.Runtime.RegisterAssembly` 메서드는 등록 자가 고려할 추가 형식이 있음을 알리기 위해 제공 됩니다.
+등록자는 시작 시 일부 형식을 등록 해야 한다는 것을 알 수 없습니다. 등록자에 게 고려할 추가 형식이 있음을 알리기 위해 `ObjCRuntime.Runtime.RegisterAssembly` 메서드가 제공 됩니다.

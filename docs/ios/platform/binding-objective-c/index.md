@@ -5,24 +5,24 @@ ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 24203d8a3a4356fb4de08d132c164d9f2d19a0c9
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 61d1adfc997b34302f1f89f56653af906ca90135
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291796"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022218"
 ---
 # <a name="binding-ios-libraries"></a>IOS 라이브러리 바인딩
 
 다음 링크를 따라 CocoaPods 및 Xamarin.ios에 대 한 바인딩 목표-C 라이브러리 및에 대해 알아보세요.
 
 - [**개요**](~/cross-platform/macios/binding/overview.md) -
-  바인딩이 작동 하는 방식을 설명 합니다.
-- [**바인딩 목표-C 라이브러리**](~/cross-platform/macios/binding/objective-c-libraries.md) -
-  Xamarin 프로젝트에서 사용할 목적-C 라이브러리를 바인딩하는 방법에 대 한 지침입니다.
+  바인딩의 작동 방식을 설명 합니다.
+- [**바인딩 목표-c 라이브러리**](~/cross-platform/macios/binding/objective-c-libraries.md) 는 Xamarin 프로젝트에서 사용할 목적-c 라이브러리를 바인딩하는 방법에 대 한 지침을 -
+  합니다.
 - [**형식 정의 참조 가이드**](~/cross-platform/macios/binding/binding-types-reference.md) -
   바인딩 생성 프로세스를 구동 하기 위해 바인딩 작성자가 사용할 수 있는 모든 특성을 설명 합니다.
 

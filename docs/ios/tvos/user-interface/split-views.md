@@ -4,21 +4,21 @@ description: 이 문서에서는 Xamarin을 사용 하 여 빌드된 앱에서 t
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 5c147b43caf3018cde8870adb25bb73cb08f53ee
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e42912add9dd94b9cce16d725a456b1b4da30e35
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768506"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022205"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Xamarin에서 tvOS 분할 뷰 컨트롤러 작업
 
 분할 뷰 컨트롤러는 마스터 및 세부 정보 보기 컨트롤러를 동시에 화면에 표시 하 고 관리 합니다. 분할 뷰 컨트롤러는 마스터 뷰 (왼쪽의 작은 섹션) 및 관련 세부 정보 보기 (오른쪽의 더 큰 섹션)에 영구적이 고 중요 한 콘텐츠를 표시 하는 데 사용 됩니다.
 
-[![](split-views-images/intro01.png "샘플 분할 뷰")](split-views-images/intro01.png#lightbox)
+[![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -28,7 +28,7 @@ ms.locfileid: "70768506"
 
 또한 필요에 따라 마스터 뷰 컨트롤러를 숨기 거 나 표시할 수 있습니다. 
 
-[![](split-views-images/intro02.png "마스터 뷰 컨트롤러 숨김")](split-views-images/intro02.png#lightbox)
+[![](split-views-images/intro02.png "The Master View Controller hidden")](split-views-images/intro02.png#lightbox)
 
 분할 뷰 컨트롤러는 주로 마스터 뷰의 범주 및 자세히 보기의 필터링 된 결과를 사용 하 여 필터링 가능한 콘텐츠 목록을 표시 하는 데 사용 됩니다. 일반적으로 왼쪽에는 테이블 뷰로 표시 되 고 오른쪽에는 [컬렉션 뷰가](~/ios/tvos/user-interface/collection-views.md) 표시 됩니다.
 
@@ -51,18 +51,18 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
 1. **Solution Pad**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 끌어서 뷰에 놓습니다. 
 
-    [![](split-views-images/activity01.png "분할 뷰 컨트롤러")](split-views-images/activity01.png#lightbox)
+    [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
 1. 기본적으로 iOS Designer는 마스터 보기에 탐색 컨트롤러 및 뷰 컨트롤러를 설치 합니다. 앱의 요구 사항에 맞지 않는 경우 삭제 하기만 하면 됩니다.
 1. 기본 마스터 뷰를 제거 하는 경우 새 뷰 컨트롤러를 디자인 화면으로 끌어 놓습니다. 
 
-    [![](split-views-images/activity02.png "뷰 컨트롤러")](split-views-images/activity02.png#lightbox)
+    [![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
 1. 컨트롤을 클릭 하 고 분할 뷰 컨트롤러에서 새 마스터 뷰 컨트롤러로 끕니다. 
 1. **팝업 메뉴**에서 **마스터** 를 선택 합니다. 
 
-    [![](split-views-images/activity03.png "팝업 메뉴에서 마스터를 선택 합니다.")](split-views-images/activity03.png#lightbox)
+    [![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
 1. 마스터 및 세부 정보 보기의 내용 디자인: 
 
-    [![](split-views-images/activity04.png "예제 레이아웃")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
 1. 코드 C# 에서 UI 컨트롤을 사용 하려면 **Properties Pad** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
 1. 변경 내용을 저장 하 고 Mac용 Visual Studio로 돌아갑니다.
 
@@ -71,18 +71,18 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 1. **도구 상자** 에서 **분할 뷰 컨트롤러** 를 끌어서 뷰에 놓습니다. 
 
-    [![](split-views-images/activity01-vs.png "분할 뷰 컨트롤러")](split-views-images/activity01-vs.png#lightbox)
+    [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
 1. 기본적으로 iOS Designer는 마스터 뷰에서 탐색 컨트롤러 및 뷰 컨트롤러를 추가 합니다. 앱의 요구 사항에 맞지 않는 경우 삭제 하기만 하면 됩니다.
 1. 기본 마스터 뷰를 제거 하는 경우 새 뷰 컨트롤러를 디자인 화면으로 끌어 놓습니다. 
 
-    [![](split-views-images/activity02-vs.png "뷰 컨트롤러")](split-views-images/activity02-vs.png#lightbox)
+    [![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
 1. 컨트롤을 클릭 하 고 분할 뷰 컨트롤러에서 새 마스터 뷰 컨트롤러로 끕니다. 
 1. **팝업 메뉴**에서 **마스터** 를 선택 합니다. 
 
-    [![](split-views-images/activity03-vs.png "팝업 메뉴에서 마스터를 선택 합니다.")](split-views-images/activity03-vs.png#lightbox)
+    [![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
 1. 마스터 및 세부 정보 보기의 내용 디자인: 
 
-    [![](split-views-images/activity04.png "콘텐츠 레이아웃")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
 1. 코드에서 C# UI 컨트롤을 사용 하려면 **속성 탐색기** 의 **위젯 탭** 에서 **이름을** 할당 합니다.
 1. 변경 내용을 저장합니다.
 
@@ -100,7 +100,7 @@ TvOS 앱에서 분할 뷰 컨트롤러를 사용 하는 가장 쉬운 방법은 
 
 ### <a name="accessing-master-and-detail"></a>마스터 및 세부 정보 액세스
 
-마스터 및 세부 뷰 컨트롤러에 프로그래밍 방식으로 액세스 해야 하는 경우 분할 `ViewControllers` 뷰 컨트롤러의 속성을 사용 합니다. 예를 들어:
+마스터 및 세부 정보 보기 컨트롤러에 프로그래밍 방식으로 액세스 해야 하는 경우 분할 뷰 컨트롤러의 `ViewControllers` 속성을 사용 합니다. 예를 들면,
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -122,7 +122,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 public DetailViewController DetailController { get; set;}
 ```
 
-분할 뷰 컨트롤러에서 `ViewDidLoad` 메서드를 재정의 하 고 두 뷰를 함께 연결 합니다. 예를 들어:
+분할 뷰 컨트롤러에서 `ViewDidLoad` 메서드를 재정의 하 고 두 뷰를 함께 연결 합니다. 예를 들면,
 
 ```csharp
 public override void ViewDidLoad ()
@@ -146,7 +146,7 @@ public override void ViewDidLoad ()
 
 ### <a name="showing-and-hiding-master"></a>마스터 표시 및 숨기기
 
-필요에 따라 분할 뷰 컨트롤러의 `PreferredDisplayMode` 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예:
+필요에 따라 분할 뷰 컨트롤러의 `PreferredDisplayMode` 속성을 사용 하 여 마스터 뷰 컨트롤러를 표시 하거나 숨길 수 있습니다. 예를 들면,
 
 ```csharp
 // Show hide split view
@@ -157,7 +157,7 @@ if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryH
 }
 ```
 
-열거형 `UISplitViewControllerDisplayMode` 은 다음 중 하나로 마스터 뷰 컨트롤러를 표시 하는 방법을 정의 합니다.
+`UISplitViewControllerDisplayMode` 열거형은 마스터 뷰 컨트롤러가 다음 중 하나로 표시 되는 방법을 정의 합니다.
 
 - **자동** TvOS는 마스터 및 세부 정보 보기의 표시를 제어 합니다.
 - **Primaryhidden** -마스터 뷰 컨트롤러를 숨깁니다.

@@ -4,15 +4,15 @@ description: 이 문서는 Xamarin.ios 개발자가 사용할 수 있는 다양 
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2979b51c954ab891da5e452e579a650a013a7572
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fbf847ef49be83494f593291fbb0a00934bc3ced
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70289532"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022039"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Xamarin.ios의 사용자 인터페이스 컨트롤
 
@@ -28,7 +28,7 @@ UIButton 클래스는 iOS 화면에서 다양 한 종류의 단추를 표시 하
 
 ## <a name="collection-viewsuicollectionviewmd"></a>[컬렉션 뷰](uicollectionview.md)
 
-`UICollectionView` 클래스에서 사용할 수 있는 컬렉션 뷰는 레이아웃을 사용 하 여 화면에 여러 항목을 표시 하는 iOS 6의 새로운 개념입니다. 에 데이터 `UICollectionView` 를 제공 하 여 항목을 만들고 해당 항목과 상호 작용 하는 패턴은 iOS 개발에 일반적으로 사용 되는 것과 동일한 위임 및 데이터 소스 패턴을 따릅니다.
+`UICollectionView` 클래스에서 제공 되는 컬렉션 뷰는 레이아웃을 사용 하 여 화면에 여러 항목을 표시 하는 iOS 6의 새로운 개념입니다. 항목을 만들고 해당 항목과 상호 작용 하는 `UICollectionView`에 데이터를 제공 하는 패턴은 iOS 개발에 일반적으로 사용 되는 것과 동일한 위임 및 데이터 소스 패턴을 따릅니다.
 
 ## <a name="imagesimagemd"></a>[이미지](image.md)
 
@@ -36,7 +36,7 @@ UIButton 클래스는 iOS 화면에서 다양 한 종류의 단추를 표시 하
 
 ## <a name="manual-camera-controlsintro-to-manual-camera-controlsmd"></a>[수동 카메라 컨트롤](intro-to-manual-camera-controls.md)
 
-Ios 8 `AVFoundation Framework` 의에서 제공 하는 수동 카메라 컨트롤을 사용 하면 모바일 응용 프로그램이 ios 장치의 카메라를 완전히 제어할 수 있습니다. 이 세분화 된 제어 수준을 사용 하면 스틸 이미지 또는 비디오를 가져오는 동안 카메라의 매개 변수를 조정 하 여 전문가 수준의 카메라 응용 프로그램을 만들고 음악가 컴퍼지션을 제공할 수 있습니다.
+IOS 8의 `AVFoundation Framework`에서 제공 하는 수동 카메라 컨트롤을 사용 하 여 모바일 응용 프로그램이 iOS 장치의 카메라를 완전히 제어할 수 있습니다. 이 세분화 된 제어 수준을 사용 하면 스틸 이미지 또는 비디오를 가져오는 동안 카메라의 매개 변수를 조정 하 여 전문가 수준의 카메라 응용 프로그램을 만들고 음악가 컴퍼지션을 제공할 수 있습니다.
 
 ## <a name="mapsios-mapsindexmd"></a>[지도](ios-maps/index.md)
 
@@ -54,7 +54,7 @@ Ios 8 `AVFoundation Framework` 의에서 제공 하는 수동 카메라 컨트�
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[진행률 및 활동 표시기](progress-activity-indicator.md)
 
-iOS는 앱에서 진행률을 나타내는 두 가지 주요 방법을 제공 합니다. 활동 표시기 (특정 _네트워크_ 활동 표시기 포함) 및 진행률 표시줄
+iOS는 앱에서 진행률을 나타내는 두 가지 주요 방법, 즉 활동 표시기 (특정 _네트워크_ 활동 표시기 포함) 및 진행률 표시줄을 제공 합니다.
 
 ## <a name="search-barssearchbarmd"></a>[검색 막대](searchbar.md)
 
@@ -62,11 +62,11 @@ UISearchBar는 값 목록을 검색 하는 데 사용 됩니다.
 
 ## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[슬라이더, 스위치 및 분할된 컨트롤](slider-switch-segmented-controls.md)
 
-슬라이더 컨트롤을 사용 하면 범위 내에서 숫자 값을 간단히 선택할 수 있습니다. iOS는를 `UISwitch` 다른 플랫폼의 라디오 단추로 표현할 수 있는 부울 입력으로 사용 합니다. 분할 된 컨트롤은 사용자가 적은 수의 옵션을 조작할 수 있도록 구성 된 방법입니다.
+슬라이더 컨트롤을 사용 하면 범위 내에서 숫자 값을 간단히 선택할 수 있습니다. iOS는 다른 플랫폼에서 라디오 단추로 표현할 수 있는 부울 입력으로 `UISwitch`를 사용 합니다. 분할 된 컨트롤은 사용자가 적은 수의 옵션을 조작할 수 있도록 구성 된 방법입니다.
 
 ## <a name="stack-viewuistackviewmd"></a>[스택 보기](uistackview.md)
 
-Stack View control (`UIStackView`)은 Auto Layout 및 Size 클래스의 강력한 기능을 활용 하 여 iOS 장치의 방향 및 화면 크기에 동적으로 응답 하는 가로 또는 세로로 하위 뷰 스택을 관리 합니다.
+`UIStackView`(Stack View control)는 Auto Layout 및 Size 클래스의 강력한 기능을 활용 하 여 iOS 장치의 방향 및 화면 크기에 동적으로 응답 하는 가로 또는 세로로 하위 뷰 스택을 관리 합니다.
 
 ## <a name="tables-and-cellstablesindexmd"></a>[테이블 및 셀](tables/index.md)
 
@@ -74,7 +74,7 @@ Stack View control (`UIStackView`)은 Auto Layout 및 Size 클래스의 강력�
 
 ## <a name="text-inputtext-inputmd"></a>[텍스트 입력](text-input.md)
 
-사용자 텍스트 수락은 여러 줄의 편집 `UITextField` 가능 텍스트에 대 한 한 줄 입력 및 uitextview에 대해를 사용 하 여 수행 됩니다. 이러한 컨트롤 중 하나를 화면으로 끌어 온 다음 두 번 클릭 하 여 초기 텍스트를 설정할 수 있습니다.
+사용자 텍스트를 허용 하는 것은 여러 줄의 편집 가능 텍스트에 대 한 한 줄 입력 및 UITextView의 `UITextField` 사용 하 여 수행 됩니다. 이러한 컨트롤 중 하나를 화면으로 끌어 온 다음 두 번 클릭 하 여 초기 텍스트를 설정할 수 있습니다.
 
 ## <a name="tab-bars-and-tab-bar-controllerscreating-tabbed-applicationsmd"></a>[탭 표시줄 및 탭 표시줄 컨트롤러](creating-tabbed-applications.md)
 
@@ -82,7 +82,7 @@ Stack View control (`UIStackView`)은 Auto Layout 및 Size 클래스의 강력�
 
 ## <a name="web-viewsuiwebviewmd"></a>[웹 보기](uiwebview.md)
 
-이 문서에서는 Apple `UIWebView`에서 제공 하는, `WKWebview`, 및 `SFSafariViewController`의 세 가지 웹 보기와 해당 유사성과 차이점 및 사용 방법에 대해 살펴보겠습니다.
+이 문서에서는 Apple에서 제공 하는 세 가지 웹 보기, `UIWebView`, `WKWebview`, `SFSafariViewController`, 유사성 및 차이점, 사용 방법 등을 살펴봅니다.
 
 ## <a name="related-links"></a>관련 링크
 

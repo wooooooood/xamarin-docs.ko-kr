@@ -4,15 +4,15 @@ description: Android 장치 또는 에뮬레이터에서 화면 잠금을 설정
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: f52be16a81f3c8047997e1f4a88e13f6b940db14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c0290dfa3b4aa301a07a589f78577899e8282158
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756414"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027590"
 ---
 # <a name="enrolling-a-fingerprint"></a>지문 등록
 
@@ -46,7 +46,7 @@ ADB (Android Debug Bridge)를 사용 하려면 명령 프롬프트에 대해 잘
 
 4. 여기에서 시퀀스를 따라 장치에 지문을 추가 합니다.
 
-    [![장치에 지문을 추가 하기 위한 스크린샷 시퀀스](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
+    [장치에 지문을 추가 하기 위한 스크린샷![시퀀스](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
 5. 최종 화면에서 지문 스캐너에 손가락을 입력 하 라는 메시지가 표시 됩니다. 
 
@@ -56,13 +56,13 @@ ADB (Android Debug Bridge)를 사용 하려면 명령 프롬프트에 대해 잘
 
 ### <a name="simulating-a-fingerprint-scan-on-the-emulator"></a>에뮬레이터에서 지문 스캔 시뮬레이션
 
-Android 에뮬레이터에서 Android Debug Bridge를 사용 하 여 지문 검색을 시뮬레이션할 수 있습니다. OS X에서 터미널 세션을 시작 하는 동안 Windows에서 명령 프롬프트 또는 Powershell 세션을 시작 하 `adb`고 다음을 실행 합니다.
+Android 에뮬레이터에서 Android Debug Bridge를 사용 하 여 지문 검색을 시뮬레이션할 수 있습니다. OS X에서 터미널 세션을 시작 하는 동안 Windows에서 명령 프롬프트 또는 Powershell 세션을 시작 하 고 `adb`를 실행 합니다.
 
 ```shell
 $ adb -e emu finger touch 1
 ```
 
-값 **1** 은 "검사 됨" 인 핑거의 _핑거\_id_ 입니다. 각 가상 지 문으로 할당 하는 고유한 정수입니다. 나중에 앱이 실행 되는 경우 에뮬레이터에서 지문을 입력 하 라는 메시지가 표시 될 때마다 동일한 adb 명령을 실행할 수 있습니다. 그런 다음 `adb` 명령을 실행 하 고 지문 검색을 시뮬레이트하는 _손가락\_id_ 를 전달할 수 있습니다.
+값 **1** 은 "검사 됨" 인 핑거의 _손가락\_id_ 입니다. 각 가상 지 문으로 할당 하는 고유한 정수입니다. 앱이 실행 될 때 나중에이 동일한 ADB 명령을 실행할 수 있습니다. 에뮬레이터에서 지문을 입력 하 라는 메시지가 표시 될 때마다 `adb` 명령을 실행 하 고 _손가락\_id_ 를 전달 하 여 지문 검색을 시뮬레이션할 수 있습니다.
 
 지문 검사가 완료 된 후 Android는 지문을 추가 했음을 알립니다.  
 

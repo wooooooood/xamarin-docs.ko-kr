@@ -1,17 +1,17 @@
 ---
-title: Xamarin.ios 및 데스크톱-Mono 런타임의 차이점
+title: Xamarin Android 및 Desktop-Mono 런타임의 차이점
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 7f98f2f75a106ad3a9f62256a7145ac746c4b1c8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8fe0e3a9adedb161c527ccdf6d6c3a7cd06a1d86
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70757779"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73027847"
 ---
 # <a name="limitations"></a>제한 사항
 
@@ -25,16 +25,16 @@ Android의 응용 프로그램은 빌드 프로세스 중에 Java 프록시 형�
 
 ## <a name="limited-java-generation-support"></a>제한 된 Java Generation 지원
 
-Java 코드에서 관리 코드를 호출 하려면 [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md) 를 생성 해야 합니다. *기본적으로*Android 호출 가능 래퍼는 (특정) 선언 된 생성자와 메서드만 포함 합니다. [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)이 메서드는 가상 java 메서드를 재정의 하거나 (예:), Java 인터페이스 메서드를 구현 합니다. `Attribute`(인터페이스와 마찬가지로)
+Java 코드에서 관리 코드를 호출 하려면 [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md) 를 생성 해야 합니다. *기본적으로*Android 호출 가능 래퍼에는 (특정) 선언 된 생성자와 메서드만 포함 됩니다. 즉, 가상 java 메서드를 재정의 하거나 (예: [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)) java 인터페이스 메서드를 구현 합니다. 인터페이스는 `Attribute`도 마찬가지입니다.
   
-4\.1 릴리스 전에는 추가 메서드를 선언할 수 없습니다. 4\.1 릴리스를 [ `Export` 사용 하 여 및 `ExportField` 사용자 지정 특성을 사용 하 여 Android 호출 가능 래퍼 내에서 Java 메서드 및 필드를 선언할 수 있습니다](~/android/platform/java-integration/working-with-jni.md).
+4\.1 릴리스 전에는 추가 메서드를 선언할 수 없습니다. 4\.1 릴리스를 사용 하 여 [`Export` 및 `ExportField` 사용자 지정 특성을 사용 하 여 Android 호출 가능 래퍼 내에서 Java 메서드 및 필드를 선언할 수 있습니다](~/android/platform/java-integration/working-with-jni.md).
 
 ### <a name="missing-constructors"></a>누락 된 생성자
 
-생성자는를 사용 하지 [`ExportAttribute`](xref:Java.Interop.ExportAttribute) 않는 한 복잡 하 게 유지 됩니다. Android 호출 가능 래퍼 생성자를 생성 하는 알고리즘은 다음과 같은 경우에 Java 생성자를 내보내는 것입니다.
+[`ExportAttribute`](xref:Java.Interop.ExportAttribute) 사용 하지 않는 한 생성자는 복잡 하 게 유지 됩니다. Android 호출 가능 래퍼 생성자를 생성 하는 알고리즘은 다음과 같은 경우에 Java 생성자를 내보내는 것입니다.
 
 1. 모든 매개 변수 형식에 대 한 Java 매핑이 있습니다.
-2. Android 호출 가능 래퍼가 해당 하는 &ndash; 기본 클래스 생성자를 호출 *해야* 하기 때문에 기본 클래스는 동일한 생성자를 선언 합니다. 기본 인수를 사용할 수 없습니다 .이 경우에는 값을 쉽게 확인할 수 있습니다. Java 내에서 사용 해야 함).
+2. Android 호출 가능 래퍼가 해당 하는 기본 클래스 생성자를 호출 *해야* 하기 때문에 기본 클래스는 동일한 생성자 &ndash; 선언 합니다. 기본 인수를 사용할 수 없습니다 (Java 내에서 사용 해야 하는 값을 쉽게 확인할 수 있는 방법이 없음).
 
 예를 들어 다음 클래스를 예로 들어 볼 수 있습니다.
 
@@ -47,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-이는 완벽 하 게 논리적으로 보이지만 *릴리스 빌드에서* 생성 된 Android 호출 가능 래퍼는 기본 생성자를 포함 하지 않습니다. 따라서이 서비스 [`Context.StartService`](xref:Android.Content.Context.StartService*)를 시작 하려고 하면 실패 하 게 됩니다.
+이는 완벽 하 게 논리적으로 보이지만 *릴리스 빌드에서* 생성 된 Android 호출 가능 래퍼는 기본 생성자를 포함 하지 않습니다. 따라서이 서비스를 시작 하려고 하면 (예: [`Context.StartService`](xref:Android.Content.Context.StartService*)실패 합니다.
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -70,7 +70,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-해결 방법은 기본 생성자를 선언 하 고 `ExportAttribute`, 장식할로 [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)설정 하 고,를 설정 하는 것입니다. 
+해결 방법은 기본 생성자를 선언 하 고 `ExportAttribute`를 사용 하 여 장식할 [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)를 설정 하는 것입니다. 
 
 ```csharp
 [Service]
@@ -88,7 +88,7 @@ class MyIntentService : IntentService {
 
 제네릭 C# 클래스는 부분적 으로만 지원 됩니다. 다음과 같은 제한 사항이 있습니다.
 
-- 제네릭 형식은 또는를 `[Export]` `[ExportField`사용할 수 없습니다. 이렇게 하려고 하면 `XA4207` 오류가 생성 됩니다.
+- 제네릭 형식은 `[Export]` 또는 `[ExportField`]를 사용할 수 없습니다. 이렇게 하려고 하면 `XA4207` 오류가 생성 됩니다.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -101,7 +101,7 @@ class MyIntentService : IntentService {
     }
     ```
 
-- 제네릭 메서드는 또는 `[Export]` `[ExportField]`를 사용할 수 없습니다.
+- 제네릭 메서드는 `[Export]` 또는 `[ExportField]`를 사용할 수 없습니다.
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -116,7 +116,7 @@ class MyIntentService : IntentService {
     }
     ```
 
-- `[ExportField]`다음을 반환 `void`하는 메서드에서는 사용할 수 없습니다.
+- `void`을 반환 하는 메서드에는 `[ExportField]` 사용할 수 없습니다.
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -153,5 +153,5 @@ Java 제네릭 바인딩 지원은 제한 됩니다. 특히, 다른 제네릭 (�
 - [Android 호출 가능 래퍼](~/android/platform/java-integration/android-callable-wrappers.md)
 - [JNI 사용](~/android/platform/java-integration/working-with-jni.md)
 - [ExportAttribute](xref:Java.Interop.ExportAttribute)
-- [SuperString](xref:Java.Interop.ExportAttribute.SuperArgumentsString)
+- [슈퍼 문자열](xref:Java.Interop.ExportAttribute.SuperArgumentsString)
 - [RegisterAttribute](xref:Android.Runtime.RegisterAttribute)

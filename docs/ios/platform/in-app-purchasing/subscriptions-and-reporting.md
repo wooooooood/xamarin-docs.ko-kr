@@ -4,15 +4,15 @@ description: 이 문서에서는 갱신 되지 않은 구독, 무료 구독, 자
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 81e8f5c1beafeaafcf0d5dcbcc3bf4d66ee05a66
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70752671"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032300"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Xamarin.ios의 구독 및 보고
 
@@ -50,17 +50,17 @@ ms.locfileid: "70752671"
 
 ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.   
    
- [![](subscriptions-and-reporting-images/image2.png "내 앱 선택")](subscriptions-and-reporting-images/image2.png#lightbox)  
+ [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 응용 프로그램을 선택 하 고 **앱에서 바로 구매** 탭을 클릭 합니다.
 
-[![](subscriptions-and-reporting-images/image6.png "앱에서 바로 구매 탭을 클릭 합니다.")](subscriptions-and-reporting-images/image6.png#lightbox)
+[![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 페이지 맨 아래에서 **공유 암호 보기 또는 생성**을 선택 합니다.
    
- [![](subscriptions-and-reporting-images/image40.png "공유 암호 보기 또는 생성을 선택 합니다.")](subscriptions-and-reporting-images/image40.png#lightbox)
+ [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "공유 암호 생성")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
 
 공유 암호를 사용 하려면 다음과 같이 자동 갱신 가능한 구독에 대 한 앱 내 구매 수령의 유효성을 검사할 때 Apple 서버에 전송 되는 JSON 페이로드에 해당 암호를 포함 합니다.
 
@@ -100,7 +100,7 @@ SKPaymentTransaction 개체는 구독 기간을 포함 하지 않습니다. 각 
 
 ## <a name="reporting"></a>보고
 
-iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com))는 다음을 제공 합니다.   
+iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com))는 다음을 제공 합니다.   
    
  **판매 및 추세** – 앱 다운로드, 업데이트 및 앱에서의 구매에 대 한 세부 정보를 표시 합니다.   
    
@@ -108,9 +108,9 @@ iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com))는 �
 
 판매 및 추세 보고서의 예는 다음과 같습니다.   
 
- [![](subscriptions-and-reporting-images/image42.png "예: 판매 및 추세 보고서")](subscriptions-and-reporting-images/image42.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
- 또한 [ **ITC 연결 모바일**IOS 앱 (iTunes 링크)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8)이 있습니다.
+ 또한 [ **ITC 연결 모바일**IOS 앱 (iTunes 링크)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8)이 있습니다.
 사용할 수 있는 통계 중 일부에 대 한 iPhone 스크린샷는 다음과 같습니다.   
    
- [![](subscriptions-and-reporting-images/image43.png "사용할 수 있는 통계 중 일부에 대 한 iPhone 스크린샷")](subscriptions-and-reporting-images/image43.png#lightbox)
+ [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

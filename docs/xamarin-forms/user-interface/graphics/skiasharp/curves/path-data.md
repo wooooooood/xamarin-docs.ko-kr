@@ -1,34 +1,34 @@
 ---
-title: SkiaSharp에서 SVG 경로 데이터
-description: 이 문서는 확장성이 뛰어난 벡터 그래픽 형식으로 텍스트 문자열을 사용 하 여 SkiaSharp 경로 정의 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
+title: SkiaSharp의 SVG 경로 데이터
+description: 이 문서에서는 확장 가능한 벡터 그래픽 형식의 텍스트 문자열을 사용 하 여 SkiaSharp 경로를 정의 하는 방법을 설명 하 고 샘플 코드를 사용 하 여이를 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
-ms.openlocfilehash: 467863dba2f5757e0590ccf64927ae2af292f285
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 809bcd8288c4c4205b3110418aeae0e08bf21dd6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770568"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029456"
 ---
-# <a name="svg-path-data-in-skiasharp"></a>SkiaSharp에서 SVG 경로 데이터
+# <a name="svg-path-data-in-skiasharp"></a>SkiaSharp의 SVG 경로 데이터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 경로 정의 합니다._
+_확장 가능한 벡터 그래픽 형식의 텍스트 문자열을 사용 하 여 경로 정의_
 
-합니다 [ `SKPath` ](xref:SkiaSharp.SKPath) 클래스 형식으로 확장 가능한 SVG (벡터 그래픽) 사양에 설정 된 텍스트 문자열의 전체 경로 개체의 정의 지원 합니다. 이 문서의 뒷부분에 나오는 같은 텍스트 문자열의 전체 경로 나타낼 수는 어떻게 표시 됩니다.
+[`SKPath`](xref:SkiaSharp.SKPath) 클래스는 SVG (스케일러블 벡터 그래픽) 사양에 의해 설정 된 형식으로 텍스트 문자열에서 전체 경로 개체의 정의를 지원 합니다. 이 문서의 뒷부분에서 텍스트 문자열에 있는 경로와 같은 전체 경로를 표시 하는 방법을 확인할 수 있습니다.
 
-![](path-data-images/pathdatasample.png "SVG 경로 데이터를 사용 하 여 정의 하는 샘플 경로")
+![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
 
-SVG는 웹 페이지에 대 한 언어를 프로그래밍 하는 XML 기반 그래픽입니다. SVG 일련의 함수 호출 보다는 태그에 정의 해야 하는 경로 허용 해야 하기 때문에 표준 SVG은 텍스트 문자열로 전체 그래픽 경로 지정 하는 매우 간단 하 게 포함 되어 있습니다.
+SVG는 웹 페이지에 대 한 XML 기반 그래픽 프로그래밍 언어입니다. SVG는 일련의 함수 호출이 아닌 태그에서 경로를 정의할 수 있도록 허용 해야 하므로, SVG 표준에는 전체 그래픽 경로를 텍스트 문자열로 지정 하는 매우 간결한 방법이 포함 되어 있습니다.
 
-SkiaSharp, 내에서이 형식으로 라고 "SVG 경로 데이터입니다." 형식은 Windows XAML 기반 프로그래밍 환경의 Windows Presentation Foundation 등으로 알려져 있는 유니버설 Windows 플랫폼 에서도 지원 됩니다 합니다 [경로 태그 구문](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) 또는 [이동 그리기 명령 구문 및](/windows/uwp/xaml-platform/move-draw-commands-syntax/)합니다. 또한 XML과 같은 텍스트 기반 파일에서 특히 벡터 그래픽 이미지에 대 한 교환 형식으로 제공할 수 있습니다.
+SkiaSharp 내에서이 형식을 "SVG 경로-데이터" 라고 합니다. 이 형식은 Windows Presentation Foundation 및 유니버설 Windows 플랫폼를 비롯 하 여 Windows XAML 기반 프로그래밍 환경 에서도 지원 됩니다. 여기서 [경로 태그 구문](/dotnet/framework/wpf/graphics-multimedia/path-markup-syntax) 또는 [이동 및 그리기 명령 구문](/windows/uwp/xaml-platform/move-draw-commands-syntax/)이라고 합니다. 특히 XML과 같은 텍스트 기반 파일에서 벡터 그래픽 이미지에 대 한 교환 형식으로 사용할 수도 있습니다.
 
-합니다 [ `SKPath` ](xref:SkiaSharp.SKPath) 단어를 사용 하 여 두 개의 메서드를 정의 하는 클래스 `SvgPathData` 이름에:
+[`SKPath`](xref:SkiaSharp.SKPath) 클래스는 이름에 `SvgPathData` 라는 단어가 포함 된 두 개의 메서드를 정의 합니다.
 
 ```csharp
 public static SKPath ParseSvgPathData(string svgPath)
@@ -36,29 +36,29 @@ public static SKPath ParseSvgPathData(string svgPath)
 public string ToSvgPathData()
 ```
 
-정적 [ `ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) 메서드를 문자열로 변환 합니다는 `SKPath` 개체를 하는 동안 [ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) 변환는 `SKPath` 개체를 문자열입니다.
+정적 [`ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) 메서드는 문자열을 `SKPath` 개체로 변환 하 고 [`ToSvgPathData`](xref:SkiaSharp.SKPath.ToSvgPathData) 는 `SKPath` 개체를 문자열로 변환 합니다.
 
-점이 5 별 지점을 중심으로 (0, 0)는 radius 사용 하 여 100의 SVG 문자열을 다음과 같습니다.
+다음은 반지름이 100 인 점 (0, 0)을 중심으로 하는 5 개의 뾰족한 별에 대 한 SVG 문자열입니다.
 
 ```
 "M 0 -100 L 58.8 90.9, -95.1 -30.9, 95.1 -30.9, -58.8 80.9 Z"
 ```
 
-문자는 구축 하는 명령은 `SKPath` 개체: `M` 나타냅니다는 `MoveTo` 를 호출 `L` 는 `LineTo`, 및 `Z` 는 `Close` 윤곽선을 닫습니다. 각 번호 쌍 점의 X 및 Y 좌표를 제공합니다. 다음에 유의 합니다 `L` 명령 뒤에 쉼표로 구분 하 여 여러 지점입니다. 일련의 좌표, 지점, 쉼표 및 공백을 동일 하 게 처리 됩니다. 일부 프로그래머는 X 및 Y 좌표 간에 아니라는 점 사이 쉼표를 추가할 수 있지만 쉼표나 공백을 모호성을 피하기 위해만 필요 합니다. 이 완벽 하 게 유효합니다.
+문자는 `SKPath` 개체를 작성 하는 명령입니다. `M`은 `MoveTo` 호출을 나타내고 `L` `LineTo``Z` 하 고 `Close`를 하 여 컨투어를 닫습니다. 각 숫자 쌍은 점의 X 및 Y 좌표를 제공 합니다. `L` 명령 뒤에 쉼표로 구분 된 여러 점이 있습니다. 일련의 좌표와 점에서 쉼표와 공백은 동일 하 게 처리 됩니다. 일부 프로그래머는 요소가 아니라 X 좌표와 Y 좌표 사이에 쉼표를 추가 하는 것이 좋습니다. 단, 쉼표 또는 공백은 모호성을 방지 하는 데 필요 합니다. 이는 완벽 하 게 사용할 수 있습니다.
 
 ```
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
-SVG 경로 데이터의 구문을 공식적으로 문서화 [SVG 사양의 섹션 8.3](http://www.w3.org/TR/SVG11/paths.html#PathData)합니다. 요약 정보는 다음과 같습니다.
+SVG 경로 데이터의 구문은 [svg 사양의 섹션 8.3](https://www.w3.org/TR/SVG11/paths.html#PathData)에 공식적으로 문서화 되어 있습니다. 요약 정보는 다음과 같습니다.
 
-## <a name="moveto"></a>**MoveTo**
+## <a name="moveto"></a>**이면**
 
 ```
 M x y
 ```
 
-현재 위치를 설정 하 여 경로에 새 윤곽선 시작 됩니다. 경로 데이터는 항상로 시작 되는 `M` 명령입니다.
+이렇게 하면 현재 위치를 설정 하 여 경로에서 새 컨투어를 시작 합니다. 경로 데이터는 항상 `M` 명령으로 시작 해야 합니다.
 
 ## <a name="lineto"></a>**LineTo**
 
@@ -66,23 +66,23 @@ M x y
 L x y ...
 ```
 
-이 명령은 경로에 직선 (또는 줄)를 추가 하 고 마지막 줄의 끝에 새 현재 위치를 설정 합니다. 따르면 합니다 `L` 여러 쌍의 명령과 *x* 및 *y* 좌표입니다.
+이 명령은 경로에 직선 또는 줄을 추가 하 고 새 현재 위치를 마지막 줄의 끝으로 설정 합니다. 여러 쌍의 *x* 및 *y* 좌표를 사용 하 여 `L` 명령을 따를 수 있습니다.
 
-## <a name="horizontal-lineto"></a>**가로 LineTo**
+## <a name="horizontal-lineto"></a>**수평 LineTo**
 
 ```
 H x ...
 ```
 
-이 명령은 경로에 가로줄을 추가 하 고 줄의 끝에 새 현재 위치를 설정 합니다. 따를 수 있습니다 합니다 `H` 여러 개의 명령 *x* 좌표 있지만 대부분이 잘 이해 하지 않습니다.
+이 명령은 경로에 가로선을 추가 하 고 새 현재 위치를 줄의 끝으로 설정 합니다. 여러 *x* 좌표를 사용 하 여 `H` 명령을 따를 수 있지만이는 그다지 적합 하지 않습니다.
 
-## <a name="vertical-line"></a>**수직선**
+## <a name="vertical-line"></a>**세로줄**
 
 ```
 V y ...
 ```
 
-이 명령은 경로에 세로 줄을 추가 하 고 줄의 끝에 새 현재 위치를 설정 합니다.
+이 명령은 경로에 세로줄을 추가 하 고 새 현재 위치를 줄의 끝으로 설정 합니다.
 
 ## <a name="close"></a>**닫기**
 
@@ -90,23 +90,23 @@ V y ...
 Z
 ```
 
-`C` 명령은 현재 위치에서 윤곽선의 시작 부분에 직선을 추가 하 여 윤곽선을 닫습니다.
+`C` 명령은 현재 위치에서 컨투어 시작 부분에 직선을 추가 하 여 컨투어를 닫습니다.
 
 ## <a name="arcto"></a>**ArcTo**
 
-타원형 호 윤곽선을 추가 하는 명령을 전체 SVG 경로 데이터 사양에서 가장 복잡 한 명령을 단연입니다. 유일한 명령이 있는 숫자를 나타낼 수 있습니다 좌표 값 이외의 것:
+윤곽선에 타원형 호를 추가 하는 명령은 전체 SVG 경로-데이터 사양에서 가장 복잡 한 명령입니다. 숫자가 좌표 값이 아닌 다른 항목을 나타낼 수 있는 유일한 명령입니다.
 
 ```
 A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 ```
 
-합니다 *rx* 하 고 *ry* 매개 변수는 타원의 가로 및 세로 반지름입니다. 합니다 *회전 각도* 도 시계 방향으로 됩니다.
+*Rx* 및 *r)* 매개 변수는 타원의 가로 및 세로 반지름입니다. *회전 각도* 는 시계 방향 (도)입니다.
 
-설정 된 *큰 호 플래그* 큰 호에는 1 또는 0 작은 호에 대 한 합니다.
+클 호에 대해 *큼 플래그* 를 1로 설정 하거나, 작은 호의 경우 0으로 설정 합니다.
 
-설정 합니다 *스윕 플래그* 1에 시계 방향으로 및 0으로 시계 반대 방향으로 합니다.
+*스윕 플래그* 를 시계 방향으로 1로 설정 하 고, 시계 반대 방향으로 0으로 설정 합니다.
 
-지점 호가 그려지는 (*x*, *y*)을 새 현재 위치 됩니다.
+호가 새 현재 위치가 되는 점 (*x*, *y*)에 그려집니다.
 
 ## <a name="cubicto"></a>**CubicTo**
 
@@ -114,17 +114,17 @@ A rx ry rotation-angle large-arc-flag sweep-flag x y ...
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
-이 명령은 현재 위치에서 입방 형 3 차원 큐빅 곡선을 추가 (*x3*를 *y3*)을 새 현재 위치 됩니다. 요소 (*x1*를 *y1*) 및 (*x2*를 *y2*) 제어점입니다.
+이 명령은 현재 위치에서 (*x3*, *y3*)로 입방 형 3 차원 곡선을 추가 합니다 .이는 새로운 현재 위치가 됩니다. 요소 (*x1*, *y1*) 및 (*x2*, *y2*)는 제어점입니다.
 
-여러 베 지 어 곡선으로 단일 지정할 수 있습니다 `C` 명령입니다. 점 개수 3의 배수 여야 합니다.
+여러 베 지 어 곡선을 단일 `C` 명령으로 지정할 수 있습니다. 점의 수는 3의 배수 여야 합니다.
 
-"부드러운" 베 지 어 곡선 명령이 이기도합니다.
+또한 "부드러운" 베 지 어 곡선 명령도 있습니다.
 
 ```
 S x2 y2 x3 y3 ...
 ```
 
-이 명령은 (엄밀히 필요한) 하지만 일반 베 지 어 명령을 따라야 합니다. 부드러운 베 지 어 명령을 상호 지점과 관련 된 이전 베 지 어의 두 번째 제어점의 반사 되도록 첫 번째 제어점을 계산 합니다. 이러한 3 개의 점으로 되며 동일 선상의 따라서 두 베 지 어 곡선으로 분할 간의 연결이 부드러운.
+이 명령은 일반적인 베 지 어 명령 (반드시 필요한 것은 아니지만)을 따라야 합니다. 부드러운 베 지 어 명령은 첫 번째 제어점을 계산 하 여 해당 상호 지점을 중심으로 이전 Bezier의 두 번째 제어점을 반영 합니다. 따라서 이러한 세 가지 점이 colinear 두 베 지 어 곡선 간의 연결은 부드러운 것입니다.
 
 ## <a name="quadto"></a>**QuadTo**
 
@@ -132,25 +132,25 @@ S x2 y2 x3 y3 ...
 Q x1 y1 x2 y2 ...
 ```
 
-정방형 베 지 어 곡선에 대 한 지점의 수에 2의 배수 여야 합니다. 시작 하는 (*x1*, *y1*) 끝점 (및 새 현재 위치) 이며 (*x2*하십시오 *y2*)
+정방형 3 차원 곡선의 경우 점 수는 2의 배수 여야 합니다. 제어점은 (*x1*, *y1*)이 고 끝점 (및 새 현재 위치)은 (*x2*, *y2*)입니다.
 
-부드러운 정방형 곡선 명령을 이기도합니다.
+또한 부드러운 정방형 곡선 명령도 있습니다.
 
 ```
 T x2 y2 ...
 ```
 
-제어점은 이전 정방형 곡선의 제어점을 기준으로 계산 됩니다.
+제어 지점은 이전 정방형 곡선의 제어점을 기반으로 계산 됩니다.
 
-이러한 모든 명령이 사용할 수 있습니다 "상대" 버전에서 현재 위치를 기준으로 좌표 지점 있는 합니다. 예를 들어 이러한 상대 명령을 소문자를 사용 하 여 시작 `c` 대신 `C` 입방 형 3 차원 곡선 명령의 상대 버전에 대 한 합니다.
+이러한 모든 명령은 "상대" 버전 에서도 사용할 수 있습니다. 여기서 좌표 점은 현재 위치를 기준으로 합니다. 이러한 상대 명령은 대문자를 사용 하 여 시작 합니다 (예: 입방 형 3 차원 명령의 상대 버전에 대 한 `C` 대신 `c`).
 
-SVG 경로 데이터 정의의 범위입니다. 반복 되는 명령 그룹 또는 모든 유형의 계산을 수행 하기 위한 기능이 없습니다. 에 대 한 명령 `ConicTo` 했거나 다른 유형의 호 사양 사용할 수 없습니다.
+이는 SVG 경로 데이터 정의의 범위입니다. 명령 그룹을 반복 하거나 모든 유형의 계산을 수행 하는 기능은 없습니다. `ConicTo` 또는 다른 유형의 arc 사양에 대 한 명령은 사용할 수 없습니다.
 
-정적 [ `SKPath.ParseSvgPathData` ](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) 메서드에 SVG 명령의 유효한 문자열이 필요 합니다. 메서드가 반환 하는 경우 구문 오류가 감지 되 면 `null`합니다. 오류 표시입니다.
+정적 [`SKPath.ParseSvgPathData`](xref:SkiaSharp.SKPath.ParseSvgPathData(System.String)) 메서드에는 SVG 명령의 유효한 문자열이 필요 합니다. 구문 오류가 발견 되 면 메서드는 `null`반환 합니다. 유일한 오류 표시입니다.
 
-[ `ToSvgPathData` ](xref:SkiaSharp.SKPath.ToSvgPathData) 메서드는 기존 SVG 경로 데이터를 가져오기 위한 편리한 `SKPath` 다른 프로그램에 전송할 또는 XML과 같은 텍스트 기반 파일 형식으로 저장 하는 개체입니다. (의 `ToSvgPathData` 메서드는이 문서의 샘플 코드에서 다루지 않습니다.) 수행할 *되지* 예상 `ToSvgPathData` 경로 생성 하는 메서드 호출을 정확 하 게 해당 문자열을 반환 합니다. 여러 원호는 변환 함을 알게 하는 특히 `QuadTo` 명령에서 반환 되는 경로 데이터에 표시 되는 방식입니다 `ToSvgPathData`합니다.
+[`ToSvgPathData`](xref:SkiaSharp.SKPath.ToSvgPathData) 메서드는 기존 `SKPath` 개체에서 SVG 경로 데이터를 가져와 다른 프로그램으로 전송 하거나 XML과 같은 텍스트 기반 파일 형식으로 저장 하는 데 유용 합니다. 이 문서의 샘플 코드에서는 `ToSvgPathData` 방법을 보여 줍니다. 경로를 만든 메서드 호출에 해당 하는 문자열을 반환 하는 `ToSvgPathData` 필요 *하지* 않습니다. 특히 원호는 여러 `QuadTo` 명령으로 변환 되 고 `ToSvgPathData`에서 반환 되는 경로 데이터에 표시 되는 것을 알 수 있습니다.
 
-합니다 **경로 데이터 Hello** 페이지 단어가 마법 "HELLO" SVG 경로 데이터를 사용 하 여 합니다. 모두를 `SKPath` 하 고 `SKPaint` 개체의 필드로 정의 된 합니다 [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) 클래스:
+**경로 데이터 Hello** 페이지는 SVG 경로 데이터를 사용 하 여 "Hello" 라는 단어를 출력 합니다. `SKPath` 및 `SKPaint` 개체는 모두 [`PathDataHelloPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) 클래스에서 필드로 정의 됩니다.
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -174,21 +174,21 @@ public class PathDataHelloPage : ContentPage
 }
 ```
 
-텍스트 문자열을 정의 하는 경로 지점 (0, 0)에서 왼쪽 위 모퉁이에서 시작 됩니다. 각 문자는 와이드 단위는 50 및 100 단위에 불과하지만 하 고 전체 경로 350 단위 와이드 문자 다른 25 단위로 구분 됩니다.
+텍스트 문자열을 정의 하는 경로는 지점 (0, 0)의 왼쪽 위 모퉁이에서 시작 합니다. 각 문자는 50 단위이 고 100 단위는 세로로 구분 되며 문자는 다른 25 단위로 구분 됩니다. 즉, 전체 경로는 350 단위 너비입니다.
 
-'Hello"'H'는 'E'는 두 개의 연결 된 3 차원 큐빅 곡선 세 줄 윤곽 구성 됩니다. 다음에 유의 합니다 `C` 명령 뒤에 6 개의 점 있고 두 제어점 – 10 및 기타 문자 Y 좌표를 범위 밖에 놓입니다 110의 Y 좌표입니다. 'L'은 두 개의 연결 된 선 하는 동안는 ' o '가 사용 하 여 렌더링 되는 타원을 `A` 명령입니다.
+"Hello"의 ' H '는 3 1 선 윤곽선으로 구성 되 고 ' E '는 두 개의 연결 된 입방 형 3 차원 곡선입니다. `C` 명령 다음에는 6 개의 점이 있고, 두 제어점의 Y 좌표는-10 및 110 이며,이는 다른 문자의 Y 좌표 범위 밖에 배치 합니다. ' L '은 두 개의 연결 된 줄 이지만 ' O '는 `A` 명령을 사용 하 여 렌더링 되는 타원입니다.
 
-`M` 위치 왼쪽의 세로 가운데 인 점 (350, 50)를 설정 하는 마지막 윤곽선을 시작 하는 명령을 측의 ' o '입니다. 첫 번째 숫자 다음에 표시 된 대로 `A` 명령을 타원에 25 가로 반지름 및 50 세로 반지름입니다. 끝점에서 숫자의 마지막 쌍으로 표시 됩니다는 `A` 점 (300, 49.9)를 나타내는 명령입니다. 시작 지점에서 의도적으로 약간 다릅니다. 끝점 시작점 같음으로 설정 된 경우 원호 렌더링 되지 않습니다. 완전 한 타원을 그릴 설정한 끝점에 닫기 (같지 않음) 그러나 시작점을 하거나 두 개 이상 사용 해야 `A` 완전 한 타원의 부분에 대 한 각 명령입니다.
+마지막 컨투어를 시작 하는 `M` 명령은 위치를 ' O ' 왼쪽의 세로 가운데 인 지점 (350, 50)으로 설정 합니다. `A` 명령 다음의 첫 번째 숫자로 표시 된 것 처럼 타원의 가로 반경이 25이 고 세로 반지름이 50입니다. 끝점은 포인트 (300, 49.9)를 나타내는 `A` 명령의 마지막 숫자 쌍으로 표시 됩니다. 이것은 단순히 시작 지점과 약간 다릅니다. 끝점이 시작 지점과 동일 하 게 설정 된 경우 호가 렌더링 되지 않습니다. 전체 타원을 그리려면 끝점을 시작점 (또는 같지 않음)으로 설정 해야 합니다. 그렇지 않으면 전체 타원의 일부에 대해 둘 이상의 `A` 명령을 사용 해야 합니다.
 
-페이지의 생성자에 다음 문을 추가 하 고 결과 문자열을 검사 하려면 중단점을 설정 하는 것이 좋습니다.
+다음 문을 페이지의 생성자에 추가 하 고 결과 문자열을 검사 하는 중단점을 설정 하는 것이 좋습니다.
 
 ```csharp
 string str = helloPath.ToSvgPathData();
 ```
 
-일련의 긴를 사용 하 여 원호를 교체한 알게 `Q` 정방형 베 지 어 곡선을 사용 하 여 원호의 증분 근사값에 대 한 명령입니다.
+근 베 지 어 곡선을 사용 하는 원호의 증분 근사값에 대 한 긴 `Q` 명령으로 호가 대체 되었음을 알 수 있습니다.
 
-`PaintSurface` 처리기 'E'에 대 한 제어점을 포함 하지 않는 경로 긴밀 하 게 범위를 가져옵니다 하 고 ' 곡선 o '입니다. 세 가지 변환 경로의 가운데 점 (0, 0), 캔버스 (하지만 또한 고려 스트로크 너비)의 크기에 대 한 경로 확장 이동한 다음 경로의 가운데를 캔버스의 가운데 위로 이동:
+`PaintSurface` 처리기는 ' E ' 및 ' O ' 곡선에 대 한 제어점을 포함 하지 않는 경로의 긴밀 한 경계를 가져옵니다. 세 가지 변환은 경로의 중심을 점 (0, 0)으로 이동 하 고, 경로를 캔버스의 크기로 조정 하 고, 패스의 중심을 캔버스의 가운데로 이동 합니다.
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -217,11 +217,11 @@ public class PathDataHelloPage : ContentPage
 }
 ```
 
-경로 보이는 가로 모드로 볼 때 적절 한 캔버스를 채웁니다.
+이 경로는 가로 모드로 볼 때 더 합리적인 모양의 캔버스를 채웁니다.
 
-[![](path-data-images/pathdatahello-small.png "경로 데이터 Hello 페이지 스크린샷 삼중")](path-data-images/pathdatahello-large.png#lightbox "삼중 경로 데이터 Hello 페이지 스크린샷")
+[![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
 
-합니다 **경로 데이터 Cat** 페이지는와 유사 합니다. 경로 및 그리기 개체 모두에 필드로 정의 된 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 클래스:
+**데이터 Cat 경로** 페이지도 유사 합니다. 경로 및 그리기 개체는 모두 [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 클래스의 필드로 정의 됩니다.
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -255,11 +255,11 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-헤드 고양이 그림이 그려 원 이며 두 개를 사용 하 여 렌더링 되는 여기 `A` 그리는 반원 명령입니다. 둘 다 `A` 100의 가로 및 세로 반지름을 정의 하는 head에 대 한 명령입니다. 첫 번째 호에서 시작 (240, 100)에서 끝납니다 (240, 300) 다시 종료 하는 두 번째 호에 대 한 시작점 됩니다 (240, 100).
+고양이 헤드는 원입니다. 여기에는 각각 반원를 그리는 두 개의 `A` 명령으로 렌더링 됩니다. 헤드에 대 한 두 `A` 명령은 모두 100의 가로 및 세로 반지름을 정의 합니다. 첫 번째 호는 (240, 100)에서 시작 하 고 (240, 300)에서 종료 됩니다 .이는 (240, 100)에서 종료 되는 두 번째 원호의 시작점입니다.
 
-두 대는 또한 두 개의 렌더링 `A` 명령 및 고양이 head와 마찬가지로 두 번째 `A` 명령은 첫 번째 시작으로 동일한 지점에서 끝납니다 `A` 명령입니다. 그러나 이러한 한 쌍의 `A` 명령을 타원을 정의 하지 않습니다. 사용 하 여 각 원호의 40 단위 이며 반지름도 40 단위, 즉, 이러한 원호 전체 semicircles 없는 합니다.
+두 개의 눈동자는 두 개의 `A` 명령으로 렌더링 되 고, cat 헤드와 마찬가지로 두 번째 `A` 명령은 첫 번째 `A` 명령의 시작과 동일한 지점에서 끝납니다. 그러나 이러한 `A` 명령 쌍은 타원을 정의 하지 않습니다. 각 호의를 포함 하는은 40 단위 이며 반지름은 40 단위 이기도 합니다. 즉, 이러한 원호는 전체 semicircles 되지 않습니다.
 
-합니다 `PaintSurface` 처리기 앞의 예제에서와 비슷한 변환을 수행 하지만 단일 설정 `Scale` 가로 세로 비율을 유지 하 고 고양이 수염에 대 한 화면의 측면을 건드리지 않을 작은 여백을 제공 요소:
+`PaintSurface` 처리기는 이전 샘플과 유사한 변환을 수행 하지만, 가로 세로 비율을 유지 하기 위해 단일 `Scale` 요소를 설정 하 고, cat의 수염 화면 측면을 건드리지 않도록 작은 여백을 제공 합니다.
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -288,13 +288,13 @@ public class PathDataCatPage : ContentPage
 }
 ```
 
-실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![](path-data-images/pathdatacat-small.png "경로 데이터 Cat 페이지 스크린샷 삼중")](path-data-images/pathdatacat-large.png#lightbox "삼중 경로 데이터 Cat 페이지 스크린샷")
+[![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
 
-일반적으로,는 `SKPath` 개체가 필드로 정의 된, 경로 윤곽 다른 메서드나 생성자에 정의 되어야 합니다. 그러나 SVG 경로 데이터를 사용할 때 살펴보았습니다 필드 정의에 전체 경로 지정할 수 있습니다.
+일반적으로 `SKPath` 개체가 필드로 정의 된 경우 경로의 컨투어는 생성자 또는 다른 메서드에서 정의 해야 합니다. 그러나 SVG 경로 데이터를 사용 하는 경우 필드 정의에서 경로를 완전히 지정할 수 있습니다.
 
-이전 **까다로운 아날로그 클록** 샘플을 [ **The 회전 변환** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) 문서 시계 바늘을 간단한 선으로 표시 합니다. 합니다 **아날로그 클록 상당히** 아래 프로그램을 사용 하 여 해당 줄 대체 `SKPath` 필드로 정의 된 개체를 [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) 클래스와 함께 `SKPaint` 개체:
+[**회전 변환**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) 문서의 이전에는 **못 된 아날로그 클록** 샘플에서 Clock의 손을 간단한 선으로 표시 했습니다. 아래 **아날로그 클록** 프로그램은 이러한 줄을 `SKPaint` 개체와 함께 [`PrettyAnalogClockPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) 클래스의 필드로 정의 된 `SKPath` 개체로 바꿉니다.
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
@@ -332,9 +332,9 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-이제 시간 및 분 손을 영역 포함 했습니다. 이러한 실습 서로 구별을 하려면 black 개요 및 사용 하 여 회색 채우기를 사용 하 여 그릴 합니다 `handStrokePaint` 및 `handFillPaint` 개체입니다.
+이제 시간 및 분 바늘에는 포함 된 영역이 있습니다. 이러한 손을 서로 구분 하기 위해 `handStrokePaint` 및 `handFillPaint` 개체를 사용 하 여 검정 윤곽선과 회색 채우기를 모두 사용 하 여 그립니다.
 
-이전 **까다로운 아날로그 클록** 샘플 작은 원을 표시 시간 및 분 루프에 그려진 합니다. 이 **아날로그 클록 상당히** 샘플에 사용 되는 완전히 다른 방법: 시간 및 분 표시는 점선으로 사용 하 여 그린 합니다 `minuteMarkPaint` 및 `hourMarkPaint` 개체:
+이전에는 **못 된 아날로그 클록** 샘플에서 시간 및 분으로 표시 된 작은 원이 루프에서 그려집니다. 이 처럼 **아날로그 클록** 샘플에서는 완전히 다른 방법이 사용 됩니다. 시간 및 분 표시는 `minuteMarkPaint` 및 `hourMarkPaint` 개체를 사용 하 여 그려진 점선입니다.
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
@@ -361,11 +361,11 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-합니다 [ **점 및 대시** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) 문서 사용 하는 방법을 설명 합니다 [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) 파선을 만드는 방법. 첫 번째 인수는 일반적 `float` 으로 두 개의 요소를 포함 하는 배열입니다. 첫 번째 요소는 대시의 길이 이며 두 번째 요소는 대시 사이의 간격입니다. 경우는 `StrokeCap` 속성이 `SKStrokeCap.Round`, 둥근된 끝 대시 대시의 양쪽에서 스트로크 너비에 따라 대시 길이 효과적으로 연장 합니다. 따라서 첫 번째 배열 요소를 0으로 설정 된 점선을 만듭니다.
+[**점 및 대시**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) 문서에서는 [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash*) 메서드를 사용 하 여 파선을 만드는 방법에 대해 설명 했습니다. 첫 번째 인수는 일반적으로 두 개의 요소를 포함 하는 `float` 배열입니다. 첫 번째 요소는 대시의 길이이 고 두 번째 요소는 대시 사이의 간격입니다. `StrokeCap` 속성이 `SKStrokeCap.Round`으로 설정 되 면 대시의 둥근 끝에서 대시의 양쪽에 있는 스트로크 너비로 대시 길이를 효과적으로 늘립니다. 따라서 첫 번째 배열 요소를 0으로 설정 하면 점선이 만들어집니다.
 
-이러한 점 사이의 거리는 두 번째 배열 요소에 의해 제어 됩니다. 알 수 있듯이 곧 이러한 두 `SKPaint` 개체 90 단위의 반지름 원을 그리는 데 사용 됩니다. 이 원의 원주 60 분 표시 모든 3 π 단위 표시 되어야 함을 의미 합니다 180π 되므로에서 두 번째 값을 `float` 배열을 `minuteMarkPaint`합니다. 12 시간 표시 나타나야 모든 15π 단위를 두 번째에서 값인 `float` 배열입니다.
+이러한 점 사이의 거리는 두 번째 배열 요소에 의해 제어 됩니다. 곧 볼 수 있듯이 이러한 두 `SKPaint` 개체는 90 단위의 반지름이 있는 원을 그리는 데 사용 됩니다. 따라서이 원의 원주는 180 π입니다. 즉, 60 분 표시는 `minuteMarkPaint`에서 `float` 배열의 두 번째 값인 3π 단위 마다 표시 되어야 합니다. 12 시간 표시는 두 번째 `float` 배열의 값인 15π 단위 마다 표시 되어야 합니다.
 
-합니다 `PrettyAnalogClockPage` 클래스 16 밀리초 마다 화면을 무효화 합니다. 타이머를 설정 합니다 및 `PaintSurface` 속도 처리기가 호출 됩니다. 이전 정의 `SKPath` 고 `SKPaint` 개체 수에 대 한 그리기 코드 정리:
+`PrettyAnalogClockPage` 클래스는 16 밀리초 마다 표면을 무효화 하는 타이머를 설정 하 고 해당 속도에서 `PaintSurface` 처리기를 호출 합니다. `SKPath` 및 `SKPaint` 개체의 이전 정의에서는 매우 깨끗 한 그리기 코드를 사용할 수 있습니다.
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage
@@ -425,9 +425,9 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-그러나 한편으로 두 번째를 사용 하 여 수행 됩니다 특별 한. 시계는 업데이트 되므로 16 밀리초 마다를 `Millisecond` 의 속성을 `DateTime` 값의 개별 점프 이동 하는 대신 스윕을 수동으로 두 번째 애니메이션 효과를 잠재적으로 사용할 수 있습니다 초 초에서. 하지만이 코드 이어갈 수 하는 움직임을 허용 하지 않습니다. 대신를 사용 하 여 Xamarin.Forms [ `SpringIn` ](xref:Xamarin.Forms.Easing.SpringIn) 하 고 [ `SpringOut` ](xref:Xamarin.Forms.Easing.SpringOut) 애니메이션 감속/가속 함수는 다른 종류의 이동에 대 한 합니다. 감속/가속 함수가 양식 화면 떨림 방식으로 이동할 초침 &mdash; 끌어오기 다시 작은 이동한 다음 약간 과도 하 게 해결 목적지 효과 안타깝게도 재현할 수 없는 정적이 스크린 샷에 전에:
+그러나 특별 한 작업은 두 번째 손으로 수행 됩니다. Clock이 16 밀리초 마다 업데이트 되기 때문에, `DateTime` 값의 `Millisecond` 속성을 사용 하 여 불연속 점프에서 second로 이동 하는 대신 스윕 두 번째 쪽에 애니메이션 효과를 줄 수 있습니다. 그러나이 코드는 이동이 원활 하 게 진행 되는 것을 허용 하지 않습니다. 대신 Xamarin.ios [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) 를 사용 하 고 다른 종류의 이동에 대 한 애니메이션 감속/가속 함수를 [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) 합니다. 이러한 감속/가속 함수를 통해 두 번째 손을 jerkier &mdash; 방식으로 이동 하 여 이동 하기 전에 약간의 작업을 수행 하 고, 해당 대상을 약간 과도 하 게 복원 하는 것은 이러한 정적 스크린샷에서 재현할 수 없는 효과를 발생 시킵니다.
 
-[![](path-data-images/prettyanalogclock-small.png "삼중 아날로그 시계 매우 페이지 스크린샷")](path-data-images/prettyanalogclock-large.png#lightbox "삼중 아날로그 시계 매우 페이지 스크린샷")
+[![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
 
 ## <a name="related-links"></a>관련 링크
 

@@ -3,15 +3,15 @@ title: Xamarin.ios에 대 한 Xamarin Live Player
 description: 이 문서에서는 설치, Xamarin Live Player 앱, Xamarin Live Player와 함께 사용할 샘플, 제한 사항 및 문제 해결에 대 한 Xamarin Live Player 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
-ms.openlocfilehash: 02a4f5970e1c94385316c80b53d8262f47db6c60
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: d5f3fb2a793f658334555aae3328e69134b2666a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278838"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029668"
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin.ios에 대 한 Xamarin Live Player
 
@@ -27,7 +27,7 @@ ms.locfileid: "70278838"
 
 ## <a name="how-xamarin-live-player-worked"></a>Xamarin Live Player 작동 방법
 
-[![Xamarin Live Player: 코드, 검색, 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+[![Xamarin Live Player: 코드, 검사, 테스트](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. **기본 설정**에서 *Xamarin Live Player* 를 사용 하도록 설정 하 고 **장치 목록에서 장치를** 선택 합니다.
 2. 라이브 플레이어 장치를 관리 하 여 QR 코드를 스캔 하 여 장치를 Visual Studio에 페어링 합니다.

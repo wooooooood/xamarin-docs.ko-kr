@@ -4,15 +4,15 @@ description: 이 문서에서는 Android를 개발 하기 위해 컴퓨터 및 �
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 190e38e525288dbc2b7f6bd9e785c723c80c6271
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 83ec214ae1838959355e99322ce5a809ead004fa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762233"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028737"
 ---
 # <a name="setup-and-installation"></a>설정 및 설치
 
@@ -22,13 +22,13 @@ _이 문서에서는 Android를 개발 하기 위해 컴퓨터 및 장치를 준
 
 Xamarin 기반 Android 마모 앱을 만들려면 다음이 필요 합니다.
 
-- **Visual Studio 또는 Mac용 Visual Studio** &ndash; Visual Studio 2017 Community 이상이 필요 합니다.
+- Visual **studio 또는 Mac용 Visual Studio** &ndash; visual Studio 2017 Community 이상이 필요 합니다.
 
-- Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin android** &ndash; xamarin android 4.17 이상 버전을 설치 하 고 구성 해야 합니다.
+- Visual Studio 또는 Mac용 Visual Studio를 사용 하 여 **xamarin.ios &ndash; xamarin. android 4.17** 이상 버전을 설치 하 고 구성 해야 합니다.
 
 - Android SDK Manager를 통해 **Android SDK** Android SDK 5.0.1 용 (API 21) 이상을 설치 해야 합니다.
 
-- **Java 개발자 키트** Api 레벨 24 이상에 대해 개발 중인 경우 Xamarin Android 개발에 [jdk 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이 필요 합니다 (jdk 1.8은 24 이전 API 수준도 지원). &ndash;
+- API 레벨 24 1.8 이상에 대해 개발 중인 경우에는 jdk 1.8를 사용 하 여 **Java 개발자 키트** &ndash; Xamarin Android를 개발 하는 경우 [jdk](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 는 24 이전 api 수준도 지원 합니다.
 
 API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 을 계속 사용할 수 있습니다.
 
@@ -65,7 +65,7 @@ Xamarin.ios를 설치한 후 다음 단계를 수행 하 여 Android 앱을 빌�
 - Android 4.4 W (API20) 또는
 - Android 5.0.1 용 (API21) 이상.
 
-최신 sdk 및 도구를 설치 하지 않은 경우 필요한 sdk 도구 *및* api 비트를 다운로드 합니다 (아래에 api 선택이 표시 되어 있는지 확인 &ndash; 하려면 약간 스크롤해야 할 수 있음). 
+최신 SDK 및 도구를 설치 하지 않은 경우 필요한 SDK 도구 *및* api 비트를 다운로드 합니다 (아래에 api 선택이 표시 &ndash; 하려면 약간 스크롤해야 할 수 있음). 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

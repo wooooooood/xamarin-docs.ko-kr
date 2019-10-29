@@ -3,19 +3,19 @@ title: 아키텍처 개요
 description: 이 문서에서는 Xamarin Workbooks의 아키텍처에 대해 설명 하 고 대화형 에이전트와 대화형 클라이언트가 함께 작동 하는 방식을 검토 합니다.
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
-ms.openlocfilehash: 7129d0bedddb272ef87e3d209cb05c2ca0c0acf4
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 7b3f2613e315bc05fedfb5b2fa70d11c2874ba65
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285290"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73029615"
 ---
 # <a name="architecture-overview"></a>아키텍처 개요
 
-Xamarin Workbooks는 서로 함께 작동 해야 하는 두 가지 주요 구성 요소를 제공 합니다. _에이전트_ 및 _클라이언트_.
+Xamarin Workbooks은 서로 함께 작동 해야 하는 두 가지 주요 구성 요소 ( _에이전트_ 와 _클라이언트_)를 제공 합니다.
 
 ## <a name="interactive-agent"></a>대화형 에이전트
 

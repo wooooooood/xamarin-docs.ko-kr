@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin에서 watchOS 3으로 작업할 때 유
 ms.prod: xamarin
 ms.assetid: 5911D898-0E23-40CC-9F3C-5F61B4D50ADC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: f10fb237bca92f49ac77657778ada8a47ed69c49
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 093ac4a3242866413042de0b650433d4369ad35f
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292180"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028249"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 문제 해결
 
@@ -66,29 +66,29 @@ WatchOS 3 beta 2 이상 및 macOS Sierra beta 2 이상을 사용 하 여 사용�
 
 ## <a name="nsurlconnection"></a>NSURLConnection
 
-이전 `NSURLConnection` TLS 프로토콜을 사용 하는 모든 연결이 실패 합니다. 모든 SSL/TLS 연결의 경우 이제 RC4 대칭 암호화가 기본적으로 사용 하지 않도록 설정 됩니다. 또한 보안 전송 API는 더 이상 SSLv3을 지원 하지 않으며, 가능한 한 빨리 SHA-1 및 3DES 암호화를 사용 하 여 앱을 중지 하는 것이 좋습니다.
+이전 TLS 프로토콜을 사용 하는 모든 `NSURLConnection` 연결은 실패 합니다. 모든 SSL/TLS 연결의 경우 이제 RC4 대칭 암호화가 기본적으로 사용 하지 않도록 설정 됩니다. 또한 보안 전송 API는 더 이상 SSLv3을 지원 하지 않으며, 가능한 한 빨리 SHA-1 및 3DES 암호화를 사용 하 여 앱을 중지 하는 것이 좋습니다.
 
 WatchOS 3에서 SSL/TLS 연결 보안은 Apple에 의해 엄격히 적용 됩니다. 영향을 받는 서비스와 앱은 최신 TLS 프로토콜 버전을 사용 하도록 웹 서버를 업데이트 해야 합니다.
 
 ## <a name="nsurlsession"></a>NSURLSession
 
-WatchOS 3부터 `NSMutableURLRequest` 클래스의 속성 `HTTPBodyStream` 은 `NSURLSession` 이제이 요구 사항을 엄격 하 게 적용 하기 때문 `NSURLConnection` 에 아직 열지 않은 스트림으로 설정 되어야 합니다.
+WatchOS 3부터 `NSURLConnection` 및 `NSURLSession`에서이 요구 사항을 엄격 하 게 적용 하기 때문에 `NSMutableURLRequest` 클래스의 `HTTPBodyStream` 속성을 열지 않은 스트림으로 설정 해야 합니다.
 
-## <a name="privacy"></a>개인 정보 취급 방침
+## <a name="privacy"></a>개인 정보 보호
 
 알려진 문제:
 
-Url로 `https://` 작업할 때 `NSURLConnection` 및는 TLS 핸드셰이크 중에 RC4 암호 그룹을 더 이상 지원 하지 않습니다. `NSURLSession` 다음 오류 코드 중 하나가 생성 될 수 있습니다.
+`https://` Url을 사용 하는 경우 `NSURLSession` 및 `NSURLConnection`는 TLS 핸드셰이크 중에 RC4 암호 그룹을 더 이상 지원 하지 않습니다. 다음 오류 코드 중 하나가 생성 될 수 있습니다.
 
-- **-1200 또는-98** - `NSURLErrorSecurityConnectionFailed` 및 securetransport 오류
+- **-1200 또는-98** -`NSURLErrorSecurityConnectionFailed` 및 securetransport 오류가 발생 합니다.
 - **-1200 [3:-9824]** -Http 로드에 실패 했습니다.
-- **-**  -  1200`NSURLConnection` 이 완료 되었으나 오류가 발생 했습니다.
+- **-1200** - `NSURLConnection` 완료 되었으나 오류가 발생 했습니다.
 
 WatchOS 3에서 SSL/TLS 연결 보안은 Apple에 의해 엄격히 적용 됩니다. 영향을 받는 서비스와 앱은 최신 TLS 프로토콜 버전을 사용 하도록 웹 서버를 업데이트 해야 합니다. 자세한 내용은 위의 [NSURLConnection](#nsurlconnection) 를 참조 하세요.
 
-## <a name="snapshots"></a>스냅숏
+## <a name="snapshots"></a>스냅샷
 
-새 `HandelBackgroundTask` API를 채택 하지 않은 WatchKit apps는 watchOS 3에서 더 이상 정기적으로 업데이트를 받지 않습니다. 
+새 `HandelBackgroundTask` API를 채택 하지 않은 WatchKit apps는 watchOS 3에서 더 이상 정기 업데이트를 받지 않습니다. 
 
 ## <a name="watchkit"></a>WatchKit
 

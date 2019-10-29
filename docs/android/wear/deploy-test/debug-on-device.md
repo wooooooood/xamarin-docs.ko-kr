@@ -4,15 +4,15 @@ description: 이 문서에서는 마모 된 장치에서 Xamarin Android 마모 
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 9596ff34352337d892fc22df5651b2f78f8c33f6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 965ed4e802c05f8450192c0fec17fe31e464c779
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762170"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028692"
 ---
 # <a name="debug-on-a-wear-device"></a>Wear 디바이스에서 디버그
 
@@ -86,7 +86,7 @@ Android 마모 장치에서 디버깅을 사용 하도록 설정 하려면 다�
     Target: connected
     ```
 
-6. 위의 단계를 완료 한 후에는 `adb devices` 를 실행 하 여 휴대폰 및 Android 장치 상태를 모두 표시 합니다.
+6. 위의 단계를 완료 한 후 `adb devices`를 실행 하면 전화와 Android 장치 둘 다의 상태가 표시 됩니다.
 
     ```
     List of devices attached
@@ -126,7 +126,7 @@ adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 adb -s 127.0.0.1:4444 uninstall <package name>
 ```
 
-예를 들어 패키지 이름 `com.xamarin.weartest`으로 앱을 제거 하려면 다음 명령을 입력 합니다.
+예를 들어 `com.xamarin.weartest`패키지 이름으로 앱을 제거 하려면 다음 명령을 입력 합니다.
 
 ```shell
 adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
