@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.ios의 슬라이드, 스위치 및 분�
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: e95a514286c68879eac4ee80f2c95882b4e2b5b6
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 763165f1e09f847745b820987f8dbbae8f834fd7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768464"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021958"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Xamarin.ios의 슬라이더, 스위치 및 분할 컨트롤
 
@@ -22,11 +22,11 @@ ms.locfileid: "70768464"
 
 슬라이더 컨트롤을 사용 하면 범위 내에서 숫자 값을 간단히 선택할 수 있습니다. 컨트롤의 기본값은 0에서 1 사이의 값 이지만 이러한 한도를 사용자 지정할 수 있습니다.
 
- [![](slider-switch-segmented-controls-images/image25a.png "슬라이드")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image25a.png "Slider")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 다음 스크린샷은 디자이너에서 편집할 수 있는 속성을 보여 줍니다.
 
- [![](slider-switch-segmented-controls-images/image26a.png "슬라이더 속성")](slider-switch-segmented-controls-images/image25a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image26a.png "Slider Properties")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
 `UILabel` 컨트롤에서 현재 선택 된 값을 표시 하는 처리기를 연결 하는 것을 포함 하 여 아래와 같이 코드에서 이러한 값을 설정할 수 있습니다.
 
@@ -47,10 +47,10 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 사용자 지정 된 슬라이더는 다음과 같습니다.
 
- [![](slider-switch-segmented-controls-images/image27a.png "사용자 지정 슬라이더")](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image27a.png "Custom Slider")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> 현재가 런타임에 예상 대로 렌더링 되지 `ThumbTint`않도록 하는 [버그](https://stackoverflow.com/a/19496179)가 있습니다. 위의 **코드 줄에 다음 코드 줄** 을 추가 하 여 해결 방법을 사용할 수 있습니다. [[Source](https://stackoverflow.com/a/21396794)]:
+> 현재 `ThumbTint`가 런타임에 예상 대로 렌더링 되지 않도록 하는 [버그가](https://stackoverflow.com/a/19496179) 있습니다. 위의 **코드 줄에 다음 코드 줄** 을 추가 하 여 해결 방법을 사용할 수 있습니다. [[원본](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
@@ -58,17 +58,17 @@ slider1.MaximumTrackTintColor = UIColor.Green;
 
 <a name="Switch" />
 
-## <a name="switch"></a>스위치
+## <a name="switch"></a>전환
 
-iOS는를 `UISwitch` 다른 플랫폼의 라디오 단추로 표현할 수 있는 부울 입력으로 사용 합니다. 사용자는 **설정/해제** 위치 사이의 *엄지 단추* 를 이동 하 여 컨트롤을 조작할 수 있습니다.
+iOS는 다른 플랫폼에서 라디오 단추로 표현할 수 있는 부울 입력으로 `UISwitch`를 사용 합니다. 사용자는 **설정/해제** 위치 사이의 *엄지 단추* 를 이동 하 여 컨트롤을 조작할 수 있습니다.
 
  [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 스위치의 모양은 디자이너의 **Properties Pad** 에서 사용자 지정할 수 있으며,이를 통해 기본 상태, **설정/해제 색조** 색 및 **설정/해제 이미지**를 제어할 수 있습니다. 이는 아래 이미지에 나와 있습니다.
 
- [![](slider-switch-segmented-controls-images/image29a.png "스위치 속성")](slider-switch-segmented-controls-images/image29a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image29a.png "Switch Properties")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
-코드에서 스위치의 속성을 설정할 수도 있습니다. 예를 들어 아래 코드는의 `On`기본값을 사용 하는 스위치를 표시 합니다.
+코드에서 스위치의 속성을 설정할 수도 있습니다. 예를 들어 아래 코드는 `On`의 기본값을 사용 하는 스위치를 표시 합니다.
 
 ```csharp
 switch1.On = true;
@@ -80,15 +80,15 @@ switch1.On = true;
 
 분할 된 컨트롤은 사용자가 적은 수의 옵션을 조작할 수 있도록 구성 된 방법입니다. 가로로 배치 되며 각 세그먼트는 별도의 단추로 작동 합니다. 디자이너를 사용할 때 분할 된 컨트롤은 **도구 상자 > 컨트롤**에서 찾을 수 있으며 다음 이미지와 같이 표시 됩니다.
 
- [![](slider-switch-segmented-controls-images/segmentedcontrol.png "분할 컨트롤")](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
+ [![](slider-switch-segmented-controls-images/segmentedcontrol.png "Segmented Control")](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
 디자이너의 고유한 기능을 사용 하면 아래 그림과 같이 디자인 화면에서 각 세그먼트를 개별적으로 선택할 수 있습니다.
 
- [![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "분할 컨트롤")](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
+ [![](slider-switch-segmented-controls-images/segmentedcontrolselection.png "Segmented Control")](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
 이렇게 하면 Properties Pad를 사용 하 여 각 세그먼트의 속성을 보다 정확 하 게 제어할 수 있습니다. 아래 스크린샷에서 편집 가능한 속성을 볼 수 있습니다.
 
- [![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "분할 컨트롤")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
+ [![](slider-switch-segmented-controls-images/segmentedcontrolproperties.png "Segmented Control")](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
 분할 된 컨트롤 스타일은 iOS7에서 더 이상 사용 되지 않으므로 iOS7 응용 프로그램에서이에 대 한 옵션을 조정 해도 아무런 영향을 주지 않습니다.
 
