@@ -4,15 +4,15 @@ description: 디버그 로그를 사용하여 Xamarin.Android 애플리케이션
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: ef3ba27b9056e1de92aabb87f86416b2985d6e1d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 39ee1039104052b8799debf19f09439f57a1791d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754218"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028092"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
 
@@ -65,7 +65,7 @@ ms.locfileid: "70754218"
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 **디바이스 로그**를 열려면 **보기 &gt; 패드 &gt; 디바이스 로그**를 클릭합니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "70754218"
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 디버그 로그를 보는 또 다른 옵션은 명령줄을 통해서 보는 것입니다. 터미널 창을 열고 Android SDK 플랫폼 도구 폴더(일반적으로 SDK 플랫폼 도구 폴더는 **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**에 있음)로 이동합니다.
 

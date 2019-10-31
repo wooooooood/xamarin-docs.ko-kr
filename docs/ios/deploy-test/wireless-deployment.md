@@ -4,16 +4,16 @@ description: 이 문서에서는 Mac용 Visual Studio 또는 Visual Studio 2019�
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: afa87cf98a2f9caee49c510674fe774a46e81107
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: b0eb471bd41bb38d62ced38ed66cfa0dfee37bbf
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284350"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023416"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Xamarin.iOS 및 tvOS 앱에 대한 무선 배포
 
@@ -27,7 +27,7 @@ ms.locfileid: "70284350"
 
 무선 배포를 사용하려면 다음이 필요합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 - macOS 10.12.4
 - 최신 버전의 Mac용 Visual Studio

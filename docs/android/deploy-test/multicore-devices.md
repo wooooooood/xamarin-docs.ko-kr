@@ -4,15 +4,15 @@ description: Android는 여러 컴퓨터 아키텍처에서 실행할 수 있습
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: f24fdb768cc0c4e12fdc58f6e5386edd0db98527
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753951"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028023"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 디바이스 및 Xamarin.Android
 
@@ -140,7 +140,7 @@ lib/armeabi-v7a/libtwo.so
 $APP/lib/libtwo.so # from the armeabi-v7a directory in the apk
 ```
 
-즉, `libone.so`는 설치되지 않습니다. 그러면 문제가 발생합니다. 애플리케이션이 런타임에 로드할 `libone.so`가 없기 때문입니다. 이 동작은 예상하지 못한 것이지만 버그로 기록되었고 "[예상대로 작동](http://code.google.com/p/android/issues/detail?id=9089)"으로 재분류되었습니다.
+즉, `libone.so`는 설치되지 않습니다. 그러면 문제가 발생합니다. 애플리케이션이 런타임에 로드할 `libone.so`가 없기 때문입니다. 이 동작은 예상하지 못한 것이지만 버그로 기록되었고 "[예상대로 작동](https://code.google.com/p/android/issues/detail?id=9089)"으로 재분류되었습니다.
 
 따라서 Android 4.0 이전 버전을 대상으로 하는 경우 애플리케이션이 지원할 *각* ABI의 *모든* 네이티브 라이브러리를 제공해야 합니다. 즉, `.apk`는 다음을 포함해야 합니다.
 
@@ -174,7 +174,7 @@ $APP/lib/libone.so
 $APP/lib/libtwo.so
 ```
 
-불행히도 이 동작은 다음 문서 [문제 24321: apk에 armeabi와 armeabi-v7a가 둘 다 포함된 경우 Galaxy Nexus 4.0.2가 armeabi 네이티브 코드 사용](http://code.google.com/p/android/issues/detail?id=25321)에 설명된 대로 순서에 따라 달라집니다.
+불행히도 이 동작은 다음 문서 [문제 24321: apk에 armeabi와 armeabi-v7a가 둘 다 포함된 경우 Galaxy Nexus 4.0.2가 armeabi 네이티브 코드 사용](https://code.google.com/p/android/issues/detail?id=25321)에 설명된 대로 순서에 따라 달라집니다.
 
 네이티브 라이브러리는 "순서대로"(예를 들어 unzip에 나열된 대로) 처리되고, *처음 일치* 항목이 추출됩니다. `.apk`에는 `armeabi` 및 `armeabi-v7a` 버전의 `libtwo.so`가 포함되어 있고 `armeabi`가 먼저 나열되므로 `armeabi-v7a` 버전이 *아닌* `armeabi` 버전이 추출됩니다.
 
@@ -255,5 +255,5 @@ Mac용 Visual Studio에서는 다음 스크린샷에서처럼 **고급** 탭에�
 
 - [ARM 아키텍처용 ABI(PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
-- [문제 9089: Nexus One - armeabi-v7a에 하나 이상의 라이브러리가 없을 경우 armeabi에서 네이티브 라이브러리를 로드하지 않음](http://code.google.com/p/android/issues/detail?id=9089)
-- [문제 24321: apk에 armeabi와 armeabi-v7a가 둘 다 포함된 경우 Galaxy Nexus 4.0.2가 armeabi 네이티브 코드 사용](http://code.google.com/p/android/issues/detail?id=25321)
+- [문제 9089: Nexus One - armeabi-v7a에 하나 이상의 라이브러리가 없을 경우 armeabi에서 네이티브 라이브러리를 로드하지 않음](https://code.google.com/p/android/issues/detail?id=9089)
+- [문제 24321: apk에 armeabi와 armeabi-v7a가 둘 다 포함된 경우 Galaxy Nexus 4.0.2가 armeabi 네이티브 코드 사용](https://code.google.com/p/android/issues/detail?id=25321)

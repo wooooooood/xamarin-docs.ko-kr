@@ -6,15 +6,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c9f9fb7eecd41c3aeffb7a28042f944c9d6a320b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ab401c24fc486ba69fe01aff76e1a9b7d53122d0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68644069"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028026"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: 빠른 시작
 
@@ -515,7 +515,7 @@ namespace Phoneword
 
 **Phoneword** 프로젝트에서 **mipmap-** Xamarin 앱 아이콘 폴더의 콘텐츠를 해당하는 **mipmap-** 폴더에 복사할 때까지 **mipmap-** 폴더의 각각에 대해 이러한 단계를 반복합니다.
 
-모든 아이콘을 Xamarin.Android 프로젝트에 복사한 후에 **Solution Pad**에서 프로젝트를 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다. **빌드 > Android 응용 프로그램**을 선택하고 **응용 프로그램 아이콘** 콤보 상자에서 `@mipmap/icon`을 선택합니다.
+모든 아이콘을 Xamarin.Android 프로젝트에 복사한 후에 **Solution Pad**에서 프로젝트를 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션** 대화 상자를 엽니다. **빌드 &gt; Android 애플리케이션**을 선택하고 **애플리케이션 아이콘** 콤보 상자에서 `@mipmap/icon`을 선택합니다.
 
 [![프로젝트 아이콘 설정](hello-android-quickstart-images/xs/28-set-project-icon-sml.png)](hello-android-quickstart-images/xs/28-set-project-icon.png#lightbox)
 

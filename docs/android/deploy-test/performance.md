@@ -4,15 +4,15 @@ description: Xamarin.Android로 빌드된 애플리케이션의 성능을 높이
 ms.prod: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 88e1acecdc96af596a0151bbd3f64dc4547d4cce
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 620a7edd4467a5a2bae60bbd82d0e1460c9f0040
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753816"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021409"
 ---
 # <a name="xamarinandroid-performance"></a>Xamarin.Android 성능
 

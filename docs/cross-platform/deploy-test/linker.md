@@ -3,15 +3,15 @@ title: 사용자 지정 링커 구성
 description: 이 문서에서는 필요한 코드가 연결된 애플리케이션에서 제거되지 않았음을 명시적으로 확인하는 링커를 구성하는 데 사용할 수 있는 XML 파일을 설명합니다.
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 230fe0f168b5718c2bc91cff6dbdc078b0e6834d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6ecfad9a3dc33a4fc4012a797631b5c240aa7a80
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765936"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016533"
 ---
 # <a name="custom-linker-configuration"></a>사용자 지정 링커 구성
 

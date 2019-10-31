@@ -4,15 +4,15 @@ description: 이 문서에서는 디바이스를 사용하여 Xamarin.Android �
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
-ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
+ms.openlocfilehash: f5b92bc202cbf9765a63219ad653442152c3eb24
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65925055"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020710"
 ---
 # <a name="set-up-device-for-development"></a>개발용 디바이스 설정
 
@@ -71,7 +71,7 @@ Windows 컴퓨터에서 USB로 연결된 Android 디바이스를 인식하기 �
 
 ### <a name="download-the-usb-drivers"></a>USB 드라이버를 다운로드합니다.
 
-Google Nexus 디바이스(Galaxy Nexus 제외)에는 Google USB 드라이버가 필요합니다. Galaxy Nexus용 드라이버가 [Samsung에서 배포](http://www.samsung.com/us/support/downloads/)됩니다.
+Google Nexus 디바이스(Galaxy Nexus 제외)에는 Google USB 드라이버가 필요합니다. Galaxy Nexus용 드라이버가 [Samsung에서 배포](https://www.samsung.com/us/support/downloads/)됩니다.
 다른 모든 Android 디바이스는 [해당 제조업체의 USB 드라이버](https://developer.android.com/tools/extras/oem-usb.html#Drivers)를 사용해야 합니다.
 
 다음 스크린샷에서 볼 수 있듯이 Android SDK Manager를 시작하고 **Extras** 폴더를 확장하여 **Google USB 드라이버** 패키지를 설치합니다.
@@ -183,7 +183,7 @@ adb devices
 
 - [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
 - [하드웨어 디바이스 사용](https://developer.android.com/tools/device.html)
-- [Samsung 드라이버 다운로드](http://www.samsung.com/us/support/downloads/)
+- [Samsung 드라이버 다운로드](https://www.samsung.com/us/support/downloads/)
 - [OEM USB 드라이버](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
 - [Google USB 드라이버](https://developer.android.com/sdk/win-usb.html)
-- [XDA 개발자: Windows 8 - ADB/빠른 부팅 드라이버 문제 해결](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [XDA 개발자: Windows 8 - ADB/빠른 부팅 드라이버 문제 해결](https://forum.xda-developers.com/showthread.php?t=1583801)

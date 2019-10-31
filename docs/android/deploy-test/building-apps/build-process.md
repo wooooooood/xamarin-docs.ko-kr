@@ -3,15 +3,15 @@ title: 빌드 프로세스
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2019
-ms.openlocfilehash: 45d57f818fc6d90cb712b9f43ef815d44059ea68
-ms.sourcegitcommit: 13e43f510da37ad55f1c2f5de1913fb0aede6362
+ms.openlocfilehash: 06e40fce69ee6d614bcf27bd563d9452595bd6ab
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71021367"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028146"
 ---
 # <a name="build-process"></a>빌드 프로세스
 
@@ -102,7 +102,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   *기본적으로* `Debug` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 파일과 패키지가 존재해야 작동하는 소형 Android 패키지를 생성하도록 합니다.
 
-  기본 `Release` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 패키지나 파일을 설치하지 않고도 사용할 수 있는 ‘독립 실행형’ Android 패키지를 생성하도록 합니다.
+  기본 `Release` 구성은 `Install` 및 `SignAndroidPackage` 대상에서 다른 패키지나 파일을 설치하지 않고도 사용할 수 있는 ‘독립 실행형’ Android 패키지를 생성하도록 합니다. 
 
 - **DebugSymbols** &ndash; `$(DebugType)` 속성과 함께 사용되며, Android 패키지가 *디버그 가능*한지 결정하는 부울 값입니다. 디버그 가능한 패키지는 디버그 기호를 포함하고, `//application/@android:debuggable` 특성을 `true`로 설정하며, 디버거가 프로세스에 연결할 수 있도록 `INTERNET` 권한을 자동으로 추가합니다. `DebugSymbols`가 `True`*이고*`DebugType`이 빈 문자열이거나 `Full`일 경우 애플리케이션을 디버그할 수 있습니다.
 
@@ -212,7 +212,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
   기본적으로 이 속성은 `False`입니다.
 
 - **AndroidErrorOnCustomJavaObject** &ndash; 형식이 `Java.Lang.Object` 또는 `Java.Lang.Throwable`에서도 상속되지 ‘않고’ `Android.Runtime.IJavaObject`
-  를 구현할 수 있는지 여부를 확인하는 부울 속성입니다.
+  를 구현할 수 있는지 여부를 확인하는 부울 속성입니다. 
 
   ```csharp
   class BadType : IJavaObject {
@@ -303,7 +303,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   Xamarin.Android 6.1에 추가되었습니다.
 
-- **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 올바른 값은 다음과 같습니다.
+- **AndroidLinkMode** &ndash; Android 패키지 내에 포함된 어셈블리에 대해 수행해야 하는 [연결](~/android/deploy-test/linker.md) 유형을 지정합니다. Android 애플리케이션 프로젝트 내에서만 사용됩니다. 기본값은 *SdkOnly*입니다. 유효한 값은
 
   - **없음**: 연결을 시도하지 않습니다.
 
@@ -381,7 +381,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
 - **AndroidR8JarPath** &ndash; r8 dex 컴파일러 및 shrinker와 함께 사용하기 위한 `r8.jar`의 경로입니다. Xamarin.Android 설치 경로의 기본값입니다. 자세한 내용은 [D8 및 R8][d8-r8]에 대한 설명서를 참조하세요.
 
-- **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다.
+- **AndroidSdkBuildToolsVersion** &ndash; Android SDK 빌드 도구 패키지는 **aapt** 및 **zipalign** 등의 도구를 제공합니다. 여러 가지 버전의 빌드-도구 패키지를 동시에 설치할 수 있습니다. 패키징할 빌드-도구 패키지는 “권장” 빌드-도구 버전을 확인하고 사용하는 방식으로 선택됩니다(있는 경우). “권장” 버전이 ‘없을’ 경우 설치된 빌드-도구 패키지 중 가장 높은 버전이 사용됩니다. 
 
   `$(AndroidSdkBuildToolsVersion)` MSBuild 속성에는 기본 설정 빌드 도구 버전이 포함되어 있습니다. Xamarin.Android 빌드 시스템에서 `Xamarin.Android.Common.targets`에 기본값을 제공하고, 최신 aapt가 충돌하고 있지만 이전 버전의 aapt가 작동하는 것으로 알려져 있는 경우와 같이 다른 빌드 도구 버전을 선택하기 위해 프로젝트 파일 내에서 기본값을 재정의할 수 있습니다.
 
@@ -394,7 +394,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
   - `arm64-v8a`: Xamarin.Android 5.1 이상이 필요합니다.
   - `x86_64`: Xamarin.Android 5.1 이상이 필요합니다.
 
-- **AndroidTlsProvider**&ndash; 애플리케이션에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은 다음과 같습니다.
+- **AndroidTlsProvider**&ndash; 애플리케이션에서 사용할 TLS 공급자를 지정하는 문자열 값입니다. 가능한 값은
 
   - 설정 해제/빈 문자열: Xamarin.Android 7.3 이상에서는 `btls`에 해당합니다.
 
@@ -526,7 +526,7 @@ MSBuild 속성은 대상의 동작을 제어합니다. [MSBuild PropertyGroup �
 
   - **기타**: *키릴 자모(Windows)* \[CP1251\], *발트어(Windows)* \[iso-8859-4, CP1257\], *베트남어(Windows)* \[CP1258\], *키릴 자모(KOI8-R)* \[koi8-r, CP1251\], *우크라이나어(KOI8-U)* \[koi8-u, CP1251\], *발트어(ISO)* \[iso-8859-4, CP1257\], *키릴 자모(ISO)* \[iso-8859-5, CP1251\], *ISCII 데바나가리 문자* \[x-iscii-de, CP57002\], *ISCII 벵골어* \[x-iscii-be, CP57003\], *ISCII 타밀어* \[x-iscii-ta, CP57004\], *ISCII 텔루구어* \[x-iscii-te, CP57005\], *ISCII 아삼어* \[x-iscii-as, CP57006\], *ISCII 오리야어* \[x-iscii-or, CP57007\], *ISCII 칸나다어* \[x-iscii-ka, CP57008\], *ISCII 말라얄람어* \[x-iscii-ma, CP57009\], *ISCII 구자라트어* \[x-iscii-gu, CP57010\], *ISCII 펀잡어* \[x-iscii-pa, CP57011\] 및 *태국어(Windows)* \[CP874\] 같은 기타 인코딩을 포함합니다.
 
-  - **Rare**: *IBM EBCDIC(터키어)* \[CP1026\], *IBM EBCDIC(개방형 시스템 라틴어 1)* \[CP1047\], *IBM EBCDIC(미국-캐나다와 유로)* \[CP1140\], *IBM EBCDIC(독일과 유로)* \[CP1141\], *IBM EBCDIC(덴마크/노르웨이와 유로)* \[CP1142\], *IBM EBCDIC(핀란드/스웨덴과 유로)* \[CP1143\], *IBM EBCDIC(이탈리아와 유로)* \[CP1144\], *IBM EBCDIC(라틴 아메리카/스페인과 유로)* \[CP1145\], *IBM EBCDIC(영국과 유로)* \[CP1146\], *IBM EBCDIC(프랑스와 유로)* \[CP1147\], *IBM EBCDIC(국가별 설정과 유로)* \[CP1148\], *IBM EBCDIC(아이슬란드어와 유로)* \[CP1149\], *IBM EBCDIC(독일)* \[CP20273\], *IBM EBCDIC(덴마크/노르웨이)* \[CP20277\], *IBM EBCDIC(핀란드/스웨덴)* \[CP20278\], *IBM EBCDIC(이탈리아)* \[CP20280\], *IBM EBCDIC(라틴 아메리카/스페인)* \[CP20284\], *IBM EBCDIC(영국)* \[CP20285\], *IBM EBCDIC(일본어 가타카나 확장)* \[CP20290\], *IBM EBCDIC(프랑스)* \[CP20297\], *IBM EBCDIC(아랍어)* \[CP20420\], *IBM EBCDIC(히브리어)* \[CP20424\], *IBM EBCDIC(아이슬란드어)* \[CP20871\], *IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)* \[CP21025\], *IBM EBCDIC(미국-캐나다)* \[CP37\], *IBM EBCDIC(국가별 설정)* \[CP500\], *아랍어(ASMO 708)* \[CP708\], *중앙 유럽어(DOS)* \[CP852\]*, 키릴 자모(DOS)* \[CP855\], *터키어(DOS)* \[CP857\], *서유럽어(DOS와 유로)* \[CP858\], *히브리어(DOS)* \[CP862\], *아랍어(DOS)* \[CP864\], *러시아어(DOS)* \[CP866\], *그리스어(DOS)* \[CP869\], *IBM EBCDIC(라틴어 2)* \[CP870\] 및 *IBM EBCDIC(그리스어)* \[CP875\] 같은 희귀한 인코딩을 포함합니다.
+  - **Rare**: *IBM EBCDIC(터키어)* \[CP1026\], *IBM EBCDIC(개방형 시스템 라틴어 1)* \[CP1047\], *IBM EBCDIC(미국-캐나다와 유로)* \[CP1140\], *IBM EBCDIC(독일과 유로)* \[CP1141\], *IBM EBCDIC(덴마크/노르웨이와 유로)* \[CP1142\], *IBM EBCDIC(핀란드/스웨덴과 유로)* \[CP1143\], *IBM EBCDIC(이탈리아와 유로)* \[CP1144\], *IBM EBCDIC(라틴 아메리카/스페인과 유로)* \[CP1145\], *IBM EBCDIC(영국과 유로)* \[CP1146\], *IBM EBCDIC(프랑스와 유로)* \[CP1147\], *IBM EBCDIC(국가별 설정과 유로)* \[CP1148\], *IBM EBCDIC(아이슬란드어와 유로)* \[CP1149\], *IBM EBCDIC(독일)* \[CP20273\], *IBM EBCDIC(덴마크/노르웨이)* \[CP20277\], *IBM EBCDIC(핀란드/스웨덴)* \[CP20278\], *IBM EBCDIC(이탈리아)* \[CP20280\], *IBM EBCDIC(라틴 아메리카/스페인)* \[CP20284\], *IBM EBCDIC(영국)* \[CP20285\], *IBM EBCDIC(일본어 가타카나 확장)* \[CP20290\], *IBM EBCDIC(프랑스)* \[CP20297\], *IBM EBCDIC(아랍어)* \[CP20420\], *IBM EBCDIC(히브리어)* \[CP20424\], *IBM EBCDIC(아이슬란드어)* \[CP20871\], *IBM EBCDIC(키릴 자모 - 세르비아어, 불가리아어)* \[CP21025\], *IBM EBCDIC(미국-캐나다)* \[CP37\], *IBM EBCDIC(국가별 설정)* \[CP500\], *아랍어(ASMO 708)* \[CP708\], *중앙 유럽어(DOS)* \[CP852\] *, 키릴 자모(DOS)* \[CP855\], *터키어(DOS)* \[CP857\], *서유럽어(DOS와 유로)* \[CP858\], *히브리어(DOS)* \[CP862\], *아랍어(DOS)* \[CP864\], *러시아어(DOS)* \[CP866\], *그리스어(DOS)* \[CP869\], *IBM EBCDIC(라틴어 2)* \[CP870\] 및 *IBM EBCDIC(그리스어)* \[CP875\] 같은 희귀한 인코딩을 포함합니다.
 
   - **West**: *서유럽어(Mac)* \[macintosh, CP10000\], *아이슬란드어(Mac)* \[x-mac-icelandic, CP10079\], *중앙 유럽어(Windows)* \[iso-8859-2, CP1250\], *서유럽어(Windows)* \[iso-8859-1, CP1252\], *그리스어(Windows)* \[iso-8859-7, CP1253\], *중앙 유럽어(ISO)* \[iso-8859-2, CP28592\], *라틴어 3(ISO)* \[iso-8859-3, CP28593\], *그리스어(ISO)* \[iso-8859-7, CP28597\], *라틴어 9 (ISO)* \[iso-8859-15, CP28605\], *OEM 미국* \[CP437\], *서유럽어(DOS)* \[CP850\], *포르투갈어(DOS)* \[CP860\], *아이슬란드어(DOS)* \[CP861\], *프랑스어(캐나다)(DOS)* \[CP863\] 및 *북유럽어(DOS)* \[CP865\] 같은 서부 인코딩을 포함합니다.
 

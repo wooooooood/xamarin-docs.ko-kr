@@ -3,15 +3,15 @@ title: 키 저장소의 서명 찾기
 ms.prod: xamarin
 ms.assetid: 1b511fec-e6f6-453e-89c8-810aafb02b77
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 6cada2c7426cc50723321d77e21852a92fe64d63
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 49d67db46416584248a9b15db606538f5ebfba79
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70755792"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021014"
 ---
 # <a name="finding-your-keystores-signature"></a>키 저장소의 서명 찾기
 
@@ -59,7 +59,7 @@ Certificate fingerprints:
          Version: 3
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 애플리케이션의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
@@ -124,7 +124,7 @@ Visual Studio **배포** 마법사를 사용하여 Xamarin.Android 앱에 서명
 
 Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 애플리케이션 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio **서명 및 배포...** 마법사를 사용하여 앱에 서명한 경우 결과 키 저장소는 다음 위치에 있습니다.
 

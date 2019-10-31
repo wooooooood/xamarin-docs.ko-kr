@@ -3,15 +3,15 @@ title: 수동으로 APK 업로드
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 47dd1da8c82c47ee07ad2b4e5a22a32010462de2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b5b7a416cf67c217862987e7fa29bfb6a9692642
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756063"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021247"
 ---
 # <a name="manually-uploading-the-apk"></a>수동으로 APK 업로드
 
@@ -88,7 +88,7 @@ APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명�
 
 [![콘텐츠 등급 섹션](manually-uploading-the-apk-images/11-content-rating-sml.png)](manually-uploading-the-apk-images/11-content-rating.png#lightbox)
 
-Google Play의 모든 애플리케이션은 Google Play 등급 시스템에 따라 등급을 지정해야 합니다. 콘텐츠 등급 외에도 모든 애플리케이션은 Google의 [개발자 콘텐츠 정책](http://www.android.com/us/developer-content-policy.html)을 준수해야 합니다.
+Google Play의 모든 애플리케이션은 Google Play 등급 시스템에 따라 등급을 지정해야 합니다. 콘텐츠 등급 외에도 모든 애플리케이션은 Google의 [개발자 콘텐츠 정책](https://www.android.com/us/developer-content-policy.html)을 준수해야 합니다.
 
 다음은 Google Play 등급 시스템의 4수준을 나열하고 등급 수준을 요구 또는 강제 적용하는 기능이나 콘텐츠에 관한 몇 가지 지침을 제공합니다. 
 
@@ -96,11 +96,11 @@ Google Play의 모든 애플리케이션은 Google Play 등급 시스템에 따�
 
 - **하**&ndash; 위치 데이터를 액세스하지만 공유하지 않는 애플리케이션입니다. 가볍거나 만화 수준의 폭력 묘사 
 
-- **중** &ndash; 마약, 주류 또는 담배에 대 한 언급 도박 테마 또는 시뮬레이션 적의가 있는 콘텐츠 불경스럽거나 외설적인 유머  도발적 또는 성적 언급 
-    강한 수준의 판타지 폭력  현실적인 폭력  사용자가 서로 찾을 수 있음 사용자가 서로 커뮤니케이션할 수 있음 
+- **중** &ndash; 마약, 주류 또는 담배에 대 한 언급 도박 테마 또는 시뮬레이션 적의가 있는 콘텐츠 불경스럽거나 외설적인 유머 도발적 또는 성적 언급 
+    강한 수준의 판타지 폭력 현실적인 폭력 사용자가 서로 찾을 수 있음 사용자가 서로 커뮤니케이션할 수 있음 
     사용자 위치 데이터 공유 
 
-- **상** &ndash; 주류, 담배 또는 약물 사용 도는 판매에 초점 도발적 또는 성적 언급에 초점 그래픽 폭력  
+- **상** &ndash; 주류, 담배 또는 약물 사용 도는 판매에 초점 도발적 또는 성적 언급에 초점 그래픽 폭력 
 
 중 목록의 항목은 주관적인 판단이 필요하므로, 중 등급에 해당하는 것처럼 보이는 지침이 상 등급 만큼 강도가 있을 수 있습니다. 
 
@@ -114,7 +114,7 @@ Google Play에서는 무료 애플리케이션이 유료 앱으로 변경되는 
 
 [![가격 및 배포 대화 상자](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-### <a name="manage-countries"></a>국가 관리 
+### <a name="manage-countries"></a>국가 관리
 
 **국가 관리** 섹션에서는 앱이 배포될 수 있는 국가를 제어합니다.
 
@@ -131,7 +131,7 @@ Google Play에서는 무료 애플리케이션이 유료 앱으로 변경되는 
 ### <a name="consent"></a>동의
 
 **가격 책정 &amp; 배포** 페이지의 하단은 **동의** 섹션입니다.
-필수 섹션이며, 애플리케이션이 [Android 콘텐츠 지침](http://www.android.com/market/terms/developer-content-policy.html#hl=us)에 부합하고 미국 수출 법률의 적용 대상임을 인정하는 데 사용됩니다.
+필수 섹션이며, 애플리케이션이 [Android 콘텐츠 지침](https://www.android.com/market/terms/developer-content-policy.html#hl=us)에 부합하고 미국 수출 법률의 적용 대상임을 인정하는 데 사용됩니다.
 
 [![동의 섹션](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 

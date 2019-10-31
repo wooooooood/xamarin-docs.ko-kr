@@ -3,15 +3,15 @@ title: 애플리케이션 게시
 ms.prod: xamarin
 ms.assetid: 51E19000-040A-2B74-C462-EC57C617085C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: fe1422aa55e5c1518134e6d0fbbf40047b577767
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753803"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021371"
 ---
 # <a name="publishing-an-application"></a>애플리케이션 게시
 
@@ -33,7 +33,7 @@ Xamarin.Android 애플리케이션 개발의 마지막 단계는 애플리케이
 
 - **웹 사이트를 통해**&ndash; Xamarin.Android 애플리케이션을 웹 사이트의 다운로드로 제공할 수 있습니다. 여기서 사용자가 링크를 클릭하여 애플리케이션을 설치하게 됩니다.
 - **이메일을 통해**&ndash; 사용자가 자신의 이메일에서 Xamarin.Android 애플리케이션을 설치할 수 있습니다. Android 지원 디바이스로 첨부 파일을 열면 애플리케이션이 설치됩니다.
-- **마켓을 통해**&ndash;[Google Play](http://play.google.com/) 또는 [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) 등, 배포를 위한 몇 가지 애플리케이션 마켓플레이스가 있습니다.
+- **마켓을 통해**&ndash;[Google Play](https://play.google.com/) 또는 [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) 등, 배포를 위한 몇 가지 애플리케이션 마켓플레이스가 있습니다.
 
 기존 마켓플레이스는 광범위한 시장 접근과 최대 규모의 배포 관리를 제공하므로 가장 일반적인 애플리케이션 게시 방법입니다. 그러나 마켓플레이스를 통해 애플리케이션을 게시하려면 추가적인 작업이 필요합니다.
 

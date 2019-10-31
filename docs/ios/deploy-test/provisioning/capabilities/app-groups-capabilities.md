@@ -4,15 +4,15 @@ description: 애플리케이션에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 72e0c27502c10fe3522d80c6345a847ca424d49f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f98603c2ffac35362c6697e4806bf4b2daf44710
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762784"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030181"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Xamarin.iOS에서 앱 그룹 기능
 

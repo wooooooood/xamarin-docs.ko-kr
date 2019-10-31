@@ -3,15 +3,15 @@ title: 플랫폼 간 성능
 description: 이 문서에서는 모바일 애플리케이션의 성능을 개선하는 데 사용할 수 있는 다양한 기술을 설명합니다. 프로파일러, IDisposable 리소스, 약한 참조, SGen 가비지 수집기, 크기 감소 기법 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 7fcb482fd17cba267d25dbea5d25232f2cf6ff2f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70765938"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016523"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -331,7 +331,7 @@ SGen이 가비지 수집을 시작하면 메모리를 회수하는 동안 애플
 - 애플리케이션의 관리 코드 크기를 줄입니다. 각 어셈블리에서 링커를 사용하여 이 작업을 수행할 수 있습니다(iOS 프로젝트의 경우 *모두 링크* 및 Android 프로젝트의 경우 *모든 어셈블리 링크*).
 
 Android 앱은 각 ABI의 별도 APK로 분할될 수도 있습니다("아키텍처").
-이 블로그 게시물에서 자세히 알아보기: [Android 앱 크기를 줄이는 방법](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+이 블로그 게시물에서 자세히 알아보기: [Android 앱 크기를 줄이는 방법](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
 <a name="optimizeimages" />
 

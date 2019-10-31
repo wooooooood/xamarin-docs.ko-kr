@@ -4,15 +4,15 @@ description: 이 문서에서는 물리적 Android 디바이스에서 Xamarin.An
 ms.prod: xamarin
 ms.assetid: 153D3746-A27F-198B-48FE-D219C0133A79
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: e2542a95ce7b62a017161da4fe206b83202c9085
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: e697459b20a481b1d2bada69677647ad4fbd3023
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754140"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021596"
 ---
 # <a name="debug-on-device"></a>디바이스에서 디버그
 
@@ -38,7 +38,7 @@ Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 디바이스�
 
 ![중단점 도달](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![디버그 구성 선택됨](debug-on-device-images/image1-xs.png)
 

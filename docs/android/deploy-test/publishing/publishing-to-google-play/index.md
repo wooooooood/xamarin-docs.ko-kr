@@ -3,15 +3,15 @@ title: Google Play에 게시
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 656b74bce10d30ddd463486c5103d65c6ba5eb97
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 77fc4cbb15c47b87b0fa33e81b0b3749115af076
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250018"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021278"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
 
@@ -142,7 +142,7 @@ Xamarin Android 7.0에는 Visual Studio에서 Google Play에 앱을 게시하는
 
 다음 섹션에서는 새 Google API 프로젝트를 만들고 필요한 _클라이언트 ID_ 및 _클라이언트 암호_를 생성하는 방법에 대해 설명합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Visual Studio for Mac에는 Google Play에 앱을 게시하는 통합 워크플로가 있습니다.
 
@@ -261,7 +261,7 @@ Google Play 테스트 및 단계별 출시에 대한 자세한 내용은 [알파
 
 이 오류를 해결하려면 다른 버전 번호로 앱을 다시 빌드하고 **배포 채널** 대화 상자를 통해 Google Play에 다시 제출합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 클라이언트 ID와 클라이언트 암호를 사용하여 Visual Studio for Mac의 **Google Play API 계정** 대화 상자를 입력합니다. 계정에 설명을 제공할 수 있습니다. &ndash; 이렇게 하면 둘 이상의 Google Play 계정을 등록하고 향후의 APK를 다른 Google Play 계정에 등록할 수 있습니다. 클라이언트 ID와 클라이언트 암호를 이 대화 상자에 복사하고 **등록**을 클릭합니다.
 

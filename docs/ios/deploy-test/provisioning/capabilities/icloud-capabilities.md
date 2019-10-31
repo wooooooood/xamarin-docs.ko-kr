@@ -4,15 +4,15 @@ description: 애플리케이션에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 3fd3ec0207ac3ae1e5fcaa7d11d91247cd73666d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c8c1a5d284e5faaffae33a724c461b6fd74cf39b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762901"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028582"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Xamarin.iOS에서 iCloud 기능
 

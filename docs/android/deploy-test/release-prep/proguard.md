@@ -4,15 +4,15 @@ description: Xamarin.Android ProGuard는 Java 클래스 파일 축소, 최적화
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: b85289d9dbd60d5ee0238540e67773ed9085b672
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 854287ec22fb89ec2f0a55f8c3854dc0106fb11a
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249963"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021173"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -320,7 +320,7 @@ Unknown option '-keep' in line 1 of file 'proguard.cfg'
 
 이 문제를 방지하려면 파일을 BOM 없이 저장할 수 있는 텍스트 편집기에서 사용자 지정 구성 파일을 편집합니다. 이 문제를 해결하려면 텍스트 편집기의 인코딩이 `UTF-8`로 설정되어 있는지 확인합니다. 예를 들어 텍스트 편집기 [Notepad++](https://notepad-plus-plus.org/)는 파일을 저장할 때 **Encoding &gt; Encode in UTF-8 Without BOM**을 선택하면 BOM 없이 파일을 저장할 수 있습니다. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 이 문제를 방지하려면 BOM을 생략할 수 있는 텍스트 편집기에서 사용자 지정 구성 파일을 저장합니다. 
 

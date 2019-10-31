@@ -4,15 +4,15 @@ description: 게시할 APK(Android 애플리케이션 패키지)에 서명하는
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: 0a60031481f16a3a600cca090d39ec47cbb8ca9a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b646893d8bbe63aa537c973c90552e0367735e47
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756052"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021213"
 ---
 # <a name="signing-the-android-application-package"></a>Android 애플리케이션 패키지에 서명
 
@@ -24,7 +24,7 @@ ms.locfileid: "70756052"
 
 [![배포 채널 대화 상자](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 [게시를 위해 보관](~/android/deploy-test/release-prep/index.md#archive)에서 **서명 및 배포...** 대화 상자에는 두 가지 배포 옵션이 제공됩니다. **임시**를 선택하고 **다음**을 클릭합니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "70756052"
 
 키 저장소에 대한 자세한 내용은 [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)를 참조하세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 **임시**를 클릭하면 Mac용 Visual Studio에서 다음 스크린샷에 표시된 것과 같은 **Android 서명 ID** 대화 상자가 열립니다. .APK를 게시하려면 먼저 (인증서라고도 하는) 서명 키로 서명해야 합니다. 인증서가 이미 있는 경우 **기존 키 가져오기** 단추를 클릭하여 가져온 후 [APK 서명](#sign-the-apk)을 진행합니다. 그렇지 않을 경우 **새 키 만들기** 단추를 클릭하여 새 인증서를 만듭니다.
 
@@ -118,7 +118,7 @@ Android 애플리케이션에 서명하는 데 사용할 수 있는 새로운 �
 
 [![Windows 탐색기에 표시된 APK](images/vs/09-generated-app-vs-sml.png)](images/vs/09-generated-app-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 여기 표시된 것처럼 새 인증서가 키 저장소에 추가되었습니다. Google Play에서 앱을 게시하려면 **취소**를 클릭하고 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)로 이동합니다.
 그렇지 않으면 이 예에 표시된 것처럼 **다음**을 클릭하여 *ad-hoc* 앱을 (개별 배포용으로) 게시합니다.

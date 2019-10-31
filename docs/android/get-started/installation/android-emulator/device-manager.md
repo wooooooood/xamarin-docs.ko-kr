@@ -5,16 +5,16 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 682fc5c2241ab3177b12f46dd31d264a4f58b951
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 64e637648b03dff81468f2d7ad072c7acc50868b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250100"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021150"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 디바이스 관리
 
@@ -429,7 +429,7 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 ### <a name="wrong-version-of-android-sdk-tools"></a>Android SDK Tools의 잘못된 버전
 
@@ -473,7 +473,7 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 [![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 위의 문제 해결 팁을 사용하여 해결할 수 없는 Android Device Manager 관련 문제를 발견할 경우 **도움말 > 문제 보고**를 클릭하여 버그 보고서를 제출하세요.
 

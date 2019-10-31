@@ -4,15 +4,15 @@ description: 애플리케이션에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 9d0ffbd0da99134dfae3e42fe8baf4111c80935f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 4406ff3ce67ddf4787d155794258faa1a172eec1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762999"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016955"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay 기능
 

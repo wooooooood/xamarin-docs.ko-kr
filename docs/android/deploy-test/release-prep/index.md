@@ -3,15 +3,15 @@ title: 릴리스용 애플리케이션 준비
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 5113255d8776987783ad5e8f023e7b2b30924ea4
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249998"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021198"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -49,7 +49,7 @@ Visual Studio 2017 이상에서는 다음 스크린샷과 같이 프로젝트 **
 
 [![애플리케이션 아이콘 설정](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 애플리케이션** 섹션을 통해 애플리케이션 아이콘을 지정할 수 있습니다.
 
@@ -81,7 +81,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 [![버전 번호 설정](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 이러한 값은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **빌드 &gt; Android 애플리케이션** 섹션을 통해 설정할 수 있습니다.
 
@@ -118,7 +118,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 - **SDK 및 사용자 어셈블리**&ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 링커 옵션은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 빌드** 섹션에 있는 **링커** 탭을 통해 설정합니다.
 
@@ -148,7 +148,7 @@ ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android
 
 [![Proguard 빌드 작업](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![Proguard 빌드 작업](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -198,7 +198,7 @@ Dotfuscator를 사용하려면 **도구 > PreEmptive Protection - Dotfuscator**�
 Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition 사용](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)을 참조하세요.
 구성된 후에는 Dotfuscator CE가 만들어진 각 빌드를 자동으로 보호합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 애플리케이션을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 애플리케이션의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
 Mac용 Visual Studio는 지원하지 않지만 Visual Studio에서 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 디바이스에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
@@ -243,7 +243,7 @@ _LLVM 최적화 컴파일러_는 더 작고 빠른 컴파일 코드를 만들며
 
 [![패키징 속성](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 다음 스크린 샷에서처럼 **프로젝트 옵션**에서 패키지 속성을 설정할 수 있습니다.
 
@@ -279,7 +279,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 패키지와 서명을 더 상세하게 설명합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 위의 단계가 모두 완료되면 애플리케이션을 빌드하여(**빌드 &gt; 모두 빌드**) 릴리스 모드에서 성공적으로 빌드되는지 확인합니다. 이 단계에서는 아직 APK가 생성되지 않았습니다.
 
@@ -347,7 +347,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 - **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다. 계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 게시 프로세스를 시작하려면 **빌드 > 게시를 위해 보관**을 선택합니다.
 

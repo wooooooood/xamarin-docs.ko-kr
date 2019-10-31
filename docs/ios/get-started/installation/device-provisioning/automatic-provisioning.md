@@ -4,16 +4,16 @@ description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 �
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: bb8a969a930f2e169d19738ddaafab04a4e8a057
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c65a8d4cf47fdec582b46370b6a8dbc1ddd55a1e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70287353"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022792"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -21,7 +21,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ## <a name="requirements"></a>요구 사항
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 - Mac용 Visual Studio 7.3 이상
 - Xcode 9 이상
@@ -58,7 +58,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 IOS 디바이스에 배포할 앱에 자동으로 서명하려면 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Mac용 Visual Studio에서 iOS 프로젝트를 엽니다.
 

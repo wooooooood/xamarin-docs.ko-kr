@@ -4,15 +4,15 @@ description: 애플리케이션에 기능을 추가하려면 흔히 추가 프�
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: d7a2f14b55d9f8de2ea01bdfa5c68c5c9f8f2555
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756146"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028561"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Xamarin.iOS에서 기능 사용
 
@@ -72,7 +72,7 @@ Apple은 기능을 확장하고 iOS 앱이 수행할 수 있는 범위를 넓히
 
 ## <a name="using-the-ide"></a>IDE 사용
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 기능은 Mac용 Visual Studio에서 **Entitlements.plist**에 추가됩니다. 기능을 추가하려면 다음 단계를 사용합니다.
 

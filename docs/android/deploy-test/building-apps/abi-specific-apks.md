@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 �
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 0c3bb547a21457a1666db5fe84560e10e3bb8eb1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754271"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028131"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -35,7 +35,7 @@ _이 문서에서는 Xamarin.Android를 사용하여 단일 ABI를 대상으로 
 1. 이전 단계의 **AndroidManifest.XML**을 사용하여 애플리케이션을 빌드합니다.
 1. APK에 서명하고 zipalign하여 릴리스를 준비합니다.
 
-이 가이드의 뒷부분에 [Rake](http://martinfowler.com/articles/rake.html)를 사용하여 이러한 단계를 스크립팅하는 방법을 보여주는 연습이 있습니다.
+이 가이드의 뒷부분에 [Rake](https://martinfowler.com/articles/rake.html)를 사용하여 이러한 단계를 스크립팅하는 방법을 보여주는 연습이 있습니다.
 
 ### <a name="creating-the-version-code-for-the-apk"></a>APK의 버전 코드 만들기
 
@@ -157,7 +157,7 @@ Rake 작업이 완료되면 `xamarin.helloworld.apk` 파일이 있는 `bin` 폴�
 [![xamarin.helloworld.apk를 포함하는 플랫폼별 폴더의 위치](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
 > [!NOTE]
-> 이 가이드에 설명된 빌드 프로세스는 여러 다른 빌드 시스템 중 하나에서 구현될 수 있습니다. 미리 작성된 예제는 없지만 [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 또는 [Fake](http://fsharp.github.io/FAKE/)를 사용하면 가능합니다.
+> 이 가이드에 설명된 빌드 프로세스는 여러 다른 빌드 시스템 중 하나에서 구현될 수 있습니다. 미리 작성된 예제는 없지만 [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) 또는 [Fake](https://fsharp.github.io/FAKE/)를 사용하면 가능합니다.
 
 ## <a name="summary"></a>요약
 

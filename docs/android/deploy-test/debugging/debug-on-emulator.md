@@ -4,15 +4,15 @@ description: 이 가이드에서는 Android Emulator를 사용하여 Visual Stud
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 761b1a8b2c3fd97ca3f1560b79b042e0fd89da92
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70754180"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028078"
 ---
 # <a name="debugging-on-the-android-emulator"></a>Android Emulator에서 디버깅
 
@@ -47,7 +47,7 @@ Xamarin.Android 프로젝트에서 사용 가능한 가상 디바이스와 호�
 **최소 Android 대상 변경**을 클릭하여 프로젝트의 최소 Android 버전을 사용 가능한 가상 디바이스의 API 수준에 맞게 변경할 수 있습니다. 또는 [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)를 사용하여 대상 API 수준을 지원하는 새 가상 디바이스를 만들 수 있습니다.
 새 API 수준에 대해 가상 디바이스를 구성할 수 있으려면 먼저 해당 API 수준에 대한 시스템 이미지를 설치해야 합니다([Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md) 참조).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Visual Studio for Mac에는 디바이스 드롭다운 메뉴에 표시되는 미리 구성된 가상 디바이스가 있습니다. 예를 들어 다음 스크린 샷에서는 몇 가지 미리 구성된 두 가상 디바이스를 제공합니다.
 
@@ -75,7 +75,7 @@ Visual Studio 위에는 **디버그** 또는 **릴리스** 모드를 선택하�
 
 [![디버그 및 릴리스 모드, 재생 단추](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![디버그 및 릴리스 모드, 재생 단추](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 

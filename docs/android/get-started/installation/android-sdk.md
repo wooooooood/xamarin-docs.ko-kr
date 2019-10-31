@@ -4,15 +4,15 @@ description: Visual Studio에는 Xamarin.Android 앱 개발에 필요한 Android
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 9bdc7b57cee74a91cc3abf69a216ea9913482c94
-ms.sourcegitcommit: e354aabfb39598e0ce11115db3e6bcebb9f68338
+ms.openlocfilehash: 9d8b3e68aa626890fdce5c004928541ece263703
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72273155"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73020808"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
 
@@ -123,7 +123,7 @@ Google 리포지토리를 선택하면 추가 패키지가 이전에 지원되�
 
 플랫폼 및 도구에서 지원되는 리포지토리를 다시 전환하려면 **Microsoft(권장)** 를 클릭합니다. 그러면 패키지 및 도구 목록을 기본 선택 영역으로 복원합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 ## <a name="requirements"></a>요구 사항
 

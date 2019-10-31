@@ -3,15 +3,15 @@ title: Android의 연결
 ms.prod: xamarin
 ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2018
-ms.openlocfilehash: e5f494c2f41500b660bf333e7c63f0120536f52a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70753850"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021450"
 ---
 # <a name="linking-on-android"></a>Android의 연결
 
@@ -19,7 +19,7 @@ Xamarin.Android 애플리케이션은 *링커*를 사용하여 애플리케이�
 
 예를 들어 [Hello, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a) 샘플은 다음과 같습니다.
 
-|구성|1.2.0 크기|4.0.1 크기|
+|Configuration|1.2.0 크기|4.0.1 크기|
 |---|---|---|
 |연결 없이 릴리스:|14.0MB|16.0MB|
 |연결 없이 릴리스:|4.2MB|2.9MB|

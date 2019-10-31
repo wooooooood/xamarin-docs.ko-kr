@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 애플리케이션에서 성능 및
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/29/2016
-ms.openlocfilehash: b41916a65e091fb7d5198a6f06a5e91aa9d6bb81
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bfa8c2cdcdcd6305618c0cd8e9cb69bde59b4f0b
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292347"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030199"
 ---
 # <a name="xamarinios-performance"></a>Xamarin.iOS 성능
 
@@ -211,11 +211,11 @@ class MyChild : UIView
 ```
 
 강력한 참조를 해제하는 방법에 대한 자세한 내용은 [IDisposable 리소스 해제](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable)를 참조하세요.
-다음 블로그 게시물에도 유용한 논의가 있습니다. [Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me)(Xamarin.iOS 가비지 수집기 관련 주요 정보)
+다음 블로그 게시물에도 유용한 논의가 있습니다. [Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me)(Xamarin.iOS 가비지 수집기 관련 주요 정보)
 
 ### <a name="more-information"></a>추가 정보
 
-자세한 내용은 [순환 유지를 방지하는 규칙](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html)(Cocoa With Love 제공), [MonoTouch GC에 있는 버그인가요?](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc)(StackOverflow 제공) 및 [MonoTouch GC에서 refcount가 1보다 큰 관리 개체를 종료할 수 없는 이유는 무엇인가요?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1)(StackOverflow 제공)를 참조하세요
+자세한 내용은 [순환 유지를 방지하는 규칙](https://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html)(Cocoa With Love 제공), [MonoTouch GC에 있는 버그인가요?](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc)(StackOverflow 제공) 및 [MonoTouch GC에서 refcount가 1보다 큰 관리 개체를 종료할 수 없는 이유는 무엇인가요?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1)(StackOverflow 제공)를 참조하세요
 
 ## <a name="optimize-table-views"></a>테이블 보기 최적화
 
