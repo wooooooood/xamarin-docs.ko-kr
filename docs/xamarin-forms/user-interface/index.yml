@@ -120,7 +120,7 @@ sections:
             image:
               src: ~/media/icons/i_user-interface.svg
               href: map/index.md
-            title: 지도
+            title: 맵
           - href: menuitem.md
             html: MenuItem 클래스를 사용하여 ListView 셀의 상황에 맞는 메뉴에 항목을 추가 하는 방법에 대해 알아보세요.
             image:
