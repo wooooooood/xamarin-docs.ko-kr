@@ -27,7 +27,7 @@ ms.locfileid: "72697844"
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 설정 하는 주요 사용 시나리오는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 대 한 필터링 작업에서 데이터를 생성 하지 않고 웹 서비스에서 데이터를 검색 하는 동안 사용자 의견을 표시 하는 경우 사용자 의견을 표시 하는 것입니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 설정 하는 주요 사용 시나리오는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 대 한 필터링 작업에서 데이터를 생성 하지 않고 웹 서비스에서 데이터를 검색 하는 동안 사용자 의견을 표시 하는 경우 사용자 의견을 표시 하는 것입니다.
 
 > [!NOTE]
 > 필요한 경우 대화형 콘텐츠를 포함 하는 뷰로 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 설정할 수 있습니다.
@@ -36,7 +36,7 @@ ms.locfileid: "72697844"
 
 ## <a name="display-a-string-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 문자열 표시
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 될 때 또는 `ItemsSource` 속성으로 지정 된 컬렉션이 `null` 이거나 비어 있을 때 표시 되는 문자열로 설정 될 수 있습니다. 다음 XAML은이 시나리오의 예를 보여 줍니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 될 때 또는 `ItemsSource` 속성으로 지정 된 컬렉션이 `null` 이거나 비어 있을 때 표시 되는 문자열로 설정 될 수 있습니다. 다음 XAML은이 시나리오의 예를 보여 줍니다.
 
 ```xaml
 <CarouselView ItemsSource="{Binding EmptyMonkeys}"
@@ -57,7 +57,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "EmptyMonkeys");
 
 ## <a name="display-views-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 보기 표시
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 될 때 또는 `ItemsSource` 속성으로 지정 된 컬렉션이 `null` 이거나 비어 있을 때 표시 되는 뷰로 설정할 수 있습니다. 단일 보기 이거나 여러 자식 뷰를 포함 하는 뷰입니다. 다음 XAML 예제에서는 여러 자식 뷰를 포함 하는 뷰로 설정 된 `EmptyView` 속성을 보여 줍니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 될 때 또는 `ItemsSource` 속성으로 지정 된 컬렉션이 `null` 이거나 비어 있을 때 표시 되는 뷰로 설정할 수 있습니다. 단일 보기 이거나 여러 자식 뷰를 포함 하는 뷰입니다. 다음 XAML 예제에서는 여러 자식 뷰를 포함 하는 뷰로 설정 된 `EmptyView` 속성을 보여 줍니다.
 
 ```xaml
 <StackLayout Margin="20">
@@ -105,11 +105,11 @@ CarouselView carouselView = new CarouselView
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-[@No__t_1](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터가 생성 되지 않으면 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 된 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 표시 됩니다.
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터가 생성 되지 않으면 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 된 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 표시 됩니다.
 
 ## <a name="display-a-templated-custom-type-when-data-is-unavailable"></a>데이터를 사용할 수 없을 때 템플릿 사용자 지정 형식 표시
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 될 때 또는 `ItemsSource` 속성으로 지정 된 컬렉션이 `null` 이거나 비어 있는 경우 템플릿이 표시 되는 사용자 지정 형식으로 설정할 수 있습니다. [@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성은 `EmptyView`의 모양을 정의 하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 설정할 수 있습니다. 다음 XAML은이 시나리오의 예를 보여 줍니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성은 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성이 `null` 될 때 또는 `ItemsSource` 속성으로 지정 된 컬렉션이 `null` 이거나 비어 있는 경우 템플릿이 표시 되는 사용자 지정 형식으로 설정할 수 있습니다. [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성은 `EmptyView`의 모양을 정의 하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 설정할 수 있습니다. 다음 XAML은이 시나리오의 예를 보여 줍니다.
 
 ```xaml
 <StackLayout Margin="20">
@@ -152,7 +152,7 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-@No__t_0 형식은 `Filter` 속성과 해당 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)을 정의 합니다.
+`FilterData` 형식은 `Filter` 속성과 해당 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty)을 정의 합니다.
 
 ```csharp
 public class FilterData : BindableObject
@@ -167,7 +167,7 @@ public class FilterData : BindableObject
 }
 ```
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyView) 속성이 `FilterData` 개체로 설정 되 고 `Filter` 속성 데이터가 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 바인딩됩니다. [@No__t_1](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 `Filter` 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터를 생성 하지 않으면 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 값으로 설정 되는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에 정의 된 [`Label`](xref:Xamarin.Forms.Label) 표시 됩니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성이 `FilterData` 개체로 설정 되 고 `Filter` 속성 데이터가 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 바인딩됩니다. [`SearchBar`](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 `Filter` 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터를 생성 하지 않으면 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성 값으로 설정 되는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)에 정의 된 [`Label`](xref:Xamarin.Forms.Label) 표시 됩니다.
 
 > [!NOTE]
 > 데이터를 사용할 수 없을 때 템플릿 사용자 지정 형식을 표시 하는 경우 여러 자식 뷰가 포함 된 뷰로 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성을 설정할 수 있습니다.
@@ -230,7 +230,7 @@ public class FilterData : BindableObject
 </ContentPage>
 ```
 
-이 XAML은 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에서 [`ContentView`](xref:Xamarin.Forms.ContentView) 개체 두 개를 정의 합니다 .이 개체는 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 되는 `ContentView` 개체를 제어 하는 [`Switch`](xref:Xamarin.Forms.Switch) 개체입니다. [@No__t_1](xref:Xamarin.Forms.Switch) 설정/해제 되 면 `OnEmptyViewSwitchToggled` 이벤트 처리기는 `ToggleEmptyView` 메서드를 실행 합니다.
+이 XAML은 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에서 [`ContentView`](xref:Xamarin.Forms.ContentView) 개체 두 개를 정의 합니다 .이 개체는 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성 값으로 설정 되는 `ContentView` 개체를 제어 하는 [`Switch`](xref:Xamarin.Forms.Switch) 개체입니다. [`Switch`](xref:Xamarin.Forms.Switch) 설정/해제 되 면 `OnEmptyViewSwitchToggled` 이벤트 처리기는 `ToggleEmptyView` 메서드를 실행 합니다.
 
 ```csharp
 void ToggleEmptyView(bool isToggled)
@@ -239,13 +239,13 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-@No__t_0 메서드는 [`ResourceDictionary`](xref:Xamarin.Forms.Switch.IsToggled) 속성의 값을 기반으로 `carouselView` 개체의 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 [`Switch.IsToggled`](xref:Xamarin.Forms.ResourceDictionary)에 저장 된 두 개의 [`ContentView`](xref:Xamarin.Forms.ContentView) 개체 중 하나로 설정 합니다. [@No__t_1](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터가 생성 되지 않으면 `EmptyView` 속성으로 설정 된 `ContentView` 개체가 표시 됩니다.
+`ToggleEmptyView` 메서드는 [`ResourceDictionary`](xref:Xamarin.Forms.Switch.IsToggled) 속성의 값을 기반으로 `carouselView` 개체의 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성을 [`Switch.IsToggled`](xref:Xamarin.Forms.ResourceDictionary)에 저장 된 두 개의 [`ContentView`](xref:Xamarin.Forms.ContentView) 개체 중 하나로 설정 합니다. [`SearchBar`](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터가 생성 되지 않으면 `EmptyView` 속성으로 설정 된 `ContentView` 개체가 표시 됩니다.
 
 리소스 사전에 대 한 자세한 내용은 [Xamarin.ios 리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)을 참조 하세요.
 
 ## <a name="choose-an-emptyviewtemplate-at-runtime"></a>런타임에 EmptyViewTemplate 선택
 
-[@No__t_3](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성을 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 개체로 설정 하 여 런타임에 값을 기준으로 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 모양을 선택할 수 있습니다.
+[`CarouselView.EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성을 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 개체로 설정 하 여 런타임에 값을 기준으로 [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 모양을 선택할 수 있습니다.
 
 ```xaml
 <ContentPage ...
@@ -292,9 +292,9 @@ CarouselView carouselView = new CarouselView()
 carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.EmptyView) 속성이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성으로 설정 되 고 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성이 `SearchTermDataTemplateSelector` 개체로 설정 됩니다.
+[`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) 속성이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성으로 설정 되 고 [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성이 `SearchTermDataTemplateSelector` 개체로 설정 됩니다.
 
-[@No__t_1](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터가 생성 되지 않는 경우 `SearchTermDataTemplateSelector` 개체에 의해 선택 된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성으로 설정 되 고 표시 됩니다.
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) 에서 `FilterCommand`를 실행 하면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 에 의해 표시 되는 컬렉션이 [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) 속성에 저장 된 검색 용어에 대해 필터링 됩니다. 필터링 작업에서 데이터가 생성 되지 않는 경우 `SearchTermDataTemplateSelector` 개체에 의해 선택 된 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) 속성으로 설정 되 고 표시 됩니다.
 
 다음 예제에서는 `SearchTermDataTemplateSelector` 클래스를 보여 줍니다.
 
@@ -312,7 +312,7 @@ public class SearchTermDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-@No__t_0 클래스는 다른 데이터 템플릿으로 설정 된 `DefaultTemplate` 및 `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. @No__t_0 재정의는 검색 쿼리가 "xamarin"과 같지 않은 경우 사용자에 게 메시지를 표시 하는 `DefaultTemplate`을 반환 합니다. 검색 쿼리가 "xamarin"과 같을 때 `OnSelectTemplate` 재정의는 사용자에 게 기본 메시지를 표시 하는 `OtherTemplate`을 반환 합니다.
+`SearchTermTemplateSelector` 클래스는 다른 데이터 템플릿으로 설정 된 `DefaultTemplate` 및 `OtherTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. `OnSelectTemplate` 재정의는 검색 쿼리가 "xamarin"과 같지 않은 경우 사용자에 게 메시지를 표시 하는 `DefaultTemplate`을 반환 합니다. 검색 쿼리가 "xamarin"과 같을 때 `OnSelectTemplate` 재정의는 사용자에 게 기본 메시지를 표시 하는 `OtherTemplate`을 반환 합니다.
 
 데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
 

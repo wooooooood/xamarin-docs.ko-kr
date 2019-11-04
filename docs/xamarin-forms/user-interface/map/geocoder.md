@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/22/2019
-ms.openlocfilehash: ce1f6751c0381ed41058784fbea3ebedefbdac6d
-ms.sourcegitcommit: e4c23187874488ff55794d0e81a9bba30d2c2cd6
+ms.openlocfilehash: 9a20618fea0091979c2ea862f417dccec565b218
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778795"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425614"
 ---
 # <a name="xamarinforms-map-geocoding"></a>Xamarin.ios 맵 지 오 코딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-Xamarin.ios 맵은 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체에 저장 된 문자열 주소와 위도 및 경도 좌표 간을 변환 하는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 제공 합니다.
+[`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) 네임 스페이스는 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체에 저장 된 문자열 주소와 위도 및 경도 좌표 간을 변환 하는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 제공 합니다. [`Position`](xref:Xamarin.Forms.Maps.Position) 구조체에 대 한 자세한 내용은 [지도 위치 및 거리](position-distance.md)를 참조 하세요.
 
 ## <a name="geocode-an-address"></a>Geocode 주소
 
@@ -34,7 +34,7 @@ Position position = approximateLocations.FirstOrDefault();
 string coordinates = $"{position.Latitude}, {position.Longitude}";
 ```
 
-[@No__t_1](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync*) 메서드는 주소를 나타내는 `string` 인수를 사용 하 고 주소를 나타낼 수 있는 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체의 컬렉션을 비동기적으로 반환 합니다.
+[`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync*) 메서드는 주소를 나타내는 `string` 인수를 사용 하 고 주소를 나타낼 수 있는 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체의 컬렉션을 비동기적으로 반환 합니다.
 
 ## <a name="reverse-geocode-an-address"></a>역방향 geocode 주소
 
@@ -50,9 +50,10 @@ IEnumerable<string> possibleAddresses = await geoCoder.GetAddressesForPositionAs
 string address = possibleAddresses.FirstOrDefault();
 ```
 
-[@No__t_1](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync*) 메서드는 위도 및 경도 좌표로 구성 된 [`Position`](xref:Xamarin.Forms.Maps.Position) 인수를 사용 하 고, 위치 근처의 주소를 나타내는 문자열의 컬렉션을 비동기적으로 반환 합니다.
+[`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync*) 메서드는 위도 및 경도 좌표로 구성 된 [`Position`](xref:Xamarin.Forms.Maps.Position) 인수를 사용 하 고, 위치 근처의 주소를 나타내는 문자열의 컬렉션을 비동기적으로 반환 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Xamarin.ios 맵 위치 및 거리](position-distance.md)
 - [Geocoder API](xref:Xamarin.Forms.Maps.Geocoder)

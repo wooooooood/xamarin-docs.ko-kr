@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
-ms.openlocfilehash: a2fb0ba2036dfe34e85c7bebab6ecb55cd868ad5
-ms.sourcegitcommit: 5c22097bed2a8d51ecaf6ca197bf4d449dfe1377
+ms.openlocfilehash: 930d2dcc701f88e2a350ec1011405bb18b86de6e
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72810526"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425555"
 ---
 # <a name="xamarinforms-map-pins"></a>Xamarin.ios 맵 핀
 
@@ -44,10 +44,7 @@ Xamarin.ios [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤을 사용 하면 위�
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
      <maps:Map x:Name="map"
                IsShowingUser="True"
-               MoveToLastRegionOnLayoutChange="False"
-               HeightRequest="100"                  
-               WidthRequest="960"
-               VerticalOptions="FillAndExpand">
+               MoveToLastRegionOnLayoutChange="False">
          <x:Arguments>
              <maps:MapSpan>
                  <x:Arguments>
@@ -80,10 +77,7 @@ Xamarin.ios [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤을 사용 하면 위�
 </ContentPage>
 ```
 
-이 XAML은 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 개체에 의해 지정 된 영역을 표시 하는 [`Map`](xref:Xamarin.Forms.Maps.Map) 개체를 만듭니다. `MapSpan` 개체는 0.01 위도 및 경도도를 연장 하는 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체로 표시 되는 위도 및 경도를 중심으로 합니다. [`Pin`](xref:Xamarin.Forms.Maps.Pin) 개체는 [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) 컬렉션에 추가 되 고 [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) 속성으로 지정 된 위치에 `Map`에 그려집니다. 기본 생성자가 없는 개체로 XAML의 인수를 전달 하는 방법에 대 한 자세한 내용은 [xaml로 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)을 참조 하세요.
-
-> [!NOTE]
-> [`Position`](xref:Xamarin.Forms.Maps.Position) 구조체는 `double`형식 모두 읽기 전용 [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude) 및 [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude) 속성을 정의 합니다. 생성자를 통해 `Position` 개체를 만들 때 위도 값은-90.0과 90.0 사이에 고정 경도 값은-180.0과 180.0 사이에 고정 됩니다.
+이 XAML은 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 개체에 의해 지정 된 영역을 표시 하는 [`Map`](xref:Xamarin.Forms.Maps.Map) 개체를 만듭니다. `MapSpan` 개체는 0.01 위도 및 경도도를 연장 하는 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체로 표시 되는 위도 및 경도를 중심으로 합니다. [`Pin`](xref:Xamarin.Forms.Maps.Pin) 개체는 [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) 컬렉션에 추가 되 고 [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) 속성으로 지정 된 위치에 `Map`에 그려집니다. [`Position`](xref:Xamarin.Forms.Maps.Position) 구조체에 대 한 자세한 내용은 [지도 위치 및 거리](position-distance.md)를 참조 하세요. 기본 생성자가 없는 개체로 XAML의 인수를 전달 하는 방법에 대 한 자세한 내용은 [xaml로 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)을 참조 하세요.
 
 해당하는 C# 코드는 다음과 같습니다.
 
@@ -119,7 +113,7 @@ map.Pins.Add(pin);
 
 지도에서 다른 곳을 누르면 정보 창이 닫힙니다.
 
-[`Pin`](xref:Xamarin.Forms.Maps.Pin) 클래스는 `Pin` 탭 할 때 발생 하는 `MarkerClicked` 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 정보 창을 표시할 필요는 없습니다. 대신이 이벤트는 특정 pin이 탭 되었다는 알림이 필요한 경우에만 처리 해야 합니다.
+[`Pin`](xref:Xamarin.Forms.Maps.Pin) 클래스는 `Pin` 탭 할 때 발생 하는 `MarkerClicked` 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 정보 창을 표시할 필요는 없습니다. 대신이 이벤트는 특정 pin을 탭 했음을 알리는 요구 사항이 있을 때 처리 되어야 합니다.
 
 또한 [`Pin`](xref:Xamarin.Forms.Maps.Pin) 클래스는 정보 창을 누를 때 발생 하는 `InfoWindowClicked` 이벤트를 정의 합니다. 이 이벤트는 특정 정보 창이 탭 되었다는 알림이 표시 되어야 하는 경우 처리 되어야 합니다.
 
@@ -190,7 +184,6 @@ wharfPin.InfoWindowClicked += async (s, args) =>
     <Grid>
         ...
         <maps:Map x:Name="map"
-                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>
@@ -211,11 +204,11 @@ wharfPin.InfoWindowClicked += async (s, args) =>
 
 다음 스크린샷에는 데이터 바인딩을 사용 하 여 [`Pin`](xref:Xamarin.Forms.Maps.Pin) 컬렉션을 표시 하는 [`Map`](xref:Xamarin.Forms.Maps.Map) 표시 됩니다.
 
-[![IOS 및 Android에서 데이터 바인딩된 핀이 있는 지도의 스크린샷](map-images/pins-itemssource.png "데이터 바인딩된 pin을 사용 하는 맵")](map-images/pins-itemssource-large.png#lightbox "데이터 바인딩된 pin을 사용 하는 맵")
+[![IOS 및 Android에서 데이터 바인딩된 핀이 있는 지도의 스크린샷](pins-images/pins-itemsource.png "데이터 바인딩된 pin을 사용 하는 맵")](pins-images/pins-itemsource-large.png#lightbox "데이터 바인딩된 pin을 사용 하는 맵")
 
 ### <a name="choose-item-appearance-at-runtime"></a>런타임에 항목 모양 선택
 
-@No__t_0 컬렉션에 있는 각 항목의 모양은 `ItemTemplateSelector` 속성을 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)로 설정 하 여 항목 값에 따라 런타임에 선택할 수 있습니다.
+`IEnumerable` 컬렉션에 있는 각 항목의 모양은 `ItemTemplateSelector` 속성을 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)로 설정 하 여 항목 값에 따라 런타임에 선택할 수 있습니다.
 
 ```xaml
 <ContentPage ...
@@ -265,7 +258,7 @@ public class MapItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-@No__t_0 클래스는 다른 데이터 템플릿으로 설정 된 `DefaultTemplate` 및 `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. @No__t_0 메서드는 "샌프란시스코"를 포함 하는 주소가 항목에 포함 된 경우 `Pin` 탭 할 때 "Xamarin"을 레이블로 표시 하는 `XamarinTemplate`을 반환 합니다. 항목에 "샌프란시스코"가 포함 된 주소가 없는 경우 `OnSelectTemplate` 메서드는 `DefaultTemplate` 반환 합니다.
+`MapItemTemplateSelector` 클래스는 다른 데이터 템플릿으로 설정 된 `DefaultTemplate` 및 `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. `OnSelectTemplate` 메서드는 "샌프란시스코"를 포함 하는 주소가 항목에 포함 된 경우 `Pin` 탭 할 때 "Xamarin"을 레이블로 표시 하는 `XamarinTemplate`을 반환 합니다. 항목에 "샌프란시스코"가 포함 된 주소가 없는 경우 `OnSelectTemplate` 메서드는 `DefaultTemplate` 반환 합니다.
 
 데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
 

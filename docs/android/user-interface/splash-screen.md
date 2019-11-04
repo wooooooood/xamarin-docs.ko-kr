@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 8f225df47b299ae4748c3a3fea586f277e14213d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cc499902058e7b20b00e65e0c6541b8d137804a7
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028726"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425505"
 ---
 # <a name="splash-screen"></a>시작 화면
 
@@ -67,7 +67,7 @@ Android 앱은 시작 하는 데 약간의 시간이 걸립니다. 특히 앱이
 </layer-list>
 ```
 
-이 `layer-list`는 시작 이미지를 `@color/splash_background` 리소스로 지정 된 배경색으로 가운데 맞춤 합니다. 샘플 응용 프로그램은 **Resources/values/color .xml** 파일에서이 색을 정의 합니다.
+이 `layer-list`는 시작 이미지를 `@color/splash_background` 리소스로 지정 된 배경색으로 가운데 맞춤 합니다. 샘플 응용 프로그램은 **리소스/값/색 .xml** 파일에이 색을 정의 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -221,7 +221,7 @@ public class MainActivity : AppCompatActivity
 
 7. 앱을 다시 빌드하고 실행 합니다. 시작 화면이 계속 표시 되어 있는 동안 장치를 가로 모드로 회전 합니다. 시작 화면이 가로 버전으로 변경 됩니다.
 
-    [시작 화면을 가로 모드로 회전![](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+    [시작 화면을 가로 모드로 회전 ![](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
 가로 모드 시작 화면을 사용 하는 경우에는 항상 원활한 환경을 제공 하지는 않습니다. 기본적으로 Android는 앱을 세로 모드로 시작 하 고 장치가 이미 가로 모드에 있는 경우에도 가로 모드로 전환 합니다. 따라서 장치가 가로 모드에 있는 동안 앱이 시작 되 면, 장치는 세로로 세로 시작 화면을 표시 한 다음 세로에서 가로 시작 화면으로 회전에 애니메이션 효과를 적용 합니다. 아쉽게도이 초기 세로-가로 전환은 시작 작업의 플래그에 `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` 지정 된 경우에도 적용 됩니다. 이 제한을 해결 하는 가장 좋은 방법은 세로 및 가로 모드에서 올바르게 렌더링 되는 단일 시작 화면 이미지를 만드는 것입니다.
 

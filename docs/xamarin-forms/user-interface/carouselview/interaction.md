@@ -31,12 +31,12 @@ ms.locfileid: "72749796"
 
 이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) 은 사용자 스크롤으로 인해 또는 응용 프로그램에서 속성을 설정 하는 경우 `CurrentItem` 속성이 변경 될 때 발생 하는 `CurrentItemChanged` 이벤트를 정의 합니다. @No__t_1 이벤트와 함께 제공 되는 `CurrentItemChangedEventArgs` 개체에는 두 가지 속성인 `object` 형식이 있습니다.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) 은 사용자 스크롤으로 인해 또는 응용 프로그램에서 속성을 설정 하는 경우 `CurrentItem` 속성이 변경 될 때 발생 하는 `CurrentItemChanged` 이벤트를 정의 합니다. `CurrentItemChanged` 이벤트와 함께 제공 되는 `CurrentItemChangedEventArgs` 개체에는 두 가지 속성인 `object` 형식이 있습니다.
 
 - `PreviousItem` – 속성이 변경 된 후의 이전 항목입니다.
 - `CurrentItem` – 속성 변경 후 현재 항목입니다.
 
-또한 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 사용자 스크롤으로 인해 또는 응용 프로그램에서 속성을 설정 하는 경우 `Position` 속성이 변경 될 때 발생 하는 `PositionChanged` 이벤트를 정의 합니다. @No__t_1 이벤트와 함께 제공 되는 `PositionChangedEventArgs` 개체에는 두 가지 속성인 `int` 형식이 있습니다.
+또한 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 사용자 스크롤으로 인해 또는 응용 프로그램에서 속성을 설정 하는 경우 `Position` 속성이 변경 될 때 발생 하는 `PositionChanged` 이벤트를 정의 합니다. `PositionChanged` 이벤트와 함께 제공 되는 `PositionChangedEventArgs` 개체에는 두 가지 속성인 `int` 형식이 있습니다.
 
 - `PreviousPosition` – 속성 변경 후의 이전 위치입니다.
 - `CurrentPosition` – 속성 변경 후의 현재 위치입니다.
@@ -46,7 +46,7 @@ ms.locfileid: "72749796"
 현재 표시 된 항목이 변경 되 면 `CurrentItem` 속성이 항목의 값으로 설정 됩니다. 이 속성이 변경 되 면 `ICommand` 전달 되는 `CurrentItemChangedCommandParameter` 값을 사용 하 여 `CurrentItemChangedCommand` 실행 됩니다. 그런 다음 `Position` 속성이 업데이트 되 고 `CurrentItemChanged` 이벤트가 발생 합니다.
 
 > [!IMPORTANT]
-> @No__t_0 속성은 `CurrentItem` 속성이 변경 될 때 변경 됩니다. 그러면 `PositionChangedCommand` 실행 되 고 `PositionChanged` 이벤트가 발생 합니다.
+> `Position` 속성은 `CurrentItem` 속성이 변경 될 때 변경 됩니다. 그러면 `PositionChangedCommand` 실행 되 고 `PositionChanged` 이벤트가 발생 합니다.
 
 ### <a name="event"></a>이벤트(event)
 
@@ -112,10 +112,10 @@ public ICommand ItemChangedCommand => new Command<Monkey>((item) =>
 
 ## <a name="respond-to-the-position-changing"></a>변경 된 위치에 응답
 
-현재 표시 된 항목이 변경 되 면 `Position` 속성이 기본 컬렉션의 현재 항목 인덱스에 설정 됩니다. 이 속성이 변경 되 면 `ICommand` 전달 되는 `PositionChangedCommandParameter` 값을 사용 하 여 `PositionChangedCommand` 실행 됩니다. 그러면 `PositionChanged` 이벤트가 발생 합니다. @No__t_0 속성이 프로그래밍 방식으로 변경 되 면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) `Position` 값에 해당 하는 항목으로 스크롤됩니다.
+현재 표시 된 항목이 변경 되 면 `Position` 속성이 기본 컬렉션의 현재 항목 인덱스에 설정 됩니다. 이 속성이 변경 되 면 `ICommand` 전달 되는 `PositionChangedCommandParameter` 값을 사용 하 여 `PositionChangedCommand` 실행 됩니다. 그러면 `PositionChanged` 이벤트가 발생 합니다. `Position` 속성이 프로그래밍 방식으로 변경 되 면 [`CarouselView`](xref:Xamarin.Forms.CarouselView) `Position` 값에 해당 하는 항목으로 스크롤됩니다.
 
 > [!NOTE]
-> @No__t_0 속성을 0으로 설정 하면 기본 컬렉션의 첫 번째 항목이 표시 됩니다.
+> `Position` 속성을 0으로 설정 하면 기본 컬렉션의 첫 번째 항목이 표시 됩니다.
 
 ### <a name="event"></a>이벤트(event)
 
@@ -181,7 +181,7 @@ public ICommand PositionChangedCommand => new Command<int>((position) =>
 
 ## <a name="preset-the-current-item"></a>현재 항목 미리 설정
 
-[@No__t_1](xref:Xamarin.Forms.CarouselView) 의 현재 항목은 `CurrentItem` 속성을 항목으로 설정 하 여 프로그래밍 방식으로 설정할 수 있습니다. 다음 XAML 예제에서는 현재 항목을 미리 선택 하는 `CarouselView` 보여 줍니다.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) 의 현재 항목은 `CurrentItem` 속성을 항목으로 설정 하 여 프로그래밍 방식으로 설정할 수 있습니다. 다음 XAML 예제에서는 현재 항목을 미리 선택 하는 `CarouselView` 보여 줍니다.
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}"
@@ -199,9 +199,9 @@ carouselView.SetBinding(CarouselView.CurrentItemProperty, "CurrentItem");
 ```
 
 > [!NOTE]
-> @No__t_0 속성은 `TwoWay`의 기본 바인딩 모드를 갖습니다.
+> `CurrentItem` 속성은 `TwoWay`의 기본 바인딩 모드를 갖습니다.
 
-@No__t_0 속성 데이터는 `Monkey` 유형인 연결 된 뷰 모델의 `CurrentItem` 속성에 바인딩됩니다. 기본적으로 사용자가 현재 항목을 변경 하는 경우 `CurrentItem` 속성의 값이 현재 `Monkey` 개체로 설정 되도록 `TwoWay` 바인딩이 사용 됩니다. @No__t_0 속성은 `MonkeysViewModel` 클래스에서 정의 되 고 `Monkeys` 컬렉션의 네 번째 항목으로 설정 됩니다.
+`CarouselView.CurrentItem` 속성 데이터는 `Monkey` 유형인 연결 된 뷰 모델의 `CurrentItem` 속성에 바인딩됩니다. 기본적으로 사용자가 현재 항목을 변경 하는 경우 `CurrentItem` 속성의 값이 현재 `Monkey` 개체로 설정 되도록 `TwoWay` 바인딩이 사용 됩니다. `CurrentItem` 속성은 `MonkeysViewModel` 클래스에서 정의 되 고 `Monkeys` 컬렉션의 네 번째 항목으로 설정 됩니다.
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -240,9 +240,9 @@ carouselView.SetBinding(CarouselView.PositionProperty, "Position");
 ```
 
 > [!NOTE]
-> @No__t_0 속성은 `TwoWay`의 기본 바인딩 모드를 갖습니다.
+> `Position` 속성은 `TwoWay`의 기본 바인딩 모드를 갖습니다.
 
-@No__t_0 속성 데이터는 `int` 유형인 연결 된 뷰 모델의 `Position` 속성에 바인딩됩니다. 기본적으로 사용자가 [`CarouselView`](xref:Xamarin.Forms.CarouselView)을 스크롤하면 `Position` 속성의 값이 표시 된 항목의 인덱스로 설정 되도록 `TwoWay` 바인딩이 사용 됩니다. @No__t_0 속성은 `MonkeysViewModel` 클래스에서 정의 되 고 `Monkeys` 컬렉션의 네 번째 항목으로 설정 됩니다.
+`CarouselView.Position` 속성 데이터는 `int` 유형인 연결 된 뷰 모델의 `Position` 속성에 바인딩됩니다. 기본적으로 사용자가 [`CarouselView`](xref:Xamarin.Forms.CarouselView)을 스크롤하면 `Position` 속성의 값이 표시 된 항목의 인덱스로 설정 되도록 `TwoWay` 바인딩이 사용 됩니다. `Position` 속성은 `MonkeysViewModel` 클래스에서 정의 되 고 `Monkeys` 컬렉션의 네 번째 항목으로 설정 됩니다.
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -261,15 +261,15 @@ public class MonkeysViewModel : INotifyPropertyChanged
 
 ## <a name="clear-the-current-item"></a>현재 항목 지우기
 
-@No__t_0 속성은 해당 속성을 설정 하거나 `null`에 바인딩하는 개체를 설정 하 여 지울 수 있습니다.
+`CurrentItem` 속성은 해당 속성을 설정 하거나 `null`에 바인딩하는 개체를 설정 하 여 지울 수 있습니다.
 
 ## <a name="disable-bounce"></a>바운스 사용 안 함
 
-기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 콘텐츠 경계에서 항목을 바운스 합니다. @No__t_0 속성을 `false`로 설정 하 여이를 비활성화할 수 있습니다.
+기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 콘텐츠 경계에서 항목을 바운스 합니다. `IsBounceEnabled` 속성을 `false`로 설정 하 여이를 비활성화할 수 있습니다.
 
 ## <a name="disable-swipe-interaction"></a>살짝 밀기 상호 작용 사용 안 함
 
-기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 사용자가 살짝 밀기 제스처를 사용 하 여 항목 간을 이동할 수 있도록 허용 합니다. @No__t_0 속성을 `false`로 설정 하면이 살짝의 상호 작용을 비활성화할 수 있습니다.
+기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 사용자가 살짝 밀기 제스처를 사용 하 여 항목 간을 이동할 수 있도록 허용 합니다. `IsSwipeEnabled` 속성을 `false`로 설정 하면이 살짝의 상호 작용을 비활성화할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

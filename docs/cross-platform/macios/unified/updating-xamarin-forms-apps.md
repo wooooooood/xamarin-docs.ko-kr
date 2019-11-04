@@ -6,12 +6,12 @@ ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: dad1b7173e302931455887fdaa4730347f0e5e55
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 48519431a65fba0cdc61062021ad86fb53854ef3
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015009"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425470"
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>기존 Xamarin Forms 앱 업데이트
 
@@ -196,14 +196,14 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 Xamarin.ios NuGet 패키지를 업데이트 한 후에도 이와 유사한 오류가 표시 되는 경우가 있습니다. NuGet 업데이트 프로그램이 **.csproj** 파일에서 이전 버전에 대 한 참조를 완전히 제거 하지 않을 때 발생 합니다.
 
->\_프로젝트 .csproj: 오류:이 프로젝트는이 컴퓨터에 없는 NuGet 패키지를 참조 합니다. NuGet 패키지 복원을 사용 하도록 설정 하 여 다운로드 합니다.  자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105 을 참조하십시오. 누락 된 파일은입니다. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + net45 + wp80 + MonoAndroid10 + MonoTouch10/Xamarin.ios. (\_프로젝트)
+>\_프로젝트 .csproj: 오류:이 프로젝트는이 컴퓨터에 없는 NuGet 패키지를 참조 합니다. NuGet 패키지 복원을 사용 하도록 설정 하 여 다운로드 합니다.  자세한 내용은 https://go.microsoft.com/fwlink/?LinkID=322105 을 참조하십시오. 누락 된 파일은입니다. /.. /packages/Xamarin.Forms.1.2.3.6257/build/portable-win + net45 + wp80 + MonoAndroid10 + MonoTouch10/Xamarin.ios. (\_프로젝트)
 
 이러한 오류를 해결 하려면 텍스트 편집기에서 **.csproj** 파일을 열고 아래에 표시 된 요소와 같은 이전 버전의 xamarin.ios를 참조 하는 `<Target` 요소를 찾습니다. 이 전체 요소를 **.csproj** 파일에서 수동으로 삭제 하 고 변경 내용을 저장 해야 합니다.
 
 ```csharp
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see https://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
   </Target>
