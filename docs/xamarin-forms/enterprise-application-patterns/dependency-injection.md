@@ -6,13 +6,13 @@ ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 975b32610b4b496e329c5c5a29b79efd2874d8cf
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/04/2019
+ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
+ms.sourcegitcommit: 9dd0b076ab4ecdbbd1b029d2e0d67d900e1c4494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029496"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567891"
 ---
 # <a name="dependency-injection"></a>종속성 주입
 
@@ -57,9 +57,9 @@ public class ProfileViewModel : ViewModelBase
 
 MVVM를 사용 하는 Xamarin.ios 앱의 컨텍스트에서 종속성 주입 컨테이너는 일반적으로 뷰 모델을 등록 하 고 해결 하는 데 사용 되며, 서비스를 등록 하 고이를 뷰 모델에 삽입 하는 데 사용 됩니다.
 
-앱에서 뷰 모델 및 서비스 클래스의 인스턴스화를 관리 하기 위해 Autofac를 사용 하 여 eShopOnContainers 모바일 앱과 함께 사용할 수 있는 많은 종속성 주입 컨테이너가 있습니다. Autofac는 느슨하게 결합 된 앱 빌드를 용이 하 게 하 고, 형식 매핑 및 개체 인스턴스를 등록 하 고, 개체를 확인 하 고, 개체 수명을 관리 하 고, 삽입 하는 메서드를 포함 하 여 종속성 주입 컨테이너에서 일반적으로 발견 되 종속 개체를 확인 하는 개체의 생성자로 변환 합니다. Autofac에 대 한 자세한 내용은 readthedocs.io의 [Autofac](https://autofac.readthedocs.io/en/latest/index.html) 를 참조 하세요.
+TinyIoC를 사용 하 여 앱에서 뷰 모델 및 서비스 클래스의 인스턴스화를 관리 하는 eShopOnContainers 모바일 앱과 함께 사용할 수 있는 많은 종속성 주입 컨테이너가 있습니다. TinyIoC는 다양 한 컨테이너를 평가한 후에 선택 되었으며, 잘 알려진 대부분의 컨테이너와 비교할 때 모바일 플랫폼에서 뛰어난 성능을 제공 합니다. 느슨하게 연결 된 앱 빌드를 용이 하 게 하 고, 형식 매핑을 등록 하 고, 개체를 확인 하 고, 개체 수명을 관리 하 고, 종속 개체를 삽입 하는 메서드를 포함 하 여 종속성 주입 컨테이너에서 일반적으로 발견 되는 확인 하는 개체의 생성자입니다. TinyIoC에 대 한 자세한 내용은 [TinyIoC](https://github.com/grumpydev/TinyIoC/wiki) on github.com를 참조 하세요.
 
-Autofac에서 `IContainer` 인터페이스는 종속성 주입 컨테이너를 제공 합니다. 그림 3-1은 `IOrderService` 개체를 인스턴스화하고 `ProfileViewModel` 클래스에 삽입 하는이 컨테이너를 사용할 때의 종속성을 보여 줍니다.
+TinyIoC에서 `TinyIoCContainer` 형식은 종속성 주입 컨테이너를 제공 합니다. 그림 3-1은 `IOrderService` 개체를 인스턴스화하고 `ProfileViewModel` 클래스에 삽입 하는이 컨테이너를 사용할 때의 종속성을 보여 줍니다.
 
 ![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
 
@@ -87,64 +87,37 @@ Autofac에서 `IContainer` 인터페이스는 종속성 주입 컨테이너를 �
 > [!TIP]
 > 종속성 주입 컨테이너가 항상 적절 한 것은 아닙니다. 종속성 주입에는 작은 앱에 적합 하지 않거나 유용 하지 않을 수 있는 추가 복잡성 및 요구 사항이 도입 되었습니다. 클래스에 종속성이 없거나 다른 형식에 대 한 종속성이 아닌 경우 컨테이너에 배치 하는 것이 적합 하지 않을 수 있습니다. 또한 클래스에는 형식에 대 한 정수 계열 종속성 집합이 하나 있지만 변경 되지 않는 경우 컨테이너에 배치 하는 것이 적합 하지 않을 수 있습니다.
 
-종속성 주입이 필요한 형식의 등록은 앱의 단일 메서드에서 수행 해야 하며, 앱이 해당 클래스 간의 종속성을 인식 하도록 앱의 수명 주기 초기에이 메서드를 호출 해야 합니다. EShopOnContainers 모바일 앱에서이는 `IContainer` 개체를 빌드하고 해당 개체에 대 한 참조를 포함 하는 응용 프로그램의 유일한 클래스인 `ViewModelLocator` 클래스에 의해 수행 됩니다. 다음 코드 예제에서는 eShopOnContainers mobile 앱이 `ViewModelLocator` 클래스에서 `IContainer` 개체를 선언 하는 방법을 보여 줍니다.
+종속성 주입이 필요한 형식의 등록은 앱의 단일 메서드에서 수행 해야 하며, 앱이 해당 클래스 간의 종속성을 인식 하도록 앱의 수명 주기 초기에이 메서드를 호출 해야 합니다. EShopOnContainers 모바일 앱에서이는 `TinyIoCContainer` 개체를 빌드하고 해당 개체에 대 한 참조를 포함 하는 응용 프로그램의 유일한 클래스인 `ViewModelLocator` 클래스에 의해 수행 됩니다. 다음 코드 예제에서는 eShopOnContainers mobile 앱이 `ViewModelLocator` 클래스에서 `TinyIoCContainer` 개체를 선언 하는 방법을 보여 줍니다.
 
 ```csharp
-private static IContainer _container;
+private static TinyIoCContainer _container;
 ```
 
-형식 및 인스턴스는 `ViewModelLocator` 클래스의 `RegisterDependencies` 메서드에 등록 됩니다. 이를 위해 먼저 다음 코드 예제에서 보여 주는 `ContainerBuilder` 인스턴스를 만듭니다.
+형식은 `ViewModelLocator` 생성자에 등록 됩니다. 이를 위해 먼저 다음 코드 예제에서 보여 주는 `TinyIoCContainer` 인스턴스를 만듭니다.
 
 ```csharp
-var builder = new ContainerBuilder();
+_container = new TinyIoCContainer();
 ```
 
-그런 다음 형식 및 인스턴스가 `ContainerBuilder` 개체에 등록 되며, 다음 코드 예제에서는 형식 등록의 가장 일반적인 형태를 보여 줍니다.
+그런 다음 형식이 `TinyIoCContainer` 개체에 등록 되며, 다음 코드 예제에서는 형식 등록의 가장 일반적인 형태를 보여 줍니다.
 
 ```csharp
-builder.RegisterType<RequestProvider>().As<IRequestProvider>();
+_container.Register<IRequestProvider, RequestProvider>();
 ```
 
-여기에 표시 된 `RegisterType` 메서드는 인터페이스 형식을 구체적인 형식에 매핑합니다. 이 클래스는 생성자를 통해 `IRequestProvider`를 삽입 해야 하는 개체를 인스턴스화할 때 `RequestProvider` 개체를 인스턴스화하기 위해 컨테이너에 지시 합니다.
+여기에 표시 된 `Register` 메서드는 인터페이스 형식을 구체적인 형식에 매핑합니다. 기본적으로 각 인터페이스 등록은 모든 종속 개체가 동일한 공유 인스턴스를 받도록 singleton으로 구성 됩니다. 따라서 생성자를 통해 `IRequestProvider`를 삽입 해야 하는 개체에서 공유 하는 단일 `RequestProvider` 인스턴스만 컨테이너에 존재 합니다.
 
 구체적 형식은 다음 코드 예제와 같이 인터페이스 형식에서 매핑을 사용 하지 않고 직접 등록할 수도 있습니다.
 
 ```csharp
-builder.RegisterType<ProfileViewModel>();
+_container.Register<ProfileViewModel>();
 ```
 
-`ProfileViewModel` 형식이 확인 되 면 컨테이너는 필요한 종속성을 삽입 합니다.
-
-Autofac를 사용 하면 컨테이너에서 형식의 singleton 인스턴스에 대 한 참조를 유지 관리 하는 인스턴스를 등록할 수도 있습니다. 예를 들어 다음 코드 예제에서는 `ProfileViewModel` 인스턴스에 `IOrderService` 인스턴스가 필요할 때 eShopOnContainers mobile 앱에서 사용할 구체적인 형식을 등록 하는 방법을 보여 줍니다.
-
-```csharp
-builder.RegisterType<OrderService>().As<IOrderService>().SingleInstance();
-```
-
-여기에 표시 된 `RegisterType` 메서드는 인터페이스 형식을 구체적인 형식에 매핑합니다. `SingleInstance` 메서드는 모든 종속 개체가 동일한 공유 인스턴스를 받도록 등록을 구성 합니다. 따라서 생성자를 통해 `IOrderService`를 삽입 해야 하는 개체에서 공유 하는 단일 `OrderService` 인스턴스만 컨테이너에 존재 합니다.
-
-인스턴스 등록은 다음 코드 예제에서 보여 주는 `RegisterInstance` 메서드를 사용 하 여 수행할 수도 있습니다.
-
-```csharp
-builder.RegisterInstance(new OrderMockService()).As<IOrderService>();
-```
-
-여기에 표시 된 `RegisterInstance` 메서드는 새 `OrderMockService` 인스턴스를 만들고 컨테이너에 등록 합니다. 따라서 생성자를 통해 `IOrderService`를 삽입 해야 하는 개체에서 공유 하는 단일 `OrderMockService` 인스턴스만 컨테이너에 있습니다.
-
-형식 및 인스턴스 등록 후에는 다음 코드 예제에서 보여 주는 `IContainer` 개체를 빌드해야 합니다.
-
-```csharp
-_container = builder.Build();
-```
-
-`ContainerBuilder` 인스턴스에서 `Build` 메서드를 호출 하면 만들어진 등록이 포함 된 새 종속성 주입 컨테이너가 작성 됩니다.
-
-> [!TIP]
-> `IContainer`를 변경할 수 없는 것으로 간주 합니다. Autofac는 기존 컨테이너의 등록을 업데이트 하는 `Update` 메서드를 제공 하는 반면 가능 하면이 메서드를 호출 하지 않아야 합니다. 컨테이너를 만든 후, 특히 컨테이너를 사용 하는 경우에는 컨테이너를 수정 하는 데 위험이 있습니다. 자세한 내용은 readthedocs.io에서 변경할 수 없도록 [컨테이너 고려](https://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) 를 참조 하세요.
+기본적으로 각 구체적 클래스 등록은 모든 종속 개체가 새 인스턴스를 받도록 다중 인스턴스로 구성 됩니다. 따라서 `ProfileViewModel` 확인 되 면 새 인스턴스가 만들어지고 컨테이너는 필요한 종속성을 삽입 합니다.
 
 <a name="resolution" />
 
-## <a name="resolution"></a>해결
+## <a name="resolution"></a>해결 방법
 
 형식을 등록 한 후에는 종속성으로 확인 하거나 삽입할 수 있습니다. 형식을 확인 하 고 컨테이너가 새 인스턴스를 만들어야 하는 경우 모든 종속성을 인스턴스에 삽입 합니다.
 
@@ -154,21 +127,21 @@ _container = builder.Build();
 1. 형식이 singleton으로 등록 된 경우 컨테이너는 singleton 인스턴스를 반환 합니다. 이 형식이에 대해 처음으로 호출 되 면 컨테이너는 필요한 경우이를 만들고 해당에 대 한 참조를 유지 관리 합니다.
 1. 형식이 singleton으로 등록 되지 않은 경우 컨테이너는 새 인스턴스를 반환 하 고이에 대 한 참조를 유지 하지 않습니다.
 
-다음 코드 예제에서는 이전에 Autofac에 등록 된 `RequestProvider` 유형을 확인할 수 있는 방법을 보여 줍니다.
+다음 코드 예제에서는 이전에 TinyIoC에 등록 된 `RequestProvider` 형식을 확인할 수 있는 방법을 보여 줍니다.
 
 ```csharp
-var requestProvider = _container.Resolve<IRequestProvider>();
+var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-이 예제에서 Autofac는 종속성과 함께 `IRequestProvider` 형식에 대 한 구체적인 형식을 확인 하도록 요청 됩니다. 일반적으로 `Resolve` 메서드는 특정 형식의 인스턴스가 필요할 때 호출 됩니다. 확인 된 개체의 수명을 제어 하는 방법에 대 한 자세한 내용은 [확인 된 개체의 수명 관리](#managing_the_lifetime_of_resolved_objects)를 참조 하세요.
+이 예제에서 TinyIoC는 종속성과 함께 `IRequestProvider` 형식에 대 한 구체적인 형식을 확인 하도록 요청 됩니다. 일반적으로 `Resolve` 메서드는 특정 형식의 인스턴스가 필요할 때 호출 됩니다. 확인 된 개체의 수명을 제어 하는 방법에 대 한 자세한 내용은 [확인 된 개체의 수명 관리](#managing_the_lifetime_of_resolved_objects)를 참조 하세요.
 
 다음 코드 예제에서는 eShopOnContainers 모바일 앱이 뷰 모델 유형 및 해당 종속성을 인스턴스화하는 방법을 보여 줍니다.
 
 ```csharp
-var viewModel = _container.Resolve(viewModelType);
+var viewModel = _container.Resolve(viewModelType);
 ```
 
-이 예에서는 요청 된 뷰 모델에 대 한 뷰 모델 유형을 확인 하도록 Autofac를 요청 하 고, 컨테이너는 종속성도 확인 합니다. `ProfileViewModel` 유형을 확인 하는 경우 확인할 종속성은 `IOrderService` 개체입니다. 따라서 Autofac는 먼저 `OrderService` 개체를 생성 한 다음 `ProfileViewModel` 클래스의 생성자에 전달 합니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)를 참조 하세요.
+이 예에서는 요청 된 뷰 모델에 대 한 뷰 모델 유형을 확인 하도록 TinyIoC를 요청 하 고, 컨테이너는 종속성도 확인 합니다. `ProfileViewModel` 유형을 확인 하는 경우 확인할 종속성은 `ISettingsService` 개체 및 `IOrderService` 개체입니다. `SettingsService` 및 `OrderService` 클래스를 등록할 때 인터페이스 등록이 사용 되었으므로 TinyIoC는 `SettingsService` 및 `OrderService` 클래스에 대 한 singleton 인스턴스를 반환한 다음 `ProfileViewModel` 클래스의 생성자에 전달 합니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)를 참조 하세요.
 
 > [!NOTE]
 > 컨테이너를 사용하여 형식을 등록하고 확인하는 경우, 특히 앱의 각 페이지 탐색에 대한 종속성을 다시 생성하는 경우 컨테이너의 리플렉션 사용으로 인해 성능비용이 발생합니다. 종속성이 많거나 깊은 경우에는 생성 비용이 많이 증가할 수 있습니다.
@@ -177,26 +150,24 @@ var viewModel = _container.Resolve(viewModelType);
 
 ## <a name="managing-the-lifetime-of-resolved-objects"></a>확인 된 개체의 수명 관리
 
-형식을 등록 한 후 Autofac의 기본 동작은 형식이 확인 될 때마다 또는 종속성 메커니즘이 다른 클래스에 인스턴스를 삽입 하는 경우에 등록 된 형식의 새 인스턴스를 만드는 것입니다. 이 시나리오에서 컨테이너는 확인 된 개체에 대 한 참조를 보유 하지 않습니다. 그러나 인스턴스를 등록할 때 Autofac의 기본 동작은 개체의 수명을 단일 항목으로 관리 하는 것입니다. 따라서 인스턴스가 범위 내에 있는 동안 인스턴스는 범위 내에 유지 되 고, 컨테이너가 범위를 벗어나면 가비지가 수집 되 고, 코드에서 명시적으로 컨테이너를 삭제 하면 삭제 됩니다.
+구체적 클래스 등록을 사용 하 여 형식을 등록 한 후 TinyIoC의 기본 동작은 형식이 확인 될 때마다 또는 종속성 메커니즘이 다른 클래스에 인스턴스를 삽입 하는 경우에 등록 된 형식의 새 인스턴스를 만드는 것입니다. 이 시나리오에서 컨테이너는 확인 된 개체에 대 한 참조를 보유 하지 않습니다. 그러나 인터페이스 등록을 사용 하 여 형식을 등록 하는 경우 TinyIoC의 기본 동작은 개체의 수명을 단일 항목으로 관리 하는 것입니다. 따라서 인스턴스가 범위 내에 있는 동안 인스턴스는 범위 내에 유지 되 고, 컨테이너가 범위를 벗어나면 가비지가 수집 되 고, 코드에서 명시적으로 컨테이너를 삭제 하면 삭제 됩니다.
 
-Autofac 인스턴스 범위를 사용 하 여 등록 된 형식에서 Autofac가 만드는 개체에 대 한 singleton 동작을 지정할 수 있습니다. Autofac 인스턴스 범위는 컨테이너에 의해 인스턴스화된 개체 수명을 관리 합니다. `RegisterType` 메서드의 기본 인스턴스 범위는 `InstancePerDependency` 범위입니다. 그러나 `RegisterType` 메서드와 함께 `SingleInstance` 범위를 사용 하 여 `Resolve` 메서드를 호출할 때 컨테이너가 형식의 singleton 인스턴스를 만들거나 반환할 수 있습니다. 다음 코드 예제에서는 Autofac가 `NavigationService` 클래스의 단일 인스턴스를 만들도록 지시 하는 방법을 보여 줍니다.
+기본 TinyIoC 등록 동작은 흐름 `AsSingleton` 및 `AsMultiInstance` API 메서드를 사용 하 여 재정의할 수 있습니다. 예를 들어 `AsSingleton` 메서드를 `Register` 메서드와 함께 사용 하 여 `Resolve` 메서드를 호출할 때 컨테이너가 형식의 singleton 인스턴스를 만들거나 반환할 수 있습니다. 다음 코드 예제에서는 TinyIoC가 `LoginViewModel` 클래스의 단일 인스턴스를 만들도록 지시 하는 방법을 보여 줍니다.
 
 ```csharp
-builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
+_container.Register<LoginViewModel>().AsSingleton();
 ```
 
-`INavigationService` 인터페이스가 처음으로 확인 되 면 컨테이너는 새 `NavigationService` 개체를 만들고 해당 개체에 대 한 참조를 유지 관리 합니다. `INavigationService` 인터페이스의 이후 해상도에서 컨테이너는 이전에 만든 `NavigationService` 개체에 대 한 참조를 반환 합니다.
+`LoginViewModel` 형식이 처음 확인 될 때 컨테이너는 새 `LoginViewModel` 개체를 만들고 해당 개체에 대 한 참조를 유지 관리 합니다. `LoginViewModel`의 이후 해상도에서 컨테이너는 이전에 만든 `LoginViewModel` 개체에 대 한 참조를 반환 합니다.
 
 > [!NOTE]
-> SingleInstance 범위는 컨테이너를 삭제할 때 생성 된 개체를 삭제 합니다.
-
-Autofac는 추가 인스턴스 범위를 포함 합니다. 자세한 내용은 readthedocs.io의 [인스턴스 범위](https://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) 를 참조 하세요.
+> 단일 항목로 등록 된 형식은 컨테이너가 삭제 될 때 삭제 됩니다.
 
 ## <a name="summary"></a>요약
 
 종속성 주입을 통해 이러한 형식에 종속 된 코드에서 구체적인 형식을 분리할 수 있습니다. 일반적으로 인터페이스와 추상 형식 간의 등록 및 매핑 목록과 이러한 형식을 구현 하거나 확장 하는 구체적인 형식을 포함 하는 컨테이너를 사용 합니다.
 
-Autofac는 느슨하게 결합 된 앱 빌드를 용이 하 게 하 고, 형식 매핑 및 개체 인스턴스를 등록 하 고, 개체를 확인 하 고, 개체 수명을 관리 하 고, 삽입 하는 메서드를 포함 하 여 종속성 주입 컨테이너에서 일반적으로 발견 되 종속 개체를 확인 하는 개체의 생성자로 변환 합니다.
+TinyIoC는 잘 알려진 대부분의 컨테이너와 비교할 때 모바일 플랫폼에서 뛰어난 성능을 제공 하는 경량 컨테이너입니다. 느슨하게 연결 된 앱 빌드를 용이 하 게 하 고, 형식 매핑을 등록 하 고, 개체를 확인 하 고, 개체 수명을 관리 하 고, 종속 개체를 삽입 하는 메서드를 포함 하 여 종속성 주입 컨테이너에서 일반적으로 발견 되는 확인 하는 개체의 생성자입니다.
 
 ## <a name="related-links"></a>관련 링크
 
