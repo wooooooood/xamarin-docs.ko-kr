@@ -3,15 +3,15 @@ title: 모바일 소프트웨어 개발 수명 주기
 description: 이 문서에서는 모바일 소프트웨어 개발 수명 주기, UX 디자인 살펴보기, UI 디자인, 개발, 안정화, 배포 등을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: 4e2af0d1746ef1321db39d97a86af2b4bd769c69
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: b08293727a585ff68c4bac8a25b26d249505b1aa
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69526699"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016391"
 ---
 # <a name="mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기
 
@@ -72,7 +72,7 @@ ms.locfileid: "69526699"
 
 UX는 일반적으로 여러 [디자인 도구 키트](https://docs.microsoft.com/windows/uwp/design/downloads/) 중 하나를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다. UX 모형을 통해 실제 UI 디자인을 고민할 필요없이 UX를 디자인할 수 있습니다.
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX는 일반적으로 Balsamiq와 같은 도구를 사용하여 와이어프레임 또는 모형을 통해 수행됩니다.")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인터페이스 지침을 고려하는 것이 중요합니다. 앱은 각 플랫폼에서 “익숙한 방식”이어야 합니다. 각 플랫폼의 공식 디자인 지침은 다음과 같습니다.
 
@@ -84,11 +84,11 @@ UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인�
 
 또한 하드웨어 자체는 UX 의사 결정도 지정합니다. 예를 들어 iOS 디바이스에는 물리적 *뒤로* 단추가 없으므로 탐색 컨트롤러 메타포를 도입합니다.
 
- ![](introduction-to-mobile-sdlc-images/01-navigation-controller.png "iOS 디바이스에는 물리적 뒤로 단추가 없으므로 탐색 컨트롤러 메타포를 도입")
+ ![](introduction-to-mobile-sdlc-images/01-navigation-controller.png "iOS devices have no physical back button, and therefore introduce the Navigation Controller metaphor")
 
 또한 폼 팩터도 UX 결정에 영향을 줍니다. 태블릿은 훨씬 더 많은 화면 공간을 보유하고 있으므로 더 많은 정보를 표시할 수 있습니다. 보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됩니다.
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "보통 휴대폰의 여러 화면에 필요한 내용은 태블릿용으로 하나로 압축됩니다.")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 그리고 수많은 폼 팩터가 있기 때문에 대상으로 지정할 수 있는 중간 크기의 폼 팩터(휴대폰과 태블릿 중간)가 있습니다.
 
@@ -98,7 +98,7 @@ UX가 결정되면 다음 단계는 UI 디자인을 만드는 것입니다. UX�
 
 UX와 마찬가지로 각 플랫폼마다 고유한 디자인 언어가 있으므로 잘 디자인된 애플리케이션은 각 플랫폼마다 다르게 나타날 수 있습니다.
 
- [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "잘 디자인된 애플리케이션은 각 플랫폼마다 다르게 보일 수 있습니다.")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 ### <a name="development"></a>개발
 
@@ -146,10 +146,10 @@ Android는 이 정보를 사용하여 Android OS 내에서 실행되는 애플�
 
 이를 통해 개발자는 잠재적으로 더 크고 더 복잡한 애플리케이션 배포 채널을 사용할 수 있습니다. [Google Play](https://play.google.com/store?hl=en)는 Google의 공식 앱 스토어이지만 기타 여러 가지가 있습니다. 널리 사용되는 것은 다음과 같습니다.
 
-1. [AppBrain](http://www.appbrain.com/)
-1. [Android용 Amazon App Store](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1. [Handango](http://www.handango.com/)
-1. [GetJar](http://www.getjar.com/)
+1. [AppBrain](https://www.appbrain.com/)
+1. [Android용 Amazon App Store](https://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](https://www.handango.com/)
+1. [GetJar](https://www.getjar.com/)
 
 #### <a name="uwp"></a>UWP
 

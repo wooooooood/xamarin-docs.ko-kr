@@ -4,15 +4,15 @@ description: 이 문서에서는 애플리케이션 테스트에 사용할 수 �
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 7ee3d7d9b2ce074174b676225ec934279ceb5a86
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292635"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022694"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 디바이스 프로비저닝
 
@@ -20,7 +20,7 @@ Xamarin.iOS 애플리케이션을 개발하는 동안 시뮬레이터 뿐만 아
 
 아래 그림에 강조 표시된 섹션은 iOS 프로비전을 설정하는 데 필요한 단계를 보여 줍니다.
 
-[![](images/provisioningdiagram.png "이 그림에 강조 표시된 섹션은 iOS 프로비전을 설정하는 데 필요한 단계를 보여 줍니다.")](images/provisioningdiagram.png#lightbox)
+[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
 
 이 후 다음 단계는 애플리케이션을 배포하는 것입니다. 배포에 대한 자세한 내용은 [앱 배포](~/ios/deploy-test/app-distribution/index.md) 가이드를 참조하세요.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 앱 스토어에서 배포를 위해 릴리스�
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 01e6ae4362c902c0982f7b93cc1f65b003db1020
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: aefd649fe1859306e5499addc1c08f4e42b2b424
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763235"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026691"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
 
@@ -40,7 +40,7 @@ iTunes Connect는 다음과 같은 용도로 사용할 수 있습니다.
 
 iTunes Connect의 **계약, 세금 및 뱅킹** 섹션은 iTunes 개발자 지불 및 원천 징수와 관련된 필수 재무 정보를 제공하고 Apple과 체결한 계약 상태를 추적하는 데 사용됩니다. 앱 스토어에서 iOS 애플리케이션을 무료 또는 판매용으로 릴리스하려면, 먼저 적절한 계약을 체결하고 기존 계약을 수정하는 데 동의해야 합니다.
 
-[![](itunesconnect-images/agreement01.png "계약, 세금 및 뱅킹 관리")](itunesconnect-images/agreement01.png#lightbox)
+[![](itunesconnect-images/agreement01.png "Managing Agreements, Tax and Banking")](itunesconnect-images/agreement01.png#lightbox)
 
 여기서는 다음을 수행할 수 있습니다.
 
@@ -63,13 +63,13 @@ iOS 애플리케이션을 iTunes Connect에 추가하려면 **팀 에이전트**
 
 1. **My Apps**를 클릭합니다.
 
-    [![](itunesconnect-images/add01.png "My Apps 클릭")](itunesconnect-images/add01.png#lightbox)
+    [![](itunesconnect-images/add01.png "Click on My Apps")](itunesconnect-images/add01.png#lightbox)
 2. 왼쪽 위 모서리에서 **+** 를 클릭하고 **새 iOS 앱**을 선택합니다.
 
-    [![](itunesconnect-images/add02.png "새 iOS 앱 추가")](itunesconnect-images/add02.png#lightbox)
+    [![](itunesconnect-images/add02.png "Adding a New iOS App")](itunesconnect-images/add02.png#lightbox)
 3. iTunes Connect에서 **새 iOS 앱** 대화 상자가 표시됩니다.
 
-    [![](itunesconnect-images/add03.png "새 iOS 앱 대화 상자")](itunesconnect-images/add03.png#lightbox)
+    [![](itunesconnect-images/add03.png "The New iOS App dialog")](itunesconnect-images/add03.png#lightbox)
 4. 앱 스토어에 표시되어야 하는 애플리케이션에 대한 **이름** 및 **버전 번호**를 입력합니다.
 5. **기본 언어**를 선택합니다.
 6. **SKU** 번호를 입력합니다. 이 번호는 애플리케이션을 추적하는 데 사용되는 고유한 상수 식별자입니다. 최종 사용자에게는 표시되지 않으며, 앱을 만든 후에는 _변경할 수 없습니다_.
@@ -78,7 +78,7 @@ iOS 애플리케이션을 iTunes Connect에 추가하려면 **팀 에이전트**
 
 새 애플리케이션이 iTunes Connect에 만들어지고, 설명, 가격, 범주, 등급 등과 같은 필수 정보를 입력할 준비가 됩니다.
 
-[![](itunesconnect-images/add04.png "새 애플리케이션이 iTunes Connect에 만들어집니다.")](itunesconnect-images/add04.png#lightbox)
+[![](itunesconnect-images/add04.png "The new application will be created in iTunes Connect")](itunesconnect-images/add04.png#lightbox)
 
 <a name="managing" />
 
@@ -112,7 +112,7 @@ Apple에서는 애플리케이션이 지원하는 모든 화면 크기와 해상
 4. **스크린샷** 섹션으로 스크롤합니다.
 5. **이미지 크기**를 선택하고 필요한 이미지를 끌어옵니다(화면 크기당 최대 5개).
 
-    [![](itunesconnect-images/screenshot01.png "이미지 크기를 선택하고 필요한 이미지 끌어오기")](itunesconnect-images/screenshot01.png#lightbox)
+    [![](itunesconnect-images/screenshot01.png "Select the Image Size and drag in the required images")](itunesconnect-images/screenshot01.png#lightbox)
 6. 필요한 모든 화면 크기에 대해 반복합니다.
 7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
@@ -185,7 +185,7 @@ Apple에서는 개발자가 자신의 웹 사이트에 대한 링크를 제공�
 4. **이름** 섹션으로 스크롤합니다.
 5. 필요한 모든 정보를 입력합니다.
 
-    [![](itunesconnect-images/name01.png "iTunes Connect에서 이름, 설명, 새로운 기능, 키워드 및 URL 편집")](itunesconnect-images/name01.png#lightbox)
+    [![](itunesconnect-images/name01.png "Editing Name, Description, What's New, Keywords and URLs in iTunes Connect")](itunesconnect-images/name01.png#lightbox)
 6. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 > [!IMPORTANT]
@@ -250,10 +250,10 @@ Apple에서는 애플리케이션에 대한 저작권 정보를 제공하도록 
 4. **일반 앱 정보** 섹션으로 스크롤합니다.
 5. 필요한 모든 정보를 입력합니다.
 
-    [![](itunesconnect-images/general01.png "iTunes Connect에서 일반 앱 정보 편집")](itunesconnect-images/general01.png#lightbox)
+    [![](itunesconnect-images/general01.png "Editing General App Information in iTunes Connect")](itunesconnect-images/general01.png#lightbox)
 6. **등급**에서 **편집** 단추를 클릭하여 등급 정보를 설정합니다.
 
-    [![](itunesconnect-images/general02.png "등급 편집")](itunesconnect-images/general02.png#lightbox)
+    [![](itunesconnect-images/general02.png "Editing the Rating")](itunesconnect-images/general02.png#lightbox)
 7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 > [!NOTE]
@@ -276,14 +276,14 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 5. **Game Center** 섹션에서 스위치를 **켜기** 위치로 대칭 이동합니다.
 6. 필요한 모든 정보를 입력합니다.
 
-    [![](itunesconnect-images/gamecenter01.png "iTunes Connect에서 Game Center 정보 편집")](itunesconnect-images/gamecenter01.png#lightbox)
+    [![](itunesconnect-images/gamecenter01.png "Editing Game Center Information in iTunes Connect")](itunesconnect-images/gamecenter01.png#lightbox)
 7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 **Game Center** 탭을 사용하여 Game Center를 활성화하고, 이 애플리케이션에 제공되는 **순위표** 또는 **성적**을 유지 관리합니다.
 
-[![](itunesconnect-images/gamecenter02.png "Game Center 활성화")](itunesconnect-images/gamecenter02.png#lightbox)
+[![](itunesconnect-images/gamecenter02.png "Activate Game Center")](itunesconnect-images/gamecenter02.png#lightbox)
 
-[![](itunesconnect-images/gamecenter03.png "이 애플리케이션에 제공되는 순위표 또는 성적 유지 관리")](itunesconnect-images/gamecenter03.png#lightbox)
+[![](itunesconnect-images/gamecenter03.png "Maintain any available Leaderboards or Achievements for this application")](itunesconnect-images/gamecenter03.png#lightbox)
 
 ## <a name="maintaining-app-review-information"></a>앱 검토 정보 유지 관리
 
@@ -299,17 +299,17 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 4. **앱 검토 정보** 섹션으로 스크롤합니다.
 5. 필요한 모든 정보를 입력합니다.
 
-    [![](itunesconnect-images/review01.png "iTunes Connect에서 앱 검토 정보 편집")](itunesconnect-images/review01.png#lightbox)
+    [![](itunesconnect-images/review01.png "Editing App Review Information in iTunes Connect")](itunesconnect-images/review01.png#lightbox)
 6. 애플리케이션을 성공적으로 검토한 후 앱 스토어에 릴리스하려는 방법을 선택합니다.
 
-    [![](itunesconnect-images/review02.png "iTunes Connect에서 릴리즈 정보 편집")](itunesconnect-images/review02.png#lightbox)
+    [![](itunesconnect-images/review02.png "Editing release information in iTunes Connect")](itunesconnect-images/review02.png#lightbox)
 7. 화면 위쪽의 **저장** 단추를 클릭하여 변경 내용을 저장합니다.
 
 ## <a name="maintaining-pricing-information"></a>가격 정보 유지 관리
 
 판매용 애플리케이션을 릴리스하려는 경우, 사용 가능한 Apple 가격 책정 계층 중 하나를 선택하고 지정된 가격이 적용되는 날짜를 선택하여 판매 가격을 설정해야 합니다. 예를 들어 이 문서의 작성 시점에서 , **계층 1** 가격은 다음과 같습니다.
 
-[![](itunesconnect-images/price01.png "가격 정보 유지 관리")](itunesconnect-images/price01.png#lightbox)
+[![](itunesconnect-images/price01.png "Maintaining Pricing Information")](itunesconnect-images/price01.png#lightbox)
 
 ### <a name="educational-discount"></a>교육 할인
 
@@ -319,7 +319,7 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 
 **사용자 지정 기업 간 애플리케이션**으로 설정되는 애플리케이션은 iTunes Connect에서 지정한 **Volume Purchase Program** 고객에게만 제공되며, 해당 지역에서만 사용할 수 있습니다. 예를 들어 미국 Volume Purchase Program 고객은 미국 비즈니스용 앱 스토어 Volume Purchase Program을 사용해야 합니다.
 
-사용자 지정 기업 간 애플리케이션은 교육 기관 또는 일반 앱 스토어 고객에게 제공되지 않습니다. *비즈니스용 앱 스토어 Volume Purchase Program*에 대해 자세히 알아보려면 Apple의 [FAQ(질문과 대답)](http://vpp.itunes.apple.com/faq) 페이지를 참조하세요. 고객이 **Volume Purchase Program**에 등록하는 방법에 대해 자세히 알아보려면 Apple의 [배포 프로그램](http://enroll.vpp.itunes.apple.com) 페이지를 참조하세요.
+사용자 지정 기업 간 애플리케이션은 교육 기관 또는 일반 앱 스토어 고객에게 제공되지 않습니다. *비즈니스용 앱 스토어 Volume Purchase Program*에 대해 자세히 알아보려면 Apple의 [FAQ(질문과 대답)](https://vpp.itunes.apple.com/faq) 페이지를 참조하세요. 고객이 **Volume Purchase Program**에 등록하는 방법에 대해 자세히 알아보려면 Apple의 [배포 프로그램](https://enroll.vpp.itunes.apple.com) 페이지를 참조하세요.
 
 ### <a name="editing-pricing-information-in-itunes-connect"></a>iTunes Connect에서 가격 정보 편집
 
@@ -329,7 +329,7 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 2. 애플리케이션의 **아이콘**을 클릭합니다.
 3. **가격 책정** 탭을 선택합니다.
 
-    [![](itunesconnect-images/price02.png "iTunes Connect에서 가격 정보 편집")](itunesconnect-images/price02.png#lightbox)
+    [![](itunesconnect-images/price02.png "Editing Pricing Information in iTunes Connect")](itunesconnect-images/price02.png#lightbox)
 4. **가용성 날짜**를 선택합니다.
 5. **가격 계층** 드롭다운 목록에서 원하는 가격을 선택합니다.
 6. 필요에 따라 **교육 할인**을 사용하도록 설정합니다.
@@ -342,7 +342,7 @@ Apple의 Game Center를 지원하는 iOS 게임 애플리케이션의 경우 사
 
 애플리케이션의 가상 인앱 제품(예: 새 게임 수준 또는 애플리케이션 기능)을 판매하려는 경우 이 섹션을 사용하여 해당 구매 항목을 만들고 유지 관리합니다.
 
-[![](itunesconnect-images/inapp01.png "인앱 구매 정보 유지 관리")](itunesconnect-images/inapp01.png#lightbox)
+[![](itunesconnect-images/inapp01.png "Maintaining In-App Purchase Information")](itunesconnect-images/inapp01.png#lightbox)
 
 Xamarin.iOS 애플리케이션에서 인앱 구매를 수행하는 작업에 대한 자세한 내용은 [인앱 구매](~/ios/platform/in-app-purchasing/index.md) 설명서를 참조하세요.
 
@@ -350,7 +350,7 @@ Xamarin.iOS 애플리케이션에서 인앱 구매를 수행하는 작업에 대
 
 애플리케이션이 앱 스토어에 릴리스되면, 애플리케이션을 무료로 구입하거나 다운로드한 사용자는 애플리케이션에 대한 검토를 작성하고 별 등급을 남길 수 있습니다. 이 섹션을 사용하여 해당 검토를 확인합니다. 예:
 
-[![](itunesconnect-images/reviews01.png "애플리케이션 검토 보기")](itunesconnect-images/reviews01.png#lightbox)
+[![](itunesconnect-images/reviews01.png "Viewing Application Reviews")](itunesconnect-images/reviews01.png#lightbox)
 
 ## <a name="summary"></a>요약
 

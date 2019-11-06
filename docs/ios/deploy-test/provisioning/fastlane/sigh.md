@@ -4,15 +4,15 @@ description: 이 문서에서는 모든 Xamarin.iOS 빌드 구성에 대해 프�
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c9b6f6c29b86ee40c2d7b04dbe6fa4ce24a745ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9506d80ab10ce70938f95371a52bf28bda33d42d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762629"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028505"
 ---
 # <a name="fastlane-for-ios-sigh"></a>iOS용 fastlane – sigh
 
@@ -64,7 +64,7 @@ fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
 
 `com.company.appname`은 앱의 번들 ID이며 아래 그림과 같이 Xamarin.iOS 애플리케이션의 Info.plist 파일에서 찾을 수 있습니다.
 
-[![](sigh-images/fastlane-image5.png "Xamarin.iOS 애플리케이션의 Info.plist 파일")](sigh-images/fastlane-image5.png#lightbox)
+[![](sigh-images/fastlane-image5.png "The Info.plist file of the Xamarin.iOS application")](sigh-images/fastlane-image5.png#lightbox)
 
 고유한 앱 ID는 역방향 DNS 스타일 문자열이어야 합니다. ID를 만든 후에는 ID를 메모해 두었다가 이 가이드의 뒷부분 나오는 sigh를 사용할 때 사용해야 합니다.
 
@@ -111,7 +111,7 @@ fastlane 프롬프트가 표시되면 Apple ID 사용자 이름을 입력합니�
 
 Apple ID가 여러 팀에 연결되어 있으면 여기에 표시됩니다. 사용할 팀에 해당하는 번호를 선택합니다.
 
-[![](sigh-images/fastlane-image2.png "사용하려는 팀 선택")](sigh-images/fastlane-image2.png#lightbox)
+[![](sigh-images/fastlane-image2.png "Select the team that you wish to use")](sigh-images/fastlane-image2.png#lightbox)
 
 팀 ID는 다음과 같은 방법으로 CLI에 전달될 수도 있습니다.
 
@@ -127,7 +127,7 @@ fastlane sigh -l 2TU993NY9J
 
 개발자 센터를 탐색하면 아래 그림과 같이 새로 만든 프로비전 프로필을 볼 수 있습니다.
 
-[![](sigh-images/fastlane-image10.png "새로 만든 프로비전 프로필 보기")](sigh-images/fastlane-image10.png#lightbox)
+[![](sigh-images/fastlane-image10.png "View the newly created provisioning profile")](sigh-images/fastlane-image10.png#lightbox)
 
 sigh는 기본적으로 현재 폴더에 프로비전 프로필을 저장합니다. 출력 디렉터리를 변경하려면 `output_path`를 편집하거나 다음을 수행합니다.
 

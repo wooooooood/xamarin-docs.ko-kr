@@ -3,15 +3,15 @@ title: 다중 프로세스 디버깅
 description: 이 문서에서는 Mac용 Visual Studio를 사용하여 동시에 실행되는 여러 프로세스를 디버깅하는 방법을 설명합니다. 예를 들어 이 기능은 모바일 애플리케이션 및 웹 서비스 프로젝트를 동시에 디버깅하는 데 사용될 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: db5d2dfcf96cdc1a89c0ecb2192b86f564e584ed
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: fb96dab2d9979a365964d4993d9c7fc7fee299f5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70290449"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73016555"
 ---
 # <a name="multi-process-debugging"></a>다중 프로세스 디버깅
 
@@ -33,28 +33,28 @@ Mac용 Visual Studio에서 개발된 최신 솔루션에는 다양한 플랫폼�
 
 Mac용 Visual Studio에서 여러 프로세스를 시작하고 디버깅하려면 _솔루션 구성_을 만드는 것이 필요합니다. 솔루션 구성은 **시작** 단추를 클릭하거나 &#8984;&#8617;(**Cmd-Enter**)을 눌러 디버깅 세션을 시작할 때 솔루션에 어떤 프로젝트가 포함되어야 하는지 설명합니다. 다음 스크린샷은 Mac용 Visual Studio에 있는 여러 솔루션 구성을 가진 솔루션의 예시입니다.
 
-![](multi-process-debugging-images/mpd01-xs.png "여러 솔루션 구성을 가진 솔루션")
+![](multi-process-debugging-images/mpd01-xs.png "A solution with multiple solution configurations")
 
 ### <a name="parts-of-the-debug-toolbar"></a>디버그 도구 모음의 부분
 
 디버그 도구 모음은 팝업 메뉴를 통해 솔루션 구성을 선택할 수 있도록 변경되었습니다. 이 스크린샷은 디버그 도구 모음의 부분을 보여줍니다.
 
-![](multi-process-debugging-images/mpd02-xs.png "디버그 도구 모음의 부분")
+![](multi-process-debugging-images/mpd02-xs.png "The parts of the debug toolbar")
 
 1. **솔루션 구성** - 디버그 도구 모음에서 솔루션 구성을 클릭하고 팝업 메뉴에서 해당 구성을 선택하여 솔루션 구성을 설정할 수 있습니다.
 
-    ![](multi-process-debugging-images/mpd03-xs.png "솔루션 구성을 사용한 샘플 팝업")
+    ![](multi-process-debugging-images/mpd03-xs.png "A sample popup with solution configurations")
 
 2. **빌드 대상** - 프로젝트에 대한 빌드 대상을 식별합니다. Mac용 Visual Studio의 이전 버전에서 변경되지 않습니다.
 3. **디바이스 대상** - 솔루션이 실행될 디바이스를 선택합니다. 각 프로젝트에 대한 별도 디바이스 또는 에뮬레이터를 식별할 수 있습니다.
 
-    ![](multi-process-debugging-images/mpd04-xs.png "프로젝트에 대한 디바이스를 표시하는 팝업")
+    ![](multi-process-debugging-images/mpd04-xs.png "Popup showing the devices for a project")
 
 ### <a name="multiple-debug-pads"></a>여러 디버그 패드
 
 다중 솔루션 구성을 시작할 때 Mac용 Visual Studio 패드 일부가 각 프로세스에 대해 한 번씩 여러번 나타납니다. 예를 들어 다음 스크린샷은 두 개의 프로젝트를 실행하는 솔루션에 대해 두 **애플리케이션 출력** 패드를 보여줍니다.
 
-![](multi-process-debugging-images/mpd05-xs.png "솔루션 구성에 대한 출력 패드")
+![](multi-process-debugging-images/mpd05-xs.png "Output Pad for a solution configuration")
 
 ### <a name="multiple-processes-and-the-_active-thread_"></a>여러 프로세스와 _활성 스레드_
 
@@ -64,7 +64,7 @@ Mac용 Visual Studio에서 여러 프로세스를 시작하고 디버깅하려�
 
 **스레드 패드**는 솔루션 구성에서 검사 중인 모든 프로세스 및 스레드에 대한 정보를 표시하고 어떤 것이 활성 스레드인지에 관한 시각 신호를 제공합니다.
 
-![](multi-process-debugging-images/mpd06-xs.png "솔루션 구성에 대한 스레드 패드")
+![](multi-process-debugging-images/mpd06-xs.png "Thread pad for a solution configuration")
 
 스레드는 호스팅하는 프로세스에 의해 그룹화됩니다. 활성 스레드의 프로젝트 이름 및 ID는 굵은 텍스트로 표시되고, 오른쪽을 가리키는 화살표는 활성 스레드 옆에 있는 여백에 나타납니다. 이전 스크린 샷에서 **프로세스 Id 48703**(**FirstProject**)의 **스레드 #1**은 활성 스레드입니다.
 
@@ -74,7 +74,7 @@ Mac용 Visual Studio에서 여러 프로세스를 시작하고 디버깅하려�
 
 두 개 이상의 프로젝트에 중단점이 있을 경우 Mac용 Visual Studio는 두 프로세스를 일시 중지합니다. 그렇게 하는 것은 활성 스레드에 있는 **스텝오버** 코드에만 가능합니다. 다른 프로세스는 범위 변경이 디버거가 활성 스레드에서 포커스를 전환할 수 있도록 할 때까지 일시 중지됩니다. 예를 들어, 두 개의 프로젝트를 디버깅하는 Mac용 Visual Studio의 다음 스크린샷을 살펴보겠습니다.
 
-![](multi-process-debugging-images/mpd09-xs.png  "Mac용 Visual Studio로 두 프로젝트를 디버깅함")
+![](multi-process-debugging-images/mpd09-xs.png  "Visual Studio for Mac debugging two projects")
 
 이 스크린샷을 보면 각 솔루션에 자체 중단점이 있습니다. 디버깅이 시작될 때 만나게 될 첫 번째 중단점은 **SecondProject**에서 `MainClass`의 **10줄**에 있습니다. 두 프로젝트 모두에 중단점이 있으므로 각 프로세스가 중지됩니다. 중단점에 도달하면 **스텝오버**를 호출할 때마다 Mac용 Visual Studio가 활성화 스레드에서 코드를 단계별로 실행합니다.
 
@@ -88,11 +88,11 @@ Mac용 Visual Studio에서 여러 프로세스를 시작하고 디버깅하려�
 
 프로세스를 마우스 오른쪽 단추로 클릭한 후 상황에 맞는 메뉴에서 **일시 중지** 또는 **다시 시작**을 선택하여 프로세스를 일시 중지하거나 계속할 수 있습니다.
 
-![](multi-process-debugging-images/mpd08-xs.png "스레드 패드에서 일시 중지 또는 다시 시작")
+![](multi-process-debugging-images/mpd08-xs.png "Pause or resume in the Thread pad")
 
 디버그 도구 모음의 모양은 디버깅 중인 프로젝트의 상태에 따라 변경됩니다. 여러 프로젝트가 실행 중이라면, 디버그 도구 모음은 적어도 하나의 프로젝트가 실행 중이고 하나의 프로젝트가 일시 중지된 경우 **일시 중지** 및 **다시 시작** 단추를 모두 표시합니다.
 
-![](multi-process-debugging-images/mpd07-xs.png  "Debug 도구 모음")
+![](multi-process-debugging-images/mpd07-xs.png  "Debug toolbar")
 
 **디버그 도구 모음**에서 **일시 중지** 단추를 클릭하면 디버깅 중인 모든 프로세스가 일시 중지하고 **다시 시작** 단추를 클릭하면 모든 일시 중지 된 프로세스가 다시 시작됩니다.
 
@@ -100,7 +100,7 @@ Mac용 Visual Studio에서 여러 프로세스를 시작하고 디버깅하려�
 
 Mac용 Visual Studio가 첫 번째 프로젝트를 시작하고 나면 두 번째 프로젝트를 디버깅할 수 있습니다. 첫 번째 프로젝트가 시작되면 **솔루션 패드**에서 프로젝트를 **마우스 오른쪽 단추로 클릭*한 다음, **디버깅 항목 시작**을 클릭합니다.
 
-![](multi-process-debugging-images/mpd13-xs.png  "디버깅 항목 시작")
+![](multi-process-debugging-images/mpd13-xs.png  "Start Debugging Item")
 
 ## <a name="creating-a-solution-configuration"></a>솔루션 구성 만들기
 
@@ -110,15 +110,15 @@ Xamaring Studio에서 새 솔루션 구성을 만들려면
 
 1. Mac용 Visual Studio에서 **솔루션 옵션** 대화 상자를 열고 **실행 > 구성**을 선택합니다.
 
-    ![](multi-process-debugging-images/mpd10-xs.png "솔루션 옵션 대화 상자에서 솔루션 구성")
+    ![](multi-process-debugging-images/mpd10-xs.png "Solution Configuration in the Solution Options dialog")
 
 2. **새로** 단추를 클릭하고, 새 솔루션 구성의 이름을 입력한 후, **만들기**를 클릭합니다. 새 솔루션 구성이 **구성** 창에 나타납니다.
 
-    ![](multi-process-debugging-images/mpd11-xs.png  "새 솔루션 구성 이름 지정")
+    ![](multi-process-debugging-images/mpd11-xs.png  "Naming a new solution configuration")
 
 3. 구성 목록에서 새 실행 구성을 선택합니다. **솔루션 옵션** 대화 상자는 솔루션에 있는 프로젝트를 표시합니다. 디버깅 세션을 시작할 때 시작되어야 하는 각 프로젝트를 확인합니다.
 
-    ![](multi-process-debugging-images/mpd12-xs.png "시작할 프로젝트 선택")
+    ![](multi-process-debugging-images/mpd12-xs.png "Selecting the project to start")
 
 이제 **MultipleProjects** 솔루션 구성이 **디버그 도구 모음**에 나타나 개발자가 두 개의 프로젝트를 동시에 디버깅할 수 있게 합니다.
 

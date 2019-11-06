@@ -4,15 +4,15 @@ description: 이 가이드에서는 앱의 시간을 맞추는 방법 및 빠른
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 58bf8325a0fab17411dd7a4f857fdad8bdc6b016
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756266"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026363"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
 
@@ -26,7 +26,7 @@ Xamarin 빌드 속도는 프로세서 기능, 버스 속도, 실제 메모리의
 
 ## <a name="timing-apps"></a>타이밍 앱
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
@@ -97,7 +97,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
-[![](ios-build-mechanics-images/image3.png "옵션 설정")](ios-build-mechanics-images/image3.png#lightbox)
+[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>디바이스 트릭
 
@@ -107,7 +107,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 
 iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니다. 각 구성을 정확하게 이해하여 최적화가 필요한 시기와 이유를 알아야 합니다.
 
-- 디버그
+- Debug
   - 앱이 개발 중일 때 사용해야 하는 기본 구성이며, 따라서 최대한 빨라야 합니다.
 - Release
   - 릴리스 빌드는 사용자에게 제공되는 빌드이며 무엇보다도 성능에 초점을 맞춰야 합니다. 릴리스 구성을 사용할 때 LLVM 최적화 컴파일러를 사용하여 PNG 파일을 최적화할 수 있습니다.
@@ -148,7 +148,7 @@ iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니�
 
 아래 스크린샷은 iOS 옵션에서 시뮬레이터에 대해 이러한 옵션을 설정하는 방법을 보여줍니다.
 
-[![](ios-build-mechanics-images/image4.png "옵션 설정")](ios-build-mechanics-images/image4.png#lightbox)
+[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>링커 사용
 

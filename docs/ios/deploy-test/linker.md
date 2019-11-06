@@ -4,15 +4,15 @@ description: 이 문서에서는 해당 크기를 줄이기 위해 Xamarin.iOS �
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 2cda4d53ae3f5f5716d53fd8862ca9cf000003e0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762838"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030230"
 ---
 # <a name="linking-xamarinios-apps"></a>Xamarin.iOS 앱 연결
 
@@ -26,11 +26,11 @@ ms.locfileid: "70762838"
 
 ## <a name="linker-behavior"></a>링커 동작
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 **프로젝트 옵션**의 링커 동작 드롭다운을 통해 연결 프로세스를 사용자 지정할 수 있습니다. 이 드롭다운에 액세스하려면 아래 그림처럼 iOS 프로젝트를 두 번 클릭하고 **iOS 빌드 > 링커 옵션**을 찾습니다.
 
-[![](linker-images/image1.png "링커 옵션")](linker-images/image1.png#lightbox)
+[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -40,10 +40,10 @@ Visual Studio의 **프로젝트 속성**에서 찾을 수 있는 링커 동작 �
 
 1. **솔루션 탐색기**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 
-    ![](linker-images/linking01w.png "솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 속성 선택")
+    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
 2. **프로젝트 속성**에서 **IOS 빌드**를 선택합니다.
 
-    ![](linker-images/linking02w.png "IOS 빌드 선택")
+    ![](linker-images/linking02w.png "Select IOS Build")
 3. 연결 옵션을 변경하려면 아래 지침을 따릅니다.
 
 -----

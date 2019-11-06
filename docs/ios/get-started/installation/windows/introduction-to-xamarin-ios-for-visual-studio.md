@@ -4,15 +4,15 @@ description: 이 문서에서는 Visual Studio를 사용하여 Xamarin iOS 애�
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 45c7c3a90fa0dedfed8f5f325a96b4c7aa7a5a9e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: ae32588d75ec3152a1b8b8558d40abbe2e76d1b4
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70292031"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022481"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Visual Studio용 Xamarin.iOS 소개
 
@@ -32,7 +32,7 @@ Visual Studio에서 iOS를 개발할 때 준수해야 하는 몇 가지 요구 �
 
 사용 가능한 몇 가지 구성 옵션이 있으므로 각자 자신의 개발 요구 사항에 가장 적합한 구성을 선택하면 됩니다. 구성은 다음과 같습니다.
 
-- Mac을 주 개발 컴퓨터로 사용하고 Visual Studio가 설치된 Windows 가상 머신을 실행합니다. [Parallels](http://www.parallels.com/products/desktop/) 또는 [VMWare](http://www.vmware.com/products/fusion/) 같은 VM 소프트웨어를 사용하는 것이 좋습니다.
+- Mac을 주 개발 컴퓨터로 사용하고 Visual Studio가 설치된 Windows 가상 머신을 실행합니다. [Parallels](https://www.parallels.com/products/desktop/) 또는 [VMWare](https://www.vmware.com/products/fusion/) 같은 VM 소프트웨어를 사용하는 것이 좋습니다.
 - Mac을 빌드 호스트로만 사용합니다. 이 시나리오에서는 [필요한](~/get-started/installation/windows.md#installation) 도구가 설치된 Windows 컴퓨터와 동일한 네트워크에 연결됩니다.
 
 두 경우 모두 다음 단계를 수행해야 합니다.
@@ -53,7 +53,7 @@ Visual Studio용 Xamarin iOS는 표준 도구 모음 및 새 iOS 도구 모음�
 
 Xamarin iOS 개발과 관련된 컨트롤은 빨간색 원으로 표시되어 있습니다.
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "Xamarin iOS 개발과 관련된 컨트롤은 빨간색 원으로 표시")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Xamarin iOS 개발과 관련된 컨트롤은 빨간색 원으로 표시")
+[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
 
 - **시작** - 선택한 플랫폼에서 애플리케이션 디버그 또는 실행을 시작합니다. 연결된 Mac이 있어야 합니다(iOS 도구 모음의 상태 표시기 참조).
 - **솔루션 구성** – 사용할 구성을 선택할 수 있습니다(예: 디버그, 릴리스).
@@ -63,7 +63,7 @@ Xamarin iOS 개발과 관련된 컨트롤은 빨간색 원으로 표시되어 �
 
 Visual Studio의 iOS 도구 모음은 각 Visual Studio 버전에서 비슷하게 생겼으며 아래에 전부 나열되어 있습니다.
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS 도구 모음")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS Toolbar")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 이 항목은 아래에 설명되어 있습니다.
 
@@ -79,31 +79,31 @@ Visual Studio의 iOS 도구 모음은 각 Visual Studio 버전에서 비슷하�
 
 아래 스크린 샷은 사용 가능한 출력 창을 보여주며, 사용 가능한 출력 창은 프로젝트 형식에 따라 달라질 수 있습니다.
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "사용 가능한 출력 창")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "The available output windows")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin** – 여기에는 Mac과의 연결이나 활성화 상태처럼 오직 Xamarin에만 관련된 정보가 포함되어 있습니다.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Mac과의 연결이나 활성화 상태처럼 오직 Xamarin에만 관련된 정보")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Xamarin 진단** – Android와의 상호 작용처럼 Xamarin 프로젝트에 대한 자세한 정보를 표시합니다.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Xamarin 프로젝트에 대한 자세한 정보")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 디버그 및 빌드 같은 다른 기본 Visual Studio 출력 창은 출력 보기 내에서 여전히 사용할 수 있으며 출력 및 MSBuild 출력을 디버그하는 데 사용됩니다.
 
 - **디버그**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "출력 디버그")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
 - **빌드** & **빌드 순서**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild 출력")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## <a name="ios-project-properties"></a>iOS 프로젝트 속성
 
 Visual Studio의 프로젝트 속성은 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 *속성*을 클릭하여 액세스할 수 있습니다. 그러면 아래 스크린샷처럼 iOS 애플리케이션을 구성할 수 있습니다.
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "iOS 애플리케이션 구성")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
 
 - *iOS 번들 서명* – Mac에 연결하여 코드 서명 ID 및 프로비전 프로필을 채웁니다.
 
@@ -133,11 +133,11 @@ Visual Studio에서 iOS 디자이너를 사용하여 스토리보드 및 .xib �
 
 스토리보드 만들기 또는 편집을 시작하려면 `Main.storyboard`를 두 번 클릭하여 iOS 디자이너에서 엽니다.
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "iOS 디자이너에 있는 Main.storyboard")
+![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "The Main.storyboard in the iOS Designer")
 
 보기에 개체를 추가하려면 **도구 상자** 창을 사용하여 디자인 화면으로 항목을 끌어다 놓습니다. 아직 도구 상자를 추가하지 않은 경우 **보기 > 도구 상자**를 선택하여 도구 상자를 추가할 수 있습니다. 아래 그림과 같이 **속성** 창을 사용하여 개체 속성을 수정하고, 레이아웃을 조정하고, 이벤트를 만들 수 있습니다.
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "속성 창")
+![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "The Properties pane")
 
  iOS 디자이너 사용에 대한 자세한 내용은 [디자이너](~/ios/user-interface/designer/index.md) 지침을 참조하세요.
 
@@ -163,7 +163,7 @@ Visual Studio 2017에서는 Android 및 iOS 로그 패드가 통합되었습니�
 
 애플리케이션의 어느 위치에나 프로그램 실행을 일시적으로 중지하라고 디버거에 신호를 보내는 중단점을 설정할 수 있습니다. Visual Studio에서 중단점을 설정하려면 편집기의 여백 영역에서 중단하려는 코드의 줄 번호 옆을 클릭합니다.
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "디버그 지점 설정")
+![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "Setting a debug point")
 
 디버깅을 시작하고, 시뮬레이터 또는 디바이스를 사용하여 애플리케이션을 중단점으로 이동합니다. 중단점에 도착하면 줄이 강조 표시되고 Visual Studio의 일반적인 디버깅 동작이 사용됩니다. 코드를 한 단계씩 실행하거나 프로시저 단위로 실행하거나 코드에서 나갈 수 있고, 지역 변수를 검사할 수 있고, 직접 실행 창을 사용할 수 있습니다.
 

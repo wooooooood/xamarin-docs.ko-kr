@@ -4,15 +4,15 @@ description: Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 �
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/15/2017
-ms.openlocfilehash: c190e92c8366644c00e0f03c314d535f43f8046b
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 50ba4a46e9d9f7cbf5337844025790ab51e309dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70768632"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022682"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
@@ -39,41 +39,41 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 1. [개발자 포털의 Certificates, Identifiers, and Profiles(인증서, 식별자 및 프로필) 섹션](https://developer.apple.com/account/overview.action)에 로그인하여 **iOS 앱** 열에서 **인증서** 섹션을 선택합니다. 그런 다음, **+** 를 눌러서 새 인증서를 만듭니다.
 
-    [![](manual-provisioning-images/cert-plus.png "+를 클릭하여 새 인증서 만들기")](manual-provisioning-images/cert-plus.png#lightbox)
+    [![](manual-provisioning-images/cert-plus.png "Click the + to create a new certificate")](manual-provisioning-images/cert-plus.png#lightbox)
 
 2. 인증서 유형에 **iOS App Development**(iOS 앱 개발) 옵션을 선택하고 **계속**을 클릭합니다. 이 화면은 계정 권한에 따라 다르게 보일 수 있습니다.
 
-    [![](manual-provisioning-images/cert-first.png "인증서 유형에 iOS 앱 개발 옵션 선택")](manual-provisioning-images/cert-first.png#lightbox)
+    [![](manual-provisioning-images/cert-first.png "Select the iOS App Development option for the certificate type")](manual-provisioning-images/cert-first.png#lightbox)
 
 3. 인증서를 수동으로 생성하기 위해 업로드할 인증서 서명 요청을 요청합니다. 이렇게 하려면 Mac에서 **Keychain Access**(키 집합 액세스)를 시작합니다. 주 메뉴로 이동하여 아래 그림과 같이 **Certificate Assistant**(인증서 도우미) 및 **Request a Certificate from a Certificate Authority...** (인증 기관의 인증서 요청)를 선택합니다.
 
-      [![](manual-provisioning-images/key-first.png "인증서 서명 요청 요청하기")](manual-provisioning-images/key-first.png#lightbox)
+      [![](manual-provisioning-images/key-first.png "Request a Certificate Signing Request")](manual-provisioning-images/key-first.png#lightbox)
 
 4. 정보를 입력하고 **디스크에 저장** 옵션을 선택합니다.
 
-    [![](manual-provisioning-images/key-second.png "정보 입력")](manual-provisioning-images/key-second.png#lightbox)
+    [![](manual-provisioning-images/key-second.png "Fill in your information")](manual-provisioning-images/key-second.png#lightbox)
 
 5. 쉽게 찾을 수 있는 위치에 CSR을 저장합니다.
 
-    [![](manual-provisioning-images/cert-third.png "CSR 저장")](manual-provisioning-images/cert-third.png#lightbox)
+    [![](manual-provisioning-images/cert-third.png "Save the CSR")](manual-provisioning-images/cert-third.png#lightbox)
 
 6. 프로비전 포털로 돌아가서 포털에 인증서를 업로드하고 제출합니다.
 
-    [![](manual-provisioning-images/cert-second.png "포털에 인증서 업로드")](manual-provisioning-images/cert-second.png#lightbox)
+    [![](manual-provisioning-images/cert-second.png "Upload the Certificate to the portal")](manual-provisioning-images/cert-second.png#lightbox)
 
     관리자 권한이 없는 경우에는 관리자 또는 팀 에이전트가 인증서를 승인해야 합니다.
 
 7. 인증서가 승인되면 프로비전 포털에서 다운로드합니다.
 
-    [![](manual-provisioning-images/status-dev.png "프로비전 포털에서 인증서 다운로드")](manual-provisioning-images/status-dev.png#lightbox)
+    [![](manual-provisioning-images/status-dev.png "Download the Certificate from the Provisioning Portal")](manual-provisioning-images/status-dev.png#lightbox)
 
 8. 다운로드한 인증서를 두 번 클릭하여 키 집합 액세스를 시작하고 **My Certificates**(내 인증서) 패널을 열어서 새 인증서 및 연결된 프라이빗 키를 표시합니다.
 
-    [![](manual-provisioning-images/keychain.png "키 집합 액세스의 인증서")](manual-provisioning-images/keychain.png#lightbox)
+    [![](manual-provisioning-images/keychain.png "The Certificate in Keychain Access")](manual-provisioning-images/keychain.png#lightbox)
 
 ### <a name="understanding-certificate-key-pairs"></a>인증서 키 쌍 이해
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 개발자 프로필에는 인증서, 이와 연결된 키, 계정과 연결된 프로비전 프로필에 포함됩니다. 실제로 개발자 프로필에는 두 가지 버전이 있습니다. 한 가지는 개발자 포털에 있고 나머지는 로컬 Mac에 있습니다. 이 두 가지의 차이점은 포함된 키의 유형입니다. _포털의 프로필에는 인증서와 연결된 모든 퍼블릭 키가 있지만 로컬 Mac의 복사본에는 모든 프라이빗 키가 포함됩니다_. 인증서가 유효하려면 키 쌍이 일치해야 합니다. 로컬 Mac에 개발자 프로필의 백업을 유지해야 합니다. 프라이빗 키가 손실되면 모든 인증서와 프로비전 프로필을 다시 생성해야 하기 때문입니다.
 
@@ -102,34 +102,34 @@ Apple의 ID를 설정했고 개발 인증서가 준비되었으면 Apple 디바�
 2. 프로비전할 디바이스를 제공된 USB 케이블을 사용하여 Mac에 연결합니다.
 3. **창** 메뉴에서 **디바이스**를 선택합니다.
 
-   [![](manual-provisioning-images/add01.png "창 메뉴에서 디바이스 선택")](manual-provisioning-images/add01.png#lightbox)
+   [![](manual-provisioning-images/add01.png "From the Windows menu select Devices")](manual-provisioning-images/add01.png#lightbox)
 
 4. 디바이스 창 왼쪽의 **디바이스** 목록에서 원하는 iOS 디바이스를 선택합니다.
 5. **식별자** 문자열을 선택하여 클립보드로 복사합니다.
 
-   [![](manual-provisioning-images/add02.png "식별자 문자열 선택")](manual-provisioning-images/add02.png#lightbox)
+   [![](manual-provisioning-images/add02.png "Highlight the Identifier string")](manual-provisioning-images/add02.png#lightbox)
 
 6. Safari에서 [Apple Developer Center](https://developer.apple.com/membercenter/index.action)로 이동하여 로그인합니다.
 7. **Certificates, Identifiers & Profiles**(인증서, 식별자 및 프로필) 링크를 클릭합니다.
 
-   [![](manual-provisioning-images/add03.png "인증서, 식별자 및 프로필 링크 클릭")](manual-provisioning-images/add03.png#lightbox)
+   [![](manual-provisioning-images/add03.png "Click the Certificates, Identifiers  Profiles link")](manual-provisioning-images/add03.png#lightbox)
 
 8. **디바이스** 링크를 클릭합니다.
 
-   [![](manual-provisioning-images/add04.png "디바이스 링크 클릭")](manual-provisioning-images/add04.png#lightbox)
+   [![](manual-provisioning-images/add04.png "Click on the Devices link")](manual-provisioning-images/add04.png#lightbox)
 
 9. **+** 단추를 클릭합니다.
 
-   [![](manual-provisioning-images/add05.png "+ 단추 클릭")](manual-provisioning-images/add05.png#lightbox)
+   [![](manual-provisioning-images/add05.png "Click the + button")](manual-provisioning-images/add05.png#lightbox)
 
 10. 새 디바이스의 이름을 입력하고 위에서 복사한 디바이스 **식별자** 를 **UUID** 필드에 붙여 넣습니다.
 
-    [![](manual-provisioning-images/add06.png "새 디바이스의 이름 및 디바이스 식별자 입력")](manual-provisioning-images/add06.png#lightbox)
+    [![](manual-provisioning-images/add06.png "Provide a name for the new device and the device Identifier")](manual-provisioning-images/add06.png#lightbox)
 
 11. **계속** 단추를 클릭합니다.
 12. 마지막으로, 정보를 검토하고 **등록** 단추를 클릭합니다.
 
-    [![](manual-provisioning-images/add07.png "정보 검토")](manual-provisioning-images/add07.png#lightbox)
+    [![](manual-provisioning-images/add07.png "Review the information")](manual-provisioning-images/add07.png#lightbox)
 
 Xamarin.iOS 애플리케이션을 테스트하거나 디버그하는 데 사용할 iOS 디바이스에 위의 단계를 반복합니다.
 
@@ -148,10 +148,10 @@ Xamarin.iOS 애플리케이션을 테스트하거나 디버그하는 데 사용�
 1. [개발자 포털](https://developer.apple.com/account/overview.action)에서 Apple Developer Center의 *Certificate, Identifiers and Profiles*(인증서, 식별자 및 프로필) 섹션으로 이동합니다. **식별자** 아래에서 **앱 ID**를 선택합니다.
 2. **+** 단추를 클릭하고 **이름**을 지정합니다.
 
-    [![](manual-provisioning-images/appid05a.png "이름 입력")](manual-provisioning-images/appid05a.png#lightbox)
+    [![](manual-provisioning-images/appid05a.png "Provide a Name")](manual-provisioning-images/appid05a.png#lightbox)
 3. App 접두사를 미리 설정해야 합니다. 앱 접미사에 대한 **Wildcard App ID**(와일드카드 앱 ID)를 선택합니다. 번들 ID를 `com.[DomainName].*` 형식으로 입력합니다.
 
-   [![](manual-provisioning-images/appid05b.png "번들 ID 입력")](manual-provisioning-images/appid05b.png#lightbox)
+   [![](manual-provisioning-images/appid05b.png "Enter a Bundle ID")](manual-provisioning-images/appid05b.png#lightbox)
 
 4. **계속** 단추를 클릭하고 화면의 지침에 따라 새 앱 ID를 만듭니다.
 
@@ -165,25 +165,25 @@ Xamarin.iOS 애플리케이션을 테스트하거나 디버그하는 데 사용�
 2. 오른쪽 위 모서리에 있는 **+** 단추를 눌러서 새 프로필을 만듭니다.
 3. **개발** 섹션에서 **iOS App Development**(iOS 앱 개발) 옆에 있는 라디오 단추를 선택하고 **계속**을 누릅니다.
 
-    [![](manual-provisioning-images/provisioning-profile01.png "만들 프로필 형식 선택")](manual-provisioning-images/provisioning-profile01.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile01.png "Select the type of profile to create")](manual-provisioning-images/provisioning-profile01.png#lightbox)
 4. 드롭다운 메뉴에서 사용할 앱 ID를 선택합니다.
 
-    [![](manual-provisioning-images/provisioning-profile02.png "사용할 앱 ID 선택")](manual-provisioning-images/provisioning-profile02.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile02.png "Select the App ID that to use")](manual-provisioning-images/provisioning-profile02.png#lightbox)
 5. 프로비전 프로필에 포함할 인증서를 선택하고 **계속**을 누릅니다.
 
-    [![](manual-provisioning-images/provisioning-profile03.png "프로비전 프로필에 포함할 인증서 선택")](manual-provisioning-images/provisioning-profile03.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile03.png "Select the Certificates to include in the provisioning profile")](manual-provisioning-images/provisioning-profile03.png#lightbox)
 6. 앱을 설치할 모든 디바이스를 선택합니다.
 
-    [![](manual-provisioning-images/provisioning-profile04.png "앱을 설치할 모든 디바이스 선택")](manual-provisioning-images/provisioning-profile04.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile04.png "Select all the devices that the app will be installed on")](manual-provisioning-images/provisioning-profile04.png#lightbox)
 7. 프로비전 프로필에 식별 가능한 이름을 제공하고 **계속**을 눌러서 프로필을 만듭니다.
 
-    [![](manual-provisioning-images/provisioning-profile05.png "프로비전 프로필에 식별 가능한 이름 입력")](manual-provisioning-images/provisioning-profile05.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile05.png "Provide the Provisioning Profile with an identifiable a name")](manual-provisioning-images/provisioning-profile05.png#lightbox)
 8. **다운로드**를 눌러서 Mac에 프로비전 프로필을 다운로드합니다.
 
-    [![](manual-provisioning-images/provisioning-profile06.png "프로비전 프로필 다운로드")](manual-provisioning-images/provisioning-profile06.png#lightbox)
+    [![](manual-provisioning-images/provisioning-profile06.png "Download the provisioning profile")](manual-provisioning-images/provisioning-profile06.png#lightbox)
 9. 파일을 두 번 클릭하여 Xcode에 프로비전 프로필을 설치합니다. 여는 것을 제외하고 Xcode에는 프로필이 설치되었다는 시각적인 단서가 표시되지 않을 수 있습니다. 이것은 **Xcode > 기본 설정 > 계정**으로 이동하여 확인할 수 있습니다. Apple ID를 선택하고 **자세히 보기...** 를 클릭합니다. 아래 그림과 같이 새 프로비전 프로필이 나열됩니다.
 
-      [![](manual-provisioning-images/provisioning-profile07.png "Xcode에서 프로필 보기")](manual-provisioning-images/provisioning-profile07.png#lightbox)
+      [![](manual-provisioning-images/provisioning-profile07.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 프로비전 프로필 만들기가 완료되면 Mac용 Visual Studio 및 Visual Studio에서 모든 개발 인증서를 사용할 수 있도록 Xcode를 새로 고쳐야 할 수도 있습니다.
 
@@ -204,7 +204,7 @@ Apple Developer 포털에서 만든 인증서 및 프로비전 프로필은 Xcod
 
 Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 프로필이 보이고 사용할 준비가 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 > [!IMPORTANT]
 > Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Mac용 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
@@ -230,7 +230,7 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 
 이 시점에서 프로비전은 완료되고, 디바이스에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 > [!IMPORTANT]
 > 시작하기 전에 **Info.plist**에서 **수동 프로비저닝**을 선택해야 합니다.
@@ -238,11 +238,11 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 1. 디바이스를 Mac에 연결합니다.
 2. 프로젝트의 **Info.plist**에서 번들 식별자가 앱 ID와 일치하도록 합니다(앱 ID가 와일드카드인 경우 제외).
 
-   ![](manual-provisioning-images/deploydevice01xs.png "식별자 입력")
+   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
 
 3. 프로젝트를 마우스 오른쪽 단추로 클릭하여 프로젝트 옵션 대화 상자를 표시하고 **빌드 > iOS 번들 서명**으로 이동합니다. **서명 ID** 및 **프로비전 프로필** 옆에 있는 드롭다운 목록에서 Mac용 Visual Studio에 올바른 프로필이 표시되는지 확인하고 특정 ID와 프로필을 선택합니다.
 
-   ![](manual-provisioning-images/deploydevice02xs.png "특정 ID와 프로필 선택")
+   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
 
    **자동**으로 설정되어 있는 경우 2단계에서 설정한 번들 ID를 기반으로 Mac용 Visual Studio에서 ID와 프로필이 선택됩니다.
 
@@ -257,7 +257,7 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 1. 디바이스를 Mac 빌드 호스트에 플러그 인합니다.
 2. 프로젝트의 **Info.plist**에서 번들 식별자가 앱 ID와 일치하도록 합니다.
 
-   ![](manual-provisioning-images/servicevs01.png "식별자 입력")
+   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
 
 3. 프로젝트를 마우스 오른쪽 단추로 클릭하여 프로젝트 옵션 대화 상자를 표시하고 **빌드 > iOS 번들 서명**으로 이동합니다. **서명 ID** 및 **프로비전 프로필** 옆에 있는 드롭다운 목록에서 Visual Studio에 올바른 프로필이 표시되는지 확인하고 특정 ID와 프로필을 선택합니다.
 

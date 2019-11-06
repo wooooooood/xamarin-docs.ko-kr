@@ -6,21 +6,21 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: d72e6230-c9ee-4bee-90ec-877d256821aa
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: d58a18a1957fa7515e6ad260eff95f5a33e64c1e
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c89a3616bfa239ba919ae9750082bcef48c9f890
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291143"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023366"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Hello, iOS 멀티스크린 – 빠른 시작
 
 연습의 이 부분에서는 앱으로 호출된 전화번호의 기록을 표시하는 두 번째 화면을 Phoneword 애플리케이션에 추가합니다. 다음 스크린샷에 표시된 것처럼 최종 애플리케이션에 호출 기록을 표시하는 두 번째 화면이 포함됩니다.
 
-[![](hello-ios-multiscreen-quickstart-images/00.png "이 스크린샷에 표시된 것처럼 최종 애플리케이션에 호출 기록을 표시하는 두 번째 화면이 포함됩니다.")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
+[![](hello-ios-multiscreen-quickstart-images/00.png "The final application will have a second screen that displays the call history, as illustrated by this screenshot")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
 [함께 제공되는 심층 분석](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)은 빌드하였던 애플리케이션을 검토하고, 진행하면서 나오는 아키텍처, 탐색 및 다른 새 iOS 개념에 대해 논의합니다.
 
@@ -38,56 +38,56 @@ ms.locfileid: "70291143"
 
 2. **Solution Pad**에서 **Main.storyboard** 파일을 엽니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/02new.png "iOS 디자이너에 있는 Main.storyboard")
+    ![](hello-ios-multiscreen-quickstart-images/02new.png "The Main.storyboard in the iOS Designer")
 
 3. **탐색 컨트롤러**를 **도구 상자**에서 디자인 화면으로 끌어 옵니다(디자인 화면에서 이러한 모든 내용에 맞게 축소해야 할 수 있습니다!).
 
-    ![](hello-ios-multiscreen-quickstart-images/03new.png "탐색 컨트롤러를 도구 상자에서 디자인 화면으로 끌어 오기")
+    ![](hello-ios-multiscreen-quickstart-images/03new.png "Drag a navigation controller from the Toolbox onto the design surface")
 
 4. **원본 없는 segue**(단일 보기 컨트롤러의 왼쪽에 있는 회색 화살표)를 **탐색 컨트롤러**로 끌어와서 애플리케이션의 시작점을 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/04new.png "원본 없는 Segue를 탐색 컨트롤러로 끌어와서 애플리케이션의 시작점 변경")
+    ![](hello-ios-multiscreen-quickstart-images/04new.png "Drag the Sourceless Segue to the navigation controller to change the starting point of the application")
 
 5. 아래쪽 표시줄을 클릭하여 기존 **루트 보기 컨트롤러**를 선택하고, **삭제**를 눌러 디자인 화면에서 제거합니다.
 그런 다음, **Phoneword** 장면을 **탐색 컨트롤러** 옆으로 이동합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/05new.png "Phoneword 장면을 탐색 컨트롤러 옆으로 이동")
+    ![](hello-ios-multiscreen-quickstart-images/05new.png "Move the Phoneword scene next to the navigation controller")
 
 6. **ViewController**를 탐색 컨트롤러의 **루트 보기 컨트롤러**로 설정합니다. **Ctrl** 키를 누르고 **탐색 컨트롤러** 내부를 클릭합니다. 파란색 선이 표시됩니다. 그런 다음, **Ctrl** 키를 누른 상태로 **탐색 컨트롤러**에서 **Phoneword** 장면으로 끌어서 놓습니다. 이는 _Ctrl 끌기_라고 합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/06.png "탐색 컨트롤러에서 Phoneword 장면으로 끌어서 놓습니다.")
+    ![](hello-ios-multiscreen-quickstart-images/06.png "Drag from the navigation controller to the Phoneword scene and release")
 
 7. 팝오버에서 관계를 **루트**로 설정합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/07new.png "루트로 관계 설정")
+    ![](hello-ios-multiscreen-quickstart-images/07new.png "Setting the relationship to Root")
 
     **ViewController**는 이제 **탐색 컨트롤러의 루트 보기 컨트롤러입니다.**
 
-    ![](hello-ios-multiscreen-quickstart-images/08.png "ViewController는 이제 탐색 컨트롤러의 루트 보기 컨트롤러입니다.")
+    ![](hello-ios-multiscreen-quickstart-images/08.png "The ViewController is now the navigation controllers Root view controller")
 
 8. **Phoneword** 화면의 **제목** 표시줄을 두 번 클릭하고 **제목**을 **Phoneword**로 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/09.png "제목을 'Phoneword'로 변경합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/09.png "Change the Title to 'Phoneword'")
 
 9. **도구 상자**에서 **단추**를 끌어서 **호출 단추** 아래에 배치합니다. 핸들을 끌어 새 **단추**가 **호출 단추**와 동일한 너비가 되도록 합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/10new.png "새 단추가 호출 단추와 동일한 너비가 되도록 합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/10new.png "Make the new Button the same width as the Call Button")
 
 10. **Properties Pad**에서 단추 **이름**을 **CallHistoryButton**으로 변경하고 **제목**을 **통화 기록**으로 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/11new.png "단추의 이름을 CallHistoryButton으로 변경하고 제목을 통화 기록으로 변경합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/11new.png "Change the Name of the Button to CallHistoryButton and change the Title to Call History")
 
 11. **통화 기록** 화면을 만듭니다. **도구 상자**에서 **테이블 보기 컨트롤러**를 디자인 화면으로 끕니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/12new.png "테이블 보기 컨트롤러를 디자인 화면으로 끕니다.")
+    ![](hello-ios-multiscreen-quickstart-images/12new.png "Drag a table view controller onto the design surface")
 
 12. 그런 다음, 장면의 아래쪽에 있는 검은색 표시줄을 클릭하여 **테이블 보기 컨트롤러**를 선택합니다. **Properties Pad**에서 **테이블 보기 컨트롤러**의 클래스를 `CallHistoryController`로 변경하고 **Enter** 키를 누릅니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/13new.png "테이블 보기 컨트롤러 클래스를 CallHistoryController로 변경")
+    ![](hello-ios-multiscreen-quickstart-images/13new.png "Change the table view controllers class to CallHistoryController")
 
     iOS 디자이너는 `CallHistoryController`라는 사용자 지정 백업 클래스를 생성하여 이 화면의 콘텐츠 보기 계층 구조를 관리합니다. **CallHistoryController.cs** 파일은 **Solution Pad**에 표시됩니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/14new.png "Solution Pad의 CallHistoryController.cs 파일")
+    ![](hello-ios-multiscreen-quickstart-images/14new.png "The CallHistoryController.cs file in the Solution Pad")
 
 13. **CallHistoryController.cs** 파일을 두 번 클릭하여 열고 내용을 다음 코드로 바꿉니다.
     
@@ -144,17 +144,17 @@ ms.locfileid: "70291143"
 14. **Phoneword** 장면과 **통화 기록** 장면 사이에 _segue_(전환)를 만듭니다.
   **Phoneword 장면**에서 **통화 기록 단추**를 선택하고 **단추**에서 **통화 기록** 장면으로 Ctrl 끌기합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/15.png "단추에서 통화 기록 장면으로 Ctrl 끌기")
+    ![](hello-ios-multiscreen-quickstart-images/15.png "Ctrl-drag from the Button to the Call History scene")
 
     **작업 Segue** 팝오버에서 **표시**를 선택합니다.
 
     iOS 디자이너는 두 장면 사이에 Segue를 추가할 예정입니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/17new.png "두 장면 사이의 Segue")
+    ![](hello-ios-multiscreen-quickstart-images/17new.png "The Segue between the two scenes")
 
 15. 장면 아래쪽의 검은색 표시줄을 선택하고 **Properties Pad**에서 **보기 컨트롤러 제목**을 **통화 기록**으로 변경하여 **제목**을 **테이블 보기 컨트롤러**에 추가합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/18new.png "Properties Pad에서 보기 컨트롤러 제목을 통화 기록으로 변경")
+    ![](hello-ios-multiscreen-quickstart-images/18new.png "Change the view controller title to Call History in the Properties Pad")
 
 16. 애플리케이션이 실행될 때 **통화 기록 단추**는 **통화 기록** 화면을 열지만, 테이블 보기는 추적을 유지하고 전화번호를 표시할 코드가 없기 때문에 비어 있게 됩니다.
 
@@ -264,7 +264,7 @@ ms.locfileid: "70291143"
 
 18. **시작** 단추를 눌러 **iOS 시뮬레이터** 내에서 애플리케이션을 시작합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/19.png "시작 단추를 눌러 iOS 시뮬레이터 내에서 애플리케이션을 시작합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/19.png "Press the Start button to launch the application inside the iOS Simulator")
 
 첫 번째 멀티스크린 Xamarin.iOS 애플리케이션을 완성한 것을 축하합니다!
 
@@ -279,54 +279,54 @@ ms.locfileid: "70291143"
 
 2. 사용자 인터페이스를 편집하여 시작합니다. **다른 이름으로 보기**가 _iPhone 6_으로 설정되었는지 확인하여 **솔루션 탐색기**에서 **Main.storyboard** 파일을 엽니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image1.png "iOS 디자이너에 있는 Main.storyboard")
+    ![](hello-ios-multiscreen-quickstart-images/image1.png "The Main.storyboard in the iOS Designer")
 
 3. **탐색 컨트롤러**를 **도구 상자**에서 디자인 화면으로 끌어 옵니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image2.png "탐색 컨트롤러를 도구 상자에서 디자인 화면으로 끌어 오기")
+    ![](hello-ios-multiscreen-quickstart-images/image2.png "Drag a navigation controller from the Toolbox onto the design surface")
 
 4. **원본 없는 Segue**(**Phoneword** 장면의 왼쪽에 있는 회색 화살표)를 **Phoneword** 장면에서 **탐색 컨트롤러**로 끌어와서 애플리케이션의 시작점을 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image3.png "원본 없는 Segue를 탐색 컨트롤러로 끌어와서 애플리케이션의 시작점 변경")
+    ![](hello-ios-multiscreen-quickstart-images/image3.png "Drag the Sourceless Segue to the navigation controller to change the starting point of the application")
 
 5. 검은색 표시줄을 클릭하여 **루트 보기 컨트롤러**를 선택하고 **삭제**를 눌러 디자인 화면에서 제거합니다.
   그런 다음, **Phoneword** 장면을 **탐색 컨트롤러** 옆으로 이동합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image4.png "Phoneword 장면을 탐색 컨트롤러 옆으로 이동")
+    ![](hello-ios-multiscreen-quickstart-images/image4.png "Move the Phoneword scene next to the navigation controller")
 
 6. **ViewController**를 탐색 컨트롤러의 루트 보기 컨트롤러로 설정합니다. **Ctrl** 키를 누르고 **탐색 컨트롤러** 내부를 클릭합니다. 파란색 선이 표시됩니다. 그런 다음, **Ctrl** 키를 누른 상태로 **탐색 컨트롤러**에서 **Phoneword** 장면으로 끌어서 놓습니다. 이는 _Ctrl 끌기_라고 합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image5.png "탐색 컨트롤러에서 Phoneword 장면으로 끌어서 놓습니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image5.png "Drag from the navigation controller to the Phoneword scene and release")
 
 7. 팝오버에서 관계를 **루트**로 설정합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image6.png "루트로 관계를 설정합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image6.png "Set the relationship to Root")
 
     **ViewController**는 이제 **탐색 컨트롤러의 루트 보기 컨트롤러입니다.**
 
 8. **Phoneword** 화면의 **제목** 표시줄을 두 번 클릭하고 **제목**을 **Phoneword**로 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image7.png "제목을 Phoneword로 변경합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image7.png "Change the Title to Phoneword")
 
 9. **도구 상자**에서 **단추**를 끌어서 **호출 단추** 아래에 배치합니다. 핸들을 끌어 새 **단추**가 **호출 단추**와 동일한 너비가 되도록 합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image8.png "새 단추가 호출 단추와 동일한 너비가 되도록 합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image8.png "Make the new Button the same width as the Call Button")
 
 10. **속성 탐색기**에서 **단추**의 **이름**을 `CallHistoryButton`으로 변경하고 **제목**을 **통화 기록**으로 변경합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image9.png "단추의 이름을 'CallHistoryButton'으로 변경하고 제목을 '통화 기록'으로 변경합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image9.png "Change the Name of the Button to 'CallHistoryButton' and the Title to 'Call History'")
 
 11. **통화 기록** 화면을 만듭니다. **도구 상자**에서 **테이블 보기 컨트롤러**를 디자인 화면으로 끕니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image10.png "테이블 보기 컨트롤러를 디자인 화면으로 끕니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image10.png "Drag a table view controller onto the design surface")
 
 12. 장면의 아래쪽에 있는 검은색 표시줄을 클릭하여 **테이블 보기 컨트롤러**를 선택합니다. **속성 탐색기**에서 **테이블 보기 컨트롤러**의 클래스를 `CallHistoryController`로 변경하고 **Enter** 키를 누릅니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image11.png "테이블 보기 컨트롤러 클래스를 CallHistoryController로 변경")
+    ![](hello-ios-multiscreen-quickstart-images/image11.png "Change the table view controllers class to CallHistoryController")
 
     iOS 디자이너는 `CallHistoryController`라는 사용자 지정 백업 클래스를 생성하여 이 화면의 콘텐츠 보기 계층 구조를 관리합니다. **CallHistoryController.cs** 파일은 **솔루션 탐색기**에 표시됩니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image12.png "솔루션 탐색기의 CallHistoryController.cs 파일")
+    ![](hello-ios-multiscreen-quickstart-images/image12.png "The CallHistoryController.cs file in the Solution Explorer")
 
 13. **CallHistoryController.cs** 파일을 두 번 클릭하여 열고 내용을 다음 코드로 바꿉니다.
 
@@ -384,19 +384,19 @@ ms.locfileid: "70291143"
 14. **Phoneword** 장면과 **통화 기록** 장면 사이에 _segue_(전환)를 만듭니다.
   **Phoneword 장면**에서 **통화 기록 단추**를 선택하고 **단추**에서 **통화 기록** 장면으로 **Ctrl 끌기**합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image13.png "단추에서 통화 기록 장면으로 Ctrl 끌기")
+    ![](hello-ios-multiscreen-quickstart-images/image13.png "Ctrl-drag from the Button to the Call History scene")
 
     **작업 Segue** 팝오버에서 **표시**를 선택합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image14.png "Segue 형식으로 표시를 선택합니다.")
+    ![](hello-ios-multiscreen-quickstart-images/image14.png "Select Show as the segue type")
 
     iOS 디자이너는 두 장면 사이에 segue를 추가할 예정입니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image15.png "두 장면 사이의 Segue")
+    ![](hello-ios-multiscreen-quickstart-images/image15.png "The Segue between the two scenes")
 
 15. 장면 아래쪽의 검은색 표시줄을 선택하고 **속성 컨트롤러**에서 **보기 컨트롤러 > 제목**을 **통화 기록**으로 변경하여 **제목**을 **테이블 보기 컨트롤러**에 추가합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/image16.png "보기 컨트롤러 제목을 통화 기록으로 변경")
+    ![](hello-ios-multiscreen-quickstart-images/image16.png "Change the view controller Title to Call History")
 
 16. 애플리케이션이 실행될 때 **통화 기록 단추**는 **통화 기록** 화면을 열지만, 테이블 보기는 추적을 유지하고 전화번호를 표시할 코드가 없기 때문에 비어 있게 됩니다.
 
@@ -507,7 +507,7 @@ ms.locfileid: "70291143"
 
 18. **시작** 단추를 눌러 **iOS 시뮬레이터** 내에서 애플리케이션을 시작합니다.
 
-    ![](hello-ios-multiscreen-quickstart-images/19.png "샘플 앱의 첫 번째 화면")
+    ![](hello-ios-multiscreen-quickstart-images/19.png "The first screen of the sample app")
 
 첫 번째 멀티스크린 Xamarin.iOS 애플리케이션을 완성한 것을 축하합니다!
 

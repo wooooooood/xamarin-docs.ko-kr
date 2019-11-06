@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 애플리케이션을 단위 테스
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 44ced93605ff595fe2fd7f09f88948e5b0e1914c
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70282450"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028453"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Xamarin.iOS 앱 단위 테스트
 
@@ -23,11 +23,11 @@ Xamarin.iOS를 사용한 단위 테스트는 Touch.Unit 프레임워크를 사�
 
 프로젝트에 대한 단위 테스트 프레임워크를 설정하려면 **iOS 단위 테스트 프로젝트** 유형의 프로젝트를 솔루션에 추가하기만 하면 됩니다. 이렇게 하려면 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트 추가**를 차례로 선택합니다. 목록에서 **iOS > 테스트 > 통합 API > iOS 단위 테스트 프로젝트**(C# 또는 F# 중 하나를 선택할 수 있음)를 차례로 선택합니다.
 
-![](touch.unit-images/00.png "C# 또는 F# 선택")
+![](touch.unit-images/00.png "Choose either C# or F#")
 
 위에서는 기본 실행기 프로그램을 포함하고 새 MonoTouch.NUnitLite 어셈블리를 참조하는 기본 프로젝트를 만듭니다. 이 프로젝트는 다음과 같습니다.
 
-![](touch.unit-images/01.png "솔루션 탐색기의 프로젝트")
+![](touch.unit-images/01.png "The project in the Solution Explorer")
 
 `AppDelegate.cs` 클래스에는 테스트 실행기가 포함되어 있으며 다음과 같습니다.
 
@@ -105,10 +105,10 @@ namespace Fixtures {
 
 테스트 실행기를 사용하면 등록된 테스트를 확인하고 실행할 수 있는 테스트를 개별적으로 선택할 수 있습니다.
 
-[![](touch.unit-images/02-sml.png "등록된 테스트 목록")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "개별 텍스트")](touch.unit-images/03.png#lightbox) 
+[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/04-sml.png "실행 결과")](touch.unit-images/04.png#lightbox)
+[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
 
 중첩된 뷰에서 테스트 픽스쳐를 선택하여 개별 테스트 픽스쳐를 실행하거나, "모든 항목 실행"으로 모든 테스트를 실행할 수 있습니다. 기본 테스트를 실행하는 경우 통과한 테스트, 실패한 테스트 및 무시한 테스트를 하나씩 포함하도록 되어 있습니다. 보고서는 다음과 같이 표시되며, 실패한 테스트를 직접 드릴다운하여 실패에 대한 자세한 정보를 확인할 수 있습니다.
 
@@ -118,7 +118,7 @@ namespace Fixtures {
 
 ## <a name="writing-new-tests"></a>새 테스트 작성
 
-NUnitLite는 [Touch.Unit](https://github.com/xamarin/Touch.Unit) 프로젝트라고 하는 NUnit의 수정된 버전입니다. [NUnit](http://nunit.com/)의 아이디어를 기반으로 하고 해당 기능의 일부를 제공하는 간단한 .NET 테스트 프레임워크입니다.
+NUnitLite는 [Touch.Unit](https://github.com/xamarin/Touch.Unit) 프로젝트라고 하는 NUnit의 수정된 버전입니다. [NUnit](https://nunit.com/)의 아이디어를 기반으로 하고 해당 기능의 일부를 제공하는 간단한 .NET 테스트 프레임워크입니다.
 최소한의 리소스를 사용하며, 포함 및 모바일 개발에 사용되는 플랫폼과 같은 리소스 제한 플랫폼에서 실행됩니다. NUnitLite API는 Xamarin.iOS에서 사용할 수 있습니다. 단위 테스트 템플릿에서 제공하는 기본 구조를 사용하면 주 진입점은 [Assert 클래스](xref:NUnit.Framework.Assert) 메서드가 됩니다.
 
 Assert 클래스 메서드 외에도 단위 테스트 기능은 NUnitLite의 일부인 다음 네임스페이스에서 분할됩니다.

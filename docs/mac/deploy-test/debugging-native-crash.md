@@ -4,15 +4,15 @@ description: 이 문서에서는 Objective-C 런타임에서 발생하는 예외
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: 7340df1d65768363f39c6f080a5d50e2ac250400
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70769880"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021665"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Xamarin.Mac 앱에서 네이티브 크래시 디버깅
 
@@ -183,7 +183,7 @@ new System.Threading.Thread (() =>
 
 그 다음 단계는 향후 릴리스에서 바인딩을 수정할 수 있도록 Xamarin에 문제를 보고하는 것입니다. 비즈니스 또는 엔터프라이즈 라이선스 소유자인 경우 
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 그렇지 않으면 다음 단계에 따라 기존 문제를 검색합니다.
 

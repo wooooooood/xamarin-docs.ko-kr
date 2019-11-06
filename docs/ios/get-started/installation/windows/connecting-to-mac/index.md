@@ -4,15 +4,15 @@ description: 이 가이드에서는 Mac에 페어링을 사용하여 Visual Stud
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 9296fa60a454fe83f9ec9b383067576b67e5f037
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198550"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022491"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
@@ -58,7 +58,7 @@ Mac 빌드 호스트를 설정하려면 먼저 원격 로그인을 사용하도�
 
 2. **서비스** 목록에서 **원격 로그인**을 선택합니다.
 
-    ![원격 로그인을 사용하도록 설정](images/sharing.png "원격 로그인을 사용하도록 설정")
+    ![원격 로그인 사용](images/sharing.png "원격 로그인 사용")
 
     **모든 사용자**에 대한 액세스를 허용하도록 구성되어 있거나 Mac 사용자 이름 또는 그룹이 허용된 사용자 목록에 포함되어 있는지 확인합니다.
 
@@ -92,7 +92,7 @@ Mac 빌드 호스트를 설정하려면 먼저 원격 로그인을 사용하도�
 
     - 특정 Mac에 처음 연결하면 해당 컴퓨터에 대한 사용자 이름과 암호를 입력하라는 메시지가 표시됩니다.
 
-      ![Mac에 대한 사용자 이름 및 암호 입력](images/auth.png "Mac에 대한 사용자 이름 및 암호 입력")
+      ![Mac의 사용자 이름 및 암호 입력](images/auth.png "Mac의 사용자 이름 및 암호 입력")
 
       > [!TIP]
       > 로그인하는 경우 전체 이름 대신 시스템 사용자 이름을 사용하세요.
@@ -130,7 +130,7 @@ Mac을 페어링할 수 없는 경우 [수동으로 Mac 추가](#manually-add-a-
 
     - Mac에서 **시스템 기본 설정 > 공유> 원격 로그인**을 차례로 엽니다.
 
-      [![시스템 기본 설정 > 공유에 있는 Mac의 IP 주소](images/sharing-ipaddress.png "시스템 기본 설정 > 공유에 있는 Mac의 IP 주소")](images/sharing.png#lightbox)
+      [![시스템 기본 설정 > 공유의 Mac IP 주소](images/sharing-ipaddress.png "시스템 기본 설정 > 공유의 Mac IP 주소")](images/sharing.png#lightbox)
 
     - 또는 명령줄을 사용합니다. 터미널에서 다음 명령을 실행합니다.
 
@@ -178,7 +178,7 @@ Mac에 페어링은 Mono가 설치되어 있는지 확인합니다. 설치되어
 
 ||설치 확인|다운로드|설치
 |---|---|---|---|
-|Mono|[![모노 설치 누락](images/mono-missing.png "모노 설치 누락")](images/mono-missing-large.png#lightbox)|[![모노 다운로드](images/mono-downloading.png "모노 다운로드")](images/mono-downloading-large.png#lightbox)|[![모노 설치](images/mono-installing.png "모노 설치")](images/mono-installing-large.png#lightbox)|
+|Mono|[![Mono 설치 누락](images/mono-missing.png "Mono 설치 누락")](images/mono-missing-large.png#lightbox)|[![Mono 다운로드](images/mono-downloading.png "Mono 다운로드")](images/mono-downloading-large.png#lightbox)|[![Mono 설치](images/mono-installing.png "Mono 설치")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -194,7 +194,7 @@ Mac에 페어링은 Windows 컴퓨터에 설치된 버전과 일치하도록 Mac
 
 ||설치 확인|다운로드|설치
 |---|---|---|---|
-|Xamarin.iOS|[![Xamarin.iOS 설치 누락](images/xamios-missing.png "Xamarin.iOS 설치 누락")](images/xamios-missing-large.png#lightbox)|[![Xamarin.iOS 다운로드](images/xamios-downloading.png "Xamarin.iOS 다운로드")](images/xamios-downloading-large.png#lightbox)|[![Xamarin.iOS 설치](images/xamios-installing.png "Xamarin.iOS 설치")](images/xamios-installing-large.png#lightbox)|
+|Xamarin.iOS|[![Xamarin.iOS 설치 누락](images/xamios-missing.png "Xamarin.iOS 설치 누락")](images/xamios-missing-large.png#lightbox)|[![Xamarin.iOS 다운로드](images/xamios-downloading.png "Xamarin.iOS 다운로드")](images/xamios-downloading-large.png#lightbox)|[![Xamarin.iOS 설치](images/xamios-installing.png "Xmarin.iOS 설치")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Xcode 도구 및 라이선스
 

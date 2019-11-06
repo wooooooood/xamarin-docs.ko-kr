@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.Mac 애플리케이션의 아이콘에 
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a5f8f6f2feda1ab27c874d8281483e9e26f0855
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770147"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73021712"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 애플리케이션 아이콘
 
@@ -100,7 +100,7 @@ Xamarin.Mac 앱의 아이콘을 디자인하기 전에 Apple의 [OS X 휴먼 인
 
 앱이 실행되면 새 아이콘이 도크에 표시됩니다.
 
-![macOS dock의 앱 아이콘 예제](app-icon-images/icon04.png "macOS dock의 앱 아이콘 예제")
+![macOS 도크에 표시되는 앱 아이콘의 예](app-icon-images/icon04.png "macOS 도크에 표시되는 앱 아이콘의 예")
 
 ## <a name="summary"></a>요약
 

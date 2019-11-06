@@ -4,15 +4,15 @@ description: 이 문서에서는 Mac App Store 외부에 배포될 수 있도록
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 925a110025092ce6efa4e4d5f8e80b640b7f3dd1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: eb8df9f7088c4954ed48ce8c7c145334004207cd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770095"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73017941"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>개발자 ID를 사용하여 Xamarin.Mac 앱 서명
 
@@ -24,23 +24,23 @@ Apple 웹 사이트에서 [개발자 ID 및 게이트키퍼](https://developer.a
 
 사용자에게 직접 배포할(Mac 앱 스토어를 통하지 않고) 앱을 빌드하려면 **개발자 ID**를 사용하도록 **서명 설정**을 지정합니다. **릴리스** 구성을 편집합니다.
 
- [![](signing-images/config02.png "Mac 서명 옵션")](signing-images/config02.png#lightbox)
+ [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
 
 ## <a name="build"></a>빌드
 
 빌드하기 전에, 올바른 구성을 선택하고 **Mac 빌드** 설정에서 설치 패키지를 만듭니다.
 
-[![](signing-images/config03.png "빌드 옵션")](signing-images/config03.png#lightbox)
+[![](signing-images/config03.png "The build options")](signing-images/config03.png#lightbox)
 
 개발자가 앱을 빌드하는 동안 두 인증서를 사용하라는 메시지가 표시됩니다.
 
- [![](signing-images/image57.png "키 집합 액세스 허용")](signing-images/image57.png#lightbox)
+ [![](signing-images/image57.png "Allowing keychain access")](signing-images/image57.png#lightbox)
 
- [![](signing-images/image58.png "키 집합 액세스 허용")](signing-images/image58.png#lightbox)
+ [![](signing-images/image58.png "Allowing keychain access")](signing-images/image58.png#lightbox)
 
 애플리케이션을 빌드한 후 개발자는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **상위 폴더 열기**를 선택하여 패키지 파일을 찾습니다(`bin/Release` 디렉터리에서). 이 패키지 파일에는 애플리케이션 설치 관리자가 포함되어 있으므로 아무 macOS 사용자에게 설치용으로 배포할 수 있습니다.
 
- [![](signing-images/image59.png "찾기에서 앱 패키지 선택")](signing-images/image59.png#lightbox)
+ [![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

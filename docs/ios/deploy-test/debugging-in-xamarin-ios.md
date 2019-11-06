@@ -4,21 +4,21 @@ description: 이 문서에서는 Mac 또는 Visual Studio 2019용 Visual Studio�
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a1a110bf1ff021c3280e19dea777180d71dba1a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763354"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026514"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
 _Mac용 Visual Studio 또는 Visual Studio에서 기본 제공 디버거를 사용하여 Xamarin.iOS 애플리케이션을 디버그할 수 있습니다._
 
-C# 및 기타 관리되는 언어 코드를 디버그하는 경우 Mac용 Visual Studio의 네이티브 디버깅 지원을 사용하고, Xamarin.iOS 프로젝트와 연결할 수 있는 C, C++ 또는 Objective C 코드를 디버그해야 하는 경우 [LLDB](http://lldb.llvm.org/tutorial.html)를 사용합니다.
+C# 및 기타 관리되는 언어 코드를 디버그하는 경우 Mac용 Visual Studio의 네이티브 디버깅 지원을 사용하고, Xamarin.iOS 프로젝트와 연결할 수 있는 C, C++ 또는 Objective C 코드를 디버그해야 하는 경우 [LLDB](https://lldb.llvm.org/tutorial.html)를 사용합니다.
 
 > [!NOTE]
 > 디버그 모드에서 애플리케이션을 컴파일할 때 Xamarin.iOS는 모든 코드 줄을 계측해야 하므로 더 느리고 더 큰 애플리케이션을 생성합니다. 먼저 릴리스 빌드를 수행한 후에 릴리스해야 합니다.
@@ -31,27 +31,27 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com
 
 애플리케이션 디버깅을 시작할 준비가 되면 첫 번째 단계는 [애플리케이션에 중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)하는 것입니다. 이 작업은 중단하려는 코드 번호 옆에 있는 편집기의 여백 영역에서 클릭하여 수행됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging1.png "중단점 설정")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging1.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging1a.png "중단점 설정")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging1a.png "Setting Breakpoints")](debugging-in-xamarin-ios-images/debugging1a.png#lightbox)
 
 -----
 
 **중단점 패드**로 이동하여 코드에 설정된 모든 중단점을 볼 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/image0a.png "중단점 패드")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  중단점 패드가 자동으로 표시되지 않으면 _보기 > 디버그 창 > 중단점_을 선택하여 중단점 패드를 표시할 수 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/image0.png "중단점 패드")](debugging-in-xamarin-ios-images/image0.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  중단점 패드가 자동으로 표시되지 않으면 _디버그 > 창 > 중단점_을 선택하여 중단점 패드를 표시할 수 있습니다.
 
@@ -59,28 +59,28 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com
 
 애플리케이션 디버깅을 시작하기 전에 중단점, 데이터 시각화 도우미 사용, 호출 스택 보기와 같은 디버깅을 지원하는 유용한 도구 모음이 포함되어 있으므로 구성이 **디버그**로 설정되어 있는지 항상 확인해야 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging7.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
-[![](debugging-in-xamarin-ios-images/debugging7a.png "물리적 디바이스에서 디버깅")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7a.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7a.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging7c.png "시뮬레이터에서 디버깅")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
-[![](debugging-in-xamarin-ios-images/debugging7d.png "물리적 디바이스에서 디버깅")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7c.png "Debugging on simulator")](debugging-in-xamarin-ios-images/debugging7c.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7d.png "Debugging on a physical device")](debugging-in-xamarin-ios-images/debugging7d.png#lightbox)
 
 -----
 
 ## <a name="start-debugging"></a>디버깅 시작
 디버깅을 시작하려면 IDE에서 대상 디바이스 또는 유사한 디바이스를 선택합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](debugging-in-xamarin-ios-images/debugging7b.png "대상 디바이스 선택")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7b.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7b.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](debugging-in-xamarin-ios-images/debugging7e.png "대상 디바이스 선택")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging7e.png "Select the target device")](debugging-in-xamarin-ios-images/debugging7e.png#lightbox)
 
 -----
 
@@ -88,41 +88,41 @@ Xamarin.iOS 디버거는 [Mono 소프트 디버거](https://www.mono-project.com
 
 중단점을 적중하면 코드가 노란색으로 강조 표시됩니다.
 
-[![](debugging-in-xamarin-ios-images/image2.png "노란색으로 강조 표시된 코드")](debugging-in-xamarin-ios-images/image2.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image2.png "The code will be highlighted yellow")](debugging-in-xamarin-ios-images/image2.png#lightbox)
 
 개체의 값을 검사하는 것과 같은 디버깅 도구를 현재 시점에서 사용하여 코드에서 발생하는 상황에 대한 자세한 정보를 얻을 수 있습니다.
 
-[![](debugging-in-xamarin-ios-images/image3.png "색상 값 표시")](debugging-in-xamarin-ios-images/image3.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image3.png "Displaying a color value")](debugging-in-xamarin-ios-images/image3.png#lightbox)
 
 ## <a name="conditional-breakpoints"></a>조건부 중단점
 
 중단점이 발생해야 하는 상황을 결정하는 규칙을 설정할 수도 있습니다. 이를 *조건부 중단점* 추가라고 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 조건부 중단점을 설정하려면 **중단점 속성 창**에 액세스합니다. 다음 두 가지 방법으로 액세스할 수 있습니다.
 
 - 새 조건부 중단점을 추가하려면 편집기 여백에서 중단점을 설정하려는 코드의 줄 번호 왼쪽을 마우스 오른쪽 단추로 클릭하고 새 중단점을 선택합니다.
 
-  [![](debugging-in-xamarin-ios-images/image4.png "새 중단점 선택")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "Select New Breakpoint")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - 기존 중단점에 조건을 추가하려면, 중단점을 마우스 오른쪽 단추로 클릭하고 **중단점 속성**을 선택하거나 **중단점 패드**에서 아래 그림과 같은 속성 단추를 선택합니다.
 
-  [![](debugging-in-xamarin-ios-images/image5.png "중단점 패드")](debugging-in-xamarin-ios-images/image5.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image5.png "The Breakpoints Pad")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 그런 다음, 중단점이 발생되게 하는 조건을 입력할 수 있습니다.
 
-[![](debugging-in-xamarin-ios-images/image6.png "발생할 중단점의 조건 입력")](debugging-in-xamarin-ios-images/image6.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image6.png "Enter the condition for the breakpoint to occur")](debugging-in-xamarin-ios-images/image6.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 조건부 중단점을 설정하려면 먼저 [일반 중단점을 설정](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint)합니다. 중단점을 마우스 오른쪽 단추로 클릭하여 팝업 메뉴를 표시합니다.
 
- [![](debugging-in-xamarin-ios-images/image4vs.png "중단점 팝업 메뉴")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
+ [![](debugging-in-xamarin-ios-images/image4vs.png "The breakpoint context menu")](debugging-in-xamarin-ios-images/image4vs.png#lightbox)
 
 **조건...** 을 선택하여 _중단점 설정_ 메뉴를 표시합니다.
 
- [![](debugging-in-xamarin-ios-images/image6vs.png "중단점 설정 메뉴")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
+ [![](debugging-in-xamarin-ios-images/image6vs.png "The Breakpoint Settings menu")](debugging-in-xamarin-ios-images/image6vs.png#lightbox)
 
 여기서 중단점이 발생되게 하는 조건을 입력할 수 있습니다.
 
@@ -134,11 +134,11 @@ Visual Studio에서 조건부 중단점을 설정하려면 먼저 [일반 중단
 
 중단점에 도달하면 디버그 도구를 사용하여 프로그램 실행을 제어할 수 있습니다. IDE에서 4개의 단추를 표시하여 코드를 실행하고 단계별로 실행할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio에서는 다음과 같이 표시됩니다.
 
- [![](debugging-in-xamarin-ios-images/image7.png "개발자가 프로그램 실행을 제어하는 데 사용할 수 있는 디버그 도구")](debugging-in-xamarin-ios-images/image7.png#lightbox)
+ [![](debugging-in-xamarin-ios-images/image7.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7.png#lightbox)
 
 이러한 항목은 다음과 같습니다.
 
@@ -151,7 +151,7 @@ Mac용 Visual Studio에서는 다음과 같이 표시됩니다.
 
 Visual Studio에서는 다음과 같이 표시됩니다.
 
-[![](debugging-in-xamarin-ios-images/image7vs.png "개발자가 프로그램 실행을 제어하는 데 사용할 수 있는 디버그 도구")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
+[![](debugging-in-xamarin-ios-images/image7vs.png "The Debug tools enable the developer to get control over the program’s execution")](debugging-in-xamarin-ios-images/image7vs.png#lightbox)
 
 이러한 항목은 다음과 같습니다.
 
@@ -198,7 +198,7 @@ Xamarin.iOS는 새로운 Mono 소프트 디버거를 사용합니다. 별도의 
 
 콘솔 클래스의 크래시 로그 및 출력은 iPhone 콘솔로 전송됩니다. "구성 도우미"를 사용하고 구성 도우미에서 디바이스를 선택하여 Xcode를 통해 이 콘솔에 액세스할 수 있습니다.
 
-또는 Xcode를 시작하지 않으려면 Apple의 [iPhone 구성 유틸리티](http://www.apple.com/support/iphone/enterprise/)를 사용하여 콘솔에 직접 액세스할 수 있습니다. 이 필드에서 문제를 디버그하는 경우 Windows 시스템에서 콘솔 로그에 액세스할 수 있는 기회가 추가로 있습니다.
+또는 Xcode를 시작하지 않으려면 Apple의 [iPhone 구성 유틸리티](https://www.apple.com/support/iphone/enterprise/)를 사용하여 콘솔에 직접 액세스할 수 있습니다. 이 필드에서 문제를 디버그하는 경우 Windows 시스템에서 콘솔 로그에 액세스할 수 있는 기회가 추가로 있습니다.
 
 Visual Studio 사용자의 경우 [출력] 창에서 사용할 수 있는 몇 가지 로그가 있지만, Mac으로 전환해야 더 철저하고 자세한 로그를 볼 수 있습니다.
 
@@ -210,19 +210,19 @@ Visual Studio 사용자의 경우 [출력] 창에서 사용할 수 있는 몇 �
 
 Xamarin.iOS는 Mono의 클래스 라이브러리에 대한 소스 코드와 함께 제공되며, 이 소스 코드를 사용하여 디버거에서 한 단계씩 실행함으로써 작업의 동작 방식을 확인할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 이 기능은 디버그하는 동안 더 많은 메모리를 사용하므로 기본적으로 꺼져 있습니다.
 
 이 기능을 사용하도록 설정하려면 아래 그림과 같이 _Mac용 Visual Studio > 기본 설정> 디버거_ 메뉴에서 **프로젝트 코드만 디버깅합니다. 프레임워크 코드는 한 단계씩 실행하지 마세요.** 옵션이 선택 취소되어 있는지 확인합니다.
 
-[![](debugging-in-xamarin-ios-images/debugging6.png "Mono의 클래스 라이브러리 디버깅")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 클래스 라이브러리를 디버그하려면 _디버그 > 옵션_ 메뉴에서 **내 코드만**을 사용하지 않도록 설정해야 합니다. _디버깅 > 일반_ 노드에서 **내 코드만 사용** 확인란을 선택 취소합니다.
 
-[![](debugging-in-xamarin-ios-images/debugging6vs.png "Mono의 클래스 라이브러리 디버깅")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
+[![](debugging-in-xamarin-ios-images/debugging6vs.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

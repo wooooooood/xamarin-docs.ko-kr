@@ -4,15 +4,15 @@ description: 이 문서에서는 iOS 개발에 대한 코드 서명 인증서 �
 ms.prod: xamarin
 ms.assetid: C4A2A67E-0643-4CED-B1A9-79D65054F3CA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8991ddc55069fad8c5f023f35ece0926f0f7e5b8
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 08fdcafe33e4b9b2aa6b5595c732718878be33f2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70285723"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028508"
 ---
 # <a name="fastlane-for-ios---match"></a>iOS용 fastlane – match
 
@@ -59,15 +59,15 @@ fastlane match init
 
 메시지가 표시되면 Git 리포지토리의 URL을 입력합니다.
 
- [![](match-images/fastlane-image7.png "Git 리포지토리의 URL 입력")](match-images/fastlane-image7.png#lightbox)
+ [![](match-images/fastlane-image7.png "Enter the URL of the git repo")](match-images/fastlane-image7.png#lightbox)
 
 URL은 아래 그림과 같이 github.com에서 찾아서 **Clone or Download**(복제 또는 다운로드) 단추를 클릭하여 복사할 수 있습니다.
 
-[![](match-images/fastlane-image6.png "github.com에서 복제 또는 다운로드 단추의 URL")](match-images/fastlane-image6.png#lightbox)
+[![](match-images/fastlane-image6.png "The URL under the Clone or Download button on github.com")](match-images/fastlane-image6.png#lightbox)
 
 프로젝트를 초기화하면 matchfile(match 도구에 환경 변수를 전달하도록 편집할 수 있는 텍스트 파일)이 생성됩니다. matchfile 예제는 다음과 같습니다.
 
-[![](match-images/fastlane-image8.png "matchfile 예제")](match-images/fastlane-image8.png#lightbox)
+[![](match-images/fastlane-image8.png "A matchfile example")](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -93,7 +93,7 @@ fastlane match development
 - 기본 지침이 포함된 readme
 - match version
 
-[![](match-images/fastlane-image9.png "Git 리포지토리의 프로젝트 구조")](match-images/fastlane-image9.png#lightbox)
+[![](match-images/fastlane-image9.png "The project structure in the git repo")](match-images/fastlane-image9.png#lightbox)
 
 프로비전 프로필은 `~/Library/MobileDevice/Provisioning Profiles`에 설치됩니다. 인증서와 프라이빗 키는 키 집합에 바로 설치됩니다.
 

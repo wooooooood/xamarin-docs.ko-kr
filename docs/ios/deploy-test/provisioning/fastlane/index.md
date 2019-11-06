@@ -4,15 +4,15 @@ description: 이 가이드에서는 iOS 애플리케이션 서명을 코드하�
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: c26d912a4684f6ddbee46ae953ce5cf1a3db67bd
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0af85c1c27d2b329d81cc680a0fc4c075d4a86dd
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70762729"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028602"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>iOS에 대한 Fastlane 소개
 
@@ -50,13 +50,13 @@ fastlane은 다양한 방식으로 사용할 수 있습니다: 그러한 방식�
 3. 파일의 압축을 풀어 fastlane를 설치하고 `install` 실행 파일을 두 번 클릭합니다. 파일이 "정체불명의 개발자로부터 왔기 때문에 열 수 없다"고 통지하는 오류가 발생하면 확인을 누르고 다음 작업을 수행합니다.
     - `install` 실행 파일에서 컨트롤 +를 클릭합니다. 아래의 대화 상자를 표시합니다.
 
-     ![](images/fastlane-image12.png "설치 대화 상자")
+     ![](images/fastlane-image12.png "The install dialog")
 
     - Fastlane 도구 설치를 시작하려면 [확인]을 누릅니다.
 
 4. 터미널은 아래 그림과 같이 대화 상자로 묻는 메시지를 표시합니다. `y` 누르기:
 
-   ![](images/fastlane-image13.png "터미널 프롬프트")
+   ![](images/fastlane-image13.png "The Terminal prompt")
 
 5. 처음으로 fastlane을 사용하기 전에.`which fastlane`을 실행합니다. 경로는 다음과 같습니다. 
 
@@ -84,11 +84,11 @@ fastlane은 다양한 방식으로 사용할 수 있습니다: 그러한 방식�
 
 fastlane는 정기적으로 새 릴리스를 푸시하는 매우 활성화된 오픈 소스 프로젝트입니다. 새 버전의 fastlane이 사용 가능하게 된다면 fastlane 명령을 실행할 때 알림을 받을 것입니다.
 
-[![](images/fastlane-image0.png "패스트 레인 업데이트 프롬프트")](images/fastlane-image0.png#lightbox)
+[![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png#lightbox)
 
 Fastlane의 새 버전으로 업데이트하려면 [여기](https://download.fastlane.tools)서 최신 패키지를 다운로드하여 설치 패키지를 두 번 클릭하여 실행합니다.
 
-[![](images/fastlane-image0a.png "설치 패키지 실행")](images/fastlane-image0a.png#lightbox)
+[![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png#lightbox)
 
 ## <a name="contents"></a>목차
 
@@ -106,7 +106,7 @@ fastlane을 사용하여 서명 ID와 프로비전 프로필을 만들었다면 
 
 Xamarin.iOS 애플리케이션에 대한 코드 서명 옵션을 설정하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하여 **프로젝트 옵션 &gt; 빌드 &gt; iOS 번들 서명**을 선택하고 아래에 설명했듯이 서명 ID와 프로비전 프로필을 명시적으로 설정합니다.
 
-[![](images/fastlane-image11.png "서명 ID와 프로비전 프로필을 명시적으로 설정")](images/fastlane-image11.png#lightbox)
+[![](images/fastlane-image11.png "Set the Signing Identity and Provisioning Profile explicitly")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

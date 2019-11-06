@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple Enterprise Developer Program의 구성원
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a27536585cbd320a5595d71b156459e25a1fa7a9
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 9b9db3e6ae081a02d2b2297e70c216015dceade6
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70763061"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026540"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 사내 배포
 
@@ -56,15 +56,15 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 3. 새 인증서를 만들기 위해 **+** 단추를 클릭합니다.
 4. *프로덕션* 제목 아래에서 **사내 및 임시**를 선택합니다.
 
-   [![](in-house-distribution-images/createcertmanually01.png "사내 및 임시 선택")](in-house-distribution-images/createcertmanually01.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. [계속]을 클릭하고, 지시에 따라 키 집합 액세스를 통해 CSR(인증서 서명 요청)을 만듭니다.
 
-   [![](in-house-distribution-images/createcertmanually02.png "키 집합 액세스를 통해 CSR(인증서 서명 요청) 만들기")](in-house-distribution-images/createcertmanually02.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. 지시한 대로 CSR을 만들었으면 [계속]을 클릭하고 CSR을 Member Center에 업로드합니다.
 
-   [![](in-house-distribution-images/createcertmanually03.png "Member Center에 CSR 업로드")](in-house-distribution-images/createcertmanually03.png#lightbox)
+   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. [생성]을 클릭하여 인증서를 만듭니다.
 8. 완성된 인증서를 다운로드하고 파일을 두 번 클릭하여 설치합니다.
@@ -74,15 +74,15 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 1. 팀을 선택하고 *세부 정보 보기*를 클릭합니다.
 
-   [![](in-house-distribution-images/selectteam.png "팀 선택")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. 다음으로, **iOS 배포 인증서** 옆에 있는 **만들기** 단추를 클릭합니다.
 
-   [![](in-house-distribution-images/selectcert.png "iOS 배포 인증서 만들기")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
 
 3. 다음으로, **더하기(+)** 단추를 클릭하고 **iOS 앱 스토어**를 선택합니다.
 
-   [![](in-house-distribution-images/selectcert.png "iOS 앱 스토어 선택")](in-house-distribution-images/selectcert.png#lightbox)
+   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -104,27 +104,27 @@ Apple Developer Enterprise Program 인증서는 3년 동안 지속되며, 프로
 
 1. Apple 프로비전 포털로 돌아가서 **프로비전** > **배포**를 차례로 선택합니다.
 
-   [![](in-house-distribution-images/distribute01.png "프로비전 > 배포 선택")](in-house-distribution-images/distribute01.png#lightbox)
+   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. **+** 단추를 클릭하고 만들려는 배포 프로필 유형을 **사내**로 선택합니다.
 
-   [![](in-house-distribution-images/distribute02.png "사내 배포 프로필 만들기")](in-house-distribution-images/distribute02.png#lightbox)
+   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. **계속** 단추를 클릭하고 드롭다운 목록에서 배포 프로필을 만들려는 앱 ID를 선택합니다.
 
-   [![](in-house-distribution-images/distribute03.png "드롭다운 목록에서 앱 ID 선택")](in-house-distribution-images/distribute03.png#lightbox)
+   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. **계속** 단추를 클릭하고 애플리케이션에 서명하는 데 필요한 배포 인증서를 선택합니다.
 
-   [![](in-house-distribution-images/distribute04.png "애플리케이션 서명에 필요한 배포 인증서 선택")](in-house-distribution-images/distribute04.png#lightbox)
+   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
 
 5. **계속** 단추를 클릭하고 새 배포 프로필에 대한 **이름**을 입력합니다.
 
-   [![](in-house-distribution-images/distribute06.png "새 배포 프로필에 대한 이름 입력")](in-house-distribution-images/distribute06.png#lightbox)
+   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
 
 6. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -138,7 +138,7 @@ Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studi
 
 ## <a name="distributing-your-app-in-house"></a>사내 앱 배포
 
-Apple Developer Enterprise Program에서 정식 사용자는 애플리케이션을 배포하고 Apple에서 설정한 [지침](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf)을 준수해야 하는 사람입니다.
+Apple Developer Enterprise Program에서 정식 사용자는 애플리케이션을 배포하고 Apple에서 설정한 [지침](https://developer.apple.com/programs/enterprise/)을 준수해야 하는 사람입니다.
 
 앱은 다음과 같은 다양한 수단을 사용하여 안전하게 배포할 수 있습니다.
 

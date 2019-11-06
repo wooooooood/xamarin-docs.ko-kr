@@ -4,15 +4,15 @@ description: 이 문서에서는 App Store에 배포할 Xamarin.iOS 애플리케
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: b6fb02697d3df59181750bf6fd7c840129554ac3
-ms.sourcegitcommit: 84d788f7dbabc1c83ac795ed3952d589074fa8e8
+ms.openlocfilehash: 3803d7e14b161a7c166bcae37e3d9f46b7637984
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71811176"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026644"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
@@ -91,7 +91,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 새 Xamarin.iOS 프로젝트는 자동으로 **디버그** 및 **릴리스**_빌드 구성_을 설정합니다. **릴리스** 빌드를 올바르게 구성하려면, 다음 단계를 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **Solution Pad**에서 **Info.plist**를 엽니다. **수동 프로비저닝**을 선택합니다. 파일을 저장한 후 닫습니다.
 2. **Solution Pad**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **옵션**을 선택한 후, **iOS 빌드** 탭으로 이동합니다.
@@ -202,7 +202,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 빌드 설정을 올바르게 구성하고 iTunes Connect가 제출 대기 중인 경우, 이제 앱을 빌드하고 Apple에 제출할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Mac용 Visual Studio에서 빌드 구성 및 빌드할 디바이스(시뮬레이터는 해당사항 없음) **릴리스**를 선택합니다.
 
@@ -211,7 +211,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 2. **빌드** 메뉴에서 **게시를 위해 보관**을 선택합니다.
 3. 보관이 만들어지면 **보관** 보기가 표시됩니다. **서명 및 배포**를 클릭하여 게시 마법사를 엽니다.
 
-    ![보관 보기의 서명 및 배포 단추 위치 스크린샷](publishing-to-the-app-store-images/archives-mac.png "보관 보기의서명 및 배포 단추 위치 스크린샷")
+    ![보관 보기의 서명 및 배포 단추 위치 스크린샷.](publishing-to-the-app-store-images/archives-mac.png "보관 보기의 서명 및 배포 단추 위치 스크린샷.")
 
     > [!NOTE]
     > 기본적으로는 **보관** 보기는 열려 있는 솔루션의 보관만 표시합니다. 보관이 있는 솔루션을 모두 보려면 **모든 보관 표시** 체크박스를 체크합니다. 포함한 디버그 정보가 필요한 경우 충돌 보고서를 기호화하여 사용될 수 있도록 이전 보관을 보관하는 것이 좋습니다.

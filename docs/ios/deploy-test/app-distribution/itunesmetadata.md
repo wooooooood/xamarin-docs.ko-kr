@@ -4,15 +4,15 @@ description: 이 문서에서는 테스트 또는 엔터프라이즈 배포를 �
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 47b2428ddca47f554fea675a9d2e70374679688f
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: cdaa0855538c35c82cb96bde58ad2258b1fb56e5
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70281157"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73026499"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
 
@@ -124,7 +124,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="artistname-and-playlistartistname"></a>artistName 및 playlistArtistName
 
-`artistName` 및 `playlistArtistName` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션을 만든 회사의 이름을 정의합니다. 예제:
+`artistName` 및 `playlistArtistName` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션을 만든 회사의 이름을 정의합니다. 예:
 
 ```xml
 <key>artistName</key>
@@ -136,7 +136,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="bundledisplayname-itemname-and-playlistname"></a>bundleDisplayName, itemName 및 playlistName
 
-`bundleDisplayName`, `itemName` 및 `playlistName` 키를 사용하여 iTunes 내부에 표시할 iOS 애플리케이션의 이름을 정의합니다. 예제:
+`bundleDisplayName`, `itemName` 및 `playlistName` 키를 사용하여 iTunes 내부에 표시할 iOS 애플리케이션의 이름을 정의합니다. 예:
 
 ```xml
 <key>bundleDisplayName</key>
@@ -151,7 +151,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="bundleshortversionstring-and-bundleversion"></a>bundleShortVersionString 및 bundleVersion
 
-`bundleShortVersionString` 및 `bundleVersion` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션의 버전 번호를 정의합니다. 예제:
+`bundleShortVersionString` 및 `bundleVersion` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션의 버전 번호를 정의합니다. 예:
 
 ```xml
 <key>bundleShortVersionString</key>
@@ -162,7 +162,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="softwareversionbundleid"></a>softwareVersionBundleId
 
-`softwareVersionBundleId` 키를 사용하여 iOS 애플리케이션에 대한 번들 ID를 지정합니다. 예제:
+`softwareVersionBundleId` 키를 사용하여 iOS 애플리케이션에 대한 번들 ID를 지정합니다. 예:
 
 ```xml
 <key>softwareVersionBundleId</key>
@@ -171,7 +171,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="copyright"></a>저작권
 
-`copyright` 키를 사용하여 iTunes에 표시되는 저작권 표시를 정의합니다. 예제:
+`copyright` 키를 사용하여 iTunes에 표시되는 저작권 표시를 정의합니다. 예:
 
 ```xml
 <key>copyright</key>
@@ -180,7 +180,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="releasedate"></a>releaseDate
 
-`releaseDate` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션의 릴리스 날짜를 제공합니다. 예제:
+`releaseDate` 키를 사용하여 iTunes에 표시할 iOS 애플리케이션의 릴리스 날짜를 제공합니다. 예:
 
 ```xml
 <key>releaseDate</key>
@@ -189,7 +189,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="softwareiconneedsshine"></a>softwareIconNeedsShine
 
-`softwareIconNeedsShine` 키를 사용하여 iOS 6(및 이전 버전)에 대해 _반짝이는 강조 표시_가 iOS 애플리케이션의 아이콘에 필요한지 여부를 iTunes에 알립니다. 예제:
+`softwareIconNeedsShine` 키를 사용하여 iOS 6(및 이전 버전)에 대해 _반짝이는 강조 표시_가 iOS 애플리케이션의 아이콘에 필요한지 여부를 iTunes에 알립니다. 예:
 
 ```xml
 <key>softwareIconNeedsShine</key>
@@ -198,7 +198,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="gamecenterenabled-and-gamecentereverenabled"></a>gameCenterEnabled 및 gameCenterEverEnabled
 
-`gameCenterEnabled` 및 `gameCenterEverEnabled` 키를 사용하여 이 iOS 애플리케이션이 Apple의 Game Center를 지원하는지 여부를 iTunes에 알립니다. 예제:
+`gameCenterEnabled` 및 `gameCenterEverEnabled` 키를 사용하여 이 iOS 애플리케이션이 Apple의 Game Center를 지원하는지 여부를 iTunes에 알립니다. 예:
 
 ```xml
 <key>gameCenterEnabled</key>
@@ -209,7 +209,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="genre-genreid-and-subgenres"></a>genre, genreId 및 subgenres
 
-`genre` 및 `genreId` 키를 사용하여 iOS 애플리케이션이 속한 장르를 iTunes에 알립니다. 예제:
+`genre` 및 `genreId` 키를 사용하여 iOS 애플리케이션이 속한 장르를 iTunes에 알립니다. 예:
 
 ```xml
 <key>genre</key>
@@ -218,7 +218,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 <integer>6014</integer>
 ```
 
-필요에 따라 `subgenres` 키를 사용하여 iOS 애플리케이션에 대해 최대 두 개의 하위 장르를 추가로 정의할 수 있습니다. 예제:
+필요에 따라 `subgenres` 키를 사용하여 iOS 애플리케이션에 대해 최대 두 개의 하위 장르를 추가로 정의할 수 있습니다. 예:
 
 ```xml
 <key>subgenres</key>
@@ -242,11 +242,11 @@ iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-자세한 내용은 Apple의 [장르 ID 부록](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) 설명서를 참조하세요.
+자세한 내용은 Apple의 [장르 ID 부록](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) 설명서를 참조하세요.
 
 ### <a name="softwaresupporteddeviceids"></a>softwareSupportedDeviceIds
 
-`softwareSupportedDeviceIds` 키를 사용하여 이 iOS 애플리케이션이 지원하는 iOS 디바이스를 iTunes에 알립니다. 예제:
+`softwareSupportedDeviceIds` 키를 사용하여 이 iOS 애플리케이션이 지원하는 iOS 디바이스를 iTunes에 알립니다. 예:
 
 ```xml
 <key>softwareSupportedDeviceIds</key>
@@ -286,7 +286,7 @@ iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>iTunesMetadata.plist 파일 만들기
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 `iTunesMetadata.plist` 파일을 사용하는 경우 두 가지 옵션이 있습니다.
 
@@ -302,26 +302,26 @@ iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 
 1. **솔루션 탐색기**에서 Xamarin.iOS 프로젝트 파일을 마우스 오른쪽 단추로 클릭하고, **추가** > **새 파일...** 을 차례로 선택합니다.
 2. [새 파일] 대화 상자에서 **iOS** > **속성 목록**을 차례로 선택합니다.
 
-    ![](itunesmetadata-images/image01.png "iOS 속성 목록 선택")
+    ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. **이름**에 대해 `iTunesMetadata`를 입력하고 **새로 만들기** 단추를 클릭합니다.
 4. 편집하기 위해 **솔루션 탐색기**에서 `iTunesMetadata.plist` 파일을 두 번 클릭하여 엽니다.
 
-    ![](itunesmetadata-images/image02.png "iTunesMetadata.plist 편집기")
+    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
 5. 녹색 **+** 를 클릭하여 새 항목을 만들고, 키 이름으로 `UIRequiredDeviceCapabilities`를 입력합니다.
 
-    ![](itunesmetadata-images/image03.png "새 항목을 만들고 UIRequiredDeviceCapabilities를 키 이름으로 입력")
+    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. **문자열** 값 형식을 클릭하고, 팝업 목록에서 **사전**을 선택합니다.
 
-    ![](itunesmetadata-images/image04.png "팝업 목록에서 사전 선택")
+    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
 7. 속성 이름의 왼쪽에서 접혀 있는 부분을 클릭하여 사전 항목을 표시합니다.
 
-    ![](itunesmetadata-images/image05.png "사전 항목 표시")
+    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
 8. **새 항목 추가** 텍스트를 클릭한 다음, 녹색 **+** 를 클릭하여 사전에 항목을 추가합니다.
 
-    ![](itunesmetadata-images/image06.png "사전에 항목 추가")
+    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
 9. 키 이름으로 `armv7`을 입력하고, **부울** 형식을 선택하고, 값으로 **예**를 입력합니다.
 
-    ![](itunesmetadata-images/image07.png "키 이름으로 armv7을 입력하고, 부울 형식을 선택하고, 값으로 예를 입력")
+    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
 10. 필요한 모든 키/값 쌍으로 `iTunesMetadata.plist` 파일을 채울 때까지 위의 단계를 반복합니다(자세한 내용은 위의 [iTunesMetadata.plist 내용](#iTunesMetadata_contents) 섹션 참조).
 
 11. 변경 내용을 plist 파일에 저장합니다.

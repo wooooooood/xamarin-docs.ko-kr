@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 개발자가 Apple의 유료 개발
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/16/2018
-ms.openlocfilehash: 8279487fc5effd5c2c019bffa5ceb820d2240400
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 951b019a4a0bf503629b6ac63853bd5b1c818bce
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291429"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022750"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 무료 프로비전
 
@@ -49,7 +49,7 @@ ms.locfileid: "70291429"
 2. Xcode를 열고 **Xcode > 기본 설정**으로 이동합니다.
 3. **계정** 아래에서 **+** 단추를 사용하여 기존 Apple ID를 추가합니다. 이래 스크린샷과 비슷한 화면이 보일 것입니다.
 
-    ![Xcode 기본 설정 – 계정](free-provisioning-images/launchapp1.png "Xcode 기본 설정 – 계정")
+    ![Xcode 기본 계정](free-provisioning-images/launchapp1.png "Xcode 기본 계정")
 
 4. Xcode 기본 설정을 닫습니다.
 5. 앱을 배포하려는 iOS 디바이스에 플러그 인합니다.
@@ -87,7 +87,7 @@ ms.locfileid: "70291429"
 
 ### <a name="deploy-your-xamarinios-app"></a>Xamarin.iOS 앱 배포
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. USB를 통하거나 [무선](~/ios/deploy-test/wireless-deployment.md)으로 Mac 빌드 호스트에 iOS 디바이스를 연결합니다.
 2. Mac용 Visual studio **Solution Pad**에서 **Info.plist**를 두 번 클릭합니다.

@@ -4,15 +4,15 @@ description: 이 가이드에서는 Xamarin.Mac 앱을 게시하는 데 필요�
 ms.prod: xamarin
 ms.assetid: 393d0066-7f6f-4ac3-a48d-4b5db65bc4cd
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: a39c40bb6f63427f1a4aeedea10e90aef4df91e8
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 59c3372350caf3939a4e40ba2999ffb490d4a1f7
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770256"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73030091"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Xamarin.Mac에서 인증서 및 식별자
 
@@ -138,7 +138,7 @@ Mac 개발자 센터의 **디바이스** 섹션에서 **모두**를 선택하고
     [![앱 스토어 인증서 만들기](certificates-identifiers-images/certif04.png "앱 스토어 인증서 만들기")](certificates-identifiers-images/certif04-large.png#lightbox)
 2. 만들려는 인증서 유형을 선택합니다(앱 스토어에 릴리스할 각 유형 중 하나가 필요).
 
-    [![인증서 종류 선택](certificates-identifiers-images/certif05.png "인증서 종류 선택")](certificates-identifiers-images/certif05-large.png#lightbox)
+    [![인증서 유형 선택](certificates-identifiers-images/certif05.png "인증서 유형 선택")](certificates-identifiers-images/certif05-large.png#lightbox)
 3. 다음 페이지에서는 **키 집합 액세스**를 사용하여 인증서 요청 파일을 생성하는 방법을 설명합니다. 다음 지침을 따릅니다.
 
     [![키 집합 요청 생성](certificates-identifiers-images/certif06.png "키 집합 요청 생성")](certificates-identifiers-images/certif06-large.png#lightbox)

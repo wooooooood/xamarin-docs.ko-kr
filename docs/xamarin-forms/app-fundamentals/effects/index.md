@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 9d859377c40c6fca07e140c50da46d8f30aaae04
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2de1d1dd065a01bb457ebf03acdc0c01529abf7b
+ms.sourcegitcommit: 1242d32b7f072c837005cdee174abe6c0d1d0c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994460"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73083833"
 ---
 # <a name="xamarinforms-effects"></a>Xamarin.Forms 효과
 
@@ -33,3 +33,7 @@ _Xamarin.Forms 사용자 인터페이스는 대상 플랫폼의 네이티브 컨
 ## <a name="invoking-events-from-an-effecttouch-trackingmd"></a>[효과에서 이벤트 호출](touch-tracking.md)
 
 효과는 이벤트를 호출할 수 있습니다. 이 문서에서는 하위 수준 멀티 터치 핑거 추적을 구현하고 애플리케이션에 터치 누름, 이동 및 릴리스 신호를 보내는 이벤트를 만드는 방법을 보여줍니다.
+
+## <a name="reusable-roundeffectreusable-roundeffectmd"></a>[재사용 가능한 RoundEffect](reusable-roundeffect.md)
+
+RoundEffect는 VisualElement에서 파생된 모든 컨트롤에 적용하여 컨트롤을 원으로 렌더링할 수 있는 재사용 가능한 효과입니다. 이 효과는 원형 이미지, 원형 단추 및 기타 원형 컨트롤을 만드는 데 사용할 수 있습니다.

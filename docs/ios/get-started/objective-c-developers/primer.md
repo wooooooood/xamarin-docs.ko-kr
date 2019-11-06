@@ -4,15 +4,15 @@ description: 이 문서에서는 Objective-C 개발자용 C#을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: a55d1d9848d3f1378ccbc4a24e1748eb146a6a35
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 8b84d959ce7976fc51cbdfee99cbceec560e8e8e
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70291994"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022435"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Objective-C 개발자용 C# 입문서
 
@@ -58,7 +58,7 @@ public static class UITextViewExtensions
 
 그 후 코드에 `UITextView` 인스턴스가 생성되면 아래와 같이 자동 완성 목록에서 메서드를 사용할 수 있습니다.
 
- ![](primer-images/01-extensionmethodintellisense.png "자동 완성 기능에서 사용할 수 있는 메서드")
+ ![](primer-images/01-extensionmethodintellisense.png "The method available in the autocomplete")
 
 확장 메서드가 호출되면 이 예제의 `textView`처럼 인스턴스가 인수로 전달됩니다.
 

@@ -4,15 +4,15 @@ description: 이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin�
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 2bdb95c73ed692b3ba7f0c3ff15cd7754a7e7b66
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: 41254fb6aac176cd796fba851478b31f774553d2
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278871"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73023453"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>연습 - Apple의 계측 도구 사용
 
@@ -27,11 +27,11 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 2. **실행 &gt; 디바이스에 업로드** 메뉴 항목을 선택하여 애플리케이션을 디바이스에 업로드합니다.
 3. **할당** 템플릿(흰색 상자가 있는 주황색 아이콘)을 선택합니다.
 
-    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "할당 템플릿 선택")
+    ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Choose the Allocations template")
 
 4. 창 위쪽의 **프로비전 템플릿 선택:** 목록에서 **MemoryDemo** 애플리케이션을 선택합니다. iOS 디바이스를 먼저 클릭하여 설치된 애플리케이션을 보여 주는 메뉴를 펼칩니다.
 
-    ![](walkthrough-apples-instrument-images/01-mem-demo.png "MemoryDemo 애플리케이션 선택")
+    ![](walkthrough-apples-instrument-images/01-mem-demo.png "Select the Memory Demo application")
 
 5. **선택**(창 오른쪽 아래) 단추를 눌러 **계측**을 시작합니다. 이 템플릿은 위쪽 창에 두 개의 항목(할당 및 VM 추적기)을 표시합니다.
 
@@ -39,7 +39,7 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 
 7. 위쪽 창에서 **VM 추적기** 행을 선택합니다(현재 앱이 실행되고 있으므로 Dirty(더티) 및 Resident(설정) 크기의 두 섹션이 포함됨). **검사기** 창에서 **디스플레이 설정 표시** 옵션(기어 아이콘)을 선택한 다음, 이 스크린샷의 오른쪽 아래에 표시된 **자동 스냅샷** 확인란을 선택합니다.
 
-    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "디스플레이 설정 표시 옵션(기어 아이콘)을 선택한 다음, 자동 스냅샷 확인란을 선택함")
+    ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Choose the Show Display Settings option the gear icon then tick the Automatic Snapshotting checkbox")
 
 8. 위쪽 창에서 **할당** 행을 선택합니다(현재 앱이 실행되고 있으므로 *모든 힙 및 익명 VM*이라고 표시됨).
 9. **검사기** 창에서 **디스플레이 설정 표시** 옵션(기어 아이콘)을 선택한 다음, **표시 생성** 단추를 클릭하여 기준선을 설정합니다. 작은 빨간색 플래그가 창 위쪽의 타임라인에 표시됩니다.
@@ -50,15 +50,15 @@ _이 문서에서는 Apple의 계측 도구를 사용하여 Xamarin으로 빌드
 
 14. **&lt;non-object>** 노드에서 과도한 메모리 증가를 보여 줍니다. 이 노드 옆에 있는 화살표를 클릭하면 세부 정보가 표시됩니다. 스택 추적을 마우스 오른쪽 단추로 클릭하여 창에 **원본 위치**를 추가합니다.
 
-    ![](walkthrough-apples-instrument-images/03-mem-growth.png "창에 원본 위치 추가")
+    ![](walkthrough-apples-instrument-images/03-mem-growth.png "Add Source Location to the pane")
 
 15. **크기** 기준으로 정렬하고 **확장된 세부 정보** 보기를 표시합니다.
 
-    ![](walkthrough-apples-instrument-images/04-extended-detail.png "크기별 정렬 및 확장된 세부 정보 보기 표시")
+    ![](walkthrough-apples-instrument-images/04-extended-detail.png "Sort by Size and display the  Extended Detail view")
 
 16. 호출 스택에서 원하는 항목을 클릭하면 관련 코드가 표시됩니다.
 
-    ![](walkthrough-apples-instrument-images/05-related-code.png "관련된 코드 보기")
+    ![](walkthrough-apples-instrument-images/05-related-code.png "Viewing the related code")
 
 이 경우 새 이미지가 만들어져 각 셀의 컬렉션에 저장되거나 기존 컬렉션 뷰 셀이 다시 사용되지 않습니다.
 
@@ -83,11 +83,11 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 이제 애플리케이션을 실행하면 메모리 사용량이 크게 줄어듭니다. 생성 간의 **증가**는 이제 코드를 수정하기 전의 MiB(메가바이트) 대신 Kib(킬로바이트) 단위로 측정됩니다.
 
-![](walkthrough-apples-instrument-images/06-reduced-memory.png "앱 메모리 사용량 표시")
+![](walkthrough-apples-instrument-images/06-reduced-memory.png "Showing the app memory usage")
 
 향상된 코드는 Mac용 Visual Studio에서 **다음** 솔루션의 [MemoryDemo 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)에서 사용할 수 있습니다.
 
-[Xamarin.iOS 가비지 수집](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)에 대한 이 커뮤니티 블로그는 Xamarin.iOS와 관련된 메모리 문제를 처리하는 데 유용한 참고 자료입니다.
+[Xamarin.iOS 가비지 수집](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)에 대한 이 커뮤니티 블로그는 Xamarin.iOS와 관련된 메모리 문제를 처리하는 데 유용한 참고 자료입니다.
 
 ## <a name="summary"></a>요약
 
@@ -98,4 +98,4 @@ Mac용 Visual Studio 내에서 계측을 시작하고, 메모리 할당 템플�
 ## <a name="related-links"></a>관련 링크
 
 - [MemoryDemo 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
-- [Xamarin.iOS 가비지 수집(블로그 게시물)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS 가비지 수집(블로그 게시물)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

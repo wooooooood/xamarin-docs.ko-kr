@@ -6,15 +6,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: c02e8e3c30508951df071810aff8db429a2f04ea
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756716"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73028003"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 
@@ -107,7 +107,7 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 
 - **리소스**&ndash; 문자열, 이미지 및 레이아웃과 같은 애플리케이션 리소스가 포함됩니다. 생성된 `Resource` 클래스를 통해 코드에 있는 이러한 리소스에 액세스할 수 있습니다. [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md) 가이드는 **리소스** 디렉터리에 대한 자세한 정보를 제공합니다. 애플리케이션 템플릿에는 **AboutResources.txt** 파일의 리소스에 대한 간단한 가이드가 포함됩니다.
 
-### <a name="resources"></a>자료
+### <a name="resources"></a>리소스
 
 **리소스** 디렉터리에는 **drawable**, **layout**, **mipmap** 및 **values**라는 4개의 폴더 및 **Resource.designer.cs**라는 파일이 포함됩니다.
 
@@ -161,7 +161,7 @@ Android 애플리케이션을 통한 선형 진행이 없으므로(여러 위치
 
 **activity_main.axml**은 애플리케이션의 첫 번째 화면에 대한 사용자 인터페이스 레이아웃 파일입니다. .axml은 Android Designer 파일임을 나타냅니다(AXML은 *Android XML*을 의미함). *Main*이라는 이름은 Android의 관점에서 임의입니다.&ndash; 레이아웃 파일에는 다른 이름이 지정될 수 있습니다. IDE에서 **activity_main.axml**을 열 때 *Android Designer*라는 Android 레이아웃 파일에 대한 시각적 편집기를 표시합니다.
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android 디자이너")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 **Phoneword** 앱에서 **TranslateButton**의 ID는 `@+id/TranslateButton`로 설정됩니다.
 
@@ -357,7 +357,7 @@ Android 디바이스가 다양한 화면 크기 및 해상도에서 제공되지
 
 ::: zone pivot="windows"
 
-![mipmap 폴더](hello-android-deepdive-images/vs/07-mipmap-folders.png "mipmap 폴더")
+![Mipmap 폴더](hello-android-deepdive-images/vs/07-mipmap-folders.png "Mipmap 폴더")
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -376,26 +376,26 @@ Android는 적절한 밀도의 아이콘을 선택합니다.
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; 다른 유용한 커뮤니티 도구에 대한 링크를 포함한 모든 형식의 Android 아이콘에 대한 웹 기반 브라우저 내 생성기입니다. Google Chrome에서 가장 잘 작동합니다.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; 다른 유용한 커뮤니티 도구에 대한 링크를 포함한 모든 형식의 Android 아이콘에 대한 웹 기반 브라우저 내 생성기입니다. Google Chrome에서 가장 잘 작동합니다.
 
 - Visual Studio &ndash; IDE에서 직접 앱에 대한 간단한 아이콘 집합을 만드는 데 사용할 수 있습니다.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
+- [Glyphish](https://www.glyphish.com/) &ndash; 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 집합을 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
+- [Fiverr](https://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 집합을 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; 다른 유용한 커뮤니티 도구에 대한 링크를 포함한 모든 형식의 Android 아이콘에 대한 웹 기반 브라우저 내 생성기입니다. Google Chrome에서 가장 잘 작동합니다.
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; 다른 유용한 커뮤니티 도구에 대한 링크를 포함한 모든 형식의 Android 아이콘에 대한 웹 기반 브라우저 내 생성기입니다. Google Chrome에서 가장 잘 작동합니다.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; Sketch는 사용자 인터페이스, 아이콘 등을 디자인하기 위한 Mac 앱입니다. Xamarin 앱 아이콘 및 시작 이미지 집합을 디자인하는 데 사용되었던 앱입니다. Sketch 3은 App Store에서 제공됩니다(약 $80). 체험용 [Sketch Tool](http://bohemiancoding.com/sketch/tool/)도 사용해 볼 수 있습니다.
+- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; Sketch는 사용자 인터페이스, 아이콘 등을 디자인하기 위한 Mac 앱입니다. Xamarin 앱 아이콘 및 시작 이미지 집합을 디자인하는 데 사용되었던 앱입니다. Sketch 3은 App Store에서 제공됩니다(약 $80). 체험용 [Sketch Tool](https://bohemiancoding.com/sketch/tool/)도 사용해 볼 수 있습니다.
 
-- [Pixelmator](http://www.pixelmator.com/) &ndash; Mac용 다양한 이미지 편집 앱입니다(약 $30).
+- [Pixelmator](https://www.pixelmator.com/) &ndash; Mac용 다양한 이미지 편집 앱입니다(약 $30).
 
-- [Glyphish](http://www.glyphish.com/) &ndash; 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
+- [Glyphish](https://www.glyphish.com/) &ndash; 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 집합을 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
+- [Fiverr](https://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 집합을 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 

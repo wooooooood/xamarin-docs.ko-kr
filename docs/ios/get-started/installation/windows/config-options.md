@@ -4,15 +4,15 @@ description: 이 문서에서는 Xamarin.iOS 개발을 위해 Visual Studio 2019
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
-ms.openlocfilehash: b3910bd096f2a8dd301a9ba6e200028d3121c8df
-ms.sourcegitcommit: 933de144d1fbe7d412e49b743839cae4bfcac439
+ms.openlocfilehash: c5c819221bc08f1c39bde9b5900c2f9f9889764d
+ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70279220"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73022532"
 ---
 # <a name="configuring-visual-studio-for-ios-development"></a>iOS 개발을 위한 Visual Studio 구성
 
@@ -42,7 +42,7 @@ Visual Studio 2019 또는 Visual Studio 2017에서 iOS 프로젝트가 열리면
 
 이 도구 모음이 표시되지 않으면 Visual Studio 2019 또는 Visual Studio 2017에서 **보기** 메뉴를 열고 **도구 모음 > iOS**를 선택합니다.
 
-![iOS 도구 모음 활성화](config-options-images/ios-toolbar-enable.png "iOS 도구 모음 활성화")
+![iOS 도구 모음 사용](config-options-images/ios-toolbar-enable.png "iOS 도구 모음 사용")
 
 ## <a name="solution-platforms-drop-down-menu"></a>솔루션 플랫폼 드롭다운 메뉴
 
@@ -54,7 +54,7 @@ Visual Studio 2019 또는 Visual Studio 2017에서 iOS 프로젝트가 열리면
 - **단추 추가 또는 제거** 선택 
 - **솔루션 플랫폼** 항목이 선택되어 있는지 확인합니다.
 
-![솔루션 플랫폼 드롭다운 메뉴 활성화](config-options-images/solution-platforms-enable.png "솔루션 플랫폼 드롭다운 메뉴 활성화")
+![솔루션 플랫폼 드롭다운 메뉴 사용](config-options-images/solution-platforms-enable.png "솔루션 플랫폼 드롭다운 메뉴 사용")
 
 iOS 프로젝트를 열면 **표준** 및 **iOS** 도구 모음이 다음 스크린샷과 비슷합니다.
 
