@@ -1,242 +1,242 @@
 ---
-title: 요약 28 장입니다. 위치 및 지도
-description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 요약 28 장입니다. 위치 및 지도'
+title: 28 장 요약입니다. 위치 및 지도
+description: 'Xamarin.ios를 사용 하 여 Mobile Apps 만들기: 28 장 요약입니다. 위치 및 지도'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 8c0b60a5064bbcf605f66a7b9dcce5da1f84a015
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 5dcd84536cc6d80deb753fc6fe57f9090f6b2dad
+ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770894"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72697074"
 ---
-# <a name="summary-of-chapter-28-location-and-maps"></a>요약 28 장입니다. 위치 및 지도
+# <a name="summary-of-chapter-28-location-and-maps"></a>28 장 요약입니다. 위치 및 지도
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
-> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
+> 이 페이지의 정보는 Xamarin.ios가 책에 제공 된 자료에서 달라져서 있는 영역을 표시 합니다.
 
-Xamarin.Forms 지원를 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 에서 파생 된 요소 `View`합니다. 맵을 사용 하 여 관련 된 위에 표시 되는 특별 한 플랫폼 요구 사항으로 인해 별도 어셈블리에 구현 됩니다 **Xamarin.Forms.Maps**를 다른 네임 스페이스를 포함 하 고: `Xamarin.Forms.Maps`합니다.
+Xamarin.ios는 `View`에서 파생 되는 [`Map`](xref:Xamarin.Forms.Maps.Map) 요소를 지원 합니다. Maps를 사용 하는 특별 한 플랫폼 요구 사항 때문에이는 별도의 어셈블리인 **xamarin.ios**에서 구현 되 고 다른 네임 스페이스를 포함 하는 `Xamarin.Forms.Maps`합니다.
 
-## <a name="the-geographic-coordinate-system"></a>지리 좌표계
+## <a name="the-geographic-coordinate-system"></a>지리적 좌표계
 
-지리 좌표계 지구 처럼 구면 (또는 거의 구면) 개체의 위치를 식별합니다. 좌표 둘 다로 이루어져를 *위도* 하 고 *경도* 각도에 표시 합니다.
+지리적 좌표계는 지구와 같이 구형 (또는 거의 구형) 개체의 위치를 식별 합니다. 좌표는 각도로 표현 되는 *위도* 및 *경도* 로 구성 됩니다.
 
-대권 호출을 `equator` 는 지구 축 개념적으로 확장 하는 두 극 지방의 중간입니다.
+`equator` 라는 큰 원은 지구 축에서 개념적으로 확장 하는 두 극 지방 사이에 있습니다.
 
-### <a name="parallels-and-latitude"></a>Parallels와 위도
+### <a name="parallels-and-latitude"></a>위 도선 및 위도
 
-각도로 측정 북쪽 또는 남쪽 지구의 눈금 표시의 가운데에서 적도 라고 같은 위도 줄 *parallels*합니다. 이러한 범위 중 북부 및 중남부 극 지방까지 90도에서 적도에서 0도입니다. 규칙에 따라 적도 북쪽의 위도 양수 값 및 음수 값은 적도 남쪽 해당 합니다.
+같은 *위도를 중심*으로 하는 지구의 중심에서 적도의 북쪽 또는 남부로 측정 된 각도입니다. 이 범위는 적도의 0도에서 북부 및 남부 극 지방의 90도 까지입니다. 규칙에 따라 적도의 위도 북부는 양수 값이 고 적도의 남부는 음수 값입니다.
 
 ### <a name="longitude-and-meridians"></a>경도 및 자오선
 
-남부 극에 북극에서 훌륭한 원 중 절반은 같은 경도 줄 라고도 *자오선*합니다. 이들은 본초 자오선에서 영국 그리니치를 기준으로 합니다. 규칙에 따라 경도 본초 자오선의 동쪽 180도, 양수 값 0도에서 되며 본초 자오선 서쪽 경도 음수 값으로 0도에서 &ndash;180도 합니다.
+고가 중 북부에서 남 극으로 큰 원의 절반은 동일한 경도 ( *자오선*라고도 함)의 선입니다. 이는 그리니치 표준시 (미국 자오선)에 상대적입니다. 규칙에 따라 프라임 자오선의 경도 동부는 0도에서 180 사이의 양수 값이 고, 소수 자오선의 경도 서쪽은 0도에서 &ndash;180도까지 음수 값입니다.
 
-### <a name="the-equirectangular-projection"></a>등 장방형 도법이
+### <a name="the-equirectangular-projection"></a>등 장방형 프로젝션
 
-모든 플랫 맵 지구 왜곡을 소개합니다. 위도 및 경도의 모든 줄에는 직선, 및 지도에 같은 거리에 해당 하는 위도 및 경도 각도에서 같은 차이점을 하는 경우 결과 경우는 *등 장방형 도법이*합니다. 이 지도 수평으로 확장 하므로 극 지방까지 더 가까운 곳에 영역을 왜곡 합니다.
+지구에 대 한 모든 기본 지도에는 왜곡이 도입 되었습니다. 위도 및 경도의 모든 줄이 직선 이며 위도 및 경도 각도의 차이가 지도의 동일한 거리에 해당 하는 경우 결과는 *등 장방형 프로젝션*입니다. 이 맵은 가로로 확장 되기 때문에 극 지방에 가까운 영역을 왜곡 합니다.
 
-### <a name="the-mercator-projection"></a>메 르 카 토르 도법
+### <a name="the-mercator-projection"></a>Mercator 프로젝션
 
-널리 사용 되 *메 르 카 토르 도법* 또한 이러한 영역을 세로로 확장 하 여 수평 확장에 대 한 보정을 시도 합니다. 이 인해 영역 극 지방까지 거의 모든 지역 실제 영역을 사용 하 여 매우 밀접 하 게 준수 하지만, 실제로 보다 훨씬 더 큰 나타나는 맵.
+인기 있는 *Mercator 프로젝션* 은 이러한 영역을 세로로 확장 하 여 수평 확장을 보정 하려고 시도 합니다. 이로 인해 극 지방 근처의 영역이 실제로 표시 되는 것 보다 훨씬 큰 것으로 나타나지만 로컬 영역은 실제 영역과 거의 일치 합니다.
 
-### <a name="map-services-and-tiles"></a>지도 서비스 및 타일
+### <a name="map-services-and-tiles"></a>서비스 및 타일 매핑
 
-지도 서비스 호출 메 르 카 토르 도법의 변형을 사용 하 여 `Web Mercator`입니다. 지도 서비스 위치 및 확대/축소 수준에 따라 클라이언트에 비트맵 타일을 제공 합니다.
+지도 서비스는 `Web Mercator`이라는 변형 Mercator 프로젝션을 사용 합니다. 지도 서비스는 위치 및 확대/축소 수준에 따라 클라이언트에 비트맵 타일을 제공 합니다.
 
-## <a name="getting-the-users-location"></a>사용자의 위치를 가져오는 중
+## <a name="getting-the-users-location"></a>사용자의 위치 가져오기
 
-Xamarin.Forms `Map` 클래스에서 사용자의 지리적 위치를 가져올 수 있는 기능을 포함 하지는 않지만이 바람직한 경우가 많습니다 처리 해야 하므로 종속성 서비스 맵 작업 하는 경우.
+Xamarin.ios `Map` 클래스에는 사용자의 지리적 위치를 가져오는 기능이 포함 되어 있지 않지만 map을 사용 하 여 작업 하는 경우에는 종속성 서비스에서 처리 해야 하는 경우가 많습니다.
 
 > [!NOTE]
-> Xamarin.Forms 응용 프로그램을 대신 사용할 수는 [ `Geolocation` ](~/essentials/geolocation.md) Xamarin.Essentials에 포함 하는 클래스입니다.
+> Xamarin Forms 응용 프로그램은 Xamarin.ios에 포함 된 [`Geolocation`](~/essentials/geolocation.md) 클래스를 대신 사용할 수 있습니다.
 
-### <a name="the-location-tracker-api"></a>위치 추적기 API
+### <a name="the-location-tracker-api"></a>Location tracker API
 
-합니다 [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 솔루션 위치 추적기 API에 대 한 코드를 포함 합니다. 합니다 [ `GeographicLocation` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) 구조 위도 및 경도 캡슐화 합니다. 합니다 [ `ILocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) 인터페이스 시작 및 일시 중지 위치 추적기 및 이벤트를 새 위치로 사용할 수 있는 경우 두 개의 메서드를 정의 합니다.
+[**Xamarin.ios 설명서**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform) 에는 LOCATION tracker API에 대 한 코드가 포함 되어 있습니다. [`GeographicLocation`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/GeographicLocation.cs) 구조는 위도 및 경도를 캡슐화 합니다. [`ILocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform/ILocationTracker.cs) 인터페이스는 위치 추적기를 시작 하 고 일시 중지 하는 두 가지 방법 및 새 위치를 사용할 수 있을 때의 이벤트를 정의 합니다.
 
 #### <a name="the-ios-location-manager"></a>IOS 위치 관리자
 
-IOS 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) iOS 클래스는 사용 [ `CLLocationManager` ](xref:CoreLocation.CLLocationManager)합니다.
+`ILocationTracker`의 iOS 구현은 iOS [`CLLocationManager`](xref:CoreLocation.CLLocationManager)를 사용 하는 [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS/LocationTracker.cs) 클래스입니다.
 
 #### <a name="the-android-location-manager"></a>Android 위치 관리자
 
-Android 구현의 `ILocationTracker` 되는 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) Android 이용 하는 클래스 [ `LocationManager` ](xref:Android.Locations.LocationManager) 클래스입니다.
+`ILocationTracker`의 Android 구현은 Android [`LocationManager`](xref:Android.Locations.LocationManager) 클래스를 사용 하는 [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) 클래스입니다.
 
 #### <a name="the-uwp-geo-locator"></a>UWP 지역 로케이터
 
-유니버설 Windows 플랫폼 구현의 `ILocationTracker` 은 [ `LocationTracker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs) UWP를 사용 하는 클래스 [ `Geolocator` ](/uwp/api/Windows.Devices.Geolocation.Geolocator)합니다.
+`ILocationTracker`의 유니버설 Windows 플랫폼 구현은 UWP [`Geolocator`](/uwp/api/Windows.Devices.Geolocation.Geolocator)를 사용 하는 [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT/LocationTracker.cs) 클래스입니다.
 
 ### <a name="display-the-phones-location"></a>휴대폰의 위치를 표시 합니다.
 
-합니다 [ **WhereAmI** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/WhereAmI) 샘플 위치 추적기를 사용 하 여 텍스트와 등 장방형 맵에서 휴대폰의 위치를 표시 합니다.
+[**WhereAmI**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/WhereAmI) 샘플은 location tracker를 사용 하 여 텍스트와 등 장방형 맵에 휴대폰의 위치를 표시 합니다.
 
-### <a name="the-required-overhead"></a>오버 헤드가 필요 합니다.
+### <a name="the-required-overhead"></a>필요한 오버 헤드
 
-에 대 한 약간의 오버 헤드가 필요 **WhereAmI** 위치 추적기를 사용 하도록 합니다. 모든 프로젝트에 첫 번째는 **WhereAmI** 솔루션에서 해당 프로젝트에 대 한 참조가 있어야 합니다. **Xamarin.FormsBook.Platform**, 및 각 **WhereAmI** 프로젝트 호출 해야 합니다는 `Toolkit.Init` 메서드.
+**WhereAmI** 가 location tracker를 사용 하려면 약간의 오버 헤드가 필요 합니다. 먼저 **WhereAmI** 솔루션의 모든 프로젝트에 **xamarin.ios**의 해당 프로젝트에 대 한 참조가 있어야 하 고 각 **WhereAmI** 프로젝트가 `Toolkit.Init` 메서드를 호출 해야 합니다.
 
-위치 권한이 형식의 몇 가지 추가 플랫폼별 오버 헤드가 필요합니다.
+위치 권한 형식의 일부 추가 플랫폼별 오버 헤드가 필요 합니다.
 
-#### <a name="location-permission-for-ios"></a>IOS에 대 한 위치 사용 권한
+#### <a name="location-permission-for-ios"></a>IOS에 대 한 위치 권한
 
-Ios의 경우는 **info.plist** 파일에는 해당 사용자의 위치를 가져오는 허용 여부를 묻는 질문의 텍스트를 포함 하는 항목이 포함 되어야 합니다.
+IOS의 경우 **info.plist** 파일은 사용자의 위치를 가져올 수 있도록 사용자에 게 요청 하는 질문의 텍스트가 포함 된 항목을 포함 해야 합니다.
 
 #### <a name="location-permissions-for-android"></a>Android에 대 한 위치 권한
 
-사용자의 위치는 android 응용 프로그램에는 AndroidManifest.xml 파일에는 ACCESS_FILE_LOCATION 권한이 있어야 합니다.
+사용자 위치를 가져오는 Android 응용 프로그램은 AndroidManifest .xml 파일에 ACCESS_FILE_LOCATION 권한이 있어야 합니다.
 
 #### <a name="location-permissions-for-the-uwp"></a>UWP에 대 한 위치 권한
 
-유니버설 Windows 플랫폼 응용 프로그램을 있어야를 `location` Package.appxmanifest 파일에서 장치 기능이 표시 합니다.
+유니버설 Windows 플랫폼 응용 프로그램은 appxmanifest.xml 파일에 표시 된 `location` 장치 기능을 포함 해야 합니다.
 
-## <a name="working-with-xamarinformsmaps"></a>Xamarin.Forms.Maps 사용
+## <a name="working-with-xamarinformsmaps"></a>Xamarin.ios 사용
 
-몇 가지 요구 사항을 사용에 관련 된 `Map` 클래스입니다.
+`Map` 클래스를 사용 하는 데는 몇 가지 요구 사항이 있습니다.
 
 ### <a name="the-nuget-package"></a>NuGet 패키지
 
-합니다 **Xamarin.Forms.Maps** NuGet 라이브러리 응용 프로그램 솔루션에 추가 해야 합니다. 버전 번호와 동일 해야 합니다 **Xamarin.Forms** 현재 설치 된 패키지입니다.
+응용 프로그램 솔루션에 **Xamarin.ios** NuGet 라이브러리를 추가 해야 합니다. 버전 번호는 현재 설치 되어 있는 **Xamarin. Forms** 패키지와 동일 해야 합니다.
 
-### <a name="initializing-the-maps-package"></a>맵 패키지를 초기화합니다.
+### <a name="initializing-the-maps-package"></a>맵 패키지 초기화
 
-응용 프로그램 프로젝트를 호출 해야 합니다 `Xamarin.FormsMaps.Init` 에 대 한 호출을 수행한 후 메서드 `Xamarin.Forms.Forms.Init`합니다.
+응용 프로그램 프로젝트는 `Xamarin.Forms.Forms.Init`를 호출한 후 `Xamarin.FormsMaps.Init` 메서드를 호출 해야 합니다.
 
-### <a name="enabling-map-services"></a>지도 서비스를 사용 하도록 설정
+### <a name="enabling-map-services"></a>Map services 사용
 
-때문에 `Map` 사용자의 위치를 가져올 수 있습니다, 응용 프로그램에는이 장 앞부분에서 설명한 방식으로 사용자에 대 한 권한을 얻어야 합니다.
+`Map` 사용자의 위치를 가져올 수 있으므로 응용 프로그램은이 챕터의 앞부분에서 설명한 방식으로 사용자에 대 한 권한을 받아야 합니다.
 
-#### <a name="enabling-ios-maps"></a>IOS를 사용 하도록 설정 하면 맵
+#### <a name="enabling-ios-maps"></a>IOS 맵 사용
 
-사용 하 여 iOS 응용 프로그램 `Map` info.plist 파일에서 두 줄을 해야 합니다.
+`Map`를 사용 하는 iOS 응용 프로그램은 info.plist 파일에 두 줄이 필요 합니다.
 
-#### <a name="enabling-android-maps"></a>Android를 사용 하도록 설정 하면 맵
+#### <a name="enabling-android-maps"></a>Android 맵 사용
 
-권한 부여 키는 Google 지도 서비스를 사용 하기 위해 필요 합니다. 이 키에 삽입 되는 **AndroidManifest.xml** 파일입니다. 또한 합니다 **AndroidManifest.xml** 파일에 필요한 `manifest` 사용자의 위치 가져오기에 관련 된 태그입니다.
+Google Map services를 사용 하려면 인증 키가 필요 합니다. 이 키는 **Androidmanifest .xml** 파일에 삽입 됩니다. 또한 **Androidmanifest .xml** 파일에는 사용자의 위치를 가져오는 데 필요한 `manifest` 태그가 필요 합니다.
 
-#### <a name="enabling-uwp-maps"></a>UWP를 사용 하도록 설정 하면 맵
+#### <a name="enabling-uwp-maps"></a>UWP 맵 사용
 
-유니버설 Windows 플랫폼 응용 프로그램을 Bing Maps를 사용 하 여 권한 부여 키가 필요 합니다. 이 키에 대 한 인수로 전달 되는 `Xamarin.FormsMaps.Init` 메서드. 위치 서비스에 대 한 응용 프로그램을 사용할 수도 있어야 합니다.
+유니버설 Windows 플랫폼 응용 프로그램에는 Bing Maps를 사용 하기 위한 인증 키가 필요 합니다. 이 키는 `Xamarin.FormsMaps.Init` 메서드에 인수로 전달 됩니다. 응용 프로그램 에서도 위치 서비스를 사용 하도록 설정 해야 합니다.
 
-### <a name="the-unadorned-map"></a>표시 되지 않은 맵
+### <a name="the-unadorned-map"></a>되지 않은 맵
 
-[ **MapDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/MapDemos) 이루어져 있습니다 샘플을 [MapsDemoHomePage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml) 파일 및 [MapsDemoHomePage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml.cs) 코드 숨김 파일 다양 한 데모 프로그램을 이동할 수 있습니다.
+[**Mapdemos**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/MapDemos) 샘플은 다양한 데모 프로그램 탐색을 허용하는 [MapsDemoHomePage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml) 파일 및 [MapsDemoHomePage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml.cs) 코드 숨김으로 구성되어 있습니다.
 
-합니다 [BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml) 파일을 표시 하는 방법을 보여 줍니다 합니다 [ `Map` ](xref:Xamarin.Forms.Maps.Map) 보기. 마시는, 기본적으로 표시 되지만 사용자가 지도 조작할 수 있습니다.
+[Basicmappage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml) 파일은 [`Map`](xref:Xamarin.Forms.Maps.Map) 보기를 표시 하는 방법을 보여 줍니다. 기본적으로 로마 도시는 표시 되지만 사용자가 지도를 조작할 수 있습니다.
 
-가로 및 세로 스크롤을 사용 하지 않으려면 다음을 설정 합니다 [ `HasScrollEnabled` ](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled) 속성을 `false`입니다. 확대/축소를 사용 하지 않으려면 설정할 [ `HasZoomEnabled` ](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) 하려면 `false`합니다. 이러한 속성 모든 플랫폼에서 작동 하지 않을 수 있습니다.
+가로 및 세로 스크롤을 사용 하지 않도록 설정 하려면 [`HasScrollEnabled`](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled) 속성을 `false`로 설정 합니다. 확대/축소를 사용 하지 않도록 설정 하려면 [`HasZoomEnabled`](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) 를 `false`로 설정 합니다. 이러한 속성은 일부 플랫폼에서 작동 하지 않을 수 있습니다.
 
-### <a name="streets-and-terrain"></a>거리와 지형
+### <a name="streets-and-terrain"></a>거리 및 지형
 
-설정 하 여 다양 한 유형의 지도 표시할 수 있습니다 합니다 `Map` 속성 [ `MapType` ](xref:Xamarin.Forms.Maps.Map.MapType) 형식의 [ `MapType` ](xref:Xamarin.Forms.Maps.MapType), 세 가지 멤버로 구성 된 열거형:
+형식이 [`MapType`](xref:Xamarin.Forms.Maps.MapType) [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) `Map` 속성을 설정 하 여 다양 한 형식의 맵을 표시할 수 있습니다 .이 열거형의 멤버는
 
 - [`Street`](xref:Xamarin.Forms.Maps.MapType.Street)기본값
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
 - [`Hybrid`](xref:Xamarin.Forms.Maps.MapType.Hybrid)
 
-합니다 [MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) 파일에는 지도 유형을 선택 하려면 라디오 단추를 사용 하는 방법을 보여 줍니다. 것 활용 합니다 [ `RadioButtonManager` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) 클래스를 [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리 및 클래스를 기반으로 [MapTypeRadioButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) 파일입니다.
+[Maptype 페이지 .xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypesPage.xaml) 파일은 라디오 단추를 사용 하 여 지도 유형을 선택 하는 방법을 보여 줍니다. [MapTypeRadioButton](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapTypeRadioButton.xaml) 파일을 기반으로 하는 클래스 및 [**xamarin.ios**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`RadioButtonManager`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/RadioButtonManager.cs) 클래스를 사용 합니다.
 
 ### <a name="map-coordinates"></a>지도 좌표
 
-프로그램을 가져오면 현재 영역은 합니다 `Map` 를 통해 표시 되는 [ `VisibleRegion` ](xref:Xamarin.Forms.Maps.Map.VisibleRegion) 속성입니다. 이 속성은 *되지* 바인딩 가능한 속성으로 지원 하도록 지정 하는 변경 된 경우, 속성을 모니터링 하고자 하는 프로그램은 해당 목적을 위해 타이머를 사용 아마도 알림 메커니즘이 없습니다.
+프로그램은 `Map` [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion) 속성을 통해 표시 되는 현재 영역을 가져올 수 있습니다. 이 속성은 바인딩 가능한 속성에 의해 지원 *되지* 않으며 변경 된 시간을 나타내는 알림 메커니즘이 없기 때문에 속성을 모니터링 하려는 프로그램은 해당 목적으로 타이머를 사용 해야 합니다.
 
-`VisibleRegion` 유형의 [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), 4 개의 읽기 전용 속성을 사용 하 여 클래스:
+`VisibleRegion`는 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan)형식 이며, 4 개의 읽기 전용 속성이 있는 클래스입니다.
 
-- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) 형식의 [`Position`](xref:Xamarin.Forms.Maps.Position)
-- [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) 형식의 `double`, 지도의 표시 영역 높이 나타내는
-- [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) 형식의 `double`, 지도의 표시 영역 너비를 나타내는
-- [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) 형식의 [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), 지도 가장 큰 순환 영역 크기를 나타내는
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center)([`Position`](xref:Xamarin.Forms.Maps.Position) 형식)
+- 맵의 표시 된 영역 높이를 나타내는 `double`형식의 [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees)
+- 맵의 표시 된 영역 너비를 나타내는 `double`형식의 [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) 입니다.
+- 지도에 표시 되는 가장 큰 원형 영역의 크기를 나타내는 [`Distance`](xref:Xamarin.Forms.Maps.Distance)형식의 [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius)
 
-`Position` 및 `Distance` 두 구조입니다. `Position` 통해 설정 하는 두 개의 읽기 전용 속성을 정의 합니다 [ `Position` 생성자](xref:Xamarin.Forms.Maps.Position.%23ctor(System.Double,System.Double)):
+`Position`와 `Distance`는 모두 구조체입니다. `Position` [`Position` 생성자](xref:Xamarin.Forms.Maps.Position.%23ctor(System.Double,System.Double))를 통해 설정 된 두 개의 읽기 전용 속성을 정의 합니다.
 
 - [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude)
 - [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude)
 
-`Distance` 미터법과 영국식 단위 간의 변환 하 여 거리 단위에 관계 없이 제공 됩니다. `Distance` 여러 가지 방법으로 값을 만들 수 있습니다.
+`Distance`는 메트릭과 영어 단위를 변환 하 여 단위 독립적 거리를 제공 하기 위한 것입니다. `Distance` 값은 여러 가지 방법으로 만들 수 있습니다.
 
-- [`Distance` 생성자](xref:Xamarin.Forms.Maps.Distance.%23ctor(System.Double)) 미터에서 거리를 사용 하 여
+- 거리가 미터 인 [`Distance` 생성자](xref:Xamarin.Forms.Maps.Distance.%23ctor(System.Double))
 - [`Distance.FromMeters`](xref:Xamarin.Forms.Maps.Distance.FromMeters(System.Double)) 정적 메서드
 - [`Distance.FromKilometers`](xref:Xamarin.Forms.Maps.Distance.FromKilometers(System.Double)) 정적 메서드
 - [`Distance.FromMiles`](xref:Xamarin.Forms.Maps.Distance.FromMiles(System.Double)) 정적 메서드
 
-값은 세 가지 속성에서 사용할 수 있습니다.
+값은 다음 세 가지 속성에서 사용할 수 있습니다.
 
-- [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters) 형식의 `double`
-- [`Kilometers`](xref:Xamarin.Forms.Maps.Distance.Kilometers) 형식의 `double`
-- [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles) 형식의 `double`
+- [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters)(`double` 형식)
+- [`Kilometers`](xref:Xamarin.Forms.Maps.Distance.Kilometers)(`double` 형식)
+- [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles)(`double` 형식)
 
-합니다 [MapCoordinatesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml) 파일에는 몇 `Label` 표시에 대 한 요소는 `MapSpan` 정보입니다. 합니다 [MapCoordinatesPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml.cs) 코드 숨김 파일 타이머를 사용 하 여 지도 조작 하는 사용자에 따라 업데이트 정보를 유지 합니다.
+[MapCoordinatesPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml) 파일에는 `MapSpan` 정보를 표시 하기 위한 여러 `Label` 요소가 포함 되어 있습니다. [MapCoordinatesPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml.cs) 코드를 사용 하는 파일은 사용자가 맵을 조작할 때 정보를 업데이트 하는 데 타이머를 사용 합니다.
 
 ### <a name="position-extensions"></a>위치 확장
 
-명명 된이 책에 대 한 새 라이브러리 [ **Xamarin.FormsBook.Toolkit.Maps** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps) 맵 관련 있지만 플랫폼 독립적인 형식을 포함 합니다. [ `PositionExtensions` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) 클래스에는 `ToString` 에 대 한 메서드 `Position`, 및 간 거리를 계산 하는 방법을 `Position` 값입니다.
+이름이 [**xamarin.ios**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit.Maps) 인이 책의 새 라이브러리에는 맵 전용 및 플랫폼 독립적인 형식이 포함 되어 있습니다. [`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) 클래스에는 `Position`에 대 한 `ToString` 메서드와 두 `Position` 값 사이의 거리를 계산 하는 메서드가 있습니다.
 
-### <a name="setting-an-initial-location"></a>초기 위치를 설정합니다.
+### <a name="setting-an-initial-location"></a>초기 위치 설정
 
-호출할 수 있습니다 합니다 [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)) 메서드의 `Map` 프로그래밍 방식으로 지도에 위치 및 확대/축소 수준을 설정 하려면. 형식 인수가 `MapSpan`합니다. 만들 수는 `MapSpan` 다음 중 하나를 사용 하 여 개체:
+`Map`의 [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)) 메서드를 호출 하 여 지도에 위치 및 확대/축소 수준을 프로그래밍 방식으로 설정할 수 있습니다. 인수의 형식은 `MapSpan`입니다. 다음 중 하나를 사용 하 여 `MapSpan` 개체를 만들 수 있습니다.
 
-- [`MapSpan` 생성자](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double)) 사용 하 여는 `Position`, 및 위 도와 경도 범위
-- [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance)) 사용 하 여를 `Position` 및 radius
+- `Position`, 위도 및 경도 범위가 있는 [`MapSpan` 생성자](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double))
+- `Position` 및 radius를 사용 하 여 [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance))
 
-새 수 이기도 `MapSpan` 메서드를 사용 하 여 기존에서 [ `ClampLatitude` ](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double)) 하거나 [ `WithZoom` ](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double))합니다.
+[`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double)) 또는 [`WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double))메서드를 사용 하 여 기존 항목에서 새 `MapSpan`를 만들 수도 있습니다.
 
-[WyomingPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) 파일 및 [WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) 코드 숨김 파일을 사용 하는 방법에 설명 합니다 `MoveToRegion` 와이오밍 상태를 표시 하는 방법입니다.
+[WyomingPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) 파일 및 [WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) 코드를 사용 하는 파일은 `MoveToRegion` 메서드를 사용 하 여 와이오밍의 상태를 표시 하는 방법을 보여 줍니다.
 
-사용할 수 있습니다 합니다 [ `Map` 생성자](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) 사용 하 여를 `MapSpan` map의 위치를 초기화할 개체입니다. 합니다 [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) 파일 샌프란시스코에 Xamarin의 본사를 표시 하는 XAML에서 전체적으로이 작업을 수행 하는 방법을 보여 줍니다.
+또는 [`Map` 생성자](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) 를 `MapSpan` 개체와 함께 사용 하 여 맵의 위치를 초기화할 수 있습니다. [XamarinHQPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) 파일은 완전히 xaml로이 작업을 수행 하 여 샌프란시스코에서 Xamarin의 사령부를 표시 하는 방법을 보여 줍니다.
 
 ### <a name="dynamic-zooming"></a>동적 확대/축소
 
-사용할 수는 `Slider` 동적 맵을 확대/축소 합니다. 합니다 [RadiusZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/RadiusZoomPage.xaml) 파일 및 [RadiusZoomPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/RadiusZoomPage.xaml.cs) 코드 숨김 파일에 따라 지도의 반지름을 변경 하는 방법을 표시 합니다 `Slider` 값입니다.
+`Slider`를 사용 하 여 지도를 동적으로 확대/축소할 수 있습니다. [RadiusZoomPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/RadiusZoomPage.xaml) 파일 및 [RadiusZoomPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/RadiusZoomPage.xaml.cs) 코드 숨김 파일에서는 `Slider` 값을 기준으로 지도의 반경을 변경 하는 방법을 보여 줍니다.
 
-합니다 [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LongitudeZoomPage.xaml) 파일 및 [LongitudeZoomPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LongitudeZoomPage.xaml.cs) 코드 숨김 파일에는 Android에서 더 잘 작동 하는 또 다른 방법은 표시 하지만 두 가지 방식에서 Windows 플랫폼입니다.
+[LongitudeZoomPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LongitudeZoomPage.xaml) 파일 및 [LongitudeZoomPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LongitudeZoomPage.xaml.cs) 코드 숨김 파일에는 Android에서 더 잘 작동 하는 다른 방법이 표시 되지만 두 방법 모두 Windows 플랫폼에서 제대로 작동 하지 않습니다.
 
-### <a name="the-phones-location"></a>휴대폰의 위치
+### <a name="the-phones-location"></a>전화의 위치
 
-[ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) 의 속성 `Map` 약간으로 각 플랫폼에서 다르게 작동 합니다 [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) 파일을 보여 줍니다.
+`Map`의 [`IsShowingUser`](xref:Xamarin.Forms.Maps.Map.IsShowingUser) 속성은 각 플랫폼에서 Showlocationpage로 약간 다르게 작동 [합니다. xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) 파일은 다음을 보여 줍니다.
 
-- IOS에서 파랑 점 휴대폰의 위치를 나타내는 있지만 있습니다에 수동으로 이동 해야 합니다.
-- Android에서는 아이콘이 표시 됩니다 때 푸시 이동 휴대폰의 위치에 매핑
-- UWP는 iOS와 유사 하지만 경우에 따라 자동으로 위치로 이동
+- IOS에서 파란색 점은 휴대폰의 위치를 나타내지만 수동으로 이동 해야 합니다.
+- Android에서 푸시 될 때 지도를 전화의 위치로 이동할 때 아이콘이 표시 됩니다.
+- UWP는 iOS와 유사 하지만 때때로 자동으로 이동 하는 위치로 이동 합니다.
 
-합니다 **MapDemos** 프로젝트는 Android 접근 방식을 기반으로 하는 아이콘 기반 단추를 먼저 정의 함으로써 모방 하기 위해 시도 합니다 [MyLocationButton.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MyLocationButton.xaml) 파일 및 [MyLocationButton.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MyLocationButton.xaml.cs) 코드 숨김 파일입니다.
+**Mapdemos** 프로젝트는 먼저 [mylocationbutton .xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MyLocationButton.xaml) 파일 및 [MyLocationButton.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MyLocationButton.xaml.cs) 파일을 기반으로 아이콘 기반 단추를 정의 하 여 Android 접근 방식을 모방 하려고 합니다.
 
-합니다 [GoToLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GoToLocationPage.xaml) 파일 및 [GoToLocationPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GoToLocationPage.xaml.cs) 휴대폰의 위치로 이동 하려면이 단추를 사용 하는 코드 숨김 파일입니다.
+[GoToLocationPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GoToLocationPage.xaml) 파일 및 [GoToLocationPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GoToLocationPage.xaml.cs) 코드 숨김이이 단추를 사용 하 여 휴대폰의 위치로 이동 합니다.
 
-### <a name="pins-and-science-museums"></a>Pin 및 과학 박물관
+### <a name="pins-and-science-museums"></a>핀 및 과학 museums
 
-마지막으로, 합니다 `Map` 클래스 정의 [ `Pins` ](xref:Xamarin.Forms.Maps.Map.Pins) 형식의 속성 `IList<Pin>`합니다. 합니다 [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) 클래스 네 가지 속성을 정의 합니다.
+마지막으로 `Map` 클래스는 `IList<Pin>`형식의 [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins) 속성을 정의 합니다. [`Pin`](xref:Xamarin.Forms.Maps.Pin) 클래스는 네 가지 속성을 정의 합니다.
 
-- [`Label`](xref:Xamarin.Forms.Maps.Pin.Label) 형식의 `string`, 필수 속성
-- [`Address`](xref:Xamarin.Forms.Maps.Pin.Address) 형식의 `string`, 사람이 읽을 수는 선택적 주소
-- [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) 형식의 `Position`, pin 지도에 표시 되는 위치를 나타내는
-- [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) 형식의 [ `PinType` ](xref:Xamarin.Forms.Maps.PinType), 사용 되지 않는 열거형
+- 필수 속성인 `string`형식의 [`Label`](xref:Xamarin.Forms.Maps.Pin.Label)
+- 사람이 읽을 수 있는 선택적 주소인 `string`형식의 [`Address`](xref:Xamarin.Forms.Maps.Pin.Address)
+- 맵에 핀이 표시 되는 위치를 나타내는 `Position`형식의 [`Position`](xref:Xamarin.Forms.Maps.Pin.Position)
+- 사용 되지 않는 열거형 [`PinType`](xref:Xamarin.Forms.Maps.PinType)형식의 [`Type`](xref:Xamarin.Forms.Maps.Pin.Type)
 
-합니다 **MapDemos** 프로젝트 파일이 [ScienceMuseums.xml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml), 미국에 과학 박물관을 나열 하는 및 [ `Locations` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs) 및 [ `Site` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs) 이 데이터를 역직렬화 하는 동안에 클래스입니다.
+**Mapdemos** 프로젝트에는 [ScienceMuseums](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml)파일이 포함 되어 있으며,이 파일에는 미국에서 과학 museums을 나열 하 고,이 데이터를 deserialize 하기 위한 [`Locations`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs) 및 [`Site`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs) 클래스가 있습니다.
 
-합니다 [ScienceMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ScienceMuseumsPage.xaml) 파일 및 [ScienceMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ScienceMuseumsPage.xaml.cs) 맵에서 이러한 과학 박물관에 대 한 코드 숨김 파일 표시 pin입니다. 사용자가 pin을 누르면 고 박물관에 대 한 웹 사이트와 주소를 표시 합니다.
+[ScienceMuseumsPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ScienceMuseumsPage.xaml) 파일과 [ScienceMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ScienceMuseumsPage.xaml.cs) 파일은 지도에 이러한 과학 museums에 대 한 핀을 표시 합니다. 사용자는 pin을 탭 할 때 박물관의 주소와 웹 사이트를 표시 합니다.
 
-### <a name="the-distance-between-two-points"></a>두 점 사이의 거리
+### <a name="the-distance-between-two-points"></a>두 요소 사이의 거리입니다.
 
-[ `PositionExtensions` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) 클래스를 포함 한 [ `DistanceTo` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs#L88) 간소화 된 두 지리적 위치 사이의 거리를 계산을 사용 하 여 메서드.
+[`PositionExtensions`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs) 클래스에는 두 지리적 위치 간의 거리를 단순화 하는 [`DistanceTo`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit.Maps/Xamarin.FormsBook.Toolkit.Maps/PositionExtensions.cs#L88) 메서드가 포함 되어 있습니다.
 
-이 [LocalMuseumsPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) 파일 및 [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) 표시할 또한 거리는 박물관에 사용자의 위치에서 코드 숨김 파일:
+[LocalMuseumsPage](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml) 파일 및 [LocalMuseumsPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/LocalMuseumsPage.xaml.cs) 코드를 사용 하 여 사용자의 위치에서 박물관 까지의 거리를 표시 합니다.
 
-[![삼중 로컬 박물관 페이지 스크린샷](images/ch28fg28-small.png "위치로 거리")](images/ch28fg28-large.png#lightbox "위치로 거리")
+[![로컬 Museums 페이지의 삼중 스크린샷](images/ch28fg28-small.png "위치에 대 한 거리")](images/ch28fg28-large.png#lightbox "위치에 대 한 거리")
 
-프로그램에는 동적으로 지도 위치에 따라 pin 수를 제한 하는 방법을 보여 줍니다.
+또한 프로그램은 지도의 위치를 기준으로 핀의 수를 동적으로 제한 하는 방법을 보여 줍니다.
 
-## <a name="geocoding-and-back-again"></a>지 오 코딩 한 후 다시 돌아오기
+## <a name="geocoding-and-back-again"></a>다시 지 오 코딩
 
-[ **Xamarin.Forms.Maps** ](xref:Xamarin.Forms.Maps) 어셈블리 포함는 [ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 [ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) 변환 하는 메서드 0 또는 보다 가능한 지리적 위치 및 다른 메서드는 텍스트 주소 [ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) 반대 방향에서으로 변환 하는 합니다.
+또한 [**xamarin.ios**](xref:Xamarin.Forms.Maps) 어셈블리에는 텍스트 주소를 0 개 이상의 가능한 지리적 위치로 변환 하는 [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) 메서드를 포함 하는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 클래스와 다른 메서드 [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) 를 변환 하는 다른 메서드가 포함 되어 있습니다. 방향도.
 
-합니다 [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) 파일 및 [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) 코드 숨김 파일에서이 기능을 보여 줍니다.
+[GeocoderRoundTrip](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) 파일 및 [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) 코드 숨김이이 기능을 보여 줍니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [28 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)
 - [28 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
-- [Xamarin.Forms 맵](~/xamarin-forms/user-interface/map.md)
+- [Xamarin.ios 맵](~/xamarin-forms/user-interface/map/index.md)
