@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: b53c58a5e859bf7752855c3954666a062261599d
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: e38987006025dad1c2ff49c3ea8916e2075d61d7
+ms.sourcegitcommit: d1d4700b3b1b417a9d7b7da85ab5d28f8e8e599d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697742"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73649301"
 ---
 # <a name="xamarinforms-refreshview"></a>Xamarin.ios RefreshView
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
-@No__t_0는 스크롤 가능한 콘텐츠의 기능을 새로 고치기 위해 끌어오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식은 [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)또는 [`ListView`](xref:Xamarin.Forms.ListView)와 같이 스크롤할 수 있는 컨트롤 이어야 합니다.
+`RefreshView`는 스크롤 가능한 콘텐츠의 기능을 새로 고치기 위해 끌어오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식은 [`ScrollView`](xref:Xamarin.Forms.ScrollView), [`CollectionView`](xref:Xamarin.Forms.CollectionView)또는 [`ListView`](xref:Xamarin.Forms.ListView)와 같이 스크롤할 수 있는 컨트롤 이어야 합니다.
 
 `RefreshView`는 다음 속성을 정의 합니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "72697742"
 </RefreshView>
 ```
 
-@No__t_0 코드에서 만들 수도 있습니다.
+`RefreshView` 코드에서 만들 수도 있습니다.
 
 ```csharp
 RefreshView refreshView = new RefreshView();
@@ -68,9 +68,9 @@ scrollView.Content = flexLayout;
 refreshView.Content = scrollView;
 ```
 
-이 예제에서 `RefreshView`은 자식이 [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) [`ScrollView`](xref:Xamarin.Forms.ScrollView) 에 기능을 새로 고치는 기능을 제공 합니다. @No__t_0는 항목 컬렉션에 바인딩하여 바인딩 가능한 레이아웃을 사용 하 여 콘텐츠를 생성 하 고 각 항목의 모양을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)설정 합니다. 바인딩 가능한 레이아웃에 대 한 자세한 내용은 [xamarin.ios의 바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)을 참조 하세요.
+이 예제에서 `RefreshView`은 자식이 [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) [`ScrollView`](xref:Xamarin.Forms.ScrollView) 에 기능을 새로 고치는 기능을 제공 합니다. `FlexLayout`는 항목 컬렉션에 바인딩하여 바인딩 가능한 레이아웃을 사용 하 여 콘텐츠를 생성 하 고 각 항목의 모양을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)설정 합니다. 바인딩 가능한 레이아웃에 대 한 자세한 내용은 [xamarin.ios의 바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)을 참조 하세요.
 
-@No__t_0 속성의 값은 `RefreshView`의 현재 상태를 나타냅니다. 사용자가 새로 고침을 트리거하는 경우이 속성은 자동으로 `true`로 전환 됩니다. 새로 고침이 완료 되 면 속성을 `false`으로 다시 설정 해야 합니다.
+`RefreshView.IsRefreshing` 속성의 값은 `RefreshView`의 현재 상태를 나타냅니다. 사용자가 새로 고침을 트리거하는 경우이 속성은 자동으로 `true`로 전환 됩니다. 새로 고침이 완료 되 면 속성을 `false`으로 다시 설정 해야 합니다.
 
 사용자가 새로 고침을 시작 하면 `Command` 속성으로 정의 된 `ICommand` 실행 되어 표시 되는 항목을 새로 고쳐야 합니다. 새로 고침이 발생 하는 동안 애니메이션 처리 원으로 구성 된 새로 고침 시각화가 표시 됩니다.
 
@@ -81,7 +81,7 @@ refreshView.Content = scrollView;
 
 ## <a name="refreshview-appearance"></a>RefreshView 모양
 
-[@No__t_2](xref:Xamarin.Forms.VisualElement) 클래스에서 상속 `RefreshView`는 속성 외에도 `RefreshColor` 속성도 정의 `RefreshView`. 이 속성을 설정 하 여 새로 고침 중에 표시 되는 진행률 원의 색을 정의할 수 있습니다.
+[`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스에서 상속 `RefreshView`는 속성 외에도 `RefreshColor` 속성도 정의 `RefreshView`. 이 속성을 설정 하 여 새로 고침 중에 표시 되는 진행률 원의 색을 정의할 수 있습니다.
 
 ```xaml
 <RefreshView RefreshColor="Teal"
@@ -105,6 +105,6 @@ refreshView.Content = scrollView;
 
 ## <a name="related-links"></a>관련 링크
 
-- [RefreshView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshview/)
+- [RefreshView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 - [Xamarin.ios의 바인딩 가능한 레이아웃](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
 - [RefreshView 풀 방향 플랫폼 관련](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

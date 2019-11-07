@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/31/2019
-ms.openlocfilehash: dd451ae1acd233c1d3de675357bb172f25716f59
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.date: 11/06/2019
+ms.openlocfilehash: 038ff27907573c1fe15516f6f4caf26d0892ab9f
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426290"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662337"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.ios 맵 초기화 및 구성
 
@@ -43,6 +43,8 @@ UWP (유니버설 Windows 플랫폼)에서이는 `MainPage` 생성자에서 `Xam
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 ```
+
+UWP에 필요한 인증 토큰에 대 한 자세한 내용은 [유니버설 Windows 플랫폼](#universal-windows-platform)를 참조 하세요.
 
 NuGet 패키지를 추가 하 고 각 응용 프로그램 내에서 초기화 메서드를 호출 하면 공유 코드 프로젝트에서 `Xamarin.Forms.Maps` Api를 사용할 수 있습니다.
 
@@ -244,6 +246,20 @@ UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map s
       <DeviceCapability Name="location"/>
     </Capabilities>
     ```
+
+#### <a name="release-builds"></a>릴리스 빌드
+
+UWP 릴리스 빌드는 .NET 네이티브 컴파일을 사용 하 여 응용 프로그램을 네이티브 코드로 직접 컴파일합니다. 그러나이로 인해 UWP의 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤에 대 한 렌더러는 실행 파일에서 연결 되지 않을 수 있습니다. **App.xaml.cs**에서 `Forms.Init` 메서드의 UWP 관련 오버 로드를 사용 하 여이 문제를 해결할 수 있습니다.
+
+```csharp
+var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };
+Xamarin.Forms.Forms.Init(e, assembliesToInclude);
+```
+
+이 코드는 `Xamarin.Forms.Maps.UWP.MapRenderer` 클래스가 있는 어셈블리를 `Forms.Init` 메서드에 전달 합니다. 이렇게 하면 어셈블리가 .NET 네이티브 컴파일 프로세스에 의해 실행 파일에 연결 되지 않습니다.
+
+> [!IMPORTANT]
+> 이 작업을 수행 하지 못하면 릴리스 빌드를 실행할 때 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤이 나타나지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 

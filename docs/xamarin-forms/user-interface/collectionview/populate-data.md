@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 5afdaa9afa4c5ced39498a1cb45de07fe4bf4195
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
+ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696703"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73662324"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.ios CollectionView 데이터
 
@@ -32,7 +32,7 @@ ms.locfileid: "72696703"
 
 ## <a name="populate-a-collectionview-with-data"></a>데이터를 사용 하 여 CollectionView 채우기
 
-[@No__t_1](xref:Xamarin.Forms.CollectionView) [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성을 `IEnumerable`를 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다. 문자열 배열에서 `ItemsSource` 속성을 초기화 하 여 XAML에 항목을 추가할 수 있습니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성을 `IEnumerable`를 구현 하는 컬렉션으로 설정 하 여 데이터로 채워집니다. 문자열 배열에서 `ItemsSource` 속성을 초기화 하 여 XAML에 항목을 추가할 수 있습니다.
 
 ```xaml
 <CollectionView>
@@ -69,14 +69,17 @@ collectionView.ItemsSource = new string[]
 };
 ```
 
-> [!IMPORTANT]
-> 기본 컬렉션에서 항목이 추가, 제거 또는 변경 될 때 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 를 새로 고쳐야 하는 경우 기본 컬렉션은 `ObservableCollection`와 같은 속성 변경 알림을 보내는 `IEnumerable` 컬렉션 이어야 합니다.
+> [!WARNING]
+> [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) UI 스레드 외부에서 업데이트 되는 경우 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 예외를 throw 합니다.
 
 기본적으로 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 다음 스크린샷에 표시 된 것 처럼 세로 목록에 항목을 표시 합니다.
 
 [![IOS 및 Android에서 텍스트 항목을 포함 하는 CollectionView의 스크린샷](populate-data-images/text.png "CollectionView의 텍스트 항목")](populate-data-images/text-large.png#lightbox "CollectionView의 텍스트 항목")
 
-[@No__t_1](xref:Xamarin.Forms.CollectionView) 레이아웃을 변경 하는 방법에 대 한 자세한 내용은 [xamarin.ios CollectionView layout](layout.md)을 참조 하세요. @No__t_0에서 각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 [항목 모양 정의](#define-item-appearance)를 참조 하세요.
+> [!IMPORTANT]
+> 기본 컬렉션에서 항목이 추가, 제거 또는 변경 될 때 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 를 새로 고쳐야 하는 경우 기본 컬렉션은 `ObservableCollection`와 같은 속성 변경 알림을 보내는 `IEnumerable` 컬렉션 이어야 합니다.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 레이아웃을 변경 하는 방법에 대 한 자세한 내용은 [xamarin.ios CollectionView layout](layout.md)을 참조 하세요. `CollectionView`에서 각 항목의 모양을 정의 하는 방법에 대 한 자세한 내용은 [항목 모양 정의](#define-item-appearance)를 참조 하세요.
 
 ### <a name="data-binding"></a>데이터 바인딩
 
@@ -102,7 +105,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 
 ## <a name="define-item-appearance"></a>항목 모양 정의
 
-[@No__t_3](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 설정 하 여 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에 있는 각 항목의 모양을 정의할 수 있습니다.
+[`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 설정 하 여 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에 있는 각 항목의 모양을 정의할 수 있습니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -170,7 +173,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 });
 ```
 
-[@No__t_1](xref:Xamarin.Forms.DataTemplate) 에 지정 된 요소는 목록에 있는 각 항목의 모양을 정의 합니다. 이 예제에서 `DataTemplate` 내의 레이아웃은 [`Grid`](xref:Xamarin.Forms.Grid)를 통해 관리 됩니다. @No__t_0에는 [`Image`](xref:Xamarin.Forms.Image) 개체와 두 개의 [`Label`](xref:Xamarin.Forms.Label) 개체가 포함 되어 있으며,이는 모두 `Monkey` 클래스의 속성에 바인딩됩니다.
+[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 에 지정 된 요소는 목록에 있는 각 항목의 모양을 정의 합니다. 이 예제에서 `DataTemplate` 내의 레이아웃은 [`Grid`](xref:Xamarin.Forms.Grid)를 통해 관리 됩니다. `Grid`에는 [`Image`](xref:Xamarin.Forms.Image) 개체와 두 개의 [`Label`](xref:Xamarin.Forms.Label) 개체가 포함 되어 있으며,이는 모두 `Monkey` 클래스의 속성에 바인딩됩니다.
 
 ```csharp
 public class Monkey
@@ -190,7 +193,7 @@ public class Monkey
 
 ## <a name="choose-item-appearance-at-runtime"></a>런타임에 항목 모양 선택
 
-[@No__t_3](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 개체로 설정 하 여 항목 값을 기준으로 런타임에 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에 있는 각 항목의 모양을 선택할 수 있습니다.
+[`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성을 [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) 개체로 설정 하 여 항목 값을 기준으로 런타임에 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에 있는 각 항목의 모양을 선택할 수 있습니다.
 
 ```xaml
 <ContentPage ...
@@ -224,7 +227,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-[@No__t_1](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성은 `MonkeyDataTemplateSelector` 개체로 설정 됩니다. 다음 예제에서는 `MonkeyDataTemplateSelector` 클래스를 보여 줍니다.
+[`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 속성은 `MonkeyDataTemplateSelector` 개체로 설정 됩니다. 다음 예제에서는 `MonkeyDataTemplateSelector` 클래스를 보여 줍니다.
 
 ```csharp
 public class MonkeyDataTemplateSelector : DataTemplateSelector
@@ -239,18 +242,18 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 }
 ```
 
-@No__t_0 클래스는 다른 데이터 템플릿으로 설정 된 `AmericanMonkey` 및 `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. @No__t_0 재정의는 원숭이 이름에 "아메리카"가 포함 된 경우 원숭이의 이름과 위치를 청록색으로 표시 하는 `AmericanMonkey` 템플릿을 반환 합니다. 원숭이 이름에 "아메리카"가 포함 되지 않은 경우 `OnSelectTemplate` 재정의는 원숭이의 원숭이 이름과 위치를 표시 하는 `OtherMonkey` 템플릿을 반환 합니다.
+`MonkeyDataTemplateSelector` 클래스는 다른 데이터 템플릿으로 설정 된 `AmericanMonkey` 및 `OtherMonkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. `OnSelectTemplate` 재정의는 원숭이 이름에 "아메리카"가 포함 된 경우 원숭이의 이름과 위치를 청록색으로 표시 하는 `AmericanMonkey` 템플릿을 반환 합니다. 원숭이 이름에 "아메리카"가 포함 되지 않은 경우 `OnSelectTemplate` 재정의는 원숭이의 원숭이 이름과 위치를 표시 하는 `OtherMonkey` 템플릿을 반환 합니다.
 
 [![IOS 및 Android에서 CollectionView 런타임 항목 템플릿 선택의 스크린샷](populate-data-images/datatemplateselector.png "CollectionView의 런타임 항목 템플릿 선택")](populate-data-images/datatemplateselector-large.png#lightbox "CollectionView의 런타임 항목 템플릿 선택")
 
 데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
 
 > [!IMPORTANT]
-> [@No__t_1](xref:Xamarin.Forms.CollectionView)사용 하는 경우 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체의 루트 요소를 `ViewCell`로 설정 하지 마십시오. 이로 인해 `CollectionView`에는 셀 개념이 없으므로 예외가 throw 됩니다.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView)사용 하는 경우 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체의 루트 요소를 `ViewCell`로 설정 하지 마십시오. 이로 인해 `CollectionView`에는 셀 개념이 없으므로 예외가 throw 됩니다.
 
 ## <a name="pull-to-refresh"></a>새로 고치려면 끌어오기
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RefreshView`를 통해 기능을 새로 고치는 기능을 지원 합니다 .이를 통해 항목 목록에서 아래로 당겨 데이터를 새로 고칠 수 있습니다. @No__t_0은 자식에서 스크롤 가능한 콘텐츠를 지 원하는 경우 해당 자식에 대 한 기능을 새로 고치는 가져오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식으로 설정 하 여 `CollectionView`에 대 한 끌어오기를 새로 고칩니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RefreshView`를 통해 기능을 새로 고치는 기능을 지원 합니다 .이를 통해 항목 목록에서 아래로 당겨 데이터를 새로 고칠 수 있습니다. `RefreshView`은 자식에서 스크롤 가능한 콘텐츠를 지 원하는 경우 해당 자식에 대 한 기능을 새로 고치는 가져오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식으로 설정 하 여 `CollectionView`에 대 한 끌어오기를 새로 고칩니다.
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -283,9 +286,9 @@ refreshView.Content = collectionView;
 
 [![IOS 및 Android에서 CollectionView 끌어오기-새로 고침의 스크린샷](populate-data-images/pull-to-refresh.png "CollectionView 가져오기-새로 고침")](populate-data-images/pull-to-refresh-large.png#lightbox "CollectionView 가져오기-새로 고침")
 
-@No__t_0 속성의 값은 `RefreshView`의 현재 상태를 나타냅니다. 사용자가 새로 고침을 트리거하는 경우이 속성은 자동으로 `true`로 전환 됩니다. 새로 고침이 완료 되 면 속성을 `false`으로 다시 설정 해야 합니다.
+`RefreshView.IsRefreshing` 속성의 값은 `RefreshView`의 현재 상태를 나타냅니다. 사용자가 새로 고침을 트리거하는 경우이 속성은 자동으로 `true`로 전환 됩니다. 새로 고침이 완료 되 면 속성을 `false`으로 다시 설정 해야 합니다.
 
-@No__t_0에 대 한 자세한 내용은 [Xamarin.ios RefreshView](~/xamarin-forms/user-interface/refreshview.md)를 참조 하세요.
+`RefreshView`에 대 한 자세한 내용은 [Xamarin.ios RefreshView](~/xamarin-forms/user-interface/refreshview.md)를 참조 하세요.
 
 ## <a name="load-data-incrementally"></a>증분 방식으로 데이터 로드
 
@@ -299,7 +302,7 @@ refreshView.Content = collectionView;
 
 또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RemainingItemsThreshold` 항목이 표시 되지 않을 만큼 `CollectionView` 스크롤 될 때 발생 하는 `RemainingItemsThresholdReached` 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 더 많은 항목을 로드할 수 있습니다. 또한 `RemainingItemsThresholdReached` 이벤트가 발생 하면 `RemainingItemsThresholdReachedCommand` 실행 되어 viewmodel에서 증분 데이터 로드가 발생 하도록 할 수 있습니다.
 
-@No__t_0 속성의 기본값은-1입니다 .이 값은 `RemainingItemsThresholdReached` 이벤트가 발생 되지 않음을 나타냅니다. 속성 값이 0 이면 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 의 최종 항목이 표시 될 때 `RemainingItemsThresholdReached` 이벤트가 발생 합니다. 값이 0 보다 큰 경우에는 `ItemsSource`에 아직 스크롤되지 않는 항목 수가 포함 되어 있으면 `RemainingItemsThresholdReached` 이벤트가 발생 합니다.
+`RemainingItemsThreshold` 속성의 기본값은-1입니다 .이 값은 `RemainingItemsThresholdReached` 이벤트가 발생 되지 않음을 나타냅니다. 속성 값이 0 이면 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 의 최종 항목이 표시 될 때 `RemainingItemsThresholdReached` 이벤트가 발생 합니다. 값이 0 보다 큰 경우에는 `ItemsSource`에 아직 스크롤되지 않는 항목 수가 포함 되어 있으면 `RemainingItemsThresholdReached` 이벤트가 발생 합니다.
 
 > [!NOTE]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 `RemainingItemsThreshold` 속성의 유효성을 검사 하 여 해당 값이 항상-1 보다 크거나 같도록 합니다.
@@ -335,7 +338,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> @No__t_0를 viewmodel의 `ICommand` 구현에 바인딩하여 증분 방식으로 데이터를 로드할 수도 있습니다.
+> `RemainingItemsThresholdReachedCommand`를 viewmodel의 `ICommand` 구현에 바인딩하여 증분 방식으로 데이터를 로드할 수도 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
