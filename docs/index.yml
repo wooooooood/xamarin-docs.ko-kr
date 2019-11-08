@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: ced31e2802ab7d0550069b0c96a91b014a33f59d
-  ms.sourcegitcommit: 5110d1279809a2af58d3d66cd14c78113bb51436
+  ms.openlocfilehash: 908c1b347a10404ddeaff49ce5fe0a8e4b0e6ad9
+  ms.sourcegitcommit: 5384b26b3bd07f1e5796fd76cb24a40b3270ebd6
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/08/2019
-  ms.locfileid: "72032520"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73589457"
 highlightedContent:
   items:
   - title: 설정 및 설치
@@ -41,7 +41,7 @@ productDirectory:
     - url: ~/xamarin-forms/xaml/index.yml
       text: Xamarin.Forms XAML
     - url: ~/xamarin-forms/index.yml
-      text: 플랫폼 문서
+      text: 모든 Xamarin.Forms 문서
   - title: Android
     imageSrc: https://docs.microsoft.com/media/logos/logo_android.svg
     links:
@@ -50,7 +50,7 @@ productDirectory:
     - url: ~/android/platform/android-10.md
       text: Android 10
     - url: ~/android/index.yml
-      text: 플랫폼 문서
+      text: 모든 Android 문서
   - title: iOS
     imageSrc: https://docs.microsoft.com/media/common/i_web-apps.svg
     links:
@@ -59,14 +59,14 @@ productDirectory:
     - url: ~/ios/platform/ios13/index.md
       text: iOS 13
     - url: ~/ios/index.yml
-      text: 플랫폼 문서
+      text: 모든 iOS 문서
   - title: Mac
     imageSrc: https://docs.microsoft.com/media/common/i_xplat-code.svg
     links:
     - url: ~/mac/get-started/hello-mac.md
       text: Mac 앱 빌드
     - url: ~/mac/index.yml
-      text: 플랫폼 문서
+      text: 모든 Mac 문서
 conceptualContent:
   title: Xamarin.Forms 시작
   summary: Windows 및 macOS의 Visual Studio에서 C# 및 .NET을 사용하여 플랫폼 간 Android 및 iOS 앱을 빌드합니다.
