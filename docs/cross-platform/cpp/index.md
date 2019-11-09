@@ -4,13 +4,13 @@ title: Xamarin에서 CC++ /라이브러리 사용
 description: Xamarin 및C++ C#를 사용 하 여 플랫폼 간 C/코드를 빌드하고 Android 및 iOS 용 모바일 앱으로 통합 하는 데 Mac용 Visual Studio 사용할 수 있습니다. 이 문서에서는 Xamarin 앱에서 프로젝트를 C++ 설정 하 고 디버그 하는 방법을 설명 합니다.
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/2018
-ms.openlocfilehash: a10d63e8ed152fae3c9e87cbae7bacb25a0d019c
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.date: 11/07/2019
+ms.openlocfilehash: 42a59570d727657b2f3c23bd9d1f37e1205717d0
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206384"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842815"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Xamarin에서 CC++ /라이브러리 사용
 
@@ -26,7 +26,7 @@ Xamarin을 통해 개발자는 Visual Studio를 사용 하 여 플랫폼 간 네
 
 ## <a name="background"></a>배경
 
-C/C++ 는 플랫폼 간 언어로 간주 되지만, 소스 코드는 모든 대상 컴파일러에서 지원 되는 c/C++ 를 사용 하 고 조건부로 포함 된 플랫폼을 포함 하거나 포함 하지 않는 플랫폼을 사용 하 여 실제로 플랫폼 간 이어야 합니다. 컴파일러 관련 코드입니다.
+C/C++ 는 플랫폼 간 언어로 간주 되지만, 소스 코드는 모든 대상 컴파일러에서 지원 되는 c/C++ 를 사용 하 고 조건부로 포함 된 플랫폼 또는 컴파일러 관련 코드를 포함 하지 않는 부분을 사용 하는 것이 중요 합니다.
 
 궁극적으로 코드는 모든 대상 플랫폼에서 성공적으로 컴파일되고 실행 되어야 하므로 대상으로 지정 되는 플랫폼 (및 컴파일러)에서 구축 됩니다. 컴파일러 간의 사소한 차이로 인해 문제가 발생 하 여 각 대상 플랫폼에 대 한 철저 한 테스트 (가능한 자동화)가 점점 더 중요 해지고 있습니다.  
 
@@ -43,11 +43,11 @@ C/C++ 는 플랫폼 간 언어로 간주 되지만, 소스 코드는 모든 대�
 3. .NET 래퍼에 대 한 NuGet 패키지를 압축 하 고 푸시합니다.
 4. Xamarin 앱에서 NuGet 패키지 사용
 
-### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>1 단계: C/C++ 소스 코드를 플랫폼별 네이티브 라이브러리로 컴파일
+### <a name="stage-1-compiling-the-cc-source-code-into-platform-specific-native-libraries"></a>1 단계: 플랫폼 특정 네이티브 라이브러리로C++ C/소스 코드 컴파일
 
 이 단계의 목표는 C# 래퍼에 의해 호출 될 수 있는 네이티브 라이브러리를 만드는 것입니다. 이는 상황에 따라 달라질 수도 있고 관련이 없을 수도 있습니다. 이 일반적인 시나리오에서 다룰 수 있는 많은 도구와 프로세스는이 문서의 범위를 벗어나는 것입니다. 핵심 고려 사항은 C/C++ 코드 베이스를 모든 네이티브 래퍼 코드, 충분 한 단위 테스트 및 빌드 자동화와 동기화 하는 것입니다. 
 
-연습에서 라이브러리는 함께 제공 되는 셸 스크립트와 함께 Visual Studio Code를 사용 하 여 만들어졌습니다. 이 연습에 대 한 확장 버전은 샘플의이 부분에 대해 자세히 설명 하는 [모바일 CAT GitHub 리포지토리에서](https://github.com/xamarin/mobcat/blob/dev/samples/cpp_with_xamarin/) 찾을 수 있습니다. 이 경우 네이티브 라이브러리는 타사 종속성으로 처리 되지만이 단계는 컨텍스트에 대해 설명 되어 있습니다.
+연습에서 라이브러리는 함께 제공 되는 셸 스크립트와 함께 Visual Studio Code를 사용 하 여 만들어졌습니다. 이 연습에 대 한 확장 버전은 샘플의이 부분에 대해 자세히 설명 하는 [모바일 CAT GitHub 리포지토리에서](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) 찾을 수 있습니다. 이 경우 네이티브 라이브러리는 타사 종속성으로 처리 되지만이 단계는 컨텍스트에 대해 설명 되어 있습니다.
 
 간단히 하기 위해이 연습은 아키텍처의 하위 집합만을 대상으로 합니다. IOS의 경우 lipo 유틸리티를 사용 하 여 개별 아키텍처 관련 이진 파일에서 단일 fat 이진 파일을 만듭니다. Android는와 함께 동적 이진 파일을 사용 하므로 확장명 및 iOS는 확장명이 인 정적 fat 이진 파일을 사용 합니다. 
 
@@ -65,38 +65,38 @@ C/C++ 는 플랫폼 간 언어로 간주 되지만, 소스 코드는 모든 대�
 
 세 번째 단계는 이전 단계의 빌드 아티팩트를 사용 하 여 NuGet 패키지를 만드는 것입니다. 이 단계의 결과는 Xamarin 앱에서 사용할 수 있는 NuGet 패키지입니다. 이 연습에서는 로컬 디렉터리를 사용 하 여 NuGet 피드 역할을 수행 합니다. 프로덕션 환경에서이 단계는 패키지를 공용 또는 개인 NuGet 피드에 게시 해야 하며 완전히 자동화 되어야 합니다.
 
-**4 단계: Xamarin Forms 앱에서 NuGet 패키지 사용**
+**4 단계: Xamarin.ios 앱에서 NuGet 패키지 사용**
 
 마지막 단계는 Xamarin.ios 앱에서 NuGet 패키지를 참조 하 고 사용 하는 것입니다. 이렇게 하려면 이전 단계에서 정의한 피드를 사용 하도록 Visual Studio에서 NuGet 피드를 구성 해야 합니다.
 
 피드가 구성 되 면 플랫폼 간 Xamarin.ios 앱의 각 프로젝트에서 패키지를 참조 해야 합니다. ' Bait-switch 트릭 '은 동일한 인터페이스를 제공 하므로 단일 위치에 정의 된 코드를 사용 하 여 네이티브 라이브러리 기능을 호출할 수 있습니다.
 
-소스 코드 리포지토리에는 Azure DevOps에서 개인 NuGet 피드를 설정 하는 방법 및 해당 피드에 패키지를 푸시하는 방법에 대 한 문서가 포함 된 [추가 읽기 목록이](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) 포함 되어 있습니다. 로컬 디렉터리 보다 설치 시간이 약간 더 필요 하지만이 유형의 피드는 팀 개발 환경에서 더 효율적입니다.
+소스 코드 리포지토리에는 Azure DevOps에서 개인 NuGet 피드를 설정 하는 방법 및 해당 피드에 패키지를 푸시하는 방법에 대 한 문서가 포함 된 [추가 읽기 목록이](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up) 포함 되어 있습니다. 로컬 디렉터리 보다 설치 시간이 약간 더 필요 하지만이 유형의 피드는 팀 개발 환경에서 더 효율적입니다.
 
 ## <a name="walk-through"></a>연습
 
 제공 된 단계는 **Mac용 Visual Studio**에만 해당 되지만 구조는 **Visual Studio 2017** 에서도 작동 합니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>Prerequisites
 
 이를 수행 하려면 개발자가 다음을 수행 해야 합니다.
 
 - [NuGet 명령줄 (CLI)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
 
-- [*Visual Studio* *for Mac*](https://visualstudio.microsoft.com/downloads)
+- [*Mac 용* *Visual Studio*](https://visualstudio.microsoft.com/downloads)
 
 > [!NOTE]
 > IPhone에 앱을 배포 하려면 활성 [**Apple 개발자 계정이**](https://developer.apple.com/) 필요 합니다.
 
 ## <a name="creating-the-native-libraries-stage-1"></a>네이티브 라이브러리 만들기 (1 단계)
 
-네이티브 라이브러리 기능은 [연습의 예제를 기반으로 합니다. 정적 라이브러리 만들기 및 사용 (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)을 사용 합니다.
+네이티브 라이브러리 기능은 [연습: 정적 라이브러리 만들기 및 사용 (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017)의 예제를 기반으로 합니다.
 
-이 연습에서는이 시나리오에서 라이브러리가 타사 종속성으로 제공 되기 때문에 기본 라이브러리를 빌드하는 첫 번째 단계를 건너뜁니다. 미리 컴파일된 네이티브 라이브러리는 [샘플 코드](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) 와 함께 포함 되거나 직접 [다운로드할](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) 수 있습니다.
+이 연습에서는이 시나리오에서 라이브러리가 타사 종속성으로 제공 되기 때문에 기본 라이브러리를 빌드하는 첫 번째 단계를 건너뜁니다. 미리 컴파일된 네이티브 라이브러리는 [샘플 코드](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) 와 함께 포함 되거나 직접 [다운로드할](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) 수 있습니다.
 
 ### <a name="working-with-the-native-library"></a>네이티브 라이브러리 작업
 
-원래 *MathFuncsLib* 예제에는 다음 정의를 사용 `MyMathFuncs` 하 여 라는 단일 클래스가 포함 됩니다.
+원래 *MathFuncsLib* 예제에는 다음 정의가 포함 된 `MyMathFuncs` 라는 단일 클래스가 포함 되어 있습니다.
 
 ```cpp
 namespace MathFuncs
@@ -112,7 +112,7 @@ namespace MathFuncs
 }
 ```
 
-추가 클래스는 .net 소비자가 기본 네이티브 `MyMathFuncs` 클래스를 만들고, 삭제 하 고, 상호 작용할 수 있도록 하는 래퍼 함수를 정의 합니다.
+추가 클래스는 .NET 소비자가 기본 네이티브 `MyMathFuncs` 클래스를 만들고, 삭제 하 고, 상호 작용할 수 있도록 하는 래퍼 함수를 정의 합니다.
 
 ```cpp
 #include "MyMathFuncs.h"
@@ -128,11 +128,11 @@ extern "C" {
 }
 ```
 
-[Xamarin](https://visualstudio.microsoft.com/xamarin/) 쪽에서 사용 되는 이러한 래퍼 함수가 됩니다.
+[Xamarin](https://visualstudio.microsoft.com/xamarin/) 쪽에서 사용 되는 이러한 래퍼 함수가 됩니다.
 
 ## <a name="wrapping-the-native-library-stage-2"></a>네이티브 라이브러리 래핑 (2 단계)
 
-이 단계를 수행 하려면 [이전 섹션](#creating-the-native-libraries-stage-1)에서 설명 하는 [미리 컴파일된 라이브러리가](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) 필요 합니다.
+이 단계를 수행 하려면 [이전 섹션](#creating-the-native-libraries-stage-1)에서 설명 하는 [미리 컴파일된 라이브러리가](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) 필요 합니다.
 
 ### <a name="creating-the-visual-studio-solution"></a>Visual Studio 솔루션 만들기
 
@@ -140,9 +140,9 @@ extern "C" {
 2. **새 프로젝트** 창에서 **공유 프로젝트** ( *다중 플랫폼 > 라이브러리*에서)를 선택 하 고 **다음**을 클릭 합니다.
 3. 다음 필드를 업데이트 한 후 **만들기**를 클릭 합니다.
 
-    - **프로젝트 이름:** MathFuncs.Shared  
+    - **프로젝트 이름:** MathFuncs  
     - **솔루션 이름:** MathFuncs  
-    - **위치도** 기본 저장 위치 사용 (또는 대안 선택)   
+    - **위치:** 기본 저장 위치 사용 (또는 대안 선택)   
     - **솔루션 디렉터리 내에 프로젝트를 만듭니다.** 이 확인란을 선택 된 상태로 설정 합니다.
 4. **솔루션 탐색기**에서 **MathFuncs** 프로젝트를 두 번 클릭 하 고 **주 설정**으로 이동 합니다.
 5. 제거 **.**  **MathFuncs** only로 설정 되도록 **기본 네임 스페이스** 에서 공유 하 고 **확인**을 클릭 합니다.
@@ -152,8 +152,8 @@ extern "C" {
 9. **.NET Standard 2.0** 을 선택 하 고 **다음**을 클릭 합니다.
 10. 다음 필드를 업데이트 한 후 **만들기**를 클릭 합니다.
 
-    - **프로젝트 이름:** MathFuncs.Standard  
-    - **위치도** 공유 프로젝트와 동일한 저장 위치 사용   
+    - **프로젝트 이름:** MathFuncs  
+    - **위치:** 공유 프로젝트와 동일한 저장 위치 사용   
 
 11. **솔루션 탐색기**에서 **MathFuncs** 프로젝트를 두 번 클릭 합니다.
 12. **주 설정**으로 이동 하 고 **기본 네임 스페이스** 를 **MathFuncs**로 업데이트 합니다.
@@ -166,8 +166,8 @@ extern "C" {
 
     | **프로젝트 이름**  | **템플릿 이름**   | **새 프로젝트 메뉴**   |
     |-------------------| --------------------| -----------------------|
-    | MathFuncs.Android | 클래스 라이브러리       | Android > 라이브러리      |
-    | MathFuncs.iOS     | 바인딩 라이브러리     | iOS > 라이브러리          |
+    | MathFuncs | 클래스 라이브러리       | Android > 라이브러리      |
+    | MathFuncs     | 바인딩 라이브러리     | iOS > 라이브러리          |
 
 19. **솔루션 탐색기**에서 **MathFuncs** 프로젝트를 두 번 클릭 한 다음 **컴파일러** 설정으로 이동 합니다.
 
@@ -252,7 +252,7 @@ extern "C" {
     > [!NOTE]
     > 바인딩 라이브러리 프로젝트 형식을 [네이티브 참조](https://docs.microsoft.com/xamarin/cross-platform/macios/native-references) 와 함께 사용 하면 정적 라이브러리가 포함 되 고,이 라이브러리를 참조 하는 xamarin.ios 앱과 자동으로 연결 될 수 있습니다 (NuGet 패키지를 통해 포함 된 경우에도).
 
-5. **ApiDefinition.cs**를 열고 템플릿 처리 된 코드 ( `MathFuncs` 네임 스페이스만 남겨 둡니다)를 삭제 한 다음 **Structs.cs** 에 대해 동일한 단계를 수행 합니다. 
+5. **ApiDefinition.cs**를 열고 템플릿 처리 된 코드 (`MathFuncs` 네임 스페이스만 남겨 두고)를 삭제 한 다음 **Structs.cs** 에 대해 동일한 단계를 수행 합니다. 
 
     > [!NOTE]
     > 바인딩 라이브러리 프로젝트를 빌드하려면 이러한 파일 ( *Objcbindingapidefinition* 및 *Objcbindingcor9build* 작업 포함)이 필요 합니다. 그러나 표준 P/Invoke를 사용 하 여 Android 및 iOS 라이브러리 대상 모두에서 공유할 수 있는 방식으로 이러한 파일 외부에서 네이티브 라이브러리를 호출 하는 코드를 작성 합니다.
@@ -277,7 +277,7 @@ extern "C" {
         {
             public MyMathFuncsSafeHandle() : base(true) { }
 
-            public IntPtr Ptr => this.handle;
+            public IntPtr Ptr => handle;
 
             protected override bool ReleaseHandle()
             {
@@ -315,7 +315,7 @@ extern "C" {
     ```
 
     > [!NOTE]
-    > 그러면 라이브러리가 **Android** 또는 **iOS**용으로 빌드 되었는지 여부에 따라 **DllName** 상수 값이 설정 됩니다. 이는 각 플랫폼에서 사용 되는 다양 한 명명 규칙을 해결 하는 것입니다 .이 경우에 사용 되는 라이브러리의 형식 이기도 합니다. Android는 동적 라이브러리를 사용 하므로 확장명을 포함 하는 파일 이름이 필요 합니다. IOS의 경우 정적 라이브러리를 사용 하므로 ' *__Internal*'이 필요 합니다.
+    > 그러면 라이브러리가 **Android** 또는 **iOS**용으로 빌드 되었는지 여부에 따라 **DllName** 상수 값이 설정 됩니다. 이는 각 플랫폼에서 사용 되는 다양 한 명명 규칙을 해결 하는 것입니다 .이 경우에 사용 되는 라이브러리의 형식 이기도 합니다. Android는 동적 라이브러리를 사용 하므로 확장명을 포함 하는 파일 이름이 필요 합니다. IOS의 경우 정적 라이브러리를 사용 하 고 있으므로 ' *__Internal*'가 필요 합니다.
 
 3. **MyMathFuncsWrapper.cs** 파일의 맨 위에 t e m에 대 한 참조를 추가 합니다 **.**
 
@@ -402,7 +402,7 @@ extern "C" {
 1. **TODO** 줄을 바꿉니다.
 
     ```csharp
-    MyMathFuncsWrapper.DisposeMyMathFuncs(this);
+    MyMathFuncsWrapper.DisposeMyMathFuncs(handle);
     ```
 
 #### <a name="writing-the-mymathfuncs-class"></a>MyMathFuncs 클래스 작성
@@ -480,7 +480,7 @@ NuGet을 통해 라이브러리를 패키지 하 고 배포 하기 위해 솔루
 1. **MathFuncs**솔루션을 제어 하 고 **클릭** 한 다음 **추가** 메뉴에서 **솔루션 폴더 추가** 를 선택 하 여 솔루션 폴더 이름을 지정 **합니다.**
 2. **솔루션에서 솔루션** 을 마우스 단추로 **클릭** 한 다음 **추가** 메뉴에서 **새 파일 ...** 을 선택 합니다.
 3. **새 파일** 창에서 **빈 XML 파일** 을 선택 하 고 이름을 **MathFuncs. Nuspec** 로 지정한 후 **새로 만들기**를 클릭 합니다.
-4. **NuGet** 소비자에 게 표시 되는 기본 패키지 메타 데이터를 사용 하 여 **MathFuncs. nuspec** 를 업데이트 합니다. 예를 들어:
+4. **NuGet** 소비자에 게 표시 되는 기본 패키지 메타 데이터를 사용 하 여 **MathFuncs. nuspec** 를 업데이트 합니다. 예를 들면,
 
     ```xml
     <?xml version="1.0"?>
@@ -499,7 +499,7 @@ NuGet을 통해 라이브러리를 패키지 하 고 배포 하기 위해 솔루
     > [!NOTE]
     > 이 매니페스트에 사용 된 스키마에 대 한 자세한 내용은 [nuspec 참조](https://docs.microsoft.com/nuget/reference/nuspec) 문서를 참조 하세요.
 
-5. 요소를 `<files>` `<package>` 요소의 `<file>` 자식으로 추가 하 여 각 파일을 개별 요소로 식별 합니다. `<metadata>`
+5. 별도의 `<file>` 요소를 사용 하 여 각 파일을 식별 하는 `<package>` 요소의 자식으로 `<files>` 요소를 추가 합니다 (`<metadata>`바로 아래).
 
     ```xml
     <files>
@@ -516,21 +516,21 @@ NuGet을 통해 라이브러리를 패키지 하 고 배포 하기 위해 솔루
     > [!NOTE]
     > 패키지를 프로젝트에 설치 하 고 동일한 이름으로 여러 어셈블리를 지정 하는 경우 NuGet은 지정 된 플랫폼과 가장 고유한 어셈블리를 효과적으로 선택 합니다.
 
-6. Android 어셈블리에 대 한 요소를추가`<file>` 합니다.
+6. **Android** 어셈블리에 대 한 `<file>` 요소를 추가 합니다.
 
     ```xml
     <file src="MathFuncs.Android/bin/Release/MathFuncs.dll" target="lib/MonoAndroid81/MathFuncs.dll" />
     <file src="MathFuncs.Android/bin/Release/MathFuncs.pdb" target="lib/MonoAndroid81/MathFuncs.pdb" />
     ```
 
-7. IOS 어셈블리 `<file>` 에 대 한 요소를 추가 합니다.
+7. **IOS** 어셈블리에 대 한 `<file>` 요소를 추가 합니다.
 
     ```xml
     <file src="MathFuncs.iOS/bin/Release/MathFuncs.dll" target="lib/Xamarin.iOS10/MathFuncs.dll" />
     <file src="MathFuncs.iOS/bin/Release/MathFuncs.pdb" target="lib/Xamarin.iOS10/MathFuncs.pdb" />
     ```
 
-8. `<file>` **Netstandard 2.0** 어셈블리에 대 한 요소를 추가 합니다.
+8. **Netstandard 2.0** 어셈블리에 대 한 `<file>` 요소를 추가 합니다.
 
     ```xml
     <file src="MathFuncs.Standard/bin/Release/netstandard2.0/MathFuncs.dll" target="lib/netstandard2.0/MathFuncs.dll" />
@@ -588,7 +588,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
 1. **빌드 구성을** **릴리스**로 설정 하 고 **명령 + B**를 사용 하 여 빌드를 실행 합니다.
 2. **터미널** 을 열고 **nuspec** 파일이 포함 된 폴더로 디렉터리를 변경 합니다.
-3. **터미널**에서 **Nuspec** 파일, **버전** (예: 1.0.0) 및 **OutputDirectory** ( [이전 단계](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed)에서 만든 폴더를 사용 하 여)를 지정 하는 **nuget pack** 명령을 실행 합니다. 즉,  **로컬 nuget 피드**. 예:
+3. **터미널**에서 **Nuspec** 파일, **버전** (예: 1.0.0)을 지정 하 고, [이전 단계](https://docs.microsoft.com/xamarin/cross-platform/cpp/index#creating-a-local-nuget-feed)에서 만든 폴더 (예: **로컬 nuget 피드**)를 사용 하 여 **OutputDirectory** 를 지정 하는 **nuget pack** 명령을 실행 합니다. 예를 들면,
 
     ```bash
     nuget pack MathFuncs.nuspec -Version 1.0.0 -OutputDirectory ~/local-nuget-feed
@@ -627,7 +627,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
     - **프로젝트 이름:** MathFuncsApp.
     - **솔루션 이름:** MathFuncsApp.  
-    - **위치도** 기본 저장 위치를 사용 하거나 다른 위치를 선택 합니다.
+    - **위치:** 기본 저장 위치를 사용 하거나 다른 위치를 선택 합니다.
 
 6. **솔루션 탐색기**에서 초기 테스트를 위해 대상 (**MathFuncsApp** 또는 **MathFuncs**)을 제어 하 고 **클릭** 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
 7. 선호 하는 **장치** 또는 **시뮬레이터**/**에뮬레이터**를 선택 합니다. 
@@ -642,8 +642,8 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 2. **NuGet** 섹션에서 **소스** 를 선택 하 고 **추가**를 클릭 합니다.
 3. 다음 필드를 업데이트 한 다음 **원본 추가**를 클릭 합니다.
 
-    - **Name:** 로컬 패키지와 같은 의미 있는 이름을 제공 합니다.  
-    - **위치도** [이전 단계](#preparing-a-local-packages-directory)에서 만든 **로컬 nuget 피드** 폴더를 지정 합니다.
+    - **이름:** 로컬 패키지와 같은 의미 있는 이름을 제공 합니다.  
+    - **위치:** [이전 단계](#preparing-a-local-packages-directory)에서 만든 **로컬 nuget 피드** 폴더를 지정 합니다.
 
     > [!NOTE]
     > 이 경우 **사용자 이름과** **암호**를 지정할 필요가 없습니다. 
@@ -671,13 +671,13 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
     using MathFuncs;
     ```
 
-3. 클래스의 맨 위에 `MyMathFuncs` `MainPage` 클래스의 인스턴스를 선언 합니다.
+3. `MainPage` 클래스 맨 위에 `MyMathFuncs` 클래스의 인스턴스를 선언 합니다.
 
     ```csharp
     MyMathFuncs myMathFuncs;
     ```
 
-4. 기본 클래스 `OnAppearing` 에서 `OnDisappearing` 및 메서드를 재정의 합니다. `ContentPage`
+4. `ContentPage` 기본 클래스에서 `OnAppearing` 및 `OnDisappearing` 메서드를 재정의 합니다.
 
     ```csharp
     protected override void OnAppearing()
@@ -691,7 +691,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
     }
     ```
 
-5. 메서드를 `OnAppearing` 업데이트 하 여 이전 `myMathFuncs` 에 선언 된 변수를 초기화 합니다.
+5. `OnAppearing` 메서드를 업데이트 하 여 이전에 선언 된 `myMathFuncs` 변수를 초기화 합니다.
 
     ```csharp
     protected override void OnAppearing()
@@ -701,7 +701,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
     }
     ```
 
-6. 메서드를 업데이트 하 여에서 `Dispose` `myMathFuncs`메서드를 호출 합니다. `OnDisappearing`
+6. `myMathFuncs`에서 `Dispose` 메서드를 호출 하도록 `OnDisappearing` 메서드를 업데이트 합니다.
 
     ```csharp
     protected override void OnDisappearing()
@@ -739,7 +739,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
     }
     ```
 
-8. 마지막으로 `OnAppearing` 메서드 `TestMathFuncs` 끝에서를 호출 합니다.
+8. 마지막으로 `OnAppearing` 메서드의 끝에서 `TestMathFuncs`를 호출 합니다.
 
     ```csharp
     TestMathFuncs();
@@ -766,7 +766,7 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 - [NuGet 명령줄 (CLI) 도구](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
 - [Visual Studio](https://visualstudio.microsoft.com/vs)
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 - [를 사용한 하이퍼 경과 플랫폼 간 모바일 개발C++](https://blogs.msdn.microsoft.com/vcblog/2015/06/26/hyperlapse-cross-platform-mobile-development-with-visual-c-and-xamarin/)
 - [Microsoft Pix (C++ 및 Xamarin)](https://devblogs.microsoft.com/xamarin/microsoft-research-ships-intelligent-apps-with-the-power-of-c-and-ai/)
@@ -774,4 +774,4 @@ NuGet 피드의 가장 간단한 형태는 로컬 디렉터리입니다.
 
 ### <a name="further-reading"></a>추가 정보
 
-[이 게시물의 내용과 관련 된 문서](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up)
+[이 게시물의 내용과 관련 된 문서](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up)

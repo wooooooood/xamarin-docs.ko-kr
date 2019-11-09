@@ -6,13 +6,13 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
-ms.openlocfilehash: 3c167b025b41bd4fc7c8c93bdb2f825c9daa540c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.date: 11/07/2019
+ms.openlocfilehash: 83fbad8a9bbb9afef5ee80705fe9e86e51284e7d
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032844"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842991"
 ---
 # <a name="authenticate-users-with-an-identity-provider"></a>Id 공급자를 사용 하 여 사용자 인증
 
@@ -259,6 +259,16 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ```
 
 `FindAccountsForService` 메서드는 컬렉션의 첫 번째 항목이 일치 하는 계정으로 설정 되는 `Account` 개체의 `IEnumerable` 컬렉션을 반환 합니다.
+
+## <a name="troubleshooting"></a>문제 해결
+
+- Android에서 인증 후 브라우저를 닫을 때 알림 메시지가 표시 되 고 알림 메시지를 중지 하려면 Xamarin.ios를 초기화 한 후 Android 프로젝트에 다음 코드를 추가 합니다.
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- Android에서 브라우저가 자동으로 닫히지 않는 경우 일시적인 해결 방법은 Xamarin.ios 패키지를 1.5.0.3 버전으로 다운 그레이드 하는 것입니다. 그런 다음, Android 프로젝트에 [PCL Crypto v 2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) 를 추가 합니다.
 
 ## <a name="summary"></a>요약
 
