@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: b17a1177abafe4e605263664038842863302ac3b
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: 96c775ba8e29597a8420b1c42d53e33357c7324c
+ms.sourcegitcommit: 18b446a0032f3a7a064e5a6470e9d20b1ec2fbed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249696"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73426457"
 ---
 # <a name="localization"></a>지역화
 
@@ -69,7 +69,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 솔루션 트리에서는 관련 파일을 보여줍니다. 새 변환 가능한 문자열을 추가하려면 RESX 파일을 편집*해야* 하며, **.designer.cs** 파일은 편집하지 *말아야* 합니다.
 
-![](text-images/appresources-tree.png "AppResources.resx 파일")
+![](text-images/appresources-tree.png "AppResources.resx File")
 
 ##### <a name="string-visibility"></a>문자열 표시 유형
 
@@ -81,11 +81,11 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-internal-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-internal.png#lightbox)
+[![](text-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
 -----
 
@@ -93,13 +93,13 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![](text-images/vs-resx-public-sml.png "AppResources.Resx의 속성 창")](text-images/vs-resx-public.png#lightbox)
+[![](text-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![](text-images/xs-resx-internal-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-internal.png#lightbox)
+[![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
 
-[![](text-images/xs-resx-public-sml.png "AppResources.Resx의 속성 패드")](text-images/xs-resx-public.png#lightbox)
+[![](text-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
 -----
 
@@ -157,7 +157,7 @@ Xamarin.Forms. NET Standard 라이브러리 애플리케이션 글로벌화의 �
 
  이러한 언어별 리소스 파일은 **.designer.cs** partial 클래스가 필요’하지 않기’ 때문에 해당 리소스 파일을 **빌드 작업: EmbeddedResource**이 설정된 일반 XML 파일로 추가할 수 있습니다. 이 스크린샷은 언어별 리소스 파일이 포함된 솔루션을 보여줍니다.
 
-![](text-images/appresources-langs.png "언어별 리소스 파일")
+![](text-images/appresources-langs.png "Language-Specific Resource Files")
 
 애플리케이션을 개발하고 기본 RESX 파일이 텍스트를 추가했으므로 각 `data` 요소를 변환하고 앱에 포함되도록 언어별 리소스 파일을 반환할(표시된 명명 규칙을 사용하여) 변환기에 텍스트를 전송해야 합니다. 일부 '기계 번역' 예제는 다음과 같습니다.
 
@@ -208,7 +208,7 @@ myButton.Text = AppResources.AddButton;
 
 텍스트가 하드 코딩되기보다는 리소스에서 로드되기 때문에 앱을 여러 언어로 변환할 수 있는 것을 제외하고 iOS, Android 및 UWP(유니버설 Windows 플랫폼)의 사용자 인터페이스가 예상대로 렌더링됩니다. 변환에 앞서 각 플랫폼에서 UI를 보여주는 스크린샷은 다음과 같습니다.
 
-![](text-images/simple-example-english.png "변환 전의 플랫폼 간 UI")
+![](text-images/simple-example-english.png "Cross-Platform UIs Prior to Translation")
 
 ### <a name="troubleshooting"></a>문제 해결
 
@@ -398,7 +398,7 @@ namespace UsingResxLocalization.iOS
                 case "ms-SG":    // "Malaysian (Singapore)" not supported .NET culture
                     netLanguage = "ms"; // closest supported
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "Schwiizerdüütsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                 // add more application-specific cases here (if required)
@@ -506,7 +506,7 @@ namespace UsingResxLocalization.Android
                 }
                 catch (CultureNotFoundException e2)
                 {
-                    // iOS language not valid .NET culture, falling back to English
+                    // Android language not valid .NET culture, falling back to English
                     ci = new System.Globalization.CultureInfo("en");
                 }
             }
@@ -526,7 +526,7 @@ namespace UsingResxLocalization.Android
                 case "in-ID":  // "Indonesian (Indonesia)" has different code in  .NET
                     netLanguage = "id-ID"; // correct code for .NET
                     break;
-                case "gsw-CH":  // "Schwiizertüütsch (Swiss German)" not supported .NET culture
+                case "gsw-CH":  // "Schwiizerdüütsch (Swiss German)" not supported .NET culture
                     netLanguage = "de-CH"; // closest supported
                     break;
                     // add more application-specific cases here (if required)
@@ -583,7 +583,7 @@ UWP(유니버설 Windows 플랫폼) 프로젝트에는 종속 서비스가 필�
 
 위에 표시된 대로 플랫폼별 프로젝트를 업데이트하고 변환된 RESX 파일을 사용하여 앱을 다시 컴파일한 후 각 앱에서 업데이트된 변환을 사용할 수 있습니다. 중국어(간체)로 번역된 샘플 코드의 스크린샷은 다음과 같습니다.
 
-![](text-images/simple-example-hans.png "중국어(간체)로 번역된 플랫폼 간 UI")
+![](text-images/simple-example-hans.png "Cross-Platform UIs Translated to Simplified Chinese")
 
 UWP 지역화에 대한 자세한 내용은 [UWP 지역화](/windows/uwp/design/globalizing/globalizing-portal/)를 참조하세요.
 
@@ -732,7 +732,7 @@ iOS는 지역화 프로젝트 또는 **.lproj** 디렉터리라는 명명 표준
 
 이 스크린샷에서는 언어별 **.lproj** 디렉터리가 포함된 iOS 샘플 앱을 보여줍니다. **es.lproj**라는 스페인어 디렉터리에는 **flag.png**뿐만 아니라 지역화된 버전의 기본 이미지도 포함됩니다.
 
-![](text-images/ios-resources.png "iOS 지역화 프로젝트 디렉터리")
+![](text-images/ios-resources.png "iOS Localization Project Directories")
 
 각 언어 디렉터리에는 해당 언어에 맞게 지역화된 **flag.png**의 복사본이 포함됩니다. 이미지가 제공되지 않으면 운영 체제의 기본값은 기본 언어 디렉터리의 이미지가 됩니다. Retina 지원의 경우 각 이미지의 **@2x** 및 **@3x** 복사본을 제공해야 합니다.
 
@@ -746,7 +746,7 @@ iOS는 지역화 프로젝트 또는 **.lproj** 디렉터리라는 명명 표준
 
 애플리케이션을 실행하는 경우 앱 이름 및 이미지 모두 지역화됩니다.
 
-![](text-images/ios-imageicon.png "iOS 샘플 앱 텍스트 및 이미지 지역화")
+![](text-images/ios-imageicon.png "iOS Sample App Text and Image Localization")
 
 ### <a name="android-application-project"></a>Android 애플리케이션 프로젝트
 
@@ -756,7 +756,7 @@ Android는 언어 코드 접미사가 있는 다양한 **드로어블** 및 **�
 
 이 스크린샷은 일부 지역화된 드로어블 및 문자열을 통해 Android 샘플을 보여줍니다.
 
-![](text-images/android-resources.png "Android 지역화된 드로어블 및 문자열 디렉터리")
+![](text-images/android-resources.png "Android Localized Drawables and String Directories")
 
 Android에서는 중국어 간체 및 번체에 대해 zh-Hans 및 zh-Hant를 사용하지 않고 대신 zh-CN 및 zh-TW와 같은 국가별 코드를 지원합니다.
 
@@ -782,7 +782,7 @@ Android에서는 중국어 간체 및 번체에 대해 zh-Hans 및 zh-Hant를 �
 
 이제 앱은 앱 이름 및 이미지를 지역화합니다. 결과(스페인어)의 스크린샷은 다음과 같습니다.
 
-![](text-images/android-imageicon.png "Android 샘플 앱 텍스트 및 이미지 지역화")
+![](text-images/android-imageicon.png "Android Sample App Text and Image Localization")
 
 ### <a name="universal-windows-platform-application-projects"></a>유니버설 Windows 플랫폼 애플리케이션 프로젝트
 
@@ -792,7 +792,7 @@ Android에서는 중국어 간체 및 번체에 대해 zh-Hans 및 zh-Hant를 �
 
 다음 스크린샷에 표시된 것과 같이 리소스별 폴더에 배치하여 이미지를 지역화할 수 있습니다.
 
-![](text-images/uwp-image-folder-structure.png "UWP 이미지 지역화 폴더 구조")
+![](text-images/uwp-image-folder-structure.png "UWP Image Localization Folder Structure")
 
 런타임 시 Windows 리소스 인프라는 사용자의 로캘에 따라 적절한 이미지를 선택합니다.
 

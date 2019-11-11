@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: c65a8d4cf47fdec582b46370b6a8dbc1ddd55a1e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bdc8366e75455755cbb2f533b6707f72e33436e2
+ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022792"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425581"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 자동 프로비저닝
 
@@ -39,7 +39,7 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ## <a name="enabling-automatic-signing"></a>자동 서명 사용
 
-자동 서명 프로세스를 시작하기 전에 [Apple 계정 관리](~/cross-platform/macios/apple-account-management.md) 가이드에 설명된 대로 Visual Studio에 추가된 Apple ID가 있는지 확인해야 합니다. Apple ID를 추가했다면 모든 관련 _팀_을 사용할 수 있습니다. 따라서 팀에 대해 인증서, 프로필 및 다른 ID를 만들 수 있습니다. 팀 ID는 프로비저닝 프로필에 포함될 앱 ID에 대한 접두사를 만들 때도 사용됩니다. 이 요소가 있으면 Apple이 신원을 확인할 수 있습니다.
+자동 서명 프로세스를 시작하기 전에 [Apple 계정 관리](~/cross-platform/macios/apple-account-management.md) 가이드에 설명된 대로 Visual Studio에 추가된 Apple ID가 있는지 확인해야 합니다. Apple ID를 추가했다면 모든 관련 _팀_을 사용할 수 있습니다. 따라서 팀에 대해 인증서, 프로필 및 다른 ID를 만들 수 있습니다. 팀 ID는 프로비저닝 프로필에 포함될 앱 ID의 접두사를 만들 때도 사용됩니다. 이 요소가 있으면 Apple이 신원을 확인할 수 있습니다.
 
 > [!IMPORTANT]
 > 시작하기 전에 [iTunes Connect](https://itunesconnect.apple.com/) 또는 [appleid.apple.com](https://appleid.apple.com)에 로그인하여 최신 Apple 계정 정책에 동의했는지 확인하세요. 메시지가 표시되면 단계를 완료하여 Apple의 새 계정 계약에 동의합니다. 2018년 5월부터 개인 정보 보호 계약에 동의하지 않은 경우 디바이스를 프로비저닝할 때 다음 경고 중 하나가 표시됩니다.
