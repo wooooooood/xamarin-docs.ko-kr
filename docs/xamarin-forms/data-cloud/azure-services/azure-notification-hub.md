@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 05/23/2019
-ms.openlocfilehash: c4237e9315ccc095abc72fdec24d58ffe1faebdf
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: eafa5c8af8d93138ec6e2b9e2f25549d7ed006b0
+ms.sourcegitcommit: bfe4327ef2e89dab095641860256eadb349ca62c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "68739224"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73849829"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.ios를 사용 하 여 푸시 알림 보내기 및 받기
 
-[샘플 ](~/media/shared/download.png)Download ![Download 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[샘플 다운로드](~/media/shared/download.png)샘플 다운로드 ![](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 푸시 알림은 백 엔드 시스템에서 모바일 응용 프로그램으로 정보를 제공 합니다. Apple, Google 및 기타 플랫폼에는 각각 자체 푸시 알림 서비스 (PNS)가 있습니다. Azure Notification Hubs를 사용 하면 여러 플랫폼에서 알림을 중앙 집중화 하 여 백 엔드 응용 프로그램에서 단일 허브와 통신할 수 있으므로 각 플랫폼별 PNS 알림을 배포할 수 있습니다.
 
@@ -112,7 +112,7 @@ public static class AppConstants
 }
 ```
 
-@No__t_0에서 다음 값을 사용자 지정 하 여 샘플 응용 프로그램을 Azure Notification Hub에 연결 합니다.
+`AppConstants`에서 다음 값을 사용자 지정 하 여 샘플 응용 프로그램을 Azure Notification Hub에 연결 합니다.
 
 * `NotificationHubName`: Azure Portal에서 만든 Azure 알림 허브의 이름을 사용 합니다.
 * `ListenConnectionString`:이 값은 Azure Notification Hub의 **액세스 정책**에서 찾을 수 있습니다.
@@ -132,8 +132,8 @@ public static class AppConstants
     1. Xamarin.ios. NotificationHubs.
 1. FCM 설치 중에 다운로드 한 `google-services.json` 파일을 프로젝트에 복사 하 고 빌드 작업을 `GoogleServicesJson`로 설정 합니다.
 1. [Firebase와 통신 하도록 AndroidManifest을 구성](#configure-android-manifest)합니다.
-1. [@No__t_1를 사용 하 여 Firebase 및 Azure Notification Hub에 응용 프로그램을 등록](#register-using-a-custom-firebaseinstanceidservice)합니다.
-1. [@No__t_1를 사용 하 여 메시지를 처리](#process-messages-with-a-firebasemessagingservice)합니다.
+1. [`FirebaseInstanceIdService`를 사용 하 여 Firebase 및 Azure Notification Hub에 응용 프로그램을 등록 ](#register-using-a-custom-firebaseinstanceidservice)합니다.
+1. [`FirebaseMessagingService`를 사용 하 여 메시지를 처리 ](#process-messages-with-a-firebasemessagingservice)합니다.
 1. [들어오는 알림을 XAMARIN.IOS UI에 추가](#add-incoming-notifications-to-the-xamarinforms-ui)합니다.
 
 > [!NOTE]
@@ -141,7 +141,7 @@ public static class AppConstants
 
 ### <a name="configure-android-manifest"></a>Android 매니페스트 구성
 
-@No__t_1 요소 내의 `receiver` 요소를 사용 하면 앱이 Firebase와 통신할 수 있습니다. 앱은 `uses-permission` 요소를 사용 하 여 메시지를 처리 하 고 Azure Notification Hub에 등록할 수 있습니다. 전체 **Androidmanifest** 은 아래 예제와 같이 표시 됩니다.
+`application` 요소 내의 `receiver` 요소를 사용 하면 앱이 Firebase와 통신할 수 있습니다. 앱은 `uses-permission` 요소를 사용 하 여 메시지를 처리 하 고 Azure Notification Hub에 등록할 수 있습니다. 전체 **Androidmanifest** 은 아래 예제와 같이 표시 됩니다.
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="YOUR_PACKAGE_NAME" android:installLocation="auto">
@@ -167,7 +167,7 @@ public static class AppConstants
 
 Firebase는 PNS에서 장치를 고유 하 게 식별 하는 토큰을 발급 합니다. 토큰의 수명은 길고 가끔 새로 고쳐집니다. 토큰을 발급 하거나 새로 고치면 응용 프로그램은 Azure 알림 허브에 새 토큰을 등록 해야 합니다. 등록은 `FirebaseInstanceIdService`에서 파생 되는 클래스의 인스턴스에 의해 처리 됩니다.
 
-샘플 응용 프로그램에서 `FirebaseRegistrationService` 클래스는 `FirebaseInstanceIdService`에서 상속 됩니다. 이 클래스에는 Firebase에서 토큰을 발급 하는 경우 Android OS가 `OnTokenRefresh`을 자동으로 호출할 수 있도록 `com.google.firebase.INSTANCE_ID_EVENT` 포함 된 `IntentFilter` 있습니다.
+샘플 응용 프로그램에서 `FirebaseRegistrationService` 클래스는 `FirebaseInstanceIdService`에서 상속 됩니다. 이 클래스에는 Firebase에서 토큰을 발급 하는 경우 Android OS가 `OnTokenRefresh`을 자동으로 호출할 수 있도록 `com.google.firebase.INSTANCE_ID_EVENT`포함 된 `IntentFilter` 있습니다.
 
 다음 코드는 샘플 응용 프로그램의 사용자 지정 `FirebaseInstanceIdService`를 보여 줍니다.
 
@@ -209,11 +209,11 @@ public class FirebaseRegistrationService : FirebaseInstanceIdService
 }
 ```
 
-@No__t_1의 `SendRegistrationToServer` 메서드는 Azure Notification Hub를 사용 하 여 장치를 등록 하 고 템플릿을 사용 하 여 태그를 구독 합니다. 샘플 응용 프로그램은 `default` 이라는 단일 태그와 **AppConstants.cs** 파일에서 `messageParam` 라는 단일 매개 변수를 사용 하 여 템플릿을 정의 합니다. 등록, 태그 및 템플릿에 대 한 자세한 내용은 [Azure 알림 허브를 사용 하 여 템플릿 및 태그 등록](#register-templates-and-tags-with-the-azure-notification-hub) 을 참조 하세요.
+`FirebaseRegistrationClass`의 `SendRegistrationToServer` 메서드는 Azure Notification Hub를 사용 하 여 장치를 등록 하 고 템플릿을 사용 하 여 태그를 구독 합니다. 샘플 응용 프로그램은 `default` 이라는 단일 태그와 **AppConstants.cs** 파일에서 `messageParam` 라는 단일 매개 변수를 사용 하 여 템플릿을 정의 합니다. 등록, 태그 및 템플릿에 대 한 자세한 내용은 [Azure 알림 허브를 사용 하 여 템플릿 및 태그 등록](#register-templates-and-tags-with-the-azure-notification-hub) 을 참조 하세요.
 
 ### <a name="process-messages-with-a-firebasemessagingservice"></a>FirebaseMessagingService를 사용 하 여 메시지 처리
 
-들어오는 메시지는 로컬 알림으로 변환 될 수 있는 `FirebaseMessagingService` 인스턴스로 라우팅됩니다. 샘플 응용 프로그램의 Android 프로젝트에는 `FirebaseMessagingService`에서 상속 되는 `FirebaseService` 라는 클래스가 포함 되어 있습니다. 이 클래스에는 `com.google.firebase.MESSAGING_EVENT` 포함 되어 있으며, Android OS가 푸시 알림 메시지를 받을 때 `OnMessageReceived`을 자동으로 호출할 수 있도록 하는 `IntentFilter` 있습니다.
+들어오는 메시지는 로컬 알림으로 변환 될 수 있는 `FirebaseMessagingService` 인스턴스로 라우팅됩니다. 샘플 응용 프로그램의 Android 프로젝트에는 `FirebaseMessagingService`에서 상속 되는 `FirebaseService` 라는 클래스가 포함 되어 있습니다. 이 클래스에는 `com.google.firebase.MESSAGING_EVENT`포함 되어 있으며, Android OS가 푸시 알림 메시지를 받을 때 `OnMessageReceived`을 자동으로 호출할 수 있도록 하는 `IntentFilter` 있습니다.
 
 다음 예제에서는 예제 응용 프로그램의 `FirebaseService`을 보여 줍니다.
 
@@ -285,7 +285,7 @@ public class FirebaseService : FirebaseMessagingService
 
 ### <a name="add-incoming-notifications-to-the-xamarinforms-ui"></a>Xamarin.ios UI에 들어오는 알림 추가
 
-@No__t_0 클래스는 알림을 처리 하 고 들어오는 메시지 데이터를 관리할 수 있는 권한을 얻어야 합니다. 다음 코드에서는 전체 `MainActivity` 구현을 보여 줍니다.
+`MainActivity` 클래스는 알림을 처리 하 고 들어오는 메시지 데이터를 관리할 수 있는 권한을 얻어야 합니다. 다음 코드에서는 전체 `MainActivity` 구현을 보여 줍니다.
 
 ```csharp
 [Activity(Label = "NotificationHubSample", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, LaunchMode = LaunchMode.SingleTop)]
@@ -301,7 +301,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
         global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
         LoadApplication(new App());
 
-        if (IsPlayServiceAvailable() == false)
+        if (!IsPlayServiceAvailable())
         {
             throw new Exception("This device does not have Google Play Services and cannot receive push notifications.");
         }
@@ -356,9 +356,9 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 }
 ```
 
-@No__t_0 특성은 응용 프로그램 `LaunchMode` `SingleTop` 설정 합니다. 이 시작 모드는 Android OS에이 작업의 단일 인스턴스만 허용 하도록 지시 합니다. 이 시작 모드에서 들어오는 `Intent` 데이터는 `OnNewIntent` 메서드로 라우팅됩니다 .이 메서드는 메시지 데이터를 추출 하 여 `AddMessage` 메서드를 통해 `MainPage` 인스턴스로 보냅니다. 응용 프로그램에서 다른 시작 모드를 사용 하는 경우 `Intent` 데이터를 다르게 처리 해야 합니다.
+`Activity` 특성은 응용 프로그램 `LaunchMode` `SingleTop`설정 합니다. 이 시작 모드는 Android OS에이 작업의 단일 인스턴스만 허용 하도록 지시 합니다. 이 시작 모드에서 들어오는 `Intent` 데이터는 `OnNewIntent` 메서드로 라우팅됩니다 .이 메서드는 메시지 데이터를 추출 하 여 `AddMessage` 메서드를 통해 `MainPage` 인스턴스로 보냅니다. 응용 프로그램에서 다른 시작 모드를 사용 하는 경우 `Intent` 데이터를 다르게 처리 해야 합니다.
 
-@No__t_0 메서드는 `IsPlayServiceAvailable` 라는 도우미 메서드를 사용 하 여 장치에서 Google Play 서비스를 지원 하는지 확인 합니다. Google Play 서비스를 지원 하지 않는 에뮬레이터 또는 장치는 Firebase에서 푸시 알림을 받을 수 없습니다.
+`OnCreate` 메서드는 `IsPlayServiceAvailable` 라는 도우미 메서드를 사용 하 여 장치에서 Google Play 서비스를 지원 하는지 확인 합니다. Google Play 서비스를 지원 하지 않는 에뮬레이터 또는 장치는 Firebase에서 푸시 알림을 받을 수 없습니다.
 
 ## <a name="configure-ios-for-notifications"></a>알림에 대 한 iOS 구성
 
@@ -425,9 +425,9 @@ void RegisterForRemoteNotifications()
 
 ### <a name="register-with-azure-notification-hub-and-subscribe-to-tags"></a>Azure 알림 허브에 등록 하 고 태그를 구독 합니다.
 
-@No__t_0 메서드 중에 장치가 원격 알림에 성공적으로 등록 되 면 iOS는 `RegisteredForRemoteNotifications` 메서드를 호출 합니다. 다음 작업을 수행 하려면이 메서드를 재정의 해야 합니다.
+`FinishedLaunching` 메서드 중에 장치가 원격 알림에 성공적으로 등록 되 면 iOS는 `RegisteredForRemoteNotifications` 메서드를 호출 합니다. 다음 작업을 수행 하려면이 메서드를 재정의 해야 합니다.
 
-1. @No__t_0를 인스턴스화합니다.
+1. `SBNotificationHub`를 인스턴스화합니다.
 1. 기존 등록의 등록을 취소 합니다.
 1. 알림 허브에 장치를 등록 합니다.
 1. 템플릿으로 특정 태그를 구독 합니다.
@@ -473,11 +473,11 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 ```
 
 > [!NOTE]
-> 네트워크에 연결 되지 않은 경우 원격 알림에 대 한 등록이 실패할 수 있습니다. @No__t_0 메서드를 재정의 하 여 등록 오류를 처리 하도록 선택할 수 있습니다.
+> 네트워크에 연결 되지 않은 경우 원격 알림에 대 한 등록이 실패할 수 있습니다. `FailedToRegisterForRemoveNotifications` 메서드를 재정의 하 여 등록 오류를 처리 하도록 선택할 수 있습니다.
 
 ### <a name="add-apns-notifications-to-xamarinforms-ui"></a>Xamarin.ios UI에 APNS 알림 추가
 
-장치가 원격 알림을 수신 하면 iOS는 `ReceivedRemoteNotification` 메서드를 호출 합니다. 들어오는 메시지 JSON은 `NSDictionary` 개체로 변환 되 고 `ProcessNotification` 메서드는 사전에서 값을 추출 하 여 Xamarin.ios `MainPage` 인스턴스로 보냅니다. @No__t_0 메서드는 다음 코드와 같이 `ProcessNotification`를 호출 하도록 재정의 됩니다.
+장치가 원격 알림을 수신 하면 iOS는 `ReceivedRemoteNotification` 메서드를 호출 합니다. 들어오는 메시지 JSON은 `NSDictionary` 개체로 변환 되 고 `ProcessNotification` 메서드는 사전에서 값을 추출 하 여 Xamarin.ios `MainPage` 인스턴스로 보냅니다. `ReceivedRemoteNotifications` 메서드는 다음 코드와 같이 `ProcessNotification`를 호출 하도록 재정의 됩니다.
 
 ```csharp
 public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
@@ -523,7 +523,7 @@ Azure Notification Hubs를 사용 하 여 응용 프로그램에서 테스트 �
 
 1. 응용 프로그램에서 푸시 알림을 받을 수 있는지 테스트 하는 경우 물리적 장치를 사용 해야 합니다. Android 및 iOS 가상 장치는 푸시 알림을 받기 위해 올바르게 구성 되지 않을 수 있습니다.
 1. 샘플 Android 응용 프로그램은 Firebase 토큰이 발급 될 때 토큰 및 템플릿을 한 번 등록 합니다. 테스트 하는 동안 새 토큰을 요청 하 고 Azure 알림 허브에 다시 등록 해야 할 수 있습니다. 이렇게 하는 가장 좋은 방법은 프로젝트를 정리 하 고, `bin` `obj` 및 폴더를 삭제 하 고, 다시 빌드 및 배포 하기 전에 장치에서 응용 프로그램을 제거 하는 것입니다.
-1. 푸시 알림 흐름의 많은 부분이 비동기적으로 실행 됩니다. 이로 인해 중단점이 적중 되지 않거나 예기치 않은 순서로 적중 될 수 있습니다. 응용 프로그램 흐름을 중단 하지 않고 추적 실행에 장치 또는 디버그 로깅을 사용 합니다. @No__t_1에 지정 된 `DebugTag`를 사용 하 여 Android 장치 로그를 필터링 합니다.
+1. 푸시 알림 흐름의 많은 부분이 비동기적으로 실행 됩니다. 이로 인해 중단점이 적중 되지 않거나 예기치 않은 순서로 적중 될 수 있습니다. 응용 프로그램 흐름을 중단 하지 않고 추적 실행에 장치 또는 디버그 로깅을 사용 합니다. `Constants`에 지정 된 `DebugTag`를 사용 하 여 Android 장치 로그를 필터링 합니다.
 
 ## <a name="create-a-notification-dispatcher"></a>알림 디스패처 만들기
 
@@ -538,7 +538,7 @@ public static class DispatcherConstants
 }
 ```
 
-Azure 알림 허브 구성과 일치 하도록 **DispatcherConstants.cs** 을 구성 해야 합니다. @No__t_0 속성의 값은 클라이언트 앱에서 사용 되는 값과 일치 해야 합니다. @No__t_0 속성은 Azure 알림 허브 인스턴스의 이름입니다. @No__t_0 속성은 알림 허브 **액세스 정책**에 있는 선택 키입니다. 다음 스크린샷은 Azure Portal의 `NotificationHubName` 및 `FullAccessConnectionString` 속성의 위치를 보여 줍니다.
+Azure 알림 허브 구성과 일치 하도록 **DispatcherConstants.cs** 을 구성 해야 합니다. `SubscriptionTags` 속성의 값은 클라이언트 앱에서 사용 되는 값과 일치 해야 합니다. `NotificationHubName` 속성은 Azure 알림 허브 인스턴스의 이름입니다. `FullAccessConnectionString` 속성은 알림 허브 **액세스 정책**에 있는 선택 키입니다. 다음 스크린샷은 Azure Portal의 `NotificationHubName` 및 `FullAccessConnectionString` 속성의 위치를 보여 줍니다.
 
 ![Azure 알림 허브 이름 및 FullAccessConnectionString의 스크린샷](azure-notification-hub-images/notification-hub-full-access-policy.png "Azure 알림 허브 이름 및 FullAccessConnectionString")
 
