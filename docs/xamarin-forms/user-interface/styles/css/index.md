@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/19/2019
-ms.openlocfilehash: 6cece2c7cad401a9dc6f14b689c5c9e5ab757df5
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: fdee070021b22f82cb69571f0fa2f396831b14e6
+ms.sourcegitcommit: 6781967baeed4fe2c58f070476e7c21d01c25c30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696876"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052798"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>CSS 스타일시트를 사용 하 여 Xamarin Forms 앱 스타일 지정 (CSS)
 
@@ -95,7 +95,7 @@ Xamarin.ios에서 CSS 스타일 시트는 컴파일 시간이 아니라 런타�
 
 ### <a name="xaml"></a>XAML
 
-[@No__t_3](xref:Xamarin.Forms.ResourceDictionary)에 추가 되기 전에 [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) 클래스를 사용 하 여 스타일 시트를 로드 하 고 구문 분석할 수 있습니다.
+[`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 되기 전에 [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) 클래스를 사용 하 여 스타일 시트를 로드 하 고 구문 분석할 수 있습니다.
 
 ```xaml
 <Application ...>
@@ -105,7 +105,7 @@ Xamarin.ios에서 CSS 스타일 시트는 컴파일 시간이 아니라 런타�
 </Application>
 ```
 
-[@No__t_1](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) 속성은 바깥쪽 XAML 파일의 위치에 상대적인 uri로 스타일 시트를 지정 하거나 uri가 `/` 시작 하는 경우 프로젝트 루트에 상대적인 uri로 지정 합니다.
+[`StyleSheet.Source`](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) 속성은 바깥쪽 XAML 파일의 위치에 상대적인 uri로 스타일 시트를 지정 하거나 uri가 `/`시작 하는 경우 프로젝트 루트에 상대적인 uri로 지정 합니다.
 
 > [!WARNING]
 > 빌드 작업이 **EmbeddedResource**으로 설정 되지 않은 경우 CSS 파일을 로드 하지 못합니다.
@@ -148,7 +148,7 @@ public partial class MyPage : ContentPage
 }
 ```
 
-@No__t_0 메서드에 대 한 인수는 스타일 시트를 읽은 `TextReader`입니다.
+`StyleSheet.FromReader` 메서드에 대 한 인수는 스타일 시트를 읽은 `TextReader`입니다.
 
 ## <a name="selecting-elements-and-applying-properties"></a>요소 선택 및 속성 적용
 
@@ -169,7 +169,7 @@ stacklayout {
 이 선택기는 스타일 시트를 사용 하는 페이지의 모든 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 요소를 식별 하 고 해당 여백을 균일 두께 20으로 설정 합니다.
 
 > [!NOTE]
-> @No__t_0 선택기는 지정 된 형식의 서브 클래스를 식별 하지 않습니다.
+> `element` 선택기는 지정 된 형식의 서브 클래스를 식별 하지 않습니다.
 
 ### <a name="selecting-elements-by-base-class"></a>기본 클래스에서 요소 선택
 
@@ -184,7 +184,7 @@ stacklayout {
 이 선택기는 스타일 시트를 사용 하는 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 요소를 식별 하 고 배경색을 `lightgray`로 설정 합니다.
 
 > [!NOTE]
-> @No__t_0 선택기는 Xamarin.ios와 관련 되며 CSS 사양의 일부가 아닙니다.
+> `^base` 선택기는 Xamarin.ios와 관련 되며 CSS 사양의 일부가 아닙니다.
 
 ### <a name="selecting-an-element-by-name"></a>이름으로 요소 선택
 
@@ -282,7 +282,7 @@ listview image {
 ```
 
 > [!NOTE]
-> @No__t_0 선택기에는 자식 요소가 부모의 _직계_ 자식일 필요가 없습니다. 자식 요소가 다른 부모를 가질 수 있습니다. 상위 항목이 지정 된 첫 번째 요소인 경우 선택이 발생 합니다.
+> `element element` 선택기에는 자식 요소가 부모의 _직계_ 자식일 필요가 없습니다. 자식 요소가 다른 부모를 가질 수 있습니다. 상위 항목이 지정 된 첫 번째 요소인 경우 선택이 발생 합니다.
 
 ### <a name="selecting-direct-child-elements"></a>직계 자식 요소 선택
 
@@ -313,7 +313,7 @@ stacklayout>image {
 ```
 
 > [!NOTE]
-> @No__t_0 선택기를 사용 하려면 자식 요소가 부모의 _직계_ 자식 이어야 합니다.
+> `element>element` 선택기를 사용 하려면 자식 요소가 부모의 _직계_ 자식 이어야 합니다.
 
 ## <a name="selector-reference"></a>선택기 참조
 
@@ -322,15 +322,15 @@ stacklayout>image {
 |선택기|예제|설명|
 |---|---|---|
 |`.class`|`.header`|' Header '를 포함 하는 `StyleClass` 속성을 사용 하 여 모든 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 합니다.|
-|`#id`|`#email`|@No__t_1 `StyleId` 설정 된 모든 요소를 선택 합니다. @No__t_0 설정 되지 않은 경우 `x:Name`로 대체 합니다. XAML을 사용 하는 경우 `x:Name` `StyleId` 보다 우선적으로 사용 됩니다. 이 선택기는 대/소문자를 구분 합니다.|
+|`#id`|`#email`|`email``StyleId` 설정 된 모든 요소를 선택 합니다. `StyleId` 설정 되지 않은 경우 `x:Name`로 대체 합니다. XAML을 사용 하는 경우 `x:Name` `StyleId` 보다 우선적으로 사용 됩니다. 이 선택기는 대/소문자를 구분 합니다.|
 |`*`|`*`|모든 요소를 선택 합니다.|
-|`element`|`label`|@No__t_0 형식의 모든 요소를 선택 하지만 서브 클래스는 선택 하지 않습니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
-|`^base`|`^contentpage`|@No__t_1를 포함 하 여 `ContentPage`를 기본 클래스로 사용 하는 모든 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않으며 CSS 사양의 일부가 아닙니다.|
+|`element`|`label`|`Label`형식의 모든 요소를 선택 하지만 서브 클래스는 선택 하지 않습니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
+|`^base`|`^contentpage`|`ContentPage`를 포함 하 여 `ContentPage`를 기본 클래스로 사용 하는 모든 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않으며 CSS 사양의 일부가 아닙니다.|
 |`element,element`|`label,button`|모든 `Button` 요소 및 `Label` 요소를 모두 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
-|`element element`|`stacklayout label`|@No__t_1 내에서 `Label` 요소를 모두 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
-|`element>element`|`stacklayout>label`|@No__t_1가 있는 모든 `Label` 요소를 직접 부모로 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
-|`element+element`|`label+entry`|@No__t_1 바로 뒤의 모든 `Entry` 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
-|`element~element`|`label~entry`|@No__t_1 앞에 있는 모든 `Entry` 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
+|`element element`|`stacklayout label`|`StackLayout`내에서 `Label` 요소를 모두 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
+|`element>element`|`stacklayout>label`|`StackLayout`가 있는 모든 `Label` 요소를 직접 부모로 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
+|`element+element`|`label+entry`|`Label`바로 뒤의 모든 `Entry` 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
+|`element~element`|`label~entry`|`Label`앞에 있는 모든 `Entry` 요소를 선택 합니다. 이 선택기는 대/소문자를 구분 하지 않습니다.|
 
 일치 하는 선택기를 사용 하는 스타일은 정의 순서 대로 연속적으로 적용 됩니다. 특정 항목에 대해 정의 된 스타일은 항상 마지막에 적용 됩니다.
 
@@ -352,7 +352,7 @@ stacklayout>image {
 
 |속성|적용 대상|값|예제|
 |---|---|---|---|
-|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| 0 1 2 3 4 5 6 7 @no__ t_18 9 0 1 2 |`align-content: space-between;`|
+|`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| 0 1 2 |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| 0 1 2 3 4|`align-self: flex-end;`|
 |`background-color`|`VisualElement`|_색_ \| `initial` |`background-color: springgreen;`|
@@ -372,7 +372,7 @@ stacklayout>image {
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_double_ \| _namedsize_ \| `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
-|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| 0 1 2 3 4 5 6 7 @no__ t_18 9 0|`justify-content: flex-end;`|
+|`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \||`justify-content: flex-end;`|
 |`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_두께_ \| `initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_두께_ \| `initial` |`margin-left: 3;`|
@@ -406,9 +406,11 @@ stacklayout>image {
 
 - `all: initial`
 - 레이아웃 속성 (상자 또는 그리드).
-- @No__t_0, `border` 등의 줄임 속성입니다.
+- `font`, `border`등의 줄임 속성입니다.
 
 또한 `inherit` 값이 없으므로 상속이 지원 되지 않습니다. 따라서 예를 들어 레이아웃에 `font-size` 속성을 설정 하 고 레이아웃의 모든 [`Label`](xref:Xamarin.Forms.Label) 인스턴스가 값을 상속 하도록 할 수는 없습니다. 한 가지 예외는 `direction` 속성 이며 기본값은 `inherit`입니다.
+
+`Span` 요소를 대상으로 지정 하는 것은 요소와 이름 (`#` 기호 사용)에 의해 CSS 스타일의 대상이 될 수 없도록 하는 알려진 문제가 있습니다. `Span` 요소는 `StyleClass` 속성이 없는 `GestureElement`에서 파생 되므로 범위는 CSS 클래스 대상을 지원 하지 않습니다. 자세한 내용은 [범위 제어에 CSS 스타일을 적용할 수 없음](https://github.com/xamarin/Xamarin.Forms/issues/5979)을 참조 하세요.
 
 ### <a name="xamarinforms-specific-properties"></a>Xamarin.ios 관련 속성
 
