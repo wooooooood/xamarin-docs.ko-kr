@@ -4,15 +4,16 @@ description: 이 문서에서는 기본 App 클래스의 기능을 설명합니�
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
+ms.custom: video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
+ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971211"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842977"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms App 클래스
 
@@ -221,3 +222,9 @@ public sealed partial class MainPage
 UWP 프로젝트의 **App.xaml.cs**에서 `Forms.Init()`가 호출되어야 합니다.
 
 자세한 내용은 UWP를 대상으로 하지 않는 기존 Xamarin.Forms 솔루션에 UWP 프로젝트를 추가하는 단계가 포함된 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
