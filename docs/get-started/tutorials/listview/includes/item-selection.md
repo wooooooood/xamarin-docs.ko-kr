@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a537bdaf2015dd7d179545cb7587934818e960d7
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: 2185fa243d2bccea046be5c91a2b1e9ed365edfe
+ms.sourcegitcommit: ecb81266e59c9e1773a06582e138bf4eed713dfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004149"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74062907"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -39,13 +39,13 @@ ms.locfileid: "71004149"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![ iOS 및 Android의 항목 선택 및 탭에 응답하는 ListView 스크린샷](../images/item-selection.png "ListView 항목 선택")](../images/item-selection-large.png#lightbox "ListView 항목 선택")
+    [![iOS 및 Android의 항목 선택 및 탭에 응답하는 ListView 스크린샷](../images/item-selection.png "ListView 항목 선택")](../images/item-selection-large.png#lightbox "ListView 항목 선택")
 
     두 이벤트 처리기에 중단점을 설정하고 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 항목을 탭니다. [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트는 [`ListView`](xref:Xamarin.Forms.ListView)에서 새 항목을 선택할 때만 발생하고, [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트는 항목을 탭할 때마다 발생합니다.
 
     항목 선택 및 탭에 대한 자세한 내용은 [ListView 대화형 작업](~/xamarin-forms/user-interface/listview/interactivity.md) 안내서의 [선택 및 탭](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps)을 참조하세.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.ListView) 선언을 수정하여 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 및 [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트에 대한 처리기를 설정합니다.
 
@@ -78,8 +78,8 @@ ms.locfileid: "71004149"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![ iOS 및 Android의 항목 선택 및 탭에 응답하는 ListView 스크린샷](../images/item-selection.png "ListView 항목 선택")](../images/item-selection-large.png#lightbox "ListView 항목 선택")
+    [![iOS 및 Android의 항목 선택 및 탭에 응답하는 ListView 스크린샷](../images/item-selection.png "ListView 항목 선택")](../images/item-selection-large.png#lightbox "ListView 항목 선택")
 
     두 이벤트 처리기에 중단점을 설정하고 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 항목을 탭니다. [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트는 [`ListView`](xref:Xamarin.Forms.ListView)에서 새 항목을 선택할 때만 발생하고, [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) 이벤트는 항목을 탭할 때마다 발생합니다.
 
-    항목 선택 및 탭에 대한 자세한 내용은 [선택 & 탭]을 참조하세요.(~/xamarin-forms/user-interface/listview/interactivity.md#selection-and
+    항목 선택 및 탭에 대한 자세한 내용은 [선택 및 탭](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps)을 참조하세요.
