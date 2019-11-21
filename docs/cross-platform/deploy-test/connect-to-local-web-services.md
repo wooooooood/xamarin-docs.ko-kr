@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-ms.openlocfilehash: 0a2bd469477ce6e2aca03e1d4cf279bb5a7a16f9
-ms.sourcegitcommit: 94fa3bf464a2ee5ac4b6056691d264b8210b1192
+ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
+ms.sourcegitcommit: 233aaa1ac3d8f40c09b6daf6d944ea0b4cbee381
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72526814"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74135274"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>iOS 시뮬레이터 및 Android Emulator에서 로컬 웹 서비스에 연결
 
@@ -37,13 +37,13 @@ iOS 시뮬레이터 또는 Android Emulator에서 실행되는 모바일 애플�
 
 .NET Core SDK를 설치하면 로컬 사용자 인증서 저장소에 ASP.NET Core HTTPS 개발 인증서가 설치됩니다. 그러나 인증서가 설치되었지만 신뢰할 수는 없습니다. 인증서를 신뢰하려면 다음 일회성 단계를 수행하여 dotnet `dev-certs` 도구를 실행합니다.
 
-```console
+```dotnetcli
 dotnet dev-certs https --trust
 ```
 
 다음 명령은 `dev-certs` 도구에 대한 도움말을 제공합니다.
 
-```console
+```dotnetcli
 dotnet dev-certs https --help
 ```
 
