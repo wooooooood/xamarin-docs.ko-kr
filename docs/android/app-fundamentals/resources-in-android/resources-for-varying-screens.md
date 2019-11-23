@@ -55,11 +55,11 @@ Android는 런타임에 적합 한 크기로 확장 가능 합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[Android 매니페스트![](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[Android 매니페스트![](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
+[![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.m761.png)](resources-for-varying-screens-images/01-android-manifest.m761.png#lightbox)
 
 -----
 
@@ -112,7 +112,7 @@ API 수준 13 (Android 3.2) 부터는 sw*N*dp 한정자를 사용 하기 위해 
 
 - Motorola Xoom과 같은 **10 개의 "태블릿** &ndash; 720 dp:
 
-API 수준을 최대 12 (Android 3.1)로 지정 하는 응용 프로그램의 경우 레이아웃은 다양 한 화면의 일반화를 사용 하는 한정자 **small**/**normal**/**large**/**초대형** 를 사용 하는 디렉터리로 이동 해야 합니다. 대부분의 장치에서 사용할 수 있는 크기입니다. 예를 들어 아래 이미지에는 4 개의 다른 화면 크기에 대 한 대체 리소스가 있습니다.
+API 수준을 최대 12 (Android 3.1)로 지정 하는 응용 프로그램의 경우 대부분의 장치에서 사용할 수 있는 다양 한 화면 크기의 일반화로 한정자 **small**/**normal**/**large**/**초대형** 를 사용 하는 디렉터리에 레이아웃을 배치 해야 합니다. 예를 들어 아래 이미지에는 4 개의 다른 화면 크기에 대 한 대체 리소스가 있습니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -163,7 +163,7 @@ Android는 장치에 필요한 대로 비트맵 크기를 조정 하지만, 비�
 
 다양 한 밀도의 이러한 비트맵을 만드는 것이 다소 지루한 일 수 있습니다. 따라서 Google은 [**Android Asset Studio**](https://romannurik.github.io/AndroidAssetStudio/)라는 이러한 비트맵 만들기와 관련 된 일부 번거로움을를 줄일 수 있는 온라인 유틸리티를 만들었습니다.
 
-[Android Asset Studio![](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
+[![Android Asset Studio](resources-for-varying-screens-images/08-android-asset-studio-sml.png)](resources-for-varying-screens-images/08-android-asset-studio.png#lightbox)
 
 이 웹 사이트는 하나의 이미지를 제공 하 여 네 가지 일반적인 화면 밀도를 대상으로 하는 비트맵을 만드는 데 도움이 됩니다. 그러면 Android Asset Studio에서 일부 사용자 지정 항목을 사용 하 여 비트맵을 만든 다음 zip 파일로 다운로드할 수 있습니다.
 
@@ -178,9 +178,9 @@ Android는 놀랄만한 수의 장치에서 실행 되며 화면 크기와 화�
 - &ndash; **가능** 하면 [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout)
   사용 **하지** 않는 것이 좋습니다 .이는 API 수준 3 (Android 1.5)에서 더 이상 사용 되지 않으며 불안정 레이아웃을 생성 합니다. 사용 하면 안 됩니다. 대신 [**LinearLayout**](xref:Android.Widget.LinearLayout), [**RelativeLayout**](xref:Android.Widget.RelativeLayout)또는 새 [**GridLayout**](xref:Android.Widget.GridLayout)와 같은 더 유연한 레이아웃 위젯을 사용 합니다.
 
-- **기본 &ndash; 레이아웃 방향을 선택** 합니다. 예를 들어 대체 리소스를 제공 하는 대신 **모양** 및 **레이아웃 포트**를 제공 하 고, **레이아웃**에 가로 및 세로의 리소스를 배치 하는 것이 좋습니다. **layout-포트**
+- **기본 &ndash; 레이아웃 방향 하나를 선택** 합니다. 예를 들어 대체 리소스를 제공 하는 대신 레이아웃- **육지** 와 **레이아웃 포트**를 제공 하 고, **레이아웃**에 가로 및 세로의 리소스를 **레이아웃 포트**에 배치 합니다.
 
-- **Height 및 Width에 대해 LayoutParams 사용** -XML 레이아웃 파일에서 UI 요소를 정의 하는 경우 **wrap_content** 및 **fill_parent** 값을 사용 하는 Android 응용 프로그램은 더 많은 성공을 보장 합니다. 픽셀 또는 밀도 독립적 단위 사용. 이러한 차원 값으로 인해 Android에서 비트맵 리소스를 적절 하 게 확장할 수 있습니다. 이와 같은 이유로, 밀도 독립적 단위는 UI 요소의 여백 및 안쪽 여백을 지정 하는 경우에 적합 합니다.
+- **Height 및 Width에 대해 LayoutParams 사용** -XML 레이아웃 파일에서 UI 요소를 정의 하는 경우 **wrap_content** 및 **fill_parent** 값을 사용 하는 Android 응용 프로그램은 픽셀 또는 밀도 독립적 단위를 사용 하는 것과는 다른 장치에 대해 적절 한 모양을 확인 합니다. 이러한 차원 값으로 인해 Android에서 비트맵 리소스를 적절 하 게 확장할 수 있습니다. 이와 같은 이유로, 밀도 독립적 단위는 UI 요소의 여백 및 안쪽 여백을 지정 하는 경우에 적합 합니다.
 
 ## <a name="testing-multiple-screens"></a>여러 화면 테스트
 

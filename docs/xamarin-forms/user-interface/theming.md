@@ -22,14 +22,14 @@ Xamarin Forms 응용 프로그램은 `DynamicResource` 태그 확장을 사용 �
 
 Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로세스는 다음과 같습니다.
 
-1. [@No__t_1](xref:Xamarin.Forms.ResourceDictionary)에서 각 테마에 대 한 리소스를 정의 합니다.
-1. @No__t_0 태그 확장을 사용 하 여 응용 프로그램의 테마 리소스를 사용 합니다.
+1. [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에서 각 테마에 대 한 리소스를 정의 합니다.
+1. `DynamicResource` 태그 확장을 사용 하 여 응용 프로그램의 테마 리소스를 사용 합니다.
 1. 응용 프로그램의 **app.xaml** 파일에서 기본 테마를 설정 합니다.
 1. 런타임에 테마를 로드 하는 코드를 추가 합니다.
 
 다음 스크린샷은 테마 페이지를 표시 하며, 진한 테마를 사용 하 여 밝은 테마와 Android 응용 프로그램을 사용 하는 iOS 응용 프로그램입니다.
 
-[![](theming-images/main-page-both-themes.png "테마가 적용 된 앱의 기본 페이지")](theming-images/main-page-both-themes-large.png#lightbox "테마가 적용 된 앱의 기본 페이지") Ios 및 android에서 테마가 적용 된 앱의[![세부 정보 페이지](theming-images/detail-page-both-themes.png "테마가 적용 된 앱의 세부 정보 페이지") 에 있는 ios 및 Android 
+[![](theming-images/main-page-both-themes.png "테마가 적용 된 앱의 기본 페이지")](theming-images/main-page-both-themes-large.png#lightbox "테마가 적용 된 앱의 기본 페이지") Ios 및 android에서 테마가 적용 된 앱의 [ ![세부 정보 페이지](theming-images/detail-page-both-themes.png "테마가 적용 된 앱의 세부 정보 페이지") 에 있는 ios 및 Android
 의 기본 페이지 스크린샷](theming-images/detail-page-both-themes-large.png#lightbox "테마가 적용 된 앱의 세부 정보 페이지")
 
 ## <a name="define-themes"></a>테마 정의
@@ -70,10 +70,10 @@ Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로�
 </ResourceDictionary>
 ```
 
-각 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에는 각각의 테마를 정의 하는 [`Color`](xref:Xamarin.Forms.Color) 리소스가 포함 되며 각 `ResourceDictionary` 동일한 키 값을 사용 합니다. 리소스 사전에 대 한 자세한 내용은 [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)을 참조 하세요.
+각 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에는 각각의 테마를 정의 하는 [`Color`](xref:Xamarin.Forms.Color) 리소스가 포함 되며 각 `ResourceDictionary` 동일한 키 값을 사용 합니다. 리소스 사전에 대 한 자세한 내용은 참조 하세요. [리소스가](~/xamarin-forms/xaml/resource-dictionaries.md)합니다.
 
 > [!IMPORTANT]
-> @No__t_1 메서드를 호출 하는 각 `ResourceDictionary`에 코드 숨김이 필요 합니다. 이는 런타임에 선택 된 테마를 나타내는 CLR 개체를 만들 수 있도록 하는 데 필요 합니다.
+> `InitializeComponent` 메서드를 호출 하는 각 `ResourceDictionary`에 코드 숨김이 필요 합니다. 이는 런타임에 선택 된 테마를 나타내는 CLR 개체를 만들 수 있도록 하는 데 필요 합니다.
 
 ## <a name="set-a-default-theme"></a>기본 테마 설정
 
@@ -176,7 +176,7 @@ Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로�
 
 테마 리소스를 직접 사용 하는 경우 `DynamicResource` 태그 확장과 함께 사용 해야 합니다. 그러나 `DynamicResource` 태그 확장을 사용 하는 스타일을 사용 하는 경우 `StaticResource` 태그 확장과 함께 사용 해야 합니다.
 
-스타일 지정에 대 한 자세한 내용은 [XAML 스타일을 사용 하 여 Xamarin.ios 앱 스타일](~/xamarin-forms/user-interface/styles/xaml/index.md)지정을 참조 하세요. @No__t_0 태그 확장에 대 한 자세한 내용은 [xamarin.ios의 동적 스타일](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)(영문)을 참조 하세요.
+스타일 지정에 대 한 자세한 내용은 [XAML 스타일을 사용 하 여 Xamarin.ios 앱 스타일](~/xamarin-forms/user-interface/styles/xaml/index.md)지정을 참조 하세요. `DynamicResource` 태그 확장에 대 한 자세한 내용은 [xamarin.ios의 동적 스타일](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)(영문)을 참조 하세요.
 
 ## <a name="load-a-theme-at-runtime"></a>런타임에 테마 로드
 
@@ -185,7 +185,7 @@ Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로�
 1. 응용 프로그램에서 현재 테마를 제거 합니다. 이렇게 하려면 응용 프로그램 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)의 [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) 속성을 선택 취소 합니다.
 2. 선택한 테마를 로드 합니다. 이렇게 하려면 선택한 테마의 인스턴스를 응용 프로그램 수준 `ResourceDictionary`의 `MergedDictionaries` 속성에 추가 합니다.
 
-@No__t_2 태그 확장을 사용 하 여 속성을 설정 하는 모든 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 개체는 새 테마 값을 적용 합니다. 이는 `DynamicResource` 태그 확장이 사전 키에 대 한 링크를 유지 관리 하기 때문에 발생 합니다. 따라서 키와 연결 된 값이 대체 되 면 변경 내용이 `VisualElement` 개체에 적용 됩니다.
+`DynamicResource` 태그 확장을 사용 하 여 속성을 설정 하는 모든 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 개체는 새 테마 값을 적용 합니다. 이는 `DynamicResource` 태그 확장이 사전 키에 대 한 링크를 유지 관리 하기 때문에 발생 합니다. 따라서 키와 연결 된 값이 대체 되 면 변경 내용이 `VisualElement` 개체에 적용 됩니다.
 
 샘플 응용 프로그램에서 테마는 [`Picker`](xref:Xamarin.Forms.Picker)포함 된 모달 페이지를 통해 선택 됩니다. 다음 코드에서는 선택 된 테마가 변경 될 때 실행 되는 `OnPickerSelectionChanged` 메서드를 보여 줍니다.
 
@@ -217,6 +217,6 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 ## <a name="related-links"></a>관련 링크
 
 - [테마 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
-- [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Xamarin.ios의 동적 스타일](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

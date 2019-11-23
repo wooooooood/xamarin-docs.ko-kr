@@ -93,11 +93,11 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 이렇게 하면 [`Activity`](xref:Android.App.Activity) 된 레이아웃의 [`WebView`](xref:Android.Webkit.WebView) 멤버를 초기화 하 고 [`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled)
-`= true`를 사용 하 여 [`WebView`](xref:Android.Webkit.WebView) 에 javascript를 사용 하도록 설정 합니다 (에 대 한 자세한 내용은 javascript의 [javascript 조리법에서](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) JavaScript에서 C\# 함수를 호출 하는 방법에 대 한 정보입니다. 마지막으로 초기 웹 페이지가 [`LoadUrl(String)`](xref:Android.Webkit.WebView)와 함께 로드 됩니다.
+`= true`를 사용 하는 [`WebView`](xref:Android.Webkit.WebView) 에 대해 javascript를 사용 하도록 설정 합니다. javascript에서 c\# 함수를 호출 하는 방법에 대 한 자세한 내용은 [javascript에서 c\# 호출](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript) (영문)을 참조 하세요. 마지막으로 초기 웹 페이지가 [`LoadUrl(String)`](xref:Android.Webkit.WebView)와 함께 로드 됩니다.
 
 앱을 빌드하고 실행합니다. 다음 스크린샷에 표시 된 것 처럼 간단한 웹 페이지 뷰어 앱이 표시 됩니다.
 
-[웹 보기를 표시 하는 앱의 예![](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
+[웹 보기를 표시 하는 앱의 예 ![](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 **뒤로** 단추 키 누름을 처리 하려면 다음 using 문을 추가 합니다.
 
@@ -124,7 +124,7 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 
 애플리케이션을 다시 실행합니다. 이제 링크를 팔 로우 하 고 페이지 기록을 통해 다시 탐색할 수 있습니다.
 
-[작업 중인 뒤로 단추의 스크린샷 예![](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
+[작업 중인 뒤로 단추의 스크린샷 예 ![](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 *이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유한 작업을 기반으로 하 고*
 [*Creative Commons 2.5 특성 라이선스*](https://creativecommons.org/licenses/by/2.5/)에 설명 된 용어에 따라 사용 되는 수정 내용입니다.
@@ -132,5 +132,5 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 ## <a name="related-links"></a>관련 링크
 
 - [JavaScript에서 C# 호출](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
-- [Webkit](xref:Android.Webkit.WebView)
+- [Android.Webkit.WebView](xref:Android.Webkit.WebView)
 - [KeyEvent](xref:Android.Webkit.WebView)

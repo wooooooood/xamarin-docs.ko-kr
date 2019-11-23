@@ -21,7 +21,7 @@ ms.locfileid: "73029362"
 
  [정상 상태에 대 한 녹색 android 아이콘](custom-button-images/android-normal.png)](custom-button-images/android-normal.png#lightbox) [![포커스가 있는 상태에 대 한 주황색 android 아이콘](custom-button-images/android-focused.png)](custom-button-images/android-focused.png#lightbox) [![![노란색 android 아이콘 누름 상태](custom-button-images/android-pressed.png)](custom-button-images/android-pressed.png#lightbox)
 
-**Android_button**라는 **리소스/그릴** 때 디렉터리에 새 파일을 만듭니다. 다음 XML을 삽입 합니다.
+**Android_button**이라는 **리소스/그릴** 때 디렉터리에 새 파일을 만듭니다. 다음 XML을 삽입 합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -34,7 +34,7 @@ ms.locfileid: "73029362"
 </selector>
 ```
 
-이는 단추의 현재 상태에 따라 해당 이미지를 변경 하는 그릴 수 있는 단일 리소스를 정의 합니다. 첫 번째 `<item>` 단추를 누르면 (활성화 된) **android_pressed** 를 이미지로 정의 합니다. 두 번째 `<item>` 단추를 포커스가 있을 때 (트랙볼 또는 방향 패드를 사용 하 여 단추가 강조 표시 된 경우) **android_focused** 를 이미지로 정의 합니다. 그리고 세 번째 `<item>`는 **android_normal** 를 표준 상태 (눌린 상태 또는 포커스가 없는 경우)에 대 한 이미지로 정의 합니다. 이 XML 파일은 이제 그릴 수 있는 단일 리소스를 나타내며 배경에 대해 [`Button`](xref:Android.Widget.Button) 에서 참조 될 때 표시 되는 이미지는 이러한 세 가지 상태에 따라 변경 됩니다.
+이는 단추의 현재 상태에 따라 해당 이미지를 변경 하는 그릴 수 있는 단일 리소스를 정의 합니다. 첫 번째 `<item>`은 단추를 누르면 (활성화 된) **android_pressed** 를 이미지로 정의 합니다. 두 번째 `<item>`은 단추가 포커스를 할 때 (단추를 트랙볼 또는 방향 패드를 사용 하 여 강조 표시 된 경우) 이미지로 **android_focused** 를 정의 합니다. 그리고 세 번째 `<item>`는 **android_normal** 를 표준 상태 (누르거나 포커스가 없는 경우)에 대 한 이미지로 정의 합니다. 이 XML 파일은 이제 그릴 수 있는 단일 리소스를 나타내며 배경에 대해 [`Button`](xref:Android.Widget.Button) 에서 참조 될 때 표시 되는 이미지는 이러한 세 가지 상태에 따라 변경 됩니다.
 
 > [!NOTE]
 > `<item>` 요소의 순서는 중요 합니다. 그릴 수 있는이 항목을 참조 하는 경우 현재 단추 상태에 적합 한 항목을 확인 하기 위해 `<item>`s가 차례로 트래버스 됩니다.

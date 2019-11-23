@@ -18,7 +18,7 @@ ms.locfileid: "70770641"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
-_Xamarin.Forms XAML 파일에서 iOS, Android 및 유니버설 Windows 플랫폼의 네이티브 뷰를 직접 참조할 수 있습니다. 속성과 이벤트 핸들러는 네이티브 뷰에서 설정할 수 있으며, Xamarin.Forms 뷰와 상호작용할 수 있습니다. 이 문서에서는 Xamarin.Forms XAML 파일의 네이티브 뷰를 사용 하는 방법에 설명 합니다._
+_IOS, Android 및 유니버설 Windows 플랫폼의 기본 뷰는 Xamarin.ios XAML 파일에서 직접 참조할 수 있습니다. 속성 및 이벤트 처리기는 네이티브 뷰에서 설정할 수 있으며, Xamarin.ios 뷰와 상호 작용할 수 있습니다. 이 문서에서는 Xamarin.ios XAML 파일에서 네이티브 뷰를 사용 하는 방법을 보여 줍니다._
 
 이 문서에서는 다음 내용을 다룹니다.
 

@@ -28,8 +28,8 @@ Tizen .NET 응용 프로그램 개발을 시작 하려면 먼저 개발 환경�
 
 ## <a name="documentation"></a>설명서
 
-- [Xamarin forms 설명서](~/xamarin-forms/index.yml) @no__t 및 xamarin.ios를 사용 하 여 C# 플랫폼 간 응용 프로그램을 빌드하는 방법을 참조 하세요.
-- [**developer.tizen.org**](https://developer.tizen.org/development) @no__t-tizen 응용 프로그램을 빌드하고 배포 하는 데 도움이 되는 2 개의 설명서와 비디오입니다.
+- [Xamarin forms 설명서](~/xamarin-forms/index.yml) 는 및 xamarin.ios를 사용 하 여 C# 플랫폼 간 응용 프로그램을 빌드하는 방법 &ndash;.
+- [**developer.tizen.org**](https://developer.tizen.org/development) 는 tizen 응용 프로그램을 빌드 및 배포 하는 데 도움이 되는 설명서와 비디오를 &ndash; 합니다.
 
 ## <a name="samples"></a>샘플
 

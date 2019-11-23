@@ -22,7 +22,7 @@ _CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에
 
 > [!VIDEO https://youtube.com/embed/eYCx63FeqVU]
 
-**Evolve 2016: Xamarin.ios**
+**Evolve 2016: Cocos # xamarin.forms**
 
 ## <a name="overview"></a>개요
 
@@ -30,7 +30,7 @@ CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 �
 
 - [CocosSharp 란?](#what)
 - [CocosSharp Nuget 패키지 추가](#nuget)
-- [연습: Xamarin. Forms 앱에 CocosSharp 추가](#add)
+- [연습: CocosSharp를 Xamarin.Forms 앱에 추가](#add)
 
 <a name="what" />
 
@@ -39,11 +39,11 @@ CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 �
 [CocosSharp](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md) 는 Xamarin 플랫폼에서 사용할 수 있는 오픈 소스 게임 엔진입니다.
 CocosSharp는 다음과 같은 기능을 포함 하는 효율적인 런타임 라이브러리:
 
-- 클래스를 `CCSprite` 사용 하 여 이미지 렌더링
-- 클래스를 `CCDrawNode` 사용 하 여 셰이프 렌더링
-- 클래스를 사용 하는 `CCNode.Schedule` 모든 프레임 논리
-- 콘텐츠 관리 (. .png 파일 등의 리소스 로드 및 언로드)를 사용 하 여`CCTextureCache`
-- 클래스를 사용 `CCAction` 하는 애니메이션
+- `CCSprite` 클래스를 사용 하 여 이미지 렌더링
+- `CCDrawNode` 클래스를 사용 하 여 도형 렌더링
+- `CCNode.Schedule` 클래스를 사용 하는 모든 프레임 논리
+- 콘텐츠 관리 (`CCTextureCache`를 사용 하 여 .png 파일 등의 리소스 로드 및 언로드)
+- `CCAction` 클래스를 사용 하는 애니메이션
 
 CocosSharp의 주된 초점은 플랫폼 간 2D 게임;의 생성을 간소화 하는 그러나 Xamarin 양식 응용 프로그램에 크게 보강할 수도 있습니다. 게임에는 일반적으로 효율적인 렌더링 및 시각적 개체를 정확 하 게 제어할 필요, CocosSharp 게임 내 응용 프로그램에 강력한 시각화 및 효과 추가 하려면 사용할 수 있습니다.
 
@@ -62,7 +62,7 @@ CocosSharp를 사용 하기 전에 개발자는 Xamarin.Forms 프로젝트에 �
 CocosSharp Nuget 패키지는 모든 CocosSharp 개체를 만드는 데 필요한 개체를 포함 합니다.
 CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` Xamarin.Forms에서 CocosSharp 호스팅하는 데 사용 하는 클래스입니다.
 추가 된 **CocosSharp.Forms** NuGet 및 **CocosSharp** 도 자동으로 추가 될 예정입니다.
-이렇게 하려면 마우스 오른쪽 단추로 클릭 합니다 **패키지** 선택한.NET Standard 라이브러리 프로젝트 폴더 **패키지 추가...** . 검색 용어를 입력 **CocosSharp.Forms**를 선택 **Xamarin.Forms 용 CocosSharp**, 클릭 **패키지 추가**합니다.
+이렇게 하려면 .NET Standard library 프로젝트에서 **패키지** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다. 검색 용어 **Cocossharp**를 입력 하 고 **Xamarin.ios에 대해 cocossharp**를 선택한 다음 **패키지 추가**를 클릭 합니다.
 
 ![](cocossharp-images/image1.png "추가 패키지 대화 상자")
 
@@ -74,7 +74,7 @@ CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` Xamarin.Forms에
 
 <a name="add" />
 
-## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>연습: Xamarin. Forms 앱에 CocosSharp 추가
+## <a name="walkthrough-adding-cocossharp-to-a-xamarinforms-app"></a>연습: CocosSharp를 Xamarin.Forms 앱에 추가
 
 Xamarin.Forms 앱에 간단한 CocosSharp 뷰를 추가 하려면 다음이 단계를 수행 합니다.
 
@@ -88,7 +88,7 @@ Xamarin.Forms 앱에 CocosSharp 뷰를 성공적으로 추가한 후 방문 합�
 
 <a name="1" />
 
-### <a name="1-creating-a-xamarin-forms-page"></a>1. 만들기는 Xamarin Forms 페이지
+### <a name="1-creating-a-xamarin-forms-page"></a>1. Xamarin Forms 페이지 만들기
 
 Xamarin.Forms는 모든 컨테이너에서 CocosSharp는 호스팅할 수 있습니다. 이 페이지에 대 한이 샘플에서는 라는 페이지 `HomePage`합니다. `HomePage` 절반으로 분할 됩니다는 `Grid` Xamarin.Forms 및 CocosSharp 수 렌더링 되는 방식을 동시에 동일한 페이지에 표시 합니다.
 
@@ -276,7 +276,7 @@ CocosSharp 시각적 개체 표시 되는 이제 조사할 수 있습니다는 `
 
 <a name="5" />
 
-### <a name="5-interacting-with-cocossharp"></a>5. CocosSharp 상호 작용
+### <a name="5-interacting-with-cocossharp"></a>5. CocosSharp와 상호 작용
 
 CocosSharp 시각적 요소 (같은 `CCDrawNode`)에서 상속 된 `CCNode` 클래스입니다. `CCNode` 부모를 기준으로 개체를 배치에 사용할 수 있는 두 개 속성도 제공 합니다. `PositionX` 고 `PositionY`입니다. 이 코드 조각에 나와 있는 것 처럼 코드는 원의 중심을 배치 하려면 이러한 두 속성을 사용 하는 현재:
 

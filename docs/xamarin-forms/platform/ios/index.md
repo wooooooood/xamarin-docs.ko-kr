@@ -30,11 +30,11 @@ IOS 용 Xamarin Forms 응용 프로그램을 개발 하려면 Visual Studio가 �
 
 IOS의 Xamarin 양식 보기에 대해 다음과 같은 플랫폼별 기능이 제공 됩니다.
 
-- [@No__t 1](xref:Xamarin.Forms.Cell) 배경색을 설정 합니다. 자세한 내용은 [iOS의 셀 배경색](cell-background-color.md)을 참조 하세요.
+- [`Cell`](xref:Xamarin.Forms.Cell) 배경색 설정 자세한 내용은 [iOS의 셀 배경색](cell-background-color.md)을 참조 하세요.
 - 에 적합 한 텍스트를 입력 하는 보장 된 [ `Entry` ](xref:Xamarin.Forms.Entry) 글꼴 크기를 조정 하 여 합니다. 자세한 내용은 [iOS의 항목 글꼴 크기](entry-font-size.md)를 참조 하세요.
 - 커서 색 설정 된 [ `Entry` ](xref:Xamarin.Forms.Entry)합니다. 자세한 내용은 [iOS의 항목 커서 색](entry-cursor-color.md)을 참조 하세요.
-- 스크롤 하는 동안 [@no__t 1](xref:Xamarin.Forms.ListView) 머리글 셀이 부동 되는지 여부를 제어 합니다. 자세한 내용은 [iOS의 ListView 그룹 헤더 스타일](listview-group-header-style.md)을 참조 하세요.
-- [@No__t-1](xref:Xamarin.Forms.ListView) 항목 컬렉션을 업데이트할 때 행 애니메이션을 사용 하지 않도록 설정할지 여부를 제어 합니다. 자세한 내용은 [iOS의 ListView 행 애니메이션](listview-row-animations.md)을 참조 하세요.
+- 스크롤 하는 동안 머리글 셀의 부동 [`ListView`](xref:Xamarin.Forms.ListView) 여부를 제어 합니다. 자세한 내용은 [iOS의 ListView 그룹 헤더 스타일](listview-group-header-style.md)을 참조 하세요.
+- [`ListView`](xref:Xamarin.Forms.ListView) items 컬렉션을 업데이트할 때 행 애니메이션을 사용 하지 않도록 설정할지 여부를 제어 합니다. 자세한 내용은 [iOS의 ListView 행 애니메이션](listview-row-animations.md)을 참조 하세요.
 - 구분 기호 스타일을 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [iOS의 ListView 구분 기호 스타일](listview-separator-style.md)을 참조 하세요.
 - 선택 항목에서 발생 하는 경우 제어는 [ `Picker` ](xref:Xamarin.Forms.Picker)합니다. 자세한 내용은 [iOS에서 선택 항목 선택 항목](picker-selection.md)을 참조 하세요.
 - 사용 하도록 설정 합니다 [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) 속성에는 위치에 탭 하 여 설정 될를 [ `Slider` ](xref:Xamarin.Forms.Slider) 끌어 필요가 하는 대신 가로 막대형,는 `Slider` thumb. 자세한 내용은 [iOS의 슬라이더 엄지 단추 탭](slider-thumb.md)을 참조 하세요.
@@ -45,7 +45,7 @@ IOS의 Xamarin.ios 페이지에 대해 다음과 같은 플랫폼 관련 기능�
 - 탐색 모음 반투명 인지 여부를 제어 합니다. 자세한 내용은 [iOS의 탐색 모음 반투명도](navigation-bar-translucent.md)을 참조 하세요.
 - 제어 상태 표시줄 텍스트의 색 여부는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 탐색 모음의 광도 맞게 조정 됩니다. 자세한 내용은 [iOS의 Navigationpage Bar 텍스트 색 모드](status-bar-text-color.md)를 참조 하세요.
 - 페이지 탐색 모음에서 큰 제목으로 페이지 제목이 표시 되는지 여부를 제어 합니다. 자세한 내용은 [iOS의 큰 페이지 제목](page-large-title.md)을 참조 하세요.
-- @No__t에서 홈 표시기의 표시 여부를 설정 합니다. [1](xref:Xamarin.Forms.Page). 자세한 내용은 [iOS의 홈 표시기 표시 유형](page-home-indicator.md)을 참조 하세요.
+- [`Page`](xref:Xamarin.Forms.Page)에서 홈 표시기의 표시 여부를 설정 합니다. 자세한 내용은 [iOS의 홈 표시기 표시 유형](page-home-indicator.md)을 참조 하세요.
 - 상태 표시줄 표시 여부 설정 된 [ `Page` ](xref:Xamarin.Forms.Page)합니다. 자세한 내용은 [iOS의 페이지 상태 표시줄 표시 유형](page-status-bar-visibility.md)을 참조 하세요.
 - 콘텐츠 페이지를 확인 합니다. 모든 iOS 장치에 대 한 안전한 화면 영역에 배치 됩니다. 자세한 내용은 [iOS의 안전 영역 레이아웃 가이드](page-safe-area-layout.md)를 참조 하세요.
 - 모달 페이지의 프레젠테이션 스타일 설정 자세한 내용은 [모달 페이지 표시 스타일](page-presentation-style.md)을 참조 하세요.

@@ -36,7 +36,7 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 1. **도구 > 옵션 ...** 을 클릭 합니다.
 2. 왼쪽 트리 보기에서 **프로젝트 및 솔루션 > 빌드 및 실행** 을 선택 합니다.
 3. 오른쪽 패널에서 MSBuild 빌드 출력 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
-4. **확인** 을 클릭합니다.
+4. **확인**을 클릭합니다.
 5. 패키지를 지우고 다시 빌드합니다.
 6. 진단 출력이 출력 패널에 표시 됩니다.
 
@@ -45,7 +45,7 @@ Mac용 Visual Studio/OS X 내에서 진단 MSBuild 출력을 사용 하려면 �
 1. **Mac용 Visual Studio > 기본 설정** ...을 클릭 합니다.
 2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 를 선택 합니다.
 3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
-4. **확인** 을 클릭합니다.
+4. **확인**을 클릭합니다.
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드합니다.
 7. 빌드 출력 단추를 클릭 하 여 오류 패드 (**보기 > 패드 > 오류** ) 내에 진단 출력이 표시 됩니다.
@@ -89,7 +89,7 @@ Xamarin Android는 다음과 같은 시스템 속성을 지원 합니다.
   > [!NOTE]
   > Android 시스템 속성 값의 길이는 92 자를 초과할 수 없습니다.
 
-  예제:
+  예:
 
   ```
   adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
@@ -209,7 +209,7 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 - 약한 전역 참조 만들기: *+ w +* 로 시작 하는 줄입니다.
 - 약한 전역 참조 소멸: *-w-* 로 시작 하는 선입니다.
 
-모든 메시지에서 *grefc* 값은 xamarin.ios가 만든 전역 참조의 수이 고 *Grefwc* 값은 xamarin.ios가 만든 약한 전역 참조의 수입니다. *핸들* 또는 *obj 핸들* 값은 JNI handle 값이 고 ' */* ' 뒤의 문자는 핸들 값의 형식입니다. 로컬 참조의 경우 */l* , 전역 참조의 경우 */g* , weak global의 경우 */w* 참조할.
+모든 메시지에서 *grefc* 값은 xamarin.ios가 만든 전역 참조의 수이 고 *Grefwc* 값은 xamarin.ios가 만든 약한 전역 참조의 수입니다. *핸들* 또는 *obj 핸들* 값은 JNI handle 값이 고 ' */* ' 뒤의 문자는 핸들 값의 형식입니다. 로컬 참조의 경우 */l* , 전역 참조의 경우 */g* , 약한 전역 참조의 경우 */w*
 
 GC 프로세스의 일부로 전역 참조 (+ g +)는 약한 전역 참조 (+ w + 및-g-로 인해)로 변환 되 고, Java 쪽 GC가 시작 된 후 weak 전역 참조가 수집 되었는지 확인 합니다. 아직 활성 상태 이면 weak ref (+ g +,-w-)를 중심으로 새 gref이 생성 되 고, 그렇지 않으면 약한 참조가 제거 됩니다 (-w).
 
@@ -279,7 +279,7 @@ Xamarin.ios는 *armeabi-v7a*, *armeabi-v7a-armeabi-v7a*및 *x 86*과 같은 여�
 Google에서 Windows 용 Android SDK에 대해 2 개의 다운로드를 사용할 수 있습니다.
 .Exe 설치 관리자를 선택 하는 경우 설치 된 위치에 Xamarin.ios를 지시 하는 레지스트리 키를 작성 합니다. .Zip 파일을 선택 하 고 압축을 풀면 Xamarin.ios는 SDK를 찾을 위치를 알 수 없습니다. **Xamarin > Android 설정 > 도구 > 옵션**으로 이동 하 여 SDK가 Visual Studio에 있는 경우 xamarin.ios에 지시할 수 있습니다.
 
-[Xamarin Android 설정에서![Android SDK 위치](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
+[Xamarin Android 설정에서 ![Android SDK 위치](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 ## <a name="ide-does-not-display-target-device"></a>IDE에서 대상 장치를 표시 하지 않음
 
@@ -306,7 +306,7 @@ HTC Sync 소프트웨어로 인해 **adb 시작 서버가** 제대로 작동 하
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid 또는 aresgen가 코드 1로 종료 되었습니다.
 
-이 문제를 디버깅 하는 데 도움이 되도록 Visual Studio로 이동 하 여 MSBuild의 자세한 정도를 변경 합니다 .이 작업을 수행 하려면 **도구 > 옵션 > 프로젝트** 및 **솔루션 > 빌드** 및 **실행 > MSBuild 프로젝트 빌드 출력의 자세한 정도** 를 선택 하 고이를 설정 합니다. **정상**값입니다.
+이 문제를 디버깅 하는 데 도움이 되도록 Visual Studio로 이동 하 여 MSBuild의 자세한 정도를 변경 합니다 .이 작업을 수행 하려면 **도구 > 옵션 > 프로젝트** 및 **솔루션 > 빌드** 및 **실행 > MSBuild 프로젝트 빌드 출력의 자세한 정도** 를 선택 하 고이 값을 **Normal**으로 설정 합니다.
 
 다시 빌드하고 전체 오류를 포함 하는 Visual Studio의 출력 창을 확인 합니다.
 
@@ -464,7 +464,7 @@ mAdapter = new SimpleExpandableListAdapter (
 );
 ```
 
-문제는 Xamarin.ios에서 중첩 된 제네릭 형식을 잘못 마샬링하는 것입니다. `List<IDictionary<string, object>>` [ArrrayList](xref:Java.Util.ArrayList)로 마샬링될 수는 있지만, `ArrayList`는를 구현 하는 항목 대신 `Dictionary<string, object>` 인스턴스를 참조 하는 `mono.android.runtime.JavaObject` 인스턴스를 포함 하 [고 있습니다.](xref:Java.Util.IMap) 발생할
+문제는 Xamarin.ios에서 중첩 된 제네릭 형식을 잘못 마샬링하는 것입니다. 이 `List<IDictionary<string, object>>`은 [java.lang.ArrrayList](xref:Java.Util.ArrayList)로 마샬링될 때, `ArrayList`는 `mono.android.runtime.JavaObject`java.util.Map`Dictionary<string, object>`을 구현 하는 항목 대신 [인스턴스를 참조 하는 ](xref:Java.Util.IMap) 인스턴스를 포함 합니다. 다음 예외가 발생 합니다.
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -478,7 +478,7 @@ E/AndroidRuntime( 2991):        at android.widget.ListView.fillFromTop(ListView.
 E/AndroidRuntime( 2991):        at android.widget.ListView.layoutChildren(ListView.java:1622)
 ```
 
-해결 방법은 &ldquo;내부&rdquo; 형식에 대 한 `System.Collections.Generic` 형식 대신 제공 된 [Java 컬렉션 형식을](~/android/internals/api-design.md) 사용 하는 것입니다. 그러면 인스턴스를 마샬링할 때 적절 한 Java 형식이 생성 됩니다. (다음 코드는 gref 수명을 줄이기 위해 필요한 것 보다 더 복잡 합니다. `s/List/JavaList/g`를 통해 원래 코드를 변경 하는 것이 간단 하 고 gref 수명이 염려 되지 않는 경우 `s/Dictionary/JavaDictionary/g` 수 있습니다.
+해결 방법은 [내부](~/android/internals/api-design.md) 형식에대한 `System.Collections.Generic`형식 대신 제공된 &ldquo;Java 컬렉션 형식&rdquo;을 사용하는 것 입니다. 그러면 인스턴스를 마샬링할 때 적절 한 Java 형식이 생성 됩니다. (다음 코드는 gref 수명을 줄이기 위해 필요한 것 보다 더 복잡 합니다. `s/List/JavaList/g`를 통해 원래 코드를 변경 하는 것이 간단 하 고 gref 수명이 염려 되지 않는 경우 `s/Dictionary/JavaDictionary/g` 수 있습니다.
 
 ```csharp
 // insert good code here
@@ -526,7 +526,7 @@ E/mono(15202):   at Android.Views.View+IOnTouchListenerAdapter.n_OnTouch_Landroi
 E/mono(15202):   at (wrapper dynamic-method) object:b039cbb0-15e9-4f47-87ce-442060701362 (intptr,intptr,intptr,intptr)
 ```
 
-or
+로 구분하거나 여러
 
 ```shell
 E/mono    ( 4176): Unhandled Exception:
@@ -627,7 +627,7 @@ E/dalvikvm(  602): VM aborting
 
 위의 예제 (여기서는 [버그 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)에서 제공 됨)에서 문제가 너무 많은 Android. Point 인스턴스가 생성 되 고 있는 것입니다. 이 특정 버그의 수정 목록은 [설명 \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) 를 참조 하세요.
 
-일반적으로 유용 하 게 사용할 수 있는 솔루션은 위의 덤프 &ndash;에서 &ndash; 할당 된 인스턴스가 너무 많은 형식을 찾은 다음 소스 코드에서 생성 된 위치를 찾고 해당 Java 개체를 적절 하 게 삭제 하는 것입니다. 수명이 단축 됩니다). 이는 항상 적절 한 것은 아닙니다. (\#685215은 다중 스레드 이므로 trivial 솔루션은 Dispose 호출을 방지 하지만 가장 먼저 고려해 야 할 사항입니다.
+일반적으로 유용 하 게 사용할 수 있는 솔루션은 위의 덤프 &ndash;에서 &ndash; 할당 된 인스턴스가 너무 많은 형식을 찾은 다음 소스 코드에서 생성 된 위치를 찾아서 적절 하 게 삭제 하는 것입니다 (Java 개체 수명이 단축 됨). 이는 항상 적절 한 것은 아닙니다. (\#685215은 다중 스레드 이므로 trivial 솔루션은 Dispose 호출을 방지 하지만 가장 먼저 고려해 야 할 사항입니다.
 
 [GREF 로깅을](~/android/troubleshooting/index.md) 사용 하도록 설정 하 여 grefs가 생성 된 시기와 존재 하는 수를 확인할 수 있습니다.
 

@@ -73,7 +73,7 @@ PCL 기반 프로젝트 및 .NET Standard 기반 프로젝트는 플랫폼별 �
 [![](single-codebase-images/add-later-platforms-sml.png "Add platform options such as iOS, Android, and Shared Project")](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
 공유 프로젝트로 변환한 후에는 **프로젝트 옵션 > Nuget 패키지 > 참조 어셈블리**
-[섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 여 필요한 프로필이 선택 되었는지 확인 합니다. 이전에에서 사용 됨).
+[섹션](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) 을 방문 하 여 필요한 프로필이 선택 되었는지 확인 합니다. 그러면 nuget이 이전에 사용 했던 프로젝트와 계속 호환 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

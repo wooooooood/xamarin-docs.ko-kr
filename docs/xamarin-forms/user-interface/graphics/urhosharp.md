@@ -33,7 +33,7 @@ UrhoSharp는 Xamarin.Forms 응용 프로그램에서 그래픽을 렌더링에 �
 UrhoSharp 사용 하기 전에 개발자가 솔루션에 UrhoSharp Nuget 패키지를 추가 해야 합니다. 이 가이드에서는 iOS, Android 및.NET Standard를 사용 하 여 Xamarin.Forms 프로젝트 가정 라이브러리 프로젝트. 코드의 모든.NET Standard 라이브러리 프로젝트에 기록 됩니다. 하지만 너무 UrhoSharp Nuget iOS 및 Android 프로젝트에 추가 해야 합니다.
 
 UrhoSharp.Forms Nuget 패키지는 모든 UrhoSharp 개체를 만드는 데 필요한 개체를 포함 합니다. UrhoSharp.Forms nuget 패키지에 포함 된 `UrhoSurface` Xamarin.Forms에서 UrhoSharp 호스팅하는 데 사용 하는 클래스입니다.
-시작 하려면 마우스 오른쪽 단추로 클릭 합니다 **패키지** 선택한.NET Standard 라이브러리 프로젝트 폴더 **패키지 추가...** . 검색 용어를 입력 **UrhoSharp.Forms**를 선택 **Xamarin.Forms 용 UrhoSharp**, 클릭 **패키지 추가**합니다.
+시작 하려면 .NET Standard library 프로젝트에서 **패키지** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다. 검색 단어를 입력 하 고, **xamarin.ios에 대해 Urhosharp**를 **선택 하 고**, **패키지 추가**를 클릭 합니다.
 
 [![](urhosharp-images/add-package-sml.png "추가 패키지 대화 상자")](urhosharp-images/add-package.png#lightbox "패키지 대화 상자를 추가 합니다.")
 
@@ -43,7 +43,7 @@ UrhoSharp.Forms NuGet 패키지를 프로젝트에 추가 됩니다.
 
 플랫폼별 프로젝트 (예: iOS 및 Android)에 대해 위의 단계를 반복 합니다.
 
-## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>연습: Xamarin.ios 앱에 UrhoSharp 추가
+## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>연습: Xamarin.Forms 앱에 UrhoSharp 추가
 
 이러한 단계는 Xamarin.Forms UrhoSharp 샘플의 코드를 설명합니다.
 
@@ -151,7 +151,7 @@ namespace FormsSample
 
 <a name="4"/>
 
-### <a name="4-add-the-charts-class-to-the-urhosurface"></a>4. 에 UrhoSurface 차트 클래스 추가
+### <a name="4-add-the-charts-class-to-the-urhosurface"></a>4. UrhoSurface에 차트 클래스를 추가 합니다.
 
 사용 하 여는 `UrhoSurface.Show<T>` 제네릭 메서드 Xamarin.Forms 페이지 Urho 응용 프로그램을 추가 합니다. 아래 코드 조각을 만드는 데 필요한 추가 코드를 보여 줍니다.는 `Charts` 클래스:
 
@@ -171,7 +171,7 @@ public class UrhoPage : ContentPage
 
 <a name="5"/>
 
-### <a name="5-interacting-with-urhosharp"></a>5. UrhoSharp 상호 작용
+### <a name="5-interacting-with-urhosharp"></a>5. UrhoSharp와 상호 작용
 
 예제 차트 막대를를 선택 하 고 수정할 수 있습니다. 합니다 `Charts` 노출 클래스는 `Bars` 및 `SelectedBar` 이 상호 작용할 수 있도록 합니다.
 

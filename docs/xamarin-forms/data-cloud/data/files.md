@@ -1,6 +1,6 @@
 ---
 title: Xamarin.Forms의 파일 처리
-description: Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함 리소스를 사용하여 수행할 수 있습니다.
+description: Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함된 리소스를 사용하여 수행할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms
@@ -64,7 +64,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 ## <a name="loading-files-embedded-as-resources"></a>리소스로 포함된 파일 로드
 
-**.NET Standard** 어셈블리에 파일을 포함하려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource**를 확인합니다.
+**.NET Standard** 어셈블리에 파일을 포함시키려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource**를 확인합니다.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -76,7 +76,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 -----
 
-`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 WorkingWithFiles이 고 파일 이름은 **입니다. 따라서**리소스 @no__t id는-2가 됩니다.
+`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 WorkingWithFiles이 고 파일 이름은 **입니다. 따라서**리소스 id는 `WorkingWithFiles.LibTextResource.txt`됩니다.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;

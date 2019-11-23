@@ -168,7 +168,7 @@ AV 캡처 세션은 iOS 장치의 카메라에서 라이브 비디오 기록을 
 응용 프로그램의 `AppDelegate`을 수정 하 고 필요한 코드를 추가 하려면 다음을 수행 합니다.
 
 1. 솔루션 탐색기에서 `AppDelegate.cs` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
-1. 다음 using 문을 파일 맨 위에 추가 합니다.
+1. 파일 맨 위에 다음 using 문을 추가합니다.
 
     ```csharp
     using System;
@@ -330,11 +330,11 @@ IOS 7 이상에서 제공 하는 기능 외에도 다음과 같은 기능을 사
 
 위의 기능을 구현 하기 위해 `AVCaptureDevice` 클래스는 카메라 렌즈의 현재 위치를 가져오는 데 사용 되는 읽기 전용 `LensPosition` 속성을 포함 하도록 수정 되었습니다.
 
-렌즈 위치를 수동으로 제어 하려면 캡처 장치가 잠긴 포커스 모드에 있어야 합니다. 예제:
+렌즈 위치를 수동으로 제어 하려면 캡처 장치가 잠긴 포커스 모드에 있어야 합니다. 예:
 
  `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
 
-캡처 장치의 `SetFocusModeLocked` 메서드는 카메라 렌즈의 위치를 조정 하는 데 사용 됩니다. 변경 내용이 적용 될 때 알림을 받으려면 선택적 콜백 루틴을 제공할 수 있습니다. 예제:
+캡처 장치의 `SetFocusModeLocked` 메서드는 카메라 렌즈의 위치를 조정 하는 데 사용 됩니다. 변경 내용이 적용 될 때 알림을 받으려면 선택적 콜백 루틴을 제공할 수 있습니다. 예:
 
 ```csharp
 ThisApp.CaptureDevice.LockForConfiguration(out Error);
@@ -1117,7 +1117,7 @@ Apple은 회색 세계 용어를 사용 하 여 iOS 8에 기본 제공 되는 �
 설정을 처리 하기 위해 두 개의 새로운 클래스가 구현 되었습니다.
 
 - `AVCaptureAutoExposureBracketedStillImageSettings` – 자동 노출 괄호에 대 한 바이어스를 설정 하는 데 사용 되는 하나의 속성인 `ExposureTargetBias`있습니다.
-- `AVCaptureManual` @ no__t_1_ – 수동 노출 브래킷의 셔터 속도와 ISO를 설정 하는 데 사용 되는 `ExposureDuration` 및 `ISO`라는 두 개의 속성이 있습니다.
+- `AVCaptureManual``ExposureBracketedStillImageSettings` – 수동 노출 괄호에 대해 셔터 속도와 ISO를 설정 하는 데 사용 되는 두 개의 속성인 `ExposureDuration` 및 `ISO`가 있습니다.
 
 ### <a name="bracketed-capture-controls-dos-and-donts"></a>대괄호로 묶인 캡처 컨트롤의 및 일과
 

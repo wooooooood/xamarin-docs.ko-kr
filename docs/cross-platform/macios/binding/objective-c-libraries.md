@@ -108,7 +108,7 @@ API 파일의 형식 및 사용할 수 있는 특성에 대 한 자세한 내용
 
 API 정의 파일에는 네임 스페이스 및 인터페이스 정의 (인터페이스에 포함 될 수 있는 모든 멤버 포함)만 포함 되며 클래스, 열거형, 대리자 또는 구조체는 포함 되지 않아야 합니다. API 정의 파일은 API를 생성 하는 데 사용 되는 계약 일 뿐입니다.
 
-열거 나 지원 클래스와 같이 필요한 추가 코드는 별도의 파일에 호스팅해야 합니다. 위의 예제에서 "CameraMode"는 CS 파일에 없고 별도의 파일에 호스트 되어야 하는 열거형 값입니다 (예: `StructsAndEnums.cs`:
+열거 나 지원 클래스와 같이 필요한 추가 코드는 별도의 파일에 호스팅해야 합니다. 위의 예제에서 "CameraMode"는 CS 파일에 없고 별도의 파일 (예: `StructsAndEnums.cs`)에서 호스팅되어야 하는 열거형 값입니다.
 
 ```csharp
 public enum CameraMode {
@@ -132,7 +132,7 @@ public partial class Camera {
 
 라이브러리를 빌드하면 기본 바인딩이 생성 됩니다.
 
-이 바인딩을 완료 하려면 네이티브 라이브러리를 프로젝트에 추가 해야 합니다.  이 작업을 수행 하려면 프로젝트에서 네이티브 라이브러리를 솔루션 탐색기의 프로젝트에 끌어 놓거나 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **파일 추가** 를 선택 하 여 프로젝트에 네이티브 라이브러리를 추가 합니다. 네이티브 라이브러리입니다.
+이 바인딩을 완료 하려면 네이티브 라이브러리를 프로젝트에 추가 해야 합니다.  이 작업을 수행 하려면 프로젝트에서 네이티브 라이브러리를 솔루션 탐색기의 프로젝트에 끌어 놓거나 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **파일 추가** 를 선택 하 여 네이티브 라이브러리를 선택 합니다.
 규칙에 따라 네이티브 라이브러리는 "lib" 라는 단어로 시작 하 고 ".a" 확장명으로 끝납니다. 이 작업을 수행 하면 Mac용 Visual Studio 파일 및 네이티브 라이브러리에 포함 된 내용에 대 한 정보를 C# 포함 하는 자동으로 채워진 파일 등 두 개의 파일이 추가 됩니다.
 
  [![](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png "Native libraries by convention start with the word lib and end with the extension .a")](objective-c-libraries-images/screen-shot-2012-02-08-at-3.45.06-pm.png#lightbox)
@@ -288,7 +288,7 @@ string Text { get; [NullAllowed] set; }
 그런 다음 변경할 수 있는 하위 클래스에서 [`[Override]`](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute) 를 사용 합니다. 
 속성이 실제로 부모의 동작을 재정의 하도록 속성에 대 한 특성입니다.
 
-예제:
+예:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -479,7 +479,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>바인딩 목표-C 인수 목록
 
-Variadic 인수를 지원 합니다. 예를 들면,
+Variadic 인수를 지원 합니다. 예를 들면 다음과 같습니다.
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -522,7 +522,7 @@ public void AppendWorkers(params Worker[] workers)
 
 일반적으로 이러한 필드는 참조 해야 하는 문자열이 나 정수 값을 포함 합니다. 일반적으로 특정 알림과 사전에서 키를 나타내는 문자열로 사용 됩니다.
 
-필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예를 들면,
+필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -540,8 +540,8 @@ interface LonelyClass {
 }
 ```
 
-위의는 `NSObject`에서 파생 되지 않으며`NSString`으로 노출 되는 `NSSomeEventNotification`
-에 대 한 바인딩을 포함 하는 `LonelyClass` 생성 합니다.
+위의는 `NSObject`에서 파생 되지 않으며 `NSString`으로 노출 되는 `NSSomeEventNotification`
+에 대 한 바인딩을 포함 하는 `LonelyClass` 생성 합니다.`NSString`
 
 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성은 다음 데이터 형식에 적용 될 수 있습니다.
 
@@ -580,7 +580,7 @@ interface LonelyClass {
 
 바인딩 파일에 직접 `enum`를 추가 하 여 다른 소스 파일 (바인딩과 최종 프로젝트 모두에서 컴파일해야 하는 다른 소스 파일을 사용 하지 않고 API 정의 내에서 더 쉽게 사용할 수 있음).
 
-예제:
+예:
 
 ```csharp
 [Native] // needed for enums defined as NSInteger in ObjC
@@ -594,7 +594,7 @@ interface MyType {
 
 `NSString` 상수를 대체 하는 고유한 열거형을 만들 수도 있습니다. 이 경우 생성기는 **자동으로** 열거형 값과 nsstring 상수를 변환 하는 메서드를 만듭니다.
 
-예제:
+예:
 
 ```csharp
 enum NSRunLoopMode {
@@ -632,7 +632,7 @@ interface MyType {
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)를 사용 하 여 메서드 (반환 값의 경우), 매개 변수 및 속성을 데코레이팅 할 수 있습니다. 유일한 제한 사항은 멤버가 [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 내에 **있지 않아야** 한다는 것입니다. 
 또는 인터페이스를 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 합니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -647,11 +647,11 @@ NSNumber ShouldDraw ([BindAs (typeof (CGRect))] NSValue rect);
 bool? ShouldDraw (CGRect rect) { ... }
 ```
 
-내부적으로는 `bool?` <-> `NSNumber` 하 고 <-> 변환`NSValue` `CGRect`합니다.
+내부적으로는 `bool?` <-> `NSNumber` 하 고  <-> 변환 `NSValue` `CGRect`합니다.
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) 은 `NSNumber` `NSValue` 및 `NSString`(열거형)의 배열도 지원 합니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -682,7 +682,7 @@ Xamarin.ios 바인딩 생성기는 개발자가 알림을 바인딩할 수 있�
 
 페이로드를 사용 하지 않는 알림에 대해 인수를 사용 하지 않고이 특성을 사용 하거나, 일반적으로 이름이 "EventArgs"로 끝나는 API 정의의 다른 인터페이스를 참조 하는 `System.Type`을 지정할 수 있습니다. 생성기는 인터페이스를 서브 클래스 `EventArgs` 하는 클래스로 전환 하 고 여기에 나열 된 모든 속성을 포함 합니다. EventArgs 클래스에서 값을 인출 하기 위해 목표-C 사전을 조회 하는 데 사용 되는 키의 이름을 나열 하려면 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성을 사용 해야 합니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.
 
 ```csharp
 interface MyClass {
@@ -882,7 +882,7 @@ s.Enumerate ((obj, stop) => {
 [`[Async]`](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute) 를 사용할 수 있습니다. 
 void를 반환 하 고 마지막 인수가 콜백 인 메서드의 특성입니다.  이를 메서드에 적용 하는 경우 바인딩 생성기는 `Async`접미사를 사용 하 여 해당 메서드의 버전을 생성 합니다.  콜백이 매개 변수를 사용 하지 않는 경우 반환 값은 `Task`가 됩니다. 콜백에서 매개 변수를 사용 하는 경우 결과는 `Task<T>`됩니다.  콜백이 여러 매개 변수를 사용 하는 경우 `ResultType` 또는 `ResultTypeName`를 설정 하 여 모든 속성을 보유할 생성 된 형식의 원하는 이름을 지정 해야 합니다.
 
-예제:
+예:
 
 ```csharp
 [Export ("loadfile:completed:")]
@@ -901,11 +901,11 @@ Task<string> LoadFileAsync (string file);
 
 ### <a name="surfacing-strong-types-for-weak-nsdictionary-parameters"></a>약한 NSDictionary 매개 변수에 대 한 강력한 형식
 
-목표-C API의 많은 위치에서 매개 변수는 특정 키와 값이 있는 약한 형식의 `NSDictionary` Api로 전달 되지만 오류가 발생 하기 쉽습니다. 잘못 된 키를 전달 하 고 경고를 받을 수 있습니다. 잘못 된 값을 전달 하 고 경고를 가져올 수 있으며, 사용 하기 어려울 수 있습니다. 가능한 키 이름과 값을 조회 하기 위해 문서를 여러 번 왕복 해야 합니다.
+목표-C API의 많은 위치에서 매개 변수는 특정 키와 값이 포함 된 약한 형식의 `NSDictionary` Api로 전달 되지만 이러한 오류는 오류가 발생 하기 쉽습니다. (잘못 된 키를 전달 하 고 경고를 받을 수 있습니다. 잘못 된 값을 전달 하 고 경고를 받을 수 있음), 가능한 키 이름 및 값을 조회 하기 위해 문서를 여러 번 이동 해야 하므로 사용 하기에
 
 이 솔루션은 강력한 형식의 API를 제공 하는 강력한 형식의 버전을 제공 하 고 내부적으로는 다양 한 기본 키 및 값을 매핑하는 것입니다.
 
-예를 들어, 목표-C API가 `NSDictionary`를 수락 하 고 `XyzCaptionKey` 1.0 0.0 `NSNumber` `XyzVolumeKey` 하는 키를 사용 하는 것으로 설명 됩니다. 에서 사용자에 게 다음과 같은 유용한 API를 사용할 수 있습니다.
+예를 들어, 목표-C API가 `NSDictionary`를 수락 하 고 0.0에서 1.0 까지의 볼륨 값과 문자열을 사용 하는 `XyzCaptionKey` `NSNumber`를 사용 하는 키 `XyzVolumeKey`를 사용 하는 것으로 설명 된 경우 사용자에 게 다음과 같은 멋진 API를 사용 하도록 할 수 있습니다.
 
 ```csharp
 public class  XyzOptions {
@@ -1055,7 +1055,7 @@ interface XyzPanel {
 
 ### <a name="arrays"></a>배열
 
-Xamarin.ios 런타임은`NSArrays`로 배열을 자동으로 변환 C# 하 고 변환 하는 작업을 자동으로 수행 하므로, 예를 들어`UIViews`의`NSArray`반환 하는 허수-C 메서드를 사용할 수 있습니다.
+Xamarin.ios 런타임은 `NSArrays`로 배열을 자동으로 변환 C# 하 고 변환 하는 작업을 자동으로 수행 하므로, 예를 들어 `UIViews`의 `NSArray` 반환 하는 허수-C 메서드를 사용할 수 있습니다.
 
 ```csharp
 // Get the peer views - untyped
@@ -1111,7 +1111,7 @@ class DialogPrint : UIViewController {
 }
 ```
 
-더 좋은를 개발자에 C# 게 제공 하기 위해 일반적으로`NSAction`매개 변수를 사용 하는 메서드를 제공 합니다. C# 이 메서드를 사용 하면`Target+Selector`대신 대리자 및 람다를 사용할 수 있습니다. 이렇게 하려면 일반적으로 `SetTarget` 메서드를 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) 에 플래그를 사용 하 여 숨깁니다.
+더 좋은를 개발자에 C# 게 제공 하기 위해 일반적으로 `NSAction` 매개 변수를 사용 하는 메서드를 제공 합니다. C# 이 메서드를 사용 하면 `Target+Selector`대신 대리자 및 람다를 사용할 수 있습니다. 이렇게 하려면 일반적으로 `SetTarget` 메서드를 [`[Internal]`](~/cross-platform/macios/binding/binding-types-reference.md#InternalAttribute) 에 플래그를 사용 하 여 숨깁니다.
 그런 다음 다음과 같이 새 도우미 메서드를 노출 합니다.
 
 ```csharp
@@ -1328,7 +1328,7 @@ Btouch 인터페이스 정의 시스템에서 직접 지원 하지 않는 열거
 
 응용 프로그램의 일부가 아닌 Api를 바인딩하는 경우 실행 파일이 이러한 라이브러리에 대해 연결 되어 있는지 확인 해야 합니다.
 
-Gcc_flags에서 라이브러리를 연결 하는 방법에 대해 알려야 합니다. "-" 옵션을 사용 하 여 새 라이브러리와 연결 하는 방법을 지정 하는 몇 가지 추가 빌드 인수를 사용 하 여 `mtouch` 명령을 호출 하도록 빌드 구성을 변경 하 여이 작업을 수행할 수 있습니다. 다음에는 다음과 같이 프로그램에 필요한 모든 추가 라이브러리를 포함 하는 따옴표 붙은 문자열이 옵니다.
+Xamarin.ios에서 라이브러리를 연결 하는 방법에 대해 설명 해야 합니다 .이 작업은 "-gcc_flags" 옵션을 사용 하 여 새 라이브러리와 연결 하는 방법을 지정 하는 추가 빌드 인수를 사용 하 여 `mtouch` 명령을 호출 하도록 빌드 구성을 변경 하 고, 다음과 같이 프로그램에 필요한 모든 추가 라이브러리를 포함 하는 따옴표 붙은 문자열을 사용 하 여 수행할 수 있습니다.
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -force_load -lSystemLibrary -framework CFNetwork -ObjC"
@@ -1337,7 +1337,7 @@ Gcc_flags에서 라이브러리를 연결 하는 방법에 대해 알려야 합�
 위의 예에서는 `libMyLibrary.a`, `libSystemLibrary.dylib` 및 `CFNetwork` framework 라이브러리를 최종 실행 파일에 연결 합니다.
 
 또는 계약 파일에 포함할 수 있는 어셈블리 수준 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)(예: `AssemblyInfo.cs`)를 활용할 수 있습니다.
-[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)사용 하는 경우 네이티브 라이브러리가 응용 프로그램에 포함 될 수 있도록 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예를 들면,
+[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)사용 하는 경우 네이티브 라이브러리가 응용 프로그램에 포함 될 수 있도록 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:
@@ -1347,7 +1347,7 @@ Gcc_flags에서 라이브러리를 연결 하는 방법에 대해 알려야 합�
 [assembly: LinkWith ("libMyLibrary.a", LinkTarget.ArmV6 | LinkTarget.ArmV7 | LinkTarget.Simulator, ForceLoad = true, IsCxx = true)]
 ```
 
-`-force_load` 명령이 필요한 이유는 무엇 이며,-ObjC 플래그가에서 코드를 컴파일하는 경우에는 필요한 메타 데이터 (링커/컴파일러 데드 코드 제거 스트립)를 지 원하는 데 필요한 메타 데이터를 유지 하지 않는 이유를 궁금할 수 있습니다. Xamarin.ios에 대 한 런타임.
+`-force_load` 명령이 필요한 이유는 무엇 이며,-ObjC 플래그가에서 코드를 컴파일하는 경우에는 Xamarin.ios를 위해 런타임에 필요한 범주 (링커/컴파일러 데드 코드 제거 스트립)를 지 원하는 데 필요한 메타 데이터를 유지 하지 않는 이유가 궁금할 수 있습니다.
 
 <a name="Assisted_References" />
 

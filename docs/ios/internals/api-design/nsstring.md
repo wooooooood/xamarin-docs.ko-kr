@@ -16,9 +16,9 @@ ms.locfileid: "73022356"
 ---
 # <a name="nsstring-in-xamarinios-and-xamarinmac"></a>Xamarin.ios 및 Xamarin.ios의 NSString
 
-Xamarin.ios 및 Xamarin.ios의 디자인은 사용 API에 대 한를 호출 하 여 네이티브 .NET 문자열 형식, `string`, C# 및 기타 .net 프로그래밍 언어의 문자열 조작 및를 사용 하는 대신 api에서 노출 하는 데이터 형식으로 문자열을 노출 합니다. `NSString` 데이터 형식입니다.
+Xamarin.ios 및 Xamarin.ios의 디자인은 사용 API를 호출 하 여 네이티브 .NET 문자열 형식을 노출 하 고, `string`하 고, 다른 .NET 프로그래밍 언어에서 C# 문자열을 조작 하 고, `NSString` 데이터 형식 대신 API에서 노출 하는 데이터 형식으로 문자열을 노출 합니다.
 
-즉, 개발자는 특정 형식 (`Foundation.NSString`)에서 xamarin.ios & Xamarin.ios API (통합)를 호출 하는 데 사용 되는 문자열을 유지할 필요가 없으며, 모든 작업에 대해 Mono의 `System.String`을 계속 사용할 수 있으며, 언제 든 지 Xamarin.ios 또는 Xamarin.ios에는 문자열이 필요 하며, API 바인딩에서 정보 마샬링을 처리 합니다.
+즉, 개발자는 특정 형식 (`Foundation.NSString`)에서 xamarin.ios & Xamarin.ios API (통합)를 호출 하는 데 사용 되는 문자열을 유지할 필요가 없으며, 모든 작업에 Mono의 `System.String`을 계속 사용할 수 있으며, Xamarin.ios 또는 Xamarin.ios의 API에 문자열이 필요할 때마다 API 바인딩에서 정보 마샬링을 처리 합니다.
 
 예를 들어 `NSString`형식 `UILabel`의 목표-C "텍스트" 속성은 다음과 같이 선언 됩니다.
 
@@ -34,9 +34,9 @@ class UILabel {
 }
 ```
 
-내부적으로이 속성의 구현은 문자열을 C#`NSString`로 마샬링하고 목표와 같은 방식으로`objc_msgSend`메서드를 호출 합니다.
+내부적으로이 속성의 구현은 문자열을 C# `NSString`로 마샬링하고 목표와 같은 방식으로 `objc_msgSend` 메서드를 호출 합니다.
 
-`NSString`사용 하지 않고 C 문자열 ("*char*")을 사용 하는 제 3 자 목표-C api가 있습니다. 이러한 경우에도 C# 문자열 데이터 형식을 사용할 수 있지만, [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) 특성을 사용 하 여 바인딩 생성기에이 문자열을`NSString`로 마샬링할 수 없고 그 대신 C 문자열로 매핑해야 함을 알려야 합니다.
+`NSString`사용 하지 않고 C 문자열 ("*char*")을 사용 하는 제 3 자 목표-C api가 있습니다. 이러한 경우에도 C# 문자열 데이터 형식을 사용할 수 있지만, [[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) 특성을 사용 하 여 바인딩 생성기에이 문자열을 `NSString`로 마샬링할 수 없고 그 대신 C 문자열로 매핑해야 함을 알려야 합니다.
 
  <a name="Exceptions_to_the_Rule" />
 

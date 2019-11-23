@@ -21,7 +21,7 @@ ms.locfileid: "73029162"
 
 이 자습서의 첫 번째 부분에서는 행성 목록을 표시 하는 간단한 회전자 위젯을 만듭니다. 행성을 선택 하면 선택 된 항목을 표시 하는 알림 메시지가 표시 됩니다.
 
-[HelloSpinner 앱의![예제 스크린샷](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
+[HelloSpinner 앱의 ![예제 스크린샷](spinner-images/01-example-screenshots-sml.png)](spinner-images/01-example-screenshots.png#lightbox)
 
 **HelloSpinner**라는 새 프로젝트를 시작 합니다.
 
@@ -190,9 +190,9 @@ private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventAr
 
 응용 프로그램을 실행 합니다. 알림 메시지는 다음과 같습니다.
 
-[온도를 표시 하는 행성 선택의 예![](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
+[온도를 표시 하는 행성 선택의 예 ![](spinner-images/03-keyvalue-example-sml.png)](spinner-images/03-keyvalue-example.png#lightbox)
 
-## <a name="resources"></a>자료
+## <a name="resources"></a>리소스
 
 - [`Resource.Layout`](xref:Android.Resource.Layout)
 - [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
