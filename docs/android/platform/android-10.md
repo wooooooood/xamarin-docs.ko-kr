@@ -29,7 +29,7 @@ Xamarin Android 10.0은 Android 10에 대 한 지원을 제공 합니다. Androi
 다음 목록은 Xamarin 기반 앱에서 Android 10 기능을 사용 하는 데 필요 합니다.
 
 - **Visual studio** -visual studio 2019을 권장 합니다. Windows에서 Visual Studio 2019 버전 16.3 이상으로 업데이트 합니다. MacOS에서 Mac 용 Visual Studio 2019 버전 8.3 이상으로 업데이트 합니다.
-- Xamarin **android** -xamarin. android 10.0 이상이 visual studio와 함께 설치 되어야 합니다. Xamarin은 Windows에서 .net 작업을 **사용 하 여 모바일 개발** 의 일부로 자동으로 설치 되 고 **visual studio의 일부로 설치 됩니다. Mac 용 설치 관리자**)
+- **Xamarin android** -xamarin. android 10.0 이상이 Visual Studio와 함께 설치 되어야 합니다. Xamarin은 Windows에서 .net 작업을 **사용 하 여 모바일 개발** 의 일부로 자동으로 설치 되 고 **Mac용 Visual Studio 설치 관리자**의 일부로 설치 됩니다.
 - **Java 개발자 키트** -Xamarin Android 10.0 개발에는 JDK 8이 필요 합니다. Microsoft의 OpenJDK 배포는 자동으로 Visual Studio의 일부로 설치 됩니다.
 - **Android SDK** -Android SDK API 29는 Android SDK Manager를 통해 설치 해야 합니다.
 
@@ -96,7 +96,7 @@ Android 10에는 다양 한 새로운 기능이 도입 되었습니다. 이러�
 
 ![어두운 테마](~/android/platform/android-10-images/darktheme.png)
 
-- Edge에서 가장자리로 이동 하 고 사용자 지정 제스처가 시스템 탐색 제스처로 보완 되도록 하 여 앱의 ** [gestural 탐색](https://developer.android.com/preview/features/gesturalnav) 지원** 합니다.
+- Edge에서 가장자리로 이동하고 사용자 지정 제스처가 시스템 탐색 제스처** [로 보완되도록 하여 앱에서 gestural 탐색을](https://developer.android.com/preview/features/gesturalnav)** 지원합니다.
 
 ![제스처 탐색](~/android/platform/android-10-images/gesturenavigation.png)
 
@@ -106,8 +106,8 @@ Android 10에는 다양 한 새로운 기능이 도입 되었습니다. 이러�
 
 앱과 관련 된 경우 다음 기능을 권장 합니다.
 
-- **추가 대화형 알림:**  알림이 메시지를 포함 하는 경우 알림  [에서 제안 된 회신 및 동작](https://developer.android.com/preview/features#smart-suggestions) 을 사용 하도록 설정 하 여 사용자를 참여 시키고 즉시 조치를 취할 수 있도록 합니다.
-- **향상 된 생체 인식:**  생체 인식 인증을 사용 하는 경우 최신 장치에서 지문 인증을 지 원하는 기본 방법인 [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt)로 이동 합니다.
+- **추가 대화형 알림:** 알림이 메시지를 포함 하는 경우 알림  [에서 제안 된 회신 및 동작](https://developer.android.com/preview/features#smart-suggestions) 을 사용 하도록 설정 하 여 사용자를 참여 시키고 즉시 조치를 취할 수 있도록 합니다.
+- **향상 된 생체 인식:** 생체 인식 인증을 사용 하는 경우 최신 장치에서 지문 인증을 지 원하는 기본 방법인 [BiometricPrompt](https://developer.android.com/reference/androidx/biometric/BiometricPrompt)로 이동 합니다.
 - **보강 녹음:** 캡션 또는 게임 기록을 지원 하기 위해  [오디오 재생 캡처](https://developer.android.com/preview/features/playback-capture)를 사용 하도록 설정 합니다. 더 많은 사용자를 연결 하 고 앱을 더 쉽게 액세스할 수 있도록 하는 좋은 방법입니다.
 - **더 나은 코덱:** 미디어 앱에 대 한 비디오 스트리밍에 대해 [AV1](https://en.wikipedia.org/wiki/AV1) 를 시도 하 고, 높은 동적 범위 비디오에는 [HDR10 +](https://en.wikipedia.org/wiki/High-dynamic-range_video#HDR10+) 를 시도 합니다. 음성 및 음악 스트리밍의 경우 [Opus](http://opus-codec.org/) encoding을 사용 하 고 musicians의 경우 [네이티브 MIDI API](https://developer.android.com/preview/features/midi) 를 사용할 수 있습니다.
 - **향상 된 네트워킹 api:** 앱에서 wi-fi를 통해 IoT 장치를 관리 하는 경우 구성, 다운로드 또는 인쇄와 같은 기능을 위해 새 [네트워크 연결 api](https://developer.android.com/preview/features#peer2peer) 를 사용해 보세요.
@@ -120,7 +120,7 @@ Android 10에는 몇 가지 새로운 기능과 Api가 있습니다. 모두 보�
 
 - [앱의 안정성과 호환성을 보장 하기 위해 android 플랫폼은 이제 앱이 android 10에서 사용할 수 있는 비 SDK 인터페이스를 제한 합니다](https://developer.android.com/about/versions/10/behavior-changes-10#non-sdk-restrictions).
 - [공유 메모리가 변경 되었습니다](https://developer.android.com/about/versions/10/behavior-changes-10#shared-memory).
-- [Android runtime & AOT 정확성](https://developer.android.com/about/versions/10/behavior-changes-10#system-only-oat)입니다.
+- [Android runtime &AMP; AOT 정확성](https://developer.android.com/about/versions/10/behavior-changes-10#system-only-oat)입니다.
 - [전체 화면 의도에 대 한 사용 권한은 `USE_FULL_SCREEN_INTENT`를 요청 해야 합니다 ](https://developer.android.com/about/versions/10/behavior-changes-10#full-screen-intents).
 - [Foldables에 대 한 지원](https://developer.android.com/about/versions/10/behavior-changes-10#foldables).
 
