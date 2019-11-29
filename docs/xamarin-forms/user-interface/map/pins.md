@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
-ms.openlocfilehash: 930d2dcc701f88e2a350ec1011405bb18b86de6e
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425555"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556168"
 ---
 # <a name="xamarinforms-map-pins"></a>Xamarin.ios 맵 핀
 
@@ -198,7 +198,7 @@ wharfPin.InfoWindowClicked += async (s, args) =>
 </ContentPage>
 ```
 
-[`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) 속성 데이터는 연결 된 viewmodel의 `Locations` 속성에 바인딩되고,이 속성은 사용자 지정 유형인 `Location` 개체의 `ObservableCollection` 반환 합니다. 각 `Location` 개체는 `string` 형식의 `Address` 및 `Description` 속성과 [`Position`](xref:Xamarin.Forms.Maps.Position)형식의 `Position` 속성을 정의 합니다.
+[`ItemsSource`](xref:Xamarin.Forms.Maps.Map.ItemsSource) 속성 데이터는 연결 된 viewmodel의 `Locations` 속성에 바인딩되고,이 속성은 사용자 지정 유형인 `Location` 개체의 `ObservableCollection` 반환 합니다. 각 `Location` 개체는 `string`형식의 `Address` 및 `Description` 속성과 [`Position` ](xref:Xamarin.Forms.Maps.Position)형식의`Position`속성을 정의 합니다.
 
 `IEnumerable` 컬렉션에 있는 각 항목의 모양은 데이터를 적절 한 속성에 바인딩하는 [`Pin`](xref:Xamarin.Forms.Maps.Pin) 개체를 포함 하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) [`ItemTemplate`](xref:Xamarin.Forms.Maps.Map.ItemTemplate) 속성을 설정 하 여 정의 됩니다.
 
@@ -225,6 +225,7 @@ wharfPin.InfoWindowClicked += async (s, args) =>
             </local:MapItemTemplateSelector.DefaultTemplate>
             <local:MapItemTemplateSelector.XamarinTemplate>
                 <DataTemplate>
+                    <!-- Change the property values, or the properties that are bound to. -->
                     <maps:Pin Position="{Binding Position}"
                               Address="{Binding Address}"
                               Label="Xamarin!" />
@@ -258,7 +259,10 @@ public class MapItemTemplateSelector : DataTemplateSelector
 }
 ```
 
-`MapItemTemplateSelector` 클래스는 다른 데이터 템플릿으로 설정 된 `DefaultTemplate` 및 `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. `OnSelectTemplate` 메서드는 "샌프란시스코"를 포함 하는 주소가 항목에 포함 된 경우 `Pin` 탭 할 때 "Xamarin"을 레이블로 표시 하는 `XamarinTemplate`을 반환 합니다. 항목에 "샌프란시스코"가 포함 된 주소가 없는 경우 `OnSelectTemplate` 메서드는 `DefaultTemplate` 반환 합니다.
+`MapItemTemplateSelector` 클래스는 다른 데이터 템플릿으로 설정 된 `DefaultTemplate` 및 `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 속성을 정의 합니다. `OnSelectTemplate` 메서드는 "샌프란시스코"를 포함 하는 주소가 항목에 포함 된 경우 `Pin` 탭 할 때 "Xamarin"을 레이블로 표시 하는 `XamarinTemplate`을 반환 합니다. 항목에 "샌프란시스코"가 포함 된 주소가 없는 경우 `OnSelectTemplate` 메서드는 `DefaultTemplate`반환 합니다.
+
+> [!NOTE]
+> 이 기능에 대 한 사용 사례는 `Pin` 하위 유형에 따라 하위 분류 [`Pin`](xref:Xamarin.Forms.Maps.Pin) 개체의 속성을 다른 속성에 바인딩하는 것입니다.
 
 데이터 템플릿 선택기에 대 한 자세한 내용은 [DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)를 참조 하세요.
 

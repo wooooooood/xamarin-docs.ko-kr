@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/28/2019
-ms.openlocfilehash: ba23b7dee93c0c8938ee3b2b820ba081e420727c
-ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
+ms.openlocfilehash: d47146c90635084a4974cfa0c7dcb142ac918788
+ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980868"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74556173"
 ---
 # <a name="xamarinforms-label"></a>Xamarin.ios 레이블
 
@@ -76,7 +76,7 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 
 각 플랫폼에서 색을 사용할 수 있도록 하려면 특별 한 주의가 필요 합니다. 각 플랫폼에는 텍스트 및 배경색에 대해 서로 다른 기본값이 있으므로 각각에 대해 작동 하는 기본을 선택 해야 합니다.
 
-다음 XAML 예제에서는 `Label` 텍스트 색을 설정 합니다.
+다음 XAML 예제에서는 `Label`텍스트 색을 설정 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -133,7 +133,8 @@ public partial class LabelPage : ContentPage
 
 `Label.MaxLines` 속성을 `int` 값으로 설정 하 여 [`Label`](xref:Xamarin.Forms.Label) 표시 되는 줄 수를 지정할 수 있습니다.
 
-- `MaxLines`가 0 이면 `Label`는 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 속성의 값을 사용 하 여 한 줄만 표시 하거나, 모든 텍스트는 잘린 상태로 표시 하거나 모든 줄을 표시 합니다.
+- `MaxLines`가 기본값 인-1 인 경우 `Label`는 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 속성의 값을 사용 하 여 한 줄만 표시 하거나 잘린 상태로 표시 하거나 모든 텍스트를 포함 하는 모든 줄을 표시 합니다.
+- `MaxLines` 0 이면 `Label` 표시 되지 않습니다.
 - `MaxLines` 1 이면 결과는 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 속성을 [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode)또는 [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode)로 설정 하는 것과 같습니다. 그러나 `Label`는 줄임표의 배치와 관련 하 여 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 속성의 값을 적용 합니다 (해당 하는 경우).
 - `MaxLines`가 `Label` 1 보다 크면 지정 된 개수의 줄까지 표시 되 고 줄임표 (해당 하는 경우)의 배치와 관련 하 여 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 속성의 값을 사용 합니다. 그러나 `MaxLines` 속성을 1 보다 큰 값으로 설정 하면 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) 속성이 [`NoWrap`](xref:Xamarin.Forms.LineBreakMode)으로 설정 된 경우에는 영향을 주지 않습니다.
 
@@ -215,7 +216,7 @@ XAML에서 `<` 및 `>` 기호를 추가로 이스케이프 하면 HTML 문자열
 `FormattedText` 속성은 [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) 속성을 통해 설정 된 하나 이상의 [`Span`](xref:Xamarin.Forms.Span) 인스턴스로 구성 되는 [`FormattedString`](xref:Xamarin.Forms.FormattedString)유형입니다. 시각적 효과를 설정 하는 데 사용할 수 있는 `Span` 속성은 다음과 같습니다.
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – span 배경의 색입니다.
-- `double` 형식의 `CharacterSpacing`은 `Span` 텍스트 문자 사이의 간격입니다.
+- `double` 형식의 `CharacterSpacing`은 `Span` 텍스트를 구성하는 문자 사이의 간격입니다.
 - [`Font`](xref:Xamarin.Forms.Span.Font) – 범위의 텍스트 글꼴입니다.
 - [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) – 범위의 텍스트에 대 한 글꼴 특성입니다.
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – 범위의 텍스트 글꼴이 속한 글꼴 패밀리입니다.
@@ -404,7 +405,6 @@ Label label = new Label
 > Android 및 유니버설 Windows 플랫폼에서 `Padding` 속성 값은 `Label`를 만들 때 또는 나중에 지정할 수 있습니다.
 
 안쪽 여백에 대 한 자세한 내용은 [여백 및 안쪽](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)여백을 참조 하세요.
-
 
 ## <a name="hyperlinks"></a>링크
 
