@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
 ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: 330d41ea795754388402fbb7c660ba8d77f1aa4b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8927e7b2a1b194d1bfab334736c3d024f0542b01
+ms.sourcegitcommit: 60e955ce65194ffea987409157ccc7d5db87c2ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019402"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74690207"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -34,8 +34,8 @@ Xamarin Profiler는 독립 실행형 응용 프로그램으로, IDE 내에서 �
 
 플랫폼용 설치 패키지를 다운로드 합니다.
 
-- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac.pkg)
-- [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
+- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac-1.6.10-15.pkg)
+- [**Windows**](https://dl.xamarin.com/profiler/XamarinProfiler.Windows.Installer.1.6.10-15.msi)
 
 다운로드 되 면 설치 관리자를 시작 하 여 시스템에 Xamarin Profiler를 추가 합니다.
 
@@ -96,7 +96,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 앱을 성공적으로 프로 파일링 하려면 앱의 프로젝트 옵션에서 프로 파일링을 허용 해야 합니다.
 
-- Io
+- iOS:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -112,7 +112,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 -----
 
-- 용
+- Android:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -186,11 +186,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-[Mac용 Visual Studio의 프로파일러 섹션![](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
+[Mac용 Visual Studio의 프로파일러 섹션 ![](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[Visual Studio의![Profiler 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
+[Visual Studio의 ![Profiler 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -341,4 +341,4 @@ Classic API 사용 하는 xamarin.ios 응용 프로그램은 Boehm GC – 세대
 ## <a name="related-links"></a>관련 링크
 
 - [메모리 및 성능 모범 사례](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [릴리스 정보](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)
+- [릴리스 정보](/xamarin/tools/profiler/release-notes/)

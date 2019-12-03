@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: f6d255e9af64d316ac76eab92a73cc1c90b82956
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 659545431a490f50224de3e7728b4d4d0c111d64
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019549"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681329"
 ---
 # <a name="troubleshooting"></a>문제 해결
 
@@ -35,6 +35,6 @@ _이 섹션의 문서에서는 Android 문제 해결에 관련 된 기능을 다
 
 Android SDK Tools 26.0.1 이상부터부터 Google은 새로운 명령줄 도구 맞도록에서 기존 AVD 및 SDK 관리자를 제거 했습니다.
 
-## <a name="xamarinandroid-errors-referenceandroidtroubleshootingerrorsmd"></a>[Xamarin.Android 오류 참조](~/android/troubleshooting/errors.md)
+## <a name="xamarinandroid-errors-referencexamarinandroiderrors-and-warnings"></a>[Xamarin.Android 오류 참조](/xamarin/android/errors-and-warnings/)
 
-Xamarin Studio에서 Xamarin.ios를 사용 하는 경우 발생할 수 있는 가장 일반적인 오류를 보여 주는 오류 참조 가이드
+Visual Studio에서 Xamarin.ios를 사용 하는 경우 발생할 수 있는 가장 일반적인 오류를 보여 주는 오류 참조 가이드
