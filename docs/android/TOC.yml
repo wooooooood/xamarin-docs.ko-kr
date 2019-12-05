@@ -335,7 +335,7 @@
           items:
             - name: 위치
               href: platform/maps-and-location/location.md
-            - name: 맵
+            - name: 지도
               href: platform/maps-and-location/maps/index.md
               items:
                 - name: 맵 애플리케이션
@@ -424,7 +424,7 @@
           href: ~/essentials/magnetometer.md?context=xamarin/android
         - name: 주 스레드
           href: ~/essentials/main-thread.md?context=xamarin/android
-        - name: 맵
+        - name: 지도
           href: ~/essentials/maps.md?context=xamarin/android
         - name: 브라우저 열기
           href: ~/essentials/open-browser.md?context=xamarin/android
@@ -476,7 +476,7 @@
           items:
             - name: 소개
               href: data-cloud/data-access/introduction.md
-            - name: 구성
+            - name: Configuration
               href: data-cloud/data-access/configuration.md
             - name: SQLite.NET ORM 사용
               href: data-cloud/data-access/using-sqlite-orm.md
@@ -619,8 +619,8 @@
           href: troubleshooting/resolving-library-installation-errors.md
         - name: Android SDK Tools에 대한 변경 내용
           href: troubleshooting/sdk-cli-tooling-changes.md
-        - name: Xamarin.Android 오류 참조
-          href: troubleshooting/errors.md
+        - name: Xamarin.Android 오류 및 경고 참조
+          href: /xamarin/android/errors-and-warnings/
     - name: Wear
       href: wear/index.md
       items:
