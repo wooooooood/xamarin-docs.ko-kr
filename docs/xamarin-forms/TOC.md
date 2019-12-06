@@ -64,8 +64,8 @@
 ##### [지도의 순환 영역 강조 표시](app-fundamentals/custom-renderer/map/circle-map-overlay.md)
 #### [ListView 사용자 지정](app-fundamentals/custom-renderer/listview.md)
 #### [ViewCell 사용자 지정](app-fundamentals/custom-renderer/viewcell.md)
+#### [WebView 사용자 지정](app-fundamentals/custom-renderer/hybridwebview.md)
 #### [보기 구현](app-fundamentals/custom-renderer/view.md)
-#### [HybridWebView 구현](app-fundamentals/custom-renderer/hybridwebview.md)
 #### [비디오 플레이어 구현](app-fundamentals/custom-renderer/video-player/index.md)
 ##### [플랫폼 비디오 플레이어 만들기](app-fundamentals/custom-renderer/video-player/player-creation.md)
 ##### [웹 비디오 재생](app-fundamentals/custom-renderer/video-player/web-videos.md)
@@ -197,7 +197,7 @@
 #### [목록 모양](user-interface/listview/customizing-list-appearance.md)
 #### [대화형 작업](user-interface/listview/interactivity.md)
 #### [성능](user-interface/listview/performance.md)
-### 지도
+### 맵
 #### [개요](user-interface/map/index.md)
 #### [초기화 및 구성](user-interface/map/setup.md)
 #### [지도 컨트롤](user-interface/map/map.md)
