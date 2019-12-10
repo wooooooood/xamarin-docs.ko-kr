@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/11/2019
-ms.openlocfilehash: cf9c5d7aa018a6d12a6c4788dc1e8114088d056c
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: a11bbbc40cd209f90d03817fc81f58bd5661bd23
+ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697126"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74823874"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러 기본 클래스 및 네이티브 컨트롤
 
@@ -93,7 +93,7 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|스위치|SwitchCompat|ToggleSwitch|
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
-|[`WebView`](xref:Xamarin.Forms.WebView)|WebViewRenderer|UIWebView|WebView||WebView|
+|[`WebView`](xref:Xamarin.Forms.WebView)|WkWebViewRenderer(iOS), WebViewRenderer(Android and UWP)|WkWebView|WebView||WebView|
 
 ## <a name="cells"></a>셀
 

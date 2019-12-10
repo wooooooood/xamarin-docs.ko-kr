@@ -6,13 +6,13 @@ ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2019
-ms.openlocfilehash: 0841cb0cbe97644f3bb53105887f3adadf9bf6c5
-ms.sourcegitcommit: 266e75fa6893d3732e4e2c0c8e79c62be2804468
+ms.date: 11/27/2019
+ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
+ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820948"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74681342"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Xamarin.Forms 앱 성능 향상
 
@@ -43,7 +43,7 @@ XAMLC는 새 Xamarin.Forms 솔루션에서 기본적으로 사용하도록 설�
 
 ## <a name="reduce-unnecessary-bindings"></a>불필요한 바인딩 줄이기
 
-정적으로 쉽게 설정할 수 있는 콘텐츠에 바인딩을 사용하지 마세요. 바인딩할 필요가 없는 데이터를 바인딩할 경우 어떠한 이점도 없습니다. 바인딩은 비용 효율적이지 않기 때문입니다. 예를 들어 `Button.Text = "Accept"`를 설정하는 것은 "Accept" 값을 사용하여 ViewModel `string` 속성에 [`Button.Text`](xref:Xamarin.Forms.Button.Text)를 바인딩하는 것보다 오버헤드가 적습니다.
+정적으로 쉽게 설정할 수 있는 콘텐츠에 바인딩을 사용하지 마세요. 바인딩할 필요가 없는 데이터를 바인딩할 경우 어떠한 이점도 없습니다. 바인딩은 비용 효율적이지 않기 때문입니다. 예를 들어, `Button.Text = "Accept"`를 설정하는 것은 "Accept" 값을 사용하여 viewmodel `string` 속성에 [`Button.Text`](xref:Xamarin.Forms.Button.Text)를 바인딩하는 것보다 오버헤드가 적습니다.
 
 ## <a name="use-fast-renderers"></a>빠른 렌더러 사용
 
@@ -157,6 +157,41 @@ Android에서 AOT(Ahead of Time) 컴파일을 사용하면 JIT(Just-in-time) 애
 - [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 필요 이상으로 자주 업데이트하지 마세요. 레이블의 크기가 변경되면 전체 화면 레이아웃이 다시 계산될 수 있습니다.
 - 필요하지 않은 경우 [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) 속성을 설정하지 마세요.
 - 가능할 때마다 [`Label`](xref:Xamarin.Forms.Label) 인스턴스의 [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode)를 [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap)으로 설정합니다.
+
+## <a name="use-asynchronous-programming"></a>비동기 프로그래밍 사용
+
+비동기 프로그래밍을 사용하여 애플리케이션의 전반적인 응답성을 향상시키고 많은 경우에 성능 병목 현상을 방지할 수 있습니다. .NET에서 [TAP(작업 기반 비동기 패턴)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)은 비동기 작업에 권장되는 디자인 패턴입니다. 그러나 TAP을 잘못 사용하면 성능이 저하될 수 있습니다. 따라서 TAP을 사용하는 경우 다음 지침을 따라야 합니다.
+
+### <a name="fundamentals"></a>기본 사항
+
+- `TaskStatus` 열거형으로 표시되는 작업 수명 주기를 이해합니다. 자세한 내용은 [TaskStatus의 의미](https://devblogs.microsoft.com/pfxteam/the-meaning-of-taskstatus/) 및 [작업 상태](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap#task-status)를 참조하세요.
+- `Task.WhenAll` 메서드를 사용하여 일련의 비동기 작업을 개별적으로 `await`하는 것이 아니라 여러 비동기 작업이 완료될 때까지 비동기적으로 대기합니다. 자세한 내용은 [Task.WhenAll](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall)을 참조하세요.
+- `Task.WhenAny` 메서드를 사용하여 여러 비동기 작업 중 하나가 완료될 때까지 비동기적으로 대기합니다. 자세한 내용은 [Task.WhenAny](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall)를 참조하세요.
+- `Task.Delay` 메서드를 사영하여 지정된 시간 이후에 완료되는 `Task` 개체를 생성합니다. 이는 데이터 폴링 및 미리 정해진 시간 동안 사용자 입력 처리 지연 등의 시나리오에 유용합니다. 자세한 내용은 [Task.Delay](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskdelay)를 참조하세요.
+- `Task.Run` 메서드를 사용하여 스레드 풀에서 집약적 동기 CPU 작업을 실행합니다. 이 메서드는 가장 최적의 인수가 설정된 `TaskFactory.StartNew` 메서드의 바로 가기입니다. 자세한 내용은 [Task.Run](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskrun)을 참조하세요.
+- 비동기 생성자를 만들지 마십시오. 대신, 수명 주기 이벤트 또는 별도의 초기화 논리를 사용하여 초기화를 올바르게 `await`합니다. 자세한 내용은 blog.stephencleary.com에서 [비동기 생성자](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html)를 참조하세요.
+- 지연 작업 패턴을 사용하여 애플리케이션 시작 중에 비동기 작업이 완료될 때까지 기다리지 않도록 합니다. 자세한 내용은 [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/)를 참조하세요.
+- `TaskCompletionSource<T>` 개체를 만들어 TAP을 사용하지 않는 기존 비동기 작업에 대한 작업 래퍼를 만듭니다. 이 개체를 사용하여 `Task` 프로그래밍의 이점을 얻고 관련된 `Task`의 수명과 완료를 제어할 수 있도록 합니다. 자세한 내용은 [TaskCompletionSource의 특성](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/)을 참조하세요.
+asynchronous-mvvm-applications-commands).
+- 비동기 작업의 결과를 처리할 필요가 없는 경우 대기 `Task` 개체를 반환하는 대신, `Task` 개체를 반환합니다. 이렇게 하면 컨텍스트 전환이 수행되지 않으므로 성능이 향상됩니다.
+- 사용 가능한 경우 데이터 처리와 같은 시나리오에서 또는 비동기적으로 서로 통신해야 하는 작업이 많은 경우에 TPL(작업 병렬 라이브러리) 데이터 흐름 라이브러리를 사용합니다. 자세한 내용은 [데이터 흐름(작업 병렬 라이브러리)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)을 참조하세요.
+
+### <a name="ui"></a>UI
+
+- 사용할 수 있는 경우, API의 비동기 버전을 호출합니다. 그러면 UI 스레드의 차단이 해제됩니다. 따라서 애플리케이션에서 사용자의 환경을 개선할 수 있습니다.
+- UI 요소를 UI 스레드에 대한 비동기 작업의 데이터로 업데이트하여 예외가 throw되지 않도록 합니다. 그러나 `ListView.ItemsSource` 속성의 업데이트는 자동으로 UI 스레드로 마샬링됩니다. 코드가 UI 스레드에서 실행되고 있는지 확인하는 방법에 대한 자세한 내용은 [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms)를 참조하세요.
+
+    > [!IMPORTANT]
+    > 데이터 바인딩을 통해 업데이트되는 모든 컨트롤 속성은 자동으로 UI 스레드로 마샬링됩니다.
+
+### <a name="error-handling"></a>오류 처리
+
+- 비동기 예외 처리에 대해 알아봅니다. 비동기적으로 실행되는 코드에 의해 throw된 처리되지 않은 예외는 특정 시나리오를 제외하고는 호출 스레드로 다시 전파됩니다. 자세한 내용은 [예외 처리(작업 병렬 라이브러리)](/dotnet/standard/parallel-programming/exception-handling-task-parallel-library)를 참조하세요.
+- `async void` 메서드를 만들지 말고 대신 `async Task` 메서드를 만듭니다. 이를 통해 오류 처리, 구성 가능성 및 테스트 가능성을 보다 손쉽게 사용할 수 있습니다. 이 지침의 예외는 `void`를 반환해야 하는 비동기 이벤트 처리기입니다. 자세한 내용은 [비동기 Void 방지](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#avoid-async-void)를 참조하세요.
+- 교착 상태가 발생할 수 있으므로 `Task.Wait`, `Task.Result` 또는 `GetAwaiter().GetResult` 메서드를 호출하여 차단 및 비동기 코드를 혼합하지 마세요. 그러나 이 지침을 위반해야 하는 경우, 작업 예외를 유지하기 때문에 `GetAwaiter().GetResult` 메서드를 호출하는 것이 좋습니다. 자세한 내용은 [Async All the Way](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#async-all-the-way)(계속 비동기) 및 [Task Exception Handling in .NET 4.5](https://devblogs.microsoft.com/pfxteam/task-exception-handling-in-net-4-5/)(.NET 4.5의 작업 예외 처리)를 참조하세요.
+- 가능하면 항상 `ConfigureAwait` 메서드를 사용하여 컨텍스트를 구별하지 않는 코드를 만듭니다. 컨텍스트를 구별하지 않는 코드는 모바일 애플리케이션에 더 나은 성능을 제공하며, 부분적으로 비동기 코드베이스로 작업할 때 교착 상태를 방지하는 데 유용한 기술입니다. 자세한 내용은 [컨텍스트 구성](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#configure-context)을 참조하세요.
+- 이전 비동기 작업에서 throw된 예외를 처리하는 기능 및 연속 작업 시작 전에 또는 실행 중에 해당 작업을 취소하는 기능에 *연속 작업*을 사용합니다. 자세한 내용은 [연속 작업을 사용하여 작업 연결](/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks)을 참조하세요.
+- 비동기 작업이 `ICommand`에서 호출될 때 비동기 `ICommand` 구현을 사용합니다. 이렇게 하면 비동기 명령 논리의 모든 예외를 처리할 수 있습니다. 자세한 내용은 [비동기 프로그래밍: 비동기 MVVM 애플리케이션의 패턴: 명령](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands)을 참조하세요.
 
 ## <a name="choose-a-dependency-injection-container-carefully"></a>종속성 주입 컨테이너를 신중하게 선택
 

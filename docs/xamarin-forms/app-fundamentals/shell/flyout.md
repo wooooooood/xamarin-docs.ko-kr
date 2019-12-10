@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2019
-ms.openlocfilehash: eaa29138f91fb8215e2c7c4e651baaf8e311f713
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
+ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889192"
+ms.lasthandoff: 11/24/2019
+ms.locfileid: "74451813"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
@@ -20,7 +20,7 @@ ms.locfileid: "69889192"
 
 플라이아웃은 셸 애플리케이션의 루트 메뉴이며, 아이콘을 통해 또는 화면 측면에서 살짝 밀어 액세스할 수 있습니다. 플라이아웃은 선택적 헤더, 플라이아웃 항목 및 선택적 메뉴 항목으로 구성됩니다.
 
-![셸 주석 처리 플라이아웃의 스크린샷](flyout-images/flyout-annotated.png "주석으로 처리된 플라이아웃")
+![셸 주석 처리 플라이아웃의 스크린샷](flyout-images/flyout-annotated.png "주석이 추가된 플라이아웃")
 
 필요한 경우 `Shell.FlyoutBackgroundColor` 바인딩 가능 속성을 통해 플라이아웃의 배경색을 [`Color`](xref:Xamarin.Forms.Color)로 설정할 수 있습니다. 이 속성은 CSS(CSS 스타일시트)에서 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
 
@@ -155,7 +155,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 이 설정에 따라 배경 이미지가 플라이아웃에 표시됩니다.
 
-![플라이아웃 배경 이미지 스크린샷](flyout-images/flyout-backgroundimage.png "플라이아웃 배경 이미지")
+![플라이아웃 배경 이미지의 스크린샷](flyout-images/flyout-backgroundimage.png "플라이아웃 배경 이미지")
 
 ## <a name="flyout-items"></a>플라이아웃 항목
 
@@ -193,7 +193,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 이 예제에서는 각 [`ContentPage`](xref:Xamarin.Forms.ContentPage)는 플라이아웃 항목을 통해서만 액세스할 수 있습니다.
 
-[![iOS 및 Android에서 플라이아웃 항목이 있는 셸 2페이지 앱의 스크린샷](flyout-images/two-page-app-flyout.png "플라이아웃 항목이 있는 셸 2페이지 앱")](flyout-images/two-page-app-flyout-large.png#lightbox "플라이아웃 항목이 있는 셸 2페이지 앱")
+[![iOS 및 Android에서 플라이아웃 항목이 있는 셸의 두 페이지 앱에 대한 스크린샷](flyout-images/two-page-app-flyout.png "플라이아웃 항목이 있는 셸의 두 페이지 앱")](flyout-images/two-page-app-flyout-large.png#lightbox "플라이아웃 항목이 있는 셸의 두 페이지 앱")
 
 > [!NOTE]
 > 플라이아웃 헤더가 없으면 플라이아웃 항목이 플라이아웃 위쪽에 나타납니다. 플라이아웃 헤더가 있으면 플라이아웃 항목이 플라이아웃 헤더 아래에 나타납니다.
@@ -300,7 +300,7 @@ Shell.Current.FlyoutIsPresented = false;
 
 이를 통해 다음 플라이아웃 항목이 생성됩니다.
 
-[![iOS 및 Android에서 FlyoutItem 개체가 포함된 플라이아웃의 스크린샷](flyout-images/flyout-reduced.png "FlyoutItem 개체가 포함된 셸 플라이아웃")](flyout-images/flyout-reduced-large.png#lightbox "FlyoutItem 개체가 포함된 셸 플라이아웃")
+[![iOS 및 Android에서 FlyoutItem 개체를 포함 하는 플라이아웃의 스크린샷](flyout-images/flyout-reduced.png "FlyoutItem 개체가 포함된 셸 플라이아웃")](flyout-images/flyout-reduced-large.png#lightbox "FlyoutItem 개체가 포함된 셸 플라이아웃")
 
 ## <a name="define-flyoutitem-appearance"></a>FlyoutItem 모양 정의
 
@@ -333,8 +333,71 @@ Shell.Current.FlyoutIsPresented = false;
 
 [![iOS 및 Android에서 템플릿 기반 FlyoutItem 개체의 스크린샷](flyout-images/flyoutitem-templated.png "셸 템플릿 기반 FlyoutItem 개체")](flyout-images/flyoutitem-templated-large.png#lightbox "셸 템플릿 기반 FlyoutItem 개체")
 
+
+`Shell.ItemTemplate`은(는) 연결된 속성이므로 특정 `FlyoutItem` 개체에 다양한 템플릿을 첨부할 수 있습니다.
+
 > [!NOTE]
 > 셸은 `ItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 `Title` 및 `FlyoutIcon` 속성을 제공합니다.
+
+
+### <a name="default-template-for-flyoutitems-and-menuitems"></a>FlyoutItem 및 MenuItem의 기본 템플릿
+Shell에서 기본 구현에 내부적으로 다음 템플릿을 사용합니다. 기존 레이아웃을 약간만 변경하려는 경우에 좋은 방법입니다. 또한 플라이아웃 항목의 Visual State Manager 기능을 보여 줍니다. 이 템플릿은 MenuItem에도 사용할 수 있습니다.
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## <a name="flyoutitem-tab-order"></a>FlyoutItem 탭 순서
 
@@ -403,7 +466,7 @@ Shell.Current.CurrentItem = aboutItem;
 
 이 코드는 2개의 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체를 플라이아웃에서 모든 플라이아웃 항목 아래쪽에 추가합니다.
 
-[![iOS 및 Android에서 MenuItem 개체가 포함된 플라이아웃의 스크린샷](flyout-images/flyout.png "MenuItem 개체가 포함된 셸 플라이아웃")](flyout-images/flyout-large.png#lightbox "MenuItem 개체가 포함된 셸 플라이아웃")
+[![iOS 및 Android에서 MenuItem 개체를 포함 하는 플라이아웃의 스크린샷](flyout-images/flyout.png "MenuItem 개체가 포함된 셸 플라이 아웃")](flyout-images/flyout-large.png#lightbox "MenuItem 개체가 포함된 셸 플라이 아웃")
 
 첫 번째 [`MenuItem`](xref:Xamarin.Forms.MenuItem) 개체는 애플리케이션의 임의 페이지로 이동하는 `RandomPageCommand`라는 `ICommand`를 실행합니다. 두 번째 `MenuItem` 개체는 웹 브라우저에서 `CommandParameter` 속성으로 지정된 URL을 여는 `HelpCommand`라는 `ICommand`를 실행합니다.
 
@@ -446,10 +509,10 @@ Shell.Current.CurrentItem = aboutItem;
 
 이 예제에서는 Shell 수준 `MenuItemTemplate`을 각 `MenuItem` 개체에 첨부하여 각 `MenuItem` 개체의 제목을 기울임꼴로 표시합니다.
 
-[![iOS 및 Android에서 템플릿 기반 MenuItem 개체의 스크린샷](flyout-images/menuitem-templated.png "셸 템플릿 기반 MenuItem 개체")](flyout-images/menuitem-templated-large.png#lightbox "셸 템플릿 기반 MenuItem 개체")
+[![iOS 및 Android에서 템플릿 기반 MenuItem 개체의 스크린샷](flyout-images/menuitem-templated.png "Shell 템플릿 기반 MenuItem 개체")](flyout-images/menuitem-templated-large.png#lightbox "Shell 템플릿 기반 MenuItem 개체")
 
 > [!NOTE]
-> 셸은 `MenuItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 [`Text`](xref:Xamarin.Forms.MenuItem.Text) 및 [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 속성을 제공합니다.
+> 셸은 `MenuItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 [`Text`](xref:Xamarin.Forms.MenuItem.Text) 및 [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 속성을 제공합니다. 메뉴 항목 및 플라이아웃 항목에 동일한 템플릿을 다시 사용할 수 있는 `IconImageSource` 대신 `Text`을(를) 사용하고 `Icon` 대신 `Title`을(를) 사용할 수도 있습니다.
 
 `Shell.MenuItemTemplate`은 연결된 속성이므로 특정 `MenuItem` 개체에 서로 다른 템플릿을 첨부할 수 있습니다.
 
@@ -488,6 +551,10 @@ Shell.Current.CurrentItem = aboutItem;
     </MenuItem>
 </Shell>
 ```
+
+
+> [!NOTE]
+> [플라이아웃 항목](#default-template-for-flyoutitems-and-menuitems)에 사용된 동일한 템플릿을 메뉴 항목에도 사용할 수 있습니다.
 
 이 예제에서는 Shell 수준 `MenuItemTemplate`을 첫 번째 `MenuItem` 개체에 첨부하고 인라인 `MenuItemTemplate`을 두 번째 `MenuItem`에 첨부합니다.
 

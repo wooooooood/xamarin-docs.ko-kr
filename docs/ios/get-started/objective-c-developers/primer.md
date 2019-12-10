@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 8b84d959ce7976fc51cbdfee99cbceec560e8e8e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6b2753b0f1a7389d62866e5c8003b439a283e5b5
+ms.sourcegitcommit: 1c87135a47780f34102952d4b140850b4f08b075
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022435"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74536505"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Objective-C 개발자용 C# 입문서
 
 _Xamarin.iOS를 사용하면 C#에서 작성된 플랫폼 제약 없는 코드를 플랫폼 간에 공유할 수 있습니다. 그러나 기존 iOS 애플리케이션은 이미 만들어진 Objective-C 코드를 활용하려 할 수 있습니다. 이 문서는 Xamarin 및 C# 언어로 이동하려는 Objective-C 개발자를 위한 간단한 입문서입니다._
 
-Objective-C에서 개발된 iOS 및 OS X 애플리케이션은 플랫폼별 코드가 필요 없는 곳에서 C#을 활용하여 Xamarin의 장점을 얻을 수 있으며, 이러한 코드를 Apple 이외의 디바이스에서 사용할 수 있습니다. 그리고 웹 서비스, JSON, XML 구문 분석 같은 것들과 사용자 지정 알고리즘을 플랫폼 간 방식으로 사용할 수 있습니다.
+Objective-C에서 개발된 iOS 및 macOS 애플리케이션은 플랫폼별 코드가 필요 없는 곳에서 C#을 활용하여 Xamarin의 장점을 얻을 수 있으며, 이러한 코드를 Apple 이외의 디바이스에서 사용할 수 있습니다. 그리고 웹 서비스, JSON, XML 구문 분석 같은 것들과 사용자 지정 알고리즘을 플랫폼 간 방식으로 사용할 수 있습니다.
 
 Objective-C 자산을 유지하면서도 Xamarin을 활용하려면 바인딩이라고 하는 Xamarin의 기술로 Xamarin을 C#에 노출하면 됩니다. 그러면 Objective-C 코드가 관리 C# 세계에 표시됩니다. 또한 원한다면 코드를 한 줄씩 C#으로 이식할 수 있습니다. 하지만 바인딩을 사용하든 아니면 이식을 사용하든, 기존 Objective-C 코드를 Xamarin.iOS에 효율적으로 활용하려면 Objective-C 및 C#에 대한 약간의 지식이 필요합니다.
 
@@ -64,7 +64,7 @@ public static class UITextViewExtensions
 
 ### <a name="frameworks-vs-assemblies"></a>프레임워크 vs. 어셈블리
 
-Objective-C는 관련 클래스를 프레임워크라고 하는 특수 디렉터리에 패키징합니다. 그러나 C# 및 .NET에서는 어셈블리를 사용하여 미리 컴파일된 코드의 재사용 가능한 비트를 제공합니다. iOS 외부 환경에서 어셈블리에는 런타임에 JIT(Just-In-Time) 컴파일되는 IL(중간 언어) 코드가 포함됩니다. 그러나 Apple은 iOS 애플리케이션에서 JIT를 허용하지 않습니다. 따라서 Xamarin을 사용하는 iOS를 대상으로 하는 C# 코드는 AOT(Ahead Of Time) 컴파일되고, 애플리케이션 번들에 포함된 메타데이터 파일과 함께 단일 Unix 실행 파일을 생성합니다.
+Objective-C는 관련 클래스를 프레임워크라고 하는 특수 디렉터리에 패키징합니다. 그러나 C# 및 .NET에서는 어셈블리를 사용하여 미리 컴파일된 코드의 재사용 가능한 비트를 제공합니다. iOS 외부 환경에서 어셈블리에는 런타임에 JIT(Just-In-Time) 컴파일되는 IL(중간 언어) 코드가 포함됩니다. 그러나 Apple은 App Store에서 릴리스된 iOS 애플리케이션에서 JIT 컴파일된 코드의 실행을 허용하지 않습니다. 따라서 Xamarin을 사용하는 iOS를 대상으로 하는 C# 코드는 AOT(Ahead Of Time) 컴파일되고, 애플리케이션 번들에 포함된 메타데이터 파일과 함께 단일 Unix 실행 파일을 생성합니다.
 
 ### <a name="selectors-vs-named-parameters"></a>선택기 vs. 명명된 매개 변수
 
