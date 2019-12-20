@@ -109,7 +109,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
    [![Android 버전 선택](device-manager-images/win/13-android-version-w158-sml.png)](device-manager-images/win/13-android-version-w158.png#lightbox)
 
-   아직 설치되지 않은 Android API 수준을 선택하면 Device Manager에 &ndash; 화면의 아래쪽의 **새 디바이스가 다운로드 됨** 메시지가 표시됩니다. 새 가상 디바이스를 만들 때 필요한 파일을 다운로드하고 설치합니다.
+   아직 설치되지 않은 Android API 수준을 선택하면 Device Manager가 &ndash;  화면 아래쪽에 **새 디바이스가 다운로드됩니다** 메시지를 표시합니다. 새 가상 디바이스를 만들 때 필요한 파일을 다운로드하고 설치합니다.
 
    ![새 디바이스 이미지가 다운로드됩니다.](device-manager-images/win/14-automatic-download-w158.png)
 
@@ -153,7 +153,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 [![디바이스 편집기 화면](device-manager-images/win/22-device-editor-sml.png)](device-manager-images/win/22-device-editor.png#lightbox)
 
-**디바이스 편집기** 화면에는 가상 디바이스의 속성이 **값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래의 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
+**디바이스 편집기** 화면에는 가상 디바이스의 속성이**값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래에 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
 
 속성을 변경하려면 **값** 열에서 해당 값을 편집합니다.
 예를 들어 다음 스크린샷에서 `hw.lcd.density` 속성은 **480**에서 **240**으로 변경됩니다.
@@ -279,7 +279,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
    [![Android 버전 선택](device-manager-images/mac/14-android-screenshot-m76-sml.png)](device-manager-images/mac/14-android-screenshot-m76.png#lightbox)
 
-   아직 설치되지 않은 Android API 수준을 선택하면 Device Manager에 &ndash; 화면의 아래쪽의 **새 디바이스가 다운로드 됨** 메시지가 표시됩니다. 새 가상 디바이스를 만들 때 필요한 파일을 다운로드하고 설치합니다.
+   아직 설치되지 않은 Android API 수준을 선택하면 Device Manager가 &ndash;  화면 아래쪽에 **새 디바이스가 다운로드됩니다** 메시지를 표시합니다. 새 가상 디바이스를 만들 때 필요한 파일을 다운로드하고 설치합니다.
 
    ![새 디바이스 이미지가 다운로드됩니다.](device-manager-images/mac/15-automatic-download-m76.png)
 
@@ -319,7 +319,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 [![디바이스 편집기 화면](device-manager-images/mac/22-device-editor-sml.png)](device-manager-images/mac/22-device-editor.png#lightbox)
 
-**디바이스 편집기** 화면에는 가상 디바이스의 속성이 **값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래의 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
+**디바이스 편집기** 화면에는 가상 디바이스의 속성이**값** 열에 각 속성의 해당 값과 함께 **속성** 열 아래에 나열됩니다. 속성을 선택하면 속성에 대한 자세한 설명이 오른쪽에 표시됩니다.
 
 속성을 변경하려면 **값** 열에서 해당 값을 편집합니다.
 예를 들어 다음 스크린샷에서 `hw.lcd.density` 속성은 **480**에서 **240**으로 변경됩니다.
