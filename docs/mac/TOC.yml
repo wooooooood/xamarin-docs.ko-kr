@@ -171,7 +171,7 @@
                       href: ~/cross-platform/macios/binding/objective-sharpie/platform/native-frameworks.md?context=xamarin/mac
                     - name: 특성 확인
                       href: ~/cross-platform/macios/binding/objective-sharpie/platform/verify.md?context=xamarin/mac
-                - name: 예제
+                - name: 예
                   href: ~/cross-platform/macios/binding/objective-sharpie/examples/index.md?context=xamarin/mac
                   items:
                     - name: Xcode
@@ -224,4 +224,4 @@
     - name: 릴리스 정보
       href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
     - name: 샘플
-      href: samples/index.yml
+      href: samples/index.md

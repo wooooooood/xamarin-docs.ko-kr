@@ -660,4 +660,4 @@
     - name: 릴리스 정보
       href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
     - name: 샘플
-      href: samples/index.yml
+      href: samples/index.md
