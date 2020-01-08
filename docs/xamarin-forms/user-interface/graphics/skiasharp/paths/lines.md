@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: cc62ca4656a845a261c56424aa1ea1331c994994
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 724a79e618321f97257718bf56dd1fdd18f73563
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759214"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545614"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
@@ -22,7 +22,7 @@ _다른 스트로크 단면 있는 선을 그리려면 SkiaSharp 사용 방법 �
 
 SkiaSharp, 전혀 렌더링에서는 일련의 연결 된 직선 렌더링에서 다릅니다. 단일 줄을 그릴 때에 있지만 경우가 줄 특정 스트로크 너비를 지정 하는 데 필요한 합니다. 이러한 줄 광범위 한 있을 경우 줄의 끝 모양의이 중요 합니다. 선의 끝 모양을 라고 합니다 *스트로크 단면*:
 
-![](lines-images/strokecapsexample.png "세 선 caps 옵션")
+![](lines-images/strokecapsexample.png "The three stroke caps options")
 
 단일 선 그리기 `SKCanvas` 간단한 정의 [ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) 인수 시작 및 끝 좌표로 사용 하 여 선의 표시 하는 메서드는 `SKPaint` 개체:
 
@@ -30,7 +30,7 @@ SkiaSharp, 전혀 렌더링에서는 일련의 연결 된 직선 렌더링에서
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 하지만 조정 가능한 두께의 선 그리기를 시작 하면 다른 문제가 발생 합니다. 이러한 굵은 선의 시작과 끝을 렌더링 하는 방법은 무엇입니까?
+기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 또 다른 문제를 발생 시키는 많은 두께의 줄 그리기를 시작 하면 되지만: 시작 되 고 이러한 두꺼운 선 끝 렌더링 되는 방식을?
 
 작업이 시작 되 고 줄 끝 모양을 라고는 *선 끝 모양을* 또는 Skia는 *스트로크 단면*합니다. "이 컨텍스트에서" cap 라는 단어는 hat의 종류를 의미 &mdash; 줄의 끝에 위치 하는 것입니다. 설정한 합니다 [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) 의 속성을 `SKPaint` 개체의 다음 멤버 중 하나를 [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) 열거형:
 
@@ -94,7 +94,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 각 멤버에 대해는 `SKStrokeCap` 열거형 처리기 50 픽셀 및 두 픽셀의 스트로크 두께 사용 하 여 맨 위에 배치 하는 다른 줄 스트로크 두께 사용 하 여 하나를 두 줄을 그립니다. 이 두 번째 줄은 기하학적 시작과 선 두께 및 스트로크 단면 독립적인 줄의 끝을 설명 하기 위한 것:
 
-[![](lines-images/strokecaps-small.png "삼중 스트로크 단면 페이지 스크린샷")](lines-images/strokecaps-large.png#lightbox "삼중 스트로크 단면 페이지 스크린샷")
+[![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
 
 알 수 있듯이 합니다 `Square` 고 `Round` 스트로크 단면 줄의 시작 부분 및 끝 다시 절반 스트로크 너비에 의해 줄의 길이 효과적으로 확장 합니다. 이 확장이 렌더링 되는 그래픽 개체의 크기를 결정 하는 데 필요한 경우에 중요 합니다.
 
@@ -228,13 +228,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 스크린샷에서 다양 한 표시 `Picker` 선택:
 
-[![](lines-images/multiplelines-small.png "여러 줄 페이지의 3 배가 스크린샷")](lines-images/multiplelines-large.png#lightbox "삼중 여러 줄 페이지 스크린샷")
+[![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
 
 왼쪽된 박람회에서 iPhone 하는 방법을 `SKPointMode.Points` 열거형 멤버 발생 `DrawPoints` 각 항목에 렌더링 하는 `SKPoint` 선 끝 모양을 경우 사각형으로 배열 `Butt` 또는 `Square`합니다. 선 끝 모양을 경우 원 렌더링 됩니다 `Round`합니다.
 
-대신 사용 하는 경우 `SKPointMode.Lines`센터에서 Android 화면에 표시 된 것 처럼 합니다 `DrawPoints` 메서드 각 쌍 사이 선을 그립니다 `SKPoint` 값,이 경우 지정된 선 끝 모양를 사용 하 여 `Round`입니다.
+Android 스크린샷은 `SKPointMode.Lines`의 결과를 보여 줍니다. `DrawPoints` 메서드는 지정 된 줄 끝 (이 경우 `Round`)을 사용 하 여 `SKPoint` 값의 각 쌍 사이에 선을 그립니다.
 
-결과 표시 하는 UWP 스크린샷에서 `SKPointMode.Polygon` 값입니다. 배열에서 연속 점 사이의 줄이 그려집니다 있지만 매우 자세히 살펴보면 이러한 줄 연결 되어 있지 않은 확인할 수 있습니다. 각 이러한 별도 줄 시작 되며 지정된 선 끝 모양을로 끝납니다. 선택 하는 경우는 `Round` 캡이 포함 된 줄 연결 되어 나타날 수 있지만 실제로 연결 되지 않은 합니다.
+대신 `SKPointMode.Polygon`를 사용 하는 경우 배열에서 연속 되는 요소 사이에 선이 그려지고 매우 긴밀 하 게 표시 되는 경우이 줄이 연결 되지 않은 것을 볼 수 있습니다. 각 이러한 별도 줄 시작 되며 지정된 선 끝 모양을로 끝납니다. 선택 하는 경우는 `Round` 캡이 포함 된 줄 연결 되어 나타날 수 있지만 실제로 연결 되지 않은 합니다.
 
 줄 연결 되거나 연결 되지 있는지 여부를 그래픽 경로 사용 하는 중요 한 측면 이며
 

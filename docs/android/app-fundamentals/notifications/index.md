@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 5d91904e35a658b03d4602567e5a123cafd6926c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e0035414cb8a24e5571b2972ec638eec550c593c
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025529"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545558"
 ---
 # <a name="notifications-in-xamarinandroid"></a>Xamarin Android의 알림
 
@@ -29,7 +29,7 @@ ms.locfileid: "73025529"
 
 FCM ( [Firebase Cloud messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) &ndash; Firebase 클라우드 메시징)는 모바일 앱과 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. Firebase 클라우드 메시징은 Xamarin Android 응용 프로그램에서 원격 알림 (푸시 알림)을 구현 하는 데 사용할 수 있습니다.
 
-이 Android 개발자 항목 &ndash; [알림은](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) android 알림에 대 한 결정적인 가이드입니다. 이 섹션에는 Android 사용자 인터페이스의 지침을 준수 하도록 알림을 디자인 하는 데 도움이 되는 디자인 고려 사항이 포함 되어 있습니다. 활동을 시작할 때 preserviing 탐색에 대 한 자세한 배경 정보를 제공 하 고, 알림에 진행률을 표시 하 고 잠금 화면에서 미디어 재생을 제어 하는 방법을 설명 합니다.
+이 Android 개발자 항목 &ndash; [알림은](https://developer.android.com/guide/topics/ui/notifiers/notifications.html) android 알림에 대 한 결정적인 가이드입니다. 이 섹션에는 Android 사용자 인터페이스의 지침을 준수 하도록 알림을 디자인 하는 데 도움이 되는 디자인 고려 사항이 포함 되어 있습니다. 활동을 시작할 때 탐색 유지에 대 한 자세한 배경 정보를 제공 하 고, 알림에 진행률을 표시 하 고 잠금 화면에서 미디어 재생을 제어 하는 방법을 설명 합니다.
 
 [NotificationListenerService](xref:Android.Service.Notification.NotificationListenerService) &ndash;이 android 서비스를 사용 하면 앱이 수신 하도록 등록 된 알림 뿐만 아니라 android 장치에 게시 된 모든 알림을 앱에서 수신 하 고 상호 작용할 수 있습니다.
 사용자는 장치에서 알림을 수신할 수 있도록 앱에 대 한 권한을 명시적으로 부여 해야 합니다.
@@ -37,4 +37,3 @@ FCM ( [Firebase Cloud messaging](~/android/data-cloud/google-messaging/firebase-
 ## <a name="related-links"></a>관련 링크
 
 - [로컬 알림 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
-- [원격 알림 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)

@@ -7,12 +7,12 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: bfc1bec06c773039529cd85aac604a9a9031cb54
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: c3d7e6e0c0e3230c11e2e96baa9efa57ac988c83
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70773023"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545672"
 ---
 # <a name="the-skew-transform"></a>기울이기 변환
 
@@ -22,7 +22,7 @@ _기울이기 변환에서 SkiaSharp 기운된 그래픽 개체를 만들 수 �
 
 SkiaSharp, 기울이기 변환 그림자가 그림과에서 같은 그래픽 개체를 기울이는:
 
-![](skew-images/skewexample.png "그림자 텍스트 기울이기 프로그램에서 기울이기의 예")
+![](skew-images/skewexample.png "An example of skewing from the Skew Shadow Text program")
 
 오차는 평행 사변형에 사각형을 설정 하지만 불균형된 타원은 타원 계속 합니다.
 
@@ -72,9 +72,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 값을 `xSkew` 양수 값에 대 한 오른쪽 텍스트 또는 음수 값에 대 한 왼쪽의 아래쪽을 이동 하는 인수입니다. 값 `ySkew` 양수 또는 음수 값에 대해 텍스트의 오른쪽 이동 합니다.
 
-[![](skew-images/skewexperiment-small.png "기울이기 실험 페이지의 3 배가 스크린 샷")](skew-images/skewexperiment-large.png#lightbox "삼중 기울이기 실험 페이지 스크린샷")
+[![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
 
-경우는 `xSkew` 값은 음수를 `ySkew` 값 결과 회전 이지만으로 다소 비율도 UWP 표시를 나타냅니다.
+`xSkew` 값이 `ySkew` 값의 음수 이면 결과는 회전이 며 약간 크기가 조정 됩니다.
 
 변환 수식에는 다음과 같습니다.
 
@@ -86,7 +86,7 @@ y' ySkew? = x + y
 
 왼쪽 위 모퉁이가 점 (0, 0)를 배치 하는 사용 하 여 렌더링 되는 삼각형 200 픽셀 너비 고 100 픽셀 짜리는 `xSkew` 값이 1.5, 다음 평행 사변형 결과:
 
-![](skew-images/skeweffect.png "기울이기 변환 사각형에 끼치는 영향")
+![](skew-images/skeweffect.png "The effect of the skew transform on a rectangle")
 
 아래쪽 가장자리의 좌표의 `y` 값이 100 인 이므로 150 픽셀을 오른쪽으로 옮겨집니다.
 
@@ -108,7 +108,7 @@ y' ySkew? = (x-px) + y
 
 수 편하다면 기울기 각도 α가 다이어그램과에서 같은 기울기 각도를 지정 합니다.
 
-![](skew-images/skewangleeffect.png "기울이기 변환 기울이기 각도 사용 하 여 사각형에 미치는 표시")
+![](skew-images/skewangleeffect.png "The effect of the skew transform on a rectangle with a skewing angle indicated")
 
 100 픽셀 세로 150 픽셀 shift의 비율은이 예에서 해당 각도의 탄젠트 56.3 (도).
 
@@ -155,7 +155,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 각도 양수 또는 음수 90도 다가오면 탄젠트 가까워지면 무한대 있지만 약 80도 정도까지 각도 사용할 수 없습니다.
 
-[![](skew-images/skewangleexperiment-small.png "기울이기 각도 실험 페이지의 3 배가 스크린 샷")](skew-images/skewangleexperiment-large.png#lightbox "삼중 기울이기 각도 실험 페이지 스크린샷")
+[![](skew-images/skewangleexperiment-small.png "Triple screenshot of the Skew Angle Experiment page")](skew-images/skewangleexperiment-large.png#lightbox "Triple screenshot of the Skew Angle Experiment page")
 
 작은 음수 가로 기울이기를으로 오블리크 또는 기울임꼴 텍스트를 모방 합니다 **오블리크 텍스트** 페이지를 보여 줍니다. 합니다 [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) 클래스가 어떻게 수행 되는지 보여 줍니다.
 
@@ -191,7 +191,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 합니다 `TextAlign` 속성을 `SKPaint` 로 설정 된 `Center`합니다. 모든 변환 없이 `DrawText` 의 좌표를 사용 하 여 호출 (0, 0) 왼쪽 위 모퉁이에서 기준의 가로 가운데를 사용 하 여 텍스트의 위치는입니다. `SkewDegrees` 기준선을 기준으로 20도 텍스트를 가로로 기울어집니다. `Translate` 호출 캔버스의 가운데에 텍스트의 기준선의 가로 가운데를 이동 합니다.
 
-[![](skew-images/obliquetext-small.png "오블리크 텍스트 페이지의 3 배가 스크린샷")](skew-images/obliquetext-large.png#lightbox "삼중 오블리크 텍스트 페이지 스크린샷")
+[![](skew-images/obliquetext-small.png "Triple screenshot of the Oblique Text page")](skew-images/obliquetext-large.png#lightbox "Triple screenshot of the Oblique Text page")
 
 합니다 **그림자 텍스트 기울이기** 페이지 텍스트에서 기울이는 텍스트 그림자 45도 기울이기 및 세로 눈금을 조합해 서 사용 하는 방법에 설명 합니다. 관련 부분은 여기는 `PaintSurface` 처리기:
 
@@ -224,11 +224,11 @@ using (SKPaint textPaint = new SKPaint())
 
 그림자가 표시 된 첫 번째 및 다음 텍스트:
 
-[![](skew-images/skewshadowtext1-small.png "기울이기 섀도 텍스트 페이지의 3 배가 스크린샷")](skew-images/skewshadowtext1-large.png#lightbox "삼중 기울이기 섀도 텍스트 페이지 스크린샷")
+[![](skew-images/skewshadowtext1-small.png "Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png#lightbox "Triple screenshot of the Skew Shadow Text page")
 
 에 전달 하는 세로 좌표는 `DrawText` 메서드 기준선을 기준으로 텍스트의 위치를 나타냅니다. 기울이기의 중심에 사용 되는 동일한 세로 좌표입니다. 텍스트 문자열 디센더를 포함 하는 경우에이 기술은 작동 하지 않습니다. 예를 들어, "섀도"에 대 한 "마구" 라는 단어를 대체 하 고 결과 다음과 같습니다.
 
-[![](skew-images/skewshadowtext2-small.png "삼중 디센더를 사용 하 여 대체 단어를 사용 하 여 섀도 텍스트 기울이기 페이지 스크린샷")](skew-images/skewshadowtext2-large.png#lightbox "삼중 디센더를 사용 하 여 대체 단어를 사용 하 여 섀도 텍스트 기울이기 페이지 스크린샷")
+[![](skew-images/skewshadowtext2-small.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")
 
 섀도 및 텍스트는 기준선에 맞춘 여전히 있지만 효과 깔 잘못 된 합니다. 이 문제를 해결 하려면 텍스트 범위를 가져오려고 합니다.
 
@@ -248,7 +248,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 이제 이러한 디센더와 맨 아래에서 그림자를 확장합니다.
 
-[![](skew-images/skewshadowtext3-small.png "삼중 하강 조정 기울이기 섀도 텍스트 페이지 스크린샷")](skew-images/skewshadowtext3-large.png#lightbox "삼중 하강 조정 기울이기 섀도 텍스트 페이지 스크린샷")
+[![](skew-images/skewshadowtext3-small.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")
 
 ## <a name="related-links"></a>관련 링크
 

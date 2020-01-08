@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 658bb65c9f9dea2c68b782736de02d95df368dd3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 97c582ada0951f530885359112c3c7adfacc3502
+ms.sourcegitcommit: bdb8ad7337931adf2ea45b10c2af81ecc4aad26a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024863"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500241"
 ---
 # <a name="creating-a-service"></a>서비스 만들기
 
@@ -32,7 +32,7 @@ public class DemoService : Service
 }
 ```
 
-컴파일 시 Xamarin.ios는 다음 XML 요소를 **Androidmanifest** 에 삽입 하 여 서비스를 등록 합니다. 즉, xamarin.ios에서 서비스에 대 한 무작위 이름을 생성 합니다.
+컴파일 시 Xamarin.Android는 다음 XML 요소를 **Androidmanifest**에 삽입하여 서비스를 등록합니다(Xamarin.Android에서 서비스에 대해 무작위로 이름을 생성했음을 알 수 있습니다).
 
 ```xml
 <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
@@ -75,7 +75,7 @@ public class DemoService : Service
 
 Android에서 서비스를 시작 하는 가장 기본적인 방법은 시작할 서비스를 식별 하는 데 도움이 되는 메타 데이터를 포함 하는 `Intent`를 디스패치 하는 것입니다. 서비스를 시작 하는 데 사용할 수 있는 두 가지 다른 스타일의 의도가 있습니다.
 
-- 명시적 **의도** &ndash; _명시적_ 의도는 지정 된 작업을 완료 하는 데 사용 해야 하는 서비스를 정확 하 게 식별 합니다. 명시적 의도는 특정 주소가 있는 문자로 간주할 수 있습니다. Android는 명시적으로 식별 된 서비스로 의도를 라우팅합니다. 이 코드 조각은 명시적 의도를 사용 하 여 `DownloadService` 라는 서비스를 시작 하는 한 가지 예입니다.
+- 명시적 **의도** &ndash; _명시적_ 의도는 지정 된 작업을 완료 하는 데 사용 해야 하는 서비스를 정확 하 게 식별 합니다. 명시적 의도는 특정 주소가 있는 문자로 간주할 수 있습니다. Android는 명시적으로 식별 된 서비스로 의도를 라우팅합니다. 이 코드 조각은 명시적 의도를 사용 하 여 `DownloadService`라는 서비스를 시작 하는 한 가지 예입니다.
 
     ```csharp
     // Example of creating an explicit Intent in an Android Activity
@@ -83,7 +83,7 @@ Android에서 서비스를 시작 하는 가장 기본적인 방법은 시작할
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
-- **암시적 의도** &ndash;이 유형의 의도는 사용자가 수행 하려는 동작의를 식별 하지만 해당 작업을 완료 하는 정확한 서비스는 알 수 없음입니다. 암시적 의도는 "문제를 해결할 수 있습니다." 라고 하는 문자로 간주할 수 있습니다.
+- **암시적 의도** &ndash;이 유형의 의도는 사용자가 수행 하려는 동작의 유형을 식별 하지만 해당 작업을 완료 하는 정확한 서비스는 알 수 없음입니다. 암시적 의도는 "문제를 해결할 수 있습니다." 라고 하는 문자로 간주할 수 있습니다.
     Android는 의도 된 내용을 검사 하 고 해당 의도와 일치 하는 기존 서비스가 있는지 확인 합니다.
 
     _내재 된 필터_ 를 사용 하 여 등록 된 서비스와 암시적 의도를 일치 시킬 수 있습니다. 의도 필터는 서비스와 암시적 의도를 일치 시키는 데 도움이 되는 필요한 메타 데이터를 포함 하는 **Androidmanifest** 에 추가 되는 xml 요소입니다.
@@ -106,7 +106,7 @@ Android가 암시적 의도에 대해 둘 이상의 가능한 일치 항목을 �
 
 ### <a name="creating-an-intent-filter-for-implicit-intents"></a>암시적 의도에 대 한 의도 필터 만들기
 
-서비스를 암시적 의도에 연결 하려면 Android 앱에서 서비스의 기능을 식별 하는 메타 데이터를 제공 해야 합니다. 이 메타 데이터는 _의도 필터_에 의해 제공 됩니다. 의도 필터에는 서비스를 시작 하기 위해 제공 해야 하는 작업 또는 데이터 유형과 같은 일부 정보가 포함 되어 있습니다. Xamarin Android에서 의도 필터는 서비스를 [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute)로 데코레이팅하는 방법으로 **Androidmanifest** 에 등록 됩니다. 예를 들어 다음 코드는 `com.xamarin.DemoService` 관련 된 작업을 사용 하 여 의도 필터를 추가 합니다.
+서비스를 암시적 의도에 연결 하려면 Android 앱에서 서비스의 기능을 식별 하는 메타 데이터를 제공 해야 합니다. 이 메타 데이터는 _의도 필터_에 의해 제공 됩니다. 의도 필터에는 서비스를 시작 하기 위해 제공 해야 하는 작업 또는 데이터 유형과 같은 일부 정보가 포함 되어 있습니다. Xamarin Android에서 의도 필터는 서비스를 [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute)로 데코레이팅하는 방법으로 **Androidmanifest** 에 등록 됩니다. 예를 들어 다음 코드는 `com.xamarin.DemoService`관련 된 작업을 사용 하 여 의도 필터를 추가 합니다.
 
 ```csharp
 [Service]
@@ -130,7 +130,7 @@ Xamarin Android 서비스의 기본 사항을 사용 하 여 다양 한 서비�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Android. App. 서비스](xref:Android.App.Service)
-- [Android. ServiceAttribute](xref:Android.App.ServiceAttribute)
-- [Android. 앱 의도](xref:Android.Content.Intent)
-- [Android. IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute)
+- [Android.App.Intent](xref:Android.Content.Intent)
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)

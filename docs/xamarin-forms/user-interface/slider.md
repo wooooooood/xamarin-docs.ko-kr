@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
-ms.openlocfilehash: e54b36989f5b4694da5d46a89391d56920b8d6a9
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: ddb25a1f01f91b627fc0c370f7f21e2a797b72cb
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656251"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545584"
 ---
 # <a name="xamarinforms-slider"></a>Xamarin.Forms 슬라이더
 
@@ -39,7 +39,7 @@ Xamarin.Forms [ `Slider` ](xref:Xamarin.Forms.Slider) 은 선택 하는 사용�
 
 [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) 와 함께 제공 되는 개체를 `ValueChanged` 이벤트 라는 두 가지 속성이 형식 둘 다 `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) 및 [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). 시 이벤트 발생의 값 `NewValue` 동일 합니다 `Value` 의 속성은 `Slider` 개체.
 
-`Slider`또한는 `DragStarted` 끌기 `DragCompleted` 작업의 시작과 끝에서 발생 하는 및 이벤트를 정의 합니다. 이벤트와 달리 및`DragCompleted`이벤트 는의 `Slider`사용자 조작을 통해서만 발생 합니다. `DragStarted` [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) 이벤트가 발생 `DragStartedCommand`하면 형식의`ICommand`이 실행 됩니다. `DragStarted` 마찬가지로 `DragCompleted` 이벤트가 발생 `DragCompletedCommand`하면 형식의 `ICommand`이 실행 됩니다.
+또한 `Slider`는 끌기 작업의 시작과 끝에서 발생 하는 `DragStarted` 및 `DragCompleted` 이벤트를 정의 합니다. [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) 이벤트와 달리 `DragStarted` 및 `DragCompleted` 이벤트는 `Slider`의 사용자 조작을 통해서만 발생 합니다. `DragStarted` 이벤트가 발생 하면 `ICommand`형식의 `DragStartedCommand`실행 됩니다. 마찬가지로 `DragCompleted` 이벤트가 발생 하면 `ICommand`형식의 `DragCompletedCommand`실행 됩니다.
 
 > [!WARNING]
 > 제약을 받지 않는 가로 레이아웃 옵션을 사용 하지 마십시오 `Center`, `Start`, 또는 `End` 사용 하 여 `Slider`입니다. Android 및 UWP, 모두는 `Slider` 길이가 0 인 및 iOS의 경우 막대에 막대에는 축소 정도로 매우 짧습니다. 기본값을 유지 `HorizontalOptions` 설정 `Fill`, 고의 너비를 사용 하지 않는 `Auto` 전환할 때 `Slider` 에 `Grid` 레이아웃 합니다.
@@ -109,7 +109,7 @@ public class BasicSliderCodePage : ContentPage
 
 합니다 `Slider` 하도록 초기화 됩니다는 `Maximum` 360의 속성입니다. `ValueChanged` 처리기를 `Slider` 사용 하 여를 `Value` 의 속성을 `slider` 설정할 개체입니다를 `Rotation` 첫 번째 속성 `Label` 사용 하는 `String.Format` 메서드를 `NewValue` 의 속성을 설정에 대 한 이벤트 인수를 `Text` 두 번째 속성 `Label`합니다. 이러한 두 가지 방법의 현재 값을 가져옵니다는 `Slider` 바꾸어 사용할 수 있습니다.
 
-장치 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)에서 실행 중인 프로그램이 다음과 같습니다.
+IOS 및 Android 장치에서 실행 되는 프로그램은 다음과 같습니다.
 
 [![기본 슬라이더 코드](slider-images/BasicSliderCode.png "기본 슬라이더 코드")](slider-images/BasicSliderCode-Large.png#lightbox)
 
@@ -205,7 +205,7 @@ double value = slider.Value;
 </ContentPage>
 ```
 
-`Rotation` 첫 번째 속성 `Label` 바인딩되는 `Value` 의 속성을 `Slider`는 `Text` 두 번째 속성 `Label` 사용 하 여를 `StringFormat` 사양입니다. **기본 슬라이더 바인딩** 페이지는 위의 두 페이지와 약간 다르게 작동 합니다. 페이지가 처음 표시 될 때 두 번째 `Label` 는 값을 포함 하는 텍스트 문자열을 표시 합니다. 데이터 바인딩을 사용 하 여이 유용 합니다. 데이터 바인딩 없이 텍스트를 표시 하려면 특히 초기화 해야는 `Text` 의 속성을 `Label` 의 발생을 시뮬레이션 하거나는 `ValueChanged` 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트.
+`Rotation` 첫 번째 속성 `Label` 바인딩되는 `Value` 의 속성을 `Slider`는 `Text` 두 번째 속성 `Label` 사용 하 여를 `StringFormat` 사양입니다. 합니다 **기본 슬라이더 바인딩을** 페이지 함수 약간 다르게 두 이전 페이지에서: 페이지가 처음 나타날 경우, 두 번째 `Label` 값을 사용 하 여 텍스트 문자열을 표시 합니다. 데이터 바인딩을 사용 하 여이 유용 합니다. 데이터 바인딩 없이 텍스트를 표시 하려면 특히 초기화 해야는 `Text` 의 속성을 `Label` 의 발생을 시뮬레이션 하거나는 `ValueChanged` 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트.
 
 <a name="precautions" />
 
@@ -295,11 +295,11 @@ Android 구현의 `Slider` Android 기반 [ `SeekBar` ](xref:Android.Widget.Seek
 
 UWP 구현의 `Slider` UWP 기반 [ `Slider` ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) 제어 합니다. `StepFrequency` UWP의 속성 `Slider` 의 차이로 `Maximum` 및 `Minimum` 10, 하지만 1 보다 크지 않음로 나눈 값 속성입니다.
 
-예를 들어, 기본 범위인 0 ~ 1에 대 한는 `StepFrequency` 속성은 0.1로 설정 합니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. (이것은의 마지막 페이지에서 명백 합니다 [ **SliderDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플.) 때 간의 차이 `Maximum` 및 `Minimum` 한 다음 속성은 10 이상이 `StepFrequency` 1로 설정 됩니다 및 `Value` 속성이 정수 계열 값입니다.
+예를 들어, 기본 범위인 0 ~ 1에 대 한는 `StepFrequency` 속성은 0.1로 설정 합니다. 로 `Slider` 조작 되는 `Value` 속성은 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 및 1.0으로 제한 합니다. 이는 [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) 샘플의 마지막 페이지에 있습니다. `Maximum`와 `Minimum` 속성 간의 차이가 10 이상일 경우 `StepFrequency` 1로 설정 되 고 `Value` 속성에는 정수 값이 포함 됩니다.
 
 ### <a name="the-stepslider-solution"></a>StepSlider 솔루션
 
-더욱 유용한 `StepSlider` 에 설명 되어 [27 장입니다. 사용자 지정 렌더러](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) 책 *Creating Mobile Apps with Xamarin.Forms*합니다. 합니다 `StepSlider` 비슷합니다 `Slider` 있지만 추가 `Steps` 사이의 값의 수를 지정 하려면 속성 `Minimum` 및 `Maximum`합니다.
+보다 다양 한 `StepSlider`는 [27 장에서 설명 합니다. ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) *Xamarin.ios를 사용 하 여 Mobile Apps를 만드는*책의 사용자 지정 렌더러 합니다 `StepSlider` 비슷합니다 `Slider` 있지만 추가 `Steps` 사이의 값의 수를 지정 하려면 속성 `Minimum` 및 `Maximum`합니다.
 
 ## <a name="sliders-for-color-selection"></a>색 선택 영역에 대 한 슬라이더
 
@@ -505,7 +505,7 @@ Viewmodel 하며 `INotifyPropertyChanged` 인터페이스는 문서에서 설명
 
 [![HSL 색 슬라이더](slider-images/HslColorSliders.png "HSL 색 슬라이더")](slider-images/HslColorSliders-Large.png#lightbox)
 
-합니다 `StringFormat` 구성 요소는 `Binding` 두 소수 자릿수를 표시 하려면 "F2"의 형식에 대 한 태그 확장 설정 됩니다. (데이터 바인딩에서 서식 지정 문자열은 문서에서 설명한 [문자열 서식 지정](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) 그러나 프로그램의 UWP 버전은 0, 0.1, 0.2의 값으로 제한 하는 중... 0.9 및 1.0입니다. UWP의 구현 직접적인 결과로 이것이 `Slider` 섹션에서 설명한 것 처럼 [플랫폼 구현 차이로](#implementations)합니다.
+합니다 `StringFormat` 구성 요소는 `Binding` 두 소수 자릿수를 표시 하려면 "F2"의 형식에 대 한 태그 확장 설정 됩니다. 데이터 바인딩의 문자열 서식 지정에 대해서는 문서 [문자열 서식 지정](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)에서 설명 합니다. 그러나 UWP 버전의 프로그램은 0, 0.1, 0.2, ...의 값으로 제한 됩니다. 0.9 및 1.0입니다. UWP의 구현 직접적인 결과로 이것이 `Slider` 섹션에서 설명한 것 처럼 [플랫폼 구현 차이로](#implementations)합니다.
 
 ## <a name="related-links"></a>관련 링크
 

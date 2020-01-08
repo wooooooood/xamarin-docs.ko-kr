@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 924b66b3bdb66c2197b708d87e20eeb6f3ed9f46
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 16d576c599dbf5815b19aec4a2e8390f7ed0e601
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770518"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545571"
 ---
 # <a name="the-path-fill-types"></a>경로 채우기 유형
 
@@ -22,7 +22,7 @@ _SkiaSharp 경로 채우기 유형으로 가능한 다른 결과 검색 합니�
 
 경로에 두 개의 윤곽선 겹칠 수 및 단일 윤곽선을 구성 하는 줄이 겹칠 수 있습니다. 잠재적으로 모든 포함 된 영역을 채울 수 있습니다, 있지만 포함된 된 모든 영역을 입력 하지 않을 수도 있습니다. 예를 들면 다음과 같습니다.
 
-![](fill-types-images/filltypeexample.png "점이 5 filles 부분적으로 별")
+![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
 이 통해 약간 제어할 수 있습니다. 채우기 알고리즘에 의해 제어 됩니다는 [ `SKFillType` ](xref:SkiaSharp.SKPath.FillType) 속성을 `SKPath`의 멤버로 설정 합니다 [ `SKPathFillType` ](xref:SkiaSharp.SKPathFillType) 열거형:
 
@@ -170,9 +170,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 일반적으로 경로 채우기 유형에 영향을 주지 채우기와 스트로크 되지 않습니다 하지만 두 `Inverse` 모드 채우기와 스트로크에 영향을 줍니다. 두 채우기에 `Inverse` 형식 입력 영역 oppositely는 별 외부 영역을 채웁니다. 선의 경우 두 `Inverse` 스트로크를 제외한 모든 항목 형식 색입니다. 이러한 역 채우기 형식을 사용 하 여 iOS 스크린샷에서 보여 주듯이 일부 홀수 효과 만들 수 있습니다.
 
-[![](fill-types-images/fivepointedstar-small.png "삼중 Five-Pointed 별 페이지 스크린샷")](fill-types-images/fivepointedstar-large.png#lightbox "삼중 Five-Pointed 별 페이지 스크린샷")
+[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
-스크린샷에서 Android 및 UWP 일반적인 홀수 및 감기 효과 보여주지만 스트로크 및 채우기의 순서는 결과도 영향을 줍니다.
+Android 스크린 샷에서는 일반적인 짝수-홀수 및 권선 효과를 보여 주지만 스트로크 및 채우기의 순서는 결과에도 영향을 줍니다.
 
 감기 알고리즘은 줄이 그려지는 방향에 따라 달라 집니다. 일반적으로 경로 만들 때, 제어할 수 있습니다 그 방향에서 다른 한 지점에서 줄을 그릴는 지정한. 그러나 합니다 `SKPath` 클래스와 같은 메서드 정의 `AddRect` 및 `AddCircle` 전체 윤곽을 그리는입니다. 메서드를 이러한 개체는 그리는 방법을 제어 하려면 형식 매개 변수를 포함 [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection), 두 명의 멤버가 있는 합니다.
 
@@ -223,7 +223,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 이 최소한의 코드만 사용 하 여 만든 흥미로운 이미지:
 
-[![](fill-types-images/overlappingcircles-small.png "겹치는 원 페이지 스크린샷 삼중")](fill-types-images/overlappingcircles-large.png#lightbox "삼중 겹치는 원 페이지 스크린샷")
+[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
 ## <a name="related-links"></a>관련 링크
 

@@ -6,13 +6,13 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/28/2019
-ms.openlocfilehash: b2918dde7524a02aa318164933063a5546db031a
-ms.sourcegitcommit: 76f930ce63b193ca3f7f85f768b031e59cb342ec
+ms.date: 11/04/2019
+ms.openlocfilehash: 62bc5d2012df4880e9257ac70d0fc2e0fca4af64
+ms.sourcegitcommit: 619b32f4f96a255140963afcf87629ca690af93d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71198481"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75500451"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -49,6 +49,8 @@ var about = new Label {
 ```csharp
 label.FontSize = 24;
 ```
+
+크기 값은 장치 독립적 단위로 측정 됩니다. 자세한 내용은 [측정 단위](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement)를 참조 하세요.
 
 또한 xamarin.ios는 특정 글꼴 크기를 나타내는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 열거형의 필드도 정의 합니다. 명명 된 글꼴 크기에 대 한 자세한 내용은 [명명 된 글꼴 크기](#named-font-sizes)를 참조 하십시오.
 
@@ -118,9 +120,9 @@ Xamarin.Forms 컨트롤 모두 표시 텍스트를 `FontSize` XAML에서 설정�
 
 ## <a name="named-font-sizes"></a>명명 된 글꼴 크기
 
-Xamarin.ios는 특정 글꼴 크기를 나타내는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 열거형의 필드를 정의 합니다. 다음 표에서는 `NamedSize` 구성원 및 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기를 보여 줍니다.
+Xamarin.ios는 특정 글꼴 크기를 나타내는 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 열거형의 필드를 정의 합니다. 다음 표에서는 `NamedSize` 멤버와 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)의 기본 크기를 보여 줍니다.
 
-| 멤버 | iOS | Android | UWP |
+| Member | iOS | Android | UWP |
 | --- | --- | --- | --- |
 | `Default` | 16 | 14 | 14 |
 | `Micro` | 11 | 10 | 15.667 |
@@ -133,7 +135,9 @@ Xamarin.ios는 특정 글꼴 크기를 나타내는 [`NamedSize`](xref:Xamarin.F
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
 
-명명 된 글꼴 크기는 XAML과 코드를 모두 통해 설정할 수 있습니다. 또한 `Device.GetNamedSize` 메서드를 호출 하 여 명명 된 글꼴 크기를 `double` 나타내는를 반환할 수 있습니다.
+크기 값은 장치 독립적 단위로 측정 됩니다. 자세한 내용은 [측정 단위](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement)를 참조 하세요.
+
+명명 된 글꼴 크기는 XAML과 코드를 모두 통해 설정할 수 있습니다. 또한 `Device.GetNamedSize` 메서드를 호출 하 여 명명 된 글꼴 크기를 나타내는 `double`를 반환할 수 있습니다.
 
 ```csharp
 label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
@@ -148,7 +152,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 
 기본 제공 서체가 아닌 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 사용자 지정 글꼴을 보여 주는이 스크린샷 **Lobster** 에서 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) Xamarin.Forms를 사용 하 여 렌더링 합니다.
 
- [![IOS 및 Android에서 사용자 지정 글꼴](fonts-images/custom-sml.png "사용자 지정 글꼴 예제")](fonts-images/custom.png#lightbox "사용자 지정 글꼴 예제")
+ [![IOS 및 Android의 사용자 지정 글꼴](fonts-images/custom-sml.png "사용자 지정 글꼴 예")](fonts-images/custom.png#lightbox "사용자 지정 글꼴 예")
 
 각 플랫폼에 필요한 단계는 다음과 같습니다. 응용 프로그램을 사용 하 여 사용자 지정 글꼴 파일을 포함 하는 경우에 배포에 대 한 글꼴의 라이선스를 허용 하는지 확인 해야 합니다.
 
@@ -157,7 +161,7 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 먼저 로드 됨을 보장 다음 Xamarin.Forms를 사용 하 여 이름으로 참조 하 여 사용자 지정 글꼴을 표시 하는 것이 불가능 `Font` 메서드.
 지침을 따릅니다 [이 블로그 게시물](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
 
-1. 빌드 작업을 사용 하 **여 글꼴 파일 추가: BundleResource**, and
+1. 사용 하 여 글꼴 파일 추가 **빌드 작업: BundleResource**, 및
 2. 업데이트를 **Info.plist** 파일 (**응용 프로그램에서 제공 하는 글꼴**, 또는 `UIAppFonts`키,), 한 다음
 3. Xamarin.Forms의 글꼴을 정의 하는 위치를 이름으로 참조!
 
@@ -171,7 +175,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 응용 프로그램 프로젝트의 **자산** 폴더에 글꼴 파일을 추가 하 고 빌드 *작업을 설정 합니다. AndroidAsset*. 그런 다음 전체 경로 사용 하 고 *글꼴 이름* 아래 코드 조각에서 보여 주듯이 Xamarin.Forms의 글꼴 이름으로 해시 (#)로 구분:
+Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 글꼴 파일을 추가 합니다 **자산** 집합과 응용 프로그램 프로젝트에서 폴더 *빌드 작업: AndroidAsset*합니다. 그런 다음 전체 경로 사용 하 고 *글꼴 이름* 아래 코드 조각에서 보여 주듯이 Xamarin.Forms의 글꼴 이름으로 해시 (#)로 구분:
 
 ```csharp
 new Label
@@ -196,8 +200,6 @@ new Label
 > [!NOTE]
 > 글꼴 이름과 글꼴 파일에 있는 참고 달라질 수 있습니다. Windows에서 글꼴 이름을 검색할.ttf 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **미리 보기**합니다. 글꼴 이름은 미리 보기 창에서 다음 확인할 수 있습니다.
 
-응용 프로그램에 대한 공통 코드가 이제 완료되었습니다. 플랫폼 특정 전화 걸기 코드는 이제 [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md)로 구현됩니다.
-
 ### <a name="xaml"></a>XAML
 
 사용할 수도 있습니다 [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) 사용자 지정 글꼴을 렌더링 하는 XAML에서:
@@ -216,14 +218,14 @@ new Label
 
 ## <a name="display-font-icons"></a>글꼴 아이콘 표시
 
-글꼴 아이콘 데이터를 `FontImageSource` 개체에 지정 하 여 xamarin.ios 응용 프로그램에서 글꼴 아이콘을 표시할 수 있습니다. [`ImageSource`](xref:Xamarin.Forms.ImageSource) 클래스에서 파생 되는이 클래스에는 다음과 같은 속성이 있습니다.
+글꼴 아이콘은 `FontImageSource` 개체에서 글꼴 아이콘 데이터를 지정 하 여 Xamarin.ios 응용 프로그램에서 표시할 수 있습니다. [`ImageSource`](xref:Xamarin.Forms.ImageSource) 클래스에서 파생 되는이 클래스에는 다음과 같은 속성이 있습니다.
 
-- `Glyph`–로 `string`지정 된 글꼴 아이콘의 유니코드 문자 값입니다.
-- `Size`– 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)를 나타내는 값입니다.`double` 기본값은 30입니다.
-- `FontFamily`– 글꼴 아이콘이 속한 글꼴 패밀리를 나타내는입니다.`string`
-- `Color`– 글꼴 아이콘 [`Color`](xref:Xamarin.Forms.Color) 을 표시할 때 사용 되는 선택적 값입니다.
+- `Glyph` – `string`으로 지정 된 글꼴 아이콘의 유니코드 문자 값입니다.
+- `Size` – 렌더링 된 글꼴 아이콘의 크기 (장치 독립적 단위)를 나타내는 `double` 값입니다. 기본값은 30입니다. 또한이 속성은 명명 된 글꼴 크기로 설정할 수 있습니다.
+- `FontFamily` – 글꼴 아이콘이 속한 글꼴 패밀리를 나타내는 `string`입니다.
+- `Color` – 글꼴 아이콘을 표시할 때 사용할 선택적 [`Color`](xref:Xamarin.Forms.Color) 값입니다.
 
-이 데이터는를 표시할 `ImageSource`수 있는 보기에서 표시할 수 있는 PNG를 만드는 데 사용 됩니다. 이 접근 방식을 사용 하면 [`Label`](xref:Xamarin.Forms.Label)글꼴 아이콘 표시를 같은 단일 텍스트 (예:)로 제한 하는 것과 달리 여러 뷰에 표시 되는 emojis와 같은 글꼴 아이콘을 사용할 수 있습니다.
+이 데이터는 `ImageSource`를 표시할 수 있는 보기에서 표시할 수 있는 PNG를 만드는 데 사용 됩니다. 이 방법을 사용 하면 [`Label`](xref:Xamarin.Forms.Label)와 같이 글꼴 아이콘을 표시 하는 단일 텍스트를 표시 하는 것과는 반대로 여러 보기에서 emojis와 같은 글꼴 아이콘을 표시할 수 있습니다.
 
 > [!IMPORTANT]
 > 글꼴 아이콘은 현재 유니코드 문자 표시로만 지정할 수 있습니다.
@@ -240,7 +242,7 @@ new Label
 </Image>
 ```
 
-이 코드는 아이콘 글꼴 패밀리의 [`Image`](xref:Xamarin.Forms.Image) 보기에서 XBox 아이콘을 표시 합니다. 이 아이콘 `\uf30c`의 유니코드 문자는 이지만 XAML에서 이스케이프 되어야 `&#xf30c;`하므로가 됩니다. 해당하는 C# 코드는 다음과 같습니다.
+이 코드는 [`Image`](xref:Xamarin.Forms.Image) 보기에서 고 아이콘 글꼴 패밀리의 XBox 아이콘을 표시 합니다. 이 아이콘의 유니코드 문자는 `\uf30c`있지만 XAML로 이스케이프 되어야 하므로 `&#xf30c;`됩니다. 해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

@@ -6,12 +6,12 @@ ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: 4e2b653365a747b30016a1fbd42b8a01c4c87848
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a8b63638861e8d44deb4ea72959d7461190f7713
+ms.sourcegitcommit: 6266ef043ae0289f174e901f204f2a280a53c071
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029753"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545808"
 ---
 # <a name="net-embedding-limitations"></a>.NET 포함 제한 사항
 
@@ -39,7 +39,7 @@ ms.locfileid: "73029753"
 
 ## <a name="objective-c-generated-code"></a>목표-C 생성 된 코드
 
-### <a name="nullability"></a>여부가
+### <a name="nullability"></a>Null 허용 여부
 
 .NET에는 null 참조를 사용할 수 있는지 여부를 나타내는 메타 데이터가 없으므로 API에 대 한 메타 데이터가 없습니다. 대부분의 Api는 `null` 인수를 처리할 수 없는 경우 `ArgumentNullException`를 throw 합니다. 이것은 목표-C 예외를 처리 하는 것이 더 좋습니다.
 
@@ -48,5 +48,11 @@ ms.locfileid: "73029753"
 ### <a name="bitcode-ios"></a>Bitcode (iOS)
 
 현재 .NET 포함은 일부 Xcode 프로젝트 템플릿에 대해 사용 하도록 설정 된 iOS에서 bitcode를 지원 하지 않습니다. 생성 된 프레임 워크를 성공적으로 연결 하려면이 기능을 사용 하지 않도록 설정 해야 합니다.
+
+* IOS의 경우 bitcode는 Apple의 AppStore에 앱을 제출 하는 옵션입니다. Xamarin.ios는 생성 된 bitcode가 "인라인 어셈블리" 이므로 iOS에 대해이를 지원 하지 않습니다. 이를 통해 서버 쪽을 최적화할 수는 없지만 이진 파일의 크기와 빌드 시간은 더 오래 걸릴 수 있기 때문에 iOS 플랫폼에 대 한 혜택을 얻을 수 없습니다.
+
+* TvOS 및 watchOS의 경우 Apple의 AppStore에 앱을 제출 하는 데 bitcode가 필요 합니다. Xamarin.ios는이 요구 사항을 충족 하기 위해 tvOS ("인라인 어셈블리") 및 watchOS ("LLVM/IR")의 bitcode를 지원 합니다.
+
+* MacOS의 경우 bitcode 지원은 현재 필요 하지 않으며 Xamarin.ios에서 지원 되지 않습니다.
 
 ![Bitcode 옵션](images/ios-bitcode-option.png)

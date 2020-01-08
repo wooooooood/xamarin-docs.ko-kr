@@ -9,12 +9,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
-ms.openlocfilehash: 2c50ffb37f0fd1d7b0d9fad063c4d6195d6b1f08
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
+ms.sourcegitcommit: c4f72221a6dce1276a90f2b52282b8145f8e0f1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199783"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502802"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
@@ -32,15 +32,15 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 1. **파일 > 새 > 프로젝트 ...** 를 선택 하거나 **새 프로젝트 만들기** ... 단추를 누릅니다.
 
-    [![새 프로젝트 만들기](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+    [새 프로젝트를 만들 ![](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
 2. "Xamarin"을 검색 하거나 **프로젝트 형식** 메뉴에서 **모바일** 을 선택 합니다. **모바일 앱 (xamarin.ios)** 프로젝트 형식을 선택 합니다.
 
-    [![Xamarin 프로젝트에 대 한 필터](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+    [Xamarin 프로젝트용 ![필터](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
 
-3. 프로젝트 이름을 &ndash; 선택 합니다 .이 예제에서는 "AwesomeApp"를 사용 합니다.
+3. 이 예에서는 "AwesomeApp"를 사용 하 &ndash; 프로젝트 이름을 선택 합니다.
 
-    [![프로젝트 이름 선택](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+    [프로젝트 이름을 선택 ![](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
 
 4. **빈** 프로젝트 형식을 클릭 하 고 **Android** 및 **iOS** 가 선택 되어 있는지 확인 합니다.
 
@@ -166,7 +166,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
     [![빈 Forms 앱](images/01-sml.png)](images/01.png#lightbox)
 
-2. **.NET Standard** 공유가 포함된 **Android** 및 **iOS**가 선택되었는지 확인합니다.
+2. **.NET Standard** 코드 공유와 함께 **Android** 및 **iOS**가 선택되었는지 확인합니다.
 
     [![.NET Standard가 포함된 Android 및 iOS](images/02-sml.png)](images/02.png#lightbox)
 
@@ -212,5 +212,5 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 ## <a name="next-steps"></a>다음 단계
 
 - [단일 페이지 빠른](~/get-started/quickstarts/single-page.md) 시작 &ndash; 더 많은 기능을 갖춘 앱을 빌드 하세요.
-- [Xamarin.Forms 샘플](~/xamarin-forms/samples/index.yml) &ndash; 코드 예제 및 샘플 앱을 다운로드하여 실행합니다.
-- [모바일 앱 전자책 만들기](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; PDF로 제공되고 수백 개의 추가 샘플을 포함하는 Xamarin.Forms 개발을 설명하는 심층적인 챕터입니다.
+- [Xamarin.ios 샘플](~/xamarin-forms/samples/index.md) &ndash; 코드 예제 및 샘플 앱을 다운로드 하 고 실행 합니다.
+- [Mobile Apps 전자책를 만드는 과정](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 을 통해 Xamarin. 양식 개발에 대해 설명 하 고, PDF로 사용 가능 하며, 수백 개의 추가 샘플을 포함 하는 자세한 장을 &ndash;.
