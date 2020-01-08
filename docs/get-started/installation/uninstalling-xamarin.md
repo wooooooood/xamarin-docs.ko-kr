@@ -6,14 +6,14 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun
 ms.date: 04/08/2017
-ms.openlocfilehash: a5a9ddfe92bd8f5b743da2c535a93c282542c860
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fa7d5fc8d33cd7ed3a347209aaff2610e6d319dc
+ms.sourcegitcommit: 5ddb107b0a56bef8a16fce5bc6846f9673b3b22e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756778"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558822"
 ---
-# <a name="uninstalling-xamarin"></a>Xamarin 제거
+# <a name="uninstall-xamarin"></a>Xamarin 제거
 
 이 가이드에서는 macOS 또는 Windows의 Visual Studio에서 Xamarin을 제거하는 방법을 설명합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "70756778"
 - [Xamarin.Mac](#uninstallmac)
 - [Workbooks](#uninstallworkbooks)
 - [Xamarin Profiler](#uninstallprofiler)
-- [설치 관리자](#uninstallinstaller)
+- [설치 프로그램](#uninstallinstaller)
 
 > [!TIP]
 > macOS 컴퓨터에서 Xamarin을 제거할 때 사용할 [제거 스크립트](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)를 제공했습니다. 스크립트 사용에 대한 자세한 내용은 이 가이드의 [스크립트 제거 사용](#uninstallscript) 섹션을 참조하세요.
@@ -94,7 +94,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 
 #### <a name="uninstall-android-sdk-and-java-sdk"></a>Android SDK 및 Java SDK 제거
 
-Android SDK는 Android 애플리케이션 개발에 필요합니다. Android SDK의 모든 부분을 완전히 제거하려면 **\~/Library/Developer/Xamarin/** 에서 해당 파일을 찾아 **휴지통** 으로 이동합니다.
+Android SDK는 Android 애플리케이션 개발에 필요합니다. Android SDK의 모든 부분을 완전히 제거하려면 **~/Library/Developer/Xamarin/** 에서 해당 파일을 찾아 **휴지통**으로 이동합니다.
 
 Java SDK(JDK)는 이미 Mac OS X에 포함되어 있으므로 제거할 필요가 없습니다.
 
@@ -185,39 +185,42 @@ rm -rf "~/Library/Preferences/Visual Studio/"
 
 ### <a name="using-the-uninstall-script"></a>스크립트 제거 사용
 
-이 제거 스크립트를 사용하면 Mac용 Visual Studio와 관련된 Xamarin 구성 요소를 한꺼번에 제거할 수 있습니다.
+> [!TIP]
+> 다운로드 한 스크립트를 실행 하기 전에 명령을 통해 컴퓨터에 적용 되는 변경 내용을 이해 하세요.
 
-이 스크립트는 이 문서에 나와 있는 대부분의 명령을 포함합니다. 다음과 같은 두 가지 항목은 외부 종속성 문제의 소지가 있어 이 스크립트에 포함되지 않았습니다.
+[이 제거 스크립트](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) 를 사용 하 여 Mac용 Visual Studio 및 연결 된 Xamarin 구성 요소를 한 번에 제거할 수 있습니다.
+
+이 스크립트는 이 문서에 나와 있는 대부분의 명령을 포함합니다. 스크립트에는 두 가지 주요 누락이 있으며 가능한 외부 종속성으로 인해 포함 되지 않습니다. 다른 앱은 Mono 또는 Android 도구를 사용할 수 있습니다.
 
 - Mono 제거
 - Android AVD 제거
 
-스크립트를 실행하려면 다음 단계를 수행하십시오.
+스크립트를 실행하려면 다음과 같이 하십시오.
 
-1. 스크립트를 마우스 오른쪽 단추로 클릭하고 [다른 이름으로 저장...]을 선택하여 Mac에 파일을 저장합니다.
+1. [ **Uninstall-vsmac.sh** 에 대 한이 링크](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) 를 마우스 오른쪽 단추로 클릭 하 고 파일을 Mac에 저장/다운로드 합니다.
 
 2. **터미널**을 열고 스크립트를 다운로드한 위치로 작업 디렉터리를 변경합니다.
 
-    ```
+    ```bash
     cd /location/of/file
     ```
 
 3. 스크립트를 실행 가능으로 설정하고 **sudo**로 실행합니다.
 
-    ```
-    chmod +x ./xamarin_uninstall.sh
-    sudo ./xamarin_uninstall.sh
+    ```bash
+    chmod +x ./uninstall-vsmac.sh
+    sudo ./uninstall-vsmac.sh
     ```
 
-4. 마지막으로 제거 스크립트를 삭제합니다.
+4. 제거 스크립트를 삭제 합니다.
 
-이 시점에서 사용자의 컴퓨터에서 Xamarin은 제거되어야 합니다.
+이제 컴퓨터에서 Mac용 Visual Studio 및 Xamarin 도구가 제거 됩니다.
 
 <a name="uninstallwindows" />
 
 ## <a name="uninstalling-xamarin-on-windows"></a>Windows에서 Xamarin 제거
 
-Xamarin은 다음에서 지원됩니다.
+Xamarin은 다음 Ide에서 지원 됩니다.
 
 - [Visual Studio 2019 및 Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
@@ -234,25 +237,25 @@ Xamarin은 다음에서 지원됩니다.
 
 2. 변경하려는 인스턴스의 **수정** 단추를 누릅니다.
 
-    [![](uninstalling-xamarin-images/vs2017-02-sml.png "수정 단추 누르기")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-02-sml.png "Press the modify button")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
 
 3. **워크로드** 탭에서 **.NET을 사용하는 모바일 개발** 옵션의 선택을 취소합니다(**모바일 및 게임** 섹션에서).
 
-    [![](uninstalling-xamarin-images/vs2017-03-sml.png "모바일 개발 워크로드 선택 취소")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-03-sml.png "Uncheck the Mobile Development workload")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
 
 4. 창의 오른쪽 아래에 있는 **수정** 단추를 클릭합니다.
 
 5. 설치 관리자는 선택이 취소된 구성 요소를 제거합니다(설치 관리자가 변경하기 전에 Visual Studio 2017이 닫힘).
 
-    [![](uninstalling-xamarin-images/vs2017-04-sml.png "수정 단추 누르기")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
+    [![](uninstalling-xamarin-images/vs2017-04-sml.png "Press the Modify button")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
 
 3단계에서 **개별 구성 요소** 탭을 전환하고 특정 구성 요소의 선택을 취소하여 개별 Xamarin 구성 요소(예: 프로파일러 또는 Workbooks)를 제거할 수 있습니다.
 
-[![](uninstalling-xamarin-images/vs2017-components-sml.png "개별 구성 요소 제거")](uninstalling-xamarin-images/vs2017-components.png#lightbox)
+[![](uninstalling-xamarin-images/vs2017-components-sml.png "Uninstall individual components")](uninstalling-xamarin-images/vs2017-components.png#lightbox)
 
 Visual Studio 2017을 완전히 제거하려면 **시작** 단추 옆에 있는 3개의 표시줄 메뉴에서 **제거**를 선택합니다.
 
-[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Visual Studio 완전히 제거")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
+[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Uninstall Visual Studio completely")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
 > 릴리스 및 미리 보기 버전 등 Visual Studio의 두 개(이상) 인스턴스를 나란히(SxS) 설치한 경우 하나의 인스턴스를 제거하면 다음을 비롯한 다른 Visual Studio 인스턴스에서 일부 Xamarin 기능이 제거될 수 있습니다.
@@ -276,7 +279,7 @@ Visual Studio 2015를 완전히 제거하려면 [visualstudio.com에서 Support 
 
 **제어판**을 통해 Windows 컴퓨터에서 Xamarin을 제거할 수 있습니다. 아래 그림과 같이 **프로그램 및 기능** 또는 **프로그램 > 프로그램 제거**로 이동합니다.
 
- [![](uninstalling-xamarin-images/image3.png "여기 그림과 같이 [프로그램 및 기능] 또는 [프로그램 > 프로그램 제거]로 이동")](uninstalling-xamarin-images/image3.png#lightbox) 
+ [![](uninstalling-xamarin-images/image3.png "Navigate to Programs and Features or Programs  Uninstall a Program as illustrated here")](uninstalling-xamarin-images/image3.png#lightbox) 
 
 [제어판]에서 표시되는 다음 중 하나를 제거합니다.
 
@@ -343,7 +346,7 @@ Xamarin Studio를 제거하려면 프로그램 목록에서 **Xamarin Studio 5.x
 
 Mac에서 Xamarin Studio를 제거하는 첫 번째 단계는 **/Applications** 디렉터리에서 **Xamarin Studio.app**을 찾아 **휴지통**으로 끌어놓는 것입니다. 또는 아래 그림과 같이 마우스 오른쪽 단추를 클릭하고 **Move to Trash**(휴지통으로 이동)를 선택합니다.
 
- [![](uninstalling-xamarin-images/image1.png "또는 다음 그림과 같이 마우스 오른쪽 단추를 클릭하고 휴지통으로 이동을 선택합니다.")](uninstalling-xamarin-images/image1.png#lightbox)
+ [![](uninstalling-xamarin-images/image1.png "Alternatively, right-click and select Move to Trash as illustrated here")](uninstalling-xamarin-images/image1.png#lightbox)
 
 이 앱 번들을 삭제하면 Xamarin Studio가 제거되지만 Xamarin과 관련된 다른 파일은 파일 시스템에 남아 있습니다.
 

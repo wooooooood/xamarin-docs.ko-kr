@@ -6,13 +6,13 @@ ms.assetid: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
-ms.openlocfilehash: 90d860cb6429025672a058e22e76f029872d3b34
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.date: 12/04/2019
+ms.openlocfilehash: 7c6647a0299b5ece3caaaa1d322ec1a0efac3557
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657169"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490092"
 ---
 # <a name="xamarinforms-imagebutton"></a>Xamarin.Forms ImageButton
 
@@ -56,6 +56,9 @@ _Imagebutton이 이미지를 표시 하 고 탭 또는 특정 작업을 수행 �
 [![기본 ImageButton](imagebutton-images/BasicImageButton.png "기본 ImageButton")](imagebutton-images/BasicImageButton-Large.png#lightbox "기본 ImageButton")
 
 기본적으로 `ImageButton` 사각형이 사용 하 여 it 둥근 모퉁이 제공할 수 있지만 `CornerRadius` 속성. 에 대 한 자세한 내용은 `ImageButton` 모양을 참조 [ImageButton 모양을](#imagebutton-appearance)합니다.
+
+> [!NOTE]
+> `ImageButton`는 애니메이션 GIF를 로드할 수 있지만 GIF의 첫 번째 프레임만 표시 됩니다.
 
 다음 예제에는 완전히 이지만 이전 하는 XAML 예와 기능적으로 동일 하 게 연결 되는 페이지를 만드는 방법을 보여 줍니다 C#:
 
@@ -238,7 +241,7 @@ public class ImageButtonDemoPage : ContentPage
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -레터 박스 (필요한 경우) 이미지 전체 이미지에 맞도록는 `ImageButton`, 위쪽/아래쪽 또는 이미지를 가로 또는 세로 인지에 따라 양쪽에 추가 공백이 있는 합니다. 기본 값을 [ `Aspect` ](xref:Xamarin.Forms.Aspect) 열거형입니다.
 
 > [!NOTE]
-> `ImageButton` 클래스에 [ `Margin` ](xref:Xamarin.Forms.View.Margin) 하 고 `Padding` 레이아웃 동작을 제어 하는 속성을 `ImageButton`합니다. 자세한 내용은 [여백 및 안쪽 여백](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)합니다.
+> `ImageButton` 클래스에 [ `Margin` ](xref:Xamarin.Forms.View.Margin) 하 고 `Padding` 레이아웃 동작을 제어 하는 속성을 `ImageButton`합니다. 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.
 
 ## <a name="imagebutton-visual-states"></a>ImageButton 시각적 상태
 

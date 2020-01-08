@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 7b073e0233fb9c5511593ed80313f402c888c811
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 64209f905ba07f7efc7368b8f054dfc3ae606af2
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771007"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489988"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Azure Cosmos DB 문서 데이터베이스 및 Xamarin.ios를 사용 하 여 사용자 인증
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
-_Azure Cosmos DB 문서 데이터베이스 무제한 저장소 및 처리량을 지원 하면서 여러 서버 및 파티션에 걸칠 수 있는 분할 된 컬렉션을 지원 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션을 사용 하 여 액세스 제어를 결합 하는 방법을 설명 합니다._
+_Azure Cosmos DB 문서 데이터베이스는 분할 된 컬렉션을 지원 하며,이는 여러 서버 및 파티션에 걸쳐 있을 수 있으며 저장소와 처리량을 무제한으로 지원 합니다. 이 문서에서는 사용자가 Xamarin.ios 응용 프로그램에서 자신의 문서에만 액세스할 수 있도록 분할 된 컬렉션과 액세스 제어를 결합 하는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
@@ -33,7 +33,7 @@ _Azure Cosmos DB 문서 데이터베이스 무제한 저장소 및 처리량을 
 
 요청 하는 일반적인 방법, 생성 및 모바일 응용 프로그램에 리소스 토큰을 제공 리소스 토큰 broker를 사용 하는 것입니다. 다음 다이어그램은 샘플 응용 프로그램 문서 데이터베이스 데이터에 대 한 액세스를 관리 하는 리소스 토큰 broker를 사용 하는 방법에 대 한 개략적인 개요를 보여줍니다.
 
-![](azure-cosmosdb-auth-images/documentdb-authentication.png "문서 데이터베이스 인증 프로세스")
+![](azure-cosmosdb-auth-images/documentdb-authentication.png "Document Database Authentication Process")
 
 리소스 토큰 broker는 Cosmos DB 계정의 마스터 키를 소유 하는 Azure App Service에서 호스팅되는 중간 계층 웹 API 서비스를 합니다. 리소스 토큰 broker를 사용 하 여 다음과 같은 문서 데이터베이스 데이터에 대 한 액세스를 관리 하는 샘플 응용 프로그램:
 
@@ -57,6 +57,9 @@ Xamarin.Forms 응용 프로그램에 리소스 토큰 broker를 통합 하기 �
 1. 인증을 수행 하려면 Facebook 앱을 만듭니다. 자세한 내용은 [Facebook 앱 구성을](#facebook_configuration)합니다.
 1. Facebook 사용 하 여 쉽게 인증 하는 데 Azure App Service를 구성 합니다. 자세한 내용은 [Azure App Service 인증 구성](#app_service_authentication_configuration)합니다.
 1. Azure App Service 및 Cosmos DB와 통신 하는 Xamarin.Forms 샘플 응용 프로그램을 구성 합니다. 자세한 내용은 [Xamarin.Forms 응용 프로그램 구성](#forms_application_configuration)합니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 <a name="cosmosdb_configuration" />
 
@@ -83,7 +86,7 @@ Azure App Service에서 리소스 토큰 broker를 호스트 하기 위한 프�
 
     다음 스크린샷은 이러한 구성을 보여 줍니다.
 
-    [![](azure-cosmosdb-auth-images/azure-web-app-settings.png "App Service 웹 앱 설정을")](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service 웹 앱 설정")
+    [![](azure-cosmosdb-auth-images/azure-web-app-settings.png "App Service Web App Settings")](azure-cosmosdb-auth-images/azure-web-app-settings-large.png#lightbox "App Service Web App Settings")
 
 1. Azure App Service 웹 앱에 리소스 토큰 broker 솔루션을 게시 합니다.
 
@@ -102,7 +105,7 @@ Azure App Service에서 리소스 토큰 broker를 호스트 하기 위한 프�
 
   다음 스크린샷은 이러한 구성을 보여 줍니다.
 
-  ![](azure-cosmosdb-auth-images/facebook-oauth-settings.png "Facebook 로그인 OAuth 설정")
+  ![](azure-cosmosdb-auth-images/facebook-oauth-settings.png "Facebook Login OAuth Settings")
 
 자세한 내용은 [Facebook 응용 프로그램 등록](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook)합니다.
 
@@ -119,7 +122,7 @@ App Service 간편한 인증을 구성 하기 위한 프로세스는 다음과 �
 
     다음 스크린샷은 이러한 구성을 보여 줍니다.
 
-    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service 웹 앱 인증 설정")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service 웹 앱 인증 설정")
+    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
 
 App Service 웹 앱 인증 흐름을 사용 하도록 설정 하려면 Facebook 응용 프로그램을 사용 하 여 통신에 구성 되어야 합니다. Facebook id 공급자를 선택 하 고 입력 하 여이 작업을 수행할 수 있습니다는 **앱 ID** 하 고 **App Secret** Facebook 개발자 센터에서 Facebook 앱 설정 값입니다. 자세한 내용은 [응용 프로그램에 추가 Facebook 정보](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application)합니다.
 
@@ -148,7 +151,7 @@ var auth = new Xamarin.Auth.WebRedirectAuthenticator(
 
 이렇게 하면 Azure App Service 및 Facebook 로그인 페이지를 표시 하는 Facebook 간에 시작 하는 OAuth 인증 흐름:
 
-![](azure-cosmosdb-auth-images/login.png "Facebook 로그인")
+![](azure-cosmosdb-auth-images/login.png "Facebook Login")
 
 키를 눌러 로그인을 취소할 수 있습니다 합니다 **취소** 키를 눌러 iOS에서 단추를 **다시** android에서 사용자 인증 되지 않은 남아 있는 경우에 id 공급자 사용자 인터페이스 이며 단추 화면에서 제거 합니다.
 
@@ -205,7 +208,7 @@ auth.Completed += async (sender, e) =>
 }
 ```
 
-`WebRedirectAuthenticator.Completed` 이벤트 처리기에서 응답을 읽는 `resourcetoken` API 리소스 토큰 및 사용자 id를 추출 합니다. 리소스 토큰은 다음에 인수로 전달 된 `DocumentClient` 끝점, 자격 증명 및 연결 정책 Cosmos DB에 액세스 하는 데 사용을 캡슐화 하 고 구성 및 Cosmos DB에 대 한 요청을 실행 하는 데 사용 되는 생성자입니다. 리소스 토큰을 직접 리소스에 액세스 하려면 각 요청과 함께 전송 되 고 인증 된 사용자의 분할 된 컬렉션에 대 한 읽기/쓰기 액세스 부여 되어 있음을 나타냅니다.
+`WebRedirectAuthenticator.Completed` 이벤트 처리기는 `resourcetoken` API에서 응답을 읽고 리소스 토큰 및 사용자 id를 추출 합니다. 그런 다음 리소스 토큰은 `DocumentClient` 생성자에 인수로 전달 됩니다 .이 생성자는 Cosmos DB에 액세스 하는 데 사용 되는 끝점, 자격 증명 및 연결 정책을 캡슐화 하 고 Cosmos DB에 대 한 요청을 구성 하 고 실행 하는 데 사용 됩니다. 리소스 토큰을 직접 리소스에 액세스 하려면 각 요청과 함께 전송 되 고 인증 된 사용자의 분할 된 컬렉션에 대 한 읽기/쓰기 액세스 부여 되어 있음을 나타냅니다.
 
 ## <a name="retrieving-documents"></a>문서 검색
 
