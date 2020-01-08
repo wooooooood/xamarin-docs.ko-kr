@@ -1,135 +1,71 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Xamarin 설명서의 새로운 기능은?
+### YamlMime:Landing
+title: Xamarin 문서 - 새로운 기능
+summary: Xamarin 문서의 새로운 기능을 시작합니다.
 metadata:
-  title: Xamarin 설명서의 새로운 기능은?
+  title: Xamarin 문서 - 새로운 기능
   description: Xamarin 문서의 새로운 기능.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
   author: davidbritch
   ms.author: dabritch
-  ms.date: 09/10/2019
-abstract:
-  description: Xamarin 문서의 새로운 기능을 시작합니다.
-sections:
-  - title: 새로운 기능
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: 2019-10.md
-            html: '2019년 10월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.3 릴리스 및 기타 업데이트.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-10.md
-            title: 2019년 10월
-          - href: 2019-08.md
-            html: '2019년 8월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.2 릴리스, 사용자 인터페이스 업데이트 및 기타 업데이트.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-08.md
-            title: 2019년 8월
-          - href: 2019-07.md
-            html: '2019년 7월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.1 릴리스, 데이터 및 클라우드 서비스 업데이트 및 기타 업데이트.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-07.md
-            title: 2019년 7월
-          - href: 2019-06.md
-            html: '2019년 6월 Xamarin 문서의 새로운 기능: Xamarin.Forms 4.0 릴리스, 데이터 및 클라우드 서비스 업데이트, API 문서는 지금 docs.microsoft.com에 있습니다.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-06.md
-            title: 2019년 6월
-          - href: 2019-03.md
-            html: '2019년 3월에 Xamarin 문서의 새로운 기능: 새로운 시작 예제 및 12개의 새로운 자습서, Xamarin.Forms 3.6 및 Xamarin.Forms 3.5.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: 2019-03.md
-            title: 2019년 3월
-  - title: 오픈 소스 기여
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: 'https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md'
-            html: Xamarin 콘텐츠에 기여하고자 하는 경우 이 기여자 가이드부터 시작하세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_library.svg'
-              href: 'https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md'
-            title: 기여자 가이드
-          - href: 'https://github.com/MicrosoftDocs/xamarin-docs'
-            html: 콘텐츠 제안 사항이나 아이디어가 있다면 문서 GitHub 리포지토리에서 새 이슈를 엽니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_feedback.svg'
-              href: 'https://github.com/MicrosoftDocs/xamarin-docs'
-            title: Xamarin Docs GitHub 리포지토리
-          - href: 'https://github.com/xamarin/Xamarin.Forms-api-docs'
-            html: Xamarin.Forms API 문서에 기여하려는 경우 Xamarin.Forms API 문서 리포지토리에서 수행할 수 있습니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/xamarin/Xamarin.Forms-api-docs'
-            title: Xamarin.Forms API Docs GitHub 리포지토리
-          - href: 'https://github.com/xamarin/apple-api-docs'
-            html: Xamarin.iOS 또는 Xamarin.Mac API 문서에 기여하려는 경우 Xamarin.iOS 및 Xamarin.Mac API 문서 리포지토리에서 수행할 수 있습니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/xamarin/apple-api-docs'
-            title: Xamarin.iOS 및 Mac API Docs GitHub 리포지토리
-          - href: 'https://github.com/xamarin/android-api-docs'
-            html: Xamarin.Android API 문서에 기여하려는 경우 Xamarin.Android API 문서 리포지토리에서 수행할 수 있습니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/xamarin/android-api-docs'
-            title: Xamarin.Android API Docs GitHub 리포지토리
-          - href: 'https://github.com/mono/skiasharp-api-docs'
-            html: SkiaSharp API 문서에 기여하려는 경우 SkiaSharp API 문서 리포지토리에서 수행할 수 있습니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
-              href: 'https://github.com/mono/skiasharp-api-docs'
-            title: SkiaSharp API Docs GitHub 리포지토리
-  - title: 제품 릴리스 정보
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-            html: Xamarin.Forms에 대한 릴리스 정보를 확인합니다.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_xamarin.svg'
-              href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
-            title: Xamarin.Forms
-          - href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
-            html: Xamarin.Essentials에 대한 릴리스 정보를 확인합니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
-              href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
-            title: Xamarin.Essentials
-          - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
-            html: Xamarin.iOS에 대한 릴리스 정보를 확인합니다.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
-            title: Xamarin.iOS
-          - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
-            html: Xamarin.Android에 대한 릴리스 정보를 확인합니다.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
-              href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
-            title: Xamarin.Android
-          - href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-            html: Xamarin.Mac에 대한 릴리스 정보를 확인합니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
-              href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
-            title: Xamarin.Mac
-          - href: 'https://docs.microsoft.com/xamarin/tools/'
-            html: '<a href="https://docs.microsoft.com/xamarin/tools/dotnet-embedding/release-notes/">.NET Embedding</a>, <a href="https://docs.microsoft.com/xamarin/tools/inspector/release-notes/">검사기 및 Workbooks</a>, <a href="https://docs.microsoft.com/xamarin/tools/ios-simulator/release-notes/">Windows용 원격 iOS 시뮬레이터</a> 및 <a href="https://docs.microsoft.com/xamarin/tools/profiler/release-notes/">프로파일러</a>를 포함하는 Xamarin 도구에 대한 릴리스 정보를 확인합니다.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
-              href: 'https://docs.microsoft.com/xamarin/tools/'
-            title: 도구
+  ms.date: 12/20/2019
+  ms.openlocfilehash: 262cf0019c7395c695853adb42268e8a397dbb5c
+  ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75489052"
+landingContent:
+- title: 새로운 기능
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: 2019년 12월
+      url: 2019-12.md
+    - text: 2019년 10월
+      url: 2019-10.md
+    - text: 2019년 8월
+      url: 2019-08.md
+    - text: 2019년 7월
+      url: 2019-07.md
+    - text: 2019년 6월
+      url: 2019-06.md
+    - text: 2019년 3월
+      url: 2019-03.md
+- title: 오픈 소스 기여
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Xamarin 문서 리포지토리
+      url: https://github.com/MicrosoftDocs/xamarin-docs
+    - text: 기여자 가이드
+      url: https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md
+  - linkListType: reference
+    links:
+    - text: Xamarin.Forms API 문서 리포지토리
+      url: https://github.com/xamarin/Xamarin.Forms-api-docs
+    - text: Xamarin.iOS 및 Mac API 문서 리포지토리
+      url: https://github.com/xamarin/apple-api-docs
+    - text: Xamarin.Android API 문서 리포지토리
+      url: https://github.com/xamarin/android-api-docs
+    - text: SkiaSharp API 문서 리포지토리
+      url: https://github.com/mono/skiasharp-api-docs
+- title: 관련 페이지
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: .NET 문서 업데이트
+      url: https://docs.microsoft.com/dotnet/whats-new/
+    - text: Xamarin.Forms 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+    - text: Xamarin.Essentials 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+    - text: Xamarin.iOS 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/ios/release-notes/
+    - text: Xamarin.Android 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/android/release-notes/
+    - text: Xamarin.Mac 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/mac/release-notes/
+    - text: Xamarin 도구 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/tools/

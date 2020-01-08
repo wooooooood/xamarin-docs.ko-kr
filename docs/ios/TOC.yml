@@ -187,7 +187,7 @@
               href: user-interface/controls/image.md
             - name: 수동 카메라 컨트롤
               href: user-interface/controls/intro-to-manual-camera-controls.md
-            - name: 맵
+            - name: 지도
               href: user-interface/controls/ios-maps/index.md
               items:
                 - name: 주석 및 오버레이
@@ -226,7 +226,7 @@
             - name: 텍스트 입력
               href: user-interface/controls/text-input.md
             - name: 웹 보기
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: 프로그래밍 레이아웃 제약 조건
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: 3D 터치
           href: platform/3d-touch.md
-        - name: Touch ID
-          href: platform/touchid.md
+        - name: Touch ID 및 Face ID
+          href: platform/touch-id-face-id.md
         - name: 사용자 알림 프레임워크
           items:
             - name: 개요
@@ -539,7 +539,7 @@
           href: ~/essentials/magnetometer.md?context=xamarin/ios
         - name: 주 스레드
           href: ~/essentials/main-thread.md?context=xamarin/ios
-        - name: 맵
+        - name: 지도
           href: ~/essentials/maps.md?context=xamarin/ios
         - name: 브라우저 열기
           href: ~/essentials/open-browser.md?context=xamarin/ios
@@ -958,7 +958,7 @@
               href: ~/essentials/magnetometer.md?context=xamarin/watchos
             - name: 주 스레드
               href: ~/essentials/main-thread.md?context=xamarin/watchos
-            - name: 맵
+            - name: 지도
               href: ~/essentials/maps.md?context=xamarin/watchos
             - name: 방향 센서
               href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
@@ -1112,4 +1112,4 @@
     - name: 릴리스 정보
       href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
     - name: 샘플
-      href: samples/index.yml
+      href: samples/index.md

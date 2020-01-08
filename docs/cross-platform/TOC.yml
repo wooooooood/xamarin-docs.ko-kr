@@ -49,7 +49,7 @@
               href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
             - name: 새 다중 플랫폼 라이브러리
               href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
-            - name: 새 플랫폼 특정 라이브러리
+            - name: 새 플랫폼별 라이브러리
               href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
             - name: 메타데이터 가이드
               href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
@@ -88,6 +88,8 @@
         - name: 성능
           href: deploy-test/memory-perf-best-practices.md
           items:
+            - name: Xamarin.Forms 성능
+              href: ~/xamarin-forms/deploy-test/performance.md?context=xamarin/cross-platform
             - name: Android 성능
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
             - name: iOS 성능
@@ -111,7 +113,7 @@
         - name: 다중 프로세스 디버깅
           href: deploy-test/multi-process-debugging.md
     - name: 데스크톱 개발자
-      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP developers'
       href: desktop/index.md
       items:
         - name: 앱 수명 주기 비교
@@ -171,4 +173,4 @@
         - name: 구성 요소 참조를 NuGet으로 업데이트
           href: troubleshooting/component-nuget.md
     - name: 샘플
-      href: samples/index.yml
+      href: samples/index.md

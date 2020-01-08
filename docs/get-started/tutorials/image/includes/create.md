@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: df2fa04deafc4438798593d3f25b85ec17363996
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: a51a00c8cfcd0b12787ecd3cd1eb986bb8f596c0
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277347"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490681"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67277347"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Image`](xref:Xamarin.Forms.Image)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 URI를 통해 표시할 이미지를 지정합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식입니다. 그러면 이미지를 파일, URI 또는 리소스에서 가져올 수 있습니다. 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [이미지 표시](~/xamarin-forms/user-interface/images.md#displaying-images)를 참조하세요.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Image`](xref:Xamarin.Forms.Image)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 URI를 통해 표시할 이미지를 지정합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식입니다. 그러면 이미지를 파일, URI 또는 리소스에서 가져올 수 있습니다. 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [이미지 표시](~/xamarin-forms/user-interface/images.md#display-images)를 참조하세요.
 
     [`HeightRequest`](xref:Xamarin.Forms.VisualElement) 속성은 디바이스 독립적 단위로 `Image`의 높이를 지정합니다.
 
@@ -40,12 +40,12 @@ ms.locfileid: "67277347"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에 있는 이미지의 스크린샷](../images/create-image.png "이미지를 표시하는 이미지 보기")](../images/create-image-large.png#lightbox "이미지를 표시하는 이미지 보기")
+    [![iOS 및 Android의 이미지 스크린샷](../images/create-image.png "이미지를 표시하는 이미지 뷰")](../images/create-image-large.png#lightbox "이미지를 표시하는 이미지 뷰")
 
     > [!NOTE]
     > [`Image`](xref:Xamarin.Forms.Image) 보기는 24시간 동안 다운로드된 이미지를 자동으로 캐시합니다. 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [다운로드된 이미지 캐싱](~/xamarin-forms/user-interface/images.md#downloaded-image-caching)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 이 자습서를 완료하려면 iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)가 있어야 합니다. 또한 Xcode(최신 릴리스)도 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
@@ -70,7 +70,7 @@ ms.locfileid: "67277347"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Image`](xref:Xamarin.Forms.Image)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 URI를 통해 표시할 이미지를 지정합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식입니다. 그러면 이미지를 파일, URI 또는 리소스에서 가져올 수 있습니다. 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [이미지 표시](~/xamarin-forms/user-interface/images.md#displaying-images)를 참조하세요.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Image`](xref:Xamarin.Forms.Image)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 URI를 통해 표시할 이미지를 지정합니다. [`Image.Source`](xref:Xamarin.Forms.Image.Source) 속성은 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 형식입니다. 그러면 이미지를 파일, URI 또는 리소스에서 가져올 수 있습니다. 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [이미지 표시](~/xamarin-forms/user-interface/images.md#display-images)를 참조하세요.
 
     [`HeightRequest`](xref:Xamarin.Forms.VisualElement) 속성은 디바이스 독립적 단위로 `Image`의 높이를 지정합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "67277347"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에 있는 이미지의 스크린샷](../images/create-image.png "이미지를 표시하는 이미지 보기")](../images/create-image-large.png#lightbox "이미지를 표시하는 이미지 보기")
+    [![iOS 및 Android의 이미지 스크린샷](../images/create-image.png "이미지를 표시하는 이미지 뷰")](../images/create-image-large.png#lightbox "이미지를 표시하는 이미지 뷰")
 
     > [!NOTE]
     > [`Image`](xref:Xamarin.Forms.Image) 보기는 24시간 동안 다운로드된 이미지를 자동으로 캐시합니다. 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [다운로드된 이미지 캐싱](~/xamarin-forms/user-interface/images.md#downloaded-image-caching)을 참조하세요.

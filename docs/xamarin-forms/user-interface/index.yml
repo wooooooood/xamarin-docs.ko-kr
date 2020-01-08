@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/07/2019
+  ms.date: 12/11/2019
 abstract:
   description: Xamarin.Forms를 사용하여 사용자 인터페이스를 만드는 방법을 알아봅니다.
 sections:
@@ -103,11 +103,17 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: imagebutton.md
             title: ImageButton
-          - href: layouts/index.md
+          - href: indicatorview.md
+            html: IndicatorView 컨트롤을 사용하여 항목 수와 현재 위치를 나타내는 표시기를 CarouselView에 표시하는 방법을 알아봅니다.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: indicatorview.md
+            title: IndicatorView
+          - href: layouts/index.yml
             html: Xamarin.Forms의 레이아웃 컨트롤 및 기능을 사용하여 콘텐츠를 구성하는 방법을 알아봅니다.
             image:
               src: ~/media/icons/i_user-interface.svg
-              href: layouts/index.md
+              href: layouts/index.yml
             title: 레이아웃
           - href: listview/index.md
             html: ListView 컨트롤을 사용하여 데이터 목록을 제공하는 방법을 알아봅니다.
@@ -175,6 +181,12 @@ sections:
               src: ~/media/icons/i_user-interface.svg
               href: styles/index.md
             title: 스타일
+          - href: swipeview.md
+            html: SwipeView를 사용하여 살짝 밀기 제스처로 표시되는 상황에 맞는 메뉴 항목을 제공하는 방법을 알아봅니다.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: swipeview.md
+            title: SwipeView
           - href: switch.md
             html: 스위치를 사용하여 부울 값을 설정하는 방법을 알아봅니다.
             image:
