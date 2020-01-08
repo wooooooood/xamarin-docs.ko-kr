@@ -26,7 +26,7 @@
     - name: 첫 번째 앱
       href: first-app/index.md
     - name: 빠른 시작
-      href: quickstarts/index.yml
+      href: quickstarts/index.md
       expanded: true
       items:
         - name: 파일 > 새로 만들기
@@ -70,11 +70,7 @@
     - name: Xamarin에 대해 알아보기
       expanded: true
       items:
-        - name: 네이티브 앱
-          href: ~/cross-platform/get-started/introduction-to-mobile-development.md
         - name: .NET 개발자
-          href: ~/cross-platform/desktop/index.md
-        - name: ASP.NET 개발자
           href: ~/cross-platform/desktop/index.md
         - name: Java 개발자
           href: ~/android/get-started/java-developers.md
