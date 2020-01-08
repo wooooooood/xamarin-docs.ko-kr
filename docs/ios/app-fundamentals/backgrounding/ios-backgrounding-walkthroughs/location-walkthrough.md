@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 625826e729a6b4153396286361730d6a2b878dca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b357a6e1531c8f587c8fc0f86e2b56d6fecc2923
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010466"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488324"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>연습-Xamarin.ios의 백그라운드 위치
 
@@ -80,7 +80,7 @@ ms.locfileid: "73010466"
     > [!IMPORTANT]
     > iOS 8 (및 이상)에는 사용자를 권한 부여 요청의 일부로 표시 하기 위해 **info.plist** 파일에 항목이 있어야 합니다.
 
-1. 위치 데이터 액세스를 요청 하는 경고에서 사용자에 게 표시 되는 문자열을 사용 하 여 키 `NSLocationAlwaysUsageDescription` 또는 `NSLocationWhenInUseUsageDescription`를 추가 합니다.
+1. 앱에 필요한 권한 형식에 info.plist 키를 추가 합니다 **.** (`NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`및/또는 `NSLocationAlwaysAndWhenInUseUsageDescription`) 위치 데이터 액세스를 요청 하는 경고에서 사용자에 게 표시 되는 문자열이 포함 됩니다.
 
 1. iOS 9에서는 `AllowsBackgroundLocationUpdates`를 사용할 때 info.plist에 키 `location``UIBackgroundModes`를 포함 해야 **합니다.** 이 연습의 2 단계를 완료 한 경우 info.plist 파일에 이미 포함 되어 있어야 합니다.
 

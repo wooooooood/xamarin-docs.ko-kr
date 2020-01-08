@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: ae84dadf4c405f7f8075cedc0f16ca845fea6fdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8978dbce97948d02d520b788d024fb50f4884635
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014901"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488883"
 ---
 # <a name="async-support-overview"></a>비동기 지원 개요
 
@@ -45,9 +45,9 @@ C#5 기능에는 Xamarin.ios 6.4 및 Xamarin. Android 4.8에 포함 된 Mono 3.0
 
 `async` 키워드는 비동기 (ie)로 실행할 수 있는 코드가 포함 되어 있음을 나타내기 위해 메서드 선언 (또는 람다 또는 무명 메서드에서)에 배치 됩니다. 호출자의 스레드를 차단 하지 않습니다.
 
-`async` 표시 된 메서드는 하나 이상의 wait 식 또는 문을 포함 해야 합니다. `await`s가 메서드에 없으면 동기적으로 실행 됩니다 (`async` 한정자가 없는 경우와 동일). 이로 인해 컴파일러 경고가 발생 하 고 오류는 발생 하지 않습니다.
+`async` 표시 된 메서드는 하나 이상의 wait 식 또는 문을 포함 해야 합니다. 메서드에 `await` 문이 없는 경우 동기적으로 실행 됩니다 (`async` 한정자가 없는 경우와 동일). 이로 인해 컴파일러 경고가 발생 하 고 오류는 발생 하지 않습니다.
 
-### <a name="return-types"></a>반환 형식
+### <a name="return-types"></a>반환 유형
 
 비동기 메서드는 `Task``Task<TResult>` 또는 `void`를 반환 해야 합니다.
 
@@ -87,7 +87,7 @@ Microsoft Docs [에 대 한 자세한](https://docs.microsoft.com/dotnet/csharp/
 
 취소에 대한 자세한 내용은 [비동기 애플리케이션 미세 조정(C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 [예제 Xamarin 솔루션](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (IOS 및 Android 모두)을 다운로드 하 여 모바일 앱의 `async` 및 `await`에 대 한 작업 예제를 확인 합니다. 이 섹션에서는 예제 코드에 대해 자세히 설명 합니다.
 
@@ -145,7 +145,7 @@ GetButton.Click += async (sender, e) => {
 };
 ```
 
-메모:
+참고:
 
 - 익명 대리자에는 async 키워드 접두사가 있습니다.
 - 비동기 메서드 DownloadHomepage는 sizeTask 변수에 저장 된\<int > 작업을 반환 합니다.
@@ -180,7 +180,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 몇 가지 중요 한 사항은 다음과 같습니다.
 
 - 메서드가 `async`로 표시 되어 있지만 `void`를 반환 합니다. 이는 일반적으로 이벤트 처리기에 대해서만 수행 됩니다. 그렇지 않으면 `Task` 또는 `Task<TResult>`을 반환 합니다.
-- 코드는 중간 `Task<int>` 변수를 사용 하 여 작업을 참조 하는 이전 예제와 달리 변수 (`intResult`)에 대 한 할당을 직접 `DownloadHomepage` 메서드에 `await` 합니다.  *이* 위치는 비동기 메서드가 다른 스레드에서 완료 될 때까지 제어가 호출자에 게 반환 되는 위치입니다.
+- `DownloadHomepage` 메서드의 `await` 키워드는 중간 `Task<int>` 변수를 사용 하 여 작업을 참조 하는 이전 예제와 달리 변수 (`intResult`)에 직접 할당 됩니다.  *이* 위치는 비동기 메서드가 다른 스레드에서 완료 될 때까지 제어가 호출자에 게 반환 되는 위치입니다.
 - 비동기 메서드가 완료 되 고 반환 되는 경우 `await`에서 실행이 다시 시작 되어 정수 결과가 반환 된 다음 UI 위젯에 렌더링 됩니다.
 
 ## <a name="summary"></a>요약

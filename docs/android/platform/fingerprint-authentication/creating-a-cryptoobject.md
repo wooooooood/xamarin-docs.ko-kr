@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 609ee17b6f2fd392c612277de8bbf59f8780f7d9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 871058d1c128b37a0f2e77b43587139efb433de1
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020381"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487778"
 ---
 # <a name="creating-a-cryptoobject"></a>CryptoObject 만들기
 
@@ -57,7 +57,7 @@ public class CryptoObjectHelper
         Cipher cipher = Cipher.GetInstance(TRANSFORMATION);
         try
         {
-            cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+            cipher.Init(CipherMode.EncryptMode, key);
         } catch(KeyPermanentlyInvalidatedException e)
         {
             _keystore.DeleteEntry(KEY_NAME);
@@ -132,7 +132,7 @@ Android에서 키를 무효화할 수 있는 몇 가지 상황이 있습니다.
 
 ## <a name="using-the-cryptoobjecthelper"></a>CryptoObjectHelper 사용
 
-이제 샘플 코드에서 `CryptoObjectHelper` 클래스에 `CryptoWrapper`을 만들기 위한 논리를 많이 캡슐화 했으므로이 가이드의 시작 부분에서 코드를 다시 방문 하 고 `CryptoObjectHelper`를 사용 하 여 암호를 만들고 지문 스캐너를 시작 하겠습니다. : 
+이제 샘플 코드에서 `CryptoObjectHelper` 클래스에 `CryptoWrapper`을 만들기 위한 논리를 많이 캡슐화 했으므로이 가이드의 시작 부분부터 코드를 다시 방문 하 고 `CryptoObjectHelper`를 사용 하 여 암호를 만들고 지문 스캐너를 시작 하겠습니다. 
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
@@ -158,11 +158,11 @@ protected void FingerPrintAuthenticationExample()
 ## <a name="related-links"></a>관련 링크
 
 - [암호](xref:Javax.Crypto.Cipher)
-- [FingerprintManager 개체](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
-- [FingerprintManagerCompat 개체](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
+- [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
+- [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
 - [KeyGenerator](xref:Javax.Crypto.KeyGenerator)
 - [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec 빌더](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
 - [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
 - [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)

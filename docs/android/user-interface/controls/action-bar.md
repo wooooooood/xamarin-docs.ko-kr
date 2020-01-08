@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: b2b7c2cc87b37ae0e7397988e37df6b9b1e3aa10
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f64b57e73b69b3111087ca1352f5fb9536f855e5
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029382"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488961"
 ---
 # <a name="actionbar-for-xamarinandroid"></a>Xamarin Android 용 ActionBar
 
@@ -22,7 +22,7 @@ ms.locfileid: "73029382"
 작업 모음에는 Android 4.0에서 탭 인터페이스를 추가 하는 기능이 포함 되어 있습니다.
 다음 스크린샷은 이러한 인터페이스의 예를 보여 줍니다.
 
-[에뮬레이터에서 실행 중인 앱의![스크린샷 두 개의 탭이 표시 됩니다.](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
+[에뮬레이터에서 실행 중인 앱의 ![스크린샷 두 개의 탭이 표시 됩니다.](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
 작업 모음에서 탭을 만들려면 먼저 `NavigationMode` 속성을 탭 지원으로 설정 해야 합니다. Android 4에서 `ActionBar` 속성은 다음과 같이 `NavigationMode`를 설정 하는 데 사용할 수 있는 Activity 클래스에서 사용할 수 있습니다.
 
@@ -85,11 +85,11 @@ this.ActionBar.AddTab (tab);
 
 예를 들어, 아래는 이미지를 공유 하는 메뉴 항목이 있는 작업 모음의 스크린샷입니다 ( [Shareactionprovider](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo) 샘플에서 가져온 것). 사용자가 작업 모음에서 메뉴 항목을 탭 할 때 ShareActionProvider는 `ShareActionProvider`연결 된 의도를 처리 하는 응용 프로그램을 로드 합니다. 이 예제에서는 메시징 응용 프로그램이 이전에 사용 되었으므로 작업 모음에 표시 됩니다.
 
-[작업 모음의 메시징 응용 프로그램 아이콘 스크린샷![](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
+[작업 모음의 메시징 응용 프로그램 아이콘 스크린샷 ![](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 사용자가 작업 모음의 항목을 클릭 하면 아래와 같이 공유 이미지가 포함 된 메시징 앱이 시작 됩니다.
 
-[원숭이 이미지를 표시 하는 메시징 앱![스크린샷](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[원숭이 이미지를 표시 하는 메시징 앱 ![스크린샷](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
 
 ### <a name="specifying-the-action-provider-class"></a>동작 공급자 클래스 지정
 
@@ -142,5 +142,3 @@ Intent CreateIntent ()
 
 - [Hello 탭 ICS (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
 - [ShareActionProvider 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
-- [아이스크림 및 사우스 샌드위치](https://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

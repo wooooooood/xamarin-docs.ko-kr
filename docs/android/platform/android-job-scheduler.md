@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4d28b80b32ff0d20afbe643d9c000f301a8ea582
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
+ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027821"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75667041"
 ---
 # <a name="android-job-scheduler"></a>Android 작업 스케줄러
 
@@ -33,7 +33,7 @@ Android는 백그라운드에서 작업을 수행 하는 데 도움이 되는 �
 백그라운드 작업을 효율적으로 수행 하는 두 가지 주요 기능 ( _백그라운드 작업_ 또는 _작업_이 라고도 함)은 다음과 같습니다.
 
 1. **작업 &ndash;를 지능적으로 예약** 하는 것은 응용 프로그램이 백그라운드에서 작업을 수행 하는 경우 적절 한 시민으로 작업을 수행 하는 것이 중요 합니다. 응용 프로그램에서 작업 실행을 요구 하지 않아야 하는 것이 가장 좋습니다. 대신, 응용 프로그램은 작업을 실행할 수 있는 경우 충족 해야 하는 조건을 지정 하 고 조건이 충족 될 때 작업을 수행할 운영 체제를 사용 하 여 해당 작업을 예약 해야 합니다. 이렇게 하면 Android에서 작업을 실행 하 여 장치에서 효율성을 최대한 유지할 수 있습니다. 예를 들어 네트워킹에 관련 된 오버 헤드를 최대한 활용 하기 위해 네트워크 요청을 동시에 실행 하도록 일괄 처리할 수 있습니다.
-2. 백그라운드 작업을 수행 하는 코드 &ndash; **작업을 캡슐화** 하는 작업은 사용자 인터페이스와 독립적으로 실행 될 수 있는 불연속 구성 요소에 캡슐화 해야 하며, 일부 작업에 대해 작업이 완료 되지 않으면 비교적 쉽게 일정을 조정할 수 있습니다. 문서화.
+2. 백그라운드 작업을 수행 하는 코드 &ndash; **작업을 캡슐화** 하는 작업은 사용자 인터페이스와 독립적으로 실행 될 수 있는 불연속 구성 요소에 캡슐화 해야 하며 어떤 이유로 작업이 완료 되지 않으면 비교적 쉽게 일정을 조정할 수 있습니다.
 
 Android 작업 Scheduler는 흐름 API를 제공 하는 Android 운영 체제에 기본 제공 되는 프레임 워크로 서 백그라운드 작업 예약을 간소화 합니다.  Android 작업 스케줄러는 다음 형식으로 구성 됩니다.
 
@@ -43,7 +43,7 @@ Android 작업 Scheduler는 흐름 API를 제공 하는 Android 운영 체제에
 
 Android 작업 스케줄러를 사용 하 여 작업을 예약 하려면 Xamarin.ios 응용 프로그램에서 `JobService` 클래스를 확장 하는 클래스에 코드를 캡슐화 해야 합니다. `JobService`은 작업 수명 중에 호출할 수 있는 세 가지 수명 주기 메서드를 포함 합니다.
 
-- **Bool OnStartJob (JobParameters 매개 변수)** &ndash;이 메서드는 `JobScheduler`에서 작업을 수행 하기 위해 호출 되 고 응용 프로그램의 주 스레드에서 실행 됩니다. 작업을 비동기적으로 수행 하 고 남은 작업이 있는 경우 `true` `false` 하거나 작업을 완료 한 경우에는 `JobService` 책임이 있습니다.
+- **Bool OnStartJob (JobParameters 매개 변수)** &ndash;이 메서드는 `JobScheduler`에서 작업을 수행 하기 위해 호출 되 고 응용 프로그램의 주 스레드에서 실행 됩니다. 작업을 비동기적으로 수행 하 고 남은 작업이 있는 경우 `true`을 반환 `false` 하거나 작업이 완료 된 경우에는 `JobService` 책임이 있습니다.
     
     `JobScheduler`에서이 메서드를 호출 하는 경우 작업 기간 동안 Android에서 wakelock을 요청 하 고 유지 합니다. 작업이 완료 되 면 `JobFinished` 메서드 (다음에 설명)를 호출 하 여이 사실을 `JobScheduler`에 알리는 `JobService` 책임이 있습니다.
 
@@ -148,7 +148,7 @@ Android 작업 Scheduler의 강력한 기능은 작업이 실행 되는 시기 �
 
 `SetBackoffCriteria`는 작업을 다시 실행 하기 전에 `JobScheduler` 기다려야 하는 시간에 대 한 몇 가지 지침을 제공 합니다. 백오프 조건에는 지연 시간 (밀리초의 기본값은 30 초)과 사용 해야 하는 백오프 유형 ( _백오프 정책이_ 나 _재시도 정책이_라고도 함)이 있습니다. 두 정책은 `Android.App.Job.BackoffPolicy` 열거형에 캡슐화 됩니다.
 
-- 지 수 백오프 정책을 &ndash; `BackoffPolicy.Exponential` 각 실패 후에 초기 백오프 값이 급격히 증가 합니다. 작업이 처음으로 실패 하면 라이브러리는 작업을 다시 예약 하기 전에 지정 된 초기 간격을 대기 합니다 (예: 30 초). 작업이 실패 하는 두 번째 경우 라이브러리는 작업을 실행 하기 전에 최소 60 초 정도 기다립니다. 세 번째 실패 후 라이브러리는 120 초 정도 대기 하 게 됩니다. 이 설정은 기본값입니다.
+- 지 수 백오프 정책을 &ndash; `BackoffPolicy.Exponential` 각 실패 후에 초기 백오프 값이 급격히 증가 합니다. 작업이 처음으로 실패 하면 라이브러리는 작업을 다시 예약 하기 전에 지정 된 초기 간격을 대기 합니다 (예: 30 초). 작업이 실패 하는 두 번째 경우 라이브러리는 작업을 실행 하기 전에 최소 60 초 정도 기다립니다. 세 번째 실패 후 라이브러리는 120 초 정도 대기 하 게 됩니다. 기본값입니다.
 - `BackoffPolicy.Linear` &ndash;이 전략은 작업이 성공할 때까지 설정 된 간격으로 실행 되도록 다시 예약 해야 하는 선형 백오프. 선형 백오프는 가능한 한 빨리 완료 되어야 하는 작업 또는 자신을 신속 하 게 해결 하는 문제에 가장 적합 합니다. 
 
 `JobInfo` 개체 만들기에 대 한 자세한 내용은 [`JobInfo.Builder` 클래스에 대 한 Google 설명서](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html)를 참조 하세요.

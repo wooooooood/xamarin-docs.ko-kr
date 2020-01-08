@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: ed6992f946512cd88b4b2b8cfcf4c826bdd6b837
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 924f5403f12250fcfc5f026438d08ed618fb373f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68645338"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487609"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Bing Spell Check API를 사용 하 여 맞춤법 검사
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Bing Spell Check에 맞춤법이 틀린된 단어에 대 한 인라인 제안 제공 텍스트를 확인 하는 상황에 맞는 맞춤법이 수행 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 맞춤법 오류를 해결 하려면 Bing Spell Check REST API를 사용 하는 방법을 설명 합니다._
+_Bing Spell Check는 텍스트에 대 한 상황별 맞춤법 검사를 수행 하 고 철자가 틀린 단어에 대 한 인라인 제안을 제공 합니다. 이 문서에서는 Bing Spell Check REST API를 사용 하 여 Xamarin.ios 응용 프로그램에서 맞춤법 오류를 수정 하는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
@@ -26,6 +26,9 @@ Bing Spell Check REST API에 두 가지 작동 모드 및 API에 요청할 때 �
 
 - `Spell` 짧은 텍스트 (최대 9 개의 단어) 대/소문자 변경 하지 않고 수정합니다.
 - `Proof` 긴 텍스트를 수정, 대/소문자 수정 및 기본 문장 부호, 제공 및 적극적으로 수정 하지 않습니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 Bing Spell Check API를 사용 하는 API 키를 가져와야 합니다. 가져올 수 있습니다 [Cognitive 서비스 시도](https://azure.microsoft.com/try/cognitive-services/)
 
@@ -151,12 +154,12 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 이 코드를 반복 합니다 `FlaggedTokens` 컬렉션 및 모든 철자가 잘못 된 대체 또는 첫 번째 제안을 사용 하 여 원본 텍스트의 문법적으로 잘못 된 단어입니다. 다음 스크린샷은 spell check 전후 보여 줍니다.
 
-![](spell-check-images/before-spell-check.png "맞춤법 검사 하기 전에")
+![](spell-check-images/before-spell-check.png "Before Spell Check")
 
-![](spell-check-images/after-spell-check.png "맞춤법 검사 후")
+![](spell-check-images/after-spell-check.png "After Spell Check")
 
 > [!NOTE]
-> 위의 예제에서는 편의상 `Replace` 를 사용 하지만 많은 양의 텍스트에서 잘못 된 토큰을 바꿀 수 있습니다. API는 업데이트를 `offset` 수행 하기 위해 원본 텍스트에서 올바른 위치를 식별 하기 위해 프로덕션 앱에서 사용 해야 하는 값을 제공 합니다.
+> 위의 예제에서는 편의상 `Replace`를 사용 하지만 많은 양의 텍스트에서 잘못 된 토큰을 바꿀 수 있습니다. API는 업데이트를 수행 하기 위해 원본 텍스트에서 올바른 위치를 식별 하기 위해 프로덕션 앱에서 사용 해야 하는 `offset` 값을 제공 합니다.
 
 ## <a name="summary"></a>요약
 

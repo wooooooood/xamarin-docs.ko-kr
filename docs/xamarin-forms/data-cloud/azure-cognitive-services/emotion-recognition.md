@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 05dfa69a70bcd43b66cf6b572aee7d5720a81d76
-ms.sourcegitcommit: 2e5a6b8bcd1a073b54604f51538fd108e1c2a8e5
+ms.openlocfilehash: 4dedcb0869c1e965679812239b1de09f07efa875
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869391"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487622"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Face API를 사용 하는 인식 된 Emotion 인식
 
@@ -20,11 +20,16 @@ ms.locfileid: "68869391"
 
 이 Face API는 휴먼 coders의 인식 된 주석을 기반으로 하는 얼굴 식에서 분노, 경 멸, 혐오, emotion, 행복, 중립, sadness을 검색 하는 데 검색을 수행할 수 있습니다. 그러나 얼굴 식 만으로는 사용자의 내부 상태를 반드시 나타내는 것은 아닙니다.
 
-얼굴 식에 대 한 emotion 결과를 반환 하는 것 외에도, 검색 Face API 된 면에 대 한 경계 상자를 반환할 수 있습니다. Face API를 사용 하려면 API 키를 받아야 하는 참고 합니다. 가져올 수 있습니다 [Cognitive Services 시도](https://azure.microsoft.com/try/cognitive-services/?api=face-api)합니다.
+얼굴 식에 대 한 emotion 결과를 반환 하는 것 외에도, 검색 Face API 된 면에 대 한 경계 상자를 반환할 수 있습니다.
 
 감정 인식 클라이언트 라이브러리 및 REST API를 통해 수행할 수 있습니다. 이 문서에서는 REST API를 통해 감정 인식을 수행에 중점을 둡니다. REST API에 대 한 자세한 내용은 참조 하세요. [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)합니다.
 
 Face API 비디오에서 사람의 얼굴 표정을 인식 하도 사용할 수 있으며 한 사람의 감정 요약해 서를 반환할 수 있습니다. 자세한 내용은 [실시간 비디오 분석 방법](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/)합니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
+
+Face API를 사용 하려면 API 키를 가져와야 합니다. 가져올 수 있습니다 [Cognitive Services 시도](https://azure.microsoft.com/try/cognitive-services/?api=face-api)합니다.
 
 Face API에 대 한 자세한 내용은 참조 하세요. [Face API](/azure/cognitive-services/face/overview/)합니다.
 
@@ -46,8 +51,8 @@ Face API에 유효한 API 키를 전달 하는 오류 401 응답 오류가 발�
 
 감정 인식 이미지가 포함 된 POST 요청을 만들어 수행 됩니다 합니다 `detect` API `https://[location].api.cognitive.microsoft.com/face/v1.0`여기서 `[location]]` API 키를 가져오는 데 사용할 영역입니다. 선택적 요청 매개 변수를 다음과 같습니다.
 
-- `returnFaceId` -검색 된 얼굴 faceIds를 반환할지 여부를 합니다. 기본값은 `true`입니다.
-- `returnFaceLandmarks` – 중 검색 된 얼굴 랜드마크를 반환할지 여부를 합니다. 기본값은 `false`입니다.
+- `returnFaceId` -검색 된 얼굴 faceIds를 반환할지 여부를 합니다. 기본값은 `true`여야 합니다.
+- `returnFaceLandmarks` – 중 검색 된 얼굴 랜드마크를 반환할지 여부를 합니다. 기본값은 `false`여야 합니다.
 - `returnFaceAttributes` – 분석 하 고 하나 이상의 지정 된 반환 것인지 얼굴 특성입니다. 지원 되는 얼굴 특성 포함 `age`, `gender`, `headPose`, `smile`, `facialHair`를 `glasses`, `emotion`, `hair`, `makeup`를 `occlusion`, `accessories`, `blur`하십시오 `exposure`, 및 `noise`합니다. 얼굴 특성 분석에 추가 계산 시간 및 비용을 참고 합니다.
 
 이미지 콘텐츠 URL 또는 이진 데이터를 POST 요청의 본문에 배치 되어야 합니다.
@@ -170,7 +175,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 다음 스크린샷은 샘플 응용 프로그램에서 감정 인식 프로세스의 결과 보여 줍니다.
 
-![](emotion-recognition-images/emotion-recognition.png "감정 인식")
+![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
 
 ## <a name="related-links"></a>관련 링크
 

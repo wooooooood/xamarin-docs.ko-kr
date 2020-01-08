@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: db398947b5f13963febae7d25a7898af21600813
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031778"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488948"
 ---
 # <a name="introduction-to-ios-9"></a>iOS 9 소개
 
@@ -141,7 +141,7 @@ IOS 9에서 Apple은 다음과 같이 Secure Enclave 및 기타 항목 보호 �
 - 앱에서 제공 하는 키 집합 항목 암호화에 대해 엔트로피 (응용 프로그램 암호 옵션 사용)를 Access Control 합니다.
 - 보안 enclave 내에서 키를 생성 하 고 사용할 수 있도록 지원 합니다 (`kSecAttrTokenIDSecureEnclave` 특성을 통해).
 
-자세한 내용은 [TOUCH ID 소개 설명서를](~/ios/platform/touchid.md) 참조 하세요.
+자세한 내용은 [xamarin.ios에서 TOUCH id 및 FACE id](~/ios/platform/touch-id-face-id.md)를 참조 하세요.
 
 ## <a name="right-to-left-language-support"></a>오른쪽에서 왼쪽으로 쓰기 언어 지원
 
@@ -159,7 +159,7 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 
 - AV 기반 프레임 워크
 - AVKit 프레임 워크
-- CloudKit 프레임 워크
+- CloudKit Framework
 - Foundation Framework
 - 핸드 오프 프레임 워크
 - HealthKit 프레임 워크
@@ -168,7 +168,7 @@ IOS 9에서 Apple은 오른쪽에서 왼쪽으로 진행 되는 언어에 대 �
 - MapKit 프레임 워크
 - PassKit 프레임 워크
 - Safari 서비스 프레임 워크
-- UIKit 프레임 워크
+- UIKit Framework
 
 자세한 내용은 [추가 iOS 9 프레임 워크 변경](~/ios/platform/introduction-to-ios9/additional-framework-changes.md) 설명서를 참조 하세요.
 
@@ -191,9 +191,9 @@ Apple은 iOS 9에서 다음 Api 및 함수를 사용 하지 않습니다.
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
 - [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
 - [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [사진 진행](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
+- [PhotoProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
 - [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
-- [System.windows.forms.toolstrip.stackview](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
+- [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
 또한 이러한 샘플의 iOS 부분을 확인 하세요 (부록 Mac OS X 버전).

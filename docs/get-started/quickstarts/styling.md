@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 688b0e87bb6281923d3099c0d269b1c2554b6c7a
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: a7e1cdd59b463c38be1a49e962112cb893eed50f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70756752"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488870"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin Forms 응용 프로그램 스타일
 
@@ -29,7 +29,7 @@ ms.locfileid: "70756752"
 [![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
 [![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>전제 조건
 
 이 빠른 시작을 시도 하기 전에 [이전 퀵 스타트](database.md) 를 성공적으로 완료 해야 합니다. 또는 [이전 빠른 시작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) 을 다운로드 하 고이 빠른 시작의 시작 지점으로 사용 합니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "70756752"
     </ContentPage>
     ```
 
-    이 코드는 [`ListView`](xref:Xamarin.Forms.ListView) 에 대 한 암시적 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 하 고 `ListView.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. @No__t_0 암시적 스타일은 `NotesPage` 에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
+    이 코드는 [`ListView`](xref:Xamarin.Forms.ListView) 에 대 한 암시적 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 하 고 `ListView.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. `ListView` 암시적 스타일은 `NotesPage`에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
     **Ctrl + S**를 눌러 변경 내용을 **NotesPage** 에 저장 하 고 파일을 닫습니다.
 
@@ -141,7 +141,7 @@ ms.locfileid: "70756752"
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="BackgroundColor" Value="LightGray" />
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="CornerRadius" Value="5" />
             </Style>
         </ContentPage.Resources>
 
@@ -165,7 +165,7 @@ ms.locfileid: "70756752"
     </ContentPage>
     ```
 
-    이 코드는 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 [`Editor`](xref:Xamarin.Forms.Editor) 및 [`Button`](xref:Xamarin.Forms.Button) 뷰에 대 한 암시적 스타일을 추가 하 고 `StackLayout.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. @No__t_0 및 `Button` 암시적 스타일은 `NoteEntryPage` 에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
+    이 코드는 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 [`Editor`](xref:Xamarin.Forms.Editor) 및 [`Button`](xref:Xamarin.Forms.Button) 뷰에 대 한 암시적 스타일을 추가 하 고 `StackLayout.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. `Editor` 및 `Button` 암시적 스타일은 `NoteEntryPage`에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
     **Ctrl + S**를 눌러 변경 내용을 **NoteEntryPage** 에 저장 하 고 파일을 닫습니다.
 
@@ -257,7 +257,7 @@ ms.locfileid: "70756752"
     </ContentPage>
     ```
 
-    이 코드는 [`ListView`](xref:Xamarin.Forms.ListView) 에 대 한 암시적 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 하 고 `ListView.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. @No__t_0 암시적 스타일은 `NotesPage` 에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
+    이 코드는 [`ListView`](xref:Xamarin.Forms.ListView) 에 대 한 암시적 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 추가 하 고 `ListView.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. `ListView` 암시적 스타일은 `NotesPage`에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
     **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **NotesPage** 에 저장 하 고 파일을 닫습니다.
 
@@ -282,7 +282,7 @@ ms.locfileid: "70756752"
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="BackgroundColor" Value="LightGray" />
                 <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="CornerRadius" Value="5" />
             </Style>
         </ContentPage.Resources>
 
@@ -306,7 +306,7 @@ ms.locfileid: "70756752"
     </ContentPage>
     ```
 
-    이 코드는 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 [`Editor`](xref:Xamarin.Forms.Editor) 및 [`Button`](xref:Xamarin.Forms.Button) 뷰에 대 한 암시적 스타일을 추가 하 고 `StackLayout.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. @No__t_0 및 `Button` 암시적 스타일은 `NoteEntryPage` 에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
+    이 코드는 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에 [`Editor`](xref:Xamarin.Forms.Editor) 및 [`Button`](xref:Xamarin.Forms.Button) 뷰에 대 한 암시적 스타일을 추가 하 고 `StackLayout.Margin` 속성을 응용 프로그램 수준 `ResourceDictionary`에 정의 된 값으로 설정 합니다. `Editor` 및 `Button` 암시적 스타일은 `NoteEntryPage`에서만 사용 되므로 페이지 수준 `ResourceDictionary`에 추가 되었습니다. XAML 스타일 지정에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [스타일](deepdive.md#styling) 지정을 참조 하세요.
 
     **파일 > 저장** 을 선택 하거나  **&#8984; + S**를 눌러 변경 내용을 **NoteEntryPage** 에 저장 하 고 파일을 닫습니다.
 
@@ -318,7 +318,7 @@ ms.locfileid: "70756752"
 
 ## <a name="next-steps"></a>다음 단계
 
-이 빠른 시작에서는 다음 방법에 대해 알아보았습니다.
+이 빠른 시작에서는 다음을 수행하는 방법을 알아보았습니다.
 
 - XAML 스타일을 사용 하 여 Xamarin.ios 응용 프로그램 스타일을 만듭니다.
 

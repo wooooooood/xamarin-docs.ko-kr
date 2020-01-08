@@ -6,13 +6,13 @@ ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 05/23/2019
-ms.openlocfilehash: 28abc7f4fa608091cfc7f4c64d4fcabfd9755c2b
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.date: 11/27/2019
+ms.openlocfilehash: 0152a61dabe4068892cb6b5aa5b535ab88d2ff95
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681355"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487453"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.ios를 사용 하 여 푸시 알림 보내기 및 받기
 
@@ -29,6 +29,9 @@ ms.locfileid: "74681355"
 1. [푸시 알림에 대 한 네이티브 iOS 프로젝트를 구성](#configure-ios-for-notifications)합니다.
 1. [Azure 알림 허브를 사용 하 여 알림을 테스트](#test-notifications-in-the-azure-portal)합니다.
 1. [알림을 보내는 백 엔드 응용 프로그램을 만듭니다](#create-a-notification-dispatcher).
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>푸시 Notification Services 및 Azure Notification Hub 설정
 
@@ -127,9 +130,9 @@ public static class AppConstants
 
 1. Firebase 콘솔에서 패키지 이름과 일치 하도록 Android **패키지 이름을** 구성 합니다.
 1. Google Play, Firebase 및 Azure Notification Hubs와 상호 작용 하려면 다음 NuGet 패키지를 설치 합니다.
-    1. Xamarin.googleplayservices.base.
-    1. Firebase.
-    1. Xamarin.ios. NotificationHubs.
+    1. Xamarin.GooglePlayServices.Base.
+    1. Xamarin.Firebase.Messaging.
+    1. Xamarin.Azure.NotificationHubs.Android.
 1. FCM 설치 중에 다운로드 한 `google-services.json` 파일을 프로젝트에 복사 하 고 빌드 작업을 `GoogleServicesJson`로 설정 합니다.
 1. [Firebase와 통신 하도록 AndroidManifest을 구성](#configure-android-manifest)합니다.
 1. [FirebaseMessagingService를 재정의 하 여 메시지를 처리](#override-firebasemessagingservice-to-handle-messages)합니다.

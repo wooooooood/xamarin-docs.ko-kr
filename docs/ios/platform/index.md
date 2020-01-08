@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: f2f0d44f9c9d2df3c09d98e8d921121ff2af1571
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 78f8c8d1340c6bb1063e59ad03485d8b9b807c58
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032270"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489000"
 ---
 # <a name="ios-platform-features-overview"></a>iOS 플랫폼 기능 개요
 
@@ -53,7 +53,7 @@ iOS에는 달력 응용 프로그램 및 미리 알림 응용 프로그램 이�
 
 ## <a name="ios-extensionsiosplatformextensionsmd"></a>[iOS 확장](~/ios/platform/extensions.md)
 
-IOS 8에 도입 된 확장은 사용자가 특수 입력 또는 다른 컨텍스트를 수행 하기 위해 요청 하는 사용자 지정 키보드 유형으로 **알림 센터**내에서와 같은 표준 컨텍스트 내에서 iOS에서 제공 되는 특수 `UIViewControllers`입니다. 확장이 특수 효과 필터를 제공할 수 있는 사진 편집
+IOS 8에 도입 된 확장은 사용자가 특별 한 입력을 수행 하기 위해 사용자가 요청 하는 사용자 지정 키보드 유형 또는 확장에서 특수 효과 필터를 제공할 수 있는 사진 편집과 같은 기타 컨텍스트를 사용 하 여 **알림 센터**내에서 ios에서 제공 되는 특수 `UIViewControllers`입니다.
 
 ## <a name="graphics-and-animation-in-iosiosplatformgraphics-animation-iosindexmd"></a>[IOS의 그래픽 및 애니메이션](~/ios/platform/graphics-animation-ios/index.md)
 
@@ -125,9 +125,9 @@ iOS 10에는 앱에서 연속 음성 인식 및 높여줄 음성 (라이브 또�
 
 이 문서에서는 새로운 3D 터치 Api를 사용 하 여 새로운 iPhone 6s 및 iPhone 6s Plus 장치에서 실행 되는 Xamarin.ios 앱에 압력 민감한 제스처를 추가 하는 방법을 소개 합니다.
 
-## <a name="touch-idiosplatformtouchidmd"></a>[Touch ID](~/ios/platform/touchid.md)
+## <a name="touch-id-and-face-id-with-xamariniosiosplatformtouch-id-face-idmd"></a>[Xamarin.ios를 사용 하는 Touch id 및 얼굴 ID](~/ios/platform/touch-id-face-id.md)
 
-Touch ID는 암호와 유사 하 게 사용자를 인증 하는 수단으로 iOS 7에서 도입 되었습니다. 그러나 앱 스토어를 사용 하 고 iTunes를 사용 하 고 iCloud 키 집합을 인증 하는 경우에만 장치의 잠금을 해제 하는 것이 제한 되었습니다.
+Touch ID 및 Face ID는 iOS 8부터 사용 가능한 생체 인식 인증 시스템입니다. 이 문서 및 샘플에서는 Xamarin.ios에서 Touch ID 및 얼굴 ID를 사용 하는 방법을 설명 합니다.
 
 ## <a name="user-notificationsiosplatformuser-notificationsindexmd"></a>[사용자 알림](~/ios/platform/user-notifications/index.md)
 

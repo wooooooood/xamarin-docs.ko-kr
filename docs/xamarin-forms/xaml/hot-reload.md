@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 08/13/2019
-ms.openlocfilehash: 0f3ff5357d3fb4c60a910dda6befa8c699c6fc07
-ms.sourcegitcommit: 5f7749d6ba1db79aa0fbf4ee7c90f2dcd4de812b
+ms.openlocfilehash: d94f18d00ebf6eeec5f33343b5c0f985ba2a6ea8
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884126"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655409"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms-preview"></a>Xamarin.ios에 대 한 XAML 핫 다시 로드 (미리 보기)
 
@@ -20,6 +20,8 @@ XAML 핫 다시 로드는 기존 워크플로에 연결 하 여 생산성을 높
 
 > [!NOTE]
 > WPF 또는 UWP 앱을 작성 하는 경우 [uwp 및 WPF에 대해 XAML 핫 다시 로드](/visualstudio/debugger/xaml-hot-reload)를 참조 하세요.
+>
+> Xamarin에 대 한 XAML 핫 다시 로드는 현재 Xamarin.ios UWP 프로젝트에 대해 작동 _하지_ 않습니다.
 
 ## <a name="system-requirements"></a>시스템 요구 사항
 
@@ -49,6 +51,7 @@ XAML 핫 다시 로드에서 다시 로드할 수 없는 변경 작업을 수행
 - `x:Name` 값을 사용 하 여 다른 필드나 속성에 컨트롤을 할당 하 여 만든 모든 참조는 다시 로드 되지 않습니다.
 - **Appshell** 에서 셸 응용 프로그램의 시각적 계층 구조를 업데이트 하면 응용 프로그램의 상태를 유지 관리 하는 문제가 발생할 수 있습니다. 다시 로드를 계속 하려면 앱을 다시 빌드합니다.
 - XAML 핫 다시 로드는 C# 이벤트 처리기, 사용자 지정 컨트롤, 페이지 코드 및 추가 클래스를 포함 하 여 코드를 다시 로드할 수 없습니다.
+- 는 다른 Xamarin.ios 지원 플랫폼 (mac OS 또는 UWP)에서 작동 _하지_ 않습니다.
 
 ## <a name="migrate-from-the-private-preview"></a>비공개 미리 보기에서 마이그레이션
 

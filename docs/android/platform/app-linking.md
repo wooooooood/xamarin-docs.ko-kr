@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 0c7df5f1013c912f69514ee08bac56d0c25c99c1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: af90c286d2bb960a9f78547dd15c3d98a69529ae
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027741"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487830"
 ---
 # <a name="app-linking-in-android"></a>Android에서 앱 연결
 
@@ -177,7 +177,7 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
     - 응용 프로그램에서 웹 링크를 처리 하는 도메인을 공백으로 구분 하 여 &ndash; **`Domain`** 합니다.
     - **`Status`** &ndash; 앱에 대 한 현재 링크 처리 상태입니다. 값은 **항상** 응용 프로그램이 선언 `android:autoVerify=true` 고 시스템 확인을 통과 했음을 의미 합니다. 그 다음에는 기본 설정의 Android 시스템 레코드를 나타내는 16 진수가 나옵니다.
 
-    예를 들면,
+    예를 들면 다음과 같습니다.:
 
     ```shell
     $ adb shell dumpsys package domain-preferred-apps
@@ -195,7 +195,6 @@ https://digitalassetlinks.googleapis.com/v1/statements:list?source.web.site=
 ## <a name="related-links"></a>관련 링크
 
 - [키 저장소의 MD5 또는 SHA1 서명 찾기](~/android/deploy-test/signing/keystore-signature.md)
-- [활동 및 의도](https://university.xamarin.com/classes#4)
-- [사과 잉크](https://developers.facebook.com/docs/applinks)
+- [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Google Digital 자산 링크](https://developers.google.com/digital-asset-links/)
 - [문 목록 생성기 및 테스터](https://developers.google.com/digital-asset-links/tools/generator)

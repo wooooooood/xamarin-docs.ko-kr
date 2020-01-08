@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 1f06601b2b419141b4bd44677826df4e64a831fc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 25a5d79084f7caa78eec4011c047bd19a63ef748
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020562"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487791"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
@@ -56,9 +56,9 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 
 - &ndash; **메타 데이터** 를 사용 하면 생성 된 바인딩의 네임 스페이스를 변경 하는 등 최종 API를 변경할 수 있습니다. 
 
-- **Enumfields .xml** &ndash;에는 Java `int` 상수와 C#`enums`간의 매핑이 포함 되어 있습니다. 
+- **Enumfields .xml** &ndash;에는 Java `int` 상수와 C# `enums` 간의 매핑이 포함 되어 있습니다. 
 
-- **Enummethods .xml** &ndash;를 사용 하면 Java `int` 상수에서 메서드 매개 변수 및 반환 형식을 C#`enums`로 변경할 수 있습니다. 
+- **Enummethods .xml** &ndash;를 사용 하면 Java `int` 상수에서 메서드 매개 변수 및 반환 형식을 C# `enums`로 변경할 수 있습니다. 
 
 **메타 데이터 .xml** 파일은 다음과 같이 바인딩에 대 한 일반적인 용도의 변경을 허용 하므로 이러한 파일을 가장 많이 가져오는 것입니다.
 
@@ -162,7 +162,7 @@ public class NewName : Java.Lang.Object { ... }
 
 #### <a name="renaming-eventarg-wrapper-classes"></a>`EventArg` 래퍼 클래스 이름 바꾸기
 
-Xamarin.ios 바인딩 생성기가 _수신기 형식_에 대 한 `onXXX` setter 메서드를 식별 하는 경우 Java C# 기반 수신기 패턴에 대 한 .net flavoured API를 지원 하기 위해 이벤트 및`EventArgs`하위 클래스가 생성 됩니다. 예를 들어 다음 Java 클래스와 메서드를 살펴보겠습니다.
+Xamarin.ios 바인딩 생성기가 _수신기 형식_에 대 한 `onXXX` setter 메서드를 식별 하는 경우 Java C# 기반 수신기 패턴에 대 한 .net flavoured API를 지원 하기 위해 이벤트 및 `EventArgs` 하위 클래스가 생성 됩니다. 예를 들어 다음 Java 클래스와 메서드를 살펴보겠습니다.
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
@@ -174,7 +174,7 @@ Xamarin.ios는 setter 메서드에서 `on` 접두사를 삭제 하 고 대신 `E
 NavigationManager.2DSignNextManueverEventArgs
 ```
 
-올바른 C# 클래스 이름이 아닙니다. 이 문제를 해결 하려면 바인딩 작성자가 `argsType` 특성을 사용 하 고`EventArgs`하위 클래스 C# 에 대 한 올바른 이름을 제공 해야 합니다.
+올바른 C# 클래스 이름이 아닙니다. 이 문제를 해결 하려면 바인딩 작성자가 `argsType` 특성을 사용 하 고 `EventArgs` 하위 클래스 C# 에 대 한 올바른 이름을 제공 해야 합니다.
 
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
@@ -216,7 +216,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 `managedType`은 메서드의 반환 형식을 변경 하는 데 사용 됩니다. 경우에 따라 바인딩 생성기는 Java 메서드의 반환 형식을 잘못 유추 하므로 컴파일 시간 오류가 발생 합니다. 이 경우 한 가지 가능한 해결 방법은 메서드의 반환 형식을 변경 하는 것입니다.
 
-예를 들어 바인딩 생성기는 Java 메서드가 `de.neom.neoreadersdk.resolution.compareTo()` `int`를 반환 해야 한다고 간주 하며,이로 인해 오류 메시지 **CS0535: ' DE. Neoreadersdk '는 인터페이스 멤버 ' (Java.** a s t e m. a s t. t o p. a s t. t e m) '를 구현 하지 않습니다. 다음 코드 조각에서는 생성 C# 된 메서드의 매개 변수 형식을`DE.Neom.Neoreadersdk.Resolution`에서 `Java.Lang.Object`로 변경 하는 방법을 보여 줍니다. 
+예를 들어 바인딩 생성기는 Java 메서드가 `de.neom.neoreadersdk.resolution.compareTo()` `int`를 반환 하 고 `Object`를 매개 변수로 사용 하는 것으로 간주 합니다. 그러면 오류 메시지 **오류 CS0535: ' DE. Neoreadersdk '는 인터페이스 멤버 ' (Java.** a s t e m. a s t. t o p. a s t. t e m) '를 구현 하지 않습니다. 다음 코드 조각에서는 생성 C# 된 메서드의 첫 번째 매개 변수의 형식을 `DE.Neom.Neoreadersdk.Resolution`에서 `Java.Lang.Object`로 변경 하는 방법을 보여 줍니다. 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -269,9 +269,9 @@ Java 라이브러리를 난독 처리 하는 도구는 Xamarin Android 바인딩
 
 Setter 및 getter 메서드는 바인딩 생성기에 의해 여전히 생성 됩니다.
 
-### <a name="sender"></a>으로부터
+### <a name="sender"></a>sender
 
-메서드가 이벤트에 매핑될 때 `sender` 매개 변수로 사용할 메서드의 매개 변수를 지정 합니다. 값은 `true` 또는 `false`수 있습니다. 예를 들면,
+메서드가 이벤트에 매핑될 때 `sender` 매개 변수로 사용할 메서드의 매개 변수를 지정 합니다. 값은 `true` 또는 `false`수 있습니다. 예를 들면 다음과 같습니다.:
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -281,9 +281,9 @@ Setter 및 getter 메서드는 바인딩 생성기에 의해 여전히 생성 �
     name="sender">true</ attr>
 ```
 
-### <a name="visibility"></a>표시 여부
+### <a name="visibility"></a>표시 유형
 
-이 특성은 클래스, 메서드 또는 속성의 표시 여부를 변경 하는 데 사용 됩니다. 예를 들어 해당 C# 래퍼가`public`되도록 `protected` Java 메서드를 승격 해야 할 수 있습니다.
+이 특성은 클래스, 메서드 또는 속성의 표시 여부를 변경 하는 데 사용 됩니다. 예를 들어 해당 C# 래퍼가 `public`되도록 `protected` Java 메서드를 승격 해야 할 수 있습니다.
 
 ```xml
 <!-- Change the visibility of a class -->
@@ -299,7 +299,7 @@ Android 라이브러리가 정수 상수를 사용 하 여 라이브러리의 �
 
 ### <a name="defining-an-enum-using-enumfieldsxml"></a>EnumFields .xml을 사용 하 여 열거형 정의
 
-**Enumfields .xml** 파일에는 Java `int` 상수와 C#`enums`간의 매핑이 포함 되어 있습니다. `int`상수 집합에 대해 생성 되는 C# 열거형의 다음 예를 살펴보겠습니다. 
+**Enumfields .xml** 파일에는 Java `int` 상수와 C# `enums`간의 매핑이 포함 되어 있습니다. `int` 상수 집합에 대해 생성 되는 C# 열거형의 다음 예를 살펴보겠습니다. 
 
 ```xml 
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
@@ -309,11 +309,11 @@ Android 라이브러리가 정수 상수를 사용 하 여 라이브러리의 �
 </mapping>
 ```
 
-여기서는 Java 클래스를 `SKRealReachSettings` 하 고 네임 스페이스`Skobbler.Ngx.Map.RealReach`C# 에서`SKMeasurementUnit`라는 열거형을 정의 했습니다. `field` 항목은 Java 상수 이름 (예: `UNIT_SECOND`), 열거형 항목의 이름 (예: `Second`) 및 두 엔터티가 나타내는 정수 값 (예: `0`)을 정의 합니다. 
+여기서는 Java 클래스를 `SKRealReachSettings` 하 고 네임 스페이스 `Skobbler.Ngx.Map.RealReach`C# 에서 `SKMeasurementUnit` 라는 열거형을 정의 했습니다. `field` 항목은 Java 상수 이름 (예: `UNIT_SECOND`), 열거형 항목의 이름 (예: `Second`) 및 두 엔터티가 나타내는 정수 값 (예: `0`)을 정의 합니다. 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>EnumMethods .xml을 사용 하 여 Getter/Setter 메서드 정의
 
-**Enummethods .xml** 파일을 사용 하 여 메서드 매개 변수를 변경 하 고 Java `int` 상수 C# 에서 형식을`enums`로 반환할 수 있습니다. 즉, 열거형 ( **Enumfields .xml** 파일에 정의 됨 C# )의 읽기 및 쓰기를 Java `int`상수`get`및`set`메서드에 매핑합니다.
+**Enummethods .xml** 파일을 사용 하 여 메서드 매개 변수를 변경 하 고 Java `int` 상수 C# 에서 형식을 `enums`로 반환할 수 있습니다. 즉, 열거형 ( **Enumfields .xml** 파일에 정의 됨 C# )의 읽기 및 쓰기를 Java `int` 상수 `get` 및 `set` 메서드에 매핑합니다.
 
 위에서 정의한 `SKRealReachSettings` 열거형을 지정 하는 경우 다음 **enummethods .xml** 파일은이 열거형에 대 한 getter/setter를 정의 합니다.
 

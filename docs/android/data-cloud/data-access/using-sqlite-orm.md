@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 96f084dc49a5558767b162eee59eff722f247904
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ff59213a730b74b916b993c48a6f5f779149a6f9
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023681"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488077"
 ---
 # <a name="using-sqlitenet-with-android"></a>Android에서 SQLite.NET 사용
 
@@ -128,9 +128,9 @@ public static void DoSomeDataAccess () {
 
 - **[AutoIncrement]** &ndash;이 특성은 데이터베이스에 삽입 된 각 새 개체에 대해 정수 속성의 값이 자동으로 증가 되도록 합니다.
 
-- **[Column (name)]** 선택적 `name` 매개 변수를 제공 하 &ndash; 기본 데이터베이스 열 이름 (속성과 동일)의 기본값을 재정의 합니다.
+- **[Column (name)]** &ndash; `name` 매개 변수는 기본 데이터베이스 열 이름을 설정 합니다.
 
-- **[Table (name)]** &ndash; 클래스를 기본 SQLite 테이블에 저장할 수 있는 것으로 표시 합니다. 선택적 name 매개 변수를 지정 하면 기본 데이터베이스 테이블 이름 (클래스 이름과 같음)의 기본값이 재정의 됩니다.
+- **[Table (name)]** &ndash; 지정 된 이름을 사용 하 여 클래스를 기본 SQLite 테이블에 저장할 수 있는 것으로 표시 합니다.
 
 - **[MaxLength (value)]** 데이터베이스 삽입을 시도할 때 텍스트 속성 길이를 제한 &ndash;. 데이터베이스 삽입 또는 업데이트 작업을 시도 하는 경우이 특성이 ' 확인 ' 된 경우에만 코드를 사용 하 여이 작업의 유효성을 검사 해야 합니다.
 
@@ -139,7 +139,7 @@ public static void DoSomeDataAccess () {
 
 - **[Unique]** &ndash; 기본 데이터베이스 열의 값이 고유한 지 확인 합니다.
 
-이러한 특성의 대부분은 선택 사항이 며, SQLite는 테이블 및 열 이름에 기본값을 사용 합니다. 데이터에 대해 선택 및 삭제 쿼리를 효율적으로 수행할 수 있도록 항상 정수 기본 키를 지정 해야 합니다.
+이러한 특성의 대부분은 선택적입니다. 데이터에 대해 선택 및 삭제 쿼리를 효율적으로 수행할 수 있도록 항상 정수 기본 키를 지정 해야 합니다.
 
 ## <a name="more-complex-queries"></a>더 복잡 한 쿼리
 

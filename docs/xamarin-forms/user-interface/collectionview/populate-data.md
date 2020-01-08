@@ -6,13 +6,13 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: c8d01846c9b860982cee74390dab85c7473ee141
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.date: 12/11/2019
+ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662324"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488177"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.ios CollectionView 데이터
 
@@ -20,7 +20,7 @@ ms.locfileid: "73662324"
 
 표시 되는 데이터와 표시 되는 데이터를 정의 하는 다음 속성을 포함 하 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 입니다.
 
-- `IEnumerable` 형식의 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource)는 표시할 항목의 컬렉션을 지정 하 고 기본값은 `null`입니다.
+- `IEnumerable`형식의 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource)는 표시할 항목의 컬렉션을 지정 하 고 기본값은 `null`입니다.
 - [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)형식의 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate)는 표시할 항목 컬렉션의 각 항목에 적용할 템플릿을 지정 합니다.
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, 속성은 데이터 바인딩의 대상이 될 수 있습니다.
@@ -99,7 +99,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 이 예제에서 [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) 속성 데이터는 연결 된 viewmodel의 `Monkeys` 속성에 바인딩됩니다.
 
 > [!NOTE]
-> Xamarin Forms 응용 프로그램에서 데이터 바인딩 성능을 향상 시키기 위해 컴파일된 바인딩을 사용 하도록 설정할 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
+> 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
@@ -251,7 +251,86 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView)사용 하는 경우 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체의 루트 요소를 `ViewCell`로 설정 하지 마십시오. 이로 인해 `CollectionView`에는 셀 개념이 없으므로 예외가 throw 됩니다.
 
-## <a name="pull-to-refresh"></a>새로 고치려면 끌어오기
+## <a name="context-menus"></a>상황에 맞는 메뉴
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `SwipeView`를 통해 데이터 항목에 대 한 상황에 맞는 메뉴를 지원 하며,이 메뉴는 살짝 밀기 제스처로 상황에 맞는 메뉴를 표시 합니다. `SwipeView`는 콘텐츠 항목 주위에 래핑하는 컨테이너 컨트롤이 며 해당 콘텐츠 항목에 대 한 상황에 맞는 메뉴 항목을 제공 합니다. 따라서 상황에 맞는 메뉴는 `SwipeView`에서 래핑하는 콘텐츠를 정의 하는 `SwipeView`을 만들고 살짝 밀기 제스처로 표시 되는 상황에 맞는 메뉴 항목을 만들어 `CollectionView`에 대해 구현 됩니다. 이렇게 하려면 `SwipeView`를 `CollectionView`의 각 데이터 항목의 모양을 정의 하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 의 루트 뷰로 설정 합니다.
+
+```xaml
+<CollectionView x:Name="collectionView"
+                ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Favorite"
+                                   IconImageSource="favorite.png"
+                                   BackgroundColor="LightGreen"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.FavoriteCommand}"
+                                   CommandParameter="{Binding}" />
+                        <SwipeItem Text="Delete"
+                                   IconImageSource="delete.png"
+                                   BackgroundColor="LightPink"
+                                   Command="{Binding Source={x:Reference collectionView}, Path=BindingContext.DeleteCommand}"
+                                   CommandParameter="{Binding}" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <Grid BackgroundColor="White"
+                      Padding="10">
+                    <!-- Define item appearance -->
+                </Grid>
+            </SwipeView>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+
+collectionView.ItemTemplate = new DataTemplate(() =>
+{
+    // Define item appearance
+    Grid grid = new Grid { Padding = 10, BackgroundColor = Color.White };
+    // ...
+
+    SwipeView swipeView = new SwipeView();
+    SwipeItem favoriteSwipeItem = new SwipeItem
+    {
+        Text = "Favorite",
+        IconImageSource = "favorite.png",
+        BackgroundColor = Color.LightGreen
+    };
+    favoriteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.FavoriteCommand", source: collectionView));
+    favoriteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    SwipeItem deleteSwipeItem = new SwipeItem
+    {
+        Text = "Delete",
+        IconImageSource = "delete.png",
+        BackgroundColor = Color.LightPink
+    };
+    deleteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.DeleteCommand", source: collectionView));
+    deleteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    swipeView.LeftItems = new SwipeItems { favoriteSwipeItem, deleteSwipeItem };
+    swipeView.Content = grid;    
+    return swipeView;
+});
+```
+
+이 예제에서 `SwipeView` 내용은 [`CollectionView`](xref:Xamarin.Forms.CollectionView)에서 각 항목의 모양을 정의 하는 [`Grid`](xref:Xamarin.Forms.Grid) 입니다. 살짝 밀기 항목은 `SwipeView` 콘텐츠에 대 한 작업을 수행 하는 데 사용 되며, 왼쪽에서 컨트롤이 스와이프 때 표시 됩니다.
+
+[![IOS 및 Android에서 CollectionView 상황에 맞는 메뉴 항목의 스크린샷](populate-data-images/swipeview.png "SwipeView 상황에 맞는 메뉴 항목을 사용 하는 CollectionView")](populate-data-images/swipeview-large.png#lightbox "SwipeView 상황에 맞는 메뉴 항목을 사용 하는 CollectionView")
+
+`SwipeView`는 `SwipeItems` 개체가 추가 되는 방향 `SwipeItems` 컬렉션에 의해 정의 되는 살짝 밀기 방향을 사용 하는 네 가지 살짝 밀기 방향을 지원 합니다. 기본적으로 사용자가 탭 할 때 살짝 밀기 항목이 실행 됩니다. 또한 살짝 밀기 항목이 실행 된 후에는 살짝 밀기 항목이 숨겨지고 `SwipeView` 콘텐츠가 다시 표시 됩니다. 그러나 이러한 동작은 변경할 수 있습니다.
+
+`SwipeView` 컨트롤에 대 한 자세한 내용은 [Xamarin.ios SwipeView](~/xamarin-forms/user-interface/swipeview.md)를 참조 하세요.
+
+## <a name="pull-to-refresh"></a>당겨서 새로 고침
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RefreshView`를 통해 기능을 새로 고치는 기능을 지원 합니다 .이를 통해 항목 목록에서 아래로 당겨 데이터를 새로 고칠 수 있습니다. `RefreshView`은 자식에서 스크롤 가능한 콘텐츠를 지 원하는 경우 해당 자식에 대 한 기능을 새로 고치는 가져오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식으로 설정 하 여 `CollectionView`에 대 한 끌어오기를 새로 고칩니다.
 
@@ -296,8 +375,8 @@ refreshView.Content = collectionView;
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 다음 속성을 정의 하 여 데이터의 증분 로드를 제어 합니다.
 
-- `int` 형식의 `RemainingItemsThreshold` `RemainingItemsThresholdReached` 이벤트가 발생 하는 목록에 아직 표시 되지 않는 항목의 임계값입니다.
-- `RemainingItemsThresholdReachedCommand` `RemainingItemsThreshold`에 도달할 때 실행 되는 `ICommand` 형식입니다.
+- `int`형식의 `RemainingItemsThreshold``RemainingItemsThresholdReached` 이벤트가 발생 하는 목록에 아직 표시 되지 않는 항목의 임계값입니다.
+- `RemainingItemsThresholdReachedCommand``RemainingItemsThreshold`에 도달할 때 실행 되는 `ICommand`형식입니다.
 - `object` 형식의 `RemainingItemsThresholdReachedCommandParameter` - `RemainingItemsThresholdReachedCommand`에 전달되는 매개 변수입니다.
 
 또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RemainingItemsThreshold` 항목이 표시 되지 않을 만큼 `CollectionView` 스크롤 될 때 발생 하는 `RemainingItemsThresholdReached` 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 더 많은 항목을 로드할 수 있습니다. 또한 `RemainingItemsThresholdReached` 이벤트가 발생 하면 `RemainingItemsThresholdReachedCommand` 실행 되어 viewmodel에서 증분 데이터 로드가 발생 하도록 할 수 있습니다.
@@ -344,6 +423,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.ios RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Xamarin.ios SwipeView](~/xamarin-forms/user-interface/swipeview.md)
 - [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Xamarin. Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

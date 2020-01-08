@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 289d47a700762caa8e41baef23818be6c684c61a
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.openlocfilehash: e8f3d8af7aab2a7a73787021f114470726d74b72
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "70998060"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488090"
 ---
 # <a name="xamarinforms-cells"></a>Xamarin.Forms 셀
 
@@ -22,7 +22,7 @@ _Xamarin.Forms 셀 TableViews Listview를 추가할 수 있습니다._
 
 A *셀* 테이블의 항목에 사용 되는 특수 한 요소 이며 목록의 각 항목을 렌더링 해야 하는 방법에 대해 설명 합니다. 합니다 [ `Cell` ](xref:Xamarin.Forms.Cell) 클래스에서 파생 됩니다 [ `Element` ](xref:Xamarin.Forms.Element), 올 [ `VisualElement` ](xref:Xamarin.Forms.Element) 에서도 파생 됩니다. 셀이 있다는 시각적 요소입니다. 이 대신 시각적 요소를 만들기 위한 템플릿입니다.
 
-`Cell` 단독으로 사용 됩니다 [ `ListView` ](views.md#listView) 하 고 [ `TableView` ](views.md#tableView) 컨트롤입니다. 를 사용 하 여 셀 사용자 지정 하는 방법을 알아보려면 참조를 [ `ListView` ](~/xamarin-forms/user-interface/listview/index.md) 하 고 [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) 설명서.
+`Cell` 단독으로 사용 됩니다 [ `ListView` ](views.md#listview) 하 고 [ `TableView` ](views.md#tableview) 컨트롤입니다. 를 사용 하 여 셀 사용자 지정 하는 방법을 알아보려면 참조를 [ `ListView` ](~/xamarin-forms/user-interface/listview/index.md) 하 고 [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) 설명서.
 
 ## <a name="cells"></a>셀
 
@@ -48,7 +48,7 @@ Xamarin.Forms 셀 형식을 지원 합니다.
 
 |     |     |
 | --- | --- |
-| 에 [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) 는 [`Text`](xref:Xamarin.Forms.SwitchCell.Text) 속성을 포함 하는 텍스트 집합과 on/off 스위치가 처음에 부울 [`On`](xref:Xamarin.Forms.SwitchCell.On) 속성으로 설정 되어 있습니다. 처리를 [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) 때 알림을 받도록 이벤트는 `On` 속성 변경 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.SwitchCell) / [가이드](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![SwitchCell 예제](cells-images/SwitchCell.png "SwitchCell 예제")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
+| [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) 에는 [`Text`](xref:Xamarin.Forms.SwitchCell.Text) 속성을 포함 하는 텍스트 집합과 on/Off 스위치가 처음에 부울 [`On`](xref:Xamarin.Forms.SwitchCell.On) 속성으로 설정 되어 있습니다. 처리를 [ `OnChanged` ](xref:Xamarin.Forms.SwitchCell.OnChanged) 때 알림을 받도록 이벤트는 `On` 속성 변경 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.SwitchCell) / [가이드](~/xamarin-forms/user-interface/tableview.md#switchcell) | [![SwitchCell 예제](cells-images/SwitchCell.png "SwitchCell 예제")](cells-images/SwitchCell-Large.png#lightbox "SwitchCell 예제")<br />[이 페이지에 대 한 C# 코드](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchCellDemoPage.cs) / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchCellDemoPage.xaml) |
 |     |     |
 
 ### <a name="entrycell"></a>EntryCell

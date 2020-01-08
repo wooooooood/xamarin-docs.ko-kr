@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 1781503d214b959d31223cbe8f55fd6afa0fef44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: eeee9b7d694d9380c653fb87c24171bcaf79389d
+ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019286"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75655297"
 ---
 # <a name="android-graphics-and-animation"></a>Android 그래픽 및 애니메이션
 
@@ -47,7 +47,7 @@ Android는 이러한 2D 그래픽 기술 외에도 다양 한 방법으로 애�
 
 이러한 프레임 워크는 모두 사용할 수 있는 옵션 이지만 가능 하면 속성 애니메이션에 대 한 우선 순위를 지정 해야 합니다 .이는 작업을 수행 하는 더 유연한 API입니다. 속성 애니메이션을 사용 하면 코드를 보다 쉽게 공유 하 고 코드 유지 관리를 간소화 하는 고유한 클래스에서 애니메이션 논리를 캡슐화 할 수 있습니다.
 
-## <a name="accessibility"></a>액세스 가능성
+## <a name="accessibility"></a>접근성
 
 그래픽 및 애니메이션은 Android 앱을 사용 하는 데 유용 하 고 재미 있게 만듭니다. 그러나 screenreaders, 대체 입력 장치 또는 확대/축소를 통해 일부 상호 작용이 발생 한다는 것을 기억해 야 합니다.
 또한 일부 상호 작용은 오디오 기능 없이 발생할 수 있습니다.
@@ -82,7 +82,7 @@ Android는 여러 가지 형식의 그릴 수가 있는 리소스를 정의 합�
 
 - [Levellistdrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) 수 있는 &ndash;는 특정 조건에 따라 이미지를 표시 하는 *statelistdrawable* 수 있습니다. 그러나 *Statelistdrawable*때와 달리 *levellistdrawable* 때는 정수 값을 기준으로 이미지가 표시 됩니다. *Levellistdrawable* 수 있는 예제는 WiFi 신호의 강도를 표시 하는 것입니다. WiFi 신호의 강도가 변경 되 면 표시 되는 그릴 수 있는 것이 그에 따라 변경 됩니다.
 
-- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; 이름에서 알 때 이러한 drawables은 크기 조정 및 클리핑 기능을 모두 제공 합니다. *ScaleDrawable* 는 다른 그릴 *수 있는 다른* 것으로 크기를 조정할 수 있습니다.
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)는 &ndash;이름이 암시 하므로 이러한 drawables 크기 조정 및 클리핑 기능을 모두 제공 합니다. *ScaleDrawable* 는 다른 그릴 *수 있는 다른* 것으로 크기를 조정할 수 있습니다.
 
 - [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; 그릴 수 있는 다른 리소스의 측면에 인세트를 적용 합니다. 보기의 실제 범위 보다 작은 배경이 보기에 필요할 때 사용 됩니다.
 
@@ -139,7 +139,7 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 이 모양을 확인 하려면 *AnimationsDemo* 프로젝트를 실행 하 고 주 메뉴에서 그릴 수 있는 모양 항목을 선택 합니다. 다음 스크린샷에서 유사한 내용이 표시 되어야 합니다.
 
-![그라데이션 및 모퉁이가 둥근 모퉁이가 있는 사용자 지정 배경을 사용 하는 Textview](graphics-and-animation-images/image1.png)
+[그라데이션 및 모퉁이가 둥근 모퉁이가 있는 사용자 지정 배경에 Textview ![](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 XML 요소 및 그릴 수가 있는 리소스의 구문에 대 한 자세한 내용은 [Google 설명서](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)를 참조 하세요.
 
@@ -162,17 +162,17 @@ Canvas canvas = new Canvas(b);
 
 `Canvas` 개체를 가져오는 다른 방법은 [뷰](xref:Android.Views.View) 기본 클래스를 제공 하는 [OnDraw](xref:Android.Views.View.OnDraw*) 콜백 메서드를 사용한 것입니다. Android는 뷰가 작업을 수행할 수 있도록 뷰를 자체적으로 그려야 하 고 `Canvas` 개체에 전달 해야 한다고 결정할 때이 메서드를 호출 합니다.
 
-Canvas 클래스는 그리기 명령을 프로그래밍 방식으로 제공 하는 메서드를 노출 합니다. 예를 들면,
+Canvas 클래스는 그리기 명령을 프로그래밍 방식으로 제공 하는 메서드를 노출 합니다. 예를 들면 다음과 같습니다.:
 
-- [DrawPaint](xref:Android.Graphics.Canvas.DrawPaint*) &ndash; 전체 캔버스의 비트맵을 지정 된 그리기로 채웁니다.
+- [Canvas.DrawPaint](xref:Android.Graphics.Canvas.DrawPaint*)&ndash;는 전체 비트맵을 지정 된 그리기로 채웁니다.
 
 - [Canvas. DrawPath](xref:Android.Graphics.Canvas.DrawPath*) &ndash; 지정 된 그리기를 사용 하 여 지정 된 기하학적 모양을 그립니다.
 
-- [DrawText](xref:Android.Graphics.Canvas.DrawText*) &ndash; 지정 된 색을 사용 하 여 캔버스에 텍스트를 그립니다. `x,y` 위치에 텍스트가 그려집니다.
+- [Canvas.DrawText](xref:Android.Graphics.Canvas.DrawText*)&ndash; 는 지정 된 색을 사용하여 텍스트를 그립니다. `x,y` 위치에 텍스트가 그려집니다.
 
 #### <a name="drawing-with-the-canvas-api"></a>Canvas API를 사용 하 여 그리기
 
-작업 중인 Canvas API의 예제를 살펴보겠습니다. 다음 코드 조각에서는 뷰를 그리는 방법을 보여 줍니다.
+다음은 작업 중인 Canvas API의 예제입니다. 다음 코드 조각에서는 뷰를 그리는 방법을 보여 줍니다.
 
 ```csharp
 public class MyView : View
@@ -201,7 +201,7 @@ public class MyView : View
 
 위의이 코드는 먼저 빨강 페인트 및 녹색 그리기 개체를 만듭니다. 캔버스의 콘텐츠를 빨강으로 채운 다음 캔버스에서 캔버스 너비의 25% 인 녹색 사각형을 그리도록 지시 합니다. 이에 대 한 예제는이 문서의 소스 코드와 함께 제공 되는 `AnimationsDemo` 프로젝트에서 볼 수 있습니다. 응용 프로그램을 시작 하 고 주 메뉴에서 그리기 항목을 선택 하면 다음과 같은 화면이 나타납니다.
 
-![빨간색 그리기 및 녹색 그리기 개체가 있는 화면](graphics-and-animation-images/image3.png)
+[빨간색 그리기 및 녹색 그리기 개체가 있는 ![화면](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## <a name="animation"></a>애니메이션
 
@@ -426,7 +426,7 @@ protected override void OnCreate(Bundle bundle)
 - [애니메이션 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [애니메이션 및 그래픽](https://developer.android.com/guide/topics/graphics/index.html)
 - [애니메이션을 사용 하 여 Mobile Apps 개발](https://youtu.be/ikSk_ILg3d0)
-- [애니메이션](xref:Android.Graphics.Drawables.AnimationDrawable)
+- [AnimationDrawable](xref:Android.Graphics.Drawables.AnimationDrawable)
 - [캔버스](xref:Android.Graphics.Canvas)
 - [개체 애니메이터](xref:Android.Animation.ObjectAnimator)
 - [값 애니메이터](xref:Android.Animation.ValueAnimator)

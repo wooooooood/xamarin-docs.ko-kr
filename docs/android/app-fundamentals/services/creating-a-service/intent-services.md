@@ -6,16 +6,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: c58787a051bfc965cb7493138ed6114ac23ed04d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: acf8824c7a575bca37301a409bdf6d5f42cca622
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024841"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488064"
 ---
 # <a name="intent-services-in-xamarinandroid"></a>Xamarin Android의 의도 서비스
-
-## <a name="intent-services-overview"></a>의도 서비스 개요
 
 시작 된 서비스와 바인딩된 서비스는 모두 주 스레드에서 실행 됩니다. 즉, 성능을 원활 하 게 유지 하려면 서비스에서 비동기적으로 작업을 수행 해야 합니다. 이러한 문제를 해결 하는 가장 간단한 방법 중 하나는 _작업자 큐 프로세서 패턴_을 사용 하는 것입니다. 여기에서 수행할 작업은 단일 스레드가 처리 하는 큐에 배치 됩니다.
 
@@ -57,8 +55,7 @@ public class DemoIntentService: IntentService
 Intent downloadIntent = new Intent(this, typeof(DemoIntentService));
 
 // This is just one example of passing some values to an IntentService via the Intent:
-downloadIntent.Put
-("file_to_download", "http://www.somewhere.com/file/to/download.zip");
+downloadIntent.PutPutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
 
 StartService(downloadIntent);
 ```

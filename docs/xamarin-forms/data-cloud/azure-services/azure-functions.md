@@ -7,12 +7,12 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 04/02/2019
-ms.openlocfilehash: a54d82a3e7ad95267b4083827faf0e52972417bd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 09a3770eb02810f9a4565dfc450332a1bba2034f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658660"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487492"
 ---
 # <a name="get-started-with-azure-functions"></a>Azure Functions를 사용 하 여 시작
 
@@ -26,7 +26,10 @@ _첫 번째 Azure Function 상호 작용 하는 Xamarin.Forms 사용 하 여 빌
 
 ## <a name="step-by-step-instructions"></a>단계별 지침
 
-비디오를 외에도 다음이 지침에 따르면 [Visual Studio를 사용 하 여 첫 번째 함수를 빌드](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)합니다.
+비디오 외에도 이러한 지침에 따라 [Visual Studio를 사용 하 여 첫 번째 함수를 빌드할](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)수 있습니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 ## <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
@@ -34,7 +37,10 @@ _첫 번째 Azure Function 상호 작용 하는 Xamarin.Forms 사용 하 여 빌
 
 ## <a name="step-by-step-instructions"></a>단계별 지침
 
-비디오를 외에도 다음이 지침에 따르면 [Visual Studio를 사용 하 여 첫 번째 함수를 빌드](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)합니다.
+비디오 외에도 이러한 지침에 따라 [Visual Studio를 사용 하 여 첫 번째 함수를 빌드할](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)수 있습니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 ## <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -43,6 +49,9 @@ _첫 번째 Azure Function 상호 작용 하는 Xamarin.Forms 사용 하 여 빌
 ## <a name="step-by-step-instructions"></a>단계별 지침
 
 이 비디오에서는 외에 [단계별 자습서](https://docs.microsoft.com/visualstudio/mac/azure-functions-lab) 만들고 mac 용 Visual Studio 내에서 Azure Functions를 디버그 하는 방법을 보여 주는
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 -----
 

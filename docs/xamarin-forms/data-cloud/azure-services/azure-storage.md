@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
-ms.openlocfilehash: 3f3ff0b06fe23d724e04ac34108119932aa666ef
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 8d773abbca348d09d3359f09cbded22f6521fb7f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649718"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487323"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Xamarin.ios에서 Azure Storage의 데이터 저장 및 액세스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
-_Azure Storage는 비 구조화 및 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.Forms를 사용 하 여 Azure Storage에 텍스트 및 이진 데이터를 저장 하는 방법을 데이터에 액세스 하는 방법을 보여 줍니다._
+_Azure Storage는 구조화 되지 않은 구조화 된 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는 Xamarin.ios를 사용 하 여 Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 보여 줍니다._
 
 Azure Storage는 4 개의 저장소 서비스를 제공합니다.
 
@@ -27,7 +27,7 @@ Azure Storage는 4 개의 저장소 서비스를 제공합니다.
 - 큐 저장소는 워크플로 처리 및 클라우드 서비스 간의 통신에 대 한 메시징 서비스입니다.
 - File Storage는 SMB 프로토콜을 사용 하 여 공유 저장소를 제공 합니다.
 
-스토리지 계정에는 다음과 같은 두 종류가 있습니다.
+저장소 계정의 다음과 같은 두 종류가 있습니다.
 
 - 범용 저장소 계정을 단일 계정에서 Azure Storage 서비스에 액세스를 제공 합니다.
 - Blob storage 계정에 blob 저장에 대 한 특수 저장소 계정이입니다. Blob 데이터를 저장 해야 하는 경우이 계정 유형은 것이 좋습니다.
@@ -36,17 +36,20 @@ Azure Storage는 4 개의 저장소 서비스를 제공합니다.
 
 Azure Storage에 대 한 자세한 내용은 참조 하세요. [Storage 소개](https://azure.microsoft.com/documentation/articles/storage-introduction/)합니다.
 
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
+
 ## <a name="introduction-to-blob-storage"></a>Blob Storage 소개
 
 Blob 저장소는 다음 다이어그램에 나와 있는 세 가지 구성 요소가 구성 됩니다.
 
-![](azure-storage-images/blob-storage.png "Blob 저장소 개념")
+![](azure-storage-images/blob-storage.png "Blob Storage Concepts")
 
 Azure Storage에 대 한 모든 액세스는 저장소 계정을 통해 이루어집니다. 저장소 계정 컨테이너를 개수에 제한 없이 포함 될 수 있습니다 및 컨테이너에 blob 저장소 계정의 용량 제한까지 개수에 제한 없이 저장할 수 있습니다.
 
 Blob에는 모든 형식과 크기의 파일입니다. Azure Storage에는 세 가지 다른 blob 유형을 지원합니다.
 
-- 블록 blob는 클라우드 개체를 저장 및 스트리밍에 대 한 액세스에 최적화 된 및 백업, 미디어 파일, 문서 등을 저장 하는 데 적합 합니다. 블록 blob은 최대 195gb 크기에서 될 수 있습니다.
+- 블록 blob은 클라우드 개체를 스트리밍하 고 저장 하기 위해 최적화 되었으며 백업, 미디어 파일, 문서 등을 저장 하는 데 적합 합니다. 블록 blob의 크기는 최대 195Gb 일 수 있습니다.
 - 추가 blob은 블록 blob와 유사 하지만에 최적화 된 로깅 등의 작업을 추가 합니다. 추가 blob는 최대 195gb 크기에서 일 수 있습니다.
 - 페이지 blob는 빈번한 읽기/쓰기 작업에 대 한 액세스에 최적화 된 및 가상 머신과 해당 디스크를 저장 하는 데 일반적으로 사용 됩니다. 페이지 blob은 최대 1tb 크기 수 있습니다.
 
@@ -57,20 +60,20 @@ Blob은 Azure Storage에 업로드 및 바이트 스트림으로 Azure Storage�
 
 Azure Storage에 저장 된 모든 개체에 고유한 URL 주소가 있습니다. 해당 주소 및 하위 도메인 및 도메인 이름 형식의 조합을의 하위 도메인을 구성 하는 저장소 계정 이름은 *끝점* 저장소 계정에 대 한 합니다. 예를 들어 저장소 계정 이름은 *mystorageaccount*, 저장소 계정에 대 한 기본 blob 끝점은 `https://mystorageaccount.blob.core.windows.net`합니다.
 
-스토리지 계정의 개체에 액세스하기 위한 URL은 스토리지 계정의 개체 위치를 엔드포인트에 추가하여 작성됩니다. 예를 들어 blob 주소는 형식이 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob`합니다.
+저장소 계정의 개체에 액세스 하기 위한 URL 끝점에 저장소 계정에서 개체의 위치를 추가 하 여 빌드됩니다. 예를 들어 blob 주소는 형식이 `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob`합니다.
 
 ## <a name="setup"></a>설정
 
 Xamarin.Forms 응용 프로그램을 Azure Storage 계정 통합에 대 한 프로세스는 다음과 같습니다.
 
-1. 스토리지 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account) 를 참조하세요.
+1. 저장소 계정을 만듭니다. 자세한 내용은 [저장소 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account)합니다.
 1. 추가 된 [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) Xamarin.Forms 응용 프로그램입니다.
 1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결할](#connecting)합니다.
 1. 추가 `using` 지시문에 대 한 합니다 `Microsoft.WindowsAzure.Storage` 및 `Microsoft.WindowsAzure.Storage.Blob` 네임 스페이스는 Azure Storage에 액세스 하는 클래스입니다.
 
 <a name="connecting" />
 
-## <a name="connecting-to-azure-storage"></a>Azure Storage에 연결
+## <a name="connecting-to-azure-storage"></a>Azure 저장소에 연결
 
 저장소 계정 리소스에 대 한 모든 요청은 인증 되어야 합니다. Blob을 익명 인증을 지원 하도록 구성할 수 있습니다. 두 가지 주 저장소 계정으로 인증을 사용 하 여:
 
@@ -122,7 +125,7 @@ SAS 사용 하 여 Azure Storage에 연결 하려면 다음 연결 문자열 형
 
 ## <a name="creating-a-container"></a>컨테이너 만들기
 
-`GetContainer` 메서드 검색 컨테이너에서 blob를 검색 하거나 blob 컨테이너에 추가할 다음 사용할 수 있는 명명 된 컨테이너에 대 한 참조를 사용 합니다. 다음 코드 예제는 `GetContainer` 메서드:
+`GetContainer` 메서드 검색 컨테이너에서 blob를 검색 하거나 blob 컨테이너에 추가할 다음 사용할 수 있는 명명 된 컨테이너에 대 한 참조를 사용 합니다. 다음 코드 예제는 `GetContainer` 메서드를 보여줍니다.
 
 ```csharp
 static CloudBlobContainer GetContainer(ContainerType containerType)

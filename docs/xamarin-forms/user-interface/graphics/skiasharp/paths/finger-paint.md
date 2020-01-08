@@ -7,12 +7,12 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
-ms.openlocfilehash: 571ddae0757691cd7fee301076f0b1310749531d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: 98809dca503d03d3d592161608fa9a6fa0e5d394
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657466"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488350"
 ---
 # <a name="finger-painting-in-skiasharp"></a>SkiaSharp에서 손가락 페인팅
 
@@ -22,7 +22,7 @@ _캔버스에 그릴 손가락을 사용 합니다._
 
 `SKPath` 개체를 지속적으로 업데이트 하 고 표시할 수 있습니다. 이 기능은 손가락 프로그램에서와 같은 대화형 그리기에 사용할 경로입니다.
 
-![](finger-paint-images/fingerpaintsample.png "손가락 페인팅 연습")
+![](finger-paint-images/fingerpaintsample.png "An exercise in finger painting")
 
 Xamarin.Forms의 터치 지원을 Xamarin.Forms 터치 추적 효과 추가 터치 지원을 제공 하기 위해 개발 되었습니다 하므로 화면의 각 손가락을 추적 하는 것을 허용 하지 않습니다. 이 효과 문서에서 설명한 [ **효과의 이벤트를 호출**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)합니다. 샘플 프로그램 [ **터치 추적 효과 데모** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) SkiaSharp, 손가락 프로그램을 포함 하 여 사용 하는 두 개의 페이지가 포함 됩니다.
 
@@ -53,7 +53,7 @@ Xamarin.Forms의 터치 지원을 Xamarin.Forms 터치 추적 효과 추가 터�
 
 연결 된 `TouchEffect` 직접는 `SKCanvasView` 모든 플랫폼에서 작동 하지 않습니다.
 
-합니다 [ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) 저장 하기 위한 두 개의 컬렉션을 정의 하는 코드 숨김 파일을 `SKPath` 개체 뿐만 `SKPaint` 이러한 경로 렌더링 하는 것에 대 한 개체:
+합니다 [ **FingerPaintPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) 저장 하기 위한 두 개의 컬렉션을 정의 하는 코드 숨김 파일을 `SKPath` 개체 뿐만 `SKPaint` 이러한 경로 렌더링 하는 것에 대 한 개체:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -165,7 +165,7 @@ public partial class FingerPaintPage : ContentPage
 
 에 손가락 회화 재능에 의해서만 제한 됩니다.
 
-[![](finger-paint-images/fingerpaint-small.png "손가락으로 그리기 페이지 스크린샷 삼중")](finger-paint-images/fingerpaint-large.png#lightbox "삼중 손가락으로 그리기 페이지 스크린샷")
+[![](finger-paint-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](finger-paint-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
 
 이제 선을 그리려면 매개 방정식을 사용 하 여 곡선을 정의 하는 방법을 살펴봤습니다. 이후 섹션에서 [ **SkiaSharp 곡선 및 경로** ](../curves/index.md) 다양 한 종류 곡선에 설명 하는 `SKPath` 지원 합니다. 유용한 필수 구성 요소에 이지만 [ **SkiaSharp 변환**](../transforms/index.md)합니다.
 

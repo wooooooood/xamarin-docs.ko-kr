@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2018
-ms.openlocfilehash: ec5c6e4c4c47995e78c1819007a8fa5660873bd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 6d83afa47c459633506736b2497a82c444352c90
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026588"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488935"
 ---
 # <a name="troubleshooting-tips"></a>문제 해결 팁
 
@@ -36,7 +36,7 @@ Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 1. **도구 > 옵션 ...** 을 클릭 합니다.
 2. 왼쪽 트리 보기에서 **프로젝트 및 솔루션 > 빌드 및 실행** 을 선택 합니다.
 3. 오른쪽 패널에서 MSBuild 빌드 출력 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
-4. **확인**을 클릭합니다.
+4. **확인** 을 클릭합니다.
 5. 패키지를 지우고 다시 빌드합니다.
 6. 진단 출력이 출력 패널에 표시 됩니다.
 
@@ -45,7 +45,7 @@ Mac용 Visual Studio/OS X 내에서 진단 MSBuild 출력을 사용 하려면 �
 1. **Mac용 Visual Studio > 기본 설정** ...을 클릭 합니다.
 2. 왼쪽 트리 뷰에서 **프로젝트 > 빌드** 를 선택 합니다.
 3. 오른쪽 패널에서 로그 세부 정보 표시 드롭다운을 진단으로 설정 합니다.
-4. **확인**을 클릭합니다.
+4. **확인** 을 클릭합니다.
 5. Mac용 Visual Studio 다시 시작
 6. 패키지를 지우고 다시 빌드합니다.
 7. 빌드 출력 단추를 클릭 하 여 오류 패드 (**보기 > 패드 > 오류** ) 내에 진단 출력이 표시 됩니다.
@@ -464,7 +464,7 @@ mAdapter = new SimpleExpandableListAdapter (
 );
 ```
 
-문제는 Xamarin.ios에서 중첩 된 제네릭 형식을 잘못 마샬링하는 것입니다. 이 `List<IDictionary<string, object>>`은 [java.lang.ArrrayList](xref:Java.Util.ArrayList)로 마샬링될 때, `ArrayList`는 `mono.android.runtime.JavaObject`java.util.Map`Dictionary<string, object>`을 구현 하는 항목 대신 [인스턴스를 참조 하는 ](xref:Java.Util.IMap) 인스턴스를 포함 합니다. 다음 예외가 발생 합니다.
+문제는 Xamarin.ios에서 중첩 된 제네릭 형식을 잘못 마샬링하는 것입니다. 이 `List<IDictionary<string, object>>`은 [java.lang.ArrrayList](xref:Java.Util.ArrayList)로 마샬링될 때, `ArrayList`는 [java.util.Map](xref:Java.Util.IMap)을 구현 하는 항목 대신 `Dictionary<string, object>`인스턴스를 참조 하는 `mono.android.runtime.JavaObject` 인스턴스를 포함 합니다. 다음 예외가 발생 합니다.
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -478,7 +478,7 @@ E/AndroidRuntime( 2991):        at android.widget.ListView.fillFromTop(ListView.
 E/AndroidRuntime( 2991):        at android.widget.ListView.layoutChildren(ListView.java:1622)
 ```
 
-해결 방법은 [내부](~/android/internals/api-design.md) 형식에대한 `System.Collections.Generic`형식 대신 제공된 &ldquo;Java 컬렉션 형식&rdquo;을 사용하는 것 입니다. 그러면 인스턴스를 마샬링할 때 적절 한 Java 형식이 생성 됩니다. (다음 코드는 gref 수명을 줄이기 위해 필요한 것 보다 더 복잡 합니다. `s/List/JavaList/g`를 통해 원래 코드를 변경 하는 것이 간단 하 고 gref 수명이 염려 되지 않는 경우 `s/Dictionary/JavaDictionary/g` 수 있습니다.
+해결 방법은 &ldquo;내부&rdquo; 형식에대한 `System.Collections.Generic`형식 대신 제공된 [Java 컬렉션 형식](~/android/internals/api-design.md)을 사용하는 것 입니다. 그러면 인스턴스를 마샬링할 때 적절 한 Java 형식이 생성 됩니다. (다음 코드는 gref 수명을 줄이기 위해 필요한 것 보다 더 복잡 합니다. `s/List/JavaList/g`를 통해 원래 코드를 변경 하는 것이 간단 하 고 gref 수명이 염려 되지 않는 경우 `s/Dictionary/JavaDictionary/g` 수 있습니다.
 
 ```csharp
 // insert good code here
@@ -526,7 +526,7 @@ E/mono(15202):   at Android.Views.View+IOnTouchListenerAdapter.n_OnTouch_Landroi
 E/mono(15202):   at (wrapper dynamic-method) object:b039cbb0-15e9-4f47-87ce-442060701362 (intptr,intptr,intptr,intptr)
 ```
 
-로 구분하거나 여러
+또는
 
 ```shell
 E/mono    ( 4176): Unhandled Exception:
@@ -662,7 +662,7 @@ X86 기반 장치에서 [AOT + LLVM](~/android/deploy-test/release-prep/index.md
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-[56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111)에 보고 된 알려진 문제입니다. 해결 방법은 LLVM을 사용 하지 않도록 설정 하는 것입니다.
+이것은 알려진 문제입니다. 해결 방법은 LLVM을 사용 하지 않도록 설정 하는 것입니다.
