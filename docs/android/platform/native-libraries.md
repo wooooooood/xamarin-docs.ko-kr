@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 7ef9e0415d7d1e5fe75be70e0ccf6e06a5eaf332
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7d69e99327aa3d3e3e1f5e5dbc61697d1fb9b71
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027069"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489169"
 ---
 # <a name="using-native-libraries"></a>네이티브 라이브러리 사용
 
@@ -52,7 +52,7 @@ C++ C++ **동적 공유 라이브러리 (Android)** 프로젝트에 프로젝트
 2. **디버깅 옵션**으로 스크롤합니다.
 3. **디버거** 드롭다운 메뉴에서 기본 **C++** **.net (Xamarin)** 대신를 선택 합니다.
 
-Visual Studio C++ 개발자가 visual studio 2019 또는 visual studio 2017 C++ 에서 Xamarin을 사용 하 여 디버깅을 시도 하는 [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) 샘플을 볼 수 있습니다. 자세한 내용은 [블로그 게시물](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) 을 참조 하세요.
+Visual Studio C++ 개발자는 visual studio 2019 또는 visual studio 2017 C++ 에서 Xamarin을 사용 하 여 디버깅을 시도 하는 [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk) 샘플을 볼 수 있습니다. 자세한 내용은 [블로그 게시물](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) 을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

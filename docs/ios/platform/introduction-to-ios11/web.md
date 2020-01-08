@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/12/2017
-ms.openlocfilehash: ef9577aad756ae67ac9fed685d7e40faea33c316
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c52ac3c0f06d58ab5fff8228ca3bdf722056b5b6
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032060"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663449"
 ---
 # <a name="webkit-and-safari-changes-in-ios-11"></a>IOS 11의 WebKit 및 Safari 변경 내용
 
@@ -20,7 +20,7 @@ iOS 11에는 WebKit 및 SafariServices에 대 한 변경 내용이 포함 된 sa
 
 ## <a name="safariservices"></a>SafariServices
 
-`SFSafariViewController`는 웹 콘텐츠를 표시 하거나 앱에서 사용자를 인증 하는 옵션으로 iOS 9에서 도입 되었습니다. 해당 기능에 대 한 자세한 내용은 [웹 보기](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) 가이드에서 찾을 수 있습니다.
+`SFSafariViewController`는 웹 콘텐츠를 표시 하거나 앱에서 사용자를 인증 하는 옵션으로 iOS 9에서 도입 되었습니다. 해당 기능에 대 한 자세한 내용은 [웹 보기](~/ios/user-interface/controls/webview.md#sfsafariviewcontroller) 가이드에서 찾을 수 있습니다.
 
 iOS 11은 Safari 보기 컨트롤러에 대 한 스타일 업데이트를 도입 하 여 사용자에 게 앱과 웹 간의 원활한 환경을 제공 합니다. 예를 들어 주소 표시줄을 제거 하면 이제 미니 브라우저가 아닌 앱 내 브라우저의 느낌이 Safari 보기 컨트롤러에 제공 됩니다. `preferredBarTintColor` 및 `PreferredControlTintColor` 속성을 설정 하 여 앱의 색 구성표에 맞게 색 구성표를 사용자 지정할 수도 있습니다.
 
@@ -66,7 +66,7 @@ Apple은 iOS 11의 `WKWebView`에 대 한 세 가지 주요 개선 사항을 도
 
 - 쿠키를 관리 하는 기능
 - 콘텐츠 필터링
-- 사용자 지정 리소스 로드 
+- 사용자 지정 리소스 로드
 
 쿠키 관리는 새 [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) 클래스를 통해 수행 됩니다 .이 클래스를 사용 하 여 쿠키를 추가 및 삭제 하 고, WKWebView에 저장 된 모든 쿠키를 가져오고, 쿠키 저장소에서 변경 내용을 관찰할 수 있습니다.
 

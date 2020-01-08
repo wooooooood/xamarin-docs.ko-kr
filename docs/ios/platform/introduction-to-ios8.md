@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 2da018b3595850582331280909fa327cee4ff6e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031813"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489208"
 ---
 # <a name="introduction-to-ios-8"></a>iOS 8 소개
 
 _IOS 8을 사용 하 여 Apple은 흥미 및 즐거움 개발자에 게 새로운 프레임 워크 및 Api 다양 한을 제공 했습니다. 이 가이드에서는 이러한 새 Api를 소개 하 고 iOS 8에서 개발자와 사용자 모두에 게 어떤 이점을 누릴 수 있는지 확인 합니다._
 
-iOS 7은 사용자 및 개발자가 첫 번째 iPhone OS에서 제공 하는 것과 같은 전체 iOS 사용자 인터페이스를 시각적으로 변경 했습니다. IOS 8은 개발자를 위한 많은 프레임 워크를 제공 하 여이를 계속 합니다 .이를 통해 사용자는 iPhone에서 직접 일상의 거의 모든 측면을 제어할 수 있습니다. 예를 들어 *HealthKit*를 사용 하 여 상태 및 적합성을 분석할 수 있으며, 암호는 *localauthentication*을 사용 하 여 생체 인식 인증을 사용 하 여 sal, *앱 확장* 은 타사 앱 *간의 통신 채널을 엽니다. HomeKit* 를 사용 하면 집을 미래 홈으로 전환할 수 있습니다. 
+iOS 7은 사용자 및 개발자가 첫 번째 iPhone OS에서 제공 하는 것과 같은 전체 iOS 사용자 인터페이스를 시각적으로 변경 했습니다. IOS 8은 개발자를 위한 많은 프레임 워크를 제공 하 여이를 계속 합니다 .이를 통해 사용자는 iPhone에서 직접 일상의 거의 모든 측면을 제어할 수 있습니다. 예를 들어 *HealthKit*를 사용 하 여 상태 및 적합성을 분석할 수 있으며, 암호는 *localauthentication*을 사용 하 여 생체 인식 인증을 사용 하 고, *앱 확장* 은 타사 앱 간에 통신 채널을 열고, *HomeKit* 를 사용 하 여 집을 미래 홈으로 전환할 수 있습니다. 
 
 IOS 7이 만족 사용자에 대 한 것 이라면 iOS 8은 이러한 맛의 전체 범위를 갖춘 만족 개발자에 게 주력 합니다. 
 
@@ -44,7 +44,7 @@ IPhone에서 어플라이언스를 제어 하는 것은 새로운 기술의 응�
 
 HomeKit를 사용 하 여 타사 앱 및 Siri는 액세서리를 검색 하 고 개인 홈 구성 데이터베이스에 추가 하 고,이 데이터를 편집 하 고 작업 하며, 액세서리 및 해당 서비스와 통신 하 여 작업을 수행할 수 있습니다.
 
-### <a name="configuration"></a>Configuration
+### <a name="configuration"></a>구성
 
 아래 다이어그램은 HomeKit 액세서리 구성의 기본 계층을 보여 줍니다.
 
@@ -93,7 +93,7 @@ Touch ID는 암호와 유사 하 게 사용자를 인증 하는 수단으로 iOS
 
 두 번째로 LocalAuthentication은 응용 프로그램을 로컬로 인증 하는 두 가지 방법을 제공 합니다. 개발자는 `CanEvaluatePolicy`를 사용 하 여 장치에서 Touch ID를 수락할 수 있는지 확인 한 다음 `EvaluatePolicy` 하 여 인증 작업을 시작 해야 합니다.
 
-Touch ID에 대 한 자세한 내용과 Xamarin.ios 응용 프로그램에 통합 하는 방법에 대 한 자세한 내용은 [TouchID 가이드 소개](~/ios/platform/touchid.md) 를 참조 하세요.
+Touch ID에 대 한 자세한 내용과 Xamarin.ios 응용 프로그램에 통합 하는 방법에 대 한 자세한 내용은 [xamarin.ios 가이드의 TOUCH id 및 얼굴 id](~/ios/platform/touch-id-face-id.md) 를 참조 하세요.
 
 ### <a name="document-picker"></a>문서 선택기
 
@@ -172,5 +172,5 @@ IOS 8에서 향상 된 기능을 사용 하는 경우 다양 한 Api가 사용 �
 - [문서 선택기 소개](~/ios/platform/document-picker.md)
 - [HealthKit 소개](~/ios/platform/healthkit.md)
 - [수동 카메라 컨트롤 소개](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [TouchID 소개](~/ios/platform/touchid.md)
+- [Xamarin.ios를 사용 하는 Touch id 및 얼굴 ID](~/ios/platform/touch-id-face-id.md)
 - [통합 Storyboard 소개](~/ios/user-interface/storyboards/unified-storyboards.md)

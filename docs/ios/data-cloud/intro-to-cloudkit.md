@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 01c8df7cc17c71cd2ddd55e7ed1f5a8e21617604
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 29ccb919f68a45212bff3b66b4bc3fbdebd24faf
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030459"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663462"
 ---
 # <a name="cloudkit-in-xamarinios"></a>Xamarin.ios의 CloudKit
 
@@ -33,9 +33,9 @@ CloudKit 프레임 워크는 iCloud에 액세스 하는 응용 프로그램 개�
 
 ## <a name="what-is-cloudkit"></a>CloudKit 이란?
 
-CloudKit는 개발자에 게 iCloud 서버에 대 한 액세스 권한을 제공 하는 방법입니다. ICloud 드라이브 및 iCloud 사진 라이브러리의 기반을 제공 합니다. CloudKit는 Mac OS X 및 Apple iOS 장치 모두에서 지원 됩니다.
+CloudKit는 개발자에 게 iCloud 서버에 대 한 액세스 권한을 제공 하는 방법입니다. ICloud 드라이브 및 iCloud 사진 라이브러리의 기반을 제공 합니다. CloudKit는 macOS와 iOS 장치 모두에서 지원 됩니다.
 
- [![](intro-to-cloudkit-images/image1.png "How CloudKit is supported on both Mac OS X and Apple iOS Devices")](intro-to-cloudkit-images/image1.png#lightbox)
+[macOS와 iOS 장치 둘 다에서 CloudKit를 지 원하는 방법 ![](intro-to-cloudkit-images/image1.png)](intro-to-cloudkit-images/image1.png#lightbox)
 
 CloudKit는 iCloud 계정 인프라를 사용 합니다. 장치에서 iCloud 계정에 로그인 한 사용자가 있는 경우 CloudKit는 해당 ID를 사용 하 여 사용자를 식별 합니다. 사용할 수 있는 계정이 없으면 제한 된 읽기 전용 액세스 권한이 제공 됩니다.
 
@@ -50,23 +50,24 @@ CloudKit는 구조화 된 데이터와 대량 데이터를 모두 지원 합니�
 
 ## <a name="enabling-cloudkit-in-a-xamarin-application"></a>Xamarin 응용 프로그램에서 CloudKit 사용
 
-Xamarin 응용 프로그램에서 CloudKit 프레임 워크를 사용 하려면 먼저 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 및 [자격 가이드 작업](~/ios/deploy-test/provisioning/entitlements.md) 에 설명 된 대로 응용 프로그램을 올바르게 프로 비전 해야 합니다.
+Xamarin 응용 프로그램에서 CloudKit 프레임 워크를 사용 하려면 먼저 [기능 사용](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) 및 [자격 가이드 작업](~/ios/deploy-test/provisioning/entitlements.md) 에서 자세히 설명 된 대로 응용 프로그램을 올바르게 프로 비전 해야 합니다.
+
+CloudKit에 액세스 하려면 **info.plist** 파일에 **iCloud**, **키-값 저장소**및 **cloudkit** 사용 권한을 포함 해야 합니다.
+
+### <a name="sample-app"></a>샘플 앱
+
+[CloudKitAtlas 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) 에서는 Xamarin과 함께 cloudkit를 사용 하는 방법을 보여 줍니다. 아래 단계에서는 샘플을 구성 하는 방법을 보여 줍니다. CloudKit에만 필요한 것 외에 추가 설정이 필요 합니다.
 
 1. Mac용 Visual Studio 또는 Visual Studio에서 프로젝트를 엽니다.
 2. **솔루션 탐색기**에서 **info.plist** 파일을 열고 **번들 식별자** 가 프로 비전 설정의 일부로 만든 **앱 ID** 에 정의 된 것과 일치 하는지 확인 합니다.
-
-    [![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
-
-3. **Info.plist** 파일의 아래쪽으로 스크롤하고 **사용 하도록 설정 된 백그라운드 모드**, **위치 업데이트** 및 **원격 알림**을 선택 합니다.
-
-    [![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
+3. **Info.plist** 파일의 아래쪽으로 스크롤하고 **사용 하도록 설정 된 백그라운드 모드**, **위치 업데이트**및 **원격 알림**을 선택 합니다.
 4. 솔루션에서 iOS 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **옵션**을 선택 합니다.
 5. **IOS 번들 서명**을 선택 하 고 위에서 만든 **개발자 Id** 및 **프로 비전 프로필** 을 선택 합니다.
-6. **Info.plist** 에 iCloud, **키-값 저장소** 및 **cloudkit** **사용** 이 포함 되어 있는지 확인 합니다.
-7. 위에서 만든 응용 프로그램에 대 한 **어디 컨테이너가** 있는지 확인 합니다. 예: `iCloud.com.your-company.CloudKitAtlas`
+6. **Info.plist** 에 iCloud, **키-값 저장소**및 **cloudkit** **사용**이 포함 되어 있는지 확인 합니다.
+7. 응용 프로그램에 대 한 **어디 컨테이너가** 있는지 확인 합니다. 예: `iCloud.com.your-company.CloudKitAtlas`
 8. 파일의 변경 내용을 저장합니다.
 
-이러한 설정이 적용 되 면 응용 프로그램은 이제 CloudKit 프레임 워크 Api에 액세스할 준비가 되었습니다.
+이러한 설정이 적용 된 후 샘플 앱은 이제 CloudKit 프레임 워크 Api 뿐만 아니라 백그라운드, 위치 및 notification services에 액세스할 준비가 되었습니다.
 
 ## <a name="cloudkit-api-overview"></a>CloudKit API 개요
 
@@ -102,15 +103,11 @@ CloudKit는 위에 나열 된 것과 동일한 이점을 제공 하 고 클라�
 
 컨테이너는 응용 프로그램 개발자가 WWDR 포털을 통해 완전히 관리 됩니다. 컨테이너의 네임 스페이스는 모든 Apple 개발자에 게 전역적 이므로 컨테이너는 지정 된 개발자의 응용 프로그램에 대해서만 고유 하 고 모든 Apple 개발자 및 응용 프로그램에 대해 고유할 필요는 없습니다.
 
-Apple은 응용 프로그램 컨테이너의 네임 스페이스를 만들 때 역방향 DNS 표기법을 사용 하는 것을 제안 합니다. 예제:
-
-```csharp
-iCloud.com.company-name.application-name
-```
+Apple은 응용 프로그램 컨테이너의 네임 스페이스를 만들 때 역방향 DNS 표기법을 사용 하는 것을 제안 합니다. 예: `iCloud.com.company-name.application-name`
 
 컨테이너는 기본적으로 지정 된 응용 프로그램에 대해 일대일로 바인딩되고 응용 프로그램 간에 공유할 수 있습니다. 따라서 여러 응용 프로그램이 단일 컨테이너에서 조정 될 수 있습니다. 단일 응용 프로그램은 여러 컨테이너와 통신할 수도 있습니다.
 
-### <a name="databases"></a>Databases
+### <a name="databases"></a>데이터베이스
 
 CloudKit의 주요 기능 중 하나는 응용 프로그램의 데이터 모델 및 복제를 사용 하 여 iCloud 서버를 모델링 하는 것입니다. 일부 정보는이를 만든 사용자를 위한 것 이며, 다른 정보는 식당 리뷰와 같이 사용자가 공개적으로 사용 하 여 만들 수 있는 공용 데이터 또는 개발자가 응용 프로그램에 대해 게시 한 정보 일 수 있습니다. 두 경우 모두 대상 그룹은 단일 사용자가 아니라 사람의 커뮤니티입니다.
 
@@ -130,11 +127,11 @@ IOS 장치에서 실행 되는 경우 응용 프로그램은 현재 로그온 �
 
 ```csharp
 using CloudKit;
-...
+//...
 
 public CKDatabase PublicDatabase { get; set; }
 public CKDatabase PrivateDatabase { get; set; }
-...
+//...
 
 // Get the default public and private databases for
 // the application
@@ -147,7 +144,7 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 ||공용 데이터베이스|전용 데이터베이스|
 |---|--- |--- |
 |**데이터 형식**|공유 데이터|현재 사용자의 데이터|
-|**양보다**|개발자 할당량에서의 고려|사용자의 할당량에 대 한 고려|
+|**할당량**|개발자 할당량에서의 고려|사용자의 할당량에 대 한 고려|
 |**기본 권한**|전 세계 읽기|사용자가 읽을 수 있음|
 |**편집 권한**|레코드 클래스 수준을 통한 iCloud 대시보드 역할|해당 사항 없음|
 
@@ -181,10 +178,10 @@ PrivateDatabase = CKContainer.DefaultContainer.PrivateCloudDatabase;
 
 ```csharp
 using CloudKit;
-...
+//...
 
 private const string ReferenceItemRecordName = "ReferenceItems";
-...
+//...
 
 var newRecord = new CKRecord (ReferenceItemRecordName);
 newRecord ["name"] = (NSString)nameTextField.Text;
@@ -221,7 +218,7 @@ await CloudManager.SaveAsync (newRecord);
 var recordID =  new CKRecordID("My Record");
 ```
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 참조는 지정 된 데이터베이스 내에서 관련 레코드 간의 관계를 제공 합니다.
 
@@ -302,13 +299,10 @@ namespace CloudKitAtlas
     [Register ("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        #region Computed Properties
         public override UIWindow Window { get; set;}
         public CKDatabase PublicDatabase { get; set; }
         public CKDatabase PrivateDatabase { get; set; }
-        #endregion
 
-        #region Override Methods
         public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
         {
             application.RegisterForRemoteNotifications ();
@@ -335,7 +329,6 @@ namespace CloudKitAtlas
         {
             Console.WriteLine ("Push received");
         }
-        #endregion
     }
 }
 ```
@@ -346,13 +339,11 @@ namespace CloudKitAtlas
 
 ```csharp
 using CloudKit;
-...
+//...
 
-#region Computed Properties
 public AppDelegate ThisApp {
     get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
 }
-#endregion
 ```
 
 그러면 `AppDelegate`에 대 한 바로 가기가 추가 되 고 위에서 만든 공용 및 개인 데이터베이스 바로 가기에 액세스할 수 있습니다.
@@ -496,7 +487,7 @@ CloudKit는 쿼리를 사용할 때 다음과 같은 유형의 `NSPredicates` �
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
 
-#### <a name="creating-queries"></a>쿼리 작성
+#### <a name="creating-queries"></a>쿼리 만들기
 
 다음 코드를 사용 하 여 Xamarin iOS 8 응용 프로그램에서 `CKQuery`를 만들 수 있습니다.
 
@@ -635,7 +626,7 @@ public override void ReceivedRemoteNotification (UIApplication application, NSDi
 
 이 문서의 시작 부분에서 언급 했 듯이 CloudKit는 기존 iCloud 인프라를 기반으로 빌드됩니다. 다음 섹션에서는 CloudKit API를 사용 하 여 개발자에 게 계정을 노출 하는 방법에 대해 자세히 설명 합니다.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 사용자 계정을 처리할 때 첫 번째 고려 사항은 인증입니다. CloudKit는 장치에서 현재 로그인 한 iCloud 사용자를 통한 인증을 지원 합니다. 인증은 백그라운드에서 수행 되며 iOS에서 처리 됩니다. 이러한 방식으로 개발자는 인증 구현에 대 한 세부 정보를 걱정 하지 않아도 됩니다. 사용자가 로그온 되어 있는지만 테스트 합니다.
 
@@ -650,7 +641,7 @@ CloudKit는 개발자에 게 다음과 같은 사용자 정보를 제공 합니�
 
 다음에는 이러한 항목에 대해 자세히 살펴보겠습니다.
 
-#### <a name="identity"></a>클레임
+#### <a name="identity"></a>항등
 
 위에서 설명한 것 처럼 CloudKit는 응용 프로그램이 지정 된 사용자를 고유 하 게 식별할 수 있는 방법을 제공 합니다.
 
@@ -750,7 +741,7 @@ CloudKit는 기본적으로 현재 로그온 한 사용자의 개인 정보 보�
 
 ```csharp
 public CKDiscoveredUserInfo UserInfo { get; set; }
-...
+//...
 
 // Get the user's metadata
 CKContainer.DefaultContainer.DiscoverUserInfo(UserID, (info, e) => {
@@ -863,6 +854,6 @@ CloudKit를 사용 하는 응용 프로그램을 전달 하기 전에 **프로�
 
 ## <a name="related-links"></a>관련 링크
 
+- [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
 - [CloudKitAtlas (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
-- [iOS 8 소개](~/ios/platform/introduction-to-ios8.md)
 - [프로 비전 프로필 만들기](~/ios/get-started/installation/device-provisioning/index.md)

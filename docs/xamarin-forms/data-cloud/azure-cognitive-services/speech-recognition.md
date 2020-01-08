@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 97997a527647ae972eadff47da8c1321d5d55daa
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.openlocfilehash: eca079972f4e46c0cf60c4749658ff9a7fe1791b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655462"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489806"
 ---
 # <a name="speech-recognition-using-the-microsoft-speech-api"></a>Microsoft Speech API를 사용 하 여 음성 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_Microsoft Speech API는 음성된 언어를 처리 하는 알고리즘을 제공 하는 클라우드 기반 API입니다. 이 문서에는 오디오 Xamarin.Forms 응용 프로그램에서 텍스트를 변환 하려면 Microsoft Speech Recognition REST API를 사용 하는 방법을 설명 합니다._
+_Microsoft Speech API는 음성 언어를 처리 하는 알고리즘을 제공 하는 클라우드 기반 API입니다. 이 문서에서는 Microsoft 음성 인식 REST API를 사용 하 여 Xamarin.ios 응용 프로그램에서 오디오를 텍스트로 변환 하는 방법을 설명 합니다._
 
 ## <a name="overview"></a>개요
 
@@ -28,6 +28,9 @@ Microsoft Speech API에는 두 가지 구성 요소에 있습니다.
 - 텍스트를 음성 API 음성 텍스트 변환에 대 한 합니다. 텍스트 음성 변환 REST API를 통해 수행 됩니다.
 
 이 문서에서는 REST API를 통해 음성 인식을 수행에 중점을 둡니다. 클라이언트 및 서비스 라이브러리를 지원 하지만 일부 결과 반환, REST API만 부분 결과 없이 단일 인식 결과 반환할 수 있습니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 Microsoft Speech API를 사용 하는 API 키를 가져와야 합니다. Azure에서 가져올 수 있습니다 [포털](https://portal.azure.com/)합니다. 자세한 내용은 [Azure portal에서 Cognitive Services 계정을 만드는](/azure/cognitive-services/cognitive-services-apis-create-account)합니다.
 
@@ -161,7 +164,7 @@ API 응답에 포함 되 고 인식된 된 텍스트를 사용 하 여 JSON 형�
 
 샘플 응용 프로그램에서 JSON 응답으로 deserialize 하는 `SpeechResult` 다음 스크린샷과에서 같이 표시에 대 한 호출 메서드로 반환 되는 결과 사용 하 여 인스턴스:
 
-![](speech-recognition-images/speech-recognition.png "음성 인식")
+![](speech-recognition-images/speech-recognition.png "Speech Recognition")
 
 ## <a name="summary"></a>요약
 

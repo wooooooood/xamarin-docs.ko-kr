@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: 4b3bf1fcc6be7713c87b16ef9ec083189793b324
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e9f910804f3da9d173206d51c59e1d7ddd9b90a6
+ms.sourcegitcommit: bad1ab3f78d7f94d48511666626b54f8ba155689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008065"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663514"
 ---
 # <a name="data-and-cloud-services-in-xamarinios-apps"></a>Xamarin.ios 앱의 데이터 및 Cloud Services
 
@@ -22,7 +22,7 @@ ms.locfileid: "73008065"
 
 ## <a name="icloudiosdata-cloudintroduction-to-icloudmd"></a>[iCloud](~/ios/data-cloud/introduction-to-icloud.md)
 
-IOS 5의 iCloud 저장소 API를 사용 하면 응용 프로그램에서 사용자 문서 및 응용 프로그램별 데이터를 중앙 위치에 저장 하 고 모든 사용자의 장치에서 이러한 항목에 액세스할 수 있습니다.
+ICloud 저장소 API를 사용 하면 응용 프로그램에서 사용자 문서 및 응용 프로그램별 데이터를 중앙 위치에 저장 하 고 모든 사용자의 장치에서 이러한 항목에 액세스할 수 있습니다.
 
 ## <a name="cloudkitiosdata-cloudintro-to-cloudkitmd"></a>[CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
 

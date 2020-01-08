@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 3f3b9c84fad0bce8939187fcd0c91d18314ce8ab
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2162fba1275b66167965e90aeade721e08ea9130
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032635"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489325"
 ---
 # <a name="accessibility-on-macos"></a>MacOS의 접근성
 
@@ -23,7 +23,7 @@ ms.locfileid: "73032635"
 
 ## <a name="describing-ui-elements"></a>UI 요소 설명
 
-AppKit는 `NSAccessibility` 프로토콜을 사용 하 여 사용자 인터페이스에 액세스할 수 있도록 돕는 Api를 노출 합니다. 여기에는 단추 `AccessibilityLabel` 설정 하는 것과 같이 내게 필요한 옵션 속성에 대 한 의미 있는 값을 설정 하는 기본 동작이 포함 됩니다. 레이블은 일반적으로 컨트롤이 나 뷰를 설명 하는 단일 단어나 짧은 문구입니다.
+AppKit는 `NSAccessibility` 프로토콜을 사용 하 여 사용자 인터페이스에 액세스할 수 있도록 돕는 Api를 노출 합니다. 여기에는 단추 `AccessibilityLabel`설정 하는 것과 같이 내게 필요한 옵션 속성에 대 한 의미 있는 값을 설정 하는 기본 동작이 포함 됩니다. 레이블은 일반적으로 컨트롤이 나 뷰를 설명 하는 단일 단어나 짧은 문구입니다.
 
 ### <a name="storyboard-files"></a>스토리 보드 파일
 
@@ -37,14 +37,14 @@ Xcode Interface Builder를 사용 하 여 스토리 보드 파일을 편집 합�
 Xamarin.ios는 현재 `AccessibilityLabel` setter로 노출 되지 않습니다.  다음 도우미 메서드를 추가 하 여 액세스 가능성 레이블을 설정 합니다.
 
 ```csharp
-public static class AccessibilityHelper
+public static class AccessibilityHelper
 {
-    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
-    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
+    [System.Runtime.InteropServices.DllImport (ObjCRuntime.Constants.ObjectiveCLibrary)]
+    extern static void objc_msgSend (IntPtr handle, IntPtr selector, IntPtr label);
 
-    static public void SetAccessibilityLabel (this NSView view, string value)
+    static public void SetAccessibilityLabel (this NSView view, string value)
     {
-        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
+        objc_msgSend (view.Handle, new ObjCRuntime.Selector ("setAccessibilityLabel:").Handle, new NSString (value).Handle);
     }
 }
 ```

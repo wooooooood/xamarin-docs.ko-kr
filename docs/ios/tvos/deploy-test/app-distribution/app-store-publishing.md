@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: f49fa08e5d9b2ad76fc069b415d6ea5b899b2bf7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a3d0962eb8253ca72b6afce77036e02a7aa59b94
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030784"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607895"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Apple TV App Store에 게시
 
@@ -91,7 +91,7 @@ Mac용 Visual Studio에서 다음을 수행 합니다.
 5. 앱 ID를 정의할 때 위에서 수행한 설정과 일치 하도록 tvOS 앱에 필요한 자격을 선택 하 고 구성 합니다.
 6. 변경 내용을 `Entitlements.plist` 파일에 저장합니다.
 
-자세한 지침은 [애플리케이션 서비스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) 설명서를 참조하세요. 이 문서를 iOS 용으로 작성 하는 동안에는 동일한 단계를 사용 하 여 tvOS 앱을 프로 비전 합니다.
+자세한 지침은 [애플리케이션 서비스 프로비전](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) 설명서를 참조하세요. 이 문서를 iOS 용으로 작성 하는 동안에는 동일한 단계를 사용 하 여 tvOS 앱을 프로 비전 합니다.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 

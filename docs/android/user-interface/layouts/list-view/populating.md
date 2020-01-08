@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2017
-ms.openlocfilehash: fda021eb90feba1fed2352ef7f771f5583b00920
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7ec5537345536884e2dc3da02ab54a3ca00f760e
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028855"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607973"
 ---
 # <a name="populating-a-xamarinandroid-listview-with-data"></a>Xamarin Android ListView를 데이터로 채우기
 
@@ -33,7 +33,6 @@ public class HomeScreen : ListActivity {
        items = new string[] { "Vegetables","Fruits","Flower Buds","Legumes","Bulbs","Tubers" };
        ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
    }
-   protected override void OnListItemClick(ListView l, View v, int position, long id)
 }
 ```
 
@@ -41,7 +40,7 @@ public class HomeScreen : ListActivity {
 
 일반적으로 `ListView`는 사용자가 특정 작업 (예: 노래 재생, 연락처 호출 또는 다른 화면 표시)을 수행할 수 있습니다. 사용자에 게 응답 하려면 `ListActivity` &ndash; `OnListItemClick` &ndash;에서 구현 된 메서드를 하나 이상 사용 해야 합니다. 예를 들면 다음과 같습니다.
 
-[SimpleListItem의![스크린샷](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
+[SimpleListItem의 ![스크린샷](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -53,7 +52,7 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 이제 사용자가 행을 터치 하 고 `Toast` 경고가 표시 됩니다.
 
-[행이 작업 될 때 표시 되는 알림 스크린샷![](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
+[행이 작업 될 때 표시 되는 알림 스크린샷 ![](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
 ## <a name="implementing-a-listadapter"></a>ListAdapter 구현
 
@@ -137,7 +136,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 빠른 스크롤을 사용 하면 목록의 일부에 직접 액세스 하는 스크롤 막대 역할을 하는 추가 ' 핸들 '을 제공 하 여 긴 목록을 스크롤할 수 있습니다. 이 스크린샷은 빠른 스크롤 핸들을 보여 줍니다.
 
-[스크롤 핸들을 사용 하 여 빠른 스크롤의![스크린샷](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
+[스크롤 핸들을 사용 하 여 빠른 스크롤의 ![스크린샷](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 빠른 스크롤 핸들을 표시 하는 것은 `FastScrollEnabled` 속성을 `true`로 설정 하는 것 처럼 간단 합니다.
 
@@ -149,7 +148,7 @@ ListView.FastScrollEnabled = true;
 
 섹션 인덱스는 긴 목록을 통해 빠르게 스크롤할 때 사용자에 대 한 추가 피드백을 제공 하며,이는 스크롤 한 ' 섹션 '을 보여 &ndash; 합니다. 섹션 인덱스를 표시 하려면 어댑터 하위 클래스가 표시 되는 행에 따라 인덱스 텍스트를 제공 하기 위해 `ISectionIndexer` 인터페이스를 구현 해야 합니다.
 
-[H (H)로 시작 하는 앞의 섹션에 표시 된 H의![스크린샷](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
+[H (H)로 시작 하는 앞의 섹션에 표시 된 H의 ![스크린샷](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 `ISectionIndexer`를 구현 하려면 어댑터에 다음 세 가지 메서드를 추가 해야 합니다.
 

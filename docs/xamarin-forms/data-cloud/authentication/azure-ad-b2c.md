@@ -6,13 +6,13 @@ ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2019
-ms.openlocfilehash: c1df3adfa67a363609b397731ed298155d7531be
-ms.sourcegitcommit: 483e0ab0e9f30382219084c0345519f1025169b2
+ms.date: 12/04/2019
+ms.openlocfilehash: 946cf65f7d83722fd388bed555b9d3f35c487708
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74809035"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489819"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Azure Active Directory B2C를 사용 하 여 사용자 인증
 
@@ -26,15 +26,17 @@ ADB2C (Azure Active Directory B2C)는 소비자 지향 응용 프로그램을 �
 
 모바일 응용 프로그램에 Azure Active Directory B2C id 관리 서비스를 통합 하기 위한 프로세스는 다음과 같습니다.
 
-1. Azure Active Directory B2C 테넌트 만들기
-1. Azure Active Directory B2C 테 넌 트를 사용 하 여 모바일 응용 프로그램 등록
-1. 등록 및 로그인에 대 한 정책 만들기 및 암호 사용자 흐름 잊음
+1. Azure Active Directory B2C 테 넌 트를 만듭니다.
+1. Azure Active Directory B2C 테 넌 트를 사용 하 여 모바일 응용 프로그램을 등록 합니다.
+1. 등록 및 로그인에 대 한 정책을 만들고 암호 사용자 흐름을 잊음.
 1. MSAL (Microsoft 인증 라이브러리)을 사용 하 여 Azure Active Directory B2C 테 넌 트를 사용 하 여 인증 워크플로를 시작 합니다.
 
 > [!NOTE]
-> Azure Active Directory B2C는 Microsoft, GitHub, Facebook, Twitter 등을 비롯 한 여러 id 공급자를 지원 합니다. Azure Active Directory B2C 기능에 대 한 자세한 내용은 [Azure Active Directory B2C 설명서](/azure/active-directory-b2c/)를 참조 하세요.
->
-> Microsoft 인증 라이브러리는 여러 응용 프로그램 아키텍처 및 플랫폼을 지원 합니다. MSAL 기능에 대 한 자세한 내용은 GitHub의 [Microsoft 인증 라이브러리](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) 를 참조 하세요.
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
+
+Azure Active Directory B2C는 Microsoft, GitHub, Facebook, Twitter 등을 비롯 한 여러 id 공급자를 지원 합니다. Azure Active Directory B2C 기능에 대 한 자세한 내용은 [Azure Active Directory B2C 설명서](/azure/active-directory-b2c/)를 참조 하세요.
+
+Microsoft 인증 라이브러리는 여러 응용 프로그램 아키텍처 및 플랫폼을 지원 합니다. MSAL 기능에 대 한 자세한 내용은 GitHub의 [Microsoft 인증 라이브러리](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) 를 참조 하세요.
 
 ## <a name="configure-an-azure-active-directory-b2c-tenant"></a>Azure Active Directory B2C 테 넌 트 구성
 
@@ -181,7 +183,7 @@ public partial class LoginPage : ContentPage
                 .WithPrompt(Prompt.SelectAccount)
                 .WithParentActivityOrWindow(App.UIParent)
                 .ExecuteAsync();
-    
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)

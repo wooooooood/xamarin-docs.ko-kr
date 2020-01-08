@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ef0bcba7a59984c6bad7091431fe00b1f1b7eee3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031801"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489091"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -62,7 +62,7 @@ CloudKit 프레임 워크는 iCloud에 액세스 하는 응용 프로그램 개�
 - [Cloudkit 빠른 시작](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) -Apple의 cloudkit 소개.
 - [CLOUDKIT Js 참조](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) -Apple의 cloudkit js 설명서.
 - [Cloudkit 웹 서비스 참조](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) -cloudkit에 대 한 HTTP 인터페이스를 설명 하는 Apple의 참조입니다.
-- [CloudKit 카탈로그: Cloudkit (Cocoa 및 JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599)-CloudKit 및 CloudKit JS를 사용 하는 Apple 샘플 앱을 소개 합니다.
+- Cloudkit 카탈로그: cloudkit 및 CloudKit를 사용 하는 Apple 샘플 앱 및 cloudkit [(Cocoa 및 JavaScript)에 대 한 소개](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) 입니다.
 
 > [!IMPORTANT]
 > Apple에서는 개발자가 유럽 연합의 GDPR(일반 데이터 보호 규정)을 제대로 처리하는 데 도움이 되는 [도구를 제공합니다](https://developer.apple.com/support/allowing-users-to-manage-data/).
@@ -101,7 +101,7 @@ NSProcessInfo.ProcessInfo.EndActivity(activity);
 
 ### <a name="reacting-to-low-power-mode"></a>낮은 전원 모드로 응답
 
-[Nsprocessinfo](xref:Foundation.NSProcessInfo) 클래스의 `LowPowerModeEnabled` 속성을 사용 하 여 앱이 실행 되 고 있는 iOS 장치에서 낮은 전원 모드를 사용 하도록 설정 했는지 확인 합니다. 예:
+[Nsprocessinfo](xref:Foundation.NSProcessInfo) 클래스의 `LowPowerModeEnabled` 속성을 사용 하 여 앱이 실행 되 고 있는 iOS 장치에서 낮은 전원 모드를 사용 하도록 설정 했는지 확인 합니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 // Is the device in low power mode?
@@ -131,7 +131,7 @@ Apple에는 iOS 9의 [로컬 인증](xref:LocalAuthentication) 프레임 워크�
 - 키 집합 호출에서 _인증 컨텍스트_ 를 사용 하 고 키 집합 액세스 제어 목록을 평가 하는 기능이 제공 됩니다.
 - 코드에서 사용자 프롬프트를 취소할 수 있는 권한입니다.
 
-Xamarin.ios에서 Touch ID를 사용 하는 방법에 대 한 자세한 내용은 [TOUCH Id 소개 설명서를](~/ios/platform/touchid.md) 참조 하세요.
+자세한 내용은 [xamarin.ios를 사용 하 여 TOUCH id 및 얼굴 id](~/ios/platform/touch-id-face-id.md)를 참조 하세요.
 
 ### <a name="lacontext-changes"></a>LAContext 변경
 

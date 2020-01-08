@@ -6,12 +6,12 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: davidortinau
 ms.author: daortin
 ms.date: 01/25/2016
-ms.openlocfilehash: cc404f3995bd1f2940897f6cb84d57cea39ae44b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7764d63991ec636043982509319e7097ef2091b
+ms.sourcegitcommit: d8af612b6b3218fea396d2f180e92071c4d4bf92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016274"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75663257"
 ---
 # <a name="binding-objective-c"></a>Objective-C 바인딩
 
@@ -48,7 +48,9 @@ C Api만 바인딩하는 경우에는 P/Invoke 프레임 워크로 표준 .NET �
 
 ## <a name="mac"></a>Mac
 
-지금까지 [Mac 바인딩은](~/mac/platform/binding.md) 매우 수동 프로세스입니다. 현재 Mac용 Visual Studio의 이후 릴리스에 대 한 Mac 바인딩 프로젝트 지원 [미리 보기를 다운로드할](https://forums.xamarin.com/discussion/59760/xamarin-mac-binding-project-preview) 수 있습니다.
+[Mac 바인딩](~/mac/platform/binding.md) 지침에 따라 macos 라이브러리를 바인딩합니다. **새 프로젝트** 창에서 새 **Mac 바인딩 라이브러리** 를 만들 수 있습니다.
+
+[![파일 새 mac 바인딩 프로젝트 대화 상자](images/new-bindings-library-sml.png)](images/new-bindings-library.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

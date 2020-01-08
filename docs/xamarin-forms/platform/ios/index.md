@@ -6,13 +6,13 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
-ms.openlocfilehash: c90cfc297914b585403ae84e7dbac11fd6e02836
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.date: 12/11/2019
+ms.openlocfilehash: 5d0e289ddeb7eabef6d96c8882c772c704c54b34
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170938"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489728"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>Xamarin.ios의 iOS 플랫폼 기능
 
@@ -38,6 +38,7 @@ IOS의 Xamarin 양식 보기에 대해 다음과 같은 플랫폼별 기능이 �
 - 구분 기호 스타일을 설정 된 [ `ListView` ](xref:Xamarin.Forms.ListView)합니다. 자세한 내용은 [iOS의 ListView 구분 기호 스타일](listview-separator-style.md)을 참조 하세요.
 - 선택 항목에서 발생 하는 경우 제어는 [ `Picker` ](xref:Xamarin.Forms.Picker)합니다. 자세한 내용은 [iOS에서 선택 항목 선택 항목](picker-selection.md)을 참조 하세요.
 - 사용 하도록 설정 합니다 [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) 속성에는 위치에 탭 하 여 설정 될를 [ `Slider` ](xref:Xamarin.Forms.Slider) 끌어 필요가 하는 대신 가로 막대형,는 `Slider` thumb. 자세한 내용은 [iOS의 슬라이더 엄지 단추 탭](slider-thumb.md)을 참조 하세요.
+- `SwipeView`를 열 때 사용 되는 전환을 제어 합니다. 자세한 내용은 [SwipeView 살짝 밀기 전환 모드](swipeview-swipetransitionmode.md)를 참조 하세요.
 
 IOS의 Xamarin.ios 페이지에 대해 다음과 같은 플랫폼 관련 기능이 제공 됩니다.
 
@@ -66,7 +67,7 @@ Xamarin.ios를 사용 하면 플랫폼 간 사용자 인터페이스 스타일�
 
 **Info.plist** 구성 및 `UIAppearance` api와 같은 IOS 관련 api를 사용 하 여 사용자 인터페이스 서식 지정에 대해 [자세히](formatting.md) 알아보세요.
 
-![](images/status-white-sml.png "iOS 테마")
+![](images/status-white-sml.png "iOS Theming")
 
 ## <a name="other-ios-features"></a>기타 iOS 기능
 

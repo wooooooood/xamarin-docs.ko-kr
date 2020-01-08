@@ -8,18 +8,18 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: a18572b0f28cb8d6c699d0bbd062bdb067471a34
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 13abfa9789cee32ed2c7cd2401c1402d9c7c3886
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770878"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489780"
 ---
 # <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>Xamarin.ios에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다.
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
 
-_Azure Cosmos DB 문서 데이터베이스는 원활한 확장 및 전역 복제가 필요한 응용 프로그램에 대 한 빠른, 고가용성, 확장성 있는 데이터베이스 서비스를 제공 하는 JSON 문서에 대 한 대기 시간이 짧은 액세스를 제공 하는 NoSQL 데이터베이스. 이 문서에서는 Azure Cosmos DB.NET Standard 클라이언트 라이브러리를 사용 하 여 Xamarin.Forms 응용 프로그램에 Azure Cosmos DB 문서 데이터베이스를 통합 하는 방법에 설명 합니다._
+_Azure Cosmos DB 문서 데이터베이스는 JSON 문서에 대 한 짧은 대기 시간 액세스를 제공 하는 NoSQL 데이터베이스로, 원활한 확장 및 전역 복제가 필요한 응용 프로그램에 대해 빠르고 가용성이 뛰어난 확장 가능한 데이터베이스 서비스를 제공 합니다. 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 Xamarin.ios 응용 프로그램에 통합 하는 방법을 설명 합니다._
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
@@ -36,6 +36,9 @@ Azure Cosmos DB 문서 데이터베이스는 0 개 이상의 문서 컬렉션을
 이 문서 및 샘플 응용 프로그램을 함께 제공 되는 작업을 Azure Cosmos DB 문서 데이터베이스에 저장 되어 있는 Todo 목록 응용 프로그램을 보여 줍니다. 샘플 응용 프로그램에 대 한 자세한 내용은 참조 하세요. [샘플 이해](~/xamarin-forms/data-cloud/web-services/introduction.md)합니다.
 
 Azure Cosmos DB에 대 한 자세한 내용은 참조는 [Azure Cosmos DB 설명서](/azure/cosmos-db/)합니다.
+
+> [!NOTE]
+> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
 
 ## <a name="setup"></a>설정
 
@@ -213,7 +216,7 @@ await client.DeleteDocumentCollectionAsync(collectionLink);
 
 `DeleteDocumentCollectionAsync` 메서드를 `Uri` 삭제할 문서 컬렉션을 나타내는 인수입니다. 이 메서드를 호출도 삭제 됩니다 컬렉션에 저장 된 문서를 참고 합니다.
 
-### <a name="deleting-a-database"></a>데이터베이스를 삭제합니다.
+### <a name="deleting-a-database"></a>데이터베이스 삭제
 
 데이터베이스를 사용 하 여 Cosmos DB 데이터베이스 계정에서 삭제할 수는 `DocumentClient.DeleteDatabaesAsync` 메서드:
 
