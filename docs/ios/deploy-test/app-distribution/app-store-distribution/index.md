@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 78df4a7f4c90cd6459216f1f65dd09e0daae19f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026696"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607934"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -85,7 +85,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, 다음과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다.
     - **명시적 앱 ID**: com.[DomainName].[AppName]
     - **와일드카드 앱 ID**: com.[DomainName].*
-4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices)를 선택합니다.
+4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services)를 선택합니다.
 5. **계속** 단추를 클릭하고 화면의 지침에 따라 새 앱 ID를 만듭니다.
 
 ### <a name="creating-a-provisioning-profile"></a>프로비전 프로필 만들기

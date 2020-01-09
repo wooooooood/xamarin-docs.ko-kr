@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 74e258eeca78260fbfe3811e1dc6d8051e68e5f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16ae440ec2fe3b5898c8f92d993279ef5e7e9794
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030251"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607921"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 임시 배포
 
@@ -64,7 +64,7 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 8. 마지막으로 완성된 인증서를 다운로드하고 파일을 두 번 클릭하여 설치합니다.
 9. 이 시점에서 인증서가 시스템에 설치되지만, Xcode에서 볼 수 있도록 [프로필을 새로 고쳐야](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 할 수도 있습니다.
 
-또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 다음 단계를 수행합니다.
+또는 Xcode의 [기본 설정] 대화 상자를 통해 인증서를 요청할 수도 있습니다. 이렇게 하려면 아래 단계를 수행합니다.
 
 1. 팀을 선택하고 **인증서 관리...** 를 클릭합니다.  [![팀 선택](ad-hoc-distribution-images/selectteam.png)](ad-hoc-distribution-images/selectteam.png#lightbox)
 
@@ -84,7 +84,7 @@ Xamarin.iOS 애플리케이션은 Apple Developer Program 및 Apple Developer En
 3. 앱 접두사는 이미 팀 ID로 설정되어 있으며 변경할 수 없습니다. 명시적 또는 와일드카드 앱 ID를 선택하고, 다음과 같이 번들 ID를 역방향 DNS 형식으로 입력합니다.
     - **명시적 앱 ID**: `com.[DomainName].[AppName]`
     - **와일드카드 앱 ID**: `com.[DomainName].*`
-4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices)를 선택합니다.
+4. 앱에 필요한 [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services)를 선택합니다.
 5. **계속** 단추를 클릭하고 화면의 지시에 따라 새 앱 ID를 만듭니다.
 
 배포 프로필을 만드는 데 필요한 필수 구성 요소가 있으면 아래 단계에 따라 해당 배포 프로필을 만듭니다.

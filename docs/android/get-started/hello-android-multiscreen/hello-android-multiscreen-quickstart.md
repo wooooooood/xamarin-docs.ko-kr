@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 114373b6c4b194fe6e566255eb09eb82a8208312
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b8f7d882306ed5c00404ae7a050da8e02a49d609
+ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020959"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75607908"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android 멀티스크린: 빠른 시작
 
@@ -108,7 +108,7 @@ namespace Phoneword
 }
 ```
 
-이 작업에 새 레이아웃 파일을 만들 필요가 없도록 이 클래스에서 `ListActivity`을 만들고 프로그래밍 방식으로 채웁니다. [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android/hello-android-deepdive.md)에서 자세히 설명되어 있습니다.
+이 작업에 새 레이아웃 파일을 만들 필요가 없도록 이 클래스에서 `ListActivity`을 만들고 프로그래밍 방식으로 채웁니다. [Hello, Android 멀티스크린 심층 분석](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)에서 자세히 설명되어 있습니다.
 
 ### <a name="adding-a-list"></a>목록 추가
 
@@ -156,7 +156,7 @@ string translatedNumber = string.Empty;
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
@@ -295,7 +295,7 @@ translationHistoryButton.Click += (sender, e) =>
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
