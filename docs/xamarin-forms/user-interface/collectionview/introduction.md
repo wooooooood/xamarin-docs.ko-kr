@@ -6,13 +6,13 @@ ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: 871d7cad6c57cd34757ae992ce14d5f686935584
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.date: 12/11/2019
+ms.openlocfilehash: c04b5250bcdc575adc5aaff73901347e1e476b07
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73662318"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489338"
 ---
 # <a name="xamarinforms-collectionview-introduction"></a>Xamarin Forms CollectionView 소개
 
@@ -47,15 +47,15 @@ ms.locfileid: "73662318"
 |---|---|---|
 | 데이터 | `ItemsSource` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) `ItemsSource` 속성을 설정 하 여 데이터로 채워집니다. 자세한 내용은 [데이터를 사용 하 여 CollectionView 채우기](populate-data.md#populate-a-collectionview-with-data)를 참조 하세요. |
 | 항목 모양 | `ItemTemplate` | `ItemTemplate` 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)로 설정 하 여 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에 있는 각 항목의 모양을 정의할 수 있습니다. 자세한 내용은 [항목 모양 정의](populate-data.md#define-item-appearance)를 참조 하세요. |
-| 셀 | `TextCell`에서 `ImageCell`에서 `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에는 셀의 개념이 없습니다. 대신 데이터 템플릿을 사용 하 여 목록에 있는 각 데이터 항목의 모양을 정의 합니다. |
+| 셀 | `TextCell`에서 `ImageCell`에서 `ViewCell` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에는 셀 개념이 없으므로 공개 표시기의 개념이 없습니다. 대신 데이터 템플릿을 사용 하 여 목록에 있는 각 데이터 항목의 모양을 정의 합니다. |
 | 행 구분 기호 | `SeparatorColor`, `SeparatorVisibility` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 기본 제공 구분 기호를 포함 하지 않습니다. 이러한 항목은 원하는 경우 항목 템플릿에서 제공 될 수 있습니다. |
 | 선택 항목 | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 단일 및 다중 선택을 지원 합니다. 자세한 내용은 [Xamarin.ios CollectionView Selection](selection.md)을 참조 하세요. |
 | 행 높이 | `HasUnevenRows`, `RowHeight` | `CollectionView`에서 각 항목의 행 높이는 `ItemSizingStrategy` 속성에 따라 결정 됩니다. 자세한 내용은 [항목 크기 조정](layout.md#item-sizing)을 참조 하세요.|
 | 캐싱 | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 기본 네이티브 컨트롤에서 제공 하는 가상화를 자동으로 사용 합니다. |
-| 머리글 및 바닥글 | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `Header`, `Footer`, `HeaderTemplate` 및 `FooterTemplate` 속성을 통해 목록의 항목으로 스크롤 하는 머리글 및 바닥글을 제공할 수 있습니다. 자세한 내용은 [머리글 및 바닥글](layout.md#headers-and-footers)을 참조 하세요. |
+| 머리글 및 바닥글 | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `Header`, `Footer`, `HeaderTemplate`및 `FooterTemplate` 속성을 통해 목록의 항목으로 스크롤 하는 머리글 및 바닥글을 제공할 수 있습니다. 자세한 내용은 [머리글 및 바닥글](layout.md#headers-and-footers)을 참조 하세요. |
 | 그룹화 | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) `IsGrouped` 속성을 `true`로 설정 하 여 올바르게 그룹화 된 데이터를 표시 합니다. `GroupHeaderTemplate` 및 `GroupFooterTemplate` 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 개체로 설정 하 여 그룹 머리글 및 그룹 바닥글을 사용자 지정할 수 있습니다. 자세한 내용은 [Xamarin.ios CollectionView Grouping](grouping.md)을 참조 하세요. |
-| 새로 고치려면 끌어오기 | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 를 `RefreshView`의 자식으로 설정 하 여 새로 고침 기능을 사용할 수 있습니다. 자세한 내용은 [Pull to refresh를](populate-data.md#pull-to-refresh)참조 하세요. |
-| 컨텍스트 작업 | `ContextActions` | 컨텍스트 작업은 현재 `CollectionView` 지원 되지 않지만 향후 릴리스에 추가 될 예정입니다. |
+| 당겨서 새로 고침 | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 를 `RefreshView`의 자식으로 설정 하 여 새로 고침 기능을 사용할 수 있습니다. 자세한 내용은 [Pull to refresh를](populate-data.md#pull-to-refresh)참조 하세요. |
+| 컨텍스트 메뉴 항목 | `ContextActions` | 상황에 맞는 메뉴 항목은 [`CollectionView`](xref:Xamarin.Forms.CollectionView)에 있는 각 데이터 항목의 모양을 정의 하는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 의 루트 뷰로 `SwipeView`를 설정 하 여 지원 됩니다. 자세한 내용은 [상황에 맞는 메뉴](populate-data.md#context-menus)를 참조 하세요. |
 | 스크롤 | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 항목을 뷰로 스크롤 하는 `ScrollTo` 메서드를 정의 합니다. 자세한 내용은 [스크롤](scrolling.md)을 참조 하십시오. |
 
 ## <a name="related-links"></a>관련 링크
