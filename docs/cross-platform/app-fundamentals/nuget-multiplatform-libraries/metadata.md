@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5965b3f78bfc086b1cc6030a02f1cabafaae29d3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e71ff86869c42d478fbf1ee3f6de5bff59431fc
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016752"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728215"
 ---
 # <a name="editing-nuget-metadata"></a>NuGet 메타 데이터 편집
 
@@ -27,7 +27,7 @@ _프로젝트 옵션을 사용 하 여 다중 플랫폼 라이브러리의 NuGet
 
 [![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
 
-- **ID** – Nuget.org 내에서 고유 해야 하는 패키지 식별자입니다 (또는 패키지가 배포 될 때마다). 이 [지침](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) 을 따르고 URL에 유효한 문자만 사용 합니다 (공백 없음 및 대부분의 특수 문자 사용 안 함).
+- **ID** – NuGet.org 내에서 고유 해야 하는 패키지 식별자입니다 (또는 패키지가 배포 될 때마다). 이 [지침](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) 을 따르고 URL에 유효한 문자만 사용 합니다 (공백 없음 및 대부분의 특수 문자 사용 안 함).
 - **버전** – [NuGet의 버전 관리 규칙과](https://docs.microsoft.com/nuget/create-packages/dependency-versions)일치 하는 버전 번호를 선택 합니다.
 - **작성자** -쉼표로 구분 된 이름 목록입니다.
 - **설명** – 사용자가 패키지를 선택할 때 표시 되는 패키지 기능에 대 한 개요입니다.

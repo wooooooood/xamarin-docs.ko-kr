@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
-ms.openlocfilehash: 7045bd4d3343d0c11c6cd52fa02cdc005175b8a7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 60c647a9a09ebffa5a9d50c799c09cf0dbf2e4ac
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772930"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728012"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Xamarin.Forms에서 UrhoSharp 사용
 
@@ -25,21 +25,21 @@ ms.locfileid: "70772930"
 UrhoSharp는 Xamarin.Forms 응용 프로그램에서 그래픽을 렌더링에 사용할 수 있습니다.
 이렇게 [샘플](https://github.com/xamarin/urho-samples/tree/master/FormsSample) UrhoSharp 대화형 3D 차트를 생성 하는 방법을 사용할 수 있습니다 하는 방법을 보여 줍니다.
 
-![](urhosharp-images/ios-animation.gif "IOS에서 3D 대화형 차트 UrhoSharp")
-![](urhosharp-images/android-animation.gif "Android에서 UrhoSharp 3D 대화형 차트")
+![](urhosharp-images/ios-animation.gif "UrhoSharp 3D Interactive Chart on iOS")
+![](urhosharp-images/android-animation.gif "UrhoSharp 3D Interactive Chart on Android")
 
-## <a name="adding-the-urhosharp-nuget-packages"></a>UrhoSharp Nuget 패키지 추가
+## <a name="adding-the-urhosharp-nuget-packages"></a>UrhoSharp NuGet 패키지 추가
 
-UrhoSharp 사용 하기 전에 개발자가 솔루션에 UrhoSharp Nuget 패키지를 추가 해야 합니다. 이 가이드에서는 iOS, Android 및.NET Standard를 사용 하 여 Xamarin.Forms 프로젝트 가정 라이브러리 프로젝트. 코드의 모든.NET Standard 라이브러리 프로젝트에 기록 됩니다. 하지만 너무 UrhoSharp Nuget iOS 및 Android 프로젝트에 추가 해야 합니다.
+UrhoSharp를 사용 하기 전에 개발자는 솔루션에 UrhoSharp NuGet 패키지를 추가 해야 합니다. 이 가이드에서는 iOS, Android 및.NET Standard를 사용 하 여 Xamarin.Forms 프로젝트 가정 라이브러리 프로젝트. 모든 코드는 .NET Standard library 프로젝트에 작성 됩니다. 하지만 UrhoSharp NuGet은 iOS 및 Android 프로젝트에도 추가 해야 합니다.
 
-UrhoSharp.Forms Nuget 패키지는 모든 UrhoSharp 개체를 만드는 데 필요한 개체를 포함 합니다. UrhoSharp.Forms nuget 패키지에 포함 된 `UrhoSurface` Xamarin.Forms에서 UrhoSharp 호스팅하는 데 사용 하는 클래스입니다.
+UrhoSharp. Forms NuGet 패키지에는 UrhoSharp 개체를 만드는 데 필요한 모든 개체가 포함 되어 있습니다. UrhoSharp. Forms NuGet 패키지는 Xamarin.ios에서 UrhoSharp를 호스트 하는 데 사용 되는 `UrhoSurface` 클래스를 포함 합니다.
 시작 하려면 .NET Standard library 프로젝트에서 **패키지** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다. 검색 단어를 입력 하 고, **xamarin.ios에 대해 Urhosharp**를 **선택 하 고**, **패키지 추가**를 클릭 합니다.
 
-[![](urhosharp-images/add-package-sml.png "추가 패키지 대화 상자")](urhosharp-images/add-package.png#lightbox "패키지 대화 상자를 추가 합니다.")
+[![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
 
 UrhoSharp.Forms NuGet 패키지를 프로젝트에 추가 됩니다.
 
-![](urhosharp-images/packages.png "패키지 폴더")
+![](urhosharp-images/packages.png "Packages Folder")
 
 플랫폼별 프로젝트 (예: iOS 및 Android)에 대해 위의 단계를 반복 합니다.
 

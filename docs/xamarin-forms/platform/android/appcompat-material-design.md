@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: e8c05000275b65c18ddb6b628091da0fac462278
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73005459"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728332"
 ---
 # <a name="adding-appcompat-and-material-design"></a>AppCompat 및 재질 디자인 추가
 
@@ -27,7 +27,7 @@ https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ --
 
 ### <a name="1-update-xamarinforms"></a>1. Xamarin 양식을 업데이트 합니다.
 
-솔루션이 Xamarin.ios 2.0 이상 버전을 사용 하 고 있는지 확인 합니다. 필요한 경우 Xamarin.ios Nuget 패키지를 2.0으로 업데이트 합니다.
+솔루션이 Xamarin.ios 2.0 이상 버전을 사용 하 고 있는지 확인 합니다. 필요한 경우 Xamarin.ios NuGet 패키지를 2.0으로 업데이트 합니다.
 
 ### <a name="2-check-android-version"></a>2. Android 버전 확인
 
@@ -39,7 +39,7 @@ Android 프로젝트의 대상 프레임 워크가 Android 6.0 (Marshmallow) 인
 
 Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용을 붙여넣습니다. Google은 지정 된에 대 한 대체 색 구성표를 선택 하는 데 도움이 되는 [스타일 안내선](https://www.google.com/design/spec/style/color.html#color-color-palette) 및 [색상표 생성기](https://www.materialpalette.com/) 를 제공 합니다.
 
-**리소스/값/색 .xml**
+**Resources/values/colors.xml**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용�
 </resources>
 ```
 
-**리소스/값/스타일 .xml**
+**Resources/values/style.xml**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용�
 
 Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 **v21** 폴더에 추가 스타일을 포함 해야 합니다.
 
-**Resources/values-v21/style .xml**
+**Resources/values-v21/style.xml**
 
 ```xml
 <resources>
@@ -84,7 +84,7 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 
 이 새 테마 정보를 사용 하려면 `android:theme="@style/MyTheme"`을 추가 하 여 **Androidmanifest** 파일에 테마를 설정 합니다 (나머지 XML은 그대로 유지).
 
-**Properties/AndroidManifest .xml**
+**Properties/AndroidManifest.xml**
 
 ```xml
 ...
@@ -97,7 +97,7 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 
 [ **리소스/레이아웃** ] 디렉터리에 있는 **tabbar. Axml** 및 **Toolbar xml** 파일을 만들고 아래 내용을 붙여넣습니다.
 
-**리소스/레이아웃/Tabbar. axml**
+**Resources/layout/Tabbar.axml**
 
 ```xml
 <android.support.design.widget.TabLayout
@@ -116,7 +116,7 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 탭의 몇 가지 속성은 탭의 무게를 포함 하 여 `fill` 하 고 `fixed`모드로 설정 되었습니다.
 탭이 많은 경우이를 보다 자세히 알아보려면 Android [TabLayout 설명서](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) 를 통해 스크롤할 수 있도록 전환 하는 것이 좋습니다.
 
-**리소스/레이아웃/도구 모음. axml**
+**Resources/layout/Toolbar.axml**
 
 ```xml
 <android.support.v7.widget.Toolbar

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 65a613f229f04a4ab01ca73a9c53c026add49f84
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c913f18e34f93e9ab7adc09109ea5c9e9e5067a2
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029043"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728150"
 ---
 # <a name="viewpager-with-views"></a>보기가 있는 ViewPager
 
@@ -28,7 +28,7 @@ _ViewPager는 gestural 탐색을 구현할 수 있도록 하는 레이아웃 관
 
 **TreePager** 라는 새 android 프로젝트를 만듭니다 (새 android 프로젝트를 만드는 방법에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md) 참조). 그런 다음 NuGet 패키지 관리자를 시작 합니다. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 프로젝트에 Nuget 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)을 참조 하세요. **Android 지원 라이브러리 v4**찾기 및 설치: 
 
-[NuGet 패키지 관리자에서 선택한 v4 Nuget 지원의![스크린샷](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
+[NuGet 패키지 관리자에서 선택한 v4 NuGet 지원의 ![스크린샷](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 그러면 **Android Support Library v4**로 reaquired 추가 패키지도 설치 됩니다.
 
@@ -91,7 +91,7 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-이 코드는 다음을 수행 합니다.
+이 코드는 다음 작업을 수행합니다.
 
 1. **주. axml** 레이아웃 리소스에서 뷰를 설정 합니다.
 
@@ -101,7 +101,7 @@ protected override void OnCreate(Bundle bundle)
 
 이 코드를 작성 하 고 실행 하면 다음 스크린샷에 표시 됩니다. 
 
-[빈 ViewPager를 표시 하는 앱의![스크린샷](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
+[빈 ViewPager를 표시 하는 앱의 ![스크린샷](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 이 시점에서 **TreeCatalog**의 콘텐츠에 액세스 하기 위한 어댑터가 부족 하기 때문에 `ViewPager` 비어 있습니다. 다음 섹션에서는 `ViewPager`을 **TreeCatalog**에 연결 하기 위해 **PagerAdapter** 를 만듭니다. 
 
@@ -207,7 +207,7 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 }
 ```
 
-이 코드는 다음을 수행 합니다.
+이 코드는 다음 작업을 수행합니다.
 
 1. 새 `ImageView`을 인스턴스화하여 지정 된 위치에 트리 이미지를 표시 합니다. 앱의 `MainActivity`은 `ImageView` 생성자에 전달 되는 컨텍스트입니다.
 
@@ -234,17 +234,17 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 }
 ```
 
-이 코드는 다음을 수행 합니다.
+이 코드는 다음 작업을 수행합니다.
 
 1. 전달 된 컨테이너 `View`를 `ViewPager` 참조로 캐스팅 합니다.
 
-2. 전달 된 Java 개체 (`view`)를 C#`View`(`view as View`)로 캐스팅 합니다.
+2. 전달 된 Java 개체 (`view`)를 C# `View` (`view as View`)로 캐스팅 합니다.
 
 3. `ViewPager`에서 뷰를 제거 합니다. 
 
 ### <a name="implement-isviewfromobject"></a>IsViewFromObject 구현
 
-사용자가 콘텐츠 페이지에서 왼쪽과 오른쪽으로 이동 하면 `IsViewFromObject`를 호출 하 여 지정 된 위치의 자식 `View`이 동일한 위치에 대 한 어댑터의 개체와 연결 되어 있는지 확인 `ViewPager`. 따라서 어댑터의 개체를 *개체 키* 라고 합니다. ). 비교적 간단한 앱의 경우 연결은 id &ndash; 중 하나 이며, 해당 인스턴스에서 어댑터의 개체 키는 이전에 `InstantiateItem`를 통해 `ViewPager`에 반환 된 뷰입니다. 그러나 다른 앱의 경우에는 개체 키가 해당 위치에 표시 `ViewPager`는 자식 뷰와 연결 된 다른 어댑터별 클래스 인스턴스일 수 있습니다. 어댑터 에서만 전달 된 뷰와 개체 키가 연결 되어 있는지 여부를 알 수 있습니다. 
+사용자가 콘텐츠 페이지에서 왼쪽과 오른쪽으로 이동 하면 `IsViewFromObject` `ViewPager`를 호출 하 여 지정 된 위치의 자식 `View`이 동일한 위치에 대해 어댑터의 개체와 연결 되어 있는지 확인할 수 있습니다. 따라서 어댑터의 개체를 *개체 키*라고 합니다. 비교적 간단한 앱의 경우 연결은 id &ndash; 중 하나 이며, 해당 인스턴스에서 어댑터의 개체 키는 이전에 `InstantiateItem`를 통해 `ViewPager`에 반환 된 뷰입니다. 그러나 다른 앱의 경우에는 개체 키가 해당 위치에 표시 `ViewPager`는 자식 뷰와 연결 된 다른 어댑터별 클래스 인스턴스일 수 있습니다. 어댑터 에서만 전달 된 뷰와 개체 키가 연결 되어 있는지 여부를 알 수 있습니다. 
 
 `PagerAdapter` 제대로 작동 하려면 `IsViewFromObject`를 구현 해야 합니다. 지정 된 `ViewPager` 위치에 대 한 `false` 반환 하 `IsViewFromObject` 경우에는 해당 위치에 뷰가 표시 되지 않습니다. `TreePager` 앱 *에서 `InstantiateItem`에 의해 반환 되는* 개체 키는 트리의 페이지 `View` 이므로 코드는 id를 확인 하기만 하면 됩니다. 즉, 개체 키와 뷰가 서로 동일 하 고 뷰가 있습니다. `IsViewFromObject`를 다음 코드로 바꿉니다. 
 
@@ -267,7 +267,7 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 이제 코어 구현이 완료 되어 앱을 빌드하고 실행 &ndash;. 다음 스크린샷에 왼쪽에 표시 된 대로 트리 카탈로그의 첫 번째 이미지가 화면에 나타납니다. 왼쪽으로 살짝 밀어 트리 보기를 표시 한 다음 오른쪽으로 살짝 밀어 트리 카탈로그를 통해 다시 이동 합니다. 
 
-[트리 이미지를 통해 TreePager 앱의![스크린샷 살짝 밀기](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
+[트리 이미지를 통해 TreePager 앱의 ![스크린샷 살짝 밀기](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
 
 ## <a name="add-a-pager-indicator"></a>호출기 표시기 추가
 
@@ -296,7 +296,7 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 `ViewPager` 및 `PagerTabStrip`는 함께 작동 하도록 설계 되었습니다. `ViewPager` 레이아웃 내에 `PagerTabStrip`을 선언 하면 `ViewPager`에서 자동으로 `PagerTabStrip`를 찾아 어댑터에 연결 합니다. 앱을 빌드하고 실행할 때 각 화면 맨 위에 빈 `PagerTabStrip` 표시 되어야 합니다. 
 
-[빈 PagerTabStrip의![확대/확대 스크린 샷](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
+[빈 PagerTabStrip의 ![확대/확대 스크린 샷](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 ### <a name="display-a-title"></a>제목 표시
 
@@ -311,7 +311,7 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 이 코드는 트리 카탈로그의 지정 된 페이지 (위치)에서 트리 캡션 문자열을 검색 하 고, Java `String`로 변환한 후 `ViewPager`에 반환 합니다. 이 새 메서드를 사용 하 여 앱을 실행 하면 각 페이지에 `PagerTabStrip`의 트리 캡션이 표시 됩니다. 화면 맨 위에 밑줄 없이 트리 이름이 표시 됩니다. 
 
-[텍스트 채우기 PagerTabStrip 탭이 있는 페이지의![스크린샷](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
+[텍스트 채우기 PagerTabStrip 탭이 있는 페이지의 ![스크린샷](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
 
 앞뒤로 살짝 밀어 카탈로그에서 각 캡션 트리 이미지를 볼 수 있습니다. 
 
@@ -319,7 +319,7 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 `PagerTitleStrip`은 현재 선택 된 탭에 밑줄을 추가 `PagerTabStrip` 한다는 점을 제외 하 고 `PagerTabStrip`와 매우 비슷합니다. 위의 레이아웃에서 `PagerTabStrip` `PagerTitleStrip`로 바꾸고 앱을 다시 실행 하 여 `PagerTitleStrip`표시 되는 모양을 확인할 수 있습니다. 
 
-[텍스트에서 밑줄이 제거 된![PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
+[텍스트에서 밑줄이 제거 된 ![PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
 
 `PagerTitleStrip`로 변환할 때 밑줄이 제거 됩니다. 
 

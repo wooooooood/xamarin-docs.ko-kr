@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e38fc0d23c65189f51f7f8f159a07894b3e1ab72
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a94baa66c1ca18762efccd980264170648c232fa
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030329"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728293"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>플랫폼 간 앱 사례 연구: Tasky
 
@@ -52,7 +52,7 @@ ms.locfileid: "73030329"
 
 Tasky는 각 ' TaskItem '에 대 한 세 가지 속성을 저장 해야 합니다.
 
-- **이름** – 문자열
+- **Name** – 문자열
 - **참고** – 문자열
 - **Done** – 부울
 
@@ -103,7 +103,7 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
  <a name="References" />
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 이식 가능한 클래스 라이브러리는 플랫폼 및 프레임 워크 기능에 대해 다양 한 수준의 지원을 제공 하는 여러 플랫폼에서 사용할 수 있어야 합니다. 따라서 사용할 수 있는 패키지 및 프레임 워크 라이브러리에 대 한 제한 사항이 있습니다. 예를 들어 Xamarin.ios는 c # `dynamic` 키워드를 지원 하지 않으므로 이식 가능한 클래스 라이브러리는 Android에서 작동 하는 경우에도 동적 코드에 종속 된 패키지를 사용할 수 없습니다. Mac용 Visual Studio를 사용 하면 호환 되지 않는 패키지 및 참조를 추가할 수 없지만 나중에 발생 하는 것을 방지 하기 위해 제한을 염두에 두어야 합니다.
 
@@ -115,7 +115,7 @@ Tasky 이식 가능한 클래스 라이브러리 전략을 사용 하 여 공통
 
 데이터 계층에는 데이터베이스, 플랫 파일 또는 기타 메커니즘과 관련 된 데이터의 실제 저장소를 수행 하는 코드가 포함 되어 있습니다. Tasky 데이터 계층은 SQLite 네트워크 라이브러리와 연결에 추가 된 사용자 지정 코드의 두 부분으로 구성 됩니다.
 
-Tasky는 Frank Kreuger에서 게시 한 Sqlite-net nuget 패키지를 사용 하 여 ORM (개체-관계형 매핑) 데이터베이스 인터페이스를 제공 하는 SQLite-NET 코드를 포함 합니다. `TaskItemDatabase` 클래스는 `SQLiteConnection`에서 상속 되며 SQLite에 데이터를 읽고 쓰는 데 필요한 만들기, 읽기, 업데이트, 삭제 (CRUD) 메서드를 추가 합니다. 다른 프로젝트에서 다시 사용할 수 있는 일반적인 CRUD 메서드의 간단한 상용구 구현입니다.
+Tasky는 Frank Kreuger에서 게시 한 Sqlite-net NuGet 패키지를 사용 하 여 ORM (개체-관계형 매핑) 데이터베이스 인터페이스를 제공 하는 SQLite-NET 코드를 포함 합니다. `TaskItemDatabase` 클래스는 `SQLiteConnection`에서 상속 되며 SQLite에 데이터를 읽고 쓰는 데 필요한 만들기, 읽기, 업데이트, 삭제 (CRUD) 메서드를 추가 합니다. 다른 프로젝트에서 다시 사용할 수 있는 일반적인 CRUD 메서드의 간단한 상용구 구현입니다.
 
 `TaskItemDatabase`는 단일 항목 이므로 동일한 인스턴스에 대 한 모든 액세스가 발생 합니다. 잠금은 여러 스레드의 동시 액세스를 방지 하는 데 사용 됩니다.
 
@@ -186,7 +186,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 
  <a name="Data_Access_Layer_(DAL)" />
 
-### <a name="data-access-layer-dal"></a>DAL (데이터 액세스 계층)
+### <a name="data-access-layer-dal"></a>DAL(데이터 액세스 계층)
 
 `TaskItemRepository` 클래스는 `TaskItem` 개체를 만들고, 삭제 하 고, 검색 하 고, 업데이트할 수 있는 강력한 형식의 API를 사용 하 여 데이터 저장소 메커니즘을 캡슐화 합니다.
 
@@ -243,7 +243,7 @@ Tasky에서 모델은 `TaskItem` 클래스 이며 `TaskItemManager` `TaskItems`�
 
 공용 코드를 작성 한 후에는 사용자 인터페이스를 빌드하여이를 통해 노출 되는 데이터를 수집 하 고 표시 해야 합니다. `TaskItemManager` 클래스는 응용 프로그램 코드에서 액세스할 수 있는 간단한 API를 제공 하는 외관 패턴을 구현 합니다.
 
-각 플랫폼별 프로젝트에서 작성 된 코드는 일반적으로 해당 장치의 네이티브 SDK와 긴밀 하 게 결합 되며 `TaskItemManager`에서 정의한 API를 사용 하 여 공통 코드에만 액세스할 수 있습니다. 여기에는 `TaskItem` 같이 노출 하는 메서드 및 비즈니스 클래스가 포함 됩니다.
+각 플랫폼별 프로젝트에서 작성 된 코드는 일반적으로 해당 장치의 네이티브 SDK와 긴밀 하 게 결합 되며 `TaskItemManager`에서 정의한 API를 사용 하 여 공통 코드에만 액세스할 수 있습니다. 여기에는 `TaskItem`같이 노출 하는 메서드 및 비즈니스 클래스가 포함 됩니다.
 
 이미지는 플랫폼 간에 공유 되지 않지만 각 프로젝트에 독립적으로 추가 됩니다. 이는 각 플랫폼에서 서로 다른 파일 이름, 디렉터리 및 해상도를 사용 하 여 이미지를 다르게 처리 하기 때문에 중요 합니다.
 
@@ -263,7 +263,7 @@ Tasky에서 모델은 `TaskItem` 클래스 이며 `TaskItemManager` `TaskItems`�
 
  <a name="References" />
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 IOS 앱은 플랫폼별 SDK 라이브러리를 참조 합니다 (예:). Xamarin.ios 및 Monotouch.dialog-1.
 
@@ -367,7 +367,7 @@ Tasky는 `MonoTouch.Dialog`의 리플렉션 API를 사용 하 여 화면을 표�
 
  <a name="References" />
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 Android 앱 프로젝트는 Android SDK의 클래스에 액세스 하기 위해 플랫폼별 Xamarin Android 어셈블리를 참조 해야 합니다.
 
@@ -381,11 +381,11 @@ Android 앱 프로젝트는 Android SDK의 클래스에 액세스 하기 위해 
 
 이전에 살펴본 iOS 버전과 마찬가지로, Android 버전의 응용 프로그램 계층에는 핵심에 의해 노출 되는 개체를 UI에 ' 바인딩 ' 하는 데 필요한 플랫폼별 클래스가 포함 되어 있습니다.
 
- **Tasklistadapter** – \<T > 개체의 목록을 표시 하려면 `ListView` 사용자 지정 개체를 표시 하는 어댑터를 구현 해야 합니다. 어댑터는 목록의 각 항목에 사용 되는 레이아웃을 제어 합니다 .이 경우 코드는 Android 기본 제공 레이아웃 `SimpleListItemChecked`를 사용 합니다.
+ **Tasklistadapter** –\<> 개체의 목록을 표시 하려면 `ListView`사용자 지정 개체를 표시 하는 어댑터를 구현 해야 합니다. 어댑터는 목록의 각 항목에 사용 되는 레이아웃을 제어 합니다 .이 경우 코드는 Android 기본 제공 레이아웃 `SimpleListItemChecked`를 사용 합니다.
 
  <a name="User_Interface_(UI)" />
 
-### <a name="user-interface-ui"></a>UI (사용자 인터페이스)
+### <a name="user-interface-ui"></a>사용자 인터페이스(UI)
 
 Android 앱의 사용자 인터페이스 계층은 코드 및 XML 태그의 조합입니다.
 
@@ -426,7 +426,7 @@ PCL 라이브러리에 대 한 모든 참조는 `TaskItemManager` 클래스를 �
 
  <a name="References" />
 
-### <a name="references"></a>참조 항목
+### <a name="references"></a>참조
 
 플랫폼별 프로젝트는 올바른 Windows Phone 응용 프로그램을 만들기 위해 필요한 플랫폼별 라이브러리 (예: `Microsoft.Phone` 및 `System.Windows`)를 참조 해야 합니다.
 
@@ -448,7 +448,7 @@ ViewModels PCL (`TaskItemManager`)에서 데이터를 래핑하고 Silverlight/X
 
  <a name="User_Interface_(UI)" />
 
-### <a name="user-interface-ui"></a>UI (사용자 인터페이스)
+### <a name="user-interface-ui"></a>사용자 인터페이스(UI)
 
 XAML에는 태그에서 선언할 수 있는 고유한 데이터 바인딩 기능이 있으며 개체를 표시 하는 데 필요한 코드의 양을 줄일 수 있습니다.
 

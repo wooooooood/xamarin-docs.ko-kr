@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 583b1cb9e53ef0fb1002bc73ba53d063f99eff7c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016772"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728228"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Xamarin에 대 한 NuGet 패키지 수동 만들기
 
@@ -26,7 +26,7 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 현재 사용 중인 기본 Xamarin 대상 프레임 워크는 다음과 같습니다.
 
-- **MonoAndroid**
+- **MonoAndroid** - Xamarin.Android
 - **Xamarin.ios** -xamarin.ios [Unified API](~/cross-platform/macios/unified/index.md) (64 비트 지원)
 - **Xamarin.ios 및** xamarin.ios의 모바일 프로필. Xamarin.ios 및 xamarin.ios API 화면에 해당 합니다.
 
@@ -53,7 +53,7 @@ NuGet 웹 사이트에서 [여러 .NET Framework 버전 및 프로필을 지 원
 
 위의 "MonoAndroid10"은 "Android 1.0"을 의미 합니다. 즉, 프로젝트의 [대상 프레임 워크](~/android/app-fundamentals/android-api-levels.md) 를 MonoAndroid 버전 1.0 이상으로 만들어야 합니다. 버전은 프로젝트 파일의 `<TargetFrameworkVersion>` 요소에 지정 됩니다.
 
-명확 하 게 설명:
+명확히 하기:
 
 - **MonoAndroid403** 는 Android 4.0.3 이상 (ie API 수준 15)과 일치 합니다.
 - **IOS10** 는 xamarin.ios 1.0 이상 일치 합니다.
@@ -69,7 +69,7 @@ PCL 프로필은 액세스할 수 있는 .NET framework Api에서 제한적 이�
 
 [NuGet 대상 이름이 있는 PCL 프로필의](https://portablelibraryprofiles.stephencleary.com) 이 외부 목록도 유용한 참조입니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 참조할 수 있는 몇 가지 오픈 소스 예제는 다음과 같습니다.
 
@@ -79,5 +79,5 @@ PCL 프로필은 액세스할 수 있는 .NET framework Api에서 제한적 이�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Nugetizer-3000 자동화 된 Nuget 만들기](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
+- [Nugetizer-3000 자동화 된 NuGet 만들기](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
 - [프로젝트에 NuGet 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
-ms.openlocfilehash: 7b465391958a6e862bfed9fde8d9da1fdd52bee5
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: d13237f270fe01e2a91b69a60c3109843db713bf
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759765"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728020"
 ---
 # <a name="using-cocossharp-in-xamarinforms"></a>Xamarin.Forms에서 CocosSharp 사용
 
@@ -29,7 +29,7 @@ _CocosSharp는 사용 하 여 고급 시각화에 대 한 응용 프로그램에
 CocosSharp는 그래픽 표시, 터치 입력을 읽고, 오디오 및 관리 콘텐츠를 재생 하기 위한 유연 하 고 강력한 기술 됩니다. 이 가이드에서는 CocosSharp Xamarin.Forms 응용 프로그램을 추가 하는 방법을 설명 합니다. 다음 내용을 다룹니다.
 
 - [CocosSharp 란?](#what)
-- [CocosSharp Nuget 패키지 추가](#nuget)
+- [CocosSharp NuGet 패키지 추가](#nuget)
 - [연습: CocosSharp를 Xamarin.Forms 앱에 추가](#add)
 
 <a name="what" />
@@ -53,22 +53,22 @@ Xamarin.Forms는 네이티브 플랫폼 특정 UI 시스템을 기반으로 합�
 
 <a name="nuget" />
 
-## <a name="adding-the-cocossharp-nuget-packages"></a>CocosSharp Nuget 패키지 추가
+## <a name="adding-the-cocossharp-nuget-packages"></a>CocosSharp NuGet 패키지 추가
 
 CocosSharp를 사용 하기 전에 개발자는 Xamarin.Forms 프로젝트에 대 한 몇 가지 추가 확인 해야 합니다.
 이 가이드에서는 iOS, Android 및.NET Standard를 사용 하 여 Xamarin.Forms 프로젝트 가정 라이브러리 프로젝트.
 코드의 모든.NET Standard 라이브러리 프로젝트에 기록 됩니다. 그러나 라이브러리는 iOS 및 Android 프로젝트에 추가 되어야 합니다.
 
-CocosSharp Nuget 패키지는 모든 CocosSharp 개체를 만드는 데 필요한 개체를 포함 합니다.
-CocosSharp.Forms nuget 패키지에 포함 된 `CocosSharpView` Xamarin.Forms에서 CocosSharp 호스팅하는 데 사용 하는 클래스입니다.
+CocosSharp NuGet 패키지에는 CocosSharp 개체를 만드는 데 필요한 모든 개체가 포함 되어 있습니다.
+CocosSharp. Forms NuGet 패키지는 Xamarin.ios에서 CocosSharp를 호스트 하는 데 사용 되는 `CocosSharpView` 클래스를 포함 합니다.
 추가 된 **CocosSharp.Forms** NuGet 및 **CocosSharp** 도 자동으로 추가 될 예정입니다.
 이렇게 하려면 .NET Standard library 프로젝트에서 **패키지** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다. 검색 용어 **Cocossharp**를 입력 하 고 **Xamarin.ios에 대해 cocossharp**를 선택한 다음 **패키지 추가**를 클릭 합니다.
 
-![](cocossharp-images/image1.png "추가 패키지 대화 상자")
+![](cocossharp-images/image1.png "Add Packages Dialog")
 
 둘 다 **CocosSharp** 하 고 **CocosSharp.Forms** NuGet 패키지를 프로젝트에 추가 됩니다.
 
-![](cocossharp-images/image2.png "패키지 폴더")
+![](cocossharp-images/image2.png "Packages Folder")
 
 플랫폼별 프로젝트 (예: iOS 및 Android)에 대해 위의 단계를 반복 합니다.
 
@@ -138,7 +138,7 @@ public HomePage ()
 
 Ios의 경우는 `HomePage` 다음 이미지와 같이 표시 됩니다.
 
-![](cocossharp-images/image3.png "홈 페이지 스크린샷")
+![](cocossharp-images/image3.png "HomePage Screenshot")
 
 <a name="2" />
 
@@ -194,7 +194,7 @@ void HandleViewCreated (object sender, EventArgs e)
 
 다음 그래프는 일반적인 CocosSharp 계층 구조를 시각화 하는 데 도움이 됩니다.
 
-![](cocossharp-images/image4.png "일반적인 CocosSharp 계층")
+![](cocossharp-images/image4.png "Typical CocosSharp Hierarchy")
 
 하나의 `CCScene` 한 번에 활성화 될 수 있습니다. 대부분의 게임 사용 하 여 `CCLayer` 내용 정렬 하지만 응용 프로그램 인스턴스 하나만 사용 합니다. 마찬가지로 대부분의 게임 여러 시각적 개체를 사용 하지만 우리는 앱에만 해야 합니다. 시각적 계층에서 찾을 수 있습니다 CocosSharp에 대 한 논의 자세한 합니다 [BouncingGame 연습](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md)합니다.
 
@@ -220,7 +220,7 @@ GameScene gameScene;
 
 이제 프로젝트를 컴파일 및 실행 CocosSharp을 실행 수 했습니다. 에 아무 것도 추가 하지 않은 것이 `GameScene,` 페이지의 위쪽 절반 검정-CocosSharp 장면의 기본 색은:
 
-![](cocossharp-images/image5.png "빈 GameScene")
+![](cocossharp-images/image5.png "Blank GameScene")
 
 <a name="4" />
 
@@ -254,7 +254,7 @@ public class GameScene : CCScene
 
 이제 앱을 실행 하는 원 CocosSharp 표시 영역의 왼쪽에 보여 줍니다.
 
-![](cocossharp-images/image6.png "GameScene 원")
+![](cocossharp-images/image6.png "Circle in GameScene")
 
 #### <a name="understanding-designresolution"></a>DesignResolution 이해
 
@@ -262,7 +262,7 @@ CocosSharp 시각적 개체 표시 되는 이제 조사할 수 있습니다는 `
 
 `DesignResolution` 배치 및 개체 크기 조정에 대 한 CocosSharp 영역의 높이 너비를 나타냅니다. 영역의 실제 해상도 측정 됩니다 *픽셀* 하는 동안 합니다 `DesignResolution` 환경에서 측정 됩니다 *단위*합니다. 다음 다이어그램은 다양 한 부분 640 x 1136 픽셀의 화면 해상도 사용 하 여 iPhone 5에 표시 된 뷰 확인을 보여줍니다.
 
-![](cocossharp-images/image7.png "iPhone 5 초 디자인 확인")
+![](cocossharp-images/image7.png "iPhone 5s Design Resolution")
 
 위의 다이어그램 검은색 텍스트로 화면 외부의 픽셀 크기를 표시합니다. 단위는 흰색 텍스트의 다이어그램의 내부에 표시 됩니다. 위에 표시 된 몇 가지 중요 한 세부 정보는 다음과 같습니다.
 
@@ -330,7 +330,7 @@ void CreateBottomHalf(Grid grid)
 
 이제 CocosSharp 원을 클릭에 대 한 응답으로 이동합니다. 또한 명확 하 게 CocosSharp 캔버스의 경계 원을 충분히 왼쪽 이나 오른쪽으로 이동 하 여 볼 수 있습니다.
 
-![](cocossharp-images/image8.png "사용 하 여 원을 이동 GameScene")
+![](cocossharp-images/image8.png "GameScene with Moving Circle")
 
 ## <a name="summary"></a>요약
 

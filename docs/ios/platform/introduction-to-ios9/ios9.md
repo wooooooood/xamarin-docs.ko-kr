@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: cbea7686c2ec96492f9531e1ff30d1686db1a4c0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: edc778879aa88d420f41bd2b7b8e15b6d80b5939
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031768"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728267"
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 호환성
 
@@ -46,7 +46,7 @@ Visual Studio가 안정적인 최신 버전으로 업데이트 되었는지 여�
 위에서 설명한 두 가지 문제를 해결 하기 위해 사용 하는 구성 요소 또는 Nuget의 새 버전을 기다릴 필요가 **없습니다** .
 이러한 문제는 매우 안정적인 Xamarin.ios의 최신 릴리스로 앱을 다시 빌드하여 간단히 수정할 수 있습니다.
 
-마찬가지로, 구성 요소 공급 업체와 Nuget 작성자는 위에서 언급 한 두 가지 문제를 해결 하기 위해 새 빌드를 제출 하는 데 필요 **하지 않습니다** . 그러나 구성 요소나 Nuget이 **Xib** 파일의 `UICollectionView` 또는 로드 뷰를 사용 하는 경우 아래에 설명 된 iOS 9 호환성 문제를 해결 하기 위해 업데이트가 필요할 수 *있습니다* .
+마찬가지로, 구성 요소 공급 업체와 NuGet 작성자는 위에서 언급 한 두 가지 문제를 해결 하기 위해 새 빌드를 제출 하는 데 필요 **하지 않습니다** . 그러나 구성 요소나 NuGet이 **Xib** 파일의 `UICollectionView` 또는 로드 뷰를 사용 하는 경우 아래에 설명 된 iOS 9 호환성 문제를 해결 하기 위해 업데이트가 필요할 수 *있습니다* .
 
 <a name="compat" />
 

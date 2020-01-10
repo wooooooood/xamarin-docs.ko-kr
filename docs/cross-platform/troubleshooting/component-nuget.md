@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 47f47882cb270a8e2517f7cab6f1d6af1cf473f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014338"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728254"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조 업데이트
 
@@ -37,7 +37,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 프로젝트에서 구성 요소를 제거 하려면 다음을 수행 합니다.
 
-1. **.Csproj** 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다. 
+1. **.csproj** 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다. 
 
 2. 언로드된 프로젝트를 마우스 오른쪽 단추로 다시 클릭 하 고 **{프로젝트 이름} .Csproj 편집**을 선택 합니다.
 
@@ -137,7 +137,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 ![구성 요소 삭제](component-nuget-images/delete-component-sml.png)
 
-NuGet 패키지는 **패키지** 노드에 나열 된 상태를 유지 하 고 앱이 정상적으로 컴파일되고 실행 됩니다. 나중에이 패키지의 업데이트는 **Nuget** 업데이트 기능을 통해 수행 됩니다.
+NuGet 패키지는 **패키지** 노드에 나열 된 상태를 유지 하 고 앱이 정상적으로 컴파일되고 실행 됩니다. 나중에이 패키지의 업데이트는 **NuGet** 업데이트 기능을 통해 수행 됩니다.
 
 ![NuGet 패키지 업데이트](component-nuget-images/nuget-update-sml.png)
 

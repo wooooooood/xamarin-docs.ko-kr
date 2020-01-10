@@ -6,12 +6,12 @@ ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
 author: davidortinau
 ms.author: daortin
 ms.date: 05/08/2018
-ms.openlocfilehash: 0e49ef8fa0bf00d5ed41f3411393ffaf4891c1b8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 30827292e59c70395fce17bb520f48b2f19c7d1e
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013986"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728178"
 ---
 # <a name="general-frequently-asked-questions"></a>일반적인 질문과 대답
 
@@ -33,7 +33,7 @@ Nuget 업데이트, 확장 및 추가 기능은 **Nuget 패키지 관리자**의
 ### <a name="how-do-i-downgrade-a-nuget-packagenuget-package-downgrademd"></a>[NuGet 패키지를 다운그레이드하려면 어떻게 해야 하나요?](nuget-package-downgrade.md)
 Mac용 Visual Studio & Visual Studio에는 이전 버전의 패키지를 선택 하 고 자동으로 설치 하는 기능이 있습니다. 패키지 업데이트의 작동 방법과 비슷합니다.
 
-### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[Nuget 패키지를 업데이트한 후 패키지 오류 없음](nuget-packages-missing.md)
+### <a name="missing-packages-error-after-updating-nuget-packagesnuget-packages-missingmd"></a>[NuGet 패키지를 업데이트 한 후 누락 된 패키지 오류](nuget-packages-missing.md)
 이 문제는 주로 Xamarin.ios 샘플 앱 솔루션에 대해 보고 되었지만 NuGet 패키지를 사용 하는 모든 프로젝트에서이 문제가 발생할 수 있습니다.
 
 ### <a name="unifying-google-play-services-components-and-nugetgps-components-nugetmd"></a>[Google Play 서비스 구성 요소 및 NuGet 통합](gps-components-nuget.md)

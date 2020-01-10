@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fdc9fd6eac8c7b0c9ec91eb66b5d6723cda71006
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ad576f10fc0af5d96396d90b3e502e21da1182d
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016835"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728241"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5부 - 실제 코드 공유 전략
 
@@ -155,7 +155,7 @@ string filePath = Path.Combine (
         Environment.GetFolderPath (Environment.SpecialFolder.Personal),
         "MyFile.txt");
 System.IO.File.WriteAllText (filePath, "Contents of text file");
-Console.WriteLine (System.IO.ReadAllText (filePath));
+Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
 참조는 xamarin.ios [파일 시스템 작업](~/ios/app-fundamentals/file-system.md) iOS 관련 파일 시스템 기능에 대 한 자세한 내용은 문서. 플랫폼 간 파일 액세스 코드를 작성 하는 경우에 일부 파일 시스템 대 소문자를 구분 하 고 다른 디렉터리 구분 기호가 해야 합니다. 항상 파일 이름에 대 한 동일한 대/소문자를 사용 하는 것이 좋습니다 하며 `Path.Combine()` 파일 또는 디렉터리 경로 생성할 때 메서드.
@@ -190,7 +190,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 ### <a name="cross-platform-file-access-in-pcls"></a>Pcl에서 플랫폼 간 파일 액세스
 
-PCL 호환 Nuget – 이기도 [PCLStorage](https://www.nuget.org/packages/PCLStorage/) – Xamarin 지원 되는 플랫폼 및 최신 Windows Api에 대 한 해당 시설 플랫폼 간 파일 액세스 합니다.
+또한 Xamarin 지원 플랫폼 및 최신 Windows Api에 대 한 플랫폼 간 파일 액세스 기능을 지 원하는 PCL 호환 NuGet – [Pclstorage](https://www.nuget.org/packages/PCLStorage/) 가 있습니다.
 
 ## <a name="network-operations"></a>네트워크 작업
 
@@ -205,7 +205,7 @@ PCL 호환 Nuget – 이기도 [PCLStorage](https://www.nuget.org/packages/PCLSt
 
 ### <a name="httpclient"></a>HttpClient
 
-합니다 `HttpClient` 클래스는 `System.Net.Http` 네임 스페이스는 Xamarin.iOS, Xamarin.Android 및 대부분의 Windows 플랫폼에서 사용할 수 있습니다. 한 [Microsoft HTTP 클라이언트 라이브러리 Nuget](https://www.nuget.org/packages/Microsoft.Net.Http/) 이식 가능한 클래스 라이브러리 (및 Windows Phone 8 Silverlight)에이 API를 사용할 수 있는 합니다.
+합니다 `HttpClient` 클래스는 `System.Net.Http` 네임 스페이스는 Xamarin.iOS, Xamarin.Android 및 대부분의 Windows 플랫폼에서 사용할 수 있습니다. 이 API를 이식 가능한 클래스 라이브러리 (및 Windows Phone 8 Silverlight)로 가져오는 데 사용할 수 있는 [MICROSOFT HTTP 클라이언트 라이브러리 NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/) 이 있습니다.
 
 ```csharp
 var client = new HttpClient();

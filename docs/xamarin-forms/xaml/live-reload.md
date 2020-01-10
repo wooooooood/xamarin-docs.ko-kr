@@ -8,19 +8,19 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: 9fb085313e994adc486833bb25e893659aa33b4b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032754"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728345"
 ---
 # <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
 > [!NOTE]
 > Xamarin Live 다시 로드의 미리 보기가 종료 되었으며, 모든 사용자에 게 피드백과 의견을 보내 주셔서 감사 합니다. Xamarin.ios에 대해 작업 중인 새로운 생산성 기능에 대 한 자세한 내용은 Visual Studio 2019에 대 한 [로드맵](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) 을 참조 하세요. 이 확장은 Visual Studio 2017에 계속 사용할 수 있지만 향후 업데이트는 수신 되지 않습니다.
 
-Xamarin Live Reload를 사용 하면 **XAML을 변경 하 고 다른 컴파일 및 배포를 요구 하지 않고 라이브 상태를 볼**수 있습니다. XAML에 대 한 변경 내용은 저장 시 배포 대상에 다시 배포 됩니다.
+Xamarin Live Reload를 사용 하면 **XAML을 변경 하 고 다른 컴파일 및 배포를 요구 하지 않고 라이브 상태를 볼**수 있습니다. XAML을 변경하고 저장하면 배포 대상에 다시 반영됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -30,29 +30,29 @@ Xamarin Live Reload를 사용 하면 **XAML을 변경 하 고 다른 컴파일 �
 ## <a name="getting-started"></a>시작
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Visual Studio Marketplace에서 Xamarin Live 다시 로드를 설치 합니다.
 
-Xamarin Live Reload는 Visual Studio Marketplace를 통해 배포 됩니다. 확장을 설치 하려면 Visual Studio Marketplace 웹 사이트의 [Xamarin Live Reload 페이지](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) 를 방문 하 여 **다운로드**를 클릭 합니다.
+Xamarin Live Reload는 Visual Studio 마켓플레이스를 통해 배포됩니다. 확장을 설치하려면 [Visual Studio 마켓플레이스의 Xamarin Live Reload 페이지](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) 웹 사이트를 방문해 **다운로드**를 클릭합니다.
 
-다운로드 된 .vsix를 열고 **설치**를 클릭 합니다.
+다운로드가 완료되면 .vsix를 클릭해 열고 **설치**합니다.
 
-![Visual Studio 설치 관리자 Xamarin 라이브 다시 로드 확인](images/LiveReloadVSIXInstall.png)
+![Visual Studio 설치 관리자에서 Xamarin Live Reload 체크](images/LiveReloadVSIXInstall.png)
 
-또는 Visual Studio 내의 **확장 및 업데이트** 대화 상자에 있는 **온라인** 탭에서 검색할 수 있습니다.
+또는 Visual Studio에서 **확장명 및 업데이트** 대화상자의 **온라인** 탭에서 찾을 수 있습니다.
 
 ### <a name="2-configure-your-app-to-use-live-reload"></a>2. 라이브 다시 로드를 사용 하도록 앱 구성
 
-기존 모바일 앱에 라이브 다시 로드를 추가 하는 작업은 다음 세 단계로 수행할 수 있습니다.
+기존 모바일 앱에 3단계로 Live Reload를 추가할 수 있습니다.
 
-1. 모든 프로젝트가 [Xamarin. Forms 3.0.0 이상을](https://www.nuget.org/packages/Xamarin.Forms/) 사용 하도록 업데이트 되었는지 확인 합니다.
+1. 모든 프로젝트가 [Xamarin.Forms 3.0.0 이상](https://www.nuget.org/packages/Xamarin.Forms/)인지 확인.
 
-2. **LiveReload** NuGet 패키지를 추가 합니다.
+2. **Xamarin.LiveReload** NuGet 패키지 추가:
 
-    a. **.NET Standard** – .NET Standard 2.0 라이브러리에 **LiveReload** NuGet을 설치 합니다. 이를 플랫폼 프로젝트에 설치할 필요는 없습니다. **패키지 원본이** **모두**로 설정 되어 있는지 확인 합니다.
+    a. **.NET Standard** – **Xamarin.LiveReload** NuGet을 .NET Standard 2.0 라이브러리에 설치합니다. 이 Nuget은 플랫폼 프로젝트에 따로 설치할 필요는 없습니다. **패키지 소스**가 **모두**로 설정되어있는지 확인합니다.
     
-    b. **공유 프로젝트** – **LiveReload** NuGet을 모든 플랫폼 프로젝트에 설치 합니다 (예: ANDROID, iOS, UWP 등). **패키지 원본이** **모두**로 설정 되어 있는지 확인 합니다.
+    b. **공유 프로젝트** – **Xamarin.LiveReload** NuGet을 모든 플랫폼 프로젝트(Android, iOS, UWP 등)에 설치합니다. **패키지 소스**가 **모두**로 설정되어있는지 확인합니다.
 
-    [NuGet 패키지 관리자를 사용 하 여 Xamarin Live Reload NuGet 추가![](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
+    [NuGet 패키지 관리자를 사용 하 여 Xamarin Live Reload NuGet 추가 ![](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
-3. 다음 코드 조각과 같이 `Application` 클래스의 생성자에 `LiveReload.Init();`를 추가 합니다.
+3. 아래 코드 조각에 있는 것처럼 `Application` 클래스의 생성자에 `LiveReload.Init();` 추가:
 
 ```csharp
 public partial class App : Application
@@ -72,11 +72,11 @@ public partial class App : Application
 
 ### <a name="3-start-live-reloading"></a>3. 라이브 다시 로드 시작
 
-응용 프로그램을 컴파일 및 배포 합니다. 앱이 배포 되 면 XAML 파일을 열고 일부를 변경한 후 파일을 저장 합니다. 변경 내용은 배포 대상에 다시 배포 됩니다.
+앱을 컴파일 및 배포합니다. 앱이 배포되면 XAML 파일을 열고, 일부를 변경한 후 파일을 저장합니다. 변경 내용이 배포 대상에 다시 배포됩니다.
 
 > [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
 
-라이브 다시 로드는 XAML 파일에 대 한 변경 내용으로 작동 합니다. NuGet 패키지 C# 를 변경 하거나 추가/제거 하려면 새 빌드 및 배포를 적용 해야 합니다.
+Live Reload는 작동하는 모든 XAML 파일에서 사용할 수 있습니다. C#이나 NuGet 패키지의 추가/제거는 다시 빌드하고 배포해야 변경 사항을 적용할 수 있습니다.
 
 ## <a name="frequently-asked-questions"></a>질문과 대답 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>Mac용 Visual Studio에서 Xamarin Live 재로드를 사용할 수 있나요? 
@@ -105,7 +105,7 @@ Android 에뮬레이터 또는 iOS 시뮬레이터에 디버깅 하는 경우 �
 
 ### <a name="does-it-require-debugging-the-app"></a>앱을 디버깅 해야 하나요? 
 
-아니요. 실제로 모든 수의 장치 또는 시뮬레이터/에뮬레이터에서 지원 되는 모든 응용 프로그램 목표 (Android, iOS 및 UWP)를 시작 하 고 모든 업데이트를 한 번에 볼 수 있습니다. 
+No. 실제로 모든 수의 장치 또는 시뮬레이터/에뮬레이터에서 지원 되는 모든 응용 프로그램 목표 (Android, iOS 및 UWP)를 시작 하 고 모든 업데이트를 한 번에 볼 수 있습니다. 
 
 ## <a name="limitations"></a>제한 사항
 
@@ -127,15 +127,15 @@ Android 에뮬레이터 또는 iOS 시뮬레이터에 디버깅 하는 경우 �
 
 * **XLR001**: *현재 프로젝트에서 ' LiveReload ' NuGet 패키지 버전 ' [version] '을 참조 하지만 Xamarin Live Reload 확장에 버전 ' [version] '이 (가) 필요 합니다.*
 
-  라이브 다시 로드 기능의 빠른 반복 및 발전을 허용 하려면 nuget 패키지와 Visual Studio 확장이 정확히 일치 해야 합니다. Nuget 패키지를 설치한 확장의 동일한 버전으로 업데이트 합니다.
+  라이브 다시 로드 기능의 빠른 반복 및 발전을 허용 하려면 NuGet 패키지와 Visual Studio 확장이 정확히 일치 해야 합니다. NuGet 패키지를 설치한 확장의 동일한 버전으로 업데이트 합니다.
 
 * **XLR002**: *라이브 다시 로드는 명령줄에서 빌드할 때 적어도 ' MqttHostname ' 속성이 필요 합니다. 또는 ' EnableLiveReload '을 ' f a l s e '로 설정 하 여 기능을 사용 하지 않도록 설정 합니다.*
 
   라이브 다시 로드에 필요한 속성은 명령줄에서 빌드하는 경우 (또는 연속 통합에서) 사용할 수 없으므로 명시적으로 제공 해야 합니다. 
 
-* **XLR003**: *라이브 다시 로드 nuget 패키지를 사용 하려면 Xamarin Live reload Visual Studio 확장을 설치 해야 합니다.*
+* **XLR003**: *라이브 다시 로드 NuGet 패키지를 사용 하려면 Xamarin Live reload Visual Studio 확장을 설치 해야 합니다.*
 
-  라이브 다시 로드 nuget 패키지를 참조 하는 프로젝트를 빌드하려고 했지만 시각적 확장이 설치 되어 있지 않습니다.  
+  라이브 다시 로드 NuGet 패키지를 참조 하는 프로젝트를 빌드하려고 했지만 시각적 확장이 설치 되어 있지 않습니다.  
 
 * *어셈블리를 로드 하는 동안 예외가 발생 했습니다. System.io.filenotfoundexception: ' Xamarin.ios, Version = 0.3.27.0, Culture = 중립, PublicKeyToken = ' 어셈블리를 로드할 수 없습니다.*
 
@@ -143,7 +143,7 @@ Android 에뮬레이터 또는 iOS 시뮬레이터에 디버깅 하는 경우 �
 
 ### <a name="app-doesnt-connect"></a>앱이 연결 되지 않음
 
-응용 프로그램을 빌드할 때 **도구 > 옵션 > Xamarin > 라이브 다시 로드** (호스트 이름, 포트 및 암호화 키)의 정보는 앱에 포함 되므로 `LiveReload.Init()` 실행 될 때 연결에 대 한 페어링 또는 구성이 필요 하지 않습니다. 실패.
+응용 프로그램을 빌드할 때 **도구 > 옵션 > Xamarin > 라이브 다시 로드** (호스트 이름, 포트 및 암호화 키)의 정보는 앱에 포함 되므로 `LiveReload.Init()` 실행 될 때 연결이 성공 하는 데는 페어링 또는 구성이 필요 하지 않습니다.
 
 일반적인 네트워킹 문제 (방화벽, 다른 네트워크의 장치) 외에는 앱이 Visual Studio의 구성과 다르기 때문에 앱이 성공적으로 IDE를 연결 하지 못하는 주된 이유가 있습니다. 이 문제는 다음과 같은 경우에 발생할 수 있습니다.
 
@@ -160,9 +160,9 @@ Android 에뮬레이터 또는 iOS 시뮬레이터에 디버깅 하는 경우 �
 1. **C:\Program files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** 폴더를 삭제 합니다 (참고: "Enterprise"를 설치 된 버전으로 바꾸고, 안정적인 VS에 설치 된 경우 "Preview"를 "2017"으로 바꿉니다.
 2. 해당 Visual Studio에 대 한 **개발자 명령 프롬프트** 를 열고 `devenv /updateconfiguration`를 실행 합니다. 
 
-## <a name="tips--tricks"></a>팁 & 트릭
+## <a name="tips--tricks"></a>팁과 트릭
 
-* 암호화 키 **자동 생성**을 해제 하는 경우 처럼 암호화 키를 포함 하 여 라이브 다시 로드 설정이 변경 되지 않고 동일한 컴퓨터에서 빌드하는 경우 초기 배포 후에 앱을 빌드 및 배포할 필요가 없습니다. 코드 또는 종속성. 이전에 배포 된 앱을 다시 시작할 수 있으며 사용 된 마지막 호스트에 연결 됩니다.
+* 암호화 키 **자동 생성**을 해제 하는 경우 처럼 암호화 키를 포함 하 여 라이브 다시 로드 설정이 변경 되지 않고 동일한 컴퓨터에서 빌드하는 경우에는 코드 또는 종속성을 변경 하지 않는 한 초기 배포 후에 앱을 빌드 및 배포할 필요가 없습니다. 이전에 배포 된 앱을 다시 시작할 수 있으며 사용 된 마지막 호스트에 연결 됩니다.
 
 * 동일한 Visual Studio 세션에 연결할 수 있는 장치 수에는 제한이 없습니다. 모든 장치에서 동시에 작업을 수행 하는 것을 확인 하기 위해 필요에 따라 많은 장치/시뮬레이터에서 앱을 배포 하 고 시작할 수 있습니다.
 
@@ -170,7 +170,7 @@ Android 에뮬레이터 또는 iOS 시뮬레이터에 디버깅 하는 경우 �
 
 ## <a name="live-reload-server"></a>서버 라이브 다시 로드
 
-실행 중인 응용 프로그램에서 컴퓨터에 연결 하는 경우 (예를 들어 `localhost`를 사용 하 여 컴퓨터에 연결 하는 경우 또는 **도구 > > > 옵션**에서 `127.0.0.1`를 사용 하 여 표시 되는 경우, 즉, 방화벽, 다른 네트워크) 원격 서버를 구성할 수 있습니다. 대신 IDE와 앱이 모두이에 해당 합니다.
+실행 중인 응용 프로그램에서 컴퓨터에 연결 하는 경우 (예를 들어 `localhost` 또는 도구 > > 옵션에서 `127.0.0.1`를 사용 하 여 표시 된 것 처럼 **Xamarin > 라이브 다시 로드**)를 사용할 수 없는 경우 (예: 방화벽, 다른 네트워크) 원격 서버를 구성할 수 있습니다.
 
 라이브 다시 로드는 표준 [Mqtt 프로토콜](https://mqtt.org/) 을 사용 하 여 메시지를 교환 하므로 [타사 서버](https://github.com/mqtt/mqtt.github.io/wiki/servers)와 통신할 수 있습니다. 사용할 수 있는 [공용 서버](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) ( *브로커*라고도 함)도 제공 됩니다. 라이브 다시 로드는 `broker.hivemq.com` 및 `iot.eclipse.org` 호스트 이름과 [www.cloudmqtt.com](https://www.cloudmqtt.com) 및 [www.cloudamqp.com](https://www.cloudamqp.com)에서 제공 하는 서비스를 사용 하 여 테스트 되었습니다. Azure의 Azure에서 사용자 고유의 MQTT 서버를 배포할 수도 있습니다 (예: [Azure에서의 Hivemq](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud)).
 
