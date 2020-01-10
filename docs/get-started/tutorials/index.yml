@@ -1,106 +1,55 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Forms 자습서
+summary: Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 사항을 알아봅니다.
 metadata:
   title: Xamarin.Forms 자습서
-  description: Visual Studio 및 Mac용 Visual Studio를 사용하여 Xamarin.Forms 애플리케이션을 개발하는 방법에 대한 자습서입니다.
+  description: Visual Studio 및 Mac용 Visual Studio를 사용하여 Xamarin.Forms 애플리케이션을 개발하는 기본 사항에 대한 자습서입니다.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 8E3D88AE-923E-4B7C-ABAC-058A25A48BBF
-  ms.technology: xamarin-forms
   author: davidbritch
   ms.author: dabritch
-  ms.date: 02/14/2018
-abstract:
-  description: 이 페이지는 Xamarin.Forms를 사용하여 모바일 애플리케이션을 만드는 기본 사항에 대해 자세히 알아보는 자습서에 연결됩니다. 전체 Xamarin.Forms 설명서는 <a href="/xamarin/xamarin-forms/">Xamarin.Forms 설명서</a>를 참조하세요.
-sections:
-  - title: 레이아웃
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: stacklayout/
-            html: 1차원 스택으로 가로 또는 세로 보기를 구성하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: stacklayout/
-            title: StackLayout
-          - href: grid/
-            html: 보기를 비례적이거나 절대적인 크기의 행 및 열로 구성하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_table.svg'
-              href: grid/
-            title: 표
-  - title: 보기
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: label/
-            html: 한 줄 및 여러 줄로 텍스트를 표시하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_form-label.svg
-              href: label/
-            title: 레이블
-          - href: button/
-            html: 특정 작업을 수행하도록 애플리케이션에 지시하는 방법으로 단추를 누르거나 클릭하는 데 대응하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_button.svg'
-              href: button/
-            title: 단추
-          - href: entry/
-            html: 한 줄 텍스트 입력을 수락하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_form-entry.svg
-              href: entry/
-            title: 입력
-          - href: editor/
-            html: 여러 줄 텍스트 입력을 수락하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_form-editor.svg
-              href: editor/
-            title: 편집기
-          - href: image/
-            html: 페이지에서 이미지를 표시하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_account-management.svg'
-              href: image/
-            title: 이미지
-          - href: listview/
-            html: 데이터 목록을 제공하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_sharepoint-list.svg'
-              href: listview/
-            title: ListView
-  - title: 앱 기본 사항
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: pop-ups/
-            html: Xamarin.Forms을 사용하여 사용자에게 간단한 질문을 묻거나 작업을 설명하는 경고 및 작업 시트를 표시하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_alert.svg'
-              href: pop-ups/
-            title: 팝업 항목
-          - href: app-lifecycle/
-            html: Xamarin.Forms 앱 수명 주기 및 수명 주기 상태 변경에서 데이터를 유지하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
-              href: app-lifecycle/
-            title: 앱 수명 주기
-          - href: local-database/
-            html: SQLite.NET NuGet 패키지를 사용하여 로컬 데이터베이스 작업을 앱에 통합하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-              href: local-database/
-            title: 로컬 데이터베이스
-          - href: web-service/
-            html: Xamarin.Forms의 REST 기반 웹 서비스를 사용하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_server.svg'
-              href: web-service/
-            title: 웹 서비스
+  ms.date: 12/23/2019
+  ms.openlocfilehash: fa5fb1d6747650520864371ceacf665a50dc0973
+  ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/07/2020
+  ms.locfileid: "75718742"
+landingContent:
+- title: 레이아웃
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: StackLayout
+      url: stacklayout/index.yml
+    - text: 표
+      url: grid/index.yml
+- title: 컨트롤
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 레이블
+      url: label/index.yml
+    - text: 단추
+      url: button/index.yml
+    - text: 입력
+      url: entry/index.yml
+    - text: 편집기
+      url: editor/index.yml
+    - text: 이미지
+      url: image/index.yml
+    - text: ListView
+      url: listview/index.yml
+    - text: 팝업 항목
+      url: pop-ups/index.yml
+- title: 앱 기본 사항
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 앱 수명 주기
+      url: app-lifecycle/index.yml
+    - text: 로컬 데이터베이스
+      url: local-database/index.yml
+    - text: 웹 서비스
+      url: web-service/index.yml

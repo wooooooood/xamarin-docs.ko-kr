@@ -1,6 +1,6 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: XAML(eXtensible Application Markup Language)
+summary: XAML을 사용하여 Xamarin.Forms 사용자 인터페이스를 정의하는 방법을 알아보세요.
 metadata:
   title: XAML(eXtensible Application Markup Language)
   description: XAML을 사용하여 Xamarin.Forms 사용자 인터페이스를 정의하는 방법을 알아보세요.
@@ -9,127 +9,59 @@ metadata:
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
-abstract:
-  description: XAML을 사용하여 Xamarin.Forms 사용자 인터페이스를 정의하는 방법을 알아보세요.
-sections:
-  - title: 시작
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: xaml-basics/index.md
-            html: XAML을 사용하여 Xamarin.Forms 사용자 인터페이스를 개발하는 기초적인 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-              href: xaml-basics/index.md
-            title: 기본 사항
-          - href: xaml-controls.md
-            html: XAML 파일에서 참조할 수 있는 Xamarin Forms 보기에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_form.svg'
-              href: xaml-controls.md
-            title: 컨트롤
-          - href: xamlc.md
-            html: XAML 컴파일러를 사용하여 XAML을 중간 언어로 직접 컴파일하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-              href: xamlc.md
-            title: 컴파일
-          - href: markup-extensions/index.md
-            html: 리터럴 텍스트 문자열이 아닌 소스에서 요소 특성을 설정할 수 있게 하는 XAML 태그 확장에 대해 알아보세요.
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: markup-extensions/index.md
-            title: 태그 확장
-  - title: 도구
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: hot-reload.md
-            html: XAML 핫 다시 로드를 사용하여 UI 변경 내용의 유효성을 신속하게 검사하는 방법을 알아보세요.
-            image:
-              src: ~/media/icons/i_quickstart-3.svg
-              href: hot-reload.md
-            title: 핫 다시 로드
-          - href: toolbox.md
-            html: XAML 도구 상자를 사용하여 Xamarin.Forms 컨트롤과 레이아웃을 XAML 편집기로 끌어서 놓는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
-              href: toolbox.md
-            title: 도구 상자
-          - href: xaml-previewer/index.md
-            html: XAML 미리 보기를 사용하여 페이지의 실시간 미리 보기를 XAML 태그와 나란히 표시하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_responsive.svg'
-              href: xaml-previewer/index.md
-            title: 미리 보기
-  - title: 네임스페이스
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: namespaces.md
-            html: XAML 네임스페이스 구문과 XAML 네임스페이스를 선언하여 형식에 액세스하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_namespace.svg'
-              href: namespaces.md
-            title: 네임스페이스
-          - href: custom-namespace-schemas.md
-            html: 사용자 지정 URL과 하나 이상의 CLR 네임스페이스 간의 매핑을 지정하는 XAML 사용자 지정 네임스페이스 스키마를 만드는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
-              href: custom-namespace-schemas.md
-            title: 사용자 지정 네임스페이스 스키마
-          - href: custom-prefix.md
-            html: XAML을 사용하기 위해 XAML 네임스페이스와 연결할 권장 접두사를 지정하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-automate.svg'
-              href: custom-prefix.md
-            title: 네임스페이스 권장 접두사
-  - title: 추가 기능
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: bindable-properties.md
-            html: 바인딩 가능한 속성을 만드는 방법과 XAML에서 이러한 속성을 이용하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-              href: bindable-properties.md
-            title: 바인딩 가능한 속성
-          - href: attached-properties.md
-            html: 연결된 속성을 만드는 방법과 XAML에서 이러한 속성을 이용하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-              href: attached-properties.md
-            title: 연결된 속성
-          - href: resource-dictionaries.md
-            html: XAML 리소스를 만들고 Xamarin Forms 애플리케이션 전체에서 다시 사용하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_reference.svg'
-              href: resource-dictionaries.md
-            title: 리소스 사전
-          - href: passing-arguments.md
-            html: 'XAML을 사용하여 인수를 생성자에 전달하고, 팩터리 메서드를 호출하며, 제네릭 인수의 형식을 지정하는 방법을 알아보세요.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
-              href: passing-arguments.md
-            title: 인수 전달
-          - href: field-modifiers.md
-            html: 명명된 XAML 요소의 생성된 필드에 액세스 수준을 지정하는 XAML 필드 한정자에 대해 알아보세요.
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: field-modifiers.md
-            title: 필드 한정자
-          - href: runtime-load.md
-            html: 런타임에 XAML을 로드하고 구문 분석하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-              href: runtime-load.md
-            title: 런타임에 XAML 로드
+  ms.date: 12/27/2019
+  ms.openlocfilehash: 5f01b3ecf914d6c7c5c36378511c0fd7e30c952c
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679690"
+landingContent:
+- title: 시작
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 기본 사항
+      url: xaml-basics/index.md
+    - text: 컨트롤
+      url: xaml-controls.md
+    - text: 컴파일
+      url: xamlc.md
+    - text: 태그 확장
+      url: markup-extensions/index.md
+- title: 도구
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 핫 다시 로드
+      url: hot-reload.md
+    - text: 도구 상자
+      url: toolbox.md
+    - text: 미리 보기
+      url: xaml-previewer/index.md
+- title: 네임스페이스
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 네임스페이스
+      url: namespaces.md
+    - text: 사용자 지정 네임스페이스 스키마
+      url: custom-namespace-schemas.md
+    - text: 네임스페이스 권장 접두사
+      url: custom-prefix.md
+- title: 추가 기능
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 바인딩 가능한 속성
+      url: bindable-properties.md
+    - text: 연결된 속성
+      url: attached-properties.md
+    - text: 리소스 사전
+      url: resource-dictionaries.md
+    - text: 인수 전달
+      url: passing-arguments.md
+    - text: 필드 한정자
+      url: field-modifiers.md
+    - text: 런타임 시 XAML 로드
+      url: runtime-load.md

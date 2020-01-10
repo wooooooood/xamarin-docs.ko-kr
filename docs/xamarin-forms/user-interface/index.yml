@@ -1,6 +1,6 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Forms 사용자 인터페이스
+summary: Xamarin.Forms를 사용하여 사용자 인터페이스를 만드는 방법을 알아봅니다.
 metadata:
   title: Xamarin.Forms 사용자 인터페이스
   description: Xamarin.Forms를 사용하여 사용자 인터페이스를 만드는 방법을 알아봅니다.
@@ -9,235 +9,177 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/11/2019
-abstract:
-  description: Xamarin.Forms를 사용하여 사용자 인터페이스를 만드는 방법을 알아봅니다.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: activityindicator.md
-            html: ActivityIndicator를 사용하여 사용자에게 진행률 표시줄은 제공하지 않으면서 애플리케이션에서 시간이 오래 걸리는 활동이 진행되고 있음을 알려주는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: activityindicator.md
-            title: ActivityIndicator
-          - href: animation/index.md
-            html: Xamarin.Forms에서 애니메이션을 만드는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: animation/index.md
-            title: 애니메이션
-          - href: boxview.md
-            html: BoxView를 사용하여 색이 있는 사각형을 만드는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: boxview.md
-            title: BoxView
-          - href: button.md
-            html: 단추를 사용하여 애플리케이션에 특정 작업을 수행하도록 지시하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: button.md
-            title: 단추
-          - href: carouselview/index.md
-            html: CarouselView를 사용하여 선형 캐러셀 레이아웃에 데이터를 제공하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: collectionview/index.md
-            title: CarouselView
-          - href: checkbox.md
-            html: CheckBox를 사용하여 부울 값을 설정하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: checkbox.md
-            title: CheckBox
-          - href: collectionview/index.md
-            html: CollectionView를 사용하여 여러 레이아웃 사양으로 데이터 목록을 제공하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: collectionview/index.md
-            title: CollectionView
-          - href: colors.md
-            html: Color 클래스를 사용하여 여러 플랫폼에서 색을 정의하고 사용하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: colors.md
-            title: 색
-          - href: controls/index.md
-            html: 'Xamarin.Forms에서 사용 가능한 페이지, 레이아웃, 보기 및 셀에 대해 알아봅니다.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: controls/index.md
-            title: 컨트롤 참조
-          - href: datepicker.md
-            html: DatePicker를 사용하여 지정된 범위 내의 날짜를 선택할 수 있도록 하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: datepicker.md
-            title: DatePicker
-          - href: pop-ups.md
-            html: 사용자에게 간단한 질문을 하고 작업 과정을 안내하며 메시지를 표시하는 대화 상자를 표시하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: pop-ups.md
-            title: 팝업 표시
-          - href: graphics/skiasharp/index.md
-            html: SkiaSharp를 사용하여 Xamarin.Forms 애플리케이션에 그래픽을 적용하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: graphics/skiasharp/index.md
-            title: SkiaSharp를 사용한 그래픽
-          - href: images.md
-            html: Image 컨트롤을 사용하여 이미지를 표시하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: images.md
-            title: 이미지
-          - href: imagebutton.md
-            html: ImageButton 컨트롤을 사용하여 이미지를 표시하는 방법과 애플리케이션에 특정 작업을 수행하도록 지시하는 탭에 응답하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: imagebutton.md
-            title: ImageButton
-          - href: indicatorview.md
-            html: IndicatorView 컨트롤을 사용하여 항목 수와 현재 위치를 나타내는 표시기를 CarouselView에 표시하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: indicatorview.md
-            title: IndicatorView
-          - href: layouts/index.yml
-            html: Xamarin.Forms의 레이아웃 컨트롤 및 기능을 사용하여 콘텐츠를 구성하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: layouts/index.yml
-            title: 레이아웃
-          - href: listview/index.md
-            html: ListView 컨트롤을 사용하여 데이터 목록을 제공하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: listview/index.md
-            title: ListView
-          - href: map/index.md
-            html: 필수 플랫폼 구성을 비롯한 맵 컨트롤을 사용하는 방법과 맵에 핀을 채우는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: map/index.md
-            title: 맵
-          - href: menuitem.md
-            html: MenuItem 클래스를 사용하여 ListView 셀의 상황에 맞는 메뉴에 항목을 추가 하는 방법에 대해 알아보세요.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: menuitem.md
-            title: MenuItem
-          - href: picker/index.md
-            html: Picker 컨트롤을 사용하여 데이터 목록에서 텍스트 항목을 선택하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: picker/index.md
-            title: 선택기
-          - href: progressbar.md
-            html: ProgressBar를 사용하여 애플리케이션에서 시간이 오래 걸리는 활동이 진행되고 있음을 알려주는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: progressbar.md
-            title: ProgressBar
-          - href: refreshview.md
-            html: RefreshView를 사용하여 스크롤 가능한 콘텐츠의 기능을 새로 고칠 수 있도록 하는 풀을 제공하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: refreshview.md
-            title: RefreshView
-          - href: searchbar.md
-            html: SearchBar 컨트롤을 사용하여 검색을 시작하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: searchbar.md
-            title: SearchBar
-          - href: slider.md
-            html: 슬라이더 컨트롤을 사용하여 사용자가 연속 범위에서 숫자 값을 선택할 수 있도록 하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: slider.md
-            title: 슬라이더
-          - href: splashscreen.md
-            html: Xamarin.Forms 애플리케이션에 대한 시작 화면을 만드는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: splashscreen.md
-            title: 시작 화면
-          - href: stepper.md
-            html: Stepper 컨트롤을 사용하여 사용자가 값 범위에서 숫자 값을 선택할 수 있도록 하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: stepper.md
-            title: Stepper
-          - href: styles/index.md
-            html: XAML 스타일과 CSS(CSS 스타일시트)를 사용하여 사용자 인터페이스에 스타일을 적용하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: styles/index.md
-            title: 스타일
-          - href: swipeview.md
-            html: SwipeView를 사용하여 살짝 밀기 제스처로 표시되는 상황에 맞는 메뉴 항목을 제공하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: swipeview.md
-            title: SwipeView
-          - href: switch.md
-            html: 스위치를 사용하여 부울 값을 설정하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: switch.md
-            title: 스위치
-          - href: tableview.md
-            html: 'TableView를 사용하여 각 행이 동일한 템플릿을 공유하지 않는, 스크롤 가능한 데이터 또는 선택 항목 목록을 표시하는 방법을 알아봅니다.'
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: tableview.md
-            title: TableView
-          - href: text/index.md
-            html: 텍스트를 제공하고 받는 Xamarin.Forms 컨트롤에 대해 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: text/index.md
-            title: 텍스트
-          - href: theming.md
-            html: Xamarin.Forms 애플리케이션 테마를 작성하고 런타임 시 테마를 변경하는 방법에 대해 알아보세요.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: theming.md
-            title: 테마
-          - href: timepicker.md
-            html: TimePicker를 사용하여 시간을 선택할 수 있도록 하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: timepicker.md
-            title: TimePicker
-          - href: toolbaritem.md
-            html: ToolbarItem을 사용하여 탐색 표시줄에 단추를 추가하는 방법에 대해 알아보세요.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: toolbaritem.md
-            title: ToolbarItem
-          - href: visual/index.md
-            html: Xamarin.Forms 재질 시각적 개체를 사용하여 iOS 및 Android에서 동일해 보이거나 거의 동일해 보이는 애플리케이션을 만드는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: visual/index.md
-            title: 시각적 개체
-          - href: visual-state-manager.md
-            html: 사용자 인터페이스의 시각적 개체 상태를 정의하고 VisualStateManager 클래스를 사용하여 상태를 활성화하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: visual-state-manager.md
-            title: 시각적 개체 상태 관리자
-          - href: webview.md
-            html: Xamarin.Forms 애플리케이션에서 HTML 및 웹 콘텐츠를 표시하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: webview.md
-            title: WebView
+  ms.date: 12/30/2019
+  ms.openlocfilehash: 2a62ff0c3d94d47870b9b112b86091c534ed6ff8
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679612"
+landingContent:
+- title: 컨트롤 참조
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 개요
+      url: controls/index.md
+    - text: Pages
+      url: controls/pages.md
+    - text: 레이아웃
+      url: controls/layouts.md
+    - text: 뷰
+      url: controls/views.md
+    - text: 셀
+      url: controls/cells.md
+    - text: 공용 속성, 메서드, 이벤트
+      url: controls/common-properties.md
+    - text: 타사 컨트롤
+      url: controls/thirdparty.md
+- title: 프레젠테이션 뷰
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: BoxView
+      url: boxview.md
+    - text: 이미지
+      url: images.md
+    - text: 레이블
+      url: text/label.md
+    - text: 맵
+      url: map/index.md
+    - text: WebView
+      url: webview.md
+- title: 시작 명령 뷰
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 단추
+      url: button.md
+    - text: ImageButton
+      url: imagebutton.md
+    - text: RefreshView
+      url: refreshview.md
+    - text: SearchBar
+      url: searchbar.md
+    - text: SwipeView
+      url: swipeview.md
+- title: 값 설정 뷰
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: CheckBox
+      url: checkbox.md
+    - text: DatePicker
+      url: datepicker.md
+    - text: 슬라이더
+      url: slider.md
+    - text: Stepper
+      url: stepper.md
+    - text: 스위치
+      url: switch.md
+    - text: TimePicker
+      url: timepicker.md
+- title: 텍스트 편집 뷰
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 편집기
+      url: text/editor.md
+    - text: 입력
+      url: text/entry.md
+- title: 작업 표시 뷰
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ActivityIndicator
+      url: activityindicator.md
+    - text: ProgressBar
+      url: progressbar.md
+- title: 컬렉션 표시 뷰
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: CarouselView
+      url: carouselview/index.md
+    - text: CollectionView
+      url: collectionview/index.md
+    - text: IndicatorView
+      url: indicatorview.md
+    - text: ListView
+      url: listview/index.md
+    - text: 선택기
+      url: picker/index.md
+    - text: TableView
+      url: tableview.md
+- title: 추가 컨트롤
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: MenuItem
+      url: menuitem.md
+    - text: ToolbarItem
+      url: toolbaritem.md
+- title: 사용자 인터페이스 개념
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 애니메이션
+      url: animation/index.md
+    - text: 색
+      url: colors.md
+    - text: 팝업 표시
+      url: pop-ups.md
+    - text: 글꼴
+      url: text/fonts.md
+    - text: SkiaSharp를 사용한 그래픽
+      url: graphics/skiasharp/index.md
+    - text: 시작 화면
+      url: splashscreen.md
+    - text: 스타일
+      url: styles/index.md
+    - text: 테마
+      url: theming.md
+    - text: 시각적 개체
+      url: visual/index.md
+    - text: 시각적 개체 상태 관리자
+      url: visual-state-manager.md
+- title: 레이아웃
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 레이아웃 선택
+      url: layouts/choose-layout.md
+    - text: AbsoluteLayout
+      url: layouts/absolute-layout.md
+    - text: ContentView
+      url: layouts/contentview.md
+    - text: FlexLayout
+      url: layouts/flex-layout.md
+    - text: 프레임
+      url: layouts/frame.md
+    - text: 표
+      url: layouts/grid.md
+    - text: RelativeLayout
+      url: layouts/relative-layout.md
+    - text: ScrollView
+      url: layouts/scroll-view.md
+    - text: StackLayout
+      url: layouts/stack-layout.md
+- title: 레이아웃 개념
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 바인딩 가능한 레이아웃
+      url: layouts/bindable-layouts.md
+    - text: 사용자 지정 레이아웃
+      url: layouts/custom.md
+    - text: 디바이스 방향
+      url: layouts/device-orientation.md
+    - text: LayoutOptions
+      url: layouts/layout-options.md
+    - text: 레이아웃 압축
+      url: layouts/layout-compression.md
+    - text: 여백 및 안쪽 여백
+      url: layouts/margin-and-padding.md
+    - text: 태블릿 및 데스크톱 레이아웃
+      url: layouts/tablet.md

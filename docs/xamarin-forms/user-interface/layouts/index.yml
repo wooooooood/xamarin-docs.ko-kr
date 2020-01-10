@@ -1,117 +1,63 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Forms 레이아웃
+summary: Xamarin.Forms의 레이아웃 클래스와 레이아웃 개념에 대해 알아봅니다.
 metadata:
   title: Xamarin.Forms 레이아웃
-  description: Xamarin.Forms의 레이아웃 클래스 및 레이아웃 기능에 대해 알아보세요.
+  description: Xamarin.Forms의 레이아웃 클래스와 레이아웃 개념에 대해 알아봅니다.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: CF6BD41F-CD4B-4576-841D-B8A49A4EC754
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/14/2019
-abstract:
-  description: Xamarin.Forms의 레이아웃 클래스 및 레이아웃 기능에 대해 알아보세요.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: choose-layout.md
-            html: Xamarin.Forms의 기본 레이아웃 클래스에서 자식의 위치 및 크기를 조정하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: choose-layout.md
-            title: 레이아웃 선택
-          - href: stack-layout.md
-            html: 1차원 스택으로 가로 또는 세로 보기를 구성하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: stack-layout.md
-            title: StackLayout
-          - href: grid.md
-            html: 보기를 비례적이거나 절대적인 크기의 행 및 열로 구성하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: grid.md
-            title: 표
-          - href: flex-layout.md
-            html: 줄 바꿈을 사용하여 뷰를 가로 또는 세로로 구성하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: flex-layout.md
-            title: FlexLayout
-          - href: relative-layout.md
-            html: 레이아웃 또는 형제 뷰의 속성을 기준으로 제약 조건을 설정하여 뷰를 구성하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: RelativeLayout
-          - href: absolute-layout.md
-            html: 비례 또는 절댓값을 설정하여 뷰를 구성하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: absolute-layout.md
-            title: AbsoluteLayout
-          - href: scroll-view.md
-            html: 뷰가 화면 경계와 맞지 않을 때 스크롤 기능을 제공하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: scroll-view.md
-            title: ScrollView
-          - href: contentview.md
-            html: ContentView를 사용하여 사용자 지정 컨트롤을 만드는 방법에 대해 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: contentview.md
-            title: ContentView
-          - href: frame.md
-            html: '색, 그림자 및 기타 옵션으로 구성할 수 있는 프레임을 사용하여 뷰를 래핑하는 방법에 대해 알아보세요.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: frame.md
-            title: 프레임
-          - href: layout-options.md
-            html: 부모 레이아웃 내에서 뷰의 맞춤을 정의하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: layout-options.md
-            title: LayoutOptions
-          - href: margin-and-padding.md
-            html: '요소와 인접 요소, 그리고 해당 자식 요소 사이의 거리를 제어하는 방법에 대해 알아보세요.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: margin-and-padding.md
-            title: 여백 및 안쪽 여백
-          - href: device-orientation.md
-            html: 디바이스 방향 변경에 대해 구성하고 응답하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: device-orientation.md
-            title: 디바이스 방향
-          - href: tablet.md
-            html: 태블릿 및 데스크톱 애플리케이션의 레이아웃을 최적화하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: tablet.md
-            title: 태블릿 및 데스크톱 레이아웃
-          - href: bindable-layouts.md
-            html: 항목 컬렉션에 바인딩하여 레이아웃 클래스로 콘텐츠를 생성하고 모양을 설정하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: bindable-layouts.md
-            title: 바인딩 가능한 레이아웃
-          - href: layout-compression.md
-            html: 페이지 렌더링 성능을 향상시키기 위해 시각적 트리에서 특정 레이아웃 개체를 제거하는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: layout-compression.md
-            title: 레이아웃 압축
-          - href: custom.md
-            html: 방향에 민감한 사용자 지정 레이아웃 클래스를 만드는 방법에 대해 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_dashboard.svg'
-              href: custom.md
-            title: 사용자 지정 레이아웃
+  ms.date: 01/03/2020
+  ms.openlocfilehash: e8d3e6d57bab88c85f0058ee2c974d932bd07b37
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679742"
+landingContent:
+- title: 핵심 레이아웃
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 레이아웃 선택
+      url: choose-layout.md
+    - text: AbsoluteLayout
+      url: absolute-layout.md
+    - text: FlexLayout
+      url: flex-layout.md
+    - text: 표
+      url: grid.md
+    - text: RelativeLayout
+      url: relative-layout.md
+    - text: StackLayout
+      url: stack-layout.md
+- title: 추가 레이아웃
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ContentView
+      url: contentview.md
+    - text: 프레임
+      url: frame.md
+    - text: ScrollView
+      url: scroll-view.md
+- title: 레이아웃 개념
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 바인딩 가능한 레이아웃
+      url: bindable-layouts.md
+    - text: 사용자 지정 레이아웃
+      url: custom.md
+    - text: 디바이스 방향
+      url: device-orientation.md
+    - text: LayoutOptions
+      url: layout-options.md
+    - text: 레이아웃 압축
+      url: layout-compression.md
+    - text: 여백 및 안쪽 여백
+      url: margin-and-padding.md
+    - text: 태블릿 및 데스크톱 레이아웃
+      url: tablet.md

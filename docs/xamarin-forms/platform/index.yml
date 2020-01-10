@@ -1,6 +1,6 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Forms 플랫폼 기능
+summary: 다양한 기술을 사용하여 Xamarin.Forms에서 플랫폼별 기능을 활용하는 방법을 알아봅니다.
 metadata:
   title: Xamarin.Forms 플랫폼 기능
   description: 다양한 기술을 사용하여 Xamarin.Forms에서 플랫폼별 기능을 활용하는 방법을 알아봅니다.
@@ -9,67 +9,67 @@ metadata:
   ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/23/2019
-abstract:
-  description: 다양한 기술을 사용하여 Xamarin.Forms에서 플랫폼별 기능을 활용하는 방법을 알아봅니다.
-sections:
-  - title: 플랫폼 사양
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: android/index.md
-            html: Xamarin.Forms에서 제공하는 Android 플랫폼 사양을 사용하는 방법과 기존 Xamarin.Forms Android 앱을 업데이트하여 재질 디자인을 사용하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_android.svg'
-              href: android/index.md
-            title: Android
-          - href: ios/index.md
-            html: Xamarin.Forms에서 제공하는 iOS 플랫폼 사양을 사용하는 방법과 추가 iOS 스타일 지정을 수행하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: ios/index.md
-            title: iOS
-          - href: windows/index.md
-            html: Xamarin.Forms에서 제공하는 UWP 플랫폼 사양을 사용하는 방법과 UWP 프로젝트를 기존 Xamarin.Forms 솔루션에 추가하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Windows.svg'
-              href: windows/index.md
-            title: Windows
-          - href: platform-specifics/index.md
-            html: 플랫폼 사양과 공급업체가 효과가 포함된 플랫폼 사양을 만드는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: platform-specifics/index.md
-            title: 플랫폼 사양 만들기
-  - title: 플랫폼 기능
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: device.md
-            html: 디바이스 클래스를 사용하여 플랫폼별로 기능과 레이아웃에 대해 세분화된 제어를 제공하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_desktop-phone.svg
-              href: device.md
-            title: 디바이스 클래스
-          - href: native-forms.md
-            html: 'Xamarin.Forms ContentPage 파생 페이지를 네이티브 Xamarin.iOS, Xamarin.Android 및 UWP 프로젝트에서 사용할 수 있는 방법을 알아봅니다.'
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: native-forms.md
-            title: 네이티브 양식
-          - href: native-views/index.md
-            html: 'Xamarin.Forms 애플리케이션에서 Android, iOS 및 유니버설 Windows 플랫폼의 네이티브 뷰를 직접 참조하는 방법을 알아봅니다.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_form.svg'
-              href: native-views/index.md
-            title: 네이티브 뷰
-          - href: sign-in-with-apple/index.md
-            html: Android 및 iOS에서 Apple을 사용하여 로그인을 사용하여 더 강력한 사용자 개인 정보를 제공하는 방법을 알아보세요.
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_ios.svg'
-              href: sign-in-with-apple/index.md
-            title: Apple을 사용하여 로그인
+  ms.date: 12/30/2019
+  ms.openlocfilehash: c95416d35a54dfd5954318ea068a4c70622dc1a1
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75679651"
+landingContent:
+- title: Android
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ListView 빠른 스크롤
+      url: android/listview-fast-scrolling.md
+    - text: TabbedPage 페이지 살짝 밀기
+      url: android/tabbedpage-page-swiping.md
+    - text: 재질 디자인
+      url: android/appcompat-material-design.md
+    - text: VisualElement 권한 상승
+      url: android/visualelement-elevation.md
+    - text: 자세히 보기 >
+      url: android/index.md
+- title: iOS
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 항목 커서 색
+      url: ios/entry-cursor-color.md
+    - text: 대용량 페이지 제목
+      url: ios/page-large-title.md
+    - text: 페이지 홈 표시기 가시성
+      url: ios/page-home-indicator.md
+    - text: 슬라이더 위치 조정 컨트롤 탭
+      url: ios/slider-thumb.md
+    - text: 자세히 보기 >
+      url: ios/index.md
+- title: Windows
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ListView 선택 모드
+      url: windows/listview-selectionmode.md
+    - text: RefreshView 풀 방향
+      url: windows/refreshview-pulldirection.md
+    - text: SearchBar 맞춤법 검사
+      url: windows/searchbar-spell-check.md
+    - text: TabbedPage 탭 아이콘
+      url: windows/tabbedpage-icons.md
+    - text: 자세히 보기 >
+      url: windows/index.md
+- title: 플랫폼 기능
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 플랫폼 사양 만들기
+      url: platform-specifics/index.md
+    - text: 디바이스 클래스
+      url: device.md
+    - text: 네이티브 양식
+      url: native-forms.md
+    - text: 네이티브 뷰
+      url: native-views/index.md
+    - text: Apple에서 로그인
+      url: sign-in-with-apple/index.md

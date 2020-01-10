@@ -1,6 +1,6 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Forms 애플리케이션 기본 사항
+summary: Xamarin.Forms를 사용하는 모바일 애플리케이션 개발의 기본적인 사항을 알아봅니다.
 metadata:
   title: Xamarin.Forms 애플리케이션 기본 사항
   description: Xamarin.Forms를 사용하는 모바일 애플리케이션 개발의 기본적인 사항을 알아봅니다.
@@ -9,115 +9,59 @@ metadata:
   ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/30/2019
-abstract:
-  description: Xamarin.Forms를 사용하는 모바일 애플리케이션 개발의 기본적인 사항을 알아봅니다.
-sections:
-  - title: null
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: accessibility/index.md
-            html: 다양한 요구 사항을 갖고 다양한 환경에서 UI에 접근하는 사람들이 사용할 수 있는 애플리케이션을 만드는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_accessibility.svg'
-              href: accessibility/index.md
-            title: 액세스 가능성
-          - href: application-class.md
-            html: 서브클래싱된 애플리케이션 클래스에 의해 노출되는 기능에 대해 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-blocks.svg'
-              href: application-class.md
-            title: 앱 클래스
-          - href: app-lifecycle.md
-            html: 애플리케이션 수명 주기 이벤트를 처리하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_agile.svg'
-              href: app-lifecycle.md
-            title: 앱 수명 주기
-          - href: deep-linking.md
-            html: 애플리케이션 인덱싱 및 딥 링크를 사용하여 iOS 및 Android에서 애플리케이션 콘텐츠를 검색할 수 있게 만드는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_link.svg'
-              href: deep-linking.md
-            title: 애플리케이션 인덱싱 및 딥 링크 설정
-          - href: behaviors/index.md
-            html: 서브클래스 없이 컨트롤에 기능을 추가하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: behaviors/index.md
-            title: 동작
-          - href: custom-renderer/index.md
-            html: 새 사용자 지정 컨트롤을 만들고 기존 컨트롤을 수정하여 Xamarin.Forms 컨트롤을 확장하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_extend.svg'
-              href: custom-renderer/index.md
-            title: 사용자 지정 렌더러
-          - href: data-binding/index.md
-            html: 사용자 인터페이스와 데이터 소스를 자동으로 동기화하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_sync.svg'
-              href: data-binding/index.md
-            title: 데이터 바인딩
-          - href: dependency-service/index.md
-            html: DependencyService 클래스를 사용하여 공유 코드에서 네이티브 플랫폼 기능을 호출하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-              href: dependency-service/index.md
-            title: 종속성 서비스
-          - href: effects/index.md
-            html: 기본 네이티브 컨트롤에 액세스하여 Xamarin.Forms 컨트롤의 동작을 조정하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: effects/index.md
-            title: 효과
-          - href: gestures/index.md
-            html: '제스처 인식기를 사용하여 애플리케이션에 탭하기, 손가락 모으기, 이동하기, 살짝 밀기 제스처 지원을 추가하는 방법을 알아봅니다.'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_form.svg'
-              href: gestures/index.md
-            title: 제스처
-          - href: local-notifications.md
-            html: Xamarin.Froms에서 로컬 알림을 보내고 받는 방법에 대해 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_push-notification.svg'
-              href: local-notifications.md
-            title: 로컬 알림
-          - href: localization/index.md
-            html: Xamarin.Forms를 사용하여 다국어 애플리케이션을 개발하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_article.svg'
-              href: localization/index.md
-            title: 지역화
-          - href: messaging-center.md
-            html: 메시지 기반 통신을 사용하여 형식 간 종속성을 줄이는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_mail.svg'
-              href: messaging-center.md
-            title: 메시징 센터
-          - href: navigation/index.md
-            html: Xamarin.Forms 애플리케이션에서 탐색을 수행하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_class.svg'
-              href: navigation/index.md
-            title: 탐색
-          - href: shell/index.md
-            html: Xamarin.Forms Shell을 사용하여 모바일 애플리케이션 개발의 복잡성을 줄이는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-              href: shell/index.md
-            title: 셸
-          - href: templates/index.md
-            html: Xamarin.Forms에서 제공하는 템플릿 기능을 사용하는 방법을 알아봅니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_template.svg'
-              href: templates/index.md
-            title: 템플릿
-          - href: triggers.md
-            html: XAML에서 이벤트 또는 속성 변경에 따라 컨트롤의 모양을 변경하는 동작을 표현하는 방법을 알아봅니다.
-            image:
-              src: ~/media/icons/i_xaml-forms.svg
-              href: triggers.md
-            title: 트리거
+  ms.date: 12/30/2019
+  ms.openlocfilehash: 960e8e555b051e3a6cf3eedd0f999a78f8317d61
+  ms.sourcegitcommit: ff0dd66d6d00257ac1695aa7ac46940ff7d3bd93
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/06/2020
+  ms.locfileid: "75680414"
+landingContent:
+- title: 핵심 개념
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 앱 클래스
+      url: application-class.md
+    - text: 앱 수명 주기
+      url: app-lifecycle.md
+    - text: 데이터 바인딩
+      url: data-binding/index.md
+    - text: 제스처
+      url: gestures/index.md
+    - text: 지역화
+      url: localization/index.md
+    - text: MessagingCenter
+      url: messaging-center.md
+    - text: 탐색
+      url: navigation/index.md
+    - text: 셸
+      url: shell/index.md
+    - text: 템플릿
+      url: templates/index.md
+    - text: 트리거
+      url: triggers.md
+- title: Xamarin.Forms 확장
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 동작
+      url: behaviors/index.md
+    - text: 사용자 지정 렌더러
+      url: custom-renderer/index.md
+    - text: DependencyService
+      url: dependency-service/index.md
+    - text: 효과
+      url: effects/index.md
+- title: 애플리케이션 향상
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 액세스 가능성
+      url: accessibility/index.md
+    - text: 애플리케이션 인덱싱 및 딥 링크 설정
+      url: deep-linking.md
+    - text: 로컬 알림
+      url: local-notifications.md
+    - text: 지역화
+      url: localization/index.md
