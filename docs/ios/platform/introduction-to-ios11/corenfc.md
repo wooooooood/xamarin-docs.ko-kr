@@ -7,18 +7,18 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 110df71dd043f627b89a7c4a906db0418a8cfae8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
+ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032200"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75753022"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Xamarin.ios의 핵심 NFC
 
 _IOS 11을 사용 하 여 NFC (근거리 통신) 태그 읽기_
 
-CoreNFC는 앱 내에서 태그를 읽기 위해 NFC ( _근거리 통신_ ) 라디오에 액세스할 수 있게 해 주는 iOS 11의 새로운 프레임 워크입니다. IPhone 7, 7 Plus, 8, 8 Plus 및 X에서 작동 합니다.
+CoreNFC는 앱 내에서 태그를 읽기 위해 NFC ( _근거리 통신_ ) 라디오에 액세스할 수 있게 해 주는 iOS 11의 새로운 프레임 워크입니다. CoreNFC는 iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS 및 iPhone 11 모델에서 작동 합니다 (iPhone 6 및 iPhone 6 Plus 모델에는 NFC 결제 기능이 있지만 CoreNFC를 지원 하지 않음).
 
 IOS 장치의 NFC 태그 판독기는 NDEF ( _Nfc Data Exchange Format_ ) 정보를 포함 하는 모든 nfc 태그 유형 1 ~ 5를 지원 합니다.
 
@@ -31,7 +31,7 @@ IOS 장치의 NFC 태그 판독기는 NDEF ( _Nfc Data Exchange Format_ ) 정보
 
 이 페이지에서는 CoreNFC를 사용 하는 데 필요한 구성에 대해 설명 하 고 ["NFCTagReader" 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)를 사용 하 여 API를 사용 하는 방법을 보여 줍니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 CoreNFC를 사용 하도록 설정 하려면 프로젝트에서 다음 세 가지 항목을 구성 해야 합니다.
 
