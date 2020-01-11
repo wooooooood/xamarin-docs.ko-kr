@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 8313af47882b1c8c47f1e82f62f0a43e4e9c704c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d5898f9c6ee30eb1f12bf6480b93a609e762e6ea
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029722"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886595"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Windows용 원격 iOS 시뮬레이터
 
@@ -34,7 +34,7 @@ Windows 용 원격 iOS 시뮬레이터는 Visual Studio 2019 및 Visual Studio 2
 
 - **Home** – iOS 장치에서 홈 단추를 시뮬레이션 합니다.
 - **잠금** – 시뮬레이터를 잠급니다 (잠금 해제로 살짝 밀기).
-- **스크린샷** – 시뮬레이터의 스크린샷 ( **Pictures\Xamarin\iOS 시뮬레이터 \\** 에 저장)을 저장 합니다.
+- **스크린샷** – 시뮬레이터의 스크린샷 ( **Pictures\Xamarin\iOS 시뮬레이터\\** 에 저장)을 저장 합니다.
 - [**설정**](#settings) – 키보드, 위치 및 기타 설정을 표시 합니다.
 - [**기타 옵션**](#other-options) – 회전, 흔들기 제스처 및 터치식 ID와 같은 다양 한 시뮬레이터 옵션을 표시 합니다.
 
@@ -72,3 +72,12 @@ Windows 용 원격 iOS 시뮬레이터를 사용 하지 않도록 설정 하려�
 [![시뮬레이터 사용 확인란](images/options-sml.png "시뮬레이터 사용 확인란")](images/options.png#lightbox)
 
 이 옵션을 사용 하지 않도록 설정 하면 디버깅은 연결 된 Mac 빌드 호스트에서 iOS 시뮬레이터를 엽니다.
+
+## <a name="troubleshooting"></a>문제 해결
+
+원격 iOS 시뮬레이터에 문제가 발생 하는 경우 다음 위치에서 로그를 볼 수 있습니다.
+
+- **Mac** – `~/Library/Logs/Xamarin/Simulator.Server`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+
+[Visual Studio에서 문제를 보고 하는](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio)경우 이러한 로그를 연결 하는 것이 유용할 수 있습니다 (업로드를 유지 하는 옵션이 있음).
