@@ -613,16 +613,17 @@
         - name: 개요
           href: deploy-test/index.md
         - name: 앱 배포
-          href: deploy-test/app-distribution/index.md
           items:
-            - name: 앱 스토어 배포
+            - name: 개요
+              href: deploy-test/app-distribution/index.md
+            - name: App Store 배포
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items:
                 - name: iTunes Connect에서 앱 구성
                   href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
                 - name: 앱 스토어에 게시
                   href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
-            - name: 사내(Enterprise) 배포
+            - name: 사내(enterprise) 배포
               href: deploy-test/app-distribution/in-house-distribution.md
             - name: 임시 배포
               href: deploy-test/app-distribution/ad-hoc-distribution.md
