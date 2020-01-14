@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 66323974fa44f5397e21541595a187ce0ba4d061
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.openlocfilehash: 056bb16c76887661f054422b2c682a91e6bfa466
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997145"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489897"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -43,8 +43,9 @@ ms.locfileid: "71997145"
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -74,6 +75,7 @@ ms.locfileid: "71997145"
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -106,6 +108,7 @@ ms.locfileid: "71997145"
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -188,8 +191,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
@@ -270,7 +272,7 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
 다음 스크린샷에서는 위의 두 가지 다중 트리거 예제 사이의 차이점을 보여 줍니다. 화면의 위쪽에서는 `Entry`의 텍스트 입력만으로 **저장** 단추를 사용할 수 있습니다.
 화면의 아래쪽에서는 두 필드 모두에 데이터가 포함될 때까지 **로그인** 단추가 비활성 상태로 유지됩니다.
 
-![](triggers-images/multi-requireall.png "MultiTrigger 예제")
+![](triggers-images/multi-requireall.png "MultiTrigger Examples")
 
 <a name="enterexit" />
 
@@ -283,7 +285,7 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
 > [!NOTE]
 > `EnterActions` 및 `ExitActions` 컬렉션에 정의된 [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) 개체는 [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) 클래스에 의해 무시됩니다.    
 
-트리거에서 `Setter`뿐만 아니라 `EnterActions` 및 `ExitActions`도 *모두* 제공할 수 있지만, `Setter`가 즉시 호출된다는 점에 주의하세요(`EnterAction` 또는 `ExitAction`이 완료될 때까지 기다리지 않음). 또는 코드에 있는 모든 작업을 수행할 수 있으며 `Setter`는 전혀 사용하지 않습니다.
+트리거에서 `Setter`뿐만 아니라 `EnterActions` 및 `ExitActions`도 *모두* 제공할 수 있지만, `Setter`이(가) 즉시 호출된다는 점을 주의하세요(`EnterAction` 또는 `ExitAction`이 완료될 때까지 기다리지 않음). 또는 코드에 있는 모든 작업을 수행할 수 있으며 `Setter`는 전혀 사용하지 않습니다.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -316,19 +318,18 @@ XAML은 아래와 같습니다. 첫 번째 다중 트리거 예제와의 차이�
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
 {
-    public FadeTriggerAction() {}
-
     public int StartsFrom { set; get; }
 
-    protected override void Invoke (VisualElement visual)
+    protected override void Invoke(VisualElement sender)
     {
-            visual.Animate("", new Animation( (d)=>{
-                var val = StartsFrom==1 ? d : 1-d;
-                visual.BackgroundColor = Color.FromRgb(1, val, 1);
-
-            }),
-            length:1000, // milliseconds
-            easing: Easing.Linear);
+        sender.Animate("FadeTriggerAction", new Animation((d) =>
+        {
+            var val = StartsFrom == 1 ? d : 1 - d;
+            // so i was aiming for a different color, but then i liked the pink :)
+            sender.BackgroundColor = Color.FromRgb(1, val, 1);
+        }),
+        length: 1000, // milliseconds
+        easing: Easing.Linear);
     }
 }
 ```

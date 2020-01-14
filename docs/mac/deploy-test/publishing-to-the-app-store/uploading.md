@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fede666071aad8702eda17a94a06c7de49c7397e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e2b25468255ff84a3fe79ed4fea913e04bf88687
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029470"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489372"
 ---
 # <a name="upload-to-mac-app-store"></a>Mac 앱 스토어에 업로드
 
 _이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 업로드하는 방법을 안내합니다._
 
-애플리케이션은 Mac 앱 스토어 승인을 받기 위해 [iTunes Connect](https://itunesconnect.apple.com/)를 통해 제출됩니다.
+애플리케이션은 Mac 앱 스토어 승인을 받기 위해 [iTunes Connect](https://itunesconnect.apple.com/)를 통해 제출됩니다. 또한 App Store의 [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) 도구도 필요합니다.
 
 1. 만들려는 **macOS 앱**을 선택합니다. 
 
@@ -70,37 +70,22 @@ _이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 업로
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
-9. 애플리케이션 로더를 시작하고 Apple ID로 로그인합니다.
-**앱 배달**을 선택하여 계속 진행합니다. 
+9. **Transporter**를 시작하고 Apple ID로 로그인한 다음 **앱 추가**를 선택합니다.
 
-    [![](uploading-images/image77.png "The Application Loader interface")](uploading-images/image77.png#lightbox)
+    [![](uploading-images/transporter01-sml.png "The Application Loader interface")](uploading-images/transporter01.png#lightbox)
 
-10. **이진 파일 업로드 준비 완료** 상태인 애플리케이션 목록 중에서 선택하고 **다음**을 클릭합니다. 
+    지침에 따라 앱 패키지를 iTunes Connect에 업로드합니다.
 
-    [![](uploading-images/image78.png "Selecting the app to load")](uploading-images/image78.png#lightbox)
-
-11. 애플리케이션 메타데이터를 검토하고 **선택...** 을 클릭하여 패키지 파일을 찾습니다. 
-
-    [![](uploading-images/image79.png "Reviewing the app metadata")](uploading-images/image79.png#lightbox)
-
-12. 앱 스토어 빌드 구성을 사용하여 Mac용 Visual Studio에서 빌드한 패키지 파일을 찾습니다. 
-
-    [![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png#lightbox)
-
-13. **보내기**를 누릅니다. 
-
-    [![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png#lightbox)
-
-14. 패키지의 유효성이 검사되고 오류가 보고됩니다. 오류를 수정하고 다시 업로드합니다. 업로드가 완료되면 앱 스토어 팀에서 검토할 수 있도록 앱이 자동으로 제출됩니다. 
-
-    [![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png#lightbox)
+    > [!NOTE]
+    > [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12)는 Xcode 10 이전 버전에서 사용된 **애플리케이션 로더** 도구를 대체합니다.
+    > 애플리케이션 로더는 Xcode 11 이상 버전에서 더 이상 사용할 수 없습니다.
 
 애플리케이션이 승인되면 Mac 앱 스토어에서 다운로드하거나 구매할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [설치](~//mac/get-started/installation.md)
-- [Hello, Mac 샘플](~//mac/get-started/hello-mac.md)
+- [Hello, Mac 샘플](~/mac/get-started/hello-mac.md)
 - [Mac 앱 스토어에서 앱 배포](https://developer.apple.com/devcenter/mac/checklist/)
 - [도구 가이드: 앱 코드 서명](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/)

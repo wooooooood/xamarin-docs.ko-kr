@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
-ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
+ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317884"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488506"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
@@ -29,7 +29,7 @@ ms.locfileid: "54317884"
 using Xamarin.Essentials;
 ```
 
-기본 설정에서 지정된 ‘키’의 값을 저장합니다.
+기본 설정에서 지정된 ‘키’의 값을 저장합니다. 
 
 ```csharp
 Preferences.Set("my_key", "my_value");
@@ -41,7 +41,7 @@ Preferences.Set("my_key", "my_value");
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
-기본 설정에서 ‘키’를 제거합니다.
+기본 설정에서 ‘키’를 제거합니다. 
 
 ```csharp
 Preferences.Remove("my_key");
@@ -83,13 +83,15 @@ Preferences.Clear();
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다.
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다. 
+
+또한 `LocalSettings`에는 각 설정의 이름 길이가 최대 255자 이하로 제한하는 사항이 포함되어 있습니다. 각 설정의 크기는 최대 8K 바이트이며 각 복합 설정은 크기는 최대 64K 바이트까지 가능합니다.
 
 --------------
 
 ## <a name="persistence"></a>지속성
 
-애플리케이션을 제거하면 모든 ‘기본 설정’이 제거됩니다. 한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
+애플리케이션을 제거하면 모든 ‘기본 설정’이 제거됩니다.  한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="limitations"></a>제한 사항
 

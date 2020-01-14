@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2019
 ms.custom: video
-ms.openlocfilehash: d981307ae96f75c67442d3898255c8bed62f1cf7
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771711"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545669"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
@@ -197,7 +197,7 @@ public partial class AlternativeCodeBindingPage : ContentPage
 
 왼쪽의 iOS 화면에서는 페이지가 처음 나타날 때 화면이 표시되는 모양을 보여 줍니다. `Label`은 어디에 있을까요?
 
-문제는 `Slider`의 초기 값이 0이라는 것입니다. 이로 인해 `Label`의 `Scale` 속성도 0으로 설정되어 기본값인 1을 재정의합니다. 따라서 초기에는 `Label`이 표시되지 않습니다. Android 및 UWP(유니버설 Windows 플랫폼) 스크린샷에서 보여 주듯이 `Slider`를 조작하여 `Label`이 다시 나타나도록 할 수 있지만 초기에 표시되지 않으면 당혹스럽게 만듭니다.
+문제는 `Slider`의 초기 값이 0이라는 것입니다. 이로 인해 `Label`의 `Scale` 속성도 0으로 설정되어 기본값인 1을 재정의합니다. 따라서 초기에는 `Label`이 표시되지 않습니다. Android 스크린샷에서 보여 주듯이 `Slider`을(를) 조작하여 `Label`이(가) 다시 나타나도록 할 수 있지만, 초기에 표시되지 않으면 당황스러울 수 있습니다.
 
 [다음 문서](binding-mode.md)에서 `Scale` 속성의 기본값에서 `Slider`를 초기화하여 이 문제를 방지하는 방법을 알아봅니다.
 

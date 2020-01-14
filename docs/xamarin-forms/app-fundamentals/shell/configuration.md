@@ -6,13 +6,13 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
-ms.openlocfilehash: 022aa9f1aeb2961d98b52747441e875bd89a584a
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.date: 12/05/2019
+ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739323"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489910"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.Forms Shell 페이지 구성
 
@@ -86,6 +86,21 @@ ms.locfileid: "68739323"
 
 XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)을 참조하세요.
 
+## <a name="enable-navigation-bar-shadow"></a>탐색 모음 섀도 사용
+
+`Shell` 클래스는 탐색 모음에 섀도가 포함되는 여부를 제어하는 `bool` 형식의 `NavBarHasShadow` 연결된 속성을 정의합니다. 기본적으로 속성의 값은 `false`입니다.
+
+이 속성은 서브클래싱된 `Shell` 개체에서 설정할 수 있지만, 탐색 모음 섀도를 사용하려는 모든 페이지에서도 설정할 수 있습니다. 예를 들어 다음 XAML은 [`ContentPage`](xref:Xamarin.Forms.ContentPage)에서 탐색 모음 섀도를 사용할 수 있음을 보여줍니다.
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+그러면 탐색 모음 섀도가 사용 설정됩니다.
+
 ## <a name="disable-the-navigation-bar"></a>탐색 모음을 사용하지 않도록 설정
 
 `Shell` 클래스는 페이지가 표시될 때 탐색 모음이 보이도록 할지 여부를 제어하는 `bool` 형식의 `NavBarIsVisible` 연결된 속성을 정의합니다. 기본적으로 속성의 값은 `true`입니다.
@@ -101,7 +116,7 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 따라서 페이지가 표시되면 탐색 모음은 보이지 않게 됩니다.
 
-![iOS 및 Android에서 탐색 모음이 보이지 않는 Shell 페이지의 스크린샷](configuration-images/navigationbar-invisible.png "탐색 모음이 보이지 않는 Shell 페이지")
+![iOS 및 Android의 탐색 모음이 보이지 않는 셸 페이지의 스크린샷](configuration-images/navigationbar-invisible.png "탐색 모음이 보이지 않는 셸 페이지")
 
 ## <a name="disable-the-tab-bar"></a>탭 표시줄을 사용하지 않음
 
@@ -118,7 +133,7 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 따라서 페이지가 표시되면 탭 표시줄은 보이지 않게 됩니다.
 
-![iOS 및 Android에서 탭 표시줄이 보이지 않는 Shell 페이지의 스크린샷](configuration-images/tabbar-invisible.png "탭 표시줄이 보이지 않는 Shell 페이지")
+![iOS 및 Android의 탭 모음이 보이지 않는 셸 페이지의 스크린샷](configuration-images/tabbar-invisible.png "탭 모음이 보이지 않는 셸 페이지")
 
 ## <a name="display-views-in-the-navigation-bar"></a>탐색 모음에서 보기 표시
 
@@ -139,7 +154,7 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 그 결과, 이미지가 페이지의 탐색 모음에 표시됩니다.
 
-![iOS 및 Android에서 제목 보기가 있는 Shell 페이지의 스크린샷](configuration-images/titleview.png "제목 보기가 있는 Shell 페이지")
+![iOS 및 Android의 제목이 있는 셸 페이지의 스크린샷](configuration-images/titleview.png "제목이 있는 셸 페이지")
 
 > [!IMPORTANT]
 > `NavBarIsVisible` 연결된 속성을 가진 탐색 모음이 보이지 않게 되면 제목 보기가 표시되지 않습니다.

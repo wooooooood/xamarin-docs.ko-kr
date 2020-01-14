@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/08/2019
-ms.openlocfilehash: 8d5de8bac6cc61b0874c978a6443ca4490015457
-ms.sourcegitcommit: eb23b7d745d1090376f9def07e0f11cb089494d0
+ms.openlocfilehash: 0e5fd88678becd7becfcb1c43e14b1e33aad72de
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72170970"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489884"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
@@ -26,7 +26,7 @@ Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스�
 
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) 클래스에서는 멀티캐스트 게시-구독 기능을 제공합니다. 즉, 단일 메시지를 게시하는 여러 게시자가 있을 수 있으며 동일한 메시지를 수신 대기하는 여러 구독자가 있을 수 있습니다.
 
-![](messaging-center-images/messaging-center.png "멀티캐스트 게시-구독 기능")
+![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
 
 게시자는 [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) 메서드를 사용하여 메시지를 보내는 한편, 구독자는 [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드를 사용하여 메시지를 수신 대기합니다. 또한 구독자는 필요한 경우 [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) 메서드를 사용하여 메시지 구독을 구독 취소할 수도 있습니다.
 
@@ -82,6 +82,9 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 ```
 
 이 예제에서는 [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) 메서드를 통해 페이로드 데이터가 `string`인 `MainPage` 형식으로 보낸 `Hi` 메시지를 구독합니다. 콜백 대리자는 경고에 페이로드 데이터를 표시하는 해당 메시지를 수신하는 데 대한 응답으로 실행됩니다.
+
+> [!IMPORTANT]
+> `Subscribe` 메소드로 실행된 대리자는 `Send` 메소드를 사용하여 메시지를 게시하는 동일한 스레드에서 실행됩니다.
 
 ## <a name="unsubscribe-from-a-message"></a>메시지 구독 취소
 

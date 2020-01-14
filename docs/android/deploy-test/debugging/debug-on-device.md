@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: e697459b20a481b1d2bada69677647ad4fbd3023
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3ca524e451a7a4eb838805c839b33c4b9dd6bddd
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021596"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556537"
 ---
-# <a name="debug-on-device"></a>디바이스에서 디버그
+# <a name="debug-on-an-android-device"></a>Android 디바이스의 디버그
 
 _이 아티클에서는 물리적 Android 디바이스에서 Xamarin.Android 애플리케이션을 디버그하는 방법을 설명합니다._
-
-## <a name="debug-on-device-overview"></a>디바이스에서 디버그 개요
 
 Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 디바이스에서 Xamarin.Android 앱을 디버그할 수 있습니다. 디바이스에서 디버그가 가능하려면 먼저 [개발을 위해 설정](~/android/get-started/installation/set-up-device-for-development.md)되고 PC나 MAC에 연결되어야 합니다.
 

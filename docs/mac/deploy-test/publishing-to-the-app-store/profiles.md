@@ -7,20 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: b361cd00121d16752d5eebc971653c8ea185c641
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018101"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489390"
 ---
-# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 프로비저닝 프로필
+# <a name="provisioning-profiles-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 프로비전 프로필
 
 개발자는 프로비전 프로필을 통해 몇 가지 macOS(이전 이름: Mac OS X) 특정 기능(예: iCloud 및 푸시 알림)을 Xamarin.Mac 앱에 통합시킬 수 있습니다. 이러한 기능을 사용하는 개발 중인 각 애플리케이션에 대해 Mac 프로비전 프로필을 만들고 다운로드하고 설치해야 합니다.
 
 [![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
-
-<a name="Development_Provisioning_Profile" />
 
 ## <a name="development-provisioning-profile"></a>개발 프로비전 프로필
 
@@ -60,8 +58,6 @@ ms.locfileid: "73018101"
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
 새 개발 프로비전 프로필은 새 앱 각각에 대해 만들거나 테스트할 새 컴퓨터를 추가하여 테스트할 때 만들어야 합니다.
-
-<a name="Production_Provisioning_Profile" />
 
 ## <a name="production-provisioning-profile"></a>프로덕션 프로비전 프로필
 

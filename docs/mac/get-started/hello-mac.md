@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: cb5eb783109f4758fcbc997c4f2bf4a93aaa262b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b56275ef903aa7def239a2e19980f52d83e6194f
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73018136"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489741"
 ---
 # <a name="hello-mac-walkthrough"></a>Hello, Mac – 연습
 
@@ -38,7 +38,7 @@ Xamarin.Mac을 사용하면 *Objective-C* 또는 *Swift*에서 개발할 때 사
 Xamarin.Mac 애플리케이션 개발에는 다음이 필요합니다.
 
 - macOS High Sierra(10.13) 이상을 실행하는 Mac 컴퓨터
-- [Xcode 9 이상](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)
+- [Xcode 10 이상](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - 최신 버전의 [Xamarin.Mac 및 Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 Xamarin.Mac으로 빌드된 애플리케이션을 실행하려면 다음이 필요합니다.

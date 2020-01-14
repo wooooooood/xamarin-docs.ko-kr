@@ -1,5 +1,5 @@
 ---
-title: Java 개발자를 위한 Xamarin
+title: Java 개발자용 Xamarin
 description: Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, 두 언어 모두에서 매우 비슷한 기능을 제공합니다. 또한 C# 고유의 기능을 통해 개발 작업을 더 쉽게 수행할 수 있습니다.
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: 1d9b41af68576a67c901f8f19a57fb4738430306
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b9c6694ea49607b839a3658e5cc8bac5fb529c85
+ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73027934"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728059"
 ---
-# <a name="xamarin-for-java-developers"></a>Java 개발자를 위한 Xamarin
+# <a name="xamarin-for-java-developers"></a>Java 개발자용 Xamarin
 
 _Java 개발자인 경우 Xamarin 플랫폼에서 기술과 기존 코드를 활용하는 동시에 C# 코드도 다시 사용할 수 있습니다. C# 구문은 Java 구문과 매우 비슷하며, 두 언어 모두에서 매우 비슷한 기능을 제공합니다. 또한 C# 고유의 기능을 통해 개발 작업을 더 쉽게 수행할 수 있습니다._
 
@@ -44,7 +44,7 @@ Java 및 C#는 모두 관리되는 실행 환경에서 실행되는 중간 언�
 
 하지만 Java와 C# 사이에는 많은 차이점이 있습니다. 예:
 
-- Java는 암시적으로 형식화된 지역 변수를 지원하지 않습니다(C#은 `var` 키워드를 지원함).
+- Java는 (Android에서 사용된 대로) 암시적으로 형식화된 지역 변수를 지원하지 않습니다(C#은 `var` 키워드를 지원함).
 
 - Java에서는 매개 변수를 값으로 전달할 수 있지만, C#에서는 값뿐만 아니라 참조로도 전달할 수 있습니다. (C#은 `ref` 및 `out` 키워드를 제공하여 매개 변수를 참조로 전달하지만, Java에는 이에 해당하는 키워드가 없습니다).
 
@@ -70,24 +70,29 @@ Java 및 C#는 모두 관리되는 실행 환경에서 실행되는 중간 언�
 
 C#은 Java 개발자가 현재 Android에서 사용할 수 없는 Xamarin.Android에 많은 주요 기능을 제공합니다. 다음과 같은 기능을 사용하면 더 짧은 시간에 더 효율적인 코드를 작성할 수 있습니다.
 
-- [속성](#properties) &ndash; C#의 속성 시스템을 사용하면 setter 및 getter 메서드를 작성하지 않고도 멤버 변수에 안전하게 직접 액세스할 수 있습니다.
+- [속성](#properties) &ndash; C#의 속성 시스템을 사용하면 setter 및 getter 메서드를 쓰지 않고도 멤버 변수에 안전하게 직접 액세스할 수 있습니다.
 
-- [람다 식](#lambdas) &ndash; C#에서는 무명 메서드(‘람다’라고도 함)를 사용하여 기능을 더 간결하고 더 효율적으로 표현할 수 있습니다.  일회용 개체를 작성해야 하는 오버헤드를 방지할 수 있으며, 매개 변수를 추가할 필요 없이 로컬 상태를 메서드에 전달할 수 있습니다.
+- [람다 식](#lambdas) &ndash; C#에서는 무명 메서드(*람다*라고도 함)를 사용하여 기능을 더 간결하고 더 효율적으로 표현할 수 있습니다. 일회용 개체를 작성해야 하는 오버헤드를 방지할 수 있으며, 매개 변수를 추가할 필요 없이 로컬 상태를 메서드에 전달할 수 있습니다.
 
 - [이벤트 처리](#events) &ndash; C#은 *이벤트 구동 프로그래밍*에 대한 언어 수준 지원을 제공합니다. 이 경우 개체는 관심 있는 이벤트가 발생할 때 알림을 받도록 등록할 수 있습니다. `event` 키워드는 게시자 클래스에서 이벤트 구독자에게 알리는 데 사용할 수 있는 멀티캐스트 브로드캐스트 메커니즘을 정의합니다.
 
-- [비동기 프로그래밍](#async) &ndash; C#의 비동기 프로그래밍 기능(`async`/`await`)은 응용 프로그램이 즉시 응답할 수 있도록 합니다.
+- [비동기 프로그래밍](#async) &ndash; C#의 비동기 프로그래밍 기능(`async`/`await`) 덕분에 앱이 즉각적으로 응답합니다.
     이 기능의 언어 수준 지원을 통해 비동기 프로그래밍을 쉽게 구현할 수 있으며 오류가 발생할 가능성이 적습니다.
 
 마지막으로, Xamarin에서는 *바인딩*으로 알려진 기술을 통해 [기존 Java 자산을 활용할 수 있습니다](#interop). Xamarin의 자동 바인딩 생성기를 사용하여 C#에서 기존 Java 코드, 프레임워크 및 라이브러리를 호출할 수 있습니다. 이렇게 하려면 Java에서 정적 라이브러리를 만들고 바인딩을 통해 C#에 노출하면 됩니다.
 
+> [!NOTE]
+> Android 프로그래밍은 모든 Java 7 기능 [및 Java 8의 하위 집합](https://developer.android.com/studio/write/java8-support.html)을 지원하는 Java 언어의 특정 버전을 사용합니다.
+>
+> 이 페이지에서 설명하는 일부 기능(예: C#의 `var` 키워드)은 최신 버전의 java에서 사용할 수 있지만(예: [Java 10의 `var`](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), 하지만 Android 개발자는 아직 사용할 수 없습니다.
+
 <a name="fundamentals" />
 
-## <a name="going-from-java-to-c-development"></a>Java에서 C#으로 개발 이동
+## <a name="going-from-java-to-c-development"></a>Java에서 C# 개발로 이동
 
 다음 섹션에서는 C#과 Java의 기본적인 "시작" 차이점에 대해 설명하고, 이후 섹션에서는 이러한 언어 간의 개체 지향 차이점에 대해 설명합니다.
 
-### <a name="libraries-vs-assemblies"></a>라이브러리 및 어셈블리
+### <a name="libraries-vs-assemblies"></a>라이브러리 대 어셈블리
 
 Java는 일반적으로 **.jar** 파일에 관련 클래스를 패키지합니다. 그러나 C# 및 .NET에서는 미리 컴파일된 코드의 재사용 가능한 비트가 일반적으로 *.dll* 파일이라는 *어셈블리*에 패키지됩니다. 어셈블리는 C#/.NET 코드의 배포 단위이며, 각 어셈블리는 일반적으로 C# 프로젝트와 연결됩니다. 어셈블리에는 런타임에 컴파일된 JIT(Just-In-Time)인 IL(중간 코드)이 포함되어 있습니다.
 
@@ -204,11 +209,9 @@ public class SensorsActivity : Activity, ISensorEventListener
 
 이 예제에서 `SensorsActivity`는 `Activity`에서 상속받고 `ISensorEventListener` 인터페이스에 선언된 기능을 구현합니다. 인터페이스 목록은 기본 클래스 뒤에 나와야 합니다(그렇지 않으면 컴파일 시간 오류가 발생함). 규칙에 따라 C# 인터페이스 이름 앞에는 "I" 대문자가 붙습니다. 이렇게 하면 `implements` 키워드가 없어도 인터페이스의 클래스를 확인할 수 있습니다.
 
-C#에서 클래스가 더 이상 서브클래싱되지 않도록 하려면, 클래스 이름 앞에 `sealed`를 붙입니다. Java에서는 클래스 이름 앞에 `final`을 붙입니다.
+C#에서 클래스가 더 이상 서브클래싱되지 않도록 하려면, C#에서는 클래스 이름 앞에 `sealed` &ndash;을(를) 붙이고 Java에서는 클래스 이름 앞에 `final`을(를) 붙입니다.
 
 C# 클래스 정의에 대한 자세한 내용은 [클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) 및 [상속](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance) 항목을 참조하세요.
-
-<a name="properties" />
 
 ### <a name="properties"></a>속성
 
@@ -226,7 +229,7 @@ rulerView.DrawingCacheEnabled = true;
 
 이 예제에서 너비와 높이 값은 해당 `MeasuredWidth` 및 `MeasuredHeight` 속성에 액세스하여 `rulerView` 개체에서 읽습니다. 이러한 속성을 읽으면 연결된(그러나 숨겨진) 필드 값의 값이 장면 뒤에서 가져와 호출자에게 반환됩니다. `rulerView` 개체는 너비와 높이 값을 한 측정 단위(예: 픽셀)로 저장하고, `MeasuredWidth`와 `MeasuredHeight` 속성에 액세스할 때 이러한 값을 다른 측정 단위(예: 밀리미터)로 변환합니다.
 
-또한 `rulerView` 개체는 `DrawingCacheEnabled`라는 속성을 가지고 있으며, 예제 코드에서는 이 속성을 `true`로 설정하여 `rulerView`에서 그리기 캐시를 사용할 수 있도록 합니다. 장면 뒤에서 연결되었지만 숨겨진 필드가 새 값으로 업데이트되고, `rulerView` 상태의 다른 측면이 수정됩니다. 예를 들어 `DrawingCacheEnabled`가 `false`로 설정되면 `rulerView`는 개체에 이미 누적된 그리기 캐시 정보를 모두 지울 수도 있습니다.
+또한 `rulerView` 개체에는 `DrawingCacheEnabled` &ndash;(이)라는 속성이 있으며, 예제 코드에서는 이 속성을 `true`(으)로 설정하여 `rulerView`에서 그리기 캐시를 사용할 수 있도록 합니다. 장면 뒤에서 연결되었지만 숨겨진 필드가 새 값으로 업데이트되고, `rulerView` 상태의 다른 측면이 수정됩니다. 예를 들어 `DrawingCacheEnabled`가 `false`로 설정되면 `rulerView`는 개체에 이미 누적된 그리기 캐시 정보를 모두 지울 수도 있습니다.
 
 속성에 대한 액세스는 읽기/쓰기, 읽기 전용 또는 쓰기 전용일 수 있습니다. 또한 읽기 및 쓰기에 대해 다른 액세스 한정자를 사용할 수 있습니다. 예를 들어 공용 읽기 액세스 권한이 있지만 개인 쓰기 액세스 권한이 있는 속성을 정의할 수 있습니다.
 
@@ -423,7 +426,7 @@ Java에서 사용되는 많은 언어 키워드가 C#에서도 사용됩니다. 
 |`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|파생 클래스 내에서 부모 클래스의 멤버에 액세스하는 데 사용됩니다.|
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|잠금 획득 및 해제를 사용하여 중요한 코드 섹션을 래핑합니다.|
 
-또한 C#에 고유하고 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)를 읽을 때 유용하게 참조할 수 있습니다.
+또한 C#에 고유하고 Android에서 사용되는 Java에 해당하는 키워드가 없는 키워드가 많이 있습니다. Xamarin.Android 코드는 다음 C# 키워드를 자주 사용합니다. 다음 표는 Xamarin.Android [샘플 코드](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)를 읽을 때 유용하게 참조할 수 있습니다.
 
 |C#|설명|
 |---|---|
@@ -459,11 +462,11 @@ C#으로 변환하지 않으려는 기존 Java 기능이 있는 경우 Xamarin.A
 
 - **Java 바인딩 라이브러리 만들기** &ndash; 이 방법을 사용하면 Xamarin 도구를 사용하여 Java 형식에 대한 C# 래퍼를 생성할 수 있습니다. 이러한 래퍼를 *바인딩*이라고 합니다. 따라서 Xamarin.Android 애플리케이션은 이러한 래퍼로 호출하여 *.jar* 파일을 사용할 수 있습니다.
 
-- **Java 기본 인터페이스** &ndash; ‘JNI(Java 기본 인터페이스)’는 C# 앱에서 Java 코드로 호출하거나 호출할 수 있게 하는 프레임워크입니다. 
+- **Java 기본 인터페이스** &ndash; JNI(*Java 기본 인터페이스*)는 C# 앱에서 Java 코드로 호출하거나 호출될 수 있게 하는 프레임워크입니다.
 
 이러한 방법에 대한 자세한 내용은 [Java 통합 개요](~/android/platform/java-integration/index.md)를 참조하세요.
 
-## <a name="for-further-reading"></a>추가 정보
+## <a name="further-reading"></a>추가 정보
 
 MSDN [C# 프로그래밍 가이드](https://docs.microsoft.com/dotnet/csharp/programming-guide/)는 C# 프로그래밍 언어 학습을 시작할 수 있는 좋은 방법이며, [C# 참조](https://docs.microsoft.com/dotnet/csharp/language-reference/)를 사용하여 특정 C# 언어 기능을 조회할 수 있습니다.
 

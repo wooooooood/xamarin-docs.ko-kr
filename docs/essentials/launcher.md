@@ -5,12 +5,12 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 3e49e12faac1fc93816d9a51646f639046c200c5
-ms.sourcegitcommit: ab51d32f4ea0e0d4701f0bf2f1465c9323cd070b
+ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887369"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488519"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: 시작 관리자
 
@@ -53,6 +53,30 @@ public class LauncherTest
     }
 }
 ```
+
+### <a name="additional-platform-setup"></a>추가 플랫폼 설정
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+추가 설정이 없습니다.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+iOS 9 이상에서 Apple은 애플리케이션이 쿼리할 수 있는 구성표를 적용합니다. 사용할 구성표를 지정하려면 `Info.plist` 파일에서 `LSApplicationQueriesSchemes`을(를) 지정해야 합니다.
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>lyft</string>  
+    <string>fb</string>
+</array>
+```
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+추가 설정이 없습니다.
+
+-----
 
 ## <a name="files"></a>파일
 

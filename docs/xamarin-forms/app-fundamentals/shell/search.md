@@ -6,13 +6,13 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 400459d2701731726c91c70e020ef375a7031169
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 12/18/2019
+ms.openlocfilehash: 9bd4fe5f1a35e2a6f36540cbee13838841b36d92
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72695930"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490066"
 ---
 # <a name="xamarinforms-shell-search"></a>Xamarin.Forms Shell 검색
 
@@ -181,8 +181,11 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 `SearchHandler`가 페이지 위쪽에 추가되면 기본적으로 검색 상자는 표시되고 완전히 확장됩니다. 그러나 이 동작은 `SearchHandler.SearchBoxVisibility` 속성을 `SearchBoxVisibility` 열거형 멤버 중 하나로 설정하여 변경할 수 있습니다.
 
 - `Hidden` – 검색 상자가 표시되지 않거나 액세스할 수 없습니다.
-- `Collapsible` – 사용자가 검색 상자를 표시하는 작업을 수행할 때까지 검색 상자가 숨겨집니다.
-- `Expanded` – 검색 상자가 표시되고 완전히 확장됩니다.
+- `Collapsible` – 사용자가 검색 상자를 표시하는 작업을 수행할 때까지 검색 상자가 숨겨집니다. iOS에서 검색 상자는 페이지 콘텐츠를 세로로 튕기면 표시되고 Android에서는 물음표 아이콘을 누르면 검색 상자가 표시됩니다.
+- `Expanded` – 검색 상자가 표시되고 완전히 확장됩니다. 이 값은 `SearchHandler.SearchBoxVisibility` 속성의 기본값입니다.
+
+> [!IMPORTANT]
+> iOS에서 축소 가능한 검색 상자 기능을 사용하려면 iOS 11 이상 버전이 필요합니다.
 
 다음 예제에서는 검색 상자를 숨기는 방법을 보여 줍니다.
 
@@ -190,7 +193,7 @@ Shell.SetSearchHandler(this, new MonkeySearchHandler
 <ContentPage ...
              xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler SearchBoxVisibility="Hidden"
+        <controls:AnimalSearchHandler SearchBoxVisibility="Hidden"
                                       ... />
     </Shell.SearchHandler>
     ...

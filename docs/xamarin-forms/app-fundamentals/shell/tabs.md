@@ -6,13 +6,13 @@ ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
-ms.openlocfilehash: a6d99197adca9d07fec5b996d2a74e2ac336d2e9
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.date: 11/06/2019
+ms.openlocfilehash: 0ffcbe99ef9696c5fde501809bea5ddcc7a793a7
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888978"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489840"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Xamarin.Forms Shell 탭
 
@@ -50,7 +50,7 @@ ms.locfileid: "69888978"
 
 이 코드 예제에서는 다음 단일 페이지 애플리케이션이 생성됩니다.
 
-[![iOS 및 Android에 있는 셸 단일 페이지 앱의 스크린샷](tabs-images/single-page-app.png "셸 단일 페이지 앱")](tabs-images/single-page-app-large.png#lightbox "셸 단일 페이지 앱")
+[![iOS 및 Android의 셸 단일 페이지 앱 스크린샷](tabs-images/single-page-app.png "셸 단일 페이지 앱")](tabs-images/single-page-app-large.png#lightbox "셸 단일 페이지 앱")
 
 > [!NOTE]
 > 필요한 경우 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체에서 `Shell.NavBarIsVisible` 연결된 속성을 `false`로 설정하여 탐색 모음을 숨길 수 있습니다.
@@ -100,7 +100,11 @@ ms.locfileid: "69888978"
 
 탭 제목 및 아이콘은 각 `Tab` 개체에서 설정되고 아래쪽 탭에 표시됩니다.
 
-[![iOS 및 Android에서 아래쪽 탭이 있는 셸 2페이지 앱의 스크린샷](tabs-images/two-page-app-bottom-tabs.png "아래쪽 탭이 있는 셸 2페이지 앱")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "아래쪽 탭이 있는 셸 2페이지 앱")
+[![iOS 및 Android의 아래쪽 탭이 있는 셸 두 페이지 앱 스크린샷](tabs-images/two-page-app-bottom-tabs.png "아래쪽 탭이 있는 셸 두 페이지 앱")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "아래쪽 탭이 있는 셸 두 페이지 앱")
+
+6개 이상의 탭이 있는 경우 추가 탭에 액세스하는 데 사용할 수 있는 **자세히** 탭이 표시됩니다.
+
+[![iOS 및 Android의 자세히 탭이 있는 셸 앱 스크린샷](tabs-images/more-tabs.png "자세히 탭이 있는 셸 앱")](tabs-images/more-tabs-large.png#lightbox "자세히 탭이 있는 셸 앱")
 
 또는 셸의 암시적 변환 연산자를 사용하여 이전 예제에서 `ShellContent` 및 `Tab` 개체를 제거할 수 있습니다.
 
@@ -213,7 +217,7 @@ ms.locfileid: "69888978"
 
 이를 통해 다음 스크린샷에 표시된 레이아웃이 생성됩니다.
 
-[![iOS 및 Android에서 위쪽 및 아래쪽 탭이 있는 셸 2페이지 앱의 스크린샷](tabs-images/two-page-app-top-tabs.png "위쪽 및 아래쪽 탭이 있는 셸 2페이지 앱")](tabs-images/two-page-app-top-tabs-large.png#lightbox "위쪽 및 아래쪽 탭이 있는 셸 2페이지 앱")
+[![iOS 및 Android에서 위/아래 탭이 있는 셸 두 페이지 앱 스크린샷](tabs-images/two-page-app-top-tabs.png "위/아래 탭이 있는 셸 두 페이지 앱")](tabs-images/two-page-app-top-tabs-large.png#lightbox "위/아래 탭이 있는 셸 두 페이지 앱")
 
 또는 셸의 암시적 변환 연산자를 사용하여 이전 예제에서 `ShellContent` 개체 및 두 번째 `Tab` 개체를 제거할 수 있습니다.
 

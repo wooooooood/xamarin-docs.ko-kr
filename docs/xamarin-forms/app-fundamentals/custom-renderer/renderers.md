@@ -6,13 +6,13 @@ ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/11/2019
-ms.openlocfilehash: a11bbbc40cd209f90d03817fc81f58bd5661bd23
-ms.sourcegitcommit: 27e77acd0139c099f6592085a5ea5aabcaeedc7f
+ms.date: 12/13/2019
+ms.openlocfilehash: ead643357b3ef88f3099c6ee03cda694a8ea1971
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823874"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489247"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러 기본 클래스 및 네이티브 컨트롤
 
@@ -53,16 +53,16 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 
 |레이아웃|렌더러|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
-|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|보기|FrameworkElement|
-|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|보기|FrameworkElement|
-|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|보기|FrameworkElement|
+|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|View|FrameworkElement|
+|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|View|FrameworkElement|
+|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|View|FrameworkElement|
 |[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|테두리|
 |[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollViewer|
-|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|보기|FrameworkElement|
-|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|보기|FrameworkElement|
-|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|보기|FrameworkElement|
-|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|보기|FrameworkElement|
-|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|보기|FrameworkElement|
+|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|View|FrameworkElement|
+|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|View|FrameworkElement|
+|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|View|FrameworkElement|
+|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|View|FrameworkElement|
+|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|View|FrameworkElement|
 
 ## <a name="views"></a>뷰
 
@@ -81,6 +81,7 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
 |[`Image`](xref:Xamarin.Forms.Image)|ImageRenderer|UIImageView|ImageView||이미지|
 |[`ImageButton`](xref:Xamarin.Forms.ImageButton)|ImageButtonRenderer|UIButton||AppCompatImageButton|단추|
+|`IndicatorView`|IndicatorViewRenderer|UIPageControl||LinearLayout||
 |[`Label`](xref:Xamarin.Forms.Label)|LabelRenderer|UILabel|TextView||TextBlock|
 |[`ListView`](xref:Xamarin.Forms.ListView)|[ListViewRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md)|UITableView|ListView||ListView|
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)|MKMapView|MapView||MapControl|
@@ -90,6 +91,7 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |[`SearchBar`](xref:Xamarin.Forms.SearchBar)|SearchBarRenderer|UISearchBar|SearchView||AutoSuggestBox|
 |[`Slider`](xref:Xamarin.Forms.Slider)|SliderRenderer|UISlider|SeekBar||슬라이더|
 |[`Stepper`](xref:Xamarin.Forms.Stepper)|StepperRenderer|UIStepper|LinearLayout||컨트롤|
+|`SwipeView`|SwipeViewRenderer|UIView||View|SwipeControl|
 |[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|스위치|SwitchCompat|ToggleSwitch|
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
@@ -105,7 +107,7 @@ _모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 
 |[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UISwitch를 포함한 UITableViewCell|스위치|TextBlock과 ToggleSwitch가 있는 그리드를 포함한 DataTemplate|
 |[`TextCell`](xref:Xamarin.Forms.TextCell)|TextCellRenderer|UITableViewCell|두 개의 TextViews를 포함한 LinearLayout|두 개의 TextBlock이 있는 StackPanel을 포함한 DataTemplate|
 |[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UIImage를 포함한 UITableViewCell|두 개의 TextViews와 ImageView를 포함한 LinearLayout|이미지와 두 개의 TextBlock이 있는 그리드를 포함한 DataTemplate|
-|[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|보기|ContentPresenter를 포함한 DataTemplate|
+|[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|View|ContentPresenter를 포함한 DataTemplate|
 
 ## <a name="summary"></a>요약
 

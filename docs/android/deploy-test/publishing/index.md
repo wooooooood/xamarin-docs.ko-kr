@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 765adf10e5bdf20191c5ee1c089d39032ea07ce0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 3062afda82be2b45146687b9d77210a42f8f55fa
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021371"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487960"
 ---
 # <a name="publishing-an-application"></a>애플리케이션 게시
 
@@ -31,9 +31,9 @@ Xamarin.Android 애플리케이션 개발의 마지막 단계는 애플리케이
 
 위의 다이어그램에서 볼 수 있듯이 사용되는 배포 방법에 관계없이 준비는 동일합니다. 몇 가지 방법으로 Android 애플리케이션을 사용자에게 릴리스할 수 있습니다.
 
-- **웹 사이트를 통해**&ndash; Xamarin.Android 애플리케이션을 웹 사이트의 다운로드로 제공할 수 있습니다. 여기서 사용자가 링크를 클릭하여 애플리케이션을 설치하게 됩니다.
-- **이메일을 통해**&ndash; 사용자가 자신의 이메일에서 Xamarin.Android 애플리케이션을 설치할 수 있습니다. Android 지원 디바이스로 첨부 파일을 열면 애플리케이션이 설치됩니다.
-- **마켓을 통해**&ndash;[Google Play](https://play.google.com/) 또는 [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) 등, 배포를 위한 몇 가지 애플리케이션 마켓플레이스가 있습니다.
+- **웹 사이트를 통해** &ndash; Xamarin.Android 애플리케이션을 웹 사이트의 다운로드로 제공할 수 있습니다. 여기서 사용자가 링크를 클릭하여 애플리케이션을 설치하게 됩니다.
+- **이메일을 통해** &ndash; 사용자가 자신의 이메일에서 Xamarin.Android 애플리케이션을 설치할 수 있습니다. Android 지원 디바이스로 첨부 파일을 열면 애플리케이션이 설치됩니다.
+- **마켓을 통해** &ndash; 배포를 위한 몇 가지 애플리케이션 마켓플레이스(예: [Google Play](https://play.google.com/) 또는 [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011))가 있습니다.
 
 기존 마켓플레이스는 광범위한 시장 접근과 최대 규모의 배포 관리를 제공하므로 가장 일반적인 애플리케이션 게시 방법입니다. 그러나 마켓플레이스를 통해 애플리케이션을 게시하려면 추가적인 작업이 필요합니다.
 
@@ -46,7 +46,7 @@ Amazon Mobile App Distribution Program을 사용하면 모바일 앱 개발자�
 
 Google Play는 Android 애플리케이션에 대한 가장 포괄적이고 인기 있는 마켓플레이스입니다. Google Play에서는 사용자가 디바이스나 컴퓨터의 간단한 아이콘을 클릭하여 애플리케이션을 검색, 다운로드, 평가 및 결제할 수 있습니다. Google Play는 판매 및 시장 추세 분석을 지원하고 애플리케이션을 다운로드할 수 있는 디바이스 및 사용자를 제어하는 도구도 제공합니다. Android 디바이스에서 실행되는 Google Play의 스크린 샷은 다음과 같습니다.
 
-[![Google Play 스크린샷](images/google-play-app.png)](images/google-play-app.png#lightbox)
+[![Google Play 스크린 샷](images/google-play-app.png)](images/google-play-app.png#lightbox)
 
 이 섹션에서는 적합한 프로모션 자료와 함께 Google Play 등의 스토어에 애플리케이션을 업로드하는 방법을 보여 줍니다. APK 확장 파일이 무엇이며 어떻게 작동하는지를 개념적으로 설명합니다. Google 라이선스 서비스에 대해서도 설명합니다. 마지막으로 HTTP 웹 서버, 간단한 이메일 배포 및 Amazon App Store for Android 등, 다른 배포 방법에 대해서 소개합니다.
 
@@ -56,6 +56,7 @@ Google Play는 Android 애플리케이션에 대한 가장 포괄적이고 인�
 - [빌드 프로세스](~/android/deploy-test/building-apps/build-process.md)
 - [링크](~/android/deploy-test/linker.md)
 - [Google Maps API 키 가져오기](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
+- [Visual Studio App Center를 통한 배포](https://docs.microsoft.com/appcenter/distribution/stores/googleplay)
 - [애플리케이션 서명](https://source.android.com/security/apksigning/)
 - [Google Play에 게시](https://developer.android.com/distribute/googleplay/publish/index.html)
 - [Google 애플리케이션 라이선스](https://developer.android.com/guide/google/play/licensing/index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 7d442d14589b35632bce2b6caec09235138ec585
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771631"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545616"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
@@ -279,9 +279,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 작동하는 방법을 다음과 같습니다. 사용자가 먼저 **새로 만들기** 단추를 누릅니다. 이렇게 하면 입력 양식은 사용할 수 있지만 **새로 만들기** 단추가 비활성화됩니다. 그러면 사용자가 이름, 나이 및 기술을 입력합니다. 사용자는 편집하는 중에 언제라도 **취소** 단추를 눌러 다시 시작할 수 있습니다. 이름과 유효 기간이 입력된 경우에만 **제출** 단추가 활성화됩니다. 이 **제출** 단추를 누르면 사용자를 `ListView`에서 표시하는 컬렉션으로 전송합니다. **취소** 또는 **제출** 단추를 누르면 입력 양식이 지워지고 **새로 만들기** 단추가 활성화됩니다.
 
-왼쪽의 iOS 화면에서는 유효한 나이를 입력하기 전의 레이아웃을 보여 줍니다. Android 및 UWP 화면에는 나이가 설정되면 활성화되는 **제출** 단추가 표시됩니다.
+왼쪽의 iOS 화면에서는 유효한 나이를 입력하기 전의 레이아웃을 보여 줍니다. Android 화면에는 나이를 설정하면 활성화되는 **제출** 단추가 표시됩니다.
 
-[![Person Entry](commanding-images/personentry-small.png "Person Entry")](commanding-images/personentry-large.png#lightbox "Person Entry")
+[![개인 항목](commanding-images/personentry-small.png "개인 항목")](commanding-images/personentry-large.png#lightbox "개인 항목")
 
 프로그램에는 기존 항목을 편집할 수 있는 기능이 없으며, 페이지에서 이동할 때 항목을 저장하지 않습니다.
 
@@ -532,7 +532,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[![10진수 키보드](commanding-images/decimalkeyboard-small.png "10진수 키보드")](commanding-images/decimalkeyboard-large.png#lightbox "10진수 키보드")
+[![음악 키보드](commanding-images/decimalkeyboard-small.png "음악 키보드")](commanding-images/decimalkeyboard-large.png#lightbox "음악 키보드")
 
 입력된 숫자에 이미 소수점이 포함되어 있으므로 세 개의 스크린샷 모두에서 소수점 단추가 비활성화되어 있습니다.
 
@@ -758,7 +758,7 @@ public partial class MainPage : ContentPage
 
 또한 생성자는 바인딩에서 이 클래스의 `NavigateCommand`를 참조하도록 페이지의 `BindingContext`를 자체로 설정합니다.
 
-이 생성자의 코드 순서가 중요합니다. `InitializeComponent` 호출로 인해 XAML이 구문 분석되지만 `BindingContext`가 `null`로 설정되어 있으므로 이때에는 `NavigateCommand`라는 속성에 대한 바인딩을 확인할 수 없습니다. `NavigateCommand`가 설정되기 *전에* `BindingContext`가 생성자에 설정되면 `BindingContext`가 설정될 때 바인딩을 확인할 수 있지만 이 시점에서 `NavigateCommand`는 여전히 `null`입니다. `NavigateCommand`를 변경하면 `PropertyChanged` 이벤트가 발생하지 않고 바인딩에서 `NavigateCommand`가 현재 유효한지 인식할 수 없으므로 `BindingContext` 뒤에 `NavigateCommand`를 설정해도 바인딩에 아무 영향을 주지 않습니다.
+이 생성자의 코드 순서가 중요합니다. `InitializeComponent` 호출로 인해 XAML이 구문 분석되지만 `BindingContext`가 `null`로 설정되어 있으므로 이때에는 `NavigateCommand`라는 속성에 대한 바인딩을 확인할 수 없습니다. `NavigateCommand`이(가) 설정되기 *전에* `BindingContext`이(가) 생성자에서 설정되면 `BindingContext`이(가) 설정될 때 바인딩을 확인할 수 있지만, 이 시점에서 `NavigateCommand`은(는) 여전히 `null`입니다. `NavigateCommand`를 변경하면 `PropertyChanged` 이벤트가 발생하지 않고 바인딩에서 `NavigateCommand`가 현재 유효한지 인식할 수 없으므로 `BindingContext` 뒤에 `NavigateCommand`를 설정해도 바인딩에 아무 영향을 주지 않습니다.
 
 XAML 파서에서 바인딩 정의를 발견하면 바인딩의 두 구성 요소가 모두 설정되므로 `InitializeComponent`를 호출하기 전에 `NavigateCommand` 및 `BindingContext`를 모두 임의의 순서로 설정할 수 있습니다.
 

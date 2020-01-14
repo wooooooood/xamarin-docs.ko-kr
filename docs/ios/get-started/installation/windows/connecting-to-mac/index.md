@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: b8020ae8539e12640cde0d565ccbd2eb0c01fc30
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e93a12fec63dcb0a31e57de26b3d7ee8827e7864
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022491"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489065"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
@@ -168,7 +168,7 @@ Mac을 페어링할 수 없는 경우 [수동으로 Mac 추가](#manually-add-a-
 > - 자동 Mac 프로비전을 사용하려면 Mac에서 원격 로그인을 사용하도록 설정하고 네트워크를 통해 Windows 컴퓨터에 액세스할 수 있어야 합니다. 자세한 내용은 [Mac에서 원격 로그인을 사용하도록 설정](#enable-remote-login-on-the-mac)을 참조하세요.
 > - 자동 Mac 프로비전에는 Xamarin.iOS를 설치하기 위해 Mac에 3GB의 사용 가능한 공간이 필요합니다.
 
-Visual Studio 2017이 [Mac에 연결](#connect-to-the-mac-from-visual-studio-2019)되면 Mac에 페어링에서 필요한 소프트웨어 설치/업데이트를 수행합니다.
+Visual Studio 2019가 [Mac에 연결](#connect-to-the-mac-from-visual-studio-2019)되면 Mac과의 페어링에 필요한 소프트웨어 설치/업데이트가 수행됩니다.
 
 ### <a name="mono"></a>Mono
 
@@ -218,7 +218,7 @@ Mac에 페어링은 Xcode가 설치되어 있고 해당 라이선스가 승인�
 
 ### <a name="troubleshooting-automatic-mac-provisioning"></a>자동 Mac 프로비전 문제 해결
 
-자동 Mac 프로비전을 사용하는 데 문제가 발생하면 **%LOCALAPPDATA%\Xamarin\Logs\15.0**에 저장된 Visual Studio 2019 IDE 로그를 살펴보세요. 이러한 로그에는 효율적으로 오류를 진단하거나 지원을 받는 데 도움이 되는 오류 메시지가 포함될 수 있습니다.
+자동 Mac 프로비전을 사용하는 데 문제가 발생하면 **%LOCALAPPDATA%\Xamarin\Logs\16.0**에 저장된 Visual Studio 2019 IDE 로그를 살펴보세요. 이러한 로그에는 효율적으로 오류를 진단하거나 지원을 받는 데 도움이 되는 오류 메시지가 포함될 수 있습니다.
 
 ## <a name="build-ios-apps-from-the-windows-command-line"></a>Windows 명령줄에서 iOS 응용 프로그램 빌드
 
@@ -236,7 +236,7 @@ C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamU
 - `ServerPassword` – Mac 빌드 호스트에 로그인할 때 사용할 암호입니다.
 
 > [!NOTE]
-> Visual Studio 2019에서는 `msbuild`를 다음 디렉터리에 저장합니다. **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2019에서는 `msbuild`를 다음 디렉터리에 저장합니다. **C:\Program Files (x86)\Microsoft Visual Studio\2019\\&lt;Version&gt;\MSBuild\Current\Bin**
 
 Mac에 페어링은 Visual Studio 2019 또는 명령줄에서 특정 Mac 빌드 호스트에 처음 로그인할 때 SSH 키를 설정합니다. 이러한 키를 사용하면 이후의 로그인에서 사용자 이름이나 암호가 필요하지 않습니다. 새로 만든 키는 **%LOCALAPPDATA%\Xamarin\MonoTouch**에 저장됩니다.
 

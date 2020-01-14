@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2019
-ms.openlocfilehash: c57281f3fa526bb238f4a0dd6a4fad70376c742e
-ms.sourcegitcommit: b4c9eb94ae2b9eae852a24d126b39ac64a6d0ffb
+ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681342"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75487167"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Xamarin.Forms 앱 성능 향상
 
@@ -172,7 +172,7 @@ Android에서 AOT(Ahead of Time) 컴파일을 사용하면 JIT(Just-in-time) 애
 - 비동기 생성자를 만들지 마십시오. 대신, 수명 주기 이벤트 또는 별도의 초기화 논리를 사용하여 초기화를 올바르게 `await`합니다. 자세한 내용은 blog.stephencleary.com에서 [비동기 생성자](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html)를 참조하세요.
 - 지연 작업 패턴을 사용하여 애플리케이션 시작 중에 비동기 작업이 완료될 때까지 기다리지 않도록 합니다. 자세한 내용은 [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/)를 참조하세요.
 - `TaskCompletionSource<T>` 개체를 만들어 TAP을 사용하지 않는 기존 비동기 작업에 대한 작업 래퍼를 만듭니다. 이 개체를 사용하여 `Task` 프로그래밍의 이점을 얻고 관련된 `Task`의 수명과 완료를 제어할 수 있도록 합니다. 자세한 내용은 [TaskCompletionSource의 특성](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/)을 참조하세요.
-asynchronous-mvvm-applications-commands).
+ 
 - 비동기 작업의 결과를 처리할 필요가 없는 경우 대기 `Task` 개체를 반환하는 대신, `Task` 개체를 반환합니다. 이렇게 하면 컨텍스트 전환이 수행되지 않으므로 성능이 향상됩니다.
 - 사용 가능한 경우 데이터 처리와 같은 시나리오에서 또는 비동기적으로 서로 통신해야 하는 작업이 많은 경우에 TPL(작업 병렬 라이브러리) 데이터 흐름 라이브러리를 사용합니다. 자세한 내용은 [데이터 흐름(작업 병렬 라이브러리)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library)을 참조하세요.
 

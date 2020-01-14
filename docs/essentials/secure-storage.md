@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 1e4cb52772a60489f887116cbcfd4e6a8930fa3a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70756791"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75488493"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
@@ -155,13 +155,13 @@ KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해�
 
 암호화된 값은 `ApplicationData.Current.LocalSettings`의 컨테이너 안에 **[YOUR-APP-ID].xamarinessentials**라는 이름으로 저장됩니다.
 
-**SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다.
+**SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 또한 각 설정의 이름 길이가 최대 255자 이하로 제한된 `LocalSettings`을(를) 사용합니다. 각 설정의 크기는 최대 8K 바이트이며 각 복합 설정은 크기는 최대 64K 바이트까지 가능합니다.
 
 -----
 
 ## <a name="limitations"></a>제한 사항
 
-이 API는 소량 텍스트를 저장하기 위한 것입니다.  대량 텍스트를 저장하는 데 사용하려고 하면 성능이 느려질 수 있습니다.
+이 API는 소량 텍스트를 저장하기 위한 것입니다.  대량 텍스트를 저장하는 데 사용하려고 하면 성능이 느려질 수 있습니다. 
 
 ## <a name="api"></a>API
 

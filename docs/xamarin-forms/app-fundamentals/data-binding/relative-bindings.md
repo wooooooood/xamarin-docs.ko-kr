@@ -6,13 +6,13 @@ ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/30/2019
-ms.openlocfilehash: 08026cd3f3ef7503a92f6c78f1e3e27ad3642d09
-ms.sourcegitcommit: f8583585c501607fdfa061b95e9a9f385ed1d591
+ms.date: 12/04/2019
+ms.openlocfilehash: e115014728cce9252a92740b6db5beab582f61ed
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72959131"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489875"
 ---
 # <a name="xamarinforms-relative-bindings"></a>Xamarin.Forms 상대 바인딩
 
@@ -23,7 +23,7 @@ ms.locfileid: "72959131"
 `RelativeSource` 태그 확장은 다음 속성을 정의하는 `RelativeSourceExtension` 클래스에서 지원됩니다.
 
 - `RelativeBindingSourceMode` 형식의 `Mode`: 바인딩 대상의 위치에 상대적으로 바인딩 소스의 위치를 설명합니다.
-- `int` 형식의 `AncestorLevel`: `Mode` 속성이 `FindAncestor`인 경우 살펴보아야 할 선택적 상위 항목 수준입니다.
+- `int` 형식의 `AncestorLevel`: `Mode` 속성이 `FindAncestor`인 경우 살펴보아야 할 선택적 상위 항목 수준입니다. `n`의 `AncestorLevel`은(는) `AncestorType`의 `n-1` 인스턴스를 건너뜁니다.
 - `Type` 형식의 `AncestorType`: `Mode` 속성이 `FindAncestor`인 경우 살펴보아야 할 상위 항목 유형입니다.
 
 > [!NOTE]
@@ -81,6 +81,9 @@ Xamarin.Forms 태그 확장에 대한 자세한 내용은 [XAML 태그 확장](~
 > `FindAncestor` 및 `FindAncestorBindingContext` 상대 바인딩 모드를 사용할 때는 `AncestorType` 속성을 `Type`으로 설정해야 합니다. 그러지 않으면 `XamlParseException`이 throw됩니다.
 
 `Mode` 속성이 명시적으로 설정되지 않은 경우, `AncestorType` 속성을 [`Element`](xref:Xamarin.Forms.Element)에서 파생된 형식으로 설정하면 `Mode` 속성이 암시적으로 `FindAncestor`로 설정됩니다. 마찬가지로, `AncestorType` 속성을 `Element`에서 파생되지 않은 형식으로 설정하면 `Mode` 속성이 암시적으로 `FindAncestorBindingContext`로 설정됩니다.
+
+> [!NOTE]
+> `FindAncestorBindingContext` 모드를 사용하는 상대 바인딩은 모든 상위 항목의 `BindingContext`이(가) 변경될 때 다시 적용됩니다.
 
 다음 XAML은 `Mode` 속성이 암시적으로 `FindAncestorBindingContext`로 설정되는 예제를 보여 줍니다.
 

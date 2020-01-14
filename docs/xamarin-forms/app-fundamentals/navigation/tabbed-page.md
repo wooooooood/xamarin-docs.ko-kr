@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2019
-ms.openlocfilehash: 22c5b5b6479ce65c2e6b69f6ad5a98fd11ae47d7
-ms.sourcegitcommit: efbc69acf4ea484d8815311b058114379c9db8a2
+ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842897"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75490001"
 ---
 # <a name="xamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
@@ -27,7 +27,7 @@ iOS에서 탭 목록은 화면 맨 아래에 나타나고 세부 내용 영역�
 > [!TIP]
 > iOS의 경우 `TabbedRenderer`에는 지정된 원본에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIcon` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있습니다. 또한 선택하거나 선택하지 않은 버전의 아이콘을 제공할 수 있습니다.
 
-Android에서는 탭 목록이 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 각 탭은 제목과 아이콘으로 구성되며 알파 채널이 있는 PNG 파일이어야 합니다. 그러나 탭은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 아이콘 요구 사항에 대한 자세한 내용은 material.io의 [Tabs](https://material.io/components/tabs/#) 및 developer.android.com의 [다양한 픽셀 밀도 지원](https://developer.android.com/training/multiscreen/screendensities)을 참조하세요. 화면 아래쪽으로 탭을 이동하는 방법에 대한 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md)을 참조하세요.
+Android에서는 탭 목록이 화면 맨 위에 표시되고 세부 정보 영역은 아래에 위치합니다. 각 탭은 제목과 아이콘으로 구성되며 알파 채널이 있는 PNG 파일이어야 합니다. 그러나 탭은 특정 플랫폼에서 화면 아래쪽으로 이동할 수 있습니다. 6개 이상의 탭이 있고 탭 목록이 화면 아래쪽에 있는 경우 추가 탭에 액세스하는 데 사용할 수 있는 *자세히* 탭이 나타납니다. 아이콘 요구 사항에 대한 자세한 내용은 material.io의 [Tabs](https://material.io/components/tabs/#) 및 developer.android.com의 [다양한 픽셀 밀도 지원](https://developer.android.com/training/multiscreen/screendensities)을 참조하세요. 화면 아래쪽으로 탭을 이동하는 방법에 대한 자세한 내용은 [TabbedPage 도구 모음 배치 및 색 설정](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md)을 참조하세요.
 
 > [!TIP]
 > Android AppCompat의 경우 `TabbedPageRenderer`에는 사용자 지정된 `Drawable`에서 탭 아이콘을 로드하는 데 사용할 수 있는 재정의 가능한 `GetIconDrawable` 메서드가 포함됩니다. 이 재정의를 통해 `TabbedPage`에서 SVG 이미지를 아이콘으로 사용할 수 있고 위아래 탭 표시줄 모두에서 작업할 수 있습니다. 또는 위쪽 탭 표시줄의 경우 재정의 가능한 `SetTabIcon` 메서드를 사용하여 사용자 지정 `Drawable`에서 탭 아이콘을 로드할 수 있습니다.

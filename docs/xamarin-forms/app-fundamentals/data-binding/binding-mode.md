@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1991be6961cbc296501a1df92fe3c89dda01d190
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: acfa7bc953906654567d361b93ec1ccff22c1f1b
+ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771683"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545649"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
@@ -49,7 +49,7 @@ ms.locfileid: "70771683"
 
 [![역방향 바인딩](binding-mode-images/reversebinding-small.png "역방향 바인딩")](binding-mode-images/reversebinding-large.png#lightbox "역방향 바인딩")
 
-하지만 놀랍게도 `Slider`는 Android와 UWP 스크린샷에 표시된 것처럼 계속 작동합니다. 이를 통해 알 수 있는 것은 데이터 바인딩은 `Label`보다는 `Slider`가 바인딩 대상일 때 더 잘 작동하며 그 이유는 초기화가 예상대로 작동하기 때문이라는 점입니다.
+하지만 놀랍게도 `Slider`은(는) Android 스크린샷에 표시된 것처럼 계속 작동합니다. 이를 통해 알 수 있는 것은 데이터 바인딩은 `Label`보다는 `Slider`가 바인딩 대상일 때 더 잘 작동하며 그 이유는 초기화가 예상대로 작동하기 때문이라는 점입니다.
 
 **Reverse Binding**(역방향 바인딩) 샘플과 이전 샘플의 차이는 *바인딩 모드*입니다.
 
@@ -58,10 +58,10 @@ ms.locfileid: "70771683"
 바인딩 모드는 [`BindingMode`](xref:Xamarin.Forms.BindingMode) 열거형의 멤버를 통해 지정됩니다.
 
 - [`Default`](xref:Xamarin.Forms.BindingMode.Default)
-- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; 데이터가 원본과 대상 사이에서 양방향으로 이동합니다.
-- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; 데이터가 원본에서 대상으로 이동합니다.
-- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터가 대상에서 원본으로 이동합니다.
-- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; `BindingContext`가 변경되는 경우에만 데이터가 원본에서 대상으로 이동합니다(Xamarin.Forms 3.0의 새로운 기능).
+- [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; 데이터가 원본과 대상 사이에서 양방향으로 이동
+- [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; 데이터가 원본에서 대상으로 이동
+- [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터가 대상에서 원본으로 이동
+- `BindingContext`이(가) 변경되는 경우에만 [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터가 원본에서 대상으로 이동(Xamarin.Forms 3.0의 새로운 기능)
 
 바인딩할 수 있는 모든 속성에는 바인딩할 수 있는 속성이 생성될 때 설정되는 기본 바인딩 모드가 있으며, `BindableProperty` 개체의 [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) 속성에 제공됩니다. 기본 바인딩 모드는 속성이 데이터 바인딩 대상일 때 적용되는 모드를 나타냅니다.
 
@@ -261,9 +261,9 @@ ViewModel이 바인딩 소스로 설정되면 바인딩 인프라는 `PropertyCh
 
 프로그램을 처음 실행하는 경우 `BoxView`, `Label` 및 세 가지 `Slider` 요소는 모두 ViewModel을 인스턴스화했을 때 설정된 초기 `Color` 설정을 기반으로 ViewModel에서 설정됩니다. 왼쪽의 iOS 스크린샷이 이 경우를 보여줍니다.
 
-[![간단한 색 선택기](binding-mode-images/simplecolorselector-small.png "간단한 색 선택기")](binding-mode-images/simplecolorselector-large.png#lightbox "Simple 간단한 색 선택기")
+[![단순 색 선택기](binding-mode-images/simplecolorselector-small.png "단순 색 선택기")](binding-mode-images/simplecolorselector-large.png#lightbox "단순 색 선택기")
 
-슬라이더를 조작하면 그에 따라 `BoxView`와 `Label`이 Android와 UWP 스크린샷에 설명된 것처럼 업데이트됩니다.
+슬라이더를 조작하면 그에 따라 `BoxView` 및 `Label`이(가) Android 스크린샷에 설명된 것처럼 업데이트됩니다.
 
 리소스 사전에서 ViewModel을 인스턴스화하는 것이 일반적인 방법 중 하나입니다. `BindingContext` 속성에 대한 속성 요소 태그 내에서 ViewModel을 인스턴스화하는 것도 가능합니다. **Simple Color Selector**(간단한 색 선택기) XAML 파일에서 `HslColorViewModel`을 리소스 사전에서 제거하고 다음과 같이 `Grid`의 `BindingContext` 속성으로 설정합니다.
 

@@ -7,18 +7,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 8ca13b4f9c961b8bb206d065ce3cf641a8662160
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
+ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028078"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556524"
 ---
-# <a name="debugging-on-the-android-emulator"></a>Android Emulator에서 디버깅
+# <a name="debug-on-the-android-emulator"></a>Android Emulator의 디버그
 
 _이 가이드에서는 앱을 디버그하고 테스트하기 위해 Android Emulator에서 가상 디바이스를 시작하는 방법을 알아봅니다._
-
-## <a name="overview"></a>개요
 
 Android Emulator( **.NET을 사용한 모바일 개발** 워크로드의 일부로 설치됨)를 다양한 구성으로 실행하여 다양한 Android 디바이스를 시뮬레이션할 수 있습니다. 이러한 구성은 각각 _가상 디바이스_로 생성됩니다. 이 가이드에서는 Visual Studio에서 에뮬레이터를 시작하고, 가상 디바이스에서 앱을 실행하는 방법을 알아봅니다. Android Emulator를 구성하고 새 가상 디바이스를 만드는 방법에 대한 자세한 내용은 [Android Emulator 설정](~/android/get-started/installation/android-emulator/index.md)을 참조하세요.
 

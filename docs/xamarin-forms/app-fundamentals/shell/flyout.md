@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
-ms.openlocfilehash: c7ddcf443e3834e6c9e9518779a016d69ad7e204
-ms.sourcegitcommit: 18891db12c9d47224326af5753eccad8a904a188
+ms.date: 11/05/2019
+ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
+ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/24/2019
-ms.locfileid: "74451813"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75489962"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
@@ -246,6 +246,23 @@ Shell.Current.FlyoutIsPresented = false;
 - `OnTabStopPropertyChanged` - `IsTabStop` 속성이 변경될 때마다 호출됩니다.
 - `TabIndexDefaultValueCreator` - `int`를 반환하고 `TabIndex` 속성의 기본값을 설정하기 위해 호출됩니다.
 - `TabStopDefaultValueCreator` - `bool`을 반환하고 `TabStop` 속성의 기본값을 설정하기 위해 호출됩니다.
+
+## <a name="flyout-vertical-scroll"></a>플라이아웃 세로 스크롤
+
+기본적으로 플라이아웃 항목이 플라이아웃에 들어가지 않으면 플라이아웃을 세로로 스크롤할 수 있습니다. 이 동작은 `Shell.FlyoutVerticalScrollMode` 바인딩 가능 속성을 다음의 `ScrollMode` 열거형 멤버 중 하나로 설정함으로써 변경할 수 있습니다.
+
+- `Disabled` – 세로 스크롤이 사용 중지됨을 나타냅니다.
+- `Enabled` – 세로 스크롤이 사용 설정됨을 나타냅니다.
+- `Auto` – 플라이아웃 항목이 플라이아웃에 들어가지 않는 경우 세로 스크롤을 사용 설정됨을 나타냅니다. 이 값은 `Shell.FlyoutVerticalScrollMode` 속성의 기본값입니다.
+
+다음 예제에서는 세로 스크롤을 사용 중지하는 방법을 보여줍니다.
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
 
 ## <a name="flyout-display-options"></a>플라이아웃 표시 옵션
 
