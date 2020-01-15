@@ -5,18 +5,18 @@ description: 이 문서에서는 WPF를 Xamarin.ios와 비교 하 고 대조 합
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: 798839457a418d457bac83e6e20397722423dbac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e87595c121f1117d055d812cb06c81ecba850c12
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016480"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955649"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 Xamarin.ios: 유사성 & 차이점
 
 ## <a name="control-templates"></a>컨트롤 템플릿
 
-WPF는 컨트롤에 대 한 시각화 명령 (`Button`, `ListBox` 등)을 제공 하는 *컨트롤 템플릿의* 개념을 지원 합니다. 위에서 설명한 것 처럼 Xamarin.ios는 네이티브 플랫폼 (iOS, Android 등)과 상호 작용 하 여 컨트롤을 시각화 하는 구체적인 _렌더링_ 클래스를 사용 합니다.
+WPF는 컨트롤에 대 한 시각화 명령 (`Button`, `ListBox`등)을 제공 하는 *컨트롤 템플릿의* 개념을 지원 합니다. 위에서 설명한 것 처럼 Xamarin.ios는 네이티브 플랫폼 (iOS, Android 등)과 상호 작용 하 여 컨트롤을 시각화 하는 구체적인 _렌더링_ 클래스를 사용 합니다.
 
 그러나 Xamarin.ios에는 `ControlTemplate` _형식이 있습니다._ `Page` 개체에 테마를 사용 하는 데 사용 됩니다. 일관 된 콘텐츠를 제공 하는 `Page`에 대 한 정의를 제공 하지만 페이지 사용자가 색, 글꼴 등을 변경할 수 있도록 하 고, 요소를 추가 하 여 응용 프로그램에 고유 하 게 만들 수도 있습니다.
 
@@ -27,13 +27,13 @@ WPF는 컨트롤에 대 한 시각화 명령 (`Button`, `ListBox` 등)을 제공
 3. `ContentPresenter`
 4. `TemplateBinding`
 
-하지만 Xamarin.ios에서 동일한 용도를 제공 _하지_ 않는다는 것을 알아야 합니다. 이 기능에 대 한 자세한 내용은 [설명서 페이지](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)를 참조 하세요.
+하지만 Xamarin.ios에서 동일한 용도를 제공 _하지_ 않는다는 것을 알아야 합니다. 이 기능에 대 한 자세한 내용은 [설명서 페이지](~/xamarin-forms/app-fundamentals/templates/control-template.md)를 참조 하세요.
 
 ## <a name="xaml"></a>XAML
 
 XAML은 WPF 및 Xamarin.ios에 대 한 선언적 태그 언어로 사용 됩니다. 대부분의 경우 구문은 동일 합니다. 주요 차이점은 XAML 그래프에서 정의/만든 개체입니다.
 
-- Xamarin.ios는 [XAML 2009 사양을](/dotnet/framework/xaml-services/xaml-2009-language-features/)지원 합니다. 이렇게 하면 제네릭 형식을 정의 하 고 생성자에 인수를 전달 하는 것 외에도 `string`s, `int`s 등의 데이터를 보다 쉽게 정의할 수 있습니다.
+- Xamarin.ios는 [XAML 2009 사양을](/dotnet/framework/xaml-services/xaml-2009-language-features/)지원 합니다. 이렇게 하면 `string`s, `int`와 같은 데이터를 보다 쉽게 정의할 수 있을 뿐만 아니라 제네릭 형식을 정의 하 고 생성자에 인수를 전달할 수 있습니다.
 
 - 현재 `XamlReader`에서 WPF와 같은 XAML을 동적으로 로드할 수 있는 방법은 없습니다. 그러나 [NuGet 패키지](https://www.nuget.org/packages/Xamarin.Forms.Dynamic/) 를 사용 하 여 동일한 기본 기능을 얻을 수 있습니다.
 
@@ -92,12 +92,12 @@ Xamarin.ios의 바인딩 가능한 속성에 대 한 정의는 WPF와 동일 합
   - NotifyOnSourceUpdated
   - NotifyOnTargetUpdated
   - NotifyOnValidationError
-  - System.windows.data.binding.updatesourcetrigger
+  - UpdateSourceTrigger
   - UpdateSourceExceptionFilter
   - ValidatesOnDataErrors
   - ValidatesOnExceptions
   - ValidationRules 컬렉션
-  - XPath입니다.
+  - XPath
   - XmlNamespaceManager
 
 #### <a name="relativesource"></a>RelativeSource
@@ -128,7 +128,7 @@ Xamarin.ios에서이 기능은 사용 가능한 이지만 속성 이름은 `Bind
 
 값 변환기는 WPF와 마찬가지로 Xamarin.ios에서 완벽 하 게 지원 됩니다. 동일한 인터페이스 모양이 사용 되지만 Xamarin.ios는 `Xamarin.Forms` 네임 스페이스에 정의 된 인터페이스를 포함 합니다.
 
-### <a name="model-view-viewmodel"></a>모델-뷰-ViewModel
+### <a name="model-view-viewmodel"></a>Model-View-ViewModel
 
 MVVM는 WPF 및 Xamarin.ios에서 완전히 지원 됩니다.
 
@@ -138,28 +138,28 @@ WPF에는 사용 되는 기본 제공 `RoutedCommand`이 포함 되어 있습니
 
 두 인터페이스 모두 Xamarin. Forms 바인딩에서 완벽 하 게 지원 됩니다. 많은 XAML 기반 프레임 워크와 달리, Xamarin.ios의 백그라운드 스레드에서 속성 변경 알림이 발생할 수 있으며 (예: WPF와 마찬가지로) 바인딩 엔진은 UI 스레드로 적절히 전환 됩니다.
 
-또한 두 환경 모두 `SynchronziationContext` 및 `async` / `await`를 지원 하 여 적절 한 스레드 마샬링을 수행 합니다. WPF는 모든 시각적 요소에 `Dispatcher` 클래스를 포함 하며, Xamarin. Forms에는 사용할 수 있는 정적 메서드 `Device.BeginInvokeOnMainThread` 있습니다 (플랫폼 간 코딩에는 `SynchronizationContext`이 선호 됨).
+또한 두 환경 모두 `SynchronziationContext` 및 `async`/`await`를 지원 하 여 적절 한 스레드 마샬링을 수행 합니다. WPF는 모든 시각적 요소에 `Dispatcher` 클래스를 포함 하며, Xamarin. Forms에는 사용할 수 있는 정적 메서드 `Device.BeginInvokeOnMainThread` 있습니다 (플랫폼 간 코딩에는 `SynchronizationContext`이 선호 됨).
 
 - Xamarin.ios에는 컬렉션 변경 알림을 지 원하는 `ObservableCollection<T>` 포함 되어 있습니다.
 - `BindingBase.EnableCollectionSynchronization`를 사용 하 여 컬렉션에 대 한 크로스 스레드 업데이트를 사용 하도록 설정할 수 있습니다. API는 WPF 변형과 약간 다릅니다. 자세한 내용은 [문서를 참조](xref:Xamarin.Forms.BindingBase.EnableCollectionSynchronization*)하세요.
 
 ## <a name="data-templates"></a>데이터 템플릿
 
-데이터 템플릿은 `ListView` 행 (셀)의 렌더링을 사용자 지정 하기 위해 Xamarin.ios에서 지원 됩니다. 콘텐츠 기반 컨트롤에 대 한 `DataTemplate`s를 활용할 수 있는 WPF와는 달리, Xamarin.ios는 현재 `ListView`에만 사용 합니다. 템플릿 정의는 인라인으로 정의 (`ItemTemplate` 속성에 할당 됨) 하거나 `ResourceDictionary`의 리소스로 정의 될 수 있습니다.
+데이터 템플릿은 `ListView` 행 (셀)의 렌더링을 사용자 지정 하기 위해 Xamarin.ios에서 지원 됩니다. 콘텐츠 지향 컨트롤에 `DataTemplate`s를 활용할 수 있는 WPF와 달리, Xamarin.ios는 현재 `ListView`에만 사용 합니다. 템플릿 정의는 인라인으로 정의 (`ItemTemplate` 속성에 할당 됨) 하거나 `ResourceDictionary`의 리소스로 정의 될 수 있습니다.
 
 또한 WPF에 상응 하는 것 만큼 유연 하지 않습니다.
 
 1. `DataTemplate`의 루트 요소는 _항상_ `ViewCell` 개체 여야 합니다.
 2. 데이터 트리거는 데이터 템플릿에서 완전히 지원 되지만 트리거와 연결 된 속성의 유형을 나타내는 `DataType` 속성을 포함 해야 합니다.
-3. `DataTemplateSelector`도 지원 되지만 `DataTemplate`에서 파생 되므로 `ItemTemplate` 속성 (vs)에 직접 할당 됩니다.  WPF의 `ItemTemplateSelector`).
+3. `DataTemplateSelector`도 지원 되지만 `DataTemplate`에서 파생 되므로 `ItemTemplate` 속성 (WPF의 `ItemTemplateSelector` 비교)에 직접 할당 됩니다.
 
 ## <a name="itemscontrol"></a>ItemsControl
 
 Xamarin.ios의 `ItemsControl`에는 기본 제공 되는 형식이 없습니다. 하지만 [여기에서 사용할 수 있는 xamarin.ios에 대 한 사용자 지정](https://github.com/xamarinhq/xamu-infrastructure/blob/master/src/XamU.Infrastructure/Controls/ItemsControl.cs)이 있습니다.
 
-## <a name="user-controls"></a>사용자 정의 컨트롤
+## <a name="user-controls"></a>사용자 컨트롤
 
-WPF에서 `UserControl`s는 연결 된 동작이 있는 UI 섹션을 제공 하는 데 사용 됩니다. Xamarin.ios에서는 동일한 용도로 `ContentView`를 사용 합니다. 둘 다 XAML에서 바인딩과 포함을 지원 합니다.
+WPF에서 `UserControl`s를 사용 하 여 연결 된 동작을 포함 하는 UI 섹션을 제공 합니다. Xamarin.ios에서는 동일한 용도로 `ContentView`를 사용 합니다. 둘 다 XAML에서 바인딩과 포함을 지원 합니다.
 
 ## <a name="navigation"></a>탐색
 

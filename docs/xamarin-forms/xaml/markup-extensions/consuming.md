@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: 736627edc8628f229e6e1a1e079fca24b8ff97db
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 47fd6d34a1ef286fa8e1a307ea6033c9c6a9feea
+ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490118"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955765"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -35,7 +35,7 @@ XAML 태그 확장 다양 한 원본에서에서 설정할 요소 특성을 허�
 - [**리소스 사전 문서에**](~/xamarin-forms/xaml/resource-dictionaries.md)설명 된 대로 리소스 사전에서 개체를 참조 `StaticResource`.
 - `DynamicResource`- [**동적 스타일**](~/xamarin-forms/user-interface/styles/dynamic.md)문서에 설명 된 대로 리소스 사전에 있는 개체의 변경 내용에 응답 합니다.
 - `Binding`-아티클 [**데이터 바인딩에**](~/xamarin-forms/app-fundamentals/data-binding/index.md)설명 된 대로 두 개체의 속성 간에 링크를 설정 합니다.
-- `TemplateBinding`-컨트롤 [**템플릿에서 바인딩**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
+- `TemplateBinding`- [**xamarin.ios 컨트롤 템플릿**](~/xamarin-forms/app-fundamentals/templates/control-template.md)문서에 설명 된 대로 컨트롤 템플릿에서 데이터 바인딩을 수행 합니다.
 - `RelativeSource`- [상대적인](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md)바인딩 문서에 설명 된 대로 바인딩 대상의 위치를 기준으로 바인딩 소스를 설정 합니다.
 
 합니다 [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) 레이아웃 사용자 지정 태그 확장 사용 [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression)합니다. 이 태그 확장은 문서에서 설명한 [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md)합니다.

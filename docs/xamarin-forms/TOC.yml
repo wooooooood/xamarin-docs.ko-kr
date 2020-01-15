@@ -10,18 +10,75 @@
           href: ~/get-started/requirements.md
         - name: 설치
           href: ~/get-started/installation/index.md
-        - name: 첫 번째 앱 빌드
+          items:
+            - name: Windows에서 Xamarin 설치
+              href: ~/get-started/installation/windows.md
+              items:
+                - name: Xamarin 미리 보기 설치(Windows)
+                  href: ~/get-started/installation/windows-preview.md
+            - name: Mac용 Visual Studio 설치
+              href: /visualstudio/mac/installation/
+              items:
+                - name: Xamarin 미리 보기 설치(Mac)
+                  href: /visualstudio/mac/update/
+            - name: Xamarin 방화벽 구성 지침
+              href: ~/get-started/installation/firewall.md
+            - name: Xamarin 제거
+              href: ~/get-started/installation/uninstalling-xamarin.md
+        - name: 첫 번째 앱
           href: ~/get-started/first-app/index.md
-        - name: 단일 페이지 빠른 시작
-          href: ~/get-started/quickstarts/single-page.md
-        - name: 다중 페이지 빠른 시작
-          href: ~/get-started/quickstarts/multi-page.md
-        - name: 로컬 데이터베이스 빠른 시작
-          href: ~/get-started/quickstarts/database.md
-        - name: 스타일 지정 빠른 시작
-          href: ~/get-started/quickstarts/styling.md
-        - name: 심층 분석
-          href: ~/get-started/quickstarts/deepdive.md
+        - name: 빠른 시작
+          href: ~/get-started/quickstarts/index.md
+          items:
+            - name: 파일 > 새로 만들기
+              href: ~/get-started/quickstarts/single-page.md
+            - name: 다중 페이지
+              href: ~/get-started/quickstarts/multi-page.md
+            - name: 데이터베이스
+              href: ~/get-started/quickstarts/database.md
+            - name: 스타일 지정
+              href: ~/get-started/quickstarts/styling.md
+            - name: 심층 분석
+              href: ~/get-started/quickstarts/deepdive.md
+        - name: 자습서
+          href: ~/get-started/tutorials/index.yml
+          items:
+            - name: 스택 레이아웃
+              href: ~/get-started/tutorials/stacklayout/index.yml
+            - name: 레이블
+              href: ~/get-started/tutorials/label/index.yml
+            - name: 단추
+              href: ~/get-started/tutorials/button/index.yml
+            - name: 텍스트 항목
+              href: ~/get-started/tutorials/entry/index.yml
+            - name: 텍스트 편집기
+              href: ~/get-started/tutorials/editor/index.yml
+            - name: 이미지
+              href: ~/get-started/tutorials/image/index.yml
+            - name: 그리드 레이아웃
+              href: ~/get-started/tutorials/grid/index.yml
+            - name: 목록
+              href: ~/get-started/tutorials/listview/index.yml
+            - name: 팝업 항목
+              href: ~/get-started/tutorials/pop-ups/index.yml
+            - name: 앱 수명 주기
+              href: ~/get-started/tutorials/app-lifecycle/index.yml
+            - name: 로컬 데이터베이스
+              href: ~/get-started/tutorials/local-database/index.yml
+            - name: 웹 서비스
+              href: ~/get-started/tutorials/web-service/index.yml
+        - name: Xamarin에 대해 알아보기
+          items:
+            - name: .NET 개발자
+              href: ~/cross-platform/desktop/index.md
+            - name: Java 개발자
+              href: ~/android/get-started/java-developers.md
+            - name: Objective-C 개발자
+              href: ~/ios/get-started/objective-c-developers/index.md
+            - name: Azure
+              href: ~/xamarin-forms/data-cloud/index.yml
+        - name: 개발 지침
+          href: ~/cross-platform/index.yml
     - name: XAML
       items:
         - name: 개요
@@ -266,17 +323,11 @@
             - name: 사용자 지정 렌더러
               href: app-fundamentals/shell/customrenderers.md
         - name: 템플릿
-          href: app-fundamentals/templates/index.md
           items:
+            - name: 개요
+              href: app-fundamentals/templates/index.md
             - name: 컨트롤 템플릿
-              href: app-fundamentals/templates/control-templates/index.md
-              items:
-                - name: 소개
-                  href: app-fundamentals/templates/control-templates/introduction.md
-                - name: 컨트롤 템플릿 만들기
-                  href: app-fundamentals/templates/control-templates/creating.md
-                - name: 템플릿 바인딩
-                  href: app-fundamentals/templates/control-templates/template-binding.md
+              href: app-fundamentals/templates/control-template.md
             - name: 데이터 템플릿
               href: app-fundamentals/templates/data-templates/index.md
               items:
