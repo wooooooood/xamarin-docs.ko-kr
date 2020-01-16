@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ae3a2af436a4ad8860ab27df550a1d74d5084a6
-ms.sourcegitcommit: 0ffef1721f28717d46c8168ec96a45b6fe96b623
+ms.openlocfilehash: 933edb1c0681f3fc9cbb8d81aa3091a65c4346e3
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75718768"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031362"
 ---
 # <a name="web-views-in-xamarinios"></a>Xamarin.ios의 웹 보기
 
@@ -95,6 +95,9 @@ iOS 9의 향상 된 기능을 통해 사용자는 Safari 페이지의 왼쪽 위
 > `UIWebView`은 사용되지 않습니다. 이 컨트롤을 사용 하는 앱은 [4 월 2020을 기준으로 앱 스토어에 허용 되지 않으며 기존 앱에서 12 월 2020에 해당 앱을 제거 해야](https://developer.apple.com/news/?id=12232019b)합니다.
 > 
 > [Apple의 `UIWebView` 설명서](https://developer.apple.com/documentation/uikit/uiwebview) 에서는 대신 [`WKWebView`](#wkwebview) 를 사용 해야 합니다.
+
+> [!IMPORTANT]
+> Xamarin.ios를 사용 하는 동안 `UIWebView` 사용 중단 경고 (ITMS-90809)와 관련 된 리소스를 찾고 있는 경우 [Xamarin.ios 웹 보기](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) 설명서를 참조 하세요.
 
 `UIWebView` 앱에서 웹 콘텐츠를 제공 하는 Apple의 레거시 방법입니다. IOS 2.0에 출시 되었으며 8.0부터 사용 되지 않습니다.
 

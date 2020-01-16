@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: c9f934ad690bffa2418a7221445a473d9a90fdb9
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490209"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031402"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -518,6 +518,50 @@ function factorial(num) {
 </body>
 </html>
 ```
+
+## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>UIWebView 보기 사용 중단 및 앱 스토어 거부 (ITMS-90809)
+
+2020 년 4 월부터 [Apple은](https://developer.apple.com/news/?id=12232019b) 아직 사용 되지 않는 `UIWebView` API를 사용 하는 앱을 거부 합니다. Xamarin.ios는 기본값으로 `WKWebView`로 전환 되었지만 Xamarin.ios 이진 파일에는 여전히 이전 SDK에 대 한 참조가 있습니다. 현재 [iOS 링커](~/ios/deploy-test/linker.md) 동작은이를 제거 하지 않습니다. 따라서 앱 스토어에 제출할 때 사용 되지 않는 `UIWebView` API는 여전히 앱에서 참조 되는 것으로 나타납니다.
+
+이 문제를 해결 하기 위해 링커의 미리 보기 버전을 사용할 수 있습니다. 미리 보기를 사용 하도록 설정 하려면 링커에 `--optimize=experimental-xforms-product-type` 추가 인수를 제공 해야 합니다. 
+
+이 작업을 수행 하기 위한 필수 구성 요소는 다음과 같습니다.
+
+- Xamarin.ios **4.5 이상** &ndash; 시험판 버전의 Xamarin. forms 4.5를 사용할 수 있습니다.
+- **Xamarin.ios 13.10.0.17 이상** &ndash; [Visual Studio에서](~/cross-platform/troubleshooting/questions/version-logs.md#version-information)xamarin.ios 버전을 확인 합니다. 이 버전의 Xamarin.ios는 Mac용 Visual Studio 8.4.1 및 Visual Studio 16.4.3에 포함 되어 있습니다.
+- **`UIWebView`에 대 한 참조를 제거** &ndash; 코드에 `UIWebView` 또는 `UIWebView`를 사용 하는 모든 클래스에 대 한 참조가 없어야 합니다.
+
+### <a name="configure-the-linker-preview"></a>링커 미리 보기 구성
+
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+링커가 `UIWebView` 참조를 제거 하려면 다음 단계를 수행 합니다.
+
+1. Ios **프로젝트 속성 &ndash; 열려면** ios 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+1. Ios **빌드 섹션으로 이동 하** &ndash; **ios 빌드** 섹션을 선택 합니다.
+1. 추가 **mtouch 인수** &ndash; 추가 **Mtouch 인수를 업데이트** 합니다 .이 플래그는이 플래그를 추가 합니다 `--optimize=experimental-xforms-product-type` (이미 있을 수 있는 값 외에). 
+1. 모든 빌드 구성을 **업데이트** &ndash; 창의 맨 위에 있는 **구성** 및 **플랫폼** 목록을 사용 하 여 모든 빌드 구성을 업데이트할 수 있습니다. 업데이트 하는 가장 중요 한 구성은 **릴리스/iPhone** 구성으로, 일반적으로 앱 스토어 전송용 빌드를 만드는 데 사용 되기 때문입니다.
+
+이 스크린샷에는 새 플래그가 설정 된 창이 표시 됩니다.
+
+[iOS 빌드 섹션에서 플래그를 설정 하는 ![](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+
+링커가 `UIWebView` 참조를 제거 하려면 다음 단계를 수행 합니다.
+
+1. Ios **프로젝트 옵션 &ndash; 열려면** ios 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **옵션**을 선택 합니다.
+1. Ios **빌드 섹션으로 이동 하** &ndash; **ios 빌드** 섹션을 선택 합니다.
+1. **추가 _mtouch_ 인수를 업데이트** &ndash; 추가  **_mtouch_ 인수** 에서이 플래그를 추가 합니다 `--optimize=experimental-xforms-product-type` (이미 있을 수 있는 값 외에)
+1. 모든 빌드 구성을 **업데이트** &ndash; 창의 맨 위에 있는 **구성** 및 **플랫폼** 목록을 사용 하 여 모든 빌드 구성을 업데이트할 수 있습니다. 업데이트 하는 가장 중요 한 구성은 **릴리스/iPhone** 구성으로, 일반적으로 앱 스토어 전송용 빌드를 만드는 데 사용 되기 때문입니다.
+
+이 스크린샷에는 새 플래그가 설정 된 창이 표시 됩니다.
+
+[iOS 빌드 섹션에서 플래그를 설정 하는 ![](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+
+-----
+
+이제 새 (릴리스) 빌드를 만들고 앱 스토어에 제출할 때 사용 되지 않는 API에 대 한 경고가 표시 되지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 
