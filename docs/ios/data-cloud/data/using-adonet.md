@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: db26de8deed9945c6fff2d49f7d12de03fbe38df
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2ed16c651d0b373e33d58bb73591977d3484d6e0
+ms.sourcegitcommit: be8ce3449afab22673e48b546d857431c071d66f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73008232"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162934"
 ---
 # <a name="using-adonet-with-xamarinios"></a>Xamarin.ios에서 ADO.NET 사용
 
@@ -69,7 +69,7 @@ ADO.NET를 통해 액세스 SQLite를 사용 하려면 여기에 나와 있는 �
 
 ## <a name="basic-data-access"></a>기본 데이터 액세스
 
-IOS에서 실행 되는 경우이 문서의 *DataAccess_Basic* 샘플 코드는 다음과 같습니다.
+이 문서에 대 한 *DataAccess_Basic* 샘플 코드는 iOS에서 실행 하는 경우 다음과 같습니다.
 
  ![](using-adonet-images/image9.png "iOS ADO.NET sample")
 
@@ -209,6 +209,17 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 `ExecuteScalar` 메서드의 반환 형식은 `object`-데이터베이스 쿼리에 따라 결과를 캐스팅 해야 합니다. 결과는 COUNT 쿼리의 정수 이거나 단일 열 SELECT 쿼리의 문자열 일 수 있습니다. 이는 판독기 개체 또는 영향을 받는 행 수의 수를 반환 하는 다른 Execute 메서드와는 다릅니다.
+
+## <a name="microsoftdatasqlite"></a>Microsoft.Data.Sqlite
+
+[NuGet에서 설치할](https://www.nuget.org/packages/Microsoft.Data.Sqlite)수 있는 다른 라이브러리 `Microsoft.Data.Sqlite`있습니다 .이는 `Mono.Data.Sqlite`와 기능적으로 동일 하며 동일한 유형의 쿼리를 허용 합니다.
+
+[두 라이브러리](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) 와 일부 [Xamarin 관련 세부 정보](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin)를 비교 합니다. Xamarin.ios 앱에 가장 중요 한 것은 초기화 호출을 포함 해야 합니다.
+
+```csharp
+// required for Xamarin.iOS
+SQLitePCL.Batteries_V2.Init();
+```
 
 ## <a name="related-links"></a>관련 링크
 
