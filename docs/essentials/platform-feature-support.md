@@ -5,12 +5,12 @@ ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: ec3474880660a2455c758b2660d5c43e23284c9d
-ms.sourcegitcommit: 93697a20e6fc7da547a8714ac109d7953b61d63f
+ms.openlocfilehash: 66cc9042b74cd29cc11194e8cfde91a6ebec6f8b
+ms.sourcegitcommit: 04929b5ff4384ca807727bec7c0467111a7eb283
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980912"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75867654"
 ---
 # <a name="platform-support"></a>플랫폼 지원
 
@@ -36,42 +36,42 @@ Xamarin.Essentials는 항상 모든 플랫폼에 기능을 가져오려고 하�
 
 아이콘 지침:
 
-* ✔ - 완전히 지원됨
-* ⚠ - 제한적으로 지원됨
-* ❌ - 지원되지 않음
+* ![전체 지원](~/media/shared/yes.png "전체 지원") - 전체 지원
+* ![제한적 지원](~/media/shared/warn.png "제한적 지원") - 제한적 지원
+* ![지원 안 함](~/media/shared/no.png "지원 안 함") - 지원 안 함
 
 | 기능 | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [가속도계](accelerometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [앱 정보](app-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [지표](barometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [배터리](battery.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ⚠ | ⚠ |
-| [클립보드](clipboard.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
-| [색 변환기](color-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [나침반](compass.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [연결](connectivity.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ✔ | ✔ |
-| [흔들림 탐지](detect-shake.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [디바이스 디스플레이 정보](device-display.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
-| [디바이스 정보](device-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [이메일](email.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [파일 시스템 도우미](file-system-helpers.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [손전등](flashlight.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [지오코딩](geocoding.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [지리적 위치](geolocation.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [자이로스코프](gyroscope.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [Launcher](launcher.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [지자기 센터](magnetometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [MainThread](main-thread.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [지도](maps.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [브라우저 열기](open-browser.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [방향 센서](orientation-sensor.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [전화 걸기](phone-dialer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [플랫폼 확장](platform-extensions.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [기본 설정](preferences.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [보안 스토리지](secure-storage.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [공유](share.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [SMS](sms.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [텍스트 음성 변환](text-to-speech.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [단위 변환기](unit-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [버전 추적](version-tracking.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [진동](vibrate.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
+| [가속도계](accelerometer.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [앱 정보](app-information.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [지표](barometer.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [배터리](battery.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 제한적 지원](~/media/shared/warn.png "tvOS 제한적 지원") | ![Tizen 제한적 지원](~/media/shared/warn.png "Tizen 제한적 지원") | 
+| [클립보드](clipboard.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원 안 함](~/media/shared/no.png "Tizen 지원 안 함") | 
+| [색 변환기](color-converters.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [나침반](compass.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [연결](connectivity.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [흔들림 탐지](detect-shake.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [디바이스 디스플레이 정보](device-display.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원 안 함](~/media/shared/no.png "Tizen 지원 안 함") | 
+| [디바이스 정보](device-information.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [이메일](email.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [파일 시스템 도우미](file-system-helpers.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [손전등](flashlight.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [지오코딩](geocoding.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [지리적 위치](geolocation.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [자이로스코프](gyroscope.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [Launcher](launcher.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [지자기 센터](magnetometer.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [MainThread](main-thread.md?content=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [지도](maps.md?content=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [브라우저 열기](open-browser.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [방향 센서](orientation-sensor.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [전화 걸기](phone-dialer.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [플랫폼 확장](platform-extensions.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [기본 설정](preferences.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [보안 스토리지](secure-storage.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [공유](share.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [SMS](sms.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [텍스트 음성 변환](text-to-speech.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [단위 변환기](unit-converters.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [버전 추적](version-tracking.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원](~/media/shared/yes.png "watchOS 지원") | ![tvOS 지원](~/media/shared/yes.png "tvOS 지원") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") | 
+| [진동](vibrate.md?context=xamarin/xamarin-forms) | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원](~/media/shared/yes.png "iOS 지원") | ![UWP 지원](~/media/shared/yes.png "UWP 지원") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원](~/media/shared/yes.png "Tizen 지원") |

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 4abe0da2b75b6859c6547f0dc1c4cf8708491afb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 40f99fb4e7e44e0a3dc499dc603e66620b890eaa
+ms.sourcegitcommit: ec62e2624295aa502ec35ac782031d61d61c3aaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022474"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886569"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Xamarin.iOS 빌드 호스트에 대한 연결 문제 해결
 
@@ -20,8 +20,8 @@ _이 가이드에서는 연결 및 SSH 문제를 포함하여 새 연결 관리�
 
 ## <a name="log-file-location"></a>로그 파일 위치
 
-- **Mac** – ~/Library/Logs/Xamarin-[MAJOR.MINOR]
-- **Windows** – %LOCALAPPDATA%\Xamarin\Logs
+- **Mac** – `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs`
 
 로그 파일은 Visual Studio에서 **도움말 &gt; Xamarin &gt; Zip 로그**로 이동하여 찾을 수 있습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: 96300cdddcc21511ef85ebbfe33f6ce32cb56cd7
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
+ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607934"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031418"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -21,6 +21,9 @@ Xamarin.iOS 앱이 개발되면 소프트웨어 개발 수명 주기의 다음 �
 > [!IMPORTANT]
 > Apple은 2019년 3월부터 App Store에 제출된 모든 앱과 업데이트가 iOS 12.1 SDK 이상에서 빌드되어 Xcode 10.1 이상에 포함된다고 [발표했습니다](https://developer.apple.com/ios/submit/).
 > 앱은 iPhone XS 및 12.9인치 iPad Pro 화면 크기도 지원해야 합니다.
+
+> [!IMPORTANT]
+> Xamarin.Forms를 사용하는 동안 `UIWebView` 사용 중단 경고(ITMS-90809)와 관련된 리소스를 찾는 경우 [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) 설명서를 참조하세요.
 
 애플리케이션을 배포하는 경우와 마찬가지로 애플리케이션을 배포하려면 적절한 *프로비전 프로필*을 사용하여 애플리케이션을 프로비전해야 합니다. 프로비전 프로필은 애플리케이션 ID 및 의도된 배포 메커니즘뿐만 아니라 코드 서명 정보도 포함된 파일입니다. 앱 스토어 배포가 아닌 경우 앱을 배포할 수 있는 디바이스에 대한 정보도 포함되어 있습니다.
 
