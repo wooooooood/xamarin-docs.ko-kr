@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/07/2019
-ms.openlocfilehash: 71305dd7287df56036d0298ebfcf8a8cb7c4d3b3
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.openlocfilehash: a90c56102f77e3f64d9333eec03b025d24888977
+ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69528369"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76549987"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Android 빌드 오류 – LinkAssemblies 작업이 예기치 않게 실패 했습니다.
 
-양식을 사용 하는 Xamarin Android `The "LinkAssemblies" task failed unexpectedly` 프로젝트를 빌드할 때 오류 메시지가 표시 될 수 있습니다. 이는 링커가 활성 상태일 때 (일반적으로 *릴리스* 빌드에서 앱 패키지의 크기를 줄이기 위해) 발생 합니다. Android 대상이 최신 프레임 워크로 업데이트 되지 않기 때문에 발생 합니다. (추가 정보: [Android 용 Xamarin.ios 요구 사항](~/get-started/requirements.md#android))
+양식을 사용 하는 Xamarin Android 프로젝트를 빌드할 때 `The "LinkAssemblies" task failed unexpectedly` 오류 메시지가 표시 될 수 있습니다. 이는 링커가 활성 상태일 때 (일반적으로 *릴리스* 빌드에서 앱 패키지의 크기를 줄이기 위해) 발생 합니다. Android 대상이 최신 프레임 워크로 업데이트 되지 않기 때문에 발생 합니다. (자세한 정보: [xamarin.ios 지원 플랫폼](~/get-started/supported-platforms.md#android-platform-support))
 
 이 문제를 해결 하려면 지원 되는 최신 Android SDK 버전이 있는지 확인 하 고 **대상 프레임 워크** 를 설치 된 최신 플랫폼으로 설정 합니다. 또한 **대상 Android 버전** 을 설치 된 최신 플랫폼으로 설정 하 고 **최소 ANDROID 버전** 을 API 19 이상으로 설정 하는 것이 좋습니다. 이는 지원 되는 구성으로 간주 됩니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "69528369"
 
 1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 메뉴에서 **옵션** 을 선택 합니다.
 2. **프로젝트 옵션** 대화 상자에서 **빌드 > 일반**으로 이동 합니다.
-3. Android 버전 **을 사용 하 여 컴파일 설정: (대상 프레임 워크)**  최신 버전으로 설치 합니다.
+3. **Android 버전을 사용 하 여 컴파일: (대상 프레임 워크)** 를 설치 된 최신 플랫폼으로 설정 합니다.
 4. **프로젝트 옵션** 대화 상자에서 **빌드 > Android 응용 프로그램**으로 이동 합니다.
 5. **최소 android 버전** 을 API 수준 19 이상으로 설정 하 고 **대상 android 버전** 을 (3)에서 선택한 최신 플랫폼으로 설정 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "69528369"
 
 1. Android 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 메뉴에서 **속성** 를 선택 합니다.
 2. 프로젝트 속성에서 **응용 프로그램**으로 이동 합니다.
-3. Android 버전 **을 사용 하 여 컴파일 설정: (대상 프레임 워크)**  최신 버전으로 설치 합니다.
+3. **Android 버전을 사용 하 여 컴파일: (대상 프레임 워크)** 를 설치 된 최신 플랫폼으로 설정 합니다.
 4. 프로젝트 속성에서 **Android 매니페스트**로 이동 합니다.
 5. **최소 android 버전** 을 API 수준 19 이상으로 설정 하 고 **대상 android 버전** 을 (3)에서 선택한 최신 플랫폼으로 설정 합니다.
 

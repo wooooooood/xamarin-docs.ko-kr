@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019
-ms.openlocfilehash: 94523bb019e366738de65ce0b05c70264fce738b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: ce8d0b834cff5b2eee46b4ace5de4a95d196726d
+ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489767"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76549996"
 ---
 # <a name="android-platform-features"></a>Android 플랫폼 기능
 
-Android 용 Xamarin Forms 응용 프로그램을 개발 하려면 Visual Studio가 필요 합니다. [요구 사항 페이지](~/get-started/requirements.md) 에는 필수 구성 요소에 대 한 자세한 정보가 포함 되어 있습니다.
+Android 용 Xamarin Forms 응용 프로그램을 개발 하려면 Visual Studio가 필요 합니다. [지원 되는 플랫폼 페이지](~/get-started/supported-platforms.md) 에는 필수 구성 요소에 대 한 자세한 정보가 포함 되어 있습니다.
 
 ## <a name="platform-specifics"></a>플랫폼 사양
 
