@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: f1551607a621ac3960c39d282111065c258ed90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d8b48892a5a1106b03778ac30eca4b18f049f4d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032770"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725325"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hello, watchOS – 연습
 
@@ -87,7 +87,7 @@ UI를 만듭니다.
 
 ![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
 
-스토리 보드를 저장 하면 **InterfaceController.designer.cs** 가 컨트롤 이름 및 동작으로 업데이트 됩니다. 이 파일을 업데이트 한 후에이 파일을 열면 `RegisterAttribute` 컨트롤러에 해당 하는 방법 및 UI 컨트롤이`OutletAttribute`표시 된 C# 인스턴스 변수에 해당 하는 방법 및 작업이`ActionAttribute`태그가 지정 된 부분 메서드에 매핑되는 방법을 확인할 수 있습니다 :
+스토리 보드를 저장 하면 **InterfaceController.designer.cs** 가 컨트롤 이름 및 동작으로 업데이트 됩니다. 이 파일을 업데이트 한 후에이 파일을 열면 `RegisterAttribute` 컨트롤러에 해당 하는 방법 및 UI 컨트롤이 `OutletAttribute` 표시 된 C# 인스턴스 변수에 해당 하는 방법 및 작업이 `ActionAttribute`태그가 지정 된 부분 메서드에 매핑되는 방법을 확인할 수 있습니다.
 
 ```csharp
 // WARNING
@@ -155,6 +155,5 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 
 ## <a name="related-links"></a>관련 링크
 
-- [시작 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [설정 및 설치](~/ios/watchos/get-started/installation.md)
-- [첫 번째 시청 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [第一个 Watch 应用视频](https://blog.xamarin.com/your-first-watch-kit-app/)

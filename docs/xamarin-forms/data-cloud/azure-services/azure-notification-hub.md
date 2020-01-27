@@ -16,7 +16,7 @@ ms.locfileid: "75487453"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.ios를 사용 하 여 푸시 알림 보내기 및 받기
 
-[샘플 다운로드](~/media/shared/download.png)샘플 다운로드 ![](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[![샘플 다운로드](~/media/shared/download.png)샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 푸시 알림은 백 엔드 시스템에서 모바일 응용 프로그램으로 정보를 제공 합니다. Apple, Google 및 기타 플랫폼에는 각각 자체 푸시 알림 서비스 (PNS)가 있습니다. Azure Notification Hubs를 사용 하면 여러 플랫폼에서 알림을 중앙 집중화 하 여 백 엔드 응용 프로그램에서 단일 허브와 통신할 수 있으므로 각 플랫폼별 PNS 알림을 배포할 수 있습니다.
 

@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a16ec338d5929a217ee2e4a622bdce4da617e86
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 94bc775366d832e0994b8d3c74a45123ff56c13b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029798"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725307"
 ---
 # <a name="using-team-city-with-xamarin"></a>Xamarin과 함께 팀 도시 사용
 
@@ -61,7 +61,7 @@ TeamCity 8.1에 대 한 지식이 필요 합니다. TeamCity의 설치는이 문
 3. **Xcode** – Xcode은 iOS 응용 프로그램을 컴파일하고 서명 하는 데 필요 합니다.
 4. **Xcode 명령줄 도구** -이에 대 한 설명은 [r단계별 v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드의 설치 섹션 1 단계에 설명 되어 있습니다.
 5. **서명 id & 프로 비전 프로필** – XCode를 통해 인증서 및 프로 비전 프로필을 가져옵니다. 자세한 내용은 Apple의 [서명 id 및 프로 비전 프로필 내보내기](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) 에 대 한 지침을 참조 하세요.
-6. **Android keystores** – teamcity 사용자가 액세스할 수 있는 디렉터리 (예:)에 필요한 android keystores를 복사 합니다.  `~/Documents/keystores/MyAndroidApp1`.
+6. **Android keystores** – teamcity 사용자가 액세스할 수 있는 디렉터리 (예: `~/Documents/keystores/MyAndroidApp1`)에 필요한 android keystores를 복사 합니다.
 7. **Calabash** – 응용 프로그램에 calabash를 사용 하 여 작성 된 테스트가 있는 경우 선택적 단계입니다. 자세한 내용은 [OS X Mavericks에서 Calabash 설치](https://github.com/calabash/calabash-ios/wiki) 가이드 및 [rguide v를 사용 하 여 Ruby 업데이트](https://github.com/calabash/calabash-ios/wiki) 가이드를 참조 하세요.
 
 다음 다이어그램에서는 이러한 구성 요소를 모두 보여 줍니다.
@@ -87,7 +87,7 @@ TeamCity는 모바일 응용 Test Cloud 프로그램을 컴파일 및 제출 하
 
 - [**가짜**](https://fsharp.github.io/FAKE/) – 필요에 F# 따라 기존 .net 라이브러리를 활용할 수 있도록 하는 DSL입니다.
 
-사용 되는 스크립팅 언어는 기본 설정 및 요구 사항에 따라 달라 집니다. [Taskypro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) 예제에는 [빌드 스크립트로](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile)Rake를 사용 하는 예가 포함 되어 있습니다.
+사용 되는 스크립팅 언어는 기본 설정 및 요구 사항에 따라 달라 집니다.
 
 > [!NOTE]
 > MSBuild 또는 NAnt와 같은 XML 기반 빌드 시스템을 사용할 수 있지만 이러한 시스템에는 소프트웨어 빌드 전용 DSL의 표현을 및 유지 관리 기능이 없습니다.

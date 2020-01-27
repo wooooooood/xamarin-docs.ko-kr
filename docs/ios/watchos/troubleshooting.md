@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1f5c4135dc1db874de16f6783a86fa7ea927676c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032725"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725316"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -36,9 +36,9 @@ ms.locfileid: "73032725"
 <a name="deploy" />
 
 - 이전 버전의 Mac용 Visual Studio 잘못 된 **설정** 아이콘 중 하나를 88x88 픽셀로 잘못 표시 합니다. 그러면 앱 스토어에 제출 하려고 할 때 **아이콘 오류가** 표시 되지 않습니다.
-    이 아이콘은 87x87 픽셀 ( **@3x** 레 티 나 화면의 경우 29 단위) 이어야 합니다. Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 [이 샘플과](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)일치 하도록 **콘텐츠. json** 파일을 수동으로 편집 합니다.
+    此图标应为 87 x 87 像素 (29 单位 **@3x** Retina 屏幕)。 Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
 
-- Watch 확장 프로젝트의 **info.plist > WKApp 번들** Id가 watch 앱의 **번들 id**와 일치 하도록 [올바르게 설정](~/ios/watchos/get-started/project-references.md) 되지 않은 경우 디버거는 연결에 실패 하 고 *"디버거를 Mac용 Visual Studio 다음으로 대기 하는 중입니다." 라는 메시지가 나타납니다. 연결 "* .
+- Watch 확장 프로젝트의 **info.plist > WKApp 번들** Id가 watch 앱의 **번들 id**와 일치 하도록 [올바르게 설정](~/ios/watchos/get-started/project-references.md) 되지 않은 경우 디버거는 연결에 실패 하 Mac용 Visual Studio 고 *"디버거가 연결 되기를 기다리는 중입니다." 라는*메시지와 함께 대기 합니다.
 
 - 디버깅은 **알림** 모드에서 지원 되지만 안정적이 지 않을 수 있습니다. 작업을 다시 시도 하는 경우도 있습니다. Watch 앱의 **info.plist** `WKCompanionAppBundleIdentifier`가 iOS 부모/컨테이너 앱의 번들 식별자와 일치 하도록 설정 되었는지 확인 합니다 (iPhone에서 실행 되는 것으로 확인 됨).
 
@@ -166,7 +166,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`
+8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`.
     모든 항목이 제대로 작동 하는 경우 **클래스:** 드롭다운 목록에 자동으로 표시 되며 여기에서 선택할 수 있습니다.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -226,14 +226,14 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 앱을 반영 하기 위해 업데이트 해야 하는 매개 변수는 `launchsimwatch`.
 
-### <a name="--launchsimwatch"></a>--launcha watch
+### <a name="--launchsimwatch"></a>--launchsimwatch
 
 *Watch 앱 및 확장을 포함 하는 iOS 앱에 대 한*기본 앱 번들의 전체 경로입니다.
 
 > [!NOTE]
 > 제공 해야 하는 경로는 *iPhone 응용 프로그램 파일*에 대 한 것입니다. 즉, iOS 시뮬레이터에 배포 되 고 조사식 확장과 조사식 앱을 모두 포함 하는 앱입니다.
 
-예제:
+예:
 
 ```bash
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
@@ -257,9 +257,9 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-필수 요소. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
+필수 Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
 
-예제:
+예:
 
 ```bash
  --sdkroot /Applications/Xcode.app/Contents/Developer/
@@ -277,7 +277,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 **UDID**
 
-예제:
+예:
 
 ```bash
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
@@ -285,7 +285,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 **런타임 및 장치 유형**
 
-예제:
+예:
 
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
@@ -293,5 +293,5 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog （示例）](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables （示例）](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

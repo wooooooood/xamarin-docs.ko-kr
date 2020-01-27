@@ -1,46 +1,46 @@
 ---
-title: 텍스트 번역, Translator API를 사용 하 여
-description: Microsoft Translator API는 음성 및 REST API를 통해 텍스트 번역을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 다른 언어로 텍스트를 변환 하는 Microsoft Translator Text API를 사용 하는 방법을 설명 합니다.
+title: 使用 Translator API 的文本翻译
+description: 可以使用 Microsoft Translator API 翻译语音和文本通过 REST API。 本文介绍如何使用 Microsoft 文本翻译 API 将文本从一种语言到 Xamarin.Forms 应用程序中的另一个翻译。
 ms.prod: xamarin
 ms.assetid: 68330242-92C5-46F1-B1E3-2395D8823B0C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 4f73ea249d29075b0e9e115e86afc971632b7b61
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 841b1d4abab5e4c09249174b221da20794771a86
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487505"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725570"
 ---
-# <a name="text-translation-using-the-translator-api"></a>텍스트 번역, Translator API를 사용 하 여
+# <a name="text-translation-using-the-translator-api"></a>使用 Translator API 的文本翻译
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Microsoft Translator API를 사용 하 여 REST API에서 음성 및 텍스트를 변환할 수 있습니다. 이 문서에서는 Xamarin.ios 응용 프로그램에서 Microsoft Translator Text API를 사용 하 여 한 언어에서 다른 언어로 텍스트를 변환 하는 방법을 설명 합니다._
 
-## <a name="overview"></a>개요
+## <a name="overview"></a>概述
 
-Translator API의 두 구성 요소:
+Translator API 有两个组件：
 
-- 텍스트 번역 REST API를 한 언어에서 다른 언어의 텍스트로 변환 합니다. API는 자동으로 변환 하기 전에 전송 된 텍스트의 언어를 검색 합니다.
-- 음성 번역 REST API를 다른 언어의 텍스트를 음성 언어에서를 기록 합니다. API는 또한 번역된 된 텍스트를 다시 사용 하는 텍스트 음성 변환 기능을 통합 합니다.
+- 文本翻译 REST API 将文本从一种语言翻译成另一种语言的文本。 API 会自动检测已发送之前将其转换的文本的语言。
+- 语音翻译 REST API 进行转录语音从一种语言到另一种语言的文本。 API 还集成了朗读已翻译的文本返回的文本到语音转换功能。
 
-이 문서는 Translator Text API를 사용 하 여 다른 언어로 텍스트를 번역에 중점을 둡니다.
+本文重点介绍翻译文本从一种语言到另一个使用文本翻译 API。
 
 > [!NOTE]
-> [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
+> 如果还没有 [Azure 订阅](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)，可以在开始前创建一个[免费帐户](https://aka.ms/azfree-docs-mobileapps)。
 
-Translator Text API를 사용 하는 API 키를 가져와야 합니다. 가져올 수 있습니다 [Microsoft Translator Text API에 대 한 등록 방법](/azure/cognitive-services/translator/translator-text-how-to-signup/)합니다.
+若要使用文本翻译 API，必须获取 API 密钥。 这可以获得[如何注册 Microsoft 文本翻译 API](/azure/cognitive-services/translator/translator-text-how-to-signup/)。
 
-Microsoft Translator Text API에 대 한 자세한 내용은 참조 하세요. [Translator 텍스트 API 설명서](/azure/cognitive-services/translator/)합니다.
+有关 Microsoft 文本翻译 API 的详细信息，请参阅[Translator 文本 API 文档](/azure/cognitive-services/translator/)。
 
-## <a name="authentication"></a>인증
+## <a name="authentication"></a>身份验证 （可能为英文网页）
 
-Translator Text API에 대 한 모든 요청에서 cognitive 서비스 토큰 서비스에서 가져올 수 있는 JSON 웹 토큰 (JWT) 액세스 토큰을 필요한 `https://api.cognitive.microsoft.com/sts/v1.0/issueToken`합니다. 토큰 서비스에 POST 요청을 수행 하 여 토큰을 가져올 수 있습니다 지정 하는 `Ocp-Apim-Subscription-Key` 값으로 API 키가 포함 된 헤더입니다.
+对文本翻译 API 所做的每个请求需要一个 JSON Web 令牌 (JWT) 访问令牌，可以从在认知服务令牌服务获取`https://api.cognitive.microsoft.com/sts/v1.0/issueToken`。 可以通过向令牌服务中，发出 POST 请求来获取令牌指定`Ocp-Apim-Subscription-Key`标题，其中包含作为其值的 API 密钥。
 
-다음 코드 예제에서는 토큰 서비스에서 토큰 액세스를 요청 하는 방법을 보여 줍니다.
+下面的代码示例演示如何请求访问令牌的令牌服务：
 
 ```csharp
 public AuthenticationService(string apiKey)
@@ -59,19 +59,19 @@ async Task<string> FetchTokenAsync(string fetchUri)
 }
 ```
 
-Base64 텍스트를 반환된 하는 액세스 토큰을 만료 시간을 10 분에 있습니다. 따라서 샘플 응용 프로그램 9 분 마다 액세스 토큰을 갱신합니다.
+返回的访问令牌，它为 Base64 文本时，有 10 分钟的到期时间。 因此，示例应用程序将续订访问令牌每隔 9 分钟。
 
-각 Translator Text API 액세스 토큰을 지정 해야로 호출을 `Authorization` 문자열을 접두사로 하는 헤더 `Bearer`다음 코드 예제에 나와 있는 것 처럼:
+必须在每个文本翻译 API 中指定的访问令牌调用作为`Authorization`与字符串作为前缀的标头`Bearer`，下面的代码示例中所示：
 
 ```csharp
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 ```
 
-Cognitive 서비스 토큰 서비스에 대 한 자세한 내용은 참조 하세요. [인증 토큰 API](https://docs.microsofttranslator.com/oauth-token.html)합니다.
+인식 서비스 토큰 서비스에 대 한 자세한 내용은 [인증](/azure/cognitive-services/translator/reference/v3-0-reference#authentication)을 참조 하세요.
 
-## <a name="performing-text-translation"></a>텍스트 번역 수행
+## <a name="performing-text-translation"></a>执行文本转换
 
-GET 요청을 수행 하 여 텍스트 번역을 수행할 수 있습니다 합니다 `translate` API에 `https://api.microsofttranslator.com/v2/http.svc/translate`입니다. 샘플 응용 프로그램에서을 `TranslateTextAsync` 텍스트 변환 프로세스를 호출 하는 메서드:
+可以通过在 GET 请求来实现文本翻译`translate`API， `https://api.microsofttranslator.com/v2/http.svc/translate`。 在示例应用程序，`TranslateTextAsync`方法将调用文本转换过程：
 
 ```csharp
 public async Task<string> TranslateTextAsync(string text)
@@ -85,13 +85,13 @@ public async Task<string> TranslateTextAsync(string text)
 }
 ```
 
-`TranslateTextAsync` 메서드 요청 URI를 생성 하 고 토큰 서비스에서 액세스 토큰을 검색 합니다. 텍스트 번역 요청에 전송 됩니다는 `translate` 결과가 포함 된 XML 응답을 반환 하는 API입니다. XML 응답을 구문 분석 및 변환 결과를 표시 하기 위해 호출 메서드로 반환 됩니다.
+`TranslateTextAsync`方法生成请求 URI，并从令牌的服务中检索访问令牌。 文本翻译请求然后发送到`translate`API，它将返回包含结果的 XML 响应。 分析 XML 响应，并转换结果返回到调用方法以显示。
 
-텍스트 번역 REST Api에 대 한 자세한 내용은 참조 하세요. [Microsoft Translator Text API](https://docs.microsofttranslator.com/text-translate.html)합니다.
+텍스트 변환 REST Api에 대 한 자세한 내용은 [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference)를 참조 하세요.
 
-### <a name="configuring-text-translation"></a>텍스트 변환 구성
+### <a name="configuring-text-translation"></a>配置文本翻译
 
-HTTP 쿼리 매개 변수를 지정 하 여 텍스트 번역 프로세스를 구성할 수 있습니다.
+文本翻译过程可通过指定 HTTP 查询参数进行配置：
 
 ```csharp
 string GenerateRequestUri(string endpoint, string text, string to)
@@ -103,14 +103,14 @@ string GenerateRequestUri(string endpoint, string text, string to)
 }
 ```
 
-이 메서드는 텍스트를 번역 및 텍스트를 변환할 언어를 설정 합니다. Microsoft Translator를 지 원하는 언어 목록은 참조 하세요 [Microsoft Translator Text API에서 지원 되는 언어](/azure/cognitive-services/translator/languages/)합니다.
+此方法设置要转换为文本的语言和要转换的文本。 Microsoft Translator 支持的语言的列表，请参阅[在 Microsoft 文本翻译 API 中支持的语言](/azure/cognitive-services/translator/languages/)。
 
 > [!NOTE]
-> 응용 프로그램에서는 텍스트는 언어를 알아야 하는 경우는 `Detect` 텍스트 문자열의 언어를 검색 하도록 API를 호출할 수 있습니다.
+> 如果应用程序需要知道文本采用何种语言`Detect`可以调用 API 来检测文本字符串的语言。
 
-### <a name="sending-the-request"></a>요청을 보내기
+### <a name="sending-the-request"></a>发送请求
 
-`SendRequestAsync` 메서드 텍스트 번역 REST API에 GET 요청을 수행 하 고 응답을 반환 합니다.
+`SendRequestAsync`方法将向文本翻译 REST API 发出 GET 请求并返回的响应：
 
 ```csharp
 async Task<string> SendRequestAsync(string url, string bearerToken)
@@ -126,29 +126,29 @@ async Task<string> SendRequestAsync(string url, string bearerToken)
 }
 ```
 
-액세스 토큰을 추가 하 여 GET 요청을 작성 하는이 메서드는 `Authorization` 문자열을 접두사로 헤더 `Bearer`합니다. 다음 GET 요청을 보낼는 `translate` 변환할 텍스트를 지정 하는 요청 URL과 텍스트를 변환 하는 언어를 사용 하 여 API입니다. 그런 다음 응답은 읽고 호출 메서드로 반환 됩니다.
+此方法的访问令牌与基础之上构建的 GET 请求`Authorization`标头，使用字符串作为前缀`Bearer`。 然后将 GET 请求发送到`translate`API，其中包含请求 URL 指定的文本以进行翻译，以及要转换为文本的语言。 然后将对响应进行读取，并将其返回给调用的方法。
 
-`translate` API에서 HTTP 상태 코드 200 (정상) 요청 올바른지 요청이 성공 했는지를 나타내는 응답에 요청 된 정보를 제공 하 고 응답을 보냅니다. 가능한 오류 응답의 목록을 응답 메시지를 참조 하세요 [번역 가져오기](https://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate)합니다.
+`translate` API 将在响应中，提供请求的有效，指示请求成功，并且请求的信息包含在响应中发送 HTTP 状态代码 200 （正常）。 有关可能的错误响应的列表，请参阅在响应消息[获取翻译](/azure/cognitive-services/translator/reference/v3-0-translate)。
 
-### <a name="processing-the-response"></a>응답 처리
+### <a name="processing-the-response"></a>处理响应
 
-API 응답은 XML 형식으로 반환 합니다. 다음 XML 데이터에는 일반적인 성공 응답 메시지를 보여 줍니다.
+以 XML 格式返回 API 响应。 下面的 XML 数据显示了典型的成功响应消息：
 
 ```xml
 <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Morgen kaufen gehen ein</string>
 ```
 
-샘플 응용 프로그램에서 XML 응답으로 구문 분석 되는 `XDocument` 다음 스크린샷과에서 같이 표시에 대 한 호출 메서드로 반환 되는 XML 루트 값을 사용 하 여 인스턴스:
+在示例应用程序，XML 响应被解析为`XDocument`实例，返回到调用方法以显示以下屏幕截图中所示的 XML 根值：
 
 ![](text-translation-images/text-translation.png "Text Translation to German")
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.Forms 응용 프로그램에서 다른 언어의 텍스트로 한 언어에서 텍스트를 번역에 Microsoft Translator Text API를 사용 하는 방법을 설명 합니다. 텍스트를 번역 하는 것 외에도 Microsoft Translator API 다른 언어의 텍스트에 사용 하는 음성 언어에서 촬영할 수도 있습니다.
+本文介绍了如何使用 Microsoft 文本翻译 API 将从一种语言的文本翻译到 Xamarin.Forms 应用程序中的另一种语言的文本。 除了将文本翻译，Microsoft Translator API 还可以到另一种语言的文本转录从一种语言的语音。
 
 ## <a name="related-links"></a>관련 링크
 
-- [Translator Text API 설명서](/azure/cognitive-services/translator/)합니다.
+- [Translator Text API 설명서](/azure/cognitive-services/translator/)
 - [RESTful 웹 서비스 사용](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
-- [Microsoft Translator Text API](https://docs.microsofttranslator.com/text-translate.html)합니다.
+- [Todo 认知服务 （示例）](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference)

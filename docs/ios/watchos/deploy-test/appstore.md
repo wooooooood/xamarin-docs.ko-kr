@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: bbf580007f4d149501efe424f0e36178a49f6aa5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028364"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725124"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>앱 스토어에 watchOS Apps 배포
 
@@ -39,7 +39,7 @@ ms.locfileid: "73028364"
   - **창 > 구성 도우미** 로 이동 하 여 **보관**을 선택 합니다.
   - 목록에서 응용 프로그램 및 보관을 선택 합니다.
   - 생략할 **유효성 검사** ... 보관 파일입니다.
-  - **제출** ... 검토 및 승인을 위해 iTunes Connect에 업로드 하는 단계를 수행 합니다.
+  - **提交...** 存档并遵循的步骤将上载到 iTunes 连接用于审查和批准。
 
 아래 항목과 관련 된 특정 팁을 읽으십시오. 문제가 있는 경우 [문제 해결](#troubleshooting) 섹션을 참조 하세요.
 
@@ -128,7 +128,7 @@ Xcode는 Mac용 Visual Studio에서 만든 보관 파일을 자동으로 표시 
 
 그런 다음 **버전** 페이지에서 승인을 위해 앱을 제출할 수 있습니다. 자세한 내용은 [iOS 앱 배포 개요](~/ios/deploy-test/app-distribution/index.md) 를 참조 하세요.
 
-## <a name="troubleshooting"></a>문제 해결
+## <a name="troubleshooting"></a>故障排除
 
 앱 스토어에 제출 하는 동안 발생할 수 있는 몇 가지 오류 및 문제를 해결 하기 위해 수행할 수 있는 단계는 다음과 같습니다.
 
@@ -177,7 +177,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 > [!IMPORTANT]
 > Mac용 Visual Studio의 조사식 아이콘 지원에는 알려진 버그가 있습니다. **29x29@3x** 이미지에는 88x88 픽셀 이미지 (픽셀 87x87)가 필요 합니다.
 
-Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 [이 샘플과](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)일치 하도록 **콘텐츠. json** 파일을 수동으로 편집 합니다.
+Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
 
 ### <a name="invalid-watchkit-support"></a>잘못 된 WatchKit 지원
 

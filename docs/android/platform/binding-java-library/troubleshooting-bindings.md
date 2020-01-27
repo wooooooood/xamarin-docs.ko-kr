@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 2eea51764e0e0f13c1a1a91db664872a67420d33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0c273797d7512f062260e49e0f71fdd1132f037b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020550"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723805"
 ---
 # <a name="troubleshooting-bindings"></a>바인딩 문제 해결
 
 _이 문서에서는 바인딩을 생성할 때 발생할 수 있는 여러 일반적인 오류를 요약 하 고 가능한 원인과 해결 방법을 설명 합니다._
 
-## <a name="overview"></a>개요
+## <a name="overview"></a>概述
 
 Android 라이브러리 ( **aar** 또는 **.jar**) 파일을 바인딩하는 것은 거의 번거롭고 되지 않습니다. Java와 .NET 간의 차이로 인해 발생 하는 문제를 완화 하기 위해 일반적으로 추가 작업이 필요 합니다.
 이러한 문제로 인해 Xamarin.ios는 Android 라이브러리를 바인딩하지 않으며 빌드 로그에 오류 메시지로 표시 됩니다. 이 가이드에서는 문제 해결을 위한 몇 가지 팁을 제공 하 고, 몇 가지 일반적인 문제/시나리오를 나열 하 고, Android 라이브러리를 성공적으로 바인딩할 수 있는 가능한 솔루션을 제공 합니다.
@@ -49,10 +49,10 @@ Android 라이브러리를 디컴파일된 소스 코드를 검사 합니다. �
 
 - 난독 처리 된 클래스의 특성에 **난독 처리** &ndash; 특성이 있는 클래스는 다음과 같습니다.
 
-  - 클래스 이름에는 **$** (예: **$. 클래스** )가 포함 됩니다.
+  - Class 名称中包含 **$** ，即 **$.class**
   - 클래스 이름은 소문자 (예: **클래스** )로 완전히 손상 됩니다.      
 
-- 참조 되지 않은 라이브러리 &ndash; **`import` 문을** 참조 하 여 참조 되지 않은 라이브러리를 식별 하 고 **ReferenceJar** 또는 EmbedddedReferenceJar의 **빌드 작업** 을 사용 하 여 이러한 종속성을 xamarin.ios 바인딩 프로젝트에 추가 합니다..
+- 참조 되지 않은 라이브러리 **`import` 문은** 참조 되지 않은 라이브러리 &ndash; 식별 하 고 **ReferenceJar** 또는 **EmbedddedReferenceJar**의 **빌드 작업** 을 사용 하 여 이러한 종속성을 Xamarin. Android 바인딩 프로젝트에 추가 합니다.
 
 > [!NOTE]
 > 디컴파일 Java 라이브러리를 사용 하지 않도록 설정 하거나 로컬 법률 또는 Java 라이브러리가 게시 된 라이선스에 따라 법적 제한을 받을 수 있습니다. 필요한 경우 Java 라이브러리를 디컴파일 하 고 소스 코드를 검사 하기 전에 법적 전문가의 서비스를 등록 합니다.
@@ -105,7 +105,7 @@ Binding **.dll** 은 일부 Java 형식을 작성 하지만 누락 된 형식이
 
 - Java는 public 클래스가 아닌 클래스에서 파생 될 수 있지만 .NET에서는 지원 되지 않습니다. 바인딩 생성기는 public이 아닌 클래스에 대 한 바인딩을 생성 하지 않으므로 이러한 파생 클래스를 올바르게 생성할 수 없습니다. 이 문제를 해결 하려면 **메타 데이터 .xml**의 제거 노드를 사용 하 여 파생 된 클래스에 대 한 메타 데이터 항목을 제거 하거나 public이 아닌 클래스를 public으로 설정 하는 메타 데이터를 수정 합니다. 후자 솔루션은 C# 소스가 빌드하도록 바인딩을 만들기 때문에 public이 아닌 클래스를 사용 하면 안 됩니다.
 
-  예를 들면,
+  예를 들면 다음과 같습니다.:
 
   ```xml
   <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
@@ -157,7 +157,7 @@ public interface MediationInterstitialListener {
 }
 ```
 
-이는 이벤트 인수 형식에 대 한 긴 이름이 회피 되도록 의도적으로 설계 된 것입니다. 이러한 충돌을 방지 하기 위해 일부 메타 데이터 변환이 필요 합니다. [**Transforms\Metadata.xml**](https://github.com/xamarin/monodroid-samples/blob/master/AdMob/AdMob/Transforms/Metadata.xml) 를 편집 하 고 인터페이스 (또는 인터페이스 메서드에서) 중 하나에 `argsType` 특성을 추가 합니다.
+이는 이벤트 인수 형식에 대 한 긴 이름이 회피 되도록 의도적으로 설계 된 것입니다. 이러한 충돌을 방지 하기 위해 일부 메타 데이터 변환이 필요 합니다. **Transforms\Metadata.xml** 를 편집 하 고 인터페이스 (또는 인터페이스 메서드에서) 중 하나에 `argsType` 특성을 추가 합니다.
 
 ```xml
 <attr path="/api/package[@name='com.google.ads.mediation']/
@@ -204,7 +204,7 @@ return type of 'Java.Lang.Object'
   }
   ```
 
-- 생성 C# 된 코드에서 공 분산을 제거 합니다. 여기에는 생성 C# 된 코드에`Java.Lang.Object`반환 형식이 포함 되도록 다음 변환을 **Transforms\Metadata.xml** 에 추가 하는 작업이 포함 됩니다.
+- 생성 C# 된 코드에서 공 분산을 제거 합니다. 여기에는 생성 C# 된 코드에 `Java.Lang.Object`반환 형식이 포함 되도록 다음 변환을 **Transforms\Metadata.xml** 에 추가 하는 작업이 포함 됩니다.
 
   ```xml
   <attr
@@ -231,7 +231,7 @@ Java에서 파생 된 클래스의 표시 유형이 부모와 같을 필요는 �
 
 일부 바인딩 프로젝트는의 기능에 종속 될 수도 **있습니다.** Xamarin.ios가 자동으로 라이브러리를 로드 하지 않을 **수 있습니다.** 래핑된 Java 코드가 실행 되 면 Xamarin.ios는 JNI 호출을 수행 하지 않고 오류 메시지 _UnsatisfiedLinkError: Native method를 찾을 수 없습니다._ 는 응용 프로그램에 대해 logcat out에 표시 됩니다.
 
-이 문제를 해결 하려면 `Java.Lang.JavaSystem.LoadLibrary`를 호출 하 여. 라이브러리를 수동으로 로드 해야 합니다 **.** 예를 들어 Xamarin.ios 프로젝트에 shared library **libpocketsphinx_jni** 가 있다고 가정 하면 **EmbeddedNativeLibrary**의 빌드 작업을 사용 하 여 바인딩 프로젝트에 포함 된 다음 코드 조각 (공유 라이브러리를 사용 하기 전에 실행 됨) 는를 로드 **합니다.** 라이브러리:
+이 문제를 해결 하려면 `Java.Lang.JavaSystem.LoadLibrary`를 호출 하 여. 라이브러리를 수동으로 로드 해야 합니다 **.** 예를 들어 Xamarin.ios 프로젝트에 공유 된 라이브러리 libpocketsphinx_jni 있는 것으로 가정 **합니다. 따라서** **EmbeddedNativeLibrary**의 빌드 작업을 사용 하 여 바인딩 프로젝트에 포함 되어 있으므로, 공유 라이브러리를 사용 하기 전에 실행 되는 다음 코드 조각이를 로드 **합니다.**
 
 ```csharp
 Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 3db7e456d4321aa7eba415813f8c374b030da4ca
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 44468d3f2d323065161c290f2df8e6f0e89d3def
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029860"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724989"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>추가 macOS Sierra 프레임워크 변경 내용
 
@@ -101,7 +101,7 @@ MacOS Sierra에 대 한 Foundation Framework의 향상 된 기능은 다음과 �
 
 MacOS Sierra에 대 한 GameKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
-- **Game Center 앱** 은 macos에서 더 이상 사용 되지 않고 제거 되었습니다. 앱에서 GameKit를 사용 하는 경우 순위표 등과 같은 GameKit 기능을 표시 하는 고유한 인터페이스를 제공 _해야 합니다_ . 
+- **Game Center 앱** 은 macos에서 더 이상 사용 되지 않고 제거 되었습니다. 앱에서 GameKit를 사용 하는 경우 순위표 등과 같은 GameKit 기능을 표시 하는 고유한 인터페이스를 제공 _해야 합니다_ .
 - 새 iCloud 전용 계정 유형은 [Gkcloudplayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) 클래스에 의해 구현 되었습니다.
 - 새 [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) 클래스는 Game Center에서 영구적 데이터 저장소를 관리 하기 위한 일반화 된 솔루션을 제공 합니다. `GKGameSession`은 플레이어의 목록을 유지 관리 하 고, 앱은 참가자 날짜가 플레이어 간에 저장, 검색 또는 교환 되는 방법과 시기를 구현 하는 일을 담당 합니다. 대부분의 경우 게임 세션은 기존 턴 기반 일치, 실시간 일치 또는 지속적인 게임 저장 방법을 바꿀 수 있습니다.
 
@@ -169,7 +169,7 @@ MacOS Sierra에 대 한 SceneKit 프레임 워크에 대 한 다음과 같은 �
 - SceneKit는 모든 셰이더 형식에 대해 선형 RGB 색 공간의 색 구성 요소 값을 해석 합니다.
 - SceneKit는 질감 이미지에서 색 프로필 정보를 읽고 조정 하므로 모든 이미지에 대 한 자산 카탈로그를 사용 하 여이 정보가 제공 되는지 확인 합니다.
 - 앱 `Info.plist`에서 `SCNDisableLinearSpaceRendering` 및 `SCNDisableWideGamut` 키를 지정 하 여 선형 색 공간 렌더링과 와이드 색을 모두 사용 하지 않도록 설정할 수 있습니다.
-- 새 [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) 클래스를 사용 하 여 geometry를 지정 하기 위해 파일에서 로드 되거나 프로그래밍 방식으로 생성 되는 임의의 다각형 primates을 빌드합니다.
+- 새 [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon?language=objc) 클래스를 사용 하 여 geometry를 지정 하기 위해 파일에서 로드 되거나 프로그래밍 방식으로 생성 되는 임의의 다각형 primates을 빌드합니다.
 
 <a name="Security-Framework-Enhancements" />
 

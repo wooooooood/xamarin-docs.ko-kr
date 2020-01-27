@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: cad352466e7661183c5277f60c63c283342c50fb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: be2f7f555b76d472f7a66d95e661bb2f5884c58f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015876"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725343"
 ---
 # <a name="overview-of-objective-c-bindings"></a>목적-C 바인딩 개요
 
@@ -19,7 +19,7 @@ _바인딩 프로세스의 작동 방식에 대 한 세부 정보_
 
 Xamarin과 함께 사용 하기 위해 목표-C 라이브러리를 바인딩하는 데는 세 가지 단계가 사용 됩니다.
 
-1. 기본 API C# 가 .net에 노출 되는 방식과 기본 목표에 매핑되는 방법을 설명 하는 "api 정의"를 작성 합니다. `interface`및 다양 한 바인딩 C# **특성과** 같은 표준 구문을 사용 하 여 수행 됩니다 (이 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)참조).
+1. 기본 API C# 가 .net에 노출 되는 방식과 기본 목표에 매핑되는 방법을 설명 하는 "api 정의"를 작성 합니다. `interface` 및 다양 한 바인딩 C# **특성과** 같은 표준 구문을 사용 하 여 수행 됩니다 (이 [간단한 예제](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)참조).
 
 2. 에서 C#"API 정의"를 작성 한 후에는이를 컴파일하여 "바인딩" 어셈블리를 생성 합니다. 이 작업은 [**명령줄**](#commandline) 에서 또는 Mac용 Visual Studio 또는 Visual Studio에서 [**바인딩 프로젝트**](#bindingproject) 를 사용 하 여 수행할 수 있습니다.
 
@@ -35,7 +35,7 @@ Xamarin과 함께 사용 하기 위해 목표-C 라이브러리를 바인딩하�
 
 ## <a name="command-line-bindings"></a>명령줄 바인딩
 
-Xamarin.ios (또는 Xamarin.ios를 사용 하는 경우 `bmac-native`)에 대 한 `btouch-native`를 사용 하 여 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 (또는 목표 Sharpie 사용)를 명령줄 도구`btouch-native`(IOS 또는 Mac 용`bmac-native`)에 전달 하는 방식으로 작동 합니다.
+Xamarin.ios (또는 Xamarin.ios를 사용 하는 경우 `bmac-native`)에 대 한 `btouch-native`를 사용 하 여 바인딩을 직접 빌드할 수 있습니다. 직접 만든 C# API 정의 (또는 목표 Sharpie 사용)를 명령줄 도구`btouch-native` (IOS 또는 Mac 용 `bmac-native`)에 전달 하는 방식으로 작동 합니다.
 
 이러한 도구를 호출 하는 일반적인 구문은 다음과 같습니다.
 
@@ -73,7 +73,7 @@ bash$ bmac-native -e cocos2d.cs -s:enums.cs -x:extensions.cs
 
 [[Register]](xref:Foundation.RegisterAttribute) 특성, [[Export]](xref:Foundation.ExportAttribute) 특성 및 [수동 목표-c 선택기 호출](~/ios/internals/objective-c-selectors.md) 을 함께 사용 하 여 새 (이전에는 바인딩되지 않은) 목표-c 형식을 수동으로 바인딩할 수 있습니다.
 
-먼저 바인딩하려는 형식을 찾습니다. 토론 목적 (및 단순성)을 위해 [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) 형식 ( [NSEnumerator](xref:Foundation.NSEnumerator)에 이미 바인딩되어 있음)을 바인딩합니다. 아래 구현은 단지 예를 제공 하기 위한 것입니다.
+먼저 바인딩하려는 형식을 찾습니다. 토론 목적 (및 단순성)을 위해 [NSEnumerator](https://developer.apple.com/documentation/foundation/nsenumerator) 형식 ( [NSEnumerator](xref:Foundation.NSEnumerator)에 이미 바인딩되어 있음)을 바인딩합니다. 아래 구현은 단지 예를 제공 하기 위한 것입니다.
 
 두 번째로, C# 형식을 만들어야 합니다. 네임 스페이스에이를 추가할 수 있습니다. 목표-C는 네임 스페이스를 지원 하지 않으므로 `[Register]` 특성을 사용 하 여 Xamarin.ios에서 목표-C 런타임으로 등록 하는 형식 이름을 변경 해야 합니다. 또한 C# 이 형식은 [기본 nsobject](xref:Foundation.NSObject)에서 상속 해야 합니다.
 

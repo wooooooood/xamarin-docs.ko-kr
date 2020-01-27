@@ -7,12 +7,12 @@ manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: 57e3444ebcbd87607da248ecacca5e76a44f1577
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd1a728dfe14ff9243402bedae74db7be93bf466
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007440"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725133"
 ---
 # <a name="devops-with-xamarin"></a>Xamarin을 사용한 DevOps
 
@@ -26,7 +26,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 
 ## <a name="agile-tools"></a>Agile 도구
 
-참조 링크:  **[Agile 도구 및 Agile 프로젝트 관리 정보](/azure/devops/boards/backlogs/overview?view=vsts)**
+참조 링크: **[Agile 도구 및 Agile 프로젝트 관리 정보](/azure/devops/boards/backlogs/backlogs-overview?view=azure-devops)**
 
 일반 설명: 모든 계획 및 추적 기능은 프로젝트 형식 및 코딩 언어와 독립적입니다.
 
@@ -55,7 +55,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |레이어 다이어그램|예||
 |레이어 유효성 검사|예||
 
-## <a name="code"></a>코드
+## <a name="code"></a>代码
 
 |기능|Xamarin에서 지원 여부|추가 설명|
 |-------------|----------------------------|-------------------------|
@@ -77,7 +77,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |사전 및 사후 스크립트로 정의 작성|예||
 |제어된 체크 인을 포함하는 연속 통합|예|Git는 체크 인이 아니라 끌어오기 요청 모델로 작동하므로 TFVC에 대한 제어된 체크 인에만 해당|
 
-## <a name="test"></a>테스트
+## <a name="test"></a>测试
 
 |기능|Xamarin에서 지원 여부|추가 설명|
 |-------------|----------------------------|-------------------------|
@@ -97,8 +97,8 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |[관리 코드 품질 분석](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|예||
 |[코드 복제본 검색을 사용하여 중복 코드 찾기](https://msdn.microsoft.com/library/hh205279.aspx)|예||
 |[관리 코드의 복잡성 및 유지 관리 용이성 측정](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|예||
-|[성능 탐색기](/visualstudio/profiling/performance-explorer)|아니요|대신 Mac용 Visual Studio를 통해 [Xamarin Profiler](/xamarin/tools/profiler/) 을 사용 합니다. Xamarin 프로파일러는 현재 미리 보기로 제공되며 아직 Windows 대상에서 작동하지 않습니다.|
-|[.NET Framework 메모리 문제 분석](https://msdn.microsoft.com/library/dn342825.aspx)|아니요|Visual Studio 도구에는 프로파일링을 위한 모노 프레임워크에 대한 후크가 없습니다.|
+|[성능 탐색기](/visualstudio/profiling/performance-explorer)|否|대신 Mac용 Visual Studio를 통해 [Xamarin Profiler](/xamarin/tools/profiler/) 을 사용 합니다. Xamarin 프로파일러는 현재 미리 보기로 제공되며 아직 Windows 대상에서 작동하지 않습니다.|
+|[.NET Framework 메모리 문제 분석](https://msdn.microsoft.com/library/dn342825.aspx)|否|Visual Studio 도구에는 프로파일링을 위한 모노 프레임워크에 대한 후크가 없습니다.|
 
 ## <a name="release-management"></a>릴리스 관리
 

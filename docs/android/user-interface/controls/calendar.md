@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: 3d74e2db541e1f30c7626cd1b08228c1e8f57a42
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d9c655a503ebdd9ebc08646fb385cdd8f4aa5753
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029323"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725169"
 ---
 # <a name="xamarinandroid-calendar"></a>Xamarin Android 일정
 
@@ -114,7 +114,7 @@ ListAdapter = adapter;
 
 다음은 `ListView`에 표시 되는 달력 정보가 있는 최종 결과를 보여 주는 스크린샷입니다.
 
-[에뮬레이터에서 실행 되는![CalendarDemo, 두 개의 일정 항목 표시](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
+[에뮬레이터에서 실행 되는 ![CalendarDemo, 두 개의 일정 항목 표시](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
 
 ## <a name="listing-calendar-events"></a>일정 이벤트 나열
 
@@ -210,7 +210,7 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 그러면 다음과 같이 이벤트 목록이 표시 됩니다.
 
-[3 개의 일정 이벤트를 표시 하는 예제 앱의![스크린샷](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
+[3 개의 일정 이벤트를 표시 하는 예제 앱의 ![스크린샷](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
 ## <a name="adding-a-calendar-event"></a>일정 이벤트 추가
 
@@ -265,16 +265,14 @@ long GetDateTimeMS (int yr, int month, int day, int hr, int min)
 
 이벤트 목록 UI에 단추를 추가 하 고 단추의 click 이벤트 처리기에서 위의 코드를 실행 하는 경우 이벤트가 달력에 추가 되 고 아래와 같이 목록에서 업데이트 됩니다.
 
-[일정 이벤트와 샘플 이벤트 추가 단추가 있는 예제 앱의![스크린샷](calendar-images/13.png)](calendar-images/13.png#lightbox)
+[일정 이벤트와 샘플 이벤트 추가 단추가 있는 예제 앱의 ![스크린샷](calendar-images/13.png)](calendar-images/13.png#lightbox)
 
 일정 앱을 여는 경우에도 이벤트가 기록 됩니다.
 
-[선택한 일정 이벤트를 표시 하는 일정 앱의![스크린샷](calendar-images/14.png)](calendar-images/14.png#lightbox)
+[선택한 일정 이벤트를 표시 하는 일정 앱의 ![스크린샷](calendar-images/14.png)](calendar-images/14.png#lightbox)
 
 여기에서 볼 수 있듯이 Android를 사용 하면 쉽고 간편 하 게 일정 데이터를 검색 및 유지할 수 있으므로 응용 프로그램에서 일정 기능을 원활 하 게 통합할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [달력 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
-- [아이스크림 및 사우스 샌드위치](https://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

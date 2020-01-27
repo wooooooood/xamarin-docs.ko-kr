@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ad54c97da9ebc9f1c705e99a4a390571d229520a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 16e35d67f8fce33c8a0b21ddcd07df14fedf179b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009409"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725205"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>연습: Xamarin.ios에서 Touch 사용
 
@@ -23,9 +23,6 @@ ms.locfileid: "73009409"
 - [사용자 지정 제스처 인식기 샘플](#Custom_Gesture_Recognizer) – 사용자 지정 제스처 인식기를 빌드하는 방법입니다.
 
 각 섹션에는 코드를 처음부터 작성 하는 지침이 포함 되어 있습니다.
-[시작 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) 는 이미 전체 스토리 보드 및 메뉴 화면을 포함 합니다.
-
- [![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 아래 지침에 따라 스토리 보드에 코드를 추가 하 고 iOS에서 제공 되는 다양 한 유형의 터치 이벤트에 대해 알아보세요. 또는 [완성 된 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) 을 열어 모든 것이 작동 하는지 확인 합니다.
 
@@ -35,13 +32,13 @@ ms.locfileid: "73009409"
 
 이 샘플에서는 touch Api의 일부를 설명 합니다. 터치 이벤트를 구현 하는 데 필요한 코드를 추가 하려면 다음 단계를 수행 합니다.
 
-1. **Touch_Start**프로젝트를 엽니다. 먼저 프로젝트를 실행 하 여 모든 것이 정상 인지 확인 하 고 **터치 샘플** 단추를 터치 합니다. 다음과 비슷한 화면이 표시 됩니다 (단추가 작동 하지 않음).
+1. 프로젝트 **Touch_Start**를 엽니다. 먼저 프로젝트를 실행 하 여 모든 것이 정상 인지 확인 하 고 **터치 샘플** 단추를 터치 합니다. 다음과 비슷한 화면이 표시 됩니다 (단추가 작동 하지 않음).
 
     [![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 1. **TouchViewController.cs** 파일을 편집 하 고 클래스 `TouchViewController`에 다음 두 개의 인스턴스 변수를 추가 합니다.
 
-    ```csharp 
+    ```csharp
     #region Private Variables
     private bool imageHighlighted = false;
     private bool touchStartedInside;
@@ -50,14 +47,14 @@ ms.locfileid: "73009409"
 
 1. 아래 코드에 나와 있는 것 처럼 `TouchesBegan` 메서드를 구현 합니다.
 
-    ```csharp 
+    ```csharp
     public override void TouchesBegan(NSSet touches, UIEvent evt)
     {
         base.TouchesBegan(touches, evt);
-    
+
         // If Multitouch is enabled, report the number of fingers down
         TouchStatus.Text = string.Format ("Number of fingers {0}", touches.Count);
-    
+
         // Get the current touch
         UITouch touch = touches.AnyObject as UITouch;
         if (touch != null)
@@ -90,7 +87,7 @@ ms.locfileid: "73009409"
         }
     }
     ```
-    
+
     이 메서드는 `UITouch` 개체를 확인 하 고 존재 하는 경우 터치가 발생 한 위치에 따라 몇 가지 작업을 수행 하는 방식으로 작동 합니다.
 
     - _TouchImage 내부_ – 텍스트 `Touches Began`를 레이블에 표시 하 고 이미지를 변경 합니다.
@@ -99,7 +96,7 @@ ms.locfileid: "73009409"
 
     위의 코드는 개별 접촉만 처리 하며 사용자가 화면에서 손가락을 이동 하는 경우에도 여전히 동작 하지 않습니다. 이동에 응답 하려면 아래 코드와 같이 `TouchesMoved`을 구현 합니다.
 
-    ```csharp 
+    ```csharp
     public override void TouchesMoved(NSSet touches, UIEvent evt)
     {
         base.TouchesMoved(touches, evt);
@@ -126,7 +123,7 @@ ms.locfileid: "73009409"
     }
     ```
 
-    이 메서드는 `UITouch` 개체를 가져온 다음 터치가 발생 한 위치를 확인 합니다. `TouchImage`에서 터치가 발생 한 경우 이동 된 텍스트가 화면에 표시 됩니다. 
+    이 메서드는 `UITouch` 개체를 가져온 다음 터치가 발생 한 위치를 확인 합니다. `TouchImage`에서 터치가 발생 한 경우 이동 된 텍스트가 화면에 표시 됩니다.
 
     `touchStartedInside` true 이면 사용자에 게 손가락을 `DragImage` 하 고 이동 하는 것입니다. 사용자가 화면 주위에서 손가락을 움직이면 코드가 `DragImage` 이동 합니다.
 
@@ -136,13 +133,13 @@ ms.locfileid: "73009409"
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
     {
         base.TouchesCancelled(touches, evt);
-    
+
         // reset our tracking flags
         touchStartedInside = false;
         TouchImage.Image = UIImage.FromBundle("TouchMe.png");
         TouchStatus.Text = "";
     }
-    
+
     public override void TouchesEnded(NSSet touches, UIEvent evt)
     {
         base.TouchesEnded(touches, evt);
@@ -167,7 +164,7 @@ ms.locfileid: "73009409"
 1. 이제 터치 샘플 화면이 종료 되었습니다. 다음 스크린샷에 표시 된 것 처럼 각 이미지와 상호 작용할 때 화면이 어떻게 달라 지는 지 확인 합니다.
 
     [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
-    
+
     [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples" />
@@ -179,10 +176,6 @@ ms.locfileid: "73009409"
 
 - 화면 주위에서 이미지를 끌기 위한 `UIPanGestureRecognizer`입니다.
 - 화면에서 두 번 탭 하 여 응답할 `UITapGestureRecognizer`입니다.
-
-[시작 샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start) 를 실행 하 고 **제스처 인식기 샘플** 단추를 클릭 하면 다음과 같은 화면이 표시 됩니다.
-
- [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 제스처 인식기를 구현 하려면 다음 단계를 수행 합니다.
 
@@ -205,10 +198,10 @@ ms.locfileid: "73009409"
     {
         // Create a new tap gesture
         UIPanGestureRecognizer gesture = new UIPanGestureRecognizer();
-    
+
         // Wire up the event handler (have to use a selector)
         gesture.AddTarget(() => HandleDrag(gesture));  // to be defined
-    
+
         // Add the gesture recognizer to the view
         DragImage.AddGestureRecognizer(gesture);
     }
@@ -227,7 +220,7 @@ ms.locfileid: "73009409"
         {
             originalImageFrame = DragImage.Frame;
         }
-    
+
         // Move the image if the gesture is valid
         if (recognizer.State != (UIGestureRecognizerState.Cancelled | UIGestureRecognizerState.Failed
             | UIGestureRecognizerState.Possible))
@@ -250,11 +243,11 @@ ms.locfileid: "73009409"
     {
         // Create a new tap gesture
         UITapGestureRecognizer tapGesture = null;
-    
+
         // Report touch
         Action action = () => {
             TouchStatus.Text = string.Format("Image touched at: {0}",tapGesture.LocationOfTouch(0, DoubleTouchImage));
-    
+
             // Toggle the image
             if (imageHighlighted)
             {
@@ -266,18 +259,18 @@ ms.locfileid: "73009409"
             }
             imageHighlighted = !imageHighlighted;
         };
-    
+
         tapGesture = new UITapGestureRecognizer(action);
-    
+
         // Configure it
         tapGesture.NumberOfTapsRequired = 2;
-    
+
         // Add the gesture recognizer to the view
         DoubleTouchImage.AddGestureRecognizer(tapGesture);
     }
     ```
 
-    이 코드는 `UIPanGestureRecognizer`에 대 한 코드와 매우 유사 하지만 대상에 대리자를 사용 하는 대신 `Action`를 사용 합니다. 
+    이 코드는 `UIPanGestureRecognizer`에 대 한 코드와 매우 유사 하지만 대상에 대리자를 사용 하는 대신 `Action`를 사용 합니다.
 
 1. 방금 추가한 메서드를 호출 하도록 `ViewDidLoad` 수정 해야 합니다. ViewDidLoad을 다음 코드와 같이 변경 합니다.
 
@@ -285,12 +278,12 @@ ms.locfileid: "73009409"
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
-    
+
         Title = "Gesture Recognizers";
-    
+
         // Save initial state
         originalImageFrame = DragImage.Frame;
-    
+
         WireUpTapGestureRecognizer();
         WireUpDragGestureRecognizer();
     }
@@ -300,7 +293,7 @@ ms.locfileid: "73009409"
 
 1. 응용 프로그램을 실행 하 고 두 이미지를 조작 합니다.
 다음 스크린샷은 이러한 상호 작용의 한 가지 예입니다.
-    
+
     [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"/>
@@ -320,7 +313,7 @@ ms.locfileid: "73009409"
     using CoreGraphics;
     using Foundation;
     using UIKit;
-    
+
     namespace Touch
     {
         public class CheckmarkGestureRecognizer : UIGestureRecognizer
@@ -329,7 +322,7 @@ ms.locfileid: "73009409"
             private CGPoint midpoint = CGPoint.Empty;
             private bool strokeUp = false;
             #endregion
-    
+
             #region Override Methods
             /// <summary>
             ///   Called when the touches end or the recognizer state fails
@@ -337,27 +330,27 @@ ms.locfileid: "73009409"
             public override void Reset()
             {
                 base.Reset();
-    
+
                 strokeUp = false;
                 midpoint = CGPoint.Empty;
             }
-    
+
             /// <summary>
             ///   Is called when the fingers touch the screen.
             /// </summary>
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
-    
+
                 // we want one and only one finger
                 if (touches.Count != 1)
                 {
                     base.State = UIGestureRecognizerState.Failed;
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
-    
+
             /// <summary>
             ///   Called when the touches are cancelled due to a phone call, etc.
             /// </summary>
@@ -368,7 +361,7 @@ ms.locfileid: "73009409"
                 // if the application comes back into view
                 base.State = UIGestureRecognizerState.Failed;
             }
-    
+
             /// <summary>
             ///   Called when the fingers lift off the screen
             /// </summary>
@@ -380,24 +373,24 @@ ms.locfileid: "73009409"
                 {
                     base.State = UIGestureRecognizerState.Recognized;
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
-    
+
             /// <summary>
             ///   Called when the fingers move
             /// </summary>
             public override void TouchesMoved(NSSet touches, UIEvent evt)
             {
                 base.TouchesMoved(touches, evt);
-    
+
                 // if we haven't already failed
                 if (base.State != UIGestureRecognizerState.Failed)
                 {
                     // get the current and previous touch point
                     CGPoint newPoint = (touches.AnyObject as UITouch).LocationInView(View);
                     CGPoint previousPoint = (touches.AnyObject as UITouch).PreviousLocationInView(View);
-    
+
                     // if we're not already on the upstroke
                     if (!strokeUp)
                     {
@@ -420,7 +413,7 @@ ms.locfileid: "73009409"
                         }
                     }
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
             #endregion
@@ -447,7 +440,7 @@ ms.locfileid: "73009409"
     {
         // Create the recognizer
         checkmarkGesture = new CheckmarkGestureRecognizer();
-    
+
         // Wire up the event handler
         checkmarkGesture.AddTarget(() => {
             if (checkmarkGesture.State == (UIGestureRecognizerState.Recognized | UIGestureRecognizerState.Ended))
@@ -463,7 +456,7 @@ ms.locfileid: "73009409"
                 isChecked = !isChecked;
             }
         });
-    
+
         // Add the gesture recognizer to the view
         View.AddGestureRecognizer(checkmarkGesture);
     }
@@ -475,21 +468,20 @@ ms.locfileid: "73009409"
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
-    
+
         // Wire up the gesture recognizer
         WireUpCheckmarkGestureRecognizer();
     }
     ```
 
 1. 응용 프로그램을 실행 하 고 화면에서 "V" 그리기를 시도 합니다. 다음 스크린샷에 표시 된 것 처럼 표시 되는 이미지가 변경 됩니다.
-    
+
     [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
-    
+
     [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 위의 세 섹션에서는 터치 이벤트, 기본 제공 제스처 인식기 또는 사용자 지정 제스처 인식기를 사용 하 여 iOS의 터치 이벤트에 응답 하는 다양 한 방법을 보여 주었습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [iOS Touch 시작 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 - [iOS Touch Final (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

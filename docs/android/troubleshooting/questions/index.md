@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 35df724850e1fc945c096aebc91b7aa84936bdc1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 28b13951a0d681ffdb8e643667e496e0b3606628
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026974"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724004"
 ---
 # <a name="android-frequently-asked-questions"></a>Android faq (질문과 대답)
 
@@ -51,7 +51,7 @@ Windows에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되�
 
 ### <a name="how-do-i-automate-an-android-nunit-test-projectautomate-android-nunit-testmd"></a>[Android NUnit 테스트 프로젝트를 자동화하려면 어떻게 해야 하나요?](automate-android-nunit-test.md)
 
-이 가이드에서는 UITest 프로젝트가 _아닌_ Android NUnit 테스트 프로젝트를 설정 하는 단계에 대해 설명 합니다. UITest 가이드는 [여기](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest)에서 찾을 수 있습니다.
+이 가이드에서는 UITest 프로젝트가 _아닌_ Android NUnit 테스트 프로젝트를 설정 하는 단계에 대해 설명 합니다. UITest 가이드는 [여기](/appcenter/test-cloud/preparing-for-upload)에서 찾을 수 있습니다.
 
 ### <a name="why-cant-my-android-release-build-connect-to-the-internetandroid-internetmd"></a>[Android 릴리스 빌드를 인터넷에 연결할 수 없는 이유는 무엇인가요?](android-internet.md)
 
@@ -65,7 +65,7 @@ Windows에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되�
 
 이 문서에서는 Xamarin Android 프로젝트를 빌드하는 동안 발생할 수 있는 **PathTooLongException** 오류를 해결 하는 방법을 설명 합니다.
 
-## <a name="deprecated"></a>Mapi
+## <a name="deprecated"></a>사용하지 않음
 
 > [!NOTE]
 > 다음 문서는 최신 버전의 Xamarin에서 해결 된 문제에 적용 됩니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.

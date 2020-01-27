@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d420faf59d940bb111b5ecd326a29083cab012e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 4f91e683b826657a9740de7e0b98137858130042
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029920"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725379"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Xamarin에서 Jenkins 사용
 
@@ -142,7 +142,7 @@ Jenkins는 추가 플러그 인 없이 Git를 지원 합니다.
 MacOS 워크스테이션이 TFS 서버와 상호 작용 하도록 하려면 [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) 워크스테이션에 설치 되어 있어야 합니다. Team Explorer Everywhere는 TFS 액세스를 위한 플랫폼 간 명령줄 클라이언트가 포함 된 Microsoft의 도구 집합입니다. Team Explorer Everywhere Microsoft에서 다운로드 하 여 세 단계로 설치할 수 있습니다.
 
 1. 사용자 계정에 액세스할 수 있는 디렉터리에 보관 파일의 압축을 풉니다. 예를 들어 **~/tee**로 파일의 압축을 풀 수 있습니다.
-2. 위의 1 단계에서 압축을 푼 파일을 보관 하는 폴더를 포함 하도록 셸 또는 시스템 경로를 구성 합니다. 예를 들어 개체에 적용된
+2. 위의 1 단계에서 압축을 푼 파일을 보관 하는 폴더를 포함 하도록 셸 또는 시스템 경로를 구성 합니다. 예를 들어 입니다.
 
     ```
     echo export PATH~/tee/:$PATH' >> ~/.bash_profile
@@ -387,7 +387,7 @@ zipalign -f -v 4 $SIGNED_APK $FINAL_APK
 
 ### <a name="submitting-tests-to-test-cloud"></a>Test Cloud에 테스트 제출
 
-셸 명령을 사용 하 여 자동화 된 테스트를 Test Cloud에 제출할 수 있습니다. Xamarin Test Cloud에서 테스트 실행을 설정 하는 방법에 대 한 자세한 내용은 [UITest](/appcenter/test-cloud/preparing-for-upload/uitest/)사용에 대 한이 가이드를 참조 하세요.
+셸 명령을 사용 하 여 자동화 된 테스트를 Test Cloud에 제출할 수 있습니다. Xamarin Test Cloud에서 테스트 실행을 설정 하는 방법에 대 한 자세한 내용은 [Xamarin Android 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) 및 [xamarin.ios 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)를 참조 하세요.
 
 ## <a name="summary"></a>요약
 

@@ -6,19 +6,19 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 372a51ba204b3b87d1bb3917b26c0ffb8acfceb6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: dee7f4fa0b3d8fbd0b3ed57e885c9f5083d9875e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015131"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725298"
 ---
 # <a name="unified-api-overview"></a>Unified API 개요
 
 Xamarin의 Unified API를 사용 하면 Mac과 iOS 간에 코드를 공유 하 고, 32 및 64 비트 응용 프로그램을 동일한 이진으로 지원할 수 있습니다. Unified API은 기본적으로 새 Xamarin.ios 및 Xamarin.ios 프로젝트에서 사용 됩니다.
 
 > [!IMPORTANT]
-> Unified API 앞에 있는 Xamarin Classic API은 더 이상 사용 되지 않습니다. 
+> Unified API 앞에 있는 Xamarin Classic API은 더 이상 사용 되지 않습니다.
 >
 > - Classic API (monotouch.dialog)를 지원 하기 위한 최신 버전의 Xamarin.ios는 Xamarin.ios 9.10입니다.
 > - Xamarin.ios는 여전히 Classic API을 지원 하지만 더 이상 업데이트 되지 않습니다. 개발자는 더 이상 사용 되지 않으므로 응용 프로그램을 Unified API로 이동 해야 합니다.
@@ -98,7 +98,7 @@ Unified API는 더 이상 사용 되지 않는 메서드를 제거 하 고, 클�
 Unified API에는 호환 되는 패키지 ( **iOS10**)에 대 한 새 플랫폼 식별자가 도입 되었습니다. Unified API에 대해 빌드하여 기존 NuGet 패키지를 업데이트 하 여이 플랫폼에 대 한 지원을 추가 해야 합니다.
 
 > [!IMPORTANT]
-> _"오류 3"에 ' monotouch.dialog ' 및 ' monotouch.dialog '가 모두 포함 될 수 없습니다. ' xamarin.ios '는 명시적으로 참조 되는 반면 ' '는 ' xxx, Version = 0.0.000, Culture =에 의해 참조 됩니다. 중립, PublicKeyToken = null ' "_ 응용 프로그램을 통합 된 api로 변환한 후에는 일반적으로 Unified API로 업데이트 되지 않은 구성 요소 또는 NuGet 패키지가 프로젝트에 포함 되어 있기 때문입니다. 기존 component/NuGet을 제거 하 고, 통합 Api를 지 원하는 버전으로 업데이트 하 고, 클린 빌드를 수행 해야 합니다.
+> 오류가 있는 경우 _"오류 3에 ' monotouch.dialog '과 ' xamarin.ios '를 모두 포함할 수 없습니다. iOS 프로젝트-' xamarin.ios '는 명시적으로 참조 되지만 ' monotouch.dialog '는 ' xxx ' Version = 0.0.000, Culture = 중립, PublicKeyToken = null '에 의해 참조_ 되는 반면, 응용 프로그램을 통합 된 api로 변환한 후에는 일반적으로 Unified API 업데이트 되지 않은 구성 요소 또는 NuGet 패키지가 프로젝트에 포함 되어 있기 때문입니다. 기존 component/NuGet을 제거 하 고, 통합 Api를 지 원하는 버전으로 업데이트 하 고, 클린 빌드를 수행 해야 합니다.
 
 ### <a name="the-road-to-64-bits"></a>64 비트로 이동
 
@@ -134,7 +134,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>배열 및 System.object
 
-인덱서에 C# 는`int`형식이 필요 하기 때문에 컬렉션 또는 배열의 요소에 액세스 하려면 `nint`값을`int`로 명시적으로 캐스팅 해야 합니다. 예를 들면,
+인덱서에 C# 는 `int`형식이 필요 하기 때문에 컬렉션 또는 배열의 요소에 액세스 하려면 `nint` 값을 `int`로 명시적으로 캐스팅 해야 합니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -246,7 +246,7 @@ public delegate void NSNotificationHandler (NSNotification notification);
 
 일부 경우에는 일부 상수를 `string`에서 `NSString`으로 변경 해야 했습니다 (예: `UITableViewCell`
 
-**기존**
+**经典**
 
 ```csharp
 public virtual string ReuseIdentifier { get; }
@@ -268,7 +268,7 @@ public virtual NSString ReuseIdentifier { get; }
 
 이러한 제한 사항은 통합 Api에서 제거 되 고 정리 되었습니다. 대부분의 변경 내용은 다음과 같습니다.
 
-**기존**
+**经典**
 
 ```csharp
 public virtual AVAssetResourceLoaderDelegate Delegate { get; }
@@ -284,7 +284,7 @@ public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
 또한 일부 API는 보다 정확 하 고 사용 하기 쉽습니다. 예를 들면 다음과 같습니다.
 
-**기존**
+**经典**
 
 ```csharp
 public virtual void SelectionDidChange (NSObject uiTextInput);
@@ -311,11 +311,6 @@ Unified API에서는이 문제를 해결 했습니다.  형식이 `NSCoding`를 
 
 에 대해 알아 두어야 할 추가 변경 내용은 [Unified API 앱을 업데이트 하기 위한 팁](~/cross-platform/macios/unified/updating-tips.md)에 나와 있습니다.
 
-## <a name="sample-code"></a>샘플 코드
-
-7 월 31 일까 지 [monotouch.dialog](https://github.com/xamarin/monotouch-samples/commits/magic-types)의 `magic-types` 분기에서 iOS 샘플의 포트를이 새 API에 게시 했습니다.
-
-Mac의 경우, [mac 샘플](https://github.com/xamarin/mac-samples) 리포지토리 (Mavericks/Yosemite의 새 api 표시) 뿐만 아니라 매직 유형의 분기 [Mac-샘플](https://github.com/xamarin/monotouch-samples/commits/magic-types)에서 32/64 비트 샘플에 대 한 샘플을 확인 하 고 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

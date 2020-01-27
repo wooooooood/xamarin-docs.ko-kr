@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: e79fca8c59ae49d27cd335106ca57945be106031
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 186164d9f2239bc577470cc4b1a999f4c516dedb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031083"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725397"
 ---
 # <a name="ios-frequently-asked-questions"></a>iOS faq (질문과 대답)
 
@@ -77,7 +77,7 @@ IOS 9의 API 변경에는 이제 기본 API에서 예상 하는 것 처럼 비�
 ### <a name="compile-error-can-not-encode-offset-x-in-resulting-scattered-relocationerror-encode-offset-scattered-relocationmd"></a>[컴파일 오류: 분산 재배치에서 오프셋 X를 인코딩할 수 없습니다.](error-encode-offset-scattered-relocation.md)
 이 문제는 ARMv7와 같은 32 비트 아키텍처에 대해 빌드할 때 최종 바이너리가 네이티브 도구 체인에 비해 너무 클 경우 발생 합니다.
 
-## <a name="deprecated"></a>Mapi
+## <a name="deprecated"></a>사용하지 않음
 
 > [!IMPORTANT]
 > 다음 문서는 최신 버전의 Xamarin에서 해결 된 문제에 적용 됩니다. 그러나 최신 버전의 소프트웨어에서 문제가 발생 하는 경우 전체 버전 정보 및 전체 빌드 로그 출력을 사용 하 여 [새 버그](~/cross-platform/troubleshooting/questions/howto-file-bug.md) 를 작성 하세요.
@@ -86,7 +86,7 @@ IOS 9의 API 변경에는 이제 기본 API에서 예상 하는 것 처럼 비�
 이전 버전의 Xamarin에서는 Windows의 IPA 파일을 0 바이트로 만드는 몇 가지 알려진 문제가 있었습니다.
 
 ### <a name="ibtool-error-the-operation-couldnt-be-completederror-ibtoolmd"></a>[IBTool 오류: 작업을 완료할 수 없습니다.](error-ibtool.md)
-Apple 은 Xcode 6.1.1에서 이 `ibtool`버그를 [수정](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) 했으므로 Xcode 6.1.1 이상으로 업그레이드 하는 것이 가장 쉬운 픽스입니다.
+Apple Xcode 6.1.1에서이 `ibtool` 버그를 수정 했으므로 Xcode 6.1.1 이상으로 업그레이드 하는 것이 가장 쉬운 수정입니다.
 
 ### <a name="error-mt1009-could-not-copy-the-assemblyerror-mt1009md"></a>[오류 MT1009: 어셈블리를 복사할 수 없습니다.](error-mt1009.md)
 이는 Xamarin.ios 7.2.6를 실행 하는 사용자에 게 영향을 줍니다. 이 문제는 Xamarin.ios가 다른 사용자 계정으로 설치 된 후 개발자의 기본 계정을 사용 하 여 더 높은 권한을 필요로 하는 파일 사용 권한 때문에 발생 합니다.

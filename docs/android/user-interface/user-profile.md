@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2018
-ms.openlocfilehash: 252a104118b0419f33abdf7f522ad8fc358e3f76
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 395f7c477f1f2bdb608aec918f877f6d320d75cc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028707"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724792"
 ---
 # <a name="user-profile"></a>사용자 프로필
 
@@ -23,7 +23,7 @@ var uri = ContactsContract.Contacts.ContentUri;
 
 // Setup the "projection" (columns we want) for only the ID and display name:
 string[] projection = {
-    ContactsContract.Contacts.InterfaceConsts.Id, 
+    ContactsContract.Contacts.InterfaceConsts.Id,
     ContactsContract.Contacts.InterfaceConsts.DisplayName };
 
 // Use a CursorLoader to retrieve the user's contacts data:
@@ -45,7 +45,7 @@ if (cursor != null)
 }
 ```
 
-Android 4 (API 수준 14)부터, `ContactsContract` 공급자를 통해 [연락처](xref:Android.Provider.ContactsContract.Profile) 클래스를 사용할 수 있습니다. `ContactsContact.Profile` 장치 소유자의 개인 프로필에 대 한 액세스를 제공 합니다. 여기에는 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터가 포함 됩니다.
+从 Android 4 (API 级别 14) 开始, 可通过`ContactsContract`提供程序使用 [ContactsContact.Profile](xref:Android.Provider.ContactsContract.Profile) 类。 `ContactsContact.Profile` 장치 소유자의 개인 프로필에 대 한 액세스를 제공 합니다. 여기에는 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터가 포함 됩니다.
 
 ## <a name="required-permissions"></a>필요한 권한
 
@@ -100,12 +100,10 @@ StartActivity (intent);
 
 위의 코드를 실행 하는 경우 사용자 프로필은 다음 스크린샷에 표시 된 대로 표시 됩니다.
 
-[John Doe 사용자 프로필을 표시 하는 프로필의![스크린샷](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
+[John Doe 사용자 프로필을 표시 하는 프로필의 ![스크린샷](user-profile-images/01-profile-screen-sml.png)](user-profile-images/01-profile-screen.png#lightbox)
 
 사용자 프로필 작업은 Android에서 다른 데이터와 상호 작용 하는 것과 유사 하며 추가 수준의 장치 개인 설정을 제공 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [연락처 Sproviderdemo (샘플)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/contactsproviderdemo)
-- [아이스크림 및 사우스 샌드위치](https://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 플랫폼](https://developer.android.com/sdk/android-4.0.html)

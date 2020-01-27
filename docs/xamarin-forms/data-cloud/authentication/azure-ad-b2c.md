@@ -44,7 +44,7 @@ Microsoft 인증 라이브러리는 여러 응용 프로그램 아키텍처 및 
 
 테 넌 트를 만든 후에는 모바일 응용 프로그램을 구성 하기 위해 테 넌 트 **이름** 및 **테 넌 트 ID** 가 필요 합니다. 테 넌 트 ID 및 이름은 테 넌 트 URL을 만들 때 생성 된 도메인에 의해 정의 됩니다. 생성 된 테 넌 트 URL이 `https://contoso20190410tenant.onmicrosoft.com/` **테** 넌 트 ID가 `contoso20190410tenant.onmicrosoft.com` 되 고 **테 넌 트 이름이** `contoso20190410tenant`됩니다. 상단 메뉴에서 **디렉터리 및 구독 필터** 를 클릭 하 여 Azure Portal에서 테 넌 트 도메인을 찾습니다. 다음 스크린샷은 Azure 디렉터리 및 구독 필터 단추와 테 넌 트 도메인을 보여 줍니다.
 
-[Azure 디렉터리 및 구독 필터 보기에서 테 넌 트 이름 ![](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
+[![Azure 디렉터리 및 구독 필터 보기에서 테 넌 트 이름 ](azure-ad-b2c-images/azure-tenant-name-cropped.png)](azure-ad-b2c-images/azure-tenant-name.png#lightbox)
 
 샘플 프로젝트에서 **Constants.cs** 파일을 편집 하 여 `tenantName` 및 `tenantId` 필드를 설정 합니다. 다음 코드에서는 테 넌 트 도메인이 `https://contoso20190410tenant.onmicrosoft.com/`경우 이러한 값을 설정 하는 방법을 보여 줍니다 .이 값은 포털의 값으로 바꿉니다.
 
@@ -61,7 +61,7 @@ public static class Constants
 
 모바일 응용 프로그램을 연결 하 고 사용자를 인증 하려면 먼저 테 넌 트에 등록 해야 합니다. 등록 프로세스에서는 응용 프로그램에 고유한 **응용 프로그램 ID** 를 할당 하 고, 인증 후 응답을 응용 프로그램에 다시 전달 하는 **리디렉션 URL** 을 할당 합니다. 자세한 내용은 [Azure Active Directory B2C: 응용 프로그램을 등록](/azure/active-directory-b2c/active-directory-b2c-app-registration/)합니다. 응용 프로그램에 할당 된 응용 프로그램 ID를 알고 있어야 합니다 .이 **ID** 는 속성 보기에서 응용 프로그램 이름 뒤에 나열 됩니다. 다음 스크린샷은 응용 프로그램 ID를 찾을 수 있는 위치를 보여 줍니다.
 
-[Azure 응용 프로그램 속성 보기에서 응용 프로그램 ID ![](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
+[![Azure 응용 프로그램 속성 보기에서 응용 프로그램 ID ](azure-ad-b2c-images/azure-application-id-cropped.png)](azure-ad-b2c-images/azure-application-id.png#lightbox)
 
 Microsoft 인증 라이브러리에서는 응용 프로그램에 대 한 **리디렉션 URL** 이 "msal" 텍스트와 접두사로 시작 하는 **응용 프로그램 ID** 가 되 고 그 뒤에 "auth" 라는 끝점이 필요 합니다. 응용 프로그램 ID가 "1234abcd" 이면 전체 URL을 `msal1234abcd://auth`해야 합니다. 응용 프로그램에서 **Native client** 설정을 사용 하도록 설정 했는지 확인 하 고 다음 스크린샷에 표시 된 것 처럼 응용 프로그램 ID를 사용 하 여 **사용자 지정 리디렉션 URI** 를 만들어야 합니다.
 

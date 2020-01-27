@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: f15c754a47f910f430af3c036ed510cc9e130eac
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021814"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725473"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
 
@@ -69,7 +69,7 @@ View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, 
 
 선택한 보기에서 제약 조건을 편집 하려면 줄임표를 클릭 하 여 팝 오버: ![제약 조건 편집 팝 오버를 표시](designer-auto-layout-images/constraints-popup.png)
 
-제약 조건을 열 팝 오버 뷰에서 미리 설정 된 제약 조건을 표시 합니다. 모든 간격 제약 조건을 설정 하려면 오른쪽 위 모서리의 combobox에서 모든 **면** 을 선택 하 고 **모두 지우기** 를 선택 하 여 제거 합니다. 
+제약 조건을 열 팝 오버 뷰에서 미리 설정 된 제약 조건을 표시 합니다. 모든 간격 제약 조건을 설정 하려면 오른쪽 위 모서리의 combobox에서 모든 **면** 을 선택 하 고 **모두 지우기** 를 선택 하 여 제거 합니다.
 
 **W** 는 Width와 **H** 를 설정 하 여 height 제약 조건을 설정 합니다. **가로 세로 비율**을 확인 하는 경우 뷰 높이 및 너비가 다른 화면 크기로 제어 됩니다. 뷰의 너비는 r의 분자로 사용 되 고 높이는 분모로 사용 됩니다.
 
@@ -201,7 +201,7 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 제약 조건 변경에 대 한 응답으로 연결 된 보기를 즉시 업데이트 하는 대신 자동 레이아웃 엔진은 가까운 장래에 _지연 된 레이아웃 패스_ 를 예약 합니다. 이 지연 된 단계 중에는 지정 된 뷰의 제약 조건이 업데이트 되는 것 뿐만 아니라 계층의 모든 뷰에 대 한 제약 조건이 다시 계산 되어 새 레이아웃에 맞게 조정 됩니다.
 
-어느 시점에서 든 부모 뷰의 `SetNeedsLayout` 또는 `SetNeedsUpdateConstraints` 메서드를 호출 하 여 사용자 고유의 지연 된 레이아웃 패스를 예약할 수 있습니다. 
+어느 시점에서 든 부모 뷰의 `SetNeedsLayout` 또는 `SetNeedsUpdateConstraints` 메서드를 호출 하 여 사용자 고유의 지연 된 레이아웃 패스를 예약할 수 있습니다.
 
 지연 된 레이아웃 패스는 뷰 계층 구조를 통과 하는 두 개의 고유한 패스로 구성 됩니다.
 
@@ -210,7 +210,7 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 ### <a name="animating-constraint-changes"></a>제약 조건 변경 내용 적용
 
-제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들면,
+제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");
@@ -234,4 +234,3 @@ UIView.CommitAnimations();
 - [iOS 디자인 가능한 컨트롤 연습](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Android Designer 개요](~/android/user-interface/android-designer/index.md)
 - [프로그래밍 제약 조건](~/ios/user-interface/programmatic-layout-constraints.md)
-- [Apple-자동 레이아웃 가이드](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/AutolayoutPG/Introduction/Introduction.html#/apple_ref/doc/uid/TP40010853-CH13-SW1)

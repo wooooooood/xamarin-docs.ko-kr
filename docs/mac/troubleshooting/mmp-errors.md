@@ -8,22 +8,22 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: 32fecaff7f6896c03f3ac094d478fef3338f844d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1dc53b863e0408e27351aabfa625a08baae3d5a1
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025716"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725451"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.ios 오류 메시지 (mmp)
 
 ## <a name="mm0xxx-mmp-error-messages"></a>MM0xxx: mmp 오류 메시지
 
-예를 들어 매개 변수, 환경, 누락 된 도구입니다.
+예: 매개 변수, 환경, 누락 된 도구입니다.
 
 <a name="MM0000" />
 
-#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: 예기치 않은 오류- https://github.com/xamarin/xamarin-macios/issues/new에서 버그 보고서를 파일에 넣으십시오.
+#### <a name="mm0000-unexpected-error---please-file-a-bug-report-at-httpsgithubcomxamarinxamarin-maciosissuesnew"></a>MM0000: 예기치 않은 오류- https://github.com/xamarin/xamarin-macios/issues/new 에서 버그 보고서를 파일에 넣으십시오.
 
 예기치 않은 오류 조건이 발생 했습니다. 다음과 같이 가능한 한 많은 정보를 사용 하 여 [버그 보고서를 파일](https://github.com/xamarin/xamarin-macios/issues/new) 에 입력 하세요.
 
@@ -35,7 +35,7 @@ ms.locfileid: "73025716"
 
 <a name="MM0001" />
 
-#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001:이 버전의 Xamarin.ios에는 Mono {0} 필요 합니다 (현재 Mono 버전은 {1}). http://mono-project.com/Downloads에서 Mono 프레임 워크를 업데이트 하세요.
+#### <a name="mm0001-this-version-of-xamarinmac-requires-mono-0-the-current-mono-version-is-1-please-update-the-monoframework-from-httpmono-projectcomdownloads"></a>MM0001:이 버전의 Xamarin.ios에는 Mono {0} 필요 합니다 (현재 Mono 버전은 {1}). http://mono-project.com/Downloads 에서 Mono 프레임 워크를 업데이트 하세요.
 
 <a name="MM0003" />
 
@@ -119,7 +119,7 @@ ms.locfileid: "73025716"
 
 <a name="MM0071" />
 
-#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: 알 수 없는 플랫폼: *. 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 테스트 사례를 사용 하 여 https://bugzilla.xamarin.com에서 버그 보고서를 파일에 입력 하세요.
+#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: 알 수 없는 플랫폼: *. 这通常表示 Xamarin.Mac; 中的 bug在一个 bug 报告，请记录 https://bugzilla.xamarin.com 与测试用例。
 
 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 테스트 사례를 사용 하 여 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) 에서 버그 보고서를 파일에 입력 하세요.
 
@@ -158,7 +158,7 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 한 가지 잠재적인 대안 솔루션은 관리 되는 링커를 사용 하도록 설정 하는 것입니다. 그러면 대부분의 경우 헤더 파일이 누락 되거나 불완전 한 새 API를 포함 하 여 사용 되지 않는 API가 제거 됩니다. 그러나 프로젝트에서 Xcode 제공 하는 것 보다 최신 SDK에 도입 된 API를 사용 하는 경우에는이 작업이 수행 되지 않습니다.
 
-또 다른 잠재적인 대체 솔루션은 대신 동적 등록자를 사용 하는 것입니다. 이렇게 하면 형식을 동적으로 등록 하 고 헤더 파일 요구 사항을 제거 하 여 시작 비용을 부과 합니다. 
+또 다른 잠재적인 대체 솔루션은 대신 동적 등록자를 사용 하는 것입니다. 이렇게 하면 형식을 동적으로 등록 하 고 헤더 파일 요구 사항을 제거 하 여 시작 비용을 부과 합니다.
 
 마지막 straw 솔루션은 프로젝트에 필요한 SDK를 지 원하는 이전 버전의 Xamarin.ios를 사용 하는 것입니다.
 
@@ -172,7 +172,7 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 <a name="MM0099" />
 
-#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpsbugzillaxamarincom"></a>MM0099: 내부 오류 {0}입니다. 테스트 사례 ( https://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
+#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpsbugzillaxamarincom"></a>MM0099: 내부 오류 {0}입니다. 请提交 bug 报告与测试用例 ( https://bugzilla.xamarin.com) 。
 
 <a name="MM0114" />
 
@@ -210,7 +210,7 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 허용 되는 형식은 `[+|-]optimization-name`입니다. 여기서 `optimization-name`는 오류 메시지에 나열 된 값 중 하나입니다.
 
-각 최적화에 대 한 전체 설명은 [빌드 최적화](https://developer.xamarin.com/guides/cross-platform/macios/build-optimizations) 를 참조 하세요.
+각 최적화에 대 한 전체 설명은 [빌드 최적화](~/cross-platform/macios/optimizations.md) 를 참조 하세요.
 
 <a name="MM0133" />
 
@@ -220,9 +220,9 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 #### <a name="mm0134-32-bit-applications-should-be-migrated-to-64-bit"></a>MM0134:32 비트 응용 프로그램을 64 비트로 마이그레이션해야 합니다.
 
-Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제출할 수 없다는 것을 발표 했습니다. 
+Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제출할 수 없다는 것을 발표 했습니다.
 
-또한 32 비트 응용 프로그램은 높은 시에라리온 (손상 없음) 후에 macOS 버전에서 실행 되지 않습니다. 
+또한 32 비트 응용 프로그램은 높은 시에라리온 (손상 없음) 후에 macOS 버전에서 실행 되지 않습니다.
 
 자세한 내용: https://developer.apple.com/news/?id=06282017a
 
@@ -230,7 +230,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM0135" />
 
-#### <a name="mm0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MM0135: {2} {3}에 도입 되었으므로 '{1}' 어셈블리에서 참조 하는 '{0}' 시스템 프레임 워크를 연결 하지 못했습니다. {2} SDK를 사용 하 고 있습니다.{4}
+#### <a name="mm0135-did-not-link-system-framework-0-referenced-by-assembly-1-because-it-was-introduced-in-2-3-and-were-using-the-2-4-sdk"></a>MM0135: {2} {3}에 도입 되었으므로 '{1}' 어셈블리에서 참조 하는 '{0}' 시스템 프레임 워크를 연결 하지 못했습니다. {2} SDK를 사용 하 고 있습니다.
 
 응용 프로그램을 빌드하려면 Xamarin.ios는 시스템 라이브러리에 연결 해야 하며, 그 중 일부는 오류 메시지에 지정 된 SDK 버전에 따라 달라 집니다. 이전 버전의 SDK를 사용 하 고 있기 때문에 해당 Api에 대 한 호출이 런타임에 실패할 수 있습니다.
 
@@ -392,7 +392,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 혼합 모드 어셈블리는 링커에서 처리할 수 없습니다.
 
-혼합 모드 어셈블리에 대 한 자세한 내용은 https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies를 참조 하세요.
+请参阅 https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies 为混合模式程序集的详细信息。
 
 <a name="MM2106" />
 
@@ -509,7 +509,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM5202" />
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono. 프레임 워크 MDK가 없습니다. http://mono-project.com/Downloads에서 Mono 프레임 워크 버전에 대 한 MDK을 설치 하세요.
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono. 프레임 워크 MDK가 없습니다. http://mono-project.com/Downloads 에서 Mono 프레임 워크 버전에 대 한 MDK을 설치 하세요.
 
 <a name="MM5203" />
 
@@ -546,7 +546,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM5301" />
 
-#### <a name="mm5301-pkg-config-could-not-be-found-please-install-the-monoframework-from-httpmono-projectcomdownloads"></a>MM5301: pkg를 찾을 수 없습니다. http://mono-project.com/Downloads에서 Mono 프레임 워크를 설치 하세요.
+#### <a name="mm5301-pkg-config-could-not-be-found-please-install-the-monoframework-from-httpmono-projectcomdownloads"></a>MM5301: pkg를 찾을 수 없습니다. http://mono-project.com/Downloads 에서 Mono 프레임 워크를 설치 하세요.
 
 <!-- 5302 used by mtouch -->
 <!-- 5303 used by mtouch -->
@@ -609,7 +609,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 #### <a name="mm8025-failed-to-compute-the-token-reference-for-the-type-typeassemblyqualifiedname-because-reasons"></a>MM8025: ' {type 형식에 대 한 토큰 참조를 계산 하지 못했습니다. {AssemblyQualifiedName} ' 이유}
 
-이는 Xamarin.ios의 버그를 나타냅니다. 버그를 제출 하세요 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) 합니다.
+이는 Xamarin.ios의 버그를 나타냅니다. 请提交在 bug [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)。
 
 가능한 해결 방법은 프로젝트의 Mac 빌드 옵션에서 추가 mmp 인수로 `--optimize:-register-protocols`를 전달 하 여 `register-protocols` 최적화를 사용 하지 않도록 설정 하는 것입니다.
 
@@ -617,6 +617,6 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 #### <a name="mm8026--is-not-supported-when-the-dynamic-registrar-has-been-linked-away"></a>MM8026: *는 동적 등록 기관이 연결 된 경우에는 지원 되지 않습니다.
 
-이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 필요한 경우 동적 등록자를 연결 해서는 안 됩니다. 버그를 제출 하세요 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
+이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 필요한 경우 동적 등록자를 연결 해서는 안 됩니다. 请提交在 bug [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
 
 프로젝트의 Mac 빌드 옵션에서 추가 mmp 인수에 `--optimize=-remove-dynamic-registrar`을 추가 하 여 링커가 동적 등록자를 유지 하도록 강제할 수 있습니다.

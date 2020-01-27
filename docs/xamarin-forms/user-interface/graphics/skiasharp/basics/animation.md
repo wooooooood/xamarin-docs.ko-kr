@@ -1,30 +1,30 @@
 ---
-title: SkiaSharp의 기본적인 애니메이션
-description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 SkiaSharp 그래픽에 애니메이션을 적용 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
+title: SkiaSharp 中的基本动画
+description: 本文介绍了如何进行动画处理 SkiaSharp 图形在 Xamarin.Forms 应用程序，并且此示例代码进行了演示。
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: ceeacaed510005cec7a4017ce45706e492d7e146
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 80de16a0cf9b601ac3795085b638b9d62812f4d9
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759742"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725552"
 ---
-# <a name="basic-animation-in-skiasharp"></a>SkiaSharp의 기본적인 애니메이션
+# <a name="basic-animation-in-skiasharp"></a>SkiaSharp 中的基本动画
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_SkiaSharp 그래픽에 애니메이션을 적용 하는 방법 알아보기_
+_了解如何对 SkiaSharp 图形进行动画处理_
 
-시켜 Xamarin.Forms에서 SkiaSharp 그래픽 애니메이션을 적용할 수는 `PaintSurface` 약간 다르게 사용 되는 그래픽 그리기 시간 주기적으로 호출 될 메서드를 각각. 센터에서 확장 된 것 처럼 보이는 동심원을 사용 하 여이 문서의 뒷부분에 표시 된 애니메이션은 다음과 같습니다.
+您可以设置动画效果 SkiaSharp 图形在 Xamarin.Forms 中导致`PaintSurface`定期调用的方法，每次绘制图形略有不同。 下面是动画看似展开从中心的同心圆本文稍后所示：
 
-![](animation-images/animationexample.png "여러 동심원 센터에서 보이는 확장")
+![](animation-images/animationexample.png "Several concentric circles seemingly expanding from the center")
 
-합니다 **Pulsating 타원** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램 애니메이션 효과 적용 되는 타원의 두 가지 축을 pulsating 수에 표시 되도록 하 고 제어할 수 있습니다는 이 pulsation의 비율입니다. 합니다 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) 파일은는 Xamarin.Forms `Slider` 및 `Label` 슬라이더의 현재 값을 표시 합니다. 이 일반적으로 통합 하는 `SKCanvasView` 다른 Xamarin.Forms 뷰를 사용 하 여:
+**Pulsating 椭圆**页面[ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)程序之间进行动画处理的椭圆的两个轴，以便它似乎 pulsating 和甚至可以控制此 pulsation 的速率。 [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml)文件实例化 Xamarin.Forms`Slider`和`Label`以显示当前滑块的值。 这是一种常见的方法来集成`SKCanvasView`与其他 Xamarin.Forms 视图：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -59,7 +59,7 @@ _SkiaSharp 그래픽에 애니메이션을 적용 하는 방법 알아보기_
 </ContentPage>
 ```
 
-코드 숨김 파일을 인스턴스화하는 `Stopwatch` 고정밀 형식으로 처리 하는 개체입니다. `OnAppearing` 집합을 재정의 합니다 `pageIsActive` 필드를 `true` 라는 메서드를 호출 하 고 `AnimationLoop`입니다. 합니다 `OnDisappearing` 재정의 설정 하는 `pageIsActive` 필드를 `false`:
+实例化的代码隐藏文件`Stopwatch`对象作为高精度时钟。 `OnAppearing`重写集`pageIsActive`字段`true`，并调用一个名为方法`AnimationLoop`。 `OnDisappearing`重写设置`pageIsActive`字段`false`:
 
 ```csharp
 Stopwatch stopwatch = new Stopwatch();
@@ -85,7 +85,7 @@ protected override void OnDisappearing()
 }
 ```
 
-`AnimationLoop` 메서드가 시작 합니다 `Stopwatch` 고 하는 동안 다음 루프 `pageIsActive` 는 `true`. 이 기본적으로 "무한 루프" 페이지에 활성 상태 이지만 프로그램 루프에 대 한 호출 끝나는 때문에 중단을 수행 해도 해당 하는 동안 `Task.Delay` 사용 하 여는 `await` 프로그램 함수의 다른 부분을 수 있는 연산자입니다. 인수 `Task.Delay` 1/30 초 후 완료 하도록 할 수 있습니다. 이 애니메이션의 프레임 속도 정의합니다.
+`AnimationLoop`方法启动`Stopwatch`，然后循环时`pageIsActive`是`true`。 这是实质上是"无限循环"，而页处于活动状态，但它不会导致程序挂起，因为循环的结尾部分通过调用`Task.Delay`与`await`运算符，可让程序函数的其他部分。 参数`Task.Delay`后，即可在 1/30 秒后完成。 此项定义动画的帧速率。
 
 ```csharp
 async Task AnimationLoop()
@@ -106,9 +106,9 @@ async Task AnimationLoop()
 
 ```
 
-합니다 `while` 루프에서 주기 시간을 확보 하 여 시작 된 `Slider`합니다. 예를 들어 5 (초)에서 시간입니다. 값을 계산 하는 두 번째 문은 `t` 에 대 한 *시간*합니다. 에 `cycleTime` 5 `t` 5 초 마다 1 0에서 증가 합니다. 인수는 `Math.Sin` 함수에는 두 번째 문은 범위가 0 ~ 5 초 마다 2 π입니다. `Math.Sin` 함수는 0에서 1 다시 0으로 차례로 까지의 값을 반환 &ndash;1과 0 5 초 마다 값이 1 또는-1 값이 더 느리게 변경 합니다. 값 1은 값이 양수인 경우 항상 다음 것은 2로 나눈 값을 1을 0으로 약 1과 0 값이 저하 되지만 ½ ½로 ½에서 범위 있도록 하므로 추가 됩니다. 에 저장 되어이 `scale` 필드 및 `SKCanvasView` 무효화 됩니다.
+`while`循环开始通过获取周期时间与`Slider`。 这是以秒为单位，例如，5 次。 第二个语句计算的值`t`有关*时间*。 有关`cycleTime`为 5，`t`将增加从 0 到 1 每隔 5 秒。 参数`Math.Sin`函数中的第二个语句范围从 0 到 2 π 每隔 5 秒。 `Math.Sin`函数将返回值从 0 到 1 后到 0，再到&ndash;1 和 0 每隔 5 秒，但其速度更慢更改时的值是接近 1 或-1 的值。 值 1 添加的值始终为正数，因此然后它除以 2，因此从 ½ 为 ½ 为介于 0 到 ½，但速度较慢的值时大约 1 和 0 到 1 的值范围。 这存储在`scale`字段中，和`SKCanvasView`失效。
 
-합니다 `PaintSurface` 메서드는이 사용 하 여 `scale` 타원의 두 가지 축을 계산 하는 값:
+`PaintSurface`方法使用此`scale`值来计算两个椭圆的轴：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -139,17 +139,17 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-메서드는 표시 영역의 크기를 기준으로 최대 반지름 및 최대 radius 기반 최소 반지름을 계산 합니다. `scale` 값 애니메이션이 적용 되어 0과 1 사이의 및 0으로 다시 메서드를 사용 하 여 하는 계산 되므로 `xRadius` 및 `yRadius` 사이 범위입니다 `minRadius` 및 `maxRadius`합니다. 이러한 값은 그리고 타원을 채우는 데 사용 됩니다.
+该方法计算基于显示区域的大小最大 radius 和基于最大的半径的最小半径。 `scale`值经过动画处理的介于 0 和 1 之间，并返回到 0，因此该方法使用的计算`xRadius`并`yRadius`之间的范围`minRadius`和`maxRadius`。 这些值用于绘制并填充椭圆，使用：
 
-[![](animation-images/pulsatingellipse-small.png "가득 찬 타원 페이지 스크린샷 삼중")](animation-images/pulsatingellipse-large.png#lightbox "삼중 가득 찬 타원 페이지 스크린샷")
+[![](animation-images/pulsatingellipse-small.png "Triple screenshot of the Pulsating Ellipse page")](animation-images/pulsatingellipse-large.png#lightbox "Triple screenshot of the Pulsating Ellipse page")
 
-에 `SKPaint` 에서 개체를 만들는 `using` 블록입니다. 많은 SkiaSharp 클래스 처럼 `SKPaint` 에서 파생 되 `SKObject`에서 파생 되는 `SKNativeObject`를 구현 하는 합니다 [ `IDisposable` ](xref:System.IDisposable) 인터페이스입니다. `SKPaint` 재정의 `Dispose` 관리 되지 않는 리소스를 해제 하는 방법입니다.
+请注意，`SKPaint`中创建对象时`using`块。 像许多 SkiaSharp 类`SKPaint`派生自`SKObject`，它派生`SKNativeObject`，它实现[ `IDisposable` ](xref:System.IDisposable)接口。 `SKPaint` 重写`Dispose`方法来释放非托管的资源。
 
- 배치 `SKPaint` 에 `using` 되도록 블록 `Dispose` 이러한 관리 되지 않는 리소스를 해제 하는 블록의 끝에 호출 됩니다. 이런 그래도 메모리에서 사용 하는 경우는 `SKPaint` 개체가 해제 되며.NET 가비지 수집기에 의해 하지만 애니메이션 코드에서 것이 가장 좋습니다를 능동적으로 보다 순차적 방식으로 메모리를 해제 합니다.
+ 将放`SKPaint`中`using`块确保`Dispose`用于释放这些非托管的资源的块结束时调用。 发生这种情况是否仍要使用的内存时`SKPaint`释放对象.NET 垃圾回收器，但在动画代码中，最好是主动地释放内存中更有序的方式。
 
- 이 경우 더 나은 솔루션을 두 개를 만드는 것 `SKPaint` 필드로 저장할 개체입니다.
+ 在此特定情况下更好的解决方案就是创建两个`SKPaint`对象一次并将其保存为字段。
 
-즉 합니다 **원 확장** 애니메이션 않습니다. 합니다 [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) 클래스를 포함 하 여 여러 필드를 정의 하 여 시작을 `SKPaint` 개체:
+这正是**展开圆圈**动画 does。 [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs)类首先定义多个字段，包括`SKPaint`对象：
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -177,7 +177,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-이 프로그램에는 Xamarin.Forms에 따라 애니메이션 하는 다른 방법을 사용 하 여 `Device.StartTimer` 메서드. 합니다 `t` 필드의 애니메이션이 적용 되어 0에서 1 모든 `cycleTime` 시간 (밀리초):
+此程序使用不同的方法来通过基于 Xamarin.Forms 的动画`Device.StartTimer`方法。 `t`字段以动画形式是从 0 到 1 每个`cycleTime`毫秒：
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -211,7 +211,7 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-`PaintSurface` 처리기 애니메이션이 적용 된 반지름을 사용 하 여 5 동심원을 그립니다. 경우는 `baseRadius` 으로 다음 100으로 변수는 계산 `t` 0에서 1, 100, 100-200, 200에서 300, 300 ~ 400 및 500 400 0에서 5 원 증가의 반지름에 애니메이션 효과가 적용 됩니다. 원 중 대부분은 `strokeWidth` 50 하지만 첫 번째 원형는 `strokeWidth` 0에서 50으로 애니메이션 효과 줍니다. 원 중 대부분의 경우 색 파란색 이지만 마지막 원의 색 애니메이션 효과가 적용 됩니다 파란색에서 투명 합니다. 네 번째 인수를 확인 합니다 `SKColor` 불투명도 지정 하는 생성자.
+`PaintSurface`处理程序绘制具有经过动画处理的半径的五个同心圆。 如果`baseRadius`变量计算为 100，然后为`t`从 0 到 1，从 0 到 100、 100 到 200、 200 到 300、 300 到 400 和 400 到 500 的五个圆圈增加半径的动画。 对于大多数的圆圈`strokeWidth`是 50 但第一个圆`strokeWidth`进行从 0 到 50 的动画处理。 对于大多数的圆圈，颜色为蓝色，但最后一个圆，颜色以动画形式从蓝到透明。 请注意，到第四个参数`SKColor`指定不透明度的构造函数：
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage
@@ -242,11 +242,11 @@ public class ExpandingCirclesPage : ContentPage
 }
 ```
 
-결과 동일한 경우에는 이미지에 표시 되는지 `t` 이 0 인 경우와 `t` 1 이면 및 원 계속 영원히 확장 것 같습니다.
+结果是图像看起来相同 when`t`等于 0 时`t`等于 1，而圆形似乎继续扩大对不限次数：
 
-[![](animation-images/expandingcircles-small.png "삼중 원 확장 페이지 스크린샷")](animation-images/expandingcircles-large.png#lightbox "삼중 원 확장 페이지 스크린샷")
+[![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharpFormsDemos （示例）](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

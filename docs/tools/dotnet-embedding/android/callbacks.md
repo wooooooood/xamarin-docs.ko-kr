@@ -5,12 +5,12 @@ ms.assetid: F3A7A4E6-41FE-4F12-949C-96090815C5D6
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: f23f155a02422a3d04a0b14b282929ea63d60765
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d1d5b8985d132e5a5839e3cd23aaec32fc3815a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007297"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725115"
 ---
 # <a name="callbacks-on-android"></a>Android의 콜백
 
@@ -97,7 +97,7 @@ public void abstractCallback() throws Throwable {
 System.NotSupportedException: Unable to find Invoker for type 'Android.AbstractClass'. Was it linked away?
 ```
 
-여기에는 `Invoker` 형식이 없습니다. Java에 대 한 호출을 전달 C# 하는 `AbstractClass`의 서브 클래스입니다. Java 개체가 C# 전 세계에 있고 동일한 C# 형식이 abstract 인 경우 xamarin.ios는 코드 내에서 C# C# 사용 하기 위해`Invoker`접미사가 포함 된 형식을 자동으로 찾습니다.
+여기에는 `Invoker` 형식이 없습니다. Java에 대 한 호출을 전달 C# 하는 `AbstractClass`의 서브 클래스입니다. Java 개체가 C# 전 세계에 있고 동일한 C# 형식이 abstract 인 경우 xamarin.ios는 코드 내에서 C# C# 사용 하기 위해 `Invoker` 접미사가 포함 된 형식을 자동으로 찾습니다.
 
 Xamarin.ios는 Java 바인딩 프로젝트에서이 `Invoker` 패턴을 사용 합니다.
 
@@ -160,7 +160,7 @@ Java interop에 대 한 자세한 내용은이 주제에 대 한 놀라운 [Xama
 
 ## <a name="interfaces"></a>인터페이스
 
-인터페이스는 다음과 같은 한 가지 세부 사항을 제외 하 고 추상 클래스와 거의 같습니다. Xamarin.ios는 이러한 항목에 대 한 Java를 생성 하지 않습니다. 이는 .NET을 포함 하기 전에 Java가 인터페이스를 C# 구현 하는 시나리오는 많지 않기 때문입니다.
+인터페이스는 한 가지 세부 정보를 제외 하 고 추상 클래스와 거의 동일 합니다. Android는이에 대 한 Java를 생성 하지 않습니다. 이는 .NET을 포함 하기 전에 Java가 인터페이스를 C# 구현 하는 시나리오는 많지 않기 때문입니다.
 
 다음 C# 인터페이스가 있다고 가정해 보겠습니다.
 
@@ -267,9 +267,9 @@ public class VirtualClass : Java.Lang.Object
 }
 ```
 
-위의 `abstract` 클래스 예제를 수행한 경우에는 한 가지 세부 사항을 제외 하 고는 다음과 같은 작업을 수행 합니다. _Xamarin.ios는 `Invoker`를 조회 하지 않습니다_ .
+위의 `abstract` 클래스 예제를 수행한 경우에는 한 가지 세부 사항을 제외 하 고 작동 합니다. 즉, _Xamarin. Android는 `Invoker`를 조회 하지 않습니다_ .
 
-이 문제를 해결 하려면`abstract`C# 되도록 클래스를 수정 합니다.
+이 문제를 해결 하려면 `abstract`C# 되도록 클래스를 수정 합니다.
 
 ```csharp
 public abstract class VirtualClass : Java.Lang.Object
@@ -281,7 +281,7 @@ public abstract class VirtualClass : Java.Lang.Object
 
 이러한 시나리오를 향상 시킬 수 있는 몇 가지 작업이 있습니다.
 
-1. 이 [PR](https://github.com/xamarin/java.interop/pull/170)에서 C# 생성자에 대한 `throws Throwable`은 고정되어 있습니다.
+1. 此 [PR](https://github.com/xamarin/java.interop/pull/170) C#上`throws Throwable`已修复构造函数。
 1. Xamarin Android 지원 인터페이스에서 Java 생성기를 만듭니다.
     - 이렇게 하면 `AndroidJavaSource`의 빌드 작업을 사용 하 여 Java 소스 파일을 추가 하지 않아도 됩니다.
 1. Xamarin.ios에서 가상 클래스에 대 한 `Invoker`를 로드 하는 방법을 만듭니다.
@@ -296,5 +296,4 @@ public abstract class VirtualClass : Java.Lang.Object
 - [Android 시작](~/tools/dotnet-embedding/get-started/java/android.md)
 - [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)
 - [.NET 포함 제한 사항](~/tools/dotnet-embedding/limitations.md)
-- [오픈 소스 프로젝트에 기여](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 - [오류 코드 및 설명](~/tools/dotnet-embedding/errors.md)

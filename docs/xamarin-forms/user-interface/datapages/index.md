@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 4569240d7419254bad41957d30b4ad652c7a3f4e
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 01/24/2020
 ms.locfileid: "75727942"
 ---
 # <a name="xamarinforms-datapages"></a>Xamarin. 양식 DataPages
@@ -19,11 +19,11 @@ ms.locfileid: "75727942"
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages를 렌더링 하려면 Xamarin.ios 테마 참조가 필요 합니다. 이 것은 프로젝트에 [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet 패키지 설치를 유발하고, [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) 및 [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet 패키지 전체에로 따른다.
+> DataPages 要求使用 Xamarin. Forms 主题引用来呈现。 这涉及到将[xamarin. Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nuget 包安装到项目中，然后将其后跟[xamarin](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/)或[xamarin. 暗体](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/)nuget 包。
 
 Xamarin. Forms DataPages는 2016에 발표 되었으며 고객이 피드백을 제공 하 고 피드백을 제공 하는 미리 보기로 제공 됩니다.
 
-DataPages 빠르고 쉽게 미리 작성된 된 보기에 데이터 소스를 바인딩하는 API를 제공 합니다. 목록 항목 및 세부 정보 페이지는 데이터를 자동으로 렌더링 하며 테마를 사용 하 여 사용자 지정할 수 있습니다.
+DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预建的视图。 목록 항목 및 세부 정보 페이지는 데이터를 자동으로 렌더링 하며 테마를 사용 하 여 사용자 지정할 수 있습니다.
 
 진화 키 노트 데모의 작동 방식을 확인 하려면 [시작 가이드](get-started.md)를 확인 하세요.
 
@@ -59,7 +59,7 @@ DataPages **는 Xamarin.ios NuGet 패키지** 를 포함 하 여 xamarin.ios 응
 
 예제는 [Datapages 컨트롤 참조](controls.md) 를 참조 하세요.
 
-### <a name="under-the-hood"></a>내부 살펴보기
+### <a name="under-the-hood"></a>내부적으로
 
 Xamarin Forms 데이터 소스는 `IDataSource` 인터페이스를 따릅니다.
 

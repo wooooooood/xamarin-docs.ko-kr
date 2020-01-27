@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 1efb8df4bac307d0e73da6bcbf645077cb63c839
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5aabaadfb1781f9f1622abf5687252b16b327d34
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032350"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725424"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>Xamarin.ios의 앱 내 구매
 
@@ -32,7 +32,7 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 
 앱 내 구매를 지원 하려면 Xcode 7 이상에서 Xamarin.ios 5.0 이상 버전을 사용 해야 합니다.
 
-## <a name="contents"></a>목차
+## <a name="contents"></a>내용
 
 - [앱에서 바로 구매 기본 사항 및 구성](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
@@ -65,7 +65,6 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 - [앱 내 구매 제품 식별자 Q & A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [앱에서 구매 기술 참고 사항](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [첫 번째 앱 스토어 제출](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [앱 스토어 리소스 센터](https://developer.apple.com/appstore/index.html)
 - [앱 스토어 제출 팁](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [앱 스토어 검토 지침](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [앱 관리](https://developer.apple.com/appstore/resources/managing/index.html)

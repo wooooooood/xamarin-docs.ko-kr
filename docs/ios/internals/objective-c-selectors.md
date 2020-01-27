@@ -7,23 +7,23 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/12/2017
-ms.openlocfilehash: 79f226c137c3ab6b1dd2de9f92cb868056aa9d59
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2a4d255500f68497fe7cb0cc439c5f9c0504b0f2
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022286"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725187"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Xamarin.ios의 목적-C 선택기
 
 목표-C 언어는 *선택기*를 기반으로 합니다. 선택기는 개체 또는 *클래스로*보낼 수 있는 메시지입니다. [Xamarin.ios](~/ios/internals/api-design/index.md) 는 인스턴스 선택기와 정적 메서드에 대 한 클래스 선택기를 인스턴스 메서드에 매핑합니다.
 
 일반적인 C 함수와 달리 멤버 함수와 마찬가지로 C++ 선택기는 [P/invoke](https://www.mono-project.com/docs/advanced/pinvoke/) 를 사용 하 여 직접 호출할 수 없으며 선택기는를 사용 하 여 객관적인 c 클래스 또는 인스턴스로 전송 됩니다 [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-칩셋용으로.
+함수입니다.
 
 목적-C의 메시지에 대 한 자세한 내용은 Apple의 [개체 작업](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) 가이드를 참조 하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>示例
 
 [`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont) 를 호출 한다고 가정 합니다.
 [`NSString`](https://developer.apple.com/documentation/foundation/nsstring)선택기입니다.
@@ -36,19 +36,19 @@ Apple의 설명서에서 선언은 다음과 같습니다.
 이 API에는 다음과 같은 특징이 있습니다.
 
 - 반환 형식은 Unified API `CGSize` 됩니다.
-- 매개 변수 `font`는 [uifont](xref:UIKit.UIFont) [nsobject](xref:Foundation.NSObject)에서 파생 된 형식 (간접적) 이며, 이는 [System.IntPtr](xref:System.IntPtr)에 매핑됩니다.
+- 매개 변수 `font`는 [uifont](xref:UIKit.UIFont)[nsobject](xref:Foundation.NSObject)에서 파생 된 형식 (간접적) 이며, 이는 [System.IntPtr](xref:System.IntPtr)에 매핑됩니다.
 - `CGFloat``width` 매개 변수는 `nfloat`에 매핑됩니다.
 - [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc)`lineBreakMode` 매개 변수는 이미 xamarin.ios에서 [`UILineBreakMode`](xref:UIKit.UILineBreakMode) 으로 바인딩 되었습니다.
-열거할.
+枚举中。
 
 모두 함께 배치 하면 `objc_msgSend` 선언이 일치 해야 합니다.
 
 ```csharp
 CGSize objc_msgSend(
-    IntPtr target, 
-    IntPtr selector, 
-    IntPtr font, 
-    nfloat width, 
+    IntPtr target,
+    IntPtr selector,
+    IntPtr font,
+    nfloat width,
     UILineBreakMode mode
 );
 ```
@@ -58,7 +58,7 @@ CGSize objc_msgSend(
 ```csharp
 [DllImport (Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend")]
 static extern CGSize cgsize_objc_msgSend_IntPtr_float_int (
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -76,7 +76,7 @@ nfloat width = ...
 UILineBreakMode mode = ...
 
 CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
-    target.Handle, 
+    target.Handle,
     selector.Handle,
     font == null ? IntPtr.Zero : font.Handle,
     width,
@@ -90,7 +90,7 @@ CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
 [DllImport (MonoTouch.Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend_stret")]
 static extern void cgsize_objc_msgSend_stret_IntPtr_float_int (
     out CGSize retval,
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -111,7 +111,7 @@ CGSize size;
 
 if (Runtime.Arch == Arch.SIMULATOR)
     size = cgsize_objc_msgSend_IntPtr_float_int(
-        target.Handle, 
+        target.Handle,
         selector.Handle,
         font == null ? IntPtr.Zero : font.Handle,
         width,
@@ -154,8 +154,8 @@ else
 
 `objc_msgSend` 함수는 두 개 이상 있습니다.
 
-- 구조체를 반환 하는 선택기에 [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) 를 사용 합니다. ARM에는 열거형 또는 C 기본 제공 형식 (`char`, `short`, `int`, `long`, `float``double`)이 아닌 모든 반환 형식이 포함 됩니다. X86 (시뮬레이터)에서이 메서드는 크기가 8 바이트 보다 큰 모든 구조체에 사용 해야 합니다 (`CGSize` 8 바이트 이며 시뮬레이터에서 `objc_msgSend_stret`를 사용 하지 않음). 
-- X 86의 부동 소수점 값을 반환 하는 선택기에 [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) 를 사용 합니다. 이 함수는 ARM에서 사용할 필요가 없습니다. 대신 `objc_msgSend`를 사용 합니다. 
+- 구조체를 반환 하는 선택기에 [`objc_msgSend_stret`](https://developer.apple.com/documentation/objectivec/1456730-objc_msgsend_stret?language=objc) 를 사용 합니다. ARM에는 열거형 또는 C 기본 제공 형식 (`char`, `short`, `int`, `long`, `float``double`)이 아닌 모든 반환 형식이 포함 됩니다. X86 (시뮬레이터)에서이 메서드는 크기가 8 바이트 보다 큰 모든 구조체에 사용 해야 합니다 (`CGSize` 8 바이트 이며 시뮬레이터에서 `objc_msgSend_stret`를 사용 하지 않음).
+- X 86의 부동 소수점 값을 반환 하는 선택기에 [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc) 를 사용 합니다. 이 함수는 ARM에서 사용할 필요가 없습니다. 대신 `objc_msgSend`를 사용 합니다.
 - 주 [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend) 함수는 다른 모든 선택기에 사용 됩니다.
 
 호출 해야 하는 `objc_msgSend` 함수를 결정 한 후에는 시뮬레이터와 장치에서 각각 다른 메서드를 필요로 할 수 있습니다. 일반적 [`[DllImport]`](xref:System.Runtime.InteropServices.DllImportAttribute) 메서드를 사용 하 여 나중에 호출할 수 있도록 함수를 선언할 수 있습니다.
@@ -183,7 +183,7 @@ if (Runtime.Arch == Arch.DEVICE)
     PointF ret;
     Messaging.PointF_objc_msgSend_stret_PointF_IntPtr (out ret, myHandle, selector.Handle);
     return ret;
-} 
+}
 else
 {
     return Messaging.PointF_objc_msgSend_PointF_IntPtr (myHandle, selector.Handle);
@@ -201,7 +201,3 @@ X 86 용으로 빌드하는 경우 [`objc_msgSend_stret`](https://developer.appl
 ### <a name="creating-your-own-signatures"></a>사용자 고유의 서명 만들기
 
 필요한 경우 다음 [요점](https://gist.github.com/rolfbjarne/981b778a99425a6e630c) 를 사용 하 여 고유한 서명을 만들 수 있습니다.
-
-## <a name="related-links"></a>관련 링크
-
-- [목표-C 선택기](https://developer.xamarin.com/samples/mac-ios/Objective-C/) 샘플

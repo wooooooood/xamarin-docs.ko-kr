@@ -7,30 +7,30 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2018
-ms.openlocfilehash: d48767ea29c5f610e02fade20ae92c5e085cc9be
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 24c70c2e869f59091a1519af6d1165dbea9cc467
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026957"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725062"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>어떤 Android SDK 패키지를 설치해야 하나요?
 
 Android SDK를 설치 하면 개발에 필요한 모든 최소 패키지가 자동으로 포함 되지 않습니다. 개별 개발자 요구 사항은 다르지만 일반적으로 Xamarin.ios를 사용 하 여 개발 하려면 다음 패키지가 필요 합니다.
 
-## <a name="tools"></a>도구
+## <a name="tools"></a>工具
 
 SDK manager의 Tools 폴더에서 최신 도구를 설치 합니다.
 
-- Android SDK Tools
+- Android SDK 工具
 - Android SDK 플랫폼-도구
 - Android SDK 빌드-도구
 
 ## <a name="android-platforms"></a>Android 플랫폼
 
-최소 & 대상으로 설정한 Android 버전용 "SDK 플랫폼"을 설치 합니다. 
+최소 & 대상으로 설정한 Android 버전용 "SDK 플랫폼"을 설치 합니다.
 
-예를 들면 다음과 같습니다.
+예:
 
 - 대상 API 23
 - 최소 API 23
@@ -46,8 +46,5 @@ API 15 및 23 용 SDK 플랫폼을 설치 해야 합니다. 해당 API 수준으
 
 Google에서 기본 Android 에뮬레이터를 사용 하려는 경우에만 필요 합니다. 자세한 내용은 [Android Emulator 설치](~/android/get-started/installation/android-emulator/index.md) 를 참조 하세요.
 
-## <a name="extras"></a>Extras
+## <a name="extras"></a>기타
 Android SDK 스페셜는 일반적으로 필요 하지 않습니다. 그러나 사용 사례에 따라 필요할 수 있으므로이에 대해 알고 있으면 유용 합니다.
-
-## <a name="further-reading"></a>추가 정보
-다음 가이드에서는 이러한 옵션에 대해 설명 하 고 SDK manager를 통해 다음에는 여러 패키지에 대해 자세히 설명 합니다. [Android SDK Manager 설치 가이드](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)

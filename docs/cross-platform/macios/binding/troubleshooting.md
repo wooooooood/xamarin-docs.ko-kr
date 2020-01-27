@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: fe4b9ade9e6e462c3472a8bb3bb8750ed6cac326
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8194c369aa0e4f8bb17a1a162354b4f72c6aaa41
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015885"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725334"
 ---
 # <a name="binding-troubleshooting"></a>바인딩 문제 해결
 
@@ -42,17 +42,17 @@ Xamarin은 Apple Api에 대 한 고품질 및 잘 테스트 된 바인딩을 제
 
 ## <a name="reporting-bugs"></a>버그 보고
 
-사용자 의견은 microsoft에 중요 합니다. Xamarin.ios에서 문제가 발견 되 면 다음을 수행 합니다.
+고객 의견은 품질 향상에 큰 도움이 됩니다. Xamarin.ios에서 문제가 발견 되 면 다음을 수행 합니다.
 
-- [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/mac) 확인
-- [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색 
+- [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/xamarin-mac) 확인
+- [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색
 - GitHub 문제로 전환하기 전에 Xamarin 문제가 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)에서 추적되었습니다. 여기서 일치하는 문제를 검색해 보세요.
 - 일치하는 문제를 찾을 수 없는 경우 [GitHub 문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 제출하세요.
 
-GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 수 없습니다. 
+GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 수 없습니다.
 
 다음 정보를 가능한 많이 포함하세요.
 
-- 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**. 
+- 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**.
 - 크래시의 전체 스택 추적.
 - 크래시 주변의 C# 코드.

@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 8f930e2358562df7e68841b87b6a3df0914805fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e1019417ff7ac93abfe2396a4acaa76c66d182f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032300"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725370"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Xamarin.ios의 구독 및 보고
 
 ## <a name="about-non-renewing-subscriptions"></a>갱신 되지 않는 구독 정보
 
 갱신 되지 않은 구독은 시간 제한이 있는 서비스의 판매를 나타내는 제품을 위한 것입니다 (예: 탐색 응용 프로그램에 대 한 1 주 또는 데이터 보관에 대 한 시간 제한 액세스).   
-   
+
 갱신 되지 않는 구독과 기타 제품 유형 간의 주요 차이점은 다음과 같습니다.
 
-- ITunes Connect의 제품 정의는 용어를 포함 하지 않습니다. 응용 프로그램 코드는 제품 ID에서 유효 기간을 유추할 수 있어야 합니다. 
-- 여러 번 구입할 수 있습니다 (예: 소비재 제품). 응용 프로그램은 구독 용어/만료 및 갱신을 관리 하 고 사용자가 겹치는 구독을 구입 하는 것을 방지 하는 데 필요 합니다. 
-- 지원 되지 않는 제품은 복원 기능을 지원 합니다. 모든 사용자의 장치에서 구독을 사용할 수 있는 경우 응용 프로그램은 원격 서버와 함께이 기능을 설계 하 고 구현 해야 합니다. 또한 응용 프로그램은 백업이 백업 된 후 백업에서 복원 되는 경우에 대 한 구독 상태를 백업 하는 작업을 담당 합니다. 
+- ITunes Connect의 제품 정의는 용어를 포함 하지 않습니다. 응용 프로그램 코드는 제품 ID에서 유효 기간을 유추할 수 있어야 합니다.
+- 여러 번 구입할 수 있습니다 (예: 소비재 제품). 응용 프로그램은 구독 용어/만료 및 갱신을 관리 하 고 사용자가 겹치는 구독을 구입 하는 것을 방지 하는 데 필요 합니다.
+- 지원 되지 않는 제품은 복원 기능을 지원 합니다. 모든 사용자의 장치에서 구독을 사용할 수 있는 경우 응용 프로그램은 원격 서버와 함께이 기능을 설계 하 고 구현 해야 합니다. 또한 응용 프로그램은 백업이 백업 된 후 백업에서 복원 되는 경우에 대 한 구독 상태를 백업 하는 작업을 담당 합니다.
 - 구현 개요
-- 갱신 되지 않은 구독은 일반적으로 서버에서 제공 하는 워크플로를 사용 하 여 구현 되 고 사용 가능한 제품과 같이 관리 됩니다. 
+- 갱신 되지 않은 구독은 일반적으로 서버에서 제공 하는 워크플로를 사용 하 여 구현 되 고 사용 가능한 제품과 같이 관리 됩니다.
 
 ## <a name="about-free-subscriptions"></a>무료 구독 정보
 
@@ -49,7 +49,7 @@ ms.locfileid: "73032300"
 서버에서 자동 갱신 가능한 구독을 확인할 때 JSON 요청에서 앱 내 구매 공유 암호를 사용 해야 합니다. ITunes Connect를 통해 공유 암호가 생성/액세스 됩니다.
 
 ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.   
-   
+
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 응용 프로그램을 선택 하 고 **앱에서 바로 구매** 탭을 클릭 합니다.
@@ -57,7 +57,7 @@ ITunes Connect 홈 페이지에서 **내 앱**을 선택 합니다.
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 페이지 맨 아래에서 **공유 암호 보기 또는 생성**을 선택 합니다.
-   
+
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
@@ -101,16 +101,15 @@ SKPaymentTransaction 개체는 구독 기간을 포함 하지 않습니다. 각 
 ## <a name="reporting"></a>보고
 
 iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com))는 다음을 제공 합니다.   
-   
+
  **판매 및 추세** – 앱 다운로드, 업데이트 및 앱에서의 구매에 대 한 세부 정보를 표시 합니다.   
-   
+
  **지불 및 재무 보고서** – 앱의 수입을 자세히 설명 하 고 사용자에 게 발생 한 지불액과 빚 정도를 나열 합니다.
 
 판매 및 추세 보고서의 예는 다음과 같습니다.   
 
  [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
-   
- 또한 [ **ITC 연결 모바일**IOS 앱 (iTunes 링크)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8)이 있습니다.
-사용할 수 있는 통계 중 일부에 대 한 iPhone 스크린샷는 다음과 같습니다.   
-   
+
+ 또한 **ITC Connect Mobile** iOS 앱이 있습니다. 사용할 수 있는 통계 중 일부에 대 한 iPhone 스크린샷는 다음과 같습니다.   
+
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

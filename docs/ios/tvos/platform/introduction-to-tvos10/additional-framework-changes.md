@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 1339a6c2909c7ba62592d66dcdf08bcfd2e668a4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5b9dfb354f33f67c73b415f8c109ebdc27dcdb6d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030631"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725388"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>추가 tvOS 10 프레임 워크 변경 내용
 
@@ -55,7 +55,7 @@ tvOS 10에는 핵심 데이터 프레임 워크에 대 한 다음과 같은 향�
 
 tvOS 10에는 핵심 그래픽 프레임 워크에 대 한 다음과 같은 향상 된 기능이 포함 되어 있습니다.
 
-- 새 [CGColorConverterRef](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) 클래스를 사용 하 여 일련의 색 변환을 수행할 수 있습니다.
+- 새 CGColorConverterRef 클래스를 사용 하 여 일련의 색 변환을 수행할 수 있습니다.
 
 <a name="Core-Image-Enhancements" />
 
@@ -65,7 +65,7 @@ tvOS 10은 핵심 이미지 프레임 워크에 대해 다음과 같은 향상 �
 
 - [Cifilter](https://developer.apple.com/reference/coreimage/cifilter) 클래스의 `ImageWithExtent` 메서드를 사용 하 여 사용자 지정 처리를 필터 작업에 삽입할 수 있습니다. 핵심 이미지는 출력 또는 표시를 위해 이미지를 처리할 때 필터 사이에 지정 된 콜백을 호출 합니다.
 - 이제 앱은 처리 전후에 색 공간을 변환 하 여 핵심 이미지 컨텍스트의 작업 색 공간 외부에 있는 색 공간에서 이미지를 처리할 수 있습니다.
-- `UIImageView` 개체에서 `UIImage` 렌더링 (핵심 이미지 이미지 저장소에 의해 지원 되는 경우)에 대 한 몇 가지 렌더링 성능이 향상 되었습니다. 
+- `UIImageView` 개체에서 `UIImage` 렌더링 (핵심 이미지 이미지 저장소에 의해 지원 되는 경우)에 대 한 몇 가지 렌더링 성능이 향상 되었습니다.
 - 넓은 색 영역으로 태그가 지정 된 `UIImage` 개체는 넓은 색을 지 원하는 iOS 장치에서 `UIImageView` 개체의 넓은 색 영역 색으로 렌더링 됩니다.
 - 핵심 이미지 커널 코드는 이제 특정 픽셀 출력 형식을 요청할 수 있습니다.
 
@@ -159,7 +159,7 @@ TvOS 10에서 SceneKit 프레임 워크에 대해 다음과 같은 기능이 향
 - SceneKit는 모든 셰이더 형식에 대해 선형 RGB 색 공간의 색 구성 요소 값을 해석 합니다.
 - SceneKit는 질감 이미지에서 색 프로필 정보를 읽고 조정 하므로 모든 이미지에 대 한 자산 카탈로그를 사용 하 여이 정보가 제공 되는지 확인 합니다.
 - 앱 `Info.plist`에서 `SCNDisableLinearSpaceRendering` 및 `SCNDisableWideGamut` 키를 지정 하 여 선형 색 공간 렌더링과 와이드 색을 모두 사용 하지 않도록 설정할 수 있습니다.
-- 새 [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) 클래스를 사용 하 여 geometry를 지정 하기 위해 파일에서 로드 되거나 프로그래밍 방식으로 생성 되는 임의의 다각형 primates을 빌드합니다.
+- 새 [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon) 클래스를 사용 하 여 geometry를 지정 하기 위해 파일에서 로드 되거나 프로그래밍 방식으로 생성 되는 임의의 다각형 primates을 빌드합니다.
 
 <a name="SpriteKit-Enhancements" />
 
@@ -181,7 +181,7 @@ TvOS 10에서 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향�
 - 포커스 API는 `UIViews`외에도 뷰 항목이 아닌 항목의 포커스를 지원 하도록 향상 되었습니다. 포커스를 지 원하는 항목은 `IUIFocusItem` 인터페이스를 구현 _해야_ 합니다.
 - 새 `UIGraphicsRender` 클래스는 UIKit 렌더링 또는 핵심 그래픽에서 비트맵 또는 Pdf를 만드는 개체 지향 메서드를 제공 하 고 사용 되지 않는 `UIGraphicsBeginImageContext` 메서드를 대체 합니다.
 - 현재 활성 상태인 사용자 인터페이스 테마 (어둡게 또는 밝게)를 결정 하기 위해 `UIUserInterfaceStyle` 클래스가 추가 되었습니다.
-- 완전히 대화형으로 제공 되는 새로운 개체 기반 애니메이션 지원이 추가 되 고 van이 제스처에 연결 됩니다. Pleas 참조 Apple의 [Uiviewanimating 프로토콜 참조](https://developer.apple.com/reference/uikit/uiviewanimating), [uiviewproperty애니메이터 클래스 참조](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider Protocol Reference](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Uicubic ingparameters 클래스 참조](https://developer.apple.com/reference/uikit/uicubictimingparameters) 및 [ 자세한 내용은 UISpringTimingParameter 클래스 참조를 참조](https://developer.apple.com/reference/uikit/uispringtimingparameters) 하세요.
+- 완전히 대화형으로 제공 되는 새로운 개체 기반 애니메이션 지원이 추가 되 고 van이 제스처에 연결 됩니다. Pleas 请参阅 Apple 的[UIViewAnimating 协议参考](https://developer.apple.com/reference/uikit/uiviewanimating)、 [UIViewPropertyAnimator 类引用](https://developer.apple.com/reference/uikit/uiviewpropertyanimator)、 [UITimingCurveProvider 协议参考](https://developer.apple.com/reference/uikit/uitimingcurveprovider)、 [UICubicTimingParameters 类引用](https://developer.apple.com/reference/uikit/uicubictimingparameters)和有关详细信息, 请参阅 [UISpringTimingParameter 类](https://developer.apple.com/reference/uikit/uispringtimingparameters)。
 - 새 `UIPreviewInteraction` 및 `UIPreviewInteractionDelegate`를 사용 하 여 앱이 피킹 (peeking) 및 pop 작업을 위한 사용자 지정 인터페이스를 제공할 수 있습니다.
 - 새 `UIAccessibilityCustomRotor` 클래스를 사용 하면 앱에서 음성 전달 등의 보조 기술에 대 한 사용자 지정 컨텍스트별 기능을 제공할 수 있습니다.
 - `UIAccessibilityIsAssistiveTouchRunning` 및 `UIAccessibilityAssistiveTouchStatusDidChangeNotification` 기호를 사용 하 여 AssistiveTouch 사용 여부를 확인 합니다.

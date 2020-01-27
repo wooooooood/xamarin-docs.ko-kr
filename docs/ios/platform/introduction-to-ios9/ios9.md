@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: edc778879aa88d420f41bd2b7b8e15b6d80b5939
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e12bac1f65981776a7bd650cbc840cc0cdf72892
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728267"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725160"
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 호환성
 
@@ -21,9 +21,7 @@ _IOS 9 기능을 앱에 바로 추가할 계획이 없더라도 최신 버전의
 > [!IMPORTANT]
 > 이 페이지의 정보는 ios 9 호환성에 대 한 업데이트를 아직 제출 하지 않은 iOS 8 또는 이전 버전을 대상으로 하는 앱 스토어에 이미 앱이 있는 고객을 위한 것입니다. 최신 버전의 Xcode 7 및 Xamarin. iOS 9를 이미 사용 중인 경우에는 [ios 9 소개](~/ios/platform/introduction-to-ios9/index.md)를 참조 하세요.
 
-첫 번째 iOS 9 베타 버전이 표시 되 면 iOS 9에서 오래 된 앱을 시작할 수 없는 것으로 확인 된 이전 버전의 Xamarin에 대 한 두 가지 문제를 확인 했습니다.
-
-이러한 두 가지 문제 ( [포럼에 자세히 설명](https://forums.xamarin.com/discussion/comment/131529/#Comment_131529))는 다음과 같습니다.
+첫 번째 iOS 9 베타 버전이 표시 되 면 iOS 9에서 이전 앱을 시작할 수 없는 것으로 확인 된 이전 버전의 Xamarin에 대 한 두 가지 문제를 확인 했습니다.
 
 - IOS 8 또는 이전 버전의 앱 빌드는 32 비트 장치 ( [Unified API](~/cross-platform/macios/unified/index.md)로 빌드된 앱 포함)에서 시작할 수 없습니다.
 - 전체 경로를 지정 하지 않고 P/Invoke가 실패 합니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: 5ff315270646389d67b505eef04c1aa11d0029c1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f849ad9d722e297438b3960f74953ff922be0e56
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028260"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725289"
 ---
 # <a name="introduction-to-watchos-3"></a>watchOS 3 소개
 
@@ -79,7 +79,7 @@ watchOS 3은 사용자가 시계 화면에서 정보를 한눈에 볼 수 있도
 - 사용자는 시계 화면에서 바로 복잡 한 방식으로 앱을 신속 하 게 시작할 수 있습니다.
 - 응용 프로그램의 감시에 대 한 문제 중 하나가 발생 하면 시스템은 백그라운드에서 앱을 시작 하 고 메모리에 유지 하 고 업데이트할 추가 시간을 제공 하는 즉시 시작 상태로 앱을 유지 합니다.
 - 매우 복잡 한 일은 하루에 최소 50의 푸시 업데이트를 보장 합니다.
-- 앱에 복잡 한 내용이 포함 되어 있으면 Apple Watch 얼굴 갤러리에 표시 됩니다 (자세한 내용은 갤러리 설명서 [에](https://developer.apple.com/documentation/clockkit/adding_complications_to_the_gallery) 대 한 자세한 내용은 Apple의 추가 기능 참조).
+- 앱이 복잡 한 경우에는 Apple Watch 얼굴 갤러리에서 제공 됩니다.
 
 WatchOS 3의 ClockKit 프레임 워크에는 이제 [CLKComplicationTemplateExtraLargeColumnsText](https://developer.apple.com/reference/clockkit/clkcomplicationtemplateextralargecolumnstext) 및 [CLKComplicationTemplateExtraLargeRingImage](https://developer.apple.com/reference/clockkit/clkcomplicationtemplateextralargeringimage)와 같은 매우 많은 복잡 한 새로운 템플릿이 포함 되어 있습니다. 또한 지역화 가능한 텍스트를 만들려면 [Clktextprovider](https://developer.apple.com/reference/clockkit/clktextprovider) 클래스의 새 메서드를 사용 합니다.
 
@@ -96,7 +96,7 @@ watchOS 3에는 이전에 사용할 수 없었던 기존 Apple 프레임 워크�
 - **Avfoundation** -오디오를 관리 하 고 재생 합니다.
 - **Cloudkit** -watch 앱과 iCloud 컨테이너 간에 데이터를 이동 합니다.
 - **핵심 오디오** -오디오 스트림을 나타내는 데이터 형식, 복잡 한 버퍼 및 시간 값을 관리 하는 데 사용할 수 있습니다.
-- **GameKit** -소셜 게임을 만듭니다.
+- **Gamekit** -创建社交游戏。
 
 <a name="Proactive-Suggestions" />
 
@@ -138,7 +138,7 @@ WatchOS 3에 도입 된 사용자 알림 프레임 워크는 Apple Watch에 대 
 
 ## <a name="watch-connectivity-framework-enhancements"></a>연결 프레임 워크의 향상 된 기능 보기
 
-[WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) 클래스의 new `HasContentPending`속성은 세션이 처리 해야 하는 배경에 데이터를 수신 했음을 나타냅니다. `RemainingComplicationUserInfoTransfers` 속성은 iOS 앱이 watchOS의 복잡 한 업데이트를 업데이트할 수 있는 남은 시간을 반환 합니다.
+[WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) 类的新`HasContentPending`属性指示会话已在后台接收需要处理的数据。 `RemainingComplicationUserInfoTransfers` 속성은 iOS 앱이 watchOS의 복잡 한 업데이트를 업데이트할 수 있는 남은 시간을 반환 합니다.
 
 자세히 알아보려면 [백그라운드 작업](~/ios/watchos/platform/background-tasks.md) 가이드를 참조 하세요.
 
@@ -151,7 +151,7 @@ watchOS 3에는 다음과 같은 WatchKit 프레임 워크에 대 한 몇 가지
 - 앱은 새 [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) 클래스를 사용 하 여 Digital Crown 상태를 가져올 수 있으며, 사용자가 [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) 클래스를 사용 하 여 ccs (crown를 회전 하면 업데이트를 받을 수 있습니다.
 - 이제 [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) 클래스에 앱의 런타임 상태를 추적 하는 데 사용할 수 있는 `ApplicationState` 메서드 및 [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) 상수가 포함 됩니다. 또한 `WKExtension`에서는 백그라운드 작업을 예약 하는 데 사용할 수 있는 두 가지 새로운 메서드를 제공 합니다.
 - 이제 [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) 에는 새로운 `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` 및 `HandleBackgroundTasks` 메서드가 포함 되어 앱의 상태 변경을 모니터링 하 고 백그라운드 작업 업데이트를 처리 합니다.
-- Watch 앱에 다음과 같은 유형의 제스처 인식을 제공 하기 위해 새 [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) 클래스가 추가 되었습니다. [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) 및 [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer)입니다.
+- Watch 앱에 [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) 및 [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer)유형의 제스처 인식을 제공 하기 위해 새 [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) 클래스가 추가 되었습니다.
 - 새 [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) 클래스는 모든 HomeKit 연결 된 IP 카메라에 대 한 인터페이스를 제공 합니다.
 - 새 [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) 클래스를 사용 하면 앱에서 사용자가 탭 할 때 실행 중인 동영상으로 교체 되는 영화 "포스터"를 표시할 수 있습니다.
 - 새 [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) 클래스를 사용 하면 앱에서 UI에 Apple Pay 단추를 표시 하 여 탭 할 때 지불 요청을 시작할 수 있습니다.

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: e0ab824eff4c8bb18a2bd1998862df433cdade1a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 84d235bb7c6874255ea025ff5897e150bd6f023b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73011100"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724685"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.ios의 앱 전송 보안
 
 _ATS (app Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간에 보안 연결을 적용 합니다._
 
-이 문서에서는 앱 전송 보안이 iOS 9 앱에서 적용 하는 보안 변경 내용 및이에 해당 하는 [ATS 구성 옵션](#config) 을 [설명](#xamarinsupport)하 고 [ATS를 옵트아웃](#optout) 하는 방법을 설명 합니다. 필요한 경우 ATS. ATS은 기본적으로 사용 하도록 설정 되어 있으므로 안전 하지 않은 모든 인터넷 연결이 iOS 9 앱에서 예외를 발생 시킵니다 (명시적으로 허용 하지 않는 한).
+이 문서에서는 앱 전송 보안이 iOS 9 앱에 적용 하는 보안 변경 내용 및이에 해당 하는 [ATS 구성 옵션](#config) 에 [대해 설명](#xamarinsupport)하 고, 필요한 경우 ATS ATS를 [옵트아웃](#optout) 하는 방법을 설명 합니다. ATS은 기본적으로 사용 하도록 설정 되어 있으므로 안전 하지 않은 모든 인터넷 연결이 iOS 9 앱에서 예외를 발생 시킵니다 (명시적으로 허용 하지 않는 한).
 
 ## <a name="about-app-transport-security"></a>앱 전송 보안 정보
 
@@ -93,11 +93,11 @@ IOS 앱에서 사용 하는 HTTPClient 구현을 설정 하려면 **솔루션 �
 
 관리 되는 처리기는 이전 버전의 Xamarin.ios와 함께 제공 되는 완전히 관리 되는 HttpClient 처리기 이며 기본 처리기입니다.
 
-들
+장점:
 
 - 이는 Microsoft .NET 및 이전 버전의 Xamarin과 가장 호환 됩니다.
 
-단점
+단점:
 
 - IOS와 완전히 통합 되지 않습니다 (예: TLS 1.0로 제한 됨).
 - 일반적으로 기본 Api 보다 훨씬 느립니다.
@@ -107,12 +107,12 @@ IOS 앱에서 사용 하는 HTTPClient 구현을 설정 하려면 **솔루션 �
 
 CFNetwork 기반 처리기는 네이티브 `CFNetwork` 프레임 워크를 기반으로 합니다.
 
-들
+장점:
 
 - 는 더 나은 성능과 더 작은 실행 파일 크기를 위해 기본 API를 사용 합니다.
 - TLS 1.2와 같은 최신 표준에 대 한 지원을 추가 합니다.
 
-단점
+단점:
 
 - IOS 6 이상이 필요 합니다.
 - WatchOS에서 사용할 수 없습니다.
@@ -122,12 +122,12 @@ CFNetwork 기반 처리기는 네이티브 `CFNetwork` 프레임 워크를 기�
 
 NSUrlSession 기반 처리기는 네이티브 `NSUrlSession` API를 기반으로 합니다.
 
-들
+장점:
 
 - 는 더 나은 성능과 더 작은 실행 파일 크기를 위해 기본 API를 사용 합니다.
 - TLS 1.2와 같은 최신 표준에 대 한 지원을 추가 합니다.
 
-단점
+단점:
 
 - IOS 7 이상이 필요 합니다.
 - 일부 HttpClient 기능 및 옵션을 사용할 수 없습니다.
@@ -136,7 +136,7 @@ NSUrlSession 기반 처리기는 네이티브 `NSUrlSession` API를 기반으로
 
 직접 또는 iOS 9의 웹 보기에서 인터넷에 연결 하려고 할 때 다음과 같은 형식으로 오류가 발생할 수 있습니다.
 
-> 앱 전송 보안이 안전 하지 않으므로 일반 텍스트 HTTP (http://www.-the-blocked-domain.com) 리소스 로드를 차단 했습니다. 임시 예외는 앱의 info.plist 파일을 통해 구성할 수 있습니다.
+> 앱 전송 보안이 안전 하지 않으므로 일반 텍스트 HTTP (`http://www.-the-blocked-domain.com`) 리소스 로드를 차단 했습니다. 임시 예외는 앱의 info.plist 파일을 통해 구성할 수 있습니다.
 
 IOS9에서 ATS (App Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 합니다. 또한 ATS는 TLS 버전 1.2을 사용 하 여 암호화 하기 위해 `HTTPS` 프로토콜 및 고급 API 통신을 사용 하는 통신이 필요 합니다.
 
@@ -239,7 +239,7 @@ Mac용 Visual Studio 내에서 **솔루션 탐색기**에서 `Info.plist` 파일
 [![](ats-images/ats02.png "The Source view of the Info.plist file")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는 `NSAllowsArbitraryLoads`를 사용 하 여 ATS를 완전히 켜는 대신 `NSExceptionDomains`를 사용 하 여 도메인을 **예외로 입력 해야** 합니다. `NSAllowsArbitraryLoads`은 심각한 응급 상황 에서만 사용 해야 합니다.
+> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는 `NSAllowsArbitraryLoads`를 사용 하 여 ATS를 완전히 켜는 대신 `NSExceptionDomains`를 사용 하 여 도메인을 **예외로 입력 해야** 합니다. `NSAllowsArbitraryLoads` 仅应在极端的紧急情况下使用。
 
 ATS를 사용 하지 않도록 설정 하는 것은 보안 연결로 전환 하는 것이 불가능 하거나 불가능 한 경우 마지막 수단 _으로만_ 사용 해야 합니다.
 

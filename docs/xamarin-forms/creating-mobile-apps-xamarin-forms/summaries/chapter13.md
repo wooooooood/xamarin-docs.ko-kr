@@ -1,210 +1,210 @@
 ---
-title: 요약 13 장입니다. 비트맵
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 13 장입니다. 비트맵
+title: 第 13 章的摘要。 비트맵
+description: 使用 Xamarin.Forms 创建移动应用： 摘要的第 13 章。 비트맵
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e4746ed94a008d382ce15bb9cd7c52365d9ba574
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61334619"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725530"
 ---
-# <a name="summary-of-chapter-13-bitmaps"></a>요약 13 장입니다. 비트맵
+# <a name="summary-of-chapter-13-bitmaps"></a>第 13 章的摘要。 비트맵
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
-> [!NOTE] 
-> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
+> [!NOTE]
+> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
 
-Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) 비트맵을 표시 하는 요소입니다. 모든 Xamarin.Forms 플랫폼 JPEG, PNG, GIF 및 BMP 파일 형식을 지원합니다.
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image)元素显示位图。 所有 Xamarin.Forms 平台都支持的 JPEG、 PNG、 GIF 和 BMP 文件格式。
 
-Xamarin.Forms에서 비트맵 네 곳에서 제공합니다.
+在 Xamarin.Forms 中的位图来自四个位置：
 
-- URL에 지정 된 대로 웹을 통해
-- 공유 라이브러리에 리소스로 포함
-- 플랫폼 응용 프로그램 프로젝트에 리소스로 포함
-- .NET에서 참조할 수 있는 어디서 `Stream` 개체를 포함 하 여 `MemoryStream`
+- 通过指定 URL 的 web
+- 作为在共享库中的资源嵌入
+- 作为资源嵌入在平台应用程序项目
+- 从任何位置可由.NET 引用`Stream`对象，其中包括 `MemoryStream`
 
-공유 라이브러리에서 비트맵 리소스 플랫폼 독립적인은 플랫폼 프로젝트에서는 비트맵 리소스가 플랫폼 마다 다릅니다.
-
-> [!NOTE] 
-> 책의 텍스트는.NET Standard 라이브러리 바뀌었습니다는 이식 가능한 클래스 라이브러리에 대 한 참조를 만듭니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
-
-비트맵을 설정 하 여 지정 합니다 [ `Source` ](xref:Xamarin.Forms.Image.Source) 의 속성 `Image` 형식의 개체에 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), 세 개의 파생을 사용 하 여 추상 클래스:
-
-- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) 비트맵을 기반으로 웹을 통해 액세스를 `Uri` 개체 집합 해당 [ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri) 속성
-- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 로 설정 하는 폴더 및 파일 경로에 따라 플랫폼 응용 프로그램 프로젝트에 저장 하는 비트맵에 액세스 하기 위한 해당 [ `File` ](xref:Xamarin.Forms.FileImageSource.File) 속성
-- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) .NET을 사용 하 여 비트맵을 로드 하기 위한 `Stream` 를 반환 하 여 지정 된 개체를 `Stream` 에서 `Func` 로 해당 [ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream) 속성
-
-다음 정적 메서드를 사용할 수 있습니다 또는 (및 자주)는 `ImageSource` 클래스를 반환 하는 모든 `ImageSource` 개체:
-
-- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 비트맵을 기반으로 웹을 통해 액세스를 `Uri` 개체
-- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) PCL; 응용 프로그램에 포함 리소스로 저장 된 비트맵에 액세스 하기 위한 [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type)) 하거나 [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly)) 다른 원본 어셈블리에서 비트맵을 액세스 하려면
-- [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) 플랫폼 응용 프로그램 프로젝트에서 비트맵에 액세스 하기 위한
-- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) 에 따라 비트맵을 로드 한 `Stream` 개체
-
-동등한 옵션이 없습니다 클래스는 `Image.FromResource` 메서드. `UriImageSource` 클래스는 캐싱을 제어 하는 경우에 유용 합니다. `FileImageSource` 클래스는 XAML에서 유용 합니다. `StreamImageSource` 비동기 로딩을 유용 `Stream` 반면 개체 `ImageSource.FromStream` 동기화 됩니다.
-
-## <a name="platform-independent-bitmaps"></a>플랫폼 독립적 비트맵
-
-합니다 [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) 사용 하 여 웹을 통해 비트맵을 로드 하는 프로젝트 `ImageSource.FromUri`합니다. `Image` 로 설정 된를 `Content` 의 속성을 `ContentPage`이므로 페이지의 크기로 제한 됩니다. 제한 된 비트맵의 크기에 관계 없이 `Image` 요소는 해당 컨테이너의 크기를 채우도록 확장 하 고 비트맵 내에서 최대 크기에 표시 되는 `Image` 비트맵의 가로 세로 비율을 유지 하면서 요소입니다. 영역의 합니다 `Image` 외에 비트맵으로 색이 지정 될 수 있습니다 [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor)합니다.
-
-[ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) 예제와 유사 하지만 간단히 설정는 `Source` 속성을 URL입니다. 변환에서 처리 되는 [ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter) 클래스입니다.
-
-### <a name="fit-and-fill"></a>맞춤 및 채우기
-
-설정 하 여 비트맵은 늘이는 방법을 제어할 수 있습니다.는 [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) 의 속성을 `Image` 의 다음 멤버 중 하나에 [ `Aspect` ](xref:Xamarin.Forms.Aspect) 열거형:
-
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): 가로 세로 비율 (기본값)를 준수 합니다.
-- [`Fill`](xref:Xamarin.Forms.Aspect.Fill): 영역을 채우는, 가로 세로 비율을 고려 하지 않습니다
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill): 영역을 채우는 있지만 비트맵의 부분을 자르기 하면 가로 세로 비율을 고려 합니다.
-
-### <a name="embedded-resources"></a>포함된 리소스
-
-PCL, 또는 PCL의 폴더에 비트맵 파일을 추가할 수 있습니다. 지정 된 **빌드 작업** 의 **EmbeddedResource**합니다. 합니다 [ **ResourceBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode) 샘플을 사용 하는 방법에 설명 `ImageSource.FromResource` 파일을 로드 합니다. 메서드에 전달 된 리소스 이름 뒤에 선택적 폴더 이름 뒤에 점, 및 파일 이름 뒤에 점, 어셈블리 이름으로 구성 됩니다.
-
-프로그램 집합을 `VerticalOptions` 및 `HorizontalOptions` 의 속성을 `Image` 에 `LayoutOptions.Center`, 그러면는 `Image` 비제한 요소. `Image` 비트맵은 동일한 크기 및:
-
-- IOS 및 Android에는 `Image` 비트맵의 픽셀 크기입니다. 비트맵 픽셀과 화면의 픽셀 간에 일대일 매핑이 있습니다.
-- 유니버설 Windows 플랫폼에는 `Image` 장치 독립적 단위 비트맵의 픽셀 크기입니다. 대부분의 장치에서 각 비트맵 픽셀 여러 화면 픽셀을 차지합니다.
-
-합니다 [ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) put 샘플을 `Image` 세로에서 `StackLayout` XAML에서. 명명 된 태그 확장 [ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) XAML에 포함 된 리소스를 참조 하는 데 도움이 됩니다. 이 클래스는에서 어셈블리에서 리소스를 로드만 있는 라이브러리에 배치 될 수 없습니다.
-
-### <a name="more-on-sizing"></a>크기 조정에 대 한 자세한 내용
-
-크기 비트맵 모든 플랫폼 간에 일관 되 게 하는 것이 좋습니다.
-시험해 **StackedBitmap**를 설정할 수 있습니다를 `WidthRequest` 에 `Image` 세로에서 요소 `StackLayout` 크기 수 있지만 플랫폼 간에 일관 되도록이 기술을 사용 하 여 크기를 줄일만 수입니다.
-
-설정할 수도 있습니다는 `HeightRequest` 이미지 수 있도록 플랫폼에서 일관 된 크기 있지만 비트맵의 너비를 제한 된이 방법의 다양성을 제한 합니다. 세로 이미지 `StackLayout`, `HeightRequest` 하지 않아야 합니다.
-
-장치 독립적 단위에서 phone 너비 보다 더 광범위 한 비트맵을 시작 하 여 설정 하는 가장 좋은 방법은 `WidthRequest` 장치 독립적 단위에서 원하는 너비입니다. 에 설명 되어이 [ **DeviceIndBitmapSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DeviceIndBitmapSize) 샘플입니다.
-
-합니다 [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty) Lewis Carroll의 7 장 표시 *Wonderland Alice의 탐험* John Tenniel 하 여 원래 그림을 사용 하 여:
-
-[![Mad tea 파티의 삼중 스크린 샷](images/ch13fg16-small.png "Mad Hatters Tea 타사 책 텍스트")](images/ch13fg16-large.png#lightbox "Mad Hatters Tea 타사 책 텍스트")
-
-### <a name="browsing-and-waiting"></a>검색 및 대기
-
-합니다 [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) 샘플 Xamarin 웹 사이트에 저장 하는 스톡 이미지를 탐색할 수 있습니다. .NET을 사용 하 여 [ `WebRequest` ](xref:System.Net.WebRequest) 비트맵의 목록 사용 하 여 JSON 파일을 다운로드 하는 클래스입니다.
+共享库中的位图资源是独立于平台的而平台项目中的位图资源是特定于平台的。
 
 > [!NOTE]
-> Xamarin.Forms 프로그램을 사용할지 [ `HttpClient` ](xref:System.Net.Http.HttpClient) 대신 [ `WebRequest` ](xref:System.Net.WebRequest) 인터넷을 통해 파일에 액세스 합니다. 
+> 本书的文本，就对可移植类库，它已替换为.NET Standard 库的引用。 本书中的所有示例代码已都转换为使用.NET 标准库。
 
-프로그램을 사용 하는 [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) 진행을 나타냅니다. 각 비트맵 로드의 읽기 전용 [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) 속성을 `Image` 는 `true`합니다. 합니다 `IsLoading` 속성이 있으므로 바인딩 가능한 속성으로 지원 되는 `PropertyChanged` 해당 속성이 변경 될 때 이벤트가 발생 합니다. 프로그램이이 이벤트 처리기를 연결 하 고 현재 설정을 사용 `IsLoaded` 설정 하는 [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) 의 속성을 `ActivityIndicator`합니다.
+通过设置指定的位图[ `Source` ](xref:Xamarin.Forms.Image.Source)的属性`Image`对象的类型[ `ImageSource` ](xref:Xamarin.Forms.ImageSource)，一个带有三个派生类抽象类：
 
-## <a name="streaming-bitmaps"></a>스트리밍 비트맵
+- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) 用于通过基于 web 访问位图`Uri`对象设置为其[ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri)属性
+- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 用于访问存储在平台应用程序项目中的位图基于文件夹和文件路径设置为其[ `File` ](xref:Xamarin.Forms.FileImageSource.File)属性
+- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) 用于加载使用.NET 的位图`Stream`返回由指定的对象`Stream`从`Func`设置为其[ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream)属性
 
-합니다 `ImageSource.FromStream` 메서드를 만듭니다를 `ImageSource` .NET 기반 `Stream`입니다. 메서드에 전달 해야 합니다는 `Func` 반환 하는 개체를 `Stream` 개체입니다.
+或者 （和更常见的） 可以使用的以下静态方法`ImageSource`类中，将返回的所有`ImageSource`对象：
 
-### <a name="accessing-the-streams"></a>스트림 액세스
+- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) 用于通过基于 web 访问位图`Uri`对象
+- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) 用于访问存储为 PCL; 在应用程序中嵌入的资源的位图[ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type))或[ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly))访问另一个源程序集中的位图
+- [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) 用于访问从平台应用程序项目的位图
+- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) 用于加载位图基于`Stream`对象
 
-[ **BitmapStreams** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/BitmapStreams) 샘플을 사용 하는 방법에 설명 합니다 `ImaageSource.FromStream` 포함 리소스로 저장 비트맵을 로드 하 고 웹에서 비트맵을 로드 하는 메서드.
+没有类等效项的`Image.FromResource`方法。 `UriImageSource`类是很有用，如果您需要缓存进行控制。 `FileImageSource`类是在 XAML 中很有用。 `StreamImageSource` 对于异步加载很有用`Stream`对象，而`ImageSource.FromStream`是同步的。
 
-### <a name="generating-bitmaps-at-run-time"></a>런타임에 비트맵 생성
+## <a name="platform-independent-bitmaps"></a>独立于平台的位图
 
-모든 Xamarin.Forms 플랫폼 지원 코드에서 생성 하 고 다음 저장 하는 작업을 쉽게는 압축 되지 않은 BMP 파일 형식으로는 `MemoryStream`합니다. 이 방법을 사용 하면 알고리즘 방식으로 런타임에 비트맵 만들기에서 구현 되는 [ `BmpMaker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs) 클래스를 **Xamrin.FormsBook.Toolkit** 라이브러리입니다.
+[ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode)项目将位图加载通过 web 使用`ImageSource.FromUri`。 `Image`元素设置为`Content`属性的`ContentPage`，因此其被限制到页的大小。 而不考虑位图的大小，受约束`Image`元素拉伸到其容器的大小，并且在其最大大小显示位图`Image`元素同时保持位图的长宽比。 区域`Image`更高版本可以具有颜色位图[ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor)。
 
-"수행 직접" [ **DiyGradientBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap) 샘플의 사용법을 보여 줍니다. `BmpMaker` 그라데이션 이미지를 사용 하 여 비트맵을 만들 수 있습니다.
+[ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml)示例类似，但只需设置`Source`到 URL 的属性。 就会处理转换[ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter)类。
 
-## <a name="platform-specific-bitmaps"></a>플랫폼별 비트맵
+### <a name="fit-and-fill"></a>配合和填充
 
-모든 Xamarin.Forms 플랫폼 플랫폼 응용 프로그램 어셈블리에서 비트맵을 저장할 수 있습니다. 이러한 플랫폼 비트맵 형식의 Xamarin.Forms 응용 프로그램에 의해 가져오면 [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)합니다. 에 대 한 사용:
+您可以控制如何通过设置拉伸位图[ `Aspect` ](xref:Xamarin.Forms.Image.Aspect)的属性`Image`的以下成员之一[ `Aspect` ](xref:Xamarin.Forms.Aspect)枚举：
 
-- 합니다 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 속성 [`MenuItem`](xref:Xamarin.Forms.MenuItem)
-- 합니다 [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) 속성 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
-- 합니다 [ `Image` ](xref:Xamarin.Forms.Button) 속성 `Button`
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)： 尊重纵横比 （默认值）
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill)： 填充区域，不会接受纵横比
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)： 填充区域，但会考虑通过裁剪位图的一部分来实现的纵横比，
 
-플랫폼 어셈블리에는 이미 아이콘 및 시작 화면에 대 한 비트맵에
+### <a name="embedded-resources"></a>嵌入的资源
 
-- IOS 프로젝트에서에 **리소스** 폴더
-- 하위 폴더에 Android 프로젝트에는 **리소스** 폴더
-- Windows 프로젝트에서에 **자산** 폴더 (Windows 플랫폼은 해당 폴더에 비트맵을 제한 하지 않습니다) 있음
+可以将位图文件添加到 PCL，或在 pcl 中的文件夹。 为其提供**生成操作**的**EmbeddedResource**。 [ **ResourceBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ResourceBitmapCode)示例演示如何使用`ImageSource.FromResource`加载文件。 传递给方法的资源名称包含的程序集名称后, 跟句点后, 跟可选的文件夹名称和句点后, 跟文件名。
 
-합니다 [ **PlatformBitmaps** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/PlatformBitmaps) 샘플 코드를 사용 하 여 플랫폼 응용 프로그램 프로젝트에서 아이콘을 표시 합니다.
+程序集`VerticalOptions`并`HorizontalOptions`的属性`Image`到`LayoutOptions.Center`，这使得`Image`不受约束的元素。 `Image`和位图都相同的大小：
 
-### <a name="bitmap-resolutions"></a>비트맵 해상도
+- 在 iOS 和 Android，`Image`是位图的像素大小。 没有位图像素和屏幕像素之间的一对一映射。
+- 在通用 Windows 平台上，`Image`是以与设备无关单位位图的像素大小。 大多数设备上，每个位图像素占用多个屏幕像素。
 
-모든 플랫폼에 다른 장치 해상도 대해 비트맵 이미지의 여러 버전을 저장할 수 있습니다. 런타임 시 적절 한 버전 화면 장치 해상도에 따라 로드 됩니다.
+[ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap)示例 put`Image`中垂直`StackLayout`在 XAML 中。 名为标记扩展[ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs)有助于引用 XAML 中嵌入的资源。 此类只从它的程序集加载资源在虚拟机所在，因此它不能放置在库中。
 
-Ios의 경우 이러한 비트맵 파일 이름에 접미사 구분 됩니다.
+### <a name="more-on-sizing"></a>有关调整大小的详细信息
 
-- 160 DPI 장치 (장치 독립적 단위 1 픽셀)에 대 한 접미사 없음
-- '@2x' 320 DPI 장치 (2는 DIU 픽셀)에 대 한 접미사
-- '@3x' 480 DPI 장치 (3는 DIU 픽셀)에 대 한 접미사
+通常是希望在所有平台之间一致地大小位图。
+试验**StackedBitmap**，可以设置`WidthRequest`上`Image`元素中垂直`StackLayout`使大小保持一致之间平台，但您只能减少使用这种方法的大小。
 
-1 인치의 사각형으로 표시 하기 위한 비트맵은 세 가지 버전에 존재 합니다.
+您还可以设置`HeightRequest`以使图像大小一致的平台上，但约束位图的宽度将限制此技术的用途广泛。 图像的垂直`StackLayout`，`HeightRequest`应避免使用。
 
-- 160 픽셀 사각형에서 MyImage.jpg
-- MyImage@2x.jpg 320 픽셀 사각형
-- MyImage@3x.jpg 480 픽셀 사각형
+最好的方法是开始使用比电话宽度以与设备无关单位更广的位图，并将设置`WidthRequest`到所需的宽度以与设备无关单位。 了这一点[ **DeviceIndBitmapSize** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DeviceIndBitmapSize)示例。
 
-이 비트맵 MyImage.jpg으로 프로그램 참조 하지만 적절 한 버전의 화면 해상도에 따라 런타임에 검색 됩니다. 제한 되지 않은, 비트맵은 항상 160 장치 독립적 단위에서 렌더링 됩니다.
+[ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/MadTeaParty)显示 Lewis Carroll 的第 7 章*Wonderland Alice 的冒险*与 John Tenniel 通过原始图例：
 
-Android 비트맵의 다양 한 하위 폴더에 저장 합니다 **리소스** 폴더:
+[![매드 tea 파티의 삼중 스크린샷](images/ch13fg16-small.png "매드 Hatters Tea 파티 서적 텍스트")](images/ch13fg16-large.png#lightbox "매드 Hatters Tea 파티 서적 텍스트")
 
-- drawable-ldpi (낮은 DPI) 120 DPI 장치 (0.75를 DIU 픽셀)에 대 한
-- drawable-mdpi (중간) (160DPI 장치용 (DIU는 1 픽셀)
-- drawable-hdpi (높음) 240 DPI 장치 (1.5는 DIU 픽셀)에 대 한
-- drawable-xhdpi (매우 높음) 320 DPI 장치 (2는 DIU 픽셀)에 대 한
-- drawable-xxhdpi (추가 매우 높은) 480 DPI 장치 (3는 DIU 픽셀)에 대 한
-- drawable-xxxhdpi (세 개의 추가 최대값) 640 DPI 장치 (4는 DIU 픽셀)에 대 한
+### <a name="browsing-and-waiting"></a>浏览和等待
 
-정사각형 1 인치에서 렌더링 되는 데는 비트맵에 대 한 비트맵의 다양 한 버전에는 이름은 같지만 다른 크기로 있고 이러한 폴더에 저장:
+[ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser)示例允许用户浏览存储在 Xamarin 网站上的库存映像。 它使用.NET [ `WebRequest` ](xref:System.Net.WebRequest)类下载包含位图的列表的 JSON 文件。
 
-- drawable-ldpi/MyImage.jpg 120 픽셀 사각형
-- drawable-mdpi/MyImage.jpg 160 픽셀 사각형
-- drawable-hdpi/MyImage.jpg 240 픽셀 사각형
-- drawable-xhdpi/MyImage.jpg 320 픽셀 사각형
-- drawable-xxhdpi/MyImage.jpg 480 픽셀 사각형
-- drawable-xxxhdpi/MyImage.jpg 640 픽셀 사각형
+> [!NOTE]
+> Xamarin.Forms 程序应使用[ `HttpClient` ](xref:System.Net.Http.HttpClient)而非[ `WebRequest` ](xref:System.Net.WebRequest)用于通过 internet 访问的文件。
 
-비트맵은 항상 160 장치 독립적 단위에 렌더링 합니다. (표준 Xamarin.Forms 솔루션 템플릿을 포함 hdpi, xhdpi, 및 xxhdpi 폴더.)
+该程序使用[ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator)以指示内容怎么回事。 加载每个位图，只读[ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading)的属性`Image`是`true`。 `IsLoading`属性由可绑定的属性，因此支持`PropertyChanged`该属性发生更改时触发事件。 该程序将一个处理程序附加到此事件，并使用当前的设置`IsLoaded`若要设置[ `IsRunning` ](xref:Xamarin.Forms.ActivityIndicator.IsRunning)属性`ActivityIndicator`。
 
-UWP 프로젝트에 구성 된 장치 독립적 단위 당 픽셀 수 크기 조정 비율을 백분율로 예를 들어 비트맵 이름 지정 체계를 지원 합니다.
+## <a name="streaming-bitmaps"></a>流式处理位图
 
-- 320 픽셀 사각형 MyImage.scale 200.jpg
+`ImageSource.FromStream`方法创建`ImageSource`基于.NET `Stream`。 必须传递方法`Func`对象，它返回`Stream`对象。
 
-일부 백분율에만 유효 합니다. 이 책에 대 한 샘플 프로그램의 이미지만 포함 **확장 200** 접미사 하지만 포함 하는 현재 Xamarin.Forms 솔루션 템플릿을 **확장-100**를 **확장 125**, **배율을 150**, 및 **확장-400**합니다.
+### <a name="accessing-the-streams"></a>访问流
 
-플랫폼 프로젝트에 비트맵을 추가 하는 경우는 **빌드 작업** 이어야 합니다.
+[ **BitmapStreams** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/BitmapStreams)示例演示如何使用`ImaageSource.FromStream`方法来加载位图存储为嵌入的资源，并通过 web 加载位图。
+
+### <a name="generating-bitmaps-at-run-time"></a>在运行时生成的位图
+
+所有 Xamarin.Forms 平台都支持未压缩的 BMP 文件格式，这是轻松地在代码中构造，然后将存储在`MemoryStream`。 此方法允许从算法上在运行时，创建位图中实现[ `BmpMaker` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs)类**Xamrin.FormsBook.Toolkit**库。
+
+"执行它自己" [ **DiyGradientBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/DiyGradientBitmap)示例演示如何使用`BmpMaker`渐变映像创建一个位图。
+
+## <a name="platform-specific-bitmaps"></a>特定于平台的位图
+
+所有 Xamarin.Forms 平台都允许将位图存储在平台应用程序程序集。 这些平台位图时检索到的 Xamarin.Forms 应用程序，属于类型[ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource)。 可将其用于：
+
+- [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon)属性 [`MenuItem`](xref:Xamarin.Forms.MenuItem)
+- [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon)属性 [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- [ `Image` ](xref:Xamarin.Forms.Button)属性 `Button`
+
+平台程序集已经包含图标和初始屏幕的位图：
+
+- 在 iOS 项目中，在**资源**文件夹
+- 在 Android 项目中的子文件夹**资源**文件夹
+- 在 Windows 项目中，在**资产**文件夹 （尽管 Windows 平台不到该文件夹会限制位图）
+
+[ **PlatformBitmaps** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/PlatformBitmaps)示例使用代码以显示来自平台应用程序项目的图标。
+
+### <a name="bitmap-resolutions"></a>位图的解决方法
+
+所有平台都允许存储不同的设备分辨率的位图图像的多个版本。 在运行时，正确的版本加载基于设备屏幕的分辨率。
+
+在 iOS 上，通过在文件名上后缀区分这些位图：
+
+- 没有后缀为 160 DPI 设备 （1 像素到独立于设备的的单元） 的
+- @2x后缀为 320 DPI 设备 （DIU 到 2 的像素为单位）
+- @3x后缀为 480 DPI 设备 （DIU 到 3 个像素为单位）
+
+应显示为一个平方英寸的位图将存在于三个版本：
+
+- 在 160 像素正方形 MyImage.jpg
+- MyImage@2x.jpg 在为 320 像素正方形
+- MyImage@3x.jpg 在 480 像素正方形
+
+程序将引用此位图作为 MyImage.jpg，但在基于屏幕的分辨率的运行时检索的适当版本。 不受约束，位图将始终呈现在 160 设备无关的单位。
+
+对于 Android，位图存储中的各个子文件夹**资源**文件夹：
+
+- drawable-ldpi (低 DPI) 为 120 DPI 设备 （到 DIU 0.75 的像素为单位）
+- drawable-mdpi （中） 的 160 DPI 设备 （1 像素到 DIU）
+- 可绘制的 hdpi （高） 为 240 DPI 设备 （DIU 到 1.5 的像素为单位）
+- drawable-xhdpi （高） 为 320 DPI 设备 （DIU 到 2 的像素为单位）
+- drawable-xxhdpi （额外高） 为 480 DPI 设备 （DIU 到 3 个像素为单位）
+- drawable-xxxhdpi （三个额外高） 为 640 DPI 设备 （DIU 到 4 的像素为单位）
+
+对于用于呈现一个方形英寸处位图，各种版本的位图将具有相同名称但不同的大小，并存储在这些文件夹中：
+
+- drawable-ldpi/MyImage.jpg 在 120 像素正方形
+- drawable-mdpi/MyImage.jpg 在 160 像素正方形
+- 可绘制的 hdpi/MyImage.jpg 在 240 像素正方形
+- drawable-xhdpi/MyImage.jpg 为 320 像素正方形
+- drawable-xxhdpi/MyImage.jpg 在 480 像素正方形
+- drawable-xxxhdpi/MyImage.jpg 在 640 像素正方形
+
+位图将始终呈现在 160 设备无关的单位。 （使用标准的 Xamarin.Forms 解决方案模板仅包括 hdpi、 xhdpi 和 xxhdpi 文件夹。）
+
+UWP 项目支持包含以像素为单位，每个与设备无关单位的缩放系数以百分比表示，例如位图命名方案：
+
+- 在为 320 像素正方形的 MyImage.scale 200.jpg
+
+仅某些百分比都有效。 本书的示例程序包含仅与图像**规模 200**后缀，但当前的 Xamarin.Forms 解决方案模板包括**缩放 100**，**规模 125**，**规模 150**，并**规模 400**。
+
+将位图添加到平台项目中，当**生成操作**应为：
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**
-- UWP: **콘텐츠**
+- UWP:**内容**
 
-[ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) 샘플으로 구성 된 두 개의 단추와 유사한 개체를 만듭니다 `Image` 사용 하 여 요소를 `TapGestureRecognizer` 설치 합니다. 개체 1 인치의 사각형 되도록 작성 되었습니다. 합니다 `Source` 속성을 `Image` 사용 하도록 설정 됩니다 `OnPlatform` 및 `On` 플랫폼에서 잠재적으로 서로 다른 파일 이름을 참조 하는 개체입니다. 비트맵 이미지는 크기 비트맵을 검색 하 고 렌더링을 볼 수 있도록 해당 픽셀 크기를 나타내는 숫자를 포함 합니다.
+[ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap)示例创建两个按钮类似对象组成`Image`元素与`TapGestureRecognizer`安装。 适用对象是一个英寸正方形。 `Source`的属性`Image`使用设置`OnPlatform`和`On`对象引用的平台上的文件名可能不同。 位图图像包括数字，指示其像素大小，因此大家可以检索和呈现的大小的位图。
 
-### <a name="toolbars-and-their-icons"></a>도구 모음 및 해당 아이콘
+### <a name="toolbars-and-their-icons"></a>工具栏和它们的图标
 
-플랫폼별 비트맵의 주요 용도 중 하나는 추가 하 여 생성 된 Xamarin.Forms 도구 모음 [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) 개체를 [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) 정의한컬렉션`Page`. `ToobarItem` 파생 [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) 하는 일부 속성을 상속 합니다.
+特定于平台的位图的主要用途之一是 Xamarin.Forms 工具栏中，通过添加构造[ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem)对象添加到[ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) 所定义集合`Page`. `ToobarItem` 派生自[ `MenuItem` ](xref:Xamarin.Forms.MenuItem)从它继承了某些属性。
 
-가장 중요 한 `ToolbarItem` 속성입니다.
+最重要`ToolbarItem`属性是：
 
-- [`Text`](xref:Xamarin.Forms.MenuItem.Text) 플랫폼에 따라 표시 될 수 있는 텍스트 및 `Order`
-- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) 형식의 `FileImageSource` 플랫폼에 따라 표시 될 수 있는 이미지 및 `Order`
-- [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) 형식의 [ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder)는 세 멤버가 포함 된 열거형 [ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default)하십시오 [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary), 및 [ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
+- [`Text`](xref:Xamarin.Forms.MenuItem.Text) 根据平台可能会出现的文本和 `Order`
+- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) 类型的`FileImageSource`可能会出现因平台而异的图像和 `Order`
+- [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) 类型的[ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder)，一个包含三个成员的枚举[ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default)， [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary)，并[ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
-수가 `Primary` 항목 3 또는 4로 제한 되어야 합니다. 포함 해야는 `Text` 모든 항목에 대 한 설정입니다. 만 대부분의 플랫폼에 대 한는 `Primary` 항목의 필요를 `Icon` Windows 8.1 필요 하지만 `Icon` 모든 항목에 대 한 합니다. 아이콘에는 32 장치 독립적 단위 정사각형 이어야 합니다. `FileImageSource` 형식은 플랫폼별 지를 나타냅니다.
+数`Primary`应限制为三个或四个项。 应包括`Text`设置的所有项。 对于大多数平台，仅`Primary`项需要`Icon`，但 Windows 8.1 需要`Icon`的所有项。 图标应为 32 个与设备无关单位正方形。 `FileImageSource`类型指示它们是特定于平台的。
 
-합니다 `ToolbarItem` 발생을 [ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked) 변하는데, 비슷한 이벤트를 `Button`입니다. `ToolbarItem` 또한 지원 [ `Command` ](xref:Xamarin.Forms.MenuItem.Command) 하 고 [ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter) MVVM과 관련 하 여 자주 사용 되는 속성입니다. (참조 [18 장, MVVM](chapter18.md)).
+`ToolbarItem`激发[ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked)事件时点击，非常类似于`Button`。 `ToolbarItem` 此外支持[ `Command` ](xref:Xamarin.Forms.MenuItem.Command)并[ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter)属性通常与 MVVM 结合使用。 (请参阅[第 18 章、 MVVM](chapter18.md))。
 
-IOS 및 Android 도구 모음을 표시 하는 페이지가 되도록 요구할를 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 또는 탐색 페이지는 `NavigationPage`합니다. [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) 집합을 프로그래밍 합니다 `MainPage` 속성 해당 `App` 클래스를 [ `NavigationPage` 생성자](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) 사용 하 여를 `ContentPage` 인수를 도구 모음 생성 및 이벤트 처리기를 보여 줍니다.
+IOS 和 Android 都需要页将显示一个工具栏[ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage)或导航到的页`NavigationPage`。 [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo)程序集`MainPage`属性及其`App`类[`NavigationPage`构造函数](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page))与`ContentPage`自变量，并演示了工具栏的构造和事件处理程序。
 
-### <a name="button-images"></a>단추 이미지
+### <a name="button-images"></a>按钮图像
 
-설정에 플랫폼 전용 비트맵을 사용할 수도 있습니다는 [ `Image` ](xref:Xamarin.Forms.Button.Image) 속성을 `Button` 나타난 것 처럼 32 장치 독립적 단위 정사각형 비트맵에는 [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) 샘플입니다.
+此外可以使用特定于平台的位图设置[ `Image` ](xref:Xamarin.Forms.Button.Image)的属性`Button`到 32 个与设备无关单位正方形，如所示的位图[ **ButtonImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage)示例。
 
 > [!NOTE]
-> 단추의 이미지를 사용 하는 향상 되었습니다. 참조 [단추를 사용 하 여 비트맵을 사용 하 여](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)입니다.
+> 使用按钮上的图像已得到增强。 请参阅[位图使用按钮](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)。
 
 ## <a name="related-links"></a>관련 링크
 
-- [13 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
-- [13 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
+- [第 13 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
+- [第 13 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [이미지 작업](~/xamarin-forms/user-interface/images.md)
-- [단추를 사용 하 여 비트맵을 사용 하 여](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)
+- [使用位图按钮](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

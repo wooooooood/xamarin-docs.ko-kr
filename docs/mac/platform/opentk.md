@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: e2d459650c4e5ea38d5e54aef64cc3d7dcb5625c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0e283c9d9d1143f7cf4b0d2da0616e94d6ce5bce
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029873"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725014"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Xamarin.ios의 OpenTK 소개
 
@@ -20,9 +20,9 @@ OpenTK (개방형 도구 키트)는 OpenGL, OpenCL 및 OpenAL C# 작업을 용�
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
-이 문서에서는 Xamarin.ios 응용 프로그램의 OpenTK에 대 한 기본 사항을 다룹니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
+이 문서에서는 Xamarin.ios 응용 프로그램의 OpenTK에 대 한 기본 사항을 다룹니다. 强烈建议您先完成[Hello，Mac](~/mac/get-started/hello-mac.md)一文，特别是[Xcode 和 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder)及[输出口和操作](~/mac/get-started/hello-mac.md#outlets-and-actions)部分的简介，因为它涵盖了我们将在本文中使用的重要概念和技巧。
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 클래스/메서드 노출 C# ](~/mac/internals/how-it-works.md) 섹션을 살펴볼 수 있습니다. 여기에서는 C# 클래스를 목표에 연결 하는 데 사용 되는`Register`및`Export`명령을 설명 합니다. 개체 및 UI 요소
+你可能想要查看[Xamarin](~/mac/internals/how-it-works.md)示例文档的 " C# [公开C#类/方法到目标-c](~/mac/internals/how-it-works.md) " 部分，它解释了用于将类连接到目标 c 对象和 UI 元素的 `Register` 和 `Export` 命令。
 
 <a name="About_OpenTK" />
 
@@ -40,7 +40,7 @@ OpenTK (개방형 도구 키트)는 OpenGL, OpenCL 및 OpenAL C# 작업을 용�
 
 OpenTK는 3D 그래픽, 오디오 또는 계산 기능을 필요로 하는 게임, 공학용 응용 프로그램 또는 기타 프로젝트에 사용할 수 있습니다.
 
-자세한 내용은 Toolkit 웹 사이트 [열기](http://www.opentk.com) 를 참조 하세요.
+자세한 내용은 Toolkit 웹 사이트 [열기](https://opentk.net) 를 참조 하세요.
 
 <a name="OpenTK_Quickstart" />
 
@@ -329,6 +329,6 @@ OpenTK 구현에 대 한 보다 복잡 한 Xamarin.ios 예제는 [MonoMacGameVie
 - [MonoMacGameView (샘플)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows 작업](~/mac/user-interface/window.md)
-- [Open Toolkit](http://www.opentk.com)
+- [Open Toolkit](https://opentk.net)
 - [OS X 휴먼 인터페이스 지침](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Windows 소개](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

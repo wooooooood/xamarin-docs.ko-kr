@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 50302b0b9cf96d211c704ab9e68d1c61d11e807a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ebd7cad9ef33a44dbc7aa469bb4e866bdfea2e61
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016578"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724783"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -23,27 +23,27 @@ Xamarin.ios를 사용 하는 고객의 경우 [Xamarin.ios 웹 서비스](~/xama
 
 > [!IMPORTANT]
 > IOS 9에서 앱 전송 보안 (ATS)은 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간에 보안 연결을 적용 하 여 중요 한 정보가 실수로 공개 되는 것을 방지 합니다.
-> ATS는 iOS 9 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로 모든 연결에 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않으면 예외와 함께 실패 합니다.
+> 由于默认情况下构建适用于 iOS 9 应用程序中启用了 ATS，所有连接都将遵循 ATS 安全要求。 如果连接不能满足这些要求，它们将失败并出现异常。
 
-`HTTPS` 프로토콜을 사용 하 고 인터넷 리소스에 대 한 보안 통신을 할 수 없는 경우 ATS를 옵트아웃 (opt out) 할 수 있습니다. 이는 앱의 **info.plist** 파일을 업데이트 하 여 수행할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md)을 참조 하세요.
+`HTTPS` 프로토콜을 사용 하 고 인터넷 리소스에 대 한 보안 통신을 할 수 없는 경우 ATS를 옵트아웃 (opt out) 할 수 있습니다. 这可以通过更新应用程序的实现**Info.plist**文件。 有关详细信息请参阅[应用程序传输安全](~/ios/app-fundamentals/ats.md)。
 
 ## <a name="rest"></a>REST
 
-REST (Representational State Transfer)는 웹 서비스를 빌드하기 위한 아키텍처 스타일입니다. REST 요청은 웹 브라우저에서 웹 페이지를 검색 하 고 서버에 데이터를 보내는 데 사용 하는 것과 동일한 HTTP 동사를 사용 하 여 HTTP를 통해 수행 됩니다. 동사는 다음과 같습니다.
+具象状态传输 (REST) 是用于构建 web 服务的体系结构样式。 REST 请求是通过发出 HTTP 使用 web 浏览器使用检索 web 页面，并将数据发送到服务器的同一 HTTP 谓词。 谓词是：
 
-- **GET** –이 작업은 웹 서비스에서 데이터를 검색 하는 데 사용 됩니다.
-- **POST** –이 작업은 웹 서비스에서 데이터의 새 항목을 만드는 데 사용 됩니다.
-- **PUT** –이 작업은 웹 서비스의 데이터 항목을 업데이트 하는 데 사용 됩니다.
-- **PATCH** –이 작업은 항목을 수정 하는 방법에 대 한 지침 집합을 설명 하 여 웹 서비스에서 데이터 항목을 업데이트 하는 데 사용 됩니다. 이 동사는 샘플 응용 프로그램에서 사용 되지 않습니다.
-- **삭제** –이 작업은 웹 서비스의 데이터 항목을 삭제 하는 데 사용 됩니다.
+- **获取**– 此操作用于从 web 服务中检索数据。
+- **开机自检**– 此操作用于 web 服务上创建新项的数据。
+- **放置**– 此操作用于更新 web 服务上的数据的项。
+- **修补程序**– 此操作用于通过一组指令描述有关应如何修改此项更新 web 服务上的数据的项。 在示例应用程序不使用此谓词。
+- **删除**– 此操作用于删除 web 服务上的数据的项。
 
-REST를 준수 하는 웹 서비스 Api는 RESTful Api 라고 하며 다음을 사용 하 여 정의 됩니다.
+遵守 REST 的 Api 被称为 RESTful Api，并使用定义的 web 服务：
 
-- 기본 URI입니다.
-- GET, POST, PUT, PATCH 또는 DELETE와 같은 HTTP 메서드입니다.
-- JavaScript Object Notation (JSON)와 같은 데이터에 대 한 미디어 유형입니다.
+- 一个基 URI。
+- HTTP 方法，如 GET、 POST、 PUT、 PATCH 或 DELETE。
+- 数据，如 JavaScript 对象表示法 (JSON) 媒体类型。
 
-REST의 단순성은 모바일 응용 프로그램에서 웹 서비스에 액세스 하는 기본 방법입니다.
+REST 的简单性已帮助使其用于访问移动应用程序中的 web 服务的主要方法。
 
 ## <a name="consuming-rest-services"></a>REST 서비스 사용
 
@@ -51,9 +51,9 @@ REST 서비스를 사용 하는 데 사용할 수 있는 라이브러리와 클�
 
 ### <a name="httpclient"></a>HttpClient
 
-[MICROSOFT Http 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) 는 http를 통해 요청을 보내고 받는 데 사용 되는 `HttpClient` 클래스를 제공 합니다. URI로 식별 된 리소스에서 http 요청을 보내고 HTTP 응답을 받기 위한 기능을 제공 합니다. 각 요청은 비동기 작업으로 전송 됩니다. 비동기 작업에 대 한 자세한 내용은 [Async 지원 개요](~/cross-platform/platform/async.md)를 참조 하세요.
+[MICROSOFT Http 클라이언트 라이브러리](https://www.nuget.org/packages/Microsoft.Net.Http) 는 http를 통해 요청을 보내고 받는 데 사용 되는 `HttpClient` 클래스를 제공 합니다. URI로 식별 된 리소스에서 http 요청을 보내고 HTTP 응답을 받기 위한 기능을 제공 합니다. 每个请求将作为异步操作发送。 有关异步操作的详细信息，请参阅[异步支持概述](~/cross-platform/platform/async.md)。
 
-`HttpResponseMessage` 클래스는 HTTP 요청을 만든 후 웹 서비스에서 받은 HTTP 응답 메시지를 나타냅니다. 상태 코드, 헤더 및 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. 데이터의 형식에 따라 `ReadAsStringAsync` 및 `ReadAsByteArrayAsync`와 같은 `ReadAs` 방법 중 하나를 사용 하 여 콘텐츠를 읽을 수 있습니다.
+`HttpResponseMessage`类表示 HTTP 响应消息进行 HTTP 请求之后收到来自 web 服务。 상태 코드, 헤더 및 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. 可以读取内容，使用任一`ReadAs`方法，如`ReadAsStringAsync`和`ReadAsByteArrayAsync`根据数据的格式。
 
 `HttpClient` 클래스에 대 한 자세한 내용은 [HTTPClient 개체 만들기](~/xamarin-forms/data-cloud/web-services/rest.md)를 참조 하세요.
 
@@ -165,7 +165,7 @@ public class RxTermNSURLConnectionDelegate : NSUrlConnectionDelegate
 
 ### <a name="servicestack"></a>ServiceStack
 
-웹 서비스를 호출 하는 또 다른 옵션은 [서비스 스택](https://www.servicestack.net/) 라이브러리입니다. 예를 들어 다음 코드에서는 서비스 스택의 `IServiceClient.GetAsync` 메서드를 사용 하 여 서비스 요청을 실행 하는 방법을 보여 줍니다.
+웹 서비스를 호출 하는 또 다른 옵션은 [서비스 스택](https://servicestack.net) 라이브러리입니다. 예를 들어 다음 코드에서는 서비스 스택의 `IServiceClient.GetAsync` 메서드를 사용 하 여 서비스 요청을 실행 하는 방법을 보여 줍니다.
 
 ```csharp
 client.GetAsync<CustomersResponse>("",
@@ -186,11 +186,11 @@ client.GetAsync<CustomersResponse>("",
 
 ## <a name="consuming-restful-data"></a>RESTful 데이터 소비
 
-RESTful 웹 서비스는 일반적으로 JSON 메시지를 사용 하 여 클라이언트에 데이터를 반환 합니다. JSON은 압축 페이로드를 생성 하는 텍스트 기반 데이터 교환 형식으로, 데이터를 보낼 때 대역폭 요구 사항이 감소 합니다. 이 섹션에서는 JSON 및 POX (RESTful)에서의 응답을 사용 하는 메커니즘을 검사 합니다.
+RESTful web 服务通常使用 JSON 消息来将数据返回到客户端。 JSON은 압축 페이로드를 생성 하는 텍스트 기반 데이터 교환 형식으로, 데이터를 보낼 때 대역폭 요구 사항이 감소 합니다. 이 섹션에서는 JSON 및 POX (RESTful)에서의 응답을 사용 하는 메커니즘을 검사 합니다.
 
 <a name="Using_System.JSON" />
 
-### <a name="systemjson"></a>시스템 JSON
+### <a name="systemjson"></a>System.JSON
 
 Xamarin 플랫폼은 기본 제공 되는 JSON에 대 한 지원을 제공 합니다. `JsonObject`를 사용 하 여 다음 코드 예제와 같이 결과를 검색할 수 있습니다.
 
@@ -227,7 +227,7 @@ term.RxCUI = properties["rxcui"].Value<string>();
 
 <a name="Using_ServiceStack.Text" />
 
-### <a name="servicestacktext"></a>ServiceStack. 텍스트
+### <a name="servicestacktext"></a>ServiceStack.Text
 
 ServiceStack. Text는 ServiceStack 라이브러리와 함께 작동 하도록 설계 된 JSON serialization 라이브러리입니다. 다음 코드 예제에서는 `ServiceStack.Text.JsonObject`를 사용 하 여 JSON을 구문 분석 하는 방법을 보여 줍니다.
 
@@ -272,20 +272,20 @@ var result = doc.Root.Descendants("rxtermsProperties")
 
 ## <a name="aspnet-web-service-asmx"></a>ASMX (ASP.NET Web Service)
 
-ASMX는 SOAP (Simple Object Access Protocol)를 사용 하 여 메시지를 보내는 웹 서비스를 빌드하는 기능을 제공 합니다. SOAP는 웹 서비스를 빌드하고 액세스 하기 위한 플랫폼 독립적이 고 언어에 독립적인 프로토콜입니다. ASMX 서비스 소비자는 서비스를 구현 하는 데 사용 되는 플랫폼, 개체 모델 또는 프로그래밍 언어에 대해 알 필요가 없습니다. SOAP 메시지를 송수신 하는 방법을 이해 해야 합니다.
+ASMX는 SOAP (Simple Object Access Protocol)를 사용 하 여 메시지를 보내는 웹 서비스를 빌드하는 기능을 제공 합니다. SOAP 是一种独立于平台的和独立于语言的构建和访问 web 服务协议。 一个 ASMX 服务的使用者不需要完全了解平台、 对象模型中或用于实现服务的编程语言。 它们只需了解如何发送和接收 SOAP 消息。
 
-SOAP 메시지는 다음 요소를 포함 하는 XML 문서입니다.
+SOAP 消息是包含以下元素的 XML 文档：
 
-- XML 문서를 SOAP 메시지로 식별 하는 *Envelope* 이라는 루트 요소입니다.
-- 인증 데이터와 같은 응용 프로그램 관련 정보를 포함 하는 선택적 *헤더* 요소입니다. *Header* 요소가 있으면 *Envelope* 요소의 첫 번째 자식 요소 여야 합니다.
-- 받는 사람에 대해 의도 된 SOAP 메시지를 포함 하는 필수 *본문* 요소입니다.
-- 오류 메시지를 나타내는 데 사용 되는 선택적 *오류* 요소입니다. *Fault* 요소가 있으면 *Body* 요소의 자식 요소 여야 합니다.
+- 名为的根元素*信封*，它标识为 SOAP 消息的 XML 文档。
+- 一个可选*标头*包含特定于应用程序的信息，例如身份验证数据的元素。 如果*标头*存在元素，则它必须是第一个子元素*信封*元素。
+- 所需*正文*包含适用于接收方的 SOAP 消息的元素。
+- 一个可选*容错*元素，用于指示错误消息。 如果*容错*元素不存在，必须为的子元素*正文*元素。
 
-SOAP는 HTTP, SMTP, TCP 및 UDP를 비롯 한 여러 전송 프로토콜을 통해 작동할 수 있습니다. 그러나 ASMX 서비스는 HTTP를 통해서만 작동할 수 있습니다. Xamarin 플랫폼은 HTTP를 통한 표준 SOAP 1.1 구현을 지원 하며, 여기에는 많은 표준 ASMX 서비스 구성에 대 한 지원이 포함 됩니다.
+SOAP 可以在许多传输协议，包括 HTTP、 SMTP、 TCP 和 UDP 上操作。 但是，一个 ASMX 服务可以仅通过 HTTP 操作。 Xamarin 平台支持标准 SOAP 1.1 实现通过 HTTP，并且这包括对很多标准的 ASMX 服务配置的支持。
 
 ### <a name="generating-a-proxy"></a>프록시 생성
 
-응용 프로그램에서 서비스에 연결할 수 있도록 하는 ASMX 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서로 노출 됩니다. 프록시는 웹 서비스에 대 한 웹 참조를 플랫폼별 프로젝트에 추가 하기 위해 Mac용 Visual Studio 또는 Visual Studio를 사용 하 여 빌드됩니다.
+응용 프로그램에서 서비스에 연결할 수 있도록 하는 ASMX 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 代理是通过使用以定义的方法和关联的服务配置的服务元数据构造的。 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서로 노출 됩니다. 프록시는 웹 서비스에 대 한 웹 참조를 플랫폼별 프로젝트에 추가 하기 위해 Mac용 Visual Studio 또는 Visual Studio를 사용 하 여 빌드됩니다.
 
 웹 서비스 URL은 `file:///` 경로 접두사를 통해 액세스할 수 있는 호스트 된 원격 원본 또는 로컬 파일 시스템 리소스 일 수 있습니다. 예를 들면 다음과 같습니다.
 
@@ -301,15 +301,15 @@ file:///Users/myUserName/projects/MyProjectName/service.wsdl
 
 #### <a name="manually-adding-a-proxy-to-a-project"></a>수동으로 프록시를 프로젝트에 추가
 
-호환 되는 도구를 사용 하 여 생성 된 기존 프록시가 있는 경우이 출력은 프로젝트의 일부로 포함 될 때 사용 될 수 있습니다. Mac용 Visual Studio에서 **파일 추가** ...를 사용 하 여 프록시를 추가 하는 메뉴 옵션입니다. 또한이를 위해 **참조 추가 ...** *를 사용* 하 여 명시적으로 참조 해야 합니다. 대화.
+호환 되는 도구를 사용 하 여 생성 된 기존 프록시가 있는 경우이 출력은 프로젝트의 일부로 포함 될 때 사용 될 수 있습니다. Mac용 Visual Studio에서 **파일 추가** ...를 사용 하 여 프록시를 추가 하는 메뉴 옵션입니다. 또한이를 위해 **참조 추가 ...** *를 사용* 하 여 명시적으로 참조 해야 합니다. 대화 상자에서 추가합니다.
 
 ### <a name="consuming-the-proxy"></a>프록시 사용
 
-생성 된 프록시 클래스는 APM (비동기 프로그래밍 모델) 디자인 패턴을 사용 하는 웹 서비스를 사용 하는 메서드를 제공 합니다. 이 패턴에서 비동기 작업은 비동기 작업을 시작 하 고 종료 하는 *Beginoperationname* 및 *EndOperationName*라는 두 개의 메서드로 구현 됩니다.
+生成的代理类提供用于使用 web 服务使用异步编程模型 (APM) 设计模式的方法。 在此模式中异步操作实现这两个方法名为*BeginOperationName*并*EndOperationName*，其中开始和结束异步操作。
 
-*Beginoperationname* 메서드는 비동기 작업을 시작 하 고 `IAsyncResult` 인터페이스를 구현 하는 개체를 반환 합니다. *Beginoperationname*을 호출한 후에는 비동기 작업이 스레드 풀 스레드에서 수행 되는 동안 응용 프로그램에서 호출 스레드에 대 한 명령을 계속 실행할 수 있습니다.
+*BeginOperationName*方法开始异步操作并返回一个对象，实现`IAsyncResult`接口。 在调用*BeginOperationName*，应用程序可以继续在调用线程上执行指令，同时异步操作在线程池线程。
 
-*Beginoperationname*을 호출할 때마다 응용 프로그램은 *EndOperationName* 를 호출 하 여 작업의 결과를 가져와야 합니다. *EndOperationName* 의 반환 값은 동기 웹 서비스 메서드에서 반환 되는 형식과 동일 합니다. 다음 코드 예제는 이러한 예를 보여줍니다.
+每次调用*BeginOperationName*，应用程序还应调用*EndOperationName*来获取该操作的结果。 返回值*EndOperationName*同步 web 服务方法返回的类型相同。 다음 코드 예제는 이러한 예를 보여줍니다.
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -324,7 +324,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-TPL (작업 병렬 라이브러리)은 동일한 `Task` 개체에 비동기 작업을 캡슐화 하 여 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 있습니다. 이 캡슐화는 `Task.Factory.FromAsync` 메서드의 여러 오버 로드에서 제공 됩니다. 이 메서드는 `TodoService.BeginGetTodoItems` 메서드가 완료 된 후 `BeginGetTodoItems` 대리자에 전달 되는 데이터가 없음을 나타내는 `null` 매개 변수를 사용 하 여 `TodoService.EndGetTodoItems` 메서드를 실행 하는 `Task`을 만듭니다. 마지막으로 `TaskCreationOptions` 열거형의 값은 작업의 생성 및 실행에 대 한 기본 동작을 사용 하도록 지정 합니다.
+任务并行库 (TPL) 可以简化使用 APM begin/end 方法对通过封装中相同的异步操作的过程`Task`对象。 这种封装提供的多个重载`Task.Factory.FromAsync`方法。 이 메서드는 `TodoService.BeginGetTodoItems` 메서드가 완료 된 후 `BeginGetTodoItems` 대리자에 전달 되는 데이터가 없음을 나타내는 `null` 매개 변수를 사용 하 여 `TodoService.EndGetTodoItems` 메서드를 실행 하는 `Task`을 만듭니다. 最后的值`TaskCreationOptions`枚举指定应使用的创建和执行任务的默认行为。
 
 APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) 을 참조 하세요.
 
@@ -334,25 +334,25 @@ ASMX 서비스를 사용 하는 방법에 대 한 자세한 내용은 [asmx (ASP
 
 ## <a name="windows-communication-foundation-wcf"></a>WCF(Windows Communication Foundation)
 
-WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프레임 워크입니다. 이를 통해 개발자는 안전 하 고 신뢰할 수 있으며 트랜잭션 된 분산 응용 프로그램을 빌드할 수 있습니다.
+WCF는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프레임 워크입니다. 它允许开发人员构建安全、 可靠、 事务处理，且可互操作分布式应用程序。
 
-WCF는 다음과 같은 다양 한 계약을 포함 하는 서비스를 설명 합니다.
+WCF 描述了与各种不同的约定，其中包括以下服务：
 
-- **데이터 계약** – 메시지 내에서 콘텐츠의 기반을 형성 하는 데이터 구조를 정의 합니다.
-- **메시지 계약** – 기존 데이터 계약에서 메시지를 작성 합니다.
-- **오류 계약** – 사용자 지정 SOAP 오류를 지정할 수 있습니다.
-- **서비스 계약** – 서비스에서 지 원하는 작업 및 각 작업과 상호 작용 하는 데 필요한 메시지를 지정 합니다. 또한 각 서비스에서 작업에 연결할 수 있는 사용자 지정 오류 동작도 지정 합니다.
+- **数据协定**– 定义构成对其中一条消息的内容的基础的数据结构。
+- **消息协定搭配**– 撰写邮件从现有数据协定。
+- **错误协定**– 允许指定的自定义 SOAP 错误。
+- **服务协定**– 指定服务支持的操作，这些消息所需的与每个操作进行交互。 它们还指定可以与每个服务上的操作相关联的任何自定义错误行为。
 
-ASP.NET 웹 서비스 (ASMX)와 WCF 간에는 차이점이 있지만, WCF는 ASMX에서 제공 하는 것과 동일한 기능 (HTTP를 통한 SOAP 메시지)을 지원 한다는 것을 이해 하는 것이 중요 합니다.
+ASP.NET Web 服务 (ASMX) 和 WCF 之间的差异，但务必要了解 WCF 支持的相同功能提供的 ASMX 服务 – 通过 HTTP 的 SOAP 消息。
 
 > [!IMPORTANT]
-> WCF에 대 한 Xamarin 플랫폼 지원은 `BasicHttpBinding` 클래스를 사용 하 여 HTTP/HTTPS를 통해 텍스트로 인코딩된 SOAP 메시지로 제한 됩니다. 또한 WCF 지원에는 프록시를 생성 하는 Windows 환경 에서만 사용할 수 있는 도구를 사용 해야 합니다.
+> WCF에 대 한 Xamarin 플랫폼 지원은 `BasicHttpBinding` 클래스를 사용 하 여 HTTP/HTTPS를 통해 텍스트로 인코딩된 SOAP 메시지로 제한 됩니다. 此外，WCF 支持需要使用工具仅在 Windows 环境以生成代理中可用。
 
 ### <a name="generating-a-proxy"></a>프록시 생성
 
-응용 프로그램에서 서비스에 연결할 수 있도록 하는 WCF 서비스를 사용 하려면 *프록시가* 생성 되어야 합니다. 프록시는 메서드 및 관련 서비스 구성을 정의 하는 서비스 메타 데이터를 사용 하 여 생성 됩니다. 이 메타 데이터는 웹 서비스에 의해 생성 된 WSDL (웹 서비스 기술 언어) 문서의 형식으로 노출 됩니다. Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다.
+一个*代理*必须生成以使用 WCF 服务，允许应用程序连接到服务。 代理是通过使用以定义的方法和关联的服务配置的服务元数据构造的。 此元数据中生成的 web 服务的 Web 服务描述语言 (WSDL) 文档的形式公开。 Visual Studio 2017의 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 빌드하여 웹 서비스에 대 한 서비스 참조를 .NET Standard 라이브러리에 추가할 수 있습니다.
 
-Visual Studio 2017에서 Microsoft WCF Web Service Reference Provider를 사용 하 여 프록시를 만드는 대안은 ServiceModel Metadata 유틸리티 도구 (svcutil.exe)를 사용 하는 것입니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)를 참조 하세요.
+创建的代理帐户在 Visual Studio 2017 中使用 Microsoft WCF Web Service Reference Provider 的替代方法是使用 ServiceModel Metadata Utility Tool (svcutil.exe)。 有关详细信息，请参阅[ServiceModel Metadata Utility Tool (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)。
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security" />
 
@@ -379,15 +379,15 @@ binding.ReceiveTimeout = timeout;
 client = new Service1Client (binding, new EndpointAddress ("http://192.168.1.100/Service1.svc"));
 ```
 
-바인딩은 응용 프로그램 및 서비스에서 서로 통신 하는 데 필요한 전송, 인코딩 및 프로토콜 세부 정보를 지정 하는 데 사용 됩니다. `BasicHttpBinding`는 HTTP 전송 프로토콜을 통해 텍스트 인코딩된 SOAP 메시지를 보내도록 지정 합니다. 끝점 주소를 지정 하면 게시 된 인스턴스가 여러 개 있는 경우 응용 프로그램에서 WCF 서비스의 다른 인스턴스에 연결할 수 있습니다.
+使用绑定指定传输、 编码和协议详细信息所需的应用程序和服务彼此通信。 `BasicHttpBinding`指定将通过 HTTP 传输协议发送文本编码的 SOAP 消息。 指定终结点地址可以连接到 WCF 服务的不同实例应用程序，前提是有多个已发布的实例。
 
 ### <a name="consuming-the-proxy"></a>프록시 사용
 
-생성 된 프록시 클래스는 APM (비동기 프로그래밍 모델) 디자인 패턴을 사용 하는 웹 서비스를 사용 하는 메서드를 제공 합니다. 이 패턴에서 비동기 작업은 비동기 작업을 시작 하 고 종료 하는 *Beginoperationname* 및 *EndOperationName*라는 두 개의 메서드로 구현 됩니다.
+生成的代理类提供用于使用 web 服务使用异步编程模型 (APM) 设计模式的方法。 在此模式下，异步操作实现这两个方法名为*BeginOperationName*并*EndOperationName*，其中开始和结束异步操作。
 
-*Beginoperationname* 메서드는 비동기 작업을 시작 하 고 `IAsyncResult` 인터페이스를 구현 하는 개체를 반환 합니다. *Beginoperationname*을 호출한 후에는 비동기 작업이 스레드 풀 스레드에서 수행 되는 동안 응용 프로그램에서 호출 스레드에 대 한 명령을 계속 실행할 수 있습니다.
+*BeginOperationName*方法开始异步操作并返回一个对象，实现`IAsyncResult`接口。 在调用*BeginOperationName*，应用程序可以继续在调用线程上执行指令，同时异步操作在线程池线程。
 
-*Beginoperationname*을 호출할 때마다 응용 프로그램은 *EndOperationName* 를 호출 하 여 작업의 결과를 가져와야 합니다. *EndOperationName* 의 반환 값은 동기 웹 서비스 메서드에서 반환 되는 형식과 동일 합니다. 다음 코드 예제는 이러한 예를 보여줍니다.
+每次调用*BeginOperationName*，应用程序还应调用*EndOperationName*来获取该操作的结果。 返回值*EndOperationName*同步 web 服务方法返回的类型相同。 다음 코드 예제는 이러한 예를 보여줍니다.
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -402,7 +402,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-TPL (작업 병렬 라이브러리)은 동일한 `Task` 개체에 비동기 작업을 캡슐화 하 여 APM begin/end 메서드 쌍을 사용 하는 프로세스를 간소화할 수 있습니다. 이 캡슐화는 `Task.Factory.FromAsync` 메서드의 여러 오버 로드에서 제공 됩니다. 이 메서드는 `TodoServiceClient.BeginGetTodoItems` 메서드가 완료 된 후 `BeginGetTodoItems` 대리자에 전달 되는 데이터가 없음을 나타내는 `null` 매개 변수를 사용 하 여 `TodoServiceClient.EndGetTodoItems` 메서드를 실행 하는 `Task`을 만듭니다. 마지막으로 `TaskCreationOptions` 열거형의 값은 작업의 생성 및 실행에 대 한 기본 동작을 사용 하도록 지정 합니다.
+任务并行库 (TPL) 可以简化使用 APM begin/end 方法对通过封装中相同的异步操作的过程`Task`对象。 这种封装提供的多个重载`Task.Factory.FromAsync`方法。 이 메서드는 `TodoServiceClient.BeginGetTodoItems` 메서드가 완료 된 후 `BeginGetTodoItems` 대리자에 전달 되는 데이터가 없음을 나타내는 `null` 매개 변수를 사용 하 여 `TodoServiceClient.EndGetTodoItems` 메서드를 실행 하는 `Task`을 만듭니다. 最后的值`TaskCreationOptions`枚举指定应使用的创建和执行任务的默认行为。
 
 APM에 대 한 자세한 내용은 MSDN의 [비동기 프로그래밍 모델](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) 및 [TPL 및 기존 .NET Framework 비동기 프로그래밍](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) 을 참조 하세요.
 

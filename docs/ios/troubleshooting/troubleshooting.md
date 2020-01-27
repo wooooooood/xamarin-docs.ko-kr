@@ -8,24 +8,24 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018
-ms.openlocfilehash: 21b1f0c29962b7aeb45a836c976ec2635a39622e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 716999002cf90b50b90f4924adc11555cc43717f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030876"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725361"
 ---
-# <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁 
+# <a name="troubleshooting-tips-for-xamarinios"></a>Xamarin.ios에 대 한 문제 해결 팁
 
 ## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin.ios가 System.valuetuple를 확인할 수 없습니다.
 
-이 오류는 Visual Studio와의 비 호환성으로 인해 발생 합니다.
+发生此错误的原因是与 Visual Studio 不兼容。
 
 - **Visual Studio 2017 업데이트 1** (버전 15.1 또는 이전 버전)은 **system.valuetuple NuGet 4.3.0** (또는 이전 버전)와만 호환 됩니다.
 
 - **Visual Studio 2017 업데이트 2** (버전 15.2 이상)는 **system.valuetuple NuGet 4.3.1** 이상과만 호환 됩니다.
 
-Visual Studio 2017 설치에 해당 하는 올바른 System.valuetuple NuGet을 선택 하세요.
+请选择与你的 Visual Studio 2017 安装相对应的正确 ValueTuple NuGet。
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>' 업데이트 정보를 검색 하는 동안 오류 발생 ' 오류 메시지를 받고 있습니다.
 
@@ -124,11 +124,11 @@ public Bar (IntPtr handle) : base (handle) { }
 
 네임 스페이스 설정은 프로젝트 옵션 대화 상자에서 찾을 수 있습니다. 기본 네임 스페이스는 **일반-> 주 설정** 섹션에서 찾을 수 있습니다. 비어 있는 경우 프로젝트의 이름이 기본값으로 사용 됩니다. 고급 네임 스페이스 설정은 **소스 코드-> .Net 명명 정책** 섹션에서 찾을 수 있습니다.
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>동작에 대 한 경고: 전용 메서드 ' Foo '은 (는) 사용 되지 않습니다. CS0169
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>동작에 대 한 경고: 전용 메서드 ' Foo '은 (는) 사용 되지 않습니다. (CS0169)
 
 인터페이스 작성기 파일에 대 한 작업은 런타임에 리플렉션에 의해 위젯에 연결 되므로이 경고가 발생 합니다.
 
-이러한 메서드에만이 경고를 표시 하지 않으려면 "#pragma 경고 사용 안 함 0169" "#pragma 경고 사용 0169"을 사용 하거나, 전체 프로젝트에 대해 사용 하지 않도록 설정 하려는 경우 컴파일러 옵션의 "경고 무시" 필드에 0169를 추가 합니다. 권장).
+이러한 메서드에만이 경고를 표시 하지 않으려는 경우 0169, 전체 프로젝트에 대해 사용 하지 않도록 설정 하려는 경우 컴파일러 옵션의 "경고 무시" 필드에 "#pragma 경고 사용 안 함 0169" "#pragma 경고 사용 0169"을 사용할 수 있습니다 (권장 되지 않음).
 
 ## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>mtouch이 실패 했습니다. '/path/to/yourproject.exe ' 어셈블리를 열 수 없습니다.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Thumb 코드를 사용 하 여 컴파일된 정적 라이브러리를 프로젝트에 연결 하는 것을 의미 합니다. IPhone SDK 릴리스 3.1 이상 (이 문서를 작성할 당시 이상)에는 엄지 코드 (정적 라이브러리)가 아닌 코드 (Xamarin.ios)를 연결 하는 경우 Apple에서 버그가 도입 되었습니다. 이 문제를 완화 하기 위해 정적 라이브러리의 Thumb이 아닌 버전에 연결 해야 합니다.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>ExecutionEngineException: JIT 컴파일 메서드 (래퍼 관리-관리 되는) Foo []: ICollection'1 get_Count ()를 시도 합니다.
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>ExecutionEngineException: JIT 컴파일 메서드 (래퍼 관리-관리 되는) Foo [] get_Count: ()를 시도 하는 중입니다.
 
 [] 접미사는 사용자 또는 클래스 라이브러리가 IEnumerable < >, ICollection < > 또는 IList < > 등의 제네릭 컬렉션을 통해 배열에서 메서드를 호출 하 고 있음을 나타냅니다. 해결 방법으로, 직접 메서드를 호출 하 고 예외를 트리거한 호출 전에이 코드가 실행 되는지 확인 하 여 AOT 컴파일러에 이러한 메서드를 포함 하도록 명시적으로 강제할 수 있습니다. 이 경우 다음을 작성할 수 있습니다.
 
@@ -208,7 +208,7 @@ int count = ((ICollection<Foo>) array).Count;
 1. 빔 동기화를 사용 하지 않도록 설정 하 여 (1) 단계를 반복 해 보세요.
 1. 몇 초 넘게 편집기가 중단 되 면 터미널에서 "killall [Mac용 Visual Studio]"를 실행 해 보십시오. 편집기가 정지 되는 동안 kill 명령이 실행 되는 것은 어려울 수 있지만 이렇게 하는 것이 중요 합니다. 명령을 사용 하면 Mono가 모든 스레드의 스택 추적을 MD 로그에 쓰도록 합니다 .이는를 사용 하 여 XS가 정지 된 상태에서 스레드가 있는 상태를 검색 하는 데 사용할 수 있기 때문입니다.
 
-XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp} .log** 를 연결 하세요. 이전 버전의 XS/MonoDevelop에서 **~/library/logs를 전송 합니다. /MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
+XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **androidtools-{timestamp} .log**및 **Components-{timestamp} .log** 를 연결 하세요 (이전 버전의 XS/MonoDevelop에서 **~/Library/Logs/MonoDevelop-(3.0 | 2.8 | 2.6)/MonoDevelop.log**).
 
 > [!NOTE]
 > 위의 문제가 XS 2.2 마지막에 수정 되었습니다. * *
@@ -219,7 +219,7 @@ XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **andro
 
 Xamarin.ios 1.3 기반 디버그 빌드에는 Mono의 모든 단일 구성 요소 (프레임 워크의 모든 클래스에 있는 모든 메서드)에 대 한 디버깅 지원이 포함 되었습니다.  
 
-Xamarin.ios 1.4를 사용 하 여 디버깅을 위한 보다 세분화 된 방법을 소개 합니다. 기본값은 코드 및 라이브러리에 대 한 디버깅 계측만 제공 하는 것 이며, 모든 [Mono 어셈블리](~/cross-platform/internals/available-assemblies.md) 에 대해이 작업을 수행 하지는 않습니다 .이 작업은 가능 하지만 는 이러한 어셈블리를 디버깅 하기 위해 옵트인 해야 합니다.
+Xamarin.ios 1.4를 사용 하 여 디버깅을 위한 보다 세분화 된 메서드를 도입할 수 있습니다. 기본값은 코드 및 라이브러리에 대 한 디버깅 계측만 제공 하는 것 이며, 모든 [Mono 어셈블리](~/cross-platform/internals/available-assemblies.md) 에 대해이 작업을 수행 하지는 않습니다 .이 작업은 가능 하지만 이러한 어셈블리를 디버깅 하려면 옵트인 해야 합니다.
 
 ## <a name="installation-hangs"></a>설치 중단
 
@@ -309,7 +309,7 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 
 (Ed Anuff에서 기여)
 
-아래 단계를 수행합니다.
+다음 단계를 수행하십시오.
 
 - IPhone 빌드에서 SDK 버전을 3.2 또는 iTunes connect로 변경 하면 3.2 보다 작은 SDK 버전을 사용 하 여 빌드된 iPad 호환 앱이 표시 되기 때문에 업로드가 거부 됩니다.
 - 프로젝트에 대 한 사용자 지정 info.plist을 만들고이를 명시적으로 3.0에 설정 합니다.   이렇게 하면 Xamarin.ios로 설정 된 이상 값 Osversion 3.2 값이 재정의 됩니다.   이 작업을 수행 하지 않으면 iPhone에서 앱을 실행할 수 없게 됩니다.
@@ -368,7 +368,7 @@ SDK 버전은 "최소 OS 버전" 설정과 혼동 해서는 안 됩니다.
 
 이는 XCode 4가 설치 되어 있음을 의미 합니다.   XCode 4에서는 ibtool 도구가 제거 되었으므로 독립 실행형 도구를 사용 하 여 XIB 파일을 더 이상 편집할 수 없습니다.
 
-Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 있는 [XCode 시리즈 3](https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792)을 설치 합니다.
+Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 있는 XCode 시리즈 3을 설치 합니다.
 
 ## <a name="cant-create-display-binding-for-mime-type-applicationvndapple-interface-builder"></a>"Mime 형식에 대 한 표시 바인딩을 만들 수 없음: application/vnd. apple-interface-builder"
 
@@ -394,7 +394,7 @@ Interface Builder를 사용 하려면 Apple 웹 사이트에서 사용할 수 �
 응용 프로그램 이름에 '. '가 포함 된 경우이 문제가 발생할 수 있습니다. 이름에 (점)입니다.
 이는 다른 여러 사례 (예: 장치)에서 작동할 수 있는 경우에도 CFBundleExecutable의 실행 파일 이름으로 사용할 수 없습니다.
 
- \* "값은 이름에 확장명을 포함 하지 않아야 합니다." - [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+"값은 이름에 확장명을 포함 하지 않아야 합니다."
 
 ## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>오류: xib 파일을 두 번 클릭 하면 "사용자 지정 특성 유형 0x43이 지원 되지 않습니다."
 

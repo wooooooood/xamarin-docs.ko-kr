@@ -1,44 +1,44 @@
 ---
 title: 선 및 스트로크 단면
-description: 이 문서에서는 Xamarin.Forms 응용 프로그램에서 다른 스트로크 단면 있는 선을 그리려면 SkiaSharp 사용 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
+description: 此文介绍了如何使用 SkiaSharp 绘制在 Xamarin.Forms 应用程序中具有不同笔画顶端行，此示例代码进行了演示。
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
 ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 724a79e618321f97257718bf56dd1fdd18f73563
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+ms.openlocfilehash: 9aaecb8c63ff28111097dce81954f523b4c7731b
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545614"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725214"
 ---
 # <a name="lines-and-stroke-caps"></a>선 및 스트로크 단면
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_다른 스트로크 단면 있는 선을 그리려면 SkiaSharp 사용 방법 알아보기_
+_了解如何使用 SkiaSharp 绘制具有不同笔画顶端行_
 
-SkiaSharp, 전혀 렌더링에서는 일련의 연결 된 직선 렌더링에서 다릅니다. 단일 줄을 그릴 때에 있지만 경우가 줄 특정 스트로크 너비를 지정 하는 데 필요한 합니다. 이러한 줄 광범위 한 있을 경우 줄의 끝 모양의이 중요 합니다. 선의 끝 모양을 라고 합니다 *스트로크 단면*:
+SkiaSharp，呈现单行是非常不同于呈现一系列相互连接的直线。 即使绘制单个线条，但是，它通常是需要为特定的笔划宽度的线条。 由于这些行变得更广，行尾的外观也变得重要。 名为行尾的外观*笔划 cap*:
 
 ![](lines-images/strokecapsexample.png "The three stroke caps options")
 
-단일 선 그리기 `SKCanvas` 간단한 정의 [ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) 인수 시작 및 끝 좌표로 사용 하 여 선의 표시 하는 메서드는 `SKPaint` 개체:
+用于绘制单个线条`SKCanvas`定义一种简单[ `DrawLine` ](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint))方法的参数指示的起始和结束的包含的行坐标`SKPaint`对象：
 
 ```csharp
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-기본적으로 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성을 새로 인스턴스화된 `SKPaint` 개체가 0으로, 1 픽셀의 선 두께 렌더링에 1의 값으로 동일한 효과가 있습니다. 이 나타나므로 매우 얇은 휴대폰와 같은 고해상도 장치에서 설정 하 고 싶을 `StrokeWidth` 큰 값으로. 또 다른 문제를 발생 시키는 많은 두께의 줄 그리기를 시작 하면 되지만: 시작 되 고 이러한 두꺼운 선 끝 렌더링 되는 방식을?
+默认情况下[ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth)属性的新实例化`SKPaint`对象是 0，它具有为粗细中呈现的一个像素行 1 的值相同的效果。 这会显示非常细小手机，等的高分辨率设备上可能需要设置`StrokeWidth`到更大的值。 但后，开始画可调整大小的粗细的线，将引发另一个问题： 应开始和结束这些粗线条呈现方式？
 
-작업이 시작 되 고 줄 끝 모양을 라고는 *선 끝 모양을* 또는 Skia는 *스트로크 단면*합니다. "이 컨텍스트에서" cap 라는 단어는 hat의 종류를 의미 &mdash; 줄의 끝에 위치 하는 것입니다. 설정한 합니다 [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) 의 속성을 `SKPaint` 개체의 다음 멤버 중 하나를 [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) 열거형:
+调用的开始和结束的行的外观*线帽*，或者在 Skia，*笔划 cap*。 在此上下文中的"cap"一词是指一种类型的 hat&mdash;位于行尾的内容。 您设置[ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap)的属性`SKPaint`对象的以下成员之一[ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap)枚举：
 
-- `Butt` (기본값)
+- `Butt` （默认值）
 - `Square`
 - `Round`
 
-이러한 샘플 프로그램을 통해 잘 설명 됩니다. **SkiaSharp 선 및 경로** 섹션을 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 라는 제목의 페이지를 사용 하 여 프로그램 시작 **스트로크 단면** 기반으로 [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) 클래스입니다. 이 페이지에서는 정의 `PaintSurface` 의 세 멤버를 반복 하는 이벤트 처리기는 `SKStrokeCap` 열거형 멤버의 이름을 둘 다를 표시 하 고 해당 스트로크 단면을 사용 하는 선을 그리기 열거형:
+这些最好说明与示例程序。 **SkiaSharp 线和路径**一部分[ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)程序开始页面标题为**笔划大写字母**基于[ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs)类。 此页定义`PaintSurface`循环访问的三个成员的事件处理程序`SKStrokeCap`显示这两个枚举成员的名称和绘制一条直线使用该笔划 cap 枚举：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -92,25 +92,25 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-각 멤버에 대해는 `SKStrokeCap` 열거형 처리기 50 픽셀 및 두 픽셀의 스트로크 두께 사용 하 여 맨 위에 배치 하는 다른 줄 스트로크 두께 사용 하 여 하나를 두 줄을 그립니다. 이 두 번째 줄은 기하학적 시작과 선 두께 및 스트로크 단면 독립적인 줄의 끝을 설명 하기 위한 것:
+每个成员的`SKStrokeCap`枚举，该处理程序绘制两个行，另一个笔画粗细设置为 50 个像素，另一行具有两个像素的笔画粗细定位在顶部上使用。 此第二行用于说明的几何开始和结束的独立于线条粗细和笔划上限的行：
 
 [![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
 
-알 수 있듯이 합니다 `Square` 고 `Round` 스트로크 단면 줄의 시작 부분 및 끝 다시 절반 스트로크 너비에 의해 줄의 길이 효과적으로 확장 합니다. 이 확장이 렌더링 되는 그래픽 개체의 크기를 결정 하는 데 필요한 경우에 중요 합니다.
+正如您所看到的`Square`和`Round`笔划大写字母有效地通过一半笔划宽度在行开头和结尾处再次扩展行的长度。 需要确定呈现的图形对象的维度时，此扩展变得重要。
 
-`SKCanvas` 클래스에는 다소 특이 한 여러 줄을 그리기 위한 다른 방법을 포함 되어 있습니다.
+`SKCanvas`类还包含用于绘制多个行是有点奇怪的另一种方法：
 
 ```csharp
 DrawPoints (SKPointMode mode, points, paint)
 ```
 
-`points` 매개 변수는 배열이 `SKPoint` 값 및 `mode` 멤버인 합니다 [ `SKPointMode` ](xref:SkiaSharp.SKPointMode) 세 명의 멤버가 있는 열거형:
+`points`参数是一个数组`SKPoint`值和`mode`属于[ `SKPointMode` ](xref:SkiaSharp.SKPointMode)枚举，它具有三个成员：
 
-- `Points` 개별 요소를 렌더링 하려면
-- `Lines` 각 쌍의 위치를 연결 하려면
-- `Polygon` 모든 연속 요소를 연결 하려면
+- `Points` 若要呈现的各个点
+- `Lines` 若要连接的点的每个对
+- `Polygon` 若要连接所有连续点
 
-합니다 **여러 줄** 페이지에는이 방법을 보여 줍니다. [ **MultipleLinesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) 파일은 두 `Picker` 수 있도록 하는 보기의 멤버를 선택 합니다 `SKPointMode` 열거형 및 멤버인은 `SKStrokeCap` 열거형:
+**多行**页演示此方法。 [ **MultipleLinesPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml)文件实例化两个`Picker`视图使您选择的成员`SKPointMode`枚举的成员和`SKStrokeCap`枚举：
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -173,7 +173,7 @@ DrawPoints (SKPointMode mode, points, paint)
 </ContentPage>
 ```
 
-SkiaSharp 네임 스페이스 선언을 약간 다른 때문에 `SkiaSharp` 네임 스페이스의 멤버를 참조 하는 데 필요한 합니다 `SKPointMode` 및 `SKStrokeCap` 열거형입니다. 합니다 `SelectedIndexChanged` 둘 다에 대 한 처리기 `Picker` 뷰는 단순히 무효화는 `SKCanvasView` 개체:
+请注意 SkiaSharp 命名空间声明是稍有不同，因为`SkiaSharp`引用的成员所需的命名空间`SKPointMode`和`SKStrokeCap`枚举。 `SelectedIndexChanged`两个处理程序`Picker`视图只是使`SKCanvasView`对象：
 
 ```csharp
 void OnPickerSelectedIndexChanged(object sender, EventArgs args)
@@ -185,9 +185,9 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs args)
 }
 ```
 
-이 처리기가 있는지 확인 해야 합니다 `SKCanvasView` 개체 때문에 첫 번째 이벤트 처리기가 호출 될 때를 `SelectedIndex` 의 속성을 `Picker` XAML 파일에서 0으로 설정 됩니다 하기 전에 발생 하는 `SKCanvasView` 인스턴스화된.
+此处理程序需要检查是否存在`SKCanvasView`对象是第一个事件处理程序时，调用`SelectedIndex`的属性`Picker`在 XAML 文件中，设置为 0 和之前将发生这种情况`SKCanvasView`已实例化。
 
-합니다 `PaintSurface` 처리기에서 두 개의 열거형 값을 가져옵니다는 `Picker` 뷰:
+`PaintSurface`处理程序获取两个枚举值从`Picker`视图：
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -226,19 +226,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-스크린샷에서 다양 한 표시 `Picker` 선택:
+屏幕截图显示了各种`Picker`选择：
 
 [![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
 
-왼쪽된 박람회에서 iPhone 하는 방법을 `SKPointMode.Points` 열거형 멤버 발생 `DrawPoints` 각 항목에 렌더링 하는 `SKPoint` 선 끝 모양을 경우 사각형으로 배열 `Butt` 또는 `Square`합니다. 선 끝 모양을 경우 원 렌더링 됩니다 `Round`합니다.
+在左侧显示了 iPhone 如何`SKPointMode.Points`枚举成员会导致`DrawPoints`要呈现的每个中点`SKPoint`线帽是否为一个方框数组`Butt`或`Square`。 线帽是否呈现圆圈`Round`。
 
 Android 스크린샷은 `SKPointMode.Lines`의 결과를 보여 줍니다. `DrawPoints` 메서드는 지정 된 줄 끝 (이 경우 `Round`)을 사용 하 여 `SKPoint` 값의 각 쌍 사이에 선을 그립니다.
 
-대신 `SKPointMode.Polygon`를 사용 하는 경우 배열에서 연속 되는 요소 사이에 선이 그려지고 매우 긴밀 하 게 표시 되는 경우이 줄이 연결 되지 않은 것을 볼 수 있습니다. 각 이러한 별도 줄 시작 되며 지정된 선 끝 모양을로 끝납니다. 선택 하는 경우는 `Round` 캡이 포함 된 줄 연결 되어 나타날 수 있지만 실제로 연결 되지 않은 합니다.
+대신 `SKPointMode.Polygon`를 사용 하는 경우 배열에서 연속 되는 요소 사이에 선이 그려지고 매우 긴밀 하 게 표시 되는 경우이 줄이 연결 되지 않은 것을 볼 수 있습니다. 每个这些单独的行开始和结束的指定的线帽。 如果您选择`Round`顶端行可能看起来连接，但它们实际上未连接。
 
-줄 연결 되거나 연결 되지 있는지 여부를 그래픽 경로 사용 하는 중요 한 측면 이며
+行是否已连接或未连接是使用的图形路径的一个重要方面。
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharpFormsDemos （示例）](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

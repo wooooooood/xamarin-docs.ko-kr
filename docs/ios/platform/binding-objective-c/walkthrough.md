@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: f5e5af7d9b4ec85832f2d6050f632d054ba089a2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f7c98de605f71b320f0650954f08c8857459ceaf
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032673"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725271"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS 목표-C 라이브러리 바인딩
 
@@ -28,7 +28,7 @@ IOS에서 작업 하는 경우 타사 목표-C 라이브러리를 사용 하려�
 
 첫 번째 및 두 번째 시나리오에서는 미리 컴파일된 CocoaTouch 정적 라이브러리가 이미 있으므로이 문서에서는 세 번째 시나리오에 중점을 둡니다. 바인딩을 만들기 전에 항상 라이브러리와 함께 제공 되는 라이선스를 확인 하 여 해당 라이선스를 자유롭게 바인딩할 수 있도록 해야 합니다.
 
-이 문서에서는 오픈 소스 [Infcolorpicker](https://github.com/InfinitApps/InfColorPicker) 목표-c 프로젝트를 사용 하 여 바인딩 프로젝트를 만드는 방법에 대 한 단계별 연습을 제공 하지만,이 가이드의 모든 정보는 타사 목표-c 라이브러리와 함께 사용 하도록 조정할 수 있습니다. . InfColorPicker 라이브러리는 다시 사용할 수 있는 뷰 컨트롤러를 제공 합니다 .이를 통해 사용자는이를 통해 HSB 표시를 기준으로 색을 선택 하 여 사용자에 게 더 쉽게 색을 선택할 수 있습니다.
+이 문서에서는 예를 들어 오픈 소스 [Infcolorpicker](https://github.com/InfinitApps/InfColorPicker) 목표-c 프로젝트를 사용 하 여 바인딩 프로젝트를 만드는 단계별 연습을 제공 하지만,이 가이드의 모든 정보는 타사 목표-c 라이브러리와 함께 사용 하도록 조정할 수 있습니다. InfColorPicker 라이브러리는 다시 사용할 수 있는 뷰 컨트롤러를 제공 합니다 .이를 통해 사용자는이를 통해 HSB 표시를 기준으로 색을 선택 하 여 사용자에 게 더 쉽게 색을 선택할 수 있습니다.
 
 [![](walkthrough-images/run01.png "Example of the InfColorPicker library running on iOS")](walkthrough-images/run01.png#lightbox)
 
@@ -90,7 +90,7 @@ Xcode FAQ 설명서를 [사용 하 여 명령줄에서](https://developer.apple.
 이 연습에서는 다음 단계를 다룹니다.
 
 - **[정적 라이브러리 만들기](#Creating_A_Static_Library)** -이 단계는 **infcolorpicker** 목표-C 코드의 정적 라이브러리를 만드는 작업을 포함 합니다. 정적 라이브러리는 `.a` 파일 확장명을 갖게 되 고 라이브러리 프로젝트의 .NET 어셈블리에 포함 됩니다.
-- **[Xamarin.ios 바인딩 프로젝트 만들기](#Create_a_Xamarin.iOS_Binding_Project)** -정적 라이브러리가 있으면이를 사용 하 여 xamarin.ios 바인딩 프로젝트를 만듭니다. 바인딩 프로젝트는 방금 만든 정적 라이브러리로 구성 되며, 목표-C API를 사용 하 C# 는 방법을 설명 하는 코드 형식으로 메타 데이터를 구성 합니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. API 정의를 만드는 데 도움이 되는 **[목적 Sharpie](#Using_Objective_Sharpie)** 를 사용 합니다.
+- **[Xamarin.ios 바인딩 프로젝트 만들기](#Create_a_Xamarin.iOS_Binding_Project)** -정적 라이브러리가 있으면이를 사용 하 여 xamarin.ios 바인딩 프로젝트를 만듭니다. 바인딩 프로젝트는 방금 만든 정적 라이브러리로 구성 되며, 목표-C API를 사용 하 C# 는 방법을 설명 하는 코드 형식으로 메타 데이터를 구성 합니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. 我们将使用 **[目标 Sharpie](#Using_Objective_Sharpie)** 来帮助我们与创建 API 定义。
 - **[API 정의 표준화](#Normalize_the_API_Definitions)** -목표 Sharpie는 유용 하지만 모든 작업을 수행할 수는 없습니다. API 정의를 사용 하기 전에 수행 해야 하는 몇 가지 변경 사항을 설명 합니다.
 - **[바인딩 라이브러리 사용](#Using_the_Binding)** -마지막으로, 새로 만든 바인딩 프로젝트를 사용 하는 방법을 보여 주는 xamarin.ios 응용 프로그램을 만듭니다.
 
@@ -156,7 +156,7 @@ Github에서 InfColorPicker에 대 한 코드를 검사 하는 경우:
 
     [![](walkthrough-images/image16b.png "Expand the Link Binary With Libraries section")](walkthrough-images/image16b.png#lightbox)
 
-13. **+** 단추를 사용 하 여 위에 나열 된 필수 프레임 프레임 워크를 추가할 수 있는 대화 상자를 엽니다.
+13. 使用 **+** 按钮以打开对话框让你可以添加上面列出的所需的帧框架：
 
     [![](walkthrough-images/image16c.png "Add the required frames frameworks listed above")](walkthrough-images/image16c.png#lightbox)
 
@@ -168,19 +168,19 @@ Github에서 InfColorPicker에 대 한 코드를 검사 하는 경우:
 
 ### <a name="creating-a-fat-binary"></a>Fat 이진 파일 만들기
 
-모든 iOS 장치에는 시간에 따라 개발 된 ARM 아키텍처로 구동 되는 프로세서가 있습니다. 새 아키텍처에는 이전 버전과의 호환성을 유지 하면서 새로운 지침과 기타 기능이 추가 되었습니다. iOS 장치에는 armv6, armv7, armv7s 용 thumb-2, arm64 명령 집합이 있습니다. 하지만 [armv6은 더 이상 사용 되지 않습니다](~/ios/deploy-test/compiling-for-different-devices.md). IOS 시뮬레이터는 ARM에서 구동 되지 않으며 대신 x86 및 x86_64 동력 시뮬레이터입니다. 즉, 각 명령 집합에 대해 라이브러리를 제공 해야 합니다.
+모든 iOS 장치에는 시간에 따라 개발 된 ARM 아키텍처로 구동 되는 프로세서가 있습니다. 새 아키텍처에는 이전 버전과의 호환성을 유지 하면서 새로운 지침과 기타 기능이 추가 되었습니다. iOS 장치에는 armv6, armv7, armv7s 용 thumb-2, arm64 명령 집합이 있습니다. 하지만 [armv6은 더 이상 사용 되지 않습니다](~/ios/deploy-test/compiling-for-different-devices.md). IOS 시뮬레이터는 ARM에서 구동 되지 않으며, x86 및 x86_64 powered 시뮬레이터입니다. 즉, 각 명령 집합에 대해 라이브러리를 제공 해야 합니다.
 
 Fat 라이브러리는 지원 되는 모든 아키텍처를 포함 하는 `.a` 파일입니다.
 
 Fat 이진 파일을 만드는 과정은 다음 3 단계로 진행 됩니다.
 
 - ARM 7 & ARM64 버전의 정적 라이브러리를 컴파일합니다.
-- X86 및 x84_64 버전의 정적 라이브러리를 컴파일합니다.
+- X86 및 정적 라이브러리의 x84_64 버전을 컴파일합니다.
 - `lipo` 명령줄 도구를 사용 하 여 두 정적 라이브러리를 하나로 결합 합니다.
 
 이러한 세 단계는 간단 하지만, 목표-C 라이브러리가 업데이트를 받거나 버그를 수정 해야 하는 경우 나중에이 단계를 반복 해야 할 수도 있습니다. 이러한 단계를 자동화 하기로 결정 한 경우에는 iOS 바인딩 프로젝트의 향후 유지 관리 및 지원이 간소화 됩니다.
 
-이러한 작업을 자동화 하는 데 사용할 수 있는 여러 도구가 있습니다 (셸 스크립트, [rake](https://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)및 [만들기](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html)). Xcode 명령줄 도구를 설치 하면 `make` 설치 되므로이 연습에 사용할 빌드 시스템이 됩니다. IOS 장치에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는 **메이크파일** 및 라이브러리에 대 한 시뮬레이터는 다음과 같습니다.
+이러한 작업을 자동화 하는 데 사용할 수 있는 여러 도구가 있습니다 (셸 스크립트, [rake](https://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/)및 만들기). Xcode 명령줄 도구를 설치 하면 `make` 설치 되므로이 연습에 사용할 빌드 시스템이 됩니다. IOS 장치에서 작동 하는 다중 아키텍처 공유 라이브러리를 만드는 데 사용할 수 있는 **메이크파일** 및 라이브러리에 대 한 시뮬레이터는 다음과 같습니다.
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -278,7 +278,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 1. 새 프로젝트 대화 상자에서 **Visual C# > iPhone & IPad > iOS 바인딩 라이브러리 (Xamarin)** 를 선택 합니다.
 
-    [iOS 바인딩 라이브러리를 선택![](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
+    [iOS 바인딩 라이브러리를 선택 ![](walkthrough-images/bind02.w157-sml.png)](walkthrough-images/bind02.w157.png#lightbox)
 
 1. **이름** 으로 "Infcolor kerbinding"을 입력 하 고 **확인** 단추를 클릭 하 여 솔루션을 만듭니다.
 
@@ -419,7 +419,7 @@ sdk: watchos2.2      arch: armv7
 sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-여기서 `[full-path-to-project]`은 컴퓨터에서 **Infcolorpicker** Xcode 프로젝트 파일이 있는 디렉터리의 전체 경로이 고 [iphone-os]는 `sharpie xcode -sdks` 명령에 명시 된 대로 설치한 iOS SDK입니다. 이 예제에서는이 디렉터리의 *모든* 헤더 파일을 포함 하는 매개 변수로\*를 전달 했습니다 **.** 일반적으로이 작업을 수행 하면 안 됩니다. 대신 헤더 파일을 통해 자세히 읽어 최상위 .h 파일을 찾아야 합니다 **.** 는 다른 모든 관련 파일을 참조 하 고이를 목표 Sharpie 전달 하기만 하면 됩니다.
+여기서 `[full-path-to-project]`은 컴퓨터에서 **Infcolorpicker** Xcode 프로젝트 파일이 있는 디렉터리의 전체 경로이 고 [iphone-os]는 `sharpie xcode -sdks` 명령에 명시 된 대로 설치한 iOS SDK입니다. 이 예제에서는이 디렉터리의 *모든* 헤더 파일을 포함 하는 매개 변수로\*를 전달 했습니다 **.** 일반적으로이 작업을 수행 하면 안 됩니다. 그 대신 헤더 파일을 통해 다른 모든 관련 파일을 참조 하는 최상위 **.H** 파일을 찾고 목표 Sharpie으로 전달 하기만 하면 됩니다.
 
 터미널에서 생성 되는 [출력](walkthrough-images/os05.png) 은 다음과 같습니다.
 
@@ -460,7 +460,7 @@ Europa:Resources kmullins$
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **Mac 빌드 호스트**에서 **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 기존 `namespace ...` 코드 블록을 **InfColorPicker.cs** 파일의 내용으로 바꿉니다. `using` 문은 그대로 유지 됩니다.
+위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **Mac 빌드 호스트**에서 **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 기존 `namespace ...` 코드 블록을 **InfColorPicker.cs** 파일의 내용으로 바꿉니다 (`using` 문은 그대로 유지).
 
 -----
 
@@ -529,7 +529,7 @@ Sharpie 특성을 `[Verify]` 사용 하 여에서 바인딩에 주석이 추가 
 
 1. **Xamarin.ios 프로젝트 만들기** - **단일 뷰 응용 프로그램** 템플릿을 사용 하 여 **infcolor kersample** 이라는 새 xamarin.ios 프로젝트를 추가 합니다.
 
-    [iOS 앱 (Xamarin) 프로젝트![](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
+    [iOS 앱 (Xamarin) 프로젝트 ![](walkthrough-images/use01.w157-sml.png)](walkthrough-images/use01.w157.png#lightbox)
 
     [![템플릿 선택](walkthrough-images/use01-2.w157-sml.png)](walkthrough-images/use01-2.w157.png#lightbox)
 
@@ -586,7 +586,7 @@ public partial interface InfColorPickerControllerDelegate {
 
 Xamarin.ios 응용 프로그램에서이 인터페이스를 구현할 수 있는 방법에는 두 가지가 있습니다.
 
-- **강력한 대리자** -강력한 대리자를 사용 하는 경우 C#`InfColorPickerControllerDelegate`하는 클래스를 만들고 적절 한 메서드를 재정의 해야 합니다. **Infcolorpickercontroller** 는이 클래스의 인스턴스를 사용 하 여 클라이언트와 통신 합니다.
+- **강력한 대리자** -강력한 대리자를 사용 하는 경우 C# `InfColorPickerControllerDelegate` 하는 클래스를 만들고 적절 한 메서드를 재정의 해야 합니다. **Infcolorpickercontroller** 는이 클래스의 인스턴스를 사용 하 여 클라이언트와 통신 합니다.
 - **약한 대리자** -약한 대리자는 일부 클래스 (예: `InfColorPickerSampleViewController`)에서 공용 메서드를 만든 다음 `Export` 특성을 통해 해당 메서드를 `InfColorPickerDelegate` 프로토콜에 노출 하는 약간 다른 기술입니다.
 
 강력한 대리자는 Intellisense, 형식 안전성 및 더 나은 캡슐화 기능을 제공 합니다. 이러한 이유로 weak 대리자 대신 가능한 경우 강력한 대리자를 사용 해야 합니다.
@@ -667,7 +667,7 @@ private void HandleTouchUpInsideWithStrongDelegate (object sender, EventArgs e)
 
 ### <a name="implementing-a-weak-delegate"></a>약한 대리자 구현
 
-특정 대리자의 목적-C 프로토콜에 바인딩된 클래스를 서브클래싱 하는 대신 Xamarin.ios를 사용 하 여 `NSObject`에서 파생 되는 모든 클래스에서 프로토콜 메서드를 구현 하 고, `ExportAttribute`를 사용 하 여 메서드를 데코레이팅 한 다음,를 제공 합니다. 적절 한 선택기입니다. 이 방법을 사용 하는 경우 클래스의 인스턴스를 `Delegate` 속성이 아닌 `WeakDelegate` 속성에 할당 합니다. 약한 대리자는 대리자 클래스를 다른 상속 계층 구조에서 사용할 수 있는 유연성을 제공 합니다. Xamarin.ios 응용 프로그램에서 weak 대리자를 구현 하 고 사용 하는 방법을 살펴보겠습니다.
+특정 대리자의 목적-C 프로토콜에 바인딩된 클래스를 서브클래싱 하는 대신 Xamarin.ios를 사용 하 여 `NSObject`에서 파생 되는 모든 클래스에서 프로토콜 메서드를 구현 하 고, `ExportAttribute`를 사용 하 여 메서드를 데코레이팅하 며, 적절 한 선택기를 제공할 수도 있습니다. 이 방법을 사용 하는 경우 클래스의 인스턴스를 `Delegate` 속성이 아닌 `WeakDelegate` 속성에 할당 합니다. 약한 대리자는 대리자 클래스를 다른 상속 계층 구조에서 사용할 수 있는 유연성을 제공 합니다. Xamarin.ios 응용 프로그램에서 weak 대리자를 구현 하 고 사용 하는 방법을 살펴보겠습니다.
 
 **TouchUpInside에 대 한 이벤트 처리기 만들기** -배경 색 변경 단추의 `TouchUpInside` 이벤트에 대 한 새 이벤트 처리기를 만듭니다. 이 처리기는 이전 섹션에서 만든 `HandleTouchUpInsideWithStrongDelegate` 처리기와 동일한 역할을 채우지만 강력한 대리자 대신 weak 대리자를 사용 합니다. `ViewController`클래스를 편집 하 고 다음 메서드를 추가 합니다.
 
@@ -692,7 +692,7 @@ public override void ViewDidLoad ()
 
 ```
 
-**ColorPickerControllerDidFinish: message를 처리 합니다.** -`ViewController` 완료 되 면 iOS는 메시지 `colorPickerControllerDidFinish:` `WeakDelegate`보냅니다. 이 메시지를 처리할 수 C# 있는 메서드를 만들어야 합니다. 이렇게 하려면 메서드를 C# 만든 다음`ExportAttribute`를 사용 하 여 장식할 합니다. `ViewController`를 편집 하 고 다음 메서드를 클래스에 추가 합니다.
+**ColorPickerControllerDidFinish: message를 처리 합니다.** -`ViewController` 완료 되 면 iOS는 메시지 `colorPickerControllerDidFinish:` `WeakDelegate`보냅니다. 이 메시지를 처리할 수 C# 있는 메서드를 만들어야 합니다. 이렇게 하려면 메서드를 C# 만든 다음 `ExportAttribute`를 사용 하 여 장식할 합니다. `ViewController`를 편집 하 고 다음 메서드를 클래스에 추가 합니다.
 
 ```csharp
 [Export("colorPickerControllerDidFinish:")]
@@ -704,7 +704,7 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 
 ```
 
-애플리케이션을 실행합니다. 이제 이전과 정확히 동일 하 게 동작 하지만 강력한 대리자 대신 weak 대리자를 사용 합니다. 이 시점에서이 연습을 성공적으로 완료 했습니다. 이제 Xamarin.ios 바인딩 프로젝트를 만들고 사용 하는 방법을 이해 해야 합니다.
+응용 프로그램을 실행합니다. 이제 이전과 정확히 동일 하 게 동작 하지만 강력한 대리자 대신 weak 대리자를 사용 합니다. 이 시점에서이 연습을 성공적으로 완료 했습니다. 이제 Xamarin.ios 바인딩 프로젝트를 만들고 사용 하는 방법을 이해 해야 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -712,7 +712,6 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 
 ## <a name="related-links"></a>관련 링크
 
-- [바인딩 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/infcolorpicker)
 - [Objective-C 라이브러리 바인딩](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [바인딩 세부 정보](~/cross-platform/macios/binding/overview.md)
 - [바인딩 형식 참조 가이드](~/cross-platform/macios/binding/binding-types-reference.md)

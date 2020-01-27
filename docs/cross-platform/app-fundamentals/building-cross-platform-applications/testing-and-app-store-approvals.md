@@ -6,12 +6,12 @@ ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 07eab1e8229cd6600bb8abdd324cb3eb12a8f886
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a9f84192a312f9aba98817b75c058229e6c721bb
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016849"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723622"
 ---
 # <a name="part-6---testing-and-app-store-approvals"></a>6부 - 테스트 및 App Store 승인
 
@@ -31,7 +31,7 @@ Windows phone, 태블릿 및 데스크톱 장치에서 .NET이 지 원하는 기
 
 휴대폰 및 태블릿 에코 시스템은 항상 증가 하 고 있으므로 사용할 수 있는 장치 수를 지속적으로 테스트 하는 것은 불가능 합니다. 이 문제를 해결 하기 위해 많은 수의 서비스에서 다양 한 장치를 원격으로 제어 하는 기능을 제공 하므로 많은 하드웨어에 직접 투자할 필요 없이 응용 프로그램을 설치 하 고 테스트할 수 있습니다.
 
-[App Center 테스트](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) 는 수백 개의 서로 다른 장치에서 IOS 및 Android 응용 프로그램을 테스트 하는 쉬운 방법을 제공 합니다.
+App Center 테스트는 수백 개의 서로 다른 장치에서 iOS 및 Android 응용 프로그램을 테스트 하는 쉬운 방법을 제공 합니다. 자세한 내용은 [Xamarin Android 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) 및 [xamarin.ios 앱 준비](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)를 참조 하세요.
 
 ### <a name="test-management"></a>Test Management
 
@@ -56,7 +56,7 @@ Xamarin.ios에는 JUnit/NUnit 스타일을 작성 하는 데 따르는 Touch. Un
 
 테스트를 작성 하 고 터치를 실행 하는 방법에 대 한 자세한 내용은 [xamarin.ios를 사용한 단위 테스트](~/ios/deploy-test/touch.unit.md) 설명서를 참조 하세요.
 
-### <a name="andrunit"></a>Andr. Unit
+### <a name="andrunit"></a>Andr.Unit
 
 Android의 경우 Andr. Unit의 Touch와 동일한 오픈 소스가 있습니다. [Github](https://github.com/spouliot/Andr.Unit) 에서이를 다운로드 하 고 [@spouliot의 블로그에서](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/)도구를 읽을 수 있습니다.
 

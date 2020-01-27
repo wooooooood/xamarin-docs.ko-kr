@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d9d47e750580bb9e4a0f4a2283cbd9e8c6a44c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: fd9bced0d2185fd9bd0d18932921c101b2ed207c
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489091"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725178"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>추가 iOS 9 프레임 워크 변경 내용
 
@@ -61,7 +61,6 @@ CloudKit 프레임 워크는 iCloud에 액세스 하는 응용 프로그램 개�
 - [Cloudkit 소개](~/ios/data-cloud/intro-to-cloudkit.md) -xamarin.ios 앱에서 cloudkit를 사용 하는 방법을 소개 합니다.
 - [Cloudkit 빠른 시작](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) -Apple의 cloudkit 소개.
 - [CLOUDKIT Js 참조](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) -Apple의 cloudkit js 설명서.
-- [Cloudkit 웹 서비스 참조](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) -cloudkit에 대 한 HTTP 인터페이스를 설명 하는 Apple의 참조입니다.
 - Cloudkit 카탈로그: cloudkit 및 CloudKit를 사용 하는 Apple 샘플 앱 및 cloudkit [(Cocoa 및 JavaScript)에 대 한 소개](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) 입니다.
 
 > [!IMPORTANT]
@@ -117,7 +116,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 Apple에는 iOS 9의 [HealthKit](xref:HealthKit) 프레임 워크에 대 한 다음과 같은 변경 내용이 포함 되어 있습니다.
 
 - HealthKit 데이터베이스의 항목에 대 한 대량 삭제 및 삭제 추적 지원. 자세한 내용은 Apple의 [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) 및 [HKHealthStore 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) 를 참조 하세요.
-- `HKQuantityTypeIdentifier` 클래스 (예: `UVExposure`) 및 `HKCategoryTypeIdentifier` 클래스 (예: `OvulationTestResult`)에 새로운 추적 범주 및 특징이 추가 되었습니다. 자세한 내용은 Apple의 [HealthKit 상수 참조](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) 를 참조 하세요.
+- `HKQuantityTypeIdentifier` 클래스 (예: `UVExposure`) 및 `HKCategoryTypeIdentifier` 클래스 (예: `OvulationTestResult`)에 새로운 추적 범주 및 특징이 추가 되었습니다. 
 
 Xamarin.ios에서 HealthKit를 사용 하는 방법에 대 한 자세한 내용은 [HealthKit 소개 설명서를](~/ios/platform/healthkit.md) 참조 하세요.
 
@@ -125,7 +124,7 @@ Xamarin.ios에서 HealthKit를 사용 하는 방법에 대 한 자세한 내용�
 
 Apple에는 iOS 9의 [로컬 인증](xref:LocalAuthentication) 프레임 워크에 대 한 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-- 이제 [LAContext](xref:LocalAuthentication.LAContext) 클래스의 `EvaluateAccessControl` 및 `EvaluatePolicy` 메서드를 사용하여 이전에 성공한 잠금 해제 시도에서 Touch ID 일치를 재사용할 수 있습니다.
+- 使用 [LAContext 类](xref:LocalAuthentication.LAContext)的`EvaluateAccessControl`和`EvaluatePolicy`方法, 你现在可以重新使用之前成功解除锁定尝试的 Touch ID 匹配项 。
 - 현재 등록 된 손가락의 목록을 가져올 수 있습니다.
 - 손가락을 인증에서 추가 하거나 제거 하는 경우 추적을 지원 합니다.
 - 키 집합 호출에서 _인증 컨텍스트_ 를 사용 하 고 키 집합 액세스 제어 목록을 평가 하는 기능이 제공 됩니다.
@@ -156,7 +155,7 @@ Apple에는 iOS 9의 [Mapkit](xref:MapKit) 프레임 워크가 다음과 같이 
 - MapKit에서 반환 된 검색 결과 및 [CLGeocoder](xref:CoreLocation.CLGeocoder) 클래스는 결과의 표준 시간대를 제공할 수도 있습니다.
 - 이제 [MKAnnotationView](xref:MapKit.MKAnnotationView) 클래스의 `DetailCalloutAccessoryView` 속성을 사용 하 여 iOS 앱에서 제공 하는 맵 주석을 완전히 사용자 지정할 수 있습니다.
 
-자세한 내용은 [Ios 맵](~/ios/user-interface/controls/ios-maps/index.md) 및 [연습-mapkit](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md)의 Xamarin.iOS 및 Apple의 [CLGeocoder 참조](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder)에서 주석과 오버레이 탐색 설명서에서 맵과 주석을 사용하는 방법에 대한 자세한 내용은 참조하세요.
+자세한 내용은 [Ios 맵](~/ios/user-interface/controls/ios-maps/index.md) 및 [연습-mapkit의 주석과 오버레이 탐색](~/ios/user-interface/controls/ios-maps/ios-maps-walkthrough.md) 설명서에서 맵과 주석을 사용 하는 방법에 대 한 자세한 [내용은 참조 하세요](https://developer.apple.com/library/prerelease/ios/documentation/CoreLocation/Reference/CLGeocoder_class/index.html#//apple_ref/occ/cl/CLGeocoder) .
 
 ## <a name="passkit-framework-additions"></a>PassKit 프레임 워크 추가
 
@@ -221,7 +220,7 @@ Apple은 iOS 9의 터치 이벤트에 대해 몇 가지 향상 된 기능을 제
 
 새 `NSLayoutAnchor` 및 `NSLayoutDimension` 레이아웃 앵커 클래스는 [Uiview](xref:UIKit.UIView) 클래스의 새 앵커 속성 (예: `LeadingAnchor` 및 `WidthAnchor`)을 사용 하 여 iOS 9에서 레이아웃을 보다 쉽게 만들 수 있습니다.
 
-Xamarin.ios 앱 및 Apple의 [Nslayoutanchor 참조](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)에서 자동 레이아웃 및 크기 클래스로 작업 하는 방법에 대 한 자세한 내용은 [통합 스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 설명서를 참조하고 [NSLayoutDimension Reference](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) 참조를 참조 하세요. 자세한 내용은 [UIView 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView)를 참조 하세요.
+有关如何在 Xamarin iOS 应用中使用自动版式和大小类的详细信息, 请参阅我们的[统一情节提要文档简介](~/ios/user-interface/storyboards/unified-storyboards.md)和 Apple 的[NSLayoutAnchor 参考](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)[NSLayoutDimension 参考](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension)和[UIView 参考](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView)。
 
 ### <a name="new-readable-content-margins"></a>새 읽을 수 있는 콘텐츠 여백
 

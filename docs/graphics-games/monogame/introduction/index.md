@@ -6,45 +6,43 @@ ms.assetid: D781401F-7A96-4098-9645-5F98AEAF7F71
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 1a94a29f0da6f7916eca697a24ad504a0af46b7c
-ms.sourcegitcommit: 41a029c69925e3a9d2de883751ebfd649e8747cd
+ms.openlocfilehash: 8ffb62c8715ff60e9b0ea3b2bc536f3441fb8765
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978384"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724676"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>MonoGame를 사용한 게임 개발 소개
 
 _이 다중 파트 연습에서는 MonoGame를 사용 하 여 간단한 2D 응용 프로그램을 만드는 방법을 보여 줍니다.  그래픽, 입력, 게임 엔터티 및 물리학 같은 일반적인 게임 프로그래밍 개념을 다룹니다._
 
-이 문서에서는 플랫폼 간 게임을 만들기 위한 MonoGame API 기술에 대해 설명 합니다. 플랫폼의 전체 목록은 [MonoGame 웹 사이트](http://www.monogame.net/)를 참조 하세요. 이 자습서에서는 MonoGame C# 완벽 하 게 작동 F# 하는 경우에도 코드 샘플에 대해를 사용 합니다.
+本文介绍了用于制作跨平台游戏的 MonoGame API 技术。 有关平台的完整列表，请参阅 [MonoGame 网站](http://www.monogame.net/)。 本教程将使用 C＃ 代码示例，虽然 MonoGame 也完全可以使用F＃。
 
-MonoGame는 그래픽, 오디오, 게임 상태 관리, 입력 및 자산 가져오기를 위한 콘텐츠 파이프라인을 제공 하는 플랫폼 간 하드웨어 가속 API입니다. 대부분의 게임 엔진과 달리 MonoGame는 패턴 또는 프로젝트 구조를 제공 하거나 적용 하지 않습니다.  이는 개발자가 코드를 원하는 대로 구성할 수 있다는 것을 의미 하는 반면, 새 프로젝트를 처음 시작할 때 약간의 설정 코드가 필요 함을 의미 하기도 합니다.
+MonoGame 是一个跨平台的硬件加速API、提供图形、音频、游戏状态管理、输入以及用于导入资产的内容流水线。 与大多数游戏引擎不同，MonoGame 不提供或强加任何模式或项目结构。  虽然这意味着开发人员可以随意组织他们的代码，但这也意味着首次启动新项目时需要一些设置代码。
 
-이 연습의 첫 번째 섹션에서는 빈 프로젝트를 설정 하는 방법을 집중적으로 설명 합니다. 마지막 섹션에서는 모든 게임 논리 및 콘텐츠를 작성 하는 방법을 다룹니다. 대부분은 플랫폼 간입니다.
+本演练的第一部分重点介绍如何设置一个空项目。 最后一部分介绍了如何编写我们所有的游戏逻辑和内容 — 大多数都是跨平台的。
 
-이 연습을 마치면 플레이어가 터치 입력으로 애니메이션 문자를 제어할 수 있는 간단한 게임을 만들었습니다.  이는 기술적으로 전체 게임을 하지는 않지만 (win 또는 분실 조건이 있으므로) 많은 게임 개발 개념을 보여 주며 많은 유형의 게임을 위한 기반으로 사용할 수 있습니다.
+本演练结束时，我们将创建一个简单的游戏，玩家可以通过触摸输入控制动画角色。  虽然这在技术上并不是一个完整的游戏（因为它没设置赢或输的条件），但它展示了许多游戏开发概念，可以作为许多游戏类型的基础。
 
-다음은이 연습의 결과를 보여 줍니다.
+下面显示了此演练的结果：
 
 ![마우스 다음에 나오는 샘플 게임 문자 애니메이션](images/image1.gif)
 
 ## <a name="monogame-and-xna"></a>MonoGame 및 XNA
 
-MonoGame 라이브러리는 구문과 기능 모두에서 Microsoft의 XNA 라이브러리를 모방 하기 위한 것입니다.  모든 MonoGame 개체는 MonoGame에서 수정 없이 대부분의 XNA 코드를 사용할 수 있도록 하는 Microsoft Xna 네임 스페이스에 있습니다.
+MonoGame 库旨在模仿 Microsoft XNA 库的功能和语法。  所有 MonoGame 对象都存在于 Microsoft.Xna 命名空间下 - 允许大多数 XNA 代码在 MonoGame 中使用而无需修改。
 
-XNA에 익숙한 개발자는 이미 MonoGame의 구문에 익숙하고 MonoGame 사용에 대 한 추가 정보를 찾는 개발자는 기존 온라인 XNA 연습, API 설명서 및 토론을 참조할 수 있습니다.
+熟悉 XNA 的开发人员已熟悉 MonoGame 的语法，想寻找更多有关使用 MonoGame 的信息的开发人员可参考现有的在线XNA演练、API 文档和讨论。
 
 ## <a name="walkthrough-parts"></a>연습 파트
 
-- [1 부-플랫폼 간 MonoGame 프로젝트 만들기](~/graphics-games/monogame/introduction/part1.md)
-- [2 부-WalkingGame 구현](~/graphics-games/monogame/introduction/part2.md)
+- [第 1 部分 – 创建跨平台 MonoGame 项目](~/graphics-games/monogame/introduction/part1.md)
+- [第 2 部分 – 实现 WalkingGame ](~/graphics-games/monogame/introduction/part2.md)
 
 ## <a name="related-links"></a>관련 링크
 
 - [WalkingGame MonoGame 프로젝트 (샘플)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
-- [XNB 글꼴 iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [XNB 글꼴 Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
-- [NuGet의 MonoGame Android](https://www.nuget.org/packages/MonoGame.Framework.Android/)
-- [NuGet의 MonoGame iOS](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
+- [NuGet 上的 MonoGame Android](https://www.nuget.org/packages/MonoGame.Framework.Android/)
+- [NuGet 上的 MonoGame iOS](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [MonoGame API 설명서](http://www.monogame.net/documentation/?page=main)

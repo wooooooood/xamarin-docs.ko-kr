@@ -6,12 +6,12 @@ ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 2f1fb3706012fa86834986064a366071b644b2dc
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f60be3f7dc14749f5cd58d5228c17fa85282cd78
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015948"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725352"
 ---
 # <a name="objective-sharpie-release-history"></a>목표 Sharpie 릴리스 내역
 
@@ -58,11 +58,9 @@ ms.locfileid: "73015948"
 
 ## <a name="216-march-17-2015"></a>2.1.6 (3 월 17 일, 2015)
 
-[다운로드 v 2.1.6](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.6.pkg)
-
 * 고정 이항 연산자 식 바인딩: 식의 왼쪽이 오른쪽으로 잘못 바꿨습니다. 예를 들어 `1 << 0` `0 << 1`으로 잘못 바인딩되어 있습니다. 이를 위해 Adam Kemp에 감사 드립니다.
 * `NSUInteger` `NSInteger`와 관련 된 문제를 해결 하 고 i386에서 `nint` 및 `nuint` 대신 `int` 및 `uint`에 바인딩되어 있습니다. `-DNS_BUILD_32_LIKE_64`은 이제 구문 분석 `objc/NSObjCRuntime.h` i386에서 예상 대로 작동 하도록 Clang에 전달 됩니다.
-* Mac OS X Sdk (예: `-sdk macosx10.10`)에 대 한 기본 아키텍처는 이제 i386 대신 x86_64 이므로 기본값 재정의를 원하는 경우가 아니면 `-arch`를 생략할 수 있습니다.
+* Mac OS X Sdk (예: `-sdk macosx10.10`)에 대 한 기본 아키텍처는 이제 i386 대신 x86_64 되므로 기본값 재정의를 원하는 경우가 아니면 `-arch`를 생략할 수 있습니다.
 
 ## <a name="210-march-15-2015"></a>2.1.0 (3 월 15 일, 2015)
 
@@ -95,7 +93,7 @@ ms.locfileid: "73015948"
 
 * `long` 또는 `int`와 같은 builtin 정수 계열 형식으로 확인 되는 `typedef` 바로 앞에 있는 익명 열거형의 명명 추론 기능이 향상 되었습니다.
 
-* 이제 C 포인터는`System.IntPtr`대신 C#`unsafe`포인터로 바인딩됩니다. 이로 인해 포인터 매개 변수를 `out` 또는 `ref` 매개 변수로 전환할 수 있는 경우 바인딩이 더 명확 하 게 됩니다. 매개 변수를 `out` 또는 `ref`해야 하는지를 항상 유추할 수 있는 것은 아니므로 감사를 쉽게 수행할 수 있도록 포인터가 바인딩에 유지 됩니다.
+* 이제 C 포인터는 `System.IntPtr`대신 C# `unsafe` 포인터로 바인딩됩니다. 이로 인해 포인터 매개 변수를 `out` 또는 `ref` 매개 변수로 전환할 수 있는 경우 바인딩이 더 명확 하 게 됩니다. 매개 변수를 `out` 또는 `ref`해야 하는지를 항상 유추할 수 있는 것은 아니므로 감사를 쉽게 수행할 수 있도록 포인터가 바인딩에 유지 됩니다.
 
 * 위의 포인터 바인딩에 대 한 예외는 목표 C 개체에 대 한 2 차수 포인터가 매개 변수로 발견 된 경우입니다. 이러한 경우 규칙은 널리 사용할 수 있으며 매개 변수는 `out` (예: `NSError **error` → `out NSError error`)로 바인딩됩니다.
 
@@ -135,7 +133,7 @@ ms.locfileid: "73015948"
 
 [다운로드 v 1.1.35](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.35.pkg)
 
-사소한 버그 수정
+사소한 버그가 수정되었습니다.
 
 ## <a name="111-december-15-2014"></a>1.1.1:2014 년 12 월 15 일
 

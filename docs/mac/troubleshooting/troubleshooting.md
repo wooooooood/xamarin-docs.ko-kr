@@ -8,16 +8,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7bb17abf8cdb943780bb3939aae8e461925b6517
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8714297c4948dbb65c521d6a32bac3e437b40733
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001604"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725442"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.ios 문제 해결 팁
 
-## <a name="overview"></a>개요
+## <a name="overview"></a>概述
 
 때로는 API를 사용 하 여 원하는 방식으로 또는 버그를 해결할 수 없는 경우에도 프로젝트에서 작업 하는 동안 문제가 발생할 수 있습니다. Xamarin의 목표는 모바일 및 데스크톱 응용 프로그램을 작성 하는 데 도움이 되는 것 이며, 도움이 되는 몇 가지 리소스를 제공 했습니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "73001604"
 - 명령줄에서 명령에 "MONO_LOG_LEVEL"를 추가 하 여 출력을 늘릴 수 있습니다. 예를 들면 다음과 같습니다.
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- 프로세스에 네이티브 디버거 (`lldb`)를 연결 하 여 더 많은 정보를 제공 하는지 확인할 수 있습니다 (유료 라이선스 필요). 예를 들어, 다음을 수행 합니다.
+- 프로세스에 네이티브 디버거 (`lldb`)를 연결 하 여 더 많은 정보를 제공 하는지 확인할 수 있습니다 (유료 라이선스 필요). 예를 들어 다음을 수행합니다.
 
   1. 터미널에 `lldb MyApp.app/Contents/MacOS/MyApp`을 입력 합니다.
   2. 터미널에 `run`을 입력 합니다.
@@ -68,7 +68,7 @@ ms.locfileid: "73001604"
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>샌드박스 앱에서 디버거에 연결할 수 없습니다.
 
-디버거는 TCP를 통해 Xamarin.ios 앱에 연결 합니다. 즉, 기본적으로 샌드 박싱을 사용 하도록 설정 하면 앱에 연결할 수 없습니다. 따라서 적절 한 사용 권한을 설정 하지 않고 앱을 실행 하려고 하면 *"디버거에 연결할 수 없습니다." 오류가 발생 합니다.* .
+디버거는 TCP를 통해 Xamarin.ios 앱에 연결 합니다. 즉, 기본적으로 샌드 박싱을 사용 하도록 설정 하면 앱에 연결할 수 없습니다. 따라서 적절 한 사용 권한을 설정 하지 않고 앱을 실행 하려고 하면 *"디버거에 연결할 수 없습니다"* 오류가 발생 합니다.
 
 [![자격 편집](troubleshooting-images/debug01.png "자격 편집")](troubleshooting-images/debug01-large.png#lightbox)
 
@@ -112,13 +112,13 @@ Xcode의 새 버전을 처음으로 실행 하면 Xamarin.ios에 필요한 몇 �
 
 ## <a name="community-support-on-the-forums"></a>포럼의 커뮤니티 지원
 
-Xamarin 제품을 사용 하는 개발자 커뮤니티는 놀라운 것 이며 많은 [경험을 통해](https://forums.xamarin.com/categories/mac) 경험과 전문 지식을 공유할 수 있습니다. 또한 Xamarin 엔지니어가 포럼을 주기적으로 방문 하 여 도움을 줍니다.
+Xamarin 제품을 사용 하는 개발자 커뮤니티는 놀라운 것 이며 많은 [경험을 통해](https://forums.xamarin.com/categories/xamarin-mac) 경험과 전문 지식을 공유할 수 있습니다. 또한 Xamarin 엔지니어가 포럼을 주기적으로 방문 하 여 도움을 줍니다.
 
 <a name="filing-a-bug"/>
 
 ## <a name="filing-a-bug"></a>버그 파일링
 
-사용자 의견은 microsoft에 중요 합니다. Xamarin.ios에서 문제가 발견 되 면 다음을 수행 합니다.
+고객 의견은 품질 향상에 큰 도움이 됩니다. Xamarin.ios에서 문제가 발견 되 면 다음을 수행 합니다.
 
 - [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색
 - GitHub 문제로 전환하기 전에 Xamarin 문제가 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)에서 추적되었습니다. 여기서 일치하는 문제를 검색해 보세요.

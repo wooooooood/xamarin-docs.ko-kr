@@ -1,101 +1,101 @@
 ---
-title: Xamarin에서 watchOS 알림
-description: 이 문서에서는 Xamarin에서 watchOS 알림을 사용 하는 방법을 설명 합니다. 알림 컨트롤러를 만들고, 알림을 생성 하 고, 알림을 테스트 하는 방법을 설명 합니다.
+title: watchOS 中 Xamarin 的通知
+description: 本文档介绍如何使用 Xamarin 中的 watchOS 通知。 它讨论了创建通知控制器，生成通知，并将测试通知。
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 6be46d31ac2c16d02749519907d650588dbbcbe6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 85a55967446da5cf89e8ce19dadf88d0de16d80a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028223"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725071"
 ---
-# <a name="watchos-notifications-in-xamarin"></a>Xamarin에서 watchOS 알림
+# <a name="watchos-notifications-in-xamarin"></a>watchOS 中 Xamarin 的通知
 
-시청 앱은 포함 하는 iOS 앱이 지원 되는 경우 알림을 받을 수 있습니다. 기본 제공 알림 처리가 있으므로 아래에 설명 된 추가 알림 지원을 추가할 *필요* 는 없지만 알림 동작 및 모양을 사용자 지정 하려는 경우에는을 참조 하세요.
+如果包含 iOS 应用程序支持它们，watch 应用可以接收通知。 没有内置通知处理，以便不这样做*需要*添加其他通知支持下述，但是如果你想要自定义通知行为和外观请继续阅读。
 
-솔루션에서 iOS 앱에 알림 지원을 추가 하는 방법에 대 한 자세한 내용은 [Ios 알림](~/ios/platform/user-notifications/deprecated/index.md) 문서를 참조 하세요.
+请参阅[iOS 通知](~/ios/platform/user-notifications/deprecated/index.md)将通知支持添加到你的解决方案中的 iOS 应用程序的详细信息的文档。
 
-## <a name="creating-notification-controllers"></a>알림 컨트롤러 만들기
+## <a name="creating-notification-controllers"></a>创建通知控制器
 
-스토리 보드 알림 컨트롤러에는 트리거를 트리거하는 특수 한 유형의 segue 있습니다. 새 **알림 인터페이스 컨트롤러** 를 스토리 보드로 끌면 자동으로 segue이 연결 됩니다.
+情节提要上通知控制器有一种特殊类型的 segue 触发它们。 当您将一个新**通知界面控制器**到情节提要上，它会自动将具有附加 segue:
 
 ![](notifications-images/notification-storyboard1.png "A new Notification Interface Controller with a segue attached")
 
-알림 segue를 선택 하면 해당 속성을 편집할 수 있습니다.
+选择通知的 segue 时您可以编辑其属性：
 
 ![](notifications-images/notification-storyboard2.png "The notification segue selected")
 
-컨트롤러를 사용자 지정한 후에는 WatchKitCatalog에서 다음 예제와 같이 보일 수 있습니다.
+自定义控制器后，它可能看起来如以下示例从 WatchKitCatalog:
 
 ![](notifications-images/notifications-segue.png "The Notification Properties")
 
-다음과 같은 두 가지 유형의 알림이 있습니다.
+有两种类型的通知：
 
 - 시스템에서 정의한 스크롤할 때 스크롤할 때 정적 뷰가 아닙니다.
 
-- 사용자가 정의한 **길고** 스크롤 가능 하 고 사용자 지정이 가능한 뷰입니다. 더 간단한 정적 버전 및 보다 복잡 한 동적 버전을 지정할 수 있습니다.
+- **长时间看**-滚动的由你定义的可自定义视图 ！ 可以指定一个更简单的、 静态版本和更复杂的动态版本。
 
-### <a name="short-look-notification-controller"></a>단기 알림 컨트롤러
+### <a name="short-look-notification-controller"></a>短查看通知控制器
 
-간단한 UI는 앱 아이콘, 앱 이름 및 알림 제목 문자열로 구성 됩니다.
+简短介绍 UI 包含只是应用程序图标、 应用程序名称和通知标题字符串。
 
-사용자가 알림을 무시 하지 않으면 시스템은 자세한 정보를 제공 하는 긴 모양 알림으로 자동 전환 됩니다.
+如果用户不会忽略该通知，系统将自动切换到提供的详细信息的长时间查看通知。
 
-### <a name="long-look-notification-controller"></a>긴 알림 컨트롤러
+### <a name="long-look-notification-controller"></a>长时间查看通知控制器
 
-OS는 여러 요소에 따라 정적 또는 동적 뷰를 표시할지 여부를 결정 합니다. 정적 인터페이스를 제공 해야 하며 필요에 따라 알림에 대 한 동적 인터페이스를 포함할 수도 있습니다.
+操作系统决定是否显示基于许多因素的静态或动态视图。 必须提供静态接口，并可以选择性地还包括了动态接口以通知。
 
 #### <a name="static"></a>Static
 
-정적 보기는 간단 하 고 신속 하 게 표시할 수 있어야 합니다.
+静态视图应该既简单又快速显示。
 
 ![](notifications-images/notification-static.png "The static view")
 
-#### <a name="dynamic"></a>동적
+#### <a name="dynamic"></a>Dynamic
 
-동적 보기는 더 많은 데이터를 표시 하 고 더 많은 상호 작용을 제공할 수 있습니다.
+动态视图可以显示更多数据，并提供更多交互性。
 
 ![](notifications-images/notification-dynamic.png "The dynamic view")
 
-## <a name="generating-notifications"></a>알림 생성
+## <a name="generating-notifications"></a>生成通知
 
-알림은 원격 서버 ([Apple Push Notification Service](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)또는 APNS)에서 제공 되거나 iOS 앱에서 로컬로 생성 될 수 있습니다.
+알림은 원격 서버에서 제공 될 수도 있고 iOS 앱에서 로컬로 생성 될 수도 있습니다.
 
-로컬 알림을 생성 하는 방법에 대 한 예제 및 작업 예제는 [WatchNotifications 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) 을 보려면 [iOS 알림 연습](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) 을 참조 하세요.
+로컬 알림을 생성 하는 방법에 대 한 예제는 [IOS 알림 연습](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) 을 참조 하세요.
 
-로컬 알림에는 Apple Watch에 표시 되도록 설정 된 `AlertTitle` 있어야 합니다. `AlertTitle` 문자열이 단기 인터페이스에 표시 됩니다. `AlertTitle`와 `AlertBody` 모두 알림 목록에 표시 됩니다. `AlertBody`는 긴 모양 인터페이스에 표시 됩니다.
+必须具有本地通知`AlertTitle`设置为显示在 Apple Watch-`AlertTitle`短外观界面中显示字符串。 同时`AlertTitle`并`AlertBody`显示在通知列表; 和`AlertBody`长时间看界面中显示。
 
-이 스크린샷에서는 알림 목록에 표시 되는 `AlertTitle` 및 긴 모양 인터페이스에 표시 되는 `AlertBody` ( [샘플 코드](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)사용)를 보여 줍니다.
+이 스크린샷에서는 알림 목록에 표시 되는 `AlertTitle` 및 긴 모양 인터페이스에 표시 되는 `AlertBody`를 보여 줍니다.
 
 ![](notifications-images/watch-notificationslist-sml.png "이 스크린샷은 알림 목록에 표시 되는 AlertTitle을 보여 줍니다.") ![](notifications-images/watch-notificationcontroller-sml.png "긴 모양 인터페이스에 표시 되는 AlertBody")
 
-## <a name="testing-notifications"></a>테스트 알림
+## <a name="testing-notifications"></a>测试通知
 
-알림 (로컬 및 원격 모두)은 장치 에서만 제대로 테스트할 수 있지만 iOS 시뮬레이터의 **json** 파일을 사용 하 여 시뮬레이션할 수 있습니다.
+通知 （本地和远程） 可以仅正确测试在设备上，但可以使用模拟它们 **.json** iOS 模拟器中的文件。
 
-### <a name="testing-on-apple-watch"></a>Apple Watch 테스트
+### <a name="testing-on-apple-watch"></a>在 Apple Watch 上进行测试
 
-Apple Watch에 대 한 알림을 테스트 하는 경우 [Apple 설명서](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html) 에는 다음이 명시 되어 있습니다.
+在测试时在 Apple Watch 上的通知，请记住[Apple 的文档](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)指出：
 
-> 앱의 로컬 또는 원격 알림 중 하나가 사용자의 iPhone에 도착 하면 iOS는 iPhone 또는 Apple Watch에 해당 알림을 표시할지 여부를 결정 합니다.
+> 当用户的 iPhone 上的一个应用程序的本地或远程通知到达时，iOS 将决定是否在 iPhone 上或在 Apple Watch 上显示该通知。
 
-이는 iOS에서 알림이 iPhone에 표시될지 아니면 시계에 표시될지를 결정 한다는 사실입니다. 알림이 수신 될 때 페어링된 iPhone이 활성화 되어 있으면 알림이 iPhone에 표시 되 고 감시로 라우팅되지 *않을* 수 있습니다.
+这这一事实 alluding 该 iOS 决定是否在 iPhone 或 Watch 上将出现一条通知。 如果配对的 iPhone 激活时收到通知，通知是有可能显示在 iPhone 上并*不*路由到手表。
 
-알림이 보기에 표시 되는지 확인 하려면 iPhone 화면을 끄거나 (전원 단추를 한 번 누름) 절전 모드로 전환 합니다. 쌍을 이루는 Watch가 범위 내에 있고, 전원이 손목에서 마모 되는 경우, 해당 알림이 라우팅되고 표시 되 고 감시에 표시 됩니다 (미묘한).
+若要确保 watch 上会显示通知，请关闭 iPhone 屏幕 （一次按电源按钮） 或让其进入睡眠状态。 如果配对的监视处于范围内，已通电并且佩戴手腕上，通知会存在路由和监视文件 （伴随细微） 上显示。
 
-### <a name="testing-on-the-ios-simulator"></a>IOS 시뮬레이터 테스트
+### <a name="testing-on-the-ios-simulator"></a>在 iOS 模拟器上测试
 
-IOS 시뮬레이터에서 알림 모드를 테스트할 때 테스트 JSON 페이로드를 제공 *해야* 합니다. Mac용 Visual Studio의 **사용자 지정 실행 인수** 창에서 경로를 설정 합니다.
+您*必须*在 iOS 模拟器中测试通知模式时提供测试 JSON 有效负载。 在中设置路径**自定义执行参数**窗口在 Visual Studio for mac。
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
-Mac용 Visual Studio은 조사식 확장이 **시작 프로젝트로**설정 된 경우 추가 옵션을 표시 합니다.
-조사식 확장 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **> 사용자 지정 매개 변수를 사용 하 여 실행**...을 선택 합니다.
+监视扩展设置为时，visual Studio for Mac 将显示其他选项**启动项目**。
+右键单击监视扩展项目并选择**运行与 > 自定义参数...** :
 
 [![](notifications-images/runwith-customparams-sml.png "Running with Custom Properties")](notifications-images/runwith-customparams.png#lightbox)
 
@@ -105,25 +105,25 @@ Mac용 Visual Studio은 조사식 확장이 **시작 프로젝트로**설정 된
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Visual Studio에서 테스트 알림 페이로드를 설정 하려면 조사식 확장을 마우스 오른쪽 단추로 클릭 하 여 **프로젝트 속성**을 편집 합니다. **디버그** 섹션으로 이동 하 여 목록에서 알림 json 파일을 선택 합니다. 프로젝트에 포함 된 모든 json 파일은 자동으로 나열 됩니다.
+若要编辑的监视扩展中右键单击 Visual Studio 设置测试通知有效负载**项目属性**。 转到**调试**部分，并从列表中 （它会自动列出项目中包含的所有 JSON 文件） 选择通知 JSON 文件。
 
 [![](notifications-images/runwith-execargs-sml-vs.png "Select a notifications JSON file")](notifications-images/runwith-execargs-vs.png#lightbox)
 
-조사식 확장이 **시작 프로젝트인**경우 Visual Studio는 아래와 같이 추가 옵션을 표시 합니다. **알림 모드에서** 감시 앱을 시작 하는 **알림** 옵션 중 하나를 선택 합니다 (속성 창에서 선택한 JSON 파일 사용).
+监视扩展时**启动项目**，Visual Studio 将显示其他选项，如下所示。 选择其中一个**通知**选项以在启动监视应用程序**通知**模式 （使用属性窗口中选择的 JSON 文件）：
 
 ![](notifications-images/runwith-vs.png "The Device menu")
 
 -----
 
-기본 페이로드 JSON 파일을 사용 하 여 시뮬레이터에서 테스트할 때 기본 알림 컨트롤러는 다음과 같습니다.
+在模拟器上测试使用默认有效负载的 JSON 文件时，默认通知控制器如下所示：
 
 ![](notifications-images/notification-debug-sml.png "An example notification")
 
-[명령줄](~/ios/watchos/troubleshooting.md#command_line) 을 사용 하 여 iOS 시뮬레이터를 시작할 수도 있습니다.
+它也是可以使用[命令行](~/ios/watchos/troubleshooting.md#command_line)启动 iOS 模拟器。
 
-### <a name="example-notification-payload"></a>알림 페이로드 예
+### <a name="example-notification-payload"></a>示例通知有效负载
 
-[Watch Kit 카탈로그](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) 샘플에는 예제 페이로드 Json 파일 **notificationpayload. json** (아래에 나열 되어 있습니다)이 있습니다.
+在中[监视工具包目录](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)示例有是 JSON 文件的示例有效负载**NotificationPayload.json** （列举如下）。
 
 ```json
 {
@@ -146,6 +146,5 @@ Visual Studio에서 테스트 알림 페이로드를 설정 하려면 조사식 
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchNotifications (로컬 알림) (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
-- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Apple의 감시 키트 알림 문서](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)
+- [WatchKitCatalog （示例）](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Apple Watch 工具包通知文档](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

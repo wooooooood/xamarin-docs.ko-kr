@@ -6,12 +6,12 @@ ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: d081795ecfcc5d0aa2559b866fcc57076fe8248b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f0e2128bca5d2965395647353cd5a95a4030439f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73007017"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725280"
 ---
 # <a name="getting-started-with-macos"></a>MacOS 시작
 
@@ -82,7 +82,7 @@ Finder에서 **~/Projects/hello-from-csharp/output** 디렉터리를 열고, **h
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     MyNSView *view = [[MyNSView alloc] init];
     view.frame = CGRectMake(0, 200, 200, 200);
     [self.view addSubview: view];
@@ -94,5 +94,3 @@ Finder에서 **~/Projects/hello-from-csharp/output** 디렉터리를 열고, **h
 마지막으로 Xcode 프로젝트를 실행 하 고 다음과 같은 항목이 표시 됩니다.
 
 ![시뮬레이터에서 C# 실행 되는 샘플의 Hello](macos-images/hello-from-csharp-mac.png)
-
-여기에서 더 완전 하 고 더 나은 샘플을 [볼 수 있습니다](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).
