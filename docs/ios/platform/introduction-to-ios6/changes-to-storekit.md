@@ -7,21 +7,21 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1d49be1f4339b658e8202d4091b9a12b45d7b507
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7cf18934c70acf59213a697ab57b6c5e308e7b2a
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031914"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725223"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>iOS 6의 StoreKit 변경 내용
 
-_iOS 6에는 저장소 키트 API에 대 한 두 가지 변경 사항이 도입 되었습니다. 앱 내에서 iTunes (및 App Store/iBookstore) 제품을 표시 하는 기능 및 Apple에서 다운로드 한 파일을 호스트 하는 새로운 앱 내 구매 옵션이 도입 되었습니다. 이 문서에서는 Xamarin.ios를 사용 하 여 이러한 기능을 구현 하는 방법을 설명 합니다._
+_iOS 6에는 저장소 키트 API에 대 한 두 가지 변경 사항이 도입 되었습니다. 앱 내에서 iTunes (및 App Store/iBookstore 점) 제품을 표시 하는 기능 및 Apple에서 다운로드 한 파일을 호스트 하는 새로운 앱 내 구매 옵션이 도입 되었습니다. 이 문서에서는 Xamarin.ios를 사용 하 여 이러한 기능을 구현 하는 방법을 설명 합니다._
 
 IOS6에서 저장소 키트의 주요 변경 내용은 다음과 같은 두 가지 새로운 기능입니다.
 
 - **앱 내 콘텐츠 표시 & 구매** – 사용자는 앱을 종료 하지 않고도 앱, 음악, 책 및 기타 iTunes 콘텐츠를 구매 하 고 다운로드할 수 있습니다. 사용자 고유의 앱에 연결 하 여 구매를 홍보 하거나 리뷰 및 등급을 장려 하도록 할 수도 있습니다.
-- **앱에서 호스트** 되는 콘텐츠-Apple은 앱 내 구매 제품과 관련 된 콘텐츠를 저장 하 고 전달 합니다. 그러면 개별 서버가 파일을 호스팅할 필요가 없으며, 자동으로 백그라운드 다운로드를 지원 하 고 사용자가 작성할 수 있습니다. less 코드.
+- **앱에서 호스트** 되는 콘텐츠-Apple은 앱 내 구매 제품과 관련 된 콘텐츠를 저장 하 고 전달 합니다 .이는 별도의 서버가 파일을 호스팅할 필요가 없는 경우 자동으로 백그라운드 다운로드를 지원 하 고 코드를 더 작게 작성할 수 있도록 합니다.
 
 기능 키트 Api에 대 한 자세한 내용은 [앱 내 구매](~/ios/platform/in-app-purchasing/index.md) 가이드를 참조 하세요.
 
@@ -60,7 +60,7 @@ IOS의 새로운 앱 내 구매 기능을 통해 사용자는 제품 정보를 �
 1. 뷰 컨트롤러의 `Finished` 이벤트에 처리기를 할당 합니다 .이 이벤트는 뷰 컨트롤러를 해제 해야 합니다. 이 이벤트는 사용자가 취소를 누를 때 호출 됩니다. 또는 뷰 컨트롤러 내에서 트랜잭션을 마무리 합니다.
 1. `StoreProductParameters` 및 완료 처리기를 전달 하는 `LoadProduct` 메서드를 호출 합니다. 완료 처리기는 제품 요청이 성공적으로 완료 되었는지 확인 하 고, 있는 경우 `SKProductViewController`를 모달 형식으로 표시 합니다. 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>示例
 
 이 문서의 지 항목 *키트* 샘플 코드에 있는 제품 *뷰* 프로젝트는 모든 제품의 Apple ID를 수락 하 고 `SKStoreProductViewController`를 표시 하는 `Buy` 메서드를 구현 합니다. 다음 코드는 지정 된 Apple ID에 대 한 제품 정보를 표시 합니다.
 
@@ -100,7 +100,7 @@ void Buy (int productId)
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
@@ -115,7 +115,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 
 ### <a name="reading-objective-c-documentation"></a>목표 읽기-C 설명서
 
-Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있는 개발자는이 새로운 기능과 관련 하 여 설명 하는 [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html)프로토콜을 볼 수 있습니다. 대리자 프로토콜에는 Xamarin.ios의 `SKStoreProductViewController`에서 `Finished` 이벤트로 노출 된 productViewControllerDidFinish – 메서드가 하나만 있습니다.
+Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있는  [개발자](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) 는이 새로운 기능과 관련 하 여 설명 하는 프로토콜을 볼 수 있습니다. 대리자 프로토콜에는 Xamarin.ios의 `SKStoreProductViewController`에서 `Finished` 이벤트로 노출 된 productViewControllerDidFinish – 메서드가 하나만 있습니다.
 
 ## <a name="determining-apple-ids"></a>Apple Id 확인
 
@@ -131,7 +131,7 @@ Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있
 
 ### <a name="search-api"></a>검색 API
 
-Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 하는 동적 검색 API를 제공 합니다. 검색 API에 액세스 하는 방법에 대 한 정보는 [Apple의 관련 리소스](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)에서 찾을 수 있습니다. 단, api는 등록 된 계열사가 아니라 누구나 노출 됩니다. 결과 JSON을 구문 분석 하 여 `SKStoreProductViewController`에 사용할 Apple ID 인 `trackId` 검색할 수 있습니다.
+Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 하는 동적 검색 API를 제공 합니다. 검색 API에 액세스 하는 방법에 대 한 정보는 Apple의 관련 리소스에서 찾을 수 있습니다. 단, API는 등록 된 계열사가 아니라 누구나 노출 됩니다. 결과 JSON을 구문 분석 하 여 `SKStoreProductViewController`에 사용할 Apple ID 인 `trackId` 검색할 수 있습니다.
 
 결과에는 앱에서 제품을 렌더링 하는 데 사용할 수 있는 표시 정보 및 아트 워크 Url을 포함 하는 다른 메타 데이터도 포함 됩니다.
 
@@ -142,7 +142,7 @@ Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 
 
 ### <a name="enterprise-partner-feed"></a>엔터프라이즈 파트너 피드
 
-Apple은 다운로드 가능한 데이터베이스 지원 플랫 파일 형식으로 모든 제품에 대 한 완전 한 데이터 덤프를 승인 된 파트너에 게 제공 합니다. [엔터프라이즈 파트너 피드에](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html)대 한 액세스 권한이 있는 경우 모든 제품에 대 한 Apple ID를 해당 데이터 집합에서 찾을 수 있습니다.
+Apple은 다운로드 가능한 데이터베이스 지원 플랫 파일 형식으로 모든 제품에 대 한 완전 한 데이터 덤프를 승인 된 파트너에 게 제공 합니다. 엔터프라이즈 파트너 피드에 대 한 액세스 권한이 있는 경우 모든 제품에 대 한 Apple ID를 해당 데이터 집합에서 찾을 수 있습니다.
 
 엔터프라이즈 파트너 피드의 많은 사용자는 제품 판매를 커미션 수 있도록 하는 관련 [프로그램](https://www.apple.com/itunes/affiliates) 의 멤버입니다. `SKStoreProductViewController`는 관련 Id (작성 시점)를 지원 하지 않습니다.
 
@@ -170,8 +170,8 @@ http://itunes.apple.com/us/app/mwc-2012-unofficial/id496963922?mt=8
 앱에서 바로 구매를 다운로드할 수 있는 콘텐츠 (예: 서적 또는 기타 미디어, 게임 수준 아트 및 구성 또는 기타 많은 파일)로 구성 된 경우 이러한 파일은 웹 서버에서 호스트 되는 데 사용 되며 앱은 다음에 안전 하 게 다운로드 하기 위해 코드를 통합 해야 했습니다. 구입처나. IOS 6부터 Apple은 서버에서 파일을 호스팅하고 별도의 서버에 대 한 필요성을 제거 합니다. 이 기능은 사용할 수 없는 제품 (사용할 수 없음 또는 구독)에 대해서만 사용할 수 있습니다. Apple의 호스팅 서비스를 사용 하는 이점은 다음과 같습니다.
 
 - 호스팅 & 대역폭 비용을 절감 합니다.
-- 현재 사용 중인 모든 서버 호스트 보다 확장성이 더 높습니다. 
-- 서버 쪽 처리를 빌드할 필요가 없기 때문에 작성할 코드는 적습니다. 
+- 현재 사용 중인 모든 서버 호스트 보다 확장성이 더 높습니다.
+- 서버 쪽 처리를 빌드할 필요가 없기 때문에 작성할 코드는 적습니다.
 - 백그라운드 다운로드는 사용자를 위해 구현 됩니다.
 
 참고: iOS 시뮬레이터에서 호스팅된 앱 내 구매 콘텐츠 테스트는 지원 되지 않으므로 실제 장치로 테스트 해야 합니다.
@@ -196,7 +196,7 @@ IOS 6 Apple에서는 서버에서 제공 하는 콘텐츠 파일을 호스트 �
 
 다음 섹션에서는이 문서의 샘플 코드를 사용 하 여 패키지를 만들고 업로드 하 여 구매 및 다운로드 프로세스를 관리 하는 방법을 설명 합니다.
 
-### <a name="sample-code"></a>예제 코드
+### <a name="sample-code"></a>샘플 코드
 
 샘플 프로젝트 *HostedNonConsumables* (StoreKitiOS6)는 호스트 된 콘텐츠를 사용 합니다. 앱은 판매에 대 한 두 개의 "책 장"을 제공 하며,이 콘텐츠는 Apple 서버에서 호스팅됩니다. 콘텐츠는 긴 응용 프로그램에서 훨씬 더 복잡 한 콘텐츠를 사용할 수 있지만 텍스트 파일과 이미지로 구성 되어 있습니다.
 
@@ -269,7 +269,8 @@ Apple에 업로드 하는 콘텐츠 파일은 다음 제한 사항을 충족 해
 
 ![](changes-to-storekit-images/image13.png "Choose Archiven")
 
-그러면 아래와 같이 콘텐츠 패키지가 보관 위치에 표시 됩니다. 보관 유형 및 아이콘은이 줄을 **앱 내 구매 콘텐츠 보관**으로 표시 합니다. **유효성 검사** ...를 클릭 합니다. 실제로 업로드를 수행 하지 않고 콘텐츠 패키지에서 오류를 확인 합니다.
+그러면 아래와 같이 콘텐츠 패키지가 보관 위치에 표시 됩니다.
+보관 유형 및 아이콘은이 줄을 **앱 내 구매 콘텐츠 보관**으로 표시 합니다. **유효성 검사** ...를 클릭 합니다. 실제로 업로드를 수행 하지 않고 콘텐츠 패키지에서 오류를 확인 합니다.
 
 [![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
 
@@ -469,7 +470,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);
@@ -524,8 +525,7 @@ Apple의 iCloud 백업 지침은 서버에서 쉽게 복원 되는 사용자가 
 - [앱에서 바로 구매](~/ios/platform/in-app-purchasing/index.md)
 - [나이 키트 프레임 워크 참조](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [이 클래스 참조](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [iTunes 검색 API 참조](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [이상 다운로드](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
-- [고 제품](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
-- [WWDC 비디오: 매장 키트를 사용 하 여 제품 판매](https://developer.apple.com/videos/wwdc/2012/?include=302#302)
+- [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
+- [WWDC 비디오: 스토어 키트를 사용 하 여 제품 판매](https://developer.apple.com/videos/wwdc/2012/?include=302#302)
