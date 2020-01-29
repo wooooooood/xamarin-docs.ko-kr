@@ -4,8 +4,6 @@
   items:
     - name: Xamarin이란?
       href: what-is-xamarin.md
-    - name: 요구 사항
-      href: requirements.md
     - name: 설치
       href: installation/index.md
       items:
@@ -14,15 +12,19 @@
           items:
             - name: Xamarin 미리 보기 설치(Windows)
               href: installation/windows-preview.md
+            - name: Visual Studio에서 Xamarin 제거
+              href: installation/uninstalling-xamarin.md
         - name: Mac용 Visual Studio 설치
           href: /visualstudio/mac/installation/
           items:
             - name: Xamarin 미리 보기 설치(Mac)
               href: /visualstudio/mac/update/
+            - name: Mac용 Visual Studio 제거
+              href: /visualstudio/mac/uninstall
         - name: Xamarin 방화벽 구성 지침
           href: installation/firewall.md
-        - name: Xamarin 제거
-          href: installation/uninstalling-xamarin.md
+    - name: 지원되는 플랫폼
+      href: supported-platforms.md
     - name: 첫 번째 앱
       href: first-app/index.md
     - name: 빠른 시작
