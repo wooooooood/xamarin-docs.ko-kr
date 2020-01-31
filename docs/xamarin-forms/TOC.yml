@@ -6,8 +6,6 @@
       items:
         - name: Xamarin.Forms란?
           href: ~/get-started/what-is-xamarin-forms.md
-        - name: 요구 사항
-          href: ~/get-started/requirements.md
         - name: 설치
           href: ~/get-started/installation/index.md
           items:
@@ -16,15 +14,19 @@
               items:
                 - name: Xamarin 미리 보기 설치(Windows)
                   href: ~/get-started/installation/windows-preview.md
+                - name: Visual Studio에서 Xamarin 제거
+                  href: ~/get-started/installation/uninstalling-xamarin.md
             - name: Mac용 Visual Studio 설치
               href: /visualstudio/mac/installation/
               items:
                 - name: Xamarin 미리 보기 설치(Mac)
                   href: /visualstudio/mac/update/
+                - name: Mac용 Visual Studio 제거
+                  href: /visualstudio/mac/uninstall
             - name: Xamarin 방화벽 구성 지침
               href: ~/get-started/installation/firewall.md
-            - name: Xamarin 제거
-              href: ~/get-started/installation/uninstalling-xamarin.md
+        - name: 지원되는 플랫폼
+          href: ~/get-started/supported-platforms.md
         - name: 첫 번째 앱
           href: ~/get-started/first-app/index.md
         - name: 빠른 시작
