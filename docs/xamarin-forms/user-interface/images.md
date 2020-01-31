@@ -163,7 +163,7 @@ var embeddedImage = new Image {
 
 다음 스크린샷은 각 플랫폼에 포함 된 이미지를 표시 하는 결과 보여 줍니다.
 
-[포함 된 이미지를 표시 하는 샘플 응용 프로그램 ![](images-images/resource-sml.png)](images-images/resource.png#lightbox)
+[![포함 된 이미지를 표시 하는 샘플 응용 프로그램](images-images/resource-sml.png)](images-images/resource.png#lightbox)
 
 ### <a name="xaml"></a>XAML
 

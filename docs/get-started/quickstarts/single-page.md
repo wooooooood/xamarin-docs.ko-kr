@@ -1,6 +1,6 @@
 ---
 title: 단일 페이지 Xamarin.Forms 애플리케이션 만들기
-description: 이 문서에서는 메모를 입력 하 고 장치 저장소에 보관 하는 데 사용할 수 있는 단일 페이지 플랫폼 간 Xamarin.ios 응용 프로그램을 만드는 방법을 설명 합니다.
+description: 이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간의 Xamarin.Forms 애플리케이션 생성 방법을 설명합니다.
 zone_pivot_groups: platform-dev16
 ms.topic: quickstart
 ms.prod: xamarin
@@ -10,54 +10,54 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
-ms.translationtype: MT
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71679979"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin. Forms 응용 프로그램 만들기
+# <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
-이 빠른 시작에서는 다음 방법에 대해 알아봅니다.
+이 빠른 시작에서 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
-- 플랫폼 간 Xamarin Forms 응용 프로그램을 만듭니다.
-- XAML (eXtensible Application Markup Language)을 사용 하 여 페이지에 대 한 사용자 인터페이스를 정의 합니다.
-- 코드에서 XAML 사용자 인터페이스 요소와 상호 작용 합니다.
+- 플랫폼 간 Xamarin.Forms 애플리케이션을 만듭니다.
+- XAML(eXtensible Application Markup Language)을 사용하는 페이지에 대해 사용자 인터페이스를 정의합니다.
+- 코드에서 XAML 사용자 인터페이스 요소와 상호작용합니다.
 
-이 빠른 시작은 메모를 입력 하 고 장치 저장소에 보관할 수 있는 플랫폼 간 Xamarin.ios 응용 프로그램을 만드는 방법을 안내 합니다. 최종 애플리케이션은 다음과 같습니다.
+빠른 시작에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 안내합니다. 최종 애플리케이션은 다음과 같습니다.
 
 [![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
 
 ::: zone pivot="windows"
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>사전 요구 사항
 
-- .NET 워크 로드를 **사용한 모바일 개발** 이 설치 된 Visual Studio 2019 (최신 릴리스)
-- 에 대 C#한 지식.
-- 필드 IOS에서 응용 프로그램을 빌드하기 위한 페어링된 Mac입니다.
+- **.NET을 사용한 모바일 개발** 워크로드가 설치된 Visual Studio 2019(최신 릴리스)
+- C# 관련 지식
+- (선택 사항) iOS상의 애플리케이션 빌드를 위해 페어링된 Mac
 
-이러한 필수 구성 요소에 대 한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조 하세요. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
+이 사전 요구 사항에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
 
 ## <a name="get-started-with-visual-studio-2019"></a>Visual Studio 2019 시작
 
-1. Visual Studio 2019을 시작 하 고 시작 창에서 **새 프로젝트 만들기** 를 클릭 하 여 새 프로젝트를 만듭니다.
+1. Visual Studio 2019를 시작하고 시작 창에서 **새 프로젝트 만들기**를 클릭하여 새 프로젝트를 만듭니다.
 
     ![](single-page-images/vs/new-solution-2019.png "New Project")
 
-2. **새 프로젝트 만들기** 창의 **프로젝트 형식** 드롭다운에서 **모바일** 을 선택 하 고 **모바일 앱 (xamarin.ios)** 템플릿을 선택 하 고 **다음** 단추를 클릭 합니다.
+2. **새 프로젝트 만들기** 창에서 **프로젝트 형식** 드롭다운의 **모바일**을 선택한 다음 **모바일 앱(Xamarin.Forms)** 템플릿을 선택하고 **다음** 단추를 클릭합니다.
 
     ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
-3. **새 프로젝트 구성** 창에서 **프로젝트 이름을** **메모**로 설정 하 고, 프로젝트에 적합 한 위치를 선택 하 고, **만들기** 단추를 클릭 합니다.
+3. **새 프로젝트 구성** 창에서 **프로젝트 이름**을 **Notes**로 지정하고 적절한 프로젝트 위치를 선택한 다음 **만들기** 단추를 클릭합니다.
 
     ![](single-page-images/vs/configure-project.png "Configure your Project")
 
     > [!IMPORTANT]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
-4. **새 플랫폼 간 앱** 대화 상자에서 비어 있는 **앱**을 클릭 하 고 **확인** 단추를 클릭 합니다.
+4. **새 플랫폼 간 앱** 대화 상자에서 **빈 앱**을 클릭한 후 **확인** 단추를 클릭합니다.
 
     ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
 
@@ -96,7 +96,7 @@ ms.locfileid: "71679979"
     </ContentPage>
     ```
 
-    이 코드는 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 합니다 .이 인터페이스는 텍스트를 표시 하는 [`Label`](xref:Xamarin.Forms.Label) , 텍스트 입력에 대 한 [`Editor`](xref:Xamarin.Forms.Editor) , 파일을 저장 하거나 삭제 하도록 응용 프로그램을 지시 하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스를 정의 합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 Xamarin.ios의 [사용자 인터페이스](deepdive.md#user-interface) [빠른 시작 심층](deepdive.md)정보를 참조 하세요.
+    이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 인터페이스](deepdive.md#user-interface)를 참조하세요.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
@@ -144,7 +144,7 @@ ms.locfileid: "71679979"
     }
     ```
 
-    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction) 을 참조 하세요.
+    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은[Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -164,7 +164,7 @@ ms.locfileid: "71679979"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [각 플랫폼에서 응용 프로그램 시작](deepdive.md#launching-the-application-on-each-platform) 을 참조 하세요.
+    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
     > [!NOTE]
     > 다음 단계는 Xamarin.Forms 개발을 위한 시스템 요구 사항을 충족하는 [페어링된 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)이 있는 경우에만 수행해야 합니다.
@@ -181,22 +181,22 @@ ms.locfileid: "71679979"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [각 플랫폼에서 응용 프로그램 시작](deepdive.md#launching-the-application-on-each-platform) 을 참조 하세요.
+    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>사전 요구 사항
 
-- .NET 워크 로드를 **사용한 모바일 개발** 이 설치 된 Visual Studio 2017.
-- 에 대 C#한 지식.
-- 필드 IOS에서 응용 프로그램을 빌드하기 위한 페어링된 Mac입니다.
+- **.NET을 사용한 모바일 개발** 워크로드가 설치된 Visual Studio 2017
+- C# 관련 지식
+- (선택 사항) iOS상의 애플리케이션 빌드를 위해 페어링된 Mac
 
-이러한 필수 구성 요소에 대 한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조 하세요. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
+이 사전 요구 사항에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
 
 ## <a name="get-started-with-visual-studio-2017"></a>Visual Studio 2017 시작
 
-1. Visual Studio 2017을 시작 하 고 시작 페이지에서 **새 프로젝트 만들기** ...를 클릭 하 여 새 프로젝트를 만듭니다.
+1. Visual Studio 2017을 시작하고 시작 창에서 **새 프로젝트 만들기**를 클릭하여 새 프로젝트를 만듭니다.
 
     ![](single-page-images/vs/new-solution.png "New Project")
 
@@ -207,7 +207,7 @@ ms.locfileid: "71679979"
     > [!IMPORTANT]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션의 이름이 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 솔루션으로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
-3. **New Cross Platform App** 대화 상자에서 **Blank**를 클릭하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
+3. **새 플랫폼 간 앱** 대화 상자에서 **비어 있는 앱**을 클릭하고, **.NET Standard**를 코드 공유 전략으로 선택하고, **확인** 단추를 클릭합니다.
 
     ![](single-page-images/vs/new-app.png "New Cross-Platform App")
 
@@ -246,7 +246,7 @@ ms.locfileid: "71679979"
     </ContentPage>
     ```
 
-    이 코드는 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 합니다 .이 인터페이스는 텍스트를 표시 하는 [`Label`](xref:Xamarin.Forms.Label) , 텍스트 입력에 대 한 [`Editor`](xref:Xamarin.Forms.Editor) , 파일을 저장 하거나 삭제 하도록 응용 프로그램을 지시 하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스를 정의 합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 Xamarin.ios의 [사용자 인터페이스](deepdive.md#user-interface) [빠른 시작 심층](deepdive.md)정보를 참조 하세요.
+    이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 인터페이스](deepdive.md#user-interface)를 참조하세요.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
@@ -294,7 +294,7 @@ ms.locfileid: "71679979"
     }
     ```
 
-    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction) 을 참조 하세요.
+    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은[Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -314,7 +314,7 @@ ms.locfileid: "71679979"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [각 플랫폼에서 응용 프로그램 시작](deepdive.md#launching-the-application-on-each-platform) 을 참조 하세요.
+    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
     > [!NOTE]
     > 다음 단계는 Xamarin.Forms 개발을 위한 시스템 요구 사항을 충족하는 [페어링된 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)이 있는 경우에만 수행해야 합니다.
@@ -331,22 +331,22 @@ ms.locfileid: "71679979"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [각 플랫폼에서 응용 프로그램 시작](deepdive.md#launching-the-application-on-each-platform) 을 참조 하세요.
+    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>사전 요구 사항
 
-- IOS 및 Android 플랫폼 지원이 설치 된 Mac용 Visual Studio (최신 릴리스)
-- Xcode (최신 릴리스).
-- 에 대 C#한 지식.
+- iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)
+- Xcode(최신 릴리스)
+- C# 관련 지식
 
-이러한 필수 구성 요소에 대 한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조 하세요.
+이 사전 요구 사항에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
 ## <a name="get-started-with-visual-studio-for-mac"></a>Mac용 Visual Studio 시작
 
-1. Mac용 Visual Studio를 시작 하 고 시작 창에서 **새로** 만들기를 클릭 하 여 새 프로젝트를 만듭니다.
+1. Mac용 Visual Studio를 시작하고 시작 창에서 **새로 만들기**를 클릭하여 새 프로젝트를 만듭니다.
 
     ![](single-page-images/vsmac/new-project.png "New Solution")
 
@@ -400,7 +400,7 @@ ms.locfileid: "71679979"
     </ContentPage>
     ```
 
-    이 코드는 페이지에 대 한 사용자 인터페이스를 선언적으로 정의 합니다 .이 인터페이스는 텍스트를 표시 하는 [`Label`](xref:Xamarin.Forms.Label) , 텍스트 입력에 대 한 [`Editor`](xref:Xamarin.Forms.Editor) , 파일을 저장 하거나 삭제 하도록 응용 프로그램을 지시 하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스를 정의 합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [ `StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대 한 자세한 내용은 Xamarin.ios의 [사용자 인터페이스](deepdive.md#user-interface) [빠른 시작 심층](deepdive.md)정보를 참조 하세요.
+    이 코드는 텍스트를 표시하는 [`Label`](xref:Xamarin.Forms.Label), 텍스트 입력을 위한 [`Editor`](xref:Xamarin.Forms.Editor), 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Label`, `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 사용자 인터페이스를 만드는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 인터페이스](deepdive.md#user-interface)를 참조하세요.
 
     **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml**에 저장하고 파일을 닫습니다.
 
@@ -448,19 +448,19 @@ ms.locfileid: "71679979"
     }
     ```
 
-    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction) 을 참조 하세요.
+    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은[Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
     **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
 ### <a name="building-the-quickstart"></a>빠른 시작 빌드
 
-1. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(또는 **&#8984; + B** 키를 누름)합니다. 프로젝트가 빌드되고 성공 메시지가 Mac용 Visual Studio 도구 모음에 표시됩니다.
+1. Mac용 Visual Studio에서 **빌드 > 솔루션 빌드** 메뉴 항목을 선택(하거나 **&#8984; + B** 키를 누릅니다). 프로젝트가 빌드되고 성공 메시지가 Mac용 Visual Studio 도구 모음에 표시됩니다.
 
       ![](single-page-images/vsmac/build-successful.png "Build Successful")
 
     오류가 있는 경우 이전 단계를 반복하고 프로젝트가 성공적으로 빌드할 때까지 실수를 수정합니다.
 
-2. **Solution Pad**에서 **참고. iOS** 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
+2. **Solution Pad**에서 **Notes.iOS** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
       ![](single-page-images/vsmac/set-startup-project-ios.png "Set iOS as Startup Project")
 
@@ -472,9 +472,9 @@ ms.locfileid: "71679979"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [각 플랫폼에서 응용 프로그램 시작](deepdive.md#launching-the-application-on-each-platform) 을 참조 하세요.
+    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
-4. **Solution Pad**에서 **참고. droid** 프로젝트를 선택 하 고 마우스 오른쪽 단추를 클릭 한 다음 **시작 프로젝트로 설정**을 선택 합니다.
+4. **Solution Pad**에서 **Notes.Droid** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
       ![](single-page-images/vsmac/set-startup-project-android.png "Set Android as Startup Project")
 
@@ -484,19 +484,19 @@ ms.locfileid: "71679979"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 [xamarin.ios](deepdive.md)의 [각 플랫폼에서 응용 프로그램 시작](deepdive.md#launching-the-application-on-each-platform) 을 참조 하세요.
+    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 ::: zone-end
 
 ## <a name="next-steps"></a>다음 단계
 
-이 빠른 시작에서는 다음 방법에 대해 알아보았습니다.
+이 빠른 시작에서는 다음과 같은 방법을 배웠습니다.
 
-- 플랫폼 간 Xamarin Forms 응용 프로그램을 만듭니다.
-- XAML (eXtensible Application Markup Language)을 사용 하 여 페이지에 대 한 사용자 인터페이스를 정의 합니다.
-- 코드에서 XAML 사용자 인터페이스 요소와 상호 작용 합니다.
+- 플랫폼 간 Xamarin.Forms 애플리케이션을 만듭니다.
+- XAML(eXtensible Application Markup Language)을 사용하는 페이지에 대해 사용자 인터페이스를 정의합니다.
+- 코드에서 XAML 사용자 인터페이스 요소와 상호작용합니다.
 
-이 단일 페이지 응용 프로그램을 다중 페이지 응용 프로그램으로 전환 하려면 다음 빠른 시작을 계속 진행 합니다.
+이 단일 페이지 애플리케이션을 다중 페이지 애플리케이션으로 전환하려면 다음 빠른 시작 안내를 계속 진행하세요.
 
 > [!div class="nextstepaction"]
 > [다음](multi-page.md)
@@ -504,4 +504,4 @@ ms.locfileid: "71679979"
 ## <a name="related-links"></a>관련 링크
 
 - [노트(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
-- [Xamarin.ios 빠른 시작 심층 살펴보기](deepdive.md)
+- [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)

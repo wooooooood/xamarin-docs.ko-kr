@@ -141,7 +141,7 @@ Certificate fingerprints:
 
 3. 이 단추를 클릭 하면 API 키가 생성 됩니다. 다음으로는 앱만이 키를 사용 하 여 Api를 호출할 수 있도록이 키를 제한 해야 합니다. **키 제한**을 클릭 합니다.
 
-   [자격 증명 페이지에서 키 제한을 클릭 ![](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
+   [![자격 증명 페이지에서 키 제한을 클릭](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs-sml.png)](obtaining-a-google-maps-api-key-images/07-generate-api-key-vs.png#lightbox)
 
 4. **이름** 필드를 **API 키 1** 에서 이름으로 변경 합니다 (이 예제에서는**XamarinMapsDemoKey** 가 사용 됨). 다음으로 **Android 앱** 라디오 단추를 클릭 합니다.
 

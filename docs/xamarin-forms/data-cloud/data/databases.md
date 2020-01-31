@@ -20,7 +20,7 @@ ms.locfileid: "76794664"
 
 SQLite 데이터베이스 엔진을 사용 하면 Xamarin.ios 응용 프로그램에서 공유 코드에 데이터 개체를 로드 하 고 저장할 수 있습니다. 예제 응용 프로그램은 SQLite 데이터베이스 테이블을 사용 하 여 할 일 항목을 저장 합니다. 이 문서에서는 공유 코드에서 SQLite.Net를 사용 하 여 로컬 데이터베이스에 정보를 저장 하 고 검색 하는 방법을 설명 합니다.
 
-[iOS 및 Android에서 Todolist 앱의 ![스크린샷](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "IOS 및 Android의 Todolist 앱")
+[![iOS 및 Android에서 Todolist 앱의 스크린샷](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "IOS 및 Android의 Todolist 앱")
 
 다음 단계를 수행 하 여 모바일 앱에 SQLite.NET를 통합 합니다.
 

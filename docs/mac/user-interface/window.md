@@ -652,7 +652,7 @@ void OpenDialog (NSObject sender)
 
 파일이 표시 되 고 제목은 파일의 아이콘을 사용 하 여 설정 됩니다.
 
-[로드 된 파일의 내용 ![](window-images/file04.png)](window-images/file04.png#lightbox)
+[![로드 된 파일의 내용](window-images/file04.png)](window-images/file04.png#lightbox)
 
 ## <a name="adding-a-new-window-to-a-project"></a>프로젝트에 새 창 추가
 
