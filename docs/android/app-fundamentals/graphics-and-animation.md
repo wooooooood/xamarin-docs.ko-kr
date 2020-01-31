@@ -139,7 +139,7 @@ tv.SetBackgroundResource(Resource.Drawable.shape_rounded_blue_rect);
 
 이 모양을 확인 하려면 *AnimationsDemo* 프로젝트를 실행 하 고 주 메뉴에서 그릴 수 있는 모양 항목을 선택 합니다. 다음 스크린샷에서 유사한 내용이 표시 되어야 합니다.
 
-[그라데이션 및 모퉁이가 둥근 모퉁이가 있는 사용자 지정 배경에 Textview ![](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
+[![그라데이션 및 모퉁이가 둥근 모퉁이가 있는 사용자 지정 배경에 Textview](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 XML 요소 및 그릴 수가 있는 리소스의 구문에 대 한 자세한 내용은 [Google 설명서](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)를 참조 하세요.
 
@@ -201,7 +201,7 @@ public class MyView : View
 
 위의이 코드는 먼저 빨강 페인트 및 녹색 그리기 개체를 만듭니다. 캔버스의 콘텐츠를 빨강으로 채운 다음 캔버스에서 캔버스 너비의 25% 인 녹색 사각형을 그리도록 지시 합니다. 이에 대 한 예제는이 문서의 소스 코드와 함께 제공 되는 `AnimationsDemo` 프로젝트에서 볼 수 있습니다. 응용 프로그램을 시작 하 고 주 메뉴에서 그리기 항목을 선택 하면 다음과 같은 화면이 나타납니다.
 
-[빨간색 그리기 및 녹색 그리기 개체가 있는 ![화면](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
+[![빨간색 그리기 및 녹색 그리기 개체가 있는 화면](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## <a name="animation"></a>애니메이션
 

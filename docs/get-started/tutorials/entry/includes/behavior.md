@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 48af50d31013f696879174a5cf108ab9fde92d0b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61343462"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -25,11 +25,11 @@ ms.locfileid: "61343462"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Entry`](xref:Xamarin.Forms.Entry)에 텍스트를 입력한 다음, 각 문자를 암호 마스크 문자로 바꾸고 입력할 수 있는 최대 문자 수가 15개인지를 확인합니다.
 
-    [![iOS 및 Android에서 암호 문자로 표시된 텍스트를 포함하는 항목의 스크린샷](../images/customize-behavior.png "표시된 암호 문자를 포함하는 항목")](../images/customize-behavior-large.png#lightbox "표시된 암호 문자를 포함하는 항목")
+    [![iOS 및 Android에서 암호 문자로 마스킹된 텍스트를 포함하는 항목의 스크린샷](../images/customize-behavior.png "마스킹된 암호 문자를 포함하는 항목")](../images/customize-behavior-large.png#lightbox "마스킹된 암호 문자를 포함하는 항목")
 
     [`Entry`](xref:Xamarin.Forms.Entry) 동작을 사용자 지정하는 방법에 대한 자세한 내용은 [Xamarin.Forms 항목](~/xamarin-forms/user-interface/text/entry.md) 가이드를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Entry`](xref:Xamarin.Forms.Entry) 선언을 수정하여 해당 동작을 사용자 지정합니다.
 
@@ -48,6 +48,6 @@ ms.locfileid: "61343462"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Entry`](xref:Xamarin.Forms.Entry)에 텍스트를 입력한 다음, 각 문자를 암호 마스크 문자로 바꾸고 입력할 수 있는 최대 문자 수가 15개인지를 확인합니다.
 
-    [![iOS 및 Android에서 암호 문자로 표시된 텍스트를 포함하는 항목의 스크린샷](../images/customize-behavior.png "표시된 암호 문자를 포함하는 항목")](../images/customize-behavior-large.png#lightbox "표시된 암호 문자를 포함하는 항목")
+    [![iOS 및 Android에서 암호 문자로 마스킹된 텍스트를 포함하는 항목의 스크린샷](../images/customize-behavior.png "마스킹된 암호 문자를 포함하는 항목")](../images/customize-behavior-large.png#lightbox "마스킹된 암호 문자를 포함하는 항목")
 
     [`Entry`](xref:Xamarin.Forms.Entry) 동작을 사용자 지정하는 방법에 대한 자세한 내용은 [Xamarin.Forms 항목](~/xamarin-forms/user-interface/text/entry.md) 가이드를 참조하세요.

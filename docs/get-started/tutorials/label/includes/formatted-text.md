@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "60896724"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -32,11 +32,11 @@ ms.locfileid: "60896724"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Label`](xref:Xamarin.Forms.Label) 모양이 변경되었음을 확인합니다.
 
-    [![iOS 및 Android의 서식 있는 텍스트를 표시하는 라벨 스크린샷](../images/label-formatted-text.png "서식 있는 텍스트를 사용한 레이블")](../images/label-formatted-text-large.png#lightbox "서식 있는 텍스트를 사용한 레이블")
+    [![iOS 및 Android에서 서식 있는 텍스트를 표시하는 레이블의 스크린샷](../images/label-formatted-text.png "서식 있는 텍스트를 포함하는 레이블")](../images/label-formatted-text-large.png#lightbox "서식 있는 텍스트를 포함하는 레이블")
 
     [`Span`](xref:Xamarin.Forms.Span) 모양 설정에 대한 자세한 내용은 [Xamarin.Forms 레이블](~/xamarin-forms/user-interface/text/label.md) 가이드의 [서식 있는 텍스트](~/xamarin-forms/user-interface/text/label.md#formatted-text)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서, 단일 `Label`에서 여러 형식을 사용하는 텍스트를 제공하도록 [`Label`](xref:Xamarin.Forms.Label) 선언을 수정합니다.
 
@@ -62,6 +62,6 @@ ms.locfileid: "60896724"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Label`](xref:Xamarin.Forms.Label) 모양이 변경되었음을 확인합니다.
 
-    [![iOS 및 Android의 서식 있는 텍스트를 표시하는 라벨 스크린샷](../images/label-formatted-text.png "서식 있는 텍스트를 사용한 레이블")](../images/label-formatted-text-large.png#lightbox "서식 있는 텍스트를 사용한 레이블")
+    [![iOS 및 Android에서 서식 있는 텍스트를 표시하는 레이블의 스크린샷](../images/label-formatted-text.png "서식 있는 텍스트를 포함하는 레이블")](../images/label-formatted-text-large.png#lightbox "서식 있는 텍스트를 포함하는 레이블")
 
     [`Span`](xref:Xamarin.Forms.Span) 모양 설정에 대한 자세한 내용은 [Xamarin.Forms 레이블](~/xamarin-forms/user-interface/text/label.md) 가이드의 [서식 있는 텍스트](~/xamarin-forms/user-interface/text/label.md#formatted-text)를 참조하세요.

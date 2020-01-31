@@ -7,45 +7,45 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/05/2019
-ms.openlocfilehash: e86d69bb9dc751f70d03a556f65c11efd0b34d10
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 52b227b0244a83ec4a7466cca7591c6b712f1c76
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725588"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794664"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms 로컬 데이터베이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-SQLite 数据库引擎允许 Xamarin 应用程序加载和保存共享代码中的数据对象。 示例应用程序使用 SQLite 数据库表存储 todo 项。 本文介绍如何使用共享代码中的 SQLite.Net 在本地数据库中存储和检索信息。
+SQLite 데이터베이스 엔진을 사용 하면 Xamarin.ios 응용 프로그램에서 공유 코드에 데이터 개체를 로드 하 고 저장할 수 있습니다. 예제 응용 프로그램은 SQLite 데이터베이스 테이블을 사용 하 여 할 일 항목을 저장 합니다. 이 문서에서는 공유 코드에서 SQLite.Net를 사용 하 여 로컬 데이터베이스에 정보를 저장 하 고 검색 하는 방법을 설명 합니다.
 
-[在 iOS 和 Android 上 ![Todolist 应用程序的屏幕截图](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "IOS 和 Android 上的 Todolist 应用")
+[iOS 및 Android에서 Todolist 앱의 ![스크린샷](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "IOS 및 Android의 Todolist 앱")
 
-按照以下步骤将 SQLite.NET 集成到移动应用：
+다음 단계를 수행 하 여 모바일 앱에 SQLite.NET를 통합 합니다.
 
-1. [安装 NuGet 包](#install-the-sqlite-nuget-package)。
-1. [配置常量](#configure-app-constants)。
-1. [创建数据库访问类](#create-a-database-access-class)。
-1. [访问 Xamarin 中的数据](#access-data-in-xamarinforms)。
-1. [高级配置](#advanced-configuration)。
+1. [NuGet 패키지를 설치](#install-the-sqlite-nuget-package)합니다.
+1. [상수를 구성](#configure-app-constants)합니다.
+1. [데이터베이스 액세스 클래스를 만듭니다](#create-a-database-access-class).
+1. [Xamarin.ios의 데이터에 액세스](#access-data-in-xamarinforms)합니다.
+1. [고급 구성](#advanced-configuration).
 
-## <a name="install-the-sqlite-nuget-package"></a>安装 SQLite NuGet 包
+## <a name="install-the-sqlite-nuget-package"></a>SQLite NuGet 패키지 설치
 
-使用 NuGet 包管理器搜索**sqlite 网络 pcl** ，并将最新版本添加到共享代码项目。
+NuGet 패키지 관리자를 사용 하 여 **sqlite-net-library** 를 검색 하 고 공유 코드 프로젝트에 최신 버전을 추가 합니다.
 
 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
 
 - **만든 사람:** Frank A. Krueger
-- **ID：** sqlite 网络-pcl
-- **NuGet 链接：** [sqlite 网络-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **ID:** sqlite-net-pcl
+- **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
 > 패키지 이름에도 불구하고 .NET 표준 프로젝트에서도 **sqlite-net-pcl** NuGet 패키지를 사용합니다.
 
-## <a name="configure-app-constants"></a>配置应用常数
+## <a name="configure-app-constants"></a>앱 상수 구성
 
-该示例项目包含一个**Constants.cs**文件，该文件提供了常见的配置数据：
+샘플 프로젝트에는 일반적인 구성 데이터를 제공 하는 **Constants.cs** 파일이 포함 되어 있습니다.
 
 ```csharp
 public static class Constants
@@ -71,28 +71,28 @@ public static class Constants
 }
 ```
 
-常量文件指定用于初始化数据库连接的默认 `SQLiteOpenFlag` 枚举值。 `SQLiteOpenFlag` 枚举支持以下值：
+상수 파일은 데이터베이스 연결을 초기화 하는 데 사용 되는 열거형 값 `SQLiteOpenFlag` 기본값을 지정 합니다. `SQLiteOpenFlag` 열거형은 다음 값을 지원 합니다.
 
-- `Create`：连接将自动创建数据库文件（如果该文件不存在）。
-- `FullMutex`：连接在序列化线程模式下打开。
-- `NoMutex`：连接在多线程模式下打开。
-- `PrivateCache`：连接将不会参与共享缓存（即使已启用）。
-- `ReadWrite`：连接可以读取和写入数据。
-- `SharedCache`：如果已启用共享缓存，则连接将参与共享缓存。
-- `ProtectionComplete`：当设备被锁定时，文件已加密且不可访问。
-- `ProtectionCompleteUnlessOpen`：在打开文件之前对其进行加密，但即使用户锁定设备，也可对其进行访问。
-- `ProtectionCompleteUntilFirstUserAuthentication`：在用户已启动并解锁设备之前，对文件进行加密。
-- `ProtectionNone`：数据库文件未加密。
+- `Create`: 연결에서 데이터베이스 파일이 없는 경우 자동으로 만듭니다.
+- `FullMutex`: 연결이 직렬화 된 스레딩 모드로 열립니다.
+- `NoMutex`: 연결이 다중 스레딩 모드로 열립니다.
+- `PrivateCache`: 연결은 사용 하도록 설정 된 경우에도 공유 캐시에 참여 하지 않습니다.
+- `ReadWrite`: 연결은 데이터를 읽고 쓸 수 있습니다.
+- `SharedCache`: 연결을 사용 하는 경우 공유 캐시에 참여 합니다.
+- `ProtectionComplete`: 장치가 잠겨 있는 동안 파일이 암호화 되어 액세스할 수 없습니다.
+- `ProtectionCompleteUnlessOpen`: 파일이 열려 있을 때까지 암호화 되지만 사용자가 장치를 잠근 경우에도 액세스할 수 있습니다.
+- `ProtectionCompleteUntilFirstUserAuthentication`: 사용자가 장치를 부팅 하 고 잠금을 해제할 때까지 파일이 암호화 됩니다.
+- `ProtectionNone`: 데이터베이스 파일이 암호화 되지 않았습니다.
 
-根据数据库的使用方式，可能需要指定不同的标志。 有关 `SQLiteOpenFlags`的详细信息，请参阅 sqlite.org 上[的打开新的数据库连接](https://www.sqlite.org/c3ref/open.html)。
+데이터베이스가 사용 되는 방식에 따라 다른 플래그를 지정 해야 할 수 있습니다. `SQLiteOpenFlags`에 대 한 자세한 내용은 sqlite.org에서 [새 데이터베이스 연결 열기](https://www.sqlite.org/c3ref/open.html) 를 참조 하세요.
 
-## <a name="create-a-database-access-class"></a>创建数据库访问类
+## <a name="create-a-database-access-class"></a>데이터베이스 액세스 클래스 만들기
 
-数据库包装类从应用程序的其余部分对数据访问层进行抽象化。 此类集中了查询逻辑，并简化了数据库初始化的管理，从而更容易在应用程序增长时重构或扩展数据操作。 Todo 应用出于此目的定义了一个 `TodoItemDatabase` 类。
+데이터베이스 래퍼 클래스는 응용 프로그램의 나머지 부분에서 데이터 액세스 계층을 추상화 합니다. 이 클래스는 쿼리 논리를 중앙화 하 고 데이터베이스 초기화의 관리를 간소화 하 여 앱이 증가 함에 따라 데이터 작업을 쉽게 리팩터링 또는 확장할 수 있도록 합니다. Todo 앱은이 용도로 `TodoItemDatabase` 클래스를 정의 합니다.
 
 ### <a name="lazy-initialization"></a>초기화 지연
 
-`TodoItemDatabase` 使用 .NET `Lazy` 类在第一次访问数据库之前延迟数据库的初始化。 使用延迟初始化可防止数据库加载进程延迟应用程序启动。 有关详细信息，请参阅[懒惰&lt;t&gt; 类](xref:System.Lazy`1)。
+`TodoItemDatabase` .NET `Lazy` 클래스를 사용 하 여 처음 액세스할 때까지 데이터베이스 초기화를 지연 합니다. 초기화 지연을 사용 하면 데이터베이스 로드 프로세스가 앱 시작을 지연 하지 않습니다. 자세한 내용은 [Lazy&lt;t&gt; 클래스](xref:System.Lazy`1)를 참조 하세요.
 
 ```csharp
 public class TodoItemDatabase
@@ -126,19 +126,19 @@ public class TodoItemDatabase
 }
 ```
 
-数据库连接是一个静态字段，可确保在应用程序的生存期内使用单个数据库连接。 使用持久性静态连接比在单个应用会话期间多次打开和关闭连接提供了更好的性能。
+데이터베이스 연결은 응용 프로그램의 수명 동안 단일 데이터베이스 연결이 사용 되도록 하는 정적 필드입니다. 영구 정적 연결을 사용 하면 단일 앱 세션 중에 연결을 여러 번 열고 닫는 것 보다 성능이 향상 됩니다.
 
-`InitializeAsync` 方法负责检查是否存在用于存储 `TodoItem` 对象的表。 如果表不存在，此方法会自动创建该表。
+`InitializeAsync` 메서드는 `TodoItem` 개체를 저장 하기 위한 테이블이 이미 있는지 확인 하는 일을 담당 합니다. 이 메서드는 테이블이 없는 경우 자동으로 만듭니다.
 
-### <a name="the-safefireandforget-extension-method"></a>SafeFireAndForget 扩展方法
+### <a name="the-safefireandforget-extension-method"></a>SafeFireAndForget extension 메서드
 
-实例化 `TodoItemDatabase` 类时，它必须初始化数据库连接，这是一个异步过程。 그러나
+`TodoItemDatabase` 클래스가 인스턴스화되면 비동기 프로세스 인 데이터베이스 연결을 초기화 해야 합니다. 그러나
 
-- 类构造函数不能是异步的。
-- 未等待的异步方法不会引发异常。
-- 使用 `Wait` 方法会阻止线程_并_吞并异常。
+- 클래스 생성자는 비동기 일 수 없습니다.
+- 대기 하지 않는 비동기 메서드는 예외를 throw 하지 않습니다.
+- `Wait` 메서드를 사용 하면 스레드가 차단 되 _고_ 숨깁니다 예외를 허용 합니다.
 
-为了启动异步初始化，请避免阻止执行，并有机会捕获异常，示例应用程序使用名为 `SafeFireAndForget`的扩展方法。 `SafeFireAndForget` 扩展方法向 `Task` 类提供附加功能：
+비동기 초기화를 시작 하기 위해 실행을 차단 하지 않고 예외를 catch 할 수 있는 기회를 갖도록 샘플 응용 프로그램은 `SafeFireAndForget`라는 확장명 메서드를 사용 합니다. `SafeFireAndForget` 확장 메서드는 `Task` 클래스에 추가 기능을 제공 합니다.
 
 ```csharp
 public static class TaskExtensions
@@ -166,16 +166,16 @@ public static class TaskExtensions
 }
 ```
 
-`SafeFireAndForget` 方法等待提供的 `Task` 对象的异步执行，并允许附加在引发异常时调用的 `Action`。
+`SafeFireAndForget` 메서드는 제공 된 `Task` 개체의 비동기 실행을 기다립니다 하 고, 예외가 throw 되 면 호출 되는 `Action` 연결할 수 있습니다.
 
-有关详细信息，请参阅[基于任务的异步模式（单击）](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)。
+자세한 내용은 [작업 기반 비동기 패턴 (탭)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)을 참조 하세요.
 
-### <a name="data-manipulation-methods"></a>数据操作方法
+### <a name="data-manipulation-methods"></a>데이터 조작 메서드
 
-`TodoItemDatabase` 类包括用于四种类型的数据操作的方法：创建、读取、编辑和删除。 SQLite.NET 库提供了一个简单的对象关系映射（ORM），可用于存储和检索对象，而无需编写 SQL 语句。
+`TodoItemDatabase` 클래스에는 만들기, 읽기, 편집 및 삭제의 네 가지 데이터 조작 형식에 대 한 메서드가 포함 되어 있습니다. SQLite.NET 라이브러리는 SQL 문을 작성 하지 않고 개체를 저장 하 고 검색할 수 있는 간단한 ORM (개체 관계형 맵)을 제공 합니다.
 
 ```csharp
-public static class TodoItemDatabase {
+public class TodoItemDatabase {
 
     // ...
 
@@ -214,9 +214,9 @@ public static class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-xamarinforms"></a>访问 Xamarin 中的数据
+## <a name="access-data-in-xamarinforms"></a>Xamarin.ios에서 데이터 액세스
 
-Xamarin `App` 类公开 `TodoItemDatabase` 类的实例：
+Xamarin.ios `App` 클래스는 `TodoItemDatabase` 클래스의 인스턴스를 노출 합니다.
 
 ```csharp
 public static TodoItemDatabase Database
@@ -232,7 +232,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-此属性允许 Xamarin 组件在 `Database` 实例上调用数据检索和操作方法以响应用户交互。 예를 들면 다음과 같습니다.:
+이 속성을 사용 하면 Xamarin.ios 구성 요소가 사용자 상호 작용에 대 한 응답으로 `Database` 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 var saveButton = new Button { Text = "Save" };
@@ -246,47 +246,47 @@ saveButton.Clicked += async (sender, e) =>
 
 ## <a name="advanced-configuration"></a>고급 구성
 
-SQLite 提供了一个功能强大的 API，该 API 的功能多于本文和示例应用中介绍的功能。 以下各节介绍了对于可伸缩性很重要的功能。
+SQLite는이 문서 및 샘플 앱에 설명 된 것 보다 더 많은 기능을 갖춘 강력한 API를 제공 합니다. 다음 섹션에서는 확장성에 중요 한 기능을 다룹니다.
 
-有关详细信息，请参阅 sqlite.org 上的[SQLite 文档](https://www.sqlite.org/docs.html)。
+자세한 내용은 sqlite.org의 [SQLite 설명서](https://www.sqlite.org/docs.html) 를 참조 하세요.
 
-### <a name="write-ahead-logging"></a>预写日志记录
+### <a name="write-ahead-logging"></a>미리 쓰기 로깅
 
-默认情况下，SQLite 使用传统的 rollback 日志。 未更改的数据库内容的副本将写入单独的回滚文件中，然后将这些更改直接写入数据库文件。 删除回滚日志时进行提交。
+기본적으로 SQLite는 기존 롤백 저널을 사용 합니다. 변경 되지 않은 데이터베이스 콘텐츠의 복사본이 별도의 롤백 파일에 기록 된 후 변경 내용이 데이터베이스 파일에 직접 기록 됩니다. 롤백은 롤백 저널을 삭제할 때 발생 합니다.
 
-预写日志记录（WAL）首先将更改写入单独的 WAL 文件中。 在 WAL 模式下，COMMIT 是一个特殊记录，附加到 WAL 文件，这允许在单个 WAL 文件中发生多个事务。 在名为 "_检查点_" 的特殊操作中，WAL 文件将合并回数据库文件。
+WAL (미리 쓰기 로깅)은 먼저 별도의 WAL 파일에 변경 내용을 기록 합니다. WAL 모드에서 커밋은 WAL 파일에 추가 된 특수 레코드로, 단일 WAL 파일에서 여러 트랜잭션을 수행할 수 있습니다. WAL 파일은 _검사점_이라는 특수 한 작업으로 데이터베이스 파일에 다시 병합 됩니다.
 
-对于本地数据库，WAL 可能会更快，因为读取器和编写器彼此之间不会相互阻止，这允许进行读写操作。 但是，WAL 模式不允许更改_页面大小_、向数据库添加其他文件关联以及添加额外的_检查点_操作。
+읽기 및 쓰기 작업이 동시에 수행 될 수 있도록 판독기와 작성기가 서로를 차단 하지 않기 때문에 로컬 데이터베이스에 대 한 WAL 속도가 빨라질 수 있습니다. 그러나 WAL 모드는 _페이지 크기_를 변경할 수 없으며, 데이터베이스에 추가 파일 연결을 추가 하 고, 추가 _검사점_ 작업을 추가 합니다.
 
-若要在 SQLite.NET 中启用 WAL，请对 `SQLiteAsyncConnection` 实例调用 `EnableWriteAheadLoggingAsync` 方法：
+SQLite.NET에서 WAL을 사용 하도록 설정 하려면 `SQLiteAsyncConnection` 인스턴스에서 `EnableWriteAheadLoggingAsync` 메서드를 호출 합니다.
 
 ```csharp
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-有关详细信息，请参阅 sqlite.org 上的[SQLite 预写日志记录](https://www.sqlite.org/wal.html)。
+자세한 내용은 sqlite.org의 [SQLite 미리 쓰기 로깅](https://www.sqlite.org/wal.html) 을 참조 하세요.
 
-### <a name="copying-a-database"></a>复制数据库
+### <a name="copying-a-database"></a>데이터베이스 복사
 
-在以下几种情况下，可能需要复制 SQLite 数据库：
+SQLite 데이터베이스를 복사 해야 하는 여러 가지 경우가 있습니다.
 
-- 数据库附带了你的应用程序，但必须将其复制或移动到移动设备上的可写存储中。
-- 你需要创建数据库的备份或副本。
-- 需要对数据库文件进行版本、移动或重命名。
+- 데이터베이스가 응용 프로그램과 함께 제공 되었지만 모바일 장치에서 쓰기 가능한 저장소로 복사 또는 이동 해야 합니다.
+- 데이터베이스의 백업 또는 복사본을 만들어야 합니다.
+- 데이터베이스 파일의 버전을 변경 하거나, 이동 하거나, 이름을 변경 해야 합니다.
 
-通常，移动、重命名或复制数据库文件与其他任何文件类型的过程相同，但有一些其他注意事项：
+일반적으로 데이터베이스 파일을 이동 하거나, 이름을 바꾸거나, 복사 하는 과정은 몇 가지 추가 고려 사항이 있는 다른 모든 파일 형식과 동일한 프로세스입니다.
 
-- 在尝试移动数据库文件之前，应关闭所有数据库连接。
-- 如果使用[预写日志记录](#write-ahead-logging)，SQLite 将创建共享内存访问（. 具有 shm）文件和（写入日志）（wal）文件。 请确保也将任何更改应用于这些文件。
+- 데이터베이스 파일을 이동 하기 전에 모든 데이터베이스 연결을 닫아야 합니다.
+- [미리 쓰기 로깅을](#write-ahead-logging)사용 하는 경우 SQLite는 공유 메모리 액세스 (.sm) 파일 및 (미리 쓰기 로그) (wal) 파일을 만듭니다. 이러한 파일에도 변경 내용을 적용 해야 합니다.
 
-有关详细信息，请参阅[Xamarin 中的文件处理](~/xamarin-forms/data-cloud/data/files.md)。
+자세한 내용은 [xamarin.ios에서 파일 처리](~/xamarin-forms/data-cloud/data/files.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [Todo 示例应用程序](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
-- [SQLite.NET NuGet 包](https://www.nuget.org/packages/sqlite-net-pcl/)
-- [SQLite 文档](https://www.sqlite.org/docs.html)
-- [将 SQLite 用于 Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
-- [将 SQLite 与 iOS 配合使用](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [基于任务的异步模式（点击）](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Todo 샘플 응용 프로그램](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [SQLite.NET NuGet 패키지](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [SQLite 설명서](https://www.sqlite.org/docs.html)
+- [Android에서 SQLite 사용](~/android/data-cloud/data-access/using-sqlite-orm.md)
+- [IOS에서 SQLite 사용](~/ios/data-cloud/data/using-sqlite-orm.md)
+- [작업 기반 비동기 패턴 (탭)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 - [Lazy&lt;T&gt; 클래스](xref:System.Lazy`1)

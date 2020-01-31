@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: b08293727a585ff68c4bac8a25b26d249505b1aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016391"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724836"
 ---
 # <a name="mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기
 
@@ -80,7 +80,7 @@ UX 모형을 만들 때 앱의 대상이 될 다양한 플랫폼에 대한 인�
 1. **Android** –  [디자인 지침](https://developer.android.com/design/index.html)
 1. **UWP** – [UWP 디자인 기본 내용](https://docs.microsoft.com/windows/uwp/design/basics/)
 
-예를 들어, 각 앱에는 애플리케이션의 섹션 간 전환을 위한 메타포가 있습니다. iOS는 화면 하단에 탭 표시줄을 사용하고 Android는 화면 상단에 탭 표시줄을 사용하며 UWP는 [Pivot 또는 탭](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot) 뷰를 사용합니다.
+예를 들어, 각 앱에는 애플리케이션의 섹션 간 전환을 위한 메타포가 있습니다. iOS는 화면 하단에 탭 표시줄을 사용하고 Android는 화면 상단에 탭 표시줄을 사용하며 UWP는 [Pivot 또는 탭](/windows/uwp/design/controls-and-patterns/pivot) 뷰를 사용합니다.
 
 또한 하드웨어 자체는 UX 의사 결정도 지정합니다. 예를 들어 iOS 디바이스에는 물리적 *뒤로* 단추가 없으므로 탐색 컨트롤러 메타포를 도입합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 7db7edd4d8143f4e456f59b97de51e3c1d202dc0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f008ac42bfffeda2a47ca30aa2991d91f990732f
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489403"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725040"
 ---
 # <a name="mac-app-configuration"></a>Mac 앱 구성
 
@@ -53,4 +53,4 @@ Xamarin.Mac으로 만든 Mac 애플리케이션을 실행하려면 다음과 같
 - [설치](/visualstudio/mac/installation/)
 - [Hello, Mac 샘플](~/mac/get-started/hello-mac.md)
 - [Mac 앱 스토어에서 앱 배포](https://developer.apple.com/devcenter/mac/checklist/)
-- [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/)
+- [개발자 ID 및 게이트키퍼](https://developer.apple.com/developer-id/)

@@ -29,7 +29,7 @@ Windows는 모덜리스 상태 (예: 한 번에 여러 문서를 열 수 있는 
 
 패널은 일반적으로 응용 프로그램에서 보조 기능을 제공 하는 특수 한 종류의 창 (기본 `NSWindow` 클래스의 서브 클래스)으로, 일반적으로 응용 프로그램에서 보조 기능을 제공 합니다 (예: 텍스트 형식 검사기, 시스템 색 선택 등).
 
-[Xcode에서 창 편집 ![](window-images/intro01.png)](window-images/intro01.png#lightbox)
+[![Xcode에서 창 편집](window-images/intro01.png)](window-images/intro01.png#lightbox)
 
 이 문서에서는 Xamarin.ios 응용 프로그램에서 Windows 및 패널로 작업 하는 기본 사항을 설명 합니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
@@ -86,7 +86,7 @@ Apple에서는 다음 지침을 제안 합니다.
 
 패널은 활성 문서 또는 선택 (예: 시스템 색 선택)에 영향을 주는 컨트롤과 옵션을 포함 하는 보조 창입니다.
 
-[색 패널 ![](window-images/panel01.png)](window-images/panel01.png#lightbox)
+[![색 패널](window-images/panel01.png)](window-images/panel01.png#lightbox)
 
 패널은 _앱 특정_ _또는 전체를 사용할_수 있습니다. 앱 특정 패널은 응용 프로그램의 문서 창 맨 위에 고정 되어 있고 응용 프로그램이 백그라운드에 있을 때 사라집니다. 응용 프로그램에 상관 없이 모든 시스템 패널 (예: **글꼴** 패널)은 열려 있는 모든 창 위에 배치 됩니다. 
 
@@ -102,7 +102,7 @@ Apple에서는 다음 지침을 제안 합니다.
 
 최신 macOS 응용 프로그램은 패널 창을 사용 하는 대신 주 창에 포함 된 _검사기_ 로 활성 문서 또는 선택 항목에 영향을 주는 보조 컨트롤 및 옵션을 제공 합니다 (예: 아래에 표시 된 **페이지** 앱).
 
-[예제 검사자 ![](window-images/panel02.png)](window-images/panel02.png#lightbox)
+[![예제 검사자](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
 자세한 내용은 Xamarin.ios 앱에서 **검사기 인터페이스** 의 전체 구현을 위한 Apple [macos 디자인 테마](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) 및 [Macos](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) 샘플 앱의 [패널](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) 섹션을 참조 하세요.
 
@@ -110,11 +110,11 @@ Apple에서는 다음 지침을 제안 합니다.
 
 새 Xamarin.ios Cocoa 응용 프로그램을 만들면 기본적으로 표준 빈 창이 표시 됩니다. 이 창은 프로젝트에 자동으로 포함 되는 `.storyboard` 파일에 정의 됩니다. Windows 디자인을 편집 하려면 **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 합니다.
 
-[주 스토리 보드를 선택 ![](window-images/edit01.png)](window-images/edit01.png#lightbox)
+[![주 스토리 보드를 선택](window-images/edit01.png)](window-images/edit01.png#lightbox)
 
 이렇게 하면 Xcode의 Interface Builder에서 창 디자인이 열립니다.
 
-[Xcode에서 UI 편집 ![](window-images/edit02.png)](window-images/edit02.png#lightbox)
+[![Xcode에서 UI 편집](window-images/edit02.png)](window-images/edit02.png#lightbox)
 
 **특성 검사자**에는 창을 정의 하 고 제어 하는 데 사용할 수 있는 몇 가지 속성이 있습니다.
 
@@ -146,7 +146,7 @@ Apple에서는 다음 지침을 제안 합니다.
 
 창의 초기 위치를 설정 하 고 크기를 제어 하려면 **크기 검사자**로 전환 합니다.
 
-[기본 크기 및 위치 ![](window-images/edit07.png)](window-images/edit07.png#lightbox)
+[![기본 크기 및 위치](window-images/edit07.png)](window-images/edit07.png#lightbox)
 
 여기에서 창의 초기 크기를 설정 하 고, 최소 및 최대 크기를 지정 하 고, 화면에서 초기 위치를 설정 하 고, 창 둘레의 테두리를 제어할 수 있습니다.
 
@@ -160,15 +160,15 @@ UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으�
 2. Design Surface에서 `NSWindowController`를 선택 합니다.
 3. **Identity Inspector** 뷰로 전환 하 고 **클래스 이름**으로 `WindowController`을 입력 합니다. 
 
-    [클래스 이름 설정 ![](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
+    [![클래스 이름 설정](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
 4. 변경 내용을 저장 하 고 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 5. `WindowController.cs` 파일은 Mac용 Visual Studio의 **솔루션 탐색기** 에서 프로젝트에 추가 됩니다. 
 
-    [windows 컨트롤러를 선택 ![](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
+    [![windows 컨트롤러를 선택](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
 6. Xcode의 Interface Builder에서 Storyboard를 다시 엽니다.
 7. `WindowController.h` 파일을 사용할 수 있습니다. 
 
-    [WindowController .h 파일을 편집 ![](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
+    [![WindowController .h 파일을 편집](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
 
 ### <a name="adding-ui-elements"></a>UI 요소 추가
 
@@ -176,21 +176,21 @@ UI 요소를 코드에 C# 노출 하는 작업 및 작업을 만들 수 있으�
 
 예를 들어 **라이브러리 검사기** 의 도구 모음을 **인터페이스 편집기**의 창으로 끌어 보겠습니다.
 
-[라이브러리에서 도구 모음을 선택 ![](window-images/edit03.png)](window-images/edit03.png#lightbox)
+[![라이브러리에서 도구 모음을 선택](window-images/edit03.png)](window-images/edit03.png#lightbox)
 
 다음으로 **텍스트 뷰** 를 끌고 크기를 조정 하 여 도구 모음 아래의 영역을 채웁니다.
 
-[텍스트 뷰를 추가 ![](window-images/edit04.png)](window-images/edit04.png#lightbox)
+[![텍스트 뷰를 추가](window-images/edit04.png)](window-images/edit04.png#lightbox)
 
 창 크기가 변경 되 면 **텍스트 보기가** 축소 되 고 증가 하도록 하기 때문에 **제약 조건 편집기** 로 전환 하 여 다음 제약 조건을 추가 하겠습니다.
 
-[제약 조건 편집 ![](window-images/edit05.png)](window-images/edit05.png#lightbox)
+[![제약 조건 편집](window-images/edit05.png)](window-images/edit05.png#lightbox)
 
 편집기 위쪽에서 4 개의 **Red I-빔** 를 클릭 하 고 **4 개의 제약 조건 추가**를 클릭 하 여 텍스트 보기에 지정 된 X, Y 좌표를 그대로 유지 하 고 창의 크기를 조정할 때 가로 및 세로로 가로 및 세로로 확대 하거나 축소 하도록 지시 합니다.
 
 마지막으로 **콘센트** 를 사용 하 여 코드에 **텍스트 뷰** 를 노출 합니다 (`ViewController.h` 파일을 선택 해야 합니다).
 
-[콘센트 구성 ![](window-images/edit06.png)](window-images/edit06.png#lightbox)
+[![콘센트 구성](window-images/edit06.png)](window-images/edit06.png#lightbox)
 
 변경 내용을 저장 하 고 다시 Mac용 Visual Studio로 전환 하 여 Xcode와 동기화 합니다.
 
@@ -215,17 +215,17 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 모든 창에 대 
 
 기본적으로 새 Xamarin.ios 응용 프로그램은 시작 될 때 `MainWindow.xib` 파일에 정의 된 창을 자동으로 표시 합니다.
 
-[실행 중인 예제 창 ![](window-images/display01.png)](window-images/display01.png#lightbox)
+[![실행 중인 예제 창](window-images/display01.png)](window-images/display01.png#lightbox)
 
 위에서 해당 창의 디자인을 수정 했으므로 이제 기본 도구 모음과 **텍스트 뷰** 컨트롤을 포함 합니다. `Info.plist` 파일의 다음 섹션은이 창을 표시 하는 작업을 담당 합니다.
 
-[info.plist 편집 ![](window-images/display00.png)](window-images/display00.png#lightbox)
+[![info.plist 편집](window-images/display00.png)](window-images/display00.png#lightbox)
 
 주 **인터페이스** 드롭다운은 기본 앱 UI (이 경우 `Main.storyboard`)로 사용 될 Storyboard를 선택 하는 데 사용 됩니다.
 
 표시 되는 주 창 (기본 보기와 함께)을 제어 하기 위해 뷰 컨트롤러가 프로젝트에 자동으로 추가 됩니다. 이 파일은 `ViewController.cs` 파일에 정의 되어 있으며, **Identity Inspector**Interface Builder의 **파일 소유자** 에 게 연결 됩니다.
 
-[파일 소유자를 설정 하는 ![](window-images/display02.png)](window-images/display02.png#lightbox)
+[![파일 소유자를 설정 하는](window-images/display02.png)](window-images/display02.png#lightbox)
 
 이 창의 경우에는 먼저를 열 때 `untitled` 제목을 사용 하 여 다음과 같이 `ViewController.cs`의 `ViewWillAppear` 메서드를 재정의 합니다.
 
@@ -283,11 +283,11 @@ MyWindow.Close();
 
 MacOS에서 Apple은 사용자가 창 내용 (`NSWindow`)을 수정 하 고 저장 해야 함을 사용자에 게 알리는 방법을 제공 합니다. 창에 수정 된 내용이 포함 되어 있는 경우 **닫는** 위젯에 작은 검정색 점이 표시 됩니다.
 
-[수정 된 표식을 사용 하 여 창 ![](window-images/close01.png)](window-images/close01.png#lightbox)
+[![수정 된 표식을 사용 하 여 창](window-images/close01.png)](window-images/close01.png#lightbox)
 
 창의 내용에 저장 하지 않은 변경 내용이 있는 상태에서 사용자가 창을 닫거나 Mac 앱을 종료 하려는 경우에는 [대화 상자](~/mac/user-interface/dialog.md) 또는 [모달 시트](~/mac/user-interface/dialog.md) 를 표시 하 고 사용자가 변경 내용을 먼저 저장할 수 있도록 해야 합니다.
 
-[창이 닫힐 때 표시 되는 저장 시트를 ![합니다.](window-images/close02.png)](window-images/close02.png#lightbox)
+[![창이 닫힐 때 표시 되는 저장 시트를 합니다.](window-images/close02.png)](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>창을 수정 된 것으로 표시
 
@@ -453,11 +453,11 @@ void NewDocument (NSObject sender) {
 
 이 코드는 창 컨트롤러의 새 버전을 만들고, 새 창을 로드 하 고, 기본 및 키 창으로 설정 하 고, 제목으로 설정 합니다. 이제 응용 프로그램을 실행 하 고 **파일** 메뉴에서 **새로 만들기** 를 선택 하면 새 편집기 창이 열리고 표시 됩니다.
 
-[새 제목 없는 창이 추가 ![](window-images/display04.png)](window-images/display04.png#lightbox)
+[![새 제목 없는 창이 추가](window-images/display04.png)](window-images/display04.png#lightbox)
 
 **Windows** 메뉴를 열면 응용 프로그램에서 열려 있는 창을 자동으로 추적 하 고 처리 하는 것을 볼 수 있습니다.
 
-[windows 메뉴 ![](window-images/display05.png)](window-images/display05.png#lightbox)
+[![windows 메뉴](window-images/display05.png)](window-images/display05.png#lightbox)
 
 Xamarin.ios 응용 프로그램에서 메뉴를 사용 하는 방법에 대 한 자세한 내용은 [메뉴 작업](~/mac/user-interface/menu.md) 설명서를 참조 하세요.
 
@@ -648,7 +648,7 @@ void OpenDialog (NSObject sender)
 
 이제 앱을 실행 하는 경우 **파일** 메뉴에서 **열기 ...** 를 선택 하 고 **열기** 대화 상자에서 텍스트 파일을 선택 하 여 엽니다.
 
-[열기 대화 상자 ![](window-images/file03.png)](window-images/file03.png#lightbox)
+[![열기 대화 상자](window-images/file03.png)](window-images/file03.png#lightbox)
 
 파일이 표시 되 고 제목은 파일의 아이콘을 사용 하 여 설정 됩니다.
 
@@ -663,22 +663,22 @@ void OpenDialog (NSObject sender)
 1. **솔루션 탐색기**에서 `Main.storyboard` 파일을 두 번 클릭 하 여 Xcode의 Interface Builder에서 편집할 수 있도록 엽니다.
 2. **라이브러리** 에서 새 **창 컨트롤러** 를 끌어 **Design Surface**에 놓습니다.
 
-    [라이브러리에서 새 창 컨트롤러를 선택 ![](window-images/new01.png)](window-images/new01.png#lightbox)
+    [![라이브러리에서 새 창 컨트롤러를 선택](window-images/new01.png)](window-images/new01.png#lightbox)
 3. **Identity Inspector**에서 **Storyboard id**에 대 한 `PreferencesWindow`를 입력 합니다. 
 
-    [스토리 보드 ID 설정 ![](window-images/new02.png)](window-images/new02.png#lightbox)
+    [![스토리 보드 ID 설정](window-images/new02.png)](window-images/new02.png#lightbox)
 4. 인터페이스 디자인: 
 
-    [UI 디자인 ![](window-images/new03.png)](window-images/new03.png#lightbox)
+    [![UI 디자인](window-images/new03.png)](window-images/new03.png#lightbox)
 5. 앱 메뉴 (`MacWindows`)를 열고, **기본 설정 ...** 을 선택 하 고, 컨트롤을 클릭 한 다음 새 창으로 끕니다. 
 
-    [segue를 만드는 ![](window-images/new05.png)](window-images/new05.png#lightbox)
+    [![segue를 만드는](window-images/new05.png)](window-images/new05.png#lightbox)
 6. 팝업 메뉴에서 **표시** 를 선택 합니다.
 7. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 
 **응용 프로그램 메뉴**에서 코드를 실행 하 고 **기본 설정 ...** 을 선택 하는 경우 창이 표시 됩니다.
 
-[샘플 기본 설정 메뉴 ![](window-images/new04.png)](window-images/new04.png#lightbox)
+[![샘플 기본 설정 메뉴](window-images/new04.png)](window-images/new04.png#lightbox)
 
 ## <a name="working-with-panels"></a>패널 사용
 
@@ -696,7 +696,7 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 다른 유형의 �
 
 **특성 검사자**의 패널에는 다음과 같은 옵션이 있습니다.
 
-[특성 검사자 ![](window-images/panel03.png)](window-images/panel03.png#lightbox)
+[![특성 검사자](window-images/panel03.png)](window-images/panel03.png#lightbox)
 
 - **스타일** -패널의 스타일을 다음과 같이 조정할 수 있습니다. 일반 패널 (표준 창 처럼 보임), 유틸리티 패널 (더 작은 제목 표시줄 있음), HUD 패널 (반투명, 제목 표시줄은 배경의 일부).
 - **활성화 되지 않음** -패널의 키 창이 됩니다.
@@ -707,24 +707,24 @@ Xamarin.ios 응용 프로그램에서 만들고 사용 하는 다른 유형의 �
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일**...을 선택 합니다.
 2. 새 파일 대화 상자에서 컨트롤러를 사용 하 여 **xamarin.ios** > **cocoa 창**을 선택 합니다.
 
-    [새 창 컨트롤러를 추가 ![](window-images/panels00.png)](window-images/panels00.png#lightbox)
+    [![새 창 컨트롤러를 추가](window-images/panels00.png)](window-images/panels00.png#lightbox)
 
 3. **이름**에 대해 `DocumentPanel`를 입력하고 **새로 만들기** 단추를 클릭합니다.
 4. `DocumentPanel.xib` 파일을 두 번 클릭 하 여 Interface Builder에서 편집할 수 있도록 엽니다. 
 
-    [패널 편집 ![](window-images/new02.png)](window-images/new02.png#lightbox)
+    [![패널 편집](window-images/new02.png)](window-images/new02.png#lightbox)
 
 5. 기존 창을 삭제 하 고 **인터페이스 편집기**에서 **라이브러리 검사기** 의 패널을 끕니다. 
 
-    [기존 창을 삭제 ![](window-images/panels01.png)](window-images/panels01.png#lightbox)
+    [![기존 창을 삭제](window-images/panels01.png)](window-images/panels01.png#lightbox)
 
 6. 패널을 **파일의 소유자** - **창** 에 연결 - **콘센트**에 연결 합니다. 
 
-    [마우스로 끌어 패널을 연결 ![](window-images/panels02.png)](window-images/panels02.png#lightbox)
+    [![마우스로 끌어 패널을 연결](window-images/panels02.png)](window-images/panels02.png#lightbox)
 
 7. **Id 검사자** 로 전환 하 고 패널의 클래스를 `DocumentPanel`설정 합니다. 
 
-    [패널의 클래스를 설정 ![](window-images/panels03.png)](window-images/panels03.png#lightbox)
+    [![패널의 클래스를 설정](window-images/panels03.png)](window-images/panels03.png#lightbox)
 
 8. 변경 내용을 저장 하 고 Xcode와 동기화 할 Mac용 Visual Studio로 돌아갑니다.
 9. `DocumentPanel.cs` 파일을 편집 하 고 클래스 정의를 다음과 같이 변경 합니다. 
@@ -747,7 +747,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 응용 프로그램을 실행 하는 경우 패널이 표시 됩니다.
 
-[실행 중인 앱에서 패널 ![](window-images/panels04.png)](window-images/panels04.png#lightbox)
+[![실행 중인 앱에서 패널](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > 패널 창은 Apple에서 더 이상 사용 되지 않으므로 **검사기 인터페이스로**바꾸어야 합니다. Xamarin.ios 앱에서 **검사기** 를 만드는 전체 예제는 [macinspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) 샘플 앱을 참조 하세요.

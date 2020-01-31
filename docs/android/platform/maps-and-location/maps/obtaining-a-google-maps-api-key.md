@@ -115,15 +115,15 @@ Certificate fingerprints:
 
 2. 새 프로젝트를 만든 경우 표시 되는 **새 프로젝트** 대화 상자에 프로젝트 이름을 입력 합니다. 이 대화 상자는 프로젝트 이름을 기반으로 하는 고유한 프로젝트 ID를 제조 합니다. 그런 다음이 예제에 표시 된 대로 **만들기** 단추를 클릭 합니다.
 
-   [새 프로젝트의 이름이 XamarinMapsDemo ![](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
+   [![새 프로젝트의 이름이 XamarinMapsDemo](obtaining-a-google-maps-api-key-images/02-new-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/02-new-project-vs.png#lightbox)
 
 3. 1 분이 지나면 프로젝트가 만들어지고 프로젝트의 **대시보드** 페이지로 이동 합니다. 여기에서 **API 및 서비스 사용**을 클릭 합니다.
 
-   [라이브러리 섹션에서 Google Maps Android API 클릭 ![](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
+   [![라이브러리 섹션에서 Google Maps Android API 클릭](obtaining-a-google-maps-api-key-images/03-api-selection-vs-sml.png)](obtaining-a-google-maps-api-key-images/03-api-selection-vs.png#lightbox)
 
 4. **API 라이브러리** 페이지에서 **ANDROID 용 Maps SDK**를 클릭 합니다. 다음 페이지에서 **사용** 을 클릭 하 여이 프로젝트에 대 한 서비스를 켭니다.
 
-   [대시보드 섹션에서 사용 단추를 클릭 ![](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
+   [![대시보드 섹션에서 사용 단추를 클릭](obtaining-a-google-maps-api-key-images/04-enable-api-vs-sml.png)](obtaining-a-google-maps-api-key-images/04-enable-api-vs.png#lightbox)
 
 이제 API 프로젝트가 만들어지고 Google Maps Android API v2가 추가 되었습니다. 그러나이 API에 대 한 자격 증명을 만들 때까지 프로젝트에서이 API를 사용할 수 없습니다. 다음 섹션에서는 API 키를 만들고이 키를 사용할 수 있는 권한을 부여 하도록 Xamarin Android 응용 프로그램을 만드는 방법을 설명 합니다.
 
@@ -133,11 +133,11 @@ Certificate fingerprints:
 
 1. 이전 단계에서 **사용** 을 클릭 한 후 표시 되는 **ANDROID 용 Maps SDK** 페이지에서 **자격 증명** 탭으로 이동 하 여 **자격 증명 만들기** 단추를 클릭 합니다.
 
-   [Android 자격 증명에 대 한 ![맵 SDK 메시지](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
+   [![Android 자격 증명에 대 한 맵 SDK 메시지](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs-sml.png)](obtaining-a-google-maps-api-key-images/05-api-is-enabled-vs.png#lightbox)
 
 2. **API 키**를 클릭 합니다.
 
-   [프로젝트에 자격 증명 추가 ![대화 상자](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
+   [![프로젝트에 자격 증명 추가 대화 상자](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs-sml.png)](obtaining-a-google-maps-api-key-images/06-add-credentials-to-your-project-vs.png#lightbox)
 
 3. 이 단추를 클릭 하면 API 키가 생성 됩니다. 다음으로는 앱만이 키를 사용 하 여 Api를 호출할 수 있도록이 키를 제한 해야 합니다. **키 제한**을 클릭 합니다.
 
@@ -145,19 +145,19 @@ Certificate fingerprints:
 
 4. **이름** 필드를 **API 키 1** 에서 이름으로 변경 합니다 (이 예제에서는**XamarinMapsDemoKey** 가 사용 됨). 다음으로 **Android 앱** 라디오 단추를 클릭 합니다.
 
-   [자격 증명 페이지에서 Android 앱을 선택 ![](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
+   [![자격 증명 페이지에서 Android 앱을 선택](obtaining-a-google-maps-api-key-images/08-key-restriction-vs-sml.png)](obtaining-a-google-maps-api-key-images/08-key-restriction-vs.png#lightbox)
 
 5. SHA-1 지문을 추가 하려면 **+ 패키지 이름 및 지문 추가**를 클릭 합니다.
 
-   [패키지 이름 및 지문 추가 클릭 ![](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
+   [![패키지 이름 및 지문 추가 클릭](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/09-add-package-fingerprint-vs.png#lightbox)
 
 6. 앱의 패키지 이름을 입력 하 고 SHA-1 인증서 지문 (이 가이드의 앞부분에서 설명한 대로 `keytool`를 통해 가져옴)을 입력 합니다. 다음 예제에서는 `XamarinMapsDemo`에 대 한 패키지 이름을 입력 하 고 그 뒤에 **키 저장소**에서 가져온 sha-1 인증서 지문을 입력 합니다.
 
-   [입력 한 패키지 이름은 com. xamarin.ios. ![입니다.](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
+   [![입력 한 패키지 이름은 com. xamarin.ios. 입니다.](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs-sml.png)](obtaining-a-google-maps-api-key-images/10-enter-package-and-sha1-vs.png#lightbox)
 
 7. Google Maps에 액세스할 APK에 대 한 순서로 sha-1 지문 포함 하며 APK에 서명 하는 데 사용 하는 모든 keystore (디버그 및 릴리스)에 대 한 이름을 패키지 note 합니다. 예를 들어, 디버그 및 릴리스 APK를 생성 하기 위한 다른 컴퓨터에 대 한 컴퓨터를 사용 하는 경우 포함 해야 첫 번째 컴퓨터의 디버그 키 저장소에서 sha-1 인증서 지문 및의 릴리스 키 저장소에서 sha-1 인증서 지문 두 번째 컴퓨터입니다. **+ 패키지 이름 및 지문 추가** 를 클릭 하 여 다음 예와 같이 다른 지문 및 패키지 이름을 추가 합니다.
 
-   [다른 지문을 추가 하 ![다른 SHA-1 인증서를 만듭니다.](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
+   [![다른 지문을 추가 하 다른 SHA-1 인증서를 만듭니다.](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs-sml.png)](obtaining-a-google-maps-api-key-images/11-second-fingerprint-vs.png#lightbox)
 
 8. **저장** 단추를 클릭하여 변경 내용을 저장합니다. 다음으로 API 키 목록으로 돌아갑니다. 이전에 만든 다른 API 키가 있는 경우 여기에도 나열 됩니다. 이 예제에서는 이전 단계에서 만든 API 키 한 개만 나열 됩니다.
 
@@ -169,11 +169,11 @@ Certificate fingerprints:
 
 1. 햄버거 메뉴 단추를 클릭 하 고 **청구** 페이지를 선택 합니다.
 
-   [햄버거 메뉴 청구 섹션을 선택 하 ![](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
+   [![햄버거 메뉴 청구 섹션을 선택 하](obtaining-a-google-maps-api-key-images/13-goto-billing-vs-sml.png)](obtaining-a-google-maps-api-key-images/13-goto-billing-vs.png#lightbox)
 
 2. 청구 계정에 **링크를** 클릭 하 고 표시 된 팝업에서 **청구 계정 만들기** 를 클릭 하 여 프로젝트를 청구 계정에 연결 합니다. 계정이 없는 경우 새 항목을 만들도록 안내 합니다.
 
-   [청구 계정에 프로젝트 ![링크](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
+   [![청구 계정에 프로젝트 링크](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs-sml.png)](obtaining-a-google-maps-api-key-images/14-link-billing-account-vs.png#lightbox)
 
 ## <a name="adding-the-key-to-your-project"></a>프로젝트에 키 추가
 

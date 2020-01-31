@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 1bb7ffba11a7135735b7599fa7f12b47d0b347c8
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 00d7610bda3d1b7c9f954df64bb6e3af982b1d06
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489390"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725521"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Xamarin.Mac 앱에 대한 프로비전 프로필
 
@@ -29,31 +29,31 @@ ms.locfileid: "75489390"
 
 다음을 수행합니다.
 
-1. 만들 프로비전 프로필 유형을 선택하고 **계속** 단추를 클릭합니다. 
+1. 만들 프로비전 프로필 유형을 선택하고 **계속** 단추를 클릭합니다.
 
     [![](profiles-images/certif14.png "Selecting the profile type")](profiles-images/certif14.png#lightbox)
-2. 프로필을 만들 애플리케이션의 ID를 선택하고 **계속** 단추를 클릭합니다. 
+2. 프로필을 만들 애플리케이션의 ID를 선택하고 **계속** 단추를 클릭합니다.
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. 프로필에 서명하는 데 사용되는 개발자 ID를 선택하고 **계속**을 클릭합니다. 
+3. 프로필에 서명하는 데 사용되는 개발자 ID를 선택하고 **계속**을 클릭합니다.
 
     [![](profiles-images/certif16.png "Selecting the developer ID")](profiles-images/certif16.png#lightbox)
-4. 프로필을 사용할 수 있는 컴퓨터를 선택하고 **계속**을 클릭합니다. 
+4. 프로필을 사용할 수 있는 컴퓨터를 선택하고 **계속**을 클릭합니다.
 
     [![](profiles-images/certif17.png "Selecting the allowed computers")](profiles-images/certif17.png#lightbox)
-5. 이제 **프로필 이름**을 입력하고 **생성** 단추를 클릭합니다. 
+5. 이제 **프로필 이름**을 입력하고 **생성** 단추를 클릭합니다.
 
     [![](profiles-images/certif18.png "Generating the profile")](profiles-images/certif18.png#lightbox)
-6. **다운로드** 단추를 클릭하여 새 프로필을 다운로드합니다. 
+6. **다운로드** 단추를 클릭하여 새 프로필을 다운로드합니다.
 
     [![](profiles-images/certif19.png "Downloading the profile")](profiles-images/certif19.png#lightbox)
-7. 개발 프로비전 프로필은 Mac **시스템 기본 설정** 애플리케이션의 Profiles Preferences(프로필 기본 설정) 창에 설치됩니다. 
+7. 개발 프로비전 프로필은 Mac **시스템 기본 설정** 애플리케이션의 Profiles Preferences(프로필 기본 설정) 창에 설치됩니다.
 
     [![](profiles-images/certif20.png "Installing the profile")](profiles-images/certif20.png#lightbox)
-8. Profiles Preferences(프로필 기본 설정) 창에 설치된 모든 프로필이 표시됩니다. 
+8. Profiles Preferences(프로필 기본 설정) 창에 설치된 모든 프로필이 표시됩니다.
 
     [![](profiles-images/image47.png "Showing all installed profiles")](profiles-images/image47.png#lightbox)
-9. 프로필을 다시 다운로드해야 하는 경우에는 **Developer Certificate Utility**(개발자 인증서 유틸리티)에도 프로필이 표시됩니다. 
+9. 프로필을 다시 다운로드해야 하는 경우에는 **Developer Certificate Utility**(개발자 인증서 유틸리티)에도 프로필이 표시됩니다.
 
     [![](profiles-images/image48.png "The Developer Certificate Utility")](profiles-images/image48.png#lightbox)
 
@@ -65,25 +65,25 @@ ms.locfileid: "75489390"
 
 다음을 수행합니다.
 
-1. 만들 프로필 유형을 선택하고 **계속** 단추를 클릭합니다. 
+1. 만들 프로필 유형을 선택하고 **계속** 단추를 클릭합니다.
 
     [![](profiles-images/certif21.png "Selecting the type of profile")](profiles-images/certif21.png#lightbox)
-2. 프로필을 만들 앱의 ID를 선택하고 **계속** 단추를 클릭합니다. 
+2. 프로필을 만들 앱의 ID를 선택하고 **계속** 단추를 클릭합니다.
 
     [![](profiles-images/certif15.png "Selecting the app ID")](profiles-images/certif15.png#lightbox)
-3. 프로필에 서명할 회사 ID를 선택하고 **계속** 단추를 클릭합니다. 
+3. 프로필에 서명할 회사 ID를 선택하고 **계속** 단추를 클릭합니다.
 
     [![](profiles-images/certif23.png "Selecting the company ID")](profiles-images/certif23.png#lightbox)
-4. **프로필 이름**을 입력하고 **생성** 단추를 클릭합니다. 
+4. **프로필 이름**을 입력하고 **생성** 단추를 클릭합니다.
 
     [![](profiles-images/certif24.png "Generating the profile")](profiles-images/certif24.png#lightbox)
-5. **다운로드**를 클릭하여 프로비전 프로필 파일(확장 `.provisionprofile`)을 다운로드합니다. 
+5. **다운로드**를 클릭하여 프로비전 프로필 파일(확장 `.provisionprofile`)을 다운로드합니다.
 
     [![](profiles-images/certif25.png "Downloading the profile")](profiles-images/certif25.png#lightbox)
-6. **Xcode 구성 도우미**로 끌어다 놓거나 두 번 클릭하여 설치합니다. 그러면 프로필이 Xcode 구성 도우미에 표시됩니다. 
+6. **Xcode 구성 도우미**로 끌어다 놓거나 두 번 클릭하여 설치합니다. 그러면 프로필이 Xcode 구성 도우미에 표시됩니다.
 
     [![](profiles-images/image51.png "Installing the profile")](profiles-images/image51.png#lightbox)
-7. 프로비전 프로필도 목록에 표시됩니다. 
+7. 프로비전 프로필도 목록에 표시됩니다.
 
     [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
 
@@ -95,4 +95,4 @@ ms.locfileid: "75489390"
 - [Hello, Mac 샘플](~//mac/get-started/hello-mac.md)
 - [Mac 앱 스토어에서 앱 배포](https://developer.apple.com/devcenter/mac/checklist/)
 - [도구 가이드: 앱 코드 서명](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/)
+- [개발자 ID 및 게이트키퍼](https://developer.apple.com/developer-id/)

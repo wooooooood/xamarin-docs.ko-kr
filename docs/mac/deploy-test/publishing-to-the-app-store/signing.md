@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: de858049ef899134d61596cabfcf81fca973e8b0
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489351"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725464"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>개발자 ID를 사용하여 Xamarin.Mac 앱 서명
 
 개발자가 macOS 사용자에게 직접 앱을 배포하려는 경우 Apple에서는 **게이트키퍼**가 설정된 macOS 시스템에 설치할 수 있도록 개발자 ID로 앱을 코드 서명할 것을 권장합니다. 앱이 서명되지 않은 경우 **게이트키퍼**는 사용자가 앱을 설치하지 못하게 차단하고 경고 메시지를 표시합니다(시작할 때 Control 키를 길게 눌러 이 제한을 무시할 수 있음).
 
-Apple 웹 사이트에서 [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/) 및 [Mac 앱 스토어 외부에 배포](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)에 대해 자세히 알아보세요.
+Apple 웹 사이트에서 [개발자 ID 및 게이트키퍼](https://developer.apple.com/developer-id/) 및 [Mac 앱 스토어 외부에 배포](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)에 대해 자세히 알아보세요.
 
 ## <a name="code-signing-options"></a>코드 서명 옵션
 
@@ -48,4 +48,4 @@ Apple 웹 사이트에서 [개발자 ID 및 게이트키퍼](https://developer.a
 - [Hello, Mac 샘플](~//mac/get-started/hello-mac.md)
 - [Mac 앱 스토어에서 앱 배포](https://developer.apple.com/devcenter/mac/checklist/)
 - [도구 가이드: 앱 코드 서명](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/)
+- [개발자 ID 및 게이트키퍼](https://developer.apple.com/developer-id/)

@@ -22,7 +22,7 @@ ms.locfileid: "75489026"
 
 이 문서와 함께 제공 되는 샘플 코드는 기본 제공 제품을 보여 줍니다. 제품 Id는 지불 후 기능을 ' 잠금 해제 ' 하는 코드와 긴밀 하 게 결합 되므로 응용 프로그램에 하드 코딩 됩니다. 구매 프로세스는 다음과 같이 시각화할 수 있습니다.   
    
-[구매 프로세스 시각화 ![](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
+[![구매 프로세스 시각화](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  기본 워크플로는 다음과 같습니다.   
    
@@ -44,11 +44,11 @@ ms.locfileid: "75489026"
 
 응용 프로그램은 이러한 스크린샷에 표시 됩니다. 각 구매는 사용자 잔액에 "원숭이 크레딧"을 추가 합니다.   
 
- [각 구매 ![사용자 잔액에 더 많은 원숭이 크레딧을 추가 합니다.](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
+ [![각 구매 사용자 잔액에 더 많은 원숭이 크레딧을 추가 합니다.](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
 
 사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용은 다음과 같습니다.   
 
- [사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용 ![](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
+ [![사용자 지정 클래스, 사용자 키트 키트 및 앱 스토어 간의 상호 작용](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 ### <a name="viewcontroller-methods"></a>ViewController 메서드
 
@@ -197,7 +197,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 
 사용자가 여러 수량을 구매 하면 다음 스크린샷에 표시 된 것 처럼, 수량, 단가 및 총 가격이 청구 됩니다.
 
-[구매를 확인 하는 ![](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
+[![구매를 확인 하는](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## <a name="handling-network-outages"></a>네트워크 중단 처리
 
@@ -303,7 +303,7 @@ public bool CanMakePayments()
 
 이 방법을 테스트 하려면 iOS의 **제한** 기능을 사용 하 여 **앱에서 바로 구매**를 사용 하지 않도록 설정 합니다.   
 
- [iOS의 제한 기능을 사용 하 여 앱에서 바로 구매를 사용 하지 않도록 설정 ![](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
+ [![iOS의 제한 기능을 사용 하 여 앱에서 바로 구매를 사용 하지 않도록 설정](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
 
 `ConsumableViewController`의이 예제 코드는 사용 안 함 단추에 **Appstore 사용 안 함** 텍스트를 표시 하 여 false를 반환 `CanMakePayments`에 반응 합니다.
 
@@ -323,7 +323,7 @@ if (iap.CanMakePayments()) {
 
 **앱에서 바로 구매** 기능이 제한 되는 경우 응용 프로그램은 다음과 같이 표시 됩니다. 구매 단추를 사용할 수 없습니다.   
 
- [앱 내 구매 기능이 제한 되는 경우 응용 프로그램은 다음과 같이 표시 됩니다. 구매 단추를 사용할 수 없습니다. ![](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
+ [![앱 내 구매 기능이 제한 되는 경우 응용 프로그램은 다음과 같이 표시 됩니다. 구매 단추를 사용할 수 없습니다.](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
 
 `CanMakePayments` false 인 경우에도 제품 정보를 요청할 수 있으므로 앱에서 가격을 검색 하 고 표시할 수 있습니다. 즉, 코드에서 `CanMakePayments` 확인을 제거 했을 때 구매 단추는 계속 활성화 되어 있지만 구매가 시도 될 때 사용자에 게 **앱에서의 구매가 허용 되지** 않는다는 메시지가 표시 됩니다 (지불 큐에 액세스 하는 경우에는 사용자 키트 키트에 의해 생성 됨).   
 

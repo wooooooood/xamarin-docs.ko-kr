@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 338b03ae5e52b06c6ddc225b418ee2bc7d5e5ffc
-ms.sourcegitcommit: 6b833f44d5fd8dc7ab7f8546e8b7d383e5a989db
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71107304"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
@@ -24,4 +24,4 @@ ms.locfileid: "71107304"
 
 Visual Studio 2019 또는 Mac용 Visual Studio를 사용하여 [OpenWeatherMap](https://openweathermap.org/) 웹 서비스에서 데이터를 검색하는 방법을 보여 주는 간단한 애플리케이션을 만들겠습니다. 다음 스크린샷은 최종 애플리케이션을 보여 줍니다.
 
-[![iOS 및 Android에서 시애틀의 날씨 데이터 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
+[![iOS 및 Android에서 시애틀 날씨 데이터 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")

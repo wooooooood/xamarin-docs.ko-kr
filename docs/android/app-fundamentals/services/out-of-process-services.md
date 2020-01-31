@@ -469,7 +469,7 @@ Android 권한으로 서비스를 보호 하는 일반적인 방법에는 다음
 
 응용 프로그램에 부여 된 사용 권한을 보려면 Android 설정 앱을 열고 **앱**을 선택 합니다. 목록에서 응용 프로그램을 찾아 선택 합니다. **앱 정보** 화면에서 앱에 부여 된 모든 사용 권한을 표시 하는 보기를 표시 하는 **권한** 을 탭 합니다.
 
-[응용 프로그램에 부여 된 사용 권한을 찾는 방법을 보여주는 Android 장치에서 스크린샷 ![](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
+[![응용 프로그램에 부여 된 사용 권한을 찾는 방법을 보여주는 Android 장치에서 스크린샷 ](out-of-process-services-images/ipc-06-sml.png)](out-of-process-services-images/ipc-06.png#lightbox)
 
 ## <a name="summary"></a>요약
 

@@ -140,6 +140,11 @@
       items:
         - name: 개요
           href: user-interface/index.md
+        - name: 스토리보드
+          href: user-interface/storyboards/index.md
+          items:
+            - name: 통합 Storyboards
+              href: user-interface/storyboards/unified-storyboards.md
         - name: iOS 디자이너
           href: user-interface/designer/index.md
           items:
@@ -151,11 +156,6 @@
               href: user-interface/designer/ios-designable-controls-walkthrough.md
             - name: iOS 디자이너를 통한 자동 레이아웃
               href: user-interface/designer/designer-auto-layout.md
-        - name: Storyboards
-          href: user-interface/storyboards/index.md
-          items:
-            - name: 통합 Storyboards
-              href: user-interface/storyboards/unified-storyboards.md
         - name: iOS의 사용자 인터페이스
           href: user-interface/ios-ui/index.md
           items:

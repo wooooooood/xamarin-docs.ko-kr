@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: bc5a151323414e867b919035b0c5705234faebf9
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 40d849ad403f2f47c00be9d3da7b59fc27ce8002
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021665"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725495"
 ---
 # <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Xamarin.Mac 앱에서 네이티브 크래시 디버깅
 
 ## <a name="overview"></a>개요
 
-프로그래밍 오류 때문에 네이티브 Objective-C 런타임에서 크래시가 가끔 발생합니다. C# 예외와는 달리, 이 예외는 직접 살펴보면서 수정할 수 있도록 코드의 특정 줄을 가리키지 않습니다. 찾아서 고치기에는 아주 사소한 경우도 있고, 추적하기가 매우 어려운 경우도 있습니다. 
+프로그래밍 오류 때문에 네이티브 Objective-C 런타임에서 크래시가 가끔 발생합니다. C# 예외와는 달리, 이 예외는 직접 살펴보면서 수정할 수 있도록 코드의 특정 줄을 가리키지 않습니다. 찾아서 고치기에는 아주 사소한 경우도 있고, 추적하기가 매우 어려운 경우도 있습니다.
 
 지금부터 몇 가지 실제 네이티브 크래시 예제를 살펴보겠습니다.
 
@@ -163,40 +163,40 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 
 ### <a name="locating"></a>찾기
 
-이러한 특성의 버그가 있는 경우 가장 흔한 증상은 네이티브 크래시로, 일반적으로 `mono_sigsegv_signal_handler`와 비슷하거나, 스택의 맨 위 프레임에 있는 `_sigtrap`과 비슷합니다. Cocoa는 C# 코드로 콜백을 시도하고, 가비지 수집된 개체가 적중하고, 크래시가 발생합니다. 그러나 이러한 기호가 포함된 모든 크래시가 이와 같은 바인딩 문제 때문에 발생하는 것은 아니므로 몇 가지 추가 조사를 실시하여 이 문제가 맞는지 확인해야 합니다. 
+이러한 특성의 버그가 있는 경우 가장 흔한 증상은 네이티브 크래시로, 일반적으로 `mono_sigsegv_signal_handler`와 비슷하거나, 스택의 맨 위 프레임에 있는 `_sigtrap`과 비슷합니다. Cocoa는 C# 코드로 콜백을 시도하고, 가비지 수집된 개체가 적중하고, 크래시가 발생합니다. 그러나 이러한 기호가 포함된 모든 크래시가 이와 같은 바인딩 문제 때문에 발생하는 것은 아니므로 몇 가지 추가 조사를 실시하여 이 문제가 맞는지 확인해야 합니다.
 
 이러한 버그를 추적하기가 어려운 이유는 가비지 수집이 의심스러운 개체를 삭제한 **후**에만 발생하기 때문입니다. 이러한 버그 중 하나를 찾았다고 생각되면 다음 코드를 시작 시퀀스 어딘가에 추가합니다.
 
 ```csharp
-new System.Threading.Thread (() => 
+new System.Threading.Thread (() =>
 {
     while (true) {
          System.Threading.Thread.Sleep (1000);
          GC.Collect ();
     }
-}).Start (); 
+}).Start ();
 ```
 
 이렇게 하면 애플리케이션이 가비지 수집기를 1초마다 실행합니다. 애플리케이션을 다시 실행하고 버그를 재현해 봅니다. 크래시가 즉시 발생하거나, 임의로 발생하는 것이 아니라 지속적으로 발생하는 경우 제대로 추적하고 있는 것입니다.
 
 ### <a name="reporting"></a>보고
 
-그 다음 단계는 향후 릴리스에서 바인딩을 수정할 수 있도록 Xamarin에 문제를 보고하는 것입니다. 비즈니스 또는 엔터프라이즈 라이선스 소유자인 경우 
+그 다음 단계는 향후 릴리스에서 바인딩을 수정할 수 있도록 Xamarin에 문제를 보고하는 것입니다. 비즈니스 또는 엔터프라이즈 라이선스 소유자인 경우
 
 [visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 그렇지 않으면 다음 단계에 따라 기존 문제를 검색합니다.
 
-- [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/mac) 확인
+- [Xamarin.Mac 포럼](https://forums.xamarin.com/categories/xamarin-mac) 확인
 - [문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues) 검색
 - GitHub 문제로 전환하기 전에 Xamarin 문제가 [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi)에서 추적되었습니다. 여기서 일치하는 문제를 검색해 보세요.
 - 일치하는 문제를 찾을 수 없는 경우 [GitHub 문제 리포지토리](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 제출하세요.
 
-GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 수 없습니다. 
+GitHub 문제는 모두 공용입니다. 설명 또는 첨부 파일을 숨길 수 없습니다.
 
 다음 정보를 가능한 많이 포함하세요.
 
-- 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**. 
+- 문제를 재현하는 간단한 예제. 문제를 재현할 수 있다면 **매우 유용합니다**.
 - 크래시의 전체 스택 추적.
 - 크래시 주변의 C# 코드.   
 
@@ -250,4 +250,4 @@ C# 예외가 관리 코드를 호출하는 Objective-C 메서드로 "이스케�
 
 기술적 이유로 인한 어려움이 없다면, 모든 관리/네이티브 경계에서 관리 예외를 catch하도록 인프라를 설정하면 비용이 적지 않게 소모되며 여러 일반 작업에서 발생하는 _많은_ 전환이 있습니다. 많은 작업, 특히 UI 스레드와 관련된 작업은 신속하게 완료되어야 합니다. 그렇지 않으면 앱이 느려지고 성능이 저하됩니다. 이러한 콜백의 상당수는 throw 가능성이 별로 없는 간단한 작업만 하기 때문에 이와 같은 상황에서 이 오버헤드는 비용이 많이 들고 불필요합니다.
 
-따라서 try/catch를 설정하지 않습니다. 코드가 사소하지 않은 작업(부울 반환 또는 간단한 수학 이상)을 수행하는 경우 사용자가 직접 catch를 시도할 수 있습니다. 
+따라서 try/catch를 설정하지 않습니다. 코드가 사소하지 않은 작업(부울 반환 또는 간단한 수학 이상)을 수행하는 경우 사용자가 직접 catch를 시도할 수 있습니다.

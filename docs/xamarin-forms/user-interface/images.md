@@ -73,7 +73,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 다음 스크린샷에서 각 플랫폼에서 로컬 이미지를 표시 하는 결과 보여 줍니다.
 
-[로컬 이미지를 표시 하는 샘플 응용 프로그램 ![](images-images/local-sml.png)](images-images/local.png#lightbox)
+[![로컬 이미지를 표시 하는 샘플 응용 프로그램](images-images/local-sml.png)](images-images/local.png#lightbox)
 
 보다 유연 하 게 여 `Device.RuntimePlatform` 속성 사용할 수 있습니다 다른 이미지 파일 또는 일부 또는 모든 플랫폼에 대 한 경로 선택 하려면이 코드 예제 에서처럼:
 
@@ -96,7 +96,7 @@ IOS 9 이전 이미지의 레 티 나 버전에 놓일 수 있습니다는 **리
 
 Android 대체 고해상도 이미지를 배치할 [라는 특수 디렉터리](https://developer.android.com/guide/practices/screens_support.html) 다음 스크린샷에 표시 된 것 처럼 Android 프로젝트에서:
 
-[Android 다중 해상도 이미지 위치 ![](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
+[![Android 다중 해상도 이미지 위치](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
 UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)여기서 `xxx` 예를 들어 자산에 적용 하는 크기 조정 비율 **myimage.scale 200.png**합니다. 이미지를 코드에 배율 한정자 없이 XAML 예를 들어 참조할 수 있습니다 **myimage.png**합니다. 플랫폼에서는 디스플레이 현재 DPI를 기준으로 가장 가까운 적절 한 자산 눈금자를 선택 합니다.
 
@@ -123,7 +123,7 @@ UWP 이미지 파일 이름을 [붙어야 수 `.scale-xxx` 파일 확장명 앞]
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[빌드 작업을 포함 리소스에 설정 ![](images-images/vs-buildaction-sml.png)](images-images/vs-buildaction.png#lightbox)
+[![빌드 작업을 포함 리소스에 설정](images-images/vs-buildaction-sml.png)](images-images/vs-buildaction.png#lightbox)
 
 **빌드 작업** 보기 및 변경 합니다 **속성** 파일 창.
 
@@ -140,7 +140,7 @@ IDE에 연결 하 여이 기본값을 생성 합니다 **기본 Namespace** 파�
 IDE에 연결 하 여이 기본값을 생성 합니다 **기본 Namespace** 파일 이름으로이 프로젝트에 대 한 각 값 사이 마침표 (.)를 사용 하 여 합니다.
 이 ID를 편집할 수 있습니다 합니다 **속성** 패드 하지만 이러한 예제에 대 한 값 **WorkingWithImages.beach.jpg** 사용 됩니다.
 
-[포함 리소스 속성 패드 ![](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
+[![포함 리소스 속성 패드](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
 
 -----
 
@@ -273,7 +273,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 다음 스크린샷에서 각 플랫폼에서 원격 이미지를 표시 하는 결과 보여 줍니다.
 
-[다운로드 한 이미지를 표시 하는 샘플 응용 프로그램 ![](images-images/download-sml.png)](images-images/download.png#lightbox)
+[![다운로드 한 이미지를 표시 하는 샘플 응용 프로그램](images-images/download-sml.png)](images-images/download.png#lightbox)
 
 ### <a name="downloaded-image-caching"></a>다운로드 한 이미지 캐싱
 

@@ -50,7 +50,7 @@ Xamarin Live Reload는 Visual Studio 마켓플레이스를 통해 배포됩니�
     
     b. **공유 프로젝트** – **Xamarin.LiveReload** NuGet을 모든 플랫폼 프로젝트(Android, iOS, UWP 등)에 설치합니다. **패키지 소스**가 **모두**로 설정되어있는지 확인합니다.
 
-    [NuGet 패키지 관리자를 사용 하 여 Xamarin Live Reload NuGet 추가 ![](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
+    [![NuGet 패키지 관리자를 사용 하 여 Xamarin Live Reload NuGet 추가](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
 3. 아래 코드 조각에 있는 것처럼 `Application` 클래스의 생성자에 `LiveReload.Init();` 추가:
 

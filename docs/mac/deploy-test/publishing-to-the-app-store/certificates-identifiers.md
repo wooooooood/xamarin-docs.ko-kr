@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/17/2019
-ms.openlocfilehash: 2ea3516c1fb89c8c9b9cc3694d7c95ccd87e9d41
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 2b2bfe9925a99c2ba7f1366ea28d5c72e2e1da88
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489645"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725543"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Xamarin.Mac에서 인증서 및 식별자
 
@@ -150,7 +150,7 @@ macOS 개발과 관련된 5가지 주요 유형의 인증서가 있습니다.
 
 App Store에서 앱을 해제하려면 다음의 두 가지 인증서가 필요합니다.
 
-- 애플리케이션에 서명하는 데 사용되는 **Mac 앱 배포** 인증서와 
+- 애플리케이션에 서명하는 데 사용되는 **Mac 앱 배포** 인증서와
 - 설치 관리자에 서명하기 위한 **Mac 설치 관리자 배포**입니다.
 
 > [!TIP]
@@ -183,7 +183,7 @@ App Store에서 앱을 해제하려면 다음의 두 가지 인증서가 필요�
 
 Xamarin.Mac 애플리케이션을 직접 해제(Apple App Store를 통해 해제하지 않음)하려면 두 가지 인증서가 필요합니다.
 
-- 애플리케이션에 서명하는 데 사용되는 **개발자 ID 설치 관리자** 인증서와 
+- 애플리케이션에 서명하는 데 사용되는 **개발자 ID 설치 관리자** 인증서와
 - 설치 관리자에 서명하기 위한 **개발자 ID 애플리케이션** 인증서입니다.
 
 > [!TIP]
@@ -198,4 +198,4 @@ Xamarin.Mac 애플리케이션을 직접 해제(Apple App Store를 통해 해제
 - [설치](/visualstudio/mac/installation/)
 - [Hello, Mac 샘플](~/mac/get-started/hello-mac.md)
 - [Mac 앱 스토어에서 앱 배포](https://developer.apple.com/devcenter/mac/checklist/)
-- [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/)
+- [개발자 ID 및 게이트키퍼](https://developer.apple.com/developer-id/)

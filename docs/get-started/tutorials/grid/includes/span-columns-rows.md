@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61375985"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -33,11 +33,11 @@ ms.locfileid: "61375985"
 
 1. Visual Studio 도구 모음에서 선택한 iOS 원격 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 여러 열과 행에 분산된 콘텐츠가 포함된 그리드의 스크린샷](../images/span-columns-rows.png "열과 행이 분산된 콘텐츠가 있는 그리드")](../images/span-columns-rows-large.png#lightbox "열과 행이 분산된 콘텐츠가 있는 그리드")
+    [![iOS 및 Android에서 여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드의 스크린샷](../images/span-columns-rows.png "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")](../images/span-columns-rows-large.png#lightbox "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")
 
     열과 행을 분산하는 방법에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md) 가이드에서 [범위](~/xamarin-forms/user-interface/layouts/grid.md#spans)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Grid`](xref:Xamarin.Forms.Grid) 선언을 수정하여 열과 행을 정의하고 열과 행에 분산된 콘텐츠를 배치합니다.
 
@@ -64,6 +64,6 @@ ms.locfileid: "61375985"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 여러 열과 행에 분산된 콘텐츠가 포함된 그리드의 스크린샷](../images/span-columns-rows.png "열과 행이 분산된 콘텐츠가 있는 그리드")](../images/span-columns-rows-large.png#lightbox "열과 행이 분산된 콘텐츠가 있는 그리드")
+    [![iOS 및 Android에서 여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드의 스크린샷](../images/span-columns-rows.png "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")](../images/span-columns-rows-large.png#lightbox "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")
 
     열과 행을 분산하는 방법에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md) 가이드에서 [범위](~/xamarin-forms/user-interface/layouts/grid.md#spans)를 참조하세요.

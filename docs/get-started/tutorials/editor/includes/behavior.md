@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: bd3f37082443e93f10f60d9466fe22aae8571b14
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61373440"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -26,7 +26,7 @@ ms.locfileid: "61373440"
 
     [`Editor`](xref:Xamarin.Forms.Editor) 동작을 사용자 지정하는 방법에 대한 자세한 내용은 [Xamarin.Forms 편집기](~/xamarin-forms/user-interface/text/editor.md) 가이드를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Editor`](xref:Xamarin.Forms.Editor) 선언을 수정하여 해당 동작을 사용자 지정합니다.
 

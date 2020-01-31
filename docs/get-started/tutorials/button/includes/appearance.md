@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372973"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -26,11 +26,11 @@ ms.locfileid: "61372973"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button) 모양이 변경되었음을 확인합니다.
 
-    [![iOS 및 Android에서 시각적 개체 모양이 변경된 단추의 스크린샷](../images/change-button-appearance.png "변경된 모양의 단추")](../images/change-button-appearance-large.png#lightbox "변경된 모양의 단추")
+    [![iOS 및 Android에서 시각적 개체 모양이 변경된 단추의 스크린샷](../images/change-button-appearance.png "모양이 변경된 단추")](../images/change-button-appearance-large.png#lightbox "모양이 변경된 단추")
 
     [`Button`](xref:Xamarin.Forms.Button) 모양 설정에 대한 자세한 내용은 [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md) 가이드에서 [단추 모양](~/xamarin-forms/user-interface/button.md#button-appearance)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 해당 시각적 개체 모양을 변경합니다.
 
@@ -50,6 +50,6 @@ ms.locfileid: "61372973"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button) 모양이 변경되었음을 확인합니다.
 
-    [![iOS 및 Android에서 시각적 개체 모양이 변경된 단추의 스크린샷](../images/change-button-appearance.png "변경된 모양의 단추")](../images/change-button-appearance-large.png#lightbox "변경된 모양의 단추")
+    [![iOS 및 Android에서 시각적 개체 모양이 변경된 단추의 스크린샷](../images/change-button-appearance.png "모양이 변경된 단추")](../images/change-button-appearance-large.png#lightbox "모양이 변경된 단추")
 
     [`Button`](xref:Xamarin.Forms.Button) 모양 설정에 대한 자세한 내용은 [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md) 가이드에서 [단추 모양](~/xamarin-forms/user-interface/button.md#button-appearance)을 참조하세요.

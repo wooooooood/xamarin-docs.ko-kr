@@ -28,7 +28,7 @@ _ViewPager는 gestural 탐색을 구현할 수 있도록 하는 레이아웃 관
 
 **TreePager** 라는 새 android 프로젝트를 만듭니다 (새 android 프로젝트를 만드는 방법에 대 한 자세한 내용은 [Hello, android](~/android/get-started/hello-android/hello-android-quickstart.md) 참조). 그런 다음 NuGet 패키지 관리자를 시작 합니다. NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 프로젝트에 Nuget 포함](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)을 참조 하세요. **Android 지원 라이브러리 v4**찾기 및 설치: 
 
-[NuGet 패키지 관리자에서 선택한 v4 NuGet 지원의 ![스크린샷](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
+[![NuGet 패키지 관리자에서 선택한 v4 NuGet 지원의 스크린샷](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 그러면 **Android Support Library v4**로 reaquired 추가 패키지도 설치 됩니다.
 
@@ -101,7 +101,7 @@ protected override void OnCreate(Bundle bundle)
 
 이 코드를 작성 하 고 실행 하면 다음 스크린샷에 표시 됩니다. 
 
-[빈 ViewPager를 표시 하는 앱의 ![스크린샷](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
+[![빈 ViewPager를 표시 하는 앱의 스크린샷](viewpager-and-views-images/02-initial-screen-sml.png)](viewpager-and-views-images/02-initial-screen.png#lightbox)
 
 이 시점에서 **TreeCatalog**의 콘텐츠에 액세스 하기 위한 어댑터가 부족 하기 때문에 `ViewPager` 비어 있습니다. 다음 섹션에서는 `ViewPager`을 **TreeCatalog**에 연결 하기 위해 **PagerAdapter** 를 만듭니다. 
 
@@ -267,7 +267,7 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 이제 코어 구현이 완료 되어 앱을 빌드하고 실행 &ndash;. 다음 스크린샷에 왼쪽에 표시 된 대로 트리 카탈로그의 첫 번째 이미지가 화면에 나타납니다. 왼쪽으로 살짝 밀어 트리 보기를 표시 한 다음 오른쪽으로 살짝 밀어 트리 카탈로그를 통해 다시 이동 합니다. 
 
-[트리 이미지를 통해 TreePager 앱의 ![스크린샷 살짝 밀기](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
+[![트리 이미지를 통해 TreePager 앱의 스크린샷 살짝 밀기](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
 
 ## <a name="add-a-pager-indicator"></a>호출기 표시기 추가
 
@@ -296,7 +296,7 @@ viewPager.Adapter = new TreePagerAdapter(this, treeCatalog);
 
 `ViewPager` 및 `PagerTabStrip`는 함께 작동 하도록 설계 되었습니다. `ViewPager` 레이아웃 내에 `PagerTabStrip`을 선언 하면 `ViewPager`에서 자동으로 `PagerTabStrip`를 찾아 어댑터에 연결 합니다. 앱을 빌드하고 실행할 때 각 화면 맨 위에 빈 `PagerTabStrip` 표시 되어야 합니다. 
 
-[빈 PagerTabStrip의 ![확대/확대 스크린 샷](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
+[![빈 PagerTabStrip의 확대/확대 스크린 샷](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
 ### <a name="display-a-title"></a>제목 표시
 
@@ -311,7 +311,7 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 이 코드는 트리 카탈로그의 지정 된 페이지 (위치)에서 트리 캡션 문자열을 검색 하 고, Java `String`로 변환한 후 `ViewPager`에 반환 합니다. 이 새 메서드를 사용 하 여 앱을 실행 하면 각 페이지에 `PagerTabStrip`의 트리 캡션이 표시 됩니다. 화면 맨 위에 밑줄 없이 트리 이름이 표시 됩니다. 
 
-[텍스트 채우기 PagerTabStrip 탭이 있는 페이지의 ![스크린샷](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
+[![텍스트 채우기 PagerTabStrip 탭이 있는 페이지의 스크린샷](viewpager-and-views-images/05-final-pagetabstrip-sml.png)](viewpager-and-views-images/05-final-pagetabstrip.png#lightbox)
 
 앞뒤로 살짝 밀어 카탈로그에서 각 캡션 트리 이미지를 볼 수 있습니다. 
 
@@ -319,7 +319,7 @@ public override Java.Lang.ICharSequence GetPageTitleFormatted(int position)
 
 `PagerTitleStrip`은 현재 선택 된 탭에 밑줄을 추가 `PagerTabStrip` 한다는 점을 제외 하 고 `PagerTabStrip`와 매우 비슷합니다. 위의 레이아웃에서 `PagerTabStrip` `PagerTitleStrip`로 바꾸고 앱을 다시 실행 하 여 `PagerTitleStrip`표시 되는 모양을 확인할 수 있습니다. 
 
-[텍스트에서 밑줄이 제거 된 ![PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
+[![텍스트에서 밑줄이 제거 된 PagerTitleStrip](viewpager-and-views-images/06-pagetitlestrip-example-sml.png)](viewpager-and-views-images/06-pagetitlestrip-example.png#lightbox)
 
 `PagerTitleStrip`로 변환할 때 밑줄이 제거 됩니다. 
 

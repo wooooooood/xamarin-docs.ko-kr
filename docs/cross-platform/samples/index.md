@@ -31,7 +31,7 @@ C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되�
 이 샘플은 로컬 SQLite 데이터베이스에서 데이터가 저장되고 액세스되는 Todo 목록 애플리케이션을 보여주며 Xamarin.Forms를 사용하여 빌드됩니다.
     :::column-end:::
     :::column:::
-[내 구매자 ![](images/myshoppe.png)](https://github.com/xamarinhq/app-myshoppe)
+[![내 구매자 ](images/myshoppe.png)](https://github.com/xamarinhq/app-myshoppe)
 
 ### <a name="my-shoppehttpsgithubcomxamarinhqapp-myshoppe"></a>[내 구매자](https://github.com/xamarinhq/app-myshoppe)
 

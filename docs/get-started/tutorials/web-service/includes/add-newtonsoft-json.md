@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cef0b8f56639e7bc8571ab01b820dfd54b074472
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277359"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -23,13 +23,13 @@ ms.locfileid: "67277359"
 
 1. **NuGet 패키지 관리자**에서 **찾아보기** 탭을 선택하고 **Newtonsoft.Json** NuGet 패키지를 검색하여 선택한 다음, **설치** 단추를 클릭하여 프로젝트에 추가합니다.
 
-    ![NuGet 패키지 관리자에서 Newtonsoft.Json NuGet 패키지의 스크린샷](../images/vs/add-package.png "Newtonsoft.Json NuGet 패키지")
+    ![NuGet 패키지 관리자의 Newtonsoft.Json NuGet 패키지 스크린샷](../images/vs/add-package.png "Newtonsoft.Json NuGet 패키지")
 
     이 패키지는 JSON 역직렬화를 애플리케이션에 통합하는 데 사용됩니다.
 
 1. 오류가 없는지 확인하기 위해 솔루션을 빌드합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 이 자습서를 완료하려면 iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)가 있어야 합니다. 또한 Xcode(최신 릴리스)도 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
@@ -46,7 +46,7 @@ ms.locfileid: "67277359"
 
 1. **패키지 추가** 창에서 **Newtonsoft.Json** NuGet 패키지를 검색하여 선택한 다음, **패키지 추가** 단추를 클릭하여 프로젝트에 추가합니다.
 
-    ![NuGet 패키지 관리자에서 Newtonsoft.Json NuGet 패키지의 스크린샷](../images/vsmac/add-package.png "Newtonsoft.Json NuGet 패키지")
+    ![NuGet 패키지 관리자의 Newtonsoft.Json NuGet 패키지 스크린샷](../images/vsmac/add-package.png "Newtonsoft.Json NuGet 패키지")
 
     이 패키지는 JSON 역직렬화를 애플리케이션에 통합하는 데 사용됩니다.
 

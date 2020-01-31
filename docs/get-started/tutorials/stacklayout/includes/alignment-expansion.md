@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67560011"
 ---
 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내에 자식 뷰의 크기와 위치는 자식 뷰의 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성 값과 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성 값에 따라 달라집니다.
@@ -53,7 +53,7 @@ ms.locfileid: "67560011"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 맞춤 및 확장 옵션이 설정된 StackLayout의 자식 뷰 스크린샷](../images/alignment-expansion.png "맞춤 및 확장 집합이 있는 레이블 인스턴스가 포함된 StackLayout")](../images/alignment-expansion-large.png#lightbox "맞춤 및 확장 집합이 있는 레이블 인스턴스가 포함된 StackLayout")
+    [![iOS 및 Android에서 맞춤 및 확장 옵션이 설정된 StackLayout 내 자식 뷰의 스크린샷](../images/alignment-expansion.png "맞춤 및 확장이 설정된 레이블 인스턴스를 포함하는 StackLayout")](../images/alignment-expansion-large.png#lightbox "맞춤 및 확장이 설정된 레이블 인스턴스를 포함하는 StackLayout")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout)은 `StackLayout` 방향과 반대 방향에 있는 자식 뷰의 맞춤 기본 설정을 따릅니다. 따라서 세로 방향 `StackLayout` 내의 [`Label`](xref:Xamarin.Forms.Label) 자식 뷰는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 맞춤 필드 중 하나로 설정합니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "67560011"
 
     맞춤 및 확장에 대한 자세한 내용은 [xamarin.Forms의 레이아웃 옵션](~/xamarin-forms/user-interface/layouts/layout-options.md)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 선언을 수정하여 각 [`Label`](xref:Xamarin.Forms.Label)에 대한 맞춤 및 확장 옵션을 설정합니다.
 
@@ -109,7 +109,7 @@ ms.locfileid: "67560011"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 맞춤 및 확장 옵션이 설정된 StackLayout의 자식 뷰 스크린샷](../images/alignment-expansion.png "맞춤 및 확장 집합이 있는 레이블 인스턴스가 포함된 StackLayout")](../images/alignment-expansion-large.png#lightbox "맞춤 및 확장 집합이 있는 레이블 인스턴스가 포함된 StackLayout")
+    [![iOS 및 Android에서 맞춤 및 확장 옵션이 설정된 StackLayout 내 자식 뷰의 스크린샷](../images/alignment-expansion.png "맞춤 및 확장이 설정된 레이블 인스턴스를 포함하는 StackLayout")](../images/alignment-expansion-large.png#lightbox "맞춤 및 확장이 설정된 레이블 인스턴스를 포함하는 StackLayout")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout)은 `StackLayout` 방향과 반대 방향에 있는 자식 뷰의 맞춤 기본 설정을 따릅니다. 따라서 세로 방향 `StackLayout` 내의 [`Label`](xref:Xamarin.Forms.Label) 자식 뷰는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 맞춤 필드 중 하나로 설정합니다.
 

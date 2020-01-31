@@ -107,7 +107,7 @@ XAML을에 저장 되는 리소스에는 `ResourceDictionary` 다음 검색 및 
 
 첫 번째 [ `Label` ](xref:Xamarin.Forms.Label) 인스턴스를 검색 하 고 사용 합니다 `LabelPageHeadingStyle` 응용 프로그램 수준에 정의 된 리소스 `ResourceDictionary`, 두 번째 `Label` 인스턴스 검색 및 사용 하 여 `LabelNormalStyle`컨트롤 수준에 정의 된 리소스 `ResourceDictionary`합니다. 마찬가지로,는 [ `Button` ](xref:Xamarin.Forms.Button) 인스턴스를 검색 하 고 사용 합니다 `NormalTextColor` 응용 프로그램 수준에 정의 된 리소스 `ResourceDictionary`, 및 `MediumBoldText` 컨트롤 수준에 정의 된 리소스 `ResourceDictionary`합니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
-[ResourceDictionary 리소스를 소비 하는 ![](resource-dictionaries-images/screenshots-sml.png)](resource-dictionaries-images/screenshots.png#lightbox)
+[![ResourceDictionary 리소스를 소비 하는](resource-dictionaries-images/screenshots-sml.png)](resource-dictionaries-images/screenshots.png#lightbox)
 
 > [!NOTE]
 > 단일 페이지와 관련 된 리소스를 포함 하는 응용 프로그램 수준 리소스 사전에 따라서 리소스를 구문 분석 대신 응용 프로그램 시작 시 페이지에서 필요한 경우 되어서는 안 됩니다. 자세한 내용은 [응용 프로그램 리소스 사전 크기 줄이기](~/xamarin-forms/deploy-test/performance.md)합니다.
@@ -142,7 +142,7 @@ XAML을에 저장 되는 리소스에는 `ResourceDictionary` 다음 검색 및 
 
 원래 `PageBackgroundColor` 및 `NormalTextColor` 인스턴스를 응용 프로그램 수준에서 정의 의해 재정의 되는 `PageBackgroundColor` 및 `NormalTextColor` 페이지 수준에서 정의 된 인스턴스. 따라서 페이지 배경색 파란색 되며 다음 스크린샷과에서 같이 페이지의 텍스트 노랑 됩니다.
 
-[ResourceDictionary 리소스를 재정의 ![](resource-dictionaries-images/overridding-screenshots-sml.png)](resource-dictionaries-images/overridding-screenshots.png#lightbox)
+[![ResourceDictionary 리소스를 재정의](resource-dictionaries-images/overridding-screenshots-sml.png)](resource-dictionaries-images/overridding-screenshots.png#lightbox)
 
 하지만의 막대는 [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) 는 여전히 노란색 때문에 [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) 속성의 값으로 설정 됩니다는 `PageBackgroundColor` 응용 프로그램에 정의 된 리소스 수준 `ResourceDictionary`합니다.
 

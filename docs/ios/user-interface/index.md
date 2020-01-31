@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/21/2017
-ms.openlocfilehash: 8e52dbce6abd30633ffffa22e24d471fef0500ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a749324c2963290c45b0e003af1518d1d517b30d
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73003557"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794678"
 ---
 # <a name="building-user-interfaces-with-xamarinios"></a>Xamarin.ios를 사용 하 여 사용자 인터페이스 빌드
-
-## <a name="ios-designeriosuser-interfacedesignerindexmd"></a>[iOS Designer](~/ios/user-interface/designer/index.md)
-
-Mac용 Visual Studio에 완전히 통합 된 iOS storyboard 형식에 대 한 디자이너를 빌드 했습니다. IOS 디자이너는 Xcode 또는 Mac용 Visual Studio에서 파일을 편집할 수 있도록 스토리 보드 형식과의 완전 한 호환성을 유지 합니다. 또한 편집기는 디자인 타임에 편집기에서 렌더링 하는 사용자 지정 컨트롤과 같은 고급 기능을 지원 합니다.
 
 ## <a name="introduction-to-storyboardsiosuser-interfacestoryboardsindexmd"></a>[Storyboards 소개](~/ios/user-interface/storyboards/index.md)
 
 스토리 보드는 응용 프로그램의 모양과 흐름을 시각적으로 표현한 것입니다. Xamarin은 Xamarin.ios 응용 프로그램에서 storyboard를 활용할 수 있는 디자이너를 도입 했으므로 응용 프로그램 화면을 시각적으로 디자인 하 고 보기, 컨트롤러 및 segue C# 에 액세스 하 여 더 많은 제어를 제공 합니다. [이 가이드](~/ios/user-interface/designer/introduction.md) 를 참조 하 여에 대 한 설명과 연습을 참조할 수도 있습니다 Xamarin Designer for iOS
+
+## <a name="ios-designeriosuser-interfacedesignerindexmd"></a>[iOS Designer](~/ios/user-interface/designer/index.md)
+
+Mac용 Visual Studio에 완전히 통합 된 iOS storyboard 형식에 대 한 디자이너를 빌드 했습니다. IOS 디자이너는 Xcode 또는 Mac용 Visual Studio에서 파일을 편집할 수 있도록 스토리 보드 형식과의 완전 한 호환성을 유지 합니다. 또한 편집기는 디자인 타임에 편집기에서 렌더링 하는 사용자 지정 컨트롤과 같은 고급 기능을 지원 합니다.
 
 ## <a name="user-interface-in-iosiosuser-interfaceios-uiindexmd"></a>[iOS의 사용자 인터페이스](~/ios/user-interface/ios-ui/index.md)
 

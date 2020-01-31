@@ -17,7 +17,7 @@ Xamarin 개발 환경을 개선하는 데 도움이 되는 도구입니다.
 
 :::row:::
     :::column:::
-[Windows 용 iOS 시뮬레이터 ![](~/media/index/xamarin-tools-windows-simulator.svg?branch=master)](~/tools/ios-simulator/index.md)
+[![Windows 용 iOS 시뮬레이터](~/media/index/xamarin-tools-windows-simulator.svg?branch=master)](~/tools/ios-simulator/index.md)
 
 ### <a name="ios-simulator-for-windowstoolsios-simulatorindexmd"></a>[Windows용 iOS 시뮬레이터](~/tools/ios-simulator/index.md)
 

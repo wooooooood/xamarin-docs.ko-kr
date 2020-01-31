@@ -279,7 +279,7 @@ Xamarin.ios는 *armeabi-v7a*, *armeabi-v7a-armeabi-v7a*및 *x 86*과 같은 여�
 Google에서 Windows 용 Android SDK에 대해 2 개의 다운로드를 사용할 수 있습니다.
 .Exe 설치 관리자를 선택 하는 경우 설치 된 위치에 Xamarin.ios를 지시 하는 레지스트리 키를 작성 합니다. .Zip 파일을 선택 하 고 압축을 풀면 Xamarin.ios는 SDK를 찾을 위치를 알 수 없습니다. **Xamarin > Android 설정 > 도구 > 옵션**으로 이동 하 여 SDK가 Visual Studio에 있는 경우 xamarin.ios에 지시할 수 있습니다.
 
-[Xamarin Android 설정에서 ![Android SDK 위치](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
+[![Xamarin Android 설정에서 Android SDK 위치](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 ## <a name="ide-does-not-display-target-device"></a>IDE에서 대상 장치를 표시 하지 않음
 

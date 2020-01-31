@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d87289e481b69592b68627d053e937856d3d6067
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61376012"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -46,9 +46,9 @@ ms.locfileid: "61376012"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 열과 행에 콘텐츠를 배치한 그리드의 스크린샷](../images/columns-rows.png "열과 행의 콘텐츠가 있는 그리드")](../images/columns-rows-large.png#lightbox "열과 행의 콘텐츠가 있는 그리드")
+    [![iOS 및 Android에서 열 및 행에 배치된 콘텐츠를 포함하는 그리드의 스크린샷](../images/columns-rows.png "열 및 행에 콘텐츠를 포함하는 그리드")](../images/columns-rows-large.png#lightbox "열 및 행에 콘텐츠를 포함하는 그리드")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Grid`](xref:Xamarin.Forms.Grid) 선언을 수정하여 열과 행을 정의하고 콘텐츠를 열과 행에 배치합니다.
 
@@ -88,4 +88,4 @@ ms.locfileid: "61376012"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 열과 행에 콘텐츠를 배치한 그리드의 스크린샷](../images/columns-rows.png "열과 행의 콘텐츠가 있는 그리드")](../images/columns-rows-large.png#lightbox "열과 행의 콘텐츠가 있는 그리드")
+    [![iOS 및 Android에서 열 및 행에 배치된 콘텐츠를 포함하는 그리드의 스크린샷](../images/columns-rows.png "열 및 행에 콘텐츠를 포함하는 그리드")](../images/columns-rows-large.png#lightbox "열 및 행에 콘텐츠를 포함하는 그리드")

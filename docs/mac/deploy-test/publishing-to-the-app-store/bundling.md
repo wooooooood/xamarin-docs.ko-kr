@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7d2cd650dd22cd64d506d5d17a5ae0c34b44fc2b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: f4d38bb66a34257c1e0a27c5fbbfe16f59743e83
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487212"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725508"
 ---
 # <a name="bundling-for-the-mac-app-store"></a>Mac 앱 스토어용으로 묶기
 
@@ -47,4 +47,4 @@ ms.locfileid: "75487212"
 - [설치](/visualstudio/mac/installation/)
 - [Hello, Mac 샘플](~/mac/get-started/hello-mac.md)
 - [Mac 앱 스토어에서 앱 배포](https://developer.apple.com/devcenter/mac/checklist/)
-- [개발자 ID 및 게이트키퍼](https://developer.apple.com/resources/developer-id/)
+- [개발자 ID 및 게이트키퍼](https://developer.apple.com/developer-id/)

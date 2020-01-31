@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e03d0ada982cbf1d2954f4b677accc7ce7da793e
-ms.sourcegitcommit: 6264fb540ca1f131328707e295e7259cb10f95fb
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "69541504"
 ---
 [`ListView`](xref:Xamarin.Forms.ListView)는 `IEnumerable` 형식인 [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성을 사용하여 데이터를 채웁니다. 이전 단계에서 XAML의 `ListView`를 문자열 배열로 채웠습니다. 그러나 일반적으로 `ListView`은 코드 숨김으로 정의된 `IEnumerable`를 구현하는 컬렉션의 데이터로 채워집니다.
@@ -191,7 +191,7 @@ ms.locfileid: "69541504"
 
     [`ListView`](xref:Xamarin.Forms.ListView)에는 `Monkeys` 컬렉션의 각 `Monkey`에 대한 `Name` 속성이 표시됩니다. 이는 기본적으로 `ListView`가 컬렉션에서 개체를 표시할 때 `ToString` 메서드를 호출하기 때문입니다(`Monkey` 클래스에서 재정의되어 `Name` 속성 값 반환).
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **ListViewTutorial** 프로젝트에서 다음 코드가 포함된 `Monkey`라는 클래스를 추가합니다.
 

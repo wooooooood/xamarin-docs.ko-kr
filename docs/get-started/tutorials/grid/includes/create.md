@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b1a041f1a2baae9b06de023f6eae9c6598b80061
-ms.sourcegitcommit: 5efbf5ab53532b3a74c80129ff4e0ca84b476d21
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "72678729"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -37,11 +37,11 @@ ms.locfileid: "72678729"
 
 1. Visual Studio 도구 모음에서 선택한 iOS 원격 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 그리드 내 레이블의 스크린샷](../images/create-grid.png "레이블을 포함하는 그리드")](../images/create-grid-large.png#lightbox "레이블을 포함하는 그리드s")
+    [![iOS 및 Android에서 그리드 내 레이블의 스크린샷](../images/create-grid.png "레이블을 포함하는 그리드")](../images/create-grid-large.png#lightbox "레이블을 포함하는 그리드")
 
     [`Grid`](xref:Xamarin.Forms.Grid)에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 이 자습서를 완료하려면 iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)가 있어야 합니다. 또한 Xcode(최신 릴리스)도 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
@@ -72,6 +72,6 @@ ms.locfileid: "72678729"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 그리드 내 레이블의 스크린샷](../images/create-grid.png "레이블을 포함하는 그리드")](../images/create-grid-large.png#lightbox "레이블을 포함하는 그리드s")
+    [![iOS 및 Android에서 그리드 내 레이블의 스크린샷](../images/create-grid.png "레이블을 포함하는 그리드")](../images/create-grid-large.png#lightbox "레이블을 포함하는 그리드")
 
     [`Grid`](xref:Xamarin.Forms.Grid)에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md)를 참조하세요.

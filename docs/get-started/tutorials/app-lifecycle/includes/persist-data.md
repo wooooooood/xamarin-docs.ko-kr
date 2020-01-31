@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67841385"
 ---
 [`Application`](xref:Xamarin.Forms.Application) 서브클래스에는 수명 주기 상태 변경에 따라 데이터를 저장하는 데 사용할 수 있는 정적 [`Properties`](xref:Xamarin.Forms.Application.Properties) 사전이 있습니다. 이 사전은 `string` 키를 사용하고 `object` 값을 저장합니다. 사전은 자동으로 디바이스에 저장되며, 애플리케이션을 다시 시작하면 다시 채워집니다.
@@ -113,11 +113,11 @@ ms.locfileid: "67841385"
 
     마지막으로 Visual Studio에서 애플리케이션을 다시 시작하면 이전에 [`Entry`](xref:Xamarin.Forms.Entry)에 입력한 텍스트가 복원됩니다.
 
-    [![iOS 및 Android에서 수명 주기 상태 변경에 따라 텍스트 속성이 유지되는 항목의 스크린샷](../images/persist-data.png "수명 주기 상태 변경에 따라 텍스트 속성이 유지되는 항목")](../images/persist-data-large.png#lightbox "수명 주기 상태 변경에 따라 텍스트 속성이 유지되는 항목")
+    [![iOS 및 Android에서 수명 주기 상태 변경에 텍스트 속성이 유지되는 항목의 스크린샷](../images/persist-data.png "텍스트 속성이 수명 주기 상태 변경에서 지속되는 항목")](../images/persist-data-large.png#lightbox "텍스트 속성이 수명 주기 상태 변경에서 지속되는 항목")
 
     속성 사전에 데이터를 유지하는 방법에 대한 자세한 내용은 [Xamarin.Forms 앱 클래스](~/xamarin-forms/app-fundamentals/application-class.md) 가이드의 [속성 사전](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **AppLifecycleTutorial** 프로젝트에서 **App.xaml**을 확장하고 **App.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **App.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -217,6 +217,6 @@ ms.locfileid: "67841385"
 
     마지막으로 Mac용 Visual Studio에서 애플리케이션을 다시 시작하면 이전에 [`Entry`](xref:Xamarin.Forms.Entry)에 입력한 텍스트가 복원됩니다.
 
-    [![iOS 및 Android에서 수명 주기 상태 변경에 따라 텍스트 속성이 유지되는 항목의 스크린샷](../images/persist-data.png "수명 주기 상태 변경에 따라 텍스트 속성이 유지되는 항목")](../images/persist-data-large.png#lightbox "수명 주기 상태 변경에 따라 텍스트 속성이 유지되는 항목")
+    [![iOS 및 Android에서 수명 주기 상태 변경에 텍스트 속성이 유지되는 항목의 스크린샷](../images/persist-data.png "텍스트 속성이 수명 주기 상태 변경에서 지속되는 항목")](../images/persist-data-large.png#lightbox "텍스트 속성이 수명 주기 상태 변경에서 지속되는 항목")
 
     속성 사전에 데이터를 유지하는 방법에 대한 자세한 내용은 [Xamarin.Forms 앱 클래스](~/xamarin-forms/app-fundamentals/application-class.md) 가이드의 [속성 사전](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary)을 참조하세요.

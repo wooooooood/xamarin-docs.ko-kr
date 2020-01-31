@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659860"
 ---
 이 연습에서는 `RestService` 클래스를 사용하는 사용자 인터페이스를 만듭니다. 그러면 [OpenWeatherMap](https://openweathermap.org/) 웹 API에서 데이터를 검색하게 됩니다.
@@ -123,12 +123,12 @@ ms.locfileid: "67659860"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button)을 눌러 시애틀의 현재 날씨 데이터를 검색합니다.
 
-    [![iOS 및 Android에서 시애틀의 날씨 데이터 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
+    [![iOS 및 Android에서 시애틀 날씨 데이터 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
 
     > [!IMPORTANT]
     > 개인 OpenWeatherMap API 키는 `Constants` 클래스의 `OpenWeatherMapAPIKey` 상수 값으로 설정되어야 합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **WebServiceTutorial** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -245,7 +245,7 @@ ms.locfileid: "67659860"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button)을 눌러 시애틀의 현재 날씨 데이터를 검색합니다.
 
-    [![iOS 및 Android에서 시애틀의 날씨 데이터 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
+    [![iOS 및 Android에서 시애틀 날씨 데이터의 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
 
     > [!IMPORTANT]
     > 개인 OpenWeatherMap API 키는 `Constants` 클래스의 `OpenWeatherMapAPIKey` 상수 값으로 설정되어야 합니다.

@@ -29,14 +29,14 @@ C# 및 Xamarin을 사용하여 모바일 앱을 빌드하는 데 도움이 되�
 Mac 개발을 시작할 Hello World 앱입니다.
     :::column-end:::
     :::column:::
-["MacControls" ![](images/controls.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/)
+[!["MacControls"](images/controls.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/)
 
 ### <a name="maccontrolshttpsdocsmicrosoftcomsamplesxamarinmac-samplesmaccontrols"></a>[MacControls](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols/)
 
 Mac 앱용 UI 컨트롤의 예제입니다.
     :::column-end:::
     :::column:::
-["MacImages" ![](images/images.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/)
+[!["MacImages"](images/images.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/)
 
 ### <a name="macimageshttpsdocsmicrosoftcomsamplesxamarinmac-samplesmacimages"></a>[MacImages](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages/)
 
@@ -46,7 +46,7 @@ Mac 앱용 UI 컨트롤의 예제입니다.
 
 :::row:::
     :::column:::
-["SourceWriter" ![](images/sourcewriter.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/)
+[!["SourceWriter"](images/sourcewriter.png)](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/)
 
 ### <a name="sourcewriterhttpsdocsmicrosoftcomsamplesxamarinmac-samplessourcewriter"></a>[SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter/)
 

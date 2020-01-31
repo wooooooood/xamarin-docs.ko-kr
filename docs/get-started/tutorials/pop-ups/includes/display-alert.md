@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67277360"
 ---
 Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 묻는 모달 팝업(경고라고도 함)이 있습니다. 이 연습에서는 [`Page`](xref:Xamarin.Forms.Page) 클래스에서 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 사용하여 사용자에게 경고를 표시하고 간단한 질문을 묻습니다.
@@ -54,24 +54,24 @@ Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 �
 
     [`Button`](xref:Xamarin.Forms.Button)을 누르면 해당하는 이벤트 처리기 메서드가 실행됩니다. `OnDisplayAlertButtonClicked` 메서드는 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 호출하여 단일 취소 단추를 포함하는 모달 경고를 표시합니다. 경고가 해제되면 사용자는 애플리케이션과 계속 상호 작용할 수 있습니다.
 
-    `OnDisplayAlertQuestionButtonClicked` 메서드는 [ `DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드의 오버로드를 호출하여 수락 단추와 취소 단추를 포함하는 모달 경고를 표시합니다. 사용자가 단추 중 하나를 선택하면 선택 영역이 `boolean`으로 반환됩니다.
+    `OnDisplayAlertQuestionButtonClicked` 메서드는 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드의 오버로드를 호출하여 수락 단추와 취소 단추를 포함하는 모달 경고를 표시합니다. 사용자가 단추 중 하나를 선택하면 선택 영역이 `boolean`으로 반환됩니다.
 
     > [!IMPORTANT]
     > [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드는 비동기이며 `await` 키워드와 함께 항상 대기해야 합니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. 그런 다음, 첫 번째 [`Button`](xref:Xamarin.Forms.Button)을 누릅니다.
 
-    [![iOS 및 Android에서 경고 스크린샷](../images/alert.png "경고")](../images/alert-large.png#lightbox "경고")
+    [![iOS 및 Android에서의 경고 스크린샷](../images/alert.png "경고")](../images/alert-large.png#lightbox "경고")
 
     경고를 해제한 후에 두 번째 [`Button`](xref:Xamarin.Forms.Button)을 누릅니다.
 
-    [![iOS 및 Android에서 질문을 묻는 경고 메시지의 스크린샷](../images/alert-question.png "질문을 묻는 경고")](../images/alert-question-large.png#lightbox "질문을 묻는 경고")
+    [![iOS 및 Android에서의 질문형 경고 스크린샷](../images/alert-question.png "질문형 경고")](../images/alert-question-large.png#lightbox "질문형 경고")
 
     질문에 대한 응답을 선택한 후에 응답이 Visual Studio **출력** 창에 출력되는지 살펴봅니다.
 
     경고를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 가이드에서 [경고 표시](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 이 자습서를 완료하려면 iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)가 있어야 합니다. 또한 Xcode(최신 릴리스)도 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
@@ -117,18 +117,18 @@ Xamarin.Forms에는 사용자에게 경고를 표시하고 간단한 질문을 �
 
     [`Button`](xref:Xamarin.Forms.Button)을 누르면 해당하는 이벤트 처리기 메서드가 실행됩니다. `OnDisplayAlertButtonClicked` 메서드는 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 호출하여 단일 취소 단추를 포함하는 모달 경고를 표시합니다. 경고가 해제되면 사용자는 애플리케이션과 계속 상호 작용할 수 있습니다.
 
-    `OnDisplayAlertQuestionButtonClicked` 메서드는 [ `DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드의 오버로드를 호출하여 수락 단추와 취소 단추를 포함하는 모달 경고를 표시합니다. 사용자가 단추 중 하나를 선택하면 선택 영역이 `boolean`으로 반환됩니다.
+    `OnDisplayAlertQuestionButtonClicked` 메서드는 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드의 오버로드를 호출하여 수락 단추와 취소 단추를 포함하는 모달 경고를 표시합니다. 사용자가 단추 중 하나를 선택하면 선택 영역이 `boolean`으로 반환됩니다.
 
     > [!IMPORTANT]
     > [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드는 비동기이며 `await` 키워드와 함께 항상 대기해야 합니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. 그런 다음, 첫 번째 [`Button`](xref:Xamarin.Forms.Button)을 누릅니다.
 
-    [![iOS 및 Android에서 경고 스크린샷](../images/alert.png "경고")](../images/alert-large.png#lightbox "경고")
+    [![iOS 및 Android에서의 경고 스크린샷](../images/alert.png "경고")](../images/alert-large.png#lightbox "경고")
 
     경고를 해제한 후에 두 번째 [`Button`](xref:Xamarin.Forms.Button)을 누릅니다.
 
-    [![iOS 및 Android에서 질문을 묻는 경고 메시지의 스크린샷](../images/alert-question.png "질문을 묻는 경고")](../images/alert-question-large.png#lightbox "질문을 묻는 경고")
+    [![iOS 및 Android에서의 질문형 경고 스크린샷](../images/alert-question.png "질문형 경고")](../images/alert-question-large.png#lightbox "질문형 경고")
 
     질문에 대한 응답을 선택한 후에 응답이 Mac용 Visual Studio **애플리케이션 출력** 창에 출력되는지 살펴봅니다.
 

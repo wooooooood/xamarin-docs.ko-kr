@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3130c20d39e0140695eed92ffa4941d6bafe796e
-ms.sourcegitcommit: b4c9c574b771ae0265171ca5e938aed1c5e35028
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67394547"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -42,13 +42,13 @@ ms.locfileid: "67394547"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 텍스트가 포함된 항목의 스크린샷](../images/text-changes.png "텍스트가 포함된 항목")](../images/text-changes-large.png#lightbox "텍스트가 포함된 항목")
+    [![iOS 및 Android에서 텍스트를 포함하는 항목의 스크린샷](../images/text-changes.png "텍스트를 포함하는 항목")](../images/text-changes-large.png#lightbox "텍스트를 포함하는 항목")
 
     두 개의 이벤트 처리기에서 중단점을 설정하고, [`Entry`](xref:Xamarin.Forms.Entry)에 텍스트를 입력하고, [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트가 발생하는지 살펴봅니다.
 
     [`Entry`](xref:Xamarin.Forms.Entry) 이벤트에 대한 자세한 내용은 [Xamarin.Forms 항목](~/xamarin-forms/user-interface/text/entry.md) 가이드에서 [이벤트 및 대화형 작업](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Entry`](xref:Xamarin.Forms.Entry) 선언을 수정하여 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트에 대한 처리기를 설정합니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "67394547"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
-    [![iOS 및 Android에서 텍스트가 포함된 항목의 스크린샷](../images/text-changes.png "텍스트가 포함된 항목")](../images/text-changes-large.png#lightbox "텍스트가 포함된 항목")
+    [![iOS 및 Android에서 텍스트를 포함하는 편집기의 스크린샷](../images/text-changes.png "텍스트를 포함하는 항목")](../images/text-changes-large.png#lightbox "텍스트를 포함하는 항목")
 
     두 개의 이벤트 처리기에서 중단점을 설정하고, [`Entry`](xref:Xamarin.Forms.Entry)에 텍스트를 입력하고, [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트가 발생하는지 살펴봅니다.
 

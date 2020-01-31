@@ -544,7 +544,7 @@ function factorial(num) {
 
 이 스크린샷에는 새 플래그가 설정 된 창이 표시 됩니다.
 
-[iOS 빌드 섹션에서 플래그를 설정 하는 ![](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+[![iOS 빌드 섹션에서 플래그를 설정 하는](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
 
@@ -557,7 +557,7 @@ function factorial(num) {
 
 이 스크린샷에는 새 플래그가 설정 된 창이 표시 됩니다.
 
-[iOS 빌드 섹션에서 플래그를 설정 하는 ![](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+[![iOS 빌드 섹션에서 플래그를 설정 하는](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
 
 -----
 

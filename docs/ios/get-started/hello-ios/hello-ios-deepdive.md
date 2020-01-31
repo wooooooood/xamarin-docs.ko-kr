@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 0fa6c05b3aa90f1d1875b9169350b197d882d863
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023258"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724774"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS - 심층 분석
 
@@ -439,16 +439,13 @@ iOS 시뮬레이터는 애플리케이션을 테스트하기 위한 빠른 방�
 
 ::: zone pivot="macos"
 
-- [**Sketch**](https://www.sketchapp.com") – Sketch는 사용자 인터페이스, 아이콘 등을 디자인하기 위한 Mac 앱입니다. 이는 Xamarin 앱 아이콘 및 시작 이미지 집합을 디자인하는 데 사용되었던 앱입니다. Sketch 3은 App Store에서 사용할 수 있습니다. 무료 [Sketch Tool](https://bohemiancoding.com/sketch/tool/)도 사용해 볼 수 있습니다.
 - [**Pixelmator**](https://www.pixelmator.com/) – Mac용 다양한 이미지 편집 앱입니다(약 $30).
-- [**Glyphish**](https://www.glyphish.com/) – 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
 - [**Fiverr**](https://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 ::: zone pivot="windows"
 
 - Visual Studio - IDE에서 직접 앱에 대한 간단한 아이콘 집합을 만드는 데 사용할 수 있습니다.
-- [**Glyphish**](https://www.glyphish.com/) – 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
 - [**Fiverr**](https://www.fiverr.com/) – 다양한 디자이너를 선택하여 자신에 게 맞는 아이콘 집합을 만들 수 있습니다(가격: $5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end

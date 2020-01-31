@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d1f7d209eaaca62a55b768646f51024609057a63
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "61372976"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -33,11 +33,11 @@ ms.locfileid: "61372976"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button)을 클릭하고 표시되는 텍스트가 변경되었음을 확인합니다.
 
-    [![iOS 및 Android에서 클릭이 수신된 후 변경되는 버튼 텍스트 스크린샷](../images/handle-button-click.png "단추 클릭 처리")](../images/handle-button-click-large.png#lightbox "단추 클릭 처리")
+    [![iOS 및 Android에서 클릭 1회 후 변경되는 단추 텍스트의 스크린샷](../images/handle-button-click.png "단추 클릭 처리")](../images/handle-button-click-large.png#lightbox "단추 클릭 처리")
 
     단추 클릭 처리에 대한 자세한 내용은 [Xamarin.Forms 버튼](~/xamarin-forms/user-interface/button.md) 가이드의 [단추 클릭 처리](~/xamarin-forms/user-interface/button.md#handling-button-clicks)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트에 대한 처리기를 설정합니다.
 
@@ -64,6 +64,6 @@ ms.locfileid: "61372976"
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button)을 클릭하고 표시되는 텍스트가 변경되었음을 확인합니다.
 
-    [![iOS 및 Android에서 클릭이 수신된 후 변경되는 버튼 텍스트 스크린샷](../images/handle-button-click.png "단추 클릭 처리")](../images/handle-button-click-large.png#lightbox "단추 클릭 처리")
+    [![iOS 및 Android에서 클릭 1회 후 변경되는 단추 텍스트의 스크린샷](../images/handle-button-click.png "단추 클릭 처리")](../images/handle-button-click-large.png#lightbox "단추 클릭 처리")
 
     단추 클릭 처리에 대한 자세한 내용은 [Xamarin.Forms 버튼](~/xamarin-forms/user-interface/button.md) 가이드의 [단추 클릭 처리](~/xamarin-forms/user-interface/button.md#handling-button-clicks)를 참조하세요.

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "67659858"
 ---
 이 연습에서는 이전에 만든 데이터 액세스 클래스를 사용하는 사용자 인터페이스를 만듭니다.
@@ -78,7 +78,7 @@ ms.locfileid: "67659858"
 
     Xamarin.Forms에서 로컬 데이터베이스에 대한 자세한 내용은 [Xamarin.Forms 로컬 데이터베이스(가이드)](~/xamarin-forms/data-cloud/data/databases.md)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio for Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **LocalDatabaseTutorial** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -138,7 +138,7 @@ ms.locfileid: "67659858"
     `OnAppearing` 메서드는 [`ListView`](xref:Xamarin.Forms.ListView)를 데이터베이스에 저장된 데이터로 채웁니다. [`Button`](xref:Xamarin.Forms.Button)을 누를 때 실행되는 `OnButtonClicked` 메서드에서는 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스를 모두 지우고 `ListView`에 있는 데이터를 새로 고치기 전에 입력된 데이터를 데이터베이스에 저장합니다.
 
     > [!NOTE]
-    > [`ContentPage`](xref:Xamarin.Forms.ContentPage)를 레이아웃하고 나서 표시되기 전에 `OnAppearing` 메서드 재정의가 실행됩니다. 따라서 여기에서 Xamarin.Forms 보기 콘텐츠를 설정하는 것이 좋습니다.
+    > [`ContentPage`](xref:Xamarin.Forms.ContentPage)를 레이아웃하고 나서 표시되기 전에 `OnAppearing` 메서드 재정의가 실행됩니다. 따라서 Xamarin.Forms 뷰 콘텐츠를 설정하는 것이 좋습니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 19276826e1996e68fd27107d23e0def76a1025a5
-ms.sourcegitcommit: 61a35d0643eb3bf5adb8f8831da54771d8dde626
+ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 01/23/2020
 ms.locfileid: "71059740"
 ---
 이 자습서를 시도하기 전에 다음 작업을 성공적으로 완료해야 합니다.
@@ -21,4 +21,4 @@ ms.locfileid: "71059740"
 
 Visual Studio 2019 또는 Mac용 Visual Studio를 사용하여 Xamarin.Forms에 팝업을 표시하는 방법을 보여 주는 간단한 애플리케이션을 만들겠습니다. 다음 스크린샷은 최종 애플리케이션을 보여 줍니다.
 
-[![iOS 및 Android의 작업 시트 스크린샷](../images/actionsheet-reduced.png "사용자에게 작업을 안내하는 작업 시트")](../images/actionsheet-large.png#lightbox "사용자에게 작업을 안내하는 작업 시트")
+[![iOS 및 Android에서 작업 시트의 스크린샷](../images/actionsheet-reduced.png "사용자에게 작업을 안내하는 작업 시트")](../images/actionsheet-large.png#lightbox "사용자에게 작업을 안내하는 작업 시트")
