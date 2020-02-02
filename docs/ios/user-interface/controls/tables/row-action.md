@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 542ae6696bae8fccfa6d5ed9842bce126760da37
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8efa116a82ba021c2a723dc6ab636f54b6b5af71
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021862"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940990"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Xamarin.ios에서 행 작업 사용
 
@@ -117,7 +117,7 @@ public UIContextualAction ContextualFlagAction(int row)
 
 ## <a name="uitableviewrowaction"></a>UITableViewRowAction
 
-`UITableView`에 대해 하나 이상의 사용자 지정 행 작업을 정의 하려면 `UITableViewDelegate` 클래스의 인스턴스를 만들고 `EditActionsForRow` 메서드를 재정의 해야 합니다. 예를 들면,
+`UITableView`에 대해 하나 이상의 사용자 지정 행 작업을 정의 하려면 `UITableViewDelegate` 클래스의 인스턴스를 만들고 `EditActionsForRow` 메서드를 재정의 해야 합니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ namespace BasicTable
 }
 ```
 
-정적 `UITableViewRowAction.Create` 메서드를 사용 하 여 사용자가 테이블의 행에 가로 방향 **으로 swipes 때 단추를** 표시 하는 새 `UITableViewRowAction`을 만들 수 있습니다. 나중에 `TableDelegate`의 새 인스턴스가 만들어지고 `UITableView`에 연결 됩니다. 예를 들면,
+정적 `UITableViewRowAction.Create` 메서드를 사용 하 여 사용자가 테이블의 행에 가로 방향 **으로 swipes 때 단추를** 표시 하는 새 `UITableViewRowAction`을 만들 수 있습니다. 나중에 `TableDelegate`의 새 인스턴스가 만들어지고 `UITableView`에 연결 됩니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 TableDelegate tableDelegate;

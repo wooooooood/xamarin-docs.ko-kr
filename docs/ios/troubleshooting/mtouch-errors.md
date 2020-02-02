@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: d8bb526f8e53ab2005e2e59556597c351d33f87a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a26c83565e4cfa64272549e12a35206dff6ec3c0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031198"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940965"
 ---
 # <a name="xamarinios-errors"></a>Xamarin.ios 오류
 
@@ -36,7 +36,7 @@ ms.locfileid: "73031198"
 - 오류를 재현 하는 최소 테스트 사례입니다. 하거나
 - 모든 버전 정보 롤업
 
-정확한 버전 정보를 얻는 가장 쉬운 방법은 **Mac용 Visual Studio** 메뉴, Mac용 Visual Studio 항목에 **대 한** 자세한 **정보 표시** 단추를 사용 하 고 버전 정보 롤업를 복사/붙여 넣는 것입니다 ( **정보 복사** 단추를 사용할 수 있음). .
+정확한 버전 정보를 얻는 가장 쉬운 방법은 **Mac용 Visual Studio** 메뉴, Mac용 Visual Studio 항목에 **대 한** 자세한 **정보 표시** 단추를 사용 하 고 버전 정보 롤업를 복사/붙여 넣는 것입니다 ( **정보 복사** 단추를 사용할 수 있음).
 
 <a name="MT0001" />
 
@@ -324,7 +324,7 @@ Mtouch에 대 한 작업이 지정 되지 않았습니다.
 
 ### <a name="mt0054-unable-to-canonicalize-the-path--"></a>MT0054: '\*' 경로를 정규화 할 수 없습니다. \*
 
-내부 오류입니다. 이 오류가 표시 되 면 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
+이것은 내부 오류입니다. 이 오류가 표시 되 면 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
 <a name="MT0055" />
 
@@ -583,7 +583,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 오류 메시지에 언급 된 어셈블리에 충돌 하는 빌드 대상이 있습니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.:
 
 ```
   --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
@@ -597,7 +597,7 @@ Xamarin.ios에는 응용 프로그램을 빌드하기 위해 오류 메시지에
 
 오류 메시지에 언급 된 어셈블리는 모두 단일 정적 개체로 컴파일됩니다. 이는 허용 되지 않습니다. 모든 어셈블리는 다른 정적 개체로 컴파일해야 합니다.
 
-예를 들면,
+예를 들면 다음과 같습니다.:
 
 ```
 --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
@@ -1607,7 +1607,7 @@ Parameter name: instruction
 
 ### <a name="mt2030-remove-user-resources-failed-processing-"></a>MT2030: `...`를 처리 하지 못한 사용자 리소스를 제거 합니다.
 
-사용자 리소스를 제거 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+사용자 리소스를 제거 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 사용자 리소스는 빌드 시 응용 프로그램 번들을 만들기 위해 추출 해야 하는 어셈블리 (리소스) 내에 포함 된 파일입니다. 여기에는 다음이 포함됩니다.
 
@@ -1618,37 +1618,37 @@ Parameter name: instruction
 
 ### <a name="mt2040-default-httpmessagehandler-setter-failed-processing-"></a>MT2040: 기본 HttpMessageHandler setter가 `...`를 처리 하지 못했습니다.
 
-응용 프로그램에 대 한 기본 `HttpMessageHandler`를 설정 하는 동안 예기치 않은 오류가 발생 했습니다. 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 에 새로운 문제를 기록 하세요.
+응용 프로그램에 대 한 기본 `HttpMessageHandler`를 설정 하는 동안 예기치 않은 오류가 발생 했습니다. 자세한 정보 표시를 사용하 는 전체 빌드 로그 (즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
 <a name="MT2050" />
 
 ### <a name="mt2050-code-remover-failed-processing-"></a>MT2050: 코드 Remover `...`처리 하지 못했습니다.
 
-응용 프로그램을 사용 하 여 BCL 전달에서 코드를 제거 하려고 할 때 예기치 않은 오류가 발생 했습니다. 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 에 새로운 문제를 기록 하세요.
+응용 프로그램을 사용 하 여 BCL 전달에서 코드를 제거 하려고 할 때 예기치 않은 오류가 발생 했습니다. 자세한 정보 표시를 사용하 는 전체 빌드 로그 (즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
 <a name="MT2060" />
 
 ### <a name="mt2060-sealer-failed-processing-"></a>MT2060: Sealer에서 `...`를 처리 하지 못했습니다.
 
-형식이 나 메서드를 봉인 하거나 (최종) 일부 메서드를 가상화 할 때 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+형식이 나 메서드를 봉인 하거나 (최종) 일부 메서드를 가상화 할 때 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2070" />
 
 ### <a name="mt2070-metadata-reducer-failed-processing-"></a>MT2070: Metadata 리 듀 서 `...`처리 하지 못했습니다.
 
-응용 프로그램에서 메타 데이터를 줄이려고 할 때 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+응용 프로그램에서 메타 데이터를 줄이려고 할 때 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2080" />
 
 ### <a name="mt2080-marknsobjects-failed-processing-"></a>MT2080: MarkNSObjects `...`처리 하지 못했습니다.
 
-응용 프로그램에서 `NSObject` 서브 클래스를 표시 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+응용 프로그램에서 `NSObject` 서브 클래스를 표시 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2090" />
 
 ### <a name="mt2090-inliner-failed-processing-"></a>MT2090: 인라인 처리자에서 `...`를 처리 하지 못했습니다.
 
-응용 프로그램에서 코드를 인라인 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 에서 새 문제에 어셈블리를 제공 해야 합니다.
+응용 프로그램에서 코드를 인라인 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <!-- MT21xx: more linker errors -->
 
@@ -1658,7 +1658,7 @@ Parameter name: instruction
 
 ### <a name="mt2100-smart-enum-conversion-preserver-failed-processing-"></a>MT2100: Smart Enum Conversion Preserver `...`처리 하지 못했습니다.
 
-응용 프로그램에서 스마트 열거형의 변환 메서드를 표시 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 에서 새 문제에 어셈블리를 제공 해야 합니다.
+응용 프로그램에서 스마트 열거형의 변환 메서드를 표시 하는 동안 예기치 않은 오류가 발생 했습니다. 오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2101" />
 
@@ -1666,7 +1666,7 @@ Parameter name: instruction
 
 오류 메시지에 언급 된 메서드를 처리 하는 동안 잘못 된 어셈블리 참조가 발생 했습니다.
 
-오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2102" />
 
@@ -1674,7 +1674,7 @@ Parameter name: instruction
 
 오류 메시지에 언급 된 메서드를 표시 하는 동안 예기치 않은 오류가 발생 했습니다.
 
-오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2103" />
 
@@ -1682,7 +1682,7 @@ Parameter name: instruction
 
 어셈블리를 처리 하는 동안 예기치 않은 오류가 발생 했습니다.
 
-오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 (즉, **추가 mtouch 인수**에 `-v -v -v -v`)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new) 의 새 문제에 어셈블리를 제공 해야 합니다.
+오류 메시지에서 문제의 원인이 되는 어셈블리의 이름을 지정 합니다. 이 문제를 해결 하려면 자세한 정보 표시를 사용 하는 전체 빌드 로그 ( 즉, `-v -v -v -v`에서 **추가 mtouch 인수**)와 함께 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제에 어셈블리를 제공 해야 합니다.
 
 <a name="MT2104" />
 
@@ -1855,7 +1855,7 @@ Xamarin.ios가 문제의 유형을 지원 해야 하는 경우 [github](https://
 
 <a name="MT4112" />
 
-### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: 등록 기관에서 잘못 된 형식 `*`을 (를) 찾았습니다. 목적-C를 사용 하 여 제네릭 형식을 등록 하는 것은 지원 되지 않으며, 임의 동작 및/또는 충돌이 발생할 수 있습니다 (이전 버전과의 호환성을 위해 이전 버전과의 호환성을 위해 `--unsupported--enable-generics-in-registrar`를에서 추가 mtouch 인수로 전달 하 여이 오류를 무시할 수 있습니다. 프로젝트의 iOS 빌드 옵션 페이지입니다. 자세한 내용은 [developer.xamarin.com/guides/ios/advanced_topics/registrar](~/ios/internals/registrar.md) 를 참조 하세요.
+### <a name="mt4112-the-registrar-found-an-invalid-type--registering-generic-types-with-objective-c-is-not-supported-and-may-lead-to-random-behavior-andor-crashes-for-backwards-compatibility-with-older-versions-of-xamarinios-it-is-possible-to-ignore-this-error-by-passing---unsupported--enable-generics-in-registrar-as-an-additional-mtouch-argument-in-the-projects-ios-build-options-page-see-developerxamarincomguidesiosadvanced_topicsregistrariosinternalsregistrarmd-for-more-information"></a>MT4112: 등록 기관에서 잘못 된 형식 `*`을 (를) 찾았습니다. 목적-C를 사용 하 여 제네릭 형식을 등록 하는 것은 지원 되지 않으며, 임의 동작 및/또는 충돌이 발생할 수 있습니다 (이전 버전의 Xamarin.ios와 이전 버전과의 호환성을 위해 프로젝트의 iOS 빌드 옵션 페이지에서 `--unsupported--enable-generics-in-registrar`를 추가 mtouch 인수로 전달 하 여이 오류를 무시할 수 있습니다. 자세한 내용은 [developer.xamarin.com/guides/ios/advanced_topics/registrar](~/ios/internals/registrar.md) 를 참조 하세요.
 
 <a name="MT4113" />
 
@@ -2019,7 +2019,7 @@ class MyCustomNSObject : MyNSObject
 
 <a name="MT4144" />
 
-### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144: ' * ' 메서드는 연결 된 tram를 포함 하지 않으므로 등록할 수 없습니다. http://bugzilla.xamarin.com 에서 버그 보고서를 파일에 입력 하십시오.
+### <a name="mt4144-cannot-register-the-method--since-it-does-not-have-an-associated-trampoline-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT4144: ' * ' 메서드는 연결 된 tram를 포함 하지 않으므로 등록할 수 없습니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -2239,7 +2239,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 이는 네이티브 링커가 어딘가에 참조 되는 기호를 찾을 수 없는 경우에 발생 합니다. 이는 다음과 같은 몇 가지 이유로 발생할 수 있습니다.
 
-- 타사 바인딩에는 프레임 워크가 필요 하지만 바인딩이 `[LinkWith]` 특성에이를 지정 하지 않습니다. 해결책이
+- 타사 바인딩에는 프레임 워크가 필요 하지만 바인딩이 `[LinkWith]` 특성에이를 지정 하지 않습니다. 솔루션:
   - 타사 바인딩의 작성자 이거나 소스에 대 한 액세스 권한이 있는 경우 필요한 프레임 워크를 포함 하도록 바인딩의 `[LinkWith]` 특성을 수정 합니다.
 
     ```csharp
@@ -2251,7 +2251,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 - 관리 되는 바인딩은 네이티브 라이브러리에 없는 네이티브 기호를 참조 합니다.
     이는 일반적으로 바인딩이 일정 시간 동안 존재 하 고 해당 시간 동안 네이티브 코드가 수정 되어 특정 네이티브 클래스가 제거 되거나 이름이 변경 된 경우에 발생 합니다.
 - P/Invoke가 존재 하지 않는 네이티브 기호를 참조 합니다. Xamarin.ios 7.4부터이 경우 <a href="#MT5214">MT5214</a> 오류가 보고 됩니다. 자세한 내용은 MT5214를 참조 하세요.
-- 타사 바인딩/라이브러리가를 사용 하 여 C++빌드 되었지만 바인딩이`[LinkWith]`특성에이를 지정 하지 않습니다. 이는 기호에 올바른 C++ 기호가 있기 때문에 일반적으로 쉽게 인식할 수 있습니다 (한 가지 일반적인 예는`__ZNKSt9exception4whatEv`).
+- 타사 바인딩/라이브러리가를 사용 하 여 C++빌드 되었지만 바인딩이 `[LinkWith]` 특성에이를 지정 하지 않습니다. 이는 기호에 올바른 C++ 기호가 있기 때문에 일반적으로 쉽게 인식할 수 있습니다 (한 가지 일반적인 예는 `__ZNKSt9exception4whatEv`).
   - 타사 바인딩의 작성자 이거나 소스에 대 한 액세스 권한이 있는 경우 바인딩의 `[LinkWith]` 특성을 수정 하 여 `IsCxx` 플래그를 설정 합니다.
 
     ```csharp
@@ -2266,7 +2266,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 이는 네이티브 링커가 어딘가에 참조 된 목표 C 클래스를 찾을 수 없는 경우에 발생 합니다. 이는 다음과 같은 몇 가지 이유로 발생할 수 있습니다. [MT5210](#MT5210) 와 동일 합니다.
 
-- 타사 바인딩은 목표-C 프로토콜을 바인딩되고 해당 api 정의의 `[Protocol]` 특성에는 주석을 추가 하지 않았습니다. 해결책이
+- 타사 바인딩은 목표-C 프로토콜을 바인딩되고 해당 api 정의의 `[Protocol]` 특성에는 주석을 추가 하지 않았습니다. 솔루션:
   - 누락 된 `[Protocol]` 특성을 추가 합니다.
 
     ```csharp
@@ -2286,7 +2286,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 - 동일한 네이티브 라이브러리가 두 번 포함 됩니다.
 - 동일한 기호를 정의 하는 두 개의 고유 네이티브 라이브러리가 발생 합니다.
 - 네이티브 라이브러리가 제대로 빌드되지 않고 동일한 기호를 두 번 이상 포함 합니다.
-  터미널에서 다음 명령 집합을 사용 하 여 확인할 수 있습니다 (x86_64/armv7/armv7s 용 thumb-2/arm64를 빌드하는 아키텍처에 따라 바꾸기).
+  터미널에서 다음 명령 집합을 사용 하 여이를 확인할 수 있습니다 (/armv7/armv7s/arm64을 빌드하는 아키텍처에 따라 x86_64는 i386 바꾸기).
 
   ```
   # Native libraries are usually fat libraries, containing binary code for
@@ -2350,7 +2350,7 @@ BindAs 특성의 형식이 연결 된 멤버의 형식과 일치 하는지 확�
 
 ### <a name="mt5214-native-linking-failed-undefined-symbol--this-symbol-was-referenced-the-managed-member--please-verify-that-all-the-necessary-frameworks-have-been-referenced-and-native-libraries-linked"></a>MT5214: 네이티브 링크 실패, 정의 되지 않은 기호: *. 이 기호는 관리 되는 멤버 *를 참조 했습니다. 필요한 모든 프레임 워크가 참조 되었으며 네이티브 라이브러리가 연결 되어 있는지 확인 하세요.
 
-이 오류는 관리 코드에 존재 하지 않는 네이티브 메서드에 대 한 P/Invoke가 포함 되어 있을 때 보고 됩니다. 예를 들면,
+이 오류는 관리 코드에 존재 하지 않는 네이티브 메서드에 대 한 P/Invoke가 포함 되어 있을 때 보고 됩니다. 예를 들면 다음과 같습니다.:
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -2776,12 +2776,12 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 여기서 *는 다음과 같습니다.
 
 - string
-- array
+- 배열입니다.
 - dict
-- bool
-- 실제로
+- 부울
+- real
 - 정수
-- 날
+- date
 - 데이터
 
 <a name="MT7046" />
@@ -2953,13 +2953,13 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 
 <a name="MT8008" />
 
-### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: 로드 된 버전의 Xamarin.ios는 \* bits에 대해 컴파일 되었지만 프로세스는 \* 비트입니다. http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8008-the-loaded-version-of-xamariniosdll-was-compiled-for--bits-while-the-process-is--bits-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8008: 로드 된 버전의 Xamarin.ios는 \* bits에 대해 컴파일 되었지만 프로세스는 \* 비트입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이는 빌드 프로세스에서 문제가 발생 했음을 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
 <a name="MT8009" />
 
-### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: 메서드에 대 한 변환 메서드를 위임할 블록을 찾을 수 없습니다 *.* ' s 매개 변수 # *. http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8009-unable-to-locate-the-block-to-delegate-conversion-method-for-the-method-s-parameter--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8009: 메서드에 대 한 변환 메서드를 위임할 블록을 찾을 수 없습니다 *.* ' s 매개 변수 # *. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이는 API가 올바르게 바인딩되지 않았음을 나타냅니다. Xamarin에서 노출 하는 API 인 경우 [github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요. 타사 바인딩 인 경우 공급 업체에 문의 하세요.
 
@@ -2971,7 +2971,7 @@ Xamarin.ios 프로젝트는 네이티브 기호를 동적으로 참조 하는 �
 
 <a name="MT8011" />
 
-### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: 메서드의 반환 값에 대 한 변환 특성 ([DelegateProxy])을 차단 하는 대리자를 찾을 수 없습니다 *.* . http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8011-unable-to-locate-the-delegate-to-block-conversion-attribute-delegateproxy-for-the-return-value-for-the-method--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8011: 메서드의 반환 값에 대 한 변환 특성 ([DelegateProxy])을 차단 하는 대리자를 찾을 수 없습니다 *.* . 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (대리자를 블록으로 변환).
 
@@ -2979,7 +2979,7 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8012" />
 
-### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: 메서드의 반환 값에 대 한 DelegateProxyAttribute가 잘못 되었습니다 *.* : DelegateType가 null입니다. http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8012-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8012: 메서드의 반환 값에 대 한 DelegateProxyAttribute가 잘못 되었습니다 *.* : DelegateType가 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 잘못 되었습니다.
 
@@ -2987,7 +2987,7 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8013" />
 
-### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드의 반환 값에 대 한 DelegateProxyAttribute가 잘못 되었습니다.: DelegateType ({2})은 ' Handler ' 필드가 없는 형식을 지정 합니다 *.* http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8013-invalid-delegateproxyattribute-for-the-return-value-for-the-method--delegatetype-2-specifies-a-type-without-a-handler-field-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8013: 메서드의 반환 값에 대 한 DelegateProxyAttribute가 잘못 되었습니다.: DelegateType ({2})은 ' Handler ' 필드가 없는 형식을 지정 합니다 *.* 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 `[DelegateProxy]` 특성이 잘못 되었습니다.
 
@@ -2995,7 +2995,7 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드의 반환 값에 대 한 DelegateProxyAttribute이 잘못 되었습니다 *.* : DelegateType의 ({2}) ' Handler ' 필드는 null입니다. http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: 메서드의 반환 값에 대 한 DelegateProxyAttribute이 잘못 되었습니다 *.* : DelegateType의 ({2}) ' Handler ' 필드는 null입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 `[DelegateProxy]` 특성이 잘못 되었습니다.
 
@@ -3003,7 +3003,7 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8015" />
 
-### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드의 반환 값에 대해 잘못 된 DelegateProxyAttribute *입니다.* : DelegateType의 ({2}) ' Handler ' 필드는 대리자가 아닙니다. *입니다. http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8015-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-not-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8015: 메서드의 반환 값에 대해 잘못 된 DelegateProxyAttribute *입니다.* : DelegateType의 ({2}) ' Handler ' 필드는 대리자가 아닙니다. *입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 DelegateProxy 특성이 잘못 되었습니다.
 
@@ -3011,7 +3011,7 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8016" />
 
-### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: 대리자를 메서드의 반환 값에 대 한 블록으로 변환할 수 없습니다 *.* 입력이 대리자가 아니기 때문에 *입니다. http://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8016-unable-to-convert-delegate-to-block-for-the-return-value-for-the-method--because-the-input-isnt-a-delegate-its-a--please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8016: 대리자를 메서드의 반환 값에 대 한 블록으로 변환할 수 없습니다 *.* 입력이 대리자가 아니기 때문에 *입니다. 버그를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 해당 메서드에 대 한 `[DelegateProxy]` 특성이 잘못 되었습니다.
 
@@ -3021,7 +3021,7 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8018" />
 
-### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: 내부 일관성 오류가 발생 했습니다. http://bugzilla.xamarin.com 에서 버그 보고서를 파일에 입력 하십시오.
+### <a name="mt8018-internal-consistency-error-please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8018: 내부 일관성 오류가 발생 했습니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
@@ -3045,18 +3045,18 @@ Xamarin.ios에서 런타임에 필요한 메서드를 찾을 수 없습니다 (�
 
 <a name="MT8022" />
 
-### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: 토큰 참조 \* \*이어야 하는데 \*입니다. http://bugzilla.xamarin.com 에서 버그 보고서를 파일에 입력 하십시오.
+### <a name="mt8022-expected-the-token-reference--to-be-a--but-its-a--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8022: 토큰 참조 \* \*이어야 하는데 \*입니다. 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
 <a name="MT8023" />
 
-### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: open 제네릭 메서드에 대해 폐쇄형 제네릭 메서드를 생성 하려면 인스턴스 개체가 필요 합니다. \* (토큰 참조: \*). http://bugzilla.xamarin.com 에서 버그 보고서를 파일에 입력 하십시오.
+### <a name="mt8023-an-instance-object-is-required-to-construct-a-closed-generic-method-for-the-open-generic-method--token-reference--please-file-a-bug-report-at-httpbugzillaxamarincom"></a>MT8023: open 제네릭 메서드에 대해 폐쇄형 제네릭 메서드를 생성 하려면 인스턴스 개체가 필요 합니다. \* (토큰 참조: \*). 버그 보고서를 제출 하세요 http://bugzilla.xamarin.com 합니다.
 
 이는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.
 
 <a name="MT8024" />
 
-### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: 스마트 열거형 ' {smart_type} '에 대 한 올바른 확장 유형을 찾을 수 없습니다. https://bugzilla.xamarin.com 에서 버그를 파일에 입력 하십시오.
+### <a name="mt8024-could-not-find-a-valid-extension-type-for-the-smart-enum-smart_type-please-file-a-bug-at-httpsbugzillaxamarincom"></a>MT8024: 스마트 열거형 ' {smart_type} '에 대 한 올바른 확장 유형을 찾을 수 없습니다. 버그를 제출 하세요 https://bugzilla.xamarin.com 합니다.
 
 이는 Xamarin.ios의 버그를 나타냅니다. [Github](https://github.com/xamarin/xamarin-macios/issues/new)에서 새 문제를 해결 하세요.

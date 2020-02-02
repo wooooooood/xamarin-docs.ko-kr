@@ -6,12 +6,12 @@ ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: dee7f4fa0b3d8fbd0b3ed57e885c9f5083d9875e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725298"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940720"
 ---
 # <a name="unified-api-overview"></a>Unified API 개요
 
@@ -246,7 +246,7 @@ public delegate void NSNotificationHandler (NSNotification notification);
 
 일부 경우에는 일부 상수를 `string`에서 `NSString`으로 변경 해야 했습니다 (예: `UITableViewCell`
 
-**经典**
+**기존**
 
 ```csharp
 public virtual string ReuseIdentifier { get; }
@@ -268,7 +268,7 @@ public virtual NSString ReuseIdentifier { get; }
 
 이러한 제한 사항은 통합 Api에서 제거 되 고 정리 되었습니다. 대부분의 변경 내용은 다음과 같습니다.
 
-**经典**
+**기존**
 
 ```csharp
 public virtual AVAssetResourceLoaderDelegate Delegate { get; }
@@ -284,7 +284,7 @@ public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
 또한 일부 API는 보다 정확 하 고 사용 하기 쉽습니다. 예를 들면 다음과 같습니다.
 
-**经典**
+**기존**
 
 ```csharp
 public virtual void SelectionDidChange (NSObject uiTextInput);

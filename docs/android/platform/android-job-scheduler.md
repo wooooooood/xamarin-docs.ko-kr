@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2018
-ms.openlocfilehash: 4b1e0b32050b22a63bb89b28107877ef3e196b16
-ms.sourcegitcommit: 6de849e2feca928ce5d91a3897e7d4049301081c
+ms.openlocfilehash: 10d2ae6ac35f02d75ef6e04a0531ec3f5dafd668
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75667041"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940815"
 ---
 # <a name="android-job-scheduler"></a>Android 작업 스케줄러
 
@@ -76,7 +76,7 @@ Android 작업 스케줄러 라이브러리에서 수행 하는 모든 작업은
 3. `ServiceAttribute`의 `Permission` 속성을 `android.permission.BIND_JOB_SERVICE`문자열로 설정 합니다.
 4. 작업을 수행 하는 코드를 추가 하 여 `OnStartJob` 메서드를 재정의 합니다. Android는 응용 프로그램의 주 스레드에서이 메서드를 호출 하 여 작업을 실행 합니다. 응용 프로그램이 차단 되는 것을 방지 하기 위해 스레드에서 몇 밀리초를 수행 해야 하는 작업은 더 오래 걸릴 수 있습니다.
 5. 작업이 완료 되 면 `JobService`은 `JobFinished` 메서드를 호출 해야 합니다. 이 메서드는 `JobService` 작업의 수행을 `JobScheduler`에 알리는 방법입니다. `JobFinished`를 호출 하지 않으면 장치에서 불필요 한 요구 사항이 발생 하 여 배터리 수명을 단축할 `JobService`. 
-6. `OnStopJob` 메서드를 재정의 하는 것도 좋습니다. 이 메서드는 작업이 완료 되기 전에 작업이 종료 될 때 Android에서 호출 되며, `JobService` 제공 하 여 리소스를 적절 하 게 삭제할 수 있는 기회를 제공 합니다. 작업을 다시 예약 해야 하는 경우이 메서드는 `true`을 반환 하 고, 작업을 다시 실행 하기 위해 desireable 않는 경우에는 `false` 합니다.
+6. `OnStopJob` 메서드를 재정의 하는 것도 좋습니다. 이 메서드는 작업이 완료 되기 전에 작업이 종료 될 때 Android에서 호출 되며, `JobService` 제공 하 여 리소스를 적절 하 게 삭제할 수 있는 기회를 제공 합니다. 작업을 다시 예약 해야 하는 경우이 메서드는 `true`을 반환 하거나 작업을 다시 실행 하는 것이 바람직하지 않은 경우 `false` 합니다.
 
 다음 코드는 TPL을 사용 하 여 작업을 비동기적으로 수행 하는 응용 프로그램에 대 한 가장 간단한 `JobService`의 예입니다.
 

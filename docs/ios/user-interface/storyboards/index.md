@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b0cd3e7c851aed6f178069497665b88c1338b36b
-ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
+ms.openlocfilehash: 13f5c594543934e14295615517e3de01a98a69a5
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794709"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940995"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -78,7 +78,7 @@ Segue에 대 한 작업을 선택할 수 있는 메뉴가 표시 됩니다. 아�
 
  ios 8에는 iOS storyboard 파일이 사용 가능한 모든 화면 크기에서 작동할 수 있도록 하는 [크기 클래스가](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 도입 되어 개발자가 모든 ios 장치에 대해 하나의 UI를 만들 수 있습니다. 기본적으로 모든 새 Xamarin.ios 응용 프로그램은 size 클래스를 사용 합니다. 이전 프로젝트의 크기 클래스를 사용 하려면 [통합 된 스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 가이드를 참조 하세요.
 
-Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응 segue*](~/ios/user-interface/storyboards/unified-storyboards.md)사용 합니다. Size 클래스를 사용 하는 경우 iPhone 또는 iPad를 사용 하 고 있다는 것을 직접 지정 하는 것은 아닙니다. 즉, 작업 해야 하는 부동산의 양에 관계 없이 항상 동일한 것으로 보이는 하나의 UI를 만듭니다. 적응 Segue는 환경을 심사 하 고 콘텐츠를 표시 하는 데 가장 적합 한 방법을 결정 합니다. 적응 Segue 다음과 같이 표시 됩니다.
+Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응 segue*](~/ios/user-interface/storyboards/unified-storyboards.md)사용 합니다. Size 클래스를 사용 하는 경우 iPhone 또는 iPad를 사용 하는 날씨를 직접 지정 하지 않는다는 점에 주의 하세요. 즉, 작업 해야 하는 부동산의 양에 관계 없이 항상 동일한 것으로 보이는 하나의 UI를 만듭니다. 적응 Segue는 환경을 심사 하 고 콘텐츠를 표시 하는 데 가장 적합 한 방법을 결정 합니다. 적응 Segue 다음과 같이 표시 됩니다.
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 

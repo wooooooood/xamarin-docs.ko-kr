@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2019
-ms.openlocfilehash: 11de0ecf20c6748d4958d1f1f1bea80e6a87024e
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 99bf55b6e956efe54510e822d379665879f3ba44
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490014"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940298"
 ---
 # <a name="the-xamarinforms-visual-state-manager"></a>Xamarin.Forms Visual State Manager
 
@@ -511,7 +511,7 @@ VisualStateManager.GoToState(this, "Focused");
 
 [![VSM 유효성 검사: 유효한 상태](vsm-images/VsmValidationValid.png "VSM 유효성 검사-유효")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
-코드 숨김 파일은 처리 작업을 담당 합니다 `TextChanged` 에서 이벤트를 `Entry`입니다. 입력된 문자열은 올바른 경우 확인 하려면 정규식을 사용 하는 처리기. 라는 코드 숨김 파일의 메서드에 `GoToState` 정적 호출 `VisualStateManager.GoToState` 둘 다에 대 한 메서드 `helpLabel` 및 `submitButton`:
+코드 숨김이 `Entry`에서 `TextChanged` 이벤트를 처리 하는 것을 담당 합니다. 입력된 문자열은 올바른 경우 확인 하려면 정규식을 사용 하는 처리기. 라는 코드 숨김 파일의 메서드에 `GoToState` 정적 호출 `VisualStateManager.GoToState` 둘 다에 대 한 메서드 `helpLabel` 및 `submitButton`:
 
 ```csharp
 public partial class VsmValidationPage : ContentPage
@@ -681,7 +681,7 @@ VSM 태그 XAML 파일에 네 곳에서 발생합니다. 합니다 `StackLayout`
 
 내부 `ScrollView` 라는 `menuScroll` 하며 `StackLayout` 라는 `menuStack` 메뉴 단추를 구현 합니다. 이러한 레이아웃의 방향을 반대쪽의 `mainStack`합니다. 메뉴를 세로 모드로 가로 및 세로 가로 모드로 있어야 합니다.
 
-VSM 태그의 네 번째 섹션을 자체 단추에 대 한 암시적 스타일의 경우 이 태그 집합 `VerticalOptions`, `HorizontalOptions`, 및 `Margin` portait 및 가로 방향에 관련 된 속성입니다.
+VSM 태그의 네 번째 섹션을 자체 단추에 대 한 암시적 스타일의 경우 이 태그는 가로 및 세로 방향과 관련 된 `VerticalOptions`, `HorizontalOptions`및 `Margin` 속성을 설정 합니다.
 
 코드 숨김 파일 집합을 `BindingContext` 의 속성 `menuStack` 구현 하 `Button` 도 처리기를 연결 및 명령에 `SizeChanged` 페이지의 이벤트:
 

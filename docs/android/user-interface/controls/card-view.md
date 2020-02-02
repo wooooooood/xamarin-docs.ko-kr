@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 053847426d770408826297d9a80b6e38d7f6bc44
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 37afc9ef7773bbfefe442216055c0501af2ab966
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029276"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940879"
 ---
 # <a name="xamarinandroid-cardview"></a>Xamarin Android CardView
 
@@ -36,7 +36,7 @@ Android 5.0 (롤리팝)에 도입 된 `Cardview` 위젯은 카드와 유사한 �
 
 - Android SDK Manager를 통해 **Android SDK** &ndash; Android 5.0 (API 21) 이상을 설치 해야 합니다.
 
-- 구체적으로 API 레벨 23이 하를 대상으로 하는 경우 **JAVA jdk 1.8** &ndash; jdk 1.7를 사용할 수 있습니다. JDK 1.8은 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)에서 사용할 수 있습니다.
+- 구체적으로 API 레벨 23 및 이전 버전을 대상으로 하는 경우 **JAVA jdk 1.8** &ndash; jdk 1.7를 사용할 수 있습니다. JDK 1.8은 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)에서 사용할 수 있습니다.
 
 앱에 `Xamarin.Android.Support.v7.CardView` 패키지도 포함 되어 있어야 합니다. Mac용 Visual Studio에서 `Xamarin.Android.Support.v7.CardView` 패키지를 추가 하려면 다음을 수행 합니다.
 
@@ -90,7 +90,7 @@ NuGet 패키지를 설치 하는 방법에 대 한 자세한 내용은 [연습: 
 
 이 레이아웃 예제에서는 다음 스크린샷에 표시 된 것 처럼 한 줄의 텍스트를 사용 하 여 기본 `CardView`를 만듭니다.
 
-[흰색 배경 및 텍스트 줄이 있는 CardView의![스크린샷](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
+[흰색 배경 및 텍스트 줄이 있는 CardView의 ![스크린샷](card-view-images/02-basic-cardview-sml.png)](card-view-images/02-basic-cardview.png#lightbox)
 
 이 예제에서는 응용 프로그램 스타일이 밝은 재질 테마 (`Theme.Material.Light`)로 설정 되어 `CardView` 그림자와 가장자리를 더 쉽게 볼 수 있습니다. Android 5.0 앱에 테마를 표시 하는 방법에 대 한 자세한 내용은 [재질 테마](~/android/user-interface/material-theme.md)를 참조 하세요. 다음 섹션에서는 응용 프로그램에 대 한 `CardView`를 사용자 지정 하는 방법을 알아봅니다.
 
@@ -153,7 +153,7 @@ Android v7 지원 라이브러리에서 `CardView`를 제공 하기 때문에 `a
 
 이 레이아웃 예제를 사용 하 여 사진 보기 앱에서 이미지를 표시 하는 경우 `CardView`는 다음 스크린샷에 표시 된 것 처럼 사진 스냅숏의 모양을 갖습니다.
 
-[이미지 및 이미지가 아래에 있는 이미지 및 캡션을 사용 하 여 CardView![](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
+[이미지 및 이미지가 아래에 있는 이미지 및 캡션을 사용 하 여 CardView ![](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 이 스크린샷은 `RecyclerView` 위젯을 사용 하 여 사진 보기에 대 한 `CardView` 이미지의 스크롤 목록을 제공 하는 [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) 샘플 앱에서 가져옵니다. `RecyclerView`에 대 한 자세한 내용은 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) 가이드를 참조 하세요.
 
@@ -163,16 +163,16 @@ Android v7 지원 라이브러리에서 `CardView`를 제공 하기 때문에 `a
 
 안쪽 여백, 높이, 모퉁이 반경 및 배경색에 영향을 주는 특성을 하나 이상 설정 하 여 `CardView` 레이아웃을 사용자 지정할 수 있습니다.
 
-[CardView 특성의![다이어그램](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
+[CardView 특성의 ![다이어그램](card-view-images/04-attributes-sml.png)](card-view-images/04-attributes.png#lightbox)
 
 해당 하는 `CardView` 메서드를 호출 하 여 각 특성을 동적으로 변경할 수도 있습니다. `CardView` 메서드에 대 한 자세한 내용은 [CardView 클래스 참조](https://developer.android.com/reference/android/support/v7/widget/CardView.html)를 참조 하세요.
 이러한 특성 (배경색 제외)은 치수 값을 허용 하며,이 값은 10 진수이 고 그 뒤에 단위가 옵니다. 예를 들어 `11.5dp`는 11.5 밀도 독립적 픽셀을 지정 합니다.
 
-#### <a name="padding"></a>채우기
+#### <a name="padding"></a>안쪽 여백
 
 `CardView`은 카드 내에서 콘텐츠를 배치할 수 있는 5 가지 패딩 특성을 제공 합니다. 레이아웃 XML에서 설정 하거나 코드에서 유사한 메서드를 호출할 수 있습니다.
 
-[CardView 패딩 특성의![다이어그램](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
+[CardView 패딩 특성의 ![다이어그램](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 
 패딩 특성에 대 한 설명은 다음과 같습니다.
 
@@ -193,7 +193,7 @@ Android v7 지원 라이브러리에서 `CardView`를 제공 하기 때문에 `a
 
 `CardView`는 권한 상승을 제어 하는 두 가지 권한 상승 특성을 제공 하 고 그에 따라 해당 그림자의 크기를 제공 합니다.
 
-[CardView 권한 상승 특성의![다이어그램](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
+[CardView 권한 상승 특성의 ![다이어그램](card-view-images/06-elevation-sml.png)](card-view-images/06-elevation.png#lightbox)
 
 권한 상승 특성에 대 한 설명은 다음과 같습니다.
 
@@ -208,7 +208,7 @@ Android v7 지원 라이브러리에서 `CardView`를 제공 하기 때문에 `a
 
 `CardView`는 모퉁이 반지름과 배경색을 제어 하는 데 사용할 수 있는 특성을 제공 합니다. 이러한 두 가지 속성을 사용 하 여 `CardView`의 전체 스타일을 변경할 수 있습니다.
 
-[CardView 모퉁이 radious 및 배경색 특성의![다이어그램](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
+[CardView 모퉁이 radious 및 배경색 특성의 ![다이어그램](card-view-images/07-radius-bgcolor-sml.png)](card-view-images/07-radius-bgcolor.png#lightbox)
 
 이러한 특성에 대 한 설명은 다음과 같습니다.
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/27/2018
-ms.openlocfilehash: 1dc53b863e0408e27351aabfa625a08baae3d5a1
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: b1125ab554bd9c73917c106c7486b742f16e628a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725451"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940357"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Xamarin.ios 오류 메시지 (mmp)
 
@@ -119,7 +119,7 @@ ms.locfileid: "76725451"
 
 <a name="MM0071" />
 
-#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: 알 수 없는 플랫폼: *. 这通常表示 Xamarin.Mac; 中的 bug在一个 bug 报告，请记录 https://bugzilla.xamarin.com 与测试用例。
+#### <a name="mm0071-unknown-platform--this-usually-indicates-a-bug-in-xamarinmac-please-file-a-bug-report-at-httpsbugzillaxamarincom-with-a-test-case"></a>MM0071: 알 수 없는 플랫폼: *. 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 테스트 사례를 사용 하 여 https://bugzilla.xamarin.com 에서 버그 보고서를 파일에 입력 하세요.
 
 이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 테스트 사례를 사용 하 여 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) 에서 버그 보고서를 파일에 입력 하세요.
 
@@ -172,7 +172,7 @@ Xamarin.ios를 사용 하려면 오류 메시지에 지정 된 SDK 버전의 헤
 
 <a name="MM0099" />
 
-#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpsbugzillaxamarincom"></a>MM0099: 내부 오류 {0}입니다. 请提交 bug 报告与测试用例 ( https://bugzilla.xamarin.com) 。
+#### <a name="mm0099-internal-error-0-please-file-a-bug-report-with-a-test-case-httpsbugzillaxamarincom"></a>MM0099: 내부 오류 {0}입니다. 테스트 사례 (https://bugzilla.xamarin.com) 를 사용 하 여 버그 보고서를 파일에 입력 하세요.
 
 <a name="MM0114" />
 
@@ -270,7 +270,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 <a name="MM1406" />
 
-#### <a name="mm1406-target-framework-0-is-invalid-when-targetting-xamarinmac-45-net-framwork"></a>MM1406: Xamarin.ios 4.5 .NET framwork를 대상으로 하는 경우 대상 프레임 워크 '{0}'이 (가) 유효 하지 않습니다.
+#### <a name="mm1406-target-framework-0-is-invalid-when-targeting-xamarinmac-45-net-framwork"></a>MM1406: Xamarin.ios 4.5 .NET framwork를 대상으로 지정 하는 경우 대상 프레임 워크 '{0}'이 (가) 유효 하지 않습니다.
 
 <a name="MM1407" />
 
@@ -392,7 +392,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 혼합 모드 어셈블리는 링커에서 처리할 수 없습니다.
 
-请参阅 https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies 为混合模式程序集的详细信息。
+혼합 모드 어셈블리에 대 한 자세한 내용은 https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies 를 참조 하세요.
 
 <a name="MM2106" />
 
@@ -609,7 +609,7 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 #### <a name="mm8025-failed-to-compute-the-token-reference-for-the-type-typeassemblyqualifiedname-because-reasons"></a>MM8025: ' {type 형식에 대 한 토큰 참조를 계산 하지 못했습니다. {AssemblyQualifiedName} ' 이유}
 
-이는 Xamarin.ios의 버그를 나타냅니다. 请提交在 bug [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac)。
+이는 Xamarin.ios의 버그를 나타냅니다. 버그를 제출 하세요 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=Xamarin.Mac) 합니다.
 
 가능한 해결 방법은 프로젝트의 Mac 빌드 옵션에서 추가 mmp 인수로 `--optimize:-register-protocols`를 전달 하 여 `register-protocols` 최적화를 사용 하지 않도록 설정 하는 것입니다.
 
@@ -617,6 +617,6 @@ Apple은 macOS 앱 스토어에서 32 비트 앱 (2018 년 1 월부터)을 제�
 
 #### <a name="mm8026--is-not-supported-when-the-dynamic-registrar-has-been-linked-away"></a>MM8026: *는 동적 등록 기관이 연결 된 경우에는 지원 되지 않습니다.
 
-이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 필요한 경우 동적 등록자를 연결 해서는 안 됩니다. 请提交在 bug [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)。
+이는 일반적으로 Xamarin.ios의 버그를 나타냅니다. 필요한 경우 동적 등록자를 연결 해서는 안 됩니다. 버그를 제출 하세요 [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) 합니다.
 
 프로젝트의 Mac 빌드 옵션에서 추가 mmp 인수에 `--optimize=-remove-dynamic-registrar`을 추가 하 여 링커가 동적 등록자를 유지 하도록 강제할 수 있습니다.

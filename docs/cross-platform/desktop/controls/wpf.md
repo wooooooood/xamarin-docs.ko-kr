@@ -5,12 +5,12 @@ description: 이 문서에서는 WPF를 Xamarin.ios와 비교 하 고 대조 합
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2017
-ms.openlocfilehash: e87595c121f1117d055d812cb06c81ecba850c12
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 9c69449f88f9c237b5075967c89ff7ff3b6fb57a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955649"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940793"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>WPF 및 Xamarin.ios: 유사성 & 차이점
 
@@ -72,13 +72,13 @@ Xamarin.ios의 바인딩 가능한 속성에 대 한 정의는 WPF와 동일 합
 
 전체 예제는 [xamarin.ios의 바인딩 가능한 속성](~/xamarin-forms/xaml/bindable-properties.md)을 참조 하세요.
 
-### <a name="attached-properties"></a>연결 된 속성
+### <a name="attached-properties"></a>연결된 속성
 
-연결 된 속성은 바인딩 가능한 속성의 하위 집합이 며 WPF에서와 동일한 방식으로 작동 합니다. 주요 차이점은 속성 래퍼가이 사례에서 생략 소유 하는 클래스에 대 한 정적 get/set 메서드 집합으로 대체 된다는 것입니다. 자세한 내용은 [xamarin.ios의 연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 을 참조 하세요.
+연결 된 속성은 바인딩 가능한 속성의 하위 집합이 며 WPF에서와 동일한 방식으로 작동 합니다. 주요 차이점은 속성 래퍼가이 경우 생략 되 고 소유 클래스에서 정적 get/set 메서드 집합으로 대체 된다는 것입니다. 자세한 내용은 [xamarin.ios의 연결 된 속성](~/xamarin-forms/xaml/attached-properties.md) 을 참조 하세요.
 
 ### <a name="using-the-binding-engine"></a>바인딩 엔진 사용
 
-바인딩 엔진을 사용 하는 프로세스는 WPF의 경우와 동일 합니다. 소스 개체에 연결 된 `Binding` 개체 (.NET 형식) 및 선택적 속성 값 (생략 경우 WPF 처럼 소스 개체를 속성 자체로 처리 하는 경우)을 만들어 코드 숨김으로 활용할 수 있습니다. 그런 다음 `BindableObject`에 대 한 `SetBinding`를 사용 하 여 바인딩을 `BindableProperty`에 연결할 수 있습니다.
+바인딩 엔진을 사용 하는 프로세스는 WPF의 경우와 동일 합니다. 소스 개체에 연결 된 `Binding` 개체 (.NET 형식) 및 선택적 속성 값을 만들어 코드 숨김으로 활용할 수 있습니다. 생략 하는 경우에는 WPF와 마찬가지로 소스 개체를 속성 자체로 처리 합니다. 그런 다음 `BindableObject`에 대 한 `SetBinding`를 사용 하 여 바인딩을 `BindableProperty`에 연결할 수 있습니다.
 
 또는 `BindingExtension`를 사용 하 여 XAML에서 바인딩 관계를 정의할 수 있습니다. WPF의 확장과 동일한 기본 값을 갖습니다.
 

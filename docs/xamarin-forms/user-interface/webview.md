@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
-ms.openlocfilehash: dedce45d0c09f807aaf2ecbf540b8c9f319a4f16
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
+ms.openlocfilehash: 65b6eb0ab75344ef112bc09aa1165f86e125872b
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031402"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940349"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -107,7 +107,7 @@ browser.Source = htmlSource;
 
 ![HTML 문자열을 표시 하는 웹 보기](webview-images/html-string.png)
 
-위의 코드에서 `@` HTML을 리터럴, 모든 일반적인 이스케이프 문자는 무시 되는 문자열로 표시 하는 데 사용 됩니다.
+위의 코드에서 `@`는 HTML을 [축 자 문자열 리터럴로](/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals)표시 하는 데 사용 됩니다. 즉, 대부분의 이스케이프 문자는 무시 됩니다.
 
 > [!NOTE]
 > `WebView`의 자식인 레이아웃에 따라 [`WebView`](xref:Xamarin.Forms.WebView) 의 `WidthRequest` 및 `HeightRequest` 속성을 설정 하 여 HTML 콘텐츠를 확인 해야 할 수 있습니다. 예를 들어 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 필요 합니다.
@@ -122,7 +122,7 @@ WebView에서 HTML, CSS 콘텐츠를 표시할 수 및 앱 내에서 Javascript�
     <title>Xamarin Forms</title>
   </head>
   <body>
-    <h1>Xamrin.Forms</h1>
+    <h1>Xamarin.Forms</h1>
     <p>This is an iOS web page.</p>
     <img src="XamarinLogo.png" />
   </body>

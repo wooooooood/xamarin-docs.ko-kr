@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
-ms.openlocfilehash: 47fd6d34a1ef286fa8e1a307ea6033c9c6a9feea
-ms.sourcegitcommit: 211fed94fb96127a3e158ae1ff5d7eb831a203d8
+ms.openlocfilehash: 693dd29e59aee73a206398a8a44cc4f15e385d8d
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75955765"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940282"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>XAML 태그 확장 사용
 
@@ -60,7 +60,7 @@ static class AppConstants
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:local="clr-namespace:MarkupExtensions"
              x:Class="MarkupExtensions.StaticDemoPage"
              Title="x:Static Demo">
@@ -115,7 +115,7 @@ XAML 파서에서 허용 합니다 `StaticExtension` 로 축약할 수 클래스
 합니다 **정적 데모** 페이지에 두 가지 예제가 포함 되어 있습니다. XAML 파일의 루트 태그는.NET에 대 한 XML 네임 스페이스 선언을 포함 `System` 네임 스페이스:
 
 ```xaml
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 따라서 합니다 `Label` 정적 필드에 설정할 글꼴 크기 `Math.PI`합니다. 결과는 작은 텍스트 이므로 `Scale` 속성이 `Math.E`:

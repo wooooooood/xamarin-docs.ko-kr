@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 600a94a0ee9eb5bcf06dc19d95cf9e77132a2e81
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c7718ef7a02365e9ca09f7491804cbadfa0c9a41
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029060"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940854"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -24,7 +24,7 @@ _ViewPager는 gestural 탐색을 구현할 수 있도록 하는 레이아웃 관
 
 [수평 살짝 밀기 예제가 있는 TreePager 앱의 ![스크린샷](images/01-intro-sml.png)](images/01-intro.png#lightbox)
 
-일반적으로 `ViewPager`는 [조각](~/android/platform/fragments/index.md)과 함께 사용되지만 `ViewPager`의 복잡성을 추가 하지 않고 `Fragment`를 사용 해야 하는 경우도 있습니다.
+일반적으로 `ViewPager`는 [조각](~/android/platform/fragments/index.md)과 함께 사용되지만 `Fragment`의 복잡성을 추가 하지 않고 `ViewPager`를 사용 해야 하는 경우도 있습니다.
 
 `ViewPager` 어댑터 패턴을 사용 하 여 표시할 뷰를 제공 합니다. 여기에서 사용 된 어댑터는 &ndash; [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) 에서 사용 하는 것과 개념적으로 유사 합니다. `PagerAdapter`의 구현을 제공 하 여 `ViewPager` 사용자에 게 표시 되는 페이지를 생성할 수 있습니다. `ViewPager` 표시 되는 페이지는 `View`또는 `Fragment`수 있습니다. `View`s가 표시 되 면 어댑터의 서브 클래스 Android `PagerAdapter` 기본 클래스입니다. `Fragment`s가 표시 되 면 어댑터의 서브 클래스 Android `FragmentPagerAdapter`. Android 지원 라이브러리에는 `Fragment`를 데이터에 연결 하는 방법에 대 한 세부 정보를 제공 하는 `FragmentPagerAdapter` (`PagerAdapter`의 서브 클래스)도 포함 되어 있습니다. 
 
@@ -33,7 +33,7 @@ _ViewPager는 gestural 탐색을 구현할 수 있도록 하는 레이아웃 관
 - 뷰를 사용 [하는](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) [viewpager](~/android/user-interface/controls/view-pager/viewpager-and-views.md)에서 `ViewPager`를 사용 하 여 트리 카탈로그 (낙 엽 및 TreePager의 이미지 갤러리)의 뷰를 표시 하는 방법을 보여 주기 위해 개발 되었습니다. 
     `PagerTabStrip` 및 `PagerTitleStrip`는 페이지 탐색에 도움이 되는 제목을 표시 하는 데 사용 됩니다.
 
-- [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md)에서 조각을 사용하는 viewpager에서와 함께 를 사용하여 플래시 카드로 수학 문제를 제공하고 사용자 입력에 응답하는 앱을 빌드하는 방법을 [ 보여주기 위해](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) 약간 더 복잡한 `ViewPager`FlashCardPager`Fragment` 앱이 개발되었습니다. 
+- [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md)에서 조각을 사용하는 viewpager에서와 함께 를 사용하여 플래시 카드로 수학 문제를 제공하고 사용자 입력에 응답하는 앱을 빌드하는 방법을 `ViewPager` 보여주기 위해`Fragment` 약간 더 복잡한 [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) 앱이 개발되었습니다. 
 
 ## <a name="requirements"></a>요구 사항
 

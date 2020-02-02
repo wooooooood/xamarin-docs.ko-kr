@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: f7c98de605f71b320f0650954f08c8857459ceaf
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725271"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940919"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS 목표-C 라이브러리 바인딩
 
@@ -90,7 +90,7 @@ Xcode FAQ 설명서를 [사용 하 여 명령줄에서](https://developer.apple.
 이 연습에서는 다음 단계를 다룹니다.
 
 - **[정적 라이브러리 만들기](#Creating_A_Static_Library)** -이 단계는 **infcolorpicker** 목표-C 코드의 정적 라이브러리를 만드는 작업을 포함 합니다. 정적 라이브러리는 `.a` 파일 확장명을 갖게 되 고 라이브러리 프로젝트의 .NET 어셈블리에 포함 됩니다.
-- **[Xamarin.ios 바인딩 프로젝트 만들기](#Create_a_Xamarin.iOS_Binding_Project)** -정적 라이브러리가 있으면이를 사용 하 여 xamarin.ios 바인딩 프로젝트를 만듭니다. 바인딩 프로젝트는 방금 만든 정적 라이브러리로 구성 되며, 목표-C API를 사용 하 C# 는 방법을 설명 하는 코드 형식으로 메타 데이터를 구성 합니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. 我们将使用 **[目标 Sharpie](#Using_Objective_Sharpie)** 来帮助我们与创建 API 定义。
+- **[Xamarin.ios 바인딩 프로젝트 만들기](#Create_a_Xamarin.iOS_Binding_Project)** -정적 라이브러리가 있으면이를 사용 하 여 xamarin.ios 바인딩 프로젝트를 만듭니다. 바인딩 프로젝트는 방금 만든 정적 라이브러리로 구성 되며, 목표-C API를 사용 하 C# 는 방법을 설명 하는 코드 형식으로 메타 데이터를 구성 합니다. 이 메타 데이터를 일반적으로 API 정의 라고 합니다. API 정의를 만드는 데 도움이 되는 **[목적 Sharpie](#Using_Objective_Sharpie)** 를 사용 합니다.
 - **[API 정의 표준화](#Normalize_the_API_Definitions)** -목표 Sharpie는 유용 하지만 모든 작업을 수행할 수는 없습니다. API 정의를 사용 하기 전에 수행 해야 하는 몇 가지 변경 사항을 설명 합니다.
 - **[바인딩 라이브러리 사용](#Using_the_Binding)** -마지막으로, 새로 만든 바인딩 프로젝트를 사용 하는 방법을 보여 주는 xamarin.ios 응용 프로그램을 만듭니다.
 
@@ -156,7 +156,7 @@ Github에서 InfColorPicker에 대 한 코드를 검사 하는 경우:
 
     [![](walkthrough-images/image16b.png "Expand the Link Binary With Libraries section")](walkthrough-images/image16b.png#lightbox)
 
-13. 使用 **+** 按钮以打开对话框让你可以添加上面列出的所需的帧框架：
+13. **+** 단추를 사용 하 여 위에 나열 된 필수 프레임 프레임 워크를 추가할 수 있는 대화 상자를 엽니다.
 
     [![](walkthrough-images/image16c.png "Add the required frames frameworks listed above")](walkthrough-images/image16c.png#lightbox)
 
@@ -375,11 +375,12 @@ Options:
   -v, --versionShow version information
 
 Available Tools:
-
-  xcode    Get information about Xcode installations and available SDKs.
-
-  bind     Create a Xamarin C# binding to Objective-C APIs
-Europa:Resources kmullins$
+  xcode              Get information about Xcode installations and available SDKs.
+  pod                Create a Xamarin C# binding to Objective-C CocoaPods
+  bind               Create a Xamarin C# binding to Objective-C APIs
+  update             Update to the latest release of Objective Sharpie
+  verify-docs        Show cross reference documentation for [Verify] attributes
+  docs               Open the Objective Sharpie online documentation
 ```
 
 이 연습에서는 다음과 같은 목적 Sharpie 도구를 사용 합니다.
@@ -394,11 +395,14 @@ Europa:Resources kmullins$ sharpie xcode -help
 usage: sharpie xcode [OPTIONS]+
 
 Options:
-  -h, --help                 Show detailed help
-  -v, --verbose              Be verbose with output
-      --sdks                 List all available Xcode SDKs. Pass -verbose for
-                               more details.
-Europa:Resources kmullins$
+  -h, -help           Show detailed help
+  -v, -verbose        Be verbose with output
+
+Xcode Options:
+  -sdks               List all available Xcode SDKs. Pass -verbose for more
+                        details.
+  -sdkpath SDK        Output the path of the SDK
+  -frameworks SDK     List all available framework directories in a given SDK.
 ```
 
 바인딩 프로세스를 시작 하기 전에 터미널 `sharpie xcode -sdks`에 다음 명령을 입력 하 여 현재 설치 된 Sdk에 대 한 정보를 가져와야 합니다.

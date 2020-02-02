@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: 3adabbac3f56747093aa8a3def85869a92d33600
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ef1a97df5648d0f120b58f6206f18f74a6f50f92
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010493"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940977"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.ios 앱에 대 한 시작 화면
 
@@ -89,7 +89,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
     ![레이아웃 제약 조건이 있는 레이블](launch-screens-images/launch11.png)
 
-12. 다른 장치 및 방향을 테스트 하 여 디자인이 모든 시나리오에서 의도 한 대로 나타나는지 확인 합니다. 특정 장치나 방향에 대 한 조정을 수행 해야 하는 경우 **특성 편집** 단추를 사용 하 여 특정 크기 클래스에 대 한 제약 조건은를 추가 합니다.
+12. 다른 장치 및 방향을 테스트 하 여 디자인이 모든 시나리오에서 의도 한 대로 나타나는지 확인 합니다. 특정 장치나 방향에 대 한 조정을 수행 해야 하는 경우 **특성 편집** 단추를 사용 하 여 특정 크기 클래스에 대 한 제약 조건을 추가 합니다.
 
     ![가로 방향을 사용 하 여 iPhone X로 렌더링 된 시작 화면](launch-screens-images/launch12.png)
 
@@ -172,7 +172,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
     
     ![레이아웃 제약 조건이 있는 레이블](launch-screens-images/launch14-vs.png) 
 
-15. 다른 장치 및 방향을 테스트 하 여 디자인이 모든 시나리오에서 의도 한 대로 나타나는지 확인 합니다. 특정 장치나 방향에 대 한 조정을 수행 해야 하는 경우 **특성 편집** 단추를 사용 하 여 특정 크기 클래스에 대 한 제약 조건은를 추가 합니다.
+15. 다른 장치 및 방향을 테스트 하 여 디자인이 모든 시나리오에서 의도 한 대로 나타나는지 확인 합니다. 특정 장치나 방향에 대 한 조정을 수행 해야 하는 경우 **특성 편집** 단추를 사용 하 여 특정 크기 클래스에 대 한 제약 조건을 추가 합니다.
 
     ![가로 방향을 사용 하 여 iPhone X로 렌더링 된 시작 화면](launch-screens-images/launch15-vs.png) 
 

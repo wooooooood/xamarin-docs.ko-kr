@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/29/2018
-ms.openlocfilehash: 8c0a2dffbe312cb25258cd2738b661ded2df8d7d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 25e33ee2d77501b3913a3598ef7855714f0b9bc1
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029270"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940901"
 ---
 # <a name="xamarinandroid-controls-widgets"></a>Xamarin Android 컨트롤 (위젯)
 
@@ -87,7 +87,7 @@ Xamarin.ios는 Android에서 제공 하는 모든 네이티브 사용자 인터�
 
 ## <a name="spinnerandroiduser-interfacecontrolsspinnermd"></a>[회전자](~/android/user-interface/controls/spinner.md)
 
-`Spinner`는 집합에서 하나의 값을 신속 하 게 선택 하는 방법을 제공 하는 UI 요소입니다. 드롭다운 목록으로 simmilar. 
+`Spinner`는 집합에서 하나의 값을 신속 하 게 선택 하는 방법을 제공 하는 UI 요소입니다. 드롭다운 목록과 유사 합니다. 
 
 ![예제 회전자](images/spinner.png)
 
