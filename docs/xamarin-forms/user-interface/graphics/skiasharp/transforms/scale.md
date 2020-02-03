@@ -1,6 +1,6 @@
 ---
 title: 크기 조정 변환
-description: Thhis 文章探讨了 SkiaSharp 缩放转换为缩放到不同大小的对象，此示例代码进行了演示。
+description: Thhis 문서 탐색 SkiaSharp 배율 변환 개체, 다양 한 규모를 확장 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
@@ -18,52 +18,52 @@ ms.locfileid: "76724248"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_发现 SkiaSharp 缩放转换为缩放到不同大小的对象_
+_다양 한 크기로 개체 크기를 조정 하기 위한 SkiaSharp 배율 변환 검색_
 
-如您所见中[**转换转换**](translate.md)文章翻译转换可以图形对象从一个位置移动到另一个。 与此相反，缩放转换将更改图形的对象的大小：
+[**변환 변환 문서에서**](translate.md) 볼 수 있듯이 변환 변환은 그래픽 개체를 한 위치에서 다른 위치로 이동할 수 있습니다. 이와 대조적으로 배율 변환 그래픽 개체의 크기를 변경 합니다.
 
 ![](scale-images/scaleexample.png "A tall word scaled in size")
 
-缩放转换通常还会导致移动它们进行了更大的图形坐标。
+배율 변환에는 종종 더 큰 내용이 이동할 그래픽 좌표 하면 됩니다.
 
-前面描述的翻译因素的影响的两个转换公式`dx`和`dy`:
+이전에는 `dx` 및 `dy`의 변환 요소가 미치는 영향을 설명 하는 두 가지 변환 수식을 살펴보았습니다.
 
-x = x + dx
+x' = x + dx
 
-y = y + dy
+y' = y + dy
 
-缩放的比例`sx`和`sy`是乘法而不是累加性：
+`sx` 및 `sy`의 크기 조정 요인은 덧셈이 아닌 곱하기입니다.
 
-x = sx 推荐配置x
+x' = sx? x
 
-y = sy 推荐配置y
+y' = sy? y
 
-Translate 因素的默认值为 0;缩放比例的默认值为 1。
+Translate 요인의 기본값은 0; 배율 인수는 기본 값은 1입니다.
 
-`SKCanvas`类定义了四个`Scale`方法。 第一个[ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single))方法对于用例时所需的相同水平和垂直缩放因素是：
+`SKCanvas` 클래스는 네 개의 `Scale` 메서드를 정의 합니다. 첫 번째 [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single)) 메서드는 동일한 수평 및 수직 배율 인수를 원하는 경우에 대 한 것입니다.
 
 ```csharp
 public void Scale (Single s)
 ```
 
-这称为*增益*缩放&mdash;缩放，它相同两个方向。 增益缩放保留对象的长宽比。
+이를 양방향 *isotropic* 크기 조정 &mdash; 크기 조정 이라고 합니다. 개체의 가로 세로 비율 유지 등방성 크기 조정 합니다.
 
-第二个[ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single))方法允许你指定的水平和垂直缩放不同的值：
+두 번째 [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) 메서드를 사용 하 여 가로 및 세로 크기 조정에 대해 다른 값을 지정할 수 있습니다.
 
 ```csharp
 public void Scale (Single sx, Single sy)
 ```
 
-这会导致*各向异性*缩放。
-第三个[ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(SkiaSharp.SKPoint))方法将组合在单个的两个缩放因素`SKPoint`值：
+이로 인해 *이방성* 크기가 조정 됩니다.
+세 번째 [`Scale`](xref:SkiaSharp.SKCanvas.Scale(SkiaSharp.SKPoint)) 메서드는 두 개의 배율 인수를 단일 `SKPoint` 값으로 결합 합니다.
 
 ```csharp
 public void Scale (SKPoint size)
 ```
 
-第四个`Scale`将稍后所述方法。
+네 번째 `Scale` 방법은 잠시 설명 됩니다.
 
-**基本的规模**页说明`Scale`方法。 [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml)文件包含两个`Slider`元素，可选择介于 0 和 10 之间的水平和垂直比例因子。 [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs)代码隐藏文件中使用这些值以调用`Scale`显示圆角的矩形用虚线描边和调整大小以适应在左上方的一些文本之前画布的角：
+**기본 크기 조정** 페이지에서는 `Scale` 방법을 보여 줍니다. [**BasicScalePage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) 파일에는 0과 10 사이의 가로 및 세로 배율 인수를 선택할 수 있는 두 개의 `Slider` 요소가 포함 되어 있습니다. [**BasicScalePage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) 코드에서 해당 값 `Scale`을 사용 하 여 파선으로 그린 모퉁이가 둥근 사각형을 표시 하 고 크기를 조정 하 여 캔버스의 왼쪽 위 모퉁이에 텍스트를 맞춥니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -102,28 +102,28 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-您可能想知道： 缩放因素如何影响从返回的值`MeasureText`方法的`SKPaint`？ 答案是： 根本不容易。 `Scale` 是一种方法的`SKCanvas`。 它不影响与执行任何操作`SKPaint`对象，直到该对象用于呈现在画布上的某些内容。
+크기 조정 요인이 `SKPaint`의 `MeasureText` 메서드에서 반환 된 값에 어떻게 영향을 주는지 궁금할 수 있습니다. 대답: 전혀 그렇지 않습니다. `Scale`은 `SKCanvas`메서드입니다. 개체를 사용 하 여 캔버스에서 항목을 렌더링할 때까지 `SKPaint` 개체에서 수행 하는 작업에는 영향을 주지 않습니다.
 
-您可以看到，所有内容绘制后`Scale`调用按比例增加：
+여기에서 볼 수 있듯이 `Scale` 호출 후에 그려진 모든 항목은 비례적으로 늘어납니다.
 
 [![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png#lightbox "Triple screenshot of the Basic Scale page")
 
-文本，虚线中的边角，并在画布的左侧和顶部边缘和圆角的矩形之间的 10 个像素边距舍入的行的短划线的长度的宽度都受到相同的缩放比例。
+텍스트를 모퉁이가 둥근된 사각형 캔버스의 왼쪽 및 위쪽 가장자리 사이의 여백이 10 픽셀인을 반올림 하는 줄에서 대시의 길이 파선 선의 두께 사항이 모두 동일한 배율입니다.
 
 > [!IMPORTANT]
-> 通用 Windows 平台无法正确呈现 anisotropicly 缩放后的文本。
+> 유니버설 Windows 플랫폼 anisotropicly 배율 조정 된 텍스트를 올바르게 렌더링 하지 않습니다.
 
-各向异性缩放原因变得不同的行的笔划宽度和对齐水平和垂直轴。 이 페이지의 첫 번째 이미지 에서도 확인할 수 있습니다. 스트로크 너비를 배율 인수에 영향을 주지 않도록 하려면 0으로 설정 하 고, `Scale` 설정에 관계 없이 항상 1 픽셀 너비를 설정 합니다.
+확장 하면 이방성 줄 마다 되려면 스트로크 너비 가로 및 세로 축에 맞춥니다. 이 페이지의 첫 번째 이미지 에서도 확인할 수 있습니다. 스트로크 너비를 배율 인수에 영향을 주지 않도록 하려면 0으로 설정 하 고, `Scale` 설정에 관계 없이 항상 1 픽셀 너비를 설정 합니다.
 
-缩放是相对于画布的左上角。 这可能正是您所需但可能不会。 假设你想要在画布上放置文本和其他位置的矩形，并且你想要缩放相对于其中心。 在这种情况下可以使用的第四个版本[ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single))方法，其中包含两个附加参数来指定缩放中心：
+조정은 캔버스의 왼쪽 위 모퉁이 기준으로 합니다. 이 수 정확 하 게 원하는 있지만 되지 않을 수 있습니다. 텍스트와 사각형을 다른 곳을 캔버스에 배치 하 고 중심을 기준으로 크기를 조정 하려는 경우 이 경우 두 개의 추가 매개 변수를 포함 하 여 크기 조정 중심을 지정 하는 [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) 메서드의 네 번째 버전을 사용할 수 있습니다.
 
 ```csharp
 public void Scale (Single sx, Single sy, Single px, Single py)
 ```
 
-`px`并`py`参数定义一个点，它有时被称为*缩放中心*但中 SkiaSharp 文档被称为*透视点*。 这是不受缩放画布的相对于左上角的点。 所有缩放相对于该中心会发生。
+`px` 및 `py` 매개 변수는 *크기 조정 중심* 이 라고도 하는 점을 정의 하지만 SkiaSharp 설명서에서 *피벗 점*이라고 합니다. 이 확장 하 여 영향을 받지 않는 캔버스의 왼쪽 위 모퉁이 기준으로 지점입니다. 모든 확장에 가운데를 기준으로 발생합니다.
 
-[**居中规模**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs)页显示了具体过程。 `PaintSurface`处理程序是类似于**基本的规模**程序不同之处在于`margin`计算值以使文本水平居中，这意味着程序适合在纵向模式下：
+[**중앙 크기 조정**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) 페이지에는이 기능이 어떻게 작동 하는지 표시 됩니다. `PaintSurface` 처리기는 텍스트를 가로로 가운데 맞춤 하기 위해 `margin` 값이 계산 된다는 점을 제외 하 고 **기본 크기 조정** 프로그램과 유사 합니다. 즉, 프로그램이 세로 모드에서 가장 잘 작동 한다는 것을 의미 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -166,34 +166,34 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-圆角矩形的左上角位于`margin`从画布左侧的像素和`margin`像素。 最后两个参数`Scale`方法设置为这些值加上的宽度和高度的文本，这也是圆角矩形的宽度和高度。 这意味着，所有缩放是相对于该矩形的中心：
+모퉁이가 둥근 사각형의 왼쪽 위 모퉁이는 캔버스의 왼쪽부터 픽셀 `margin` 배치 되며 위쪽의 픽셀을 `margin` 합니다. `Scale` 메서드에 대 한 마지막 두 개의 인수는 텍스트의 너비와 높이를 더한 값으로 설정 되며,이는 모퉁이가 둥근 사각형의 너비와 높이 이기도 합니다. 즉, 모든 크기 조정 해당 영역의 가운데를 기준으로 합니다.
 
 [![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
 
-`Slider`在此程序中的元素具有一系列&ndash;10 到 10。 正如您所看到的负值的垂直缩放 （如在中心屏幕在 Android 上） 将导致对象绕水平轴通过缩放的中心的翻转。 负值，水平缩放 （例如，如右侧 UWP 屏幕所示） 会导致对象绕垂直轴通过缩放的中心的翻转。
+이 프로그램의 `Slider` 요소 범위는 10에서 10 &ndash;사이입니다. 알 수 있듯이 수직적 크기 조정 (예: android 화면 가운데에서)의 음수 값 개체 크기 조정의 중심을 통과 하는 가로 축을 대칭으로 배열할지 발생 합니다. 수평적 크기 조정은 (UWP 화면 오른쪽의 예)의 음수 값을 선택 하면 크기 조정의 중심을 통과 하는 세로 축을 대칭으로 배열할지 개체가 합니다.
 
-版本[ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single))透视点的方法是一系列的三个的快捷方式`Translate`和`Scale`调用。 您可能想要了解这通过将替换为的工作原理`Scale`中的方法**居中规模**以下页：
+피벗 점이 있는 [`Scale`](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) 메서드의 버전은 세 가지 `Translate` 및 `Scale` 호출에 대 한 바로 가기입니다. 이 작업을 수행 하는 방법은 **가운데 맞춤** 페이지의 `Scale` 메서드를 다음으로 대체 하 여 확인 하는 것이 좋습니다.
 
 ```csharp
 canvas.Translate(-px, -py);
 ```
 
-这些是假负的透视点坐标。
+이들은 피벗 점 좌표의 부정입니다.
 
-이제 프로그램을 다시 실행합니다. 你将看到，以便在中心是在画布的左上角向矩形和文本。 几乎不能，您可以看到它。 滑块不支持当然，因为现在不会在所有扩展程序。
+이제 프로그램을 다시 실행합니다. 캔버스의 왼쪽 위 모서리에 있는 가운데 되도록 사각형 및 텍스트 이동 되며 볼 수 있습니다. 이 단계에 대해 간단히 확인할 수 있습니다. 이제 프로그램이 전혀 확장 되지 않습니다 때문에 슬라이더는 물론 작동 하지 않습니다.
 
-现在，添加基本`Scale`（不带缩放的中心） 调用*之前*的`Translate`调用：
+이제 `Translate`를 호출 *하기 전에* 기본 `Scale` 호출 (크기 조정 센터 제외)을 추가 합니다.
 
 ```csharp
 canvas.Scale(sx, sy);
 canvas.Translate(–px, –py);
 ```
 
-如果您熟悉此练习中其他图形编程系统，您可能认为这就是问题，但它不是。 Skia 处理连续的转换调用有点以不同的方式从您可能熟悉。
+익숙한 경우이 연습에서 그래픽 시스템 프로그래밍에서 생각 하는 무엇이 다른 하지만 하지 않습니다. Skia 연속 변환 호출 약간 다르게 처리에서 어떤 익숙하게 사용 하 여 합니다.
 
-使用连续`Scale`和`Translate`调用，圆角矩形的中心仍在左上角，但您可以将其横向相对于左上角的画布，这也是圆角矩形的中心。
+연속 `Scale` 및 `Translate` 호출을 사용 하 여 모퉁이가 둥근 사각형의 중심은 여전히 왼쪽 위 모퉁이에 있지만, 이제 캔버스의 왼쪽 위 모퉁이를 기준으로 크기를 조정할 수 있습니다 .이는 모퉁이가 둥근 사각형의 가운데 이기도 합니다.
 
-现在，在此之前`Scale`调用中，添加另一个`Translate`居中值调用：
+이제 `Scale`를 호출 하기 전에 중심 값을 사용 하 여 다른 `Translate` 호출을 추가 합니다.
 
 ```csharp
 canvas.Translate(px, py);
@@ -201,25 +201,25 @@ canvas.Scale(sx, sy);
 canvas.Translate(–px, –py);
 ```
 
-这会移动缩放后的结果返回到原始位置。 这些三种调用是等效于：
+이 확장된 하면 다시를 원래 위치로 이동합니다. 이러한 세 번 호출 하는 것과 동일합니다.
 
 ```csharp
 canvas.Scale(sx, sy, px, py);
 ```
 
-单个转换会更加复杂，以便总转换公式：
+개별 변환 총 변환 수식은 되도록 중요:
 
- x = sx 推荐配置(x – px) + px
+ x' = sx? (x-px) + px
 
- y = sy 推荐配置(y – py) + py
+ y' = sy? (y-py) + py
 
-请记住的默认值`sx`和`sy`均为 1。 它很容易使您自己确信这些公式不转换中心点 （像素，py）。 它将保持在相同的位置相对于 canvas。
+`sx` 및 `sy`의 기본값은 1입니다. 피벗 점 (px, py) 이러한 수식으로 변환 하지 않습니다 직접 확인 하기 쉽습니다. 캔버스를 기준으로 동일한 위치에 유지 됩니다.
 
-结合`Translate`和`Scale`调用，则顺序很重要。 如果`Translate`之后`Scale`，平移因数有效地进行缩放的缩放比例。 如果`Translate`之前`Scale`，平移因数不进行缩放。 此过程就会明白了某种程度上 (尽管较为复杂的数学) 引入的转换矩阵主题了。
+`Translate` 및 `Scale` 호출을 결합 하는 경우 순서가 중요 합니다. `Translate` `Scale`뒤에 오는 경우 변환 요소는 크기 조정 요인에 의해 효과적으로 조정 됩니다. `Translate` `Scale`앞에 오는 경우에는 변환 요인이 조정 되지 않습니다. 이 프로세스 다소 분명해 집니다 (비록 더 수학) 경우 변환 행렬의 주제는 도입 되었습니다.
 
-`SKPath`类定义的只读[ `Bounds` ](xref:SkiaSharp.SKPath.Bounds)返回的属性`SKRect`路径中定义的坐标范围。 例如，当`Bounds`从更早版本，创建的 hendecagram 路径获取属性`Left`并`Top`矩形的属性是大约-100、 步长`Right`和`Bottom`属性大约 100，并`Width`和`Height`属性是大约 200 个。 （大部分的实际值都是小小于因为星星的点定义的一个圆圈一个半径为 100，但只有顶部的点是并行具有水平或垂直轴。）
+`SKPath` 클래스는 경로에서 좌표의 범위를 정의 하는 `SKRect`을 반환 하는 읽기 전용 [`Bounds`](xref:SkiaSharp.SKPath.Bounds) 속성을 정의 합니다. 예를 들어 앞에서 만든 hendecagram 경로에서 `Bounds` 속성을 가져오는 경우 사각형의 `Left` 및 `Top` 속성은 약 100이 고 `Right` 및 `Bottom` 속성은 약 100 이며 `Width` 및 `Height` 속성은 약 200입니다. (대부분의 실제 값은 거의 없는 별표 지점의 반지름은 100 원으로 정의 되어 있지만 상위 지점에만 가로 또는 세로 축이 있는 병렬 때문에.)
 
-此信息的可用性意味着它应该可以派生缩放和平移因素适用于缩放画布的大小的路径。 [**各向异性缩放**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs)页此进行了演示使用 11 星。 *各向异性*规模意味着，它是在水平方向和垂直方向，不相等这意味着在星型将不会保留原始纵横比。 下面是相关的代码中`PaintSurface`处理程序：
+이 정보의 가용성 수 확장 파생 캔버스의 크기에 대 한 경로 크기 조정에 대 한 적절 한 요소를 변환 해야 것을 의미 합니다. [**이방성 크기 조정**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) 페이지에서는 11 방향 별을 사용 하 여이를 보여 줍니다. *이방성* 규모는 가로 및 세로 방향이 같지 않음을 의미 합니다. 즉, 별이 원래의 가로 세로 비율을 유지 하지 않습니다. `PaintSurface` 처리기의 관련 코드는 다음과 같습니다.
 
 ```csharp
 SKPath path = HendecagramPage.HendecagramPath;
@@ -247,24 +247,24 @@ using (SKPaint strokePaint = new SKPaint
 }
 ```
 
-`pathBounds`获取此代码中，顶部附近，并随后用于更高版本的宽度和高度画布中的矩形`Scale`调用。 通过呈现时，本身的调用将扩展的路径中的坐标`DrawPath`星形，但是该调用将在画布的右上角中居中。 它需要向下和向左移动。 这是作业的`Translate`调用。 这两个属性的`pathBounds`是大约-100、 步长，因此翻译因素是大约 100。 因为`Translate`调用晚`Scale`调用，这些值的有效地缩放的缩放比例，以便它们将在星型的中心移动到画布的中心：
+`pathBounds` 사각형은이 코드의 맨 위 근처에서 가져온 다음 나중에 `Scale` 호출에서 캔버스의 너비와 높이와 함께 사용 됩니다. 자체를 호출 하면 `DrawPath` 호출에서 렌더링 될 때 경로 좌표가 조정 되지만 별이 캔버스의 오른쪽 위 모퉁이에 가운데 맞춤 됩니다. 아래로 및 왼쪽으로 이동 해야 합니다. `Translate` 호출의 작업입니다. `pathBounds`의 이러한 두 속성은 약 100 이므로 변환 요인은 100입니다. `Translate` 호출은 `Scale` 호출 후에 수행 되기 때문에 이러한 값은 크기 조정 요소에 의해 효과적으로 조정 되므로 별의 중심을 캔버스의 중심으로 이동 합니다.
 
 [![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png#lightbox "Triple screenshot of the Anisotropic Scaling page")
 
-另一种方法可以考虑一下`Scale`和`Translate`的调用是确定在反向序列中的效果：`Translate`调用将转移路径，因此它将完全可见但面向在画布的左上角。 `Scale`方法然后使该星型相对于左上角更大。
+`Scale` 및 `Translate` 호출에 대해 고려할 수 있는 다른 방법은 역방향 시퀀스의 효과를 결정 하는 것입니다. `Translate` 호출은 완전히 표시 되지만 캔버스의 왼쪽 위 모퉁이에 표시 되도록 경로를 이동 합니다. 그런 다음 `Scale` 메서드는 왼쪽 위 모퉁이를 기준으로 더 큰 별을 만듭니다.
 
-实际上，它将显示 star 是有点大于画布。 问题在于笔划宽度。 `Bounds`属性的`SKPath`指示坐标维数编码在路径中，并且该程序使用来扩展它。 使用特定的笔划宽度呈现路径时，呈现的路径大于画布。
+사실 별 캔버스 보다 약간 더 큰 인지 표시 됩니다. 문제는 스트로크 너비입니다. `SKPath`의 `Bounds` 속성은 경로에서 인코딩된 좌표의 크기를 나타내며 프로그램에서 크기를 조정 하는 데 사용 합니다. 특정 스트로크 너비를 사용 하 여 경로 렌더링할 때 렌더링 되는 경로 캔버스 보다 큽니다.
 
-若要解决此问题需要补偿的。 在此程序中的一种简单方法是添加以下语句右侧之前`Scale`调用：
+이 문제를 해결 하는 보완 해야 합니다. 이 프로그램의 한 가지 간단한 방법은 `Scale` 호출 바로 앞에 다음 문을 추가 하는 것입니다.
 
 ```csharp
 pathBounds.Inflate(strokePaint.StrokeWidth / 2,
                    strokePaint.StrokeWidth / 2);
 ```
 
-这会增加`pathBounds`通过所有四个边 1.5 个单位的矩形。 仅当舍入笔划联接时，这是一个合理的解决方案。 斜接联接可以较长，而且很难计算。
+그러면 4 면에서 1.5 단위로 `pathBounds` 사각형이 늘어납니다. 선 조인 반올림 하는 경우에 적절 한 솔루션입니다. 마이터 조인을 길어질 수 있습니다 하 고 계산 하기가 어렵습니다.
 
-此外可以使用类似的技术与文本，作为**各向异性文本**页说明。 下面是相关部分`PaintSurface`处理程序[ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs)类：
+또한 **이방성 텍스트** 페이지에서 보여 주는 것 처럼 텍스트와 유사한 기술을 사용할 수 있습니다. 다음은 [`AnisotropicTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) 클래스에서 `PaintSurface` 처리기의 관련 부분입니다.
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -290,17 +290,17 @@ using (SKPaint textPaint = new SKPaint
 }
 ```
 
-它是类似的逻辑和文本扩展的基于文本的边界矩形从返回的页大小为`MeasureText`（这可能有点大于实际文本）：
+비슷한 논리 이며 텍스트는 `MeasureText`에서 반환 되는 텍스트 범위 사각형 (실제 텍스트 보다 조금 큼)에 따라 페이지 크기로 확장 됩니다.
 
 [![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png#lightbox "Triple screenshot of the Anisotropic Test page")
 
-如果您需要保持图形对象的纵横比，您需要使用增益缩放。 **增益缩放**页此进行了演示为 11 星。 从概念上讲，用于在增益缩放页的中心显示图形对象的步骤如下：
+그래픽 개체의 가로 세로 비율을 유지 해야 할 경우 등방성 크기 조정을 사용 하는 것이 좋습니다. **Isotropic 크기 조정** 페이지에서는 11 방향 별에 대해이를 보여 줍니다. 개념적으로 등방성 크기 조정을 사용 하 여 페이지의 가운데에 그래픽 개체를 표시 하기 위한 단계를 다음과 같습니다.
 
-- 转换到左上角的图形对象的中心。
-- 缩放基于水平和垂直页尺寸由图形对象维度划分的最小值的对象。
-- 转换中心的缩放到页面的中心对象。
+- 왼쪽 위 모퉁이에 그래픽 개체의 중심을 변환 합니다.
+- 그래픽 개체 크기를 나눈 가로 및 세로 페이지 크기의 최소값을 기준으로 개체를 확장 합니다.
+- 페이지의 가운데에 확장 된 개체의 중심을 변환 합니다.
 
-[ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs)显示星号前会按相反的顺序执行以下步骤：
+[`IsotropicScalingPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) 는 별표를 표시 하기 전에 역순으로 이러한 단계를 수행 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -339,11 +339,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-代码还显示星型 10 次，10%和逐渐将颜色更改由红色变为蓝色，降低缩放每次挑选：
+코드 표시 별 10 번 이상, 10% 점진적으로 빨간색에서 파란색 색을 변경 하 여 요소 배율을 감소 될 때마다:
 
 [![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos （示例）](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

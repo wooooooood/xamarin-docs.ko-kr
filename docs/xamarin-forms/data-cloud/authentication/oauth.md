@@ -1,6 +1,6 @@
 ---
 title: Id 공급자를 사용 하는 AuthenticateUsers
-description: 本文介绍如何使用 Xamarin.Auth 管理 Xamarin.Forms 应用程序中的身份验证过程。
+description: 이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
@@ -20,59 +20,59 @@ ms.locfileid: "76725561"
 
 _Xamarin.ios는 사용자를 인증 하 고 계정을 저장 하기 위한 플랫폼 간 SDK입니다. Google, Microsoft, Facebook 및 Twitter와 같은 id 공급자를 사용 하는 지원을 제공 하는 OAuth 인증자 포함 합니다. 이 문서에서는 xamarin.ios를 사용 하 여 Xamarin.ios 응용 프로그램에서 인증 프로세스를 관리 하는 방법을 설명 합니다._
 
-OAuth 是开放式的标准进行身份验证，并启用通知资源提供程序应授予权限的第三方而无需共享资源所有者标识访问其信息的资源所有者。 此示例将启用通知 （如 Google、 Microsoft、 Facebook 或 Twitter） 的标识提供者，将向应用程序访问其数据，而无需共享用户的标识授予权限的用户。 它通常用于作为用户的方法登录到网站和应用程序使用标识提供程序，但不公开到网站或应用程序密码。
+OAuth 인증을 위한 개방형 표준인 이며 타사 리소스 소유자 id를 공유 하지 않고 해당 정보에 액세스할 수 권한을 부여 해야 하는 리소스 공급자에 알리기 위해 리소스 소유자를 사용 하도록 설정 합니다. 이 예제 권한 사용자의 id를 공유 하지 않고 해당 데이터에 액세스 하는 응용 프로그램에 부여 해야 하는 id 공급자 (예: Google, Microsoft, Facebook 또는 Twitter)에 알리기 위해 사용자를 가능 하 게 됩니다. 로그인에는 웹 사이트 또는 응용 프로그램이 자신의 암호를 노출 하지 않고 웹 사이트 및 id 공급자를 사용 하 여 응용 프로그램에 일반적으로 사용자에 대 한 방법으로 사용 됩니다.
 
-使用 OAuth 标识提供程序时的身份验证流的高级概述如下所示：
+OAuth id 공급자를 사용 하는 경우 인증 흐름의 대략적인 개요는 다음과 같습니다.
 
-1. 应用程序导航到标识提供者 URL 的浏览器。
-1. 标识提供程序处理用户身份验证，并将授权代码返回到应用程序。
-1. 应用程序与其交换中的标识提供程序的访问令牌的授权代码。
-1. 应用程序使用访问令牌来访问标识提供程序，如请求基本用户数据的 API 的 Api。
+1. 응용 프로그램에는 브라우저는 id 공급자 URL 이동합니다.
+1. Id 공급자는 사용자 인증을 처리 하 고 응용 프로그램에 권한 부여 코드를 반환 합니다.
+1. 응용 프로그램은 id 공급자에서 액세스 토큰에 대 한 권한 부여 코드를 교환 합니다.
+1. 응용 프로그램 Api 같은 기본적인 사용자 데이터를 요청에 대 한 API는 id 공급자에 액세스 하려면 액세스 토큰을 사용 합니다.
 
-示例应用程序演示了如何使用 Xamarin.Auth 实现本机身份验证流对 Google。 虽然 Google 用作本主题中的标识提供程序，方法是同样适用于其他标识提供者。 有关使用 Google OAuth 2.0 终结点身份验证的详细信息，请参阅[访问 Google api 使用 OAuth2.0](https://developers.google.com/identity/protocols/OAuth2) Google 的网站上。
+샘플 응용 프로그램 Xamarin.Auth를 사용 하 여 Google에 대 한 기본 인증 흐름을 구현 하는 방법에 설명 합니다. 이 항목의 id 공급자로 Google을 사용, 방법은 다른 id 공급자에 모두 적용 합니다. Google의 OAuth 2.0 끝점을 사용 하는 인증에 대 한 자세한 내용은 Google 웹 사이트에서 [oauth 2.0을 사용 하 여 Google api에 액세스](https://developers.google.com/identity/protocols/OAuth2) 를 참조 하세요.
 
 > [!NOTE]
-> 在 iOS 9 及更高版本中，应用传输安全 (ATS) 强制执行安全连接之间 （例如应用程序的后端服务器） 的 internet 资源和应用程序中，从而防止意外泄露敏感信息。 由于默认情况下构建适用于 iOS 9 应用程序中启用了 ATS，所有连接都将遵循 ATS 安全要求。 如果连接不能满足这些要求，它们将失败并出现异常。
-> 如果不能使用 ATS 可以选择退出的`HTTPS`协议并确保对 internet 资源的通信安全。 这可以通过更新应用程序的实现**Info.plist**文件。 有关详细信息请参阅[应用程序传输安全](~/ios/app-fundamentals/ats.md)。
+> IOS 9 이상, 앱 전송 보안 ATS ()는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간에 보안 연결 하므로 중요 한 정보가 실수로 유출 방지 적용 합니다. ATS는 iOS 9 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되므로 모든 연결이 ATS 보안 요구 사항이 적용 됩니다. 연결에서 이러한 요구를 충족 하지 않는, 예외와 함께 실패 합니다.
+> `HTTPS` 프로토콜을 사용 하 고 인터넷 리소스에 대 한 보안 통신을 할 수 없는 경우 ATS를 옵트아웃 (opt out) 할 수 있습니다. 이는 앱의 **info.plist** 파일을 업데이트 하 여 수행할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md)을 참조 하세요.
 
-## <a name="using-xamarinauth-to-authenticate-users"></a>使用 Xamarin.Auth 用户进行身份验证
+## <a name="using-xamarinauth-to-authenticate-users"></a>Xamarin.Auth를 사용 하 여 사용자를 인증 합니다.
 
-Xamarin.Auth 支持两种方法的应用程序与标识提供程序的授权终结点进行交互：
+Xamarin.Auth id 공급자의 권한 부여 끝점과 상호 작용 하는 응용 프로그램에 대 한 두 가지 방법을 지원 합니다.
 
-1. 使用嵌入式的 web 视图。 虽然这是一种常见做法，但不再建议出于以下原因：
+1. 포함 된 웹 보기를 사용합니다. 일반적으로 된이 하는 동안 다음과 같은 이유로 더 이상 권장 되지:
 
-    - 承载 web 视图的应用程序可以访问用户的完全身份验证凭据，而不仅仅是适用于应用程序的 OAuth 授权授予。 这违反了最低特权原则，如应用程序有权访问更强大的凭据不是它需要有可能增加应用程序的受攻击面。
-    - 主机应用程序能捕获用户名和密码、 自动提交窗体和绕过用户同意，和复制会话 cookie 并使用它们的用户身份执行已经过身份验证的操作。
-    - 嵌入式的 web 视图不与其他应用程序或设备的 web 浏览器，因此需要用户在为每个授权请求，它被视为较差的用户体验的登录共享身份验证状态。
-    - 某些授权终结点采取措施来检测和阻止来自 web 视图的授权请求。
+    - 웹 보기를 호스팅하는 응용 프로그램에는 사용자의 전체 인증 자격 증명, 응용 프로그램 의도 OAuth 권한 부여 뿐 아니라 액세스할 수 있습니다. 이 응용 프로그램에 필요한 응용 프로그램의 공격 노출 영역을 향상 시키는 것 보다 더 강력한 자격 증명에 대 한 액세스를 최소 권한의 원칙을 위반 합니다.
+    - 호스트 응용 프로그램 수 사용자 이름 및 암호, 자동으로 폼을 제출 및 사용자 동의 무시 및 세션 쿠키를 복사 캡처하고 사용자로 인증 된 작업을 수행 하 합니다.
+    - 포함 된 웹 보기는 다른 응용 프로그램 또는 사용자는 첨자 사용자 환경을 간주 되는 모든 권한 부여 요청에 대 한 로그인 하도록 요구 되는 장치의 웹 브라우저를 사용 하 여 인증 상태를 공유 하지 마세요.
+    - 일부 권한 부여 끝점 검색 웹 보기에서 제공 되는 권한 부여 요청을 차단 하는 단계를 수행 합니다.
 
-1. 使用设备的 web 浏览器中，这是建议的方法。 使用设备浏览器进行 OAuth 请求可提高应用程序的可用性，因为用户只需登录到标识提供程序一次每个设备，从而提高转换率的应用程序中的登录和授权流程。 设备浏览器还提供了改进的安全性，如应用程序都能够检查和修改内容在 web 视图中，但不是显示在浏览器中的内容。 这是此文章和示例应用程序中采用的方法。
+1. 권장 되는 장치의 웹 브라우저를 사용 합니다. 장치 브라우저를 사용 하 여 OAuth 요청에 대 한 사용자만 응용 프로그램에서 로그인 및 권한 부여 흐름의 전환율 개선 장치에 한 번씩 id 공급자 로그인에 필요한 응용 프로그램의 유용성이 향상 됩니다. 또한 장치 브라우저 응용 프로그램을 검사 하 고 콘텐츠는 웹 뷰의 있지만 브라우저에 표시 되지 않습니다의 콘텐츠를 수정할 수는 향상 된 보안을 제공 합니다. 이것이이 문서 및 샘플 응용 프로그램에서 취한 접근법입니다.
 
-下图中所示的示例应用程序如何使用 Xamarin.Auth 对用户进行身份验证和检索其基本数据的高级概述：
+샘플 응용 프로그램 사용자를 인증 하 고 기본 데이터를 검색 하려면 Xamarin.Auth를 사용 하는 방법에 대 한 고급 개요는 다음 다이어그램에 표시 됩니다.
 
 ![](oauth-images/google-auth.png "Using Xamarin.Auth to Authenticate with Google")
 
-应用程序发出对使用 Google 的身份验证请求`OAuth2Authenticator`类。 返回身份验证响应时，在用户已成功通过身份验证 Google 通过其在登录页面，其中包括访问令牌。 然后，应用程序的基本用户数据，使用 Google 向发出请求`OAuth2Request`类，包含在请求中的访问令牌。
+응용 프로그램은 `OAuth2Authenticator` 클래스를 사용 하 여 Google에 인증 요청을 만듭니다. 액세스 토큰을 포함 하는 해당 로그인 페이지를 통해 Google을 사용 하 여 사용자가 성공적으로 인증 되 면 인증 응답을 반환 됩니다. 그런 다음 응용 프로그램은 `OAuth2Request` 클래스를 사용 하 여 Google에 기본 사용자 데이터를 요청 하 고 요청에 포함 되는 액세스 토큰을 만듭니다.
 
-### <a name="setup"></a>설정
+### <a name="setup"></a>설치
 
-必须创建一个 Google API 控制台项目与 Xamarin.Forms 应用程序集成，Google 登录。 이렇게 하려면 다음을 수행합니다.
+Xamarin.Forms 응용 프로그램을 사용 하 여 Google 로그인을 통합 하는 Google API 콘솔 프로젝트를 만들어야 합니다. 이렇게 하려면 다음을 수행합니다.
 
-1. 转到[Google API 控制台](https://console.developers.google.com)网站，然后使用 Google 帐户凭据登录。
-1. 从项目下拉列表中选择一个现有项目，或创建一个新。
+1. [GOOGLE API 콘솔](https://console.developers.google.com) 웹 사이트로 이동 하 고 google 계정 자격 증명을 사용 하 여 로그인 합니다.
+1. 프로젝트 드롭다운 목록에서 기존 프로젝트를 선택 하거나 새로 만듭니다.
 1. "API 관리자"의 사이드바에서 **자격 증명**을 선택 하 고 **OAuth 동의 화면 탭**을 선택 합니다. **전자 메일 주소**를 선택 하 고, **사용자에 게 표시 되는 제품 이름을**지정 하 고, **저장**을 누릅니다.
-1. 在中**凭据**选项卡上，选择**创建凭据**下拉列表，并选择**OAuth 客户端 ID**。
-1. 下**应用程序类型**，选择移动应用程序将在运行的平台 (**iOS**或**Android**)。
-1. 填写所需的详细信息，然后选择**创建**按钮。
+1. **자격 증명** 탭에서 **자격 증명 만들기** 드롭다운 목록을 선택 하 고 **OAuth 클라이언트 ID**를 선택 합니다.
+1. **응용 프로그램 종류**아래에서 모바일 응용 프로그램이 실행 될 플랫폼 (**iOS** 또는 **Android**)을 선택 합니다.
+1. 필요한 세부 정보를 입력 하 고 **만들기** 단추를 선택 합니다.
 
 > [!NOTE]
-> 客户端 ID 可让应用程序访问已启用的 Google Api，并为移动应用程序仅适用于单个平台。 因此， **OAuth 客户端 ID**应创建为将使用 Google 登录每个平台。
+> 클라이언트 ID 설정 된 Google Api에 액세스 하는 응용 프로그램 및 모바일 응용 프로그램에는 단일 플랫폼에 고유 합니다. 따라서 Google 로그인을 사용 하는 각 플랫폼에 대해 **OAuth 클라이언트 ID** 를 만들어야 합니다.
 
-执行这些步骤后，Xamarin.Auth 可用于启动使用 Google 的 OAuth2 身份验证流。
+이러한 단계를 수행한 후 Xamarin.Auth google OAuth2 인증 흐름을 시작 하려면 사용할 수 있습니다.
 
-### <a name="creating-and-configuring-an-authenticator"></a>创建和配置身份验证器
+### <a name="creating-and-configuring-an-authenticator"></a>만들기 및 인증자를 구성 합니다.
 
-Xamarin.Auth 的`OAuth2Authenticator`类负责处理 OAuth 身份验证流。 下面的代码示例演示的实例化`OAuth2Authenticator`类执行身份验证设备的 web 浏览器时：
+Xamarin.ios의 `OAuth2Authenticator` 클래스는 OAuth 인증 흐름을 처리 합니다. 다음 코드 예제에서는 장치의 웹 브라우저를 사용 하 여 인증을 수행할 때 `OAuth2Authenticator` 클래스를 인스턴스화하는 방법을 보여 줍니다.
 
 ```csharp
 var authenticator = new OAuth2Authenticator(
@@ -86,73 +86,73 @@ var authenticator = new OAuth2Authenticator(
     true);
 ```
 
-`OAuth2Authenticator`类需要多个参数，如下所示：
+`OAuth2Authenticator` 클래스에는 다음과 같은 다양 한 매개 변수가 필요 합니다.
 
-- **客户端 ID** – 此标识正在发出请求，并且可以从项目中检索的客户端[Google API 控制台](https://console.developers.google.com)。
-- **客户端机密**– 这应该是`null`或`string.Empty`。
-- **作用域**– 此标识符可标识正在请求应用程序的 API 访问权限和值通知向用户显示的许可屏幕。 범위에 대 한 자세한 내용은 Google 웹 사이트에서 [요청 권한 부여](https://developers.google.com/docs/api/how-tos/authorizing) 를 참조 하세요.
-- **授权 URL** – 此标识将来获取授权代码的 URL。
-- **重定向 URL** – 此标识，以便进行发送响应的 URL。 此参数的值必须匹配中显示的值之一**凭据**选项卡中的项目[Google 开发人员控制台](https://console.developers.google.com/)。
-- **AccessToken Url** – 这标识用于获取授权代码后请求访问令牌的 URL。
-- **GetUserNameAsync Func** – 一个可选的`Func`将用于它已成功完成身份验证后以异步方式检索帐户的用户名。
-- **使用本机 UI** – 一`boolean`值，该值指示是否使用设备的 web 浏览器来执行身份验证请求。
+- **클라이언트 ID** – 요청 하는 클라이언트를 식별 하며 [Google API 콘솔](https://console.developers.google.com)의 프로젝트에서 검색할 수 있습니다.
+- **클라이언트 암호** -`null` 하거나 `string.Empty`해야 합니다.
+- **범위** – 응용 프로그램에서 요청 하는 API 액세스를 식별 하 고, 값은 사용자에 게 표시 되는 동의 화면을 알립니다. 범위에 대 한 자세한 내용은 Google 웹 사이트에서 [요청 권한 부여](https://developers.google.com/docs/api/how-tos/authorizing) 를 참조 하세요.
+- **Url** 권한 부여 – 인증 코드를 가져올 url을 식별 합니다.
+- **Url 리디렉션** – 응답을 보낼 url을 식별 합니다. 이 매개 변수 값은 [Google 개발자 콘솔](https://console.developers.google.com/)의 프로젝트에 대 한 **자격 증명** 탭에 표시 되는 값 중 하 나와 일치 해야 합니다.
+- **AccessToken url** – 권한 부여 코드를 가져온 후 액세스 토큰을 요청 하는 데 사용 되는 url을 식별 합니다.
+- **GetUserNameAsync Func** – 성공적으로 인증 된 후 계정의 사용자 이름을 비동기적으로 검색 하는 데 사용 되는 선택적 `Func`입니다.
+- **기본 UI 사용** – 장치의 웹 브라우저를 사용 하 여 인증 요청을 수행할지 여부를 나타내는 `boolean` 값입니다.
 
-### <a name="setup-authentication-event-handlers"></a>设置身份验证事件处理程序
+### <a name="setup-authentication-event-handlers"></a>인증 이벤트 처리기를 설정 합니다.
 
-显示用户界面，事件处理程序之前`OAuth2Authenticator.Completed`必须注册事件，如下面的代码示例中所示：
+사용자 인터페이스를 표시 하기 전에 다음 코드 예제와 같이 `OAuth2Authenticator.Completed` 이벤트에 대 한 이벤트 처리기를 등록 해야 합니다.
 
 ```csharp
 authenticator.Completed += OnAuthCompleted;
 ```
 
-在用户成功进行身份验证或取消登录时，会触发此事件。
+이 이벤트는 사용자가 성공적으로 인증 하거나 로그인을 취소 하는 경우에 발생 합니다.
 
-（可选） 的事件处理程序`OAuth2Authenticator.Error`也可以注册事件。
+필요에 따라 `OAuth2Authenticator.Error` 이벤트에 대 한 이벤트 처리기도 등록할 수 있습니다.
 
-### <a name="presenting-the-sign-in-user-interface"></a>显示登录用户界面
+### <a name="presenting-the-sign-in-user-interface"></a>로그인 사용자 인터페이스를 제공합니다.
 
-通过使用必须在每个平台项目中初始化 Xamarin.Auth 登录表示器，可以向用户显示登录用户界面。 下面的代码示例演示如何初始化中的登录名演示者`AppDelegate`iOS 项目中的类：
+로그인 사용자 인터페이스에서 각 플랫폼 프로젝트를 초기화 해야 Xamarin.Auth 로그인 발표자는를 사용 하 여 사용자에 게 표시할 수 있습니다. 다음 코드 예제에서는 iOS 프로젝트의 `AppDelegate` 클래스에서 로그인 발표자를 초기화 하는 방법을 보여 줍니다.
 
 ```csharp
 global::Xamarin.Auth.Presenters.XamarinIOS.AuthenticationConfiguration.Init();
 ```
 
-下面的代码示例演示如何初始化中的登录名演示者`MainActivity`Android 项目中的类：
+다음 코드 예제에서는 Android 프로젝트의 `MainActivity` 클래스에서 로그인 발표자를 초기화 하는 방법을 보여 줍니다.
 
 ```csharp
 global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
 ```
 
-.NET Standard 库项目然后可以按如下所示调用登录演示者：
+그런 다음.NET Standard 라이브러리 프로젝트를 로그인 프레 젠 터를 다음과 같이 호출할 수 있습니다.
 
 ```csharp
 var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
 presenter.Login(authenticator);
 ```
 
-请注意，参数`Xamarin.Auth.Presenters.OAuthLoginPresenter.Login`方法是`OAuth2Authenticator`实例。 当`Login`调用方法、 登录用户界面显示为一个选项卡中的用户从设备的 web 浏览器中，下面的屏幕截图中所示：
+`Xamarin.Auth.Presenters.OAuthLoginPresenter.Login` 메서드에 대 한 인수는 `OAuth2Authenticator` 인스턴스입니다. `Login` 메서드가 호출 되 면 로그인 사용자 인터페이스가 장치의 웹 브라우저에서 탭으로 표시 되며,이는 다음 스크린샷에 표시 됩니다.
 
 ![](oauth-images/login.png "Google Sign-In")
 
-### <a name="processing-the-redirect-url"></a>处理重定向 URL
+### <a name="processing-the-redirect-url"></a>리디렉션 URL을 처리합니다.
 
 사용자가 인증 프로세스를 완료 한 후 컨트롤은 웹 브라우저 탭에서 응용 프로그램으로 돌아갑니다. 이렇게 하려면 인증 프로세스에서 반환 된 리디렉션 URL에 대 한 사용자 지정 URL 체계를 등록 한 다음 전송 되 면 사용자 지정 URL을 검색 하 고 처리 합니다.
 
-选择要与应用程序关联的自定义 URL 方案，应用程序必须使用基于名称受其控制的方案。 这可以通过 iOS 和 Android 上的包名称上使用捆绑包标识符名称，并反转，以便 URL 方案来实现。 但是，某些标识提供者，如 Google，分配基于域的名称，然后反转并用作 URL 方案的客户端标识符。 例如，如果 Google 创建的客户端 id `902730282010-ks3kd03ksoasioda93jldas93jjj22kr.apps.googleusercontent.com`，将为 URL 方案`com.googleusercontent.apps.902730282010-ks3kd03ksoasioda93jldas93jjj22kr`。 请注意，只有一个`/`方案组件后可以显示。 因此，利用自定义的 URL 方案的重定向 URL 的完整示例是`com.googleusercontent.apps.902730282010-ks3kd03ksoasioda93jldas93jjj22kr:/oauth2redirect`。
+응용 프로그램을 사용 하 여 연결 하는 사용자 지정 URL 구성표를 선택할 때 응용 프로그램 이름을 기반으로 해당 제어 체계를 사용 해야 합니다. 이 iOS 및 android에서 패키지 이름에 번들 식별자 이름을 사용 하 여 URL 체계를 내릴 수 있도록를 역순으로 구현할 수 있습니다. 그러나 일부 id 공급자, Google 등 되돌릴 되며 URL 스키마로 사용 하는 도메인 이름을 기반으로 하는 클라이언트 식별자를 할당 합니다. 예를 들어 Google에서 `902730282010-ks3kd03ksoasioda93jldas93jjj22kr.apps.googleusercontent.com`의 클라이언트 id를 만드는 경우 URL 체계가 `com.googleusercontent.apps.902730282010-ks3kd03ksoasioda93jldas93jjj22kr`됩니다. 단일 `/` 스키마 구성 요소 다음에만 나타날 수 있습니다. 따라서 사용자 지정 URL 체계를 활용 하는 리디렉션 URL의 전체 예제는 `com.googleusercontent.apps.902730282010-ks3kd03ksoasioda93jldas93jjj22kr:/oauth2redirect`됩니다.
 
-Web 浏览器收到响应后从包含自定义的 URL 方案的标识提供程序，它尝试加载的 URL，将会失败。 相反，自定义 URL 方案被报告给操作系统引发的事件。 对于已注册的架构，然后检查操作系统和操作系统如果找到一个对象，将启动应用程序注册方案，并将其发送重定向 URL。
+웹 브라우저의 사용자 지정 URL 구성표를 포함 하는 id 공급자 로부터 응답을 받으면 실패 하는 URL을 로드 하려고 합니다. 대신 사용자 지정 URL 구성표는 이벤트를 발생 시켜 운영 체제에 보고 됩니다. 등록 된 스키마를 운영 체제를 확인 하 고 있으면 하나 운영 체제는 체계를 등록 하는 응용 프로그램을 시작 리디렉션 URL을 보냅니다.
 
-用于向操作系统注册自定义的 URL 方案和处理方案的机制是特定于每个平台。
+운영 체제를 사용 하 여 사용자 지정 URL 구성표 등록 및 스키마를 처리 하는 메커니즘 각 플랫폼에 따라 다릅니다.
 
 #### <a name="ios"></a>iOS
 
-在 iOS 上，自定义的 URL 方案中注册**Info.plist**，如以下屏幕截图中所示：
+IOS에서 다음 스크린샷에 표시 된 것 처럼 **info.plist**에 사용자 지정 URL 체계가 등록 됩니다.
 
 ![](oauth-images/info-plist.png "URL Scheme Registration")
 
-**标识符**值可以是任何内容，并**角色**值必须设置为**查看器**。 **Url 方案**值，开头`com.googleusercontent.apps`，可以从项目的 iOS 客户端 id 获取上[Google API 控制台](https://console.developers.google.com)。
+**식별자** 값은 모든 값이 될 수 있으며 **역할** 값은 **뷰어로**설정 되어야 합니다. `com.googleusercontent.apps`시작 하는 **Url 체계** 값은 [Google API 콘솔](https://console.developers.google.com)의 프로젝트에 대 한 iOS 클라이언트 id에서 가져올 수 있습니다.
 
-标识提供程序完成授权请求，它将重定向到应用程序的重定向 URL。 由于 URL 使用自定义方案，这样可以在 iOS 中启动应用程序，同时将 URL 传递作为启动参数，它由处理`OpenUrl`在应用程序的重写`AppDelegate`类，该类在下面的代码示例所示：
+Id 공급자에는 권한 부여 요청 완료 되 면 응용 프로그램의 리디렉션 URL로 리디렉션합니다. URL은 사용자 지정 체계를 사용 하므로 iOS에서 응용 프로그램을 시작 하 고 URL을 시작 매개 변수로 전달 합니다 .이 매개 변수는 다음 코드 예제에 표시 된 응용 프로그램의 `AppDelegate` 클래스의 `OpenUrl` 재정의에 의해 처리 됩니다.
 
 ```csharp
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
@@ -167,11 +167,11 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
 }
 ```
 
-`OpenUrl`方法将从接收到的 URL 转换`NSUrl`到.NET `Uri`，然后再处理与重定向 URL`OnPageLoading`公共方法`OAuth2Authenticator`对象。 这将导致 Xamarin.Auth 以关闭 web 浏览器选项卡上，并将收到的 OAuth 数据分析。
+`OpenUrl` 메서드는 공용 `OAuth2Authenticator` 개체의 `OnPageLoading` 메서드를 사용 하 여 리디렉션 URL을 처리 하기 전에 받은 URL을 `NSUrl`에서 .NET `Uri`로 변환 합니다. 이렇게 하면 Xamarin.Auth 수신된 된 OAuth 데이터를 구문 분석 하 고 웹 브라우저 탭을 닫습니다.
 
 #### <a name="android"></a>Android
 
-在 Android 上，自定义的 URL 方案注册通过指定[ `IntentFilter` ](xref:Android.App.IntentFilterAttribute)特性，可以在`Activity`，用于处理方案。 标识提供程序完成授权请求，它将重定向到应用程序的重定向 URL。 为 URL 使用自定义方案，这样可以在 Android 中启动应用程序，同时将 URL 传递作为启动参数，它由处理`OnCreate`方法的`Activity`注册用于处理自定义 URL 方案。 下面的代码示例显示了处理自定义 URL 方案的示例应用程序中的类：
+Android에서 스키마를 처리 하는 `Activity` [`IntentFilter`](xref:Android.App.IntentFilterAttribute) 특성을 지정 하 여 사용자 지정 URL 체계가 등록 됩니다. Id 공급자에는 권한 부여 요청 완료 되 면 응용 프로그램의 리디렉션 URL로 리디렉션합니다. URL에 사용자 지정 스키마를 사용 하는 경우 Android에서 응용 프로그램을 시작 하 고 URL을 시작 매개 변수로 전달 합니다 .이 매개 변수는 사용자 지정 URL 체계를 처리 하기 위해 등록 된 `Activity`의 `OnCreate` 메서드에서 처리 됩니다. 다음 코드 예제에서는 사용자 지정 URL 체계를 처리 하는 샘플 응용 프로그램에서 클래스를 보여 줍니다.
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -197,16 +197,16 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-`DataSchemes`的属性[ `IntentFilter` ](xref:Android.App.IntentFilterAttribute)必须设置为在获取项目的 Android 客户端 id 的反向客户端标识符[Google API 控制台](https://console.developers.google.com)。
+[`IntentFilter`](xref:Android.App.IntentFilterAttribute) 의 `DataSchemes` 속성은 [Google API 콘솔](https://console.developers.google.com)의 프로젝트에 대 한 Android 클라이언트 id에서 가져온 역방향 클라이언트 식별자로 설정 되어야 합니다.
 
-`OnCreate`方法将从接收到的 URL 转换`Android.Net.Url`到.NET `Uri`，然后再处理与重定向 URL`OnPageLoading`公共方法`OAuth2Authenticator`对象。 这将导致 Xamarin.Auth 关闭 web 浏览器选项卡上，并将收到的 OAuth 数据分析。
+`OnCreate` 메서드는 공용 `OAuth2Authenticator` 개체의 `OnPageLoading` 메서드를 사용 하 여 리디렉션 URL을 처리 하기 전에 받은 URL을 `Android.Net.Url`에서 .NET `Uri`로 변환 합니다. 그러면 Xamarin.Auth를 웹 브라우저 탭을 닫고 수신된 된 OAuth 데이터를 구문 분석 합니다.
 
 > [!IMPORTANT]
-> 在 Android 上，使用 Xamarin.Auth `CustomTabs` API 与 web 浏览器和操作系统进行通信。 但是，它不能保证的`CustomTabs`将用户的设备上安装兼容的浏览器。
+> Android에서 Xamarin.ios는 `CustomTabs` API를 사용 하 여 웹 브라우저 및 운영 체제와 통신 합니다. 그러나 `CustomTabs` 호환 브라우저가 사용자의 장치에 설치 되는 것은 아닙니다.
 
-### <a name="examining-the-oauth-response"></a>检查 OAuth 响应
+### <a name="examining-the-oauth-response"></a>OAuth 응답을 검토
 
-分析收到的 OAuth 数据之后, 将引发 Xamarin.Auth`OAuth2Authenticator.Completed`事件。 此事件的事件处理程序中`AuthenticatorCompletedEventArgs.IsAuthenticated`属性可用于确定是否已成功身份验证，如下面的代码示例中所示：
+받은 OAuth 데이터를 구문 분석 한 후 Xamarin.ios는 `OAuth2Authenticator.Completed` 이벤트를 발생 시킵니다. 이 이벤트에 대 한 이벤트 처리기에서 다음 코드 예제와 같이 `AuthenticatorCompletedEventArgs.IsAuthenticated` 속성을 사용 하 여 인증에 성공 했는지 여부를 식별할 수 있습니다.
 
 ```csharp
 async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
@@ -219,11 +219,11 @@ async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs e)
 }
 ```
 
-收集从身份验证成功的数据现已推出`AuthenticatorCompletedEventArgs.Account`属性。 这包括访问令牌，可以使用数据传输到标识提供程序提供的 API 的请求进行签名。
+성공적인 인증에서 수집 된 데이터는 `AuthenticatorCompletedEventArgs.Account` 속성에서 사용할 수 있습니다. Id 공급자에서 제공 하는 API에는 데이터에 대 한 요청을 서명 하는 액세스 토큰을 포함 합니다.
 
-### <a name="making-requests-for-data"></a>发出请求的数据
+### <a name="making-requests-for-data"></a>데이터에 대 한 요청
 
-应用程序获取访问令牌后，它用于向发送请求`https://www.googleapis.com/oauth2/v2/userinfo`API，请求从标识提供者的基本用户数据。 使用 Xamarin.Auth 的发出此请求`OAuth2Request`类，该类表示使用从检索到的帐户进行身份验证的请求`OAuth2Authenticator`实例，如下面的代码示例中所示：
+응용 프로그램에서 액세스 토큰을 가져온 후에는 id 공급자의 기본 사용자 데이터를 요청 하기 위해 `https://www.googleapis.com/oauth2/v2/userinfo` API에 대 한 요청을 수행 하는 데 사용 됩니다. 이 요청은 다음 코드 예제와 같이 `OAuth2Authenticator` 인스턴스에서 검색 된 계정을 사용 하 여 인증 된 요청을 나타내는 Xamarin.ios의 `OAuth2Request` 클래스를 사용 하 여 수행 됩니다.
 
 ```csharp
 // UserInfoUrl = https://www.googleapis.com/oauth2/v2/userinfo
@@ -236,34 +236,34 @@ if (response != null)
 }
 ```
 
-HTTP 方法和 API URL，以及`OAuth2Request`还指定了实例`Account`实例，其中包含访问令牌来登录到由指定的 URL 请求`Constants.UserInfoUrl`属性。 标识提供者然后返回作为 JSON 响应，包括用户的名称和电子邮件地址，前提它识别为有效的访问令牌的基本用户数据。 JSON 响应然后读取和反序列化为`user`变量。
+또한 `OAuth2Request` 인스턴스는 HTTP 메서드 및 API URL 뿐만 아니라 `Constants.UserInfoUrl` 속성으로 지정 된 URL에 요청을 서명 하는 액세스 토큰을 포함 하는 `Account` 인스턴스도 지정 합니다. Id 공급자 액세스 토큰이 유효한 것으로 인식 된 사용자 이름 및 전자 메일 주소를 포함 하 여 JSON 응답을으로 기본적인 사용자 데이터를 반환 합니다. 그런 다음 JSON 응답을 읽고 `user` 변수로 deserialize 합니다.
 
-有关详细信息，请参阅[调用 Google API](https://developers.google.com/identity/protocols/OAuth2InstalledApp#callinganapi) Google 开发人员门户上。
+자세한 내용은 Google 개발자 포털에서 [GOOGLE API 호출](https://developers.google.com/identity/protocols/OAuth2InstalledApp#callinganapi) 을 참조 하세요.
 
-### <a name="storing-and-retrieving-account-information-on-devices"></a>存储和检索设备上的帐户信息
+### <a name="storing-and-retrieving-account-information-on-devices"></a>저장 하 고 장치에 대 한 계정 정보를 검색 합니다.
 
-安全地存储 Xamarin.Auth`Account`存储帐户中的对象，以便应用程序并不总是有重新进行身份验证的用户。 `AccountStore`类是负责存储帐户信息，由密钥链在 iOS 中，服务提供支持和`KeyStore`在 Android 中的类。
+Xamarin.ios는 응용 프로그램이 항상 사용자를 다시 인증할 필요가 없도록 계정 저장소에 `Account` 개체를 안전 하 게 저장 합니다. `AccountStore` 클래스는 계정 정보를 저장 하는 일을 담당 하며 iOS의 키 집합 서비스와 Android의 `KeyStore` 클래스에서 지원 됩니다.
 
 > [!IMPORTANT]
 > Xamarin.ios의 `AccountStore` 클래스는 더 이상 사용 되지 않으므로 Xamarin.ios `SecureStorage` 클래스를 대신 사용 해야 합니다. 자세한 내용은 [AccountStore에서 Xamarin. Essentials SecureStorage로 마이그레이션](https://github.com/xamarin/Xamarin.Auth/wiki/Migrating-from-AccountStore-to-Xamarin.Essentials-SecureStorage)을 참조 하세요.
 
-下面的代码示例演示如何`Account`安全地保存对象：
+다음 코드 예제에서는 `Account` 개체가 안전 하 게 저장 되는 방법을 보여 줍니다.
 
 ```csharp
 AccountStore.Create ().Save (e.Account, Constants.AppName);
 ```
 
-已保存的帐户进行唯一标识使用组成该帐户的密钥`Username`属性和服务 ID，这是一个字符串，用于提取帐户时从帐户存储。 如果`Account`以前保存，调用`Save`方法再次将其覆盖。
+저장 된 계정은 계정 `Username` 속성으로 구성 된 키와 계정 저장소에서 계정을 가져올 때 사용 되는 문자열인 서비스 ID를 사용 하 여 고유 하 게 식별 됩니다. `Account` 이전에 저장 된 경우 `Save` 메서드를 다시 호출 하면 덮어씁니다.
 
-`Account` 对象服务可以检索通过调用`FindAccountsForService`方法，如下面的代码示例中所示：
+다음 코드 예제와 같이 `FindAccountsForService` 메서드를 호출 하 여 서비스에 대 한 `Account` 개체를 검색할 수 있습니다.
 
 ```csharp
 var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).FirstOrDefault();
 ```
 
-`FindAccountsForService`方法将返回`IEnumerable`的集合`Account`对象，与设置为匹配帐户的集合中的第一个项。
+`FindAccountsForService` 메서드는 컬렉션의 첫 번째 항목이 일치 하는 계정으로 설정 되는 `Account` 개체의 `IEnumerable` 컬렉션을 반환 합니다.
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>문제 해결
 
 - Android에서 인증 후 브라우저를 닫을 때 알림 메시지가 표시 되 고 알림 메시지를 중지 하려면 Xamarin.ios를 초기화 한 후 Android 프로젝트에 다음 코드를 추가 합니다.
 
@@ -275,12 +275,12 @@ Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
 
 ## <a name="summary"></a>요약
 
-本文介绍了如何使用 Xamarin.Auth 管理 Xamarin.Forms 应用程序中的身份验证过程。 提供了 Xamarin.Auth`OAuth2Authenticator`和`OAuth2Request`Xamarin.Forms 应用程序用于使用 Google、 Microsoft、 Facebook 和 Twitter 等标识提供程序的类。
+이 문서에서는 Xamarin.Auth를 사용 하 여 Xamarin.Forms 응용 프로그램에서 인증 프로세스를 관리 하는 방법을 설명 합니다. Xamarin.ios는 Google, Microsoft, Facebook 및 Twitter와 같은 id 공급자를 사용 하기 위해 Xamarin.ios 응용 프로그램에서 사용 하는 `OAuth2Authenticator` 및 `OAuth2Request` 클래스를 제공 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [OAuthNativeFlow （示例）](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
-- [对于本机应用程序的 OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
-- [使用 OAuth2.0 访问 Google Api](https://developers.google.com/identity/protocols/OAuth2)
-- [Xamarin.Auth (NuGet)](https://www.nuget.org/packages/xamarin.auth/)
-- [Xamarin.Auth (GitHub)](https://github.com/xamarin/Xamarin.Auth)
+- [OAuthNativeFlow (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
+- [네이티브 앱에 대 한 OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
+- [OAuth 2.0을 사용 하 여 Google Api에 액세스](https://developers.google.com/identity/protocols/OAuth2)
+- [Xamarin.ios (NuGet)](https://www.nuget.org/packages/xamarin.auth/)
+- [Xamarin.ios (GitHub)](https://github.com/xamarin/Xamarin.Auth)

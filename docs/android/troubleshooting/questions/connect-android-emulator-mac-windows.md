@@ -96,7 +96,7 @@ Mac에서 _원격 로그인_ 를 사용 하도록 설정한 경우 `ssh` 포트 
 이론적으로는 `adb`의 기본 제공 기능을 사용 하 여 원격 컴퓨터에서 실행 되는 `adb` 서버에 연결 하는 것이 좋습니다 (예: [https://stackoverflow.com/a/18551325](https://stackoverflow.com/a/18551325)참조).
 그러나 Xamarin Android IDE 확장은 현재 해당 옵션을 구성 하는 방법을 제공 하지 않습니다.
 
-## <a name="contact-information"></a>联系信息
+## <a name="contact-information"></a>연락처 정보
 
 이 문서에서는 2016 년 3 월 현재 동작에 대해 설명 합니다. 이 문서에서 설명 하는 기술은 Xamarin 용 안정적인 테스트 제품군의 일부가 아니므로 나중에 중단 될 수 있습니다.
 

@@ -19,13 +19,13 @@ ms.locfileid: "76725361"
 
 ## <a name="xamarinios-cannot-resolve-systemvaluetuple"></a>Xamarin.ios가 System.valuetuple를 확인할 수 없습니다.
 
-发生此错误的原因是与 Visual Studio 不兼容。
+이 오류는 Visual Studio와의 비 호환성으로 인해 발생 합니다.
 
 - **Visual Studio 2017 업데이트 1** (버전 15.1 또는 이전 버전)은 **system.valuetuple NuGet 4.3.0** (또는 이전 버전)와만 호환 됩니다.
 
 - **Visual Studio 2017 업데이트 2** (버전 15.2 이상)는 **system.valuetuple NuGet 4.3.1** 이상과만 호환 됩니다.
 
-请选择与你的 Visual Studio 2017 安装相对应的正确 ValueTuple NuGet。
+Visual Studio 2017 설치에 해당 하는 올바른 System.valuetuple NuGet을 선택 하세요.
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>' 업데이트 정보를 검색 하는 동안 오류 발생 ' 오류 메시지를 받고 있습니다.
 
@@ -309,7 +309,7 @@ Mac용 Visual Studio 2.2에는 쉼표를 포함 하는 배포 인증서를 검�
 
 (Ed Anuff에서 기여)
 
-다음 단계를 수행하십시오.
+다음 단계를 수행하세요.
 
 - IPhone 빌드에서 SDK 버전을 3.2 또는 iTunes connect로 변경 하면 3.2 보다 작은 SDK 버전을 사용 하 여 빌드된 iPad 호환 앱이 표시 되기 때문에 업로드가 거부 됩니다.
 - 프로젝트에 대 한 사용자 지정 info.plist을 만들고이를 명시적으로 3.0에 설정 합니다.   이렇게 하면 Xamarin.ios로 설정 된 이상 값 Osversion 3.2 값이 재정의 됩니다.   이 작업을 수행 하지 않으면 iPhone에서 앱을 실행할 수 없게 됩니다.

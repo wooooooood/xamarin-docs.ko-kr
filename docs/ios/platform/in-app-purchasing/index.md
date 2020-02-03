@@ -32,7 +32,7 @@ iOS 응용 프로그램은 휴대폰 키트를 사용 하 여 디지털 제품 �
 
 앱 내 구매를 지원 하려면 Xcode 7 이상에서 Xamarin.ios 5.0 이상 버전을 사용 해야 합니다.
 
-## <a name="contents"></a>내용
+## <a name="contents"></a>목차
 
 - [앱에서 바로 구매 기본 사항 및 구성](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 

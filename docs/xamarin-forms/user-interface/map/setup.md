@@ -18,9 +18,9 @@ ms.locfileid: "76725579"
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-[`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤은 각 플랫폼에서 네이티브 맵 컨트롤을 사용 합니다. 这为用户提供了快速、熟悉的地图体验，但这意味着需要执行一些配置步骤以符合每个平台的 API 要求。
+[`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤은 각 플랫폼에서 네이티브 맵 컨트롤을 사용 합니다. 이를 통해 사용자는 빠르고 친숙 한 지도를 제공할 수 있지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 합니다.
 
-## <a name="map-initialization"></a>地图初始化
+## <a name="map-initialization"></a>맵 초기화
 
 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤은 솔루션의 모든 프로젝트에 추가 해야 하는 [xamarin.ios](https://www.nuget.org/packages/Xamarin.Forms.Maps/) NuGet 패키지에서 제공 됩니다.
 
@@ -58,14 +58,14 @@ IOS에서 지도를 표시 하 고 상호 작용 하려면 추가 구성이 필�
 
 - iOS 11 이상
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – 在任何时候使用位置服务
-- iOS 10 及更早版本
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – 항상 위치 서비스를 사용 하는 경우
+- iOS 10 및 이전 버전
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – 在任何时候使用位置服务    
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – 항상 위치 서비스를 사용 하는 경우    
 
-若要支持 iOS 11 和更早版本，可以包括所有三个密钥： `NSLocationWhenInUseUsageDescription`， `NSLocationAlwaysAndWhenInUseUsageDescription`，和`NSLocationAlwaysUsageDescription`。
+IOS 11 및 이전 버전을 지원 하기 위해 `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`및 `NSLocationAlwaysUsageDescription`의 세 가지 키를 모두 포함할 수 있습니다.
 
-中的这些项的 XML 表示形式**Info.plist**如下所示。 应更新`string`值以反映你的应用程序如何使用位置信息：
+**Info.plist** 에서 이러한 키에 대 한 XML 표현은 다음과 같습니다. 응용 프로그램에서 위치 정보를 사용 하는 방법을 반영 하 여 `string` 값을 업데이트 해야 합니다.
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
@@ -76,7 +76,7 @@ IOS에서 지도를 표시 하 고 상호 작용 하려면 추가 구성이 필�
 <string>Can we use your location at all times?</string>
 ```
 
-**Info.plist**还可以在中添加条目**源**在其他视图**Info.plist**文件：
+**Info.plist** 파일을 편집 하는 동안 **Info.plist** 항목을 **소스** 뷰에 추가할 수도 있습니다.
 
 ![IOS 8 용 info.plist](setup-images/ios8-map-permissions.png "iOS 8 필수 정보. info.plist 항목")
 
@@ -112,7 +112,7 @@ API 키를 가져온 후에는 **Properties/AndroidManifest .xml** 파일의 `<a
 이렇게 하면 API 키가 매니페스트에 포함 됩니다. 유효한 API 키를 사용 하지 않으면 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤에 빈 눈금이 표시 됩니다.
 
 > [!NOTE]
-> 请注意，为了使 APK 来访问 Google 地图，您必须包括 sha-1 指纹，包使用对 APK 进行签名每个密钥存储 （调试和发布） 的名称。 例如，如果一台计算机用于调试和生成发布 APK 的另一台计算机，您应包括 sha-1 证书指纹从第一台计算机的调试密钥存储和从的发布密钥存储的 sha-1 证书指纹第二台计算机。 此外，切记要编辑的密钥凭据，如果应用程序的**包名称**更改。 [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
+> Google Maps에 액세스할 APK에 대 한 순서로 sha-1 지문 포함 하며 APK에 서명 하는 데 사용 하는 모든 keystore (디버그 및 릴리스)에 대 한 이름을 패키지 note 합니다. 예를 들어, 디버그 및 릴리스 APK를 생성 하기 위한 다른 컴퓨터에 대 한 컴퓨터를 사용 하는 경우 포함 해야 첫 번째 컴퓨터의 디버그 키 저장소에서 sha-1 인증서 지문 및의 릴리스 키 저장소에서 sha-1 인증서 지문 두 번째 컴퓨터입니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
 
 #### <a name="specify-the-google-play-services-version-number"></a>Google Play services 버전 번호를 지정 합니다.
 
@@ -231,7 +231,7 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
 
 [![Android의 위치 권한 요청 스크린샷](setup-images/permission-android.png "Android 권한 요청")](setup-images/permission-android-large.png#lightbox "Android 권한 요청")
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map service를 사용할 수 있습니다. 응용 프로그램을 인증 하려면 맵 인증 키를 지정 해야 합니다. 자세한 내용은 [지도 인증 키 요청](/windows/uwp/maps-and-location/authentication-key)을 참조 하세요. 그런 다음 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 메서드 호출에서 인증 토큰을 지정 하 여 Bing Maps를 사용 하 여 응용 프로그램을 인증 합니다.
 
@@ -266,4 +266,4 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 - [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.ios 고정](~/xamarin-forms/user-interface/map/pins.md).
 - [지도 API](xref:Xamarin.Forms.Maps)
-- [地图自定义呈现器](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [사용자 지정 렌더러 매핑](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)

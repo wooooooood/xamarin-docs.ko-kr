@@ -18,11 +18,11 @@ ms.locfileid: "76725062"
 
 Android SDK를 설치 하면 개발에 필요한 모든 최소 패키지가 자동으로 포함 되지 않습니다. 개별 개발자 요구 사항은 다르지만 일반적으로 Xamarin.ios를 사용 하 여 개발 하려면 다음 패키지가 필요 합니다.
 
-## <a name="tools"></a>工具
+## <a name="tools"></a>도구
 
 SDK manager의 Tools 폴더에서 최신 도구를 설치 합니다.
 
-- Android SDK 工具
+- Android SDK Tools
 - Android SDK 플랫폼-도구
 - Android SDK 빌드-도구
 
@@ -30,7 +30,7 @@ SDK manager의 Tools 폴더에서 최신 도구를 설치 합니다.
 
 최소 & 대상으로 설정한 Android 버전용 "SDK 플랫폼"을 설치 합니다.
 
-예:
+예제:
 
 - 대상 API 23
 - 최소 API 23

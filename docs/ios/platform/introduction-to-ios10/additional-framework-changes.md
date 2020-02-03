@@ -49,7 +49,7 @@ iOS 10에는 핵심 데이터 프레임 워크에 대 한 다음과 같은 향�
 iOS 10은 핵심 이미지 프레임 워크에 대해 다음과 같은 향상 된 기능을 만듭니다.
 
 - 이제 개발자는 처리 전후에 색 공간에서를 변환 하 여 핵심 이미지 컨텍스트의 작업 색 공간 외부에 있는 색 공간에서 이미지를 처리할 수 있습니다.
-- A8 또는 A9 Cpu를 사용 하는 iOS 장치의 경우 이제 원시 이미지 형식이 지원 됩니다. 핵심 이미지는 이제 기본 제공 iSight 카메라 또는 타사 카메라에서 원시 이미지를 디코딩하는 기능을 지원 합니다. 使用 [CIFilter](xref:CoreImage.CIFilter) 类的`FilterWithImageData`或`FilterWithImageURL`方法来处理原始映像 。
+- A8 또는 A9 Cpu를 사용 하는 iOS 장치의 경우 이제 원시 이미지 형식이 지원 됩니다. 핵심 이미지는 이제 기본 제공 iSight 카메라 또는 타사 카메라에서 원시 이미지를 디코딩하는 기능을 지원 합니다. [Cifilter](xref:CoreImage.CIFilter) 클래스의 `FilterWithImageData` 또는 `FilterWithImageURL` 메서드를 사용 하 여 원시 이미지를 처리 합니다.
 - `UIImageView` 개체에서 `UIImage` 렌더링 (핵심 이미지 이미지 저장소에 의해 지원 되는 경우)에 대 한 몇 가지 렌더링 성능이 향상 되었습니다.
 - 넓은 색 영역으로 태그가 지정 된 `UIImage` 개체는 넓은 색을 지 원하는 iOS 장치에서 `UIImageView` 개체의 넓은 색 영역 색으로 렌더링 됩니다.
 - 핵심 이미지 커널 코드는 이제 특정 픽셀 출력 형식을 요청할 수 있습니다.
@@ -105,7 +105,7 @@ IOS 10에서 HealthKit 프레임 워크에 대 한 다음과 같은 기능이 �
 - 날씨 유형 (예: `HKWeatherConditionClear` 및 `HKWeatherConditionCloudy`)에 대 한 새 메타 데이터 키가 추가 되었고, 체력 유형 (예: `HKWorkoutActivityTypeFlexibility` 및 `HKWorkoutActivityTypeWheelchairRunPace`)이 추가 되었습니다.
 - 새 `HKCDADocument` 클래스가 CDA (임상 문서 아키텍처) 형식의 문서를 나타내기 위해 추가 되었습니다.
 - 새 [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) 클래스를 사용 하 여 `ActivityType` 및 체력 `LocationType`를 지정 합니다.
-- 添加了新的 [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) 和[HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore)类的`WheelchairUse`方法, 以便使用轮椅相关的运行状况数据。
+- [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) 클래스의 새 [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) 및 `WheelchairUse` 메서드는 휠체어 관련 상태 데이터를 사용 하기 위해 추가 되었습니다.
 
 ## <a name="homekit-enhancements"></a>HomeKit 향상
 
@@ -192,7 +192,7 @@ IOS 10.3에서 ScrollView 컨트롤에 대 한 다음과 같은 기능이 향상
 IOS 10의 UIKit 프레임 워크에 대 한 다음과 같은 기능이 향상 되었습니다.
 
 - 새 [uipasteboard](xref:UIKit.UIPasteboard) 본 API는 수명 제한과 같은 새 옵션을 제공 하며 공용 클래스 형식에 대해 호환 되는 콘텐츠 형식을 자동으로 선언 합니다.
-- 완전히 대화형으로 제공 되는 새로운 개체 기반 애니메이션 지원이 추가 되었으며 제스처에 연결할 수 있습니다. 请请参阅 Apple 的[UIViewAnimating 协议参考](https://developer.apple.com/reference/uikit/uiviewanimating)、 [UIViewPropertyAnimator 类引用](https://developer.apple.com/reference/uikit/uiviewpropertyanimator)、 [UITimingCurveProvider 协议参考](https://developer.apple.com/reference/uikit/uitimingcurveprovider)、 [UICubicTimingParameters 类引用](https://developer.apple.com/reference/uikit/uicubictimingparameters)和有关详细信息, 请参阅 [UISpringTimingParameter 类](https://developer.apple.com/reference/uikit/uispringtimingparameters)。
+- 완전히 대화형으로 제공 되는 새로운 개체 기반 애니메이션 지원이 추가 되었으며 제스처에 연결할 수 있습니다. 자세한 내용은 Apple의 [Uiviewanimating 프로토콜 참조](https://developer.apple.com/reference/uikit/uiviewanimating), [uiviewproperty애니메이터 클래스 참조](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [UITimingCurveProvider 프로토콜 참조](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [UicubicUISpringTimingParameter Ingparameters 클래스 참조](https://developer.apple.com/reference/uikit/uicubictimingparameters) 및 [클래스 참조](https://developer.apple.com/reference/uikit/uispringtimingparameters) 를 참조 하세요.
 - 새 `UIPreviewInteraction` 및 `UIPreviewInteractionDelegate`를 통해 개발자 앱은 peek 및 pop 작업용 사용자 지정 인터페이스를 제공할 수 있습니다.
 - 새 `UIAccessibilityCustomRotor` 클래스를 사용 하면 앱에서 음성 전달 등의 보조 기술에 대 한 사용자 지정 컨텍스트별 기능을 제공할 수 있습니다.
 - `UIAccessibilityIsAssistiveTouchRunning` 및 `UIAccessibilityAssistiveTouchStatusDidChangeNotification` 기호를 사용 하 여 AssistiveTouch 사용 여부를 확인 합니다.

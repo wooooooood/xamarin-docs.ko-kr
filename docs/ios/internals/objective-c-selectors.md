@@ -19,11 +19,11 @@ ms.locfileid: "76725187"
 목표-C 언어는 *선택기*를 기반으로 합니다. 선택기는 개체 또는 *클래스로*보낼 수 있는 메시지입니다. [Xamarin.ios](~/ios/internals/api-design/index.md) 는 인스턴스 선택기와 정적 메서드에 대 한 클래스 선택기를 인스턴스 메서드에 매핑합니다.
 
 일반적인 C 함수와 달리 멤버 함수와 마찬가지로 C++ 선택기는 [P/invoke](https://www.mono-project.com/docs/advanced/pinvoke/) 를 사용 하 여 직접 호출할 수 없으며 선택기는를 사용 하 여 객관적인 c 클래스 또는 인스턴스로 전송 됩니다 [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
-함수입니다.
+함수를 사용합니다.
 
 목적-C의 메시지에 대 한 자세한 내용은 Apple의 [개체 작업](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) 가이드를 참조 하세요.
 
-## <a name="example"></a>示例
+## <a name="example"></a>예제
 
 [`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont) 를 호출 한다고 가정 합니다.
 [`NSString`](https://developer.apple.com/documentation/foundation/nsstring)선택기입니다.
@@ -39,7 +39,7 @@ Apple의 설명서에서 선언은 다음과 같습니다.
 - 매개 변수 `font`는 [uifont](xref:UIKit.UIFont)[nsobject](xref:Foundation.NSObject)에서 파생 된 형식 (간접적) 이며, 이는 [System.IntPtr](xref:System.IntPtr)에 매핑됩니다.
 - `CGFloat``width` 매개 변수는 `nfloat`에 매핑됩니다.
 - [`UILineBreakMode`](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc)`lineBreakMode` 매개 변수는 이미 xamarin.ios에서 [`UILineBreakMode`](xref:UIKit.UILineBreakMode) 으로 바인딩 되었습니다.
-枚举中。
+열거할.
 
 모두 함께 배치 하면 `objc_msgSend` 선언이 일치 해야 합니다.
 

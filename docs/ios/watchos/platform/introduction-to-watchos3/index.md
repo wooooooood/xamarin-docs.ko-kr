@@ -96,7 +96,7 @@ watchOS 3에는 이전에 사용할 수 없었던 기존 Apple 프레임 워크�
 - **Avfoundation** -오디오를 관리 하 고 재생 합니다.
 - **Cloudkit** -watch 앱과 iCloud 컨테이너 간에 데이터를 이동 합니다.
 - **핵심 오디오** -오디오 스트림을 나타내는 데이터 형식, 복잡 한 버퍼 및 시간 값을 관리 하는 데 사용할 수 있습니다.
-- **Gamekit** -创建社交游戏。
+- **GameKit** -소셜 게임을 만듭니다.
 
 <a name="Proactive-Suggestions" />
 
@@ -138,7 +138,7 @@ WatchOS 3에 도입 된 사용자 알림 프레임 워크는 Apple Watch에 대 
 
 ## <a name="watch-connectivity-framework-enhancements"></a>연결 프레임 워크의 향상 된 기능 보기
 
-[WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) 类的新`HasContentPending`属性指示会话已在后台接收需要处理的数据。 `RemainingComplicationUserInfoTransfers` 속성은 iOS 앱이 watchOS의 복잡 한 업데이트를 업데이트할 수 있는 남은 시간을 반환 합니다.
+[WCSession](https://developer.apple.com/reference/watchconnectivity/wcsession) 클래스의 새 `HasContentPending` 속성은 세션이 처리 해야 하는 배경에 데이터를 수신 했음을 나타냅니다. `RemainingComplicationUserInfoTransfers` 속성은 iOS 앱이 watchOS의 복잡 한 업데이트를 업데이트할 수 있는 남은 시간을 반환 합니다.
 
 자세히 알아보려면 [백그라운드 작업](~/ios/watchos/platform/background-tasks.md) 가이드를 참조 하세요.
 

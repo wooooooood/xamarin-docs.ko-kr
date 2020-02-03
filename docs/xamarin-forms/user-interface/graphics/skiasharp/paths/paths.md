@@ -1,6 +1,6 @@
 ---
-title: SkiaSharp 中的路径基础知识
-description: 本文探讨了结合使用连接的直线和曲线的 SkiaSharp SKPath 对象，并演示此示例代码。
+title: SkiaSharp의 경로 기본 사항
+description: 이 문서에서는 연결 된 선 및 곡선을 결합 하는 데 SkiaSharp SKPath 개체를 탐색 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: A7EDA6C2-3921-4021-89F3-211551E430F1
 ms.technology: xamarin-skiasharp
@@ -14,33 +14,33 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76725196"
 ---
-# <a name="path-basics-in-skiasharp"></a>SkiaSharp 中的路径基础知识
+# <a name="path-basics-in-skiasharp"></a>SkiaSharp의 경로 기본 사항
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_了解结合使用连接的直线和曲线的 SkiaSharp SKPath 对象_
+_연결 된 선 및 곡선을 결합 하기 위한 SkiaSharp 된 경로 개체 탐색_
 
-图形路径的最重要功能之一是能够定义应已连接多个行和时应不将它们连接起来。 这些两个三角形顶部进行说明，可以是有意义的不同之处：
+그래픽 경로의 가장 중요 한 기능 중 하나는 경우 이러한 연결 되지 않아야 하 고 여러 줄을 연결 해야 하는 경우를 정의할 수 있습니다. 이러한 두 개의 삼각형의 위쪽 있듯이 차이 중요 수 있습니다.
 
 ![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
 
-图形路径封装[ `SKPath` ](xref:SkiaSharp.SKPath)对象。 路径是一个或多个集合*轮廓*。 每个分布是一系列*连接*直线和曲线。 分布图未连接到彼此，但它们可能会以可视方式重叠。 有时单一 contour 可以重叠本身。
+그래픽 경로는 [`SKPath`](xref:SkiaSharp.SKPath) 개체에 의해 캡슐화 됩니다. 경로는 하나 이상의 *컨투어에*대 한 컬렉션입니다. 각 컨투어는 *연결* 된 직선 및 곡선의 컬렉션입니다. 윤곽을 서로 연결 되어 있지 않지만 시각적으로 중첩 될 수 있습니다. 경우에 따라 단일 윤곽선 자체적으로 겹쳐질 수 있습니다.
 
-轮廓线通常从以下方法的调用开始`SKPath`:
+외형선은 일반적으로 다음 `SKPath`메서드를 호출 하 여 시작 합니다.
 
-- [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) 若要开始新的轮廓
+- 새 컨투어를 시작 [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*)
 
-该方法的参数是可以表示为单个点`SKPoint`值，或将作为单独的 X 和 Y 坐标。 `MoveTo`调用建立轮廓和一个初始的点开头*当前点*。 可以调用以下方法来继续使用直线或曲线从当前的点到点方法，然后将成为新的当前点中指定的轮廓：
+이 메서드에 대 한 인수는 단일 점으로, `SKPoint` 값으로 표현 하거나 별도 X 및 Y 좌표로 표현할 수 있습니다. `MoveTo` 호출은 컨투어 시작 지점 및 초기 *현재 점을*설정 합니다. 줄 또는 현재 위치에서 메서드를 새로운 현재 점의 그러면에 지정 된 지점에 곡선을 사용 하 여 윤곽선을 계속 하려면 다음 메서드를 호출할 수 있습니다.
 
-- [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) 若要向路径添加一条直线
-- [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) 若要添加一段弧线，这是圆或椭圆圆周上的线条
-- [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*) 若要添加的三次方贝塞尔样条
-- [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*) 若要添加的二次贝塞尔样条
-- [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) 若要添加的合理二次贝塞尔样条，可以准确地呈现圆锥部分 （椭圆、 条抛物线合理组合和 hyperbolas） 的
+- 경로에 직선을 추가 [`LineTo`](xref:SkiaSharp.SKPath.LineTo*)
+- 원 또는 타원의 원주 선 인 호를 추가 하려면 [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) 합니다.
+- 입방 형 3 차원 곡선 스플라인을 추가 하 [`CubicTo`](xref:SkiaSharp.SKPath.CubicTo*)
+- 정방형 3 차원 곡선 스플라인을 추가 하 [`QuadTo`](xref:SkiaSharp.SKPath.QuadTo*)
+- 원추형 섹션 (줄임표, parabolas 및 hyperbolas)을 정확 하 게 렌더링할 수 있는 유리수 정방형 3 차원 곡선 스플라인을 추가 하려면 [`ConicTo`](xref:SkiaSharp.SKPath.ConicTo*) 합니다.
 
-这些五个方法均包含描述直线或曲线所需的所有信息。 每个五个方法适用于前面紧邻的方法调用来建立的当前点一起使用。 例如，`LineTo`方法将添加一条直线到轮廓取决于当前点，因此参数`LineTo`是单一点。
+이러한 5 개의 메서드 선이나 곡선에 설명 하는 데 필요한 모든 정보를 포함 합니다. 이러한 다섯 개의 메서드의 메서드 호출 바로 앞에서 설정한 현재 지점과 함께에서 작동 합니다. 예를 들어 `LineTo` 메서드는 현재 점에 따라 윤곽선에 직선을 추가 하므로 `LineTo`에 대 한 매개 변수는 단일 지점입니다.
 
-`SKPath`类还定义了具有相同的名称作为这些六种方法，但使用的方法`R`开头：
+`SKPath` 클래스는 이러한 6 개의 메서드와 이름이 같지만 시작 부분에 `R` 있는 메서드를 정의 하기도 합니다.
 
 - [`RMoveTo`](xref:SkiaSharp.SKPath.RMoveTo*)
 - [`RLineTo`](xref:SkiaSharp.SKPath.RLineTo*)
@@ -49,11 +49,11 @@ _了解结合使用连接的直线和曲线的 SkiaSharp SKPath 对象_
 - [`RQuadTo`](xref:SkiaSharp.SKPath.RQuadTo*)
 - [`RConicTo`](xref:SkiaSharp.SKPath.RConicTo*)
 
-`R`代表*相对*。 这些方法都有相应的方法，而不必与相同的语法`R`但相对于当前点。 这些可以方便地绘制类似组成部分中多次调用的方法的路径。
+`R`는 *상대*를 나타냅니다. 이러한 메서드는 `R` 없지만 현재 점을 기준으로 하는 해당 메서드와 동일한 구문을 사용 합니다. 이 비슷한 구성 요소가 메서드를 여러 번 호출 하 여 경로 그리는 데 유용 합니다.
 
-轮廓线结尾再次调用`MoveTo`或`RMoveTo`，其中开始新的轮廓或调用`Close`，用于关闭轮廓。 `Close`方法自动追加一条直线从当前的点分布的第一个点并将路径标记为已关闭，这意味着它将呈现而无需任何笔划大写字母。
+컨투어는 새 컨투어를 시작 하는 `MoveTo` 또는 `RMoveTo`에 대 한 다른 호출로 끝나지만 컨투어를 닫는 `Close`를 호출 합니다. `Close` 메서드는 현재 점에서 컨투어의 첫 번째 점에 직선을 자동으로 추가 하 고 경로를 닫힌 것으로 표시 합니다. 즉, 스트로크 캡 없이 렌더링 됩니다.
 
-打开和关闭分布图之间的差异所示**两个三角形轮廓**页上，使用`SKPath`具有两个要呈现两个三角形的轮廓的对象。 第一个轮廓线是打开和关闭第二个。 下面是[ `TwoTriangleContoursPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/TwoTriangleContoursPage.cs)类：
+열려 있는 컨투어와 닫힌 컨투어 간의 차이점은 두 개의 두 개의 2 개를 포함 하는 `SKPath` 개체를 사용 하 여 두 개의 삼각형을 렌더링 하는 **두 개의 삼각형 컨투어** 페이지에 나와 있습니다. 첫 번째 윤곽선 열려 하 고 두 번째 닫힙니다. [`TwoTriangleContoursPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/TwoTriangleContoursPage.cs) 클래스는 다음과 같습니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -99,33 +99,33 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-对的调用包含的第一个轮廓[ `MoveTo` ](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single))使用 X 和 Y 坐标而非`SKPoint`值后, 跟三个对[ `LineTo` ](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single))要绘制的三条边三角形。 第二个 contour 具有只有两个调用`LineTo`但完成通过调用 contour [ `Close` ](xref:SkiaSharp.SKPath.Close)，用于关闭轮廓。 重要的区别是：
+첫 번째 컨투어는 `SKPoint` 값이 아닌 X 및 Y 좌표를 사용 하는 [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) 에 대 한 호출로 구성 된 다음 세 개의 [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) 호출을 통해 삼각형의 세 면을 그립니다. 두 번째 컨투어는 `LineTo`에 대 한 두 개의 호출만 포함 하지만 컨투어를 닫는 [`Close`](xref:SkiaSharp.SKPath.Close)에 대 한 호출로 컨투어를 완료 합니다. 큰 차이:
 
 [![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
 
-正如您所看到的第一个轮廓显然是一系列的三个相互连接的直线，但结束时不会连接与的开始部分。 在顶部重叠两行。 第二个 contour 显然关闭并完成了一个更少`LineTo`调用因为`Close`方法自动添加最终行以关闭轮廓。
+알 수 있듯이 첫 번째 윤곽선은 일련의 세 가지 연결 된 선 있지만 끝 시작 부분을 사용 하 여 연결 하지 않습니다. 두 줄 맨 위에 있는 겹칩니다. 두 번째 컨투어는 명확 하 게 종결 되었으며 `Close` 메서드가 컨투어를 닫기 위해 최종 줄을 자동으로 추가 하기 때문에 하나 이상의 `LineTo` 호출로 수행 되었습니다.
 
-`SKCanvas` 只定义一个[ `DrawPath` ](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint))方法，该方法在本演示中调用了两次以填满并绘制路径。 所有轮廓进行都填充，甚至包括那些未关闭。 为了填充闭合的路径，则假定一条直线起点和终点的轮廓之间存在。 如果删除最后一个`LineTo`从第一个轮廓或删除`Close`从第二个分布，每个分布的调用都将拥有但会仅两个方面，就好像三角形填充。
+`SKCanvas`는 하나의 [`DrawPath`](xref:SkiaSharp.SKCanvas.DrawPath(SkiaSharp.SKPath,SkiaSharp.SKPaint)) 메서드만 정의 합니다 .이 데모에서는 경로를 채우고 스트로크 하기 위해 두 번 호출 됩니다. 모든 윤곽 가득 차면 닫혀 있지 않은 해당 합니다. 닫히지 않은 경로 채우기 위해, 직선 윤곽선의 시작점과 끝점 간에 존재로 간주 됩니다. 첫 번째 컨투어에서 마지막 `LineTo`을 제거 하거나 두 번째 컨투어에서 `Close` 호출을 제거 하는 경우 각 컨투어는 두 면만 갖지만 삼각형 인 것 처럼 채워집니다.
 
-`SKPath` 定义了许多其他方法和属性。 以下方法将整个分布图添加到路径，它可能已关闭或未关闭根据该方法：
+`SKPath`는 다른 여러 메서드 및 속성을 정의 합니다. 다음 방법 닫히거나 방법에 따라 닫히지 수 있는 경로 전체 윤곽을 추가 합니다.
 
 - [`AddRect`](xref:SkiaSharp.SKPath.AddRect*)
 - [`AddRoundedRect`](xref:SkiaSharp.SKPath.AddRoundedRect(SkiaSharp.SKRect,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddCircle`](xref:SkiaSharp.SKPath.AddCircle(System.Single,System.Single,System.Single,SkiaSharp.SKPathDirection))
 - [`AddOval`](xref:SkiaSharp.SKPath.AddOval(SkiaSharp.SKRect,SkiaSharp.SKPathDirection))
-- [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) 若要添加一条曲线的椭圆圆周上
-- [`AddPath`](xref:SkiaSharp.SKPath.AddPath*) 若要将另一路径添加到当前路径
-- [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath)) 若要按相反的顺序添加另一个路径
+- 타원의 원주에 곡선을 추가 [`AddArc`](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single))
+- 현재 경로에 다른 경로를 추가 [`AddPath`](xref:SkiaSharp.SKPath.AddPath*)
+- 반대 방향으로 다른 경로를 추가 [`AddPathReverse`](xref:SkiaSharp.SKPath.AddPathReverse(SkiaSharp.SKPath))
 
-请记住`SKPath`对象定义仅几何图形&mdash;一系列点和连接。 仅当`SKPath`与组合`SKPaint`对象是使用特定颜色、 笔划宽度等呈现的路径。 此外，请记住`SKPaint`对象传递给`DrawPath`方法定义特征的完整路径。 如果你想要绘制一些内容需要多个颜色，必须为每种颜色来使用一个单独的路径。
+`SKPath` 개체는 일련의 점과 연결 &mdash; 기 하 도형만 정의 합니다. `SKPath` `SKPaint` 개체와 결합 된 경우에만 특정 색, 스트로크 너비 등을 사용 하 여 렌더링 된 경로입니다. 또한 `DrawPath` 메서드에 전달 된 `SKPaint` 개체는 전체 경로의 특징을 정의 합니다. 여러 색 필요한 것 그리기 하려는 경우에 각 색에 대 한 별도 경로 사용 해야 합니다.
 
-就像由描边端点定义的开始和结束的行的外观，通过定义两行之间的连接的外观*笔划联接*。 通过设置来指定这[ `StrokeJoin` ](xref:SkiaSharp.SKPaint.StrokeJoin)的属性`SKPaint`成员[ `SKStrokeJoin` ](xref:SkiaSharp.SKStrokeJoin)枚举：
+선의 시작과 끝 모양이 스트로크 단면에 의해 정의 되는 것 처럼 두 줄 사이의 연결 모양은 *스트로크 조인*에 의해 정의 됩니다. `SKPaint`의 [`StrokeJoin`](xref:SkiaSharp.SKPaint.StrokeJoin) 속성을 [`SKStrokeJoin`](xref:SkiaSharp.SKStrokeJoin) 열거의 멤버로 설정 하 여이를 지정 합니다.
 
-- `Miter` 用于尖尖联接
-- `Round` 用于圆角联接
-- `Bevel` 已被截关闭联接
+- pointy join에 대 한 `Miter`
+- 둥근 조인에 대 한 `Round`
+- 잘라내야 조인에 대 한 `Bevel`
 
-**笔划联接**页面的显示了这三个绘制笔画，代码类似于联接**笔划大写字母**页。 这是`PaintSurface`中的事件处理程序[ `StrokeJoinsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs)类：
+스트로크 **조인** 페이지에는 스트로크 **단면** 페이지와 비슷한 코드와 세 가지 스트로크 조인이 표시 됩니다. 다음은 [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs) 클래스의 `PaintSurface` 이벤트 처리기입니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -193,9 +193,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 [![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
 
-斜接联接包含，其中用线条连接是尖角。 当在一个小角度加入两行时，斜接联接可能会变得相当长。 若要防止过长斜接联接，斜接联接的长度受限制的值[ `StrokeMiter` ](xref:SkiaSharp.SKPaint.StrokeMiter)属性的`SKPaint`。 超过此长度的斜接联接砍掉成为斜切接合。
+마이터 조인을 줄에 연결 하는 # 지점으로 구성 됩니다. 두 줄에 작은 각도로 가입 마이터 조인을 상당히 길어질 수 있습니다. 과도 하 게 긴 마이터 조인을 방지 하기 위해 사접 조인의 길이는 `SKPaint`의 [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) 속성 값에 의해 제한 됩니다. 이 길이 초과 하는 음 빗면 조인 되도록 잘려 됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos （示例）](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

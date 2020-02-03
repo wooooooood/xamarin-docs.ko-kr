@@ -99,7 +99,7 @@ Jenkins이 실행 되 고 있으면 사용자가 컴퓨터에 로그인 할 때�
 
 ### <a name="installing-plugins"></a>플러그 인 설치
 
-Jenkins 설치 관리자가 완료 되 면 Jenkins를 시작 하 고 아래 스크린샷에 표시 된 것 처럼 URL http://localhost:8080 를 사용 하 여 웹 브라우저를 시작 합니다.
+Jenkins 설치 관리자가 완료 되 면 Jenkins를 시작 하 고 아래 스크린샷에 표시 된 것 처럼 URL http://localhost:8080를 사용 하 여 웹 브라우저를 시작 합니다.
 
 [![](jenkins-walkthrough-images/image10.png "8080, as shown in this screenshot")](jenkins-walkthrough-images/image10.png#lightbox)
 
@@ -196,7 +196,7 @@ TFS에 대 한 명령줄 클라이언트를 설치한 후에는 `tf` 명령줄 �
 2. 텍스트 편집기에서 **~/.jenkins/config.xml** 파일을 엽니다.
 3. `<usesecurity></usesecurity>` 요소의 값을 `true`에서 `false`으로 변경 합니다.
 4. 파일에서 `<authorizationstrategy></authorizationstrategy>` 및 `<securityrealm></securityrealm>` 요소를 삭제 합니다.
-5. Jenkins를 다시 시작 합니다.
+5. Jenkins를 다시 시작합니다.
 
 ## <a name="setting-up-a-job"></a>작업 설정
 

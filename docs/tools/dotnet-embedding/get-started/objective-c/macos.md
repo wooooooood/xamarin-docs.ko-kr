@@ -15,11 +15,11 @@ ms.locfileid: "76725280"
 ---
 # <a name="getting-started-with-macos"></a>MacOS 시작
 
-## <a name="what-you-will-need"></a>필요한 항목
+## <a name="what-you-will-need"></a>필요한 사항
 
 * [목표 시작-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) 가이드의 지침을 따릅니다.
 
-## <a name="hello-world"></a>Hello World
+## <a name="hello-world"></a>Hello world
 
 먼저에서 C#간단한 hello 세계 예제를 빌드합니다.
 

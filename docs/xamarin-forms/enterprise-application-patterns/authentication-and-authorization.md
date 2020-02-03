@@ -18,17 +18,17 @@ ms.locfileid: "76725606"
 
 인증은 사용자의 이름 및 암호와 같은 id 자격 증명을 가져오고 기관에 대해 해당 자격 증명의 유효성을 검사 하는 프로세스입니다. 자격 증명이 유효 하면 자격 증명을 제출한 엔터티가 인증 된 id로 간주 됩니다. Id가 인증 되 면 권한 부여 프로세스에서 해당 id에 지정 된 리소스에 대 한 액세스 권한이 있는지 여부를 확인 합니다.
 
-有许多种集成到 Xamarin.Forms 应用 ASP.NET MVC web 应用程序，包括使用 ASP.NET Core 标识时，例如 Microsoft、 Google、 外部身份验证提供程序与之通信的身份验证和授权Facebook 或 Twitter 和身份验证中间件。 EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자가 IdentityServer에 로그인 해야 합니다. 그러나 IdentityServer는 인증을 위한 사용자 인터페이스 또는 데이터베이스를 제공 하지 않습니다. 因此，在 eShopOnContainers 引用应用程序中，ASP.NET Core标识用于此目的。
+인증 및 권한 부여를 ASP.NET Core Id 사용, Microsoft, Google 등의 외부 인증 공급자를 사용 하는 것을 포함 하 여 ASP.NET MVC 웹 응용 프로그램과 통신 하는 Xamarin Forms 앱에 통합 하는 방법에는 여러 가지가 있습니다. Facebook, Twitter 및 인증 미들웨어가 있습니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자가 IdentityServer에 로그인 해야 합니다. 그러나 IdentityServer는 인증을 위한 사용자 인터페이스 또는 데이터베이스를 제공 하지 않습니다. 따라서 eShopOnContainers 참조 응용 프로그램에서 ASP.NET Core Identity가이 목적으로 사용 됩니다.
 
-## <a name="authentication"></a>身份验证 （可能为英文网页）
+## <a name="authentication"></a>인증
 
-응용 프로그램에서 현재 사용자의 id를 알고 있어야 하는 경우 인증이 필요 합니다. ASP.NET Core 用于标识用户的主要机制是 ASP.NET Core 标识成员身份系统，它在由开发人员配置了数据存储中存储用户的信息。 일반적으로 사용자 지정 저장소나 타사 패키지를 사용 하 여 Azure storage, Azure Cosmos DB 또는 기타 위치에 id 정보를 저장할 수는 있지만이 데이터 저장소는 일반적으로 EntityFramework 저장소입니다.
+응용 프로그램에서 현재 사용자의 id를 알고 있어야 하는 경우 인증이 필요 합니다. 사용자를 식별 하는 ASP.NET Core의 기본 메커니즘은 개발자가 구성한 데이터 저장소에 사용자 정보를 저장 하는 ASP.NET Core Id 멤버 자격 시스템입니다. 일반적으로 사용자 지정 저장소나 타사 패키지를 사용 하 여 Azure storage, Azure Cosmos DB 또는 기타 위치에 id 정보를 저장할 수는 있지만이 데이터 저장소는 일반적으로 EntityFramework 저장소입니다.
 
-有关身份验证方案，请使用本地用户数据存储区，并且保留之间通过 cookie （就是典型 ASP.NET MVC web 应用程序中） 发出的请求的标识信息，则 ASP.NET Core 标识为合适的解决方案。 그러나 쿠키는 항상 데이터를 유지 하 고 전송 하는 자연 스러운 수단이 아닙니다. 例如，ASP.NET Core web 应用程序公开从移动应用程序访问的 RESTful 终结点通常需要使用持有者令牌身份验证，因为无法在此方案中使用 cookie。 그러나 전달자 토큰은 모바일 앱에서 수행 된 웹 요청의 권한 부여 헤더에 쉽게 검색 하 고 포함할 수 있습니다.
+로컬 사용자 데이터 저장소를 사용 하 고 쿠키를 통해 요청 간에 id 정보를 유지 하는 인증 시나리오의 경우 (ASP.NET MVC 웹 응용 프로그램에서 일반적으로) ASP.NET Core Identity가 적합 한 솔루션입니다. 그러나 쿠키는 항상 데이터를 유지 하 고 전송 하는 자연 스러운 수단이 아닙니다. 예를 들어 모바일 앱에서 액세스 하는 RESTful 끝점을 노출 하는 ASP.NET Core 웹 응용 프로그램은이 시나리오에서 쿠키를 사용할 수 없으므로 일반적으로 전달자 토큰 인증을 사용 해야 합니다. 그러나 전달자 토큰은 모바일 앱에서 수행 된 웹 요청의 권한 부여 헤더에 쉽게 검색 하 고 포함할 수 있습니다.
 
 ### <a name="issuing-bearer-tokens-using-identityserver-4"></a>IdentityServer 4를 사용 하 여 전달자 토큰 발급
 
-[IdentityServer 4](https://github.com/IdentityServer/IdentityServer4)有关 ASP.NET Core，可用于许多的身份验证和授权方案，包括颁发本地 ASP.NET Core 标识用户的安全令牌是一种开放源代码 OpenID Connect 和 OAuth 2.0 框架。
+[IdentityServer 4](https://github.com/IdentityServer/IdentityServer4) 는 로컬 ASP.NET Core id 사용자에 대 한 보안 토큰 발급을 비롯 한 여러 인증 및 권한 부여 시나리오에 사용할 수 있는 ASP.NET Core에 대 한 오픈 소스 openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
 
 > [!NOTE]
 > Openid connect Connect와 OAuth 2.0은 매우 비슷하며 책임이 서로 다릅니다.
@@ -53,7 +53,7 @@ EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하 여 인증을 
 
 ### <a name="adding-identityserver-to-a-web-application"></a>웹 응용 프로그램에 IdentityServer 추가
 
-为了使 ASP.NET Core web 应用程序使用 IdentityServer 4，必须将添加到 web 应用程序的 Visual Studio 解决方案。 자세한 내용은 IdentityServer 설명서에서 [개요](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) 를 참조 하세요.
+ASP.NET Core 웹 응용 프로그램에서 IdentityServer 4를 사용 하려면 웹 응용 프로그램의 Visual Studio 솔루션에 추가 해야 합니다. 자세한 내용은 IdentityServer 설명서에서 [개요](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) 를 참조 하세요.
 
 IdentityServer가 웹 응용 프로그램의 Visual Studio 솔루션에 포함 되 면 웹 응용 프로그램의 HTTP 요청 처리 파이프라인에 추가 해야 Openid connect Connect 및 OAuth 2.0 끝점에 대 한 요청을 처리할 수 있습니다. 이는 다음 코드 예제에서 보여 주는 것 처럼 웹 응용 프로그램의 `Startup` 클래스의 `Configure` 메서드에서 구현 됩니다.
 
@@ -95,12 +95,12 @@ public void ConfigureServices(IServiceCollection services)
 - 서명에 사용 되는 자격 증명입니다.
 - 사용자가 액세스를 요청할 수 있는 API 및 id 리소스입니다.
 - 요청 토큰에 연결 되는 클라이언트입니다.
-- ASP.NET Core 标识。
+- ASP.NET Core Id입니다.
 
 > [!TIP]
 > IdentityServer 4 구성을 동적으로 로드 합니다. IdentityServer 4의 Api를 사용 하면 구성 개체의 메모리 내 목록에서 IdentityServer를 구성할 수 있습니다. EShopOnContainers reference 응용 프로그램에서 이러한 메모리 내 컬렉션은 응용 프로그램에 하드 코딩 됩니다. 그러나 프로덕션 시나리오에서는 구성 파일이 나 데이터베이스에서 동적으로 로드할 수 있습니다.
 
-有关配置 IdentityServer 使用 ASP.NET Core 标识的信息，请参阅[使用 ASP.NET Core 标识](https://identityserver4.readthedocs.io/en/latest/quickstarts/6_aspnet_identity.html)IdentityServer 文档中。
+ASP.NET Core Identity를 사용 하도록 IdentityServer를 구성 하는 방법에 대 한 자세한 내용은 IdentityServer 설명서에서 [ASP.NET Core Identity 사용](https://identityserver4.readthedocs.io/en/latest/quickstarts/6_aspnet_identity.html) 을 참조 하세요.
 
 #### <a name="configuring-api-resources"></a>API 리소스 구성
 
@@ -219,7 +219,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 ### <a name="performing-authentication"></a>인증 수행
 
-IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자가 IdentityServer에 로그인 해야 합니다. 그러나 IdentityServer는 인증을 위한 사용자 인터페이스 또는 데이터베이스를 제공 하지 않습니다. 因此，在 eShopOnContainers 引用应用程序中，ASP.NET Core标识用于此目的。
+IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자가 IdentityServer에 로그인 해야 합니다. 그러나 IdentityServer는 인증을 위한 사용자 인터페이스 또는 데이터베이스를 제공 하지 않습니다. 따라서 eShopOnContainers 참조 응용 프로그램에서 ASP.NET Core Identity가이 목적으로 사용 됩니다.
 
 EShopOnContainers 모바일 앱은 그림 9-2에 나와 있는 하이브리드 인증 흐름을 사용 하 여 IdentityServer를 사용 하 여 인증 합니다.
 
@@ -364,7 +364,7 @@ public string CreateLogoutRequest(string token)
 
 이 메서드는 필수 매개 변수를 사용 하 여 IdentityServer의 [end session 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession)에 대 한 URI를 만듭니다. 종료 세션 끝점은 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 `/connect/endsession` 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
-반환 된 URI는 `LoginViewModel` 클래스의 `LoginUrl` 속성에 저장 됩니다. `IsLogin` 속성이 `true`되는 동안 `LoginView`의 [`WebView`](xref:Xamarin.Forms.WebView) 표시 됩니다. `WebView` 데이터는 [`Source`](xref:Xamarin.Forms.WebView.Source) 속성을 `LoginViewModel` 클래스의 `LoginUrl` 속성에 바인딩되므로 `LoginUrl` 속성이 IdentityServer의 end session endpoint로 설정 된 경우 로그 아웃 요청을 IdentityServer 합니다. 사용자가 로그인 하는 경우 IdentityServer가이 요청을 받으면 로그 아웃이 발생 합니다. 身份验证会跟踪与由从 ASP.NET Core cookie 身份验证中间件的 cookie。 따라서 IdentityServer에서 로그 아웃 하면 인증 쿠키가 제거 되 고 사후 로그 아웃 리디렉션 URI가 클라이언트에 다시 전송 됩니다.
+반환 된 URI는 `LoginViewModel` 클래스의 `LoginUrl` 속성에 저장 됩니다. `IsLogin` 속성이 `true`되는 동안 `LoginView`의 [`WebView`](xref:Xamarin.Forms.WebView) 표시 됩니다. `WebView` 데이터는 [`Source`](xref:Xamarin.Forms.WebView.Source) 속성을 `LoginViewModel` 클래스의 `LoginUrl` 속성에 바인딩되므로 `LoginUrl` 속성이 IdentityServer의 end session endpoint로 설정 된 경우 로그 아웃 요청을 IdentityServer 합니다. 사용자가 로그인 하는 경우 IdentityServer가이 요청을 받으면 로그 아웃이 발생 합니다. 인증은 ASP.NET Core에서 쿠키 인증 미들웨어에 의해 관리 되는 쿠키를 사용 하 여 추적 됩니다. 따라서 IdentityServer에서 로그 아웃 하면 인증 쿠키가 제거 되 고 사후 로그 아웃 리디렉션 URI가 클라이언트에 다시 전송 됩니다.
 
 모바일 앱에서 [`WebView`](xref:Xamarin.Forms.WebView) 가 사후 로그 아웃 리디렉션 URI로 리디렉션됩니다. 이 `WebView` 탐색을 수행 하면 `LoginViewModel` 클래스의 `NavigateAsync` 메서드가 실행 되며,이는 다음 코드 예제에 나와 있습니다.
 
@@ -391,9 +391,9 @@ private async Task NavigateAsync(string url)
 
 ## <a name="authorization"></a>권한 부여
 
-身份验证后，ASP.NET Core web Api 通常需要授予访问权限，这样，服务以使 Api 可供某些经过身份验证的用户，而不是为全部。
+인증 후에는 ASP.NET Core 웹 Api에서 액세스 권한을 부여 해야 하는 경우가 많습니다 .이 경우 서비스에서 일부 인증 된 사용자에 게 Api를 사용할 수 있지만 all은 허용 되지 않습니다.
 
-将访问限制为 ASP.NET Core MVC 路由可以通过将 Authorize 属性应用于控制器或操作，这可以限制访问控制器或操作到身份验证的用户，如下面的代码示例中所示：
+컨트롤러 또는 작업에 권한 부여 특성을 적용 하 여 ASP.NET Core MVC 경로에 대 한 액세스를 제한할 수 있습니다 .이는 다음 코드 예제에 표시 된 것 처럼 컨트롤러 또는 작업에 대 한 액세스를 인증 된 사용자로 제한 합니다.
 
 ```csharp
 [Authorize]  
@@ -474,7 +474,7 @@ EShopOnContainers 모바일 앱이 웹 요청을 만드는 방법에 대 한 자
 
 ## <a name="summary"></a>요약
 
-可以通过许多方法将身份验证和授权集成到与 ASP.NET MVC Web 应用程序进行通讯的 Xamarin.Forms 应用中， EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer 是用于与 ASP.NET Core标识来执行持有者令牌身份验证集成的 ASP.NET Core 的开放源代码 OpenID Connect 和 OAuth 2.0 框架。
+ASP.NET MVC 웹 응용 프로그램과 통신 하는 Xamarin. Forms 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer는 ASP.NET Core Id와 통합 되어 전달자 토큰 인증을 수행 하는 ASP.NET Core에 대 한 오픈 소스 Openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
 
 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. 리소스에 액세스할 때 권한 부여를 필요로 하는 Api에 대 한 요청에 액세스 토큰을 포함 해야 합니다. IdentityServer의 미들웨어는 들어오는 액세스 토큰의 유효성을 검사 하 여 신뢰할 수 있는 발급자 로부터 보내고이를 수신 하는 API에서 사용할 수 있는지 확인 합니다.
 

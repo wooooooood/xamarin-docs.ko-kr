@@ -118,7 +118,7 @@ Android 매니페스트에서 이러한 사용 권한을 설정 합니다. **And
 </manifest>
 ```
 
-위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. 예: `com.xamarin.gcmexample`.
+위의 XML에서 *YOUR_PACKAGE_NAME* 를 클라이언트 앱 프로젝트의 패키지 이름으로 변경 합니다. `com.xamarin.gcmexample`)을 입력합니다.
 
 ### <a name="check-for-google-play-services"></a>Google Play 서비스 확인
 
@@ -398,7 +398,7 @@ namespace ClientApp
 
 #### <a name="test-registration-with-gcm"></a>GCM을 사용한 테스트 등록
 
-앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예를 들면 다음과 같습니다.:
+앱을 완전히 다시 빌드하고 실행 해 보겠습니다. GCM에서 등록 토큰을 성공적으로 수신 하면 출력 창에 등록 토큰이 표시 되어야 합니다. 예를 들면 다음과 같습니다.
 
 ```shell
 D/Mono    ( 1934): Assembly Ref addref ClientApp[0xb4ac2400] -> Xamarin.GooglePlayServices.Gcm[0xb4ac2640]: 2

@@ -1,5 +1,5 @@
 ---
-title: Firebase 클라우드 메시징
+title: Firebase Cloud 메시징
 description: FCM (Firebase Cloud Messaging)는 모바일 앱과 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 FCM가 작동 하는 방식에 대 한 개요를 제공 하 고, 앱이 FCM을 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76723783"
 ---
-# <a name="firebase-cloud-messaging"></a>Firebase 클라우드 메시징
+# <a name="firebase-cloud-messaging"></a>Firebase Cloud 메시징
 
 _FCM (Firebase Cloud Messaging)는 모바일 앱과 서버 응용 프로그램 간의 메시징을 용이 하 게 하는 서비스입니다. 이 문서에서는 FCM가 작동 하는 방식에 대 한 개요를 제공 하 고, 앱이 FCM을 사용할 수 있도록 Google 서비스를 구성 하는 방법을 설명 합니다._
 
@@ -22,7 +22,7 @@ _FCM (Firebase Cloud Messaging)는 모바일 앱과 서버 응용 프로그램 �
 
 이 항목에서는 Firebase 클라우드 메시징에서 Xamarin Android 앱과 앱 서버 간에 메시지를 라우팅하는 방법에 대 한 개략적인 개요를 제공 하 고, 앱에서 FCM 서비스를 사용할 수 있도록 자격 증명을 획득 하는 단계별 절차를 제공 합니다.
 
-## <a name="overview"></a>概述
+## <a name="overview"></a>개요
 
 FCM (Firebase Cloud Messaging)은 서버 응용 프로그램과 모바일 클라이언트 앱 간에 메시지의 전송, 라우팅 및 큐를 처리 하는 플랫폼 간 서비스입니다. FCM는 GCM (Google Cloud Messaging의 후속 작업) 이며 Google Play 서비스를 기반으로 합니다.
 
@@ -141,7 +141,7 @@ Firebase 토픽 메시징에 대 한 자세한 내용은 Google 's [Android의 �
 
 Android에서 FCM 푸시 알림 메시지를 수신 하기 위해 **google 서비스** 를 앱 프로젝트에 추가 하는 방법에 대 한 자세한 예제는 [FCM를 사용 하 여 원격 알림](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md)을 참조 하세요.
 
-## <a name="for-further-reading"></a>추가 정보
+## <a name="for-further-reading"></a>추가 참고 자료
 
 - Google의 [Firebase 클라우드 메시징은](https://firebase.google.com/docs/cloud-messaging/) Firebase 클라우드 메시징의 주요 기능에 대 한 개요, 작동 방법에 대 한 설명 및 설치 지침을 제공 합니다.
 
@@ -157,4 +157,4 @@ Android에서 FCM 푸시 알림 메시지를 수신 하기 위해 **google 서�
 
 ## <a name="related-links"></a>관련 링크
 
-- [Firebase 클라우드 메시징](https://firebase.google.com/docs/cloud-messaging/)
+- [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)

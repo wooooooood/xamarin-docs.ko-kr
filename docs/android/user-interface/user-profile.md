@@ -45,7 +45,7 @@ if (cursor != null)
 }
 ```
 
-从 Android 4 (API 级别 14) 开始, 可通过`ContactsContract`提供程序使用 [ContactsContact.Profile](xref:Android.Provider.ContactsContract.Profile) 类。 `ContactsContact.Profile` 장치 소유자의 개인 프로필에 대 한 액세스를 제공 합니다. 여기에는 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터가 포함 됩니다.
+Android 4 (API 수준 14)부터, `ContactsContract` 공급자를 통해 [연락처](xref:Android.Provider.ContactsContract.Profile) 클래스를 사용할 수 있습니다. `ContactsContact.Profile` 장치 소유자의 개인 프로필에 대 한 액세스를 제공 합니다. 여기에는 장치 소유자의 이름 및 전화 번호와 같은 연락처 데이터가 포함 됩니다.
 
 ## <a name="required-permissions"></a>필요한 권한
 

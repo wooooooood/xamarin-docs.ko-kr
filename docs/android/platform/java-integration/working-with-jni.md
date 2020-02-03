@@ -18,7 +18,7 @@ ms.locfileid: "76724346"
 
 _Xamarin Android를 사용 하면 Java 대신 Android C# 앱을 작성할 수 있습니다. GoogleMaps 및 mono를 비롯 한 Java 라이브러리에 대 한 바인딩을 제공 하는 여러 어셈블리가 Xamarin.ios와 함께 제공 됩니다. 그러나 사용할 수 있는 모든 Java 라이브러리에 대해서는 바인딩이 제공 되지 않으며 제공 되는 바인딩은 모든 Java 형식 및 멤버를 바인딩할 수 없습니다. 바인딩되지 않은 Java 형식 및 멤버를 사용 하려면 JNI (Java Native Interface)를 사용할 수 있습니다. 이 문서에서는 JNI를 사용 하 여 Xamarin Android 응용 프로그램에서 Java 형식 및 멤버와 상호 작용 하는 방법을 보여 줍니다._
 
-## <a name="overview"></a>概述
+## <a name="overview"></a>개요
 
 Java 코드를 호출 하는 MCW (관리 되는 호출 가능 래퍼)를 만드는 것은 항상 필요 하거나 가능 하지 않습니다. 대부분의 경우 "인라인" JNI은 바인딩되지 않은 Java 멤버의 일회용 사용을 위해 완벽 하 게 허용 되 고 유용 합니다. JNI를 사용 하 여 전체 .jar 바인딩을 생성 하는 것 보다 Java 클래스에서 단일 메서드를 호출 하는 것이 더 간단 합니다.
 
@@ -64,7 +64,7 @@ Android 호출 가능 래퍼는 [빌드 프로세스](~/android/deploy-test/buil
 Android 인터페이스 (예: [IComponentCallbacks](xref:Android.Content.IComponentCallbacks))를 구현 해야 하는 경우가 있습니다.
 
 모든 Android 클래스 및 인터페이스는 [IJavaObject](xref:Android.Runtime.IJavaObject) 인터페이스를 확장 합니다. 따라서 모든 Android 형식은 `IJavaObject`를 구현 해야 합니다.
-Xamarin.ios는 `IJavaObject`를 사용 하 여 지정 된 관리 되는 형식에 대 한 Java 프록시 (Android 호출 가능 래퍼)를 Android에 제공 하는 &ndash;이 팩트를 활용 합니다. **Monodroid** 는 `Java.Lang.Object` 서브 클래스 (`IJavaObject`를 구현 해야 함)만 찾으므로, 서브클래싱 `Java.Lang.Object`는 관리 코드에서 인터페이스를 구현 하는 방법을 제공 합니다. 예를 들면 다음과 같습니다.:
+Xamarin.ios는 `IJavaObject`를 사용 하 여 지정 된 관리 되는 형식에 대 한 Java 프록시 (Android 호출 가능 래퍼)를 Android에 제공 하는 &ndash;이 팩트를 활용 합니다. **Monodroid** 는 `Java.Lang.Object` 서브 클래스 (`IJavaObject`를 구현 해야 함)만 찾으므로, 서브클래싱 `Java.Lang.Object`는 관리 코드에서 인터페이스를 구현 하는 방법을 제공 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -261,7 +261,7 @@ public static System.IO.Stream In
 
 ### <a name="method-binding"></a>메서드 바인딩
 
-Java 메서드는 C# 메서드 및 C# 속성으로 노출 됩니다. 例如, Java 方法[java.lang.Runtime.runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) 方法被绑定为 [Java.Lang.Runtime.RunFinalizersOnExit](xref:Java.Lang.Runtime.RunFinalizersOnExit*) 方法, 并将方法绑定为方法, 并将[java.lang.Object.getClass](https://developer.android.com/reference/java/lang/Object.html#getClass) 方法绑定为[Java.Lang.Object.Class](xref:Java.Lang.Object.Class)方法的对象, 并将其属性。
+Java 메서드는 C# 메서드 및 C# 속성으로 노출 됩니다. 예를 들어 java 메서드 [runFinalizersOnExit](https://developer.android.com/reference/java/lang/Runtime.html#runFinalizersOnExit(boolean)) 메서드는 [runFinalizersOnExit](xref:Java.Lang.Runtime.RunFinalizersOnExit*) 메서드로 바인딩되고, java. c a. g a [c. Getclass](https://developer.android.com/reference/java/lang/Object.html#getClass) 메서드는 [java. c](xref:Java.Lang.Object.Class) a c a. g a c 속성으로 바인딩됩니다.
 
 메서드 호출은 다음과 같은 두 단계로 진행 됩니다.
 
@@ -393,7 +393,7 @@ public Integer (int value)
 }
 ```
 
-[JNIEnv](xref:Android.Runtime.JNIEnv.CreateInstance*) 메서드는 `JNIEnv.FindClass`에서 반환 된 값에 대 한 `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`및 `JNIEnv.DeleteGlobalReference`를 수행 하는 도우미입니다. 자세한 내용은 다음 섹션을 참조하십시오.
+[JNIEnv](xref:Android.Runtime.JNIEnv.CreateInstance*) 메서드는 `JNIEnv.FindClass`에서 반환 된 값에 대 한 `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`및 `JNIEnv.DeleteGlobalReference`를 수행 하는 도우미입니다. 자세한 내용은 다음 섹션을 참조하세요.
 
 <a name="_Supporting_Inheritance,_Interfaces_1" />
 
@@ -657,7 +657,7 @@ public class Adder : Java.Lang.Object {
 }
 ```
 
-### <a name="restrictions"></a>제한 사항
+### <a name="restrictions"></a>제한
 
 다음 조건과 일치 하는 형식을 작성할 때:
 
@@ -665,7 +665,7 @@ public class Adder : Java.Lang.Object {
 
 1. `[Register]` 사용자 지정 특성 포함
 
-1. `RegisterAttribute.DoNotGenerateAcw`가 `true`인 경우
+1. `RegisterAttribute.DoNotGenerateAcw`은 `true`입니다.
 
 그런 다음 GC 상호 작용의 경우 형식에는 런타임에 `Java.Lang.Object` 또는 `Java.Lang.Object` 하위 클래스를 참조할 수 있는 필드가 없어야 *합니다* . 예를 들어 `System.Object` 형식의 필드와 모든 인터페이스 형식이 허용 되지 않습니다. `Java.Lang.Object` 인스턴스를 참조할 수 없는 형식 (예: `System.String` 및 `List<int>`)이 허용 됩니다. 이러한 제한 사항은 GC에의 한 개체 수집을 중간에 방지 하는 것입니다.
 
@@ -983,7 +983,7 @@ JNIEnv를 사용 하 여 제거할 수 있습니다 [.](xref:Android.Runtime.JNI
 
 ### <a name="dealing-with-jni-local-references"></a>JNI 로컬 참조 처리
 
-The [JNIEnv.GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*), [JNIEnv.GetStaticObjectField](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), [JNIEnv.CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*), [JNIEnv.CallNonvirtualObjectMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) 和 [JNIEnv.CallStaticObjectMethod](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) 方法返回一个`IntPtr`包含对 java 对象的 JNI 本地引用; 如果返回了 java `null`，则为`IntPtr.Zero`。 한 번에 처리 될 수 있는 제한 된 수의 로컬 참조 (512 개 항목)로 인해 참조가 적시에 삭제 되도록 하는 것이 좋습니다. 로컬 참조는 다음과 같은 세 가지 방법으로 처리할 수 있습니다. 명시적으로 삭제 하 고,이를 포함 하는 `Java.Lang.Object` 인스턴스를 만들고 `Java.Lang.Object.GetObject<T>()`를 사용 하 여 그 주위에 관리 되는 호출 가능 래퍼를 만듭니다.
+[JNIEnv GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*), [JNIEnv](xref:Android.Runtime.JNIEnv.GetStaticObjectField*), CallObjectMethod, JNIEnv, JNIEnv, JNI [,](xref:Android.Runtime.JNIEnv.CallObjectMethod*),,, [및](xref:Android.Runtime.JNIEnv.CallNonvirtualObjectMethod*) 는 java 개체에 대 한 로컬 참조를 포함 하는 `IntPtr`를 반환 하거나, java가 `null`를 반환 하는 경우 `IntPtr.Zero`을 반환 [합니다.](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) 한 번에 처리 될 수 있는 제한 된 수의 로컬 참조 (512 개 항목)로 인해 참조가 적시에 삭제 되도록 하는 것이 좋습니다. 로컬 참조는 다음과 같은 세 가지 방법으로 처리할 수 있습니다. 명시적으로 삭제 하 고,이를 포함 하는 `Java.Lang.Object` 인스턴스를 만들고 `Java.Lang.Object.GetObject<T>()`를 사용 하 여 그 주위에 관리 되는 호출 가능 래퍼를 만듭니다.
 
 ### <a name="explicitly-deleting-local-references"></a>명시적으로 로컬 참조 삭제
 
@@ -1034,7 +1034,7 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 
 1. `T`은 참조 형식 이어야 합니다.
 
-1. `T` `IJavaObject` 인터페이스를 구현 해야 합니다.
+1. `T`는 `IJavaObject` 인터페이스를 구현해야 합니다.
 
 1. `T` 추상 클래스 또는 인터페이스가 아니면 `T`는 매개 변수 형식이 `(IntPtr,
     JniHandleOwnership)` 인 생성자를 제공 해야 합니다.
@@ -1077,7 +1077,7 @@ JNI에서 필드 또는 메서드를 조회 하려면 필드 또는 메서드에
 
 여기서 `*`은 필드의 유형입니다.
 
-- [JNIEnv.GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*) &ndash;  读取不是内置类型的任何实例字段的值, 例如`java.lang.Object`、数组和接口类型。 반환 되는 값은 JNI 로컬 참조입니다.
+- [JNIEnv GetObjectField](xref:Android.Runtime.JNIEnv.GetObjectField*) &ndash; `java.lang.Object`, 배열 및 인터페이스 형식과 같은 기본 제공 형식이 아닌 모든 인스턴스 필드의 값을 읽습니다. 반환 되는 값은 JNI 로컬 참조입니다.
 
 - [JNIEnv GetBooleanField](xref:Android.Runtime.JNIEnv.GetBooleanField*) &ndash; `bool` 인스턴스 필드의 값을 읽습니다.
 
@@ -1211,21 +1211,21 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 여기서 `*`은 메서드의 반환 형식입니다.
 
-- [JNIEnv.CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*) &ndash; 调用返回非内置类型 (如`java.lang.Object`、数组和接口) 的方法。 반환 되는 값은 JNI 로컬 참조입니다.
+- [JNIEnv CallObjectMethod](xref:Android.Runtime.JNIEnv.CallObjectMethod*) &ndash; `java.lang.Object`, 배열 및 인터페이스와 같이 builtin이 아닌 형식을 반환 하는 메서드를 호출 합니다. 반환 되는 값은 JNI 로컬 참조입니다.
 
-- [JNIEnv.CallBooleanMethod](xref:Android.Runtime.JNIEnv.CallBooleanMethod*) &ndash; JNIEnv 调用返回`bool`值的方法。
+- [JNIEnv CallBooleanMethod](xref:Android.Runtime.JNIEnv.CallBooleanMethod*) &ndash; `bool` 값을 반환 하는 메서드를 호출 합니다.
 
-- [JNIEnv.CallByteMethod](xref:Android.Runtime.JNIEnv.CallByteMethod*) &ndash; 调用返回`sbyte`值的方法
+- [JNIEnv CallByteMethod](xref:Android.Runtime.JNIEnv.CallByteMethod*) &ndash; `sbyte` 값을 반환 하는 메서드를 호출 합니다.
 
-- [JNIEnv.CallCharMethod](xref:Android.Runtime.JNIEnv.CallCharMethod*) &ndash; 调用返回`char`值的方法。
+- [JNIEnv 메서드](xref:Android.Runtime.JNIEnv.CallCharMethod*) &ndash; `char` 값을 반환 하는 메서드를 호출 합니다.
 
-- [JNIEnv.CallShortMethod](xref:Android.Runtime.JNIEnv.CallShortMethod*) &ndash;  调用返回`short`值的方法。
+- [JNIEnv CallShortMethod](xref:Android.Runtime.JNIEnv.CallShortMethod*) &ndash; `short` 값을 반환 하는 메서드를 호출 합니다.
 
-- [JNIEnv.CallLongMethod](xref:Android.Runtime.JNIEnv.CallLongMethod*) &ndash; 调用返回`long`值的方法。
+- [JNIEnv 메서드](xref:Android.Runtime.JNIEnv.CallLongMethod*) &ndash; `long` 값을 반환 하는 메서드를 호출 합니다.
 
-- [JNIEnv.CallFloatMethod](xref:Android.Runtime.JNIEnv.CallFloatMethod*) &ndash; 调用返回`float`值的方法。
+- [JNIEnv CallFloatMethod](xref:Android.Runtime.JNIEnv.CallFloatMethod*) &ndash; `float` 값을 반환 하는 메서드를 호출 합니다.
 
-- [JNIEnv.CallDoubleMethod](xref:Android.Runtime.JNIEnv.CallDoubleMethod*) &ndash; 调用返回`double`值的方法。
+- [JNIEnv CallDoubleMethod](xref:Android.Runtime.JNIEnv.CallDoubleMethod*) &ndash; `double` 값을 반환 하는 메서드를 호출 합니다.
 
 ### <a name="non-virtual-method-invocation"></a>비가상 메서드 호출
 
@@ -1271,21 +1271,21 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 여기서 `*`은 메서드의 반환 형식입니다.
 
-- [JNIEnv.CallStaticObjectMethod](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) &ndash; 调用返回非内置`java.lang.Object`类型 (如、数组和接口) 的静态方法。 반환 되는 값은 JNI 로컬 참조입니다.
+- [JNIEnv](xref:Android.Runtime.JNIEnv.CallStaticObjectMethod*) 는 `java.lang.Object`, 배열 및 인터페이스와 같이 builtin이 아닌 형식을 반환 하는 정적 메서드를 호출 &ndash; 합니다. 반환 되는 값은 JNI 로컬 참조입니다.
 
-- [JNIEnv.CallStaticBooleanMethod](xref:Android.Runtime.JNIEnv.CallStaticBooleanMethod*) &ndash; 调用返回`bool`值的静态方法。
+- [JNIEnv CallStaticBooleanMethod](xref:Android.Runtime.JNIEnv.CallStaticBooleanMethod*) &ndash; `bool` 값을 반환 하는 정적 메서드를 호출 합니다.
 
-- [JNIEnv.CallStaticByteMethod](xref:Android.Runtime.JNIEnv.CallStaticByteMethod*) &ndash; 调用返回`sbyte`值的静态方法。
+- [JNIEnv CallStaticByteMethod](xref:Android.Runtime.JNIEnv.CallStaticByteMethod*) &ndash; `sbyte` 값을 반환 하는 정적 메서드를 호출 합니다.
 
-- [JNIEnv.CallStaticCharMethod](xref:Android.Runtime.JNIEnv.CallStaticCharMethod*) &ndash; 调用返回`char`值的静态方法。
+- [JNIEnv](xref:Android.Runtime.JNIEnv.CallStaticCharMethod*) 는 `char` 값을 반환 하는 정적 메서드를 호출 &ndash; 합니다.
 
-- [JNIEnv.CallStaticShortMethod](xref:Android.Runtime.JNIEnv.CallStaticShortMethod*) &ndash; 调用返回`short`值的静态方法。
+- [JNIEnv CallStaticShortMethod](xref:Android.Runtime.JNIEnv.CallStaticShortMethod*) &ndash; `short` 값을 반환 하는 정적 메서드를 호출 합니다.
 
-- [JNIEnv.CallStaticLongMethod](xref:Android.Runtime.JNIEnv.CallLongMethod*) &ndash; 调用返回`long`值的静态方法。
+- [JNIEnv 메서드](xref:Android.Runtime.JNIEnv.CallLongMethod*) 는 `long` 값을 반환 하는 정적 메서드를 호출 &ndash; 합니다.
 
-- [JNIEnv.CallStaticFloatMethod](xref:Android.Runtime.JNIEnv.CallStaticFloatMethod*) &ndash; 调用返回`float`值的静态方法。
+- [JNIEnv CallStaticFloatMethod](xref:Android.Runtime.JNIEnv.CallStaticFloatMethod*) &ndash; `float` 값을 반환 하는 정적 메서드를 호출 합니다.
 
-- [JNIEnv.CallStaticDoubleMethod](xref:Android.Runtime.JNIEnv.CallStaticDoubleMethod*) &ndash; 调用返回`double`值的静态方法。
+- [JNIEnv CallStaticDoubleMethod](xref:Android.Runtime.JNIEnv.CallStaticDoubleMethod*) &ndash; `double` 값을 반환 하는 정적 메서드를 호출 합니다.
 
 <a name="JNI_Type_Signatures" />
 
@@ -1314,8 +1314,8 @@ JNI 형식 시그니처는 다음과 같습니다.
 JNI 형식 참조는 Java 형식 참조와 다릅니다. JNI와 `java.lang.String` 같이 정규화 된 Java 형식 이름을 사용할 수 없습니다. 컨텍스트에 따라 JNI 변형 `"java/lang/String"` 또는 `"Ljava/lang/String;"`를 대신 사용 해야 합니다. 자세한 내용은 아래를 참조 하세요.
 JNI 형식 참조에는 다음 네 가지 유형이 있습니다.
 
-- **built-in**
-- **simplified**
+- **기본 제공**
+- **시킨**
 - **type**
 - **array**
 
@@ -1353,7 +1353,7 @@ JNI 형식 참조에는 다음 네 가지 유형이 있습니다.
 형식 참조는 배열 형식 참조 및 JNI 시그니처와 함께 사용 됩니다.
 
 형식 참조를 얻는 또 다른 방법은 `'javap -s -classpath android.jar fully.qualified.Java.Name'`의 출력을 읽는 것입니다.
-관련 된 형식에 따라 생성자 선언 또는 메서드 반환 형식을 사용 하 여 JNI 이름을 확인할 수 있습니다. 예를 들면 다음과 같습니다.:
+관련 된 형식에 따라 생성자 선언 또는 메서드 반환 형식을 사용 하 여 JNI 이름을 확인할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```shell
 $ javap -classpath android.jar -s java.lang.Thread.State

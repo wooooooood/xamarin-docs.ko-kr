@@ -20,9 +20,9 @@ OpenTK (개방형 도구 키트)는 OpenGL, OpenCL 및 OpenAL C# 작업을 용�
 
 [![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
 
-이 문서에서는 Xamarin.ios 응용 프로그램의 OpenTK에 대 한 기본 사항을 다룹니다. 强烈建议您先完成[Hello，Mac](~/mac/get-started/hello-mac.md)一文，特别是[Xcode 和 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder)及[输出口和操作](~/mac/get-started/hello-mac.md#outlets-and-actions)部分的简介，因为它涵盖了我们将在本文中使用的重要概念和技巧。
+이 문서에서는 Xamarin.ios 응용 프로그램의 OpenTK에 대 한 기본 사항을 다룹니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
-你可能想要查看[Xamarin](~/mac/internals/how-it-works.md)示例文档的 " C# [公开C#类/方法到目标-c](~/mac/internals/how-it-works.md) " 部分，它解释了用于将类连接到目标 c 对象和 UI 元素的 `Register` 和 `Export` 命令。
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적-c 섹션에 클래스/ C# 메서드 노출](~/mac/internals/how-it-works.md) 섹션을 살펴보면 C# 클래스를 목표-c 개체 및 UI 요소에 연결 하는 데 사용 되는 `Register` 및 `Export` 명령을 설명 합니다.
 
 <a name="About_OpenTK" />
 

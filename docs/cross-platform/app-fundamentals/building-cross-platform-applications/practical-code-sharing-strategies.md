@@ -1,6 +1,6 @@
 ---
 title: 5부 - 실제 코드 공유 전략
-description: 本文档介绍了实际代码共享方案，例如数据库、 文件访问、 网络操作和异步代码的策略。
+description: 이 문서에는 실제 코드 공유 전략 데이터베이스, 파일 액세스, 네트워크 작업 및 비동기 코드와 같은 시나리오에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
@@ -15,34 +15,34 @@ ms.locfileid: "76723632"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>5부 - 실제 코드 공유 전략
 
-本部分提供有关如何共享代码的常见应用程序方案的示例。
+이 섹션에서는 일반적인 응용 프로그램 시나리오에 대 한 코드를 공유 하는 방법의 예제를 제공 합니다.
 
-## <a name="data-layer"></a>数据层
+## <a name="data-layer"></a>데이터 계층
 
-数据层由存储引擎和方法来读取和写入信息构成。 出于性能、 灵活性和跨平台兼容性 SQLite 数据库引擎被建议 Xamarin 跨平台应用程序。
-它在各种平台包括 Windows、 Android、 iOS 和 mac 上运行
+데이터 계층 정보 읽기 및 쓰기 방법 및 저장소 엔진으로 구성 됩니다. 성능, 유연성 및 플랫폼 간 호환성을 SQLite에 대 한 데이터베이스 엔진은 Xamarin 플랫폼 간 응용 프로그램에 권장 됩니다.
+다양 한 Windows, Android, iOS 및 Mac.를 비롯 하 여 플랫폼에서 실행
 
 ### <a name="sqlite"></a>SQLite
 
-SQLite 是开放源代码数据库实现。 원본 및 설명서는 [SQLite.org](https://www.sqlite.org/)에서 찾을 수 있습니다. SQLite 지원은 각 모바일 플랫폼에서 사용할 수 있습니다.
+SQLite는 오픈 소스 데이터베이스 구현입니다. 원본 및 설명서는 [SQLite.org](https://www.sqlite.org/)에서 찾을 수 있습니다. SQLite 지원은 각 모바일 플랫폼에서 사용할 수 있습니다.
 
-- **iOS** – 内置于操作系统。
-- **Android** – 内置于操作系统自 Android 2.2 (API 级别 10)。
-- **Windows** – 请参阅[适用于通用 Windows 平台扩展的 SQLite](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936)。
+- **iOS** – 운영 체제에 기본 제공 됩니다.
+- **Android** – android 2.2 이후 운영 체제에 기본 제공 됩니다 (API 수준 10).
+- **Windows** – [유니버설 Windows 플랫폼 확장은 SQLite](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936)를 참조 하세요.
 
-即使使用数据库引擎在所有平台上，来访问数据库的本机方法是不同的。 这两种 iOS 和 Android 提供内置的 Api 从 Xamarin.iOS 或 Xamarin.Android 访问 SQLite 可供使用，但是使用本机 SDK 方法提供不能共享 （而不是可能的 SQL 查询本身，假定它们以字符串形式存储） 的代码. 有关本机数据库功能搜索的详细信息`CoreData`在 iOS 或 Android 的`SQLiteOpenHelper`类; 因为这些选项不是跨平台它们不在本文的讨论范围。
+모든 플랫폼에서 사용할 수 있는 데이터베이스 엔진을 사용 하더라도 데이터베이스에 액세스 하는 네이티브 메서드는 다릅니다. 하지만 IOS 및 Android Xamarin.iOS 또는 Xamarin.Android에서 사용할 수 있는 SQLite에 액세스 하는 기본 제공 Api를 제공, (아마도 SQL 쿼리 자체에 문자열로 저장 된 것으로 가정)이 아닌 코드를 공유 하는 기능이 없습니다 제공 네이티브 SDK 메서드를 사용 하 여 모두 . 네이티브 데이터베이스 기능에 대 한 자세한 내용은 iOS 또는 Android의 `SQLiteOpenHelper` 클래스에서 `CoreData`를 검색 합니다. 이러한 옵션은 플랫폼 간이 아니기 때문에이 문서에서는 다루지 않습니다.
 
 ### <a name="adonet"></a>ADO.NET
 
-Xamarin.iOS 和 Xamarin.Android 的支持`System.Data`并`Mono.Data.Sqlite`(请参阅 Xamarin.iOS[文档](~/ios/data-cloud/system.data.md)的详细信息)。
-使用这些命名空间，可编写适用于这两个平台的 ADO.NET 代码。 编辑项目的引用，包括`System.Data.dll`和`Mono.Data.Sqlite.dll`并添加以下 using 语句至代码：
+Xamarin.ios 및 Xamarin.ios는 모두 `System.Data` 및 `Mono.Data.Sqlite`를 지원 합니다 (자세한 내용은 Xamarin.ios [설명서](~/ios/data-cloud/system.data.md) 참조).
+이러한 네임 스페이스를 사용 하 여 두 플랫폼 모두에서 작동 하는 ADO.NET 코드를 작성할 수 있습니다. `System.Data.dll` 및 `Mono.Data.Sqlite.dll`를 포함 하도록 프로젝트의 참조를 편집 하 고 다음 using 문을 코드에 추가 합니다.
 
 ```csharp
 using System.Data;
 using Mono.Data.Sqlite;
 ```
 
-将工作，下面的示例代码：
+다음 샘플 코드 작동 합니다.
 
 ```csharp
 string dbPath = Path.Combine (
@@ -79,24 +79,24 @@ using (var contents = connection.CreateCommand ()) {
 connection.Close ();
 ```
 
-很明显会跨不同的方法和类 （此示例中是仅用于演示目的） 拆分 ADO.NET 的实际实现。
+ADO.NET의 실제 구현은 분명히 다른 메서드 및 클래스 (이 예제는 데모용 으로만 제공)으로 분리 되어 있습니다.
 
-### <a name="sqlite-net--cross-platform-orm"></a>SQLite NET – 跨平台 ORM
+### <a name="sqlite-net--cross-platform-orm"></a>SQLite-NET-플랫폼 간 ORM
 
-ORM （或对象关系映射程序） 尝试简化在类中建模的数据的存储。 而不是该表创建或选择手动编写 SQL 查询，手动从提取的插入和删除数据类的字段和属性，ORM 额外提供一层会为你的代码。 使用反射来检查您的类结构，ORM 可以自动创建表和列匹配的一个类并生成查询，以读取和写入数据。 这允许应用程序代码，只需发送和检索到的 ORM，负责实质上的所有 SQL 操作的对象实例。
+ORM (개체 관계형 매퍼 또는) 클래스에서 모델링 하는 데이터의 저장소를 단순화 하려고 합니다. 대신 수동으로 추출 된 데이터를 삽입 및 삭제 클래스 필드 하 고 해당 작업을 수행 하는 코드의 레이어를 추가 하는 속성을 ORM 수동으로 해당 테이블 만들기 또는 선택에는 SQL 쿼리를 작성 합니다. 리플렉션을 사용 하 여 클래스의 구조를 검사, ORM을 자동으로 만들 수는 클래스와 일치 하 고 쿼리 된 데이터 읽기 및 쓰기를 생성 하는 테이블 및 열입니다. 이 응용 프로그램 코드가 단순히 보내고 개체 인스턴스 내부에서 모든 SQL 작업을 처리 하는 ORM 검색할 수 있습니다.
 
-SQLite NET 充当一个简单的 ORM，您可以保存和检索您在 SQLite 中的类。 它会隐藏跨平台编译器指令和其他技巧相结合的 SQLite 访问的复杂性。
+SQLite-NET 저장 하 고 SQLite 클래스를 검색할 수 있는 부분은 단순한 ORM으로 작동 합니다. 크로스 컴파일러 지시문 및 다른 유용한 정보를 조합 하 여 SQLite 액세스 플랫폼의 복잡성을 숨깁니다.
 
-SQLite NET 功能：
+SQLite-NET의 기능은 다음과 같습니다.
 
-- 通过将属性添加到模型的类定义的表。
-- 数据库实例都由的子类`SQLiteConnection`，SQLite 的网络库中的主类。
-- 数据可以插入、 查询和删除使用的对象。 任何 SQL 语句不是必需的 （尽管您可以编写 SQL 语句，如果需要）。
-- 可以对返回的 SQLite NET 集合执行基本的 Linq 查询。
+- 모델 클래스에 특성을 추가 하 여 테이블 정의 됩니다.
+- 데이터베이스 인스턴스는 SQLite 라이브러리의 기본 클래스인 `SQLiteConnection`의 서브 클래스로 표현 됩니다.
+- 쿼리 및 삭제 된 개체를 사용 하 여 데이터를 삽입할 수 있습니다. SQL 문이 없습니다는 (하지만 필요한 경우 SQL 문을 작성할 수 있습니다)에 필요 합니다.
+- SQLite-NET 반환한 컬렉션에 대해 기본 Linq 쿼리를 수행할 수 있습니다.
 
-源代码和 SQLite NET 文档位于[github 上的 SQLite Net](https://github.com/praeclarum/sqlite-net)和已实现了这两个案例研究。 SQLite NET 代码的简单示例 (从*Tasky Pro*案例研究) 如下所示。
+SQLite의 소스 코드 및 설명서는 [github의 sqlite](https://github.com/praeclarum/sqlite-net) 에서 사용할 수 있으며 사례 연구에서 구현 되었습니다. 예를 들어 *Tasky Pro* 사례 연구에서 SQLITE-NET 코드의 간단한 예를 볼 수 있습니다.
 
-首先，`TodoItem`类使用属性来定义将字段设为数据库主密钥：
+먼저 `TodoItem` 클래스는 특성을 사용 하 여 필드를 데이터베이스 기본 키로 정의 합니다.
 
 ```csharp
 public class TodoItem : IBusinessEntity
@@ -110,13 +110,13 @@ public class TodoItem : IBusinessEntity
 }
 ```
 
-这允许`TodoItem`表上使用下面这行代码 （以及任何 SQL 语句） 创建`SQLiteConnection`实例：
+이를 통해 `SQLiteConnection` 인스턴스에서 다음 코드 줄 (및 SQL 문 없음)을 사용 하 여 `TodoItem` 테이블을 만들 수 있습니다.
 
 ```csharp
 CreateTable<TodoItem> ();
 ```
 
-表中的数据还与其他方法在操作`SQLiteConnection`（同样，无需进行的 SQL 语句）：
+테이블의 데이터는 SQL 문을 요구 하지 않고 `SQLiteConnection`의 다른 메서드를 사용 하 여 조작할 수도 있습니다.
 
 ```csharp
 Insert (TodoItem); // 'task' is an instance with data populated in its properties
@@ -124,31 +124,31 @@ Update (TodoItem); // Primary Key field must be populated for Update to work
 Table<TodoItem>.ToList(); // returns all rows in a collection
 ```
 
-请参阅完整的示例案例研究源代码。
+전체 예제에 대 한 사례 연구 소스 코드를 참조 하세요.
 
 ## <a name="file-access"></a>파일 액세스
 
-文件访问是确定以任何应用程序的关键部分。 可能不属于应用程序包含的文件的常见示例：
+파일 액세스는 특정 응용 프로그램의 핵심 부분입니다. 응용 프로그램의 일부일 수도 있는 파일의 일반적인 예제:
 
-- SQLite 数据库文件。
-- 用户生成 （文本、 图像、 声音、 视频） 的数据。
-- 下载用于缓存 （映像、 html 或 PDF 文件） 的数据。
+- SQLite 데이터베이스 파일입니다.
+- 사용자 생성 데이터 (텍스트, 이미지, 사운드, 비디오).
+- 캐싱 (이미지, html 또는 PDF 파일)에 대 한 다운로드 한 데이터입니다.
 
-### <a name="systemio-direct-access"></a>System.IO 直接访问权限
+### <a name="systemio-direct-access"></a>System.IO 직접 액세스
 
-Xamarin.iOS 和 Xamarin.Android 允许使用中的类的文件系统访问`System.IO`命名空间。
+Xamarin.ios 및 Xamarin.ios는 모두 `System.IO` 네임 스페이스의 클래스를 사용 하 여 파일 시스템에 액세스할 수 있습니다.
 
-每个平台都有不同的访问限制，必须加以考虑：
+각 플랫폼에는 고려해 야 하는 다양 한 액세스 제한 사항이지 않습니다 있습니다.
 
-- iOS 应用程序具有严格限制的文件系统访问权限的沙盒中运行。 Apple 进一步决定了如何通过指定会备份某些位置 （和其他人不是） 应使用文件系统。 请参阅[使用 Xamarin.iOS 中的文件系统](~/ios/app-fundamentals/file-system.md)更多详细信息的指南。
-- Android 还将访问限制为某些目录中与应用程序，但它也支持外部媒体 （例如。 SD 卡） 和访问共享的数据。
-- Windows Phone 8 (Silverlight) 不允许直接进行文件访问权限 – 仅可以使用操作文件`IsolatedStorage`。
-- Windows 8.1 WinRT 和 Windows 10 UWP 项目中只提供通过异步文件操作`Windows.Storage`Api，这不同于其他平台。
+- iOS 응용 프로그램은 매우 제한 된 파일 시스템 액세스를 사용 하 여 샌드박스에서 실행합니다. 추가 Apple 백업 된 특정 위치 (및 기타 없는)를 지정 하 여 파일 시스템을 사용 해야 하는 방법을 지정 합니다. 자세한 내용은 [xamarin.ios에서 파일 시스템 사용](~/ios/app-fundamentals/file-system.md) 가이드를 참조 하세요.
+- Android 응용 프로그램에 관련 된 특정 디렉터리에도 액세스를 제한 하지만 또한 지원 외부 미디어 (예: SD 카드) 및 공유 데이터에 액세스 합니다.
+- Windows Phone 8 (Silverlight)는 직접 파일 액세스를 허용 하지 않습니다. 파일은 `IsolatedStorage`를 사용 해야만 조작할 수 있습니다.
+- Windows 8.1 WinRT 및 Windows 10 UWP 프로젝트는 다른 플랫폼과 다른 `Windows.Storage` Api를 통해서만 비동기 파일 작업을 제공 합니다.
 
-#### <a name="example-for-ios-and-android"></a>适用于 iOS 和 Android 示例
+#### <a name="example-for-ios-and-android"></a>IOS 및 Android에 대 한 예제
 
-将写入和读取文本文件的简单示例如下所示。
-使用`Environment.GetFolderPath`允许运行 iOS 和 Android，其中的每个返回基于其文件系统约定是有效的目录上相同的代码。
+텍스트 파일을 읽고 작성 하는 간단한 예는 다음과 같습니다.
+`Environment.GetFolderPath`를 사용 하면 동일한 코드를 iOS 및 Android에서 실행할 수 있으며, 각각은 파일 시스템 규칙에 따라 올바른 디렉터리를 반환 합니다.
 
 ```csharp
 string filePath = Path.Combine (
@@ -158,14 +158,14 @@ System.IO.File.WriteAllText (filePath, "Contents of text file");
 Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
-请参阅 Xamarin.iOS[使用文件系统](~/ios/app-fundamentals/file-system.md)文档的特定于 iOS 的文件系统功能的详细信息。 编写跨平台文件访问代码时，请记住某些文件系统区分大小写，并且具有不同的目录分隔符。 建议的文件名始终使用相同的大小写和`Path.Combine()`方法构造文件或目录路径时。
+IOS 관련 파일 시스템 기능에 대 한 자세한 내용은 [파일 시스템](~/ios/app-fundamentals/file-system.md) 문서를 참조 하세요. 플랫폼 간 파일 액세스 코드를 작성 하는 경우에 일부 파일 시스템 대 소문자를 구분 하 고 다른 디렉터리 구분 기호가 해야 합니다. 파일 또는 디렉터리 경로를 생성할 때 파일 이름에 대해 항상 동일한 대/소문자를 사용 하 고 `Path.Combine()` 방법을 사용 하는 것이 좋습니다.
 
-### <a name="windowsstorage-for-windows-8-and-windows-10"></a>对于 Windows 8 和 Windows 10 的 Windows.Storage
+### <a name="windowsstorage-for-windows-8-and-windows-10"></a>Windows 8 및 Windows 10에 대 한 Windows.Storage
 
 *Xamarin.ios를 사용 하 여 Mobile Apps 만들기* [문서](https://developer.xamarin.com/r/xamarin-forms/book/) 는 [20 장
 . Async 및 File i/o](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) [에는 Windows 8.1 및 Windows 10에 대 한 샘플이](https://github.com/xamarin/xamarin-forms-book-preview-2/tree/master/Chapter20)포함 되어 있습니다.
 
-使用[ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md)就可以读取和文件，使用支持的 Api 这些平台上的文件：
+[`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) 사용 하면 지원 되는 api를 사용 하 여 이러한 플랫폼에서 파일을 읽고 파일을 읽을 수 있습니다.
 
 ```csharp
 StorageFolder localFolder = ApplicationData.Current.LocalFolder;
@@ -174,38 +174,38 @@ IStorageFile storageFile = await localFolder.CreateFileAsync("MyFile.txt",
 await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 ```
 
-请参阅[书籍章节](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf)的更多详细信息。
+자세한 내용은 [책 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 을 참조 하세요.
 
 <a name="Isolated_Storage" />
 
-### <a name="isolated-storage-on-windows-phone-7--8-silverlight"></a>在 Windows Phone 7 和 8 (Silverlight) 上的独立的存储
+### <a name="isolated-storage-on-windows-phone-7--8-silverlight"></a>Windows Phone 7 및 8 (Silverlight)에서 격리 된 저장소
 
-独立的存储来保存和加载文件跨所有 iOS、 Android 和较旧的 Windows Phone 平台是通用的 API。
+격리 된 저장소는 일반적인 API 저장 하 고 모든 iOS, Android 및 이전 버전의 Windows Phone 플랫폼과 간에 파일을 로드 합니다.
 
-它是默认的机制用于在已实现了 Xamarin.iOS 和 Xamarin.Android 以允许公共文件访问代码编写的 Windows Phone (Silverlight) 中的文件访问。 `System.IO.IsolatedStorage`类，可以在所有三个平台中引用[共享项目](~/cross-platform/app-fundamentals/shared-projects.md)。
+쓸 일반적인 파일 액세스 코드를 허용 하려면 Xamarin.iOS 및 Xamarin.Android에서 구현 된 Windows Phone (Silverlight)에서 파일 액세스를 위한 기본 메커니즘입니다. `System.IO.IsolatedStorage` 클래스는 [공유 프로젝트](~/cross-platform/app-fundamentals/shared-projects.md)의 세 플랫폼에서 모두 참조할 수 있습니다.
 
-请参阅[独立存储概述为 Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx)有关详细信息。
+자세한 내용은 [격리 된 저장소 Windows Phone 개요](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) 를 참조 하세요.
 
-独立存储 Api 中不可用[的可移植类库](~/cross-platform/app-fundamentals/pcl.md)。 PCL 的一个替代方法是[PCLStorage NuGet](https://pclstorage.codeplex.com/)
+격리 된 저장소 Api는 [이식 가능한 클래스 라이브러리](~/cross-platform/app-fundamentals/pcl.md)에서 사용할 수 없습니다. PCL의 한 가지 대안은 [Pclstorage NuGet](https://pclstorage.codeplex.com/) 입니다.
 
-### <a name="cross-platform-file-access-in-pcls"></a>在 Pcl 中的跨平台文件访问
+### <a name="cross-platform-file-access-in-pcls"></a>Pcl에서 플랫폼 간 파일 액세스
 
 또한 Xamarin 지원 플랫폼 및 최신 Windows Api에 대 한 플랫폼 간 파일 액세스 기능을 지 원하는 PCL 호환 NuGet – [Pclstorage](https://www.nuget.org/packages/PCLStorage/) 가 있습니다.
 
-## <a name="network-operations"></a>网络操作
+## <a name="network-operations"></a>네트워크 작업
 
-大多数移动应用程序将具有网络组件，例如：
+대부분의 모바일 응용 프로그램에는 예를 들어 네트워킹 구성 요소로 제공 됩니다.
 
-- 下载图像、 视频和音频 （例如。 缩略图、 照片、 音乐）。
-- 下载文档 （例如。 HTML、 PDF)。
-- 上传用户数据 （如照片或文本）。
-- 访问 web 服务或第三方 Api （包括 SOAP、 XML 或 JSON）。
+- 이미지, 비디오 및 오디오 (예: 다운로드 미리 보기, 사진, 음악)입니다.
+- (예: 문서를 다운로드합니다. HTML, PDF)입니다.
+- 사용자 데이터 (예: 사진 또는 텍스트)를 업로드 합니다.
+- 웹 서비스 또는 제 3 자 (포함 하 여 SOAP, XML 또는 JSON) Api에 액세스합니다.
 
-.NET Framework 提供几个不同的类，用于访问网络资源： `HttpClient`， `WebClient`，和`HttpWebRequest`。
+.NET Framework는 네트워크 리소스에 액세스 하기 위한 몇 가지 클래스 `HttpClient`, `WebClient`및 `HttpWebRequest`를 제공 합니다.
 
 ### <a name="httpclient"></a>HttpClient
 
-`HttpClient`类中`System.Net.Http`命名空间现已推出 Xamarin.iOS、 Xamarin.Android 和大多数 Windows 平台。 이 API를 이식 가능한 클래스 라이브러리 (및 Windows Phone 8 Silverlight)로 가져오는 데 사용할 수 있는 [MICROSOFT HTTP 클라이언트 라이브러리 NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/) 이 있습니다.
+`System.Net.Http` 네임 스페이스의 `HttpClient` 클래스는 Xamarin.ios, Xamarin Android 및 대부분의 Windows 플랫폼에서 사용할 수 있습니다. 이 API를 이식 가능한 클래스 라이브러리 (및 Windows Phone 8 Silverlight)로 가져오는 데 사용할 수 있는 [MICROSOFT HTTP 클라이언트 라이브러리 NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/) 이 있습니다.
 
 ```csharp
 var client = new HttpClient();
@@ -215,11 +215,11 @@ var response = await myClient.SendAsync(request);
 
 ### <a name="webclient"></a>WebClient
 
-`WebClient`类提供了一个简单的 API 来检索远程数据从远程服务器。
+`WebClient` 클래스는 원격 서버에서 원격 데이터를 검색 하는 간단한 API를 제공 합니다.
 
-通用 Windows 平台运营*必须*是异步的即使 Xamarin.iOS 和 Xamarin.Android 支持同步操作 （这可以在后台线程上执行）。
+Xamarin.ios 및 Xamarin이 동기 작업 (백그라운드 스레드에서 수행할 수 있음)을 지원 하더라도 유니버설 Windows 플랫폼 작업은 비동기적 이어야 *합니다* .
 
-对于简单的异步代码`WebClient`操作：
+간단한 보조적 `WebClient` 작업에 대 한 코드는 다음과 같습니다.
 
 ```csharp
 var webClient = new WebClient ();
@@ -232,15 +232,15 @@ webClient.Encoding = System.Text.Encoding.UTF8;
 webClient.DownloadStringAsync (new Uri ("http://some-server.com/file.xml"));
 ```
 
- `WebClient` 还有`DownloadFileCompleted`和`DownloadFileAsync`来检索二进制数据。
+ `WebClient`에는 이진 데이터를 검색 하는 `DownloadFileCompleted` 및 `DownloadFileAsync` 있습니다.
 
 <a name="HttpWebRequest" />
 
 ### <a name="httpwebrequest"></a>HttpWebRequest
 
-`HttpWebRequest` 提供了更多自定义比`WebClient`，因此需要更多代码以使用。
+`HttpWebRequest`는 `WebClient` 보다 더 많은 사용자 지정 기능을 제공 하므로 더 많은 코드를 사용 해야 합니다.
 
-为简单的同步代码`HttpWebRequest`操作：
+간단한 동기 `HttpWebRequest` 작업에 대 한 코드는 다음과 같습니다.
 
 ```csharp
 var request = HttpWebRequest.Create(@"http://some-server.com/file.xml ");
@@ -258,68 +258,68 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 }
 ```
 
-还有一个示例中的我们[Web 服务文档](~/cross-platform/data-cloud/web-services/index.md)。
+[웹 서비스 설명서](~/cross-platform/data-cloud/web-services/index.md)에는 예제가 있습니다.
 
  <a name="Reachability" />
 
-### <a name="reachability"></a>可访问性
+### <a name="reachability"></a>연결 가능성
 
-在各种从快速的 Wi-fi 网络条件或 4g 连接到不佳的接待和慢速边缘数据链接下运行的移动设备。 因此，它是网络的很好的做法检测网络是否可用，因此，哪些类型是否可用，然后再尝试连接到远程服务器。
+모바일 장치에서 빠른 Wi-fi 네트워크 조건의 다양 한 또는 4g 연결 저하 비치 및 느린 지 데이터 연결을 작동합니다. 이 인해 것이 네트워크를 사용할 수 있는지와, 어떤 유형의 네트워크는 경우 원격 서버에 연결 하기 전에 검색 하는 것이 좋습니다.
 
-移动应用可能需要在这些情况下的操作包括：
+이러한 상황에서 모바일 앱을 소요 하는 동작은 다음과 같습니다.
 
-- 如果网络不可用，告知用户。 如果它们已手动将其禁用 （例如。 飞行模式或关闭 Wi-fi） 然后它们可以解决此问题。
-- 如果连接是 3g，应用程序的行为可能有所不同 （例如，Apple 不允许应用程序超过 20 Mb，要下载超过 3g）。 应用程序可以使用此信息来警告用户过多的下载时间检索大型文件时。
-- 即使网络不可用，它是很好的做法启动其他请求之前验证与目标服务器的连接。 这将阻止应用的网络操作超时，重复，并且还允许信息更丰富的错误消息来向用户显示。
+- 네트워크를 사용할 수 없는 경우 사용자는 것이 좋습니다. 경우는 수동으로 사용 하지 않도록 설정한 것 (예: 비행기 모드 또는 Wi-fi 해제) 다음 문제를 해결할 수 있습니다.
+- 응용 프로그램을 다르게 동작할 수 있습니다 3g 연결을 사용 하는 경우 (예를 들어 Apple 없도록 앱 3g 개 다운로드 20mb 보다 큰). 응용 프로그램이이 정보를 사용 하 여 과도 한 다운로드에 대 한 사용자에 게 알립니다 수 큰 파일을 검색할 때 시간입니다.
+- 네트워크를 사용할 수 있는 경우에 것 다른 요청을 시작 하기 전에 대상 서버를 사용 하 여 연결을 확인 하는 것이 좋습니다. 앱의 네트워크 작업 시간 초과 반복적으로 방지 되 고도 사용자에 게 표시 되는 자세한 오류 메시지를 허용 됩니다.
 
 ## <a name="webservices"></a>WebServices
 
-请参阅我们的文档[使用 Web 服务](~/cross-platform/data-cloud/web-services/index.md)，其中涵盖访问其余部分中，使用 Xamarin.iOS 的 SOAP 和 WCF 终结点。 它可以手动创建 web 服务请求和分析响应，但也有可用于使这更简单，包括 Azure、 RestSharp 和 ServiceStack 库。 即使基本 WCF 操作可访问 Xamarin 应用程序中。
+Xamarin.ios를 사용 하 여 REST, SOAP 및 WCF 끝점에 액세스 하는 [웹 서비스 작업](~/cross-platform/data-cloud/web-services/index.md)에 대 한 설명서를 참조 하세요. 웹 서비스 요청을 직접 만들 수 있습니다 하 고 개 훨씬 Azure, RestSharp, ServiceStack 등 이렇게 하려면 사용할 수 있는 라이브러리는 응답을 구문 분석 합니다. 기본 WCF 작업 Xamarin 앱에서 액세스할 수 있습니다.
 
 ### <a name="azure"></a>Azure
 
-Microsoft Azure 是一个云平台，提供各种适用于移动应用，包括数据存储和同步和推送通知服务。
+Microsoft Azure는 다양 한 데이터 저장소 및 동기화 및 푸시 알림을 포함 하 여 모바일 앱에 대 한 서비스를 제공 하는 클라우드 플랫폼입니다.
 
-请访问[azure.microsoft.com](https://azure.microsoft.com/)免费试用。
+[Azure.microsoft.com](https://azure.microsoft.com/) 을 방문 하 여 무료로 사용해 보세요.
 
 ### <a name="restsharp"></a>RestSharp
 
-RestSharp 是一个.NET 库，可以包括在移动应用程序提供简化了对 web 服务的访问的 REST 客户端。 它通过提供一个简单的 API 来请求数据和分析的 REST 响应来帮助。 RestSharp 很有用
+RestSharp에 웹 서비스에 대 한 액세스를 간소화 하는 REST 클라이언트를 제공 하는 모바일 응용 프로그램에 포함 될 수 있는.NET 라이브러리입니다. 데이터를 요청 하 고 REST 응답을 구문 분석 하는 간단한 API를 제공 하 여 도움이 됩니다. RestSharp 유용할 수 있습니다.
 
-[RestSharp 网站](http://restsharp.org/)包含[文档](https://github.com/restsharp/RestSharp/wiki)如何实现使用 RestSharp 的 REST 客户端。
-RestSharp 上提供了 Xamarin.iOS 和 Xamarin.Android 示例[github](https://github.com/restsharp/RestSharp/)。
+[RestSharp 웹 사이트](http://restsharp.org/) 는 RestSharp를 사용 하 여 REST 클라이언트를 구현 하는 방법에 대 한 [설명서](https://github.com/restsharp/RestSharp/wiki) 를 포함 합니다.
+RestSharp는 [github](https://github.com/restsharp/RestSharp/)에서 Xamarin.ios 및 xamarin Android 예제를 제공 합니다.
 
-此外，还有 Xamarin.iOS 代码片段中的我们[Web 服务文档](~/cross-platform/data-cloud/web-services/index.md)。
+[웹 서비스 설명서](~/cross-platform/data-cloud/web-services/index.md)에는 xamarin.ios 코드 조각도 있습니다.
 
  <a name="ServiceStack" />
 
 ### <a name="servicestack"></a>ServiceStack
 
-ServiceStack 与 RestSharp，这两个服务器端解决方案来承载 web 服务，以及可以在移动应用程序访问这些服务中实现一个客户端库。
+RestSharp, 달리 ServiceStack는 모두는 서버 쪽 솔루션 해당 서비스에 액세스 하는 모바일 응용 프로그램에서 구현 될 수 있는 클라이언트 라이브러리 뿐만 아니라 웹 서비스 호스트입니다.
 
-[ServiceStack 网站](http://servicestack.net/)文档和代码示例说明用途的项目和链接。 示例包括 web 服务，以及可以访问它的各种客户端应用程序的完整服务器端实现。
+[Servicestack 웹 사이트](http://servicestack.net/) 는 프로젝트의 목적과 문서 및 코드 샘플에 대 한 링크를 설명 합니다. 예제에 액세스할 수 있는 다양 한 클라이언트 쪽 응용 프로그램 뿐만 아니라 웹 서비스의 완전 한 서버 쪽 구현을 포함 됩니다.
 
 ### <a name="wcf"></a>WCF
 
-Xamarin 工具可以帮助您使用一些 Windows Communication Foundation (WCF) 服务。 一般情况下，Xamarin 支持 WCF 附带了 Silverlight 运行时的相同客户端的子集。 这包括最常见编码和协议的 WCF 的实现： 文本编码的 SOAP 消息通过 HTTP 传输协议使用`BasicHttpBinding`。
+Xamarin 도구는 일부 Windows Communication Foundation (WCF) 서비스를 사용할 수 있습니다. 일반적으로 Xamarin Silverlight 런타임과 함께 제공 되는 WCF의 동일한 클라이언트 쪽 하위 집합을 지원 합니다. 여기에는 `BasicHttpBinding`를 사용 하 여 HTTP 전송 프로토콜을 통해 텍스트 인코딩된 SOAP 메시지의 가장 일반적인 인코딩 및 프로토콜 구현이 포함 됩니다.
 
-由于的大小和 WCF 框架的复杂性，可能会超出由 Xamarin 的客户端子集域支持的作用域的当前和未来的服务实现。 此外，WCF 支持需要使用工具仅在 Windows 环境以生成代理中可用。
+크기 및 WCF 프레임 워크의 복잡성으로 인해 Xamarin 클라이언트 하위 도메인에서 지원 되는 범위 밖에 서 속하는 현재 및 향후 서비스 구현이 있을 수 있습니다. 또한 WCF 지원만 프록시를 생성할 Windows 환경에서 사용할 수 있는 도구의 사용을 해야 합니다.
 
  <a name="Threading" />
 
 ## <a name="threading"></a>스레딩
 
-应用程序响应能力非常重要的移动应用程序 – 用户期望应用程序能够加载和快速执行。 冻结屏幕将停止接受用户输入将出现以指示应用程序崩溃，所以一定不能阻塞 UI 线程长时间运行阻塞调用，例如网络请求或缓慢本地操作 （如解压缩文件）。 特别是在启动过程不应包含长时间运行的任务 – 所有移动平台将终止花很长时间加载的应用。
+응용 프로그램 응답성은 모바일 응용 프로그램에 대 한 중요 한 – 사용자가 예상 응용 프로그램을 로드 하 고 신속 하 게 수행 합니다. 사용자 입력을 수락 하는 중지 하도록 지정 하는 응용 프로그램에서 반복적인 충돌이 발생, 네트워크 요청과 같은 장기 실행 차단 호출 또는 느린 로컬 작업 (예: 파일 압축을 푸는)를 사용 하 여 UI 스레드를 연결할 필요가 반드시 표시 되는 '고정된' 화면입니다. 특히 시작 프로세스에는 장기 실행 작업 없어야 합니다.-모든 모바일 플랫폼을 로드 하는 데 오랜를 사용 하는 앱을 종료 합니다.
 
-这意味着您的用户界面应实现进度指示器或快速显示，否则为可用 UI 和异步任务来执行后台操作。 执行后台任务需要的使用的线程，这意味着后台任务需要一种方法要发送回主线程以指示进度或工作已完成。
+즉, '진행률 표시기' 또는 '사용'이 고, 그렇지 되는 UI를 표시 하려면 빠른 및 비동기 작업 백그라운드 작업을 수행 하려면 사용자 인터페이스 구현 해야 합니다. 백그라운드 작업 실행 완료 될 때 또는 백그라운드 작업 요구 사항 진행률을 나타내는 주 스레드로 다시 통신 하는 방법이 즉 스레드를 사용을 해야 합니다.
 
  <a name="Parallel_Task_Library" />
 
-### <a name="parallel-task-library"></a>并行任务库
+### <a name="parallel-task-library"></a>병렬 작업 라이브러리
 
-使用并行任务库创建的任务可以以异步方式运行，并返回其调用线程，使其非常适用于触发长时间运行的操作而不会阻止用户界面上。
+병렬 작업 라이브러리를 사용 하 여 만든 작업이 비동기적으로 실행 하 고 해당 사용자 인터페이스를 차단 하지 않고 장기 실행 작업을 트리거하는 데 매우 유용 쉽게 호출 스레드에서 반환 수 있습니다.
 
-简单的并行任务操作可能如下所示：
+간단한 병렬 작업을이 같습니다.
 
 ```csharp
 using System.Threading.Tasks;
@@ -331,9 +331,9 @@ void MainThreadMethod ()
 }
 ```
 
-该键`TaskScheduler.FromCurrentSynchronizationContext()`这将重复使用的调用该方法的线程 SynchronizationContext.Current (此处运行的主线程`MainThreadMethod`) 作为封送到该线程后的调用的方法。 这意味着如果在 UI 线程上调用方法时，它将运行`ContinueWith`回 UI 线程上的操作。
+키는 `TaskScheduler.FromCurrentSynchronizationContext()` (여기서는 `MainThreadMethod`를 실행 하는 주 스레드) 메서드를 호출 하는 스레드의 SynchronizationContext를 다시 사용 하 여 해당 스레드에 대 한 호출을 다시 마샬링하는 방법으로 사용 됩니다. 즉, UI 스레드에서 메서드가 호출 되 면 UI 스레드에서 `ContinueWith` 작업을 다시 실행 합니다.
 
-如果代码从其他线程开始任务，使用以下模式来创建对 UI 线程的引用，该任务可以仍对其进行调用：
+코드를 다른 스레드에서 작업의 시작을 UI 스레드에 대 한 참조를 만들려면 다음 패턴을 사용 하 고 태스크를 다시 호출할 여전히 수 있습니다.
 
 ```csharp
 static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
@@ -341,18 +341,18 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
  <a name="Invoking_on_the_UI_Thread" />
 
-### <a name="invoking-on-the-ui-thread"></a>在 UI 线程上调用
+### <a name="invoking-on-the-ui-thread"></a>UI 스레드에서 호출
 
-对于不使用并行任务库的代码，每个平台都有其自己的语法的封送处理回 UI 线程的操作：
+병렬 작업 라이브러리를 활용 하지 않습니다 하는 코드에 대 한 각 플랫폼에 UI 스레드로 다시 마샬링 작업에 대 한 자체 구문이 있습니다.
 
 - **iOS** – `owner.BeginInvokeOnMainThread(new NSAction(action))`
 - **Android** – `owner.RunOnUiThread(action)`
-- **Xamarin.Forms** – `Device.BeginInvokeOnMainThread(action)`
+- **Xamarin.ios** – `Device.BeginInvokeOnMainThread(action)`
 - **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
 
-IOS 和 Android 的语法要求的 'context' 类可用于这意味着该代码需要将此对象传递到需要在 UI 线程上的回调的任何方法。
+IOS 및 Android 구문 즉,이 개체에 필요한 UI 스레드에서 콜백 메서드를 전달 해야 하는 코드를 사용할 수는 '컨텍스트' 클래스에 필요 합니다.
 
-若要共享代码中进行 UI 线程调用，请按照[IDispatchOnUIThread 示例](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net)(由[ @follesoe ](https://twitter.com/follesoe))。 声明和程序对`IDispatchOnUIThread`接口中的共享代码，然后实现特定于平台的类，如下所示：
+공유 코드에서 UI 스레드를 호출 하려면 [IDispatchOnUIThread 예제](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) ( [@follesoe](https://twitter.com/follesoe))를 따르세요. 및 프로그램을 공유 코드의 `IDispatchOnUIThread` 인터페이스로 선언 하 고 다음과 같이 플랫폼별 클래스를 구현 합니다.
 
 ```csharp
 // program to the interface in shared code
@@ -387,10 +387,10 @@ public class DispatchAdapter : IDispatchOnUIThread {
 }
 ```
 
-Xamarin.Forms 开发人员应使用[ `Device.BeginInvokeOnMainThread` ](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads)常见代码 （共享的项目或 PCL） 中。
+Xamarin Forms 개발자는 공용 코드 (공유 프로젝트 또는 PCL)에서 [`Device.BeginInvokeOnMainThread`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) 를 사용 해야 합니다.
 
  <a name="Platform_and_Device_Capabilities_and_Degradation" />
 
-## <a name="platform-and-device-capabilities-and-degradation"></a>平台和设备功能和性能降低
+## <a name="platform-and-device-capabilities-and-degradation"></a>플랫폼 및 장치 기능 및 성능 저하
 
-进一步处理不同的功能的具体示例给出了平台功能文档。 它可以处理检测不同的功能以及如何妥善降级应用程序提供良好的用户体验，即使应用程序不能运行，对其全部潜能。
+더 다양 한 기능을 사용 하 여 처리 하는 특정 예제는 플랫폼 기능 설명서에 제공 됩니다. 검색 다양 한 기능 및 앱의 전체 잠재력을 수행할 수 없습니다 하는 경우에는 뛰어난 사용자 환경을 제공 하는 응용 프로그램을 정상적으로 저하 하는 방법을 다룹니다.

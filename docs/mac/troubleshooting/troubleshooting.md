@@ -17,7 +17,7 @@ ms.locfileid: "76725442"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Xamarin.ios 문제 해결 팁
 
-## <a name="overview"></a>概述
+## <a name="overview"></a>개요
 
 때로는 API를 사용 하 여 원하는 방식으로 또는 버그를 해결할 수 없는 경우에도 프로젝트에서 작업 하는 동안 문제가 발생할 수 있습니다. Xamarin의 목표는 모바일 및 데스크톱 응용 프로그램을 작성 하는 데 도움이 되는 것 이며, 도움이 되는 몇 가지 리소스를 제공 했습니다.
 

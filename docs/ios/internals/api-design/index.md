@@ -93,7 +93,7 @@ Xamarin.ios에는 *Xamarin.ios 프로필*을 구성 하는 많은 어셈블리�
 
 Xamarin.ios는 목표-C C# 의 클래스 계층 구조에서 미러링합니다. 예를 들어, 목표-C 기본 클래스 NSObject는 C# [Foundation.](xref:Foundation.NSObject)n e s 개체를 통해 사용할 수 있습니다.
 
-이 네임 스페이스는 기본 목표-C Foundation 형식에 대 한 바인딩을 제공 하지만 일부 경우에는 기본 형식을 .NET 형식에 매핑 했습니다. 예를 들면 다음과 같습니다.:
+이 네임 스페이스는 기본 목표-C Foundation 형식에 대 한 바인딩을 제공 하지만 일부 경우에는 기본 형식을 .NET 형식에 매핑 했습니다. 예를 들면 다음과 같습니다.
 
 - Nsstring 및 [nsstring](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html)를 처리 하는 대신 런타임은 API 전체에 C# [문자열](xref:System.String)s와 강력한 형식의 [배열을](xref:System.Array)제공 합니다.
 
@@ -190,7 +190,7 @@ PreserveAttribute는 응용 프로그램의 크기를 줄이기 위해 응용 �
 
 애플리케이션이 정적으로 연결하지 않은 모든 멤버는 제거됩니다. 따라서이 특성은 정적으로 참조 되지 않지만 응용 프로그램에 필요한 멤버를 표시 하는 데 사용 됩니다.
 
-예를 들어 형식을 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지하는 것이 좋습니다. XML serialization을 사용하는 경우 형식의 속성을 유지하는 것이 좋습니다.
+예를 들어 형식을 동적으로 인스턴스화하는 경우 형식의 기본 생성자를 유지하는 것이 좋습니다. XML 직렬화를 사용하는 경우에 형식의 속성을 유지하는 것이 좋습니다.
 
 같은 형식의 모든 멤버 또는 형식 자체에 이 특성을 적용할 수 있습니다. 전체 형식을 유지 하려는 경우 형식에 대해 [Preserve (AllMembers = true)] 구문을 사용할 수 있습니다.
 
@@ -236,7 +236,7 @@ UIView [] GetViews ();
 
 `NSArray`을 직접 사용 하려는 경우에는 `NSArray`에 몇 가지 방법이 노출 되지만 API 바인딩에서 사용 하지 않는 것이 좋습니다.
 
-또한 CoreGraphics API에서 `CGRect`, `CGPoint` 및 `CGSize`를 노출 하는 대신 **Classic API** 에서 개발자가 OpenTK를 사용 하는 기존 OpenGL 코드를 유지 하는 데 도움이 되는 `System.Drawing`, `RectangleF`, `PointF` 구현으로 대체 했습니다. 새 64 비트 **Unified API**를 사용 하는 경우 CoreGraphics API를 사용 해야 합니다.
+또한 CoreGraphics API에서 `CGRect`, `CGPoint` 및 `CGSize`를 노출 하는 대신 **Classic API** 에서 개발자가 OpenTK를 사용 하는 기존 OpenGL 코드를 유지 하는 데 도움이 되는 `System.Drawing`, `RectangleF`, `PointF` 구현으로 대체 했습니다.`SizeF` 새 64 비트 **Unified API**를 사용 하는 경우 CoreGraphics API를 사용 해야 합니다.
 
 #### <a name="inheritance"></a>상속
 
@@ -283,7 +283,7 @@ Xamarin.ios에서는 이러한 대리자에 바인딩하는 세 가지 상호 �
 
 ##### <a name="via-events"></a>Via 이벤트
 
-많은 형식에 대해 Xamarin.ios는 `UIWebViewDelegate` 호출을 이벤트로 C# 전달 하는 적절 한 대리자를 자동으로 만듭니다. `UIWebView`의 경우:
+많은 형식에 대해 Xamarin.ios는 `UIWebViewDelegate` 호출을 이벤트로 C# 전달 하는 적절 한 대리자를 자동으로 만듭니다. `UIWebView`의 경우
 
 - WebViewDidStartLoad 메서드는 [Uiwebview 보기. LoadStarted](xref:UIKit.UIWebView.LoadStarted) 이벤트에 매핑됩니다.
 - WebViewDidFinishLoad 메서드는 [Uiwebview 보기. LoadFinished](xref:UIKit.UIWebView.LoadFinished) 이벤트에 매핑됩니다.
@@ -358,7 +358,7 @@ web.Delegate = new Notifier ();
 강력한 형식의 속성 외에도 개발자가 원하는 경우 다른 항목을 바인딩할 수 있도록 하는 약한 형식의 대리자도 있습니다.
 강력한 형식의 `Delegate` 속성이 Xamarin.ios의 바인딩에서 노출 되는 모든 위치에서 해당 하는 `WeakDelegate` 속성도 노출 됩니다.
 
-`WeakDelegate`사용 하는 경우 [내보내기](xref:Foundation.ExportAttribute) 특성을 사용 하 여 클래스를 적절 하 게 데코레이팅 하 여 선택기를 지정할 책임이 있습니다. 예를 들면 다음과 같습니다.:
+`WeakDelegate`사용 하는 경우 [내보내기](xref:Foundation.ExportAttribute) 특성을 사용 하 여 클래스를 적절 하 게 데코레이팅 하 여 선택기를 지정할 책임이 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 class Notifier : NSObject  {
@@ -573,7 +573,7 @@ public class MyViewController : UIViewController {
 var controller = new MyViewController ("HelloWorld", NSBundle.MainBundle, this);
 ```
 
-그러면 NIB에서 사용자 인터페이스가 로드 됩니다. 이제 콘센트에 액세스 하려면 런타임에 액세스 하려는 런타임에 알려야 합니다. 이렇게 하려면 `UIViewController` 하위 클래스가 속성을 선언 하 고 [Connect] 특성으로 주석을 추가 해야 합니다. 다음과 같습니다.
+그러면 NIB에서 사용자 인터페이스가 로드 됩니다. 이제 콘센트에 액세스 하려면 런타임에 액세스 하려는 런타임에 알려야 합니다. 이렇게 하려면 `UIViewController` 하위 클래스가 속성을 선언 하 고 [Connect] 특성으로 주석을 추가 해야 합니다. 다음과 같이:
 
 ```csharp
 [Connect]
@@ -595,13 +595,13 @@ Mac용 Visual Studio 및 인터페이스 작성기를 사용 하는 경우이에
 
 목표-C 프로그래밍의 핵심 개념은 선택기입니다. 선택기를 전달 해야 하는 Api를 통해 또는 코드에서 선택기에 응답할 것으로 예상 하는 경우가 많습니다.
 
-에서 C# 새 선택기를 만드는 것은 매우 쉽습니다. `ObjCRuntime.Selector` 클래스의 새 인스턴스를 만들고이를 필요로 하는 API의 모든 장소에서 결과를 사용 하기만 하면 됩니다. 예를 들면 다음과 같습니다.:
+에서 C# 새 선택기를 만드는 것은 매우 쉽습니다. `ObjCRuntime.Selector` 클래스의 새 인스턴스를 만들고이를 필요로 하는 API의 모든 장소에서 결과를 사용 하기만 하면 됩니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-C# 메서드가 선택기 호출에 응답 하는 경우 `NSObject` 형식에서 상속 해야 하며, `[Export]` 특성을 C# 사용 하 여 해당 메서드를 선택기 이름으로 데코레이팅 해야 합니다. 예를 들면 다음과 같습니다.:
+C# 메서드가 선택기 호출에 응답 하는 경우 `NSObject` 형식에서 상속 해야 하며, `[Export]` 특성을 C# 사용 하 여 해당 메서드를 선택기 이름으로 데코레이팅 해야 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public class MyMath : NSObject {

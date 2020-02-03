@@ -100,7 +100,7 @@ NSProcessInfo.ProcessInfo.EndActivity(activity);
 
 ### <a name="reacting-to-low-power-mode"></a>낮은 전원 모드로 응답
 
-[Nsprocessinfo](xref:Foundation.NSProcessInfo) 클래스의 `LowPowerModeEnabled` 속성을 사용 하 여 앱이 실행 되 고 있는 iOS 장치에서 낮은 전원 모드를 사용 하도록 설정 했는지 확인 합니다. 예를 들면 다음과 같습니다.:
+[Nsprocessinfo](xref:Foundation.NSProcessInfo) 클래스의 `LowPowerModeEnabled` 속성을 사용 하 여 앱이 실행 되 고 있는 iOS 장치에서 낮은 전원 모드를 사용 하도록 설정 했는지 확인 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Is the device in low power mode?
@@ -124,7 +124,7 @@ Xamarin.ios에서 HealthKit를 사용 하는 방법에 대 한 자세한 내용�
 
 Apple에는 iOS 9의 [로컬 인증](xref:LocalAuthentication) 프레임 워크에 대 한 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-- 使用 [LAContext 类](xref:LocalAuthentication.LAContext)的`EvaluateAccessControl`和`EvaluatePolicy`方法, 你现在可以重新使用之前成功解除锁定尝试的 Touch ID 匹配项 。
+- 이제 [LAContext](xref:LocalAuthentication.LAContext) 클래스의 `EvaluateAccessControl` 및 `EvaluatePolicy` 메서드를 사용 하 여 이전에 성공한 잠금 해제 시도의 Touch ID 일치를 재사용할 수 있습니다.
 - 현재 등록 된 손가락의 목록을 가져올 수 있습니다.
 - 손가락을 인증에서 추가 하거나 제거 하는 경우 추적을 지원 합니다.
 - 키 집합 호출에서 _인증 컨텍스트_ 를 사용 하 고 키 집합 액세스 제어 목록을 평가 하는 기능이 제공 됩니다.
@@ -220,7 +220,7 @@ Apple은 iOS 9의 터치 이벤트에 대해 몇 가지 향상 된 기능을 제
 
 새 `NSLayoutAnchor` 및 `NSLayoutDimension` 레이아웃 앵커 클래스는 [Uiview](xref:UIKit.UIView) 클래스의 새 앵커 속성 (예: `LeadingAnchor` 및 `WidthAnchor`)을 사용 하 여 iOS 9에서 레이아웃을 보다 쉽게 만들 수 있습니다.
 
-有关如何在 Xamarin iOS 应用中使用自动版式和大小类的详细信息, 请参阅我们的[统一情节提要文档简介](~/ios/user-interface/storyboards/unified-storyboards.md)和 Apple 的[NSLayoutAnchor 参考](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)[NSLayoutDimension 参考](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension)和[UIView 参考](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView)。
+Xamarin.ios 앱 및 Apple의 [Nslayoutanchor 참조](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutAnchor_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutAnchor)에서 자동 레이아웃 및 크기 클래스 작업에 대 한 자세한 내용은 [통합 storyboard 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 설명서를 참조 하세요. 자세한 내용은 [Nslayoutanchor 참조](https://developer.apple.com/library/prerelease/ios/documentation/AppKit/Reference/NSLayoutDimension_ClassReference/index.html#//apple_ref/occ/cl/NSLayoutDimension) 및 [uiview 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/cl/UIView) 를 참조 하세요.
 
 ### <a name="new-readable-content-margins"></a>새 읽을 수 있는 콘텐츠 여백
 

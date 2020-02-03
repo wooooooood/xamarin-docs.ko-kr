@@ -48,7 +48,7 @@ Xamarin 기반 앱에서 새로운 Android 5.0 기능을 사용 하려면 다음
 
 - Android SDK Manager를 통해 **Android SDK** &ndash; Android 5.0 (API 21) 이상을 설치 해야 합니다.
 
-- **Java 开发人员工具包** &ndash; Xamarin.Android 需要 [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 如果要针对 API 级别24或更高版本进行开发, 则需要安装 Xamarin 1.8 或更高版本 (JDK 1.8 还支持早于24的 api 级别, 包括棒糖形)。 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우 64 비트 버전의 JDK 1.8이 필요 합니다.
+- Xamarin.ios &ndash; **Java 개발자 키트** 를 사용 하려면 api 수준 24 이상에 대해 개발 하는 경우 jdk [1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 이상이 필요 합니다 (jdk 1.8은 롤리팝을 비롯 하 여 24 이전 API 수준도 지원 함). 사용자 지정 컨트롤 또는 폼 미리 보기를 사용 하는 경우 64 비트 버전의 JDK 1.8이 필요 합니다.
 
 API 레벨 23 또는 이전 버전을 개발 하는 경우에는 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 을 계속 사용할 수 있습니다.
 
@@ -83,7 +83,7 @@ Android 5.0 프로젝트를 만들려면 최신 도구 및 SDK 패키지를 설�
 
 참고: Android L Preview를 대상으로 하는 기존 Android 프로젝트를 업데이트 하는 경우 **대상 프레임 워크** 및 **android 버전** 을 위에서 설명한 값으로 업데이트 해야 합니다.
 
-## <a name="important-changes"></a>重要更改
+## <a name="important-changes"></a>중요 한 변경 내용
 
 이전에 게시 된 Android 앱은 Android 5.0 변경의 영향을 받을 수 있습니다. 특히 Android 5.0는 새로운 런타임과 상당한 변경 된 알림 형식을 사용 합니다.
 
@@ -418,7 +418,7 @@ Android 5.0에는 `RemoteControlClient`를 대체 하는 새로운 `Android.Medi
 
 Android 5.0의 새로운 미디어 재생 제어 기능에 대 한 자세한 내용은 [미디어](https://developer.android.com/about/versions/android-5.0.html#Media)를 참조 하세요.
 
-### <a name="storage"></a>저장소
+### <a name="storage"></a>스토리지
 
 Android 5.0는 응용 프로그램이 디렉터리와 문서를 쉽게 사용할 수 있도록 저장소 액세스 프레임 워크를 업데이트 합니다.
 

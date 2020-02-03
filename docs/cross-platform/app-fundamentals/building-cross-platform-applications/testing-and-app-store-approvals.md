@@ -50,7 +50,7 @@ Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-u
 
 ## <a name="unit-testing"></a>단위 테스트
 
-### <a name="touchunit"></a>터치 단위
+### <a name="touchunit"></a>Touch.Unit
 
 Xamarin.ios에는 JUnit/NUnit 스타일을 작성 하는 데 따르는 Touch. Unit 이라는 단위 테스트 프레임 워크가 포함 되어 있습니다.
 

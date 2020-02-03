@@ -1,6 +1,6 @@
 ---
-title: 第 2 章的摘要。 应用剖析
-description: 使用 Xamarin.Forms 创建移动应用： 第 2 章的摘要。 应用剖析
+title: 요약 2 장입니다. 앱 분석
+description: 'Xamarin.Forms를 사용 하 여 모바일 앱 만들기: 2 장 요약 합니다. 앱 분석'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
@@ -14,165 +14,165 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76724996"
 ---
-# <a name="summary-of-chapter-2-anatomy-of-an-app"></a>第 2 章的摘要。 应用剖析
+# <a name="summary-of-chapter-2-anatomy-of-an-app"></a>요약 2 장입니다. 앱 분석
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 
 > [!NOTE]
-> 此页上的说明表明其中 Xamarin.Forms 已脱离一书中介绍的内容的区域。
+> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
 
-在 Xamarin.Forms 应用程序中，占用屏幕空间的对象称为*可视元素*、 通过封装[ `VisualElement` ](xref:Xamarin.Forms.VisualElement)类。 可视元素可以拆分为三个类别对应于这些类：
+Xamarin.ios 응용 프로그램에서 화면에 공간을 차지 하는 개체는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스에 의해 캡슐화 된 *시각적 요소*라고 합니다. 시각적 요소는 이러한 클래스에 해당 하는 세 가지 범주로 분할 될 수 있습니다.
 
-- [페이지](xref:Xamarin.Forms.Page)
+- [호출](xref:Xamarin.Forms.Page)
 - [레이아웃](xref:Xamarin.Forms.Layout)
 - [보기](xref:Xamarin.Forms.View)
 
-一个`Page`派生占据整个屏幕或几乎整个屏幕。 通常情况下，一个页面的子级是`Layout`派生类来组织子可视元素。 子级`Layout`可以是其他`Layout`类或`View`派生类 (通常称为*元素*)，这是熟悉的对象，如文本、 位图、 滑块、 按钮、 列表框等。
+`Page` 파생물은 전체 화면 또는 거의 전체 화면을 차지 합니다. 일반적으로 페이지의 자식은 자식 시각적 요소를 구성 하기 위한 파생 `Layout`입니다. `Layout` 자식은 텍스트, 비트맵, 슬라이더, 단추, 목록 상자 등의 친숙 한 개체인 다른 `Layout` 클래스 또는 `View` 파생 된 ( *요소*라고도 함) 일 수 있습니다.
 
-本章演示如何通过在创建应用程序[ `Label` ](xref:Xamarin.Forms.Label)，这是`View`显示文本的派生类。
+이 장에서는 텍스트를 표시 하는 `View` 파생물 인 [`Label`](xref:Xamarin.Forms.Label)에 초점을 맞춘 응용 프로그램을 만드는 방법을 보여 줍니다.
 
-## <a name="say-hello"></a>假设你好
+## <a name="say-hello"></a>살펴보기
 
-使用安装 Xamarin 平台，你可以创建新的 Xamarin.Forms 解决方案在 Visual Studio 或 Visual Studio for mac。 [ **Hello** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello)解决方案使用可移植类库的通用代码。
-
-> [!NOTE]
-> .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。
-
-此示例演示在 Visual Studio 中创建不作任何修改的 Xamarin.Forms 解决方案。 솔루션은 다음 네 가지 프로젝트로 구성 됩니다.
-
-- [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello)，由其他项目共享的可移植类库 (PCL)
-- [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid)，适用于 Android 的应用程序项目
-- [**Hello.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.iOS)，适用于 iOS 的应用程序项目
-- [**Hello.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.UWP)，通用 Windows 平台 （Windows 10 和 Windows 10 移动版） 的应用程序项目
+설치 하는 Xamarin 플랫폼을 사용 하 여 만들 수 있습니다 새 Xamarin.Forms 솔루션을 Visual Studio 또는 Visual Studio for mac [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello) 솔루션은 공용 코드에 이식 가능한 클래스 라이브러리를 사용 합니다.
 
 > [!NOTE]
-> Xamarin.Forms 不再支持 Windows 8.1、 Windows Phone 8.1 或 Windows 10 移动版，但在 Windows 10 桌面版上运行的 Xamarin.Forms 应用程序。
+> Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
 
-您可以进行任何这些应用程序项目启动项目，然后生成并在设备或模拟器上运行该程序。
+이 샘플에는 수정 하지 않고도 Visual Studio에서 만들어진 Xamarin.Forms 솔루션을 보여 줍니다. 솔루션은 다음 네 가지 프로젝트로 구성 됩니다.
 
-在许多 Xamarin.Forms 程序，您不会修改应用程序项目。 这些通常保持小的存根，只是为了启动该程序。 您的大部分将是侧重点的普遍适用于所有应用程序库。
-
-## <a name="inside-the-files"></a>文件内
-
-显示的视觉对象**Hello**程序定义的构造函数中[ `App` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs)类。 `App` 派生自 Xamarin.Forms 类[ `Application` ](xref:Xamarin.Forms.Application)。
-
-> [!NOTE]
-> Visual Studio 解决方案模板适用于 Xamarin.Forms 使用 XAML 文件创建一个页面。 直到本书中未涵盖 XAML[第 7 章](chapter07.md)。
-
-**引用**一部分**Hello** PCL 项目中包括以下 Xamarin.Forms 程序集：
-
-- **Xamarin.Forms.Core**
-- **Xamarin.Forms.Xaml**
-- **Xamarin.Forms.Platform**
-
-**引用**节的五个应用程序项目包括适用于各个平台的其他程序集：
-
-- **Xamarin.Forms.Platform.Android**
-- **Xamarin.Forms.Platform.iOS**
-- **Xamarin.Forms.Platform.UWP**
-- **Xamarin.Forms.Platform.WinRT**
-- **Xamarin.Forms.Platform.WinRT.Tablet**
-- **Xamarin.Forms.Platform.WinRT.Phone**
+- [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), 다른 프로젝트에서 공유 하는 PCL (이식 가능한 클래스 라이브러리)
+- [**Hello. Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), Android 용 응용 프로그램 프로젝트
+- [**Hello.** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.iOS)iOS, ios 용 응용 프로그램 프로젝트
+- [**Hello. UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.UWP), 유니버설 Windows 플랫폼의 응용 프로그램 프로젝트 (windows 10 및 Windows 10 Mobile)
 
 > [!NOTE]
-> **引用**不再列出程序集，这些项目的部分。 相反，该项目文件包含**PackageReference**标记引用的 Xamarin.Forms NuGet 包。 **引用**Visual Studio 列表中的部分**Xamarin.Forms**包而不是 Xamarin.Forms 程序集。
+> Xamarin.Forms는 더 이상 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 지원하지 않지만 Windows 10 데스크톱에서 실행은 지원합니다.
 
-每个应用程序项目包含调用静态`Forms.Init`中的方法`Xamarin.Forms`命名空间。 此初始化 Xamarin.Forms 库。 不同版本的`Forms.Init`定义为每个平台。 调用此方法可在以下类：
+수의 응용 프로그램 프로젝트 시작 프로젝트 및 다음 빌드를 장치 또는 시뮬레이터에서 프로그램을 실행 합니다.
+
+Xamarin.Forms 프로그램의 대부분에서는 응용 프로그램 프로젝트를 수정 하지 않습니다. 이러한 프로그램을 시작 하려면 방금 작은 스텁 종종 남아 있습니다. 대부분의 집중 라이브러리는 모든 응용 프로그램에 공통적으로 적용 됩니다.
+
+## <a name="inside-the-files"></a>파일 내에서
+
+**Hello** 프로그램에 의해 표시 되는 시각적 개체는 [`App`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello/App.cs) 클래스의 생성자에 정의 됩니다. `App`는 Xamarin.ios 클래스 [`Application`](xref:Xamarin.Forms.Application)에서 파생 됩니다.
+
+> [!NOTE]
+> Xamarin.Forms에 대 한 Visual Studio 솔루션 템플릿 XAML 파일을 사용 하 여 페이지를 만듭니다. XAML은 [7 장](chapter07.md)까지이 서적에서 다루지 않습니다.
+
+**Hello** PCL 프로젝트의 **참조** 섹션에는 다음과 같은 Xamarin. Forms 어셈블리가 포함 되어 있습니다.
+
+- **Xamarin.ios. 핵심**
+- **Xamarin.ios**
+- **Xamarin.ios. 플랫폼**
+
+5 개 응용 프로그램 프로젝트의 **참조** 섹션은 개별 플랫폼에 적용 되는 추가 어셈블리를 포함 합니다.
+
+- **Xamarin.ios. Android**
+- **Xamarin.ios.**
+- **Xamarin.ios. Platform.object**
+- **Xamarin.ios. Platform.object**
+- **Xamarin.ios (xamarin.ios)**
+- **Xamarin.ios..**
+
+> [!NOTE]
+> 이러한 프로젝트의 **참조** 섹션은 더 이상 어셈블리를 나열 하지 않습니다. 대신, 프로젝트 파일에는 Xamarin.ios NuGet 패키지를 참조 하는 **PackageReference** 태그가 포함 됩니다. Visual Studio의 **참조** 섹션에는 xamarin.ios 어셈블리가 아니라 **xamarin.ios** 패키지가 나열 됩니다.
+
+각 응용 프로그램 프로젝트에는 `Xamarin.Forms` 네임 스페이스의 정적 `Forms.Init` 메서드에 대 한 호출이 포함 되어 있습니다. 이 Xamarin.Forms 라이브러리를 초기화합니다. 각 플랫폼에 대해 다른 버전의 `Forms.Init` 정의 됩니다. 다음 클래스에이 메서드의 호출을 찾을 수 있습니다.
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
-- UWP: [ `App`类，`OnLaunched`方法](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
+- UWP: [`App` 클래스, `OnLaunched` 메서드](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 
-此外，每个平台必须实例化`App`类共享库中的位置。 此错误出现在调用`LoadApplication`为以下几类：
+또한 각 플랫폼은 공유 라이브러리의 `App` 클래스 위치를 인스턴스화해야 합니다. 이는 다음 클래스의 `LoadApplication`에 대 한 호출에서 발생 합니다.
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
 - UWP: [`MainPage`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.UWP/MainPage.xaml.cs)
 
-否则，这些应用程序项目是正常的"执行任何操作"的程序。
+그렇지 않으면 이러한 응용 프로그램 프로젝트는 일반 "아무 작업도 수행" 프로그램입니다.
 
-## <a name="pcl-or-sap"></a>PCL 或 SAP？
+## <a name="pcl-or-sap"></a>PCL 또는 SAP?
 
-就可以使用可移植类库 (PCL) 或共享资产项目 (SAP) 中的常见代码创建 Xamarin.Forms 解决方案。 若要创建的 SAP 解决方案，请在 Visual Studio 中选择共享选项。 [ **HelloSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap)解决方案演示了不作任何修改的 SAP 模板。
+이식 가능한 클래스 라이브러리 (PCL) 또는 공유 자산 프로젝트 (SAP)에서 공통 코드를 사용 하 여 Xamarin.Forms 솔루션을 만들 수는 것입니다. SAP 솔루션을 만들려면 Visual Studio에서 공유 옵션을 선택 합니다. [**HelloSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/HelloSap) 솔루션은 수정 없이 SAP 템플릿을 보여 줍니다.
 
 > [!NOTE]
-> .NET Standard 库已替换为可移植类库。 本书中的所有示例代码已都转换为使用.NET 标准库。 否则，PCL 和.NET Standard 库在概念上非常类似。
+> 이식 가능한 클래스 라이브러리는.NET Standard 라이브러리로 바뀌었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다. 그렇지 않은 경우 PCL 및.NET Standard 라이브러리는 개념적으로 유사 합니다.
 
-所有通用平台应用程序项目引用的库项目中的都代码库方法捆绑包。 使用 SAP 方法时，公共代码有效地在所有平台应用程序项目中存在并在它们之间共享。
+모든 일반적인 플랫폼 응용 프로그램 프로젝트에서 참조 하는 라이브러리 프로젝트에서 코드 라이브러리 접근 방식 번들입니다. SAP 방식의 경우 공통 코드는 효과적으로 모든 플랫폼 응용 프로그램 프로젝트에 존재 하 고 그 중 공유 됩니다.
 
-大多数 Xamarin.Forms 开发人员更喜欢库方法。 在本书中，大部分解决方案使用一个库。 包括那些使用 SAP **Sap**项目名称中的后缀。
+대부분의 개발자 들은 Xamarin.Forms 라이브러리 접근 방식을 선호합니다. 이 책에이 나온 대부분의 솔루션이 라이브러리를 사용 합니다. SAP를 사용 하는 것은 프로젝트 이름에 **sap** 접미사를 포함 합니다.
 
-共享项目中的代码可以通过使用为各种平台的不同代码执行与 SAP 方法C#预处理器指令 (`#if`，#`elif`，并`#endif`) 使用这些预定义的标识符：
+SAP 접근 방식에서 공유 프로젝트의 코드는 다음과 같은 미리 정의 된 식별자로 전처리기 지시문 (`#if`C# , #`elif`및 `#endif`)을 사용 하 여 다양 한 플랫폼에 대해 다른 코드를 실행할 수 있습니다.
 
 - iOS: `__IOS__`
 - Android: `__ANDROID__`
 - UWP: `WINDOWS_UWP`
 
-在共享库中，可以确定在运行时, 运行哪种平台，您将看到更高版本中这一章。
+공유 라이브러리의이 장 뒷부분에서 살펴보겠지만 런타임 시 실행 중인 플랫폼을 확인할 수 있습니다.
 
-## <a name="labels-for-text"></a>标签文本
+## <a name="labels-for-text"></a>텍스트에 대 한 레이블
 
-[ **Greetings** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings)解决方案展示了如何添加新C#的文件**Greetings**项目。 此文件定义一个名为`GreetingsPage`派生`ContentPage`。 在此书中，大多数项目都包含单个`ContentPage`派生其名称是带有后缀的项目名称`Page`追加。
+[**인사말**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Greetings) 솔루션은 C# **인사말** 프로젝트에 새 파일을 추가 하는 방법을 보여 줍니다. 이 파일은 `ContentPage`에서 파생 되는 `GreetingsPage` 라는 클래스를 정의 합니다. 이 책에서 대부분의 프로젝트에는 이름이 추가 `Page` 접미사가 있는 프로젝트의 이름인 단일 `ContentPage` 파생물이 포함 되어 있습니다.
 
-`GreetingsPage`构造函数实例化[ `Label` ](xref:Xamarin.Forms.Label)视图，它是显示文本的 Xamarin.Forms 视图。 [ `Text` ](xref:Xamarin.Forms.Label.Text)属性设置为显示的文本`Label`。 此程序设置`Label`到`Content`属性的`ContentPage`。 构造函数`App`类，然后实例化`GreetingsPage`并将其设置为其`MainPage`属性。
+`GreetingsPage` 생성자는 텍스트를 표시 하는 Xamarin.ios 뷰로 된 [`Label`](xref:Xamarin.Forms.Label) 뷰를 인스턴스화합니다. [`Text`](xref:Xamarin.Forms.Label.Text) 속성은 `Label`표시 되는 텍스트로 설정 됩니다. 이 프로그램은 `Label`를 `ContentPage`의 `Content` 속성으로 설정 합니다. 그러면 `App` 클래스의 생성자가 `GreetingsPage`을 인스턴스화하고 `MainPage` 속성으로 설정 합니다.
 
-在页面的左上角显示的文本。 在 iOS 上，这意味着它与重叠页面的状态栏。 有几种解决方案，此问题：
+텍스트는 페이지의 왼쪽 위 모퉁이에 표시 됩니다. Ios의 경우 페이지의 상태 표시줄을 겹치는 것을 의미 합니다. 이 문제에 대 한 솔루션 몇 가지가 있습니다.
 
-### <a name="solution-1-include-padding-on-the-page"></a>解决方案 1。 包括在页上的填充
+### <a name="solution-1-include-padding-on-the-page"></a>솔루션 1입니다. 페이지의 안쪽 여백을 포함
 
-设置[ `Padding` ](xref:Xamarin.Forms.Page.Padding)页上的属性。 `Padding` 类型[ `Thickness` ](xref:Xamarin.Forms.Thickness)，具有四个属性的结构：
+페이지에서 [`Padding`](xref:Xamarin.Forms.Page.Padding) 속성을 설정 합니다. `Padding`은 형식 [`Thickness`](xref:Xamarin.Forms.Thickness)이며, 4 개의 속성이 있는 구조체입니다.
 
 - [`Left`](xref:Xamarin.Forms.Thickness.Left)
 - [`Top`](xref:Xamarin.Forms.Thickness.Top)
 - [`Right`](xref:Xamarin.Forms.Thickness.Right)
 - [`Bottom`](xref:Xamarin.Forms.Thickness.Bottom)
 
-`Padding` 定义页内的一个区域，其中排除内容。 这允许`Label`以避免覆盖 iOS 状态栏。
+`Padding` 콘텐츠가 제외 되는 페이지 내의 영역을 정의 합니다. 이렇게 하면 `Label` iOS 상태 표시줄을 덮어쓰는 것을 방지할 수 있습니다.
 
-### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>解决方案 2。 包括只适用于 iOS (仅适用于 SAP) 的填充
+### <a name="solution-2-include-padding-just-for-ios-sap-only"></a>솔루션 2입니다. IOS (SAP에만 해당)에 대 한 안쪽 여백을 포함
 
-只能在使用与 SAP 在 iOS 上设置填充属性C#预处理器指令。 了这一点[ **GreetingsSap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap)解决方案。
+'안쪽 여백' 속성을 사용 하 여 SAP를 사용 하 여 iOS에만 설정 된 C# 전처리기 지시문입니다. 이는 [**GreetingsSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/GreetingsSap) 솔루션에서 보여 줍니다.
 
-### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>解决方案 3。 包括只适用于 iOS （PCL 和 SAP） 的填充
+### <a name="solution-3-include-padding-just-for-ios-pcl-or-sap"></a>3 솔루션입니다. IOS (PCL 또는 SAP)에 대 한 안쪽 여백을 포함
 
-在用于书的 Xamarin.Forms 版本`Padding`可以使用所选属性特定于 iOS 的 PCL 或 SAP [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action))或[ `Device.OnPlatform<T>` ](xref:Xamarin.Forms.Device.OnPlatform*)静态方法。 这些方法现已弃用
+책에 사용 되는 Xamarin.ios 버전에서 PCL 또는 SAP의 iOS와 관련 된 `Padding` 속성은 [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 또는 [`Device.OnPlatform<T>`](xref:Xamarin.Forms.Device.OnPlatform*) 정적 메서드를 사용 하 여 선택할 수 있습니다. 이러한 메서드는 이제 사용 되지 않습니다.
 
-`Device.OnPlatform`方法用来运行特定于平台的代码，或者选择特定于平台的值。 在内部，它们使利用[ `Device.OS` ](xref:Xamarin.Forms.Device.OS)静态只读属性，返回的成员[ `TargetPlatform` ](xref:Xamarin.Forms.TargetPlatform)枚举：
+`Device.OnPlatform` 메서드는 플랫폼별 코드를 실행 하거나 플랫폼별 값을 선택 하는 데 사용 됩니다. 내부적으로는 [`Device.OS`](xref:Xamarin.Forms.Device.OS) 정적 읽기 전용 속성을 사용 하며,이 속성은 [`TargetPlatform`](xref:Xamarin.Forms.TargetPlatform) 열거형의 멤버를 반환 합니다.
 
 - [`iOS`](xref:Xamarin.Forms.TargetPlatform.iOS)
 - [`Android`](xref:Xamarin.Forms.TargetPlatform.Android)
-- [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) 对于 UWP 设备。
+- UWP 장치에 대 한 [`Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) 입니다.
 
-`Device.OnPlatform`方法，`Device.OS`属性，并`TargetPlatform`枚举都现在已弃用。 请改用[ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform)属性，并比较`string`返回包含以下静态字段的值：
+`Device.OnPlatform` 메서드, `Device.OS` 속성 및 `TargetPlatform` 열거형은 모두 이제 사용 되지 않습니다. 대신 [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) 속성을 사용 하 여 `string` 반환 값을 다음 정적 필드와 비교 합니다.
 
-- [`iOS`](xref:Xamarin.Forms.Device.iOS)字符串"iOS"
-- [`Android`](xref:Xamarin.Forms.Device.Android)字符串"Android"
-- [`UWP`](xref:Xamarin.Forms.Device.UWP)字符串"UWP"，指通用 Windows 平台
+- [`iOS`](xref:Xamarin.Forms.Device.iOS)"iOS" 문자열
+- [`Android`](xref:Xamarin.Forms.Device.Android)"Android" 문자열
+- [`UWP`](xref:Xamarin.Forms.Device.UWP)유니버설 Windows 플랫폼를 참조 하는 문자열 "UWP"
 
-[ `Device.Idiom` ](xref:Xamarin.Forms.Device.Idiom)静态只读属性相关联。 这将返回的成员[ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom)，其中包括以下成员：
+[`Device.Idiom`](xref:Xamarin.Forms.Device.Idiom) 정적 읽기 전용 속성은 서로 관련 되어 있습니다. 이러한 멤버를 포함 하는 [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom)의 멤버를 반환 합니다.
 
 - [`Desktop`](xref:Xamarin.Forms.TargetIdiom.Desktop)
 - [`Tablet`](xref:Xamarin.Forms.TargetIdiom.Tablet)
 - [`Phone`](xref:Xamarin.Forms.TargetIdiom.Phone)
-- [`Unsupported`](xref:Xamarin.Forms.TargetIdiom.Unsupported) 未使用
+- [`Unsupported`](xref:Xamarin.Forms.TargetIdiom.Unsupported) 사용 되지 않음
 
-适用于 iOS 和 Android 之间截止`Tablet`和`Phone`是纵向宽度为 600 的单位。 对于 Windows 平台中，`Desktop`指示在 Windows 10 下运行的 UWP 应用程序和`Phone`指示 Windows 10 应用程序下运行的 UWP 应用程序。
+IOS 및 Android의 경우 `Tablet`와 `Phone` 간의 구분은 세로 너비 600 단위입니다. Windows 플랫폼의 경우 `Desktop`은 Windows 10에서 실행 되는 UWP 응용 프로그램을 나타내고 `Phone`는 Windows 10 응용 프로그램에서 실행 되는 UWP 응용 프로그램을 나타냅니다.
 
-## <a name="solution-3a-set-margin-on-the-label"></a>解决方案 3a。 标签上的设置距
+## <a name="solution-3a-set-margin-on-the-label"></a>솔루션 3a 합니다. 레이블에 여백 설정
 
-[ `Margin` ](xref:Xamarin.Forms.View.Margin)太迟引入属性要包含在书中，但它也是类型`Thickness`，并且上设置`Label`来定义的计算中包括视图之外的区域视图的布局。
+[`Margin`](xref:Xamarin.Forms.View.Margin) 속성은 너무 늦게 도입 되어 책에 포함 될 수 있지만, `Thickness` 형식 이므로, `Label`에서이 속성을 설정 하 여 보기의 레이아웃 계산에 포함 되는 보기 외부 영역을 정의할 수 있습니다.
 
-`Padding`属性上才[ `Layout` ](xref:Xamarin.Forms.Layout)并[ `Page` ](xref:Xamarin.Forms.Page)派生类。 `Margin`属性是可用于所有[ `View` ](xref:Xamarin.Forms.View)派生类。
+`Padding` 속성은 [`Layout`](xref:Xamarin.Forms.Layout) 및 [`Page`](xref:Xamarin.Forms.Page) 파생 된 경우에만 사용할 수 있습니다. `Margin` 속성은 모든 [`View`](xref:Xamarin.Forms.View) 파생물에서 사용할 수 있습니다.
 
-## <a name="solution-4-center-the-label-within-the-page"></a>解决方案 4。 在页面内的使标签居中
+## <a name="solution-4-center-the-label-within-the-page"></a>4 솔루션입니다. 페이지 내에서 레이블을 가운데합니다
 
-您可以居中`Label`内`Page`（或将其放入其他 8 个位置之一） 通过设置[ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)并[ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions)属性的`Label`为类型的值[ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions)。 `LayoutOptions`结构定义两个属性：
+`Label`의 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions)형식의 값으로 설정 하 여 `Page` 내에 `Label`을 가운데에 배치 하거나 8 개의 다른 위치 중 하나에 배치할 수 있습니다. `LayoutOptions` 구조는 다음과 같은 두 가지 속성을 정의 합니다.
 
-- [ `Alignment` ](xref:Xamarin.Forms.LayoutOptions.Alignment)类型的属性[ `LayoutAlignment` ](xref:Xamarin.Forms.LayoutAlignment)，具有四个成员的枚举： [ `Start` ](xref:Xamarin.Forms.LayoutAlignment.Start)，这意味着左端或顶端具体取决于方向[ `Center` ](xref:Xamarin.Forms.LayoutAlignment.Center)， [ `End` ](xref:Xamarin.Forms.LayoutAlignment.End)，这意味着右侧或底部根据方向，以及[ `Fill` ](xref:Xamarin.Forms.LayoutAlignment.Fill)。
+- [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment)형식의 [`Alignment`](xref:Xamarin.Forms.LayoutOptions.Alignment) 속성입니다. 네 개의 멤버가 포함 된 열거형입니다. [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start)는 방향에 따라 오른쪽 또는 아래쪽을 의미 하는 [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center) [`End`](xref:Xamarin.Forms.LayoutAlignment.End)방향에 따라 왼쪽 또는 위쪽을 의미 [합니다. ](xref:Xamarin.Forms.LayoutAlignment.Fill)`Fill`
 
-- [ `Expands` ](xref:Xamarin.Forms.LayoutOptions.Expands)类型的属性`bool`。
+- `bool`형식의 [`Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) 속성입니다.
 
-通常不直接使用这些属性。 相反，将这两个属性的组合提供的类型的八个静态只读属性`LayoutOptions`:
+일반적으로 이러한 속성을 직접 사용 되지 않습니다. 대신 이러한 두 속성의 조합은 `LayoutOptions`형식의 8 개의 정적 읽기 전용 속성을 통해 제공 됩니다.
 
 - [`LayoutOptions.Start`](xref:Xamarin.Forms.LayoutOptions.Start)
 - [`LayoutOptions.Center`](xref:Xamarin.Forms.LayoutOptions.Center)
@@ -185,23 +185,23 @@ ms.locfileid: "76724996"
 
 `HorizontalOptions` 및 `VerticalOptions`는 Xamarin.ios 레이아웃에서 가장 중요 한 속성 이며, 4 장에서 더 자세히 설명 합니다 [ **. 스택을 스크롤합니다**](chapter04.md).
 
-下面是使用结果`HorizontalOptions`并`VerticalOptions`的属性`Label`都设置为`LayoutOptions.Center`:
+`Label`의 `HorizontalOptions` 및 `VerticalOptions` 속성이 `LayoutOptions.Center`로 설정 된 결과는 다음과 같습니다.
 
 [![인사말 프로그램의 삼중 스크린 샷](images/ch02fg05-small.png "가로 및 세로 가운데 맞춤 레이블")](images/ch02fg05-large.png#lightbox "가로 및 세로 가운데 맞춤 레이블")
 
-## <a name="solution-5-center-the-text-within-the-label"></a>解决方案 5。 在标签中的文本居中
+## <a name="solution-5-center-the-text-within-the-label"></a>5 솔루션입니다. 레이블 내에서 텍스트를 가운데
 
-此外可以使文本居中 （或将其放在页上的其他 8 个位置中） 通过设置[ `HorizontalTextAlignment` ](xref:Xamarin.Forms.Label.HorizontalTextAlignment)并[ `VerticalTextAlignment` ](xref:Xamarin.Forms.Label.VerticalTextAlignment)的属性`Label`成员[ `TextAlignment` ](xref:Xamarin.Forms.TextAlignment)枚举：
+`Label`의 [`HorizontalTextAlignment`](xref:Xamarin.Forms.Label.HorizontalTextAlignment) 및 [`VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) 속성을 [`TextAlignment`](xref:Xamarin.Forms.TextAlignment) 열거형의 멤버로 설정 하 여 텍스트를 가운데에 배치 하거나 페이지의 8 가지 다른 위치에 배치 하 여 사용할 수도 있습니다.
 
-- [`Start`](xref:Xamarin.Forms.TextAlignment.Start)含义左或靠上 （具体取决于方向）
+- [`Start`](xref:Xamarin.Forms.TextAlignment.Start)(방향에 따라 왼쪽 또는 위쪽)
 - [`Center`](xref:Xamarin.Forms.TextAlignment.Center)
-- [`End`](xref:Xamarin.Forms.TextAlignment.End)这意味着右侧或底部 （取决于方向）
+- [`End`](xref:Xamarin.Forms.TextAlignment.End)(방향에 따라 오른쪽 또는 아래쪽)
 
-这两个属性定义仅可由`Label`，而`HorizontalAlignment`并`VerticalAlignment`属性定义由`View`并由所有继承`View`派生类。 下的视觉效果可能看起来类似，但它们有很大差异，如下一章中所示。
+이러한 두 속성은 `Label`에 의해서만 정의 되지만 `HorizontalAlignment` 및 `VerticalAlignment` 속성은 `View`에 의해 정의 되 고 모든 `View` 파생 항목에서 상속 됩니다. Visual 결과 수 비슷해 보이지만 다음 장에서 보여 주듯이 매우 다릅니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [第 2 章全文 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
-- [第 2 章示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
-- [第 2 章F#示例](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
-- [Xamarin.Forms 入门](~/get-started/index.yml)
+- [2 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
+- [2 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
+- [2 F# 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
+- [Xamarin.ios 시작](~/get-started/index.yml)

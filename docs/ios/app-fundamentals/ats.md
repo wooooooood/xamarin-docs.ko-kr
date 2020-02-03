@@ -103,7 +103,7 @@ IOS 앱에서 사용 하는 HTTPClient 구현을 설정 하려면 **솔루션 �
 - 일반적으로 기본 Api 보다 훨씬 느립니다.
 - 더 많은 관리 코드가 필요 하 고 더 큰 앱이 생성 됩니다.
 
-#### <a name="cfnetwork-handler"></a>CFNetwork 처리기
+#### <a name="cfnetwork-handler"></a>CFNetwork Handler
 
 CFNetwork 기반 처리기는 네이티브 `CFNetwork` 프레임 워크를 기반으로 합니다.
 
@@ -174,10 +174,10 @@ NSAppTransportSecurity
 - **NSExceptionDomains** (`Dictionary`)-ATS에서 지정 된 도메인에 사용 해야 하는 보안 설정 및 도메인 모음입니다.
 - **\<도메인 이름-예외 >** (`Dictionary`)-지정 된 도메인에 대 한 예외 모음 (예: `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** (`String`)-최소 TLS 버전은 `TLSv1.0`, `TLSv1.1` 또는 `TLSv1.2` (기본값)입니다.
-- **NSExceptionRequiresForwardSecrecy** (`Boolean`)-`NO` 도메인은 전달 보안이 있는 암호를 사용할 필요가 없습니다. 기본값은 `YES`여야 합니다.
+- **NSExceptionRequiresForwardSecrecy** (`Boolean`)-`NO` 도메인은 전달 보안이 있는 암호를 사용할 필요가 없습니다. 기본값은 `YES`입니다.
 - **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`)-`NO` (기본값) 이면이 도메인과의 모든 통신이 `HTTPS` 프로토콜에 있어야 합니다.
-- **NSRequiresCertificateTransparency** (`Boolean`)-`YES` 경우 도메인의 SSL(SECURE SOCKETS LAYER) (SSL)에 유효한 투명도 데이터가 포함 되어야 합니다. 기본값은 `NO`여야 합니다.
-- **NSIncludesSubdomains** (`Boolean`)-`YES` 경우 이러한 설정이이 도메인의 모든 하위 도메인을 재정의 합니다. 기본값은 `NO`여야 합니다.
+- **NSRequiresCertificateTransparency** (`Boolean`)-`YES` 경우 도메인의 SSL(SECURE SOCKETS LAYER) (SSL)에 유효한 투명도 데이터가 포함 되어야 합니다. 기본값은 `NO`입니다.
+- **NSIncludesSubdomains** (`Boolean`)-`YES` 경우 이러한 설정이이 도메인의 모든 하위 도메인을 재정의 합니다. 기본값은 `NO`입니다.
 - **NSThirdPartyExceptionMinimumTLSVersion** (`String`)-도메인이 개발자의 제어를 벗어난 타사 서비스인 경우 사용 되는 TLS 버전입니다.
 - **NSThirdPartyExceptionRequiresForwardSecrecy** (`Boolean`)-`YES` 타사 도메인에는 전달 보안 기능이 필요 합니다.
 - **NSThirdPartyExceptionAllowsInsecureHTTPLoads** (`Boolean`)-`YES` 이면 ATS가 타사 도메인과의 비보안 통신을 허용 합니다.
@@ -239,7 +239,7 @@ Mac용 Visual Studio 내에서 **솔루션 탐색기**에서 `Info.plist` 파일
 [![](ats-images/ats02.png "The Source view of the Info.plist file")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는 `NSAllowsArbitraryLoads`를 사용 하 여 ATS를 완전히 켜는 대신 `NSExceptionDomains`를 사용 하 여 도메인을 **예외로 입력 해야** 합니다. `NSAllowsArbitraryLoads` 仅应在极端的紧急情况下使用。
+> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는 `NSAllowsArbitraryLoads`를 사용 하 여 ATS를 완전히 켜는 대신 `NSExceptionDomains`를 사용 하 여 도메인을 **예외로 입력 해야** 합니다. `NSAllowsArbitraryLoads`은 심각한 응급 상황 에서만 사용 해야 합니다.
 
 ATS를 사용 하지 않도록 설정 하는 것은 보안 연결로 전환 하는 것이 불가능 하거나 불가능 한 경우 마지막 수단 _으로만_ 사용 해야 합니다.
 

@@ -28,7 +28,7 @@ ms.locfileid: "76725325"
 
 이제 Watch 앱을 실행할 수 있지만, Watch 앱 내에 있는 스토리 보드 파일이 비어 있으므로 알 수 없습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![](hello-watch-images/projectstructure.png "The Solution Explorer")
 
@@ -38,7 +38,7 @@ ms.locfileid: "76725325"
 
 -----
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 Watch 앱에서 Xcode를 두 번 클릭 하 여 Xamarin iOS Designer를 시작 합니다. (Mac을 사용 하는 경우 마우스 오른쪽 단추를 클릭 하 고 **Interface Builder >를 사용 하 여 열**수도 있습니다.)
 
@@ -68,7 +68,7 @@ UI를 만듭니다.
 1. **단추** 와 **레이블을** 장면에 끌어서 놓습니다.
 1. 다음과 같이 컨트롤의 텍스트 및 특성을 설정 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
 
@@ -156,4 +156,4 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 ## <a name="related-links"></a>관련 링크
 
 - [설정 및 설치](~/ios/watchos/get-started/installation.md)
-- [第一个 Watch 应用视频](https://blog.xamarin.com/your-first-watch-kit-app/)
+- [첫 번째 시청 앱 비디오](https://blog.xamarin.com/your-first-watch-kit-app/)

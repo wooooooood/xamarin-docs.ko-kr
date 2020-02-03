@@ -39,7 +39,7 @@ ms.locfileid: "76725124"
   - **창 > 구성 도우미** 로 이동 하 여 **보관**을 선택 합니다.
   - 목록에서 응용 프로그램 및 보관을 선택 합니다.
   - 생략할 **유효성 검사** ... 보관 파일입니다.
-  - **提交...** 存档并遵循的步骤将上载到 iTunes 连接用于审查和批准。
+  - **제출** ... 검토 및 승인을 위해 iTunes Connect에 업로드 하는 단계를 수행 합니다.
 
 아래 항목과 관련 된 특정 팁을 읽으십시오. 문제가 있는 경우 [문제 해결](#troubleshooting) 섹션을 참조 하세요.
 
@@ -84,7 +84,7 @@ ITunes Connect에서 앱을 구성 하는 경우 보기 아이콘과 스크린�
 
 <a name="xamarin_studio" />
 
-## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+## <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 1. IOS 앱이 시작 프로젝트 인지 확인 합니다. 그렇지 않으면 마우스 오른쪽 단추를 클릭 하 여 설정 합니다.
 
@@ -128,7 +128,7 @@ Xcode는 Mac용 Visual Studio에서 만든 보관 파일을 자동으로 표시 
 
 그런 다음 **버전** 페이지에서 승인을 위해 앱을 제출할 수 있습니다. 자세한 내용은 [iOS 앱 배포 개요](~/ios/deploy-test/app-distribution/index.md) 를 참조 하세요.
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>문제 해결
 
 앱 스토어에 제출 하는 동안 발생할 수 있는 몇 가지 오류 및 문제를 해결 하기 위해 수행할 수 있는 단계는 다음과 같습니다.
 

@@ -55,7 +55,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |레이어 다이어그램|예||
 |레이어 유효성 검사|예||
 
-## <a name="code"></a>代码
+## <a name="code"></a>코드
 
 |기능|Xamarin에서 지원 여부|추가 설명|
 |-------------|----------------------------|-------------------------|
@@ -77,14 +77,14 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |사전 및 사후 스크립트로 정의 작성|예||
 |제어된 체크 인을 포함하는 연속 통합|예|Git는 체크 인이 아니라 끌어오기 요청 모델로 작동하므로 TFVC에 대한 제어된 체크 인에만 해당|
 
-## <a name="test"></a>测试
+## <a name="test"></a>테스트
 
 |기능|Xamarin에서 지원 여부|추가 설명|
 |-------------|----------------------------|-------------------------|
 |테스트 계획, 테스트 사례 만들기 및 테스트 도구 모음 구성|예||
 |수동 테스트|예||
 |테스트 관리자(테스트 기록 및 재생)|예|Visual Studio에서만 제공하는 Windows 디바이스 및 Android 에뮬레이터.|
-|코드 검사|N/A||
+|코드 검사|해당 없음||
 |[코드 단위 테스트](/visualstudio/test/unit-test-your-code/)|예|Windows 및 Android 대상의 경우 기본 제공 MSTest 도구를 사용할 수 있습니다. Windows, Android 및 iOS에서 단위 테스트를 실행하려면 NUnit를 사용하는 것이 좋습니다. [TFVC 사용](/azure/devops/repos/tfvc/overview?view=vsts) 참조|
 |[UI 자동화를 사용하여 코드 테스트](/visualstudio/test/use-ui-automation-to-test-your-code/)|Windows에만 해당|Visual Studio의 UI 테스트 레코더는 Windows 전용입니다. 모든 플랫폼에 대해서는 [Xamarin.UITest](/appcenter/test-cloud/uitest/)를 참조하세요.|
 
@@ -97,8 +97,8 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |[관리 코드 품질 분석](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|예||
 |[코드 복제본 검색을 사용하여 중복 코드 찾기](https://msdn.microsoft.com/library/hh205279.aspx)|예||
 |[관리 코드의 복잡성 및 유지 관리 용이성 측정](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|예||
-|[성능 탐색기](/visualstudio/profiling/performance-explorer)|否|대신 Mac용 Visual Studio를 통해 [Xamarin Profiler](/xamarin/tools/profiler/) 을 사용 합니다. Xamarin 프로파일러는 현재 미리 보기로 제공되며 아직 Windows 대상에서 작동하지 않습니다.|
-|[.NET Framework 메모리 문제 분석](https://msdn.microsoft.com/library/dn342825.aspx)|否|Visual Studio 도구에는 프로파일링을 위한 모노 프레임워크에 대한 후크가 없습니다.|
+|[성능 탐색기](/visualstudio/profiling/performance-explorer)|아니요|대신 Mac용 Visual Studio를 통해 [Xamarin Profiler](/xamarin/tools/profiler/) 을 사용 합니다. Xamarin 프로파일러는 현재 미리 보기로 제공되며 아직 Windows 대상에서 작동하지 않습니다.|
+|[.NET Framework 메모리 문제 분석](https://msdn.microsoft.com/library/dn342825.aspx)|아니요|Visual Studio 도구에는 프로파일링을 위한 모노 프레임워크에 대한 후크가 없습니다.|
 
 ## <a name="release-management"></a>릴리스 관리
 
@@ -108,7 +108,7 @@ Visual Studio는 Azure DevOps Services 및 Team Foundation Server와 함께 다�
 |-------------|----------------------------|-------------------------|
 |릴리스 프로세스 관리|예||
 |스크립트를 통한 테스트용 로드를 위해 서버에 배포|예||
-|앱 스토어에 업로드|Partial|일부 앱 스토어의 경우 이 프로세스를 자동화할 수 있는 확장을 사용할 수 있습니다.  [Azure DevOps Services용 확장](https://marketplace.visualstudio.com/VSTS)(예: [Google Play용 확장](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play))을 참조하세요.|
+|앱 스토어에 업로드|부분|일부 앱 스토어의 경우 이 프로세스를 자동화할 수 있는 확장을 사용할 수 있습니다.  [Azure DevOps Services용 확장](https://marketplace.visualstudio.com/VSTS)(예: [Google Play용 확장](https://marketplace.visualstudio.com/items?itemName=ms-vsclient.google-play))을 참조하세요.|
 
 ## <a name="monitor-with-hockeyapp"></a>HockeyApp으로 모니터링
 

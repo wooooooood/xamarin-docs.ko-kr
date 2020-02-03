@@ -121,7 +121,7 @@ Android 및 iOS 프로젝트에서 **참조** 노드를 마우스 오른쪽 단�
 
 [이식 가능한 Visual Basic.NET 페이지](~/cross-platform/platform/visual-basic/index.md)에서 설명한 대로 Xamarin은 Visual Basic 언어를 지원 하지 않습니다. 즉, Visual Basic를 사용할 수 있는 위치에 몇 가지 제한 사항이 있습니다.
 
-- XAML 페이지는 Visual Basic 프로젝트에 포함 될 수 없습니다. 코드에 포함 된 생성기만 빌드할 C#수 있습니다. 可以在单独的、 C#可移植的类库中包含 xaml，并使用数据绑定通过 Visual Basic 模型填充 xaml 文件（[示例](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)中包含了此示例）。
+- XAML 페이지는 Visual Basic 프로젝트에 포함 될 수 없습니다. 코드에 포함 된 생성기만 빌드할 C#수 있습니다. 별도의 참조 된 C# 이식 가능한 클래스 라이브러리에 xaml을 포함 하 고 데이터 바인딩을 사용 하 여 Visual Basic 모델을 통해 xaml 파일을 채울 수 있습니다 (이에 대 한 예제는 [샘플](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)에 포함 됨).
 
 - 사용자 지정 렌더러는 Visual Basic 작성할 수 없으며 네이티브 플랫폼 프로젝트 C# 에서 작성 해야 합니다.
 

@@ -29,14 +29,14 @@ ms.locfileid: "76725316"
 
 <a name="knownissues" />
 
-## <a name="known-issues"></a>알려진 문제점
+## <a name="known-issues"></a>알려진 문제
 
 ### <a name="general"></a>일반
 
 <a name="deploy" />
 
 - 이전 버전의 Mac용 Visual Studio 잘못 된 **설정** 아이콘 중 하나를 88x88 픽셀로 잘못 표시 합니다. 그러면 앱 스토어에 제출 하려고 할 때 **아이콘 오류가** 표시 되지 않습니다.
-    此图标应为 87 x 87 像素 (29 单位 **@3x** Retina 屏幕)。 Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
+    이 아이콘은 87x87 픽셀 ( **@3x** 레 티 나 화면의 경우 29 단위) 이어야 합니다. Mac용 Visual Studio에서이 문제를 해결할 수 없습니다. Xcode에서 이미지 자산을 편집 하거나 **콘텐츠. json** 파일을 수동으로 편집 합니다.
 
 - Watch 확장 프로젝트의 **info.plist > WKApp 번들** Id가 watch 앱의 **번들 id**와 일치 하도록 [올바르게 설정](~/ios/watchos/get-started/project-references.md) 되지 않은 경우 디버거는 연결에 실패 하 Mac용 Visual Studio 고 *"디버거가 연결 되기를 기다리는 중입니다." 라는*메시지와 함께 대기 합니다.
 
@@ -166,7 +166,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`.
+8. 새 인터페이스 컨트롤러를 선택 하 고 위에서 정의한 클래스 이름 (예:)을 제공 합니다. `MyInterfaceController`입니다.
     모든 항목이 제대로 작동 하는 경우 **클래스:** 드롭다운 목록에 자동으로 표시 되며 여기에서 선택할 수 있습니다.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -257,7 +257,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-필수 Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
+필수입니다. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
 
 예:
 
@@ -265,7 +265,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>--장치
+### <a name="--device"></a>--device
 
 실행할 시뮬레이터 장치입니다. 이는 특정 장치의 udid를 사용 하거나 런타임 및 장치 유형의 조합을 사용 하 여 두 가지 방법으로 지정할 수 있습니다.
 
@@ -293,5 +293,5 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ## <a name="related-links"></a>관련 링크
 
-- [WatchKitCatalog （示例）](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables （示例）](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

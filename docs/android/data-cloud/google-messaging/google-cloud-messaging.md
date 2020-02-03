@@ -27,7 +27,7 @@ _GCM (Google Cloud Messaging)은 모바일 앱과 서버 응용 프로그램 간
 
 이 항목에서는 앱과 앱 서버 간에 메시지를 라우팅하 Google Cloud Messaging는 방법에 대 한 개략적인 개요를 제공 하 고, 앱에서 GCM 서비스를 사용할 수 있도록 자격 증명을 획득 하는 단계별 절차를 제공 합니다.
 
-## <a name="overview"></a>概述
+## <a name="overview"></a>개요
 
 GCM (Google Cloud Messaging)은 서버 응용 프로그램과 모바일 클라이언트 앱 간의 메시지 보내기, 라우팅 및 큐 처리를 처리 하는 서비스입니다. *클라이언트 앱* 은 장치에서 실행 되는 GCM 사용 앱입니다. 사용자 또는 회사에서 제공 하는 *앱 서버* 는 클라이언트 앱이 gcm을 통해 통신 하는 gcm 사용 서버입니다.
 
