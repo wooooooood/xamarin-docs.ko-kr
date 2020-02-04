@@ -58,13 +58,13 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 using Android.Views;
 ```
 
-이 코드 예제는 레이아웃에서 [Edittext](xref:Android.Widget.EditText) 요소를 늘어납니다 하 고 위젯에 포커스가 있을 때 키를 누를 때 수행할 동작을 정의 하는 [KeyPress](xref:Android.Views.View.KeyPress) 처리기를 추가 합니다. 이 경우 메서드는 **Enter** 키를 수신 대기 하도록 정의 된 다음 입력 된 텍스트와 함께 [알림](xref:Android.Widget.Toast) 메시지를 표시 합니다. 请注意, 如果已[处理](xref:Android.Views.View.KeyEventArgs.Handled)事件, 则已处理的属性应始终为`true`。 이는 이벤트를 버블링 하지 않도록 하기 위해 필요 합니다 (텍스트 필드에서 캐리지 리턴을 반환 함).
+이 코드 예제는 레이아웃에서 [Edittext](xref:Android.Widget.EditText) 요소를 늘어납니다 하 고 위젯에 포커스가 있을 때 키를 누를 때 수행할 동작을 정의 하는 [KeyPress](xref:Android.Views.View.KeyPress) 처리기를 추가 합니다. 이 경우 메서드는 **Enter** 키를 수신 대기 하도록 정의 된 다음 입력 된 텍스트와 함께 [알림](xref:Android.Widget.Toast) 메시지를 표시 합니다. 이벤트가 처리 된 경우 [처리](xref:Android.Views.View.KeyEventArgs.Handled) 된 속성은 항상 `true` 해야 합니다. 이는 이벤트를 버블링 하지 않도록 하기 위해 필요 합니다 (텍스트 필드에서 캐리지 리턴을 반환 함).
 
 응용 프로그램을 실행 하 고 텍스트 필드에 일부 텍스트를 입력 합니다. **Enter** 키를 누르면 알림이 오른쪽에 표시 된 대로 표시 됩니다.
 
 [텍스트를 편집 텍스트로 입력 하는 ![예제](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 Creative Commons 2.5 특성 라이선스에 설명 된 용어에 따라 사용 되는 작업을 * [기반으로 수정 됩니다](https://creativecommons.org/licenses/by/2.5/) *. 이 자습서는* [*Android 양식 제품 자습서*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) 를 기반으로 *합니다.*
+*이 페이지의 일부는 Android 오픈 소스 프로젝트에서 만들고 공유 하 고 Creative Commons 2.5 특성 라이선스에 설명 된 용어에 따라 사용 되는 작업을 기반으로 수정 됩니다* [*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/) *. 이 자습서는* [*Android 양식 제품 자습서*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) 를 기반으로 *합니다.*
 
 ## <a name="related-links"></a>관련 링크
 

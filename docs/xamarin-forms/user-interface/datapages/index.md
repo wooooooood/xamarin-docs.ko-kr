@@ -19,11 +19,11 @@ ms.locfileid: "75727942"
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages 要求使用 Xamarin. Forms 主题引用来呈现。 这涉及到将[xamarin. Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nuget 包安装到项目中，然后将其后跟[xamarin](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/)或[xamarin. 暗体](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/)nuget 包。
+> DataPages를 렌더링 하려면 Xamarin.ios 테마 참조가 필요 합니다. 여기에는 프로젝트에 [xamarin.ios](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) . a s e. m a s e. a s e. m a s [e.](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/)
 
 Xamarin. Forms DataPages는 2016에 발표 되었으며 고객이 피드백을 제공 하 고 피드백을 제공 하는 미리 보기로 제공 됩니다.
 
-DataPages 提供一个 API，用于快速、 轻松地将数据源绑定到预建的视图。 목록 항목 및 세부 정보 페이지는 데이터를 자동으로 렌더링 하며 테마를 사용 하 여 사용자 지정할 수 있습니다.
+DataPages 빠르고 쉽게 미리 작성된 된 보기에 데이터 소스를 바인딩하는 API를 제공 합니다. 목록 항목 및 세부 정보 페이지는 데이터를 자동으로 렌더링 하며 테마를 사용 하 여 사용자 지정할 수 있습니다.
 
 진화 키 노트 데모의 작동 방식을 확인 하려면 [시작 가이드](get-started.md)를 확인 하세요.
 

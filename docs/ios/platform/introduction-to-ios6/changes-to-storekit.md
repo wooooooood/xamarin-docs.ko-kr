@@ -60,7 +60,7 @@ IOS의 새로운 앱 내 구매 기능을 통해 사용자는 제품 정보를 �
 1. 뷰 컨트롤러의 `Finished` 이벤트에 처리기를 할당 합니다 .이 이벤트는 뷰 컨트롤러를 해제 해야 합니다. 이 이벤트는 사용자가 취소를 누를 때 호출 됩니다. 또는 뷰 컨트롤러 내에서 트랜잭션을 마무리 합니다.
 1. `StoreProductParameters` 및 완료 처리기를 전달 하는 `LoadProduct` 메서드를 호출 합니다. 완료 처리기는 제품 요청이 성공적으로 완료 되었는지 확인 하 고, 있는 경우 `SKProductViewController`를 모달 형식으로 표시 합니다. 제품을 검색할 수 없는 경우 적절 한 오류 처리를 추가 해야 합니다.
 
-### <a name="example"></a>示例
+### <a name="example"></a>예제
 
 이 문서의 지 항목 *키트* 샘플 코드에 있는 제품 *뷰* 프로젝트는 모든 제품의 Apple ID를 수락 하 고 `SKStoreProductViewController`를 표시 하는 `Buy` 메서드를 구현 합니다. 다음 코드는 지정 된 Apple ID에 대 한 제품 정보를 표시 합니다.
 
@@ -115,7 +115,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 
 ### <a name="reading-objective-c-documentation"></a>목표 읽기-C 설명서
 
-Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있는  [개발자](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) 는이 새로운 기능과 관련 하 여 설명 하는 프로토콜을 볼 수 있습니다. 대리자 프로토콜에는 Xamarin.ios의 `SKStoreProductViewController`에서 `Finished` 이벤트로 노출 된 productViewControllerDidFinish – 메서드가 하나만 있습니다.
+Apple의 개발자 포털에서 스토어 키트에 대 한 정보를 읽고 있는 개발자 [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) 는이 새로운 기능과 관련 하 여 설명 하는 프로토콜을 볼 수 있습니다. 대리자 프로토콜에는 Xamarin.ios의 `SKStoreProductViewController`에서 `Finished` 이벤트로 노출 된 productViewControllerDidFinish – 메서드가 하나만 있습니다.
 
 ## <a name="determining-apple-ids"></a>Apple Id 확인
 
@@ -135,10 +135,10 @@ Apple은 앱 스토어, iTunes 및 iBookstore 점에서 모든 제품을 쿼리 
 
 결과에는 앱에서 제품을 렌더링 하는 데 사용할 수 있는 표시 정보 및 아트 워크 Url을 포함 하는 다른 메타 데이터도 포함 됩니다.
 
-다음은 몇 가지 예입니다.
+예를 들어 다음과 같은 노래를 선택할 수 있다.
 
-- **Ibooks app** – [https://itunes.apple.com/search?term=ibooks&amp ; entity = software&amp; country = us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Dot 및 Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; entity = 전자책&amp; country = us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **Ibooks app** – [https://itunes.apple.com/search?term=ibooks&amp; entity = software&amp;country = us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot 및 Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entity = 전자책&amp;country = us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>엔터프라이즈 파트너 피드
 
@@ -527,5 +527,5 @@ Apple의 iCloud 백업 지침은 서버에서 쉽게 복원 되는 사용자가 
 - [이 클래스 참조](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
 - [이상 다운로드](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
-- [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
+- [고 제품](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)
 - [WWDC 비디오: 스토어 키트를 사용 하 여 제품 판매](https://developer.apple.com/videos/wwdc/2012/?include=302#302)

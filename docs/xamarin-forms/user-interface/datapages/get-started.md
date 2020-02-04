@@ -1,6 +1,6 @@
 ---
-title: 开始使用 DataPages
-description: 本文介绍如何开始构建使用 Xamarin.Forms DataPages 一个简单的数据驱动页面。
+title: DataPages 시작
+description: 이 문서에서는 Xamarin.Forms DataPages를 사용 하 여 간단한 데이터 기반 페이지를 구축을 시작 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
@@ -14,16 +14,16 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76725597"
 ---
-# <a name="getting-started-with-datapages"></a>开始使用 DataPages
+# <a name="getting-started-with-datapages"></a>DataPages 시작
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
 
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages 要求使用 Xamarin. Forms 主题引用来呈现。 这涉及到将[xamarin. Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) nuget 包安装到项目中，然后将其后跟[xamarin](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/)或[xamarin. 暗体](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/)nuget 包。
+> DataPages를 렌더링 하려면 Xamarin.ios 테마 참조가 필요 합니다. 여기에는 프로젝트에 [xamarin.ios](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) . a s e. m a s e. a s e. m a s [e.](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/)
 
-若要开始构建使用 DataPages 预览一个简单的数据驱动页面，请执行以下步骤。 在预览中的硬编码样式 （"事件"） 生成此演示使用仅适用于在代码中特定的 JSON 格式。
+DataPages 미리 보기를 사용 하 여 간단한 데이터 기반 페이지를 작성 합니다. 시작 하려면 다음 단계를 수행 합니다. 이 데모에서는 미리 보기에서 하드 코드 된 스타일 ("이벤트")를 작성 하는 코드에서 특정 JSON 형식 에서만 작동 합니다.
 
 [![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
 
@@ -37,7 +37,7 @@ ms.locfileid: "76725597"
 
 ## <a name="2-add-theme-reference"></a>2. 테마 참조 추가
 
-在中**App.xaml**文件中，添加一个自定义`xmlns:mytheme`主题，并确保主题合并到应用程序的资源字典：
+**앱 .xaml** 파일에서 테마에 대 한 사용자 지정 `xmlns:mytheme` 추가 하 고 테마가 응용 프로그램의 리소스 사전에 병합 되도록 합니다.
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -51,13 +51,13 @@ ms.locfileid: "76725597"
 ```
 
 > [!IMPORTANT]
-> IOS `AppDelegate` 및 Android `MainActivity`에 몇 가지 상용구 코드를 추가 하 여 테마 어셈블리를 로드 하는 단계를 수행 해야 합니다 [(아래 참조)](#loadtheme) . 这将在将来的预览版的版本中得到改进。
+> IOS `AppDelegate` 및 Android `MainActivity`에 몇 가지 상용구 코드를 추가 하 여 테마 어셈블리를 로드 하는 단계를 수행 해야 합니다 [(아래 참조)](#loadtheme) . 향후 미리 보기 릴리스에서 개선 됩니다.
 
 ## <a name="3-add-a-xaml-page"></a>3. XAML 페이지 추가
 
-将新的 XAML 页面添加到 Xamarin.Forms 应用程序，并*将基类更改*从`ContentPage`到`Xamarin.Forms.Pages.ListDataPage`。 这必须在 C# 和 XAML 中进行：
+Xamarin.ios 응용 프로그램에 새 XAML 페이지를 추가 하 고 `ContentPage`에서 `Xamarin.Forms.Pages.ListDataPage`로 *기본 클래스를 변경* 합니다. 여기에 C# 및 XAML을 모두에서 수행 될 수 있습니다.
 
-**C# 文件**
+**C#파일과**
 
 ```csharp
 public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was ContentPage
@@ -69,9 +69,9 @@ public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was C
 }
 ```
 
-**XAML 文件**
+**XAML 파일**
 
-除了更改到的根元素之外`<p:ListDataPage>`的自定义命名空间`xmlns:p`还必须添加：
+루트 요소를 변경 하는 것 외에도 `xmlns:p`에 대 한 사용자 지정 네임 스페이스를 추가 해야 `<p:ListDataPage>`.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -85,9 +85,9 @@ public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was C
 </p:ListDataPage>
 ```
 
-**应用程序子类**
+**응용 프로그램 하위 클래스**
 
-更改`App`类构造函数，以便`MainPage`设置为`NavigationPage`包含新`SessionDataPage`。 一个导航页*必须*使用。
+`MainPage` `App` 클래스 생성자를 변경 하 여 새 `SessionDataPage`를 포함 하는 `NavigationPage`으로 설정 합니다. 탐색 페이지를 사용 *해야* 합니다.
 
 ```csharp
 MainPage = new NavigationPage (new SessionDataPage ());
@@ -95,10 +95,10 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 ## <a name="3-add-the-datasource"></a>3. DataSource를 추가 합니다.
 
-删除`Content`元素并将其替换为`p:ListDataPage.DataSource`来填充的数据页。 在远程 Json 下面的示例从 URL 是正在加载数据文件。
+`Content` 요소를 삭제 하 고 해당 요소를 `p:ListDataPage.DataSource`로 바꿔서 페이지를 데이터로 채웁니다. 원격 Json 아래 예제에서는 데이터 파일 URL에서 로드 되 고 있습니다.
 
 > [!NOTE]
-> 미리 보기에는 데이터 원본에 대 한 렌더링 힌트를 제공 하는 `StyleClass` 특성이 *필요* 합니다. `StyleClass="Events"`指的是在预览中预定义的包含样式的布局*硬编码*以匹配正在使用的 JSON 数据源。
+> 미리 보기에는 데이터 원본에 대 한 렌더링 힌트를 제공 하는 `StyleClass` 특성이 *필요* 합니다. `StyleClass="Events"`는 미리 보기에 미리 정의 된 레이아웃을 나타내며 사용 중인 JSON 데이터 원본과 일치 하도록 *하드 코딩* 된 스타일을 포함 합니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -115,7 +115,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 </p:ListDataPage>
 ```
 
-**JSON 数据**
+**JSON 데이터**
 
 데모 원본의 JSON 데이터 예제는 다음과 같습니다.
 
@@ -135,17 +135,17 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 ## <a name="4-run"></a>4. 실행!
 
-上述步骤应导致工作数据页：
+위의 단계를 작업 데이터 페이지에서 발생 해야 합니다.
 
 [![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
 
-이는 미리 작성 된 스타일 **"이벤트"** 가 밝은 테마 NuGet 패키지에 있고 데이터 원본과 일치 하는 스타일이 정의 되어 있기 때문에 작동 합니다 (예: "title"、"图像"、"表示器"）。
+이는 미리 작성 된 스타일 **"이벤트"** 가 밝은 테마 NuGet 패키지에 있고 데이터 원본과 일치 하는 스타일이 정의 되어 있기 때문에 작동 합니다 (예: "title", "image", "프레 젠 터").
 
-"事件"`StyleClass`旨在显示`ListDataPage`具有一个自定义控件`CardView`Xamarin.Forms.Pages 中定义的控件。 `CardView`控件具有三个属性： `ImageSource`， `Text`，和`Detail`。 主题是硬编码要绑定的数据源 （从 JSON 文件中） 到显示这些属性的三个字段。
+"Events" `StyleClass`는 Xamarin.ios에 정의 된 사용자 지정 `CardView` 컨트롤을 사용 하 여 `ListDataPage` 컨트롤을 표시 하도록 빌드됩니다. `CardView` 컨트롤에는 `ImageSource`, `Text`및 `Detail`의 세 가지 속성이 있습니다. 테마는 datasource의 세 필드 (JSON 파일)에서 표시에 대 한 이러한 속성에 바인딩할 하드 코딩 됩니다.
 
 ## <a name="5-customize"></a>5. 사용자 지정
 
-可以通过指定的模板并使用数据源绑定中重写继承的样式。 아래 XAML은 새 `ListItemControl` 및 `{p:DataSourceBinding}` 구문을 사용 하 여 각 행에 대 한 사용자 지정 템플릿을 **선언 합니다.**
+상속 된 스타일 템플릿을 지정 하 고 데이터 원본 바인딩을 사용 하 여 재정의할 수 있습니다. 아래 XAML은 새 `ListItemControl` 및 `{p:DataSourceBinding}` 구문을 사용 하 여 각 행에 대 한 사용자 지정 템플릿을 **선언 합니다.**
 
 ```xaml
 <p:ListDataPage.DefaultItemTemplate>
@@ -164,11 +164,11 @@ MainPage = new NavigationPage (new SessionDataPage ());
 </p:ListDataPage.DefaultItemTemplate>
 ```
 
-通过提供`DataTemplate`此代码将重写`StyleClass`，而是使用的默认布局`ListItemControl`。
+이 코드는 `DataTemplate`를 제공 하 여 `StyleClass`를 재정의 하 고 대신 `ListItemControl`에 기본 레이아웃을 사용 합니다.
 
 [![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
 
-开发人员喜欢 C# 到 XAML 可以创建数据源绑定过 (请记住包括`using Xamarin.Forms.Pages;`语句):
+XAML을 선호 C# 하는 개발자는 데이터 소스 바인딩만 만들 수 있습니다 (`using Xamarin.Forms.Pages;` 문을 포함 해야).
 
 ```csharp
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
@@ -176,17 +176,17 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 
 테마를 처음부터 만드는 데 더 많은 작업이 필요 하지만 이후 미리 보기 릴리스에서는이 작업을 보다 쉽게 수행할 수 있습니다.
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>문제 해결
 
 <a name="loadtheme" />
 
-## <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>无法加载文件或程序集 Xamarin.Forms.Theme.Light 或其某个依赖项
+## <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>파일이 나 어셈블리 'Xamarin.Forms.Theme.Light' 또는 해당 종속성 중 하나를 로드할 수 없습니다.
 
-在预览版本中，主题可能不能在运行时加载。 添加代码，如下所示在相关项目来修复此错误。
+미리 보기 릴리스에서 테마 못할 런타임에 로드할 수 있습니다. 이 오류를 해결 하려면 관련 프로젝트에 아래 표시 된 코드를 추가 합니다.
 
-**Android**
+**iOS**
 
-在中**AppDelegate.cs**添加以下行后 `LoadApplication`
+**AppDelegate.cs** 에 다음 줄을 추가 `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
@@ -194,9 +194,9 @@ x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 ```
 
-**OWA(Outlook Web Access)**
+**Android**
 
-在中**MainActivity.cs**添加以下行后 `LoadApplication`
+**MainActivity.cs** 에 다음 줄을 추가 `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
@@ -206,4 +206,4 @@ x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 
 ## <a name="related-links"></a>관련 링크
 
-- [DataPagesDemo 示例](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
+- [DataPagesDemo 샘플](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)

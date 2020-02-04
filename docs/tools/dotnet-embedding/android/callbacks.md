@@ -281,7 +281,7 @@ public abstract class VirtualClass : Java.Lang.Object
 
 이러한 시나리오를 향상 시킬 수 있는 몇 가지 작업이 있습니다.
 
-1. 此 [PR](https://github.com/xamarin/java.interop/pull/170) C#上`throws Throwable`已修复构造函数。
+1. 이 PR C# 에서 생성자에 대 한 [PR](https://github.com/xamarin/java.interop/pull/170)`throws Throwable` 고정 되어 있습니다.
 1. Xamarin Android 지원 인터페이스에서 Java 생성기를 만듭니다.
     - 이렇게 하면 `AndroidJavaSource`의 빌드 작업을 사용 하 여 Java 소스 파일을 추가 하지 않아도 됩니다.
 1. Xamarin.ios에서 가상 클래스에 대 한 `Invoker`를 로드 하는 방법을 만듭니다.
@@ -291,7 +291,7 @@ public abstract class VirtualClass : Java.Lang.Object
 
 여기에서는 많은 작업을 수행 해야 하지만 .NET 포함의 이러한 향상 된 기능을 사용할 수 있습니다.
 
-## <a name="further-reading"></a>추가 정보
+## <a name="further-reading"></a>추가 참고 자료
 
 - [Android 시작](~/tools/dotnet-embedding/get-started/java/android.md)
 - [예비 Android 연구](~/tools/dotnet-embedding/android/index.md)

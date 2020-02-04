@@ -63,7 +63,7 @@ PresentViewController(sfViewController, true, null);
 
 그러면 다음과 같은 웹 보기가 생성 됩니다.
 
-[SFSafariViewController를 사용 하 여 예제 웹 보기 ![](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
+[![SFSafariViewController를 사용 하 여 예제 웹 보기](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -77,7 +77,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 그러면 다음과 같은 웹 보기가 생성 됩니다.
 
-[Safari에 표시 되는 웹 페이지 ![](webview-images/safari.png)](webview-images/safari.png#lightbox)
+[![Safari에 표시 되는 웹 페이지](webview-images/safari.png)](webview-images/safari.png#lightbox)
 
 사용자를 앱에서 Safari로 이동 하는 것은 일반적으로 항상 피해 야 합니다. 대부분의 사용자는 응용 프로그램 외부에서 탐색을 필요로 하지 않으므로 앱에서 벗어나면 사용자는이를 반환 하지 않을 수 있으며,이는 기본적으로 참여를 중단 합니다.
 
@@ -113,7 +113,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 그러면 다음과 같은 웹 보기가 생성 됩니다.
 
-[ScalesPagesToFit의 효과를 ![합니다.](webview-images/webview.png)](webview-images/webview.png#lightbox)
+[![ScalesPagesToFit의 효과를 합니다.](webview-images/webview.png)](webview-images/webview.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 
