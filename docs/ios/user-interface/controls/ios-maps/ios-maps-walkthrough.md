@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 404483bb0c2c405fb810ebcd3a8007692219f522
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7e9010eb579f28e62b5f7ab72ac061e9898e7ecf
+ms.sourcegitcommit: a9b180651863cb7da31d3af14182fe3ad44796f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022011"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971534"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Xamarin.ios의 주석 및 오버레이
 
@@ -80,7 +80,7 @@ ms.locfileid: "73022011"
 
     ```
 
-1. `MapDelegate`의 새 인스턴스를 만들고이를 `MKMapView`의 `Delegate`에 할당 합니다. 다시 `MapDelegate` 곧 implcodeent 됩니다.
+1. `MapDelegate`의 새 인스턴스를 만들고이를 `MKMapView`의 `Delegate`에 할당 합니다. 다시, `MapDelegate`을 구현 합니다.
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -107,7 +107,7 @@ ms.locfileid: "73022011"
 
     및 문자열:
 
-    `Maps Walkthrough Docs Sample`
+    `Maps Walkthrough Docs Sample`.
 
 ## <a name="conferenceannotationcs--a-class-for-custom-annotations"></a>ConferenceAnnotation.cs – 사용자 지정 주석에 대 한 클래스입니다.
 
@@ -245,7 +245,7 @@ ms.locfileid: "73022011"
     }
     ```
 
-1. 사용자가 맵의 다른 위치를 눌러 주석을 선택 취소 했을 때 이미지를 숨기려면 `DidSelectAnnotationView` 메서드를 다음과 같이 구현 합니다.
+1. 사용자가 맵의 다른 위치를 눌러 주석을 선택 취소 했을 때 이미지를 숨기려면 `DidDeselectAnnotationView` 메서드를 다음과 같이 구현 합니다.
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)
@@ -276,7 +276,7 @@ ms.locfileid: "73022011"
     }
     ```
 
-애플리케이션을 실행합니다. 이제 사용자 지정 주석과 오버레이가 포함 된 대화형 맵이 있습니다. 아래와 같이 주석을 탭 하면 오스틴 이미지가 표시 됩니다.
+응용 프로그램을 실행합니다. 이제 사용자 지정 주석과 오버레이가 포함 된 대화형 맵이 있습니다. 아래와 같이 주석을 탭 하면 오스틴 이미지가 표시 됩니다.
 
  [![](ios-maps-walkthrough-images/01-map-image.png "Tap on the annotation and the image of Austin is displayed")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
