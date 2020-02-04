@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 5eff10d58ac094f3493bd60bdb621df1bcb30477
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 72cddde86708b5573dc578165354d137c4dc35b6
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028051"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76723902"
 ---
 # <a name="installing-xamarinandroid-as-a-system-app"></a>시스템 앱으로 Xamarin.Android 설치
 
@@ -42,7 +42,7 @@ Xamarin.Android 앱은 시스템 애플리케이션으로 배포할 수 있습�
 
 다음 단계에는 시스템 앱으로 Xamarin.Android 앱을 설치하는 방법을 설명합니다.
 
-1. **Xamarin.Android 앱의 릴리스 APK 패키징**&ndash; 이는 [애플리케이션 게시](~/android/deploy-test/publishing/index.md) 가이드에 자세히 설명되어 있습니다.
+1. **Xamarin.Android 앱의 릴리스 APK 패키지** &ndash; [애플리케이션 게시](~/android/deploy-test/publishing/index.md) 가이드에 자세히 설명되어 있습니다.
 
 2. **APK에서 공유 라이브러리 추출** &ndash; ZIP 유틸리티 프로그램을 사용하여 APK 파일을 열고 **/lib/** 폴더의 콘텐츠를 살펴봅니다. 이 폴더에는 애플리케이션에서 지원하는 각 ABI(_애플리케이션 이진 인터페이스_)의 하위 디렉터리가 있습니다. 이 폴더의 콘텐츠에는 특정 ABI의 앱에 필요한 모든 공유 라이브러리가 포함됩니다.
 
@@ -63,4 +63,4 @@ Xamarin.Android 앱은 시스템 애플리케이션으로 배포할 수 있습�
 - [애플리케이션 게시](~/android/deploy-test/publishing/index.md)
 - [CPU 아키텍처](~/android/app-fundamentals/cpu-architectures.md)
 - [BLUETOOTH_PRIVILEGED](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)
-- [ABI 관리](https://developer.android.com/ndk~/abis.html)
+- [ABI 관리](https://developer.android.com/ndk/guides/abis)

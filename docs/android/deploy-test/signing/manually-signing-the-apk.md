@@ -6,27 +6,27 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: f43cb3ac5ff4d976c57a9d82c2003a08954ef1a4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2d84d149b2eb4194de35fabc69cf44af99c04d25
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021045"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724128"
 ---
 # <a name="manually-signing-the-apk"></a>수동으로 APK 서명
 
 애플리케이션이 릴리스용으로 빌드된 후 배포 전에 APK에 서명해야 Android 디바이스에서 실행할 수 있습니다. 이 프로세스는 일반적으로 IDE로 처리되지만 명령줄에서 수동으로 APK에 서명하기 위해 필요한 경우가 있습니다. APK 서명과 관련된 단계는 다음과 같습니다.
 
-1. **프라이빗 키 만들기**&ndash; 이 단계는 한 번만 수행해야 합니다. 프라이빗 키는 APK에 디지털 방식으로 서명하는 데 필요합니다.
+1. **프라이빗 키 만들기** &ndash; 이 단계는 한 번만 수행해야 합니다. 프라이빗 키는 APK에 디지털 방식으로 서명하는 데 필요합니다.
     프라이빗 키가 준비되면 이후 릴리스 빌드에서 이 단계를 건너뛸 수 있습니다.
 
-2. **APK Zipalign**&ndash;*Zipalign*은 애플리케이션에서 수행되는 최적화 프로세스입니다. 런타임에 Android가 APK와 보다 효율적으로 상호 작용할 수 있게 해줍니다. Xamarin.Android는 런타임에 검사를 수행하고 APK가 Zipalign 되지 않은 경우 애플리케이션 실행을 허용하지 않습니다.
+2. **APK Zipalign** &ndash; *Zipalign*은 애플리케이션에서 수행되는 최적화 프로세스입니다. 런타임에 Android가 APK와 보다 효율적으로 상호 작용할 수 있게 해줍니다. Xamarin.Android는 런타임에 검사를 수행하고 APK가 Zipalign 되지 않은 경우 애플리케이션 실행을 허용하지 않습니다.
 
-3. **APK 서명**&ndash; 이 단계에서는 Android SDK의 **apksigner** 유틸리티를 사용하고, 이전 단계에서 생성된 프라이빗 키로 APK에 서명합니다. v24.0.3 이전 버전의 오래된 Android SDK 빌드 도구를 사용하여 개발된 애플리케이션은 JDK의 **jarsigner** 앱을 사용합니다. 이러한 도구는 아래에서 자세히 설명합니다. 
+3. **APK 서명** &ndash; 이 단계에서는 Android SDK의 **apksigner** 유틸리티를 사용하고, 이전 단계에서 생성된 프라이빗 키로 APK에 서명합니다. v24.0.3 이전 버전의 오래된 Android SDK 빌드 도구를 사용하여 개발된 애플리케이션은 JDK의 **jarsigner** 앱을 사용합니다. 이러한 도구는 아래에서 자세히 설명합니다.
 
-단계의 순서는 중요하며 APK에 서명하는 데 사용되는 도구에 따라 달라집니다. **apksigner**를 사용할 경우 먼저 애플리케이션 **zipalign**을 수행한 후 **apksigner**로 서명하는 것이 중요합니다.  **jarsigner**를 사용하여 APK에 서명해야 하며, 먼저 APK에 서명한 후 **zipalign**을 실행하는 것이 중요합니다. 
+단계의 순서는 중요하며 APK에 서명하는 데 사용되는 도구에 따라 달라집니다. **apksigner**를 사용할 경우 먼저 애플리케이션 **zipalign**을 수행한 후 **apksigner**로 서명하는 것이 중요합니다.  **jarsigner**를 사용하여 APK에 서명해야 하며, 먼저 APK에 서명한 후 **zipalign**을 실행하는 것이 중요합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 가이드에서는 Android SDK 빌드 도구 v24.0.3 이상 버전의 **apksigner**를 사용하는 방법을 중점적으로 설명합니다. APK가 이미 빌드되었다고 가정합니다.
 
@@ -127,7 +127,7 @@ $ apksigner sign --ks xample.keystore --ks-key-alias publishingdoc mono.samples.
 > [!WARNING]
 > 이 섹션은 **jarsigner** 유틸리티를 사용하여 APK에 서명해야 하는 경우에만 적용됩니다. 개발자는 **apksigner**를 사용하여 APK에 서명하는 것이 좋습니다.
 
-이 기법을 사용하려면 Java SDK의 **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** 명령을 사용하여 APK 파일에 서명해야 합니다.  **jarsigner** 도구는 Java SDK에서 제공합니다. 
+이 기법을 사용하려면 Java SDK의 **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** 명령을 사용하여 APK 파일에 서명해야 합니다.  **jarsigner** 도구는 Java SDK에서 제공합니다.
 
 다음은 **xample.keystore**라는 키 저장소 파일에 포함된 `publishingdoc` 키와 **jarsigner**를 사용하여 APK에 서명하는 방법을 보여줍니다.
 
@@ -141,7 +141,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 ## <a name="related-links"></a>관련 링크
 
 - [애플리케이션 서명](https://source.android.com/security/apksigning/)
-- [Java JAR 서명](https://docs.oracle.com/javase/8/docs/technotes~/jar/jar.html#Signed_JAR_File)
 - [jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)
 - [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
 - [zipalign](https://developer.android.com/studio/command-line/zipalign.html)

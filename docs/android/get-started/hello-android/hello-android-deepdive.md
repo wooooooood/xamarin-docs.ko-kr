@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: ee72c51611503f92e7ede3a01a7918780652935c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028003"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724368"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: 심층 분석
 
@@ -26,7 +26,7 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 ::: zone pivot="windows"
 
-- **Visual Studio 소개**&ndash; Visual Studio 및 새로운 Xamarin.Android 애플리케이션 만들기를 소개합니다.
+- **Visual Studio 소개** &ndash; Visual Studio 및 새로운 Xamarin.Android 애플리케이션 만들기를 소개합니다.
 
 - **Xamarin.Android 애플리케이션 분석** - Xamarin.Android 애플리케이션의 핵심 부분을 안내합니다.
 
@@ -36,14 +36,14 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 - **작업 및 작업 수명 주기** &ndash; 작업 수명 주기를 소개하고 코드로 사용자 인터페이스를 연결합니다.
 
-- **테스트, 배포 및 마무리**&ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 애플리케이션을 완성합니다.
+- **테스트, 배포 및 마무리** &ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 애플리케이션을 완성합니다.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **Mac용 Visual Studio 소개**&ndash; Mac용 Visual Studio 및 새로운 Xamarin.Forms 애플리케이션 만들기를 소개합니다.
+- **Mac용 Visual Studio 소개** &ndash; Mac용 Visual Studio 및 새로운 Xamarin.Android 애플리케이션 만들기를 소개합니다.
 
-- **Xamarin.Android 애플리케이션 분석**&ndash; Xamarin.Android 애플리케이션의 핵심 부분을 안내합니다.
+- **Xamarin.Android 애플리케이션 분석** &ndash; Xamarin.Android 애플리케이션의 핵심 부분을 안내합니다.
 
 - **앱 기본 항목 및 아키텍처 기본 사항** &ndash; 작업, Android 매니페스트 및 일반 버전의 Android 개발을 소개합니다.
 
@@ -51,7 +51,7 @@ _두 부분으로 구성된 이 가이드에서는 첫 번째 Xamarin.Android �
 
 - **작업 및 작업 수명 주기** &ndash; 작업 수명 주기를 소개하고 코드로 사용자 인터페이스를 연결합니다.
 
-- **테스트, 배포 및 마무리**&ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 애플리케이션을 완성합니다.
+- **테스트, 배포 및 마무리** &ndash; 테스트, 배포, 아트워크 생성 등에 관한 정보를 활용하여 애플리케이션을 완성합니다.
 
 ::: zone-end
 
@@ -99,13 +99,13 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 
 각 폴더 및 해당 용도를 보려면 프로젝트 내부의 항목을 확인합니다.
 
-- **속성**&ndash; 이름, 버전 번호 및 사용 권한을 포함하는 Xamarin.Android 애플리케이션에 대한 모든 요구 사항을 설명하는 [AndroidManifest.xml](~/android/platform/android-manifest.md) 파일이 포함됩니다. **속성** 폴더는 .NET 어셈블리 메타데이터 파일인 [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo)도 보관합니다. 이 파일을 애플리케이션에 대한 일부 기본 정보로 채우는 것이 좋습니다.
+- **속성** &ndash; 이름, 버전 번호 및 권한을 포함하는 Xamarin.Android 애플리케이션에 대한 모든 요구 사항을 설명하는 [AndroidManifest.xml](~/android/platform/android-manifest.md) 파일이 포함됩니다. **속성** 폴더는 .NET 어셈블리 메타데이터 파일인 [AssemblyInfo.cs](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo)도 보관합니다. 이 파일을 애플리케이션에 대한 일부 기본 정보로 채우는 것이 좋습니다.
 
-- **참조**&ndash; 애플리케이션을 빌드하고 실행하는 데 필요한 어셈블리가 포함됩니다. 참조 디렉터리를 확장하면 Xamarin의 Mono.Android 어셈블리에 대한 참조뿐만 아니라 [System](xref:System), System.Core 및 [System.Xml](xref:System.Xml)과 같은 .NET 어셈블리에 대한 참조를 확인할 수 있습니다.
+- **참조** &ndash; 애플리케이션을 빌드하고 실행하는 데 필요한 어셈블리가 포함됩니다. 참조 디렉터리를 확장하면 Xamarin의 Mono.Android 어셈블리에 대한 참조뿐만 아니라 [System](xref:System), System.Core 및 [System.Xml](xref:System.Xml)과 같은 .NET 어셈블리에 대한 참조를 확인할 수 있습니다.
 
-- **자산**&ndash; 글꼴, 로컬 데이터 파일 및 텍스트 파일을 포함하여 애플리케이션이 실행해야 하는 파일이 포함됩니다. 여기에 포함된 파일은 생성된 `Assets` 클래스를 통해 액세스할 수 있습니다. Android 자산에 대한 자세한 내용은 Xamarin [Android 자산 사용](~/android/app-fundamentals/resources-in-android/android-assets.md) 가이드를 참조하세요.
+- **자산** &ndash; 글꼴, 로컬 데이터 파일 및 텍스트 파일을 포함하여 애플리케이션이 실행해야 하는 파일이 포함됩니다. 여기에 포함된 파일은 생성된 `Assets` 클래스를 통해 액세스할 수 있습니다. Android 자산에 대한 자세한 내용은 Xamarin [Android 자산 사용](~/android/app-fundamentals/resources-in-android/android-assets.md) 가이드를 참조하세요.
 
-- **리소스**&ndash; 문자열, 이미지 및 레이아웃과 같은 애플리케이션 리소스가 포함됩니다. 생성된 `Resource` 클래스를 통해 코드에 있는 이러한 리소스에 액세스할 수 있습니다. [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md) 가이드는 **리소스** 디렉터리에 대한 자세한 정보를 제공합니다. 애플리케이션 템플릿에는 **AboutResources.txt** 파일의 리소스에 대한 간단한 가이드가 포함됩니다.
+- **리소스** &ndash; 문자열, 이미지 및 레이아웃과 같은 애플리케이션 리소스가 포함됩니다. 생성된 `Resource` 클래스를 통해 코드에 있는 이러한 리소스에 액세스할 수 있습니다. [Android 리소스](~/android/app-fundamentals/resources-in-android/index.md) 가이드는 **리소스** 디렉터리에 대한 자세한 정보를 제공합니다. 애플리케이션 템플릿에는 **AboutResources.txt** 파일의 리소스에 대한 간단한 가이드가 포함됩니다.
 
 ### <a name="resources"></a>리소스
 
@@ -113,22 +113,22 @@ Mac용 Visual Studio는 코드를 _솔루션_ 및 _프로젝트_로 구성하는
 
 항목은 아래 표에 요약되어 있습니다.
 
-- **drawable** &ndash; 드로어블 디렉터리는 이미지 및 비트맵과 같은 [드로어블 리소스](https://developer.android.com/guide/topics/resources/drawable-resource.html)를 보관합니다.
+- **drawable** &ndash; drawable 디렉터리는 이미지 및 비트맵과 같은 [드로어블 리소스](https://developer.android.com/guide/topics/resources/drawable-resource.html)를 보관합니다.
 
 - **mipmap** &ndash; mipmap 디렉터리는 다른 시작 관리자 아이콘 밀도에 대한 드로어블 리소스를 저장합니다. 기본 템플릿에서 드로어블 디렉터리는 애플리케이션 아이콘 파일인 **Icon.png**를 보관합니다.
 
 ::: zone pivot="windows"
 
-- **layout** &ndash; 레이아웃 디렉터리에는 각 화면이나 작업에 대한 사용자 인터페이스를 정의하는 _Android 디자이너 파일_(.axml)이 포함됩니다. 이 템플릿은 **activity_main.axml**이라는 기본 레이아웃을 만듭니다.
+- **layout** &ndash; layout 디렉터리에는 각 화면이나 작업에 대한 사용자 인터페이스를 정의하는 _Android Designer 파일_(.axml)이 포함됩니다. 이 템플릿은 **activity_main.axml**이라는 기본 레이아웃을 만듭니다.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- **layout** &ndash; 레이아웃 디렉터리에는 각 화면이나 작업에 대한 사용자 인터페이스를 정의하는 _Android 디자이너 파일_(.axml)이 포함됩니다. 이 템플릿은 **Main.axml**이라는 기본 레이아웃을 만듭니다.
+- **layout** &ndash; layout 디렉터리에는 각 화면이나 작업에 대한 사용자 인터페이스를 정의하는 _Android Designer 파일_(.axml)이 포함됩니다. 이 템플릿은 **Main.axml**이라는 기본 레이아웃을 만듭니다.
 
 ::: zone-end
 
-- **values** &ndash; 이 디렉터리는 문자열, 정수 및 색과 같은 단순 값을 저장하는 XML 파일을 보관합니다. 템플릿은 **Strings.xml**이라고 하는 문자열 값을 저장할 파일을 만듭니다.
+- **values**&ndash; 이 디렉터리는 문자열, 정수 및 색과 같은 단순 값을 저장하는 XML 파일을 보관합니다. 템플릿은 **Strings.xml**이라고 하는 문자열 값을 저장할 파일을 만듭니다.
 
 - **Resource.designer.cs** &ndash; `Resource` 클래스라고도 하는 이 파일은 각 리소스에 할당된 고유 ID를 보유하는 partial 클래스입니다. Xamarin.Android 도구에 의해 자동으로 만들어지고 필요에 따라 다시 생성됩니다. Xamarin.Android가 수동 변경된 내용을 덮어쓰게 되면 이 파일은 수동으로 편집할 수 있습니다.
 
@@ -235,11 +235,11 @@ Android에서 작업은 사용자와의 상호 작용에 따라 수명 주기의
 
 `Activity` 수명 주기 메서드를 재정의하여 작업이 로드하는 방법, 사용자에게 반응하는 방법 및 디바이스 화면에서 사라진 후에 수행되는 작업을 제어할 수 있습니다. 예를 들어 위의 다이어그램에서 수명 주기 메서드를 재정의하여 몇 가지 중요한 작업을 수행할 수 있습니다.
 
-- **OnCreate** &ndash; 뷰를 만들고, 변수를 초기화하고, 사용자에게 작업을 표시하기 전에 수행해야 하는 기타 준비 작업을 수행합니다. 이 메서드는 작업을 메모리에 로드할 때 한 번만 호출됩니다. 
+- **OnCreate** &ndash; 뷰를 만들고, 변수를 초기화하고, 사용자에게 작업을 표시하기 전에 수행해야 하는 기타 준비 작업을 수행합니다. 이 메서드는 작업을 메모리에 로드할 때 한 번만 호출됩니다.
 
-- **OnResume**&ndash; 작업이 디바이스 화면에 반환될 때마다 발생해야 하는 모든 작업을 수행합니다.
+- **OnResume** &ndash; 작업이 디바이스 화면에 반환될 때마다 발생해야 하는 모든 작업을 수행합니다.
 
-- **OnPause**&ndash; 작업이 디바이스 화면을 벗어날 때마다 발생해야 하는 모든 작업을 수행합니다.
+- **OnPause** &ndash; 작업이 디바이스 화면을 벗어날 때마다 발생해야 하는 모든 작업을 수행합니다.
 
 `Activity`의 수명 주기 메서드에 사용자 지정 코드를 추가하는 경우 해당 수명 주기 메서드의 *기본 구현*을 *재정의*합니다. 기존 수명 주기 메서드(일부 코드가 이미 연결되어 있음)를 누르고 고유한 코드를 사용하여 해당 메서드를 확장합니다. 새 코드 앞에 원래 코드가 실행되도록 메서드 내에서 기본 구현을 호출합니다. 다음 섹션에서 이러한 예제를 설명합니다.
 
@@ -279,7 +279,7 @@ SetContentView (Resource.Layout.activity_main);
 SetContentView (Resource.Layout.Main);
 ```
 
-`MainActivity`가 시작되면 **Main.axml** 파일의 내용에 기반하는 보기를 만듭니다. 레이아웃 파일 이름이 작업 이름과 일치합니다. &ndash; *Main*.axml은 *Main* 작업의 레이아웃입니다. 이 항목은 Android의 관점에서 필요하지 않지만 애플리케이션에 더 많은 화면을 추가할 때 이 명명 규칙을 통해 보다 쉽게 코드 파일을 레이아웃 파일과 일치시킬 수 있습니다.
+`MainActivity`가 시작되면 **Main.axml** 파일의 내용에 기반하는 보기를 만듭니다. 레이아웃 파일 이름이 작업 이름과 일치합니다. &ndash; *Main*.axml은 *Main*Activity의 레이아웃입니다. 이 항목은 Android의 관점에서 필요하지 않지만 애플리케이션에 더 많은 화면을 추가할 때 이 명명 규칙을 통해 보다 쉽게 코드 파일을 레이아웃 파일과 일치시킬 수 있습니다.
 
 ::: zone-end
 
@@ -296,7 +296,7 @@ TextView translatedPhoneWord = FindViewById<TextView>(Resource.Id.TranslatedPhon
 
 ### <a name="responding-to-user-interaction"></a>사용자 상호 작용에 응답
 
-Android에서 `Click` 이벤트는 사용자의 터치를 수신 대기합니다. 앱에서 람다를 사용하여 `Click` 이벤트를 처리하지만 대리자 또는 명명된 이벤트 처리기를 대신 사용할 수 있습니다. 최종 **TranslateButton** 코드는 다음과 유사합니다. 
+Android에서 `Click` 이벤트는 사용자의 터치를 수신 대기합니다. 앱에서 람다를 사용하여 `Click` 이벤트를 처리하지만 대리자 또는 명명된 이벤트 처리기를 대신 사용할 수 있습니다. 최종 **TranslateButton** 코드는 다음과 유사합니다.
 
 ```csharp
 translateButton.Click += (sender, e) =>
@@ -380,22 +380,16 @@ Android는 적절한 밀도의 아이콘을 선택합니다.
 
 - Visual Studio &ndash; IDE에서 직접 앱에 대한 간단한 아이콘 집합을 만드는 데 사용할 수 있습니다.
 
-- [Glyphish](https://www.glyphish.com/) &ndash; 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
-
-- [Fiverr](https://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 집합을 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
+- [Fiverr](https://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 세트를 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 ::: zone pivot="macos"
 
 - [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html) &ndash; 다른 유용한 커뮤니티 도구에 대한 링크를 포함한 모든 형식의 Android 아이콘에 대한 웹 기반 브라우저 내 생성기입니다. Google Chrome에서 가장 잘 작동합니다.
 
-- [Sketch 3](https://itunes.apple.com/us/app/sketch/id852320343?mt=12) &ndash; Sketch는 사용자 인터페이스, 아이콘 등을 디자인하기 위한 Mac 앱입니다. Xamarin 앱 아이콘 및 시작 이미지 집합을 디자인하는 데 사용되었던 앱입니다. Sketch 3은 App Store에서 제공됩니다(약 $80). 체험용 [Sketch Tool](https://bohemiancoding.com/sketch/tool/)도 사용해 볼 수 있습니다.
-
 - [Pixelmator](https://www.pixelmator.com/) &ndash; Mac용 다양한 이미지 편집 앱입니다(약 $30).
 
-- [Glyphish](https://www.glyphish.com/) &ndash; 무료 다운로드 및 구매가 가능한 고품질의 미리 빌드된 아이콘 집합입니다.
-
-- [Fiverr](https://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 집합을 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
+- [Fiverr](https://www.fiverr.com/) &ndash; 다양한 디자이너를 선택하여 자신에게 맞는 아이콘 세트를 만들 수 있습니다($5부터). 성공할 수도 있고 아니면 실패할 수도 있지만, 즉시 디자인된 아이콘이 필요한 경우에 좋은 리소스입니다.
 
 ::: zone-end
 

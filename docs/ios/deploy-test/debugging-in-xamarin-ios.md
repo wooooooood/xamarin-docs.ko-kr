@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: ae140f7ea75c1631c6c96170af738f3fac04dcdb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026514"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724698"
 ---
 # <a name="debugging-xamarinios-apps"></a>Xamarin.iOS 앱 디버깅
 
@@ -198,7 +198,7 @@ Xamarin.iOS는 새로운 Mono 소프트 디버거를 사용합니다. 별도의 
 
 콘솔 클래스의 크래시 로그 및 출력은 iPhone 콘솔로 전송됩니다. "구성 도우미"를 사용하고 구성 도우미에서 디바이스를 선택하여 Xcode를 통해 이 콘솔에 액세스할 수 있습니다.
 
-또는 Xcode를 시작하지 않으려면 Apple의 [iPhone 구성 유틸리티](https://www.apple.com/support/iphone/enterprise/)를 사용하여 콘솔에 직접 액세스할 수 있습니다. 이 필드에서 문제를 디버그하는 경우 Windows 시스템에서 콘솔 로그에 액세스할 수 있는 기회가 추가로 있습니다.
+또는 Xcode를 시작하지 않으려면 Apple의 iPhone 구성 유틸리티를 사용하여 콘솔에 직접 액세스할 수 있습니다. 이 필드에서 문제를 디버그하는 경우 Windows 시스템에서 콘솔 로그에 액세스할 수 있는 기회가 추가로 있습니다.
 
 Visual Studio 사용자의 경우 [출력] 창에서 사용할 수 있는 몇 가지 로그가 있지만, Mac으로 전환해야 더 철저하고 자세한 로그를 볼 수 있습니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/30/2019
-ms.openlocfilehash: 1141b96151df0adda755b7c6d60019c18825cc76
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e27e73ac2c5164fa3431c8892b21a71c32fcd8ef
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028023"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724017"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>다중 코어 디바이스 및 Xamarin.Android
 
@@ -91,11 +91,11 @@ Android 애플리케이션 패키지는 Android 애플리케이션에 필요한 
 
 `.apk` 파일의 콘텐츠에 대한 간단한 설명:
 
-- **AndroidManifest.xml** &ndash; 이는 이진 XML 형식의 `AndroidManifest.xml` 파일입니다.
+- **AndroidManifest.xml** &ndash; 이진 XML 형식의 `AndroidManifest.xml` 파일입니다.
 
-- **classes.dex**&ndash; 여기에는 Android 런타임 VM에서 사용하는 `dex` 파일 형식으로 컴파일된 애플리케이션 코드가 포함됩니다.
+- **classes.dex** &ndash; 여기에는 Android 런타임 VM에서 사용하는 `dex` 파일 형식으로 컴파일된 애플리케이션 코드가 포함됩니다.
 
-- **resources.arsc**&ndash; 이 파일에는 애플리케이션의 미리 컴파일된 리소스가 모두 포함됩니다.
+- **resources.arsc** &ndash; 이 파일에는 애플리케이션의 미리 컴파일된 리소스가 모두 포함됩니다.
 
 - **lib** &ndash; 이 디렉터리에는 각 ABI의 컴파일된 코드가 저장됩니다. 이전 섹션에서 설명된 각 ABI당 하나의 하위 폴더가 포함됩니다. 위의 스크린샷에서 해당 `.apk`에는 `armeabi-v7a` 및 `x86` 모두를 위한 네이티브 라이브러리가 있습니다.
 
@@ -110,9 +110,9 @@ Android 애플리케이션 패키지는 Android 애플리케이션에 필요한 
 
 각 Android 디바이스는 최대 두 개의 ABI에서 네이티브 코드 실행을 지원합니다.
 
-- **“주” ABI** &ndash; 이는 시스템 이미지에서 사용되는 머신 코드에 해당합니다.
+- **“주” ABI** &ndash; 시스템 이미지에서 사용되는 머신 코드에 해당합니다.
 
-- **“보조” ABI** &ndash; 이는 시스템 이미지에서도 지원되는 선택적 ABI입니다.
+- **“보조” ABI** &ndash; 시스템 이미지에서도 지원되는 선택적 ABI입니다.
 
 예를 들어 일반적인 ARMv5TE 디바이스는 `armeabi`의 주 ABI만 있지만, ARMv7 디바이스는 `armeabi-v7a`의 주 ABI와 `armeabi`의 보조 ABI를 지정합니다. 일반적인 x86 디바이스는 `x86`의 주 ABI만 지정합니다.
 
@@ -176,7 +176,7 @@ $APP/lib/libtwo.so
 
 불행히도 이 동작은 다음 문서 [문제 24321: apk에 armeabi와 armeabi-v7a가 둘 다 포함된 경우 Galaxy Nexus 4.0.2가 armeabi 네이티브 코드 사용](https://code.google.com/p/android/issues/detail?id=25321)에 설명된 대로 순서에 따라 달라집니다.
 
-네이티브 라이브러리는 "순서대로"(예를 들어 unzip에 나열된 대로) 처리되고, *처음 일치* 항목이 추출됩니다. `.apk`에는 `armeabi` 및 `armeabi-v7a` 버전의 `libtwo.so`가 포함되어 있고 `armeabi`가 먼저 나열되므로 `armeabi-v7a` 버전이 *아닌* `armeabi` 버전이 추출됩니다.
+네이티브 라이브러리는 "순서대로"(예를 들어 unzip에 나열된 대로) 처리되고, *처음 일치* 항목이 추출됩니다. `.apk`에는 `armeabi` 및 `armeabi-v7a` 버전의 `libtwo.so`가 포함되어 있고 `armeabi`가 먼저 나열되므로 `armeabi-v7a` 버전이 *아닌*`armeabi` 버전이 추출됩니다.
 
 ```shell
 $APP/lib/libone.so # armeabi
@@ -253,7 +253,6 @@ Mac용 Visual Studio에서는 다음 스크린샷에서처럼 **고급** 탭에�
 
 ## <a name="related-links"></a>관련 링크
 
-- [ARM 아키텍처용 ABI(PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
 - [문제 9089: Nexus One - armeabi-v7a에 하나 이상의 라이브러리가 없을 경우 armeabi에서 네이티브 라이브러리를 로드하지 않음](https://code.google.com/p/android/issues/detail?id=9089)
 - [문제 24321: apk에 armeabi와 armeabi-v7a가 둘 다 포함된 경우 Galaxy Nexus 4.0.2가 armeabi 네이티브 코드 사용](https://code.google.com/p/android/issues/detail?id=25321)

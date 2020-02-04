@@ -6,16 +6,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: b5b7a416cf67c217862987e7fa29bfb6a9692642
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b54296da3f1253b77b63363583c34e1548cd6abc
+ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021247"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76724086"
 ---
 # <a name="manually-uploading-the-apk"></a>수동으로 APK 업로드
 
-APK가 Google Play에 처음으로 제출될 경우(또는 초기 버전의 Xamarin.Android를 사용할 경우) [Google Play 개발자 콘솔](https://play.google.com/apps/publish)을 통해 수동으로 APK를 업로드해야 합니다. 이 가이드에서는 이 프로세스에 필요한 단계를 설명합니다. 
+APK가 Google Play에 처음으로 제출될 경우(또는 초기 버전의 Xamarin.Android를 사용할 경우) [Google Play 개발자 콘솔](https://play.google.com/apps/publish)을 통해 수동으로 APK를 업로드해야 합니다.
+이 가이드에서는 이 프로세스에 필요한 단계를 설명합니다.
 
 ## <a name="google-play-developer-console"></a>Google Play 개발자 콘솔
 
@@ -35,7 +36,7 @@ Google Play에 등록한 기존 앱이 있는 경우 **새 애플리케이션 �
 
 [![알파에 첫 번째 APK 업로드](manually-uploading-the-apk-images/03-upload-to-alpha-sml.png)](manually-uploading-the-apk-images/03-upload-to-alpha.png#lightbox)
 
-**ALPHA에 새 APK 업로드** 대화 상자가 표시됩니다. APK는 **파일 찾아보기** 단추를 클릭하거나 APK를 끌어서 놓아 업로드할 수 있습니다. 
+**ALPHA에 새 APK 업로드** 대화 상자가 표시됩니다. APK는 **파일 찾아보기** 단추를 클릭하거나 APK를 끌어서 놓아 업로드할 수 있습니다.
 
 [![ALPHA에 새 APK 업로드 대화 상자](manually-uploading-the-apk-images/04-upload-dialog-sml.png)](manually-uploading-the-apk-images/04-upload-dialog.png#lightbox)
 
@@ -54,7 +55,7 @@ APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명�
 
 ## <a name="store-listing"></a>스토어 목록
 
-**Google Play 개발자 콘솔**에서 **스토어 목록**을 클릭하여 Google Play가 해당 애플리케이션의 미래 사용자에게 표시할 정보를 입력합니다. 
+**Google Play 개발자 콘솔**에서 **스토어 목록**을 클릭하여 Google Play가 해당 애플리케이션의 미래 사용자에게 표시할 정보를 입력합니다.
 
 [![스토어 목록 대화 상자](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
 
@@ -90,19 +91,19 @@ APK를 업로드한 후에는 초안으로 저장됩니다. 다음에서 설명�
 
 Google Play의 모든 애플리케이션은 Google Play 등급 시스템에 따라 등급을 지정해야 합니다. 콘텐츠 등급 외에도 모든 애플리케이션은 Google의 [개발자 콘텐츠 정책](https://www.android.com/us/developer-content-policy.html)을 준수해야 합니다.
 
-다음은 Google Play 등급 시스템의 4수준을 나열하고 등급 수준을 요구 또는 강제 적용하는 기능이나 콘텐츠에 관한 몇 가지 지침을 제공합니다. 
+다음은 Google Play 등급 시스템의 4수준을 나열하고 등급 수준을 요구 또는 강제 적용하는 기능이나 콘텐츠에 관한 몇 가지 지침을 제공합니다.
 
-- **모든 사용자** &ndash; 위치 데이터를 액세스, 게시 또는 공유하지 못합니다. 사용자가 생성한 콘텐츠를 호스트할 수 없습니다. 사용자 간의 커뮤니케이션을 사용하도록 설정할 수 없습니다. 
+- **모든 사용자** &ndash; 위치 데이터를 액세스, 게시 또는 공유하지 못합니다. 사용자가 생성한 콘텐츠를 호스트할 수 없습니다. 사용자 간의 커뮤니케이션을 사용하도록 설정할 수 없습니다.
 
-- **하**&ndash; 위치 데이터를 액세스하지만 공유하지 않는 애플리케이션입니다. 가볍거나 만화 수준의 폭력 묘사 
+- **하** &ndash; 위치 데이터를 액세스하지만 공유하지 않는 애플리케이션입니다. 가볍거나 만화 수준의 폭력 묘사
 
-- **중** &ndash; 마약, 주류 또는 담배에 대 한 언급 도박 테마 또는 시뮬레이션 적의가 있는 콘텐츠 불경스럽거나 외설적인 유머 도발적 또는 성적 언급 
-    강한 수준의 판타지 폭력 현실적인 폭력 사용자가 서로 찾을 수 있음 사용자가 서로 커뮤니케이션할 수 있음 
-    사용자 위치 데이터 공유 
+- **중** &ndash; 마약, 주류 또는 담배에 대한 언급입니다. 도박 테마 또는 시뮬레이션 적의가 있는 콘텐츠 불경스럽거나 외설적인 유머 도발적 또는 성적 언급
+    강한 수준의 판타지 폭력 현실적인 폭력 사용자가 서로 찾을 수 있음 사용자가 서로 커뮤니케이션할 수 있음
+    사용자 위치 데이터 공유
 
-- **상** &ndash; 주류, 담배 또는 약물 사용 도는 판매에 초점 도발적 또는 성적 언급에 초점 그래픽 폭력 
+- **상** &ndash; 주류, 담배 또는 약물 사용이나 판매에 초점을 맞춥니다. 도발적 또는 성적 언급에 초점 그래픽 폭력
 
-중 목록의 항목은 주관적인 판단이 필요하므로, 중 등급에 해당하는 것처럼 보이는 지침이 상 등급 만큼 강도가 있을 수 있습니다. 
+중 목록의 항목은 주관적인 판단이 필요하므로, 중 등급에 해당하는 것처럼 보이는 지침이 상 등급 만큼 강도가 있을 수 있습니다.
 
 ## <a name="pricing-amp-distribution"></a>&amp; 배포 가격 책정
 
@@ -131,7 +132,7 @@ Google Play에서는 무료 애플리케이션이 유료 앱으로 변경되는 
 ### <a name="consent"></a>동의
 
 **가격 책정 &amp; 배포** 페이지의 하단은 **동의** 섹션입니다.
-필수 섹션이며, 애플리케이션이 [Android 콘텐츠 지침](https://www.android.com/market/terms/developer-content-policy.html#hl=us)에 부합하고 미국 수출 법률의 적용 대상임을 인정하는 데 사용됩니다.
+필수 섹션이며, 애플리케이션이 [Android 콘텐츠 지침](https://play.google.com/about/restricted-content/)에 부합하고 미국 수출 법률의 적용 대상임을 인정하는 데 사용됩니다.
 
 [![동의 섹션](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)
 
@@ -149,29 +150,29 @@ Google Play 앱 게시에 대한 자세한 내용은 [Google Play 개발자 콘�
 
 Google Play 스토어에서 앱이 필터링되는 방식을 제어하기 위해 앱의 매니페스트에 요소를 추가할 수 있습니다. 다음은 애플리케이션 필터링에 사용할 수 있는 매니페스트 요소 및 특성을 나열합니다.
 
-- [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html)&ndash; Google Play는 이 특성을 사용하여 화면 크기를 기준으로 애플리케이션을 디바이스에 배포할 수 있는지 판단합니다. 
-    Google Play에서는 Android가 더 작은 레이아웃에서 더 큰 레이아웃으로는 조절할 수 있지만 그 반대로는 조절할 수 없다고 가정합니다. 따라서 일반 화면을 지원한다고 밝힌 애플리케이션은 대형 화면 검색에는 표시되나 소형 화면에는 표시되지 않습니다. Xamarin.Android 애플리케이션이 매니페스트 파일에서 `<supports-screen>` 요소를 제공하지 않을 경우 Google Play는 모든 특성의 값이 참이며 애플리케이션이 모든 화면 크기를 지원하다고 가정합니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
+- [supports-screen](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) &ndash; Google Play는 이 특성을 사용하여 화면 크기를 기준으로 애플리케이션을 디바이스에 배포할 수 있는지 판단합니다.
+    Google Play에서는 Android가 더 작은 레이아웃에서 더 큰 레이아웃으로는 조절할 수 있지만 그 반대로는 조절할 수 없다고 가정합니다. 따라서 일반 화면을 지원한다고 밝힌 애플리케이션은 대형 화면 검색에는 표시되나 소형 화면에는 표시되지 않습니다. Xamarin.Android 애플리케이션이 매니페스트 파일에서 `<supports-screen>` 요소를 제공하지 않을 경우 Google Play는 모든 특성의 값이 참이며 애플리케이션이 모든 화면 크기를 지원하다고 가정합니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다.
 
-- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html)&ndash; 이 매니페스트 요소는 키보드 형식, 탐색 디바이스, 터치 스크린 등, 특정 하드웨어 기능을 요청하는 데 사용됩니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
+- [uses-configuration](https://developer.android.com/guide/topics/manifest/uses-configuration-element.html) &ndash; 이 매니페스트 요소는 키보드 형식, 탐색 디바이스, 터치 스크린 등, 특정 하드웨어 기능을 요청하는 데 사용됩니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다.
 
-- [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html)&ndash; 이 매니페스트 요소는 애플리케이션이 작동하기 위해 디바이스에 필요한 하드웨어 또는 소프트웨어 기능을 선언합니다. 이 특성은 정보 제공에만 해당합니다. Google Play에서는 이 필터에 부합하지 않는 애플리케이션을 디바이스에 표시하지 않습니다. 다른 방법(수동 또는 다운로드)을 통해 애플리케이션을 설치할 수는 있습니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다. 
+- [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; 이 매니페스트 요소는 애플리케이션이 작동하기 위해 디바이스에 필요한 하드웨어 또는 소프트웨어 기능을 선언합니다. 이 특성은 정보 제공에만 해당합니다. Google Play에서는 이 필터에 부합하지 않는 애플리케이션을 디바이스에 표시하지 않습니다. 다른 방법(수동 또는 다운로드)을 통해 애플리케이션을 설치할 수는 있습니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다.
 
-- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html)&ndash; 이 요소는 Google Maps 등, 디바이스에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibraryAttribute`를 통해서도 지정할 수 있습니다. 예: 
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; 이 요소는 Google Maps 등, 디바이스에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibraryAttribute`를 통해서도 지정할 수 있습니다. 예:
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
-- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html)&ndash; 이 요소는 `<uses-feature>` 요소에서 제대로 선언되지 않았을 수 있으며 애플리케이션의 실행에 필요한 특정 하드웨어 기능을 유추하는 데 사용됩니다. 예를 들어, 애플리케이션이 카메라 사용 권한을 요청할 경우 Google Play는 카메라를 선언하는 `<uses-feature>` 요소가 없더라도 해당 디바이스에 카메라가 있다고 가정합니다. 이 요소는 `Android.App.UsesPermissionsAttribute`를 통해서 설정할 수 있습니다. 예: 
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; 이 요소는 `<uses-feature>` 요소에서 제대로 선언되지 않았을 수 있으며 애플리케이션의 실행에 필요한 특정 하드웨어 기능을 유추하는 데 사용됩니다. 예를 들어, 애플리케이션이 카메라 사용 권한을 요청할 경우 Google Play는 카메라를 선언하는 `<uses-feature>` 요소가 없더라도 해당 디바이스에 카메라가 있다고 가정합니다. 이 요소는 `Android.App.UsesPermissionsAttribute`를 통해서 설정할 수 있습니다. 예:
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]
     ```
 
-- [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)&ndash; 이 요소는 애플리케이션에 필요한 최소한의 Android API 수준을 선언하는 데 사용됩니다. 이 요소는 Xamarin.Android 프로젝트의 Xamarin.Android 옵션에서 설정할 수 있습니다. 
+- [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html) &ndash; 이 요소는 애플리케이션에 필요한 최소한의 Android API 레벨을 선언하는 데 사용됩니다. 이 요소는 Xamarin.Android 프로젝트의 Xamarin.Android 옵션에서 설정할 수 있습니다.
 
-- [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html)&ndash; 이 요소는 이 요소에서 지정한 화면 크기와 밀도에 부합하지 않는 애플리케이션을 필터링하는 데 사용됩니다. 대부분의 애플리케이션에서는 이 필터를 사용하면 안 됩니다. 애플리케이션 배포에 엄격한 제어가 필요한 특정 고성능 게임이나 애플리케이션에 적용됩니다. 앞에서 언급한 `<support-screen>` 특성을 사용하는 것이 좋습니다. 
+- [compatible-screens](https://developer.android.com/guide/topics/manifest/compatible-screens-element.html) &ndash; 이 요소는 이 요소에서 지정한 화면 크기와 밀도에 부합하지 않는 애플리케이션을 필터링하는 데 사용됩니다. 대부분의 애플리케이션에서는 이 필터를 사용하면 안 됩니다. 애플리케이션 배포에 엄격한 제어가 필요한 특정 고성능 게임이나 애플리케이션에 적용됩니다. 앞에서 언급한 `<support-screen>` 특성을 사용하는 것이 좋습니다.
 
-- [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html)&ndash; 이 요소는 애플리케이션이 요구하는 GL 질감 압축 형식을 선언하는 데 사용됩니다. 대부분의 애플리케이션에서는 이 필터를 사용하면 안 됩니다. 애플리케이션 배포에 엄격한 제어가 필요한 특정 고성능 게임이나 애플리케이션에 적용됩니다. 
+- [supports-gl-texture](https://developer.android.com/guide/topics/manifest/supports-gl-texture-element.html) &ndash; 이 요소는 애플리케이션이 요구하는 GL 질감 압축 형식을 선언하는 데 사용됩니다. 대부분의 애플리케이션에서는 이 필터를 사용하면 안 됩니다. 애플리케이션 배포에 엄격한 제어가 필요한 특정 고성능 게임이나 애플리케이션에 적용됩니다.
 
 앱 매니페스트 구성에 대한 자세한 내용은 Android [앱 매니페스트](https://developer.android.com/guide/topics/manifest/manifest-intro.html) 항목을 참조하세요.

@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: 675e6cebab95d2a997bf48a6c9231b5e8c661342
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
+ms.sourcegitcommit: dde593cf9dedf4a056ffef86bcf2fa0640412a4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020839"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794821"
 ---
 # <a name="android-emulator-troubleshooting"></a>Android 에뮬레이터 문제 해결
 
@@ -58,8 +58,8 @@ _이 문서에서는 Android Emulator를 구성하고 실행하는 동안 발생
 
 에뮬레이터에서 실행 중인 가상 디바이스에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 이러한 패키지를 포함하지 않고 가상 디바이스를 만들 때 발생하는 경우가 많습니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 옵션 중 하나 또는 둘 다를 선택해야 합니다.
 
-- **Google API**&ndash;에는 가상 디바이스에 Google Play 서비스가 포함되어 있습니다.
-- **Google Play 스토어**&ndash;에는 가상 디바이스에 Google Play 스토어가 포함되어 있습니다.
+- **Google API** &ndash; 가상 디바이스에 Google Play 서비스가 포함되어 있습니다.
+- **Google Play 스토어** &ndash; 가상 디바이스에 Google Play 스토어가 포함되어 있습니다.
 
 예를 들어 이 가상 디바이스에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
 
@@ -232,9 +232,9 @@ HAXM은 Hyper-v, Windows Device Guard 및 일부 바이러스 백신 소프트�
 
 - **Hyper-V** &ndash; **Windows 10 2018년 4월 업데이트(빌드 1803)** 및 Hyper-V가 활성화되기 전에 Windows의 버전을 사용 중인 경우, HAXM을 활성화할 수 있도록 [Hyper-V 비활성화](#disable-hyperv)의 단계를 따릅니다.
 
-- **Device Guard** &ndash;Device Guard 및 Credential Guard는 Windows 컴퓨터에서 Hyper-V가 비활성화되지 못하게 방지할 수 있습니다. Device Guard 및 Credential Guard를 사용하지 않으려면 [Device Guard 사용 안 함](#disable-devguard)을 참조하세요.
+- **Device Guard** &ndash; Device Guard 및 Credential Guard는 Windows 컴퓨터에서 Hyper-V가 비활성화되지 못하게 방지할 수 있습니다. Device Guard 및 Credential Guard를 사용하지 않으려면 [Device Guard 사용 안 함](#disable-devguard)을 참조하세요.
 
-- **바이러스 백신 소프트웨어** &ndash; 하드웨어 지원 가상화(예: Avast)를 사용하는 바이러스 백신 소프트웨어를 실행 중인 경우 이 소프트웨어를 사용하지 않게 설정하거나 제거하고, 다시 부팅하고, Android 에뮬레이터를 다시 시도합니다.
+- **바이러스 백신 소프트웨어** &ndash; 하드웨어 지원 가상화(예: Avast)를 사용하는 바이러스 백신 소프트웨어를 실행 중인 경우 이 소프트웨어를 사용하지 않게 설정하거나 제거하고, 다시 부팅하고, Android Emulator를 다시 시도합니다.
 
 #### <a name="incorrect-bios-settings"></a>잘못된 BIOS 설정
 
@@ -284,7 +284,7 @@ Device Guard가 활성화된 경우 다음 단계를 따라 비활성화합니�
 
 1. 이전 섹션에 설명된 대로 (**Windows 기능 사용/사용 안 함**에서) **Hyper-V**가 비활성화되었는지 확인합니다.
 
-2. Windows 검색 상자에 **gpedit**를 입력하고 **그룹 정책 편집** 검색 결과를 선택합니다. 다음 단계에서는 **로컬 그룹 정책 편집기**를 시작합니다.
+2. Windows 검색 상자에 **gpedit.msc**를 입력하고 **그룹 정책 편집** 검색 결과를 선택합니다. 다음 단계에서는 **로컬 그룹 정책 편집기**를 시작합니다.
 
 3. **로컬 그룹 정책 편집기**에서 **컴퓨터 구성 > 관리 템플릿 > 시스템 > Device Guard**로 이동합니다.
 
@@ -394,8 +394,8 @@ Component Intel x86 Emulator Accelerator (HAXM installer) r6.2.1 [Extra: (Intel 
 
 에뮬레이터에서 실행 중인 가상 디바이스에 Google Play 서비스 또는 Google Play 스토어가 설치되어 있지 않은 경우, 이 조건은 일반적으로 패키지를 포함하지 않고 가상 디바이스를 만드는 경우에 발생합니다. 가상 디바이스를 만들 때([Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md) 참조) 다음 중 하나 또는 둘 다를 선택해야 합니다.
 
-- **Google API**&ndash;에는 가상 디바이스에 Google Play 서비스가 포함되어 있습니다.
-- **Google Play 스토어**&ndash;에는 가상 디바이스에 Google Play 스토어가 포함되어 있습니다.
+- **Google API** &ndash; 가상 디바이스에 Google Play 서비스가 포함되어 있습니다.
+- **Google Play 스토어** &ndash; 가상 디바이스에 Google Play 스토어가 포함되어 있습니다.
 
 예를 들어 이 가상 디바이스에는 Google Play 서비스 및 Google Play 스토어가 포함됩니다.
 
