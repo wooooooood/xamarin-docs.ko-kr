@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 23ca9c3fe36a65aefb17f10fd3e680937c36acc0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
+ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016249"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980429"
 ---
 # <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예
 
@@ -19,7 +19,7 @@ ms.locfileid: "73016249"
 
 이 섹션에서는 Apple의 `xcodebuild` 도구를 사용 하 여 먼저 POP 프로젝트를 빌드하고 목표 Sharpie에 대 한 입력을 수동으로 추론 하는 바인딩에 대 한 고급 접근 방법을 설명 합니다. 이는 Sharpie가 이전 섹션의 내부적으로 수행 하는 작업을 설명 합니다.
 
-```
+```bash
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 POP 라이브러리에는 Xcode 프로젝트가 있으므로 (`pop.xcodeproj`) `xcodebuild`를 사용 하 여 POP를 빌드할 수 있습니다. 이 프로세스는 목표 Sharpie이 구문 분석 해야 할 수 있는 헤더 파일을 생성할 수 있습니다. 이 때문에 바인딩이 중요 합니다. `xcodebuild`를 통해 빌드할 때 목적 Sharpie으로 전달 하려는 것과 동일한 SDK 식별자와 아키텍처를 전달 하는 것이 좋습니다. 3.0 Sharpie 목표는 일반적으로이 작업을 수행할 수 있습니다.
 
-```
+```bash
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 
 이제 POP를 바인딩할 준비가 되었습니다. `arm64` 아키텍처를 사용 하 여 SDK `iphoneos8.1`에 대해 빌드 하려고 하며 관심 있는 헤더 파일은 POP git 체크 인에서 `build/Headers` 됩니다. `build/Headers` 디렉터리를 살펴보면 많은 헤더 파일이 표시 됩니다.
 
-```
+```bash
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 `POP.h`에 대 한 자세한 내용은 다른 파일을 `#import`하는 라이브러리의 기본 최상위 헤더 파일 임을 확인할 수 있습니다. 이로 인해 `POP.h`를 목표 Sharpie 전달 하기만 하면 clang가 백그라운드에서 나머지 작업을 수행 합니다.
 
-```
+```bash
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64
@@ -122,7 +122,7 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-목표 Sharpie에 `-scope build/Headers` 인수를 전달 하는 것을 알 수 있습니다. C 및 객관적인 C 라이브러리는 바인딩하려는 API가 아닌 라이브러리의 구현 Sharpie 다른 헤더 파일을 `#import` 하거나 `#include` 해야 하기 때문에 `-scope` 인수는 대상에는 파일에 정의 되어 있지 않은 모든 API를 무시 하도록 목표로 지시 합니다. `-scope` 디렉터리 내에 있습니다.
+목표 Sharpie에 `-scope build/Headers` 인수를 전달 하는 것을 알 수 있습니다. C 및 객관적인 C 라이브러리는 바인딩하려는 API가 아닌 라이브러리의 구현 Sharpie 다른 헤더 파일을 `#import` 하거나 `#include` 해야 하기 때문에 `-scope` 인수는 `-scope` 디렉터리 내의 파일에 정의 되어 있지 않은 모든 API를 무시 하도록 목표를 알려 줍니다.
 
 `-scope` 인수는 명확 하 게 구현 된 라이브러리의 경우 선택적 이지만 명시적으로 제공 하는 데에는 나쁜 영향을 미치지 않습니다.
 
