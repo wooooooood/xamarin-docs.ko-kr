@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: b11f21b0d0932013c65ea9298ad9425747afdf79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0520439b89458b7f73a025cd8d6b2cf8fc41dac0
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028131"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940631"
 ---
 # <a name="building-abi-specific-apks"></a>ABI 관련 APK 빌드
 
@@ -99,15 +99,15 @@ ABI별 APK를 빌드할 때는 다음 샘플 명령줄에 나와 있는 것처�
 
 - `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; 대상으로 할 ABI입니다. `armeabi`, `armeabi-v7a` 또는 `x86` 중 하나여야 합니다.
 
-- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; 이는 빌드의 일부로 생성된 중간 파일을 저장하는 디렉터리입니다. Xamarin.Android는 필요할 경우 ABI의 이름을 딴 디렉터리를 만듭니다(예: `obj.armeabi-v7a`). 한 빌드에서 다른 빌드로 파일이 "유출"되는 결과를 가져오는 문제를 방지할 수 있으므로 각 ABI당 하나의 폴더를 사용하는 것이 좋습니다. 이 값은 디렉터리 구분 기호(OS X의 경우 `/`)를 사용하여 종결됩니다.
+- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; 빌드의 일부로 생성된 중간 파일을 저장할 디렉터리입니다. Xamarin.Android는 필요할 경우 ABI의 이름을 딴 디렉터리를 만듭니다(예: `obj.armeabi-v7a`). 한 빌드에서 다른 빌드로 파일이 "유출"되는 결과를 가져오는 문제를 방지할 수 있으므로 각 ABI당 하나의 폴더를 사용하는 것이 좋습니다. 이 값은 디렉터리 구분 기호(OS X의 경우 `/`)를 사용하여 종결됩니다.
 
-- `/p:AndroidManifest` &ndash; 이 속성은 빌드 중에 사용되는 **AndroidManifest.XML** 파일에 대한 경로를 지정합니다.
+- `/p:AndroidManifest` &ndash; 이 속성은 빌드 중에 사용되는 **AndroidManifest.XML** 파일의 경로를 지정합니다.
 
-- `/p:OutputPath=bin.<TARGET_ABI>` &ndash; 이는 최종 APK가 저장될 디렉터리입니다. Xamarin.Android는 ABI의 이름을 딴 디렉터리를 만듭니다(예: `bin.armeabi-v7a`).
+- `/p:OutputPath=bin.<TARGET_ABI>` &ndash; 최종 APK가 저장될 디렉터리입니다. Xamarin.Android는 ABI의 이름을 딴 디렉터리를 만듭니다(예: `bin.armeabi-v7a`).
 
 - `/p:Configuration=Release` &ndash; APK의 릴리스 빌드를 수행합니다. 디버그 빌드는 Google Play에 업로드하지 못할 수 있습니다.
 
-- `<CS_PROJ FILE>` &ndash; 이는 Xamarin.Android 프로젝트의 `.csproj` 파일에 대한 경로입니다.
+- `<CS_PROJ FILE>` &ndash; Xamarin.Android 프로젝트에 대한 `.csproj` 파일의 경로입니다.
 
 ### <a name="sign-and-zipalign-the-apk"></a>APK 서명 및 Zipalign
 

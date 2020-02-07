@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
-ms.openlocfilehash: 3e63a580bbdb1c220d44b100725cdc8ce387b405
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.openlocfilehash: cb2ae3afe9db86d4db603d499ef0e75e7cbbf552
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72696514"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940396"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Xamarin.Forms Shell 소개
 
@@ -37,6 +37,8 @@ Xamarin.Forms 셸은 iOS 및 Android에서는 완전히 지원되나 UWP(유니�
 ```csharp
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
+
+UWP 프로젝트를 Xamarin.Forms 솔루션에 추가 하는 방법에 대한 자세한 내용은 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
 
 ## <a name="shell-navigation-experience"></a>셸 탐색 환경
 

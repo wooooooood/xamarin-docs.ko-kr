@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: ff5c7cb36305780d12b5fd69b7cbadec0eaef551
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771553"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940332"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
@@ -29,7 +29,7 @@ Xamarin.Forms 애플리케이션 인덱싱 및 딥 링크 설정은 사용자가
 
 이 샘플 애플리케이션은 다음 스크린샷과 같이 데이터가 로컬 SQLite 데이터베이스에 저장되는 Todo 목록 애플리케이션을 보여줍니다.
 
-![](deep-linking-images/screenshots.png "TodoList 애플리케이션")
+![](deep-linking-images/screenshots.png "TodoList Application")
 
 사용자가 만든 각 `TodoItem` 인스턴스는 인덱싱됩니다. 그런 다음, 플랫폼별 검색을 사용하여 애플리케이션에서 인덱싱된 데이터를 찾을 수 있습니다. 사용자 애플리케이션에 대한 검색 결과 항목을 누르면 애플리케이션이 시작되고 `TodoItemPage`가 탐색되고, 딥 링크에서 참조되는 `TodoItem`이 표시됩니다.
 
@@ -79,6 +79,9 @@ AndroidAppLinks.Init(this);
 ```
 
 **google-services.json**이 프로젝트에 추가되고 (및 *GoogleServicesJson** 빌드 작업이 설정) 빌드 프로세스에서 클라이언트 ID 및 API 키를 추출한 다음, 생성된 매니페스트 파일에 이러한 자격 증명을 추가합니다.
+
+> [!NOTE]
+> 이 문서에서는 애플리케이션 링크와 딥 링크라는 용어를 같은 의미로 사용합니다. 그러나 Android에서는 이 두 용어가 다른 의미를 가집니다. Android에서 딥 링크는 사용자가 앱에서 특정 작업을 직접 입력할 수 있도록 하는 의도 필터입니다. 딥 링크를 클릭하면 사용자가 URL을 처리할 수 있는 여러 앱 중 하나를 선택할 수 있게 하는 사용 앱 선택 대화 상자를 열 수 있습니다. Android 앱 링크는 웹 사이트 URL을 기반으로 하는 딥 링크이며, 웹 사이트에 속하는 것으로 확인되었습니다. 애플리케이션이 설치되어 있는 경우 앱 링크를 클릭하면 사용 앱 선택 대화 상자 없이 열립니다.
 
 자세한 내용은 Xamarin 블로그에서 [Xamarin.Forms URL 탐색이 있는 딥 링크 콘텐츠](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/)를 참조하세요.
 
@@ -135,7 +138,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 
 [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) 인스턴스가 인덱싱을 위해 등록되면 검색 결과에 나타날 수 있습니다. 다음 스크린샷은 iOS 플랫폼의 검색 결과에 나타나는 인덱싱된 콘텐츠를 보여줍니다.
 
-![](deep-linking-images/ios-search.png "iOS의 검색 결과에서 인덱싱된 콘텐츠")
+![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
 
 ## <a name="de-registering-indexed-content"></a>인덱싱된 콘텐츠 등록 취소
 

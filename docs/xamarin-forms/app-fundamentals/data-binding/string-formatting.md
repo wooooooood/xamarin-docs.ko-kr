@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ba7148ecabf7f534a953fda3c3d3021abeaa034c
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771575"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940376"
 ---
 # <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 형식 지정
 
@@ -44,7 +44,7 @@ XAML 파서가 중괄호를 다른 XAML 태그 확장으로 처리하는 것을 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="DataBindingDemos.StringFormattingPage"
              Title="String Formatting">
 
@@ -123,7 +123,7 @@ XAML 파일의 다음 섹션은 정적 `DateTime.Now` 속성을 참조하는 `x:
 
 실행 중인 프로그램은 다음과 같습니다.
 
-[![문자열 형식 지정](string-formatting-images/stringformatting-small.png "문자열 형식 지정")](string-formatting-images/stringformatting-large.png#lightbox "문자열 형식 지정")
+[![문자열 형식 지정](string-formatting-images/stringformatting-small.png "문자열 서식 지정")](string-formatting-images/stringformatting-large.png#lightbox "문자열 서식 지정")
 
 ## <a name="viewmodels-and-string-formatting"></a>ViewModels 및 문자열 형식 지정
 
@@ -176,7 +176,7 @@ XAML 파일의 다음 섹션은 정적 `DateTime.Now` 속성을 참조하는 `x:
 
 이제 `HslColorViewModel` 개체의 동일한 원본 속성에 바인딩된 `Slider` 및 `Label` 요소 쌍이 3개 있습니다. 유일한 차이는 `Label`에 각 `Slider` 값을 표시하는 `StringFormat` 속성이 있는 것입니다.
 
-[![더 나은 색 선택기](string-formatting-images/bettercolorselector-small.png "더 나은 색 선택기")](string-formatting-images/bettercolorselector-large.png#lightbox "더 나은 색 선택기")
+[![개선된 색 선택기](string-formatting-images/bettercolorselector-small.png "개선된 색 선택기")](string-formatting-images/bettercolorselector-large.png#lightbox "개선된 색 선택기")
 
 RGB(빨강, 녹색, 파랑) 값을 기존의 2자리 16진수 형식으로 표현하는 방법이 궁금할 수도 있습니다. 이러한 정수 값은 `Color` 구조체에서 직접 사용할 수 없습니다. 한 가지 솔루션은 ViewModel에서 색 구성 요소의 정수 값을 계산하여 속성으로 나타내는 것입니다. 그런 다음, `X2` 형식 지정 사양을 사용하여 형식을 지정할 수 있습니다.
 

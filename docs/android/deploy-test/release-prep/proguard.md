@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
-ms.openlocfilehash: 1ae7850951060f2e89a953ce554a0dbfa286c3a1
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487994"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940687"
 ---
 # <a name="proguard"></a>ProGuard
 
@@ -37,7 +37,7 @@ ProGuard는 다음 단계를 통해 입력 APK를 처리합니다.
 
 ## <a name="proguard-in-xamarinandroid"></a>Xamarin.Android의 ProGuard
 
-Xamarin.Android ProGuard 구성은 APK를 난독 처리하지 않습니다. 사실, ProGuard를 통한 난독 처리를 활성화하는 것은 불가능합니다(사용자 지정 구성 파일을 사용해도 불가능). 따라서 Xamarin.Android의 ProGuard는 **축소** 및 **최적화** 단계만 수행합니다. 
+Xamarin.Android ProGuard 구성은 APK를 난독 처리하지 않습니다. 사실 ProGuard를 통한 난독 처리를 활성화하는 것은 불가능합니다(사용자 지정 구성 파일을 사용해도 불가능). 따라서 Xamarin.Android의 ProGuard는 **축소** 및 **최적화** 단계만 수행합니다. 
 
 [![축소 및 최적화 단계](proguard-images/01-xa-chain-sml.png)](proguard-images/01-xa-chain.png#lightbox)
 

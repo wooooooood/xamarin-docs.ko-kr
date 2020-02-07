@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: e93a12fec63dcb0a31e57de26b3d7ee8827e7864
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 81377d790d695b60465319aeb166eb1e62483211
+ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489065"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76940938"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Xamarin.iOS 개발을 위해 Mac에 페어링
 
@@ -204,7 +204,7 @@ Mac에 페어링은 Xcode가 설치되어 있고 해당 라이선스가 승인�
 |---|---|---|
 |Xcode|[![Xcode 설치 누락](images/xcode-missing.png "Xcode 설치 누락")](images/xcode-missing-large.png#lightbox)|[![Xcode 라이선스](images/xcode-license.png "Xcode 라이선스")](images/xcode-license-large.png#lightbox)|
 
-또한 Mac에 페어링은 Xcode와 함께 배포되는 다양한 패키지를 설치하거나 업데이트합니다. 예:
+또한 Mac에 페어링은 Xcode와 함께 배포되는 다양한 패키지를 설치하거나 업데이트합니다. 예를 들어:
 
 - **MobileDeviceDevelopment.pkg**
 - **XcodeExtensionSupport.pkg**
@@ -222,7 +222,7 @@ Mac에 페어링은 Xcode가 설치되어 있고 해당 라이선스가 승인�
 
 ## <a name="build-ios-apps-from-the-windows-command-line"></a>Windows 명령줄에서 iOS 응용 프로그램 빌드
 
-Mac에 페어링은 명령줄에서 Xamarin.iOS 애플리케이션을 빌드하도록 지원합니다. 예:
+Mac에 페어링은 명령줄에서 Xamarin.iOS 애플리케이션을 빌드하도록 지원합니다. 예를 들어:
 
 ```bash
 C:\samples\App1>msbuild App1.sln /p:ServerAddress=10.211.55.2 /p:ServerUser=xamUser /p:Platform=iPhoneSimulator /p:ServerPassword=mypassword
