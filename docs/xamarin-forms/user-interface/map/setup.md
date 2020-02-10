@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
-ms.openlocfilehash: 9213e893d222e26168940e09a93e158d1e74d8dc
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.date: 02/07/2020
+ms.openlocfilehash: eff7dff15fb75859d43923f71696bccf1b0e2cc5
+ms.sourcegitcommit: 87b818373d83fd3a6856c4b5a702b013a731b5ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725579"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77069651"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.ios 맵 초기화 및 구성
 
@@ -234,6 +234,9 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
 ### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map service를 사용할 수 있습니다. 응용 프로그램을 인증 하려면 맵 인증 키를 지정 해야 합니다. 자세한 내용은 [지도 인증 키 요청](/windows/uwp/maps-and-location/authentication-key)을 참조 하세요. 그런 다음 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 메서드 호출에서 인증 토큰을 지정 하 여 Bing Maps를 사용 하 여 응용 프로그램을 인증 합니다.
+
+> [!NOTE]
+> UWP에서 지 오 코딩와 같은 map services를 사용 하려면 `MapService.ServiceToken` 속성도 인증 키 값으로 설정 해야 합니다. 다음 코드 줄을 사용 하 여이 작업을 수행할 수 있습니다. `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 또한 응용 프로그램에서 사용자의 위치에 액세스 해야 하는 경우 패키지 매니페스트에서 위치 기능을 사용 하도록 설정 해야 합니다. 이렇게 하려면 다음을 수행합니다.
 
