@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: 7d53623ef1fb1eeb917cbf4cd6d65d461e525982
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 286950104e9a85b6ec89f0c0f3f891f29dada4ec
+ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724240"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144662"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -66,6 +66,13 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`Map`](xref:Xamarin.Forms.Maps.Map) 지도를 표시 합니다. **Xamarin.ios** NuGet 패키지를 설치 해야 합니다. Android 및 유니버설 Windows 플랫폼 맵 권한 부여 키가 필요 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Maps.Map) / [가이드](~/xamarin-forms/user-interface/map/index.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![지도 예제](views-images/Map.png "지도 예제")](views-images/Map-Large.png#lightbox "지도 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) |
 |     |     |
 
+### <a name="mediaelement"></a>MediaElement
+
+|     |     |
+| --- | --- |
+| `MediaElement` 비디오를 표시 하거나 오디오를 재생 합니다. 미디어는 웹을 통해 다운로드 하거나 플랫폼 프로젝트에 리소스로 포함할 수 있습니다.<br /><br />[가이드](~/xamarin-forms/user-interface/mediaelement.md) / [샘플](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement) | |
+|     |     |
+
 ## <a name="views-that-initiate-commands"></a>시작 명령 뷰
 
 ### <a name="button"></a>단추
@@ -93,7 +100,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| [`SearchBar`](xref:Xamarin.Forms.SearchBar) 는 사용자가 텍스트 문자열을 입력할 수 있는 영역을 표시 하 고, 응용 프로그램에 검색을 수행 하도록 신호를 표시 하는 단추 (또는 키보드 키)를 표시 합니다. [`Text`](xref:Xamarin.Forms.SearchBar.Text) 속성은 텍스트에 대 한 액세스를 제공 하 고 [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) 이벤트는 단추를 눌렀음을 나타냅니다.<br /><br />[API 설명서](xref:Xamarin.Forms.SearchBar) / [가이드](~/xamarin-forms/user-interface/searchbar.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/) | [![SearchBar 예제](views-images/SearchBar.png "SearchBar 예제")](views-images/SearchBar-Large.png#lightbox "SearchBar 예제")<br /> [코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) / [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) |
+| [`SearchBar`](xref:Xamarin.Forms.SearchBar) 는 사용자가 텍스트 문자열을 입력할 수 있는 영역을 표시 하 고, 응용 프로그램에 검색을 수행 하도록 신호를 표시 하는 단추 (또는 키보드 키)를 표시 합니다. [`Text`](xref:Xamarin.Forms.InputView.Text) 속성은 텍스트에 대 한 액세스를 제공 하 고 [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) 이벤트는 단추를 눌렀음을 나타냅니다.<br /><br />[API 설명서](xref:Xamarin.Forms.SearchBar) / [가이드](~/xamarin-forms/user-interface/searchbar.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/) | [![SearchBar 예제](views-images/SearchBar.png "SearchBar 예제")](views-images/SearchBar-Large.png#lightbox "SearchBar 예제")<br /> [코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) / [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) |
 |     |     |
 
 ### <a name="swipeview"></a>SwipeView
@@ -155,14 +162,14 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| 사용자는 [`Entry`](xref:Xamarin.Forms.Entry) 를 사용 하 여 한 줄의 텍스트를 입력 하 고 편집할 수 있습니다. 텍스트는 [`Text`](xref:Xamarin.Forms.Entry.Text) 속성으로 사용할 수 있으며, [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트는 텍스트를 변경 하거나 사용자가 enter 키를 눌러 완료를 신호의 때 발생 합니다.<br /><br />여러 줄의 텍스트를 입력 하 고 편집 하려면 [`Editor`](#editor) 을 사용 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Entry) / [가이드](~/xamarin-forms/user-interface/text/entry.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![항목 예제](views-images/Entry.png "항목 예제")](views-images/Entry-Large.png#lightbox "항목 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryDemoPage.cs) |
+| 사용자는 [`Entry`](xref:Xamarin.Forms.Entry) 를 사용 하 여 한 줄의 텍스트를 입력 하 고 편집할 수 있습니다. 텍스트는 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성으로 사용할 수 있으며, [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트는 텍스트를 변경 하거나 사용자가 enter 키를 눌러 완료를 신호의 때 발생 합니다.<br /><br />여러 줄의 텍스트를 입력 하 고 편집 하려면 [`Editor`](#editor) 을 사용 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Entry) / [가이드](~/xamarin-forms/user-interface/text/entry.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![항목 예제](views-images/Entry.png "항목 예제")](views-images/Entry-Large.png#lightbox "항목 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryDemoPage.cs) |
 |     |     |
 
 ### <a name="editor"></a>편집기
 
 |     |     |
 | --- | --- |
-| 사용자는 [`Editor`](xref:Xamarin.Forms.Editor) 를 사용 하 여 여러 줄의 텍스트를 입력 하 고 편집할 수 있습니다. 텍스트는 [`Text`](xref:Xamarin.Forms.Editor.Text) 속성으로 사용할 수 있으며, [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Editor.Completed) 이벤트는 텍스트를 변경 하거나 사용자가 완료 하면 신호를 발생 시킵니다.<br /><br />[`Entry`](#entry) 뷰를 사용 하 여 한 줄의 텍스트를 입력 하 고 편집 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Editor) / [가이드](~/xamarin-forms/user-interface/text/editor.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![항목 예제](views-images/Editor.png "편집기 예제")](views-images/Editor-Large.png#lightbox "편집기 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) |
+| 사용자는 [`Editor`](xref:Xamarin.Forms.Editor) 를 사용 하 여 여러 줄의 텍스트를 입력 하 고 편집할 수 있습니다. 텍스트는 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성으로 사용할 수 있으며, [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Editor.Completed) 이벤트는 텍스트를 변경 하거나 사용자가 완료 하면 신호를 발생 시킵니다.<br /><br />[`Entry`](#entry) 뷰를 사용 하 여 한 줄의 텍스트를 입력 하 고 편집 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Editor) / [가이드](~/xamarin-forms/user-interface/text/editor.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![항목 예제](views-images/Editor.png "편집기 예제")](views-images/Editor-Large.png#lightbox "편집기 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) |
 |     |     |
 
 ## <a name="views-to-indicate-activity"></a>작업 표시 뷰

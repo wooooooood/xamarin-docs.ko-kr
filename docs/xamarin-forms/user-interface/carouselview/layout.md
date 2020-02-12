@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/14/2019
-ms.openlocfilehash: 0149a66fedd98a94f1c9d96bf8e7e57715d1b90b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 38c891a095b2b3d41d906e747585b961516f9256
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488259"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77130856"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.ios CarouselView 레이아웃
 
@@ -47,7 +47,7 @@ ms.locfileid: "75488259"
 
 ## <a name="horizontal-layout"></a>가로 레이아웃
 
-기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 항목을 가로로 표시 합니다. 따라서이 레이아웃을 사용 하도록 [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 설정 하지 않아도 됩니다.
+기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 항목을 가로로 표시 합니다. 따라서이 레이아웃을 사용 하도록 [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) 속성을 설정 하지 않아도 됩니다.
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -87,7 +87,7 @@ ms.locfileid: "75488259"
 </CarouselView>
 ```
 
-또는 `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) 열거형 멤버를 `Orientation` 속성 값으로 지정 하 여 [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 `LinearItemsLayout` 개체로 설정 하 여이 레이아웃을 수행할 수도 있습니다.
+또는 `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) 열거형 멤버를 `Orientation` 속성 값으로 지정 하 여 [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) 속성을 `LinearItemsLayout` 개체로 설정 하 여이 레이아웃을 수행할 수도 있습니다.
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -112,7 +112,7 @@ CarouselView carouselView = new CarouselView
 
 ## <a name="vertical-layout"></a>세로 레이아웃
 
-[`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 `LinearItemsLayout` 개체로 설정 하 여 `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) 열거형 멤버를 `Orientation` 속성 값으로 지정 하 여 해당 항목을 세로로 표시할 수 [`CarouselView`](xref:Xamarin.Forms.CarouselView) .
+[`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) 속성을 `LinearItemsLayout` 개체로 설정 하 여 `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) 열거형 멤버를 `Orientation` 속성 값으로 지정 하 여 해당 항목을 세로로 표시할 수 [`CarouselView`](xref:Xamarin.Forms.CarouselView) .
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -194,7 +194,7 @@ CarouselView carouselView = new CarouselView
 
 기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 의 각 항목 주위에는 빈 공간이 없습니다. `CarouselView`에서 사용 하는 항목 레이아웃에 대 한 속성을 설정 하 여이 동작을 변경할 수 있습니다.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) 속성을 `LinearItemsLayout` 개체로 설정 하면 `LinearItemsLayout.ItemSpacing` 속성을 각 항목 주위의 빈 공간을 나타내는 `double` 값으로 설정할 수 있습니다.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) 속성을 `LinearItemsLayout` 개체로 설정 하면 `LinearItemsLayout.ItemSpacing` 속성을 각 항목 주위의 빈 공간을 나타내는 `double` 값으로 설정할 수 있습니다.
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">

@@ -7,24 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: cdbfaafdac8f965adaf4b840b568154e40ef7e10
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.openlocfilehash: d58ba81596cccf470b7246514d71f35968599880
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228175"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131060"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Xamarin.Forms에서 암시적 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
-_암시적 스타일은 각 컨트롤에 스타일을 참조 하지 않고도 동일한 TargetType의 모든 컨트롤에서 사용 되는 하나입니다._
+_암시적 스타일은 각 컨트롤이 스타일을 참조할 필요 없이 동일한 TargetType의 모든 컨트롤에서 사용 하는 스타일입니다._
 
 ## <a name="create-an-implicit-style-in-xaml"></a>XAML에서 암시적 스타일 만들기
 
-선언 하는 [ `Style` ](xref:Xamarin.Forms.Style) 페이지 수준에 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 페이지 및 다음 하나 이상의 추가 해야 합니다 `Style` 선언에 포함 될 수는 `ResourceDictionary`. A `Style` 이루어집니다 *암시적* 지정 하지는 `x:Key` 특성입니다. 스타일 다음 일치 하는 시각적 요소에 적용할 합니다 `TargetType` 정확 하 게 아니라에서 파생 된 요소에는 `TargetType` 값입니다.
+페이지 수준에서 [`Style`](xref:Xamarin.Forms.Style) 를 선언 하려면 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 를 페이지에 추가한 다음 하나 이상의 `Style` 선언을 `ResourceDictionary`에 포함할 수 있습니다. `x:Key` 특성을 지정 하지 않으면 `Style` *암시적* 으로 수행 됩니다. 그러면 `TargetType`와 정확 하 게 일치 하는 시각적 요소에 스타일이 적용 되지만 `TargetType` 값에서 파생 된 요소에는 적용 되지 않습니다.
 
-다음 코드 예제는 *암시적* 페이지의 XAML에 선언 된 스타일 `ResourceDictionary`, 페이지에 적용 하 고 [ `Entry` ](xref:Xamarin.Forms.Entry) 인스턴스:
+다음 코드 예제에서는 페이지의 `ResourceDictionary`에서 XAML로 선언 되 고 페이지의 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 적용 되는 *암시적* 스타일을 보여 줍니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
@@ -51,15 +51,15 @@ _암시적 스타일은 각 컨트롤에 스타일을 참조 하지 않고도 �
 </ContentPage>
 ```
 
-합니다 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 단일 정의 *암시적* 페이지에 적용 되는 스타일 [ `Entry` ](xref:Xamarin.Forms.Entry) 인스턴스. `Style` 도 다른 모양 옵션을 설정 하는 동안 노란색 배경이에 파란색 텍스트를 표시 하는 데 사용 됩니다. 합니다 `Style` 페이지에 추가 됩니다 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 지정 하지 않고는 `x:Key` 특성입니다. 따라서 합니다 `Style` 모두에 적용 됩니다는 `Entry` 일치 하는 암시적으로 인스턴스를 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 의 속성을 `Style` 정확 하 게 합니다. 그러나 합니다 `Style` 에 적용 되지 않습니다 합니다 `CustomEntry` 서브클래싱된는 인스턴스 `Entry`합니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
+[`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 는 페이지의 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 적용 되는 단일 *암시적* 스타일을 정의 합니다. `Style`는 노란색 배경에 파란색 텍스트를 표시 하는 동시에 다른 모양 옵션도 설정 하는 데 사용 됩니다. `Style` `x:Key` 특성을 지정 하지 않고 페이지의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 추가 됩니다. 따라서 `Style`는 `Style`의 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성과 정확히 일치 하므로 모든 `Entry` 인스턴스에 암시적으로 적용 됩니다. 그러나 `Style`은 서브클래싱된 `Entry``CustomEntry` 인스턴스에 적용 되지 않습니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
 
 [![암시적 스타일 예제](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
-또한, 네 번째 [ `Entry` ](xref:Xamarin.Forms.Entry) 재정의 [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor) 고 [ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor) 다른 암시적스타일의속성`Color`값입니다.
+또한 네 번째 [`Entry`](xref:Xamarin.Forms.Entry) 는 암시적 스타일의 [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) 및 [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) 속성을 다른 `Color` 값으로 재정의 합니다.
 
 ### <a name="create-an-implicit-style-at-the-control-level"></a>컨트롤 수준에서 암시적 스타일 만들기
 
-외에도 *암시적* 페이지 수준에서 스타일도 만들 수 있습니다 제어 수준에서 다음 코드 예제 에서처럼:
+다음 코드 예제와 같이 페이지 수준에서 *암시적* 스타일을 만들 수 있을 뿐 아니라 컨트롤 수준 에서도 만들 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Styles;assembly=Styles" x:Class="Styles.ImplicitStylesPage" Title="Implicit" IconImageSource="xaml.png">
@@ -80,13 +80,13 @@ _암시적 스타일은 각 컨트롤에 스타일을 참조 하지 않고도 �
 </ContentPage>
 ```
 
-이 예제에서는 *암시적* [ `Style` ](xref:Xamarin.Forms.Style) 에 할당 되는 [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 의 컬렉션을 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)컨트롤입니다. 합니다 *암시적* 스타일 컨트롤과 해당 자식 컨트롤에 적용할 수 있습니다.
+이 예제에서는 *암시적* [`Style`](xref:Xamarin.Forms.Style) [`StackLayout`](xref:Xamarin.Forms.StackLayout) 컨트롤의 [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) 컬렉션에 할당 됩니다. 그런 다음 컨트롤 및 해당 자식에 *암시적* 스타일을 적용할 수 있습니다.
 
-응용 프로그램에서 스타일을 만드는 방법은 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)를 참조 하십시오 [글로벌 스타일](~/xamarin-forms/user-interface/styles/application.md).
+응용 프로그램의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)에서 스타일을 만드는 방법에 대 한 자세한 내용은 [전역 스타일](~/xamarin-forms/user-interface/styles/application.md)을 참조 하세요.
 
 ## <a name="create-an-implicit-style-in-c35"></a>C에서 암시적 스타일 만들기&#35;
 
-[`Style`](xref:Xamarin.Forms.Style) 인스턴스 페이지를 추가할 수 있습니다 [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) 새 C#에서 컬렉션 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), 추가 하 여 다음을 `Style` 인스턴스를 `ResourceDictionary`에서처럼는 다음 코드 예제:
+다음 코드 예제와 같이 새 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)를 만든 다음 `Style` 인스턴스 C# 를 `ResourceDictionary`에 추가 하 여의 페이지 [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) 컬렉션에 [`Style`](xref:Xamarin.Forms.Style) 인스턴스를 추가할 수 있습니다.
 
 ```csharp
 public class ImplicitStylesPageCS : ContentPage
@@ -117,13 +117,13 @@ public class ImplicitStylesPageCS : ContentPage
 }
 ```
 
-생성자 정의 단일 *암시적* 페이지에 적용 되는 스타일 [ `Entry` ](xref:Xamarin.Forms.Entry) 인스턴스. `Style` 도 다른 모양 옵션을 설정 하는 동안 노란색 배경이에 파란색 텍스트를 표시 하는 데 사용 됩니다. 합니다 `Style` 페이지에 추가 됩니다 [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) 지정 하지 않고는 `key` 문자열입니다. 따라서 합니다 `Style` 모두에 적용 됩니다는 `Entry` 일치 하는 암시적으로 인스턴스를 [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) 의 속성을 `Style` 정확 하 게 합니다. 그러나 합니다 `Style` 에 적용 되지 않습니다 합니다 `CustomEntry` 서브클래싱된는 인스턴스 `Entry`합니다.
+생성자는 페이지의 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 적용 되는 단일 *암시적* 스타일을 정의 합니다. `Style`는 노란색 배경에 파란색 텍스트를 표시 하는 동시에 다른 모양 옵션도 설정 하는 데 사용 됩니다. `Style` `key` 문자열을 지정 하지 않고 페이지의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 추가 됩니다. 따라서 `Style`는 `Style`의 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성과 정확히 일치 하므로 모든 `Entry` 인스턴스에 암시적으로 적용 됩니다. 그러나 `Style`은 서브클래싱된 `Entry``CustomEntry` 인스턴스에 적용 되지 않습니다.
 
 ## <a name="apply-a-style-to-derived-types"></a>파생 형식에 스타일 적용
 
-속성을 사용 하면 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성이 참조 하는 기본 형식에서 파생 된 컨트롤에 스타일을 적용할 수 있습니다. [`Style.ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 따라서 형식이 `TargetType` 속성에 지정 된 `true` 기본 형식에서 파생 되는 경우이 속성을로 설정 하면 여러 형식을 대상으로 하는 단일 스타일을 사용할 수 있습니다.
+[`Style.ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성을 사용 하면 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성이 참조 하는 기본 형식에서 파생 된 컨트롤에 스타일을 적용할 수 있습니다. 따라서이 속성을 `true`로 설정 하면 형식이 `TargetType` 속성에 지정 된 기본 형식에서 파생 되는 경우 단일 스타일이 여러 형식을 대상으로 지정할 수 있습니다.
 
-다음 예제에서는 [`Button`](xref:Xamarin.Forms.Button) 인스턴스의 배경색을 빨간색으로 설정 하는 암시적 스타일을 보여 줍니다.
+다음 예제에서는 [`Button`](xref:Xamarin.Forms.Button) 인스턴스의 배경색을 빨강으로 설정 하는 암시적 스타일을 보여 줍니다.
 
 ```xaml
 <Style TargetType="Button"
@@ -133,7 +133,7 @@ public class ImplicitStylesPageCS : ContentPage
 </Style>
 ```
 
-이 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 배치 하면 페이지의 모든 [`Button`](xref:Xamarin.Forms.Button) 인스턴스와에서 `Button`파생 되는 모든 컨트롤에 적용 됩니다. 그러나 [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성이 설정 되지 않은 상태로 유지 되는 경우에 `Button` 는 해당 스타일만 인스턴스에 적용 됩니다.
+이 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 배치 하면 페이지의 모든 [`Button`](xref:Xamarin.Forms.Button) 인스턴스에 적용 되 고 `Button`에서 파생 되는 모든 컨트롤에도 적용 됩니다. 그러나 [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성이 설정 되지 않은 상태로 유지 되는 경우에는 `Button` 인스턴스에만 스타일이 적용 됩니다.
 
 해당하는 C# 코드는 다음과 같습니다.
 
@@ -156,9 +156,9 @@ Resources = new ResourceDictionary { buttonStyle };
 
 ## <a name="related-links"></a>관련 링크
 
-- [XAML 마크업 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [XAML 태그 확장](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [기본 스타일 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
-- [스타일 (샘플)를 사용 하 여 작업](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [스타일 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
-- [스타일](xref:Xamarin.Forms.Style)
+- [Style](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)
