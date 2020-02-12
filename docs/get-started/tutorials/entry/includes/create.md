@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 820761111c609f224a6dda14d5853777d22aa259
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d8c50b1dfb2a2669f7611a6bc6da882c54b877aa
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277343"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135034"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -30,7 +30,7 @@ ms.locfileid: "67277343"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "67277343"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 

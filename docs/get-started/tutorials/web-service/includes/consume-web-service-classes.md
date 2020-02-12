@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c92a97b336e89214bbd95021ad8fb9a56f64cc8c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 90f3f9ff5ed29a1ae2c93e355fc15bc6550d78dd
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659860"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135076"
 ---
 이 연습에서는 `RestService` 클래스를 사용하는 사용자 인터페이스를 만듭니다. 그러면 [OpenWeatherMap](https://openweathermap.org/) 웹 API에서 데이터를 검색하게 됩니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "67659860"
     </ContentPage>
     ```
 
-    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에서 [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) 및 일련의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. `Entry`는 해당하는 [`Text`](xref:Xamarin.Forms.Entry.Text) 속성을 설정하여 "Seattle"로 미리 채워져 있습니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `Label` 인스턴스의 절반은 `WeatherData` 속성에 대한 나머지 인스턴스 데이터 바인딩을 사용하여 정적 텍스트를 표시합니다. 런타임 시 데이터 바인딩을 사용하는 `Label` 인스턴스는 해당 바인딩 식에서 사용할 `WeatherData` 개체에 해당하는 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성을 살펴봅니다. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
+    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에서 [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) 및 일련의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. `Entry`는 해당하는 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성을 설정하여 "Seattle"로 미리 채워져 있습니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `Label` 인스턴스의 절반은 `WeatherData` 속성에 대한 나머지 인스턴스 데이터 바인딩을 사용하여 정적 텍스트를 표시합니다. 런타임 시 데이터 바인딩을 사용하는 `Label` 인스턴스는 해당 바인딩 식에서 사용할 `WeatherData` 개체에 해당하는 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성을 살펴봅니다. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
     또한 [`Entry`](xref:Xamarin.Forms.Entry)에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 개체에 액세스할 수 있습니다.
 
@@ -123,7 +123,7 @@ ms.locfileid: "67659860"
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Button`](xref:Xamarin.Forms.Button)을 눌러 시애틀의 현재 날씨 데이터를 검색합니다.
 
-    [![iOS 및 Android에서 시애틀 날씨 데이터 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
+    [![iOS 및 Android에서 시애틀 날씨 데이터의 스크린샷](../images/consume-web-service.png "시애틀 날씨 데이터")](../images/consume-web-service-large.png#lightbox "시애틀 날씨 데이터")
 
     > [!IMPORTANT]
     > 개인 OpenWeatherMap API 키는 `Constants` 클래스의 `OpenWeatherMapAPIKey` 상수 값으로 설정되어야 합니다.
@@ -187,7 +187,7 @@ ms.locfileid: "67659860"
     </ContentPage>
     ```
 
-    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에서 [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) 및 일련의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. `Entry`는 해당하는 [`Text`](xref:Xamarin.Forms.Entry.Text) 속성을 설정하여 "Seattle"로 미리 채워져 있습니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `Label` 인스턴스의 절반은 `WeatherData` 속성에 대한 나머지 인스턴스 데이터 바인딩을 사용하여 정적 텍스트를 표시합니다. 런타임 시 데이터 바인딩을 사용하는 `Label` 인스턴스는 해당 바인딩 식에서 사용할 `WeatherData` 개체에 해당하는 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성을 살펴봅니다. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
+    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에서 [`Entry`](xref:Xamarin.Forms.Entry), [`Button`](xref:Xamarin.Forms.Button) 및 일련의 [`Label`](xref:Xamarin.Forms.Label) 인스턴스로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. `Entry`는 해당하는 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성을 설정하여 "Seattle"로 미리 채워져 있습니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `Label` 인스턴스의 절반은 `WeatherData` 속성에 대한 나머지 인스턴스 데이터 바인딩을 사용하여 정적 텍스트를 표시합니다. 런타임 시 데이터 바인딩을 사용하는 `Label` 인스턴스는 해당 바인딩 식에서 사용할 `WeatherData` 개체에 해당하는 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성을 살펴봅니다. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
     또한 [`Entry`](xref:Xamarin.Forms.Entry)에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 개체에 액세스할 수 있습니다.
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 16ceaba572ca932777bb366d9f7c58f6dcb24f70
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67841385"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135063"
 ---
 [`Application`](xref:Xamarin.Forms.Application) 서브클래스에는 수명 주기 상태 변경에 따라 데이터를 저장하는 데 사용할 수 있는 정적 [`Properties`](xref:Xamarin.Forms.Application.Properties) 사전이 있습니다. 이 사전은 `string` 키를 사용하고 `object` 값을 저장합니다. 사전은 자동으로 디바이스에 저장되며, 애플리케이션을 다시 시작하면 다시 채워집니다.
 
@@ -82,7 +82,7 @@ ms.locfileid: "67841385"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정하고, `OnEntryCompleted`라는 이벤트 처리기가 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트로 등록됩니다. 또한 `Entry`에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 `Entry` 개체에 액세스할 수 있습니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정하고, `OnEntryCompleted`라는 이벤트 처리기가 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트로 등록됩니다. 또한 `Entry`에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 `Entry` 개체에 액세스할 수 있습니다.
 
 1. **솔루션 탐색기**의 **AppLifecycleTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 `OnAppearing` 메서드에 대한 재정의 및 `OnEntryCompleted` 이벤트 처리기를 클래스에 추가합니다.
 
@@ -100,7 +100,7 @@ ms.locfileid: "67841385"
     }
     ```
 
-    `OnAppearing` 메서드는 `App.DisplayText` 속성의 값을 검색하여 [`Entry`](xref:Xamarin.Forms.Entry)의 [`Text`](xref:Xamarin.Forms.Entry.Text) 속성 값으로 설정합니다.
+    `OnAppearing` 메서드는 `App.DisplayText` 속성의 값을 검색하여 [`Entry`](xref:Xamarin.Forms.Entry)의 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성 값으로 설정합니다.
 
     > [!NOTE]
     > `OnAppearing` 메서드 재정의는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)가 배치된 후에 실행되지만 표시되기 직전에 실행됩니다. 따라서 Xamarin.Forms 뷰 콘텐츠를 설정하는 것이 좋습니다.
@@ -186,7 +186,7 @@ ms.locfileid: "67841385"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정하고, `OnEntryCompleted`라는 이벤트 처리기가 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트로 등록됩니다. 또한 `Entry`에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 `Entry` 개체에 액세스할 수 있습니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성은 `Entry`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정하고, `OnEntryCompleted`라는 이벤트 처리기가 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트로 등록됩니다. 또한 `Entry`에는 `x:Name` 특성으로 지정된 이름이 있습니다. 이렇게 하면 코드 숨김 파일이 할당된 이름을 사용하여 `Entry` 개체에 액세스할 수 있습니다.
 
 1. **Solution Pad**의 **AppLifecycleTutorial** 프로젝트에서 **MainPage.xaml**을 확장하고 **MainPage.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **MainPage.xaml.cs**에서 `OnAppearing` 메서드에 대한 재정의 및 `OnEntryCompleted` 이벤트 처리기를 클래스에 추가합니다.
 
@@ -204,7 +204,7 @@ ms.locfileid: "67841385"
     }
     ```
 
-    `OnAppearing` 메서드는 `App.DisplayText` 속성의 값을 검색하여 [`Entry`](xref:Xamarin.Forms.Entry)의 [`Text`](xref:Xamarin.Forms.Entry.Text) 속성 값으로 설정합니다.
+    `OnAppearing` 메서드는 `App.DisplayText` 속성의 값을 검색하여 [`Entry`](xref:Xamarin.Forms.Entry)의 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성 값으로 설정합니다.
 
     > [!NOTE]
     > `OnAppearing` 메서드 재정의는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)가 배치된 후에 실행되지만 표시되기 직전에 실행됩니다. 따라서 Xamarin.Forms 뷰 콘텐츠를 설정하는 것이 좋습니다.

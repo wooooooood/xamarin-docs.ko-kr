@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: fe7e11f37f303c2ec1f5bc58e98953449694191c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67277352"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135057"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67277352"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Editor`](xref:Xamarin.Forms.Editor)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) 속성은 `Editor`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다. 또한 [`HeightRequest`](xref:Xamarin.Forms.VisualElement) 속성은 디바이스 독립적 단위로 `Editor`의 높이를 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Editor`](xref:Xamarin.Forms.Editor)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성은 `Editor`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다. 또한 [`HeightRequest`](xref:Xamarin.Forms.VisualElement) 속성은 디바이스 독립적 단위로 `Editor`의 높이를 지정합니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "67277352"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Editor`](xref:Xamarin.Forms.Editor)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) 속성은 `Editor`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다. 또한 [`HeightRequest`](xref:Xamarin.Forms.VisualElement) 속성은 디바이스 독립적 단위로 `Editor`의 높이를 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Editor`](xref:Xamarin.Forms.Editor)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성은 `Editor`가 처음 표시될 때 표시되는 자리 표시자 텍스트를 지정합니다. 또한 [`HeightRequest`](xref:Xamarin.Forms.VisualElement) 속성은 디바이스 독립적 단위로 `Editor`의 높이를 지정합니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 

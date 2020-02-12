@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: caee3eeda90a560f032c17657072ae5ba5023a69
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "67659858"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77135019"
 ---
 이 연습에서는 이전에 만든 데이터 액세스 클래스를 사용하는 사용자 인터페이스를 만듭니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "67659858"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스 두 개, [`Button`](xref:Xamarin.Forms.Button) 한 개 및 [`ListView`](xref:Xamarin.Forms.ListView) 한 개로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. 각 `Entry`에는 해당하는 [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성 세트가 포함되며 여기서는 사용자 입력 이전에 표시되는 자리 표시자 텍스트를 지정합니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `ListView`는 해당하는 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정합니다. 여기서는 [`TextCell`](xref:Xamarin.Forms.TextCell)을 사용하여 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 각 행의 모양을 정의합니다. `TextCell` 데이터는 해당하는 [`Text`](xref:Xamarin.Forms.TextCell.Text) 및 [`Detail`](xref:Xamarin.Forms.TextCell.Detail) 속성을 `Person` 개체의 `Name` 및 `Age` 속성으로 각각 바인딩합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스 두 개, [`Button`](xref:Xamarin.Forms.Button) 한 개 및 [`ListView`](xref:Xamarin.Forms.ListView) 한 개로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. 각 `Entry`에는 해당하는 [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성 세트가 포함되며 여기서는 사용자 입력 이전에 표시되는 자리 표시자 텍스트를 지정합니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `ListView`는 해당하는 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정합니다. 여기서는 [`TextCell`](xref:Xamarin.Forms.TextCell)을 사용하여 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 각 행의 모양을 정의합니다. `TextCell` 데이터는 해당하는 [`Text`](xref:Xamarin.Forms.TextCell.Text) 및 [`Detail`](xref:Xamarin.Forms.TextCell.Detail) 속성을 `Person` 개체의 `Name` 및 `Age` 속성으로 각각 바인딩합니다.
 
     또한 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스 및 [`ListView`](xref:Xamarin.Forms.ListView)의 이름은 `x:Name` 특성을 사용하여 지정됩니다. 그러면 코드 숨김 파일이 할당된 이름을 사용하여 이러한 개체에 액세스할 수 있습니다.
 
@@ -106,7 +106,7 @@ ms.locfileid: "67659858"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스 두 개, [`Button`](xref:Xamarin.Forms.Button) 한 개 및 [`ListView`](xref:Xamarin.Forms.ListView) 한 개로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. 각 `Entry`에는 해당하는 [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성 세트가 포함되며 여기서는 사용자 입력 이전에 표시되는 자리 표시자 텍스트를 지정합니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `ListView`는 해당하는 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정합니다. 여기서는 [`TextCell`](xref:Xamarin.Forms.TextCell)을 사용하여 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 각 행의 모양을 정의합니다. `TextCell` 데이터는 해당하는 [`Text`](xref:Xamarin.Forms.TextCell.Text) 및 [`Detail`](xref:Xamarin.Forms.TextCell.Detail) 속성을 `Person` 개체의 `Name` 및 `Age` 속성으로 각각 바인딩합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스 두 개, [`Button`](xref:Xamarin.Forms.Button) 한 개 및 [`ListView`](xref:Xamarin.Forms.ListView) 한 개로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. 각 `Entry`에는 해당하는 [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성 세트가 포함되며 여기서는 사용자 입력 이전에 표시되는 자리 표시자 텍스트를 지정합니다. `Button`은 해당하는 [`Clicked`](xref:Xamarin.Forms.Button.Clicked) 이벤트를 다음 단계에서 만들 `OnButtonClicked`라는 이벤트 처리기로 설정합니다. `ListView`는 해당하는 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 설정합니다. 여기서는 [`TextCell`](xref:Xamarin.Forms.TextCell)을 사용하여 [`ListView`](xref:Xamarin.Forms.ListView)에 있는 각 행의 모양을 정의합니다. `TextCell` 데이터는 해당하는 [`Text`](xref:Xamarin.Forms.TextCell.Text) 및 [`Detail`](xref:Xamarin.Forms.TextCell.Detail) 속성을 `Person` 개체의 `Name` 및 `Age` 속성으로 각각 바인딩합니다.
 
     또한 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스 및 [`ListView`](xref:Xamarin.Forms.ListView)의 이름은 `x:Name` 특성을 사용하여 지정됩니다. 그러면 코드 숨김 파일이 할당된 이름을 사용하여 이러한 개체에 액세스할 수 있습니다.
 
