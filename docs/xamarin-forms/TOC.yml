@@ -250,6 +250,17 @@
               href: app-fundamentals/dependency-service/registration-and-resolution.md
             - name: 사진 라이브러리에서 선택
               href: app-fundamentals/dependency-service/photo-picker.md
+        - name: 이중 화면
+          href: app-fundamentals/dual-screen/index.md
+          items:
+            - name: 이중 화면 패턴
+              href: app-fundamentals/dual-screen/design-patterns.md
+            - name: TwoPaneView
+              href: app-fundamentals/dual-screen/twopaneview.md
+            - name: DualScreenInfo
+              href: app-fundamentals/dual-screen/dual-screen-info.md
+            - name: DualScreenHelper
+              href: app-fundamentals/dual-screen/dual-screen-helper.md
         - name: 효과
           href: app-fundamentals/effects/index.md
           items:
