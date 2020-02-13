@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 92e2ceeea901e2acea70118e75d936f3b3ac94db
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70199988"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131134"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 Automation 속성
 
@@ -113,7 +113,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 > [!NOTE]
 > [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드는 `AutomationProperties.HelpText` 연결된 속성을 설정하는 데 사용할 수도 있습니다 - `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-일부 플랫폼에서는 [`Entry`](xref:Xamarin.Forms.Entry)과 같은 편집 컨트롤을 위해 `HelpText` 속성을 경우에 따라 생략하고 자리 표시자 텍스트로 바꿀 수 있습니다. 예를 들어 "여기에 이름 입력"은 사용자가 실제로 입력하기 전에 컨트롤에 텍스트를 배치하는 [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) 속성의 좋은 후보입니다.
+일부 플랫폼에서는 [`Entry`](xref:Xamarin.Forms.Entry)과 같은 편집 컨트롤을 위해 `HelpText` 속성을 경우에 따라 생략하고 자리 표시자 텍스트로 바꿀 수 있습니다. 예를 들어 "여기에 이름 입력"은 사용자가 실제로 입력하기 전에 컨트롤에 텍스트를 배치하는 [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성의 좋은 후보입니다.
 
 <a name="labeledby" />
 

@@ -10,12 +10,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 3936fe16ee768505c53ec119c51dcbecef7e6fbe
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: c0e8ec27898cc842d485967e525c2936d7a0f56d
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "73842963"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131045"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석
 
@@ -383,7 +383,7 @@ await Navigation.PopAsync();
 
 데이터 바인딩은 Xamarin.Forms 애플리케이션이 데이터를 나타내고 해당 데이터와 상호 작용하는 방법을 단순화하기 위해 사용됩니다. 그것을 통해 사용자 인터페이스와 기본 애플리케이션 간에 연결이 설정됩니다. [`BindableObject`](xref:Xamarin.Forms.BindableObject) 클래스에는 데이터 바인딩을 지원하는 인프라의 대부분이 담겨 있습니다.
 
-데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(하고 종종 표시)합니다. 예를 들어 한 [`Editor`](xref:Xamarin.Forms.Editor)(*대상* 개체)는 일반적으로 *소스* 개체에 있는 해당 [`Text`](xref:Xamarin.Forms.Editor.Text) 속성을 공용 `string` 속성에 바인딩합니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
+데이터 바인딩은 *source* 및 *target*이라는 두 개의 개체를 연결합니다. *source* 개체는 데이터를 제공합니다. *target* 개체는 원본 개체의 데이터를 사용(하고 종종 표시)합니다. 예를 들어 한 [`Editor`](xref:Xamarin.Forms.Editor)(*대상* 개체)는 일반적으로 *소스* 개체에 있는 해당 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성을 공용 `string` 속성에 바인딩합니다. 다음 다이어그램은 바인딩 관계를 보여 줍니다.
 
 ![](deepdive-images/data-binding.png "Data Binding")
 
@@ -432,7 +432,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         ... />
 ```
 
-*source* 개체의 [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) 속성과 `Text` 속성 간의 바인딩이 설정됩니다. `Editor`에서 변경된 내용은 자동으로 `Note` 개체로 전파됩니다. 마찬가지로, `Note.Text` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Editor`의 내용도 업데이트합니다. 이것을 *양방향(two-way) 바인딩*이라고 합니다.
+*source* 개체의 [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) 속성과 `Text` 속성 간의 바인딩이 설정됩니다. `Editor`에서 변경된 내용은 자동으로 `Note` 개체로 전파됩니다. 마찬가지로, `Note.Text` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Editor`의 내용도 업데이트합니다. 이것을 *양방향(two-way) 바인딩*이라고 합니다.
 
 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
