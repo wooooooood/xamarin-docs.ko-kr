@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: a3b9653651e3000b954cb6d16154cddc8d5d363a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 42ad56a7ae34bcef638ed25bea267dcabd21e20c
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772094"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131087"
 ---
 # <a name="create-xamarinforms-behaviors"></a>Xamarin.Forms 동작 만들기
 
@@ -84,7 +84,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 }
 ```
 
-`NumericValidationBehavior`는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되며, 여기서 `T`는 [`Entry`](xref:Xamarin.Forms.Entry)입니다. [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드는 메모리 누수를 방지하도록 `TextChanged` 이벤트를 등록 취소하는 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 사용하여 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 이벤트에 대한 이벤트 처리기를 등록합니다. 동작의 핵심 기능은 `OnEntryTextChanged` 메서드에서 제공됩니다. 이는 사용자가 `Entry`에 입력한 값을 구문 분석하고, 값이 `double`이 아닌 경우 [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) 속성을 빨간색으로 설정합니다.
+`NumericValidationBehavior`는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되며, 여기서 `T`는 [`Entry`](xref:Xamarin.Forms.Entry)입니다. [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드는 메모리 누수를 방지하도록 `TextChanged` 이벤트를 등록 취소하는 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 사용하여 [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 이벤트에 대한 이벤트 처리기를 등록합니다. 동작의 핵심 기능은 `OnEntryTextChanged` 메서드에서 제공됩니다. 이는 사용자가 `Entry`에 입력한 값을 구문 분석하고, 값이 `double`이 아닌 경우 [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) 속성을 빨간색으로 설정합니다.
 
 > [!NOTE]
 > 동작은 스타일을 통해 공유되고 여러 컨트롤에 적용할 수 있으므로 Xamarin.Forms는 동작의 `BindingContext`를 설정하지 않습니다.
@@ -110,7 +110,7 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 런타임 시 동작은 동작 구현에 따라 응답하여 컨트롤과 상호 작용합니다. 다음 스크린샷에서는 잘못된 입력에 응답하는 동작을 설명합니다.
 
-[![](creating-images/screenshots-sml.png "Xamarin.Forms Behavior를 사용하는 애플리케이션 예제")](creating-images/screenshots.png#lightbox "Xamarin.Forms Behavior를 사용하는 애플리케이션 예제")
+[![](creating-images/screenshots-sml.png "Sample Application with Xamarin.Forms Behavior")](creating-images/screenshots.png#lightbox "Sample Application with Xamarin.Forms Behavior")
 
 > [!NOTE]
 > 동작은 특정 컨트롤 형식(또는 여러 컨트롤에 적용할 수 있는 슈퍼클래스)에 작성되며, 호환 컨트롤에만 추가해야 합니다. 호환되지 않는 컨트롤에 동작을 연결하면 예외가 throw됩니다.

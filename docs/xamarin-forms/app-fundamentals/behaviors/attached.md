@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: ab39c79c59855c9f78184614176b1658ee0e29b2
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 7d16eef4fe5422fb5cf3c039c66d1b0f113727fd
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772109"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77131127"
 ---
 # <a name="attached-behaviors"></a>연결된 동작
 
@@ -80,7 +80,7 @@ public static class NumericValidationBehavior
 }
 ```
 
-`NumericValidationBehavior` 클래스에는 `static` getter 및 setter와 함께 `AttachBehavior`라는 연결된 속성이 포함되어 있습니다. 이는 클래스가 연결될 컨트롤에 동작의 추가 또는 제거를 제어합니다. 이 연결된 속성은 속성 값이 변경될 때 실행할 `OnAttachBehaviorChanged` 메서드를 등록합니다. 이 메서드는 `AttachBehavior` 연결된 속성의 값에 따라 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 이벤트에 대한 이벤트 처리기를 등록 또는 등록 해제합니다. 동작의 핵심 기능은 `OnEntryTextChanged` 메서드에서 제공됩니다. 이는 사용자가 [`Entry`](xref:Xamarin.Forms.Entry)에 입력한 값을 구문 분석하여 값이 `double`이 아닌 경우 빨간색으로 표시하도록 `TextColor` 속성을 설정합니다.
+`NumericValidationBehavior` 클래스에는 `static` getter 및 setter와 함께 `AttachBehavior`라는 연결된 속성이 포함되어 있습니다. 이는 클래스가 연결될 컨트롤에 동작의 추가 또는 제거를 제어합니다. 이 연결된 속성은 속성 값이 변경될 때 실행할 `OnAttachBehaviorChanged` 메서드를 등록합니다. 이 메서드는 `AttachBehavior` 연결된 속성의 값에 따라 [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 이벤트에 대한 이벤트 처리기를 등록 또는 등록 해제합니다. 동작의 핵심 기능은 `OnEntryTextChanged` 메서드에서 제공됩니다. 이는 사용자가 [`Entry`](xref:Xamarin.Forms.Entry)에 입력한 값을 구문 분석하여 값이 `double`이 아닌 경우 빨간색으로 표시하도록 `TextColor` 속성을 설정합니다.
 
 ## <a name="consuming-an-attached-behavior"></a>연결된 동작 사용
 
@@ -103,7 +103,7 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 런타임 시 동작은 동작 구현에 따라 응답하여 컨트롤과 상호 작용합니다. 다음 스크린샷에서는 잘못된 입력에 응답하는 연결된 동작을 설명합니다.
 
-[![](attached-images/screenshots-sml.png "연결된 동작이 포함된 샘플 애플리케이션")](attached-images/screenshots.png#lightbox "연결된 동작이 포함된 샘플 애플리케이션")
+[![](attached-images/screenshots-sml.png "Sample Application with Attached Behavior")](attached-images/screenshots.png#lightbox "Sample Application with Attached Behavior")
 
 > [!NOTE]
 > 연결된 동작은 특정 컨트롤 형식(또는 여러 컨트롤에 적용할 수 있는 슈퍼클래스)에 작성되며 호환 컨트롤에만 추가해야 합니다. 호환되지 않는 컨트롤에 동작을 연결하려고 하면 알 수 없는 동작이 발생하고 동작 구현에 따라 결과가 달라집니다.
@@ -116,14 +116,14 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 <Entry Placeholder="Enter a System.Double" local:NumericValidationBehavior.AttachBehavior="false" />
 ```
 
-해당하는 C#의 [`Entry`](xref:Xamarin.Forms.Entry)가 다음 코드 예제에 나와 있습니다.
+C#의 해당하는 [`Entry`](xref:Xamarin.Forms.Entry)가 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-런타임 시 `AttachBehavior` 연결된 속성의 값이 `false`로 설정된 경우 `OnAttachBehaviorChanged` 메서드가 실행됩니다. 그런 다음, `OnAttachBehaviorChanged` 메서드는 사용자가 컨트롤과 상호 작용할 때 동작이 실행되지 않도록 [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) 이벤트에 대한 이벤트 처리기를 등록 해제합니다.
+런타임 시 `AttachBehavior` 연결된 속성의 값이 `false`로 설정된 경우 `OnAttachBehaviorChanged` 메서드가 실행됩니다. 그런 다음, `OnAttachBehaviorChanged` 메서드는 사용자가 컨트롤과 상호 작용할 때 동작이 실행되지 않도록 [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 이벤트에 대한 이벤트 처리기를 등록 해제합니다.
 
 ## <a name="summary"></a>요약
 

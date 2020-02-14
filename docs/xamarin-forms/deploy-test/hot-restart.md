@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: jimmgarrido
 ms.author: jigarrid
 ms.date: 01/14/2020
-ms.openlocfilehash: fb607ab605322499e42f500e4f3bf08c1c267c23
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: 2cf925a96e952e6b760da9ca5416e124a3e3716b
+ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519659"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071155"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart(미리 보기)
 
@@ -52,7 +52,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 > 자동 프로비저닝은 iOS 기기의 배포 구성이 간편해질 수 있다는 장점으로 사용이 권장됩니다. 물론 적합한 프로비저닝 프로필이 있다면 이를 사용하지 않고 수동 프로비저닝을 계속 사용할 수도 있습니다.
 
 ## <a name="use-xamarin-hot-restart"></a>Xamarin Hot Restart 사용
-초기 설치 후에는 연결된 디바이스가 디버그 대상 드롭다운 메뉴에 표시됩니다. 앱을 디버그하려면 드롭다운에서 디바이스를 선택하고 **실행** 단추를 클릭합니다. 디버그 세션 개시를 위해 디바이스에서 앱을 수동으로 시작해야 할 수도 있습니다.
+초기 설치 후에는 연결된 디바이스가 디버그 대상 드롭다운 메뉴에 표시됩니다. 앱을 디버그하려면 드롭다운에서 디바이스를 선택하고 **실행** 단추를 클릭합니다. 디버그 세션을 시작하기 위해 디바이스에서 앱을 수동으로 시작하라는 메시지가 Visual Studio에 표시될 수 있습니다.
 
 디버깅하는 동안 코드 파일을 편집한 다음 디버그 도구 모음에서 **다시 시작** 단추를 누르거나 **Ctrl+Shift+F5**를 눌러 새 변경 사항이 적용된 상태로 디버그 세션을 다시 시작할 수 있습니다.
 
@@ -66,6 +66,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 
 ## <a name="troubleshoot"></a>문제 해결
 - iTunes는 Microsoft Store를 통해 설치된 경우 설치 마법사에 감지되지 않습니다. 이 버전을 먼저 제거한 다음 [Apple의 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2101014)를 다운로드해야 합니다.
+- 디바이스별 빌드를 사용하도록 설정하면 앱이 디버그 모드로 전환하지 못하는 알려진 문제가 있습니다. 해결하려면 **속성 > iOS 빌드**에서 이 빌드를 사용하지 않도록 설정하고 디버깅을 다시 시도해야 합니다. 이 문제는 향후 릴리스에서 수정됩니다.
 - 앱이 디바이스에 이미 있다면 `AMDeviceStartHouseArrestService` 오류로 Hot Restart 배포 시도가 실패할 수 있습니다. 해결 방법은 디바이스에서 앱을 제거한 후 다시 배포하는 것입니다.
 
 그 외의 문제를 추가로 보고하려면 [도움말 > 의견 보내기 > 문제 보고](/visualstudio/ide/feedback-options?view=vs-2019#report-a-problem)로 이동하여 피드백 도구를 사용하시기 바랍니다.
