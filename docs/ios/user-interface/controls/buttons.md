@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: a8dfd267fe9f5f838927fc216d53c2475398ed16
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0619488199c202e1877e4cfa60d622ef247e2b3f
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022108"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77374121"
 ---
 # <a name="buttons-in-xamarinios"></a>Xamarin.ios의 단추
 
@@ -69,7 +69,7 @@ IOS에서 `UIButton` 클래스는 단추 컨트롤을 나타냅니다.
 단추 탭에 응답 하려면 단추의 `TouchUpInside` 이벤트에 대 한 처리기를 제공 합니다.
 
 ```csharp
-button.TouchUpInside += (sender, e) => {
+myButton.TouchUpInside += (sender, e) => {
     DoSomething();
 };
 ```
@@ -91,13 +91,13 @@ button.TouchUpInside += (sender, e) => {
 
 > [!NOTE]
 > 모든 `UIControlState` 값의 전체 목록을 보려면를 살펴보세요 [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
-> 설명을.
+> 참조하세요.
 
 예를 들어 `UIControlState.Normal`의 제목 색과 그림자 색을 설정 하려면 다음을 수행 합니다.
 
 ```csharp
-button.SetTitleColor(UIColor.White, UIControlState.Normal);
-button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
+myButton.SetTitleColor(UIColor.White, UIControlState.Normal);
+myButton.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
 다음 코드에서는 단추 제목을 `UIControlState.Normal` 및 `UIControlState.Highlighted`에 대 한 특성이 지정 된 (스타일) 문자열로 설정 합니다.
@@ -115,9 +115,9 @@ myButton.SetAttributedTitle(highlightedAttributedTitle, UIControlState.Highlight
 `Custom` `UIButtonType` 있는 단추에는 기본 스타일이 없습니다. 그러나 다양 한 상태에 대해 이미지를 설정 하 여 단추의 모양을 구성할 수 있습니다.
 
 ```csharp
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
-button4.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand.png"), UIControlState.Normal);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UIControlState.Highlighted);
+myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
 사용자가 단추를 터치 하는지 여부에 따라 다음 이미지 (`UIControlState.Normal`, `UIControlState.Highlighted` 및 `UIControlState.Selected` 상태) 중 하나로 렌더링 됩니다.
