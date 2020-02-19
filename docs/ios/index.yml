@@ -1,124 +1,215 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.iOS
+summary: Xamarin.iOS는 .NET 개발자를 위한 전체 iOS SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 iOS 앱을 빌드합니다.
 metadata:
+  title: Xamarin.iOS
   description: Xamarin.iOS는 .NET 개발자를 위한 전체 iOS SDK를 제공합니다.
-  author: davidortinau
-  ms.author: daortin
-  ms.date: 09/28/2018
   ms.topic: landing-page
-  ms.technology: xamarin-ios
-abstract:
-  description: 'Xamarin.iOS는 .NET 개발자를 위한 전체 iOS SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 iOS 앱을 빌드합니다.'
-  menu:
-    items:
-      - href: ~/ios/samples/index.md
-        text: iOS 샘플
-      - href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
-        text: 릴리스 정보
-      - href: 'https://developer.apple.com/documentation/'
-        text: Apple 개발자 설명서
-      - href: /visualstudio/
-        text: Visual Studio
-sections:
-  - title: 시작
-    items:
-      - type: paragraph
-        text: 'Xamarin 및 C#으로 첫 번째 iOS 앱을 빌드하는 방법에 대해 알아봅니다.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: 설정
-            href: ~/ios/get-started/installation/index.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: 'Hello, iOS'
-            href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: 멀티 화면 앱
-            href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-            text: iOS 13
-            href: ~/ios/platform/ios13/index.md
-  - title: 가이드
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: ~/ios/get-started/index.md
-            html: Xamarin.iOS를 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 iOS 앱을 빌드하세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-              href: ~/ios/get-started/index.md
-            title: 시작
-          - href: ~/ios/app-fundamentals/index.md
-            html: 'iOS 앱을 빌드하는 데 필요한 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: ~/ios/app-fundamentals/index.md
-            title: 애플리케이션 기본 사항
-          - href: ~/ios/user-interface/index.md
-            html: UIKit의 iOS에서 사용할 수 있는 사용자 인터페이스 컨트롤을 모두 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: ~/ios/user-interface/index.md
-            title: 사용자 인터페이스
-          - href: ~/ios/platform/index.md
-            html: 'iOS 플랫폼 기능(예: ARKit 및 CoreML) 및 iOS 11의 기타 새로운 기능 작업입니다.'
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: ~/ios/platform/index.md
-            title: 플랫폼 기능
-          - href: ~/essentials/index.md?context=xamarin/ios
-            html: 모바일 애플리케이션을 위한 플랫폼 간 API.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
-              href: ~/essentials/index.md?context=xamarin/ios
-            title: Xamarin.Essentials
-          - href: ~/ios/data-cloud/index.md
-            html: 로컬 및 원격 데이터 스토리지과 검색 및 기타 클라우드 기반 서비스입니다.
-            image:
-              src: ~/media/icons/i_data-cloud.svg
-              href: ~/ios/data-cloud/index.md
-            title: 데이터 및 클라우드 서비스
-          - href: ~/ios/deploy-test/index.md
-            html: App Store에 앱을 빌드하고 배포하는 지침과 앱을 미리 테스트하는 데 유용한 팁입니다!
-            image:
-              src: ~/media/icons/i_deploy-test.svg
-              href: ~/ios/deploy-test/index.md
-            title: 배포 및 테스트
-          - href: ~/ios/internals/index.md
-            html: Xamarin.iOS의 작동 방법에 대한 자세한 정보입니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
-              href: ~/ios/internals/index.md
-            title: 고급 개념 및 내부 요소
-          - href: ~/ios/watchos/index.md
-            html: Apple Watch용 앱을 빌드하세요!
-            image:
-              src: ~/media/icons/i_watchos.svg
-              href: ~/ios/watchos/index.md
-            title: watchOS
-          - href: ~/ios/tvos/index.md
-            html: Apple TV용 앱을 빌드하세요!
-            image:
-              src: ~/media/icons/i_tvos.svg
-              href: ~/ios/tvos/index.md
-            title: tvOS
-  - title: 참고
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: API
-            href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12'
-            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12">iOS API 문서</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">기본 클래스 라이브러리</a></p>'
-          - title: 샘플
-            href: 'https://developer.xamarin.com/samples'
-            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">iOS 샘플</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">watchOS 샘플</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">tvOS 샘플</a></p>'
+  ms.prod: xamarin
+  ms.assetid: 7DF889E9-23F6-408F-B836-E0FDF5F0FA9B
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 01/24/2020
+  ms.openlocfilehash: f800b61bfdf9d1e79eed6e943c2b49e4724ef641
+  ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/17/2020
+  ms.locfileid: "77374112"
+landingContent:
+- title: 시작
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Xamarin.iOS 시작
+      url: ~/ios/get-started/index.md
+    - text: 설정 및 설치
+      url: ~/ios/get-started/installation/index.md
+    - text: 첫 번째 앱 빌드
+      url: ~/ios/get-started/hello-ios/index.md
+    - text: 첫 번째 앱 확장
+      url: ~/ios/get-started/hello-ios-multiscreen/index.md
+    - text: Objective-C 개발자
+      url: ~/ios/get-started/objective-c-developers/index.md
+- title: 애플리케이션 기본 사항
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 액세스 가능성
+      url: ~/ios/app-fundamentals/accessibility.md
+    - text: Backgrounding
+      url: ~/ios/app-fundamentals/backgrounding/index.md
+    - text: 예외 마샬링
+      url: ~/ios/platform/exception-marshaling.md
+    - text: 이벤트, 프로토콜 및 대리자
+      url: ~/ios/app-fundamentals/delegates-protocols-and-events.md
+    - text: 파일 시스템
+      url: ~/ios/app-fundamentals/file-system.md
+    - text: 이미지 및 아이콘
+      url: ~/ios/app-fundamentals/images-icons/index.md
+    - text: 지역화
+      url: ~/ios/app-fundamentals/localization/index.md
+    - text: 보안 및 개인 정보
+      url: ~/ios/app-fundamentals/security-privacy.md
+    - text: 터치
+      url: ~/ios/app-fundamentals/touch/index.md
+    - text: 자세히 보기 >
+      url: ~/ios/app-fundamentals/index.md
+- title: 사용자 인터페이스
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: iOS 디자이너
+      url: ~/ios/user-interface/designer/index.md
+    - text: 스토리보드
+      url: ~/ios/user-interface/storyboards/index.md
+    - text: 사용자 인터페이스
+      url: ~/ios/user-interface/ios-ui/index.md
+    - text: 컨트롤
+      url: ~/ios/user-interface/controls/index.md
+    - text: 프로그래밍 레이아웃 제약 조건
+      url: ~/ios/user-interface/programmatic-layout-constraints.md
+    - text: MonoTouch.Dialog
+      url: ~/ios/user-interface/monotouch.dialog/index.md
+- title: 플랫폼 기능
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Apple Pay
+      url: ~/ios/platform/apple-pay.md
+    - text: ARKit
+      url: ~/ios/platform/introduction-to-ios11/arkit/index.md
+    - text: 그래픽 및 애니메이션
+      url: ~/ios/platform/graphics-animation-ios/index.md
+    - text: PassKit
+      url: ~/ios/platform/passkit.md
+    - text: PhotoKit
+      url: ~/ios/platform/photokit.md
+    - text: 검색
+      url: ~/ios/platform/search/index.md
+    - text: SiriKit
+      url: ~/ios/platform/sirikit/index.md
+    - text: 3D 터치
+      url: ~/ios/platform/3d-touch.md
+    - text: Touch ID 및 Face ID
+      url: ~/ios/platform/touch-id-face-id.md
+    - text: 자세히 보기 >
+      url: ~/ios/platform/index.md
+- title: Xamarin.Essentials
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: About
+      url: ~/essentials/index.md?context=xamarin/ios
+    - text: 시작
+      url: ~/essentials/get-started.md?context=xamarin/ios
+    - text: 플랫폼 및 기능 지원
+      url: ~/essentials/platform-feature-support.md?context=xamarin/ios
+    - text: 문제 해결
+      url: ~/essentials/troubleshooting.md?context=xamarin/ios
+    - text: 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+- title: 데이터 및 클라우드 서비스
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure Active Directory
+      url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios
+    - text: Azure Mobile Apps
+      url: ~/cross-platform/data-cloud/mobile-apps.md
+    - text: 데이터 액세스
+      url: ~/ios/data-cloud/data/index.md
+    - text: System.Data
+      url: ~/ios/data-cloud/system.data.md
+    - text: iCloud
+      url: ~/ios/data-cloud/introduction-to-icloud.md
+    - text: CloudKit
+      url: ~/ios/data-cloud/intro-to-cloudkit.md
+    - text: 웹 서비스 소개
+      url: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios
+- title: 배포 및 테스트
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 앱 배포
+      url: ~/ios/deploy-test/app-distribution/index.md
+    - text: 코드 서명 및 프로비저닝
+      url: ~/ios/deploy-test/provisioning/index.md
+    - text: 다른 디바이스용으로 컴파일
+      url: ~/ios/deploy-test/compiling-for-different-devices.md
+    - text: iOS 빌드 메커니즘
+      url: ~/ios/deploy-test/ios-build-mechanics.md
+    - text: Xamarin.iOS 앱 연결
+      url: ~/ios/deploy-test/linker.md
+    - text: 프로파일링
+      url: ~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md
+    - text: 성능
+      url: ~/ios/deploy-test/performance.md
+    - text: 단위 테스트
+      url: ~/ios/deploy-test/touch.unit.md
+    - text: 무선 배포
+      url: ~/ios/deploy-test/wireless-deployment.md
+    - text: 자세히 보기 >
+      url: ~/ios/deploy-test/index.md
+- title: 고급 개념 및 내부 요소
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: API
+      url: ~/ios/internals/api.md
+    - text: API 디자인
+      url: ~/ios/internals/api-design/index.md
+    - text: 사용 가능한 어셈블리
+      url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/ios
+    - text: 부동 소수점
+      url: ~/ios/internals/floating-point.md
+    - text: XIB 코드 생성
+      url: ~/ios/internals/xib-code-generation.md
+    - text: iOS 아키텍처
+      url: ~/ios/internals/architecture.md
+    - text: 제한 사항
+      url: ~/ios/internals/limitations.md
+    - text: 새 refcount
+      url: ~/ios/internals/newrefcount.md
+    - text: Objective-C 선택기
+      url: ~/ios/internals/objective-c-selectors.md
+    - text: 등록자
+      url: ~/ios/internals/registrar.md
+- title: watchOS
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 시작
+      url: ~/ios/watchos/get-started/index.md
+    - text: 애플리케이션 기본 사항
+      url: ~/ios/watchos/app-fundamentals/index.md
+    - text: 사용자 인터페이스
+      url: ~/ios/watchos/user-interface/index.md
+    - text: 플랫폼 기능
+      url: ~/ios/watchos/platform/index.md
+    - text: WatchOS용 Xamarin.Essentials
+      url: ~/essentials/index.md?context=xamarin/watchos
+    - text: 배포 및 테스트
+      url: ~/ios/watchos/deploy-test/index.md
+    - text: 문제 해결
+      url: ~/ios/watchos/troubleshooting.md
+- title: tvOS
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 시작
+      url: ~/ios/tvos/get-started/index.md
+    - text: 애플리케이션 기본 사항
+      url: ~/ios/tvos/app-fundamentals/index.md
+    - text: 사용자 인터페이스
+      url: ~/ios/tvos/user-interface/index.md
+    - text: 플랫폼 기능
+      url: ~/ios/tvos/platform/index.md
+    - text: tvOS용 Xamarin.Essentials
+      url: ~/essentials/index.md?context=xamarin/tvos
+    - text: 배포 및 테스트
+      url: ~/ios/tvos/deploy-test/index.md
+    - text: 내부 요소
+      url: ~/ios/tvos/internals/index.md
+    - text: 문제 해결
+      url: ~/ios/tvos/troubleshooting.md

@@ -1,118 +1,177 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Xamarin.Android
+summary: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 Android 앱을 제작합니다.
 metadata:
+  title: Xamarin.Android
   description: Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다.
-  author: davidortinau
-  ms.author: daortin
-  ms.date: 07/27/2018
   ms.topic: landing-page
+  ms.prod: xamarin
   ms.technology: xamarin-android
-abstract:
-  description: 'Xamarin.Android는 .NET 개발자를 위한 완전한 Android SDK를 제공합니다. Visual Studio에서 C# 또는 F#을 사용하여 완전한 네이티브 Android 앱을 빌드합니다.'
-  menu:
-    items:
-      - href: ~/android/samples/index.md
-        text: Android 샘플
-      - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
-        text: 릴리스 정보
-      - href: 'https://developers.google.com/'
-        text: Google 개발자 설명서
-      - href: /visualstudio/
-        text: Visual Studio
-sections:
-  - title: 시작
-    items:
-      - type: paragraph
-        text: 'Xamarin 및 C#으로 첫 번째 Android 앱을 제작하는 방법에 대해 알아봅니다.'
-      - type: list
-        style: icon48
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            text: 설정
-            href: ~/android/get-started/installation/index.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: 'Hello, Android'
-            href: ~/android/get-started/hello-android/hello-android-quickstart.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
-            text: 멀티 화면 앱
-            href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-          - image:
-              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
-            text: Android 10
-            href: ~/android/platform/android-10.md
-  - title: 가이드
-    items:
-      - type: list
-        style: cards
-        className: cardsB
-        items:
-          - href: ~/android/get-started/index.md
-            html: Xamarin.Android로 안내하고 실행하는 자습서입니다. 모두 올바르게 설치되었는지 확인하고 첫 번째 Android 앱을 빌드하세요.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-              href: ~/android/get-started/index.md
-            title: 시작
-          - href: ~/android/app-fundamentals/index.md
-            html: 'Android 앱을 제작하는 데 알아야 할 모든 작업(예: 파일, 이미지, 데이터베이스 작업 등)입니다.'
-            image:
-              src: ~/media/icons/i_app-build.svg
-              href: ~/android/app-fundamentals/index.md
-            title: 애플리케이션 기본 사항
-          - href: ~/android/user-interface/index.md
-            html: Android에서 사용할 수 있는 사용자 인터페이스 컨트롤 위젯을 모두 알아봅니다.
-            image:
-              src: ~/media/icons/i_user-interface.svg
-              href: ~/android/user-interface/index.md
-            title: 사용자 인터페이스
-          - href: ~/android/platform/index.md
-            html: 'Android 플랫폼 기능 작업(예: 지문 인증) 및 Android 8.0 Oreo의 최신 기능 작업입니다.'
-            image:
-              src: ~/media/icons/i_platform.svg
-              href: ~/android/platform/index.md
-            title: 플랫폼 기능
-          - href: ~/essentials/index.md?context=xamarin/android
-            html: 모바일 애플리케이션을 위한 플랫폼 간 API.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
-              href: ~/essentials/index.md?context=xamarin/android
-            title: Xamarin.Essentials
-          - href: ~/android/data-cloud/index.md
-            html: 로컬 및 원격 데이터 스토리지과 검색 및 기타 클라우드 기반 서비스입니다.
-            image:
-              src: ~/media/icons/i_data-cloud.svg
-              href: ~/android/data-cloud/index.md
-            title: 데이터 및 클라우드 서비스
-          - href: ~/android/deploy-test/index.md
-            html: Google Play에 앱을 빌드하고 배포하는 방법 및 해당 앱을 미리 테스트하는 데 유용한 팁입니다!
-            image:
-              src: ~/media/icons/i_deploy-test.svg
-              href: ~/android/deploy-test/index.md
-            title: 배포 및 테스트
-          - href: ~/android/internals/index.md
-            html: Xamarin.Android 내부 요소에 대한 추가 정보 및 지역화와 액세스 가능성 등의 기능에 대한 도움말입니다.
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
-              href: ~/android/internals/index.md
-            title: 고급 개념 및 내부 요소
-          - href: ~/android/wear/index.md
-            html: Android Wear용 앱을 제작합니다.
-            image:
-              src: ~/media/icons/i_android-wear.svg
-              href: ~/android/wear/index.md
-            title: Android Wear
-  - title: 참고
-    items:
-      - type: list
-        style: cards
-        className: cardsD
-        items:
-          - title: API
-            href: 'https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9'
-            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Android API 문서</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">기본 클래스 라이브러리</a></p>'
-          - title: 샘플
-            href: 'https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android'
-            html: '<p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android">Android 샘플</a></p>'
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 01/27/2020
+  ms.openlocfilehash: 394812b5150f7bbea46dff476bd2f896083b9a74
+  ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/17/2020
+  ms.locfileid: "77374086"
+landingContent:
+- title: 시작
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Xamarin.Android 시작
+      url: ~/android/get-started/index.md
+    - text: 설정 및 설치
+      url: ~/android/get-started/installation/index.md
+    - text: 첫 번째 앱 빌드
+      url: ~/android/get-started/hello-android/index.md
+    - text: 첫 번째 앱 확장
+      url: ~/android/get-started/hello-android-multiscreen/index.md
+    - text: Java 개발자용 Xamarin
+      url: ~/android/get-started/java-developers.md
+- title: 애플리케이션 기본 사항
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 액세스 가능성
+      url: ~/android/app-fundamentals/accessibility.md
+    - text: Android API 수준
+      url: ~/android/app-fundamentals/android-api-levels.md
+    - text: 작업 수명 주기
+      url: ~/android/app-fundamentals/activity-lifecycle/index.md
+    - text: 브로드캐스트 수신기
+      url: ~/android/app-fundamentals/broadcast-receivers.md
+    - text: 그래픽 및 애니메이션
+      url: ~/android/app-fundamentals/graphics-and-animation.md
+    - text: 지역화
+      url: ~/android/app-fundamentals/localization.md
+    - text: 알림
+      url: ~/android/app-fundamentals/notifications/index.md
+    - text: 사용 권한
+      url: ~/android/app-fundamentals/permissions.md
+    - text: 터치 및 제스처
+      url: ~/android/app-fundamentals/touch/index.md
+    - text: 자세히 보기 >
+      url: ~/android/app-fundamentals/index.md
+- title: 사용자 인터페이스
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Android Designer
+      url: ~/android/user-interface/android-designer/index.md
+    - text: 재질 테마
+      url: ~/android/user-interface/material-theme.md
+    - text: 사용자 프로필
+      url: ~/android/user-interface/user-profile.md
+    - text: 시작 화면
+      url: ~/android/user-interface/splash-screen.md
+    - text: 레이아웃
+      url: ~/android/user-interface/layouts/index.md
+    - text: 컨트롤
+      url: ~/android/user-interface/controls/index.md
+- title: 플랫폼 기능
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 앱 연결
+      url: ~/android/platform/app-linking.md
+    - text: Java 라이브러리 바인딩
+      url: ~/android/platform/binding-java-library/index.md
+    - text: 콘텐츠 공급자
+      url: ~/android/platform/content-providers/index.md
+    - text: 파일 액세스
+      url: ~/android/platform/files/index.md
+    - text: 지문 인증
+      url: ~/android/platform/fingerprint-authentication/index.md
+    - text: 조각
+      url: ~/android/platform/fragments/index.md
+    - text: Java 통합
+      url: ~/android/platform/java-integration/index.md
+    - text: 작업 스케줄러
+      url: ~/android/platform/android-job-scheduler.md
+    - text: 맵 및 위치
+      url: ~/android/platform/maps-and-location/index.md
+    - text: 자세히 보기 >
+      url: ~/android/platform/index.md
+- title: Xamarin.Essentials
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: About
+      url: ~/essentials/index.md?context=xamarin/android
+    - text: 시작
+      url: ~/essentials/get-started.md?context=xamarin/android
+    - text: 플랫폼 및 기능 지원
+      url: ~/essentials/platform-feature-support.md?context=xamarin/android
+    - text: 문제 해결
+      url: ~/essentials/troubleshooting.md?context=xamarin/android
+    - text: 릴리스 정보
+      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+- title: 데이터 및 클라우드 서비스
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure Active Directory
+      url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
+    - text: Azure Mobile Apps
+      url: ~/cross-platform/data-cloud/mobile-apps.md
+    - text: 데이터 액세스
+      url: ~/android/data-cloud/data-access/index.md
+    - text: Google 메시징
+      url: ~/android/data-cloud/google-messaging/index.md
+    - text: 웹 서비스 소개
+      url: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/android
+- title: 배포 및 테스트
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 앱 패키지 크기
+      url: ~/android/deploy-test/app-package-size.md
+    - text: 앱 빌드
+      url: ~/android/deploy-test/building-apps/index.md
+    - text: 연결
+      url: ~/android/deploy-test/linker.md
+    - text: 다중 코어 디바이스
+      url: ~/android/deploy-test/multicore-devices.md
+    - text: 성능
+      url: ~/android/deploy-test/performance.md
+    - text: 프로파일링
+      url: ~/android/deploy-test/profiling.md
+    - text: 릴리스 준비
+      url: ~/android/deploy-test/release-prep/index.md
+    - text: APK 서명
+      url: ~/android/deploy-test/signing/index.md
+    - text: 앱 게시
+      url: ~/android/deploy-test/publishing/index.md
+    - text: 자세히 보기 >
+      url: ~/android/deploy-test/index.md
+- title: 고급 개념 및 내부 요소
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 아키텍처
+      url: ~/android/internals/architecture.md
+    - text: 사용 가능한 어셈블리
+      url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
+    - text: API 디자인
+      url: ~/android/internals/api-design.md
+    - text: 가비지 수집
+      url: ~/android/internals/garbage-collection.md
+    - text: 제한 사항
+      url: ~/android/internals/limitations.md
+- title: Android Wear
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 시작
+      url: ~/android/wear/get-started/index.md
+    - text: 사용자 인터페이스
+      url: ~/android/wear/user-interface/index.md
+    - text: 플랫폼 기능
+      url: ~/android/wear/platform/index.md
+    - text: 화면 크기
+      url: ~/android/wear/screen-sizes.md
+    - text: 배포 및 테스트
+      url: ~/android/wear/deploy-test/index.md
