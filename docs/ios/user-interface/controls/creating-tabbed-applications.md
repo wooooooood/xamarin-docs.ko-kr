@@ -324,7 +324,7 @@ public override void ViewDidLoad ()
 
 加载时在应用程序运行与用户点击第一个屏幕，UITabBarController 按钮，从放置在第一个选项卡中，如下所示的第一个屏幕视图：
 
-[![샘플 앱 출력](creating-tabbed-applications-images/first-view-sml.png)](creating-tabbed-applications-images/first-view.png#lightbox)
+[샘플 앱 출력 ![](creating-tabbed-applications-images/first-view-sml.png)](creating-tabbed-applications-images/first-view.png#lightbox)
 
 ## <a name="summary"></a>요약
 
