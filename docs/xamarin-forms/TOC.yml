@@ -555,7 +555,12 @@
                 - name: CSS(CSS 스타일시트)를 사용하여 Xamarin.Forms 앱 스타일 지정
                   href: user-interface/styles/css/index.md
             - name: 테마
-              href: user-interface/theming.md
+              href: user-interface/theming/index.md
+              items:
+                - name: 애플리케이션에 테마 설정
+                  href: user-interface/theming/theming.md
+                - name: 어둡게 모드 감지
+                  href: user-interface/theming/dark-mode.md
             - name: 시각적 개체
               href: user-interface/visual/index.md
               items:

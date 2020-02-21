@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: 1199cdf00a5fa93b7ed7a4351ea5838a2065eddd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a724a21dfffead307ca3d65d5ff134cf2d7c90db
+ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020854"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77374038"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>에뮬레이터 성능에 대한 하드웨어 가속(Hyper-V & HAXM)
 
@@ -42,7 +42,7 @@ Visual Studio를 통해 Android 디바이스가 지원되지 않거나 실용적
 2. **Intel의 HAXM(Hardware Accelerated Execution Manager)**
    HAXM은 Intel CPU를 실행하는 컴퓨터에 대한 가상화 엔진입니다.
 
-Windows에서 최상의 경험을 위해서는 Android 에뮬레이터를 가속화하는데 HAXM를 사용하는 것이 좋습니다. 컴퓨터에서 HAXM을 사용할 수 없는 경우 Windows 하이퍼바이저 플랫폼(WHPX)을 사용할 수 있습니다. Android 에뮬레이터는 다음 기준이 충족되는 경우 자동으로 하드웨어 가속을 사용합니다.
+Windows에서 최상의 경험을 위해서는 WHPX를 사용하여 Android 에뮬레이터를 가속하는 것이 좋습니다. 컴퓨터에서 WHPX를 사용할 수 없는 경우 HAXM을 사용할 수 있습니다. Android 에뮬레이터는 다음 기준이 충족되는 경우 자동으로 하드웨어 가속을 사용합니다.
 
 - 개발 컴퓨터에서 하드웨어 가속을 사용하고 활성화할 수 있습니다.
 
@@ -89,7 +89,7 @@ Hyper-V는 Windows 하이퍼바이저 플랫폼에서 실행됩니다. Hyper-V�
 systeminfo
 ```
 
-나열된 모든 Hyper-V 요구 사항의 값이 **예**이면 컴퓨터에서 Hyper-V를 지원할 수 있습니다. 예:
+나열된 모든 Hyper-V 요구 사항의 값이 **예**이면 컴퓨터에서 Hyper-V를 지원할 수 있습니다. 예를 들어:
 
 [![systeminfo 출력 예제](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
@@ -102,6 +102,10 @@ systeminfo
     [![Hyper-V 및 Windows 하이퍼바이저 플랫폼 사용](hardware-acceleration-images/win/03-hyper-v-settings-w158-sml.png)](hardware-acceleration-images/win/03-hyper-v-settings-w158.png#lightbox)
 
    다음과 같이 변경한 후 컴퓨터를 다시 부팅합니다.
+   
+> [!IMPORTANT]
+>
+> Windows 10 October 2018 업데이트(RS5) 이상에서는 Hyper-V만 사용하도록 설정하면 됩니다. Hyper-V가 자동으로 WHPX(Windows Hypervisor Platform)를 사용하기 때문입니다.
 
 2. **[Visual Studio 15.8 이상](https://visualstudio.microsoft.com/vs/) 설치**(이 버전의 Visual Studio는 Hyper-V로 Android 에뮬레이터를 실행하기 위한 IDE 지원을 제공합니다).
 
@@ -126,7 +130,7 @@ systeminfo
     sc query intelhaxm
     ```
 
-2. 출력을 검사하여 HAXM 프로세스가 실행 중인지 확인합니다. 그럴 경우 `intelhaxm` 상태가 `RUNNING`으로 나열된 출력이 표시되어야 합니다. 예:
+2. 출력을 검사하여 HAXM 프로세스가 실행 중인지 확인합니다. 그럴 경우 `intelhaxm` 상태가 `RUNNING`으로 나열된 출력이 표시되어야 합니다. 예를 들어:
 
     ![HAXM을 사용할 수 하는 경우 sc 쿼리 명령의 출력](hardware-acceleration-images/win/05-sc_query-w158.png)
 
