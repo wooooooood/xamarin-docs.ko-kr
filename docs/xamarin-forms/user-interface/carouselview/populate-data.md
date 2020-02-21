@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/17/2019
-ms.openlocfilehash: 7d1183bf0c741b5a7ca02b43c4edb0c640ee1ac2
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: 8ec66a8d39f373b624e3a597e62014e3b1c72f56
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488228"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480564"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.ios CarouselView 데이터
 
@@ -270,23 +270,23 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView` `ItemsSourceBy` 속성을 `CarouselView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
+이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView`는 `ItemsSourceBy` 연결 된 속성을 `CarouselView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
 
 [![IOS 및 Android에서 CarouselView 및 IndicatorView의 스크린샷](populate-data-images/indicators.png "IndicatorView 원")](populate-data-images/indicators-large.png#lightbox "IndicatorView 원")
 
 > [!IMPORTANT]
-> `ItemsSourceBy` 속성을 설정 하면 `IndicatorView.Position` 속성이 `CarouselView.Position` 속성에 바인딩하고 `IndicatorView.ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
+> `IndicatorView.ItemsSourceBy` 연결 된 속성을 설정 하면 `IndicatorView.Position` 속성 바인딩이 `CarouselView.Position` 속성으로, `IndicatorView.ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
 
 표시기에 대 한 자세한 내용은 [IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)를 참조 하세요.
 
-## <a name="pull-to-refresh"></a>당겨서 새로 고침
+## <a name="pull-to-refresh"></a>새로 고치려면 끌어오기
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 `RefreshView`를 통해 기능을 새로 고치는 기능을 지원 합니다 .이 기능을 사용 하면 항목을 축소 하 여 데이터를 새로 고칠 수 있습니다. `RefreshView`은 자식에서 스크롤 가능한 콘텐츠를 지 원하는 경우 해당 자식에 대 한 기능을 새로 고치는 가져오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식으로 설정 하 여 `CarouselView`에 대 한 끌어오기를 새로 고칩니다.
 
@@ -333,7 +333,7 @@ refreshView.Content = carouselView;
 
 - `int`형식의 `RemainingItemsThreshold``RemainingItemsThresholdReached` 이벤트가 발생 하는 목록에 아직 표시 되지 않는 항목의 임계값입니다.
 - `RemainingItemsThresholdReachedCommand``RemainingItemsThreshold`에 도달할 때 실행 되는 `ICommand`형식입니다.
-- `object` 형식의 `RemainingItemsThresholdReachedCommandParameter` - `RemainingItemsThresholdReachedCommand`에 전달되는 매개 변수입니다.
+- `RemainingItemsThresholdReachedCommandParameter` 형식의 `object` - `RemainingItemsThresholdReachedCommand`에 전달되는 매개 변수입니다.
 
 또한 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 `RemainingItemsThreshold` 항목이 표시 되지 않을 만큼 `CarouselView` 스크롤 될 때 발생 하는 `RemainingItemsThresholdReached` 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 더 많은 항목을 로드할 수 있습니다. 또한 `RemainingItemsThresholdReached` 이벤트가 발생 하면 `RemainingItemsThresholdReachedCommand` 실행 되어 viewmodel에서 증분 데이터 로드가 발생 하도록 할 수 있습니다.
 
@@ -381,6 +381,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CarouselView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 - [Xamarin.ios IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
 - [Xamarin.ios RefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Xamarin. Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

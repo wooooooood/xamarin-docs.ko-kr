@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/17/2019
-ms.openlocfilehash: 6b7845011470d83d8f2187e0227950c23e46d52d
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: a5a9daa39dcc94bbf77d9c91ea651bda6ec5747b
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490519"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480548"
 ---
 # <a name="xamarinforms-indicatorview"></a>Xamarin.ios IndicatorView
 
@@ -30,19 +30,19 @@ ms.locfileid: "75490519"
 Forms.SetFlags("IndicatorView_Experimental");
 ```
 
-`IndicatorView` 다음 속성을 정의합니다.
+`IndicatorView`는 다음 속성을 정의 합니다.
 
 - `int`형식의 `Count`표시기의 수입니다.
-- `bool`형식의 `HideSingle`는 하나만 있을 때 표시기를 숨길지 여부를 나타냅니다. 기본값은 `true`여야 합니다.
+- `bool`형식의 `HideSingle`는 하나만 있을 때 표시기를 숨길지 여부를 나타냅니다. 기본값은 `true`입니다.
 - `Color`형식의 `IndicatorColor`표시기 색입니다.
 - `double`형식의 `IndicatorSize`표시기 크기입니다. 기본값은 6.0입니다.
 - `Layout<View>`형식의 `IndicatorLayout``IndicatorView`을 렌더링 하는 데 사용 되는 레이아웃 클래스를 정의 합니다. 이 속성은 Xamarin.ios로 설정 되며 일반적으로 개발자가 설정할 필요가 없습니다.
 - `DataTemplate`형식의 `IndicatorTemplate`각 표시기의 모양을 정의 하는 템플릿입니다.
 - `IndicatorShape`형식의 `IndicatorsShape`각 표시기의 모양입니다.
-- `IEnumerable`형식의 `ItemsSource`이며, 표시기가 표시 될 컬렉션입니다. 이 속성은 `ItemsSourceBy` 속성이 설정 될 때 자동으로 설정 됩니다.
-- `VisualElement`형식의 `ItemsSourceBy`표시기를 표시할 `CarouselView` 개체입니다.
-- `int`형식의 `MaximumVisible`표시 되는 최대 표시기 수입니다. 기본값은 `int.MaxValue`여야 합니다.
-- 현재 선택한 지표 인덱스를 `int`형식의 `Position`입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 `ItemsSourceBy` 속성이 설정 될 때 자동으로 설정 됩니다.
+- `IEnumerable`형식의 `ItemsSource`이며, 표시기가 표시 될 컬렉션입니다. 이 속성은 연결 된 `ItemsSourceBy` 속성이 설정 될 때 자동으로 설정 됩니다.
+- `VisualElement`형식의 `ItemsSourceBy`표시기를 표시할 `CarouselView` 개체입니다. 이 연결 된 속성입니다.
+- `int`형식의 `MaximumVisible`표시 되는 최대 표시기 수입니다. 기본값은 `int.MaxValue`입니다.
+- 현재 선택한 지표 인덱스를 `int`형식의 `Position`입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 연결 된 `ItemsSourceBy` 속성이 설정 될 때 자동으로 설정 됩니다.
 - `Color`형식의 `SelectedIndicatorColor``CarouselView`의 현재 항목을 나타내는 표시기 색입니다.
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
@@ -59,17 +59,17 @@ Forms.SetFlags("IndicatorView_Experimental");
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView` `ItemsSourceBy` 속성을 `CarouselView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
+이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView`는 `ItemsSourceBy` 연결 된 속성을 `CarouselView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
 
 > [!IMPORTANT]
-> `ItemsSourceBy` 속성을 설정 하면 `Position` 속성이 `CarouselView.Position` 속성에 바인딩하고 `ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
+> `ItemsSourceBy` 연결 된 속성을 설정 하면 `Position` 속성 바인딩이 `CarouselView.Position` 속성으로, `ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
 
 ## <a name="change-indicator-shape"></a>표시기 모양 변경
 
@@ -82,7 +82,7 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ```xaml
 <IndicatorView IndicatorsShape="Square"
-               ItemsSourceBy="carouselView"
+               IndicatorView.ItemsSourceBy="carouselView"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
 ```
@@ -99,7 +99,7 @@ Forms.SetFlags("IndicatorView_Experimental");
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="Black"
                    HorizontalOptions="Center">

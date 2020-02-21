@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2019
-ms.openlocfilehash: 286950104e9a85b6ec89f0c0f3f891f29dada4ec
-ms.sourcegitcommit: 07941cf9704ff88cf4087de5ebdea623ff54edb1
+ms.openlocfilehash: 06b802a90ef350dcbd0b056f801109609dcd7a35
+ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144662"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77480627"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -208,7 +208,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `IndicatorView` `CarouselView`의 항목 수를 나타내는 표시기를 표시 합니다. 표시기를 표시할 `CarouselView` 개체로 `ItemsSourceBy` 속성을 설정 합니다. <br /><br />[가이드](~/xamarin-forms/user-interface/indicatorview.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView 예제](views-images/IndicatorView.png "IndicatorView 예제")](views-images/IndicatorView-Large.png#lightbox "IndicatorView 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) |
+| `IndicatorView` `CarouselView`의 항목 수를 나타내는 표시기를 표시 합니다. 표시기를 표시할 `CarouselView` 개체로 `IndicatorView.ItemsSourceBy` 연결 된 속성을 설정 합니다. <br /><br />[가이드](~/xamarin-forms/user-interface/indicatorview.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView 예제](views-images/IndicatorView.png "IndicatorView 예제")](views-images/IndicatorView-Large.png#lightbox "IndicatorView 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) |
 |     |     |
 
 ### <a name="listview"></a>ListView
