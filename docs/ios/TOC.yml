@@ -322,6 +322,11 @@
           items:
             - name: 연습 - iOS Objective-C 라이브러리 바인딩
               href: platform/binding-objective-c/walkthrough.md
+        - name: iOS Swift 라이브러리 바인딩
+          href: platform/binding-swift/index.md
+          items:
+            - name: 연습
+              href: platform/binding-swift/walkthrough.md
         - name: CallKit
           href: platform/callkit.md
         - name: 연락처 및 ContactsUI
