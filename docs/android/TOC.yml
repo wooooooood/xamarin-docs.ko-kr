@@ -393,6 +393,8 @@
           href: ~/essentials/accelerometer.md?context=xamarin/android
         - name: 앱 정보
           href: ~/essentials/app-information.md?context=xamarin/android
+        - name: 앱 테마
+          href: ~/essentials/app-theme.md?context=xamarin/android
         - name: 지표
           href: ~/essentials/barometer.md?context=xamarin/android
         - name: 배터리
@@ -435,6 +437,8 @@
           href: ~/essentials/open-browser.md?context=xamarin/android
         - name: 방향 센서
           href: ~/essentials/orientation-sensor.md?context=xamarin/android
+        - name: 사용 권한
+          href: ~/essentials/permissions.md?context=xamarin/android
         - name: 전화 걸기
           href: ~/essentials/phone-dialer.md?context=xamarin/android
         - name: '플랫폼 확장(크기, 직사각형, 점)'
