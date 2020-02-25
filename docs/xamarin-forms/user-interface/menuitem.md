@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 08/01/2019
-ms.openlocfilehash: 5bc36f03eac4ced7c19a0053dfea93dbe2ca4497
-ms.sourcegitcommit: 850dd7a3ed10eb3f66692e765d3e31438cff0288
+ms.openlocfilehash: b4690feb6444405d090a0b2bafd6c8615b2ffa8b
+ms.sourcegitcommit: 6d86aac422d6ce2131930d18ada161d117c8c61b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72531013"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77567074"
 ---
 # <a name="xamarinforms-menuitem"></a>Xamarin.ios MenuItem
 
@@ -22,22 +22,22 @@ Xamarin.ios [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 `ListView` �
 
 다음 스크린샷에는 iOS 및 Android의 `ListView` 상황에 맞는 메뉴에 `MenuItem` 개체가 나와 있습니다.
 
-[!["IOS 및 Android에서 Menuitem"](menuitem-images/menuitem-demo-cropped.png "IOS 및 Android의 Menuitem")](menuitem-images/menuitem-demo-full.png#lightbox "IOS 및 Android의 Menuitem full image")
+[!["IOS 및 Android에서 Menuitem"](menuitem-images/menuitem-demo-cropped.png "IOS 및 Android의 Menuitem")](menuitem-images/menuitem-demo-full.png#lightbox "IOS의 Menuitem 및 Android 전체 이미지")
 
-@No__t_0 클래스는 다음 속성을 정의 합니다.
+`MenuItem` 클래스는 다음 속성을 정의 합니다.
 
 * [`Command`](xref:Xamarin.Forms.MenuItem.Command) 는 핑거 탭 또는 클릭과 같은 사용자 동작을 viewmodel에 정의 된 명령에 바인딩할 수 있는 `ICommand`입니다.
 * [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) 는 `Command`에 전달 되어야 하는 매개 변수를 지정 하는 `object`입니다.
 * [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) 는 표시 아이콘을 정의 하는 `ImageSource` 값입니다.
 * [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) 은 `MenuItem` 연결 된 UI 요소를 목록에서 제거할지 여부를 나타내는 `bool` 값입니다.
-* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) 은이 개체가 사용자 입력에 응답 하는지 여부를 결정 하는 `bool` 값입니다.
+* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) 은이 개체가 사용자 입력에 응답 하는지 여부를 나타내는 `bool` 값입니다.
 * [`Text`](xref:Xamarin.Forms.MenuItem.Text) 은 표시 텍스트를 지정 하는 `string` 값입니다.
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에 의해 지원 되므로 `MenuItem` 인스턴스가 데이터 바인딩의 대상이 될 수 있습니다.
 
 ## <a name="create-a-menuitem"></a>MenuItem 만들기
 
-`MenuItem` 개체는 `ListView` 개체의 항목에 대 한 상황에 맞는 메뉴 내에서 사용할 수 있습니다. 가장 일반적인 패턴은 `ListView`s `ItemTemplate`에 대 한 `DataTemplate` 개체로 사용 되는 `ViewCell` 인스턴스 내에 `MenuItem` 개체를 만드는 것입니다. @No__t_0 개체가 채워지면 `DataTemplate`를 사용 하 여 각 항목을 만들고, 항목에 대해 상황에 맞는 메뉴가 활성화 될 때 `MenuItem` 선택 항목을 노출 합니다.
+`MenuItem` 개체는 `ListView` 개체의 항목에 대 한 상황에 맞는 메뉴 내에서 사용할 수 있습니다. 가장 일반적인 패턴은 `ListView`s `ItemTemplate`의 `DataTemplate` 개체로 사용 되는 `ViewCell` 인스턴스 내에 `MenuItem` 개체를 만드는 것입니다. `ListView` 개체가 채워지면 `DataTemplate`를 사용 하 여 각 항목을 만들고, 항목에 대해 상황에 맞는 메뉴가 활성화 될 때 `MenuItem` 선택 항목을 노출 합니다.
 
 다음 예제에서는 `ListView` 개체의 컨텍스트 내에서 `MenuItem` 인스턴스화를 보여 줍니다.
 
@@ -56,7 +56,7 @@ Xamarin.ios [`MenuItem`](xref:Xamarin.Forms.MenuItem) 클래스는 `ListView` �
 </ListView>
 ```
 
-@No__t_0 코드에서 만들 수도 있습니다.
+`MenuItem` 코드에서 만들 수도 있습니다.
 
 ```csharp
 // A function returns a ViewCell instance that
@@ -127,7 +127,7 @@ void OnItemClicked(object sender, EventArgs e)
 
 ## <a name="define-menuitem-behavior-with-mvvm"></a>MVVM를 사용 하 여 MenuItem 동작 정의
 
-@No__t_0 클래스는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체 및 `ICommand` 인터페이스를 통해 MVVM (모델-뷰-ViewModel) 패턴을 지원 합니다. 다음 XAML은 viewmodel에 정의 된 명령에 바인딩되는 `MenuItem` 인스턴스를 보여 줍니다.
+`MenuItem` 클래스는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체 및 `ICommand` 인터페이스를 통해 MVVM (모델-뷰-ViewModel) 패턴을 지원 합니다. 다음 XAML은 viewmodel에 정의 된 명령에 바인딩되는 `MenuItem` 인스턴스를 보여 줍니다.
 
 ```xaml
 <ContentPage.BindingContext>
@@ -196,6 +196,51 @@ public MenuItemXamlMvvmPage()
 !["Android의 MenuItem 아이콘 스크린샷"](menuitem-images/menuitem-android-icon.png "Android의 MenuItem 아이콘 스크린샷")
 
 Xamarin.ios에서 이미지를 사용 하는 방법에 대 한 자세한 내용은 [xamarin.ios의 이미지](~/xamarin-forms/user-interface/images.md)를 참조 하세요.
+
+## <a name="enable-or-disable-a-menuitem-at-runtime"></a>런타임에 MenuItem 사용 또는 사용 안 함
+
+런타임에 `MenuItem` 비활성화를 사용 하도록 설정 하려면 해당 `Command` 속성을 `ICommand` 구현에 바인딩한 다음 `canExecute` 대리자가 적절 하 게 `ICommand`을 사용 하거나 사용 하지 않도록 설정 해야 합니다.
+
+> [!IMPORTANT]
+> `Command` 속성을 사용 하 여 `MenuItem`를 사용 하거나 사용 하지 않도록 설정 하는 경우 `IsEnabled` 속성을 다른 속성에 바인딩하지 마십시오.
+
+다음 예에서는 `Command` 속성이 `MyCommand`이라는 `ICommand`에 바인딩되는 `MenuItem`을 보여 줍니다.
+
+```xaml
+<MenuItem Text="My menu item"
+          Command="{Binding MyCommand}" />
+```
+
+`ICommand` 구현에는 `MenuItem`를 사용 하거나 사용 하지 않도록 설정 하기 위해 `bool` 속성의 값을 반환 하는 `canExecute` 대리자가 필요 합니다.
+
+```csharp
+public class MyViewModel : INotifyPropertyChanged
+{
+    bool isMenuItemEnabled = false;
+    public bool IsMenuItemEnabled
+    {
+        get { return isMenuItemEnabled; }
+        set
+        {
+            isMenuItemEnabled = value;
+            MyCommand.ChangeCanExecute();
+        }
+    }
+
+    public Command MyCommand { get; private set; }
+
+    public ToolbarItemViewModel()
+    {
+        MyCommand = new Command(() =>
+        {
+            // Execute logic here
+        },
+        () => IsToolbarItemEnabled);
+    }
+}
+```
+
+이 예에서는 `IsMenuItemEnabled` 속성이 설정 될 때까지 `MenuItem` 사용할 수 없습니다. 이 경우 `Command.ChangeCanExecute` 메서드를 호출 하 여 `MyCommand`에 대 한 `canExecute` 대리자를 다시 계산 합니다.
 
 ## <a name="cross-platform-context-menu-behavior"></a>플랫폼 간 상황에 맞는 메뉴 동작
 
