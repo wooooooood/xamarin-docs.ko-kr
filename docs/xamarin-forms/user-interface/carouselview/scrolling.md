@@ -6,13 +6,13 @@ ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: ce0e0b63206ab918b5d761be3e619370aec1eec7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/28/2020
+ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489754"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635922"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.ios CarouselView 스크롤
 
@@ -24,7 +24,7 @@ ms.locfileid: "75489754"
 
 - 가로 스크롤 막대가 표시 되는 시점을 지정 하는 `ScrollBarVisibility`형식의 `HorizontalScrollBarVisibility`입니다.
 - `IsDragging``CarouselView` 스크롤 여부를 나타내는 `bool`형식입니다. 이는 읽기 전용 속성 이며 기본값은 `false`입니다.
-- `IsScrollAnimated``CarouselView`를 스크롤할 때 애니메이션이 발생 하는지 여부를 지정 하는 `bool`형식입니다. 기본값은 `true`여야 합니다.
+- `IsScrollAnimated``CarouselView`를 스크롤할 때 애니메이션이 발생 하는지 여부를 지정 하는 `bool`형식입니다. 기본값은 `true`입니다.
 - 새 항목이 추가 될 때 `CarouselView`의 스크롤 동작을 나타내는 `ItemsUpdatingScrollMode`형식의 `ItemsUpdatingScrollMode`입니다.
 - 세로 스크롤 막대가 표시 되는 시점을 지정 하는 `ScrollBarVisibility`형식의 `VerticalScrollBarVisibility`입니다.
 
@@ -132,7 +132,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 > [!NOTE]
 > `ScrollTo` 메서드를 호출할 때 `position` 인수를 지정 하지 않으면 기본적으로 [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) 멤버가 사용 됩니다.
 
-### <a name="start"></a>Start
+### <a name="start"></a>시작
 
 [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 시작 부분으로 스크롤 해야 함을 나타냅니다.
 
@@ -195,7 +195,7 @@ CarouselView carouselView = new CarouselView
 - [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠가 보기에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
 - [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 은 콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
-## <a name="snap-points"></a>끌기 지점
+## <a name="snap-points"></a>맞춤 요소
 
 사용자가 스크롤을 시작 swipes 면 항목이 완전히 표시 되도록 스크롤의 끝 위치를 제어할 수 있습니다. 이 기능은 스크롤이 중지 될 때 항목이 위치에 스냅 되 고 [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) 클래스의 다음 속성에 의해 제어 되기 때문에 맞추기 라고 합니다.
 
@@ -217,6 +217,10 @@ CarouselView carouselView = new CarouselView
 
 기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView)에서 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성은 `SnapPointsType.MandatorySingle`로 설정 되므로 스크롤은 한 번에 한 항목만 스크롤합니다.
 
+다음 스크린샷에는 맞추기 기능이 해제 된 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 표시 됩니다.
+
+[![IOS 및 Android에서 스냅 지점이 없는 CarouselView의 스크린샷](scrolling-images/snappoints-none.png "CarouselView (snap points 불포함)")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView (snap points 불포함)")
+
 ### <a name="snap-points-alignment"></a>맞춤 지점의 맞춤
 
 [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) 열거형은 `Start`, `Center`및 `End` 멤버를 정의 합니다.
@@ -224,7 +228,7 @@ CarouselView carouselView = new CarouselView
 > [!IMPORTANT]
 > [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 속성의 값은 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성이 `Mandatory`또는 `MandatorySingle`로 설정 된 경우에만 적용 됩니다.
 
-#### <a name="start"></a>Start
+#### <a name="start"></a>시작
 
 `SnapPointsAlignment.Start` 멤버는 맞춤 지점이 항목의 선행 가장자리에 맞춰지도록 지정 합니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
@@ -254,7 +258,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-사용자가 가로 스크롤 [`CarouselView`](xref:Xamarin.Forms.CarouselView)에서 스크롤을 시작 swipes 면 왼쪽 항목이 뷰의 왼쪽에 맞춰집니다.
+사용자가 [`CarouselView`](xref:Xamarin.Forms.CarouselView)가로 스크롤으로 스크롤을 시작 하면 왼쪽 항목이 뷰의 왼쪽에 정렬 됩니다.
+
+[![IOS 및 Android에서 시작 하는 CarouselView의 스크린샷](scrolling-images/snappoints-start.png "시작 스냅 지점이 있는 CarouselView")](scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CarouselView")
 
 #### <a name="center"></a>Center
 
@@ -288,7 +294,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-사용자가 [`CarouselView`](xref:Xamarin.Forms.CarouselView)가로 스크롤으로 스크롤을 시작 하는 경우 가운데 항목은 뷰의 가운데에 정렬 됩니다 swipes.
+사용자가 [`CarouselView`](xref:Xamarin.Forms.CarouselView)가로 스크롤으로 스크롤을 시작 하는 경우 가운데 항목은 뷰의 가운데에 정렬 됩니다 (swipes).
+
+[![IOS 및 Android에서 가운데 맞춤 지점이 있는 CarouselView의 스크린샷](scrolling-images/snappoints-center.png "가운데 맞춤 지점이 있는 CarouselView")](scrolling-images/snappoints-center-large.png#lightbox "가운데 맞춤 지점이 있는 CarouselView")
 
 #### <a name="end"></a>종료
 
@@ -321,6 +329,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 사용자가 [`CarouselView`](xref:Xamarin.Forms.CarouselView)가로 스크롤으로 스크롤을 시작 하면 오른쪽 항목이 뷰의 오른쪽에 맞춰집니다.
+
+[![IOS 및 Android에서 최종 맞춤 지점이 있는 CarouselView의 스크린샷](scrolling-images/snappoints-end.png "끝 맞춤 지점이 있는 CarouselView")](scrolling-images/snappoints-end-large.png#lightbox "끝 맞춤 지점이 있는 CarouselView")
 
 ## <a name="related-links"></a>관련 링크
 

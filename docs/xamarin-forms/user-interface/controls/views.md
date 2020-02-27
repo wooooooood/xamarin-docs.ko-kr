@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2019
-ms.openlocfilehash: 06b802a90ef350dcbd0b056f801109609dcd7a35
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 02/14/2020
+ms.openlocfilehash: 1e8b6f5e1ea090abc8ebd6084095bf6b34663a42
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480627"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635870"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -70,7 +70,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `MediaElement` 비디오를 표시 하거나 오디오를 재생 합니다. 미디어는 웹을 통해 다운로드 하거나 플랫폼 프로젝트에 리소스로 포함할 수 있습니다.<br /><br />[가이드](~/xamarin-forms/user-interface/mediaelement.md) / [샘플](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement) | |
+| [`MediaElement`](xref:Xamarin.Forms.MediaElement) 비디오 또는 오디오를 재생 합니다. [`Source`](xref:Xamarin.Forms.MediaElement.Source) 속성이 [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource) 또는 [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource)설정 되었는지 여부에 따라 URL 또는 로컬 파일에서 미디어를 재생할 수 있습니다.<br /><br />[API 설명서](xref:Xamarin.Forms.MediaElement) / [가이드](~/xamarin-forms/user-interface/mediaelement.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos) | [![MediaElement 예](views-images/MediaElement.png "MediaElement 예")](views-images/MediaElement-Large.png#lightbox "MediaElement 예")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MediaElementDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MediaElementDemoPage.cs) |
 |     |     |
 
 ## <a name="views-that-initiate-commands"></a>시작 명령 뷰

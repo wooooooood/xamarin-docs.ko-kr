@@ -6,13 +6,13 @@ ms.assetid: fede0382-c972-4023-a4ea-fe5cadec91a6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
-ms.openlocfilehash: 38c891a095b2b3d41d906e747585b961516f9256
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.date: 01/28/2020
+ms.openlocfilehash: 2e3d3ccd42907ef3678ccfb634c036930800a145
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77130856"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636132"
 ---
 # <a name="xamarinforms-carouselview-layout"></a>Xamarin.ios CarouselView 레이아웃
 
@@ -108,7 +108,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-그러면 새 항목이 추가 될 때 레이아웃이 가로로 증가 합니다.
+그러면 새 항목이 추가 될 때 레이아웃이 가로 방향으로 증가 합니다.
+
+[![IOS 및 Android에서 CarouselView 가로 레이아웃의 스크린샷](layout-images/horizontal.png "CarouselView 가로 레이아웃")](layout-images/horizontal-large.png#lightbox "CarouselView 가로 레이아웃")
 
 ## <a name="vertical-layout"></a>세로 레이아웃
 
@@ -167,6 +169,8 @@ CarouselView carouselView = new CarouselView
 
 이로 인해 새 항목이 추가 될 때 레이아웃이 세로로 증가 합니다.
 
+[![IOS 및 Android에서 CarouselView 세로 레이아웃의 스크린샷](layout-images/vertical.png "CarouselView 세로 레이아웃")](layout-images/vertical-large.png#lightbox "CarouselView 세로 레이아웃")
+
 ## <a name="partially-visible-adjacent-items"></a>부분적으로 표시 되는 인접 항목
 
 기본적으로 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 는 전체 항목을 한 번에 표시 합니다. 그러나 `PeekAreaInsets` 속성을에 의해 부분적으로 표시 되는 인접 한 항목의 크기를 지정 하는 `Thickness` 값으로 설정 하 여이 동작을 변경할 수 있습니다. 이는 볼 추가 항목이 있음을 사용자에 게 표시 하는 데 유용할 수 있습니다. 다음 XAML은이 속성을 설정 하는 예를 보여 줍니다.
@@ -189,6 +193,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 결과적으로 인접 한 항목이 화면에 부분적으로 노출 됩니다.
+
+[![IOS 및 Android에서 부분적으로 표시 되는 인접 항목을 포함 하는 CollectionView의 스크린샷](layout-images/peek-items.png "CarouselView 피킹 (peeking) 영역 인세트")](layout-images/peek-items-large.png#lightbox "CarouselView 피크 영역 인세트")
 
 ## <a name="item-spacing"></a>항목 간격
 
@@ -238,7 +244,9 @@ void OnImageTapped(object sender, EventArgs e)
 }
 ```
 
-`OnImageTapped` 이벤트 처리기는 탭 하는 [`Image`](xref:Xamarin.Forms.Image) 개체에 대 한 응답으로 실행 되 고 이미지의 크기 (및 부모 프레임)를 변경 하 여 쉽게 볼 수 있도록 합니다.
+`OnImageTapped` 이벤트 처리기는 탭 하는 [`Image`](xref:Xamarin.Forms.Image) 개체에 대 한 응답으로 실행 되 고 이미지의 크기 (및 부모 `Frame`)를 변경 하 여 더 쉽게 볼 수 있도록 합니다.
+
+[![IOS 및 Android에서 동적 항목 크기 조정을 사용 하는 CarouselView의 스크린샷](layout-images/runtime-resizing.png "CarouselView 동적 항목 크기 조정")](layout-images/runtime-resizing-large.png#lightbox "CarouselView 동적 항목 크기 조정")
 
 ## <a name="right-to-left-layout"></a>오른쪽에서 왼쪽 레이아웃
 

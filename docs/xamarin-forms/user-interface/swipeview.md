@@ -6,13 +6,13 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
-ms.openlocfilehash: 4119a650c431013bb0c8e680de600ed4e73d0c93
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 02/11/2020
+ms.openlocfilehash: 6131287b200846a033e0c476d7039dfd774cab68
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490507"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77635591"
 ---
 # <a name="xamarinforms-swipeview"></a>Xamarin.ios SwipeView
 
@@ -30,7 +30,7 @@ ms.locfileid: "75490507"
 Forms.SetFlags("SwipeView_Experimental");
 ```
 
-`SwipeView` 다음 속성을 정의합니다.
+`SwipeView`는 다음 속성을 정의 합니다.
 
 - `LeftItems`은 컨트롤이 왼쪽에서 스와이프 때 호출할 수 있는 살짝 밀기 항목을 나타내는 `SwipeItems`형식의입니다.
 - `RightItems`는 컨트롤이 우변에서 스와이프 때 호출할 수 있는 살짝 밀기 항목을 나타내는 `SwipeItems`형식의입니다.
@@ -57,7 +57,7 @@ Forms.SetFlags("SwipeView_Experimental");
 
 `SwipeView`은 `SwipeView` 래핑하는 콘텐츠 및 살짝 밀기 제스처로 표시 되는 살짝 밀기 항목을 정의 해야 합니다. 살짝 밀기 항목은 네 개의 `SwipeView` 방향 컬렉션 `LeftItems`, `RightItems`, `TopItems`또는 `BottomItems`중 하나에 배치 되는 하나 이상의 `SwipeItem` 개체입니다.
 
-다음 예제에서는 인스턴스화하는 방법을 보여 줍니다는 `SwipeView` XAML에서:
+다음 예제에서는 XAML로 `SwipeView`를 인스턴스화하는 방법을 보여 줍니다.
 
 ```xaml
 <SwipeView>
@@ -82,6 +82,49 @@ Forms.SetFlags("SwipeView_Experimental");
                VerticalOptions="Center" />
     </Grid>
 </SwipeView>
+```
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+// SwipeItems
+SwipeItem favoriteSwipeItem = new SwipeItem
+{
+    Text = "Favorite",
+    IconImageSource = "favorite.png",
+    BackgroundColor = Color.LightGreen
+};
+favoriteSwipeItem.Invoked += OnFavoriteSwipeItemInvoked;
+
+SwipeItem deleteSwipeItem = new SwipeItem
+{
+    Text = "Delete",
+    IconImageSource = "delete.png",
+    BackgroundColor = Color.LightPink
+};
+deleteSwipeItem.Invoked += OnDeleteSwipeItemInvoked;
+
+List<SwipeItem> swipeItems = new List<SwipeItem>() { favoriteSwipeItem, deleteSwipeItem };
+
+// SwipeView content
+Grid grid = new Grid
+{
+    HeightRequest = 60,
+    WidthRequest = 300,
+    BackgroundColor = Color.LightGray
+};
+grid.Children.Add(new Label
+{
+    Text = "Swipe right",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+SwipeView swipeView = new SwipeView
+{
+    LeftItems = new SwipeItems(swipeItems),
+    Content = grid
+};
 ```
 
 이 예제에서 `SwipeView` 내용은 [`Label`](xref:Xamarin.Forms.Label)를 포함 하는 [`Grid`](xref:Xamarin.Forms.Grid) 입니다.
@@ -136,14 +179,16 @@ Forms.SetFlags("SwipeView_Experimental");
 </SwipeView>
 ```
 
-각 `SwipeItem`의 모양은 `Text`, `IconImageSource`및 `BackgroundColor` 속성에 의해 정의 됩니다.
+각 `SwipeItem`의 모양은 `Text`, `IconImageSource`및 `BackgroundColor` 속성을 조합 하 여 정의 됩니다.
 
 [![IOS 및 Android에서 SwipeView 살짝 밀기 항목의 스크린샷](swipeview-images/swipeview-swipeitems.png "SwipeView 항목 살짝 밀기")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView 항목 살짝 밀기")
 
 `SwipeItem` 탭 하면 해당 `Invoked` 이벤트가 발생 하 고 등록 된 이벤트 처리기에 의해 처리 됩니다. 또는 `SwipeItem`를 호출할 때 실행 되는 `ICommand` 구현으로 `Command` 속성을 설정할 수 있습니다.
 
 > [!NOTE]
-> `SwipeItem` 개체로 살짝 밀기 항목을 정의 하는 것 외에도 사용자 지정 살짝 밀기 항목 뷰를 정의할 수 있습니다. 자세한 내용은 [사용자 지정 살짝 밀기 항목](#custom-swipe-items)을 참조 하세요.
+> `SwipeItem` 모양이 `Text` 또는 `IconImageSource` 속성을 사용 하 여 정의 되는 경우 콘텐츠는 항상 중앙에 맞춰집니다.
+
+`SwipeItem` 개체로 살짝 밀기 항목을 정의 하는 것 외에도 사용자 지정 살짝 밀기 항목 뷰를 정의할 수 있습니다. 자세한 내용은 [사용자 지정 살짝 밀기 항목](#custom-swipe-items)을 참조 하세요.
 
 ## <a name="swipe-direction"></a>살짝 밀기 방향
 
@@ -247,7 +292,7 @@ Forms.SetFlags("SwipeView_Experimental");
 사용자 지정 살짝 밀기 항목은 `SwipeItemView` 유형을 사용 하 여 정의할 수 있습니다. `SwipeItemView` 클래스는 [`ContentView`](xref:Xamarin.Forms.ContentView) 클래스에서 파생 되 고 다음 속성을 추가 합니다.
 
 - `Command`는 살짝 밀기 항목을 누를 때 실행 되는 `ICommand`형식입니다.
-- `object` 형식의 `CommandParameter` - `Command`에 전달되는 매개 변수입니다.
+- `CommandParameter` 형식의 `object` - `Command`에 전달되는 매개 변수입니다.
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
 
@@ -288,4 +333,4 @@ Forms.SetFlags("SwipeView_Experimental");
 ## <a name="related-links"></a>관련 링크
 
 - [SwipeView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
-- [Xamarin.ios MenuItem](~/xamarin-forms/user-interface/menuitem.md)
+- [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

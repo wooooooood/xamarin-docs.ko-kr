@@ -6,13 +6,13 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
-ms.openlocfilehash: 83aca8c9e64ffb01eb9773c17b42333f73c1aab5
-ms.sourcegitcommit: 9fa7cf9fae44ed092bc9cab17c843a443001734e
+ms.date: 01/17/2020
+ms.openlocfilehash: c71153cdaa94a7983b89968abc828011a648f2b1
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72971258"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636102"
 ---
 # <a name="display-pop-ups"></a>팝업 표시
 
@@ -22,7 +22,7 @@ ms.locfileid: "72971258"
 
 ## <a name="display-an-alert"></a>경고 표시
 
-Xamarin.Forms에서 지원하는 모든 플랫폼에는 사용자에게 경고를 표시하고 간단한 질문을 하는 모달 팝업이 있습니다. Xamarin.Forms에서 이러한 경고를 표시하려면 [`Page`](xref:Xamarin.Forms.Page)에서 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) 메서드를 사용합니다. 다음 코드 줄은 사용자에게 표시되는 간단한 메시지입니다.
+Xamarin.Forms에서 지원하는 모든 플랫폼에는 사용자에게 경고를 표시하고 간단한 질문을 하는 모달 팝업이 있습니다. Xamarin.Forms에서 이러한 경고를 표시하려면 [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*)에서 [`Page`](xref:Xamarin.Forms.Page) 메서드를 사용합니다. 다음 코드 줄은 사용자에게 표시되는 간단한 메시지입니다.
 
 ```csharp
 await DisplayAlert ("Alert", "You have been alerted", "OK");
@@ -48,7 +48,7 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html)는 iOS의 일반적인 UI 요소입니다. Xamarin.Forms [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 메서드를 통해 Android 및 UWP에서 기본 대체 항목을 렌더링하는 플랫폼 간 앱에 이 컨트롤을 포함시킬 수 있습니다.
 
-작업 시트를 표시하려면 [`Page`](xref:Xamarin.Forms.Page)에서 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)를 `await`하여 메시지 및 단추 레이블을 문자열로 전달합니다. 메서드는 사용자가 클릭한 단추의 문자열 레이블을 반환합니다. 다음은 간단한 예제입니다.
+작업 시트를 표시 하려면 모든 [`Page`](xref:Xamarin.Forms.Page)에서 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 를 `await` 하 여 메시지 및 단추 레이블을 문자열로 전달 합니다. 메서드는 사용자가 클릭한 단추의 문자열 레이블을 반환합니다. 다음은 간단한 예제입니다.
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -84,25 +84,26 @@ string result = await DisplayPromptAsync("Question 1", "What's your name?");
 
 [![IOS 및 Android의 모달 프롬프트 스크린샷](pop-ups-images/simple-prompt.png "모달 프롬프트")](pop-ups-images/simple-prompt-large.png#lightbox "모달 프롬프트")
 
-확인 단추를 탭 하면 입력 한 응답이 `string` 반환 됩니다. 취소 단추를 탭 하면 `null` 반환 됩니다.
+확인 단추를 탭 하면 입력 한 응답이 `string`반환 됩니다. 취소 단추를 탭 하면 `null` 반환 됩니다.
 
 `DisplayPromptAsync` 메서드의 전체 인수 목록은 다음과 같습니다.
 
-- `string` 형식의 `title`는 프롬프트에 표시할 제목입니다.
-- `string` 형식의 `message`는 프롬프트에 표시할 메시지입니다.
-- `string` 형식의 `accept`은 수락 단추의 텍스트입니다. 이 인수는 선택적 인수 이며 기본값은 OK입니다.
-- `string` 형식의 `cancel`는 취소 단추의 텍스트입니다. 기본값은 Cancel 인 선택적 인수입니다.
-- `string` 형식의 `placeholder`는 프롬프트에 표시할 자리 표시자 텍스트입니다. 이 인수는 선택적 인수 이며 기본값은 `null`입니다.
-- `int` 형식의 `maxLength`은 사용자 응답의 최대 길이입니다. 이 인수는 선택적 인수 이며 기본값은-1입니다.
-- `Keyboard` 형식의 `keyboard`은 사용자 응답에 사용할 키보드 유형입니다. 이 인수는 선택적 인수 이며 기본값은 `Keyboard.Default`입니다.
+- `string`형식의 `title`는 프롬프트에 표시할 제목입니다.
+- `string`형식의 `message`는 프롬프트에 표시할 메시지입니다.
+- `string`형식의 `accept`은 수락 단추의 텍스트입니다. 이 인수는 선택적 인수 이며 기본값은 OK입니다.
+- `string`형식의 `cancel`는 취소 단추의 텍스트입니다. 기본값은 Cancel 인 선택적 인수입니다.
+- `string`형식의 `placeholder`는 프롬프트에 표시할 자리 표시자 텍스트입니다. 이 인수는 선택적 인수 이며 기본값은 `null`입니다.
+- `int`형식의 `maxLength`은 사용자 응답의 최대 길이입니다. 이 인수는 선택적 인수 이며 기본값은-1입니다.
+- `Keyboard`형식의 `keyboard`은 사용자 응답에 사용할 키보드 유형입니다. 이 인수는 선택적 인수 이며 기본값은 `Keyboard.Default`입니다.
+- `string`형식의 `initialValue`은 표시 되 고 편집할 수 있는 미리 정의 된 응답입니다. 이 인수는 선택적 인수 이며 기본값은 비어 있는 `string`입니다.
 
 다음 예에서는 일부 선택적 인수를 설정 하는 방법을 보여 줍니다.
 
 ```csharp
-string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
 ```
 
-이 코드는 입력할 수 있는 문자 수를 2로 제한 하 고 사용자 입력에 대 한 숫자 키보드를 표시 합니다.
+이 코드는 미리 정의 된 응답 10 개를 표시 하 고, 입력 될 수 있는 문자 수를 2로 제한 하 고, 사용자 입력에 대 한 숫자 키보드를 표시 합니다.
 
 [![IOS 및 Android의 모달 프롬프트 스크린샷](pop-ups-images/keyboard-prompt.png "모달 프롬프트")](pop-ups-images/keyboard-prompt-large.png#lightbox "모달 프롬프트")
 
