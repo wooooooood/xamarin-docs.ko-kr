@@ -8,12 +8,12 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.assetid: 11111111-2222-3333-4444-555555555555
 ms.prod: xamarin
-ms.openlocfilehash: d6300d6d3fdebf851c3710aa2a949575e6fe3f68
-ms.sourcegitcommit: 699de58432b7da300ddc2c85842e5d9e129b0dc5
+ms.openlocfilehash: f26a786f3da909c7d948fe99b4b3a1423352ecbe
+ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249562"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77553566"
 ---
 # <a name="metadata-and-markdown-template"></a>메타데이터 및 Markdown 템플릿
 
@@ -95,7 +95,7 @@ Markdown은 서식 지정을 위해 \*, \`, \# 등의 특수 문자를 사용합
 
 ## <a name="text-styling"></a>텍스트 스타일 지정
 
-*기울임꼴* 파일, 폴더, 경로(긴 항목의 경우 자체 줄로 분할), 새 용어, URL(기본 설정인 링크로 렌더링되지 않는 경우)에 사용됩니다.
+_기울임꼴_ 파일, 폴더, 경로(긴 항목의 경우 자체 줄로 분할), 새 용어, URL(기본 설정인 링크로 렌더링되지 않는 경우)에 사용됩니다.
 
 **굵은 글씨체** UI 요소에 사용됩니다.
 
@@ -333,7 +333,7 @@ docs.microsoft는 GitHub Flavored Markdown에 대해 몇 가지 추가 확장을
 > This is a NOTE
 ```
 
-#### <a name="warning"></a>Warning
+#### <a name="warning"></a>경고
 
 ```
 > [!WARNING]
