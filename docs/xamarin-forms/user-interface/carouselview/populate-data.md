@@ -6,13 +6,13 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
-ms.openlocfilehash: 8ec66a8d39f373b624e3a597e62014e3b1c72f56
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 02/27/2019
+ms.openlocfilehash: 154d039e95ccc2de28e09a7162a32a19f8f84656
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480564"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674535"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.ios CarouselView 데이터
 
@@ -264,25 +264,25 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView`는 `ItemsSourceBy` 연결 된 속성을 `CarouselView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
+이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView` `CarouselView.IndicatorView` 속성을 `IndicatorView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
 
 [![IOS 및 Android에서 CarouselView 및 IndicatorView의 스크린샷](populate-data-images/indicators.png "IndicatorView 원")](populate-data-images/indicators-large.png#lightbox "IndicatorView 원")
 
 > [!IMPORTANT]
-> `IndicatorView.ItemsSourceBy` 연결 된 속성을 설정 하면 `IndicatorView.Position` 속성 바인딩이 `CarouselView.Position` 속성으로, `IndicatorView.ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
+> `CarouselView.IndicatorView` 속성을 설정 하면 `IndicatorView.Position` 속성이 `CarouselView.Position` 속성에 바인딩하고 `IndicatorView.ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
 
 표시기에 대 한 자세한 내용은 [IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)를 참조 하세요.
 

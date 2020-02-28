@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 945b0ffcff589da28c5e0ef2509a9d2ad7c388b5
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 601a2884cb9ca90ab6681e48afda4c9f1f467932
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635985"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674548"
 ---
 # <a name="xamarinforms-mediaelement"></a>Xamarin.ios MediaElement
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) 은 비디오와 오디오를 재생 하는 보기입니다. 기본 플랫폼에서 지원 되는 미디어는 다음 원본에서 재생할 수 있습니다.
 
@@ -537,7 +537,7 @@ public class PositionSlider : Slider
 
 ## <a name="related-links"></a>관련 링크
 
-- [MediaElementDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+- [MediaElementDemos (샘플)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/MediaElementDemos)
 - [URI 체계](/windows/uwp/app-resources/uri-schemes)
 - [Xamarin Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.ios 슬라이더](~/xamarin-forms/user-interface/slider.md)

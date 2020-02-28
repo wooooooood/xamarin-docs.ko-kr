@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e8b6f5e1ea090abc8ebd6084095bf6b34663a42
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 09bcb49db7f257a415518b259672ca8e776cdbc4
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635870"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674566"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -45,7 +45,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`BoxView`](xref:Xamarin.Forms.BoxView) [`Color`](xref:Xamarin.Forms.BoxView.Color) 속성으로 색이 지정 된 단색 사각형을 표시 합니다. `BoxView`의 기본 크기 요청은 40x40입니다. 다른 크기의 경우 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성을 할당 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.BoxView) / [가이드](~/xamarin-forms/user-interface/boxview.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock), [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![BoxView 예제](views-images/BoxView.png "BoxView 예제")](views-images/BoxView-Large.png#lightbox "BoxView 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) |
 |     |     |
 
-### <a name="webview"></a>웹 보기
+### <a name="webview"></a>WebView
 
 |     |     |
 | --- | --- |
@@ -59,7 +59,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) 는 IOS 및 Android 프로젝트에서 OpenGL 그래픽을 표시 합니다. 유니버설 Windows 플랫폼에 대 한 지원은 없습니다. IOS 및 Android 프로젝트에는 **OpenTK-1.0** 어셈블리 또는 **OpenTK** 버전 1.0.0.0 어셈블리에 대 한 참조가 필요 합니다. `OpenGLView`는 공유 프로젝트에서 보다 쉽게 사용할 수 있습니다. .NET Standard 라이브러리에서 사용 되는 경우 샘플 코드에 표시 된 것과 같이 종속성 서비스도 필요 합니다.<br /><br />이는 Xamarin.ios에 기본 제공 되는 유일한 그래픽 기능 이지만, Xamarin.ios 응용 프로그램은 [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md)또는 [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md)를 사용 하 여 그래픽을 렌더링할 수도 있습니다.<br /><br />[API 문서](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![OpenGLView 예제](views-images/OpenGLView.png "OpenGLView 예제")](views-images/OpenGLView-Large.png#lightbox "OpenGLView 예제")<br />[코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) / [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) |
 |     |     |
 
-### <a name="map"></a>지도
+### <a name="map"></a>맵
 
 |     |     |
 | --- | --- |
@@ -133,7 +133,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | 사용자는 [`Stepper`](xref:Xamarin.Forms.Stepper) 를 사용 하 여 [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum), [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum)및 [`Increment`](xref:Xamarin.Forms.Stepper.Increment) 속성으로 지정 된 증분 값 범위에서 `double` 값을 선택할 수 있습니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Stepper)  / [가이드](~/xamarin-forms/user-interface/stepper.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) | [![스텝 퍼 예제](views-images/Stepper.png "스텝 퍼 예제")](views-images/Stepper-Large.png#lightbox "스텝 퍼 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) |
 |     |     |
 
-### <a name="switch"></a>스위치
+### <a name="switch"></a>전환
 
 |     |     |
 | --- | --- |
@@ -208,7 +208,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 |     |     |
 | --- | --- |
-| `IndicatorView` `CarouselView`의 항목 수를 나타내는 표시기를 표시 합니다. 표시기를 표시할 `CarouselView` 개체로 `IndicatorView.ItemsSourceBy` 연결 된 속성을 설정 합니다. <br /><br />[가이드](~/xamarin-forms/user-interface/indicatorview.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView 예제](views-images/IndicatorView.png "IndicatorView 예제")](views-images/IndicatorView-Large.png#lightbox "IndicatorView 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) |
+| `IndicatorView` `CarouselView`의 항목 수를 나타내는 표시기를 표시 합니다. `CarouselView.IndicatorView` 속성을 `IndicatorView` 개체로 설정 하 여 `CarouselView`표시기를 표시 합니다. <br /><br />[가이드](~/xamarin-forms/user-interface/indicatorview.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView 예제](views-images/IndicatorView.png "IndicatorView 예제")](views-images/IndicatorView-Large.png#lightbox "IndicatorView 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) |
 |     |     |
 
 ### <a name="listview"></a>ListView

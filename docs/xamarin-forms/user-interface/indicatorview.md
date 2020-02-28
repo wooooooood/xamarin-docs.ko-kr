@@ -6,13 +6,13 @@ ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
-ms.openlocfilehash: a5a9daa39dcc94bbf77d9c91ea651bda6ec5747b
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.date: 02/27/2020
+ms.openlocfilehash: e76cf6e766a95994fa2862deb9eb73928f4769a2
+ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480548"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77674534"
 ---
 # <a name="xamarinforms-indicatorview"></a>Xamarin.ios IndicatorView
 
@@ -24,7 +24,7 @@ ms.locfileid: "77480548"
 
 [![IOS 및 Android에서 CarouselView 및 IndicatorView의 스크린샷](indicatorview-images/circles.png "IndicatorView 원")](indicatorview-images/circles-large.png#lightbox "IndicatorView 원")
 
-`IndicatorView`는 iOS 및 Android 플랫폼에서 Xamarin. 양식 4.4에서 사용할 수 있습니다. 그러나 현재 실험적 이며 `Forms.Init`를 호출 하기 전에 iOS의 `AppDelegate` 클래스 또는 Android의 `MainActivity` 클래스에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
+`IndicatorView`는 iOS 및 Android 플랫폼의 Xamarin. Forms 4.4 및 유니버설 Windows 플랫폼의 4.5에서 사용할 수 있습니다. 그러나 현재 실험적 이며 `Forms.Init`를 호출 하기 전에 iOS의 `AppDelegate` 클래스 또는 Android의 `MainActivity` 클래스에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
 
 ```csharp
 Forms.SetFlags("IndicatorView_Experimental");
@@ -39,10 +39,9 @@ Forms.SetFlags("IndicatorView_Experimental");
 - `Layout<View>`형식의 `IndicatorLayout``IndicatorView`을 렌더링 하는 데 사용 되는 레이아웃 클래스를 정의 합니다. 이 속성은 Xamarin.ios로 설정 되며 일반적으로 개발자가 설정할 필요가 없습니다.
 - `DataTemplate`형식의 `IndicatorTemplate`각 표시기의 모양을 정의 하는 템플릿입니다.
 - `IndicatorShape`형식의 `IndicatorsShape`각 표시기의 모양입니다.
-- `IEnumerable`형식의 `ItemsSource`이며, 표시기가 표시 될 컬렉션입니다. 이 속성은 연결 된 `ItemsSourceBy` 속성이 설정 될 때 자동으로 설정 됩니다.
-- `VisualElement`형식의 `ItemsSourceBy`표시기를 표시할 `CarouselView` 개체입니다. 이 연결 된 속성입니다.
+- `IEnumerable`형식의 `ItemsSource`이며, 표시기가 표시 될 컬렉션입니다. 이 속성은 `CarouselView.IndicatorView` 속성이 설정 될 때 자동으로 설정 됩니다.
 - `int`형식의 `MaximumVisible`표시 되는 최대 표시기 수입니다. 기본값은 `int.MaxValue`입니다.
-- 현재 선택한 지표 인덱스를 `int`형식의 `Position`입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 연결 된 `ItemsSourceBy` 속성이 설정 될 때 자동으로 설정 됩니다.
+- 현재 선택한 지표 인덱스를 `int`형식의 `Position`입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 `CarouselView.IndicatorView` 속성이 설정 될 때 자동으로 설정 됩니다.
 - `Color`형식의 `SelectedIndicatorColor``CarouselView`의 현재 항목을 나타내는 표시기 색입니다.
 
 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
@@ -53,27 +52,27 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView`는 `ItemsSourceBy` 연결 된 속성을 `CarouselView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
+이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView` `CarouselView.IndicatorView` 속성을 `IndicatorView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
 
 > [!IMPORTANT]
-> `ItemsSourceBy` 연결 된 속성을 설정 하면 `Position` 속성 바인딩이 `CarouselView.Position` 속성으로, `ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
+> `CarouselView.IndicatorView` 속성을 설정 하면 `IndicatorView.Position` 속성이 `CarouselView.Position` 속성에 바인딩하고 `IndicatorView.ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
 
 ## <a name="change-indicator-shape"></a>표시기 모양 변경
 
-`IndicatorView` 클래스에는 표시기의 모양을 나타내는 `IndicatorsShape` 속성이 있습니다. 이 속성은 `IndicatorShape` 열거형 멤버 중 하나로 설정할 수 있습니다.
+`IndicatorView` 클래스에는 표시기의 모양을 결정 하는 `IndicatorsShape` 속성이 있습니다. 이 속성은 `IndicatorShape` 열거형 멤버 중 하나로 설정할 수 있습니다.
 
 - `Circle` 표시기 셰이프가 원형이 되도록 지정 합니다. 이 값은 `IndicatorView.IndicatorsShape` 속성의 기본값입니다.
 - `Square` 표시기 셰이프가 사각형 임을 나타냅니다.
@@ -81,10 +80,32 @@ Forms.SetFlags("IndicatorView_Experimental");
 다음 예에서는 사각형 표시기를 사용 하도록 구성 된 `IndicatorView`를 보여 줍니다.
 
 ```xaml
-<IndicatorView IndicatorsShape="Square"
-               IndicatorView.ItemsSourceBy="carouselView"
+<IndicatorView x:Name="indicatorView"
+               IndicatorsShape="Square"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
+```
+
+## <a name="change-indicator-size"></a>표시기 크기 변경
+
+`IndicatorView` 클래스에는 장치 독립적 단위의 표시기 크기를 결정 하는 `double`형식의 `IndicatorSize` 속성이 있습니다. 이 속성의 기본값은 6.0입니다.
+
+다음 예에서는 더 큰 표시기를 표시 하도록 구성 된 `IndicatorView`를 보여 줍니다.
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               IndicatorSize="18" />
+```
+
+## <a name="limit-the-number-of-indicators-displayed"></a>표시 되는 표시기 수 제한
+
+`IndicatorView` 클래스에는 표시 가능한 최대 표시기 수를 결정 하는 `int`형식의 `MaximumVisible` 속성이 있습니다.
+
+다음 예에서는 최대 6 개의 표시기를 표시 하도록 구성 된 `IndicatorView`를 보여 줍니다.
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               MaximumVisible="6" />
 ```
 
 ## <a name="define-indicator-appearance"></a>표시기 모양 정의
@@ -93,13 +114,13 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ```xaml
 <StackLayout>
-    <CarouselView x:Name="carouselView"
-                  ItemsSource="{Binding Monkeys}">
+    <CarouselView ItemsSource="{Binding Monkeys}"
+                  IndicatorView="indicatorView">
         <CarouselView.ItemTemplate>
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
+    <IndicatorView x:Name="indicatorView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="Black"
                    HorizontalOptions="Center">
