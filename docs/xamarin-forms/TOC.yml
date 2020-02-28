@@ -398,6 +398,8 @@
                   href: user-interface/map/geocoder.md
                 - name: 기본 지도 앱 시작
                   href: user-interface/map/native-map-app.md
+            - name: MediaElement
+              href: user-interface/mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: 명령 시작
@@ -620,6 +622,8 @@
           items:
             - name: 개요
               href: platform/android/index.md
+            - name: AndroidX 마이그레이션
+              href: platform/android/androidx-migration.md
             - name: AppCompat 및 재질 디자인
               href: platform/android/appcompat-material-design.md
             - name: 단추 안쪽 여백 및 섀도
@@ -662,6 +666,8 @@
               href: platform/ios/named-font-size-scaling.md
             - name: 셀 배경색
               href: platform/ios/cell-background-color.md
+            - name: DatePicker 항목 선택
+              href: platform/ios/datepicker-selection.md
             - name: 항목 커서 색
               href: platform/ios/entry-cursor-color.md
             - name: 항목 글꼴 크기
@@ -702,16 +708,24 @@
               href: platform/ios/slider-thumb.md
             - name: SwipeView 살짝 밀기 전환 모드
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: TabbedPage 반투명 TabBar
+              href: platform/ios/tabbedpage-translucent-tabbar.md
+            - name: TimePicker 항목 선택
+              href: platform/ios/timepicker-selection.md
             - name: VisualElement 흐림 효과
               href: platform/ios/visualelement-blur.md
             - name: VisualElement 드롭 섀도
               href: platform/ios/visualelement-drop-shadow.md
             - name: VisualElement 레거시 색 모드
               href: platform/ios/legacy-color-mode.md
+            - name: VisualElement 첫 번째 응답기
+              href: platform/ios/visualelement-first-responder.md
         - name: Windows
           items:
             - name: 개요
               href: platform/windows/index.md
+            - name: 기본 이미지 디렉터리
+              href: platform/windows/default-image-directory.md
             - name: InputView 읽기 순서
               href: platform/windows/inputview-reading-order.md
             - name: ListView SelectionMode
