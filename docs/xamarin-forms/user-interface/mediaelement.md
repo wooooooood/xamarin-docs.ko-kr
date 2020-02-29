@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/18/2020
-ms.openlocfilehash: 601a2884cb9ca90ab6681e48afda4c9f1f467932
-ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
+ms.openlocfilehash: 76a30bfb17c8263345d781386acf9d34c01aae3b
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77674548"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160411"
 ---
 # <a name="xamarinforms-mediaelement"></a>Xamarin.ios MediaElement
 
@@ -38,14 +38,14 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
 > [!NOTE]
-> [`MediaElement`](xref:Xamarin.Forms.MediaElement) 은 IOS, Android, 유니버설 WINDOWS 플랫폼 (UWP) 및 추가 플랫폼에서 사용할 수 있습니다.
+> [`MediaElement`](xref:Xamarin.Forms.MediaElement) 은 IOS, Android, 유니버설 WINDOWS 플랫폼 (UWP), macos, Windows Presentation Foundation 및 Tizen에서 사용할 수 있습니다.
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement)는 다음 속성을 정의합니다.
 
 - [`Aspect`](xref:Xamarin.Forms.Aspect)형식의 [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect)는 미디어가 표시 영역에 맞게 조정 되는 방법을 결정 합니다. 이 속성의 기본값은 `AspectFit`입니다.
 - `bool`형식의 [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) [`Source`](xref:Xamarin.Forms.MediaElement.Source) 속성을 설정할 때 미디어 재생을 자동으로 시작할지 여부를 나타냅니다. 이 속성의 기본값은 `true`입니다.
 - `double`형식의 [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress)은 현재 버퍼링 진행률을 나타냅니다. 이 속성의 기본값은 0.0입니다.
-- `bool`형식의 [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek) [`Position`](xref:Xamarin.Forms.MediaElement.Position) 속성의 값을 설정 하 여 미디어의 위치를 변경할 수 있는지 여부를 나타냅니다. 이 속성은 읽기 전용입니다.
+- `bool`형식의 [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek) [`Position`](xref:Xamarin.Forms.MediaElement.Position) 속성의 값을 설정 하 여 미디어의 위치를 변경할 수 있는지 여부를 나타냅니다. 읽기 전용 속성입니다.
 - [`MediaElementState`](xref:Xamarin.Forms.MediaElementState)형식의 [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState)은 컨트롤의 현재 상태를 나타냅니다. 기본값은 `MediaElementState.Closed`읽기 전용 속성입니다.
 - `TimeSpan?`형식의 [`Duration`](xref:Xamarin.Forms.MediaElement.Duration)는 현재 열려 있는 미디어의 지속 시간을 나타냅니다. 기본값은 `null`읽기 전용 속성입니다.
 - `bool`형식의 [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping)는 현재 로드 된 미디어 소스가 끝에 도달한 후 시작부터 재생을 다시 시작할지 여부를 설명 합니다. 이 속성의 기본값은 `false`입니다.
@@ -53,8 +53,8 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 - `TimeSpan`형식의 [`Position`](xref:Xamarin.Forms.MediaElement.Position)는 미디어 재생 시간을 통해 현재 진행 상황을 설명 합니다. 이 속성의 기본값은 `TimeSpan.Zero`입니다.
 - `bool`형식의 [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls)플랫폼 재생 컨트롤이 표시 되는지 여부를 결정 합니다. 이 속성의 기본값은 `false`입니다.
 - [`MediaSource`](xref:Xamarin.Forms.MediaSource)형식의 [`Source`](xref:Xamarin.Forms.MediaElement.Source)은 컨트롤에 로드 된 미디어의 원본을 나타냅니다.
-- `int`형식의 [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight)는 컨트롤의 높이를 나타냅니다. 이 속성은 읽기 전용입니다.
-- `int`형식의 [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth)는 컨트롤의 너비를 나타냅니다. 이 속성은 읽기 전용입니다.
+- `int`형식의 [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight)는 컨트롤의 높이를 나타냅니다. 읽기 전용 속성입니다.
+- `int`형식의 [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth)는 컨트롤의 너비를 나타냅니다. 읽기 전용 속성입니다.
 - `double`형식의 [`Volume`](xref:Xamarin.Forms.MediaElement.Volume)은 미디어의 볼륨을 결정 합니다 .이 볼륨은 0과 1 사이의 선형 눈금에 표시 됩니다. 이 속성은 `TwoWay` 바인딩을 사용 하며, 기본값은 1입니다.
 
 `CanSeek` 속성을 제외 하 고 이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에 의해 지원 됩니다. 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.

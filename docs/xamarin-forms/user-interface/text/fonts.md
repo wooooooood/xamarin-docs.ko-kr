@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/20/2020
-ms.openlocfilehash: 75cf5acdb862a15d722075269b2f736264be680f
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 3798e3612547d36905dd62e6314f158958782874
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636170"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160611"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -148,6 +148,74 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 <a name="Using_a_Custom_Font" />
 
 ## <a name="use-a-custom-font"></a>사용자 지정 글꼴 사용
+
+기본 제공 서체가 아닌 글꼴을 사용 하 여 일부 플랫폼별 코딩이 필요 합니다. 이 스크린샷에서는 Xamarin.ios를 사용 하 여 렌더링 된 [Google의 오픈 소스 글꼴](https://www.google.com/fonts) 에서 사용자 지정 글꼴 **Lobster** 를 보여 줍니다.
+
+ [![IOS 및 Android의 사용자 지정 글꼴](fonts-images/custom-sml.png "사용자 지정 글꼴 예")](fonts-images/custom.png#lightbox "사용자 지정 글꼴 예")
+
+각 플랫폼에 필요한 단계는 다음과 같습니다. 응용 프로그램을 사용 하 여 사용자 지정 글꼴 파일을 포함 하는 경우에 배포에 대 한 글꼴의 라이선스를 허용 하는지 확인 해야 합니다.
+
+### <a name="ios"></a>iOS
+
+사용자 지정 글꼴을 먼저 로드 한 다음 Xamarin.ios `Font` 메서드를 사용 하 여 이름별로 참조 하 여 표시할 수 있습니다.
+[이 블로그 게시물](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/)의 지침을 따르세요.
+
+1. 빌드 작업을 사용 하 여 글꼴 파일 추가 **: BundleResource**및
+2. Info.plist 파일 (**응용 프로그램에서 제공**하는 글꼴 또는 `UIAppFonts`키)을 업데이트 합니다 **.**
+3. Xamarin.Forms의 글꼴을 정의 하는 위치를 이름으로 참조!
+
+```csharp
+new Label
+{
+    Text = "Hello, Forms!",
+    FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" : null // set only for iOS
+}
+```
+
+### <a name="android"></a>Android
+
+Android 용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 응용 프로그램 프로젝트의 **자산** 폴더에 글꼴 파일을 추가 하 고 *빌드 작업: AndroidAsset*을 설정 합니다. 그런 다음 아래 코드 조각에서 보여 주는 것 처럼 전체 경로 및 *글꼴 이름을* xamarin.ios의 글꼴 이름으로 해시 (#)로 구분 하 여 사용 합니다.
+
+```csharp
+new Label
+{
+  Text = "Hello, Forms!",
+  FontFamily = Device.RuntimePlatform == Device.Android ? "Lobster-Regular.ttf#Lobster-Regular" : null // set only for Android
+}
+```
+
+### <a name="windows"></a>Windows
+
+Windows 플랫폼용 Xamarin.Forms에는 특정 명명 표준에 따라 프로젝트에 추가 된 사용자 지정 글꼴을 참조할 수 있습니다. 먼저 응용 프로그램 프로젝트의 **/Assets/Fonts/** 폴더에 글꼴 파일을 추가 하 고 **빌드 작업: 콘텐츠**를 설정 합니다. 그런 다음 아래 코드 조각에서 보여 주는 것 처럼 전체 경로와 글꼴 파일 이름 뒤에 해시 (#) 및 **글꼴 이름을**사용 합니다.
+
+```csharp
+new Label
+{
+    Text = "Hello, Forms!",
+    FontFamily = Device.RuntimePlatform == Device.UWP ? "Assets/Fonts/Lobster-Regular.ttf#Lobster" : null // set only for UWP apps
+}
+```
+
+> [!NOTE]
+> 글꼴 이름과 글꼴 파일에 있는 참고 달라질 수 있습니다. Windows에서 글꼴 이름을 검색 하려면 .ttf 파일을 마우스 오른쪽 단추로 클릭 하 고 **미리 보기**를 선택 합니다. 글꼴 이름은 미리 보기 창에서 다음 확인할 수 있습니다.
+
+### <a name="xaml"></a>XAML
+
+XAML에서 [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) 를 사용 하 여 사용자 지정 글꼴을 렌더링할 수도 있습니다.
+
+```xaml
+<Label Text="Hello Forms with XAML">
+    <Label.FontFamily>
+        <OnPlatform x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Lobster-Regular" />
+                <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
+                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
+        </OnPlatform>
+    </Label.FontFamily>
+</Label>
+```
+
+## <a name="use-a-custom-font-preview"></a>사용자 지정 글꼴 사용 (미리 보기)
 
 사용자 지정 글꼴은 Xamarin. Forms 공유 프로젝트에 추가 하 고 추가 작업 없이 플랫폼 프로젝트에서 사용 될 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
