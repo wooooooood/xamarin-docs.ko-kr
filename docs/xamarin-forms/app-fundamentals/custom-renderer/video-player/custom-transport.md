@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e0694598fe5637f6e63ebf64dce4a7d9768eba5f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70771823"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636018"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 
@@ -613,7 +613,7 @@ namespace FormsVideoLibrary.UWP
 </ContentPage>
 ```
 
-데이터 트리거에 대한 자세한 내용은 [데이터 트리거](~/xamarin-forms/app-fundamentals/triggers.md#data) 문서를 참조하세요.
+데이터 트리거에 대한 자세한 내용은 [데이터 트리거](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) 문서를 참조하세요.
 
 코드 숨김 파일에는 단추 `Clicked` 이벤트에 대한 처리기가 있습니다.
 
@@ -649,7 +649,7 @@ namespace VideoPlayerDemos
 
 `AutoPlay`가 **CustomTransport.xaml** 파일에 `false`로 설정되어 있으므로 비디오를 시작할 수 있게 되면 **Play** 단추를 눌러야 비디오가 시작됩니다. 단추는 위에 언급된 유니코드 문자가 해당 텍스트와 함께 제공되도록 정의됩니다. 버튼은 비디오가 재생될 때 각 플랫폼에서 일관된 모양을 유지합니다.
 
-[![사용자 지정 전송 재생 중](custom-transport-images/customtransportplaying-small.png "사용자 지정 전송 재생 중")](custom-transport-images/customtransportplaying-large.png#lightbox "사용자 지정 전송 재생 중")
+[![사용자 지정 전송 실행 중](custom-transport-images/customtransportplaying-small.png "사용자 지정 전송 실행 중")](custom-transport-images/customtransportplaying-large.png#lightbox "사용자 지정 전송 실행 중")
 
 하지만 Android 및 UWP에서 동영상이 일시 중지되면 **Play** 단추가 매우 다르게 보입니다.
 

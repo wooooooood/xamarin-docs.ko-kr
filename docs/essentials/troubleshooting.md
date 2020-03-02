@@ -4,13 +4,13 @@ description: 이 문서에서는 Xamarin.Essentials 라이브러리를 사용하
 ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
-ms.openlocfilehash: a9546923c9a17aade58d830ea2504406ad09d7d7
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.date: 01/06/2020
+ms.openlocfilehash: 2bd537a782b7090207b09ca02c5dfe5c4422a9ad
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870081"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545135"
 ---
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: 문제 해결
 
@@ -20,13 +20,13 @@ Xamarin.Essentials를 사용하는 Xamarin.Forms 프로젝트로 NuGet 패키지
 
 ```error
 NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue. 
- MyApp -> Xamarin.Essentials 1.1.0 -> Xamarin.Android.Support.CustomTabs 28.0.0.1 -> Xamarin.Android.Support.Compat (= 28.0.0.1) 
+ MyApp -> Xamarin.Essentials 1.3.1 -> Xamarin.Android.Support.CustomTabs 28.0.0.3 -> Xamarin.Android.Support.Compat (= 28.0.0.3) 
  MyApp -> Xamarin.Forms 3.1.0.583944 -> Xamarin.Android.Support.v4 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).
 ```
 
 두 NuGet에서 일치하지 않는 종속성이 문제입니다. 둘 다 지원할 수 있는 종속성의 특정 버전을 수동으로 추가하여 이 문제를 해결할 수 있습니다(이 경우에 **Xamarin.Android.Support.Compat**).
 
-이를 위해 수동으로 충돌의 원인인 NuGet을 추가하고 **버전** 목록을 사용하여 특정 버전을 선택합니다. Xamarin.Android.Support.Compat 및 Xamarin.Android.Support.Core.Util NuGet의 현재 버전 28.0.0.1이 이 오류를 해결합니다.
+이를 위해 수동으로 충돌의 원인인 NuGet을 추가하고 **버전** 목록을 사용하여 특정 버전을 선택합니다. Xamarin.Android.Support.Compat 및 Xamarin.Android.Support.Core.Util NuGet의 현재 버전 28.0.0.3이 이 오류를 해결합니다.
 
 문제를 해결하는 방법에 대한 자세한 내용 및 비디오는 [이 블로그 게시물](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/)을 참조하세요.
 

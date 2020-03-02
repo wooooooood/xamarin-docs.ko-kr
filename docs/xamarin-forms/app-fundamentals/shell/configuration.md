@@ -6,19 +6,19 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/05/2019
-ms.openlocfilehash: e207949d607219393ffeb51fce818ddfb68ae344
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 01/29/2020
+ms.openlocfilehash: dfa452addd7cfb838091afdfb350484998d0cc9d
+ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489910"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77636089"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.Forms Shell 페이지 구성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-`Shell` 클래스는 Xamarin.Forms Shell 애플리케이션에서 페이지의 모양을 구성하는 데 사용할 수 있는 연결된 속성을 정의합니다. 여기에는 페이지 색 설정, 탐색 모음을 사용하지 않도록 설정, 탭 표시줄을 사용하지 않도록 설정 및 탐색 모음에 뷰 표시가 포함됩니다.
+`Shell` 클래스는 Xamarin.Forms Shell 애플리케이션에서 페이지의 모양을 구성하는 데 사용할 수 있는 연결된 속성을 정의합니다. 여기에는 페이지 색 설정, 페이지 프레젠테이션 모드 설정, 탐색 모음을 사용하지 않도록 설정, 탭 표시줄을 사용하지 않도록 설정 및 탐색 모음에 뷰 표시가 포함됩니다.
 
 ## <a name="set-page-colors"></a>페이지 색 설정
 
@@ -30,7 +30,7 @@ ms.locfileid: "75489910"
 - 현재 페이지의 제목에 사용되는 색을 정의하는 `Color` 형식의 `TitleColor`.
 - 셸 크롬에서 선택되지 않은 텍스트 및 아이콘에 사용되는 색을 정의하는 `Color` 형식의 `UnselectedColor`.
 
-이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며 XAML 스타일을 사용하여 스타일 지정됩니다. 이는 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다. CSS(CSS 스타일시트)를 사용하여 속성을 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
+이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체가 지원합니다. 이는 속성이 데이터 바인딩의 대상이 될 수 있으며 XAML 스타일을 사용하여 스타일 지정됨을 의미합니다. CSS(CSS 스타일시트)를 사용하여 속성을 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
 
 > [!NOTE]
 > 탭 색을 정의할 수 있도록 설정하는 속성도 있습니다. 자세한 내용은 [탭 모양](tabs.md#tab-appearance)을 참조하세요.
@@ -85,6 +85,30 @@ ms.locfileid: "75489910"
 ```
 
 XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)을 참조하세요.
+
+## <a name="set-page-presentation-mode"></a>페이지 프레젠테이션 모드 설정
+
+기본적으로 `GoToAsync` 메서드를 사용하여 페이지를 탐색할 때 작은 탐색 애니메이션이 표시됩니다. 그러나 이 동작은 [`ContentPage`](xref:Xamarin.Forms.ContentPage)에서 `Shell.PresentationMode` 연결된 속성을 `PresentationMode` 열거형 멤버 중 하나로 설정하여 변경할 수 있습니다.
+
+- `NotAnimated`는 페이지가 탐색 애니메이션 없이 표시됨을 나타냅니다.
+- `Animated`는 페이지가 탐색 애니메이션을 사용하여 표시됨을 나타냅니다. 이 값은 `Shell.PresentationMode` 연결된 속성의 기본값입니다.
+- `Modal`은 페이지가 모달 페이지로 표시됨을 나타냅니다.
+- `ModalAnimated`는 페이지가 탐색 애니메이션을 사용하여 모달 페이지로 표시됨을 나타냅니다.
+- `ModalNotAnimated`는 페이지가 탐색 애니메이션 없이 모달 페이지로 표시됨을 나타냅니다.
+
+> [!IMPORTANT]
+> `PresentationMode` 형식은 플래그 열거형입니다. 즉, 코드에서 열거형 멤버의 조합을 적용할 수 있습니다. 그러나 XAML에서 편리하게 사용할 수 있도록 `ModalAnimated` 멤버는 `Animated`와 `Modal` 멤버의 조합이고 `ModalNotAnimated` 멤버는 `NotAnimated`와 `Modal` 멤버의 조합입니다. 플래그 열거에 대한 자세한 내용은 [비트 플래그로서 열거형 형식](/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags)을 참조하세요.
+
+다음 XAML 예제는 [`ContentPage`](xref:Xamarin.Forms.ContentPage)에서 `Shell.PresentationMode` 연결된 속성을 설정합니다.
+
+```xaml
+<ContentPage ...
+             Shell.PresentationMode="Modal">
+    ...             
+</ContentPage>
+```
+
+이 예제에서는 `GoToAsync` 메서드를 사용하여 페이지를 탐색하는 경우 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 가 모달 페이지로 표시되도록 설정됩니다.
 
 ## <a name="enable-navigation-bar-shadow"></a>탐색 모음 섀도 사용
 
@@ -162,6 +186,10 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 보기의 크기가 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성으로 지정되지 않거나 보기의 위치가 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성으로 지정되지 않으면 탐색 모음에 많은 보기가 나타나지 않습니다.
 
 [`Layout`](xref:Xamarin.Forms.Layout) 클래스는 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 여러 보기를 포함하는 레이아웃 클래스를 표시하도록 `TitleView` 연결된 속성을 설정할 수 있습니다. 마찬가지로 [`ContentView`](xref:Xamarin.Forms.ContentView) 클래스는 결국 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 `TitleView` 연결된 속성은 단일 보기를 포함하는 `ContentView`를 표시하도록 설정할 수 있습니다.
+
+## <a name="page-visibility"></a>페이지 표시 여부
+
+셸은 [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) 속성으로 설정된 페이지 표시 여부를 고려합니다. 따라서 페이지의 `IsVisible` 속성이 `false`로 설정되면 셸 애플리케이션에 표시되지 않으며 이 애플리케이션으로 이동할 수 없습니다.
 
 ## <a name="related-links"></a>관련 링크
 

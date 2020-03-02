@@ -4,13 +4,13 @@ description: Xamarin.Essentials의 UnitConverters 클래스는 Xamarin.Essential
 ms.assetid: 35DE2704-E730-4337-9476-66CD53376943
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: be560a156647274932265597ae5b83f22255d061
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.date: 01/06/2020
+ms.openlocfilehash: c07e0c7d9645c22f0d70c75fd7d8dffdec8cde04
+ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70120145"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77545036"
 ---
 # <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: 단위 변환기
 
@@ -31,7 +31,7 @@ using Xamarin.Essentials;
 모든 단위 변환기는 Xamarin.Essentials의 정적 `UnitConverters` 클래스를 통해 사용할 수 있습니다. 예를 들어 화씨온도를 쉽게 섭씨온도로 변환할 수 있습니다.
 
 ```csharp
-var celcius = UnitConverters.FahrenheitToCelsius(32.0);
+var celsius = UnitConverters.FahrenheitToCelsius(32.0);
 ```
 
 다음은 사용 가능한 변환 목록입니다.
@@ -43,6 +43,8 @@ var celcius = UnitConverters.FahrenheitToCelsius(32.0);
 - MilesToMeters
 - MilesToKilometers
 - KilometersToMiles
+- MetersToInternationalFeet
+- InternationalFeetToMeters
 - DegreesToRadians
 - RadiansToDegrees
 - DegreesPerSecondToRadiansPerSecond
@@ -59,6 +61,10 @@ var celcius = UnitConverters.FahrenheitToCelsius(32.0);
 - PascalsToAtmospheres
 - CoordinatesToMiles
 - CoordinatesToKilometers
+- KilogramsToPounds
+- PoundsToKilograms
+- StonesToPounds
+- PoundsToStones
 
 ## <a name="api"></a>API
 
