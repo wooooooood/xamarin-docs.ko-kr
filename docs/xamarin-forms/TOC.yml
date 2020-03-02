@@ -255,12 +255,14 @@
           items:
             - name: 이중 화면 패턴
               href: app-fundamentals/dual-screen/design-patterns.md
-            - name: TwoPaneView
+            - name: 이중 화면 레이아웃
               href: app-fundamentals/dual-screen/twopaneview.md
-            - name: DualScreenInfo
+            - name: 이중 화면 디바이스 기능
               href: app-fundamentals/dual-screen/dual-screen-info.md
-            - name: DualScreenHelper
+            - name: 이중 화면 플랫폼 도우미
               href: app-fundamentals/dual-screen/dual-screen-helper.md
+            - name: 이중 화면 트리거
+              href: app-fundamentals/dual-screen/triggers.md
         - name: 효과
           href: app-fundamentals/effects/index.md
           items:
