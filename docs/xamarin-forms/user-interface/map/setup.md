@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020
-ms.openlocfilehash: eff7dff15fb75859d43923f71696bccf1b0e2cc5
-ms.sourcegitcommit: 87b818373d83fd3a6856c4b5a702b013a731b5ea
+ms.openlocfilehash: c3c4863814949be2e6575e92136ca740452a2f3c
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77069651"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78214984"
 ---
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.ios 맵 초기화 및 구성
 
@@ -105,14 +105,16 @@ API 키를 가져온 후에는 **Properties/AndroidManifest .xml** 파일의 `<a
 
 ```xml
 <application ...>
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
 </application>
 ```
 
 이렇게 하면 API 키가 매니페스트에 포함 됩니다. 유효한 API 키를 사용 하지 않으면 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤에 빈 눈금이 표시 됩니다.
 
 > [!NOTE]
-> Google Maps에 액세스할 APK에 대 한 순서로 sha-1 지문 포함 하며 APK에 서명 하는 데 사용 하는 모든 keystore (디버그 및 릴리스)에 대 한 이름을 패키지 note 합니다. 예를 들어, 디버그 및 릴리스 APK를 생성 하기 위한 다른 컴퓨터에 대 한 컴퓨터를 사용 하는 경우 포함 해야 첫 번째 컴퓨터의 디버그 키 저장소에서 sha-1 인증서 지문 및의 릴리스 키 저장소에서 sha-1 인증서 지문 두 번째 컴퓨터입니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
+> `com.google.android.geo.API_KEY`은 API 키에 권장 되는 메타 데이터 이름입니다. 이전 버전과의 호환성을 위해 `com.google.android.maps.v2.API_KEY` 메타 데이터 이름을 사용할 수 있지만 Android Maps API v 2에 대 한 인증만 허용 합니다.
+
+APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는 모든 키 저장소 (디버그 및 릴리스)에 대해 SHA-1 지문 및 패키지 이름을 포함 해야 합니다. 예를 들어, 디버그 및 릴리스 APK를 생성 하기 위한 다른 컴퓨터에 대 한 컴퓨터를 사용 하는 경우 포함 해야 첫 번째 컴퓨터의 디버그 키 저장소에서 sha-1 인증서 지문 및의 릴리스 키 저장소에서 sha-1 인증서 지문 두 번째 컴퓨터입니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
 
 #### <a name="specify-the-google-play-services-version-number"></a>Google Play services 버전 번호를 지정 합니다.
 
