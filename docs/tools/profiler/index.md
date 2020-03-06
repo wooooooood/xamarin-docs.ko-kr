@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
 ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: 8927e7b2a1b194d1bfab334736c3d024f0542b01
-ms.sourcegitcommit: 60e955ce65194ffea987409157ccc7d5db87c2ba
+ms.openlocfilehash: cb109055b476fee6d34041940c682187074f4e7d
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74690207"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295445"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -34,7 +34,7 @@ Xamarin Profiler는 독립 실행형 응용 프로그램으로, IDE 내에서 �
 
 플랫폼용 설치 패키지를 다운로드 합니다.
 
-- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac-1.6.10-15.pkg)
+- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac-1.6.13-11.pkg)
 - [**Windows**](https://dl.xamarin.com/profiler/XamarinProfiler.Windows.Installer.1.6.10-15.msi)
 
 다운로드 되 면 설치 관리자를 시작 하 여 시스템에 Xamarin Profiler를 추가 합니다.
@@ -53,11 +53,11 @@ Xamarin Profiler는 개발자에 게 Mac용 Visual Studio 또는 Visual Studio �
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 현재 Xamarin Profiler를 사용 하 여 Mac에서 Xamarin.ios, Xamarin Android 및 Xamarin.ios 응용 프로그램을 테스트할 수 있습니다 (Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며, Mac용 Visual Studio에서 시작 하는 것 외에도 독립 실행형 응용 프로그램으로 사용 하 여 [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 `.mlpd` 파일을 검사할 수 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 현재 Xamarin Profiler는 Windows에서 Xamarin Android 앱을 테스트 하는 데 사용할 수 있습니다 (Visual Studio 및 Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며, Visual Studio에서 시작 하는 것 외에도 [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 `.mlpd` 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
 
@@ -98,13 +98,13 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 - iOS:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
   **프로 파일링을 사용 하도록 설정 하 > iOS 디버그 > 빌드**
 
   ![Mac용 Visual Studio의 iOS 옵션 대화 상자](images/ios-options-mac.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   **프로 파일링을 사용 하도록 설정 > iOS 빌드 > 속성**
 
@@ -114,13 +114,13 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 - Android:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
   **개발자 계측을 사용 하도록 설정 하 > Android 디버그 > 빌드**
 
   ![Mac용 Visual Studio의 Android 옵션 대화 상자](images/android-project-options.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   **개발자 계측을 사용 하도록 설정 하 > Android 디버그 > 빌드**
 
@@ -132,7 +132,7 @@ Xamarin Profiler에 대 한 지원은 다음 플랫폼에서 제공 됩니다.
 
 IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실행형 응용 프로그램으로 프로 파일링 할 때 IDE에서 Xamarin Profiler를 시작할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 #### <a name="launching-from-visual-studio-for-mac"></a>Mac용 Visual Studio에서 시작
 
@@ -141,7 +141,7 @@ IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실�
 
   ![Mac용 Visual Studio에서 프로파일러 시작](images/start-profiling-xs.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 #### <a name="launching-from-visual-studio"></a>Visual Studio에서 시작
 
@@ -162,13 +162,13 @@ IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실�
 
 언제 든 지 프로 파일링 세션을 저장 하려면 프로파일러 메뉴 모음에서 **파일 > 다른 이름으로 저장 ...** 을 선택 합니다. 이렇게 하면 프로 파일링 데이터에 대 한 특수 하 고 매우 압축 된 형식인 _.mlpd_ 형식으로 파일을 저장 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 설치 된 후에는 아래 스크린샷에 나와 있는 것 처럼 응용 프로그램 폴더에서 Xamarin Profiler를 찾을 수 있습니다.
 
 ![Mac에서 독립 실행형 프로파일러 열기](images/applications.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 응용 프로그램을 설치한 후에는 응용 프로그램 디렉터리에서 Xamarin Profiler 응용 프로그램을 찾을 수 있습니다.
 
@@ -184,11 +184,11 @@ IOS 또는 Android 응용 프로그램을 프로 파일링 하거나 독립 실�
 
 Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [Mac용 Visual Studio의 프로파일러 섹션 ![](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [Visual Studio의 ![Profiler 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
@@ -206,11 +206,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 프로파일러 맨 위에는 할당 차트가 있습니다 .이 차트는 프로 파일링 중에 일정 한 간격으로 할당 된 메모리의 양을 표시 합니다. 현재 할당 그래프는 해당 시점의 힙 크기가 아니라 총 할당 수입니다. 따라서 중단 되지 않으며 계속 증가 합니다. 여기에는 스택에 할당 된 개체가 포함 됩니다. 사용 되는 런타임 버전에 따라 동일한 앱에 대해서도 차트가 다르게 보일 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![할당 계측](images/allocations1.png)](images/allocations1.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![할당 계측](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
@@ -220,11 +220,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 - **할당** -모든 할당 목록을 표시 하 고 클래스 이름별로 그룹화 합니다. 사용 되는 클래스 및 메서드, 사용 빈도 및 사용 되는 클래스의 집합적 크기에 대 한 유용한 개요를 제공 합니다. 클래스를 두 번 클릭 하면 할당 된 메모리가 표시 됩니다. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
   [![할당 탭](images/allocations3.png)](images/allocations3.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![할당 탭](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
@@ -236,11 +236,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
     1. **반전 된 호출 트리** -스택 추적을 위에서 아래로 간주 합니다. 이 옵션은 CPU가 시간을 소비 하는 가장 깊은 메서드를 나타내므로 편리 하 게 볼 수 있습니다.
     2. **스레드별로 분리** –이 옵션은 스레드를 통해 호출 트리를 구성 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
   [![호출 트리 탭](images/allocations2.png)](images/allocations2.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![호출 트리 탭](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
@@ -248,11 +248,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 - **스냅숏** -이 창에는 메모리 스냅숏에 대 한 정보가 표시 됩니다. 라이브 응용 프로그램을 프로 파일링 하는 동안 이러한 항목을 생성 하려면 유지 되 고 릴리스되는 메모리를 확인 하려는 각 지점에서 _카메라_ 단추를 클릭 합니다. 그런 다음 각 스냅숏을 클릭 하 여 내부적으로 발생 하는 상황을 탐색할 수 있습니다. 스냅숏은 앱을 실시간으로 프로 파일링 하는 경우에만 수행할 수 있습니다. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
   [![스냅숏 탭](images/allocations4.png)](images/allocations4.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![스냅숏 탭](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
@@ -264,13 +264,13 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 아래 스크린샷에 표시 된 그림 차트에는 앱이 실행 될 때 앱에서 받은 샘플 수가 표시 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![시간 프로파일러 계측](images/time1.png)](images/time1.png#lightbox) 
 
 [![Time Profiler 계측 – 샘플 목록](images/time3.png)](images/time3.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![시간 프로파일러 계측](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
@@ -280,25 +280,25 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 - **호출 트리** – 각 메서드에서 소요 된 시간을 표시 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
   [![Time Profiler 계측 – 호출 트리](images/time2.png)](images/time2.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
   [![Time Profiler 계측 – 호출 트리](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
-### <a name="cycles"></a>주기
+### <a name="cycles"></a>Cycles
 
 C# 및 F# 관리 코드를 사용 하면 매우 일반적 일 수 있으며, 삭제 되지 않는 개체에 대 한 참조를 만드는 것은 매우 쉽습니다. 이 계측을 통해 해당 개체를 파악 하 고 응용 프로그램에서 참조 되는 주기를 표시할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![주기 계측](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![주기 계측](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
 
@@ -310,11 +310,11 @@ C# 및 F# 관리 코드를 사용 하면 매우 일반적 일 수 있으며, 삭
 
 다른 구성으로 앱을 프로 파일링 하는 경우 다음과 같은 메시지 대화 상자가 표시 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![프로 파일링 오류 대화 상자](images/image001.png)](images/image001.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![프로 파일링 오류 대화 상자](images/image1vs.png)](images/image1vs.png#lightbox) 
 

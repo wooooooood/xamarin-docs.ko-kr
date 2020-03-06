@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/27/2019
-ms.openlocfilehash: 8b633481d74810bc4d86d68f8c36d55980092510
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 778f56ec844e2802c1e1bc783824d55218678761
+ms.sourcegitcommit: e9d88587aafc912124b87732d81c3910247ad811
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940315"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78337285"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.ios를 사용 하 여 푸시 알림 보내기 및 받기
 
-[![샘플 다운로드](~/media/shared/download.png)샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[샘플 다운로드](~/media/shared/download.png)샘플 다운로드 ![](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 푸시 알림은 백 엔드 시스템에서 모바일 응용 프로그램으로 정보를 제공 합니다. Apple, Google 및 기타 플랫폼에는 각각 자체 푸시 알림 서비스 (PNS)가 있습니다. Azure Notification Hubs를 사용 하면 여러 플랫폼에서 알림을 중앙 집중화 하 여 백 엔드 응용 프로그램에서 단일 허브와 통신할 수 있으므로 각 플랫폼별 PNS 알림을 배포할 수 있습니다.
 
@@ -518,6 +518,7 @@ Azure Notification Hubs를 사용 하 여 응용 프로그램에서 테스트 �
 1. 응용 프로그램에서 푸시 알림을 받을 수 있는지 테스트 하는 경우 물리적 장치를 사용 해야 합니다. Android 및 iOS 가상 장치는 푸시 알림을 받기 위해 올바르게 구성 되지 않을 수 있습니다.
 1. 샘플 Android 응용 프로그램은 Firebase 토큰이 발급 될 때 토큰 및 템플릿을 한 번 등록 합니다. 테스트 하는 동안 새 토큰을 요청 하 고 Azure 알림 허브에 다시 등록 해야 할 수 있습니다. 이렇게 하는 가장 좋은 방법은 프로젝트를 정리 하 고, `bin` `obj` 및 폴더를 삭제 하 고, 다시 빌드 및 배포 하기 전에 장치에서 응용 프로그램을 제거 하는 것입니다.
 1. 푸시 알림 흐름의 많은 부분이 비동기적으로 실행 됩니다. 이로 인해 중단점이 적중 되지 않거나 예기치 않은 순서로 적중 될 수 있습니다. 응용 프로그램 흐름을 중단 하지 않고 추적 실행에 장치 또는 디버그 로깅을 사용 합니다. `Constants`에 지정 된 `DebugTag`를 사용 하 여 Android 장치 로그를 필터링 합니다.
+1. Visual Studio에서 디버깅이 중지 되 면 앱이 강제로 닫힙니다. 디버깅 프로세스의 일부로 시작 된 모든 메시지 수신기 또는 기타 서비스는 닫히고 메시지 이벤트에 응답 하지 않습니다.
 
 ## <a name="create-a-notification-dispatcher"></a>알림 디스패처 만들기
 
