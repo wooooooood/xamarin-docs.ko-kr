@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
 ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488436"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916531"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.ios의 응용 프로그램 아이콘
 
@@ -28,13 +28,13 @@ ms.locfileid: "75488436"
 
 Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사용할 수 있는 것과 동일한 방식으로 이미지 자산을 사용 하 여 응용 프로그램 아이콘을 제공할 수 있습니다. IPad의 다음 스크린샷은 iOS에서 아이콘의 세 가지 사용을 보여 줍니다.
 
-- **응용 프로그램 아이콘** -모든 iOS 앱은 응용 프로그램 아이콘을 정의 해야 합니다. 사용자가 앱을 시작 하기 위해 iOS 홈 화면에서 탭 하는 아이콘입니다. 또한이 아이콘은 Game Center에서 사용 됩니다 (해당 하는 경우). 예: 
+- **응용 프로그램 아이콘** -모든 iOS 앱은 응용 프로그램 아이콘을 정의 해야 합니다. 사용자가 앱을 시작 하기 위해 iOS 홈 화면에서 탭 하는 아이콘입니다. 또한이 아이콘은 Game Center에서 사용 됩니다 (해당 하는 경우). 예제: 
 
     [![](app-icons-images/000.png "Application Icon")](app-icons-images/000-full.png#lightbox)
-- **스포트라이트 아이콘** -사용자가 스포트라이트 검색에서 앱 이름을 입력할 때마다이 아이콘이 표시 됩니다. 예: 
+- **스포트라이트 아이콘** -사용자가 스포트라이트 검색에서 앱 이름을 입력할 때마다이 아이콘이 표시 됩니다. 예제: 
 
     [![](app-icons-images/000a.png "Spotlight Icon")](app-icons-images/000a-full.png#lightbox)
-- **설정 아이콘** -사용자가 iOS 장치에서 **설정** 앱을 입력 하면 앱에 대 한 **설정** 목록 끝에이 아이콘이 표시 됩니다. 예: 
+- **설정 아이콘** -사용자가 iOS 장치에서 **설정** 앱을 입력 하면 앱에 대 한 **설정** 목록 끝에이 아이콘이 표시 됩니다. 예제: 
 
     [![](app-icons-images/000b.png "Settings Icon")](app-icons-images/000b-full.png#lightbox)
 
@@ -54,7 +54,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
     ||1x|2x|
     |---|---|---|
-    |애플리케이션 아이콘|60x60<sup>1</sup>|120x120|
+    |애플리케이션 아이콘|합니다<sup>1</sup>|120x120|
     |Spotlight|40x40<sup>2</sup>|80x80|
     |설정|-|-|
 
@@ -109,7 +109,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
 자산 카탈로그를 사용 하려면 다음 단계를 수행 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 2. **IPhone 아이콘** 섹션까지 아래로 스크롤합니다.
@@ -129,7 +129,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 7. **열기** 단추를 클릭 하 여 프로젝트에 이미지를 포함 하 고 xcasset에 설정 합니다.
 8. 필요한 모든 이미지에 대해 반복 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. \* * 정보를 두 번 클릭 합니다.  \* * **솔루션 탐색기**파일:
 
@@ -166,7 +166,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
 iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 2. 편집기의 **ITunes 아트 워크** 섹션으로 스크롤합니다. 
@@ -175,7 +175,7 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 3. 누락 된 이미지의 경우 편집기에서 축소판 그림을 클릭 하 고 파일 열기 대화 상자에서 원하는 iTunes 아트 워크의 이미지 파일을 선택 하 고 **확인** 단추를 클릭 합니다.
 4. 앱에 필요한 모든 이미지가 지정 될 때까지이 단계를 반복 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
 

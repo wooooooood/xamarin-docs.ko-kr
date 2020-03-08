@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: b1b6d07b221f702b54833bd87161d6abbadbd4e8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030847"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915782"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Xamarin에서 tvOS 아이콘 및 이미지 작업
 
@@ -38,7 +38,7 @@ Captivating 아이콘과 이미지를 만드는 것은 Apple TV 앱에 대 한 �
 
 시작 이미지는 광고 또는 미술 식의 기회가 아니므로 앱이 신속 하 게 시작 되 고 사용할 준비가 되었다는 느낌을 제공 하기 위해 존재 합니다.
 
-|시작 이미지 크기|노트|
+|시작 이미지 크기|메모|
 |---|---|
 |1920x1080px|계층화 되지 않은 .png 파일만|
 
@@ -135,7 +135,7 @@ TvOS 앱에는 Apple TV 홈 화면의 앱 아이콘 뿐만 아니라 앱 스토�
 
 |작은 아이콘||크게 아이콘||
 |---|---|---|---|
-|실제 크기|400x240px|Size|1280x768px|
+|실제 크기|400x240px|크기|1280x768px|
 |안전한 영역 크기|370x222px|||
 |포커스가 없는 크기|300x180px|||
 |포커스가 있는 크기|370x222px|||
@@ -187,7 +187,7 @@ TvOS 프로젝트에 필요한 앱 아이콘을 설정 하려면 다음을 수�
 
 최상위 선반 이미지는 단일 정적 `.png` 또는 `.lsr` 파일로 제공 하거나 ( [계층화 된 이미지 만들기](#Creating-Layered-Images)참조) 런타임에 포커스를 받을 수 있는 항목의 단일 행으로 동적으로 만들 수 있습니다 (아래의 [동적 상위 선반 내용](#Dynamic-Top-Shelf-Content) 참조).
 
-|상위 선반 이미지 크기|노트|
+|상위 선반 이미지 크기|메모|
 |---|---|
 |1920x720px|정적 .png 또는 계층화 된 .lsr 파일|
 
@@ -281,11 +281,11 @@ TvOS 앱이 게임 이며 지원 Game Center 포함 된 경우 몇 가지 추가
 
 ||성과 아이콘|대시보드 아트 워크|순위표 아트 워크|
 |---|---|---|---|
-|표시 크기|200x200px|923x150px|N/A|
-|실제 크기|320x320px|N/A|659x371px|
-|안전한 영역 크기|N/A|N/A|618x348px|
-|포커스가 없는 크기|N/A|N/A|548x309px|
-|포커스가 있는 크기|N/A|N/A|618x348px|
+|표시 크기|200x200px|923x150px|해당 없음|
+|실제 크기|320x320px|해당 없음|659x371px|
+|안전한 영역 크기|해당 없음|해당 없음|618x348px|
+|포커스가 없는 크기|해당 없음|해당 없음|548x309px|
+|포커스가 있는 크기|해당 없음|해당 없음|618x348px|
 
 Game Center 작업에 대 한 자세한 내용은 Apple의 [Game Center 프로그래밍 가이드](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html)를 참조 하세요.
 

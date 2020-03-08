@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/25/2017
 ms.openlocfilehash: 1cf061f2ff27720ad78567bc26f00d99c5456f04
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759426"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915981"
 ---
 # <a name="three-types-of-bzier-curves"></a>3가지 형식의 Bézier 곡선
 
@@ -22,7 +22,7 @@ _SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡�
 
 베 지 어 곡선 피에르 베 지 어 (1910 – 1999)의 자동차 본문의 컴퓨터 기반 디자인의 곡선을 사용 하는 자동차 회사에서 프랑스어 엔지니어 후 이라고 합니다.
 
-베 지 어 곡선은 대화형 디자인에 적합 하다는 것으로 알려져 있습니다. 즉, 곡선이 무한 &mdash; 하거나 singularities 되 고 일반적으로 멋지고 보기 편 인 것은 아닙니다. &mdash;
+베 지 어 곡선은 대화형 디자인에 적합 하다는 것으로 알려져 있습니다. 즉, &mdash;는 잘 작동 하는 것입니다. 즉, 곡선이 무한 하거나 다루기가 &mdash; 되 고 일반적으로 멋지고 보기 편 인 singularities 없습니다.
 
 ![샘플 베 지 어 곡선](beziers-images/beziersample.png)
 
@@ -93,7 +93,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기이 실행 됩니다.
 
-[![베 지 어 곡선 페이지의 세 번째 스크린샷](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
+[베 지 어 곡선 페이지의 ![삼중 스크린 샷](beziers-images/beziercurve-small.png)](beziers-images/beziercurve-large.png#lightbox)
 
 수학적으로 곡선이 입방 형 3 다항식입니다. 곡선 최대 세 지점에 직선을 교차 합니다. 시작 시점에 곡선이 항상 탄젠트와 같은 방향으로에서, 시작까지에서 직선을 가리키는 첫 번째 제어점입니다. 끝점에서 곡선이 항상 탄젠트와 같은 방향으로에서, 두 번째 컨트롤까지에서 직선을 가리키는 끝점입니다.
 
@@ -211,7 +211,7 @@ float Magnitude(SKPoint v)
 
 다른 각도 사용 하 여 실행 중인 프로그램이 다음과 같습니다.
 
-[![베 지 어 원형 호 페이지의 세 번째 스크린샷](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
+[베 지 어 원형 호 페이지의 ![삼중 스크린샷](beziers-images/beziercirculararc-small.png)](beziers-images/beziercirculararc-large.png#lightbox)
 
 세 번째 스크린샷에서 자세히 살펴보고 및 각도 180도 하지만 iOS 화면 표시 각도가 90도 때 제대로 1/4 원에 맞게 많다고 베 지 어 곡선 특히 반원에서 벗어납니다 표시 됩니다.
 
@@ -293,11 +293,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 점을 sinusoidally 진동 값에 따라 보간 `t`합니다. 일련의 연결 된 4 개의 베 지 어 곡선을 생성 하는 보간된 지점 사용 됩니다. 애니메이션을 다음과 같습니다.
 
-[![원 페이지를 제곱 하는 세 번째 스크린샷](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
+[원 페이지를 제곱 하는의 세 번째 스크린샷 ![](beziers-images/squaringthecircle-small.png)](beziers-images/squaringthecircle-large.png#lightbox)
 
 이러한 애니메이션은 원호와 직선으로 렌더링할 수 있을 만큼 유연 알고리즘 곡선은 없이 수 없습니다.
 
-합니다 **베 지 어 무한대** 페이지도는 근사치 원호를 베 지 어 곡선의 기능을 사용 합니다. 다음은 `PaintSurface` 에서 처리기는 [ `BezierInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierInfinityPage.cs) 클래스:
+합니다 **베 지 어 무한대** 페이지도는 근사치 원호를 베 지 어 곡선의 기능을 사용 합니다. 다음은  에서 처리기는  `BezierInfinityPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/BezierInfinityPage.cs) 클래스:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -342,7 +342,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 무한대 기호는 다음과 같습니다.
 
-[![베 지 어 Infinity 페이지의 삼중 스크린샷](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
+[베 지 어 Infinity 페이지의 ![삼중 스크린샷](beziers-images/bezierinfinity-small.png)](beziers-images/bezierinfinity-large.png#lightbox)
 
 것이 다소 원활 하 게 중심에서 렌더링 된 무한대 기호를 **Arc 무한대** 에서 페이지를 [ **호를 그리려면 세 가지 방법으로** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) 문서.
 
@@ -405,7 +405,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 및 여기 실행 됩니다.
 
-[![정방형 곡선 페이지의 세 번째 스크린샷](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
+[정방형 곡선 페이지의 ![3 차 스크린샷](beziers-images/quadraticcurve-small.png)](beziers-images/quadraticcurve-large.png#lightbox)
 
 점선은 시작점 및 끝점에서 곡선 탄젠트 되며 제어점에 충족 합니다.
 
@@ -483,7 +483,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 여기이 실행 됩니다.
 
-[![원추형 곡선 페이지의 세 번째 스크린샷](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
+[원추형 곡선 페이지의 ![삼중 스크린샷](beziers-images/coniccurve-small.png)](beziers-images/coniccurve-large.png#lightbox)
 
 알 수 있듯이 제어점 가중치가 높은 경우 자세한으로 곡선을 끌어오는 것 같습니다. 가중치가 0 인 곡선 직선 시작 점에서 끝점 됩니다.
 
@@ -547,7 +547,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 알 수 있듯이 차이가 없는 visual는 `ConicTo` 빨간색으로 표시 하는 경로 및 기본 원을 참조용으로 표시 합니다.
 
-[![원추형 원호 페이지의 세 번째 스크린샷](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
+[원추형 원호 페이지의 ![삼중 스크린샷](beziers-images/coniccirculararc-small.png)](beziers-images/coniccirculararc-large.png#lightbox)
 
 하지만 180도 수학 실패 하는 각도 설정 합니다.
 

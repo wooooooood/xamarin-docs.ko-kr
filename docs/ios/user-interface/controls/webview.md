@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
 ms.openlocfilehash: 8640800717a88e800503e93c339eeb080707374e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725433"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915697"
 ---
 # <a name="web-views-in-xamarinios"></a>Xamarin.ios의 웹 보기
 
@@ -63,7 +63,7 @@ PresentViewController(sfViewController, true, null);
 
 그러면 다음과 같은 웹 보기가 생성 됩니다.
 
-[![SFSafariViewController를 사용 하 여 예제 웹 보기](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
+[SFSafariViewController를 사용 하 여 예제 웹 보기 ![](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
 
 ## <a name="safari"></a>Safari
 
@@ -77,7 +77,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 그러면 다음과 같은 웹 보기가 생성 됩니다.
 
-[![Safari에 표시 되는 웹 페이지](webview-images/safari.png)](webview-images/safari.png#lightbox)
+[Safari에 표시 되는 웹 페이지 ![](webview-images/safari.png)](webview-images/safari.png#lightbox)
 
 사용자를 앱에서 Safari로 이동 하는 것은 일반적으로 항상 피해 야 합니다. 대부분의 사용자는 응용 프로그램 외부에서 탐색을 필요로 하지 않으므로 앱에서 벗어나면 사용자는이를 반환 하지 않을 수 있으며,이는 기본적으로 참여를 중단 합니다.
 
@@ -92,7 +92,7 @@ iOS 9의 향상 된 기능을 통해 사용자는 Safari 페이지의 왼쪽 위
 ## <a name="uiwebview-deprecated"></a>UIWebView 보기 (사용 되지 않음)
 
 > [!IMPORTANT]
-> `UIWebView`는 사용 되지 않습니다. 이 컨트롤을 사용 하는 앱은 [4 월 2020을 기준으로 앱 스토어에 허용 되지 않으며 기존 앱에서 12 월 2020에 해당 앱을 제거 해야](https://developer.apple.com/news/?id=12232019b)합니다.
+> `UIWebView`는 사용되지 않습니다. 이 컨트롤을 사용 하는 앱은 [4 월 2020을 기준으로 앱 스토어에 허용 되지 않으며 기존 앱에서 12 월 2020에 해당 앱을 제거 해야](https://developer.apple.com/news/?id=12232019b)합니다.
 >
 > [Apple의 `UIWebView` 설명서](https://developer.apple.com/documentation/uikit/uiwebview) 에서는 대신 [`WKWebView`](#wkwebview) 를 사용 해야 합니다.
 
@@ -113,7 +113,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 그러면 다음과 같은 웹 보기가 생성 됩니다.
 
-[![ScalesPagesToFit의 효과를 합니다.](webview-images/webview.png)](webview-images/webview.png#lightbox)
+[ScalesPagesToFit의 효과를 ![합니다.](webview-images/webview.png)](webview-images/webview.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

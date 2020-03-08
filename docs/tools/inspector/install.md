@@ -7,23 +7,23 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
 ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029690"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917590"
 ---
 # <a name="inspector-installation-and-requirements"></a>검사기 설치 및 요구 사항
 
 ## <a name="download-and-installation"></a>다운로드 및 설치
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 1. [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/) 를 다운로드 하 여 설치 하 고 .net 워크 로드 **를 사용 하 여 모바일 개발** 을 선택 합니다.
 1. [로그인](https://docs.microsoft.com/visualstudio/ide/signing-in-to-visual-studio) 하 여 엔터프라이즈 구독을 사용 하도록 설정 합니다.
 1. 응용 프로그램을 [검사](~/tools/inspector/inspect.md) 합니다.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 1. [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/)를 다운로드 하 고 설치 합니다.
 1. [로그인](https://docs.microsoft.com/visualstudio/mac/activation) 하 여 엔터프라이즈 구독을 사용 하도록 설정 합니다.
@@ -33,14 +33,14 @@ ms.locfileid: "73029690"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>지원되는 운영 체제
 
 - **Mac** -OS X 10.11 이상
 - **Windows** -windows 7 이상 (Internet Explorer 11 이상 및 .net 4.6.1 이상)
 
 ### <a name="supported-ides"></a>지원 되는 Ide
 
-- Visual Studio for Mac
+- Mac용 Visual Studio
 - .NET 워크 로드 **를 사용한 모바일 개발** 에 Visual Studio 2017
 
 라이브 앱 검사는 기업 고객에 게 제공 됩니다.
@@ -49,7 +49,7 @@ ms.locfileid: "73029690"
 
 ### <a name="supported-app-platforms"></a>지원 되는 앱 플랫폼
 
-|앱 플랫폼|IDE 지원|노트|
+|앱 플랫폼|IDE 지원|메모|
 |--- |--- |--- |
 |Mac|에서만 지원 Mac용 Visual Studio|
 |iOS|Visual Studio 2017 및 Mac용 Visual Studio에서 지원 됨| 링커 동작을 **연결 안 함** 으로 설정 해야 합니다 ( **iOS 빌드** 프로젝트 옵션 아래). |

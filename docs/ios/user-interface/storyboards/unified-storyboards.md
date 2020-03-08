@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
 ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001823"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915178"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Xamarin.ios의 통합 스토리 보드
 
@@ -115,8 +115,8 @@ IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래�
 |속성|값|
 |--- |--- |
 |`HorizontalSizeClass`|구문|
-|`VerticalSizeClass`|기본|
-|`UserInterfaceIdom`|전화|
+|`VerticalSizeClass`|일반|
+|`UserInterfaceIdom`|Phone|
 |`DisplayScale`|2.0|
 
 위의 집합은 모든 특성 속성에 대 한 값을 가지 며 정규화 된 특성 컬렉션을 나타냅니다.
@@ -126,9 +126,9 @@ IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래�
 |속성|값|
 |--- |--- |
 |`HorizontalSizeClass`|구문|
-|`VerticalSizeClass`|지정 되지 않은|
-|`UserInterfaceIdom`|지정 되지 않은|
-|`DisplayScale`|지정 되지 않은|
+|`VerticalSizeClass`|Unspecified|
+|`UserInterfaceIdom`|Unspecified|
+|`DisplayScale`|Unspecified|
 
 그러나 일반적으로 개발자는 특성 컬렉션에 대 한 특성 환경을 요구할 때 위의 예제와 같이 정규화 된 컬렉션을 반환 합니다.
 
@@ -158,7 +158,7 @@ iOS 8은 개발자가 성분 컬렉션을 기반으로 하는 이미지 카탈�
 
 `UIImageView` 클래스 내에서 이미지 중 하나를 사용 하는 경우 이미지 뷰에서 해당 특성 컬렉션의 올바른 이미지 버전이 자동으로 표시 됩니다. 성분 환경 (예: 장치를 세로에서 가로로 전환 하는 사용자)이 변경 되는 경우 이미지 뷰에서 새 특성 컬렉션과 일치 하도록 새 이미지 크기를 자동으로 선택 하 고 현재 이미지의 현재 버전에 대 한 크기와 일치 하도록 크기를 변경 합니다. 표시할지.
 
-## <a name="uiimageasset"></a>Uiimag및 Set
+## <a name="uiimageasset"></a>UIImageAsset
 
 Apple은 개발자에 게 이미지 선택에 대 한 더 많은 제어를 제공 하기 위해 `UIImageAsset` 이라는 iOS 8에 새 클래스를 추가 했습니다.
 
@@ -214,9 +214,9 @@ Size 클래스가 양쪽 방향으로 압축 되는 iPhone에서 분할 뷰 컨�
 
 iOS 8은 다음 표와 같이 개발자가 특성 변경에 참여 하는 데 사용할 수 있는 몇 가지 콜백을 제공 합니다.
 
-|Phase|Callback|설명|
+|단계|콜백|Description|
 |--- |--- |--- |
-|설정|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>이 메서드는 특성 변경의 시작 부분에서 특성 컬렉션이 새 값으로 설정 되기 전에 호출 됩니다.</li><li>메서드는 특성 컬렉션의 값이 변경 되 고 애니메이션이 발생 하기 전에 호출 됩니다.</li></ul>|
+|설치 프로그램|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>이 메서드는 특성 변경의 시작 부분에서 특성 컬렉션이 새 값으로 설정 되기 전에 호출 됩니다.</li><li>메서드는 특성 컬렉션의 값이 변경 되 고 애니메이션이 발생 하기 전에 호출 됩니다.</li></ul>|
 |애니메이션|`WillTransitionToTraitCollection`|이 메서드에 전달 되는 전환 코디네이터에는 개발자가 기본 애니메이션과 함께 실행 되는 애니메이션을 추가할 수 있는 `AnimateAlongside` 속성이 있습니다.|
 |정리|`WillTransitionToTraitCollection`|전환이 발생 한 후 개발자가 자체 정리 코드를 포함 하도록 하는 메서드를 제공 합니다.|
 
@@ -242,7 +242,7 @@ iOS 8은 다음 표와 같이 개발자가 특성 변경에 참여 하는 데 �
 
 ### <a name="showing-view-controllers"></a>뷰 컨트롤러 표시
 
-Apple에서 iOS 8을 변경 하는 또 다른 변경 내용은 개발자가 보기 컨트롤러를 표시 하는 것입니다. 이전에는 응용 프로그램에 리프 뷰 컨트롤러 (예: 테이블 뷰 컨트롤러)가 있고 개발자가 다른 것을 보여 준 경우 (예: 셀을 누르는 사용자에 대 한 응답으로) 응용 프로그램은 컨트롤러 계층 구조를 통해 탐색 뷰 컨트롤러 및이에 대 한 `PushViewController` 메서드를 호출 하 여 새 뷰를 표시 합니다.
+Apple에서 iOS 8을 변경 하는 또 다른 변경 내용은 개발자가 보기 컨트롤러를 표시 하는 것입니다. 이전에는 응용 프로그램에 리프 뷰 컨트롤러 (예: 테이블 뷰 컨트롤러)가 있고 개발자가 다른 항목을 표시 한 경우 (예: 셀을 누르는 사용자에 대 한 응답으로) 응용 프로그램이 컨트롤러 계층 구조를 탐색 뷰 컨트롤러에 다시 연결 하 여 새 뷰를 표시 하는 `PushViewController` 메서드를 호출 합니다.
 
 그러면 탐색 컨트롤러와 탐색 컨트롤러를 실행 하는 환경 간에 매우 긴밀 하 게 결합 됩니다. IOS 8에서 Apple은 다음과 같은 두 가지 새로운 메서드를 제공 하 여이를 분리 했습니다.
 
@@ -253,13 +253,13 @@ Apple에서 iOS 8을 변경 하는 또 다른 변경 내용은 개발자가 보�
 
 개발자는 자체 사용자 지정 뷰 컨트롤러에서 `ShowViewController` 및 `ShowDetailViewController`를 구현 하 여 `UINavigationController` 및 `UISplitViewController`에서 제공 하는 것과 동일한 자동화 된 기능을 얻을 수 있습니다.
 
-### <a name="how-it-works"></a>작동 방식
+### <a name="how-it-works"></a>작동 방법
 
 이 섹션에서는 이러한 메서드를 iOS 8에서 실제로 구현 하는 방법을 살펴보겠습니다. 먼저 새 `GetTargetForAction` 메서드를 살펴보겠습니다.
 
  [![](unified-storyboards-images/gettargetforaction.png "The new GetTargetForAction method")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
-이 메서드는 올바른 컨테이너 뷰 컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 예를 들면,
+이 메서드는 올바른 컨테이너 뷰 컨트롤러를 찾을 때까지 계층 구조 체인을 보여 줍니다. 다음은 그 예입니다.
 
 1. `ShowViewController` 메서드가 호출 되 면이 메서드를 구현 하는 체인의 첫 번째 뷰 컨트롤러가 탐색 컨트롤러 이므로 새 뷰의 부모로 사용 됩니다.
 1. `ShowDetailViewController` 메서드가 대신 호출 된 경우 분할 뷰 컨트롤러는이를 구현 하기 위한 첫 번째 뷰 컨트롤러 이므로 부모로 사용 됩니다.
@@ -294,7 +294,7 @@ IPhone에서 적응 사진 응용 프로그램을 실행 하는 경우 사용자
 
  [![](unified-storyboards-images/rotation.png "The Split View Controller will display both the master and details view as seen here")](unified-storyboards-images/rotation.png#lightbox)
 
-이렇게 하려면 뷰 컨트롤러의 `UpdateConstraintsForTraitCollection` 메서드를 재정의 하 고 `VerticalSizeClass`값을 기준으로 제약 조건을 조정 합니다. 예를 들면,
+이렇게 하려면 뷰 컨트롤러의 `UpdateConstraintsForTraitCollection` 메서드를 재정의 하 고 `VerticalSizeClass`값을 기준으로 제약 조건을 조정 합니다. 다음은 그 예입니다.
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -350,7 +350,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>전환 애니메이션 추가
 
-적응 사진 응용 프로그램의 분할 보기 컨트롤러가 축소에서 확장으로 전환 되 면 뷰 컨트롤러의 `WillTransitionToTraitCollection` 메서드를 재정의 하 여 애니메이션이 기본 애니메이션에 추가 됩니다. 예를 들면,
+적응 사진 응용 프로그램의 분할 보기 컨트롤러가 축소에서 확장으로 전환 되 면 뷰 컨트롤러의 `WillTransitionToTraitCollection` 메서드를 재정의 하 여 애니메이션이 기본 애니메이션에 추가 됩니다. 다음은 그 예입니다.
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -680,7 +680,7 @@ IPhone 시뮬레이터에서 응용 프로그램을 실행 하는 경우 요소�
 
 시작 화면 파일은 iOS 응용 프로그램을 시작 하는 동안 시작 화면으로 표시 되며, 사용자에 게 앱을 실제로 시작 하는 피드백을 제공 합니다. IOS 8 이전에 개발자는 응용 프로그램이 실행 되는 각 장치 유형, 방향 및 화면 해상도에 대 한 여러 `Default.png` 이미지 자산을 포함 해야 합니다. 예를 들어 `Default@2x.png`, `Default-Landscape@2x~ipad.png`, `Default-Portrait@2x~ipad.png`등이 있습니다.
 
-모든 기존 iPhone 및 iPad 장치에서 새로운 iPhone 6 및 iPhone 6 Plus 장치와 장치 (및 예정 된 Apple Watch)를 구분 하는 것은 다양 한 규모의 다양 한 크기, 방향 및 해상도를 나타냅니다. `Default.png` 시작 화면 이미지 자산의 자산 생성 및 유지 관리 또한 이러한 파일은 매우 클 수 있으며, iTunes 앱 스토어에서 응용 프로그램을 다운로드 하는 데 필요한 시간을 증가 시켜 서 앱 번들을 "확장" 합니다 (셀룰러 네트워크를 통해 전달 되지 않도록 할 수 있음). 최종 사용자의 장치에 필요한 저장소 용량을 늘립니다.
+모든 기존 iPhone 및 iPad 장치에서 새로운 iPhone 6 및 iPhone 6 Plus 장치와 장치 (및 예정 된 Apple Watch)를 팩터링 하는 것은 다양 한 크기, 방향 및 해상도를 사용 하 여 생성 및 유지 관리 해야 하는 `Default.png` 시작 화면 이미지 자산의 광범위 한 배열을 나타냅니다. 또한 이러한 파일은 매우 클 수 있으며, iTunes 앱 스토어에서 응용 프로그램을 다운로드 하는 데 필요한 시간을 증가 시켜 서 앱 번들을 "확장" 합니다 (셀룰러 네트워크를 통해 전달 되지 않도록 할 수 있음). 최종 사용자의 장치에 필요한 저장소 용량을 늘립니다.
 
 IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래스를 사용 하 여 모든 장치, 해상도 및 방향에 대해 작동 하는 *동적 시작 화면* 을 만드는 Xcode에서 단일 원자 `.xib` 파일을 만들 수 있습니다. 이렇게 하면 개발자가 필요한 모든 이미지 자산을 만들고 유지 관리 하는 데 필요한 작업량을 줄일 수 있을 뿐만 아니라 응용 프로그램의 설치 된 번들 크기를 크게 줄일 수 있습니다.
 
@@ -713,7 +713,7 @@ IOS 8의 새로운 기능은 개발자가 자동 레이아웃 및 크기 클래�
 6. 그래픽 요소를 추가 하 고 레이아웃 제약 조건을 사용 하 여 지정 된 장치, 방향 및 화면 크기로 배치 하 여 시작 화면의 디자인을 편집 합니다.
 
     [![](unified-storyboards-images/dls05.png "Editing the design of the launch screen")](unified-storyboards-images/dls05.png#lightbox)
-7. `LaunchScreen.xib`에 대 한 변경 내용을 저장 합니다.
+7. `LaunchScreen.xib`에 변경 내용을 저장합니다.
 8. **응용 프로그램 대상을** 선택 하 고 **일반** 탭을 선택 합니다.
 
     [![](unified-storyboards-images/dls06.png "Select the Applications Target and the General tab")](unified-storyboards-images/dls06.png#lightbox)

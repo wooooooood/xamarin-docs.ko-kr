@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
 ms.openlocfilehash: ebd7cad9ef33a44dbc7aa469bb4e866bdfea2e61
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724783"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915366"
 ---
 # <a name="introduction-to-web-services"></a>웹 서비스 소개
 
@@ -27,7 +27,7 @@ Xamarin.ios를 사용 하는 고객의 경우 [Xamarin.ios 웹 서비스](~/xama
 
 `HTTPS` 프로토콜을 사용 하 고 인터넷 리소스에 대 한 보안 통신을 할 수 없는 경우 ATS를 옵트아웃 (opt out) 할 수 있습니다. 이는 앱의 **info.plist** 파일을 업데이트 하 여 수행할 수 있습니다. 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md)을 참조 하세요.
 
-## <a name="rest"></a>REST
+## <a name="rest"></a>REST (영문)
 
 REST representational State Transfer ()는 웹 서비스 구축을 위한 아키텍처 스타일입니다. REST 요청 웹 페이지를 검색 하 고 서버에 데이터를 보내도록 웹 브라우저를 사용 하는 동일한 HTTP 동사를 사용 하 여 HTTP를 통해 수행 됩니다. 동사는 다음과 같습니다.
 

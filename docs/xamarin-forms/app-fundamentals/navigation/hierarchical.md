@@ -8,27 +8,27 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
 ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: 0df727caf941f1fa0aca680ec871bfe7a9089e7c
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621096"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915672"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
-_NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으로 뒤로 탐색할 수 있는 계층적 탐색 환경을 제공합니다. 이 클래스는 탐색을 Page 개체의 LIFO(후입선출) 스택으로 구현합니다. 이 문서에서는 NavigationPage 클래스를 사용하여 페이지 스택 탐색을 수행하는 방법을 보여 줍니다._
+_NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞뒤로 탐색할 수 있는 계층적 탐색 환경을 제공 합니다. 클래스는 페이지 개체의 LIFO (선입 first out) 스택으로 탐색을 구현 합니다. 이 문서에서는 NavigationPage 클래스를 사용 하 여 페이지 스택에서 탐색을 수행 하는 방법을 보여 줍니다._
 
 한 페이지에서 다른 페이지로 이동하려면 다음 다이어그램에 표시된 것처럼 애플리케이션은 새 페이지를 탐색 스택으로 푸시하여 활성 페이지가 되게 합니다.
 
-![](hierarchical-images/pushing.png "탐색 스택으로 페이지 푸시")
+![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
 
 이전 페이지로 돌아가기 위해 애플리케이션은 다음 다이어그램에 표시된 것처럼 탐색 스택에서 현재 페이지를 꺼내고 맨 위에 있는 새 페이지가 활성 페이지가 됩니다.
 
-![](hierarchical-images/popping.png "탐색 스택에서 페이지 꺼내기")
+![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
-탐색 메서드는 모든 [`Page`](xref:Xamarin.Forms.Page) 파생 형식의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에 의해 노출됩니다. 이 메서드는 탐색 스택에 페이지를 푸시하고 탐색 스택에서 페이지를 꺼내 스택 조작을 수행하는 기능을 제공합니다.
+탐색 메서드는 모든 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 파생 형식의 [`Page`](xref:Xamarin.Forms.Page) 속성에 의해 노출됩니다. 이 메서드는 탐색 스택에 페이지를 푸시하고 탐색 스택에서 페이지를 꺼내 스택 조작을 수행하는 기능을 제공합니다.
 
 <a name="Performing_Navigation" />
 
@@ -36,12 +36,12 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 
 계층적 탐색에서는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 클래스가 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 개체의 스택을 탐색하는 데 사용됩니다. 다음 스크린샷은 각 플랫폼에서 `NavigationPage`의 주요 구성 요소를 보여 줍니다.
 
-![](hierarchical-images/navigationpage-components.png "NavigationPage 구성 요소")
+![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
 
 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 레이아웃은 플랫폼에 따라 달라집니다.
 
 - iOS에는 탐색 모음이 제목을 표시하는 페이지 맨 위에 나타나며 여기에 이전 페이지로 돌아가는 *뒤로* 단추가 있습니다.
-- Android에는 탐색 모음이 제목, 아이콘 및 이전 페이지로 돌아가는 *뒤로* 단추를 표시하는 페이지 맨 위에 나타납니다. 아이콘은 Android 플랫폼 관련 프로젝트의 `MainActivity` 클래스를 데코레이팅하는 `[Activity]` 특성에 정의됩니다.
+- Android에는 탐색 모음이 제목, 아이콘 및 이전 페이지로 돌아가는 *뒤로* 단추를 표시하는 페이지 맨 위에 나타납니다. 아이콘은 Android 플랫폼 관련 프로젝트의 `[Activity]` 클래스를 데코레이팅하는 `MainActivity` 특성에 정의됩니다.
 - 유니버설 Windows 플랫폼에서 제목을 표시하는 페이지 맨 위에 탐색 모음이 나타납니다.
 
 모든 플랫폼에서 [`Page.Title`](xref:Xamarin.Forms.Page.Title) 속성 값이 페이지 제목으로 표시됩니다.
@@ -60,16 +60,16 @@ public App ()
 }
 ```
 
-`Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스가 탐색 스택으로 푸시되어 애플리케이션의 활성 및 루트 페이지가 됩니다. 이 과정은 다음 스크린샷에 나와 있습니다.
+이렇게 하면 `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스가 탐색 스택으로 푸시되 므로 응용 프로그램의 활성 페이지 및 루트 페이지가 됩니다. 이 과정은 다음 스크린샷에 표시됩니다.
 
-![](hierarchical-images/mainpage.png "탐색 스택의 루트 페이지")
+![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
 > [!NOTE]
-> [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스의 [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) 속성은 탐색 스택의 첫 번째 페이지에 대한 액세스를 제공합니다.
+> [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) 인스턴스의 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 속성은 탐색 스택의 첫 번째 페이지에 대한 액세스를 제공합니다.
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>탐색 스택으로 페이지 푸시
 
-`Page2Xaml`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성에서 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드를 호출해야 합니다.
+`Page2Xaml`로 이동하려면 다음 코드 예제에서 설명한 것처럼 현재 페이지의 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 속성에서 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 메서드를 호출해야 합니다.
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -78,9 +78,9 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-`Page2Xaml` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다. 이 과정은 다음 스크린샷에 나와 있습니다.
+`Page2Xaml` 인스턴스가 탐색 스택으로 푸시되어 활성 페이지가 됩니다. 이 과정은 다음 스크린샷에 표시됩니다.
 
-![](hierarchical-images/secondpage.png "탐색 스택에 푸시된 페이지")
+![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
 
 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 메서드가 호출되는 경우 다음 이벤트가 발생합니다.
 
@@ -114,7 +114,7 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 
 그러나 이러한 이벤트가 발생하는 정확한 순서는 플랫폼에 따라 다릅니다. 자세한 내용은 Charles Petzold의 Xamarin.Forms 책 [24장](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)을 참조하세요.
 
-각 페이지의 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 속성은 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 및 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 메서드뿐만 아니라 [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) 메서드도 제공하며 다음 코드 예제에 표시됩니다.
+각 페이지의 [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) 속성은 [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) 및 [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) 메서드뿐만 아니라 [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) 메서드도 제공하며 다음 코드 예제에 표시됩니다.
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -149,7 +149,7 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-기본 플랫폼에서 지원되는 경우 매개 변수를 `true`로 설정하면 페이지 전환 애니메이션을 사용하도록 설정되고, `boolean` 매개 변수를 `false`로 설정하면 페이지 전환 애니메이션을 사용하지 않도록 설정됩니다. 그러나 이 매개 변수가 없는 푸시 및 팝 메서드는 기본적으로 애니메이션을 사용하도록 설정합니다.
+기본 플랫폼에서 지원되는 경우 매개 변수를 `boolean`로 설정하면 페이지 전환 애니메이션을 사용하도록 설정되고, `false` 매개 변수를 `true`로 설정하면 페이지 전환 애니메이션을 사용하지 않도록 설정됩니다. 그러나 이 매개 변수가 없는 푸시 및 팝 메서드는 기본적으로 애니메이션을 사용하도록 설정합니다.
 
 <a name="Passing_Data_when_Navigating" />
 
@@ -168,7 +168,7 @@ public App ()
 }
 ```
 
-이 코드는 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) 인스턴스에 래핑되고 ISO8601 형식의 현재 날짜 및 시간으로 전달하는 `MainPage` 인스턴스를 생성합니다.
+이 코드는 `MainPage`[`NavigationPage` 인스턴스에 래핑되고 ISO8601 형식의 현재 날짜 및 시간으로 전달하는 ](xref:Xamarin.Forms.NavigationPage) 인스턴스를 생성합니다.
 
 `MainPage` 인스턴스는 다음 코드 예제에 나온 것처럼 생성자 매개 변수를 통해 데이터를 수신합니다.
 
@@ -182,7 +182,7 @@ public MainPage (string date)
 
 그런 다음, 다음 스크린샷에 표시된 것처럼 [`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성을 설정하여 데이터를 페이지에 표시합니다.
 
-![](hierarchical-images/passing-data-constructor.png "페이지 생성자를 통해 전달된 데이터")
+![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
 
 ### <a name="passing-data-through-a-bindingcontext"></a>BindingContext를 통해 데이터 전달
 
@@ -204,7 +204,7 @@ async void OnNavigateButtonClicked (object sender, EventArgs e)
 }
 ```
 
-이 코드는 `SecondPage` 인스턴스의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 `Contact` 인스턴스로 설정한 다음, `SecondPage`로 이동합니다.
+이 코드는 [ 인스턴스의 `BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)`SecondPage`를 `Contact` 인스턴스로 설정한 다음, `SecondPage`로 이동합니다.
 
 그런 다음, 다음 XAML 코드 예제에 표시된 대로 `SecondPage`는 데이터 바인딩을 사용하여 `Contact` 인스턴스 데이터를 표시합니다.
 
@@ -268,7 +268,7 @@ public class SecondPageCS : ContentPage
 
 그런 다음, 다음 스크린샷에 표시된 것처럼 일련의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤로 데이터를 페이지에 표시합니다.
 
-![](hierarchical-images/passing-data-bindingcontext.png "BindingContext를 통해 전달된 데이터")
+![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 기본](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)을 참조하세요.
 
@@ -280,11 +280,11 @@ public class SecondPageCS : ContentPage
 
 [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) 메서드는 다음 다이어그램에 표시된 것처럼 탐색 스택에서 기존 지정된 페이지 앞에 지정된 페이지를 삽입합니다.
 
-![](hierarchical-images/insert-page-before.png "탐색 스택에 페이지 삽입")
+![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
 
 [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) 메서드는 다음 다이어그램에 표시된 것처럼 탐색 스택에서 지정된 페이지를 제거합니다.
 
-![](hierarchical-images/remove-page.png "탐색 스택에서 페이지 제거")
+![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
 
 이러한 메소드를 사용하면 로그인 성공 후 로그인 페이지를 새 페이지로 바꾸는 것과 같은 사용자 지정 탐색 환경이 가능합니다. 다음 코드 예제에서는 이 시나리오를 보여 줍니다.
 
@@ -342,7 +342,7 @@ public class TitleViewPage : ContentPage
 [![슬라이더 TitleView](hierarchical-images/titleview-small.png "슬라이더 TitleView")](hierarchical-images/titleview-large.png#lightbox "슬라이더 TitleView")
 
 > [!IMPORTANT]
-> 보기의 크기가 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성으로 지정되지 않으면 탐색 모음에 많은 보기가 나타나지 않습니다. 또는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 적절한 값으로 설정하여 보기를 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 래핑할 수 있습니다.
+> 보기의 크기가 [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 및 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) 속성으로 지정되지 않으면 탐색 모음에 많은 보기가 나타나지 않습니다. 또는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 및 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 적절한 값으로 설정하여 보기를 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions)에 래핑할 수 있습니다.
 
 [`Layout`](xref:Xamarin.Forms.Layout) 클래스는 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생되므로 여러 보기를 포함하는 레이아웃 클래스를 표시하도록 [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) 연결된 속성을 설정할 수 있습니다. iOS 및 UWP(유니버설 Windows 플랫폼)에서는 탐색 모음의 높이를 변경할 수 없으므로 탐색 모음에 표시된 보기가 탐색 모음의 기본 크기보다 클 경우 클리핑이 발생합니다. 그러나 Android에서는 [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) 바인딩 가능 속성을 새 높이를 나타내는 `double`로 설정하여 탐색 모음의 높이를 변경할 수 있습니다. 자세한 내용은 [NavigationPage에서 탐색 모음 높이 설정](~/xamarin-forms/platform/android/navigationpage-bar-height.md)을 참조하세요.
 
@@ -353,11 +353,11 @@ public class TitleViewPage : ContentPage
 
 ### <a name="limitations"></a>제한 사항
 
-[`NavigationPage`](xref:Xamarin.Forms.NavigationPage)의 탐색 모음에 [`View`](xref:Xamarin.Forms.View)를 표시할 때 주의해야 할 몇 가지 제한 사항이 있습니다.
+[`View`](xref:Xamarin.Forms.View)의 탐색 모음에 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)를 표시할 때 주의해야 할 몇 가지 제한 사항이 있습니다.
 
 - iOS에서는 `NavigationPage`의 탐색 모음에 배치된 보기가 큰 제목의 사용 가능 여부에 따라 다른 위치에 나타납니다. 큰 제목 사용에 대한 자세한 내용은 [큰 제목 표시](~/xamarin-forms/platform/ios/page-large-title.md)를 참조하세요.
 - Android에서는 `NavigationPage`의 탐색 모음에 보기를 배치하는 작업을 app-compat을 사용하는 앱에서만 수행할 수 있습니다.
-- `NavigationPage`의 탐색 모음에 [`ListView`](xref:Xamarin.Forms.ListView) 및 [`TableView`](xref:Xamarin.Forms.TableView)와 같은 크고 복잡한 보기를 배치하지 않는 것이 좋습니다.
+- [의 탐색 모음에 `ListView`](xref:Xamarin.Forms.ListView)[ 및 `TableView`](xref:Xamarin.Forms.TableView)`NavigationPage`와 같은 크고 복잡한 보기를 배치하지 않는 것이 좋습니다.
 
 ## <a name="related-links"></a>관련 링크
 

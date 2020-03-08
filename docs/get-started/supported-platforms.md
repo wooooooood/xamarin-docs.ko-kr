@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/22/2020
 ms.openlocfilehash: 5751983bf4a818e8ee91af98b0c05658efaca8b2
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76550230"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915655"
 ---
 # <a name="xamarinforms-supported-platforms"></a>Xamarin.Forms 지원 플랫폼
 
@@ -44,15 +44,15 @@ Xamarin.Forms는 iOS, Android 및 Windows 이외의 추가 플랫폼을 지원�
 
 최신 Android SDK 도구 및 Android API 플랫폼이 설치되어 있어야 합니다. [Android SDK Manager](~/android/get-started/installation/android-sdk.md)를 사용하여 최신 버전으로 업데이트할 수 있습니다.
 
-또한 Android 프로젝트에 대한 대상/컴파일 버전은 *가장 최근에 설치된 플랫폼을 사용*하도록 설정**되어야** 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 디바이스를 계속 지원할 수 있도록 API 19로 설정할 수 있습니다. 이러한 값은 **프로젝트 옵션**에서 설정합니다.
+또한 Android 프로젝트에 대한 대상/컴파일 버전은 **가장 최근에 설치된 플랫폼을 사용**하도록 설정*되어야* 합니다. 그러나 최소 버전은 Android 4.4 이상을 사용하는 디바이스를 계속 지원할 수 있도록 API 19로 설정할 수 있습니다. 이러한 값은 **프로젝트 옵션**에서 설정합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 **프로젝트 옵션 &gt; 애플리케이션 &gt; 애플리케이션 속성**
 
 ![Visual Studio의 Android 빌드 옵션](requirements-images/options-android-vs-sml.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio for Mac](#tab/macos)
 
 **빌드 > 일반**
 
@@ -60,7 +60,7 @@ Xamarin.Forms는 iOS, Android 및 Windows 이외의 추가 플랫폼을 지원�
 
 **빌드 &gt; Android 애플리케이션**
 
-![앱에 대한 최소 및 대상 Android 버전을 선택하세요.](requirements-images/options-android-sml.png)
+![앱에 대한 최소 및 대상 Android 버전을 선택합니다.](requirements-images/options-android-sml.png)
 
 -----
 

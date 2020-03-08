@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: a2435b30b7d5b468fca6c55d295c87b9a0d20652
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724435"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914819"
 ---
 # <a name="xamarinios-api-design"></a>Xamarin.ios API 디자인
 
@@ -76,7 +76,7 @@ Monotouch.dialog 코드와 통신 하는 하위 수준 런타임은 [Cruntime](#
   - C#이벤트 시스템
   - 대리자 C# (람다, 무명 메서드 및 `System.Delegate`)를 목표로 C api에 블록으로 노출 합니다.
 
-### <a name="assemblies"></a>Assemblies
+### <a name="assemblies"></a>어셈블리
 
 Xamarin.ios에는 *Xamarin.ios 프로필*을 구성 하는 많은 어셈블리가 포함 되어 있습니다. [어셈블리](~/cross-platform/internals/available-assemblies.md) 페이지에 자세한 정보가 있습니다.
 
@@ -93,7 +93,7 @@ Xamarin.ios에는 *Xamarin.ios 프로필*을 구성 하는 많은 어셈블리�
 
 Xamarin.ios는 목표-C C# 의 클래스 계층 구조에서 미러링합니다. 예를 들어, 목표-C 기본 클래스 NSObject는 C# [Foundation.](xref:Foundation.NSObject)n e s 개체를 통해 사용할 수 있습니다.
 
-이 네임 스페이스는 기본 목표-C Foundation 형식에 대 한 바인딩을 제공 하지만 일부 경우에는 기본 형식을 .NET 형식에 매핑 했습니다. 예를 들면 다음과 같습니다.
+이 네임 스페이스는 기본 목표-C Foundation 형식에 대 한 바인딩을 제공 하지만 일부 경우에는 기본 형식을 .NET 형식에 매핑 했습니다. 다음은 그 예입니다.
 
 - Nsstring 및 [nsstring](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html)를 처리 하는 대신 런타임은 API 전체에 C# [문자열](xref:System.String)s와 강력한 형식의 [배열을](xref:System.Array)제공 합니다.
 
@@ -218,7 +218,7 @@ P/Invoke는 Windows 및 Linux에서 네이티브 라이브러리를 호출 하�
 
 Xamarin.ios 응용 프로그램을 만드는 사용자에 게는 다음 몇 가지 섹션에서 설명 하는 것이 필요 하지 않지만 개발자가 작업을 수행 하는 방법을 이해 하 고 더 복잡 한 응용 프로그램을 만들 때이를 지원할 수 있습니다.
 
-#### <a name="types"></a>형식
+#### <a name="types"></a>유형
 
 잘 이해 하는 경우 C# 에 C# 는 형식이 낮은 수준의 Foundation 형식 대신 노출 됩니다.  즉, [API는 NSString 대신 C# "string" 형식을 사용](~/ios/internals/api-design/nsstring.md) 하 고 nsstring를 노출 하는 C# 대신 강력한 형식의 배열을 사용 합니다.
 
@@ -358,7 +358,7 @@ web.Delegate = new Notifier ();
 강력한 형식의 속성 외에도 개발자가 원하는 경우 다른 항목을 바인딩할 수 있도록 하는 약한 형식의 대리자도 있습니다.
 강력한 형식의 `Delegate` 속성이 Xamarin.ios의 바인딩에서 노출 되는 모든 위치에서 해당 하는 `WeakDelegate` 속성도 노출 됩니다.
 
-`WeakDelegate`사용 하는 경우 [내보내기](xref:Foundation.ExportAttribute) 특성을 사용 하 여 클래스를 적절 하 게 데코레이팅 하 여 선택기를 지정할 책임이 있습니다. 예를 들면 다음과 같습니다.
+`WeakDelegate`사용 하는 경우 [내보내기](xref:Foundation.ExportAttribute) 특성을 사용 하 여 클래스를 적절 하 게 데코레이팅 하 여 선택기를 지정할 책임이 있습니다. 다음은 그 예입니다.
 
 ```csharp
 class Notifier : NSObject  {
@@ -595,13 +595,13 @@ Mac용 Visual Studio 및 인터페이스 작성기를 사용 하는 경우이에
 
 목표-C 프로그래밍의 핵심 개념은 선택기입니다. 선택기를 전달 해야 하는 Api를 통해 또는 코드에서 선택기에 응답할 것으로 예상 하는 경우가 많습니다.
 
-에서 C# 새 선택기를 만드는 것은 매우 쉽습니다. `ObjCRuntime.Selector` 클래스의 새 인스턴스를 만들고이를 필요로 하는 API의 모든 장소에서 결과를 사용 하기만 하면 됩니다. 예를 들면 다음과 같습니다.
+에서 C# 새 선택기를 만드는 것은 매우 쉽습니다. `ObjCRuntime.Selector` 클래스의 새 인스턴스를 만들고이를 필요로 하는 API의 모든 장소에서 결과를 사용 하기만 하면 됩니다. 다음은 그 예입니다.
 
 ```csharp
 var selector_add = new Selector ("add:plus:");
 ```
 
-C# 메서드가 선택기 호출에 응답 하는 경우 `NSObject` 형식에서 상속 해야 하며, `[Export]` 특성을 C# 사용 하 여 해당 메서드를 선택기 이름으로 데코레이팅 해야 합니다. 예를 들면 다음과 같습니다.
+C# 메서드가 선택기 호출에 응답 하는 경우 `NSObject` 형식에서 상속 해야 하며, `[Export]` 특성을 C# 사용 하 여 해당 메서드를 선택기 이름으로 데코레이팅 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 public class MyMath : NSObject {
@@ -651,7 +651,7 @@ public Foo (NSCoder coder)
 
 Xamarin.ios API 디자인은 목표로 C 예외를 C# 발생 시 키 지 않습니다. 디자인은 첫 번째 위치의 가비지를 목표로 전송 하지 않도록 하 고, 생성 되어야 하는 모든 예외는 잘못 된 데이터가 목표-C 환경에 전달 되기 전에 바인딩 자체에서 생성 되도록 합니다.
 
-#### <a name="notifications"></a>알림
+#### <a name="notifications"></a>공지
 
 IOS 및 OS X 모두에서 개발자는 기본 플랫폼에서 브로드캐스팅하는 알림을 구독할 수 있습니다. `NSNotificationCenter.DefaultCenter.AddObserver` 메서드를 사용 하 여이 작업을 수행 합니다. `AddObserver` 메서드는 두 개의 매개 변수를 사용 합니다. 하나는 구독 하려는 알림입니다. 다른는 알림이 발생할 때 호출 되는 메서드입니다.
 

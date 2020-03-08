@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940833"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78916822"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -70,7 +70,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </application>
 ```
 
-또는 **AssemblyInfo.cs** (또는 **Properties.cs**)에서 응용 프로그램 `Theme` 특성을 설정할 수 있습니다. 예를 들면 다음과 같습니다.:
+또는 **AssemblyInfo.cs** (또는 **Properties.cs**)에서 응용 프로그램 `Theme` 특성을 설정할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -185,7 +185,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 또한 Android 5.0을 사용 하면 개별 보기의 스타일을 지정할 수 있습니다. 이전 섹션에서 설명한 대로 **색 .xml** 및 **스타일 .xml** 을 만든 후에는 **스타일 .xml**에 보기 스타일을 추가할 수 있습니다.
 개별 보기의 스타일을 만들려면 다음 단계를 사용 합니다.
 
-- **Resources/values-v21/styles** 를 편집 하 고 사용자 지정 보기 스타일의 이름과 함께 `style` 노드를 추가 합니다. 이 `style` 노드 내에서 보기에 대 한 사용자 지정 색 특성을 설정 합니다. 예를 들어 모퉁이가 더 둥글고 `my_blue`를 카드 배경색으로 사용 하는 사용자 지정 [CardView](~/android/user-interface/controls/card-view.md) 스타일을 만들려면 `resources`노드 내 에서 **스타일 .xml**에 `style`노드를 추가 하 고 배경색을 구성 합니다. 모퉁이 반경:
+- **Resources/values-v21/styles** 를 편집 하 고 사용자 지정 보기 스타일의 이름과 함께 `style` 노드를 추가 합니다. 이 `style` 노드 내에서 보기에 대 한 사용자 지정 색 특성을 설정 합니다. 예를 들어 더 많은 모퉁이가 있는 사용자 지정 [CardView](~/android/user-interface/controls/card-view.md) 스타일을 만들고 카드 배경색으로 `my_blue`를 사용 하려면 `resources` 노드 내에서 `style` 노드를 **스타일 .xml** 에 추가 하 고 배경색 및 모퉁이 반경을 구성 합니다.
 
 ```xml
 <!-- Theme an individual view: -->
@@ -199,7 +199,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </style>
 ```
 
-- 레이아웃에서 해당 보기에 대 한 `style` 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 예를 들면 다음과 같습니다.:
+- 레이아웃에서 해당 보기에 대 한 `style` 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 예를 들면 다음과 같습니다.
 
 ```xml
 <android.support.v7.widget.CardView
@@ -219,7 +219,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 하향 호환 스타일로 자동으로 전환 하도록 앱의 스타일을 설정 하려면 다음 단계를 사용 합니다.
 
-- 재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.:
+- 재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.
 
 ```xml
 <resources>
@@ -229,7 +229,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </resources>
 ```
 
-- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.:
+- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.
 
 ```xml
 <resources>
@@ -240,7 +240,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 ```
 
 - **Androidmanifest**에서 사용자 지정 테마 이름으로 앱을 구성 합니다. 
-    예를 들면 다음과 같습니다.:
+    예를 들면 다음과 같습니다.
 
 ```xml
 <application android:label="MyApp" 

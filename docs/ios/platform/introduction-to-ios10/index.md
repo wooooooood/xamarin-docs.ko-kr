@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: ce262faf2d79e6a2cc969df582446fdc2ec29bde
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032218"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910860"
 ---
 # <a name="introduction-to-ios-10"></a>iOS 10 소개
 
@@ -52,7 +52,7 @@ Apple은 iOS 10에서 몇 가지 새로운 앱 확장 지점이 제공 됩니다
 - `UITextDocumentProxy` 클래스의 새 `DocumentInputMode` 속성은 문서의 입력 언어를 결정 하 고 키보드 확장을 해당 언어와 맞출 수 있습니다.
 - 새 `HandleInputModeList` 메서드를 사용 하면 키보드 확장에서 탭 하 고 있는 지구본 키에 대 한 응답으로 시스템의 키보드 선택기 메뉴를 표시할 수 있습니다.
 
-자세한 내용은 [확장 소개](~/ios/platform/extensions.md), [메시지 앱 통합](~/ios/platform/message-app-integration/index.md), [사전 권장 사항](~/ios/platform/search/proactive-suggestions.md)소개, [sirikit](~/ios/platform/sirikit/index.md)소개, [사용자 알림 소개](~/ios/platform/user-notifications/index.md) 및 Apple의 [소개를 참조 하세요. 앱 확장 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
+자세한 내용은 [확장 소개](~/ios/platform/extensions.md), [메시지 앱 통합](~/ios/platform/message-app-integration/index.md), [사전 권장 사항](~/ios/platform/search/proactive-suggestions.md)소개, [Sirikit](~/ios/platform/sirikit/index.md)소개, [사용자 알림 소개](~/ios/platform/user-notifications/index.md) 및 Apple [앱 확장 프로그래밍 가이드](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)를 참조 하세요.
 
 ## <a name="app-search-enhancements"></a>앱 검색 기능 향상
 
@@ -123,7 +123,7 @@ iOS 10은 시스템이 적절 한 시간에 자동으로 유용한 정보를 사
 - 앱 전환기
 - 잠금 화면
 - CarPlay
-- 맵
+- 지도
 - Siri 상호 작용
 - QuickType 제안
 
@@ -168,7 +168,7 @@ Siri는 일반적으로 모든 사용자 상호 작용을 처리 하지만 앱 �
 
 iOS 10에는 앱에서 연속 음성 인식 및 높여줄 음성 (라이브 또는 녹화 된 오디오 스트림에서)을 텍스트로 사용할 수 있도록 하는 새로운 Speech API 포함 되어 있습니다.
 
-음성 인식은 Apple 서버에서 데이터의 전송 및 임시 저장을 요구 하기 때문에 앱은 `Info.plist` 파일에 `NSSpeechRecognitionUsageDescription` 키를 포함 하 고 `SFSpeechRecognizer.RequestAutorization`를 호출 하 여 사용자에 게 인식을 수행할 수 있는 권한을 요청 _해야 합니다_ . 방법이.
+음성 인식에는 Apple 서버에서 데이터의 전송 및 임시 저장소가 필요 하므로 앱은 `Info.plist` 파일에 `NSSpeechRecognitionUsageDescription` 키를 포함 하 고 `SFSpeechRecognizer.RequestAutorization` 메서드를 호출 하 여 사용자의 인식을 수행할 수 있는 권한을 요청 _해야 합니다_ .
 
 자세히 알아보려면 [음성 인식 소개](~/ios/platform/speech.md) 가이드를 참조 하세요.
 

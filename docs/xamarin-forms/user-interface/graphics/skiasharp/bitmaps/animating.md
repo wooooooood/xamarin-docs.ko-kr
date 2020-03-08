@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
 ms.openlocfilehash: 33e17a01d8a13fcdaee27e5857c554a4a232c534
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228047"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917860"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>SkiaSharp 비트맵에 애니메이션 적용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-일반적으로 SkiaSharp 그래픽에 애니메이션을 적용 하는 응용 프로그램 호출 `InvalidateSurface` 에 `SKCanvasView` 종종 16 밀리초 마다 고정 요금. 에 대 한 호출을 트리거하는 화면을 무효화 합니다 `PaintSurface` 처리기 표시를 다시 그려야 합니다. 시각적 개체에는 초당 60 번 그려지는,으로 애니메이션을 적용할 원활 하 게 표시 됩니다.
+SkiaSharp 그래픽에 애니메이션을 적용 하는 응용 프로그램은 일반적으로 16 밀리초 마다 고정 속도로 `SKCanvasView`에 `InvalidateSurface`를 호출 합니다. 화면을 무효화 하면 `PaintSurface` 처리기에 대 한 호출이 트리거되어 표시를 다시 그립니다. 시각적 개체에는 초당 60 번 그려지는,으로 애니메이션을 적용할 원활 하 게 표시 됩니다.
 
 그러나 그래픽에 16 밀리초에서 렌더링할 너무 복잡 한 경우 애니메이션 흔들림 될 수 있습니다. 프로그래머가 30 배 또는 15 번 초 새로 고침 빈도 줄일 수도 있지만 되기도 하는 충분 하지 않습니다. 경우에 따라 그래픽은 복잡 하 게 하는 단순히 렌더링할 수 없습니다 실시간에서입니다.
 
@@ -34,13 +34,13 @@ SkiaSharp에서 유사 하 게 수행할 수 있습니다. 이 문서에서는 �
 
 ## <a name="bitmap-animation"></a>비트맵 애니메이션
 
-Mandelbrot 집합을 시각적으로 썼으며 이지만 computionally 매우 긴 경우 (여기에 수학 및 Mandelbrot 집합의 내용은 참조 하세요. [의 20 장 _Creating Mobile Apps with Xamarin.Forms_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) 666 페이지를 시작 합니다. 다음 설명에서는 해당 배경 지식을)
+Mandelbrot 집합을 시각적으로 썼으며 이지만 computionally 매우 긴 경우 여기에 사용 된 만델브로트 집합 및 수학에 대 한 자세한 내용은 666 페이지에서 시작 [ _하는 xamarin.ios를 사용 하 여 Mobile Apps 만들기_ 의 20 장](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) 을 참조 하세요. 다음 설명에서는 해당 배경 지식을)
 
-합니다 [ **Mandelbrot 애니메이션** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) 샘플 Mandelbrot 집합에서 고정된 소수점의 지속적인 확대를 시뮬레이션 하기 위해 비트맵 애니메이션을 사용 합니다. 를 축소 하 여 다음 확대/축소 하 고 주기가 영구적으로 또는 프로그램을 종료할 때까지 반복 됩니다.
+[**만델브로트 애니메이션**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) 샘플에서는 비트맵 애니메이션을 사용 하 여 만델브로트 집합에서 고정 소수점의 연속 확대를 시뮬레이션 합니다. 를 축소 하 여 다음 확대/축소 하 고 주기가 영구적으로 또는 프로그램을 종료할 때까지 반복 됩니다.
 
-이 애니메이션에 대 한 응용 프로그램 로컬 저장소에 저장 하는 50 비트맵까지 만들어 프로그램을 준비 합니다. 각 비트맵은 이전 비트맵 너비와 높이 복합 평면의의 절반을 포함합니다. (프로그램에 이러한 비트맵을 나타내는 정수 라고 _확대/축소 수준_.) 비트맵 순서로 표시 됩니다. 각 비트맵의 배율을 다른 하나의 비트맵에서 원활한 진행을 위해 애니메이션 효과가 적용 됩니다.
+이 애니메이션에 대 한 응용 프로그램 로컬 저장소에 저장 하는 50 비트맵까지 만들어 프로그램을 준비 합니다. 각 비트맵은 이전 비트맵 너비와 높이 복합 평면의의 절반을 포함합니다. 프로그램에서는 이러한 비트맵이 정수 _확대/축소 수준을_나타내는 것으로 간주 됩니다. 그런 다음 비트맵이 차례로 표시 됩니다. 각 비트맵의 배율을 다른 하나의 비트맵에서 원활한 진행을 위해 애니메이션 효과가 적용 됩니다.
 
-20 장에서에서 설명 하는 최종 프로그램 같은 _Creating Mobile Apps with Xamarin.Forms_에서 Mandelbrot 집합의 계산 **Mandelbrot 애니메이션** 8을 사용 하 여 비동기 메서드 매개 변수입니다. 매개 변수는 복잡 한 중심점 너비 및 높이 중심점을 둘러싼 복합 평면의 포함 합니다. 다음 세 매개 변수는 픽셀 너비 및 만들려는 비트맵의 높이 및 최대 재귀 계산에 대 한 반복입니다. `progress` 매개 변수를 사용이 계산의 진행률을 표시 합니다. `cancelToken` 매개 변수는이 프로그램에서 사용 되지 않습니다.
+_Xamarin.ios를 사용 하 여 Mobile Apps 만들기_의 20 장에서 설명 하는 최종 프로그램과 마찬가지로, **만델브로트 애니메이션** 에서 만델브로트 집합을 계산 하는 것은 매개 변수가 8 개인 비동기 메서드입니다. 매개 변수는 복잡 한 중심점 너비 및 높이 중심점을 둘러싼 복합 평면의 포함 합니다. 다음 세 매개 변수는 픽셀 너비 및 만들려는 비트맵의 높이 및 최대 재귀 계산에 대 한 반복입니다. `progress` 매개 변수는이 계산의 진행 상태를 표시 하는 데 사용 됩니다. `cancelToken` 매개 변수는이 프로그램에서 사용 되지 않습니다.
 
 ```csharp
 static class Mandelbrot
@@ -107,7 +107,7 @@ static class Mandelbrot
 }
 ```
 
-형식의 개체를 반환 하는 메서드 `BitmapInfo` 비트맵 만들기에 대 한 정보를 제공 합니다.
+메서드는 비트맵을 만들기 위한 정보를 제공 하는 `BitmapInfo` 형식의 개체를 반환 합니다.
 
 ```csharp
 class BitmapInfo
@@ -127,7 +127,7 @@ class BitmapInfo
 }
 ```
 
-합니다 **Mandelbrot 애니메이션** XAML 파일에 두 개의 `Label` 뷰를 `ProgressBar`, 및 `Button` 뿐만 `SKCanvasView`:
+**만델브로트 Animation** XAML 파일에는 두 개의 `Label` 뷰, `ProgressBar`및 `SKCanvasView``Button` 포함 됩니다.
 
 ```csharp
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -179,11 +179,11 @@ public partial class MainPage : ContentPage
 }
 ```
 
-어느 시점에서에서는 아마도 변경 하려는 `COUNT` 값을 50 애니메이션의 전체 범위를 확인 합니다. 50 보다 큰 값 유용합니다. 48 정도의 확대/축소 수준, 배정밀도 부동 소수점 숫자의 해상도 Mandelbrot 집합 계산에 대 한 부족 한 됩니다. 이 문제는 684 페이지에서 설명 _Creating Mobile Apps with Xamarin.Forms_합니다.
+어느 시점에서 `COUNT` 값을 50로 변경 하 여 애니메이션의 전체 범위를 볼 수 있습니다. 50 보다 큰 값 유용합니다. 48 정도의 확대/축소 수준, 배정밀도 부동 소수점 숫자의 해상도 Mandelbrot 집합 계산에 대 한 부족 한 됩니다. 이 문제는 _xamarin.ios를 사용 하 여 Mobile Apps 만들기_의 684 페이지에서 설명 합니다.
 
-`center` 값이 매우 중요 합니다. 이 애니메이션 확대/축소의 초점 이기도 합니다. 파일의 세 가지 값의 20 장 최종 스크린샷 세 개에 사용 된 _Creating Mobile Apps with Xamarin.Forms_ 페이지 684, 하지만 고유한 값 중 하나를 사용 하는 장에서 프로그램을 사용 하 여 실험할 수 있습니다.
+`center` 값이 매우 중요 합니다. 이 애니메이션 확대/축소의 초점 이기도 합니다. 파일의 세 가지 값은 684 페이지에서 _xamarin.ios를 사용 하 여 Mobile Apps를 만드는 방법_ 20 장에서 사용 된 세 가지 방법 중 하나 이며, 해당 챕터의 프로그램을 시험 하 여 고유한 값 중 하나를 얻을 수 있습니다.
 
-합니다 **Mandelbrot 애니메이션** 이러한 샘플 저장 `COUNT` 로컬 응용 프로그램 저장소에는 비트맵입니다. 50 비트맵 20mb가 넘는 장치에서 저장소 이러한 비트맵 차지 하 고 저장소 양을 알아야 할 수 있도록 하며 시점에서 모두 삭제 하려고 할 수 있습니다. 아래쪽의 두 가지 방법의 용도는 `MainPage` 클래스:
+**만델브로트 Animation** 샘플은 이러한 `COUNT` 비트맵을 로컬 응용 프로그램 저장소에 저장 합니다. 50 비트맵 20mb가 넘는 장치에서 저장소 이러한 비트맵 차지 하 고 저장소 양을 알아야 할 수 있도록 하며 시점에서 모두 삭제 하려고 할 수 있습니다. 이는 `MainPage` 클래스의 맨 아래에 있는 다음 두 메서드의 용도입니다.
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -215,9 +215,9 @@ public partial class MainPage : ContentPage
 
 프로그램은 메모리에 유지 하므로 프로그램 동일한 그러한 비트맵에 애니메이션 효과 하는 동안 로컬 저장소에 비트맵을 삭제할 수 있습니다. 하지만 프로그램을 실행 하면 다음에 해야 비트맵을 다시 만듭니다.
 
-로컬 응용 프로그램 저장소에 저장 된 비트맵 통합 합니다 `center` 값은 파일 이름에 변경한 경우를 `center` 설정을 기존 비트맵 저장소에 대체 되지 것입니다 및 공간을 차지 계속 합니다.
+로컬 응용 프로그램 저장소에 저장 된 비트맵은 파일 이름에 `center` 값을 통합 하므로 `center` 설정을 변경 하는 경우 기존 비트맵이 저장소에서 대체 되지 않으며 계속 공간을 차지 하 게 됩니다.
 
-같습니다. 메서드는 `MainPage` 는 파일 이름을 생성 하기 위한 사용 뿐만 `MakePixel` 색 구성 요소를 기반으로 한 픽셀 값을 정의 하기 위한 메서드:
+다음은 파일 이름을 생성 하는 데 사용 하는 메서드와 색 구성 요소를 기반으로 픽셀 값을 정의 하는 `MakePixel` 메서드 `MainPage`입니다.
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -238,9 +238,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-합니다 `zoomLevel` 매개 변수를 `FilePath` 범위는 0에서는 `COUNT` 상수 1을 뺀 값입니다.
+`zoomLevel` 매개 변수는 0부터 `COUNT` 상수에서 1을 뺀 범위 `FilePath` 합니다.
 
-합니다 `MainPage` 생성자 호출을 `LoadAndStartAnimation` 메서드:
+`MainPage` 생성자는 `LoadAndStartAnimation` 메서드를 호출 합니다.
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -256,7 +256,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-`LoadAndStartAnimation` 메서드는 만들어진 있습니다 프로그램 이전에 실행 될 때 모든 비트맵을 로드 하려면 응용 프로그램 로컬 저장소에 액세스 하는 일을 담당 합니다. 반복 하 고 `zoomLevel` 값을 0에서 `COUNT`합니다. 파일이 존재 하는 경우에 로드 된 `bitmaps` 배열입니다. 특정 비트맵을 만드는 데 필요한이 고, 그렇지 `center` 하 고 `zoomLevel` 를 호출 하 여 값 `Mandelbrot.CalculateAsync`합니다. 해당 메서드가이 메서드를 색상으로 변환 하는 각 픽셀에 대 한 반복 수를 가져옵니다.
+`LoadAndStartAnimation` 메서드는 이전에 프로그램이 실행 되었을 때 만들어진 모든 비트맵을 로드 하기 위해 응용 프로그램 로컬 저장소에 액세스 하는 책임이 있습니다. 0에서 `COUNT``zoomLevel` 값을 반복 합니다. 파일이 있으면 `bitmaps` 배열에 로드 합니다. 그렇지 않으면 `Mandelbrot.CalculateAsync`를 호출 하 여 특정 `center`에 대 한 비트맵을 만들고 값을 `zoomLevel` 해야 합니다. 해당 메서드가이 메서드를 색상으로 변환 하는 각 픽셀에 대 한 반복 수를 가져옵니다.
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -374,13 +374,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-프로그램에서 장치의 사진 라이브러리 아닌 로컬 응용 프로그램 저장소에 이러한 비트맵을 저장 하는 것을 확인 합니다. .NET Standard 2.0 라이브러리를 사용 하면 친숙 한을 사용 하 여 `File.OpenRead` 고 `File.WriteAllBytes` 이 작업에 대 한 메서드.
+프로그램에서 장치의 사진 라이브러리 아닌 로컬 응용 프로그램 저장소에 이러한 비트맵을 저장 하는 것을 확인 합니다. .NET Standard 2.0 라이브러리를 사용 하면이 작업에 익숙한 `File.OpenRead` 및 `File.WriteAllBytes` 메서드를 사용할 수 있습니다.
 
-메서드를 시작 하는 모든 비트맵 만들거나 메모리에 로드 한 후에 `Stopwatch` 개체와 호출 `Device.StartTimer`합니다. `OnTimerTick` 16 밀리초 마다 호출 됩니다.
+모든 비트맵이 생성 되거나 메모리로 로드 된 후 메서드는 `Stopwatch` 개체를 시작 하 고 `Device.StartTimer`를 호출 합니다. `OnTimerTick` 메서드는 16 밀리초 마다 호출 됩니다.
 
-`OnTimerTick` 계산을 `time` 6000 시간이 0 까지의 시간 (밀리초)의 값 `COUNT`, 각 비트맵의 표시를 위한 6 초 apportions입니다. 합니다 `progress` 사용 하 여 값을 `Math.Sin` 주기의 시작 부분에서 성능이 저하 됩니다 하는 사인 곡선 애니메이션을 만드는 값 및 느린 것으로 끝 방향을 반대로 바꿉니다.
+`OnTimerTick`는 `time` 값을 밀리초 단위로 계산 하며,이 값은 0 ~ 6000 시간 `COUNT`이며, 각 비트맵이 표시 되는 데 6 초 정도 걸립니다. `progress` 값은 `Math.Sin` 값을 사용 하 여 주기 시작에서 속도가 느려지고 방향이 반전 되는 끝에서 느려지는 사인 곡선 애니메이션을 만듭니다.
 
-합니다 `progress` 값을 0에서 범위 `COUNT`합니다. 즉, 변수의 정수 부분과 `progress` 인덱스인 합니다 `bitmaps` 배열에 생성 되 고 소수 부분의 `progress` 해당 특정 비트맵을 확대/축소 수준을 나타냅니다. 이러한 값에 저장 됩니다는 `bitmapIndex` 및 `bitmapProgress` 필드 및 하 여 표시 되는 `Label` 및 `Slider` XAML 파일에. `SKCanvasView` 비트맵 디스플레이를 업데이트 무효화 됩니다.
+`progress` 값의 범위는 0에서 `COUNT`까지입니다. 즉, `progress`의 정수 부분은 `bitmaps` 배열의 인덱스이 고, `progress`의 소수 부분은 특정 비트맵의 확대/축소 수준을 나타냅니다. 이러한 값은 `bitmapIndex` 및 `bitmapProgress` 필드에 저장 되며 XAML 파일의 `Label` 및 `Slider` 표시 됩니다. `SKCanvasView`은 비트맵 표시를 업데이트 하는 데 무효가 됩니다.
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -421,7 +421,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-마지막으로, 합니다 `PaintSurface` 처리기는 `SKCanvasView` 가로 세로 비율을 유지 하면서 가능한 한 큰 비트맵을 표시 하려면 대상 사각형을 계산 합니다. 소스 사각형을 기반으로 합니다 `bitmapProgress` 값입니다. 합니다 `fraction` 값 범위는 0에서 계산 여기 `bitmapProgress` 0.25 경우 전체 비트맵을 표시 하려면 0 `bitmapProgress` 는 너비와 높이 확대/축소를 효과적으로 비트맵의 절반을 표시할 1:
+마지막으로, `SKCanvasView`의 `PaintSurface` 처리기는 가로 세로 비율을 유지 하면서 최대한 크게 비트맵을 표시 하는 대상 사각형을 계산 합니다. 소스 사각형은 `bitmapProgress` 값을 기반으로 합니다. 여기에서 계산 된 `fraction` 값은 `bitmapProgress` 0부터 전체 비트맵 0.25을 표시 하 고 `bitmapProgress`가 1 이면 비트맵의 너비와 높이의 절반을 표시 하 고 효과적으로 확대/축소 합니다.
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -461,15 +461,15 @@ public partial class MainPage : ContentPage
 }
 ```
 
-실행 중인 프로그램이 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![Mandelbrot 애니메이션](animating-images/MandelbrotAnimation.png "Mandelbrot 애니메이션")](animating-images/MandelbrotAnimation-Large.png#lightbox)
+[![만델브로트 애니메이션](animating-images/MandelbrotAnimation.png "만델브로트 애니메이션")](animating-images/MandelbrotAnimation-Large.png#lightbox)
 
 ## <a name="gif-animation"></a>GIF 애니메이션
 
-형식 GIF (Graphics Interchange) 사양 장면의 루프에서 자주 연속적으로 표시 될 수 있는 여러 순차 프레임을 포함 하도록 단일 GIF 파일을 허용 하는 기능이 있습니다. 이러한 파일 이라고 _애니메이션 된 Gif_합니다. 웹 브라우저는 애니메이션된 Gif를 재생할 수 있습니다 하 고 SkiaSharp 응용 프로그램 애니메이션된 GIF 파일에서 프레임을 추출 하 고 순차적 표시를 허용 합니다.
+형식 GIF (Graphics Interchange) 사양 장면의 루프에서 자주 연속적으로 표시 될 수 있는 여러 순차 프레임을 포함 하도록 단일 GIF 파일을 허용 하는 기능이 있습니다. 이러한 파일을 _애니메이션 gif_라고 합니다. 웹 브라우저는 애니메이션된 Gif를 재생할 수 있습니다 하 고 SkiaSharp 응용 프로그램 애니메이션된 GIF 파일에서 프레임을 추출 하 고 순차적 표시를 허용 합니다.
 
-합니다 [SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플 이라는 애니메이션된 GIF 리소스가 포함 **Newtons_cradle_animation_book_2.gif** DemonDeLuxe 만들고에서 다운로드를 [뉴턴의 크레들에 놓기를 ](https://en.wikipedia.org/wiki/Newton%27s_cradle) Wikipedia의 페이지입니다. 합니다 **애니메이션 GIF** 해당 정보를 제공 하 고 인스턴스화하는 XAML 파일을 포함 하는 페이지는 `SKCanvasView`:
+[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에는 DemonDeLuxe에 의해 생성 되 고 위키백과의 [뉴턴의 크레들에 놓기](https://en.wikipedia.org/wiki/Newton%27s_cradle) 페이지에서 다운로드 한 **Newtons_cradle_animation_book_2** 라는 애니메이션 gif 리소스가 포함 되어 있습니다. **애니메이션 GIF** 페이지에는 해당 정보를 제공 하 고 `SKCanvasView`를 인스턴스화하는 XAML 파일이 포함 되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -500,15 +500,15 @@ public partial class MainPage : ContentPage
 
 애니메이션된 GIF 파일의 프레임을 추출 하려면 SkisSharp 사용 하지 않는 것 어디서 나 문서화 대 한 설명은 아래 코드는 평소 보다 더 자세한 이므로:
 
-페이지의 생성자에서 발생 하 고는 애니메이션된 GIF 파일 디코딩 합니다 `Stream` 비트맵을 참조 하는 개체를 만드는 데 사용할를 `SKManagedStream` 개체 차례로 [ `SKCodec` ](xref:SkiaSharp.SKCodec) 개체입니다. 합니다 [ `FrameCount` ](xref:SkiaSharp.SKCodec.FrameCount) 속성 애니메이션을 구성 하는 프레임의 수를 나타냅니다.
+애니메이션 GIF 파일의 디코딩은 페이지의 생성자에서 발생 하며, 비트맵을 참조 하는 `Stream` 개체를 사용 하 여 `SKManagedStream` 개체를 만든 다음 [`SKCodec`](xref:SkiaSharp.SKCodec) 개체를 사용 해야 합니다. [`FrameCount`](xref:SkiaSharp.SKCodec.FrameCount) 속성은 애니메이션을 구성 하는 프레임 수를 나타냅니다.
 
-이러한 프레임 생성자를 사용 하므로 결과적으로 개별 비트맵으로 저장 됩니다 `FrameCount` 형식의 배열을 할당할 `SKBitmap` 두 뿐만 아니라 `int` 누적 된 기간 동안 각 프레임의와 (보다 쉽게 애니메이션 논리) 배열 재생 시간입니다.
+이러한 프레임은 궁극적으로 개별 비트맵으로 저장 되므로 생성자는 `FrameCount`을 사용 하 여 각 프레임의 기간에 대해 두 개의 `int` 배열과 각 프레임의 기간에 대해 두 개의 배열을 `SKBitmap` 할당 하 고 누적 된 기간을 줄이기 위해를 사용 합니다.
 
-합니다 [ `FrameInfo` ](xref:SkiaSharp.SKCodec.FrameInfo) 속성을 `SKCodec` 클래스는 배열을 [ `SKCodecFrameInfo` ](xref:SkiaSharp.SKCodecFrameInfo) 값, 각 프레임을 하지만이 프로그램은 해당 구조에서 유일한 항목에 대 한이를 [ `Duration` ](xref:SkiaSharp.SKCodecFrameInfo.Duration) 프레임의 시간 (밀리초)입니다.
+`SKCodec` 클래스의 [`FrameInfo`](xref:SkiaSharp.SKCodec.FrameInfo) 속성은 각 프레임 마다 하나씩 [`SKCodecFrameInfo`](xref:SkiaSharp.SKCodecFrameInfo) 값의 배열 이지만이 프로그램은 해당 구조에서 사용 하는 유일한 작업은 프레임의 [`Duration`](xref:SkiaSharp.SKCodecFrameInfo.Duration) (밀리초)입니다.
 
-`SKCodec` 라는 속성을 정의 [ `Info` ](xref:SkiaSharp.SKCodec.Info) 형식의 [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo)하지만 `SKImageInfo` 값을 나타냅니다 (적어도이 이미지에 대 한) 색 형식이 `SKColorType.Index8`, 즉 각 픽셀이 색 유형으로 인덱스 됩니다. 색상표를 사용 하지 않으려면 프로그램을 사용 하는 [ `Width` ](xref:SkiaSharp.SKImageInfo.Width) 하 고 [ `Height` ](xref:SkiaSharp.SKImageInfo.Height) 컬러를 소유 하는 정보를 생성 하는 구조는 `ImageInfo` 값. 각 `SKBitmap` 에서 만들어집니다.
+`SKCodec` [`SKImageInfo`](xref:SkiaSharp.SKImageInfo)형식의 [`Info`](xref:SkiaSharp.SKCodec.Info) 라는 속성을 정의 하지만 해당 `SKImageInfo` 값은 (적어도이 이미지) 색 형식이 `SKColorType.Index8`임을 나타냅니다. 즉, 각 픽셀은 색 형식의 인덱스입니다. 신경를 방지 하기 위해 프로그램은 [`Width`](xref:SkiaSharp.SKImageInfo.Width) 를 사용 하 고 해당 구조의 정보를 [`Height`](xref:SkiaSharp.SKImageInfo.Height) 하 여 자체의 전체 색 `ImageInfo` 값을 생성 합니다. 해당에서 각 `SKBitmap` 만들어집니다.
 
-합니다 `GetPixels` 메서드의 `SKBitmap` 반환을 `IntPtr` 해당 비트맵의 픽셀 비트를 참조 합니다. 이러한 픽셀 비트 아직 설정 되지 않았습니다. `IntPtr` 중 하나에 전달 되는 [ `GetPixels` ](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) 메서드의 `SKCodec`합니다. 해당 메서드에 복사 프레임 GIF 파일에서 참조 하는 메모리 공간을 `IntPtr`입니다. 합니다 [ `SKCodecOptions` ](xref:SkiaSharp.SKCodecOptions) 생성자 프레임 수를 나타냅니다.
+`SKBitmap`의 `GetPixels` 메서드는 해당 비트맵의 픽셀 비트를 참조 하는 `IntPtr` 반환 합니다. 이러한 픽셀 비트 아직 설정 되지 않았습니다. 이 `IntPtr`은 `SKCodec`의 [`GetPixels`](xref:SkiaSharp.SKCodec.GetPixels(SkiaSharp.SKImageInfo,System.IntPtr,SkiaSharp.SKCodecOptions)) 메서드 중 하나로 전달 됩니다. 이 메서드는 GIF 파일의 프레임을 `IntPtr`에서 참조 하는 메모리 공간에 복사 합니다. [`SKCodecOptions`](xref:SkiaSharp.SKCodecOptions) 생성자는 프레임 번호를 나타냅니다.
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -576,11 +576,11 @@ public partial class AnimatedGifPage : ContentPage
 }
 ```
 
-불구 하 고는 `IntPtr` 값을 no `unsafe` 되므로 코드 작업이 필요 합니다 `IntPtr` 는 C# 포인터 값으로 변환 되지 않습니다.
+`IntPtr` 값에도 불구 하 고 `IntPtr` C# 포인터 값으로 변환 되지 않으므로 `unsafe` 코드가 필요 하지 않습니다.
 
 각 프레임을 추출한 후 생성자, 모든 프레임의 기간을 합계 하 고 누적된 기간을 사용 하 여 다른 배열을 초기화 합니다.
 
-코드 숨김 파일의 나머지 애니메이션께 바 칩니다. `Device.StartTimer` 메서드, 타이머를 시작 하는 및 `OnTimerTick` 콜백을 사용 하는 `Stopwatch` 경과 시간 (밀리초) 결정 하는 개체입니다. 누적된 기간 배열을 통해 반복 하는 것은 충분 한 현재 프레임을 찾으려면:
+코드 숨김 파일의 나머지 애니메이션께 바 칩니다. `Device.StartTimer` 메서드는 타이머를 시작 하는 데 사용 되 고 `OnTimerTick` 콜백은 `Stopwatch` 개체를 사용 하 여 경과 된 시간 (밀리초)을 결정 합니다. 누적된 기간 배열을 통해 반복 하는 것은 충분 한 현재 프레임을 찾으려면:
 
 ```csharp
 public partial class AnimatedGifPage : ContentPage
@@ -651,7 +651,7 @@ public partial class AnimatedGifPage : ContentPage
 }
 ```
 
-때마다 합니다 `currentframe` 변수 변경은 `SKCanvasView` 무효화 됩니다 하 고 새 프레임에 표시 됩니다:
+`currentframe` 변수가 변경 될 때마다 `SKCanvasView` 무효화 되 고 새 프레임이 표시 됩니다.
 
 [![애니메이션 GIF](animating-images/AnimatedGif.png "애니메이션 GIF")](animating-images/AnimatedGif-Large.png#lightbox)
 
@@ -661,4 +661,4 @@ public partial class AnimatedGifPage : ContentPage
 
 - [SkiaSharp Api](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [Mandelbrot 애니메이션 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima)
+- [만델브로트 애니메이션 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima)

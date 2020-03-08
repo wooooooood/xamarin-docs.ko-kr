@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
 ms.openlocfilehash: 1bb0fae73a1e3647cdc0e3266c7b44ac04fcc1ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73020421"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78914214"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Xamarin Android를 사용 하 여 File Storage 및 액세스
 
@@ -23,7 +23,7 @@ Android 앱에 대 한 일반적인 요구 사항은 사진을 저장 하거나,
 
 이러한 그룹은 개념적 으로만 사용할 수 있으며 장치에서 단일 파티션 또는 디렉터리를 반드시 참조할 필요는 없습니다. Android 장치는 항상 내부 저장소 및 외부 저장소에 대 한 파티션을 제공 합니다. 특정 장치에 외부 저장소로 간주 되는 파티션이 여러 개 있을 수 있습니다. 파티션에 관계 없이 파일 읽기, 쓰기 또는 만들기를 위한 Api가 동일 합니다. Xamarin Android 응용 프로그램에서 파일 액세스에 사용할 수 있는 두 가지 Api 집합이 있습니다.
 
-1. **.Net api (Mono에서 제공되고 xamarin.ios로 래핑된)** &ndash; 여기에는 [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android)에서 제공하는 [파일 시스템 도우미가](~/essentials/file-system-helpers.md?context=xamarin/android) 포함됩니다. .NET Api는 최고의 플랫폼 간 호환성을 제공 하며이 가이드는 이러한 Api에 중점을 둡니다.
+1. 여기에는 Xamarin.ios에서 **제공 하는 .Net api (Mono에서 제공 하 고 xamarin.ios에서 래핑된)** &ndash; 여기에는 [xamarin.ios](~/essentials/index.md?context=xamarin/android)에서 제공 하는 [파일 시스템 도우미가](~/essentials/file-system-helpers.md?context=xamarin/android) 포함 됩니다. .NET Api는 최고의 플랫폼 간 호환성을 제공 하며이 가이드는 이러한 Api에 중점을 둡니다.
 1. Java **에서 제공 하 고 xamarin.ios로 래핑된 네이티브 java 파일 액세스 Api는** 파일 읽기 및 쓰기를 위한 자체 api를 제공 &ndash; 합니다. 이러한 항목은 .NET Api에 대 한 완전 한 대안 이지만 Android에만 해당 되며 플랫폼 간으로 사용 되는 앱에는 적합 하지 않습니다.
 
 파일 읽기 및 쓰기는 다른 .NET 응용 프로그램에 대 한 것 처럼 Xamarin.ios에서 거의 동일 합니다. Xamarin Android 앱은 조작할 파일의 경로를 결정 한 다음 파일 액세스에 표준 .NET 관용구을 사용 합니다. 내부 및 외부 저장소의 실제 경로는 장치 마다 다르거나 Android 버전에서 Android 버전으로 다를 수 있으므로 파일 경로를 하드 코딩 하는 것은 좋지 않습니다. 대신, Xamarin.ios Api를 사용 하 여 파일 경로를 확인 합니다. 이러한 방식으로 파일을 읽고 쓰기 위한 .NET Api는 내부 및 외부 저장소에 있는 파일의 경로를 결정 하는 데 도움이 되는 네이티브 Android Api를 노출 합니다.

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 4731be58c1fadae0bba6768570ecfd181b071dd2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031859"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915709"
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 사용자 인터페이스 개요
 
@@ -201,7 +201,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
  [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
 
-`TopLayoutGuide/BottomLayoutGuide` 및 `EdgesForExtendedLayout` Api가 비슷한 효과는 있지만 서로 다른 목표를 채우는 것을 의미 합니다. `EdgesForExtendedLayout` 설정을 기본값에서 변경 하면 iOS 6 용으로 설계 된 응용 프로그램의 잘린 보기가 수정 될 수 있지만, 좋은 iOS 7 디자인은 전체 화면 미적을 준수 하 고 `TopLayoutGuide` 및 `BottomLayoutGuide`를 적절히 활용 하 여 전체 화면 보기 환경을 제공 해야 합니다. 사용자를 위한 편안 하 게 조작할 콘텐츠를 배치 합니다.
+`TopLayoutGuide/BottomLayoutGuide` 및 `EdgesForExtendedLayout` Api가 비슷한 효과는 있지만 서로 다른 목표를 채우는 것을 의미 합니다. `EdgesForExtendedLayout` 설정을 기본값에서 변경 하면 iOS 6 용으로 설계 된 응용 프로그램의 잘린 보기가 수정 될 수 있지만, 좋은 iOS 7 디자인은 전체 화면을 미적 하 고, `TopLayoutGuide` 및 `BottomLayoutGuide`를 사용 하 여 사용자가 편안 하 게 조작할 수 있는 콘텐츠를 적절 하 게 배치 해야 합니다.
 
 작업 샘플은 [Imageviewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) 를 참조 하세요.
 

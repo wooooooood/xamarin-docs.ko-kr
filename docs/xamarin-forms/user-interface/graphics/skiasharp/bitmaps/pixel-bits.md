@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
 ms.openlocfilehash: 6c066f89dc8f558a9154138bf38ad4326fe21291
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642526"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918177"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트에 액세스
 
@@ -280,7 +280,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-유일한 질문은 다음과 같습니다. `SKColor` 값의 정수 형식이 `SKColorType.Rgba8888` `SKColorType.Bgra8888` 색 유형 또는 색 유형 순서에서 나 완전히 다른 것 입니까? 해당 질문에 대답 곧 공개 됩니다.
+유일한 질문은 다음과 같습니다. `SKColorType.Rgba8888` 색 형식 또는 `SKColorType.Bgra8888` 색 형식의 순서로 `SKColor` 값의 정수 형식 인지 또는 완전히 다른 항목 인지 여부 해당 질문에 대답 곧 공개 됩니다.
 
 ### <a name="the-setpixels-method"></a>SetPixels 메서드
 
@@ -294,7 +294,7 @@ bitmap.SetPixels(intPtr);
 
 처음에 것 같습니다 처럼 `SetPixels` 더 더욱 강력 하 고 보다 성능을 제공 `GetPixels` 동시에 보다 편리 합니다. 사용 하 여 `GetPixels` 비트맵 메모리 블록을 가져오고 액세스 합니다. 사용 하 여 `SetPixels` 할당 하 고 일부 메모리에 액세스 하 고 비트맵 메모리 블록으로 설정 하는 합니다.
 
-그러나를 `SetPixels` 사용 하면 다음과 같은 별개의 구문이 제공 됩니다. 배열을 사용 하 여 비트맵 픽셀 비트에 액세스할 수 있습니다. 여기에 메서드가 `GradientBitmapPage` 이 기법을 보여 주는 합니다. 메서드는 먼저 비트맵의 픽셀의 바이트를 해당 다차원 바이트 배열을 정의 합니다. 첫 번째 차원 행을 두 번째 차원의 열 이며 각 픽셀의 네 가지 구성 요소를 세 번째 차원의 합니다.
+그러나 `SetPixels`를 사용 하면 다음과 같은 별개의 구문이 제공 됩니다. 배열을 사용 하 여 비트맵 픽셀 비트에 액세스할 수 있습니다. 여기에 메서드가 `GradientBitmapPage` 이 기법을 보여 주는 합니다. 메서드는 먼저 비트맵의 픽셀의 바이트를 해당 다차원 바이트 배열을 정의 합니다. 첫 번째 차원 행을 두 번째 차원의 열 이며 각 픽셀의 네 가지 구성 요소를 세 번째 차원의 합니다.
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -609,7 +609,7 @@ uint* ptr = basePtr + bitmap.Width * row + col;
 
 에 `PaintSurface` 처리기는 `SKCanvasView`, 비트맵은 표시 영역을 채우도록 확장:
 
-[![Rainbow 사인](pixel-bits-images/RainbowSine.png "레인 보우 사인")](pixel-bits-images/RainbowSine-Large.png#lightbox)
+[![무지개 사인](pixel-bits-images/RainbowSine.png "무지개 사인")](pixel-bits-images/RainbowSine-Large.png#lightbox)
 
 ## <a name="from-one-bitmap-to-another"></a>다른 하나의 비트맵에서
 
@@ -789,7 +789,7 @@ public class PosterizePage : ContentPage
 
 생성자의 코드 0xE0E0E0FF, 값을 사용 하 여 비트 AND 연산을 수행 하며 비트맵에 다시 결과 저장 한 다음 각 픽셀에 액세스 합니다. 0xE0E0E0FF 값 각 색 구성 요소의 상위 3 비트를 유지 하 고 하위 5 비트를 0으로 설정 합니다. 2는 대신<sup>24</sup> 16777216 색 비트맵을 2로 감소 하거나<sup>9</sup> 또는 512 색:
 
-[![포스터](pixel-bits-images/Posterize.png "포스터")](pixel-bits-images/포스터-Large.png#lightbox)
+[![포스터](pixel-bits-images/Posterize.png "포스터")](pixel-bits-images/Posterize-Large.png#lightbox)
 
 ## <a name="related-links"></a>관련 링크
 

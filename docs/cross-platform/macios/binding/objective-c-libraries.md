@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
 ms.openlocfilehash: 6841e94ad13357c51e6ccf59e35c659dfb9954aa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016286"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915190"
 ---
 # <a name="binding-objective-c-libraries"></a>바인딩 목표-C 라이브러리
 
@@ -34,14 +34,14 @@ C 라이브러리를 정적으로 연결 하는 방법에 대 한 자세한 내�
 
 ## <a name="getting-started"></a>시작
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 바인딩을 만드는 가장 쉬운 방법은 Xamarin.ios 바인딩 프로젝트를 만드는 것입니다.
 프로젝트 형식, **iOS > 라이브러리 > 바인딩 라이브러리**를 선택 하 여 Mac용 Visual Studio에서이 작업을 수행할 수 있습니다.
 
 [![](objective-c-libraries-images/00-sml.png "Do this from Visual Studio for Mac by selecting the project type, iOS Library Bindings Library")](objective-c-libraries-images/00.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 바인딩을 만드는 가장 쉬운 방법은 Xamarin.ios 바인딩 프로젝트를 만드는 것입니다.
 프로젝트 형식,  **C# visual > Ios > 바인딩 라이브러리 (ios)** 를 선택 하 여 Windows의 visual Studio에서이 작업을 수행할 수 있습니다.
@@ -169,7 +169,7 @@ API 정의 파일은 다양 한 인터페이스로 구성 됩니다. API 정의�
 
 가장 간단한 바인딩은 메서드를 바인딩하는 것입니다. C# 명명 규칙을 사용 하 여 인터페이스에서 메서드를 선언 하 고 메서드를 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 사용 하 여 데코 레이트 합니다.
 특성도. [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성은 Xamarin.ios 런타임의 목적과 이름 C# 에 연결 하는 것입니다. [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 매개 변수입니다. 
-특성은 목표-C 선택기의 이름입니다. 몇 가지 예:
+특성은 목표-C 선택기의 이름입니다. 몇 가지 예는 다음과 같습니다.
 
 ```csharp
 // A method, that takes no arguments
@@ -288,7 +288,7 @@ string Text { get; [NullAllowed] set; }
 그런 다음 변경할 수 있는 하위 클래스에서 [`[Override]`](~/cross-platform/macios/binding/binding-types-reference.md#OverrideAttribute) 를 사용 합니다. 
 속성이 실제로 부모의 동작을 재정의 하도록 속성에 대 한 특성입니다.
 
-예:
+예제:
 
 ```csharp
 [BaseType (typeof (NSObject))]
@@ -479,7 +479,7 @@ interface NSStringDrawingExtensions {
 
 ### <a name="binding-objective-c-argument-lists"></a>바인딩 목표-C 인수 목록
 
-Variadic 인수를 지원 합니다. 예를 들면 다음과 같습니다.
+Variadic 인수를 지원 합니다. 다음은 그 예입니다.
 
 ```objc
 - (void) appendWorkers:(XWorker *) firstWorker, ...
@@ -522,7 +522,7 @@ public void AppendWorkers(params Worker[] workers)
 
 일반적으로 이러한 필드는 참조 해야 하는 문자열이 나 정수 값을 포함 합니다. 일반적으로 특정 알림과 사전에서 키를 나타내는 문자열로 사용 됩니다.
 
-필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 예를 들면 다음과 같습니다.
+필드를 바인딩하려면 인터페이스 정의 파일에 속성을 추가 하 고 [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) 특성을 사용 하 여 속성을 데코 레이트 합니다. 이 특성은 조회할 기호의 C 이름 매개 변수 하나를 사용 합니다. 다음은 그 예입니다.
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -580,7 +580,7 @@ interface LonelyClass {
 
 바인딩 파일에 직접 `enum`를 추가 하 여 다른 소스 파일 (바인딩과 최종 프로젝트 모두에서 컴파일해야 하는 다른 소스 파일을 사용 하지 않고 API 정의 내에서 더 쉽게 사용할 수 있음).
 
-예:
+예제:
 
 ```csharp
 [Native] // needed for enums defined as NSInteger in ObjC
@@ -594,7 +594,7 @@ interface MyType {
 
 `NSString` 상수를 대체 하는 고유한 열거형을 만들 수도 있습니다. 이 경우 생성기는 **자동으로** 열거형 값과 nsstring 상수를 변환 하는 메서드를 만듭니다.
 
-예:
+예제:
 
 ```csharp
 enum NSRunLoopMode {
@@ -632,7 +632,7 @@ interface MyType {
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute)를 사용 하 여 메서드 (반환 값의 경우), 매개 변수 및 속성을 데코레이팅 할 수 있습니다. 유일한 제한 사항은 멤버가 [`[Protocol]`](~/cross-platform/macios/binding/binding-types-reference.md#ProtocolAttribute) 내에 **있지 않아야** 한다는 것입니다. 
 또는 인터페이스를 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute) 합니다.
 
-예를 들면 다음과 같습니다.
+다음은 그 예입니다.
 
 ```csharp
 [return: BindAs (typeof (bool?))]
@@ -651,7 +651,7 @@ bool? ShouldDraw (CGRect rect) { ... }
 
 [`[BindAs]`](~/cross-platform/macios/binding/binding-types-reference.md#BindAsAttribute) 은 `NSNumber` `NSValue` 및 `NSString`(열거형)의 배열도 지원 합니다.
 
-예를 들면 다음과 같습니다.
+다음은 그 예입니다.
 
 ```csharp
 [BindAs (typeof (CAScroll []))]
@@ -682,7 +682,7 @@ Xamarin.ios 바인딩 생성기는 개발자가 알림을 바인딩할 수 있�
 
 페이로드를 사용 하지 않는 알림에 대해 인수를 사용 하지 않고이 특성을 사용 하거나, 일반적으로 이름이 "EventArgs"로 끝나는 API 정의의 다른 인터페이스를 참조 하는 `System.Type`을 지정할 수 있습니다. 생성기는 인터페이스를 서브 클래스 `EventArgs` 하는 클래스로 전환 하 고 여기에 나열 된 모든 속성을 포함 합니다. EventArgs 클래스에서 값을 인출 하기 위해 목표-C 사전을 조회 하는 데 사용 되는 키의 이름을 나열 하려면 [`[Export]`](~/cross-platform/macios/binding/binding-types-reference.md#ExportAttribute) 특성을 사용 해야 합니다.
 
-예를 들면 다음과 같습니다.
+다음은 그 예입니다.
 
 ```csharp
 interface MyClass {
@@ -779,7 +779,7 @@ interface MyUIViewExtension {
 }
 ```
 
-위의에서는 `MakeBackgroundRed` 확장 메서드를 포함 하는 클래스 `MyUIViewExtension`를 만듭니다.  즉, 이제는 `UIView` 서브 클래스에서 "MakeBackgroundRed"를 호출 하 여 목표에 대해 얻을 수 있는 것과 동일한 기능을 제공할 수 있습니다. 다른 경우에는 범주를 사용 하 여 시스템 클래스를 확장 하는 대신 기능을 구성 하는 용도로만 사용 됩니다.  다음과 같습니다.
+위의에서는 `MakeBackgroundRed` 확장 메서드를 포함 하는 클래스 `MyUIViewExtension`를 만듭니다.  즉, 이제는 `UIView` 서브 클래스에서 "MakeBackgroundRed"를 호출 하 여 목표에 대해 얻을 수 있는 것과 동일한 기능을 제공할 수 있습니다. 다른 경우에는 범주를 사용 하 여 시스템 클래스를 확장 하는 대신 기능을 구성 하는 용도로만 사용 됩니다.  다음과 같이:
 
 ```csharp
 @interface SocialNetworking (Twitter)
@@ -882,7 +882,7 @@ s.Enumerate ((obj, stop) => {
 [`[Async]`](~/cross-platform/macios/binding/binding-types-reference.md#AsyncAttribute) 를 사용할 수 있습니다. 
 void를 반환 하 고 마지막 인수가 콜백 인 메서드의 특성입니다.  이를 메서드에 적용 하는 경우 바인딩 생성기는 `Async`접미사를 사용 하 여 해당 메서드의 버전을 생성 합니다.  콜백이 매개 변수를 사용 하지 않는 경우 반환 값은 `Task`가 됩니다. 콜백에서 매개 변수를 사용 하는 경우 결과는 `Task<T>`됩니다.  콜백이 여러 매개 변수를 사용 하는 경우 `ResultType` 또는 `ResultTypeName`를 설정 하 여 모든 속성을 보유할 생성 된 형식의 원하는 이름을 지정 해야 합니다.
 
-예:
+예제:
 
 ```csharp
 [Export ("loadfile:completed:")]
@@ -1337,7 +1337,7 @@ Xamarin.ios에서 라이브러리를 연결 하는 방법에 대해 설명 해�
 위의 예에서는 `libMyLibrary.a`, `libSystemLibrary.dylib` 및 `CFNetwork` framework 라이브러리를 최종 실행 파일에 연결 합니다.
 
 또는 계약 파일에 포함할 수 있는 어셈블리 수준 [`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)(예: `AssemblyInfo.cs`)를 활용할 수 있습니다.
-[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)사용 하는 경우 네이티브 라이브러리가 응용 프로그램에 포함 될 수 있도록 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 예를 들면 다음과 같습니다.
+[`[LinkWithAttribute]`](~/cross-platform/macios/binding/binding-types-reference.md#LinkWithAttribute)사용 하는 경우 네이티브 라이브러리가 응용 프로그램에 포함 될 수 있도록 바인딩을 만들 때 사용할 수 있는 네이티브 라이브러리가 있어야 합니다. 다음은 그 예입니다.
 
 ```csharp
 // Specify only the library name as a constructor argument and specify everything else with properties:

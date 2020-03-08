@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725316"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915503"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS 문제 해결
 
@@ -233,7 +233,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 > [!NOTE]
 > 제공 해야 하는 경로는 *iPhone 응용 프로그램 파일*에 대 한 것입니다. 즉, iOS 시뮬레이터에 배포 되 고 조사식 확장과 조사식 앱을 모두 포함 하는 앱입니다.
 
-예:
+예제:
 
 ```bash
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
@@ -257,9 +257,9 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-필수입니다. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
+필수 사항입니다. Xcode에 대 한 경로를 지정 합니다 (6.2 이상).
 
-예:
+예제:
 
 ```bash
  --sdkroot /Applications/Xcode.app/Contents/Developer/
@@ -277,7 +277,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 **UDID**
 
-예:
+예제:
 
 ```bash
 --device=:v2:udid=AAAAAAA-BBBB-CCCC-DDDD-EEEEEEEEEEEE
@@ -285,7 +285,7 @@ Xcode Interface Builder를 사용 하는 *경우* 다음 단계에 따라 watch 
 
 **런타임 및 장치 유형**
 
-예:
+예제:
 
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
 ms.openlocfilehash: 3c754acc3502d7aa2c47264e734187ffe060c029
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030845"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78915796"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>TvOS 탐색 및 Xamarin에서 포커스 사용
 
@@ -48,7 +48,7 @@ Apple은 tvOS 앱에 대 한 탐색을 설계할 때 다음 사항을 염두에 
 - **메뉴 단추를 통해 역방향 탐색을 제공** 하 여 사용자가 Siri 원격의 **메뉴** 단추를 사용 하 여 뒤로 탐색할 수 있도록 하는 친숙 하 고 친숙 한 환경을 만듭니다. **메뉴** 단추를 누르면 항상 이전 화면으로 돌아가거나 앱의 주 메뉴로 돌아갑니다. 앱의 최상위 수준에서 **메뉴** 단추를 누르면 Apple TV 홈 화면으로 돌아옵니다.
 - **일반적으로 뒤로 단추를 표시 하지 않습니다** . Siri 원격에서 **메뉴** 단추를 누를 때 화면 스택이 뒤로 이동 하기 때문에이 동작을 복제 하는 추가 컨트롤이 표시 되지 않기 때문입니다. 이 규칙의 예외는 **취소** 단추를 표시 해야 하는 소거식 작업 (예: 콘텐츠 삭제)이 포함 된 화면 또는 화면을 구매 하는 것입니다.
 - **많은 컬렉션을 단일 화면에 표시** 합니다. 즉, Siri 원격은 제스처를 사용 하 여 많은 양의 콘텐츠 컬렉션을 빠르고 쉽게 이동할 수 있도록 설계 되었습니다. 앱이 포커스를 받을 수 있는 항목의 큰 컬렉션을 사용 하는 경우 사용자의 파트를 더 많이 탐색 해야 하는 여러 화면으로 분리 하는 대신 단일 화면으로 유지 하는 것이 좋습니다.
-- **탐색에 표준 컨트롤** 을 다시 사용 하 여 가능한 한 쉽게 친숙 하 고 친숙 한 사용자 환경을 만들 수 있습니다. 페이지 컨트롤, 탭 모음, 분할 된 컨트롤, 테이블 뷰, 컬렉션 뷰 및 분할 뷰와 같은 기본 제공 `UIKit` 컨트롤을 사용할 수 있습니다. 앱의 탐색. 사용자는 이러한 요소를 이미 잘 알고 있으므로 사용자는 앱을 탐색할 수 있습니다.
+- **탐색에 표준 컨트롤** 을 다시 사용 하 여 가능한 한 간편 하 고 친숙 한 사용자 환경을 만들 수 있습니다. 즉, 페이지 컨트롤, 탭 모음, 분할 된 컨트롤, 테이블 뷰, 컬렉션 보기, 응용 프로그램 탐색을 위한 분할 보기 등의 기본 제공 `UIKit` 컨트롤을 사용할 수 있습니다. 사용자는 이러한 요소를 이미 잘 알고 있으므로 사용자는 앱을 탐색할 수 있습니다.
 - **가로 콘텐츠 탐색 우선** -Apple TV의 특성으로 인해 Siri 원격의 왼쪽에서 오른쪽으로 살짝 밀기는 위쪽 및 아래쪽 보다 더 자연스럽 게 작동 합니다. 앱에 대 한 콘텐츠 레이아웃을 디자인할 때이 옵션을 고려 합니다.
 
 <a name="Focus-and-Selection" />
@@ -80,7 +80,7 @@ Apple에는 포커스 및 선택 작업에 대 한 다음과 같은 제안이 �
 
 ### <a name="working-with-focus"></a>포커스 작업
 
-포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. `CanBecomeFocused` 속성을 재정의 하 고 `true`를 반환 하는 경우에는 `false`를 반환 합니다. 예를 들면,
+포커스를 받을 수 있는 항목이 될 수 있는 사용자 지정 컨트롤을 만들려고 할 수 있습니다. `CanBecomeFocused` 속성을 재정의 하 고 `true`를 반환 하는 경우에는 `false`를 반환 합니다. 다음은 그 예입니다.
 
 ```csharp
 public class myView : UIView
@@ -91,7 +91,7 @@ public class myView : UIView
 }
 ```
 
-언제 든 지 `UIKit` 컨트롤의 `Focused` 속성을 사용 하 여 현재 항목 인지 확인할 수 있습니다. 현재 UI 항목에 포커스가 `true` 있으면이 고, 그렇지 않으면입니다. 예를 들면,
+언제 든 지 `UIKit` 컨트롤의 `Focused` 속성을 사용 하 여 현재 항목 인지 확인할 수 있습니다. 현재 UI 항목에 포커스가 `true` 있으면이 고, 그렇지 않으면입니다. 다음은 그 예입니다.
 
 ```csharp
 // Is my view in focus?
@@ -101,7 +101,7 @@ if (myView.Focused) {
 }
 ```
 
-코드를 통해 포커스를 다른 UI 요소로 직접 이동할 수는 없지만, `PreferredFocusedView` 속성을 `true`로 설정 하 여 화면이 로드 될 때 먼저 포커스를 가져오는 UI 요소를 지정할 수 있습니다. 예를 들면,
+코드를 통해 포커스를 다른 UI 요소로 직접 이동할 수는 없지만, `PreferredFocusedView` 속성을 `true`로 설정 하 여 화면이 로드 될 때 먼저 포커스를 가져오는 UI 요소를 지정할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 // Make the play button the starting focus item
@@ -164,7 +164,7 @@ public override void ViewDidLoad ()
 
 먼저 새 `UIFocusGuide` 만들어지고 `AddLayoutGuide` 메서드를 사용 하 여 뷰의 레이아웃 안내선 컬렉션에 추가 됩니다.
 
-그런 다음, 포커스 가이드의 위쪽, 왼쪽, 너비 및 높이 앵커는 **추가 정보** 및 **구입** 단추를 기준으로 조정 되어 서로 배치 됩니다. 참조
+그런 다음, 포커스 가이드의 위쪽, 왼쪽, 너비 및 높이 앵커는 **추가 정보** 및 **구입** 단추를 기준으로 조정 되어 서로 배치 됩니다. 다음을 참조하세요.
 
 [![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
 
@@ -204,7 +204,7 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 첫째,이 코드는 전달 된 `UIFocusUpdateContext`에서 `NextFocusedView`을 가져옵니다 (`context`). 이 보기가 `null`경우에는 처리가 필요 하지 않으며 메서드가 종료 됩니다.
 
-그런 다음 `nextFocusableItem` 평가 됩니다. **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 `PreferredFocusedView` 속성을 사용 하 여 반대 단추에 포커스를 보냅니다. 예를 들면,
+그런 다음 `nextFocusableItem` 평가 됩니다. **추가 정보** 또는 **구입** 단추와 일치 하는 경우 포커스 가이드의 `PreferredFocusedView` 속성을 사용 하 여 반대 단추에 포커스를 보냅니다. 다음은 그 예입니다.
 
 ```csharp
 // Move from the More Info to Buy button
@@ -222,7 +222,7 @@ FocusGuide.PreferredFocusedView = null;
 
 ### <a name="working-with-focus-in-collections"></a>컬렉션에서 포커스 사용
 
-개별 항목을 `UICollectionView` 또는 `UITableView`에서 포커스를 받을 수 있는지 여부를 결정할 때 `UICollectionViewDelegate` 또는 `UITableViewDelegate`의 메서드를 각각 재정의 합니다. 예를 들면,
+개별 항목을 `UICollectionView` 또는 `UITableView`에서 포커스를 받을 수 있는지 여부를 결정할 때 `UICollectionViewDelegate` 또는 `UITableViewDelegate`의 메서드를 각각 재정의 합니다. 다음은 그 예입니다.
 
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
