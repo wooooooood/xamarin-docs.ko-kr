@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 07/15/2017
 ms.openlocfilehash: 945a42485486dbfddfd023a72e88d9127651c71f
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607955"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911493"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Xamarin.iOS에 대한 수동 프로비전
 
@@ -73,11 +73,11 @@ _Xamarin.iOS가 성공적으로 설치된 후 iOS 개발의 다음 단계는 iOS
 
 ### <a name="understanding-certificate-key-pairs"></a>인증서 키 쌍 이해
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 개발자 프로필에는 인증서, 이와 연결된 키, 계정과 연결된 프로비전 프로필에 포함됩니다. 실제로 개발자 프로필에는 두 가지 버전이 있습니다. 한 가지는 개발자 포털에 있고 나머지는 로컬 Mac에 있습니다. 이 두 가지의 차이점은 포함된 키의 유형입니다. _포털의 프로필에는 인증서와 연결된 모든 퍼블릭 키가 있지만 로컬 Mac의 복사본에는 모든 프라이빗 키가 포함됩니다_. 인증서가 유효하려면 키 쌍이 일치해야 합니다. 로컬 Mac에 개발자 프로필의 백업을 유지해야 합니다. 프라이빗 키가 손실되면 모든 인증서와 프로비전 프로필을 다시 생성해야 하기 때문입니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 개발자 프로필에는 인증서, 이와 연결된 키, 계정과 연결된 프로비전 프로필에 포함됩니다. 실제로 개발자 프로필에는 두 가지 버전이 있습니다. 한 가지는 개발자 포털에 있고 나머지는 Mac에 있습니다. 이 두 가지의 차이점은 포함된 키의 유형입니다. _포털의 프로필에는 인증서와 연결된 모든 퍼블릭 키가 있지만 Mac의 복사본에는 모든 프라이빗 키가 포함됩니다_. 인증서가 유효하려면 키 쌍이 일치해야 합니다. Xamarin 빌드 호스트의 Mac에 개발자 프로필의 백업을 유지해야 합니다. 프라이빗 키가 손실되면 모든 인증서와 프로비전 프로필을 다시 생성해야 하기 때문입니다.
 
@@ -207,12 +207,12 @@ Apple Developer 포털에서 만든 인증서 및 프로비전 프로필은 Xcod
 
 Mac용 Visual Studio 또는 Visual Studio에 새 인증서 또는 프로비전 프로필이 보이고 사용할 준비가 됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 > [!IMPORTANT]
 > Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Mac용 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Xcode에서 업데이트된 새로운 인증서나 수정된 인증서를 보려면 Visual Studio를 중지하고 다시 시작해야 할 수도 있습니다.
@@ -231,7 +231,7 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 
 이 시점에서 프로비전은 완료되고, 디바이스에 앱을 배포할 준비가 되어 있어야 합니다. 이렇게 하려면 아래 단계를 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 > [!IMPORTANT]
 > 시작하기 전에 **Info.plist**에서 **수동 프로비저닝**을 선택해야 합니다.
@@ -250,7 +250,7 @@ Apple은 Xamarin.iOS 애플리케이션에 활성화할 수 있는 다양한 애
 4. 빌드 구성이 시뮬레이터가 아닌 **iPhone** / **iPad**로 설정되어 있는지 확인합니다.
 5. Mac용 Visual Studio에서 **실행**을 클릭하여 디바이스에서 실행되는 앱을 봅니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > 시작하기 전에 **프로젝트 > 속성 프로비전...** 에서 **수동 프로비전**을 선택해야 합니다.
