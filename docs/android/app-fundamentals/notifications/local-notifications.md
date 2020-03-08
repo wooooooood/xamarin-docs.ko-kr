@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/16/2018
 ms.openlocfilehash: 617c04e2f40af535fb381362a389524d693fad0b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025647"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913564"
 ---
 # <a name="local-notifications-on-android"></a>Android의 로컬 알림
 
@@ -26,7 +26,7 @@ Android는 알림 아이콘과 알림 정보를 사용자에 게 표시 하는 �
 
 알림에 대 한 세부 정보를 얻기 위해 사용자는 알림 서랍 (각 알림 아이콘을 확장 하 여 알림 콘텐츠 표시)을 열고 알림과 관련 된 모든 작업을 수행할 수 있습니다. 다음 스크린샷은 위에 표시 된 알림 영역에 해당 하는 *알림 서랍* 을 보여 줍니다.
 
-[알림 서랍 세 개를 표시 하는![예제 알림 서랍](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
+[알림 서랍 세 개를 표시 하는 ![예제 알림 서랍](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
 Android 알림은 다음과 같은 두 가지 유형의 레이아웃을 사용 합니다.
 
@@ -53,7 +53,7 @@ Android 알림은 다음과 같은 두 가지 유형의 레이아웃을 사용 �
 
 이러한 요소는 다음 다이어그램에 나와 있는 것 처럼 표시 됩니다.
 
-[알림 요소의![위치](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
+[알림 요소의 ![위치](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
 
 기본 레이아웃은 높이의 64 dp (밀도 독립적 픽셀)로 제한 됩니다. Android는 기본적으로이 기본 알림 스타일을 만듭니다.
 
@@ -112,11 +112,11 @@ Android 8.0 (Oreo)부터 *알림 채널* 기능을 사용 하 여 표시 하려�
 
 Android Oreo와 함께 설치 되는 **YouTube** 앱은 다음과 같은 두 가지 알림 범주를 나열 합니다. **알림** 및 **일반 알림**다운로드:
 
-[Android Oreo의 YouTube![알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
+[Android Oreo의 YouTube ![알림 화면](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 이러한 각 범주는 알림 채널에 해당 합니다. YouTube 앱은 **다운로드 알림** 채널 및 **일반 알림** 채널을 구현 합니다. 사용자는 앱의 다운로드 알림 채널에 대 한 설정 화면을 표시 하는 **다운로드 알림**을 탭 할 수 있습니다.
 
-[YouTube 앱에 대 한![알림 화면 다운로드](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
+[YouTube 앱에 대 한 ![알림 화면 다운로드](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 이 화면에서 사용자는 다음을 수행 하 여 **다운로드** 알림 채널의 동작을 수정할 수 있습니다.
 
@@ -132,7 +132,7 @@ Android Oreo와 함께 설치 되는 **YouTube** 앱은 다음과 같은 두 가
 
 **일반 알림** 채널의 설정은 다음과 유사 합니다.
 
-[YouTube 앱에 대 한![일반 알림 화면](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
+[YouTube 앱에 대 한 ![일반 알림 화면](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
 
 알림 채널이 사용자와 상호 작용 하는 방식에 대 한 절대 제어 권한이 없습니다. 사용자는 위의 스크린샷에 표시 된 대로 장치에서 알림 채널에 대 한 설정을 수정할 수 &ndash;. 그러나 아래에 설명 된 대로 기본값을 구성할 수 있습니다. 이 예제에서 설명 하는 것 처럼 새 알림 채널 기능을 사용 하면 다양 한 종류의 알림을 사용자에 게 세분화 하 여 제어할 수 있습니다.
 
@@ -236,7 +236,7 @@ const int notificationId = 0;
 notificationManager.Notify (notificationId, notification);
 ```
 
-이 예제에서는 사용할 알림 채널의 ID와 함께 `builder` 라는 새 `NotificationCompat.Builder` 개체가 인스턴스화됩니다. 알림의 제목과 텍스트가 설정 되 고, 알림 아이콘이 **Resources/그릴 수 있는/ic_notification**에서 로드 됩니다. 알림 작성기의 `Build` 메서드에 대 한 호출은 이러한 설정을 사용 하 여 알림 개체를 만듭니다. 다음 단계는 알림 관리자의 `Notify` 메서드를 호출 하는 것입니다. 알림 관리자를 찾으려면 위에 표시 된 대로 `GetSystemService`를 호출 합니다.
+이 예제에서는 사용할 알림 채널의 ID와 함께 `builder` 라는 새 `NotificationCompat.Builder` 개체가 인스턴스화됩니다. 알림의 제목과 텍스트가 설정 되 고, 알림 아이콘이 **리소스/그릴 수 있는/ic_notification .png**에서 로드 됩니다. 알림 작성기의 `Build` 메서드에 대 한 호출은 이러한 설정을 사용 하 여 알림 개체를 만듭니다. 다음 단계는 알림 관리자의 `Notify` 메서드를 호출 하는 것입니다. 알림 관리자를 찾으려면 위에 표시 된 대로 `GetSystemService`를 호출 합니다.
 
 `Notify` 메서드는 알림 식별자 및 notification 개체 라는 두 개의 매개 변수를 허용 합니다. 알림 id는 응용 프로그램에 대 한 알림을 식별 하는 고유한 정수입니다. 이 예제에서 알림 식별자는 0으로 설정 됩니다. 그러나 프로덕션 응용 프로그램에서는 각 알림에 고유한 식별자를 지정 하는 것이 좋습니다. `Notify`에 대 한 호출에서 이전 식별자 값을 다시 사용 하면 마지막 알림이 덮어쓰여집니다.
 
@@ -460,7 +460,7 @@ Android 알림은 일반적으로 알림의 왼쪽에 있는 원래 앱의 아�
 builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable.monkey_icon));
 ```
 
-이 예제 코드는 **Resources/그릴 수 있는/monkey_icon**에서 이미지 파일을 열고 비트맵으로 변환한 다음 결과 비트맵을 `NotificationCompat.Builder`에 전달 합니다. 일반적으로 원본 이미지 해상도는 &ndash; 작은 아이콘 보다 크므로 크게 크지 않습니다. 이미지가 너무 크면 알림 게시를 지연 시킬 수 있는 불필요 한 크기 조정 작업이 발생할 수 있습니다.
+이 예제 코드는 **Resources/그릴 수 있는/monkey_icon .png**에서 이미지 파일을 열고 비트맵으로 변환한 다음 결과 비트맵을 `NotificationCompat.Builder`에 전달 합니다. 일반적으로 원본 이미지 해상도는 &ndash; 작은 아이콘 보다 크므로 크게 크지 않습니다. 이미지가 너무 크면 알림 게시를 지연 시킬 수 있는 불필요 한 크기 조정 작업이 발생할 수 있습니다.
 
 ### <a name="big-text-style"></a>큰 텍스트 스타일
 
@@ -529,7 +529,7 @@ builder.SetStyle (picStyle);
 // Create the notification and publish it ...
 ```
 
-`NotificationCompat.Builder`의 `SetLargeIcon`메서드와 마찬가지로 `BigPictureStyle`의 [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) 메서드는알림의본문에표시하려는이미지의비트맵이필요 합니다. 이 예제에서 `BitmapFactory`의 [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) 메서드는 **Resources/x_bldg/** 에 있는 이미지 파일을 읽고 비트맵으로 변환 합니다.
+`NotificationCompat.Builder`의 `SetLargeIcon`메서드와 마찬가지로 `BigPictureStyle`의 [BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*) 메서드는알림의본문에표시하려는이미지의비트맵이필요 합니다. 이 예제에서 `BitmapFactory` [DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*) 메서드는 **Resources/그릴 수 있는/x_bldg** 에 있는 이미지 파일을 읽어 비트맵으로 변환 합니다.
 
 리소스로 패키지 되지 않은 이미지를 표시할 수도 있습니다. 예를 들어 다음 샘플 코드는 로컬 SD 카드에서 이미지를 로드 하 고 *이미지* 알림에 표시 합니다.
 
@@ -592,7 +592,7 @@ builder.SetStyle (inboxStyle);
 
 알림 본문에 새 텍스트 줄을 추가 하려면 `InboxStyle` 개체의 [Addline](xref:Android.App.Notification.InboxStyle.AddLine*) 메서드를 호출 합니다 ( *수신함* 알림의 최대 높이는 256 dp). *큰 텍스트* 스타일과 달리 *수신함* 스타일은 알림 본문에서 개별 텍스트 줄을 지원 합니다.
 
-또한 개별 텍스트 줄을 확장 된 형식으로 표시 해야 하는 모든 알림에 대해 *수신함* 스타일을 사용할 수 있습니다. 예를 들어, *수신함* 알림 스타일을 사용 하 여 여러 보류 중인 알림을 요약 알림으로 결합할 수 &ndash;, 새 알림 내용 줄이 포함 된 단일 *수신함* 스타일 알림을 업데이트할 수 있습니다 ( [업데이트를 참조 하세요. 위의 알림](#updating-a-notification) )-자주 발생 하는 새로운 알림의 연속 스트림을 생성 하지 않습니다.
+또한 개별 텍스트 줄을 확장 된 형식으로 표시 해야 하는 모든 알림에 대해 *수신함* 스타일을 사용할 수 있습니다. 예를 들어, *수신함* 알림 스타일을 사용 하 여 여러 보류 중인 알림을 요약 알림으로 결합할 수 &ndash; 새 알림 콘텐츠 줄로 단일 *수신함* 스타일 알림을 업데이트할 수 있습니다 (위의 [알림 업데이트](#updating-a-notification) 참조).
 
 ## <a name="configuring-metadata"></a>메타 데이터 구성
 
@@ -707,7 +707,7 @@ builder.SetCategory (Notification.CategoryCall);
 
 ![화면 스위치를 방해 하지 않음](local-notifications-images/26-do-not-disturb.png)
 
-위의 스크린샷에 나와 있는 것 처럼 사용자가 전화 통화를 제외 하 고 모든 인터럽트를 차단 하도록 *방해* 금지를 구성 하는 경우, Android에서 장치가 방해 금지 상태인 동안 범주 설정이 `Notification.CategoryCall` 인 알림이 표시 되도록 허용 합니다.모드. `Notification.CategoryAlarm` 알림은 *방해* 금지 모드에서 차단 되지 않습니다.
+위의 스크린샷에 나와 있는 것 처럼 사용자가 전화 통화를 제외한 모든 인터럽트를 차단 하도록 *방해* 금지를 구성 하는 경우, Android에서 장치가 *방해 금지* 모드에 있을 때 `Notification.CategoryCall` 범주 설정이 포함 된 알림을 제공 하도록 허용 합니다. `Notification.CategoryAlarm` 알림은 *방해* 금지 모드에서 차단 되지 않습니다.
 
 [Localnotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) 샘플은 `NotificationCompat.Builder`를 사용 하 여 알림에서 두 번째 활동을 시작 하는 방법을 보여 줍니다. 이 샘플 코드는 [xamarin.ios 연습의 로컬 알림 사용](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) 에서 설명 합니다.
 
@@ -750,7 +750,7 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Android에서 로컬 알림을 만드는 방법을 설명 했습니다. 알림 분석에 대해 설명 하 고, `NotificationCompat.Builder`를 사용 하 여 알림을 만드는 방법, 큰 아이콘의 알림 스타일 지정 방법, *빅 텍스트*, *이미지* 및 *수신함* 형식, 등의 알림 메타 데이터 설정을 설정 하는 방법에 대해 설명 했습니다. 우선 순위, 표시 유형 및 범주와 알림에서 작업을 시작 하는 방법을 설명 합니다. 또한이 문서에서는 Android 5.0에 도입 된 새로운 준비, 잠금 화면 및 *방해 금지* 기능에서 이러한 알림 설정이 작동 하는 방식을 설명 했습니다. 마지막으로 `NotificationCompat.Builder`를 사용 하 여 이전 버전의 Android와의 호환성을 유지 하는 방법을 배웠습니다.
+이 문서에서는 Android에서 로컬 알림을 만드는 방법을 설명 했습니다. 알림 분석에 대해 설명 하 고, `NotificationCompat.Builder`를 사용 하 여 알림을 만드는 방법, 큰 아이콘의 알림 스타일 설정 방법, *빅 텍스트*, *이미지* 및 *수신함* 형식, 우선 순위, 표시 유형 및 범주와 같은 알림 메타 데이터 설정을 설정 하는 방법, 알림에서 작업을 시작 하는 방법에 대해 설명 했습니다. 또한이 문서에서는 Android 5.0에 도입 된 새로운 준비, 잠금 화면 및 *방해 금지* 기능에서 이러한 알림 설정이 작동 하는 방식을 설명 했습니다. 마지막으로 `NotificationCompat.Builder`를 사용 하 여 이전 버전의 Android와의 호환성을 유지 하는 방법을 배웠습니다.
 
 Android에 대 한 알림을 디자인 하는 방법에 대 한 지침은 [알림](https://developer.android.com/guide/topics/ui/notifiers/notifications.html)을 참조 하세요.
 

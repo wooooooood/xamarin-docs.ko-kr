@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/09/2018
 ms.openlocfilehash: 91513936a0223af0e4220154d0fe65ee0a599a4f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022316"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78911563"
 ---
 # <a name="limitations-of-xamarinios"></a>Xamarin.ios의 제한 사항
 
@@ -49,7 +49,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>동적 코드 생성 안 함
 
-IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을 방지 하므로 Xamarin.ios는 동적 코드 생성의 형태를 지원 하지 않습니다. 여기에는 다음이 포함됩니다.
+IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을 방지 하므로 Xamarin.ios는 동적 코드 생성의 형태를 지원 하지 않습니다. 이러한 개체는 다음과 같습니다.
 
 - System.object를 사용할 수 없습니다.
 - System.object를 지원 하지 않습니다.
@@ -60,7 +60,7 @@ IOS 커널은 응용 프로그램이 동적으로 코드를 생성 하는 것을
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
-시스템 리플렉션이 부족 합니다. **내보내기** 는 런타임 코드 생성에 의존 하는 코드가 작동 하지 않음을 의미 합니다. 여기에는 다음과 같은 항목이 포함 됩니다.
+시스템 리플렉션이 부족 합니다. **내보내기** 는 런타임 코드 생성에 의존 하는 코드가 작동 하지 않음을 의미 합니다. 여기에는 다음과 같은 항목이 포함됩니다.
 
 - 동적 언어 런타임입니다.
 - 동적 언어 런타임 위에 빌드된 모든 언어
