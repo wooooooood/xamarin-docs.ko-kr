@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
 ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028347"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918733"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Xamarin을 사용 하 여 watchOS Apps 배포 및 테스트
 
@@ -100,7 +100,7 @@ Apple Watch 앱 ID에서 앱 그룹을 사용 하도록 설정 **하지** 마세
 - iOS 앱 프로젝트
 - 확장 프로젝트 감시
 
-이어야 합니다.![Info.plist 편집기](images/entitlements-plist-sml.png)
+.![Info.plist 편집기](images/entitlements-plist-sml.png)
 
 Watch 앱 프로젝트에서 자격을 사용 하도록 설정 **하지** 마세요. Watch 자체에서 사용 하도록 설정할 필요는 없습니다.
 
