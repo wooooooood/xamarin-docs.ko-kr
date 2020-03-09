@@ -5,12 +5,12 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 2b1413c6bce7fc4ce43a190cd25494c69dbadedb
-ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
+ms.openlocfilehash: 21f2079ace4adae6fd84d89426e5d66692af2a0a
+ms.sourcegitcommit: ddf0369573b738896efaa601fa6ef5dbc68d9cf1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77555691"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289801"
 ---
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
@@ -90,7 +90,7 @@ Xamarin.Essentials는 가능한 한 많은 권한을 추상화하려고 하지�
 | StorageRead | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원 안 함](~/media/shared/no.png "iOS 지원 안 함") | ![UWP 지원 안 함](~/media/shared/no.png "UWP 지원 안 함") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원 안 함](~/media/shared/no.png "Tizen 지원 안 함") |
 | StorageWrite | ![Android 지원](~/media/shared/yes.png "Android 지원") | ![iOS 지원 안 함](~/media/shared/no.png "iOS 지원 안 함") | ![UWP 지원 안 함](~/media/shared/no.png "UWP 지원 안 함") | ![watchOS 지원 안 함](~/media/shared/no.png "watchOS 지원 안 함") | ![tvOS 지원 안 함](~/media/shared/no.png "tvOS 지원 안 함") | ![Tizen 지원 안 함](~/media/shared/no.png "Tizen 지원 안 함") |
 
-권한이 ❌로 표시되는 경우 확인 또는 요청 시 항상 `Granted`를 반환합니다.
+권한이 ![지원되지 않음](~/media/shared/no.png "지원되지 않음")으로 표시되는 경우 확인 또는 요청 시 항상 `Granted`를 반환합니다.
 
 ## <a name="general-usage"></a>일반적인 사용법
 다음은 권한을 처리하기 위한 일반적인 사용 패턴입니다.

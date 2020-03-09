@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: 1c6e55b69ca683b7fc1919995ba576ab77bf3c3b
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: c7d4e4f7ea27e150752b222e3ea4ce2c4256a43a
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488506"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295406"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
@@ -39,6 +39,12 @@ Preferences.Set("my_key", "my_value");
 
 ```csharp
 var myValue = Preferences.Get("my_key", "default_value");
+```
+
+지정된 ‘키’가 기본 설정에 있는지 확인하려면 다음을 수행합니다. 
+
+```csharp
+bool hasKey = Preferences.HasKey("my_key");
 ```
 
 기본 설정에서 ‘키’를 제거합니다. 
@@ -73,15 +79,15 @@ Preferences.Clear();
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
-모든 데이터는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장됩니다. `sharedName`을 지정하지 않으면 기본 공유 기본 설정이 사용되고, 이외의 경우에는 지정된 이름을 사용하여 **개인** 공유 기본 설정을 가져오는 데 이름이 사용됩니다.
+모든 데이터는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장됩니다. `sharedName`을 지정하지 않으면 기본 공유 기본 설정이 사용되고, 이외의 경우에는 지정된 이름을 사용하여 **프라이빗** 공유 기본 설정을 가져오는 데 이름이 사용됩니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 [NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults)는 iOS 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `StandardUserDefaults`가 사용되고, 이외의 경우에는 `NSUserDefaultsType.SuiteName`에 사용된 지정된 이름을 사용하여 새 `NSUserDefaults`을 만드는 데 이름이 사용됩니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 [ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다. 
 

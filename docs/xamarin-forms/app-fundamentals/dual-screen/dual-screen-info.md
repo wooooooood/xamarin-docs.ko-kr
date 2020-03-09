@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Forms DualScreenInfo
+title: Xamarin.Forms 이중 화면 디바이스 기능
 description: 이 가이드에서는 Xamarin.Forms DualScreenInfo 클래스를 사용하여 Surface Duo 및 Surface Neo와 같은 이중 화면 디바이스의 앱 환경을 최적화하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: e9a01ed3720f1501423eb1c0746d311918af82fb
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.openlocfilehash: 8dda1960fceaf7738c44d58b10149b8c20fa543f
+ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480591"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160602"
 ---
-# <a name="xamarinforms-dualscreeninfo"></a>Xamarin.Forms DualScreenInfo
+# <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Forms 이중 화면 디바이스 기능
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+![](~/media/shared/preview.png "This API is currently pre-release")
+
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
 `DualScreenInfo` 클래스를 사용하면 보기가 표시된 창과 그 크기, 디바이스의 방향, 힌지 각도 등을 확인할 수 있습니다.
 
@@ -212,4 +214,4 @@ public partial class GridUsingDualScreenInfo : ContentPage
 
 ## <a name="related-links"></a>관련 링크
 
-- [DualScreen(sample)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)(DualScreen(샘플))
+- [DualScreen(sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)(DualScreen(샘플))

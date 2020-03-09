@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 07/10/2019
-ms.openlocfilehash: daab2b3a18eeea2f50c9518144b3396fbba90928
-ms.sourcegitcommit: fec87846fcb262fc8b79774a395908c8c8fc8f5b
+ms.openlocfilehash: 251c1b8102327093fcb142ca056743f00618f81b
+ms.sourcegitcommit: f43d5ecafd19cbc5cce39201916a83927a34617a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77545126"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78214975"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
 
@@ -19,7 +19,7 @@ Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없
 
 ## <a name="installation"></a>설치
 
-Xamarin.Essentials는 NuGet 패키지로 사용할 수 있으며 Visual Studio의 모든 새 프로젝트에 포함되어 있습니다. 또한 다음 단계를 사용하여 Visual Studio를 사용하는 기존 프로젝트에 추가할 수 있습니다.
+Xamarin.Essentials는 NuGet 패키지로 사용할 수 있으며 Visual Studio의 모든 새 프로젝트에 포함되어 있습니다. 다음 단계를 통해 Visual Studio를 사용하는 기존 프로젝트에 추가할 수도 있습니다.
 
 1. [Visual Studio Tools for Xamarin](~/get-started/installation/index.md)을 사용하여 [Visual Studio](https://visualstudio.microsoft.com/)를 다운로드하고 설치합니다.
 

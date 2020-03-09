@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dffa9c202d42cfb12ed67e219b4e3155e4e554d0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.openlocfilehash: 0071fcc72844e4816e707c5828464859e09db68c
+ms.sourcegitcommit: 2503da076966d12a8bdbf7af209662b74913a15c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751917"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261620"
 ---
 # <a name="contributing"></a>참여
 
@@ -65,15 +65,19 @@ Xamarin 팀은 PR을 검토하고 승인하기 위해 변경 내용이 적합하
 
 특정 주기에서는 모든 커밋을 마스터 분기에서 라이브 사이트로 푸시한 다음, https://docs.microsoft.com/xamarin/ 에서 참여도를 확인할 수 있습니다.
 
+### <a name="contributing-to-international-content"></a>국가별 콘텐츠 기여
+
+MT(기계 번역) 콘텐츠 기여는 현재 허용되지 않습니다. MT 콘텐츠의 품질을 개선하기 위해 인공신경망 MT 엔진으로 전환했습니다. 인공신경망 MT 엔진을 학습하는 데 사용되는 HT(사람 번역) 콘텐츠 기여를 허용하고 권장합니다. 따라서 시간이 지남에 따라 HT 콘텐츠 기여는 HT 및 MT의 품질을 모두 개선합니다. MT 항목에는 항목의 일부가 MT일 수 있다는 고지 사항이 포함되며, **편집** 단추는 사용할 수 없기 때문에 표시되지 않습니다.
+
 ## <a name="dos-and-donts"></a>권고 및 금지
 
 .NET 설명서에 기여할 때 염두해야 하는 지침 규칙의 짧은 목록은 다음과 같습니다.
 
 - **금지** 대규모 끌어오기 요청을 제공합니다. 대신, 많은 시간을 투자하기 전에 방향에 동의할 수 있도록 문제를 저장하고 토론을 시작합니다.
-- **권고** [스타일 가이드](contributing-guidelines/template.md) 및 [어투 및 어조](contributing-guidelines/voice-tone.md) 지침을 참고합니다.
-- **권고** [템플릿](contributing-guidelines/template.md) 파일을 작업의 시작점으로 사용합니다.
+- **권고**[스타일 가이드](contributing-guidelines/template.md) 및 [어투 및 어조](contributing-guidelines/voice-tone.md) 지침을 참고합니다.
+- **권고**[템플릿](contributing-guidelines/template.md) 파일을 작업의 시작점으로 사용합니다.
 - **권고** 문서에서 작업하기 전에 포크의 별도 분기를 만듭니다.
-- **권고** [GitHub 흐름 워크플로](https://guides.github.com/introduction/flow/)를 수행합니다.
+- **권고**[GitHub 흐름 워크플로](https://guides.github.com/introduction/flow/)를 수행합니다.
 - **권고** 기여에 대해 자주 블로깅하고 트윗(무엇이든)합니다.
 
 > [!NOTE]

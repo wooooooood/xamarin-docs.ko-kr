@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
 ms.openlocfilehash: d58ba81596cccf470b7246514d71f35968599880
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77131060"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918145"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Xamarin.Forms에서 암시적 스타일
 
@@ -51,7 +51,7 @@ _암시적 스타일은 각 컨트롤이 스타일을 참조할 필요 없이 �
 </ContentPage>
 ```
 
-[`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 는 페이지의 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 적용 되는 단일 *암시적* 스타일을 정의 합니다. `Style`는 노란색 배경에 파란색 텍스트를 표시 하는 동시에 다른 모양 옵션도 설정 하는 데 사용 됩니다. `Style` `x:Key` 특성을 지정 하지 않고 페이지의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 추가 됩니다. 따라서 `Style`는 `Style`의 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성과 정확히 일치 하므로 모든 `Entry` 인스턴스에 암시적으로 적용 됩니다. 그러나 `Style`은 서브클래싱된 `Entry``CustomEntry` 인스턴스에 적용 되지 않습니다. 이로 인해 결국 다음 스크린샷에 표시된 모양이 됩니다.
+[`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 는 페이지의 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 적용 되는 단일 *암시적* 스타일을 정의 합니다. `Style`는 노란색 배경에 파란색 텍스트를 표시 하는 동시에 다른 모양 옵션도 설정 하는 데 사용 됩니다. `Style` `x:Key` 특성을 지정 하지 않고 페이지의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 추가 됩니다. 따라서 `Style`는 `Style`의 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성과 정확히 일치 하므로 모든 `Entry` 인스턴스에 암시적으로 적용 됩니다. 그러나 `Style`은 서브클래싱된 `Entry``CustomEntry` 인스턴스에 적용 되지 않습니다. 이 인해 다음 스크린샷에 표시 된 모양:
 
 [![암시적 스타일 예제](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
@@ -135,7 +135,7 @@ public class ImplicitStylesPageCS : ContentPage
 
 이 스타일을 페이지 수준 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 에 배치 하면 페이지의 모든 [`Button`](xref:Xamarin.Forms.Button) 인스턴스에 적용 되 고 `Button`에서 파생 되는 모든 컨트롤에도 적용 됩니다. 그러나 [`ApplyToDerivedTypes`](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) 속성이 설정 되지 않은 상태로 유지 되는 경우에는 `Button` 인스턴스에만 스타일이 적용 됩니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var buttonStyle = new Style(typeof(Button))

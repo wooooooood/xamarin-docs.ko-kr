@@ -5,12 +5,12 @@ ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 29b67e4410a3549e4e2cd63121ffa2e2205e0941
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 1cab4ea8ea3f98def4830e101783db1554efa69c
+ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940811"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78295419"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: 디바이스 정보
 
@@ -79,9 +79,9 @@ var deviceType = DeviceInfo.DeviceType;
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
-iOS는 개발자가 특정 iOS 디바이스의 이름을 가져올 수 있는 API를 노출하지 않습니다. 대신에 iPhone X를 참조하는 _iPhone10,6_과 같은 하드웨어 식별자가 반환됩니다. 이러한 식별자의 매핑은 Apple에서 제공하지 않지만 [iPhone Wiki](https://www.theiphonewiki.com/wiki/Models)(비공식 소스)에서 찾을 수 있습니다.
+iOS는 개발자가 특정 iOS 디바이스의 모델을 가져올 수 있는 API를 노출하지 않습니다. 대신, iPhone X를 참조하는 하드웨어 식별자(예: _iPhone10,6_)가 반환됩니다. 이러한 식별자의 매핑은 Apple에서 제공하지 않지만 비공식 소스인 [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) 및 [Get iOS Model](https://github.com/dannycabrera/Get-iOS-Model)에서 확인할 수 있습니다.
 
 --------------
 
