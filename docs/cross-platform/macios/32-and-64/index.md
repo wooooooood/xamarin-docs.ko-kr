@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016327"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910756"
 ---
 # <a name="3264-bit-platform-considerations"></a>32/64 비트 플랫폼 고려 사항
 
@@ -36,7 +36,7 @@ Unified API로 변환 된 Xamarin.ios 모바일 응용 프로그램의 경우 �
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **Solution Pad**에서 응용 프로그램의 프로젝트를 두 번 클릭 하 여 **프로젝트 옵션** 창을 엽니다.
 2. **IOS 빌드**를 선택 합니다.
@@ -49,22 +49,22 @@ Unified API로 변환 된 Xamarin.ios 모바일 응용 프로그램의 경우 �
    [![지원 되는 아키텍처를 ARM64 조합 중 하나로 설정](Images/Image02.png "지원 되는 아키텍처를 ARM64 조합 중 하나로 설정")](Images/Image02-large.png#lightbox)
 
 5. **확인**을 클릭합니다.
-6. 클린 빌드를 수행 합니다.
+6. 클린 빌드를 수행합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **솔루션 탐색기**에서 응용 프로그램의 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 2. **IOS 빌드**를 선택 합니다.
 3. IPhone 시뮬레이터의 경우 **지원 되는 아키텍처** 를 **x86\_64** 또는 **i386 + x86\_64**으로 설정 합니다. 
 
-   [![X86_64 또는 i386 + x86\_64에 지원 되는 아키텍처 설정](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![지원 되는 아키텍처를 x86_64 또는 i386 + x86\_64로 설정](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. 물리적 장치의 경우 사용 가능한 **ARM64** 조합 중 하나를 선택 합니다.
     
    [![지원 되는 아키텍처를 ARM64 조합 중 하나로 설정](Images/VS01.png "지원 되는 아키텍처를 ARM64 조합 중 하나로 설정")](Images/VS01-large.png#lightbox)
 
 5. 변경 내용을 저장합니다.
-6. 클린 빌드를 수행 합니다.
+6. 클린 빌드를 수행합니다.
 
 -----
 

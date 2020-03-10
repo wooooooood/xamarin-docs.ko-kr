@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 8402a48602dd94578e688faeb038aec69684e7d4
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940720"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917554"
 ---
 # <a name="unified-api-overview"></a>Unified API 개요
 
@@ -33,7 +33,7 @@ Xamarin의 Unified API를 사용 하면 Mac과 iOS 간에 코드를 공유 하 �
 - [기존 Xamarin.Forms 앱 업데이트](updating-xamarin-forms-apps.md)
 - [바인딩을 Unified API로 마이그레이션](update-binding.md)
 
-## <a name="tips-for-updating-code-to-the-unified-apiupdating-tipsmd"></a>[코드를 Unified API로 업데이트하는 팁](updating-tips.md)
+## <a name="tips-for-updating-code-to-the-unified-api"></a>[코드를 Unified API로 업데이트하는 팁](updating-tips.md)
 
 마이그레이션하는 응용 프로그램에 관계 없이 Unified API로 업데이트 하는 데 도움이 되는 [다음 팁](updating-tips.md) 을 확인 하세요.
 
@@ -134,7 +134,7 @@ if (IntPtr.Size == 4) {
 
 ### <a name="arrays-and-systemcollectionsgeneric"></a>배열 및 System.object
 
-인덱서에 C# 는 `int`형식이 필요 하기 때문에 컬렉션 또는 배열의 요소에 액세스 하려면 `nint` 값을 `int`로 명시적으로 캐스팅 해야 합니다. 예를 들면 다음과 같습니다.:
+인덱서에 C# 는 `int`형식이 필요 하기 때문에 컬렉션 또는 배열의 요소에 액세스 하려면 `nint` 값을 `int`로 명시적으로 캐스팅 해야 합니다. 다음은 그 예입니다.
 
 ```csharp
 public List<string> Names = new List<string>();
@@ -228,7 +228,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 ### <a name="custom-delegates-replaced-with-actiont"></a>사용자 지정 대리자를 작업\<T로 대체 >
 
-**통합** 된 몇 가지 간단한 (예: 하나의 매개 변수) .net 대리자는 `Action<T>`로 대체 되었습니다. 예:
+**통합** 된 몇 가지 간단한 (예: 하나의 매개 변수) .net 대리자는 `Action<T>`로 대체 되었습니다. 예를 들어
 
 ```csharp
 public delegate void NSNotificationHandler (NSNotification notification);
@@ -246,7 +246,7 @@ public delegate void NSNotificationHandler (NSNotification notification);
 
 일부 경우에는 일부 상수를 `string`에서 `NSString`으로 변경 해야 했습니다 (예: `UITableViewCell`
 
-**기존**
+**클래식**
 
 ```csharp
 public virtual string ReuseIdentifier { get; }
@@ -268,7 +268,7 @@ public virtual NSString ReuseIdentifier { get; }
 
 이러한 제한 사항은 통합 Api에서 제거 되 고 정리 되었습니다. 대부분의 변경 내용은 다음과 같습니다.
 
-**기존**
+**클래식**
 
 ```csharp
 public virtual AVAssetResourceLoaderDelegate Delegate { get; }
@@ -284,7 +284,7 @@ public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
 또한 일부 API는 보다 정확 하 고 사용 하기 쉽습니다. 예를 들면 다음과 같습니다.
 
-**기존**
+**클래식**
 
 ```csharp
 public virtual void SelectionDidChange (NSObject uiTextInput);

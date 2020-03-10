@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: HT
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73023413"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78918059"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -64,7 +64,7 @@ MVC는 *데이터 지속성* 및 모델의 *액세스*와 완전히 독립적입
 
 ## <a name="navigation-controller"></a>탐색 컨트롤러
 
-Phoneword 애플리케이션에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UINavigationController` 클래스로 표시되는 특수화된 `UIViewController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 콘텐츠 뷰 계층 구조를 관리합니다.
+Phoneword 애플리케이션에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UIViewController` 클래스로 표시되는 특수화된 `UINavigationController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 콘텐츠 뷰 계층 구조를 관리합니다.
 
 탐색 컨트롤러는 iOS 애플리케이션에서 일반적이며 아래 스크린샷에서 표시된 것처럼 **Settings** 앱과 같은 주요한 iOS 애플리케이션에 대한 탐색을 제공합니다.
 
@@ -126,7 +126,7 @@ iOS는 전환이 발생하기 직전에 `PrepareForSegue`를 호출하고 Storyb
 CallHistoryController callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
-마지막으로 `CallHistoryController`의 `PhoneHistory` 속성을 전화를 건 전화번호 목록으로 설정하여 `ViewController`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
+마지막으로 `ViewController`의 `CallHistoryController` 속성을 전화를 건 전화번호 목록으로 설정하여 `PhoneHistory`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
 
 ```csharp
 callHistoryController.PhoneNumbers = PhoneNumbers;
@@ -166,7 +166,7 @@ this.Storyboard.InstantiateViewController
 ("CallHistoryController") as CallHistoryController;
 ```
 
-마지막으로 Segue로 전환을 처리할 때 수행한 것처럼 `CallHistoryController`의 `PhoneHistory` 속성을 전화를 건 전화번호 목록으로 설정하여 `ViewController`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
+마지막으로 Segue로 전환을 처리할 때 수행한 것처럼 `ViewController`의 `CallHistoryController` 속성을 전화를 건 전화번호 목록으로 설정하여 `PhoneHistory`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
 
 ```csharp
 callHistory.PhoneNumbers = PhoneNumbers;
@@ -205,4 +205,4 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 
 - [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)
+- [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)

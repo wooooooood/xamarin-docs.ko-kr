@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
 ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489208"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910821"
 ---
 # <a name="introduction-to-ios-8"></a>iOS 8 소개
 
