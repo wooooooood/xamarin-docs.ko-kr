@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 4ccd22945caa9d81970867e0b037069389538b88
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 67b760a58628950caa33fe9009c5023c8696691c
+ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940919"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78946309"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>연습: iOS 목표-C 라이브러리 바인딩
 
@@ -54,11 +54,11 @@ Xamarin.ios에서이 특정 목표-C API를 사용 하는 데 필요한 모든 �
 
 ## <a name="installing-the-xcode-command-line-tools"></a>Xcode 명령줄 도구 설치
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 위에서 설명한 것 처럼이 연습에서는 Xcode 명령줄 도구 (특히 `make` 및 `lipo`)를 사용 합니다. `make` 명령은 프로그램을 빌드하는 방법을 지정 하는 _메이크파일을_ 사용 하 여 실행 프로그램 및 라이브러리의 컴파일을 자동화 하는 매우 일반적인 Unix 유틸리티입니다. `lipo` 명령은 다중 아키텍처 파일을 만들기 위한 OS X 명령줄 유틸리티입니다. 여러 `.a` 파일을 모든 하드웨어 아키텍처에서 사용할 수 있는 하나의 파일로 결합 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 위에서 설명한 것 처럼이 연습에서는 **Mac 빌드 호스트** (특히 `make` 및 `lipo`)에서 Xcode 명령줄 도구를 사용 합니다. `make` 명령은 _메이크파일을_ 사용 하 여 프로그램을 빌드하는 방법을 지정 하는 실행 프로그램 및 라이브러리의 컴파일을 자동화 하는 매우 일반적인 Unix 유틸리티입니다. `lipo` 명령은 다중 아키텍처 파일을 만들기 위한 OS X 명령줄 유틸리티입니다. 여러 `.a` 파일을 모든 하드웨어 아키텍처에서 사용할 수 있는 하나의 파일로 결합 합니다.
 
@@ -247,7 +247,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 다음 작업을 수행해 보겠습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Mac용 Visual Studio를 시작합니다.
 1. **파일** 메뉴에서 **새로 만들기** > **솔루션 ...** 을 선택 합니다.
@@ -258,7 +258,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
     ![](walkthrough-images/bind02.png "Select iOS Binding Project")
 
-1. **다음** 단추를 클릭 합니다.
+1. **다음** 단추를 클릭합니다.
 
 1. **프로젝트 이름** 으로 "Infcolor kerbinding"을 입력 하 고 **만들기** 단추를 클릭 하 여 솔루션을 만듭니다.
 
@@ -268,7 +268,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 ![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Visual Studio를 시작합니다.
 
@@ -299,7 +299,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
 라이브러리를 추가 하려면 다음 단계를 따르세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Solution Pad에서 **네이티브 참조** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **네이티브 참조 추가**를 선택 합니다.
 
@@ -312,7 +312,7 @@ Architectures in the fat file: libInfColorPicker.a are: i386 armv7 x86_64 arm64
 
     ![](walkthrough-images/bind04.png "Including a file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **Mac 빌드 호스트** 에서 `libInfColorPickerSDK.a`을 복사 하 여 바인딩 프로젝트에 붙여넣습니다.
 
@@ -346,11 +346,11 @@ using ObjCRuntime;
 
 ## <a name="using-objective-sharpie"></a>목표 Sharpie 사용
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 목표 Sharpie는 타사 목표-C 라이브러리를에 C#바인딩하는 데 필요한 정의를 만드는 데 도움이 될 수 있는 명령줄 도구 (Xamarin에서 제공)입니다. 이 섹션에서는 Sharpie를 사용 하 여 InfColorPicker 프로젝트에 대 한 초기 **ApiDefinition.cs** 를 만듭니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 목표 Sharpie는 타사 목표-C 라이브러리를에 C#바인딩하는 데 필요한 정의를 만드는 데 도움이 될 수 있는 명령줄 도구 (Xamarin에서 제공)입니다. 이 섹션에서는 **Mac 빌드 호스트** 의 목적 Sharpie를 사용 하 여 InfColorPicker 프로젝트에 대 한 초기 **ApiDefinition.cs** 를 만듭니다.
 
@@ -420,10 +420,13 @@ sdk: watchos2.2      arch: armv7
 터미널 앱에서 다음 명령을 입력 합니다.
 
 ```bash
-sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
+sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-여기서 `[full-path-to-project]`은 컴퓨터에서 **Infcolorpicker** Xcode 프로젝트 파일이 있는 디렉터리의 전체 경로이 고 [iphone-os]는 `sharpie xcode -sdks` 명령에 명시 된 대로 설치한 iOS SDK입니다. 이 예제에서는이 디렉터리의 *모든* 헤더 파일을 포함 하는 매개 변수로\*를 전달 했습니다 **.** 일반적으로이 작업을 수행 하면 안 됩니다. 그 대신 헤더 파일을 통해 다른 모든 관련 파일을 참조 하는 최상위 **.H** 파일을 찾고 목표 Sharpie으로 전달 하기만 하면 됩니다.
+여기서 `[full-path-to-project]`은 컴퓨터에서 **Infcolorpicker** Xcode 프로젝트 파일이 있는 디렉터리의 전체 경로이 고 [iphone-os]는 `sharpie xcode -sdks` 명령에 명시 된 대로 설치한 iOS SDK입니다. 이 예제에서는이 디렉터리의 *모든* 헤더 파일을 포함 하는 매개 변수로\*를 전달 했습니다 **.** 일반적으로이 작업을 수행 하면 안 됩니다. 그 대신 헤더 파일을 통해 다른 모든 관련 파일을 참조 하는 최상위 **.H** 파일을 찾고 목표 Sharpie으로 전달 하기만 하면 됩니다. 
+
+> [!TIP] 
+> `-scope` 인수에 대해 바인딩하려는 헤더가 있는 폴더를 전달 합니다. `-scope` 인수를 사용 하지 않으면 목표 Sharpie는 가져오는 iOS SDK 헤더 (예: `#import <UIKit.h>`)에 대 한 바인딩을 생성 하려고 하며,이로 인해 바인딩 프로젝트를 컴파일할 때 오류가 생성 될 가능성이 큰 정의 파일이 생성 됩니다. `-scope` 인수를 설정 하면 목표로 Sharpie는 범위 폴더 외부의 모든 헤더에 대 한 바인딩을 생성 하지 않습니다. 
 
 터미널에서 생성 되는 [출력](walkthrough-images/os05.png) 은 다음과 같습니다.
 
@@ -456,13 +459,13 @@ Europa:Resources kmullins$
 
 [![](walkthrough-images/os06.png "The InfColorPicker.enums.cs and InfColorPicker.cs files")](walkthrough-images/os06.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 기존 `namespace ...` 코드 블록을 **InfColorPicker.cs** 파일의 내용으로 바꿉니다. 즉, `using` 문은 그대로 둡니다.
 
 ![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 위에서 만든 바인딩 프로젝트에서 이러한 파일을 모두 엽니다. **Mac 빌드 호스트**에서 **InfColorPicker.cs** 파일의 내용을 복사 하 고 **ApiDefinition.cs** 파일에 붙여넣어 기존 `namespace ...` 코드 블록을 **InfColorPicker.cs** 파일의 내용으로 바꿉니다 (`using` 문은 그대로 유지).
 
@@ -489,13 +492,13 @@ Europa:Resources kmullins$
 
 Sharpie 특성을 `[Verify]` 사용 하 여에서 바인딩에 주석이 추가 되었음을 확인할 수도 있습니다. 이러한 특성은 바인딩을 원래 C/목표값-C 선언과 비교 하 여 (바인딩된 선언 위의 설명에 제공 됨) 목표 Sharpie이 올바른 것을 확인 해야 함을 의미 합니다. 바인딩을 확인 한 후에는 verify 특성을 제거 해야 합니다. 자세한 내용은 [확인](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) 가이드를 참조 하세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 이 시점에서 바인딩 프로젝트를 완료 하 고 빌드할 준비가 완료 되어야 합니다. 바인딩 프로젝트를 빌드하고 오류 없이 종료 되었는지 확인 합니다.
 
 [바인딩 프로젝트를 빌드하고 오류가 없는지 확인 합니다.](walkthrough-images/os12.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 이 시점에서 바인딩 프로젝트를 완료 하 고 빌드할 준비가 완료 되어야 합니다. 바인딩 프로젝트를 빌드하고 오류 없이 종료 되었는지 확인 합니다.
 
@@ -507,7 +510,7 @@ Sharpie 특성을 `[Verify]` 사용 하 여에서 바인딩에 주석이 추가 
 
 위에서 만든 iOS 바인딩 라이브러리를 사용 하는 샘플 iPhone 응용 프로그램을 만들려면 다음 단계를 수행 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **Xamarin.ios 프로젝트 만들기** -다음 스크린샷에 표시 된 것 처럼 솔루션에 **Infcolorpickersample** 이라는 새 xamarin.ios 프로젝트를 추가 합니다.
 
@@ -529,7 +532,7 @@ Sharpie 특성을 `[Verify]` 사용 하 여에서 바인딩에 주석이 추가 
 
 1. 메시지가 표시 되 면 프로젝트에 **xib** 파일을 복사 합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. **Xamarin.ios 프로젝트 만들기** - **단일 뷰 응용 프로그램** 템플릿을 사용 하 여 **infcolor kersample** 이라는 새 xamarin.ios 프로젝트를 추가 합니다.
 
@@ -667,7 +670,7 @@ private void HandleTouchUpInsideWithStrongDelegate (object sender, EventArgs e)
 
 [![](walkthrough-images/run01.png "Running the Application")](walkthrough-images/run01.png#lightbox)
 
-지금까지 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
+축하합니다! 이 시점에서 Xamarin.ios 응용 프로그램에서 사용할 목적-C 라이브러리를 성공적으로 만들고 바인딩 했습니다. 다음으로 약한 대리자를 사용 하는 방법을 살펴보겠습니다.
 
 ### <a name="implementing-a-weak-delegate"></a>약한 대리자 구현
 
@@ -708,7 +711,7 @@ public void ColorPickerControllerDidFinish (InfColorPickerController controller)
 
 ```
 
-응용 프로그램을 실행합니다. 이제 이전과 정확히 동일 하 게 동작 하지만 강력한 대리자 대신 weak 대리자를 사용 합니다. 이 시점에서이 연습을 성공적으로 완료 했습니다. 이제 Xamarin.ios 바인딩 프로젝트를 만들고 사용 하는 방법을 이해 해야 합니다.
+애플리케이션을 실행합니다. 이제 이전과 정확히 동일 하 게 동작 하지만 강력한 대리자 대신 weak 대리자를 사용 합니다. 이 시점에서이 연습을 성공적으로 완료 했습니다. 이제 Xamarin.ios 바인딩 프로젝트를 만들고 사용 하는 방법을 이해 해야 합니다.
 
 ## <a name="summary"></a>요약
 

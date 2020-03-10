@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
 ms.openlocfilehash: cd427d13bb79fd31e1e814726aaaf61788ae10ec
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030071"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78917571"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>Xamarin.ios 개발자를 위한 macOS Api
 
@@ -36,7 +36,7 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 - `(NSIndexSet *)rowIndexes`는 첫 번째 매개 변수이 고 형식이입니다. 첫 번째 매개 변수 형식은 다음과 같습니다. `(Type) pararmName`
 - `atPoint:(NSPoint)mouseDownPoint`은 두 번째 매개 변수 및 해당 형식입니다. 첫 번째 뒤의 모든 매개 변수는 형식입니다. `selectorPart:(Type) pararmName`
 - 이 메시지 선택기의 전체 이름은 `canDragRowsWithIndexes:atPoint:`입니다. 끝에 `:`를 확인 하는 것이 중요 합니다.
-- 실제 Xamarin.ios C# 바인딩은 다음과 같습니다`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- 실제 Xamarin.ios C# 바인딩은 다음과 같습니다 `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 이 선택기 호출은 다음과 같은 방식으로 읽을 수 있습니다.
 
@@ -45,7 +45,7 @@ Xamarin.ios를 사용 하 여 개발 하는 데 많은 시간이 소요 되는 �
 ```
 
 - 인스턴스 `v`에는 전달 된 `set` 및 `point`의 두 매개 변수를 사용 하 여 라는 `canDragRowsWithIndexes:atPoint` 선택기를 사용 합니다.
-- 에서 C#메서드 호출은 다음과 같습니다.`x.CanDragRows (set, point);`
+- 에서 C#메서드 호출은 다음과 같습니다. `x.CanDragRows (set, point);`
 
 <a name="finding_selector" />
 
