@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
 ms.openlocfilehash: 73c4e992fae1a2d525670604d98f277fe4fde794
-ms.sourcegitcommit: 3e94c6d2b6d6a70c94601e7bf922d62c4a6c7308
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031418"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78913574"
 ---
 # <a name="app-store-distribution"></a>앱 스토어 배포
 
@@ -121,11 +121,11 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 7. **생성** 단추를 클릭하여 새 프로필을 만들고 프로세스를 완료합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Mac용 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  Visual Studio에서 새 배포 프로필을 사용하려면, 먼저 Visual Studio를 종료한 다음, [서명 ID 요청](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download) 섹션의 지침에 따라 빌드 호스트의 Mac에 있는 Xcode에서 사용 가능한 서명 ID 및 프로비전 프로필의 목록을 새로 고쳐야 할 수도 있습니다.
 
@@ -137,7 +137,7 @@ Xamarin.iOS 애플리케이션을 릴리스하려는 방법에 관계없이 특�
 
 iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 빌드를 수행할 준비가 되면 위에서 만든 배포 프로필을 선택합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 다음을 수행합니다.
 
@@ -153,7 +153,7 @@ iTunes 앱 스토어에서 판매할 Xamarin.iOS 애플리케이션의 최종 �
     ![](images/releasexs03.png "Select the Signing Identity and Distribution Profiles")
 5. **확인** 단추를 클릭하여 변경 내용을 저장합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  Visual Studio에서 다음을 수행합니다.
 
