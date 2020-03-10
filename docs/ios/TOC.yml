@@ -658,15 +658,6 @@
               href: deploy-test/provisioning/entitlements.md
             - name: Info.plist 키/값 참조
               href: deploy-test/provisioning/infoplist-reference.md
-            - name: Fastlane
-              href: deploy-test/provisioning/fastlane/index.md
-              items:
-                - name: cert
-                  href: deploy-test/provisioning/fastlane/cert.md
-                - name: sigh
-                  href: deploy-test/provisioning/fastlane/sigh.md
-                - name: 일치
-                  href: deploy-test/provisioning/fastlane/match.md
         - name: 다른 디바이스용으로 컴파일
           href: deploy-test/compiling-for-different-devices.md
         - name: 환경
