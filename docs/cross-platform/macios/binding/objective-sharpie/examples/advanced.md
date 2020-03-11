@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5e36a66949c55a85d84cbbb17fa4d276e3af1eee
-ms.sourcegitcommit: acbaedbcb78bb5629d4a32e3b00f11540c93c216
+ms.openlocfilehash: 2dea16633181d6b1120a5f9a90da685df66e5451
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980429"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79031006"
 ---
 # <a name="advanced-manual-real-world-example"></a>고급 (수동) 실제 예
 
@@ -124,7 +124,10 @@ Done.
 
 목표 Sharpie에 `-scope build/Headers` 인수를 전달 하는 것을 알 수 있습니다. C 및 객관적인 C 라이브러리는 바인딩하려는 API가 아닌 라이브러리의 구현 Sharpie 다른 헤더 파일을 `#import` 하거나 `#include` 해야 하기 때문에 `-scope` 인수는 `-scope` 디렉터리 내의 파일에 정의 되어 있지 않은 모든 API를 무시 하도록 목표를 알려 줍니다.
 
-`-scope` 인수는 명확 하 게 구현 된 라이브러리의 경우 선택적 이지만 명시적으로 제공 하는 데에는 나쁜 영향을 미치지 않습니다.
+`-scope` 인수는 명확 하 게 구현 된 라이브러리의 경우 선택적 이지만 명시적으로 제공 하는 데에는 나쁜 영향을 미치지 않습니다. 
+
+> [!TIP]
+> 라이브러리의 헤더가 iOS SDK 헤더 (예: `#import <Foundation.h>`)를 가져오는 경우이 범위를 설정 해야 합니다. 그렇지 않으면 해당 범위를 설정 해야 합니다. 그렇지 않으면 Sharpie가 가져온 iOS SDK 헤더에 대 한 바인딩 정의를 생성 하 여 바인딩 프로젝트를 컴파일할 때 오류가 발생할 가능성이 큰 바인딩이 생성 됩니다. 
 
 또한 `-c -Ibuild/headers`를 지정 했습니다. 첫째, `-c` 인수는 명령줄 인수 해석을 중지 하 고 모든 후속 인수를 _clang 컴파일러에 직접_전달 하는 것을 목표로 Sharpie에 지시 합니다. 따라서 `-Ibuild/Headers`는 POP 머리글이 라이브 상태인 `build/Headers`에서 포함을 검색 하도록 clang에 지시 하는 clang 컴파일러 인수입니다. 이 인수를 `#import`사용 하지 않으면 clang는 `POP.h` 파일을 찾을 수 있는 위치를 알 수 없습니다. _객관적인 Sharpie 있지만를 사용 하는 거의 모든 "문제"는 clang에 전달할 사항을 파악 하는 데 사용_됩니다.
 
