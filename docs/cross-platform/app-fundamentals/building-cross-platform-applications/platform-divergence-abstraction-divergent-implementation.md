@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: e1fa76faf0313a21061af585052a3b137243db55
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: c8b4dcbfbf65bc4059125404b0d20ed35fa31f29
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488649"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088926"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>4부 - 다중 플랫폼 처리
 
@@ -158,15 +158,17 @@ Xamarin으로 컴파일해야 하는 코드입니다. Android 응용 프로그�
 
 #### <a name="mac"></a>Mac
 
-현재 Xamarin.ios에 대 한 기본 제공 기호가 없지만, Mac 앱 프로젝트 옵션에서 사용자 고유의 기호를 추가 하거나, **기호 정의** 상자에서 **> 컴파일러 > 빌드** 를 추가 하거나, .csproj 파일을 편집 하 고 해당 파일을 추가할 수 있습니다 (예: `__MAC__`) **.**
+Xamarin.ios는 macOS 용으로 컴파일하는 데 사용할 수 있는 `__MACOS__` 정의 합니다.
 
-```xml
-<PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
+```csharp
+#if __MACOS__
+// macOS-specific code
+#endif
 ```
 
 #### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
-`WINDOWS_UWP`을 사용하세요. Xamarin 플랫폼 기호와 같은 문자열 주위에는 밑줄이 없습니다.
+대신 `WINDOWS_UWP`를 Xamarin 플랫폼 기호와 같은 문자열 주위에는 밑줄이 없습니다.
 
 ```csharp
 #if WINDOWS_UWP

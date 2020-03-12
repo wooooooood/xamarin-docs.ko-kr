@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
 ms.openlocfilehash: e5a61af4cd8a09df3ffddb74658f646aa8edfa1f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: ce4670de51e24116a944c778ee64585bd0aae0e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032079"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79088972"
 ---
 # <a name="visual-design-updates-in-ios-11"></a>IOS 11의 시각적 디자인 업데이트
 
@@ -51,7 +51,7 @@ iOS 11은 검색 컨트롤러를 탐색 모음에 직접 추가 하는 작업을
 NavigationItem.SearchController = searchController;
 ```
 
-[검색 창을 사용 하 여![큼 탐색 제목](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
+[검색 창을 사용 하 여 ![큼 탐색 제목](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 앱의 기능에 따라 사용자가 목록에서 스크롤하면 검색 표시줄이 숨겨지도록 할 수도 있고 그렇지 않을 수도 있습니다. `HidesSearchBarWhenScrolling` 속성을 사용 하 여이를 조정할 수 있습니다.
 
@@ -78,7 +78,7 @@ iOS 7에서는 `topLayoutGuide` 및 `bottomLayoutGuide`를 도입 하 여 UIKit 
 
 [![안전 영역 vs 위쪽 및 아래쪽 레이아웃 안내선](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
-이전에는 보기를 추가 하 고 위의 녹색 영역에서 보기를 표시 하려는 경우 `TopLayoutGuide`의 하단 및 `BottomLayoutGuide`의 _맨_ _아래로_ 제한 합니다. IOS 11에서는이를 안전 영역의 _위쪽_ 및 _아래쪽_ 으로 제한 합니다. 이러한 예제는 다음과 같습니다.
+이전에는 보기를 추가 하 고 위의 녹색 영역에서 보기를 표시 하려는 경우 `TopLayoutGuide`의 하단 및 `BottomLayoutGuide`의 _맨_ _아래로_ 제한 합니다. IOS 11에서는이를 안전 영역의 _위쪽_ 및 _아래쪽_ 으로 제한 합니다. 예제는 다음과 같습니다.
 
 ```csharp
 var safeGuide = View.SafeAreaLayoutGuide;
