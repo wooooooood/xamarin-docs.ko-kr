@@ -1,5 +1,5 @@
 ---
-title: CSS(CSS 스타일시트)를 사용하여 Xamarin.Forms 앱 스타일 지정
+title: (CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 description: Xamarin.Forms는 스타일 (CSS 스타일 시트)를 사용 하는 시각적 요소를 지원 합니다.
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 726ebd55b38460ee966113e4ee487327cd42b03d
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724195"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305602"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>(CSS 스타일 시트)를 사용 하 여 Xamarin.Forms 앱 스타일 지정
 
@@ -319,7 +319,7 @@ stacklayout>image {
 
 다음 CSS 선택기는 Xamarin.Forms에서 지원 됩니다.
 
-|선택기|예제|설명|
+|선택기|예제|Description|
 |---|---|---|
 |`.class`|`.header`|' Header '를 포함 하는 `StyleClass` 속성을 사용 하 여 모든 요소를 선택 합니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|
 |`#id`|`#email`|`email``StyleId` 설정 된 모든 요소를 선택 합니다. `StyleId` 설정 되지 않은 경우 `x:Name`로 대체 합니다. XAML을 사용 하는 경우 `x:Name` `StyleId`보다 우선적으로 사용 됩니다. 이 선택기는 대/소문자 구분 임을 유의 합니다.|

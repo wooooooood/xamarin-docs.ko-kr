@@ -8,30 +8,30 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2019
 ms.openlocfilehash: 2a17b037803d1ca6e54000ea7ba3f05c8ce6034f
-ms.sourcegitcommit: 5f972a757030a1f17f99177127b4b853816a1173
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69888467"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305758"
 ---
 # <a name="colors-in-xamarinforms"></a>Xamarin.Forms의 색
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
-_Xamarin.Forms는 유연한 플랫폼 간 색 클래스를 제공 합니다._
+_Xamarin.ios는 유연한 플랫폼 간 색 클래스를 제공 합니다._
 
-이 문서에서는 xamarin.ios에서 클래스를 [`Color`](xref:Xamarin.Forms.Color) 사용 하는 다양 한 방법을 소개 합니다.
+이 문서에서는 Xamarin.ios에서 [`Color`](xref:Xamarin.Forms.Color) 클래스를 사용 하는 다양 한 방법을 소개 합니다.
 
-클래스 [`Color`](xref:Xamarin.Forms.Color) 는 색 인스턴스를 작성 하는 여러 메서드를 제공 합니다.
+[`Color`](xref:Xamarin.Forms.Color) 클래스는 색 인스턴스를 작성 하는 여러 메서드를 제공 합니다.
 
-- **명명 된 색** -일반적인 명명 된 색을 포함 하 여 컬렉션인 `Red`를 `Green`, 및 `Blue`합니다.
+- **명명 된 색** -`Red`, `Green`및 `Blue`를 포함 하는 일반적인 명명 된 색의 컬렉션입니다.
 - **Fromhex** -문자열 값 (예: "00FF00")을 HTML에서 사용 하는 구문과 유사 합니다. 선택적으로 Alpha는 첫 번째 문자 쌍 ("CC00FF00")으로 지정할 수 있습니다.
-- **FromHsla** -색상, 채도 및 명도 `double` 선택적 알파 값 (0.0-1.0) 값입니다.
-- **FromRgb** -빨강, 녹색 및 파랑 `int` 값 (0-255).
-- **FromRgba** -빨간색, 녹색, 파랑 및 알파 `int` 값 (0-255).
-- **FromUint** -단일 설정 `double` 값을 나타내는 **argb**합니다.
+- **Fromhsla** -색상, 채도 및 명도 `double` 값 이며 선택적 알파 값 (0.0-1.0)이 있습니다.
+- **Fromrgb** -Red, green 및 blue `int` 값 (0-255)입니다.
+- **Fromrgba** -빨강, 녹색, 파랑 및 알파 `int` 값 (0-255)입니다.
+- **FromUint** - **argb**를 나타내는 단일 `double` 값을 설정 합니다.
 
-여기에 할당 된 일부 예제에서는 색을가 `BackgroundColor` 다양 한 허용 되는 구문 사용 하 여 일부 레이블의:
+다음은 허용 되는 구문의 다른 변형을 사용 하 여 일부 레이블의 `BackgroundColor`에 할당 된 몇 가지 예제 색입니다.
 
 ```csharp
 var red    = new Label { Text = "Red",   BackgroundColor = Color.Red };
@@ -47,15 +47,15 @@ var @default = new Label    { Text = "Default",    BackgroundColor = Color.Defau
 var accent = new Label      { Text = "Accent",     BackgroundColor = Color.Accent };
 ```
 
-이러한 색은 아래 각 플랫폼에 표시 됩니다. 최종 색-확인 `Accent` -blue-ish 색 iOS 및 Android 용 Xamarin.Forms에서이 값은 정의 합니다.
+이러한 색은 아래 각 플랫폼에 표시 됩니다. 최종 색 `Accent`는 iOS 및 Android의 파란색 길쭉한 색입니다. 이 값은 Xamarin.ios에 의해 정의 됩니다.
 
  [![색 데모](colors-images/colors-sml.png "색 데모")](colors-images/colors.png#lightbox "색 데모")
 
 ## <a name="colordefault"></a>Color.Default
 
-사용 된 `Default` 기본값으로 다시 플랫폼 (각 속성에 대 한 각 플랫폼에서 다른 기본 색을 나타내는 이해) 색 값을 설정 (또는 다시 설정).
+`Default`를 사용 하 여 색 값을 플랫폼 기본값으로 다시 설정 (또는 다시 설정) 할 수 있습니다 .이는 각 속성에 대 한 각 플랫폼에서 서로 다른 기본 색을 나타내는 것을 이해 합니다.
 
-개발자 설정 하려면이 값을 사용할 수는 `Color` 해야 하지만 **하지** (해당 하는 모든-1로 설정) 구성 요소 RGB 값에 대해이 인스턴스를 쿼리 합니다.
+개발자는이 값을 사용 하 여 `Color` 속성을 설정할 수 있지만 구성 요소 RGB 값에 대해이 인스턴스 **를 쿼리하지 말아야 합니다.** 모두-1로 설정 됩니다.
 
 ## <a name="colortransparent"></a>Color.Transparent
 
@@ -67,18 +67,18 @@ IOS 및 Android에서이 인스턴스는 기본 배경으로 표시 되었지만
 
 ## <a name="additional-methods"></a>추가 방법
 
-[`Color`](xref:Xamarin.Forms.Color)인스턴스에는 다음과 같은 추가 메서드가 포함 됩니다.
+[`Color`](xref:Xamarin.Forms.Color) 인스턴스에는 다음과 같은 추가 메서드가 포함 됩니다.
 
-- **Addluminosity** -제공 된 `Color` 델타를 기준으로 광도를 수정 하 여를 반환 합니다.
-- **MultiplyAlpha** -알파를 `Color` 수정 하 고 제공 된 알파 값을 곱하여를 반환 합니다.
-- **Tohex** -의 `Color`16 진수 `string` 표현을 반환 합니다.
-- **Withhue** -를 `Color`반환 하 고, 색상을 제공 된 값으로 바꿉니다.
-- **Withluminosity** -광도를 `Color`제공 된 값으로 바꿔를 반환 합니다.
-- **Withsaturation** -채도를 `Color`제공 된 값으로 바꿔를 반환 합니다.
+- **Addluminosity** -제공 된 델타를 기준으로 광도를 수정 하 여 `Color`을 반환 합니다.
+- **MultiplyAlpha** -알파를 수정 하 여 제공 된 알파 값을 곱하여 `Color`을 반환 합니다.
+- **Tohex** -`Color`의 16 진수 `string` 표현을 반환 합니다.
+- **Withhue** -색상을 제공 된 값으로 대체 하는 `Color`를 반환 합니다.
+- **Withluminosity** -광도를 제공 된 값으로 대체 하는 `Color`를 반환 합니다.
+- **Withsaturation** -`Color`을 반환 하 고 채도를 제공 된 값으로 바꿉니다.
 
 ## <a name="implicit-conversions"></a>암시적 변환
 
-간에 암시적 변환이 합니다 `Xamarin.Forms.Color` 및 `System.Drawing.Color` 형식을 수행할 수 있습니다.
+`Xamarin.Forms.Color`와 `System.Drawing.Color` 형식 간의 암시적 변환을 수행할 수 있습니다.
 
 ```csharp
 Xamarin.Forms.Color xfColor = Xamarin.Forms.Color.FromRgb(0, 72, 255);
@@ -93,7 +93,7 @@ Xamarin.Forms.Color xfColor2 = sdColor;
 
 ## <a name="deviceruntimeplatform"></a>Device.RuntimePlatform
 
-이 코드 조각을 사용 하는 `Device.RuntimePlatform` 선택적으로 색을 설정 하는 속성을 `ActivityIndicator`:
+이 코드 조각은 `Device.RuntimePlatform` 속성을 사용 하 여 `ActivityIndicator`색을 선택적으로 설정 합니다.
 
 ```csharp
 ActivityIndicator activityIndicator = new ActivityIndicator
@@ -121,4 +121,4 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 ## <a name="related-links"></a>관련 링크
 
 - [ColorsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
-- [바인딩할 수 있는 선택 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [바인딩 가능한 선택기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)

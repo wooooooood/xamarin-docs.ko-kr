@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 08fb22627ab6b40c94c17d94321ed0bac60beedd
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78915268"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306322"
 ---
 # <a name="dependency-injection"></a>종속성 주입
 
@@ -144,7 +144,7 @@ var viewModel = _container.Resolve(viewModelType);
 이 예에서는 요청 된 뷰 모델에 대 한 뷰 모델 유형을 확인 하도록 TinyIoC를 요청 하 고, 컨테이너는 종속성도 확인 합니다. `ProfileViewModel` 유형을 확인 하는 경우 확인할 종속성은 `ISettingsService` 개체 및 `IOrderService` 개체입니다. `SettingsService` 및 `OrderService` 클래스를 등록할 때 인터페이스 등록이 사용 되었으므로 TinyIoC는 `SettingsService` 및 `OrderService` 클래스에 대 한 singleton 인스턴스를 반환한 다음 `ProfileViewModel` 클래스의 생성자에 전달 합니다. EShopOnContainers 모바일 앱에서 모델을 생성 하 고 보기에 연결 하는 방법에 대 한 자세한 내용은 [뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator)를 참조 하세요.
 
 > [!NOTE]
-> 컨테이너를 사용하여 형식을 등록하고 확인하는 경우, 특히 앱의 각 페이지 탐색에 대한 종속성을 다시 생성하는 경우 컨테이너의 리플렉션 사용으로 인해 성능비용이 발생합니다. 종속성이 많거나 깊은 경우에는 생성 비용이 많이 증가할 수 있습니다.
+> 컨테이너를 사용하여 형식을 등록하고 확인하는 경우, 특히 앱의 각 페이지 탐색에 대한 종속성을 다시 생성하는 경우 컨테이너의 리플렉션 사용으로 인해 성능비용이 발생합니다. 여러 경우에 전체 종속성 생성 비용이 크게 증가할 수 있습니다.
 
 <a name="managing_the_lifetime_of_resolved_objects" />
 

@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
 ms.openlocfilehash: 68de58f499788d803aa0af6c68f20e2265b1d6b5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013168"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305824"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>버전 정보 및 로그는 어디에서 확인할 수 있나요?
 
@@ -31,7 +31,7 @@ ms.locfileid: "73013168"
     - Visual Studio 시작, 자세한 정보 로그
   - [Mac 로그](#mac-logs)
     - 빌드 호스트
-  - Visual Studio for Mac
+  - Mac용 Visual Studio
     - Xamarin Studio
     - Xamarin 설치 관리자
 - [자세한 정보 표시 빌드 출력](#verbose-build-output-logs)
@@ -56,7 +56,7 @@ ms.locfileid: "73013168"
 
 ### <a name="a-idmac-version-information-namemac-version-information-mac-version-information"></a><a id="mac-version-information" name="mac-version-information" />Mac 버전 정보
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **Visual studio > Visual Studio > 정보 > 복사 정보 표시 [단추]**
 
@@ -64,7 +64,7 @@ ms.locfileid: "73013168"
 
 Android SDK 관리자를 열고 최상위 **도구** 섹션의 스크린샷을 찍습니다.
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **Android SDK Manager > 도구를 엽니다.**
 
@@ -150,7 +150,7 @@ Finder에서 **이동 > 폴더로 이동** 메뉴 항목을 선택 하 고이 �
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a>Xamarin Android 및 Xamarin.ios 앱에 대 한 디버그 로그 <a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />
 
-### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **응용 프로그램 출력 > > 패드 보기**
 
@@ -160,9 +160,9 @@ Finder에서 **이동 > 폴더로 이동** 메뉴 항목을 선택 하 고이 �
 
 **출력 > 표시 > 디버그: 디버그**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a>Android [`adb`](https://developer.android.com/tools/help/adb.html) logcat 로그 <a id="adb-logcat" name="adb-logcat" />
+### <a name="a-idadb-logcat-nameadb-logcat-android-adb-logcat-logs"></a>Android [`adb`](https://developer.android.com/tools/help/adb.html) logcat 로그 <a id="adb-logcat" name="adb-logcat" />
 
-`adb` 명령을 실행 한 후 바탕 화면에서 **android_logcat** 파일을 다시 연결 합니다. 이 지침에서는 장치가 하나만 연결 되어 있다고 가정 합니다.
+`adb` 명령을 실행 한 후 바탕 화면에서 **android_logcat .txt** 파일을 다시 연결 합니다. 이 지침에서는 장치가 하나만 연결 되어 있다고 가정 합니다.
 
 [Android 디버그 로그](~/android/deploy-test/debugging/android-debug-log.md) 페이지도 참조 하세요.
 
@@ -170,14 +170,14 @@ Finder에서 **이동 > 폴더로 이동** 메뉴 항목을 선택 하 고이 �
 
 1. **Android > 도구 > Android Adb 명령 프롬프트 시작**
 2. 로그 정리: `adb logcat -c`
-3. 문제를 재현 합니다.
+3. 이슈를 재현합니다.
 4. 로그를 출력 합니다. `adb logcat -vtime -d > "%USERPROFILE%\Desktop\android_logcat.txt"`
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 1. **도구 > Android SDK 명령 프롬프트 열기**
 2. 로그 정리: `adb logcat -c`
-3. 문제를 재현 합니다.
+3. 이슈를 재현합니다.
 4. 로그를 출력 합니다. `adb logcat -vtime -d > ~/Desktop/android_logcat.txt`
 
 ### <a name="a-idios-simulator-logs-nameios-simulator-logs-ios-simulator-logs-on-mac"></a><a id="ios-simulator-logs" name="ios-simulator-logs" />iOS 시뮬레이터 로그 (Mac)
@@ -188,7 +188,7 @@ Finder에서 **이동 > 폴더로 이동** 메뉴 항목을 선택 하 고이 �
 
 ### <a name="a-idios-device-logs-nameios-device-logs-ios-device-logs-on-mac"></a>Mac에서 iOS 장치 로그 <a id="ios-device-logs" name="ios-device-logs" />
 
-#### <a name="visual-studio-for-mac"></a>Visual Studio for Mac
+#### <a name="visual-studio-for-mac"></a>Mac용 Visual Studio
 
 **IOS 장치 로그 > > 패드 보기**
 

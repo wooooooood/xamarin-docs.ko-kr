@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/04/2019
 ms.openlocfilehash: 26fbe6af639c67a94408605ba456bb3a100d2355
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155251"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305890"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -34,7 +34,7 @@ ms.locfileid: "78155251"
 > [!NOTE]
 > Windows의 `WebView`은 해당 플랫폼에서 Internet Explorer가 지 원하는 경우에도 Silverlight, Flash 또는 ActiveX 컨트롤을 지원 하지 않습니다.
 
-### <a name="websites"></a>웹 사이트
+### <a name="websites"></a>Websites
 
 인터넷에서 웹 사이트를 표시 하려면 `WebView`의 [`Source`](xref:Xamarin.Forms.WebViewSource) 속성을 문자열 URL로 설정 합니다.
 
@@ -114,7 +114,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-WebView에서 HTML, CSS 콘텐츠를 표시할 수 및 앱 내에서 Javascript를 포함 합니다. 예들 들어 다음과 같습니다.
+WebView에서 HTML, CSS 콘텐츠를 표시할 수 및 앱 내에서 Javascript를 포함 합니다. 다음은 그 예입니다.
 
 ```html
 <html>
@@ -178,7 +178,7 @@ IOS에서 웹 콘텐츠는 아래와 같이 *BundleResource*빌드 작업을 사
 
 ![IOS의 로컬 파일](webview-images/ios-vs.png)
 
-# <a name="visual-studio-for-mac"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![IOS의 로컬 파일](webview-images/ios-xs.png)
 
@@ -208,7 +208,7 @@ Android에서 아래와 같이 빌드 작업 *Androidasset* 를 사용 하 여 �
 
 ![Android의 로컬 파일](webview-images/android-vs.png)
 
-# <a name="visual-studio-for-mac"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![Android의 로컬 파일](webview-images/android-xs.png)
 
@@ -240,7 +240,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 }
 ```
 
-#### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
+#### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP (유니버설 Windows 플랫폼) 프로젝트에서 빌드 작업을 *내용*으로 설정 하 여 프로젝트 루트에 HTML, CSS 및 이미지를 넣습니다.
 
@@ -326,7 +326,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-정말 간단하죠.
+이것으로 끝입니다.
 
 ![웹 보기 탐색 단추](webview-images/in-app-browser.png)
 
@@ -352,7 +352,7 @@ WebView에 상태에서 변경 내용에 응답할 수 있도록 다음 이벤�
 - `Source` – 탐색을 수행 하는 요소입니다.
 - `Url` – 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 및 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예들 들어 다음과 같습니다.
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 되는 경우 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 및 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 다음은 그 예입니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -546,7 +546,7 @@ function factorial(num) {
 
 [iOS 빌드 섹션에서 플래그를 설정 하는 ![](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
 
-# <a name="visual-studio-for-mac"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 링커가 `UIWebView` 참조를 제거 하려면 다음 단계를 수행 합니다.
 

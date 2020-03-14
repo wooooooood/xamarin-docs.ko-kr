@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/26/2019
 ms.openlocfilehash: 1ae176cfebdde31038c30895d1bf562ff3396eaa
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77131066"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306610"
 ---
 # <a name="xamarinforms-editor"></a>Xamarin.Forms 편집기
 
@@ -98,7 +98,7 @@ var editor = new Editor { ... MaxLength = 10 };
         CharacterSpacing="10" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Editor editor = new editor { CharacterSpacing = 10 };
@@ -144,13 +144,13 @@ var editor = new Editor { Text = "Enter text here", AutoSize = EditorAutoSizeOpt
 - [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 텍스트를 입력할 때 사용합니다.
 - [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 파일 경로 및 웹 주소를 입력하는 데 사용합니다.
 
-이렇게 하면 다음과 같이 XAML로 수행할 수 있습니다.
+이렇게 하려면 XAML에서 다음과 같이 합니다.
 
 ```xaml
 <Editor Keyboard="Chat" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var editor = new Editor { Keyboard = Keyboard.Chat };
@@ -183,7 +183,7 @@ var editor = new Editor { Keyboard = Keyboard.Chat };
 </Editor>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var editor = new Editor();

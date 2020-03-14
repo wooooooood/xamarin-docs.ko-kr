@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/20/2020
 ms.openlocfilehash: 3798e3612547d36905dd62e6314f158958782874
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160611"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305680"
 ---
 # <a name="fonts-in-xamarinforms"></a>Xamarin.Forms의 글꼴
 
@@ -240,7 +240,7 @@ using Xamarin.Forms;
        FontFamily="Lobster-Regular" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Label label = new Label
@@ -280,7 +280,7 @@ Label label = new Label
 </Image>
 ```
 
-이 코드는 [`Image`](xref:Xamarin.Forms.Image) 보기에서 고 아이콘 글꼴 패밀리의 XBox 아이콘을 표시 합니다. 이 아이콘의 유니코드 문자는 `\uf30c`있지만 XAML로 이스케이프 되어야 하므로 `&#xf30c;`됩니다. 해당하는 C# 코드는 다음과 같습니다.
+이 코드는 [`Image`](xref:Xamarin.Forms.Image) 보기에서 고 아이콘 글꼴 패밀리의 XBox 아이콘을 표시 합니다. 이 아이콘의 유니코드 문자는 `\uf30c`있지만 XAML로 이스케이프 되어야 하므로 `&#xf30c;`됩니다. 해당 하는 C# 코드가입니다.
 
 ```csharp
 Image image = new Image { BackgroundColor = Color.FromHex("#D1D1D1") };

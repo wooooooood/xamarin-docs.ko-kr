@@ -1,6 +1,6 @@
 ---
-title: Xamarin Forms 장치 클래스
-description: 이 문서에서는 Xamarin.ios 장치 클래스를 사용 하 여 플랫폼별로 기능 및 레이아웃에 대 한 세분화 된 제어를 사용 하는 방법을 설명 합니다.
+title: Xamarin.Forms 장치 클래스
+description: 이 문서에서는 Xamarin.Forms 장치 클래스를 사용 하 여 플랫폼별 기준 기능 및 레이아웃 보다 세분화 된 제어 하는 방법에 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
@@ -8,27 +8,27 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/12/2019
 ms.openlocfilehash: 25ddbea75d0fd6858f848499281da5d5f0b68171
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697192"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306430"
 ---
-# <a name="xamarinforms-device-class"></a>Xamarin Forms 장치 클래스
+# <a name="xamarinforms-device-class"></a>Xamarin.Forms 장치 클래스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
-[`Device`](xref:Xamarin.Forms.Device) 클래스에는 개발자가 플랫폼별 레이아웃 및 기능을 사용자 지정 하는 데 도움이 되는 다양 한 속성 및 메서드가 포함 되어 있습니다.
+합니다 [ `Device` ](xref:Xamarin.Forms.Device) 클래스 속성 및 레이아웃 및 플랫폼별으로 기능을 사용자 지정 하는 개발자가 하는 방법의 수를 포함 합니다.
 
 특정 하드웨어 형식 및 크기에서 코드를 대상으로 하는 메서드 및 속성 외에도 `Device` 클래스에는 백그라운드 스레드에서 UI 컨트롤과 상호 작용 하는 데 사용할 수 있는 메서드가 포함 되어 있습니다. 자세한 내용은 [백그라운드 스레드에서 UI와 상호 작용](#interact-with-the-ui-from-background-threads)을 참조 하세요.
 
 ## <a name="providing-platform-specific-values"></a>플랫폼별 값 제공
 
-2\.3.4 이전에는 응용 프로그램을 실행 하는 플랫폼을 [`Device.OS`](xref:Xamarin.Forms.Device.OS) 속성을 검사 하 고 [`TargetPlatform.iOS`](xref:Xamarin.Forms.TargetPlatform.iOS), [`TargetPlatform.Android`](xref:Xamarin.Forms.TargetPlatform.Android), [`TargetPlatform.WinPhone`](xref:Xamarin.Forms.TargetPlatform.WinPhone)및 [`TargetPlatform.Windows`](xref:Xamarin.Forms.TargetPlatform.Windows) 열거와 비교 하 여 가져올 수 있었습니다. 값인. 마찬가지로 [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드 중 하나를 사용 하 여 플랫폼 특정 값을 컨트롤에 제공할 수 있습니다.
+2\.3.4 Xamarin.Forms 하기 전에 응용 프로그램에서 실행 되는 플랫폼 검사 하 여 가져올 수 없습니다는 [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) 속성과 비교 하 여 [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android)하십시오 [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), 및 [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) 열거형 값입니다. 마찬가지로,이 중 하나는 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드를 사용 하 여 컨트롤에 플랫폼 특정 값을 제공할 수 있습니다.
 
-그러나 Xamarin.ios 2.3.4 이러한 Api는 더 이상 사용 되지 않으며 대체 되었습니다. 이제 [`Device`](xref:Xamarin.Forms.Device) 클래스에는 [`Device.iOS`](xref:Xamarin.Forms.Device.iOS), [`Device.Android`](xref:Xamarin.Forms.Device.Android), `Device.WinPhone` (사용 되지 않음), `Device.WinRT` (사용 되지 않음), `Device.UWP` 및 1 [플랫폼을](xref:Xamarin.Forms.Device.UWP)식별 [`Device.macOS`](xref:Xamarin.Forms.Device.macOS)하는 공용 문자열 상수가 포함 되어 있습니다. 마찬가지로 [`Device.OnPlatform`](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드는 [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) 및 [`On`](xref:Xamarin.Forms.On) api로 대체 되었습니다.
+그러나 이후 Xamarin.Forms 2.3.4 이러한 Api가 더 이상 사용 되지 되어 대체 합니다. 합니다 [ `Device` ](xref:Xamarin.Forms.Device) 플랫폼을 식별 하는 공용 문자열 상수를 이제 포함 하는 클래스 [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS)를 [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`( 사용 되지 않음), `Device.WinRT` (사용 되지 않음), [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), 및 [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS)합니다. 마찬가지로, 합니다 [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) 오버 로드로 대체 되었습니다 합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 및 [ `On` ](xref:Xamarin.Forms.On) Api.
 
-에서 C#플랫폼별 값은 [`Device.RuntimePlatform`](xref:Xamarin.Forms.Device.RuntimePlatform) 속성에 `switch` 문을 만든 다음 필요한 플랫폼에 대 한 `case` 문을 제공 하 여 제공할 수 있습니다.
+C#를 만들어 플랫폼 특정 값을 제공할 수 있습니다는 `switch` 문을 [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) 속성을 선택한 다음 제공 `case` 에 필요한 플랫폼에 대 한 문을:
 
 ```csharp
 double top;
@@ -46,7 +46,7 @@ switch (Device.RuntimePlatform)
 layout.Margin = new Thickness(5, top, 5, 0);
 ```
 
-[`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) 및 [`On`](xref:Xamarin.Forms.On) 클래스는 XAML에서 동일한 기능을 제공 합니다.
+[ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 하 고 [ `On` ](xref:Xamarin.Forms.On) 클래스는 XAML에서 동일한 기능을 제공 합니다.
 
 ```xaml
 <StackLayout>
@@ -60,27 +60,27 @@ layout.Margin = new Thickness(5, top, 5, 0);
 </StackLayout>
 ```
 
-[`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) 클래스는 대상 형식과 일치 하는 `x:TypeArguments` 특성을 사용 하 여 인스턴스화해야 하는 제네릭 클래스입니다. [`On`](xref:Xamarin.Forms.On) 클래스에서 [`Platform`](xref:Xamarin.Forms.On.Platform) 특성은 단일 `string` 값 또는 쉼표로 구분 된 여러 `string` 값을 사용할 수 있습니다.
+합니다 [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) 클래스는 인스턴스화할 수 있어야 하는 제네릭 클래스는 `x:TypeArguments` 대상 형식과 일치 하는 특성입니다. 에 [ `On` ](xref:Xamarin.Forms.On) 클래스를 [ `Platform` ](xref:Xamarin.Forms.On.Platform) 특성에는 단일 수락할 수 있습니다 `string` 값 또는 쉼표로 구분 된 여러 `string` 값입니다.
 
 > [!IMPORTANT]
-> `On` 클래스에 잘못 된 `Platform` 특성 값을 제공 하면 오류가 발생 하지 않습니다. 대신, 플랫폼별 값을 적용 하지 않고 코드가 실행 됩니다.
+> 잘못 된 제공 `Platform` 특성 값을 `On` 클래스 오류가 발생 하지 것입니다. 대신 코드 적용 되는 플랫폼 특정 값 없이 실행 됩니다.
 
-또는 XAML에서 `OnPlatform` 태그 확장을 사용 하 여 플랫폼 별로 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [Onplatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)을 참조 하세요.
+또는 `OnPlatform` 태그 확장 수 XAML에서 플랫폼별 기준 UI 모양을 사용자 지정 합니다. 자세한 내용은 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform)합니다.
 
-## <a name="deviceidiom"></a>장치.
+## <a name="deviceidiom"></a>Device.Idiom
 
-`Device.Idiom` 속성은 응용 프로그램이 실행 되는 장치에 따라 레이아웃이 나 기능을 변경 하는 데 사용할 수 있습니다. [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) 열거형에는 다음 값이 포함 됩니다.
+`Device.Idiom` 장치 응용 프로그램에 따라 기능에서 실행 되 고 또는 레이아웃을 변경 하려면 속성을 사용할 수 있습니다. 합니다 [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) 열거형 다음 값을 포함 합니다.
 
-- **전화 번호** -IPhone, iPod Touch 및 Android 장치 600 dip ^ 미만
-- **태블릿** – IPad, Windows 장치 및 Android 장치가 600 dip ^ 보다 더 큼
-- **Desktop** – windows 10 데스크톱 컴퓨터의 [UWP 앱](~/xamarin-forms/platform/windows/installation/index.md) 에서만 반환 됩니다 (Continuum 시나리오를 포함 하 여 모바일 windows 장치에서 `Phone` 반환).
-- **Tv** – Tizen tv 장치
-- **시청** – Tizen 시청 장치
-- **지원 되지 않음** -사용 안 함
+- **Phone** – iPhone, iPod touch 및 Android 장치 600 dip 보다 너비가 좁습니다 ^
+- **태블릿** -iPad, Windows 장치 및 Android 장치 600 dip 보다 넓은 ^
+- **데스크톱** – 반환 [UWP 앱](~/xamarin-forms/platform/windows/installation/index.md) Windows 10 데스크톱 컴퓨터에서 (반환 `Phone` 연속성 시나리오에 포함 하 여 모바일 Windows 장치의)
+- **TV** – Tizen TV 장치
+- **조사식** – Tizen watch 장치
+- **지원 되지 않는** – 사용 되지 않는
 
-*^ dip는 실제 픽셀 수와 같지 않을 수 있습니다.*
+*^ dip가 반드시 물리적 픽셀 수*
 
-`Idiom` 속성은 다음과 같이 더 큰 화면을 활용 하는 레이아웃을 작성 하는 데 특히 유용 합니다.
+`Idiom` 속성은 다음과 같은 큰 화면을 활용 하는 레이아웃을 작성 하는 데 특히 유용 합니다.
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -90,7 +90,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 }
 ```
 
-[`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) 클래스는 XAML에서 동일한 기능을 제공 합니다.
+합니다 [ `OnIdiom` ](xref:Xamarin.Forms.OnIdiom`1) 클래스는 XAML에서 동일한 기능을 제공 합니다.
 
 ```xaml
 <StackLayout>
@@ -105,35 +105,35 @@ if (Device.Idiom == TargetIdiom.Phone) {
 </StackLayout>
 ```
 
-[`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) 클래스는 대상 형식과 일치 하는 `x:TypeArguments` 특성을 사용 하 여 인스턴스화해야 하는 제네릭 클래스입니다.
+합니다 [ `OnIdiom` ](xref:Xamarin.Forms.OnPlatform`1) 클래스는 인스턴스화할 수 있어야 하는 제네릭 클래스는 `x:TypeArguments` 대상 형식과 일치 하는 특성입니다.
 
-또는 XAML에서 `OnIdiom` 태그 확장을 사용 하 여 응용 프로그램이 실행 되 고 있는 장치의 지정을 기반으로 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [Onidiom 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom)을 참조 하세요.
+또는 `OnIdiom` 태그 확장을 사용 하 XAML에서 응용 프로그램에서 실행 중인 장치의 관용구를 기반으로 하는 UI 모양을 사용자 지정할 수 있습니다. 자세한 내용은 [OnIdiom 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom)합니다.
 
-## <a name="deviceflowdirection"></a>장치. FlowDirection
+## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-[`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 값은 장치에서 사용 중인 현재 흐름 방향을 나타내는 [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) 열거형 값을 검색 합니다. 흐름 방향은 페이지의 UI 요소를 육안으로 흝어보는 방향입니다. 열거형 값은 다음과 같습니다.
+합니다 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 검색 값을 [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) 장치에서 사용 중인 현재 흐름 방향을 나타내는 열거형 값입니다. 흐름 방향은 페이지의 UI 요소를 육안으로 흝어보는 방향입니다. 열거형 값은 다음과 같습니다.
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
-XAML에서 `x:Static` 태그 확장을 사용 하 여 [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) 값을 검색할 수 있습니다.
+XAML에 [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) 값을 사용 하 여 검색할 수는 `x:Static` 태그 확장:
 
 ```xaml
 <ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
 ```
 
-에서 C# 해당 하는 코드는 다음과 같습니다.
+해당 하는 코드에서 C# 는:
 
 ```csharp
 this.FlowDirection = Device.FlowDirection;
 ```
 
-흐름 방향에 대 한 자세한 내용은 [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)를 참조 하세요.
+흐름 방향에 대 한 자세한 내용은 참조 하세요. [오른쪽에서 왼쪽 지역화](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)합니다.
 
-## <a name="devicestyles"></a>장치 스타일
+## <a name="devicestyles"></a>Device.Styles
 
-[`Styles` 속성](~/xamarin-forms/user-interface/styles/index.md) 에는 일부 컨트롤 (예: `Label`) `Style` 속성에 적용 될 수 있는 기본 제공 스타일 정의가 포함 되어 있습니다. 사용 가능한 스타일은 다음과 같습니다.
+합니다 [ `Styles` 속성](~/xamarin-forms/user-interface/styles/index.md) 일부 컨트롤에 적용할 수 있는 기본 제공 스타일 정의가 포함 되어 있습니다 (같은 `Label`) `Style` 속성입니다. 사용 가능한 스타일 다음과 같습니다.
 
 - BodyStyle
 - CaptionStyle
@@ -142,9 +142,9 @@ this.FlowDirection = Device.FlowDirection;
 - SubtitleStyle
 - TitleStyle
 
-## <a name="devicegetnamedsize"></a>장치. GetNamedSize
+## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
-`GetNamedSize` 코드에서 [`FontSize`](~/xamarin-forms/user-interface/text/fonts.md) 를 C# 설정할 때 사용할 수 있습니다.
+`GetNamedSize` 설정할 때 사용할 수 있습니다 [ `FontSize` ](~/xamarin-forms/user-interface/text/fonts.md) 에서 C# 코드:
 
 ```csharp
 myLabel.FontSize = Device.GetNamedSize (NamedSize.Small, myLabel);
@@ -155,9 +155,9 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-## <a name="devicestarttimer"></a>Device. StartTimer
+## <a name="devicestarttimer"></a>Device.StartTimer
 
-`Device` 클래스에는 .NET Standard 라이브러리를 포함 하 여 Xamarin.ios 공통 코드에서 작동 하는 시간 종속 작업을 트리거하는 간단한 방법을 제공 하는 `StartTimer` 메서드도 있습니다. 간격을 설정 하 고 `true`를 반환 하 여 타이머를 계속 실행 하거나 현재 호출 후에 중지할 `false` `TimeSpan`를 전달 합니다.
+합니다 `Device` 클래스에는 `StartTimer` Xamarin.Forms 일반 코드에서.NET Standard 라이브러리를 포함 하 여 사용할 수 있는 시간 종속 작업을 트리거하는 간단한 방법을 제공 하는 메서드. 전달 된 `TimeSpan` 간격을 설정 하 고 반환 `true` 타이머 실행 되도록 또는 `false` 하 여 현재 호출 후 중지.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () =>
@@ -167,7 +167,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () =>
 });
 ```
 
-타이머 내부의 코드가 사용자 인터페이스와 상호 작용 하는 경우 (예: `Label` 텍스트 설정 또는 경고 표시) `BeginInvokeOnMainThread` 식 내에서 수행 해야 합니다 (아래 참조).
+타이머 내의 코드는 사용자 인터페이스와 상호 작용 하는 경우 (의 텍스트를 설정 하는 등을 `Label` 경고를 표시 하거나) 내에서 수행 해야는 `BeginInvokeOnMainThread` 식 (아래 참조).
 
 > [!NOTE]
 > `System.Timers.Timer` 및 `System.Threading.Timer` 클래스는 `Device.StartTimer` 메서드를 사용 하는 방법에 대 한 .NET Standard 대안입니다.
@@ -202,4 +202,4 @@ Device.BeginInvokeOnMainThread (() =>
 
 - [장치 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 - [스타일 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
-- [디바이스](xref:Xamarin.Forms.Device)
+- [장치](xref:Xamarin.Forms.Device)

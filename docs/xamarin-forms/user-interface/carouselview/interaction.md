@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/11/2020
 ms.openlocfilehash: 150c358346f90a513e1558dc847ad7eb6dd6e6e2
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635801"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305962"
 ---
 # <a name="xamarinforms-carouselview-interaction"></a>Xamarin Forms CarouselView 상호 작용
 
@@ -49,7 +49,7 @@ ms.locfileid: "77635801"
 > [!IMPORTANT]
 > `Position` 속성은 `CurrentItem` 속성이 변경 될 때 변경 됩니다. 그러면 `PositionChangedCommand` 실행 되 고 `PositionChanged` 이벤트가 발생 합니다.
 
-### <a name="event"></a>이벤트
+### <a name="event"></a>행사
 
 다음 XAML 예제에서는 이벤트 처리기를 사용 하 여 현재 항목의 변경 내용에 응답 하는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 를 보여 줍니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "77635801"
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -94,7 +94,7 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -122,7 +122,7 @@ public ICommand ItemChangedCommand => new Command<Monkey>((item) =>
 > [!NOTE]
 > `Position` 속성을 0으로 설정 하면 기본 컬렉션의 첫 번째 항목이 표시 됩니다.
 
-### <a name="event"></a>이벤트
+### <a name="event"></a>행사
 
 다음 XAML 예제에서는 이벤트 처리기를 사용 하 여 `Position` 속성의 변경에 응답 하는 [`CarouselView`](xref:Xamarin.Forms.CarouselView) 을 보여 줍니다.
 
@@ -133,7 +133,7 @@ public ICommand ItemChangedCommand => new Command<Monkey>((item) =>
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -167,7 +167,7 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -199,7 +199,7 @@ public ICommand PositionChangedCommand => new Command<int>((position) =>
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -244,7 +244,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();

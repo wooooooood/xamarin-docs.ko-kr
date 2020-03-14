@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 13f5c594543934e14295615517e3de01a98a69a5
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3d9531bbaa38a0a0a9bb42d22c79a63fda75c449
+ms.sourcegitcommit: 926f9a44065b41c7d74794a94bee66b61e903bf2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940995"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79134008"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Xamarin.ios의 스토리 보드 소개
 
@@ -82,7 +82,7 @@ Size 클래스를 사용 하는 모든 응용 프로그램은 새로운 [*적응
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
-|Segue|설명|
+|Segue|Description|
 |--- |--- |
 |표시|이는 푸시 segue 매우 유사 하지만 화면의 내용을 고려 합니다.|
 |세부 정보 표시|앱이 마스터 및 세부 정보 보기를 표시 하는 경우 (예: iPad의 분할 보기 컨트롤러에서) 콘텐츠가 자세히 보기를 대체 합니다. 앱에 마스터 또는 세부 정보만 표시 되는 경우 콘텐츠는 뷰 컨트롤러 스택의 맨 위를 대체 합니다.|
@@ -128,7 +128,7 @@ if (callHistoryController != null) {
 
 경우에 따라 이전 비 storyboard 파일에 Storyboard를 추가 해야 할 수도 있습니다. Mac용 Visual Studio에서이 작업을 수행 하면 다음 단계를 수행 하 여 간소화할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. 아래 그림과 같이 **파일 > 새 파일 > iOS > 스토리 보드**를 검색 하 여 새 스토리 보드 파일을 만듭니다.
 
@@ -149,7 +149,7 @@ if (callHistoryController != null) {
     }
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 새 파일 > 추가 하 고 아래 그림과 같이 **새 파일 > iOS > 빈 스토리 보드에 추가**하 여 새 스토리 보드 파일을 만듭니다.
 
@@ -187,6 +187,10 @@ Mac용 Visual Studio를 사용 하 여 개발한 iOS 앱에서 사용 하기 위
     [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
 
 2. 스토리 보드 파일을 마우스 오른쪽 단추로 클릭 하 고 **> Xcode Interface Builder를 사용 하 여 열기** 를 선택 하 여 Xcode에서 엽니다.
+
+    *기본적으로 Xcode Interface builder를 사용 하려는 경우 프로젝트의 Mac용 Visual Studio 기본 설정 **> iOS**에서 선택할 수 있습니다.*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
 
 3. Xcode에서 라이브러리 ( **보기 > Show library** 또는 *Shift + Command + L*)를 통해 스토리 보드에 추가할 수 있는 개체의 목록을 표시 합니다. 목록에서 스토리 보드로 개체를 끌어서 스토리 보드에 `Navigation Controller`을 추가 합니다. 기본적으로 `Navigation Controller`는 두 개의 화면을 제공 합니다. 오른쪽 화면은 간단한 보기로 바꿀 `TableViewController`입니다. 따라서 뷰를 클릭 하 고 Delete 키를 눌러 제거할 수 있습니다.
 

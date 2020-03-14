@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2019
 ms.openlocfilehash: 6c2b3d8bad621db3110fe25041125c5694f21180
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917423"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305920"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.ios CollectionView 레이아웃
 
@@ -114,7 +114,7 @@ ms.locfileid: "78917423"
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -178,7 +178,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -234,7 +234,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -290,7 +290,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -331,7 +331,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -372,7 +372,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -431,7 +431,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -473,7 +473,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 > [!NOTE]
 > `LinearItemsLayout.ItemSpacing` 속성에는 속성 값이 항상 0 보다 크거나 같도록 확인 하는 유효성 검사 콜백 집합이 있습니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -507,7 +507,7 @@ CollectionView collectionView = new CollectionView
 > [!NOTE]
 > `GridItemsLayout.VerticalItemSpacing` 및 `GridItemsLayout.HorizontalItemSpacing` 속성은 유효성 검사 콜백을 설정 하므로 속성의 값은 항상 0 보다 크거나 같아야 합니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -544,7 +544,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

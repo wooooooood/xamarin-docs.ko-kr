@@ -1,5 +1,5 @@
 ---
-title: 플랫폼 사양
+title: 플랫폼별
 description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 플랫폼 세부 정보를 사용 하 고 만드는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
 ms.openlocfilehash: f6190b9c0d29d57d6d509bdff25e2ce3572e3a3c
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910547"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305734"
 ---
-# <a name="platform-specifics"></a>플랫폼 사양
+# <a name="platform-specifics"></a>플랫폼별
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2019
 ms.openlocfilehash: 154d039e95ccc2de28e09a7162a32a19f8f84656
-ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77674535"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305830"
 ---
 # <a name="xamarinforms-carouselview-data"></a>Xamarin.ios CarouselView 데이터
 
@@ -55,7 +55,7 @@ ms.locfileid: "77674535"
 > [!NOTE]
 > `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -88,7 +88,7 @@ carouselView.ItemsSource = new string[]
 <CarouselView ItemsSource="{Binding Monkeys}" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -144,7 +144,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -224,7 +224,7 @@ public class Monkey
 </ContentPage>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView
@@ -299,7 +299,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 </RefreshView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 RefreshView refreshView = new RefreshView();
@@ -353,7 +353,7 @@ refreshView.Content = carouselView;
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView

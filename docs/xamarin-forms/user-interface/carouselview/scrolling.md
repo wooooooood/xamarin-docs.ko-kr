@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/28/2020
 ms.openlocfilehash: 735a572f4aadfc224e545e371525b96f29c9552e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635922"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305686"
 ---
 # <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.ios CarouselView 스크롤
 
@@ -54,7 +54,7 @@ ms.locfileid: "77635922"
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView();
@@ -142,7 +142,7 @@ carouselView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 이 예제 코드는 항목을 뷰의 시작 부분으로 스크롤합니다.
 
-### <a name="center"></a>Center
+### <a name="center"></a>중심
 
 [`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 가운데로 스크롤 해야 함을 나타냅니다.
 
@@ -152,7 +152,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 이 예제 코드는 항목을 뷰의 가운데로 스크롤합니다.
 
-### <a name="end"></a>종료
+### <a name="end"></a>끝
 
 [`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 끝으로 스크롤 해야 함을 나타냅니다.
 
@@ -178,7 +178,7 @@ carouselViewView.ScrollTo(monkey, position: ScrollToPosition.End);
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView
@@ -244,7 +244,7 @@ CarouselView carouselView = new CarouselView
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView
@@ -262,7 +262,7 @@ CarouselView carouselView = new CarouselView
 
 [![IOS 및 Android에서 시작 하는 CarouselView의 스크린샷](scrolling-images/snappoints-start.png "시작 스냅 지점이 있는 CarouselView")](scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CarouselView")
 
-#### <a name="center"></a>Center
+#### <a name="center"></a>중심
 
 `SnapPointsAlignment.Center` 멤버는 맞춤 지점이 항목의 가운데에 정렬 됨을 나타냅니다.
 
@@ -280,7 +280,7 @@ CarouselView carouselView = new CarouselView
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView
@@ -298,7 +298,7 @@ CarouselView carouselView = new CarouselView
 
 [![IOS 및 Android에서 가운데 맞춤 지점이 있는 CarouselView의 스크린샷](scrolling-images/snappoints-center.png "가운데 맞춤 지점이 있는 CarouselView")](scrolling-images/snappoints-center-large.png#lightbox "가운데 맞춤 지점이 있는 CarouselView")
 
-#### <a name="end"></a>종료
+#### <a name="end"></a>끝
 
 `SnapPointsAlignment.End` 멤버는 맞춤 지점이 항목의 후행 가장자리에 맞춰지도록 지정 합니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
@@ -314,7 +314,7 @@ CarouselView carouselView = new CarouselView
 </CarouselView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CarouselView carouselView = new CarouselView

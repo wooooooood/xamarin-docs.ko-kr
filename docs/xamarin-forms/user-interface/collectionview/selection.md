@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: a4cc237ef738edeccf66f1a91a010e4831c1c72f
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77635627"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305914"
 ---
 # <a name="xamarinforms-collectionview-selection"></a>Xamarin.ios CollectionView 선택
 
@@ -55,7 +55,7 @@ ms.locfileid: "77635627"
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -98,7 +98,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -139,7 +139,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -203,7 +203,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -318,7 +318,7 @@ namespace CollectionViewDemos.ViewModels
                 SelectionMode="None" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

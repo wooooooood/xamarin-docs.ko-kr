@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/25/2019
 ms.openlocfilehash: c7daad8898d3048f10c9489ee4e2c78f147c6e52
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77131143"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306616"
 ---
 # <a name="xamarinforms-entry"></a>Xamarin.Forms 항목
 
@@ -98,7 +98,7 @@ var entry = new Entry { ... MaxLength = 10 };
        CharacterSpacing="10" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Entry entry = new Entry { CharacterSpacing = 10 };
@@ -183,7 +183,7 @@ var entry = new Entry { Text = "Cursor position and selection length set", Curso
        ClearButtonVisibility="WhileEditing" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearButtonVisibility.WhileEditing };
@@ -206,13 +206,13 @@ var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearBut
 - [`Text`](xref:Xamarin.Forms.Keyboard.Text) – 텍스트를 입력할 때 사용합니다.
 - [`Url`](xref:Xamarin.Forms.Keyboard.Url) – 파일 경로 및 웹 주소를 입력하는 데 사용합니다.
 
-이렇게 하면 다음과 같이 XAML로 수행할 수 있습니다.
+이렇게 하려면 XAML에서 다음과 같이 합니다.
 
 ```xaml
 <Entry Keyboard="Chat" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var entry = new Entry { Keyboard = Keyboard.Chat };
@@ -245,7 +245,7 @@ var entry = new Entry { Keyboard = Keyboard.Chat };
 </Entry>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var entry = new Entry { Placeholder = "Enter text here" };
@@ -269,7 +269,7 @@ entry.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.Capit
 <Entry ReturnType="Send" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 var entry = new Entry { ReturnType = ReturnType.Send };

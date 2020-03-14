@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/29/2019
 ms.openlocfilehash: 1cfda90360557af1160d421f18807f8b534967a8
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426350"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306508"
 ---
 # <a name="xamarinforms-map-control"></a>Xamarin 양식 맵 컨트롤
 
@@ -56,7 +56,7 @@ ms.locfileid: "73426350"
 > [!NOTE]
 > Xamarin.ios 컨트롤을 참조 하려면 추가 `xmlns` 네임 스페이스 정의가 필요 합니다. 이전 예제에서 `Xamarin.Forms.Maps` 네임 스페이스는 `maps` 키워드를 통해 참조 됩니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 using Xamarin.Forms;
@@ -95,7 +95,7 @@ namespace WorkingWithMaps
 <maps:Map MapType="Satellite" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Map map = new Map
@@ -106,15 +106,15 @@ Map map = new Map
 
 다음 스크린샷은 [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) 속성이 `Street`으로 설정 된 경우 [`Map`](xref:Xamarin.Forms.Maps.Map) 를 보여 줍니다.
 
-[![IOS 및 Android에서 거리 맵 유형이 있는 지도 컨트롤의 스크린샷](map-images/maptype-street.png "거리 maptype을 사용 하 여 컨트롤 매핑")](map-images/maptype-street-large.png#lightbox "Map control with the street map type")
+[![IOS 및 Android에서 거리 맵 유형이 있는 지도 컨트롤의 스크린샷](map-images/maptype-street.png "거리 maptype을 사용 하 여 컨트롤 매핑")](map-images/maptype-street-large.png#lightbox "거리 맵 종류를 사용 하 여 컨트롤 매핑")
 
 다음 스크린샷은 [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) 속성이 `Satellite`으로 설정 된 경우 [`Map`](xref:Xamarin.Forms.Maps.Map) 를 보여 줍니다.
 
-[![IOS 및 Android에서 위성 지도 유형을 사용 하는 지도 컨트롤의 스크린샷](map-images/maptype-satellite.png "위성 maptype을 사용 하 여 컨트롤 매핑")](map-images/maptype-satellite-large.png#lightbox "Map control with the satellite map type")
+[![IOS 및 Android에서 위성 지도 유형을 사용 하는 지도 컨트롤의 스크린샷](map-images/maptype-satellite.png "위성 maptype을 사용 하 여 컨트롤 매핑")](map-images/maptype-satellite-large.png#lightbox "위성 지도 형식으로 컨트롤 매핑")
 
 다음 스크린샷은 [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) 속성이 `Hybrid`으로 설정 된 경우 [`Map`](xref:Xamarin.Forms.Maps.Map) 를 보여 줍니다.
 
-[![IOS 및 Android에서 하이브리드 지도 유형을 사용한 지도 컨트롤의 스크린샷](map-images/maptype-hybrid.png "하이브리드 maptype을 사용 하 여 컨트롤 매핑")](map-images/maptype-hybrid-large.png#lightbox "Map control with the hybrid map type")
+[![IOS 및 Android에서 하이브리드 지도 유형을 사용한 지도 컨트롤의 스크린샷](map-images/maptype-hybrid.png "하이브리드 maptype을 사용 하 여 컨트롤 매핑")](map-images/maptype-hybrid-large.png#lightbox "하이브리드 지도 종류를 사용 하 여 컨트롤 매핑")
 
 ## <a name="display-a-specific-location-on-a-map"></a>지도에 특정 위치 표시
 
@@ -139,7 +139,7 @@ Map map = new Map
 </maps:Map>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Position position = new Position(36.9628066, -122.0194722);
@@ -216,7 +216,7 @@ if (map.VisibleRegion != null)
 <maps:Map HasScrollEnabled="false" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Map map = new Map
@@ -233,7 +233,7 @@ Map map = new Map
 <maps:Map HasZoomEnabled="false" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Map map = new Map
@@ -250,7 +250,7 @@ Map map = new Map
 <maps:Map IsShowingUser="true" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Map map = new Map
@@ -270,7 +270,7 @@ Map map = new Map
 <maps:Map MoveToLastRegionOnLayoutChange="false" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Map map = new Map
@@ -298,7 +298,7 @@ void OnMapClicked(object sender, MapClickedEventArgs e)
 <maps:Map MapClicked="OnMapClicked" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 Map map = new Map();

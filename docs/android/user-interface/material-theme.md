@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 809f6241b3a17f63fe3077f896095c303e1dfd2e
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916822"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305980"
 ---
 # <a name="material-theme"></a>재질 테마
 
@@ -70,7 +70,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </application>
 ```
 
-또는 **AssemblyInfo.cs** (또는 **Properties.cs**)에서 응용 프로그램 `Theme` 특성을 설정할 수 있습니다. 예를 들면 다음과 같습니다.
+또는 **AssemblyInfo.cs** (또는 **Properties.cs**)에서 응용 프로그램 `Theme` 특성을 설정할 수 있습니다. 다음은 그 예입니다.
 
 ```C#
 [assembly: Application(Theme="@android:style/Theme.Material.Light")]
@@ -199,7 +199,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 </style>
 ```
 
-- 레이아웃에서 해당 보기에 대 한 `style` 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 예를 들면 다음과 같습니다.
+- 레이아웃에서 해당 보기에 대 한 `style` 특성을 이전 단계에서 선택한 사용자 지정 스타일 이름과 일치 하도록 설정 합니다. 다음은 그 예입니다.
 
 ```xml
 <android.support.v7.widget.CardView
@@ -219,7 +219,7 @@ Android 5.0 앱 프로젝트를 구성 하는 방법을 알아보려면 [android
 
 Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 하향 호환 스타일로 자동으로 전환 하도록 앱의 스타일을 설정 하려면 다음 단계를 사용 합니다.
 
-- 재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.
+- 재질 테마 스타일에서 파생 되는 **Resources/values-v21/styles xml** 에서 사용자 지정 테마를 정의 합니다. 다음은 그 예입니다.
 
 ```xml
 <resources>
@@ -229,7 +229,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 </resources>
 ```
 
-- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 예를 들면 다음과 같습니다.
+- 이전 테마에서 파생 되지만 위와 동일한 테마 이름을 사용 하는 **리소스/값/스타일 .xml** 의 사용자 지정 테마를 정의 합니다. 다음은 그 예입니다.
 
 ```xml
 <resources>
@@ -240,7 +240,7 @@ Android 5.0에서 재질 테마를 사용 하지만 이전 Android 버전에서 
 ```
 
 - **Androidmanifest**에서 사용자 지정 테마 이름으로 앱을 구성 합니다. 
-    예를 들면 다음과 같습니다.
+    다음은 그 예입니다.
 
 ```xml
 <application android:label="MyApp" 

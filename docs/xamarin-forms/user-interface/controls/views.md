@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/14/2020
 ms.openlocfilehash: 09bcb49db7f257a415518b259672ca8e776cdbc4
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917274"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305908"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.Forms 뷰
 
@@ -22,7 +22,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 
 뷰는 다른 그래픽 프로그래밍 환경에서 일반적으로 *컨트롤이* 나 *위젯* 으로 알려진 레이블, 단추 및 슬라이더와 같은 사용자 인터페이스 개체입니다. Xamarin.ios에서 지원 되는 뷰는 모두 [`View`](xref:Xamarin.Forms.View) 클래스에서 파생 됩니다. 이러한 여러 범주로 나눌 수 있습니다.
 
-## <a name="views-for-presentation"></a>프레젠테이션 뷰
+## <a name="views-for-presentation"></a>프레젠테이션 보기
 
 ### <a name="label"></a>레이블
 
@@ -73,7 +73,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`MediaElement`](xref:Xamarin.Forms.MediaElement) 비디오 또는 오디오를 재생 합니다. [`Source`](xref:Xamarin.Forms.MediaElement.Source) 속성이 [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource) 또는 [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource)설정 되었는지 여부에 따라 URL 또는 로컬 파일에서 미디어를 재생할 수 있습니다.<br /><br />[API 설명서](xref:Xamarin.Forms.MediaElement) / [가이드](~/xamarin-forms/user-interface/mediaelement.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos) | [![MediaElement 예](views-images/MediaElement.png "MediaElement 예")](views-images/MediaElement-Large.png#lightbox "MediaElement 예")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MediaElementDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MediaElementDemoPage.cs) |
 |     |     |
 
-## <a name="views-that-initiate-commands"></a>시작 명령 뷰
+## <a name="views-that-initiate-commands"></a>명령을 시작 하는 뷰
 
 ### <a name="button"></a>단추
 
@@ -110,7 +110,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | `SwipeView`은 콘텐츠 항목 주위에 래핑하는 컨테이너 컨트롤이 며 살짝 밀기 제스처로 표시 되는 상황에 맞는 메뉴 항목을 제공 합니다. 각 메뉴 항목은 항목을 탭 할 때 `ICommand`를 실행 하는 `Command` 속성이 있는 `SwipeItem`으로 표시 됩니다.<br /><br /> [가이드](~/xamarin-forms/user-interface/swipeview.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![SwipeView 예제](views-images/SwipeView.png "SwipeView 예제")](views-images/SwipeView-Large.png#lightbox "SwipeView 예제")<br /> [코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) / [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>값 설정 뷰
+## <a name="views-for-setting-values"></a>값을 설정 하는 것에 대 한 보기
 
 ### <a name="checkbox"></a>CheckBox
 
@@ -154,7 +154,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | 사용자는 [`TimePicker`](xref:Xamarin.Forms.TimePicker) 를 사용 하 여 플랫폼 시간 선택으로 시간을 선택할 수 있습니다. [`Time`](xref:Xamarin.Forms.TimePicker.Time) 속성은 선택한 시간입니다. 응용 프로그램은 [`PropertyChanged`](xref:Xamarin.Forms.BindableObject.PropertyChanged) 이벤트에 대 한 처리기를 설치 하 여 `Time` 속성의 변경 내용을 모니터링할 수 있습니다.<br /><br />[API 설명서](xref:Xamarin.Forms.TimePicker) / [가이드](~/xamarin-forms/user-interface/timepicker.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker) | [![TimePicker 예제](views-images/TimePicker.png "TimePicker 예제")](views-images/TimePicker-Large.png#lightbox "TimePicker 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) |
 |     |     |
 
-## <a name="views-for-editing-text"></a>텍스트 편집 뷰
+## <a name="views-for-editing-text"></a>텍스트 편집에 대 한 보기
 
 이러한 두 클래스는 [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) 속성을 정의 하는 [`InputView`](xref:Xamarin.Forms.InputView) 클래스에서 파생 됩니다.
 
@@ -172,7 +172,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | 사용자는 [`Editor`](xref:Xamarin.Forms.Editor) 를 사용 하 여 여러 줄의 텍스트를 입력 하 고 편집할 수 있습니다. 텍스트는 [`Text`](xref:Xamarin.Forms.InputView.Text) 속성으로 사용할 수 있으며, [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Editor.Completed) 이벤트는 텍스트를 변경 하거나 사용자가 완료 하면 신호를 발생 시킵니다.<br /><br />[`Entry`](#entry) 뷰를 사용 하 여 한 줄의 텍스트를 입력 하 고 편집 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Editor) / [가이드](~/xamarin-forms/user-interface/text/editor.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![항목 예제](views-images/Editor.png "편집기 예제")](views-images/Editor-Large.png#lightbox "편집기 예제")<br />이 페이지 / [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) [에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) |
 |     |     |
 
-## <a name="views-to-indicate-activity"></a>작업 표시 뷰
+## <a name="views-to-indicate-activity"></a>작업을 나타내기 위해 뷰
 
 ### <a name="activityindicator"></a>ActivityIndicator
 
@@ -188,7 +188,7 @@ _Xamarin 양식 보기는 플랫폼 간 모바일 사용자 인터페이스의 �
 | [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) 는 애니메이션을 사용 하 여 응용 프로그램이 긴 작업을 진행 하 고 있음을 보여 줍니다. [`Progress`](xref:Xamarin.Forms.ProgressBar.Progress) 속성을 0에서 1 사이의 값으로 설정 하 여 진행 상황을 표시 합니다.<br /><br />활동의 진행 상황을 알 수 없는 경우 [`ActivityIndicator`](#activityindicator) 를 대신 사용 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ProgressBar) / [가이드](~/xamarin-forms/user-interface/progressbar.md) / [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/) | [![ProgressBar 예](views-images/ProgressBar.png "ProgressBar 예")](views-images/ProgressBar-Large.png#lightbox "ProgressBar 예")<br />[코드 숨김으로](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml.cs) [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml) / [이 페이지에 대 한 코드 C# ](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ProgressBarDemoPage.cs) |
 |     |     |
 
-## <a name="views-that-display-collections"></a>컬렉션 표시 뷰
+## <a name="views-that-display-collections"></a>컬렉션을 표시 하는 보기
 
 ### <a name="carouselview"></a>CarouselView
 

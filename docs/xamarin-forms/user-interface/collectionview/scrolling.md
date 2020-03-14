@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/17/2019
 ms.openlocfilehash: 7aef14cbb854d89a2088a450353b943402f76a86
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697226"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305752"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.ios CollectionView 스크롤
 
@@ -20,9 +20,9 @@ ms.locfileid: "72697226"
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 항목을 뷰로 스크롤 하는 두 개의 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드를 정의 합니다. 오버 로드 중 하나는 지정 된 인덱스에 있는 항목을 뷰로 스크롤하고 다른 하나는 지정 된 항목을 뷰로 스크롤합니다. 두 오버 로드 모두에 항목이 속한 그룹을 나타내는 추가 인수, 스크롤이 완료 된 후 항목의 정확한 위치 및 스크롤에 애니메이션 효과를 적용할지 여부를 지정 하는 추가 인수가 있습니다.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 중 하나가 호출 될 때 발생 하는 [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 이벤트를 정의 합니다. @No__t_2 이벤트와 함께 제공 되는 [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) 개체에는 `IsAnimated`, `Index`, `Item`, `ScrollToPosition` 등의 많은 속성이 있습니다. 이러한 속성은 `ScrollTo` 메서드 호출에 지정 된 인수에서 설정 됩니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 중 하나가 호출 될 때 발생 하는 [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 이벤트를 정의 합니다. `ScrollToRequested` 이벤트와 함께 제공 되는 [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) 개체에는 `IsAnimated`, `Index`, `Item`, `ScrollToPosition`등의 많은 속성이 있습니다. 이러한 속성은 `ScrollTo` 메서드 호출에 지정 된 인수에서 설정 됩니다.
 
-또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 스크롤이 발생 했음을 나타내기 위해 발생 하는 `Scrolled` 이벤트를 정의 합니다. @No__t_1 이벤트와 함께 제공 되는 `ItemsViewScrolledEventArgs` 개체에는 많은 속성이 있습니다. 자세한 내용은 [스크롤 검색](#detect-scrolling)을 참조 하세요.
+또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 은 스크롤이 발생 했음을 나타내기 위해 발생 하는 `Scrolled` 이벤트를 정의 합니다. `Scrolled` 이벤트와 함께 제공 되는 `ItemsViewScrolledEventArgs` 개체에는 많은 속성이 있습니다. 자세한 내용은 [스크롤 검색](#detect-scrolling)을 참조 하세요.
 
 또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 새 항목이 추가 될 때 `CollectionView`의 스크롤 동작을 나타내는 `ItemsUpdatingScrollMode` 속성을 정의 합니다. 이 속성에 대 한 자세한 내용은 [새 항목이 추가 될 때 스크롤 위치 제어](#control-scroll-position-when-new-items-are-added)를 참조 하세요.
 
@@ -40,7 +40,7 @@ ms.locfileid: "72697226"
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -65,11 +65,11 @@ void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 이 예제에서 `OnCollectionViewScrolled` 이벤트 처리기는 이벤트와 함께 제공 되는 `ItemsViewScrolledEventArgs` 개체의 값을 출력 합니다.
 
 > [!IMPORTANT]
-> @No__t_0 이벤트는 사용자가 시작한 스크롤에 대해 발생 하 고 프로그래밍 방식으로 스크롤됩니다.
+> `Scrolled` 이벤트는 사용자가 시작한 스크롤에 대해 발생 하 고 프로그래밍 방식으로 스크롤됩니다.
 
 ## <a name="scroll-an-item-at-an-index-into-view"></a>인덱스에 있는 항목을 뷰로 스크롤합니다.
 
-첫 번째 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 오버 로드는 지정 된 인덱스에 있는 항목을 뷰로 스크롤합니다. @No__t_2 이라는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 개체가 지정 된 경우 다음 예제에서는 인덱스 12의 항목을 뷰로 스크롤 하는 방법을 보여 줍니다.
+첫 번째 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 오버 로드는 지정 된 인덱스에 있는 항목을 뷰로 스크롤합니다. `collectionView`이라는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 개체가 지정 된 경우 다음 예제에서는 인덱스 12의 항목을 뷰로 스크롤 하는 방법을 보여 줍니다.
 
 ```csharp
 collectionView.ScrollTo(12);
@@ -83,11 +83,11 @@ collectionView.ScrollTo(2, 1);
 ```
 
 > [!NOTE]
-> [@No__t_1](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 이벤트는 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드가 호출 될 때 발생 합니다.
+> [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 이벤트는 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드가 호출 될 때 발생 합니다.
 
 ## <a name="scroll-an-item-into-view"></a>항목을 뷰로 스크롤
 
-두 번째 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 오버 로드는 지정 된 항목을 뷰로 스크롤합니다. @No__t_2 이라는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 개체가 지정 된 다음 예제에서는 Proboscis 원숭이 항목을 뷰로 스크롤 하는 방법을 보여 줍니다.
+두 번째 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드 오버 로드는 지정 된 항목을 뷰로 스크롤합니다. `collectionView`이라는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 개체가 지정 된 다음 예제에서는 Proboscis 원숭이 항목을 뷰로 스크롤 하는 방법을 보여 줍니다.
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -105,7 +105,7 @@ collectionView.ScrollTo(monkey, group);
 ```
 
 > [!NOTE]
-> [@No__t_1](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 이벤트는 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드가 호출 될 때 발생 합니다.
+> [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) 이벤트는 [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) 메서드가 호출 될 때 발생 합니다.
 
 ## <a name="disable-scroll-animation"></a>스크롤 애니메이션 사용 안 함
 
@@ -121,7 +121,7 @@ collectionView.ScrollTo(monkey, animate: false);
 
 ### <a name="makevisible"></a>MakeVisible
 
-[@No__t_1](xref:Xamarin.Forms.ScrollToPosition) 멤버는 보기에 표시 될 때까지 항목을 스크롤 해야 함을 나타냅니다.
+[`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 보기에 표시 될 때까지 항목을 스크롤 해야 함을 나타냅니다.
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
@@ -132,11 +132,11 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 [![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-makevisible.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
 > [!NOTE]
-> @No__t_3 메서드를 호출할 때 `position` 인수를 지정 하지 않으면 기본적으로 [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) 멤버가 사용 됩니다.
+> `ScrollTo` 메서드를 호출할 때 `position` 인수를 지정 하지 않으면 기본적으로 [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) 멤버가 사용 됩니다.
 
-### <a name="start"></a>Start
+### <a name="start"></a>시작
 
-[@No__t_1](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 시작 부분으로 스크롤 해야 함을 나타냅니다.
+[`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 시작 부분으로 스크롤 해야 함을 나타냅니다.
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
@@ -146,9 +146,9 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 [![IOS 및 Android에서 항목이 뷰로 스크롤 된 CollectionView 세로 목록 스크린샷](scrolling-images/scrolltoposition-start.png "항목이 스크롤 된 CollectionView 세로 목록")](scrolling-images/scrolltoposition-start-large.png#lightbox "항목이 스크롤 된 CollectionView 세로 목록")
 
-### <a name="center"></a>가운데 맞춤
+### <a name="center"></a>중심
 
-[@No__t_1](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 가운데로 스크롤 해야 함을 나타냅니다.
+[`ScrollToPosition.Center`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 가운데로 스크롤 해야 함을 나타냅니다.
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
@@ -160,7 +160,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 ### <a name="end"></a>끝
 
-[@No__t_1](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 끝으로 스크롤 해야 함을 나타냅니다.
+[`ScrollToPosition.End`](xref:Xamarin.Forms.ScrollToPosition) 멤버는 항목을 뷰의 끝으로 스크롤 해야 함을 나타냅니다.
 
 ```csharp
 collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
@@ -186,7 +186,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -217,7 +217,7 @@ CollectionView collectionView = new CollectionView
 
 ### <a name="snap-points-type"></a>맞춤 지점의 유형
 
-[@No__t_1](xref:Xamarin.Forms.SnapPointsType) 열거형은 다음 멤버를 정의 합니다.
+[`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) 열거형은 다음 멤버를 정의 합니다.
 
 - `None` 스크롤이 항목에 맞추지 않음을 나타냅니다.
 - `Mandatory`은 항상 내용이 관성의 방향에 따라 스크롤할 수 있는 가장 가까운 맞춤 지점에 맞춰집니다.
@@ -229,14 +229,14 @@ CollectionView collectionView = new CollectionView
 
 ### <a name="snap-points-alignment"></a>맞춤 지점의 맞춤
 
-[@No__t_1](xref:Xamarin.Forms.SnapPointsAlignment) 열거형은 `Start`, `Center` 및 `End` 멤버를 정의 합니다.
+[`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) 열거형은 `Start`, `Center`및 `End` 멤버를 정의 합니다.
 
 > [!IMPORTANT]
-> [@No__t_1](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 속성의 값은 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성이 `Mandatory` 또는 `MandatorySingle`로 설정 된 경우에만 적용 됩니다.
+> [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 속성의 값은 [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) 속성이 `Mandatory`또는 `MandatorySingle`로 설정 된 경우에만 적용 됩니다.
 
-#### <a name="start"></a>Start
+#### <a name="start"></a>시작
 
-@No__t_0 멤버는 맞춤 지점이 항목의 선행 가장자리에 맞춰지도록 지정 합니다.
+`SnapPointsAlignment.Start` 멤버는 맞춤 지점이 항목의 선행 가장자리에 맞춰지도록 지정 합니다.
 
 기본적으로 [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) 속성은 `SnapPointsAlignment.Start`로 설정 됩니다. 그러나 완전성을 위해 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
@@ -251,7 +251,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -269,9 +269,9 @@ CollectionView collectionView = new CollectionView
 
 [![IOS 및 Android의 시작 CollectionView 세로 목록 스크린샷](scrolling-images/snappoints-start.png "시작 스냅 지점이 있는 CollectionView 세로 목록")](scrolling-images/snappoints-start-large.png#lightbox "시작 스냅 지점이 있는 CollectionView 세로 목록")
 
-#### <a name="center"></a>가운데 맞춤
+#### <a name="center"></a>중심
 
-@No__t_0 멤버는 맞춤 지점이 항목의 가운데에 정렬 됨을 나타냅니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
+`SnapPointsAlignment.Center` 멤버는 맞춤 지점이 항목의 가운데에 정렬 됨을 나타냅니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -284,7 +284,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -304,7 +304,7 @@ CollectionView collectionView = new CollectionView
 
 #### <a name="end"></a>끝
 
-@No__t_0 멤버는 맞춤 지점이 항목의 후행 가장자리에 맞춰지도록 지정 합니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
+`SnapPointsAlignment.End` 멤버는 맞춤 지점이 항목의 후행 가장자리에 맞춰지도록 지정 합니다. 다음 XAML 예제에서는이 열거형 멤버를 설정 하는 방법을 보여 줍니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -317,7 +317,7 @@ CollectionView collectionView = new CollectionView
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView

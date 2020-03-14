@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2019
 ms.openlocfilehash: 197c48a7a3486d7161d351a6b06101daaa389256
-ms.sourcegitcommit: 2cc0796902123df137611b855a55b754ca3c6d73
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74556168"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306568"
 ---
 # <a name="xamarinforms-map-pins"></a>Xamarin.ios 맵 핀
 
@@ -79,7 +79,7 @@ Xamarin.ios [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤을 사용 하면 위�
 
 이 XAML은 [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) 개체에 의해 지정 된 영역을 표시 하는 [`Map`](xref:Xamarin.Forms.Maps.Map) 개체를 만듭니다. `MapSpan` 개체는 0.01 위도 및 경도도를 연장 하는 [`Position`](xref:Xamarin.Forms.Maps.Position) 개체로 표시 되는 위도 및 경도를 중심으로 합니다. [`Pin`](xref:Xamarin.Forms.Maps.Pin) 개체는 [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) 컬렉션에 추가 되 고 [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) 속성으로 지정 된 위치에 `Map`에 그려집니다. [`Position`](xref:Xamarin.Forms.Maps.Position) 구조체에 대 한 자세한 내용은 [지도 위치 및 거리](position-distance.md)를 참조 하세요. 기본 생성자가 없는 개체로 XAML의 인수를 전달 하는 방법에 대 한 자세한 내용은 [xaml로 인수 전달](~/xamarin-forms/xaml/passing-arguments.md)을 참조 하세요.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 using Xamarin.Forms.Maps;

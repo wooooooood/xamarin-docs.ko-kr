@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78919161"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79306058"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Xamarin Designer for iOS 자동 레이아웃
 
@@ -210,7 +210,7 @@ IOS 디자이너에서 제약 조건에 대해 다음과 같은 설정이 제공
 
 ### <a name="animating-constraint-changes"></a>제약 조건 변경 내용 적용
 
-제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 예를 들면 다음과 같습니다.
+제약 조건 속성을 수정 하는 것 외에도 핵심 애니메이션을 사용 하 여 뷰의 제약 조건에 대 한 변경 내용을 적용할 수 있습니다. 다음은 그 예입니다.
 
 ```csharp
 UIView.BeginAnimations("OpenInfo");

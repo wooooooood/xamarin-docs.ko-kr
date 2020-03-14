@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019
 ms.openlocfilehash: 9442f7878d9290946fabb7bfc5dee77a828228c7
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488177"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79305932"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.ios CollectionView 데이터
 
@@ -53,7 +53,7 @@ ms.locfileid: "75488177"
 > [!NOTE]
 > `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -89,7 +89,7 @@ collectionView.ItemsSource = new string[]
 <CollectionView ItemsSource="{Binding Monkeys}" />
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -140,7 +140,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -217,7 +217,7 @@ public class Monkey
 </ContentPage>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -285,7 +285,7 @@ public class MonkeyDataTemplateSelector : DataTemplateSelector
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView();
@@ -330,7 +330,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 
 `SwipeView` 컨트롤에 대 한 자세한 내용은 [Xamarin.ios SwipeView](~/xamarin-forms/user-interface/swipeview.md)를 참조 하세요.
 
-## <a name="pull-to-refresh"></a>당겨서 새로 고침
+## <a name="pull-to-refresh"></a>새로 고치려면 끌어오기
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RefreshView`를 통해 기능을 새로 고치는 기능을 지원 합니다 .이를 통해 항목 목록에서 아래로 당겨 데이터를 새로 고칠 수 있습니다. `RefreshView`은 자식에서 스크롤 가능한 콘텐츠를 지 원하는 경우 해당 자식에 대 한 기능을 새로 고치는 가져오기를 제공 하는 컨테이너 컨트롤입니다. 따라서 `RefreshView`의 자식으로 설정 하 여 `CollectionView`에 대 한 끌어오기를 새로 고칩니다.
 
@@ -343,7 +343,7 @@ collectionView.ItemTemplate = new DataTemplate(() =>
 </RefreshView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 RefreshView refreshView = new RefreshView();
@@ -377,7 +377,7 @@ refreshView.Content = collectionView;
 
 - `int`형식의 `RemainingItemsThreshold``RemainingItemsThresholdReached` 이벤트가 발생 하는 목록에 아직 표시 되지 않는 항목의 임계값입니다.
 - `RemainingItemsThresholdReachedCommand``RemainingItemsThreshold`에 도달할 때 실행 되는 `ICommand`형식입니다.
-- `object` 형식의 `RemainingItemsThresholdReachedCommandParameter` - `RemainingItemsThresholdReachedCommand`에 전달되는 매개 변수입니다.
+- `RemainingItemsThresholdReachedCommandParameter` 형식의 `object` - `RemainingItemsThresholdReachedCommand`에 전달되는 매개 변수입니다.
 
 또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 `RemainingItemsThreshold` 항목이 표시 되지 않을 만큼 `CollectionView` 스크롤 될 때 발생 하는 `RemainingItemsThresholdReached` 이벤트를 정의 합니다. 이 이벤트를 처리 하 여 더 많은 항목을 로드할 수 있습니다. 또한 `RemainingItemsThresholdReached` 이벤트가 발생 하면 `RemainingItemsThresholdReachedCommand` 실행 되어 viewmodel에서 증분 데이터 로드가 발생 하도록 할 수 있습니다.
 
@@ -396,7 +396,7 @@ refreshView.Content = collectionView;
 </CollectionView>
 ```
 
-해당하는 C# 코드는 다음과 같습니다.
+해당 하는 C# 코드가입니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -424,6 +424,6 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.ios RefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Xamarin.ios SwipeView](~/xamarin-forms/user-interface/swipeview.md)
-- [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin Forms 데이터 템플릿](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Xamarin. Forms DataTemplateSelector 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
