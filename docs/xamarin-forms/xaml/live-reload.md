@@ -8,17 +8,20 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: a5a5a9acf47603601461660df689a7a5fa6aee00
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: e6c8e7b84ba8e3d0f6e6247798bb9164a3bc994d
+ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728345"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423904"
 ---
 # <a name="xamarin-live-reload-preview"></a>Xamarin 라이브 다시 로드 (미리 보기)
 
 > [!NOTE]
-> Xamarin Live 다시 로드의 미리 보기가 종료 되었으며, 모든 사용자에 게 피드백과 의견을 보내 주셔서 감사 합니다. Xamarin.ios에 대해 작업 중인 새로운 생산성 기능에 대 한 자세한 내용은 Visual Studio 2019에 대 한 [로드맵](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) 을 참조 하세요. 이 확장은 Visual Studio 2017에 계속 사용할 수 있지만 향후 업데이트는 수신 되지 않습니다.
+> Xamarin Live 다시 로드의 미리 보기가 종료 되었으며, 모든 사용자에 게 피드백과 의견을 보내 주셔서 감사 합니다. 
+>
+> 앱이 실행 중일 때 XAML을 편집 하려면 [xamarin.ios에 대해 Xaml 핫 다시 로드](~/xamarin-forms/xaml/hot-reload.md)를 사용 합니다.
+>
 
 Xamarin Live Reload를 사용 하면 **XAML을 변경 하 고 다른 컴파일 및 배포를 요구 하지 않고 라이브 상태를 볼**수 있습니다. XAML을 변경하고 저장하면 배포 대상에 다시 반영됩니다.
 
@@ -30,29 +33,29 @@ Xamarin Live Reload를 사용 하면 **XAML을 변경 하 고 다른 컴파일 �
 ## <a name="getting-started"></a>시작
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Visual Studio Marketplace에서 Xamarin Live 다시 로드를 설치 합니다.
 
-Xamarin Live Reload는 Visual Studio 마켓플레이스를 통해 배포됩니다. 확장을 설치하려면 [Visual Studio 마켓플레이스의 Xamarin Live Reload 페이지](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) 웹 사이트를 방문해 **다운로드**를 클릭합니다.
+Xamarin Live Reload는 Visual Studio 마켓플레이스를 통해 배포됩니다. 확장을 설치 하려면 Visual Studio Marketplace 웹 사이트의 [Xamarin Live Reload 페이지](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) 를 방문 하 여 **다운로드**를 클릭 합니다.
 
-다운로드가 완료되면 .vsix를 클릭해 열고 **설치**합니다.
+다운로드 된 .vsix를 열고 **설치**를 클릭 합니다.
 
 ![Visual Studio 설치 관리자에서 Xamarin Live Reload 체크](images/LiveReloadVSIXInstall.png)
 
-또는 Visual Studio에서 **확장명 및 업데이트** 대화상자의 **온라인** 탭에서 찾을 수 있습니다.
+또는 Visual Studio 내의 **확장 및 업데이트** 대화 상자에 있는 **온라인** 탭에서 검색할 수 있습니다.
 
 ### <a name="2-configure-your-app-to-use-live-reload"></a>2. 라이브 다시 로드를 사용 하도록 앱 구성
 
 기존 모바일 앱에 3단계로 Live Reload를 추가할 수 있습니다.
 
-1. 모든 프로젝트가 [Xamarin.Forms 3.0.0 이상](https://www.nuget.org/packages/Xamarin.Forms/)인지 확인.
+1. 모든 프로젝트가 [Xamarin. Forms 3.0.0 이상을](https://www.nuget.org/packages/Xamarin.Forms/) 사용 하도록 업데이트 되었는지 확인 합니다.
 
-2. **Xamarin.LiveReload** NuGet 패키지 추가:
+2. **LiveReload** NuGet 패키지를 추가 합니다.
 
-    a. **.NET Standard** – **Xamarin.LiveReload** NuGet을 .NET Standard 2.0 라이브러리에 설치합니다. 이 Nuget은 플랫폼 프로젝트에 따로 설치할 필요는 없습니다. **패키지 소스**가 **모두**로 설정되어있는지 확인합니다.
+    a. **.NET Standard** – .NET Standard 2.0 라이브러리에 **LiveReload** NuGet을 설치 합니다. 이 Nuget은 플랫폼 프로젝트에 따로 설치할 필요는 없습니다. **패키지 원본이** **모두**로 설정 되어 있는지 확인 합니다.
     
-    b. **공유 프로젝트** – **Xamarin.LiveReload** NuGet을 모든 플랫폼 프로젝트(Android, iOS, UWP 등)에 설치합니다. **패키지 소스**가 **모두**로 설정되어있는지 확인합니다.
+    b. **공유 프로젝트** – **LiveReload** NuGet을 모든 플랫폼 프로젝트에 설치 합니다 (예: ANDROID, iOS, UWP 등). **패키지 원본이** **모두**로 설정 되어 있는지 확인 합니다.
 
-    [![NuGet 패키지 관리자를 사용 하 여 Xamarin Live Reload NuGet 추가](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
+    [NuGet 패키지 관리자를 사용 하 여 Xamarin Live Reload NuGet 추가 ![](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
 
-3. 아래 코드 조각에 있는 것처럼 `Application` 클래스의 생성자에 `LiveReload.Init();` 추가:
+3. 다음 코드 조각과 같이 `Application` 클래스의 생성자에 `LiveReload.Init();`를 추가 합니다.
 
 ```csharp
 public partial class App : Application
@@ -112,7 +115,7 @@ No. 실제로 모든 수의 장치 또는 시뮬레이터/에뮬레이터에서 
 * XAML의 다시 로드만 지원 됩니다.
 * MVVM를 사용 하지 않는 한 다시 배포 간에 UI 상태가 유지 되지 않을 수 있습니다.
 
-## <a name="known-issues"></a>알려진 문제점
+## <a name="known-issues"></a>알려진 문제
 
 * Visual Studio 에서만 지원 됩니다.
 * **링크를 연결 하지** 않거나 **프레임 워크 Sdk만 링크** 하지 않도록 설정 해야 합니다. 

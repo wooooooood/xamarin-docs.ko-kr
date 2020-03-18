@@ -1,6 +1,6 @@
 ---
 title: Java 바인딩 메타데이터
-description: C#Xamarin.ios의 코드는 JNI (Java Native Interface)에 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘인 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.ios는 이러한 바인딩을 생성 하는 도구를 제공 합니다. 개발자는이 도구를 사용 하 여 메타 데이터를 사용 하 여 바인딩을 만드는 방법을 제어할 수 있습니다 .이를 통해 네임 스페이스 수정과 멤버 이름 바꾸기와 같은 절차를 수행할 수 있습니다 이 문서에서는 메타 데이터가 작동 하는 방법을 설명 하 고, 메타 데이터에서 지 원하는 특성을 요약 하 고,이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는
+description: Xamarin.Android의 C# 코드는 바인딩을 통해 JNI(Java Native Interface)에 지정된 하위 수준 세부 정보를 추상화하는 메커니즘인 Java 라이브러리를 호출합니다. Xamarin.Android는 이러한 바인딩을 생성하는 도구를 제공합니다. 개발자는 이 도구를 통해 메타데이터를 사용하여 바인딩을 만드는 방법을 제어할 수 있으며, 이를 통해 네임스페이스 수정이나 멤버 이름 바꾸기 같은 절차를 수행할 수 있습니다 이 문서에서는 메타데이터가 작동하는 방식을 설명하고, 메타데이터에서 지원하는 특성을 요약하고, 이 메타데이터를 수정하여 바인딩 문제를 해결하는 방법을 설명합니다.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
@@ -8,24 +8,24 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
 ms.openlocfilehash: 25a5d79084f7caa78eec4011c047bd19a63ef748
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "75487791"
 ---
 # <a name="java-bindings-metadata"></a>Java 바인딩 메타데이터
 
-_C#Xamarin.ios의 코드는 JNI (Java Native Interface)에 지정 된 하위 수준 세부 정보를 추상화 하는 메커니즘인 바인딩을 통해 Java 라이브러리를 호출 합니다. Xamarin.ios는 이러한 바인딩을 생성 하는 도구를 제공 합니다. 개발자는이 도구를 사용 하 여 메타 데이터를 사용 하 여 바인딩을 만드는 방법을 제어할 수 있습니다 .이를 통해 네임 스페이스 수정과 멤버 이름 바꾸기와 같은 절차를 수행할 수 있습니다 이 문서에서는 메타 데이터가 작동 하는 방법을 설명 하 고, 메타 데이터에서 지 원하는 특성을 요약 하 고,이 메타 데이터를 수정 하 여 바인딩 문제를 해결 하는_
+_Xamarin.Android의 C# 코드는 바인딩을 통해 JNI(Java Native Interface)에 지정된 하위 수준 세부 정보를 추상화하는 메커니즘인 Java 라이브러리를 호출합니다. Xamarin.Android는 이러한 바인딩을 생성하는 도구를 제공합니다. 개발자는 이 도구를 통해 메타데이터를 사용하여 바인딩을 만드는 방법을 제어할 수 있으며, 이를 통해 네임스페이스 수정이나 멤버 이름 바꾸기 같은 절차를 수행할 수 있습니다 이 문서에서는 메타데이터가 작동하는 방식을 설명하고, 메타데이터에서 지원하는 특성을 요약하고, 이 메타데이터를 수정하여 바인딩 문제를 해결하는 방법을 설명합니다._
 
 ## <a name="overview"></a>개요
 
-Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라고도 하는 도구를 사용 하 여 기존 Android 라이브러리를 바인딩하는 데 필요한 대부분의 작업을 자동화 하려고 시도 합니다. Java 라이브러리를 바인딩할 때 Xamarin.ios는 Java 클래스를 검사 하 고 바인딩할 모든 패키지, 형식 및 멤버의 목록을 생성 합니다. 이 Api 목록은 XML 파일에 저장 됩니다 .이 파일은 **릴리스** 빌드의 경우에는 xml 파일에 저장 하 고, **디버그** 빌드에는 **\{프로젝트 디렉터리} \obj\Debug\api.xml** 에서 **\{** 찾을 수 있습니다.
+Xamarin.Android **Java 바인딩 라이브러리**는 _바인딩 생성기_라고도 하는 도구의 도움을 받아 기존 Android 라이브러리를 바인딩하는 데 필요한 대부분의 작업을 자동화하려고 시도합니다. Java 라이브러리를 바인딩할 때 Xamarin.Android는 Java 클래스를 검사하고 바인딩할 모든 패키지, 형식 및 멤버 목록을 생성합니다. 이 API 목록은 **릴리스** 빌드의 **\{project directory}\obj\Release\api.xml** 및 **디버그** 빌드의 **\{project directory}\obj\Debug\api.xml**에서 찾을 수 있는 XML 파일에 저장됩니다.
 
-![Obj/Debug 폴더에 있는 api .xml 파일의 위치](java-bindings-metadata-images/java-bindings-metadata-01.png)
+![Obj/Debug 폴더에 있는 api.xml 파일의 위치](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
-바인딩 생성기는 **api .xml** 파일을 필요한 C# 래퍼 클래스를 생성 하는 지침으로 사용 합니다. 이 XML 파일의 내용은 Google의 _Android 오픈 소스 프로젝트_ 형식에 대 한 변형입니다.
-다음 코드 조각은 **api .xml**의 내용에 대 한 예입니다.
+바인딩 생성기는 **api.xml** 파일을 지침으로 사용하여 필요한 C# 래퍼 클래스를 생성합니다. 이 XML 파일의 콘텐츠는 Google의 _Android 오픈 소스 프로젝트_ 형식의 변형입니다.
+다음 코드 조각은 **api.xml** 콘텐츠의 예입니다.
 
 ```xml
 <api>
@@ -45,43 +45,43 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 </api>
 ```
 
-이 예제에서 **api .xml** 은 `java.lang.Object`을 확장 하는 `Manifest` 이라는 `android` 패키지의 클래스를 선언 합니다.
+이 예제의 **api.xml**은 `android` 패키지에서 `java.lang.Object`를 확장하는 `Manifest`라는 클래스를 선언합니다.
 
-대부분의 경우에는 Java API가 더 많은 ".NET like"를 사용 하거나 바인딩 어셈블리를 컴파일할 수 없도록 하는 문제를 해결 하기 위해 사용자 지원이 필요 합니다. 예를 들어 Java 패키지 이름을 .NET 네임 스페이스로 변경 하거나, 클래스 이름을 바꾸거나, 메서드의 반환 형식을 변경 해야 할 수 있습니다.
+대부분의 경우에는 Java API를 ".NET과 비슷한 느낌"으로 만들거나 바인딩 어셈블리를 컴파일할 수 없게 만드는 문제를 해결하려면 사람의 도움이 필요합니다. 예를 들어 Java 패키지 이름을 .NET 네임스페이스로 변경하거나, 클래스 이름을 바꾸거나, 메서드의 반환 형식을 변경해야 할 수 있습니다.
 
-이러한 변경 내용은 **api .xml** 을 직접 수정 하 여 수행 되지 않습니다.
-대신, Java 바인딩 라이브러리 템플릿에서 제공 하는 특수 XML 파일에 변경 내용이 기록 됩니다. Xamarin Android 바인딩 어셈블리를 컴파일할 때 바인딩 생성기는 바인딩 어셈블리를 만들 때 이러한 매핑 파일의 영향을 받습니다.
+이러한 변경 작업은 **api.xml**을 직접 수정하는 방법으로 수행되지 않습니다.
+그 대신, Java 바인딩 라이브러리 템플릿에서 제공하는 특수 XML 파일에 변경 내용이 기록됩니다. Xamarin.Android 바인딩 어셈블리를 컴파일할 때, 바인딩 생성기는 바인딩 어셈블리를 만들 때 이러한 매핑 파일의 영향을 받습니다.
 
-이러한 XML 매핑 파일은 프로젝트의 **변환** 폴더에서 찾을 수 있습니다.
+이러한 XML 매핑 파일은 다음과 같은 프로젝트의 **Transforms** 폴더에서 찾을 수 있습니다.
 
-- &ndash; **메타 데이터** 를 사용 하면 생성 된 바인딩의 네임 스페이스를 변경 하는 등 최종 API를 변경할 수 있습니다. 
+- **MetaData.xml** &ndash; 생성된 바인딩의 네임스페이스를 변경하는 등 최종 API를 변경할 수 있습니다. 
 
-- **Enumfields .xml** &ndash;에는 Java `int` 상수와 C# `enums` 간의 매핑이 포함 되어 있습니다. 
+- **EnumFields.xml** &ndash; Java `int` 상수와 C# `enums` 간의 매핑을 포함합니다. 
 
-- **Enummethods .xml** &ndash;를 사용 하면 Java `int` 상수에서 메서드 매개 변수 및 반환 형식을 C# `enums`로 변경할 수 있습니다. 
+- **EnumMethods.xml** &ndash; 메서드 매개 변수와 반환 형식을 Java `int` 상수에서 C# `enums`로 변경할 수 있습니다. 
 
-**메타 데이터 .xml** 파일은 다음과 같이 바인딩에 대 한 일반적인 용도의 변경을 허용 하므로 이러한 파일을 가장 많이 가져오는 것입니다.
+**MetaData.xml** 파일은 다음과 같이 일반적인 이유로 바인딩을 변경할 수 있으므로 이러한 파일 중 가장 중요합니다.
 
-- 네임 스페이스, 클래스, 메서드 또는 필드의 이름을 변경 하 여 .NET 규칙을 따르도록 합니다. 
+- .NET 규칙을 따르도록 네임스페이스, 클래스, 메서드 또는 필드 이름을 변경합니다. 
 
-- 필요 하지 않은 네임 스페이스, 클래스, 메서드 또는 필드를 제거 합니다. 
+- 필요 없는 네임스페이스, 클래스, 메서드 또는 필드를 제거합니다. 
 
-- 클래스를 다른 네임 스페이스로 이동 합니다. 
+- 클래스를 다른 네임스페이스로 이동합니다. 
 
-- 바인딩 디자인이 .NET framework 패턴을 따르도록 지원 클래스를 추가 합니다. 
+- 바인딩 디자인이 .NET 프레임워크 패턴을 따르도록 지원 클래스를 추가합니다. 
 
-**메타 데이터** 에 대 한 자세한 내용을 설명 하기 위해 이동 합니다.
+지금부터 **Metadata.xml**을 자세히 살펴보겠습니다.
 
-## <a name="metadataxml-transform-file"></a>Metadata .xml 변환 파일
+## <a name="metadataxml-transform-file"></a>Metadata.xml 변환 파일
 
-이미 학습 한 대로 바인딩 생성기에서 파일 **메타 데이터** 를 사용 하 여 바인딩 어셈블리 생성에 영향을 줍니다.
-메타 데이터 형식은 [XPath](https://www.w3.org/TR/xpath/) 구문을 사용 하며, [gapi 메타 데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) 가이드에 설명 된 *gapi 메타 데이터* 와 거의 동일 합니다. 이 구현은 거의 완전 한 XPath 1.0 구현 이며, 따라서 1.0 표준의 항목을 지원 합니다. 이 파일은 API 파일의 요소나 특성을 변경, 추가, 숨기기 또는 이동 하는 강력한 XPath 기반 메커니즘입니다. 메타 데이터 사양의 모든 rule 요소에는 규칙이 적용 되는 노드를 식별 하는 경로 특성이 포함 됩니다. 규칙은 다음 순서로 적용 됩니다.
+이미 배운 것처럼, **Metadata.xml** 파일은 바인딩 생성기에서 바인딩 어셈블리 생성에 영향을 주는 데 사용됩니다.
+메타데이터 형식은 [XPath](https://www.w3.org/TR/xpath/) 구문을 사용하며 [GAPI 메타데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) 가이드에서 설명한 *GAPI 메타데이터*와 거의 동일합니다. 이 구현은 거의 완전한 XPath 1.0 구현이며, 따라서 1.0 표준의 항목을 지원합니다. 이 파일은 API 파일의 요소나 특성을 변경, 추가, 숨김 또는 이동하는 강력한 XPath 기반 메커니즘입니다. 메타데이터 사양의 모든 규칙 요소에는 규칙을 적용할 노드를 식별하는 경로 특성이 포함됩니다. 규칙은 다음 순서대로 적용됩니다.
 
-- **add-node** &ndash;는 path 특성으로 지정 된 노드에 자식 노드를 추가 합니다.
-- **attr** &ndash; path 특성에 지정 된 요소의 특성 값을 설정 합니다.
-- **-node** &ndash;는 지정 된 XPath와 일치 하는 노드를 제거 합니다.
+- **add-node** &ndash; 경로 특성에 지정된 노드에 자식 노드를 추가합니다.
+- **attr** &ndash; 경로 특성에 지정된 요소의 특성 값을 설정합니다.
+- **remove-node** &ndash; 지정된 XPath와 일치하는 노드를 제거합니다.
 
-다음은 **메타 데이터 .xml** 파일의 예입니다.
+다음은 **Metadata.xml** 파일의 예입니다.
 
 ```xml
 <metadata>
@@ -99,19 +99,19 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 </metadata>
 ```
 
-다음 목록에는 Java API의 가장 일반적으로 사용 되는 XPath 요소가 나와 있습니다.
+다음은 Java API에 가장 일반적으로 사용되는 XPath 요소 목록입니다.
 
-- Java 인터페이스를 찾는 데 사용 되는 `interface` &ndash;입니다. 예: `/interface[@name='AuthListener']`.
+- `interface` &ndash; Java 인터페이스를 찾는 데 사용됩니다. 예: `/interface[@name='AuthListener']`.
 
-- 클래스를 찾는 데 사용 되는 `class` &ndash;입니다. 예: `/class[@name='MapView']`.
+- `class` &ndash; 클래스를 찾는 데 사용됩니다. 예: `/class[@name='MapView']`.
 
-- `method` Java 클래스 또는 인터페이스에서 메서드를 찾는 데 사용 &ndash;. 예: `/class[@name='MapView']/method[@name='setTitleSource']`.
+- `method` &ndash; Java 클래스 또는 인터페이스에서 메서드를 찾는 데 사용됩니다. 예: `/class[@name='MapView']/method[@name='setTitleSource']`.
 
-- 메서드에 대 한 매개 변수를 식별 &ndash; `parameter` 합니다. 예: `/parameter[@name='p0']`
+- `parameter` &ndash; 메서드의 매개 변수를 식별합니다. 예: `/parameter[@name='p0']`
 
 ### <a name="adding-types"></a>형식 추가
 
-`add-node` 요소는 Xamarin.ios 바인딩 프로젝트에 새 래퍼 클래스를 **api .xml**에 추가 하도록 지시 합니다. 예를 들어 다음 코드 조각에서는 생성자와 단일 필드를 사용 하 여 클래스를 만들도록 바인딩 생성기에 지시 합니다.
+`add-node` 요소는 **api.xml**에 새 래퍼 클래스를 추가하도록 Xamarin.Android 바인딩 프로젝트에 지시합니다. 예를 들어 다음 코드 조각은 생성자와 단일 필드를 사용하여 클래스를 만들도록 바인딩 생성기에 지시합니다.
 
 ```xml
 <add-node path="/api/package[@name='org.alljoyn.bus']">
@@ -124,7 +124,7 @@ Xamarin Android **Java 바인딩 라이브러리** 는 _바인딩 생성기_라�
 
 ### <a name="removing-types"></a>형식 제거
 
-Java 형식을 무시 하 고 바인딩하지 않도록 Xamarin Android 바인딩 생성기에 지시할 수 있습니다. 이 작업을 수행 하려면 `remove-node` XML 요소를 **metadata .xml** 파일에 추가 합니다.
+Java 형식을 무시하고 바인딩하지 않도록 Xamarin.Android 바인딩 생성기에 지시할 수 있습니다. 이 작업은 `remove-node` XML 요소를 **metadata.xml** 파일에 추가하여 수행됩니다.
 
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
@@ -132,26 +132,26 @@ Java 형식을 무시 하 고 바인딩하지 않도록 Xamarin Android 바인�
 
 ### <a name="renaming-members"></a>멤버 이름 바꾸기
 
-Xamarin.ios는 원래 Java Native Interface (JNI) 이름이 필요 하므로 **api .xml** 파일을 직접 편집 하 여 멤버 이름을 바꿀 수 없습니다. 따라서 `//class/@name` 특성을 변경할 수 없습니다. 인 경우 바인딩이 작동 하지 않습니다.
+Xamarin.Android는 원래 JNI(Java Native Interface) 이름이 필요하기 때문에 **api.xml** 파일을 직접 편집하여 멤버 이름을 바꿀 수 없습니다. 따라서 `//class/@name` 특성을 변경하면 안 됩니다. 변경할 경우 바인딩이 작동하지 않습니다.
 
-`android.Manifest`형식의 이름을 바꾸려는 경우를 고려 합니다.
-이를 위해 **api .xml** 을 직접 편집 하 고 다음과 같이 클래스의 이름을 바꿀 수 있습니다.
+`android.Manifest` 형식의 이름을 바꾸려 한다고 가정해 봅시다.
+이 작업을 수행하기 위해, 다음과 같이 **api.xml** 파일을 직접 편집하여 클래스 이름을 바꾸려고 합니다.
 
 ```xml
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
     name="name">NewName</attr>
 ```
 
-그러면 바인딩 생성기가 래퍼 클래스에 대해 다음 C# 코드를 만듭니다.
+그러면 바인딩 생성기가 래퍼 클래스에 대한 다음 C# 코드를 만듭니다.
 
 ```csharp
 [Register ("android/NewName")]
 public class NewName : Java.Lang.Object { ... }
 ```
 
-래퍼 클래스의 이름이 `NewName`로 바뀌고 원래 Java 형식은 아직 `Manifest`되지 않습니다. 더 이상 Xamarin. Android 바인딩 클래스가 `android.Manifest`의 메서드에 액세스할 수 없습니다. 래퍼 클래스는 존재 하지 않는 Java 형식에 바인딩됩니다.
+래퍼 클래스의 이름이 `NewName`으로 바뀌었지만 원래 Java 형식은 여전히 `Manifest`입니다. 이제 Xamarin.Android 바인딩 클래스가 더 이상 `android.Manifest`의 메서드에 액세스할 수 없습니다. 래퍼 클래스는 존재하지 않는 Java 형식에 바인딩됩니다.
 
-래핑된 형식 (또는 메서드)의 관리 되는 이름을 적절 하 게 변경 하려면 다음 예제와 같이 `managedName` 특성을 설정 해야 합니다.
+래핑된 형식(또는 메서드)의 관리되는 이름을 적절하게 변경하려면 다음 예제와 같이 `managedName` 특성을 설정해야 합니다.
 
 ```xml
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
@@ -162,19 +162,19 @@ public class NewName : Java.Lang.Object { ... }
 
 #### <a name="renaming-eventarg-wrapper-classes"></a>`EventArg` 래퍼 클래스 이름 바꾸기
 
-Xamarin.ios 바인딩 생성기가 _수신기 형식_에 대 한 `onXXX` setter 메서드를 식별 하는 경우 Java C# 기반 수신기 패턴에 대 한 .net flavoured API를 지원 하기 위해 이벤트 및 `EventArgs` 하위 클래스가 생성 됩니다. 예를 들어 다음 Java 클래스와 메서드를 살펴보겠습니다.
+Xamarin.Android 바인딩 생성기가 _수신기 형식_의 `onXXX` setter 메서드를 발견하면 Java 기반 수신기 패턴에 .NET 종류의 API를 지원하기 위해 C# 이벤트 및 `EventArgs` 서브클래스가 생성됩니다. 예를 들어 다음과 같은 Java 클래스 및 메서드를 생각해 볼 수 있습니다.
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
 ```
 
-Xamarin.ios는 setter 메서드에서 `on` 접두사를 삭제 하 고 대신 `EventArgs` 하위 클래스 이름에 대 한 기준으로 `2DSignNextManuever`를 사용 합니다. 하위 클래스의 이름은 다음과 유사 합니다.
+Xamarin.Android는 setter 메서드에서 `on` 접두사를 삭제하고, 그 대신 `2DSignNextManuever`를 `EventArgs` 서브클래스 이름의 기준으로 사용합니다. 서브클래스의 이름은 다음과 비슷합니다.
 
 ```csharp
 NavigationManager.2DSignNextManueverEventArgs
 ```
 
-올바른 C# 클래스 이름이 아닙니다. 이 문제를 해결 하려면 바인딩 작성자가 `argsType` 특성을 사용 하 고 `EventArgs` 하위 클래스 C# 에 대 한 올바른 이름을 제공 해야 합니다.
+이것은 올바른 C# 클래스 이름이 아닙니다. 이 문제를 해결하려면 바인딩 작성자가 다음과 같이 `argsType` 특성을 사용하여 `EventArgs` 서브클래스에 올바른 C# 이름을 제공해야 합니다.
 
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
@@ -183,29 +183,29 @@ NavigationManager.2DSignNextManueverEventArgs
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
 
-## <a name="supported-attributes"></a>지원 되는 특성
+## <a name="supported-attributes"></a>지원되는 특성
 
-다음 섹션에서는 Java Api를 변환 하기 위한 몇 가지 특성에 대해 설명 합니다.
+다음 섹션에서는 Java API를 변환하는 데 사용되는 몇 가지 특성을 설명합니다.
 
 ### <a name="argstype"></a>argsType
 
-이 특성은 Java 수신기를 지원 하기 위해 생성 되는 `EventArg` 하위 클래스의 이름을 지정할 수 있도록 setter 메서드에 배치 됩니다. 이 내용은이 가이드의 뒷부분에 나오는 [EventArg 래퍼 클래스 이름 바꾸기](#Renaming_EventArg_Wrapper_Classes) 섹션에서 자세히 설명 합니다.
+이 특성은 Java 수신기를 지원하기 위해 생성되는 `EventArg` 서브클래스의 이름을 지정할 수 있도록 setter 메서드에 배치됩니다. 자세한 내용은 이 가이드의 뒷부분에 나오는 [EventArg 래퍼 클래스 이름 바꾸기](#Renaming_EventArg_Wrapper_Classes) 섹션에서 설명하겠습니다.
 
 ### <a name="eventname"></a>eventName
 
-이벤트의 이름을 지정 합니다. 비어 있는 경우 이벤트 생성을 금지 합니다.
-이에 대 한 자세한 내용은 [EventArg 래퍼 클래스 이름 바꾸기](#Renaming_EventArg_Wrapper_Classes)섹션을 참조 하세요.
+이벤트의 이름을 지정합니다. 비워 두면 이벤트를 생성할 수 없습니다.
+자세한 내용은 [EventArg 래퍼 클래스 이름 바꾸기](#Renaming_EventArg_Wrapper_Classes) 섹션에서 설명하겠습니다.
 
 ### <a name="managedname"></a>managedName
 
-패키지, 클래스, 메서드 또는 매개 변수의 이름을 변경 하는 데 사용 됩니다. 예를 들어 Java 클래스의 이름을 `NewClassName``MyClass` 변경 하려면 다음을 수행 합니다.
+패키지, 클래스, 메서드 또는 매개 변수의 이름을 변경하는 데 사용됩니다. 예를 들어 Java 클래스 이름 `MyClass`를 `NewClassName`으로 변경하는 방법은 다음과 같습니다.
 
 ```xml
 <attr path="/api/package[@name='com.my.application']/class[@name='MyClass']" 
     name="managedName">NewClassName</attr>
 ```
 
-다음 예제에서는 메서드 `java.lang.object.toString` `Java.Lang.Object.NewManagedName`로 이름을 바꾸는 XPath 식을 보여 줍니다.
+다음 예제에서는 `java.lang.object.toString` 메서드를 `Java.Lang.Object.NewManagedName`으로 바꾸는 XPath 식을 보여줍니다.
 
 ```xml
 <attr path="/api/package[@name='java.lang']/class[@name='Object']/method[@name='toString']" 
@@ -214,9 +214,9 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="managedtype"></a>managedType
 
-`managedType`은 메서드의 반환 형식을 변경 하는 데 사용 됩니다. 경우에 따라 바인딩 생성기는 Java 메서드의 반환 형식을 잘못 유추 하므로 컴파일 시간 오류가 발생 합니다. 이 경우 한 가지 가능한 해결 방법은 메서드의 반환 형식을 변경 하는 것입니다.
+`managedType`은 메서드의 반환 형식을 변경하는 데 사용됩니다. 바인딩 생성기가 Java 메서드의 반환 형식을 잘못 유추하여 컴파일 시간 오류가 발생하는 경우가 있습니다. 이 상황을 해결하는 한 가지 방법은 메서드의 반환 형식을 변경하는 것입니다.
 
-예를 들어 바인딩 생성기는 Java 메서드가 `de.neom.neoreadersdk.resolution.compareTo()` `int`를 반환 하 고 `Object`를 매개 변수로 사용 하는 것으로 간주 합니다. 그러면 오류 메시지 **오류 CS0535: ' DE. Neoreadersdk '는 인터페이스 멤버 ' (Java.** a s t e m. a s t. t o p. a s t. t e m) '를 구현 하지 않습니다. 다음 코드 조각에서는 생성 C# 된 메서드의 첫 번째 매개 변수의 형식을 `DE.Neom.Neoreadersdk.Resolution`에서 `Java.Lang.Object`로 변경 하는 방법을 보여 줍니다. 
+예를 들어 바인딩 생성기는 Java 메서드 `de.neom.neoreadersdk.resolution.compareTo()`가 `int`를 반환하고 `Object`를 매개 변수로 사용해야 한다고 판단합니다. 그러면 **오류 CS0535: 'DE.Neom.Neoreadersdk.Resolution'이 인터페이스 멤버 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'를 구현하지 않습니다**라는 오류 메시지가 표시됩니다. 다음 코드 조각은 생성된 C# 메서드의 첫 번째 매개 변수 형식을 `DE.Neom.Neoreadersdk.Resolution`에서 `Java.Lang.Object`로 변경하는 방법을 보여줍니다. 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -228,7 +228,7 @@ NavigationManager.2DSignNextManueverEventArgs
 
 ### <a name="managedreturn"></a>managedReturn
 
-메서드의 반환 형식을 변경 합니다. 반환 특성을 변경 하지 않습니다. 반환 특성을 변경 하면 JNI 서명에 대해 호환 되지 않는 변경이 발생할 수 있습니다. 다음 예제에서는 `append` 메서드의 반환 형식이 `SpannableStringBuilder`에서 `IAppendable` (공변 반환 형식을 지원 하지 않는 회수 C# )로 변경 됩니다.
+메서드의 반환 형식을 변경합니다. 반환 형식을 변경해도 반환 특성은 변경되지 않습니다(반환 특성을 변경하면 JNI 서명에 대해 호환되지 않는 변경이 발생할 수 있음). 다음 예제에서는 `append` 메서드의 반환 형식이 `SpannableStringBuilder`에서 `IAppendable`로 변경됩니다(C#은 공변 반환 형식을 지원하지 않음).
 
 ```xml
 <attr path="/api/package[@name='android.text']/
@@ -237,14 +237,14 @@ NavigationManager.2DSignNextManueverEventArgs
     name="managedReturn">Java.Lang.IAppendable</attr>
 ```
 
-### <a name="obfuscated"></a>처리
+### <a name="obfuscated"></a>obfuscated
 
-Java 라이브러리를 난독 처리 하는 도구는 Xamarin Android 바인딩 생성기 및 래퍼 클래스 생성 C# 기능을 방해할 수 있습니다. 난독 처리 된 클래스의 특징은 다음과 같습니다. 
+Java 라이브러리를 난독 처리하는 도구는 Xamarin.Android 바인딩 생성기 및 C# 래퍼 클래스 생성 기능을 방해할 수 있습니다. obfuscated 클래스의 특징은 다음과 같습니다. 
 
-- 클래스 이름에는 **$** (예: **$. 클래스** )가 포함 됩니다.
-- 클래스 이름은 소문자 (예: **클래스** )로 완전히 손상 됩니다.
+- 클래스 이름에 **$** (예: **a$.class**)가 포함됩니다.
+- 모든 클래스 이름이 소문자로 조정됩니다(예: **a.class**).
 
-이 코드 조각은 "난독 처리 되지 않은" C# 형식을 생성 하는 방법의 예입니다.
+이 코드 조각은 "난독 처리되지 않은" C# 형식을 생성하는 방법의 예입니다.
 
 ```xml
 <attr path="/api/package[@name='{package_name}']/class[@name='{name}']" 
@@ -253,9 +253,9 @@ Java 라이브러리를 난독 처리 하는 도구는 Xamarin Android 바인딩
 
 ### <a name="propertyname"></a>propertyName
 
-이 특성은 관리 되는 속성의 이름을 변경 하는 데 사용할 수 있습니다.
+이 특성은 관리되는 속성의 이름을 변경하는 데 사용할 수 있습니다.
 
-`propertyName`를 사용 하는 특수 한 경우에는 Java 클래스에는 필드에 대 한 getter 메서드만 있는 상황이 포함 됩니다. 이 경우 바인딩 생성기는 .NET에서 권장 되지 않는 쓰기 전용 속성을 만들려고 합니다. 다음 코드 조각에서는 `propertyName`를 빈 문자열로 설정 하 여 .NET 속성을 "제거" 하는 방법을 보여 줍니다.
+`propertyName`을 사용하는 특별한 사례로 Java 클래스에 필드의 getter 메서드만 있는 경우가 있습니다. 이 경우 바인딩 생성기는 .NET에서 권장하지 않는 쓰기 전용 속성을 만들려고 합니다. 다음 코드 조각은 `propertyName`을 빈 문자열로 설정하여 .NET 속성을 "제거"하는 방법을 보여줍니다.
 
 ```xml
 <attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='setResourceDescriptor' 
@@ -267,11 +267,11 @@ Java 라이브러리를 난독 처리 하는 도구는 Xamarin Android 바인딩
     name="propertyName"></attr>
 ```
 
-Setter 및 getter 메서드는 바인딩 생성기에 의해 여전히 생성 됩니다.
+setter 및 getter 메서드는 여전히 바인딩 생성기에 의해 생성됩니다.
 
-### <a name="sender"></a>sender
+### <a name="sender"></a>보낸 사람
 
-메서드가 이벤트에 매핑될 때 `sender` 매개 변수로 사용할 메서드의 매개 변수를 지정 합니다. 값은 `true` 또는 `false`수 있습니다. 예를 들면 다음과 같습니다.:
+메서드가 이벤트에 매핑될 때 `sender` 매개 변수로 사용할 메서드의 매개 변수를 지정합니다. 값은 `true`, `false`입니다. 예를 들어:
 
 ```xml
 <attr path="/api/package[@name='android.app']/
@@ -281,9 +281,9 @@ Setter 및 getter 메서드는 바인딩 생성기에 의해 여전히 생성 �
     name="sender">true</ attr>
 ```
 
-### <a name="visibility"></a>표시 유형
+### <a name="visibility"></a>표시 여부
 
-이 특성은 클래스, 메서드 또는 속성의 표시 여부를 변경 하는 데 사용 됩니다. 예를 들어 해당 C# 래퍼가 `public`되도록 `protected` Java 메서드를 승격 해야 할 수 있습니다.
+이 특성은 클래스, 메서드 또는 속성의 표시 여부를 변경하는 데 사용됩니다. 예를 들어 다음과 같이 해당 C# 래퍼가 `public`이 되도록 `protected` Java 메서드를 승격해야 하는 경우가 있습니다.
 
 ```xml
 <!-- Change the visibility of a class -->
@@ -293,13 +293,13 @@ Setter 및 getter 메서드는 바인딩 생성기에 의해 여전히 생성 �
 <attr path="/api/package[@name='namespace']/class[@name='ClassName']/method[@name='MethodName']" name="visibility">public</attr>
 ```
 
-## <a name="enumfieldsxml-and-enummethodsxml"></a>EnumFields .xml 및 Enumfields
+## <a name="enumfieldsxml-and-enummethodsxml"></a>EnumFields.xml 및 EnumMethods.xml
 
-Android 라이브러리가 정수 상수를 사용 하 여 라이브러리의 속성 또는 메서드에 전달 되는 상태를 나타내는 경우가 있습니다. 대부분의 경우 이러한 정수 상수를의 C#열거형에 바인딩하는 것이 유용 합니다. 이 매핑을 용이 하 게 하려면 바인딩 프로젝트에서 **Enumfields** 및 **enumfields .xml** 파일을 사용 합니다. 
+Android 라이브러리가 정수 상수를 사용하여 상태를 나타내고, 이 상태가 라이브러리의 속성 또는 메서드에 전달되는 경우가 있습니다. 대부분의 경우 C#에서 이러한 정수 상수를 열거형에 바인딩하는 것이 좋습니다. 이 매핑을 쉽게 하려면 바인딩 프로젝트에서 **EnumFields.xml** 및 **EnumMethods.xml** 파일을 사용합니다. 
 
-### <a name="defining-an-enum-using-enumfieldsxml"></a>EnumFields .xml을 사용 하 여 열거형 정의
+### <a name="defining-an-enum-using-enumfieldsxml"></a>EnumFields.xml을 사용하여 열거형 정의
 
-**Enumfields .xml** 파일에는 Java `int` 상수와 C# `enums`간의 매핑이 포함 되어 있습니다. `int` 상수 집합에 대해 생성 되는 C# 열거형의 다음 예를 살펴보겠습니다. 
+**EnumFields.xml** 파일에는 Java `int` 상수와 C# `enums` 간의 매핑이 포함되어 있습니다. `int` 상수 세트에 대해 생성되는 다음 C# 열거형 예제를 살펴보겠습니다. 
 
 ```xml 
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
@@ -309,13 +309,13 @@ Android 라이브러리가 정수 상수를 사용 하 여 라이브러리의 �
 </mapping>
 ```
 
-여기서는 Java 클래스를 `SKRealReachSettings` 하 고 네임 스페이스 `Skobbler.Ngx.Map.RealReach`C# 에서 `SKMeasurementUnit` 라는 열거형을 정의 했습니다. `field` 항목은 Java 상수 이름 (예: `UNIT_SECOND`), 열거형 항목의 이름 (예: `Second`) 및 두 엔터티가 나타내는 정수 값 (예: `0`)을 정의 합니다. 
+여기서는 Java 클래스 `SKRealReachSettings`를 사용하고 `Skobbler.Ngx.Map.RealReach` 네임스페이스에서 `SKMeasurementUnit`이라는 C# 열거형을 정의했습니다. `field` 항목은 Java 상수의 이름(예: `UNIT_SECOND`), 열거형 항목의 이름(예: `Second`) 및 두 엔터티로 나타내는 정수 값(예: `0`)을 정의합니다. 
 
-### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>EnumMethods .xml을 사용 하 여 Getter/Setter 메서드 정의
+### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>EnumMethods.xml을 사용하여 Getter/Setter 메서드 정의
 
-**Enummethods .xml** 파일을 사용 하 여 메서드 매개 변수를 변경 하 고 Java `int` 상수 C# 에서 형식을 `enums`로 반환할 수 있습니다. 즉, 열거형 ( **Enumfields .xml** 파일에 정의 됨 C# )의 읽기 및 쓰기를 Java `int` 상수 `get` 및 `set` 메서드에 매핑합니다.
+**EnumMethods.xml** 파일은 메서드 매개 변수와 반환 형식을 Java `int` 상수에서 C# `enums`로 변경할 수 있습니다. 즉, C# 열거형(**EnumFields.xml** 파일에 정의됨)의 읽기 및 쓰기를 Java `int` 상수 `get` 및 `set` 메서드에 매핑합니다.
 
-위에서 정의한 `SKRealReachSettings` 열거형을 지정 하는 경우 다음 **enummethods .xml** 파일은이 열거형에 대 한 getter/setter를 정의 합니다.
+위에서 정의한 `SKRealReachSettings` 열거형을 고려할 때, 다음 **EnumMethods.xml** 파일은 이 열거형에 대한 getter/setter 메서드를 정의합니다.
 
 ```xml
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings">
@@ -326,7 +326,7 @@ Android 라이브러리가 정수 상수를 사용 하 여 라이브러리의 �
 
 첫 번째 `method` 줄은 Java `getMeasurementUnit` 메서드의 반환 값을 `SKMeasurementUnit` 열거형에 매핑합니다. 두 번째 `method` 줄은 `setMeasurementUnit`의 첫 번째 매개 변수를 동일한 열거형에 매핑합니다.
 
-이러한 모든 변경 내용을 적용 하면 Xamarin.ios에서 다음 코드를 사용 하 여 `MeasurementUnit`를 설정할 수 있습니다. 
+이러한 변경 내용을 모두 적용하면 Xamarin.Android에서 다음 코드를 사용하여 `MeasurementUnit`를 설정할 수 있습니다. 
 
 ```csharp
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
@@ -334,10 +334,10 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin Android에서 메타 데이터를 사용 하 여 *Google* *AOSP 형식의*API 정의를 변환 하는 방법을 설명 했습니다. *Metadata .xml*을 사용 하 여 가능한 변경 내용을 적용 한 후에는 멤버 이름을 바꿀 때 발생 하는 제한 사항을 검사 하 고 각 특성을 사용 해야 하는 경우를 설명 하는 지원 되는 xml 특성 목록을 제공 합니다.
+이 문서에서는 Xamarin.Android에서 메타데이터를 사용하여 *Google* *AOSP 형식*의 API 정의를 변환하는 방법을 설명했습니다. *Metadata.xml*을 사용하여 수행 가능한 변경 내용을 살펴본 후, 멤버 이름을 바꿀 때 발생하는 제한 사항을 알아보고 각 특성을 언제 사용해야 하는지 설명하는 지원되는 XML 특성 목록을 살펴보았습니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [JNI 사용](~/android/platform/java-integration/working-with-jni.md)
+- [JNI 작업](~/android/platform/java-integration/working-with-jni.md)
 - [Java 라이브러리 바인딩](~/android/platform/binding-java-library/index.md)
-- [GAPI 메타 데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [GAPI 메타데이터](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

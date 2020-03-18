@@ -1,6 +1,6 @@
 ---
-title: 요약 9 장입니다. 플랫폼별 API 호출
-description: Xamarin.Forms를 사용 하 여 모바일 앱을 만듭니다. 요약 9 장입니다. 플랫폼별 API 호출
+title: 요약 - 9장. 플랫폼별 API 호출
+description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 9장. 플랫폼별 API 호출'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
@@ -8,52 +8,52 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "61334559"
 ---
-# <a name="summary-of-chapter-9-platform-specific-api-calls"></a>요약 9 장입니다. 플랫폼별 API 호출
+# <a name="summary-of-chapter-9-platform-specific-api-calls"></a>요약 - 9장. 플랫폼별 API 호출
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE] 
-> 이 페이지에 대 한 참고 사항 Xamarin.Forms 책의 내용을에서 달라졌는지를 위치 하는 영역을 나타냅니다.
+> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
 
-플랫폼에 따라 달라 지는 일부 코드를 실행 하는 데 필요한 경우가 있습니다. 이 장에서 기술을 살펴봅니다.
+플랫폼에 따라 달라지는 일부 코드를 실행해야 하는 경우도 있습니다. 이 장에서는 기법에 대해 살펴봅니다.
 
-## <a name="preprocessing-in-the-shared-asset-project"></a>공유 자산 프로젝트의 전처리
+## <a name="preprocessing-in-the-shared-asset-project"></a>공유 자산 프로젝트에서 전처리
 
-Xamarin.Forms 공유 자산 프로젝트는 C# 전처리기 지시문을 사용 하 여 각 플랫폼에 대 한 다른 코드를 실행할 수 있습니다 `#if`하십시오 `#elif`, 및 `endif`합니다. 이 확인할 [ **PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1):
+Xamarin.Forms 공유 자산 프로젝트는 C# 전처리기 지시문 `#if`, `#elif` 및 `endif`를 사용하여 각 플랫폼마다 다른 코드를 실행할 수 있습니다. 이는 [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1)에 설명되어 있습니다.
 
-[![변수의 세 번 스크린 샷 단락 서식이 지정 된](images/ch09fg01-small.png "운영 체제 및 장치 모델")](images/ch09fg01-large.png#lightbox "장치 모델 및 운영 체제")
+[![가변 형식 단락의 삼중 스크린샷](images/ch09fg01-small.png "디바이스 모델 및 운영 체제")](images/ch09fg01-large.png#lightbox "디바이스 모델 및 운영 체제")
 
-그러나 결과 코드 보기 및 읽기 어려울 수 있습니다.
+그러나 결과 코드는 복잡하고 읽기 힘들 수 있습니다.
 
 ## <a name="parallel-classes-in-the-shared-asset-project"></a>공유 자산 프로젝트의 병렬 클래스
 
-SAP의 플랫폼별 코드를 실행 하려면 더 구조화 된 접근법에 설명 되어는 [ **PlatInfoSap2** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap2) 샘플입니다. 각 플랫폼 프로젝트는 동일 하 게 명명 된 클래스 및 메서드를 포함 하지만 해당 특정 플랫폼에 대 한 구현 합니다. SAP 다음 단순히 클래스를 인스턴스화하고 메서드를 호출 합니다.
+SAP에서 플랫폼별 코드를 실행하는 보다 구조화된 접근 방식은 [**PlatInfoSap2**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap2) 샘플에 설명되어 있습니다. 각 플랫폼 프로젝트는 동일하게 명명된 클래스 및 메서드가 있지만 특정 플랫폼에 대해 구현됩니다. 그런 다음 SAP는 단순히 클래스를 인스턴스화하고 메서드를 호출합니다.
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService 및 이식 가능한 클래스 라이브러리
 
 > [!NOTE] 
-> Portable Class Library는 .NET Standard 라이브러리로 변경되었습니다. 이 책에서 모든 샘플 코드는 .NET 표준 라이브러리를 사용하도록 변경되었습니다.
+> 이식 가능한 클래스 라이브러리는 .NET Standard 라이브러리로 대체되었습니다. 이 책의 모든 샘플 코드는 .NET Standard 라이브러리를 사용하도록 변환되었습니다.
 
-라이브러리는 응용 프로그램 프로젝트에서 클래스를 액세스할 일반적으로 수 없습니다. 설명한 기술을 사용 하지 않으려면이 제한 사항은 같습니다 **PlatInfoSap2** 라이브러리에서 사용 되지 않도록 합니다. Xamarin.Forms에서 클래스를 포함 하는 반면 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) .NET 리플렉션을 응용 프로그램 프로젝트에서 공용 클래스 라이브러리에서 액세스를 사용 하 여 합니다.
+라이브러리는 일반적으로 애플리케이션 프로젝트의 클래스에 액세스할 수 없습니다. 이 제한은 **PlatInfoSap2**에 표시된 기법이 라이브러리에서 사용되지 않도록 하는 것처럼 보입니다. 그러나 Xamarin.Forms에는 .NET 리플렉션을 사용하여 라이브러리에서 애플리케이션 프로젝트의 공용 클래스에 액세스하는 [`DependencyService`](xref:Xamarin.Forms.DependencyService)라는 클래스가 있습니다.
 
-라이브러리를 정의 해야 합니다는 `interface` 각 플랫폼에서 사용 해야 하는 멤버를 사용 하 여 합니다. 그런 다음 플랫폼 중 각 해당 인터페이스의 구현을 포함합니다. 인터페이스를 구현 하는 클래스를 사용 하 여 식별 되어야 합니다는 [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute) 어셈블리 수준에 있습니다.
+라이브러리는 각 플랫폼에서 사용해야 하는 멤버를 사용하여 `interface`를 정의해야 합니다. 그런 다음 각 플랫폼에 해당 인터페이스의 구현이 포함됩니다. 인터페이스를 구현하는 클래스는 어셈블리 수준에서 [DependencyAttribute](xref:Xamarin.Forms.DependencyAttribute)를 사용하여 식별해야 합니다.
 
-라이브러리를 사용 하 여 제네릭 [ `Get` ](xref:Xamarin.Forms.DependencyService.Get*) 메서드의 `DependencyService` 인터페이스를 구현 하는 플랫폼 클래스의 인스턴스를 가져오려고 합니다.
+그런 다음 라이브러리는 `DependencyService`의 제네릭 [`Get`](xref:Xamarin.Forms.DependencyService.Get*) 메서드를 사용하여 인터페이스를 구현하는 플랫폼 클래스의 인스턴스를 가져옵니다.
 
-에 설명 되어이 [ **DisplayPlatformInfo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) 샘플입니다.
+이는 [**DisplayPlatformInfo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/DisplayPlatformInfo) 샘플에 설명되어 있습니다.
 
-## <a name="platform-specific-sound-generation"></a>플랫폼별 사운드 생성
+## <a name="platform-specific-sound-generation"></a>플랫폼별 소리 생성
 
-[ **MonkeyTapWithSound** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) 샘플 경고음을 추가 합니다 **MonkeyTap** 각 플랫폼에서 소리 생성 기능에 액세스 하 여 프로그램입니다.
+[**MonkeyTapWithSound**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/MonkeyTapWithSound) 샘플은 각 플랫폼에서 소리 생성 기능에 액세스하여 **MonkeyTap** 프로그램에 경고음을 추가합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [9 장 전체 텍스트 (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
-- [9 장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
+- [9장 전체 텍스트(PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf)
+- [9장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 - [종속성 서비스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)
