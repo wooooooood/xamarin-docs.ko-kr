@@ -8,25 +8,25 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 21fd8eff64d374e52e64194524a8c096cdf4d90e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
-ms.translationtype: MT
+ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/10/2020
 ms.locfileid: "73027034"
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>Windows에서 Android를 디버그해야 하는 USB 드라이버는 무엇인가요?
 
 ## <a name="finding-usb-drivers"></a>USB 드라이버 찾기
 
-Windows에서 개발할 때 Android 장치에서 디버깅 하려면 호환 되는 USB 드라이버를 설치 해야 합니다. Android SDK 관리자는 기본적으로 "Google USB 드라이버"를 포함 합니다. 여기에는 여기에 설명 된 대로 Nexus 장치에 대 한 지원이 추가 되었습니다. [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
+Windows에서 개발할 때 Android 디바이스에서 디버그하려면 호환되는 USB 드라이버를 설치해야 합니다. Android SDK 관리자에는 [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)에서 설명하는 것처럼 기본적으로 Nexus 디바이스에 대한 지원을 추가하는 “Google USB 드라이버”가 포함됩니다.
 
-다른 장치에는 장치 제조업체에서 특별히 게시 한 USB 드라이버가 필요 합니다. 이 가이드에는 가장 일반적인 제조업체를 위한 링크가 포함 되어 있습니다 ( [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
+다른 디바이스에는 해당 디바이스 제조업체에서 제공하는 USB 드라이버가 필요합니다. [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html) 가이드에는 자주 사용되는 제조업체 링크가 포함되어 있습니다.
 
-## <a name="alternatives"></a>대안은
+## <a name="alternatives"></a>대안
 
-Manfacturer에 따라 필요한 정확한 USB 드라이버를 추적 하기 어려울 수 있습니다. Android 에뮬레이터를 사용 하거나 외부 테스트 서비스를 사용 하는 등 Windows에서 개발한 Android 앱 테스트를 위한 몇 가지 대안입니다. 여기에는 다음과 같은 항목이 포함됩니다.
+제조업체에 따라, 필요한 정확한 USB 드라이버를 찾기가 어려울 수 있습니다. Windows에서 개발한 Android 앱을 테스트하기 위한 대안에는 Android 에뮬레이터를 사용하거나 외부 테스트 서비스를 사용하는 방법이 있습니다. 여기에는 다음과 같은 항목이 포함됩니다.
 
-- 수백 개의 실제 Android 장치에서 실행 되는 테스트 클라우드 테스트 서비스를 [App Center](https://docs.microsoft.com/appcenter/test-cloud/) 합니다.
+- [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) - 수백 가지의 실제 Android 디바이스에서 실행되는 클라우드 테스트 서비스입니다.
 
 - [Visual Studio Emulator for Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 

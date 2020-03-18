@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: a0d1e397725ca0a60eb68fb0e6b989ee22c3f56a
-ms.sourcegitcommit: 3d39bafe4c56b15cbb695b1f7f02b926e1033f58
+ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
+ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78155262"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78910725"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -28,6 +28,7 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 
 * [가속도계](accelerometer.md?context=xamarin/xamarin-forms) - 3차원 공간에서 디바이스의 가속 데이터를 검색합니다.
 * [앱 정보](app-information.md?context=xamarin/xamarin-forms) - 애플리케이션에 대한 정보를 확인합니다.
+* [앱 테마](app-theme.md?context=xamarin/xamarin-forms) – 애플리케이션에 대해 요청된 현재 테마를 검색합니다.
 * [기압계](barometer.md?context=xamarin/xamarin-forms) - 기압계에서 압력 변경 내용을 모니터링합니다.
 * [배터리](battery.md?context=xamarin/xamarin-forms) - 배터리 잔량, 소스 및 상태를 쉽게 검색합니다.
 * [클립보드](clipboard.md?context=xamarin/xamarin-forms) - 클립보드에서 쉽고 빠르게 텍스트를 설정하거나 읽습니다.
