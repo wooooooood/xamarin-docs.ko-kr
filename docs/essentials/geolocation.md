@@ -6,11 +6,11 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
 ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558674"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303650"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
@@ -22,7 +22,7 @@ ms.locfileid: "67558674"
 
 **지리적 위치** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Coarse 및 Fine Location 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 또한 앱이 Android 5.0(API 레벨 21) 이상을 대상으로 하는 경우 해당 앱에서 매니페스트 파일의 하드웨어 기능을 사용하도록 선언해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
 
@@ -50,7 +50,7 @@ Coarse 및 Fine Location 권한이 필요하며 Android 프로젝트에서 구�
 
 또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아서 **ACCESS_COARSE_LOCATION** 및 **ACCESS_FINE_LOCATION** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 디바이스 위치에 액세스하려면 앱의 **Info.plist**에 `NSLocationWhenInUseUsageDescription` 키가 포함되어야 합니다.
 
@@ -63,7 +63,7 @@ plist 편집기를 연 다음, **개인 정보 - 위치 사용 시 사용 설명
 <string>Fill in a reason why your app needs access to location.</string>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 애플리케이션에 대한 `Location` 권한을 설정해야 합니다. 이 작업을 수행하려면 **Package.appxmanifest**를 열고, **기능** 탭을 선택하고, **Location**을 선택합니다.
 
@@ -206,7 +206,7 @@ if (location != null)
 
 ## <a name="distance-between-two-locations"></a>두 위치 간 거리
 
-[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다.
+[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다. 
 
 예를 들면 다음과 같습니다.
 

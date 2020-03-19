@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2020
 ms.openlocfilehash: 4c9096edddeb00070aaabc3e93b283f2d55c1bfa
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76550009"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303644"
 ---
 # <a name="uninstall-xamarin-from-visual-studio"></a>Visual Studio에서 Xamarin 제거
 

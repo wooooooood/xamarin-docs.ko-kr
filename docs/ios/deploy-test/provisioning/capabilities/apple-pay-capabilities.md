@@ -8,15 +8,15 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
 ms.openlocfilehash: 54fcc3bb683f6ca4515d807da5c3345cf71a2df3
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78917744"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303710"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Xamarin.iOS에서 Apple Pay 기능
 
-_응용 프로그램에 기능을 추가 하려면 종종 추가 프로 비전 설정이 필요 합니다. 이 가이드에서는 Apple Pay 기능에 필요한 설정을 설명 합니다._
+_애플리케이션에 기능을 추가하려면 흔히 추가 프로비전 설정이 필요합니다. 이 가이드에서는 Apple Pay 기능에 필요한 설정을 설명합니다._
 
 Apple Pay를 사용하면 사용자의 iOS 디바이스를 통해 실제 상품을 구입할 수 있습니다. 이 섹션에서는 Apple Developer Center에서 Apple Pay에 필요한 모든 구성 요소를 생성하는 방법을 설명합니다.
 
@@ -154,6 +154,6 @@ Apple Pay 사용에 대한 자세한 내용은 다음 가이드를 참조하세�
 
 * 앱에서 프레임워크 네임스페이스를 사용합니다.
 * 앱에 필요한 자격을 추가합니다. 필요한 자격 및 추가 방법에 대한 자세한 내용은 [자격 사용](~/ios/deploy-test/provisioning/entitlements.md) 가이드를 참조하세요.
-* 앱의  **iOS 번들 서명**에서  **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이는 디버그 및 iOS 시뮬레이터 빌드에 대 한 기본 설정  _되지 않습니다_ .
+* 앱의  **iOS 번들 서명**에서  **사용자 지정 자격**이 **Entitlements.plist**로 설정되어 있는지 확인합니다. 이 설정은 디버그 및 iOS 시뮬레이터 빌드에 대한 기본 설정이  _아닙니다_ .
 
 앱 서비스에 문제가 발생하면 주 가이드의 [문제 해결](~/ios/deploy-test/provisioning/capabilities/index.md) 섹션을 참조하세요.

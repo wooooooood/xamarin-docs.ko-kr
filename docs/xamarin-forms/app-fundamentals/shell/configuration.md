@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/29/2020
-ms.openlocfilehash: dfa452addd7cfb838091afdfb350484998d0cc9d
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+ms.openlocfilehash: 411c87c25701521bf27fbb863b02a90f8e523574
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77636089"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303788"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.Forms Shell 페이지 구성
 
@@ -112,7 +112,7 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 ## <a name="enable-navigation-bar-shadow"></a>탐색 모음 섀도 사용
 
-`Shell` 클래스는 탐색 모음에 섀도가 포함되는 여부를 제어하는 `bool` 형식의 `NavBarHasShadow` 연결된 속성을 정의합니다. 기본적으로 속성의 값은 `false`입니다.
+`Shell` 클래스는 탐색 모음에 섀도가 포함되는 여부를 제어하는 `bool` 형식의 `NavBarHasShadow` 연결된 속성을 정의합니다. 기본적으로 속성 값은 iOS의 경우 `false`, Android의 경우 `true`입니다.
 
 이 속성은 서브클래싱된 `Shell` 개체에서 설정할 수 있지만, 탐색 모음 섀도를 사용하려는 모든 페이지에서도 설정할 수 있습니다. 예를 들어 다음 XAML은 [`ContentPage`](xref:Xamarin.Forms.ContentPage)에서 탐색 모음 섀도를 사용할 수 있음을 보여줍니다.
 

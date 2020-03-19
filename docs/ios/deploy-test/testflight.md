@@ -8,11 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028483"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303596"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>TestFlight를 사용하여 Xamarin.iOS 앱 배포
 
@@ -22,7 +22,7 @@ _TestFlight는 현재 Apple에서 소유하고 있으며, Xamarin.iOS 앱을 베
 
 TestFlight는 Apple의 iOS 앱용 베타 테스트 서비스이며, [iTunes Connect](https://itunesconnect.apple.com/)를 통해서만 액세스할 수 있습니다. 현재 iOS 8.0 이상 앱에서 사용할 수 있습니다. TestFlight는 내부 및 외부 사용자 모두와 함께 베타 테스트를 수행할 수 있으며, 외부 사용자에 대한 베타 앱 검토로 인해 앱 스토어에 게시할 때 최종 검토에서 훨씬 쉽게 처리할 수 있습니다.
 
-이전에는 이진 파일이 Mac용 Visual Studio 내에서 생성되고, 테스터에게 배포하기 위해 TestFlightApp 웹 사이트에 업로드되었습니다. 새 프로세스에는 앱 스토어에서 완전하게 테스트된 고품질 응용 프로그램을 사용할 수 있도록 하는 여러 가지 향상된 기능이 있습니다. 예:
+이전에는 이진 파일이 Mac용 Visual Studio 내에서 생성되고, 테스터에게 배포하기 위해 TestFlightApp 웹 사이트에 업로드되었습니다. 새 프로세스에는 앱 스토어에서 완전하게 테스트된 고품질 응용 프로그램을 사용할 수 있도록 하는 여러 가지 향상된 기능이 있습니다. 예를 들어:
 
 - 외부 테스트에 필요한 베타 앱 검토는 최종 앱 스토어 검토에 대한 성공 가능성을 높여주지만, 두 검토 모두 Apple의 지침을 준수해야 합니다.
 - 업로드하기 전에 앱을 iTunes Connect에 등록해야 합니다. 이렇게 하면 프로비전 프로필, 이름 및 인증서 간에 불일치가 발생하지 않습니다.
@@ -93,7 +93,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ### <a name="create-an-archive"></a>보관 만들기
 
@@ -120,7 +120,7 @@ iTunes Connect 레코드가 만들어지면 새 빌드를 업로드할 수 있�
 
  이러한 단계에 대한 자세한 내용은 [Apple에 앱 제출](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) 섹션을 참조하세요.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="building-your-final-distributable"></a>최종 배포 가능한 파일 빌드
  Visual Studio용 Xamarin 플러그 인은 앱 스토어에 게시하기 위해 Xamarin.iOS 앱을 보관하는 것을 지원하지 않으므로, Visual Studio에서 iOS 애플리케이션을 게시하는 두 가지 옵션이 있습니다. 이러한 항목은 다음과 같습니다.

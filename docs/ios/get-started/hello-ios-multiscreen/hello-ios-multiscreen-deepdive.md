@@ -9,11 +9,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 3bcfb20d8283f621ac1d32730ee67be2b09efe50
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78918059"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303698"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Hello, iOS 멀티스크린 - 심층 분석
 
@@ -52,11 +52,11 @@ MVC는 *데이터 지속성* 및 모델의 *액세스*와 완전히 독립적입
 > [!NOTE]
 > 일부 문서에서 MVC 패턴의 모델 부분은 UI에 표시되는 데이터뿐 아니라 전체 애플리케이션 백 엔드를 참조할 수 있습니다. 이 가이드에서는 모델의 최신 해석을 사용하지만 차이는 특별히 중요하지 않습니다.
 
-### <a name="view"></a>보기
+### <a name="view"></a>View
 
 뷰는 사용자 인터페이스를 렌더링할 책임이 있는 구성 요소입니다. MVC 패턴을 사용하는 거의 모든 플랫폼에서 사용자 인터페이스는 뷰의 계층 구조로 구성됩니다. MVC의 뷰를 계층 구조의 상단에서 단일 뷰(루트 뷰로 알려짐)가 있는 뷰 계층 구조 및 그 아래의 개수에 관계 없는 자식 뷰(하위 뷰로 알려짐)로 생각할 수 있습니다. iOS에서 화면의 콘텐츠 뷰 계층 구조는 MVC에서 뷰 구성 요소에 해당합니다.
 
-### <a name="controller"></a>컨트롤러
+### <a name="controller"></a>Controller
 
 컨트롤러 개체는 모든 항목을 함께 연결하는 구성 요소이며 `UIViewController`에 의해 iOS에서 표시됩니다. 컨트롤러를 화면 또는 뷰 집합에 대한 백업 코드로 생각할 수 있습니다. 컨트롤러는 사용자로부터 요청을 수신하고 적절한 뷰 계층 구조를 반환하는 일을 담당합니다. 뷰에서 요청을 수신하고(단추 클릭, 텍스트 입력 등) 적절한 처리, 뷰 수정 및 뷰 다시 로드를 수행합니다. 또한 컨트롤러는 애플리케이션에 있는 모든 백업 데이터 저장소에서 모델을 만들거나 검색하고 해당 데이터로 뷰를 채우는 일을 담당합니다.
 
@@ -64,7 +64,7 @@ MVC는 *데이터 지속성* 및 모델의 *액세스*와 완전히 독립적입
 
 ## <a name="navigation-controller"></a>탐색 컨트롤러
 
-Phoneword 애플리케이션에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UIViewController` 클래스로 표시되는 특수화된 `UINavigationController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 콘텐츠 뷰 계층 구조를 관리합니다.
+Phoneword 애플리케이션에서는 여러 화면 간 탐색을 관리하는 데 도움을 주도록 탐색 컨트롤러를 사용했습니다. 탐색 컨트롤러는 `UINavigationController` 클래스로 표시되는 특수화된 `UIViewController`입니다. 단일 콘텐츠 뷰 계층 구조를 관리하는 대신 탐색 컨트롤러는 다른 뷰 컨트롤러 및 제목, 뒤로 단추 및 다른 선택적 기능을 포함하는 탐색 도구 모음의 형식으로 자체의 특수한 콘텐츠 뷰 계층 구조를 관리합니다.
 
 탐색 컨트롤러는 iOS 애플리케이션에서 일반적이며 아래 스크린샷에서 표시된 것처럼 **Settings** 앱과 같은 주요한 iOS 애플리케이션에 대한 탐색을 제공합니다.
 
@@ -126,7 +126,7 @@ iOS는 전환이 발생하기 직전에 `PrepareForSegue`를 호출하고 Storyb
 CallHistoryController callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
-마지막으로 `ViewController`의 `CallHistoryController` 속성을 전화를 건 전화번호 목록으로 설정하여 `PhoneHistory`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
+마지막으로 `CallHistoryController`의 `PhoneHistory` 속성을 전화를 건 전화번호 목록으로 설정하여 `ViewController`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
 
 ```csharp
 callHistoryController.PhoneNumbers = PhoneNumbers;
@@ -166,7 +166,7 @@ this.Storyboard.InstantiateViewController
 ("CallHistoryController") as CallHistoryController;
 ```
 
-마지막으로 Segue로 전환을 처리할 때 수행한 것처럼 `ViewController`의 `CallHistoryController` 속성을 전화를 건 전화번호 목록으로 설정하여 `PhoneHistory`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
+마지막으로 Segue로 전환을 처리할 때 수행한 것처럼 `CallHistoryController`의 `PhoneHistory` 속성을 전화를 건 전화번호 목록으로 설정하여 `ViewController`에서 `CallHistoryController`로 전화번호 목록(모델)을 전달합니다.
 
 ```csharp
 callHistory.PhoneNumbers = PhoneNumbers;
@@ -205,4 +205,4 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 
 - [Hello, iOS(샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS 휴먼 인터페이스 지침](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
-- [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
+- [iOS 프로비전 포털](https://developer.apple.com/ios/manage/overview/index.action)

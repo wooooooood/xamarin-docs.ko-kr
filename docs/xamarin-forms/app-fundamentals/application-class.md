@@ -9,11 +9,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
 ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
-ms.translationtype: MT
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78916474"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303770"
 ---
 # <a name="xamarinforms-app-class"></a>Xamarin.Forms App 클래스
 
@@ -58,7 +58,7 @@ public partial class App : Application
 
 ## <a name="mainpage-property"></a>MainPage 속성
 
-`MainPage` 클래스의 `Application` 속성은 애플리케이션의 루트 페이지를 설정합니다.
+`Application` 클래스의 `MainPage` 속성은 애플리케이션의 루트 페이지를 설정합니다.
 
 예를 들어 사용자가 로그인했는지 여부에 따라 다른 페이지를 표시하는 논리를 `App` 클래스에 만들 수 있습니다.
 
@@ -82,7 +82,7 @@ public class App : Xamarin.Forms.Application
 
 `Properties` 사전은 `string` 키를 사용하고 `object` 값을 저장합니다.
 
-예를 들어 다음과 같이 코드의 아무 곳에서(항목이 선택된 경우 페이지의 `"id"` 메서드 또는 `OnDisappearing` 메서드에서) 영구 `OnSleep` 속성을 설정할 수 있습니다.
+예를 들어 다음과 같이 코드의 아무 곳에서(항목이 선택된 경우 페이지의 `OnDisappearing` 메서드 또는 `OnSleep` 메서드에서) 영구 `"id"` 속성을 설정할 수 있습니다.
 
 ```csharp
 Application.Current.Properties ["id"] = someClass.ID;
@@ -112,7 +112,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 
 Xamarin.Forms 1.4는 `Application` 클래스에 `SavePropertiesAsync()` 추가 메서드를 도입했으며, 이 메서드는 `Properties` 사전을 사전에 유지하기 위해 호출할 수 있습니다. 이렇게 하면 중요한 업데이트 후에 충돌로 인해 직렬화되지 않거나 OS에서 종료하는 위험을 감수하지 않으면서 속성을 저장할 수 있습니다.
 
-`Properties`Xamarin.Forms를 사용하여 모바일 애플리케이션 만들기**서적의**6[, ](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf)15[ 및 ](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf)20[ 장과 관련 ](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf)샘플[에서 ](https://github.com/xamarin/xamarin-forms-book-preview-2) 사전 사용에 대한 참조를 찾을 수 있습니다.
+**Xamarin.Forms를 사용하여 모바일 애플리케이션 만들기** 서적의 [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) 및 [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 장과 관련 [샘플](https://github.com/xamarin/xamarin-forms-book-preview-2)에서 `Properties` 사전 사용에 대한 참조를 찾을 수 있습니다.
 
 ## <a name="the-application-class"></a>애플리케이션 클래스
 
@@ -146,14 +146,14 @@ public class App : Xamarin.Forms.Application
 }
 ```
 
-그러면 이 클래스가 각 플랫폼별 프로젝트에서 인스턴스화되고, `LoadApplication`가 로드되어 사용자에게 표시되는 `MainPage` 메서드로 전달됩니다.
+그러면 이 클래스가 각 플랫폼별 프로젝트에서 인스턴스화되고, `MainPage`가 로드되어 사용자에게 표시되는 `LoadApplication` 메서드로 전달됩니다.
 각 플랫폼에 대한 코드는 다음 섹션에서 보여 줍니다. 최신 Xamarin.Forms 솔루션 템플릿에는 이 코드가 모두 포함되어 있으며 애플리케이션에 맞게 미리 구성되어 있습니다.
 
 ### <a name="ios-project"></a>iOS 프로젝트
 
 iOS `AppDelegate` 클래스는 `FormsApplicationDelegate`에서 상속됩니다. 수행하는 작업은 다음과 같습니다.
 
-* `LoadApplication` 클래스의 인스턴스를 사용하여 `App`을 호출합니다.
+* `App` 클래스의 인스턴스를 사용하여 `LoadApplication`을 호출합니다.
 
 * 항상 `base.FinishedLaunching (app, options);`를 반환합니다.
 
@@ -219,7 +219,7 @@ public sealed partial class MainPage
  }
 ```
 
-UWP 프로젝트의 `Forms.Init()`App.xaml.cs**에서** 가 호출되어야 합니다.
+UWP 프로젝트의 **App.xaml.cs**에서 `Forms.Init()`가 호출되어야 합니다.
 
 자세한 내용은 UWP를 대상으로 하지 않는 기존 Xamarin.Forms 솔루션에 UWP 프로젝트를 추가하는 단계가 포함된 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
 
