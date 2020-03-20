@@ -7,11 +7,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
 ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021198"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303524"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -19,7 +19,7 @@ ms.locfileid: "73021198"
 
 다음 단계를 통해 릴리스용 앱을 빌드합니다.
 
-- **[애플리케이션 아이콘 지정](#Specify_the_Application_Icon)** &ndash; 각각의 Xamarin.Android 애플리케이션에는 지정된 애플리케이션 아이콘이 있어야 합니다. 기술적으로 필요하지는 않지만 Google Play와 같은 일부 마켓에서 필요합니다.
+- **[애플리케이션 아이콘 지정](#Specify_the_Application_Icon)** &ndash; 각 Xamarin.Android 애플리케이션에는 지정된 애플리케이션 아이콘이 있어야 합니다. 기술적으로 필요하지는 않지만 Google Play와 같은 일부 마켓에서 필요합니다.
 
 - **[애플리케이션 버전 지정](#Versioning)** &ndash; 이 단계에서는 버전 정보를 초기화하거나 업데이트합니다. 이것은 향후 애플리케이션 업데이트와, 사용자가 설치한 애플리케이션 버전을 인지하도록 하기 위해 중요합니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "73021198"
 
 - **[애플리케이션 보호](#protect_app)** &ndash; 디버깅을 사용하지 못하게 하고, 관리 코드를 난독 처리하고, 디버그 방지 및 변조 방지를 추가하며 네이티브 컴파일을 사용하여 사용자나 공격자가 애플리케이션을 디버그, 변조 또는 리버스 엔지니어링하지 못하게 합니다.
 
-- **[패키지 속성 설정](#Set_Packaging_Properties)** &ndash; 패키지 속성은 Android 애플리케이션 패키지(APK)의 생성을 제어합니다. 이 단계에서는 APK를 최적화하고 그 자산을 보호하며 필요에 맞게 패키지를 모듈화합니다.
+- **[패키지 속성 설정](#Set_Packaging_Properties)** &ndash; 패키지 속성은 APK(Android 애플리케이션 패키지)의 생성을 제어합니다. 이 단계에서는 APK를 최적화하고 그 자산을 보호하며 필요에 맞게 패키지를 모듈화합니다.
 
 - **[컴파일](#Compile)** &ndash; 이 단계에서는 코드와 자산을 컴파일하여 릴리스 모드에서 빌드되는지 확인합니다.
 
@@ -43,13 +43,13 @@ ms.locfileid: "73021198"
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio 2017 이상에서는 다음 스크린샷과 같이 프로젝트 **속성**의 **Android 매니페스트** 섹션을 통해 애플리케이션 아이콘을 지정합니다.
 
 [![애플리케이션 아이콘 설정](images/vs/01-application-icon-sml.png)](images/vs/01-application-icon.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 애플리케이션** 섹션을 통해 애플리케이션 아이콘을 지정할 수 있습니다.
 
@@ -71,17 +71,17 @@ Visual Studio for Mac에서도 다음 스크린 샷에서처럼 **프로젝트 �
 
 버전 작업은 Android 애플리케이션 유지 관리와 배포를 위해 중요합니다. 일종의 버전 작업이 없으면 애플리케이션이 업데이트되어야 하는지 여부를 판단하기가 어렵습니다. 버전 작업을 지원하기 위해 Android는 두 가지 유형의 정보를 인식합니다. 
 
-- **버전 번호**&ndash; 애플리케이션의 버전을 나타내는 정수값(Android 및 애플리케이션에서 내부적으로 사용)입니다. 대부분의 애플리케이션은 이 값을 1로 설정한 다음 빌드마다 커집니다. 이 값은 버전 이름 특성과의 관련이나 선호 관계가 없습니다(아래 참조). 애플리케이션 및 게시 서비스는 이 값을 사용자에게 표시해서는 안 됩니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionCode`로 저장됩니다. 
+- **버전 번호** &ndash; 애플리케이션의 버전을 나타내는 정수 값(Android 및 애플리케이션에서 내부적으로 사용)입니다. 대부분의 애플리케이션은 이 값을 1로 설정한 다음 빌드마다 커집니다. 이 값은 버전 이름 특성과의 관련이나 선호 관계가 없습니다(아래 참조). 애플리케이션 및 게시 서비스는 이 값을 사용자에게 표시해서는 안 됩니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionCode`로 저장됩니다. 
 
-- **버전 이름**&ndash; 애플리케이션 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 디바이스에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 디바이스에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
+- **버전 이름** &ndash; 애플리케이션 버전에 대한 정보를 사용자에게 알리는 데만 사용되는 문자열입니다(특정 디바이스에 설치된 대로). 버전 이름은 사용자 또는 Google Play에 표시하기 위한 것입니다. 이 문자열은 Android에서 내부적으로 사용되지 않습니다. 버전 이름은 디바이스에 설치된 빌드를 사용자가 식별하는 데 도움이 되는 모든 문자열이 될 수 있습니다. 이 값은 **AndroidManifest.xml** 파일에 `android:versionName`으로 저장됩니다. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 매니페스트** 섹션에서 이 값을 설정할 수 있습니다.
 
 [![버전 번호 설정](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 이러한 값은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **빌드 &gt; Android 애플리케이션** 섹션을 통해 설정할 수 있습니다.
 
@@ -103,7 +103,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 - 구성: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 프로젝트 **속성**의 **Android 옵션** 섹션을 통해 링커 옵션을 설정합니다.
 
@@ -113,12 +113,12 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 - **없음** &ndash; 링커가 꺼지고 연결이 수행되지 않습니다.
 
-- **SDK 어셈블리만** &ndash; [Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 
+- **SDK 어셈블리만** &ndash;[Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 
     다른 어셈블리는 연결되지 않습니다.
 
-- **SDK 및 사용자 어셈블리**&ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
+- **SDK 및 사용자 어셈블리** &ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 링커 옵션은 다음 스크린 샷에서처럼 **프로젝트 옵션**의 **Android 빌드** 섹션에 있는 **링커** 탭을 통해 설정합니다.
 
@@ -128,7 +128,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 - **연결 안 함** &ndash; 링커가 꺼지고 연결이 수행되지 않습니다.
 
-- **SDK 어셈블리만 연결** &ndash; [Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 다른 어셈블리는 연결되지 않습니다.
+- **SDK 어셈블리만 연결** &ndash;[Xamarin.Android에서 필요한](~/cross-platform/internals/available-assemblies.md) 어셈블리만 연결합니다. 다른 어셈블리는 연결되지 않습니다.
 
 - **모든 어셈블리 연결** &ndash; Xamarin.Android뿐 아니라 애플리케이션에서 필요한 모든 어셈블리를 연결합니다.
 
@@ -144,11 +144,11 @@ ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android
 
 **ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![Proguard 빌드 작업](images/vs/05-proguard-build-action-sml.png)](images/vs/05-proguard-build-action.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![Proguard 빌드 작업](images/xs/05-proguard-build-action-sml.png)](images/xs/05-proguard-build-action.png#lightbox)
 
@@ -187,7 +187,7 @@ Android 매니페스트에는 애플리케이션의 디버그 가능 여부를 �
 
 ### <a name="application-protection-with-dotfuscator"></a>Dotfuscator를 통한 애플리케이션 보호
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 애플리케이션을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 애플리케이션의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 디바이스에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
@@ -198,7 +198,7 @@ Dotfuscator를 사용하려면 **도구 > PreEmptive Protection - Dotfuscator**�
 Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition 사용](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator)을 참조하세요.
 구성된 후에는 Dotfuscator CE가 만들어진 각 빌드를 자동으로 보호합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [디버깅을 사용하지 않는](#Disable_Debugging) 경우에도 공격자가 애플리케이션을 다시 패키지하고, 구성 옵션이나 권한을 추가 또는 제거할 가능성은 여전히 남아 있습니다. 이를 통해 애플리케이션의 리버스 엔지니어링, 디버그 또는 변조가 가능해집니다.
 Mac용 Visual Studio는 지원하지 않지만 Visual Studio에서 [Dotfuscator CE(Community Edition)](https://www.preemptive.com/products/dotfuscator/overview)를 사용하여 관리 코드를 난독 처리하고, Xamarin.Android 앱이 루트 디바이스에서 실행되고 있는지 검색하고 응답하기 위해 빌드 시간에 런타임 보안 상태 검색 코드를 이 앱에 삽입할 수 있습니다.
@@ -237,17 +237,17 @@ _LLVM 최적화 컴파일러_는 더 작고 빠른 컴파일 코드를 만들며
 
 ## <a name="set-packaging-properties"></a>패키지 속성 설정
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 다음 스크린 샷에서처럼 프로젝트 **속성**의 **Android 옵션** 섹션에서 패키지 속성을 설정할 수 있습니다.
 
 [![패키징 속성](images/vs/04-packaging-sml.png)](images/vs/04-packaging.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 다음 스크린 샷에서처럼 **프로젝트 옵션**에서 패키지 속성을 설정할 수 있습니다.
 
-[![패키징 속성](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
+[![패키지 속성](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
 
 -----
 
@@ -273,13 +273,13 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 ## <a name="compile"></a>Compile
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 위의 단계가 모두 완료되면 앱을 컴파일할 수 있습니다. **빌드 > 솔루션 다시 빌드**를 선택하여 릴리스 모드에서 성공적으로 빌드되는지 확인합니다. 이 단계에서는 아직 APK가 생성되지 않았습니다.
 
 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 패키지와 서명을 더 상세하게 설명합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 위의 단계가 모두 완료되면 애플리케이션을 빌드하여(**빌드 &gt; 모두 빌드**) 릴리스 모드에서 성공적으로 빌드되는지 확인합니다. 이 단계에서는 아직 APK가 생성되지 않았습니다.
 
@@ -289,7 +289,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 ## <a name="archive-for-publishing"></a>게시를 위해 보관
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 게시 프로세스를 시작하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **보관...**  바로 가기 메뉴 항목을 선택합니다.
 
@@ -297,7 +297,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 **보관...** 은 **Archive Manager**를 실행하고 이 스크린 샷에서처럼 앱 번들을 보관하는 프로세스를 시작합니다.
 
-[![보관 관리자](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
+[![Archive Manager](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
 보관 파일을 만드는 또 다른 방법은 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **모두 보관...** 을 선택하는 것입니다. 그러면 솔루션을 빌드하고 보관 파일을 생성할 수 있는 모든 Xamarin 프로젝트를 보관합니다.
 
@@ -305,7 +305,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 **보관** 및 **모두 보관**에서는 모두 **Archive Manager**가 자동으로 시작됩니다. **Archive Manager**를 직접 시작하려면 **도구 > Archive Manager...** 메뉴 항목을 클릭합니다.
 
-[![보관 관리자 시작](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
+[![Archive Manager 시작](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
 **솔루션** 노드를 마우스 오른쪽 단추로 클릭하고 **보관 보기**를 선택하면 언제든 솔루션의 보관 파일을 볼 수 있습니다.
 
@@ -315,7 +315,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 **Archive Manager**는 **솔루션 목록** 창, **보관 목록**, **세부 정보 패널**로 구성됩니다.
 
-[![보관 관리자 창](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
+[![Archive Manager 창](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
 **솔루션 목록**은 보관된 프로젝트가 하나 이상 있는 모든 솔루션을 표시합니다. **솔루션 목록**에는 다음 섹션이 포함됩니다.
 
@@ -325,7 +325,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 **보관 목록** 선택한 솔루션에 대한 모든 보관 파일 목록을 표시합니다. **보관 목록**에는 다음 섹션이 포함됩니다.
 
-- **솔루션 이름 선택** &ndash; **솔루션 목록**에서 선택한 솔루션의 이름을 표시합니다. **보관 목록**에 표시된 모든 정보는 이 선택한 솔루션에 대한 것입니다.
+- **솔루션 이름 선택** &ndash;**솔루션 목록**에서 선택한 솔루션의 이름을 표시합니다. **보관 목록**에 표시된 모든 정보는 이 선택한 솔루션에 대한 것입니다.
 - **플랫폼 필터** &ndash; 이 필드를 통해 플랫폼 종류(예: iOS 또는 Android)에 따라 보관 파일을 필터링할 수 있습니다.
 - **항목 보관** &ndash; 선택한 솔루션의 보관 파일의 목록입니다. 이 목록의 각 항목에는 프로젝트 이름, 만든 날짜 및 플랫폼이 포함되어 있습니다. 항목이 보관 또는 게시 중인 동안 진행률 같은 추가 정보를 표시할 수도 있습니다.
 
@@ -343,11 +343,11 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 다음 배포 채널 중 하나를 선택할 수 있습니다.
 
-- **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있는 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, _임시_ 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
+- **임시** &ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있는 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, _임시_ 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
 
 - **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다. 계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 게시 프로세스를 시작하려면 **빌드 > 게시를 위해 보관**을 선택합니다.
 
@@ -363,7 +363,7 @@ Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](
 
 여기에서는 배포 채널을 선택할 수 있습니다.
 
-- **임시**&ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있게 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, &ldquo;임시&rdquo; 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
+- **임시** &ndash; 서명된 APK를 Android 디바이스에 사이드로드할 수 있게 디스크에 저장합니다. 계속하여 [앱 패키지 서명](~/android/deploy-test/signing/index.md)에서 Android 서명 ID를 만들고, Android 애플리케이션용 새 서명 인증서를 만들며, &ldquo;임시&rdquo; 앱 버전을 디스크에 게시하는 방법을 알아봅니다. 테스트를 위한 APK를 만드는 좋은 방법입니다.
 
 - **Google Play** &ndash; 서명된 APK를 Google Play에 게시합니다.
     계속하여 [Google Play에 게시](~/android/deploy-test/publishing/publishing-to-google-play/index.md)에서 APK를 서명하여 Google Play 스토어에 게시하는 방법을 알아봅니다.

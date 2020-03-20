@@ -5,16 +5,16 @@ ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 39f650a73f03888e50c6259c1052e24dbea0a4f5
-ms.sourcegitcommit: ec62c7f28abc8e121656f1b93146657d90a4cab4
+ms.openlocfilehash: e31cae6ff639dbe261599a7cf78ae31fc09318b3
+ms.sourcegitcommit: c83b55f60ece20e9163b3e587130250fdf113a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77555671"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190323"
 ---
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: 앱 테마
 
-**RequestedTheme** API는 [AppInfo](/app-information.md) 클래스의 일부이며, 시스템에서 실행 중인 애플리케이션에 대해 요청된 테마에 관한 정보를 제공합니다.
+**RequestedTheme** API는 [`AppInfo`](app-information.md) 클래스의 일부이며 시스템에서 실행 중인 애플리케이션에 대해 요청된 테마에 관한 정보를 제공합니다.
 
 ## <a name="get-started"></a>시작
 

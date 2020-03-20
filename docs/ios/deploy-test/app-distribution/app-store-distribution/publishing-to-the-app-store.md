@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 3803d7e14b161a7c166bcae37e3d9f46b7637984
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 822f2ae57241cd51f9e9c4eb2b63c75d30867d83
+ms.sourcegitcommit: c83b55f60ece20e9163b3e587130250fdf113a16
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026644"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190329"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>App Store에 Xamarin.iOS 앱 게시
 
@@ -89,15 +89,15 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 ## <a name="update-the-release-build-configuration"></a>릴리스 빌드 구성 업데이트
 
-새 Xamarin.iOS 프로젝트는 자동으로 **디버그** 및 **릴리스**_빌드 구성_을 설정합니다. **릴리스** 빌드를 올바르게 구성하려면, 다음 단계를 수행합니다.
+새 Xamarin.iOS 프로젝트는 자동으로 **디버그** 및 **릴리스** _빌드 구성_을 설정합니다. **릴리스** 빌드를 올바르게 구성하려면, 다음 단계를 수행합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. **Solution Pad**에서 **Info.plist**를 엽니다. **수동 프로비저닝**을 선택합니다. 파일을 저장한 후 닫습니다.
 2. **Solution Pad**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **옵션**을 선택한 후, **iOS 빌드** 탭으로 이동합니다.
 3. **구성**을 **릴리스**로 설정하고 **플랫폼**을 **iPhone**으로 설정합니다.
 4. 특정 iOS SDK를 빌드하려면 **SDK 버전** 목록에서 선택합니다. 그렇지 않으면 이 값을 **기본**으로 둡니다.
-5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
+5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. **연결하지 않음** 옵션을 사용하면 **프레임워크 SDK만 링크** 옵션을 사용하여 연결되는 Xamarin.iOS에 있는 비공용 iOS API의 존재 때문에 Apple에서 앱을 거부할 수 있습니다. **모두 연결**은 타사 라이브러리를 비롯하여 프로젝트의 모든 어셈블리에서 코드를 제거하며 타사 라이브러리에서 링커가 검색할 수 없는 리플렉션을 통해서만 사용할 수 있는 코드를 제거할 수 있으므로 신중하게 사용해야 합니다. 이는 사용되는 라이브러리 코드를 결정하기 위해 정적 코드 분석을 수행하기 때문입니다. 코드 누락으로 인한 런타임 실패를 방지하기 위해 일부 클래스 및/또는 메서드 등을 수동으로 유지해야 할 수 있으므로 **모두 연결**을 신중하게 사용하세요. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
 6. **PNG 이미지 최적화**를 확인하여 추가로 애플리케이션의 크기를 줄일 수 있는지 알아봅니다.
 7. 디버깅은 빌드를 쓸데없이 크게 만들므로 _사용하지 않도록_ 설정해야 합니다.
 8. iOS 11의 경우 **ARM64**를 지원하는 디바이스 아키텍처 중 하나를 선택합니다. 64비트 iOS 디바이스 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
@@ -121,13 +121,13 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 15. **OK**를 클릭하여 변경 내용을 프로젝트 속성에 저장합니다.
 
-# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
+# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/windows)
 
 1. Visual Studio 2019가 [Mac 빌드 호스트와 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
 2. **솔루션 탐색기**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 3. **iOS 빌드** 탭으로 이동하고 **구성**을 **릴리스**로 설정하고 **플랫폼**을 **iPhone**으로 설정합니다.
 4. 특정 iOS SDK를 빌드하려면 **SDK 버전** 목록에서 선택합니다. 그렇지 않으면 이 값을 **기본**으로 둡니다.
-5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
+5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. **연결하지 않음** 옵션을 사용하면 **프레임워크 SDK만 링크** 옵션을 사용하여 연결되는 Xamarin.iOS에 있는 비공용 iOS API의 존재 때문에 Apple에서 앱을 거부할 수 있습니다. **모두 연결**은 타사 라이브러리를 비롯하여 프로젝트의 모든 어셈블리에서 코드를 제거하며 타사 라이브러리에서 링커가 검색할 수 없는 리플렉션을 통해서만 사용할 수 있는 코드를 제거할 수 있으므로 신중하게 사용해야 합니다. 이는 사용되는 라이브러리 코드를 결정하기 위해 정적 코드 분석을 수행하기 때문입니다. 코드 누락으로 인한 런타임 실패를 방지하기 위해 일부 클래스 및/또는 메서드 등을 수동으로 유지해야 할 수 있으므로 **모두 연결**을 신중하게 사용하세요. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
 6. **PNG 이미지 최적화**를 확인하여 추가로 애플리케이션의 크기를 줄일 수 있는지 알아봅니다.
 7. 디버깅은 빌드를 쓸데없이 크게 만들므로 사용하지 않도록 설정해야 합니다.
 8. iOS 11의 경우 **ARM64**를 지원하는 디바이스 아키텍처 중 하나를 선택합니다. 64비트 iOS 디바이스 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
@@ -150,13 +150,13 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 14. 빌드 구성을 저장하고 닫습니다.
 
-# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+# <a name="visual-studio-2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
 1. Visual Studio 2017이 [Mac 빌드 호스트와 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)되었는지 확인합니다.
 2. **솔루션 탐색기**에서 **프로젝트 이름**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 3. **iOS 빌드** 탭으로 이동하고 **구성**을 **릴리스**로 설정하고 **플랫폼**을 **iPhone**으로 설정합니다.
 4. 특정 iOS SDK를 빌드하려면 **SDK 버전** 목록에서 선택합니다. 그렇지 않으면 이 값을 **기본**으로 둡니다.
-5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. 일부 타사 라이브러리를 사용할 때와 같은 일부 상황에서는 필요한 코드가 제거되지 않도록 이 값을 **연결 안 함**으로 설정할 필요가 있습니다. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
+5. 링크하면 사용되지 않는 코드를 제거하여 애플리케이션의 전체 크기를 줄일 수 있습니다. 대부분의 경우 **링커 동작**은 기본값인 **프레임 워크 SDK만 링크**로 설정해야 합니다. **연결하지 않음** 옵션을 사용하면 **프레임워크 SDK만 링크** 옵션을 사용하여 연결되는 Xamarin.iOS에 있는 비공용 iOS API의 존재 때문에 Apple에서 앱을 거부할 수 있습니다. **모두 연결**은 타사 라이브러리를 비롯하여 프로젝트의 모든 어셈블리에서 코드를 제거하며 타사 라이브러리에서 링커가 검색할 수 없는 리플렉션을 통해서만 사용할 수 있는 코드를 제거할 수 있으므로 신중하게 사용해야 합니다. 이는 사용되는 라이브러리 코드를 결정하기 위해 정적 코드 분석을 수행하기 때문입니다. 코드 누락으로 인한 런타임 실패를 방지하기 위해 일부 클래스 및/또는 메서드 등을 수동으로 유지해야 할 수 있으므로 **모두 연결**을 신중하게 사용하세요. 자세한 내용은 [Xamarin.iOS 앱 연결하기](~/ios/deploy-test/linker.md) 가이드를 참조하세요.
 6. **PNG 이미지 최적화**를 확인하여 추가로 애플리케이션의 크기를 줄일 수 있는지 알아봅니다.
 7. 디버깅은 빌드를 쓸데없이 크게 만들므로 사용하지 않도록 설정해야 합니다.
 8. iOS 11의 경우 **ARM64**를 지원하는 디바이스 아키텍처 중 하나를 선택합니다. 64비트 iOS 디바이스 빌드에 대한 자세한 내용은 [32/64비트 플랫폼 고려 사항](~/cross-platform/macios/32-and-64/index.md) 설명서의 **Xamarin.iOS 앱의 64비트 빌드 활성화** 섹션을 참조하세요.
@@ -202,7 +202,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
 빌드 설정을 올바르게 구성하고 iTunes Connect가 제출 대기 중인 경우, 이제 앱을 빌드하고 Apple에 제출할 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Mac용 Visual Studio에서 빌드 구성 및 빌드할 디바이스(시뮬레이터는 해당사항 없음) **릴리스**를 선택합니다.
 
@@ -237,7 +237,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
     >
     > 이 오류의 해결 방법은 [Xamarin 포럼의 이 게시물](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1)을 참조합니다.
 
-# <a name="visual-studio-2019tabwindows"></a>[Visual Studio 2019](#tab/windows)
+# <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/windows)
 
 > [!NOTE]
 > App Store에 게시는 Visual Studio 2019 버전 16.3 이상에서 지원됩니다.
@@ -263,7 +263,7 @@ iOS는 *프로비전 프로필*을 사용하여 특정 애플리케이션 빌드
 
     ![Apple ID 및 앱 고유 암호를 입력하기 위한 팝업 창 스크린샷.](publishing-to-the-app-store-images/connectInfo-win.png "Apple ID 및 앱 고유 암호를 입력하기 위한 팝업 창 스크린샷.")
 
-# <a name="visual-studio-2017tabwin-vs2017"></a>[Visual Studio 2017](#tab/win-vs2017)
+# <a name="visual-studio-2017"></a>[Visual Studio 2017](#tab/win-vs2017)
 
 > [!NOTE]
 > Visual Studio 2017은 Mac용 Visual Studio 및 Visual Studio 2019에서 찾은 전체 게시 워크플로를 지원하지 않습니다.

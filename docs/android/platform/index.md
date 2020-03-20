@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 3ad3661ff50ad7f4be95421de57dc5017392a59f
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 38052eee1b71ace9795f5c16bdf714f9538e353d
+ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "77495674"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79303478"
 ---
 # <a name="platform-features"></a>플랫폼 기능
 
@@ -41,6 +41,10 @@ Android 3.0은 휴대폰과 태블릿에 탑재된 다양한 화면 크기에 �
 ## <a name="app-linking"></a>[앱 연결](~/android/platform/app-linking.md)
 
 이 가이드에서는 Android 6.0이 _앱 연결_을 지원하는 방법을 설명합니다. 이는 모바일 앱이 웹 사이트의 URL에 응답할 수 있도록 하는 기법입니다. Android 6.0 애플리케이션에서 앱 연결을 구현하는 방법과 도메인의 앱 연결을 처리할 권한을 모바일 앱에 부여하도록 웹 사이트를 구성하는 방법을 설명합니다.
+
+## <a name="androidx"></a>[AndroidX](~/android/platform/androidx.md)
+
+이 문서에서는 Xamarin.Android 프로젝트 내에서 AndroidX를 사용하는 방법을 안내하고 Android 지원 라이브러리에서 AndroidX로 애플리케이션을 마이그레이션하는 방법을 보여 주는 설명서의 링크를 제공합니다.
 
 ## <a name="android-10"></a>[Android 10](~/android/platform/android-10.md)
 

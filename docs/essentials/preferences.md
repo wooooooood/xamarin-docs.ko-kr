@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/15/2019
 ms.custom: video
-ms.openlocfilehash: c7d4e4f7ea27e150752b222e3ea4ce2c4256a43a
-ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
+ms.sourcegitcommit: 98fdc3b4a7ef10d5b45167315dbffe94853af71a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78295406"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79497045"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
@@ -44,7 +44,7 @@ var myValue = Preferences.Get("my_key", "default_value");
 지정된 ‘키’가 기본 설정에 있는지 확인하려면 다음을 수행합니다. 
 
 ```csharp
-bool hasKey = Preferences.HasKey("my_key");
+bool hasKey = Preferences.ContainsKey("my_key");
 ```
 
 기본 설정에서 ‘키’를 제거합니다. 
@@ -73,6 +73,15 @@ Preferences.Clear();
 - **string**
 - **DateTime**
 
+## <a name="integrate-with-system-settings"></a>시스템 설정과 통합
+
+기본 설정은 기본적으로 저장되므로 설정을 네이티브 시스템 설정에 통합할 수 있습니다. 플랫폼 설명서 및 샘플을 따라 플랫폼과 통합합니다.
+
+* Apple: [iOS 설정 번들 구현](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [iOS 애플리케이션 기본 설정 샘플](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [watchOS 설정](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+* Android: [설정 화면 시작](https://developer.android.com/guide/topics/ui/settings.html)
+
 ## <a name="implementation-details"></a>구현 세부 정보
 
 `DateTime` 값은 `DateTime` 클래스에서 정의된 두 가지 메서드를 사용하여 64 비트 이진(긴 정수) 형식으로 저장됩니다. [`ToBinary`](xref:System.DateTime.ToBinary) 메서드는 `DateTime` 값을 인코딩하는 데 사용되며 [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) 메서드는 값을 디코딩합니다. UTC(협정 세계시) 값이 아닌 `DateTime`이 저장될 때 디코드된 값으로 설정할 수 있는 조정에 대해서는 이러한 메서드의 문서를 참조하세요.
@@ -81,7 +90,7 @@ Preferences.Clear();
 
 # <a name="android"></a>[Android](#tab/android)
 
-모든 데이터는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장됩니다. `sharedName`을 지정하지 않으면 기본 공유 기본 설정이 사용되고, 이외의 경우에는 지정된 이름을 사용하여 **프라이빗** 공유 기본 설정을 가져오는 데 이름이 사용됩니다.
+모든 데이터는 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장됩니다. `sharedName`을 지정하지 않으면 기본 공유 기본 설정이 사용되고, 이외의 경우에는 지정된 이름을 사용하여 **개인** 공유 기본 설정을 가져오는 데 이름이 사용됩니다.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
