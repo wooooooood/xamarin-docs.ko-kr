@@ -85,7 +85,7 @@ C의 상위 집합인 Objective-C는 구현 파일에서 구분되는 공용 선
 예를 들어 다음 코드에는 `UIKit` 네임스페이스가 포함되어 있어서 해당 네임스페이스의 모든 클래스를 구현에 사용할 수 있습니다.
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
     // implementation of classes
