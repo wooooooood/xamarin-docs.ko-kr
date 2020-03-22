@@ -8,12 +8,12 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2020
 ms.custom: video
-ms.openlocfilehash: f5266049e1498d902864185a61cba6d3730f9594
-ms.sourcegitcommit: 2836f2003a5b745b042ee6003a3d6a11b9139e44
+ms.openlocfilehash: 496251ec9596b9ef76fb34149acca184b5934c37
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77618867"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070391"
 ---
 # <a name="resource-dictionaries"></a>리소스 사전
 
@@ -150,7 +150,7 @@ Xamarin. Forms 3.0부터 명시적 `ResourceDictionary` 태그가 필요 하지 
 
 ## <a name="stand-alone-resource-dictionaries"></a>독립 실행형 리소스 사전
 
-`ResourceDictionary`에서 파생 된 클래스는 별도의 독립 실행형 파일에 있을 수도 있습니다. (보다 정확 하 게 `ResourceDictionary`에서 파생 된 클래스에는 리소스가 XAML 파일에 정의 되어 있지만 `InitializeComponent` 호출을 포함 하는 코드 숨김이 필요 하므로 일반적으로 파일 _쌍_ 이 필요 합니다.) 그러면 결과 파일을 응용 프로그램 간에 공유할 수 있습니다.
+`ResourceDictionary`에서 파생 된 클래스는 별도의 독립 실행형 파일에 있을 수도 있습니다. 그런 다음 응용 프로그램 간에 결과 파일을 공유할 수 있습니다.
 
 이러한 파일을 만들려면 프로젝트에 새 **콘텐츠 뷰** 또는 **콘텐츠 페이지** 항목을 추가 합니다 ( C# 파일 하나만 있는 콘텐츠 **뷰** 또는 **콘텐츠 페이지** 는 아님). XAML 파일 및 C# 파일에서 기본 클래스의 이름을 `ContentView` 또는 `ContentPage`에서 `ResourceDictionary`으로 변경 합니다. XAML 파일에서 기본 클래스의 이름에는 최상위 요소입니다.
 
@@ -215,7 +215,7 @@ Xamarin. Forms 3.0부터 명시적 `ResourceDictionary` 태그가 필요 하지 
 </ContentPage>
 ```
 
-이 구문은 `MyResourceDictionary` 클래스를 인스턴스화하지 않습니다. 대신, XAML 파일을 참조합니다. 이러한 이유로 [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) 속성을 설정할 때 코드 숨김이 필요 하지 않으며 `x:Class` 특성을 **myresourcedictionary .xaml** 파일의 루트 태그에서 제거할 수 있습니다. 또한이 방법을 사용 하 여 리소스 사전을 병합할 때 Xamarin.ios는 자동으로 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)를 인스턴스화하면 외부 `ResourceDictionary` 태그가 필요 하지 않습니다.
+이 구문은 `MyResourceDictionary` 클래스를 인스턴스화하지 않습니다. 대신, XAML 파일을 참조합니다. 이러한 이유로 [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) 속성을 설정 하는 경우 코드 숨김이 필요 하지 않으며 `x:Class` 특성을 **myresourcedictionary .xaml** 파일의 루트 태그에서 제거할 수 있습니다. 또한이 방법을 사용 하 여 리소스 사전을 병합할 때 Xamarin.ios는 자동으로 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary)를 인스턴스화하면 외부 `ResourceDictionary` 태그가 필요 하지 않습니다.
 
 > [!IMPORTANT]
 > [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) 속성은 XAML 에서만 설정할 수 있습니다.

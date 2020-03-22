@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 8640800717a88e800503e93c339eeb080707374e
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: a9dce962c35e5f9cfdcd674da9ad71cf8935e7d4
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306172"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070312"
 ---
 # <a name="web-views-in-xamarinios"></a>Xamarin.ios의 웹 보기
 
@@ -89,31 +89,71 @@ iOS 9의 향상 된 기능을 통해 사용자는 Safari 페이지의 왼쪽 위
 
 앱에서 응용 프로그램을 구현 하는 방법을 비롯 하 여 ATS에 대 한 자세한 내용은 [앱 전송 보안](~/ios/app-fundamentals/ats.md) 가이드를 참조 하세요.
 
-## <a name="uiwebview-deprecated"></a>UIWebView 보기 (사용 되지 않음)
-
-> [!IMPORTANT]
-> `UIWebView`는 사용되지 않습니다. 이 컨트롤을 사용 하는 앱은 [4 월 2020을 기준으로 앱 스토어에 허용 되지 않으며 기존 앱에서 12 월 2020에 해당 앱을 제거 해야](https://developer.apple.com/news/?id=12232019b)합니다.
->
-> [Apple의 `UIWebView` 설명서](https://developer.apple.com/documentation/uikit/uiwebview) 에서는 대신 [`WKWebView`](#wkwebview) 를 사용 해야 합니다.
-
-> [!IMPORTANT]
-> Xamarin.Forms를 사용하는 동안 `UIWebView` 사용 중단 경고(ITMS-90809)와 관련된 리소스를 찾는 경우 [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) 설명서를 참조하세요.
+## <a name="uiwebview-deprecation"></a>UIWebView 보기 사용 중단
 
 `UIWebView` 앱에서 웹 콘텐츠를 제공 하는 Apple의 레거시 방법입니다. IOS 2.0에 출시 되었으며 8.0부터 사용 되지 않습니다.
 
-Xamarin.ios 앱에 UIWebView 보기를 추가 하려면 다음 코드를 사용 합니다.
+> [!IMPORTANT]
+> `UIWebView`는 사용되지 않습니다. 이 컨트롤을 사용 하는 새 앱은 [4 월 2020을 기준으로 앱 스토어에 허용 되지 않으며,이 컨트롤을 사용 하는 앱 업데이트는 12 월 2020에 허용 되지](https://developer.apple.com/news/?id=12232019b)않습니다.
+>
+> [Apple의 `UIWebView` 설명서](https://developer.apple.com/documentation/uikit/uiwebview) 에서는 대신 [`WKWebView`](#wkwebview) 를 사용 해야 합니다.
+>
+> Xamarin.Forms를 사용하는 동안 `UIWebView` 사용 중단 경고(ITMS-90809)와 관련된 리소스를 찾는 경우 [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) 설명서를 참조하세요.
 
-```csharp
-webView = new UIWebView (View.Bounds);
-View.AddSubview(webView);
+지난 6 개월 동안 iOS 응용 프로그램을 제출한 개발자가 앱 스토어에서 경고를 수신 했을 수 있습니다 .이에 대 한 자세한 `UIWebView`는 사용 되지 않습니다.
 
-var url = "https://docs.microsoft.com"; // NOTE: https secure request
-webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
-```
+결함 Api는 일반적입니다. Xamarin.ios는 사용자 지정 특성을 사용 하 여 해당 Api를 알리고 (사용 가능한 경우 대체를 제안) 개발자에 게 다시 제공 합니다. 이 시간은 서로 다르며, 일반적으로 사용 중단은 전송 시 Apple의 앱 스토어에서 **적용** 됩니다.
 
-그러면 다음과 같은 웹 보기가 생성 됩니다.
+아쉽게도 `Xamarin.iOS.dll`에서 `UIWebView` 형식을 제거 하는 것은 [이진 주요 변경 사항](https://docs.microsoft.com/dotnet/core/compatibility/categories#binary-compatibility)입니다. 이렇게 변경 하면 지원 되지 않거나 더 이상 다시 컴파일할 수 없는 일부 (예: 닫힌 소스)를 비롯 하 여 기존 타사 라이브러리가 중단 됩니다. 이렇게 하면 개발자에 대 한 추가 문제도 발생 합니다. 따라서 *아직*형식을 제거 하지 않습니다.
 
-[ScalesPagesToFit의 효과를 ![합니다.](webview-images/webview.png)](webview-images/webview.png#lightbox)
+[Xamarin.ios 13.16](https://docs.microsoft.com/xamarin/ios/release-notes/13/13.16) 부터는 `UIWebView`에서 마이그레이션하는 데 도움이 되는 새로운 검색 및 도구를 사용할 수 있습니다.
+
+### <a name="detection"></a>감지
+
+최근 iOS 응용 프로그램을 Apple 앱 스토어에 제출 have'nt이 상황이 응용 프로그램에 적용 되는지 궁금할 수 있습니다.
+
+프로젝트의 **추가 mtouch 인수** 에 `--warn-on-type-ref=UIKit.UIWebView`를 추가 하 여 찾을 수 있습니다. 이렇게 하면 응용 프로그램 내에서 사용 되지 않는 `UIWebView` 및 모든 해당 종속성 **에 대 한 참조가 경고** 됩니다. 관리 되는 링커가 실행 **되기 전과** **후** 에 다양 한 경고를 사용 하 여 형식을 보고 합니다.
+
+`-warnaserror:`를 사용 하 여 경고를 다른 오류로 설정할 수 있습니다. 이는 확인 후 `UIWebView`에 대 한 새 종속성이 추가 되지 않도록 하려는 경우에 유용할 수 있습니다. 다음은 그 예입니다.
+
+* `-warnaserror:1502`는 미리 연결 된 어셈블리에서 참조를 찾을 경우 오류를 보고 합니다.
+* 사후 연결 된 어셈블리에서 참조가 발견 되 면 `-warnaserror:1503`에서 오류를 보고 합니다.
+
+사전/사후 링크 결과가 유용 하지 않을 경우 경고를 경고할 수도 있습니다. 다음은 그 예입니다.
+
+* `-nowarn:1502`는 미리 연결 된 어셈블리에서 참조를 찾을 경우 경고를 보고 **하지 않습니다** .
+* 사후 연결 된 어셈블리에서 참조를 찾은 경우에는 `-nowarn:1503`에서 경고를 보고 **하지** 않습니다.
+
+### <a name="removal"></a>제거
+
+모든 응용 프로그램은 고유 합니다. 응용 프로그램에서 `UIWebView`를 제거 하는 방법은 사용 방법과 위치에 따라 다른 단계가 필요할 수 있습니다. 가장 일반적인 시나리오는 다음과 같습니다.
+
+- 응용 프로그램 내에 `UIWebView`을 사용 하지 않습니다. 모든 것이 정상입니다. AppStore에 제출할 때 경고가 **없어야 합니다.** 다른 항목은 필요 하지 않습니다.
+- 응용 프로그램에서 `UIWebView`를 직접 사용 합니다. `UIWebView`사용을 제거 하 여 시작 합니다. 예를 들어 최신 `WKWebView` (iOS 8) 또는 `SFSafariViewController` (iOS 9) 형식으로 바꿉니다. 이 작업이 완료 되 면 관리 되는 링커는 `UIWebView`에 대 한 참조를 볼 수 없으며, 최종 응용 프로그램 이진 파일에는이를 추적 하지 않습니다.
+- 간접 사용. `UIWebView`는 응용 프로그램에서 사용 되는 일부 타사 라이브러리 (관리 또는 네이티브)에 있을 수 있습니다. 최신 릴리스에서는이 상황이 이미 해결 되었을 수 있으므로 외부 종속성을 최신 버전으로 업데이트 하 여 시작 합니다. 그렇지 않은 경우 라이브러리의 유지 관리자에 게 문의 하 고 업데이트 계획을 요청 합니다.
+
+또는 다음과 같은 방법을 시도해 볼 수 있습니다.
+
+1. **Xamarin.ios**를 사용 하는 경우이 [블로그 게시물](https://devblogs.microsoft.com/xamarin/uiwebview-deprecation-xamarin-forms/)을 읽어 보세요.
+1. (전체 프로젝트에서 또는 적어도 `UIWebView`를 사용 하는 종속성에서) 관리 되는 링커를 사용 하도록 설정 합니다. 참조 되지 않는 경우에는 제거 될 수 *있습니다* . 이렇게 하면 문제를 해결할 수 있지만 코드를 링커에 안전 하 게 만들기 위해 추가 작업이 필요할 수 있습니다.
+1. 관리 되는 링커 설정을 변경할 수 없는 경우 아래 특수 한 경우를 참조 하세요.
+
+#### <a name="applications-cannot-use-the-linker-or-change-its-settings"></a>응용 프로그램에서 링커를 사용할 수 없거나 해당 설정을 변경할 수 없습니다.
+
+경우에 따라 관리 되는 링커를 사용 **하지 않는** 경우 (예: **링크 하지 않음**) `UIWebView` 기호가 Apple에 제출 하는 이진 앱에 남아 있으며,이는 거부 될 수 있습니다.
+
+*강제* 솔루션은 프로젝트의 **추가 mtouch 인수**에 `--optimization=force-rejected-types-removal`를 추가 하는 것입니다. 이렇게 하면 응용 프로그램에서 `UIWebView` 추적을 제거 합니다. 그러나 형식을 참조 하는 모든 코드는 제대로 작동 **하지** 않습니다 (예외 또는 충돌 발생). 이 접근 방식은 정적 분석을 통해 연결할 수 있는 경우에도 런타임에 코드에 연결할 수 없는 경우에만 사용 해야 합니다.
+
+#### <a name="support-for-ios-7x-or-earlier"></a>IOS 8.x (또는 이전 버전)에 대 한 지원
+
+`UIWebView`은 v2.0 이후부터 iOS의 일부입니다. 가장 일반적인 교체는 `WKWebView` (iOS 8) 및 `SFSafariViewController` (iOS 9)입니다. 응용 프로그램에서 여전히 이전 iOS 버전을 지 원하는 경우 다음 옵션을 고려해 야 합니다.
+
+* IOS 8을 최소 대상 버전 (빌드 시간 결정)으로 설정 합니다.
+* 앱이 iOS 8 이상 (런타임 결정)에서 실행 되는 경우에만 `WKWebView`을 사용 합니다.
+
+#### <a name="applications-not-submitted-to-apple"></a>Apple에 제출 되지 않은 응용 프로그램
+
+응용 프로그램이 Apple에 제출 되지 않은 경우 이후 iOS 릴리스에서 제거 될 수 있으므로 사용 되지 않는 API에서 벗어나 이동할 계획을 세워야 합니다. 그러나 사용자 고유의 시간표를 사용 하 여이 전환을 수행할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 
