@@ -956,6 +956,8 @@
           href: internals/class-hierarchy.md
         - name: 종속성 확인
           href: internals/dependency-resolution.md
+        - name: 실험적 플래그
+          href: internals/experimental-flags.md
         - name: 빠른 렌더러
           href: internals/fast-renderers.md
         - name: 소스 링크
