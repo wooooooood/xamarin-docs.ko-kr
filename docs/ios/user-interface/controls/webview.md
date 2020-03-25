@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: a9dce962c35e5f9cfdcd674da9ad71cf8935e7d4
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.openlocfilehash: 7c469a011a70840cfe94a7f87ed77f03968a3525
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159823"
 ---
 # <a name="web-views-in-xamarinios"></a>Xamarin.ios의 웹 보기
 
@@ -146,7 +146,7 @@ iOS 9의 향상 된 기능을 통해 사용자는 Safari 페이지의 왼쪽 위
 
 #### <a name="support-for-ios-7x-or-earlier"></a>IOS 8.x (또는 이전 버전)에 대 한 지원
 
-`UIWebView`은 v2.0 이후부터 iOS의 일부입니다. 가장 일반적인 교체는 `WKWebView` (iOS 8) 및 `SFSafariViewController` (iOS 9)입니다. 응용 프로그램에서 여전히 이전 iOS 버전을 지 원하는 경우 다음 옵션을 고려해 야 합니다.
+`UIWebView`은 v2.0 이후 iOS의 일부입니다. 가장 일반적인 교체는 `WKWebView` (iOS 8) 및 `SFSafariViewController` (iOS 9)입니다. 응용 프로그램에서 여전히 이전 iOS 버전을 지 원하는 경우 다음 옵션을 고려해 야 합니다.
 
 * IOS 8을 최소 대상 버전 (빌드 시간 결정)으로 설정 합니다.
 * 앱이 iOS 8 이상 (런타임 결정)에서 실행 되는 경우에만 `WKWebView`을 사용 합니다.

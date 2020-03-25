@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/14/2020
-ms.openlocfilehash: 225b7dc7dc639031b3198a8fb9e7fe9fb9d7ee7f
-ms.sourcegitcommit: 8df67f0d76ff762b517d27b8d4c217d3a3379a18
+ms.openlocfilehash: a6cb5a0e3573ebf998bb2f81c08ff63c81678b54
+ms.sourcegitcommit: ec112800a76089ab1db66fe24b8bbcc510e067b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423878"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80159810"
 ---
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Xamarin에 대 한 XAML 핫 다시 로드
 
@@ -59,7 +59,7 @@ XAML 핫 다시 로드는 Visual Studio 및 Mac용 Visual Studio에서 동시 �
 
 ## <a name="known-limitations"></a>알려진 제한 사항
 
-* UWP 및 MacOS와 같은 다른 Xamarin 폼 대상은 아직 지원 *되지 않습니다* . [여기](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html)에서 UWP 지원의 진행률을 추적할 수 있습니다.
+* UWP 및 macOS와 같은 다른 Xamarin 폼 대상은 아직 지원 *되지 않습니다* . [여기](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html)에서 UWP 지원의 진행률을 추적할 수 있습니다.
 * XAML 핫 다시 로드 세션 중에는 파일 또는 NuGet 패키지를 추가, 제거 또는 이름을 변경할 수 없습니다. 파일이 나 NuGet 패키지를 추가 하거나 제거 하는 경우 XAML 핫 다시 로드를 계속 사용 하도록 앱을 다시 빌드하고 다시 배포 합니다.
 * 최적의 환경을 위해 링커를 **연결 하지** 않거나 **링크 없음** 으로 설정 합니다. **링크 SDK only 설정만** 대부분의 시간 동안 작동 하지만 특정 한 경우에는 실패할 수 있습니다. 링커 설정은 Android 및 iOS 빌드 옵션에서 찾을 수 있습니다.
 * 실제 iPhone에서 디버깅 하려면 인터프리터에서 XAML 핫 다시 로드를 사용 해야 합니다. 이렇게 하려면 프로젝트 설정을 열고 iOS 빌드 탭을 선택 하 고 **Mono 인터프리터 설정 사용** 이 설정 되어 있는지 확인 합니다. 속성 페이지 위쪽의 **플랫폼** 옵션을 **iPhone**으로 변경 해야 할 수 있습니다.
