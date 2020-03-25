@@ -513,6 +513,8 @@
       items:
         - name: 앱 패키지 크기
           href: deploy-test/app-package-size.md
+        - name: 변경 내용 적용
+          href: deploy-test/apply-changes.md
         - name: 앱 빌드
           href: deploy-test/building-apps/index.md
           items:
