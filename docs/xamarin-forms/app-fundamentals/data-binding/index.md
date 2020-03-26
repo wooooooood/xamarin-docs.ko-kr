@@ -6,13 +6,13 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
-ms.openlocfilehash: fa92409b33717e528c3cfb83a24148c698836594
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.date: 03/23/2020
+ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72697138"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247602"
 ---
 # <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
 
@@ -28,7 +28,7 @@ Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 �
 
 ## <a name="the-data-binding-solution"></a>데이터 바인딩 솔루션
 
-데이터 바인딩은 작업을 자동화하고 이벤트 처리기를 불필요하게 만듭니다. (데이터 바인딩 인프라에 이벤트가 사용되기 때문에 이벤트는 여전히 필요합니다.) 데이터 바인딩은 코드나 XAML로 구현할 수 있지만 코드 숨김 파일의 크기를 줄이는 데 도움이 되는 XAML이 훨씬 더 일반적입니다. 이벤트 처리기의 프로시저 코드를 선언적 코드나 마크업으로 바꾸면 애플리케이션이 간소화되고 명확해집니다.
+데이터 바인딩은 작업을 자동화하고 이벤트 처리기를 불필요하게 만듭니다. 데이터 바인딩은 코드나 XAML로 구현할 수 있지만 코드 숨김 파일의 크기를 줄이는 데 도움이 되는 XAML이 훨씬 더 일반적입니다. 이벤트 처리기의 프로시저 코드를 선언적 코드나 마크업으로 바꾸면 애플리케이션이 간소화되고 명확해집니다.
 
 데이터 바인딩과 관련된 두 개체 중 하나는 거의 항상 `View`에서 파생되고 페이지의 시각적 인터페이스 일부를 형성하는 요소입니다. 다른 개체는 다음 중 하나입니다.
 
@@ -39,39 +39,39 @@ Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 �
 
 데이터 바인딩은 다음과 같은 문서 시리즈를 통해 살펴봅니다.
 
-## <a name="basic-bindingsbasic-bindingsmd"></a>[기본 바인딩](basic-bindings.md)
+## <a name="basic-bindings"></a>[기본 바인딩](basic-bindings.md)
 
 데이터 바인딩 원본과 대상의 차이를 알아보고 코드와 XAML에서 간단한 데이터 바인딩을 살펴봅니다.
 
-## <a name="binding-modebinding-modemd"></a>[바인딩 모드](binding-mode.md)
+## <a name="binding-mode"></a>[바인딩 모드](binding-mode.md)
 
 바인딩 모드를 통해 두 개체 간의 데이터 흐름을 제어하는 방법을 알아봅니다.
 
-## <a name="string-formattingstring-formattingmd"></a>[문자열 서식](string-formatting.md)
+## <a name="string-formatting"></a>[문자열 서식](string-formatting.md)
 
 데이터 바인딩을 사용하여 개체 형식을 문자열로 지정하고 표시합니다.
 
-## <a name="binding-pathbinding-pathmd"></a>[바인딩 경로](binding-path.md)
+## <a name="binding-path"></a>[바인딩 경로](binding-path.md)
 
 데이터 바인딩의 `Path` 속성을 심층적으로 살펴보고 하위 속성 및 컬렉션 멤버에 액세스합니다.
 
-## <a name="binding-value-convertersconvertersmd"></a>[바인딩 값 변환기](converters.md)
+## <a name="binding-value-converters"></a>[바인딩 값 변환기](converters.md)
 
 바인딩 값 변환기를 사용하여 데이터 바인딩 내에서 값을 변경합니다.
 
-## <a name="relative-bindingsrelative-bindingsmd"></a>[상대 바인딩](relative-bindings.md)
+## <a name="relative-bindings"></a>[상대 바인딩](relative-bindings.md)
 
 상대 바인딩을 사용하여 바인딩 대상의 위치에 상대적으로 바인딩 소스를 설정합니다.
 
-## <a name="binding-fallbacksbinding-fallbacksmd"></a>[바인딩 대체](binding-fallbacks.md)
+## <a name="binding-fallbacks"></a>[바인딩 대체](binding-fallbacks.md)
 
 바인딩 프로세스가 실패할 경우 사용할 대체 값을 정의하여 데이터 바인딩을 더욱 강력하게 만듭니다.
 
-## <a name="the-command-interfacecommandingmd"></a>[명령 인터페이스](commanding.md)
+## <a name="the-command-interface"></a>[명령 인터페이스](commanding.md)
 
 데이터 바인딩으로 `Command` 속성을 구현합니다.
 
-## <a name="compiled-bindingscompiled-bindingsmd"></a>[컴파일된 바인딩](compiled-bindings.md)
+## <a name="compiled-bindings"></a>[컴파일된 바인딩](compiled-bindings.md)
 
 컴파일된 바인딩을 사용하여 데이터 바인딩 성능을 향상시킵니다.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: eb4d3d80fa416f7bb94f3137a0925a9a9807cb10
-ms.sourcegitcommit: 524fc148bad17272bda83c50775771daa45bfd7e
+ms.openlocfilehash: d8a57ac8688a0113ef267ea25fb54cbaaf562957
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77480609"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070386"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Forms 이중 화면 디자인 패턴
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
 이 가이드에서는 이중 화면 디바이스를 위한 권장 디자인 패턴을 소개하고 멋지고 유용한 사용자 환경을 제공하는 인터페이스를 만드는 데 도움이 되는 코드와 샘플을 제공합니다.
 
@@ -270,5 +270,5 @@ ms.locfileid: "77480609"
 
 ## <a name="related-links"></a>관련 링크
 
-- [Dual Screen Samples(GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)(이중 화면 샘플(GitHub))
+- [Dual Screen Samples(GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)(이중 화면 샘플(GitHub))
 - [Create apps for dual screen devices](index.md)(이중 화면 디바이스용 앱 만들기)
