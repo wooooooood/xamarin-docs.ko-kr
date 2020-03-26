@@ -1,5 +1,5 @@
 ---
-title: Xamarin. Android Designer
+title: Xamarin.Android Designer
 description: 이 문서에서는 Android Designer의 기능을 설명 합니다. 디자이너를 사용 하 여 위젯을 시각적으로 레이아웃 하 고 속성을 편집 하는 방법을 보여 주는 디자이너 기본 사항에 대해 설명 합니다. 또한 디자이너를 사용 하 여 테마, 언어 및 장치 구성과 같은 다양 한 구성에서 사용자 인터페이스 및 리소스를 사용 하는 방법과 가로 및 세로와 같은 대체 보기를 디자인 하는 방법을 보여 줍니다.
 ms.prod: xamarin
 ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 8793dafe5bc44999cb884621d0c41956674b05e0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bd49e498a3d54dea883292dcca42b0b4eaa6b9a2
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029401"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247576"
 ---
-# <a name="xamarinandroid-designer"></a>Xamarin. Android Designer
+# <a name="xamarinandroid-designer"></a>Xamarin.Android Designer
 
 _이 문서에서는 Android Designer의 기능을 설명 합니다. 디자이너를 사용 하 여 위젯을 시각적으로 레이아웃 하 고 속성을 편집 하는 방법을 보여 주는 디자이너 기본 사항에 대해 설명 합니다. 또한 디자이너를 사용 하 여 테마, 언어 및 장치 구성과 같은 다양 한 구성에서 사용자 인터페이스 및 리소스를 사용 하는 방법과 가로 및 세로와 같은 대체 보기를 디자인 하는 방법을 보여 줍니다._
 
@@ -46,6 +46,8 @@ Xamarin은 XML 파일을 기반으로 하는 사용자 인터페이스 디자인
  [대체 레이아웃 보기](~/android/user-interface/android-designer/alternative-layout-views.md)
 
  [재질 디자인 기능](~/android/user-interface/android-designer/material-design-features.md)
+
+ [Android 레이아웃 진단](~/android/user-interface/android-designer/diagnostics.md)
 
 ## <a name="summary"></a>요약
 

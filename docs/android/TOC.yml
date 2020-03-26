@@ -141,6 +141,8 @@
               href: user-interface/android-designer/alternative-layout-views.md
             - name: 재질 디자인 기능
               href: user-interface/android-designer/material-design-features.md
+            - name: Android 레이아웃 진단
+              href: user-interface/android-designer/diagnostics.md
         - name: 재질 테마
           href: user-interface/material-theme.md
         - name: 사용자 프로필
