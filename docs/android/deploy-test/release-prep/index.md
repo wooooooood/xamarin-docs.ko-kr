@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 8c21895918e4d4ac9a82804d4b140fbf7bf798fe
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
+ms.sourcegitcommit: 7fd88ada5b44a62390fe1a73ef08014e4d236a2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303524"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80261312"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -27,7 +27,7 @@ ms.locfileid: "79303524"
 
 - **[애플리케이션 보호](#protect_app)** &ndash; 디버깅을 사용하지 못하게 하고, 관리 코드를 난독 처리하고, 디버그 방지 및 변조 방지를 추가하며 네이티브 컴파일을 사용하여 사용자나 공격자가 애플리케이션을 디버그, 변조 또는 리버스 엔지니어링하지 못하게 합니다.
 
-- **[패키지 속성 설정](#Set_Packaging_Properties)** &ndash; 패키지 속성은 APK(Android 애플리케이션 패키지)의 생성을 제어합니다. 이 단계에서는 APK를 최적화하고 그 자산을 보호하며 필요에 맞게 패키지를 모듈화합니다.
+- **[패키지 속성 설정](#Set_Packaging_Properties)** &ndash; 패키지 속성은 APK(Android 애플리케이션 패키지)의 생성을 제어합니다. 이 단계에서는 APK를 최적화하고 그 자산을 보호하며 필요에 맞게 패키지를 모듈화합니다. 또한 디바이스에 최적화된 Android 앱 번들을 사용자에게 제공할 수 있습니다.
 
 - **[컴파일](#Compile)** &ndash; 이 단계에서는 코드와 자산을 컴파일하여 릴리스 모드에서 빌드되는지 확인합니다.
 
@@ -268,6 +268,16 @@ Xamarin.Android 앱의 릴리스를 준비할 때는 지원되는 CPU 아키텍�
 앱이 참조되는 모든 라이브러리의 모든 메서드를 사용하는 것은 아니므로 ProGuard 같은 도구(위 참조)를 사용하면 사용되지 않는 메서드를 코드에서 제거할 수 있습니다. **Multi-Dex 사용**은 절대적으로 필요한 경우에만 사용하도록 설정합니다. 즉 ProGuard를 사용한 후에도 앱이 65K 이상의 Java 메서드를 참조하는 경우입니다.
 
 Multi-Dex에 대한 자세한 내용은 [64K가 넘는 메서드의 앱 구성](https://developer.android.com/tools/building/multidex.html)을 참조하세요.
+
+### <a name="android-app-bundles"></a>Android 앱 번들
+
+앱 번들은 디바이스에 직접 배포할 수 없으므로 APK와 다릅니다. 대신, 컴파일된 모든 코드와 리소스와 함께 업로드하기 위한 형식입니다. 서명된 앱 번들을 업로드한 후에는 애플리케이션의 APK를 빌드하고 서명하는 데 필요한 모든 것이 Google Play에 제공되며, Google Play는 동적 배달을 사용하여 사용자에게 제공합니다.
+
+Android 앱 번들에 대한 지원을 사용하려면 Android 프로젝트 옵션 내에서 **Android 패키지 형식** 속성의 `bundle` 값을 옵트인해야 합니다. 그러기 전에 앱 번들이 릴리스 패키지 전용이므로 프로젝트를 `Release` 구성으로 변경해야 합니다.
+
+이제 [보관 흐름](#archive)에 따라 앱 번들을 생성할 수 있습니다. 그러면 애플리케이션에 대한 앱 번들이 생성됩니다.
+
+Android 앱 번들에 대한 자세한 내용은 [Android 앱 번들](https://developer.android.com/guide/app-bundle/)을 참조하세요.
 
 <a name="Compile" />
 

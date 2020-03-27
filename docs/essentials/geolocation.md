@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 2ee4683bce02e95c52235afa823be21b89863208
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 840aadcafea88ef08f53e16f535439be0862fee9
+ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303650"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070354"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
@@ -217,6 +217,24 @@ double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Mi
 ```
 
 `Location` 생성자에는 해당 순서로 위도 및 경도 인수가 포함됩니다. 양수 위도 값은 적도의 북쪽이고 양수 경도 값은 본초 자오선의 동쪽입니다. `CalculateDistance`에 대한 마지막 인수를 사용하여 마일 또는 킬로미터를 지정합니다. 또한 `UnitConverters` 클래스는 두 단위 간에 변환하기 위한 `KilometersToMiles` 및 `MilesToKilometers` 메서드를 정의합니다.
+
+## <a name="platform-differences"></a>플랫폼의 차이점
+
+고도는 플랫폼마다 다르게 계산됩니다.
+
+# <a name="android"></a>[Android](#tab/android)
+
+Android에서 사용 가능한 경우 [고도](https://developer.android.com/reference/android/location/Location#getAltitude())는 WGS 84 참조 타원면 위에 미터 단위로 반환됩니다. 이 위치에 고도가 없는 경우에는 0.0이 반환됩니다.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+iOS에서 [고도](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude)는 미터 단위로 측정됩니다. 양수 값은 해발 고도를 나타내고, 음수 값은 해수면 아래를 나타냅니다.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+UWP에서 고도는 미터 단위로 반환됩니다. 자세한 내용은 [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) 문서를 참조하세요.
+
+-----
 
 ## <a name="api"></a>API
 

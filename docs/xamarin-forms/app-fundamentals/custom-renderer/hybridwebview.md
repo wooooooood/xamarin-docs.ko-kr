@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2019
-ms.openlocfilehash: 46d0b245246d9e93040cd8591dab8ed3a816268d
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.date: 03/23/2020
+ms.openlocfilehash: 712ca4f8f3441e0d3c2aede1b2510b07ca89f829
+ms.sourcegitcommit: d83c6af42ed26947aa7c0ecfce00b9ef60f33319
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75487011"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80247615"
 ---
 # <a name="customizing-a-webview"></a>WebView 사용자 지정
 
@@ -268,6 +268,15 @@ namespace CustomRenderer.iOS
         {
             ((HybridWebView)Element).InvokeAction(message.Body.ToString());
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -282,8 +291,8 @@ namespace CustomRenderer.iOS
 - 렌더러 생성자는 [`WKUserContentController.AddScriptMessageHandler`](xref:WebKit.WKUserContentController.AddScriptMessageHandler(WebKit.IWKScriptMessageHandler,System.String)) 메서드를 호출하여 `invokeAction`(이)라는 스크립트 메시지 처리기를 [`WKUserContentController`](xref:WebKit.WKUserContentController) 개체에 추가합니다. 그러면 `WKUserContentController` 개체를 사용하는 모든 `WebView` 인스턴스의 모든 프레임에서 JavaScript 함수 `window.webkit.messageHandlers.invokeAction.postMessage(data)`이(가) 정의됩니다.
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
   - [`WKWebView.LoadRequest`](xref:WebKit.WKWebView.LoadRequest(Foundation.NSUrlRequest)) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다. 웹 페이지가 표시되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
-- 렌더러가 연결된 요소가 변경되면:
-  - 리소스가 해제됩니다.
+- 렌더러가 연결된 요소가 변경되면 리소스가 릴리스됩니다.
+- 렌더러가 삭제되면 Xamarin.Forms 요소가 정리됩니다.
 
 > [!NOTE]
 > `WKWebView` 클래스는 iOS 8 이상에서만 지원됩니다.
@@ -332,6 +341,15 @@ namespace CustomRenderer.Droid
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
             }
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -363,8 +381,8 @@ public class JavascriptWebViewClient : WebViewClient
   - [`WebView.AddJavascriptInterface`](xref:Android.Webkit.WebView.AddJavascriptInterface*) 메서드는 WebView의 JavaScript 컨텍스트 주 프레임에 새 `JSBridge` 인스턴스를 삽입하고 이름을 `jsBridge`로 지정합니다. 이렇게 하면 `JSBridge` 클래스의 메서드를 JavaScript에서 액세스할 수 있습니다.
   - [`WebView.LoadUrl`](xref:Android.Webkit.WebView.LoadUrl*) 메서드는 `HybridWebView.Uri` 속성에 지정된 HTML 파일을 로드합니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되도록 지정합니다.
   - `JavascriptWebViewClient` 클래스에서 페이지 로드가 완료되면 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
-- 렌더러가 연결된 요소가 변경되면:
-  - 리소스가 해제됩니다.
+- 렌더러가 연결된 요소가 변경되면 리소스가 릴리스됩니다.
+- 렌더러가 삭제되면 Xamarin.Forms 요소가 정리됩니다.
 
 `invokeCSharpAction` JavaScript 함수는 실행되면 다음 코드 예제에 보이는 `JSBridge.InvokeAction` 메서드를 호출합니다.
 
@@ -441,6 +459,15 @@ namespace CustomRenderer.UWP
         {
             ((HybridWebView)Element).InvokeAction(e.Value);
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                ((HybridWebView)Element).Cleanup();
+            }
+            base.Dispose(disposing);
+        }        
     }
 }
 ```
@@ -452,8 +479,8 @@ namespace CustomRenderer.UWP
 - 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우:
   - `NavigationCompleted` 및 `ScriptNotify` 이벤트에 대한 이벤트 처리기가 등록됩니다. 네이티브 `WebView` 컨트롤이 현재 콘텐츠를 완전히 로드하거나 탐색이 실패하면 `NavigationCompleted` 이벤트가 발생합니다. 네이티브 `WebView` 컨트롤의 콘텐츠가 JavaScript를 사용하여 애플리케이션에 문자열을 전달하면 `ScriptNotify` 이벤트가 발생합니다. 웹 페이지는 `string` 매개 변수를 전달하는 동안 `window.external.notify`를 호출하여 `ScriptNotify` 이벤트를 발생시킵니다.
   - `WebView.Source` 속성은 `HybridWebView.Uri` 속성에 지정된 HTML 파일의 URI로 설정됩니다. 이 코드는 프로젝트의 `Content` 폴더에 파일이 저장되는 것으로 가정합니다. 웹 페이지가 표시되면 `NavigationCompleted` 이벤트가 발생하고 `OnWebViewNavigationCompleted` 메서드가 호출됩니다. 탐색이 성공적으로 완료되면 `WebView.InvokeScriptAsync` 메서드를 통해 `invokeCSharpAction` JavaScript 함수가 웹 페이지에 삽입됩니다.
-- 렌더러가 연결된 요소가 변경되면:
-  - 이벤트가 구독 취소됩니다.
+- 렌더러가 연결된 요소가 변경되는 경우 이벤트가 등록 취소됩니다.
+- 렌더러가 삭제되면 Xamarin.Forms 요소가 정리됩니다.
 
 ## <a name="related-links"></a>관련 링크
 
