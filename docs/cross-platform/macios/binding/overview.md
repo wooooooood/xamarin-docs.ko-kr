@@ -115,7 +115,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-다섯 째, 3단계에서 선언된 각 선택기에 대한 메서드를 제공합니다. 이는 `objc_msgSend()`를 사용하여 네이티브 개체에 대한 선택기를 호출합니다. [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*)를 사용하여 `IntPtr`을 적절한 형식이 지정된 `NSObject`(하위) 형식으로 변환할 수 있습니다. Objective-C 코드에서 메서드를 호출할 수 있도록 하려면 멤버가 **가상***이어야 합니다*.
+다섯 째, 3단계에서 선언된 각 선택기에 대한 메서드를 제공합니다. 이는 `objc_msgSend()`를 사용하여 네이티브 개체에 대한 선택기를 호출합니다. [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*)를 사용하여 `IntPtr`을 적절한 형식이 지정된 `NSObject`(하위) 형식으로 변환할 수 있습니다. Objective-C 코드에서 메서드를 호출할 수 있도록 하려면 멤버가 **가상** *이어야 합니다*.
 
 ```csharp
 [Export("nextObject")]
