@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 1d2bed830af97ce1ff329a5396a415247a43189d
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61372973"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 해당 시각적 개체 모양을 변경합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "61372973"
 
     [`Button`](xref:Xamarin.Forms.Button) 모양 설정에 대한 자세한 내용은 [Xamarin.Forms 단추](~/xamarin-forms/user-interface/button.md) 가이드에서 [단추 모양](~/xamarin-forms/user-interface/button.md#button-appearance)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Button`](xref:Xamarin.Forms.Button) 선언을 수정하여 해당 시각적 개체 모양을 변경합니다.
 

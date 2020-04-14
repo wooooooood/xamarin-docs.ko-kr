@@ -18,7 +18,7 @@
           href: basics/text.md
         - name: 비트맵 기본 사항
           href: basics/bitmaps.md
-        - name: 투명도
+        - name: 투명성
           href: basics/transparency.md
     - name: 선 및 경로
       href: paths/index.md

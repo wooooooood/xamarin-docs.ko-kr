@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "67841509"
 ---
 이 연습에서는 데이터 액세스 클래스를 **LocalDatabaseTutorial** 프로젝트에 추가합니다. 이 프로젝트는 여러 사람에 대한 데이터를 데이터베이스에 보존하는 데 사용됩니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **솔루션 탐색기**의 **LocalDatabaseTutorial** 프로젝트에서 `Person`이라는 새 클래스를 프로젝트에 추가합니다. 그런 다음, **Person.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -120,7 +120,7 @@ ms.locfileid: "67841509"
 
 1. 오류가 없는지 확인하기 위해 솔루션을 빌드합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **LocalDatabaseTutorial** 프로젝트에서 `Person`이라는 새 클래스를 프로젝트에 추가합니다. 그런 다음, **Person.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 

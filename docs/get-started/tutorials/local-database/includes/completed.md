@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a0f2e909d4c7003ba1314b848fd01e604d190a1b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "71107301"
 ---
 이 자습서를 완료한 것을 축하하며, 여기서 다음과 같은 방법을 배웠습니다.

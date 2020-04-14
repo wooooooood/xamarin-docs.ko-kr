@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8cd3861093d4548c5252150cb3c74921c6217b25
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70775873"
 ---
 |장르 ID|장르 이름|
@@ -14,7 +14,7 @@ ms.locfileid: "70775873"
 |6003|여행|
 |6004|스포츠|
 |6005|소셜 네트워킹|
-|6006|참조|
+|6006|참고|
 |6007|생산성|
 |6008|사진 및 비디오|
 |6009|뉴스|

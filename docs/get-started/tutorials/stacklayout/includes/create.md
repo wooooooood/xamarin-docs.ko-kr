@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 80688c0796a112bcb444a15cd96a6b176b8c16e0
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: b2e1f11579e8647593e20e7d56936e8e75661e78
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "72715241"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80634711"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 이 자습서를 완료하려면 **.NET을 사용한 모바일 개발** 워크로드가 설치된 Visual Studio 2019(최신 릴리스)가 있어야 합니다. 또한 iOS에서 자습서 애플리케이션을 빌드하려면 페어링된 Mac이 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요. Visual Studio 2019를 Mac 빌드 호스트에 연결하는 방법에 대한 자세한 내용은 [Xamarin.iOS 개발을 위해 Mac에 페어링](~/ios/get-started/installation/windows/connecting-to-mac/index.md)을 참조하세요.
 
@@ -43,7 +43,7 @@ ms.locfileid: "72715241"
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 이 자습서를 완료하려면 iOS 및 Android 플랫폼 지원이 설치된 Mac용 Visual Studio(최신 릴리스)가 있어야 합니다. 또한 Xcode(최신 릴리스)도 필요합니다. Xamarin 플랫폼 설치에 대한 자세한 내용은 [Xamarin 설치](~/get-started/installation/index.md)를 참조하세요.
 
@@ -79,8 +79,3 @@ ms.locfileid: "72715241"
     [![iOS 및 Android에서 StackLayout의 자식 보기 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
 
     [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
-
------
-
-> [!div class="nextstepaction"]
-> [이슈가 발생했습니다.](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+1+Feedback&template=tutorial_template.md)

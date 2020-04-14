@@ -1,15 +1,15 @@
 ---
 ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "66193787"
 ---
 
-Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 팝업은 사용자에게 작업을 안내하는 데 사용할 수 있습니다. 이 연습에서는 [`Page`](xref:Xamarin.Forms.Page) 클래스의 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 메서드를 사용하여 사용자에게 작업을 안내하는 작업 시트를 표시합니다.
+Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 팝업은 사용자에게 작업을 안내하는 데 사용할 수 있습니다. 이 연습에서는 [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 클래스의 [`Page`](xref:Xamarin.Forms.Page) 메서드를 사용하여 사용자에게 작업을 안내하는 작업 시트를 표시합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 작업 시트를 표시하는 새로운 [`Button`](xref:Xamarin.Forms.Button) 선언을 추가합니다.
 
@@ -35,15 +35,15 @@ Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 �
     > [!IMPORTANT]
     > [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 메서드는 비동기이며 `await` 키워드와 함께 항상 대기해야 합니다.
 
-1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. 그런 다음, [`ContentPage`](xref:Xamarin.Forms.ContentPage)에 추가된 [`Button`](xref:Xamarin.Forms.Button)을 탭합니다.
+1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. 그런 다음, [`Button`](xref:Xamarin.Forms.Button)에 추가된 [`ContentPage`](xref:Xamarin.Forms.ContentPage)을 탭합니다.
 
     [![iOS 및 Android에서 작업 시트의 스크린샷](../images/actionsheet.png "사용자에게 작업을 안내하는 작업 시트")](../images/actionsheet-large.png#lightbox "사용자에게 작업을 안내하는 작업 시트")
 
     작업 시트 대화 상자에서 대안을 선택한 후 선택 영역이 Visual Studio **출력** 창에 출력되는지 확인합니다.
 
-    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 안내서에서 [사용자에게 작업 안내](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks)를 참조하세요.
+    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) 안내서에서 [사용자에게 작업 안내](~/xamarin-forms/user-interface/pop-ups.md)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 작업 시트를 표시하는 새로운 [`Button`](xref:Xamarin.Forms.Button) 선언을 추가합니다.
 
@@ -69,10 +69,10 @@ Xamarin.Forms에는 작업 시트로 알려진 모달 팝업이 있으며, 이 �
     > [!IMPORTANT]
     > [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) 메서드는 비동기이며 `await` 키워드와 함께 항상 대기해야 합니다.
 
-1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. 그런 다음, [`ContentPage`](xref:Xamarin.Forms.ContentPage)에 추가된 [`Button`](xref:Xamarin.Forms.Button)을 탭합니다.
+1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. 그런 다음, [`Button`](xref:Xamarin.Forms.Button)에 추가된 [`ContentPage`](xref:Xamarin.Forms.ContentPage)을 탭합니다.
 
     [![iOS 및 Android에서 작업 시트의 스크린샷](../images/actionsheet.png "사용자에게 작업을 안내하는 작업 시트")](../images/actionsheet-large.png#lightbox "사용자에게 작업을 안내하는 작업 시트")
 
     작업 시트 대화 상자에서 대안을 선택한 후 선택 영역이 Mac용 Visual Studio **출력** 창에 출력되는지 확인합니다.
 
-    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md) 안내서에서 [사용자에게 작업 안내](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks)를 참조하세요.
+    작업 시트를 표시하는 방법에 대한 자세한 내용은 [팝업 표시](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) 안내서에서 [사용자에게 작업 안내](~/xamarin-forms/user-interface/pop-ups.md)를 참조하세요.

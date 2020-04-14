@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: deb3516cc134a8b2eecba8460931003de8bb312f
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135028"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Entry`](xref:Xamarin.Forms.Entry) 선언을 수정하여 [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트에 대한 처리기를 설정합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "77135028"
 
     [`Entry`](xref:Xamarin.Forms.Entry) 이벤트에 대한 자세한 내용은 [Xamarin.Forms 항목](~/xamarin-forms/user-interface/text/entry.md) 가이드에서 [이벤트 및 대화형 작업](~/xamarin-forms/user-interface/text/entry.md#events-and-interactivity)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Entry`](xref:Xamarin.Forms.Entry) 선언을 수정하여 [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) 및 [`Completed`](xref:Xamarin.Forms.Entry.Completed) 이벤트에 대한 처리기를 설정합니다.
 
