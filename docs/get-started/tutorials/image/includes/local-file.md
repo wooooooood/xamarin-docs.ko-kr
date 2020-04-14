@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61384589"
 ---
 이미지 파일은 플랫폼 프로젝트에 추가되고 Xamarin.Forms 공유 코드에서 참조될 수 있습니다. 이미지를 배포하는 이 메서드는 다양한 플랫폼 또는 약간 다른 디자인의 다양한 해결 방법을 사용하는 경우와 같이 이미지가 특정 플랫폼을 지정하는 경우에 필요합니다.
@@ -16,7 +16,7 @@ ms.locfileid: "61384589"
 > [!IMPORTANT]
 > 모든 플랫폼에서 단일 이미지를 사용하려면 *모든 플랫폼에서 동일한 파일 이름을 사용해야* 하고, 해당 이름은 유효한 Android 리소스 이름(예: 소문자, 숫자, 밑줄 및 마침표만 허용됨)이어야 합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **솔루션 탐색기**의 **ImageTutorial.iOS** 프로젝트에서 **자산 카탈로그**를 확장하고, **자산**을 두 번 클릭하여 엽니다. 그런 다음, **Assets.xcassets** 탭에서 **더하기** 단추를 클릭하고 **이미지 세트 추가**를 선택합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "61384589"
 
     로컬 이미지에 대한 자세한 내용은 [Xamarin.Forms의 이미지](~/xamarin-forms/user-interface/images.md) 가이드에서 [로컬 이미지](~/xamarin-forms/user-interface/images.md#local-images)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **ImageTutorial.iOS** 프로젝트에서 **Assets.xcassets**를 두 번 클릭하여 엽니다. 그런 다음, **자산 목록**에서 **새 이미지 세트**를 마우스 오른쪽 단추로 클릭합니다.
 

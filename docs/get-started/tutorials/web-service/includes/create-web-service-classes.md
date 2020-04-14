@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3b1603b6af5ebb5558c3cd764f41fdbe24351b9b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "68669746"
 ---
 웹 브라우저가 페이지를 검색하고 서버에 데이터를 보내는 데 사용하는 동일한 HTTP 동사를 사용하여 HTTP를 통해 REST 요청이 이루어집니다. 이 연습에서는 GET 동사를 사용하여 [OpenWeatherMap](https://openweathermap.org/) 웹 API에서 데이터를 검색하는 클래스를 만듭니다. 웹 API를 사용하여 지정된 위치에 대한 일기 예보 데이터를 검색할 수 있습니다. 이 웹 API를 사용하려면 API 키에 등록해야 합니다.
@@ -11,7 +11,7 @@ ms.locfileid: "68669746"
 > [!div class="nextstepaction"]
 > [API 키에 등록](https://home.openweathermap.org/users/sign_up)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **솔루션 탐색기**의 **WebServiceTutorial** 프로젝트에서 `Constants`라는 새 클래스를 프로젝트에 추가합니다. 그런 다음, **Constants.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -131,7 +131,7 @@ ms.locfileid: "68669746"
 
 1. 오류가 없는지 확인하기 위해 솔루션을 빌드합니다.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **WebServiceTutorial** 프로젝트에서 `Constants`라는 새 클래스를 프로젝트에 추가합니다. 그런 다음, **Constants.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 

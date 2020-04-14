@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "60896724"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서, 단일 `Label`에서 여러 형식을 사용하는 텍스트를 제공하도록 [`Label`](xref:Xamarin.Forms.Label) 선언을 수정합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "60896724"
 
     [`Span`](xref:Xamarin.Forms.Span) 모양 설정에 대한 자세한 내용은 [Xamarin.Forms 레이블](~/xamarin-forms/user-interface/text/label.md) 가이드의 [서식 있는 텍스트](~/xamarin-forms/user-interface/text/label.md#formatted-text)를 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서, 단일 `Label`에서 여러 형식을 사용하는 텍스트를 제공하도록 [`Label`](xref:Xamarin.Forms.Label) 선언을 수정합니다.
 

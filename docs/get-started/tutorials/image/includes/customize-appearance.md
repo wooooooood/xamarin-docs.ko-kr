@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: d8f9445a0fc45c2700e8d9a901cfce9bd6307d2b
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "75490662"
 ---
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`Image`](xref:Xamarin.Forms.Image) 선언을 수정하여 모양을 사용자 지정합니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "75490662"
 
     [![iOS 및 Android에서 크기가 다른 이미지 스크린샷](../images/customize-appearance.png "플랫폼 단위로 크기가 지정된 이미지")](../images/customize-appearance-large.png#lightbox "플랫폼 단위로 크기가 지정된 이미지")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`Image`](xref:Xamarin.Forms.Image) 선언을 수정하여 모양을 사용자 지정합니다.
 

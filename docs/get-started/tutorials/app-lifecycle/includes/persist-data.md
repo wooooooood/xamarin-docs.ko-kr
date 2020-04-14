@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
-ms.sourcegitcommit: ccbf914615c0ce6b3f308d930f7a77418aeb4dbc
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "77135063"
 ---
 [`Application`](xref:Xamarin.Forms.Application) 서브클래스에는 수명 주기 상태 변경에 따라 데이터를 저장하는 데 사용할 수 있는 정적 [`Properties`](xref:Xamarin.Forms.Application.Properties) 사전이 있습니다. 이 사전은 `string` 키를 사용하고 `object` 값을 저장합니다. 사전은 자동으로 디바이스에 저장되며, 애플리케이션을 다시 시작하면 다시 채워집니다.
@@ -13,7 +13,7 @@ ms.locfileid: "77135063"
 
 이 연습에서는 백그라운드 시 [`Entry`](xref:Xamarin.Forms.Entry)에서 텍스트를 유지하도록 애플리케이션을 수정하고, 애플리케이션을 다시 시작할 때 텍스트를 `Entry`에 복원합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **솔루션 탐색기**의 **AppLifecycleTutorial** 프로젝트에서 **App.xaml**을 확장하고 **App.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **App.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -117,7 +117,7 @@ ms.locfileid: "77135063"
 
     속성 사전에 데이터를 유지하는 방법에 대한 자세한 내용은 [Xamarin.Forms 앱 클래스](~/xamarin-forms/app-fundamentals/application-class.md) 가이드의 [속성 사전](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **Solution Pad**의 **AppLifecycleTutorial** 프로젝트에서 **App.xaml**을 확장하고 **App.xaml.cs**를 두 번 클릭하여 엽니다. 그런 다음, **App.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 

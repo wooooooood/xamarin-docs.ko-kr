@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f87367ce7bc7e364147d087cdd126efaa6bf910c
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "67560011"
 ---
 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내에 자식 뷰의 크기와 위치는 자식 뷰의 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성 값과 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성 값에 따라 달라집니다.
@@ -13,7 +13,7 @@ ms.locfileid: "67560011"
 - **맞춤** – 자식 뷰의 기본 맞춤은 해당 부모 레이아웃 내의 위치와 크기를 결정합니다.
 - **확장** - 사용 가능한 경우([`StackLayout`](xref:Xamarin.Forms.StackLayout)에서만 사용) 자식 뷰가 추가 공간을 사용해야 하는지 여부를 나타냅니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 선언을 수정하여 각 [`Label`](xref:Xamarin.Forms.Label)에 대한 맞춤 및 확장 옵션을 설정합니다.
 
@@ -69,7 +69,7 @@ ms.locfileid: "67560011"
 
     맞춤 및 확장에 대한 자세한 내용은 [xamarin.Forms의 레이아웃 옵션](~/xamarin-forms/user-interface/layouts/layout-options.md)을 참조하세요.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 선언을 수정하여 각 [`Label`](xref:Xamarin.Forms.Label)에 대한 맞춤 및 확장 옵션을 설정합니다.
 
@@ -124,8 +124,3 @@ ms.locfileid: "67560011"
     > [`StackLayout`](xref:Xamarin.Forms.StackLayout)의 모든 공간을 사용할 때 확장 기본 설정은 아무런 영향을 미치지 않습니다.
 
     맞춤 및 확장에 대한 자세한 내용은 [xamarin.Forms의 레이아웃 옵션](~/xamarin-forms/user-interface/layouts/layout-options.md)을 참조하세요.
-
------
-
-> [!div class="nextstepaction"]
-> [이슈가 발생했습니다.](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+3+Feedback&template=tutorial_template.md)

@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 3c88b71cea834f5e6ef20d43332904c052c6e3a6
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/09/2020
 ms.locfileid: "61037627"
 ---
 이전에 [`ListView`](xref:Xamarin.Forms.ListView)는 데이터 바인딩을 사용하는 데이터로 채워졌습니다. 하지만 컬렉션에 데이터를 바인딩함에도 불구하고 컬렉션의 각 개체가 데이터의 여러 항목을 정의하는 경우 데이터의 단일 항목만 개체별로 표시되었습니다(`Monkey` 개체의 `Name` 속성).
 
 이 연습에서는 [`ListView`](xref:Xamarin.Forms.ListView)가 각 행에 있는 데이터의 여러 항목을 표시하도록 **ListViewTutorial** 프로젝트를 수정합니다.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.Image) 선언을 수정하여 각 행의 모양을 사용자 지정합니다.
 
@@ -60,7 +60,7 @@ ms.locfileid: "61037627"
 
     [![항목이 데이터 템플릿을 기반으로 하는 ListView의 스크린샷](../images/customize-cell-appearance.png "템플릿 기반 데이터를 표시하는 ListView")](../images/customize-cell-appearance-large.png#lightbox "템플릿 기반 데이터를 표시하는 ListView")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Mac용 Visual Studio](#tab/vsmac)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
 1. **MainPage.xaml**에서 [`ListView`](xref:Xamarin.Forms.Image) 선언을 수정하여 각 행의 모양을 사용자 지정합니다.
 
