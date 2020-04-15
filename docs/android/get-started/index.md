@@ -9,28 +9,28 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
 ms.openlocfilehash: 186ad5ae6e0ff3ad579fc802b4e8710a73113917
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027962"
 ---
 # <a name="get-started-with-xamarinandroid"></a>Xamarin.Android 시작
 
-## <a name="setup-and-installationandroidget-startedinstallationindexmd"></a>[설정 및 설치](~/android/get-started/installation/index.md)
+## <a name="setup-and-installation"></a>[설정 및 설치](~/android/get-started/installation/index.md)
 
 Xamarin.Android를 설정하고 Visual Studio에서 실행합니다. 이 섹션에서는 다운로드, 설치, 에뮬레이터 구성, 디바이스 프로 비전 등을 다룹니다.
 
-## <a name="hello-androidandroidget-startedhello-androidindexmd"></a>[Hello, Android](~/android/get-started/hello-android/index.md)
+## <a name="hello-android"></a>[Hello, Android](~/android/get-started/hello-android/index.md)
 
 두 부분으로 구성된 이 가이드에서는 Visual Studio를 사용하여 첫 번째 Xamarin.Android 애플리케이션을 빌드하고, Xamarin을 사용하여 Android 애플리케이션 개발에 대한 기본 사항을 이해하기 시작합니다.
 이 과정에서 이 가이드는 Xamarin.Android 애플리케이션을 빌드하고 배포하는 데 필요한 도구, 개념 및 단계를 소개합니다.
 
-## <a name="hello-android-multiscreenandroidget-startedhello-android-multiscreenindexmd"></a>[Hello, Android 멀티스크린](~/android/get-started/hello-android-multiscreen/index.md)
+## <a name="hello-android-multiscreen"></a>[Hello, Android 멀티스크린](~/android/get-started/hello-android-multiscreen/index.md)
 
 두 부분으로 구성된 이 가이드에서는 _Hello, Android_에서 만든 애플리케이션을 확장하여 두 번째 화면을 구현합니다. 이 과정에서 Android 애플리케이션 구조 및 기능을 더 이해하면 기본 Android *애플리케이션 구성 요소* 및 Android 아키텍처에 대한 자세한 분석을 소개합니다.
 
-## <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[Java 개발자용 Xamarin](~/android/get-started/java-developers.md)
+## <a name="xamarin-for-java-developers"></a>[Java 개발자용 Xamarin](~/android/get-started/java-developers.md)
 
 이 아티클에서는 Java 개발자가 Xamarin.Android 앱 개발에 대해 배울 때 만나게 되는 C# 언어 기능을 중점적으로 Java 개발자를 위한 C# 프로그래밍을 소개합니다.
 

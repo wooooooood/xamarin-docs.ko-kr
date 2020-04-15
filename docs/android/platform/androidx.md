@@ -6,10 +6,10 @@ author: JonDouglas
 ms.author: jodou
 ms.date: 02/20/2020
 ms.openlocfilehash: ad6ea2f68fc01183f7ed42e85094f6be5fb3d9f9
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "77618913"
 ---
 # <a name="androidx-with-xamarin"></a>Xamarin을 사용하는 AndroidX
@@ -46,7 +46,7 @@ AndroidX는 Android Support Library를 다시 디자인한 것이기 때문에 A
 ### <a name="package-name-change"></a>패키지 이름 변경
 이전 패키지와 새 패키지 간에 패키지 이름이 변경되었습니다. 아래에서 이러한 변경의 예를 확인할 수 있습니다.
 
-| 이전                    | 신규                    |
+| 이전                    | 단추를 사용하여 새                    |
 | ---------------------- | ---------------------- |
 | android.support.**     | androidx.@             |
 | android.design.**      | com.google.android.material.@ |

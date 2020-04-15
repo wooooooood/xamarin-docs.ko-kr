@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 63a5ed357a903700ea89d858bcde9798ddf97942
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724622"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Xamarin.iOS 앱에서 iTunesMetadata.plist 파일
@@ -108,7 +108,7 @@ iOS 애플리케이션(iTunes 앱 스토어의 판매 또는 무료 릴리스용
 
 ### <a name="uirequireddevicecapabilities"></a>UIRequiredDeviceCapabilities
 
-`UIRequiredDeviceCapabilities` 키를 사용하면 iTunes에서 지정된 iOS 디바이스에 설치되기 전에 iOS 애플리케이션에 필요한 디바이스의 특정 기능을 인식할 수 있습니다. 이 키는 기능(`<key>...</key>`)의 사전(`<dict>...</dict>`) 및 각 기능에 대한 부울 값으로 제공됩니다. 기능의 값이 `true`이면 해당 기능이 장치에 있어야 합니다. `false`이면 해당 기능이 디바이스에 없어야 합니다. 예:
+`UIRequiredDeviceCapabilities` 키를 사용하면 iTunes에서 지정된 iOS 디바이스에 설치되기 전에 iOS 애플리케이션에 필요한 디바이스의 특정 기능을 인식할 수 있습니다. 이 키는 기능(`<key>...</key>`)의 사전(`<dict>...</dict>`) 및 각 기능에 대한 부울 값으로 제공됩니다. 기능의 값이 `true`이면 해당 기능이 장치에 있어야 합니다. `false`이면 해당 기능이 디바이스에 없어야 합니다. 예를 들어:
 
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
@@ -284,7 +284,7 @@ iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>iTunesMetadata.plist 파일 만들기
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
  Mac용 Visual Studio에서 `iTunesMetadata.plist` 파일을 사용하는 경우 두 가지 옵션이 있습니다.
 
@@ -336,7 +336,7 @@ iOS 애플리케이션의 경우 현재 Apple에서 정의한 장르 및 장르 
 6. [파일 열]기 대화 상자에서 위에서 만든 `iTunesMetadata.plist` 파일을 선택하고 **확인** 단추를 클릭합니다.
 7. 이 파일에서 **없음**으로 설정된 **빌드 작업**은 그대로 둡니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio용 Xamarin 플러그 인은 `Info.plist` 및 `Entitlement.plist` 파일에 대한 시각적 편집기만 지원하므로 표준 텍스트 편집기에서 `iTunesMetadata.plist` 파일을 만들고 Xamarin.iOS 프로젝트에 수동으로 포함해야 합니다.
 

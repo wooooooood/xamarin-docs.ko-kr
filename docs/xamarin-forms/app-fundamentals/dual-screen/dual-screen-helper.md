@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: e16e926d9eb3c5f3ca04b7e1359f24624a971617
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.openlocfilehash: 9ab6106b8b92660d416e8a22cc3b1bdf1b41c5cf
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160580"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80628271"
 ---
 # <a name="xamarinforms-dual-screen-platform-helpers"></a>Xamarin.Forms 이중 화면 플랫폼 도우미
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 `DualScreenHelper` 클래스는 디바이스가 화면 속 화면 모드를 지원하는지 여부를 확인하고 `ContentPage`를 화면 속 화면 창으로 여는 용도로 사용할 수 있습니다. Neo 디바이스에서 실행 중인 경우에는 작성 모드에서 페이지가 원더바(WonderBar)로 열립니다.
 

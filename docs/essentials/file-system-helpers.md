@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 5b155e4976a67bda36e66d2ca3565c9237fde3c6
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68738859"
 ---
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: 파일 시스템 도우미
@@ -54,21 +54,21 @@ var mainDir = FileSystem.AppDataDirectory;
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - **CacheDirectory** – 현재 컨텍스트의 [CacheDir](https://developer.android.com/reference/android/content/Context.html#getCacheDir)을 반환합니다.
 - **AppDataDirectory** – 현재 컨텍스트의 [FilesDir](https://developer.android.com/reference/android/content/Context.html#getFilesDir)을 반환하고 API 23 이상부터 [자동 백업](https://developer.android.com/guide/topics/data/autobackup.html)을 사용하여 백업됩니다.
 
 Android 프로젝트의 **Assets** 폴더에 파일을 추가하고 빌드 작업을 **AndroidAsset**으로 표시하여 `OpenAppPackageFileAsync`와 함께 사용합니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - **CacheDirectory** – [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) 디렉터리를 반환합니다.
 - **AppDataDirectory** – iTunes 및 iCloud를 통해 백업되는 [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) 디렉터리를 반환합니다.
 
 iOS 프로젝트의 **Resources** 폴더에 파일을 추가하고 빌드 작업을 **BundledResource**로 표시하여 `OpenAppPackageFileAsync`와 함께 사용합니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - **CacheDirectory** – [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder) 디렉터리를 반환합니다.
 - **AppDataDirectory** - 클라우드에 백업된 [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) 디렉터리를 반환합니다.

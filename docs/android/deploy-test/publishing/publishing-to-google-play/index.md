@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 04e83fc68218216fe36cce67e43b83e8ad8feaa5
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "80070799"
 ---
 # <a name="publishing-to-google-play"></a>Google Play에 게시
@@ -136,11 +136,11 @@ Xamarin Android 7.0에는 Visual Studio에서 Google Play에 앱을 게시하는
 
 [![Google Play 계정 대화 상자](images/vs/03-google-play-accounts-sml.png)](images/vs/03-google-play-accounts.png#lightbox)
 
-**Google API 액세스 등록** 대화 상자에서 Google Play 개발자 계정에 API 액세스를 제공하는 ‘클라이언트 ID’와 ‘클라이언트 암호’를 입력해야 합니다.  
+**Google API 액세스 등록** 대화 상자에서 Google Play 개발자 계정에 API 액세스를 제공하는 _클라이언트 ID_와 _클라이언트 암호_를 입력해야 합니다.
 
 [![Google API 액세스 등록 대화 상자](images/vs/04-register-google-api-access-sml.png)](images/vs/04-register-google-api-access.png#lightbox)
 
-다음 섹션에서는 새 Google API 프로젝트를 만들고 필요한 ‘클라이언트 ID’ 및 ‘클라이언트 암호’를 생성하는 방법에 대해 설명합니다.  
+다음 섹션에서는 새 Google API 프로젝트를 만들고 필요한 _클라이언트 ID_ 및 _클라이언트 암호_를 생성하는 방법에 대해 설명합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
@@ -149,8 +149,8 @@ Visual Studio for Mac에는 Google Play에 앱을 게시하는 통합 워크플�
 [새 인증서 만들기](~/android/deploy-test/signing/index.md#newcert)에서는 Android 앱 서명을 위해 새 인증서를 만드는 방법을 설명합니다. 다음 단계에서는 Google Play에 Xamarin.Android 앱을 게시하는 방법을 설명합니다.
 
 1. Google Play 개발자 계정에 로그인하여 Google Play 개발자 계정에 연결된 새 프로젝트를 만듭니다.
-2. 앱을 인증하는 ‘OAuth 클라이언트’를 만듭니다. 
-3. 만든 ‘클라이언트 ID’와 ‘클라이언트 암호’를 Visual Studio for Mac에 입력합니다.  
+2. 앱을 인증하는 _OAuth 클라이언트_를 만듭니다.
+3. 만든 _클라이언트 ID_와 _클라이언트 암호_를 Visual Studio for Mac에 입력합니다.
 4. Visual Studio for Mac에 계정을 등록합니다.
 5. 인증서로 애플리케이션을 서명합니다.
 6. Google Play에 서명된 애플리케이션을 게시합니다.
@@ -159,11 +159,11 @@ Visual Studio for Mac에는 Google Play에 앱을 게시하는 통합 워크플�
 
 [![Android 배포 선택 대화 상자](images/xs/01-select-google-play-sml.png)](images/xs/01-select-google-play.png#lightbox)
 
-**Google Play API 계정** 대화 상자에서 Google Play 개발자 계정에 API 액세스를 제공하는 ‘클라이언트 ID’와 ‘클라이언트 암호’를 입력해야 합니다.  
+**Google Play API 계정** 대화 상자에서 Google Play 개발자 계정에 API 액세스를 제공하는 _클라이언트 ID_와 _클라이언트 암호_를 입력해야 합니다.
 
 [![Google Play API 계정 대화 상자](images/xs/02-google-play-api-account-sml.png)](images/xs/02-google-play-api-account.png#lightbox)
 
-다음 섹션에서는 새 Google API 프로젝트를 만들고 필요한 ‘클라이언트 ID’ 및 ‘클라이언트 암호’를 생성하는 방법에 대해 설명합니다.  
+다음 섹션에서는 새 Google API 프로젝트를 만들고 필요한 _클라이언트 ID_ 및 _클라이언트 암호_를 생성하는 방법에 대해 설명합니다.
 
 -----
 
@@ -220,7 +220,7 @@ JSON 파일에는 잘라서 다음 단계의 **서명 및 배포** 대화 상자
 
 #### <a name="publish"></a>게시
 
-**허용**을 클릭하면 브라우저가 ‘확인 코드 받음. 닫는 중... ‘ 메시지가 표시되며 앱이 Visual Studio의 Google Play 계정 목록에 추가됩니다.  **Google Play 계정** 대화 상자에서 **계속**을 클릭합니다.
+**허용**을 클릭하면 브라우저가 _확인 코드 받음. 닫는 중..._  메시지가 표시되며 앱이 Visual Studio의 Google Play 계정 목록에 추가됩니다. **Google Play 계정** 대화 상자에서 **계속**을 클릭합니다.
 
 [![Google Play 계정에 추가된 계정](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 

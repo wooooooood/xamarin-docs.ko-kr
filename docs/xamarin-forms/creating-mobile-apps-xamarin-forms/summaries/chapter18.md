@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 32c16409f30d6b6d502b7cc074eafb182898594a
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771070"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>요약 - 18장. MVVM
@@ -67,7 +67,7 @@ MVVM은 데이터 바인딩으로 작동하고, 데이터 바인딩은 속성으
 명령 인터페이스는 다음 두 가지 공용 속성을 사용해서 `Button`에서 스스로 매니페스트합니다.
 
 - [`ICommand`](xref:System.Windows.Input.ICommand) 형식의 [`Command`](xref:Xamarin.Forms.Button.Command)(`System.Windows.Input` 네임스페이스에 정의됨)
-- `Object` 형식의 [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter)
+- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter)(`Object` 형식)
 
 명령 인터페이스를 지원하기 위해서는 ViewModel이 `Button`의 `Command` 속성에 바인딩된 데이터인 `ICommand` 형식의 속성을 정의해야 합니다. `ICommand` 인터페이스는 두 가지 메서드와 하나의 이벤트를 선언합니다.
 

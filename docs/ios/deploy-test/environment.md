@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: b2452c50fa978f3cabb718afe7330bf0fb701ce3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030237"
 ---
 # <a name="execution-environment-for-xamarinios-apps"></a>Xamarin.iOS 앱에 대한 실행 환경
@@ -26,7 +26,7 @@ ms.locfileid: "73030237"
 
 영구 환경 변수는 mtouch 패키징 도구에 추가 인수를 지정하여 설정됩니다. 이러한 환경 변수는 실행 파일로 컴파일되며, 앱이 Mac용 Visual Studio에서 시작되지 않더라도 설정됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```csharp
 # log all exceptions to the device log

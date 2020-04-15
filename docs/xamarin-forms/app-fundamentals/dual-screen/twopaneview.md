@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
-ms.openlocfilehash: e961dc537d8b793feb3587ec89b69c53ab821088
-ms.sourcegitcommit: 5b6d3bddf7148f8bb374de5657bdedc125d72ea7
+ms.openlocfilehash: 44f7701adbe742828d8ec33dec21c316d11bf93e
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160579"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80628282"
 ---
 # <a name="xamarinforms-dual-screen-layout"></a>Xamarin.Forms 이중 화면 레이아웃
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 `TwoPaneView` 클래스는 사용 가능한 공간에서 나란히 또는 위아래로 콘텐츠의 크기와 위치를 지정하는 2개의 보기가 있는 컨테이너를 나타냅니다. `TwoPaneView`는 `Grid`에서 상속되므로 속성이 그리드에 적용되는 것이라고 생각하면 쉽습니다.
 
@@ -73,4 +73,4 @@ ms.locfileid: "78160579"
 
 ## <a name="related-links"></a>관련 링크
 
-- [DualScreen(sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)(DualScreen(샘플))
+- [DualScreen(sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)(DualScreen(샘플))

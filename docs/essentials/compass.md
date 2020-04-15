@@ -6,15 +6,15 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 55dd10bff21b7d082b225277d0100232d5efd4f3
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898786"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61356879"
 ---
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: 나침반
 
-**Compass** 클래스를 사용하면 장치의 자기 북쪽 방향을 모니터링할 수 있습니다.
+**Compass** 클래스를 사용하면 디바이스의 자기 북쪽 방향을 모니터링할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 
@@ -74,7 +74,7 @@ public class CompassTest
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Android는 나침반 방향을 검색하기 위한 API를 제공하지 않습니다. 가속도계 및 지자기 센터를 활용하여 Google에서 추천하는 자기 북쪽 방향을 계산합니다.
 

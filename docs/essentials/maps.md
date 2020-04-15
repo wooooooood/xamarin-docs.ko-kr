@@ -7,11 +7,11 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: c0875534d88ea5b66b3072c35b9d38894fe98934
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870029"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61354587"
 ---
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: 맵
 
@@ -103,15 +103,15 @@ public class MapTest
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 - `NavigationMode`에서 자전거 타기, 자가용, 걷기를 지원합니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - `NavigationMode`에서 자가용, 대중교통, 걷기를 지원합니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - `NavigationMode`에서 자가용, 대중교통, 걷기를 지원합니다.
 
@@ -119,15 +119,15 @@ public class MapTest
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Android는 `geo:` URI 체계를 사용하여 디바이스에서 지도 애플리케이션을 시작합니다. 이 URI 체계를 지원하는 기존 앱에서 선택하라는 메시지가 사용자에게 표시될 수 있습니다.  Xamarin.Essentials는 이 체계를 지원하는 Google Maps로 테스트되었습니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 플랫폼 특정 구현 세부 정보는 없습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 플랫폼 특정 구현 세부 정보는 없습니다.
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 28f48766dc62ac31fc357410eac27c33c9cae6d8
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940687"
 ---
 # <a name="proguard"></a>ProGuard
@@ -316,11 +316,11 @@ Unknown option '-keep' in line 1 of file 'proguard.cfg'
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 이 문제를 방지하려면 파일을 BOM 없이 저장할 수 있는 텍스트 편집기에서 사용자 지정 구성 파일을 편집합니다. 이 문제를 해결하려면 텍스트 편집기의 인코딩이 `UTF-8`로 설정되어 있는지 확인합니다. 예를 들어 텍스트 편집기 [Notepad++](https://notepad-plus-plus.org/)는 파일을 저장할 때 **Encoding &gt; Encode in UTF-8 Without BOM**을 선택하면 BOM 없이 파일을 저장할 수 있습니다. 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 이 문제를 방지하려면 BOM을 생략할 수 있는 텍스트 편집기에서 사용자 지정 구성 파일을 저장합니다. 
 

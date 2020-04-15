@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 5a496fc06732be1cf104cfbaffa8ff4b68c8f564
-ms.sourcegitcommit: 1341f2950b775a4daa7d0548a51fdef759afd6e3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "69976431"
 ---
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: 지표
@@ -75,17 +75,17 @@ public class BarometerTest
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 플랫폼 특정 구현 세부 정보는 없습니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 이 API는 [CMAltimeter](https://developer.apple.com/documentation/coremotion/cmaltimeter#//apple_ref/occ/cl/CMAltimeter)를 사용하여 압력 변경 내용을 모니터링합니다. 이 기능은 iPhone 6 이상 디바이스에 추가된 하드웨어 기능입니다. 고도계를 지원하지 않는 디바이스에서는 `FeatureNotSupportedException`이 throw됩니다.
 
 `SensorSpeed`는 iOS에서 지원되지 않으므로 사용되지 않습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 플랫폼 특정 구현 세부 정보는 없습니다.
 

@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
-ms.sourcegitcommit: 1dd7d09b60fcb1bf15ba54831ed3dd46aa5240cb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70120111"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
@@ -22,7 +22,7 @@ ms.locfileid: "70120111"
 
 **진동** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 Vibrate 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
 
@@ -42,11 +42,11 @@ Vibrate 권한이 필요하며 Android 프로젝트에서 구성해야 합니다
 
 또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아 **VIBRATE** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 추가 설정이 필요하지 않습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 플랫폼의 차이점이 없습니다.
 
@@ -101,17 +101,17 @@ catch (Exception ex)
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 플랫폼의 차이점이 없습니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - 디바이스가 “전화벨이 울리면 진동”으로 설정된 경우에만 진동합니다.
 - 항상 500밀리초 동안 진동합니다.
 - 진동을 취소할 수 없습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 플랫폼의 차이점이 없습니다.
 

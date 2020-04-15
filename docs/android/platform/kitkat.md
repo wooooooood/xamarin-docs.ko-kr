@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ms.openlocfilehash: 43061272f3d3486926f38af792ee3b9df0c53670
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027235"
 ---
 # <a name="kitkat-features"></a>KitKat 기능
@@ -669,7 +669,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 - 전체 화면 사용  - 콘텐츠를 탐색하고 게임을 즐기는 등 전체 화면 환경의 이점을 활용할 수 있는 기타 애플리케이션을 실행할 수 있도록 새로운 [몰입형 모드](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))가 KitKat에 도입되었습니다.
 
 - 알림 사용자 지정  - [`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)를 사용하여 시스템 알림에 대한 추가 정보를 가져옵니다
-  . 이렇게 하면 앱 내부에서 다른 방식으로 정보를 제공할 수 있습니다.
+  을 선택합니다. 이렇게 하면 앱 내부에서 다른 방식으로 정보를 제공할 수 있습니다.
 
 - 미러 드로어블 리소스  - 드로어블 리소스에는 이미지의 미러링(왼쪽에서 오른쪽 레이아웃으로 대칭 이동)된 버전을 생성하도록 시스템에 지시하는 새로운 [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
   특성이 있습니다.
@@ -689,7 +689,7 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 - 컨트롤러 구별  - KitKat에서는 디바이스의 `ControllerNumber` 속성을 통해 액세스할 수 있는 고유한 정수 식별자가 컨트롤러에 할당됩니다. 이렇게 하면 게임에서 플레이어를 쉽게 구별할 수 있습니다.
 
 - *원격 제어* - 하드웨어와 소프트웨어 측면에서 약간 변경된 KitKat을 사용하면 `ConsumerIrService`를 사용하여 IR 송신기가 장착된 디바이스를 리모컨으로 전환하고 새로운 [`RemoteController`](xref:Android.Media.RemoteController)
-  API를 사용하여 주변 장치와 상호 작용할 수 있습니다.
+  API 액세스를 간소화합니다.
 
 위의 API 변경에 대한 자세한 내용은 Google [Android 4.4 API](https://developer.android.com/about/versions/android-4.4.html) 개요를 참조하세요.
 

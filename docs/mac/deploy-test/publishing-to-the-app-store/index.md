@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
 ms.openlocfilehash: 1a14bcc15299360a17b4c9e7a363b6d6e6f2e69a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76725027"
 ---
 # <a name="publishing-xamarinmac-apps-to-the-mac-app-store"></a>Mac App Store에 Xamarin.Mac 앱 게시
@@ -36,27 +36,27 @@ Xamarin.Mac 앱은 두 가지 방법으로 배포할 수 있습니다.
 > [!NOTE]
 > 여기서 선택하는 내용은 개발자 계정을 구성할 때 표시되는 일부 화면에 영향을 줍니다. 이 문서의 설명과 스크린샷은 **개인** 개발자 계정의 관점에서 수행됩니다. **회사** 계정의 경우 일부 옵션은 **팀 관리자** 사용자에게만 제공됩니다.
 
-### <a name="certificates-and-identifiersmacdeploy-testpublishing-to-the-app-storecertificates-identifiersmd"></a>[인증서 및 식별자](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)
+### <a name="certificates-and-identifiers"></a>[인증서 및 식별자](~/mac/deploy-test/publishing-to-the-app-store/certificates-identifiers.md)
 
 이 가이드에서는 Xamarin.Mac 앱을 게시하는 데 필요한 인증서 및 식별자를 만드는 방법을 안내합니다.
 
-### <a name="create-provisioning-profilemacdeploy-testpublishing-to-the-app-storeprofilesmd"></a>[프로비전 프로필 만들기](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
+### <a name="create-provisioning-profile"></a>[프로비전 프로필 만들기](~/mac/deploy-test/publishing-to-the-app-store/profiles.md)
 
 이 가이드에서는 Xamarin.Mac 앱을 게시하는 데 필요한 프로비전 프로필을 만드는 방법을 안내합니다.
 
-### <a name="mac-app-configurationmacdeploy-testpublishing-to-the-app-storeapp-configurationmd"></a>[Mac 앱 구성](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
+### <a name="mac-app-configuration"></a>[Mac 앱 구성](~/mac/deploy-test/publishing-to-the-app-store/app-configuration.md)
 
 이 가이드에서는 게시할 Xamarin.Mac 앱을 구성하는 방법을 안내합니다.
 
-### <a name="sign-with-developer-idmacdeploy-testpublishing-to-the-app-storesigningmd"></a>[개발자 ID로 서명](~/mac/deploy-test/publishing-to-the-app-store/signing.md)
+### <a name="sign-with-developer-id"></a>[개발자 ID로 서명](~/mac/deploy-test/publishing-to-the-app-store/signing.md)
 
 이 가이드에서는 게시할 Xamarin.Mac 앱을 개발자 ID로 서명하는 방법을 안내합니다.
 
-### <a name="bundle-for-mac-app-storemacdeploy-testpublishing-to-the-app-storebundlingmd"></a>[Mac 앱 스토어용 번들](~/mac/deploy-test/publishing-to-the-app-store/bundling.md)
+### <a name="bundle-for-mac-app-store"></a>[Mac 앱 스토어용 번들](~/mac/deploy-test/publishing-to-the-app-store/bundling.md)
 
 이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 묶는 방법을 안내합니다.
 
-### <a name="upload-to-mac-app-storemacdeploy-testpublishing-to-the-app-storeuploadingmd"></a>[Mac 앱 스토어에 업로드](~/mac/deploy-test/publishing-to-the-app-store/uploading.md)
+### <a name="upload-to-mac-app-store"></a>[Mac 앱 스토어에 업로드](~/mac/deploy-test/publishing-to-the-app-store/uploading.md)
 
 이 가이드에서는 Mac 앱 스토어에 게시할 Xamarin.Mac 앱을 업로드하는 방법을 안내합니다.
 

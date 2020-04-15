@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: b54296da3f1253b77b63363583c34e1548cd6abc
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724086"
 ---
 # <a name="manually-uploading-the-apk"></a>수동으로 APK 업로드
@@ -157,13 +157,13 @@ Google Play 스토어에서 앱이 필터링되는 방식을 제어하기 위해
 
 - [uses-feature](https://developer.android.com/guide/topics/manifest/uses-feature-element.html) &ndash; 이 매니페스트 요소는 애플리케이션이 작동하기 위해 디바이스에 필요한 하드웨어 또는 소프트웨어 기능을 선언합니다. 이 특성은 정보 제공에만 해당합니다. Google Play에서는 이 필터에 부합하지 않는 애플리케이션을 디바이스에 표시하지 않습니다. 다른 방법(수동 또는 다운로드)을 통해 애플리케이션을 설치할 수는 있습니다. 이 요소는 **AndroidManifest.xml**에 수동으로 추가해야 합니다.
 
-- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; 이 요소는 Google Maps 등, 디바이스에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibraryAttribute`를 통해서도 지정할 수 있습니다. 예:
+- [uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) &ndash; 이 요소는 Google Maps 등, 디바이스에 표시해야 하는 특정 공유 라이브러리를 지정합니다. 이 요소는 `Android.App.UsesLibraryAttribute`를 통해서도 지정할 수 있습니다. 예를 들어:
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
     ```
 
-- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; 이 요소는 `<uses-feature>` 요소에서 제대로 선언되지 않았을 수 있으며 애플리케이션의 실행에 필요한 특정 하드웨어 기능을 유추하는 데 사용됩니다. 예를 들어, 애플리케이션이 카메라 사용 권한을 요청할 경우 Google Play는 카메라를 선언하는 `<uses-feature>` 요소가 없더라도 해당 디바이스에 카메라가 있다고 가정합니다. 이 요소는 `Android.App.UsesPermissionsAttribute`를 통해서 설정할 수 있습니다. 예:
+- [uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) &ndash; 이 요소는 `<uses-feature>` 요소에서 제대로 선언되지 않았을 수 있으며 애플리케이션의 실행에 필요한 특정 하드웨어 기능을 유추하는 데 사용됩니다. 예를 들어, 애플리케이션이 카메라 사용 권한을 요청할 경우 Google Play는 카메라를 선언하는 `<uses-feature>` 요소가 없더라도 해당 디바이스에 카메라가 있다고 가정합니다. 이 요소는 `Android.App.UsesPermissionsAttribute`를 통해서 설정할 수 있습니다. 예를 들어:
 
     ```csharp
     [assembly: UsesPermission(Manifest.Permission.Camera)]

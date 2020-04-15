@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
 ms.openlocfilehash: 6e80daf2be1b672dc7d0de3e303dfb9261c10472
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76940910"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Xamarin.Android에 대한 Android SDK 설정
@@ -27,7 +27,7 @@ _Visual Studio에는 Xamarin.Android 앱 개발에 필요한 Android SDK 도구,
 
 **.NET을 사용한 모바일 개발** 워크로드의 일부로 설치된 Xamarin Android SDK Manager를 사용하여 Xamarin.Android 앱 개발에 필요한 최신 Android 구성 요소를 다운로드할 수 있습니다. 이는 더 이상 사용되지 않는 Google의 독립 실행형 SDK Manager를 대체합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="requirements"></a>요구 사항
 
@@ -123,7 +123,7 @@ Google 리포지토리를 선택하면 추가 패키지가 이전에 지원되�
 
 플랫폼 및 도구에서 지원되는 리포지토리를 다시 전환하려면 **Microsoft(권장)** 를 클릭합니다. 그러면 패키지 및 도구 목록을 기본 선택 영역으로 복원합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ## <a name="requirements"></a>요구 사항
 

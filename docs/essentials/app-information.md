@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/29/2019
 ms.custom: video
 ms.openlocfilehash: 69d0cb503d329ccfb4c29fb6cc4a589bef97e893
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756985"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: 앱 정보
@@ -60,7 +60,7 @@ AppInfo.ShowSettingsUI();
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 앱 정보는 다음 필드에 대한 `AndroidManifest.xml`에서 가져옵니다.
 
@@ -69,7 +69,7 @@ AppInfo.ShowSettingsUI();
 - **PackageName**: `manifest` 노드의 `package`
 - **VersionString** – `application` 노드의 `android:versionName`
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 앱 정보는 다음 필드에 대한 `Info.plist`에서 가져옵니다.
 
@@ -78,7 +78,7 @@ AppInfo.ShowSettingsUI();
 - **PackageName**: `CFBundleIdentifier`
 - **VersionString** – `CFBundleShortVersionString`
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 앱 정보는 다음 필드에 대한 `Package.appxmanifest`에서 가져옵니다.
 

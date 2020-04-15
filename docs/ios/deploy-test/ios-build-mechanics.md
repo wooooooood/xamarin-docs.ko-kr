@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
 ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026363"
 ---
 # <a name="ios-build-mechanics"></a>iOS 빌드 메커니즘
@@ -26,7 +26,7 @@ Xamarin 빌드 속도는 프로세서 기능, 버스 속도, 실제 메모리의
 
 ## <a name="timing-apps"></a>타이밍 앱
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
@@ -38,7 +38,7 @@ Mac용 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 6. 패키지를 지우고 다시 빌드
 7. 빌드 출력 단추를 클릭하여 오류 패드 내에서 진단 출력 보기(보기 > 패드 > 오류)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio 내에서 진단 MSBuild 출력을 사용하려면:
 
@@ -107,7 +107,7 @@ Apple은 제한이 적은 코드 실행 환경을 구축하여 호환성보다 �
 
 iOS 앱을 배포할 때 제공되는 여러 가지 빌드 구성이 있습니다. 각 구성을 정확하게 이해하여 최적화가 필요한 시기와 이유를 알아야 합니다.
 
-- Debug
+- 디버그
   - 앱이 개발 중일 때 사용해야 하는 기본 구성이며, 따라서 최대한 빨라야 합니다.
 - Release
   - 릴리스 빌드는 사용자에게 제공되는 빌드이며 무엇보다도 성능에 초점을 맞춰야 합니다. 릴리스 구성을 사용할 때 LLVM 최적화 컴파일러를 사용하여 PNG 파일을 최적화할 수 있습니다.

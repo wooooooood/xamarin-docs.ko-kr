@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3560c365df18f0331d5834de20dbc5585615dbeb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70763227"
 ---
 |디바이스|세로(상태 표시줄 없음)|세로(전체 화면)|가로(상태 표시줄 없음)|가로(전체 화면)|

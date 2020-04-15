@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: 157eb3116f09268790036f8983543114e7a58276
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "66354103"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지오코딩
@@ -23,15 +23,15 @@ ms.locfileid: "66354103"
 
 **지오코딩** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 추가 설정이 필요하지 않습니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 추가 설정이 필요하지 않습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 지오코딩 기능을 사용하려면 Bing Maps API 키가 필요합니다. [Bing Maps](https://www.bingmapsportal.com/) 체험 계정을 등록합니다. **내 계정 &gt; 내 키**에서 새 키를 만들고 애플리케이션 유형(UWP 앱의 경우 **공용 Windows 앱(UWP, 8.x 이하)** 이어야 함)에 따라 정보를 입력합니다.
 

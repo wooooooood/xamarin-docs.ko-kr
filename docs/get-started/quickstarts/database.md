@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
-ms.sourcegitcommit: 3f0e4f10e5def19122588bb05f26ab2baa9df6eb
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71249675"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>로컬 SQLite.NET 데이터베이스에 데이터 저장
@@ -58,7 +58,7 @@ ms.locfileid: "71249675"
 
     이 패키지는 데이터베이스 작업을 애플리케이션에 통합하는 데 사용됩니다.
 
-4. **솔루션 탐색기**의 **Notes** 프로젝트에 있는 **Models** 폴더에서 **Note.cs**를 열고 기존 코드를 다음 코드로 바꿉니다.
+4. **솔루션 탐색기**의 **Notes** 프로젝트에 있는 **Models** 폴더에서 **Note.cs**를 열고 기존 코드를 열고 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -246,9 +246,9 @@ ms.locfileid: "71249675"
 
 11. 각 플랫폼에서 프로젝트를 빌드하고 실행합니다. 자세한 내용은 [빠른 시작 빌드](single-page.md#building-the-quickstart)를 참조하세요.
 
-    **NotesPage**에서 **+** 단추를 눌러 **NoteEntryPage**로 이동하고 메모를 입력합니다. 메모를 저장한 후 애플리케이션은 **NotesPage**로 다시 이동합니다.
+    **NotesPage**에서 **+** 단추를 눌러 **NoteEntryPage**로 이동하고 노트를 입력합니다. 노트를 저장한 후 애플리케이션은 **NotesPage**로 다시 이동합니다.
 
-    다양한 길이의 여러 메모를 입력하여 애플리케이션 동작을 관찰하세요.
+    다양한 길이의 여러 노트를 입력하여 애플리케이션 동작을 관찰합니다.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -463,9 +463,9 @@ ms.locfileid: "71249675"
 
 11. 각 플랫폼에서 프로젝트를 빌드하고 실행합니다. 자세한 내용은 [빠른 시작 빌드](single-page.md#building-the-quickstart)를 참조하세요.
 
-    **NotesPage**에서 **+** 단추를 눌러 **NoteEntryPage**로 이동하고 메모를 입력합니다. 메모를 저장한 후 애플리케이션은 **NotesPage**로 다시 이동합니다.
+    **NotesPage**에서 **+** 단추를 눌러 **NoteEntryPage**로 이동하고 노트를 입력합니다. 노트를 저장한 후 애플리케이션은 **NotesPage**로 다시 이동합니다.
 
-    다양한 길이의 여러 메모를 입력하여 애플리케이션 동작을 관찰하세요.
+    다양한 길이의 여러 노트를 입력하여 애플리케이션 동작을 관찰합니다.
 
 ::: zone-end
 

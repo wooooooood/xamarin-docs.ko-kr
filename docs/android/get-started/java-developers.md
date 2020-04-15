@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
 ms.openlocfilehash: b9c6694ea49607b839a3658e5cc8bac5fb529c85
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75728059"
 ---
 # <a name="xamarin-for-java-developers"></a>Java 개발자용 Xamarin
@@ -42,7 +42,7 @@ Java 및 C#는 모두 관리되는 실행 환경에서 실행되는 중간 언�
 그리고 단일 루트 클래스 계층 구조를 사용합니다. Java와 마찬가지로, C#은 단일 상속만 지원하며 전역 메서드는 허용하지 않습니다.
 두 언어 모두에서 개체는 `new` 키워드를 사용하여 힙에 만들어지고, 더 이상 사용되지 않으면 가비지 수집됩니다. 두 언어는 모두 `try`/`catch` 의미 체계가 포함된 공식적인 예외 처리 지원을 제공합니다. 그리고 스레드 관리 및 동기화 지원도 제공합니다.
 
-하지만 Java와 C# 사이에는 많은 차이점이 있습니다. 예:
+하지만 Java와 C# 사이에는 많은 차이점이 있습니다. 예를 들어:
 
 - Java는 (Android에서 사용된 대로) 암시적으로 형식화된 지역 변수를 지원하지 않습니다(C#은 `var` 키워드를 지원함).
 
@@ -144,7 +144,7 @@ using System.Threading.Tasks;
 
 Java와 C#은 모두 *제네릭*을 지원하며, 이는 컴파일 시간에 다른 형식을 플러그 인할 수 있는 자리 표시자입니다. 그러나 C#에서는 제네릭이 약간 다르게 작동합니다. Java에서 [형식 지우기](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html)는 컴파일 시간에만 형식 정보를 사용할 수 있게 하지만, 런타임에는 그렇지 않습니다. 반대로 .NET CLR(공용 언어 런타임)은 제네릭 형식을 명시적으로 지원하며, 이에 따라 C#에서 런타임에 형식 정보에 액세스할 수 있습니다. 일상적인 Xamarin.Android 개발에서 이 구분의 중요성은 명확하지 않지만, [리플렉션](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection)을 사용하는 경우 이 기능을 사용하여 런타임에 형식 정보에 액세스할 수 있게 됩니다.
 
-Xamarin.Android에서는 레이아웃 컨트롤에 대한 참조를 가져오는 데 사용되는 `FindViewById` 제네릭 메서드를 자주 볼 수 있습니다. 이 메서드는 조회하는 컨트롤의 형식을 지정하는 제네릭 형식 매개 변수를 허용합니다. 예:
+Xamarin.Android에서는 레이아웃 컨트롤에 대한 참조를 가져오는 데 사용되는 `FindViewById` 제네릭 메서드를 자주 볼 수 있습니다. 이 메서드는 조회하는 컨트롤의 형식을 지정하는 제네릭 형식 매개 변수를 허용합니다. 예를 들어:
 
 ```csharp
 TextView label = FindViewById<TextView> (Resource.Id.Label);
@@ -218,7 +218,7 @@ C# 클래스 정의에 대한 자세한 내용은 [클래스](https://docs.micro
 Java에서 변경자(mutator) 메서드(setter)와 검사기(inspector) 메서드(getter)는 외부 코드에서 클래스 멤버를 숨기고 보호하면서 이러한 클래스 멤버를 변경하는 방식을 제어하는 데 자주 사용됩니다. 예를 들어 Android `TextView` 클래스는 `getText` 및 `setText` 메서드를 제공합니다. C#은 *속성*으로 알려진 비슷하지만 더 직접적인 메커니즘을 제공합니다.
 C# 클래스의 사용자는 필드에 액세스하는 것과 같은 방식으로 속성에 액세스할 수 있지만, 각 액세스는 실제로 호출자에게 투명한 메서드 호출을 발생시킵니다. 이 "숨겨진(under the covers)" 메서드는 다른 값 설정, 변환 수행 또는 개체 상태 변경과 같은 부작용을 구현할 수 있습니다.
 
-속성은 UI(사용자 인터페이스) 개체 멤버를 액세스하고 수정하는 데 자주 사용됩니다. 예:
+속성은 UI(사용자 인터페이스) 개체 멤버를 액세스하고 수정하는 데 자주 사용됩니다. 예를 들어:
 
 ```csharp
 int width = rulerView.MeasuredWidth;
@@ -310,7 +310,7 @@ C#에서 람다 식은 다음과 같이 `=>` 연산자를 사용하여 만듭니
 };
 ```
 
-Xamarin.Android에서 람다 식은 이벤트 처리기를 정의하는 데 자주 사용됩니다. 예:
+Xamarin.Android에서 람다 식은 이벤트 처리기를 정의하는 데 자주 사용됩니다. 예를 들어:
 
 ```csharp
 button.Click += (sender, args) => {
@@ -354,7 +354,7 @@ startActivityButton.Click += delegate {
 
 ```
 
-그러나 람다 식을 사용하여 `delegate` 키워드를 모두 건너뛰는 이벤트를 등록할 수도 있습니다. 예:
+그러나 람다 식을 사용하여 `delegate` 키워드를 모두 건너뛰는 이벤트를 등록할 수도 있습니다. 예를 들어:
 
 ```csharp
 startActivityButton.Click += (sender, e) => {

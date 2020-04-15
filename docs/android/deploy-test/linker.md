@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
 ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021450"
 ---
 # <a name="linking-on-android"></a>Android의 연결
@@ -85,7 +85,7 @@ E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-
 
 ### <a name="preserving-code"></a>코드 유지
 
-링커는 사용자가 유지하려는 코드를 제거하는 경우가 있습니다. 예:
+링커는 사용자가 유지하려는 코드를 제거하는 경우가 있습니다. 예를 들어:
 
 - `System.Reflection.MemberInfo.Invoke`를 통해 동적으로 호출하는 코드가 있을 수 있습니다.
 

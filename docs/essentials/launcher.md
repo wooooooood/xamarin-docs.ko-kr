@@ -6,10 +6,10 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/20/2019
 ms.openlocfilehash: 88c1450d28b4c94fe8079b8915503cf5de118644
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75488519"
 ---
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: 시작 관리자
@@ -56,11 +56,11 @@ public class LauncherTest
 
 ### <a name="additional-platform-setup"></a>추가 플랫폼 설정
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 추가 설정이 없습니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 iOS 9 이상에서 Apple은 애플리케이션이 쿼리할 수 있는 구성표를 적용합니다. 사용할 구성표를 지정하려면 `Info.plist` 파일에서 `LSApplicationQueriesSchemes`을(를) 지정해야 합니다.
 
@@ -72,7 +72,7 @@ iOS 9 이상에서 Apple은 애플리케이션이 쿼리할 수 있는 구성표
 </array>
 ```
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 추가 설정이 없습니다.
 
@@ -97,11 +97,11 @@ await Launcher.OpenAsync(new OpenFileRequest
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 `CanOpenAsync`에서 반환된 작업이 즉시 완료됩니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 이 디바이스의 대상 애플리케이션이 사용자 애플리케이션의 `OpenAsync`에 의해 열린 적이 없는 경우 iOS에서 앱이 열 수 있도록 허용하라는 메시지를 사용자에게 한 번 표시합니다.
 
@@ -109,7 +109,7 @@ await Launcher.OpenAsync(new OpenFileRequest
 
 [여기](xref:UIKit.UIApplication.CanOpenUrl*)에서 iOS 구현에 대한 자세한 정보를 확인할 수 있습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 플랫폼의 차이점이 없습니다.
 

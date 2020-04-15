@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 49d67db46416584248a9b15db606538f5ebfba79
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021014"
 ---
 # <a name="finding-your-keystores-signature"></a>키 저장소의 서명 찾기
@@ -21,7 +21,7 @@ Xamarin.Android 앱의 MD5 또는 SHA1 서명은 APK 서명에 사용된 **.keys
 
 Xamarin.Android는 동일한 **debug.keystore** 파일을 사용하여 모든 디버그 빌드에 서명합니다. 이 파일은 Xamarin.Android가 처음 설치될 때 생성됩니다. 아래 단계에는 기본 Xamarin.Android **debug.keystore** 파일의 MD5 또는 SHA1 서명을 찾는 과정이 자세히 설명되어 있습니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 애플리케이션의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
@@ -59,7 +59,7 @@ Certificate fingerprints:
          Version: 3
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 앱에 서명하는 데 사용되는 Xamarin **debug.keystore** 파일을 찾습니다. 기본적으로 다음 위치에서 Xamarin.Android 애플리케이션의 디버그 버전에 서명하는 데 사용되는 키 저장소를 찾을 수 있습니다.
 
@@ -112,7 +112,7 @@ KeyIdentifier [
 
 사용자 지정 **.keystore** 파일을 사용하여 서명된 릴리스 빌드의 프로세스는 위와 동일하며, 릴리스 **.keystore** 파일이 Xamarin.Android에서 사용하는 **debug.keystore** 파일을 대체합니다. 릴리스 키 저장소 파일이 생성된 경우 키 저장소 암호와 별칭 이름의 고유한 값을 대체합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio **배포** 마법사를 사용하여 Xamarin.Android 앱에 서명한 경우 결과 키 저장소는 다음 위치에 있습니다.
 
@@ -124,7 +124,7 @@ Visual Studio **배포** 마법사를 사용하여 Xamarin.Android 앱에 서명
 
 Xamarin.Android 앱에 서명하는 방법에 대한 자세한 내용은 [Android 애플리케이션 패키지에 서명](~/android/deploy-test/signing/index.md)을 참조하세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio **서명 및 배포...** 마법사를 사용하여 앱에 서명한 경우 결과 키 저장소는 다음 위치에 있습니다.
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030423"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Xamarin.iOS에서 IPA 지원
@@ -54,7 +54,7 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
 ## <a name="creating-an-ipa"></a>IPA 만들기
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 IPA 만들기는 이제 새 게시 워크플로에 내장됩니다. 이렇게 하려면 아래 지침에 따라 앱을 보관하고, 서명한 다음, IPA를 저장합니다.
 
@@ -133,7 +133,7 @@ CI 환경과 같은 경우에는 명령줄을 통해 IPA를 빌드해야 할 수
     /Library/Frameworks/Mono.framework/Commands/msbuild YourSolution.sln /p:Configuration=Ad-Hoc /p:Platform=iPhone /p:BuildIpa=true
     ```
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 프로비전 프로필이 만들어지고 선택되면 선택적 **iTunesMetadata.plist** 파일이 만들어지고, Visual Studio에서 iTunes 아트워크가 설정되면 배포용 IPA를 빌드할 수 있습니다. 다음으로 프로젝트를 구성해야 합니다. 다음을 수행합니다.
 
@@ -169,7 +169,7 @@ CI 환경과 같은 경우에는 명령줄을 통해 IPA를 빌드해야 할 수
 
 ## <a name="customizing-the-ipa-location"></a>IPA 위치 사용자 지정
 
-**.ipa** 파일 출력 위치를 쉽게 사용자 지정할 수 있도록 새로운 `IpaPackageDir` **MSBuild** 속성이 추가되었습니다. `IpaPackageDir`을 사용자 지정 위치로 설정하면 **.ipa** 파일이 기본 타임스탬프가 적용된 하위 디렉터리 대신 해당 위치에 배치됩니다. 이는 CI(지속적인 통합) 빌드에 사용되는 것과 같이 특정 디렉터리 경로를 올바르게 사용하도록 자동화된 빌드를 만들 때 유용할 수 있습니다.
+**.ipa** 파일 출력 위치를 쉽게 사용자 지정할 수 있도록 새로운 `IpaPackageDir`**MSBuild** 속성이 추가되었습니다. `IpaPackageDir`을 사용자 지정 위치로 설정하면 **.ipa** 파일이 기본 타임스탬프가 적용된 하위 디렉터리 대신 해당 위치에 배치됩니다. 이는 CI(지속적인 통합) 빌드에 사용되는 것과 같이 특정 디렉터리 경로를 올바르게 사용하도록 자동화된 빌드를 만들 때 유용할 수 있습니다.
 
 새 속성을 사용하는 방법에는 여러 가지가 있습니다.
 
@@ -229,11 +229,11 @@ msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/
 
 새 iOS 애플리케이션은 **My Apps** 섹션에 표시되며, 여기서 마우스 오른쪽 단추를 클릭하고 애플리케이션에 대한 정보를 얻을 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
  ![](ipa-support-images/installxs01.png "The new iOS application in the My Apps section")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  ![](ipa-support-images/installvs01.png "The new iOS application in the My Apps section")
 

@@ -6,15 +6,15 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
 ms.openlocfilehash: 1e19585e238d66568364be7ccdbdb52d22b04066
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898513"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "61259483"
 ---
 # <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: 자이로스코프
 
-**Gyroscope** 클래스를 사용하면 장치의 3개 기본 축을 중심으로 한 회전인 장치의 자이로스코프 센서를 모니터링할 수 있습니다.
+**Gyroscope** 클래스를 사용하면 디바이스의 3개 기본 축을 중심으로 한 회전인 디바이스의 자이로스코프 센서를 모니터링할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 

@@ -7,17 +7,17 @@ ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
 ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67832593"
 ---
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: 흔들림 탐지
 
 **[Accelerometer](accelerometer.md)** 클래스를 사용하면 3차원 공간에서 디바이스의 가속을 나타내는 디바이스의 가속도계 센서를 모니터링할 수 있습니다. 또한 사용자가 디바이스를 흔들면 이벤트를 등록할 수 있습니다.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 [!include[](~/essentials/includes/get-started.md)]
 

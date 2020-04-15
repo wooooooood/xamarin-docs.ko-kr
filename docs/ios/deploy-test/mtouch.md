@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
 ms.openlocfilehash: 2a0f9d063b319c0f412f6e8f47a59f0f994678ae
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026280"
 ---
 # <a name="using-mtouch-to-bundle-xamarinios-apps"></a>mtouch를 사용하여 Xamarin.iOS 앱을 번들로 묶기
@@ -116,7 +116,7 @@ $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
 
 다음 단계는 일반적으로 Mac용 Visual Studio에서 수행됩니다.
 
-## <a name="reference"></a>참조
+## <a name="reference"></a>참고
 
 다른 명령줄 옵션에 대한 자세한 내용은 [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) 설명서 페이지를 참조하세요.
 

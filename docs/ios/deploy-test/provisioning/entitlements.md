@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/13/2018
 ms.openlocfilehash: f6a38aea1e46e1165bb36d83e75e24769de0a1e2
-ms.sourcegitcommit: 9ab907e053c57fc96419149f83187bc3e8983a6b
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75655368"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Xamarin.iOS에서 자격 사용
@@ -37,7 +37,7 @@ Entitlements.plist 파일은 자격을 지정하는 데 사용되며 애플리�
 
 앱 ID를 정의할 때 필요한 애플리케이션 서비스를 선택하고 구성하는 것 외에도, **Info.plist** 및 **Entitlements.plist** 파일을 편집하여 Xamarin.iOS 프로젝트에서 자격을 구성해야 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 Mac용 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 
@@ -54,7 +54,7 @@ Mac용 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 5. 앱 ID를 만들 때 정의된 설정과 일치하도록 Xamarin.iOS 애플리케이션에 필요한 자격을 선택하고 구성합니다.
 6. 변경 내용을 **Entitlements.plist** 파일에 저장합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에서 자격을 구성하려면 다음을 수행합니다.
 

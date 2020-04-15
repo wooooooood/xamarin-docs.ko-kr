@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
 ms.openlocfilehash: 148afe5354d7995f15dc19c6257ed2a1567162ec
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027949"
 ---
 # <a name="android-emulator-setup"></a>Android Emulator 설정
@@ -26,19 +26,19 @@ Android Emulator를 다양한 구성으로 실행하여 다양한 디바이스�
 
 ## <a name="sections"></a>섹션
 
-### <a name="hardware-acceleration-for-emulator-performanceandroidget-startedinstallationandroid-emulatorhardware-accelerationmd"></a>[에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
+### <a name="hardware-acceleration-for-emulator-performance"></a>[에뮬레이터 성능에 대한 하드웨어 가속](~/android/get-started/installation/android-emulator/hardware-acceleration.md)
 
 Hyper-V 또는 HAXM 가상화 기술을 사용하여 Android Emulator 성능을 최대화하도록 컴퓨터를 준비하는 방법입니다. Android Emulator는 하드웨어 가속이 없으면 매우 느려질 수 있기 때문에 이 에뮬레이터를 사용하기 전에 컴퓨터에 하드웨어 가속을 활성화하는 것이 좋습니다.
 
-### <a name="managing-virtual-devices-with-the-android-device-managerandroidget-startedinstallationandroid-emulatordevice-managermd"></a>[Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md)
+### <a name="managing-virtual-devices-with-the-android-device-manager"></a>[Android Device Manager를 사용하여 가상 디바이스 관리](~/android/get-started/installation/android-emulator/device-manager.md)
 
 Android Device Manager를 사용하여 가상 디바이스를 만들고 사용자 지정하는 방법입니다.
 
-### <a name="editing-android-virtual-device-propertiesandroidget-startedinstallationandroid-emulatordevice-propertiesmd"></a>[Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)
+### <a name="editing-android-virtual-device-properties"></a>[Android 가상 디바이스 속성 편집](~/android/get-started/installation/android-emulator/device-properties.md)
 
 Android Device Manager를 사용하여 가상 디바이스의 프로필 속성을 편집하는 방법입니다.
 
-### <a name="android-emulator-troubleshootingandroidget-startedinstallationandroid-emulatortroubleshootingmd"></a>[Android Emulator 문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md)
+### <a name="android-emulator-troubleshooting"></a>[Android Emulator 문제 해결](~/android/get-started/installation/android-emulator/troubleshooting.md)
 
 이 아티클에서는 Android Emulator를 실행하는 동안 발생하는 가장 일반적인 경고 메시지 및 문제가 해결 방법 및 설명과 함께 설명됩니다.
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
 ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73030230"
 ---
 # <a name="linking-xamarinios-apps"></a>Xamarin.iOS 앱 연결
@@ -26,13 +26,13 @@ ms.locfileid: "73030230"
 
 ## <a name="linker-behavior"></a>링커 동작
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 **프로젝트 옵션**의 링커 동작 드롭다운을 통해 연결 프로세스를 사용자 지정할 수 있습니다. 이 드롭다운에 액세스하려면 아래 그림처럼 iOS 프로젝트를 두 번 클릭하고 **iOS 빌드 > 링커 옵션**을 찾습니다.
 
 [![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio의 **프로젝트 속성**에서 찾을 수 있는 링커 동작 드롭다운을 통해 연결 프로세스를 사용자 지정할 수 있습니다.
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
 ms.openlocfilehash: 3ca524e451a7a4eb838805c839b33c4b9dd6bddd
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556537"
 ---
 # <a name="debug-on-an-android-device"></a>Android 디바이스의 디버그
@@ -24,7 +24,7 @@ Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 디바이스�
 
 디바이스가 컴퓨터에 연결된 후에는 Xamarin.Android 애플리케이션 디버그가 다른 Xamarin 제품 또는 .NET 애플리케이션에서와 같은 방식으로 수행됩니다. **디버그** 구성과 외부 디바이스를 IDE에서 선택했는지 확인합니다. 필요한 디버그 기호를 사용할 수 있고 IDE가 실행 중인 애플리케이션에 연결할 수 있음을 확인하는 것입니다. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![디버그 구성 선택됨](debug-on-device-images/image1-vs.png)
 
@@ -36,7 +36,7 @@ Mac용 Visual Studio 또는 Visual Studio를 사용하여 Android 디바이스�
 
 ![중단점 도달](debug-on-device-images/image3-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![디버그 구성 선택됨](debug-on-device-images/image1-xs.png)
 

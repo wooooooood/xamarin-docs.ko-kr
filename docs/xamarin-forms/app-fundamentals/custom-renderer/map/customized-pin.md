@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/06/2019
 ms.openlocfilehash: dfb7f12affc8b0b41ec56cd17894c0f0a4b5fc6e
-ms.sourcegitcommit: 283810340de5310f63ef7c3e4b266fe9dc2ffcaf
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73662346"
 ---
 # <a name="customizing-a-map-pin"></a>지도 핀 사용자 지정
@@ -77,7 +77,7 @@ public class CustomPin : Pin
 
 ```
 
-`local` 네임스페이스 접두사는 원하는 것으로 이름을 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 맵의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 맵을 참조하는 데 사용됩니다.
+`local` 네임스페이스 접두사는 원하는 이름으로 지정할 수 있습니다. 그러나 `clr-namespace` 및 `assembly` 값은 사용자 지정 맵의 세부 정보와 일치해야 합니다. 네임스페이스가 선언되면 사용자 지정 맵을 참조하는 데 사용됩니다.
 
 다음 코드 예제에서는 C# 페이지에서 `CustomMap` 컨트롤을 사용하는 방법을 보여줍니다.
 

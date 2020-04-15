@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
-ms.sourcegitcommit: 5821c9709bf5e06e6126233932f94f9cf3524577
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75556524"
 ---
 # <a name="debug-on-the-android-emulator"></a>Android Emulator의 디버그
@@ -22,7 +22,7 @@ Android Emulator( **.NET을 사용한 모바일 개발** 워크로드의 일부�
 
 ## <a name="using-a-pre-configured-virtual-device"></a>미리 구성된 가상 디바이스 사용
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에는 디바이스 드롭다운 메뉴에 표시되는 미리 구성된 가상 디바이스가 있습니다. 예를 들어 다음 Visual Studio 2017 스크린 샷에서는 몇 가지 미리 구성된 가상 디바이스를 제공합니다.
 
@@ -45,7 +45,7 @@ Xamarin.Android 프로젝트에서 사용 가능한 가상 디바이스와 호�
 **최소 Android 대상 변경**을 클릭하여 프로젝트의 최소 Android 버전을 사용 가능한 가상 디바이스의 API 수준에 맞게 변경할 수 있습니다. 또는 [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)를 사용하여 대상 API 수준을 지원하는 새 가상 디바이스를 만들 수 있습니다.
 새 API 수준에 대해 가상 디바이스를 구성할 수 있으려면 먼저 해당 API 수준에 대한 시스템 이미지를 설치해야 합니다([Xamarin.Android에 대한 Android SDK 설정](~/android/get-started/installation/android-sdk.md) 참조).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 Visual Studio for Mac에는 디바이스 드롭다운 메뉴에 표시되는 미리 구성된 가상 디바이스가 있습니다. 예를 들어 다음 스크린 샷에서는 몇 가지 미리 구성된 두 가상 디바이스를 제공합니다.
 
@@ -69,11 +69,11 @@ Visual Studio for Mac에는 디바이스 드롭다운 메뉴에 표시되는 미
 
 Visual Studio 위에는 **디버그** 또는 **릴리스** 모드를 선택하는 데 사용할 수 있는 드롭다운 메뉴가 있습니다. **디버그**를 선택하면 디버거가 앱이 시작된 후 에뮬레이터 안에 실행 중인 애플리케이션 프로세스에 연결됩니다. **릴리스** 모드를 선택하면 디버거가 비활성화됩니다(그러나 여전히 앱을 실행하고 디버그에 대한 로그 문을 사용할 수 있음). 디바이스 드롭다운 메뉴에서 가상 디바이스를 선택한 후 **디버그** 또는 **릴리스** 모드를 선택한 다음, 재생 단추를 클릭하여 애플리케이션을 실행합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![디버그 및 릴리스 모드, 재생 단추](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 [![디버그 및 릴리스 모드, 재생 단추](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 

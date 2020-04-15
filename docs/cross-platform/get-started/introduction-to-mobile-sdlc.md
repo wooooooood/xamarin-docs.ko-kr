@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
 ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "76724836"
 ---
 # <a name="mobile-software-development-lifecycle"></a>모바일 소프트웨어 개발 수명 주기

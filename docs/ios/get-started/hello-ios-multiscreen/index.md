@@ -9,19 +9,19 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 871a94d06048f893cf06b00de46d66dd59b3703e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73023212"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS 멀티스크린
 
-## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[1부: 빠른 시작](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstart"></a>[1부: 빠른 시작](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
 이 가이드의 첫 번째 부분에서는 두 번째 화면을 Phoneword 샘플 애플리케이션에 추가하여 입력된 숫자 기록을 추적합니다.
 
-## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[2부: 심층 분석](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-dive"></a>[2부: 심층 분석](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
 이 문서의 두 번째 부분에서는 빌드하였던 내용에 대해 설명하고, 진행하면서 나오는 아키텍처, 탐색 및 다른 새 iOS 개념에 대해 논의합니다.
 

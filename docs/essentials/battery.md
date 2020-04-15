@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 01/22/2019
 ms.custom: video
 ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70756931"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
@@ -23,7 +23,7 @@ ms.locfileid: "70756931"
 
 **배터리** 기능에 액세스하려면 다음 플랫폼 관련 설정이 필요합니다.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 `Battery` 권한이 필요하며 Android 프로젝트에서 구성해야 합니다. 이 권한은 다음과 같은 방법으로 추가할 수 있습니다.
 
@@ -43,11 +43,11 @@ ms.locfileid: "70756931"
 
 또는 Android 프로젝트를 마우스 오른쪽 단추로 클릭하고 프로젝트의 속성을 엽니다. **Android 매니페스트** 아래에서 **필요한 권한:** 영역을 찾아 **Battery** 권한을 확인합니다. 그러면 **AndroidManifest.xml** 파일이 자동으로 업데이트됩니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 추가 설정이 필요하지 않습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 추가 설정이 필요하지 않습니다.
 
@@ -164,16 +164,16 @@ public class EnergySaverTest
 
 ## <a name="platform-differences"></a>플랫폼의 차이점
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 플랫폼의 차이점이 없습니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 - API를 테스트하려면 디바이스를 사용해야 합니다. 
 - `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 - `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
 

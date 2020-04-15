@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "75488493"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
@@ -23,7 +23,7 @@ ms.locfileid: "75488493"
 
 **SecureStorage** 기능에 액세스하려면 다음과 같은 플랫폼 특정 설정이 필요합니다.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 > [!TIP]
 > [앱에 대한 자동 백업](https://developer.android.com/guide/topics/data/autobackup)은 Android 6.0(API 레벨 23) 이상의 기능으로, 사용자의 앱 데이터(공유 기본 설정, 앱 내부 스토리지의 파일 및 기타 특정 파일)를 백업합니다. 앱을 다시 설치하거나 새 디바이스에 설치하면 데이터가 복원됩니다. 이는 백업된 공유 기본 설정을 이용하며 복원 시 암호를 해독할 수 없는 `SecureStorage`에 영향을 줄 수 있습니다. Xamarin.Essentials는 키를 제거해서 다시 설정할 수 있도록 하여 자동으로 이러한 경우를 처리하지만, 자동 백업을 사용하지 않도록 설정하면 추가 단계를 수행할 수 있습니다.
@@ -61,7 +61,7 @@ ms.locfileid: "75488493"
     </full-backup-content>
     ```
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 **iOS 시뮬레이터**에서 개발하는 경우 **키 체인** 자격을 사용하도록 설정하고 애플리케이션의 번들 식별자에 대한 키 체인 액세스 그룹을 추가합니다. 
 
@@ -72,7 +72,7 @@ iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을
 > [!TIP]
 > iOS 디바이스에 배포할 때는 이 자격이 필요하지 않으므로 제거해야 합니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 추가 설정이 필요하지 않습니다.
 
@@ -129,7 +129,7 @@ SecureStorage.RemoveAll();
 
 ## <a name="platform-implementation-specifics"></a>플랫폼 구현 관련 정보
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# <a name="android"></a>[Android](#tab/android)
 
 [Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials**라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키(_값_에 대한 _키_인 암호화 키 아님)는 `SecureStorage` API로 전달되는 키의 _MD5 해시_입니다.
 
@@ -143,13 +143,13 @@ SecureStorage.RemoveAll();
 
 **SecureStorage**는 [기본 설정](preferences.md) API를 사용하며 [기본 설정](preferences.md#persistence) 문서에 설명된 것과 동일한 데이터 지속성을 따릅니다. 디바이스가 API 레벨 22 이하에서 API 레벨 23 이상으로 업그레이드되는 경우, 앱을 제거하거나 **RemoveAll**을 호출하지 않는 한 이 유형의 암호화가 계속 사용됩니다.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# <a name="ios"></a>[iOS](#tab/ios)
 
 [KeyChain](xref:Security.SecKeyChain)을 사용하여 iOS 디바이스에 값을 안전하게 저장합니다.  값을 저장하는 데 사용된 `SecRecord`의 `Service` 값은 **[YOUR-APP-BUNDLE-ID].xamarinessentials**로 설정됩니다.
 
 KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해도 iCloud 및 사용자의 다른 디바이스에서 안전한 값이 제거되지 않는 경우도 있습니다.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# <a name="uwp"></a>[UWP](#tab/uwp)
 
 [DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider)를 사용하여 UWP 디바이스에서 값을 안전하게 암호화합니다.
 

@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
 ms.openlocfilehash: aefd649fe1859306e5499addc1c08f4e42b2b424
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73026691"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>iTunes Connect에서 앱 구성
@@ -348,7 +348,7 @@ Xamarin.iOS 애플리케이션에서 인앱 구매를 수행하는 작업에 대
 
 ## <a name="viewing-application-reviews"></a>애플리케이션 검토 보기
 
-애플리케이션이 앱 스토어에 릴리스되면, 애플리케이션을 무료로 구입하거나 다운로드한 사용자는 애플리케이션에 대한 검토를 작성하고 별 등급을 남길 수 있습니다. 이 섹션을 사용하여 해당 검토를 확인합니다. 예:
+애플리케이션이 앱 스토어에 릴리스되면, 애플리케이션을 무료로 구입하거나 다운로드한 사용자는 애플리케이션에 대한 검토를 작성하고 별 등급을 남길 수 있습니다. 이 섹션을 사용하여 해당 검토를 확인합니다. 예를 들어:
 
 [![](itunesconnect-images/reviews01.png "Viewing Application Reviews")](itunesconnect-images/reviews01.png#lightbox)
 

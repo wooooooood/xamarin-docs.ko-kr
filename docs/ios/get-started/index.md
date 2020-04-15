@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
 ms.openlocfilehash: b335533bfddf78e5fe2770356d29e27dbdccd0f2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73022777"
 ---
 # <a name="get-started-with-xamarinios"></a>Xamarin.iOS 시작
@@ -36,19 +36,19 @@ Xamarin.iOS를 빌드하려면 다음이 필요합니다.
 
 ## <a name="getting-started-series"></a>시리즈 시작
 
-### <a name="setup-and-installationiosget-startedinstallationindexmd"></a>[설정 및 설치](~/ios/get-started/installation/index.md)
+### <a name="setup-and-installation"></a>[설정 및 설치](~/ios/get-started/installation/index.md)
 
 Mac용 Visual Studio 또는 Visual Studio에서 Xamarin.iOS를 설정하고 실행합니다. 이 섹션에서는 다운로드, Xamarin 설치 관리자를 사용한 설치, Microsoft 계정으로 로그인, 일반적인 문제 해결 항목, 디바이스 프로비전 등을 다룹니다.
 
-### <a name="hello-iosiosget-startedhello-iosindexmd"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
+### <a name="hello-ios"></a>[Hello, iOS](~/ios/get-started/hello-ios/index.md)
 
 두 부분으로 구성된 이 가이드에서는 Mac용 Visual Studio 또는 Visual Studio를 사용하여 첫 번째 Xamarin.iOS 애플리케이션을 빌드하는 방법을 설명하고, Xamarin을 사용하여 iOS 애플리케이션 개발에 대한 기본 사항을 소개합니다. 또한 Xamarin.iOS 애플리케이션을 빌드 및 배포하는 데 필요한 도구, 개념 및 단계도 소개합니다.
 
-### <a name="hello-ios-multiscreeniosget-startedhello-ios-multiscreenindexmd"></a>[Hello, iOS 멀티스크린](~/ios/get-started/hello-ios-multiscreen/index.md)
+### <a name="hello-ios-multiscreen"></a>[Hello, iOS 멀티스크린](~/ios/get-started/hello-ios-multiscreen/index.md)
 
 두 부분으로 구성된 이 가이드에서는 "Hello, iOS" 가이드에서 만든 애플리케이션을 확장하여 두 번째 화면을 처리하는 방법을 탐색합니다. 모델-뷰-컨트롤러 디자인 패턴, iOS 탐색 구현 및 iOS 애플리케이션의 구조 및 기능에 대한 심층적인 이해 개발과 같은 개념을 소개합니다.
 
-## <a name="xamarin-for-objective-c-developersobjective-c-developersindexmd"></a>[Objective-C 개발자용 Xamarin](objective-c-developers/index.md)
+## <a name="xamarin-for-objective-c-developers"></a>[Objective-C 개발자용 Xamarin](objective-c-developers/index.md)
 
 Xamarin 플랫폼으로 전환하는 Objective-C 개발자를 위한 정보를 제공합니다.
 
