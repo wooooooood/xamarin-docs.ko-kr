@@ -143,6 +143,8 @@
               href: user-interface/android-designer/material-design-features.md
             - name: Android 레이아웃 진단
               href: user-interface/android-designer/diagnostics.md
+            - name: Android Designer 진단 분석기
+              href: user-interface/android-designer/diagnostic-analyzers.md
         - name: 재질 테마
           href: user-interface/material-theme.md
         - name: 사용자 프로필
@@ -463,6 +465,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: 진동
           href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: 웹 인증자
+          href: ~/essentials/web-authenticator.md?context=xamarin/android
         - name: Xamarin.Essentials 릴리스 정보
           href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
         - name: 문제 해결
