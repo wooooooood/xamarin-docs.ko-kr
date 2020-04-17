@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
 ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: 2798da316a3e9d9de3ea36ff6444f60f60553424
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71674561"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
@@ -192,7 +192,7 @@ bears
 
 일부 셸 클래스는 디버거에서 클래스나 필드를 표시하는 방식을 지정하는 `DebuggerDisplayAttribute`로 데코레이팅됩니다. 이 특성을 사용하면 탐색 요청에 관련된 데이터를 표시하여 탐색 요청을 디버그할 수 있습니다. 예를 들어 다음 스크린샷은 `Shell.Current` 개체의 `CurrentItem` 및 `CurrentState` 속성을 보여 줍니다.
 
-![디버거 스크린샷](navigation-images/debugger.png "디버거")
+![디버거의 스크린샷](navigation-images/debugger.png "디버거")
 
 이 예제에서 `FlyoutItem` 형식의 `CurrentItem` 속성은 `FlyoutItem` 개체의 제목 및 경로를 표시합니다. 마찬가지로, `ShellNavigationState` 형식의 `CurrentState` 속성은 셸 애플리케이션 내에서 표시된 경로의 URI를 표시합니다.
 
@@ -335,7 +335,7 @@ Shell.SetBackButtonBehavior(this, new BackButtonBehavior
 
 `Command` 속성은 [뒤로] 단추를 누를 때 실행할 `ICommand`로 설정되고, `IconOverride` 속성은 [뒤로] 단추에 사용되는 아이콘으로 설정됩니다.
 
-[![iOS 및 Android에서 셸 뒤로 단추 아이콘 재정의의 스크린샷](navigation-images/back-button.png "셸 뒤로 단추 아이콘 재정의")](navigation-images/back-button-large.png#lightbox "셸 뒤로 단추 아이콘 재정의")
+[![iOS 및 Android의 셸 뒤로 단추 아이콘 재정의 스크린샷](navigation-images/back-button.png "셸 뒤로 단추 아이콘 재정의")](navigation-images/back-button-large.png#lightbox "셸 뒤로 단추 아이콘 재정의")
 
 ## <a name="related-links"></a>관련 링크
 

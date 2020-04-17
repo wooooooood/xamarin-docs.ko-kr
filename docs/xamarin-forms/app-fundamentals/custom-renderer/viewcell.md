@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
 ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
-ms.sourcegitcommit: a5ef4497db04dfa016865bc7454b3de6ff088554
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70998050"
 ---
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
@@ -24,7 +24,7 @@ _Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀
 
 다음 다이어그램은 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](viewcell-images/viewcell-classes.png "ViewCell 컨트롤과 네이티브 컨트롤 구현 간의 관계")
+![](viewcell-images/viewcell-classes.png "Relationship Between the ViewCell Control and the Implementing Native Controls")
 
 렌더링 프로세스는 각 플랫폼에서 [`ViewCell`](xref:Xamarin.Forms.ViewCell)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -167,11 +167,11 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 [`ItemSourc
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](viewcell-images/solution-structure.png "NativeCell 사용자 지정 렌더러 프로젝트 책임")
+![](viewcell-images/solution-structure.png "NativeCell Custom Renderer Project Responsibilities")
 
 `NativeCell` 사용자 지정 셀은 각 플랫폼의 `ViewCellRenderer` 클래스에서 모두 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `NativeCell` 사용자 지정 셀이 플랫폼별 레이아웃을 사용하여 렌더링됩니다.
 
-![](viewcell-images/screenshots.png "각 플랫폼의 NativeCell")
+![](viewcell-images/screenshots.png "NativeCell on each Platform")
 
 `ViewCellRenderer` 클래스는 사용자 지정 셀을 렌더링하기 위한 플랫폼별 메서드를 공개합니다. iOS 플랫폼의 `GetCell` 메서드, Android 플랫폼의 `GetCellCore` 메서드, UWP의 `GetTemplate` 메서드가 여기에 해당합니다.
 

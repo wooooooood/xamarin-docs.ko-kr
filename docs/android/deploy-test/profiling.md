@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
 ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73027996"
 ---
 # <a name="profiling-android-apps"></a>Android 앱 프로파일링
@@ -105,8 +105,8 @@ Android Studio 3.0 이상은 Android Profiler 도구를 포함합니다. Android
 Android Profiler 사용에 대한 자세한 정보는 [Android Studio 설명서](https://developer.android.com/studio/profile/android-profiler.html)에 포함되어 있습니다.
 다음 항목은 Xamarin Android 개발자의 관심 항목입니다.
 
-- [CPU 프로파일러](https://developer.android.com/studio/profile/cpu-profiler.html)&ndash; 실시간으로 앱의 CPU 사용량 및 스레드 작업을 검사하는 방법을 설명합니다.
+- [CPU 프로파일러](https://developer.android.com/studio/profile/cpu-profiler.html) &ndash; 실시간으로 앱의 CPU 사용량 및 스레드 작업을 검사하는 방법을 설명합니다.
 
-- [메모리 프로파일러](https://developer.android.com/studio/profile/memory-profiler.html)&ndash; 앱의 메모리 사용량을 실시간 그래프로 표시하고, 분석의 레코드 메모리 할당에 대한 단추를 포함합니다.
+- [메모리 프로파일러](https://developer.android.com/studio/profile/memory-profiler.html) &ndash; 앱의 메모리 사용량을 실시간 그래프로 표시하고, 분석의 레코드 메모리 할당에 대한 단추를 포함합니다.
 
-- [네트워크 프로파일러](https://developer.android.com/studio/profile/network-profiler.html)&ndash; 앱에서 보내고 받는 데이터의 실시간 네트워크 작업을 표시합니다.
+- [네트워크 프로파일러](https://developer.android.com/studio/profile/network-profiler.html) &ndash; 앱에서 보내고 받는 데이터의 실시간 네트워크 작업을 표시합니다.

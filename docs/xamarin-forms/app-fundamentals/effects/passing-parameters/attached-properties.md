@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
 ms.openlocfilehash: 2fcfbfa8a1780a9da4e9bfe187dc99a5172e95f0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771479"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>연결된 속성으로 효과 매개 변수 전달
@@ -35,11 +35,11 @@ _연결된 속성은 런타임 속성 변경 내용에 응답하는 효과 매�
 
 샘플 애플리케이션은 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에서 표시되는 텍스트에 그림자를 추가하는 `ShadowEffect`를 설명합니다. 또한 런타임 시 그림자의 색을 변경할 수 있습니다. 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](attached-properties-images/shadow-effect.png "그림자 효과 프로젝트 책임")
+![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
 
-`HomePage`의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤은 각 플랫폼별 프로젝트에서 `LabelShadowEffect`로 사용자 지정됩니다. 매개 변수는 `ShadowEffect` 클래스의 연결된 속성을 통해 각 `LabelShadowEffect`에 전달됩니다. 각 `LabelShadowEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷에 표시된 대로 `Label` 컨트롤에서 표시되는 텍스트에 그림자가 추가됩니다.
+`HomePage`의 [`Label`](xref:Xamarin.Forms.Label) 컨트롤은 각 플랫폼별 프로젝트에서 `LabelShadowEffect`로 사용자 지정됩니다. 매개 변수는 `ShadowEffect` 클래스의 연결된 속성을 통해 각 `LabelShadowEffect`에 전달됩니다. 각 `LabelShadowEffect` 클래스는 각 플랫폼에 대한 `PlatformEffect` 클래스에서 파생됩니다. 그러면 다음 스크린샷과 같이 `Label` 컨트롤에 표시되는 텍스트에 그림자가 추가됩니다.
 
-![](attached-properties-images/screenshots.png "각 플랫폼의 그림자 효과")
+![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
 
 ## <a name="creating-effect-parameters"></a>효과 매개 변수 만들기
 
@@ -122,7 +122,7 @@ public static class ShadowEffect
 </Label>
 ```
 
-해당하는 C#의 [`Label`](xref:Xamarin.Forms.Label)가 다음 코드 예제에 나와 있습니다.
+C#의 해당하는 [`Label`](xref:Xamarin.Forms.Label)가 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 var label = new Label {

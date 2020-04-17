@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c2a49af1a2d55011ef3579ddfe994e5455fed303
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301229"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "60857447"
 ---
 # <a name="xamarin-documentation"></a>Xamarin 설명서
 
@@ -23,11 +23,11 @@ ms.locfileid: "50301229"
 
 [**기여 프로세스**](CONTRIBUTING.md)에 대해 읽고 다음 상황에 가장 적합한 것을 식별합니다.
 
-* **커뮤니티 - 보조 업데이트**: 마음에 드는 보조 업데이트를 제공하는 경우 이 리포지토리에서 문서를 찾거나 [https://docs.microsoft.com/xamarin](https://docs.microsoft.com/xamarin)의 문서를 방문한 후 GitHub 원본으로 이동하는 문서에서 **편집** 링크를 클릭합니다. 그런 다음, GitHub 웹 사이트를 사용하여 업데이트합니다. 또는 [리포지토리를 포크](CONTRIBUTING.md)하고 포크에서 업데이트를 제출하는 것을 환영합니다.
+* **커뮤니티 - 부분 업데이트**: 선의로 부분 업데이트를 제공하는 경우 이 리포지토리에서 문서를 찾거나 [https://docs.microsoft.com/xamarin](https://docs.microsoft.com/xamarin)의 문서를 방문한 후 GitHub 원본으로 이동하는 문서에서 **편집** 링크를 클릭합니다. 그런 다음, GitHub 웹 사이트를 사용하여 업데이트합니다. 또는 [리포지토리를 포크](CONTRIBUTING.md)하고 포크에서 업데이트를 제출하는 것을 환영합니다.
 
 * **커뮤니티 - 새 문서**: Xamarin 커뮤니티에 속해 있고 새 문서를 만들고 싶다면 직원과 협력하여 퍼블릭 및 프라이빗 리포리토리의 작업 조합을 통해 새 콘텐츠를 가져올 수 있도록 해야 합니다. 먼저 제안된 내용을 요약한 이 리포지토리에서 [GitHub 문제](https://github.com/MicrosoftDocs/xamarin-docs/issues)를 제기합니다.
 
-* **직원**: Xamarin 제품에 대한 제품 팀의 기술 문서 작성자, 프로그램 관리자 또는 개발자이며 기술 문서에 기여하거나 작성하는 것이 사용자의 작업인 경우, 프라이빗 리포지토리(https://github.com/MicrosoftDocs/xamarin-docs-pr) 를 사용해야 합니다. 기존 문서를 크게 변경하거나, 이미지를 추가 또는 변경하거나 새 문서를 제공하는 경우 이 리포지토리를 포크하고, markdown 편집기인 Git을 설치하고, 몇 가지git 명령을 알아야 합니다. 자세한 내용은 [내부 기여자 가이드](https://review.docs.microsoft.com/help/contribute/?branch=master)를 참조하세요.
+* **직원**: Xamarin 제품에 대한 제품 팀의 기술 문서 작성자, 프로그램 관리자 또는 개발자이며 기술 문서에 기여하거나 작성하는 것이 사용자의 작업인 경우, 프라이빗 리포지토리 https://github.com/MicrosoftDocs/xamarin-docs-pr) 를 사용해야 합니다. 기존 문서를 크게 변경하거나, 이미지를 추가 또는 변경하거나 새 문서를 제공하는 경우 이 리포지토리를 포크하고, markdown 편집기인 Git을 설치하고, 몇 가지git 명령을 알아야 합니다. 자세한 내용은 [내부 기여자 가이드](https://review.docs.microsoft.com/help/contribute/?branch=master)를 참조하세요.
 
 ## <a name="legal-notices"></a>법적 고지 사항
 

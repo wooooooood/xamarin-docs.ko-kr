@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4fc6c50b5aa2ce502b4157ca2b15f0d33a68ecd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2b524c657a95035773d18fb17bb86308a78ce37c
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "60896736"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389953"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -19,7 +19,7 @@ ms.locfileid: "60896736"
            HorizontalOptions="Center" />
     ```
 
-    이 코드는 [`Label`](xref:Xamarin.Forms.Label)의 시각적 개체 모양을 변경하는 속성을 설정합니다. [`TextColor`](xref:Xamarin.Forms.Label.TextColor) 속성은 `Button` 텍스트의 색상을 설정합니다. [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) 속성은 레이블의 글꼴을 기울임꼴로 설정하고 [`FontSize`](xref:Xamarin.Forms.Label.FontSize) 속성은 글꼴 크기를 설정합니다. 또한 해당 [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) 속성을 설정하여 밑줄 텍스트 장식을 `Label`에 적용하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)로 설정하여 가로 가운데에 배치합니다.
+    이 코드는 [`Label`](xref:Xamarin.Forms.Label)의 시각적 개체 모양을 변경하는 속성을 설정합니다. [`TextColor`](xref:Xamarin.Forms.Label.TextColor) 속성은 `Label` 텍스트의 색상을 설정합니다. [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) 속성은 레이블의 글꼴을 기울임꼴로 설정하고 [`FontSize`](xref:Xamarin.Forms.Label.FontSize) 속성은 글꼴 크기를 설정합니다. 또한 해당 [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) 속성을 설정하여 밑줄 텍스트 장식을 `Label`에 적용하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)로 설정하여 가로 가운데에 배치합니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Label`](xref:Xamarin.Forms.Label) 모양이 변경되었음을 확인합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "60896736"
            HorizontalOptions="Center" />
     ```
 
-    이 코드는 [`Label`](xref:Xamarin.Forms.Label)의 시각적 개체 모양을 변경하는 속성을 설정합니다. [`TextColor`](xref:Xamarin.Forms.Label.TextColor) 속성은 `Button` 텍스트의 색상을 설정합니다. [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) 속성은 레이블의 글꼴을 기울임꼴로 설정하고 [`FontSize`](xref:Xamarin.Forms.Label.FontSize) 속성은 글꼴 크기를 설정합니다. 또한 해당 [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) 속성을 설정하여 밑줄 텍스트 장식을 `Label`에 적용하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)로 설정하여 가로 가운데에 배치합니다.
+    이 코드는 [`Label`](xref:Xamarin.Forms.Label)의 시각적 개체 모양을 변경하는 속성을 설정합니다. [`TextColor`](xref:Xamarin.Forms.Label.TextColor) 속성은 `Label` 텍스트의 색상을 설정합니다. [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) 속성은 레이블의 글꼴을 기울임꼴로 설정하고 [`FontSize`](xref:Xamarin.Forms.Label.FontSize) 속성은 글꼴 크기를 설정합니다. 또한 해당 [`TextDecorations`](xref:Xamarin.Forms.Label.TextDecorations) 속성을 설정하여 밑줄 텍스트 장식을 `Label`에 적용하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)로 설정하여 가로 가운데에 배치합니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다. [`Label`](xref:Xamarin.Forms.Label) 모양이 변경되었음을 확인합니다.
 

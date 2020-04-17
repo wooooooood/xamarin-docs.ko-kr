@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
 ms.openlocfilehash: 41e8d073982bf7963b3a77a939bf28e52e86feaa
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "67675185"
 ---
 # <a name="xamarinforms-app-lifecycle"></a>Xamarin.Forms 앱 수명 주기
 
 [`Application`](xref:Xamarin.Forms.Application) 기본 클래스에서 제공하는 기능은 다음과 같습니다.
 
-- [수명 주기 메서드](#Lifecycle_Methods): `OnStart`, `OnSleep` 및 `OnResume`.
-- [페이지 탐색 이벤트](#page): [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
-- [모달 탐색 이벤트](#modal): `ModalPushing`, `ModalPushed`, `ModalPopping` 및 `ModalPopped`.
+- [수명 주기 메서드](#Lifecycle_Methods) `OnStart`, `OnSleep` 및 `OnResume`.
+- [페이지 탐색 이벤트](#page) [`PageAppearing`](xref:Xamarin.Forms.Application.PageAppearing), [`PageDisappearing`](xref:Xamarin.Forms.Application.PageDisappearing).
+- [모달 탐색 이벤트](#modal) `ModalPushing`, `ModalPushed`, `ModalPopping` 및 `ModalPopped`.
 
 <a name="Lifecycle_Methods" />
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: e9a17bff9bd0a23d59faf7602544b25c7ec05a86
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771252"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기
@@ -91,7 +91,7 @@ XAML에서 `PersonDataTemplateSelector`는 다음 코드 예제와 같이 리소
 
 다음 스크린샷은 기본 컬렉션의 각 개체에 `PersonDataTemplateSelector`를 적용한 [`ListView`](xref:Xamarin.Forms.ListView)의 결과를 보여 줍니다.
 
-![](selector-images/data-template-selector.png "데이터 템플릿 선택기를 사용하는 ListView")
+![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
 
 `DateOfBirth` 속성 값이 1980보다 크거나 같은 `Person` 개체는 녹색으로 표시되고 나머지 개체는 빨간색으로 표시됩니다.
 

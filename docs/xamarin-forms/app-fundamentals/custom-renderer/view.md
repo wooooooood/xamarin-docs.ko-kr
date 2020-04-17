@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
 ms.openlocfilehash: c93feb9527892b7b4c60c9d213361d19d3bc4b93
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771723"
 ---
 # <a name="implementing-a-view"></a>보기 구현
@@ -24,7 +24,7 @@ _Xamarin.Forms 사용자 지정 사용자 인터페이스 컨트롤은 화면에
 
 다음 다이어그램은 [`View`](xref:Xamarin.Forms.View) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](view-images/view-classes.png "보기 클래스와 네이티브 클래스 구현 간의 관계")
+![](view-images/view-classes.png "Relationship Between the View Class and its Implementing Native Classes")
 
 렌더링 프로세스는 각 플랫폼에서 [`View`](xref:Xamarin.Forms.View)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -121,11 +121,11 @@ public class MainPageCS : ContentPage
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](view-images/solution-structure.png "CameraPreview 사용자 지정 렌더러 프로젝트 책임")
+![](view-images/solution-structure.png "CameraPreview Custom Renderer Project Responsibilities")
 
 `CameraPreview` 사용자 지정 컨트롤은 각 플랫폼의 `ViewRenderer` 클래스에서 모두 파생되는 플랫폼별 렌더러 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `CameraPreview` 사용자 지정 컨트롤이 플랫폼별 컨트롤로 렌더링됩니다.
 
-![](view-images/screenshots.png "각 플랫폼의 CameraPreview")
+![](view-images/screenshots.png "CameraPreview on each Platform")
 
 `ViewRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CameraPreview` 인스턴스에 대한 참조를 포함합니다.
 

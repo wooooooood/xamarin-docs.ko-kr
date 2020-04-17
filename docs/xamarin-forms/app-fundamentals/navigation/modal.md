@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 7a4c67f067b73873c3d1de4499abda2703217ddf
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70760821"
 ---
 # <a name="xamarinforms-modal-pages"></a>Xamarin.Forms 모달 페이지
@@ -29,11 +29,11 @@ _Xamarin.Forms는 모달 페이지를 지원합니다. 모달 페이지는 사�
 
 모달 페이지는 Xamarin.Forms에서 지원하는 [페이지](~/xamarin-forms/user-interface/controls/pages.md) 형식이라면 어떤 것이든 될 수 있습니다. 모달 페이지를 표시하려면 애플리케이션은 다음 다이어그램에 나온 것처럼 새 페이지를 모달 스택으로 푸시하여 활성 페이지가 되게 합니다.
 
-![](modal-images/pushing.png "페이지를 모달 스택에 푸시")
+![](modal-images/pushing.png "Pushing a Page to the Modal Stack")
 
 이전 페이지로 돌아가기 위해 애플리케이션은 다음 다이어그램에 나온 것처럼 모달 스택에서 현재 페이지를 팝하고 맨 위에 있는 새 페이지가 활성 페이지가 됩니다.
 
-![](modal-images/popping.png "모달 스택에서 페이지 팝")
+![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
 <a name="Performing_Navigation" />
 
@@ -65,7 +65,7 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 
 따라서 `MainPage` 인스턴스의 [`ListView`](xref:Xamarin.Forms.ListView)에서 항목이 선택된 경우 `ModalPage` 인스턴스가 활성 페이지가 되는 모달 스택으로 푸시됩니다. `ModalPage` 인스턴스는 다음 스크린샷과 같이 표시됩니다.
 
-![](modal-images/modalpage.png "모달 페이지 예제")
+![](modal-images/modalpage.png "Modal Page Example")
 
 [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*)가 호출되는 경우 다음 이벤트가 발생합니다.
 

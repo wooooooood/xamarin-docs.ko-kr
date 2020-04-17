@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 702ec35bca051f7255c5c9d67d2dc68d4f89ca52
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68645950"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
@@ -24,7 +24,7 @@ _Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리�
 
 마스터 페이지는 일반적으로 다음 스크린샷과 같이 항목 목록을 표시합니다.
 
-[![](master-detail-page-images/masterpage-components.png "마스터 페이지 구성 요소")](master-detail-page-images/masterpage-components-large.png#lightbox "마스터 페이지 구성 요소")
+[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
 
 항목 목록의 위치는 각 플랫폼에서 동일하며, 항목 중 하나를 선택하면 해당 세부 정보 페이지로 이동합니다. 또한 마스터 페이지에는 활성 세부 정보 페이지로 이동하는 데 사용할 수 있는 단추가 포함된 탐색 모음이 있습니다.
 
@@ -34,7 +34,7 @@ _Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리�
 
 세부 정보 페이지에는 마스터 페이지에서 선택한 항목에 해당하는 데이터가 표시되고, 세부 정보 페이지의 주요 구성 요소는 다음 스크린샷에 표시됩니다.
 
-![](master-detail-page-images/detailpage-components.png "세부 정보 페이지 구성 요소")
+![](master-detail-page-images/detailpage-components.png "Detail Page Components")
 
 세부 정보 페이지에는 콘텐츠가 플랫폼에 따라 달라지는 탐색 모음이 있습니다.
 
@@ -81,7 +81,7 @@ iOS와 Android의 마스터 페이지가 세로 모드의 마스터 페이지와
 </MasterDetailPage>
 ```
 
-다음 코드 예제에서는 C#에서 만든 해당 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)를 보여 줍니다.
+다음 코드 예제에서는 C#에서 만든 해당 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)를 보여줍니다.
 
 ```csharp
 public class MainPageCS : MasterDetailPage
@@ -210,11 +210,11 @@ public class MasterPageCS : ContentPage
 
 다음 스크린샷에서는 각 플랫폼의 마스터 페이지를 보여 줍니다.
 
-![](master-detail-page-images/masterpage.png "마스터 페이지 예제")
+![](master-detail-page-images/masterpage.png "Master Page Example")
 
 ### <a name="creating-and-displaying-the-detail-page"></a>세부 정보 페이지 만들기 및 표시
 
-`MainPage` [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 인스턴스에서 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트를 처리할 이벤트 처리기를 등록할 수 있도록 `MasterPage` 인스턴스에는 해당 [`ListView`](xref:Xamarin.Forms.ListView) 인스턴스를 공개하는 `ListView` 속성이 포함됩니다. 이렇게 하면 `MainPage` 인스턴스에서 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) 속성을 선택한 `ListView` 항목을 나타내는 페이지로 설정할 수 있습니다. 다음 코드 예제에서는 이벤트 처리기를 보여 줍니다.
+`MainPage` [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 인스턴스가 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트를 처리할 이벤트 처리기를 등록할 수 있도록 `MasterPage` 인스턴스에는 해당 [`ListView`](xref:Xamarin.Forms.ListView) 인스턴스를 공개하는 `ListView` 속성이 포함됩니다. 이렇게 하면 `MainPage` 인스턴스에서 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) 속성을 선택한 `ListView` 항목을 나타내는 페이지로 설정할 수 있습니다. 다음 코드 예제에서는 이벤트 처리기를 보여 줍니다.
 
 ```csharp
 public partial class MainPage : MasterDetailPage
@@ -245,7 +245,7 @@ public partial class MainPage : MasterDetailPage
 
 다음 스크린샷에서는 마스터 페이지에서 선택한 후에 표시되는 `ContactPage` 세부 정보 페이지를 보여 줍니다.
 
-![](master-detail-page-images/detailpage.png "세부 정보 페이지 예제")
+![](master-detail-page-images/detailpage.png "Detail Page Example")
 
 <a name="Controlling_the_Detail_Page_Display_Behavior" />
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
 ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70772013"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
@@ -24,7 +24,7 @@ _Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 �
 
 다음 다이어그램은 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](entry-images/entry-classes.png "항목 컨트롤과 네이티브 컨트롤 구현 간의 관계")
+![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
 
 렌더링 프로세스는 각 플랫폼에서 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -111,11 +111,11 @@ public class MainPage : ContentPage
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](entry-images/solution-structure.png "MyEntry 사용자 지정 렌더러 프로젝트 책임")
+![](entry-images/solution-structure.png "MyEntry Custom Renderer Project Responsibilities")
 
 `MyEntry` 컨트롤은 각 플랫폼의 `EntryRenderer` 클래스에서 모두 파생되는 플랫폼별 `MyEntryRenderer` 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `MyEntry` 컨트롤이 플랫폼별 배경색으로 렌더링됩니다.
 
-![](entry-images/screenshots.png "각 플랫폼의 MyEntry 컨트롤")
+![](entry-images/screenshots.png "MyEntry Control on each Platform")
 
 `EntryRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `MyEntry` 컨트롤에 대한 참조를 포함합니다.
 

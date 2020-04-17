@@ -10,10 +10,10 @@ ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 64e637648b03dff81468f2d7ad072c7acc50868b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021150"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Android Device Manager를 사용하여 가상 디바이스 관리
@@ -175,15 +175,15 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
   [![복제 및 편집 화면](device-manager-images/win/25-dupe-and-edit-sml.png)](device-manager-images/win/25-dupe-and-edit.png#lightbox)
 
-- **탐색기에 표시**&ndash; Windows 탐색기 창에 가상 디바이스에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel_API_27**을 선택하고 **탐색기에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
+- **탐색기에 표시** &ndash; Windows 탐색기 창에 가상 디바이스에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel_API_27**을 선택하고 **탐색기에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
 
   [![탐색기에 표시 클릭 후 결과](device-manager-images/win/26-reveal-in-explorer-sml.png)](device-manager-images/win/26-reveal-in-explorer.png#lightbox)
 
-- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅샷도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
+- **공장 재설정** &ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅샷도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
 
   ![공장 재설정 대화 상자](device-manager-images/win/27-factory-reset.png)
 
-- **삭제**&ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
+- **삭제** &ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
 
   ![디바이스 삭제 대화 상자](device-manager-images/win/28-delete-device-w158.png)
 
@@ -337,21 +337,21 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 추가 옵션 메뉴에는 다음 항목이 포함되어 있습니다.
 
-- **편집**&ndash; 앞에서 설명한 대로 현재 선택된 디바이스를 디바이스 편집기에서 엽니다.
+- **편집** &ndash; 앞에서 설명한 대로 현재 선택된 디바이스를 디바이스 편집기에서 엽니다.
 
 - **복제 및 편집** &ndash; 현재 선택된 디바이스를 복제하고 다른 고유한 이름을 사용하여 **새 디바이스** 화면에서 엽니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **복제 및 편집**을 클릭하면 이름에 카운터가 추가됩니다.
 
   [![복제 및 편집 화면](device-manager-images/mac/25-dupe-and-edit-sml.png)](device-manager-images/mac/25-dupe-and-edit.png#lightbox)
 
-- **Finder에 표시**&ndash; macOS Finder 창에 가상 디바이스에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **Finder에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
+- **Finder에 표시** &ndash; macOS Finder 창에 가상 디바이스에 대한 파일이 들어 있는 폴더가 열립니다. 예를 들어 **Pixel 2 API 28**을 선택하고 **Finder에 표시**를 클릭하면 다음 예제와 같은 창이 열립니다.
 
   [![Finder에 표시 클릭 후 결과](device-manager-images/mac/26-reveal-in-finder-sml.png)](device-manager-images/mac/26-reveal-in-finder.png#lightbox)
 
-- **공장 재설정**&ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅샷도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
+- **공장 재설정** &ndash; 선택된 디바이스를 기본 설정으로 재설정하여 디바이스가 실행 중일 때 사용자가 변경한 디바이스의 내부 상태에 대해 모든 내용을 지웁니다(있는 경우 현재 [빠른 부팅](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) 스냅샷도 지웁니다). 생성 및 편집 중에 가상 디바이스에서 수정된 내용은 이러한 변경의 영향을 받지 않습니다. 이러한 재설정을 수행할 수 없음을 알리는 대화 상자가 표시됩니다. **공장 재설정**을 클릭하여 재설정을 확인합니다.
 
   ![공장 재설정 대화 상자](device-manager-images/mac/27-factory-reset-m76.png)
 
-- **삭제**&ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
+- **삭제** &ndash; 선택된 가상 디바이스를 영구적으로 삭제합니다. 디바이스 삭제는 실행 취소할 수 없음을 알리는 대화 상자가 표시됩니다. 디바이스를 삭제하려는 것이 확실한 경우 **삭제**를 클릭합니다.
 
   ![디바이스 삭제 대화 상자](device-manager-images/mac/28-delete-device-m76.png)
 
@@ -365,7 +365,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
 <!-- markdownlint-disable MD001 -->
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ### <a name="android-sdk-in-non-standard-location"></a>표준이 아닌 위치의 Android SDK
 
@@ -383,7 +383,7 @@ Android 디바이스 관리자를 처음 실행하면 현재 구성된 모든 �
 
    ![Android Device Manager 로그 파일 위치](device-manager-images/win/30-log-files.png)
 
-2. 로그 파일 중 하나를 두 번 클릭하여 열고 **구성 파일 경로**를 찾습니다. 예:
+2. 로그 파일 중 하나를 두 번 클릭하여 열고 **구성 파일 경로**를 찾습니다. 예를 들어:
 
    [![로그 파일의 구성 파일 경로](device-manager-images/win/31-config-file-path-sml.png)](device-manager-images/win/31-config-file-path.png#lightbox)
 
@@ -429,7 +429,7 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 이러한 변경 사항이 적용되면 Wi-Fi를 다시 작동하도록 하는 상태로 AVD가 다시 시작됩니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ### <a name="wrong-version-of-android-sdk-tools"></a>Android SDK Tools의 잘못된 버전
 
@@ -467,13 +467,13 @@ Android SDK Tools 26.1.1 이상이 설치되어 있지 않으면 실행 시 이�
 
 ### <a name="generating-a-bug-report"></a>버그 보고서 생성
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 위의 문제 해결 팁을 사용하여 해결할 수 없는 Android Device Manager 관련 문제를 발견할 경우 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **버그 보고서 생성**을 선택하여 버그 보고서를 제출하세요.
 
 [![버그 보고서를 제출하는 데 사용되는 메뉴 항목의 위치](device-manager-images/win/34-bug-report-sml.png)](device-manager-images/win/34-bug-report.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 위의 문제 해결 팁을 사용하여 해결할 수 없는 Android Device Manager 관련 문제를 발견할 경우 **도움말 > 문제 보고**를 클릭하여 버그 보고서를 제출하세요.
 

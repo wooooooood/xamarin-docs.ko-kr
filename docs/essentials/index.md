@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 02/26/2020
-ms.openlocfilehash: 42cdfe6c54354f1616606c9b3a40de78446c5c39
-ms.sourcegitcommit: eedc6032eb5328115cb0d99ca9c8de48be40b6fa
+ms.openlocfilehash: 1d68203e80e0bc28e7060d5873c122db8c2ff960
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78910725"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80387208"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -61,6 +61,7 @@ Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액
 * [단위 변환기](unit-converters.md?context=xamarin/xamarin-forms) – 단위를 변환하는 도우미 메서드.
 * [버전 추적](version-tracking.md?context=xamarin/xamarin-forms) - 애플리케이션 버전 및 빌드 번호를 추적합니다.
 * [진동](vibrate.md?context=xamarin/xamarin-forms) - 디바이스를 진동합니다.
+* [웹 인증자](web-authenticator.md?context=xamarin/xamarin-forms) - 웹 인증 흐름을 시작하고 콜백을 수신 대기합니다.
 
 ## <a name="troubleshooting"></a>[문제 해결](troubleshooting.md?context=xamarin/xamarin-forms)
 

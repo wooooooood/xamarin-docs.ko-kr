@@ -8,10 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
 ms.openlocfilehash: 39ee1039104052b8799debf19f09439f57a1791d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028092"
 ---
 # <a name="android-debug-log"></a>Android 디버그 로그
@@ -32,7 +32,7 @@ ms.locfileid: "73028092"
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Visual Studio에서 디버그 로그에 액세스
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 **디바이스 로그** 도구를 열려면 도구 모음에서 **디바이스 로그(logcat)** 아이콘을 클릭합니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "73028092"
 
 디바이스가 선택되면 **디바이스 로그** 도구가 자동으로 실행 중인 앱의 로그 항목을 추가합니다. &ndash; 이러한 로그 항목은 로그 항목 테이블에 표시됩니다. 디바이스 간에 전환하면 디바이스 로깅이 중지되었다가 다시 시작됩니다. 디바이스 선택기에 디바이스가 표시되기 전에 Android 프로젝트가 로드되어야 합니다. 디바이스 선택기에 디바이스가 표시되지 않는 경우 **시작** 단추 옆의 Visual Studio 디바이스 드롭다운 메뉴에서 디바이스가 사용 가능한지 확인합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 **디바이스 로그**를 열려면 **보기 &gt; 패드 &gt; 디바이스 로그**를 클릭합니다.
 
@@ -89,7 +89,7 @@ ms.locfileid: "73028092"
 
 - **오류 표시** &ndash; 오류 메시지 표시를 토글합니다(오류 메시지는 빨란색으로 표시됨).
 
-- **다시 연결**&ndash; 디바이스에 다시 연결하고 로그 항목 표시를 새로 고칩니다.
+- **다시 연결** &ndash; 디바이스에 다시 연결하고 로그 항목 표시를 새로 고칩니다.
 
 - **마커 추가** &ndash; 마지막 로그 항목 뒤에 마커 메시지(예: `--- Marker N ---`)를 삽입합니다. 여기서 _N_은 1에서 시작하여 새 마커가 추가되면 1씩 증가하는 카운터입니다.
 
@@ -103,7 +103,7 @@ ms.locfileid: "73028092"
 
 ## <a name="accessing-from-the-command-line"></a>명령줄에서 액세스
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 디버그 로그를 보는 또 다른 옵션은 명령줄을 통해서 보는 것입니다. 명령 프롬프트 창을 열고 Android SDK 플랫폼 도구 폴더(일반적으로 SDK 플랫폼 도구 폴더는 **C:\\Program Files (x86)\\Android\\android-sdk\\platform-tools**에 있음)로 이동합니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "73028092"
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabmacos"></a>[Mac용 Visual Studio](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 디버그 로그를 보는 또 다른 옵션은 명령줄을 통해서 보는 것입니다. 터미널 창을 열고 Android SDK 플랫폼 도구 폴더(일반적으로 SDK 플랫폼 도구 폴더는 **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**에 있음)로 이동합니다.
 
@@ -132,7 +132,7 @@ $ ./adb logcat
 ## <a name="writing-to-the-debug-log"></a>디버그 로그에 쓰기
 
 [Android.Util.Log](xref:Android.Util.Log) 클래스의 메서드를 사용하여 **디버그 로그**에 메시지를 쓸 수 있습니다.
-예: 
+예를 들어: 
 
 ```csharp
 string tag = "myapp";
@@ -150,7 +150,7 @@ W/myapp   (11103): this is a warning message
 E/myapp   (11103): this is an error message
 ```
 
-`Console.WriteLine`을 사용하여 **디버그 로그** &ndash;에 쓸 수도 있습니다. 이 메시지는 출력 형식과는 약간 다르게 logcat에 나타납니다(이 기법은 Android에서 Xamarin.Forms 앱을 디버깅할 때 특히 유용합니다).
+`Console.WriteLine`을 사용하여 **디버그 로그**에 쓸 수도 있습니다. 이 메시지는 출력 형식과는 약간 다르게 logcat에 나타납니다(이 기법은 Android에서 Xamarin.Forms 앱을 디버깅할 때 특히 유용합니다).
 
 ```csharp
 System.Console.WriteLine ("DEBUG - Button Clicked!");

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
 ms.openlocfilehash: b8c6ed9e803b8dec05b2279ed93f956ed11a1c07
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "71997113"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Xamarin.Forms에서의 키보드 접근성
@@ -53,7 +53,7 @@ ms.locfileid: "71997113"
 
 다음 스크린샷은 이 코드 예제의 기본 탭 순서를 보여줍니다.
 
-![](keyboard-images/default-tab-order.png "기본 행 기반 탭 순서")
+![](keyboard-images/default-tab-order.png "Default Row-based Tab Order")
 
 여기서 탭 순서는 행 기반이며 컨트롤을 XAML에 나열한 순서와 같습니다. 따라서 탭 키를 누르면 이름 [`Entry`](xref:Xamarin.Forms.Entry) 인스턴스에 이어 성 `Entry` 인스턴스를 탐색합니다. 그러나 보다 직관적인 환경은 첫 번째 열 탭 탐색을 사용하므로 Tab 키를 누르면 이름-성 쌍을 탐색합니다. 입력 컨트롤의 탭 순서를 지정하여 이를 구현할 수 있습니다.
 
@@ -110,7 +110,7 @@ ms.locfileid: "71997113"
 
 다음 스크린샷은 이 코드 예제의 탭 순서를 보여줍니다.
 
-![](keyboard-images/correct-tab-order.png "열 기반 탭 순서")
+![](keyboard-images/correct-tab-order.png "Column-based Tab Order")
 
 여기서 탭 순서는 열 기반입니다. 따라서 Tab 키를 누르면 이름-성 [`Entry`](xref:Xamarin.Forms.Entry) 쌍을 탐색합니다.
 

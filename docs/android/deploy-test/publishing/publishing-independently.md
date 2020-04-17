@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: dee49d556173ec0b9544820f129eef8a9cce404f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021316"
 ---
 # <a name="publishing-independently"></a>독립적으로 게시
@@ -23,9 +23,9 @@ Xamarin.Android 앱의 개발, 배포 및 보급에 많은 라이선스를 사�
 
 - **Visual Studio Community** &ndash; Windows를 사용하는 학생, 소규모 팀, OSS 개발자용
 
-- **Visual Studio Professional** &ndash; 개인 개발자 또는 소규모 팀(Windows에만 해당)용. 이 라이선스는 표준 또는 클라우드 구독을 제공하며 사용 제한이 없습니다.
+- **Visual Studio Professional** &ndash; 개인 개발자 또는 소규모 팀용(Windows만 해당). 이 라이선스는 표준 또는 클라우드 구독을 제공하며 사용 제한이 없습니다.
 
-- **Visual Studio Enterprise** &ndash; (Windows에만 해당) 모든 규모의 팀용. 이 라이선스에는 엔터프라이즈 기능, 표준 또는 클라우드 구독이 포함됩니다.
+- **Visual Studio Enterprise** &ndash; 모든 규모의 팀용(Windows만 해당). 이 라이선스에는 엔터프라이즈 기능, 표준 또는 클라우드 구독이 포함됩니다.
 
 Community Edition을 다운로드하거나 Professional 및 Enterprise Edition 구매에 대한 자세한 내용을 알아보려면 [visualstudio.com](https://visualstudio.microsoft.com/xamarin/)을 방문하세요.
 
@@ -55,7 +55,7 @@ Community Edition을 다운로드하거나 Professional 및 Enterprise Edition �
 수동 설치는 세 번째 애플리케이션 설치 옵션입니다. 애플리케이션 수동 설치를 적용하려면
 
 1. **APK 사본을 사용자에게 배포** &ndash; 예를 들어 이 사본은 CD나 USB 플래스 드라이브에 배포할 수 있습니다.
-1. **(사용자) Android 디바이스에 애플리케이션 설치**&ndash; 명령줄 *Android Debug Bridge*(**adb**) 도구를 사용합니다. **adb**는 에뮬레이터 인스턴스 또는 Android 지원 디바이스와의 커뮤니케이션을 구현하는 범용 명령줄 도구입니다. Android SDK는 **adb**를 포함하며 **\<sdk>/platform-tools/** 디렉터리에 있습니다.
+1. **(사용자) Android 디바이스에 애플리케이션 설치** &ndash; 명령줄 *Android Debug Bridge*(**adb**) 도구를 사용합니다. **adb**는 에뮬레이터 인스턴스 또는 Android 지원 디바이스와의 커뮤니케이션을 구현하는 범용 명령줄 도구입니다. Android SDK는 **adb**를 포함하며 **\<sdk>/platform-tools/** 디렉터리에 있습니다.
 
 Android 디바이스를 컴퓨터에 USB 케이블로 연결해야 합니다.
 Windows 컴퓨터도 **adb**에서 인식하기 위해 전화 공급업체가 제공하는 추가 USB 드라이버가 필요할 수 있습니다. 이러한 추가 USB 드라이버 설치 지침은 이 문서에 해당하지 않습니다.

@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
 ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73028067"
 ---
 # <a name="xamarinandroid-environment"></a>Xamarin.Android 환경
@@ -150,7 +150,7 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 > 기본 Android 디바이스가 TLS 1.2를 지원해야 합니다.
 Android 5.0 이상은 TLS 1.2를 지원합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```shell
 ## Comments are lines which start with '#'

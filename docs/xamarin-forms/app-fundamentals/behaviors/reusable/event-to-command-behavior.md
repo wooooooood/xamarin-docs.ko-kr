@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
 ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68650907"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
@@ -198,7 +198,7 @@ selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 
 런타임 시 동작은 컨트롤과의 상호 작용에 응답합니다. [`ListView`](xref:Xamarin.Forms.ListView)에서 항목을 선택하면 [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) 이벤트가 발생하고 ViewModel에서 `OutputAgeCommand`가 실행됩니다. 그러면 다음 스크린샷과 같이 [`Label`](xref:Xamarin.Forms.Label)이 바인딩되는 ViewModel `SelectedItemText` 속성이 업데이트됩니다.
 
-[![](event-to-command-behavior-images/screenshots-sml.png "EventToCommandBehavior가 포함된 샘플 애플리케이션")](event-to-command-behavior-images/screenshots.png#lightbox "EventToCommandBehavior가 포함된 샘플 애플리케이션")
+[![](event-to-command-behavior-images/screenshots-sml.png "Sample Application with EventToCommandBehavior")](event-to-command-behavior-images/screenshots.png#lightbox "Sample Application with EventToCommandBehavior")
 
 이벤트가 발생할 때 이 동작을 사용하여 명령을 실행하는 이점은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결할 수 있다는 점입니다. 또한 상용구 이벤트 처리 코드가 코드 숨김 파일에서 제거됩니다.
 

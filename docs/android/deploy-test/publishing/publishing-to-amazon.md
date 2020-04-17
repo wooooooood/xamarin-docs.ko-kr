@@ -7,10 +7,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
 ms.openlocfilehash: 288ff00b35c369581e50b8e8777f85b7b6119590
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73021300"
 ---
 # <a name="publishing-to-the-amazon-app-store"></a>Amazon App Store에 게시
@@ -27,8 +27,8 @@ Amazon App Store에 애플리케이션을 제출하는 것은 Google Play에 애
 
 - **아이콘** &ndash; 투명한 배경의 114x114 .png 파일입니다. 필수입니다.
 - **축소판 그림** &ndash; 위 아이콘의 더 큰 버전입니다. 투명한 배경의 512 x 512 픽셀입니다. 이 아이콘도 필수입니다.
-- **스크린 샷** &ndash; Amazon에서는 최소 3개, 최대 10개의 스크린 샷을 요구합니다. 스크린샷은 1024w x 600h 픽셀 또는 800w x 480h 픽셀이어야 합니다. .png 및 .jpg 형식 모두 사용할 수 있습니다.
-- **프로모션 이미지**&ndash; 애플리케이션이 홈 페이지 같은 프로모션 위치에 표시되려면 프로모션 이미지를 선택적으로 제출해야 할 수 있습니다. 이 이미지는 1024w x 500h 픽셀 .png 또는 .jpg 파일로, 가로 방향이어야 합니다. 애니메이션은 포함되면 안 됩니다.
+- **스크린샷** &ndash; Amazon에서는 최소 3개, 최대 10개의 스크린샷을 요구합니다. 스크린샷은 1024w x 600h 픽셀 또는 800w x 480h 픽셀이어야 합니다. .png 및 .jpg 형식 모두 사용할 수 있습니다.
+- **프로모션 이미지** &ndash; 애플리케이션이 홈 페이지 같은 프로모션 위치에 표시되려면 프로모션 이미지를 선택적으로 제출할 수 있습니다. 이 이미지는 1024w x 500h 픽셀 .png 또는 .jpg 파일로, 가로 방향이어야 합니다. 애니메이션은 포함되면 안 됩니다.
 - 5개 비디오에 대한 업데이트가 제공될 수 잇습니다.
 
 ## <a name="approval-process"></a>승인 프로세스

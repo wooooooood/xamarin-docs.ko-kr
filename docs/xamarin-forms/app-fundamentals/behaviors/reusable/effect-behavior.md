@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771992"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
@@ -157,7 +157,7 @@ label.Behaviors.Add (new EffectBehavior {
 
 런타임에 동작이 [`Label`](xref:Xamarin.Forms.Label) 컨트롤에 연결되면 `Xamarin.LabelShadowEffect`가 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에 추가됩니다. 그러면 다음 스크린샷과 같이 `Label` 컨트롤에 표시되는 텍스트에 그림자가 추가됩니다.
 
-![](effect-behavior-images/screenshots.png "EffectsBehavior가 있는 애플리케이션 샘플")
+![](effect-behavior-images/screenshots.png "Sample Application with EffectsBehavior")
 
 컨트롤에서 효과를 추가하고 제거하는 데 이러한 동작을 사용하면 표준 효과 처리 코드를 코드 숨김 파일에서 제거할 수 있다는 이점이 있습니다.
 

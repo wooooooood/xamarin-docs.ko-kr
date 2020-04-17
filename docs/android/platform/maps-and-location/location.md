@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2018
-ms.openlocfilehash: e027d41e98c26ef1659c27ab05df3052e19cc670
-ms.sourcegitcommit: 9ee02a2c091ccb4a728944c1854312ebd51ca05b
+ms.openlocfilehash: 0fc74ae2307ffd14f8c52515c93993a51455997a
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "73027140"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "80805958"
 ---
 # <a name="location-services-on-android"></a>Android의 위치 서비스
 
@@ -84,7 +84,7 @@ else
 융합 위치 공급자는 [Google Play 서비스](https://developer.android.com/google/play-services/index.html)의 일부입니다.
 융합 위치 공급자 API가 작동하려면 애플리케이션에 Google Play 서비스 패키지를 설치하고 올바르게 구성해야 하며, 디바이스에 Google Play 서비스 APK가 설치되어 있어야 합니다.
 
-Xamarin.Android 애플리케이션에서 융합 위치 공급자를 사용하려면 먼저 **Xamarin.GooglePlayServices.Maps** 패키지를 프로젝트에 추가해야 합니다. 또한 아래에 설명된 클래스를 참조하는 원본 파일에 다음 `using` 문을 추가해야 합니다.
+Xamarin.Android 애플리케이션에서 융합 위치 공급자를 사용하려면 먼저 **Xamarin.GooglePlayServices.Location** 패키지를 프로젝트에 추가해야 합니다. 또한 아래에 설명된 클래스를 참조하는 원본 파일에 다음 `using` 문을 추가해야 합니다.
 
 ```csharp
 using Android.Gms.Common;

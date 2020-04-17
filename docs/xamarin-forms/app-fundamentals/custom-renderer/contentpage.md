@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70772021"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
@@ -24,7 +24,7 @@ _ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 �
 
 다음 다이어그램은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
-![](contentpage-images/contentpage-classes.png "ContentPage 클래스와 네이티브 컨트롤 구현 간의 관계")
+![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
 
 렌더링 프로세스는 각 플랫폼에서 [`ContentPage`](xref:Xamarin.Forms.ContentPage)에 대한 사용자 지정 렌더러를 만들어 플랫폼별 사용자 지정을 구현하는 데 활용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
@@ -105,11 +105,11 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 
 다음 다이어그램은 샘플 애플리케이션에서 각 프로젝트의 책임과 이들 간의 관계를 보여줍니다.
 
-![](contentpage-images/solution-structure.png "CameraPage 사용자 지정 렌더러 프로젝트 책임")
+![](contentpage-images/solution-structure.png "CameraPage Custom Renderer Project Responsibilities")
 
 `CameraPage` 인스턴스는 각 플랫폼의 `PageRenderer` 클래스에서 모두 파생되는 플랫폼별 `CameraPageRenderer` 클래스에 의해 렌더링됩니다. 그러면 다음 스크린샷과 같이 각 `CameraPage` 인스턴스가 라이브 카메라 피드로 렌더링됩니다.
 
-![](contentpage-images/screenshots.png "각 플랫폼의 CameraPage")
+![](contentpage-images/screenshots.png "CameraPage on each Platform")
 
 `PageRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 페이지가 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CameraPage` 인스턴스에 대한 참조를 포함합니다.
 

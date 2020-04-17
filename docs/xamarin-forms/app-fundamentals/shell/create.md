@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2019
 ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "68739303"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Xamarin.Forms Shell 애플리케이션 만들기
@@ -128,11 +128,11 @@ Xamarin.Forms Shell 애플리케이션을 만드는 마지막 단계는 서브�
 
 실행될 때 이 XAML은 서브클래싱된 `Shell` 클래스에 선언된 콘텐츠의 첫 번째 항목이므로 `CatsPage`를 표시합니다.
 
-[![iOS 및 Android에서 셸 앱의 스크린샷](create-images/cats.png "셸 앱")](create-images/cats-large.png#lightbox "셸 앱")
+[![iOS 및 Android의 셸 애플리케이션 스크린샷](create-images/cats.png "셸 애플리케이션")](create-images/cats-large.png#lightbox "셸 애플리케이션")
 
 햄버거 아이콘을 누르거나 왼쪽에서 살짝 밀면 플라이아웃이 표시됩니다.
 
-[![iOS 및 Android에서 셸 플라이아웃의 스크린샷](create-images/flyout-reduced.png "셸 플라이아웃")](create-images/flyout-reduced-large.png#lightbox "셸 플라이아웃")
+[![iOS 및 Android의 셸 플라이아웃 스크린샷](create-images/flyout-reduced.png "셸 플라이아웃")](create-images/flyout-reduced-large.png#lightbox "셸 플라이아웃")
 
 > [!IMPORTANT]
 > 셸 애플리케이션에서 `ShellContent` 개체의 자식인 각 [`ContentPage`](xref:Xamarin.Forms.ContentPage)는 애플리케이션을 시작하는 동안 만들어집니다. 이 방법을 사용하여 다른 `ShellContent` 개체를 추가하면 애플리케이션을 시작하는 동안 추가 페이지가 생성되어 시작 환경의 성능이 저하될 수 있습니다. 그러나 셸은 탐색에 대한 응답으로 요청 시 페이지를 만들 수도 있습니다. 자세한 내용은 [Xamarin.Forms Shell 탭](tabs.md) 가이드에서 [효율적인 페이지 로딩](tabs.md#efficient-page-loading)을 참조하세요.

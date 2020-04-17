@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
 ms.openlocfilehash: 399f411acd497b9d55ca81f670556430fe5f5503
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771295"
 ---
 # <a name="creating-a-xamarinforms-datatemplate"></a>Xamarin.Forms DataTemplate 만들기
@@ -28,7 +28,7 @@ _데이터 템플릿은 ResourceDictionary에서 인라인으로 만들거나 �
 
 다음 스크린샷에 표시된 것처럼 사용되는 기법에 관계 없이, [`ListView`](xref:Xamarin.Forms.ListView)에서 각 셀의 모양은 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)으로 정의됩니다.
 
-![](creating-images/data-template-appearance.png "DataTemplate을 사용한 ListView")
+![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
 
 <a name="inline" />
 

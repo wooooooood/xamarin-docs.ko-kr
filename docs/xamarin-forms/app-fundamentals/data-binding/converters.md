@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: 05ad12de77e8895a23cd364b90abfbfb567ac573
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771618"
 ---
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.Forms 바인딩 값 변환기
@@ -97,7 +97,7 @@ public class IntToBoolConverter : IValueConverter
 
 **단추 사용** 페이지는 `Button`에서 사용자가 `Entry` 보기로 입력하는 텍스트에 따라 작업을 수행하는 경우 일반적인 필요를 보여줍니다. `Entry`에 아무 것도 입력되지 않은 경우 `Button`은 비활성화되어야 합니다. 각 `Button`은 해당 `IsEnabled` 속성에 데이터 바인딩을 포함합니다. 데이터 바인딩 원본은 해당 `Entry`의 `Text` 속성의 `Length` 속성입니다. 해당 `Length` 속성이 0이 아닌 경우 값 변환기는 `true`를 반환하며 `Button`이 활성화됩니다.
 
-[![단추 사용](converters-images/enablebuttons-small.png "단추 사용")](converters-images/enablebuttons-large.png#lightbox "단추 사용")
+[![단추 활성화](converters-images/enablebuttons-small.png "단추 활성화")](converters-images/enablebuttons-large.png#lightbox "단추 활성화")
 
 각 `Entry`의 `Text` 속성은 빈 문자열로 초기화됩니다. `Text` 속성은 기본적으로 `null`이며, 이 경우 데이터 바인딩은 작동하지 않습니다.
 

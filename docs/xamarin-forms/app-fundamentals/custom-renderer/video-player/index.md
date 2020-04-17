@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 28e424f4946d05798b9ba309891845d9eab998b1
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "70771817"
 ---
 # <a name="implementing-a-video-player"></a>비디오 플레이어 구현
@@ -38,31 +38,31 @@ Xamarin.Forms 애플리케이션에서 비디오 파일을 재생하는 것이 �
 
 다음 문서 시리즈에서는 플랫폼 렌더러와 지원 클래스가 구축되는 방법을 점진적으로 보여줍니다.
 
-## <a name="creating-the-platform-video-playersplayer-creationmd"></a>[플랫폼 비디오 플레이어 만들기](player-creation.md)
+## <a name="creating-the-platform-video-players"></a>[플랫폼 비디오 플레이어 만들기](player-creation.md)
 
 각 플랫폼에는 플랫폼에서 지원되는 비디오 플레이어를 작성 및 유지 관리하는 `VideoPlayerRenderer` 클래스가 필요합니다. 이 문서에서는 렌더러 클래스의 구조와 플레이어가 작성되는 방법을 보여줍니다.
 
-## <a name="playing-a-web-videoweb-videosmd"></a>[웹 비디오 재생](web-videos.md)
+## <a name="playing-a-web-video"></a>[웹 비디오 재생](web-videos.md)
 
 십중팔구 비디오 플레이어에 대한 가장 일반적인 비디오 소스는 인터넷입니다. 이 문서에서는 웹 비디오가 참조되고 비디오 플레이어의 소스로 사용되는 방법을 설명합니다.
 
-## <a name="binding-video-sources-to-the-playersource-bindingsmd"></a>[플레이어에 비디오 소스 바인딩](source-bindings.md)
+## <a name="binding-video-sources-to-the-player"></a>[플레이어에 비디오 소스 바인딩](source-bindings.md)
 
 이 문서에서는 `ListView`를 사용하여 재생할 비디오 컬렉션을 표시합니다. 한 프로그램에 코드 숨김 파일이 비디오 플레이어의 비디오 소스를 설정하는 방법이 표시되지만 두 번째 프로그램에는 `ListView`와 비디오 플레이어 간에 데이터 바인딩을 사용하는 방법이 표시됩니다.
 
-## <a name="loading-application-resource-videosloading-resourcesmd"></a>[애플리케이션 리소스 비디오 로드](loading-resources.md)
+## <a name="loading-application-resource-videos"></a>[애플리케이션 리소스 비디오 로드](loading-resources.md)
 
 비디오는 플랫폼 프로젝트의 리소스로 포함될 수 있습니다. 이 문서에는 리소스를 저장했다가 나중에 프로그램으로 로드하여 비디오 플레이어에서 재생하는 방법을 보여줍니다.
 
-## <a name="accessing-the-devices-video-libraryaccessing-librarymd"></a>[디바이스의 비디오 라이브러리에 액세스](accessing-library.md)
+## <a name="accessing-the-devices-video-library"></a>[디바이스의 비디오 라이브러리에 액세스](accessing-library.md)
 
 디바이스의 카메라를 사용하여 비디오가 생성되면 디바이스의 이미지 라이브러리에 비디오 파일이 저장됩니다. 이 문서에서는 디바이스의 이미지 선택기에 액세스하여 비디오를 선택한 다음, 비디오 플레이어를 사용하여 재생하는 방법을 보여줍니다.
 
-## <a name="custom-video-transport-controlscustom-transportmd"></a>[사용자 지정 비디오 전송 컨트롤](custom-transport.md)
+## <a name="custom-video-transport-controls"></a>[사용자 지정 비디오 전송 컨트롤](custom-transport.md)
 
 각 플랫폼의 비디오 플레이어에 **재생** 및 **일시 중지**를 위한 단추의 형태로 자체 전송 제어가 제공되지만 이러한 단추를 표시하지 않고 자체적인 제어를 제공할 수 있습니다. 이 문서에서 그 방법을 보여줍니다.
 
-## <a name="custom-video-positioningcustom-positioningmd"></a>[사용자 지정 비디오 위치 지정](custom-positioning.md)
+## <a name="custom-video-positioning"></a>[사용자 지정 비디오 위치 지정](custom-positioning.md)
 
 플랫폼 비디오 플레이어마다 비디오의 진행률을 나타내는 위치 지정 막대가 있으며 이것을 사용하여 앞쪽이나 뒤쪽의 특정 위치로 건너뛸 수 있습니다. 이 문서에서는 이 위치 지정 막대를 사용자 지정 컨트롤로 바꾸는 방법을 보여줍니다.
 

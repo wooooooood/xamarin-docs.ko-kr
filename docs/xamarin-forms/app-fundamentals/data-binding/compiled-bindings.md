@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2019
 ms.openlocfilehash: 531d9719eb4bf5c23001ebe4260254e13f9989eb
-ms.sourcegitcommit: 21d8be9571a2fa89fb7d8ff0787ff4f957de0985
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "72697152"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
@@ -128,7 +128,7 @@ _컴파일된 바인딩을 클래식 바인딩보다 더 빨리 확인할 수 �
 
 애플리케이션을 처음 실행하는 경우 [`ListView`](xref:Xamarin.Forms.ListView)는 `NamedColor` 인스턴스로 채워집니다. `ListView`의 항목을 선택하면 [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) 속성이 `ListView`에서 선택한 항목의 색상으로 설정됩니다.
 
-[![컴파일된 색 목록](compiled-bindings-images/compiledcolorlist-small.png "컴파일된 색 목록]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![컴파일된 색 목록](compiled-bindings-images/compiledcolorlist-small.png "컴파일된 색 목록]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "컴파일된 색 목록")
 
 [`ListView`](xref:Xamarin.Forms.BoxView)에서 다른 항목을 선택하면 [`BoxView`](xref:Xamarin.Forms.BoxView)의 색상을 업데이트합니다.
 

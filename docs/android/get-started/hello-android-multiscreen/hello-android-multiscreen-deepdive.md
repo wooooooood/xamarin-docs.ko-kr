@@ -9,10 +9,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
 ms.openlocfilehash: 4acbfe810abefd9a25721ddf59c9f4f197afdf28
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 04/13/2020
 ms.locfileid: "73020975"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android 멀티스크린: 심층 분석
@@ -33,7 +33,7 @@ Android 애플리케이션은 개수에 관계 없이 이미지, 테마, 도우�
 
 일반적으로 일반 클래스에서 수행할 수 없는 작업을 수행할 수 있기 때문에 애플리케이션 블록은 Android 애플리케이션의 핵심을 형성합니다. 가장 중요한 두 가지는 _작업_ 및 _서비스_입니다.
 
-- **작업**&ndash; 작업은 사용자 인터페이스를 포함하는 화면에 해당하고 웹 애플리케이션의 웹 페이지와 개념적으로 유사합니다. 예를 들어 뉴스 피드 애플리케이션에서 로그인 화면은 첫 번째 작업이고, 뉴스 항목의 스크롤 가능한 목록이 두 번째 작업이고, 각 항목에 대한 세부 정보 페이지는 세 번째 작업입니다. [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md) 가이드에서 작업에 대해 자세히 알아볼 수 있습니다.
+- **작업** &ndash; 작업은 사용자 인터페이스를 포함하는 화면에 해당하고 웹 애플리케이션의 웹 페이지와 개념적으로 유사합니다. 예를 들어 뉴스 피드 애플리케이션에서 로그인 화면은 첫 번째 작업이고, 뉴스 항목의 스크롤 가능한 목록이 두 번째 작업이고, 각 항목에 대한 세부 정보 페이지는 세 번째 작업입니다. [작업 수명 주기](~/android/app-fundamentals/activity-lifecycle/index.md) 가이드에서 작업에 대해 자세히 알아볼 수 있습니다.
 
 - **서비스** &ndash; Android 서비스는 장기 실행 작업을 넘겨 받고 백그라운드에서 실행하여 작업을 지원합니다. 서비스에는 사용자 인터페이스가 없고 화면에 연결되지 않은 작업을 처리하는 데 사용됩니다. &ndash; 예를 들어, 백그라운드에서 음악을 재생하거나 서버에 사진을 업로드하는 작업입니다. 서비스에 대한 자세한 내용은 [서비스 만들기](~/android/app-fundamentals/services/index.md) 및 [Android 서비스](~/android/app-fundamentals/services/index.md) 가이드를 참조하세요.
 
@@ -42,7 +42,7 @@ Android 애플리케이션은 모든 형식의 블록이 아니라 한 가지 �
 ### <a name="intents"></a>의도
 
 Android 애플리케이션의 다른 기본 개념은 *의도*입니다.
-Android는 *최소 권한의 원칙*에 맞게 디자인되었습니다. &ndash; 애플리케이션에는 작동하는 데 필요한 블록에 대한 액세스 권한이 있고 운영 체제 또는 기타 애플리케이션을 구성하는 블록에 대한 액세스 권한은 제한됩니다. 마찬가지로 블록은 *느슨하게 결합*됩니다. &ndash; 다른 블록에 대한 적은 기술 및 제한된 액세스이 포함되도록 디자인되었습니다(동일한 애플리케이션의 일부인 블록인 경우에도).
+Android는 *최소 권한의 원칙*에 맞게 디자인되었습니다. 애플리케이션에는 작동하는 데 필요한 블록에 대한 액세스 권한이 있고 운영 체제 또는 기타 애플리케이션을 구성하는 블록에 대한 액세스 권한은 제한됩니다. 마찬가지로 블록은 *느슨하게 결합*됩니다. 다른 블록에 대해 적은 지식 및 제한된 액세스가 포함되도록 디자인되었습니다(동일한 애플리케이션의 일부인 블록인 경우에도).
 
 통신을 위해 애플리케이션 블록은 *의도*라고 하는 비동기 메시지를 서로 전달합니다. 의도는 수신하는 블록 및 경우에 따라 일부 데이터에 대한 정보를 포함합니다. 하나의 앱 구성 요소에서 보낸 의도는 다른 앱 구성 요소에 어떤 항목을 트리거하여 두 가지 앱 구성 요소를 바인딩하고 통신할 수 있도록 합니다. 의도를 서로 전송하여 블록에서 카메라 앱을 시작하거나, 위치 정보를 수집하거나, 화면 간에 이동하는 등 복잡한 작업을 조정할 수 있습니다.
 
@@ -81,7 +81,7 @@ translationHistoryButton.Click += (sender, e) =>
 
 Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가지 개념이 도입되었습니다. 이러한 개념은 다음과 같습니다.
 
-**문자열 리소스**&ndash; Phoneword 애플리케이션에서 `"@string/translationHistory"`의 텍스트는 `TranslationHistoryButton`로 설정되었습니다. `@string` 구문은 문자열의 값이 _문자열 리소스 파일_인 **Strings.xml**에 저장되었음을 의미합니다. `translationHistory` 문자열에 대한 값은 **Strings.xml**에 추가되었습니다.
+**문자열 리소스** &ndash; Phoneword 애플리케이션에서 `"@string/translationHistory"`의 텍스트는 `TranslationHistoryButton`로 설정되었습니다. `@string` 구문은 문자열의 값이 _문자열 리소스 파일_인 **Strings.xml**에 저장되었음을 의미합니다. `translationHistory` 문자열에 대한 값은 **Strings.xml**에 추가되었습니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -92,7 +92,7 @@ Phoneword 애플리케이션에는 이 가이드에서 다루지 않은 몇 가�
 
 문자열 리소스 및 다른 Android 리소스에 대한 자세한 내용은 [Android 리소스 가이드](~/android/app-fundamentals/resources-in-android/index.md)를 참조하세요.
 
-**ListView 및 ArrayAdapter** &ndash; _ListView_는 행의 스크롤 목록을 표시하는 간단한 방법을 제공하는 UI 구성 요소입니다. `ListView` 인스턴스에는 행 보기에 포함된 데이터를 사용하여 피드하는 _어댑터_가 필요합니다. 다음 코드 줄은 `TranslationHistoryActivity`의 사용자 인터페이스를 채우는 데 사용되었습니다.
+**ListView 및 ArrayAdapter** &ndash;_ListView_는 행의 스크롤 목록을 표시하는 간단한 방법을 제공하는 UI 구성 요소입니다. `ListView` 인스턴스에는 행 보기에 포함된 데이터를 사용하여 피드하는 _어댑터_가 필요합니다. 다음 코드 줄은 `TranslationHistoryActivity`의 사용자 인터페이스를 채우는 데 사용되었습니다.
 
 ```csharp
 this.ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, phoneNumbers);
