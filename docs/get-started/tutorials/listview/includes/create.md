@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 28a0b894d6230810f99ffaec4b93d9d87120e30f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c864f5d97e72a58e4b3c28fdeb97b7cfaea75992
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67277348"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389994"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -42,7 +42,7 @@ ms.locfileid: "67277348"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`ListView`](xref:Xamarin.Forms.Image)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성은 표시할 항목을 지정하고 이는 문자열의 배열에서 정의됩니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`ListView`](xref:Xamarin.Forms.ListView)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성은 표시할 항목을 지정하고 이는 문자열의 배열에서 정의됩니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
@@ -84,7 +84,7 @@ ms.locfileid: "67277348"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`ListView`](xref:Xamarin.Forms.Image)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성은 표시할 항목을 지정하고 이는 문자열의 배열에서 정의됩니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`ListView`](xref:Xamarin.Forms.ListView)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) 속성은 표시할 항목을 지정하고 이는 문자열의 배열에서 정의됩니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 

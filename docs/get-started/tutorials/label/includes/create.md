@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9d78f0e9bf3b8d6d227f76b2729be849e5cdd3a6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1bcd808221ee319fa2818563418d2362b146e354
+ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "72678728"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389920"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -31,7 +31,7 @@ ms.locfileid: "72678728"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Label`](xref:Xamarin.Forms.Label)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Label.Text`](xref:Xamarin.Forms.Button.Text) 속성은 표시할 텍스트를 지정하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 `Label`이(가) 수평 가운데에 배치되도록 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Label`](xref:Xamarin.Forms.Label)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성은 표시할 텍스트를 지정하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 `Label`이(가) 수평 가운데에 배치되도록 지정합니다.
 
 1. Visual Studio 도구 모음에서 선택한 원격 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "72678728"
     </ContentPage>
     ```
 
-    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Label`](xref:Xamarin.Forms.Label)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Label.Text`](xref:Xamarin.Forms.Button.Text) 속성은 표시할 텍스트를 지정하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 텍스트가 수평 가운데에 배치되도록 지정합니다.
+    이 코드는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에서 [`Label`](xref:Xamarin.Forms.Label)로 구성된 페이지에 대한 사용자 인터페이스를 선언적으로 정의합니다. [`Label.Text`](xref:Xamarin.Forms.Label.Text) 속성은 표시할 텍스트를 지정하고 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성은 텍스트가 수평 가운데에 배치되도록 지정합니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
