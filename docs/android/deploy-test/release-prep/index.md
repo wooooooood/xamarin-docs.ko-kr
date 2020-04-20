@@ -367,7 +367,7 @@ Android 앱 번들에 대한 자세한 내용은 [Android 앱 번들](https://de
 
 [![보관 파일 보기](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
-이 예제에서는 **보관 관리자**가 하나의 보관된 애플리케이션인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관파일과 함께 저장할 수 있습니다. Xamarin.Android 애플리케이션의 보관된 버전을 게시하려면 **보관 **에서 앱을 선택하고 다음과 같이 **서명 및 배포...** 를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
+이 예제에서는 **보관 관리자**가 하나의 보관된 애플리케이션인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관 파일과 함께 저장할 수 있습니다. Xamarin.Android 애플리케이션의 보관된 버전을 게시하려면 **보관 관리자**에서 앱을 선택하고 다음과 같이 **서명 및 배포...**를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
 
 [![서명 및 배포](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
