@@ -51,7 +51,7 @@ landingContent:
       url: mediaelement.md
     - text: WebView
       url: webview.md
-- title: 시작 명령 뷰
+- title: 명령 시작 뷰
   linkLists:
   - linkListType: concept
     links:
