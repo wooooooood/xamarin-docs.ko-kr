@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 7278fd624bb3147c2e1a1a1a79adde68813a9888
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ef2f8e0375786ba7b627fdf75545cbb48318c1aa
+ms.sourcegitcommit: 854798de42566750d9c70b6d0539b7ee73ff6ddc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020161"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646593"
 ---
 # <a name="android-callable-wrappers-for-xamarinandroid"></a>Xamarin.Android용 Android 호출 가능 래퍼
 
@@ -74,7 +74,7 @@ MD5SUM 기반 ACW 명명은 Xamarin.Android 5.0에서 도입되었습니다. 특
 
 Android 인터페이스(예제: [Android.Content.IComponentCallbacks](xref:Android.Content.IComponentCallbacks))를 구현해야 하는 경우가 있습니다. 모든 Android 클래스 및 인터페이스는 [Android.Runtime.IJavaObject](xref:Android.Runtime.IJavaObject) 인터페이스를 확장하므로 `IJavaObject`를 구현하는 방법에 대한 질문이 발생합니다. 
 
-위의 질문에 답변했습니다. 모든 Android 형식이 `IJavaObject`를 구현해야 하는 이유는 Xamarin.Android에는 Android에 제공할 Android 호출 가능 래퍼(즉, 지정된 형식에 대한 Java 프록시)가 있기 때문입니다. **monodroid.exe**는 `Java.Lang.Object` 서브클래스만 찾고 `Java.Lang.Object`는 `IJavaObject,`를 구현하므로 대답은 명백하게 서브클래스 `Java.Lang.Object`입니다. 
+위의 질문에 답변했습니다. 모든 Android 형식이 `IJavaObject`를 구현해야 하는 이유는 Xamarin.Android에는 Android에 제공할 Android 호출 가능 래퍼(즉, 지정된 형식에 대한 Java 프록시)가 있기 때문입니다. **monodroid.exe**는 `Java.Lang.Object` 서브클래스만 찾고 `Java.Lang.Object`는 `IJavaObject`를 구현하므로 대답은 명백하게 서브클래스 `Java.Lang.Object`입니다. 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {

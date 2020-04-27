@@ -5,12 +5,12 @@ ms.assetid: B3342772-FB88-4B7F-BC15-8BC78EED749E
 author: JonDouglas
 ms.author: jodou
 ms.date: 09/17/2019
-ms.openlocfilehash: c19c9e5bd279824ea2d3e4e9f88857388f786a2c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b26d99c131e9759da3077a767476de38712bcb18
+ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73612273"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82047575"
 ---
 # <a name="android-10-with-xamarin"></a>Xamarin이 포함된 Android 10
 
@@ -78,7 +78,7 @@ Android 프로젝트를 만들 때는 Android 10.0 이상을 대상으로 버전
 
 ### <a name="configure-a-device-or-emulator"></a>디바이스 또는 에뮬레이터 구성
 
-픽셀과 같은 물리적 디바이스를 사용하는 경우 휴대폰 설정에서 `System` > `System update` > `Check for update`로 이동하여 Android 10 업데이트를 다운로드할 수 있습니다. 디바이스를 플래시하려면 디바이스에 대한 [팩터리 이미지](https://developers.google.com/android/images) 또는 [OTA 이미지](https://developers.google.com/android/ota)를 플래시하는 방법에 대한 지침을 참조하세요.
+픽셀과 같은 물리적 디바이스를 사용하는 경우 휴대폰 설정에서 시스템 > 시스템 업데이트 > 업데이트 확인으로 이동하여 Android 10 업데이트를 다운로드할 수 있습니다. 디바이스를 플래시하려면 디바이스에 대한 [팩터리 이미지](https://developers.google.com/android/images) 또는 [OTA 이미지](https://developers.google.com/android/ota)를 플래시하는 방법에 대한 지침을 참조하세요.
 
 에뮬레이터를 사용하는 경우 API 수준 29용 가상 디바이스를 만들고 x86 기반 이미지를 선택합니다. Android 디바이스 관리자를 사용하여 가상 디바이스를 만들고 관리하는 방법에 대한 자세한 내용은 [Android 디바이스 관리자를 사용하여 가상 디바이스 관리](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager)를 참조하세요. 테스트 및 디버깅을 위해 Android Emulator를 사용하는 방법에 대한 자세한 내용은 [Android Emulator에서 디버깅](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)을 참조하세요.
 

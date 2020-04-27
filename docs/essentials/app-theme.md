@@ -5,12 +5,12 @@ ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e31cae6ff639dbe261599a7cf78ae31fc09318b3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f322855f26d7a57acc06e97e0c97ab201c3fa586
+ms.sourcegitcommit: a9280318bf7bb69e4e5744ee739e76a9cba36b28
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79190323"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82047402"
 ---
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: 앱 테마
 
@@ -62,7 +62,7 @@ Android는 구성 모드를 사용하여 사용자가 요청하는 테마 유형
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-기본적으로 앱은 Windows 설정에서 사용자가 설정한 테마(**설정 > 개인 설정 > 색> 기본 앱 모드 선택**)를 사용하여 실행됩니다. 사용자 기본값을 재정의하고 사용할 테마를 지정하도록 앱의 RequestedTheme 속성을 설정할 수 있습니다.
+UWP 애플리케이션은 **RequestedTheme** 아래에 있는 UWP App.xaml의 설정을 따릅니다. 특정 테마로 설정된 경우 Xamarin.Essentials는 항상 이 설정을 반환합니다. OS의 동적 테마를 사용하려면 애플리케이션에서 이 노드를 제거합니다. 그러면 앱이 실행될 때 사용자가 Windows 설정(**설정 > 개인 설정 > 색 > 기본 앱 모드 선택**)에서 설정한 테마를 반환합니다.
 
 [UWP 요청된 테마 설명서](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme)에서 자세한 내용을 알아볼 수 있습니다.
 
