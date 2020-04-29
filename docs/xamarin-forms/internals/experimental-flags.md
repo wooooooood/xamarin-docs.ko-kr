@@ -6,13 +6,13 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/20/2020
-ms.openlocfilehash: cebb996da992058616f9cf96ef3212c9ce27022a
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+ms.date: 04/14/2020
+ms.openlocfilehash: cca377a7a88599bc34fd66695ad303162e6be200
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112602"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516543"
 ---
 # <a name="xamarinforms-experimental-flags"></a>Xamarin 양식 실험적 플래그
 
@@ -20,10 +20,13 @@ ms.locfileid: "80112602"
 
 Xamarin.ios에는 다음과 같은 실험적 플래그가 포함 되어 있습니다.
 
+- `AppTheme_Experimental`
 - `CarouselView_Experimental`
+- `Expander_Experimental`
 - `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
+- `RadioButton_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -38,39 +41,39 @@ Xamarin.ios에는 다음과 같은 실험적 플래그가 포함 되어 있습�
 
 ## <a name="enable-flags-in-platform-projects"></a>플랫폼 프로젝트에서 플래그 사용
 
-`Xamarin.Forms.Forms.SetFlags` 메서드를 사용 하 여 플랫폼 프로젝트에서 실험적 플래그를 사용 하도록 설정할 수 있습니다.
+메서드 `Xamarin.Forms.Forms.SetFlags` 를 사용 하 여 플랫폼 프로젝트에서 실험적 플래그를 사용 하도록 설정할 수 있습니다.
 
 ```csharp
 Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
 ```
 
-`SetFlags` 메서드는 iOS의 `AppDelegate` 클래스, Android의 `MainActivity` 클래스 및 UWP의 `App` 클래스에서 호출 해야 합니다.
+메서드 `SetFlags` 는 iOS의 클래스, `AppDelegate` `MainActivity` Android의 클래스 및 UWP의 `App` 클래스에서 호출 해야 합니다.
 
 > [!IMPORTANT]
-> 플랫폼 프로젝트에서 실험적 플래그를 사용 하도록 설정 하는 것은 `Forms.Init` 메서드가 호출 되기 전에 발생 해야 합니다.
+> 플랫폼 프로젝트에서 실험적 플래그를 사용 하도록 설정 하는 것 `Forms.Init` 은 메서드를 호출 하기 전에 수행 해야 합니다.
 
-`Xamarin.Forms.Forms.SetFlags` 메서드는 단일 메서드 호출에서 여러 실험적 플래그를 사용 하도록 설정할 수 있는 `string` 배열 인수를 수락 합니다.
+메서드 `Xamarin.Forms.Forms.SetFlags` 는 단일 메서드 `string` 호출에서 여러 실험적 플래그를 사용할 수 있도록 하는 배열 인수를 수락 합니다.
 
 ```csharp
 Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]
-> 후속 호출이 이전 호출의 결과를 덮어쓰기 때문에 `SetFlags` 메서드를 두 번 이상 호출 해서는 안 됩니다.
+> 후속 호출이 이전 `SetFlags` 호출의 결과를 덮어쓰기 때문에 메서드를 두 번 이상 호출 하면 안 됩니다.
 
 ## <a name="enable-flags-in-your-app-class"></a>앱 클래스에서 플래그 사용
 
-`Device.SetFlags` 메서드를 사용 하 여 공유 코드 프로젝트의 `App` 클래스에서 실험적 플래그를 사용 하도록 설정할 수 있습니다.
+메서드 `Device.SetFlags` 를 사용 하 여 공유 코드 프로젝트의 `App` 클래스에서 실험적 플래그를 사용 하도록 설정할 수 있습니다.
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
-`Device.SetFlags` 메서드는 단일 메서드 호출에서 여러 실험적 플래그를 사용 하도록 설정할 수 있는 `IReadOnlyList<string>` 인수를 수락 합니다.
+메서드 `Device.SetFlags` 는 `IReadOnlyList<string>` 인수를 허용 하므로 단일 메서드 호출에서 여러 실험적 플래그를 사용 하도록 설정할 수 있습니다.
 
 ```csharp
 Device.SetFlags(new string[]{ "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]
-> 후속 호출이 이전 호출의 결과를 덮어쓰기 때문에 `SetFlags` 메서드를 두 번 이상 호출 해서는 안 됩니다.
+> 후속 호출이 이전 `SetFlags` 호출의 결과를 덮어쓰기 때문에 메서드를 두 번 이상 호출 하면 안 됩니다.
