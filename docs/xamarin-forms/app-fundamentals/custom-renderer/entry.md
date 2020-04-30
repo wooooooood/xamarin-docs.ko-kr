@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/26/2018
-ms.openlocfilehash: dccc47d8ee69686fe2ac7409f75284c64c99a2d4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 86714c2041edcd98c2bdd7b740a897dab8069752
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70772013"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516470"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
 
@@ -35,7 +35,7 @@ _Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 �
 이제 각 플랫폼에 서로 다른 배경색을 가진 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤을 구현하기 위해 각 항목을 차례로 설명합니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 간단한 사용자 지정 렌더러를 만드는 방법을 설명합니다. 그러나 각 플랫폼에 서로 다른 배경색을 가진 `Entry`를 구현하기 위해 사용자 지정 렌더러를 만들 필요는 없습니다. 플랫폼별 값을 제공하기 위해 [`Device`](xref:Xamarin.Forms.Device) 클래스 또는 `OnPlatform` 태그 확장을 사용하면 더 쉽게 수행할 수 있습니다. 자세한 내용은 [플랫폼별 값 제공](~/xamarin-forms/platform/device.md#providing-platform-specific-values) 및 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조하세요.
+> 이 문서에서는 간단한 사용자 지정 렌더러를 만드는 방법을 설명합니다. 그러나 각 플랫폼에 서로 다른 배경색을 가진 `Entry`를 구현하기 위해 사용자 지정 렌더러를 만들 필요는 없습니다. 플랫폼별 값을 제공하기 위해 [`Device`](xref:Xamarin.Forms.Device) 클래스 또는 `OnPlatform` 태그 확장을 사용하면 더 쉽게 수행할 수 있습니다. 자세한 내용은 [플랫폼별 값 제공](~/xamarin-forms/platform/device.md#provide-platform-specific-values) 및 [OnPlatform 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension)을 참조하세요.
 
 <a name="Creating_the_Custom_Entry_Control" />
 
