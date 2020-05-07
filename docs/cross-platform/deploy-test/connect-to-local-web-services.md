@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/16/2019
-ms.openlocfilehash: 29261f2ef6366c0dac8ac82e63584366a5cca0b0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/29/2020
+ms.openlocfilehash: 3dc1a2cb99c5ef018807a8ac81139a6cace3c66f
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74135274"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516493"
 ---
-# <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>iOS 시뮬레이터 및 Android Emulator에서 로컬 웹 서비스에 연결
+# <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>iOS 시뮬레이터 및 Android 에뮬레이터에서 로컬 웹 서비스에 연결
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
@@ -60,9 +60,7 @@ iOS 및 Android에서 실행되는 Xamarin 애플리케이션은 `HttpClient` �
 
 ### <a name="ios"></a>iOS
 
-iOS에서 실행되는 Xamarin 애플리케이션은 관리형 네트워크 스택이나 네이티브 `CFNetwork` 또는 `NSUrlSession` 네트워크 스택을 사용할 수 있습니다. 기본적으로 새 iOS 플랫폼 프로젝트는 TLS 1.2를 지원하려는 경우에는 `NSUrlSession` 네트워크 스택을 사용하고, 성능을 높이고 실행 파일 크기를 줄이려는 경우에는 네이티브 API를 사용합니다.
-
-그러나 애플리케이션이 로컬로 실행되는 보안 웹 서비스에 연결해야 하는 경우 개발자 테스트를 위해 관리형 네트워크 스택을 사용하기가 더 쉽습니다. 따라서 관리형 네트워크 스택을 사용하려면 디버그 시뮬레이터 빌드 프로필을 설정하고, `NSUrlSession` 네트워크 스택을 사용하려면 릴리스 빌드 프로필을 설정하는 것이 좋습니다. 각 네트워크 스택은 프로젝트 옵션에서 프로그래밍 방식을 사용하거나 선택기를 통해 설정할 수 있습니다. 자세한 내용은 [iOS/macOS용 HttpClient 및 SSL/TLS 구현 선택기](~/cross-platform/macios/http-stack.md)를 참조하세요.
+iOS에서 실행되는 Xamarin 애플리케이션은 관리형 네트워크 스택이나 네이티브 `CFNetwork` 또는 `NSUrlSession` 네트워크 스택을 사용할 수 있습니다. 기본적으로 새 iOS 플랫폼 프로젝트는 TLS 1.2를 지원하려는 경우에는 `NSUrlSession` 네트워크 스택을 사용하고, 성능을 높이고 실행 파일 크기를 줄이려는 경우에는 네이티브 API를 사용합니다. 자세한 내용은 [iOS/macOS용 HttpClient 및 SSL/TLS 구현 선택기](~/cross-platform/macios/http-stack.md)를 참조하세요.
 
 ### <a name="android"></a>Android
 
@@ -97,38 +95,14 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 ## <a name="bypass-the-certificate-security-check"></a>인증서 보안 검사 무시
 
-iOS 시뮬레이터 또는 Android Emulator에서 실행되는 애플리케이션에서 로컬 보안 웹 서비스를 호출하려고 하면 각 플랫폼에서 관리형 네트워크 스택을 사용하더라도 `HttpRequestException`이 throw됩니다. 로컬 HTTPS 개발 인증서가 자체 서명되며, 자체 서명된 인증서는 iOS 또는 Android에서 신뢰되지 않기 때문입니다.
-
-따라서 애플리케이션이 로컬 보안 웹 서비스를 사용하는 경우 SSL 오류를 무시해야 합니다. 현재 이를 수행하는 메커니즘은 iOS와 Android가 서로 다릅니다.
-
-### <a name="ios"></a>iOS
-
-관리형 네트워크 스택을 사용할 때 `ServicePointManager.ServerCertificateValidationCallback` 속성을 로컬 HTTPS 개발 인증서의 인증서 보안 검사 결과를 무시하는 콜백으로 설정하면 로컬 보안 웹 서비스의 경우 iOS에서 SSL 오류를 무시할 수 있습니다.
+iOS 시뮬레이터 또는 Android Emulator에서 실행되는 애플리케이션에서 로컬 보안 웹 서비스를 호출하려고 하면 각 플랫폼에서 관리형 네트워크 스택을 사용하더라도 `HttpRequestException`이 throw됩니다. 로컬 HTTPS 개발 인증서가 자체 서명되며, 자체 서명된 인증서는 iOS 또는 Android에서 신뢰되지 않기 때문입니다. 따라서 애플리케이션이 로컬 보안 웹 서비스를 사용하는 경우 SSL 오류를 무시해야 합니다. 이는 iOS 및 Android에서 관리형 및 네이티브 네트워크 스택을 모두 사용할 때 `HttpClientHandler` 개체의 `ServerCertificateCustomValidationCallback` 속성을 로컬 HTTPS 개발 인증서의 인증서 보안 검사 결과를 무시하는 콜백으로 설정하여 수행할 수 있습니다.
 
 ```csharp
-#if DEBUG
-    System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
-    {
-        if (certificate.Issuer.Equals("CN=localhost"))
-            return true;
-        return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
-    };
-#endif
-```
-
-이 코드 예제에서 유효성 검사를 진행한 인증서가 `localhost` 인증서가 아닌 경우 서버 인증서 유효성 검사 결과가 반환됩니다. 이 인증서의 경우 유효성 검사 결과가 무시되고 인증서가 유효하다는 것을 나타내는 `true`가 반환됩니다. 이 코드는 `LoadApplication(new App())` 메서드 호출 전에 iOS의 `AppDelegate.FinishedLaunching` 메서드에 추가해야 합니다.
-
-> [!NOTE]
-> iOS의 네이티브 네트워크 스택은 `ServerCertificateValidationCallback`에 연결되지 않습니다.
-
-### <a name="android"></a>Android
-
-관리형 네트워크 스택과 네이티브 `AndroidClientHandler` 네트워크 스택을 모두 사용할 때 `HttpClientHandler` 객체에서 `ServerCertificateCustomValidationCallback` 속성을 로컬 HTTPS 개발 인증서의 인증서 보안 검사 결과를 무시하는 콜백으로 설정하면 로컬 보안 웹 서비스의 경우 Android에서 SSL 오류를 무시할 수 있습니다.
-
-```csharp
+// This method must be in a class in a platform project, even if
+// the HttpClient object is constructed in a shared project.
 public HttpClientHandler GetInsecureHandler()
 {
-    var handler = new HttpClientHandler();
+    HttpClientHandler handler = new HttpClientHandler();
     handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
     {
         if (cert.Issuer.Equals("CN=localhost"))

@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/05/2019
-ms.openlocfilehash: 4049b3bdfdd6077dcfa151df9553722e63def0ba
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/22/2020
+ms.openlocfilehash: cd5ee471385761cad9f99c4b78103b9773415ddb
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303872"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517079"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
@@ -350,64 +350,84 @@ Shell.Current.FlyoutIsPresented = false;
 
 [![iOS 및 Android에서 템플릿 기반 FlyoutItem 개체의 스크린샷](flyout-images/flyoutitem-templated.png "셸 템플릿 기반 FlyoutItem 개체")](flyout-images/flyoutitem-templated-large.png#lightbox "셸 템플릿 기반 FlyoutItem 개체")
 
-
 `Shell.ItemTemplate`은(는) 연결된 속성이므로 특정 `FlyoutItem` 개체에 다양한 템플릿을 첨부할 수 있습니다.
 
 > [!NOTE]
 > 셸은 `ItemTemplate`의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에 `Title` 및 `FlyoutIcon` 속성을 제공합니다.
 
+또한 Shell에는 `FlyoutItem` 개체에 자동으로 적용되는 세 가지 스타일의 클래스가 포함되어 있습니다. 자세한 내용은 [FlyoutItem 및 MenuItem 스타일 클래스](#flyoutitem-and-menuitem-style-classes)를 참조하세요.
 
-### <a name="default-template-for-flyoutitems-and-menuitems"></a>FlyoutItem 및 MenuItem의 기본 템플릿
-Shell에서 기본 구현에 내부적으로 다음 템플릿을 사용합니다. 기존 레이아웃을 약간만 변경하려는 경우에 좋은 방법입니다. 또한 플라이아웃 항목의 Visual State Manager 기능을 보여 줍니다. 이 템플릿은 MenuItem에도 사용할 수 있습니다.
+### <a name="default-template-for-flyoutitems"></a>FlyoutItem의 기본 템플릿
+
+각 `FlyoutItem`에 사용되는 기본 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)은 다음과 같습니다.
 
 ```xaml
-<DataTemplate x:Key="FlyoutTemplates">
-    <Grid HeightRequest="{x:OnPlatform Android=50}">
+<DataTemplate x:Key="FlyoutTemplate">
+    <Grid x:Name="FlyoutItemLayout"
+          HeightRequest="{x:OnPlatform Android=50}"
+          ColumnSpacing="{x:OnPlatform UWP=0}"
+          RowSpacing="{x:OnPlatform UWP=0}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                    </VisualState>
+                    <VisualState x:Name="Normal" />
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{x:OnPlatform Android=#F2F2F2, iOS=#F2F2F2}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateGroupList>
         </VisualStateManager.VisualStateGroups>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50, UWP=Auto}" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Image Source="{Binding FlyoutIcon}"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
-            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        <Image x:Name="FlyoutItemImage"
+               Source="{Binding FlyoutIcon}"
+               VerticalOptions="Center"
+               HorizontalOptions="{x:OnPlatform Default=Center, UWP=Start}"
+               HeightRequest="{x:OnPlatform Android=24, iOS=22, UWP=16}"
+               WidthRequest="{x:OnPlatform Android=24, iOS=22, UWP=16}">
+            <Image.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="UWP"
+                            Value="12,0,12,0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Image.Margin>
         </Image>
-        <Label VerticalOptions="Center"
-                Text="{Binding Title}"
-                FontSize="{x:OnPlatform Android=14, iOS=Small}"
-                FontAttributes="Bold" Grid.Column="1">
+        <Label x:Name="FlyoutItemLabel"
+               Grid.Column="1"
+               Text="{Binding Title}"
+               FontSize="{x:OnPlatform Android=14, iOS=Small}"
+               HorizontalOptions="{x:OnPlatform UWP=Start}"
+               HorizontalTextAlignment="{x:OnPlatform UWP=Start}"
+               FontAttributes="{x:OnPlatform iOS=Bold}"
+               VerticalTextAlignment="Center">
             <Label.TextColor>
                 <OnPlatform x:TypeArguments="Color">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="#D2000000" />
+                        <On Platform="Android"
+                            Value="#D2000000" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.TextColor>
             <Label.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="20, 0, 0, 0" />
+                        <On Platform="Android"
+                            Value="20, 0, 0, 0" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.Margin>
             <Label.FontFamily>
                 <OnPlatform x:TypeArguments="x:String">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="sans-serif-medium" />
+                        <On Platform="Android"
+                            Value="sans-serif-medium" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.FontFamily>
@@ -415,6 +435,13 @@ Shell에서 기본 구현에 내부적으로 다음 템플릿을 사용합니다
     </Grid>
 </DataTemplate>
 ```
+
+이 템플릿은 기존 플라이아웃 레이아웃을 변경하기 위한 기준으로 사용할 수 있으며, 플라이아웃 항목에 구현되는 시각적 상태도 보여 줍니다.
+
+또한 [`Grid`](xref:Xamarin.Forms.Grid), [`Image`](xref:Xamarin.Forms.Image) 및 [`Label`](xref:Xamarin.Forms.Label) 요소는 모두 `x:Name` 값을 가지므로 Visual State Manager를 사용하여 대상으로 지정할 수 있습니다. 자세한 내용은 [여러 요소에 대한 상태 설정](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements)을 참조하세요.
+
+> [!NOTE]
+> `MenuItem` 개체에도 동일한 템플릿을 사용할 수 있습니다.
 
 ## <a name="flyoutitem-tab-order"></a>FlyoutItem 탭 순서
 
@@ -569,12 +596,50 @@ Shell.Current.CurrentItem = aboutItem;
 </Shell>
 ```
 
+이 예제에서는 Shell 수준 `MenuItemTemplate`을 첫 번째 `MenuItem` 개체에 첨부하고 인라인 `MenuItemTemplate`을 두 번째 `MenuItem`에 첨부합니다.
 
 > [!NOTE]
-> [플라이아웃 항목](#default-template-for-flyoutitems-and-menuitems)에 사용된 동일한 템플릿을 메뉴 항목에도 사용할 수 있습니다.
+> `FlyoutItem` 개체의 기본 템플릿은 `MenuItem` 개체에도 사용할 수 있습니다. 자세한 내용은 [FlyoutItem의 기본 템플릿](#default-template-for-flyoutitems)을 참조하세요.
 
-이 예제에서는 Shell 수준 `MenuItemTemplate`을 첫 번째 `MenuItem` 개체에 첨부하고 인라인 `MenuItemTemplate`을 두 번째 `MenuItem`에 첨부합니다.
+## <a name="flyoutitem-and-menuitem-style-classes"></a>FlyoutItem 및 MenuItem 스타일 클래스
+
+Shell에는 `FlyoutItem` 및 `MenuItem` 개체에 자동으로 적용되는 세 가지 스타일 클래스가 포함되어 있습니다. 스타일 클래스 이름은 다음과 같습니다.
+
+- `FlyoutItemLabelStyle`
+- `FlyoutItemImageStyle`
+- `FlyoutItemLayoutStyle`
+
+다음 XAML은 이러한 스타일 클래스에 대한 스타일을 정의하는 예제를 보여 줍니다.
+
+```xaml
+<Style TargetType="Label"
+       Class="FlyoutItemLabelStyle">
+    <Setter Property="TextColor"
+            Value="Black" />
+    <Setter Property="HeightRequest"
+            Value="100" />
+</Style>
+
+<Style TargetType="Image"
+       Class="FlyoutItemImageStyle">
+    <Setter Property="Aspect"
+            Value="Fill" />
+</Style>
+
+<Style TargetType="Layout"
+       Class="FlyoutItemLayoutStyle"
+       ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor"
+            Value="Teal" />
+</Style>
+```
+
+이러한 스타일은 [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) 속성을 스타일 클래스 이름으로 설정하지 않고도 `FlyoutItem` 및 `MenuItem` 개체에 자동으로 적용됩니다.
+
+또한 사용자 지정 스타일 클래스를 정의하고 `FlyoutItem` 및 `MenuItem` 개체에 적용할 수 있습니다. 스타일 클래스에 대한 자세한 내용은 [Xamarin.Forms 스타일 클래스](~/xamarin-forms/user-interface/styles/xaml/style-class.md)를 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xamarin.Forms 스타일 클래스](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)

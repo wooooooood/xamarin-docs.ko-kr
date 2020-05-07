@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/15/2020
-ms.openlocfilehash: f47dc08d11a97598966ba7af620cfc81e5fe284f
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: b1e573a6070a637ef2fdfa65bb0fc1375522fc3c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82532888"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852498"
 ---
 # <a name="xamarinforms-expander"></a>Xamarin.ios 확장기
 
@@ -26,6 +26,8 @@ Xamarin.ios `Expander` 컨트롤은 모든 콘텐츠를 호스트 하는 확장 
 
 > [!IMPORTANT]
 > `Expander`는 현재 실험적 이며 플래그를 `Expander_Experimental` 설정 하는 방법 으로만 사용할 수 있습니다. 자세한 내용은 [실험적 플래그](~/xamarin-forms/internals/experimental-flags.md)를 참조 하세요.
+>
+> 또한 컨트롤은 `Expander` `Xamarin.Forms` 네임 스페이스에서 완전히 구현 됩니다. 따라서 Xamarin.ios에서 지 원하는 모든 플랫폼에서 사용할 수 있습니다.
 
 컨트롤 `Expander` 은 다음 속성을 정의 합니다.
 

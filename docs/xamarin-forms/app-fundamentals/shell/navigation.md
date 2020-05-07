@@ -6,13 +6,13 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: 70f8f630558730f6074373eb3a814209921235de
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/02/2020
+ms.openlocfilehash: a40a2dc01c37773539089287d561f4c52ef7f6de
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71674561"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516523"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.Forms Shell 탐색
 
@@ -173,6 +173,36 @@ bears
 ```
 
 `monkeys` 경로의 등록된 페이지가 표시될 때 `details` 경로로 이동하면 `monkeys/details` 경로의 등록된 페이지가 표시됩니다. 마찬가지로, `bears` 경로의 등록된 페이지가 표시될 때 `details` 경로로 이동하면 `bears/details` 경로의 등록된 페이지가 표시됩니다. 이 예제에서 경로를 등록하는 방법에 대한 자세한 내용은 [페이지 경로 등록](#register-page-routes)을 참조하세요.
+
+### <a name="backwards-navigation"></a>뒤로 탐색
+
+뒤로 탐색은 `GotoAsync` 메서드의 인수로 ".."를 지정하여 수행할 수 있습니다.
+
+```csharp
+await Shell.Current.GoToAsync("..");
+```
+
+".."를 사용한 뒤로 탐색은 다음과 같이 경로와 결합할 수도 있습니다.
+
+```csharp
+await Shell.Current.GoToAsync("../route");
+```
+
+이 예제의 전체 효과는 뒤로 이동한 다음, 지정된 경로로 이동하는 것입니다.
+
+> [!IMPORTANT]
+> 지정된 경로로 이동하기 위해 뒤로 탐색이 경로 계층 구조의 현재 위치에 있는 경우에만 뒤로 탐색 및 지정된 경로로 탐색을 수행할 수 있습니다.
+
+마찬가지로 여러 번 뒤로 이동한 다음, 지정된 경로로 이동할 수 있습니다.
+
+```csharp
+await Shell.Current.GoToAsync("../../route");
+```
+
+이 예제의 전체 효과는 뒤로 두 번 이동한 다음, 지정된 경로로 이동하는 것입니다.
+
+> [!NOTE]
+> ".."를 사용하여 탐색하는 경우에도 데이터를 전달할 수 있습니다. 자세한 내용은 [데이터 전달](#pass-data)을 참조하세요.
 
 ### <a name="invalid-routes"></a>잘못된 경로
 

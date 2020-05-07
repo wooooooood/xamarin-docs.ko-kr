@@ -6,13 +6,13 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/14/2018
-ms.openlocfilehash: 11ad1fb18d1263eb77ef037350a3633510934c42
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 03/10/2020
+ms.openlocfilehash: 984f54698ccdee54c0b8670a50cb1f4432327977
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303824"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82517273"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
@@ -44,7 +44,7 @@ _NavigationPage 클래스는 사용자가 필요에 따라 페이지를 앞으�
 - Android에는 탐색 모음이 제목, 아이콘 및 이전 페이지로 돌아가는 *뒤로* 단추를 표시하는 페이지 맨 위에 나타납니다. 아이콘은 Android 플랫폼 관련 프로젝트의 `MainActivity` 클래스를 데코레이팅하는 `[Activity]` 특성에 정의됩니다.
 - 유니버설 Windows 플랫폼에서 제목을 표시하는 페이지 맨 위에 탐색 모음이 나타납니다.
 
-모든 플랫폼에서 [`Page.Title`](xref:Xamarin.Forms.Page.Title) 속성 값이 페이지 제목으로 표시됩니다.
+모든 플랫폼에서 [`Page.Title`](xref:Xamarin.Forms.Page.Title) 속성 값이 페이지 제목으로 표시됩니다. 또한 `IconColor` 속성을 탐색 모음의 아이콘에 적용되는 [`Color`](xref:Xamarin.Forms.Color)로 설정할 수 있습니다.
 
 > [!NOTE]
 > `NavigationPage`를 `ContentPage` 인스턴스만으로 채우는 것이 좋습니다.

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/03/2019
-ms.openlocfilehash: b87e713f89951d03408fa559bcf6e02cdae65e28
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 04d40aa4cafe663113957d31bdb8a6463ba58ba5
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74824249"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516451"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Xamarin.Forms 사용자 지정 렌더러
 
@@ -34,9 +34,9 @@ Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤을 사용하면 한 
 
 [`ContentPage`](xref:Xamarin.Forms.ContentPage)는 단일 보기를 표시하고 대부분의 화면을 차지하는 시각적 요소입니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 `ContentPage` 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
 
-## <a name="customizing-a-map"></a>[지도 사용자 지정](map/index.md)
+## <a name="customizing-a-map-pin"></a>[지도 핀 사용자 지정](map-pin.md)
 
-Xamarin.Forms.Maps는 사용자에게 친숙하고 빠른 환경을 제공하기 위해 각 플랫폼에서 네이티브 맵 API를 사용하는 맵을 표시하기 위한 플랫폼 간 추상화를 제공합니다. 이 항목에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 `Map` 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
+Xamarin.Forms.Maps는 사용자에게 친숙하고 빠른 환경을 제공하기 위해 각 플랫폼에서 네이티브 맵 API를 사용하는 맵을 표시하기 위한 플랫폼 간 추상화를 제공합니다. 이 항목에서는 개발자가 고유한 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 `Map` 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.
 
 ## <a name="customizing-a-listview"></a>[ListView 사용자 지정](listview.md)
 

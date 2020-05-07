@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/26/2020
-ms.openlocfilehash: da6dbe63b7151ef0f9a1defca66fbb3abb25ad1d
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 992e4dd1a2b2a1d1a4f0b76dadf4704241486415
+ms.sourcegitcommit: 520ea9d52266f745d2c09642bac21f64a56f8c31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517548"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859100"
 ---
 # <a name="xamarinforms-swipeview"></a>Xamarin.ios SwipeView
 
@@ -330,9 +330,9 @@ SwipeView swipeView = new SwipeView
 
 메서드 `Open` 는가 열리는 `OpenSwipeItem` 방향을 `SwipeView` 지정 하기 위해 인수를 필요로 합니다. 열거형 `OpenSwipeItem` 에는 네 개의 멤버가 있습니다.
 
-- `LeftItems`- `LeftItems` 컬렉션의 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 왼쪽에서 열리도록 지정 합니다.
-- `TopItems`- `TopItems` 컬렉션의 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 맨 위에서 열립니다.
-- `RightItems`- `RightItems` 컬렉션의 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 오른쪽에서 열리도록 지정 합니다.
+- `LeftItems`- `LeftItems` 컬렉션에서 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 왼쪽에서 열리도록 지정 합니다.
+- `TopItems`- `TopItems` 컬렉션에서 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 맨 위에서 열립니다.
+- `RightItems`- `RightItems` 컬렉션에서 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 오른쪽에서 열리도록 지정 합니다.
 - `BottomItems`- `BottomItems` 컬렉션의 살짝 밀기 `SwipeView` 항목을 표시 하기 위해가 아래쪽에서 열리도록 지정 합니다.
 
 `SwipeView` 이름이 `swipeView`지정 된 경우 다음 예제에서는를 `SwipeView` 열어 `LeftItems` 컬렉션의 살짝 밀기 항목을 표시 하는 방법을 보여 줍니다.

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: c9c6816115d89212ea720f027d51af6c990cfe8d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
+ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80261312"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166341"
 ---
 # <a name="preparing-an-application-for-release"></a>릴리스용 애플리케이션 준비
 
@@ -142,7 +142,7 @@ Visual Studio에서는 다음 스크린 샷에서처럼 프로젝트 **속성**�
 
 ProGuard는 Xamarin.Android 링커를 대체하지 않습니다. Xamarin.Android 링커는 *관리* 코드를 연결하고 ProGuard는 Java 바이트 코드를 연결합니다. 빌드 프로세스에서는 먼저 Xamarin.Android 링커를 사용하여 관리 코드(C#) 수준에서 앱을 최적화한 다음 ProGuard(사용하도록 설정된 경우)를 사용하여 Java 바이트 코드 수준에서 APK를 최적화합니다. 
 
-**ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다. 
+**ProGuard 사용**을 선택하면 Xamarin.Android이 나타나는 APK에서 ProGuard 도구를 실행합니다. ProGuard 구성 파일이 생성되며 빌드 시점에 ProGuard에서 사용됩니다. Xamarin.Android는 사용자 지정*ProguardConfiguration* 빌드 작업도 지원합니다. 사용자 지정 ProGuard 구성 파일을 프로젝트에 추가하고 아래 예제에서처럼 마우스 오른쪽 단추로 클릭하여 빌드 작업으로 선택할 수 있습니다.  
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -166,7 +166,7 @@ ProGuard 도구 사용에 대한 자세한 정보는 [ProGuard](~/android/deploy
 
 ### <a name="disable-debugging"></a>디버깅 사용 안 함
 
-Android 애플리케이션 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 애플리케이션의 디버그 빌드에 대해 기본적으로 켜져 있습니다. JDWP는 개발 중에 중요하지만 릴리스된 애플리케이션에는 보안 문제를 야기할 수 있습니다. 
+Android 애플리케이션 개발 중에는 *JDWP(Java Debug Wire Protocol)* 를 사용하여 디버그를 수행합니다. 이것은 **adb** 같은 도구가 디버그를 위해 JVM과 통신할 수 있게 하는 기술입니다. JDWP는 Xamarin.Android 애플리케이션의 디버그 빌드에 대해 기본적으로 켜져 있습니다.  JDWP는 개발 중에 중요하지만 릴리스된 애플리케이션에는 보안 문제를 야기할 수 있습니다. 
 
 > [!IMPORTANT]
 > 디버그 상태를 사용하지 않게 설정하지 않은 경우 Java 프로세스에 완전히 액세스할 수 있고 애플리케이션의 컨텍스트에서 임의 코드를 실행할 수 있으므로(JDWP를 통해 가능) 릴리스된 애플리케이션에서는 디버그 상태를 항상 사용하지 않게 설정합니다.
@@ -212,11 +212,11 @@ Dotfuscator CE를 구성하려면 [Xamarin에서 Dotfuscator Community Edition �
 
 ### <a name="bundle-assemblies-into-native-code"></a>어셈블리를 네이티브 코드에 번들
 
-이 옵션을 사용할 경우 어셈블리가 네이티브 공유 라이브러리에 번들로 포함됩니다. 이 옵션은 코드를 안전하게 유지합니다. 즉 네이티브 바이너리에 관리 어셈블리를 포함하여 보호합니다.
+이 옵션을 사용할 경우 어셈블리가 네이티브 공유 라이브러리에 번들로 포함됩니다. 이렇게 하면 어셈블리를 압축하여 더 작은 `.apk` 파일을 사용할 수 있습니다. 또한 어셈블리 압축은 *최소한*의 난독 처리 형식을 제공합니다. 이러한 난독 처리를 사용하지 않아야 합니다.
 
 이 옵션을 사용하려면 엔터프라이즈 라이선스가 필요하며 **빠른 배포 사용**을 사용하지 않도록 설정한 경우에만 사용할 수 있습니다. **어셈블리를 네이티브 코드에 번들**은 기본적으로 사용하지 않게 설정되어 있습니다.
 
-**네이티브 코드에 번들** 옵션은 어셈블리가 네이티브 코드로 컴파일 되는 것이 *아닙니다*. [**AOT 컴파일**](#aot)을 사용하여 어셈블리를 네이티브 코드로 컴파일할 수 없습니다(현재 테스트 기능이며 프로덕션에 사용할 수 없음).
+**네이티브 코드에 번들** 옵션은 어셈블리가 네이티브 코드로 컴파일 되는 것이 *아닙니다*. [**AOT 컴파일**](#aot)을 사용하여 어셈블리를 네이티브 코드로 컴파일할 수 없습니다.
 
 <a name="aot" />
 
@@ -341,9 +341,9 @@ Android 앱 번들에 대한 자세한 내용은 [Android 앱 번들](https://de
 
 **세부 정보 패널** 각 보관 파일에 대한 추가 정보를 표시합니다. 이를 통해 사용자가 배포 워크플로를 시작하거나 배포가 만들어진 폴더를 열 수 있습니다. **빌드 설명** 섹션을 사용하면 보관 파일에 빌드 설명을 포함할 수 있습니다.
 
-### <a name="distribution"></a>배포
+### <a name="distribution"></a>분포
 
-애플리케이션의 보관 버전을 게시할 준비가 되면 **보관 관리자**에서 보관 파일을 선택하고 **배포...** 단추를 클릭합니다.
+애플리케이션의 보관 버전을 게시할 준비가 되면 **Archive Manager**에서 보관 파일을 선택하고 **배포...** 단추를 클릭합니다.
 
 [![배포 단추](images/vs/13-distribute-sml.png)](images/vs/13-distribute.png#lightbox)
 
@@ -363,11 +363,11 @@ Android 앱 번들에 대한 자세한 내용은 [Android 앱 번들](https://de
 
 [![게시를 위해 보관](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png#lightbox)
 
-**게시를 위해 보관**은 프로젝트를 빌드하고 보관 파일에 번들로 묶습니다. **모두 보관** 메뉴 선택은 솔루션에서 보관 가능한 모든 프로젝트를 보관하게 됩니다. 두 경우 모두 빌드 및 번들 작업이 완료되면 자동으로 **보관 관리자**가 열립니다.
+**게시를 위해 보관**은 프로젝트를 빌드하고 보관 파일에 번들로 묶습니다. **모두 보관** 메뉴 선택은 솔루션에서 보관 가능한 모든 프로젝트를 보관하게 됩니다. 두 경우 모두 빌드 및 번들 작업이 완료되면 자동으로 **Archive Manager**가 열립니다.
 
 [![보관 파일 보기](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
-이 예제에서는 **보관 관리자**가 하나의 보관된 애플리케이션인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관 파일과 함께 저장할 수 있습니다. Xamarin.Android 애플리케이션의 보관된 버전을 게시하려면 **보관 관리자**에서 앱을 선택하고 다음과 같이 **서명 및 배포...**를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
+이 예제에서는 **Archive Manager**가 하나의 보관된 애플리케이션인 **MyApp**만 나열합니다. 설명 필드를 통해 짧은 설명을 보관파일과 함께 저장할 수 있습니다. Xamarin.Android 애플리케이션의 보관된 버전을 게시하려면 **Archive Manager**에서 앱을 선택하고 다음과 같이 **서명 및 배포...** 를 클릭합니다. 나타나는 **서명 및 배포** 대화 상자에는 두 가지 선택 항목이 있습니다.
 
 [![서명 및 배포](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 

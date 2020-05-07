@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/11/2020
-ms.openlocfilehash: 7a2671c47a6d2fceaf2b444cfa8988b4bb8c249c
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.date: 05/06/2020
+ms.openlocfilehash: 31b705a51e405285cc5eaae391dd0794bfacfd9c
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517266"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852480"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin 양식 웹 보기
 
@@ -114,7 +114,7 @@ browser.Source = htmlSource;
 
 ### <a name="local-html-content"></a>로컬 HTML 콘텐츠
 
-웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 다음은 그 예입니다.
+웹 보기는 앱 내에 포함 된 HTML, CSS 및 JavaScript의 콘텐츠를 표시할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```html
 <html>
@@ -240,7 +240,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html")))
 }
 ```
 
-#### <a name="universal-windows-platform"></a>UWP
+#### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
 UWP (유니버설 Windows 플랫폼) 프로젝트에서 빌드 작업을 *내용*으로 설정 하 여 프로젝트 루트에 HTML, CSS 및 이미지를 넣습니다.
 
@@ -352,7 +352,7 @@ public partial class InAppBrowserXaml : ContentPage
 - `Source`– 탐색을 수행한 요소입니다.
 - `Url`– 탐색 대상입니다.
 
-로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 다음은 그 예입니다.
+로드 하는 데 시간이 오래 걸리는 웹 페이지를 사용 하는 것으로 예상 [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) 되 [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) 는 경우 및 이벤트를 사용 하 여 상태 표시기를 구현 하는 것이 좋습니다. 예를 들면 다음과 같습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -554,11 +554,13 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 이 작업을 수행 하기 위한 필수 구성 요소는 다음과 같습니다.
 
-- Xamarin. forms **4.5 이상** &ndash; 시험판 버전의 xamarin. forms 4.5를 사용할 수 있습니다.
-- **Xamarin.ios 13.10.0.17 이상** &ndash; [Visual Studio에서](~/cross-platform/troubleshooting/questions/version-logs.md#version-information)xamarin.ios 버전을 확인 합니다. 이 버전의 Xamarin.ios는 Mac용 Visual Studio 8.4.1 및 Visual Studio 16.4.3에 포함 되어 있습니다.
-- 코드 **에 `UIWebView` ** &ndash; 대 한 참조를 제거 하려면를 사용 하 `UIWebView` 는 또는 클래스에 대 한 참조가 `UIWebView`없어야 합니다.
+- **Xamarin.ios 4.5 이상**. 앱에서 재질 시각적 개체를 사용 하는 경우 Xamarin. Forms 4.6 이상이 필요 합니다.
+- **Xamarin.ios 13.10.0.17 이상** [Visual Studio에서](~/cross-platform/troubleshooting/questions/version-logs.md#version-information)xamarin.ios 버전을 확인 합니다. 이 버전의 Xamarin.ios는 Mac용 Visual Studio 8.4.1 및 Visual Studio 16.4.3에 포함 되어 있습니다.
+- **에 대 한 `UIWebView`참조를 제거 **합니다. 코드에를 사용 하는 또는 클래스 `UIWebView` 에 대 한 참조가 없어야 합니다 `UIWebView`.
 
-### <a name="configure-the-linker-preview"></a>링커 미리 보기 구성
+참조를 검색 하 고 제거 `UIWebView` 하는 방법에 대 한 자세한 내용은 [uiwebview 보기](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)사용 중단을 참조 하세요.
+
+### <a name="configure-the-linker"></a>링커 구성
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -594,3 +596,4 @@ webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 
 - [웹 보기 작업 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [웹 보기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [UIWebView 보기 사용 중단](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

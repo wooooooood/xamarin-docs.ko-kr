@@ -6,13 +6,13 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/21/2020
-ms.openlocfilehash: bf9c06dae0df7da1cc69a85d8436376494039959
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.date: 04/17/2020
+ms.openlocfilehash: b4eeb776cafa131f13eb70aca5bd20df6eafa07f
+ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303836"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82516723"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.Forms 트리거
 
@@ -341,7 +341,7 @@ Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
 
 [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) 클래스에서 파생되는 [`StateTrigger`](xref:Xamarin.Forms.StateTrigger) 클래스에는 [`IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) 바인딩 가능한 속성이 있습니다. `StateTrigger`는 `IsActive` 속성 값이 변경될 때 [`VisualState`](xref:Xamarin.Forms.VisualState) 변경을 트리거합니다.
 
-모든 상태 트리거의 기본 클래스인 [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) 클래스에는 [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) 속성 및 [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) 이벤트가 있습니다. 이 이벤트는 [`VisualState`](xref:Xamarin.Forms.VisualState)가 변경될 때마다 발생합니다.
+모든 상태 트리거의 기본 클래스인 [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) 클래스에는 [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) 속성 및 [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) 이벤트가 있습니다. 이 이벤트는 [`VisualState`](xref:Xamarin.Forms.VisualState)가 변경될 때마다 발생합니다. 또한 `StateTriggerBase` 클래스에는 재정의 가능한 `OnAttached` 및 `OnDetached` 메서드가 있습니다.
 
 > [!IMPORTANT]
 > [`StateTrigger.IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) 바인딩 가능한 속성은 상속된 [`StateTriggerBase.IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) 속성을 숨깁니다.
@@ -405,7 +405,7 @@ Unchecked state active: True
 ```
 
 > [!NOTE]
-> 사용자 지정 상태 트리거는 [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) 클래스에서 파생하여 만들 수 있습니다.
+> 사용자 지정 상태 트리거는 [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) 클래스에서 파생되고 필요한 등록 및 정리를 수행하도록 `OnAttached` 및 `OnDetached` 메서드를 재정의하여 만들 수 있습니다.
 
 ### <a name="adaptive-trigger"></a>적응 트리거
 
