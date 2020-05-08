@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2020
-ms.openlocfilehash: cd5ee471385761cad9f99c4b78103b9773415ddb
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517079"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852478"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
 
@@ -480,7 +480,13 @@ Shell.Current.FlyoutIsPresented = false;
 
 이 코드는 `aboutItem`라는 `ShellContent` 개체를 `CurrentItem` 속성으로 설정하여 표시되도록 합니다. 이 예제에서 암시적 변환은 `ShellContent` 개체를 `Tab` 개체로 래핑하는 데 사용되며, 이 개체는 `FlyoutItem` 개체로 래핑됩니다.
 
-해당하는 C# 코드는 다음과 같습니다.
+`ShellContent` 개체의 이름이 `aboutItem`이면 동등한 C# 코드는 다음과 같습니다.
+
+```csharp
+CurrentItem = aboutItem;
+```
+
+이 예제에서는 서브클래스 `Shell` 클래스에 `CurrentItem` 속성이 설정되어 있습니다. 또는 `Shell.Current` 정적 속성을 통해 모든 클래스에서 `CurrentItem` 속성을 설정할 수 있습니다.
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;

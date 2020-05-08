@@ -6,12 +6,12 @@ ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/29/2020
-ms.openlocfilehash: 3dc1a2cb99c5ef018807a8ac81139a6cace3c66f
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.openlocfilehash: 29875b3f6c747d5dc2f45eb876a269d2bc7e85c6
+ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516493"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82852461"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>iOS 시뮬레이터 및 Android 에뮬레이터에서 로컬 웹 서비스에 연결
 
@@ -113,7 +113,16 @@ public HttpClientHandler GetInsecureHandler()
 }
 ```
 
-이 코드 예제에서 유효성 검사를 진행한 인증서가 `localhost` 인증서가 아닌 경우 서버 인증서 유효성 검사 결과가 반환됩니다. 이 인증서의 경우 유효성 검사 결과가 무시되고 인증서가 유효하다는 것을 나타내는 `true`가 반환됩니다. 결과 `HttpClient` 개체는 `HttpClientHandler` 생성자에 인수로 전달되어야 합니다.
+이 코드 예제에서 유효성 검사를 진행한 인증서가 `localhost` 인증서가 아닌 경우 서버 인증서 유효성 검사 결과가 반환됩니다. 이 인증서의 경우 유효성 검사 결과가 무시되고 인증서가 유효하다는 것을 나타내는 `true`가 반환됩니다. 결과 `HttpClient` 개체는 디버그 빌드를 위해 `HttpClientHandler` 생성자에 인수로 전달되어야 합니다.
+
+```csharp
+#if DEBUG
+    HttpClientHandler insecureHandler = GetInsecureHandler();
+    HttpClient client = new HttpClient(insecureHandler);
+#else
+    HttpClient client = new HttpClient();
+#endif
+```
 
 ## <a name="related-links"></a>관련 링크
 

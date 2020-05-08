@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: d0b195b90bb57b6d0717c0fb06d0202857851fe7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
+ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016523"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82738790"
 ---
 # <a name="cross-platform-performance"></a>플랫폼 간 성능
 
@@ -264,6 +264,8 @@ SGen에서는 세 가지 힙 중 하나를 활용하여 개체에 공간을 할�
 - **LOB(Large Object) 공간** – 8000바이트를 초과해야 하는 개체가 유지되는 위치입니다. LOB(Large Object)는 nursery에서 시작되지 않지만 대신 이 힙에 할당됩니다.
 
 SGen의 장점 중 하나는 보조 가비지 수집을 수행하는 데 걸리는 시간이 마지막 보조 가비지 수집 이후 생성된 새로운 라이브 개체의 수에 비례한다는 점입니다. 그러면 이러한 보조 가비지 수집에 걸리는 시간이 주요 가비지 수집보다 적기 때문에 애플리케이션의 성능에 대한 가비지 수집의 영향이 감소합니다. 주요 가비지 수집은 계속 발생하지만 빈도가 감소합니다.
+
+SGen 가비지 수집기는 Xamarin.iOS 9.2.1 이상에서 기본값이므로 자동으로 사용됩니다. 최신 버전의 Visual Studio에서 가비지 수집기를 변경하는 기능이 제거되었습니다. 자세한 내용은 [새 참조 횟수 시스템](~/ios/internals/newrefcount.md)을 참조하세요.
 
 ### <a name="reducing-pressure-on-the-garbage-collector"></a>가비지 수집기에 대한 압력 감소
 

@@ -5,12 +5,12 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 21f2079ace4adae6fd84d89426e5d66692af2a0a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3d61267ae78a4b84907a2bcf6e944eb286b113dd
+ms.sourcegitcommit: 8b94b2af2ac69e4a60e210ddc764f4d276c8d88d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78289801"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605448"
 ---
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
@@ -37,6 +37,8 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 ```
 
 필요한 권한이 선언되지 않은 경우에는 `PermissionException`이 throw됩니다.
+
+권한을 요청하기 전에 권한 상태를 확인하는 것이 좋습니다. 사용자에게 메시지가 표시되지 않는 경우 각 운영 체제는 다른 기본 상태를 반환합니다. iOS는 `Unknown`을 반환하고, 다른 운영 체제는 `Denied`를 반환합니다.
 
 ## <a name="requesting-permissions"></a>권한 요청
 
@@ -93,10 +95,10 @@ Xamarin.Essentials는 가능한 한 많은 권한을 추상화하려고 하지�
 권한이 ![지원되지 않음](~/media/shared/no.png "지원되지 않음")으로 표시되는 경우 확인 또는 요청 시 항상 `Granted`를 반환합니다.
 
 ## <a name="general-usage"></a>일반적인 사용법
-다음은 권한을 처리하기 위한 일반적인 사용 패턴입니다.
+권한을 처리하기 위한 일반적인 사용 패턴은 다음과 같습니다.
 
 ```csharp
-public async Task<PermissionStatus> CheckAndRequestPermissionAsync<TPermission>()
+public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     if (status != PermissionStatus.Granted)
