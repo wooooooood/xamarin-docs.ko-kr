@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d6dbc82e56959399c2befb6a12f0a2cf3793ee5b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 97e52d593e2b59d127da324d8ad74ad7b2096cdd
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67560011"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343421"
 ---
 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 내에 자식 뷰의 크기와 위치는 자식 뷰의 [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest), [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) 속성 값과 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성 값에 따라 달라집니다.
 
