@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b2e1f11579e8647593e20e7d56936e8e75661e78
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 45a387690792074af6a18fe3c639692863cdf4be
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80634711"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83343408"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -41,7 +41,7 @@ ms.locfileid: "80634711"
 
     [![iOS 및 Android에서 StackLayout의 자식 보기 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
 
-    [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
+    [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md)을 참조하세요.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
@@ -78,4 +78,4 @@ ms.locfileid: "80634711"
 
     [![iOS 및 Android에서 StackLayout의 자식 보기 스크린샷](../images/create-stacklayout.png "레이블 인스턴스를 포함하는 StackLayout")](../images/create-stacklayout-large.png#lightbox "레이블 인스턴스를 포함하는 StackLayout")
 
-    [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
+    [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 대한 자세한 내용은 [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md)을 참조하세요.

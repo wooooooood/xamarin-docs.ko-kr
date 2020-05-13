@@ -140,6 +140,8 @@
               href: xaml/resource-dictionaries.md
             - name: 인수 전달
               href: xaml/passing-arguments.md
+            - name: 제네릭
+              href: xaml/generics.md
             - name: 필드 한정자
               href: xaml/field-modifiers.md
             - name: 런타임 시 XAML 로드
@@ -188,13 +190,8 @@
               href: app-fundamentals/custom-renderer/entry.md
             - name: ContentPage 사용자 지정
               href: app-fundamentals/custom-renderer/contentpage.md
-            - name: 맵 사용자 지정
-              href: app-fundamentals/custom-renderer/map/index.md
-              items:
-                - name: 지도 핀 사용자 지정
-                  href: app-fundamentals/custom-renderer/map/customized-pin.md
-                - name: 맵의 원형 영역 강조 표시
-                  href: app-fundamentals/custom-renderer/map/circle-map-overlay.md
+            - name: 지도 핀 사용자 지정
+              href: app-fundamentals/custom-renderer/map-pin.md
             - name: ListView 사용자 지정
               href: app-fundamentals/custom-renderer/listview.md
             - name: ViewCell 사용자 지정
@@ -358,6 +355,8 @@
       items:
         - name: 개요
           href: user-interface/index.yml
+        - name: 'C# 태그'
+          href: user-interface/csharp-markup.md
         - name: 컨트롤 참조
           items:
             - name: 개요
@@ -378,6 +377,8 @@
           items:
             - name: BoxView
               href: user-interface/boxview.md
+            - name: Expander
+              href: user-interface/expander.md
             - name: 이미지
               href: user-interface/images.md
             - name: 레이블
@@ -394,7 +395,7 @@
                   href: user-interface/map/position-distance.md
                 - name: 핀
                   href: user-interface/map/pins.md
-                - name: 다각형 및 폴리라인
+                - name: '다각형, 폴리라인 및 원'
                   href: user-interface/map/polygons.md
                 - name: 지오코딩
                   href: user-interface/map/geocoder.md
@@ -410,6 +411,8 @@
               href: user-interface/button.md
             - name: ImageButton
               href: user-interface/imagebutton.md
+            - name: RadioButton
+              href: user-interface/radiobutton.md
             - name: RefreshView
               href: user-interface/refreshview.md
             - name: SearchBar
@@ -563,8 +566,8 @@
               items:
                 - name: 애플리케이션에 테마 설정
                   href: user-interface/theming/theming.md
-                - name: 어둡게 모드 감지
-                  href: user-interface/theming/dark-mode.md
+                - name: 시스템 테마 변경에 응답
+                  href: user-interface/theming/system-theme-changes.md
             - name: 시각적 개체
               href: user-interface/visual/index.md
               items:
@@ -591,7 +594,7 @@
                 - name: RelativeLayout
                   href: user-interface/layouts/relative-layout.md
                 - name: StackLayout
-                  href: user-interface/layouts/stack-layout.md
+                  href: user-interface/layouts/stacklayout.md
             - name: 추가 레이아웃
               items:
                 - name: ContentView
@@ -688,6 +691,8 @@
               href: platform/ios/listview-separator-style.md
             - name: 주 스레드 컨트롤 업데이트
               href: platform/ios/main-thread-updates-ui.md
+            - name: MasterDetailPage 그림자
+              href: platform/ios/masterdetailpage-shadow.md
             - name: NavigationPage 막대 구분 기호
               href: platform/ios/navigation-bar-separator.md
             - name: NavigationPage 막대 텍스트 색 모드
@@ -704,6 +709,8 @@
               href: platform/ios/page-safe-area-layout.md
             - name: ScrollView 콘텐츠 터치
               href: platform/ios/scrollview-content-touches.md
+            - name: SearchBar 스타일
+              href: platform/ios/searchbar-style.md
             - name: 동시 팬 제스처 인식
               href: platform/ios/application-pan-gesture.md
             - name: 슬라이더 위치 조정 컨트롤 탭
