@@ -10,12 +10,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: c0e8ec27898cc842d485967e525c2936d7a0f56d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: def54534d30b92b3d6ea8b5a0e7cac2c93293710
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131045"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83149821"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석
 
@@ -266,7 +266,7 @@ Notes 애플리케이션은 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 �
 > [!NOTE]
 > 뷰의 크기는 `HeightRequest` 및 `WidthRequest` 속성을 통해 설정할 수 있습니다.
 
-[`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스에 대한 자세한 내용은 [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)을 참조하세요.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스에 대한 자세한 내용은 [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md)을 참조하세요.
 
 ### <a name="responding-to-user-interaction"></a>사용자 상호 작용에 응답
 

@@ -5,12 +5,13 @@ ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: 5d64967dfaa6ce7ef746a97f739cac67f5102fc2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.custom: video
+ms.openlocfilehash: 159add7ee83f3c65d791fc49ee3a85ddaaabae1d
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545169"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150135"
 ---
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: 색 변환기
 
@@ -83,3 +84,9 @@ var system = platform.ToSystemColor();
 - [색 변환기 API 설명서](xref:Xamarin.Essentials.ColorConverters)
 - [색 확장 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [색 확장 API 설명서](xref:Xamarin.Essentials.ColorExtensions)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Color-Converters-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

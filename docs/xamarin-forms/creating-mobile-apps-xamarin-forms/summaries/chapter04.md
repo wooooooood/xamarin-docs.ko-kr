@@ -7,12 +7,12 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: bda9d5cb323524981bed9c3bb55998513dd69aab
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 5313dd34839d6a5d21432161b9fd3a0ffce6e816
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73032870"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83149948"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>챕터 4 요약. 스택 스크롤
 
@@ -116,6 +116,6 @@ ms.locfileid: "73032870"
 - [챕터 4 전체 텍스트(PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)
 - [챕터 4 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 - [챕터 4 F# 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
-- [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
+- [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
 - [BoxView](~/xamarin-forms/user-interface/boxview.md)

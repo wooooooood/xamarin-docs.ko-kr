@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: 디바이스 표시 정보'
 description: 이 문서에서는 애플리케이션이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 77af173bc3297ac9ccdef22dccbeab054895f772
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1d72458fa32db58d0c5da278dbb424aa2b1714d1
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756900"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150118"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 디바이스 표시 정보
 
@@ -103,3 +104,9 @@ public class KeepScreenOnTest
 
 - [DeviceDisplay 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
 - [DeviceDisplay API 문서](xref:Xamarin.Essentials.DeviceDisplay)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Display-Information-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

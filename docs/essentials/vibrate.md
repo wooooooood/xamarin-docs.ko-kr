@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: Vibration'
 description: 이 문서에서는 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있는 Xamarin.Essentials의 Vibration 클래스를 설명합니다.
 ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 2e4cf713f9ad7478c0d8e288fd3beff4b5015ef5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a002cd6ed183ffeafef92cb40d48b2792347714d
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70120111"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149833"
 ---
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
 
@@ -121,3 +122,9 @@ catch (Exception ex)
 
 - [진동 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
 - [진동 API 문서](xref:Xamarin.Essentials.Vibration)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Vibration-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

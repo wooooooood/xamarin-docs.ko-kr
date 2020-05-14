@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: 전화 걸기'
 description: Xamarin.Essentials의 PhoneDialer 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 07/02/2019
-ms.openlocfilehash: 0b00307759d95b8e2efe27bd9a17d2c6efd3d5c0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a955399b40f26d4a03a4047d56f7bebe3ad5b5c4
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67538687"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150042"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
 
@@ -59,3 +60,9 @@ public class PhoneDialerTest
 
 - [전화 걸기 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
 - [전화 걸기 API 문서](xref:Xamarin.Essentials.PhoneDialer)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Phone-Dialer-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

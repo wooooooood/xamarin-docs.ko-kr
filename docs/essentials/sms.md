@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: SMS'
 description: Xamarin.Essentials의 SMS 클래스를 사용하면 애플리케이션이 기본 SMS 애플리케이션에서 수신자에게 보내도록 지정된 메시지를 열 수 있습니다.
 ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: a7b52bac0e9e2061cf9ff277db044ab232b1e9e5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 38651b8e29a2119f777fdbcdd82c9a8277c02497
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61347913"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83149904"
 ---
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
 
@@ -80,3 +81,9 @@ public class SmsTest
 
 - [Sms 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
 - [Sms API 문서](xref:Xamarin.Essentials.Sms)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/SMS-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

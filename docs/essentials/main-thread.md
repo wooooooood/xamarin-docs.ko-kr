@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: MainThread'
 description: MainThread 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 코드를 실행할 수 있습니다.
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
-ms.openlocfilehash: 9109e7bff4cfe60479e711240d290d77b60a9af6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: dfef9fc5d1b8e4acaec8d9e1d653b141b04cead6
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70060123"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150054"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
@@ -110,3 +111,9 @@ _그러나 이 검사는 필요하지 않습니다._ 플랫폼의 `BeginInvokeOn
 
 - [MainThread 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
 - [MainThread API 문서](xref:Xamarin.Essentials.MainThread)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Main-Thread-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

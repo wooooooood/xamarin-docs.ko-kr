@@ -3,14 +3,15 @@ title: 'Xamarin.Essentials: 앱 테마'
 description: 이 문서에서는 실행 중인 앱에 대해 어떤 테마 스타일이 필요한지 정보를 제공하는 Xamarin.Essentials의 요청된 앱 테마 API에 대해 설명합니다.
 ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 01/06/2020
-ms.openlocfilehash: e27f43ae17fcdaf7bb40b75907a7595c5c20988b
-ms.sourcegitcommit: 9c517f2c5af21aab0775f91286f42e919ff52292
+ms.openlocfilehash: 84c246eb60f4ee561bbf2bcfee6eb587ce601a4a
+ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619870"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150147"
 ---
 # <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: 앱 테마
 
@@ -74,3 +75,9 @@ UWP 애플리케이션은 **RequestedTheme** 아래에 있는 UWP App.xaml의 �
 
 - [AppInfo 소스 코드](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
 - [AppInfo API 문서](xref:Xamarin.Essentials.AppInfo)
+
+## <a name="related-video"></a>관련 동영상
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Theme-Detection-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
