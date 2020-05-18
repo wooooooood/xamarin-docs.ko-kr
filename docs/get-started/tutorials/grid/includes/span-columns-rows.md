@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c826ee87c006b05322af8c9312bdf3120df8b357
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: fa88f6e7844899926a194e9d0cdd455a497c2b31
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61375985"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83435397"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -29,13 +29,13 @@ ms.locfileid: "61375985"
     </Grid>
     ```
 
-    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에 대한 열과 행 및 특정 열과 행에 있는 위치 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 정의합니다. 첫 번째 `Label`은 텍스트가 여러 열에 분산되도록 [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) 연결된 속성을 설정합니다. `ColumnSpan` 속성은 2로 설정되며 `Label`이 분산된 열 수를 나타냅니다. 두 번째 `Label`은 텍스트가 여러 행에 분산되도록 [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) 연결된 속성을 설정합니다. `RowSpan` 속성은 2로 설정되며 `Label`이 분산된 행 수를 나타냅니다.
+    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에 대한 열과 행을 정의하고, 특정 열과 행에 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 배치합니다. 첫 번째 `Label`은 텍스트가 여러 열에 분산되도록 [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) 연결된 속성을 설정합니다. `ColumnSpan` 속성은 2로 설정되며 `Label`이 분산된 열 수를 나타냅니다. 두 번째 `Label`은 텍스트가 여러 행에 분산되도록 [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) 연결된 속성을 설정합니다. `RowSpan` 속성은 2로 설정되며 `Label`이 분산된 행 수를 나타냅니다.
 
 1. Visual Studio 도구 모음에서 선택한 iOS 원격 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     [![iOS 및 Android에서 여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드의 스크린샷](../images/span-columns-rows.png "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")](../images/span-columns-rows-large.png#lightbox "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")
 
-    열과 행을 분산하는 방법에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md#spans) 가이드에서 [범위](~/xamarin-forms/user-interface/layouts/grid.md)를 참조하세요.
+    열과 행을 분산하는 방법에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md) 가이드에서 [행 및 열](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns)을 참조하세요.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/vsmac)
 
@@ -60,10 +60,10 @@ ms.locfileid: "61375985"
     </Grid>
     ```
 
-    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에 대한 열과 행 및 특정 열과 행에 있는 위치 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 정의합니다. 첫 번째 `Label`은 텍스트가 여러 열에 분산되도록 [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) 연결된 속성을 설정합니다. `ColumnSpan` 속성은 2로 설정되며 `Label`이 분산된 열 수를 나타냅니다. 두 번째 `Label`은 텍스트가 여러 행에 분산되도록 [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) 연결된 속성을 설정합니다. `RowSpan` 속성은 2로 설정되며 `Label`이 분산된 행 수를 나타냅니다.
+    이 코드는 [`Grid`](xref:Xamarin.Forms.Grid)에 대한 열과 행을 정의하고, 특정 열과 행에 [`Label`](xref:Xamarin.Forms.Label) 인스턴스를 배치합니다. 첫 번째 `Label`은 텍스트가 여러 열에 분산되도록 [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) 연결된 속성을 설정합니다. `ColumnSpan` 속성은 2로 설정되며 `Label`이 분산된 열 수를 나타냅니다. 두 번째 `Label`은 텍스트가 여러 행에 분산되도록 [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) 연결된 속성을 설정합니다. `RowSpan` 속성은 2로 설정되며 `Label`이 분산된 행 수를 나타냅니다.
 
 1. Mac용 Visual Studio 도구 모음에서 선택한 iOS 시뮬레이터 또는 Android 에뮬레이터 내에서 애플리케이션을 시작하려면 **시작** 단추(재생 단추와 비슷한 삼각형 모양의 단추)를 누릅니다.
 
     [![iOS 및 Android에서 여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드의 스크린샷](../images/span-columns-rows.png "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")](../images/span-columns-rows-large.png#lightbox "여러 열 및 행에 걸쳐 있는 콘텐츠를 포함하는 그리드")
 
-    열과 행을 분산하는 방법에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md#spans) 가이드에서 [범위](~/xamarin-forms/user-interface/layouts/grid.md)를 참조하세요.
+    열과 행을 분산하는 방법에 대한 자세한 내용은 [Xamarin.Forms 그리드](~/xamarin-forms/user-interface/layouts/grid.md) 가이드에서 [행 및 열](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns)을 참조하세요.

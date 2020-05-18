@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: 26c4c2487bf2ec32ade3ceef9db73b4809053fec
-ms.sourcegitcommit: 154a3e7aec775327565bb54eda1a610976af1d6f
+ms.openlocfilehash: 715b9872642dfa8d5426c2967c62e82643def34d
+ms.sourcegitcommit: 9ca07644710e5919c7bc684c1ce144471611d5df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624724"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82974474"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
@@ -70,7 +70,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="system-preferred"></a>시스템 기본 설정
 
-[Chrome 사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs)을 사용하여 URI를 로드하고 탐색 인식을 유지합니다.
+[사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs)을 사용하여 URI를 로드하고 탐색 인식을 유지합니다.
 
 ## <a name="external"></a>외부
 
