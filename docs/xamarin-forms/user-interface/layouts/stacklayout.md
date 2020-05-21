@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/11/2020
-ms.openlocfilehash: 56da2b137475ef258d780fba0a7cdec3c91323b8
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: 2535a92814181c5039256ea1e42b06419ed427aa
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83152332"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426028"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.ios StackLayout
 
@@ -210,7 +210,7 @@ public class StackLayoutSpacingPageCS : ContentPage
 > [!TIP]
 > [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 필요 하지 않은 경우의 및 속성을 설정 하지 마세요 [`StackLayout`](xref:Xamarin.Forms.StackLayout) . `LayoutOptions.Fill` 및 `LayoutOptions.FillAndExpand`의 기본값은 최고의 레이아웃 최적화를 지원합니다. 이러한 속성을 변경 하면 해당 속성을 기본값으로 다시 설정 하는 경우에도 비용이 발생 하며 메모리가 소비 됩니다.
 
-### <a name="alignment"></a>부합되는 내용
+### <a name="alignment"></a>맞춤
 
 다음 XAML 예제에서는의 각 자식 뷰에서 맞춤 기본 설정을 지정 합니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 
@@ -240,12 +240,12 @@ public class StackLayoutSpacingPageCS : ContentPage
 
 [![맞춤 옵션이 설정 된 StackLayout의 스크린샷](stacklayout-images/alignment.png "맞춤 옵션이 있는 StackLayout")](stacklayout-images/alignment-large.png#lightbox "맞춤 옵션이 있는 StackLayout")
 
-는 방향이 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 반대 방향의 자식 보기의 맞춤 기본 설정만을 기준으로 합니다 `StackLayout` . 따라서 [`Label`](xref:Xamarin.Forms.Label) 세로 방향으로 된 자식 뷰는 해당 `StackLayout` 속성을 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 맞춤 필드 중 하나로 설정 합니다.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout)은 `StackLayout` 방향과 반대 방향에 있는 자식 뷰의 맞춤 기본 설정을 따릅니다. 따라서 세로 방향 `StackLayout` 내의 [`Label`](xref:Xamarin.Forms.Label) 자식 뷰는 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 속성을 맞춤 필드 중 하나로 설정합니다.
 
 - [`Start`](xref:Xamarin.Forms.LayoutOptions.Start)는의 왼쪽에를 배치 합니다 [`Label`](xref:Xamarin.Forms.Label) [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
-- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)는에서를 가운데에 맞춥니다 [`Label`](xref:Xamarin.Forms.Label) [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
+- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 [`Label`](xref:Xamarin.Forms.Label)을 집중시킵니다.
 - [`End`](xref:Xamarin.Forms.LayoutOptions.End)는의 오른쪽에를 배치 합니다 [`Label`](xref:Xamarin.Forms.Label) [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
-- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)는의 [`Label`](xref:Xamarin.Forms.Label) 너비를 채우도록 합니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
+- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)은 [`Label`](xref:Xamarin.Forms.Label)이 [`StackLayout`](xref:Xamarin.Forms.StackLayout)의 너비를 채웁니다.
 
 해당하는 C# 코드는 다음과 같습니다.
 
@@ -310,7 +310,7 @@ public class AlignmentPageCS : ContentPage
 
 [![확장 옵션이 설정 된 StackLayout의 스크린샷](stacklayout-images/expansion.png "확장 옵션이 있는 StackLayout")](stacklayout-images/expansion-large.png#lightbox "확장 옵션이 있는 StackLayout")
 
-는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 방향 방향의 자식 보기만 확장할 수 있습니다. 따라서 세로 방향으로는 `StackLayout` 속성을 [`Label`](xref:Xamarin.Forms.Label) 확장 필드 중 하나로 설정 하는 자식 뷰를 확장할 수 있습니다 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 즉, 세로 맞춤의 경우 각 `Label`은 `StackLayout` 내의 동일한 공간을 차지합니다. 그러나 `Label` 속성을로 설정 하는 최종만 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) 크기가 달라 집니다.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout)은 해당 방향으로만 자식 뷰를 확장할 수 있습니다. 따라서 세로 방향 `StackLayout`은 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 확장 필드 중 하나로 설정하는 [`Label`](xref:Xamarin.Forms.Label) 자식 뷰를 확장할 수 있습니다. 즉, 세로 맞춤의 경우 각 `Label`은 `StackLayout` 내의 동일한 공간을 차지합니다. 그러나 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)로 설정하는 최종 `Label`만 크기가 다릅니다.
 
 > [!TIP]
 > 을 사용 하는 경우 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 하나의 자식 보기만로 설정 되었는지 확인 [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) 합니다. 이 속성은 지정된 자식 요소가 `StackLayout`에서 허용하는 최대의 공간을 차지하도록 하며, 이는 이러한 계산이 두 번 이상 수행되도록 하여 불필요합니다.
@@ -341,7 +341,7 @@ public ExpansionPageCS()
 ```
 
 > [!IMPORTANT]
-> 의 모든 공간을 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 사용 하는 경우 확장 기본 설정이 적용 되지 않습니다.
+> [`StackLayout`](xref:Xamarin.Forms.StackLayout)의 모든 공간을 사용할 때 확장 기본 설정은 아무런 영향을 미치지 않습니다.
 
 맞춤 및 확장에 대한 자세한 내용은 [xamarin.Forms의 레이아웃 옵션](layout-options.md)을 참조하세요.
 
@@ -398,7 +398,7 @@ public ExpansionPageCS()
 [![중첩 된 StackLayout 개체의 스크린샷](stacklayout-images/combined.png "중첩 된 StackLayouts")](stacklayout-images/combined-large.png#lightbox "중첩 된 StackLayouts")
 
 > [!IMPORTANT]
-> 너무 많은 개체를 중첩 `StackLayout` 하면 필요한 레이아웃 계산의 양에 인해 성능이 저하 되지 않습니다. 자세한 내용은 [올바른 레이아웃 선택](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout)을 참조 하세요.
+> [`StackLayout`](xref:Xamarin.Forms.StackLayout)개체와 기타 레이아웃을 더 깊게 중첩할 수록 중첩 된 레이아웃은 성능에 영향을 줍니다. 자세한 내용은 [올바른 레이아웃 선택](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout)을 참조 하세요.
 
 해당하는 C# 코드는 다음과 같습니다.
 

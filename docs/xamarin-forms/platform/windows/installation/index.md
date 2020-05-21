@@ -1,54 +1,54 @@
 ---
 title: Windows 프로젝트 설정
-description: 이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)는 유니버설 Windows 플랫폼 프로젝트에 없습니다 하 고 있으므로이 문서에서는 기존 Xamarin.Forms 솔루션에 새 UWP 프로젝트를 추가 하는 방법에 설명 합니다.
+description: 이전 Xamarin.ios 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 Xamarin.ios 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 합니다.
 ms.prod: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: b0f06cf15d3a3ec7eae4742d5d037e233be46d08
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5d2d9c8c2104e96f16c3a3ff169f795068605f59
+ms.sourcegitcommit: 7011303ff1868f3dd3858415706f4b5732ee44f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857615"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83696092"
 ---
 # <a name="setup-windows-projects"></a>Windows 프로젝트 설정
 
-_기존 Xamarin.Forms 솔루션에 새 Windows 프로젝트를 추가합니다._
+_기존 Xamarin.ios 솔루션에 새 Windows 프로젝트 추가_
 
-이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든) 유니버설 Windows 플랫폼 (UWP) 앱 프로젝트를 갖지 않습니다. 따라서 Windows 10 (UWP) 앱을 빌드하는 UWP 프로젝트를 수동으로 추가 해야 합니다.
+이전 Xamarin. 양식 솔루션 (또는 macOS에서 만든)은 UWP (유니버설 Windows 플랫폼) 앱 프로젝트를 포함 하지 않습니다. 따라서 Windows 10 (UWP) 앱을 빌드하려면 UWP 프로젝트를 수동으로 추가 해야 합니다.
 
-## <a name="add-a-universal-windows-platform-app"></a>추가 유니버설 Windows 플랫폼 앱
+## <a name="add-a-universal-windows-platform-app"></a>유니버설 Windows 플랫폼 앱 추가
 
-**Visual Studio 2019** 대 **Windows 10** UWP 앱을 빌드할 것이 좋습니다. 유니버설 Windows 플랫폼에 대 한 자세한 내용은 참조 하세요. [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide/)합니다.
+**Windows 10** 의 **Visual STUDIO 2019** 은 UWP 앱을 빌드하는 데 권장 됩니다. 유니버설 Windows 플랫폼에 대 한 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide/)를 참조 하세요.
 
-UWP Xamarin.Forms 2.1에서 제공 되며 나중에 및 Xamarin.Forms 2.2 이상 Xamarin.Forms.Maps 지원 됩니다.
+UWP는 Xamarin에서 사용할 수 있습니다. 양식 2.1 이상 및 Xamarin.ios는 Xamarin. Forms 2.2 이상에서 지원 됩니다.
 
-확인 합니다 <a href="#troubleshooting">문제 해결</a> 유용한 팁에 대 한 섹션입니다.
+<a href="#troubleshooting">문제 해결</a> 섹션에서 유용한 팁을 확인 하세요.
 
-Windows 10 휴대폰, 태블릿 및 데스크톱에서 실행 되는 UWP 앱을 추가 하려면 이러한 지침을 따릅니다.
+다음 지침에 따라 Windows 10 휴대폰, 태블릿 및 데스크톱에서 실행 되는 UWP 앱을 추가 합니다.
 
- 1 . 선택한 솔루션을 마우스 오른쪽 단추로 클릭 **추가 > 새 프로젝트...**  추가 된 **비어 있는 앱 (유니버설 Windows)** 프로젝트:
+ 1(sp1). 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **추가 > 새 프로젝트 ...** 를 선택 하 고 **비어 있는 앱 (유니버설 Windows)** 프로젝트를 추가 합니다.
 
-  ![](universal-images/add-wu.png "새 프로젝트 대화 상자를 추가 합니다.")
+  ![](universal-images/add-wu.png "Add New Project Dialog")
 
- 2 . 에 **새 유니버설 Windows 플랫폼 프로젝트** 대화 상자에서 Windows 10 앱에서 실행 되는 최소 및 대상 버전 선택:
+ sr-2. **새 유니버설 Windows 플랫폼 프로젝트** 대화 상자에서 앱이 실행 되는 최소 및 대상 버전의 Windows 10을 선택 합니다.
 
-  ![](universal-images/target-version.png "새 유니버설 Windows 플랫폼 프로젝트 대화 상자")
+  ![](universal-images/target-version.png "New Universal Windows Platform Project Dialog")
 
- 3 . UWP 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **NuGet 패키지 관리...**  추가한 합니다 **Xamarin.Forms** 패키지 있습니다. 또한 솔루션의 다른 프로젝트는 Xamarin.Forms 패키지의 동일한 버전으로 업데이트 됩니다 확인 합니다.
+ 3. UWP 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리 ...** 를 선택 하 고 **Xamarin. Forms** 패키지를 추가 합니다. 솔루션의 다른 프로젝트도 동일한 버전의 Xamarin.ios 패키지로 업데이트 되는지 확인 합니다.
 
- 4 . 해야 새 UWP 프로젝트에서 빌드할 수는 합니다 **빌드 > 구성 관리자** 창 (이 아마도 않습니다 발생 했을 기본적으로). 눈금은 **빌드** 하 고 **배포** 유니버설 프로젝트에 대 한 상자:
+ 3-4. 새 UWP 프로젝트가 **빌드 > Configuration Manager** 창에 빌드 되었는지 확인 합니다 .이는 기본적으로 발생 하지 않습니다. 유니버설 프로젝트에 대 한 **빌드** 및 **배포** 상자의 틱:
 
-  [![](universal-images/configuration-sml.png "구성 관리자 창")](universal-images/configuration.png#lightbox "구성 관리자 창")
+  [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
- 5 . 프로젝트를 마우스 오른쪽 단추로 클릭 **추가 > 참조** Xamarin.Forms 응용 프로그램 프로젝트 (.NET Standard 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
+ 5. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 참조** 를 선택 하 고 xamarin.ios 응용 프로그램 프로젝트 (.NET Standard 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
 
-  ![](universal-images/addref-sml.png "참조 관리자 대화 상자")
+  ![](universal-images/addref-sml.png "Reference Manager Dialog")
 
- 6 . UWP 프로젝트에서 편집 **App.xaml.cs** 포함 하는 `Init` 메서드 호출 내에서 `OnLaunched` 줄 52 메서드:
+ 6@@. UWP 프로젝트에서 **App.xaml.cs** 를 편집 하 여 메서드 `Init` 내에 메서드 호출을 `OnLaunched` 52 줄에 포함 시킵니다.
 
 ```csharp
 // under this line
@@ -57,15 +57,15 @@ rootFrame.NavigationFailed += OnNavigationFailed;
 Xamarin.Forms.Forms.Init (e); // requires the `e` parameter
 ```
 
- 7 . UWP 프로젝트에서 편집 **MainPage.xaml** 제거 하 여 합니다 `Grid` 내에 포함 된를 `Page` 요소입니다.
+ 일. UWP 프로젝트에서 요소 내에 포함 된를 제거 하 여 **mainpage** 을 편집 합니다. `Grid` `Page`
 
- 8 . **MainPage.xaml**, 새 `xmlns` 에 대 한 항목 `Xamarin.Forms.Platform.UWP`:
+ 20cm(8. **Mainpage**에서 `xmlns` 다음에 대 한 새 항목을 추가 합니다. `Xamarin.Forms.Platform.UWP`
 
 ```csharp
 xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 ```
 
- 9 . **MainPage.xaml**, 루트 변경 `<Page` 요소를 `<forms:WindowsPage`:
+ 되었는지. **Mainpage**에서 root 요소를로 변경 합니다. `<Page` `<forms:WindowsPage`
 
 ```xaml
 <forms:WindowsPage
@@ -75,13 +75,13 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 </forms:WindowsPage>
 ```
 
- 10 . UWP 프로젝트에서 편집 **MainPage.xaml.cs** 제거할 합니다 `: Page` 클래스 이름에 대 한 상속 지정자 (이제에서 상속 하므로 `WindowsPage` 이전 단계에서 수행 된 변경으로 인해):
+ 5-10. UWP 프로젝트에서 **MainPage.xaml.cs** 를 편집 하 여 `: Page` 클래스 이름에 대 한 상속 지정자를 제거 합니다 .이 지정자는 이제 `WindowsPage` 이전 단계에서 변경한 내용 때문에에서 상속 됩니다.
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- 11 . **MainPage.xaml.cs**를 추가 합니다 `LoadApplication` 에서 호출을 `MainPage` Xamarin.Forms 앱을 시작 하는 생성자:
+ pt. **MainPage.xaml.cs**에서 `LoadApplication` 생성자에 호출을 추가 `MainPage` 하 여 xamarin.ios 앱을 시작 합니다.
 
 ```csharp
 // below this existing line
@@ -89,6 +89,9 @@ this.InitializeComponent();
 // add this line
 LoadApplication(new YOUR_NAMESPACE.App());
 ```
+
+> [!NOTE]
+> 메서드에 대 한 인수는 `LoadApplication` `Xamarin.Forms.Application` .net standard 프로젝트에 정의 된 인스턴스입니다.
 
 <!--
 11 . Double-click **Package.appxmanifest** to set these capabilities
@@ -100,19 +103,19 @@ LoadApplication(new YOUR_NAMESPACE.App());
   * Location
 -->
 
-12 . 모든 로컬 리소스 (예: 추가 이미지 파일)는 필요한 기존 플랫폼 프로젝트에서.
+10. 로컬 리소스를 추가 합니다 (예: 이미지 파일)을 입력 합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 
 <a name="target-invocation-exception" />
 
-### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>"대상 호출 예외" ".NET 네이티브 도구 체인을 사용 하 여 컴파일"을 사용 하는 경우
+### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>".NET 네이티브 도구 체인으로 컴파일"을 사용 하는 경우 "대상 호출 예외"
 
-UWP 앱에서 여러 어셈블리 (타사 라이브러리를 제어 하는 예를 들어 또는 자체 앱은 여러 라이브러리도 분할)를 참조 하는 경우 Xamarin.Forms 개체 (예: 사용자 지정 렌더러) 해당 어셈블리에서 로드 하지 못할 수 있습니다.
+UWP 앱이 여러 어셈블리를 참조 하는 경우 (예: 타사 컨트롤 라이브러리 또는 앱 자체가 여러 라이브러리로 분할 된 경우) Xamarin은 이러한 어셈블리 (예: 사용자 지정 렌더러)에서 개체를 로드 하지 못할 수 있습니다.
 
-사용 하는 경우 발생할 수 있습니다는 **.NET 네이티브 도구 체인을 사용 하 여 컴파일합니다** 에서 UWP 앱에 대 한 옵션을 **속성 > 빌드 > 일반** 프로젝트에 대 한 창.
+프로젝트에 대 한 **속성 > 빌드 > 일반** 창에서 UWP 앱에 대 한 옵션인 **.NET 네이티브 도구 체인으로 컴파일** 을 사용 하는 경우이 문제가 발생할 수 있습니다.
 
-UWP 특정 오버 로드를 사용 하 여 수정할 수 있습니다 합니다 `Forms.Init` 에서 호출 **App.xaml.cs** 아래 코드에 표시 된 대로 (바꿔야 `ClassInOtherAssembly` 코드에서 참조 하는 실제 클래스를 사용 하 여):
+아래 코드에 표시 된 것 처럼 App.xaml.cs에서 호출의 UWP 관련 오버 로드를 사용 하 여이 문제를 해결할 수 있습니다 `Forms.Init` (를 코드에서 참조 하는 실제 클래스로 대체 해야 함 **App.xaml.cs** `ClassInOtherAssembly` ).
 
 ```csharp
 // You'll need to add `using System.Reflection;`
@@ -126,13 +129,13 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 // replaces Xamarin.Forms.Forms.Init(e);
 ```
 
-솔루션 탐색기에서 직접 참조 또는 NuGet을 통해 참조로 추가 된 각 어셈블리에 대 한 항목을 추가 합니다.
+직접 참조 또는 NuGet을 통해 솔루션 탐색기에 참조로 추가한 각 어셈블리에 대 한 항목을 추가 합니다.
 
-#### <a name="dependency-services-and-net-native-compilation"></a>종속성 서비스 및.NET 네이티브 컴파일
+#### <a name="dependency-services-and-net-native-compilation"></a>종속성 서비스 및 .NET 네이티브 컴파일
 
-릴리스 빌드가.NET 네이티브 컴파일을 사용 하는 기본 앱 실행 파일 (예: 라이브러리 또는 별도 프로젝트를) 외부에서 정의 되는 종속성 서비스 확인에 실패할 수 있습니다.
+.NET 네이티브 컴파일을 사용 하는 릴리스 빌드는 주 앱 실행 파일 (예: 별도의 프로젝트 또는 라이브러리) 외부에 정의 된 종속성 서비스를 확인 하지 못할 수 있습니다.
 
-사용 된 `DependencyService.Register<T>()` 수동으로 종속성 서비스 클래스를 등록 하는 방법입니다. 위의 예제에 based, 다음과 같은 register 메서드를 추가 합니다.
+메서드를 사용 `DependencyService.Register<T>()` 하 여 종속성 서비스 클래스를 수동으로 등록 합니다. 위의 예제에 따라 register 메서드를 다음과 같이 추가 합니다.
 
 ```csharp
 Xamarin.Forms.Forms.Init(e, assembliesToInclude);

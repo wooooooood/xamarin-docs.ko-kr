@@ -1,387 +1,740 @@
 ---
-title: Xamarin.Forms 표
-description: 이 문서에서는 Xamarin.Forms 표 클래스를 사용 하 여 표에서 행과 열을 소유 하는 뷰를 제공 하는 방법에 설명 합니다.
+title: Xamarin.ios 표
+description: Xamarin.ios 표는 자식을 셀의 행과 열로 구성 하는 레이아웃입니다.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/26/2017
-ms.openlocfilehash: 7a6c737bff6c504fea10fd2e34e4b26249f73aff
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+ms.date: 05/15/2020
+ms.openlocfilehash: 4f1d9d0f2d597018b9832d918bbec3f0b2594773
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770391"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83425865"
 ---
-# <a name="xamarinforms-grid"></a>Xamarin.Forms 표
+# <a name="xamarinforms-grid"></a>Xamarin.ios 표
 
-[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[`Grid`](xref:Xamarin.Forms.Grid) 지원 행과 열으로 뷰를 정렬 합니다. 가변 크기 또는 절대 크기는 행과 열을 설정할 수 있습니다. `Grid` 레이아웃 기존 테이블을 사용 하 여 혼동 해서는 안 됩니다 및 테이블 형식 데이터를 표시할 수 없습니다. `Grid` 행, 열 또는 셀 서식 개념이 없습니다. HTML 테이블과 달리 `Grid` 순수 하 게 콘텐츠를 배치 하기 위한 것입니다.
+[![Xamarin.ios 표](grid-images/layouts.png "Xamarin.ios 표")](grid-images/layouts-large.png#lightbox "Xamarin.ios 표")
 
-[![](grid-images/layouts-sml.png "Xamarin.Forms 레이아웃")](grid-images/layouts.png#lightbox "Xamarin.Forms 레이아웃")
+는 [`Grid`](xref:Xamarin.Forms.Grid) 하위 항목을 행과 열로 구성 하는 레이아웃으로, 비례 또는 절대 크기를 가질 수 있습니다. 기본적으로에는 `Grid` 하나의 행과 하나의 열이 포함 됩니다. 또한 `Grid` 다른 자식 레이아웃을 포함 하는 부모 레이아웃으로를 사용할 수 있습니다.
 
-이 문서에서는 설명 합니다.
+[`Grid`](xref:Xamarin.Forms.Grid)레이아웃은 테이블과 혼동 해서는 안 되며 표 형식 데이터를 제공 하기 위한 것이 아닙니다. HTML 테이블과 달리는 `Grid` 콘텐츠를 레이아웃 하기 위한 것입니다. 표 형식 데이터를 표시 하려면 [ListView](~/xamarin-forms/user-interface/listview/index.md), [CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)또는 [TableView](~/xamarin-forms/user-interface/tableview.md)를 사용 하는 것이 좋습니다.
 
-- **[목적은](#purpose)**  &ndash; 의 일반적인 용도 `Grid`합니다.
-- **[사용 현황](#usage)**  &ndash; 사용 하는 방법을 `Grid` 원하는 디자인을 달성 하기 위해.
-  - **[행 및 열](#rows-and-columns)**  &ndash; 행 및 열에 대 한 지정 된 `Grid`합니다.
-  - **[뷰를 배치](#placing-views-in-a-grid)**  &ndash; 표에 특정 행과 열에서 뷰를 추가 합니다.
-  - **[간격](#spacing)**  &ndash; 행 및 열 사이의 간격을 구성 합니다.
-  - **[범위](#spans)**  &ndash; 여러 행 또는 열에 걸쳐에 요소를 구성 합니다.
+[`Grid`](xref:Xamarin.Forms.Grid)클래스는 다음 속성을 정의 합니다.
 
-![](grid-images/grid.png "표 탐색")
+- [`Column`](xref:Xamarin.Forms.Grid.ColumnProperty)`int`부모에 있는 뷰의 열 맞춤을 나타내는 연결 된 속성인 형식의 `Grid` 이 속성의 기본값은 0입니다. 유효성 검사 콜백은 속성이 설정 될 때 해당 값이 0 보다 크거나 같은 경우를 확인 합니다.
+- [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions)형식의는 [`ColumnDefinitionCollection`](xref:Xamarin.Forms.ColumnDefinitionCollection) [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 그리드 열의 너비를 정의 하는 개체의 목록입니다.
+- [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing)형식의는 `double` 그리드 열 간의 거리를 나타냅니다. 이 속성의 기본값은 6 개의 장치 독립적 단위입니다.
+- [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty). 형식의 이며, `int` 부모 내에서 뷰가 걸쳐 있는 열의 총 수를 나타내는 연결 된 속성입니다 `Grid` . 이 속성의 기본값은 1입니다. 유효성 검사 콜백은 속성이 설정 될 때 해당 값이 1 보다 크거나 같으면이를 확인 합니다.
+- [`Row`](xref:Xamarin.Forms.Grid.RowProperty)`int`부모에 있는 뷰의 행 맞춤을 나타내는 연결 된 속성인 형식의입니다 `Grid` . 이 속성의 기본값은 0입니다. 유효성 검사 콜백은 속성이 설정 될 때 해당 값이 0 보다 크거나 같은 경우를 확인 합니다.
+- [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions)형식의는 [`RowDefinitionCollection`](xref:Xamarin.Forms.RowDefinitionCollection) [`RowDefintion`](xref:Xamarin.Forms.RowDefinition) 표 형태 창의 행 높이를 정의 하는 개체의 목록입니다.
+- [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing)형식의는 `double` 표 형태 창 행 간의 거리를 나타냅니다. 이 속성의 기본값은 6 개의 장치 독립적 단위입니다.
+- [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty). 형식의 이며, `int` 부모 내에서 뷰가 걸쳐 있는 행의 총 수를 나타내는 연결 된 속성입니다 `Grid` . 이 속성의 기본값은 1입니다. 유효성 검사 콜백은 속성이 설정 될 때 해당 값이 1 보다 크거나 같으면이를 확인 합니다.
 
-## <a name="purpose"></a>용도
+이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 속성이 데이터 바인딩 및 스타일의 대상이 될 수 있습니다.
 
-`Grid` 표 형태에 뷰를 정렬 하려면 사용할 수 있습니다. 많은 경우에 유용합니다.
+[`Grid`](xref:Xamarin.Forms.Grid)클래스는 `Layout<T>` 형식의 속성을 정의 하는 클래스에서 파생 `Children` `IList<T>` 됩니다. `Children`속성은 `ContentProperty` 클래스의입니다 `Layout<T>` . 따라서 XAML에서 명시적으로 설정할 필요는 없습니다.
 
-- 계산기 앱에서 단추 정렬
-- IOS 또는 Android 홈 화면 같은 모눈에 정렬 단추/선택
-- 한 차원 (일부 도구 모음에서와 같이)에서 동일한 크기의 수 있도록 뷰 정렬
+> [!TIP]
+> 가능한 최상의 레이아웃 성능을 얻으려면 [레이아웃 성능 최적화](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)의 지침을 따르세요.
 
-## <a name="usage"></a>사용
+## <a name="rows-and-columns"></a>행 및 열
 
-기존 테이블과 달리 `Grid` 에서는 행 및 열 콘텐츠에서 크기와 수를 유추 하지 않습니다. 대신 `Grid` 했습니다 `RowDefinitions` 고 `ColumnDefinitions` 컬렉션입니다. 이러한 행과 열 개수는 배치의 정의 보유 합니다. 보기에 추가 됩니다 `Grid` 는 지정 된 행 및 열 인덱스를 사용 하 여 식별 행 및 열 뷰를 배치 해야 합니다.
-
-### <a name="rows-and-columns"></a>행 및 열
-
-행 및 열 정보에 저장 됩니다 `Grid`의 `RowDefinitions`  &  `ColumnDefinitions` 속성은 각 컬렉션의 [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) 하 고 [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)개체를 각각. `RowDefinition` 단일 속성을 가진 `Height`, 및 `ColumnDefinition` 단일 속성을 가진 `Width`합니다. 높이 너비에 대 한 옵션을 아래와 같습니다.
-
-- **자동** &ndash; 행 이나 열의 내용에 맞게 자동으로 크기입니다. 로 지정 된 [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) C# 또는 `Auto` XAML에서.
-- **Proportional(*)** &ndash; 나머지 공간의 비율로 열과 행의 크기를 조정 합니다. 값으로 지정 하 고 `GridUnitType.Star` C#에서 `#*` 에서 XAML을 사용 하 여 `#` 원하는 값 중. 지정 된 행/열 `*` 하면 사용 가능한 공간을 채웁니다.
-- **절대** &ndash; 열과 높이 및 너비 값이 특정 한 고정 된 행의 크기를 조정 합니다. 값으로 지정 하 고 `GridUnitType.Absolute` C#에서 `#` 에서 XAML을 사용 하 여 `#` 원하는 값 중.
-
-> [!NOTE]
-> 열의 너비 값은 기본적으로 xamarin.ios에서 `*` 로 설정 되므로 열이 사용 가능한 공간을 채우도록 합니다. 또한 행의 높이 값은 기본적으로로 `*` 설정 됩니다.
-
-세 개의 행과 두 개의 열을 해야 하는 앱을 고려해 야 합니다. 맨 아래 행 높이가 200px 정확 하 게 해야 하며 맨 위 행은 가운데 행 높이가 두 배가 됩니다. 왼쪽된 열 콘텐츠에 맞게 하기에 충분 해야 하며 오른쪽 열 나머지 공간을 채우도록 합니다.
-
-XAML:
+기본적으로에는 [`Grid`](xref:Xamarin.Forms.Grid) 하나의 행과 하나의 열이 포함 됩니다.
 
 ```xaml
-<Grid>
-  <Grid.RowDefinitions>
-    <RowDefinition Height="2*" />
-    <RowDefinition Height="*" />
-    <RowDefinition Height="200" />
-  </Grid.RowDefinitions>
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="Auto" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-</Grid>
-```
-
-C#:
-
-```csharp
-Grid grid = new Grid();
-grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(2, GridUnitType.Star) });
-grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
-grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Auto) });
-```
-
-### <a name="placing-views-in-a-grid"></a>뷰는 표에 배치
-
-보기를 배치 하는 `Grid` 을 그리드로 자식으로 추가 하 고에 속한 행 및 열을 지정 해야 합니다.
-
-XAML을 사용 하 여 `Grid.Row` 고 `Grid.Column` 배치를 지정 하려면 각 개별 뷰. 사실은 `Grid.Row` 고 `Grid.Column` 행과 열의 0부터 시작 목록을 기반으로 하는 위치를 지정 합니다. 이 4x4 모눈의 왼쪽된 위 셀 (0, 0) 이며 오른쪽 아래 셀 (3, 3)을 의미 합니다.
-
-`Grid` 표시 된 다음 4 개의 셀을 포함 합니다.
-
-![](grid-images/label-grid.png "네 가지 보기를 사용 하 여 눈금")
-
-XAML:
-
-```xaml
-<Grid>
-  <Grid.RowDefinitions>
-    <RowDefinition Height="*" />
-    <RowDefinition Height="*" />
-  </Grid.RowDefinitions>
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="*" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-  <Label Text="Top Left" Grid.Row="0" Grid.Column="0" />
-  <Label Text="Top Right" Grid.Row="0" Grid.Column="1" />
-  <Label Text="Bottom Left" Grid.Row="1" Grid.Column="0" />
-  <Label Text="Bottom Right" Grid.Row="1" Grid.Column="1" />
-</Grid>
-```
-
-C#:
-
-```csharp
-var grid = new Grid();
-
-grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star)});
-grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star)});
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star)});
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star)});
-
-var topLeft = new Label { Text = "Top Left" };
-var topRight = new Label { Text = "Top Right" };
-var bottomLeft = new Label { Text = "Bottom Left" };
-var bottomRight = new Label { Text = "Bottom Right" };
-
-grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 1, 0);
-grid.Children.Add(bottomLeft, 0, 1);
-grid.Children.Add(bottomRight, 1, 1);
-```
-
-위의 코드는 네 개의 레이블, 두 개의 열 및 두 개의 행을 사용 하 여 그리드를 만듭니다. 각 레이블에 들이 있는 동일한 크기 및 행 확장 되어 사용 가능한 모든 공간 사용을 참고 합니다.
-
-위의 예제에서는 보기에 추가 됩니다는 [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) 사용 하 여 컬렉션의 [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) 왼쪽 및 위쪽 인수를 지정 하는 오버 로드 합니다. 사용 하는 경우는 [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) 왼쪽 지정 하는 오버 로드, 오른쪽, 위쪽 및 아래쪽 인수 동안 왼쪽 및 위쪽 인수는 항상 내의 셀으로 참조 합니다 [ `Grid` ](xref:Xamarin.Forms.Grid), 오른쪽 및 아래쪽 인수 외부에 있는 셀을 참조 하는 것 처럼는 `Grid`합니다. 오른쪽 인수 왼쪽된 인수 보다 큰지 여야 하며 아래쪽 인수 항상 커야 상위 인수 보다 때문입니다. 다음 예제에서는 둘 다를 사용 하 여 해당 코드 `Add` 오버 로드 합니다.
-
-```csharp
-// left, top
-grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 1, 0);
-grid.Children.Add(bottomLeft, 0, 1);
-grid.Children.Add(bottomRight, 1, 1);
-
-// left, right, top, bottom
-grid.Children.Add(topLeft, 0, 1, 0, 1);
-grid.Children.Add(topRight, 1, 2, 0, 1);
-grid.Children.Add(bottomLeft, 0, 1, 1, 2);
-grid.Children.Add(bottomRight, 1, 2, 1, 2);
-```
-
-### <a name="spacing"></a>간격
-
-`Grid` 속성이 키를 눌러 행 및 열 사이의 간격을 제어할 수 있습니다. 다음 속성을 사용자 지정할 수는 `Grid`:
-
-- **ColumnSpacing** &ndash; 열 사이의 간격 크기입니다. 이 속성의 기본값은 6입니다.
-- **RowSpacing** &ndash; 행 사이의 공간 크기입니다. 이 속성의 기본값은 6입니다.
-
-다음 XAML 지정를 `Grid` 두 개의 열, 행이 하나 및 5를 사용 하 여 px 열 사이의 간격입니다.
-
-```xaml
-<Grid ColumnSpacing="5">
-  <Grid.ColumnDefinitions>
-    <ColumnDefinition Width="*" />
-    <ColumnDefinition Width="*" />
-  </Grid.ColumnDefinitions>
-</Grid>
-```
-
-C#:
-
-```csharp
-var grid = new Grid { ColumnSpacing = 5 };
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star)});
-grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star)});
-```
-
-### <a name="spans"></a>범위
-
-표를 사용 하는 경우에 종종 둘 이상의 행 또는 열 차지 하는 요소가 있습니다. 간단한 계산기 응용 프로그램을 고려해 야 합니다.
-
-![](grid-images/calculator.png "Calulator 응용 프로그램")
-
-0 단추에 걸쳐 두 개의 열 처럼 각 플랫폼에 대 한 기본 제공 계산기에서 확인할 수 있습니다. 이 위해서는 사용을 `ColumnSpan` 요소는 열 개수 차지 지정 하는 속성입니다. 해당 단추에 대 한 XAML:
-
-```xaml
-<Button Text = "0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
-```
-
-및 C#:
-
-```csharp
-Button zeroButton = new Button { Text = "0" };
-controlGrid.Children.Add (zeroButton, 0, 4);
-Grid.SetColumnSpan (zeroButton, 2);
-```
-
-에 해당 코드의 정적 메서드를 확인 합니다 `Grid` 클래스는 변경을 비롯 한 위치 변경을 수행 하는 데 사용 됩니다 `ColumnSpan` 및 `RowSpan`합니다. 참고는 언제 든 지 설정할 수 있는 다른 속성과 달리 정적 메서드를 사용 하 여 설정 하는 속성 이어야 수도 표의 변경 합니다.
-
-위의 계산기 응용 프로그램에 대 한 전체 XAML은 다음과 같습니다.
-
-```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="LayoutSamples.CalculatorGridXAML"
-Title = "Calculator - XAML"
-BackgroundColor="#404040">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="plainButton" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#eee"/>
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BorderRadius" Value="0"/>
-                <Setter Property="FontSize" Value="40" />
-            </Style>
-            <Style x:Key="darkerButton" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#ddd"/>
-                <Setter Property="TextColor" Value="Black" />
-                <Setter Property="BorderRadius" Value="0"/>
-                <Setter Property="FontSize" Value="40" />
-            </Style>
-            <Style x:Key="orangeButton" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#E8AD00"/>
-                <Setter Property="TextColor" Value="White" />
-                <Setter Property="BorderRadius" Value="0"/>
-                <Setter Property="FontSize" Value="40" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <ContentPage.Content>
-        <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Label Text="0" Grid.Row="0" HorizontalTextAlignment="End" VerticalTextAlignment="End" TextColor="White"
-        FontSize="60" Grid.ColumnSpan="4" />
-            <Button Text = "C" Grid.Row="1" Grid.Column="0"
-        Style="{StaticResource darkerButton}" />
-            <Button Text = "+/-" Grid.Row="1" Grid.Column="1"
-        Style="{StaticResource darkerButton}" />
-            <Button Text = "%" Grid.Row="1" Grid.Column="2"
-        Style="{StaticResource darkerButton}" />
-            <Button Text = "div" Grid.Row="1" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "7" Grid.Row="2" Grid.Column="0"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "8" Grid.Row="2" Grid.Column="1"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "9" Grid.Row="2" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "X" Grid.Row="2" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "4" Grid.Row="3" Grid.Column="0"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "5" Grid.Row="3" Grid.Column="1"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "6" Grid.Row="3" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "-" Grid.Row="3" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "1" Grid.Row="4" Grid.Column="0"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "2" Grid.Row="4" Grid.Column="1"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "3" Grid.Row="4" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "+" Grid.Row="4" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-            <Button Text = "0" Grid.ColumnSpan="2"
-        Grid.Row="5" Grid.Column="0" Style="{StaticResource plainButton}" />
-            <Button Text = "." Grid.Row="5" Grid.Column="2"
-        Style="{StaticResource plainButton}" />
-            <Button Text = "=" Grid.Row="5" Grid.Column="3"
-        Style="{StaticResource orangeButton}" />
-        </Grid>
-    </ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridTutorial.MainPage">
+    <Grid Margin="20,35,20,20">
+        <Label Text="By default, a Grid contains one row and one column." />
+    </Grid>
 </ContentPage>
 ```
 
-모두 그리드의 맨 위에 있는 레이블 및 0 단추는 열이 하나 이상 occuping 알 수 있습니다. 중첩 된 표를 사용 하 여 유사한 레이아웃을 얻을 수 있지만 합니다 `ColumnSpan`  &  `RowSpan` 방법은 간단 합니다.
+이 예제에서는 [`Grid`](xref:Xamarin.Forms.Grid) [`Label`](xref:Xamarin.Forms.Label) 단일 위치에 자동으로 배치 되는 단일 자식을 포함 합니다.
 
-C# 구현 합니다.
+[![기본 모눈 레이아웃의 스크린샷](grid-images/default.png "기본 모눈 레이아웃")](grid-images/default-large.png#lightbox "기본 모눈 레이아웃")
+
+의 레이아웃 동작은 [`Grid`](xref:Xamarin.Forms.Grid) [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) 각각 및 개체의 컬렉션인 및 속성을 사용 하 여 정의할 수 있습니다 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) . 이러한 컬렉션은의 행 및 열 특성을 정의 `Grid` 하며,의 [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) 각 행에 대해 하나의 개체를 포함 하 `Grid` 고의 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 각 열에 대해 하나의 개체를 포함 해야 합니다 `Grid` .
+
+[`RowDefinition`](xref:Xamarin.Forms.RowDefinition)클래스는 [`Height`](xref:Xamarin.Forms.RowDefinition.Height) 형식의 속성을 정의 [`GridLength`](xref:Xamarin.Forms.GridLength) 하 고 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 클래스는 형식의 속성을 정의 합니다 [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) [`GridLength`](xref:Xamarin.Forms.GridLength) . [`GridLength`](xref:Xamarin.Forms.GridLength)구조체는 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) 세 개의 멤버를 포함 하는 열거형을 기준으로 행 높이나 열 너비를 지정 합니다.
+
+- `Absolute`– 행 높이 또는 열 너비는 장치 독립적 단위의 값 (XAML의 숫자)입니다.
+- `Auto`– 행 높이 또는 열 너비는 셀 내용 (XAML)에 따라 자동으로 크기가 조정 됩니다 `Auto` .
+- `Star`– 남겨진 행 높이 또는 열 너비는 비례적으로 할당 됩니다 (숫자 뒤에 XAML로 표시 됨 `*` ).
+
+[`Grid`](xref:Xamarin.Forms.Grid)속성이 인 행은 `Height` `Auto` 세로와 동일한 방식으로 해당 행의 뷰 높이를 제한 합니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) . 마찬가지로 속성을 가진 열은 `Width` `Auto` 가로와 매우 유사 하 게 작동 `StackLayout` 합니다.
+
+> [!CAUTION]
+> 가능한 한 적은 수의 행과 열이 size로 설정 되어 있는지 확인 하십시오 [`Auto`](xref:Xamarin.Forms.GridLength.Auto) . 자동으로 크기가 조정된 행이나 열은 레이아웃 엔진이 추가적인 레이아웃 계산을 수행하도록 합니다. 가능한 경우 고정된 크기의 행과 열을 대신 사용하세요. 또는 열거형 값을 사용 하 여 행과 열을 비례 하는 공간을 차지 하도록 설정 [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) 합니다.
+
+다음 XAML은 [`Grid`](xref:Xamarin.Forms.Grid) 3 개의 행과 두 개의 열이 있는을 만드는 방법을 보여 줍니다.
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.BasicGridPage"
+             Title="Basic Grid demo">
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        ...
+    </Grid>
+</ContentPage>
+```
+
+이 예제에서의 [`Grid`](xref:Xamarin.Forms.Grid) 전체 높이는 페이지 높이입니다. 는 `Grid` 세 번째 행의 높이가 100 장치 독립적 단위 임을 인식 합니다. 이는 해당 높이를 자체 높이로 빼고 별 앞의 숫자를 기준으로 첫 번째 및 두 번째 행 사이에 비례적으로 나머지 높이를 할당 합니다. 이 예에서는 첫 번째 행의 높이가 두 번째 행의 두 배가 됩니다.
+
+두 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 개체는 모두를로 설정 합니다 [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) . 즉 `*` `1*` , 화면의 너비가 두 열 아래에 동일 하 게 분할 됩니다.
+
+> [!IMPORTANT]
+> 속성의 기본값은 [`RowDefinition.Height`](xref:Xamarin.Forms.RowDefinition.Height) `*` 입니다. 마찬가지로 속성의 기본값은 [`ColumnDefinition.Width`](xref:Xamarin.Forms.ColumnDefinition.Width) `*` 입니다. 따라서 이러한 기본값을 사용할 수 있는 경우에는 이러한 속성을 설정할 필요가 없습니다.
+
+[`Grid`](xref:Xamarin.Forms.Grid)및 연결 된 속성을 사용 하 여 자식 뷰를 특정 셀에 배치할 수 있습니다 [`Grid.Column`](xref:Xamarin.Forms.Grid.ColumnProperty) [`Grid.Row`](xref:Xamarin.Forms.Grid.RowProperty) . 또한 자식 뷰가 여러 행과 열에 걸쳐 있도록 하려면 [`Grid.RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) 및 연결 된 속성을 사용 [`Grid.ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) 합니다.
+
+다음 XAML에서는 동일한 [`Grid`](xref:Xamarin.Forms.Grid) 정의를 보여 주고 특정 셀에 자식 뷰를 배치 합니다 `Grid` .
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.BasicGridPage"
+             Title="Basic Grid demo">
+   <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <BoxView Color="Green" />
+        <Label Text="Row 0, Column 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Column="1"
+                 Color="Blue" />
+        <Label Grid.Column="1"
+               Text="Row 0, Column 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Color="Teal" />
+        <Label Grid.Row="1"
+               Text="Row 1, Column 0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Grid.Column="1"
+                 Color="Purple" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Row1, Column 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 Color="Red" />
+        <Label Grid.Row="2"
+               Grid.ColumnSpan="2"
+               Text="Row 2, Columns 0 and 1"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </Grid>
+</ContentPage>
+```
+
+> [!NOTE]
+> `Grid.Row`및 `Grid.Column` 속성은 모두 0에서 인덱싱되는 `Grid.Row="2"` 반면는 `Grid.Column="1"` 두 번째 열을 참조 하는 동안 세 번째 행을 참조 합니다. 또한 두 속성의 기본값은 0 이므로의 첫 번째 행 또는 첫 번째 열을 차지 하는 자식 뷰에 대해 설정할 필요가 없습니다 [`Grid`](xref:Xamarin.Forms.Grid) .
+
+이 예제에서는 세 개의 행이 모두 [`Grid`](xref:Xamarin.Forms.Grid) [`BoxView`](xref:Xamarin.Forms.BoxView) 및 뷰로 점유 됩니다 [`Label`](xref:Xamarin.Forms.Label) . 세 번째 행은 100 장치 독립적 단위이 고 처음 두 행은 나머지 공간을 차지 합니다. 첫 번째 행은 두 번째 행 보다 두 배 큽니다. 두 열의 너비는 같으며 반으로 나눕니다 `Grid` . `BoxView`세 번째 행의는 두 열에 모두 걸쳐 있습니다.
+
+[![기본 모눈 레이아웃의 스크린샷](grid-images/basic.png "기본 모눈 레이아웃")](grid-images/basic-large.png#lightbox "기본 모눈 레이아웃")
+
+또한의 자식 뷰는 셀을 [`Grid`](xref:Xamarin.Forms.Grid) 공유할 수 있습니다. 자식이 XAML에 표시 되는 순서는 자식 항목이에 배치 되는 순서입니다 `Grid` . 이전 예제에서 [`Label`](xref:Xamarin.Forms.Label) 개체는 개체 위에 렌더링 되기 때문에 표시 됩니다 [`BoxView`](xref:Xamarin.Forms.BoxView) . 개체가 `Label` 위에 렌더링 된 경우 개체는 표시 되지 않습니다 `BoxView` .
+
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
-public CalculatorGridCode ()
+public class BasicGridPageCS : ContentPage
 {
-  Title = "Calculator - C#";
-  BackgroundColor = Color.FromHex ("#404040");
+    public BasicGridPageCS()
+    {
+        Grid grid = new Grid
+        {
+            RowDefinitions =
+            {
+                new RowDefinition { Height = new GridLength(2, GridUnitType.Star) },
+                new RowDefinition(),
+                new RowDefinition { Height = new GridLength(100) }
+            },
+            ColumnDefinitions =
+            {
+                new ColumnDefinition(),
+                new ColumnDefinition()
+            }
+        };
 
-  var plainButton = new Style (typeof(Button)) {
-    Setters = {
-      new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#eee") },
-      new Setter { Property = Button.TextColorProperty, Value = Color.Black },
-      new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
-      new Setter { Property = Button.FontSizeProperty, Value = 40 }
+        // Row 0
+        // The BoxView and Label are in row 0 and column 0, and so only needs to be added to the
+        // Grid.Children collection to get default row and column settings.
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Green
+        });
+        grid.Children.Add(new Label
+        {
+            Text = "Row 0, Column 0",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        });
+
+        // This BoxView and Label are in row 0 and column 1, which are specified as arguments
+        // to the Add method.
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Blue
+        }, 1, 0);
+        grid.Children.Add(new Label
+        {
+            Text = "Row 0, Column 1",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 1, 0);
+
+        // Row 1
+        // This BoxView and Label are in row 1 and column 0, which are specified as arguments
+        // to the Add method overload.
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Teal
+        }, 0, 1, 1, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Row 1, Column 0",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 0, 1, 1, 2); // These arguments indicate that that the child element goes in the column starting at 0 but ending before 1.
+                        // They also indicate that the child element goes in the row starting at 1 but ending before 2.
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.Purple
+        }, 1, 2, 1, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Row1, Column 1",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 1, 2, 1, 2);
+
+        // Row 2
+        // Alternatively, the BoxView and Label can be positioned in cells with the Grid.SetRow
+        // and Grid.SetColumn methods.
+        BoxView boxView = new BoxView { Color = Color.Red };
+        Grid.SetRow(boxView, 2);
+        Grid.SetColumnSpan(boxView, 2);
+        Label label = new Label
+        {
+            Text = "Row 2, Column 0 and 1",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+        Grid.SetRow(label, 2);
+        Grid.SetColumnSpan(label, 2);
+
+        grid.Children.Add(boxView);
+        grid.Children.Add(label);
+
+        Title = "Basic Grid demo";
+        Content = grid;
     }
-  };
-  var darkerButton = new Style (typeof(Button)) {
-    Setters = {
-      new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#ddd") },
-      new Setter { Property = Button.TextColorProperty, Value = Color.Black },
-      new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
-      new Setter { Property = Button.FontSizeProperty, Value = 40 }
+}
+```
+
+코드에서 개체의 높이 [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) 와 개체의 너비를 지정 하려면 [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) 일반적으로 [`GridLength`](xref:Xamarin.Forms.GridLength) 열거형과 함께 구조체의 값을 사용 합니다 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) .
+
+위의 예제 코드는에 자식을 추가 하 고 해당 셀이 상주 하는 셀을 지정 하는 여러 가지 방법을 보여 줍니다 [`Grid`](xref:Xamarin.Forms.Grid) . 왼쪽 `Add` , *오른쪽*, *위쪽*및 *left* *아래쪽* 인수를 지정 하는 오버 로드를 사용 하는 경우 *left* 및 *top* 인수는 항상 내의 셀을 참조 하 고 `Grid` , *오른쪽* 및 *아래쪽* 인수가 외부에 있는 셀을 참조 하는 것으로 나타납니다 `Grid` . 이는 *오른쪽* 인수가 항상 *왼쪽* 인수 보다 커야 하 고 *맨 아래* 인수가 항상 *top* 인수 보다 커야 하기 때문입니다. 다음 예에서는 2x2를 가정 하 고 `Grid` 두 오버 로드를 모두 사용 하는 동일한 코드를 보여 줍니다 `Add` .
+
+```csharp
+// left, top
+grid.Children.Add(topLeft, 0, 0);           // first column, first row
+grid.Children.Add(topRight, 1, 0);          // second column, first tow
+grid.Children.Add(bottomLeft, 0, 1);        // first column, second row
+grid.Children.Add(bottomRight, 1, 1);       // second column, second row
+
+// left, right, top, bottom
+grid.Children.Add(topLeft, 0, 1, 0, 1);     // first column, first row
+grid.Children.Add(topRight, 1, 2, 0, 1);    // second column, first tow
+grid.Children.Add(bottomLeft, 0, 1, 1, 2);  // first column, second row
+grid.Children.Add(bottomRight, 1, 2, 1, 2); // second column, second row
+```
+
+> [!NOTE]
+> 또한 및 메서드를 사용 하 여 자식 뷰를에 추가할 수 있습니다 [`Grid`](xref:Xamarin.Forms.Grid) [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) .이 메서드는 [`AddVertical`](xref:Xamarin.Forms.Grid.IGridList`1.AddVertical*) 단일 행 이나 단일 열에 자식을 추가 `Grid` 합니다. `Grid`그러면는 이러한 호출이 수행 될 때 행 또는 열을 확장 하 고 올바른 셀에 자식을 자동으로 배치할 수 있습니다.
+
+## <a name="space-between-rows-and-columns"></a>행과 열 사이의 간격
+
+기본적으로 [`Grid`](xref:Xamarin.Forms.Grid) 행은 6 개의 장치 독립적 공간 단위로 구분 됩니다. 마찬가지로, `Grid` 열은 장치 독립적인 6 개의 공간 단위로 구분 됩니다. 이러한 기본값은 [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing) 각각 및 속성을 설정 하 여 변경할 수 있습니다 [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) .
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.GridSpacingPage"
+             Title="Grid spacing demo">
+    <Grid RowSpacing="0"
+          ColumnSpacing="0">
+        ..
+    </Grid>
+</ContentPage>
+```
+
+이 예제에서는 [`Grid`](xref:Xamarin.Forms.Grid) 행과 열 사이에 공백이 없는을 만듭니다.
+
+[![셀 사이에 간격이 없는 모눈의 스크린샷](grid-images/spacing.png "셀 사이에 공백이 없는 그리드")](grid-images/spacing-large.png#lightbox "셀 사이에 공백이 없는 그리드")
+
+> [!TIP]
+> [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing)및 [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) 속성을 음수 값으로 설정 하 여 셀 내용이 겹칠 수 있습니다.
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+public GridSpacingPageCS()
+{
+    Grid grid = new Grid
+    {
+        RowSpacing = 0,
+        ColumnSpacing = 0,
+        // ...
+    };
+    // ...
+
+    Content = grid;
+}
+```
+
+## <a name="alignment"></a>맞춤
+
+의 자식 뷰는 [`Grid`](xref:Xamarin.Forms.Grid) 및 속성을 통해 셀 내에 배치 될 수 있습니다 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . 이러한 속성은 구조체에서 다음 필드로 설정할 수 있습니다 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) .
+
+- [`Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+
+> [!IMPORTANT]
+> `AndExpands`구조체의 필드는 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) 개체에만 적용 됩니다 [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
+
+다음 XAML에서는 [`Grid`](xref:Xamarin.Forms.Grid) 크기가 같은 9 개의 셀을 사용 하 여를 만들고 [`Label`](xref:Xamarin.Forms.Label) 각 셀에 다른 맞춤을 추가 합니다.
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDemos.Views.GridAlignmentPage"
+             Title="Grid alignment demo">
+    <Grid RowSpacing="0"
+          ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="AliceBlue" />
+        <Label Text="Upper left"
+               HorizontalOptions="Start"
+               VerticalOptions="Start" />
+        <BoxView Grid.Column="1"
+                 Color="LightSkyBlue" />
+        <Label Grid.Column="1"
+               Text="Upper center"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"/>
+        <BoxView Grid.Column="2"
+                 Color="CadetBlue" />
+        <Label Grid.Column="2"
+               Text="Upper right"
+               HorizontalOptions="End"
+               VerticalOptions="Start" />
+        <BoxView Grid.Row="1"
+                 Color="CornflowerBlue" />
+        <Label Grid.Row="1"
+               Text="Center left"
+               HorizontalOptions="Start"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Grid.Column="1"
+                 Color="DodgerBlue" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Text="Center center"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Grid.Column="2"
+                 Color="DarkSlateBlue" />
+        <Label Grid.Row="1"
+               Grid.Column="2"
+               Text="Center right"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="2"
+                 Color="SteelBlue" />
+        <Label Grid.Row="2"
+               Text="Lower left"
+               HorizontalOptions="Start"
+               VerticalOptions="End" />
+        <BoxView Grid.Row="2"
+                 Grid.Column="1"
+                 Color="LightBlue" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="Lower center"
+               HorizontalOptions="Center"
+               VerticalOptions="End" />
+        <BoxView Grid.Row="2"
+                 Grid.Column="2"
+                 Color="BlueViolet" />
+        <Label Grid.Row="2"
+               Grid.Column="2"
+               Text="Lower right"
+               HorizontalOptions="End"
+               VerticalOptions="End" />
+    </Grid>
+</ContentPage>
+```
+
+이 예제에서 [`Label`](xref:Xamarin.Forms.Label) 각 행의 개체는 모두 동일 하 게 세로로 정렬 되지만 다른 가로 맞춤을 사용 합니다. 또는 `Label` 서로 다른 세로 맞춤을 사용 하 여 각 열의 개체가 동일 하 게 가로로 정렬 되는 것으로 생각할 수 있습니다.
+
+[![표 형태의 셀 맞춤 스크린샷](grid-images/alignment.png "표의 셀 맞춤")](grid-images/alignment-large.png#lightbox "표의 셀 맞춤")
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+public class GridAlignmentPageCS : ContentPage
+{
+    public GridAlignmentPageCS()
+    {
+        Grid grid = new Grid
+        {
+            RowSpacing = 0,
+            ColumnSpacing = 0,
+            RowDefinitions =
+            {
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition()
+            },
+            ColumnDefinitions =
+            {
+                new ColumnDefinition(),
+                new ColumnDefinition(),
+                new ColumnDefinition()
+            }
+        };
+
+        // Row 0
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.AliceBlue
+        });
+        grid.Children.Add(new Label
+        {
+            Text = "Upper left",
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Start
+        });
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.LightSkyBlue
+        }, 1, 0);
+        grid.Children.Add(new Label
+        {
+            Text = "Upper center",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Start
+        }, 1, 0);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.CadetBlue
+        }, 2, 0);
+        grid.Children.Add(new Label
+        {
+            Text = "Upper right",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.Start
+        }, 2, 0);
+
+        // Row 1
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.CornflowerBlue
+        }, 0, 1);
+        grid.Children.Add(new Label
+        {
+            Text = "Center left",
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.Center
+        }, 0, 1);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.DodgerBlue
+        }, 1, 1);
+        grid.Children.Add(new Label
+        {
+            Text = "Center center",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        }, 1, 1);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.DarkSlateBlue
+        }, 2, 1);
+        grid.Children.Add(new Label
+        {
+            Text = "Center right",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.Center
+        }, 2, 1);
+
+        // Row 2
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.SteelBlue
+        }, 0, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Lower left",
+            HorizontalOptions = LayoutOptions.Start,
+            VerticalOptions = LayoutOptions.End
+        }, 0, 2);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.LightBlue
+        }, 1, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Lower center",
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.End
+        }, 1, 2);
+
+        grid.Children.Add(new BoxView
+        {
+            Color = Color.BlueViolet
+        }, 2, 2);
+        grid.Children.Add(new Label
+        {
+            Text = "Lower right",
+            HorizontalOptions = LayoutOptions.End,
+            VerticalOptions = LayoutOptions.End
+        }, 2, 2);
+
+        Title = "Grid alignment demo";
+        Content = grid;
     }
-  };
-  var orangeButton = new Style (typeof(Button)) {
-    Setters = {
-      new Setter { Property = Button.BackgroundColorProperty, Value = Color.FromHex ("#E8AD00") },
-      new Setter { Property = Button.TextColorProperty, Value = Color.White },
-      new Setter { Property = Button.BorderRadiusProperty, Value = 0 },
-      new Setter { Property = Button.FontSizeProperty, Value = 40 }
+}
+```
+
+## <a name="nested-grid-objects"></a>중첩 된 표 개체
+
+는 [`Grid`](xref:Xamarin.Forms.Grid) 중첩 된 자식 `Grid` 개체 또는 다른 자식 레이아웃을 포함 하는 부모 레이아웃으로 사용할 수 있습니다. `Grid`개체를 중첩 하는 경우 `Grid.Row` ,, `Grid.Column` `Grid.RowSpan` 및 `Grid.ColumnSpan` 연결 된 속성은 항상 부모 내에서 뷰의 위치를 참조 합니다 `Grid` .
+
+다음 XAML에서는 중첩 개체의 예를 보여 줍니다 [`Grid`](xref:Xamarin.Forms.Grid) .
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:GridDemos.Converters"
+             x:Class="GridDemos.Views.ColorSlidersGridPage"
+             Title="Nested Grids demo">
+
+    <ContentPage.Resources>
+        <converters:DoubleToIntConverter x:Key="doubleToInt" />
+
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <BoxView x:Name="boxView"
+                 Color="Black" />
+        <Grid Grid.Row="1"
+              Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Slider x:Name="redSlider"
+                    ValueChanged="OnSliderValueChanged" />
+            <Label Grid.Row="1"
+                   Text="{Binding Source={x:Reference redSlider},
+                                  Path=Value,
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Red = {0}'}" />
+            <Slider x:Name="greenSlider"
+                    Grid.Row="2"
+                    ValueChanged="OnSliderValueChanged" />
+            <Label Grid.Row="3"
+                   Text="{Binding Source={x:Reference greenSlider},
+                                  Path=Value,
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Green = {0}'}" />
+            <Slider x:Name="blueSlider"
+                    Grid.Row="4"
+                    ValueChanged="OnSliderValueChanged" />
+            <Label Grid.Row="5"
+                   Text="{Binding Source={x:Reference blueSlider},
+                                  Path=Value,
+                                  Converter={StaticResource doubleToInt},
+                                  ConverterParameter=255,
+                                  StringFormat='Blue = {0}'}" />
+        </Grid>
+    </Grid>
+</ContentPage>
+```
+
+이 예제에서 루트 레이아웃에 [`Grid`](xref:Xamarin.Forms.Grid) 는 [`BoxView`](xref:Xamarin.Forms.BoxView) 첫 번째 행에가 포함 되 고 `Grid` 두 번째 행에는 자식이 포함 됩니다. 자식은에 `Grid` 표시 되는 [`Slider`](xref:Xamarin.Forms.Slider) 색을 조작 하는 개체 `BoxView` 와 [`Label`](xref:Xamarin.Forms.Label) 각각의 값을 표시 하는 개체 `Slider` 를 포함 합니다.
+
+[![중첩 된 표 스크린샷](grid-images/nesting.png "중첩 된 표 개체")](grid-images/nesting-large.png#lightbox "중첩 된 표 개체")
+
+> [!IMPORTANT]
+> [`Grid`](xref:Xamarin.Forms.Grid)개체와 기타 레이아웃을 더 깊게 중첩할 수록 중첩 된 레이아웃은 성능에 영향을 줍니다. 자세한 내용은 [올바른 레이아웃 선택](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout)을 참조 하세요.
+
+해당하는 C# 코드는 다음과 같습니다.
+
+```csharp
+public class ColorSlidersGridPageCS : ContentPage
+{
+    BoxView boxView;
+    Slider redSlider;
+    Slider greenSlider;
+    Slider blueSlider;
+
+    public ColorSlidersGridPageCS()
+    {
+        // Create an implicit style for the Labels
+        Style labelStyle = new Style(typeof(Label))
+        {
+            Setters =
+            {
+                new Setter { Property = Label.HorizontalTextAlignmentProperty, Value = TextAlignment.Center }
+            }
+        };
+        Resources.Add(labelStyle);
+
+        // Root page layout
+        Grid rootGrid = new Grid
+        {
+            RowDefinitions =
+            {
+                new RowDefinition(),
+                new RowDefinition()
+            }
+        };
+
+        boxView = new BoxView { Color = Color.Black };
+        rootGrid.Children.Add(boxView);
+
+        // Child page layout
+        Grid childGrid = new Grid
+        {
+            Margin = new Thickness(20),
+            RowDefinitions =
+            {
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition(),
+                new RowDefinition()
+            }
+        };
+
+        DoubleToIntConverter doubleToInt = new DoubleToIntConverter();
+
+        redSlider = new Slider();
+        redSlider.ValueChanged += OnSliderValueChanged;
+        childGrid.Children.Add(redSlider);
+
+        Label redLabel = new Label();
+        redLabel.SetBinding(Label.TextProperty, new Binding("Value", converter: doubleToInt, converterParameter: "255", stringFormat: "Red = {0}", source: redSlider));
+        Grid.SetRow(redLabel, 1);
+        childGrid.Children.Add(redLabel);
+
+        greenSlider = new Slider();
+        greenSlider.ValueChanged += OnSliderValueChanged;
+        Grid.SetRow(greenSlider, 2);
+        childGrid.Children.Add(greenSlider);
+
+        Label greenLabel = new Label();
+        greenLabel.SetBinding(Label.TextProperty, new Binding("Value", converter: doubleToInt, converterParameter: "255", stringFormat: "Green = {0}", source: greenSlider));
+        Grid.SetRow(greenLabel, 3);
+        childGrid.Children.Add(greenLabel);
+
+        blueSlider = new Slider();
+        blueSlider.ValueChanged += OnSliderValueChanged;
+        Grid.SetRow(blueSlider, 4);
+        childGrid.Children.Add(blueSlider);
+
+        Label blueLabel = new Label();
+        blueLabel.SetBinding(Label.TextProperty, new Binding("Value", converter: doubleToInt, converterParameter: "255", stringFormat: "Blue = {0}", source: blueSlider));
+        Grid.SetRow(blueLabel, 5);
+        childGrid.Children.Add(blueLabel);
+
+        // Place the child Grid in the root Grid
+        rootGrid.Children.Add(childGrid, 0, 1);
+
+        Title = "Nested Grids demo";
+        Content = rootGrid;
     }
-  };
 
-  var controlGrid = new Grid { RowSpacing = 1, ColumnSpacing = 1 };
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (150) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-  controlGrid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUnitType.Star) });
-
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-  controlGrid.ColumnDefinitions.Add (new ColumnDefinition { Width = new GridLength (1, GridUnitType.Star) });
-
-  var label = new Label {
-    Text = "0",
-    HorizontalTextAlignment = TextAlignment.End,
-    VerticalTextAlignment = TextAlignment.End,
-    TextColor = Color.White,
-    FontSize = 60
-  };
-  controlGrid.Children.Add (label, 0, 0);
-
-  Grid.SetColumnSpan (label, 4);
-
-  controlGrid.Children.Add (new Button { Text = "C", Style = darkerButton }, 0, 1);
-  controlGrid.Children.Add (new Button { Text = "+/-", Style = darkerButton }, 1, 1);
-  controlGrid.Children.Add (new Button { Text = "%", Style = darkerButton }, 2, 1);
-  controlGrid.Children.Add (new Button { Text = "div", Style = orangeButton }, 3, 1);
-  controlGrid.Children.Add (new Button { Text = "7", Style = plainButton }, 0, 2);
-  controlGrid.Children.Add (new Button { Text = "8", Style = plainButton }, 1, 2);
-  controlGrid.Children.Add (new Button { Text = "9", Style = plainButton }, 2, 2);
-  controlGrid.Children.Add (new Button { Text = "X", Style = orangeButton }, 3, 2);
-  controlGrid.Children.Add (new Button { Text = "4", Style = plainButton }, 0, 3);
-  controlGrid.Children.Add (new Button { Text = "5", Style = plainButton }, 1, 3);
-  controlGrid.Children.Add (new Button { Text = "6", Style = plainButton }, 2, 3);
-  controlGrid.Children.Add (new Button { Text = "-", Style = orangeButton }, 3, 3);
-  controlGrid.Children.Add (new Button { Text = "1", Style = plainButton }, 0, 4);
-  controlGrid.Children.Add (new Button { Text = "2", Style = plainButton }, 1, 4);
-  controlGrid.Children.Add (new Button { Text = "3", Style = plainButton }, 2, 4);
-  controlGrid.Children.Add (new Button { Text = "+", Style = orangeButton }, 3, 4);
-  controlGrid.Children.Add (new Button { Text = ".", Style = plainButton }, 2, 5);
-  controlGrid.Children.Add (new Button { Text = "=", Style = orangeButton }, 3, 5);
-
-  var zeroButton = new Button { Text = "0", Style = plainButton };
-  controlGrid.Children.Add (zeroButton, 0, 5);
-  Grid.SetColumnSpan (zeroButton, 2);
-
-  Content = controlGrid;
+    void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        boxView.Color = new Color(redSlider.Value, greenSlider.Value, blueSlider.Value);
+    }
 }
 ```
 
 ## <a name="related-links"></a>관련 링크
 
-- [17 장 Xamarin.Forms를 사용 하 여 모바일 앱 만들기](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
-- [눈금](xref:Xamarin.Forms.Grid)
-- [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [BusinessTumble 예제 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [그리드 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+- [Xamarin.ios의 레이아웃 옵션](layout-options.md)
+- [Xamarin 양식 레이아웃 선택](choose-layout.md)
+- [Xamarin.Forms 앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)
