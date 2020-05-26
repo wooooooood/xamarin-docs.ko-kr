@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: f8e5a31b855158e1f801354c66f3d3d255eca559
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
+ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75488493"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550902"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
@@ -133,11 +133,11 @@ SecureStorage.RemoveAll();
 
 [Android 키 저장소](https://developer.android.com/training/articles/keystore.html)를 사용하여 **[YOUR-APP-PACKAGE-ID].xamarinessentials**라는 파일 이름으로 [공유 기본 설정](https://developer.android.com/training/data-storage/shared-preferences.html)에 저장되기 전에 값을 암호화하는 데 사용되는 암호화 키를 저장합니다.  공유 기본 설정 파일에 사용되는 키(_값_에 대한 _키_인 암호화 키 아님)는 `SecureStorage` API로 전달되는 키의 _MD5 해시_입니다.
 
-## <a name="api-level-23-and-higher"></a>API 레벨 23 이상
+**API 레벨 23 이상**
 
 최신 API 레벨에서 **AES** 키는 Android 키 저장소에서 가져오며, **AES/GCM/NoPadding** 암호화에 사용되어 값이 공유 기본 설정 파일에 저장되기 전에 암호화합니다.
 
-## <a name="api-level-22-and-lower"></a>API 레벨 22 이하
+**API 레벨 22 이하**
 
 이전 API 레벨에서 Android 키 저장소는 **RSA** 키 저장만 지원합니다. 이 키는 **RSA/ECB/PKCS1Padding** 암호화와 함께 사용되어 **AES** 키(런타임에 임의로 생성됨)를 암호화하며, 아직 생성되지 않은 경우 공유 기본 설정 파일의 _SecureStorageKey_ 키 아래에 저장됩니다.
 

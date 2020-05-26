@@ -7,12 +7,14 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/27/2019
-ms.openlocfilehash: 778f56ec844e2802c1e1bc783824d55218678761
-ms.sourcegitcommit: e9d88587aafc912124b87732d81c3910247ad811
+no-loc:
+- Firebase
+ms.openlocfilehash: 88926fe2c132ac03a07a7a2e18ee64b61fde43ad
+ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78337285"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83425845"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Azure Notification Hubs 및 Xamarin.Forms를 사용하여 푸시 알림 보내기 및 받기
 
@@ -35,10 +37,10 @@ ms.locfileid: "78337285"
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>푸시 알림 서비스 및 Azure Notification Hub 설정
 
-Azure Notification Hubs를 Xamarin.Forms 모바일 앱과 통합하는 것은 Azure Notification Hubs를 Xamarin 네이티브 애플리케이션과 통합하는 것과 비슷합니다. [Azure Notification Hubs를 사용하여 Xamarin.Android에 푸시 알림](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging)의 Firebase 콘솔 단계에 따라 **FCM 애플리케이션**을 설정합니다. Xamarin.Android 자습서를 사용하여 다음 단계를 완료합니다.
+Azure Notification Hubs를 Xamarin.Forms 모바일 앱과 통합하는 것은 Azure Notification Hubs를 Xamarin 네이티브 애플리케이션과 통합하는 것과 비슷합니다. [Azure Notification Hubs를 사용하여 Xamarin.Android에 푸시 알림](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging)의 Firebase 콘솔 단계에 따라 FCM(Firebase 클라우드 메시징) 애플리케이션을 설정합니다. Xamarin.Android 자습서를 사용하여 다음 단계를 완료합니다.
 
 1. 예제에서 사용되는 `com.xamarin.notifysample`과 같은 Android 패키지 이름을 정의합니다.
-1. Firebase 콘솔에서 **google-services.json**을 다운로드합니다. 이후 단계에서 Android 애플리케이션에 이 파일을 추가할 것입니다.
+1. Firebase 콘솔에서 `google-services.json`을 다운로드합니다. 이후 단계에서 Android 애플리케이션에 이 파일을 추가할 것입니다.
 1. Azure Notification Hub 인스턴스를 만들고 이름을 지정합니다. 이 문서 및 샘플에서는 `xdocsnotificationhub`를 허브 이름으로 사용합니다.
 1. FCM **서버 키**를 복사하여 Azure Notification Hub의 **Google(GCM/FCM)** 아래에서 **API 키**로 저장합니다.
 
@@ -46,7 +48,7 @@ Azure Notification Hubs를 Xamarin.Forms 모바일 앱과 통합하는 것은 Az
 
 ![Azure Notification Hub Google 구성의 스크린샷](azure-notification-hub-images/fcm-notification-hub-config.png "Azure Notification Hub Google 구성")
 
-iOS 디바이스에 대한 설정을 완료하려면 macOS 머신이 필요합니다. [Azure Notification Hubs를 사용하여 Xamarin.iOS로 푸시 알림](/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started#generate-the-certificate-signing-request-file)의 시작 단계에 따라 APNS를 설정합니다. Xamarin.iOS 자습서를 사용하여 다음 단계를 완료합니다.
+iOS 디바이스에 대한 설정을 완료하려면 macOS 머신이 필요합니다. [Azure Notification Hubs를 사용하여 Xamarin.iOS에 푸시 알림](/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started#generate-the-certificate-signing-request-file)의 시작 단계에 따라 APNS(Apple Push Notification Services)를 설정합니다. Xamarin.iOS 자습서를 사용하여 다음 단계를 완료합니다.
 
 1. iOS 번들 식별자를 정의합니다. 이 문서 및 샘플에서는 `com.xamarin.notifysample`를 번들 식별자로 사용합니다.
 1. CSR(인증서 서명 요청) 파일을 만들고 이 파일을 사용하여 푸시 알림 인증서를 생성합니다.
@@ -100,7 +102,7 @@ public void AddMessage(string message)
 }
 ```
 
-애플리케이션 예제에는 플랫폼 프로젝트에서 사용하는 속성을 정의하는 **AppConstants.cs** 파일이 포함되어 있습니다. 이 파일은 Azure Notification Hub의 값으로 사용자 지정해야 합니다. 다음 코드는 **AppConstants.cs** 파일을 보여 줍니다.
+애플리케이션 예제에는 플랫폼 프로젝트에서 사용하는 속성을 정의하는 `AppConstants.cs` 파일이 포함되어 있습니다. 이 파일은 Azure Notification Hub의 값으로 사용자 지정해야 합니다. 다음 코드는 `AppConstants.cs` 파일을 보여 줍니다.
 
 ```csharp
 public static class AppConstants
@@ -128,22 +130,22 @@ public static class AppConstants
 
 알림을 받고 처리하도록 Android 애플리케이션을 구성하려면 다음 단계를 완료합니다.
 
-1. Firebase 콘솔에서 패키지 이름과 일치하도록 Android **패키지 이름**를 구성합니다.
+1. Firebase 콘솔에서 패키지 이름과 일치하도록 Android **패키지 이름**을 구성합니다.
 1. Google Play, Firebase 및 Azure Notification Hubs와 상호 작용하려면 다음 NuGet 패키지를 설치합니다.
-    1. Xamarin.GooglePlayServices.Base.
-    1. Xamarin.Firebase.Messaging.
-    1. Xamarin.Azure.NotificationHubs.Android.
+    1. `Xamarin.GooglePlayServices.Base`
+    1. `Xamarin.Firebase.Messaging`
+    1. `Xamarin.Azure.NotificationHubs.Android`
 1. FCM 설치 중에 다운로드 한 `google-services.json` 파일을 프로젝트에 복사하고 빌드 작업을 `GoogleServicesJson`으로 설정합니다.
-1. [Firebase와 통신하도록 AndroidManifest.xml를 구성합니다](#configure-android-manifest).
-1. [FirebaseMessagingService를 재정의하여 메시지를 처리합니다](#override-firebasemessagingservice-to-handle-messages).
-1. [들어오는 알림을 Xamarin.Forms UI에 추가합니다](#add-incoming-notifications-to-the-xamarinforms-ui).
+1. Firebase와 통신하도록 `AndroidManifest.xml`을 [구성](#configure-android-manifest)합니다.
+1. 메시지를 처리하도록 `FirebaseMessagingService`를 [재정의](#override-firebasemessagingservice-to-handle-messages)합니다.
+1. 들어오는 알림을 Xamarin.Forms UI에 [추가](#add-incoming-notifications-to-the-xamarinforms-ui)합니다.
 
 > [!NOTE]
-> **GoogleServicesJson** 빌드 작업은 **Xamarin.GooglePlayServices.Base** NuGet 패키지의 일부입니다. Visual Studio 2019는 시작하는 동안 사용 가능한 빌드 작업을 설정합니다. **GoogleServicesJson**이 빌드 작업으로 표시되지 않으면 NuGet 패키지를 설치한 후 Visual Studio 2019를 다시 시작합니다.
+> `GoogleServicesJson` 빌드 작업은 `Xamarin.GooglePlayServices.Base` NuGet 패키지의 일부입니다. Visual Studio 2019는 시작하는 동안 사용 가능한 빌드 작업을 설정합니다. `GoogleServicesJson`이 빌드 작업으로 표시되지 않으면 NuGet 패키지를 설치한 후 Visual Studio 2019를 다시 시작합니다.
 
 ### <a name="configure-android-manifest"></a>Android 매니페스트 구성
 
-앱은 `application` 요소 내의 `receiver` 요소를 사용하여 Firebase와 통신할 수 있습니다. 앱은 `uses-permission` 요소를 사용하여 메시지를 처리하고 Azure Notification Hub에 등록할 수 있습니다. 전체 **AndroidManifest.xml**은 아래 예제와 유사합니다.
+`application` 요소 내의 `receiver` 요소를 통해 앱이 Firebase와 통신할 수 있습니다. 앱은 `uses-permission` 요소를 사용하여 메시지를 처리하고 Azure Notification Hub에 등록할 수 있습니다. 전체 `AndroidManifest.xml`은 아래 예제와 유사합니다.
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="YOUR_PACKAGE_NAME" android:installLocation="auto">
@@ -165,7 +167,7 @@ public static class AppConstants
 </manifest>
 ```
 
-### <a name="override-firebasemessagingservice-to-handle-messages"></a>FirebaseMessagingService를 재정의하여 메시지 처리
+### <a name="override-firebasemessagingservice-to-handle-messages"></a>메시지를 처리하도록 `FirebaseMessagingService` 재정의
 
 Firebase에 등록하고 메시지를 처리하려면 `FirebaseMessagingService` 클래스를 서브클래싱합니다. 애플리케이션 예제는 `FirebaseMessagingService`를 서브클래싱하는 `FirebaseService` 클래스를 정의합니다. 이 클래스는 `com.google.firebase.MESSAGING_EVENT` 필터를 포함하는 `IntentFilter` 특성으로 태그가 지정됩니다. Android는 이 필터를 사용하여 들어오는 메시지가 처리되도록 이 클래스에 전달할 수 있습니다.
 
@@ -209,7 +211,7 @@ void SendRegistrationToServer(string token)
 }
 ```
 
-`SendRegistrationToServer` 메서드는 Azure Notification Hub에 디바이스를 등록하고 템플릿을 사용하여 태그를 구독합니다. 애플리케이션 예제는 `default` 라는 단일 태그와 **AppConstants.cs** 파일의 `messageParam`라는 단일 매개 변수를 사용하여 템플릿을 정의합니다. 등록, 태그 및 템플릿에 대한 자세한 내용은 [Azure Notification hubs에 템플릿 및 태그 등록](#register-templates-and-tags-with-the-azure-notification-hub)을 참조하세요.
+`SendRegistrationToServer` 메서드는 Azure Notification Hub에 디바이스를 등록하고 템플릿을 사용하여 태그를 구독합니다. 애플리케이션 예제는 `default`라는 단일 태그와 `AppConstants.cs` 파일의 `messageParam`이라는 단일 매개 변수를 사용하여 템플릿을 정의합니다. 등록, 태그 및 템플릿에 대한 자세한 내용은 [Azure Notification hubs에 템플릿 및 태그 등록](#register-templates-and-tags-with-the-azure-notification-hub)을 참조하세요.
 
 메시지가 수신되면 `FirebaseService` 클래스에서 `OnMessageReceived` 메서드가 호출됩니다.
 
@@ -242,7 +244,7 @@ void SendLocalNotification(string body)
     var intent = new Intent(this, typeof(MainActivity));
     intent.AddFlags(ActivityFlags.ClearTop);
     intent.PutExtra("message", body);
-    
+
     //Unique request code to avoid PendingIntent collision.
     var requestCode = new Random().Next();
     var pendingIntent = PendingIntent.GetActivity(this, requestCode, intent, PendingIntentFlags.OneShot);
@@ -358,20 +360,20 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
 
 알림을 받도록 iOS 애플리케이션을 구성하는 프로세스는 다음과 같습니다.
 
-1. 프로비저닝 프로필에 사용되는 값과 일치하도록 **info.plist** 파일의 **번들 식별자**를 구성합니다.
-1. **푸시 알림 사용** 옵션을 **Entitlements.plist** 파일에 추가합니다.
-1. 프로젝트에 **Xamarin.Azure.NotificationHubs.iOS** NuGet 패키지를 추가합니다.
-1. [APNS를 사용하여 알림 등록](#register-for-notifications-with-apns).
-1. [Azure Notification Hub에 애플리케이션을 등록하고 태그를 구독합니다](#register-with-azure-notification-hub-and-subscribe-to-tags).
-1. [APNS 알림을 Xamarin.Forms UI에 추가합니다](#add-apns-notifications-to-xamarinforms-ui).
+1. 프로비저닝 프로필에 사용되는 값과 일치하도록 `Info.plist` 파일의 **번들 식별자**를 구성합니다.
+1. **푸시 알림 사용** 옵션을 `Entitlements.plist` 파일에 추가합니다.
+1. `Xamarin.Azure.NotificationHubs.iOS` NuGet 패키지를 프로젝트에 추가합니다.
+1. APNS를 사용하여 알림을 [등록](#register-for-notifications-with-apns)합니다.
+1. Azure Notification Hub에 애플리케이션을 [등록](#register-with-azure-notification-hub-and-subscribe-to-tags)하고 태그를 구독합니다.
+1. Xamarin.Forms UI에 APNS 알림을 [추가](#add-apns-notifications-to-xamarinforms-ui)합니다.
 
-다음 스크린샷은 Visual Studio 내의 **Entitlements.plist** 파일에서 선택된 **푸시 알림 사용** 옵션을 보여 줍니다.
+다음 스크린샷은 Visual Studio 내의 `Entitlements.plist` 파일에서 선택된 **푸시 알림 사용** 옵션을 보여 줍니다.
 
 ![푸시 알림 자격의 스크린샷](azure-notification-hub-images/push-notification-entitlement.png "푸시 알림 자격")
 
 ### <a name="register-for-notifications-with-apns"></a>APNS를 사용하여 알림 등록
 
-원격 알림을 등록하려면 **AppDelegate.cs** 파일의 `FinishedLaunching` 메서드를 재정의해야 합니다. 등록은 디바이스에서 사용되는 iOS 버전에 따라 다릅니다. 애플리케이션 예제의 iOS 프로젝트는 다음 예제와 같이 `RegisterForRemoteNotifications`를 호출하도록 `FinishedLaunching` 메서드를 재정의합니다.
+원격 알림을 등록하려면 `AppDelegate.cs` 파일의 `FinishedLaunching` 메서드를 재정의해야 합니다. 등록은 디바이스에서 사용되는 iOS 버전에 따라 다릅니다. 애플리케이션 예제의 iOS 프로젝트는 다음 예제와 같이 `RegisterForRemoteNotifications`를 호출하도록 `FinishedLaunching` 메서드를 재정의합니다.
 
 ```csharp
 public override bool FinishedLaunching(UIApplication app, NSDictionary options)
@@ -522,7 +524,7 @@ Azure Notification Hubs를 사용하여 애플리케이션에서 테스트 메�
 
 ## <a name="create-a-notification-dispatcher"></a>알림 디스패처 만들기
 
-Azure Notification Hubs에서 백엔드 애플리케이션을 사용하여 여러 플랫폼에서 디바이스에 알림을 디스패치할 수 있습니다. 이 샘플에서는 **NotificationDispatcher** 콘솔 애플리케이션을 사용한 알림 디스패치를 보여 줍니다. 애플리케이션에는 다음 속성을 정의하는 **DispatcherConstants.cs** 파일이 포함되어 있습니다.
+Azure Notification Hubs에서 백엔드 애플리케이션을 사용하여 여러 플랫폼에서 디바이스에 알림을 디스패치할 수 있습니다. 이 샘플은 콘솔 애플리케이션을 사용한 알림 디스패치를 보여 줍니다. 애플리케이션은 다음 속성을 정의하는 `DispatcherConstants.cs` 파일을 포함합니다.
 
 ```csharp
 public static class DispatcherConstants
@@ -533,7 +535,7 @@ public static class DispatcherConstants
 }
 ```
 
-**DispatcherConstants.cs**를 Azure Notification Hub 구성과 일치하도록 구성해야 합니다. `SubscriptionTags` 속성의 값은 클라이언트 앱에서 사용되는 값과 일치해야 합니다. `NotificationHubName` 속성은 Azure Notification Hub 인스턴스의 이름입니다. `FullAccessConnectionString` 속성은 알림 허브 **액세스 정책**에 있는 선택키입니다. 다음 스크린샷은 Azure Portal의 `NotificationHubName` 및 `FullAccessConnectionString` 속성의 위치를 보여 줍니다.
+Azure Notification Hub 구성과 일치하도록 `DispatcherConstants.cs` 파일을 구성해야 합니다. `SubscriptionTags` 속성의 값은 클라이언트 앱에서 사용되는 값과 일치해야 합니다. `NotificationHubName` 속성은 Azure Notification Hub 인스턴스의 이름입니다. `FullAccessConnectionString` 속성은 알림 허브 **액세스 정책**에 있는 선택키입니다. 다음 스크린샷은 Azure Portal의 `NotificationHubName` 및 `FullAccessConnectionString` 속성의 위치를 보여 줍니다.
 
 ![Azure Notification Hub 이름 및 FullAccessConnectionString의 스크린샷](azure-notification-hub-images/notification-hub-full-access-policy.png "Azure Notification Hub 이름 및 FullAccessConnectionString")
 
