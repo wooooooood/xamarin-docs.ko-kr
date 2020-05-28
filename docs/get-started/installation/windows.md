@@ -1,17 +1,20 @@
 ---
-title: Visual Studio 2019에 Xamarin 설치
-description: 이 문서에서는 Visual Studio 2019에 Xamarin을 설치하는 방법을 설명합니다. 요구 사항, 설치 프로세스 및 설치 확인을 설명합니다.
-ms.prod: xamarin
-ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
-author: conceptdev
-ms.author: crdun
-ms.date: 08/28/2018
-ms.openlocfilehash: 970985e419c5710699b6bdda49da8b59ef3c6cb6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 39cf115ad80dd8cdd3ddb298ce87c065663d6cb2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71119255"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132680"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Visual Studio 2019에 Xamarin 설치
 
@@ -39,7 +42,7 @@ Visual Studio 2019에 Xamarin을 설치하면 앱에 대한 코드 작성을 시
 
 ### <a name="ios"></a>iOS
 
-자세한 내용은 [Windows에 Xamarin.iOS 설치](~/ios/get-started/installation/windows/index.md) 가이드를 참조하세요. 
+자세한 내용은 [Windows에 Xamarin.iOS 설치](~/ios/get-started/installation/windows/index.md) 가이드를 참조하세요.
 
 1. [Mac용 Visual Studio 설치](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Mac 빌드 호스트에 Visual Studio 연결](~/ios/get-started/installation/windows/connecting-to-mac/index.md)

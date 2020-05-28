@@ -1,17 +1,20 @@
 ---
-title: Xamarin 제거
-description: 이 문서에서는 Windows의 Visual Studio에서 Xamarin을 제거하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
-author: conceptdev
-ms.author: crdun
-ms.date: 01/22/2020
-ms.openlocfilehash: 4c9096edddeb00070aaabc3e93b283f2d55c1bfa
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3e194e92e6e9b9067e40928bf9766e987bfe472c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303644"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136372"
 ---
 # <a name="uninstall-xamarin-from-visual-studio"></a>Visual Studio에서 Xamarin 제거
 
