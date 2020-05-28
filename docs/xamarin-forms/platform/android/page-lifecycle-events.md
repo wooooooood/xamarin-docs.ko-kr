@@ -1,29 +1,32 @@
 ---
-title: Android의 페이지 수명 주기 이벤트
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 응용 프로그램 일시 중지 및 다시 시작 시 각각 사라짐 및 표시 페이지 이벤트를 사용 하지 않도록 설정 하는 Android 플랫폼별를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: F6E3759C-D347-407A-91A2-CF9B3B7D4CBD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 1745f137f2eeb04c0894c57bb0e45e5c43be7d0b
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76724ff17613fcebe35cb68518a1c932eee8aad7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68649927"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128728"
 ---
 # <a name="page-lifecycle-events-on-android"></a>Android의 페이지 수명 주기 이벤트
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 Android 플랫폼 전용은 AppCompat을 사용 하는 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) 응용 [`Appearing`](xref:Xamarin.Forms.Page.Appearing) 프로그램에 대해 각각 응용 프로그램 일시 중지 및 다시 시작에서 및 페이지 이벤트를 사용 하지 않도록 설정 하는 데 사용 됩니다. 소프트 키보드는 소프트 키보드의 운영 모드를로 일시 중지에 표시 된 경우 다시 시작할 때 표시 되는지 여부를 제어 하는 기능 포함 하는 또한 [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize)합니다.
+이 Android 플랫폼 전용은 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) AppCompat을 사용 하는 응용 프로그램에 대해 각각 응용 프로그램 일시 중지 및 다시 시작에서 및 페이지 이벤트를 사용 하지 않도록 설정 하는 데 사용 됩니다. 또한 소프트 키보드의 운영 모드가로 설정 된 경우 일시 중지 시 소프트 키보드가 표시 되는지 여부를 제어 하는 기능을 포함 합니다 [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) .
 
 > [!NOTE]
-> 이러한 이벤트는 이벤트를 사용 하는 응용 프로그램에 대 한 기존 동작을 유지 하기 위해 기본적으로 설정 되어 있는지 note 합니다. 사전 AppCompat 이벤트 주기를 일치 하는 AppCompat 이벤트 주기를 통해 이러한 이벤트를 사용 하지 않도록 설정 합니다.
+> 이러한 이벤트는 이벤트를 사용 하는 응용 프로그램에 대 한 기존 동작을 유지 하기 위해 기본적으로 사용 하도록 설정 됩니다. 이러한 이벤트를 사용 하지 않도록 설정 하면 AppCompat 이벤트 주기가 이전 AppCompat 이벤트 주기와 일치 합니다.
 
-이 플랫폼별으로 설정 하 여 XAML에서 사용 될 수는 [ `Application.SendDisappearingEventOnPause` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPauseProperty)합니다 [ `Application.SendAppearingEventOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResumeProperty), 및 [ `Application.ShouldPreserveKeyboardOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResumeProperty) 에연결된속성`boolean` 값:
+이 플랫폼 관련 [`Application.SendDisappearingEventOnPause`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPauseProperty) 속성은, [`Application.SendAppearingEventOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResumeProperty) 및 [`Application.ShouldPreserveKeyboardOnResume`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResumeProperty) 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 될 수 있습니다 `boolean` .
 
 ```xaml
 <Application ...
@@ -36,7 +39,7 @@ ms.locfileid: "68649927"
 </Application>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -51,15 +54,15 @@ Xamarin.Forms.Application.Current.On<Android>()
      .ShouldPreserveKeyboardOnResume(true);
 ```
 
-`Application.Current.On<Android>` 메서드가 플랫폼별 Android에만 실행 되도록 지정 합니다. [ `Application.SendDisappearingEventOnPause` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPause(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) 메서드는 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) 네임 스페이스를 사용 하도록 설정 하거나 발생 하지 않도록 설정 되는 [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) 페이지 이벤트, 응용 프로그램 백그라운드를 입력합니다. 합니다 [ `Application.SendAppearingEventOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) 메서드를 사용 하도록 설정 하거나 발생 하지 않도록 설정 되는 [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) 백그라운드에서 응용 프로그램 다시 시작 될 때 페이지 이벤트입니다. 합니다 [ `Application.ShouldPreserveKeyboardOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) 메서드는 컨트롤 일시 중지에 표시 된 경우 다시 시작할 때 소프트 키보드 표시 되는지 여부를 제공 소프트 키보드의 운영 모드 설정 되어 있는지 [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+`Application.Current.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. [ `Application.SendDisappearingEventOnPause` ] (F: Xamarin.Forms 입니다. 플랫폼 구성. Xamarin.Forms SendDisappearingEventOnPause ()를 지정 합니다. IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Application}, system.string) 메서드를 사용 [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) 하 여 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) 응용 프로그램이 배경을 시작할 때 페이지 이벤트의 발생을 활성화 또는 비활성화 합니다. [ `Application.SendAppearingEventOnResume` ] (F: Xamarin.Forms 입니다. 플랫폼 구성. Xamarin.Forms SendAppearingEventOnResume ()를 지정 합니다. IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Application}, system.string) 메서드는 [`Appearing`](xref:Xamarin.Forms.Page.Appearing) 응용 프로그램이 백그라운드에서 다시 시작 될 때 페이지 이벤트의 발생을 활성화 하거나 비활성화 하는 데 사용 됩니다. [ `Application.ShouldPreserveKeyboardOnResume` ] (F: Xamarin.Forms 입니다. 플랫폼 구성. Xamarin.Forms ShouldPreserveKeyboardOnResume ()를 지정 합니다. IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Android, Xamarin.Forms . Application}, system.string) 메서드를 사용 하 여 소프트 키보드의 운영 모드가로 설정 된 경우 일시 중지 시 소프트 키보드가 표시 되는지 여부를 제어할 수 [`WindowSoftInputModeAdjust.Resize`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize) 있습니다.
 
-결과 [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) 하 고 [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) 페이지 이벤트 응용 프로그램 일시 중지 시 발생 하지 않습니다 각각 다시 시작 하 고 있는지 소프트 키보드를 선택할 때 표시 된 응용 프로그램 가 일시 중지 된 것도 표시 됩니다 응용 프로그램을 다시 시작 하는 경우:
+결과적으로 응용 프로그램을 [`Disappearing`](xref:Xamarin.Forms.Page.Appearing) [`Appearing`](xref:Xamarin.Forms.Page.Appearing) 일시 중지 하 고 다시 시작 하는 동안 및 페이지 이벤트가 발생 하지 않으며 응용 프로그램이 일시 중지 될 때 소프트 키보드가 표시 되 면 응용 프로그램이 다시 시작 될 때에도 표시 됩니다.
 
-[![](page-lifecycle-events-images/keyboard-on-resume.png "수명 주기 이벤트 플랫폼별")](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "수명 주기 이벤트 플랫폼별")
+[![](page-lifecycle-events-images/keyboard-on-resume.png "Lifecycle Events Platform-Specific")](page-lifecycle-events-images/keyboard-on-resume-large.png#lightbox "Lifecycle Events Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 
 - [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

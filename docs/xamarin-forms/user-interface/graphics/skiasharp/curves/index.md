@@ -1,56 +1,59 @@
 ---
-title: SkiaSharp 곡선 및 경로
-description: 이 문서에서는 SkiaSharp 곡선 및 경로 기능을 사용 하 여 Xamarin.Forms 응용 프로그램에서 사용 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/24/2017
-ms.openlocfilehash: 49888dd32ee1cbfed6f9c9268c8dc7a106bec83e
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: 이 문서에서는 SkiaSharp를 사용 하 여 곡선을 그리고 응용 프로그램에서 경로 기능을 사용 하는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d5a4fc818cef77671b6cabddc56de8234cb858d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770582"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127805"
 ---
 # <a name="skiasharp-curves-and-paths"></a>SkiaSharp 곡선 및 경로
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_SkiaSharp 곡선 및 경로 기능을 사용 하 여 사용 방법 알아보기_
+_SkiaSharp를 사용 하 여 곡선을 그리고 경로 기능을 사용 하는 방법을 알아봅니다._
 
-탐색 [ `SKPath` ](xref:SkiaSharp.SKPath) 에서 시작 하는 메서드 및 속성을 [ **SkiaSharp 선 및 경로** ](../paths/index.md) 문서. 곡선을 추가 하는 메서드를 사용 하 여이 문서를 계속를 `SKPath` 개체를 다른 강력한 경로 기능을 활용 합니다. 간단한 텍스트 문자열의 전체 경로 지정 하는 방법, 경로 효과 사용 하는 방법 및 내부 경로를 더 자세히 살펴보고 하는 방법을 배웁니다.
+[`SKPath`](xref:SkiaSharp.SKPath)메서드 및 속성 탐색은 [**SkiaSharp 줄 및 경로**](../paths/index.md) 문서에서 시작 되었습니다. 여기의 문서는 개체에 곡선을 추가 하 `SKPath` 고 다른 강력한 경로 기능을 활용 하는 메서드를 계속 사용 합니다. 간결한 텍스트 문자열에서 전체 경로를 지정 하는 방법, 경로 효과를 사용 하는 방법 및 경로 내부를 자세히 설명 하는 방법을 확인할 수 있습니다.
 
-이 섹션의 모든 샘플 프로그램에서 확인할 수 있습니다는 **SkiaSharp 곡선 및 경로** 페이지를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램을 고를 [  **곡선** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 솔루션의 폴더입니다.
+이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 **SkiaSharp 곡선 및 경로** 페이지와 솔루션의 [**곡선**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) 폴더에서 찾을 수 있습니다.
 
-## <a name="three-ways-to-draw-an-arcarcsmd"></a>[원호를 그리는 3가지 방법](arcs.md)
+## <a name="three-ways-to-draw-an-arc"></a>[원호를 그리는 3가지 방법](arcs.md)
 
-SkiaSharp를 사용 하 여 세 가지 방법으로 타원을 정의 하는 방법에 알아봅니다.
+SkiaSharp를 사용 하 여 세 가지 다른 방법으로 원호를 정의 하는 방법을 알아봅니다.
 
-## <a name="three-types-of-bzier-curvesbeziersmd"></a>[3가지 형식의 Bézier 곡선](beziers.md)
+## <a name="three-types-of-bzier-curves"></a>[3가지 형식의 Bézier 곡선](beziers.md)
 
-SkiaSharp 사용 하 여 입방 형 3, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법
+SkiaSharp를 사용 하 여 입방, 정방형 및 원추형 베 지 어 곡선을 렌더링 하는 방법을 알아봅니다.
 
-## <a name="svg-path-datapath-datamd"></a>[SVG 경로 데이터](path-data.md)
+## <a name="svg-path-data"></a>[SVG 경로 데이터](path-data.md)
 
-텍스트 문자열을 사용 하 여 확장 가능한 벡터 그래픽 형식으로 경로 정의 합니다.
+확장 가능한 벡터 그래픽 형식의 텍스트 문자열을 사용 하 여 경로 정의
 
-## <a name="clipping-with-paths-and-regionsclippingmd"></a>[경로 및 지역 클리핑](clipping.md)
+## <a name="clipping-with-paths-and-regions"></a>[경로 및 지역 클리핑](clipping.md)
 
-특정 영역 및 영역을 만드는 데 클립 그래픽에 대 한 경로 사용 합니다.
+경로를 사용 하 여 그래픽을 특정 영역으로 클리핑 하 고 영역을 만듭니다.
 
-## <a name="path-effectseffectsmd"></a>[경로 효과](effects.md)
+## <a name="path-effects"></a>[경로 효과](effects.md)
 
-선 그리기 및 입력에 사용할 경로 허용 하는 다양 한 경로 효과 검색 합니다.
+패스를 스트로크 및 채우기에 사용할 수 있도록 하는 다양 한 경로 효과를 검색 합니다.
 
-## <a name="paths-and-texttext-pathsmd"></a>[경로 및 텍스트](text-paths.md)
+## <a name="paths-and-text"></a>[경로 및 텍스트](text-paths.md)
 
-경로 및 텍스트의 교차점에 알아보고
+패스와 텍스트의 교집합 살펴보기
 
-## <a name="path-information-and-enumerationinformationmd"></a>[경로 정보 및 열거형](information.md)
+## <a name="path-information-and-enumeration"></a>[경로 정보 및 열거형](information.md)
 
-경로 대 한 정보를 가져오고 내용을 열거 합니다.
+경로에 대 한 정보를 가져오고 콘텐츠를 열거 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

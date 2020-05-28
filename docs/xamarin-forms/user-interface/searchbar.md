@@ -1,24 +1,27 @@
 ---
-title: Xamarin.Forms SearchBar
-description: Xamarin.ios SearchBar는 검색을 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. SearchBar 컨트롤은 자리 표시자 텍스트, 쿼리 입력, 실행 및 취소를 지원 합니다. 이 문서에서는 XAML 및 코드에서 SearchBar를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 11/04/2019
-ms.openlocfilehash: 9162e89768aefe761111a02b80932231a6fe759f
-ms.sourcegitcommit: da15fb3b593a3e01ced9f8a1df572348d01d42ea
+title: Xamarin.FormsSearchBar
+description: Xamarin.FormsSearchbar는 검색을 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. SearchBar 컨트롤은 자리 표시자 텍스트, 쿼리 입력, 실행 및 취소를 지원 합니다. 이 문서에서는 XAML 및 코드에서 SearchBar를 사용 하는 방법을 설명 합니다.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d8ceb139b1b9cd77aa922f98c80884d5c3e1a474
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83844194"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127545"
 ---
-# <a name="xamarinforms-searchbar"></a>Xamarin.Forms SearchBar
+# <a name="xamarinforms-searchbar"></a>Xamarin.FormsSearchBar
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-Xamarin.ios는 검색을 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. `SearchBar`컨트롤은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다. 다음 스크린샷에서 `SearchBar` 는에 결과가 표시 된 쿼리를 보여 줍니다 `ListView` .
+는 Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) 검색을 시작 하는 데 사용 되는 사용자 입력 컨트롤입니다. `SearchBar`컨트롤은 자리 표시자 텍스트, 쿼리 입력, 검색 실행 및 취소를 지원 합니다. 다음 스크린샷에서 `SearchBar` 는에 결과가 표시 된 쿼리를 보여 줍니다 `ListView` .
 
 [![IOS 및 Android에 대 한 SearchBar의 스크린샷](searchbar-images/device-searchbars-cropped.png "IOS 및 Android의 SearchBar")](searchbar-images/device-searchbars.png#lightbox "IOS 및 Android의 SearchBar")
 
@@ -38,7 +41,7 @@ Xamarin.ios는 검색을 [`SearchBar`](xref:Xamarin.Forms.SearchBar) 시작 하�
 * [`Text`](xref:Xamarin.Forms.InputView.Text)는의 `string` 쿼리 텍스트를 포함 하는입니다 `SearchBar` .
 * [`TextColor`](xref:Xamarin.Forms.InputView.TextColor)는 `Color` 쿼리 텍스트 색을 정의 하는입니다.
 
-이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,를 `SearchBar` 사용자 지정 하 고 데이터 바인딩의 대상으로 지정할 수 있습니다. 에서 글꼴 속성을 지정 하 `SearchBar` 는 것은 다른 [xamarin.ios 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)에서 텍스트를 사용자 지정 하는 것과 일치 합니다. 자세한 내용은 [xamarin.ios의 글꼴](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하세요.
+이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉,를 `SearchBar` 사용자 지정 하 고 데이터 바인딩의 대상으로 지정할 수 있습니다. 에서 글꼴 속성을 지정 하 `SearchBar` 는 것은 다른 [ Xamarin.Forms 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)에서 텍스트를 사용자 지정 하는 것과 일치 합니다. 자세한 내용은 [의 Xamarin.Forms 글꼴 ](~/xamarin-forms/user-interface/text/fonts.md)을 참조 하십시오.
 
 ## <a name="create-a-searchbar"></a>SearchBar 만들기
 
@@ -87,7 +90,7 @@ SearchBar searchBar = new SearchBar
 [![IOS 및 Android에서 사용자 지정 된 SearchBar의 스크린샷](searchbar-images/device-searchbars-styled-cropped.png "IOS 및 Android의 사용자 지정 된 SearchBar")](searchbar-images/device-searchbars-styled.png#lightbox "IOS 및 Android의 사용자 지정 된 SearchBar")
 
 > [!NOTE]
-> IOS에서 클래스는 `SearchBarRenderer` 재정의 가능한 메서드를 포함 `UpdateCancelButton` 합니다. 이 메서드는 취소 단추가 표시 되는 시점을 제어 하 고 사용자 지정 렌더러에서 재정의할 수 있습니다. 사용자 지정 렌더러에 대 한 자세한 내용은 [Xamarin.ios 사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)를 참조 하세요.
+> IOS에서 클래스는 `SearchBarRenderer` 재정의 가능한 메서드를 포함 `UpdateCancelButton` 합니다. 이 메서드는 취소 단추가 표시 되는 시점을 제어 하 고 사용자 지정 렌더러에서 재정의할 수 있습니다. 사용자 지정 렌더러에 대 한 자세한 내용은 [ Xamarin.Forms 사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)를 참조 하세요.
 
 ## <a name="perform-a-search-with-event-handlers"></a>이벤트 처리기를 사용 하 여 검색 수행
 
@@ -185,11 +188,11 @@ public class SearchViewModel : INotifyPropertyChanged
 
 이 예제에서는을 `BindingContext` 클래스의 인스턴스로 설정 합니다 `SearchViewModel` . Viewmodel의에 속성을 바인딩하고 속성 `SearchCommand` `PerformSearch` `ICommand` `SearchBar` `Text` 을 속성에 바인딩합니다 `SearchCommandParameter` . `ListView.ItemsSource`속성은 `SearchResults` viewmodel의 속성에 바인딩됩니다.
 
-인터페이스 및 바인딩에 대 한 자세한 내용은 `ICommand` [xamarin.ios 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md) 및 [ICommand 인터페이스](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)를 참조 하세요.
+인터페이스 및 바인딩에 대 한 자세한 내용은 `ICommand` [ Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md) 및 [ICommand 인터페이스](~/xamarin-forms/app-fundamentals/data-binding/commanding.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
 * [SearchBar 데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
-* [Xamarin.ios 텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)
-* [Xamarin.ios의 글꼴](~/xamarin-forms/user-interface/text/fonts.md)
-* [Xamarin Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Xamarin.Forms텍스트 컨트롤](~/xamarin-forms/user-interface/text/index.md)
+* [글꼴Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md)
+* [Xamarin.Forms데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)

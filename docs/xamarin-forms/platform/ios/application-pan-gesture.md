@@ -1,26 +1,29 @@
 ---
-title: IOS에서 동시 이동 제스처 인식
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 응용 프로그램에서 동시 이동 제스처 인식을 사용 하도록 설정 하는 iOS 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 64a39fc8a3a1bd764df424271493d95c5863590f
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 125685150243ba8e8099cbfbdfec90e5a0b4d6b7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70198002"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138582"
 ---
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>IOS에서 동시 이동 제스처 인식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-경우는 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰를 모든 제스처에 의해 캡처되는 pan의 내 보기에 연결할 때를 `PanGestureRecognizer` 스크롤 보기에 전달 되지 않습니다. 따라서 스크롤 뷰가 더 이상 스크롤됩니다.
+가 [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) 스크롤 뷰 내의 뷰에 연결 되 면 모든 팬 제스처가에서 캡처되고 `PanGestureRecognizer` 스크롤 뷰로 전달 되지 않습니다. 따라서 스크롤 뷰가 더 이상 스크롤되지 않습니다.
 
-이 iOS 플랫폼에 해당 하는 `PanGestureRecognizer` 는 스크롤 뷰에서 이동 제스처를 캡처 및 공유 하는 데 사용할 수 있습니다. 설정 하 여 XAML에서 사용 되는 [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) 연결 된 속성을 `true`:
+이 iOS 플랫폼에 해당 하는는 스크롤 뷰에서 `PanGestureRecognizer` 이동 제스처를 캡처 및 공유 하는 데 사용할 수 있습니다. 연결 된 속성을로 설정 하 여 XAML에서 사용 됩니다 [`Application.PanGestureRecognizerShouldRecognizeSimultaneously`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) `true` .
 
 ```xaml
 <Application ...
@@ -30,7 +33,7 @@ ms.locfileid: "70198002"
 </Application>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -40,9 +43,9 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
 ```
 
-`Application.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.SetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application},System.Boolean)) 메서드를 합니다 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 스크롤 보기에서 이동 제스처 인식기는 팬 제스처를 캡처 또는 캡처 및 이동을 공유 하는지 여부를 네임 스페이스를 제어 하는 스크롤 뷰를 사용 하 여 제스처입니다. 또한 합니다 [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.GetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application})) 팬 제스처를 포함 하는 스크롤 뷰를 사용 하 여 공유 되는지 여부를 반환 하려면 메서드를 사용할 수는 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)합니다.
+`Application.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ] (F: Xamarin.Forms 입니다. PlatformConfiguration. iOSSpecific ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . 응용 프로그램}, system.string) 메서드를 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 사용 하 여 스크롤 보기의 이동 제스처 인식기가 이동 제스처를 캡처하거나 스크롤 뷰를 사용 하 여 이동 제스처를 캡처 및 공유 하는지 여부를 제어 합니다. 또한 [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ] (f: Xamarin.Forms 입니다. PlatformConfiguration. iOSSpecific ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . Application}) 메서드를 사용 하 여 이동 제스처가를 포함 하는 스크롤 뷰와 공유 되는지 여부를 반환할 수 있습니다 [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) .
 
-따라서이 플랫폼별 경우 활성화를 사용 하 여는 [ `ListView` ](xref:Xamarin.Forms.ListView) 포함을 [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer)두는 `ListView` 및 `PanGestureRecognizer` 팬 제스처를 받게 됩니다 및 이 처리 합니다. 그러나 플랫폼 특정을 사용할 수 없을 때이 사용 하 여는 `ListView` 포함을 `PanGestureRecognizer`의 `PanGestureRecognizer` 팬 제스처를 캡처 및 처리 됩니다 및 `ListView` 팬 제스처를 받지 않습니다.
+따라서이 플랫폼별를 사용 하는 경우에이 [`ListView`](xref:Xamarin.Forms.ListView) 포함 되어 있으면 [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) 및가 모두 `ListView` `PanGestureRecognizer` 이동 제스처를 수신 하 고 처리 합니다. 그러나이 플랫폼별를 사용 하지 않도록 설정 된 경우에이 `ListView` 포함 되어 있으면 `PanGestureRecognizer` 에서 `PanGestureRecognizer` 이동 제스처를 캡처하고 처리 하 고,가 `ListView` 이동 제스처를 수신 하지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 

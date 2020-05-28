@@ -1,37 +1,40 @@
 ---
-title: Xamarin.ios 및 Azure Cognitive Services
-description: 음성 인식, 맞춤법 검사, 텍스트 번역 및 emotion 인식을 비롯 하 여 Azure Cognitive Services를 사용 하 여 Xamarin Forms 응용 프로그램에 인텔리전스를 추가 합니다.
-ms.prod: xamarin
-ms.assetid: 64386A65-FD31-4A1B-A769-91495E57345A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/27/2019
-ms.openlocfilehash: 03fb194a4c85d51a6fe477dcfdc8fa38fec5a89c
-ms.sourcegitcommit: ba83c107c87b015dbcc9db13964fe111a0573dca
+title: Xamarin.FormsAzure Cognitive Services
+description: Xamarin.Forms음성 인식, 맞춤법 검사, 텍스트 번역, emotion 인식 등 Azure Cognitive Services를 사용 하 여 응용 프로그램에 인텔리전스를 추가 합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 64f5dce9337444a1e910a11a69426964a09ac05a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76265164"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136021"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin.ios 및 Azure Cognitive Services
+# <a name="xamarinforms-and-azure-cognitive-services"></a>Xamarin.FormsAzure Cognitive Services
 
-## <a name="introductionintroductionmd"></a>[소개](introduction.md)
+## <a name="introduction"></a>[소개](introduction.md)
 
-Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 언어 이해와 같은 기능을 추가 하 여 응용 프로그램을 보다 지능적으로 만드는 데 사용할 수 있는 Api, Sdk 및 서비스 집합입니다. 이 문서에서는 Xamarin.ios 응용 프로그램에서 일부 Microsoft 인식 서비스 Api를 호출 하는 방법을 보여 주는 샘플 응용 프로그램에 대해 소개 합니다.
+Microsoft Cognitive Services는 개발자가 얼굴 인식, 음성 인식 및 언어 이해와 같은 기능을 추가 하 여 응용 프로그램을 보다 지능적으로 만드는 데 사용할 수 있는 Api, Sdk 및 서비스 집합입니다. 이 문서에서는 응용 프로그램에서 일부 Microsoft 인식 서비스 Api를 호출 하는 방법을 보여 주는 예제 응용 프로그램에 대해 소개 합니다 Xamarin.Forms .
 
-## <a name="speech-recognitionspeech-recognitionmd"></a>[음성 인식](speech-recognition.md)
+## <a name="speech-recognition"></a>[음성 인식](speech-recognition.md)
 
-Azure Speech Service는 음성 언어를 처리 하는 알고리즘을 제공 하는 클라우드 기반 API입니다. 이 문서에서는 Azure Speech Service를 사용 하 여 Xamarin.ios 응용 프로그램에서 음성으로 텍스트를 높여줄 하는 방법을 설명 합니다.
+Azure Speech Service는 음성 언어를 처리 하는 알고리즘을 제공 하는 클라우드 기반 API입니다. 이 문서에서는 Azure Speech Service를 사용 하 여 응용 프로그램에서 음성을 텍스트로 높여줄 하는 방법을 설명 합니다 Xamarin.Forms .
 
-## <a name="spell-checkspell-checkmd"></a>[맞춤법 검사](spell-check.md)
+## <a name="spell-check"></a>[맞춤법 검사](spell-check.md)
 
-Bing Spell Check에 맞춤법이 틀린된 단어에 대 한 인라인 제안 제공 텍스트를 확인 하는 상황에 맞는 맞춤법이 수행 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 맞춤법 오류를 해결 하려면 Bing Spell Check REST API를 사용 하는 방법을 설명 합니다.
+Bing Spell Check는 텍스트에 대 한 상황별 맞춤법 검사를 수행 하 고 철자가 틀린 단어에 대 한 인라인 제안을 제공 합니다. 이 문서에서는 Bing Spell Check REST API를 사용 하 여 응용 프로그램에서 맞춤법 오류를 수정 하는 방법을 설명 합니다 Xamarin.Forms .
 
-## <a name="text-translationtext-translationmd"></a>[텍스트 번역](text-translation.md)
+## <a name="text-translation"></a>[텍스트 번역](text-translation.md)
 
-Microsoft Translator API는 음성 및 REST API를 통해 텍스트 번역을 사용할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램에서 다른 언어로 텍스트를 변환 하는 Microsoft Translator Text API를 사용 하는 방법을 설명 합니다.
+Microsoft Translator API를 사용 하 여 REST API에서 음성 및 텍스트를 변환할 수 있습니다. 이 문서에서는 Microsoft Translator Text API를 사용 하 여 응용 프로그램에서 한 언어에서 다른 언어로 텍스트를 변환 하는 방법을 설명 합니다 Xamarin.Forms .
 
-## <a name="perceived-emotion-recognitionemotion-recognitionmd"></a>[감지된 감정 인식](emotion-recognition.md)
+## <a name="perceived-emotion-recognition"></a>[감지된 감정 인식](emotion-recognition.md)
 
-Face API 얼굴 표현을 입력으로 이미지에서는 및의 이미지에 있는 각 얼굴의 감정 집합 간에 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 Xamarin.Forms 응용 프로그램을 평가 하려면 감정 인식 하도록 Face API를 사용 하는 방법을 설명 합니다.
+Face API는 이미지에서 얼굴 식을 입력으로 사용 하 고 이미지의 각 면에 대 한 감정을 집합에 대 한 신뢰 수준을 포함 하는 데이터를 반환 합니다. 이 문서에서는 emotion를 Face API 사용 하 여 응용 프로그램의 등급을 평가 하는 방법을 설명 합니다 Xamarin.Forms .

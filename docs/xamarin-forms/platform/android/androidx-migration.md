@@ -1,22 +1,25 @@
 ---
-title: Xamarin.ios의 AndroidX 마이그레이션
-description: 이 문서에서는 AndroidX가 있는 이유와 Xamarin.ios 앱에서 AndroidX로 마이그레이션하는 방법에 대해 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 01/22/2020
-ms.openlocfilehash: 13fb802dec326cdb82bac8825ca84343ef85b13e
-ms.sourcegitcommit: 10b4d7952d78f20f753372c53af6feb16918555c
+title: AndroidX 마이그레이션Xamarin.Forms
+description: 이 문서에서는 AndroidX가 있는 이유와 앱에서 AndroidX로 마이그레이션하는 방법에 대해 설명 합니다 Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c2df309a8a12a05a4b492bb66977aa2411142850
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77646655"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138270"
 ---
-# <a name="androidx-migration-in-xamarinforms"></a>Xamarin.ios의 AndroidX 마이그레이션
+# <a name="androidx-migration-in-xamarinforms"></a>AndroidX 마이그레이션Xamarin.Forms
 
-AndroidX는 Android 지원 라이브러리를 대체 합니다. 이 문서에서는 AndroidX가 있는 이유와 Xamarin에 영향을 주는 방법 및 AndroidX 라이브러리를 사용 하도록 응용 프로그램을 마이그레이션하는 방법에 대해 설명 합니다.
+AndroidX는 Android 지원 라이브러리를 대체 합니다. 이 문서에서는 AndroidX가 있는 이유와, 영향을 주는 방법 Xamarin.Forms 및 androidx 라이브러리를 사용 하도록 응용 프로그램을 마이그레이션하는 방법에 대해 설명 합니다.
 
 ## <a name="history-of-androidx"></a>AndroidX 기록
 
@@ -24,8 +27,8 @@ Android 지원 라이브러리는 이전 버전의 Android에서 최신 기능�
 
 지원 라이브러리는 원래 단일 이진 이지만 최신 앱 개발에 거의 필요한 라이브러리 모음으로 성장 하 고 진화 하 고 있습니다. 지원 라이브러리에서 일반적으로 사용 되는 기능은 다음과 같습니다.
 
-- `Fragment` 지원 클래스입니다.
-- 긴 목록을 관리 하는 데 사용 되는 `RecyclerView`입니다.
+- `Fragment`지원 클래스입니다.
+- `RecyclerView`긴 목록을 관리 하는 데 사용 되는입니다.
 - 65536 이상의 메서드를 사용 하는 앱에 대 한 Multidex 지원.
 - `ActivityCompat` 클래스입니다.
 
@@ -33,16 +36,16 @@ AndroidX는 더 이상 유지 관리 되지 않는 지원 라이브러리를 대
 
 Google은 AndroidX로 Jetifier 이라는 마이그레이션 프로세스를 만들었습니다. Jetifier은 빌드 프로세스 중에 jar 바이트 코드를 검사 하 고 앱 코드 및 종속성 모두에 대 한 지원 라이브러리 참조를 AndroidX에 해당 하는 값으로 다시 매핑합니다.
 
-Android Java 앱에서와 마찬가지로 Xamarin Forms 앱에서 jar 종속성은 AndroidX로 마이그레이션해야 합니다. 그러나 Xamarin 바인딩만 올바른 기본 jar 파일을 가리키도록 마이그레이션해야 합니다. Xamarin.ios는 버전 4.5에서 자동 AndroidX 마이그레이션에 대 한 지원을 추가 했습니다.
+Xamarin.FormsAndroid Java 앱에서와 마찬가지로 앱에서 jar 종속성은 AndroidX로 마이그레이션해야 합니다. 그러나 Xamarin 바인딩만 올바른 기본 jar 파일을 가리키도록 마이그레이션해야 합니다. Xamarin.Forms버전 4.5에서 자동 AndroidX 마이그레이션에 대 한 지원이 추가 되었습니다.
 
 AndroidX에 대 한 자세한 내용은 developer.android.com의 [androidx 개요](https://developer.android.com/jetpack/androidx) 를 참조 하세요.
 
-## <a name="automatic-migration-in-xamarinforms"></a>Xamarin.ios에서 자동 마이그레이션
+## <a name="automatic-migration-in-xamarinforms"></a>자동 마이그레이션Xamarin.Forms
 
-AndroidX로 자동으로 마이그레이션하려면 Xamarin.ios 프로젝트는 다음을 수행 해야 합니다.
+AndroidX로 자동으로 마이그레이션하려면 프로젝트는 Xamarin.Forms 다음을 수행 해야 합니다.
 
 - Android API 버전 29 이상을 대상으로 합니다.
-- Xamarin.ios 버전 4.5 이상을 사용 합니다.
+- Xamarin.Forms버전 4.5 이상을 사용 합니다.
 
 프로젝트에서 이러한 설정을 확인 한 후 Visual Studio 2019에서 Android 앱을 빌드합니다. 빌드 프로세스 중에 IL (중간 언어)이 검사 되 고 라이브러리 종속성이 지원 되며 바인딩은 AndroidX 종속성으로 교환 됩니다. 응용 프로그램에 빌드에 필요한 모든 AndroidX 종속성이 있는 경우 빌드 프로세스에 차이가 없다는 것을 알 수 있습니다.
 
@@ -64,7 +67,7 @@ You can also copy and paste the following snippit into your .csproj file:
  <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-rc1" />
 ```
 
-누락 된 NuGet 패키지는 Visual Studio의 NuGet 패키지 관리자를 통해 설치 하거나, Android .csproj 파일을 편집 하 여 설치 하 여 오류에 나열 된 `PackageReference` XML 항목을 포함할 수 있습니다.
+누락 된 NuGet 패키지는 Visual Studio의 NuGet 패키지 관리자를 통해 설치 하거나, Android .csproj 파일을 편집 하 여 설치 하거나 `PackageReference` 오류에 나열 된 XML 항목을 포함 하도록 설치할 수 있습니다.
 
 누락 된 패키지가 확인 되 면 프로젝트를 다시 빌드하면 누락 된 패키지가 로드 되 고 프로젝트는 라이브러리 종속성 지원 대신 AndroidX 종속성을 사용 하 여 컴파일됩니다.
 

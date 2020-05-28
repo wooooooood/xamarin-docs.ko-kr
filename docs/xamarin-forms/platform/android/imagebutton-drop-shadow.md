@@ -1,24 +1,27 @@
 ---
-title: Android의 ImageButton 그림자
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 ImageButton에서 그림자를 사용 하도록 설정 하는 Android 플랫폼별를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 567216171dd289e849ee0164452e4b876953f2a3
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e2ad97eb5e7db3b832e8fb4340c86904b766b9a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68653590"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140002"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Android의 ImageButton 그림자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 Android 플랫폼 전용은에서 `ImageButton`그림자를 설정 하는 데 사용 됩니다. 설정 하 여 XAML에서 사용 되는 `ImageButton.IsShadowEnabled` 바인딩 가능한 속성을 `true`, 그림자를 제어 하는 추가 선택적 바인딩 가능한 속성의 수와 함께 합니다.
+이 Android 플랫폼 전용은에서 그림자를 설정 하는 데 사용 됩니다 `ImageButton` . 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 되며 `ImageButton.IsShadowEnabled` `true` , 드롭 그림자를 제어 하는 여러 가지 선택적 바인딩 가능 속성도 함께 사용 됩니다.
 
 ```xaml
 <ContentPage ...
@@ -44,7 +47,7 @@ ms.locfileid: "68653590"
 </ContentPage>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -60,24 +63,24 @@ imageButton.On<Android>()
 ```
 
 > [!IMPORTANT]
-> 일부로 그림자를 그릴 합니다 `ImageButton` 배경색과 배경만 그려지는 경우를 `BackgroundColor` 속성을 설정 합니다. 따라서 그림자를 그릴 수 없는 경우는 `ImageButton.BackgroundColor` 속성이 설정 되지 않습니다.
+> 그림자는 배경의 일부로 그려지며 `ImageButton` 속성을 설정한 경우에만 배경을 그립니다 `BackgroundColor` . 따라서 속성이 설정 되지 않은 경우에는 그림자가 그려지지 않습니다 `ImageButton.BackgroundColor` .
 
-`ImageButton.On<Android>` 메서드가 플랫폼별 Android에만 실행 되도록 지정 합니다. `ImageButton.SetIsShadowEnabled` 메서드, 합니다 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 그림자에 사용 되는지 여부를 제어 하려면 네임 스페이스는는 `ImageButton`합니다. 또한 그림자를 제어 하려면 다음 메서드를 호출할 수 있습니다.
+`ImageButton.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. `ImageButton.SetIsShadowEnabled`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 에서 그림자를 사용할 수 있는지 여부를 제어 하는 데 사용 됩니다 `ImageButton` . 또한 다음 메서드를 호출 하 여 그림자를 제어할 수 있습니다.
 
-- `SetShadowColor` – 그림자의 색을 설정 합니다. 기본 색은 [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*)합니다.
-- `SetShadowOffset` – 그림자의 오프셋을 설정 합니다. 그림자 캐스팅 된 및로 지정 된 방향을 변경 하는 오프셋 된 [ `Size` ](xref:Xamarin.Forms.Size) 값입니다. `Size` 구조 값의 첫 번째 값 (음수) 왼쪽 또는 오른쪽 (양수) 까지의 거리와 두 번째 되 위의 거리 값 (음수 값) 또는 (양수) 아래 장치 독립적 단위 표현 됩니다 . 이 속성의 기본값은 (0.0, 0.0)의 모든 관련 캐스팅은 섀도 있으며 그 결과 `ImageButton`합니다.
-- `SetShadowRadius`– 그림자를 렌더링 하는 데 흐리게 반경이 설정 합니다. Radius 기본값은 10.0입니다.
+- `SetShadowColor`– 그림자의 색을 설정 합니다. 기본 색은 [`Color.Default`](xref:Xamarin.Forms.Color.Default*) 입니다.
+- `SetShadowOffset`– 그림자의 오프셋을 설정 합니다. 오프셋은 그림자가 캐스팅 되는 방향을 변경 하 고 값으로 지정 됩니다 [`Size`](xref:Xamarin.Forms.Size) . `Size`구조 값은 왼쪽 (음수 값) 또는 오른쪽 (양수 값)에 대 한 첫 번째 값이 고 두 번째 값은 위 거리가 (음수 값) 이하인 (양수 값) 인 장치 독립적 단위로 표현 됩니다. 이 속성의 기본값은 (0.0, 0.0) 이며이로 인해의 모든 측면에서 그림자가 캐스팅 됩니다 `ImageButton` .
+- `SetShadowRadius`– 그림자를 렌더링 하는 데 사용 되는 흐리게 반경을 설정 합니다. 기본 반지름 값은 10.0입니다.
 
 > [!NOTE]
-> 호출 하 여 그림자의 상태를 쿼리할 수 있습니다 합니다 `GetIsShadowEnabled`, `GetShadowColor`를 `GetShadowOffset`, 및 `GetShadowRadius` 메서드.
+> 그림자 상태는 `GetIsShadowEnabled` ,, `GetShadowColor` `GetShadowOffset` 및 메서드를 호출 하 여 쿼리할 수 있습니다 `GetShadowRadius` .
 
-결과에서 그림자를 사용할 수 있습니다는 `ImageButton`:
+그 결과,에서 그림자를 사용 하도록 설정할 수 있습니다 `ImageButton` .
 
-![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "그림자를 사용 하 여 ImageButton")
+![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton with drop shadow")
 
 ## <a name="related-links"></a>관련 링크
 
 - [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

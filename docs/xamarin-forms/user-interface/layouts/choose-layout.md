@@ -1,28 +1,31 @@
 ---
-title: Xamarin 양식 레이아웃 선택
-description: Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/21/2018
-ms.openlocfilehash: 14e48d04696bb758a2010bd1d56ecaa125bbd30a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: 레이아웃 선택 Xamarin.Forms
+description: Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83150006"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138504"
 ---
-# <a name="choose-a-xamarinforms-layout"></a>Xamarin 양식 레이아웃 선택
+# <a name="choose-a-xamarinforms-layout"></a>레이아웃 선택 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다. 레이아웃 클래스를 선택 하려면 레이아웃이 자식 요소를 배치 하는 방법과 레이아웃의 자식 요소 크기를 조정 하는 방법을 알고 있어야 합니다. 또한 원하는 레이아웃을 만드는 레이아웃을 중첩 해야 할 수도 있습니다.
+Xamarin.Forms레이아웃 클래스를 사용 하면 응용 프로그램에서 UI 컨트롤을 정렬 하 고 그룹화 할 수 있습니다. 레이아웃 클래스를 선택 하려면 레이아웃이 자식 요소를 배치 하는 방법과 레이아웃의 자식 요소 크기를 조정 하는 방법을 알고 있어야 합니다. 또한 원하는 레이아웃을 만드는 레이아웃을 중첩 해야 할 수도 있습니다.
 
-다음 이미지는 기본 Xamarin.ios 레이아웃 클래스를 사용 하 여 얻을 수 있는 일반적인 레이아웃을 보여 줍니다.
+다음 이미지는 주 레이아웃 클래스를 사용 하 여 얻을 수 있는 일반적인 레이아웃을 보여 줍니다 Xamarin.Forms .
 
-[![Xamarin.ios의 주 레이아웃 클래스](images/layouts.png "Xamarin Forms 레이아웃 클래스")](images/layouts-large.png#lightbox "Xamarin Forms 레이아웃 클래스")
+[![의 주 레이아웃 클래스Xamarin.Forms](images/layouts.png "[! OP. 비-LOC (Xamarin.ios)] 레이아웃 클래스")](images/layouts-large.png#lightbox "[! OP. 비-LOC (Xamarin.ios)] 레이아웃 클래스")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -73,7 +76,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 > [!TIP]
 > 을 사용 하는 경우 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 하나의 자식 요소만로 설정 되었는지 확인 [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) 합니다. 이 속성은 지정된 자식 요소가 `StackLayout`에서 허용하는 최대의 공간을 차지하도록 하며, 이는 이러한 계산이 두 번 이상 수행되도록 하여 불필요합니다.
 
-자세한 내용은 [Xamarin.ios StackLayout](stacklayout.md)을 참조 하세요.
+자세한 내용은 [ Xamarin.Forms stacklayout](stacklayout.md)을 참조 하세요.
 
 ## <a name="grid"></a>그리드
 
@@ -118,7 +121,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 > [!CAUTION]
 > 가능한 한 적은 수의 행과 열이 size로 설정 되어 있는지 확인 하십시오 [`Auto`](xref:Xamarin.Forms.GridLength.Auto) . 자동으로 크기가 조정된 행이나 열은 레이아웃 엔진이 추가적인 레이아웃 계산을 수행하도록 합니다. 가능한 경우 고정된 크기의 행과 열을 대신 사용하세요. 또는 열거형 값을 사용 하 여 행과 열을 비례 하는 공간을 차지 하도록 설정 [`GridUnitType.Star`](xref:Xamarin.Forms.GridUnitType.Star) 합니다.
 
-자세한 내용은 [Xamarin.ios 표](grid.md)를 참조 하세요.
+자세한 내용은 [ Xamarin.Forms 표](grid.md)를 참조 하세요.
 
 ## <a name="flexlayout"></a>FlexLayout
 
@@ -142,7 +145,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 - [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems)속성이로 설정 되어 `Center` 각 항목의 가로 가운데 맞춤을 설정 합니다.
 - [`JustifyContent`](xref:Xamarin.Forms.FlexLayout.JustifyContent)속성은로 설정 됩니다 `SpaceEvenly` . 그러면 모든 항목, 첫 번째 항목 위 및 마지막 항목 아래에 있는 모든 남아 있는 세로 공간이 동일 하 게 할당 됩니다.
 
-자세한 내용은 [Xamarin.ios 레이아웃](flex-layout.md)을 참조 하세요.
+자세한 내용은가는 [ Xamarin.Forms 레이아웃](flex-layout.md)을 참조 하세요.
 
 ## <a name="relativelayout"></a>RelativeLayout
 
@@ -191,7 +194,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 > [!WARNING]
 > 가능한 경우 `RelativeLayout`을 사용하지 마세요. 그러면 CPU가 훨씬 더 많은 작업을 수행해야 합니다.
 
-자세한 내용은 [RelativeLayout](relative-layout.md)를 참조 하세요.
+자세한 내용은 [ Xamarin.Forms RelativeLayout](relative-layout.md)를 참조 하세요.
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -231,7 +234,7 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 > [!CAUTION]
 > [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize)레이아웃 엔진이 추가 레이아웃 계산을 수행 하 게 하므로 가능 하면 항상 속성을 사용 하지 않도록 합니다.
 
-자세한 내용은 [AbsoluteLayout](absolute-layout.md)를 참조 하세요.
+자세한 내용은 [ Xamarin.Forms AbsoluteLayout](absolute-layout.md)를 참조 하세요.
 
 ## <a name="input-transparency"></a>입력 투명도
 
@@ -248,11 +251,11 @@ Xamarin Forms 레이아웃 클래스를 사용 하면 응용 프로그램에서 
 ## <a name="related-links"></a>관련 링크
 
 - [레이아웃 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Xamarin.ios 레이아웃 (비디오)](https://youtu.be/4HlLjTZQzjM)
-- [Xamarin.ios StackLayout](stacklayout.md)
-- [Xamarin.ios 표](grid.md)
-- [Xamarin.ios의 레이아웃](flex-layout.md)
-- [Xamarin.ios AbsoluteLayout](absolute-layout.md)
-- [Xamarin.ios RelativeLayout](relative-layout.md)
+- [Xamarin.Forms레이아웃 (비디오)](https://youtu.be/4HlLjTZQzjM)
+- [Xamarin.FormsStackLayout](stacklayout.md)
+- [Xamarin.Forms그리드에](grid.md)
+- [Xamarin.Forms가는 레이아웃](flex-layout.md)
+- [Xamarin.FormsAbsoluteLayout](absolute-layout.md)
+- [Xamarin.FormsRelativeLayout](relative-layout.md)
 - [레이아웃 성능 최적화](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [레이아웃 압축](layout-compression.md)

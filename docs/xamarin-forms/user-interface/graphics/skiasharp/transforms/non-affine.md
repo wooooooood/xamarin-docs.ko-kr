@@ -1,34 +1,37 @@
 ---
-title: 비아핀(Non-Affine) 변환
-description: 이 문서는 변환 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 효과 만드는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/14/2017
-ms.openlocfilehash: eb7057d40e6ff0c48c6dc1b5dc38af2eb92de2e0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70772775"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131757"
 ---
 # <a name="non-affine-transforms"></a>비아핀(Non-Affine) 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_변환 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 효과 만들기_
+_Transform 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 효과 만들기_
 
-변환, 크기 조정, 회전 및 기울이기 모두으로 분류 됩니다 *affine* 변환 합니다. Affine 변환만 평행선을 유지합니다. 두 줄을 변환 하기 전에 병렬 경우 이후에 유지 병렬 변환 합니다. 사각형은 항상 parallelograms로 변환 됩니다.
+변환, 크기 조정, 회전 및 기울이기는 모두 *관계* 변환으로 분류 됩니다. 상관 변환은 병렬 선을 유지 합니다. 변환 전에 두 줄이 평행이 면 변환 후에도 병렬 상태로 유지 됩니다. 사각형은 항상 parallelograms로 변환 됩니다.
 
-그러나 SkiaSharp 사각형 모든 볼록 사변형으로 변환 하는 기능을 포함 하는 비 관계 변환 수 이기도 합니다.
+그러나 SkiaSharp는 사각형을 볼록 사변형 변환 하는 기능을 포함 하는 비 상관 변환도 가능 합니다.
 
-![](non-affine-images/nonaffinetransformexample.png "볼록 사변형으로 변환 하는 비트맵")
+![](non-affine-images/nonaffinetransformexample.png "A bitmap transformed into a convex quadrilateral")
 
-볼록 사변형 서로 교차 하지 변과 180도 보다 항상 작거나 내부 각도 사용 하 여 네 방향 그림입니다.
+볼록 사변형는 서로 교차 하지 않는 항상 180도 보다 작은 내부 각도를 가진 네 면의 그림입니다.
 
-비 관계 변환 결과 변환 행렬의 셋째 행 0, 0 및 1 이외의 값으로 설정 된 경우. 전체 `SKMatrix` 곱셈은:
+Transform 행렬의 세 번째 행이 0, 0, 1 이외의 값으로 설정 된 경우 비 상관 변환 결과가 발생 합니다. 전체 `SKMatrix` 곱하기는 다음과 같습니다.
 
 <pre>
               │ ScaleX  SkewY   Persp0 │
@@ -38,39 +41,39 @@ _변환 행렬의 세 번째 열을 사용 하 여 큐브 뷰 및 테이퍼 효�
 
 결과 변환 수식은 다음과 같습니다.
 
-x' ScaleX·x + SkewX·y TransX =
+x ' = ScaleX · x + SkewX · y + TransX
 
-y' SkewY·x + ScaleY·y TransY =
+y ' = SkewY · x + ScaleY · y + TransY
 
-z' Persp0·x + Persp1·y Persp2 =
+z ' = Persp0 · x + Persp1 · y + Persp2
 
-3x3 매트릭스를 사용 하 여 2 차원 변환에 대 한 기본 규칙은 모든 하 게 유지 되도록 평면의 Z = 1입니다. 경우가 아니면 `Persp0` 하 고 `Persp1` 는 0으로, 및 `Persp2` 가 1 이면 변환 평면 해제 Z 좌표 이동 되었습니다.
+2 차원 변환에 3 x 3 행렬을 사용 하는 기본 규칙은 Z가 1 인 평면에 모든 항목을 유지 한다는 것입니다. `Persp0`및 `Persp1` 가 0이 고가 `Persp2` 1 이면 변환에서 Z 좌표를 해당 평면 밖으로 이동 했습니다.
 
-이 2 차원 변환에 복원 하는 평면에 좌표를 다시 이동 해야 합니다. 다른 단계는 필요 합니다. X', y'를 z '값으로 나누어야 z' 및:
+이를 2 차원 변환으로 복원 하려면 좌표를 다시 해당 평면으로 이동 해야 합니다. 다른 단계가 필요 합니다. X ', y ' 및 z ' 값은 z '로 구분 해야 합니다.
 
-x" = x' / z'
+x "= x '/z '
 
-y" = y' / z'
+y "= y '/z '
 
-z" = z' / z' = 1
+z "= z '/z ' = 1
 
-이러한 라고 *동차 좌표* 하므로 개발 된 토폴로지 자신의 문제에 대 한 훨씬 잘 알려진 년 8 월 페르디난드 Möbius 수학적으로 Möbius 줄무늬 및 합니다.
+이는 유형이 같은 *좌표* 이며 Mathematician 8 월 Ferdinand Möbius에 의해 개발 되었으며, 해당 토폴로지 Oddity, Möbius 스트립에 대해 훨씬 더 잘 알려져 있습니다.
 
-하는 경우 z'가 0 이면 무한 좌표로 나누기 결과입니다. 사실, 동차 좌표를 개발 하기 위한 Möbius의 동기 중 하나 였습니다 유한 숫자를 사용 하 여 무한 한 값을 나타내는 수 있습니다.
+Z '가 0 이면 나누기가 무한 좌표를 반환 합니다. 실제로 유형이 같은 좌표 개발에 대 한 Möbius's 동기 중 하나는 유한 숫자로 무한 값을 나타내는 기능 이었습니다.
 
-그러나 그래픽을 표시 하는 경우에 무한 값으로 변환 하는 좌표를 사용 하 여 항목을 렌더링 하지 않으려는 합니다. 이러한 좌표는 렌더링 되지 않습니다. 좌표 주변의 모든 될 수 있으며 매우 큰 시각적으로 일관 되지 않을 수 있습니다.
+그러나 그래픽을 표시 하는 경우 무한 값으로 변환 되는 좌표를 사용 하 여 무언가를 렌더링 하지 않으려는 경우 이러한 좌표는 렌더링 되지 않습니다. 이러한 좌표 근처의 모든 항목은 매우 크고 시각적으로 일관 되지 않을 수 있습니다.
 
-이 수식에서 원하지 않는 z 값 ' 0이 되 고 있습니다.
+이 수식에서는 z '의 값이 0이 되지 않도록 합니다.
 
-z' Persp0·x + Persp1·y Persp2 =
+z ' = Persp0 · x + Persp1 · y + Persp2
 
-따라서 이러한 값에는 몇 가지 실질적인 제한 사항이 있습니다. 
+따라서 이러한 값에는 몇 가지 실제적인 제한이 있습니다. 
 
-`Persp2` 0 또는 0이 아니면 셀 일 수 있습니다. 경우 `Persp2` 이 0 이면 z'는 일반적으로 필요 없는 해당 지점 2 차원 그래픽에서 매우 일반적 이므로 및 점 (0, 0)에 대해서는 0입니다. 하는 경우 `Persp2` 하는 경우 일반 성의 손실 없이 0과 같지 않은 `Persp2` 1 고정 됩니다. 예를 들어 확인 된 경우 `Persp2` 나눌 수 있습니다 단순히 행렬의 모든 셀 5는 다음 5 해야 `Persp2` 1 및 결과 동일 합니다.
+`Persp2`셀은 0 또는 0이 될 수 없습니다. `Persp2`가 0 이면 z '는 점 (0, 0)에 대해 0이 고,이는 2 차원 그래픽에서 매우 일반적 이기 때문에 일반적으로 바람직하지 않습니다. `Persp2`가 0과 같지 않으면 `Persp2` 가 1에서 고정 된 경우 일반 성을가 손실 되지 않습니다. 예를 들어를 5로 설정 하는 경우 `Persp2` 행렬의 모든 셀을 5로 나눌 수 있습니다. 그러면이 값이 1로 설정 되 `Persp2` 고 결과가 동일 하 게 됩니다.
 
-이러한 이유로, `Persp2` 고정 됩니다. 대개 1은 항등 매트릭스에서 동일한 값이 있습니다.
+이러한 이유로 `Persp2` 는 id 매트릭스의 동일한 값인 1에서 수정 되는 경우가 많습니다.
 
-일반적으로 `Persp0` 고 `Persp1` 는 작은 숫자입니다. 예를 들어를 항등 매트릭스 있지만 집합을 사용 하 여 먼저 `Persp0` 0.01로:
+일반적으로 `Persp0` 및 `Persp1` 는 작은 숫자입니다. 예를 들어 id 행렬로 시작 하지만를 0.01로 설정 했다고 가정 합니다 `Persp0` .
 
 <pre>
 | 1  0   0.01 |
@@ -78,15 +81,15 @@ z' Persp0·x + Persp1·y Persp2 =
 | 0  0    1   |
 </pre>
 
-변환 하는 수식을 다음과 같습니다.
+변환 수식은 다음과 같습니다.
 
-x' = x / (0.01·x + 1)
+x ' = x/(0.01 · x + 1)
 
-y' = y / (0.01·x + 1)
+y ' = y/(0.01 · x + 1)
 
-이제이 변환을 사용 하 여 원점에 배치 100 픽셀 사각형 상자를 렌더링 합니다. 네 모퉁이 변환 하는 방법을 다음과 같습니다.
+이제이 변환을 사용 하 여 원래 위치에 100 픽셀 정사각형 상자를 렌더링 합니다. 네 개의 모퉁이가 어떻게 변환 되는지는 다음과 같습니다.
 
-(0, 0) (0, 0) 하는 경우 →
+(0, 0) → (0, 0)
 
 (0, 100) → (0, 100)
 
@@ -94,13 +97,13 @@ y' = y / (0.01·x + 1)
 
 (100, 100) → (50, 50)
 
-100을 z x 표시 되는 경우 ' 분모 이므로 2 x 및 y 좌표 효과적으로 줄었고 됩니다. 오른쪽 상자에 있는 왼쪽 보다 짧은 됩니다.
+X가 100 인 경우 z ' 분모는 2 이므로 x 및 y 좌표가 효과적으로 반. 상자의 오른쪽이 왼쪽 보다 짧습니다.
 
-![](non-affine-images/nonaffinetransform.png "비 관계 변환에 적용 하는 상자")
+![](non-affine-images/nonaffinetransform.png "A box subjected to a non-affine transform")
 
-`Persp` 상자 오른쪽에 있는 뷰어를 멀리를 사용 하 여 이제 기울어진는 제안 된 단축법 때문에 이러한 셀 이름 부분은 "관점"를 의미 합니다.
+`Persp`이러한 셀 이름의 부분은 "큐브 뷰"를 참조 합니다. 그러면 단축법은 상자를 뷰어에서 더 오른쪽으로 기울어져 있음을 나타냅니다.
 
-합니다 **테스트 큐브 뷰** 페이지의 값을 실험할 수 있습니다 `Persp0` 고 `Pers1` 작동 방식을 이해할 수 있도록 합니다. 이러한 행렬 셀의 적절 한 값은 작기는 `Slider` 유니버설 Windows 플랫폼에서 없습니다 올바르게 처리 합니다. 두 UWP 문제에 맞게 `Slider` 의 요소를 [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) 1로-1에서 범위를 초기화 해야:
+**테스트 큐브 뷰** 페이지를 사용 하 여 및 값을 시험해 보고 `Persp0` `Pers1` 작동 방식에 대 한 느낌을 얻을 수 있습니다. 이러한 행렬 셀의 적절 한 값은 유니버설 Windows 플랫폼의에서 `Slider` 적절 하 게 처리할 수 없는 크기입니다. UWP 문제를 수용 하려면 `Slider` [**testperspective. xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) 의 두 요소를-1에서 1로 초기화 해야 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -154,7 +157,7 @@ y' = y / (0.01·x + 1)
 </ContentPage>
 ```
 
-슬라이더에 대 한 이벤트 처리기를 [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) –0.01 및 0.01 사이 있도록 코드 숨김 파일 100으로 값을 나눕니다. 또한 생성자는 비트맵에 로드 됩니다.
+코드를 만든 파일의 슬라이더에 대 한 이벤트 처리기는 [`TestPerspectivePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) -0.01과 0.01 사이에 있는 값을 100로 나눕니다. 또한 생성자는 비트맵에서 로드 됩니다.
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -191,7 +194,7 @@ public partial class TestPerspectivePage : ContentPage
 }
 ```
 
-합니다 `PaintSurface` 처리기에서 계산을 `SKMatrix` 라는 값 `perspectiveMatrix` 100으로 나눈 다음 두 개의 슬라이더의 값을 기반으로 합니다. 이 함께 두 translate 변환을 비트맵의 센터에서이 변환의 중심을 둔:
+`PaintSurface`처리기는 `SKMatrix` `perspectiveMatrix` 이러한 두 슬라이더의 값을 100로 나눈 값을 기반으로 하는 라는 값을 계산 합니다. 이 변환의 중심을 비트맵의 중심에 배치 하는 두 개의 변환 변환과 결합 됩니다.
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -228,28 +231,28 @@ public partial class TestPerspectivePage : ContentPage
 }
 ```
 
-몇 가지 샘플 이미지는 다음과 같습니다.
+다음은 몇 가지 샘플 이미지입니다.
 
-[![](non-affine-images/testperspective-small.png "테스트 큐브 뷰 페이지의 3 배가 스크린샷")](non-affine-images/testperspective-large.png#lightbox "삼중 테스트 큐브 뷰 페이지 스크린샷")
+[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
 
-슬라이더를 사용 하 여 실험 시 0.0066 초과 또는 –0.0066 아래 값 때문에 이미지 갑자기 해지고 분열 된 경도의 있는지 확인할 수 있습니다. 변환할 비트맵은 300 픽셀 사각형이 됩니다. 비트맵의 좌표를 150 –150에서 범위 있도록의 중심을 기준으로 변환 됩니다. 이전에 설명한 대로 z 값 ' 됩니다.
+슬라이더를 사용 하 여 시험해 보면 0.0066 이하의 값이 보다 0.0066 작은 값을 찾으면 이미지가 갑자기 fractured 및 incoherent 됩니다. 변환 중인 비트맵이 300 픽셀 제곱입니다. 이는 중심을 기준으로 변형 되므로 비트맵의 좌표는-150에서 150 까지입니다. Z 값은 다음과 같습니다.
 
-z' Persp0·x Persp1·y + 1 =
+z ' = Persp0 · x + Persp1 · y + 1
 
-하는 경우 `Persp0` 또는 `Persp1` 0.0066 보다 크면 없거나 –0.0066, 아래 다음 항상 z를 초래 하는 비트맵의 일부 좌표 ' 값이 0입니다. 0으로 나누기 되도록 되며 렌더링 교통이 복잡 합니다. 비 관계 변환을 사용 하는 경우 0으로 나누기는 좌표를 사용 하 여 아무 것도 렌더링 하지 않도록 해야 합니다.
+`Persp0`또는 `Persp1` 가 0.0066 보다 크거나 0.0066 보다 큰 경우에는 항상 z ' 값이 0 인 비트맵이 있습니다. 이렇게 하면 0으로 나누기가 발생 하 고 렌더링은 복잡해 집니다. 비 관계 변환을 사용할 때 0으로 나누기를 발생 시키는 좌표를 사용 하 여 아무것도 렌더링 하지 않으려는 경우
 
-설정할 수 없습니다 일반적으로 `Persp0` 고 `Persp1` 격리에서 합니다. 것도 종종 특정 유형의 비 관계 변환 달성 하기 위해 행렬의 다른 셀을 설정 해야 합니다.
+일반적으로 및는 격리에서 설정 하지 않습니다 `Persp0` `Persp1` . 행렬의 다른 셀을 설정 하 여 특정 유형의 비 관계 변환을 수행 해야 하는 경우가 종종 있습니다.
 
-이러한 하나의 비 관계 변환 되는 *테이퍼 변환*합니다. 이 유형의 비 관계 변환 사각형의 전체적인 치수는 유지 되지만 한쪽 점점 가늘어지거나:
+이러한 비 상관 변환 중 하나는 *테이퍼 변형*입니다. 이러한 비 상관 변환 형식은 사각형의 전체 크기를 유지 하지만 한쪽은 tapers 합니다.
 
-![](non-affine-images/tapertransform.png "테이퍼 변환을 적용 하는 상자")
+![](non-affine-images/tapertransform.png "A box subjected to a taper transform")
 
-합니다 [ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) 클래스는 이러한 매개 변수에 따라 비 관계 변환의 일반화 된 계산을 수행 합니다.
+[`TaperTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs)클래스는 다음 매개 변수를 기반으로 비 상관 변환의 일반화 된 계산을 수행 합니다.
 
-- 변환 중인 이미지의 사각형 크기
-- 점점 가늘어지거나에 사각형의 면을 나타내는 열거형
-- 어떻게 점점 가늘어지거나 것을 나타내는 다른 열거형 및
-- 테이퍼의 범위입니다.
+- 변환 되는 이미지의 사각형 크기입니다.
+- tapers 하는 사각형의 측면을 나타내는 열거형입니다.
+- tapers 방법을 나타내는 또 다른 열거형
+- tapering의 범위입니다.
 
 코드는 다음과 같습니다.
 
@@ -353,7 +356,7 @@ static class TaperTransform
 }
 ```
 
-이 클래스에서 사용 되는 **테이퍼 변환** 페이지입니다. XAML 파일을 두 개를 인스턴스화하고 `Picker` 열거형 값을 선택 하는 요소 및 `Slider` 테이퍼 비율을 선택 합니다. 합니다 [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) 처리기 결합 테이퍼 변환을 두 개의 변환 비트맵의 왼쪽 위 모퉁이 기준으로 변환 되도록 변환 합니다.
+이 클래스는 **테이퍼 변형** 페이지에서 사용 됩니다. XAML 파일은 두 개의 `Picker` 요소를 인스턴스화하여 열거형 값을 선택 하 고, `Slider` 테이퍼 분수를 선택 합니다. 처리기는 변환 변환을 [`PaintSurface`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) 두 개의 변환으로 결합 하 여 비트맵의 왼쪽 위 모퉁이를 기준으로 변환을 수행 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -392,17 +395,17 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-다음은 몇 가지 예입니다.
+예를 들어 다음과 같은 노래를 선택할 수 있다.
 
-[![](non-affine-images/tapertransform-small.png "삼중 테이퍼 변환 페이지 스크린샷")](non-affine-images/tapertransform-large.png#lightbox "삼중 테이퍼 변환 페이지 스크린샷")
+[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
 
-다른 유형의 일반화 된 비 관계 변환은 다음 기사에서 설명 하는 3D 회전 [ **3D 회전**](3d-rotation.md)합니다.
+다른 형식의 일반화 된 비 관계 변환은 3d 회전으로, 다음 문서인 [**3d**](3d-rotation.md)회전입니다.
 
-비 관계 변환 모든 볼록 사변형에 사각형을 변환할 수 있습니다. 이 확인할 합니다 **비 Affine 행렬 표시** 페이지입니다. 매우 유사 합니다 **Affine 행렬 표시** 에서 페이지를 [ **매트릭스 변환** ](matrix.md) 네 번째 있는 점을 제외 하 고 문서 `TouchPoint` 네 번째를 조작 하는 개체 비트맵의 모퉁이.
+비 상관 변환은 사각형을 볼록 사변형 변환할 수 있습니다. 이는 **비 상관 행렬 표시** 페이지에서 보여 줍니다. 비트맵의 네 번째 모퉁이를 조작 하는 네 번째 개체를 포함 한다는 점을 제외 하 고는 [**행렬 변환**](matrix.md) 문서의 **관계 행렬 표시** 페이지와 매우 비슷합니다 `TouchPoint` .
 
-[![](non-affine-images/shownonaffinematrix-small.png "비 Affine 행렬 표시 페이지 스크린샷 삼중")](non-affine-images/shownonaffinematrix-large.png#lightbox "삼중 비 Affine 행렬 표시 페이지 스크린샷")
+[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
 
-프로그램에서이 메서드를 사용 하 여 변환을 성공적으로 계산 하지을 하려고 하면 비트맵의 모서리 중 하나를 내부 각도가 180도 보다 큰지 확인 하거나 서로 교차 하는 두 변으로는 [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) 클래스.
+비트맵의 모퉁이 중 하나에 대 한 내부 각도를 180도 보다 크게 설정 하거나 두 면을 서로 교차 하도록 설정 하지 않으면 프로그램은 클래스에서이 메서드를 사용 하 여 변환을 성공적으로 계산 합니다 [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) .
 
 ```csharp
 static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint ptLL, SKPoint ptLR)
@@ -451,23 +454,23 @@ static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint p
 }
 ```
 
-계산 편의성을 위해이 메서드는 이러한 변환 된 비트맵의 네 모퉁이 수정 하는 방법을 보여 주는 화살표가 여기 기호로 나타낼는 세 가지 별도 변환의 결과로 총 변환을 가져옵니다.
+계산의 용이성을 위해이 메서드는 세 개의 개별 변환의 곱으로 전체 변환을 가져옵니다. 여기서는 이러한 변환에서 비트맵의 네 모퉁이를 수정 하는 방법을 보여 주는 화살표가 표시 됩니다.
 
-(0, 0) (0, 0) → → (0, 0) → (0, y0) x (왼쪽 위)
+(0, 0) → (0, 0) → (0, 0) → (x0, y0) (왼쪽 위)
 
-(0, H) → (0, 1) (0, 1) → → (x1 y1) (왼쪽)
+(0, H) → (0, 1) → (0, 1) → (x1, y1) (왼쪽 아래)
 
-(W, 0) (1, 0) → → (1, 0) → (x2 y2) (오른쪽 위)
+(W, 0) → (1, 0) → (1, 0) → (x2, y2) (오른쪽 위)
 
-(H, W) → (1, 1) (a, b) → → (x3 y3) (오른쪽)
+(W, H) → (1, 1) → (a, b) → (x3, y3) (오른쪽 아래)
 
-오른쪽에 있는 마지막 좌표 지점은 4 4 개의 터치 포인트를 사용 하 여 연결 합니다. 이들은 비트맵의 모서리 중 마지막 좌표입니다.
+오른쪽에 있는 최종 좌표는 네 개의 터치 지점과 연결 된 네 개의 점에 해당 합니다. 이는 비트맵 모퉁이의 최종 좌표입니다.
 
-W 및 H 비트맵의 높이 너비를 나타냅니다. 첫 번째 변환을 `S` 1 픽셀 사각형으로 비트맵 크기를 조정 하기만 하면 됩니다. 두 번째 변환이 비 관계 변환 `N`, 세 번째 유사 변환 이며 `A`합니다. 이전 affine 마찬가지로 있으므로 해당 유사 변환 세 가지 요소에 기반 [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) 메서드 및 네 번째 행이 포함 되어 있지는 (a, b) 지점입니다.
+W 및 H는 비트맵의 너비와 높이를 나타냅니다. 첫 번째 변환은 `S` 단순히 비트맵을 1 픽셀 사각형으로 크기 조정 합니다. 두 번째 변환은 비 상관 변환 이며 `N` 세 번째 변환은 상관 변환입니다 `A` . 상관 변환은 세 개의 점을 기반으로 하므로 이전 관계 [`ComputeMatrix`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) 메서드와 동일 하며, (a, b) 점이 있는 네 번째 행을 포함 하지 않습니다.
 
-합니다 `a` 고 `b` 세 번째 변환이 유사 변환이 있도록 값이 계산 됩니다. 코드는 유사 변환의 역함수 값을 가져옵니다 하 고 오른쪽 아래 모서리를 매핑하는. (A, b) 지점입니다.
+`a` `b` 세 번째 변환이 상관 관계를 갖도록 및 값이 계산 됩니다. 이 코드는 관계 변환의 역함수를 가져온 다음이를 사용 하 여 오른쪽 아래 모퉁이를 매핑합니다. 이것은 point (a, b)입니다.
 
-3 차원 그래픽을 모방 하는 데 비 관계 변환의 다른 사용이 됩니다. 다음 문서에서는 [ **3D 회전** ](3d-rotation.md) 3D 공간에서 2 차원 그래픽을 회전 하는 방법을 참조 하세요.
+비 상관 변환의 또 다른 용도는 3 차원 그래픽을 모방 하는 것입니다. 다음 문서에서 [**3D 회전**](3d-rotation.md) 은 3d 공간에서 2 차원 그래픽을 회전 하는 방법을 보여 줍니다.
 
 ## <a name="related-links"></a>관련 링크
 

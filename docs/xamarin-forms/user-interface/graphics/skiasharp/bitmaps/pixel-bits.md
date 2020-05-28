@@ -1,47 +1,50 @@
 ---
-title: SkiaSharp 비트맵 픽셀 비트에 액세스
-description: 액세스 하 고 SkiaSharp 비트맵의 픽셀 비트를 수정 하는 다양 한 기술을 검색 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/11/2018
-ms.openlocfilehash: 6c066f89dc8f558a9154138bf38ad4326fe21291
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306460"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135583"
 ---
-# <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트에 액세스
+# <a name="accessing-skiasharp-bitmap-pixel-bits"></a>SkiaSharp 비트맵 픽셀 비트 액세스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-이 문서에서 볼 수 있듯이 [ **파일에 저장 SkiaSharp 비트맵**](saving.md), 비트맵은 일반적으로 압축 된 형식으로 JPEG 또는 PNG와 같은 파일에 저장 됩니다. 이와 달리 SkiaSharp 비트맵 메모리에 저장 된 압축 되지 않습니다. 픽셀의 순차적으로 저장 됩니다. 압축 되지 않은 형식으로 표시 화면에 비트맵의 전송을 지원합니다.
+[**SkiaSharp 비트맵을 파일에 저장**](saving.md)문서에서 보았듯이 비트맵은 일반적으로 JPEG 또는 PNG와 같은 압축 된 형식으로 파일에 저장 됩니다. 와 달리에서는 메모리에 저장 된 SkiaSharp 비트맵이 압축 되지 않습니다. 순차적인 일련의 픽셀로 저장 됩니다. 압축 되지 않은이 형식은 비트맵을 표시 화면으로 전송 하는 것을 용이 하 게 합니다.
 
-SkiaSharp 비트맵이 차지 하는 메모리 블록은 매우 간단한 방식으로 구성 됩니다. 왼쪽에서 오른쪽으로 픽셀의 첫 번째 행부터 시작 하 여 두 번째 행으로 계속 합니다. 전체 색 비트맵에 대 한 각 픽셀 이루어져 있습니다 4 바이트 비트맵에 필요한 총 메모리 공간 4 번의 너비와 높이의 제품 임을 의미입니다.
+SkiaSharp 비트맵에서 사용 되는 메모리 블록은 매우 간단한 방식으로 구성 됩니다. 즉, 왼쪽에서 오른쪽으로 픽셀의 첫 번째 행부터 시작 하 여 두 번째 행으로 계속 됩니다. 전체 색 비트맵의 경우 각 픽셀은 4 바이트로 구성 됩니다. 즉, 비트맵에 필요한 총 메모리 공간이 너비와 높이의 4 배가 됩니다.
 
-이 문서에서는 응용 프로그램에서 비트맵의 픽셀 메모리 블록에 액세스 하 여 간접적으로 이러한 픽셀에 대 한 액세스를 가져올 수는 방법에 대해 설명 합니다. 또는 간접적으로 합니다. 일부 경우에 프로그램 하려는 이미지의 픽셀을 분석 하 고 일종의 히스토그램을 생성 합니다. 일반적으로 응용 프로그램은 비트맵을 구성 하는 픽셀 알고리즘 방식으로 만들어 고유 이미지를 생성할 수 있습니다.
+이 문서에서는 응용 프로그램이 비트맵의 픽셀 메모리 블록에 액세스 하거나 간접적으로 액세스 하 여 해당 픽셀에 대 한 액세스를 얻는 방법을 설명 합니다. 일부 경우에 프로그램에서 이미지의 픽셀을 분석 하 고 일종의 히스토그램을 생성할 수 있습니다. 더 일반적으로 응용 프로그램은 비트맵을 구성 하는 픽셀을 알고리즘 방식으로 하 여 고유한 이미지를 생성할 수 있습니다.
 
 ![픽셀 비트 샘플](pixel-bits-images/PixelBitsSample.png "픽셀 비트 샘플")
 
 ## <a name="the-techniques"></a>기술
 
-SkiaSharp는 비트맵의 픽셀 비트에 액세스 하기 위한 몇 가지 방법을 제공 합니다. 어떤 것을 선택은 일반적으로 코딩 (관련이 유지 관리 및 디버깅 편의성)는 편 및 성능 절충 합니다. 대부분에서의 속성과 다음 방법 중 하나를 사용 하겠습니다 `SKBitmap` 비트맵의 픽셀에 액세스 합니다.
+SkiaSharp는 비트맵의 픽셀 비트에 액세스 하기 위한 몇 가지 방법을 제공 합니다. 사용자가 선택 하는 것은 일반적으로 코딩 편의 (유지 관리와의 용이성과 관련 됨)와 성능 간에 절충 하는 것입니다. 대부분의 경우 다음 메서드 및 속성 중 하나를 사용 하 여 비트맵의 `SKBitmap` 픽셀에 액세스 합니다.
 
-- 합니다 `GetPixel` 고 `SetPixel` 메서드 얻거나 단일 픽셀의 색을 설정할 수 있습니다.
-- `Pixels` 속성은 전체 비트맵의 픽셀 색의 배열을 가져오는 또는 색의 배열을 설정 합니다.
-- `GetPixels` 비트맵을 사용 하는 픽셀 메모리의 주소를 반환 합니다.
-- `SetPixels` 비트맵을 사용 하는 픽셀 메모리의 주소를 바꿉니다.
+- `GetPixel`및 메서드를 사용 하 여 `SetPixel` 단일 픽셀의 색을 얻거나 설정할 수 있습니다.
+- `Pixels`속성은 전체 비트맵의 픽셀 색 배열을 얻거나 색 배열을 설정 합니다.
+- `GetPixels`비트맵에서 사용 하는 픽셀 메모리의 주소를 반환 합니다.
+- `SetPixels`비트맵에서 사용 하는 픽셀 메모리의 주소를 바꿉니다.
 
-"상위 수준"으로 처음 두 기술 및 두 "낮은 수준입니다."로 생각할 수 있습니다. 일부 다른 메서드 및 속성을 사용할 수 있는 있지만 이들은 가장 유용 합니다.
+처음 두 가지 기술을 "상위 수준"으로 생각 하 고 두 번째 기술을 "낮은 수준"으로 생각할 수 있습니다. 사용할 수 있는 몇 가지 다른 메서드 및 속성이 있지만 가장 중요 합니다.
 
-이러한 기술 간의 성능 차이 볼 수 있도록 하는 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 라는 페이지를 포함 하는 응용 프로그램 **그라데이션 비트맵** 는 그라데이션을 만드는 데 빨간색, 파란색 음영을 결합 하는 픽셀을 사용 하 여 비트맵을 만듭니다. 프로그램 8 개의 다른 복사본을 만들어이 비트맵의 모든 기술을 사용 하 여 다른 비트맵 픽셀을 설정 합니다. 이러한 8 비트맵의 각 기술의 대 한 간략 한 텍스트 설명을 설정 하 고 모든 픽셀을 설정 하는 데 필요한 시간을 계산 하는 별도 메서드에서 만들어집니다. 각 메서드 반복 픽셀 설정 논리를 100 번 하 게 더 나은 성능 예측을 합니다.
+이러한 기술 간의 성능 차이를 확인할 수 있도록 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램에는 빨강 및 파랑 음영을 결합 하 여 그라데이션을 만드는 픽셀을 사용 하 여 비트맵을 만드는 **그라데이션 비트맵** 페이지가 포함 되어 있습니다. 프로그램은 비트맵 픽셀을 설정 하는 다양 한 기술을 사용 하 여이 비트맵의 8 가지 복사본을 만듭니다. 이러한 8 개 비트맵은 각각이 기술에 대 한 간략 한 텍스트 설명도 설정 하 고 모든 픽셀을 설정 하는 데 필요한 시간을 계산 하는 별도의 메서드로 생성 됩니다. 각 메서드는 픽셀 설정 논리를 100 번 반복 하 여 더 나은 성능 예측을 제공 합니다.
 
 ### <a name="the-setpixel-method"></a>SetPixel 메서드
 
-해야 할 경우만 여러 개별 픽셀을 가져오거나 설정 합니다 [ `SetPixel` ](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) 및 [ `GetPixel` ](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) 방법이 적합 합니다. 이러한 두 가지 방법 중 각각에 대 한 정수 열 및 행을 지정합니다. 픽셀 형식에 관계 없이 이러한 두 가지 방법 있습니다 얻거나 설정으로 픽셀을 `SKColor` 값:
+몇 개의 개별 픽셀만 설정 하거나 가져올 수 있는 경우 [`SetPixel`](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) 및 [`GetPixel`](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) 메서드가 적합 합니다. 이러한 두 가지 방법에 대해 정수 열과 행을 지정 합니다. 이러한 두 메서드는 픽셀 형식에 관계 없이 픽셀을 값으로 얻거나 설정할 수 있도록 합니다 `SKColor` .
 
 ```csharp
 bitmap.SetPixel(col, row, color);
@@ -49,9 +52,9 @@ bitmap.SetPixel(col, row, color);
 SKColor color = bitmap.GetPixel(col, row);
 ```
 
-`col` 인수 해야 범위는 0에서 1 보다 작은 `Width` 비트맵의 속성 및 `row` 하나에 대 한 범위는 0 보다 작은 `Height` 속성입니다.
+`col`인수는 0에서 1 사이의 값 사이 여야 하 `Width` 고, `row` 0에서 1 사이의 값 사이 여야 합니다 `Height` .
 
-여기에 메서드가 **그라데이션 비트맵** 사용 하 여 비트맵 콘텐츠를 설정 하는 `SetPixel` 메서드. 비트맵은 256 x 256 픽셀 및 `for` 루프 값의 범위를 사용 하 여 하드 코드 됩니다.
+다음은 메서드를 사용 하 여 비트맵의 콘텐츠를 설정 하는 **그라데이션 비트맵** 의 메서드입니다 `SetPixel` . 비트맵은 256 x 256 픽셀 이며 `for` 루프는 값의 범위로 하드 코딩 됩니다.
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -81,13 +84,13 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-각 픽셀에 대해 설정 된 색상에는 빨강 구성 요소와 같은 비트맵 열 및 행을 파랑 구성 요소와 같은 있습니다. 결과 비트맵은 왼쪽 위, 오른쪽 위, 아래 왼쪽 및 오른쪽 아래에 그라데이션으로 다른 곳에서 자홍 파란색에서 빨간색 검정입니다.
+각 픽셀의 색 집합에는 빨강 구성 요소가 비트맵 열과 같으며 파랑 구성 요소는 행과 동일 합니다. 결과 비트맵은 왼쪽 위, 오른쪽 위의 빨강, 왼쪽 아래에 파란색, 오른쪽 아래에 그라데이션이 있는 검정색으로 나타납니다.
 
-`SetPixel` 메서드를 호출한 65,536 시간에 관계 없이 효율성이 메서드가 될 수 있습니다, 아니기 일반적으로 대 안으로 사용할 수 있는 경우 많은 API 호출을 수행 하는 것이 좋습니다. 다행 스럽게도 몇 가지 대안이 있습니다.
+`SetPixel`메서드를 65536 번 호출 하 고,이 메서드를 효율적으로 사용할 수 있는지 여부에 관계 없이, 대체를 사용할 수 있는 경우 많은 API를 호출 하는 것이 좋습니다. 다행히 몇 가지 대안이 있습니다.
 
 ### <a name="the-pixels-property"></a>픽셀 속성
 
-`SKBitmap` 정의 된 [ `Pixels` ](xref:SkiaSharp.SKBitmap.Pixels) 배열을 반환 하는 속성 `SKColor` 전체 비트맵에 대 한 값입니다. 사용할 수도 있습니다 `Pixels` 비트맵의 색 값의 배열을 설정 합니다.
+`SKBitmap`[`Pixels`](xref:SkiaSharp.SKBitmap.Pixels)전체 비트맵의 값 배열을 반환 하는 속성을 정의 합니다 `SKColor` . 를 사용 하 여 `Pixels` 비트맵의 색 값 배열을 설정할 수도 있습니다.
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -95,11 +98,11 @@ SKColor[] pixels = bitmap.Pixels;
 bitmap.Pixels = pixels;
 ```
 
-다음 두 번째 행, 왼쪽에서 오른쪽, 첫 번째 행을 사용 하 여 시작 하 여 배열에서 정렬 되는 픽셀과 등입니다. 총 수가 배열의 색 비트맵 너비와 높이의 곱 하는 것과 같습니다.
+픽셀은 첫 번째 행부터 왼쪽부터 오른쪽, 두 번째 행 등으로 시작 하는 배열에 정렬 됩니다. 배열의 총 색 수는 비트맵 너비와 높이의 곱과 같습니다.
 
-이 속성 효율적으로 나타나지만, 염두에 비트맵을 다시 배열 및 배열에 비트맵에서 픽셀을 복사 하는 하에서 픽셀을 변환할지 `SKColor` 값입니다.
+이 속성은 효율적 이기는 하지만 비트맵이 비트맵에서 배열로 복사 되 고 배열에서 비트맵으로 다시 복사 되는 것을 염두에 두고 픽셀은 및에서 값으로 변환 됩니다 `SKColor` .
 
-여기에 메서드가 합니다 `GradientBitmapPage` 사용 하 여 비트맵을 설정 하는 클래스는 `Pixels` 속성입니다. 할당 메서드는 `SKColor` 하지만 필요한 크기의 배열을 사용할 수 있습니다는 `Pixels` 해당 배열을 만들려면 속성:
+`GradientBitmapPage`속성을 사용 하 여 비트맵을 설정 하는 클래스의 메서드는 다음과 같습니다 `Pixels` . 메서드는 `SKColor` 필요한 크기의 배열을 할당 하지만, 속성을 사용 `Pixels` 하 여 해당 배열을 만들 수 있습니다.
 
 ```csharp
 SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
@@ -125,27 +128,27 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 }
 ```
 
-인덱스를 `pixels` 배열에서 계산 해야 합니다 `row` 및 `col` 변수입니다. 행은 픽셀 (이 경우 256), 각 행의 수를 곱한 및 열이 추가 됩니다.
+배열의 인덱스는 `pixels` 및 변수에서 계산 해야 `row` `col` 합니다. 행에 각 행의 픽셀 수 (이 경우 256)를 곱한 다음 열이 추가 됩니다.
 
-`SKBitmap` 유사한 정의 `Bytes` 속성은 전체 비트맵에 대 한 바이트 배열을 반환 하는 이지만 전체 색 비트맵에 대 한 더 불편 합니다.
+`SKBitmap`는 또한 `Bytes` 전체 비트맵의 바이트 배열을 반환 하는 유사한 속성을 정의 하지만 전체 색 비트맵의 경우 더 복잡 합니다.
 
 ### <a name="the-getpixels-pointer"></a>GetPixels 포인터
 
-비트맵 픽셀 액세스에 대 한 가장 강력한 방법은 잠재적 [ `GetPixels` ](xref:SkiaSharp.SKBitmap.GetPixels), 혼동 해서는 합니다 `GetPixel` 메서드 또는 `Pixels` 속성. 사용 하 여 차이점을 즉시 확인할 수 있습니다 `GetPixels` 는 반환 되는 C# 프로그래밍에서 매우 흔하게 없습니다.
+비트맵 픽셀에 액세스할 수 있는 가장 강력한 방법은 [`GetPixels`](xref:SkiaSharp.SKBitmap.GetPixels) 메서드 또는 속성과 혼동 하지 않는 것입니다 `GetPixel` `Pixels` . `GetPixels`C # 프로그래밍에서 그다지 일반적이 지 않은 것을 반환 한다는 점에서와의 차이점을 즉시 알 수 있습니다.
 
 ```csharp
 IntPtr pixelsAddr = bitmap.GetPixels();
 ```
 
-.NET [ `IntPtr` ](xref:System.IntPtr) 형식 포인터를 나타냅니다. 라고 `IntPtr` 프로그램이 실행 되는, 일반적으로 32 비트 또는 64 비트 길이에서 컴퓨터의 기본 프로세서의 정수 길이 때문입니다. 합니다 `IntPtr` 는 `GetPixels` 는 실제 비트맵 개체는 해당 픽셀을 저장 하는 데 사용 하는 메모리 블록의 주소를 반환 합니다.
+.NET [`IntPtr`](xref:System.IntPtr) 형식은 포인터를 나타냅니다. `IntPtr`프로그램이 실행 되는 컴퓨터의 네이티브 프로세서에서의 정수 길이 이기 때문에 호출 됩니다 (일반적으로 32 비트 또는 64 비트 길이). 가 반환 되는는 `IntPtr` `GetPixels` 비트맵 개체가 픽셀을 저장 하는 데 사용 하는 실제 메모리 블록의 주소입니다.
 
-변환할 수는 `IntPtr` C# 포인터 형식을 사용 하 여 합니다 [ `ToPointer` ](xref:System.IntPtr.ToPointer) 메서드. C# 포인터 구문은 C 및 c + +와 동일 합니다.
+`IntPtr`메서드를 사용 하 여를 c # 포인터 형식으로 변환할 수 있습니다 [`ToPointer`](xref:System.IntPtr.ToPointer) . C # 포인터 구문은 C 및 c + +와 동일 합니다.
 
 ```csharp
 byte* ptr = (byte*)pixelsAddr.ToPointer();
 ```
 
-합니다 `ptr` 형식의 변수가 _바이트 포인터_합니다. 이 `ptr` 변수를 사용 하면 비트맵의 픽셀을 저장 하는 데 사용 되는 메모리의 개별 바이트를 액세스할 수 있습니다. 이 메모리에서 바이트를 읽거나 메모리 바이트를 쓸 다음과 같은 코드를 사용 합니다.
+`ptr`변수는 _바이트 포인터_유형입니다. 이 `ptr` 변수를 사용 하면 비트맵의 픽셀을 저장 하는 데 사용 되는 개별 메모리 바이트에 액세스할 수 있습니다. 다음과 같은 코드를 사용 하 여이 메모리에서 바이트를 읽거나 메모리에 바이트를 씁니다.
 
 ```csharp
 byte pixelComponent = *ptr;
@@ -153,13 +156,13 @@ byte pixelComponent = *ptr;
 *ptr = pixelComponent;
 ```
 
-이 컨텍스트에서 별표는 C# _간접 참조 연산자_ 가리키는 메모리의 내용을 참조 하는 데 사용 되 고 `ptr`입니다. 처음에 `ptr` 비트맵의 첫째 행의 첫 번째 픽셀의 첫 번째 바이트를 가리키는에서 산술 연산을 수행할 수는 `ptr` 비트맵 내의 다른 위치로 이동 하는 변수입니다.
+이 컨텍스트에서 별표는 c # _간접 연산자_ 이 고가 가리키는 메모리의 콘텐츠를 참조 하는 데 사용 됩니다 `ptr` . 처음에는 비트맵 첫 번째 행의 첫 번째 픽셀에 대 한 첫 번째 `ptr` 바이트를 가리키며 변수에 대 한 산술 연산을 수행 `ptr` 하 여 비트맵 내의 다른 위치로 이동할 수 있습니다.
 
-한 가지 단점은이 사용할 수 있는 `ptr` 변수는 코드 블록 에서만에서 표시 된 `unsafe` 키워드. 또한 어셈블리를 안전 하지 않은 블록을 허용 하도록 플래그가 지정 해야 합니다. 프로젝트의 속성에서 수행 됩니다.
+한 가지 단점은 `ptr` 키워드로 표시 된 코드 블록 에서만이 변수를 사용할 수 있다는 것입니다 `unsafe` . 또한 어셈블리는 안전 하지 않은 블록을 허용 하도록 플래그를 지정 해야 합니다. 이 작업은 프로젝트의 속성에서 수행 됩니다.
 
-C#에서 포인터를 사용 하는 것은 매우 강력 하지만 매우 위험 합니다. 참조 해야 하는 포인터가 넘는 메모리에 액세스 하지는 않도록 주의 해야 합니다. 이것이 포인터 사용은 "안전 하지 않은." 라는 단어를 사용 하 여 연결 하는 이유
+C #에서 포인터를 사용 하는 것은 매우 강력 하지만 매우 위험 합니다. 포인터가 참조 하는 것 이상의 메모리에 액세스 하지 않도록 주의 해야 합니다. 포인터 사용이 "unsafe" 라는 단어와 연결 되는 이유입니다.
 
-여기에 메서드가 합니다 `GradientBitmapPage` 사용 하는 클래스는 `GetPixels` 메서드. 통지를 `unsafe` 바이트 포인터를 사용 하는 모든 코드를 포함 하는 블록:
+다음은 `GradientBitmapPage` 메서드를 사용 하는 클래스의 메서드입니다 `GetPixels` . `unsafe`바이트 포인터를 사용 하 여 모든 코드를 포함 하는 블록을 확인 합니다.
 
 ```csharp
 SKBitmap FillBitmapBytePtr(out string description, out int milliseconds)
@@ -193,11 +196,11 @@ SKBitmap FillBitmapBytePtr(out string description, out int milliseconds)
 }
 ```
 
-경우는 `ptr` 변수에서 처음 가져온는 `ToPointer` 메서드를 가리키는 비트맵의 첫째 행의 가장 왼쪽 픽셀의 첫 번째 바이트. `for` 루프에 대 한 `row` 및 `col` 설정 되어 있도록 `ptr` 사용 하 여 증가 될 수는 `++` 연산자 각 픽셀의 각 바이트가 설정 된 후 합니다. 픽셀을 통해 다른 99 루프는 `ptr` 비트맵의 시작 부분으로 다시 설정 해야 합니다.
+변수를 `ptr` 메서드에서 처음 가져오는 경우이 변수는 `ToPointer` 비트맵 첫 번째 행의 맨 왼쪽 픽셀에 대 한 첫 번째 바이트를 가리킵니다. `for`및에 대 한 루프는 `row` `col` `ptr` `++` 각 픽셀의 각 바이트가 설정 된 후 연산자를 사용 하 여 증가 시킬 수 있도록 설정 됩니다. 픽셀을 통한 다른 99 루프의 경우를 `ptr` 비트맵의 시작 부분으로 다시 설정 해야 합니다.
 
-각 픽셀의 메모리, 4 바이트 이므로 각 바이트를 개별적으로 설정 해야 합니다. 여기에서 코드 있다고 가정 바이트가 순서 빨간색, 녹색, 파랑 알파를 일치 하는 `SKColorType.Rgba8888` 형식 색입니다. 이 유니버설 Windows 플랫폼 아니라 iOS 및 Android에 대 한 기본 색 형식 인지를 회수할 수 있습니다. UWP를 기본적으로 사용 하 여 비트맵을 만듭니다는 `SKColorType.Bgra8888` 형식 색입니다. 이러한 이유로 해당 플랫폼의 일부 다른 결과가 표시 될!
+각 픽셀은 4 바이트의 메모리 이므로 각 바이트를 별도로 설정 해야 합니다. 이 코드에서는 해당 바이트가 색 유형과 일치 하는 빨강, 녹색, 파랑 및 알파 순서로 되어 있다고 가정 합니다 `SKColorType.Rgba8888` . 이는 iOS 및 Android의 기본 색 유형 이지만 유니버설 Windows 플랫폼에 대 한 것은 아닙니다. 기본적으로 UWP는 색 형식을 사용 하 여 비트맵을 만듭니다 `SKColorType.Bgra8888` . 이러한 이유로 해당 플랫폼에서 다른 결과가 표시 될 것입니다.
 
-반환 된 값으로 캐스팅할 수 있기 `ToPointer` 에 `uint` 포인터 대신 `byte` 포인터입니다. 이렇게 하면 하나의 문에서 액세스할 수는 전체 픽셀 수 있습니다. 적용 된 `++` 연산자는 포인터에 대 한 다음 픽셀을 가리키도록 4 바이트씩 증가 합니다.
+에서 반환 된 값을 포인터가 아닌 포인터로 캐스팅할 수 있습니다 `ToPointer` `uint` `byte` . 이를 통해 한 문에서 전체 픽셀에 액세스할 수 있습니다. 연산자를 `++` 해당 포인터에 적용 하면 다음 픽셀을 가리키도록 4 바이트로 증가 합니다.
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -237,19 +240,19 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-픽셀 사용 하도록 설정 됩니다는 `MakePixel` 빨간색, 녹색, 파랑 및 알파 구성 요소에서 정수 픽셀을 생성 하는 메서드. 에 유의 합니다 `SKColorType.Rgba8888` 형식에는 다음과 같은 순서 픽셀 바이트:
+픽셀은 `MakePixel` 빨간색, 녹색, 파랑 및 알파 구성 요소에서 정수 픽셀을 생성 하는 메서드를 사용 하 여 설정 됩니다. `SKColorType.Rgba8888`형식은 다음과 같이 픽셀 바이트 순서를 갖습니다.
 
-RR GG, BB AA
+RR GG BB AA
 
-하지만 해당 바이트에 해당 하는 정수는:
+그러나 해당 바이트에 해당 하는 정수는 다음과 같습니다.
 
 AABBGGRR
 
-정수 최하위 바이트는 little endian 아키텍처에 따라 먼저 저장 됩니다. 이 `MakePixel` 사용 하 여 비트맵에 대 한 메서드를 제대로 작동 하지 것입니다는 `Bgra8888` 형식 색입니다.
+정수의 최하위 바이트는 먼저 작은 endian 아키텍처에 따라 저장 됩니다. 이 `MakePixel` 메서드는 색 형식의 비트맵에서는 제대로 작동 하지 않습니다 `Bgra8888` .
 
-`MakePixel` 메서드 플래그가 합니다 [ `MethodImplOptions.AggressiveInlining` ](xref:System.Runtime.CompilerServices.MethodImplOptions) 되지 않도록 하기 위해이 별도 메서드를 대신 코드를 컴파일하려면 메서드를 호출 하는 컴파일러를 유도 하는 옵션. 이렇게 하면 성능이 향상 됩니다.
+`MakePixel`메서드는 [`MethodImplOptions.AggressiveInlining`](xref:System.Runtime.CompilerServices.MethodImplOptions) 별도의 메서드로 설정 하지 않고 메서드가 호출 되는 코드를 컴파일하는 것을 방지 하기 위해 컴파일러를 권장 하는 옵션으로 플래그가 지정 됩니다. 이렇게 하면 성능이 향상 됩니다.
 
-흥미롭게도 합니다 `SKColor` 구조에서 명시적 변환을 정의 `SKColor` 는 부호 없는 정수입니다. 즉는 `SKColor` 값을 만들 수 및 변환할 `uint` 대신 사용할 수 있습니다 `MakePixel`:
+흥미롭게도 구조체는 `SKColor` 에서 부호 없는 정수로의 명시적 변환을 정의 합니다 `SKColor` . 즉, `SKColor` 값을 만들 수 있고 `uint` 대신로의 변환을 사용할 수 있습니다 `MakePixel` .
 
 ```csharp
 SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
@@ -280,21 +283,21 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-유일한 질문은 다음과 같습니다. `SKColorType.Rgba8888` 색 형식 또는 `SKColorType.Bgra8888` 색 형식의 순서로 `SKColor` 값의 정수 형식 인지 또는 완전히 다른 항목 인지 여부 해당 질문에 대답 곧 공개 됩니다.
+유일한 질문은 `SKColor` `SKColorType.Rgba8888` 색 유형 또는 색 유형 순서로 값의 정수 형식 `SKColorType.Bgra8888` 이거나 완전히 다른 것 입니까?입니다. 이 질문에 대 한 답은 곧 표시 될 것입니다.
 
 ### <a name="the-setpixels-method"></a>SetPixels 메서드
 
-`SKBitmap` 또한 라는 메서드를 정의 [ `SetPixels` ](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr))를 다음과 같이 호출 하는:
+`SKBitmap`는 [`SetPixels`](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)) 다음과 같이 호출 하는 라는 메서드도 정의 합니다.
 
 ```csharp
 bitmap.SetPixels(intPtr);
 ```
 
-이전에 설명한 대로 `GetPixels` 가져옵니다는 `IntPtr` 비트맵의 픽셀을 저장 하기 위해 사용 된 메모리 블록을 참조 합니다. `SetPixels` 호출 _대체_ 에서 참조 하는 메모리 블록을 사용 하 여 해당 메모리 블록을 `IntPtr` 로 지정 된는 `SetPixels` 인수입니다. 비트맵 다음 이전에 사용한 메모리 블록이 해제 됩니다. 다음 번 `GetPixels` 는 호출을 가져와서 사용 하 여 설정 된 메모리 블록 `SetPixels`합니다.
+회수할 때 `GetPixels` `IntPtr` 비트맵에서 픽셀을 저장 하는 데 사용 하는 메모리 블록을 참조 합니다. `SetPixels`호출은 지정 된에서 참조 하는 메모리 블록을 인수로 사용 하 여 메모리 블록을 _바꿉니다_ `IntPtr` `SetPixels` . 그런 다음 비트맵은 이전에 사용 된 메모리 블록을 해제 합니다. 다음에 호출 되 면를 사용 하 여 `GetPixels` 메모리 블록 집합을 가져옵니다 `SetPixels` .
 
-처음에 것 같습니다 처럼 `SetPixels` 더 더욱 강력 하 고 보다 성능을 제공 `GetPixels` 동시에 보다 편리 합니다. 사용 하 여 `GetPixels` 비트맵 메모리 블록을 가져오고 액세스 합니다. 사용 하 여 `SetPixels` 할당 하 고 일부 메모리에 액세스 하 고 비트맵 메모리 블록으로 설정 하는 합니다.
+처음에 `SetPixels` 는가 그다지 편리 하지 않을 때 보다 더 많은 기능과 성능을 제공 하지 않는 것 처럼 보입니다 `GetPixels` . 를 사용 `GetPixels` 하면 비트맵 메모리 블록을 가져와 액세스할 수 있습니다. 를 사용 하 여 `SetPixels` 일부 메모리를 할당 하 고 액세스 한 다음이를 비트맵 메모리 블록으로 설정 합니다.
 
-그러나 `SetPixels`를 사용 하면 다음과 같은 별개의 구문이 제공 됩니다. 배열을 사용 하 여 비트맵 픽셀 비트에 액세스할 수 있습니다. 여기에 메서드가 `GradientBitmapPage` 이 기법을 보여 주는 합니다. 메서드는 먼저 비트맵의 픽셀의 바이트를 해당 다차원 바이트 배열을 정의 합니다. 첫 번째 차원 행을 두 번째 차원의 열 이며 각 픽셀의 네 가지 구성 요소를 세 번째 차원의 합니다.
+그러나를 사용 하면 `SetPixels` 고유한 구문상 이점이 있습니다. 배열을 사용 하 여 비트맵 픽셀 비트에 액세스할 수 있습니다. 이 기술을 보여 주는의 메서드는 다음과 같습니다 `GradientBitmapPage` . 메서드는 먼저 비트맵 픽셀의 바이트에 해당 하는 다차원 바이트 배열을 정의 합니다. 첫 번째 차원은 행이 고, 두 번째 차원은 열 이며, 세 번째 차원은 각 픽셀의 네 가지 구성 요소로 해당 됩니다.
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -329,9 +332,9 @@ SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
 }
 ```
 
-그런 다음 픽셀을 사용 하 여 배열에 채워진 후는 `unsafe` 블록 및 `fixed` 문을이 배열을 가리키는 바이트 포인터를 가져오는 데 사용 됩니다. 해당 바이트 포인터에 캐스팅 될 수는 `IntPtr` 전달할 `SetPixels`합니다.
+그런 다음 배열을 픽셀로 채운 후 `unsafe` 블록 및 `fixed` 문이이 배열을 가리키는 바이트 포인터를 가져오는 데 사용 됩니다. 그런 다음 해당 바이트 포인터를로 캐스팅 하 여 `IntPtr` 에 전달할 수 있습니다 `SetPixels` .
 
-사용자가 만든 배열의 바이트 배열 필요가 없습니다. 행 및 열에 대 한 두 개의 차원 가진 정수 배열을 수 있습니다.
+사용자가 만드는 배열은 바이트 배열이 아니어도 됩니다. 행과 열에 대해 두 개의 차원만 있는 정수 배열일 수 있습니다.
 
 ```csharp
 SKBitmap FillBitmapUintBuffer(out string description, out int milliseconds)
@@ -363,9 +366,9 @@ SKBitmap FillBitmapUintBuffer(out string description, out int milliseconds)
 }
 ```
 
-`MakePixel` 메서드는 다시 32 비트 픽셀 색 구성 요소를 결합 하는 데 사용 됩니다.
+`MakePixel`메서드는 색 구성 요소를 32 비트 픽셀에 결합 하는 데 다시 사용 됩니다.
 
-방금 완결성 같습니다 동일한 코드를 했지만 `SKColor` 값을 부호 없는 정수로 캐스팅 합니다.
+완전성을 위해 다음과 같은 코드가 있지만 `SKColor` 부호 없는 정수로 캐스팅 된 값이 있습니다.
 
 ```csharp
 SKBitmap FillBitmapUintBufferColor(out string description, out int milliseconds)
@@ -399,7 +402,7 @@ SKBitmap FillBitmapUintBufferColor(out string description, out int milliseconds)
 
 ### <a name="comparing-the-techniques"></a>기술 비교
 
-생성자는 **그라데이션 색** 페이지 8 모든 위에 표시 된 메서드를 호출 하 고 결과 저장 합니다.
+**그라데이션 색** 페이지의 생성자는 위에 표시 된 8 개의 메서드를 모두 호출 하 고 결과를 저장 합니다.
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -432,7 +435,7 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-생성자를 만들어 완료는 `SKCanvasView` 결과 비트맵을 표시 합니다. 합니다 `PaintSurface` 처리기 나눕니다 화면 8 사각형과 호출 `Display` 각각을 표시 하려면:
+생성자는 `SKCanvasView` 결과 비트맵을 표시 하기 위해를 만들어 종료 합니다. `PaintSurface`처리기는 해당 표면을 8 개의 사각형으로 나누고 `Display` 를 호출 하 여 각 항목을 표시 합니다.
 
 ```csharp
 public class GradientBitmapPage : ContentPage
@@ -480,50 +483,65 @@ public class GradientBitmapPage : ContentPage
 }
 ```
 
-컴파일러는 코드를 최적화할 수 있도록이 페이지에서 실행 되었습니다 **릴리스** 모드입니다. MacBook Pro, Nexus 5 Android 휴대폰 및 Windows 10을 실행 하는 Surface Pro 3에는 8 iPhone 시뮬레이터에서 실행 되 고 해당 페이지는 다음과 같습니다. 하드웨어 차이로 인해 비교와 장치 간의 성능 시간을 방지 하지만 대신 각 장치에서 상대 시간을 확인 합니다.
+컴파일러가 코드를 최적화 하는 것을 허용 하기 위해이 페이지는 **릴리스** 모드에서 실행 되었습니다. MacBook Pro의 iPhone 8 시뮬레이터에서 실행 되는 페이지는 Nexus 5 Android 휴대폰 및 Windows 10을 실행 하는 Surface Pro 3입니다. 하드웨어 차이로 인해 장치 간의 성능 시간을 비교 하지 말고 각 장치에서 상대적 시간을 확인 하십시오.
 
 [![그라데이션 비트맵](pixel-bits-images/GradientBitmap.png "그라데이션 비트맵")](pixel-bits-images/GradientBitmap-Large.png#lightbox)
 
-다음은 실행 시간 (밀리초)에 통합 하는 테이블이입니다.
+실행 시간 (밀리초)을 통합 하는 테이블은 다음과 같습니다.
 
 | API       | 데이터 형식 | iOS  | Android | UWP  |
-| --------- | --------- | ----:| -------:| ----:|
-| SetPixel  |           | 3.17 |   10.77 | 3.49 |
-| 픽셀    |           | 0.32 |    1.23 | 0.07 |
-| GetPixels | byte      | 0.09 |    0.24 | 0.10 |
-|           | uint      | 0.06 |    0.26 | 0.05 |
-|           | SKColor   | 0.29 |    0.99 | 0.07 |
-| SetPixels | byte      | 1.33 |    6.78 | 0.11 |
-|           | uint      | 0.14 |    0.69 | 0.06 |
-|           | SKColor   | 0.35 |    1.93 | 0.10 |
+| ---
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-예상 대로 호출 `SetPixel` 65,536 번 하는 방법은 최소 effeicient 비트맵의 픽셀을 설정 합니다. 채우기는 `SKColor` 배열 및 설정 합니다 `Pixels` 속성 훨씬 더 좋고도 중 일부를 사용 하 여 알맞게 비교를 `GetPixels` 및 `SetPixels` 기술. 작업할 `uint` 픽셀 값은 일반적으로 별도 설정 보다 더 빠릅니다 `byte` 구성 요소 및 변환의 `SKColor` 프로세스에 약간의 오버 헤드를 추가 하는 부호 없는 정수 값입니다.
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-다양 한 그라데이션을 비교 하는 것도 흥미롭습니다. 각 플랫폼의 맨 위 행은 동일 하며 원하는 대로 그라데이션을 표시 합니다. 즉 합니다 `SetPixel` 메서드 및 `Pixels` 속성 기본 픽셀 형식에 관계 없이 색에서 픽셀을 올바르게 만듭니다.
+----- | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-IOS 및 Android 스크린샷 다음 두 행은 동일 수도 있는지 확인 하는 작은 `MakePixel` 메서드가 기본 올바르게 정의 되어 `Rgba8888` 이러한 플랫폼에 대 한 픽셀 형식입니다.
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-IOS 및 Android 스크린샷 맨 아래쪽 행입니다. 이전 버전과 호환성을 부호 없는 정수로 캐스팅 하 여 가져올 있음을 나타냅니다는 `SKColor` 형식에서 값은:
+----- | ----|---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+----:| ----:| | SetPixel |           | 3.17 |   10.77 | 3.49 | | 픽셀 |           | 0.32 |    1.23 | 0.07 | | GetPixels | 바이트 | 0.09 |    0.24 | 0.10 | |           | uint | 0.06 |    0.26 | 0.05 | |           | 이상 색 0.29 |    0.99 | 0.07 | | SetPixels | 바이트 | 1.33 |    6.78 | 0.11 | |           | uint | 0.14 |    0.69 | 0.06 | |           | 이상 색 0.35 |    1.93 | 0.10 |
+
+예상 대로 `SetPixel` 65536 시간을 호출 하는 것이 비트맵의 픽셀을 설정 하는 가장 effeicient 방법입니다. 배열을 채우거 `SKColor` 나 속성을 설정 하 `Pixels` 는 것이 훨씬 더 낫지만 잘와 일부 및 기법을 비교 하기도 `GetPixels` `SetPixels` 합니다. 픽셀 값을 사용 하 `uint` 는 것은 일반적으로 별도의 구성 요소를 설정 하는 것 보다 빠르지만 `byte` 값을 `SKColor` 부호 없는 정수로 변환 하면 프로세스에 약간의 오버 헤드가 추가 됩니다.
+
+또한 다양 한 그라데이션을 비교 하는 것이 흥미롭습니다. 각 플랫폼의 위쪽 행은 동일 하 고 의도 한 대로 그라데이션을 표시 합니다. 즉, `SetPixel` 메서드와 `Pixels` 속성은 기본 픽셀 형식에 관계 없이 색에서 픽셀을 올바르게 만듭니다.
+
+IOS 및 Android 스크린샷의 다음 두 행도 동일 합니다 `MakePixel` .이는 작은 메서드가 `Rgba8888` 이러한 플랫폼의 기본 픽셀 형식에 대해 올바르게 정의 되어 있음을 확인 합니다.
+
+IOS 및 Android 스크린샷 맨 아래 행은 역방향 이며,이는 값을 캐스팅 하 여 얻은 부호 없는 정수가 `SKColor` 형식 임을 나타냅니다.
 
 AARRGGBB
 
-바이트 순서로 표시 됩니다.
+바이트의 순서는 다음과 같습니다.
 
 BB GG RR AA
 
-이 `Bgra8888` 순서 대신 `Rgba8888` 순서입니다. `Brga8888` 형식은 그라데이션을 스크린샷에의 마지막 행에서 첫 번째 행 동일는 유니버설 Windows 플랫폼의 경우 기본값입니다. 이러한 비트맵을 생성 하는 코드 가정 하기 때문에 중간 두 행은 올바르지 않습니다 하지만 `Rgba8888` 순서입니다.
+`Bgra8888`순서가 아닌 순서입니다 `Rgba8888` . `Brga8888`형식은 유니버설 Windows 플랫폼에 대 한 기본값입니다 .이 경우 해당 스크린 샷의 마지막 행에 있는 그라데이션은 첫 번째 행과 동일 합니다. 그러나 이러한 비트맵을 만드는 코드에서 순서를 가정 하기 때문에 가운데 두 행은 올바르지 않습니다 `Rgba8888` .
 
-명시적으로 만들 수는 각 플랫폼에서 픽셀 비트에 액세스 하기 위한 동일한 코드를 사용 하려는 경우는 `SKBitmap` 중 하나를 사용 하는 `Rgba8888` 또는 `Bgra8888` 형식입니다. 캐스팅 하려는 경우 `SKColor` 사용 하는 비트맵 픽셀 값 `Bgra8888`합니다.
+각 플랫폼의 픽셀 비트에 액세스 하는 데 동일한 코드를 사용 하려는 경우 `SKBitmap` 또는 형식을 사용 하 여을 명시적으로 만들 수 있습니다 `Rgba8888` `Bgra8888` . 값을 비트맵 픽셀로 캐스팅 하려면를 `SKColor` 사용 `Bgra8888` 합니다.
 
 ## <a name="random-access-of-pixels"></a>픽셀의 임의 액세스
 
-`FillBitmapBytePtr` 하 고 `FillBitmapUintPtr` 의 메서드는 **그라데이션 비트맵** 페이지에서 활용할 수 있습니다 `for` 루프 맨 아래 행을 왼쪽에서 오른쪽으로 각 행의 맨 위 행에서 비트맵을 순차적으로 충족 하도록 설계 되었습니다. 포인터 증가 하는 동일한 문을 사용 하 여 픽셀을 설정할 수 있습니다.
+`FillBitmapBytePtr` `FillBitmapUintPtr` **그라데이션 비트맵** 페이지의 및 메서드는 `for` 위쪽 행에서 아래쪽 행으로, 각 행에서 왼쪽에서 오른쪽으로 비트맵을 순차적으로 채우도록 디자인 된 루프의 혜택을 활용할 수 있습니다. 픽셀은 포인터를 증가 시키는 동일한 문으로 설정할 수 있습니다.
 
-경우에 따라 순차적으로 대신 임의로 픽셀에 액세스 해야 합니다. 사용 중인 경우는 `GetPixels` 포인터를 행 및 열에 따라 계산 해야 접근 방식입니다. 에 설명 되어이 **레인 보우 사인** 페이지는 rainbow 사인 곡선의 한 주기의 형태로 보여 주는 비트맵을 만듭니다.
+경우에 따라 픽셀에 순차적으로 액세스 해야 하는 경우가 있습니다. 이 방법을 사용 하는 경우 `GetPixels` 행과 열을 기준으로 포인터를 계산 해야 합니다. 이는 사인 곡선의 한 주기 형태로 레인을 표시 하는 비트맵을 만드는 **레인 사인** 페이지에서 보여 줍니다.
 
-무지개 색깔이 HSL (색상, 채도 명도) 색 모델을 사용 하 여 만드는 가장 쉬운 방법은입니다. 합니다 `SKColor.FromHsl` 메서드를 만듭니다는 `SKColor` 범위는 0에서 360 (예:의 각도 원 있지만 빨간색, 녹색 및 파란색 및 빨간색으로), 색상 값을 사용 하 여 값 및 0에서 100 까지의 채도 명도 값입니다. 전설의 무지개 요정을 색에 대 한 최대 100 및 50의 중간점에 명도를 채도 설정 해야 합니다.
+무지개 색은 HSL (색상, 채도, 광도) 색 모델을 사용 하 여 만드는 것이 가장 쉽습니다. `SKColor.FromHsl`이 메서드는 `SKColor` 0 ~ 360 범위의 색조 값 (원의 각도와 같이 빨간색, 녹색, 파랑, 빨강으로 이동)을 사용 하 여 값을 만듭니다 .이 값은 0 ~ 100 범위의 채도 및 광도 값입니다. 무지개 색의 경우 채도는 최대 100로, 명도는 50의 중간점으로 설정 해야 합니다.
 
-**Rainbow 사인** 비트맵의 행을 반복 하 고 다음 360 색상 값을 반복 하 여이 이미지를 만듭니다. 각 색상 값에서 비트맵 열도를의 사인 값에 따라 계산 됩니다.
+**레인 사인** 은 비트맵의 행을 반복 하 고 360 색상 값을 반복 하 여이 이미지를 만듭니다. 각 색상 값에서 다음과 같이 사인 값을 기반으로 하는 비트맵 열도 계산 합니다.
 
 ```csharp
 public class RainbowSinePage : ContentPage
@@ -581,49 +599,49 @@ public class RainbowSinePage : ContentPage
 }
 ```
 
-생성자 기반 비트맵은 만듭니다는 `SKColorType.Bgra8888` 형식:
+생성자는 다음 형식에 따라 비트맵을 만듭니다 `SKColorType.Bgra8888` .
 
 ```csharp
 bitmap = new SKBitmap(360 * 3, 1024, SKColorType.Bgra8888, SKAlphaType.Unpremul);
 ```
 
-이렇게 하면 변환을 사용 하 여 프로그램 `SKColor` 값을 `uint` 걱정 없이 픽셀입니다. 역할 재생 되지 않을 것이 특정 프로그램에 있지만 사용할 때마다 합니다 `SKColor` 도 지정 해야 픽셀을 설정 하는 변환 `SKAlphaType.Unpremul` 때문에 `SKColor` 색 구성 요소를 프리 멀티 플라이 알파 값을 기준으로 하지 않습니다.
+이를 통해 프로그램은 `SKColor` 걱정 없이 값을 픽셀로 변환 하는 데 사용할 수 있습니다 `uint` . 이 특정 프로그램에서 역할을 수행 하지는 않지만, `SKColor` 픽셀을 설정 하기 위해 변환을 사용할 때마다에서 `SKAlphaType.Unpremul` `SKColor` 알파 값으로 색 구성 요소를 미리 곱하여 하지 않기 때문에를 지정 해야 합니다.
 
-생성자를 사용 하 여는 `GetPixels` 비트맵의 첫째 픽셀에 대 한 포인터를 가져오는 방법.
+그런 다음 생성자는 메서드를 사용 하 여 `GetPixels` 비트맵의 첫 번째 픽셀에 대 한 포인터를 가져옵니다.
 
 ```csharp
 uint* basePtr = (uint*)bitmap.GetPixels().ToPointer();
 ```
 
-모든 특정 행과 열에 대 한 오프셋된 값에 추가 해야 `basePtr`합니다. 이 오프셋은 행을 곱한 비트맵 너비와 열:
+특정 행과 열에 대해 오프셋 값을에 추가 해야 합니다 `basePtr` . 이 오프셋은 비트맵 너비의 행 시간과 열을 더한 값입니다.
 
 ```csharp
 uint* ptr = basePtr + bitmap.Width * row + col;
 ```
 
-`SKColor` 값이이 포인터를 사용 하 여 메모리에 저장 됩니다.
+`SKColor`이 값은 다음 포인터를 사용 하 여 메모리에 저장 됩니다.
 
 ```csharp
 *ptr = (uint)SKColor.FromHsl(hue, 100, 50);
 ```
 
-에 `PaintSurface` 처리기는 `SKCanvasView`, 비트맵은 표시 영역을 채우도록 확장:
+`PaintSurface`의 처리기에서 `SKCanvasView` 비트맵은 표시 영역을 채우도록 확장 됩니다.
 
 [![무지개 사인](pixel-bits-images/RainbowSine.png "무지개 사인")](pixel-bits-images/RainbowSine-Large.png#lightbox)
 
-## <a name="from-one-bitmap-to-another"></a>다른 하나의 비트맵에서
+## <a name="from-one-bitmap-to-another"></a>한 비트맵에서 다른 비트맵으로
 
-매우 많은 이미지 처리 작업에서 다른 하나의 비트맵에서 전송 될 때 픽셀을 수정 포함 됩니다. 이 기술은에 설명 되어는 **색 조정** 페이지입니다. 페이지 비트맵 리소스 중 하나를 로드 하 고 다음 세 가지를 사용 하 여 이미지를 수정할 수 있습니다 `Slider` 뷰:
+많은 이미지 처리 작업에는 한 비트맵에서 다른 비트맵으로 전송 되는 픽셀 수정이 포함 됩니다. 이 기법은 **색 조정** 페이지에서 보여 줍니다. 페이지에서 비트맵 리소스 중 하나를 로드 한 다음 세 가지 보기를 사용 하 여 이미지를 수정할 수 있습니다 `Slider` .
 
 [![색 조정](pixel-bits-images/ColorAdjustment.png "색 조정")](pixel-bits-images/ColorAdjustment-Large.png#lightbox)
 
-각 픽셀 색에 대 한 첫 번째 `Slider` 값을 0에서 360의 색을 추가 하지만 사용 하 여를 모듈로 0부터 360 사이 결과 유지 하려면 연산자를 효과적으로 시프트 색 스펙트럼을 따라 (에서처럼 UWP 스크린샷). 두 번째 `Slider` 0.5, 채도 및 세 번째에 적용할 수는 2 사이의 곱하기 요소를 선택할 수 있습니다 `Slider` Android 스크린샷에 표시 된 것과 같이 광도에 대 한 동일한 작업을 수행 합니다.
+각 픽셀 색에 대해 첫 번째는 `Slider` 0에서 360 사이의 값을 색에 추가 하지만, 그 다음에는 모듈로 연산자를 사용 하 여 0과 360 사이의 결과를 유지 합니다 .이 경우 UWP 스크린샷에서 보여 주는 것 처럼 스펙트럼을 따라 색이 효과적으로 이동 합니다. 두 번째 `Slider` 방법을 사용 하면 0.5과 2 사이의 곱하기 요소를 선택 하 여 채도에 적용 하 고, 세 번째는 `Slider` Android 스크린 샷에 표시 된 것 처럼 광도에 대해 동일 하 게 수행 됩니다.
 
-프로그램 유지 라는 원래 소스 비트맵 두 비트맵 `srcBitmap` 라는 조정 된 대상 비트맵 및 `dstBitmap`합니다. 각 시간을 `Slider` 이동 되 면 프로그램의 모든 새 픽셀 계산 `dstBitmap`합니다. 사용자가 이동 하 여 실험은 물론,는 `Slider` 뷰 매우 신속 하 게 있으므로 최상의 성능을 관리할 수 있습니다. 여기에 `GetPixels` 원본 및 대상 비트맵에 대 한 메서드.
+프로그램은 라는 원래 원본 비트맵과 이라는 조정 된 대상 비트맵 이라는 두 개의 비트맵을 유지 관리 합니다 `srcBitmap` `dstBitmap` . `Slider`이 이동 될 때마다 프로그램은에서 새 픽셀을 모두 계산 `dstBitmap` 합니다. 물론 사용자는 보기를 매우 빠르게 이동 하 여 시험해 볼 `Slider` 수 있으므로 최상의 성능을 관리할 수 있습니다. 여기에는 `GetPixels` 원본 및 대상 비트맵 모두에 대 한 메서드가 포함 됩니다.
 
-합니다 **색 조정** 페이지 원본 및 대상 비트맵의 색 형식을 제어 하지 않습니다. 대신 약간 다른 논리를 포함 `SKColorType.Rgba8888` 고 `SKColorType.Bgra8888` 형식입니다. 원본 및 대상에는 서로 다른 형식으로 될 수 있습니다 및 프로그램이 계속 작동 합니다.
+**색 조정** 페이지는 원본 및 대상 비트맵의 색 형식을 제어 하지 않습니다. 대신 및 형식에 대해 약간 다른 논리를 포함 `SKColorType.Rgba8888` `SKColorType.Bgra8888` 합니다. 원본 및 대상의 형식은 서로 다를 수 있으며 프로그램은 계속 작동 합니다.
 
-여기는 것이 중요 제외 하 고 프로그램이 `TransferPixels` 대상에 소스를 형성 하는 픽셀을 전송 하는 메서드. 생성자 `dstBitmap` 같음 `srcBitmap`합니다. 합니다 `PaintSurface` 처리기 표시 `dstBitmap`:
+`TransferPixels`소스를 대상으로 하는 픽셀을 전송 하는 중요 한 메서드를 제외한 프로그램은 다음과 같습니다. 생성자는 `dstBitmap` 와 동일 하 게 설정 `srcBitmap` 됩니다. `PaintSurface`처리기는 다음을 표시 합니다 `dstBitmap` .
 
 ```csharp
 public partial class ColorAdjustmentPage : ContentPage
@@ -668,9 +686,9 @@ public partial class ColorAdjustmentPage : ContentPage
 }
 ```
 
-합니다 `ValueChanged` 에 대 한 처리기는 `Slider` 조정 값과 호출을 계산 하는 뷰 `TransferPixels`합니다.
+`ValueChanged`뷰의 처리기는 `Slider` 조정 값 및 호출을 계산 합니다 `TransferPixels` .
 
-전체 `TransferPixels` 메서드가로 표시 되어 `unsafe`입니다. 두 비트맵의 픽셀 비트에 대 한 바이트 포인터를 가져와서 시작 하 고 모든 행과 열을 반복 합니다. 소스 비트맵에서 메서드는 각 픽셀에 대해 4 바이트를 가져옵니다. 중 하나에 있을 수 있습니다 이러한 합니다 `Rgba8888` 또는 `Bgra8888` 순서입니다. 색 형식에서 허용에 대 한 검사는 `SKColor` 만들 값입니다. HSL 구성 요소는 다음 추출, 조정 및 다시 만드는 데는 `SKColor` 값입니다. 대상 비트맵 인지에 따라 `Rgba8888` 또는 `Bgra8888`, 바이트 대상 bitmp에 저장 됩니다.
+전체 `TransferPixels` 메서드는로 표시 됩니다 `unsafe` . 먼저 두 비트맵의 픽셀 비트에 대 한 바이트 포인터를 가져온 다음 모든 행과 열을 반복 합니다. 소스 비트맵에서 메서드는 각 픽셀에 대해 4 바이트를 가져옵니다. 이러한 경우는 또는 순서 중 하나일 수 있습니다 `Rgba8888` `Bgra8888` . 색 형식을 확인 하면 `SKColor` 값을 만들 수 있습니다. 그런 다음 HSL 구성 요소를 추출 하 고 조정 하 여 값을 다시 만드는 데 사용 `SKColor` 합니다. 대상 비트맵이 또는 인지에 따라 `Rgba8888` 바이트는 `Bgra8888` 대상 bitmp에 저장 됩니다.
 
 ```csharp
 public partial class ColorAdjustmentPage : ContentPage
@@ -741,13 +759,13 @@ public partial class ColorAdjustmentPage : ContentPage
 }
 ```
 
-이 방법의 성능은 다양 한 원본 및 대상 비트맵의 색 형식 조합에 대 한 별도 메서드를 만들어 훨씬 더 향상 될 수 없습니다 하 고 모든 픽셀에 대 한 형식 검사 하지 않고 가능성이 있습니다. 또 다른 옵션은 여러 개의 `for` 에 대 한 루프를 `col` 변수 형식을 기반으로 색입니다.
+원본 및 대상 비트맵의 다양 한 색 형식 조합에 대해 별도의 메서드를 만들고 모든 픽셀에 대 한 형식을 확인 하는 것을 방지 하 여이 메서드의 성능이 훨씬 향상 될 수 있습니다. 또 다른 옵션은 `for` `col` 색 유형을 기반으로 변수에 대 한 여러 루프를 사용 하는 것입니다.
 
-## <a name="posterization"></a>포스터화
+## <a name="posterization"></a>Posterization
 
-픽셀 비트 액세스를 포함 하는 또 다른 일반적인 작업 되 _포스터화_합니다. 비트맵의 픽셀 색 인코딩된 경우 수 결과 유사한 제한 된 색상표를 사용 하 여 손으로 그린 포스터 있도록 줄어듭니다.
+픽셀 비트에 대 한 액세스를 포함 하는 또 다른 일반적인 작업은 _posterization_입니다. 비트맵이 제한 된 색상표를 사용 하 여 손으로 그린 포스터와 비슷한 결과를 얻을 수 있도록 비트맵의 픽셀에서 인코딩된 색이 감소 하는 경우입니다.
 
-합니다 **포스터화** 페이지 monkey 이미지 중 하나에 대해이 프로세스를 수행 합니다.
+**포스터화** 페이지는 원숭이 이미지 중 하나에서이 프로세스를 수행 합니다.
 
 ```csharp
 public class PosterizePage : ContentPage
@@ -787,7 +805,7 @@ public class PosterizePage : ContentPage
 }
 ```
 
-생성자의 코드 0xE0E0E0FF, 값을 사용 하 여 비트 AND 연산을 수행 하며 비트맵에 다시 결과 저장 한 다음 각 픽셀에 액세스 합니다. 0xE0E0E0FF 값 각 색 구성 요소의 상위 3 비트를 유지 하 고 하위 5 비트를 0으로 설정 합니다. 2는 대신<sup>24</sup> 16777216 색 비트맵을 2로 감소 하거나<sup>9</sup> 또는 512 색:
+생성자의 코드는 각 픽셀에 액세스 하 고 0xE0E0E0FF 값을 사용 하 여 비트 AND 연산을 수행한 다음 결과를 다시 비트맵에 저장 합니다. 0xE0E0E0FF 값은 각 색 구성 요소의 상위 3 비트를 유지 하 고 하위 5 비트를 0으로 설정 합니다. 2<sup>24</sup> 또는 16777216 색 대신 비트맵이 2<sup>9</sup> 또는 512 색으로 줄어듭니다.
 
 [![포스터](pixel-bits-images/Posterize.png "포스터")](pixel-bits-images/Posterize-Large.png#lightbox)
 

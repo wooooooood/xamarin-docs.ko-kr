@@ -1,27 +1,30 @@
 ---
-title: Xamarin.ios에서 네이티브 맵 앱을 시작 합니다.
-description: 각 플랫폼의 네이티브 맵 앱은 xamarin.ios 시작 관리자 클래스를 통해 Xamarin.ios 응용 프로그램에서 시작할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/30/2019
-ms.openlocfilehash: 54776d28bb75b152a6402e4d531d1baa4f724cba
-ms.sourcegitcommit: 3ea19e3a51515b30349d03c70a5b3acd7eca7fe7
+title: 에서 네이티브 맵 앱을 시작 합니다.Xamarin.Forms
+description: 각 플랫폼의 네이티브 맵 앱은 Xamarin.Forms 시작 관리자 클래스를 통해 응용 프로그램에서 시작할 수 있습니다 Xamarin.Essentials .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73426326"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129340"
 ---
-# <a name="launch-the-native-map-app-from-xamarinforms"></a>Xamarin.ios에서 네이티브 맵 앱을 시작 합니다.
+# <a name="launch-the-native-map-app-from-xamarinforms"></a>에서 네이티브 맵 앱을 시작 합니다.Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-각 플랫폼의 네이티브 맵 앱은 xamarin.ios `Launcher` 클래스를 통해 Xamarin.ios 응용 프로그램에서 시작할 수 있습니다. 이 클래스를 사용 하면 응용 프로그램에서 사용자 지정 URI 체계를 통해 다른 앱을 열 수 있습니다. `OpenAsync` 메서드를 사용 하 여 시작 관리자 기능을 호출 하 여 열려는 사용자 지정 URL 체계를 나타내는 `string` 또는 `Uri` 인수를 전달할 수 있습니다. Xamarin.ios에 대 한 자세한 내용은 [xamarin.ios](~/essentials/index.md?context=xamarin/xamarin-forms)를 참조 하세요.
+각 플랫폼의 네이티브 맵 앱은 클래스를 통해 응용 프로그램에서 시작할 수 있습니다 Xamarin.Forms Xamarin.Essentials `Launcher` . 이 클래스를 사용 하면 응용 프로그램에서 사용자 지정 URI 체계를 통해 다른 앱을 열 수 있습니다. 시작 관리자 기능은 메서드를 사용 하 여 호출 하 `OpenAsync` 고, `string` `Uri` 열려는 사용자 지정 URL 체계를 나타내는 또는 인수를 전달할 수 있습니다. 에 대 한 자세한 내용은 Xamarin.Essentials 을 참조 하십시오 [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms) .
 
 > [!NOTE]
-> Xamarin.ios `Launcher` 클래스를 사용 하는 대신 `Map` 클래스를 사용 합니다. 자세한 내용은 [xamarin.ios: Map](~/essentials/maps.md?context=xamarin/xamarin-forms)을 참조 하십시오.
+> 클래스를 사용 하는 대신 클래스를 사용 하는 Xamarin.Essentials `Launcher` 것이 좋습니다 `Map` . 자세한 내용은 [ Xamarin.Essentials Map](~/essentials/maps.md?context=xamarin/xamarin-forms)을 참조 하십시오.
 
 각 플랫폼의 maps 앱은 고유한 사용자 지정 URI 체계를 사용 합니다. IOS의 maps URI 체계에 대 한 자세한 내용은 developer.apple.com의 [지도 링크](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html) 를 참조 하세요. Android의 maps URI 체계에 대 한 자세한 내용은 developers.android.com의 Android 용 [Maps 개발자 가이드](https://developer.android.com/guide/components/intents-common.html#Maps) 및 [Google maps 의도](https://developers.google.com/maps/documentation/urls/android-intents) 항목을 참조 하세요. UWP (유니버설 Windows 플랫폼)의 maps URI 체계에 대 한 자세한 내용은 [Windows maps 앱 시작](/windows/uwp/launch-resume/launch-maps-app)을 참조 하세요.
 
@@ -82,4 +85,4 @@ else if (Device.RuntimePlatform == Device.UWP)
 - [맵 링크](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html)
 - [Maps 개발자 가이드](https://developer.android.com/guide/components/intents-common.html#Maps)
 - [Android 용 Google Maps 의도](https://developers.google.com/maps/documentation/)
-- [Windows Maps 앱을 시작 합니다.](/windows/uwp/launch-resume/launch-maps-app)
+- [Windows 지도 앱 실행](/windows/uwp/launch-resume/launch-maps-app)

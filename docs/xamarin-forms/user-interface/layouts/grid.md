@@ -1,24 +1,27 @@
 ---
-title: Xamarin.ios 표
-description: Xamarin.ios 표는 자식을 셀의 행과 열로 구성 하는 레이아웃입니다.
-ms.prod: xamarin
-ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4f1d9d0f2d597018b9832d918bbec3f0b2594773
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.Forms그리드에
+description: Xamarin.Forms표는 자식 항목을 셀의 행과 열로 구성 하는 레이아웃입니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425865"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138075"
 ---
-# <a name="xamarinforms-grid"></a>Xamarin.ios 표
+# <a name="xamarinforms-grid"></a>Xamarin.Forms그리드에
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Xamarin.ios 표](grid-images/layouts.png "Xamarin.ios 표")](grid-images/layouts-large.png#lightbox "Xamarin.ios 표")
+[![Xamarin.Forms그리드에](grid-images/layouts.png "[! OP. 비 LOC (Xamarin.ios)] 그리드")](grid-images/layouts-large.png#lightbox "[! OP. 비 LOC (Xamarin.ios)] 그리드")
 
 는 [`Grid`](xref:Xamarin.Forms.Grid) 하위 항목을 행과 열로 구성 하는 레이아웃으로, 비례 또는 절대 크기를 가질 수 있습니다. 기본적으로에는 `Grid` 하나의 행과 하나의 열이 포함 됩니다. 또한 `Grid` 다른 자식 레이아웃을 포함 하는 부모 레이아웃으로를 사용할 수 있습니다.
 
@@ -735,6 +738,6 @@ public class ColorSlidersGridPageCS : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [그리드 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [Xamarin.ios의 레이아웃 옵션](layout-options.md)
-- [Xamarin 양식 레이아웃 선택](choose-layout.md)
-- [Xamarin.Forms 앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)
+- [의 레이아웃 옵션Xamarin.Forms](layout-options.md)
+- [레이아웃 선택 Xamarin.Forms](choose-layout.md)
+- [Xamarin.Forms앱 성능 향상](~/xamarin-forms/deploy-test/performance.md)

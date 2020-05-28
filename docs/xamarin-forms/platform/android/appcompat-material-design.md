@@ -1,33 +1,37 @@
 ---
-title: AppCompat 및 재질 디자인 추가
-description: 이 문서에서는 AppCompat 및 재질 디자인을 사용 하도록 기존 Xamarin. Forms Android 앱을 변환 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/27/2017
-ms.openlocfilehash: 36c5733c347e3493b5ed423c52766c7e33fbdb3d
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+title: ''
+description: 이 문서에서는 Xamarin.Forms AppCompat 및 재질 디자인을 사용 하도록 기존 Android 앱을 변환 하는 방법을 설명 합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728332"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135709"
 ---
 # <a name="adding-appcompat-and-material-design"></a>AppCompat 및 재질 디자인 추가
 
-_이러한 단계를 수행 하 여 기존 Xamarin.ios Android 앱에서 AppCompat 및 재질 디자인을 사용 하도록 변환 합니다._
+_이러한 단계에 따라 기존 Xamarin.Forms Android 앱에서 AppCompat 및 재질 디자인을 사용 하도록 변환 합니다._
 
 <!-- source https://gist.github.com/jassmith/a3b2a543f99126782936
 https://blog.xamarin.com/material-design-for-your-xamarin-forms-android-apps/ -->
 
 ## <a name="overview"></a>개요
 
-이 지침에서는 AppCompat 라이브러리를 사용 하도록 기존 Xamarin.ios Android 응용 프로그램을 업데이트 하 고 Xamarin.ios 앱의 Android 버전에서 재질 디자인을 사용 하도록 설정 하는 방법을 설명 합니다.
+이 지침에서는 Xamarin.Forms AppCompat 라이브러리를 사용 하도록 기존 android 응용 프로그램을 업데이트 하 고 android 버전의 앱에서 재질 디자인을 사용 하는 방법을 설명 Xamarin.Forms 합니다.
 
-### <a name="1-update-xamarinforms"></a>1. Xamarin 양식을 업데이트 합니다.
+### <a name="1-update-xamarinforms"></a>1. 업데이트Xamarin.Forms
 
-솔루션이 Xamarin.ios 2.0 이상 버전을 사용 하 고 있는지 확인 합니다. 필요한 경우 Xamarin.ios NuGet 패키지를 2.0으로 업데이트 합니다.
+솔루션이 2.0 이상 버전을 사용 하 고 있는지 확인 Xamarin.Forms 합니다. 업데이트Xamarin.Forms
+  필요한 경우 NuGet 패키지를 2.0로
 
 ### <a name="2-check-android-version"></a>2. Android 버전 확인
 
@@ -39,7 +43,7 @@ Android 프로젝트의 대상 프레임 워크가 Android 6.0 (Marshmallow) 인
 
 Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용을 붙여넣습니다. Google은 지정 된에 대 한 대체 색 구성표를 선택 하는 데 도움이 되는 [스타일 안내선](https://www.google.com/design/spec/style/color.html#color-color-palette) 및 [색상표 생성기](https://www.materialpalette.com/) 를 제공 합니다.
 
-**Resources/values/colors.xml**
+**리소스/값/색 .xml**
 
 ```xml
 <resources>
@@ -50,7 +54,7 @@ Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용�
 </resources>
 ```
 
-**Resources/values/style.xml**
+**리소스/값/스타일 .xml**
 
 ```xml
 <resources>
@@ -68,7 +72,7 @@ Android 프로젝트에서 다음 세 개의 파일을 만들고 아래 내용�
 
 Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 **v21** 폴더에 추가 스타일을 포함 해야 합니다.
 
-**Resources/values-v21/style.xml**
+**Resources/values-v21/style .xml**
 
 ```xml
 <resources>
@@ -82,9 +86,9 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 
 ### <a name="4-update-androidmanifestxml"></a>4. 업데이트 AndroidManifest .xml
 
-이 새 테마 정보를 사용 하려면 `android:theme="@style/MyTheme"`을 추가 하 여 **Androidmanifest** 파일에 테마를 설정 합니다 (나머지 XML은 그대로 유지).
+이 새 테마 정보를 사용 하려면를 추가 하 여 **Androidmanifest** 파일에 테마를 설정 `android:theme="@style/MyTheme"` 합니다 (나머지 XML은 그대로 유지).
 
-**Properties/AndroidManifest.xml**
+**Properties/AndroidManifest .xml**
 
 ```xml
 ...
@@ -97,7 +101,7 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 
 [ **리소스/레이아웃** ] 디렉터리에 있는 **tabbar. Axml** 및 **Toolbar xml** 파일을 만들고 아래 내용을 붙여넣습니다.
 
-**Resources/layout/Tabbar.axml**
+**리소스/레이아웃/Tabbar. axml**
 
 ```xml
 <android.support.design.widget.TabLayout
@@ -113,10 +117,10 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
     app:tabMode="fixed" />
 ```
 
-탭의 몇 가지 속성은 탭의 무게를 포함 하 여 `fill` 하 고 `fixed`모드로 설정 되었습니다.
+탭에 대 한 몇 가지 속성은에 대 한 탭의 무게와 모드를 포함 하 여 설정 되었습니다 `fill` `fixed` .
 탭이 많은 경우이를 보다 자세히 알아보려면 Android [TabLayout 설명서](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) 를 통해 스크롤할 수 있도록 전환 하는 것이 좋습니다.
 
-**Resources/layout/Toolbar.axml**
+**리소스/레이아웃/도구 모음. axml**
 
 ```xml
 <android.support.v7.widget.Toolbar
@@ -135,9 +139,9 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 이러한 파일에서는 응용 프로그램에 따라 달라질 수 있는 도구 모음에 대 한 특정 테마를 만듭니다.
 자세한 내용은 [Hello 도구 모음](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/) 블로그 게시물을 참조 하세요.
 
-### <a name="6-update-the-mainactivity"></a>6. `MainActivity` 업데이트
+### <a name="6-update-the-mainactivity"></a>6. 다음을 업데이트 합니다.`MainActivity`
 
-기존 Xamarin.ios 앱에서 **MainActivity.cs** 클래스는 `FormsApplicationActivity`에서 상속 됩니다. 새 기능을 사용 하려면 `FormsAppCompatActivity`으로 바꾸어야 합니다.
+기존 Xamarin.Forms 앱에서 **MainActivity.cs** 클래스는에서 상속 됩니다 `FormsApplicationActivity` . `FormsAppCompatActivity`새 기능을 사용 하려면로 바꾸어야 합니다.
 
 **MainActivity.cs**
 
@@ -145,7 +149,7 @@ Android 롤리팝 이상에서 실행 될 때 특정 속성을 적용 하려면 
 public class MainActivity : FormsAppCompatActivity  // was FormsApplicationActivity
 ```
 
-마지막으로, 다음과 같이 `OnCreate` 메서드의 5 단계에서 새 레이아웃을 "연결" 합니다.
+마지막으로, 다음과 같이 메서드의 5 단계에서 새 레이아웃을 "연결" 합니다 `OnCreate` .
 
 ```csharp
 protected override void OnCreate(Bundle bundle)

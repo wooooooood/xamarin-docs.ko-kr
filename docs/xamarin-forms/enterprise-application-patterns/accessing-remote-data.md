@@ -1,22 +1,25 @@
 ---
-title: 원격 데이터에 액세스
-description: 이 장에서는 eShopOnContainers mobile app이 컨테이너 화 된 마이크로 서비스에서 데이터에 액세스 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 42eba6f5-9784-4e1a-9943-5c1fbeea7452
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2017
-ms.openlocfilehash: 9c793f4d5f0cda5bff2dedef5e4e5e5bdfca69e5
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7a7482754653e2aecb069afa215b68306ade8a99
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "70770810"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129582"
 ---
 # <a name="accessing-remote-data"></a>원격 데이터에 액세스
 
-많은 최신 웹 기반 솔루션은 웹 서버에서 호스트 되는 웹 서비스를 사용 하 여 원격 클라이언트 응용 프로그램에 대 한 기능을 제공 합니다. 웹 서비스에서 노출 하는 작업은 web API를 구성 합니다.
+많은 최신 웹 기반 솔루션은 웹 서버에서 호스트 되는 웹 서비스를 사용 하 여 원격 클라이언트 응용 프로그램에 대 한 기능을 제공 합니다. 웹 API는 웹 서비스에 표시되는 작업으로 구성됩니다.
 
 클라이언트 앱은 API에서 노출 하는 데이터 또는 작업이 어떻게 구현 되는지 몰라도 웹 API를 활용할 수 있어야 합니다. 이렇게 하려면 API가 클라이언트 앱 및 웹 서비스에서 사용할 데이터 형식 및 클라이언트 앱과 웹 서비스 간에 교환 되는 데이터의 구조에 동의할 수 있도록 하는 일반적인 표준에 따라 유럽 연합 합니다.
 
@@ -29,11 +32,11 @@ REST 모델은 탐색 체계를 사용 하 여 네트워크를 통해 개체 및
 > [!NOTE]
 > REST는 상태 비저장 요청 모델을 정의 합니다. 따라서 HTTP 요청은 독립적 이어야 하 고 순서에 관계 없이 발생할 수 있습니다.
 
-REST 요청의 응답은 표준 HTTP 상태 코드를 사용 합니다. 예를 들어 유효한 데이터를 반환 하는 요청은 HTTP 응답 코드 200 (OK)를 포함 해야 하는 반면, 지정 된 리소스를 찾거나 삭제 하지 못한 요청은 HTTP 상태 코드 404 (찾을 수 없음)을 포함 하는 응답을 반환 해야 합니다.
+REST 요청의 응답은 표준 HTTP 상태 코드를 사용 합니다. 예를 들어 유효한 데이터를 반환하는 요청은 HTTP 응답 코드 200(정상)을 포함해야 하는 반면, 지정된 리소스를 찾거나 삭제하는 데 실패한 요청은 HTTP 상태 코드 404(찾을 수 없음)가 포함된 응답을 반환해야 합니다.
 
 RESTful web API는 연결 된 리소스 집합을 노출 하 고, 앱이 해당 리소스를 조작 하 고 이러한 리소스를 쉽게 탐색할 수 있도록 하는 핵심 작업을 제공 합니다. 이러한 이유로 일반적인 RESTful web API를 구성 하는 Uri는 노출 되는 데이터를 기반으로 하며 HTTP에서 제공 하는 기능을 사용 하 여이 데이터에 대해 작동 합니다.
 
-HTTP 요청에 클라이언트 앱에 포함 된 데이터와 웹 서버의 해당 응답 메시지는 미디어 유형 이라고 하는 다양 한 형식으로 표시 될 수 있습니다. 클라이언트 앱은 메시지 본문에 데이터를 반환 하는 요청을 보낼 때 요청의 `Accept` 헤더에서 처리할 수 있는 미디어 형식을 지정할 수 있습니다. 웹 서버에서이 미디어 유형을 지 원하는 경우 메시지 본문에 있는 데이터의 형식을 지정 하는 `Content-Type` 헤더를 포함 하는 응답으로 회신할 수 있습니다. 클라이언트 앱이 응답 메시지를 구문 분석 하 고 결과를 적절 하 게 해석 해야 합니다.
+HTTP 요청에 클라이언트 앱에 포함 된 데이터와 웹 서버의 해당 응답 메시지는 미디어 유형 이라고 하는 다양 한 형식으로 표시 될 수 있습니다. 클라이언트 앱이 메시지 본문에 데이터를 반환 하는 요청을 보내면 요청 헤더에서 처리할 수 있는 미디어 형식을 지정할 수 있습니다 `Accept` . 웹 서버에서이 미디어 유형을 지 원하는 경우 `Content-Type` 메시지 본문에 있는 데이터의 형식을 지정 하는 헤더를 포함 하는 응답으로 회신할 수 있습니다. 클라이언트 앱이 응답 메시지를 구문 분석 하 고 결과를 적절 하 게 해석 해야 합니다.
 
 REST에 대 한 자세한 내용은 [api 디자인](/azure/architecture/best-practices/api-design/) 및 [api 구현](/azure/architecture/best-practices/api-implementation/)을 참조 하세요.
 
@@ -43,21 +46,21 @@ EShopOnContainers 모바일 앱은 MVVM (모델-뷰-ViewModel) 패턴을 사용 
 
 ### <a name="making-web-requests"></a>웹 요청 수행
 
-EShopOnContainers 모바일 앱은 `HttpClient` 클래스를 사용 하 여 HTTP를 통해 요청을 수행 하며, JSON은 미디어 유형으로 사용 됩니다. 이 클래스는 URI로 식별 된 리소스에서 HTTP 요청을 비동기적으로 보내고 HTTP 응답을 받기 위한 기능을 제공 합니다. @No__t_0 클래스는 HTTP 요청이 수행 된 후 REST API에서 받은 HTTP 응답 메시지를 나타냅니다. 상태 코드, 헤더 및 모든 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. 데이터의 형식에 따라 `ReadAsStringAsync` 및 `ReadAsByteArrayAsync`와 같은 `ReadAs` 방법 중 하나를 사용 하 여 콘텐츠를 읽을 수 있습니다.
+EShopOnContainers 모바일 앱은 클래스를 사용 하 여 `HttpClient` HTTP를 통해 요청을 수행 하며, JSON은 미디어 유형으로 사용 됩니다. 이 클래스는 URI로 식별 된 리소스에서 HTTP 요청을 비동기적으로 보내고 HTTP 응답을 받기 위한 기능을 제공 합니다. `HttpResponseMessage`클래스는 http 요청이 수행 된 후 REST API에서 받은 http 응답 메시지를 나타냅니다. 상태 코드, 헤더 및 모든 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. `ReadAs` `ReadAsStringAsync` `ReadAsByteArrayAsync` 데이터의 형식에 따라 및와 같은 메서드를 사용 하 여 콘텐츠를 읽을 수 있습니다.
 
 <a name="making_a_get_request" />
 
 #### <a name="making-a-get-request"></a>GET 요청 만들기
 
-@No__t_0 클래스는 카탈로그 마이크로 서비스에서 데이터 검색 프로세스를 관리 하는 데 사용 됩니다. @No__t_1 클래스의 `RegisterDependencies` 메서드에서 `CatalogService` 클래스는 Autofac 종속성 주입 컨테이너를 사용 하 여 `ICatalogService` 형식에 대 한 형식 매핑으로 등록 됩니다. 그런 다음 `CatalogViewModel` 클래스의 인스턴스를 만들 때 해당 생성자는 Autofac가 확인 하 고 `CatalogService` 클래스의 인스턴스를 반환 하는 `ICatalogService` 형식을 받아들입니다. 종속성 주입에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
+`CatalogService`클래스는 카탈로그 마이크로 서비스에서 데이터 검색 프로세스를 관리 하는 데 사용 됩니다. `RegisterDependencies`클래스의 메서드에서 `ViewModelLocator` `CatalogService` 클래스는 `ICatalogService` autofac 종속성 주입 컨테이너를 사용 하 여 형식에 대 한 형식 매핑으로 등록 됩니다. 그런 다음 클래스의 인스턴스를 `CatalogViewModel` 만들 때 해당 생성자는 `ICatalogService` Autofac가 확인 하 고 클래스의 인스턴스를 반환 하는 형식을 허용 `CatalogService` 합니다. 종속성 주입에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
 
-그림 10-1에서는 `CatalogView` 표시 하기 위해 카탈로그 마이크로 서비스에서 카탈로그 데이터를 읽는 클래스의 상호 작용을 보여 줍니다.
+그림 10-1에서는에서 표시 하기 위해 카탈로그 마이크로 서비스에서 카탈로그 데이터를 읽는 클래스의 상호 작용을 보여 줍니다 `CatalogView` .
 
 [![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
 
 **그림 10-1**: 카탈로그 마이크로 서비스에서 데이터 검색
 
-@No__t_0 탐색 될 때 `CatalogViewModel` 클래스의 `OnInitialize` 메서드가 호출 됩니다. 이 메서드는 다음 코드 예제에서 보여 주는 것 처럼 카탈로그 마이크로 서비스에서 카탈로그 데이터를 검색 합니다.
+`CatalogView`을 탐색 하면 `OnInitialize` 클래스의 메서드가 `CatalogViewModel` 호출 됩니다. 이 메서드는 다음 코드 예제에서 보여 주는 것 처럼 카탈로그 마이크로 서비스에서 카탈로그 데이터를 검색 합니다.
 
 ```csharp
 public override async Task InitializeAsync(object navigationData)  
@@ -68,7 +71,7 @@ public override async Task InitializeAsync(object navigationData)
 }
 ```
 
-이 메서드는 Autofac에서 `CatalogViewModel`에 삽입 된 `CatalogService` 인스턴스의 `GetCatalogAsync` 메서드를 호출 합니다. 다음 코드 예제는 `GetCatalogAsync` 메서드를 보여줍니다.
+이 메서드는 `GetCatalogAsync` `CatalogService` Autofac에 의해에 삽입 된 인스턴스의 메서드를 호출 `CatalogViewModel` 합니다. 다음 코드 예제는 `GetCatalogAsync` 메서드를 보여줍니다.
 
 ```csharp
 public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
@@ -83,9 +86,9 @@ public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()
 }
 ```
 
-이 메서드는 요청을 보낼 리소스를 식별 하는 URI를 작성 하 고, `RequestProvider` 클래스를 사용 하 여 리소스에서 GET HTTP 메서드를 호출한 후 `CatalogViewModel`에 결과를 반환 합니다. @No__t_0 클래스에는 리소스를 식별 하는 URI 형식, 해당 리소스에 대해 수행할 작업을 나타내는 HTTP 메서드, 작업을 수행 하는 데 필요한 데이터를 포함 하는 본문으로 요청을 전송 하는 기능이 포함 되어 있습니다. @No__t_0 클래스가 `CatalogService class`에 삽입 되는 방법에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
+이 메서드는 요청을 보낼 리소스를 식별 하는 URI를 빌드하고, 클래스를 사용 하 여 `RequestProvider` 리소스에서 GET HTTP 메서드를 호출한 다음 결과를로 반환 합니다 `CatalogViewModel` . 클래스에는 `RequestProvider` 리소스를 식별 하는 URI 형식, 해당 리소스에 대해 수행할 작업을 나타내는 HTTP 메서드 및 작업을 수행 하는 데 필요한 데이터를 포함 하는 본문으로 요청을 전송 하는 기능이 포함 되어 있습니다. 클래스를에 삽입 하는 방법에 대 한 자세한 내용은 `RequestProvider` `CatalogService class` [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
 
-다음 코드 예제에서는 `RequestProvider` 클래스의 `GetAsync` 메서드를 보여 줍니다.
+다음 코드 예제에서는 `GetAsync` 클래스의 메서드를 보여 줍니다 `RequestProvider` .
 
 ```csharp
 public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
@@ -103,9 +106,9 @@ public async Task<TResult> GetAsync<TResult>(string uri, string token = 
 }
 ```
 
-이 메서드는 `CreateHttpClient` 메서드를 호출 합니다 .이 메서드는 적절 한 헤더 집합을 사용 하 여 `HttpClient` 클래스의 인스턴스를 반환 합니다. 그런 다음 응답을 `HttpResponseMessage` 인스턴스에 저장 하 여 URI로 식별 되는 리소스에 비동기 GET 요청을 제출 합니다. 그런 다음 응답에 성공 HTTP 상태 코드가 포함 되지 않은 경우 예외를 throw 하는 `HandleResponse` 메서드가 호출 됩니다. 그런 다음 응답을 문자열로 읽어 JSON에서 `CatalogRoot` 개체로 변환 하 고 `CatalogService`에 반환 합니다.
+이 메서드는 `CreateHttpClient` `HttpClient` 적절 한 헤더 집합을 사용 하 여 클래스의 인스턴스를 반환 하는 메서드를 호출 합니다. 그런 다음 URI로 식별 되는 리소스에 비동기 GET 요청을 전송 하 고 응답을 인스턴스에 저장 합니다 `HttpResponseMessage` . `HandleResponse`그런 다음 응답이 성공 HTTP 상태 코드를 포함 하지 않는 경우 예외를 throw 하는 메서드를 호출 합니다. 그런 다음 응답을 문자열로 읽어 JSON에서 개체로 변환 하 `CatalogRoot` 고로 반환 합니다 `CatalogService` .
 
-@No__t_0 메서드는 다음 코드 예제에 나와 있습니다.
+`CreateHttpClient`메서드는 다음 코드 예제에서 표시 됩니다.
 
 ```csharp
 private HttpClient CreateHttpClient(string token = "")  
@@ -123,9 +126,9 @@ private HttpClient CreateHttpClient(string token = "")
 }
 ```
 
-이 메서드는 `HttpClient` 클래스의 새 인스턴스를 만들고 `HttpClient` 인스턴스에서 수행 하는 모든 요청에 대 한 `Accept` 헤더를 `application/json`로 설정 합니다 .이 헤더는 JSON을 사용 하 여 응답의 콘텐츠를 포맷할 것으로 예상 함을 나타냅니다. 그런 다음 `CreateHttpClient` 메서드에 대 한 인수로 전달 된 액세스 토큰은 `HttpClient` 인스턴스에서 만든 요청의 `Authorization` 헤더에 추가 되 고 문자열 `Bearer` 접두사가 추가 됩니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization)를 참조 하세요.
+이 메서드는 클래스의 새 인스턴스를 만들고 `HttpClient` `Accept` 인스턴스에서 만든 요청의 헤더를로 설정 합니다 `HttpClient` .이 `application/json` 경우 JSON을 사용 하 여 응답의 콘텐츠 형식을 지정 해야 함을 나타냅니다. 그런 다음 액세스 토큰이 메서드에 인수로 전달 된 경우 `CreateHttpClient` `Authorization` 인스턴스에 의해 생성 된 모든 요청의 헤더에 추가 되 고 문자열을 접두사로 추가 합니다 `HttpClient` `Bearer` . 권한 부여에 대 한 자세한 내용은 [권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization)를 참조 하세요.
 
-@No__t_1 클래스의 `GetAsync` 메서드가 `HttpClient.GetAsync`를 호출 하는 경우 다음 코드 예제와 같이 Catalog 프로젝트의 `CatalogController` 클래스에서 `Items` 메서드가 호출 됩니다.
+`GetAsync`클래스의 메서드가 `RequestProvider` 를 호출 하면 `HttpClient.GetAsync` `Items` `CatalogController` 다음 코드 예제에 표시 된 대로 Catalog. API 프로젝트의 클래스에 있는 메서드가 호출 됩니다.
 
 ```csharp
 [HttpGet]  
@@ -150,19 +153,19 @@ public async Task<IActionResult> Items(
 }
 ```
 
-이 메서드는 EntityFramework를 사용 하 여 SQL 데이터베이스에서 카탈로그 데이터를 검색 하 고, 성공 HTTP 상태 코드를 포함 하는 응답 메시지로 반환 하 고, JSON 형식의 `CatalogItem` 인스턴스 컬렉션을 반환 합니다.
+이 메서드는 EntityFramework를 사용 하 여 SQL 데이터베이스에서 카탈로그 데이터를 검색 하 고, 성공 HTTP 상태 코드 및 JSON 형식 인스턴스의 컬렉션을 포함 하는 응답 메시지로 반환 합니다 `CatalogItem` .
 
 #### <a name="making-a-post-request"></a>POST 요청 만들기
 
-@No__t_0 클래스는 바구니 마이크로 서비스를 사용 하 여 데이터 검색 및 업데이트 프로세스를 관리 하는 데 사용 됩니다. @No__t_1 클래스의 `RegisterDependencies` 메서드에서 `BasketService` 클래스는 Autofac 종속성 주입 컨테이너를 사용 하 여 `IBasketService` 형식에 대 한 형식 매핑으로 등록 됩니다. 그런 다음 `BasketViewModel` 클래스의 인스턴스를 만들 때 해당 생성자는 Autofac가 확인 하 고 `BasketService` 클래스의 인스턴스를 반환 하는 `IBasketService` 형식을 받아들입니다. 종속성 주입에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
+클래스는 바구니 마이크로 서비스를 사용 하 여 `BasketService` 데이터 검색 및 업데이트 프로세스를 관리 하는 데 사용 됩니다. `RegisterDependencies`클래스의 메서드에서 `ViewModelLocator` `BasketService` 클래스는 `IBasketService` autofac 종속성 주입 컨테이너를 사용 하 여 형식에 대 한 형식 매핑으로 등록 됩니다. 그런 다음 클래스의 인스턴스를 `BasketViewModel` 만들 때 해당 생성자는 `IBasketService` Autofac가 확인 하 고 클래스의 인스턴스를 반환 하는 형식을 허용 `BasketService` 합니다. 종속성 주입에 대 한 자세한 내용은 [종속성 주입 소개](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection)를 참조 하세요.
 
-그림 10-2은 `BasketView`에서 표시 하는 바구니 데이터를 바구니 마이크로 서비스 전송 하는 클래스의 상호 작용을 보여 줍니다.
+그림 10-2에서는 바구니 마이크로 서비스에 게 표시 되는 바구니 데이터를 보내는 클래스의 상호 작용을 보여 줍니다 `BasketView` .
 
 [![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
 
 **그림 10-2**: 바구니에 데이터 보내기 마이크로 서비스
 
-바구니에 항목을 추가 하면 `BasketViewModel` 클래스의 `ReCalculateTotalAsync` 메서드가 호출 됩니다. 이 메서드는 바구니에 있는 항목의 total 값을 업데이트 하 고 다음 코드 예제와 같이 바구니 데이터를 바구니 마이크로 서비스 보냅니다.
+바구니에 항목이 추가 되 면 `ReCalculateTotalAsync` 클래스의 메서드가 `BasketViewModel` 호출 됩니다. 이 메서드는 바구니에 있는 항목의 total 값을 업데이트 하 고 다음 코드 예제와 같이 바구니 데이터를 바구니 마이크로 서비스 보냅니다.
 
 ```csharp
 private async Task ReCalculateTotalAsync()  
@@ -176,7 +179,7 @@ private async Task ReCalculateTotalAsync()
 }
 ```
 
-이 메서드는 Autofac에서 `BasketViewModel`에 삽입 된 `BasketService` 인스턴스의 `UpdateBasketAsync` 메서드를 호출 합니다. 다음 메서드는 `UpdateBasketAsync` 메서드를 보여 줍니다.
+이 메서드는 `UpdateBasketAsync` `BasketService` Autofac에 의해에 삽입 된 인스턴스의 메서드를 호출 `BasketViewModel` 합니다. 다음 메서드는 메서드를 보여 줍니다 `UpdateBasketAsync` .
 
 ```csharp
 public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
@@ -188,9 +191,9 @@ public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerB
 }
 ```
 
-이 메서드는 요청을 보낼 리소스를 식별 하는 URI를 작성 하 고, `RequestProvider` 클래스를 사용 하 여 리소스에서 POST HTTP 메서드를 호출한 후 `BasketViewModel`에 결과를 반환 합니다. 인증 프로세스 중에 IdentityServer에서 얻은 액세스 토큰은 바구니 마이크로 서비스 요청에 권한을 부여 하는 데 필요 합니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization)를 참조 하세요.
+이 메서드는 요청을 보낼 리소스를 식별 하는 URI를 빌드하고, 클래스를 사용 하 여 `RequestProvider` 리소스에서 POST HTTP 메서드를 호출한 다음 결과를로 반환 합니다 `BasketViewModel` . 인증 프로세스 중에 IdentityServer에서 얻은 액세스 토큰은 바구니 마이크로 서비스 요청에 권한을 부여 하는 데 필요 합니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization)를 참조 하세요.
 
-다음 코드 예제에서는 `RequestProvider` 클래스의 `PostAsync` 메서드 중 하나를 보여 줍니다.
+다음 코드 예제에서는 클래스의 메서드 중 하나를 보여 줍니다 `PostAsync` `RequestProvider` .
 
 ```csharp
 public async Task<TResult> PostAsync<TResult>(  
@@ -212,9 +215,9 @@ public async Task<TResult> PostAsync<TResult>(
 }
 ```
 
-이 메서드는 `CreateHttpClient` 메서드를 호출 합니다 .이 메서드는 적절 한 헤더 집합을 사용 하 여 `HttpClient` 클래스의 인스턴스를 반환 합니다. 그런 다음 URI에 의해 식별 되는 리소스에 비동기 POST 요청을 전송 하 고, serialize 된 바구니 데이터를 JSON 형식으로 보내고, 응답을 `HttpResponseMessage` 인스턴스에 저장 합니다. 그런 다음 응답에 성공 HTTP 상태 코드가 포함 되지 않은 경우 예외를 throw 하는 `HandleResponse` 메서드가 호출 됩니다. 그런 다음 응답을 문자열로 읽어 JSON에서 `CustomerBasket` 개체로 변환 하 고 `BasketService`에 반환 합니다. @No__t_0 메서드에 대 한 자세한 내용은 [GET 요청 만들기](#making_a_get_request)를 참조 하세요.
+이 메서드는 `CreateHttpClient` `HttpClient` 적절 한 헤더 집합을 사용 하 여 클래스의 인스턴스를 반환 하는 메서드를 호출 합니다. 그런 다음 URI에 의해 식별 되는 리소스에 비동기 POST 요청을 전송 하 고, serialize 된 바구니 데이터를 JSON 형식으로 보내고, 응답을 인스턴스에 저장 합니다 `HttpResponseMessage` . `HandleResponse`그런 다음 응답이 성공 HTTP 상태 코드를 포함 하지 않는 경우 예외를 throw 하는 메서드를 호출 합니다. 그런 다음 응답을 문자열로 읽어 JSON에서 개체로 변환 하 `CustomerBasket` 고로 반환 합니다 `BasketService` . 메서드에 대 한 자세한 내용은 `CreateHttpClient` [GET 요청 만들기](#making_a_get_request)를 참조 하세요.
 
-@No__t_1 클래스의 `PostAsync` 메서드가 `HttpClient.PostAsync`를 호출 하는 경우, 다음 코드 예제에 표시 된 것과 같은 `BasketController` 클래스의 `Post` 메서드입니다. API 프로젝트를 호출 합니다.
+`PostAsync`클래스의 메서드가 `RequestProvider` 를 호출 하는 경우, `HttpClient.PostAsync` `Post` `BasketController` 다음 코드 예제와 같이 바구니 프로젝트의 클래스에서 메서드가 호출 됩니다.
 
 ```csharp
 [HttpPost]  
@@ -225,17 +228,17 @@ public async Task<IActionResult> Post([FromBody]CustomerBasket value)
 }
 ```
 
-이 메서드는 `RedisBasketRepository` 클래스의 인스턴스를 사용 하 여 장바구니 데이터를 Redis cache에 보관 하 고, 성공 HTTP 상태 코드 및 JSON 형식의 `CustomerBasket` 인스턴스를 포함 하는 응답 메시지로 반환 합니다.
+이 메서드는 클래스의 인스턴스를 사용 하 여 `RedisBasketRepository` 바구니 데이터를 Redis cache에 보관 하 고, 성공 HTTP 상태 코드 및 JSON 형식의 인스턴스가 포함 된 응답 메시지로 반환 합니다 `CustomerBasket` .
 
 #### <a name="making-a-delete-request"></a>삭제 요청 만들기
 
-그림 10-3에서는 바구니 마이크로 서비스 바구니 데이터 `CheckoutView`를 삭제 하는 클래스의 상호 작용을 보여 줍니다.
+그림 10-3에서는 바구니 마이크로 서비스 바구니 데이터를 삭제 하는 클래스의 상호 작용을 보여 줍니다 `CheckoutView` .
 
 ![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
 
 **그림 10-3**: 바구니 마이크로 서비스에서 데이터 삭제
 
-체크 아웃 프로세스를 호출 하면 `CheckoutViewModel` 클래스의 `CheckoutAsync` 메서드가 호출 됩니다. 이 메서드는 다음 코드 예제에서 보여 주는 것 처럼 장바구니를 지우기 전에 새 주문을 만듭니다.
+체크 아웃 프로세스를 호출 하는 경우 `CheckoutAsync` 클래스의 메서드가 `CheckoutViewModel` 호출 됩니다. 이 메서드는 다음 코드 예제에서 보여 주는 것 처럼 장바구니를 지우기 전에 새 주문을 만듭니다.
 
 ```csharp
 private async Task CheckoutAsync()  
@@ -246,7 +249,7 @@ private async Task CheckoutAsync()
 }
 ```
 
-이 메서드는 Autofac에서 `CheckoutViewModel`에 삽입 된 `BasketService` 인스턴스의 `ClearBasketAsync` 메서드를 호출 합니다. 다음 메서드는 `ClearBasketAsync` 메서드를 보여 줍니다.
+이 메서드는 `ClearBasketAsync` `BasketService` Autofac에 의해에 삽입 된 인스턴스의 메서드를 호출 `CheckoutViewModel` 합니다. 다음 메서드는 메서드를 보여 줍니다 `ClearBasketAsync` .
 
 ```csharp
 public async Task ClearBasketAsync(string guidUser, string token)  
@@ -258,9 +261,9 @@ public async Task ClearBasketAsync(string guidUser, string token)
 }
 ```
 
-이 메서드는 요청을 보낼 리소스를 식별 하는 URI를 빌드하고 `RequestProvider` 클래스를 사용 하 여 리소스에 대 한 DELETE HTTP 메서드를 호출 합니다. 인증 프로세스 중에 IdentityServer에서 얻은 액세스 토큰은 바구니 마이크로 서비스 요청에 권한을 부여 하는 데 필요 합니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization)를 참조 하세요.
+이 메서드는 요청을 보낼 리소스를 식별 하는 URI를 빌드하고 클래스를 사용 하 여 `RequestProvider` 리소스에 대 한 DELETE HTTP 메서드를 호출 합니다. 인증 프로세스 중에 IdentityServer에서 얻은 액세스 토큰은 바구니 마이크로 서비스 요청에 권한을 부여 하는 데 필요 합니다. 권한 부여에 대 한 자세한 내용은 [권한 부여](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md#authorization)를 참조 하세요.
 
-다음 코드 예제에서는 `RequestProvider` 클래스의 `DeleteAsync` 메서드를 보여 줍니다.
+다음 코드 예제에서는 `DeleteAsync` 클래스의 메서드를 보여 줍니다 `RequestProvider` .
 
 ```csharp
 public async Task DeleteAsync(string uri, string token = "")  
@@ -270,9 +273,9 @@ public async Task DeleteAsync(string uri, string token = "")
 }
 ```
 
-이 메서드는 `CreateHttpClient` 메서드를 호출 합니다 .이 메서드는 적절 한 헤더 집합을 사용 하 여 `HttpClient` 클래스의 인스턴스를 반환 합니다. 그런 다음 URI로 식별 되는 리소스에 비동기 삭제 요청을 제출 합니다. @No__t_0 메서드에 대 한 자세한 내용은 [GET 요청 만들기](#making_a_get_request)를 참조 하세요.
+이 메서드는 `CreateHttpClient` `HttpClient` 적절 한 헤더 집합을 사용 하 여 클래스의 인스턴스를 반환 하는 메서드를 호출 합니다. 그런 다음 URI로 식별 되는 리소스에 비동기 삭제 요청을 제출 합니다. 메서드에 대 한 자세한 내용은 `CreateHttpClient` [GET 요청 만들기](#making_a_get_request)를 참조 하세요.
 
-@No__t_1 클래스의 `DeleteAsync` 메서드가 `HttpClient.DeleteAsync`를 호출 하는 경우, 다음 코드 예제에 표시 된 것과 같은 `BasketController` 클래스의 `Delete` 메서드입니다. API 프로젝트를 호출 합니다.
+`DeleteAsync`클래스의 메서드가 `RequestProvider` 를 호출 하는 경우, `HttpClient.DeleteAsync` `Delete` `BasketController` 다음 코드 예제와 같이 바구니 프로젝트의 클래스에서 메서드가 호출 됩니다.
 
 ```csharp
 [HttpDelete("{id}")]  
@@ -282,13 +285,13 @@ public void Delete(string id)
 }
 ```
 
-이 메서드는 `RedisBasketRepository` 클래스의 인스턴스를 사용 하 여 Redis cache에서 바구니 데이터를 삭제 합니다.
+이 메서드는 클래스의 인스턴스를 사용 하 여 `RedisBasketRepository` Redis cache에서 바구니 데이터를 삭제 합니다.
 
 ## <a name="caching-data"></a>데이터 캐싱
 
 자주 액세스 하는 데이터를 앱에 가까이 있는 빠른 저장소에 캐싱하여 앱 성능을 향상 시킬 수 있습니다. 빠른 저장소가 원래 원본 보다 더 가까운 앱에 있는 경우 캐싱은 데이터를 검색할 때 응답 시간을 크게 향상 시킬 수 있습니다.
 
-가장 일반적인 형태의 캐싱은 캐시를 참조 하 여 앱에서 데이터를 검색 하는 읽기-캐싱입니다. 데이터가 캐시에 없으면 데이터 저장소에서 검색 되어 캐시에 추가 됩니다. 앱은 캐시 배제 패턴을 사용 하 여 읽기-읽기 캐싱을 구현할 수 있습니다. 이 패턴은 항목이 현재 캐시에 있는지 여부를 확인 합니다. 항목이 캐시에 없으면 데이터 저장소에서 읽어서 캐시에 추가 됩니다. 자세한 내용은 [캐시](/azure/architecture/patterns/cache-aside/) 배제 패턴을 참조 하세요.
+가장 일반적인 형태의 캐싱은 캐시를 참조 하 여 앱에서 데이터를 검색 하는 읽기-캐싱입니다. 캐시에 데이터가 없으면 데이터 저장소에서 데이터가 검색된 후 캐시에 추가됩니다. 앱은 캐시 배제 패턴을 사용 하 여 읽기-읽기 캐싱을 구현할 수 있습니다. 이 패턴은 항목이 현재 캐시에 있는지 여부를 확인 합니다. 항목이 캐시에 없으면 데이터 저장소에서 읽어서 캐시에 추가 됩니다. 자세한 내용은 [캐시](/azure/architecture/patterns/cache-aside/) 배제 패턴을 참조 하세요.
 
 > [!TIP]
 > 자주 읽고 자주 변경 되지 않는 데이터를 캐시 합니다. 이 데이터는 앱에서 처음 검색할 때 필요할 때 캐시에 추가할 수 있습니다. 즉, 응용 프로그램은 데이터 저장소에서 한 번만 데이터를 인출 해야 하며, 그 후에는 캐시를 사용 하 여 후속 액세스를 만족할 수 있습니다.
@@ -318,11 +321,11 @@ EShopOnContainers 모바일 앱은 앱의 인스턴스를 실행 하는 장치�
 
 ### <a name="caching-images"></a>이미지 캐싱
 
-EShopOnContainers 모바일 앱은 캐시를 활용 하는 원격 제품 이미지를 사용 합니다. 이러한 이미지는 [`Image`](xref:Xamarin.Forms.Image) 컨트롤과 [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) 라이브러리에서 제공 하는 `CachedImage` 컨트롤에 의해 표시 됩니다.
+EShopOnContainers 모바일 앱은 캐시를 활용 하는 원격 제품 이미지를 사용 합니다. 이러한 이미지는 [`Image`](xref:Xamarin.Forms.Image) 컨트롤 및 `CachedImage` [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) 라이브러리에서 제공 하는 컨트롤에 의해 표시 됩니다.
 
-Xamarin.ios [`Image`](xref:Xamarin.Forms.Image) 컨트롤은 다운로드 한 이미지의 캐싱을 지원 합니다. 캐싱은 기본적으로 사용 하도록 설정 되며 24 시간 동안 로컬로 이미지를 저장 합니다. 또한 [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) 속성을 사용 하 여 만료 시간을 구성할 수 있습니다. 자세한 내용은 [다운로드 한 이미지 캐싱](~/xamarin-forms/user-interface/images.md#downloaded-image-caching)을 참조 하세요.
+Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) 컨트롤은 다운로드 된 이미지의 캐싱을 지원 합니다. 캐싱은 기본적으로 사용 하도록 설정 되며 24 시간 동안 로컬로 이미지를 저장 합니다. 또한 속성을 사용 하 여 만료 시간을 구성할 수 있습니다 [`CacheValidity`](xref:Xamarin.Forms.UriImageSource.CacheValidity) . 자세한 내용은 [다운로드 한 이미지 캐싱](~/xamarin-forms/user-interface/images.md#downloaded-image-caching)을 참조 하세요.
 
-FFImageLoading의 `CachedImage` 컨트롤은 Xamarin.ios [`Image`](xref:Xamarin.Forms.Image) 컨트롤을 대체 하 여 보충 기능을 사용할 수 있는 추가 속성을 제공 합니다. 이 기능 중에서 컨트롤은 오류를 지원 하 고 이미지 자리 표시자를 로드 하는 동안 구성 가능한 캐싱을 제공 합니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱이 `ProductTemplate`의 `CachedImage` 컨트롤을 사용 하는 방법을 보여 줍니다 .이 컨트롤은 `CatalogView`의 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤에서 사용 하는 데이터 템플릿입니다.
+FFImageLoading의 `CachedImage` 컨트롤은 컨트롤을 대체 하 여 Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) 보충 기능을 사용할 수 있는 추가 속성을 제공 합니다. 이 기능 중에서 컨트롤은 오류를 지원 하 고 이미지 자리 표시자를 로드 하는 동안 구성 가능한 캐싱을 제공 합니다. 다음 코드 예제에서는 eShopOnContainers 모바일 앱이의 컨트롤에서 사용 하는 데이터 템플릿인의 컨트롤을 사용 하는 방법을 보여 줍니다 `CachedImage` `ProductTemplate` [`ListView`](xref:Xamarin.Forms.ListView) `CatalogView` .
 
 ```xaml
 <ffimageloading:CachedImage
@@ -344,9 +347,9 @@ FFImageLoading의 `CachedImage` 컨트롤은 Xamarin.ios [`Image`](xref:Xamarin.
 </ffimageloading:CachedImage>
 ```
 
-@No__t_0 컨트롤은 `LoadingPlaceholder` 및 `ErrorPlaceholder` 속성을 플랫폼별 이미지로 설정 합니다. @No__t_0 속성은 `Source` 속성으로 지정 된 이미지를 검색 하는 동안 표시할 이미지를 지정 하 고 `ErrorPlaceholder` 속성은에 지정 된 이미지를 검색 하려고 할 때 오류가 발생 하는 경우 표시할 이미지를 지정 `Source` 속성.
+`CachedImage`컨트롤은 `LoadingPlaceholder` 및 속성을 `ErrorPlaceholder` 플랫폼별 이미지로 설정 합니다. 속성은 속성 `LoadingPlaceholder` 으로 지정 된 이미지를 검색 하는 동안 표시할 이미지를 지정 하 고 속성은 `Source` `ErrorPlaceholder` 속성으로 지정 된 이미지를 검색 하려고 할 때 오류가 발생 하는 경우 표시할 이미지를 지정 합니다 `Source` .
 
-이름에서 알 때 `CachedImage` 컨트롤은 `CacheDuration` 속성 값에 지정 된 시간 동안 장치의 원격 이미지를 캐시 합니다. 이 속성 값을 명시적으로 설정 하지 않으면 30 일의 기본값이 적용 됩니다.
+이름에서 알 때 컨트롤은 `CachedImage` 속성 값에 지정 된 시간 동안 장치의 원격 이미지를 캐시 합니다 `CacheDuration` . 이 속성 값을 명시적으로 설정 하지 않으면 30 일의 기본값이 적용 됩니다.
 
 ## <a name="increasing-resilience"></a>복원 력 증대
 
@@ -373,14 +376,14 @@ FFImageLoading의 `CachedImage` 컨트롤은 Xamarin.ios [`Image`](xref:Xamarin.
 > [!NOTE]
 > 시도 간 지연 시간을 최소화 하 고 재시도 횟수를 최소화 하는 적극적인 재시도 전략은 거의 또는 대량으로 실행 되는 원격 서비스의 성능을 저하 시킬 수 있습니다. 또한 이러한 다시 시도 전략은 계속 해 서 실패 한 작업을 수행 하려고 하는 경우 앱의 응답성에 영향을 줄 수 있습니다.
 
-한 번의 재시도 후에도 요청이 계속 실패 하는 경우 앱에서 더 많은 요청을 동일한 리소스로 이동 하 여 오류를 보고 하는 것이 더 좋습니다. 그런 다음 설정 된 기간이 지나면 응용 프로그램은 리소스에 대해 하나 이상의 요청을 만들어 성공 했는지 확인할 수 있습니다. 자세한 내용은 [회로 차단기 패턴](#circuit_breaker_pattern)을 참조 하세요.
+한 번의 재시도 후에도 요청이 계속 실패 하는 경우 앱에서 더 많은 요청을 동일한 리소스로 이동 하 여 오류를 보고 하는 것이 더 좋습니다. 그런 다음 설정 된 기간이 지나면 응용 프로그램은 리소스에 대해 하나 이상의 요청을 만들어 성공 했는지 확인할 수 있습니다. 자세한 내용은 [회로 차단기 패턴](#circuit_breaker_pattern)을 참조하세요.
 
 > [!TIP]
-> 무한 재시도 메커니즘을 구현 하지 마십시오. 유한 횟수의 재시도를 사용 하거나 [회로 차단기](/azure/architecture/patterns/circuit-breaker/) 패턴을 구현 하 여 서비스를 복구할 수 있도록 합니다.
+> 무한 재시도 메커니즘을 구현하지 않습니다. 유한 횟수의 재시도를 사용 하거나 [회로 차단기](/azure/architecture/patterns/circuit-breaker/) 패턴을 구현 하 여 서비스를 복구할 수 있도록 합니다.
 
-EShopOnContainers 모바일 앱은 RESTful 웹 요청을 만들 때 현재 재시도 패턴을 구현 하지 않습니다. 그러나 [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) 라이브러리에서 제공하는 컨트롤 `CachedImage`은 이미지 로드를 다시 시도하여 일시적인 오류 처리를 지원합니다. 이미지 로드에 실패 하는 경우 추가 시도가 수행 됩니다. 시도 횟수는 `RetryCount` 속성으로 지정 되며, `RetryDelay` 속성에 의해 지정 된 지연 이후에 다시 시도 됩니다. 이러한 속성 값이 명시적으로 설정 되지 않은 경우에는 `RetryCount` 속성에 대해 3이 적용 되 고 `RetryDelay` 속성의 경우 250ms이 적용 됩니다. @No__t_0 컨트롤에 대 한 자세한 내용은 [이미지 캐싱](#caching_images)을 참조 하세요.
+EShopOnContainers 모바일 앱은 RESTful 웹 요청을 만들 때 현재 재시도 패턴을 구현 하지 않습니다. 그러나 [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) 라이브러리에서 제공하는 컨트롤 `CachedImage`은 이미지 로드를 다시 시도하여 일시적인 오류 처리를 지원합니다. 이미지 로드에 실패 하는 경우 추가 시도가 수행 됩니다. 시도 횟수는 속성으로 지정 되며 `RetryCount` , 속성에 의해 지정 된 지연 이후에 다시 시도 됩니다 `RetryDelay` . 이러한 속성 값을 명시적으로 설정 하지 않으면 속성에 대해 3 개의 기본값이 적용 되 `RetryCount` 고 속성에는 250ms 적용 됩니다 `RetryDelay` . 컨트롤에 대 한 자세한 내용은 `CachedImage` [이미지 캐싱](#caching_images)을 참조 하세요.
 
-EShopOnContainers reference 응용 프로그램은 재시도 패턴을 구현 합니다. 재시도 패턴을 `HttpClient` 클래스와 결합 하는 방법에 대 한 자세한 내용은 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
+EShopOnContainers reference 응용 프로그램은 재시도 패턴을 구현 합니다. 재시도 패턴을 클래스와 결합 하는 방법에 대 한 자세한 내용은 `HttpClient` [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
 
 다시 시도 패턴에 대 한 자세한 내용은 [재시도](/azure/architecture/patterns/retry/) 패턴을 참조 하세요.
 
@@ -395,12 +398,12 @@ EShopOnContainers reference 응용 프로그램은 재시도 패턴을 구현 �
 > [!NOTE]
 > 회로 차단기 패턴의 목적은 재시도 패턴과 다릅니다. 재시도 패턴을 사용 하면 응용 프로그램이 성공 하다 고 가정 하에 작업을 다시 시도할 수 있습니다. 회로 차단기 패턴은 응용 프로그램이 실패할 가능성이 있는 작업을 수행할 수 없도록 합니다.
 
-회로 차단기는 실패할 수 있는 작업에 대 한 프록시로 작동 합니다. 프록시는 발생 한 최근 오류 수를 모니터링 하 고,이 정보를 사용 하 여 작업을 계속 진행할 수 있는지 여부를 결정 하거나, 예외를 즉시 반환할 것인지 여부를 결정 합니다.
+회로 차단기는 실패할 수 있는 작업에서 프록시 역할을 합니다. 프록시는 발생 한 최근 오류 수를 모니터링 하 고,이 정보를 사용 하 여 작업을 계속 진행할 수 있는지 여부를 결정 하거나, 예외를 즉시 반환할 것인지 여부를 결정 합니다.
 
 EShopOnContainers 모바일 앱은 현재 회로 차단기 패턴을 구현 하지 않습니다. 그러나 eShopOnContainers는 그렇지 않습니다. 자세한 내용은 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램 아키텍처](https://aka.ms/microservicesebook)를 참조 하세요.
 
 > [!TIP]
-> 재시도 및 회로 차단기 패턴을 결합 합니다. 앱은 재시도 패턴을 사용 하 여 회로 차단기를 통해 작업을 호출 하 여 재시도 및 회로 차단기 패턴을 결합할 수 있습니다. 그러나 다시 시도 논리는 회로 차단기에서 반환 된 모든 예외에 대 한 중요 한 것 이며 회로 차단기가 일시적인 오류가 아님을 나타내는 경우 다시 시도를 중단 합니다.
+> 재시도 및 회로 차단기 패턴을 결합 합니다. 앱은 재시도 패턴을 사용 하 여 회로 차단기를 통해 작업을 호출 하 여 재시도 및 회로 차단기 패턴을 결합할 수 있습니다. 그러나 재시도 논리는 회로 차단기에서 반환되는 모든 예외에 민감하며, 회로 차단기에서 오류가 일시적임을 나타내는 경우 재시도를 중단합니다.
 
 회로 차단기 패턴에 대 한 자세한 내용은 [회로 차단기](/azure/architecture/patterns/circuit-breaker/) 패턴을 참조 하세요.
 

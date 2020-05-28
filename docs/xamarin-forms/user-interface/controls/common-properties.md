@@ -1,22 +1,25 @@
 ---
-title: Xamarin.Forms 일반 컨트롤 속성, 메서드 및 이벤트
-description: 이 문서에서는 파생 클래스에서 일반적으로 사용 되는 VisualElement 클래스에 정의 된 공용 속성, 메서드 및 이벤트에 대해 설명 합니다.
-ms.prod: xamarin
-ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 08/21/2019
-ms.openlocfilehash: 7d8f5309d14c2a99afff0998a7013a9ebec338c1
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
+description: ''
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425831"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136424"
 ---
-# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms 일반 컨트롤 속성, 메서드 및 이벤트
+# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms공용 컨트롤 속성, 메서드 및 이벤트
 
-Xamarin.ios `VisualElement` 클래스는 xamarin.ios 응용 프로그램에서 사용 되는 대부분의 컨트롤에 대 한 기본 클래스입니다. `VisualElement`클래스는 클래스 파생에 사용 되는 여러 [속성](#properties), [메서드](#methods)및 [이벤트](#events) 를 정의 합니다.
+Xamarin.Forms `VisualElement` 클래스는 응용 프로그램에서 사용 되는 대부분의 컨트롤에 대 한 기본 클래스입니다 Xamarin.Forms . `VisualElement`클래스는 클래스 파생에 사용 되는 여러 [속성](#properties), [메서드](#methods)및 [이벤트](#events) 를 정의 합니다.
 
 ## <a name="properties"></a>속성
 
@@ -36,15 +39,15 @@ Xamarin.ios `VisualElement` 클래스는 xamarin.ios 응용 프로그램에서 �
 
 ### [`Behaviors`](xref:Xamarin.Forms.VisualElement.Behaviors)
 
-`Behaviors`속성은 `List` 개체의입니다 `Behavior` . 동작을 사용 하면 다시 사용 가능한 기능을 목록에 추가 하 여 요소에 연결할 수 있습니다 `Behaviors` . 클래스에 대 한 자세한 내용은 `Behavior` [xamarin.ios 동작](~/xamarin-forms/app-fundamentals/behaviors/index.md)을 참조 하세요.
+`Behaviors`속성은 `List` 개체의입니다 `Behavior` . 동작을 사용 하면 다시 사용 가능한 기능을 목록에 추가 하 여 요소에 연결할 수 있습니다 `Behaviors` . 클래스에 대 한 자세한 내용은 `Behavior` [ Xamarin.Forms 동작](~/xamarin-forms/app-fundamentals/behaviors/index.md)을 참조 하세요.
 
 ### [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds)
 
-`Bounds`속성은 `Rectangle` 컨트롤이 차지 하는 공간을 나타내는 읽기 전용 개체입니다. `Bounds`속성 값은 레이아웃 주기 동안 할당 됩니다. 에는 `Rectangle` `struct` 사각형의 교차 및 포함을 테스트 하는 데 유용한 속성과 메서드가 포함 되어 있습니다. 자세한 내용은 [Xamarin.ios 사각형 API](xref:Xamarin.Forms.Rectangle)를 참조 하세요.
+`Bounds`속성은 `Rectangle` 컨트롤이 차지 하는 공간을 나타내는 읽기 전용 개체입니다. `Bounds`속성 값은 레이아웃 주기 동안 할당 됩니다. 에는 `Rectangle` `struct` 사각형의 교차 및 포함을 테스트 하는 데 유용한 속성과 메서드가 포함 되어 있습니다. 자세한 내용은 [ Xamarin.Forms 사각형 API](xref:Xamarin.Forms.Rectangle)를 참조 하세요.
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
-`Effects`속성은 `List` `Effect` `Element` (f: xamarin.ios) 클래스에서 상속 된 개체의입니다. 효과를 사용 하면 네이티브 컨트롤을 사용자 지정할 수 있으며, 일반적으로 작은 스타일 변경에 사용 됩니다. 클래스에 대 한 자세한 내용은 `Effect` [xamarin.ios 효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조 하세요.
+`Effects`속성은 `List` `Effect` `Element` (f:)에서 상속 되는 개체의입니다 Xamarin.Forms . Element) 클래스 효과를 사용 하면 네이티브 컨트롤을 사용자 지정할 수 있으며, 일반적으로 작은 스타일 변경에 사용 됩니다. 클래스에 대 한 자세한 내용은 `Effect` [ Xamarin.Forms 효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조 하세요.
 
 ### [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)
 
@@ -130,11 +133,11 @@ Xamarin.ios `VisualElement` 클래스는 xamarin.ios 응용 프로그램에서 �
 
 ### [`Style`](xref:Xamarin.Forms.NavigableElement.Style)
 
-`Style` 속성은 `NavigableElement` 클래스에서 상속됩니다. 이 속성은 클래스의 인스턴스입니다 `Style` . 클래스에는 `Style` 시각적 요소의 모양 및 동작을 정의 하는 트리거, setter 및 동작이 포함 되어 있습니다. 자세한 내용은 [XAMARIN.IOS XAML 스타일](~/xamarin-forms/user-interface/styles/xaml/index.md)을 참조 하세요.
+`Style` 속성은 `NavigableElement` 클래스에서 상속됩니다. 이 속성은 클래스의 인스턴스입니다 `Style` . 클래스에는 `Style` 시각적 요소의 모양 및 동작을 정의 하는 트리거, setter 및 동작이 포함 되어 있습니다. 자세한 내용은 [ Xamarin.Forms XAML 스타일](~/xamarin-forms/user-interface/styles/xaml/index.md)을 참조 하세요.
 
 ### [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass)
 
-`StyleClass`속성은 `string` 클래스의 이름을 나타내는 개체의 목록입니다 `Style` . 이 속성은 `NavigableElement` 클래스에서 상속됩니다. `StyleClass`속성을 사용 하면 여러 스타일 특성을 인스턴스에 적용할 수 있습니다 `VisualElement` . 자세한 내용은 [Xamarin.ios 스타일 클래스](~/xamarin-forms/user-interface/styles/xaml/style-class.md)를 참조 하세요.
+`StyleClass`속성은 `string` 클래스의 이름을 나타내는 개체의 목록입니다 `Style` . 이 속성은 `NavigableElement` 클래스에서 상속됩니다. `StyleClass`속성을 사용 하면 여러 스타일 특성을 인스턴스에 적용할 수 있습니다 `VisualElement` . 자세한 내용은 [ Xamarin.Forms 스타일 클래스](~/xamarin-forms/user-interface/styles/xaml/style-class.md)를 참조 하세요.
 
 ### [`TabIndex`](xref:Xamarin.Forms.VisualElement.TabIndex)
 
@@ -144,21 +147,21 @@ Xamarin.ios `VisualElement` 클래스는 xamarin.ios 응용 프로그램에서 �
 
 `TranslationX`속성은 `double` X 축에 적용할 델타 변환을 정의 하는 값입니다. 변환은 레이아웃 후에 적용 되며 일반적으로 애니메이션을 적용 하는 데 사용 됩니다. 요소를 부모 컨테이너의 범위 밖으로 변환 하면 입력이 작동 하지 않습니다.
 
-자세한 내용은 [xamarin.ios의 애니메이션](~/xamarin-forms/user-interface/animation/index.md)을 참조 하세요.
+자세한 내용은 [의 Xamarin.Forms 애니메이션 ](~/xamarin-forms/user-interface/animation/index.md)을 참조 하세요.
 
 ### [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)
 
 `TranslationY`속성은 `double` Y 축에 적용할 델타 변환을 정의 하는 값입니다. 변환은 레이아웃 후에 적용 되며 일반적으로 애니메이션을 적용 하는 데 사용 됩니다. 요소를 부모 컨테이너의 범위 밖으로 변환 하면 입력이 작동 하지 않습니다.
 
-자세한 내용은 [xamarin.ios의 애니메이션](~/xamarin-forms/user-interface/animation/index.md)을 참조 하세요.
+자세한 내용은 [의 Xamarin.Forms 애니메이션 ](~/xamarin-forms/user-interface/animation/index.md)을 참조 하세요.
 
 ### [`Triggers`](xref:Xamarin.Forms.VisualElement.Triggers)
 
-`Triggers`속성은 개체의 읽기 전용입니다 `List` `TriggerBase` . 트리거를 사용 하면 응용 프로그램 개발자가 이벤트 또는 속성 변경에 대 한 응답으로 컨트롤의 시각적 모양을 변경 하는 작업을 XAML로 표현할 수 있습니다. 자세한 내용은 [Xamarin.ios 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
+`Triggers`속성은 개체의 읽기 전용입니다 `List` `TriggerBase` . 트리거를 사용 하면 응용 프로그램 개발자가 이벤트 또는 속성 변경에 대 한 응답으로 컨트롤의 시각적 모양을 변경 하는 작업을 XAML로 표현할 수 있습니다. 자세한 내용은 [ Xamarin.Forms 트리거](~/xamarin-forms/app-fundamentals/triggers.md)를 참조 하세요.
 
 ### [`Visual`](xref:Xamarin.Forms.VisualElement.Visual)
 
-`Visual`속성은 `IVisual` 렌더러를 만들고 선택적으로 인스턴스에 적용할 수 있도록 하는 인스턴스입니다 `VisualElement` . `Visual`속성은 부모와 일치 하도록 설정 되므로 구성 요소에 대 한 렌더러를 정의 하면 해당 구성 요소의 모든 자식에도 적용 됩니다. 컨트롤이 나 해당 상위 항목에 사용자 지정 렌더러를 설정 하지 않은 경우 기본 Xamarin.ios 렌더러가 사용 됩니다. 자세한 내용은 [Xamarin.ios 시각적 개체](~/xamarin-forms/user-interface/visual/index.md)를 참조 하세요.
+`Visual`속성은 `IVisual` 렌더러를 만들고 선택적으로 인스턴스에 적용할 수 있도록 하는 인스턴스입니다 `VisualElement` . `Visual`속성은 부모와 일치 하도록 설정 되므로 구성 요소에 대 한 렌더러를 정의 하면 해당 구성 요소의 모든 자식에도 적용 됩니다. 컨트롤이 나 해당 상위 항목에 사용자 지정 렌더러를 설정 하지 않은 경우 기본 Xamarin.Forms 렌더러가 사용 됩니다. 자세한 내용은 [ Xamarin.Forms 시각적 개체](~/xamarin-forms/user-interface/visual/index.md)를 참조 하세요.
 
 ### [`Width`](xref:Xamarin.Forms.VisualElement.Width)
 
@@ -176,7 +179,7 @@ Xamarin.ios `VisualElement` 클래스는 xamarin.ios 응용 프로그램에서 �
 
 `Y`속성은 `double` 컨트롤의 현재 Y 위치를 설명 하는 읽기 전용 값입니다.
 
-## <a name="methods"></a>메서드
+## <a name="methods"></a>방법
 
 클래스에서 사용할 수 있는 메서드는 다음과 같습니다 `VisualElement` . 전체 목록은 [Visualelement API 메서드](xref:Xamarin.Forms.VisualElement#methods)를 참조 하세요.
 
@@ -212,11 +215,11 @@ public void Unfocus ()
 
 ## <a name="events"></a>이벤트
 
-클래스에서 사용할 수 있는 이벤트는 다음과 같습니다 `VisualElement` . 전체 목록은 [Xamarin.ios VisualElement 이벤트](xref:Xamarin.Forms.VisualElement#events)를 참조 하세요.
+클래스에서 사용할 수 있는 이벤트는 다음과 같습니다 `VisualElement` . 전체 목록은 [ Xamarin.Forms Visualelement 이벤트](xref:Xamarin.Forms.VisualElement#events)를 참조 하세요.
 
 ### [`Focused`](xref:Xamarin.Forms.VisualElement.Focused)
 
-`Focused`인스턴스가 포커스를 받을 때마다 이벤트가 발생 합니다 `VisualElement` . 이 이벤트는 Xamarin.ios 스택을 통해 버블링 되지 않으며 네이티브 컨트롤에서 직접 수신 됩니다. 이 이벤트는 [`IsFocused`](#isfocused) 속성 setter에서 내보냅니다.
+`Focused`인스턴스가 포커스를 받을 때마다 이벤트가 발생 합니다 `VisualElement` . 이 이벤트는 스택을 통해 버블링 되지 않으며 Xamarin.Forms 네이티브 컨트롤에서 직접 수신 됩니다. 이 이벤트는 [`IsFocused`](#isfocused) 속성 setter에서 내보냅니다.
 
 ### [`SizeChanged`](xref:Xamarin.Forms.VisualElement.SizeChanged)
 
@@ -224,11 +227,11 @@ public void Unfocus ()
 
 ### [`Unfocused`](xref:Xamarin.Forms.VisualElement.Unfocused)
 
-`Unfocused`인스턴스가 포커스를 잃을 때마다 이벤트가 발생 합니다 `VisualElement` . 이 이벤트는 Xamarin.ios 스택을 통해 버블링 되지 않으며 네이티브 컨트롤에서 직접 수신 됩니다. 이 이벤트는 [`IsFocused`](#isfocused) 속성 setter에서 내보냅니다.
+`Unfocused`인스턴스가 포커스를 잃을 때마다 이벤트가 발생 합니다 `VisualElement` . 이 이벤트는 스택을 통해 버블링 되지 않으며 Xamarin.Forms 네이티브 컨트롤에서 직접 수신 됩니다. 이 이벤트는 [`IsFocused`](#isfocused) 속성 setter에서 내보냅니다.
 
 ## <a name="units-of-measurement"></a>측정 단위
 
-Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 단위가 있습니다. Xamarin.ios는 장치 및 플랫폼에서 단위를 정규화 하는 플랫폼 독립적인 측정 단위를 사용 합니다. Xamarin.ios에는 인치당 160 단위 또는 센티미터 당 64 단위가 있습니다.
+Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 단위가 있습니다. Xamarin.Forms장치 및 플랫폼에서 단위를 정규화 하는 플랫폼 독립적인 측정 단위를 사용 합니다. 에는 인치당 160 단위 또는 센티미터 당 64 단위가 있습니다 Xamarin.Forms .
 
 ## <a name="request-properties"></a>요청 속성
 
@@ -261,7 +264,7 @@ Android, iOS 및 UWP 플랫폼에는 장치에 따라 다를 수 있는 여러 �
 
 ### <a name="minimum-properties-within-a-grid"></a>그리드 내의 최소 속성
 
-`Grid`레이아웃에는 행과 열의 상대적인 크기 조정을 위한 고유한 시스템이 있습니다. `MinimumWidthRequest` `MinimumHeightRequest` 레이아웃 내에서 또는를 사용 `Grid` 하면 효과가 없습니다. 자세한 내용은 [Xamarin.ios 표](~/xamarin-forms/user-interface/layouts/grid.md)를 참조 하세요.
+`Grid`레이아웃에는 행과 열의 상대적인 크기 조정을 위한 고유한 시스템이 있습니다. `MinimumWidthRequest` `MinimumHeightRequest` 레이아웃 내에서 또는를 사용 `Grid` 하면 효과가 없습니다. 자세한 내용은 [ Xamarin.Forms 표](~/xamarin-forms/user-interface/layouts/grid.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,24 +1,27 @@
 ---
-title: IOS의 명명 된 글꼴 크기에 대 한 접근성 크기 조정
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 명명 된 글꼴 크기에 대 한 접근성 크기 조정을 사용 하지 않도록 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/28/2019
-ms.openlocfilehash: 13ca4945ed447ae811ee95e308238f04e58ac0bd
-ms.sourcegitcommit: 1e3a0d853669dcc57d5dee0894d325d40c7d8009
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9aa29ba4d8e6bda9126ec211af1b4febebd5bab9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70200087"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128273"
 ---
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>IOS의 명명 된 글꼴 크기에 대 한 접근성 크기 조정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼별 플랫폼 전용은 명명 된 글꼴 크기에 대 한 접근성 크기 조정을 비활성화 합니다. 설정 하 여 XAML에서 사용 되는 `Application.EnableAccessibilityScalingForNamedFontSizes` 바인딩 가능한 속성을 `false`:
+이 iOS 플랫폼별 플랫폼 전용은 명명 된 글꼴 크기에 대 한 접근성 크기 조정을 비활성화 합니다. 바인딩 가능한 속성을로 설정 하 여 XAML에서 사용 됩니다 `Application.EnableAccessibilityScalingForNamedFontSizes` `false` .
 
 ```xaml
 <Application ...
@@ -28,7 +31,7 @@ ms.locfileid: "70200087"
 </Application>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -38,7 +41,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetEnableAccessibilityScalingForNamedFontSizes(false);
 ```
 
-`Application.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. [네임스페이스`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 의 메서드는iOS접근성설정에따라크기가조정되는명명된글꼴크기를사용하지않도록설정하는`Application.SetEnableAccessibilityScalingForNamedFontSizes` 데 사용 됩니다. 또한 `Application.GetEnableAccessibilityScalingForNamedFontSizes` 메서드를 사용 하 여 명명 된 글꼴 크기를 iOS 내게 필요한 옵션 설정으로 조정할지 여부를 반환할 수 있습니다.
+`Application.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `Application.SetEnableAccessibilityScalingForNamedFontSizes`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) iOS 접근성 설정에 따라 크기가 조정 되는 명명 된 글꼴 크기를 사용 하지 않도록 설정 하는 데 사용 됩니다. 또한 `Application.GetEnableAccessibilityScalingForNamedFontSizes` 메서드를 사용 하 여 명명 된 글꼴 크기를 iOS 내게 필요한 옵션 설정으로 조정할지 여부를 반환할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

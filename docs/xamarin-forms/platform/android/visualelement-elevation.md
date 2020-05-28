@@ -1,24 +1,27 @@
 ---
-title: Android에서 VisualElement 권한 상승
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 API 21 이상을 대상으로 하는 응용 프로그램에서 VisualElements의 상승을 제어 하는 Android 플랫폼 관련 기능을 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 5BFD6175-2BBD-41CD-B8F9-521B4750B708
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 243e351f29b056a6d4a567b8e39240a87f37aec2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 48060356014dc7600518b5de555ad3f346c50c35
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651880"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128546"
 ---
 # <a name="visualelement-elevation-on-android"></a>Android에서 VisualElement 권한 상승
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 Android 플랫폼별는 API 21 이상을 대상으로 하는 응용 프로그램에서 시각적 요소의 권한 상승 또는 Z 순서를 제어 하는 데 사용 됩니다. 시각적 요소 상승 Z 값이 높을수록 occluding Z 값이 낮은 시각적 요소를 사용 하 여 시각적 요소를 사용 하 여 해당 그리기 순서를 결정 합니다. 설정 하 여 XAML에서 사용 되는 `VisualElement.Elevation` 연결 된 속성을 `boolean` 값:
+이 Android 플랫폼별는 API 21 이상을 대상으로 하는 응용 프로그램에서 시각적 요소의 권한 상승 또는 Z 순서를 제어 하는 데 사용 됩니다. 시각적 요소를 상승 하면 Z 값이 더 높은 시각적 요소가 occluding 시각적 요소를 사용 하 여 그리기 순서를 결정 합니다. 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 `VisualElement.Elevation` `boolean` .
 
 ```xaml
 <ContentPage ...
@@ -37,7 +40,7 @@ ms.locfileid: "68651880"
 </ContentPage>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -79,9 +82,9 @@ public class AndroidElevationPageCS : ContentPage
 }
 ```
 
-`Button.On<Android>` 메서드가 플랫폼별 Android에만 실행 되도록 지정 합니다. `VisualElement.SetElevation` 메서드를 합니다 [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 네임 스페이스에 null을 허용 하는 상승 시각적 요소를 설정 하는 `float`합니다. 또한는 `VisualElement.GetElevation` 메서드를 사용 하 여 시각적 요소 높이 값을 검색할 수 있습니다.
+`Button.On<Android>`메서드는이 플랫폼별가 Android 에서만 실행 되도록 지정 합니다. `VisualElement.SetElevation`네임 스페이스의 메서드를 [`Xamarin.Forms.PlatformConfiguration.AndroidSpecific`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) 사용 하 여 시각적 요소의 승격을 nullable로 설정 합니다 `float` . 또한 `VisualElement.GetElevation` 메서드를 사용 하 여 시각적 요소의 상승 값을 검색할 수 있습니다.
 
-결과 더 높은 Z 값이 포함 된 시각적 요소 채워집니다 Z 값이 낮은 시각적 요소 수 있도록 시각적 요소의 높이 제어할 수 있습니다. 따라서이 예제의 두 번째 [ `Button` ](xref:Xamarin.Forms.Button) 위에 렌더링 되는 [ `BoxView` ](xref:Xamarin.Forms.BoxView) 권한 상승 값이 높을수록 있기 때문에:
+그 결과, Z 값이 더 높은 시각적 요소가 Z 값이 작은 시각적 요소를 려 시각적 요소의 상승을 제어할 수 있습니다. 따라서이 예제에서 두 번째는 [`Button`](xref:Xamarin.Forms.Button) [`BoxView`](xref:Xamarin.Forms.BoxView) 상승 값이 더 높기 때문에에서 렌더링 됩니다.
 
 ![](visualelement-elevation-images/elevation.png)
 
@@ -90,4 +93,4 @@ public class AndroidElevationPageCS : ContentPage
 - [PlatformSpecifics (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [플랫폼별 만들기](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
-- [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)
+- [AndroidSpecific AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

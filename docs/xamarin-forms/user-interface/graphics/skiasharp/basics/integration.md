@@ -1,33 +1,36 @@
 ---
-title: Xamarin.Forms와 통합
-description: 이 문서는 터치에 응답 하는 SkiaSharp 그래픽을 만드는 방법 및 Xamarin.Forms 요소에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/09/2017
-ms.openlocfilehash: 33ed7f3477f44662f3392d2125b61818b3ed885f
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: 통합Xamarin.Forms
+description: 이 문서에서는 터치 및 요소에 응답 하는 SkiaSharp 그래픽을 만드는 방법을 설명 하 Xamarin.Forms 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759445"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137698"
 ---
-# <a name="integrating-with-xamarinforms"></a>Xamarin.Forms와 통합
+# <a name="integrating-with-xamarinforms"></a>통합Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_터치 및 Xamarin.Forms 요소에 응답 하는 SkiaSharp 그래픽 만들기_
+_터치 및 요소에 응답 하는 SkiaSharp 그래픽 만들기 Xamarin.Forms_
 
-SkiaSharp 그래픽은 여러 가지 방법으로 Xamarin.Forms의 나머지 부분에 통합할 수 있습니다. SkiaSharp 캔버스 및 Xamarin.Forms 요소가 동일한 페이지에서 SkiaSharp 캔버스 맨 위에 위치 Xamarin.Forms 요소를 결합할 수 있습니다.
+SkiaSharp 그래픽은 여러 가지 방법으로의 나머지와 통합할 수 있습니다 Xamarin.Forms . 동일한 페이지에서 SkiaSharp canvas와 요소를 결합 Xamarin.Forms 하 고 Xamarin.Forms SkiaSharp 캔버스 위에 요소를 배치할 수도 있습니다.
 
-![](integration-images/integrationexample.png "슬라이더를 사용 하 여 색을 선택합니다.")
+![](integration-images/integrationexample.png "Selecting a color with sliders")
 
-Xamarin.Forms에서 SkiaSharp 그래픽 대화형 만드는 다른 방법은 터치를 통해 것입니다.
-두 번째 페이지에는 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램 자격이 **토글 채우기 탭**합니다. 두 가지 방법으로 단순 원을 그릴 &mdash; 채우기를 사용 하 여 채우기 없는 &mdash; 탭으로 전환 합니다. 합니다 [ `TapToggleFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) 클래스가 SkiaSharp 그래픽 사용자 입력에 대 한 응답에서을 변경할 수 있습니다 하는 방법을 보여 줍니다.
+에서 대화형 SkiaSharp 그래픽을 만드는 또 다른 방법은 Xamarin.Forms 터치를 통하는 것입니다.
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램의 두 번째 페이지에는 **채우기 토글 탭**이 있습니다. 채우기가 없고 &mdash; 탭으로 채우기가 전환 된 간단한 원을 그립니다 &mdash; . [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs)클래스는 사용자 입력에 응답 하 여 SkiaSharp 그래픽을 변경 하는 방법을 보여 줍니다.
 
-이 페이지에 대 한 합니다 `SKCanvasView` 클래스에서 인스턴스화됩니다 합니다 [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 도 Xamarin.Forms를 설정 하는 파일 [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) 보기에서:
+이 페이지에 대 한 `SKCanvasView` 클래스는 [TapToggleFill](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) 파일에서 인스턴스화되어 뷰에서도 설정 합니다 Xamarin.Forms [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -44,9 +47,9 @@ Xamarin.Forms에서 SkiaSharp 그래픽 대화형 만드는 다른 방법은 터
 </ContentPage>
 ```
 
-통지를 `skia` XML 네임 스페이스 선언 합니다.
+`skia`XML 네임 스페이스 선언을 확인 합니다.
 
-합니다 `Tapped` 에 대 한 처리기를 `TapGestureRecognizer` 개체를 토글합니다 호출 하는 부울 필드의 값을 [ `InvalidateSurface` ](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) 메서드의 `SKCanvasView`:
+`Tapped`개체의 처리기는 `TapGestureRecognizer` 단순히 부울 필드의 값을 전환 하 고 [`InvalidateSurface`](xref:SkiaSharp.Views.Forms.SKCanvasView.InvalidateSurface) 의 메서드를 호출 합니다 `SKCanvasView` .
 
 ```csharp
 bool showFill = true;
@@ -58,7 +61,7 @@ void OnCanvasViewTapped(object sender, EventArgs args)
 }
 ```
 
-에 대 한 호출 `InvalidateSurface` 효과적으로에 대 한 호출을 생성 합니다 `PaintSurface` 처리기를 사용 하는 `showFill` 채우거 나 원 채우지 필드:
+에 대 한 호출은 `InvalidateSurface` `PaintSurface` 필드를 사용 하 여 원을 채우거 나 채우지 않도록 처리기에 대 한 호출을 효과적으로 생성 합니다 `showFill` .
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -86,23 +89,23 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-`StrokeWidth` 속성이 차이 강조 하기 위해 50으로 설정 되어 있습니다. 또한 먼저 내부 그리기 및 윤곽선으로 전체 줄 너비를 볼 수 있습니다. 기본적으로 그래픽 그림 나중에 그려지는 `PaintSurface` 이벤트 처리기를가 려 서 이전 처리기에서에서 그린 것입니다.
+`StrokeWidth`속성이 50로 설정 되어 차이를 강조할. 내부를 먼저 그린 다음 윤곽선을 그려 전체 선 두께를 볼 수도 있습니다. 기본적으로 이벤트 처리기에서 나중에 그려진 그래픽 그림은 `PaintSurface` 처리기에서 앞에 그려진 그림을 숨깁니다.
 
-합니다 **Color 탐색** 페이지 어떻게 SkiaSharp 그래픽 다른 Xamarin.Forms 요소와 통합할 수도 있습니다 보여 주고도 SkiaSharp에서 색을 정의 하기 위한 두 가지 대체 방법 간의 차이 보여 줍니다. 정적 [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) 메서드를 만듭니다는 `SKColor` 색상-채도-명도 모델을 기반으로 하는 값:
+**색 탐색** 페이지에서는 SkiaSharp 그래픽을 다른 요소와 통합할 수 있는 방법을 보여 Xamarin.Forms 주고, SkiaSharp에서 색을 정의 하는 두 가지 대체 방법 간의 차이점도 보여 줍니다. 정적 [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl(System.Single,System.Single,System.Single,System.Byte)) 메서드는 `SKColor` 색상-채도-밝기 모델을 기반으로 값을 만듭니다.
 
 ```csharp
 public static SKColor FromHsl (Single h, Single s, Single l, Byte a)
 ```
 
-정적 [ `SKColor.FromHsv` ](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) 메서드를 만듭니다는 `SKColor` 유사한 색상-채도 값 모델을 기반으로 하는 값:
+정적 [`SKColor.FromHsv`](xref:SkiaSharp.SKColor.FromHsv(System.Single,System.Single,System.Single,System.Byte)) 메서드는 `SKColor` 유사한 색상-채도-값 모델을 기반으로 값을 만듭니다.
 
 ```csharp
 public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 ```
 
-두 경우 모두는 `h` 인수 범위는 0에서 360 사이입니다. 합니다 `s`, `l`, 및 `v` 인수 0에서 100 사이입니다. `a` (알파 또는 불투명도) 인수 범위는 0에서 255입니다.
+두 경우 모두 `h` 인수 범위는 0에서 360 까지입니다. `s`, `l` 및 `v` 인수의 범위는 0에서 100 까지입니다. `a`(알파 또는 불투명도) 인수 범위는 0에서 255 까지입니다.
 
-[ **ColorExplorePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) 파일 두 개를 만듭니다 `SKCanvasView` 개체를 `StackLayout` 와 함께 `Slider` 고 `Label` HSL 및 HSV 선택할 수 있는 뷰 색 값:
+[**ColorExplorePage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml) 파일은 `SKCanvasView` `StackLayout` `Slider` `Label` 사용자가 HSL 및 HSV color 값을 선택할 수 있는 및 보기와 나란히 두 개의 개체를 만듭니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -182,9 +185,9 @@ public static SKColor FromHsv (Single h, Single s, Single v, Byte a)
 </ContentPage>
 ```
 
-두 `SKCanvasView` 단일 셀에는 요소가 `Grid` 사용 하 여를 `Label` 결과 RGB 색 값을 표시 하기 위한 상위 하나 있는데요.
+두 `SKCanvasView` 요소는 `Grid` `Label` 결과 RGB 색 값을 표시 하기 위해 위에 앉아 있는 단일 셀에 있습니다.
 
-합니다 [ **ColorExplorePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs) 코드 숨김 파일은 비교적 간단 합니다. 공유 `ValueChanged` 세 가지에 대 한 처리기 `Slider` 요소를 간단히 모두 무효화 `SKCanvasView` 요소입니다. `PaintSurface` 처리기에서 표시 된 색을 사용 하 여 캔버스 지우기는 `Slider` 요소를 설정 합니다 `Label` 위쪽에 앉아 있는 `SKCanvasView` 요소:
+[**ColorExplorePage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ColorExplorePage.xaml.cs) 코드 숨김이 비교적 단순 합니다. `ValueChanged`세 요소에 대 한 공유 처리기는 `Slider` 두 요소를 모두 무효화 합니다 `SKCanvasView` . `PaintSurface`처리기는 요소로 표시 된 색을 사용 하 여 캔버스를 지우고 `Slider` `Label` 요소 위에 앉아 있는를 설정 합니다 `SKCanvasView` .
 
 ```csharp
 public partial class ColorExplorePage : ContentPage
@@ -229,15 +232,15 @@ public partial class ColorExplorePage : ContentPage
 }
 ```
 
-HSL 및 HSV 색 모델의 색상 값 범위는 0에서 360 하 고 색의 주요 색상을 나타냅니다. 무지개의 기존 색입니다: 빨강, 주황, 노랑, 녹색, 파란색, indigo, 보라, 및 빨간색 원 안에 백 합니다.
+HSL 및 HSV 색 모델에서 색상 값의 범위는 0에서 360이 고 색의 기준 색상을 나타냅니다. 이러한 색은 무지개의 전통적인 색 (빨강, 주황, 노랑, 녹색, 파랑, indigo, 보라)으로, 원 안의 빨간색으로 돌아옵니다.
 
-HSL 모델에서 명도 0 값은 항상 검은색으로 며 100 값을 항상 흰색입니다. 채도 값이 0 이면 명도 값 0과 100 사이의 회색 음영 됩니다. 채도 늘리면 더 많은 색을 추가 합니다. 순수 색 (임, 하나의 구성 요소가 0과는 세 번째 0에서 255 까지의 같은 다른 255를 사용 하 여 RGB 값)은 100 채도 및 밝기는 50 때 발생 합니다.
+HSL 모델에서 밝기의 0 값은 항상 검은색 이며 100 값은 항상 흰색입니다. 채도 값이 0 이면 0에서 100 사이의 밝기 값은 회색 음영입니다. 채도를 높이면 색이 더 늘어납니다. 순수한 색 (하나의 구성 요소가 255이 고, 다른 하나는 0이 고, 세 번째는 0 ~ 255) 인 RGB 값인 경우에는 채도가 100이 고 밝기는 50 인 경우 발생 합니다.
 
-HSV 모델에서 순수 색 채도 값은 100 때 발생 합니다. 값이 다른 설정에 관계 없이 0 인 경우 색은 검정입니다. 회색조 채도 0과 값 범위는 0에서 100 때 발생 합니다.
+HSV 모델에서 순수 색은 채도와 값이 모두 100 인 경우에 발생 합니다. 값이 0 이면 다른 설정에 관계 없이 색은 검정입니다. 채도가 0이 고 값 범위가 0에서 100 인 경우 회색 음영이 발생 합니다.
 
-하지만 두 모델에 대 한 이해를 위한 가장 좋은 방법은 상호 실험:
+그러나 두 모델에 대 한 느낌을 얻는 가장 좋은 방법은 직접 시험해 보는 것입니다.
 
-[![](integration-images/colorexplore-large.png "삼중 색 탐색 페이지 스크린샷")](integration-images/colorexplore-small.png#lightbox "삼중 색 탐색 페이지 스크린샷")
+[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png#lightbox "Triple screenshot of the Color Explore page")
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,18 +1,21 @@
 ---
-title: SkiaSharp blend 모드
-description: Blend 모드를 사용 하 여 그래픽 개체가 서로 쌓이는 경우 수행할 작업을 정의 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: CE1B222E-A2D0-4016-A532-EC1E59EE3D6B
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 829d764f03dd77c6126c2f4bced750ae570a3bc6
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b5b03779b9f0847621456b25582fb8ea04f8386d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425691"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131705"
 ---
 # <a name="skiasharp-blend-modes"></a>SkiaSharp blend 모드
 
@@ -29,20 +32,60 @@ SkiaSharp blend 모드는 W3C [**합성 및 혼합 수준 1**](https://www.w3.or
 열거형의 29 개 멤버는 `SKBlendMode` 다음과 같은 세 가지 범주로 나눌 수 있습니다.
 
 | Porter-Duff | 분리 가능한    | 분리 가능 하지 않음 |
-| ----------- | ------------ | ------------- |
-| `Clear`     | `Modulate`   | `Hue`         |
-| `Src`       | `Screen`     | `Saturation`  |
-| `Dst`       | `Overlay`    | `Color`       |
-| `SrcOver`   | `Darken`     | `Luminosity`  |
-| `DstOver`   | `Lighten`    |               |
-| `SrcIn`     | `ColorDodge` |               |
-| `DstIn`     | `ColorBurn`  |               |
-| `SrcOut`    | `HardLight`  |               |
-| `DstOut`    | `SoftLight`  |               |
-| `SrcATop`   | `Difference` |               |
-| `DstATop`   | `Exclusion`  |               |
-| `Xor`       | `Multiply`   |               |
-| `Plus`      |              |               |
+| ---
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------- | | `Clear`     | `Modulate`   | `Hue`         | | `Src`       | `Screen`     | `Saturation`  | | `Dst`       | `Overlay`    | `Color`       | | `SrcOver`   | `Darken`     | `Luminosity`  | | `DstOver`   | `Lighten`    |               | | `SrcIn`     | `ColorDodge` |               | | `DstIn`     | `ColorBurn`  |               | | `SrcOut`    | `HardLight`  |               | | `DstOut`    | `SoftLight`  |               | | `SrcATop`   | `Difference` |               | | `DstATop`   | `Exclusion`  |               | | `Xor`       | `Multiply`   |               | | `Plus`      |              |               |
 
 이러한 세 범주의 이름은 다음에 나오는 토론에서 더 많은 의미를 갖습니다. 멤버가 나열 되는 순서는 열거형의 정의에서와 동일 합니다 `SKBlendMode` . 첫 번째 열의 13 개 열거형 멤버는 0에서 12 사이의 정수 값을 갖습니다. 두 번째 열은 정수 13 ~ 24에 해당 하는 열거형 멤버이 고, 세 번째 열의 멤버는 25에서 28 사이의 값을 갖습니다.
 
@@ -62,7 +105,7 @@ canvas.Clear();
 
 이 메서드는 캔버스의 모든 픽셀을 또는 정수 0x00000000과 동일한 투명 한 검정색 픽셀로 바꿉니다 `new SKColor(0, 0, 0, 0)` . 모든 픽셀의 모든 바이트는 0으로 초기화 됩니다.
 
-`SKCanvas`처리기에서 가져온의 그리기 화면은 `PaintSurface` 흰색 배경을 포함 하는 것 처럼 보일 수 있지만 `SKCanvasView` 자체는 투명 한 배경을 가지 며 페이지에는 흰색 배경이 있습니다. `BackgroundColor`의 xamarin.ios 속성을 xamarin.ios 색으로 설정 하 여이 사실을 직접 보여 줄 수 있습니다 `SKCanvasView` .
+`SKCanvas`처리기에서 가져온의 그리기 화면은 `PaintSurface` 흰색 배경을 포함 하는 것 처럼 보일 수 있지만 `SKCanvasView` 자체는 투명 한 배경을 가지 며 페이지에는 흰색 배경이 있습니다. Xamarin.Forms `BackgroundColor` 의 속성을 `SKCanvasView` 색으로 설정 하 여이 사실을 직접 보여 줄 수 있습니다 Xamarin.Forms .
 
 ```csharp
 canvasView.BackgroundColor = Color.Red;

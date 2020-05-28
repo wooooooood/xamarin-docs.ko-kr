@@ -1,57 +1,174 @@
 ---
-title: 분리 되지 않은 혼합 모드
-description: 색상, 채도 또는 명도 변경 하려면 분리 되지 않은 혼합 모드를 사용 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 9054539b08da89c0f7d8a93150866fb1b41e63f1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68642784"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130184"
 ---
 # <a name="the-non-separable-blend-modes"></a>분리 되지 않은 혼합 모드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-문서에서 볼 수 있듯이 [ **SkiaSharp 분리 가능한 blend 모드**](separable.md), 분리 가능한 blend 모드를 개별적으로 빨강, 녹색 및 파란색 채널에서 작업을 수행 합니다. 분리 가능한 비 blend 모드 변환 되지 않습니다. 색의 색상, 채도 및 명도 수준으로 운영 하 여 분리 되지 않은 혼합 모드 흥미로운 방식으로 색을 변경할 수 있습니다.
+SkiaSharp 분리 가능 blend [**모드**](separable.md)문서에서 볼 수 있듯이 분리 가능 blend 모드는 빨강, 녹색 및 파랑 채널에 대해 별도로 작업을 수행 합니다. 분리 되지 않은 혼합 모드는 그렇지 않습니다. 색, 채도 및 광도 수준에서 작동 하는 경우 분리 되지 않은 혼합 모드는 다음과 같은 다양 한 방식으로 색을 변경할 수 있습니다.
 
-![분리 가능한 비 샘플](non-separable-images/NonSeparableSample.png "분리 가능한 비 샘플")
+![분리 가능 하지 않은 샘플](non-separable-images/NonSeparableSample.png "분리 가능 하지 않은 샘플")
 
-## <a name="the-hue-saturation-luminosity-model"></a>색상-채도-명도 모델
+## <a name="the-hue-saturation-luminosity-model"></a>색상-채도-광도 모델
 
-분리 가능한 비 blend 모드를 이해 하려면 색상-채도-명도 모델에 대 한 색으로 대상 및 원본 픽셀을 처리 하는 데 필요한 됩니다. (명도 라고도 밝기입니다.)
+분리 되지 않은 혼합 모드를 이해 하려면 대상 및 원본 픽셀을 색-채도-광도 모델에서 색으로 처리 해야 합니다. (명도를 밝기 라고도 합니다.)
 
-HSL 색 모델 문서에서 설명한 [ **Xamarin.Forms를 사용 하 여 통합** ](../../basics/integration.md) 하 고 해당 문서의 예제 프로그램 HSL 색을 사용 하 여 실험을 허용 합니다. 만들 수 있습니다는 `SKColor` 색상, 채도 및 명도 값을 사용 하 여 정적을 사용 하 여 값 [ `SKColor.FromHsl` ](xref:SkiaSharp.SKColor.FromHsl*) 메서드.
+HSL 색 모델에 대해서는이 문서의 [**통합 Xamarin.Forms **](../../basics/integration.md) 및 샘플 프로그램에서 hsl 색을 사용 하 여 실험을 수행할 수 있습니다. 정적 메서드를 사용 `SKColor` 하 여 색상, 채도 및 명도 값을 사용 하 여 값을 만들 수 있습니다 [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
 
-색조 색의 기준 파장을 나타냅니다. 색상 값의 범위는 0에서 360 사이이 고 가감 및 subtractive 주를 순환 합니다. Red는 값 0, 노랑, 60, 녹색은 120, 사이안은 180, 파란색은 240, 자홍은 300,, 주기는 360에서 빨간색으로 돌아갑니다.
+색상은 색의 기준 wavelength 나타냅니다. 색상 값의 범위는 0에서 360 사이이 고 덧셈 및 subtractive 주를 순환 합니다. 빨강은 값 0, 노랑, 60, 녹색은 120, 사이안은 180, blue is 240, 자홍은 300, 주기가 다시 빨간색으로 바뀝니다.
 
-주요 색상 없는 경우 &mdash; 예를 들어, 색은 흰색, 검은색 또는 회색 음영을 &mdash; 색상은 정의 되지 않은 하 고 일반적으로 0으로 설정 합니다. 
+기준 색이 없는 경우 &mdash; 색은 흰색 또는 검은색 이거나 회색 음영 인 경우 색상은 정의 되지 &mdash; 않으며 일반적으로 0으로 설정 됩니다. 
 
-채도 값 범위는 0에서 100 하 고 색의 무결성을 나타낼 수 있습니다. 채도 값을 100 값 100 보다 grayish 되려면 색 보다 낮은 하는 동안 가장 고귀한 색이 됩니다. 회색 음영의 채도 값이 0이 발생합니다.
+채도 값의 범위는 0에서 100이 고 색의 순도를 나타낼 수 있습니다. 채도 값 100은 purest 색 이지만 100 보다 작은 값으로 인해 색이 더 grayish 됩니다. 채도 값이 0 이면 회색 음영이 생성 됩니다.
 
-명도 (또는 밝기) 값을 어떻게 밝은 색이를 나타냅니다. 명도 값 0은 다른 설정과 관계 없이 검정입니다. 마찬가지로, 명도 값 100은 흰색입니다. 
+명도 (또는 명도) 값은 색의 밝기를 나타냅니다. 광도 값 0은 다른 설정에 관계 없이 검정입니다. 마찬가지로 광도 값 100은 흰색입니다. 
 
-HSL 값 (0, 100, 50)에 순수한 빨간색 상태인 RGB 값 (FF, 00, 00)입니다. HSL 값 (180, 100, 50)에 RGB 값 (00에서 FF, FF), 순수 녹청입니다. 채도 줄이면으로 주요 색상 구성 요소는 감소 하 고 다른 구성 요소는 증가 합니다. 0의 채도 수준에서 구성 요소를 모두 동일 하 고 색이 회색조입니다. 검정; 이동할 명도 감소 흰색으로 이동할 명도 늘립니다.
+HSL 값 (0, 100, 50)은 순수 빨강의 RGB 값 (FF, 00, 00)입니다. HSL 값 (180, 100, 50)은 RGB 값 (00, FF, FF), 순수한 녹청입니다. 채도가 감소 함에 따라 기준 색 구성 요소가 감소 하 고 다른 구성 요소가 증가 합니다. 채도 수준 0에서 모든 구성 요소는 동일 하 고 색은 회색 음영입니다. 검정으로 이동 하려면 밝기 줄이기 흰색으로 이동 하려면 밝기를 늘립니다.
 
-## <a name="the-blend-modes-in-detail"></a>세부 정보에서 혼합 모드
+## <a name="the-blend-modes-in-detail"></a>혼합 모드 세부 정보
 
-다른 혼합 모드와 같은 4 가지 분리 되지 않은 혼합 모드 (이 종종 비트맵 이미지)는 대상 및 소스, 자주 변경 되는 단색 또는 그라데이션 포함 됩니다. 원본과 대상에서 색상, 채도 및 명도 값을 결합 하는 혼합 모드:
+다른 blend 모드와 마찬가지로 네 가지 분리 안 혼합 모드에는 대상 (종종 비트맵 이미지)과 원본 (종종 단일 색 또는 그라데이션)이 포함 됩니다. Blend 모드는 대상 및 원본에서 색상, 채도 및 명도 값을 결합 합니다.
 
-| 혼합 모드   | 원본에서 구성 요소 | 대상에서 구성 요소 |
-| ------------ | ---------------------- | --------------------------- |
-| `Hue`        | 색상                    | 채도 명도   |
-| `Saturation` | 채도             | 색상 및 명도          |
-| `Color`      | 색상 및 채도     | 명도                  | 
-| `Luminosity` | 명도             | 색상 및 채도          | 
+| Blend 모드   | 원본에서 구성 요소 | 대상의 구성 요소 |
+| ---
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-W3C를 참조 하세요 [ **합성 하 고 수준 1 혼합** ](https://www.w3.org/TR/compositing-1/) 알고리즘에 대 한 사양입니다.
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-**분리 되지 않은 혼합 모드** 페이지에는 `Picker` 다음 중 하나를 선택 하려면 blend 모드 및 3 `Slider` HSL 색을 선택 하는 뷰:
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------ | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+----------- | ---제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-------------- | | `Hue`        | 색상 | 채도 및 광도 | | `Saturation` | 포화 | 색상 및 광도 | | `Color`      | 색상 및 채도 | 명도 | | `Luminosity` | 광도 | 색상 및 채도 | 
+
+알고리즘에 대 한 W3C [**합성 및 혼합 수준 1**](https://www.w3.org/TR/compositing-1/) 지정을 참조 하세요.
+
+분리 **되지 않은 혼합 모드** 페이지에는 `Picker` 다음 blend 모드 중 하나를 선택 하 고 세 개의 보기를 선택 하 여 `Slider` HSL 색을 선택할 수 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -111,9 +228,9 @@ W3C를 참조 하세요 [ **합성 하 고 수준 1 혼합** ](https://www.w3.or
 </ContentPage>
 ```
 
-공간 절약, 3 개를 `Slider` 뷰 프로그램의 사용자 인터페이스에서 식별 되지 않습니다. 순서는 색상, 채도 및 명도 해야 합니다. 두 `Label` 뷰 페이지의 맨 아래에 HSL 및 RGB 색 값을 표시 합니다.
+공간을 절약 하기 위해 세 가지 `Slider` 보기는 프로그램의 사용자 인터페이스에서 식별 되지 않습니다. 순서는 색상, 채도 및 광도 임을 명심 해야 합니다. `Label`페이지 맨 아래에 있는 두 개의 보기에는 HSL 및 RGB 색 값이 표시 됩니다.
 
-코드 숨김 파일 비트맵 리소스 중 하나를 로드, 표시 하는 캔버스에서 가장 크게 다음 사각형을 사용 하 여 캔버스에 다룹니다. 사각형 색이 세 가지에 따라 `Slider` 뷰와 혼합 모드는 선택한은 `Picker`:
+코드를 사용 하는 파일은 비트맵 리소스 중 하나를 로드 하 고 캔버스에서 최대한 크게 표시 한 다음 캔버스에 캔버스를 포함 합니다. 사각형 색은 세 가지 보기를 기반으로 `Slider` 하며 blend 모드는에서 선택한 것입니다 `Picker` .
 
 ```csharp
 public partial class NonSeparableBlendModesPage : ContentPage
@@ -176,51 +293,51 @@ public partial class NonSeparableBlendModesPage : ContentPage
 }
 ```
 
-확인 프로그램 HSL 색 값을 3 개의 슬라이더에 의해 선택 된 것으로 표시 되지 않습니다. 대신, 색 값을 해당 슬라이더에서 만들고 사용 하 여는 [ `ToHsl` ](xref:SkiaSharp.SKColor.ToHsl*) 색상, 채도 및 명도 값을 수집 하는 방법입니다. 때문에 이것이 합니다 `FromHsl` 메서드는 HSL 색에서 내부적으로 저장 되는 RGB 색 변환는 `SKColor` 구조입니다. `ToHsl` 메서드 HSL RGB에서 변환 되지만 결과가 원래 값을 항상 수 없습니다. 
+프로그램에는 세 개의 슬라이더에서 선택한 대로 HSL 색 값이 표시 되지 않습니다. 대신 이러한 슬라이더에서 색 값을 만든 다음 메서드를 사용 하 여 색상 [`ToHsl`](xref:SkiaSharp.SKColor.ToHsl*) , 채도 및 명도 값을 가져옵니다. 이는 `FromHsl` 메서드가 HSL 색을 구조에 내부적으로 저장 된 RGB 색으로 변환 하기 때문입니다 `SKColor` . `ToHsl`메서드는 RGB에서 HSL로 변환 하지만 결과는 항상 원래 값이 아닙니다. 
 
-예를 들어 `FromHsl` 때문에 (0, 0, 0)의 RGB 색 (180, 50, 0) HSL 값을 변환 합니다 `Luminosity` 0입니다. `ToHsl` 메서드 색상 및 채도 값 관련이 없기 때문에 (0, 0, 0)의 RGB 색 HSL 색 (0, 0, 0)으로 변환 합니다. 더 나은 것이 프로그램을 사용 하는 경우 대신 슬라이더를 사용 하 여 지정한 프로그램을 사용 하는 HSL 색의 표현을 표시 합니다.
+예를 들어 `FromHsl` 는 0 이므로 HSL 값 (180, 50, 0)을 RGB 색 (0, 0, 0)으로 변환 합니다 `Luminosity` . `ToHsl`메서드는 RGB 색 (0, 0, 0)을 HSL 색 (0, 0, 0)으로 변환 합니다 .이 경우 색상 및 채도 값은 관련이 없기 때문입니다. 이 프로그램을 사용 하는 경우 슬라이더를 사용 하 여 지정 하는 것이 아니라 프로그램에서 사용 하는 HSL 색의 표현을 확인 하는 것이 좋습니다.
 
-`SKBlendModes.Hue` blend 모드 대상의 채도 명도 수준을 유지 하면서 원본의 Hue 수준을 사용 합니다. 이 혼합 모드 테스트를 할 때 채도 명도 슬라이더 설정 해야 합니다를 0 이나 100이 아닌 이러한 경우 색상 정의 되어 있지 않으므로 고유 하 게 합니다.
+`SKBlendModes.Hue`Blend 모드는 대상의 채도 및 광도 수준을 유지 하면서 원본의 색상 수준을 사용 합니다. 이 blend 모드를 테스트할 때 채도 및 명도 슬라이더는 0 또는 100이 아닌 다른 것으로 설정 해야 합니다. 이러한 경우에는 해당 색상이 고유 하 게 정의 되지 않습니다.
 
-[![분리 가능한 비 Blend 모드-Hue](non-separable-images/NonSeparableBlendModes-Hue.png "Hue 분리 되지 않은 혼합 모드")](non-separable-images/NonSeparableBlendModes-Hue-Large.png#lightbox)
+[![분리 되지 않은 혼합 모드-색상](non-separable-images/NonSeparableBlendModes-Hue.png "분리 되지 않은 혼합 모드-색상")](non-separable-images/NonSeparableBlendModes-Hue-Large.png#lightbox)
 
-경우 하 모든 항목 기능 빨강을 사용 하 여 (마찬가지로 왼쪽에 있는 iOS 스크린샷) 슬라이더를 0으로 설정 합니다. 이미지 없는 완전히 그렇다고 하지만 녹색 및 파랑의 합니다. 물론 여전히 회색조 결과 있습니다. 예를 들어, RGB 색을 나타내는 (40, 40, C0) HSL 색 (240, 50, 50)과 같습니다. 색상은 파란색 하지만 50의 채도 값 빨간색 및 녹색 구성 요소도 개 있음을 나타냅니다. 색상을 0으로 설정 된 경우 `SKBlendModes.Hue`, HSL 색은 (0, 50, 50), RGB 색 (C0, 40, 40). 여전히 파랑 및 녹색 구성 요소 있지만 이제 주요 구성 요소는 빨간색입니다.
+을 사용 하는 경우 왼쪽에 있는 iOS 스크린샷 처럼 슬라이더를 0으로 설정 하면 모든 것이 reddish로 설정 됩니다. 그러나 이미지에 녹색 및 파란색이 모두 없음을 의미 하는 것은 아닙니다. 여전히 결과에 회색 음영이 있습니다. 예를 들어 RGB 색 (40, 40, C0)은 HSL 색 (240, 50, 50)과 동일 합니다. 색상은 파란색 이지만 채도 값 50는 빨강 및 녹색 구성 요소도 있음을 나타냅니다. 색조가를 사용 하 여 0으로 설정 된 경우 `SKBlendModes.Hue` HSL 색은 (0, 50, 50) RGB 색 (c0, 40, 40)입니다. 여전히 파란색 및 녹색 구성 요소가 있지만 이제 주요 구성 요소는 빨강입니다.
 
-`SKBlendModes.Saturation` blend 모드 색상 및 대상의 광도 사용 하 여 원본의 채도 수준을 결합 합니다. 같은 색상, 채도 제대로 정의 되지 않은 명도 0 이나 100입니다. 이론적으로 이러한 두 가지 극단적인 간의 명도 설정 작동 해야 합니다. 그러나 명도 설정 보다 더 많은 결과 영향을 줄 것 같습니다. 명도 50으로 설정 하 고 그림 채도 수준을 설정 하는 방법을 볼 수 있습니다.
+`SKBlendModes.Saturation`Blend 모드는 원본의 채도 수준을 대상의 색상 및 광도와 결합 합니다. 색조로 색과 마찬가지로, 명도가 0 또는 100 인 경우에는 채도가 잘 정의 되지 않습니다. 이론적으로는 두 극단 사이의 광도 설정이 작동 해야 합니다. 그러나 광도 설정은 결과에 더 많은 영향을 주는 것 처럼 보입니다. 밝기를 50로 설정 하 고 사진의 채도 수준을 설정 하는 방법을 확인할 수 있습니다.
 
-[![분리 가능한 비 Blend 모드-채도](non-separable-images/NonSeparableBlendModes-Saturation.png "채도 분리 되지 않은 혼합 모드")](non-separable-images/NonSeparableBlendModes-Saturation-Large.png#lightbox)
+[![분리 되지 않은 혼합 모드-채도](non-separable-images/NonSeparableBlendModes-Saturation.png "분리 되지 않은 혼합 모드-채도")](non-separable-images/NonSeparableBlendModes-Saturation-Large.png#lightbox)
 
-이 혼합 모드를 사용 하 여 색 두기 이미지의 채도 높이기 위해 또는 회색조만 이루어진 결과 이미지 (예: 왼쪽에 있는 iOS 스크린샷) 0 채도 줄일 수 있습니다.
+이 blend 모드를 사용 하 여 흐릿한 이미지의 색 채도를 높이 거 나 회색 음영 으로만 구성 된 결과 이미지에 대해 채도를 0 (왼쪽의 iOS 스크린샷)에서 0으로 낮출 수 있습니다.
 
-`SKBlendModes.Color` blend 모드 대상의 광도 유지 되지만 색상 및 채도 소스를 사용 합니다. 마찬가지로 즉, 기계의 사이 명도 슬라이더의 모든 설정이 작동 해야 합니다. 
+`SKBlendModes.Color`Blend 모드는 대상의 광도를 유지 하지만 원본의 색상 및 채도를 사용 합니다. 즉, 극단 사이에 있는 광도 슬라이더의 모든 설정이 작동 하는 것을 의미 합니다. 
 
-[![분리 가능한 비 Blend 모드-색](non-separable-images/NonSeparableBlendModes-Color.png "분리 되지 않은 혼합 모드-색")](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
+[![분리 되지 않은 혼합 모드-색](non-separable-images/NonSeparableBlendModes-Color.png "분리 되지 않은 혼합 모드-색")](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
 
-이 혼합 모드 응용 프로그램을 곧 표시 됩니다.
+이 blend 모드의 응용 프로그램은 곧 표시 됩니다.
 
-마지막으로, 합니다 `SKBlendModes.Luminosity` 혼합 모드의 반대는 `SKBlendModes.Color`합니다. 해당 색상 및 대상의 채도 유지 하지만 원본의 명도 사용 합니다. `Luminosity` Blend 모드는 일괄 처리의 가장 자세한 내용입니다. 색상 및 채도 슬라이더는 이미지에 영향을 주지만 중간 광도 에서도 이미지는 고유 하지 않습니다.
+마지막으로 `SKBlendModes.Luminosity` blend 모드는와 반대입니다 `SKBlendModes.Color` . 대상의 색조와 채도를 유지 하지만 소스의 광도를 사용 합니다. `Luminosity`Blend 모드는 배치의 가장 중요 하지 않습니다. 색상 및 채도 슬라이더는 이미지에 영향을 주지만 중간 광도 에서도 이미지는 고유 하지 않습니다.
 
-[![분리 가능한 비 Blend 모드-명도](non-separable-images/NonSeparableBlendModes-Luminosity.png "명도 분리 되지 않은 혼합 모드")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
+[![분리 되지 않은 혼합 모드-광도](non-separable-images/NonSeparableBlendModes-Luminosity.png "분리 되지 않은 혼합 모드-광도")](non-separable-images/NonSeparableBlendModes-Luminosity-Large.png#lightbox)
 
-이론적으로 이미지의 광도 늘리거나 해야 더 밝게 또는 음영이 짙을 수록 해당 합니다. 흥미롭게도 [명도 예제에는 Skia **SkBlendMode 참조** ](https://skia.org/user/api/SkBlendMode_Reference#Luminosity) 와 매우 유사 합니다.
+이론적으로 이미지의 광도를 늘리거나 줄이는 것은 더 어둡거나 더 어두워집니다. 흥미로운 것은, c # [ **참조** 의 명도 예제](https://skia.org/user/api/SkBlendMode_Reference#Luminosity) 는 매우 유사 합니다.
 
-것 일반적으로 전체 대상 이미지에 적용 한 색을 구성 하는 소스를 사용 하 여 분리 되지 않은 혼합 모드 중 하나를 사용 해야 하는 경우입니다. 효과가 너무 유용합니다. 이미지의 한 부분에 영향을 제한 해야 합니다. 이 경우 원본 transparancy, 통합 아마도 하는 또는 아마도 원본 작은 그래픽으로 제한 됩니다.
+일반적으로 전체 대상 이미지에 적용 되는 단일 색으로 구성 된 소스가 있는 분리 되지 않은 혼합 모드 중 하나를 사용 하는 경우가 아닙니다. 효과가 너무 많습니다. 이미지의 한 부분으로 효과를 제한 하려고 합니다. 이 경우 소스는 transparancy을 통합 하거나 소스를 더 작은 그래픽으로 제한할 수 있습니다.
 
-## <a name="a-matte-for-a-separable-mode"></a>분리 가능한 모드에 대 한 매트
+## <a name="a-matte-for-a-separable-mode"></a>분리 가능 모드의 무광택
 
-여기에 리소스로 포함 된 비트맵 중 하나인 합니다 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플입니다. 파일 이름이 **Banana.jpg**:
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스로 포함 된 비트맵 중 하나는 다음과 같습니다. 파일 이름은 **바나나입니다.**
 
-![바나나 Monkey](non-separable-images/Banana.jpg "Banana Monkey")
+![바나나 원숭이](non-separable-images/Banana.jpg "바나나 원숭이")
 
-바나나만 포함 하는 매트를 두는 것이 가능 합니다. 리소스에도를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플입니다. 파일 이름이 **BananaMatte.png**:
+바나나만 포함 하는 매트를 만들 수 있습니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 리소스 이기도 합니다. 파일 이름은 **BananaMatte입니다**.
 
-![바나나 매트](non-separable-images/BananaMatte.png "Banana 매트")
+![바나나 무광택](non-separable-images/BananaMatte.png "바나나 무광택")
 
-검은색 banana 셰이프 외에도 비트맵의 나머지는 투명 합니다.
+Black 바나나 셰이프를 제외 하 고 나머지 비트맵은 투명 합니다.
 
-합니다 **파란색 Banana** 색상 및 채도 monkey를 누른 채로 바나나 변경할 수 있지만 아무 이미지에서를 변경 하려면 페이지에서 해당 매트를 사용 합니다. 
+**파란색 바나나** 페이지는 해당 매트를 사용 하 여 원숭이가 보유 하 고 있는 바나나의 색조와 채도를 변경 하지만 이미지에서 다른 아무 것도 변경 하지 않습니다. 
 
-다음과에서 `BlueBananaPage` 클래스를 **Banana.jpg** 필드로 비트맵 로드 됩니다. 생성자 로드를 **BananaMatte.png** 으로 비트맵의 `matteBitmap` 개체가 아니라 해당 생성자에 관계 없이 해당 개체를 유지 하지 않습니다. 세 번째 비트맵의 이름이 아니라 `blueBananaBitmap` 만들어집니다. 합니다 `matteBitmap` 에 그려집니다 `blueBananaBitmap` 뒤에 `SKPaint` 사용 하 여 해당 `Color` 파랑으로 설정 및 해당 `BlendMode` 로 `SKBlendMode.SrcIn`합니다. `blueBananaBitmap` 대부분 투명 하지만 바나나 solid 순수 파란색 이미지를 사용 하 여 유지 됩니다.
+다음 클래스에서 `BlueBananaPage` **바나나** 비트맵은 필드로 로드 됩니다. 생성자는 **BananaMatte** 비트맵을 `matteBitmap` 개체로 로드 하지만 해당 개체를 생성자 밖으로 유지 하지는 않습니다. 대신 라는 세 번째 비트맵이 `blueBananaBitmap` 생성 됩니다. 는로 `matteBitmap` 설정 되 `blueBananaBitmap` `SKPaint` 고가 `Color` blue로 설정 되 고가 `BlendMode` 로 설정 된 `SKBlendMode.SrcIn` 이 그려집니다. 는 `blueBananaBitmap` 주로 투명 하 게 유지 되지만 바나나의 진한 순수한 파랑 이미지를 사용 합니다.
 
 ```csharp
 public class BlueBananaPage : ContentPage
@@ -283,11 +400,11 @@ public class BlueBananaPage : ContentPage
 }
 ```
 
-`PaintSurface` 처리기는 banana 보유 monkey를 사용 하 여 비트맵을 그립니다. 이 코드 뒤에 표시 `blueBananaBitmap` 사용 하 여 `SKBlendMode.Color`입니다. 바나나 화면을 통해 각 픽셀의 색상 및 채도 240 색상 값 100의 채도 값을 해당 하는 파란색으로 바뀝니다. 그러나 광도, 동일 하 게 유지, 즉, 새 색에도 불구 하 고 현실적인 텍스처는 banana 계속:
+`PaintSurface`처리기는 바나나을 보유 하는 원숭이를 사용 하 여 비트맵을 그립니다. 이 코드 뒤에는가 표시 됩니다 `blueBananaBitmap` `SKBlendMode.Color` . 바나나의 표면에서 각 픽셀의 색상 및 채도는 색상 240에 해당 하 고 채도 값은 100 인 단색 파란색으로 바뀝니다. 그러나 광도는 동일 하 게 유지 됩니다. 즉, 바나나는 새 색에도 불구 하 고 실제 질감이 계속 유지 됩니다.
 
-[![바나나 파란색](non-separable-images/BlueBanana.png "Banana 파란색")](non-separable-images/BlueBanana-Large.png#lightbox)
+[![파란색 바나나](non-separable-images/BlueBanana.png "파란색 바나나")](non-separable-images/BlueBanana-Large.png#lightbox)
 
-Blend 모드를 변경해 보세요 `SKBlendMode.Saturation`합니다. banana 노란색 남아 있지만 더 강 할수록 노란색입니다. 실제 응용 프로그램에서는이 banana 파란색 설정 보다 더 바람직합니다 효과 수 있습니다.
+Blend 모드를로 변경해 보세요 `SKBlendMode.Saturation` . 바나나 노란색으로 유지 되지만 더 강한 노랑입니다. 실제 응용 프로그램에서는 바나나 blue를 설정 하는 것 보다 더 적합할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

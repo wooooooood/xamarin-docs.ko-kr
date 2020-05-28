@@ -1,54 +1,57 @@
 ---
-title: Xamarin.ios IndicatorView
-description: IndicatorView는 CarouselView에서 항목 수 및 현재 위치를 나타내는 표시기를 표시 하는 컨트롤입니다.
-ms.prod: xamarin
-ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/27/2020
-ms.openlocfilehash: e76cf6e766a95994fa2862deb9eb73928f4769a2
-ms.sourcegitcommit: 5d22f37dfc358678df52a4d17c57261056a72cb7
+title: Xamarin.FormsIndicatorView
+description: ''
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a6bf11fd80dd5226ae26dd392e80f784a9b296bf
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77674534"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84131991"
 ---
-# <a name="xamarinforms-indicatorview"></a>Xamarin.ios IndicatorView
+# <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
-`IndicatorView`는 항목의 수 및 현재 위치를 나타내는 표시기를 `CarouselView`에 표시 하는 컨트롤입니다.
+는 `IndicatorView` 항목의 수 및 현재 위치를 나타내는 표시기를에 표시 하는 컨트롤입니다 `CarouselView` .
 
 [![IOS 및 Android에서 CarouselView 및 IndicatorView의 스크린샷](indicatorview-images/circles.png "IndicatorView 원")](indicatorview-images/circles-large.png#lightbox "IndicatorView 원")
 
-`IndicatorView`는 iOS 및 Android 플랫폼의 Xamarin. Forms 4.4 및 유니버설 Windows 플랫폼의 4.5에서 사용할 수 있습니다. 그러나 현재 실험적 이며 `Forms.Init`를 호출 하기 전에 iOS의 `AppDelegate` 클래스 또는 Android의 `MainActivity` 클래스에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
+`IndicatorView`는 Xamarin.Forms iOS 및 Android 플랫폼에서 4.4, 유니버설 Windows 플랫폼에서 4.5에 제공 됩니다. 그러나 현재 실험적 이며 iOS의 클래스에 다음 코드 줄을 추가 `AppDelegate` 하거나를 `MainActivity` 호출 하기 전에 Android의 클래스에 다음 코드 줄을 추가 하는 방법 으로만 사용할 수 있습니다 `Forms.Init` .
 
 ```csharp
 Forms.SetFlags("IndicatorView_Experimental");
 ```
 
-`IndicatorView`는 다음 속성을 정의 합니다.
+`IndicatorView`는 다음 속성을 정의합니다.
 
-- `int`형식의 `Count`표시기의 수입니다.
-- `bool`형식의 `HideSingle`는 하나만 있을 때 표시기를 숨길지 여부를 나타냅니다. 기본값은 `true`입니다.
-- `Color`형식의 `IndicatorColor`표시기 색입니다.
-- `double`형식의 `IndicatorSize`표시기 크기입니다. 기본값은 6.0입니다.
-- `Layout<View>`형식의 `IndicatorLayout``IndicatorView`을 렌더링 하는 데 사용 되는 레이아웃 클래스를 정의 합니다. 이 속성은 Xamarin.ios로 설정 되며 일반적으로 개발자가 설정할 필요가 없습니다.
-- `DataTemplate`형식의 `IndicatorTemplate`각 표시기의 모양을 정의 하는 템플릿입니다.
-- `IndicatorShape`형식의 `IndicatorsShape`각 표시기의 모양입니다.
-- `IEnumerable`형식의 `ItemsSource`이며, 표시기가 표시 될 컬렉션입니다. 이 속성은 `CarouselView.IndicatorView` 속성이 설정 될 때 자동으로 설정 됩니다.
-- `int`형식의 `MaximumVisible`표시 되는 최대 표시기 수입니다. 기본값은 `int.MaxValue`입니다.
-- 현재 선택한 지표 인덱스를 `int`형식의 `Position`입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 `CarouselView.IndicatorView` 속성이 설정 될 때 자동으로 설정 됩니다.
-- `Color`형식의 `SelectedIndicatorColor``CarouselView`의 현재 항목을 나타내는 표시기 색입니다.
+- `Count`형식의, `int` 표시기 수를 표시 합니다.
+- `HideSingle`형식의는 `bool` 하나만 있을 때 표시기를 숨길지 여부를 나타냅니다. 기본값은 `true`입니다.
+- `IndicatorColor`형식의, `Color` 표시기 색입니다.
+- `IndicatorSize`형식의, `double` 표시기 크기를 표시 합니다. 기본값은 6.0입니다.
+- `IndicatorLayout`형식의는를 `Layout<View>` 렌더링 하는 데 사용 되는 레이아웃 클래스를 정의 합니다 `IndicatorView` . 이 속성은에 의해 설정 되며 Xamarin.Forms 일반적으로 개발자가 설정할 필요가 없습니다.
+- `IndicatorTemplate``DataTemplate`각 표시기의 모양을 정의 하는 템플릿인 형식의입니다.
+- `IndicatorsShape`형식의, `IndicatorShape` 각 표시기의 모양입니다.
+- `ItemsSource`형식의 이며, `IEnumerable` 표시기가 표시 될 컬렉션입니다. 이 속성은 속성이 설정 될 때 자동으로 설정 됩니다 `CarouselView.IndicatorView` .
+- `MaximumVisible`형식의, `int` 표시 가능한 최대 지표 수입니다. 기본값은 `int.MaxValue`입니다.
+- `Position`형식의, `int` 현재 선택한 지표 인덱스입니다. 이 속성은 `TwoWay` 바인딩을 사용 합니다. 이 속성은 속성이 설정 될 때 자동으로 설정 됩니다 `CarouselView.IndicatorView` .
+- `SelectedIndicatorColor`형식의,의 `Color` 현재 항목을 나타내는 표시기의 색입니다 `CarouselView` .
 
-이러한 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원 됩니다. 즉, 데이터 바인딩의 대상이 될 수 있고 스타일을 지정할 수 있습니다.
+이러한 속성은 개체에 의해 지원 됩니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 즉, 데이터 바인딩의 대상 및 스타일을 지정할 수 있습니다.
 
 ## <a name="create-an-indicatorview"></a>IndicatorView 만들기
 
-다음 예제에서는 XAML로 `IndicatorView`를 인스턴스화하는 방법을 보여 줍니다.
+다음 예제에서는 XAML로를 인스턴스화하는 방법을 보여 줍니다 `IndicatorView` .
 
 ```xaml
 <StackLayout>
@@ -65,19 +68,19 @@ Forms.SetFlags("IndicatorView_Experimental");
 </StackLayout>
 ```
 
-이 예에서는 `IndicatorView` `CarouselView`아래에서 렌더링 되며 `CarouselView`의 각 항목에 대 한 표시기가 표시 됩니다. `IndicatorView` `CarouselView.IndicatorView` 속성을 `IndicatorView` 개체로 설정 하 여 데이터로 채워집니다. 각 표시기는 연한 회색 원 이지만 `CarouselView`의 현재 항목을 나타내는 표시기는 진한 회색입니다.
+이 예제에서는의 `IndicatorView` `CarouselView` 각 항목에 대 한 표시기를 사용 하 여 아래에 렌더링 됩니다 `CarouselView` . 는 `IndicatorView` 속성을 개체로 설정 하 여 데이터로 채워집니다 `CarouselView.IndicatorView` `IndicatorView` . 각 표시기는 연한 회색 원 이지만의 현재 항목을 나타내는 표시기는 `CarouselView` 진한 회색입니다.
 
 > [!IMPORTANT]
-> `CarouselView.IndicatorView` 속성을 설정 하면 `IndicatorView.Position` 속성이 `CarouselView.Position` 속성에 바인딩하고 `IndicatorView.ItemsSource` 속성은 `CarouselView.ItemsSource` 속성에 바인딩합니다.
+> 속성을 설정 하면 속성이 속성에 바인딩되어 속성에 속성 `CarouselView.IndicatorView` `IndicatorView.Position` `CarouselView.Position` 바인딩이 생성 `IndicatorView.ItemsSource` `CarouselView.ItemsSource` 됩니다.
 
 ## <a name="change-indicator-shape"></a>표시기 모양 변경
 
-`IndicatorView` 클래스에는 표시기의 모양을 결정 하는 `IndicatorsShape` 속성이 있습니다. 이 속성은 `IndicatorShape` 열거형 멤버 중 하나로 설정할 수 있습니다.
+클래스에는 `IndicatorView` `IndicatorsShape` 표시기의 모양을 결정 하는 속성이 있습니다. 이 속성은 열거형 멤버 중 하나로 설정할 수 있습니다 `IndicatorShape` .
 
-- `Circle` 표시기 셰이프가 원형이 되도록 지정 합니다. 이 값은 `IndicatorView.IndicatorsShape` 속성의 기본값입니다.
-- `Square` 표시기 셰이프가 사각형 임을 나타냅니다.
+- `Circle`표시기 셰이프를 원형으로 지정 합니다. 이 값은 `IndicatorView.IndicatorsShape` 속성의 기본값입니다.
+- `Square`표시기 셰이프가 정사각형 임을 나타냅니다.
 
-다음 예에서는 사각형 표시기를 사용 하도록 구성 된 `IndicatorView`를 보여 줍니다.
+다음 예제에서는 `IndicatorView` 사각형 표시기를 사용 하도록 구성 된를 보여 줍니다.
 
 ```xaml
 <IndicatorView x:Name="indicatorView"
@@ -88,9 +91,9 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ## <a name="change-indicator-size"></a>표시기 크기 변경
 
-`IndicatorView` 클래스에는 장치 독립적 단위의 표시기 크기를 결정 하는 `double`형식의 `IndicatorSize` 속성이 있습니다. 이 속성의 기본값은 6.0입니다.
+클래스에는 `IndicatorView` `IndicatorSize` `double` 장치 독립적 단위의 표시기 크기를 결정 하는 형식의 속성이 있습니다. 이 속성의 기본값은 6.0입니다.
 
-다음 예에서는 더 큰 표시기를 표시 하도록 구성 된 `IndicatorView`를 보여 줍니다.
+다음 예제에서는 `IndicatorView` 더 큰 표시기를 표시 하도록 구성 된를 보여 줍니다.
 
 ```xaml
 <IndicatorView x:Name="indicatorView"
@@ -99,9 +102,9 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ## <a name="limit-the-number-of-indicators-displayed"></a>표시 되는 표시기 수 제한
 
-`IndicatorView` 클래스에는 표시 가능한 최대 표시기 수를 결정 하는 `int`형식의 `MaximumVisible` 속성이 있습니다.
+클래스에는 표시 되는 `IndicatorView` `MaximumVisible` `int` 최대 표시기 수를 결정 하는 형식의 속성이 있습니다.
 
-다음 예에서는 최대 6 개의 표시기를 표시 하도록 구성 된 `IndicatorView`를 보여 줍니다.
+다음 예제에서는 `IndicatorView` 최대 6 개의 표시기를 표시 하도록 구성 된를 보여 줍니다.
 
 ```xaml
 <IndicatorView x:Name="indicatorView"
@@ -110,7 +113,7 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 ## <a name="define-indicator-appearance"></a>표시기 모양 정의
 
-`IndicatorView.IndicatorTemplate` 속성을 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate)설정 하 여 각 표시기의 모양을 정의할 수 있습니다.
+속성을로 설정 하 여 각 표시기의 모양을 정의할 수 있습니다 `IndicatorView.IndicatorTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) .
 
 ```xaml
 <StackLayout>
@@ -133,13 +136,13 @@ Forms.SetFlags("IndicatorView_Experimental");
 </StackLayout>
 ```
 
-[`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 에 지정 된 요소는 각 표시기의 모양을 정의 합니다. 이 예제에서 각 표시기는 `FontImage` 태그 확장을 사용 하 여 글꼴 아이콘을 표시 하는 [`Image`](xref:Xamarin.Forms.Image) 입니다.
+에서 지정 된 요소는 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 각 표시기의 모양을 정의 합니다. 이 예제에서 각 표시기는 [`Image`](xref:Xamarin.Forms.Image) 태그 확장을 사용 하 여 글꼴 아이콘을 표시 하는입니다 `FontImage` .
 
 다음 스크린샷은 글꼴 아이콘을 사용 하 여 렌더링 된 표시기를 보여 줍니다.
 
 [![IOS 및 Android에서 템플릿 IndicatorView의 스크린샷](indicatorview-images/templated.png "템플릿 기반 IndicatorView")](indicatorview-images/templated-large.png#lightbox "템플릿 기반 IndicatorView")
 
-`FontImage` 태그 확장에 대 한 자세한 내용은 [FontImage 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)을 참조 하세요.
+태그 확장에 대 한 자세한 내용은 `FontImage` [FontImage 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#fontimage-markup-extension)을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,30 +1,33 @@
 ---
-title: Windows 프로젝트 설정
-description: 이전 Xamarin.ios 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 Xamarin.ios 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/10/2018
-ms.openlocfilehash: 5d2d9c8c2104e96f16c3a3ff169f795068605f59
-ms.sourcegitcommit: 7011303ff1868f3dd3858415706f4b5732ee44f1
+title: ''
+description: 이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 합니다 Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 87ad78e97046eef7fd6c2e062fa9f84d92c11b38
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83696092"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132212"
 ---
 # <a name="setup-windows-projects"></a>Windows 프로젝트 설정
 
-_기존 Xamarin.ios 솔루션에 새 Windows 프로젝트 추가_
+_기존 솔루션에 새 Windows 프로젝트 추가 Xamarin.Forms_
 
-이전 Xamarin. 양식 솔루션 (또는 macOS에서 만든)은 UWP (유니버설 Windows 플랫폼) 앱 프로젝트를 포함 하지 않습니다. 따라서 Windows 10 (UWP) 앱을 빌드하려면 UWP 프로젝트를 수동으로 추가 해야 합니다.
+이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)은 UWP (유니버설 Windows 플랫폼) 앱 프로젝트를 포함 하지 않습니다. 따라서 Windows 10 (UWP) 앱을 빌드하려면 UWP 프로젝트를 수동으로 추가 해야 합니다.
 
 ## <a name="add-a-universal-windows-platform-app"></a>유니버설 Windows 플랫폼 앱 추가
 
 **Windows 10** 의 **Visual STUDIO 2019** 은 UWP 앱을 빌드하는 데 권장 됩니다. 유니버설 Windows 플랫폼에 대 한 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide/)를 참조 하세요.
 
-UWP는 Xamarin에서 사용할 수 있습니다. 양식 2.1 이상 및 Xamarin.ios는 Xamarin. Forms 2.2 이상에서 지원 됩니다.
+UWP는 Xamarin.Forms 2.1 이상 및에서 사용할 수 있습니다 Xamarin.Forms . 맵은 2.2 이상에서 지원 됩니다 Xamarin.Forms .
 
 <a href="#troubleshooting">문제 해결</a> 섹션에서 유용한 팁을 확인 하세요.
 
@@ -38,13 +41,13 @@ UWP는 Xamarin에서 사용할 수 있습니다. 양식 2.1 이상 및 Xamarin.i
 
   ![](universal-images/target-version.png "New Universal Windows Platform Project Dialog")
 
- 3. UWP 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리 ...** 를 선택 하 고 **Xamarin. Forms** 패키지를 추가 합니다. 솔루션의 다른 프로젝트도 동일한 버전의 Xamarin.ios 패키지로 업데이트 되는지 확인 합니다.
+ 3. UWP 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리 ...** 를 선택 하 고 패키지를 추가 합니다. **Xamarin.Forms** 솔루션의 다른 프로젝트도 동일한 버전의 패키지로 업데이트 되는지 확인 Xamarin.Forms 합니다.
 
  3-4. 새 UWP 프로젝트가 **빌드 > Configuration Manager** 창에 빌드 되었는지 확인 합니다 .이는 기본적으로 발생 하지 않습니다. 유니버설 프로젝트에 대 한 **빌드** 및 **배포** 상자의 틱:
 
   [![](universal-images/configuration-sml.png "Configuration Manager Window")](universal-images/configuration.png#lightbox "Configuration Manager Window")
 
- 5. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 참조** 를 선택 하 고 xamarin.ios 응용 프로그램 프로젝트 (.NET Standard 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
+ 5. 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 참조** 를 선택 하 고 Xamarin.Forms 응용 프로그램 프로젝트 (.NET Standard 또는 공유 프로젝트)에 대 한 참조를 만듭니다.
 
   ![](universal-images/addref-sml.png "Reference Manager Dialog")
 
@@ -81,7 +84,7 @@ xmlns:forms="using:Xamarin.Forms.Platform.UWP"
 public sealed partial class MainPage  // REMOVE ": Page"
 ```
 
- pt. **MainPage.xaml.cs**에서 `LoadApplication` 생성자에 호출을 추가 `MainPage` 하 여 xamarin.ios 앱을 시작 합니다.
+ pt. **MainPage.xaml.cs**에서 `LoadApplication` 생성자에 호출을 추가 `MainPage` 하 여 앱을 시작 합니다 Xamarin.Forms .
 
 ```csharp
 // below this existing line
@@ -111,7 +114,7 @@ LoadApplication(new YOUR_NAMESPACE.App());
 
 ### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>".NET 네이티브 도구 체인으로 컴파일"을 사용 하는 경우 "대상 호출 예외"
 
-UWP 앱이 여러 어셈블리를 참조 하는 경우 (예: 타사 컨트롤 라이브러리 또는 앱 자체가 여러 라이브러리로 분할 된 경우) Xamarin은 이러한 어셈블리 (예: 사용자 지정 렌더러)에서 개체를 로드 하지 못할 수 있습니다.
+UWP 앱이 여러 어셈블리를 참조 하는 경우 (예: 타사 컨트롤 라이브러리 또는 앱 자체가 여러 라이브러리로 분할 된 경우)는 Xamarin.Forms 이러한 어셈블리 (예: 사용자 지정 렌더러)에서 개체를 로드 하지 못할 수 있습니다.
 
 프로젝트에 대 한 **속성 > 빌드 > 일반** 창에서 UWP 앱에 대 한 옵션인 **.NET 네이티브 도구 체인으로 컴파일** 을 사용 하는 경우이 문제가 발생할 수 있습니다.
 

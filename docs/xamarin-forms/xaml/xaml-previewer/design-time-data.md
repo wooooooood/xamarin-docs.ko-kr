@@ -1,18 +1,21 @@
 ---
-title: XAML 미리 보기에서 디자인 타임 데이터 사용
-description: 이 문서에서는 디자인 타임 데이터를 사용 하 여 응용 프로그램을 실행 하지 않고 XAML 미리 보기에서 데이터를 많이 사용 하는 레이아웃을 표시 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
-ms.technology: xamarin-forms
-author: maddyleger1
-ms.author: maleger
-ms.date: 03/27/2019
-ms.openlocfilehash: 47171c3853fa8f5eb572971e119d51733cb53a40
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72303248"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127373"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>XAML 미리 보기에서 디자인 타임 데이터 사용
 
@@ -28,7 +31,7 @@ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
 ```
 
-네임 스페이스를 추가한 후에는 특성 또는 컨트롤 앞에 `d:`을 추가 하 여 XAML 미리 보기에 표시할 수 있습니다. @No__t_0 있는 요소는 런타임에 표시 되지 않습니다.
+네임 스페이스를 추가한 후에는 `d:` 특성 또는 컨트롤 앞에 배치 하 여 XAML 미리 보기에 표시할 수 있습니다. 가 있는 요소는 `d:` 런타임에 표시 되지 않습니다.
 
 예를 들어 일반적으로 데이터가 바인딩된 레이블에 텍스트를 추가할 수 있습니다.
 
@@ -38,9 +41,9 @@ mc:Ignorable="d"
 
 [![레이블에 텍스트를 사용 하 여 시간 데이터 디자인](xaml-previewer-images/designtimedata-label-sm.png "텍스트를 사용 하 여 시간 데이터 디자인")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
-이 예제에서는 `d:Text` 하지 않고 XAML 미리 보기에서 레이블에 아무것도 표시 하지 않습니다. 대신 "이름!"이 표시 됩니다. 여기서 레이블에는 런타임에 실제 데이터가 포함 됩니다.
+이 예제에서를 사용 하지 않으면 `d:Text` XAML 미리 보기에서 레이블에 아무것도 표시 되지 않습니다. 대신 "이름!"이 표시 됩니다. 여기서 레이블에는 런타임에 실제 데이터가 포함 됩니다.
 
-색, 글꼴 크기 및 간격과 같이 Xamarin.ios 컨트롤의 특성과 함께 `d:`를 사용할 수 있습니다. 컨트롤 자체에 추가할 수도 있습니다.
+`d:` Xamarin.Forms 색, 글꼴 크기 및 간격과 같은 컨트롤의 특성과 함께를 사용할 수 있습니다. 컨트롤 자체에 추가할 수도 있습니다.
 
 ```xaml
 <d:Button Text="Design Time Button" />
@@ -86,9 +89,9 @@ Listview은 모바일 앱에 데이터를 표시 하는 인기 있는 방법입�
 
 [![ListView를 사용 하 여 디자인 타임 데이터](xaml-previewer-images/designtimedata-itemssource-sm.png "ListView를 사용 하 여 디자인 타임 데이터")](xaml-previewer-images/designtimedata-itemssource-lg.png#lightbox)
 
-이 예제에서는 XAML 미리 보기에서 3 개의 TextCells의 ListView를 표시 합니다. 프로젝트에서 기존 데이터 모델로 `x:String`를 변경할 수 있습니다.
+이 예제에서는 XAML 미리 보기에서 3 개의 TextCells의 ListView를 표시 합니다. `x:String`프로젝트의 기존 데이터 모델로 변경할 수 있습니다.
 
-데이터 개체의 배열을 만들 수도 있습니다. 예를 들어 `Monkey` 데이터 개체의 공용 속성을 디자인 타임 데이터로 생성할 수 있습니다.
+데이터 개체의 배열을 만들 수도 있습니다. 예를 들어 데이터 개체의 공용 속성을 `Monkey` 디자인 타임 데이터로 생성할 수 있습니다.
 
 ```csharp
 namespace Monkeys.Models
@@ -137,7 +140,7 @@ xmlns:models="clr-namespace:Monkeys.Models"
 
 ### <a name="requirements"></a>요구 사항
 
-디자인 타임 데이터에는 최소 버전의 Xamarin. 양식 3.6이 필요 합니다.
+디자인 타임 데이터에는 최소 3.6 버전이 필요 Xamarin.Forms 합니다.
 
 ### <a name="intellisense-shows-squiggly-lines-under-my-design-time-data"></a>IntelliSense가 디자인 타임 데이터 아래에 물결 모양의 선을 표시 합니다.
 

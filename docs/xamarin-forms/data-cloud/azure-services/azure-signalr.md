@@ -1,25 +1,28 @@
 ---
-title: Xamarin.ios를 사용 하는 Azure SignalR Service
-description: Xamarin.ios를 사용 하 여 Azure SignalR Service 및 Azure Functions 시작
-ms.prod: xamarin
-ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 06/07/2019
-ms.openlocfilehash: 7b5cb6a93e5dcb958fcb30f0469b8300b169ee86
-ms.sourcegitcommit: cead6f989860331777b0502a5e56269958046517
+title: Azure SignalR ServiceXamarin.Forms
+description: Azure SignalR Service를 시작 하 고 다음을 사용 하 여 Azure Functions 하세요.Xamarin.Forms
+ms.prod: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75687429"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139440"
 ---
-# <a name="azure-signalr-service-with-xamarinforms"></a>Xamarin.ios를 사용 하는 Azure SignalR Service
+# <a name="azure-signalr-service-with-xamarinforms"></a>Azure SignalR ServiceXamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core SignalR는 응용 프로그램에 실시간 통신을 추가 하는 프로세스를 간소화 하는 응용 프로그램 모델입니다. Azure SignalR Service는 확장성 있는 SignalR 응용 프로그램을 신속 하 게 개발 하 고 배포할 수 있습니다. Azure Functions는 이벤트 중심의 확장 가능한 응용 프로그램을 구성 하기 위해 결합 될 수 있는 수명이 짧은 활성이 아닌 코드 메서드입니다.
 
-이 문서 및 샘플에서는 Azure SignalR 서비스와 Azure Functions를 Xamarin.ios와 결합 하 여 연결 된 클라이언트에 실시간 메시지를 전달 하는 방법을 보여 줍니다.
+이 문서 및 샘플에서는 Azure SignalR 서비스와 Azure Functions를 결합 하 여 Xamarin.Forms 연결 된 클라이언트에 실시간 메시지를 전달 하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
@@ -55,7 +58,7 @@ Azure SignalR Service의 **키** 섹션에는 **연결 문자열이**포함 되�
 
 예제 응용 프로그램을 테스트 하려면 Azure Portal에서 새 Azure Functions 앱을 만들어야 합니다. 이 URL은 샘플 응용 프로그램 **Constants.cs** 파일에 사용 되므로 **앱 이름을** 적어 둡니다. 다음 스크린샷은 "xdocsfunctions" 라는 새 Azure Functions 앱을 만드는 방법을 보여 줍니다.
 
-[![Azure Functions 앱 만들기의 스크린샷](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
+[![Azure Functions 앱 만들기 스크린샷](azure-signalr-images/azure-functions-app-cropped.png)](azure-signalr-images/azure-functions-app-full.png#lightbox)
 
 Azure 함수는 Visual Studio 2019에서 Azure Functions App 인스턴스에 배포할 수 있습니다. 다음 섹션에서는 샘플 응용 프로그램의 두 함수를 Azure Functions App 인스턴스에 배포 하는 방법을 설명 합니다.
 
@@ -63,7 +66,7 @@ Azure 함수는 Visual Studio 2019에서 Azure Functions App 인스턴스에 배
 
 샘플 응용 프로그램은 **Negotiate.cs** 및 **Talk.cs**라는 파일에 서버를 사용 하지 않는 두 개의 Azure Functions를 포함 하는 파일 \ **서버**라는 클래스 라이브러리를 포함 합니다.
 
-`Negotiate` 함수는 `AccessToken` 속성 및 `Url` 속성을 포함 하는 `SignalRConnectionInfo` 개체를 사용 하 여 웹 요청에 응답 합니다. 모바일 응용 프로그램은 이러한 값을 사용 하 여 SignalR hub에 자신을 등록 합니다. 다음 코드는 `Negotiate` 함수를 보여 줍니다.
+`Negotiate`함수는 `SignalRConnectionInfo` `AccessToken` 속성 및 속성을 포함 하는 개체를 사용 하 여 웹 요청에 응답 합니다 `Url` . 모바일 응용 프로그램은 이러한 값을 사용 하 여 SignalR hub에 자신을 등록 합니다. 다음 코드에서는 함수를 보여 줍니다 `Negotiate` .
 
 ```csharp
 [FunctionName("Negotiate")]
@@ -77,7 +80,7 @@ public static SignalRConnectionInfo GetSignalRInfo(
 }
 ```
 
-`Talk` 함수는 POST 본문에 메시지 개체를 제공 하는 HTTP POST 요청에 응답 합니다. POST 본문은 `SignalRMessage` 변환 되어 SignalR hub로 전달 됩니다. 다음 코드는 `Talk` 함수를 보여 줍니다.
+`Talk`함수는 post 본문에 메시지 개체를 제공 하는 HTTP post 요청에 응답 합니다. 게시물 본문은로 변환 되 `SignalRMessage` 고 SignalR hub로 전달 됩니다. 다음 코드에서는 함수를 보여 줍니다 `Talk` .
 
 ```csharp
 [FunctionName("Talk")]
@@ -139,11 +142,11 @@ Azure Functions 앱 인스턴스를 선택 하면 대상 Azure Functions 앱에 
 
 ![Azure Functions 앱에 게시 된 함수](azure-signalr-images/azure-functions-deployed.png "Azure Functions 앱에 게시 된 함수")
 
-## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Xamarin과 Azure SignalR Service 통합
+## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Azure SignalR Service 통합Xamarin.Forms
 
-Azure SignalR Service와 Xamarin.ios 응용 프로그램 간의 통합은 이벤트 처리기가 세 개의 이벤트에 할당 된 `MainPage` 클래스에서 인스턴스화된 SignalR Service 클래스입니다. 이러한 이벤트 처리기에 대 한 자세한 내용은 [xamarin.ios에서 SignalR 서비스 클래스 사용](#use-the-signalr-service-class-in-xamarinforms)을 참조 하세요.
+Azure SignalR 서비스와 응용 프로그램 간의 통합은 Xamarin.Forms `MainPage` 3 개의 이벤트에 할당 된 이벤트 처리기를 사용 하 여 클래스에서 인스턴스화된 SignalR Service 클래스입니다. 이러한 이벤트 처리기에 대 한 자세한 내용은 [에서 Xamarin.Forms SignalR Service 클래스 사용 ](#use-the-signalr-service-class-in-xamarinforms)을 참조 하세요.
 
-샘플 응용 프로그램에는 Azure Functions 앱의 URL 끝점으로 사용자 지정 해야 하는 **Constants.cs** 클래스가 포함 되어 있습니다. `HostName` 속성의 값을 Azure Functions 앱 주소로 설정 합니다. 다음 코드는 `HostName` 값 예제를 사용 하 여 **Constants.cs** 속성을 보여 줍니다.
+샘플 응용 프로그램에는 Azure Functions 앱의 URL 끝점으로 사용자 지정 해야 하는 **Constants.cs** 클래스가 포함 되어 있습니다. 속성의 값을 `HostName` Azure Functions 앱 주소로 설정 합니다. 다음 코드에서는 예제 값을 사용 하 여 **Constants.cs** 속성을 보여 줍니다 `HostName` .
 
 ```csharp
 public static class Constants
@@ -165,13 +168,13 @@ public static class Constants
 ```
 
 > [!NOTE]
-> 샘플 응용 프로그램 **Constants.cs** 파일의 `Username` 속성은 장치의 `RuntimePlatform` 값을 username으로 사용 합니다. 이를 통해 장치를 쉽게 테스트 하 고 메시지를 전송 하는 장치를 식별할 수 있습니다. 실제 응용 프로그램에서이 값은 등록 또는 로그인 프로세스 중에 수집 되는 고유한 사용자 이름이 될 수 있습니다.
+> `Username`샘플 응용 프로그램 **Constants.cs** 파일의 속성은 장치 `RuntimePlatform` 값을 사용자 이름으로 사용 합니다. 이를 통해 장치를 쉽게 테스트 하 고 메시지를 전송 하는 장치를 식별할 수 있습니다. 실제 응용 프로그램에서이 값은 등록 또는 로그인 프로세스 중에 수집 되는 고유한 사용자 이름이 될 수 있습니다.
 
 ### <a name="the-signalr-service-class"></a>SignalR service 클래스
 
-샘플 응용 프로그램에서 SignalR **client** 프로젝트의 `SignalRService` 클래스는 Azure 서비스에 연결 하기 위해 Azure Functions 앱에서 함수를 호출 하는 구현을 보여 줍니다.
+`SignalRService`샘플 응용 프로그램의 SignalR **client** 프로젝트에 있는 클래스는 Azure 서비스에 연결 하기 위해 Azure Functions 앱에서 함수를 호출 하는 구현을 보여 줍니다.
 
-`SignalRService` 클래스의 `SendMessageAsync` 메서드는 Azure SignalR Service에 연결 된 클라이언트에 메시지를 보내는 데 사용 됩니다. 이 메서드는 JSON 직렬화 된 `Message` 개체를 게시 페이로드로 포함 하 여 Azure Functions 앱에서 호스트 되는 **통신** 함수에 HTTP POST 요청을 수행 합니다. **말하기** 함수는 연결 된 모든 클라이언트에 브로드캐스트하는 메시지를 Azure SignalR 서비스에 전달 합니다. 다음 코드에서는 `SendMessageAsync` 메서드를 보여 줍니다.
+`SendMessageAsync`클래스의 메서드를 `SignalRService` 사용 하 여 Azure SignalR 서비스에 연결 된 클라이언트에 메시지를 보낼 수 있습니다. 이 메서드는 JSON 직렬화 된 개체를 POST 페이로드로 포함 하 여 Azure Functions 앱에서 호스트 되는 통신 함수에 **대해** HTTP POST 요청을 수행 합니다 `Message` . **말하기** 함수는 연결 된 모든 클라이언트에 브로드캐스트하는 메시지를 Azure SignalR 서비스에 전달 합니다. 다음 코드에서는 `SendMessageAsync` 메서드를 보여 줍니다.
 
 ```csharp
 public async Task SendMessageAsync(string username, string message)
@@ -192,9 +195,9 @@ public async Task SendMessageAsync(string username, string message)
 }
 ```
 
-`SignalRService` 클래스의 `ConnectAsync` 메서드는 Azure Functions 앱에서 호스팅된 **Negotiate** 함수에 대해 HTTP GET 요청을 수행 합니다. **Negotiate** 함수는 `NegotiateInfo` 클래스의 인스턴스로 deserialize 되는 JSON을 반환 합니다. `NegotiateInfo` 개체가 검색 되 면 `HubConnection` 클래스의 인스턴스를 사용 하 여 Azure SignalR 서비스에 직접 등록 하는 데 사용 됩니다.
+`ConnectAsync`클래스의 메서드는 `SignalRService` Azure Functions 앱에서 호스팅된 **Negotiate** 함수에 대해 HTTP GET 요청을 수행 합니다. **Negotiate** 함수는 클래스의 인스턴스로 deserialize 되는 JSON을 반환 합니다 `NegotiateInfo` . `NegotiateInfo`개체가 검색 되 면 클래스의 인스턴스를 사용 하 여 Azure SignalR 서비스에 직접 등록 하는 데 사용 됩니다 `HubConnection` .
 
-ASP.NET Core SignalR는 들어오는 데이터를 열린 연결에서 메시지로 변환 하 고, 개발자가 메시지 유형을 정의 하 고 들어오는 메시지에 유형으로 이벤트 처리기를 바인딩할 수 있도록 합니다. `ConnectAsync` 메서드는 샘플 응용 프로그램의 **Constants.cs** 파일에 정의 된 메시지 이름에 대 한 이벤트 처리기를 등록 합니다 .이 파일은 기본적으로 "newmessage"입니다.
+ASP.NET Core SignalR는 들어오는 데이터를 열린 연결에서 메시지로 변환 하 고, 개발자가 메시지 유형을 정의 하 고 들어오는 메시지에 유형으로 이벤트 처리기를 바인딩할 수 있도록 합니다. `ConnectAsync`메서드는 샘플 응용 프로그램의 **Constants.cs** 파일에 정의 된 메시지 이름에 대 한 이벤트 처리기를 등록 합니다 .이 파일은 기본적으로 "newmessage"입니다.
 
 다음 코드에서는 `ConnectAsync` 메서드를 보여 줍니다.
 
@@ -231,9 +234,9 @@ public async Task ConnectAsync()
 ```
 
 > [!NOTE]
-> SignalR 서비스는 `System.Text.Json`을 사용 하 여 기본적으로 JSON을 serialize 및 deserialize 합니다. Newtonsoft.json와 같은 다른 라이브러리를 사용 하 여 직렬화 된 데이터는 SignalR 서비스에서 deserialize 되지 않을 수 있습니다. 샘플 프로젝트의 `HubConnection` 인스턴스에는 JSON serializer를 지정 하는 `AddNewtonsoftJsonProtocol`에 대 한 호출이 포함 되어 있습니다. 이 메서드는 프로젝트에 포함 되어야 하는 **AspNetCore** 라는 특수 NuGet 패키지에 정의 됩니다. `System.Text.Json`를 사용 하 여 JSON 데이터를 직렬화/역직렬화 하는 경우이 메서드와 NuGet 패키지를 사용 하면 안 됩니다.
+> SignalR 서비스는 `System.Text.Json` 를 사용 하 여 기본적으로 JSON을 serialize 및 deserialize 합니다. Newtonsoft.json와 같은 다른 라이브러리를 사용 하 여 직렬화 된 데이터는 SignalR 서비스에서 deserialize 되지 않을 수 있습니다. `HubConnection`샘플 프로젝트의 인스턴스는에 대 한 호출을 포함 `AddNewtonsoftJsonProtocol` 하 여 JSON serializer를 지정 합니다. 이 메서드는 프로젝트에 포함 되어야 하는 **AspNetCore** 라는 특수 NuGet 패키지에 정의 됩니다. 를 사용 하 여 `System.Text.Json` JSON 데이터를 직렬화/역직렬화 하는 경우이 메서드와 NuGet 패키지를 사용 하면 안 됩니다.
 
-`AddNewMessage` 메서드는 이전 코드와 같이 `ConnectAsync` 메시지의 이벤트 처리기로 바인딩됩니다. 메시지가 수신 되 면 `JObject`으로 제공 된 메시지 데이터를 사용 하 여 `AddNewMessage` 메서드가 호출 됩니다. `AddNewMessage` 메서드는 `JObject`를 `Message` 클래스의 인스턴스로 변환 하 고, 바인딩된 경우 `NewMessageReceived`에 대 한 처리기를 호출 합니다. 다음 코드에서는 `AddNewMessage` 메서드를 보여 줍니다.
+`AddNewMessage`메서드는 이전 코드와 같이 메시지의 이벤트 처리기로 바인딩됩니다 `ConnectAsync` . 메시지가 수신 되 면 `AddNewMessage` 로 제공 되는 메시지 데이터를 사용 하 여 메서드가 호출 됩니다 `JObject` . `AddNewMessage`메서드는을 `JObject` 클래스의 인스턴스로 변환 `Message` 하 고, 바인딩된 경우에 대해 처리기를 호출 합니다 `NewMessageReceived` . 다음 코드에서는 `AddNewMessage` 메서드를 보여 줍니다.
 
 ```csharp
 public void AddNewMessage(JObject message)
@@ -249,11 +252,11 @@ public void AddNewMessage(JObject message)
 }
 ```
 
-### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Xamarin.ios에서 SignalR 서비스 클래스 사용
+### <a name="use-the-signalr-service-class-in-xamarinforms"></a>에서 SignalR 서비스 클래스 사용Xamarin.Forms
 
-Xamarin.ios에서 SignalR service 클래스를 활용 하는 것은 `MainPage` 코드 지향 클래스의 `SignalRService` 클래스 이벤트를 바인딩하여 수행 됩니다.
+에서 SignalR service 클래스를 활용 Xamarin.Forms 하는 것은 `SignalRService` 코드 숨김이 클래스의 클래스 이벤트를 바인딩하여 수행 됩니다 `MainPage` .
 
-SignalR 연결이 성공적으로 완료 되 면 `SignalRService` 클래스의 `Connected` 이벤트가 발생 합니다. SignalR 연결에 실패 하면 `SignalRService` 클래스의 `ConnectionFailed` 이벤트가 발생 합니다. `SignalR_ConnectionChanged` 이벤트 처리기 메서드는 `MainPage` 생성자의 두 이벤트에 모두 바인딩됩니다. 이 이벤트 처리기는 연결 `success` 인수를 기반으로 연결 및 보내기 단추 상태를 업데이트 하 고, `AddMessage` 메서드를 사용 하 여 이벤트에서 제공 하는 메시지를 채팅 큐에 추가 합니다. 다음 코드에서는 `SignalR_ConnectionChanged` 이벤트 처리기 메서드를 보여 줍니다.
+`Connected`클래스의 이벤트는 `SignalRService` SignalR 연결이 성공적으로 완료 되 면 발생 합니다. `ConnectionFailed`클래스의 이벤트는 `SignalRService` SignalR 연결이 실패할 때 발생 합니다. `SignalR_ConnectionChanged`이벤트 처리기 메서드는 생성자의 두 이벤트에 모두 바인딩됩니다 `MainPage` . 이 이벤트 처리기는 연결 인수를 기반으로 연결 및 보내기 단추 상태 `success` 를 업데이트 하 고 메서드를 사용 하 여 이벤트에서 제공 하는 메시지를 채팅 큐에 추가 합니다 `AddMessage` . 다음 코드에서는 `SignalR_ConnectionChanged` 이벤트 처리기 메서드를 보여 줍니다.
 
 ```csharp
 void SignalR_ConnectionChanged(object sender, bool success, string message)
@@ -266,7 +269,7 @@ void SignalR_ConnectionChanged(object sender, bool success, string message)
 }
 ```
 
-`SignalRService` 클래스의 `NewMessageReceived` 이벤트는 Azure SignalR 서비스에서 새 메시지를 받을 때 발생 합니다. `SignalR_NewMessageReceived` 이벤트 처리기 메서드는 `MainPage` 생성자의 `NewMessageReceived` 이벤트에 바인딩됩니다. 이 이벤트 처리기는 들어오는 `Message` 개체를 문자열로 변환 하 고 `AddMessage` 메서드를 사용 하 여 채팅 큐에 추가 합니다. 다음 코드에서는 `SignalR_NewMessageReceived` 이벤트 처리기 메서드를 보여 줍니다.
+`NewMessageReceived`클래스의 이벤트는 `SignalRService` Azure SignalR Service에서 새 메시지를 받을 때 발생 합니다. `SignalR_NewMessageReceived`이벤트 처리기 메서드는 `NewMessageReceived` 생성자의 이벤트에 바인딩됩니다 `MainPage` . 이 이벤트 처리기는 들어오는 `Message` 개체를 문자열로 변환 하 고 메서드를 사용 하 여 채팅 큐에 추가 합니다 `AddMessage` . 다음 코드에서는 `SignalR_NewMessageReceived` 이벤트 처리기 메서드를 보여 줍니다.
 
 ```csharp
 void SignalR_NewMessageReceived(object sender, Model.Message message)
@@ -276,7 +279,7 @@ void SignalR_NewMessageReceived(object sender, Model.Message message)
 }
 ```
 
-`AddMessage` 메서드는 채팅 큐에 `Label` 개체로 새 메시지를 추가 합니다. `AddMessage` 메서드는 주로 주 UI 스레드 외부에서 이벤트 처리기에 의해 호출 되므로 예외를 방지 하기 위해 주 스레드에서 UI 업데이트를 강제로 실행 합니다. 다음 코드에서는 `AddMessage` 메서드를 보여 줍니다.
+`AddMessage`메서드는 `Label` 채팅 큐에 개체로 새 메시지를 추가 합니다. `AddMessage`메서드는 주로 주 UI 스레드 외부에서 이벤트 처리기에 의해 호출 되므로 예외를 방지 하기 위해 주 스레드에서 UI 업데이트를 강제로 수행 합니다. 다음 코드에서는 `AddMessage` 메서드를 보여 줍니다.
 
 ```csharp
 void AddMessage(string message)
@@ -295,7 +298,7 @@ void AddMessage(string message)
 }
 ```
 
-## <a name="test-the-application"></a>응용 프로그램 테스트
+## <a name="test-the-application"></a>애플리케이션 테스트
 
 SignalR chat 응용 프로그램은 다음과 같이 제공 된 iOS, Android 및 UWP에서 테스트할 수 있습니다.
 
@@ -310,5 +313,5 @@ SignalR chat 응용 프로그램은 다음과 같이 제공 된 iOS, Android 및
 * [Xamarin 및 SignalR를 사용 하 여 실시간 모바일 앱 개발](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
 * [SignalR 소개](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Azure Functions 소개](/azure/azure-functions/functions-overview)
-* [Azure Functions 설명서](/azure/azure-functions/)
+* [Azure Functions 설명서](/azure/azure-functions/) 리소스를 참조하세요.
 * [MVVM SignalR chat 샘플](https://github.com/lbugnion/sample-xamarin-signalr)

@@ -1,59 +1,62 @@
 ---
-title: SkiaSharp에서 경로 효과
-description: 이 문서에서는 샘플 코드를 사용 하 여이 보여 줍니다 및 경로에 선 그리기 및 입력을 사용할 수 있는 다양 한 SkiaSharp 경로 효과 설명 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/29/2017
-ms.openlocfilehash: 82755a6a87ec0a47c10aac7078beeab6e14c218d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759376"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128055"
 ---
-# <a name="path-effects-in-skiasharp"></a>SkiaSharp에서 경로 효과
+# <a name="path-effects-in-skiasharp"></a>SkiaSharp의 경로 효과
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_선 그리기 및 입력에 사용할 경로 허용 하는 다양 한 경로 효과 검색 합니다._
+_스트로크 그리기 및 채우기에 경로를 사용할 수 있도록 하는 다양 한 경로 효과를 검색 합니다._
 
-A *경로 효과* 의 인스턴스를 [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) 클래스에 의해 정의 되는 8 개의 정적 생성 방법 중 하나를 사용 하 여 만든 클래스입니다. `SKPathEffect` 개체 설정 됩니다는 [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) 속성을 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 작은 복제 경로 사용 하 여 줄을 따라 다양 한 예를 들어, 흥미로운 효과 대 한 개체 :
+*경로 효과* 는 [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) 클래스에 의해 정의 된 8 개의 정적 생성 메서드 중 하나를 사용 하 여 만든 클래스의 인스턴스입니다. `SKPathEffect`그런 다음 개체를 개체의 속성으로 설정 하 여 [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) [`SKPaint`](xref:SkiaSharp.SKPaint) 여러 개의 흥미로운 효과를 적용 합니다. 예를 들어, 작은 복제 된 경로를 사용 하 여 줄을 스트로크 합니다.
 
 ![연결 된 체인 샘플](effects-images/patheffectsample.png)
 
-경로 효과 수행할 수 있습니다.
+경로 효과를 사용 하 여 다음을 수행할 수 있습니다.
 
-- 점 및 대시를 사용 하 여 선을 스트로크합니다
-- 스트로크 채워진된 모든 경로 사용 하 여 줄
-- 빗살 무늬 선을 사용 하 여 영역 채우기
-- 바둑판식으로 배열 된 경로 사용 하 여 영역 채우기
-- 날카로운 모퉁이가 둥근 확인
-- 임의 "지터" 선과 곡선을 추가 합니다.
+- 점과 대시가 있는 선 스트로크
+- 채워진 경로를 사용 하 여 선 스트로크
+- 빗살 무늬 선으로 영역 채우기
+- 타일 경로를 사용 하 여 영역 채우기
+- 날카로운 모퉁이가 둥근 모양 만들기
+- 선 및 곡선에 임의의 "지터" 추가
 
-또한 둘 이상의 경로 효과 결합할 수 있습니다.
+또한 두 개 이상의 경로 효과를 결합할 수 있습니다.
 
-이 문서에 사용 하는 방법도 보여 줍니다 합니다 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath*) 메서드의 `SKPaint` 의 속성을 적용 하 여 다른 경로를 하나의 경로 변환할 `SKPaint`등 `StrokeWidth` 및 `PathEffect`합니다. 이 인해 다른 경로 대 한 개요는 경로 가져오는 것과 같은 몇 가지 흥미로운 기술입니다. `GetFillPath` 경로 효과 관련 하 여 도움이 됩니다.
+또한이 문서에서는의 메서드를 사용 하 여 [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) `SKPaint` `SKPaint` 및를 비롯 한의 속성을 적용 하 여 한 경로를 다른 경로로 변환 하 `StrokeWidth` 는 방법을 보여 줍니다 `PathEffect` . 이로 인해 다른 경로에 대 한 개요 인 경로를 얻는 것과 같은 몇 가지 흥미로운 기술이 있습니다. `GetFillPath`는 경로 효과와 연결 하는 데도 유용 합니다.
 
 ## <a name="dots-and-dashes"></a>점 및 대시
 
-사용 된 [ `PathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) 문서에 설명 된 메서드 [ **점 및 대시**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)합니다. 메서드의 첫 번째 인수가 두 개 이상의 값을 교대로 반복 되는 대시의 길이 대시 사이 간격의 길이 사이의 짝수를 포함 하는 배열:
+메서드 사용은 [`PathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) [**점 및 대시**](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md)문서에 설명 되어 있습니다. 메서드의 첫 번째 인수는 대시의 길이와 대시 간 간격의 길이 사이에서 교대로 반복 되는 두 개 이상의 값을 포함 하는 배열입니다.
 
 ```csharp
 public static SKPathEffect CreateDash (Single[] intervals, Single phase)
 ```
 
-이러한 값은 *되지* 스트로크 너비를 기준으로 합니다. 스트로크 너비는 10을 줄 사각형 대시 및 간격을 사각형으로 구성 하는 경우 예를 들어 설정 된 `intervals` 배열 {10, 10}. `phase` 대시 패턴 내에서 줄 시작 되는 인수를 나타냅니다. 이 예제에서는 사각형 격차를 사용 하 여 시작 하는 줄을 하려는 경우 설정 `phase` 10입니다.
+이러한 값은 스트로크 너비를 기준으로 *하지 않습니다* . 예를 들어 스트로크 너비가 10이 고 정사각형 대시와 정사각형으로 구성 된 줄을 원하는 경우 `intervals` 배열을 {10, 10}으로 설정 합니다. `phase`인수는 줄이 대시 패턴 내에서 시작 되는 위치를 나타냅니다. 이 예제에서 줄을 사각형 간격으로 시작 하려면를 `phase` 10으로 설정 합니다.
 
-대시의 끝은 영향을 받지 합니다 `StrokeCap` 속성의 `SKPaint`합니다. 넓은 선 너비에 대 한이 속성을 설정 하는 매우 일반적 이기 `SKStrokeCap.Round` 대시의 끝을 반올림 합니다. 이 경우 값을 `intervals` 배열을 *하지* 길어지는 반올림에서 결과 포함 합니다. 이 팩트 순환 점 0의 너비를 지정 해야 한다는 것을 의미 합니다. 10의 스트로크 너비의 사용에 순환 점과 같은 지름의 점 간의 차이 사용 하 여 줄을 만들려면는 `intervals` 배열 {0, 20}.
+대시의 끝은의 속성에 의해 영향을 받습니다 `StrokeCap` `SKPaint` . 넓은 스트로크 너비의 경우이 속성을로 설정 하 여 대시의 끝을 둥글게 하는 것이 일반적입니다 `SKStrokeCap.Round` . 이 경우 배열의 값은 `intervals` 반올림으로 인 한 추가 길이를 포함 *하지 않습니다* . 이 사실은 원형 점에 0 너비를 지정 해야 함을 의미 합니다. 스트로크 너비 (10)의 경우 같은 지름의 점 사이에 원형 점과 간격이 있는 선을 만들려면 `intervals` {0, 20}의 배열을 사용 합니다.
 
-**점으로 구분 된 텍스트 애니메이션** 비슷합니다는 **윤곽선이 있는 텍스트** 문서에서 설명 하는 페이지 [ **통합 텍스트와 그래픽** ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) 에서 텍스트 문자를 설정 하 여 설명 표시는 `Style` 의 속성을 `SKPaint` 개체를 `SKPaintStyle.Stroke`입니다. 또한 **점으로 구분 된 텍스트 애니메이션** 사용 하 여 `SKPathEffect.CreateDash` 이 개요는 점으로 구분 된 형태를 제공 하 고 프로그램 또한 애니메이션를 `phase` 인수를 `SKPathEffect.CreateDash` 텍스트를 둘러싸는 여행을 점을 확인 하는 방법 문자입니다. 가로 모드에서 페이지가 같습니다.
+**애니메이션 점선 텍스트** 페이지는 개체의 속성을로 설정 하 여 [**텍스트와 그래픽 통합**](~/xamarin-forms/user-interface/graphics/skiasharp/basics/text.md) 문서에 설명 된 텍스트와 그래픽 통합 문서에서 설명 하는 **텍스트 페이지와** 비슷합니다 `Style` `SKPaint` `SKPaintStyle.Stroke` . 또한 **애니메이션 점선 텍스트** 는를 사용 `SKPathEffect.CreateDash` 하 여이 개요를 점선으로 표시 하 고, 프로그램은 `phase` 문자를 `SKPathEffect.CreateDash` 텍스트 문자 주위에 이동 하는 것 처럼 보이게 하는 메서드의 인수에도 애니메이션 효과를 줍니다. 가로 모드의 페이지는 다음과 같습니다.
 
 [![애니메이션 점선 텍스트 페이지의 삼중 스크린 샷](effects-images/animateddottedtext-small.png)](effects-images/animateddottedtext-large.png#lightbox)
 
-[ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 클래스는 몇 가지 상수를 정의 하 여 시작 하 고 재정의 `OnAppearing` 고 `OnDisappearing` 애니메이션에 대 한 메서드:
+[`AnimatedDottedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs)클래스는 일부 상수를 정의 하 여 시작 하 고 `OnAppearing` `OnDisappearing` 애니메이션에 대 한 및 메서드를 재정의 합니다.
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -95,7 +98,7 @@ public class AnimatedDottedTextPage : ContentPage
 }
 ```
 
-합니다 `PaintSurface` 처리기를 만들어 시작을 `SKPaint` 텍스트를 표시 하는 개체입니다. `TextSize` 속성 화면 너비에 따라 조정 됩니다.
+`PaintSurface`처리기는 `SKPaint` 텍스트를 표시 하는 개체를 만들어 시작 합니다. `TextSize`속성은 화면의 너비를 기준으로 조정 됩니다.
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -149,19 +152,19 @@ public class AnimatedDottedTextPage : ContentPage
 }
 ```
 
-메서드의 끝 합니다 `SKPathEffect.CreateDash` 메서드를 사용 하 여 호출 됩니다 합니다 `dashArray` 는 필드와 애니메이션이 적용 된로 정의 된 `phase` 값입니다. `SKPathEffect` 인스턴스로 설정 됩니다는 `PathEffect` 의 속성을 `SKPaint` 텍스트를 표시 하는 개체입니다.
+메서드가 끝날 때 `SKPathEffect.CreateDash` 메서드는 `dashArray` 필드로 정의 된 및 애니메이션 된 값을 사용 하 여 호출 됩니다 `phase` . `SKPathEffect`인스턴스는 `PathEffect` 텍스트를 표시 하는 개체의 속성으로 설정 됩니다 `SKPaint` .
 
-설정할 수 있습니다 합니다 `SKPathEffect` 개체는 `SKPaint` 텍스트를 측정 하 고 페이지의 가운데 하기 전에 개체입니다. 그러나이 경우 렌더링된 된 텍스트의 크기에 애니메이션된 점 및 대시 인해 약간 달라질 및 잠시를 진동 할 텍스트는 경향이 있습니다. (지금 사용해 보세요!)
+또는 `SKPathEffect` `SKPaint` 텍스트를 측정 하 고 페이지에 가운데 맞춤 하기 전에 개체를 개체에 설정할 수 있습니다. 그러나이 경우 애니메이션 된 점과 대시는 렌더링 된 텍스트의 크기에 일부 변형을 발생 시킵니다. 텍스트는 약간 진동. (사용해 보세요!)
 
-텍스트 문자 주위의 애니메이션된 점 원으로 있는지 각 닫힌된 곡선의 특정 지점 존재 내부 및 외부로 팝 할 점이 보일 있는 경우도 있습니다. 이것이 문자 윤곽선을 정의 하는 경로 시작 하 고 끝나는 위치입니다. 경로 길이 대시 패턴 (이 경우 20 픽셀) 길이 대 한 배수가 없으면 해당 패턴의 일부만 경로 끝에 맞출 수 있습니다.
+또한 텍스트 문자 주위에 애니메이션을 적용 하는 점으로 원을 표시 하는 것을 알 수 있습니다. 각 닫힌 곡선에는 점이 pop에 표시 되 고 존재 하지 않는 것으로 보입니다. 여기서는 문자 윤곽선을 정의 하는 경로가 시작 되 고 끝나는 위치입니다. 경로 길이가 대시 패턴의 정수 배수가 아닌 경우 (이 경우 20 픽셀) 해당 패턴의 일부만 경로의 끝에 맞출 수 있습니다.
 
-경로의 길이 맞게 대시 패턴의 길이를 조정할 수 있지만 문서에서 설명 하는 기술 경로의 길이 결정 해야 하는 [ **경로 정보 및 열거형** ](information.md).
+경로 길이에 맞게 대시 패턴의 길이를 조정할 수 있지만 경로를 결정 해야 합니다. 경로 [**정보 및 열거형**](information.md)문서에서 설명 하는 기술입니다.
 
-**Dot / Dash Morph** 대시 같습니다 다시 폼 대시를 결합 하는 점, 나눌 수 있도록 프로그램 애니메이션 자체는 대시 패턴을 적용 합니다.
+**점/대시 모핑** 프로그램은 대시 패턴 자체에 애니메이션을 적용 하 여 대시를 점으로 나누어 대시를 다시 폼으로 결합 하는 점으로 구분 합니다.
 
 [![점 대시 모핑 페이지의 삼중 스크린샷](effects-images/dotdashmorph-small.png)](effects-images/dotdashmorph-large.png#lightbox)
 
-합니다 [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) 재정의 클래스를 `OnAppearing` 및 `OnDisappearing` 이전 프로그램 했지만 클래스 정의와 같이 메서드를 `SKPaint` 필드로 개체:
+[`DotDashMorphPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs)클래스는 `OnAppearing` 이전 프로그램에서와 마찬가지로 및 메서드를 재정의 `OnDisappearing` 하지만 클래스는 개체를 필드로 정의 합니다 `SKPaint` .
 
 ```csharp
 public class DotDashMorphPage : ContentPage
@@ -243,11 +246,11 @@ public class DotDashMorphPage : ContentPage
 }
 ```
 
-합니다 `PaintSurface` 처리기가 페이지의 크기를 기준으로 타원형 경로 만들고 설정 하는 코드는 긴 작업을 실행 합니다 `dashArray` 및 `phase` 변수입니다. 애니메이션 변수 `t` 범위는 0에서 1로는 `if` 블록 4 개 분기에 해당 분기의 각 시간 중단 `tsub` 도 범위는 0에서 1 ~입니다. 맨 끝에서 프로그램을 만듭니다는 `SKPathEffect` 설정 하는 `SKPaint` 그리기에 대 한 개체입니다.
+`PaintSurface`처리기는 페이지 크기를 기준으로 타원형 경로를 만들고 및 변수를 설정 하는 긴 코드 섹션을 실행 `dashArray` `phase` 합니다. 애니메이션을 적용 하는 변수의 `t` 범위는 0에서 1 사이 `if` 이며, 블록은 해당 시간을 4 분기로 나누고 각 분기의 범위는 `tsub` 0에서 1 사이입니다. 이 프로그램은 가장 끝에서를 만들어 `SKPathEffect` `SKPaint` 그리기를 위해 개체로 설정 합니다.
 
-## <a name="from-path-to-path"></a>경로에 대 한 경로에서
+## <a name="from-path-to-path"></a>경로에서 경로로
 
-합니다 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,System.Single)) 메서드의 `SKPaint` 의 설정에 따라 다른 하나의 경로 설정 합니다 `SKPaint` 개체입니다. 이 과정을 보려면 대체는 `canvas.DrawPath` 다음 코드를 사용 하 여 이전 프로그램에서 호출 합니다.
+[`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,System.Single))의 메서드는 `SKPaint` 개체의 설정에 따라 한 경로를 다른 경로로 설정 `SKPaint` 합니다. 이 기능이 어떻게 작동 하는지 확인 하려면 `canvas.DrawPath` 이전 프로그램의 호출을 다음 코드로 바꿉니다.
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -260,34 +263,34 @@ canvas.DrawPath(newPath, newPaint);
 
 ```
 
-이 새 코드를 `GetFillPath` 변환 호출를 `ellipsePath` (되는 타원에만)에 `newPath`를 사용 하 여 표시 되는 `newPaint`합니다. `newPaint` 개체가 모든 기본 속성 설정을 사용 하 여 만들어집니다 점을 제외 하 고는 `Style` 속성 기반은 부울 값을 반환 `GetFillPath`합니다.
+이 새 코드에서 `GetFillPath` 호출은 `ellipsePath` (단지 oval)로 변환 되 고 `newPath` 로 표시 됩니다 `newPaint` . `newPaint` `Style` 속성이의 부울 반환 값을 기반으로 설정 된다는 점을 제외 하 고 모든 기본 속성 설정을 사용 하 여 개체가 만들어집니다 `GetFillPath` .
 
-시각적 개체에 설정 된 색을 제외 하 고 동일 `ellipsePaint` 있지만 `newPaint`합니다. 대신에 정의 된 단순한 타원 `ellipsePath`, `newPath` 일련의 점 및 대시를 정의 하는 다양 한 경로 윤곽을 포함 합니다. 이 다양 한 속성을 적용 한 결과인 `ellipsePaint` (특히 `StrokeWidth`, `StrokeCap`, 및 `PathEffect`)를 `ellipsePath` 결과 경로에 배치 하 고 `newPath`. 합니다 `GetFillPath` 메서드가 나타내는 부울 값을 대상 경로 입력할 수 있는지 여부 반환; 반환 값은이 예제에서는 `true` 경로 입력 하는 것에 대 한 합니다.
+시각적 개체는에 설정 된 색을 제외 하 고는 동일 `ellipsePaint` `newPaint` 합니다. 에 정의 된 단순한 타원이 아닌는 `ellipsePath` `newPath` 일련의 점과 대시를 정의 하는 다양 한 경로 컨투어를 포함 합니다. 이는에 대 한 다양 한 속성 `ellipsePaint` (특히,, `StrokeWidth` 및)을에 적용 하 `StrokeCap` 고 결과 `PathEffect` `ellipsePath` 경로를에 배치 `newPath` 하는 것입니다. `GetFillPath`메서드는 대상 경로를 채워야 하는지 여부를 나타내는 부울 값을 반환 합니다 .이 예제에서 반환 값은 `true` 경로를 채우는 데 사용할 수 있습니다.
 
-변경해 보세요 합니다 `Style` 에서 설정 `newPaint` 에 `SKPaintStyle.Stroke` 1 픽셀 너비 선으로 설명 된 개별 경로 윤곽을 확인할 수 있습니다.
+`Style`에서로 설정을 변경 하 `newPaint` 여 `SKPaintStyle.Stroke` 개별 경로 컨투어가 1 픽셀 너비의 선으로 표시 되는 것을 볼 수 있습니다.
 
-## <a name="stroking-with-a-path"></a>경로 사용 하 여 선 그리기
+## <a name="stroking-with-a-path"></a>경로를 사용 하 여 그리기
 
-합니다 [ `SKPathEffect.Create1DPath` ](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle)) 메서드는 개념적으로 비슷합니다 `SKPathEffect.CreateDash` 제외 하 고 대시 및 간격 패턴 보다는 경로 지정 합니다. 이 경로 여러 번 줄 선이나 곡선에 복제 됩니다.
+[`SKPathEffect.Create1DPath`](xref:SkiaSharp.SKPathEffect.Create1DPath(SkiaSharp.SKPath,System.Single,System.Single,SkiaSharp.SKPath1DPathEffectStyle))메서드는 `SKPathEffect.CreateDash` 대시 및 간격 패턴 대신 경로를 지정 한다는 점을 제외 하 고는 개념적으로 유사 합니다. 이 경로는 선 또는 곡선을 스트로크 하기 위해 여러 번 복제 됩니다.
 
-사용되는 구문은 다음과 같습니다.
+구문은 다음과 같습니다.
 
 ```csharp
 public static SKPathEffect Create1DPath (SKPath path, Single advance,
                                          Single phase, SKPath1DPathEffectStyle style)
 ```
 
-일반적으로 전달 하는 경로 `Create1DPath` 작고 (0, 0) 점을 가운데 맞춤 됩니다. `advance` 줄에 복제 되는 경로 매개 변수 경로 중심 사이의 거리를 나타냅니다. 일반적으로이 인수 경로의 대략적인 너비를 설정 합니다. `phase` 인수 수행 하므로 동일한 역할이 여기에서 수행 된 `CreateDash` 메서드.
+일반적으로에 전달 하는 경로는 `Create1DPath` 작고 점 (0, 0)을 중심으로 가운데 맞춤 됩니다. `advance`매개 변수는 패스가 줄에서 복제 될 때 경로 가운데 사이의 거리를 나타냅니다. 일반적으로이 인수를 경로의 대략적인 너비로 설정 합니다. `phase`인수는 메서드에서와 동일한 역할을 합니다 `CreateDash` .
 
-합니다 [ `SKPath1DPathEffectStyle` ](xref:SkiaSharp.SKPath1DPathEffectStyle) 에 세 가지 멤버가 있습니다.
+에는 [`SKPath1DPathEffectStyle`](xref:SkiaSharp.SKPath1DPathEffectStyle) 세 가지 멤버가 있습니다.
 
 - `Translate`
 - `Rotate`
 - `Morph`
 
-`Translate` 멤버의 경로 직선이 나 곡선을 따라 복제 되는 동일한 방향으로 유지 하면 됩니다. 에 대 한 `Rotate`, 경로 접선 곡선을 따라 회전 합니다. 경로 해당 일반 방향을 가로 선입니다. `Morph` 비슷합니다 `Rotate` 제외 하 고 경로 자체의 스트로크 되는 줄의 곡률에 맞게 곡선인 수도 있습니다.
+`Translate`멤버는 회선이 나 곡선을 따라 복제 되는 것과 동일한 방향으로 경로를 유지 합니다. 의 경우 곡선에 대 한 `Rotate` 탄젠트를 기준으로 경로가 회전 됩니다. 경로의 법선 방향은 가로 선입니다. `Morph`는와 유사 합니다 `Rotate` . 단,는 경로 자체가 스트로크 되는 선의 곡률과 일치 하는 곡선입니다.
 
-합니다 **1 D 경로 효과** 페이지에서는 이러한 세 가지 옵션을 보여 줍니다. 합니다 [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) 파일 열거형의 세 멤버에 해당 하는 세 가지 항목을 포함 하는 선택을 정의 합니다.
+**1D 경로 효과** 페이지는 이러한 세 가지 옵션을 보여 줍니다. [**OneDimensionalPathEffectPage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) 파일은 열거형의 세 멤버에 해당 하는 세 개의 항목이 포함 된 선택기를 정의 합니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -325,7 +328,7 @@ public static SKPathEffect Create1DPath (SKPath path, Single advance,
 </ContentPage>
 ```
 
-합니다 [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) 코드 숨김 파일 정의 3 `SKPathEffect` 필드로 개체입니다. 이러한 모든 사용 하 여 만들어집니다 `SKPathEffect.Create1DPath` 사용 하 여 `SKPath` 개체를 사용 하 여 만든 `SKPath.ParseSvgPathData`합니다. 첫 번째는 간단한 상자, 두 번째는 다이아몬드 모양 및 세 번째 사각형입니다. 이러한 세 가지 효과 스타일을 보여 주기 위해 사용 됩니다.
+[**OneDimensionalPathEffectPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) 코드를 정의 하는 파일은 세 가지 개체를 필드로 정의 합니다 `SKPathEffect` . 이러한 개체는를 사용 하 여 `SKPathEffect.Create1DPath` 만든 개체와 함께를 사용 하 여 만듭니다 `SKPath` `SKPath.ParseSvgPathData` . 첫 번째 상자는 단순 상자이 고 두 번째는 다이아몬드 모양이 며 세 번째는 사각형입니다. 이는 세 가지 효과 스타일을 보여 주기 위해 사용 됩니다.
 
 ```csharp
 public partial class OneDimensionalPathEffectPage : ContentPage
@@ -396,35 +399,35 @@ public partial class OneDimensionalPathEffectPage : ContentPage
 }
 ```
 
-합니다 `PaintSurface` 처리기 자체, 루프 및 결정 선택기에 액세스 하는 베 지 어 곡선을 만듭니다 `PathEffect` 해당 스트로크를 사용 해야 합니다. 세 가지 옵션 — `Translate`, `Rotate`, 및 `Morph` -왼쪽에서 오른쪽으로 표시 됩니다.
+`PaintSurface`처리기는 자체를 반복 하는 베 지 어 곡선을 만들고 선택기에 액세스 하 여 `PathEffect` 스트로크를 스트로크 하는 데 사용 해야 하는 점을 결정 합니다. , 및의 세 가지 옵션은 `Translate` `Rotate` `Morph` 왼쪽에서 오른쪽으로 표시 됩니다.
 
 [![1D 경로 효과 페이지의 세 번째 스크린샷](effects-images/1dpatheffect-small.png)](effects-images/1dpatheffect-large.png#lightbox)
 
-에 지정 된 경로 `SKPathEffect.Create1DPath` 메서드 항상 채워집니다. 에 지정 된 경로 `DrawPath` 메서드는 경우에 항상 스트로크 되는 `SKPaint` 개체에 해당 `PathEffect` 1d 경로 효과를 설정 하는 속성입니다. 있음을 합니다 `pathPaint` 개체에 없습니다 `Style` 기본값은 일반적으로 설정 `Fill`, 경로 상관 없이 스트로크는 있지만 합니다.
+메서드에 지정 된 경로는 `SKPathEffect.Create1DPath` 항상 채워집니다. `DrawPath` `SKPaint` 개체의 `PathEffect` 속성이 1d 경로 효과로 설정 되어 있으면 메서드에 지정 된 경로가 항상 스트로크 됩니다. 개체에는 기본적으로 `pathPaint` `Style` 로 설정 된 설정이 `Fill` 없지만 경로는에 관계 없이 스트로크 됩니다.
 
-사용 하는 상자는 `Translate` 예로 20 픽셀 정사각형 및 `advance` 인수를 24로 설정 합니다. 이 차이로 인해 경우 줄 약 수평 또는 수직 상자 겹치는 상자의 대각선 28.3 픽셀 이므로 줄 대각선 되는 경우 잠시 상자 사이의 간격을 합니다.
+예제에 사용 되는 상자는 `Translate` 20 픽셀 사각형 이며 인수는 `advance` 24로 설정 됩니다. 이러한 차이로 인해 선 간격이 가로 또는 세로 일 때 상자 사이에 간격이 발생 하지만 상자의 대각선이 28.3 픽셀 이기 때문에 줄이 대각선 인 경우 상자는 약간 겹칩니다.
 
-다이아몬드 모양에는 `Rotate` 예제에서는 너비가 20 픽셀 이기도 합니다. `advance` 다이아몬드 줄의 곡률 함께 회전 되는지으로 터치 지점을 계속 되도록 20으로 설정 되었습니다.
+예제의 다이아몬드 도형은 `Rotate` 20 픽셀 너비 이기도 합니다. 은 (는) `advance` 20으로 설정 되므로 다이아몬드가 선의 곡률과 함께 회전 될 때 요소가 계속 해 서 접촉 됩니다.
 
-사각형 셰이프를 `Morph` 예로 사용 하 여 50 픽셀을 `advance` 55 베 지 어 곡선 주위 구부러진 것 처럼 사각형 사이의 간격을 작은 수 있도록 설정 합니다.
+예제의 사각형 도형은 `Morph` 50 픽셀 너비 이며, `advance` 베 지 어 곡선 주위에서 구부러진 사각형 사이에 약간 55의 간격이 있습니다.
 
-경우는 `advance` 인수가 경로의 크기 보다 작은 경우 복제 된 경로 겹칠 수 있습니다. 이 작업은 몇 가지 흥미로운 효과에서 발생할 수 있습니다. 합니다 **연결 된 체인** 일련의 중단을 catenary 눈에 띄는 모양에 연결 된 체인을 유사 하 게 보이는 원 겹치는 페이지에 표시 됩니다.
+`advance`인수가 경로의 크기 보다 작은 경우 복제 된 경로가 겹칠 수 있습니다. 이로 인해 몇 가지 흥미로운 효과가 발생할 수 있습니다. **연결 된 체인** 페이지에는 연결 된 체인과 유사 하 게 표시 되는 일련의 겹치는 원이 표시 되며,이는 다양 한 모양의 독특한 모양에서 중단 됩니다.
 
 [![연결 된 체인 페이지의 삼중 스크린샷](effects-images/linkedchain-small.png)](effects-images/linkedchain-large.png#lightbox)
 
-근접 찾고 실제로 원 아닙니다는 표시 됩니다. 체인의 각 링크는 두 개의 원호, 크기 및 배치 되므로 인접 링크를 사용 하 여 연결 하는 것 같습니다.
+매우 가까이 보이지만 실제로 원이 표시 되지 않는 것을 알 수 있습니다. 체인의 각 링크는 크기가 조정 되 고 위치가 지정 된 두 개의 원호 이며 인접 링크와 연결 하는 것 처럼 보입니다.
 
-체인 또는 uniform 가중치 분산의 케이블을 catenary의 형태로 중단 됩니다. 반전 된 catenary의 형태로 작성 하는 아키텍처는 아키텍처의 가중치에서 압력을 균등 하 게 요약 하는에서 혜택. catenary 간단해 보이는 수학 설명에 있습니다.
+다양 한 방식으로 정지 된 균일 한 무게 분포의 체인 또는 케이블입니다. 반전 된 식의 형태로 기본 제공 되는 아치는 아치의 무게와 동일한 압력 분포를 활용 합니다. 다음과 같이 간단한 수학적 설명을 포함 하 고 있습니다.
 
 `y = a · cosh(x / a)`
 
-합니다 *cosh* 은 쌍 곡 코사인 함수입니다. 에 대 한 *x* 0과 같지 *cosh* 0 및 *y* equals *는*합니다. catenary의 중심입니다. 같은 *코사인* 함수 *cosh* 이라고 *도*, 즉 *cosh(–x)* equals *cosh(x)* , 양수 또는 음수 인수 증가 대 한 값을 높이고 있습니다. 이러한 값은 catenary 측면을 형성 하는 곡선을 설명 합니다.
+*Cosh* 는 쌍곡선 코사인 함수입니다. *X* 가 0 인 경우 *cosh* 는 0이 고 *y* 는 *a*와 같습니다. 이는 다양 한 기능을 중심으로 합니다. *코사인* 함수와 마찬가지로 *cosh* 는 *짝수*여야 합니다. 즉, cosh *(– x)* 는 *cosh (x)* 가 되 고 양수 또는 음수 인수를 늘리면 값이 증가 하는 것을 의미 합니다. 이러한 값은 다양 한 측면을 형성 하는 곡선을 설명 합니다.
 
-적절 한 값 찾기 *는* 휴대폰의 페이지 크기 catenary에 맞게 아닙니다 직접 계산 합니다. 경우 *w* 하 고 *h* 최적의 값 사각형의 높이 너비는 *를* 은 다음 수식을 충족 합니다.
+전화 페이지의 차원에 대 한 적절 *한* 값을 찾는 것은 직접 계산이 아닙니다. *W* 및 *h* 가 사각형의 너비와 높이 이면의 최적 *값은 다음 수식을 만족 합니다* .
 
 `cosh(w / 2 / a) = 1 + h / a`
 
-에 다음 메서드를 [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) 클래스는 해당 같음으로 등호의 오른쪽 및 왼쪽에 두 식이 참조 하 여 통합 `left` 고 `right`입니다. 값이 작으면 *를*, `left` 보다 크면 `right`;의 값이 크면 *를*, `left` 는 보다 작은 `right`. 합니다 `while` 루프의 최적 값에에서 좁힙니다 *는*:
+클래스의 다음 메서드는 [`LinkedChainPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) 등호의 왼쪽과 오른쪽에 있는 두 식을 및로 참조 하 여 해당 일치를 통합 합니다 `left` `right` . *의 작은 값에 대해* `left` 가 보다 큽니다. 큰 값의 경우는 `right` *a* `left` 보다 작습니다 `right` . 루프는의 `while` 최적 값으로 축소 됩니다. *a*
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -453,7 +456,7 @@ float FindOptimumA(float width, float height)
 }
 ```
 
-`SKPath` 링크 만들어지고 결과 클래스의 생성자에서 개체 `SKPathEffect` 개체 설정 됩니다는 `PathEffect` 의 속성을 `SKPaint` 필드로 저장 되어 있는 개체:
+`SKPath`링크에 대 한 개체는 클래스의 생성자에서 만들어지고 결과 `SKPathEffect` 개체는 `PathEffect` 필드로 저장 된 개체의 속성으로 설정 됩니다 `SKPaint` .
 
 ```csharp
 public class LinkedChainPage : ContentPage
@@ -501,7 +504,7 @@ public class LinkedChainPage : ContentPage
 }
 ```
 
-주 작업은 `PaintSurface` 처리기가 자체 catenary에 대 한 경로 만들어야 합니다. 최적의 확인 한 후 *는* 에 저장 하는 `optA` 변수에 해야 창의 위쪽에서 오프셋을 계산 합니다. 컬렉션에 누적 될 수 있습니다 차례로 `SKPoint` catenary에 대 한 값을 한 경로로 설정 하는 하 고 이전에 만든를 사용 하 여 경로 그리는 `SKPaint` 개체:
+처리기의 주요 작업은 다양 `PaintSurface` 한 경로를 만드는 것입니다. 최적를 결정 한 *후* 변수에 저장 하면 `optA` 창의 위쪽에서 오프셋을 계산 해야 합니다. 그런 다음,이를 `SKPoint` 경로에 설정 하 고 이전에 만든 개체를 사용 하 여 경로를 그릴 수 있습니다 `SKPaint` .
 
 ```csharp
 public class LinkedChainPage : ContentPage
@@ -545,15 +548,15 @@ public class LinkedChainPage : ContentPage
 }
 ```
 
-이 프로그램에 사용 된 경로가 정의 `Create1DPath` 있어야 해당 (0, 0) 센터를 지정 합니다. 이 것이 좋습니다 때문에 (0, 0) 패스의 줄 또는 표시 되는 곡선에 맞춥니다. 그러나 사용할 수는 비 중심 (0, 0) 일부 특수 효과 대 한 지점입니다.
+이 프로그램은에서 `Create1DPath` (0, 0) 점을 중심에 배치 하는 데 사용 되는 경로를 정의 합니다. 경로의 점 (0, 0)이 표시할 된 선 또는 곡선에 맞춰 정렬 되기 때문에이는 타당 한 것 같습니다. 그러나 일부 특수 효과의 경우 가운데 맞춤 (0, 0) 지점을 사용할 수 있습니다.
 
-합니다 **컨베이어 벨트** 페이지 곡선된 위쪽 및 아래쪽 창의 크기를 크기가 지정 된는 장방형 컨베이어 벨트와 비슷한 경로 만듭니다. 간단한을 사용 하 여 해당 경로 스트로크 `SKPaint` 20 픽셀 색이 지정 된 회색 개체 및 다른 한 다음 다시 스트로크 `SKPaint` 개체는 `SKPathEffect` 거의 버킷와 비슷한 경로 참조 하는 개체:
+**컨베이어 벨트** 페이지는 창의 크기에 맞게 크기가 지정 된 위쪽 및 아래쪽 곡선을 사용 하 여 oblong 컨베이어 벨트와 유사한 경로를 만듭니다. 이 경로는 간단한 `SKPaint` 개체 20 픽셀 너비와 색이 지정 된 회색으로 스트로크 된 다음, `SKPaint` `SKPathEffect` 작은 버킷으로 비슷한 경로를 참조 하는 개체를 사용 하 여 다른 개체와 함께 다시 표시 됩니다.
 
 [![컨베이어 벨트 페이지의 세 번째 스크린샷](effects-images/conveyorbelt-small.png)](effects-images/conveyorbelt-large.png#lightbox)
 
-(0, 0) 버킷 경로의 점은 핸들, 있으므로 `phase` 인수 애니메이션이 적용 되어, 버킷의 아마도 scooping 물 맨 아래에 등록 하 고 맨 위에 있는 덤프 하는 컨베이어 벨트를 중심으로 것 같습니다.
+버킷 경로의 (0, 0) 지점은 핸들 이므로 `phase` 인수에 애니메이션을 적용할 때 버킷은 컨베이어 벨트를 중심으로 보이는 것 처럼 보일 수 있습니다. 즉, 아래쪽에 물을 scooping 위쪽에서이를 덤프할 수 있습니다.
 
-합니다 [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) 클래스의 재정의 사용 하 여 애니메이션을 구현 합니다 `OnAppearing` 및 `OnDisappearing` 메서드. 버킷에 대 한 경로 페이지의 생성자에서 정의 됩니다.
+[`ConveyorBeltPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs)클래스는 및 메서드를 재정의 하 여 애니메이션을 구현 `OnAppearing` `OnDisappearing` 합니다. 버킷의 경로는 페이지의 생성자에 정의 되어 있습니다.
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -621,9 +624,9 @@ public class ConveyorBeltPage : ContentPage
     ...
 ```
 
-버킷 만들기 코드를 약간 크게 버킷 하 고 옆으로 설정 하는 두 가지 변환을 사용 하 여 완료 합니다. 이러한 변환 적용 된 이전 코드에 있는 모든 좌표를 조정 하는 것 보다 쉽습니다.
+버킷 만들기 코드는 버킷 크기를 늘려 조금씩 전환 하는 두 가지 변환으로 완료 됩니다. 이러한 변환을 적용 하는 것은 이전 코드의 모든 좌표를 조정 하는 것 보다 쉽습니다.
 
-`PaintSurface` 처리기 자체가 컨베이어 벨트에 대 한 경로 정의 하 여 시작 합니다. 다음은 단순히 한 쌍의 선 및 20 픽셀 너비 진한 회색 선으로 그려진 원 세미콜론의 쌍입니다.
+`PaintSurface`처리기는 컨베이어 벨트 자체의 경로를 정의 하 여 시작 합니다. 이는 단순히 줄 쌍 이며, 20 픽셀의 진한 회색 선을 사용 하 여 그린 쌍 쌍입니다.
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -680,15 +683,15 @@ public class ConveyorBeltPage : ContentPage
 }
 ```
 
-컨베이어 벨트 그리기 논리를 가로 모드로 작동 하지 않습니다.
+컨베이어 벨트를 그리기 위한 논리는 가로 모드에서 작동 하지 않습니다.
 
-버킷의 200 픽셀 떨어진 컨베이어 벨트에 대 한 배치 해야 합니다. 그러나 컨베이어 벨트 않을의 배수가으로 즉 long, 200 픽셀을 `phase` 인수의 `SKPathEffect.Create1DPath` 은 애니메이션 효과가 적용 버킷 나타납니다 내부 및 외부로 존재 합니다.
+버킷은 컨베이어 벨트에서 200 픽셀 간격으로 배치 되어야 합니다. 그러나 컨베이어 벨트는 200 픽셀의 배수가 아닐 수 있습니다. 즉,의 인수가 애니메이션으로 표시 되 `phase` `SKPathEffect.Create1DPath` 면 버킷이 존재 하지 않습니다.
 
-이러한 이유로 프로그램 먼저 값을 계산 하 라는 `length` 컨베이어 벨트의 길이입니다. 컨베이어 벨트로 구성 된 직선과 세미콜론 원 이므로 계산은 간단 합니다. 버킷 수가 나누어 계산 됩니다 어 `length` 200 여 합니다. 가장 가까운 정수로 반올림이 고 나눌 숫자 다음는 `length`합니다. 결과 대 한 버킷 정수에 대 한 간격입니다. `phase` 인수가의 분수 하기만 하면 됩니다.
+따라서 프로그램은 먼저 `length` 컨베이어 벨트의 길이인 이라는 값을 계산 합니다. 컨베이어 벨트는 직선 및 반 원으로 구성 되기 때문에 간단한 계산입니다. 그런 다음, 버킷 수는 200으로 나눠 계산 됩니다 `length` . 가장 가까운 정수로 반올림 되 고이 숫자는로 나뉩니다 `length` . 결과는 정수 버킷 수의 간격입니다. `phase`인수는 단지 해당의 비율입니다.
 
-## <a name="from-path-to-path-again"></a>경로가 다시에서
+## <a name="from-path-to-path-again"></a>경로에서 경로로 다시
 
-맨 아래에 `DrawSurface` 처리기에서 **컨베이어 벨트**, 주석 처리를 `canvas.DrawPath` 호출 하 고 다음 코드로 바꿉니다:
+`DrawSurface` **컨베이어 벨트**의 처리기 아래에서 호출을 주석으로 처리 `canvas.DrawPath` 하 고 다음 코드로 바꿉니다.
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -700,21 +703,21 @@ SKPaint newPaint = new SKPaint
 canvas.DrawPath(newPath, newPaint);
 ```
 
-이전 예제와 마찬가지로 `GetFillPath`, 결과 색 제외 하 고 동일한 지 표시 됩니다. 실행 한 후 `GetFillPath`, `newPath` 버킷 경로의 여러 복사본을 포함 하는 개체를 애니메이션 호출 시 해당 배치는 동일한 스폿 배치 각각.
+이전 예제와 마찬가지로 색을 `GetFillPath` 제외 하 고 결과가 동일 하다는 것을 알 수 있습니다. 을 실행 한 후 `GetFillPath` 개체에는 `newPath` 버킷 경로에 대 한 여러 복사본이 포함 되어 있으며, 각 복사본은 애니메이션이 호출 시 배치 되는 동일한 지점에 배치 됩니다.
 
-## <a name="hatching-an-area"></a>영역 빗살 무늬
+## <a name="hatching-an-area"></a>해칭 영역
 
-합니다 [ `SKPathEffect.Create2DLines` ](xref:SkiaSharp.SKPathEffect.Create2DLine(System.Single,SkiaSharp.SKMatrix)) 메서드 라고도 평행선이 있는 영역을 채웁니다 *줄 해치*합니다. 메서드가 다음 구문:
+[`SKPathEffect.Create2DLines`](xref:SkiaSharp.SKPathEffect.Create2DLine(System.Single,SkiaSharp.SKMatrix))메서드는 평행선 ( *해치 선*이라고 함)을 사용 하 여 영역을 채웁니다. 메서드의 구문은 다음과 같습니다.
 
 ```csharp
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
 ```
 
-`width` 인수 빗살 무늬 선 스트로크 너비를 지정 합니다. `matrix` 매개 변수 크기 조정 및 선택적 회전의 조합입니다. 배율은 Skia 빗살 무늬 선 공간을 사용 하는 픽셀 증가분을 나타냅니다. 줄 구분은 빼기 배율 인수는 `width` 인수입니다. 배율 인수 보다 작거나 같은 경우는 `width` 값 빗살 무늬 선 사이의 공백이 됩니다 및 채울 영역에 표시 됩니다. 수평 및 수직적 크기 조정에 대 한 동일한 값을 지정 합니다.
+`width`인수는 해치 선의 스트로크 너비를 지정 합니다. `matrix`매개 변수는 크기 조정 및 선택적 회전의 조합입니다. 배율 인수는 고 지 수를 사용 하 여 해치 선 공간을 지정 하는 픽셀 증가값을 나타냅니다. 줄을 구분 하는 것은 인수를 뺀 배율 인수입니다 `width` . 배율 인수가 값 보다 작거나 같으면 `width` 해치 선 사이에 공백이 표시 되지 않으며 영역이 채워져 있는 것으로 나타납니다. 가로 및 세로 크기 조정에 동일한 값을 지정 합니다.
 
-기본적으로 해치 선은 가로입니다. 경우는 `matrix` 회전을 포함 하는 매개 변수, 빗살 무늬 선 시계 방향으로 회전 합니다.
+기본적으로 빗살 무늬 선은 가로입니다. `matrix`매개 변수에 회전이 포함 되어 있으면 해치 선이 시계 방향으로 회전 합니다.
 
-합니다 **채우기 해치** 페이지에이 경로 효과 보여 줍니다. 합니다 [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) 는 크기 조정 비율을 나타내기 위해 사용 하 여 3 픽셀 너비를 사용 하 여 가로 빗살 무늬 선에 대 한 첫 번째 간격이 6 픽셀 만큼 떨어지게, 클래스 필드로 3 경로 효과 정의 합니다. 줄 구분 3 픽셀로 되므로 합니다. 두 번째 경로 효과 6 개의 픽셀 너비와 수직 빗살 무늬 선 간격이 24 픽셀 떨어진 (따라서 분리는 18 픽셀은)에 대 한 및 빗금 줄 12 픽셀 넓은 공백이 포함 된 36 픽셀 떨어진 세 번째입니다.
+**빗살 무늬 채우기** 페이지에서이 경로 효과를 보여 줍니다. [`HatchFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs)이 클래스는 세 개의 path 효과를 필드로 정의 합니다. 첫 번째는 너비가 3 픽셀이 고 너비가 6 픽셀 떨어져 있음을 나타내는 크기 조정 요소를 사용 합니다. 따라서 선 간의 분리는 3 픽셀입니다. 두 번째 경로는 너비가 24 픽셀 떨어져 있는 세로 해치 선 (구분은 18 픽셀)에 대 한 것 이며 세 번째는 36 픽셀 떨어져 있는 대각선 해치 선 12 픽셀에 대 한 것입니다.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -745,9 +748,9 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-행렬 확인 `Multiply` 메서드. 가로 및 세로 배율 같기 때문에 크기 조정 및 회전 매트릭스를 곱합니다 순서는 중요 하지 않습니다.
+행렬 메서드를 확인 `Multiply` 합니다. 가로 및 세로 배율 인수가 동일 하기 때문에 크기 조정 및 회전 매트릭스를 곱하는 순서는 중요 하지 않습니다.
 
-합니다 `PaintSurface` 처리기와 함께에서 서로 다른 세 색을 사용 하 여 이러한 세 경로 효과 사용 하 여 `fillPaint` 페이지에 맞게 크기를 조정할 모서리가 둥근된 사각형을 채웁니다. `Style` 에서 속성을 설정 `fillPaint` 무시 되 때를 `SKPaint` 개체에서 만든 경로 효과 포함 `SKPathEffect.Create2DLine`, 영역에 관계 없이 채워집니다.
+처리기는와 함께 세 가지 색 효과를 사용 하 여 `PaintSurface` `fillPaint` 페이지에 맞게 모퉁이가 둥근 사각형 크기를 채웁니다. `Style`에 설정 된 속성은 `fillPaint` 무시 되 고, `SKPaint` 개체에에서 만든 경로 효과가 포함 된 경우 `SKPathEffect.Create2DLine` 다음에 관계 없이 영역이 채워집니다.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -794,27 +797,27 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-결과 신중 하 게 보면 빨강 및 파랑 빗살 무늬 선 모퉁이가 둥근된 사각형을 정확 하 게 제한 하지는 표시 됩니다. (이 분명히 특성 기본 Skia 코드입니다.) 이 방법이 만족 스 럽 지 않으면 대각선으로 대각선 모양의 빗살 무늬를 표시 합니다. 모퉁이가 둥근 사각형은 클리핑 경로로 사용 되 고 빗살 무늬 선은 전체 페이지에 그려집니다.
+결과를 신중히 살펴보면 빨강 및 파랑 해치 선이 둥근 사각형으로 정확 하 게 한정 되지 않는 것을 알 수 있습니다. (이것은 기본가 중 Ia 코드의 특징입니다.) 이 방법이 만족 스 럽 지 않으면 녹색으로 대각선 해치 선에 대 한 대체 방법이 표시 됩니다. 모퉁이가 둥근 사각형이 클리핑 경로로 사용 되 고 빗살 무늬 선이 전체 페이지에 그려집니다.
 
-`PaintSurface` 처리기가 단순히 빨강 및 파랑 빗살 무늬 선을 사용 하 여 불일치를 볼 수 있도록 모퉁이가 둥근된 사각형을 스트로크를 호출 하 여 종료 합니다.
+`PaintSurface`처리기는 단순히 모퉁이가 둥근 사각형을 스트로크 하는 호출로 마무리 되므로 빨강 및 파랑 해치 선과의 불일치를 확인할 수 있습니다.
 
 [![빗살 무늬 채우기 페이지의 세 번째 스크린샷](effects-images/hatchfill-small.png)](effects-images/hatchfill-large.png#lightbox)
 
-Android 화면은 다음과 같이 표시 되지 않습니다. 스크린 샷 크기를 조정 하면 작은 빨강 선과 얇은 공간이 더 넓은 빨간색 선과 더 넓은 공간으로 통합 됩니다.
+Android 화면은 다음과 같이 표시 되지 않습니다. 스크린 샷 크기를 조정 하면 얇은 빨강 선과 얇은 공간이 더 넓은 빨간색 선과 더 넓은 공간으로 통합 됩니다.
 
-## <a name="filling-with-a-path"></a>경로 사용 하 여 채우기
+## <a name="filling-with-a-path"></a>경로를 사용 하 여 채우기
 
-합니다 [ `SKPathEffect.Create2DPath` ](xref:SkiaSharp.SKPathEffect.Create2DPath(SkiaSharp.SKMatrix,SkiaSharp.SKPath)) 영역을 바둑판식 적용 영역을 가로 방향과 세로 방향으로 복제 되는 경로 채울 수 있습니다.
+에서는 [`SKPathEffect.Create2DPath`](xref:SkiaSharp.SKPathEffect.Create2DPath(SkiaSharp.SKMatrix,SkiaSharp.SKPath)) 가로 및 세로로 복제 된 경로를 사용 하 여 영역을 채운 다음 영역을 바둑판식으로 채울 수 있습니다.
 
 ```csharp
 public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
 ```
 
-`SKMatrix` 배율 복제 경로의 가로 및 세로 간격을 나타냅니다. 하지만이 사용 하 여 경로 회전할 수 없습니다 `matrix` 인수; 회전 경로 사용할 경우 경로 자체의 회전를 사용 하는 `Transform` 정의한 메서드 `SKPath`.
+`SKMatrix`배율 인수는 복제 된 경로의 가로 및 세로 간격을 표시 합니다. 그러나이 인수를 사용 하 여 경로를 회전할 수 없습니다 `matrix` . 경로를 회전 하려면에 의해 정의 된 메서드를 사용 하 여 경로 자체를 회전 합니다 `Transform` `SKPath` .
 
-일반적으로 복제 된 경로 채워질 영역 보다는 화면의 왼쪽 및 위쪽 가장자리에 맞춥니다. 0에서 왼쪽 및 위쪽 양쪽에서 가로 및 세로 오프셋을 지정 하려면 크기 조정 요인을 사이의 변환 요소를 제공 하 여이 동작을 재정의할 수 있습니다.
+복제 된 경로는 일반적으로 채워지는 영역이 아니라 화면의 왼쪽 및 위쪽 가장자리와 맞춥니다. 0과 배율 인수 사이의 변환 요소를 제공 하 여 왼쪽과 위쪽에서 가로 및 세로 오프셋을 지정 하면이 동작을 재정의할 수 있습니다.
 
-합니다 **경로 타일 채우기** 페이지에이 경로 효과 보여 줍니다. 영역을 바둑판식으로 배열에 사용 되는 경로에서 필드로 정의 되는 [ `PathTileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) 클래스입니다. 가로 및 세로 좌표 범위에서-40 40, 즉이 경로 80 픽셀 사각형:
+**경로 타일 채우기** 페이지에서이 경로 효과를 보여 줍니다. 영역을 바둑판식으로 배열 하는 데 사용 되는 경로는 클래스의 필드로 정의 됩니다 [`PathTileFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) . 가로 및 세로 좌표는-40에서 40 사이 이며,이는이 경로가 80 픽셀 정사각형 임을 의미 합니다.
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -850,29 +853,29 @@ public class PathTileFillPage : ContentPage
 }
 ```
 
-에 `PaintSurface` 처리기는 `SKPathEffect.Create2DPath` 발생할 겹치는 80 픽셀 정사각형 타일에는 64를 가로 및 세로 간격을 설정 하는 호출 합니다. 다행 스럽게도 경로 원활 하 게 사용 하 여 타일에 인접 meshing 퍼즐 조각에서와 유사 합니다.
+처리기에서 `PaintSurface` `SKPathEffect.Create2DPath` 호출은 가로 및 세로 간격을 64로 설정 하 여 80 픽셀 정사각형 타일이 겹칩니다. 다행히이 경로는 인접 한 타일과 비슷하게 meshing.
 
 [![경로 타일 채우기 페이지의 세 번째 스크린샷](effects-images/pathtilefill-small.png)](effects-images/pathtilefill-large.png#lightbox)
 
-Android 화면에서 특히 일부 왜곡을 사용 하면 원래 스크린샷에서 크기 조정 합니다.
+원본 스크린샷에서 크기를 조정 하면 특히 Android 화면에서 약간의 왜곡이 발생 합니다.
 
-이러한 타일 항상 전체를 표시 하는 절대로 잘리지 않습니다 확인 합니다. 처음 두 개의 스크린샷을에서 확인할 수는 없지만 채워질 영역 모퉁이가 둥근된 사각형을 인지 합니다. 이러한 타일 특정 영역을 자를 않으려면 클리핑 패스를 사용 합니다.
+이러한 타일은 항상 전체로 표시 되며 잘리지 않습니다. 처음 두 스크린샷에서는 채워지는 영역이 둥근 사각형 임을 명확 하 게 알 수는 없습니다. 이러한 타일을 특정 영역으로 자르려면 클리핑 패스를 사용 합니다.
 
-설정 해 보세요 합니다 `Style` 의 속성을 `SKPaint` 개체를 `Stroke`를 입력 하는 것이 아니라 설명 된 개별 타일을 확인할 수 있습니다.
+`Style`개체의 속성을로 설정 해 보면 `SKPaint` `Stroke` 개별 타일이 채워져 있지 않고 윤곽선이 표시 됩니다.
 
-것도 가능 영역을 채우는 바둑판식으로 배열 된 비트맵을 사용 하 여 문서에 나와 있는 것 처럼 [ **SkiaSharp 비트맵 바둑판식**](../effects/shaders/bitmap-tiling.md)합니다.
+[**SkiaSharp 비트맵 바둑판식**](../effects/shaders/bitmap-tiling.md)배열 문서에 표시 된 것 처럼 바둑판식 비트맵으로 영역을 채울 수도 있습니다.
 
-## <a name="rounding-sharp-corners"></a>날카로운 모퉁이 반올림합니다.
+## <a name="rounding-sharp-corners"></a>뾰족한 모퉁이 둥근 모양
 
-**반올림 Heptagon** 프로그램에 표시 되는 [ **호를 그리려면 세 가지 방법으로** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) 7 양면 그림의 지점 곡선을 탄젠트 호를 사용 하는 문서. **다른 반올림 Heptagon** 페이지에서 만든 경로 효과 사용 하는 훨씬 쉽게 방법을 표시 합니다 [ `SKPathEffect.CreateCorner` ](xref:SkiaSharp.SKPathEffect.CreateCorner(System.Single)) 메서드:
+[**원호를 그리기 위한 세 가지 방법**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/arcs.md) 으로 제공 되는 **둥근 Heptagon** 프로그램은 접선 호를 사용 하 여 일곱 개의 측면 그림을 곡선으로 만듭니다. **또 다른 라운드 된 Heptagon** 페이지에는 메서드에서 만든 경로 효과를 사용 하는 훨씬 손쉬운 방법이 나와 [`SKPathEffect.CreateCorner`](xref:SkiaSharp.SKPathEffect.CreateCorner(System.Single)) 있습니다.
 
 ```csharp
 public static SKPathEffect CreateCorner (Single radius)
 ```
 
-단일 인수 이름이 있지만 `radius`, 절반 원하는 모퉁이 반경을를 설정 해야 합니다. (기본 Skia 코드의 특징입니다.)
+단일 인수의 이름은 이지만 `radius` 원하는 모퉁이 반경의 절반으로 설정 해야 합니다. (이는 기본 서 부 Ia 코드의 특징입니다.)
 
-다음은 `PaintSurface` 처리기에는 [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) 클래스:
+`PaintSurface`클래스의 처리기는 [`AnotherRoundedHeptagonPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) 다음과 같습니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -925,29 +928,29 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-이 효과 사용 하 여 선 그리기 또는 기반 채우기 합니다 `Style` 의 속성을 `SKPaint` 개체입니다. 여기이 실행 됩니다.
+개체의 속성을 기반으로 하는 선 그리기 또는 채우기에 이러한 효과를 사용할 수 있습니다 `Style` `SKPaint` . 실행 되 고 있습니다.
 
 [![둥근 다른 Heptagon 페이지의 세 번째 스크린샷](effects-images/anotherroundedheptagon-small.png)](effects-images/anotherroundedheptagon-large.png#lightbox)
 
-이 둥근된 heptagon 이전 프로그램 같다는 것을 표시 합니다. 자세한 유도 해야 하는 경우 모퉁이 반경을 실제로 100 보다는 50에 지정 된 된 `SKPathEffect.CreateCorner` 호출 모서리에 있는 프로그램 및 참조 100 radius 원 마지막 문에서 겹쳐을 주석 수 있습니다.
+이 둥근 heptagon 이전 프로그램과 동일 하다는 것을 알 수 있습니다. 호출에 지정 된 50이 아닌 진정한 100이 아니라 모퉁이 반지름이 진정한 이라고 하는 경우 `SKPathEffect.CreateCorner` 프로그램에서 최종 문의 주석 처리를 제거 하 여 모퉁이에 있는 100-radius 원을 볼 수 있습니다.
 
 ## <a name="random-jitter"></a>임의 지터
 
-경우에 따라 컴퓨터 그래픽의 완벽 한 직선 매우 원하는 않으며 원하는 것이 약간의 임의성. 시도 하려는 경우에 [ `SKPathEffect.CreateDiscrete` ](xref:SkiaSharp.SKPathEffect.CreateDiscrete(System.Single,System.Single,System.UInt32)) 메서드:
+경우에 따라 컴퓨터 그래픽의 지 수 직선 줄이 원하는 대로 표시 되지 않고 약간의 임의성이 필요 합니다. 이 경우 메서드를 사용해 볼 수 있습니다 [`SKPathEffect.CreateDiscrete`](xref:SkiaSharp.SKPathEffect.CreateDiscrete(System.Single,System.Single,System.UInt32)) .
 
 ```csharp
 public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, UInt32 seedAssist)
 ```
 
-선 그리기 또는 입력에 대 한이 경로 효과 사용할 수 있습니다. 줄 연결 세그먼트로 나뉩니다-대략적인 길이가 된 `segLength` -하 고 다른 방향으로 확장 합니다. 원래 줄에서 편차 범위 지정 된 `deviation`합니다.
+스트로크 효과 또는 채우기에이 경로 효과를 사용할 수 있습니다. 줄은 연결 된 세그먼트로 분리 되며,의 대략적인 길이는로 지정 되 `segLength` 고 다른 방향으로 확장 됩니다. 원본 줄에서의 편차 범위는에 의해 지정 됩니다 `deviation` .
 
-마지막 인수는 효과에 사용 하는 의사 (pseudo) 난수 시퀀스를 생성 하는 데 초기값입니다. 지터 효과 다른 초기값에 대 한 약간 다르게 표시 됩니다. 인수가 0 효과 동일 프로그램을 실행할 때마다 이며, 기본값은입니다. 화면을 다시 때마다 다른 지터를 하려는 경우 초기값을 설정할 수 있습니다는 `Millisecond` 의 속성을 `DataTime.Now` 예를 들어 값입니다.
+마지막 인수는 효과에 사용 되는 의사 (pseudo) 난수 시퀀스를 생성 하는 데 사용 되는 초기값입니다. 지터 효과는 초기값 마다 약간 다르게 보입니다. 인수의 기본값은 0입니다 .이는 프로그램을 실행할 때마다 효과가 동일 함을 의미 합니다. 화면을 다시 그릴 때마다 다른 지터를 원하는 경우 값의 속성으로 초기값을 설정할 수 있습니다 `Millisecond` `DataTime.Now` (예:).
 
-합니다 **실험 지터** 페이지 사각형 선 그리기는 서로 다른 값을 실험할 수 있습니다.
+**지터 실험** 페이지를 사용 하 여 사각형을 스트로크 하는 데 다른 값을 시험해 볼 수 있습니다.
 
 [![JitterExperiment 페이지의 세 번째 스크린샷](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
 
-프로그램은 간단 합니다. 합니다 [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일 두 개를 인스턴스화하고 `Slider` 요소와 `SKCanvasView`:
+프로그램은 간단 합니다. [**JitterExperimentPage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) 파일은 두 개의 `Slider` 요소 및를 인스턴스화합니다 `SKCanvasView` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1003,7 +1006,7 @@ public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, U
 </ContentPage>
 ```
 
-합니다 `PaintSurface` 처리기에는 [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) 코드 숨김 파일 이라고 때마다는 `Slider` 값이 변경 합니다. 호출한 `SKPathEffect.CreateDiscrete` 두 가지를 사용 하 여 `Slider` 값 및 사각형을 스트로크 하는:
+`PaintSurface`값이 변경 될 때마다 [**JitterExperimentPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) 코드 숨겨진 파일의 처리기가 호출 됩니다 `Slider` . `SKPathEffect.CreateDiscrete`두 값을 사용 하 여를 호출 하 `Slider` 고 사각형을 스트로크 하는 데 사용 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1034,7 +1037,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-채워진 영역의 윤곽선 이러한 임의 편차 될 수 있는 경우에 입력에 대 한이 영향을 사용할 수 있습니다. 합니다 **지터 텍스트** 페이지가 경로 효과 사용 하 여 텍스트를 표시 하는 방법을 보여 줍니다. 대부분의 코드를 `PaintSurface` 처리기는 [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) 클래스는 텍스트를 가운데 맞춤 및 크기 조정에 할당 되:
+이 효과를 채우는 데에도 사용할 수 있습니다 .이 경우 채워진 영역의 윤곽선은 이러한 임의 편차를 따릅니다. **지터 텍스트** 페이지는이 경로 효과를 사용 하 여 텍스트를 표시 하는 방법을 보여 줍니다. 클래스 처리기에서 대부분의 코드는 `PaintSurface` 텍스트의 [`JitterTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) 크기를 조정 하 고 가운데에 정렬 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1069,13 +1072,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-여기 가로 모드에서 실행 중인:
+여기서는 가로 모드로 실행 되 고 있습니다.
 
 [![JitterText 페이지의 세 번째 스크린샷](effects-images/jittertext-small.png)](effects-images/jittertext-large.png#lightbox)
 
 ## <a name="path-outlining"></a>경로 개요
 
-두 가지 간단한 예를 이미 살펴봤습니다 합니다 [ `GetFillPath` ](xref:SkiaSharp.SKPaint.GetFillPath*) 메서드의 `SKPaint`, 존재 하는 두 가지 버전:
+[`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*)두 가지 버전의 메서드에 대 한 두 가지 작은 예제 `SKPaint` 를 이미 살펴보았습니다.
 
 ```csharp
 public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale = 1)
@@ -1083,13 +1086,13 @@ public Boolean GetFillPath (SKPath src, SKPath dst, Single resScale = 1)
 public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resScale = 1)
 ```
 
-처음 두 인수에만 필수 이며 참조 경로 액세스 하는 메서드를 `src` 의 스트로크 속성을 기반으로 경로 데이터를 수정 하는 인수를를 `SKPaint` 개체 (포함 하 여는 `PathEffect` 속성), 다음 결과를 씁니다는 `dst` 경로입니다. 합니다 `resScale` 매개 변수를 더 작은 대상 경로 만드는 전체 자릿수를 줄일 수 있습니다 및 `cullRect` 인수 사각형 외부 윤곽을 제거할 수 있습니다.
+처음 두 인수만 필요 합니다. 메서드는 인수에서 참조 하는 경로에 액세스 `src` 하 고, 개체의 스트로크 속성 (속성 포함)을 기반으로 경로 데이터를 수정한 `SKPaint` 다음, `PathEffect` 결과를 경로에 씁니다 `dst` . `resScale`매개 변수를 사용 하면 정밀도를 줄여서 더 작은 대상 경로를 만들 수 있으며, `cullRect` 인수는 사각형 외부의 컨투어를 제거할 수 있습니다.
 
-이 메서드의 기본 사용에는 항상 경로 효과가 포함 되지 않습니다. 개체 `SKPaint` `PathEffect` 의 속성이로 `SKPaintStyle.Stroke`설정 되어`GetFillPath` 있고 해당 집합이 없는 경우는 소스 경로에 대 한 개요를 나타내는 경로를 만듭니다. `Style` paint 속성입니다.
+이 메서드의 기본 사용에는 항상 경로 효과가 포함 되지 않습니다. `SKPaint` 개체의 `Style` 속성이로 설정 되어 `SKPaintStyle.Stroke` 있고 해당 집합이 *없는 경우* 는 `PathEffect` `GetFillPath` 페인트 속성으로 스트로크 된 것 처럼 소스 경로의 *윤곽선* 을 나타내는 경로를 만듭니다.
 
-예를 들어 경우는 `src` 경로가 500 반지름의 단순 원 및 `SKPaint` 100 스트로크 너비를 지정 하는 개체는 `dst` 경로 두 동심원 반지름은 550 450 및 다른 반지름 하나 됩니다. 메서드를 호출 `GetFillPath` 이 채우기 때문에 `dst` 경로 선 그리기와 동일 합니다 `src` 경로입니다. 스트로크도 수 있지만 `dst` 경로를 경로 윤곽선을 참조 하세요.
+예를 들어 `src` 경로가 반지름 500의 단순 원이 고 `SKPaint` 개체가 100의 스트로크 너비를 지정 하는 경우 `dst` 경로는 두 개의 동심 원이 됩니다. 하나는 반지름이 450이 고 다른 하나는 반지름이 550입니다. `GetFillPath`이 경로를 채우는 것 `dst` 은 경로를 선 그리기와 동일 하기 때문에 메서드가 호출 됩니다 `src` . 그러나 경로를 스트로크 하 여 `dst` 경로 윤곽선을 볼 수도 있습니다.
 
-합니다 **경로 윤곽 탭** 이 보여 줍니다. `SKCanvasView` 하 고 `TapGestureRecognizer` 에서 인스턴스화되는 [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) 파일입니다. 합니다 [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) 3을 정의 하는 코드 숨김 파일 `SKPaint` 개체를 사용 하 여 선 그리기에 대 한 두 개의 필드와 스트로크 너비 채우기에 대 한 세 번째 100 및 20:
+**경로를 간략하게 설명 하는 탭** 은이를 보여 줍니다. `SKCanvasView`및는 `TapGestureRecognizer` [**TapToOutlineThePathPage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) 파일에서 인스턴스화됩니다. [**TapToOutlineThePathPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) 코드를 사용 하 여 세 개의 `SKPaint` 개체를 필드로 정의 합니다. 두 개의 개체는 두 개의 스트로크 너비를 100 및 20으로 채우고 세 번째는 채우기에 사용 됩니다.
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1130,7 +1133,7 @@ public partial class TapToOutlineThePathPage : ContentPage
 }
 ```
 
-화면 유출 된 경우는 `PaintSurface` 처리기에서 사용 합니다 `blueFill` 및 `redThickStroke` 원형 경로 렌더링 하는 개체:
+화면을 누르지 않은 경우 `PaintSurface` 처리기는 및 그리기 개체를 사용 하 여 `blueFill` `redThickStroke` 순환 경로를 렌더링 합니다.
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1170,28 +1173,28 @@ public partial class TapToOutlineThePathPage : ContentPage
 }
 ```
 
-원 채우기 및 예상한 대로 스트로크:
+원는 예상한 대로 채워지고 스트로크 됩니다.
 
 [![경로 페이지에 대 한 개요를 설명 하는 일반 탭의 세 번째 스크린샷](effects-images/taptooutlinethepathnormal-small.png)](effects-images/taptooutlinethepathnormal-large.png#lightbox)
 
-화면을 누르면 `outlineThePath` 로 설정 된 `true`, 및 `PaintSurface` 처리기를 새로 만듭니다 `SKPath` 개체 및 사용에 대 한 호출의 대상 경로로 `GetFillPath` 에 `redThickStroke` 그리기 개체입니다. 대상 경로 다음 채워지고 사용 하 여 스트로크 `redThinStroke`, 다음에서 결과:
+화면을 누르면 `outlineThePath` 가로 설정 되 고, `true` `PaintSurface` 처리기가 새 개체를 만들어 `SKPath` `GetFillPath` paint 개체에 대 한 호출에서 대상 경로로 사용 합니다 `redThickStroke` . 그런 다음 해당 대상 경로를 채우고 그에 `redThinStroke` 따라 다음을 수행 합니다.
 
 [![경로 페이지를 윤곽선으로 표시 하는 탭의 세 번째 스크린샷](effects-images/taptooutlinethepathoutlined-small.png)](effects-images/taptooutlinethepathoutlined-large.png#lightbox)
 
-두 개의 빨간색 원을 원래 원형 경로 두 순환 윤곽 변환 된는 명확히 표시 합니다.
+두 빨간색 원은 원래 원형 경로가 두 개의 원형 윤곽선으로 변환 되었음을 명확 하 게 표시 합니다.
 
-이 메서드를 사용 하는 경로 개발 하는 데 매우 유용할 수는 `SKPathEffect.Create1DPath` 메서드. 이러한 메서드에서 지정한 경로의 경로 복제 되는 경우에 항상 채워져 있습니다. 채울 전체 경로 사용 하지 않으려는 경우 윤곽선 신중 하 게 정의 해야 합니다.
+이 메서드는 메서드에 사용할 경로를 개발 하는 데 매우 유용할 수 있습니다 `SKPathEffect.Create1DPath` . 이러한 메서드에서 지정 하는 경로는 항상 경로가 복제 될 때 채워집니다. 전체 경로를 채우지 않으려면 개요를 신중 하 게 정의 해야 합니다.
 
-예를 들어 합니다 **연결 된 체인** 링크는 각 쌍의 경로를 채울 영역을 간략하게 설명 두 반지름에 기반한 4 원호, 연속 하 여 정의 된 샘플입니다. 코드를 대체할 수는 `LinkedChainPage` 약간 다른 작업을 수행 하는 클래스입니다.
+예를 들어 연결 된 **체인** 샘플에서 링크는 네 개의 호로 이루어진 일련의 원호를 사용 하 여 정의 되었습니다. 각 쌍은 채워질 경로 영역을 간략하게 설명 하기 위해 두 반지름을 기반으로 합니다. 클래스의 코드를 대체 하 여 `LinkedChainPage` 약간 다르게 할 수 있습니다.
 
-재정의 하려는 먼저를 `linkRadius` 상수:
+먼저 상수를 다시 정의 하려고 합니다 `linkRadius` .
 
 ```csharp
 const float linkRadius = 27.5f;
 const float linkThickness = 5;
 ```
 
-`linkPath` 원하는 사용 하 여 해당 단일 반지름에 따라 두 개의 원호 시작 각도 및 스윕 각도 되었습니다.
+`linkPath`이제는 원하는 시작 각도 및 스윕 각도를 사용 하 여 해당 단일 반지름을 기반으로 하는 두 개의 원호입니다.
 
 ```csharp
 using (SKPath linkPath = new SKPath())
@@ -1220,13 +1223,13 @@ using (SKPath linkPath = new SKPath())
 }
 ```
 
-합니다 `outlinePath` 개체는 다음의 윤곽선의 받는 사람 `linkPath` 에 지정 된 속성을 사용 하 여 스트로크 할 때 `strokePaint`합니다.
+`outlinePath`그런 다음 개체는 `linkPath` 에 지정 된 속성을 사용 하 여 스트로크 될 때의 개요를 받는 사람입니다 `strokePaint` .
 
-메서드에서 사용 되는 경로 대 한 다음이 기술을 사용 하 여 또 다른 예로 제공 됩니다.
+이 기법을 사용 하는 또 다른 예는 메서드에 사용 되는 경로에 대 한 다음입니다.
 
-## <a name="combining-path-effects"></a>경로 효과 결합합니다.
+## <a name="combining-path-effects"></a>조합 경로 효과
 
-두 가지 최종 정적 생성 방법을 `SKPathEffect` 됩니다 [ `SKPathEffect.CreateSum` ](xref:SkiaSharp.SKPathEffect.CreateSum(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)) 하 고 [ `SKPathEffect.CreateCompose` ](xref:SkiaSharp.SKPathEffect.CreateCompose(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)):
+의 두 가지 최종 정적 생성 메서드 `SKPathEffect` 는 [`SKPathEffect.CreateSum`](xref:SkiaSharp.SKPathEffect.CreateSum(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)) 및입니다 [`SKPathEffect.CreateCompose`](xref:SkiaSharp.SKPathEffect.CreateCompose(SkiaSharp.SKPathEffect,SkiaSharp.SKPathEffect)) .
 
 ```csharp
 public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second)
@@ -1234,15 +1237,15 @@ public static SKPathEffect CreateSum (SKPathEffect first, SKPathEffect second)
 public static SKPathEffect CreateCompose (SKPathEffect outer, SKPathEffect inner)
 ```
 
-이 두 방법 모두 복합 경로 효과 만드는 두 가지 경로 효과 결합 합니다. `CreateSum` 메서드를 별도로 적용 되는 두 개의 경로 효과 비슷한 경로 효과 만듭니다 하는 동안 `CreateCompose` 하나의 경로 효과 적용 합니다 (를 `inner`) 적용 하는 `outer` 를 합니다.
+이러한 두 메서드는 두 경로 효과를 결합 하 여 복합 경로 효과를 만듭니다. 메서드는 별도의 경로 효과 ()를 적용 하는 반면는 경로 효과를 하나 적용 한 다음에 적용 하는 경로 효과를 `CreateSum` 만듭니다 `CreateCompose` `inner` `outer` .
 
-이미 살펴본 하는 방법을 `GetFillPath` 메서드의 `SKPaint` 하나의 경로에 따라 다른 경로로 변환할 수 `SKPaint` 속성 (포함 `PathEffect`) 수 있도록 *너무* 방법를 알수없는`SKPaint`개체에 지정 된 두 개의 경로 효과 사용 하 여 두 번 해당 작업을 수행할 수 있습니다는 `CreateSum` 또는 `CreateCompose` 메서드.
+`GetFillPath`메서드가 `SKPaint` `SKPaint` `PathEffect` *too* `SKPaint` 또는 메서드에 지정 된 두 개의 경로 효과를 사용 하 여 해당 작업을 두 번 수행 하는 방법에 대 한 자세한 정보를 제외 하 고는 속성을 기반으로 한 경로를 다른 경로로 변환할 수 `CreateSum` 있는 방법을 이미 살펴보았습니다 `CreateCompose` .
 
-한 가지 확실 한 용도 `CreateSum` 정의 하는 것을 `SKPaint` 개체 하나 경로 효과 사용 하 여 경로 채우고 다른 경로 효과 사용 하 여 경로 선입니다. 에 설명 되어이 **프레임에서 고양이** 수직 물결 막대 가장자리가 프레임 내 고양이 배열을 표시 하는 샘플:
+를 사용 하는 한 가지 방법은 경로를 하나 사용 하 여 경로를 채우고 다른 경로 효과를 사용 하 여 패스를 `CreateSum` 채우는 개체를 정의 하는 것입니다 `SKPaint` . 이는 scalloped edge를 사용 하는 프레임 내에서 고양이의 배열을 표시 하는 **frame의 고양이** 샘플에 설명 되어 있습니다.
 
 [![프레임 페이지의 고양이 세 번째 스크린샷](effects-images/catsinframe-small.png)](effects-images/catsinframe-large.png#lightbox)
 
-합니다 [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) 클래스는 여러 필드를 정의 하 여 시작 합니다. 첫 번째 필드를 인식할 수 있습니다 합니다 [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) 에서 클래스를 [ **SVG 경로 데이터** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) 문서. 두 번째 경로 선과 프레임의 조개 패턴에 대 한 호를 기반으로 합니다.
+[`CatsInFramePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs)클래스는 여러 필드를 정의 하 여 시작 합니다. [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) [**SVG 경로 데이터**](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) 아티클의 클래스에서 첫 번째 필드를 인식할 수 있습니다. 두 번째 경로는 프레임의 scallop 패턴에 대 한 선 및 원호를 기반으로 합니다.
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1284,9 +1287,9 @@ public class CatsInFramePage : ContentPage
 }
 ```
 
-`catPath` 에서 사용할 수 있습니다 합니다 `SKPathEffect.Create2DPath` 메서드 경우를 `SKPaint` 개체 `Style` 속성이 `Stroke`. 그러나 경우는 `catPath` 이 프로그램에서는 다음 전체 헤드 고양이의 입력을 하며 수염에 대 한도 표시 되지 않습니다 직접 사용 됩니다. (지금 사용해 보세요!) 해당 경로의 개요에서 해당 윤곽선을 사용 하는 것이 반드시 합니다 `SKPathEffect.Create2DPath` 메서드.
+`catPath` `SKPathEffect.Create2DPath` `SKPaint` 개체 `Style` 속성이로 설정 된 경우 메서드에서를 사용할 수 있습니다 `Stroke` . 그러나 `catPath` 이 프로그램에서 직접 사용 되는 경우에는 cat의 전체 헤드를 채우고 수염 표시 되지 않습니다. (사용해 보세요!) 해당 경로의 개요를 가져와서 메서드에서 해당 개요를 사용 해야 `SKPathEffect.Create2DPath` 합니다.
 
-생성자는이 작업을 수행합니다. 먼저 두 변환을 적용 `catPath` 이동 하는 (0, 0) 센터로 가리키고 크기가 축소 합니다. `GetFillPath` 윤곽선 모든 개요를 가져옵니다 `outlinedCatPath`, 해당 개체에서 사용 되는 `SKPathEffect.Create2DPath` 호출 합니다. 크기 조정 고려를 `SKMatrix` 값은 가로 보다 약간 더 크게 및 번역 요소를 사용 하는 동안 타일 간에 거의 버퍼 제공 하기 위해 고양이의 세로 크기를 파생 다소 알려지고 실험적으로 전체 고양이 볼 수 있도록에 프레임의 왼쪽 위 모퉁이.
+생성자는이 작업을 수행 합니다. 먼저 두 개의 변환을 적용 `catPath` 하 여 (0, 0) 점을 가운데로 이동 하 고 크기를 축소 합니다. `GetFillPath`에서 컨투어의 모든 윤곽선을 가져오고 `outlinedCatPath` 해당 개체가 호출에 사용 됩니다 `SKPathEffect.Create2DPath` . `SKMatrix`타일 사이에 약간의 버퍼를 제공 하기 위해이 값의 배율 인수는 cat의 가로 및 세로 크기 보다 약간 더 크지만, 변환 요소는 약간 알려지고 실험적으로 되어 프레임의 왼쪽 위 모퉁이에 전체 cat이 표시 됩니다.
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1329,9 +1332,9 @@ public class CatsInFramePage : ContentPage
 }
 ```
 
-생성자 호출 `SKPathEffect.Create1DPath` 수직 물결 막대 프레임에 대 한 합니다. 경로 너비를 100 픽셀에 있지만 복제 경로 프레임 내에 중첩 되는 실제 너비는 75 픽셀은 알 수 있습니다. 생성자 호출의 마지막 문을 `SKPathEffect.CreateSum` 를 두 개의 경로 효과 결합 하 여 결과를 설정 합니다 `SKPaint` 개체입니다.
+그런 다음 생성자는 `SKPathEffect.Create1DPath` scalloped 프레임에 대해를 호출 합니다. 경로의 너비는 100 픽셀 이지만 앞으로는 복제 된 경로를 프레임 주위에 겹칠 수 있도록 75 픽셀을 미리 볼 수 있습니다. 생성자의 마지막 문은 `SKPathEffect.CreateSum` 를 호출 하 여 두 경로 효과를 결합 하 고 결과를 개체로 설정 합니다 `SKPaint` .
 
-이 모든 작업 수를 `PaintSurface` 매우 단순하게 하는 처리기. 만 할 사각형을 정의 하 고 사용 하 여 그리는 `framePaint`:
+이러한 모든 작업을 통해 `PaintSurface` 처리기가 매우 간단할 수 있습니다. 사각형을 정의 하 고 다음을 사용 하 여 그려야 합니다 `framePaint` .
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1352,11 +1355,11 @@ public class CatsInFramePage : ContentPage
 }
 ```
 
-경로 효과 뒤 알고리즘 항상 하면 전체 표시할 선 그리기 또는 채우기 사용 되는 일부 시각적 개체는 사각형 밖에 표시 될 수 있습니다. `ClipRect` 이전에 호출을 `DrawRect` 호출 훨씬 깔끔한 되도록 시각적 개체를 허용 합니다. (사용해 클리핑 없이!)
+경로 효과를 사용 하는 알고리즘은 항상 그리기 또는 채우기에 사용 되는 전체 경로를 사용 하 여 일부 시각적 개체를 사각형 외부에 표시 하도록 합니다. `ClipRect`호출 전에 호출을 `DrawRect` 통해 시각적 개체를 매우 깔끔하게 표시할 수 있습니다. (클리핑 없이 사용해 보세요.)
 
-일반적으로 사용 하는 것 `SKPathEffect.CreateCompose` 일부 지터가 다른 경로 효과를 추가 합니다. 확실히 직접 실험할 수 있습니다 하지만 약간 다른 예는 같습니다.
+일반적으로를 사용 하 여 `SKPathEffect.CreateCompose` 다른 경로 효과에 일부 지터를 추가 합니다. 직접 시험해 볼 수 있지만 약간 다른 예제는 다음과 같습니다.
 
-합니다 **해치 파선** 파선은 평행선을 사용 하 여 타원을 채웁니다. 대부분의 작업을 [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) 클래스 수행 됩니다 필드 정의의 오른쪽입니다. 이러한 필드는 dash 효과 해치 효과 정의합니다. 로 정의 됩니다 `static` 에 다음 참조 하므로 `SKPathEffect.CreateCompose` 에서 호출 된 `SKPaint` 정의:
+**파선 빗살 무늬 선은** 타원을 파선 인 해치 선으로 채웁니다. 클래스에 있는 대부분의 작업 [`DashedHatchLinesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) 은 필드 정의에서 바로 수행 됩니다. 이러한 필드는 대시 효과와 빗살 무늬 효과를 정의 합니다. 이러한 `static` `SKPathEffect.CreateCompose` 작업은 정의의 호출에서 참조 되기 때문에로 정의 됩니다 `SKPaint` .
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage
@@ -1384,7 +1387,7 @@ public class DashedHatchLinesPage : ContentPage
 }
 ```
 
-합니다 `PaintSurface` 표준 오버 헤드를 더한를 한 번 호출을 포함 해야 하는 처리기 `DrawOval`:
+`PaintSurface`처리기는 표준 오버 헤드와에 대 한 호출을 포함 해야 합니다 `DrawOval` .
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage
@@ -1406,11 +1409,11 @@ public class DashedHatchLinesPage : ContentPage
 }
 ```
 
-이미 알게 빗살 무늬 선 영역의 내부를 정확 하 게 제한 되지 않습니다 및이 예제에서는 항상 시작 전체 대시를 사용 하 여 왼쪽에서:
+이미 검색 한 것 처럼 해치 선은 영역 내부를 정확 하 게 제한 하지 않으며,이 예제에서는 항상 전체 대시를 사용 하 여 왼쪽에서 시작 합니다.
 
 [![파선 해치 선 페이지의 삼중 스크린샷](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
-이제 지금까지 살펴본 경로 효과 이상한 조합에 해당 범위에서 간단한 점 및 대시 상상력을 사용 하 여을 만들 수 있습니다를 참조 하세요.
+이제 간단한 점과 대시에서 이상한 조합 까지의 경로 효과를 보았을 때 상상력를 사용 하 여 만들 수 있는 항목을 확인 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

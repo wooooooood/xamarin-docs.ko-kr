@@ -1,18 +1,21 @@
 ---
-title: IOS의 모달 페이지 표시 스타일
-description: 플랫폼별를 사용 하면 사용자 지정 렌더러 나 효과를 구현 하지 않고 특정 플랫폼 에서만 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 모달 페이지의 프레젠테이션 스타일을 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/02/2020
-ms.openlocfilehash: 19175a6d97afb9d2d985d8a1bf8e1ce4c0179242
-ms.sourcegitcommit: 87035b654434c22ca1b0d70ee8d2496dcb63b365
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2abc255964df35fbdfeb4191911c57df9be99fd9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546508"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84128013"
 ---
 # <a name="modal-page-presentation-style-on-ios"></a>IOS의 모달 페이지 표시 스타일
 
@@ -60,7 +63,7 @@ public class iOSModalFormSheetPageCS : ContentPage
 [![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
 
 > [!NOTE]
-> 이 플랫폼별를 사용 하 여 모달 프레젠테이션 스타일을 설정 하는 페이지는 모달 탐색을 사용 해야 합니다. 자세한 내용은 [Xamarin Forms Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md)를 참조 하세요.
+> 이 플랫폼별를 사용 하 여 모달 프레젠테이션 스타일을 설정 하는 페이지는 모달 탐색을 사용 해야 합니다. 자세한 내용은 [ Xamarin.Forms 모달 페이지](~/xamarin-forms/app-fundamentals/navigation/modal.md)를 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

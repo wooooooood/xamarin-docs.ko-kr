@@ -1,42 +1,45 @@
 ---
-title: SkiaSharp 투명도
-description: 투명도 사용 하 여 단일 장면에서 여러 개체를 결합 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/23/2018
-ms.openlocfilehash: 74335de66e74f6adc7c9488a1b78c31d36d03f14
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759414"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134721"
 ---
 # <a name="skiasharp-transparency"></a>SkiaSharp 투명도
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-지금까지 살펴본 대로 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스를 포함 한 [ `Color` ](xref:SkiaSharp.SKPaint.Color) 형식의 속성 [ `SKColor` ](xref:SkiaSharp.SKColor). `SKColor` 알파 채널을 모두 사용 하 여 색을 포함 한 `SKColor` 값 부분적으로 투명 하 게 될 수 있습니다. 
+앞서 살펴본 것 처럼 클래스에는 [`SKPaint`](xref:SkiaSharp.SKPaint) [`Color`](xref:SkiaSharp.SKPaint.Color) 형식의 속성이 포함 됩니다 [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor`알파 채널을 포함 하므로 값을 사용 하 여 색을 지정할 수 있는 모든 항목을 `SKColor` 부분적으로 투명 하 게 지정할 수 있습니다. 
 
-몇 가지 투명도에 설명 된 합니다 [ **SkiaSharp의 기본적인 애니메이션** ](animation.md) 문서. 이 문서에서는 단일 장면 라고도 하는 기술에서에서 여러 개체를 결합 하는 투명도 다소 더 깊은 됩니다 _혼합_합니다. 혼합 기술 고급의 문서에 설명 되어는 [ **SkiaSharp 셰이더** ](../effects/shaders/index.md) 섹션입니다.
+[**SkiaSharp 문서의 기본 애니메이션**](animation.md) 에서 일부 투명도를 보여 주었습니다. 이 문서에서는 혼합을 통해 여러 개체를 단일 장면으로 결합 하 여 _혼합_으로 알려진 기법을 결합 하는 방법에 대해 자세히 설명 합니다. 고급 혼합 기술에 대해서는 [**SkiaSharp 셰이더**](../effects/shaders/index.md) 섹션의 문서에서 설명 합니다.
 
-4-매개 변수를 사용 하 여 색을 처음 만들 때 투명도 수준을 설정할 수 있습니다 [ `SKColor` ](xref:SkiaSharp.SKColor.%23ctor(System.Byte,System.Byte,System.Byte,System.Byte)) 생성자:
+네 개의 매개 변수 생성자를 사용 하 여 처음으로 색을 만들 때 투명도 수준을 설정할 수 있습니다 [`SKColor`](xref:SkiaSharp.SKColor.%23ctor(System.Byte,System.Byte,System.Byte,System.Byte)) .
 
 ```csharp
 SKColor (byte red, byte green, byte blue, byte alpha);
 ```
 
-알파 값이 0은 완전히 투명 이며 0xFF의 알파 값을 완전히 불투명 합니다. 이러한 두 가지 극단적인 사이의 값 부분적으로 투명 한 색을 만듭니다.
+알파 값 0은 완전히 투명 하 고 알파 값 0xFF는 완전히 불투명 합니다. 이러한 두 극단 사이의 값은 부분적으로 투명 한 색을 만듭니다.
 
-또한 `SKColor` 정의 유용한 [ `WithAlpha` ](xref:SkiaSharp.SKColor.WithAlpha*) 알파 수준이 지정된 하지만 기존 색에서 색을 만드는 메서드:
+또한는 `SKColor` [`WithAlpha`](xref:SkiaSharp.SKColor.WithAlpha*) 기존 색에서 지정 된 알파 수준으로 새 색을 만드는 편리한 메서드를 정의 합니다.
 
 ```csharp
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-부분적으로 투명 한 텍스트의 사용에 설명 되어는 **코드 보다 코드** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플입니다. 이 페이지 페이드 두 개의 텍스트 문자열의 시작 및 종료에서 투명도 통합 하 여는 `SKColor` 값:
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **코드 추가 코드** 페이지에서 부분적으로 투명 한 텍스트를 사용 하는 방법을 보여 줍니다. 이 페이지는 값에 투명도를 통합 하 여의 두 텍스트 문자열을 페이드 아웃 합니다 `SKColor` .
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -124,27 +127,27 @@ public class CodeMoreCodePage : ContentPage
 }
 ```
 
-`transparency` 필드는 0에서 1까지 다양할 진폭이 리듬에서 다시을 애니메이션 효과가 적용 됩니다. 첫 번째 텍스트 문자열을 빼서 계산 합니다. 알파 값을 사용 하 여 표시 됩니다는 `transparency` 1의 값:
+`transparency`사인 곡선 리듬에서 1과 1 사이의 차이가 있는 필드에 애니메이션 효과가 적용 됩니다. 첫 번째 텍스트 문자열은 1에서 값을 빼서 계산 된 알파 값이 표시 됩니다 `transparency` .
 
 ```csharp
 paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * (1 - transparency)));
 ```
 
-합니다 [ `WithAlpha` ](xref:SkiaSharp.SKColor.WithAlpha*) 같습니다. 기존 색의 알파 구성 요소를 설정 하는 메서드 `SKColors.Blue`합니다. 두 번째 텍스트 문자열에서 계산 된 알파 값을 사용 하 여 `transparency` 값 자체:
+[`WithAlpha`](xref:SkiaSharp.SKColor.WithAlpha*)메서드는 기존 색에 알파 구성 요소를 설정 합니다. 여기서는 `SKColors.Blue` 입니다. 두 번째 텍스트 문자열은 값 자체에서 계산 된 알파 값을 사용 합니다 `transparency` .
 
 ```csharp
 paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 ```
 
-애니메이션 두 단어, 긴급 "자세히 code" 사용자 (또는 "더 많은 코드"를 요청 하는 것)이 번갈아:
+애니메이션은 두 단어 사이를 대체 하 여 사용자를 "코드 urging" (또는 "추가 코드" 요청) 합니다.
 
-[![더 많은 코드를 코드](transparency-images/CodeMoreCode.png "더 많은 코드를 코드")](transparency-images/CodeMoreCode-Large.png#lightbox)
+[![코드 추가 코드](transparency-images/CodeMoreCode.png "코드 추가 코드")](transparency-images/CodeMoreCode-Large.png#lightbox)
 
-에 대 한 이전 문서에서 [ **SkiaSharp의 비트맵 기본 사항**](bitmaps.md), 중 하나를 사용 하 여 비트맵을 표시 하는 방법을 살펴보았습니다 합니다 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap*) 의 메서드 `SKCanvas`합니다. 모든는 `DrawBitmap` 메서드로 `SKPaint` 마지막 매개 변수로 개체입니다. 기본적으로이 매개 변수 설정 `null` 및 무시할 수 있습니다. 
+이전 문서 [**SkiaSharp의 비트맵 기본 사항**](bitmaps.md)에서는의 메서드 중 하나를 사용 하 여 비트맵을 표시 하는 방법을 살펴보았습니다 [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap*) `SKCanvas` . 모든 `DrawBitmap` 메서드에는 개체를 `SKPaint` 마지막 매개 변수로 포함 합니다. 기본적으로이 매개 변수는로 설정 되며 무시 해도 됩니다 `null` . 
 
-설정할 수 있습니다 합니다 `Color` 이 `SKPaint` 일정 수준의 투명도 사용 하 여 비트맵을 표시 하는 개체입니다. 에 대 한 투명도 수준을 설정 합니다 `Color` 의 속성 `SKPaint` 비트맵을 페이드 인 / 체크 아웃 하거나 다른 하나의 비트맵 주만에 수 있습니다. 
+또는 `Color` 이 개체의 속성을 설정 하 여 `SKPaint` 특정 수준의 투명도를 사용 하는 비트맵을 표시할 수 있습니다. 의 속성에서 투명도 수준을 설정 하면 `Color` 비트맵을 `SKPaint` 페이드 인 하거나 페이드 아웃할 수 있습니다. 
 
-비트맵 투명도에 설명 되어는 **비트맵 주만에** 페이지입니다. XAML 파일은는 `SKCanvasView` 및 `Slider`:
+비트맵 투명도는 **비트맵 흩어 뿌리기** 페이지에서 보여 줍니다. XAML 파일은 `SKCanvasView` 및를 인스턴스화합니다 `Slider` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -164,7 +167,7 @@ paint.Color = SKColors.Blue.WithAlpha((byte)(0xFF * transparency));
 </ContentPage>
 ```
 
-코드 숨김 파일을 두 비트맵 리소스를 로드합니다. 이러한 비트맵은 크기가 동일 하지 않습니다 하지만 동일한 가로 세로 비율:
+코드 숨김이 파일은 두 개의 비트맵 리소스를 로드 합니다. 이러한 비트맵의 크기는 동일 하지 않지만 가로 세로 비율은 다음과 같습니다.
 
 ```csharp
 public partial class BitmapDissolvePage : ContentPage
@@ -229,13 +232,13 @@ public partial class BitmapDissolvePage : ContentPage
 }
 ```
 
-`Color` 속성의는 `SKPaint` 개체 두 비트맵에 대 한 두 개의 보완 알파 수준으로 설정 됩니다. 사용 하는 경우 `SKPaint` 비트맵을 사용 하 여 어떤 나머지는 중요 하지 않습니다는 `Color` 값이 있습니다. 가장 중요는 알파 채널입니다. 여기에서 코드를 호출 합니다 `WithAlpha` 기본값인 메서드는 `Color` 속성입니다.
+`Color`개체의 속성은 `SKPaint` 두 비트맵에 대해 두 개의 보조 알파 수준으로 설정 됩니다. 비트맵과 함께를 사용 하는 경우 `SKPaint` 값의 나머지가 무엇 인지는 중요 하지 않습니다 `Color` . 알파 채널은 모두 중요 합니다. 여기에서 코드는 단순히 `WithAlpha` 속성의 기본값에 대해 메서드를 호출 합니다 `Color` .
 
-이동 된 `Slider` 하나의 비트맵 즉 사이 디졸브:
+`Slider`한 비트맵과 다른 비트맵 간에 dissolves 이동:
 
-[![디졸브 비트맵](transparency-images/BitmapDissolve.png "디졸브 비트맵")](transparency-images/BitmapDissolve-Large.png#lightbox)
+[![비트맵 흩어 뿌리기](transparency-images/BitmapDissolve.png "비트맵 흩어 뿌리기")](transparency-images/BitmapDissolve-Large.png#lightbox)
 
-지난 몇 가지 문서에서는 텍스트 "," 원 "," 줄임표 "," 둥근된 사각형 "및" 비트맵을 그릴 SkiaSharp 사용 하는 방법을 살펴보았습니다. 다음 단계 [SkiaSharp 선 및 경로](../paths/index.md) 그래픽 경로에 연결 된 선을 그리는 방법을 learn 됩니다.
+지난 몇 가지 문서에서는 SkiaSharp를 사용 하 여 텍스트, 원, 타원, 둥근 사각형 및 비트맵을 그리는 방법에 대해 살펴보았습니다. 다음 단계는 그래픽 경로에서 연결 된 선을 그리는 방법을 배울 [SkiaSharp 선 및 경로](../paths/index.md) 입니다.
 
 ## <a name="related-links"></a>관련 링크
 

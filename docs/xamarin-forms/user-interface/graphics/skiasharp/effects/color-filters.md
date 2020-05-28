@@ -1,37 +1,40 @@
 ---
-title: SkiaSharp 색 필터
-description: 색 필터를 사용 하 여 변환 또는 테이블을 사용 하 여 색을 변환 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/28/2018
-ms.openlocfilehash: 5aa8b2e85d5a7d547af5333dcaf350025b86cc26
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68647692"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136385"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp 색 필터
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-색 필터 포스터화와 같은 효과 다른 색 비트맵 (또는 다른 이미지)의 색을 변환할 수 있습니다.
+색 필터는 비트맵 또는 다른 이미지의 색을 posterization 등의 효과에 대 한 다른 색으로 변환할 수 있습니다.
 
-![색 필터 예제](color-filters-images/ColorFiltersExample.png "색 필터 예제")
+![색 필터 예](color-filters-images/ColorFiltersExample.png "색 필터 예")
 
-색 필터를 사용 하려면 설정 합니다 [ `ColorFilter` ](xref:SkiaSharp.SKPaint.ColorFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKColorFilter` ](xref:SkiaSharp.SKColorFilter) 해당 클래스의 정적 메서드 중 하나에서 만든 합니다. 이 문서에는 다음 방법을 보여 줍니다. 
+색 필터를 사용 하려면 [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) 의 속성을 `SKPaint` [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) 해당 클래스의 정적 메서드 중 하나에서 만든 형식의 개체로 설정 합니다. 이 문서에서는 다음을 보여 줍니다. 
 
-- 색 변환을 사용 하 여 만든 합니다 [ `CreateColorMatrix` ](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) 메서드.
-- 색상표를 사용 하 여 만든 합니다 [ `CreateTable` ](xref:SkiaSharp.SKColorFilter.CreateTable*) 메서드.
+- 메서드를 사용 하 여 만든 색 변환 [`CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) 입니다.
+- 메서드를 사용 하 여 만든 색 테이블 [`CreateTable`](xref:SkiaSharp.SKColorFilter.CreateTable*) 입니다.
 
-## <a name="the-color-transform"></a>색 변환
+## <a name="the-color-transform"></a>색 변환입니다.
 
-색 변환에서는 색을 수정 하는 행렬을 사용 합니다. 마찬가지로 대부분의 2D 그래픽 시스템에서 SkiaSharp 사용 하 여 행렬 문서의 iscussed로 좌표로 변환에 대 한 대부분 [ **SkiaSharp 변환 행렬**](../transforms/matrix.md)합니다. 합니다 [ `SKColorFilter` ](xref:SkiaSharp.SKColorFilter) 매트릭스 변환 하지만 RGB 색 매트릭스 변환도 지원 합니다. 어느 정도 익숙하다고 행렬 개념은 이러한 색 변환 이해 하는 데 필요한 합니다. 
+색 변환은 행렬을 사용 하 여 색을 수정 합니다. 대부분의 2D 그래픽 시스템과 마찬가지로 SkiaSharp는 대개 [**SkiaSharp의 매트릭스 변환**](../transforms/matrix.md)문서에서 좌표 요소를 iscussed로 변환 하는 데 행렬을 사용 합니다. 는 [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) 행렬 변환도 지원 하지만 행렬에서는 RGB 색을 변환 합니다. 이러한 색 변환을 이해 하려면 행렬 개념에 대 한 지식이 필요 합니다. 
 
-색 변환 매트릭스는 4 개의 행과 다섯 개의 열을 차원에 있습니다.
+색 변환 매트릭스에는 4 개의 행과 5 개의 열로 이루어진 차원이 있습니다.
 
 <pre>
 | M11 M12 M13 M14 M15 |
@@ -40,9 +43,9 @@ ms.locfileid: "68647692"
 | M41 M42 M43 M44 M45 |
 </pre>
 
-대상 색 RGB 소스 색 (R, G, B, A) 변환 (R'를 G', B ','). 
+RGB 원본 색 (R, G, B, A)을 대상 색 (R ', G ', B ', A ')으로 변환 합니다. 
 
-행렬 곱에 대 한 준비, 소스 색 5 × 1 행렬으로 변환 됩니다.
+행렬 곱셈을 준비 하는 동안 원본 색은 5 × 1 행렬로 변환 됩니다.
 
 <pre>
 | R |
@@ -52,11 +55,11 @@ ms.locfileid: "68647692"
 | 1 |
 </pre>
 
-이러한 R, G, B 및 A 값은 0에서 255 까지의 원래 바이트. 이들은 _되지_ 0 ~ 1 범위에 부동 소수점 값을 정규화 합니다.
+이러한 R, G, B 및 값은 0에서 255 사이의 원래 바이트입니다. 0에서 1 사이의 부동 소수점 값으로 정규화 _되지 않습니다_ .
 
-추가 셀 번역 요소에 필요합니다. 이 섹션에 설명 된 대로 2 차원 좌표로 변환 하는 3 × 3 행렬을 사용 하는 것과 유사 [ **3-3 하 여 행렬의 이유** ](../transforms/matrix.md#the-reason-for-the-3-by-3-matrix) 행렬을 사용 하 여 변환에 대 한 문서에서 요소를 조정 합니다.
+추가 셀은 변환 인수에 필요 합니다. 이는 좌표 점수를 변환 하기 위해 행렬을 사용 하는 문서에서 3 [**x 3 행렬의 이유**](../transforms/matrix.md#the-reason-for-the-3-by-3-matrix) 섹션에 설명 된 대로 3 × 3 매트릭스를 사용 하 여 2 차원 좌표 요소를 변환 하는 것과 유사 합니다.
 
-5 × 1 행렬으로 4 × 5 행렬 곱을 제품 4 × 1 매트릭스 변환 된 색으로 사용 됩니다.
+4 × 5 행렬에는 5 × 1 매트릭스가 곱하고, 제품은 변환 된 색이 있는 4 × 1 행렬입니다.
 
 <pre>
 | M11 M12 M13 M14 M15 |    | R |   | R' |
@@ -66,7 +69,7 @@ ms.locfileid: "68647692"
                            | 1 |
 </pre>
 
-R에 대 한 별도 수식을 같습니다 ', G'를 A 및 B',':
+R ', G ', B ' 및 A '에 대 한 별도의 수식은 다음과 같습니다.
 
 `R' = M11·R + M12·G + M13·B + M14·A + M15` 
 
@@ -76,9 +79,9 @@ R에 대 한 별도 수식을 같습니다 ', G'를 A 및 B',':
 
 `A' = M41·R + M42·G + M43·B + M44·A + M45` 
 
-행렬의 대부분 일반적으로 0 ~ 2 범위에 있는 곱하기 요소 이루어져 있습니다. 그러나 마지막 열 (M45 통해 M15) 수식에 추가 되는 값을 포함 합니다. 이러한 값 일반적으로 범위는 0에서 255입니다. 결과 0에서 255 사이의 범위로 제한 합니다.
+대부분의 행렬은 일반적으로 0에서 2 사이에 있는 곱하기 요소로 구성 됩니다. 그러나 마지막 열 (M15 ~ M45)에는 수식에 추가 된 값이 포함 되어 있습니다. 이러한 값의 범위는 일반적으로 0에서 255입니다. 결과는 0에서 255 사이의 값으로 고정 됩니다.
 
-항등 매트릭스 다음과 같습니다.
+Id 매트릭스는 다음과 같습니다.
 
 <pre>
 | 1 0 0 0 0 |
@@ -87,7 +90,7 @@ R에 대 한 별도 수식을 같습니다 ', G'를 A 및 B',':
 | 0 0 0 1 0 |
 </pre>
 
-이렇게 하면 색 변경 되지 않았습니다. 변환 하는 수식을 다음과 같습니다.
+이로 인해 색이 변경 되지 않습니다. 변환 수식은 다음과 같습니다.
 
 `R' = R` 
 
@@ -97,13 +100,13 @@ R에 대 한 별도 수식을 같습니다 ', G'를 A 및 B',':
 
 `A' = A`
 
-불투명도 보존 되므로 M44 셀이 매우 중요 합니다. 불투명 빨강, 녹색 및 파랑 값을 기반으로 하는 원치 않을 것 때문 M41, M42, 및 M43 모든 0는 경우 일반적으로입니다. 그러나 M44이 0 이면는 ' 0이 되 고 아무 것도 표시 됩니다.
+M44 셀은 불투명도를 유지 하므로 매우 중요 합니다. 일반적으로 M41, M42 및 M43가 모두 0 인 경우에는 빨강, 녹색 및 파랑 값을 기준으로 불투명도를 사용 하지 않는 것이 좋습니다. 그러나 M44가 0 이면는 0이 되 고 아무 것도 표시 되지 않습니다.
 
-색 매트릭스를 사용 하는 가장 일반적인 하나 회색조 비트맵을 색 비트맵으로 변환 하는 것입니다. 여기에 빨간색, 녹색 및 파란색 값의 가중치가 적용 된 평균에 대 한 수식을 포함 됩니다. ("표준 빨강 녹색 파란색") sRGB 색 공간을 사용 하는 비디오 디스플레이이 수식은 다음과 같습니다.
+색 매트릭스를 사용 하는 가장 일반적인 방법 중 하나는 색 비트맵을 회색 눈금 비트맵으로 변환 하는 것입니다. 여기에는 빨강, 녹색 및 파랑 값의 가중치가 적용 된 평균에 대 한 수식이 포함 됩니다. SRGB ("표준 빨강 녹색 파랑") 색 공간을 사용 하 여 비디오를 표시 하는 경우이 수식은 다음과 같습니다.
 
-회색 음영 0.2126· = R + 0.7152· G + 0.0722· B
+회색 음영 = 0.2126 · R + 0.7152 · G + 0.0722 · B
 
-R 회색조 비트맵을 색 비트맵으로 변환 하려면 ', G', B' 결과 모두 같아야 동일한 값 및 합니다. 행렬은:
+색 비트맵을 회색 눈금 비트맵으로 변환 하려면 R ', G ' 및 B의 결과가 모두 같은 값 이어야 합니다. 행렬은 다음과 같습니다.
 
 <pre>
 | 0.21 0.72 0.07 0 0 |
@@ -112,15 +115,15 @@ R 회색조 비트맵을 색 비트맵으로 변환 하려면 ', G', B' 결과 �
 | 0    0    0    1 0 |
 </pre>
 
-이 행렬에 해당 하는 SkiaSharp 데이터 형식은 있습니다. 20 배열로 행렬을 나타내야 합니다 대신 `float` 행 순서로 값: 첫 번째 행을 두 번째 행 및 등입니다.
+이 행렬에 해당 하는 SkiaSharp 데이터 형식이 없습니다. 대신 행렬을 `float` 행 순서에 있는 20 개의 값, 즉 첫 번째 행, 두 번째 행 등의 배열로 나타내야 합니다.
 
-정적 [ `SKColorFilter.CreateColorMatrix` ](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) 메서드는 다음 구문을 가집니다.
+정적 [`SKColorFilter.CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) 메서드의 구문은 다음과 같습니다.
 
 ```csharp
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-여기서 `matrix` 20의 배열이 `float` 값입니다. 배열을 만들 때 C#을 4 × 5 행렬 비슷합니다 있으므로 숫자 형식 지정 하기가 쉽습니다. 에 설명 되어이 **회색조 행렬** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플:
+여기서 `matrix` 는 20 값의 배열입니다 `float` . C #에서 배열을 만들 때 4 × 5 매트릭스와 유사 하 게 숫자의 형식을 지정 하는 것이 쉽습니다. 이는 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **회색 크기 행렬** 페이지에서 보여 줍니다.
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -163,19 +166,19 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-`DrawBitmap` 에서이 코드에 사용 하는 메서드는 합니다 **BitmapExtension.cs** 에 포함 된 파일을 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플. 
+`DrawBitmap`이 코드에 사용 되는 메서드는 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플에 포함 된 **BitmapExtension.cs** 파일에서 가져온 것입니다. 
 
-IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 결과 다음과 같습니다.
+IOS, Android 및 유니버설 Windows 플랫폼에서 실행 되는 결과는 다음과 같습니다.
 
-[![회색조 행렬](color-filters-images/GrayScaleMatrix.png "회색조 행렬")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
+[![회색 크기 행렬](color-filters-images/GrayScaleMatrix.png "회색 크기 행렬")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
 
-네 번째 행과 네 번째 열 값에 주의 합니다. A에 대 한 원래 색의 값을 곱하고 중요 한 요소는 ' 변환 된 색의 값입니다. 해당 셀이 0 이면 아무 것도 표시 되 고 문제를 찾기 어려울 수 있습니다.
+네 번째 행과 네 번째 열에 있는 값을 확인 합니다. 변환 된 색의 A ' 값에 대 한 원래 색의 값을 곱하여 하는 중요 한 요소입니다. 해당 셀이 0 이면 아무것도 표시 되지 않으며 문제를 찾기 어려울 수 있습니다.
 
-색 매트릭스를 사용 하 여 시험해 보려는 경우에 원본 큐브 또는 대상의 관점에서 변환을 처리할 수 있습니다. 원본의 빨간색 픽셀 대상의 빨강, 녹색 및 파랑 픽셀에 어떻게 기여 해야? 첫 번째 값을 기준으로 결정 됩니다 _열_ 행렬입니다. 또는 해야 빨간색 대상 픽셀 영향 원본의 빨간색, 녹색 및 파란색 픽셀로? 첫 번째 결정 됩니다 _행_ 행렬입니다.
+색 매트릭스를 사용 하 여 실험 하는 경우 원본 또는 대상의 큐브 뷰에서 변환을 처리할 수 있습니다. 원본의 빨간색 픽셀이 대상의 빨간색, 녹색 및 파란색 픽셀에 어떻게 기여 하나요? 행렬의 첫 번째 _열_ 에 있는 값에 따라 결정 됩니다. 또는 대상 빨강 픽셀의 영향을 받는 빨간색, 녹색 및 파란색 픽셀의 영향을 받습니까? 이는 행렬의 첫 번째 _행_ 에 의해 결정 됩니다.
 
-아이디어 색 변환을 사용 하는 방법에 대해서는 [ **이미지 다시 칠하기** ](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) 페이지입니다. 초점은 Windows Forms 및 행렬은 다른 형식으로 하지만 개념은 동일 합니다.
+색 변환을 사용 하는 방법에 대 한 몇 가지 아이디어는 [**이미지 다시 칠하기**](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) 페이지를 참조 하세요. 논의에는 Windows Forms, 행렬은 다른 형식 이지만 개념은 동일 합니다.
 
-합니다 **파스텔 행렬** 빨간색 대상 픽셀 attenuating 빨간색 원본 픽셀 및 약간 빨간색 및 녹색 픽셀을 강조 하 여 계산 합니다. 이 프로세스는 녹색, 파란색 픽셀 마찬가지로 발생합니다.
+**파스텔 행렬** 은 원본 빨강 픽셀을 attenuating 빨강 및 녹색 픽셀을 약간 강조 하 여 대상 빨강 픽셀을 계산 합니다. 이 프로세스는 다음과 유사 하 게 녹색 및 파란색 픽셀에 대해 발생 합니다.
 
 ```csharp
 public class PastelMatrixPage : ContentPage
@@ -218,13 +221,13 @@ public class PastelMatrixPage : ContentPage
 }
 ```
 
-여기서 볼 수 있듯이 색의 강도 음소거 하려면, 결과:
+결과는 여기에서 볼 수 있듯이 색의 강도를 음소거 하는 것입니다.
 
 [![파스텔 행렬](color-filters-images/PastelMatrix.png "파스텔 행렬")](color-filters-images/PastelMatrix-Large.png#lightbox)
 
 ## <a name="color-tables"></a>색 테이블
 
-정적 [ `SKColorFilter.CreateTable` ](xref:SkiaSharp.SKColorFilter.CreateTable*) 메서드는 두 가지 버전으로 제공 됩니다.
+정적 [`SKColorFilter.CreateTable`](xref:SkiaSharp.SKColorFilter.CreateTable*) 메서드는 두 가지 버전으로 제공 됩니다.
 
 ```csharp
 public static SKColorFilter CreateTable (byte[] table);
@@ -232,7 +235,7 @@ public static SKColorFilter CreateTable (byte[] table);
 public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] tableG, byte[] tableB);
 ```
 
-배열에는 항상 256 항목 포함. 에 `CreateTable` 빨간색, 녹색 및 파랑 구성 요소에 대 한 테이블을 동일한 테이블을 사용 하 여 메서드를 사용 합니다. 간단한 조회 테이블입니다. 원본 색이 (r, G, b)이 고 대상 색이 (r ', B ', G ') 인 경우 원본 구성 요소를 사용 하 여 인덱싱을 `table` 통해 대상 구성 요소를 가져옵니다.
+배열에는 항상 256 항목이 포함 되어 있습니다. `CreateTable`단일 테이블이 있는 메서드에서는 빨강, 녹색 및 파랑 구성 요소에 대해 동일한 테이블이 사용 됩니다. 간단한 조회 테이블입니다. 원본 색이 (R, G, B)이 고 대상 색이 (R ', B ', G ') 인 경우 `table` 원본 구성 요소를 사용 하 여 인덱싱을 통해 대상 구성 요소를 가져옵니다.
 
 `R' = table[R]`
 
@@ -240,13 +243,13 @@ public static SKColorFilter CreateTable (byte[] tableA, byte[] tableR, byte[] ta
 
 `B' = table[B]`
 
-두 번째 방법에서는 각각 네 가지 색 구성 요소는 별도 색상표를 가질 수 또는 동일한 색 테이블은 둘 이상의 구성 요소 간에 공유 될 수 있습니다.
+두 번째 방법에서는 네 가지 색 구성 요소 각각에 별도의 색 테이블이 있거나 둘 이상의 구성 요소 간에 동일한 색 테이블이 공유 될 수 있습니다.
 
-두 번째 인수 중 하나를 설정 하려는 경우 `CreateTable` 순서 대로 0에서 255 사이의 값이 들어 있는 색상표를 메서드를 사용할 수 `null` 대신 합니다. 매우 자주 합니다 `CreateTable` 호출에는 `null` 알파 채널에 대 한 첫 번째 인수입니다.
+두 번째 메서드에 대 한 인수 중 하나를 `CreateTable` 시퀀스의 0 ~ 255 값을 포함 하는 색 테이블로 설정 하려면 대신를 사용 하면 `null` 됩니다. 일반적 `CreateTable` 으로 호출에는 `null` 알파 채널에 대 한 첫 번째 인수가 있습니다.
 
-섹션에서 **포스터화** 에서 문서의 [SkiaSharp 액세스 비트맵 픽셀 비트](../bitmaps/pixel-bits.md#posterization), 색 해상도 낮추면에 비트맵의 각 픽셀 비트를 수정 하는 방법을 알아보았습니다. 이것이 기법 _포스터화_합니다. 
+[SkiaSharp 비트맵 픽셀 비트에 액세스](../bitmaps/pixel-bits.md#posterization)하는 문서의 **Posterization** 에 대 한 섹션에서 색 해상도를 줄이기 위해 비트맵의 개별 픽셀 비트를 수정 하는 방법을 살펴보았습니다. 이는 _posterization_이라는 기술입니다. 
 
-색상표를 사용 하 여 비트맵을 포스터 수도 있습니다. 생성자는 **포스터 테이블** 페이지에 매핑되는 해당 항목이 있는 인덱스 아래쪽 바이트 0으로 설정 하는 6 비트 색 테이블을 만듭니다.
+색 표를 사용 하 여 비트맵을 포스터화 할 수도 있습니다. **테이블 포스터화** 페이지의 생성자는 아래쪽 6 비트가 0으로 설정 된 바이트에 인덱스를 매핑하는 색 테이블을 만듭니다.
 
 ```csharp
 public class PosterizeTablePage : ContentPage
@@ -291,11 +294,11 @@ public class PosterizeTablePage : ContentPage
 }
 ```
 
-프로그램의 녹색 및 파란색 채널에만이 색상표를 사용 하려면 선택 합니다. 빨간색 채널 전체 해상도 계속 합니다.
+이 프로그램은 녹색 채널과 파란색 채널에만이 색 표를 사용 하도록 선택 합니다. 빨간색 채널은 전체 해상도를 계속 유지 합니다.
 
-[![테이블 포스터](color-filters-images/PosterizeTable.png "테이블 포스터")](color-filters-images/PosterizeTable-Large.png#lightbox)
+[![테이블 포스터화](color-filters-images/PosterizeTable.png "테이블 포스터화")](color-filters-images/PosterizeTable-Large.png#lightbox)
 
-다양 한 효과 대 한 다른 색 채널에 대 한 다양 한 색 테이블을 사용할 수 있습니다. 
+다양 한 효과에 대 한 다양 한 색 채널에 다양 한 색 테이블을 사용할 수 있습니다. 
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,38 +1,41 @@
 ---
-title: SkiaSharp의 3D 회전
-description: 이 문서에서는 비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 하는 방법에 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/14/2017
-ms.openlocfilehash: 60f09b2e60708df6b1e6b68be7ce0792bc8cd9b0
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3706139a2c15d01af67203c2bd09b281de80ed52
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759192"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140207"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>SkiaSharp의 3D 회전
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니다._
+_비 상관 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니다._
 
-비 관계 변환에 대 한 일반적인 응용 프로그램 3D 공간에서 2D 개체의 회전을 시뮬레이션 합니다.
+비 상관 변환의 한 가지 일반적인 응용 프로그램은 3D 공간에서 2D 개체의 회전을 시뮬레이션 하는 것입니다.
 
-![](3d-rotation-images/3drotationsexample.png "3D 공간에서 텍스트 문자열 회전")
+![](3d-rotation-images/3drotationsexample.png "A text string rotated in 3D space")
 
-이 작업에서는 3 차원 회전을 사용 하 여 작업 및 비 관계을 파생 `SKMatrix` 이러한 3D 회전을 수행 하는 변환입니다.
+이 작업에는 3 차원 회전을 사용한 다음 `SKMatrix` 이러한 3d 회전을 수행 하는 비 상관 변환의 파생이 포함 됩니다.
 
-이 개발 하는 것이 어렵습니다 `SKMatrix` 변형 2 차원 내 에서만 작동 합니다. 이 3으로 3 행렬 3D 그래픽에서 사용 되는 4x4 매트릭스에서 파생 되는 경우 작업이 훨씬 쉬워집니다. SkiaSharp 포함 된 [ `SKMatrix44` ](xref:SkiaSharp.SKMatrix44) 이 있지만 약간의 경험이 3D 그래픽에 대 한 클래스는 3D 회전 및 4-4 변환 매트릭스를 이해 하는 데 필요 합니다.
+이러한 변환은 두 차원 내 에서만 작동 하는 것이 좋습니다 `SKMatrix` . 3D 그래픽에서 사용 되는 4 x 4 매트릭스에서 3 x 3 매트릭스를 파생 하는 경우 작업이 훨씬 쉬워졌습니다. SkiaSharp에는 [`SKMatrix44`](xref:SkiaSharp.SKMatrix44) 이 목적을 위한 클래스가 포함 되어 있지만 3d 회전 및 4 x 4 변환 매트릭스를 이해 하려면 3d 그래픽의 일부 배경이 필요 합니다.
 
-개념적으로 Z. 라는 세 번째 축을 추가 하는 3 차원 좌표계는 Z 축을 화면 오른쪽 각도에. 3D 공간의 점 좌표는 세 자리 숫자를 사용 하 여 표시 됩니다: (x, y, z). 3d에서 X의 값을 늘리면이 문서에서는 사용 하는 좌표계 오른쪽 되며 증가 Y 값 두 개의 차원에서와 마찬가지로 아래로 이동 합니다. 양수 Z 값 증가 화면에서 제공 됩니다. 원점은 2D 그래픽 마찬가지로 왼쪽 위 모퉁이 있습니다. 이 평면에 오른쪽 각도 Z 축은 XY 평면으로 화면의 생각할 수 있습니다.
+3 차원 좌표계는 Z 라는 세 번째 축을 추가 합니다. 개념적으로 Z 축은 화면에 직각을 갖습니다. 3D 공간의 좌표 점이 3 개의 숫자 (x, y, z)로 표시 됩니다. 이 문서에서 사용 되는 3D 좌표계에서 X 값을 늘리려면 두 차원에서와 마찬가지로 Y의 값이 확장 됩니다. 양의 Z 값을 늘려도 화면에서 나옵니다. 원점은 2D 그래픽과 마찬가지로 왼쪽 위 모퉁이입니다. 이 평면에 대 한 오른쪽 각도에서 Z 축을 사용 하 여 화면을 XY 평면으로 간주할 수 있습니다.
 
-이 왼쪽 좌표계 라고 합니다. 에 왼쪽의 X 좌표 (오른쪽)를 양의 방향에서에 대 한 엄지와 가리키고 손가락은 Y 증가 하는 방향 (아래쪽) 조정 하는 경우 다음에 thumb의에서 지점 Z 좌표가 늘어나는 방향을-에서 초과 확장 화면입니다.
+이를 왼쪽 좌표 시스템 이라고 합니다. 양수 X 좌표 (오른쪽)의 방향으로 왼쪽의 엄지와 집게 손가락을 가리키고 가운데 손가락을 Y 좌표 (아래쪽)의 방향으로 가리키면 화면에 표시 되는 Z 좌표 방향의 화살표가 화면에서 확장 됩니다.
 
-3D 그래픽에서 변환-4x4 행렬을 기반으로 합니다. 4-4 항등 매트릭스는 다음과 같습니다.
+3D 그래픽에서 변환은 4 x 4 매트릭스를 기반으로 합니다. 4-4 항등 매트릭스는 다음과 같습니다.
 
 <pre>
 |  1  0  0  0  |
@@ -41,7 +44,7 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 |  0  0  0  1  |
 </pre>
 
-4x4 행렬을 사용 하 여 작업을 해당 행 및 열 번호를 사용 하 여 셀을 식별 하기에 편리한으로:
+4 x 4 매트릭스를 사용 하는 경우 행 및 열 번호를 사용 하 여 셀을 식별 하는 것이 편리 합니다.
 
 <pre>
 |  M11  M12  M13  M14  |
@@ -50,9 +53,9 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 |  M41  M42  M43  M44  |
 </pre>
 
-그러나는 SkiaSharp `Matrix44` 클래스는 약간 다릅니다. 설정 하거나 개별 셀 값을 가져올 유일한 방법은 `SKMatrix44` 사용 하는 것은 [ `Item` ](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) 인덱서 합니다. 행 및 열 인덱스는 0부터 시작 하지 않고 1부터 시작 하 고 행과 열 교환 됩니다. 위의 다이어그램에 있는 셀 M14 인덱서를 사용 하 여 액세스할 `[3, 0]` 에 `SKMatrix44` 개체입니다.
+그러나 SkiaSharp 클래스는 `Matrix44` 약간 다릅니다. 에서 개별 셀 값을 설정 하거나 가져오는 유일한 방법은 `SKMatrix44` 인덱서를 사용 하는 것입니다 [`Item`](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) . 행 및 열 인덱스는 1부터 시작 하는 것이 아니라 0부터 시작 하 여 행과 열이 교환 됩니다. 위의 다이어그램에서 M14 셀은 개체의 인덱서를 사용 하 여 액세스할 수 `[3, 0]` `SKMatrix44` 있습니다.
 
-3D 그래픽 시스템에서는 3D 지점 (x, y, z)는 4x4 변환 매트릭스를 곱하는 대 한 1-4 매트릭스도 변환 됩니다.
+3D 그래픽 시스템에서 3D 점 (x, y, z)은 4 x 4 x 4 x 4 x 4로 변환 됩니다.
 
 <pre>
                  |  M11  M12  M13  M14  |
@@ -61,7 +64,7 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
                  |  M41  M42  M43  M44  |
 </pre>
 
-2D 유사 변환 발생 하는 3 차원에서 3D 변환 4 차원에서으로 간주 됩니다. 네 번째 차원의 ' W ' 라고 하 고 3D 공간 W 좌표 1에 일치 하는 4 차원 공간 내에 존재로 간주 됩니다. 변환 수식에는 다음과 같습니다.
+3 차원에서 수행 되는 2D 변환과 유사 하 게 3D 변환은 4 차원에서 수행 되는 것으로 간주 됩니다. 네 번째 차원을 W 라고 하며, 3D 공간은 4D 공간 내에 존재 하는 것으로 간주 됩니다. 여기서 W 좌표는 1과 같습니다. 변환 수식은 다음과 같습니다.
 
 `x' = M11·x + M21·y + M31·z + M41`
 
@@ -71,9 +74,9 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 
 `w' = M14·x + M24·y + M34·z + M44`
 
-변환 수식에서 명확 하는 셀 `M11`, `M22`, `M33` X, Y 및 Z 방향의 배율 인수는 및 `M41`를 `M42`, 및 `M43` X, Y 및 Z의 번역 요인이 방법을 설명 합니다.
+변환 수식에서 알 수 있는 것은 셀이 `M11` `M22` `M33` x, y 및 z 방향의 배율 인수이 고, `M41` `M42` 및 `M43` 는 x, y 및 z 방향의 변환 요소입니다.
 
-이러한 좌표는 W가 1 x 3D 공간에 다시 변환할 ', y'를 z '좌표는 모든 나눈 w' 및:
+이러한 좌표를 3D 공간으로 다시 변환 하려면 (W가 1 인 경우) x ', y ' 및 z ' 좌표는 모두 w '로 나뉩니다.
 
 `x" = x' / w'`
 
@@ -83,9 +86,9 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 
 `w" = w' / w' = 1`
 
-나누기 w' 3D 공간에서 큐브 뷰를 제공 합니다. 경우 w'가 1 다음 없습니다 관점에서 발생 합니다.
+W '로 나누기는 3D 공간에서 큐브 뷰를 제공 합니다. W '가 1 이면 큐브 뷰가 발생 하지 않습니다.
 
-3D 공간에서 회전은 매우 복잡할 수 있지만 가장 간단한 회전은 X, Y 및 Z 축을 기준입니다. X 축 중심으로 α 각도의 회전은이 매트릭스입니다.
+3D 공간에서의 회전은 매우 복잡할 수 있지만 가장 간단한 회전은 X, Y 및 Z 축을 중심으로 하는 회전입니다. X 축을 중심으로 하는 각도 α 회전은 다음 행렬입니다.
 
 <pre>
 |  1     0       0     0  |
@@ -94,7 +97,7 @@ _비 관계 변환을 사용 하 여 3D 공간에서 2D 개체를 회전 합니�
 |  0     0       0     1  |
 </pre>
 
-X의 값이이 변환에 적용 하는 경우 동일 하 게 유지 합니다. Y 축 중심으로 회전 변경 하지 않고 Y의 값을 유지:
+이 변환이 적용 될 때 X의 값은 동일 하 게 유지 됩니다. Y 축을 중심으로 회전 하면 값이 변경 되지 않은 상태로 유지 됩니다.
 
 <pre>
 |  cos(α)  0  –sin(α)  0  |
@@ -103,7 +106,7 @@ X의 값이이 변환에 적용 하는 경우 동일 하 게 유지 합니다. Y
 |    0     0     0     1  |
 </pre>
 
-Z 축 중심으로 회전 2D 그래픽와 동일 합니다.
+Z 축을 중심으로 회전 하는 것은 2D 그래픽과 동일 합니다.
 
 <pre>
 |  cos(α)  sin(α)  0  0  |
@@ -112,24 +115,24 @@ Z 축 중심으로 회전 2D 그래픽와 동일 합니다.
 |    0       0     0  1  |
 </pre>
 
-회전의 방향은 좌표계의 선호도 포함 됩니다. 왼쪽 시스템입니다 증가 값 특정 축 방향으로 왼쪽의 엄지 단추를 가리킬 경우-X 축 중심으로 회전 오른쪽 회전 Y 축 및 사용자 쪽 Z 축 중심으로 회전에 대 한 아래쪽-다음의 곡선 yo 다른 손가락의 회전 양의 각도 방향을 나타냅니다.
+회전 방향은 좌표계를 활용 하 여 암시 됩니다. 이는 왼손 시스템 이므로 특정 축에 대 한 값을 높이는 왼쪽의 엄지 단추를 마우스 오른쪽 단추로 클릭 하 여 X 축을 중심으로 회전 하 고 Y 축을 중심으로 회전 하 여 Z 축을 중심으로 회전 하는 경우, 다른 손가락의 곡선은 긍정적인 각도의 회전 방향을 나타냅니다.
 
-`SKMatrix44` 정적 일반화 [ `CreateRotation` ](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) 하 고 [ `CreateRotationDegrees` ](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) 축 회전 중심점입니다 발생을 지정할 수 있도록 하는 메서드:
+`SKMatrix44`에는 [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) 회전이 발생 하는 축을 지정할 수 있는 일반화 된 정적 및 메서드가 있습니다.
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
 ```
 
-X 축 중심으로 회전에서 처음 세 개의 인수 1, 0, 0로 설정 합니다. Y 축 중심으로 회전에서 0, 1, 0으로 설정 하 고 Z 축 중심으로 회전, 0, 0, 1로 설정 합니다.
+X 축을 중심으로 회전 하려면 처음 세 인수를 1, 0, 0으로 설정 합니다. Y 축을 중심으로 회전 하려면이를 0, 1, 0으로 설정 하 고 Z 축을 중심으로 회전 하려면 0, 0, 1로 설정 합니다.
 
-네 번째 열은 4-4의 관점입니다. `SKMatrix44` 원근 변환을 만드는 메서드가 없는 있지만 직접 다음 코드를 사용 하 여 만들 수 있습니다.
+4-4의 네 번째 열은 큐브 뷰에 대 한 것입니다. 에는 `SKMatrix44` 큐브 뷰 변환을 만드는 방법이 없지만 다음 코드를 사용 하 여 사용자를 직접 만들 수 있습니다.
 
 ```csharp
 SKMatrix44 perspectiveMatrix = SKMatrix44.CreateIdentity();
 perspectiveMatrix[3, 2] = -1 / depth;
 ```
 
-인수 이름에 대 한 이유 `depth` 곧 분명 하 게 됩니다. 해당 코드는 행렬을 만듭니다.
+인수 이름의 이유가 `depth` 곧 명백 하 게 됩니다. 이 코드는 행렬을 만듭니다.
 
 <pre>
 |  1  0  0      0     |
@@ -138,21 +141,21 @@ perspectiveMatrix[3, 2] = -1 / depth;
 |  0  0  0      1     |
 </pre>
 
-W 다음 계산의 결과 변환 하는 수식을 ':
+변환 수식은 다음과 같이 w '를 계산 합니다.
 
 `w' = –z / depth + 1`
 
-이 z 값 0 보다 작은 경우 (개념적 뒤 XY 평면) 하는 경우 X 및 Y 좌표를 줄이기 위해 및 Z의 양수 값에 대 한 X 및 Y 좌표를 높이기 위해 사용 됩니다. Z 좌표 인 경우 `depth`, 다음 w'는 0이 고 좌표 될 무한 합니다. 3 차원 그래픽 시스템은 카메라 비유를 기반으로 구축 및 `depth` 값 좌표계의 원점을에서 카메라의 거리를 나타냅니다. 그래픽 개체는 Z 좌표를 즉 있는지 `depth` 단위 원점에서 카메라의 렌즈 닿는 개념적 고 무한정 커지면 합니다.
+Z 값이 0 보다 작은 경우 (개념적으로 XY 평면 뒤에) X 및 Y 좌표를 줄이는 데 사용 되며 Z 값에 대해 X 및 Y 좌표를 늘립니다. Z 좌표가와 같으면 `depth` w '는 0이 고 좌표는 무한대가 됩니다. 3 차원 그래픽 시스템은 카메라 비유를 중심으로 구축 되며 여기에서 `depth` 값은 좌표계의 원점 으로부터의 카메라 거리를 나타냅니다. 그래픽 개체의 축이 원점의 단위인 Z 좌표 이면이는 `depth` 개념적으로 카메라의 렌즈를 터치 하 고 무한히 크게 커집니다.
 
-아마도 사용할 것이 점을 염두 `perspectiveMatrix` 값과 함께 회전 행렬입니다. 회전할 그래픽 개체에 보다 큰 X 또는 Y 좌표 `depth`, 3D 공간에서이 개체의 회전은 보다 큰 Z 좌표를 포함 하는 일을 할 `depth`합니다. 이 방지할 수 있어야 합니다. 만들면 `perspectiveMatrix` 설정할 `depth` 그래픽 개체를 회전 하는 방법에 관계 없이 모든 좌표에 충분히 큰 값으로. 이 0으로 나누기 하지는 되도록 합니다.
+회전 매트릭스와 함께이 값을 사용 하는 것이 좋습니다 `perspectiveMatrix` . 회전 중인 그래픽 개체의 X 축과 Y 좌표가 보다 큰 경우 `depth` 3d 공간에서이 개체의 회전은 Z 좌표가 보다 클 수 있습니다 `depth` . 이는 피해 야 합니다. 를 만들 때 `perspectiveMatrix` `depth` 회전 방식에 관계 없이 graphics 개체의 모든 좌표에 대 한 값을 충분히 크게 설정 하려고 합니다. 이렇게 하면 0으로 나누기가 수행 되지 않습니다.
 
-3D 회전 및 큐브 뷰를 결합 하 여 4x4 행렬을 함께 곱한 필요 합니다. 이 작업을 위해 `SKMatrix44` 연결 메서드를 정의 합니다. 하는 경우 `A` 하 고 `B` 는 `SKMatrix44` 다음 다음 코드는 × b:에는 등호를 설정 하는 개체
+3D 회전 및 큐브 뷰를 결합 하려면 4 x 4 매트릭스를 함께 곱합니다. 이 목적을 위해에서는 `SKMatrix44` 연결 메서드를 정의 합니다. `A`및가 개체인 경우에는 `B` `SKMatrix44` 다음 코드에서 a × B와 같은 값을 설정 합니다.
 
 ```csharp
 A.PostConcat(B);
 ```
 
-4-4 변환 매트릭스를 2D 그래픽 시스템에서 사용할 2D 개체에 적용 됩니다. 이러한 개체는 평면 및 0의 Z 좌표를 할 것으로 간주 됩니다. 변환 곱셈은 앞에 표시 된 변환 보다 좀 더 간단 합니다.
+2D 그래픽 시스템에서 4 x 4로 변형 매트릭스가 사용 되는 경우 2D 개체에 적용 됩니다. 이러한 개체는 플랫 이며 Z 좌표가 0 인 것으로 간주 됩니다. 변환 곱셈은 앞에서 설명한 변환 보다 약간 더 간단 합니다.
 
 <pre>
                  |  M11  M12  M13  M14  |
@@ -161,27 +164,27 @@ A.PostConcat(B);
                  |  M41  M42  M43  M44  |
 </pre>
 
-행렬의 셋째 행의 모든 셀을 포함 하지 않는 변환 수식에서 z 결과 0 값:
+Z의 값이 0 이면 행렬의 세 번째 행에 있는 셀이 포함 되지 않는 변형 수식이 발생 합니다.
 
-x' = M11·x + M21·y + M41
+x ' = M11 · x + M21 · y + M41
 
-y' = M12·x + M22·y + M42
+y ' = M12 · x + M22 · y + M42
 
-z' = M13·x + M23·y + M43
+z ' = M13 · x + M23 · y + M43
 
-w' = M14·x + M24·y + M44
+w ' = M14 · x + M24 · y + M44
 
-또한 z' 좌표 관련이 없는 여기도 합니다. 3D 개체는 2 차원 그래픽 시스템에서 표시 되 면 Z 좌표 값을 무시 하 여 2 차원 개체를 축소 됩니다. 변환 하는 수식을 실제로 이러한 두 같습니다.
+또한 z 좌표는 여기 에서도 관련이 없습니다. 3D 개체가 2D 그래픽 시스템에 표시 되 면 Z 좌표 값을 무시 하 여 2 차원 개체로 축소 됩니다. 변환 수식은 정말 이러한 두 가지 방법입니다.
 
 `x" = x' / w'`
 
 `y" = y' / w'`
 
-즉, 세 번째 행 *고* -4x4 행렬의 세 번째 열을 무시할 수 있습니다.
+즉, 4 x 4 행렬의 세 번째 행 *과* 세 번째 열을 무시할 수 있습니다.
 
-하는 경우, 이유 있지만 필요한-4x4 행렬을 처음부터 인가요?
+그렇다면 4-4 매트릭스가 첫 번째 경우에도 필요한 이유는 무엇 인가요?
 
-세 번째 행과 세 번째 열은 4-4의 2 차원 변환, 세 번째 행 및 열에 대 한 관련 되지 않지만 *수행* 때 하기 전에 역할을 다양 한 `SKMatrix44` 값 곱합니다. 예를 들어 곱하는 원근 변환 사용 하 여 Y 축 중심으로 회전 하는 것으로 가정 합니다.
+4-4의 세 번째 행과 세 번째 열은 2 차원 변환과 관련이 없지만 세 번째 행과 열은 다양 한 값이 함께 연결 될 때 이전에 역할을 *수행* 합니다 `SKMatrix44` . 예를 들어 원근감 변환과 함께 Y 축을 중심으로 회전 하는 경우를 가정해 보겠습니다.
 
 <pre>
 |  cos(α)  0  –sin(α)  0  |   |  1  0  0      0     |   |  cos(α)  0  –sin(α)   sin(α)/depth  |
@@ -190,7 +193,7 @@ w' = M14·x + M24·y + M44
 |    0     0     0     1  |   |  0  0  0      1     |   |    0     0     0           1        |
 </pre>
 
-제품에서 셀 `M14` 이제 관점을 포함 합니다. 2D 개체에는 행렬을 적용 하려는 경우 세 번째 행과 열에 3-3 행렬으로 변환할 제거 됩니다.
+제품에서 셀에는 `M14` 큐브 뷰 값이 포함 됩니다. 이 행렬을 2D 개체에 적용 하려는 경우 세 번째 행과 열은 3 x 3 행렬로 변환 하기 위해 제거 됩니다.
 
 <pre>
 |  cos(α)  0  sin(α)/depth  |
@@ -198,7 +201,7 @@ w' = M14·x + M24·y + M44
 |    0     0       1        |
 </pre>
 
-이제는 2 차원 점의 변환을 사용할 수 있습니다.
+이제 2D 포인트를 변환 하는 데 사용할 수 있습니다.
 
 <pre>
                 |  cos(α)  0  sin(α)/depth  |
@@ -206,7 +209,7 @@ w' = M14·x + M24·y + M44
                 |    0     0       1        |
 </pre>
 
-변환 하는 수식을 다음과 같습니다.
+변환 수식은 다음과 같습니다.
 
 `x' = cos(α)·x`
 
@@ -214,17 +217,17 @@ w' = M14·x + M24·y + M44
 
 `z' = (sin(α)/depth)·x + 1`
 
-이제 z 나눌 모든 ':
+이제 모든 항목을 z로 나눕니다.
 
 `x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
 `y" = y / ((sin(α)/depth)·x + 1)`
 
-Y 축 중심을 양의 양의 각도 사용 하 여 2D 개체는 회전 하는 경우 X 값 오목 하 게 표시 부정 하는 동안 배경에 전경으로 제공 되는 X 값입니다. X 값을 더 작은 또는 뷰어를 멀리 이동할 때 더 큰 가깝게 됩니다 좌표로 Y 축에서 가장 먼 곳 (코사인 값을 적용은)는 Y 축에 가깝게 이동할 것 같습니다.
+2D 개체가 Y 축 주위에서 양의 각도로 회전 하는 경우 양의 X 값은 recede 하는 반면 음수 X 값은 포그라운드로 제공 됩니다. X 값은 y 축에서의 좌표 (코사인 값으로 제어 됨)와 가깝게 이동 하는 것 처럼 보일 수 있습니다. Y 축에서의 좌표는 가장 quantity 더 작거나 뷰어에 더 가깝게 이동 하기 때문입니다.
 
-사용 하는 경우 `SKMatrix44`, 다양 한 곱하여 모든 3D 회전 및 큐브 뷰 작업을 수행할 `SKMatrix44` 값입니다. 4에서 4에서 2 차원-3x3 매트릭스를 추출할 수 있습니다 다음 매트릭스를 사용 하 여는 [ `Matrix` ](xref:SkiaSharp.SKMatrix44.Matrix) 의 속성을 `SKMatrix44` 클래스입니다. 이 속성은 익숙한 반환 `SKMatrix` 값입니다.
+를 사용 하는 경우 `SKMatrix44` 다양 한 값을 곱하여 3d 회전 및 큐브 뷰 작업을 모두 수행 합니다 `SKMatrix44` . 그런 다음 클래스의 속성을 사용 하 여 4-6 행렬에서 2 차원 3 x 3 행렬을 추출할 수 있습니다 [`Matrix`](xref:SkiaSharp.SKMatrix44.Matrix) `SKMatrix44` . 이 속성은 친숙 한 `SKMatrix` 값을 반환 합니다.
 
-합니다 **회전 3D** 페이지 3D 회전을 시험해 볼 수 있습니다. 합니다 [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) 파일은 4 개의 슬라이더 X, Y 및 Z 축 기준으로 회전을 설정 하 고 깊이 값을 설정 합니다.
+**회전 3d** 페이지에서는 3d 회전을 사용 하 여 실험해 볼 수 있습니다. [**Rotation3DPage**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) 파일은 4 개의 슬라이더를 인스턴스화하여 X, Y 및 Z 축을 중심으로 회전을 설정 하 고 깊이 값을 설정 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -303,9 +306,9 @@ Y 축 중심을 양의 양의 각도 사용 하 여 2D 개체는 회전 하는 �
 </ContentPage>
 ```
 
-`depthSlider` 초기화 되는 `Minimum` 250 값입니다. 이 여기에서 순환할 2D 개체의 X 및 Y 좌표 원점을 250 픽셀 반지름으로 정의 된 원형 제한을 의미 합니다. 3D 공간에서이 개체의 모든 회전 250 보다 작은 좌표 값 항상 발생 합니다.
+는 `depthSlider` 250 값으로 초기화 됩니다 `Minimum` . 이는 여기서 회전 중인 2D 개체의 X 및 Y 좌표가 원본 주위에 있는 250 픽셀 반경으로 정의 된 원으로 제한 됨을 의미 합니다. 3D 공간에서이 개체의 회전은 항상 250 보다 작은 좌표 값을 반환 합니다.
 
-합니다 [ **Rotation3DPage.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) 코드 숨김 파일 로드 하는 비트맵은 300 픽셀 사각형입니다.
+[**Rotation3DPage.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml.cs) 코드 숨김이 300 픽셀 사각형의 비트맵에서 로드 됩니다.
 
 ```csharp
 public partial class Rotation3DPage : ContentPage
@@ -336,9 +339,9 @@ public partial class Rotation3DPage : ContentPage
 }
 ```
 
-이 비트맵에 3D 변환을 가운데 표시 되 고 하는 경우 다음 X 및 Y 좌표 –150 150 사이의 모퉁이 센터에서 212 픽셀 250 픽셀이 반경 내 하다는 것입니다.
+3D 변환이이 비트맵을 중심으로 하는 경우 X 및 Y 좌표는-150 ~ 150 사이이 고, 모퉁이는 중앙에서 212 픽셀 이므로 모든 항목은 250 픽셀 반지름 내에 있습니다.
 
-합니다 `PaintSurface` 처리기를 만듭니다 `SKMatrix44` 개체 슬라이더를 기반으로 하며 함께 사용 하 여 곱합니다 `PostConcat`합니다. 합니다 `SKMatrix` 마지막에서 추출 된 값 `SKMatrix44` 개체 주위에서 가운데 화면 가운데에 회전 변환을 변환:
+`PaintSurface`처리기는 `SKMatrix44` 슬라이더를 기준으로 개체를 만들고를 사용 하 여이를 곱합니다 `PostConcat` . `SKMatrix`최종 개체에서 추출 된 값은 `SKMatrix44` 화면 중심의 회전을 가운데 맞춤 하기 위해 변환 변환으로 둘러싸여 있습니다.
 
 ```csharp
 public partial class Rotation3DPage : ContentPage
@@ -407,11 +410,11 @@ public partial class Rotation3DPage : ContentPage
 }
 ```
 
-네 번째 슬라이더를 사용 하 여 실험 하는 경우에 다른 깊이 설정을 뷰어의에서 추가 개체를 이동 하지 않습니다 하지만 대신 큐브 뷰 결과의 범위를 alter는 보면:
+네 번째 슬라이더를 사용 하 여 실험을 수행 하는 경우 다른 깊이 설정에서 개체를 뷰어에서 멀리 이동 하지 않고 큐브 뷰 효과의 범위를 변경 하는 것을 알 수 있습니다.
 
-[![](3d-rotation-images/rotation3d-small.png "삼중 회전 3D 페이지 스크린샷")](3d-rotation-images/rotation3d-large.png#lightbox "삼중 회전 3D 페이지 스크린샷")
+[![](3d-rotation-images/rotation3d-small.png "Triple screenshot of the Rotation 3D page")](3d-rotation-images/rotation3d-large.png#lightbox "Triple screenshot of the Rotation 3D page")
 
-합니다 **애니메이션 회전 3D** 도 사용 하 여 `SKMatrix44` 3D 공간에 있는 텍스트 문자열에 애니메이션 효과를 합니다. `textPaint` 개체 필드 생성자가 사용 되는 텍스트의 경계를 결정 하는 설정 합니다.
+**애니메이션 회전 3d** 는를 사용 `SKMatrix44` 하 여 3d 공간에서 텍스트 문자열에 애니메이션 효과를 주는 데에도 사용 됩니다. `textPaint`필드로 설정 된 개체는 생성자에서 텍스트의 범위를 결정 하는 데 사용 됩니다.
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -443,7 +446,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-`OnAppearing` 재정의 세 Xamarin.Forms 정의 `Animation` 애니메이션 효과를 줄 개체를 `xRotationDegrees`, `yRotationDegrees`, 및 `zRotationDegrees` 서로 다른 속도로 필드. 이러한 애니메이션 기간 소수로 설정 된 전체 조합 마다 385 초 또는 10 분 이상만 반복 하므로 (5 초, 7, 11 초 및) 번호:
+`OnAppearing`재정의는 세 가지 개체를 정의 Xamarin.Forms `Animation` 하 여 `xRotationDegrees` , `yRotationDegrees` 및 `zRotationDegrees` 필드에 서로 다른 비율을 적용 합니다. 이러한 애니메이션의 기간은 소수 (5 초, 7 초, 11 초)로 설정 되므로 전체 조합은 385 초 또는 10 분 넘게 반복 됩니다.
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -477,7 +480,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-이전 프로그램 처럼 합니다 `PaintCanvas` 처리기를 만듭니다 `SKMatrix44` 회전 및 측면에 대 한 값을 가지 며 함께:
+이전 프로그램에서와 같이 처리기는 `PaintCanvas` `SKMatrix44` 회전 및 큐브 뷰에 대 한 값을 만들고 함께 곱합니다.
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -531,9 +534,9 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-회전 중심을 화면의 센터로 이동 하 고 화면와 동일한 너비가 되도록 텍스트 문자열의 크기를 조정할 몇 가지 2D 변환을 사용 하 여이 3D 회전 묶 였는:
+이 3D 회전은 회전 중심을 화면 중심으로 이동 하 고, 텍스트 문자열의 크기를 조정 하 여 화면과 동일한 너비를 갖도록 하는 여러 2D 변환으로 둘러싸여 있습니다.
 
-[![](3d-rotation-images/animatedrotation3d-small.png "삼중 애니메이션 회전 3D 페이지 스크린샷")](3d-rotation-images/animatedrotation3d-large.png#lightbox "삼중 애니메이션 회전 3D 페이지 스크린샷")
+[![](3d-rotation-images/animatedrotation3d-small.png "Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page")
 
 ## <a name="related-links"></a>관련 링크
 

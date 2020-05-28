@@ -1,24 +1,27 @@
 ---
-title: IOS의 TabbedPage 반투명 탭 모음
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 TabbedPage에서 탭 모음의 반투명도 모드를 설정 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 9581AE81-9557-47AD-8B07-25A1AC5F055B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/16/2020
-ms.openlocfilehash: 55fda0be2e260c5aa4a34ab2dcc1ac3cac33b92a
-ms.sourcegitcommit: 6c60914b380ff679bbffd7790edd4d5e18005d0a
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8127191aab80d81fc2e532e3d5e14931b834eeae
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070297"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137035"
 ---
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>IOS의 TabbedPage 반투명 탭 모음
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-이 iOS 플랫폼별는 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)탭 모음의 반투명도 모드를 설정 하는 데 사용 됩니다. 바인딩 가능한 속성 `TabbedPage.TranslucencyMode` `TranslucencyMode` 열거형 값으로 설정 하 여 XAML에서 사용 됩니다.
+이 iOS 플랫폼에 해당 하는는에서 탭 모음의 반투명도 모드를 설정 하는 데 사용 됩니다 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . `TabbedPage.TranslucencyMode`바인딩 가능한 속성을 열거형 값으로 설정 하 여 XAML에서 사용 됩니다 `TranslucencyMode` .
 
 ```xaml
 <TabbedPage ...
@@ -28,7 +31,7 @@ ms.locfileid: "80070297"
 </TabbedPage>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -38,15 +41,15 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 ```
 
-`TabbedPage.On<iOS>` 메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스의 `TabbedPage.SetTranslucencyMode` 메서드는 다음 `TranslucencyMode` 열거형 값 중 하나를 지정 하 여 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 에서 탭 모음의 반투명도 모드를 설정 하는 데 사용 됩니다.
+`TabbedPage.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `TabbedPage.SetTranslucencyMode`네임 스페이스의 메서드는 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 다음 열거형 값 중 하나를 지정 하 여에서 탭 모음의 반투명도 모드를 설정 하는 데 사용 됩니다 `TranslucencyMode` .
 
-- `Default`탭 표시줄을 기본 반투명도 모드로 설정 합니다. 이 값은 `TabbedPage.TranslucencyMode` 속성의 기본값입니다.
-- `Translucent`탭 모음을 반투명 하 게 설정 합니다.
-- `Opaque`탭 표시줄을 불투명 하 게 설정 합니다.
+- `Default`-탭 표시줄을 기본 반투명도 모드로 설정 합니다. 이 값은 `TabbedPage.TranslucencyMode` 속성의 기본값입니다.
+- `Translucent`탭 표시줄을 반투명 하 게 설정 하는입니다.
+- `Opaque`-탭 막대를 불투명 하 게 설정 합니다.
 
-또한 `GetTranslucencyMode` 메서드를 사용 하 여 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)에 적용 되는 `TranslucencyMode` 열거형의 현재 값을 검색할 수 있습니다.
+또한 메서드를 사용 하 여에 `GetTranslucencyMode` `TranslucencyMode` 적용 되는 열거형의 현재 값을 검색할 수 있습니다 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) .
 
-그러면 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 에 있는 탭 모음의 반투명도 모드를 설정할 수 있습니다.
+그러면에서 탭 모음의 반투명도 모드를 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 설정할 수 있습니다.
 
 ![IOS의 반투명 및 불투명 탭 막대 스크린샷](tabbedpage-translucent-tabbar-images/translucencymodes.png "반투명 및 불투명 탭 막대")
 

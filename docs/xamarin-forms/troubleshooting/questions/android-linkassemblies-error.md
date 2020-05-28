@@ -1,22 +1,25 @@
 ---
-title: Android 빌드 오류 – LinkAssemblies 작업이 예기치 않게 실패 했습니다.
-ms.topic: troubleshooting
-ms.prod: xamarin
-ms.assetid: EB3BE685-CB72-48E3-89D7-C845E76B9FA2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/07/2019
-ms.openlocfilehash: a90c56102f77e3f64d9333eec03b025d24888977
-ms.sourcegitcommit: a3b7e016fb25584dbf57bae89b64a9f98031e7c9
+title: ''
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9c0403203345ed78fae9f30c623c3e501f24ea0e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76549987"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135904"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Android 빌드 오류 – LinkAssemblies 작업이 예기치 않게 실패 했습니다.
 
-양식을 사용 하는 Xamarin Android 프로젝트를 빌드할 때 `The "LinkAssemblies" task failed unexpectedly` 오류 메시지가 표시 될 수 있습니다. 이는 링커가 활성 상태일 때 (일반적으로 *릴리스* 빌드에서 앱 패키지의 크기를 줄이기 위해) 발생 합니다. Android 대상이 최신 프레임 워크로 업데이트 되지 않기 때문에 발생 합니다. (자세한 정보: [xamarin.ios 지원 플랫폼](~/get-started/supported-platforms.md#android-platform-support))
+`The "LinkAssemblies" task failed unexpectedly`양식을 사용 하는 Xamarin Android 프로젝트를 빌드할 때 오류 메시지가 표시 될 수 있습니다. 이는 링커가 활성 상태일 때 (일반적으로 *릴리스* 빌드에서 앱 패키지의 크기를 줄이기 위해) 발생 합니다. Android 대상이 최신 프레임 워크로 업데이트 되지 않기 때문에 발생 합니다. (추가 정보: [ Xamarin.Forms 지원 되는 플랫폼](~/get-started/supported-platforms.md#android-platform-support))
 
 이 문제를 해결 하려면 지원 되는 최신 Android SDK 버전이 있는지 확인 하 고 **대상 프레임 워크** 를 설치 된 최신 플랫폼으로 설정 합니다. 또한 **대상 Android 버전** 을 설치 된 최신 플랫폼으로 설정 하 고 **최소 ANDROID 버전** 을 API 19 이상으로 설정 하는 것이 좋습니다. 이는 지원 되는 구성으로 간주 됩니다.
 
