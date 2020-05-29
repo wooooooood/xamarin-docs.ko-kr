@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms빠른 렌더러
-description: 이 문서에서는 Xamarin.Forms 생성 된 네이티브 컨트롤 계층 구조를 평면화 하 여 Android에서 컨트롤의 인플레이션 및 렌더링 비용을 줄이는 빠른 렌더러를 소개 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3f25f4c2da5b2a426673b49045b5d2d05b0c6ac4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139076"
+제목: " Xamarin.Forms 빠른 렌더러" 설명: "이 문서에서는 Xamarin.Forms 생성 된 네이티브 컨트롤 계층 구조를 평면화 하 여 Android에서 컨트롤의 인플레이션 및 렌더링 비용을 줄이는 빠른 렌더러를 소개 합니다."
+assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a: xamarin-forms author: davidbritch: dabritch:: 05/28/2020-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.Forms빠른 렌더러
 
 일반적으로 Android에서 대부분의 원래 컨트롤 렌더러는 다음과 같은 두 가지 보기로 구성 됩니다.
@@ -31,9 +17,10 @@ ms.locfileid: "84139076"
 빠른 렌더러는 Android의에서 다음 컨트롤에 사용할 수 있습니다 Xamarin.Forms .
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`Frame`](xref:Xamarin.Forms.Frame)
+- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 기능적으로 이러한 빠른 렌더러는 레거시 렌더러와 다르지 않습니다. Xamarin.Forms4.0부터 모든 응용 프로그램 `FormsAppCompatActivity` 은 기본적으로 이러한 빠른 렌더러를 사용 합니다. 및를 비롯 한 모든 새 컨트롤에 대 한 렌더러 [`ImageButton`](xref:Xamarin.Forms.ImageButton) [`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 빠른 렌더러 방법을 사용 합니다.
 

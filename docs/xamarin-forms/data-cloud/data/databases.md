@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms로컬 데이터베이스
-description: Xamarin.Forms는 SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 하므로 공유 코드에서 개체를 로드 하 고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램이 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 04d813baae5796da68ea27389df33738af5cde3e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131003"
+제목: " Xamarin.Forms 로컬 데이터베이스" 설명: " Xamarin.Forms SQLite 데이터베이스 엔진을 사용 하 여 데이터베이스 기반 응용 프로그램을 지원 하므로 공유 코드에서 개체를 로드 하 고 저장할 수 있습니다. 이 문서에서는 Xamarin.Forms 응용 프로그램이 SQLite.Net를 사용 하 여 로컬 SQLite 데이터베이스에서 데이터를 읽고 쓰는 방법을 설명 합니다.
+assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB: xamarin-forms author: profexorgeek: jusjohns:: 12/05/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-local-databases"></a>Xamarin.Forms로컬 데이터베이스
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
@@ -39,7 +25,7 @@ NuGet 패키지 관리자를 사용 하 여 **sqlite-net-library** 를 검색 �
 
 이름이 유사한 NuGet 패키지가 여러 개 있습니다. 올바른 패키지에는 이러한 특성이 있습니다.
 
-- **만든 사람:** Frank A. Krueger
+- **만든 사람:** Frank Krueger (praeclarum)
 - **ID:** sqlite-net-pcl
 - **NuGet 링크:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
@@ -236,7 +222,7 @@ public static TodoItemDatabase Database
 }
 ```
 
-이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.
+이 속성을 사용 하면 Xamarin.Forms 구성 요소가 `Database` 사용자 상호 작용에 대 한 응답으로 인스턴스에서 데이터 검색 및 조작 메서드를 호출할 수 있습니다. 예:
 
 ```csharp
 var saveButton = new Button { Text = "Save" };

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 장에서는를 사용 하는 엔터프라이즈 응용 프로그램 패턴의 앞에를 제공 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b587bd8cacda9024103757a585c11fba2ed09fda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130834"
+제목: "엔터프라이즈 앱 개발에 대 한 설명" 설명: "이 장에서는를 사용 하는 엔터프라이즈 응용 프로그램 패턴에 대 한 안내를 제공 Xamarin.Forms 합니다."
+assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="preface-to-enterprise-app-development"></a>엔터프라이즈 앱 개발에 대 한 앞으로
 
 이 전자책를 사용 하 여 플랫폼 간 엔터프라이즈 앱을 빌드하는 방법에 대 한 지침을 제공 Xamarin.Forms 합니다. Xamarin.Forms는 개발자가 iOS, Android 및 유니버설 Windows 플랫폼 (UWP)를 비롯 한 여러 플랫폼에서 공유할 수 있는 네이티브 사용자 인터페이스 레이아웃을 쉽게 만들 수 있도록 하는 플랫폼 간 UI 도구 키트입니다. 이 솔루션은 B2E (business to Employee), B2B (business to Business) 및 B2C (Business to Consumer) 앱에 대 한 종합적인 솔루션을 제공 하 여 모든 대상 플랫폼에서 코드를 공유 하 고 TCO (총 소유 비용)를 낮추는 기능을 제공 합니다.
@@ -27,7 +13,7 @@ ms.locfileid: "84130834"
 
 ## <a name="whats-left-out-of-this-guides-scope"></a>이 가이드의 범위에서 벗어난 내용
 
-이 가이드는에 이미 익숙한 독자를 대상으로 Xamarin.Forms 합니다. 에 대 한 자세한 소개는 Xamarin.Forms [ Xamarin.Forms 설명서](~/xamarin-forms/index.yml)를 참조 하 고를 [사용 하 Xamarin.Forms 여 Mobile Apps를 만듭니다 ](https://aka.ms/xamebook).
+이 가이드는에 이미 익숙한 독자를 대상으로 Xamarin.Forms 합니다. 에 대 한 자세한 소개는 Xamarin.Forms [ Xamarin.Forms 설명서](~/xamarin-forms/index.yml)를 참조 하 고를 [사용 하 Xamarin.Forms 여 Mobile Apps를 만듭니다 ](https://aka.ms/xamformsebook).
 
 이 가이드는 컨테이너 화 된 마이크로 서비스 개발 및 배포에 중점을 둔 [.Net 마이크로 서비스: 컨테이너 화 된 .Net 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook)를 보완 합니다. 다른 가이드에는 [ASP.NET Core 및 Microsoft Azure를 사용 하 여 최신 웹 응용 프로그램을 설계 하 고 개발 하 고](https://aka.ms/WebAppEbook), [Microsoft 플랫폼 및 도구를 사용 하 여 Docker 응용 프로그램 수명 주기를 컨테이너 화 된](https://aka.ms/dockerlifecycleebook), [모바일 앱 개발을 위한 microsoft 플랫폼 및 도구](https://aka.ms/MobAppDev/StndPDF)
 

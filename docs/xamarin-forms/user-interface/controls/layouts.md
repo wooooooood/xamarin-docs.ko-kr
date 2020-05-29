@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms모양의
-description: Xamarin.Forms레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조체로 구성 하는 데 사용 됩니다. 이 문서에서는에 포함 된 레이아웃을 나열 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c39bf29feceaf598ac8fd38e6af3d227b6deddc0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137308"
+제목: " Xamarin.Forms 레이아웃" 설명: " Xamarin.Forms 레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조로 구성 하는 데 사용 됩니다. 이 문서에서는에 포함 된 레이아웃을 나열 Xamarin.Forms 합니다.
+assetid: F4180997-BA21-453A-9958-D1E2940DF050: xamarin-forms author: davidbritch: dabritch: ms. date: 05/21/2018 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-layouts"></a>Xamarin.Forms모양의
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -57,7 +43,7 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView)는 내용을 스크롤할 수 있습니다. 속성을 [`Content`](xref:Xamarin.Forms.ScrollView.Content) 보기 또는 레이아웃으로 너무 커서 화면에 맞게 설정 합니다. 의 내용은 `ScrollView` 매우 일반적입니다 [`StackLayout`](#stackLayout) . 스크롤을 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) 세로, 수평 또는 둘 다로 지정 하려면 속성을 설정 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ScrollView)  /  [가이드](~/xamarin-forms/user-interface/layouts/scroll-view.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![ScrollView 예제](layouts-images/ScrollView.png "ScrollView 예제")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView)는 내용을 스크롤할 수 있습니다. 속성을 [`Content`](xref:Xamarin.Forms.ScrollView.Content) 보기 또는 레이아웃으로 너무 커서 화면에 맞게 설정 합니다. 의 내용은 `ScrollView` 매우 일반적입니다 [`StackLayout`](#stackLayout) . 스크롤을 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) 세로, 수평 또는 둘 다로 지정 하려면 속성을 설정 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ScrollView)  /  [가이드](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![ScrollView 예제](layouts-images/ScrollView.png "ScrollView 예제")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView
@@ -89,7 +75,7 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 
 <a name="grid" />
 
-### <a name="grid"></a>그리드
+### <a name="grid"></a>표
 
 |     |     |
 | --- | --- |

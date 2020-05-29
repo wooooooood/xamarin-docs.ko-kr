@@ -1,28 +1,17 @@
 ---
-title: Xamarin.Forms의 파일 처리
-description: Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함된 리소스를 사용하여 수행할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/21/2018
-ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997161"
+제목: "설명:"의 파일 처리 Xamarin.Forms Xamarin.Forms 는 .NET Standard 라이브러리의 코드를 사용 하거나 포함 된 리소스를 사용 하 여 구현할 수 있습니다. "
+assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8: xamarin-forms author: davidbritch: dabritch:: 06/21/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
-# <a name="file-handling-in-xamarinforms"></a>Xamarin.Forms의 파일 처리
+
+# <a name="file-handling-in-xamarinforms"></a>파일 처리Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
-_Xamarin.Forms를 통한 파일 처리는 .NET Standard 라이브러리의 코드를 사용하거나 포함 리소스를 사용하여 수행할 수 있습니다._
+_를 사용 하 여 파일을 처리 Xamarin.Forms 하는 것은 .NET Standard 라이브러리의 코드를 사용 하거나 포함 된 리소스를 사용 하 여 구현할 수 있습니다._
 
 ## <a name="overview"></a>개요
 
-Xamarin.Forms 코드는 각자 자체적인 파일 시스템을 지닌 여러 개의 플랫폼에서 실행됩니다. 이전에는 각 플랫폼에서 원시 파일 API를 사용하여 파일을 읽고 쓰는 것이 가장 쉽게 수행되었다는 것을 의미합니다. 또는 포함 리소스가 앱을 사용하여 데이터 파일을 배포하는 더 간단한 솔루션입니다. 그러나 .NET Standard 2.0을 사용하면 .NET Standard 라이브러리에서 파일 액세스 코드를 공유할 수 있습니다.
+Xamarin.Forms코드는 여러 플랫폼에서 실행 됩니다. 각 플랫폼에는 고유한 파일 시스템이 있습니다. 이전에는 각 플랫폼에서 원시 파일 API를 사용하여 파일을 읽고 쓰는 것이 가장 쉽게 수행되었다는 것을 의미합니다. 또는 포함 리소스가 앱을 사용하여 데이터 파일을 배포하는 더 간단한 솔루션입니다. 그러나 .NET Standard 2.0을 사용하면 .NET Standard 라이브러리에서 파일 액세스 코드를 공유할 수 있습니다.
 
 이미지 파일 처리에 대한 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md) 페이지를 참조하세요.
 
@@ -50,7 +39,7 @@ string text = File.ReadAllText(fileName);
 bool doesExist = File.Exists(fileName);
 ```
 
-각 플랫폼의 파일 경로는 [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) 열거형의 값을 `Environment.GetFolderPath` 메서드의 첫 번째 인수로 사용하여 .NET Standard 라이브러리에서 확인할 수 있습니다. 그런 다음, `Path.Combine` 메서드를 사용하여 파일 이름과 결합할 수 있습니다.
+[`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder)메서드의 첫 번째 인수로 열거형의 값을 사용 하 여 .NET Standard 라이브러리에서 각 플랫폼의 파일 경로를 확인할 수 있습니다 `Environment.GetFolderPath` . 그런 다음, `Path.Combine` 메서드를 사용하여 파일 이름과 결합할 수 있습니다.
 
 ```csharp
 string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
@@ -66,17 +55,17 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 **.NET Standard** 어셈블리에 파일을 포함시키려면 파일을 만들거나 추가하고 **빌드 작업: EmbeddedResource**를 확인합니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![포함 리소스 빌드 작업 구성](files-images/vs-embeddedresource-sml.png "EmbeddedResource") 빌드](files-images/vs-embeddedresource.png#lightbox "EmbeddedResource 빌드 설정")
+[![포함 리소스 빌드 작업 구성](files-images/vs-embeddedresource-sml.png "EmbeddedResource 빌드 설정")](files-images/vs-embeddedresource.png#lightbox "EmbeddedResource 빌드 설정")
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-[![.Net 표준 라이브러리에 포함 된 텍스트 파일, 포함 리소스 빌드 작업 구성](files-images/xs-embeddedresource-sml.png "EmbeddedResource") 빌드](files-images/xs-embeddedresource.png#lightbox "EmbeddedResource 빌드 설정")
+[![.NET standard 라이브러리에 포함 된 텍스트 파일, 포함 된 리소스 빌드 작업 구성](files-images/xs-embeddedresource-sml.png "EmbeddedResource 빌드 설정")](files-images/xs-embeddedresource.png#lightbox "EmbeddedResource 빌드 설정")
 
 -----
 
-`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 붙는 파일 이름입니다 .이 경우 어셈블리는 WorkingWithFiles이 고 파일 이름은 **입니다. 따라서**리소스 id는 `WorkingWithFiles.LibTextResource.txt`됩니다.
+`GetManifestResourceStream`은 **리소스 ID**를 사용하여 포함된 파일에 액세스하는 데 사용합니다. 기본적으로 리소스 ID는 포함 된 프로젝트의 기본 네임 스페이스가 접두사로 추가 된 파일 이름입니다 .이 경우 어셈블리는 WorkingWithFiles이 고 파일 이름은 **WorkingWithFiles** 입니다 **.** 따라서 리소스 id는 `WorkingWithFiles.LibTextResource.txt` 입니다.
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -90,7 +79,7 @@ using (var reader = new System.IO.StreamReader (stream))
 
 그러면 `text` 변수를 사용하여 텍스트를 표시하거나 그렇지 않은 경우 코드에서 사용할 수 있습니다. [샘플 앱](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)의 다음 스크린샷에서는 `Label` 컨트롤에서 렌더링된 텍스트를 보여 줍니다.
 
- [(files-images/pcltext-sml.png "앱에 표시 되는 .NET Standard 라이브러리에 포함 된 텍스트") 파일을 ![.net standard 라이브러리에 포함 된 텍스트 파일]](files-images/pcltext.png#lightbox "앱에 표시 되는 .NET Standard 라이브러리의 포함 텍스트 파일")
+ [![.NET 표준 라이브러리에 포함 된 텍스트 파일](files-images/pcltext-sml.png "앱에 표시 되는 .NET Standard 라이브러리의 포함 텍스트 파일")](files-images/pcltext.png#lightbox "앱에 표시 되는 .NET Standard 라이브러리의 포함 텍스트 파일")
 
 XML을 로드하고 역직렬화하는 것도 마찬가지로 간단합니다. 다음 코드에서는 리소스에서 로드 및 역직렬화된 다음, 표시할 `ListView`에 바인딩되는 XML 파일을 보여 줍니다. XML 파일에는 `Monkey` 개체의 배열이 포함되어 있습니다(클래스는 샘플 코드에서 정의됨).
 
@@ -106,7 +95,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Xml 파일이 .net standard 라이브러리에 포함 되어]있습니다. Listview(files-images/pclxml-sml.png "에 표시 되는 .net 표준 라이브러리의 Listview embedded Xml 파일") 에 표시 됩니다.](files-images/pclxml.png#lightbox "ListView에 표시 되는 .NET 표준 라이브러리의 포함 XML 파일")
+ [![ListView에 표시 되는 .NET standard 라이브러리에 포함 된 Xml 파일](files-images/pclxml-sml.png "ListView에 표시 되는 .NET 표준 라이브러리의 포함 XML 파일")](files-images/pclxml.png#lightbox "ListView에 표시 되는 .NET 표준 라이브러리의 포함 XML 파일")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -167,5 +156,5 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 ## <a name="related-links"></a>관련 링크
 
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
+- [Xamarin.Forms표본의](https://github.com/xamarin/xamarin-forms-samples)
 - [Xamarin.iOS에서 파일 시스템 작업](~/ios/app-fundamentals/file-system.md)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 12582c567a439cf4e0236724bd373c3508f18748
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139362"
+제목: "엔터프라이즈 앱 개발 소개" 설명: "이 장에서는 엔터프라이즈 앱 개발에 대 한 소개를 제공 하 고 eShopOnContainers 모바일 앱을 소개 합니다."
+assetid: cbce0659-fa03-447a-86ec-140438143230 ms. 기술: xamarin-forms author: davidbritch: dabritch: ms. 날짜: 08/07/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-enterprise-app-development"></a>엔터프라이즈 앱 개발 소개
 
 플랫폼에 관계 없이 엔터프라이즈 앱 개발자는 다음과 같은 몇 가지 문제를 직면 하 고 있습니다.
@@ -114,7 +100,7 @@ EShopOnContainers 모바일 앱은 다음 기능을 Xamarin.Forms 수행 합니�
 - MessagingCenter
 - 사용자 지정 컨트롤
 
-이 기능에 대 한 자세한 내용은 [ Xamarin.Forms 설명서](~/xamarin-forms/index.yml)및를 [사용 하 Xamarin.Forms 여 Mobile Apps 만들기 ](https://aka.ms/xamebook)를 참조 하세요.
+이 기능에 대 한 자세한 내용은 [ Xamarin.Forms 설명서](~/xamarin-forms/index.yml)및를 [사용 하 Xamarin.Forms 여 Mobile Apps 만들기 ](https://aka.ms/xamformsebook)를 참조 하세요.
 
 또한 eShopOnContainers 모바일 앱에서 일부 클래스에 대해 단위 테스트가 제공 됩니다.
 
@@ -122,7 +108,7 @@ EShopOnContainers 모바일 앱은 다음 기능을 Xamarin.Forms 수행 합니�
 
 EShopOnContainers 모바일 앱 솔루션은 소스 코드 및 기타 리소스를 프로젝트로 구성 합니다. 모든 프로젝트는 폴더를 사용 하 여 소스 코드 및 기타 리소스를 범주로 구성 합니다. 다음 표에서는 eShopOnContainers 모바일 앱을 구성 하는 프로젝트를 간략히 설명 합니다.
 
-|Project|Description|
+|Project|설명|
 |--- |--- |
 |eShopOnContainers|이 프로젝트는 공유 코드와 공유 UI를 포함 하는 PCL (이식 가능한 클래스 라이브러리) 프로젝트입니다.|
 |eShopOnContainers|이 프로젝트는 android 관련 코드를 저장 하며 Android 앱의 진입점입니다.|
@@ -139,7 +125,7 @@ EShopOnContainers 모바일 앱의 클래스는 전혀 수정 하지 않고 모�
 
 EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습니다.
 
-|폴더|Description|
+|폴더|설명|
 |--- |--- |
 |애니메이션|XAML에서 애니메이션을 사용 하도록 설정 하는 클래스를 포함 합니다.|
 |동작|뷰 클래스에 노출 되는 동작을 포함 합니다.|
@@ -151,7 +137,7 @@ EShopOnContainers PCL 프로젝트에는 다음 폴더가 포함 되어 있습�
 |도우미|앱에 대 한 도우미 클래스를 포함 합니다.|
 |모델|앱에 대 한 모델 클래스를 포함 합니다.|
 |속성|`AssemblyInfo.cs`.Net 어셈블리 메타 데이터 파일을 포함 합니다.|
-|Services|응용 프로그램에 제공 되는 서비스를 구현 하는 인터페이스와 클래스를 포함 합니다.|
+|서비스|응용 프로그램에 제공 되는 서비스를 구현 하는 인터페이스와 클래스를 포함 합니다.|
 |트리거|`BeginAnimation`XAML에서 애니메이션을 호출 하는 데 사용 되는 트리거를 포함 합니다.|
 |유효성 검사|데이터 입력의 유효성 검사와 관련 된 클래스를 포함 합니다.|
 |ViewModels|페이지에 노출 되는 응용 프로그램 논리를 포함 합니다.|
