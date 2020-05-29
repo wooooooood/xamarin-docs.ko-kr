@@ -1,50 +1,53 @@
 ---
-title: SkiaSharp 효과
-description: 그라데이션으로 그래픽의 기본 표시 크기를 변경, 바둑판식 배열 비트맵, 혼합 모드, 흐리게 표시 하는 방법 및 기타 효과 알아봅니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: B3E06572-8E2A-49FA-90D1-444C394CD516
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/22/2018
-ms.openlocfilehash: da923a3542a57b6150e536ecb6649140e57c81e1
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d9fa710f5dfc61c2892b8fc409a39b37cf449018
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68655353"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136307"
 ---
 # <a name="skiasharp-effects"></a>SkiaSharp 효과
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-SkiaSharp [ `SKPaint` ](xref:SkiaSharp.SKPaint) 클래스의 일반 용어에서 분류할 수 있는 6 개의 속성을 정의 합니다. _효과_합니다. 이러한 값은 어떤 방식으로든에서 그래픽의 기본 표시 크기를 변경 하는 속성입니다. SkiaSharp 효과 6 개의 범주로 구분 됩니다.
+SkiaSharp [`SKPaint`](xref:SkiaSharp.SKPaint) 클래스는 일반적인 _효과_용어로 분류할 수 있는 6 개의 속성을 정의 합니다. 이러한 속성은 그래픽의 정상적인 표시를 변경 하는 속성입니다. SkiaSharp 효과는 다음과 같은 여섯 가지 범주로 나뉩니다.
 
-## <a name="path-effectscurveseffectsmd"></a>[경로 효과](../curves/effects.md)
+## <a name="path-effects"></a>[경로 효과](../curves/effects.md)
 
-설정 합니다 [ `PathEffect` ](xref:SkiaSharp.SKPaint.PathEffect) 의 속성 `SKPaint` 형식의 개체로 [ `SKPathEffect` ](xref:SkiaSharp.SKPathEffect) 파선을 표시 영역 경로에서 만든 패턴으로 채우기 또는 스트로크 하려면. 문서의이 시리즈의 앞부분에 나오는 경로 효과 다루었습니다 [ **SkiaSharp에서 경로 효과**](../curves/effects.md)합니다.
+[`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect)의 속성을 형식의 개체로 설정 하 여 `SKPaint` [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) 파선을 표시 하거나 경로에서 만든 패턴으로 영역을 스트로크 또는 채웁니다. 경로 효과는이 시리즈의 앞부분에 있는 [**SkiaSharp의 경로 효과**](../curves/effects.md)문서에 설명 되어 있습니다.
 
-## <a name="shadersshadersindexmd"></a>[셰이더](shaders/index.md)
+## <a name="shaders"></a>[셰이더](shaders/index.md)
 
-설정 합니다 [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) 속성을 `SKPaint` 형식의 개체에 [ `SKShader` ](xref:SkiaSharp.SKShader) 선형 또는 순환 그라데이션, 바둑판식으로 배열 된 비트맵 및 Perlin 노이즈 패턴을 표시 하려면.
+[`Shader`](xref:SkiaSharp.SKPaint.Shader)의 속성을 `SKPaint` 형식의 개체로 설정 [`SKShader`](xref:SkiaSharp.SKShader) 하 여 선형 또는 원형 그라데이션, 바둑판식 비트맵 및 Perlin 노이즈 패턴을 표시 합니다.
 
-## <a name="blend-modesblend-modesindexmd"></a>[혼합 모드](blend-modes/index.md)
+## <a name="blend-modes"></a>[혼합 모드](blend-modes/index.md)
 
-설정 합니다 [ `BlendMode` ](xref:SkiaSharp.SKPaint.BlendMode) 의 속성 `SKPaint` 의 멤버에는 [ `SKBlendMode` ](xref:SkiaSharp.SKBlendMode) 대상에 소스 그래픽이 표시 되는 경우를 제어 하는 열거형입니다. SkiaSharp 모든 CSS 합치기와 blend 모드 Porter 임신 모드, 분리 가능한 혼합 모드 및 분리 되지 않은 혼합 모드를 포함 하 여 지원 합니다.
+[`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode)의 속성을 `SKPaint` 열거형의 멤버로 설정 하 여 [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) 원본 그래픽이 대상에 표시 될 때 발생 하는 결과를 제어 합니다. SkiaSharp는 Porter-Duff 모드, 분리 가능 blend 모드 및 분리 되지 않은 혼합 모드를 비롯 하 여 모든 CSS 합성 모드와 혼합 모드를 지원 합니다.
 
-## <a name="mask-filtersmask-filtersmd"></a>[마스크 필터](mask-filters.md)
+## <a name="mask-filters"></a>[마스크 필터](mask-filters.md)
 
-설정 합니다 [ `MaskFilter` ](xref:SkiaSharp.SKPaint.MaskFilter) 속성을 `SKPaint` 형식의 개체로 [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) 흐림 효과 기타 알파 효과 대 한 합니다.
+[`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter)의 속성을 `SKPaint` [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) 흐린 및 기타 알파 효과에 대 한 형식의 개체로 설정 합니다.
 
-## <a name="image-filtersimage-filtersmd"></a>[이미지 필터](image-filters.md)
+## <a name="image-filters"></a>[이미지 필터](image-filters.md)
 
-설정 합니다 [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) 흐림 비트맵 효과 적용 하 고 만드는 그림자에 대 한 볼록, 또는 효과 조각입니다.
+[`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter)의 속성을 `SKPaint` [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) 흐린 비트맵의 경우 형식의 개체로 설정 하 고 그림자, 볼록 또는 engraving 효과를 만듭니다.
 
-## <a name="color-filterscolor-filtersmd"></a>[색 필터](color-filters.md)
+## <a name="color-filters"></a>[색 필터](color-filters.md)
 
-설정 합니다 [ `ColorFilter` ](xref:SkiaSharp.SKPaint.ColorFilter) 속성을 `SKPaint` 형식의 개체에 [ `SKColorFilter` ](xref:SkiaSharp.SKColorFilter) 행렬 변환 또는 테이블을 사용 하 여 색을 변경 하려면.
+[`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) `SKPaint` [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) 테이블 또는 행렬 변환을 사용 하 여 색을 변경 하려면의 속성을 형식의 개체로 설정 합니다.
 
-이러한 문서에 대 한 모든 샘플 코드는 [ **SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)합니다. 홈 페이지에서 선택 **SkiaSharp 효과**합니다.
+이러한 아티클의 모든 샘플 코드는 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)에 있습니다. 홈 페이지에서 **SkiaSharp 효과**를 선택 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

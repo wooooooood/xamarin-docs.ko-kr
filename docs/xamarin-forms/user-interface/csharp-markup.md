@@ -1,37 +1,40 @@
 ---
-title: 'Xamarin.ios c # 태그'
-description: 'C # 태그는 c #에서 선언적 Xamarin.ios 사용자 인터페이스를 빌드하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다.'
-ms.prod: xamarin
-ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4fa8397dafbbdd836f88193081720b4960f1ce5d
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: 'Xamarin.FormsC # 태그'
+description: 'C # 태그는 Xamarin.Forms c #에서 선언적 사용자 인터페이스를 작성 하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다.'
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425813"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137750"
 ---
-# <a name="xamarinforms-c-markup"></a>Xamarin.ios c # 태그
+# <a name="xamarinforms-c-markup"></a>Xamarin.FormsC # 태그
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
-C # 태그는 c #에서 선언적 Xamarin.ios 사용자 인터페이스를 빌드하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다. C # 태그에서 제공 되는 흐름 API는 네임 스페이스에서 사용할 수 있습니다 `Xamarin.Forms.Markup` .
+C # 태그는 Xamarin.Forms c #에서 선언적 사용자 인터페이스를 작성 하는 프로세스를 간소화 하는 흐름 도우미 메서드 및 클래스의 옵트인 (opt in) 집합입니다. C # 태그에서 제공 되는 흐름 API는 네임 스페이스에서 사용할 수 있습니다 `Xamarin.Forms.Markup` .
 
 XAML과 마찬가지로 c # 태그를 사용 하면 UI 태그와 UI 논리를 명확 하 게 구분할 수 있습니다. 이는 UI 태그와 UI 논리를 고유한 partial 클래스 파일로 분리 하 여 수행할 수 있습니다. 예를 들어 로그인 페이지의 경우 ui 태그는 이름이 *LoginPage.cs*인 파일에 있으며 ui 논리는 *LoginPage.logic.cs*라는 파일에 있습니다.
 
-C # 태그는 Xamarin.ios 4.6에서 사용할 수 있습니다. 그러나 현재 실험적 이며 *App.cs* 파일에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
+C # 태그는 4.6에서 사용할 수 있습니다 Xamarin.Forms . 그러나 현재 실험적 이며 *App.cs* 파일에 다음 코드 줄을 추가 하 여 사용할 수 있습니다.
 
 ```csharp
 Device.SetFlags(new string[]{ "Markup_Experimental" });
 ```
 
 > [!NOTE]
-> C # 태그는 Xamarin.ios에서 지 원하는 모든 플랫폼에서 사용할 수 있습니다.
+> 에서 지 원하는 모든 플랫폼에서 c # 태그를 사용할 수 있습니다 Xamarin.Forms .
 
 ## <a name="basic-example"></a>기본 예제
 
@@ -89,7 +92,7 @@ Content = new Grid
 
 ## <a name="data-binding"></a>데이터 바인딩
 
-C # 태그에는 `Bind` 바인딩 가능한 속성 및 지정 된 속성 간에 데이터 바인딩을 만드는 오버 로드와 함께 확장 메서드가 포함 되어 있습니다. `Bind`메서드는 xamarin.ios에 포함 된 대부분의 컨트롤에 대 한 기본 바인딩 가능 속성을 알고 있습니다. 따라서 일반적으로이 메서드를 사용 하는 경우 대상 속성을 지정할 필요가 없습니다. 그러나 다음과 같은 추가 컨트롤에 대 한 기본 바인딩 가능 속성을 등록할 수도 있습니다.
+C # 태그에는 `Bind` 바인딩 가능한 속성 및 지정 된 속성 간에 데이터 바인딩을 만드는 오버 로드와 함께 확장 메서드가 포함 되어 있습니다. `Bind`메서드는에 포함 된 대부분의 컨트롤에 대 한 기본 바인딩 가능 속성을 알고 Xamarin.Forms 있습니다. 따라서 일반적으로이 메서드를 사용 하는 경우 대상 속성을 지정할 필요가 없습니다. 그러나 다음과 같은 추가 컨트롤에 대 한 기본 바인딩 가능 속성을 등록할 수도 있습니다.
 
 ```csharp
 using Xamarin.Forms.Markup;
@@ -232,7 +235,7 @@ new Label { Text = "Tap Me" }
 
 C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원하는 일련의 레이아웃 확장 메서드가 포함 되어 있습니다.
 
-| 유형 | 확장 메서드 |
+| Type | 확장 메서드 |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -250,7 +253,7 @@ C # 태그에는 레이아웃의 위치 지정 및 뷰의 콘텐츠를 지 원�
 
 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 흐름 방향을 모두 지원 하도록 설계 된 c # 태그의 경우 위의 네임 스페이스 중 하나가 아니라 다음 표에 있는 확장 메서드를 사용 하는 것이 좋습니다.
 
-| 유형 | 확장 메서드 |
+| Type | 확장 메서드 |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -354,7 +357,7 @@ new Grid
 }
 ```
 
-## <a name="fonts"></a>글꼴
+## <a name="fonts"></a>Fonts
 
 다음 목록의 컨트롤은 `FontSize` ,, `Bold` `Italic` 및 확장 메서드를 호출 하 여 `Font` 컨트롤에 의해 표시 되는 텍스트의 모양을 설정할 수 있습니다.
 

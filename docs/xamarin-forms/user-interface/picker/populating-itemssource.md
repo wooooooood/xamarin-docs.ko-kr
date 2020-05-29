@@ -1,30 +1,33 @@
 ---
-title: 선택기의 ItemsSource 속성 설정
-description: 선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서는 ItemsSource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/26/2019
-ms.openlocfilehash: 803cd1babc32e3a42d957c4bac0cc93c4552fb8c
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68656117"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136294"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>선택기의 ItemsSource 속성 설정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
 
-_선택기 뷰는 데이터의 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서는 ItemsSource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법 및 사용자가 항목 선택에 응답 하는 방법을 설명 합니다._
+_선택 뷰는 데이터 목록에서 텍스트 항목을 선택 하는 컨트롤입니다. 이 문서에서는 System.windows.controls.itemscontrol.itemssource 속성을 설정 하 여 데이터를 사용 하 여 선택기를 채우는 방법과 사용자가 항목 선택 항목에 응답 하는 방법을 설명 합니다._
 
-Xamarin.Forms 2.3.4 향상 되었습니다 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 뷰를 설정 하 여 데이터를 입력 하는 기능을 추가 하 여 해당 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성 합니다 에서선택한항목을검색하고[ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성입니다. 선택한 항목에 대 한 텍스트의 색을 설정 하 여 변경할 수 있습니다 또한 합니다 [ `TextColor` ](xref:Xamarin.Forms.Picker.TextColor) 속성을를 [ `Color` ](xref:Xamarin.Forms.Color)합니다.
+Xamarin.Forms2.3.4는 [`Picker`](xref:Xamarin.Forms.Picker) [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) 속성을 설정 하 고 속성에서 선택한 항목을 검색 하 여 데이터를 데이터로 채우는 기능을 추가 하 여 뷰를 향상 시켰습니다 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) . 또한 속성을로 설정 하 여 선택한 항목에 대 한 텍스트 색을 변경할 수 있습니다 [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) [`Color`](xref:Xamarin.Forms.Color) .
 
 ## <a name="populating-a-picker-with-data"></a>데이터를 사용 하 여 선택기 채우기
 
-A [ `Picker` ](xref:Xamarin.Forms.Picker) 설정 하 여 데이터로 채울 수 있습니다 해당 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성을는 `IList` 컬렉션입니다. 컬렉션의 각 항목의 수 또는 형식에서 파생 해야 `object`합니다. 초기화 하 여 XAML에서 항목을 추가할 수는 `ItemsSource` 속성 항목의 배열:
+[`Picker`](xref:Xamarin.Forms.Picker)속성을 컬렉션으로 설정 하 여를 데이터로 채울 수 있습니다 [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) `IList` . 컬렉션의 각 항목은 또는 형식 이어야 합니다 `object` . 항목의 배열에서 속성을 초기화 하 여 XAML에 항목을 추가할 수 있습니다 `ItemsSource` .
 
 ```xaml
 <Picker x:Name="picker"
@@ -45,9 +48,9 @@ A [ `Picker` ](xref:Xamarin.Forms.Picker) 설정 하 여 데이터로 채울 수
 ```
 
 > [!NOTE]
-> 합니다 `x:Array` 요소에는 `Type` 배열에 있는 항목의 유형을 나타내는 특성입니다.
+> `x:Array` 요소는 배열의 항목 유형을 나타내는 `Type` 특성이 필요합니다.
 
-해당 하는 C# 코드는 다음과 같습니다.
+해당 c # 코드는 다음과 같습니다.
 
 ```csharp
 var monkeyList = new List<string>();
@@ -65,25 +68,25 @@ picker.ItemsSource = monkeyList;
 
 ## <a name="responding-to-item-selection"></a>항목 선택에 응답
 
-A [ `Picker` ](xref:Xamarin.Forms.Picker) 한 번에 하나씩 선택할 수 있습니다. 사용자가 항목을 선택 합니다 [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 이벤트가 발생 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 목록에서 선택한 항목의 인덱스를 나타내는 정수를 업데이트 및 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성은 업데이트 된 `object` 은 선택한 항목을 나타내는입니다. 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 사용자가 선택한 항목을 나타내는 0부터 시작 수 있습니다. 선택 된 항목이 있는 경우 때 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 먼저 생성 되 고 초기화 하 고, `SelectedIndex` -1이 됩니다.
+는 한 [`Picker`](xref:Xamarin.Forms.Picker) 번에 하나의 항목을 선택할 수 있도록 지원 합니다. 사용자가 항목을 선택 하면 [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 이벤트가 발생 하 [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) 고,이 속성이 목록에서 선택한 항목의 인덱스를 나타내는 정수로 업데이트 되며, [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) 속성이 선택 된 항목을 나타내는로 업데이트 됩니다 `object` . [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex)속성은 사용자가 선택한 항목을 나타내는 0부터 시작 하는 숫자입니다. 항목을 선택 하지 않은 경우 (가 [`Picker`](xref:Xamarin.Forms.Picker) 처음 만들어지고 초기화 되는 경우 `SelectedIndex` )는-1입니다.
 
 > [!NOTE]
-> 항목의 선택 동작을 [ `Picker` ](xref:Xamarin.Forms.Picker) 플랫폼 전용을 사용 하 여 iOS에서 사용자 지정할 수 있습니다. 자세한 내용은 [선택 항목 선택 제어](~/xamarin-forms/platform/ios/picker-selection.md)입니다.
+> 의 항목 선택 동작은 [`Picker`](xref:Xamarin.Forms.Picker) 플랫폼별로 iOS에서 사용자 지정할 수 있습니다. 자세한 내용은 [선택기 항목 선택 제어](~/xamarin-forms/platform/ios/picker-selection.md)를 참조 하세요.
 
-다음 코드 예제에서는 검색 하는 방법을 보여 줍니다.는 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 에서 속성 값을 [ `Picker` ](xref:Xamarin.Forms.Picker) XAML에서:
+다음 코드 예제에서는 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) XAML의에서 속성 값을 검색 하는 방법을 보여 줍니다 [`Picker`](xref:Xamarin.Forms.Picker) .
 
 ```xaml
 <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
 ```
 
-해당 하는 C# 코드는 다음과 같습니다.
+해당 c # 코드는 다음과 같습니다.
 
 ```csharp
 var monkeyNameLabel = new Label();
 monkeyNameLabel.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: picker));
 ```
 
-이벤트 처리기 수 또한 될 때 실행 되는 [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) 이벤트가 발생 합니다.
+또한 이벤트가 발생 하는 경우 이벤트 처리기를 실행할 수 있습니다 [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) .
 
 ```csharp
 void OnPickerSelectedIndexChanged(object sender, EventArgs e)
@@ -98,14 +101,14 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs e)
 }
 ```
 
-이 메서드를 가져옵니다 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성 값에서 선택한 항목을 검색할 값을 사용 하는 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 컬렉션입니다. 이 기능적으로 선택한 항목을 검색 하는 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성입니다. 각 항목에는 `ItemsSource` 유형의 컬렉션 이므로 `object`, 이므로 캐스팅 되어야 합니다는 `string` 표시에 대 한 합니다.
+이 메서드는 [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) 속성 값을 가져오고 값을 사용 하 여 컬렉션에서 선택한 항목을 검색 합니다 [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) . 이는 속성에서 선택한 항목을 검색 하는 것과 기능적으로 동일 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) 합니다. 컬렉션의 각 항목 `ItemsSource` 은 형식 이므로 `object` 표시를 위해로 캐스팅 해야 합니다 `string` .
 
 > [!NOTE]
-> A [ `Picker` ](xref:Xamarin.Forms.Picker) 설정 하 여 특정 항목을 표시 하도록 초기화 합니다 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 또는 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성입니다. 그러나 초기화 한 후 이러한 속성 설정 해야 합니다 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 컬렉션입니다.
+> [`Picker`](xref:Xamarin.Forms.Picker)또는 속성을 설정 하 여 특정 항목을 표시 하도록를 초기화할 수 있습니다 [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) . 그러나 컬렉션을 초기화 한 후에는 이러한 속성을 설정 해야 합니다 [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) .
 
 ## <a name="populating-a-picker-with-data-using-data-binding"></a>데이터 바인딩을 사용 하 여 선택기를 데이터로 채우기
 
-A [ `Picker` ](xref:Xamarin.Forms.Picker) 채울 수 있습니다도 데이터 바인딩할 데이터 바인딩을 사용 하 여 해당 [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성을는 `IList` 컬렉션입니다. XAML에서이 통해 합니다 [ `Binding` ](xref:Xamarin.Forms.Xaml.BindingExtension) 태그 확장:
+[`Picker`](xref:Xamarin.Forms.Picker)데이터 바인딩을 사용 하 여 속성을 컬렉션에 바인딩하면 데이터를 데이터로 채울 수도 있습니다 [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) `IList` . XAML에서이 작업은 태그 확장을 사용 하 여 구현 됩니다 [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) .
 
 ```xaml
 <Picker Title="Select a monkey"
@@ -114,7 +117,7 @@ A [ `Picker` ](xref:Xamarin.Forms.Picker) 채울 수 있습니다도 데이터 �
         ItemDisplayBinding="{Binding Name}" />
 ```
 
-해당 하는 C# 코드는 다음과 같습니다.
+해당 c # 코드는 다음과 같습니다.
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
@@ -122,7 +125,7 @@ picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.ItemDisplayBinding = new Binding("Name");
 ```
 
-[ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) 속성 데이터를 바인딩하는 `Monkeys` 반환 하는 연결 된 뷰 모델의 속성을 `IList<Monkey>` 컬렉션. 다음 코드 예제는 `Monkey` 네 가지 속성을 포함 하는 클래스:
+[`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource)속성 데이터는 컬렉션을 반환 하는 `Monkeys` 연결 된 뷰 모델의 속성에 바인딩됩니다 `IList<Monkey>` . 다음 코드 예제에서는 `Monkey` 네 개의 속성을 포함 하는 클래스를 보여 줍니다.
 
 ```csharp
 public class Monkey
@@ -134,11 +137,11 @@ public class Monkey
 }
 ```
 
-개체의 목록에 바인딩할 때 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker) 각 개체에서 표시할 속성을 알 수 있어야 합니다. 설정 하 여 이렇게 합니다 [ `ItemDisplayBinding` ](xref:Xamarin.Forms.Picker.ItemDisplayBinding) 필요한 속성에 각 개체의 속성입니다. 위의 코드 예제에는 `Picker` 각 표시 하도록 설정 된 `Monkey.Name` 속성 값입니다.
+개체 목록에 바인딩하는 경우 [`Picker`](xref:Xamarin.Forms.Picker) 각 개체에서 표시할 속성을에 지시 해야 합니다. 이렇게 [`ItemDisplayBinding`](xref:Xamarin.Forms.Picker.ItemDisplayBinding) 하려면 속성을 각 개체의 필수 속성으로 설정 합니다. 위의 코드 예제에서는 `Picker` 각 속성 값을 표시 하도록 설정 됩니다 `Monkey.Name` .
 
 ### <a name="responding-to-item-selection"></a>항목 선택에 응답
 
-데이터 바인딩 개체를 설정 하려면 사용할 수는 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성 값 변경 시:
+데이터 바인딩을 사용 하 여 개체를 변경할 때 개체를 속성 값으로 설정할 수 있습니다 [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) .
 
 ```xaml
 <Picker Title="Select a monkey"
@@ -152,7 +155,7 @@ public class Monkey
 <Label Text="{Binding SelectedMonkey.Details}" ... />
 ```
 
-해당 하는 C# 코드는 다음과 같습니다.
+해당 c # 코드는 다음과 같습니다.
 
 ```csharp
 var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
@@ -173,16 +176,16 @@ var detailsLabel = new Label();
 detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 ```
 
-합니다 [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 속성 데이터를 바인딩하는 `SelectedMonkey` 형식인 연결 된 뷰 모델의 속성 `Monkey`합니다. 사용자 항목에서를 선택 하는 경우에 따라서 합니다 [ `Picker` ](xref:Xamarin.Forms.Picker)의 `SelectedMonkey` 속성이 설정 됩니다 하 여 선택한 `Monkey` 개체입니다. 합니다 `SelectedMonkey` 개체 데이터에서 사용자 인터페이스에 표시 됩니다 [ `Label` ](xref:Xamarin.Forms.Label) 하 고 [ `Image` ](xref:Xamarin.Forms.Image) 뷰:
+[`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem)속성 데이터는 `SelectedMonkey` 형식의 연결 된 뷰 모델의 속성에 바인딩됩니다 `Monkey` . 따라서 사용자가에서 항목을 선택 하면 [`Picker`](xref:Xamarin.Forms.Picker) `SelectedMonkey` 속성이 선택한 개체로 설정 됩니다 `Monkey` . `SelectedMonkey`개체 데이터는 및 뷰에 의해 사용자 인터페이스에 표시 [`Label`](xref:Xamarin.Forms.Label) 됩니다 [`Image`](xref:Xamarin.Forms.Image) .
 
-![](populating-itemssource-images/monkeys.png "선택 항목 선택")
+![](populating-itemssource-images/monkeys.png "Picker Item Selection")
 
 > [!NOTE]
-> [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) 하 고 [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) 속성 둘 다 기본적으로 양방향 바인딩을 지원 합니다.
+> [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem)및 [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) 속성은 모두 기본적으로 양방향 바인딩을 지원 합니다.
 
 ## <a name="related-links"></a>관련 링크
 
-- [선택기 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
-- [Monkey 앱 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
-- [바인딩할 수 있는 선택 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [선택 데모 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [원숭이 앱 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+- [바인딩 가능한 선택기 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
 - [선택 API](xref:Xamarin.Forms.Picker)

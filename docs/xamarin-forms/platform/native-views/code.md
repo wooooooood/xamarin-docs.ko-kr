@@ -1,51 +1,54 @@
 ---
-title: C#의 네이티브 뷰
-description: C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 iOS, Android 및 UWP에서 네이티브 뷰를 직접 참조할 수 있습니다. 이 문서에는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 네이티브 뷰를 추가 하는 방법 및 해당 측정 API 사용을 수정 하려면 사용자 지정 보기 레이아웃을 재정의 하는 방법을 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/27/2016
-ms.openlocfilehash: a759569f9faf7c8e13768a68b203a8221d3b31cb
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: 'IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 뷰의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다.'
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770710"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139596"
 ---
 # <a name="native-views-in-c"></a>C의 네이티브 뷰\#
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
-_C#을 사용 하 여 만든 Xamarin.Forms 페이지에서 iOS, Android 및 UWP에서 네이티브 뷰를 직접 참조할 수 있습니다. 이 문서에는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 네이티브 뷰를 추가 하는 방법 및 해당 측정 API 사용을 수정 하려면 사용자 지정 보기 레이아웃을 재정의 하는 방법을 보여 줍니다._
+_IOS, Android 및 UWP의 기본 뷰는 Xamarin.Forms c #을 사용 하 여 만든 페이지에서 직접 참조할 수 있습니다. 이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법과 사용자 지정 뷰의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
-허용 하는 모든 Xamarin.Forms 컨트롤 `Content` 를 설정할 수 있는 또는 `Children` 컬렉션 플랫폼 특정 뷰를 추가할 수 있습니다. 예를 들어, iOS `UILabel` 에 직접 추가할 수 있습니다 합니다 [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) 속성 또는 합니다 [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) 컬렉션. 그러나이 기능을 사용 해야는 `#if` Xamarin.Forms 공유 프로젝트 솔루션에서 정의 하 고 Xamarin.Forms.NET Standard 라이브러리 솔루션에서 사용할 수 없습니다.
+을 Xamarin.Forms 설정 하거나 컬렉션을 포함 하는 컨트롤은 `Content` `Children` 플랫폼별 뷰를 추가할 수 있습니다. 예를 들어 iOS는 `UILabel` 속성에 직접 추가 [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) 하거나 컬렉션에 추가할 수 있습니다 [`StackLayout.Children`](xref:Xamarin.Forms.Layout`1.Children) . 그러나이 기능을 사용 하려면 `#if` 공유 프로젝트 솔루션에 정의를 사용 해야 Xamarin.Forms 하며 Xamarin.Forms .NET Standard 라이브러리 솔루션에서 사용할 수 없습니다.
 
-다음 스크린샷은 플랫폼별 뷰는 Xamarin.Forms에 추가 된 것을 보여 줍니다 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
+다음 스크린샷에는에 추가 된 플랫폼별 뷰가 설명 되어 Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) 있습니다.
 
-[![](code-images/screenshots-sml.png "플랫폼별 뷰가 포함 된 StackLayout")](code-images/screenshots.png#lightbox "플랫폼별 뷰가 포함 된 StackLayout")
+[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
 
-Xamarin.Forms 레이아웃에 플랫폼 전용 뷰를 추가할 수는 각 플랫폼에서 두 개의 확장 메서드로 사용 됩니다.
+플랫폼 특정 뷰를 레이아웃에 추가 하는 기능은 Xamarin.Forms 각 플랫폼에서 두 가지 확장 메서드를 사용 하 여 사용할 수 있습니다.
 
-- `Add` – 플랫폼별 뷰를 추가 합니다 [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) 레이아웃의 컬렉션입니다.
-- `ToView` – 플랫폼별 뷰를 사용 하 고는 Xamarin.Forms로 래핑되어 [ `View` ](xref:Xamarin.Forms.View) 으로 설정할 수는 `Content` 컨트롤의 속성입니다.
+- `Add`– 레이아웃의 컬렉션에 플랫폼별 뷰를 추가 [`Children`](xref:Xamarin.Forms.Layout`1.Children) 합니다.
+- `ToView`– 플랫폼별 뷰를 사용 하 여 Xamarin.Forms [`View`](xref:Xamarin.Forms.View) 컨트롤의 속성으로 설정할 수 있는으로 래핑합니다 `Content` .
 
-이러한 메서드를 사용 하 여 Xamarin.Forms 공유 프로젝트에 적절 한 플랫폼별 Xamarin.Forms 네임 스페이스 가져오기에 필요 합니다.
+공유 프로젝트에서 이러한 메서드를 사용 Xamarin.Forms 하려면 적절 한 플랫폼별 네임 스페이스를 가져와야 합니다 Xamarin.Forms .
 
-- **iOS** – Xamarin.Forms.Platform.iOS
-- **Android** – Xamarin.Forms.Platform.Android
-- **유니버설 Windows 플랫폼 (UWP)** – Xamarin.Forms.Platform.UWP
+- **iOS** – Xamarin.Forms . Platform.object
+- **Android** – Xamarin.Forms . 플랫폼 Android
+- **유니버설 Windows 플랫폼 (UWP)** – Xamarin.Forms . Platform UWP
 
-## <a name="adding-platform-specific-views-on-each-platform"></a>각 플랫폼에 플랫폼별 뷰 추가
+## <a name="adding-platform-specific-views-on-each-platform"></a>플랫폼 특정 뷰를 각 플랫폼에 추가
 
-다음 섹션에서는 각 플랫폼에서 Xamarin.Forms 레이아웃에 플랫폼 전용 뷰를 추가 하는 방법을 보여 줍니다.
+다음 섹션에서는 플랫폼 특정 뷰를 Xamarin.Forms 각 플랫폼의 레이아웃에 추가 하는 방법을 보여 줍니다.
 
 ### <a name="ios"></a>iOS
 
-다음 코드 예제에 추가 하는 방법을 보여 줍니다.는 `UILabel` 에 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 와 [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+다음 코드 예제에서는 및에를 추가 하는 방법을 보여 줍니다 `UILabel` [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`ContentView`](xref:Xamarin.Forms.ContentView) .
 
 ```csharp
 var uiLabel = new UILabel {
@@ -58,11 +61,11 @@ stackLayout.Children.Add (uiLabel);
 contentView.Content = uiLabel.ToView();
 ```
 
-가정 합니다 `stackLayout` 및 `contentView` XAML 또는 C#에서 이전에 만든 된 인스턴스.
+이 예제에서는 `stackLayout` 및 `contentView` 인스턴스가 XAML 또는 c #에서 이전에 생성 된 것으로 가정 합니다.
 
 ### <a name="android"></a>Android
 
-다음 코드 예제에 추가 하는 방법을 보여 줍니다.는 `TextView` 에 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 와 [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+다음 코드 예제에서는 및에를 추가 하는 방법을 보여 줍니다 `TextView` [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`ContentView`](xref:Xamarin.Forms.ContentView) .
 
 ```csharp
 var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
@@ -70,11 +73,11 @@ stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
 
-가정 합니다 `stackLayout` 및 `contentView` XAML 또는 C#에서 이전에 만든 된 인스턴스.
+이 예제에서는 `stackLayout` 및 `contentView` 인스턴스가 XAML 또는 c #에서 이전에 생성 된 것으로 가정 합니다.
 
-### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
-다음 코드 예제에 추가 하는 방법을 보여 줍니다.는 `TextBlock` 에 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) 와 [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+다음 코드 예제에서는 및에를 추가 하는 방법을 보여 줍니다 `TextBlock` [`StackLayout`](xref:Xamarin.Forms.StackLayout) [`ContentView`](xref:Xamarin.Forms.ContentView) .
 
 ```csharp
 var textBlock = new TextBlock
@@ -88,17 +91,17 @@ stackLayout.Children.Add(textBlock);
 contentView.Content = textBlock.ToView();
 ```
 
-가정 합니다 `stackLayout` 및 `contentView` XAML 또는 C#에서 이전에 만든 된 인스턴스.
+이 예제에서는 `stackLayout` 및 `contentView` 인스턴스가 XAML 또는 c #에서 이전에 생성 된 것으로 가정 합니다.
 
-## <a name="overriding-platform-measurements-for-custom-views"></a>사용자 지정 보기에 대 한 플랫폼 측정 값 재정의
+## <a name="overriding-platform-measurements-for-custom-views"></a>사용자 지정 보기에 대 한 플랫폼 측정 재정의
 
-각 플랫폼에서 사용자 지정 보기는 종종만 올바르게으로 설계 된 레이아웃 시나리오에 대 한 측정을 구현 합니다. 예를 들어, 사용자 지정 보기를만 장치의 사용 가능한 너비의 절반을 차지 하도록 설계 되었습니다 수 있습니다. 그러나 다른 사용자와 공유 되 고 후 사용자 지정 보기 장치 전체 가용 공간을 차지 하는 데 필요한 수 있습니다. 따라서 Xamarin.Forms 레이아웃으로 다시 사용할 때 사용자 지정 보기 측정 구현을 재정의 하는 데 필요한 수 있습니다. 이런 이유로 합니다 `Add` 및 `ToView` 확장 메서드는 Xamarin.Forms 레이아웃에 추가 될 때 사용자 지정 보기 레이아웃을 재정의할 수를 지정 해야 측정 대리자를 허용 하는 재정의 제공 합니다.
+각 플랫폼에 대 한 사용자 지정 보기는 디자인 된 레이아웃 시나리오에 대 한 측정만 올바르게 구현 하는 경우가 많습니다. 예를 들어 사용자 지정 보기는 사용 가능한 장치 너비의 절반 까지만 차지 하도록 설계 되었을 수 있습니다. 그러나 다른 사용자와 공유 하 고 나면 사용자 지정 보기를 사용 하 여 사용 가능한 전체 장치 너비를 차지할 수 있습니다. 따라서 레이아웃에서 재사용 될 때 사용자 지정 뷰 측정 구현을 재정의 해야 할 수 있습니다 Xamarin.Forms . `Add`이러한 이유로 및 `ToView` 확장 메서드는 측정 대리자를 지정할 수 있는 재정의를 제공 하며,이는 레이아웃에 추가 될 때 사용자 지정 뷰 레이아웃을 재정의할 수 있습니다 Xamarin.Forms .
 
-다음 섹션에서는 해당 측정 API 사용을 수정 하려면 사용자 지정 보기 레이아웃을 재정의 하는 방법을 보여 줍니다.
+다음 섹션에서는 사용자 지정 보기의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 보여 줍니다.
 
 ### <a name="ios"></a>iOS
 
-다음 코드 예제는 `CustomControl` 클래스에서 상속 되는 `UILabel`:
+다음 코드 예제에서는 `CustomControl` 에서 상속 되는 클래스를 보여 줍니다 `UILabel` .
 
 ```csharp
 public class CustomControl : UILabel
@@ -115,7 +118,7 @@ public class CustomControl : UILabel
 }
 ```
 
-이 보기의 인스턴스에 추가할를 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)다음 코드 예제에서 설명한 것 처럼:
+이 뷰의 인스턴스는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 다음 코드 예제에서 보여 주는 것 처럼에 추가 됩니다.
 
 ```csharp
 var customControl = new CustomControl {
@@ -127,11 +130,11 @@ var customControl = new CustomControl {
 stackLayout.Children.Add (customControl);
 ```
 
-그러나 때문에 `CustomControl.SizeThatFits` 150 높이 항상 반환 하는 재정의 다음 스크린샷에 표시 된 것 처럼 뷰 위와 아래에 빈 공간을 사용 하 여 표시 됩니다.
+그러나 재정의는 항상 높이를 150으로 반환 하기 때문에 `CustomControl.SizeThatFits` 다음 스크린샷에 표시 된 것 처럼 뷰가 표시 되 고 그 아래에 빈 공간이 표시 됩니다.
 
-![](code-images/ios-bad-measurement.png "잘못 된 SizeThatFits 구현과 CustomControl iOS")
+![](code-images/ios-bad-measurement.png "iOS CustomControl with Bad SizeThatFits Implementation")
 
-이 문제에 솔루션을 제공 하는 것을 `GetDesiredSizeDelegate` 다음 코드 예제에 설명 된 대로 구현:
+이 문제에 대 한 해결 방법은 `GetDesiredSizeDelegate` 다음 코드 예제에서 보여 주는 것 처럼 구현을 제공 하는 것입니다.
 
 ```csharp
 SizeRequest? FixSize (NativeViewWrapperRenderer renderer, double width, double height)
@@ -152,19 +155,19 @@ SizeRequest? FixSize (NativeViewWrapperRenderer renderer, double width, double h
 }
 ```
 
-이 메서드는 제공한 너비는 `CustomControl.SizeThatFits` 70 높이 대 한 150의 높이 하지만 대체 하는 메서드. 경우는 `CustomControl` 인스턴스를 추가할는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)의 `FixSize` 으로 메서드를 지정할 수 있습니다를 `GetDesiredSizeDelegate` 제공한 잘못 된 측정을 해결 하려면는 `CustomControl` 클래스:
+이 메서드는 메서드에서 제공 하는 너비를 사용 `CustomControl.SizeThatFits` 하지만 높이 70의 높이를 150로 대체 합니다. 인스턴스가에 `CustomControl` 추가 되 면 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 메서드를로 `FixSize` 지정 `GetDesiredSizeDelegate` 하 여 클래스에서 제공 하는 잘못 된 측정을 수정할 수 있습니다 `CustomControl` .
 
 ```csharp
 stackLayout.Children.Add (customControl, FixSize);
 ```
 
-따라서 위와 아래에 빈 공간 없이 올바르게 표시 되 고 사용자 지정 보기에서 다음 스크린샷에 표시 된 대로:
+그러면 다음 스크린샷에 표시 된 것 처럼 사용자 지정 보기가 제대로 표시 되 고 그 아래에 빈 공백이 표시 되지 않습니다.
 
-![](code-images/ios-good-measurement.png "iOS CustomControl GetDesiredSize 재정의 사용 하 여")
+![](code-images/ios-good-measurement.png "iOS CustomControl with GetDesiredSize Override")
 
 ### <a name="android"></a>Android
 
-다음 코드 예제는 `CustomControl` 클래스에서 상속 되는 `TextView`:
+다음 코드 예제에서는 `CustomControl` 에서 상속 되는 클래스를 보여 줍니다 `TextView` .
 
 ```csharp
 public class CustomControl : TextView
@@ -186,7 +189,7 @@ public class CustomControl : TextView
 }
 ```
 
-이 보기의 인스턴스에 추가할를 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)다음 코드 예제에서 설명한 것 처럼:
+이 뷰의 인스턴스는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 다음 코드 예제에서 보여 주는 것 처럼에 추가 됩니다.
 
 ```csharp
 var customControl = new CustomControl (MainActivity.Instance) {
@@ -196,11 +199,11 @@ var customControl = new CustomControl (MainActivity.Instance) {
 stackLayout.Children.Add (customControl);
 ```
 
-그러나 때문에 `CustomControl.OnMeasure` 재정의 요청 된 너비의 절반 항목을 항상 반환, 뷰에 표시할 장치의 사용 가능한 너비를 절반만 차지 다음 스크린샷에 표시 된 대로:
+그러나 `CustomControl.OnMeasure` 재정의는 항상 요청 된 너비의 절반을 반환 하기 때문에 다음 스크린샷에 표시 된 것 처럼 보기는 사용 가능한 장치 너비의 절반만 표시 됩니다.
 
-![](code-images/android-bad-measurement.png "잘못 된 OnMeasure 구현과 android CustomControl")
+![](code-images/android-bad-measurement.png "Android CustomControl with Bad OnMeasure Implementation")
 
-이 문제에 솔루션을 제공 하는 것을 `GetDesiredSizeDelegate` 다음 코드 예제에 설명 된 대로 구현:
+이 문제에 대 한 해결 방법은 `GetDesiredSizeDelegate` 다음 코드 예제에서 보여 주는 것 처럼 구현을 제공 하는 것입니다.
 
 ```csharp
 SizeRequest? FixSize (NativeViewWrapperRenderer renderer, int widthConstraint, int heightConstraint)
@@ -219,19 +222,19 @@ SizeRequest? FixSize (NativeViewWrapperRenderer renderer, int widthConstraint, i
 }
 ```
 
-이 메서드는 제공한 너비는 `CustomControl.OnMeasure` 메서드 하지만 곱한 두 합니다. 경우는 `CustomControl` 인스턴스를 추가할는 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)의 `FixSize` 으로 메서드를 지정할 수 있습니다를 `GetDesiredSizeDelegate` 제공한 잘못 된 측정을 해결 하려면는 `CustomControl` 클래스:
+이 메서드는 메서드에서 제공 하는 너비를 사용 `CustomControl.OnMeasure` 하지만 2를 곱합니다. 인스턴스가에 `CustomControl` 추가 되 면 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 메서드를로 `FixSize` 지정 `GetDesiredSizeDelegate` 하 여 클래스에서 제공 하는 잘못 된 측정을 수정할 수 있습니다 `CustomControl` .
 
 ```csharp
 stackLayout.Children.Add (customControl, FixSize);
 ```
 
-이 인해 되는 사용자 지정 보기에 올바르게 표시, 장치의 너비를 차지 하는 다음 스크린샷에 표시 된 대로:
+그러면 다음 스크린샷에 표시 된 것 처럼 장치 너비를 차지 하는 사용자 지정 보기가 올바르게 표시 됩니다.
 
-![](code-images/android-good-measurement.png "사용자 지정 GetDesiredSize 대리자를 사용 하 여 android CustomControl")
+![](code-images/android-good-measurement.png "Android CustomControl with Custom GetDesiredSize Delegate")
 
-### <a name="universal-windows-platform"></a>유니버설 Windows 플랫폼
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
-다음 코드 예제는 `CustomControl` 클래스에서 상속 되는 `Panel`:
+다음 코드 예제에서는 `CustomControl` 에서 상속 되는 클래스를 보여 줍니다 `Panel` .
 
 ```csharp
 public class CustomControl : Panel
@@ -284,7 +287,7 @@ public class CustomControl : Panel
 }
 ```
 
-이 보기의 인스턴스에 추가할를 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)다음 코드 예제에서 설명한 것 처럼:
+이 뷰의 인스턴스는 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 다음 코드 예제에서 보여 주는 것 처럼에 추가 됩니다.
 
 ```csharp
 var brokenControl = new CustomControl {
@@ -293,11 +296,11 @@ var brokenControl = new CustomControl {
 stackLayout.Children.Add(brokenControl);
 ```
 
-그러나 때문에 `CustomControl.ArrangeOverride` 재정의 요청 된 너비의 절반 항목을 항상 반환, 다음 스크린샷에 표시 된 대로 장치는 사용 가능한 너비의 절반 클리핑됩니다 보기:
+그러나 `CustomControl.ArrangeOverride` 재정의는 항상 요청 된 너비의 절반을 반환 하기 때문에 다음 스크린샷에 표시 된 것 처럼 뷰가 사용 가능한 장치 너비의 1/2로 잘립니다.
 
-![](code-images/winrt-bad-measurement.png "잘못 된 ArrangeOverride 구현과 UWP CustomControl")
+![](code-images/winrt-bad-measurement.png "UWP CustomControl with Bad ArrangeOverride Implementation")
 
-이 문제에 솔루션을 제공 하는 것을 `ArrangeOverrideDelegate` 뷰를 추가 하는 경우 구현 합니다 [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)다음 코드 예제에서 설명한 것 처럼:
+이 문제에 대 한 해결 방법은 `ArrangeOverrideDelegate` [`StackLayout`](xref:Xamarin.Forms.StackLayout) 다음 코드 예제에서 보여 주는 것 처럼에 뷰를 추가할 때 구현을 제공 하는 것입니다.
 
 ```csharp
 stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, finalSize) =>
@@ -312,13 +315,13 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 });
 ```
 
-이 메서드는 제공한 너비는 `CustomControl.ArrangeOverride` 메서드 하지만 곱한 두 합니다. 이 인해 되는 사용자 지정 보기에 올바르게 표시, 장치의 너비를 차지 하는 다음 스크린샷에 표시 된 대로:
+이 메서드는 메서드에서 제공 하는 너비를 사용 `CustomControl.ArrangeOverride` 하지만 2를 곱합니다. 그러면 다음 스크린샷에 표시 된 것 처럼 장치 너비를 차지 하는 사용자 지정 보기가 올바르게 표시 됩니다.
 
-![](code-images/winrt-good-measurement.png "ArrangeOverride 대리자를 사용 하 여 UWP CustomControl")
+![](code-images/winrt-good-measurement.png "UWP CustomControl with ArrangeOverride Delegate")
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 C#을 사용 하 여 만든 Xamarin.Forms 레이아웃에 네이티브 뷰를 추가 하는 방법 및 해당 측정 API 사용을 수정 하려면 사용자 지정 보기 레이아웃을 재정의 하는 방법을 설명 합니다.
+이 문서에서는 Xamarin.Forms c #을 사용 하 여 만든 레이아웃에 네이티브 뷰를 추가 하는 방법 및 사용자 지정 보기의 레이아웃을 재정의 하 여 해당 측정 API 사용법을 수정 하는 방법을 설명 했습니다.
 
 ## <a name="related-links"></a>관련 링크
 

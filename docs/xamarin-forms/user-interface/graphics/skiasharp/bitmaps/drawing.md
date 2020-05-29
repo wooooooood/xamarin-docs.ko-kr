@@ -1,51 +1,54 @@
 ---
-title: 만들고 SkiaSharp 비트맵에 그리기
-description: SkiaSharp 비트맵을 만들고 그에 따라 캔버스를 만들어 이러한 비트맵에 드로잉을 하는 방법을 알아봅니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: 1e2b50a260ed5f5bbbbfc3c4ba55a33075262f25
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 593d6a8b30d5ed0e143d1c013849d2bef571f6dc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228108"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140298"
 ---
-# <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>만들고 SkiaSharp 비트맵에 그리기
+# <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>SkiaSharp 비트맵 만들기 및 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-살펴보았습니다 방법을 통해 응용 프로그램 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드할 수 있습니다. 응용 프로그램 내에서 새 비트맵을 만들 수 이기도 합니다. 가장 간단한 방법은의 생성자 중 하나를 포함 [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
+응용 프로그램에서 웹, 응용 프로그램 리소스 및 사용자의 사진 라이브러리에서 비트맵을 로드 하는 방법을 살펴보았습니다. 또한 응용 프로그램 내에서 새 비트맵을 만들 수 있습니다. 가장 간단한 방법은의 생성자 중 하나입니다 [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)) .
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
 ```
 
-합니다 `width` 고 `height` 매개 변수는 정수 및 비트맵의 픽셀 크기를 지정 합니다. 이 생성자는 픽셀당 4 바이트를 사용 하 여 전체 색 비트맵을 만듭니다: 빨강, 녹색, 파랑 및 알파 (불투명) 구성 요소에 대 한 1 바이트입니다.
+`width`및 `height` 매개 변수는 정수 이며 비트맵의 픽셀 크기를 지정 합니다. 이 생성자는 픽셀당 4 바이트 (빨강, 녹색, 파랑 및 알파 (불투명도) 구성 요소 당 1 바이트)를 사용 하 여 전체 색 비트맵을 만듭니다.
 
-새 비트맵을 만든 후 비트맵의 화면에 결과가 표시 해야 합니다. 일반적으로 두 가지 방법 중 하나에서 이렇게합니다.
+새 비트맵을 만든 후에는 비트맵의 표면에 항목을 가져와야 합니다. 일반적으로 다음 두 가지 방법 중 하나로이 작업을 수행 합니다.
 
-- Standard를 사용 하 여 비트맵에 드로잉 `Canvas` 그리기 메서드.
+- 표준 그리기 메서드를 사용 하 여 비트맵을 그립니다 `Canvas` .
 - 픽셀 비트에 직접 액세스 합니다.
 
 이 문서에서는 첫 번째 방법을 보여 줍니다.
 
-![샘플을 그리기](drawing-images/DrawingSample.png "샘플 그리기")
+![그리기 샘플](drawing-images/DrawingSample.png "그리기 샘플")
 
-두 번째 방법은 문서에 설명 되어 [ **SkiaSharp 비트맵 픽셀에 액세스**](pixel-bits.md)합니다.
+두 번째 방법은 [**SkiaSharp 비트맵 픽셀 액세스**](pixel-bits.md)문서에서 설명 합니다.
 
-## <a name="drawing-on-the-bitmap"></a>비트맵에 그리기
+## <a name="drawing-on-the-bitmap"></a>비트맵에서 그리기
 
-비트맵의 화면에서 그리기 비디오 디스플레이에 그리기와 같습니다. 가져올 비디오 디스플레이에 그릴를 `SKCanvas` 에서 개체를 `PaintSurface` 이벤트 인수입니다. 만든 비트맵을 그리려면를 `SKCanvas` 를 사용 하 여 개체를 [ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) 생성자:
+비트맵 표면의 그리기는 비디오 디스플레이에서 그리기와 동일 합니다. 비디오 디스플레이를 그리려면 `SKCanvas` 이벤트 인수에서 개체를 가져옵니다 `PaintSurface` . 비트맵을 그리려면 `SKCanvas` 생성자를 사용 하 여 개체를 만듭니다 [`SKCanvas`](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) .
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
 ```
 
-비트맵을 토대로 작업을 완료 하는 경우의 삭제할 수 있습니다는 `SKCanvas` 개체입니다. 이러한 이유로 합니다 `SKCanvas` 생성자에서 일반적으로 호출 되는 `using` 문:
+비트맵에서 그리기를 완료 하 고 나면 개체를 삭제할 수 있습니다 `SKCanvas` . 이러한 이유로 `SKCanvas` 생성자는 일반적으로 문에서 호출 됩니다 `using` .
 
 ```csharp
 using (SKCanvas canvas = new SKCanvas(bitmap))
@@ -54,13 +57,13 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 }
 ```
 
-비트맵 표시 될 수 있습니다. 나중에 프로그램을 새로 만들 수 있습니다 `SKCanvas` 동일한, 비트맵 및 조금 더 그릴 개체 기반으로 합니다.
+그런 다음 비트맵을 표시할 수 있습니다. 나중에 프로그램은 `SKCanvas` 동일한 비트맵을 기반으로 새 개체를 만들고이 개체에 좀 더 그릴 수 있습니다.
 
-**Hello 비트맵** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램 작성 텍스트 "Hello, 비트맵!" 비트맵에 여러 번 비트맵을 표시 됩니다.
+**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **hello 비트맵** 페이지에서 "hello, Bitmap!" 텍스트를 씁니다. 비트맵을 찾은 다음이 비트맵을 여러 번 표시 합니다.
 
-생성자는 `HelloBitmapPage` 만들어 시작을 `SKPaint` 텍스트 표시에 대 한 개체입니다. 텍스트 문자열의 크기를 결정 하 고 해당 차원을 사용 하 여 비트맵을 만듭니다. 그런 다음 만듭니다는 `SKCanvas` 해당 비트맵, 호출을 기반으로 하는 개체 `Clear`, 다음 호출 `DrawText`. 호출 하는 것이 좋습니다는 항상 `Clear` 새 비트맵을 사용 하 여 새로 만든된 비트맵 임의 데이터를 포함 될 수 있습니다.
+의 생성자는 `HelloBitmapPage` `SKPaint` 텍스트를 표시 하기 위한 개체를 만들기 시작 합니다. 텍스트 문자열의 크기를 결정 하 고 이러한 차원을 사용 하 여 비트맵을 만듭니다. 그런 다음이 `SKCanvas` 비트맵을 기반으로 개체를 만들고를 호출한 `Clear` 다음을 호출 `DrawText` 합니다. `Clear`새로 만든 비트맵에 임의의 데이터가 포함 될 수 있으므로 항상 새 비트맵을 사용 하 여를 호출 하는 것이 좋습니다.
 
-만들어 마지막 생성자는 `SKCanvasView` 비트맵을 표시 하는 개체:
+생성자는 개체를 만들어 `SKCanvasView` 비트맵을 표시 합니다.
 
 ```csharp
 public partial class HelloBitmapPage : ContentPage
@@ -111,95 +114,95 @@ public partial class HelloBitmapPage : ContentPage
 }
 ```
 
-`PaintSurface` 처리기에 여러 번 표시의 행과 열 비트맵을 렌더링 합니다. 있음을 `Clear` 에서 메서드를 `PaintSurface` 처리기의 인수에 `SKColors.Aqua`, 화면 배경의 색입니다.
+`PaintSurface`처리기는 표시의 행과 열에서 비트맵을 여러 번 렌더링 합니다. `Clear`처리기의 메서드에는 `PaintSurface` `SKColors.Aqua` 표시 표면의 배경을 색으로 하는의 인수가 있습니다.
 
-[![Hello, 비트맵! ](drawing-images/HelloBitmap.png "Hello, 비트맵!")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hello, Bitmap!](drawing-images/HelloBitmap.png "Hello, Bitmap!")](drawing-images/HelloBitmap-Large.png#lightbox)
 
-바다색 백그라운드 모양의 텍스트를 제외 하 고 투명 한 비트맵 임을 알 수 있습니다.
+바다색 배경의 모양은 텍스트를 제외 하 고 비트맵이 투명 함을 나타냅니다.
 
-## <a name="clearing-and-transparency"></a>지우기 및 투명도
+## <a name="clearing-and-transparency"></a>지우기 및 투명성
 
-표시 된 **Hello 비트맵** 페이지 비트맵 만든 프로그램은 검은색 텍스트로 제외 하 고 투명 하 게 하는 방법을 보여 줍니다. 이유는 바다색 색 화면을 통해 보여 줍니다.
+**Hello 비트맵** 페이지가 표시 되 면 프로그램이 만든 비트맵이 검정색 텍스트를 제외 하 고 투명 하 게 표시 됩니다. 표시 표면의 바다색 색은를 통해 표시 됩니다.
 
-`Clear` 다음`SKCanvas` 방법의 설명서에서는 문을 사용 하 여 설명 합니다. "캔버스의 현재 클립에서 모든 픽셀을 바꿉니다." "Replace" 라는 단어를 사용 하면 이러한 메서드의 중요 한 특징이 표시 됩니다. 기존 표시 화면에 항목 `SKCanvas` 을 추가 하는 모든 그리기 메서드입니다. 합니다 `Clear` 메서드 _대체_ 가 이미 있습니다.
+의 메서드에 대 한 설명서에서는 `Clear` `SKCanvas` "현재 클립 캔버스의 모든 픽셀을 바꿉니다." 문을 사용 하 여 설명 합니다. "Replace" 단어를 사용 하면 이러한 메서드의 중요 한 특성이 표시 됩니다. 모든 그리기 메서드는 `SKCanvas` 기존 표시 화면에 항목을 추가 합니다. `Clear`메서드는 이미 있는 항목을 _대체_ 합니다.
 
-`Clear` 두 가지 버전에 있습니다.
+`Clear`는 두 가지 다른 버전으로 존재 합니다.
 
-- 합니다 [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) 메서드를 `SKColor` 매개 변수는 픽셀 색을 디스플레이 화면의 픽셀을 대체 합니다.
+- [`Clear`](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor))매개 변수가 있는 메서드는 `SKColor` 표시 표면의 픽셀을 해당 색의 픽셀로 바꿉니다.
 
-- 합니다 [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) 메서드 매개 변수 없이 사용 하 여 픽셀을 대체 합니다 [ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty) 색 (빨강, 녹색, 파랑 및 알파) 구성 요소는 0으로 설정 하는 모든 색입니다. 이 색은 라고도 함 투명 검정입니다.
+- [`Clear`](xref:SkiaSharp.SKCanvas.Clear)매개 변수가 없는 메서드는 픽셀을 색으로 바꿉니다 [`SKColors.Empty`](xref:SkiaSharp.SKColors.Empty) .이 색은 모든 구성 요소 (빨강, 녹색, 파랑 및 알파)가 0으로 설정 되는 색입니다. 이 색을 "투명 검은색"이 라고도 합니다.
 
-호출 `Clear` 새 비트맵에 인수를 사용 하 여 완전히 투명 하 게 전체 비트맵을 초기화 합니다. 비트맵에 이후에 그려지는 아무것도 보통은 불투명 하 게 또는 부분적으로 불투명 합니다.
+`Clear`새 비트맵에서 인수를 사용 하지 않고를 호출 하면 전체 비트맵이 완전히 투명 하 게 초기화 됩니다. 이후에 비트맵에 그려진 모든 항목은 일반적으로 불투명 하거나 부분적으로 불투명 합니다.
 
-시도해 볼 수 있는 항목은 다음과 같습니다. **Hello 비트맵** 페이지에서에 적용 된 `Clear` `bitmapCanvas` 메서드를이 항목으로 바꿉니다.
+사용해 볼 수 있는 작업은 다음과 같습니다. **Hello 비트맵** 페이지에서에 `Clear` 적용 되는 메서드를 `bitmapCanvas` 이 항목으로 바꿉니다.
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));
 ```
 
-순서는 `SKColor` 생성자 매개 변수는 빨간색, 녹색, 파랑 및 알파, 여기서 각 값의 범위는 0에서 255입니다. 알파 값이 0이 투명 알파 값이 255는 불투명 해지고 염두에 두어야 합니다.
+`SKColor`생성자 매개 변수의 순서는 빨강, 녹색, 파랑 및 알파 이며 각 값의 범위는 0 ~ 255입니다. 알파 값 0은 투명 하지만 알파 값 255은 불투명 합니다.
 
-(255, 0, 0, 128) 값을 50% 불투명도 사용 하 여 빨간색 픽셀로 비트맵 픽셀을 지웁니다. 이 비트맵 배경을 반투명 임을 의미 합니다. 비트맵의 반투명 하 게 빨간색 배경이 회색 배경이 만들려는 화면 배경의 바다색와 결합 합니다.
+값 (255, 0, 0, 128)은 비트맵 픽셀을 50% 불투명도를 사용 하는 빨강 픽셀로 지웁니다. 즉, 비트맵 배경은 반 투명 합니다. 비트맵의 반투명 빨강 배경은 표시 표면의 바다색 배경과 결합 되어 회색 배경을 만듭니다.
 
-다음 할당에 배치 하 여 텍스트의 색을 투명 검정으로 설정 된 `SKPaint` 이니셜라이저:
+이니셜라이저에 다음 할당을 추가 하 여 텍스트 색을 투명 검정으로 설정 해 봅니다 `SKPaint` .
 
 ```csharp
 Color = new SKColor(0, 0, 0, 0)
 ```
 
-이 투명 한 텍스트는는 바다색 배경의 화면 표시는 비트맵의 완전히 투명 한 영역을 만든 생각할 수 있습니다. 하지만 다릅니다. 항목의 비트맵에 이미 있습니다. 위에 텍스트를 그립니다. 투명 한 텍스트 표시 되지 않습니다 전혀 합니다.
+이 투명 텍스트는 표시 화면의 바다색 배경을 표시 하는 데 사용할 수 있는 완전히 투명 한 비트맵 영역을 만드는 것으로 생각할 수 있습니다. 이는 그렇지 않습니다. 텍스트는 비트맵에 이미 있는 내용 위에 그려집니다. 투명 텍스트는 전혀 표시 되지 않습니다.
 
-이상 `Draw` 메서드 적이 비트맵 보다 투명 하 게 만듭니다. 만 `Clear` 수행할 수 있습니다.
+어떤 `Draw` 방법으로도 비트맵을 더 투명 하 게 만들 수 있습니다. `Clear`이 작업을 수행할 수 있습니다.
 
 ## <a name="bitmap-color-types"></a>비트맵 색 형식
 
-가장 간단한 `SKBitmap` 생성자를 사용 하면 정수 픽셀 너비 및 비트맵의 높이 지정할 수 있습니다. 다른 `SKBitmap` 생성자는 더 복잡 합니다. 이 생성자에는 두 열거형 형식의 인수가 필요 합니다. [ `SKColorType` ](xref:SkiaSharp.SKColorType) 하 고 [ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType)합니다. 다른 생성자를 사용 합니다 [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo) 구조는이 정보를 통합 합니다.
+가장 간단한 `SKBitmap` 생성자를 사용 하면 비트맵의 정수 픽셀 너비와 높이를 지정할 수 있습니다. 다른 `SKBitmap` 생성자는 더 복잡 합니다. 이러한 생성자에는 및 라는 두 열거형 형식의 인수가 필요 [`SKColorType`](xref:SkiaSharp.SKColorType) [`SKAlphaType`](xref:SkiaSharp.SKAlphaType) 합니다. 다른 생성자는 [`SKImageInfo`](xref:SkiaSharp.SKImageInfo) 이 정보를 통합 하는 구조를 사용 합니다.
 
-`SKColorType` 열거형 멤버가 9입니다. 이러한 각각의이 멤버에는 비트맵 픽셀을 저장 하는 특정 방식으로 설명 합니다.
-
-- `Unknown`
-- `Alpha8` &mdash; 각 픽셀은 완전 불투명에서 완전 투명 알파 값을 나타내는 8 비트
-- `Rgb565` &mdash; 각 픽셀은 16 비트를 5 비트가 빨강 및 파랑 및 녹색 6
-- `Argb4444` &mdash; 각 픽셀은 16 비트를 4 각 알파, 빨강, 녹색 및 파랑
-- `Rgba8888` &mdash; 각 픽셀은 각 8 빨간색, 녹색, 파랑 및 알파에 대 한 32 비트
-- `Bgra8888` &mdash; 각 픽셀은 각 8 파랑, 녹색, 빨강 및 알파에 대 한 32 비트
-- `Index8` &mdash; 각 픽셀은 8 비트 나타내고 인덱스는 [`SKColorTable`](xref:SkiaSharp.SKColorTable)
-- `Gray8` &mdash; 각 픽셀은 흰색으로 검정에서 회색 음영을 나타내는 8 비트
-- `RgbaF16` &mdash; 각 픽셀은 빨간색, 녹색, 파랑 및 알파는 16 비트 부동 소수점 형식에서 사용 하 여 64 비트
-
-각 픽셀은 32 픽셀 (4 바이트)는 두 가지 형식 이라고 _컬러_ 형식입니다. 여러 비디오 자체 표시 되는 경우 한 번에서 다른 형식 날짜의 전체 색 수 있었습니다. 제한 된 색 비트맵이 디스플레이 대 한 적절 한 되었으며 비트맵 메모리에 더 적은 공간을 차지 하도록 허용 합니다.
-
-이러한 일 프로그래머에 게 거의 항상 전체 색 비트맵을 사용 하 여 및 다른 형식과 이름을 바꾸지 않습니다. 예외는 `RgbaF16` 컬러 형식에도 보다 큰 컬러 해상도 허용 하는 형식입니다. 그러나이 형식은 의료 이미지 등의 특수 한 용도로 사용 되 고 타당성을 많은 표준 컬러 디스플레이 사용 하는 경우.
-
-이 문서 시리즈에서는 자체를 제한 합니다는 `SKBitmap` 하지 않으면 기본적으로 사용 되는 형식 색 `SKColorType` 멤버를 지정 합니다. 이 기본 형식 기본 플랫폼을 기반으로 합니다. Xamarin.Forms에서 지 원하는 플랫폼에 대 한 기본 색 유형은입니다.
-
-- `Rgba8888` iOS 및 Android 용
-- `Bgra8888` UWP에 대 한
-
-유일한 차이점은 메모리에 4 바이트의 순서와이만 문제가 됩니다 픽셀 비트에 직접 액세스 하는 경우. 이 않습니다 더욱 중요 문서를 가져와야만 [ **SkiaSharp 비트맵 픽셀에 액세스**](pixel-bits.md)합니다.
-
-`SKAlphaType` 열거형에는 네 가지 멤버:
+열거형에는 `SKColorType` 9 개의 멤버가 있습니다. 이러한 각 멤버는 비트맵 픽셀을 저장 하는 특정 방법을 설명 합니다.
 
 - `Unknown`
-- `Opaque` &mdash; 비트맵에 투명도 없이
-- `Premul` &mdash; 색의 구성 요소는 알파 구성 요소를 곱한 미리
-- `Unpremul` &mdash; 색의 구성 요소는 하지 미리 곱한 알파 구성 요소
+- `Alpha8`&mdash;각 픽셀은 완전히 투명 하 고 완전히 불투명 한 알파 값을 나타내는 8 비트입니다.
+- `Rgb565`&mdash;각 픽셀은 16 비트, 빨강 및 파랑의 경우 5 비트, 녹색의 경우 6 비트입니다.
+- `Argb4444`&mdash;각 픽셀은 16 비트, 알파, 빨강, 녹색, 파랑 각각 4입니다.
+- `Rgba8888`&mdash;각 픽셀은 32 비트, 빨강, 녹색, 파랑 및 알파의 8 비트입니다.
+- `Bgra8888`&mdash;각 픽셀은 32 비트, 각각 파랑, 녹색, 빨강 및 알파에 대 한 8 비트입니다.
+- `Index8`&mdash;각 픽셀은 8 비트 이며에 대 한 인덱스를 나타냅니다.[`SKColorTable`](xref:SkiaSharp.SKColorTable)
+- `Gray8`&mdash;각 픽셀은 검정에서 흰색으로 회색 음영을 나타내는 8 비트입니다.
+- `RgbaF16`&mdash;각 픽셀은 16 비트 부동 소수점 형식의 빨강, 녹색, 파랑 및 알파를 사용 하는 64 비트입니다.
 
-순서 빨간색, 녹색, 파란색, 알파에 표시 된 바이트를 사용 하 여 50% 투명도 사용 하 여 4 바이트 빨간색 비트맵 픽셀은 다음과 같습니다.
+각 픽셀이 32 픽셀 (4 바이트) 인 두 가지 형식은 일반적 _으로 전체 색_ 서식 이라고 합니다. 비디오 디스플레이 자체가 전체 색이 아닌 경우의 다른 많은 형식이 날짜입니다. 제한 된 색의 비트맵은 이러한 표시 및 허용 된 비트맵에서 메모리의 공간을 절약 하기에 적합 했습니다.
+
+프로그래머는 거의 항상 전체 색 비트맵을 사용 하 고 다른 형식을 사용 하지 마세요. 예외는 `RgbaF16` 전체 색 서식 보다 색을 더 크게 확인할 수 있는 형식입니다. 그러나이 형식은 의료 이미지와 같은 특수 한 용도로 사용 되며 표준 전체 색 표시와 함께 사용 하는 경우에는 적합 하지 않습니다.
+
+이러한 일련의 문서는 `SKBitmap` 멤버가 지정 되지 않은 경우 기본적으로 사용 되는 색 형식으로 제한 됩니다 `SKColorType` . 기본 형식은 기본 플랫폼을 기반으로 합니다. 에서 지 원하는 플랫폼의 경우 Xamarin.Forms 기본 색 형식은 다음과 같습니다.
+
+- `Rgba8888`iOS 및 Android의 경우
+- `Bgra8888`UWP의 경우
+
+유일한 차이점은 메모리에서 4 바이트의 순서 이며이는 픽셀 비트에 직접 액세스 하는 경우에만 문제가 됩니다. [**SkiaSharp 비트맵 픽셀에 액세스**](pixel-bits.md)하는 문서에 도달할 때까지이는 중요 하지 않습니다.
+
+열거형에는 `SKAlphaType` 네 개의 멤버가 있습니다.
+
+- `Unknown`
+- `Opaque`&mdash;비트맵에 투명도가 없습니다.
+- `Premul`&mdash;색 구성 요소에 알파 구성 요소가 미리 곱해집니다.
+- `Unpremul`&mdash;색 구성 요소가 알파 구성 요소에 의해 미리 곱해집니다.
+
+다음은 빨강, 녹색, 파랑, 알파 순서로 표시 되는 바이트를 50% 투명 한 4 바이트 빨강 비트맵 픽셀입니다.
 
 0xFF 0x00 0x00 0x80
 
-반투명 하 게 픽셀을 포함 하는 비트맵을 화면에 렌더링 되 면 각 비트맵 픽셀의 색 구성 요소를 해당 픽셀의 알파 값을 곱할 수 있어야 합니다. 및 디스플레이 화면의 해당 픽셀의 색 구성 요소를 곱할 수 있어야 합니다. 알파 값을 뺀 255입니다. 다음 두 픽셀을 결합할 수 있습니다. 비트맵을 렌더링할 수 더 빠르게 비트맵 픽셀에서 색 구성 요소를 이미 사전 mulitplied 알파 값을 기준으로 합니다. 해당 동일한 빨간색 픽셀 같이 미리 곱한 형식으로 저장 됩니다.
+반투명 픽셀을 포함 하는 비트맵이 디스플레이 표면에서 렌더링 되는 경우 각 비트맵 픽셀의 색 구성 요소를 해당 픽셀의 알파 값으로 곱하고, 표시 표면에 해당 하는 픽셀의 색 구성 요소에 255을 곱하여 알파 값을 뺀 값 이어야 합니다. 그런 다음 두 픽셀을 결합할 수 있습니다. 비트맵 픽셀의 색 구성 요소가 알파 값으로 미리 mulitplied 이미 있는 경우 비트맵을 더 빠르게 렌더링할 수 있습니다. 동일한 빨강 픽셀은 미리 곱하기 형식으로 다음과 같이 저장 됩니다.
 
 0x80 0x00 0x00 0x80
 
-이러한 성능 향상은 이유 `SkiaSharp` 비트맵 기본적으로 사용 하 여 만들어진를 `Premul` 형식입니다. 하지만이 액세스 하 고 픽셀 비트를 조작 하는 경우에 알고이 다시입니다.
+이러한 성능 향상으로 `SkiaSharp` 인해 기본적으로 비트맵이 형식으로 생성 됩니다 `Premul` . 그러나 픽셀 비트에 액세스 하 고 조작 하는 경우에만이를 확인 해야 합니다.
 
-## <a name="drawing-on-existing-bitmaps"></a>에 기존 비트맵 그리기
+## <a name="drawing-on-existing-bitmaps"></a>기존 비트맵에서 그리기
 
-에 그릴 새 비트맵을 만들 필요는 없습니다. 기존 비트맵 이미지에 그릴 수 있습니다.
+그릴 새 비트맵을 만들 필요는 없습니다. 기존 비트맵을 그릴 수도 있습니다.
 
-**Monkey 콧수염** 페이지의 생성자를 사용 하 여 로드 하는 **MonkeyFace.png** 이미지입니다. 그런 다음 만듭니다는 `SKCanvas` 개체는 비트맵을 기반으로 하며 사용 하 여 `SKPaint` 및 `SKPath` 는 콧수염에 그릴 개체:
+**원숭이 콧수염** 페이지는 해당 생성자를 사용 하 여 **monkeyface .png** 이미지를 로드 합니다. 그런 다음이 `SKCanvas` 비트맵을 기반으로 개체를 만들고 및 개체를 사용 하 여 `SKPaint` `SKPath` 콧수염을 그립니다.
 
 ```csharp
 public partial class MonkeyMoustachePage : ContentPage
@@ -254,27 +257,27 @@ public partial class MonkeyMoustachePage : ContentPage
 }
 ```
 
-만들어 마지막 생성자는 `SKCanvasView` 해당 `PaintSurface` 결과 단순히 표시 하는 처리기:
+생성자는 `SKCanvasView` `PaintSurface` 처리기가 단순히 결과를 표시 하는를 만들어 종료 합니다.
 
-[![조정 콧수염](drawing-images/MonkeyMoustache.png "콧수염 조정")](drawing-images/MonkeyMoustache-Large.png#lightbox)
+[![원숭이 콧수염](drawing-images/MonkeyMoustache.png "원숭이 콧수염")](drawing-images/MonkeyMoustache-Large.png#lightbox)
 
-## <a name="copying-and-modifying-bitmaps"></a>복사 하 여 비트맵을 수정
+## <a name="copying-and-modifying-bitmaps"></a>비트맵 복사 및 수정
 
-메서드 `SKCanvas` 비트맵 포함 이미지를 그릴 사용할 수 있는 `DrawBitmap`합니다. 즉, 그릴 수 있는 하나의 비트맵, 일반적으로 어떤 방식으로든에서 수정 합니다.
+`SKCanvas`비트맵에 그리는 데 사용할 수 있는 메서드는 다음과 같습니다 `DrawBitmap` . 즉, 한 비트맵을 다른 비트맵으로 그릴 수 있으며, 일반적으로 일부 비트맵을 수정 합니다.
 
-실제 픽셀 비트에 액세스 하는 비트맵을 수정 하는 가장 다양 한 방법, 문서에 설명 제목을  **[SkiaSharp 액세스 비트맵 픽셀](pixel-bits.md)** 합니다. 하지만 여러 가지 기술을 픽셀 비트에 액세스 되지 않아도 되는 비트맵을 수정할 수 있습니다.
+비트맵을 수정 하는 가장 다양 한 방법은 실제 픽셀 비트 ( **[SkiaSharp 비트맵 픽셀 액세스](pixel-bits.md)** 문서에 설명 된 주제)에 액세스 하는 것입니다. 그러나 픽셀 비트에 액세스 하지 않아도 되는 비트맵을 수정 하는 다른 여러 가지 방법이 있습니다.
 
-포함 된 다음 비트맵을 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램은 360 픽셀 너비 및 높이 480 픽셀:
+**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 포함 된 다음 비트맵은 360 픽셀 너비 및 480 픽셀 높이로 되어 있습니다.
 
-![Mountain Climbers](drawing-images/MountainClimbers.jpg "Mountain Climbers")
+![산지 Climbers](drawing-images/MountainClimbers.jpg "산지 Climbers")
 
-이 사진을 게시 하려면 왼쪽 monkey에서 권한을 받지 못했으면 가정. 한 가지 해결책은 기법을 사용 하는 monkey의 얼굴을 모호 _pixelization_합니다. 기능을 수행할 수 없습니다 있도록 글꼴의 픽셀 색의 요소를 사용 하 여 대체 됩니다. 색의 요소는 일반적으로 이러한 블록을 해당 픽셀의 색을 구하여 원래 이미지에서 파생 됩니다. 하지만이 평균 직접 수행할 필요가 없습니다. 이것이 자동으로 비트맵을 작은 픽셀 치수를 복사할 때.
+왼쪽의 원숭이에서이 사진을 게시할 수 있는 권한을 받지 않았다고 가정 합니다. 한 가지 해결책은 _pixelization_이라는 기법을 사용 하 여 원숭이의 얼굴을 숨기는 것입니다. 글꼴의 픽셀은 색의 블록으로 대체 되므로 기능을 만들 수 없습니다. 색의 블록은 일반적으로 이러한 블록에 해당 하는 픽셀 색의 평균을 계산 하 여 원래 이미지에서 파생 됩니다. 그러나이 평균을 직접 수행할 필요는 없습니다. 비트맵을 더 작은 픽셀 차원에 복사 하면 자동으로 발생 합니다.
 
-왼쪽된 monkey의 얼굴 약는 72 픽셀 사각형 영역 (112, 238) 지점에서 왼쪽 위 모퉁이 차지합니다. 보겠습니다 8-8 하 여 픽셀 사각형은 각 색이 지정 된 블록의 9에서 9에 대 한 배열을 사용 하 여 해당 72 픽셀 사각형 영역을 대체 합니다.
+왼쪽 원숭이 얼굴은 (112, 238) 점에서 왼쪽 위 모퉁이가 있는 72 픽셀 정사각형 영역을 차지 합니다. 72 픽셀 사각형 영역을 색이 지정 된 블록의 9 x 9 배열로 바꿔 보겠습니다. 각 색은 8 x 픽셀 사각형입니다.
 
-합니다 **이미지 흠집 제거 이미지** 페이지가 해당 비트맵에서 로드 되 고 먼저 라는 작은 9 픽셀 사각형 비트맵을 만들어 `faceBitmap`합니다. 이것이 바로 monkey의 얼굴을 복사 하는 것에 대 한 대상입니다. 대상 사각형은 단지 9 픽셀 사각형 이지만 소스 사각형 72 픽셀 사각형입니다. 모든 8-8 하 여 블록의 원본 픽셀 색 평균을 구하여 하나의 픽셀까지 통합 합니다.
+**Pixelize 이미지** 페이지는 해당 비트맵에서 로드 되며 먼저 라는 작은 9 픽셀 사각형 비트맵을 만듭니다 `faceBitmap` . 이는 원숭이의 얼굴을 복사 하기 위한 대상입니다. 대상 사각형은 단순히 9 픽셀 사각형 이지만 소스 사각형은 72 픽셀 사각형입니다. 원본 픽셀의 8 x 8 블록 마다 색의 평균을 계산 하 여 한 픽셀씩 통합 됩니다.
 
-원래 비트맵을 호출 하는 동일한 크기의 새 비트맵을 복사 하려면 다음 단계는 `pixelizedBitmap`합니다. 작은 `faceBitmap` 72 픽셀 사각형 대상 사각형을 사용 하 여 그 위에 후 복사 됩니다 있도록의 각 픽셀 `faceBitmap` 8 배 크기로 확장 됩니다.
+다음 단계는 라는 동일한 크기의 새 비트맵으로 원래 비트맵을 복사 하는 것입니다 `pixelizedBitmap` . `faceBitmap`그런 다음 작은가 72 픽셀 사각형 대상 사각형을 사용 하 여 그 위에 복사 되므로의 각 픽셀 `faceBitmap` 크기가 8 배까지 확장 됩니다.
 
 ```csharp
 public class PixelizedImagePage : ContentPage
@@ -334,17 +337,17 @@ public class PixelizedImagePage : ContentPage
 }
 ```
 
-만들어 마지막 생성자는 `SKCanvasView` 결과 표시:
+생성자는를 만들어 결과를 `SKCanvasView` 표시 합니다.
 
-[![이미지를 이미지 흠집 제거](drawing-images/PixelizeImage.png "이미지를 이미지 흠집 제거")](drawing-images/PixelizeImage-Large.png#lightbox)
+[![Pixelize 이미지](drawing-images/PixelizeImage.png "Pixelize 이미지")](drawing-images/PixelizeImage-Large.png#lightbox)
 
 <a name="rotating-bitmaps" />
 
 ## <a name="rotating-bitmaps"></a>비트맵 회전
 
-다른 일반적인 작업에는 비트맵을 회전 됩니다. IPhone 또는 iPad 사진 라이브러리에서 비트맵을 검색할 때 특히 유용 합니다. 사진의 찍을 때 때 장치 특정 방향에 보유 된 경우가 아니면 그림이 거꾸로 또는 옆쪽 일 수입니다.
+또 다른 일반적인 작업은 비트맵을 회전 하는 것입니다. 이 기능은 iPhone 또는 iPad 사진 라이브러리에서 비트맵을 검색할 때 특히 유용 합니다. 사진이 촬영 될 때 특정 방향으로 장치를 보유 하지 않은 경우 사진은 거꾸로 또는 옆쪽으로 진행 될 수 있습니다.
 
-첫 번째 크기가 같은 다른 비트맵을 만들기로 설정한 다음 첫 번째 두 번째 복사 하는 동안으로 180도 회전 변환이 필요 거꾸로 비트맵을 설정 합니다. 이 섹션의 예의 모든 `bitmap` 되는 `SKBitmap` 회전 해야 하는 개체:
+비트맵을 뒤집어 만들려면 첫 번째 비트맵 크기와 동일한 크기의 다른 비트맵을 만든 다음 첫 번째를 두 번째에 복사 하는 동안 180도 회전 하도록 변환을 설정 해야 합니다. 이 단원의 모든 예제에서 `bitmap` 는 `SKBitmap` 회전 해야 하는 개체입니다.
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Width, bitmap.Height);
@@ -357,7 +360,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-90도 회전 하면 높이 너비를 교환 하 여 원본 보다 다양 한 크기로 사용 되는 비트맵 만들기 해야 합니다. 예를 들어, 원래 비트맵 1200 픽셀 너비 및 800 픽셀, 회전된 비트맵 경우 1200 픽셀 너비 및 800 픽셀입니다. 비트맵 왼쪽 위 구석에 해당 중심으로 회전 하 고 다음 뷰로 이동 되도록 변환 및 회전을 설정 합니다. (에 유의 합니다 `Translate` 고 `RotateDegrees` 메서드가 적용 되는 방식의 반대 순서로 호출 됩니다.) 시계 방향으로 90도 회전 하는 것에 대 한 코드는 다음과 같습니다.
+90 도씩 회전 하는 경우 높이와 너비를 바꿔 원래 크기와 다른 비트맵을 만들어야 합니다. 예를 들어 원래 비트맵이 1200 픽셀 너비와 800 픽셀 높으면 회전 된 비트맵은 800 픽셀 너비와 1200 픽셀 너비입니다. 비트맵이 왼쪽 위 모퉁이를 중심으로 회전 한 다음 뷰로 이동 하도록 변환 및 회전을 설정 합니다. 및 메서드는 적용 되는 `Translate` `RotateDegrees` 순서와 반대 방향으로 호출 됩니다. 90도 시계 방향으로 회전 하는 코드는 다음과 같습니다.
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Height, bitmap.Width);
@@ -371,7 +374,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-그리고은 시계 반대 방향으로 90도 회전 하는 것에 대 한 유사한 기능.
+여기에는 90도 시계 반대 방향으로 회전 하는 비슷한 기능이 있습니다.
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Height, bitmap.Width);
@@ -385,11 +388,11 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-이러한 두 메서드가 사용 됩니다 합니다 **사진 퍼즐** 문서에서 설명 하는 페이지 [ **자르기 SkiaSharp 비트맵**](cropping.md#tile-division)합니다.
+이러한 두 가지 방법은 [**SkiaSharp 비트맵 자르기**](cropping.md#tile-division)문서에 설명 된 **사진 퍼즐** 페이지에서 사용 됩니다.
 
-90도 증가분에서 비트맵을 회전 시킬 수 있도록 프로그램으로 90도 회전 하는 것에 대 한 하나의 함수를 구현만 필요 합니다. 사용자 한이 함수의 반복된 실행 하 여 90도의 모든 증가에 회전할 수 있습니다.
+사용자가 90 도씩 비트맵을 회전 하는 데 사용할 수 있는 프로그램은 90 도씩 회전 하기 위한 함수 하나를 구현 해야 합니다. 그런 다음이 함수를 반복적으로 실행 하 여 90 각도의 증분을 회전할 수 있습니다.
 
-또한 프로그램 모든 양만큼 비트맵을 회전할 수 있습니다. 일반화 된를 180을 바꿔으로 180도 회전 하는 함수를 수정 하는 한 가지 간단한 방법은 것 `angle` 변수:
+프로그램은 임의의 양만큼 비트맵을 회전할 수도 있습니다. 한 가지 간단한 방법은 180을 일반화 된 변수로 바꿔 180 각도로 회전 하는 함수를 수정 하는 것입니다 `angle` .
 
 ```csharp
 SKBitmap rotatedBitmap = new SKBitmap(bitmap.Width, bitmap.Height);
@@ -402,9 +405,9 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-그러나 일반적인 경우이 논리를 자르고 회전된 비트맵의 모퉁이. 삼각 함수를 사용 하 여 해당 모퉁이 포함 하도록 회전된 비트맵의 크기를 계산 하는 것이 좋습니다.
+그러나 일반적으로이 논리는 회전 된 비트맵의 모퉁이를 자릅니다. 더 나은 방법은 삼각를 사용 하 여 회전 된 비트맵의 크기를 계산 하 여 해당 모퉁이를 포함 하는 것입니다.
 
-이 trigonometry 같으며 합니다 **비트맵 Rotator** 페이지입니다. XAML 파일은는 `SKCanvasView` 와 `Slider` 는 까지일 수 있습니다 0에서 360도 사용 하 여는 `Label` 현재 값을 보여 주는:
+이 삼각법는 **비트맵 회전자** 페이지에 표시 됩니다. XAML 파일은 `SKCanvasView` `Slider` 현재 값을 표시 하는 0에서 360 까지의 범위에 해당 하는 및를 인스턴스화합니다 `Label` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -431,7 +434,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 </ContentPage>
 ```
 
-코드 숨김 파일 비트맵 리소스를 로드 하 고 라는 정적 읽기 전용 필드 이름으로 저장 `originalBitmap`합니다. 비트맵에 표시 합니다 `PaintSurface` 처리기는 `rotatedBitmap`, 처음 설정 된 `originalBitmap`:
+코드 숨김이 파일은 비트맵 리소스를 로드 하 고 라는 정적 읽기 전용 필드로 저장 합니다 `originalBitmap` . 처리기에 표시 되는 비트맵은 이며 `PaintSurface` `rotatedBitmap` , 처음에는로 설정 됩니다 `originalBitmap` .
 
 ```csharp
 public partial class BitmapRotatorPage : ContentPage
@@ -484,19 +487,19 @@ public partial class BitmapRotatorPage : ContentPage
 }
 ```
 
-합니다 `ValueChanged` 처리기는 `Slider` 새 작업을 수행 `rotatedBitmap` 회전 각도 기반 합니다. 새 너비와 높이 기반한 absolute values의 사인 및 코사인 원래 너비 및 높이입니다. 회전된 된 비트맵에 원래 비트맵을 그릴 때 사용 되는 변환 각도 지정된 된 수 만큼 회전 고 회전된 된 비트맵의 가운데에는 center 번역할 원래 비트맵 center 원점으로 이동 합니다. (합니다 `Translate` 고 `RotateDegrees` 메서드 적용 되는 방식을 보다 반대 순서로 호출 됩니다.)
+`ValueChanged`의 처리기는 `Slider` `rotatedBitmap` 회전 각도를 기준으로 새를 만드는 작업을 수행 합니다. 새 너비와 높이는 원래 너비와 높이의 사인 및 코사인의 절대값을 기준으로 합니다. 회전 된 비트맵에서 원래 비트맵을 그리는 데 사용 되는 변환은 원본 비트맵 중심을 원본으로 이동한 다음 지정 된 각도 만큼 회전 하 고 해당 중심을 회전 된 비트맵의 중심으로 변환 합니다. `Translate`및 메서드는 `RotateDegrees` 적용 되는 방식과 반대 순서로 호출 됩니다.
 
-사용 하 여는 `Clear` 메서드를 배경의 `rotatedBitmap` 연한 분홍. 크기를 보여 주기 위해 전적으로 이것이 `rotatedBitmap` 디스플레이에서:
+메서드를 사용 하 여 `Clear` 연한 분홍의 배경을 만듭니다 `rotatedBitmap` . 이는 표시의 크기를 보여 주기 위한 것입니다 `rotatedBitmap` .
 
-[![Rotator 비트맵](drawing-images/BitmapRotator.png "비트맵 Rotator")](drawing-images/BitmapRotator-Large.png#lightbox)
+[![비트맵 회전자](drawing-images/BitmapRotator.png "비트맵 회전자")](drawing-images/BitmapRotator-Large.png#lightbox)
 
-회전된 된 비트맵 이하의 하지만 전체 원래 비트맵을 포함할 만큼 큰 경우
+회전 된 비트맵은 전체 원본 비트맵을 포함할 만큼 충분히 크지만 더 크지 않습니다.
 
-## <a name="flipping-bitmaps"></a>비트맵을 대칭 이동
+## <a name="flipping-bitmaps"></a>비트맵 대칭 이동
 
-일반적으로 비트맵에서 수행 하는 다른 작업 이라고 _대칭 이동_합니다. 개념적으로 비트맵 세로 축 또는 center 비트맵의 가로 축 주위 3 차원에서 회전 합니다. 수직 대칭 이동 미러 이미지를 만듭니다.
+비트맵에서 일반적으로 수행 되는 다른 작업을 _대칭 이동_이라고 합니다. 개념적으로 비트맵은 세로 축 둘레의 3 차원 또는 비트맵의 중심을 통한 가로 축에서 회전 됩니다. 수직 대칭 이동은 미러 이미지를 만듭니다.
 
-**비트맵 플리퍼** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에서는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 세로 및 가로로 대칭 이동에 대 한 두 개의 단추:
+**[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **비트맵 플리퍼** 페이지는 이러한 프로세스를 보여 줍니다. XAML 파일에는 `SKCanvasView` 가로 및 세로로 대칭 이동 하기 위한 및 두 개의 단추가 포함 되어 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -532,7 +535,7 @@ public partial class BitmapRotatorPage : ContentPage
 </ContentPage>
 ```
 
-이러한 두 작업을 구현 하는 코드 숨김 파일은 `Clicked` 단추에 대 한 처리기:
+코드에 대 한 처리기에서 이러한 두 작업을 구현 하는 코드 숨김이 `Clicked` 있습니다.
 
 ```csharp
 public partial class BitmapFlipperPage : ContentPage
@@ -588,13 +591,13 @@ public partial class BitmapFlipperPage : ContentPage
 }
 ```
 
-수직 대칭 이동의 가로 배율 인수를 사용 하 여 크기 조정 변환을 통해 수행 됩니다 &ndash;1입니다. 크기 조정 center 경우 비트맵의 세로 가운데 수평 대칭 이동 후에는의 세로 배율 인수를 사용 하 여 크기 조정 변환 &ndash;1입니다.
+수직 대칭 이동은 가로 크기 조정 인수가 1 인 크기 조정 변환에 의해 수행 됩니다 &ndash; . 크기 조정 중심은 비트맵의 세로 가운데입니다. 수평 대칭 이동은 세로 배율 인수가 1 인 크기 조정 변환입니다 &ndash; .
 
-Monkey의 shirt 시 역방향된 처리에서 보듯이 대칭 이동 회전 같지는 않습니다. 이지만 오른쪽 UWP 스크린샷에서 보여 주듯이 둘 다가 가로 및 세로로 대칭 이동 180도 회전와 동일 합니다.
+원숭이의 셔츠에서 역순으로 표시 되는 것 처럼 대칭 이동은 회전과 동일 하지 않습니다. 하지만 오른쪽의 UWP 스크린샷에서는 가로 및 세로 방향으로 대칭 이동 하는 것이 180도를 회전 하는 것과 같습니다.
 
-[![플리퍼 비트맵](drawing-images/BitmapFlipper.png "플리퍼 비트맵")](drawing-images/BitmapFlipper-Large.png#lightbox)
+[![비트맵 플리퍼](drawing-images/BitmapFlipper.png "비트맵 플리퍼")](drawing-images/BitmapFlipper-Large.png#lightbox)
 
-비슷한 기술을 사용 하 여 처리할 수 있는 다른 일반적인 작업 비트맵 사각형 하위 집합을 자르기 됩니다. 이 다음 문서에서 설명 [ **자르기 SkiaSharp 비트맵**](cropping.md)합니다.
+유사한 기법을 사용 하 여 처리할 수 있는 또 다른 일반적인 작업은 비트맵을 사각형 하위 집합으로 자르는 것입니다. 이 내용은 다음 문서 [**SkiaSharp 비트맵 자르기**](cropping.md)에 설명 되어 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

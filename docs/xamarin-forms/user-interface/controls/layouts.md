@@ -1,28 +1,31 @@
 ---
-title: Xamarin.Forms 레이아웃
-description: Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조로 구성 하는 데 사용 됩니다. 이 문서에서는 Xamarin.ios에 포함 된 레이아웃을 나열 합니다.
-ms.prod: xamarin
-ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/21/2018
-ms.openlocfilehash: fa08c5012adf74a17852a72b8faf2c0311d16cfa
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Xamarin.Forms모양의
+description: Xamarin.Forms레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조체로 구성 하는 데 사용 됩니다. 이 문서에서는에 포함 된 레이아웃을 나열 합니다 Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c39bf29feceaf598ac8fd38e6af3d227b6deddc0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83150030"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137308"
 ---
-# <a name="xamarinforms-layouts"></a>Xamarin.Forms 레이아웃
+# <a name="xamarinforms-layouts"></a>Xamarin.Forms모양의
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 구조체로 구성 하는 데 사용 됩니다._
 
-[`Layout`](xref:Xamarin.Forms.Layout) [`Layout<T>`](xref:Xamarin.Forms.Layout`1) Xamarin.ios의 및 클래스는 보기 및 기타 레이아웃의 컨테이너 역할을 하는 뷰의 특수 한 하위 형식입니다. `Layout`클래스 자체는에서 파생 [`View`](views.md) 됩니다. `Layout`파생물은 일반적으로 xamarin.ios 응용 프로그램에서 자식 요소의 위치와 크기를 설정 하는 논리를 포함 합니다.
+[`Layout`](xref:Xamarin.Forms.Layout)의 및 [`Layout<T>`](xref:Xamarin.Forms.Layout`1) 클래스는 Xamarin.Forms 보기 및 기타 레이아웃의 컨테이너 역할을 하는 뷰의 특수 한 하위 형식입니다. `Layout`클래스 자체는에서 파생 [`View`](views.md) 됩니다. `Layout`파생물은 일반적으로 응용 프로그램에서 자식 요소의 위치와 크기를 설정 하는 논리를 포함 합니다 Xamarin.Forms .
 
-[![Xamarin.ios 레이아웃 형식](layouts-images/layouts-sml.png "Xamarin.ios 레이아웃 형식")](layouts-images/layouts.png#lightbox "Xamarin.ios 레이아웃 형식")
+[![Xamarin.Forms레이아웃 유형](layouts-images/layouts-sml.png "[! OP. 비 LOC (Xamarin.ios)] 레이아웃 형식")](layouts-images/layouts.png#lightbox "[! OP. 비 LOC (Xamarin.ios)] 레이아웃 형식")
 
 에서 파생 되는 클래스는 `Layout` 두 가지 범주로 나눌 수 있습니다.
 
@@ -116,6 +119,6 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 
 ## <a name="related-links"></a>관련 링크
 
-- [Xamarin.ios 양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Xamarin.Forms API 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Xamarin.Forms양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.Forms표본의](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.FormsAPI 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

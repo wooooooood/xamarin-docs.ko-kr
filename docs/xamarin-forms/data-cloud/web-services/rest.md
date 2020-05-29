@@ -1,24 +1,27 @@
 ---
-title: RESTful 웹 서비스 사용
-description: 웹 서비스를 응용 프로그램에 통합 하는 것은 일반적인 시나리오입니다. 이 문서에서는 Xamarin.ios 응용 프로그램에서 RESTful 웹 서비스를 사용 하는 방법을 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/22/2018
-ms.openlocfilehash: 6ccbb24be8c03d634c884853fb0ec339d49cf49d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+title: ''
+description: 웹 서비스를 응용 프로그램에 통합 하는 것은 일반적인 시나리오입니다. 이 문서에서는 응용 프로그램에서 RESTful 웹 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ecfcede22e96a4a91f5367dae49b0d837ca2416f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029547"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139167"
 ---
 # <a name="consume-a-restful-web-service"></a>RESTful 웹 서비스 사용
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
-_웹 서비스를 응용 프로그램에 통합 하는 것은 일반적인 시나리오입니다. 이 문서에서는 Xamarin.ios 응용 프로그램에서 RESTful 웹 서비스를 사용 하는 방법을 보여 줍니다._
+_웹 서비스를 응용 프로그램에 통합 하는 것은 일반적인 시나리오입니다. 이 문서에서는 응용 프로그램에서 RESTful 웹 서비스를 사용 하는 방법을 보여 줍니다 Xamarin.Forms ._
 
 REST (Representational State Transfer)는 웹 서비스를 빌드하기 위한 아키텍처 스타일입니다. REST 요청은 웹 브라우저에서 웹 페이지를 검색 하 고 서버에 데이터를 보내는 데 사용 하는 것과 동일한 HTTP 동사를 사용 하 여 HTTP를 통해 수행 됩니다. 동사는 다음과 같습니다.
 
@@ -51,16 +54,16 @@ REST의 단순성은 모바일 응용 프로그램에서 웹 서비스에 액세
 
 REST 서비스는 ASP.NET Core를 사용 하 여 작성 되며 다음 작업을 제공 합니다.
 
-|연산|HTTP 메서드|상대 URI|매개 변수|
+|작업(Operation)|HTTP 메서드|상대 URI|매개 변수|
 |--- |--- |--- |--- |
-|할 일 항목의 목록 가져오기|가져오기|/api/todoitems/|
-|새 할 일 항목 만들기|올리기|/api/todoitems/|JSON 형식의 TodoItem|
-|할 일 항목 업데이트|보관|/api/todoitems/|JSON 형식의 TodoItem|
+|할 일 항목의 목록 가져오기|GET|/api/todoitems/|
+|새 할 일 항목 만들기|POST|/api/todoitems/|JSON 형식의 TodoItem|
+|할 일 항목 업데이트|PUT|/api/todoitems/|JSON 형식의 TodoItem|
 |할 일 항목 삭제|Delete|/api/todoitems/{id}|
 
-대부분의 Uri는 경로에 `TodoItem` ID를 포함 합니다. 예를 들어 ID가 `6bb8a868-dba1-4f1a-93b7-24ebce87e243`된 `TodoItem`를 삭제 하기 위해 클라이언트는 `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`에 삭제 요청을 보냅니다. 예제 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 [데이터 모델링](~/xamarin-forms/data-cloud/web-services/introduction.md)을 참조 하세요.
+대부분의 Uri는 `TodoItem` 경로에 ID를 포함 합니다. 예를 들어 ID가 인를 삭제 하기 위해 `TodoItem` `6bb8a868-dba1-4f1a-93b7-24ebce87e243` 클라이언트는에 삭제 요청을 보냅니다 `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243` . 예제 응용 프로그램에서 사용 되는 데이터 모델에 대 한 자세한 내용은 [데이터 모델링](~/xamarin-forms/data-cloud/web-services/introduction.md)을 참조 하세요.
 
-웹 API 프레임 워크에서 요청을 받으면 요청을 작업으로 라우팅합니다. 이러한 작업은 단순히 `TodoItemsController` 클래스의 공용 메서드입니다. 프레임 워크는 라우팅 테이블을 사용 하 여 요청에 대 한 응답으로 호출할 작업을 결정 합니다 .이 작업은 다음 코드 예제에 나와 있습니다.
+웹 API 프레임 워크에서 요청을 받으면 요청을 작업으로 라우팅합니다. 이러한 작업은 단순히 클래스의 public 메서드 `TodoItemsController` 입니다. 프레임 워크는 라우팅 테이블을 사용 하 여 요청에 대 한 응답으로 호출할 작업을 결정 합니다 .이 작업은 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 config.Routes.MapHttpRoute(
@@ -78,13 +81,13 @@ config.Routes.MapHttpRoute(
 
 REST 서비스는 기본 인증을 사용 합니다. 자세한 내용은 [RESTful 웹 서비스 인증을](~/xamarin-forms/data-cloud/authentication/rest.md)참조 하세요. ASP.NET Web API 라우팅에 대 한 자세한 내용은 ASP.NET 웹 사이트의 [ASP.NET Web API 라우팅](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) 을 참조 하세요. ASP.NET Core를 사용 하 여 REST 서비스를 빌드하는 방법에 대 한 자세한 내용은 [네이티브 모바일 응용 프로그램을 위한 백 엔드 서비스 만들기](/aspnet/core/mobile/native-mobile-backend/)를 참조 하세요.
 
-`HttpClient` 클래스는 HTTP를 통해 요청을 보내고 받는 데 사용 됩니다. URI 식별 리소스에서 http 요청을 보내고 HTTP 응답을 받기 위한 기능을 제공 합니다. 각 요청은 비동기 작업으로 전송 됩니다. 비동기 작업에 대 한 자세한 내용은 [Async 지원 개요](~/cross-platform/platform/async.md)를 참조 하세요.
+`HttpClient`클래스는 HTTP를 통해 요청을 보내고 받는 데 사용 됩니다. URI 식별 리소스에서 http 요청을 보내고 HTTP 응답을 받기 위한 기능을 제공 합니다. 각 요청은 비동기 작업으로 전송 됩니다. 비동기 작업에 대 한 자세한 내용은 [Async 지원 개요](~/cross-platform/platform/async.md)를 참조 하세요.
 
-`HttpResponseMessage` 클래스는 HTTP 요청을 만든 후 웹 서비스에서 받은 HTTP 응답 메시지를 나타냅니다. 상태 코드, 헤더 및 모든 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. 데이터의 형식에 따라 `ReadAsStringAsync` 및 `ReadAsByteArrayAsync`와 같은 `ReadAs` 방법 중 하나를 사용 하 여 콘텐츠를 읽을 수 있습니다.
+`HttpResponseMessage`클래스는 http 요청을 만든 후 웹 서비스에서 받은 http 응답 메시지를 나타냅니다. 상태 코드, 헤더 및 모든 본문을 포함 하 여 응답에 대 한 정보를 포함 합니다. 합니다 `HttpContent` 클래스를 나타내는 HTTP 본문 및 콘텐츠 헤더와 같은 `Content-Type` 고 `Content-Encoding`입니다. `ReadAs` `ReadAsStringAsync` 데이터의 형식에 따라 및와 같은 메서드를 사용 하 여 콘텐츠를 읽을 수 있습니다 `ReadAsByteArrayAsync` .
 
 ### <a name="creating-the-httpclient-object"></a>HTTPClient 개체 만들기
 
-다음 코드 예제에 표시 된 것 처럼 응용 프로그램에서 HTTP 요청을 수행 해야 하는 한, 개체는 클래스 수준에서 선언 됩니다. `HttpClient`
+`HttpClient`인스턴스는 다음 코드 예제와 같이 응용 프로그램에서 HTTP 요청을 수행 해야 하는 경우에만 개체를 사용할 수 있도록 클래스 수준에서 선언 됩니다.
 
 ```csharp
 public class RestService : IRestService
@@ -102,7 +105,7 @@ public class RestService : IRestService
 
 ### <a name="retrieving-data"></a>데이터 검색
 
-`HttpClient.GetAsync` 메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 GET 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
+`HttpClient.GetAsync`메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 GET 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
 
 ```csharp
 public async Task<List<TodoItem>> RefreshDataAsync ()
@@ -120,13 +123,13 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 }
 ```
 
-REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponseMessage.IsSuccessStatusCode` 속성에서 HTTP 상태 코드를 보냅니다. 이 작업의 경우 REST 서비스는 응답에 HTTP 상태 코드 200 (OK)를 보냅니다 .이는 요청이 성공 했 고 요청 된 정보가 응답에 있음을 나타냅니다.
+REST 서비스는 `HttpResponseMessage.IsSuccessStatusCode` http 요청 성공 또는 실패 여부를 나타내는 http 상태 코드를 속성에 보냅니다. 이 작업의 경우 REST 서비스는 응답에 HTTP 상태 코드 200 (OK)를 보냅니다 .이는 요청이 성공 했 고 요청 된 정보가 응답에 있음을 나타냅니다.
 
-HTTP 작업에 성공 하면 응답 콘텐츠를 표시 하기 위해 읽습니다. `HttpResponseMessage.Content` 속성은 HTTP 응답의 콘텐츠를 나타내며 `HttpContent.ReadAsStringAsync` 메서드는 HTTP 콘텐츠를 문자열로 비동기적으로 씁니다. 그런 다음이 콘텐츠는 JSON에서 `TodoItem` 인스턴스의 `List`으로 변환 됩니다.
+HTTP 작업에 성공 하면 응답 콘텐츠를 표시 하기 위해 읽습니다. `HttpResponseMessage.Content`속성은 http 응답의 내용을 나타내고 `HttpContent.ReadAsStringAsync` 메서드는 http 콘텐츠를 문자열에 비동기적으로 씁니다. 그런 다음이 콘텐츠는 JSON에서 인스턴스의로 변환 됩니다 `List` `TodoItem` .
 
 ### <a name="creating-data"></a>데이터 만들기
 
-`HttpClient.PostAsync` 메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 POST 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
+`HttpClient.PostAsync`메서드는 다음 코드 예제에 표시 된 것 처럼 URI로 지정 된 웹 서비스에 POST 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
 
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
@@ -153,9 +156,9 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-`TodoItem` 인스턴스는 웹 서비스로 보내기 위해 JSON 페이로드로 변환 됩니다. 그런 다음 `PostAsync` 메서드를 사용 하 여 요청 하기 전에 웹 서비스로 전송 되는 HTTP 콘텐츠의 본문에이 페이로드를 포함 합니다.
+`TodoItem`인스턴스는 웹 서비스로 보내기 위해 JSON 페이로드로 변환 됩니다. 그런 다음 메서드를 사용 하 여 요청을 수행 하기 전에 웹 서비스로 전송 되는 HTTP 콘텐츠의 본문에이 페이로드를 포함 `PostAsync` 합니다.
 
-REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponseMessage.IsSuccessStatusCode` 속성에서 HTTP 상태 코드를 보냅니다. 이 작업에 대 한 일반적인 응답은 다음과 같습니다.
+REST 서비스는 `HttpResponseMessage.IsSuccessStatusCode` http 요청 성공 또는 실패 여부를 나타내는 http 상태 코드를 속성에 보냅니다. 이 작업에 대 한 일반적인 응답은 다음과 같습니다.
 
 - **201 (만듦)** – 응답이 전송 되기 전에 새 리소스가 생성 된 요청입니다.
 - **400 (잘못 된 요청)** -서버에서 요청을 인식할 수 없습니다.
@@ -163,7 +166,7 @@ REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponse
 
 ### <a name="updating-data"></a>데이터 업데이트
 
-`HttpClient.PutAsync` 메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 PUT 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
+`HttpClient.PutAsync`메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 PUT 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
 
 ```csharp
 public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
@@ -174,9 +177,9 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
 }
 ```
 
-`PutAsync` 메서드의 작업은 웹 서비스에서 데이터를 만드는 데 사용 되는 `PostAsync` 메서드와 동일 합니다. 그러나 웹 서비스에서 전송 되는 가능한 응답은 서로 다릅니다.
+메서드의 작업은 `PutAsync` `PostAsync` 웹 서비스에서 데이터를 만드는 데 사용 되는 메서드와 동일 합니다. 그러나 웹 서비스에서 전송 되는 가능한 응답은 서로 다릅니다.
 
-REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponseMessage.IsSuccessStatusCode` 속성에서 HTTP 상태 코드를 보냅니다. 이 작업에 대 한 일반적인 응답은 다음과 같습니다.
+REST 서비스는 `HttpResponseMessage.IsSuccessStatusCode` http 요청 성공 또는 실패 여부를 나타내는 http 상태 코드를 속성에 보냅니다. 이 작업에 대 한 일반적인 응답은 다음과 같습니다.
 
 - **204 (콘텐츠 없음)** – 요청이 성공적으로 처리 되 고 응답은 의도적으로 비어 있습니다.
 - **400 (잘못 된 요청)** -서버에서 요청을 인식할 수 없습니다.
@@ -184,7 +187,7 @@ REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponse
 
 ### <a name="deleting-data"></a>데이터 삭제
 
-`HttpClient.DeleteAsync` 메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 삭제 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
+`HttpClient.DeleteAsync`메서드는 다음 코드 예제와 같이 URI로 지정 된 웹 서비스에 삭제 요청을 보낸 다음 웹 서비스에서 응답을 수신 하는 데 사용 됩니다.
 
 ```csharp
 public async Task DeleteTodoItemAsync (string id)
@@ -200,7 +203,7 @@ public async Task DeleteTodoItemAsync (string id)
 }
 ```
 
-REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponseMessage.IsSuccessStatusCode` 속성에서 HTTP 상태 코드를 보냅니다. 이 작업에 대 한 일반적인 응답은 다음과 같습니다.
+REST 서비스는 `HttpResponseMessage.IsSuccessStatusCode` http 요청 성공 또는 실패 여부를 나타내는 http 상태 코드를 속성에 보냅니다. 이 작업에 대 한 일반적인 응답은 다음과 같습니다.
 
 - **204 (콘텐츠 없음)** – 요청이 성공적으로 처리 되 고 응답은 의도적으로 비어 있습니다.
 - **400 (잘못 된 요청)** -서버에서 요청을 인식할 수 없습니다.
@@ -208,6 +211,6 @@ REST 서비스는 http 요청 성공 여부를 나타내기 위해 `HttpResponse
 
 ## <a name="related-links"></a>관련 링크
 
-- [네이티브 모바일 애플리케이션에 대한 백 엔드 서비스 만들기](/aspnet/core/mobile/native-mobile-backend/)
+- [네이티브 모바일 응용 프로그램에 대 한 백 엔드 서비스 만들기](/aspnet/core/mobile/native-mobile-backend/)
 - [TodoREST(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

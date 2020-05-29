@@ -1,26 +1,29 @@
 ---
-title: 테마 a Xamarin.ios 응용 프로그램
-description: 테마는 각 테마에 대 한 ResourceDictionary를 만든 다음 DynamicResource 태그 확장을 사용 하 여 리소스를 로드 하 여 Xamarin.ios 응용 프로그램에서 구현할 수 있습니다.
-ms.prod: xamarin
-ms.assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2019
-ms.openlocfilehash: 2f751549bdbd54b920a99b04d0068ab726600336
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.Forms응용 프로그램 테마
+description: Xamarin.Forms각 테마에 대해 ResourceDictionary를 만든 다음 DynamicResource 태그 확장을 사용 하 여 리소스를 로드 하 여 응용 프로그램에서 테마를 구현할 수 있습니다.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425802"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138205"
 ---
-# <a name="theme-a-xamarinforms-application"></a>테마 a Xamarin.ios 응용 프로그램
+# <a name="theme-a-xamarinforms-application"></a>Xamarin.Forms응용 프로그램 테마
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
-Xamarin Forms 응용 프로그램은 태그 확장을 사용 하 여 런타임에 동적으로 스타일 변경에 응답할 수 있습니다 `DynamicResource` . 이 태그 확장은 `StaticResource` 둘 다 사전 키를 사용 하 여에서 값을 인출 한다는 점에서 태그 확장과 비슷합니다 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . 그러나 `StaticResource` 태그 확장은 단일 사전 조회를 수행 하지만 `DynamicResource` 태그 확장은 사전 키에 대 한 링크를 유지 관리 합니다. 따라서 키와 연결 된 값이 대체 되 면 변경 내용이에 적용 됩니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) . 그러면 Xamarin.ios 응용 프로그램에서 런타임 테마를 구현할 수 있습니다.
+Xamarin.Forms응용 프로그램은 태그 확장을 사용 하 여 런타임에 동적으로 스타일 변경에 응답할 수 있습니다 `DynamicResource` . 이 태그 확장은 `StaticResource` 둘 다 사전 키를 사용 하 여에서 값을 인출 한다는 점에서 태그 확장과 비슷합니다 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . 그러나 `StaticResource` 태그 확장은 단일 사전 조회를 수행 하지만 `DynamicResource` 태그 확장은 사전 키에 대 한 링크를 유지 관리 합니다. 따라서 키와 연결 된 값이 대체 되 면 변경 내용이에 적용 됩니다 [`VisualElement`](xref:Xamarin.Forms.VisualElement) . 그러면 응용 프로그램에서 런타임 테마를 구현할 수 있습니다 Xamarin.Forms .
 
-Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로세스는 다음과 같습니다.
+응용 프로그램에서 런타임 테마를 구현 하는 프로세스는 다음과 같습니다 Xamarin.Forms .
 
 1. 에서 각 테마에 대 한 리소스를 정의 [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) 합니다.
 1. 태그 확장을 사용 하 여 응용 프로그램에서 테마 리소스를 사용 `DynamicResource` 합니다.
@@ -182,7 +185,7 @@ Xamarin.ios 응용 프로그램에서 런타임 테마를 구현 하는 프로�
 
 테마 리소스를 직접 사용 하는 경우 태그 확장과 함께 사용 해야 합니다 `DynamicResource` . 그러나 태그 확장을 사용 하는 스타일을 사용 하는 경우 `DynamicResource` 태그 확장과 함께 사용 해야 합니다 `StaticResource` .
 
-스타일 지정에 대 한 자세한 내용은 [XAML 스타일을 사용 하 여 Xamarin.ios 앱 스타일](~/xamarin-forms/user-interface/styles/xaml/index.md)지정을 참조 하세요. 태그 확장에 대 한 자세한 내용은 `DynamicResource` [Xamarin.ios의 동적 스타일](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)을 참조 하세요.
+스타일 지정에 대 한 자세한 내용은 [ Xamarin.Forms XAML 스타일을 사용 하 여 앱 스타일](~/xamarin-forms/user-interface/styles/xaml/index.md)지정을 참조 하세요. 태그 확장에 대 한 자세한 내용은 `DynamicResource` [의 Xamarin.Forms 동적 스타일 ](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)을 참조 하십시오.
 
 ## <a name="load-a-theme-at-runtime"></a>런타임에 테마 로드
 
@@ -225,5 +228,5 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 - [테마 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [시스템 테마 변경에 응답](system-theme-changes.md)
 - [리소스 사전](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Xamarin.ios의 동적 스타일](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [의 동적 스타일Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Xamarin.FormsXAML 스타일을 사용 하 여 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)

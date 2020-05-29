@@ -1,74 +1,77 @@
 ---
-title: SkiaSharp 비트맵 파일을 저장 하는 중
-description: 사용자의 사진 라이브러리에 비트맵을 저장 하기 위한 SkiaSharp에서 지 원하는 다양 한 파일 형식을 살펴봅니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: 2431c19ceac08db8cb9fef3834695514e714f68f
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228032"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138660"
 ---
-# <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵 파일을 저장 하는 중
+# <a name="saving-skiasharp-bitmaps-to-files"></a>SkiaSharp 비트맵을 파일에 저장
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-SkiaSharp 응용 프로그램을 만들거나 수정 비트맵에, 후 응용 프로그램 사용자의 사진 라이브러리에 비트맵 저장 할 수 있습니다.
+SkiaSharp 응용 프로그램에서 비트맵을 만들거나 수정한 후에는 응용 프로그램에서 사용자의 사진 라이브러리에 비트맵을 저장 하려고 할 수 있습니다.
 
 ![비트맵 저장](saving-images/SavingSample.png "비트맵 저장")
 
-이 작업은 두 단계:
+이 작업에는 두 단계가 포함 됩니다.
 
-- SkiaSharp 비트맵 JPEG 또는 PNG와 같은 특정 파일 형식으로 데이터를에서 변환 합니다.
-- 플랫폼별 코드를 사용 하 여 사진 라이브러리에 결과 저장 합니다.
+- SkiaSharp 비트맵을 JPEG 또는 PNG와 같은 특정 파일 형식의 데이터로 변환 합니다.
+- 플랫폼별 코드를 사용 하 여 사진 라이브러리에 결과를 저장 합니다.
 
 ## <a name="file-formats-and-codecs"></a>파일 형식 및 코덱
 
-대부분 오늘날 인기 있는 비트맵 파일의 저장소 공간을 줄이기 위해 사용 하 여 압축 형식을 지정 합니다. 두 가지 범주의 압축 기술 이라고 _손실_ 하 고 _무손실_합니다. 이러한 용어는 압축 알고리즘을 데이터 손실에서 발생 여부를 나타냅니다.
+최신의 인기 있는 비트맵 파일 형식은 압축을 사용 하 여 저장소 공간을 줄입니다. 압축 기술 중 두 가지 광범위 한 범주를 _손실_ 및 _무손실_이라고 합니다. 이러한 용어는 압축 알고리즘으로 인해 데이터가 손실 될 수 있는지 여부를 나타냅니다.
 
-가장 인기 있는 손실 Joint Photographic Experts Group에서 개발한 형식과 JPEG 라고 합니다. JPEG 압축 알고리즘 이라고 하는 수학 도구를 사용 하 여 이미지를 분석 하는 _불연속 코사인 변환_, 이미지의 시각적 품질을 유지 하는 데 중요 하지 않은 데이터를 제거 하려고 합니다. 일반적으로 라고 하는 설정을 사용 하 여 압축 수준을 제어할 수 있습니다 _품질_합니다. 더 높은 품질 설정으로 인해 더 큰 파일입니다.
+가장 인기 있는 손실 형식은 공동 사진 전문가 그룹에 의해 개발 되었으며이를 JPEG 라고 합니다. JPEG 압축 알고리즘은 _불연속 코사인 변환_이라는 수학 도구를 사용 하 여 이미지를 분석 하 고 이미지의 시각적 충실도를 유지 하기 위해 중요 하지 않은 데이터를 제거 하려고 합니다. 압축 수준은 일반적으로 _품질_이라고 하는 설정을 사용 하 여 제어할 수 있습니다. 품질 설정이 높으면 파일이 커집니다.
 
-반면, 손실 없는 압축 알고리즘을 반복 하 고 픽셀 데이터를 줄이지만의 모든 정보가 손실 되지 않습니다 하는 방식으로 인코딩할 수 있는 패턴에 대 한 이미지를 분석 합니다. 원래 비트맵 데이터를 압축된 파일에서 복원할 수 있습니다. 주 손실 없는 압축 된 파일 형식을 사용 하 여 PNG 이동식 네트워크 그래픽 () 임.
+이와 대조적으로 무손실 압축 알고리즘은 데이터를 줄이는 방식으로 인코딩할 수 있지만 정보의 손실을 초래 하지 않는 반복 및 픽셀 패턴에 대 한 이미지를 분석 합니다. 원래 비트맵 데이터는 압축 된 파일에서 완전히 복원할 수 있습니다. 현재 사용 중인 기본 무손실 압축 파일 형식은 PNG (이동식 네트워크 그래픽)입니다.
 
-일반적으로 알고리즘 방식으로 또는 수동으로 생성 된 이미지에 대 한 PNG 사용 하는 동안 JPEG 사진에 사용 됩니다. 일부 파일의 크기를 줄이는 손실 없는 압축 알고리즘 반드시 다른 크기를 늘려야 합니다. 다행 스럽게도이 증가 크기에만 발생 임의 (또는 임의의) 정보가 많이 포함 된 데이터에 대 한 합니다.
+일반적으로 JPEG는 사진에 사용 되는 반면 PNG는 수동으로 또는 알고리즘 방식으로 생성 된 이미지에 사용 됩니다. 일부 파일의 크기를 줄이는 무손실 압축 알고리즘은 반드시 다른 파일의 크기를 늘려야 합니다. 다행히 이러한 크기 증가는 일반적으로 무작위 또는 무작위 정보를 많이 포함 하는 데이터에 대해서만 발생 합니다.
 
-압축 알고리즘은 두 용어는 보증 하는 복잡 한 압축 및 압축 풀기 프로세스에 설명 합니다.
+압축 알고리즘은 압축 및 압축 풀기 프로세스를 설명 하는 두 가지 용어를 보증 하기에 충분히 복잡 합니다.
 
-- _디코딩_ &mdash; 비트맵 파일 형식을 읽고 압축을 풀어
-- _인코딩할_ &mdash; 비트맵을 압축 하 고 비트맵 파일 형식으로 작성 합니다.
+- _디코드_ &mdash; 비트맵 파일 형식 읽기 및 압축 풀기
+- _인코드_ &mdash; 비트맵 압축 및 비트맵 파일 형식에 쓰기
 
-합니다 [ `SKBitmap` ](xref:SkiaSharp.SKBitmap) 메서드가 여러 개를 포함 하는 클래스 `Decode` 생성 하는 `SKBitmap` 압축 된 원본에서 합니다. 필요한 모든 파일 이름, 스트림 또는 바이트 배열을 제공 하는 것입니다. 디코더는 파일 형식을 결정 하 고 적절 한 내부 디코딩 함수에 전달할 수 있습니다.
+클래스에는 [`SKBitmap`](xref:SkiaSharp.SKBitmap) `Decode` 압축 된 소스에서를 만드는 라는 여러 메서드가 포함 되어 있습니다 `SKBitmap` . 파일 이름, 스트림 또는 바이트 배열을 제공 해야 합니다. 디코더는 파일 형식을 확인 하 고 적절 한 내부 디코딩 함수로 전달할 수 있습니다.
 
-또한 합니다 [ `SKCodec` ](xref:SkiaSharp.SKCodec) 클래스 라는 두 가지 방법에 `Create` 을 만들 수는 `SKCodec` 압축 된 원본에서 개체 및 응용 프로그램이 디코딩 프로세스에서 더 참여 하도록 허용 합니다. (합니다 `SKCodec` 클래스는 문서에 표시 됩니다 [ **SkiaSharp 비트맵 애니메이션** ](animating.md#gif-animation) 애니메이션된 GIF 파일 디코딩와 관련 하 여.)
+또한 [`SKCodec`](xref:SkiaSharp.SKCodec) 클래스에 `Create` 는 압축 된 `SKCodec` 소스에서 개체를 만들고 응용 프로그램에서 디코딩 프로세스에 더 많은 관련 작업을 수행할 수 있도록 하는 라는 두 개의 메서드가 있습니다. `SKCodec`이 클래스는 애니메이션 GIF 파일 디코딩에 [**SkiaSharp 비트맵**](animating.md#gif-animation) 의 연결에 애니메이션 적용 문서에 나와 있습니다.
 
-비트맵을 인코딩할 때 추가 정보가 필요 합니다. 인코더는 응용 프로그램에서 사용 하려는 특정 파일 형식 (JPEG 또는 PNG 또는 기타)을 알고 있어야 합니다. 손실 형식으로 필요한 경우 인코딩 원하는 수준의 품질도 알아야 합니다.
+비트맵을 인코딩할 때 추가 정보가 필요 합니다. 인코더는 응용 프로그램에서 사용 하려는 특정 파일 형식 (JPEG 또는 PNG 또는 기타)을 알고 있어야 합니다. 손실 형식이 필요한 경우 인코딩에도 원하는 품질 수준을 알아야 합니다.
 
-합니다 `SKBitmap` 클래스를 정의 [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) 다음 구문 사용 하 여 메서드:
+`SKBitmap`클래스는 [`Encode`](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) 다음 구문을 사용 하 여 하나의 메서드를 정의 합니다.
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-이 메서드는 곧 자세히 설명 되어 있습니다. 인코드된 비트맵 쓰기 가능한 스트림을에 기록 됩니다. ('W'에서 `SKWStream` "쓰기"는 의미입니다.) 두 번째와 세 번째 인수는 파일 형식을 지정 하 고 (손실 형식)에 대 한 0에서 100 사이의 원하는 품질입니다.
+이 방법은 잠시 자세히 설명 되어 있습니다. 인코딩된 비트맵이 쓰기 가능한 스트림에 기록 됩니다. 의 ' W '는 `SKWStream` "쓰기 가능"을 의미 합니다. 두 번째 및 세 번째 인수는 0에서 100 사이의 원하는 품질의 파일 형식 및 (손실 형식에 대 한)를 지정 합니다.
 
-또한 합니다 [ `SKImage` ](xref:SkiaSharp.SKImage) 및 [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) 클래스를 정의할 수도 `Encode` 방법과 약간 더 나쁠 수 있는 것을 선호할 수 있는 합니다. 쉽게 만들 수 있습니다는 `SKImage` 에서 개체를 `SKBitmap` 사용 하는 정적 개체 [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) 메서드. 가져올 수 있습니다는 `SKPixmap` 에서 개체를 `SKBitmap` 사용 하 여 개체를 [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) 메서드.
+또한 [`SKImage`](xref:SkiaSharp.SKImage) 및 [`SKPixmap`](xref:SkiaSharp.SKPixmap) 클래스는 `Encode` 보다 다양 하 고 원하는 메서드를 정의 합니다. `SKImage` `SKBitmap` 정적 메서드를 사용 하 여 개체에서 개체를 쉽게 만들 수 있습니다 [`SKImage.FromBitmap`](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) . `SKPixmap` `SKBitmap` 메서드를 사용 하 여 개체에서 개체를 가져올 수 있습니다 [`PeekPixels`](xref:SkiaSharp.SKBitmap.PeekPixels) .
 
-중 하나는 [ `Encode` ](xref:SkiaSharp.SKImage.Encode) 정의한 메서드 `SKImage` 매개 변수가 없는 및 PNG 형식으로 자동으로 저장 합니다. 해당 매개 변수가 없는 메서드는 사용 하기가 매우 간편 합니다.
+[`Encode`](xref:SkiaSharp.SKImage.Encode)로 정의 된 메서드 중 하나 `SKImage` 에는 매개 변수가 없으며 PNG 형식에 자동으로 저장 됩니다. 이 매개 변수가 없는 메서드는 매우 쉽게 사용할 수 있습니다.
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>비트맵 파일을 저장 하기 위한 플랫폼 특정 코드
 
-인코딩할 때는 `SKBitmap` 개체로 특정 파일 형식에 일반적으로 됩니다 수 둔 일종의 스트림 개체와 데이터의 배열입니다. 일부를 `Encode` 메서드 (정의한 매개 변수가 없는 것을 포함 하 여 `SKImage`) 반환을 [ `SKData` ](xref:SkiaSharp.SKData) 를 사용 하 여 바이트 배열로 변환 될 수 있는 개체를 [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) 메서드. 이 데이터 파일에 저장 해야 합니다.
+`SKBitmap`개체를 특정 파일 형식으로 인코딩하면 일반적으로 일부 정렬 또는 데이터 배열에 대 한 스트림 개체를 사용할 수 있습니다. 일부 `Encode` 메서드 (에 의해 정의 된 매개 변수가 없는 메서드 포함 `SKImage` )는 [`SKData`](xref:SkiaSharp.SKData) 메서드를 사용 하 여 바이트 배열로 변환 될 수 있는 개체를 반환 [`ToArray`](xref:SkiaSharp.SKData.ToArray) 합니다. 그런 다음이 데이터를 파일에 저장 해야 합니다.
 
-응용 프로그램 로컬 저장소에서 파일에 저장 하는 표준 사용할 수 있으므로 쉽게 `System.IO` 클래스 및이 태스크에 대 한 메서드. 이 기술 문서에 설명 되어 [ **SkiaSharp 비트맵 애니메이션** ](animating.md#bitmap-animation) 관련 하 여 일련의 비트맵 Mandelbrot 집합의 애니메이션.
+이 작업에 표준 클래스와 메서드를 사용할 수 있기 때문에 응용 프로그램 로컬 저장소의 파일에 저장 하는 작업은 매우 간단 `System.IO` 합니다. 이 기법은 만델브로트 집합의 일련의 비트맵에 애니메이션 효과를 주는 연결 [**SkiaSharp 비트맵에 애니메이션을 적용**](animating.md#bitmap-animation) 하는 문서에 나와 있습니다.
 
-다른 응용 프로그램에서 공유 하도록 파일을 원하는 경우 사용자의 사진 라이브러리에 저장 해야 합니다. 이 작업을 수행 하려면 Xamarin.Forms 사용 하 여 플랫폼 특정 코드 [ `DependencyService` ](xref:Xamarin.Forms.DependencyService)합니다.
+다른 응용 프로그램에서 파일을 공유 하려면 해당 파일을 사용자의 사진 라이브러리에 저장 해야 합니다. 이 작업을 수행 하려면 플랫폼별 코드와를 사용 해야 합니다 Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
 
-**SkiaSharpFormsDemo** 프로젝트를 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램 정의 `IPhotoLibrary` 사용 하는 인터페이스를 `DependencyService` 클래스. 이 구문을 정의 `SavePhotoAsync` 메서드:
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램의 **SkiaSharpFormsDemo** 프로젝트는 `IPhotoLibrary` 클래스와 함께 사용 되는 인터페이스를 정의 합니다 `DependencyService` . 다음은 메서드 구문을 정의 합니다 `SavePhotoAsync` .
 
 ```csharp
 public interface IPhotoLibrary
@@ -79,15 +82,15 @@ public interface IPhotoLibrary
 }
 ```
 
-또한이 인터페이스를 정의 합니다 `PickPhotoAsync` 메서드를 사용 하는 장치의 사진 라이브러리에 대 한 플랫폼별 파일 선택기를 엽니다.
+또한이 인터페이스는 `PickPhotoAsync` 장치 사진 라이브러리의 플랫폼별 파일 선택기를 여는 데 사용 되는 메서드를 정의 합니다.
 
-에 대 한 `SavePhotoAsync`, 첫 번째 인수는 비트맵, JPEG 또는 PNG와 같은 특정 파일 형식으로 인코딩된 이미 포함 하는 바이트 배열입니다. 응용 프로그램에 파일 이름 뒤에 다음 매개 변수에 지정 된 특정 폴더를 만들면 모든 비트맵을 격리 하기를 원하는 가능성이 있습니다. 메서드 또는 성공 여부를 나타내는 부울 값을 반환 합니다.
+의 경우 `SavePhotoAsync` 첫 번째 인수는 JPEG 또는 PNG와 같이 특정 파일 형식으로 이미 인코드된 비트맵을 포함 하는 바이트 배열입니다. 응용 프로그램은 자신이 만든 모든 비트맵을 다음 매개 변수에 지정 된 다음 파일 이름에 지정 된 특정 폴더에 격리할 수 있습니다. 메서드는 성공 여부를 나타내는 부울을 반환 합니다.
 
-다음 섹션에서는 설명 하는 방법을 `SavePhotoAsync` 각 플랫폼에서 구현 됩니다.
+다음 섹션에서는 `SavePhotoAsync` 각 플랫폼에서가 구현 되는 방식에 대해 설명 합니다.
 
 ### <a name="the-ios-implementation"></a>IOS 구현
 
-IOS 구현의 `SavePhotoAsync` 사용 하 여 [ `SaveToPhotosAlbum` ](xref:UIKit.UIImage.SaveToPhotosAlbum*) 메서드의 `UIImage`:
+의 iOS 구현에서는 `SavePhotoAsync` 의 메서드를 사용 합니다 [`SaveToPhotosAlbum`](xref:UIKit.UIImage.SaveToPhotosAlbum*) `UIImage` .
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
@@ -109,16 +112,16 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-아쉽게도 없기 파일 이름 또는 이미지에 대 한 폴더를 지정 합니다.
+그러나 이미지에 대 한 파일 이름 또는 폴더를 지정할 수 있는 방법은 없습니다.
 
-합니다 **Info.plist** iOS 프로젝트의 파일에는 사진 라이브러리에 이미지를 추가한 것입니다 나타내는 키가 필요 합니다.
+IOS 프로젝트의 **info.plist** 파일에는 사진 라이브러리에 이미지를 추가 함을 나타내는 키가 필요 합니다.
 
 ```xml
 <key>NSPhotoLibraryAddUsageDescription</key>
 <string>SkiaSharp Forms Demos adds images to your photo library</string>
 ```
 
-조심하세요! 단순히 사진 라이브러리에 액세스 하기 위한 권한을 키는 매우 유사 하지만 동일 하지는 않습니다.
+조심하세요! 단순히 사진 라이브러리에 액세스 하기 위한 권한 키가 매우 유사 하지만 동일 하지는 않습니다.
 
 ```xml
 <key>NSPhotoLibraryUsageDescription</key>
@@ -127,7 +130,7 @@ public class PhotoLibrary : IPhotoLibrary
 
 ### <a name="the-android-implementation"></a>Android 구현
 
-Android 구현의 `SavePhotoAsync` 있는지 먼저 확인 합니다 `folder` 인수가 `null` 또는 빈 문자열입니다. 그렇다면 비트맵 사진 라이브러리의 루트 디렉터리에 저장 됩니다. 이 고, 그렇지 폴더를 가져오고 존재 하지 않는 경우 만들어집니다.
+의 Android 구현은 `SavePhotoAsync` 먼저 `folder` 인수가 인지 `null` 아니면 빈 문자열 인지를 확인 합니다. 이 경우 비트맵이 사진 라이브러리의 루트 디렉터리에 저장 됩니다. 그렇지 않으면 폴더가 생성 되 고, 존재 하지 않는 경우 생성 됩니다.
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
@@ -171,9 +174,9 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-에 대 한 호출 `MediaScannerConnection.ScanFile` 엄격 하 게 필요 하지 않습니다 하지만 라이브러리 갤러리 보기를 업데이트 하 여 많은 통해 즉시 사진 라이브러리를 확인 하 여 프로그램을 테스트 하는 경우.
+에 대 한 호출은 반드시 `MediaScannerConnection.ScanFile` 필요한 것은 아니지만, 사진 라이브러리를 즉시 확인 하 여 프로그램을 테스트 하는 경우 라이브러리 갤러리 보기를 업데이트 하면 많은 도움이 됩니다.
 
-합니다 **AndroidManifest.xml** 파일에 다음 사용 권한 태그가 필요 합니다.
+**Androidmanifest .xml** 파일에는 다음 사용 권한 태그가 필요 합니다.
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -181,7 +184,7 @@ public class PhotoLibrary : IPhotoLibrary
 
 ### <a name="the-uwp-implementation"></a>UWP 구현
 
-UWP 구현의 `SavePhotoAsync` Android 구현 구조의 매우 유사 합니다.
+의 UWP 구현은 `SavePhotoAsync` Android 구현과 구조가 매우 유사 합니다.
 
 ```csharp
 public class PhotoLibrary : IPhotoLibrary
@@ -235,33 +238,33 @@ public class PhotoLibrary : IPhotoLibrary
 }
 ```
 
-합니다 **기능** 섹션을 **Package.appxmanifest** 파일에 필요한 **사진 라이브러리**합니다.
+**Appxmanifest.xml** 파일의 **기능** 섹션에는 **그림 라이브러리가**필요 합니다.
 
 ## <a name="exploring-the-image-formats"></a>이미지 형식 탐색
 
-다음은 [ `Encode` ](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32)) 메서드의 `SKImage` 다시 합니다.
+[`Encode`](xref:SkiaSharp.SKBitmap.Encode(SkiaSharp.SKWStream,SkiaSharp.SKEncodedImageFormat,System.Int32))의 메서드는 `SKImage` 다음과 같습니다.
 
 ```csharp
 public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality)
 ```
 
-[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat) 일부는 다소 모호한 11 비트맵 파일 형식을 참조 하는 멤버로 구성 된 열거형이 같습니다.
+[`SKEncodedImageFormat`](xref:SkiaSharp.SKEncodedImageFormat)는 11 가지 비트맵 파일 형식을 참조 하는 멤버를 포함 하는 열거형 이며, 그 중 일부는 모호 하지 않습니다.
 
-- `Astc` &mdash; 적응 확장성 있는 질감 압축
-- `Bmp` &mdash; Windows 비트맵
-- `Dng` &mdash; Adobe 디지털 네거티브
-- `Gif` &mdash; Graphics Interchange Format
-- `Ico` &mdash; Windows 아이콘 이미지
-- `Jpeg` &mdash; Joint Photographic Experts Group
-- `Ktx` &mdash; OpenGL Khronos 질감 형식
-- `Pkm` &mdash; Pokémon 파일 저장
-- `Png` &mdash; 이동식 네트워크 그래픽
-- `Wbmp` &mdash; 무선 응용 프로그램 프로토콜 비트맵 형식 (픽셀당 1 비트)
-- `Webp` &mdash; Google WebP 형식
+- `Astc`&mdash;적응 확장 가능한 질감 압축
+- `Bmp`&mdash;Windows 비트맵
+- `Dng`&mdash;Adobe Digital 부정
+- `Gif`&mdash;그래픽 교환 형식
+- `Ico`&mdash;Windows 아이콘 이미지
+- `Jpeg`&mdash;공동 사진 전문가 그룹
+- `Ktx`&mdash;OpenGL의 Khronos 질감 형식
+- `Pkm`&mdash;Pokémon 파일 저장
+- `Png`&mdash;휴대용 네트워크 그래픽
+- `Wbmp`&mdash;무선 응용 프로그램 프로토콜 비트맵 형식 (픽셀당 1 비트)
+- `Webp`&mdash;Google WebP 형식
 
-곧 확인 하겠지만 이러한 3 개만 파일 형식 (`Jpeg`, `Png`, 및 `Webp`) SkiaSharp 실제로 지 합니다.
+곧 표시 되는 것 처럼 이러한 파일 형식 ( `Jpeg` , 및) 중 세 개만 `Png` `Webp` 실제로 SkiaSharp에서 지원 됩니다.
 
-저장 하는 `SKBitmap` 라는 개체 `bitmap` 사용자의 사진 라이브러리도 하려면의 구성원을 `SKEncodedImageFormat` 라는 열거형 `imageFormat` 한 (손실 형식) 정수 `quality` 변수입니다. 다음 코드를 사용 하 여 해당 비트맵 이름 사용 하 여 파일 저장 `filename` 에 `folder` 폴더:
+`SKBitmap`이라는 개체를 `bitmap` 사용자의 사진 라이브러리에 저장 하려면 열거형의 멤버 `SKEncodedImageFormat` `imageFormat` (손실 형식)와 정수 변수를 함께 사용 해야 `quality` 합니다. 다음 코드를 사용 하 여 폴더에 있는 이름의 파일에 비트맵을 저장할 수 있습니다 `filename` `folder` .
 
 ```csharp
 using (MemoryStream memStream = new MemoryStream())
@@ -278,11 +281,11 @@ using (SKManagedWStream wstream = new SKManagedWStream(memStream))
 }
 ```
 
-합니다 `SKManagedWStream` 클래스에서 파생 되며 `SKWStream` (나타내는 "쓰기 가능 스트림"). `Encode` 메서드는 스트림으로 인코딩된 비트맵 파일을 씁니다. 일부 오류 검사를 수행 해야를 해당 코드의 주석을 참조 하십시오.
+`SKManagedWStream`클래스가에서 파생 `SKWStream` 되는 경우 ("쓰기 가능 스트림"을 나타냄) `Encode`메서드는 인코딩된 비트맵 파일을 해당 스트림에 씁니다. 해당 코드의 주석은 수행 해야 할 수 있는 몇 가지 오류 검사를 나타냅니다.
 
-**저장 파일 형식** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램에서 유사한 코드를 사용 하 여 다양 한 형식에서 비트맵을 저장 하는 실험을 수행할 수 있도록 합니다.
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 응용 프로그램의 **파일 형식 저장** 페이지는 비슷한 코드를 사용 하 여 다양 한 형식으로 비트맵을 저장 하는 방법을 시험해 볼 수 있습니다.
 
-XAML 파일에 포함 되어는 `SKCanvasView` 비트맵을 표시 하는, 응용 프로그램을 호출 해야 하지만 페이지의 나머지 부분에 있는 모든 항목을 `Encode` 메서드의 `SKBitmap`합니다. 있기를 `Picker` 의 멤버에 대 한는 `SKEncodedImageFormat` 열거형을 `Slider` 손실 비트맵 형식에 대 한 품질 인수에 대 한 두 `Entry` 파일 이름 및 폴더 이름에 대 한 뷰 및 `Button` 파일을 저장 하는 것에 대 한 합니다.
+XAML 파일에는 비트맵을 표시 하는가 포함 되어 있고 `SKCanvasView` , 페이지의 나머지 부분에는 응용 프로그램에서의 메서드를 호출 하는 데 필요한 모든 것이 포함 되어 있습니다 `Encode` `SKBitmap` . 이 클래스 `Picker` 에는 열거형의 멤버 `SKEncodedImageFormat` , `Slider` 손실 비트맵 형식의 품질 인수에 대 한, `Entry` 파일 이름 및 폴더 이름에 대 한 두 개의 뷰, 파일을 `Button` 저장 하기 위한가 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -369,7 +372,7 @@ XAML 파일에 포함 되어는 `SKCanvasView` 비트맵을 표시 하는, 응�
 </ContentPage>
 ```
 
-비트맵 리소스를 로드 하 고 사용 하는 코드 숨김 파일은 `SKCanvasView` 표시 합니다. 비트맵 변경 되지 않습니다. `SelectedIndexChanged` 에 대 한 처리기를 `Picker` 열거형 멤버와 같은 확장명을 가진 파일을 수정 합니다.
+코드 숨김이 파일은 비트맵 리소스를 로드 하 고를 사용 하 여 `SKCanvasView` 표시 합니다. 이 비트맵은 변경 되지 않습니다. `SelectedIndexChanged`에 대 한 처리기는 `Picker` 열거형 멤버와 동일한 확장명을 사용 하 여 파일 이름을 수정 합니다.
 
 ```csharp
 public partial class SaveFileFormatsPage : ContentPage
@@ -435,45 +438,47 @@ public partial class SaveFileFormatsPage : ContentPage
 }
 ```
 
-합니다 `Clicked` 에 대 한 처리기를 `Button` 모든 실제 작동 합니다. 에 대 한 두 개의 인수를 가져와서 `Encode` 에서 합니다 `Picker` 및 `Slider`, 다음 만들려면 앞서 살펴본 코드를 사용 하 여는 `SKManagedWStream` 에 대 한는 `Encode` 메서드. 두 개의 `Entry` 보기에 대 한 폴더와 파일 이름을 제공 합니다 `SavePhotoAsync` 메서드.
+`Clicked`에 대 한 처리기는 `Button` 모든 실제 작업을 수행 합니다. 및에서에 대 한 두 개의 인수를 가져온 `Encode` `Picker` `Slider` 다음 앞에 표시 된 코드를 사용 하 여 `SKManagedWStream` 메서드에 대 한를 만듭니다 `Encode` . 두 `Entry` 뷰는 메서드에 대 한 폴더 및 파일 이름을 제공할 것 `SavePhotoAsync` 입니다.
 
-이 메서드는 대부분 할애 되는데 문제 또는 오류를 처리 합니다. 경우 `Encode` 빈 배열을 만듭니다. 즉, 특정 파일 형식은 지원 되지 않습니다. 하는 경우 `SavePhotoAsync` 반환 `false`, 다음 파일을 성공적으로 저장 되지 않았습니다.
+이 방법의 대부분은 문제 또는 오류 처리를 위한 것입니다. 가 `Encode` 빈 배열을 만드는 경우 특정 파일 형식이 지원 되지 않음을 의미 합니다. `SavePhotoAsync` `false` 가를 반환 하면 파일이 성공적으로 저장 되지 않은 것입니다.
 
-실행 중인 프로그램이 다음과 같습니다.
+실행 되는 프로그램은 다음과 같습니다.
 
 [![파일 형식 저장](saving-images/SaveFileFormats.png "파일 형식 저장")](saving-images/SaveFileFormats-Large.png#lightbox)
 
-스크린샷에 이러한 플랫폼에서 지원 되는 세 개의 형식을 보여 줍니다.
+이 스크린샷에서는 이러한 플랫폼에서 지원 되는 다음 세 가지 형식만 보여 줍니다.
 
 - JPEG
 - PNG
 - WebP
 
-다른 모든 형식에 대해는 `Encode` 메서드 nothing 스트림에 쓰고 결과 바이트 배열이 비어 있는 것입니다.
+다른 모든 형식의 경우 `Encode` 메서드는 아무것도 스트림에 쓰지 않고 결과 바이트 배열이 비어 있습니다.
 
-비트맵은를 **파일 형식은 저장** 페이지 저장은 600 픽셀 사각형이 됩니다. 픽셀당 4 바이트를 사용 하 여 총 메모리에 1,440,000 바이트입니다. 다음 표에서 파일 형식 및 품질의 다양 한 조합에 대 한 파일 크기를 보여 줍니다.
+**파일 형식 저장** 페이지에서 저장 하는 비트맵은 600 픽셀 사각형입니다. 픽셀당 4 바이트를 사용 하 여 메모리에서 총 144만 바이트입니다. 다음 표에서는 다양 한 파일 형식 및 품질 조합의 파일 크기를 보여 줍니다.
 
-|형식|품질|크기|
-|------|------:|---:|
-| PNG | N/A | 492 K |
-| JPEG | 0 | 2.95 K |
-|      | 50 | 22.1 K |
-|      | 100 | 206 K |
-| WebP | 0 | 2.71 K |
-|      | 50 | 11.9 K |
-|      | 100 | 101 K |
+|서식|품질|Size|
+|---
+제목: 설명: ms. prod: ms. 기술: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-다양 한 품질 설정으로 실험 하는 결과 검토할 수 있습니다.
+---|---제목: 설명: ms. prod: assetid: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
 
-## <a name="saving-finger-paint-art"></a>저장 finger-paint 아트
+---:|---:| | PNG | 해당 없음 | 492K | | JPEG | 0 | 2.95 k | |      | 50 | 22.1 k | |      | 100 | 206K | | WebP | 0 | 2.71 k | |      | 50 | 11.9 k | |      | 100 | 101K |
 
-비트맵의 일반적 용도 중 하나는 그리기 프로그램 라는 대로 작동 하는지는 _섀도 비트맵_합니다. 모든 그리기 프로그램에 의해 표시 되는 비트맵에 유지 됩니다. 비트맵도 유용 그리기를 저장 합니다.
+다양 한 품질 설정으로 실험 하 고 결과를 검토할 수 있습니다.
 
-합니다 [ **SkiaSharp에서 손가락 페인팅** ](../paths/finger-paint.md) 문서 추적 기본 손가락 프로그램 구현에서 터치를 사용 하는 방법을 설명 합니다. 하나의 색 및 하나의 스트로크 너비 프로그램 지원 되지만 컬렉션의 전체 그리기 유지 `SKPath` 개체입니다.
+## <a name="saving-finger-paint-art"></a>손가락 저장-그리기 아트
 
-합니다 **손가락으로 그리기와 저장** 페이지에 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플은 또한 컬렉션의 전체 그리기 유지 `SKPath` 개체 하지만 또한 사진 라이브러리에 저장할 수 있는 비트맵에 드로잉을 렌더링 합니다.
+비트맵의 일반적인 용도 중 하나는 프로그램 그리기에서 _그림자 비트맵_이라고 하는 것입니다. 모든 그리기는 비트맵에 유지 되며이는 프로그램에 의해 표시 됩니다. 비트맵은 그리기를 저장 하는 데에도 유용 합니다.
 
-이 프로그램의 대부분은 원래 비슷합니다 **손가락으로 그리기** 프로그램입니다. 개선 사항 중 하나는 XAML 파일에 이제 라는 레이블이 있는 단추가 인스턴스화합니다 **명확한** 하 고 **저장**:
+[**SkiaSharp에서 손가락 그리기**](../paths/finger-paint.md) 문서는 터치 추적을 사용 하 여 기본 손가락 그리기 프로그램을 구현 하는 방법을 보여 주었습니다. 프로그램은 한 가지 색과 하나의 스트로크 너비만 지원 하지만 개체의 컬렉션에 전체 그리기를 유지 합니다 `SKPath` .
+
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 샘플의 **저장을 사용 하 여 손가락으로** 그리기는 개체의 컬렉션에도 전체 그리기를 유지 `SKPath` 하지만 비트맵에서 그리기를 렌더링 하 여 사진 라이브러리에 저장할 수 있습니다.
+
+이 프로그램의 대부분은 원래 **손가락 그리기** 프로그램과 유사 합니다. 한 가지 향상 된 기능은 이제 XAML 파일이 **Clear** 및 **Save**라는 레이블이 지정 된 단추를 인스턴스화하는 것입니다.
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -516,7 +521,7 @@ public partial class SaveFileFormatsPage : ContentPage
 </ContentPage>
 ```
 
-코드 숨김 파일 형식의 필드를 유지 `SKBitmap` 라는 `saveBitmap`합니다. 이 비트맵을 생성 또는 다시는 `PaintSurface` 디스플레이의 크기를 화면 변경 될 때마다 처리기입니다. 비트맵을 만들어야 하는 경우 모든 화면 크기에서 변경 하는 방법에 관계 없이 유지 됩니다 있도록 기존 비트맵 이미지의 내용은 새 비트맵에 복사 됩니다.
+코드 숨김이 파일은 라는 형식의 필드를 유지 관리 `SKBitmap` 합니다 `saveBitmap` . 이 비트맵은 `PaintSurface` 디스플레이 표면의 크기가 변경 될 때마다 처리기에서 만들어지거나 다시 만들어집니다. 비트맵을 다시 만들어야 하는 경우 표시 표면의 크기가 변경 되는 방식에 관계 없이 모든 항목이 유지 되도록 기존 비트맵의 내용이 새 비트맵으로 복사 됩니다.
 
 ```csharp
 public partial class FingerPaintSavePage : ContentPage
@@ -563,9 +568,9 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-수행한 그리기를 `PaintSurface` 처리기 맨 끝에서 발생 하 고 으로만 이루어져 비트맵을 렌더링 합니다.
+처리기에서 수행 하는 그리기는 `PaintSurface` 매우 끝에서 발생 하며 비트맵 렌더링 으로만 구성 됩니다.
 
-터치를 처리 하는 이전 프로그램와 비슷합니다. 프로그램에는 두 개의 컬렉션 유지 관리 `inProgressPaths` 및 `completedPaths`를 포함 하는 모든 표시의 선택이 취소 된 마지막 시간 이후 사용자가 그린 합니다. 각 터치 이벤트에 대 한 합니다 `OnTouchEffectAction` 처리기 호출 `UpdateBitmap`:
+터치 처리는 이전 프로그램과 유사 합니다. 프로그램은를 `inProgressPaths` 마지막으로 표시 한 `completedPaths` 후 사용자가 그린 모든 항목을 포함 하는 두 개의 컬렉션 및를 유지 관리 합니다. 각 터치 이벤트에 대해 `OnTouchEffectAction` 처리기는 다음을 호출 합니다 `UpdateBitmap` .
 
 ```csharp
 public partial class FingerPaintSavePage : ContentPage
@@ -653,9 +658,9 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-합니다 `UpdateBitmap` 메서드 다시 그리기 횟수 `saveBitmap` 새 `SKCanvas`를 지운 다음 비트맵의 모든 경로 렌더링 합니다. 무효화 하 여 마지막으로 `canvasView` 디스플레이에서 비트맵을 그릴 수 있도록 합니다.
+`UpdateBitmap` `saveBitmap` 새을 만들고 `SKCanvas` 지운 다음 비트맵의 모든 경로를 렌더링 하 여 메서드를 다시 그립니다. `canvasView`표시에 비트맵을 그릴 수 있도록 무효화로 결론을 마칩니다.
 
-두 개의 단추에 대 한 처리기는 다음과 같습니다. 합니다 **지우기** 단추 두 경로 컬렉션을 업데이트를 지운 `saveBitmap` (결과 비트맵을 선택 취소)을 무효화 하 고는 `SKCanvasView`:
+다음은 두 단추에 대 한 처리기입니다. **지우기** 단추를 클릭 하면 경로 컬렉션, 업데이트 `saveBitmap` (비트맵이 지워집니다)가 모두 지워지고이 무효화 됩니다 `SKCanvasView` .
 
 ```csharp
 public partial class FingerPaintSavePage : ContentPage
@@ -690,19 +695,19 @@ public partial class FingerPaintSavePage : ContentPage
 }
 ```
 
-합니다 **저장** 단추 처리기를 사용 하 여 단순한 [ `Encode` ](xref:SkiaSharp.SKImage.Encode) 메서드에서 `SKImage`합니다. 이 메서드는 PNG 형식으로 인코딩합니다. 합니다 `SKImage` 개체를 기반으로 생성 됩니다 `saveBitmap`, 및 `SKData` 인코딩된 PNG 파일을 포함 하는 개체입니다.
+**저장** 단추 처리기는의 간소화 된 메서드를 사용 합니다 [`Encode`](xref:SkiaSharp.SKImage.Encode) `SKImage` . 이 메서드는 PNG 형식을 사용 하 여 인코딩합니다. `SKImage`개체는을 기반으로 만들어지고 `saveBitmap` `SKData` 개체는 인코딩된 PNG 파일을 포함 합니다.
 
-합니다 `ToArray` 메서드의 `SKData` 바이트의 배열을 가져옵니다. 에 전달 되는이 `SavePhotoAsync` 고정된 폴더 이름 및 현재 날짜 및 시간에서 생성 된 고유한 파일 이름을 함께 메서드.
+`ToArray`의 메서드는 `SKData` 바이트 배열을 가져옵니다. 이는 `SavePhotoAsync` 고정 폴더 이름과 현재 날짜 및 시간으로 생성 된 고유 파일 이름과 함께 메서드에 전달 됩니다.
 
-작업에서 프로그램이 다음과 같습니다.
+실행 중인 프로그램은 다음과 같습니다.
 
-[![저장 그리기 손가락](saving-images/FingerPaintSave.png "저장 그리기 손가락으로")](saving-images/FingerPaintSave-Large.png#lightbox)
+[![손가락 그리기 저장](saving-images/FingerPaintSave.png "손가락 그리기 저장")](saving-images/FingerPaintSave-Large.png#lightbox)
 
-매우 유사한 기술을 합니다 [ **SpinPaint** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) 샘플입니다. 그런 다음 해당 다른 4 개의 사분면에 디자인을 재현 하는 회전 디스크에 그리는 사용자 한다는 손가락 프로그램 이기도 합니다. 디스크로 손가락 그리기 변경의 색이 회전 합니다.
+[**SpinPaint**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-spinpaint) 샘플에서 매우 유사한 기법을 사용 합니다. 또한 손가락 그리기 프로그램은 사용자가 회전 하는 디스크를 페인트 한 후 다른 4 개의 사분면에서 디자인을 재현 한다는 점을 제외 하 고는 손가락 그리기 프로그램입니다. 디스크가 회전 하는 동안 손가락 페인트의 색이 변경 됩니다.
 
-[![그리기를 스핀업](saving-images/SpinPaint.png "그리기를 실행 합니다.")](saving-images/SpinPaint-Large.png#lightbox)
+[![페인트 회전](saving-images/SpinPaint.png "페인트 회전")](saving-images/SpinPaint-Large.png#lightbox)
 
-합니다 **저장** 단추의 `SpinPaint` 와 비슷하지만 **손가락으로 그리기** 고정된 폴더 이름에 해당 이미지를 저장 하는 (**SpainPaint**)에서 생성 된 파일 이름 및 날짜 및 시간입니다.
+클래스의 **저장** 단추는 `SpinPaint` 이미지를 고정 폴더 이름 (**SpainPaint**)에 저장 하 고 날짜 및 시간으로 생성 된 파일 이름을 저장 한다는 점에서 **손가락 그리기** 와 비슷합니다.
 
 ## <a name="related-links"></a>관련 링크
 

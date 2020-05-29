@@ -1,40 +1,43 @@
 ---
-title: ListView 모양
-description: 이 문서에는 머리글, 바닥글, 그룹 및 가변 높이 셀을 사용 하 여 Listview Xamarin.Forms 응용 프로그램에서 사용자 지정 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/13/2018
-ms.openlocfilehash: 90b0e0f3802ce766decb802c9406d72b5966360e
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: 이 문서에서는 Xamarin.Forms 헤더, 바닥글, 그룹 및 가변 높이 셀을 사용 하 여 응용 프로그램에서 listview을 사용자 지정 하는 방법을 설명 합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305650"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139921"
 ---
 # <a name="listview-appearance"></a>ListView 모양
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
 
-Xamarin.ios [`ListView`](xref:Xamarin.Forms.ListView) 를 사용 하 여 목록의 각 행에 대 한 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 인스턴스와 함께 목록의 표시를 사용자 지정할 수 있습니다.
+를 사용 하면 목록의 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) [`ViewCell`](xref:Xamarin.Forms.ViewCell) 각 행에 대 한 인스턴스와 함께 목록의 표시를 사용자 지정할 수 있습니다.
 
-## <a name="grouping"></a>Grouping(그룹화)
+## <a name="grouping"></a>그룹화
 
-연속 스크롤 목록에서 많은 데이터 집합을 표시 하는 것이 어려울 수 있습니다. 사용 하도록 설정 하면 그룹화를 더 잘 콘텐츠를 구성 하 고 데이터 탐색을 쉽게 해 주는 플랫폼 특정 컨트롤을 활성화 하 여 이러한 경우 사용자 환경을 향상 시킬 수 있습니다.
+연속 스크롤 목록에서 많은 데이터 집합을 표시 하는 것이 어려울 수 있습니다. 그룹화를 사용 하면 데이터를 더 쉽게 탐색할 수 있도록 콘텐츠를 구성 하 고 플랫폼별 컨트롤을 활성화 하 여 이러한 경우에서 사용자 환경을 향상 시킬 수 있습니다.
 
-`ListView`에 대해 그룹화가 활성화 되 면 각 그룹에 대해 머리글 행이 추가 됩니다.
+에 대해 그룹화가 활성화 되 면 `ListView` 각 그룹에 대해 머리글 행이 추가 됩니다.
 
-그룹화 수 있도록 합니다.
+그룹화를 사용 하도록 설정 하려면:
 
-- (그룹 목록, 요소의 목록이 되 고 각 그룹) 목록의 목록을 만듭니다.
-- `ListView`의 `ItemsSource`을 해당 목록으로 설정 합니다.
+- 목록 목록 (그룹 목록, 각 그룹이 요소 목록)을 만듭니다.
+- 을 `ListView` `ItemsSource` 해당 목록으로 설정 합니다.
 - `IsGroupingEnabled`를 true로 설정합니다.
-- 그룹의 제목으로 사용 되는 그룹의 속성에 바인딩하려면 [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding) 설정 합니다.
-- 필드 그룹의 짧은 이름으로 사용 되는 그룹의 속성에 바인딩하려면 [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding) 설정 합니다. 점프 목록 (iOS의 오른쪽에 있는 열)에 대 한 짧은 이름을 사용 됩니다.
+- [`GroupDisplayBinding`](xref:Xamarin.Forms.ListView.GroupDisplayBinding)그룹의 제목으로 사용 되는 그룹의 속성에 바인딩하려면 설정 합니다.
+- 필드 [`GroupShortNameBinding`](xref:Xamarin.Forms.ListView.GroupShortNameBinding)그룹의 짧은 이름으로 사용 되는 그룹의 속성에 바인딩하려면 설정 합니다. 짧은 이름은 점프 목록 (iOS의 오른쪽 열)에 사용 됩니다.
 
-그룹에 대 한 클래스를 만들어 시작 합니다.
+먼저 그룹에 대 한 클래스를 만듭니다.
 
 ```csharp
 public class PageTypeGroup : List<PageModel>
@@ -52,9 +55,9 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-위의 코드에서 `All`은 ListView에 바인딩 소스로 제공 되는 목록입니다. `Title` 및 `ShortName`는 그룹 제목에 사용 되는 속성입니다.
+위의 코드에서 `All` 는 ListView에 바인딩 소스로 제공 되는 목록입니다. `Title`및는 `ShortName` 그룹 제목에 사용 되는 속성입니다.
 
-이 단계에서 `All`은 빈 목록입니다. 프로그램 시작 시 채워집니다 있도록 정적 생성자를 추가 합니다.
+이 단계에서 `All` 는 빈 목록입니다. 프로그램이 시작 될 때 목록이 채워지도록 정적 생성자를 추가 합니다.
 
 ```csharp
 static PageTypeGroup()
@@ -77,9 +80,9 @@ static PageTypeGroup()
 }
 ```
 
-위의 코드에서는 `PageTypeGroup`형식의 인스턴스인 `Groups`의 요소에 대해 `Add`를 호출할 수도 있습니다. 이 메서드는 `PageTypeGroup` `List<PageModel>`에서 상속 되기 때문에 가능 합니다.
+위의 코드에서 `Add` 형식의 인스턴스인의 요소에 대해를 호출할 수도 있습니다 `Groups` `PageTypeGroup` . 는에서 상속 되므로이 메서드는 가능 `PageTypeGroup` `List<PageModel>` 합니다.
 
-그룹화 된 목록을 표시 하기 위한 XAML는 다음과 같습니다.
+그룹화 된 목록을 표시 하는 XAML은 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -104,10 +107,10 @@ static PageTypeGroup()
 
 이 XAML은 다음 작업을 수행 합니다.
 
-- `GroupShortNameBinding`를 그룹 클래스에 정의 된 `ShortName` 속성으로 설정 합니다.
-- `GroupDisplayBinding`를 그룹 클래스에 정의 된 `Title` 속성으로 설정 합니다.
-- `IsGroupingEnabled`를 true로 설정 합니다.
-- `ListView`의 `ItemsSource`를 그룹화 된 목록으로 변경 했습니다.
+- `GroupShortNameBinding` `ShortName` 그룹 클래스에 정의 된 속성으로 설정 합니다.
+- `GroupDisplayBinding` `Title` 그룹 클래스에 정의 된 속성으로 설정 합니다.
+- `IsGroupingEnabled`True로 설정
+- 를 `ListView` 그룹화 된 `ItemsSource` 목록으로 변경
 
 다음 스크린샷은 결과 UI를 보여 줍니다.
 
@@ -115,11 +118,11 @@ static PageTypeGroup()
 
 ### <a name="customizing-grouping"></a>그룹화 사용자 지정
 
-목록에서 그룹화를 설정한 경우 그룹 머리글도 사용자 지정할 수 있습니다.
+목록에서 그룹화를 사용 하도록 설정한 경우 그룹 머리글도 사용자 지정할 수 있습니다.
 
-`ListView`에 행 표시 방법을 정의 하는 `ItemTemplate` 있는 방법과 마찬가지로 `ListView`에는 `GroupHeaderTemplate`있습니다.
+`ListView` `ItemTemplate` 행이 표시 되는 방식을 정의 하기 위한가 있는 방법과 마찬가지로에가 있습니다 `ListView` `GroupHeaderTemplate` .
 
-XAML의 그룹 헤더를 사용자 지정의 예는 다음과 같습니다.
+XAML에서 그룹 헤더를 사용자 지정 하는 예제는 다음과 같습니다.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -156,9 +159,9 @@ XAML의 그룹 헤더를 사용자 지정의 예는 다음과 같습니다.
 
 ## <a name="headers-and-footers"></a>머리글 및 바닥글
 
-목록의 요소를 사용 하 여 스크롤 하는 헤더 및 바닥글을 제공 하는 ListView에 대 한 것 같습니다. 머리글 및 바닥글 문자열의 텍스트 또는 더 복잡 한 레이아웃을 수 있습니다. 이 동작은 [섹션 그룹과](#grouping)구분 됩니다.
+ListView가 목록의 요소로 스크롤되는 머리글 및 바닥글을 표시할 수 있습니다. 머리글과 바닥글은 텍스트 문자열 또는 보다 복잡 한 레이아웃 일 수 있습니다. 이 동작은 [섹션 그룹과](#grouping)구분 됩니다.
 
-`Header` 및/또는 `Footer`을 `string` 값으로 설정 하거나 보다 복잡 한 레이아웃으로 설정할 수 있습니다. 또한 데이터 바인딩을 지 원하는 머리글 및 바닥글에 대해 더 복잡 한 레이아웃을 만들 수 있는 `HeaderTemplate` 및 `FooterTemplate` 속성도 있습니다.
+`Header`및/또는를 값으로 설정 `Footer` `string` 하거나 보다 복잡 한 레이아웃으로 설정할 수 있습니다. 또한 `HeaderTemplate` 및 속성을 `FooterTemplate` 사용 하 여 데이터 바인딩을 지 원하는 머리글 및 바닥글에 대해 더 복잡 한 레이아웃을 만들 수 있습니다.
 
 기본 머리글/바닥글을 만들려면 머리글 또는 바닥글 속성을 표시 하려는 텍스트로 설정 하면 됩니다. 코드:
 
@@ -170,7 +173,7 @@ ListView HeaderList = new ListView()
 };
 ```
 
-XAML:
+XAML에서:
 
 ```xaml
 <ListView x:Name="HeaderList" 
@@ -182,7 +185,7 @@ XAML:
 
 ![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
 
-사용자 지정된 헤더 및 바닥글을 만들려면 머리글 및 바닥글 뷰를 정의 합니다.
+사용자 지정 된 머리글 및 바닥글을 만들려면 머리글 및 바닥글 뷰를 정의 합니다.
 
 ```xaml
 <ListView.Header>
@@ -203,22 +206,22 @@ XAML:
 
 ![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
 
-## <a name="scrollbar-visibility"></a>스크롤 막대 표시 유형
+## <a name="scrollbar-visibility"></a>스크롤 표시 유형
 
-[`ListView`](xref:Xamarin.Forms.ListView) 클래스에는 가로 또는 세로 스크롤 막대가 표시 될 때를 나타내는 [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) 값을 가져오거나 설정 하는 `HorizontalScrollBarVisibility` 및 `VerticalScrollBarVisibility` 속성이 있습니다. 두 속성은 모두 다음 값으로 설정할 수 있습니다.
+[`ListView`](xref:Xamarin.Forms.ListView)클래스에는 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) 가로 또는 세로 스크롤 막대가 표시 될 때를 나타내는 값을 가져오거나 설정 하는 및 속성이 있습니다. 두 속성은 모두 다음 값으로 설정할 수 있습니다.
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) 는 플랫폼에 대 한 기본 스크롤 막대 동작을 나타내며 `HorizontalScrollBarVisibility` 및 `VerticalScrollBarVisibility` 속성의 기본값입니다.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) 콘텐츠가 보기에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) 은 콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)플랫폼의 기본 스크롤 막대 동작을 나타내며 및 속성의 기본값입니다 `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` .
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)뷰가 뷰에 맞는 경우에도 스크롤 막대가 표시 됨을 나타냅니다.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)콘텐츠가 뷰에 맞지 않는 경우에도 스크롤 막대가 표시 되지 않음을 나타냅니다.
 
 ## <a name="row-separators"></a>행 구분 기호
 
-기본적으로 iOS 및 Android에서 `ListView` 요소 사이에 구분 기호가 표시 됩니다. IOS 및 Android에서 구분선을 숨기려는 경우 ListView에서 `SeparatorVisibility` 속성을 설정 합니다. `SeparatorVisibility`에 대 한 옵션은 다음과 같습니다.
+`ListView`기본적으로 iOS 및 Android의 요소 사이에 구분 기호가 표시 됩니다. IOS 및 Android에서 구분선을 숨기려는 경우 `SeparatorVisibility` ListView에서 속성을 설정 합니다. 의 옵션은 `SeparatorVisibility` 다음과 같습니다.
 
 - **기본값** -IOS 및 Android의 구분선을 표시 합니다.
 - **없음** -모든 플랫폼에서 구분 기호를 숨깁니다.
 
-기본 표시:
+기본 표시 유형:
 
 C#:
 
@@ -226,7 +229,7 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.Default;
 ```
 
-XAML:
+PAGE.XAML
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
@@ -242,7 +245,7 @@ C#:
 SeparatorDemoListView.SeparatorVisibility = SeparatorVisibility.None;
 ```
 
-XAML:
+PAGE.XAML
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
@@ -250,7 +253,7 @@ XAML:
 
 ![](customizing-list-appearance-images/separator-none.png "ListView without Row Separators")
 
-`SeparatorColor` 속성을 통해 구분 기호 선의 색을 설정할 수도 있습니다.
+속성을 통해 구분 기호 선의 색을 설정할 수도 있습니다 `SeparatorColor` .
 
 C#:
 
@@ -258,7 +261,7 @@ C#:
 SeparatorDemoListView.SeparatorColor = Color.Green;
 ```
 
-XAML:
+PAGE.XAML
 
 ```xaml
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
@@ -267,16 +270,16 @@ XAML:
 ![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
 
 > [!NOTE]
-> `ListView`를 로드 한 후 Android에서 이러한 속성 중 하나를 설정 하면 성능이 크게 저하 됩니다.
+> 을 로드 한 후 Android에서 이러한 속성 중 하나 `ListView` 를 설정 하면 성능이 크게 저하 됩니다.
 
 ## <a name="row-height"></a>행 높이
 
-모든 행을 ListView에서 기본적으로 같은 높이 갖습니다. ListView에 해당 동작을 변경 하려면 사용할 수 있는 두 가지 속성이 있습니다.
+ListView의 모든 행은 기본적으로 높이가 같습니다. ListView에는 해당 동작을 변경 하는 데 사용할 수 있는 두 가지 속성이 있습니다.
 
-- /`false` 값을 `true`&ndash; `HasUnevenRows` `true`로 설정 된 경우 행의 높이가 달라질 수 있습니다. 기본값은 `false`입니다.
-- `RowHeight` &ndash; `HasUnevenRows` `false`될 때 각 행의 높이를 설정 합니다.
+- `HasUnevenRows`&ndash; `true`/`false` 값으로 설정 된 경우 행의 높이가 달라 집니다 `true` . 기본값은 `false`입니다.
+- `RowHeight`&ndash;가 일 때 각 행의 높이를 설정 합니다 `HasUnevenRows` `false` .
 
-`ListView`에서 `RowHeight` 속성을 설정 하 여 모든 행의 높이를 설정할 수 있습니다.
+에서 속성을 설정 하 여 모든 행의 높이를 설정할 수 있습니다 `RowHeight` `ListView` .
 
 ### <a name="custom-fixed-row-height"></a>사용자 지정 고정 행 높이
 
@@ -286,7 +289,7 @@ C#:
 RowHeightDemoListView.RowHeight = 100;
 ```
 
-XAML:
+PAGE.XAML
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
@@ -296,7 +299,7 @@ XAML:
 
 ### <a name="uneven-rows"></a>불균형 행
 
-개별 행의 높이가 서로 다른 경우에는 `HasUnevenRows` 속성을 `true`로 설정할 수 있습니다. 높이가 Xamarin.ios에서 자동으로 계산 되기 때문에 `HasUnevenRows`를 `true`로 설정 하면 행 높이를 수동으로 설정할 필요가 없습니다.
+개별 행의 높이가 서로 다른 경우 속성을로 설정할 수 있습니다 `HasUnevenRows` `true` . `HasUnevenRows` `true` 높이가에 의해 자동으로 계산 되기 때문에 행 높이를 수동으로 설정 하지 않아도 됩니다 Xamarin.Forms .
 
 C#:
 
@@ -304,7 +307,7 @@ C#:
 RowHeightDemoListView.HasUnevenRows = true;
 ```
 
-XAML:
+PAGE.XAML
 
 ```xaml
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
@@ -314,7 +317,7 @@ XAML:
 
 ### <a name="resize-rows-at-runtime"></a>런타임에 행 크기 조정
 
-`HasUnevenRows` 속성이 `true`으로 설정 된 경우 개별 `ListView` 행은 런타임에 프로그래밍 방식으로 크기를 조정할 수 있습니다. [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) 메서드는 다음 코드 예제에서 보여 주는 것 처럼 현재 표시 되지 않는 경우에도 셀의 크기를 업데이트 합니다.
+`ListView`속성이로 설정 된 경우 개별 행은 런타임에 프로그래밍 방식으로 크기를 조정할 수 있습니다 `HasUnevenRows` `true` . [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize)메서드는 다음 코드 예제에서 보여 주는 것 처럼 현재 표시 되지 않는 경우에도 셀의 크기를 업데이트 합니다.
 
 ```csharp
 void OnImageTapped (object sender, EventArgs args)
@@ -329,7 +332,7 @@ void OnImageTapped (object sender, EventArgs args)
 }
 ```
 
-`OnImageTapped` 이벤트 처리기는 탭 하는 셀의 [`Image`](xref:Xamarin.Forms.Image) 에 대 한 응답으로 실행 되며 쉽게 볼 수 있도록 셀에 표시 되는 `Image` 크기를 늘립니다.
+`OnImageTapped`이벤트 처리기는 탭 하는 셀의에 대 한 응답으로 실행 되며 [`Image`](xref:Xamarin.Forms.Image) `Image` 쉽게 볼 수 있도록 셀에 표시 되는의 크기를 늘립니다.
 
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
 

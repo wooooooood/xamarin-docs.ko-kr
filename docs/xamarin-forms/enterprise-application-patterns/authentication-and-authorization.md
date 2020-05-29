@@ -1,24 +1,27 @@
 ---
-title: 인증 및 권한 부여
-description: 이 장에서는 eShopOnContainers mobile 앱이 컨테이너 화 된 마이크로 서비스에 대 한 인증 및 권한 부여를 수행 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/08/2017
-ms.openlocfilehash: 528ccd66cc013f83752d93251cb9714115b29819
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8d5bf1d7821187924adc58582a5139f81235e6a0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306328"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139102"
 ---
 # <a name="authentication-and-authorization"></a>인증 및 권한 부여
 
 인증은 사용자의 이름 및 암호와 같은 id 자격 증명을 가져오고 기관에 대해 해당 자격 증명의 유효성을 검사 하는 프로세스입니다. 자격 증명이 유효 하면 자격 증명을 제출한 엔터티가 인증 된 id로 간주 됩니다. Id가 인증 되 면 권한 부여 프로세스에서 해당 id에 지정 된 리소스에 대 한 액세스 권한이 있는지 여부를 확인 합니다.
 
-인증 및 권한 부여를 ASP.NET Core Id 사용, Microsoft, Google 등의 외부 인증 공급자를 사용 하는 것을 포함 하 여 ASP.NET MVC 웹 응용 프로그램과 통신 하는 Xamarin Forms 앱에 통합 하는 방법에는 여러 가지가 있습니다. Facebook, Twitter 및 인증 미들웨어가 있습니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자가 IdentityServer에 로그인 해야 합니다. 그러나 IdentityServer는 인증을 위한 사용자 인터페이스 또는 데이터베이스를 제공 하지 않습니다. 따라서 eShopOnContainers 참조 응용 프로그램에서 ASP.NET Core Identity가이 목적으로 사용 됩니다.
+ASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. 예를 들어 Xamarin.Forms ASP.NET Core id, 외부 인증 공급자 (예: Microsoft, Google, Facebook 또는 Twitter) 및 인증 미들웨어를 사용 합니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. IdentityServer 사용자를 대신 하 여 토큰을 발급 하려면 사용자가 IdentityServer에 로그인 해야 합니다. 그러나 IdentityServer는 인증을 위한 사용자 인터페이스 또는 데이터베이스를 제공 하지 않습니다. 따라서 eShopOnContainers 참조 응용 프로그램에서 ASP.NET Core Identity가이 목적으로 사용 됩니다.
 
 ## <a name="authentication"></a>인증
 
@@ -37,7 +40,7 @@ Openid connect Connect는 OAuth 2.0 프로토콜을 기반으로 하는 인증 �
 
 Openid connect Connect와 OAuth 2.0의 조합은 인증 및 API 액세스의 두 가지 기본적인 보안 문제를 결합 하 고, IdentityServer 4는 이러한 프로토콜의 구현입니다.
 
-EShopOnContainers reference 응용 프로그램과 같은 직접 클라이언트-마이크로 서비스 통신을 사용 하는 응용 프로그램에서 STS (보안 토큰 서비스) 역할을 하는 전용 인증 마이크로 서비스를 사용 하 여 사용자를 인증할 수 있습니다 (그림 참조). 9-1. 클라이언트-마이크로 서비스 간 직접 통신에 대 한 자세한 내용은 [클라이언트와 마이크로 서비스 간 통신](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices)을 참조 하세요.
+EShopOnContainers reference 응용 프로그램과 같은 직접 클라이언트-마이크로 서비스 통신을 사용 하는 응용 프로그램에서 STS (보안 토큰 서비스)로 작동 하는 전용 인증 마이크로 서비스는 그림 9-1에 표시 된 것 처럼 사용자를 인증 하는 데 사용할 수 있습니다. 클라이언트-마이크로 서비스 간 직접 통신에 대 한 자세한 내용은 [클라이언트와 마이크로 서비스 간 통신](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication_between_client_and_microservices)을 참조 하세요.
 
 ![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
 
@@ -55,7 +58,7 @@ EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하 여 인증을 
 
 ASP.NET Core 웹 응용 프로그램에서 IdentityServer 4를 사용 하려면 웹 응용 프로그램의 Visual Studio 솔루션에 추가 해야 합니다. 자세한 내용은 IdentityServer 설명서에서 [개요](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) 를 참조 하세요.
 
-IdentityServer가 웹 응용 프로그램의 Visual Studio 솔루션에 포함 되 면 웹 응용 프로그램의 HTTP 요청 처리 파이프라인에 추가 해야 Openid connect Connect 및 OAuth 2.0 끝점에 대 한 요청을 처리할 수 있습니다. 이는 다음 코드 예제에서 보여 주는 것 처럼 웹 응용 프로그램의 `Startup` 클래스의 `Configure` 메서드에서 구현 됩니다.
+IdentityServer가 웹 응용 프로그램의 Visual Studio 솔루션에 포함 되 면 웹 응용 프로그램의 HTTP 요청 처리 파이프라인에 추가 해야 Openid connect Connect 및 OAuth 2.0 끝점에 대 한 요청을 처리할 수 있습니다. 이는 `Configure` `Startup` 다음 코드 예제에서 보여 주는 것 처럼 웹 응용 프로그램의 클래스에서 메서드를 통해 얻을 수 있습니다.
 
 ```csharp
 public void Configure(  
@@ -71,7 +74,7 @@ public void Configure(
 
 ### <a name="configuring-identityserver"></a>IdentityServer 구성
 
-EShopOnContainers reference 응용 프로그램의 다음 코드 예제에 나와 있는 것 처럼 `services.AddIdentityServer` 메서드를 호출 하 여 웹 응용 프로그램의 `Startup` 클래스에서 `ConfigureServices` 메서드에 IdentityServer를 구성 해야 합니다.
+`ConfigureServices` `Startup` `services.AddIdentityServer` EShopOnContainers reference 응용 프로그램의 다음 코드 예제에서 설명한 것 처럼 메서드를 호출 하 여 웹 응용 프로그램의 클래스에 있는 메서드에서 IdentityServer을 구성 해야 합니다.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)  
@@ -90,7 +93,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-`services.AddIdentityServer` 메서드를 호출한 후에는 다음을 구성 하기 위해 추가 흐름 Api가 호출 됩니다.
+메서드를 호출한 후에 `services.AddIdentityServer` 는 다음을 구성 하기 위해 추가 흐름 api가 호출 됩니다.
 
 - 서명에 사용 되는 자격 증명입니다.
 - 사용자가 액세스를 요청할 수 있는 API 및 id 리소스입니다.
@@ -104,7 +107,7 @@ ASP.NET Core Identity를 사용 하도록 IdentityServer를 구성 하는 방법
 
 #### <a name="configuring-api-resources"></a>API 리소스 구성
 
-API 리소스를 구성할 때 `AddInMemoryApiResources` 메서드에 `IEnumerable<ApiResource>` 컬렉션이 필요 합니다. 다음 코드 예제에서는 eShopOnContainers reference 응용 프로그램에서이 컬렉션을 제공 하는 `GetApis` 메서드를 보여 줍니다.
+API 리소스를 구성할 때 `AddInMemoryApiResources` 메서드에는 컬렉션이 필요 합니다 `IEnumerable<ApiResource>` . 다음 코드 예제에서는 `GetApis` eShopOnContainers reference 응용 프로그램에서이 컬렉션을 제공 하는 메서드를 보여 줍니다.
 
 ```csharp
 public static IEnumerable<ApiResource> GetApis()  
@@ -117,11 +120,11 @@ public static IEnumerable<ApiResource> GetApis()
 }
 ```
 
-이 메서드는 IdentityServer가 주문 및 바구니 Api를 보호 하도록 지정 합니다. 따라서 IdentityServer 관리 액세스 토큰은 이러한 Api를 호출할 때 필요 합니다. `ApiResource` 형식에 대 한 자세한 내용은 IdentityServer 4 설명서의 [API 리소스](https://identityserver4.readthedocs.io/en/latest/reference/api_resource.html) 를 참조 하세요.
+이 메서드는 IdentityServer가 주문 및 바구니 Api를 보호 하도록 지정 합니다. 따라서 IdentityServer 관리 액세스 토큰은 이러한 Api를 호출할 때 필요 합니다. 형식에 대 한 자세한 내용은 `ApiResource` IdentityServer 4 설명서의 [API 리소스](https://identityserver4.readthedocs.io/en/latest/reference/api_resource.html) 를 참조 하세요.
 
 #### <a name="configuring-identity-resources"></a>Id 리소스 구성
 
-Id 리소스를 구성할 때 `AddInMemoryIdentityResources` 메서드에 `IEnumerable<IdentityResource>` 컬렉션이 필요 합니다. Id 리소스는 사용자 ID, 이름, 전자 메일 주소 등의 데이터입니다. 각 id 리소스는 고유한 이름을 가지 며 임의의 클레임 유형을 할당할 수 있으며,이는 사용자의 id 토큰에 포함 됩니다. 다음 코드 예제에서는 eShopOnContainers reference 응용 프로그램에서이 컬렉션을 제공 하는 `GetResources` 메서드를 보여 줍니다.
+Id 리소스를 구성할 때 `AddInMemoryIdentityResources` 메서드에는 컬렉션이 필요 합니다 `IEnumerable<IdentityResource>` . Id 리소스는 사용자 ID, 이름, 전자 메일 주소 등의 데이터입니다. 각 id 리소스는 고유한 이름을 가지 며 임의의 클레임 유형을 할당할 수 있으며,이는 사용자의 id 토큰에 포함 됩니다. 다음 코드 예제에서는 `GetResources` eShopOnContainers reference 응용 프로그램에서이 컬렉션을 제공 하는 메서드를 보여 줍니다.
 
 ```csharp
 public static IEnumerable<IdentityResource> GetResources()  
@@ -134,12 +137,12 @@ public static IEnumerable<IdentityResource> GetResources()
 }
 ```
 
-Openid connect Connect 사양은 일부 [표준 id 리소스](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)를 지정 합니다. 최소 요구 사항은 사용자의 고유 ID를 내보내기 위한 지원이 제공 된다는 것입니다. 이는 `IdentityResources.OpenId` id 리소스를 노출 하 여 이루어집니다.
+Openid connect Connect 사양은 일부 [표준 id 리소스](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)를 지정 합니다. 최소 요구 사항은 사용자의 고유 ID를 내보내기 위한 지원이 제공 된다는 것입니다. 이는 id 리소스를 노출 하 여 이루어집니다 `IdentityResources.OpenId` .
 
 > [!NOTE]
-> `IdentityResources` 클래스는 Openid connect Connect 사양 (openid connect, 메일, 프로필, 전화, 주소)에 정의 된 모든 범위를 지원 합니다.
+> `IdentityResources`클래스는 Openid connect Connect 사양 (openid connect, 메일, 프로필, 전화, 주소)에 정의 된 모든 범위를 지원 합니다.
 
-또한 IdentityServer는 사용자 지정 id 리소스의 정의를 지원 합니다. 자세한 내용은 IdentityServer 설명서의 [사용자 지정 id 리소스 정의](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) 를 참조 하세요. `IdentityResource` 형식에 대 한 자세한 내용은 IdentityServer 4 설명서의 [Id 리소스](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) 를 참조 하세요.
+또한 IdentityServer는 사용자 지정 id 리소스의 정의를 지원 합니다. 자세한 내용은 IdentityServer 설명서의 [사용자 지정 id 리소스 정의](http://docs.identityserver.io/en/latest/topics/resources.html#defining-custom-identity-resources) 를 참조 하세요. 형식에 대 한 자세한 내용은 `IdentityResource` IdentityServer 4 설명서의 [id 리소스](https://identityserver4.readthedocs.io/en/latest/reference/identity_resource.html) 를 참조 하세요.
 
 #### <a name="configuring-clients"></a>클라이언트 구성
 
@@ -150,7 +153,7 @@ Openid connect Connect 사양은 일부 [표준 id 리소스](https://openid.net
 - Id 및 액세스 토큰이 전송 되는 위치 (리디렉션 URI)입니다.
 - 클라이언트에서 액세스할 수 있는 리소스의 목록 (범위 라고 함)입니다.
 
-클라이언트를 구성할 때 `AddInMemoryClients` 메서드에 `IEnumerable<Client>` 컬렉션이 필요 합니다. 다음 코드 예제에서는 eShopOnContainers reference 응용 프로그램에서이 컬렉션을 제공 하는 `GetClients` 메서드의 eShopOnContainers mobile 앱에 대 한 구성을 보여 줍니다.
+클라이언트를 구성할 때 `AddInMemoryClients` 메서드에는 컬렉션이 필요 합니다 `IEnumerable<Client>` . 다음 코드 예제에서는 `GetClients` eShopOnContainers reference 응용 프로그램에서이 컬렉션을 제공 하는 메서드의 eShopOnContainers mobile 앱에 대 한 구성을 보여 줍니다.
 
 ```csharp
 public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUrl)
@@ -206,7 +209,7 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 #### <a name="configuring-the-authentication-flow"></a>인증 흐름 구성
 
-`Client.AllowedGrantTypes` 속성에서 grant 유형을 지정 하 여 클라이언트와 IdentityServer 간의 인증 흐름을 구성할 수 있습니다. Openid connect Connect 및 OAuth 2.0 사양은 다음을 비롯 한 다양 한 인증 흐름을 정의 합니다.
+클라이언트와 IdentityServer 간의 인증 흐름은 속성에서 grant 유형을 지정 하 여 구성할 수 있습니다 `Client.AllowedGrantTypes` . Openid connect Connect 및 OAuth 2.0 사양은 다음을 비롯 한 다양 한 인증 흐름을 정의 합니다.
 
 - 암시적 이 흐름은 브라우저 기반 응용 프로그램에 최적화 되어 있으며 사용자 인증 전용 이거나 인증 및 액세스 토큰 요청에 사용 되어야 합니다. 모든 토큰은 브라우저를 통해 전송 되므로 새로 고침 토큰과 같은 고급 기능을 사용할 수 없습니다.
 - 인증 코드입니다. 이 흐름은 클라이언트 인증을 지 원하는 한편 브라우저 전면 채널과 달리 백 채널에서 토큰을 검색 하는 기능을 제공 합니다.
@@ -227,19 +230,19 @@ EShopOnContainers 모바일 앱은 그림 9-2에 나와 있는 하이브리드 �
 
 **그림 9-2:** 로그인 프로세스에 대 한 개략적인 개요
 
-`<base endpoint>:5105/connect/authorize`에 대 한 로그인 요청이 발생 합니다. 성공적인 인증 후 IdentityServer는 인증 코드와 id 토큰을 포함 하는 인증 응답을 반환 합니다. 그런 다음 인증 코드는 액세스, id 및 새로 고침 토큰을 사용 하 여 응답 하는 `<base endpoint>:5105/connect/token`으로 전송 됩니다.
+에 대 한 로그인 요청이 발생 `<base endpoint>:5105/connect/authorize` 합니다. 성공적인 인증 후 IdentityServer는 인증 코드와 id 토큰을 포함 하는 인증 응답을 반환 합니다. 그런 다음 인증 코드는 `<base endpoint>:5105/connect/token` 액세스, id 및 새로 고침 토큰을 사용 하 여 응답 하는에 전송 됩니다.
 
-EShopOnContainers 모바일 앱은 추가 매개 변수를 사용 하 여 `<base endpoint>:5105/connect/endsession`에 요청을 전송 하 여 IdentityServer를 로그 아웃 합니다. 로그 아웃 발생 후 IdentityServer는 post 로그 아웃 리디렉션 URI를 모바일 앱으로 다시 전송 하 여 응답 합니다. 그림 9-3에서는이 프로세스를 보여 줍니다.
+EShopOnContainers 모바일 앱은에 요청을 전송 하 여 추가 매개 변수를 사용 하 여 IdentityServer를 로그 아웃 합니다 `<base endpoint>:5105/connect/endsession` . 로그 아웃 발생 후 IdentityServer는 post 로그 아웃 리디렉션 URI를 모바일 앱으로 다시 전송 하 여 응답 합니다. 그림 9-3에서는이 프로세스를 보여 줍니다.
 
 ![](authentication-and-authorization-images/sign-out.png "High-level overview of the sign-out process")
 
 **그림 9-3:** 로그 아웃 프로세스에 대 한 개략적인 개요
 
-EShopOnContainers 모바일 앱에서 IdentityServer와의 통신은 `IIdentityService` 인터페이스를 구현 하는 `IdentityService` 클래스에 의해 수행 됩니다. 이 인터페이스는 구현 하는 클래스가 `CreateAuthorizationRequest`, `CreateLogoutRequest`및 `GetTokenAsync` 메서드를 제공 하도록 지정 합니다.
+EShopOnContainers 모바일 앱에서 IdentityServer와의 통신은 인터페이스를 구현 하는 클래스에 의해 수행 됩니다 `IdentityService` `IIdentityService` . 이 인터페이스는 구현 하는 클래스에서 `CreateAuthorizationRequest` , 및 메서드를 제공 하도록 지정 합니다 `CreateLogoutRequest` `GetTokenAsync` .
 
 #### <a name="signing-in"></a>로그인
 
-사용자가 `LoginView`의 **로그인** 단추를 누르면 `LoginViewModel` 클래스의 `SignInCommand` 실행 되어 `SignInAsync` 메서드를 실행 합니다. 다음 코드 예제에서는 이 메서드를 보여줍니다.
+사용자가에서 **로그인** 단추를 누르면 `LoginView` `SignInCommand` 클래스의가 `LoginViewModel` 실행 되어 메서드가 실행 됩니다 `SignInAsync` . 다음 코드 예제에서는 이 메서드를 보여줍니다.
 
 ```csharp
 private async Task SignInAsync()  
@@ -251,7 +254,7 @@ private async Task SignInAsync()
 }
 ```
 
-이 메서드는 다음 코드 예제와 같이 `IdentityService` 클래스에서 `CreateAuthorizationRequest` 메서드를 호출 합니다.
+이 메서드는 클래스의 메서드를 호출 합니다 .이 메서드는 `CreateAuthorizationRequest` `IdentityService` 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 public string CreateAuthorizationRequest()
@@ -280,18 +283,18 @@ public string CreateAuthorizationRequest()
 
 ```
 
-이 메서드는 필수 매개 변수를 사용 하 여 IdentityServer의 [authorization 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)에 대 한 URI를 만듭니다. 권한 부여 끝점은 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 `/connect/authorize` 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+이 메서드는 필수 매개 변수를 사용 하 여 IdentityServer의 [authorization 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)에 대 한 URI를 만듭니다. 권한 부여 끝점은 `/connect/authorize` 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
 > [!NOTE]
 > EShopOnContainers 모바일 앱의 공격 노출 영역을 OAuth에 대 한 코드 교환 (PKCE) 확장을 구현 하 여 줄일 수 있습니다. PKCE는 권한 부여 코드가 가로채 면 사용 되지 않도록 보호 합니다. 이는 비밀 검증 도구를 생성 하는 클라이언트, 권한 부여 요청에 전달 되는 해시 및 인증 코드를 교환 때 해시 되지 않은 형태로 제공 됩니다. PKCE에 대 한 자세한 내용은 Internet 엔지니어링 작업 Force 웹 사이트에서 [OAuth 공용 클라이언트의 코드 교환에 대 한 증명 키](https://tools.ietf.org/html/rfc7636) 를 참조 하세요.
 
-반환 된 URI는 `LoginViewModel` 클래스의 `LoginUrl` 속성에 저장 됩니다. `IsLogin` 속성이 `true`되 면 `LoginView`의 [`WebView`](xref:Xamarin.Forms.WebView) 표시 됩니다. `WebView` 데이터는 [`Source`](xref:Xamarin.Forms.WebView.Source) 속성을 `LoginViewModel` 클래스의 `LoginUrl` 속성에 바인딩하며, 따라서 `LoginUrl` 속성이 IdentityServer의 권한 부여 끝점으로 설정 된 경우 로그인 요청을 IdentityServer으로 만듭니다. IdentityServer이 요청을 수신 하 고 사용자가 인증 되지 않은 경우 `WebView`는 그림 9-4에 표시 된 구성 된 로그인 페이지로 리디렉션됩니다.
+반환 된 URI는 `LoginUrl` 클래스의 속성에 저장 됩니다 `LoginViewModel` . `IsLogin`속성이 이면의이 `true` 표시 됩니다 [`WebView`](xref:Xamarin.Forms.WebView) `LoginView` . 데이터는 속성 `WebView` [`Source`](xref:Xamarin.Forms.WebView.Source) 을 `LoginUrl` 클래스의 속성에 `LoginViewModel` IdentityServer `LoginUrl` 속성이 IdentityServer의 인증 끝점으로 설정 된 경우 로그인 요청을 호출 합니다. IdentityServer이 요청을 수신 하 고 사용자가 인증 되지 않은 경우는 `WebView` 그림 9-4에 표시 된 구성 된 로그인 페이지로 리디렉션됩니다.
 
 ![](authentication-and-authorization-images/login.png "Login page displayed by the WebView")
 
 **그림 9-4:** 웹 보기에서 표시 하는 로그인 페이지
 
-로그인이 완료 되 면 [`WebView`](xref:Xamarin.Forms.WebView) 이 반환 URI로 리디렉션됩니다. 이 `WebView` 탐색을 수행 하면 `LoginViewModel` 클래스의 `NavigateAsync` 메서드가 실행 되며,이는 다음 코드 예제에 나와 있습니다.
+로그인이 완료 되 면이 [`WebView`](xref:Xamarin.Forms.WebView) 반환 URI로 리디렉션됩니다. 이 `WebView` 탐색은 `NavigateAsync` 클래스의 메서드를 실행 합니다 .이는 `LoginViewModel` 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 private async Task NavigateAsync(string url)  
@@ -316,23 +319,23 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-이 메서드는 반환 URI에 포함 된 인증 응답을 구문 분석 하 고, 유효한 인증 코드가 있으면 IdentityServer의 [토큰 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)에 요청 하 여 인증 코드, pkce 비밀 검증 도구 및 기타 필수 매개 변수를 전달 합니다. 토큰 끝점은 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 `/connect/token` 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+이 메서드는 반환 URI에 포함 된 인증 응답을 구문 분석 하 고, 유효한 인증 코드가 있으면 IdentityServer의 [토큰 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)에 요청 하 여 인증 코드, pkce 비밀 검증 도구 및 기타 필수 매개 변수를 전달 합니다. 토큰 끝점은 `/connect/token` 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
 > [!TIP]
 > 반환 Uri의 유효성을 검사 합니다. EShopOnContainers 모바일 앱은 반환 URI의 유효성을 검사 하지 않지만, 가장 좋은 방법은 반환 URI가 알려진 위치를 참조 하는지 확인 하 여 열린 리디렉션 공격을 방지 하는 것입니다.
 
-토큰 끝점이 유효한 인증 코드 및 PKCE 비밀 검증 도구를 수신 하면 액세스 토큰, id 토큰 및 새로 고침 토큰을 사용 하 여 응답 합니다. 그러면 API 리소스에 대 한 액세스를 허용 하는 액세스 토큰 및 id 토큰이 응용 프로그램 설정으로 저장 되 고 페이지 탐색이 수행 됩니다. 따라서 eShopOnContainers 모바일 앱에 대 한 전반적인 효과는 다음과 같습니다. 사용자가 IdentityServer를 사용 하 여 성공적으로 인증할 수 있는 경우 선택 된 탭으로 `CatalogView`를 표시 하는 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) `MainView` 페이지로 이동 합니다.
+토큰 끝점이 유효한 인증 코드 및 PKCE 비밀 검증 도구를 수신 하면 액세스 토큰, id 토큰 및 새로 고침 토큰을 사용 하 여 응답 합니다. 그러면 API 리소스에 대 한 액세스를 허용 하는 액세스 토큰 및 id 토큰이 응용 프로그램 설정으로 저장 되 고 페이지 탐색이 수행 됩니다. 따라서 eShopOnContainers 모바일 앱의 전반적인 효과는 다음과 같습니다. 사용자가 IdentityServer를 사용 하 여 성공적으로 인증할 수 있는 경우를 `MainView` [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 선택 된 탭으로 표시 하는 인 페이지를 탐색 `CatalogView` 합니다.
 
-페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. [`WebView`](xref:Xamarin.Forms.WebView) 탐색으로 인해 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. 탐색에서 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [`WebView`](xref:Xamarin.Forms.WebView) [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
 > [!NOTE]
-> EShopOnContainers는 앱이 `SettingsView`에서 모의 서비스를 사용 하도록 구성 된 경우에도 모의 로그인을 허용 합니다. 이 모드에서 앱은 IdentityServer와 통신 하지 않고 대신 사용자가 자격 증명을 사용 하 여 로그인 할 수 있도록 허용 합니다.
+> EShopOnContainers는 앱이에서 모의 서비스를 사용 하도록 구성 된 경우에도 모의 로그인을 허용 합니다 `SettingsView` . 이 모드에서 앱은 IdentityServer와 통신 하지 않고 대신 사용자가 자격 증명을 사용 하 여 로그인 할 수 있도록 허용 합니다.
 
 #### <a name="signing-out"></a>로그 아웃
 
-사용자가 `ProfileView`에서 **로그 아웃** 단추를 누르면 `ProfileViewModel` 클래스의 `LogoutCommand` 실행 되어 `LogoutAsync` 메서드를 실행 합니다. 이 메서드는 `LoginView` 페이지에 대 한 페이지 탐색을 수행 하 여 `true`로 설정 된 `LogoutParameter` 인스턴스를 매개 변수로 전달 합니다. 페이지를 탐색 하는 동안 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [탐색 하는 동안 매개 변수 전달](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation)
+사용자가에서 **로그 아웃** 단추를 누르면 `ProfileView` `LogoutCommand` 클래스의가 `ProfileViewModel` 실행 되어 메서드가 실행 됩니다 `LogoutAsync` . 이 메서드는 페이지로의 페이지 탐색 `LoginView` 을 수행 하 여 `LogoutParameter` 로 설정 된 인스턴스를 `true` 매개 변수로 전달 합니다. 페이지를 탐색 하는 동안 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [탐색 하는 동안 매개 변수 전달](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation)
 
-뷰가 생성 되 고 탐색 되 면 뷰의 연결 된 뷰 모델에 대 한 `InitializeAsync` 메서드가 실행 되며,이 메서드는 다음 코드 예제와 같이 `LoginViewModel` 클래스의 `Logout` 메서드를 실행 합니다.
+뷰가 생성 되 고 탐색 되 면 `InitializeAsync` 뷰의 연결 된 뷰 모델의 메서드가 실행 되며,이 메서드는 `Logout` `LoginViewModel` 다음 코드 예제에 표시 된 클래스의 메서드를 실행 합니다.
 
 ```csharp
 private void Logout()  
@@ -349,7 +352,7 @@ private void Logout()
 }
 ```
 
-이 메서드는 `IdentityService` 클래스에서 `CreateLogoutRequest` 메서드를 호출 하 여 응용 프로그램 설정에서 검색 된 id 토큰을 매개 변수로 전달 합니다. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요. 다음 코드 예제는 `CreateLogoutRequest` 메서드를 보여줍니다.
+이 메서드는 `CreateLogoutRequest` 클래스에서 메서드를 호출 `IdentityService` 하 여 응용 프로그램 설정에서 검색 된 id 토큰을 매개 변수로 전달 합니다. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요. 다음 코드 예제는 `CreateLogoutRequest` 메서드를 보여줍니다.
 
 ```csharp
 public string CreateLogoutRequest(string token)  
@@ -362,11 +365,11 @@ public string CreateLogoutRequest(string token)
 }
 ```
 
-이 메서드는 필수 매개 변수를 사용 하 여 IdentityServer의 [end session 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession)에 대 한 URI를 만듭니다. 종료 세션 끝점은 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 `/connect/endsession` 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+이 메서드는 필수 매개 변수를 사용 하 여 IdentityServer의 [end session 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/endsession.html#refendsession)에 대 한 URI를 만듭니다. End session 끝점은 `/connect/endsession` 사용자 설정으로 노출 된 기본 끝점의 포트 5105에 있습니다. 사용자 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
-반환 된 URI는 `LoginViewModel` 클래스의 `LoginUrl` 속성에 저장 됩니다. `IsLogin` 속성이 `true`되는 동안 `LoginView`의 [`WebView`](xref:Xamarin.Forms.WebView) 표시 됩니다. `WebView` 데이터는 [`Source`](xref:Xamarin.Forms.WebView.Source) 속성을 `LoginViewModel` 클래스의 `LoginUrl` 속성에 바인딩되므로 `LoginUrl` 속성이 IdentityServer의 end session endpoint로 설정 된 경우 로그 아웃 요청을 IdentityServer 합니다. 사용자가 로그인 하는 경우 IdentityServer가이 요청을 받으면 로그 아웃이 발생 합니다. 인증은 ASP.NET Core에서 쿠키 인증 미들웨어에 의해 관리 되는 쿠키를 사용 하 여 추적 됩니다. 따라서 IdentityServer에서 로그 아웃 하면 인증 쿠키가 제거 되 고 사후 로그 아웃 리디렉션 URI가 클라이언트에 다시 전송 됩니다.
+반환 된 URI는 `LoginUrl` 클래스의 속성에 저장 됩니다 `LoginViewModel` . `IsLogin`속성이 인 동안의 `true` 는 [`WebView`](xref:Xamarin.Forms.WebView) `LoginView` 표시 됩니다. 데이터는 속성 `WebView` [`Source`](xref:Xamarin.Forms.WebView.Source) 을 `LoginUrl` 클래스의 속성에 바인딩한 `LoginViewModel` 다음, `LoginUrl` 속성이 IdentityServer의 end session Endpoint로 설정 된 경우 IdentityServer에 대 한 로그 아웃 요청을 만듭니다. 사용자가 로그인 하는 경우 IdentityServer가이 요청을 받으면 로그 아웃이 발생 합니다. 인증은 ASP.NET Core에서 쿠키 인증 미들웨어에 의해 관리 되는 쿠키를 사용 하 여 추적 됩니다. 따라서 IdentityServer에서 로그 아웃 하면 인증 쿠키가 제거 되 고 사후 로그 아웃 리디렉션 URI가 클라이언트에 다시 전송 됩니다.
 
-모바일 앱에서 [`WebView`](xref:Xamarin.Forms.WebView) 가 사후 로그 아웃 리디렉션 URI로 리디렉션됩니다. 이 `WebView` 탐색을 수행 하면 `LoginViewModel` 클래스의 `NavigateAsync` 메서드가 실행 되며,이는 다음 코드 예제에 나와 있습니다.
+모바일 앱에서가 [`WebView`](xref:Xamarin.Forms.WebView) 사후 로그 아웃 리디렉션 URI로 리디렉션됩니다. 이 `WebView` 탐색은 `NavigateAsync` 클래스의 메서드를 실행 합니다 .이는 `LoginViewModel` 다음 코드 예제에 나와 있습니다.
 
 ```csharp
 private async Task NavigateAsync(string url)  
@@ -380,9 +383,9 @@ private async Task NavigateAsync(string url)
 }
 ```
 
-이 메서드는 응용 프로그램 설정에서 id 토큰과 액세스 토큰을 모두 지우고 `IsLogin` 속성을 `false`로 설정 합니다. 이렇게 하면 `LoginView` 페이지의 [`WebView`](xref:Xamarin.Forms.WebView) 표시 되지 않습니다. 마지막으로 `LoginUrl` 속성은 다음에 사용자가 로그인을 시작할 때 준비 하는 데 필요한 매개 변수를 사용 하 여 IdentityServer의 [authorization 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)URI로 설정 됩니다.
+이 메서드는 응용 프로그램 설정에서 id 토큰과 액세스 토큰을 모두 지우고 속성을로 설정 하 여 `IsLogin` `false` 페이지의이 [`WebView`](xref:Xamarin.Forms.WebView) `LoginView` 보이지 않게 합니다. 마지막으로 `LoginUrl` 속성은 다음에 사용자가 로그인을 시작할 때 준비 하는 데 필요한 매개 변수를 사용 하 여 IdentityServer의 [AUTHORIZATION 끝점](https://identityserver4.readthedocs.io/en/latest/endpoints/authorize.html)URI로 설정 됩니다.
 
-페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. [`WebView`](xref:Xamarin.Forms.WebView) 탐색으로 인해 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
+페이지 탐색에 대 한 자세한 내용은 [탐색](~/xamarin-forms/enterprise-application-patterns/navigation.md)을 참조 하세요. 탐색에서 뷰 모델 메서드를 실행 하는 방법에 대 한 자세한 내용은 [`WebView`](xref:Xamarin.Forms.WebView) [동작을 사용 하 여 탐색 호출](~/xamarin-forms/enterprise-application-patterns/navigation.md#invoking_navigation_using_behaviors)을 참조 하세요. 응용 프로그램 설정에 대 한 자세한 내용은 [구성 관리](~/xamarin-forms/enterprise-application-patterns/configuration-management.md)를 참조 하세요.
 
 > [!NOTE]
 > 또한 eShopOnContainers를 사용 하면 앱이 SettingsView에서 모의 서비스를 사용 하도록 구성 된 경우 모의 로그 아웃을 사용할 수 있습니다. 이 모드에서 앱은 IdentityServer와 통신 하지 않고 응용 프로그램 설정에서 저장 된 토큰을 모두 지웁니다.
@@ -403,10 +406,10 @@ public class BasketController : Controller
 }
 ```
 
-권한이 없는 사용자가 `Authorize` 특성으로 표시 된 컨트롤러나 작업에 액세스 하려고 하면 MVC 프레임 워크에서 401 (권한 없음) HTTP 상태 코드를 반환 합니다.
+권한이 없는 사용자가 특성으로 표시 된 컨트롤러나 작업에 액세스 하려고 하면 `Authorize` MVC 프레임 워크에서 401 (권한 없음) HTTP 상태 코드를 반환 합니다.
 
 > [!NOTE]
-> `Authorize` 특성에 매개 변수를 지정 하 여 API를 특정 사용자로 제한할 수 있습니다. 자세한 내용은 [권한 부여](/aspnet/core/security/authorization/introduction/)를 참조 하세요.
+> 특성에 매개 변수를 지정 `Authorize` 하 여 API를 특정 사용자로 제한할 수 있습니다. 자세한 내용은 [권한 부여](/aspnet/core/security/authorization/introduction/)를 참조하세요.
 
 IdentityServer는 제어 권한 부여를 제공 하는 액세스 토큰을 권한 부여 워크플로에 통합할 수 있습니다. 이 방법은 그림 9-5에 나와 있습니다.
 
@@ -418,7 +421,7 @@ EShopOnContainers 모바일 앱은 id 마이크로 서비스와 통신 하 고 �
 
 ### <a name="configuring-identityserver-to-perform-authorization"></a>권한 부여를 수행 하도록 IdentityServer 구성
 
-IdentityServer를 사용 하 여 권한 부여를 수행 하려면 해당 권한 부여 미들웨어를 웹 응용 프로그램의 HTTP 요청 파이프라인에 추가 해야 합니다. 미들웨어는 `Configure` 메서드에서 호출 되는 웹 응용 프로그램의 `Startup` 클래스의 `ConfigureAuth` 메서드에 추가 되며 eShopOnContainers reference 응용 프로그램의 다음 코드 예제에서 보여 줍니다.
+IdentityServer를 사용 하 여 권한 부여를 수행 하려면 해당 권한 부여 미들웨어를 웹 응용 프로그램의 HTTP 요청 파이프라인에 추가 해야 합니다. 미들웨어는 `ConfigureAuth` 메서드에서 호출 되는 웹 응용 프로그램의 클래스에 있는 메서드에서 추가 되며 `Startup` `Configure` eShopOnContainers reference 응용 프로그램의 다음 코드 예제에서 보여 줍니다.
 
 ```csharp
 protected virtual void ConfigureAuth(IApplicationBuilder app)  
@@ -436,7 +439,7 @@ protected virtual void ConfigureAuth(IApplicationBuilder app)
 이 메서드는 유효한 액세스 토큰을 사용 하 여 API에만 액세스할 수 있도록 합니다. 미들웨어는 들어오는 토큰의 유효성을 검사 하 여 신뢰할 수 있는 발급자 로부터 보내고 토큰을 수신 하는 API와 토큰을 사용할 수 있는지 확인 합니다. 따라서 주문 또는 바구니 컨트롤러를 검색 하면 액세스 토큰이 필요 함을 나타내는 401 (권한 없음) HTTP 상태 코드가 반환 됩니다.
 
 > [!NOTE]
-> `app.UseMvc()` 또는 `app.UseMvcWithDefaultRoute()`를 사용 하 여 MVC를 추가 하기 전에 IdentityServer의 인증 미들웨어를 웹 응용 프로그램의 HTTP 요청 파이프라인에 추가 해야 합니다.
+> 또는를 사용 하 여 MVC를 추가 하기 전에 IdentityServer의 인증 미들웨어를 웹 응용 프로그램의 HTTP 요청 파이프라인에 추가 해야 합니다 `app.UseMvc()` `app.UseMvcWithDefaultRoute()` .
 
 ### <a name="making-access-requests-to-apis"></a>Api에 대 한 액세스 요청 만들기
 
@@ -447,7 +450,7 @@ var authToken = Settings.AuthAccessToken;
 Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), authToken);
 ```
 
-액세스 토큰은 응용 프로그램 설정으로 저장 되며 플랫폼별 저장소에서 검색 되 고 `OrderService` 클래스의 `GetOrderAsync` 메서드에 대 한 호출에 포함 됩니다.
+액세스 토큰은 응용 프로그램 설정으로 저장 되며 플랫폼별 저장소에서 검색 되 고 클래스의 메서드에 대 한 호출에 포함 됩니다 `GetOrderAsync` `OrderService` .
 
 마찬가지로, 다음 코드 예제와 같이 IdentityServer protected API에 데이터를 보낼 때 액세스 토큰을 포함 해야 합니다.
 
@@ -460,21 +463,21 @@ await _basketService.UpdateBasketAsync(new CustomerBasket
 }, authToken);
 ```
 
-액세스 토큰은 플랫폼별 저장소에서 검색 되 고 `BasketService` 클래스의 `UpdateBasketAsync` 메서드에 대 한 호출에 포함 됩니다.
+액세스 토큰은 플랫폼별 저장소에서 검색 되 고 클래스의 메서드에 대 한 호출에 포함 됩니다 `UpdateBasketAsync` `BasketService` .
 
-EShopOnContainers 모바일 앱의 `RequestProvider` 클래스는 `HttpClient` 클래스를 사용 하 여 eShopOnContainers reference 응용 프로그램에서 노출 하는 RESTful Api에 요청 합니다. 권한 부여가 필요한 주문 및 바구니 Api에 대 한 요청을 만들 때 유효한 액세스 토큰을 요청에 포함 해야 합니다. 이렇게 하려면 다음 코드 예제에서 보여 주는 것 처럼 `HttpClient` 인스턴스의 헤더에 액세스 토큰을 추가 합니다.
+`RequestProvider`EShopOnContainers 모바일 앱의 클래스는 클래스를 사용 하 여 `HttpClient` eShopOnContainers reference 응용 프로그램에서 노출 하는 RESTful api에 대 한 요청을 수행 합니다. 권한 부여가 필요한 주문 및 바구니 Api에 대 한 요청을 만들 때 유효한 액세스 토큰을 요청에 포함 해야 합니다. 이렇게 하려면 `HttpClient` 다음 코드 예제에서 보여 주는 것 처럼 인스턴스의 헤더에 액세스 토큰을 추가 합니다.
 
 ```csharp
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 ```
 
-`HttpClient` 클래스의 `DefaultRequestHeaders` 속성은 각 요청과 함께 전송 되는 헤더를 노출 하 고, 액세스 토큰은 문자열 `Bearer`접두사가 붙은 `Authorization` 헤더에 추가 됩니다. RESTful API로 요청이 전송 되 면 `Authorization` 헤더의 값이 추출 되 고 유효성을 검사 하 여 신뢰할 수 있는 발급자 로부터 전송 되 고 사용자에 게이를 수신 하는 API를 호출할 수 있는 권한이 있는지 여부를 확인 하는 데 사용 됩니다.
+`DefaultRequestHeaders`클래스의 속성은 `HttpClient` 각 요청과 함께 전송 되는 헤더를 노출 하 고 액세스 토큰은 문자열이 접두사로 추가 된 헤더에 추가 됩니다 `Authorization` `Bearer` . 요청이 RESTful API로 전송 되 면 헤더의 값이 `Authorization` 추출 되 고 유효성을 검사 하 여 신뢰할 수 있는 발급자 로부터 전송 되 고 사용자에 게이를 수신 하는 api를 호출할 수 있는 권한이 있는지 여부를 확인 하는 데 사용 됩니다.
 
 EShopOnContainers 모바일 앱이 웹 요청을 만드는 방법에 대 한 자세한 내용은 [원격 데이터 액세스](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md)를 참조 하세요.
 
 ## <a name="summary"></a>요약
 
-ASP.NET MVC 웹 응용 프로그램과 통신 하는 Xamarin. Forms 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer는 ASP.NET Core Id와 통합 되어 전달자 토큰 인증을 수행 하는 ASP.NET Core에 대 한 오픈 소스 Openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
+Xamarin.FormsASP.NET MVC 웹 응용 프로그램과 통신 하는 앱에 인증 및 권한 부여를 통합 하는 방법에는 여러 가지가 있습니다. EShopOnContainers 모바일 앱은 IdentityServer 4를 사용 하는 컨테이너 화 된 identity 마이크로 서비스를 사용 하 여 인증 및 권한 부여를 수행 합니다. IdentityServer는 ASP.NET Core Id와 통합 되어 전달자 토큰 인증을 수행 하는 ASP.NET Core에 대 한 오픈 소스 Openid connect Connect 및 OAuth 2.0 프레임 워크입니다.
 
 모바일 앱은 사용자를 인증 하거나 리소스에 액세스 하기 위해 IdentityServer에서 보안 토큰을 요청 합니다. 리소스에 액세스할 때 권한 부여를 필요로 하는 Api에 대 한 요청에 액세스 토큰을 포함 해야 합니다. IdentityServer의 미들웨어는 들어오는 액세스 토큰의 유효성을 검사 하 여 신뢰할 수 있는 발급자 로부터 보내고이를 수신 하는 API에서 사용할 수 있는지 확인 합니다.
 

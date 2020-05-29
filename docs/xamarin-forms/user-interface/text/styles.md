@@ -1,33 +1,36 @@
 ---
-title: Xamarin.Forms 텍스트 스타일
-description: 이 문서에서는 설명 Xamarin.Forms 응용 프로그램에서 텍스트 스타일 지정 하는 방법입니다. 스타일을 한 번 정의 여러 뷰를 사용 하 고 있지만 한 가지 유형의 보기를 사용 하 여 스타일만 사용할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 66d7ae722281d9034cb4cdf1501662a7de396c2d
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: Xamarin.Forms텍스트 스타일
+description: 이 문서에서는 응용 프로그램에서 텍스트의 스타일을 지정 하는 방법을 설명 합니다 Xamarin.Forms . 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 79a86fd7a2c0f5b82ca4b3e22b3ecedf42c5a0ba
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70770247"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136151"
 ---
-# <a name="xamarinforms-text-styles"></a>Xamarin.Forms 텍스트 스타일
+# <a name="xamarinforms-text-styles"></a>Xamarin.Forms텍스트 스타일
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Xamarin.Forms에서 텍스트 스타일 지정_
+_Xamarin.ios에서 텍스트 스타일 지정_
 
-스타일은 레이블, 항목 및 편집기의 모양에 맞게 사용할 수 있습니다. 스타일을 한 번 정의 여러 뷰를 사용 하 고 있지만 한 가지 유형의 보기를 사용 하 여 스타일만 사용할 수 있습니다.
-스타일을 지정할 수는 `Key` 선택적으로 특정 컨트롤을 사용 하 여 적용 하 고 `Style` 속성입니다.
+스타일을 사용 하 여 레이블, 항목 및 편집기의 모양을 조정할 수 있습니다. 스타일은 한 번 정의 하 여 여러 뷰에서 사용할 수 있지만 스타일은 한 형식의 뷰에서만 사용할 수 있습니다.
+스타일에는를 지정 하 `Key` 고 특정 컨트롤의 속성을 사용 하 여 선택적으로 적용할 수 있습니다 `Style` .
 
 <a name="Built-In_Styles" />
 
 ## <a name="built-in-styles"></a>기본 제공 스타일
 
-Xamarin.Forms에 몇 [기본 제공](xref:Xamarin.Forms.Device.Styles) 일반적인 시나리오에 대 한 스타일:
+Xamarin.Forms에는 일반적인 시나리오에 대 한 여러 가지 [기본 제공](xref:Xamarin.Forms.Device.Styles) 스타일이 포함 되어 있습니다.
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -36,13 +39,13 @@ Xamarin.Forms에 몇 [기본 제공](xref:Xamarin.Forms.Device.Styles) 일반적
 - `SubtitleStyle`
 - `TitleStyle`
 
-기본 제공 스타일 중 하나를 적용 하려면 사용는 `DynamicResource` 태그 확장 스타일을 지정 하려면:
+기본 제공 스타일 중 하나를 적용 하려면 태그 확장을 사용 `DynamicResource` 하 여 스타일을 지정 합니다.
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
 ```
 
-C#에서 기본 제공 스타일에서 선택 `Device.Styles`:
+C #에서 기본 제공 스타일은 다음에서 선택 됩니다 `Device.Styles` .
 
 ```csharp
 label.Style = Device.Styles.TitleStyle;
@@ -54,9 +57,9 @@ label.Style = Device.Styles.TitleStyle;
 
 ## <a name="custom-styles"></a>사용자 지정 스타일
 
-스타일 setter 이루어진 setter 속성으로 구성 하 고 속성 값으로 설정 됩니다.
+스타일은 setter 및 setter로 구성 되며 속성 및 속성이 설정 될 값으로 구성 됩니다.
 
-C#에서는 30 크기의 빨간색 텍스트를 사용 하 여 레이블에 대 한 사용자 지정 스타일을 다음과 같이 정의 됩니다.
+C #에서 크기가 30 인 빨강 텍스트가 있는 레이블에 대 한 사용자 지정 스타일은 다음과 같이 정의 됩니다.
 
 ```csharp
 var LabelStyle = new Style (typeof(Label)) {
@@ -69,7 +72,7 @@ var LabelStyle = new Style (typeof(Label)) {
 var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 ```
 
-XAML:
+XAML에서:
 
 ```xaml
 <ContentPage.Resources>
@@ -88,7 +91,7 @@ XAML:
 </ContentPage.Content>
 ```
 
-리소스 (스타일을 모두 포함) 내에서 정의 되어 `ContentPage.Resources`에 더 친숙 한의 형제인 `ContentPage.Content` 요소입니다.
+리소스 (모든 스타일 포함)는 `ContentPage.Resources` 보다 친숙 한 요소의 형제 내에서 정의 됩니다 `ContentPage.Content` .
 
 ![사용자 지정 스타일 예제](styles-images/customstyle.png)
 
@@ -96,44 +99,44 @@ XAML:
 
 ## <a name="applying-styles"></a>스타일 적용
 
-일치 하는 모든 보기에 적용할 수는 스타일을 만든 후 해당 `TargetType`합니다.
+스타일을 만든 후에는와 일치 하는 모든 뷰에 적용할 수 있습니다 `TargetType` .
 
-XAML에서 사용자 지정 스타일에 적용 되 뷰를 제공 하 여 해당 `Style` 속성을 `StaticResource` 원하는 스타일을 참조 하는 태그 확장:
+XAML에서 사용자 지정 스타일은 원하는 스타일을 참조 하는 `Style` 태그 확장과 함께 속성을 제공 하 여 뷰에 적용 됩니다 `StaticResource` .
 
 ```xaml
 <Label Text="Check out my style." Style="{StaticResource LabelStyle}" />
 ```
 
-C#에서 스타일 중 하나 수는 뷰에 직접 적용 또는 추가할 메시지를 검색할 수는 페이지에서 `ResourceDictionary`합니다. 직접 추가 합니다.
+C #에서 스타일은 뷰에 직접 적용 하거나 페이지의에 추가 하 고 검색할 수 있습니다 `ResourceDictionary` . 직접 추가 하려면:
 
 ```csharp
 var label = new Label { Text = "Check out my style.", Style = LabelStyle };
 ```
 
-추가 하 고 페이지의 검색 `ResourceDictionary`:
+페이지의를 추가 하 고 검색 하려면 `ResourceDictionary` :
 
 ```csharp
 this.Resources.Add ("LabelStyle", LabelStyle);
 label.Style = (Style)Resources["LabelStyle"];
 ```
 
-기본 제공 스타일은 내게 필요한 옵션 설정에 응답 해야 하기 때문에 다르게 적용 됩니다. XAML의 기본 제공 스타일을 적용 하는 `DynamicResource` 태그 확장을 사용:
+기본 제공 스타일은 내게 필요한 옵션 설정에 응답 해야 하기 때문에 다르게 적용 됩니다. XAML에서 기본 제공 스타일을 적용 하려면 `DynamicResource` 태그 확장이 사용 됩니다.
 
 ```xaml
 <Label Text="I'm a Title" Style="{DynamicResource TitleStyle}"/>
 ```
 
-C#에서 기본 제공 스타일에서 선택 `Device.Styles`:
+C #에서 기본 제공 스타일은 다음에서 선택 됩니다 `Device.Styles` .
 
 ```csharp
 label.Style = Device.Styles.TitleStyle;
 ```
 
-## <a name="accessibility"></a>액세스 가능성
+## <a name="accessibility"></a>접근성
 
-기본 제공 스타일 쉽게 내게 필요한 옵션 기본 설정을 적용 하기 위해 존재 합니다. 기본 제공 스타일 중 하나를 사용 하면 글꼴 크기를 사용자가 내게 필요한 옵션 기본 설정을 적절 하 게 설정 하는 경우 자동으로 증가 합니다.
+기본 제공 스타일은 접근성 기본 설정을 보다 쉽게 적용할 수 있도록 하기 위해 존재 합니다. 기본 제공 스타일을 사용 하는 경우 사용자가 접근성 기본 설정을 적절 하 게 설정 하면 글꼴 크기가 자동으로 증가 합니다.
 
-내게 필요한 옵션 설정을 사용 하거나 사용 하지 않도록 설정으로 기본 스타일으로 스타일이 지정 된 보기의 동일한 페이지의 다음 예제를 살펴보세요.
+내게 필요한 옵션 설정을 사용 하도록 설정 하 고 사용 하지 않도록 설정 하 여 기본 제공 스타일로 스타일 지정 된 보기의 동일한 페이지에 대 한 다음 예를 살펴보겠습니다.
 
 사용 안 함:
 
@@ -143,11 +146,11 @@ label.Style = Device.Styles.TitleStyle;
 
 ![내게 필요한 옵션 기능이 설정 된 장치 스타일](styles-images/post-access.png)
 
-접근성을 위해 앱 내에서 모든 텍스트 관련 스타일에 대 한 기준으로 기본 제공 스타일을 사용 하 고 스타일을 일관 되 게 사용 중인지를 확인 합니다. 참조 [스타일](~/xamarin-forms/user-interface/styles/index.md) 확장 하 고 스타일을 사용 하 여 일반적인 작동에 대 한 자세한 내용은 합니다.
+내게 필요한 옵션을 보장 하기 위해 기본 제공 스타일을 앱 내에서 텍스트 관련 스타일의 기반으로 사용 하 고 스타일을 일관 되 게 사용 하 고 있는지 확인 합니다. 일반적으로 스타일을 확장 하 고 사용 하는 방법에 대 한 자세한 내용은 [스타일](~/xamarin-forms/user-interface/styles/index.md) 을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 
-- [12 장 Xamarin.Forms를 사용 하 여 모바일 앱 만들기](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
+- [을 사용 하 여 Mobile Apps 만들기 Xamarin.Forms , 12 장](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [스타일](~/xamarin-forms/user-interface/styles/index.md)
 - [텍스트 (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [스타일](xref:Xamarin.Forms.Style)

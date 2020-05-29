@@ -1,24 +1,27 @@
 ---
-title: IOS에서 ScrollView 콘텐츠 터치
-description: 플랫폼별을 사용 하면 사용자 지정 렌더러 또는 효과 구현 하지 않고도 에서만 특정 플랫폼에서 사용할 수 있는 기능을 사용할 수 있습니다. 이 문서에서는 ScrollView 터치 제스처를 처리할지 아니면 콘텐츠에 전달 하는지 여부를 제어 하는 iOS 플랫폼별를 사용 하는 방법을 설명 합니다.
-ms.prod: xamarin
-ms.assetid: 99F823DB-B379-40F0-A343-A9783C341120
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 154666cce4ad6c53949952fa93f5ad7dc89824ab
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9b8f743b2c3d7f4b38feb4cfc5015b1113620562
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651769"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137100"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>IOS에서 ScrollView 콘텐츠 터치
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-암시적 타이머를 터치 제스처 시작 되 면 트리거됩니다를 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) ios 및 `ScrollView` 타이머 범위 내의 사용자 동작을 기준으로 제스처 처리 또는 해당 콘텐츠를 전달 해야 하는지 여부를 결정 합니다. 기본적으로 iOS `ScrollView` 지연 콘텐츠 터치를 하지만 사용 하 여 일부 상황에서 문제를 일으킬 수이 있습니다는 `ScrollView` 하지 말아야 할 때 제스처를 최우선 콘텐츠입니다. 따라서이 플랫폼별 제어 하는지 여부를 `ScrollView` 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 설정 하 여 XAML에서 사용 되는 `ScrollView.ShouldDelayContentTouches` 연결 된 속성을 `boolean` 값:
+암시적 타이머는 [`ScrollView`](xref:Xamarin.Forms.ScrollView) `ScrollView` 제스처를 처리 하거나 해당 콘텐츠에 전달 해야 하는지 여부에 상관 없이 타이머 범위 내의 사용자 작업을 기반으로 하 여 iOS의에서 터치 제스처가 시작 되 고 결정 되는 경우에 트리거됩니다. 기본적으로 iOS는 `ScrollView` 콘텐츠를 지연 하지만,이로 인해 일부 상황에서는 콘텐츠가 제스처를 적용 `ScrollView` 하지 않는 경우 문제가 발생할 수 있습니다. 따라서이 플랫폼 특정은가 터치 제스처를 처리 하는지 아니면 콘텐츠에 전달 하는지 여부를 제어 `ScrollView` 합니다. 연결 된 속성을 값으로 설정 하 여 XAML에서 사용 됩니다 `ScrollView.ShouldDelayContentTouches` `boolean` .
 
 ```xaml
 <MasterDetailPage ...
@@ -39,7 +42,7 @@ ms.locfileid: "68651769"
 </MasterDetailPage>
 ```
 
-또는 fluent API를 사용 하 여 C#에서 사용할 수 있습니다.
+또는 흐름 API를 사용 하 여 c #에서 사용할 수 있습니다.
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -49,15 +52,15 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 scrollView.On<iOS>().SetShouldDelayContentTouches(false);
 ```
 
-`ScrollView.On<iOS>` 메서드가 플랫폼별 iOS에만 실행 되도록 지정 합니다. `ScrollView.SetShouldDelayContentTouches` 메서드, 합니다 [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 네임 스페이스에는 컨트롤에 있는지 여부를 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 터치 제스처를 처리 하거나 해당 콘텐츠를 전달 합니다. 또한 합니다 `SetShouldDelayContentTouches` 메서드를 호출 하 여 콘텐츠 터치 지연 설정/해제를 사용할 수는 `ShouldDelayContentTouches` 콘텐츠 터치 지연 되 고 있는지 여부를 반환 하는 방법.
+`ScrollView.On<iOS>`메서드는이 플랫폼별가 iOS 에서만 실행 되도록 지정 합니다. `ScrollView.SetShouldDelayContentTouches`네임 스페이스의 메서드를 [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) 사용 하 여이 [`ScrollView`](xref:Xamarin.Forms.ScrollView) 터치 제스처를 처리 하는지 또는 콘텐츠에 전달 하는지 여부를 제어 합니다. 또한 메서드를 `SetShouldDelayContentTouches` 호출 `ShouldDelayContentTouches` 하 여 콘텐츠 터치가 지연 되었는지 여부를 반환 하 여 콘텐츠를 지연 시키는 것을 전환 하는 데 메서드를 사용할 수 있습니다.
 
 ```csharp
 scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDelayContentTouches());
 ```
 
-결과 [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) 지연 되므로 콘텐츠 터치를 수신 사용 하지 않도록 설정할 수 있습니다이 시나리오에는 [ `Slider` ](xref:Xamarin.Forms.Slider) 제스처를 받는 대신 [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) 페이지의 [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage):
+결과적으로 [`ScrollView`](xref:Xamarin.Forms.ScrollView) ,이 시나리오에서가 [`Slider`](xref:Xamarin.Forms.Slider) 의 페이지 보다는 제스처를 수신 하기 때문에에서 콘텐츠가 수신 되는 지연을 사용 하지 않도록 설정할 수 있습니다 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) .
 
-[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "ScrollView 지연 콘텐츠 건드리면 플랫폼별")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "지연을 ScrollView 콘텐츠 건드리면 플랫폼별")
+[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Platform-Specific")
 
 ## <a name="related-links"></a>관련 링크
 

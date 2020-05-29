@@ -1,39 +1,42 @@
 ---
-title: SkiaSharp에서 단순 원 그리기
-description: 이 문서는 캔버스 및 그리기 개체를 포함 하 여 Xamarin.Forms 응용 프로그램에서 SkiaSharp 그리기의 기본 사항을 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: a0ab6a965c2507c01f5b7ebdc3670e6661ca481e
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+title: ''
+description: 이 문서에서는 응용 프로그램에서 캔버스 및 그리기 개체를 비롯 한 SkiaSharp drawing의 기본 사항을 설명 Xamarin.Forms 하 고 샘플 코드를 사용 하 여이를 보여 줍니다.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545637"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137724"
 ---
-# <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 단순 원 그리기
+# <a name="drawing-a-simple-circle-in-skiasharp"></a>SkiaSharp에서 간단한 원 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_개체를 그릴 및 캔버스를 포함 하 여 SkiaSharp 그리기 기본 사항 알아보기_
+_Canvas 및 paint 개체를 포함 하 여 SkiaSharp drawing의 기본 사항을 알아봅니다._
 
-SkiaSharp, 만드는 등을 사용 하 여 Xamarin.Forms에서 그래픽 그리기의 개념을 소개 하는이 문서는 `SKCanvasView` 처리 하는 그래픽을 호스트 하는 개체를 `PaintSurface` 이벤트를 사용 하 여를 `SKPaint` 색 및 다른 그리기를 지정 하는 개체 특성입니다.
+이 문서에서는 Xamarin.Forms `SKCanvasView` 그래픽을 호스트 하 고, `PaintSurface` 이벤트를 처리 하 고, 개체를 사용 하 여 `SKPaint` 색 및 기타 그리기 특성을 지정 하는 개체를 만드는 등 SkiaSharp를 사용 하 여 그래픽을 그리는 개념을 소개 합니다.
 
-합니다 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램이 SkiaSharp 문서이 시리즈에 대 한 모든 샘플 코드를 포함 합니다. 첫 번째 페이지 자격이 **단순 원** page 클래스를 호출 하 고 [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)합니다. 이 코드는 100 픽셀의 radius 사용 하 여 페이지의 가운데에 원을 그리는 방법을 보여 줍니다. 원 윤곽선은 빨간색이 고 원의 내부는 파란색입니다.
+[**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램에는이 일련의 SkiaSharp 아티클에 대 한 모든 샘플 코드가 포함 되어 있습니다. 첫 번째 페이지에는 **간단한 원이** 부여 되 고 page 클래스가 호출 됩니다 [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . 이 코드에서는 페이지의 중앙에서 반지름이 100 픽셀인 원을 그리는 방법을 보여 줍니다. 원의 윤곽선은 빨간색이 고 원의 내부는 파란색입니다.
 
 ![](circle-images/circleexample.png "A blue circle outlined in red")
 
-합니다 [ `SimpleCircle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page 클래스에서 파생 `ContentPage` 에 두 개의 및 `using` SkiaSharp 네임 스페이스에 대 한 지시문:
+[`SimpleCircle`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs)페이지 클래스는에서 파생 `ContentPage` 되며 `using` SkiaSharp 네임 스페이스에 대 한 두 개의 지시문을 포함 합니다.
 
 ```csharp
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 ```
 
-클래스의 다음 생성자를 만듭니다는 [ `SKCanvasView` ](xref:SkiaSharp.Views.Forms.SKCanvasView) 개체를 위한 처리기를 연결 합니다 [ `PaintSurface` ](xref:SkiaSharp.Views.Forms.SKCanvasView.PaintSurface) 이벤트 집합과 `SKCanvasView` 페이지의 내용으로 개체:
+클래스의 다음 생성자는 [`SKCanvasView`](xref:SkiaSharp.Views.Forms.SKCanvasView) 개체를 만들고, 이벤트에 대 한 처리기를 연결 하 [`PaintSurface`](xref:SkiaSharp.Views.Forms.SKCanvasView.PaintSurface) 고, 개체를 `SKCanvasView` 페이지의 콘텐츠로 설정 합니다.
 
 ```csharp
 public SimpleCirclePage()
@@ -46,9 +49,9 @@ public SimpleCirclePage()
 }
 ```
 
-`SKCanvasView` 페이지의 전체 콘텐츠 영역을 차지 합니다. 또는 결합할 수 있습니다는 `SKCanvasView` 다른 Xamarin.Forms를 사용 하 여 `View` 파생형 살펴보겠지만 다른 예제에서입니다.
+는 `SKCanvasView` 페이지의 전체 콘텐츠 영역을 차지 합니다. `SKCanvasView` Xamarin.Forms `View` 다른 예제에서 볼 수 있는 것 처럼 다른 파생 항목을와 결합할 수 있습니다.
 
-`PaintSurface` 이벤트 처리기가 모든 드로잉을 수행할 수 있습니다. 이 메서드 여러 번 프로그램이 실행 되는 동안, 그래픽 표시 되므로 다시 만드는 데 필요한 모든 정보를 보관 해야 합니다.
+`PaintSurface`이벤트 처리기는 모든 그리기를 수행 하는 위치입니다. 프로그램이 실행 되는 동안이 메서드를 여러 번 호출할 수 있으므로 그래픽 표시를 다시 만드는 데 필요한 모든 정보를 유지 관리 해야 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -58,16 +61,16 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-합니다 [ `SKPaintSurfaceEventArgs` ](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs) 이벤트와 함께 제공 되는 개체에 두 개의 속성이 있습니다.
+[`SKPaintSurfaceEventArgs`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs)이벤트와 함께 제공 되는 개체에는 두 가지 속성이 있습니다.
 
-- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info)([`SKImageInfo`](xref:SkiaSharp.SKImageInfo) 형식)
-- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface)([`SKSurface`](xref:SkiaSharp.SKSurface) 형식)
+- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info)유형[`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
+- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface)유형[`SKSurface`](xref:SkiaSharp.SKSurface)
 
-`SKImageInfo` 구조에 대 한 정보가 그리기 화면에 가장 중요 한 점은 너비와 높이 (픽셀)입니다. `SKSurface` 개체 자체 그리기 화면을 나타냅니다. 이 프로그램을 그리기 화면의 비디오 디스플레이 있지만 다른 프로그램에는 `SKSurface` 개체에 그릴 SkiaSharp를 사용 하는 비트맵을 나타낼 수도 있습니다.
+구조에는 `SKImageInfo` 그리기 화면에 대 한 정보 (가장 중요 한 것은 너비 및 높이 픽셀)가 포함 됩니다. `SKSurface`개체는 그리기 화면 자체를 나타냅니다. 이 프로그램에서 그리기 화면은 비디오 표시 이지만 다른 프로그램에서 `SKSurface` 개체는 SkiaSharp을 사용 하 여 그릴 때 사용 하는 비트맵을 나타낼 수도 있습니다.
 
-가장 중요 한 속성을 `SKSurface` 됩니다 [ `Canvas` ](xref:SkiaSharp.SKSurface.Canvas) 형식의 [ `SKCanvas` ](xref:SkiaSharp.SKCanvas)합니다. 이 클래스는 그리기 컨텍스트에 실제 그리기를 수행 하는 데 사용 하는 그래픽입니다. `SKCanvas` 개체 그래픽 변형과 클리핑 포함 된 그래픽 상태를 캡슐화 합니다.
+의 가장 중요 한 속성 `SKSurface` 은 [`Canvas`](xref:SkiaSharp.SKSurface.Canvas) 형식입니다 [`SKCanvas`](xref:SkiaSharp.SKCanvas) . 이 클래스는 실제 그리기를 수행 하는 데 사용 하는 그래픽 그리기 컨텍스트입니다. 개체는 그래픽 `SKCanvas` 변환과 클리핑을 포함 하는 그래픽 상태를 캡슐화 합니다.
 
-다음은 일반적인 시작을 `PaintSurface` 이벤트 처리기:
+이벤트 처리기의 일반적인 시작은 `PaintSurface` 다음과 같습니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -82,9 +85,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-합니다 [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) 메서드 투명 한 색을 사용 하 여 캔버스를 지웁니다. 오버 로드를 사용 하면 캔버스에 대 한 배경색을 지정할 수 있습니다.
+[`Clear`](xref:SkiaSharp.SKCanvas.Clear)메서드는 투명 한 색을 사용 하 여 캔버스를 지웁니다. 오버 로드를 사용 하면 캔버스의 배경색을 지정할 수 있습니다.
 
-여기서 목표는 파란색으로 채워진 빨간색 원을 그리려면입니다. 이 특정 그래픽 이미지의 두 가지 색상 들어 있으므로 작업 두 단계로 수행 해야 합니다. 첫 번째 단계는 원 윤곽선을 그립니다. 색 및 줄의 다른 특성을 지정 하려면 생성 및 초기화 된 [ `SKPaint` ](xref:SkiaSharp.SKPaint) 개체:
+여기서의 목표는 파란색으로 채워진 빨간색 원을 그리는 것입니다. 이 특정 그래픽 이미지에는 두 가지 색이 포함 되어 있으므로 작업을 두 단계로 수행 해야 합니다. 첫 번째 단계는 원의 윤곽선을 그리는 것입니다. 선의 색 및 기타 특성을 지정 하려면 개체를 만들고 초기화 합니다 [`SKPaint`](xref:SkiaSharp.SKPaint) .
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -100,19 +103,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-합니다 [ `Style` ](xref:SkiaSharp.SKPaint.Style) 속성을 원하는 지 나타냅니다 *스트로크* 줄 (이 경우 원 윤곽선) 대신 *채우기* 내부. 세 멤버를 [ `SKPaintStyle` ](xref:SkiaSharp.SKPaintStyle) 열거형은 다음과 같습니다.
+[`Style`](xref:SkiaSharp.SKPaint.Style)속성은 내부를 *채우지* 않고 선 (이 경우 원의 윤곽선)을 *스트로크* 하 려 함을 나타냅니다. 열거형의 세 가지 멤버는 다음과 같습니다 [`SKPaintStyle`](xref:SkiaSharp.SKPaintStyle) .
 
 - [`Fill`](xref:SkiaSharp.SKPaintStyle.Fill)
 - [`Stroke`](xref:SkiaSharp.SKPaintStyle.Stroke)
 - [`StrokeAndFill`](xref:SkiaSharp.SKPaintStyle.StrokeAndFill)
 
-기본값은 `Fill`입니다. 선을 스트로크 및 동일한 색을 사용 하 여 내부를 채우는 세 번째 옵션을 사용 합니다.
+기본값은 `Fill`입니다. 세 번째 옵션을 사용 하 여 선을 스트로크 하 고 동일한 색을 사용 하 여 내부를 채웁니다.
 
-설정 된 [ `Color` ](xref:SkiaSharp.SKPaint.Color) 속성 형식의 값을 [ `SKColor` ](xref:SkiaSharp.SKColor)합니다. 가져올 수는 `SKColor` 는 Xamarin.Forms를 변환 하 여 값이 `Color` 값을 `SKColor` 확장 메서드를 사용 하 여 값 [ `ToSKColor` ](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*). 합니다 [ `Extensions` ](xref:SkiaSharp.Views.Forms.Extensions) 클래스는 `SkiaSharp.Views.Forms` 네임 스페이스는 Xamarin.Forms 값과 SkiaSharp 값 간에 변환 하는 다른 메서드를 포함 합니다.
+속성을 [`Color`](xref:SkiaSharp.SKPaint.Color) 형식의 값으로 설정 합니다 [`SKColor`](xref:SkiaSharp.SKColor) . 값을 가져오는 한 가지 방법은 `SKColor` Xamarin.Forms `Color` `SKColor` 확장 메서드를 사용 하 여 값을 값으로 변환 하는 것입니다 [`ToSKColor`](xref:SkiaSharp.Views.Forms.Extensions.ToSKColor*) . [`Extensions`](xref:SkiaSharp.Views.Forms.Extensions)네임 스페이스의 클래스는 `SkiaSharp.Views.Forms` Xamarin.Forms 값과 SkiaSharp 값 사이를 변환 하는 다른 메서드를 포함 합니다.
 
-합니다 [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) 속성 선의 두께 나타냅니다. 여기에 25 픽셀에 설정 됩니다.
+[`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth)속성은 선의 두께를 나타냅니다. 여기서는 25 픽셀로 설정 됩니다.
 
-사용할 `SKPaint` 원을 그릴 개체:
+해당 개체를 사용 하 여 `SKPaint` 원을 그립니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -123,11 +126,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-디스플레이 화면의 왼쪽 위 모퉁이 기준으로 좌표를 지정 합니다. X를 오른쪽으로 증가 및 Y 좌표가 증가 다운 조정 합니다. 종종 그래픽에 대 한 자세한 내용은 수학 표기법 (x, y)가 시점을 나타내는 데 사용 됩니다. 점 (0, 0)을 디스플레이 화면의 왼쪽 위 모퉁이 이며 라고 합니다 *원본*합니다.
+좌표는 표시 표면의 왼쪽 위 모퉁이를 기준으로 지정 됩니다. X 좌표가 오른쪽으로 증가 하 고 Y 좌표가 증가 합니다. 그래픽에 대해 설명 하는 것 처럼 종종 수학적 표기법 (x, y)을 사용 하 여 점을 나타냅니다. 점 (0, 0)은 표시 표면의 왼쪽 위 모퉁이가 며 일반적으로 *원점*이라고 합니다.
 
-처음 두 인수 `DrawCircle` 원의 중심의 X 및 Y 좌표를 나타냅니다. 이러한 원의 중심을 디스플레이 화면의 가운데에 삽입할 너비와 높이 디스플레이 화면의 절반에 할당 됩니다. 세 번째 인수는 원의 반지름을 지정 하 고 마지막 인수는는 `SKPaint` 개체입니다.
+의 처음 두 인수는 `DrawCircle` 원 중심의 X 및 Y 좌표를 표시 합니다. 이는 표시 표면의 너비와 높이에 할당 되어 표시 표면의 중심에 원 중심을 배치 합니다. 세 번째 인수는 원의 반경을 지정 하 고 마지막 인수는 `SKPaint` 개체입니다.
 
-내부를 채우는 서클의,의 두 가지 속성을 변경할 수 있습니다 합니다 `SKPaint` 개체와 호출 `DrawCircle` 다시 합니다. 이 코드에는 또한 가져오기 하는 대체 방법을 보여 줍니다는 `SKColor` 의 여러 필드 중 하나에서 값을 [ `SKColors` ](xref:SkiaSharp.SKColors) 구조:
+원의 내부를 채우도록 개체의 두 속성을 변경 하 `SKPaint` 고을 다시 호출할 수 있습니다 `DrawCircle` . 또한이 코드는 `SKColor` 구조체의 여러 필드 중 하나에서 값을 가져오는 다른 방법을 보여 줍니다 [`SKColors`](xref:SkiaSharp.SKColors) .
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -139,24 +142,24 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-이 이번에는 `DrawCircle` 호출의 새 속성을 사용 하 여 원을 채웁니다는 `SKPaint` 개체입니다.
+이번에는 `DrawCircle` 호출에서 개체의 새 속성을 사용 하 여 원을 채웁니다 `SKPaint` .
 
 IOS 및 Android에서 실행 되는 프로그램은 다음과 같습니다.
 
 [![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
 
-프로그램을 직접 실행 하는 경우 휴대폰 또는 그래픽을 다시 그리면 하는 방법을 보려면 옆으로 돌려 시뮬레이터를 설정할 수 있습니다. 그래픽을 다시 그려야 할 때마다는 `PaintSurface` 이벤트 처리기가 다시 호출 합니다.
+프로그램을 직접 실행 하는 경우 휴대폰 또는 시뮬레이터를 사용 하 여 그래픽을 다시 그리는 방법을 볼 수 있습니다. 그래픽을 다시 그려야 할 때마다 `PaintSurface` 이벤트 처리기가 다시 호출 됩니다.
 
-그라데이션 또는 타일 비트맵 그래픽 개체에 색 수 이기도 합니다. 이러한 옵션에 섹션에서 설명 됩니다 [ **SkiaSharp 셰이더**](../effects/shaders/index.md)합니다.
+또한 그라데이션 또는 비트맵 타일이 포함 된 그래픽 개체를 색으로 지정할 수 있습니다. 이러한 옵션은 [**SkiaSharp 셰이더**](../effects/shaders/index.md)의 섹션에서 설명 합니다.
 
-`SKPaint` 개체 그래픽 그리기 속성의 컬렉션 보다 약간 더 합니다. 이러한 개체는 간단 합니다. 다시 사용할 수 있습니다 `SKPaint` 이 프로그램은, 또는 여러 개 만들 수 있습니다 개체 `SKPaint` 속성 그리기의 다양 한 조합에 대 한 개체입니다. 만들고 외부에서 이러한 개체를 초기화할 수는 `PaintSurface` 고 이벤트 처리기에에서 저장할 수 필드로 page 클래스.
+`SKPaint`개체는 그래픽 그리기 속성의 컬렉션 보다 약간 더 적습니다. 이러한 개체는 간단 합니다. `SKPaint`이 프로그램에서 사용 하는 개체를 다시 사용 하거나 `SKPaint` 다양 한 그리기 속성 조합에 대 한 여러 개체를 만들 수 있습니다. 이벤트 처리기 외부에서 이러한 개체를 만들고 초기화할 수 있으며,이 개체를 `PaintSurface` 페이지 클래스에 필드로 저장할 수 있습니다.
 
 > [!NOTE]
-> 합니다 `SKPaint` 클래스 정의 [ `IsAntialias` ](xref:SkiaSharp.SKPaint.IsAntialias) 앤티 앨리어싱을 그래픽 렌더링에 사용할 수 있도록 합니다. 앤티 앨리어싱을 시각적으로 부드러운 가장자리에서이 속성을 설정 하 고 싶을 하므로 일반적으로 발생 `true` 대부분의 프로그램 `SKPaint` 개체입니다. 에서는 편의 위해가이 속성은 _되지_ 대부분의 샘플 페이지에서 설정 합니다.
+> `SKPaint`클래스는 [`IsAntialias`](xref:SkiaSharp.SKPaint.IsAntialias) 그래픽의 렌더링에서 앤티앨리어싱을 사용할 수 있도록를 정의 합니다. 앤티앨리어싱을 통해 일반적으로 시각적으로 더 부드러운 가장자리가 생성 되므로 대부분의 개체에서이 속성을로 설정할 수 있습니다 `true` `SKPaint` . 간단한 설명을 위해이 속성은 대부분의 샘플 페이지에서 설정 _되지 않습니다_ .
 
-원 윤곽선의 너비를 각각 25 픽셀인으로 지정 하지만 &mdash; 또는 원의 반지름의 1/4 &mdash; 얇 것 이며에 이유가: 파란색 원에서 줄의 너비 절반가 려 지 합니다. 에 대 한 인수는 `DrawCircle` 메서드 원의 추상 지리 좌표를 정의 합니다. 가장 가까운 픽셀에 해당 차원에 파란색 내부 크기가 있지만 25 픽셀 너비 윤곽선 포괄 기하학적 원 &mdash; 내부 및 외부의 절반에 반 합니다.
+원 윤곽선의 너비가 25 픽셀 또는 원 반지름의 1/4로 지정 된 경우에도 더 &mdash; &mdash; 가늘게 보이는 것 처럼 보입니다. 선의 너비는 파란색 원으로 가려져 있는 것이 좋습니다. 메서드에 대 한 인수는 `DrawCircle` 원의 추상 기하학적 좌표를 정의 합니다. 파란색 내부는 해당 차원에 가장 가까운 픽셀까지 크기가 지정 되지만 25 픽셀의 윤곽선은 &mdash; 바깥쪽의 안쪽 및 절반에 있는 기하학적 원을 cmio 합니다.
 
-다음 샘플은 [Xamarin.Forms를 사용 하 여 통합](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) 문서 시각적으로이에서는 합니다.
+문서 [와 통합 Xamarin.Forms ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) 하는 다음 샘플에서는이를 시각적으로 보여 줍니다.
 
 ## <a name="related-links"></a>관련 링크
 

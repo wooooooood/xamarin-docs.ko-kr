@@ -1,18 +1,21 @@
 ---
-title: SkiaSharp 그리기 기본 사항
-description: 이 가이드에서는 SkiaSharp 그래픽 개념 및 좌표 Xamarin.Forms 응용 프로그램에서의 기본 사항을 설명 합니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: 7f4f02c62da1807438cc3f9e81a89b62684a91a2
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: 이 가이드에서는 SkiaSharp 그래픽 개념 및 응용 프로그램의 좌표에 대 한 기본 사항을 설명 합니다 Xamarin.Forms .
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fd82f7ffe135c12c9dfc59c3353d7d9f5d73068c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68657100"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137711"
 ---
 # <a name="skiasharp-drawing-basics"></a>SkiaSharp 그리기 기본 사항
 
@@ -20,37 +23,37 @@ ms.locfileid: "68657100"
 
 _SkiaSharp 그래픽 개념 및 좌표의 기본 사항 알아보기_
 
-Xamarin.Forms 응용 프로그램에 SkiaSharp NuGet 패키지를 추가한 후 SkiaSharp 그래픽을 사용 하 여 시작할 수 있습니다. 합니다 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 솔루션 SkiaSharp 점진적으로 더 많은 고급 단원에서 프로그래밍 기법을 보여 주는 다양 한 페이지를 포함 합니다.
+응용 프로그램에 SkiaSharp NuGet 패키지를 추가한 후 Xamarin.Forms SkiaSharp 그래픽을 사용할 수 있습니다. [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 솔루션에는 점점 더 고급 단원에서 SkiaSharp 프로그래밍 기법을 보여 주는 다양 한 페이지가 포함 되어 있습니다.
 
-제목 아래에서이 섹션의 샘플 프로그램을 모두 표시 **SkiaSharp 그리기 기본 사항** 의 홈 페이지에는 [ **SkiaSharpFormsDemos** ](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램에는 [ **기본 사항을** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) 솔루션의 폴더입니다.
+이 단원의 모든 샘플 프로그램은 [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) 프로그램 홈페이지의 **SkiaSharp Drawing 기본 사항** 및 솔루션의 [**기본**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) 폴더에 표시 됩니다.
 
-## <a name="drawing-a-simple-circlecirclemd"></a>[단순 원 그리기](circle.md)
+## <a name="drawing-a-simple-circle"></a>[단순 원 그리기](circle.md)
 
-개체를 그릴 하 고 캔버스를 포함 하 여 SkiaSharp 그리기의 기본 사항을 알아봅니다.
+Canvas 및 paint 개체를 포함 하 여 SkiaSharp drawing의 기본 사항을 알아봅니다.
 
-## <a name="integrating-with-xamarinformsintegrationmd"></a>[Xamarin.Forms와 통합](integration.md)
+## <a name="integrating-with-xamarinformsintegrationmd"></a>[통합Xamarin.Forms](integration.md)
 
-입력 및 Xamarin.Forms 요소를 사용 하 여 통합 터치에 응답 하 여 대화형 SkiaSharp 그래픽을 만듭니다.
+터치 입력에 응답 하 고 요소와 통합 하 여 대화형 SkiaSharp 그래픽을 만듭니다 Xamarin.Forms .
 
-## <a name="pixels-and-device-independent-unitspixelsmd"></a>[픽셀 및 장치 독립적 단위](pixels.md)
+## <a name="pixels-and-device-independent-units"></a>[픽셀 및 디바이스 독립적 단위](pixels.md)
 
-SkiaSharp 좌표 및 Xamarin.Forms 좌표 간의 차이점을 살펴봅니다.
+SkiaSharp 좌표와 좌표 간의 차이점을 살펴봅니다 Xamarin.Forms .
 
-## <a name="basic-animationanimationmd"></a>[기본 애니메이션](animation.md)
+## <a name="basic-animation"></a>[기본 애니메이션](animation.md)
 
-SkiaSharp 그래픽에 애니메이션을 적용 하는 방법을 알아봅니다.
+SkiaSharp 그래픽에 애니메이션 효과를 주는 방법에 대해 알아봅니다.
 
-## <a name="integrating-text-and-graphicstextmd"></a>[텍스트와 그래픽 통합](text.md)
+## <a name="integrating-text-and-graphics"></a>[텍스트와 그래픽 통합](text.md)
 
-SkiaSharp 그래픽을 사용 하 여 텍스트를 통합 하는 렌더링 된 텍스트 문자열의 크기를 확인 하는 방법을 참조 하세요.
+SkiaSharp 그래픽과 텍스트를 통합 하려면 렌더링 된 텍스트 문자열의 크기를 확인 하는 방법을 참조 하세요.
 
-## <a name="bitmap-basicsbitmapsmd"></a>[비트맵 기본 사항](bitmaps.md)
+## <a name="bitmap-basics"></a>[비트맵 기본 사항](bitmaps.md)
 
-다양 한 원본에서 비트맵을 로드 하 고 표시 합니다.
+다양 한 소스에서 비트맵을 로드 하 고 표시 합니다.
 
-## <a name="transparencytransparencymd"></a>[투명도](transparency.md)
+## <a name="transparency"></a>[투명도](transparency.md)
 
-복합 장면에 여러 이미지를 결합 하려면 투명도 사용 합니다.
+여러 이미지를 복합 장면으로 결합 하려면 투명도를 사용 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

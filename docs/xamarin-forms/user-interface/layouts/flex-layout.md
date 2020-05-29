@@ -1,29 +1,32 @@
 ---
-title: Xamarin.ios의 레이아웃
-description: 자식 보기의 컬렉션을 누적 하거나 래핑하는 데는는 안 됩니다.
-ms.prod: xamarin
-ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
-ms.technology: xamarin-forms
-ms.custom: xamu-video
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/07/2018
-ms.openlocfilehash: 507f78bf887d8d11e93a5a6a1f7d074c55e69360
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: 가는 Xamarin.Forms 레이아웃
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 031a846b7546c204d45c7437acd829d6cb49bfbb
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149963"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137217"
 ---
-# <a name="the-xamarinforms-flexlayout"></a>Xamarin.ios의 레이아웃
+# <a name="the-xamarinforms-flexlayout"></a>가는 Xamarin.Forms 레이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _자식 보기의 컬렉션을 누적 하거나 래핑하는 데는는 안 됩니다._
 
-Xamarin.ios는 [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) xamarin.ios 버전 3.0에 새로 있습니다. 이는 레이아웃 내에서 자식을 정렬 하는 여러 유연한 _옵션을 포함_하기 때문에 _일반적으로 사용_ 되는 CSS [유연한 상자 레이아웃 모듈](https://www.w3.org/TR/css-flexbox-1/)을 기반으로 합니다.
+는 Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) 버전 3.0에서 새로 만들기 되었습니다 Xamarin.Forms . 이는 레이아웃 내에서 자식을 정렬 하는 여러 유연한 _옵션을 포함_하기 때문에 _일반적으로 사용_ 되는 CSS [유연한 상자 레이아웃 모듈](https://www.w3.org/TR/css-flexbox-1/)을 기반으로 합니다.
 
-`FlexLayout`는 [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) 해당 자식을 스택에서 가로 및 세로로 정렬할 수 있다는 점에서 xamarin.ios와 비슷합니다. 그러나는 `FlexLayout` 단일 행 이나 열에 맞지 않는 경우에도 자식을 래핑할 수 있으며, 다양 한 화면 크기에 대 한 방향, 맞춤 및 조정에 대 한 다양 한 옵션을 포함 하 고 있습니다.
+`FlexLayout`는 Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) 스택에서 가로 및 세로 방향으로 자식을 정렬할 수 있다는 점에서와 비슷합니다. 그러나는 `FlexLayout` 단일 행 이나 열에 맞지 않는 경우에도 자식을 래핑할 수 있으며, 다양 한 화면 크기에 대 한 방향, 맞춤 및 조정에 대 한 다양 한 옵션을 포함 하 고 있습니다.
 
 `FlexLayout`에서 파생 되 [`Layout<View>`](xref:Xamarin.Forms.Layout`1) 고 [`Children`](xref:Xamarin.Forms.Layout`1.Children) 형식의 속성을 상속 `IList<View>` 합니다.
 
@@ -609,11 +612,11 @@ Android 스크린샷에서 `Shrink` 두 번째의 값은 `Label` 0으로 설정 
 
 ## <a name="css-styling-with-flexlayout"></a>가는 레이아웃을 사용 하는 CSS 스타일
 
-와의 연결에서 Xamarin. Forms 3.0에 도입 된 [CSS 스타일](~/xamarin-forms/user-interface/styles/css/index.md) 지정 기능을 사용할 수 있습니다 `FlexLayout` . ' 트 레이아웃 **[데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** '의 **css 카탈로그 항목** 페이지는 **카탈로그 항목** 페이지의 레이아웃을 복제 하지만 대부분의 스타일에 대 한 css 스타일 시트를 포함 합니다.
+와 연결 된 3.0에 도입 된 [CSS 스타일](~/xamarin-forms/user-interface/styles/css/index.md) 지정 기능을 사용할 수 있습니다 Xamarin.Forms `FlexLayout` . ' 트 레이아웃 **[데모](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** '의 **css 카탈로그 항목** 페이지는 **카탈로그 항목** 페이지의 레이아웃을 복제 하지만 대부분의 스타일에 대 한 css 스타일 시트를 포함 합니다.
 
 [![CSS 카탈로그 항목 페이지](flex-layout-images/CssCatalogItems.png "CSS 카탈로그 항목 페이지")](flex-layout-images/CssCatalogItems-Large.png#lightbox)
 
-원래 **CatalogItemsPage** 파일의 `Style` 섹션에는 15 개의 개체가 있는 5 개의 정의가 있습니다 `Resources` `Setter` . **CssCatalogItemsPage** 파일에서 4 개의 개체만 포함 하는 두 개의 정의로 줄었습니다 `Style` `Setter` . 이러한 스타일은 Xamarin.ios CSS 스타일 기능이 현재 지원 하지 않는 속성에 대 한 CSS 스타일 시트를 보완 합니다.
+원래 **CatalogItemsPage** 파일의 `Style` 섹션에는 15 개의 개체가 있는 5 개의 정의가 있습니다 `Resources` `Setter` . **CssCatalogItemsPage** 파일에서 4 개의 개체만 포함 하는 두 개의 정의로 줄었습니다 `Style` `Setter` . 이러한 스타일은 Xamarin.Forms css 스타일 기능이 현재 지원 하지 않는 속성에 대 한 css 스타일 시트를 보완 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -738,7 +741,7 @@ button {
 
 > [!VIDEO https://youtube.com/embed/Ng3sel_5D_0]
 
-**Xamarin.ios 3.0 Flex 레이아웃 비디오**
+**Xamarin.Forms3.0 Flex 레이아웃 비디오**
 
 ## <a name="related-links"></a>관련 링크
 

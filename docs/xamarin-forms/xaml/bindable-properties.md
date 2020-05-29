@@ -1,20 +1,23 @@
 ---
-title: Xamarin.ios 바인딩 가능 속성
-description: 이 문서에서는 바인딩 가능한 속성에 대해 소개 하 고 이러한 속성을 만들고 사용 하는 방법을 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/16/2020
-ms.openlocfilehash: 4151ac6f8cd9d860251ce1f27c7b342e0caa465c
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.Forms바인딩 가능한 속성
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425782"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138179"
 ---
-# <a name="xamarinforms-bindable-properties"></a>Xamarin.ios 바인딩 가능 속성
+# <a name="xamarinforms-bindable-properties"></a>Xamarin.Forms바인딩 가능한 속성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
@@ -28,7 +31,7 @@ ms.locfileid: "83425782"
 - 속성 값의 유효성을 검사 합니다.
 - 속성 변경 내용을 모니터링 합니다.
 
-Xamarin.ios 바인딩 가능 속성의 예로는 [`Label.Text`](xref:Xamarin.Forms.Label.Text) , [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) 및가 [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) 있습니다. 바인딩 가능한 각 속성에는 `public static readonly` [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 동일한 클래스에서 노출 되는 형식의 해당 필드와 바인딩 가능한 속성의 식별자가 있습니다. 예를 들어 속성에 대 한 해당 바인딩 가능한 속성 식별자는 `Label.Text` [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty) 입니다.
+바인딩 가능한 속성의 예로는 Xamarin.Forms [`Label.Text`](xref:Xamarin.Forms.Label.Text) , [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) 및가 [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) 있습니다. 바인딩 가능한 각 속성에는 `public static readonly` [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 동일한 클래스에서 노출 되는 형식의 해당 필드와 바인딩 가능한 속성의 식별자가 있습니다. 예를 들어 속성에 대 한 해당 바인딩 가능한 속성 식별자는 `Label.Text` [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty) 입니다.
 
 ## <a name="create-a-bindable-property"></a>바인딩 가능한 속성 만들기
 
@@ -43,14 +46,14 @@ Xamarin.ios 바인딩 가능 속성의 예로는 [`Label.Text`](xref:Xamarin.For
 
 인스턴스를 만들려면 `BindableProperty` 포함 하는 클래스가 클래스에서 파생 되어야 합니다 [`BindableObject`](xref:Xamarin.Forms.BindableObject) . 그러나 클래스는 클래스 `BindableObject` 계층 구조의 상위 클래스 이므로 사용자 인터페이스 기능에 사용 되는 대부분의 클래스는 바인딩 가능한 속성을 지원 합니다.
 
-바인딩 가능한 속성은 형식의 속성을 선언 하 여 만들 수 있습니다 `public static readonly` [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 바인딩 가능한 속성은 메서드 오버 로드 중 하나의 반환 된 값으로 설정 되어야 합니다 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) . 선언은 파생 클래스의 본문 내에 [`BindableObject`](xref:Xamarin.Forms.BindableObject) 있지만 멤버 정의 외부에 있어야 합니다.
+바인딩 가능한 속성은 형식의 속성을 선언 하 여 만들 수 있습니다 `public static readonly` [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . 바인딩 가능한 속성은 [ `BindableProperty.Create` ] (f:) 중 하나의 반환 된 값으로 설정 해야 합니다 Xamarin.Forms . BindableProperty. Create (System.string, System.string, System.string, System.object, Xamarin.Forms . BindingMode, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. BindingPropertyChangedDelegate, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. CreateDefaultValueDelegate) 메서드 오버 로드 선언은 파생 클래스의 본문 내에 [`BindableObject`](xref:Xamarin.Forms.BindableObject) 있지만 멤버 정의 외부에 있어야 합니다.
 
 최소한 다음 매개 변수와 함께를 만들 때 식별자를 지정 해야 합니다 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) .
 
 - 의 이름 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 입니다.
 - 속성의 형식입니다.
 - 소유 하는 개체의 형식입니다.
-- 속성의 기본값입니다. 이렇게 하면 속성이 설정 되지 않은 경우 속성은 항상 특정 기본값을 반환 하 고 속성의 형식에 대 한 기본값과 다를 수 있습니다. [`ClearValue`](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty))바인딩 가능한 속성에 대해 메서드를 호출 하면 기본값이 복원 됩니다.
+- 속성의 기본값입니다. 이렇게 하면 속성이 설정 되지 않은 경우 속성은 항상 특정 기본값을 반환 하 고 속성의 형식에 대 한 기본값과 다를 수 있습니다. [ `ClearValue` ] (F:)를 사용할 때 기본값이 복원 Xamarin.Forms 됩니다. BindableObject. ClearValue ( Xamarin.Forms . BindableProperty) 메서드는 바인딩 가능한 속성에 대해 호출 됩니다.
 
 다음 코드에서는 네 개의 필수 매개 변수에 대 한 식별자 및 값을 사용 하 여 바인딩 가능한 속성의 예를 보여 줍니다.
 
@@ -72,7 +75,7 @@ public static readonly BindableProperty EventNameProperty =
 
 ### <a name="create-accessors"></a>접근자 만들기
 
-속성 구문을 사용 하 여 바인딩 가능한 속성에 액세스 하려면 속성 접근자가 필요 합니다. `Get`접근자는 해당 하는 바인딩 가능 속성에 포함 된 값을 반환 해야 합니다. 이는 메서드를 호출 하 고 [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) 값을 가져올 바인딩 가능한 속성 식별자를 전달한 다음 결과를 필요한 형식으로 캐스팅 하 여 수행할 수 있습니다. 접근자는 해당 하는 `Set` 바인딩 가능한 속성의 값을 설정 해야 합니다. 이는 메서드를 호출 하 고 [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) , 값을 설정할 바인딩 가능한 속성 식별자를 전달 하 고, 설정할 값을 전달 하 여 수행할 수 있습니다.
+속성 구문을 사용 하 여 바인딩 가능한 속성에 액세스 하려면 속성 접근자가 필요 합니다. `Get`접근자는 해당 하는 바인딩 가능 속성에 포함 된 값을 반환 해야 합니다. 이는 [ `GetValue` ] (f:)를 호출 하 여 수행할 수 있습니다 Xamarin.Forms . BindableObject. GetValue ( Xamarin.Forms . BindableProperty)) 메서드는 값을 가져올 바인딩 가능한 속성 식별자를 전달 하 고 결과를 필요한 형식으로 캐스팅 합니다. 접근자는 해당 하는 `Set` 바인딩 가능한 속성의 값을 설정 해야 합니다. 이는 [ `SetValue` ] (f:)를 호출 하 여 수행할 수 있습니다 Xamarin.Forms . BindableObject. SetValue ( Xamarin.Forms . BindableProperty, System.object) 메서드는 값을 설정할 바인딩 가능한 속성 식별자와 설정할 값을 전달 합니다.
 
 다음 코드 예제에서는 바인딩 가능한 속성에 대 한 접근자를 보여 줍니다 `EventName` .
 
@@ -123,7 +126,7 @@ listView.Behaviors.Add (new EventToCommandBehavior
 
 ### <a name="detect-property-changes"></a>속성 변경 내용 검색
 
-`static`속성 변경 콜백 메서드는 `propertyChanged` 메서드에 대 한 매개 변수를 지정 하 여 바인딩 가능한 속성을 사용 하 여 등록할 수 있습니다 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) . 바인딩 가능한 속성 값이 변경 되 면 지정 된 콜백 메서드가 호출 됩니다.
+`static`속성 변경 콜백 메서드는 `propertyChanged` []에 대 한 매개 변수 `BindableProperty.Create` (f:)를 지정 하 여 바인딩 가능한 속성을 사용 하 여 등록할 수 있습니다 Xamarin.Forms . BindableProperty. Create (System.string, System.string, System.string, System.object, Xamarin.Forms . BindingMode, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. BindingPropertyChangedDelegate, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. CreateDefaultValueDelegate) 메서드. 바인딩 가능한 속성 값이 변경 되 면 지정 된 콜백 메서드가 호출 됩니다.
 
 다음 코드 예제에서는 `EventName` 바인딩 `OnEventNameChanged` 가능한 속성이 메서드를 속성 변경 콜백 메서드로 등록 하는 방법을 보여 줍니다.
 
@@ -143,7 +146,7 @@ static void OnEventNameChanged (BindableObject bindable, object oldValue, object
 
 ### <a name="validation-callbacks"></a>유효성 검사 콜백
 
-`static` `validateValue` 메서드에 대 한 매개 변수를 지정 하 여 바인딩 가능한 속성을 사용 하 여 유효성 검사 콜백 메서드를 등록할 수 있습니다 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) . 바인딩 가능한 속성 값이 설정 되 면 지정 된 콜백 메서드가 호출 됩니다.
+`static`유효성 검사 콜백 메서드는 `validateValue` []에 대 한 매개 변수 `BindableProperty.Create` (f:)를 지정 하 여 바인딩 가능한 속성을 사용 하 여 등록할 수 있습니다 Xamarin.Forms . BindableProperty. Create (System.string, System.string, System.string, System.object, Xamarin.Forms . BindingMode, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. BindingPropertyChangedDelegate, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. CreateDefaultValueDelegate) 메서드. 바인딩 가능한 속성 값이 설정 되 면 지정 된 콜백 메서드가 호출 됩니다.
 
 다음 코드 예제에서는 `Angle` 바인딩 `IsValidValue` 가능한 속성이 메서드를 유효성 검사 콜백 메서드로 등록 하는 방법을 보여 줍니다.
 
@@ -164,7 +167,7 @@ static bool IsValidValue (BindableObject view, object value)
 
 ### <a name="coerce-value-callbacks"></a>강제 값 콜백
 
-`static` `coerceValue` 메서드에 대 한 매개 변수를 지정 하 여 바인딩 가능한 속성을 사용 하 여 강제 값 콜백 메서드를 등록할 수 있습니다 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) . 바인딩 가능한 속성 값이 변경 되 면 지정 된 콜백 메서드가 호출 됩니다.
+`static` `coerceValue` [ `BindableProperty.Create` ] (F:)에 대 한 매개 변수를 지정 하 여 바인딩 가능한 속성을 사용 하 여 강제 값 콜백 메서드를 등록할 수 있습니다 Xamarin.Forms . BindableProperty. Create (System.string, System.string, System.string, System.object, Xamarin.Forms . BindingMode, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. BindingPropertyChangedDelegate, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty, Xamarin.Forms . BindableProperty. CreateDefaultValueDelegate) 메서드. 바인딩 가능한 속성 값이 변경 되 면 지정 된 콜백 메서드가 호출 됩니다.
 
 > [!IMPORTANT]
 > 형식에는 해당 `BindableObject` `CoerceValue` `BindableProperty` 강제 값 콜백을 호출 하 여 인수 값을 강제로 재평가 하기 위해 호출할 수 있는 메서드가 있습니다.
@@ -210,7 +213,7 @@ public static readonly BindableProperty SizeProperty =
   defaultValueCreator: bindable => Device.GetNamedSize (NamedSize.Large, (Label)bindable));
 ```
 
-`defaultValueCreator`매개 변수는 `Func` [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) `double` [`Label`](xref:Xamarin.Forms.Label) 네이티브 플랫폼의에서 사용 되는 글꼴의 명명 된 크기를 나타내는를 반환 하기 위해 메서드를 호출 하는로 설정 됩니다.
+`defaultValueCreator`매개 변수는 `Func` [ `Device.GetNamedSize` ] (f:)를 호출 하는로 설정 됩니다 Xamarin.Forms . 장치. GetNamedSize ( Xamarin.Forms . NamedSize, system.string)) 메서드는 `double` 네이티브 플랫폼의에서 사용 되는 글꼴의 명명 된 크기를 나타내는을 반환 합니다 [`Label`](xref:Xamarin.Forms.Label) .
 
 ## <a name="related-links"></a>관련 링크
 

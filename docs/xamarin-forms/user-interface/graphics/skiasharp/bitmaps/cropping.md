@@ -1,40 +1,43 @@
 ---
-title: SkiaSharp 비트맵 자르기
-description: SkiaSharp 사용 하 여 대화형으로 설명 하는 자르기 사각형의 사용자 인터페이스를 디자인 하는 방법에 알아봅니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: e9ba34dfcbdf041cb9bce7f277da3987acf9fec8
-ms.sourcegitcommit: c9651cad80c2865bc628349d30e82721c01ddb4a
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6c5e340818b702d79a1157f29c1ecec19bf1db76
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228236"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139947"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-합니다 [ **만들고 그리기 SkiaSharp 비트맵** ](drawing.md) 하는 방법을 설명 하는 문서를 `SKBitmap` 개체를 전달할 수는 `SKCanvas` 생성자입니다. 비트맵에 렌더링 되는 캔버스 원인 그래픽 라는 모든 그리기 메서드. 이러한 그리기 메서드를 포함 `DrawBitmap`, 즉,이 기술은 한 비트맵의 전체 또는 일부 다른 비트맵 아마도 사용 하 여 전송 적용 되는 변환을 허용함.
+[**SkiaSharp 비트맵 만들기 및 그리기**](drawing.md) 문서에서는 `SKBitmap` 개체를 생성자에 전달 하는 방법을 설명 `SKCanvas` 했습니다. 해당 캔버스에 대해 호출 된 모든 그리기 메서드로 인해 그래픽이 비트맵에서 렌더링 됩니다. 이러한 그리기 메서드는 `DrawBitmap` 를 포함 합니다. 즉,이 기술을 사용 하면 변환 적용 시 한 비트맵의 일부 또는 전체를 다른 비트맵으로 전송할 수 있습니다.
 
-비트맵을 호출 하 여 자르기에 대 한 해당 기법을 사용할 수는 [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) 소스 및 대상 사각형을 사용 하 여 메서드:
+[`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint))소스 및 대상 사각형을 사용 하 여 메서드를 호출 하 여 비트맵을 자르는 데이 방법을 사용할 수 있습니다.
 
 ```csharp
 canvas.DrawBitmap(bitmap, sourceRect, destRect);
 ```
 
-그러나 종종 자르기 구현 하는 응용 프로그램을 대화형으로 자르기 사각형을 선택할 사용자에 대 한 인터페이스를 제공 합니다.
+그러나 잘라내기를 구현 하는 응용 프로그램은 종종 사용자가 자르기 사각형을 대화형으로 선택 하기 위한 인터페이스를 제공 합니다.
 
-![샘플 자르기](cropping-images/CroppingSample.png "샘플 자르기")
+![자르기 샘플](cropping-images/CroppingSample.png "자르기 샘플")
 
-이 문서는 해당 인터페이스에 중점을 둡니다.
+이 문서에서는 해당 인터페이스에 대해 집중적으로 설명 합니다.
 
-## <a name="encapsulating-the-cropping-rectangle"></a>자르기 사각형을 캡슐화합니다.
+## <a name="encapsulating-the-cropping-rectangle"></a>자르기 사각형 캡슐화
 
-라는 클래스에는 자르기 논리 중 일부를 격리 하는 것이 유용 `CroppingRectangle`합니다. 생성자 매개 변수는 잘리지 비트맵의 크기는 일반적으로 최대 직사각형을 및 선택적 가로 세로 비율이 포함 됩니다. 생성자는 먼저 공개에 있도록 초기 자르기 사각형을 정의 합니다 `Rect` 형식의 속성 `SKRect`합니다. 이 초기 자르기 사각형 비트맵 사각형의 높이 및 너비의 80% 이지만 가로 세로 비율을 지정 하는 경우 다음 조정 됩니다.
+이라는 클래스에서 자르기 논리를 분리 하는 것이 유용 `CroppingRectangle` 합니다. 생성자 매개 변수에는 최대 사각형 (일반적으로 잘라내는 비트맵의 크기 및 가로 세로 비율)이 포함 됩니다. 생성자는 먼저 형식의 속성에서 공용으로 설정 되는 초기 자르기 사각형을 정의 합니다 `Rect` `SKRect` . 이 초기 자르기 사각형은 비트맵 사각형의 너비와 높이의 80% 이지만 가로 세로 비율을 지정 하면 조정 됩니다.
 
 ```csharp
 class CroppingRectangle
@@ -82,7 +85,7 @@ class CroppingRectangle
 }
 ```
 
-한 가지 유용한 정보는 `CroppingRectangle` 도 사용할 수 있도록 설정의 배열이 `SKPoint` 왼쪽 위, 오른쪽 위, 아래 오른쪽 및 왼쪽 아래 순서로 자르기 사각형의 네 모퉁이에 해당 하는 값:
+사용할 수 있는 유용한 정보 중 하나는 `CroppingRectangle` `SKPoint` 왼쪽 위, 오른쪽 위, 오른쪽 아래 및 왼쪽 아래 순서 대로 자르기 사각형의 네 모퉁이에 해당 하는 값의 배열입니다.
 
 ```csharp
 class CroppingRectangle
@@ -105,7 +108,7 @@ class CroppingRectangle
 }
 ```
 
-이 배열 이라고 하는 다음 메서드는 `HitTest`합니다. `SKPoint` 매개 변수는 지점에 해당 하는 손가락 터치 또는 마우스를 클릭 합니다. 인덱스 (0, 1, 2 또는 3)를 반환 하 여 지정 된 거리 내 손가락이 나 마우스 포인터를 작업 하는 모퉁이에 해당 합니다 `radius` 매개 변수: 
+이 배열은를 호출 하는 다음 메서드에서 사용 됩니다 `HitTest` . `SKPoint`매개 변수는 손가락 터치 또는 마우스 클릭에 해당 하는 지점입니다. 메서드는 매개 변수로 지정 된 거리 내에서 손가락 또는 마우스 포인터가 접촉 한 모퉁이에 해당 하는 인덱스 (0, 1, 2 또는 3)를 반환 합니다 `radius` . 
 
 ```csharp
 class CroppingRectangle
@@ -131,9 +134,9 @@ class CroppingRectangle
 }
 ```
 
-터치 또는 마우스 지점이 없는 경우 내 `radius` 메서드가 반환 하는 모든 모퉁이의 단위 &ndash;1입니다.
+터치 또는 마우스 지점이 모퉁이의 단위 내에 있지 않은 경우이 `radius` 메서드는 1을 반환 &ndash; 합니다.
 
-마지막 메서드로 `CroppingRectangle` 라고 `MoveCorner`, 터치 또는 마우스를 이동에 대 한 응답에서 이라고 합니다. 두 매개 변수 인덱스 이동 하는 모퉁이 및 해당 모퉁이의 새 위치를 나타냅니다. 자르기 사각형의 모퉁이 있지만 범위 내에서 항상 새 위치를 기반으로 조정 하는 메서드의 첫 번째 절반 `maxRect`, 비트맵의 크기는 합니다. 이 논리도 고려 합니다 `MINIMUM` nothing 자르기 사각형을 축소 하지 않으려면 필드:
+의 마지막 메서드는 `CroppingRectangle` `MoveCorner` 터치 또는 마우스 이동에 대 한 응답으로 호출 되는입니다. 두 매개 변수는 이동 중인 모퉁이의 인덱스와 해당 모퉁이의 새 위치를 표시 합니다. 메서드의 첫 번째 절반은 모퉁이의 새 위치를 기준으로 자르기 사각형을 조정 하지만 항상 비트맵 크기인의 범위 내에 `maxRect` 있습니다. 또한이 논리 `MINIMUM` 는 자르기 사각형을 아무 것도 축소 하지 않도록 필드의 계정을 사용 합니다.
 
 ```csharp
 class CroppingRectangle
@@ -203,15 +206,15 @@ class CroppingRectangle
 }
 ```
 
-메서드의 두 번째 절반에서는 선택적 가로 세로 비율을 조정합니다.
+메서드의 두 번째 절반은 선택적 가로 세로 비율에 맞게 조정 됩니다.
 
-이 클래스의 모든 픽셀 단위로 점을 염두에 두십시오.
+이 클래스의 모든 항목은 픽셀 단위를 염두에 두어야 합니다.
 
-## <a name="a-canvas-view-just-for-cropping"></a>자르기에 대 한 캔버스 뷰
+## <a name="a-canvas-view-just-for-cropping"></a>자르기만을 위한 캔버스 뷰
 
-`CroppingRectangle` 방금 살펴봤습니다 클래스를 사용 합니다 `PhotoCropperCanvasView` 클래스에서 파생 되는 `SKCanvasView`합니다. 이 클래스는 자르기 사각형 변경에 대 한 터치 또는 마우스 이벤트를 처리할 수 있을 뿐만 아니라 비트맵 및 자르기 사각형을 표시 하는 일을 담당 합니다.
+`CroppingRectangle`방금 살펴본 클래스는 `PhotoCropperCanvasView` 에서 파생 되는 클래스에서 사용 됩니다 `SKCanvasView` . 이 클래스는 자르기 사각형의 변경에 대 한 터치 또는 마우스 이벤트를 처리 하는 것 뿐만 아니라 비트맵과 자르기 사각형을 표시 합니다.
 
-`PhotoCropperCanvasView` 생성자 비트맵에 필요 합니다. 가로 세로 비율은 선택 사항입니다. 생성자는 형식의 개체를 인스턴스화합니다 `CroppingRectangle` 이 비트맵 및 가로 세로 비율을 기반으로 하며 필드로 저장 합니다.
+생성자에는 `PhotoCropperCanvasView` 비트맵이 필요 합니다. 가로 세로 비율은 선택 사항입니다. 생성자는 `CroppingRectangle` 이 비트맵 및 가로 세로 비율을 기반으로 형식의 개체를 인스턴스화하고 필드로 저장 합니다.
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -232,7 +235,7 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-이 클래스에서 파생 되므로 `SKCanvasView`에 대 한 처리기를 설치 하지 않아도 `PaintSurface` 이벤트입니다. 대신을 재정의할 수 있습니다 해당 `OnPaintSurface` 메서드. 메서드는 비트맵을 표시 하 고 몇 가지를 사용 하 여 `SKPaint` 현재 자르기 사각형을 그릴 필드로 저장 된 개체:
+이 클래스는에서 파생 되므로 `SKCanvasView` 이벤트에 대 한 처리기를 설치할 필요가 없습니다 `PaintSurface` . 대신 메서드를 재정의할 수 있습니다 `OnPaintSurface` . 메서드는 비트맵을 표시 하 고 필드로 저장 된 몇 가지 개체를 사용 하 여 `SKPaint` 현재 자르기 사각형을 그립니다.
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -312,11 +315,11 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-코드는 `CroppingRectangle` 클래스 자르기 사각형 비트맵의 픽셀 크기를 기반 합니다. 그러나 하 여 비트맵의 표시를 `PhotoCropperCanvasView` 클래스 표시 영역의 크기에 따라 확장 됩니다. `bitmapScaleMatrix` 에서 계산 된 `OnPaintSurface` 표시 되는 비트맵의 위치 및 크기가 비트맵 픽셀의 지도 재정의 합니다. 이 매트릭스 비트맵을 기준으로 표시 될 수 있도록 자르기 사각형을 변환에 사용 됩니다.
+클래스의 코드는 `CroppingRectangle` 자르기 사각형을 비트맵의 픽셀 크기에 기반으로 합니다. 그러나 클래스에의 한 비트맵 표시는 `PhotoCropperCanvasView` 표시 영역의 크기를 기준으로 크기가 조정 됩니다. `bitmapScaleMatrix`재정의에서 계산 된는 `OnPaintSurface` 비트맵 픽셀에서 비트맵의 크기 및 위치 (표시 되는 경우)로 매핑됩니다. 그런 다음이 매트릭스를 사용 하 여 비트맵을 기준으로 표시 될 수 있도록 자르기 사각형을 변환 합니다.
 
-마지막 줄을 `OnPaintSurface` 재정의의 역함수 값을 사용 합니다 `bitmapScaleMatrix` 로 저장 하 고는 `inverseBitmapMatrix` 필드. 터치 처리를 위해 사용 됩니다.
+재정의의 마지막 줄은의 `OnPaintSurface` 역함수를 사용 하 여 `bitmapScaleMatrix` 필드로 저장 합니다 `inverseBitmapMatrix` . 터치 처리에 사용 됩니다.
 
-`TouchEffect` 필드로 개체가 인스턴스화되고 생성자에 처리기를 연결 합니다 `TouchAction` 이벤트 하지만 `TouchEffect` 에 추가 해야는 `Effects` 의 컬렉션을 _부모_ 합니다 의`SKCanvasView`완료 되도록 파생 된 `OnParentSet` 재정의:
+`TouchEffect`개체는 필드로 인스턴스화되고 생성자는 이벤트에 처리기를 연결 `TouchAction` 하지만를 `TouchEffect` `Effects` 파생의 _부모_ 에 대 한 컬렉션에 추가 해야 `SKCanvasView` 하므로 재정의에서 수행 됩니다 `OnParentSet` .
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -405,13 +408,13 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-터치 이벤트 처리는 `TouchAction` 처리기는 장치 독립적 단위입니다. 먼저 사용 하 여 픽셀 변환할 필요가 합니다 `ConvertToPixel` 클래스의 맨 아래에 있는 메서드를 변환한 후 `CroppingRectangle` 사용 하 여 단위 `inverseBitmapMatrix`.
+처리기에서 처리 하는 터치 이벤트는 `TouchAction` 장치 독립적 단위에 있습니다. 이러한 첫 번째는 클래스 아래쪽의 메서드를 사용 하 여 픽셀로 변환 된 `ConvertToPixel` 다음를 `CroppingRectangle` 사용 하 여 단위로 변환 해야 `inverseBitmapMatrix` 합니다.
 
-에 대 한 `Pressed` 이벤트를 `TouchAction` 처리기 호출을 `HitTest` 메서드의 `CroppingRectangle`합니다. 이외의 인덱스를 반환 하는 경우 &ndash;1 다음 자르기 사각형의 모서리 중 하나를 조작 중인 합니다. 인덱스 및 모서리에서 실제 터치 지점의 오프셋에 저장 되는 `TouchPoint` 개체를 추가할는 `touchPoints` 사전입니다.
+이벤트의 경우 `Pressed` `TouchAction` 처리기는의 메서드를 호출 합니다 `HitTest` `CroppingRectangle` . 이가 1이 아닌 인덱스를 반환 하면 &ndash; 자르기 사각형의 모퉁이 중 하나가 조작 됩니다. 이 인덱스와 모퉁이에서 실제 터치 지점의 오프셋은 개체에 저장 되 `TouchPoint` 고 사전에 추가 됩니다 `touchPoints` .
 
-에 대 한 합니다 `Moved` 이벤트를 `MoveCorner` 메서드의 `CroppingRectangle` 가로 세로 비율에 대 한 가능한 조정 모퉁이 이동 하기 위해 호출 됩니다.
+이벤트의 경우 `Moved` `MoveCorner` 의 메서드를 `CroppingRectangle` 호출 하 여 가로 세로 비율을 조정할 수 있는 모퉁이를 이동 합니다.
 
-언제 든 지 사용 하 여 프로그램이 `PhotoCropperCanvasView` 액세스할 수는 `CroppedBitmap` 속성입니다. 이 속성에 사용 되는 `Rect` 의 속성을 `CroppingRectangle` 자른된 크기의 새 비트맵을 만들 수입니다. 버전 `DrawBitmap` 대상 및 소스를 사용 하 여 사각형 다음 추출 원래 비트맵의 하위 집합:
+언제 든 지를 사용 하는 프로그램은 `PhotoCropperCanvasView` 속성에 액세스할 수 있습니다 `CroppedBitmap` . 이 속성은 `Rect` 의 속성을 사용 `CroppingRectangle` 하 여 잘린 크기의 새 비트맵을 만듭니다. `DrawBitmap`대상 및 원본 사각형이 있는의 버전은 원래 비트맵의 하위 집합을 추출 합니다.
 
 ```csharp
 class PhotoCropperCanvasView : SKCanvasView
@@ -443,9 +446,9 @@ class PhotoCropperCanvasView : SKCanvasView
 }
 ```
 
-## <a name="hosting-the-photo-cropper-canvas-view"></a>사진 cropper 캔버스 뷰를 호스팅
+## <a name="hosting-the-photo-cropper-canvas-view"></a>Photo cropper canvas 뷰 호스팅
 
-자르기 논리를 처리 하는 이러한 두 클래스를 사용 하 여는 **사진 자르기** 페이지에 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에 거의 작업을 수행 합니다. XAML 파일은는 `Grid` 호스트에는 `PhotoCropperCanvasView` 와 **수행** 단추:
+자르기 논리를 처리 하는 이러한 두 클래스를 사용 하 여 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 **사진 자르기** 페이지에서 수행할 작업은 거의 없습니다. XAML 파일은를 인스턴스화하고 `Grid` `PhotoCropperCanvasView` **Done** 단추를 호스팅합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -472,9 +475,9 @@ class PhotoCropperCanvasView : SKCanvasView
 </ContentPage>
 ```
 
-합니다 `PhotoCropperCanvasView` 형식의 매개 변수가 필요 하기 때문에 XAML 파일에서 인스턴스화할 수 없습니다 `SKBitmap`합니다.
+는 `PhotoCropperCanvasView` 형식의 매개 변수가 필요 하므로 XAML 파일에서 인스턴스화할 수 없습니다 `SKBitmap` .
 
-대신는 `PhotoCropperCanvasView` 리소스 비트맵 중 하나를 사용 하 여 코드 숨김 파일의 생성자에서 인스턴스화됩니다.
+대신 `PhotoCropperCanvasView` 리소스 비트맵 중 하나를 사용 하 여 코드를 사용 하는 파일의 생성자에서가 인스턴스화됩니다.
 
 ```csharp
 public partial class PhotoCroppingPage : ContentPage
@@ -514,31 +517,31 @@ public partial class PhotoCroppingPage : ContentPage
 }
 ```
 
-그런 다음 자르기 사각형을 조작할 수 있습니다.:
+그러면 사용자가 자르기 사각형을 조작할 수 있습니다.
 
-[![Cropper 1 사진](cropping-images/PhotoCropping1.png "Cropper 1 사진")](cropping-images/PhotoCropping1-Large.png#lightbox)
+[![사진 Cropper 1](cropping-images/PhotoCropping1.png "사진 Cropper 1")](cropping-images/PhotoCropping1-Large.png#lightbox)
 
-정의한 좋은 자르기 사각형을 클릭 합니다 **수행** 단추입니다. `Clicked` 처리기에서 자른된 비트맵을 가져옵니다 합니다 `CroppedBitmap` 속성을 `PhotoCropperCanvasView`를 새 페이지의 모든 콘텐츠를 대체 하 고 `SKCanvasView` 이 자른된 비트맵을 표시 하는 개체:
+적절 한 자르기 사각형이 정의 되 면 **완료** 단추를 클릭 합니다. `Clicked`처리기는의 속성에서 잘린 비트맵을 가져오고 `CroppedBitmap` `PhotoCropperCanvasView` 페이지의 모든 내용을 `SKCanvasView` 이 잘린 비트맵을 표시 하는 새 개체로 바꿉니다.
 
-[![Cropper 2 사진](cropping-images/PhotoCropping2.png "Cropper 2 사진")](cropping-images/PhotoCropping2-Large.png#lightbox)
+[![사진 Cropper 2](cropping-images/PhotoCropping2.png "사진 Cropper 2")](cropping-images/PhotoCropping2-Large.png#lightbox)
 
-두 번째 인수를 설정 해 보려면 `PhotoCropperCanvasView` 1.78f (예:)을 합니다.
+의 두 번째 인수 `PhotoCropperCanvasView` 를 1.78이 f (예:)로 설정 해 봅니다.
 
 ```csharp
 photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 ```
 
-높음-텔레비전의 특성에 16-9 가로 세로 비율 제한 자르기 사각형을 볼 수 있습니다.
+높은 정의 텔레비전의 16-9 가로 세로 비율 특성으로 제한 되는 자르기 사각형을 볼 수 있습니다.
 
 <a name="tile-division" />
 
-## <a name="dividing-a-bitmap-into-tiles"></a>비트맵을 타일로 분
+## <a name="dividing-a-bitmap-into-tiles"></a>비트맵을 타일로 분할
 
-책의 22 장에에서 표시 되는 유명한 Xamarin.Forms 버전 14 ~ 15 퍼즐 [ _Creating Mobile Apps with Xamarin.Forms_ ](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 로 다운로드할 수 있습니다 [  **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)합니다. 그러나 퍼즐 됩니다 더 재미 있게 (및 더 까다로운 종종) 자신의 사진 라이브러리에서 이미지에 기반 하는 경우.
+Xamarin.FormsXamagonXuzzle를 [_사용 하 여 Mobile Apps를 만드는_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 22 장에서 발췌 한 유명한 14-15 퍼즐의 버전은 [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)로 다운로드할 수 있습니다. 그러나 퍼즐은 사용자의 사진 라이브러리의 이미지를 기반으로 하는 경우에 더 재미 있고 자주 사용 하기가 더 어려워집니다.
 
-14 ~ 15 퍼즐의이 버전의 일부인 합니다 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램에는 일련의 페이지가 이라는 구성 됩니다 **사진 퍼즐**.
+이 버전의 14-15 퍼즐은 **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** 응용 프로그램의 일부 이며 **사진 퍼즐**이라는 일련의 페이지로 구성 됩니다.
 
-합니다 **PhotoPuzzlePage1.xaml** 구성 파일을 `Button`:
+**PhotoPuzzlePage1** 파일은 다음으로 구성 됩니다 `Button` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -554,7 +557,7 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 </ContentPage>
 ```
 
-코드 숨김 파일을 구현 하는 `Clicked` 처리기를 사용 하는 `IPhotoLibrary` 종속성 서비스 사용자가 사진 라이브러리에서 사진을 선택:
+코드 숨김이 파일은 `Clicked` 종속성 서비스를 사용 하 여 `IPhotoLibrary` 사용자가 사진 라이브러리에서 사진을 선택할 수 있도록 하는 처리기를 구현 합니다.
 
 ```csharp
 public partial class PhotoPuzzlePage1 : ContentPage
@@ -580,11 +583,11 @@ public partial class PhotoPuzzlePage1 : ContentPage
 }
 ```
 
-메서드는 다음으로 이동 `PhotoPuzzlePage2`선택한 비트맵 생성자에 전달 합니다.
+그런 다음이 메서드는를 탐색 하 여 `PhotoPuzzlePage2` 선택한 비트맵을 생성자에 전달 합니다.
 
-사진 라이브러리에 표시 되 고 있지만 회전 또는 거꾸로 라이브러리에서 선택한 사진 지향 아님을 가능성이 있습니다. (IOS 장치를 나열 하는 특히 문제가 됩니다.) 이런 이유로 `PhotoPuzzlePage2` 원하는 방향으로 이미지를 회전할 수 있습니다. XAML 파일에 레이블이 지정 된 세 가지 단추가 **90&#x00B0; 오른쪽** (즉 시계 방향으로), **90&#x00B0; 왼쪽** (시계 반대 방향으로), 및 **완료**.
+라이브러리에서 선택 된 사진이 사진 라이브러리에 표시 되는 것과 다른 방향으로 진행 되는 것이 아니라 회전 또는 대칭 이동 될 수 있습니다. 특히 iOS 장치에 문제가 있는 것입니다. 따라서에서는 이미지를 `PhotoPuzzlePage2` 원하는 방향으로 회전할 수 있습니다. XAML 파일에는 **90&#x00B0; 오른쪽** (시계 방향), **90&#x00B0; 왼쪽** (시계 반대) 및 **완료**레이블이 지정 된 세 개의 단추가 있습니다.
 
-이 문서에 표시 된 비트맵 회전 논리를 구현 하는 코드 숨김 파일을  **[만들고 SkiaSharp 비트맵에 드로잉](drawing.md#rotating-bitmaps)** 합니다. 사용자 이미지를 시계 방향 또는 시계 반대 방향으로 90도 원하는 횟수 만큼 회전 수 있습니다.: 
+코드 숨김이 **[SkiaSharp 비트맵에서 만들기 및 그리기](drawing.md#rotating-bitmaps)** 문서에 표시 된 비트맵 회전 논리를 구현 합니다. 사용자는 이미지를 90도 시계 방향으로, 시계 반대 방향으로 회전할 수 있습니다. 
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -647,11 +650,11 @@ public partial class PhotoPuzzlePage2 : ContentPage
 }
 ```
 
-클릭할 때를 **수행** 단추를 `Clicked` 처리기로 이동 `PhotoPuzzlePage3`, 최종 회전된 비트맵 페이지의 생성자에 전달 합니다.
+사용자가 **완료** 단추를 클릭 하면 처리기가 `Clicked` 로 이동 하 여 `PhotoPuzzlePage3` 페이지의 생성자에서 최종 회전 된 비트맵을 전달 합니다.
 
-`PhotoPuzzlePage3` 잘라야 사진을 허용 합니다. 프로그램-4x4 표 형태 타일을 나누는 데 사각형 비트맵에 필요 합니다.
+`PhotoPuzzlePage3`사진을 자를 수 있습니다. 이 프로그램을 사용 하려면 타일의 4 x 4 모눈으로 나누는 사각형 비트맵이 필요 합니다.
 
-**PhotoPuzzlePage3.xaml** 파일에는 `Label`, `Grid` 호스트에는 `PhotoCropperCanvasView`, 또 다른 **수행** 단추:
+**PhotoPuzzlePage3** 파일에는를 `Label` `Grid` 호스트 하는 `PhotoCropperCanvasView` 및 다른 **완료** 단추를 포함 합니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -685,7 +688,7 @@ public partial class PhotoPuzzlePage2 : ContentPage
 </ContentPage>
 ```
 
-코드 숨김 파일을 인스턴스화하는 `PhotoCropperCanvasView` 해당 생성자에 전달 된 비트맵입니다. 1은 두 번째 인수로 전달 되는 알림 `PhotoCropperCanvasView`합니다. 1의 가로 세로 비율이이 강제로 정사각형이 자르기 사각형:
+코드를 사용 하는 파일은 해당 생성자에 전달 된 비트맵을 사용 하 여를 인스턴스화합니다 `PhotoCropperCanvasView` . 1은에 대 한 두 번째 인수로 전달 됩니다 `PhotoCropperCanvasView` . 이 가로 세로 비율 1은 자르기 사각형을 사각형으로 강제 합니다.
 
 ```csharp
 public partial class PhotoPuzzlePage3 : ContentPage
@@ -736,31 +739,31 @@ public partial class PhotoPuzzlePage3 : ContentPage
 }
 ```
 
-합니다 **수행** 단추 처리기 (이 두 값 같아야) 자른된 비트맵의 높이 너비를 가져오고 다음 1/4는 각각 별도 비트맵 15 나눕니다 원래 높이 너비입니다. (가능한 16 비트맵의 마지막 생성 되지 않습니다.) `DrawBitmap` 원본 및 대상 사각형을 사용 하 여 메서드 비트맵을 더 큰 비트맵의 하위 집합에 따라 만들 수 있습니다.
+**완료** 단추 처리기는 잘린 비트맵의 너비와 높이를 가져온 다음 (이 두 값은 동일 해야 함) 15 개의 개별 비트맵으로 나눕니다. 각 비트맵은 원래 1/4의 너비와 높이를 각각 합니다. 가능 하면 16 개의 비트맵 중 마지막 비트맵이 생성 되지 않습니다. `DrawBitmap`원본 및 대상 사각형이 있는 메서드를 사용 하면 큰 비트맵의 하위 집합을 기반으로 비트맵을 만들 수 있습니다.
 
-## <a name="converting-to-xamarinforms-bitmaps"></a>Xamarin.Forms 비트맵으로 변환
+## <a name="converting-to-xamarinforms-bitmaps"></a>비트맵으로 변환 Xamarin.Forms
 
-에 `OnDoneButtonClicked` 메서드를 15 비트맵 만든 배열 유형임 [ `ImageSource` ](xref:Xamarin.Forms.ImageSource):
+`OnDoneButtonClicked`메서드에서 15 개의 비트맵에 대해 만들어진 배열은 [`ImageSource`](xref:Xamarin.Forms.ImageSource) 다음과 같습니다.
 
 ```csharp
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` 비트맵을 캡슐화 하는 Xamarin.Forms 기본 형식이입니다. 다행 스럽게도 SkiaSharp 비트맵 Xamarin.Forms에서 SkiaSharp 비트맵 변환할 수 있습니다. **SkiaSharp.Views.Forms** 어셈블리 정의 [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) 에서 파생 된 클래스 `ImageSource` SkiaSharp을 따라 만들 수 있습니다 하지만 `SKBitmap` 개체입니다. `SKBitmapImageSource` 간의 변환도 정의 `SKBitmapImageSource` 및 `SKBitmap`, 및는 어떻게 `SKBitmap` 개체 Xamarin.Forms 비트맵으로 배열에 저장 됩니다:
+`ImageSource`는 Xamarin.Forms 비트맵을 캡슐화 하는 기본 형식입니다. 다행히 SkiaSharp는 SkiaSharp 비트맵에서 비트맵으로의 변환을 허용 Xamarin.Forms 합니다. **SkiaSharp** 어셈블리는 [`SKBitmapImageSource`](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) 에서 파생 되는 클래스를 정의 `ImageSource` 하지만 SkiaSharp 개체를 기반으로 만들 수 있습니다 `SKBitmap` . `SKBitmapImageSource`는 및 간의 변환만 `SKBitmapImageSource` 정의 `SKBitmap` 하며,이는 `SKBitmap` 개체가 배열에 비트맵으로 저장 되는 방식입니다 Xamarin.Forms .
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 ```
 
-이 배열을 비트맵을 생성자로 전달 됩니다 `PhotoPuzzlePage4`합니다. 해당 페이지는 Xamarin.Forms 완전히 및 모든 SkiaSharp 사용 하지 않습니다. 매우 비슷합니다 [ **XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)이므로 여기서 설명 하지는 않지만 15 정사각형 타일로 구분 하 여 선택한 사진 표시:
+이 비트맵 배열은에 생성자로 전달 됩니다 `PhotoPuzzlePage4` . 해당 페이지는 완전히 Xamarin.Forms SkiaSharp 사용 하지 않습니다. [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)와 매우 유사 하기 때문에 여기서는 설명 하지 않지만 선택한 사진을 15 개의 사각형 타일로 표시 합니다.
 
-[![퍼즐 1 사진](cropping-images/PhotoPuzzle1.png "퍼즐 1 사진")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
+[![사진 퍼즐 1](cropping-images/PhotoPuzzle1.png "사진 퍼즐 1")](cropping-images/PhotoPuzzle1-Large.png#lightbox)
 
-키를 눌러 합니다 **임의** 모든 타일을 혼합 하는 단추:
+[ **임의** ] 단추를 누르면 모든 타일이 혼합 됩니다.
 
-[![퍼즐 2 사진](cropping-images/PhotoPuzzle2.png "퍼즐 2 사진")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
+[![사진 퍼즐 2](cropping-images/PhotoPuzzle2.png "사진 퍼즐 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-이제 올바른 순서로 이러한을 넣을 수 있습니다. 빈 사각형 폴더로 이동 하 동일한 행 또는 열을 빈 사각형의 모든 타일을 탭 할 수 있습니다. 
+이제 올바른 순서 대로 다시 배치할 수 있습니다. 빈 사각형으로 동일한 행 또는 열에 있는 모든 타일을 탭 하 여 빈 사각형으로 이동할 수 있습니다. 
 
 ## <a name="related-links"></a>관련 링크
 

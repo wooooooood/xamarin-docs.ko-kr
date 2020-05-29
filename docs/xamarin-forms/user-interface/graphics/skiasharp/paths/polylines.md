@@ -1,48 +1,51 @@
 ---
-title: 폴리라인 및 파라메트릭 수식
-description: 이 문서에서는 어떻게 렌더링을 사용 하 여 SkiaSharp에 모든 줄 매개 방정식을 사용 하 여 정의할 수 있습니다 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: f635e6e20a4cec9b8cc735bc733b678263cd024a
-ms.sourcegitcommit: 57f815bf0024b1afe9754c0e28054fc0a53ce302
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b435e99180791b64e0a8ad975527fb3cb5316b7d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70759172"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84140220"
 ---
 # <a name="polylines-and-parametric-equations"></a>폴리라인 및 파라메트릭 수식
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_SkiaSharp 매개 방정식을 사용 하 여 정의할 수 있는 모든 줄을 렌더링 하는 데_
+_SkiaSharp를 사용 하 여 패라메트릭 방정식으로 정의할 수 있는 선을 렌더링 합니다._
 
-에 [ **SkiaSharp 곡선 및 경로** ](../curves/index.md) 섹션이이 가이드의 다양 한 방법을 볼 수는 [ `SKPath` ](xref:SkiaSharp.SKPath) 렌더링 특정 종류의 곡선을 정의 합니다. 그러나 경우가 유형의에서 직접 지원 하지 않는 곡선을 그리는 데 필요한 `SKPath`합니다. 이런 경우, 수학적으로 정의할 수 있는 모든 곡선을 그릴 다중선 (연결 된 선 컬렉션)를 사용할 수 있습니다. 줄을 충분히 작게를 다양 한 충분히 결과 모양은 곡선입니다. 이 나선형 3,600 거의 줄 실제로 같습니다.
+이 가이드의 [**SkiaSharp 곡선 및 경로**](../curves/index.md) 섹션에는 [`SKPath`](xref:SkiaSharp.SKPath) 특정 유형의 곡선을 렌더링 하기 위해 정의 하는 다양 한 메서드가 표시 됩니다. 그러나에서 직접 지원 하지 않는 곡선의 형식을 그려야 하는 경우도 있습니다 `SKPath` . 이러한 경우에는 폴리라인 (연결 된 선의 컬렉션)를 사용 하 여 수학적으로 정의할 수 있는 곡선을 그릴 수 있습니다. 줄 수를 충분히 작게 설정 하면 결과는 곡선 처럼 보입니다. 이 나선형은 실제로 3600 작은 줄입니다.
 
-![](polylines-images/spiralexample.png "나선형")
+![](polylines-images/spiralexample.png "A spiral")
 
-일반적으로 매개 방정식의 쌍을 기준으로 곡선을 정의 하는 것이 좋습니다. X 및 Y 좌표는 수식 됩니다 라고도, 세 번째 변수가 종속 `t` 시간에 대 한 합니다. 다음 파라메트릭 수식에 대 한 원 중심 점 (0, 0)에 1의 반지름을 정의 하는 예를 들어 *t* 0에서 1:
+일반적으로 패라메트릭 방정식 쌍의 측면에서 곡선을 정의 하는 것이 가장 좋습니다. 이는 세 번째 변수에 종속 된 X 및 Y 좌표의 방정식으로, 때때로 `t` 시간에 대해 호출 됩니다. 예를 들어 다음 패라메트릭 방정식은 0에서 1 사이의 지점 (0, 0 *)에 중점* 을 둘 수 있는 원을 정의 합니다.
 
 `x = cos(2πt)`
 
 `y = sin(2πt)`
 
- 반지름을 1 보다 큰 하려는 경우 단순히 해당 radius 사인 및 코사인 값을 곱한를 중앙의 다른 위치로 이동 해야 하는 경우 해당 값을 추가:
+ 반지름이 1 보다 큰 경우에는 해당 반지름을 기준으로 사인 및 코사인 값을 곱할 수 있으며, 중심을 다른 위치로 이동 해야 하는 경우에는 해당 값을 추가 합니다.
 
 `x = xCenter + radius·cos(2πt)`
 
 `y = yCenter + radius·sin(2πt)`
 
-가로 및 세로 축 병렬을 사용 하 여 타원에 대 한 두 개의 반지름 관련 됩니다.
+축이 가로 및 세로 방향으로 평행한 타원의 경우 두 개의 반지름이 사용 됩니다.
 
 `x = xCenter + xRadius·cos(2πt)`
 
 `y = yCenter + yRadius·sin(2πt)`
 
-그런 다음 다양 한 지점을 계산한 다음 경로에 추가 하는 루프에 해당 하는 SkiaSharp 코드를 넣을 수 있습니다. 다음 SkiaSharp 코드는 `SKPath` 화면을 채우는 타원에 대 한 개체입니다. 루프는 직접 360도 통해 주기입니다. 가운데 너비와 높이 디스플레이 화면의 절반 이며 되므로 두 반지름.
+그런 다음 다양 한 요소를 계산 하 고이를 경로에 추가 하는 루프에 동일한 SkiaSharp 코드를 넣을 수 있습니다. 다음 SkiaSharp 코드는 `SKPath` 표시 표면을 채우는 타원에 대 한 개체를 만듭니다. 루프는 360도를 직접 순환 합니다. 중심은 표시 표면의 너비와 높이의 절반 이며, 그에 해당 하는 두 반지름입니다.
 
 ```csharp
 SKPath path = new SKPath();
@@ -65,11 +68,11 @@ for (float angle = 0; angle < 360; angle += 1)
 path.Close();
 ```
 
-이 인해 360 거의 선으로 정의 되는 타원입니다. 렌더링 될 때 부드러운 나타납니다.
+이렇게 하면 360 줄에 의해 정의 된 타원이 생성 됩니다. 렌더링 되 면 부드러운 것으로 나타납니다.
 
-물론 있으므로 다중선을 사용 하 여 타원을 만들 필요가 없습니다 `SKPath` 포함는 `AddOval` 를 수행 하는 메서드가 있습니다. 제공 하지 않는 시각적 개체를 그릴 수도 있습니다 하지만 `SKPath`합니다.
+물론를 사용 하는 메서드를 포함 하므로 다중선을 사용 하 여 타원을 만들 필요가 없습니다 `SKPath` `AddOval` . 그러나에서 제공 하지 않는 시각적 개체를 그릴 수 있습니다 `SKPath` .
 
-합니다 **Archimedean 나선형** 페이지에는 다음과 같은 코드 타원 코드 하지만 중요 한 차이가 있습니다. 이 루프 원의 360도 10 번 반지름을 지속적으로 조정:
+**Archimedean 나선형** 페이지에는 타원 코드와 비슷하지만 중요 한 차이점이 있는 코드가 있습니다. 원을 지속적으로 조정 하 여 원의 360도를 10 번 반복 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -115,11 +118,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-결과 라고는 *산술 나선형* each 사이의 오프셋 상수 이므로:
+각 루프 간의 오프셋이 일정 하기 때문에 결과를 *산술 나선형* 이라고 합니다.
 
-[![](polylines-images/archimedeanspiral-small.png "삼중 Archimedean 나선형 페이지 스크린샷")](polylines-images/archimedeanspiral-large.png#lightbox "삼중 Archimedean 나선형 페이지 스크린샷")
+[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
 
-있음을 합니다 `SKPath` 만들어집니다는 `using` 블록입니다. 이 `SKPath` 보다 더 많은 메모리를 사용 합니다 `SKPath` 제안 하는 이전 프로그램에서 개체를 `using` 블록은 모든 관리 되지 않는 리소스를 삭제 하는 것이 적합 합니다.
+는 `SKPath` 블록에 생성 됩니다 `using` . 이렇게 하면 `SKPath` 이전 프로그램의 개체 보다 더 많은 메모리가 사용 됩니다 .이는 `SKPath` `using` 블록이 관리 되지 않는 리소스를 삭제 하는 데 더 적합 함을 나타냅니다.
 
 ## <a name="related-links"></a>관련 링크
 

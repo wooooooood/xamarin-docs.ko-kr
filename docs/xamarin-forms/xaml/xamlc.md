@@ -1,32 +1,35 @@
 ---
-title: Xamarin.forms에서 XAML 컴파일
-description: 이 문서에서는 XAML을 Xamarin.Forms XAML 컴파일러(XAMLC)를 사용하여 선택적으로 중간 언어(IL, Intermediate Language)로 직접 컴파일할 수 있는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/22/2018
-ms.openlocfilehash: 9567f3ad8d748a94a03cd1c86254072d4ba3bbdc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+title: XAML 컴파일Xamarin.Forms
+description: 이 문서에서는 xaml을 Xamarin.Forms xaml 컴파일러 (XAMLC)를 사용 하 여 선택적으로 IL (중간 언어)로 직접 컴파일하는 방법을 설명 합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eebbb3040175118320639bcb4482ec77b5c16ac7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075129"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137295"
 ---
-# <a name="xaml-compilation-in-xamarinforms"></a>Xamarin.forms에서 XAML 컴파일
+# <a name="xaml-compilation-in-xamarinforms"></a>XAML 컴파일Xamarin.Forms
 
-_XAML은 XAML 컴파일러(XAMLC)를 사용하여 선택적으로 중간 언어(IL, Intermediate Language)로 직접 컴파일할 수 있습니다._
+_필요한 경우 XAML 컴파일러(XAMLC)를 사용하여 XAML을 중간 언어(IL)로 바로 컴파일할 수 있습니다._
 
-XAML 컴파일은 다음과 같이 다양한 이점을 제공합니다.
+XAML 컴파일은 다음과 같은 다양 한 이점을 제공 합니다.
 
-- XAML 컴파일은 컴파일 시 XAML 검사를 수행하여 발견된 오류를 사용자에게 알립니다.
+- 컴파일 시 XAML 검사를 수행하여 발견된 오류를 사용자에게 알립니다.
 - XAML 요소의 일부 로드 및 인스턴스화 시간을 제거합니다.
 - 더 이상 .xaml 파일을 포함하지 않아 최종 어셈블리의 파일 크기를 줄이는 데 도움이 됩니다.
 
-XAML 컴파일은 기본적으로 이전 버전과의 호환성 보장을 위해 비활성화됩니다. [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) 특성을 추가하여 어셈블리와 클래스 수준에서 활성화할 수 있습니다.
+XAML 컴파일은 이전 버전과의 호환성을 위해 기본적으로 사용 하지 않도록 설정 되어 있습니다. 특성을 추가 하 여 어셈블리 및 클래스 수준 모두에서 사용 하도록 설정할 수 있습니다 [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) .
 
-다음 코드 예제는 어셈블리 수준에서 XAML 컴파일을 활성화하는 방법을 보여 줍니다.
+다음 코드 예제에서는 어셈블리 수준에서 XAML 컴파일을 사용 하도록 설정 하는 방법을 보여 줍니다.
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -38,12 +41,12 @@ namespace PhotoApp
 }
 ```
 
-해당 예제에서는 어셈블리 내에 포함된 모든 XAML의 컴파일 시 검사가 수행되며 런타임 대신 컴파일 시에 XAML 오류가 보고됩니다. 따라서 [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) 특성에 대한 접두어 `assembly`는 속성이 전체 어셈블리에 적용되도록 지정합니다.
+이 예제에서 어셈블리에 포함 된 모든 XAML의 컴파일 타임 검사가 수행 되며,이는 컴파일 시간에 런타임 대신 XAML 오류가 보고 됩니다. 따라서 `assembly` 특성에 대 한 접두사는 [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) 특성이 전체 어셈블리에 적용 되도록 지정 합니다.
 
 > [!NOTE]
-> [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) 특성 및 [ `XamlCompilationOptions` ](xref:Xamarin.Forms.Xaml.XamlCompilationOptions) 열거형은 사용하기 위해 포함되어야 하는 `Xamarin.Forms.Xaml` 네임 스페이스에 있습니다.
+> [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute)특성과 [`XamlCompilationOptions`](xref:Xamarin.Forms.Xaml.XamlCompilationOptions) 열거형은 네임 스페이스에 있으며 `Xamarin.Forms.Xaml` ,이를 사용 하려면 가져와야 합니다.
 
-다음 코드 예제는 클래스 수준에서 XAML 컴파일 활성화 방법을 보여 줍니다.
+다음 코드 예제에서는 클래스 수준에서 XAML 컴파일을 사용 하도록 설정 하는 방법을 보여 줍니다.
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -55,10 +58,10 @@ public class HomePage : ContentPage
 }
 ```
 
-이 예제에서는 `HomePage` 클래스에 대한 XAML의 컴파일 시 검사가 수행되고 컴파일 프로세스의 일부로 오류가 보고됩니다
+이 예제에서는 클래스의 XAML에 대 한 컴파일 타임 검사가 `HomePage` 수행 되 고 컴파일 프로세스의 일부로 오류가 보고 됩니다.
 
 > [!NOTE]
-> 컴파일된 바인딩을 사용하면 Xamarin.Forms 응용 프로그램에서 데이터 바인딩 성능을 향상시킬 수 있습니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하십시오.
+> 컴파일된 바인딩을 사용 하면 응용 프로그램에서 데이터 바인딩 성능을 향상 시킬 수 있습니다 Xamarin.Forms . 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 

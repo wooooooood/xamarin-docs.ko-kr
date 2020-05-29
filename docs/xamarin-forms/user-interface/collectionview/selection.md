@@ -1,51 +1,54 @@
 ---
-title: Xamarin.ios CollectionView 선택
-description: 기본적으로 CollectionView 선택은 사용 하지 않도록 설정 되어 있습니다. 그러나 단일 및 다중 선택을 사용할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a4cc237ef738edeccf66f1a91a010e4831c1c72f
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+title: Xamarin.FormsCollectionView 선택
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 39f118d7073fc551923f891681c8c6cf6a4c5ddd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305914"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137386"
 ---
-# <a name="xamarinforms-collectionview-selection"></a>Xamarin.ios CollectionView 선택
+# <a name="xamarinforms-collectionview-selection"></a>Xamarin.FormsCollectionView 선택
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 항목 선택을 제어 하는 다음 속성을 정의 합니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)항목 선택을 제어 하는 다음 속성을 정의 합니다.
 
-- [`SelectionMode`](xref:Xamarin.Forms.SelectionMode)형식의 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)선택 모드입니다.
-- 목록에서 선택한 항목 `object`형식의 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)입니다. 이 속성은 `TwoWay`의 기본 바인딩 모드 이며, 선택 된 항목이 없는 경우에는 `null` 값을 갖습니다.
-- 목록에서 선택한 항목 `IList<object>`형식의 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems)입니다. 이 속성은 `OneWay`의 기본 바인딩 모드 이며 선택 된 항목이 없는 경우에는 `null` 값을 갖습니다.
-- 선택한 항목이 변경 될 때 실행 되는 `ICommand`형식의 [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand)입니다.
-- [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter)`object`형식으로, `SelectionChangedCommand`전달 되는 매개 변수입니다.
+- [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode), 형식의, [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) 선택 모드입니다.
+- [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)`object`목록에서 선택 된 항목인 형식의입니다. 이 속성의 기본 바인딩 모드는 `TwoWay` 이며, `null` 선택 된 항목이 없는 경우에는 값이 있습니다.
+- [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems)`IList<object>`목록에서 선택한 항목의 형식입니다. 이 속성의 기본 바인딩 모드는 `OneWay` 이며 `null` 선택 된 항목이 없는 경우에는 값이 있습니다.
+- [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand)`ICommand`-선택한 항목이 변경 될 때 실행 되는 형식의입니다.
+- [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter)에 `object` 전달 되는 매개 변수인 형식의입니다 `SelectionChangedCommand` .
 
 이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 
-기본적으로 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택은 사용 하지 않도록 설정 되어 있습니다. 그러나 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성 값을 [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) 열거형 멤버 중 하나로 설정 하 여이 동작을 변경할 수 있습니다.
+기본적으로 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택은 사용 하지 않도록 설정 되어 있습니다. 그러나 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성 값을 열거형 멤버 중 하나로 설정 하 여이 동작을 변경할 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectionMode) .
 
-- `None` – 항목을 선택할 수 없음을 나타냅니다. 이것은 기본값입니다.
-- `Single` – 선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다.
-- `Multiple` – 선택한 항목을 강조 표시 하 여 여러 항목을 선택할 수 있음을 나타냅니다.
+- `None`– 항목을 선택할 수 없음을 나타냅니다. 이것은 기본값입니다.
+- `Single`– 선택한 항목이 강조 표시 된 상태로 단일 항목을 선택할 수 있음을 나타냅니다.
+- `Multiple`– 선택한 항목을 강조 표시 하 여 여러 항목을 선택할 수 있음을 나타냅니다.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 는 사용자가 목록에서 항목을 선택 하거나 응용 프로그램에서 속성을 설정 하는 경우 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성이 변경 될 때 발생 하는 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트를 정의 합니다. 또한이 이벤트는 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성이 변경 될 때에도 발생 합니다. `SelectionChanged` 이벤트와 함께 제공 되는 [`SelectionChangedEventArgs`](xref:Xamarin.Forms.SelectionChangedEventArgs) 개체에는 두 가지 속성인 `IReadOnlyList<object>`형식이 있습니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)[`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 사용자가 목록에서 항목을 선택 하거나 응용 프로그램에서 속성을 설정 하 여 속성이 변경 될 때 발생 하는 이벤트를 정의 합니다. 또한이 이벤트는 속성이 변경 될 때에도 발생 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 합니다. 이벤트와 함께 제공 되는 개체에는 [`SelectionChangedEventArgs`](xref:Xamarin.Forms.SelectionChangedEventArgs) `SelectionChanged` 두 가지 속성이 있습니다 `IReadOnlyList<object>` .
 
-- `PreviousSelection` – 선택 항목을 변경 하기 전에 선택 된 항목의 목록입니다.
-- `CurrentSelection` – 선택 항목을 변경한 후 선택 된 항목의 목록입니다.
+- `PreviousSelection`– 선택 항목을 변경 하기 전에 선택 된 항목의 목록입니다.
+- `CurrentSelection`– 선택 항목을 변경한 후 선택 된 항목의 목록입니다.
 
-또한 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 에는 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성을 선택 된 항목 목록으로 업데이트 하는 `UpdateSelectedItems` 메서드가 있으며 단일 변경 알림만 발생 합니다.
+또한에는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) `UpdateSelectedItems` [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 선택한 항목의 목록으로 속성을 업데이트 하는 메서드와 단일 변경 알림만 발생 합니다.
 
 ## <a name="single-selection"></a>단일 선택
 
-[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성이 `Single`로 설정 된 경우 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 의 단일 항목을 선택할 수 있습니다. 항목을 선택 하면 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성이 선택 된 항목의 값으로 설정 됩니다. 이 속성이 변경 되 면 [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) 실행 되 고 (`ICommand`에 전달 되는 [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) 의 값 포함) [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생 합니다.
+[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)속성이로 설정 되 면 `Single` 의 단일 항목을 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택할 수 있습니다. 항목을 선택 하면 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성이 선택 된 항목의 값으로 설정 됩니다. 이 속성이 변경 되 면이 [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) 실행 되 고 (값이로 [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) 전달 됨 `ICommand` ) [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생 합니다.
 
-다음 XAML 예제에서는 단일 항목 선택에 응답할 수 있는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 보여 줍니다.
+다음 XAML 예제에서는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 단일 항목 선택에 응답할 수 있는을 보여 줍니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -55,7 +58,7 @@ ms.locfileid: "79305914"
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -66,7 +69,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 collectionView.SelectionChanged += OnCollectionViewSelectionChanged;
 ```
 
-이 코드 `OnCollectionViewSelectionChanged` 예제에서 이벤트 처리기는 이전에 선택한 항목을 검색 하는 이벤트 처리기 및 현재 선택 된 항목을 사용 하 여 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생할 때 실행 됩니다.
+이 코드 예제에서 이벤트 처리기는 이벤트가 발생할 `OnCollectionViewSelectionChanged` 때 실행 되 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 고, 이벤트 처리기는 이전에 선택한 항목을 검색 하 고 현재 선택한 항목을 검색 합니다.
 
 ```csharp
 void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -78,17 +81,17 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 ```
 
 > [!IMPORTANT]
-> [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트는 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성을 변경한 결과로 발생 하는 변경 내용으로 인해 발생할 수 있습니다.
+> [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged)이 이벤트는 속성을 변경한 결과로 발생 하는 변경 내용으로 인해 발생 될 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) .
 
-다음 스크린샷은 [`CollectionView`](xref:Xamarin.Forms.CollectionView)의 단일 항목 선택 항목을 보여 줍니다.
+다음 스크린샷은의 단일 항목 선택 항목을 보여 줍니다 [`CollectionView`](xref:Xamarin.Forms.CollectionView) .
 
 [![IOS 및 Android에서 단일 항목이 선택 된 CollectionView 세로 목록의 스크린샷](selection-images/single-selection.png "단일 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/single-selection-large.png#lightbox "단일 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="multiple-selection"></a>다중 선택
 
-[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성이 `Multiple`로 설정 된 경우 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 의 여러 항목을 선택할 수 있습니다. 항목을 선택 하면 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성이 선택 된 항목으로 설정 됩니다. 이 속성이 변경 되 면 [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) 실행 되 고 (`ICommand`에 전달 되는 [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) 의 값 포함) [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생 합니다.
+[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)속성이로 설정 되 면 `Multiple` 의 여러 항목을 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택할 수 있습니다. 항목을 선택 하면 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성이 선택 된 항목으로 설정 됩니다. 이 속성이 변경 되 면이 [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) 실행 되 고 (값이로 [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) 전달 됨 `ICommand` ) [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생 합니다.
 
-다음 XAML 예제에서는 여러 항목 선택에 응답할 수 있는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 보여 줍니다.
+다음 XAML 예제에서는 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 여러 항목 선택에 응답할 수 있는을 보여 줍니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -98,7 +101,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -109,7 +112,7 @@ collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 collectionView.SelectionChanged += OnCollectionViewSelectionChanged;
 ```
 
-이 코드 `OnCollectionViewSelectionChanged` 예제에서 이벤트 처리기는 이전에 선택한 항목을 검색 하는 이벤트 처리기 및 현재 선택 된 항목을 사용 하 여 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생할 때 실행 됩니다.
+이 코드 예제에서 이벤트 처리기는 이벤트가 발생할 `OnCollectionViewSelectionChanged` 때 실행 되 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 고, 이벤트 처리기는 이전에 선택한 항목을 검색 하 고 현재 선택한 항목을 검색 합니다.
 
 ```csharp
 void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -121,15 +124,15 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 ```
 
 > [!IMPORTANT]
-> [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트는 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성을 변경한 결과로 발생 하는 변경 내용으로 인해 발생할 수 있습니다.
+> [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged)이 이벤트는 속성을 변경한 결과로 발생 하는 변경 내용으로 인해 발생 될 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) .
 
-다음 스크린샷은 [`CollectionView`](xref:Xamarin.Forms.CollectionView)에서 여러 항목을 선택 하는 것을 보여 줍니다.
+다음 스크린샷은에서 여러 항목을 선택 하 여 보여 줍니다 [`CollectionView`](xref:Xamarin.Forms.CollectionView) .
 
 [![IOS 및 Android에서 여러 항목이 선택 된 CollectionView 세로 목록 스크린샷](selection-images/multiple-selection.png "여러 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/multiple-selection-large.png#lightbox "여러 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="single-pre-selection"></a>단일 사전 선택
 
-[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성이 `Single`로 설정 되어 있으면 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성을 항목으로 설정 하 여 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 의 단일 항목을 미리 선택할 수 있습니다. 다음 XAML 예제에서는 단일 항목을 미리 선택 하는 `CollectionView` 보여 줍니다.
+[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)속성이로 설정 된 경우 `Single` 속성을 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목으로 설정 하 여의 단일 항목을 미리 선택할 수 있습니다 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) . 다음 XAML 예제에서는 `CollectionView` 단일 항목을 미리 선택 하는을 보여 줍니다.
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -139,7 +142,7 @@ void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -151,9 +154,9 @@ collectionView.SetBinding(SelectableItemsView.SelectedItemProperty, "SelectedMon
 ```
 
 > [!NOTE]
-> [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성은 `TwoWay`의 기본 바인딩 모드를 갖습니다.
+> [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)속성의 기본 바인딩 모드는 `TwoWay` 입니다.
 
-[`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성 데이터는 `Monkey`유형인 연결 된 뷰 모델의 `SelectedMonkey` 속성에 바인딩됩니다. 기본적으로 사용자가 선택한 항목을 변경 하는 경우 `SelectedMonkey` 속성의 값이 선택한 `Monkey` 개체로 설정 되도록 `TwoWay` 바인딩이 사용 됩니다. `SelectedMonkey` 속성은 `MonkeysViewModel` 클래스에서 정의 되 고 `Monkeys` 컬렉션의 네 번째 항목으로 설정 됩니다.
+[`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)속성 데이터는 `SelectedMonkey` 형식의 연결 된 뷰 모델의 속성에 바인딩됩니다 `Monkey` . 기본적으로 `TwoWay` 바인딩이 사용 되므로 사용자가 선택한 항목을 변경 하면 속성의 값 `SelectedMonkey` 이 선택한 개체로 설정 됩니다 `Monkey` . `SelectedMonkey`속성은 클래스에 정의 되 `MonkeysViewModel` 고,는 컬렉션의 네 번째 항목으로 설정 됩니다 `Monkeys` .
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -186,13 +189,13 @@ public class MonkeysViewModel : INotifyPropertyChanged
 }
 ```
 
-따라서 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 표시 되 면 목록의 네 번째 항목이 미리 선택 됩니다.
+따라서가 표시 되 면 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 목록의 네 번째 항목이 미리 선택 됩니다.
 
 [![IOS 및 Android에서 단일 사전 선택이 포함 된 CollectionView 세로 목록 스크린샷](selection-images/single-pre-selection.png "단일 사전 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/single-pre-selection-large.png#lightbox "단일 사전 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="multiple-pre-selection"></a>다중 미리 선택
 
-[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성이 `Multiple`로 설정 된 경우 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 의 여러 항목을 미리 선택할 수 있습니다. 다음 XAML 예제에서는 여러 항목을 미리 선택할 수 있는 `CollectionView` 보여 줍니다.
+[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)속성이로 설정 되 면 `Multiple` 의 여러 항목을 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 미리 선택할 수 있습니다. 다음 XAML 예제에서는 `CollectionView` 여러 항목을 미리 선택할 수 있도록 하는을 보여 줍니다.
 
 ```xaml
 <CollectionView x:Name="collectionView"
@@ -203,7 +206,7 @@ public class MonkeysViewModel : INotifyPropertyChanged
 </CollectionView>
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -215,9 +218,9 @@ collectionView.SetBinding(SelectableItemsView.SelectedItemsProperty, "SelectedMo
 ```
 
 > [!NOTE]
-> [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성은 `OneWay`의 기본 바인딩 모드를 갖습니다.
+> [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems)속성의 기본 바인딩 모드는 `OneWay` 입니다.
 
-[`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성 데이터는 `ObservableCollection<object>`유형인 연결 된 뷰 모델의 `SelectedMonkeys` 속성에 바인딩됩니다. `SelectedMonkeys` 속성은 `MonkeysViewModel` 클래스에서 정의 되 고 `Monkeys` 컬렉션에서 두 번째, 네 번째 및 다섯 번째 항목으로 설정 됩니다.
+[`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems)속성 데이터는 `SelectedMonkeys` 형식의 연결 된 뷰 모델의 속성에 바인딩됩니다 `ObservableCollection<object>` . `SelectedMonkeys`속성은 클래스에 정의 되 `MonkeysViewModel` 고,는 컬렉션의 두 번째, 네 번째 및 다섯 번째 항목으로 설정 됩니다 `Monkeys` .
 
 ```csharp
 namespace CollectionViewDemos.ViewModels
@@ -254,17 +257,17 @@ namespace CollectionViewDemos.ViewModels
 }
 ```
 
-따라서 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 표시 되 면 목록에서 두 번째, 네 번째 및 다섯 번째 항목이 미리 선택 됩니다.
+따라서 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 가 표시 되 면 목록에서 두 번째, 네 번째 및 다섯 번째 항목이 미리 선택 됩니다.
 
 [![IOS 및 Android에서 여러 미리 선택 된 CollectionView 세로 목록 스크린샷](selection-images/multiple-pre-selection.png "여러 사전 선택 영역을 포함 하는 CollectionView 세로 목록")](selection-images/multiple-pre-selection-large.png#lightbox "여러 사전 선택 영역을 포함 하는 CollectionView 세로 목록")
 
 ## <a name="clear-selections"></a>선택 영역 지우기
 
-[`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 및 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 속성을 설정 하거나 `null`하려면 해당 속성을 설정 하 여 지울 수 있습니다.
+[`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem)및 속성은로 [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) 설정 하거나 바인딩할 개체를로 설정 하 여 지울 수 있습니다 `null` .
 
 ## <a name="change-selected-item-color"></a>선택한 항목 색 변경
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 에는 `CollectionView`에서 선택한 항목에 대 한 시각적 변경을 시작 하는 데 사용할 수 있는 `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) 있습니다. 이 `VisualState`에 대 한 일반적인 사용 사례는 다음 XAML 예제에 표시 된 대로 선택한 항목의 배경색을 변경 하는 것입니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)에는 `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) 에서 선택한 항목에 대 한 시각적 변경을 시작 하는 데 사용할 수 있는가 있습니다 `CollectionView` . 이에 대 한 일반적인 사용 사례는 `VisualState` 다음 XAML 예제에 표시 된 대로 선택한 항목의 배경색을 변경 하는 것입니다.
 
 ```xaml
 <ContentPage ...>
@@ -301,24 +304,24 @@ namespace CollectionViewDemos.ViewModels
 ```
 
 > [!IMPORTANT]
-> `Selected` `VisualState`를 포함 하는 [`Style`](xref:Xamarin.Forms.Style) 에는`DataTemplate`속성 값으로 설정 된 [`ItemTemplate` ](xref:Xamarin.Forms.DataTemplate)의 루트 요소 형식인 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성 값이 있어야 합니다.
+> 을 포함 하는에는 속성 [`Style`](xref:Xamarin.Forms.Style) `Selected` `VisualState` [`TargetType`](xref:Xamarin.Forms.Style.TargetType) [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 값으로 설정 되는의 루트 요소 형식인 속성 값이 `ItemTemplate` 있어야 합니다.
 
-이 예제에서는 [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) 의 루트 요소가 [`Grid`](xref:Xamarin.Forms.Grid)이므로 [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성 값이 `Grid`로 설정 됩니다. `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) [`CollectionView`](xref:Xamarin.Forms.CollectionView) 항목을 선택할 때 항목의 [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) 가 `LightSkyBlue`로 설정 되도록 지정 합니다.
+이 예제에서는 [`Style.TargetType`](xref:Xamarin.Forms.Style.TargetType) 의 루트 요소가 이므로 속성 값이로 설정 됩니다 `Grid` [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) [`Grid`](xref:Xamarin.Forms.Grid) . 는의 `Selected` [`VisualState`](xref:Xamarin.Forms.VisualState) 항목이 선택 될 때 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) 항목의이로 설정 되도록 지정 합니다 `LightSkyBlue` .
 
 [![IOS 및 Android에서 사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록의 스크린샷](selection-images/single-selection-color.png "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")](selection-images/single-selection-color-large.png#lightbox "사용자 지정 단일 선택 색이 있는 CollectionView 세로 목록")
 
-시각적 상태에 대 한 자세한 내용은 [Xamarin. Forms 시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
+시각적 상태에 대 한 자세한 내용은 [ Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)를 참조 하세요.
 
 ## <a name="disable-selection"></a>선택 사용 안 함
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) 선택은 기본적으로 사용 하지 않도록 설정 되어 있습니다. 그러나 `CollectionView`에서 선택이 활성화 된 경우 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성을 `None`로 설정 하 여 사용 하지 않도록 설정할 수 있습니다.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView)선택은 기본적으로 사용 하지 않도록 설정 되어 있습니다. 그러나에서 `CollectionView` 선택이 활성화 되어 있으면 속성을로 설정 하 여 사용 하지 않도록 설정할 수 있습니다 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) `None` .
 
 ```xaml
 <CollectionView ...
                 SelectionMode="None" />
 ```
 
-해당 하는 C# 코드가입니다.
+해당하는 C# 코드는 다음과 같습니다.
 
 ```csharp
 CollectionView collectionView = new CollectionView
@@ -328,12 +331,12 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-[`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성이 `None`로 설정 된 경우 [`CollectionView`](xref:Xamarin.Forms.CollectionView) 의 항목을 선택할 수 없으며 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성은 `null`유지 되 고 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트는 발생 하지 않습니다.
+속성이로 설정 된 경우의 항목을 선택할 수 없으며,이 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) `None` 속성은 [`CollectionView`](xref:Xamarin.Forms.CollectionView) [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 유지 되 `null` 고 이벤트는 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 발생 하지 않습니다.
 
 > [!NOTE]
-> 항목을 선택 하 고 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성이 `Single`에서 `None`으로 변경 되 면 [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성이 `null`로 설정 되 고 빈`SelectionChanged`속성을 사용 하 여 [`CurrentSelection`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 이벤트가 발생 합니다.
+> 항목을 선택 하 고 [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) 속성을에서로 변경 하면 `Single` `None` [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) 속성이로 설정 되 `null` 고 [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) 빈 속성을 사용 하 여 이벤트가 발생 합니다 `CurrentSelection` .
 
 ## <a name="related-links"></a>관련 링크
 
 - [CollectionView (샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.ios 시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms시각적 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)

@@ -1,44 +1,36 @@
 ---
-title: Xamarin.ios 맵 초기화 및 구성
-description: 응용 프로그램에서 maps 기능을 사용 하려면 Xamarin.ios NuGet 패키지가 필요 합니다. 또한 사용자의 위치에 액세스 하려면 응용 프로그램에 대 한 위치 권한이 있어야 합니다.
-ms.prod: xamarin
-ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/07/2020
-ms.openlocfilehash: 177359dfe081cba3cc43031d807f669f93a31ee9
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516529"
+제목: ' Xamarin.Forms 맵 초기화 및 구성 ' 설명: ' Xamarin.Forms . Maps NuGet 패키지는 응용 프로그램에서 maps 기능을 사용 하는 데 필요 합니다. 또한 사용자의 위치에 액세스 하려면 응용 프로그램에 대 한 위치 권한이 부여 되어야 합니다.
+ms. prod: assetid: ms. 기술: author: ms author: ms. date: no loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
-# <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.ios 맵 초기화 및 구성
+
+# <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms맵 초기화 및 구성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-컨트롤 [`Map`](xref:Xamarin.Forms.Maps.Map) 은 각 플랫폼에서 네이티브 맵 컨트롤을 사용 합니다. 이를 통해 사용자는 빠르고 친숙 한 지도를 제공할 수 있지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 합니다.
+[`Map`](xref:Xamarin.Forms.Maps.Map)컨트롤은 각 플랫폼에서 네이티브 맵 컨트롤을 사용 합니다. 이를 통해 사용자는 빠르고 친숙 한 지도를 제공할 수 있지만 각 플랫폼 API 요구 사항을 준수 하려면 몇 가지 구성 단계가 필요 합니다.
 
 ## <a name="map-initialization"></a>맵 초기화
 
-컨트롤 [`Map`](xref:Xamarin.Forms.Maps.Map) 은 솔루션의 모든 프로젝트에 추가 해야 하는 [xamarin.ios](https://www.nuget.org/packages/Xamarin.Forms.Maps/) NuGet 패키지에서 제공 됩니다.
+컨트롤은에서 [`Map`](xref:Xamarin.Forms.Maps.Map) 제공 됩니다 [ Xamarin.Forms . ](https://www.nuget.org/packages/Xamarin.Forms.Maps/)솔루션의 모든 프로젝트에 추가 해야 하는 NuGet 패키지를 매핑합니다.
 
-[Xamarin.ios](https://www.nuget.org/packages/Xamarin.Forms.Maps/) NuGet 패키지를 설치한 후에는 각 플랫폼 프로젝트에서 초기화 해야 합니다.
+를 설치한 후 [ Xamarin.Forms 맵](https://www.nuget.org/packages/Xamarin.Forms.Maps/) NuGet 패키지는 각 플랫폼 프로젝트에서 초기화 해야 합니다.
 
-IOS에서 메서드를 호출한 *후* `Xamarin.Forms.Forms.Init` 메서드 **AppDelegate.cs** 를 `Xamarin.FormsMaps.Init` 호출 하 여 AppDelegate.cs에서 발생 해야 합니다.
+IOS에서 메서드를 호출한 후 메서드를 호출 하 여 **AppDelegate.cs** 에서 발생 해야 합니다 `Xamarin.FormsMaps.Init` *after* `Xamarin.Forms.Forms.Init` .
 
 ```csharp
 Xamarin.FormsMaps.Init();
 ```
 
-Android에서 메서드를 호출한 *후* `Xamarin.Forms.Forms.Init` 메서드 **MainActivity.cs** 를 `Xamarin.FormsMaps.Init` 호출 하 여 MainActivity.cs에서 발생 해야 합니다.
+Android에서 메서드를 호출한 후 메서드를 호출 하 여 **MainActivity.cs** 에서 발생 해야 합니다 `Xamarin.FormsMaps.Init` *after* `Xamarin.Forms.Forms.Init` .
 
 ```csharp
 Xamarin.FormsMaps.Init(this, savedInstanceState);
 ```
 
-UWP (유니버설 Windows 플랫폼)에서이는 `Xamarin.FormsMaps.Init` `MainPage` 생성자에서 메서드를 호출 하 여 **MainPage.xaml.cs** 에서 발생 해야 합니다.
+UWP (유니버설 Windows 플랫폼)에서이는 생성자에서 메서드를 호출 하 여 **MainPage.xaml.cs** 에서 발생 해야 합니다 `Xamarin.FormsMaps.Init` `MainPage` .
 
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
@@ -63,9 +55,9 @@ IOS에서 지도를 표시 하 고 상호 작용 하려면 추가 구성이 필�
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26)– 응용 프로그램이 사용 중일 때 위치 서비스를 사용 하는 경우
   - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18)– 항상 위치 서비스를 사용 하는 경우    
 
-IOS 11 및 이전 버전을 지원 하기 위해 `NSLocationWhenInUseUsageDescription`, 및 `NSLocationAlwaysAndWhenInUseUsageDescription` `NSLocationAlwaysUsageDescription`의 세 가지 키를 모두 포함할 수 있습니다.
+IOS 11 및 이전 버전을 지원 하기 위해, 및의 세 가지 키를 모두 포함할 수 있습니다 `NSLocationWhenInUseUsageDescription` `NSLocationAlwaysAndWhenInUseUsageDescription` `NSLocationAlwaysUsageDescription` .
 
-**Info.plist** 에서 이러한 키에 대 한 XML 표현은 다음과 같습니다. 응용 프로그램에서 위치 `string` 정보를 사용 하는 방법을 반영 하도록 값을 업데이트 해야 합니다.
+**Info.plist** 에서 이러한 키에 대 한 XML 표현은 다음과 같습니다. `string`응용 프로그램에서 위치 정보를 사용 하는 방법을 반영 하도록 값을 업데이트 해야 합니다.
 
 ```xml
 <key>NSLocationAlwaysUsageDescription</key>
@@ -93,7 +85,7 @@ Android에서 지도를 표시 하 고 상호 작용 하는 구성 프로세스�
 1. 매니페스트에서 Apache HTTP 레거시 라이브러리의 요구 사항을 지정 합니다.
 1. 필드 매니페스트에서 WRITE_EXTERNAL_STORAGE 권한을 지정 합니다.
 1. 필드 매니페스트에서 위치 사용 권한을 지정 합니다.
-1. 필드 `MainActivity` 클래스의 요청 런타임 위치 권한입니다.
+1. 필드 클래스의 요청 런타임 위치 권한 `MainActivity` 입니다.
 
 올바르게 구성 된 매니페스트 파일의 예는 샘플 응용 프로그램의 [Androidmanifest .xml](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps.Android/Properties/AndroidManifest.xml) 을 참조 하십시오.
 
@@ -109,10 +101,10 @@ API 키를 가져온 후에는 `<application>` **Properties/AndroidManifest .xml
 </application>
 ```
 
-이렇게 하면 API 키가 매니페스트에 포함 됩니다. 유효한 API 키가 없으면 컨트롤 [`Map`](xref:Xamarin.Forms.Maps.Map) 은 빈 그리드를 표시 합니다.
+이렇게 하면 API 키가 매니페스트에 포함 됩니다. 유효한 API 키가 없으면 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤은 빈 그리드를 표시 합니다.
 
 > [!NOTE]
-> `com.google.android.geo.API_KEY`는 API 키에 대해 권장 되는 메타 데이터 이름입니다. 이전 버전과의 호환성을 `com.google.android.maps.v2.API_KEY` 위해 메타 데이터 이름을 사용할 수 있지만 ANDROID Maps API v 2에 대 한 인증만 허용 합니다.
+> `com.google.android.geo.API_KEY`는 API 키에 대해 권장 되는 메타 데이터 이름입니다. 이전 버전과의 호환성을 위해 `com.google.android.maps.v2.API_KEY` 메타 데이터 이름을 사용할 수 있지만 Android MAPS API v 2에 대 한 인증만 허용 합니다.
 
 APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는 모든 키 저장소 (디버그 및 릴리스)에 대해 SHA-1 지문 및 패키지 이름을 포함 해야 합니다. 예를 들어 디버그에 하나의 컴퓨터를 사용 하 고 다른 컴퓨터에서 릴리스 APK를 생성 하는 경우 첫 번째 컴퓨터의 디버그 키 저장소의 SHA-1 인증서 지문을 포함 하 고 두 번째 컴퓨터의 릴리스 키 저장소 SHA-1 인증서 지문을 포함 해야 합니다. 또한 앱의 **패키지 이름이** 변경 되는 경우 키 자격 증명을 편집 해야 합니다. [Google MAPS API 키 가져오기를](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)참조 하세요.
 
@@ -128,17 +120,17 @@ APK가 Google Maps에 액세스 하려면 APK에 서명 하는 데 사용 하는
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Apache HTTP 레거시 라이브러리의 요구 사항 지정
 
-Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우 `<application>` **Androidmanifest**의 요소 내에 다음 선언을 추가 해야 합니다.
+Xamarin.Forms응용 프로그램이 API 28 이상을 대상으로 하는 경우 `<application>` **Androidmanifest**의 요소 내에 다음 선언을 추가 해야 합니다.
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    
 ```
 
-그러면 응용 프로그램에 Android 9 `bootclasspath` 의에서 제거 된 Apache Http 클라이언트 라이브러리를 사용 하 라는 메시지가 나타납니다.
+그러면 응용 프로그램에 Android 9의에서 제거 된 Apache Http 클라이언트 라이브러리를 사용 하 라는 메시지가 `bootclasspath` 나타납니다.
 
 #### <a name="specify-the-write_external_storage-permission"></a>WRITE_EXTERNAL_STORAGE 사용 권한 지정
 
-응용 프로그램에서 API 22이 하를 대상으로 하는 경우 `WRITE_EXTERNAL_STORAGE` `<manifest>` 요소의 자식으로 매니페스트에 권한을 추가 해야 할 수 있습니다.
+응용 프로그램에서 API 22이 하를 대상으로 하는 경우 `WRITE_EXTERNAL_STORAGE` 요소의 자식으로 매니페스트에 권한을 추가 해야 할 수 있습니다 `<manifest>` .
 
 ```xml
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -148,7 +140,7 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
 
 #### <a name="specify-location-permissions"></a>위치 권한 지정
 
-응용 프로그램에서 사용자의 위치에 액세스 해야 하는 경우에는 `ACCESS_COARSE_LOCATION` 또는 `ACCESS_FINE_LOCATION` 권한을 `<manifest>` 요소의 자식으로 매니페스트 (또는 둘 다)에 추가 하 여 권한을 요청 해야 합니다.
+응용 프로그램에서 사용자의 위치에 액세스 해야 하는 경우에는 `ACCESS_COARSE_LOCATION` 또는 `ACCESS_FINE_LOCATION` 권한을 요소의 자식으로 매니페스트 (또는 둘 다)에 추가 하 여 권한을 요청 해야 합니다 `<manifest>` .
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.myapp">
@@ -158,7 +150,7 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
 </manifest>
 ```
 
-이 `ACCESS_COARSE_LOCATION` 사용 권한을 통해 API는 WiFi 또는 모바일 데이터 또는 둘 다를 사용 하 여 장치 위치를 확인할 수 있습니다. 이 `ACCESS_FINE_LOCATION` 사용 권한을 통해 API는 GPS (전역 위치 시스템), WiFi 또는 모바일 데이터를 사용 하 여 가능한 한 정확한 위치를 결정할 수 있습니다.
+`ACCESS_COARSE_LOCATION`이 사용 권한을 통해 API는 WiFi 또는 모바일 데이터 또는 둘 다를 사용 하 여 장치 위치를 확인할 수 있습니다. `ACCESS_FINE_LOCATION`이 사용 권한을 통해 API는 GPS (전역 위치 시스템), WiFi 또는 모바일 데이터를 사용 하 여 가능한 한 정확한 위치를 결정할 수 있습니다.
 
 또는 매니페스트 편집기를 사용 하 여 다음 권한을 추가 하 여 이러한 권한을 설정할 수 있습니다.
 
@@ -173,7 +165,7 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
 
 응용 프로그램이 API 23 이상을 대상으로 하 고 사용자의 위치에 액세스 해야 하는 경우 런타임에 필요한 권한이 있는지 확인 하 고, 그렇지 않은 경우 요청 해야 합니다. 이렇게 하려면 다음을 수행합니다.
 
-1. `MainActivity` 클래스에 다음 필드를 추가 합니다.
+1. 클래스에 `MainActivity` 다음 필드를 추가 합니다.
 
     ```csharp
     const int RequestLocationId = 0;
@@ -185,7 +177,7 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
     };
     ```
 
-1. `MainActivity` 클래스에서 다음 `OnStart` 재정의를 추가 합니다.
+1. 클래스에서 `MainActivity` 다음 재정의를 추가 합니다 `OnStart` .
 
     ```csharp
     protected override void OnStart()
@@ -206,9 +198,9 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
     }
     ```
 
-    응용 프로그램이 API 23 이상을 대상으로 하는 경우이 코드는 `AccessFineLocation` 권한에 대 한 런타임 권한 검사를 수행 합니다. 사용 권한이 부여 되지 않은 경우 `RequestPermissions` 메서드를 호출 하 여 권한 요청을 수행 합니다.
+    응용 프로그램이 API 23 이상을 대상으로 하는 경우이 코드는 권한에 대 한 런타임 권한 검사를 수행 `AccessFineLocation` 합니다. 사용 권한이 부여 되지 않은 경우 메서드를 호출 하 여 권한 요청을 수행 `RequestPermissions` 합니다.
 
-1. `MainActivity` 클래스에서 다음 `OnRequestPermissionsResult` 재정의를 추가 합니다.
+1. 클래스에서 `MainActivity` 다음 재정의를 추가 합니다 `OnRequestPermissionsResult` .
 
     ```csharp
     public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
@@ -233,12 +225,12 @@ Xamarin Forms 응용 프로그램이 API 28 이상을 대상으로 하는 경우
 
 [![Android의 위치 권한 요청 스크린샷](setup-images/permission-android.png "Android 권한 요청")](setup-images/permission-android-large.png#lightbox "Android 권한 요청")
 
-### <a name="universal-windows-platform"></a>UWP
+### <a name="universal-windows-platform"></a>범용 Windows 플랫폼
 
-UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map service를 사용할 수 있습니다. 응용 프로그램을 인증 하려면 맵 인증 키를 지정 해야 합니다. 자세한 내용은 [지도 인증 키 요청](/windows/uwp/maps-and-location/authentication-key)을 참조 하세요. 그런 다음 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 메서드 호출에서 인증 토큰을 지정 하 여 Bing Maps를 사용 하 여 응용 프로그램을 인증 합니다.
+UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map service를 사용할 수 있습니다. 응용 프로그램을 인증 하려면 맵 인증 키를 지정 해야 합니다. 자세한 내용은 [지도 인증 키 요청](/windows/uwp/maps-and-location/authentication-key)을 참조 하세요. 그런 다음 메서드 호출에서 인증 토큰을 지정 `FormsMaps.Init("AUTHORIZATION_TOKEN")` 하 여 Bing Maps를 사용 하 여 응용 프로그램을 인증 합니다.
 
 > [!NOTE]
-> UWP에서 지 오 코딩와 같은 map services를 사용 하려면 `MapService.ServiceToken` 속성을 인증 키 값으로 설정 해야 합니다. 다음 코드 줄을 사용 하 여이 작업 `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`을 수행할 수 있습니다.
+> UWP에서 지 오 코딩와 같은 map services를 사용 하려면 `MapService.ServiceToken` 속성을 인증 키 값으로 설정 해야 합니다. 다음 코드 줄을 사용 하 여이 작업을 수행할 수 있습니다 `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";` .
 
 또한 응용 프로그램에서 사용자의 위치에 액세스 해야 하는 경우 패키지 매니페스트에서 위치 기능을 사용 하도록 설정 해야 합니다. 이렇게 하려면 다음을 수행합니다.
 
@@ -254,21 +246,21 @@ UWP에서는 응용 프로그램이 인증 되어야 맵을 표시 하 고 map s
 
 #### <a name="release-builds"></a>릴리스 빌드
 
-UWP 릴리스 빌드는 .NET 네이티브 컴파일을 사용 하 여 응용 프로그램을 네이티브 코드로 직접 컴파일합니다. 그러나이로 인해 UWP의 [`Map`](xref:Xamarin.Forms.Maps.Map) 컨트롤에 대 한 렌더러는 실행 파일에서 연결 되지 않을 수 있습니다. `Forms.Init` **APP.XAML.CS**에서 메서드의 UWP 관련 오버 로드를 사용 하 여이 문제를 해결할 수 있습니다.
+UWP 릴리스 빌드는 .NET 네이티브 컴파일을 사용 하 여 응용 프로그램을 네이티브 코드로 직접 컴파일합니다. 그러나이로 인해 UWP의 컨트롤에 대 한 렌더러는 [`Map`](xref:Xamarin.Forms.Maps.Map) 실행 파일에서 연결 되지 않을 수 있습니다. `Forms.Init` **App.xaml.cs**에서 메서드의 UWP 관련 오버 로드를 사용 하 여이 문제를 해결할 수 있습니다.
 
 ```csharp
 var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };
 Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 ```
 
-이 코드는 `Xamarin.Forms.Maps.UWP.MapRenderer` 클래스가 있는 어셈블리를 `Forms.Init` 메서드에 전달 합니다. 이렇게 하면 어셈블리가 .NET 네이티브 컴파일 프로세스에 의해 실행 파일에 연결 되지 않습니다.
+이 코드는 클래스가 있는 어셈블리를 메서드에 전달 합니다 `Xamarin.Forms.Maps.UWP.MapRenderer` `Forms.Init` . 이렇게 하면 어셈블리가 .NET 네이티브 컴파일 프로세스에 의해 실행 파일에 연결 되지 않습니다.
 
 > [!IMPORTANT]
-> 이 작업을 수행 하지 못하면 릴리스 빌드 [`Map`](xref:Xamarin.Forms.Maps.Map) 를 실행할 때 컨트롤이 표시 되지 않습니다.
+> 이 작업을 수행 하지 못하면 [`Map`](xref:Xamarin.Forms.Maps.Map) 릴리스 빌드를 실행할 때 컨트롤이 표시 되지 않습니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [Maps 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Xamarin.ios 고정](~/xamarin-forms/user-interface/map/pins.md).
-- [맵 API](xref:Xamarin.Forms.Maps)
+- [Xamarin.Forms. 지도 핀](~/xamarin-forms/user-interface/map/pins.md)입니다.
+- [지도 API](xref:Xamarin.Forms.Maps)
 - [사용자 지정 렌더러 매핑](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)

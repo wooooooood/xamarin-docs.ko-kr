@@ -1,38 +1,41 @@
 ---
-title: Xamarin.ios XAML의 제네릭
-description: Xamarin.ios XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다.
-ms.prod: xamarin
-ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/28/2020
-ms.openlocfilehash: 9cda08a3bab0e25db2315c9795721e25d47d2429
-ms.sourcegitcommit: 154a3e7aec775327565bb54eda1a610976af1d6f
+title: XAML의 제네릭 Xamarin.Forms
+description: Xamarin.FormsXAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 814e622a822e2eb1cf07f71bfb1da1d6eac5631f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624711"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138114"
 ---
-# <a name="generics-in-xamarinforms-xaml"></a>Xamarin.ios XAML의 제네릭
+# <a name="generics-in-xamarinforms-xaml"></a>XAML의 제네릭 Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
-Xamarin.ios XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다. 이 지원은 제네릭의 제약 형식 `x:TypeArguments` 인수를 제네릭 형식의 생성자에 전달 하는 지시문을 통해 제공 됩니다.
+Xamarin.FormsXAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 제네릭 CLR 형식을 사용할 수 있도록 지원 합니다. 이 지원은 `x:TypeArguments` 제네릭의 제약 형식 인수를 제네릭 형식의 생성자에 전달 하는 지시문을 통해 제공 됩니다.
 
 > [!IMPORTANT]
-> `x:TypeArguments` 지시문을 사용 하 여 xamarin.ios XAML에서 제네릭 클래스를 정의 하는 것은 지원 되지 않습니다.
+> 지시문을 사용 하 여 XAML에서 제네릭 클래스를 정의 하 Xamarin.Forms `x:TypeArguments` 는 것은 지원 되지 않습니다.
 
-형식 인수는 문자열로 지정 되며 일반적으로 접두사 (예: `sys:String` 및 `sys:Int32`)로 지정 됩니다. 일반적인 형식의 CLR 제네릭 제약 조건은 기본 Xamarin.ios 네임 스페이스에 매핑되지 않은 라이브러리에서 제공 되기 때문에 접두사를 입력 해야 합니다. 그러나 `x:String` 및 `x:Int32`와 같은 xaml 2009 기본 제공 형식을 형식 인수로 지정할 수도 있습니다. 여기서 `x` 는 xaml 2009의 xaml 언어 네임 스페이스입니다. XAML 2009 기본 제공 형식에 대 한 자세한 내용은 [xaml 2009 언어 기본](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)형식을 참조 하세요.
+형식 인수는 문자열로 지정 되며 일반적으로 접두사 (예: 및)로 지정 됩니다 `sys:String` `sys:Int32` . 접두사는 기본 네임 스페이스에 매핑되지 않은 라이브러리에서 가져온 일반적인 CLR 제네릭 제약 조건의 형식 이므로 필요 Xamarin.Forms 합니다. 그러나 및와 같은 XAML 2009 기본 제공 형식을 `x:String` `x:Int32` 형식 인수로 지정할 수도 있습니다 `x` . 여기서는 XAML 2009의 xaml 언어 네임 스페이스입니다. XAML 2009 기본 제공 형식에 대 한 자세한 내용은 [xaml 2009 언어 기본](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)형식을 참조 하세요.
 
 쉼표 구분 기호를 사용 하 여 여러 형식 인수를 지정할 수 있습니다. 또한 제네릭 제약 조건이 제네릭 형식을 사용 하는 경우 중첩 된 제약 조건 형식 인수는 괄호 안에 포함 되어야 합니다.
 
 > [!NOTE]
-> 태그 `x:Type` 확장은 제네릭 형식에 대 한 CLR 형식 참조를 제공 하 고 c #의 `typeof` 연산자와 유사한 함수를 제공 합니다. 자세한 내용은 [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)을 참조 하세요.
+> `x:Type`태그 확장은 제네릭 형식에 대 한 CLR 형식 참조를 제공 하 고 `typeof` c #의 연산자와 유사한 함수를 제공 합니다. 자세한 내용은 [x:Type 태그 확장](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)을 참조 하세요.
 
 ## <a name="single-primitive-type-argument"></a>단일 기본 형식 인수
 
-`x:TypeArguments` 지시문을 사용 하 여 단일 기본 형식 인수를 접두사가 있는 문자열 인수로 지정할 수 있습니다.
+지시문을 사용 하 여 단일 기본 형식 인수를 접두사가 있는 문자열 인수로 지정할 수 있습니다 `x:TypeArguments` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -55,9 +58,9 @@ Xamarin.ios XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 �
 </ContentPage>
 ```
 
-이 예제에서 `System.Collections.Generic` 는 `scg` XAML 네임 스페이스로 정의 됩니다. `CollectionView.ItemsSource` 속성은 XAML 2009 기본 제공 `List<T>` `x:String` 형식을 사용 하 여 `string` 형식 인수를 사용 하 여 인스턴스화된로 설정 됩니다. 컬렉션 `List<string>` 은 여러 `string` 항목으로 초기화 됩니다.
+이 예제에서 `System.Collections.Generic` 는 `scg` XAML 네임 스페이스로 정의 됩니다. `CollectionView.ItemsSource`속성은 `List<T>` `string` XAML 2009 기본 제공 형식을 사용 하 여 형식 인수를 사용 하 여 인스턴스화된로 설정 됩니다 `x:String` . `List<string>`컬렉션은 여러 항목으로 초기화 됩니다 `string` .
 
-또는 CLR `String` 형식을 사용 하 여 `List<T>` 컬렉션을 인스턴스화할 수 있습니다.
+또는 `List<T>` CLR 형식을 사용 하 여 컬렉션을 인스턴스화할 수 있습니다 `String` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -83,7 +86,7 @@ Xamarin.ios XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 �
 
 ## <a name="single-object-type-argument"></a>단일 개체 형식 인수
 
-`x:TypeArguments` 지시문을 사용 하 여 단일 개체 형식 인수를 접두사가 있는 문자열 인수로 지정할 수 있습니다.
+지시문을 사용 하 여 단일 개체 형식 인수를 접두사가 있는 문자열 인수로 지정할 수 있습니다 `x:TypeArguments` .
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -136,11 +139,11 @@ Xamarin.ios XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 �
 </ContentPage>
 ```
 
-`GenericsDemo.Models` 이 예제에서 `models` 는 xaml 네임 스페이스로 정의 되며 `System.Collections.Generic` 는 `scg` xaml 네임 스페이스로 정의 됩니다. `CollectionView.ItemsSource` 속성은 `Monkey` 형식 인수를 사용 하 여 인스턴스화된로 `List<T>` 설정 됩니다. 컬렉션 `List<Monkey>` 은 여러 `Monkey` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 항목으로 초기화 되 고 각 `Monkey` 개체의 모양을 정의 하는는의로 `ItemTemplate` 설정 됩니다. [`CollectionView`](xref:Xamarin.Forms.CollectionView)
+이 예제에서 `GenericsDemo.Models` 는 `models` xaml 네임 스페이스로 정의 되며 `System.Collections.Generic` 는 `scg` xaml 네임 스페이스로 정의 됩니다. `CollectionView.ItemsSource`속성은 `List<T>` 형식 인수를 사용 하 여 인스턴스화된로 설정 됩니다 `Monkey` . `List<Monkey>`컬렉션은 여러 항목으로 초기화 되 `Monkey` 고 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 각 개체의 모양을 정의 하는는의 `Monkey` 로 설정 됩니다 `ItemTemplate` [`CollectionView`](xref:Xamarin.Forms.CollectionView) .
 
 ## <a name="multiple-type-arguments"></a>여러 형식 인수
 
-`x:TypeArguments` 지시문을 사용 하 여 여러 형식 인수를 쉼표로 구분 하 여 접두사가 있는 문자열 인수로 지정할 수 있습니다. 제네릭 제약 조건에 제네릭 형식을 사용 하는 경우 중첩 된 제약 조건 형식 인수는 괄호로 묶여 있습니다.
+지시문을 사용 하 여 여러 형식 인수를 쉼표로 구분 하 여 접두사가 있는 문자열 인수로 지정할 수 있습니다 `x:TypeArguments` . 제네릭 제약 조건에 제네릭 형식을 사용 하는 경우 중첩 된 제약 조건 형식 인수는 괄호로 묶여 있습니다.
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -205,7 +208,7 @@ Xamarin.ios XAML은 제네릭 제약 조건을 형식 인수로 지정 하 여 �
 </ContentPage    
 ```
 
-`GenericsDemo.Models` 이 예제에서 `models` 는 xaml 네임 스페이스로 정의 되며 `System.Collections.Generic` 는 `scg` xaml 네임 스페이스로 정의 됩니다. `CollectionView.ItemsSource` 속성은 내부 제약 조건 형식 `List<T>` 인수 `string` 및 `Monkey`를 사용 하 `KeyValuePair<TKey, TValue>` 여 제약 조건을 사용 하 여 인스턴스화된로 설정 됩니다. 컬렉션 `List<KeyValuePair<string,Monkey>>` 은 기본 `KeyValuePair` `KeyValuePair` 이 아닌 생성자를 사용 하 여 여러 항목으로 초기화 되 고 각 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) `Monkey` 개체의 모양을 정의 하는는의로 `ItemTemplate` 설정 됩니다 [`CollectionView`](xref:Xamarin.Forms.CollectionView). 기본이 아닌 생성자에 인수를 전달 하는 방법에 대 한 자세한 내용은 [생성자 인수 전달](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)을 참조 하세요.
+이 예제에서 `GenericsDemo.Models` 는 `models` xaml 네임 스페이스로 정의 되며 `System.Collections.Generic` 는 `scg` xaml 네임 스페이스로 정의 됩니다. `CollectionView.ItemsSource`속성은 `List<T>` `KeyValuePair<TKey, TValue>` 내부 제약 조건 형식 인수 및를 사용 하 여 제약 조건을 사용 하 여 인스턴스화된로 설정 됩니다 `string` `Monkey` . `List<KeyValuePair<string,Monkey>>`컬렉션은 기본이 아닌 생성자를 사용 하 여 여러 항목으로 초기화 되 `KeyValuePair` `KeyValuePair` 고 [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 각 개체의 모양을 정의 하는는의 `Monkey` 로 설정 됩니다 `ItemTemplate` [`CollectionView`](xref:Xamarin.Forms.CollectionView) . 기본이 아닌 생성자에 인수를 전달 하는 방법에 대 한 자세한 내용은 [생성자 인수 전달](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)을 참조 하세요.
 
 ## <a name="related-links"></a>관련 링크
 

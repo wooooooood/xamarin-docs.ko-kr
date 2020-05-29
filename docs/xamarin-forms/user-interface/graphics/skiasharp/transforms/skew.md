@@ -1,48 +1,51 @@
 ---
-title: 기울이기 변환
-description: 이 문서에서는 기울이기 변환에서 SkiaSharp, 기운된 그래픽 개체를 만들 수 있습니다 하는 방법에 대해 설명 하 고 샘플 코드를 사용 하 여이 보여 줍니다.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/20/2017
-ms.openlocfilehash: c3d7e6e0c0e3230c11e2e96baa9efa57ac988c83
-ms.sourcegitcommit: 191f1f3b13a14e2afadcb95126c5f653722f126f
+title: ''
+description: ''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 207b16f062a5c2137ac5fc3c21775d2486fda57d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545672"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135865"
 ---
 # <a name="the-skew-transform"></a>기울이기 변환
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-_기울이기 변환에서 SkiaSharp 기운된 그래픽 개체를 만들 수 있습니다 하는 방법을 참조 하세요._
+_기울이기 변환으로 SkiaSharp에서 기울어진 그래픽 개체를 만드는 방법을 참조 하세요._
 
-SkiaSharp, 기울이기 변환 그림자가 그림과에서 같은 그래픽 개체를 기울이는:
+SkiaSharp에서 기울이기 변환은이 이미지의 그림자와 같은 그래픽 개체를 tilts 합니다.
 
 ![](skew-images/skewexample.png "An example of skewing from the Skew Shadow Text program")
 
-오차는 평행 사변형에 사각형을 설정 하지만 불균형된 타원은 타원 계속 합니다.
+기울이기는 사각형이 평행 사변형으로 바뀌고 기울어진 타원이 여전히 타원입니다.
 
-Xamarin.Forms 변환, 배율 및 회전에 대 한 속성을 정의 하지만 해당 속성이 없는 Xamarin.Forms의 오차에 대 한 합니다.
+Xamarin.Forms는 변환, 배율 조정 및 회전에 대 한 속성을 정의 하지만에는 기울이기에 해당 하는 속성이 없습니다 Xamarin.Forms .
 
-합니다 [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single)) 메서드의 `SKCanvas` 기울이기 세로 및 가로 기울이기를 대 한 두 개의 인수를 허용 합니다.
+[`Skew`](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single))의 메서드는 `SKCanvas` 가로 기울이기 및 세로 기울이기에 대해 두 개의 인수를 허용 합니다.
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
 ```
 
-두 번째 [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(SkiaSharp.SKPoint)) 메서드는 이러한 인수는 단일에서 결합 `SKPoint` 값:
+두 번째 [`Skew`](xref:SkiaSharp.SKCanvas.Skew(SkiaSharp.SKPoint)) 메서드는 이러한 인수를 단일 값으로 결합 합니다 `SKPoint` .
 
 ```csharp
 public void Skew (SKPoint skew)
 ```
 
-그러나 그럴 가능성은 사용할 두 가지 방법 중 하나에서 격리 합니다.
+그러나 이러한 두 가지 방법 중 하나를 격리에 사용 하는 것은 거의 없습니다.
 
-합니다 **실험 기울이기** 오차를 사용 하 여 실험 페이지 있습니다 – 10에서 10 사이의 사이의 값입니다. 텍스트 문자열에서 두 가져온 오차 값을 사용 하 여 페이지의 왼쪽 위 모퉁이에 배치 됩니다 `Slider` 요소입니다. 다음은 `PaintSurface` 처리기에는 [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) 클래스:
+**실험 기울이기** 페이지에서-10에서 10 사이의 오차를 기울일 수 있습니다. 텍스트 문자열은 페이지의 왼쪽 위 모퉁이에 배치 되며, 두 요소에서 얻은 기울이기 값이 `Slider` 있습니다. `PaintSurface`클래스의 처리기는 다음과 같습니다 [`SkewExperimentPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) .
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -70,27 +73,27 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-값을 `xSkew` 양수 값에 대 한 오른쪽 텍스트 또는 음수 값에 대 한 왼쪽의 아래쪽을 이동 하는 인수입니다. 값 `ySkew` 양수 또는 음수 값에 대해 텍스트의 오른쪽 이동 합니다.
+인수의 값은 `xSkew` 양수 값에 대해 텍스트 오른쪽의 아래쪽을 이동 하거나 음수 값을 왼쪽으로 이동 합니다. 값 `ySkew` 은 양수 값 또는 음수 값의 경우 텍스트 오른쪽을 아래로 이동 합니다.
 
 [![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
 
-`xSkew` 값이 `ySkew` 값의 음수 이면 결과는 회전이 며 약간 크기가 조정 됩니다.
+값 `xSkew` 이 음수 이면 `ySkew` 결과는 회전이 며 약간 크기를 조정 하기도 합니다.
 
-변환 수식에는 다음과 같습니다.
+변환 수식은 다음과 같습니다.
 
-x' = x + xSkew? y
+x ' = x + xSkew · x.y
 
-y' ySkew? = x + y
+y ' = ySkew · x + y
 
-양수에 대 한 예를 들어 `xSkew` 값을 변환 된 `x'` 값으로 증가 `y` 증가 합니다. 기울기 원인입니다.
+예를 들어 양수 값의 경우 `xSkew` 변환 된 `x'` 값이 `y` 늘어나면 늘어납니다. 이로 인해 기울기가 발생 합니다.
 
-왼쪽 위 모퉁이가 점 (0, 0)를 배치 하는 사용 하 여 렌더링 되는 삼각형 200 픽셀 너비 고 100 픽셀 짜리는 `xSkew` 값이 1.5, 다음 평행 사변형 결과:
+삼각형 200 픽셀 너비와 100 픽셀의 위쪽이 지점 (0, 0)에서 왼쪽 위 모퉁이에 배치 되 고 1.5 값으로 렌더링 되는 경우 `xSkew` 다음 평행 사변형 결과가 반환 됩니다.
 
 ![](skew-images/skeweffect.png "The effect of the skew transform on a rectangle")
 
-아래쪽 가장자리의 좌표의 `y` 값이 100 인 이므로 150 픽셀을 오른쪽으로 옮겨집니다.
+아래쪽 가장자리의 좌표는 `y` 100 값을 가지 므로 150 픽셀을 오른쪽으로 이동 합니다.
 
-값이 0이 아닌 `xSkew` 또는 `ySkew`를 점 (0, 0) 동일 하 게 유지 합니다. 이때 기울이기 원의 간주할 수 있습니다. 그 밖의 내용은 되도록 기울이기의 가운데 (이 일반적으로 대/소문자)을 해야 하는 경우 없습니다 `Skew` 메서드를 제공 하는 합니다. 명시적으로 결합 해야 `Translate` 사용 하 여 호출 된 `Skew` 호출 합니다. 가운데에서 기울이기 `px` 및 `py`, 다음 호출을 수행 합니다.
+또는의 0이 아닌 값의 경우 `xSkew` `ySkew` 점 (0, 0)만 동일 하 게 유지 됩니다. 이 지점은 기울이기 중심으로 간주할 수 있습니다. 다른 항목 (일반적으로 경우)으로 기울이기의 중심이 필요한 경우 `Skew` 에는이를 제공 하는 메서드가 없습니다. 호출을 사용 하 여 호출을 명시적으로 결합 해야 `Translate` `Skew` 합니다. 및에서 기울이기를 가운데로 맞추려면 `px` `py` 다음을 호출 합니다.
 
 ```csharp
 canvas.Translate(px, py);
@@ -100,19 +103,19 @@ canvas.Translate(-px, -py);
 
 복합 변환 수식은 다음과 같습니다.
 
-x' = x + xSkew? (y-py)
+x ' = x + xSkew · (y – py)
 
-y' ySkew? = (x-px) + y
+y ' = ySkew · (x – px) + y
 
-하는 경우 `ySkew` 가 0 이면 해당 `px` 값은 사용 되지 않습니다. 값을 관련 되지 않습니다 및 마찬가지로 `ySkew` 고 `py`입니다.
+`ySkew`이 0 이면 `px` 값이 사용 되지 않습니다. 값은 관련이 없으며 및의 경우에도 마찬가지입니다 `ySkew` `py` .
 
-수 편하다면 기울기 각도 α가 다이어그램과에서 같은 기울기 각도를 지정 합니다.
+이 다이어그램의 각도 α 같이 기울기 각도로 기울이기를 지정 하는 것이 더 편리할 수 있습니다.
 
 ![](skew-images/skewangleeffect.png "The effect of the skew transform on a rectangle with a skewing angle indicated")
 
-100 픽셀 세로 150 픽셀 shift의 비율은이 예에서 해당 각도의 탄젠트 56.3 (도).
+100 픽셀 세로 까지의 150 픽셀 시프트 비율은 해당 각도의 탄젠트 (이 예에서는 56.3도)입니다.
 
-XAML 파일을를 **각도 실험 기울이기** 비슷합니다는 **기울이기 각도** 는 제외 하 고 페이지를 `Slider` 요소 인에서 90도 사이입니다. [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) 코드 숨김 파일 페이지에서 텍스트를 가운데 정렬 하 고 사용 하 여 `Translate` 기울이기 페이지의 가운데를 중심을 설정 합니다. 짧은 `SkewDegrees` 메서드 코드의 맨 아래에서 각도 값 기울이기 변환 합니다.
+**기울기 각도 실험** 페이지의 XAML 파일은 요소가-90도에서 90도까지 범위를 제외 하 고는 **기울기 각도** 페이지와 비슷합니다 `Slider` . 코드를 사용 하는 [`SkewAngleExperiment`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) 파일은 페이지의 텍스트를 가운데에 맞춥니다 .를 사용 하 여 `Translate` 페이지의 중심으로 기울이기 중심을 설정 합니다. `SkewDegrees`코드 아래쪽의 short 메서드는 각도를 기울기 값으로 변환 합니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -153,11 +156,11 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 }
 ```
 
-각도 양수 또는 음수 90도 다가오면 탄젠트 가까워지면 무한대 있지만 약 80도 정도까지 각도 사용할 수 없습니다.
+각도는 양수 또는 음수 90도에 도달 하는 반면, 탄젠트는 무한대로 반올림 되지만 최대 80도까지 각도를 사용할 수 있습니다.
 
 [![](skew-images/skewangleexperiment-small.png "Triple screenshot of the Skew Angle Experiment page")](skew-images/skewangleexperiment-large.png#lightbox "Triple screenshot of the Skew Angle Experiment page")
 
-작은 음수 가로 기울이기를으로 오블리크 또는 기울임꼴 텍스트를 모방 합니다 **오블리크 텍스트** 페이지를 보여 줍니다. 합니다 [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) 클래스가 어떻게 수행 되는지 보여 줍니다.
+작은 음수 가로 기울이기는 오블리크 **텍스트** 페이지에서 보여 주는 것 처럼 오블리크 또는 기울임꼴 텍스트를 모방 합니다. [`ObliqueTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs)클래스는 수행 방법을 보여 줍니다.
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -189,11 +192,11 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 }
 ```
 
-합니다 `TextAlign` 속성을 `SKPaint` 로 설정 된 `Center`합니다. 모든 변환 없이 `DrawText` 의 좌표를 사용 하 여 호출 (0, 0) 왼쪽 위 모퉁이에서 기준의 가로 가운데를 사용 하 여 텍스트의 위치는입니다. `SkewDegrees` 기준선을 기준으로 20도 텍스트를 가로로 기울어집니다. `Translate` 호출 캔버스의 가운데에 텍스트의 기준선의 가로 가운데를 이동 합니다.
+`TextAlign`의 속성 `SKPaint` 은로 설정 됩니다 `Center` . 변환이 없는 경우 `DrawText` (0, 0) 좌표가 있는 호출은 왼쪽 위 모퉁이에 있는 기준선의 가로 가운데를 사용 하 여 텍스트를 배치 합니다. 는 `SkewDegrees` 기준선을 기준으로 텍스트를 가로 20도로 기울입니다. 이 `Translate` 호출은 텍스트 기준선의 가로 가운데를 캔버스의 가운데로 이동 합니다.
 
 [![](skew-images/obliquetext-small.png "Triple screenshot of the Oblique Text page")](skew-images/obliquetext-large.png#lightbox "Triple screenshot of the Oblique Text page")
 
-합니다 **그림자 텍스트 기울이기** 페이지 텍스트에서 기울이는 텍스트 그림자 45도 기울이기 및 세로 눈금을 조합해 서 사용 하는 방법에 설명 합니다. 관련 부분은 여기는 `PaintSurface` 처리기:
+**그림자 텍스트 기울이기** 페이지에서는 45 수준 기울이기와 세로 비율의 조합을 사용 하 여 텍스트에서 tilts 하는 텍스트 그림자를 만드는 방법을 보여 줍니다. 처리기의 관련 부분은 `PaintSurface` 다음과 같습니다.
 
 ```csharp
 using (SKPaint textPaint = new SKPaint())
@@ -222,22 +225,22 @@ using (SKPaint textPaint = new SKPaint())
 }
 ```
 
-그림자가 표시 된 첫 번째 및 다음 텍스트:
+그림자가 먼저 표시 된 다음 텍스트는 다음과 같이 표시 됩니다.
 
 [![](skew-images/skewshadowtext1-small.png "Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png#lightbox "Triple screenshot of the Skew Shadow Text page")
 
-에 전달 하는 세로 좌표는 `DrawText` 메서드 기준선을 기준으로 텍스트의 위치를 나타냅니다. 기울이기의 중심에 사용 되는 동일한 세로 좌표입니다. 텍스트 문자열 디센더를 포함 하는 경우에이 기술은 작동 하지 않습니다. 예를 들어, "섀도"에 대 한 "마구" 라는 단어를 대체 하 고 결과 다음과 같습니다.
+메서드에 전달 된 세로 좌표는 `DrawText` 기준선을 기준으로 하는 텍스트의 위치를 나타냅니다. 기울이기 중심에 사용 되는 것과 동일한 세로 좌표입니다. 텍스트 문자열에 디센더가 포함 된 경우에는이 방법이 작동 하지 않습니다. 예를 들어 "quirky" 라는 단어를 "Shadow"로 대체 하 고 결과를 확인 합니다.
 
 [![](skew-images/skewshadowtext2-small.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")
 
-섀도 및 텍스트는 기준선에 맞춘 여전히 있지만 효과 깔 잘못 된 합니다. 이 문제를 해결 하려면 텍스트 범위를 가져오려고 합니다.
+그림자와 텍스트는 여전히 기준선에서 정렬 되지만 효과가 잘못 된 것으로 보입니다. 이 문제를 해결 하려면 텍스트 범위를 가져와야 합니다.
 
 ```csharp
 SKRect textBounds = new SKRect();
 textPaint.MeasureText(text, ref textBounds);
 ```
 
-`Translate` 호출 디센더의 높이로 조정 해야 합니다.
+`Translate`호출을 하강 높이로 조정 해야 합니다.
 
 ```csharp
 canvas.Translate(xText, yText + textBounds.Bottom);
@@ -246,7 +249,7 @@ canvas.Scale(1, 3);
 canvas.Translate(-xText, -yText - textBounds.Bottom);
 ```
 
-이제 이러한 디센더와 맨 아래에서 그림자를 확장합니다.
+이제 그림자가 해당 디센더의 아래쪽부터 확장 됩니다.
 
 [![](skew-images/skewshadowtext3-small.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")
 
