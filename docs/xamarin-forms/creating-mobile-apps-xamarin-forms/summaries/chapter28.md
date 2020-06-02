@@ -1,25 +1,29 @@
 ---
-title: 28장의 요약 정보입니다. 위치 및 맵
-description: 'Xamarin.Forms로 모바일 앱 만들기: 28장의 요약 정보입니다. 위치 및 맵'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 5dcd84536cc6d80deb753fc6fe57f9090f6b2dad
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 28. Location and maps''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72697074"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133408"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>28장의 요약 정보입니다. 위치 및 맵
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 Xamarin.Forms는 `View`에서 파생되는 [`Map`](xref:Xamarin.Forms.Maps.Map) 요소를 지원합니다. 맵을 사용하려면 특수 플랫폼이 필요하기 때문에 별도의 어셈블리 **Xamarin.Forms.Maps**에서 구현되며, 다른 네임스페이스 `Xamarin.Forms.Maps`가 사용됩니다.
 
@@ -179,14 +183,14 @@ Google Map 서비스를 사용하려면 권한 부여 키가 필요합니다. �
 
 `Map`의 [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)) 메서드를 호출하여 맵의 위치 및 확대/축소 수준을 프로그래밍 방식으로 설정할 수 있습니다. 이 인수는 `MapSpan` 형식입니다. 다음 중 하나를 사용하여 `MapSpan` 개체를 만들 수 있습니다.
 
-- `Position`, 위도 및 경도 범위를 사용하는 [`MapSpan` 생성자](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double))
+- `Position`, 위도 및 경도 범위를 사용하는 [`MapSpan` constructor](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double))
 - `Position` 및 반지름을 사용하는 [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance))
 
 [`ClampLatitude`](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double)) 또는 [`WithZoom`](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double)) 메서드를 사용하여 기존 항목에서 새 `MapSpan`을 만들 수도 있습니다.
 
 [WyomingPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) 파일 및 [WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) 코드 숨김 파일은 `MoveToRegion` 메서드를 사용하여 와이오밍 상태를 표시하는 방법을 보여줍니다.
 
-또는 [`Map` 생성자](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan))와 `MapSpan` 개체를 사용하여 맵의 위치를 초기화할 수도 있습니다. [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) 파일은 이 작업을 전적으로 XAML로 수행하여 샌프란시스코에 Xamarin 본사를 표시하는 방법을 보여줍니다.
+또는 [`Map` constructor](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan))와 `MapSpan` 개체를 사용하여 맵의 위치를 초기화할 수도 있습니다. [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) 파일은 이 작업을 전적으로 XAML로 수행하여 샌프란시스코에 Xamarin 본사를 표시하는 방법을 보여줍니다.
 
 ### <a name="dynamic-zooming"></a>동적 확대/축소
 
@@ -231,7 +235,7 @@ Google Map 서비스를 사용하려면 권한 부여 키가 필요합니다. �
 
 ## <a name="geocoding-and-back-again"></a>지오코딩 및 돌아가기
 
-[**Xamarin.Forms.Maps**](xref:Xamarin.Forms.Maps) 어셈블리 역시 텍스트 주소를 0개 이상의 가능한 지리적 위치로 변환하는 [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) 메서드와 다른 방향으로 변환하는 또 다른 [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) 메서드가 들어 있는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 포함하고 있습니다.
+[ **Xamarin.Forms.Maps**](xref:Xamarin.Forms.Maps) 어셈블리 역시 텍스트 주소를 0개 이상의 가능한 지리적 위치로 변환하는 [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) 메서드와 다른 방향으로 변환하는 또 다른 [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) 메서드가 들어 있는 [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) 클래스를 포함하고 있습니다.
 
 [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) 파일 및 [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) 코드 숨김 파일은 이 기능을 보여줍니다.
 

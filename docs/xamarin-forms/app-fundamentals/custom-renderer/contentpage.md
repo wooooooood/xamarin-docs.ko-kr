@@ -1,18 +1,21 @@
 ---
-title: ContentPage 사용자 지정
-description: ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 시각적 요소입니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 ContentPage 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: A4E61D93-73D9-4668-8D1C-DB6FC2491822
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 64367ded8dcd173f7c9e57cfc234aa66712aefd4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 50e28291d72550264e3806c0911f59a57c6d8bf0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70772021"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136333"
 ---
 # <a name="customizing-a-contentpage"></a>ContentPage 사용자 지정
 
@@ -20,7 +23,7 @@ ms.locfileid: "70772021"
 
 _ContentPage는 단일 보기를 표시하고 화면 대부분을 차지하는 시각적 요소입니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 ContentPage 페이지에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
-모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`ContentPage`](xref:Xamarin.Forms.ContentPage)을 렌더링하면 `PageRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UIViewController` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `PageRenderer` 클래스는 `ViewGroup` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `PageRenderer` 클래스는 `FrameworkElement` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤이 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다. Xamarin.Forms 애플리케이션에서 [`ContentPage`](xref:Xamarin.Forms.ContentPage)를 렌더링하는 경우 iOS에서 `PageRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UIViewController` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `PageRenderer` 클래스는 `ViewGroup` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `PageRenderer` 클래스는 `FrameworkElement` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -111,7 +114,7 @@ async void OnTakePhotoButtonClicked (object sender, EventArgs e)
 
 ![](contentpage-images/screenshots.png "CameraPage on each Platform")
 
-`PageRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 페이지가 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CameraPage` 인스턴스에 대한 참조를 포함합니다.
+`PageRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 페이지가 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 연결된 Xamarin.Forms 요소와 렌더러가 연결되는 Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `CameraPage` 인스턴스에 대한 참조를 포함합니다.
 
 `CameraPageRenderer` 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 페이지 사용자 지정을 수행하는 위치입니다. 또한 렌더링되는 Xamarin.Forms 페이지 인스턴스에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 

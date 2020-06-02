@@ -1,20 +1,23 @@
 ---
-title: Xamarin.Forms 문자열 형식 지정
-description: 이 문서에서는 Xamarin.FOrms 데이터 바인딩을 사용하여 개체에 문자열 형식을 지정하고 나타내는 방법을 설명합니다. 이것은 자리 표시자를 사용하여 바인딩의 StringFormat을 표준 .NET 형식 지정 문자열로 설정하여 구현할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: bdd28e1ce6d36a0a025ac43a709af2e38a313526
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.Forms 문자열 서식 지정
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940376"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135761"
 ---
-# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 형식 지정
+# <a name="xamarinforms-string-formatting"></a>Xamarin.Forms 문자열 서식 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
@@ -180,11 +183,11 @@ XAML 파일의 다음 섹션은 정적 `DateTime.Now` 속성을 참조하는 `x:
 
 RGB(빨강, 녹색, 파랑) 값을 기존의 2자리 16진수 형식으로 표현하는 방법이 궁금할 수도 있습니다. 이러한 정수 값은 `Color` 구조체에서 직접 사용할 수 없습니다. 한 가지 솔루션은 ViewModel에서 색 구성 요소의 정수 값을 계산하여 속성으로 나타내는 것입니다. 그런 다음, `X2` 형식 지정 사양을 사용하여 형식을 지정할 수 있습니다.
 
-다른 방식은 더 일반적입니다. [**바인딩 값 변환기**](converters.md) 문서 뒷부분의 설명대로 ‘바인딩 값 변환기’를 작성할 수 있습니다. 
+다른 방식은 더 일반적입니다. [**바인딩 값 변환기**](converters.md) 문서 뒷부분의 설명대로 ‘바인딩 값 변환기’를 작성할 수 있습니다.
 
 하지만 다음 문서에서는 [**바인딩 경로**](binding-path.md)에 대해 더 자세히 살펴보고 이것을 사용하여 컬렉션의 하위 속성과 항목을 참조하는 방법을 보여줍니다.
 
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

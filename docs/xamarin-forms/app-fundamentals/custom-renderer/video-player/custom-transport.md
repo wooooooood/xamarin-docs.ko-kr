@@ -1,18 +1,21 @@
 ---
-title: 사용자 지정 비디오 전송 컨트롤
+title: ''
 description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어 애플리케이션에 사용자 지정 전송 컨트롤을 구현하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: efe41fa5f25f6257587fd97a2711e9037b94dc6e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c72f68f327b6c0df6959d37ed4bf390e3bd7f31d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77636018"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135007"
 ---
 # <a name="custom-video-transport-controls"></a>사용자 지정 비디오 전송 컨트롤
 

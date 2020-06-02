@@ -1,18 +1,22 @@
 ---
-title: 요약 - 11장. 바인딩할 수 있는 인프라
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 11장. 바인딩할 수 있는 인프라'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 11. The Bindable infrastructure''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: edc3dfd97457fe93a04edd82574f6ed419f5fdc1
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334364"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136801"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>요약 - 11장. 바인딩할 수 있는 인프라
 
@@ -20,11 +24,11 @@ ms.locfileid: "61334364"
 
 모든 C# 프로그래머는 C# *속성*에 익숙합니다. 속성에는 *set* 접근자 및/또는 *get* 접근자가 포함됩니다. 종종 이를 공용 언어 런타임에 대한 *CLR 속성*이라고도 부릅니다.
 
-Xamarin.Forms는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 클래스로 캡슐화되고 [`BindableObject`](xref:Xamarin.Forms.BindableObject) 클래스로 지원되는 *바인딩할 수 있는 속성*이라고 부르는 향상된 속성 정의를 정의합니다. 이러한 클래스는 서로 연관되어 있더라도 서로 다른 점이 많습니다. `BindableProperty`는 속성 자체를 정의하기 위해 사용됩니다. `BindableObject`는 바인딩할 수 있는 속성을 정의하는 클래스의 기본 클래스라는 점에서 `object`와 비슷합니다.
+Xamarin.Forms는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 클래스로 캡슐화되고 [`BindableObject`](xref:Xamarin.Forms.BindableObject) 클래스로 지원되는 바인딩할 수 있는 속성이라고 부르는 향상된 속성 정의를 정의합니다. 이러한 클래스는 서로 연관되어 있더라도 서로 다른 점이 많습니다. `BindableProperty`는 속성 자체를 정의하기 위해 사용됩니다. `BindableObject`는 바인딩할 수 있는 속성을 정의하는 클래스의 기본 클래스라는 점에서 `object`와 비슷합니다.
 
 ## <a name="the-xamarinforms-class-hierarchy"></a>Xamarin.Forms 클래스 계층 구조
 
-[**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) 샘플은 리플렉션을 사용해서 Xamarin.Forms의 클래스 계층 구조를 표시하고 이 계층 구조에서 `BindableObject`로 수행되는 중요한 역할을 보여줍니다. `BindableObject`는 `Object`에서 파생되며 [`VisualElement`](xref:Xamarin.Forms.VisualElement)가 파생되는 [`Element`](xref:Xamarin.Forms.Element)에 대한 부모 클래스입니다. 이 클래스는 [`Layout`](xref:Xamarin.Forms.Layout)의 부모 클래스인 [`Page`](xref:Xamarin.Forms.Page) 및 [`View`](xref:Xamarin.Forms.View)의 부모 클래스입니다.
+[**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) 샘플은 리플렉션을 사용해서 Xamarin.Forms의 클래스 계층 구조를 표시하고 이 계층 구조에서 `BindableObject`가 수행하는 중요한 역할을 보여 줍니다. `BindableObject`는 `Object`에서 파생되며 [`VisualElement`](xref:Xamarin.Forms.VisualElement)가 파생되는 [`Element`](xref:Xamarin.Forms.Element)에 대한 부모 클래스입니다. 이 클래스는 [`Layout`](xref:Xamarin.Forms.Layout)의 부모 클래스인 [`Page`](xref:Xamarin.Forms.Page) 및 [`View`](xref:Xamarin.Forms.View)의 부모 클래스입니다.
 
 [![클래스 계층 구조 공유에 대한 세 가지 스크린샷](images/ch11fg01-small.png "클래스 계층 구조 공유")](images/ch11fg01-large.png#lightbox "클래스 계층 구조 공유")
 
@@ -52,13 +56,13 @@ Xamarin.Forms는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 클�
 
 일부 속성은 바인딩할 수 있는 속성으로 지원되지 않으며, `Span`과 같은 일부 Xamarin.Forms 클래스는 `BindableObject`에서 파생되지 않습니다. `BindableObject`가 `SetValue` 및 `GetValue` 메서드를 정의하기 때문에 `BindableObject`에서 파생되는 클래스만 바인딩할 수 있는 속성을 지원할 수 있습니다.
 
-`Span`이 `BindableObject`에서 파생되지 않기 때문에 `Text`와 같은 해당 속성은 바인딩할 수 있는 속성으로 지원되지 않습니다. 따라서 `Span`의 `Text` 속성에 `DynamicResource`를 설정하면 이전 장의 [**DynamicVsStatic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) 샘플에서 예외가 발생합니다. [**DynamicVsStaticCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) 샘플은 `Element`로 정의된 [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)) 메서드를 사용하여 코드에서 동적 리소스를 설정하는 방법을 보여줍니다. 첫 번째 인수는 `BindableProperty` 형식의 객체입니다.
+`Span`이 `BindableObject`에서 파생되지 않기 때문에 `Text`와 같은 해당 속성은 바인딩할 수 있는 속성으로 지원되지 않습니다. 따라서 `Span`의 `Text` 속성에 `DynamicResource`를 설정하면 이전 장의 [**DynamicVsStatic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/DynamicVsStatic) 샘플에서 예외가 발생합니다. [**DynamicVsStaticCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/DynamicVsStaticCode) 샘플은 `Element`로 정의된 [`SetDynamicResource`](xref:Xamarin.Forms.Element.SetDynamicResource(Xamarin.Forms.BindableProperty,System.String)) 메서드를 사용하여 코드에서 동적 리소스를 설정하는 방법을 보여 줍니다. 첫 번째 인수는 `BindableProperty` 형식의 객체입니다.
 
-마찬가지로 `BindableObject`로 정의된 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드에는 `BindableProperty` 형식의 첫 번째 인수가 포함됩니다.
+마찬가지로 `BindableObject`에 의해 정의되는 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드에는 `BindableProperty` 형식의 첫 번째 인수가 있습니다.
 
 ## <a name="defining-bindable-properties"></a>바인딩할 수 있는 속성 정의
 
-`BindableProperty` 형식의 정적 읽기 전용 필드를 만들도록 정적 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) 메서드를 사용하여 사용자 고유의 바인딩할 수 있는 속성을 정의할 수 있습니다.
+정적 [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) 메서드를 사용하여 자체 바인딩 가능한 속성을 정의해 `BindableProperty` 형식의 정적 읽기 전용 필드를 만들 수 있습니다.
 
 이에 대해서는 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리의 [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) 클래스를 참조하십시오. 클래스가 `Label`에서 파생되며, 이를 이용해서 글꼴 크기(포인트)를 지정할 수 있습니다. 이에 대해서는 [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) 샘플을 참조하십시오.
 
@@ -85,9 +89,9 @@ Xamarin.Forms는 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 클�
 
 ### <a name="the-read-only-bindable-property"></a>읽기 전용 바인딩할 수 있는 속성
 
-바인딩할 수 있는 속성은 읽기 전용일 수 있습니다. 읽기 전용 바인딩할 수 있는 속성을 만들려면 정적 메서드 [`BindableProperty.CreateReadOnly`](xref:Xamarin.Forms.BindableProperty.CreateReadOnly(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate))를 호출하여 [`BindablePropertyKey`](xref:Xamarin.Forms.BindablePropertyKey) 형식의 프라이빗 정적 읽기 전용 필드를 정의해야 합니다.
+바인딩할 수 있는 속성은 읽기 전용일 수 있습니다. 바인딩할 수 있는 읽기 전용 속성을 만들려면 정적 메서드 [`BindableProperty.CreateReadOnly`](xref:Xamarin.Forms.BindableProperty.CreateReadOnly(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate))를 호출하여 [`BindablePropertyKey`](xref:Xamarin.Forms.BindablePropertyKey) 형식의 비공개 정적 읽기 전용 필드를 정의해야 합니다.
 
-그런 다음, CLR 속성 `set` 접근자를 `private`로 정의하여 `BindablePropertyKey` 개체로 [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey,System.Object)) 오버로드를 호출합니다. 그러면 속성이 클래스 외부에 설정되지 않도록 방지됩니다.
+그런 다음 CLR 속성 `set` 접근자를 `private`으로 정의하여 `BindablePropertyKey` 개체로 [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindablePropertyKey,System.Object)) 오버로드를 호출합니다. 그러면 속성이 클래스 외부에 설정되지 않도록 방지됩니다.
 
 이에 대해서는 [**BaskervillesCount**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) 샘플에 사용되는 [`CountedLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) 클래스를 참조하십시오.
 

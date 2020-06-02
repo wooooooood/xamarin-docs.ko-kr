@@ -1,19 +1,22 @@
 ---
 title: Xamarin.Forms 기본 바인딩
 description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하는 방법을 설명합니다. 이 바인딩은 두 개체 사이의 속성 쌍을 연결하며, 이러한 개체 중 적어도 하나는 일반적으로 사용자 인터페이스 개체입니다. 이러한 두 개체는 대상과 원본이라고 합니다.
-ms.prod: xamarin
-ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/22/2019
-ms.custom: video
-ms.openlocfilehash: 2227e2bd47a5b4960d28be67bac7947a4fb57a93
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: ''
+ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303782"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133551"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.Forms 기본 바인딩
 
@@ -56,7 +59,7 @@ Xamarin.Forms 데이터 바인딩은 두 개의 개체 사이의 속성 쌍을 �
 `Element`, `VisualElement`, `View` 및 `View` 파생문이 포함된 [`BindableObject`](xref:Xamarin.Forms.BindableObject)에서 파생되는 모든 클래스의 인스턴스에 바인딩을 설정할 수 있습니다.  바인딩은 항상 대상 개체에 설정됩니다. 바인딩은 원본 개체를 참조합니다. 데이터 바인딩을 설정하려면 대상 클래스의 다음 두 멤버를 사용합니다.
 
 - [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) 속성은 원본 개체를 지정합니다.
-- [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드는 대상 속성 및 원본 속성을 지정합니다.
+- [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드는 대상 속성과 원본 속성을 지정합니다.
 
 이 예제에서 `Label`은 바인딩 대상이고 `Slider`는 바인딩 원본입니다. `Slider` 원본의 변경은 `Label` 대상의 회전에 영향을 줍니다. 데이터는 원본에서 대상으로 이동합니다.
 
@@ -126,7 +129,7 @@ label.SetBinding(RotationProperty, "Value");
 - `x:Reference` 태그 확장은 원본 개체, 즉 `slider`라는 `Slider`를 참조하는 데 필요합니다.
 - `Binding` 태그 확장에서 `Label`의 `Rotation` 속성을 `Slider`의 `Value` 속성에 연결합니다.
 
-XAML 태그 확장에 대한 자세한 내용은 [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md) 문서를 참조하세요. `x:Reference` 태그 확장은 [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스에서 지원되고, `Binding`은 [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) 클래스에서 지원됩니다. XML 네임스페이스 접두사가 표시되면 `x:Reference`는 XAML 2009 사양의 일부이지만 `Binding`은 Xamin.Forms의 일부입니다. 따옴표는 중괄호 안에 표시되지 않습니다.
+XAML 태그 확장에 대한 자세한 내용은 [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md) 문서를 참조하세요. `x:Reference` 태그 확장은 [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) 클래스에서 지원되고, `Binding`은 [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) 클래스에서 지원됩니다. XML 네임스페이스 접두사가 표시되면 `x:Reference`는 XAML 2009 사양의 일부이지만 `Binding`은 Xamarin.Forms의 일부입니다. 따옴표는 중괄호 안에 표시되지 않습니다.
 
 `BindingContext`를 설정할 때 `x:Reference` 태그 확장을 잊어버리기 쉽습니다. 다음과 같이 실수로 속성을 바인딩 원본 이름으로 직접 설정하는 것이 일반적입니다.
 
@@ -138,7 +141,7 @@ BindingContext="slider"
 
 원본 속성은 [`Binding`](xref:Xamarin.Forms.Binding) 클래스의 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성에 해당하는 `BindingExtension`의 [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) 속성으로 지정됩니다.
 
-**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉, `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 ‘콘텐츠 속성’ 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다.  `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
+**기본 XAML 바인딩** 페이지에 표시된 태그는 간소화할 수 있습니다. 즉, `x:Reference` 및 `Binding`과 같은 XAML 태그 확장에는 ‘콘텐츠 속성’ 특성이 정의될 수 있으며, 이는 XAML 태그 확장의 경우 속성 이름을 표시할 필요가 없음을 의미합니다. `Name` 속성은 `x:Reference`의 콘텐츠 속성이고, `Path` 속성은 `Binding`의 콘텐츠 속성입니다. 즉 다음 식에서 해당 속성을 제외할 수 있습니다.
 
 ```xaml
 <Label Text="TEXT"
@@ -175,7 +178,7 @@ BindingContext="slider"
 </ContentPage>
 ```
 
-코드 숨김 파일은 `BindableObject`에서 정의된 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드를 사용하여 바인딩을 설정합니다. 인수는 [`Binding`](xref:Xamarin.Forms.Binding) 클래스에 대한 [생성자](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object))입니다.
+코드 숨김 파일은 `BindableObject`가 정의하는 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드로 바인딩을 설정합니다. 인수는 [`Binding`](xref:Xamarin.Forms.Binding) 클래스의 경우 [constructor](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object))입니다.
 
 ```csharp
 public partial class AlternativeCodeBindingPage : ContentPage
@@ -332,7 +335,7 @@ XAML 태그 확장은 일반적으로 중괄호로 구분되지만, 개체 요�
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>관련 동영상
 

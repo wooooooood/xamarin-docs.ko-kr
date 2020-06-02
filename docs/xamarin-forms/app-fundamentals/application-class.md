@@ -1,21 +1,24 @@
 ---
-title: Xamarin.Forms App 클래스
-description: 이 문서에서는 기본 App 클래스의 기능을 설명합니다. 이 클래스에는 앱의 초기 페이지로 설정할 속성과 수명 주기 상태 변경 전체에 걸친 단순 값을 저장하는 영구 사전이 포함되어 있습니다.
-ms.prod: xamarin
-ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
-ms.technology: xamarin-forms
-ms.custom: video
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/19/2016
-ms.openlocfilehash: aaf2086fd8128d68baa401ab646b31bcbc279545
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.Forms 앱 클래스
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303770"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129690"
 ---
-# <a name="xamarinforms-app-class"></a>Xamarin.Forms App 클래스
+# <a name="xamarinforms-app-class"></a>Xamarin.Forms 앱 클래스
 
 `Application` 기본 클래스에서 제공하여 프로젝트의 기본 `App` 하위 클래스에 공개되는 기능은 다음과 같습니다.
 
@@ -112,7 +115,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 
 Xamarin.Forms 1.4는 `Application` 클래스에 `SavePropertiesAsync()` 추가 메서드를 도입했으며, 이 메서드는 `Properties` 사전을 사전에 유지하기 위해 호출할 수 있습니다. 이렇게 하면 중요한 업데이트 후에 충돌로 인해 직렬화되지 않거나 OS에서 종료하는 위험을 감수하지 않으면서 속성을 저장할 수 있습니다.
 
-**Xamarin.Forms를 사용하여 모바일 애플리케이션 만들기** 서적의 [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) 및 [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 장과 관련 [샘플](https://github.com/xamarin/xamarin-forms-book-preview-2)에서 `Properties` 사전 사용에 대한 참조를 찾을 수 있습니다.
+**Xamarin.Forms를 사용하여 모바일 애플리케이션 만들기** 책의 [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) 및 [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) 장과 관련 [샘플](https://github.com/xamarin/xamarin-forms-book-preview-2)에서 `Properties` 사전 사용에 대한 참조를 찾을 수 있습니다.
 
 ## <a name="the-application-class"></a>애플리케이션 클래스
 

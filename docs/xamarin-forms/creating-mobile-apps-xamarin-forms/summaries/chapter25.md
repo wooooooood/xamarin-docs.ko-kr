@@ -1,18 +1,22 @@
 ---
-title: 요약 - 25장. 페이지 종류
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 25장. 페이지 종류'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: D1D348F2-6A44-4781-ADCE-A0B7BB9AEF89
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: b86f2d7216a6344b14fc4d8c538ea68871eda5ae
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 25. Page varieties''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e66fb50b8d537ee0267457d5b0ab0f417813e676
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760542"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136619"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>요약 - 25장. 페이지 종류
 
@@ -62,7 +66,7 @@ Windows 8.1 및 Windows Phone 8.1 플랫폼에서는 비트맵이 마스터 페�
 
 ### <a name="your-own-user-interface"></a>고유 사용자 인터페이스
 
-Xamarin.Forms에서 마스터 및 세부 뷰 사이의 전환을 위한 사용자 인터페이스가 제공되더라도, 사용자가 자신의 고유 인터페이스를 제공할 수 있습니다. 이를 수행하려면:
+Xamarin.Forms에서 마스터 및 세부 뷰 사이의 전환을 위한 사용자 인터페이스가 제공되더라도 사용자가 자신의 고유 인터페이스를 제공할 수 있습니다. 이를 수행하려면:
 
 - [`IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabled) 속성을 `false`로 설정하여 살짝 밀기를 사용하지 않도록 설정합니다.
 - [`ShouldShowToolbarButton`](xref:Xamarin.Forms.MasterDetailPage.ShouldShowToolbarButton) 메서드를 재정의하고 `false`를 반환하여 Windows 8.1 및 Windows Phone 8.1에서 도구 모음 단추를 숨깁니다.

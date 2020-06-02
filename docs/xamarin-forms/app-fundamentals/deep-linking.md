@@ -1,19 +1,22 @@
 ---
-title: 애플리케이션 인덱싱 및 딥 링크 설정
+title: ''
 description: 이 문서에서는 애플리케이션 인덱싱 및 딥 링크를 사용하여 iOS 및 Android 디바이스에서 Xamarin.Forms 애플리케이션 콘텐츠를 검색 가능하게 하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
-ms.technology: xamarin-forms
-ms.custom: xamu-video
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/28/2018
-ms.openlocfilehash: fcd8333a0623058fceb486183ddb995e85eaf18a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d93f9bbcfafc3cb71d6b71159f6d3368f50c08be
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940332"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135735"
 ---
 # <a name="application-indexing-and-deep-linking"></a>애플리케이션 인덱싱 및 딥 링크 설정
 
@@ -23,7 +26,7 @@ _애플리케이션 인덱싱은 검색 결과에 나타나서 관련성을 유�
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
-**Xamarin.Forms 및 Azure와 딥 링크 설정 동영상**
+**Xamarin.Forms 및 Azure를 사용한 딥 링크 설정 동영상**
 
 Xamarin.Forms 애플리케이션 인덱싱 및 딥 링크 설정은 사용자가 애플리케이션을 탐색할 때 애플리케이션 인덱싱에 대한 메타데이터를 게시하기 위한 API를 제공합니다. 그런 다음, 스포트라이트 검색, Google 검색 또는 웹 검색에서 인덱싱된 콘텐츠를 검색할 수 있습니다. 딥 링크가 포함된 검색 결과를 누르면 애플리케이션에서 처리할 수 있는 이벤트가 발생하고 일반적으로 딥 링크에서 참조되는 페이지로 이동하는 데 사용됩니다.
 
@@ -187,7 +190,7 @@ public class App : Application
 }
 ```
 
-[`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) 메서드는 `Uri`를 탐색할 페이지로 구문 분석하고 매개 변수를 페이지에 전달하기 전에 수신된 `Uri`가 애플리케이션용인지를 확인합니다. 탐색할 페이지의 인스턴스가 생성되고 페이지 매개 변수로 표시되는 `TodoItem`이 검색됩니다. 탐색할 페이지의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)가 `TodoItem`으로 설정됩니다. 이렇게 하면 `TodoItemPage`가 [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page)) 메서드로 표시될 때 딥 링크에 `ID`가 포함된 `TodoItem`가 표시됩니다.
+[`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) 메서드는 `Uri`를 탐색할 페이지로 구문 분석하고 매개 변수를 페이지에 전달하기 전에 수신된 `Uri`가 애플리케이션용인지를 확인합니다. 탐색할 페이지의 인스턴스가 생성되고 페이지 매개 변수로 표시되는 `TodoItem`이 검색됩니다. 탐색할 페이지의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)가 `TodoItem`으로 설정됩니다. 이렇게 하면 `TodoItemPage`가 [`PushAsync`](xref:Xamarin.Forms.INavigation.PushAsync(Xamarin.Forms.Page)) 메서드에 의해 표시될 때 딥 링크에 `ID`가 포함된 `TodoItem`이 표시됩니다.
 
 ## <a name="making-content-available-for-search-indexing"></a>검색 인덱싱에 사용할 수 있는 콘텐츠 만들기
 
@@ -246,7 +249,7 @@ pageLink.KeyValues.Add("companyName", "Xamarin");
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 애플리케이션 인덱싱 및 딥 링크를 사용하여 iOS 및 Android 디바이스에서 Xamarin.Forms 애플리케이션 콘텐츠를 검색 가능하게 하는 방법을 설명합니다. 애플리케이션 인덱싱을 사용하면 몇 번 사용한 후에 잊혀질 수 있는 검색 결과에 나타나서 애플리케이션의 관련성을 유지할 수 있게 합니다.
+이 문서에서는 애플리케이션 인덱싱 및 딥 링크를 사용하여 iOS 및 Android 디바이스에서 Xamarin.Forms 애플리케이션 콘텐츠를 검색 가능하게 하는 방법을 설명했습니다. 애플리케이션 인덱싱을 사용하면 몇 번 사용한 후에 잊혀질 수 있는 검색 결과에 나타나서 애플리케이션의 관련성을 유지할 수 있게 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

@@ -1,20 +1,23 @@
 ---
-title: Xamarin.Forms Shell 플라이아웃
-description: 플라이아웃은 셸 애플리케이션의 루트 메뉴이며, 아이콘을 통해 또는 화면 측면에서 살짝 밀어 액세스할 수 있습니다. 플라이아웃은 선택적 헤더, 플라이아웃 항목 및 선택적 메뉴 항목으로 구성됩니다.
-ms.prod: xamarin
-ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/22/2020
-ms.openlocfilehash: 5e5c50a9195ceb2716e3ca5306b72654fedc46e8
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
+title: Xamarin.Forms 셸 플라이아웃
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b336a594fa7525000e119333b56284368a23cc03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852478"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134955"
 ---
-# <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms Shell 플라이아웃
+# <a name="xamarinforms-shell-flyout"></a>Xamarin.Forms 셸 플라이아웃
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -22,7 +25,7 @@ ms.locfileid: "82852478"
 
 ![셸 주석 처리 플라이아웃의 스크린샷](flyout-images/flyout-annotated.png "주석이 추가된 플라이아웃")
 
-필요한 경우 `Shell.FlyoutBackgroundColor` 바인딩 가능 속성을 통해 플라이아웃의 배경색을 [`Color`](xref:Xamarin.Forms.Color)로 설정할 수 있습니다. 이 속성은 CSS(CSS 스타일시트)에서 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
+필요한 경우 `Shell.FlyoutBackgroundColor` 바인딩 가능 속성을 통해 플라이아웃의 배경색을 [`Color`](xref:Xamarin.Forms.Color)로 설정할 수 있습니다. 이 속성은 CSS(CSS 스타일시트)에서 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms Shell 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
 
 ## <a name="flyout-icon"></a>플라이아웃 아이콘
 
@@ -648,4 +651,4 @@ Shell에는 `FlyoutItem` 및 `MenuItem` 개체에 자동으로 적용되는 세 
 
 - [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms 스타일 클래스](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
-- [Xamarin.Forms 시각적 개체 상태 관리자](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

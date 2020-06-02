@@ -1,21 +1,24 @@
 ---
 title: Xamarin.Forms 빠른 시작 심층 분석
 description: 이 문서에서는 Xamarin.Forms를 사용하여 애플리케이션 개발의 기본적인 사항을 검사합니다. Xamarin.Forms 애플리케이션 분석, 아키텍처 및 애플리케이션 기본 사항, 사용자 인터페이스에 대해 다루었습니다.
-zone_pivot_groups: platform
-ms.topic: quickstart
-ms.prod: xamarin
-ms.custom: video
-ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/27/2018
-ms.openlocfilehash: def54534d30b92b3d6ea8b5a0e7cac2c93293710
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.custom: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149821"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132524"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms 빠른 시작 심층 분석
 
@@ -44,7 +47,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
-- **NuGet**은 프로젝트에 추가된 Xamarin.Forms 및 sqlite-net-pcl NuGet 패키지를 &ndash;합니다.
+- **NuGet** &ndash; 프로젝트에 추가된 Xamarin.Forms 및 sqlite-net-pcl NuGet 패키지입니다.
 - **SDK** &ndash;`NETStandard.Library` 메타패키지는 .NET Standard를 정의하는 NuGet 패키지의 전체 집합을 참조합니다.
 
 ::: zone-end
@@ -70,7 +73,7 @@ Visual Studio는 코드를 *솔루션* 및 *프로젝트*로 구성합니다. �
 
 프로젝트에는 **NuGet** 및 **SDK** 노드를 포함하는 **종속성** 노드가 있습니다.
 
-- **NuGet**은 프로젝트에 추가된 Xamarin.Forms 및 sqlite-net-pcl NuGet 패키지를 &ndash;합니다.
+- **NuGet** &ndash; 프로젝트에 추가된 Xamarin.Forms 및 sqlite-net-pcl NuGet 패키지입니다.
 - **SDK** &ndash;`NETStandard.Library` 메타패키지는 .NET Standard를 정의하는 NuGet 패키지의 전체 집합을 참조합니다.
 
 ::: zone-end
@@ -91,7 +94,7 @@ Xamarin.iOS 애플리케이션에 대한 자세한 내용은 [Xamarin.iOS 애플
 
 ## <a name="architecture-and-application-fundamentals"></a>아키텍처 및 애플리케이션 기본 사항
 
-Xamarin.Forms 애플리케이션은 전통적인 교차 플랫폼 애플리케이션과 같은 방식으로 설계되었습니다. 공유 코드는 일반적으로 .NET Standard 라이브러리에 배치되고, 플랫폼 특정 애플리케이션은 해당 공유 코드를 사용합니다. 다음 다이어그램은 Notes 애플리케이션에 대한 해당 관계의 개요를 보여줍니다.
+Xamarin.Forms 애플리케이션은 전통적인 플랫폼 간 애플리케이션과 같은 방식으로 설계되었습니다. 공유 코드는 일반적으로 .NET Standard 라이브러리에 배치되고, 플랫폼 특정 애플리케이션은 해당 공유 코드를 사용합니다. 다음 다이어그램은 Notes 애플리케이션에 대한 해당 관계의 개요를 보여줍니다.
 
 ::: zone pivot="windows"
 
@@ -161,7 +164,7 @@ namespace Notes.iOS
 
 ### <a name="android"></a>Android
 
-Notes.Android 프로젝트는 Android에서 초기 Xamarin.Forms 페이지를 시작하기 위해 `FormsAppCompatActivity` 클래스를 상속하는 작업을 사용하여 `MainLauncher` 특성을 가진 `Activity`를 만드는 코드를 포함하고 있습니다.
+Notes.Android 프로젝트는 Android에서 초기 Xamarin.Forms 페이지를 시작하기 위해 `FormsAppCompatActivity` 클래스에서 상속하는 작업을 사용하여 `MainLauncher` 특성을 가진 `Activity`를 만드는 코드를 포함하고 있습니다.
 
 ```csharp
 namespace Notes.Droid
@@ -219,10 +222,10 @@ namespace Notes.UWP
 }
 ```
 
-Xamarin.Forms 애플리케이션은 `LoadApplication` 메서드를 사용해 로드합니다.
+Xamarin.Forms 애플리케이션은 `LoadApplication` 메서드를 사용해 로드됩니다.
 
 > [!NOTE]
-> 유니버설 Windows 플랫폼 앱은 Xamarin.Forms로 만들 수 있지만 Windows상의 Visual Studio에서만 사용합니다.
+> 유니버설 Windows 플랫폼 앱은 Xamarin.Forms로 만들 수 있지만 Windows에서 Visual Studio만 사용합니다.
 
 ::: zone-end
 
@@ -231,7 +234,7 @@ Xamarin.Forms 애플리케이션은 `LoadApplication` 메서드를 사용해 로
 Xamarin.Forms 애플리케이션의 사용자 인터페이스를 만드는 데 사용되는 4개의 주 컨트롤 그룹이 있습니다.
 
 1. **페이지** – Xamarin.Forms 페이지는 플랫폼 간 모바일 애플리케이션 화면을 나타냅니다. Notes 애플리케이션은 [`ContentPage`](xref:Xamarin.Forms.ContentPage) 클래스를 사용하여 단일 화면을 표시합니다. 페이지에 대한 자세한 내용은 [Xamarin.Forms 페이지](~/xamarin-forms/user-interface/controls/pages.md)를 참조하세요.
-1. **뷰** – Xamarin.Forms 뷰는 레이블, 버튼 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. 완성된 Notes 애플리케이션은 [`ListView`](xref:Xamarin.Forms.ListView), [`Editor`](xref:Xamarin.Forms.Editor) 및 [`Button`](xref:Xamarin.Forms.Button) 보기를 사용합니다. 뷰에 대한 자세한 내용은 [Xamarin.Forms 뷰](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
+1. **뷰** – Xamarin.Forms 뷰는 레이블, 단추 및 텍스트 입력 상자 등의 사용자 인터페이스에 표시되는 컨트롤입니다. 완성된 Notes 애플리케이션은 [`ListView`](xref:Xamarin.Forms.ListView), [`Editor`](xref:Xamarin.Forms.Editor) 및 [`Button`](xref:Xamarin.Forms.Button) 보기를 사용합니다. 뷰에 대한 자세한 내용은 [Xamarin.Forms 뷰](~/xamarin-forms/user-interface/controls/views.md)를 참조하세요.
 1. **레이아웃** – Xamarin.Forms 레이아웃은 뷰를 논리 구조로 구성하는 데 사용되는 컨테이너입니다. Notes 애플리케이션은 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 클래스를 사용하여 세로 스택에서 뷰를 정렬하고 [`Grid`](xref:Xamarin.Forms.Grid) 클래스를 사용하여 단추를 가로로 정렬합니다. 레이아웃에 대한 자세한 내용은 [Xamarin.Forms 레이아웃](~/xamarin-forms/user-interface/controls/layouts.md)을 참조하세요.
 1. **셀** – Xamarin.Forms 셀은 목록에 있는 항목에 사용되는 특수한 요소이며, 목록의 각 항목이 어떻게 그려져야 하는지를 설명합니다. Notes 애플리케이션은 [`TextCell`](xref:Xamarin.Forms.TextCell)을 사용하여 목록의 각 행에 두 개의 항목을 표시합니다. 셀에 대한 자세한 내용은 [Xamarin.Forms 셀](~/xamarin-forms/user-interface/controls/cells.md)을 참조하세요.
 
@@ -344,7 +347,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 
 ## <a name="navigation"></a>탐색
 
-Xamarin.Forms는 사용된 [`Page`](xref:Xamarin.Forms.Page) 형식에 따라 여러 다른 페이지 탐색 환경을 제공합니다. [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스 탐색은 계층형이거나 모달일 수 있습니다. 모달 탐색에 대한 자세한 내용은 [Xamarin.Forms 모달 페이지](~/xamarin-forms/app-fundamentals/navigation/modal.md)를 참조하세요.
+Xamarin.Forms는 사용되는 [`Page`](xref:Xamarin.Forms.Page) 형식에 따라 다양한 페이지 탐색 환경을 제공합니다. [`ContentPage`](xref:Xamarin.Forms.ContentPage) 인스턴스 탐색은 계층형이거나 모달일 수 있습니다. 모달 탐색에 대한 자세한 내용은 [Xamarin.Forms 모달 탐색](~/xamarin-forms/app-fundamentals/navigation/modal.md)을 참조하세요.
 
 > [!NOTE]
 > [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) 및 [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) 클래스는 대체 탐색 환경을 제공합니다. 자세한 내용은 [탐색](~/xamarin-forms/app-fundamentals/navigation/index.md)을 참조하세요.
@@ -353,7 +356,7 @@ Xamarin.Forms는 사용된 [`Page`](xref:Xamarin.Forms.Page) 형식에 따라 �
 
 `NavigationPage`클래스는 또한 제목을 표시하는 페이지의 맨 위에 탐색 모음을 추가하고 이전 페이지로 돌아가게 하는 플랫폼에 적절한 **뒤로** 단추를 추가합니다.
 
-탐색 스택에 추가된 첫 번째 페이지는 애플리케이션의 루트 페이지라고 하며, 다음 코드 예제는 Notes 애플리케이션에서 해당 수행 방법을 보여줍니다. 
+탐색 스택에 추가된 첫 번째 페이지는 애플리케이션의 루트 페이지라고 하며, 다음 코드 예제는 Notes 애플리케이션에서 해당 수행 방법을 보여줍니다.
 
 ```csharp
 public App ()
@@ -432,7 +435,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         ... />
 ```
 
-*source* 개체의 [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) 속성과 `Text` 속성 간의 바인딩이 설정됩니다. `Editor`에서 변경된 내용은 자동으로 `Note` 개체로 전파됩니다. 마찬가지로, `Note.Text` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Editor`의 내용도 업데이트합니다. 이것을 *양방향(two-way) 바인딩*이라고 합니다.
+*source* 개체의 [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) 속성과 `Text` 속성 간의 바인딩이 설정됩니다. `Editor`에서 변경된 내용은 자동으로 `Note` 개체로 전파됩니다. 마찬가지로 `Note.Text` 속성을 변경하는 경우, Xamarin.Forms 바인딩 엔진은 `Editor`의 내용도 업데이트합니다. 이것을 *양방향(two-way) 바인딩*이라고 합니다.
 
 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 데이터 바인딩](~/xamarin-forms/app-fundamentals/data-binding/index.md)을 참조하세요.
 
@@ -473,7 +476,7 @@ Xamarin.Forms 애플리케이션에는 동일한 모양의 여러 시각적 요�
 [`Style`](xref:Xamarin.Forms.Style)을 만들 때 [`TargetType`](xref:Xamarin.Forms.Style.TargetType) 속성이 항상 필요합니다.
 
 > [!NOTE]
-> Xamarin.Forms 애플리케이션 스타일은 일반적으로 XAML 스타일을 사용하여 수행됩니다. 그러나 Xamarin.Forms는 CSS(CSS 스타일시트)를 사용하여 시각적 요소 스타일 지정도 지원합니다. 자세한 내용은 [CSS(CSS 스타일시트)로 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/css/index.md)을 참조하세요.
+> Xamarin.Forms 애플리케이션 스타일 지정은 일반적으로 XAML 스타일을 사용하여 수행됩니다. 그러나 Xamarin.Forms는 CSS(CSS 스타일시트)를 사용하여 시각적 요소 스타일 지정도 지원합니다. 자세한 내용은 [CSS(CSS 스타일시트)로 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/css/index.md)을 참조하세요.
 
 XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)을 참조하세요.
 
@@ -529,7 +532,7 @@ Visual Studio와 Mac용 Visual Studio는 애플리케이션을 테스트하고 �
 - 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있는 효과가 있습니다. 효과의 경우, 플랫폼별 프로젝트에서 [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) 클래스를 하위 클래스로 지정하여 만들어지고, 적절한 Xamarin.Forms 컨트롤에 연결하여 사용됩니다. 자세한 내용은 [효과](~/xamarin-forms/app-fundamentals/effects/index.md)를 참조하세요.
 - 공유 코드는 [`DependencyService`](xref:Xamarin.Forms.DependencyService) 클래스를 통해 네이티브 기능에 액세스할 수 있습니다. 자세한 내용은 [DependencyService를 사용한 네이티브 기능 액세스](~/xamarin-forms/app-fundamentals/dependency-service/index.md)를 참조하세요.
 
-또는 Charles Petzold의 책인 [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)(Xamarin.Forms를 사용하여 모바일 앱 만들기)는 Xamarin.Forms에 대해 더 배울 수 있는 좋은 자료입니다. 이 책은 PDF 또는 다양한 전자책 형식으로 제공됩니다.
+또는 Charles Petzold의 책인 [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)는 Xamarin.Forms에 대해 더 배울 수 있는 좋은 자료입니다. 이 책은 PDF 또는 다양한 전자책 형식으로 제공됩니다.
 
 ## <a name="related-links"></a>관련 링크
 

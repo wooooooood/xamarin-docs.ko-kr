@@ -1,18 +1,22 @@
 ---
-title: 요약 - 18장. MVVM
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 18장. MVVM'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 32c16409f30d6b6d502b7cc074eafb182898594a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 18. MVVM''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f180173a42654c54c5686e423ba20d9586271ea
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771070"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136710"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>요약 - 18장. MVVM
 
@@ -77,7 +81,7 @@ MVVM은 데이터 바인딩으로 작동하고, 데이터 바인딩은 속성으
 
 내부적으로 ViewModel은 `ICommand` 형식의 각 속성을 `ICommand` 인터페이스를 구현하는 클래스의 인스턴스로 설정합니다. 데이터 바인딩을 통해 `Button`은 초기에 `CanExecute` 메서드를 호출하고, 메서드가 `false`를 반환하면 자신을 사용하지 않도록 설정합니다. 또한 `CanExecuteChanged` 이벤트에 대해 처리기를 설정하고 이 이벤트가 발생할 때마다 `CanExecute`를 호출합니다. `Button`이 사용하도록 설정되었으면 `Button`이 클릭될 때마다 `Execute` 메서드를 호출합니다.
 
-Xamarin.Forms보다 앞선 ViewModel이 있을 수 있지만, 이것들도 명령 인터페이스를 이미 지원할 수 있습니다. Xamarin.Forms에서만 사용하도록 의도된 새 ViewModel에 대해 Xamarin.Forms는 `ICommand` 인터페이스를 구현하는 [`Command`](xref:Xamarin.Forms.Command) 클래스 및 [`Command<T>`](xref:Xamarin.Forms.Command`1) 클래스를 제공합니다. 제네릭 형식은 `Execute` 및 `CanExecute` 메서드에 대한 인수 형식입니다.
+Xamarin.Forms보다 앞선 ViewModel이 있을 수 있으며, 명령 인터페이스를 이미 지원할 수 있습니다. Xamarin.Forms에서만 사용하도록 의도된 새 ViewModel에 대해 Xamarin.Forms는 `ICommand` 인터페이스를 구현하는 [`Command`](xref:Xamarin.Forms.Command) 클래스 및 [`Command<T>`](xref:Xamarin.Forms.Command`1) 클래스를 제공합니다. 제네릭 형식은 `Execute` 및 `CanExecute` 메서드에 대한 인수 형식입니다.
 
 ### <a name="simple-method-executions"></a>간단한 메서드 실행
 
@@ -97,4 +101,4 @@ Xamarin.Forms보다 앞선 ViewModel이 있을 수 있지만, 이것들도 명�
 
 - [18장 전체 텍스트(PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf)
 - [18장 샘플](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
-- [Xamarin.Forms를 사용한 엔터프라이즈 애플리케이션 패턴 전자책](~/xamarin-forms/enterprise-application-patterns/index.md)
+- [Xamarin.Forms 전자책을 사용한 엔터프라이즈 애플리케이션 패턴](~/xamarin-forms/enterprise-application-patterns/index.md)

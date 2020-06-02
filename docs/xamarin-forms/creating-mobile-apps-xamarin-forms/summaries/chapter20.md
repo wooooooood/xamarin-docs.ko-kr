@@ -1,25 +1,29 @@
 ---
-title: 20장의 요약 정보입니다. 비동기 및 파일 I/O
-description: 'Xamarin.Forms로 모바일 앱 만들기: 20장의 요약 정보입니다. 비동기 및 파일 I/O'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 283273e6ee28cc5cd1a61169f38bfcd1dd1726d8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 20. Async and file I/O''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771047"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136684"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>20장의 요약 정보입니다. 비동기 및 파일 I/O
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
 > [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
  그래픽 사용자 인터페이스는 사용자 입력 이벤트에 순차적으로 응답해야 합니다. 따라서 사용자 입력 이벤트의 모든 처리가 단일 스레드(종종 *주 스레드* 또는 *UI 스레드*라고도 함)에서 발생해야 합니다.
 
@@ -141,7 +145,7 @@ Windows 런타임에서 실행되는 프로그램은 애플리케이션 로컬 �
 
 ### <a name="the-basic-mandelbrot-set"></a>기본 Mandelbrot 집합
 
-Mandelbrot 집합을 실시간으로 그리기 위해 [**Xamarin.Forms.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 `System.Numerics` 네임스페이스와 비슷한 [`Complex`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/Complex.cs) 구조가 있습니다.
+Mandelbrot 집합을 실시간으로 그리기 위해 [ **Xamarin.Forms.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에는 `System.Numerics` 네임스페이스와 비슷한 [`Complex`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/Complex.cs) 구조가 있습니다.
 
 [**MandelbrotSet**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/MandelbrotSet) 샘플에는 기본 흑백 Mandelbrot 집합을 계산하고 [`BmpMaker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/BmpMaker.cs)를 사용하여 비트맵에 배치하는 코드 숨김 파일에 `CalculateMandeblotAsync` 메서드가 있습니다.
 

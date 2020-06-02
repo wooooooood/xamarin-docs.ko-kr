@@ -1,24 +1,28 @@
 ---
-title: 22장의 요약 정보입니다. 애니메이션
-description: 'Xamarin.Forms로 모바일 앱 만들기: 22장의 요약 정보입니다. 애니메이션'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 935be5bd6696600644463eb4ec26410b546f42a0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 22. Animation''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2a8a089c210a3fe2f48dbe32bf8cda6179af2a78
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771003"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136632"
 ---
 # <a name="summary-of-chapter-22-animation"></a>22장의 요약 정보입니다. 애니메이션
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22)
 
-Xamarin.Android 타이머 또는 `Task.Delay`를 사용하여 사용자 고유의 애니메이션을 만들 수 있지만 일반적으로 Xamarin.Forms에서 제공하는 애니메이션 기능을 사용하는 것이 더 쉽습니다. 세 클래스는 다음과 같은 애니메이션을 구현합니다.
+Xamarin.Forms 타이머 또는 `Task.Delay`를 사용하여 사용자 고유의 애니메이션을 만들 수 있지만 일반적으로 Xamarin.Forms에서 제공하는 애니메이션 기능을 사용하는 것이 더 쉽습니다. 세 클래스는 다음과 같은 애니메이션을 구현합니다.
 
 - [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions), 상위 수준 접근 방식
 - [`Animation`](xref:Xamarin.Forms.Animation), 다양한 기능을 제공하지만 더 어려움
@@ -32,7 +36,7 @@ Xamarin.Android 타이머 또는 `Task.Delay`를 사용하여 사용자 고유�
 
 기본 애니메이션 함수는 [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) 클래스에 있는 확장 메서드입니다. 해당 메서드는 `VisualElement`에서 파생되는 모든 개체에 적용됩니다. 가장 간단한 애니메이션은 [`Chapter 21. Transforms`](chapter21.md)에 설명된 변환 속성을 대상으로 합니다.
 
-[**AnimationTryout**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/AnimationTryout)은 `Button`에 대한 `Clicked` 이벤트 처리기가 [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 호출하여 원의 단추를 회전하는 방법을 보여 줍니다.
+[**AnimationTryout**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/AnimationTryout)은 `Button`의 `Clicked` 이벤트 처리기가 [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 호출하여 원에서 단추를 회전시킬 수 있는 방법을 보여 줍니다.
 
 `RotateTo` 메서드는 1/4초 주기(기본값)로 `Button`의 `Rotation` 속성을 0에서 360까지 변경합니다. 그러나 `Button`을 다시 탭하면 `Rotation` 속성이 이미 360도이므로 아무 작업도 수행되지 않습니다.
 
@@ -96,11 +100,11 @@ Xamarin.Android 타이머 또는 `Task.Delay`를 사용하여 사용자 고유�
 
 한 가지 인기 있는 애니메이션 유형은 페이지가 처음 표시될 때 나타납니다. 해당 애니메이션은 페이지의 [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) 재정의 시 시작될 수 있습니다. 해당 애니메이션의 경우 해당 페이지를 애니메이션을 *뒤에* 표시하는 방법을 XAML로 설정한 다음, 코드에서 레이아웃을 초기화하고 애니메이션 효과를 주는 것이 가장 좋습니다.
 
-[**FadingEntrance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/FadingEntrance) 샘플은 [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 사용하여 페이지 내용을 페이드 인합니다.
+[**FadingEntrance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/FadingEntrance) 샘플은 [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 사용하여 페이지의 콘텐츠를 페이드 인합니다.
 
-[**SlidingEntrance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SlidingEntrance) 샘플은 [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 사용하여 슬라이드에서 페이지 내용을 슬라이드 인합니다.
+[**SlidingEntrance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SlidingEntrance) 샘플은 [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 사용하여 페이지의 콘텐츠를 측면에서 슬라이드 인합니다.
 
-[**SwingingEntrance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SwingingEntrance) 샘플은 [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 사용하여 `RotationY` 속성에 애니메이션 효과를 적용합니다. [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 메서드를 사용할 수도 있습니다.
+[**SwingingEntrance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SwingingEntrance) 샘플은 [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 확장 메서드를 사용하여 `RotationY` 속성에 애니메이션 효과를 줍니다. [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 메서드도 사용할 수 있습니다.
 
 ### <a name="forever-animations"></a>영구 애니메이션
 
@@ -118,11 +122,11 @@ Xamarin.Android 타이머 또는 `Task.Delay`를 사용하여 사용자 고유�
 
 그러나 [**RotationBreakdown**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) 샘플이 나타내는 것처럼, 요소의 `Rotation` 속성을 점진적으로 늘려도 장기간 작동하지 않을 수 있습니다.
 
-[**SpinningImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SpinningImage) 샘플은 [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)), [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 및 [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))을 사용하여 3D 공간에서 비트맵을 회전하는 것처럼 보이게 합니다.
+[**SpinningImage**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/SpinningImage) 샘플은 [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)), [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) 및 [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))을 사용하여 비트맵이 3D 공간에서 회전하는 것처럼 보이게 합니다.
 
 ### <a name="animating-the-bounds-property"></a>범위 속성에 애니메이션 적용
 
-아직 설명되지 않은 `ViewExtensions`의 유일한 확장 메서드는 [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 메서드를 호출하여 읽기 전용 [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) 속성에 효과적으로 애니메이션 효과를 주는 [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing))입니다. 이 메서드는 일반적으로 `Layout` 파생물에 의해 호출됩니다. 이 내용은 [**26장. CustomLayouts**](chapter26.md)에서 설명합니다.
+`ViewExtensions`에서 아직 보여 주지 않은 유일한 확장 메서드는 [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing))으로, [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 메서드를 호출하여 읽기 전용 [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds) 속성에 효과적으로 애니메이션을 적용합니다. 이 메서드는 일반적으로 `Layout` 파생물에 의해 호출됩니다. 이 내용은 [**26장. CustomLayouts**](chapter26.md)에서 설명합니다.
 
 `LayoutTo` 메서드는 특별한 용도로만 제한해야 합니다. [**BouncingBox**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/BouncingBox) 프로그램은 이 메서드를 사용하여 페이지의 측면에 닿을 대 `BoxView`를 압축했다가 확장합니다.
 
@@ -140,15 +144,15 @@ Xamarin.Forms 애니메이션 시스템은 약간 혼동을 줄 수 있습니다
 
 ### <a name="viewextensions-class"></a>ViewExtensions 클래스
 
-[`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions)를 이미 살펴보았을 것입니다. 이 클래스는 `Task<bool>` 및 [`CancelAnimations`](xref:Xamarin.Forms.ViewExtensions.CancelAnimations(Xamarin.Forms.VisualElement))를 반환하는 9개의 메서드를 정의합니다. 9개의 메서드 중 7개는 변환 속성을 대상으로 합니다. 다른 두 메서드는 [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) 속성을 대상으로 하는 [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))와, [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 메서드를 호출하는 [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing))입니다.
+[`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions)를 이미 살펴보았을 것입니다. `Task<bool>` 및 [`CancelAnimations`](xref:Xamarin.Forms.ViewExtensions.CancelAnimations(Xamarin.Forms.VisualElement))를 반환하는 9개의 메서드를 정의합니다. 9개의 메서드 중 7개는 변환 속성을 대상으로 합니다. 다른 2개는 [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) 속성을 대상으로 하는 [`FadeTo`](xref:Xamarin.Forms.ViewExtensions.FadeTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))과 [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) 메서드를 호출하는 [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing))입니다.
 
 ### <a name="animation-class"></a>Animation 클래스
 
-[`Animation`](xref:Xamarin.Forms.AnimationExtensions) 클래스에는 콜백 및 완료된 메서드와 애니메이션의 매개 변수를 정의하기 위해 5개의 인수를 사용하는 [생성자](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action))가 있습니다.
+[`Animation`](xref:Xamarin.Forms.AnimationExtensions) 클래스에는 콜백 및 완료된 메서드를 정의하는 5개의 인수와 애니메이션의 매개 변수가 포함된 [constructor](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action))이 있습니다.
 
-자식 애니메이션은 [`Add`](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [`Insert`](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double))와 [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double))의 오버로드를 사용하여 추가할 수 있습니다.
+자식 애니메이션은 [`Add`](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [`Insert`](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double))과 [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double))의 오버로드를 사용하여 추가할 수 있습니다.
 
-그런 다음, [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) 메서드를 호출하여 애니메이션 개체를 시작합니다.
+그런 다음 [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) 메서드에 대한 호출을 사용하여 애니메이션 개체가 시작됩니다.
 
 ### <a name="animationextensions-class"></a>AnimationExtensions 클래스
 
@@ -160,7 +164,7 @@ Xamarin.Forms 애니메이션 시스템은 약간 혼동을 줄 수 있습니다
 
 ### <a name="child-animations"></a>자식 애니메이션
 
-[**ConcurrentAnimations**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) 샘플도(매우 유사한) [`Add`](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)) 및 [`Insert`](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)) 메서드를 사용하는 자식 애니메이션을 보여 줍니다.
+[**ConcurrentAnimations**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) 샘플도 (매우 비슷한) [`Add`](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)) and [`Insert`](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)) 메서드를 사용하는 자식 애니메이션을 보여 줍니다.
 
 ### <a name="beyond-the-high-level-animation-methods"></a>상위 수준 애니메이션 메서드 이외의 메서드
 

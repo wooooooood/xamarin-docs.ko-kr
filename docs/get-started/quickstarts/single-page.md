@@ -1,20 +1,23 @@
 ---
 title: 단일 페이지 Xamarin.Forms 애플리케이션 만들기
-description: 이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간의 Xamarin.Forms 애플리케이션 생성 방법을 설명합니다.
-zone_pivot_groups: platform-dev16
-ms.topic: quickstart
-ms.prod: xamarin
-ms.assetid: E8CF05B1-54B9-428B-8518-D068837BD61E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/01/2019
-ms.openlocfilehash: c1d7aa1535fe979df222aaedc6ba2cf3bae0d51c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: 이 문서에서는 노트를 입력하고 디바이스 스토리지에 유지할 수 있는 단일 페이지 플랫폼 간 Xamarin.Forms 애플리케이션을 만드는 방법을 설명합니다.
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b9a3017fc8188d3669b64d95c968b2d0a5325358
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303632"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136073"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>단일 페이지 Xamarin.Forms 애플리케이션 만들기
 
@@ -22,7 +25,7 @@ ms.locfileid: "79303632"
 
 이 빠른 시작에서 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
-- 플랫폼 간 Xamarin.Forms 애플리케이션을 만듭니다.
+- 여러 플랫폼에서 사용 가능한 Xamarin.Forms 애플리케이션을 만듭니다.
 - XAML(eXtensible Application Markup Language)을 사용하는 페이지에 대해 사용자 인터페이스를 정의합니다.
 - 코드에서 XAML 사용자 인터페이스 요소와 상호작용합니다.
 
@@ -61,7 +64,7 @@ ms.locfileid: "79303632"
 
     ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
 
-    생성된 .NET 표준 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
+    생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
 5. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
@@ -144,7 +147,7 @@ ms.locfileid: "79303632"
     }
     ```
 
-    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은[Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
+    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`를 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -164,7 +167,7 @@ ms.locfileid: "79303632"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
+    각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
     > [!NOTE]
     > 다음 단계는 Xamarin.Forms 개발을 위한 시스템 요구 사항을 충족하는 [페어링된 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)이 있는 경우에만 수행해야 합니다.
@@ -181,7 +184,7 @@ ms.locfileid: "79303632"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
+    각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 ::: zone-end
 ::: zone pivot="win-vs2017"
@@ -211,7 +214,7 @@ ms.locfileid: "79303632"
 
     ![](single-page-images/vs/new-app.png "New Cross-Platform App")
 
-    생성된 .NET 표준 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
+    생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
 4. **솔루션 탐색기**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
@@ -294,7 +297,7 @@ ms.locfileid: "79303632"
     }
     ```
 
-    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은[Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
+    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`를 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
     **CTRL+S** 키를 눌러 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -314,7 +317,7 @@ ms.locfileid: "79303632"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
+    각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
     > [!NOTE]
     > 다음 단계는 Xamarin.Forms 개발을 위한 시스템 요구 사항을 충족하는 [페어링된 Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)이 있는 경우에만 수행해야 합니다.
@@ -331,7 +334,7 @@ ms.locfileid: "79303632"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
+    각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -365,7 +368,7 @@ ms.locfileid: "79303632"
     > [!IMPORTANT]
     > 이 빠른 시작의 C# 및 XAML 코드 조각은 솔루션과 프로젝의 이름이 모두 **Notes**이어야 합니다. 이 빠른 시작에서 코드를 프로젝트로 복사할 때 다른 이름을 사용하면 빌드 오류가 발생합니다.
 
-    생성된 .NET 표준 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
+    생성된 .NET Standard 라이브러리에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [Xamarin.Forms 애플리케이션 분석](deepdive.md#anatomy-of-a-xamarinforms-application)을 참조하세요.
 
 5. **Solution Pad**의 **Notes** 프로젝트에서 **MainPage.xaml**을 두 번 클릭하여 엽니다.
 
@@ -448,7 +451,7 @@ ms.locfileid: "79303632"
     }
     ```
 
-    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은[Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
+    이 코드는 애플리케이션의 로컬 애플리케이션 데이터 폴더에 노트 데이터를 저장하는 `notes.txt` 파일을 참조하는 `_fileName` 필드를 정의합니다. 페이지 생성자가 실행될 때 파일이 읽혀지고(있는 경우) [`Editor`](xref:Xamarin.Forms.Editor)에 표시됩니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 `Editor`의 콘텐츠가 파일에 저장됩니다. **삭제** `Button`를 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) `Editor`에서 모든 텍스트를 제거합니다. 사용자 상호 작용에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [사용자 상호 작용에 응답](deepdive.md#responding-to-user-interaction)을 참조하세요.
 
     **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **MainPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
@@ -472,7 +475,7 @@ ms.locfileid: "79303632"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
+    각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 4. **Solution Pad**에서 **Notes.Droid** 프로젝트를 선택해 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
@@ -484,7 +487,7 @@ ms.locfileid: "79303632"
 
     노트를 입력하고 **저장** 단추를 누릅니다.
 
-    각 플랫폼에서의 애플리케이션을 시작 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
+    각 플랫폼에서 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)의 [각 플랫폼에서 애플리케이션 시작](deepdive.md#launching-the-application-on-each-platform)을 참조하세요.
 
 ::: zone-end
 
@@ -492,7 +495,7 @@ ms.locfileid: "79303632"
 
 이 빠른 시작에서는 다음과 같은 방법을 배웠습니다.
 
-- 플랫폼 간 Xamarin.Forms 애플리케이션을 만듭니다.
+- 여러 플랫폼에서 사용 가능한 Xamarin.Forms 애플리케이션을 만듭니다.
 - XAML(eXtensible Application Markup Language)을 사용하는 페이지에 대해 사용자 인터페이스를 정의합니다.
 - 코드에서 XAML 사용자 인터페이스 요소와 상호작용합니다.
 

@@ -1,28 +1,31 @@
 ---
-title: 재사용 가능한 EventToCommandBehavior
-description: 동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다. 이 문서에서는 이벤트가 발생할 때 명령을 호출하도록 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/09/2018
-ms.openlocfilehash: 292a6aaaea4fb0f84138e04c88f001c72ddd096d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: 동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다. 이 문서에서는 이벤트가 발생할 때 명령을 호출하도록 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46d1566c89de763a469f30ce8ed2c6ef919f1426
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650907"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135800"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>재사용 가능한 EventToCommandBehavior
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
-_동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다. 이 문서에서는 이벤트가 발생할 때 명령을 호출하도록 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다._
+_동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다. 이 문서에서는 이벤트가 발생할 때 명령을 호출하도록 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
-`EventToCommandBehavior` 클래스는 이벤트 발생에 대한 응답으로 명령을 실행하는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다.  기본적으로 이벤트에 대한 이벤트 인수는 명령에 전달되며 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 통해 선택적으로 변환될 수 있습니다.
+`EventToCommandBehavior` 클래스는 모든 이벤트 발생에 대한 응답으로 명령을 실행하는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다. 기본적으로 이벤트에 대한 이벤트 인수는 명령에 전달되며 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 통해 선택적으로 변환될 수 있습니다.
 
 동작을 사용하기 위해 설정해야 하는 동작 속성은 다음과 같습니다.
 
@@ -32,7 +35,7 @@ _동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명
 다음과 같은 선택적 동작 속성도 설정할 수 있습니다.
 
 - **CommandParameter** – 명령에 전달될 `object`입니다.
-- **Converter** – 바인딩 엔진이 원본과 대상 사이에서 데이터를 전달할 때 이벤트 인수의 데이터의 형식을 변경하는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현입니다.  
+- **Converter** – 바인딩 엔진이 원본과 대상 사이에서 데이터를 전달할 때 이벤트 인수의 데이터의 형식을 변경하는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현입니다. 
 
 > [!NOTE]
 > `EventToCommandBehavior`는 [EventToCommand 동작 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)에 배치할 수 있는 사용자 지정 클래스이며, Xamarin.Forms의 일부가 아닙니다.
@@ -41,7 +44,7 @@ _동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명
 
 `EventToCommandBehavior` 클래스는 `BehaviorBase<T>` 클래스에서 파생되며 이 클래스는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생됩니다. `BehaviorBase<T>` 클래스의 용도는 연결된 컨트롤에 동작의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 설정해야 하는 Xamarin.Forms 동작에 대한 기본 클래스를 제공하는 것입니다. 이렇게 하면 동작이 사용될 때 `Command` 속성에 의해 지정된 `ICommand`에 동작을 바인딩하고 실행할 수 있습니다.
 
-`BehaviorBase<T>` 클래스는 동작의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)를 설정하는 재정의 가능한 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드와 `BindingContext`를 정리하는 재정의 가능한 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 제공합니다. 또한 클래스는 연결된 컨트롤에 대한 참조를 `AssociatedObject` 속성에 저장합니다.
+`BehaviorBase<T>` 클래스는 `BindingContext`를 정리하는 재정의 가능한 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method that sets the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the behavior and an overridable [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 제공합니다. 또한 클래스는 연결된 컨트롤에 대한 참조를 `AssociatedObject` 속성에 저장합니다.
 
 ### <a name="implementing-bindable-properties"></a>바인딩 가능한 속성 구현
 
@@ -69,11 +72,11 @@ public class EventToCommandBehavior : BehaviorBase<View>
 
 `EventToCommandBehavior` 클래스가 사용되면 `Command` 속성은 `EventName` 속성에 정의된 이벤트 발생에 대한 응답으로 실행되는 `ICommand`에 바인딩된 데이터여야 합니다. 동작은 연결된 컨트롤의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에서 `ICommand`를 찾을 것으로 예상됩니다.
 
-기본적으로 이벤트에 대한 이벤트 인수는 명령에 전달됩니다. 이 데이터는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 `Converter` 속성 값으로 지정하면 바인딩 엔진을 통해 원본에서 대상으로 전달되면서 선택적으로 변환될 수 있습니다.   또는 `CommandParameter` 속성 값을 지정하여 매개 변수를 명령에 전달할 수 있습니다.
+기본적으로 이벤트에 대한 이벤트 인수는 명령에 전달됩니다. 이 데이터는 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 `Converter` 속성 값으로 지정하면 바인딩 엔진을 통해 원본에서 대상으로 전달되면서 선택적으로 변환될 수 있습니다.  또는 `CommandParameter` 속성 값을 지정하여 매개 변수를 명령에 전달할 수 있습니다.
 
 ### <a name="implementing-the-overrides"></a>재정의 구현
 
-`EventToCommandBehavior` 클래스는 다음 코드 예제와 같이 `BehaviorBase<T>` 클래스의 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 및 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 재정의합니다.
+`EventToCommandBehavior` 클래스는 다음 코드 예제에 나온 것처럼 `BehaviorBase<T>` 클래스의 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) and [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 재정의합니다.
 
 ```csharp
 public class EventToCommandBehavior : BehaviorBase<View>
@@ -94,7 +97,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
 }
 ```
 
-[`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드는 `RegisterEvent` 메서드를 호출하고 `EventName` 속성의 값을 매개 변수로 전달하여 설치를 수행합니다. [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드는 `DeregisterEvent` 메서드를 호출하고 `EventName` 속성의 값을 매개 변수로 전달하여 정리를 수행합니다.
+[`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method performs setup by calling the `RegisterEvent` method, passing in the value of the `EventName` property as a parameter. The [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드는 `DeregisterEvent` 메서드를 호출해 `EventName` 속성의 값을 매개 변수를 전달하여 정리를 수행합니다.
 
 ### <a name="implementing-the-behavior-functionality"></a>동작 기능 구현
 
@@ -147,12 +150,12 @@ public class EventToCommandBehavior : BehaviorBase<View>
 `OnEvent` 메서드는 `EventName` 속성에 정의된 이벤트 발생에 대한 응답으로 실행됩니다. `Command` 속성이 유효한 `ICommand`를 참조하는 경우, 메서드는 다음과 같이 `ICommand`에 전달할 매개 변수를 검색하려고 시도합니다.
 
 - `CommandParameter` 속성이 매개 변수를 정의하면 해당 매개 변수가 검색됩니다.
-- 그렇지 않은 경우, `Converter` 속성이 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 정의하면, 변환기가 실행되고 바인딩 엔진에 의해 이벤트 인수 데이터가 원본과 대상 사이에서 전달될 때 이벤트 인수 데이터를 변환합니다.  
+- 그렇지 않은 경우, `Converter` 속성이 [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) 구현을 정의하면, 변환기가 실행되고 바인딩 엔진에 의해 이벤트 인수 데이터가 원본과 대상 사이에서 전달될 때 이벤트 인수 데이터를 변환합니다. 
 - 그렇지 않으면 이벤트 인수가 매개 변수로 간주됩니다.
 
 [`CanExecute`](xref:Xamarin.Forms.Command.CanExecute(System.Object)) 메서드가 `true`를 반환하면 데이터 바인딩 `ICommand`가 실행되고 매개 변수가 명령에 전달됩니다.
 
-여기에는 표시되지 않았지만 `EventToCommandBehavior`에는 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드에 의해 실행되는 `DeregisterEvent` 메서드도 포함됩니다. `DeregisterEvent` 메서드는 잠재적인 메모리 누수를 정리하기 위해 `EventName` 속성에 정의된 이벤트를 찾고 등록을 취소하는 데 사용됩니다.
+여기에 표시되지는 않았지만 `EventToCommandBehavior`는 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) method. The `DeregisterEvent` method is used to locate and deregister the event defined in the `EventName` 속성에 의해 수행되어 잠재적인 메모리 누수를 정리하는 `DeregisterEvent` 메서드도 포함합니다.
 
 ## <a name="consuming-the-behavior"></a>동작 사용
 
@@ -204,7 +207,7 @@ selectedItemLabel.SetBinding(Label.TextProperty, "SelectedItemText");
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 이벤트가 발생할 때 Xamarin.Forms 동작을 사용하여 명령을 호출하는 방법을 보여줍니다. 동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다.
+이 문서에서는 이벤트가 발생할 때 Xamarin.Forms 동작을 사용하여 명령을 호출하는 방법을 보여 줍니다. 동작은 명령과 상호 작용하도록 설계되지 않은 컨트롤과 명령을 연결하는 데 사용할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

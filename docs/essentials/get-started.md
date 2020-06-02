@@ -1,19 +1,22 @@
 ---
-title: Xamarin.Essentials 시작
+title: Xamarin.Essentials 시작하기
 description: Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
-ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
-author: jamesmontemagno
-ms.author: jamont
-ms.custom: video
-ms.date: 05/11/2020
-ms.openlocfilehash: 944b01d67fb09f9a21a19fb2ede9eb217d89732a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.custom: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149980"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129313"
 ---
-# <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작
+# <a name="get-started-with-xamarinessentials"></a>Xamarin.Essentials 시작하기
 
 Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 iOS, Android 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다. 지원되는 운영 체제에 대한 자세한 내용은 [플랫폼 및 기능 지원 지침](platform-feature-support.md)을 참조하세요.
 
@@ -28,16 +31,16 @@ Xamarin.Essentials는 NuGet 패키지로 사용할 수 있으며 Visual Studio�
     > [!IMPORTANT]
     > UWP 프로젝트에 추가하려면 프로젝트 속성에 빌드 16299 이상이 설정되었는지 확인합니다.
 
-3. 각 프로젝트에 [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) NuGet 패키지를 추가합니다.
+3. [ **Xamarin.Essentials** ](https://www.nuget.org/packages/Xamarin.Essentials/) NuGet 패키지를 각 프로젝트에 추가합니다.
 
     <!--markdownlint-disable MD023 -->
     # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-    솔루션 탐색기 패널에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. **Xamarin.Essentials**를 검색하고 Android, iOS, UWP 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
+    솔루션 탐색기 패널에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다. **Xamarin.Essentials** 를 검색하고 Android, iOS, UWP 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
 
     # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-    솔루션 탐색기 패널에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 > NuGet 패키지 추가...** 를 선택합니다. **Xamarin.Essentials**를 검색하고 Android, iOS 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
+    솔루션 탐색기 패널에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **추가 > NuGet 패키지 추가...** 를 선택합니다. **Xamarin.Essentials** 를 검색하고 Android, iOS 및 .NET Standard 라이브러리를 포함한 **모든** 프로젝트에 패키지를 설치합니다.
 
     -----
 
@@ -47,7 +50,7 @@ Xamarin.Essentials는 NuGet 패키지로 사용할 수 있으며 Visual Studio�
     using Xamarin.Essentials;
     ```
 
-5. Xamarin.Essentials에는 플랫폼 특정 설정이 필요합니다.
+5. Xamarin.Essentials에는 플랫폼별 설정이 필요합니다.
 
     # <a name="android"></a>[Android](#tab/android)
 

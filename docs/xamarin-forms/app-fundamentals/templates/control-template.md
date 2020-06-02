@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 컨트롤 템플릿
-description: Xamarin Forms 컨트롤 템플릿은 ContentView 파생 사용자 지정 컨트롤 및 Contentview 파생 페이지의 시각적 구조를 정의합니다.
-ms.prod: xamarin
-ms.assetid: 8B8E2360-6531-44A3-A7C8-9A8808DE9B86
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/13/2020
-ms.openlocfilehash: a73123b89cba932f2e2cb907645f6fe858cf6176
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: Xamarin.Forms 컨트롤 템플릿은 ContentView 파생 사용자 지정 컨트롤 및 ContentPage 파생 페이지의 시각적 구조를 정의합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 44eebed2a49fbdda5504f9a09873f93466d0326c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303842"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84132550"
 ---
 # <a name="xamarinforms-control-templates"></a>Xamarin.Forms 컨트롤 템플릿
 

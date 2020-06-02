@@ -1,25 +1,29 @@
 ---
-title: 19장의 요약 정보입니다. 컬렉션 뷰
-description: 'Xamarin.Forms로 모바일 앱 만들기: 19장의 요약 정보입니다. 컬렉션 뷰'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: bffbd2dec4a8494723597ba6e0f0af69e57f3718
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 19. Collection views''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0eafdeffb6783a0ed54fdf23e6d10de24e2b4c6f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73032860"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136697"
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>19장의 요약 정보입니다. 컬렉션 뷰
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)
 
 > [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 Xamarin.Forms는 컬렉션을 유지 관리하고 해당 요소를 표시하는 다음 세 가지 뷰를 정의합니다.
 
@@ -46,7 +50,7 @@ MVVM 애플리케이션에는 `ListView`를 사용하여 선택 가능한 개체
 `SelectedIndex` 속성은 바인딩 가능한 속성에서 지원되지만 `Items`는 지원되지 않으므로 `Picker`에서 데이터 바인딩을 사용하기 어렵습니다. 한 가지 해결 방법은 [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) 라이브러리에 있는 것처럼 `Picker`를 [`ObjectToIndexConverter`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ObjectToIndexConverter.cs)와 함께 사용하는 것입니다. [**PickerBinding**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerBinding)은 이 방법이 어떻게 작동하는지 보여줍니다.
 
 > [!NOTE] 
-> 이제 Xamarin.Forms `Picker`는 데이터 바인딩을 지 원하는 `ItemsSource` 및 `SelectedItem` 속성을 포함하고 있습니다. [선택기](~/xamarin-forms/user-interface/picker/index.md)를 참조하세요.
+> 이제 Xamarin.Forms `Picker`는 데이터 바인딩을 지원하는 `ItemsSource` 및 `SelectedItem` 속성을 포함하고 있습니다. [선택기](~/xamarin-forms/user-interface/picker/index.md)를 참조하세요.
 
 ## <a name="rendering-data-with-listview"></a>ListView를 사용하여 데이터 렌더링
 
@@ -97,7 +101,7 @@ iOS 및 Android 디스플레이에서는 얇은 선이 행을 구분합니다. [
 - [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) &mdash;에는 `Label`을 사용하는 `Switch`가 포함되어 있습니다.
 - [`ViewCell`](xref:Xamarin.Forms.ViewCell) &mdash;은 자식 요소와 마찬가지로 어떤 `View`여도 상관 없습니다.
 
-그 후 `DataTemplate` 개체에서 [`SetValue`](xref:Xamarin.Forms.DataTemplate.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 및 [`SetBinding`](xref:Xamarin.Forms.DataTemplate.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase))을 호출하여 값을 `Cell` 속성에 연결하거나, `ItemsSource` 컬렉션의 항목 속성을 참조하는 `Cell` 속성에서 데이터 바인딩을 설정합니다. 이 내용은 [**TextCellListCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode) 샘플에 설명되어 있습니다.
+그런 다음 `DataTemplate` 개체에서 [`SetValue`](xref:Xamarin.Forms.DataTemplate.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 및 [`SetBinding`](xref:Xamarin.Forms.DataTemplate.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase))를 호출하여 값을 `Cell` 속성에 연결하거나 `ItemsSource` 컬렉션에 있는 항목의 속성을 참조하는 `Cell` 속성에 데이터 바인딩을 설정합니다. 이 내용은 [**TextCellListCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode) 샘플에 설명되어 있습니다.
 
 `ListView`가 각 항목을 표시할 때마다 작은 시각적 트리가 템플릿에서 생성되고, 이 시각적 트리에 있는 요소의 속성과 항목 사이에 데이터 바인딩이 설정됩니다. `ListView`의 [`ItemAppearing`](xref:Xamarin.Forms.ListView.ItemAppearing) 및 [`ItemDisappearing`](xref:Xamarin.Forms.ListView.ItemDisappearing) 이벤트용 처리기를 설치하거나, 항목의 시각적 트리를 만들어야 할 때마다 호출되는 함수를 사용하는 대체 [`DataTemplate` 생성자](xref:Xamarin.Forms.DataTemplate.%23ctor(System.Func{System.Object}))를 사용해 보면 이 프로세스를 이해할 수 있습니다.
 

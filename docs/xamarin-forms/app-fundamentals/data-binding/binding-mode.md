@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 바인딩 모드
-description: 이 문서에서는 BindingMode 열거형의 멤버를 통해 지정되는 바인딩 모드를 사용하여 원본과 대상 간의 정보 흐름을 제어하는 방법을 설명합니다. 바인딩할 수 있는 모든 속성에는 기본 바인딩 모드가 있으며, 속성이 데이터 바인딩 대상일 때 적용되는 모드를 나타냅니다.
-ms.prod: xamarin
-ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/01/2018
-ms.openlocfilehash: 3bf1ab647faa4b6c4735585ddfeaeb704d7d3f41
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303764"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139778"
 ---
 # <a name="xamarinforms-binding-mode"></a>Xamarin.Forms 바인딩 모드
 
@@ -61,7 +64,7 @@ ms.locfileid: "79303764"
 - [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) &ndash; 데이터가 원본과 대상 사이에서 양방향으로 이동
 - [`OneWay`](xref:Xamarin.Forms.BindingMode.OneWay) &ndash; 데이터가 원본에서 대상으로 이동
 - [`OneWayToSource`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터가 대상에서 원본으로 이동
-- `BindingContext`이(가) 변경되는 경우에만 [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) &ndash; 데이터가 원본에서 대상으로 이동(Xamarin.Forms 3.0의 새로운 기능)
+- [`OneTime`](xref:Xamarin.Forms.BindingMode.OneWayToSource) `BindingContext`가 변경되는 경우에만 &ndash; 데이터가 원본에서 대상으로 이동(Xamarin.Forms 3.0의 새로운 기능)
 
 바인딩할 수 있는 모든 속성에는 바인딩할 수 있는 속성이 생성될 때 설정되는 기본 바인딩 모드가 있으며, `BindableProperty` 개체의 [`DefaultBindingMode`](xref:Xamarin.Forms.BindableProperty.DefaultBindingMode) 속성에 제공됩니다. 기본 바인딩 모드는 속성이 데이터 바인딩 대상일 때 적용되는 모드를 나타냅니다.
 
@@ -109,7 +112,7 @@ ms.locfileid: "79303764"
 
 **Simple Color Selector**(간단한 색 선택기) 페이지는 간단한 ViewModel 사용을 보여줍니다. 데이터 바인딩을 사용하여 사용자가 색상, 채도 및 광도에 대한 세 가지 `Slider` 요소를 사용하여 색상을 선택할 수 있습니다.
 
-ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다.  이 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 이벤트를 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
+ViewModel은 데이터 바인딩 소스입니다. ViewModel 은 바인딩할 수 있는 속성을 정의하지는 않지만 속성 값이 변경되면 바인딩 인프라에 알릴 수 있는 알림 메커니즘을 구현합니다. 이 알림 메커니즘은 [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged) 인터페이스이며 [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged)라는 단일 이벤트를 정의합니다. 공용 속성 중 하나의 값이 변경되면 이 인터페이스를 구현하는 클래스가 이벤트를 발생시킵니다. 속성이 전혀 변경되지 않으면 이벤트가 실행될 필요가 없습니다. (`INotifyPropertyChanged` 인터페이스도 `BindableObject`에 의해 구현되며 `PropertyChanged` 이벤트는 바인딩할 수 있는 속성의 값이 변하면 실행됩니다.)
 
 `HslColorViewModel` 클래스는 5개 속성을 정의합니다. `Hue`, `Saturation`, `Luminosity` 및 `Color` 속성은 서로 관련됩니다. 세 가지 색 구성 요소 중 하나라도 값이 변경되면 `Color` 속성이 다시 계산되고 네 가지 속성 모두에 대해 `PropertyChanged` 이벤트가 실행됩니다.
 
@@ -417,7 +420,7 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
 `SampleSettingsViewModel` 클래스는 배경색에 대한 두 가지 속성을 정의합니다. `BackgroundNamedColor` 속성은 `NamedColor` 형식이며, 이것은 **DataBindingDemos** 솔루션에도 포함되는 클래스입니다. `BackgroundColor` 속성은 `Color` 유형이며 `NamedColor` 개체의 `Color` 속성에서 가져옵니다.
 
-`NamedColor` 클래스는 .NET 리플렉션을 사용하여 Xamarin.Forms `Color` 구조체의 정적인 공용 필드를 모두 열거하고 정적 `All` 속성에서 액세스할 수 있는 컬렉션에 이름을 사용하여 저장합니다.
+`NamedColor` 클래스는 .NET 리플렉션을 사용하여 Xamarin.Forms `Color` 구조에서 모든 정적 공용 필드를 열거하고 `All` 정적 속성에서 액세스할 수 있는 컬렉션의 이름으로 저장합니다.
 
 ```csharp
 public class NamedColor : IEquatable<NamedColor>, IComparable<NamedColor>
@@ -684,4 +687,4 @@ public partial class SampleSettingsPage : ContentPage
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

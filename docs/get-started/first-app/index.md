@@ -1,20 +1,23 @@
 ---
 title: 첫 번째 Xamarin.Forms 앱 빌드
-description: Visual Studio에서 첫 번째 Xamarin.Forms 애플리케이션을 빌드하는 방법을 보여주는 비디오 가이드입니다.
-zone_pivot_groups: platform-dev16
-ms.prod: xamarin
-ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
-ms.technology: xamarin-forms
-ms.custom: video
-author: conceptdev
-ms.author: crdun
-ms.date: 05/23/2019
-ms.openlocfilehash: fd2fcf6ebe11df27444f2ecc1d89955debf56cb4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: Visual Studio에서 첫 번째 Xamarin.Forms 애플리케이션을 빌드하는 방법을 보여 주는 비디오 가이드입니다.
+zone_pivot_groups: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: da56bde956a0ff7730ef6737e2802c3723d6d716
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75502802"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133484"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>첫 번째 Xamarin.Forms 앱 빌드
 
@@ -115,7 +118,7 @@ _이 비디오를 보고 따라서 Xamarin.Forms로 첫 번째 모바일 앱을 
 
 위의 비디오와 함께 다음 단계를 수행합니다.
 
-1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음, **Visual C# > Cross-Platform > 모바일 앱(Xamarin.Forms)** 를 선택합니다.
+1. **파일 > 새로 만들기 > 프로젝트...** 를 선택하거나 **새 프로젝트 만들기...** 단추를 누른 다음 **Visual C# > 플랫폼 간 > 모바일 앱(Xamarin.Forms)** 을 선택합니다.
 
     [![모바일 앱(Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 

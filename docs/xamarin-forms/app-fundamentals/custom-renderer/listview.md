@@ -1,18 +1,21 @@
 ---
-title: ListView 사용자 지정
+title: ''
 description: Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 384ad20cc1456f3de01ddbe241bf2d8b58de387f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3403948c2853289610a73bb36073f09c0c86137d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771925"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135306"
 ---
 # <a name="customizing-a-listview"></a>ListView 사용자 지정
 
@@ -20,7 +23,7 @@ ms.locfileid: "70771925"
 
 _Xamarin.Forms ListView는 데이터의 컬렉션을 세로 목록으로 표시하는 보기입니다. 이 문서에서는 네이티브 목록 컨트롤 성능을 보다 효과적으로 제어할 수 있도록 플랫폼별 리스트 컨트롤과 네이티브 셀 레이아웃을 캡슐화하는 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
 
-모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`ListView`](xref:Xamarin.Forms.ListView)를 렌더링하면 `ListViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITableView` 컨트롤을 인스턴스화합니다. Android 플랫폼에서 `ListViewRenderer` 클래스는 네이티브 `ListView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ListViewRenderer` 클래스는 네이티브 `ListView` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다. Xamarin.Forms 애플리케이션에서 [`ListView`](xref:Xamarin.Forms.ListView)를 렌더링하는 경우 iOS에서 `ListViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITableView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `ListViewRenderer` 클래스는 네이티브 `ListView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ListViewRenderer` 클래스는 네이티브 `ListView` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -147,8 +150,8 @@ public class MainPageCS : ContentPage
 사용자 지정 렌더러 클래스를 만드는 프로세스는 다음과 같습니다.
 
 1. 사용자 지정 컨트롤을 렌더링하는 `ListViewRenderer` 클래스의 서브클래스를 만듭니다.
-1. 사용자 지정 컨트롤을 렌더링하고 이를 사용자 지정하기 위한 논리를 작성하는 `OnElementChanged` 메서드를 재정의합니다. 이 메서드는 해당 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView)가 생성될 때 호출됩니다.
-1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 컨트롤을 렌더링하는 `OnElementChanged` 메서드를 정의하고 이를 사용자 지정하기 위한 논리를 작성합니다. 이 메서드는 해당 Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView)가 생성될 때 호출됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 셀의 기본 클래스에 대한 기본 렌더러가 사용됩니다.
@@ -161,9 +164,9 @@ public class MainPageCS : ContentPage
 
 ![](listview-images/screenshots.png "NativeListView on each Platform")
 
-`ListViewRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `NativeListView` 인스턴스에 대한 참조를 포함합니다.
+`ListViewRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 연결된 Xamarin.Forms 요소와 렌더러가 연결되는 Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `NativeListView` 인스턴스에 대한 참조를 포함합니다.
 
-각 플랫폼별 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 플랫폼에서 사용되는 네이티브 컨트롤에 대한 형식화된 참조는 `Control` 속성을 통해 액세스할 수 있습니다. 또한 랜더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
+각 플랫폼별 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 플랫폼에서 사용되는 네이티브 컨트롤에 대한 형식화된 참조는 `Control` 속성을 통해 액세스할 수 있습니다. 또한 렌더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 
 `OnElementChanged` 메서드에서 이벤트 처리기를 구독할 때는 다음 코드 예제와 같이 주의해야 합니다.
 
@@ -182,11 +185,11 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우 네이티브 컨트롤만 구성해야 합니다. 마찬가지로, 구독된 모든 이벤트 처리기는 렌더러가 연결된 요소가 변경될 때만 구독을 취소해야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 사용자 지정 렌더러를 만들 수 있습니다.
+네이티브 컨트롤을 구성하고 사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결된 경우에만 이벤트 처리기를 구독해야 합니다. 마찬가지로, 구독된 모든 이벤트 처리기는 렌더러가 연결된 요소가 변경될 때만 구독을 취소해야 합니다. 이러한 방식을 채택하면 메모리 누수가 없는 사용자 지정 렌더러를 만들 수 있습니다.
 
-각 플랫폼별 렌더러 클래스에서 `OnElementPropertyChanged` 메서드의 재정의된 버전은 Xamarin.Forms 사용자 지정 컨트롤의 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다. 이 재정의는 여러 번 호출될 수 있으므로 변경되는 속성에 대한 검사는 항상 수행되어야 합니다.
+각 플랫폼별 렌더러 클래스에서 `OnElementPropertyChanged` 메서드의 재정의된 버전은 Xamarin.Forms 사용자 지정 컨트롤의 바인딩 가능한 속성 변경 내용에 응답하는 위치입니다. 이 재정의는 여러 번 호출될 수 있으므로 변경된 속성에 대한 검사는 항상 수행되어야 합니다.
 
-각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
+각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 사용자 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 플랫폼별 사용자 지정 렌더러 클래스의 구현을 설명합니다.
 
@@ -360,7 +363,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 네이티브 `ListView` 컨트롤이 구성됩니다. 이 구성은 네이티브 `ListView` 컨트롤에 데이터를 제공하는 `NativeAndroidListViewAdapter` 클래스의 인스턴스를 만들고, `ItemClick` 이벤트를 처리하는 이벤트 처리기를 등록하는 작업을 포함합니다. 그런 다음, 이 처리기는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출합니다. `ItemClick` 이벤트는 렌더러가 변경 내용에 연결된 Xamarin.Forms 요소에서만 구독이 취소됩니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 네이티브 `ListView` 컨트롤이 구성됩니다. 이 구성은 네이티브 `ListView` 컨트롤에 데이터를 제공하는 `NativeAndroidListViewAdapter` 클래스의 인스턴스를 만들고, `ItemClick` 이벤트를 처리하는 이벤트 처리기를 등록하는 작업을 포함합니다. 그런 다음, 이 처리기는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출합니다. `ItemClick` 이벤트는 렌더러가 연결된 Xamarin.Forms 요소가 변경되는 경우 구독이 취소됩니다.
 
 `NativeAndroidListViewAdapter`는 `BaseAdapter` 클래스에서 파생되며 `Count`, `GetView`, `GetItemId` 및 `this[int]` 메서드 재정의 뿐만 아니라 표시되는 데이터의 목록을 포함하는 `Items` 속성을 노출합니다. 이러한 메서드 재정의에 대한 자세한 내용은 [ListAdapter 구현](~/android/user-interface/layouts/list-view/populating.md)을 참조하세요. `GetView` 메서드는 데이터로 채워지는 각 행에 대한 보기를 반환하며, 다음 코드 예제에 표시됩니다.
 
@@ -513,7 +516,7 @@ namespace CustomRenderer.UWP
 }
 ```
 
-사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 네이티브 `ListView` 컨트롤이 구성됩니다. 이 구성은 네이티브 `ListView` 컨트롤이 선택되는 항목에 응답하는 방법 설정, 컨트롤로 표시되는 데이터 채우기, 각 셀의 모양 및 콘텐츠 정의 및 `SelectionChanged` 이벤트를 처리하는 이벤트 처리기 등록 작업을 포함합니다. 그런 다음, 이 처리기는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출합니다. `SelectionChanged` 이벤트는 렌더러가 변경 내용에 연결된 Xamarin.Forms 요소에서만 구독이 취소됩니다.
+사용자 지정 렌더러가 새 Xamarin.Forms 요소에 연결되어 있는 경우 네이티브 `ListView` 컨트롤이 구성됩니다. 이 구성은 네이티브 `ListView` 컨트롤이 선택되는 항목에 응답하는 방법 설정, 컨트롤로 표시되는 데이터 채우기, 각 셀의 모양 및 콘텐츠 정의 및 `SelectionChanged` 이벤트를 처리하는 이벤트 처리기 등록 작업을 포함합니다. 그런 다음, 이 처리기는 `NativeListView` 사용자 지정 컨트롤에서 제공하는 `ItemSelected` 이벤트를 호출합니다. `SelectionChanged` 이벤트는 렌더러가 연결된 Xamarin.Forms 요소가 변경되는 경우 구독이 취소됩니다.
 
 각 네이티브 `ListView` 셀의 모양 및 콘텐츠는 `ListViewItemTemplate`이라는 `DataTemplate`에 의해 정의됩니다. 이 `DataTemplate`은 애플리케이션 수준 리소스 사전에 저장되며, 다음 코드 예제에 표시됩니다.
 

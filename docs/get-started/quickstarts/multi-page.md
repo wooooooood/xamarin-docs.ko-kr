@@ -1,20 +1,23 @@
 ---
 title: 다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
-description: 이 문서에서는 단일 노트 저장이 가능한 단일 페이지 애플리케이션을 여러 노트의 저장이 가능한 다중 페이지 애플리케이션으로 전환하는 방법을 설명합니다.
-zone_pivot_groups: platform
-ms.topic: quickstart
-ms.prod: xamarin
-ms.assetid: 9DC3B3D6-6CBC-4705-BE80-3D86A9E65F92
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/01/2019
-ms.openlocfilehash: 9ce02b4c6412eab1f4b1003b262573c59940286c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b3616d0cf4804dfb37d4fe65034796c672dec828
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68653792"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84127883"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>다중 페이지 Xamarin.Forms 애플리케이션에서 탐색 수행
 
@@ -399,7 +402,7 @@ ms.locfileid: "68653792"
 
       이 코드는 텍스트 입력을 위한 하나의 [`Editor`](xref:Xamarin.Forms.Editor)와 파일을 저장 또는 삭제하도록 애플리케이션에 지시하는 두 개의 [`Button`](xref:Xamarin.Forms.Button) 인스턴스로 구성된 페이지의 사용자 인터페이스를 선언적으로 정의합니다. 두 개의 `Button` 인스턴스가 [`Grid`](xref:Xamarin.Forms.Grid)에 가로로 배치되고 `Editor` 및 `Grid`가 [`StackLayout`](xref:Xamarin.Forms.StackLayout)에 세로로 배치됩니다. 또한 `Editor`는 데이터 바인딩을 사용하여 `Note` 모델의 `Text` 속성에 바인딩합니다. 데이터 바인딩에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [데이터 바인딩](deepdive.md#data-binding)을 참조하세요.
 
-      **파일 > 저장**을 선택하여(또는 **&#8984; + S**를 누름)하여 변경 내용을 **NoteEntryPage.xaml**에 저장하고 파일을 닫습니다.
+      **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **NoteEntryPage.xaml**에 저장하고 파일을 닫습니다.
 
 9. **NoteEntryPage.xaml.cs**에서 템플릿 코드를 모두 제거하고 다음 코드로 바꿉니다.
 
@@ -454,7 +457,7 @@ ms.locfileid: "68653792"
 
       이 코드는 페이지의 [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext)에서 단일 노트를 나타내는 `Note` 인스턴스를 저장합니다. **저장** [`Button`](xref:Xamarin.Forms.Button)을 누르면 `OnSaveButtonClicked` 이벤트 처리기가 실행되어 이름이 임의로 지정된 새 파일에 `Editor`의 콘텐츠가 저장되며, 노트가 업데이트 중이라면 기존 파일에 저장됩니다. 어느 쪽이든 파일은 애플리케이션의 로컬 애플리케이션 데이터 폴더에 저장됩니다. 그런 다음에는 메서드가 이전 페이지로 다시 이동합니다. **삭제** `Button`을 누르면 `OnDeleteButtonClicked` 이벤트 처리기가 실행되어 파일을 삭제하고(있는 경우) 이전 페이지로 다시 이동합니다. 탐색에 대한 자세한 내용은 [Xamarin.Forms 빠른 시작 심층 분석](deepdive.md)에서 [탐색](deepdive.md#navigation)을 참조하세요.
 
-      **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름) 변경 내용을 **NoteEntryPage.xaml.cs**에 저장하고 파일을 닫습니다.
+      **파일 > 저장**을 선택(또는 **&#8984; + S**를 누름)하여 변경 내용을 **NoteEntryPage.xaml.cs**에 저장하고 파일을 닫습니다.
 
       > [!WARNING]
       > 이 시점에서 애플리케이션을 빌드하려고 하면 후속 단계에서 수정될 오류가 발생합니다.

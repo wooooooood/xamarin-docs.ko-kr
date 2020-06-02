@@ -1,20 +1,23 @@
 ---
 title: 플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
 description: 이 문서에서는 XAML 스타일로 플랫폼 간 Xamarin.Forms 애플리케이션의 스타일을 지정하는 방법을 설명합니다.
-zone_pivot_groups: platform
-ms.topic: quickstart
-ms.prod: xamarin
-ms.assetid: CCCF8E57-D021-4542-8709-5808570FC26A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/07/2020
-ms.openlocfilehash: fbd957c68d7a9aa2f8e44c91fab6174d8ed72014
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2d458bafc5bb1c8dcffc7858fd15734187f7612b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77068751"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84134071"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>플랫폼 간 Xamarin.Forms 애플리케이션 스타일 지정
 
@@ -22,9 +25,9 @@ ms.locfileid: "77068751"
 
 이 빠른 시작에서 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
-- XAML 스타일을 사용하여 Xamarin.Forms 애플리케이션 스타일을 만듭니다.
+- XAML 스타일을 사용하여 Xamarin.Forms 애플리케이션 스타일을 지정합니다.
 
-빠른 시작은 XAML 스타일을 사용하여 플랫폼 간 Xamarin.Forms 애플리케이션의 스타일을 만드는 방법을 안내합니다. 최종 애플리케이션은 다음과 같습니다.
+빠른 시작은 XAML 스타일을 사용하여 플랫폼 간 Xamarin.Forms 애플리케이션의 스타일을 지정하는 방법을 안내합니다. 최종 애플리케이션은 다음과 같습니다.
 
 [![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
 [![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
@@ -312,9 +315,9 @@ ms.locfileid: "77068751"
 
 ## <a name="next-steps"></a>다음 단계
 
-이 빠른 시작에서 다음과 같은 방법을 배웠습니다.
+이 빠른 시작에서는 다음과 같은 방법을 배웠습니다.
 
-- XAML 스타일을 사용하여 Xamarin.Forms 애플리케이션 스타일을 만듭니다.
+- XAML 스타일을 사용하여 Xamarin.Forms 애플리케이션 스타일을 지정합니다.
 
 Xamarin.Forms를 사용하여 애플리케이션을 개발하는 기본 사항에 대해 자세히 알아보려면 빠른 시작 심층 분석을 계속하세요.
 

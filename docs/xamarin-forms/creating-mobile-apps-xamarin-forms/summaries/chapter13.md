@@ -1,29 +1,33 @@
 ---
-title: 13장의 요약 정보입니다. 비트맵
-description: 'Xamarin.Forms로 모바일 앱 만들기: 13장의 요약 정보입니다. 비트맵'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: e4746ed94a008d382ce15bb9cd7c52365d9ba574
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 13. Bitmaps''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 43caf088ad6cb816f049e7862a287c17839c2170
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725530"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136775"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>13장의 요약 정보입니다. 비트맵
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) 요소는 비트맵을 표시합니다. 모든 Xamarin.Forms 플랫폼은 JPEG, PNG, GIF 및 BMP 파일 형식을 지원합니다.
 
-Xamarin.Forms의 비트맵은 다음 네 위치에서 옵니다.
+Xamarin.Forms의 비트맵은 다음 네 위치에서 제공됩니다.
 
 - URL에 지정된 웹
 - 공유 라이브러리에 포함된 리소스
@@ -193,7 +197,7 @@ UWP 프로젝트는 DIU당 픽셀 단위의 배율 인수로 구성되는 비트
 
 `ToolbarItem`을 누르면 `Button`처럼 [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) 이벤트가 실행됩니다. `ToolbarItem`은 MVVM과 연결하는 데 자주 사용되는 [`Command`](xref:Xamarin.Forms.MenuItem.Command) 및 [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) 속성도 지원합니다. ([18장, MVVM](chapter18.md)을 참조하세요.)
 
-iOS와 Android는 도구 모음을 표시하는 페이지가 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)이거나 `NavigationPage`에서 탐색하는 페이지여야 합니다. [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) 프로그램은 `ContentPage` 인수를 사용하여 `App` 클래스의 `MainPage` 속성을 [`NavigationPage` 생성자](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page))로 설정하며, 도구 모음의 생성 및 이벤트 처리기를 보여줍니다.
+iOS와 Android는 도구 모음을 표시하는 페이지가 [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)이거나 `NavigationPage`에서 탐색하는 페이지여야 합니다. [**ToolbarDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) 프로그램은 `ContentPage` 인수를 사용하여 `App` 클래스의 `MainPage` 속성을 [`NavigationPage` constructor](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page))로 설정하며, 도구 모음의 생성 및 이벤트 처리기를 보여 줍니다.
 
 ### <a name="button-images"></a>단추 이미지
 

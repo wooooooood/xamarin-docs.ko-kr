@@ -1,18 +1,22 @@
 ---
-title: 요약 - 21장. 변환
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 21장. 변환'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 40c091d0c5042d172108709f89774e41e9339d4b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 21. Transforms''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 32393108f84ea3a57079c86b6a9a8e628ceca03a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760574"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136671"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>요약 - 21장. 변환
 
@@ -39,7 +43,7 @@ Xamarin.Forms에서 크기 조정은 등방성으로 수행되며 너비와 높�
 - [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 - [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-이러한 모든 속성은 바인딩 가능한 속성으로 지원됩니다. 이러한 속성은 데이터 바인딩 및 스타일 지정의 대상일 수 있습니다. [**22장. 애니메이션**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md)에서는 이러한 속성을 애니메이션하는 방법을 보여주지만, 이 장의 일부 샘플은 Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#devicestarttimer)를 사용하여 애니메이션하는 방법을 보여줍니다.
+이러한 모든 속성은 바인딩 가능한 속성으로 지원됩니다. 이러한 속성은 데이터 바인딩 및 스타일 지정의 대상일 수 있습니다. [**22장. 애니메이션**](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter22.md)에서는 이러한 속성에 애니메이션 효과를 적용하는 방법을 보여주지만, 이 장의 일부 샘플은 Xamarin.Forms [timer](~/xamarin-forms/platform/device.md#devicestarttimer)를 사용하여 애니메이션 효과를 적용하는 방법을 보여 줍니다.
 
 변환 속성은 요소의 렌더링 방법에만 영향을 주며, 레이아웃에서 요소가 인식되는 방법에는 영향을 주지 *않습니다*.
 

@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 동작
-description: 동작을 사용하면 서브클래스 없이도 사용자 인터페이스 컨트롤에 기능을 추가할 수 있습니다. 동작은 코드로 작성되고 XAML 또는 코드의 컨트롤에 추가됩니다.
-ms.prod: xamarin
-ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: df0a767976247166205ae8a3d70fd59c521646f6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 83952982bd163725fb931c860cac3e267726315c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61197541"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135813"
 ---
 # <a name="xamarinforms-behaviors"></a>Xamarin.Forms 동작
 
@@ -26,9 +29,9 @@ _동작을 사용하면 서브클래스 없이도 사용자 인터페이스 컨�
 
 연결된 동작은 연결된 속성이 하나 이상 있는 `static` 클래스입니다. 이 문서에서는 연결된 동작을 만들고 사용하는 방법을 설명합니다.
 
-## <a name="xamarinforms-behaviors"></a>[Xamarin.Forms 동작](creating.md)
+## <a name="xamarinforms-behaviorscreatingmd"></a>[Xamarin.Forms 동작](creating.md)
 
-Xamarin.Forms 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여줍니다.
+Xamarin.Forms 동작은 [`Behavior`](xref:Xamarin.Forms.Behavior) 또는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되어 만들어집니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하는 방법을 보여 줍니다.
 
 ## <a name="reusable-behaviors"></a>[재사용 가능한 동작](reusable/index.md)
 

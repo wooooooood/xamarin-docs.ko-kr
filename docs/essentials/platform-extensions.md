@@ -1,20 +1,23 @@
 ---
 title: Xamarin.Essentials 플랫폼 확장
-description: Xamarin.Essentials는 Rect, 크기 및 포인트와 같은 플랫폼 형식으로 작업해야 할 때 몇 가지 플랫폼 확장 메서드를 제공합니다.
-ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 4e43159fb9cae6646be54d8efc24c334bc071477
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: Xamarin.Essentials는 Rect, Size, Point와 같은 플랫폼 형식으로 작업해야 하는 경우 몇 가지 플랫폼 확장 메서드를 제공합니다.
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3266d3870dc0d1ddef747168b2ac6b4d397a7c33
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545154"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135358"
 ---
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: 플랫폼 확장
 
-Xamarin.Essentials는 Rect, 크기 및 포인트와 같은 플랫폼 형식으로 작업해야 할 때 몇 가지 플랫폼 확장 메서드를 제공합니다. 즉, iOS, Android 및 UWP의 특정 유형에 대해 이 유형의 `System` 버전 사이를 변환할 수 있습니다. 
+Xamarin.Essentials는 Rect, Size, Point와 같은 플랫폼 형식으로 작업해야 하는 경우 몇 가지 플랫폼 확장 메서드를 제공합니다. 즉, iOS, Android 및 UWP의 특정 유형에 대해 이 유형의 `System` 버전 사이를 변환할 수 있습니다.
 
 ## <a name="get-started"></a>시작
 

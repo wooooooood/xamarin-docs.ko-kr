@@ -1,20 +1,23 @@
 ---
-title: Automation 속성
+title: ''
 description: 이 문서에서는 화면 판독기에 페이지의 요소가 표시될 수 있도록 Xamarin.Forms 애플리케이션에서 AutomationProperties 클래스를 사용하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/18/2018
-ms.openlocfilehash: 12c6229c1922f0bd4a4d25ca796bcb46141a326c
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ad6d315ccc5be0a7709164d40685c842b61b90b4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77131134"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129971"
 ---
-# <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 Automation 속성
+# <a name="automation-properties-in-xamarinforms"></a>Xamarin.Forms의 자동화 속성
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
@@ -66,7 +69,7 @@ AutomationProperties.SetIsInAccessibleTree(entry, true);
 ```
 
 > [!NOTE]
-> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드는 `AutomationProperties.IsInAccessibleTree` 연결된 속성을 설정하는 데 사용할 수도 있습니다 - `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`
+> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드를 사용하여 `AutomationProperties.IsInAccessibleTree`가 연결된 속성 `entry.SetValue(AutomationProperties.IsInAccessibleTreeProperty, true);`를 설정할 수도 있습니다.
 
 <a name="name" />
 
@@ -88,7 +91,7 @@ AutomationProperties.SetName(activityIndicator, "Progress indicator");
 ```
 
 > [!NOTE]
-> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드는 `AutomationProperties.Name` 연결된 속성을 설정하는 데 사용할 수도 있습니다 - `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`
+> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드를 사용하여 `AutomationProperties.Name`이 연결된 속성 `activityIndicator.SetValue(AutomationProperties.NameProperty, "Progress indicator");`를 설정할 수도 있습니다.
 
 <a name="helptext" />
 
@@ -111,7 +114,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 ```
 
 > [!NOTE]
-> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드는 `AutomationProperties.HelpText` 연결된 속성을 설정하는 데 사용할 수도 있습니다 - `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
+> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드를 사용하여 `AutomationProperties.HelpText`가 연결된 속성 `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`를 설정할 수도 있습니다.
 
 일부 플랫폼에서는 [`Entry`](xref:Xamarin.Forms.Entry)과 같은 편집 컨트롤을 위해 `HelpText` 속성을 경우에 따라 생략하고 자리 표시자 텍스트로 바꿀 수 있습니다. 예를 들어 "여기에 이름 입력"은 사용자가 실제로 입력하기 전에 컨트롤에 텍스트를 배치하는 [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) 속성의 좋은 후보입니다.
 
@@ -137,7 +140,7 @@ AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
 
 > [!NOTE]
-> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드는 `AutomationProperties.IsInAccessibleTree` 연결된 속성을 설정하는 데 사용할 수도 있습니다 - `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
+> [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) 메서드를 사용하여 `AutomationProperties.IsInAccessibleTree`가 연결된 속성 `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`을 설정할 수도 있습니다.
 
 ## <a name="accessibility-intricacies"></a>내게 필요한 옵션 복잡성
 

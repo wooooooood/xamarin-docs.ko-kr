@@ -1,18 +1,22 @@
 ---
-title: 요약 - 17장. Grid 마스터
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 17장. Grid 마스터'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 37b5e2bbafa816de27390771ae6daa33c74f7651
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 17. Mastering the Grid''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6dd13c0f592831c6488afac6727bcac734e9136a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70760636"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136723"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>요약 - 17장. Grid 마스터
 
@@ -30,7 +34,7 @@ XAML의 `Grid` 정의는 일반적으로 [`RowDefinition`](xref:Xamarin.Forms.Ro
 
 `RowDefinition`에는 [`Height`](xref:Xamarin.Forms.RowDefinition.Height) 속성이 있고 `ColumnDefinition`에는 [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) 속성이 있으며 둘 다 [`GridLength`](xref:Xamarin.Forms.GridLength) 형식의 구조체입니다.
 
-XAML에서 [`GridLengthTypeConverter`](xref:Xamarin.Forms.GridLengthTypeConverter)는 단순 텍스트 문자열을 `GridLength` 값으로 변환합니다. 내부적으로 [`GridLength` 생성자](xref:Xamarin.Forms.GridLength.%23ctor(System.Double,Xamarin.Forms.GridUnitType))는 3개의 멤버를 포함하는 열거형인 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) 형식의 값과 숫자를 기반으로 `GridLength` 값을 만듭니다.
+XAML에서 [`GridLengthTypeConverter`](xref:Xamarin.Forms.GridLengthTypeConverter)는 단순 텍스트 문자열을 `GridLength` 값으로 변환합니다. 내부적으로 [`GridLength` constructor](xref:Xamarin.Forms.GridLength.%23ctor(System.Double,Xamarin.Forms.GridUnitType))은 3개의 멤버를 포함하는 열거형인 [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) 형식의 값과 숫자를 기반으로 `GridLength` 값을 만듭니다.
 
 - [`Absolute`](xref:Xamarin.Forms.GridUnitType.Absolute) &mdash; 너비 또는 높이가 디바이스 독립적 단위(XAML의 숫자)로 지정됩니다.
 - [`Auto`](xref:Xamarin.Forms.GridUnitType.Auto) &mdash; 높이 또는 너비가 셀 내용에 따라 자동으로 크기가 조정됩니다(XAML의 "Auto").

@@ -1,18 +1,10 @@
 ---
-title: 'Xamarin.Essentials: 전화 걸기'
-description: Xamarin.Essentials의 PhoneDialer 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다.
-ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 07/02/2019
-ms.openlocfilehash: a955399b40f26d4a03a4047d56f7bebe3ad5b5c4
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150042"
+title: ''Xamarin.Essentials: 전화 걸기'' description: 'Xamarin.Essentials의 PhoneDialer 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다' ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: 전화 걸기
 
 **PhoneDialer** 클래스를 사용하면 애플리케이션이 전화 걸기에서 전화 번호를 열 수 있습니다.

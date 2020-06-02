@@ -1,18 +1,22 @@
 ---
-title: 요약 - 26장. 사용자 지정 레이아웃
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 26장. 사용자 지정 레이아웃'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2017
-ms.openlocfilehash: 1eb5153f8ab295696e373f4fdb65a4f8820a05bc
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 26. Custom layouts''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deb46d1a70e7c707c998be8669b4af3b8e8d7ead
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70770933"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136606"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>요약 - 26장. 사용자 지정 레이아웃
 
@@ -37,7 +41,7 @@ Xamarin.Forms 레이아웃을 처리하는 중앙 집중식 시스템은 없습�
 
 ### <a name="sizing-and-positioning"></a>크기 및 위치 지정
 
-레이아웃은 페이지를 사용하여 시각적 트리 위쪽에서 시작하여 모든 분기를 진행합니다. 레이아웃에서 가장 중요한 공용 메서드는 `VisualElement`에 의해 정의된 [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle))입니다. 다른 요소의 부모인 모든 요소는 각 자식에 대해 `Layout`을 호출하여 [`Rectangle`](xref:Xamarin.Forms.Rectangle) 값의 형태로 부모에 상대적인 크기 및 위치를 자식에 지정합니다. 이러한 `Layout` 호출은 시각적 트리를 통해 전파됩니다.
+레이아웃은 페이지를 사용하여 시각적 트리 위쪽에서 시작하여 모든 분기를 진행합니다. 레이아웃에서 가장 중요한 공용 메서드는 `VisualElement`로 정의되는 [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle))입니다. 다른 요소의 부모인 모든 요소는 각 자식에 대해 `Layout`을 호출하여 [`Rectangle`](xref:Xamarin.Forms.Rectangle) 값의 형태로 부모에 상대적인 크기 및 위치를 자식에 지정합니다. 이러한 `Layout` 호출은 시각적 트리를 통해 전파됩니다.
 
 `Layout` 호출은 요소를 화면에 표시하는 데 필요하며, 다음과 같은 읽기 전용 속성을 설정합니다. 이들은 메서드에 전달된 `Rectangle`과 일관됩니다.
 
@@ -133,7 +137,7 @@ Xamarin.Forms 레이아웃을 처리하는 중앙 집중식 시스템은 없습�
 
 ### <a name="vertical-and-horizontal-positioning-simplified"></a>수직 및 수평 배치 단순화
 
-`VerticalStack`이 수행해야 하는 작업 중 하나는 `LayoutChildren`을 재정의하는 동안 발생합니다. 이 메서드는 자식의 `HorizontalOptions` 속성을 사용하여 `VerticalStack`의 슬롯에 자식을 배치하는 방법을 결정합니다. 정적 메서드 [`Layout.LayoutChildIntoBoundingRect`](xref:Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle))를 대신 호출할 수 있습니다. 이 메서드는 자식에 대해 `Measure`를 호출하고 `HorizontalOptions` 및 `VerticalOptions` 속성을 사용하여 지정된 사각형 안에 자식을 배치합니다.
+`VerticalStack`이 수행해야 하는 작업 중 하나는 `LayoutChildren`을 재정의하는 동안 발생합니다. 이 메서드는 자식의 `HorizontalOptions` 속성을 사용하여 `VerticalStack`의 슬롯에 자식을 배치하는 방법을 결정합니다. 대신 정적 메서드 [`Layout.LayoutChildIntoBoundingRect`](xref:Xamarin.Forms.Layout.LayoutChildIntoBoundingRegion(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle))을 호출할 수 있습니다. 이 메서드는 자식에 대해 `Measure`를 호출하고 `HorizontalOptions` 및 `VerticalOptions` 속성을 사용하여 지정된 사각형 안에 자식을 배치합니다.
 
 ### <a name="invalidation"></a>무효화
 

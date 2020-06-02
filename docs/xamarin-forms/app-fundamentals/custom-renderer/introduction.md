@@ -1,18 +1,21 @@
 ---
-title: 사용자 지정 렌더러 소개
-description: 이 문서에서는 사용자 지정 렌더러를 소개하고 사용자 지정 렌더러를 만드는 과정을 간략하게 설명합니다.
-ms.prod: xamarin
-ms.assetid: 264314BE-1C5C-4727-A14E-F6F98151CDBD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/19/2016
-ms.openlocfilehash: ad2868a82f662f45066a6111a1dd3bd2aacad671
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771875"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135323"
 ---
 # <a name="introduction-to-custom-renderers"></a>사용자 지정 렌더러 소개
 
@@ -24,7 +27,7 @@ Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-inter
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>사용자 지정 렌더러가 필요한 이유 검토
 
-사용자 지정 렌더러를 사용하지 않고 Xamarin.Forms 컨트롤의 모양 변경은 서브클래싱을 통해 사용자 지정 컨트롤을 만드는 방법 및 원래 컨트롤 대신 사용자 지정 컨트롤을 사용하는 방법이 포함되는 2단계 프로세스입니다. 다음 코드 예제에서는 `Entry` 컨트롤을 서브클래싱하는 예를 보여 줍니다.
+사용자 지정 렌더러를 사용하지 않는 Xamarin.Forms 컨트롤의 모양 변경은 서브클래싱을 통해 사용자 지정 컨트롤을 만드는 방법 및 원래 컨트롤 대신 사용자 지정 컨트롤을 사용하는 방법이 포함되는 2단계 프로세스입니다. 다음 코드 예제에서는 `Entry` 컨트롤을 서브클래싱하는 예를 보여 줍니다.
 
 ```csharp
 public class MyEntry : Entry
@@ -66,7 +69,7 @@ public class MyEntry : Entry
 
 1. 네이티브 컨트롤을 렌더링하는 렌더러 클래스의 서브클래스를 만듭니다.
 1. 네이티브 컨트롤을 렌더링하고 컨트롤을 사용자 지정하기 위한 논리를 작성하는 메서드를 재정의합니다. `OnElementChanged` 메서드는 해당 Xamarin.Forms 컨트롤이 생성될 때 호출되는 네이티브 컨트롤을 렌더링하는 데 사용됩니다.
-1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 대부분의 Xamarin.Forms 요소의 경우 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다. 그러나 [보기](xref:Xamarin.Forms.View) 요소 또는 [ViewCell](xref:Xamarin.Forms.ViewCell) 요소를 렌더링하는 경우 각 플랫폼 프로젝트에 사용자 지정 렌더러가 필요합니다.
@@ -75,7 +78,7 @@ public class MyEntry : Entry
 
 ## <a name="troubleshooting"></a>문제 해결
 
-솔루션에 추가된 .NET Standard 라이브러리 프로젝트(예: Mac용 Visual Studio/Visual Studio Xamarin.Forms 앱 프로젝트에서 만든 .NET Standard 라이브러리가 아님)에 사용자 지정 컨트롤이 포함된 경우 사용자 지정 컨트롤에 액세스 하려고 할 때 iOS에서 예외가 발생할 수 있습니다. 이 문제가 발생한 경우 `AppDelegate` 클래스에서 사용자 지정 컨트롤에 대한 참조를 만들어 해결할 수 있습니다.
+솔루션에 추가된 .NET Standard 라이브러리 프로젝트(예: Mac용 Visual Studio/Visual Studio Xamarin.Forms 앱 프로젝트에서 만든 .NET Standard 라이브러리가 아님)에 사용자 지정 컨트롤이 포함된 경우 사용자 지정 컨트롤에 액세스하려고 할 때 iOS에서 예외가 발생할 수 있습니다. 이 문제가 발생한 경우 `AppDelegate` 클래스에서 사용자 지정 컨트롤에 대한 참조를 만들어 해결할 수 있습니다.
 
 ```csharp
 var temp = new ClassInPCL(); // in AppDelegate, but temp not used anywhere

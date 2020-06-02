@@ -1,18 +1,22 @@
 ---
-title: 요약 - 14장 절대 레이아웃
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 14장 절대 레이아웃'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: c489bf244396cf180ed8e1272308048a14b67300
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 14. Absolute layout''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 72ee9c4a481388e69aeeb52dbd5b8eeaabb164f6
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771125"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136762"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>요약 - 14장 절대 레이아웃
 
@@ -28,7 +32,7 @@ ms.locfileid: "70771125"
 
 표준 [`Add`](xref:System.Collections.Generic.ICollection`1.Add*) 메서드를 사용하여 `AbsoluteLayout`의 `Children` 컬렉션에 자식을 추가할 수 있지만 `AbsoluteLayout`은 사용자가 [`Rectangle`](xref:Xamarin.Forms.Rectangle)을 지정할 수 있도록 하는 확장된 [`Add`](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) 메서드도 제공합니다. 다른 [`Add`](xref:Xamarin.Forms.AbsoluteLayout.IAbsoluteList`1.Add*) 메서드에는 [`Point`](xref:Xamarin.Forms.Point)만 필요하며, 이 경우 자식은 제한되지 않고 자체적으로 크기를 조정할 수 있습니다.
 
-4개의 값을 요구하는 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double))를 사용하여 `Rectangle` 값을 만들 수 있습니다. 처음 2개 값은 부모를 기준으로 자식의 왼쪽 위 구석 위치를 나타내고 다음 2개 값은 자식의 크기를 나타냅니다. 또는 `Point` 및 [`Size`](xref:Xamarin.Forms.Size) 값이 필요한 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size))를 사용할 수 있습니다.
+4개의 값을 요구하는 [생성자](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double))를 사용하여 `Rectangle` 값을 만들 수 있습니다. 처음 2개 값은 부모를 기준으로 자식의 왼쪽 위 구석 위치를 나타내고 다음 2개 값은 자식의 크기를 나타냅니다. 또는 `Point` 및 [`Size`](xref:Xamarin.Forms.Size) 값을 필요로 하는 [constructor](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size))를 사용할 수 있습니다.
 
 해당 `Add` 메서드는 `Rectangle` 값을 사용하여 `BoxView` 요소를 배치하고 1개의 `Point` 값만 사용하여 `Label` 요소를 배치하는 [**AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo)에 나와 있습니다.
 
@@ -36,15 +40,15 @@ ms.locfileid: "70771125"
 
 ## <a name="attached-bindable-properties"></a>연결된 바인딩 가능 속성
 
-정적 메서드 [`AbsoluteLayout.SetLayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle))을 사용하여 `Children` 컬렉션에 추가된 후 위치 및 선택적으로 `AbsoluteLayout`의 자식 크기를 설정할 수도 있습니다. 첫 번째 인수는 자식이고 두 번째 인수는 `Rectangle` 개체입니다. 너비 및 높이 값을 [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) 상수로 설정하여 자식이 가로 및/또는 세로로 자체적으로 크기를 조정하도록 지정할 수 있습니다.
+정적 메서드 [`AbsoluteLayout.SetLayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle))을 사용하여 `Children` 컬렉션에 추가된 후 `AbsoluteLayout`의 자식 위치 및 크기(선택적)를 설정할 수도 있습니다. 첫 번째 인수는 자식이고 두 번째 인수는 `Rectangle` 개체입니다. 너비 및 높이 값을 [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) 상수로 설정하여 자식이 가로 및/또는 세로로 자체적으로 크기를 조정하도록 지정할 수 있습니다.
 
 [**ChessboardDynamic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) 샘플은 모든 자식에 대해 `AbsoluteLayout.SetLayoutBounds`를 호출하여 가능한 한 크게 만들기 위해 `SizeChanged` 처리기를 사용하여 `ContentView`에 `AbsoluteLayout`을 추가합니다.  
 
-`AbsoluteLayout`에서 정의하는 연결된 바인딩 가능 속성은 이름이 [`AbsoluteLayout.LayoutBoundsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty)이고 `BindableProperty` 형식을 갖는 정적 읽기 전용 필드입니다. 정적 `AbsoluteLayout.SetLayoutBounds` 메서드는 `AbsoluteLayout.LayoutBoundsProperty`를 사용하여 자식에 대해 `SetValue`를 호출하는 방식으로 구현됩니다. 자식은 연결된 바인딩 가능 속성 및 해당 값이 저장되는 사전을 포함합니다. 레이아웃 중에 `AbsoluteLayout`은 `GetValue` 호출로 구현되는 [`AbsoluteLayout.GetLayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject))를 호출하여 해당 값을 가져올 수 있습니다.
+`AbsoluteLayout`에서 정의하는 연결된 바인딩 가능 속성은 이름이 [`AbsoluteLayout.LayoutBoundsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty)이고 `BindableProperty` 형식을 갖는 정적 읽기 전용 필드입니다. 정적 `AbsoluteLayout.SetLayoutBounds` 메서드는 `AbsoluteLayout.LayoutBoundsProperty`를 사용하여 자식에 대해 `SetValue`를 호출하는 방식으로 구현됩니다. 자식은 연결된 바인딩 가능 속성 및 해당 값이 저장되는 사전을 포함합니다. 레이아웃 중에 `AbsoluteLayout`은 `GetValue` 호출로 구현되는 [`AbsoluteLayout.GetLayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject))를 호출하여 해당 값을 얻을 수 있습니다.
 
 ## <a name="proportional-sizing-and-positioning"></a>비례 크기 조정 및 위치 지정
 
-`AbsoluteLayout`은 비례 크기 조정 및 위치 지정 기능을 구현합니다. 이 클래스는 관련된 정적 메서드 [`AbsoluteLayout.SetLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) 및 [`AbsoluteLayout.GetLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject))를 사용하여 또 다른 연결된 바인딩 가능 속성 [`LayoutFlagsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty)를 정의합니다.
+`AbsoluteLayout`은 비례 크기 조정 및 위치 지정 기능을 구현합니다. 클래스는 관련된 정적 메서드 [`AbsoluteLayout.SetLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) 및 [`AbsoluteLayout.GetLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject))를 사용하여 두 번째 연결된 바인딩 가능 속성 [`LayoutFlagsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty)를 정의합니다.
 
 `AbsoluteLayout.SetLayoutFlags`에 대한 인수와 `AbsoluteLayout.GetLayoutFlags`의 반환 값은 다음 멤버를 포함하는 열거형인 [`AbsoluteLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayoutFlags) 형식의 값입니다.
 
@@ -83,7 +87,7 @@ layoutBounds.Y = (fractionalChildCoordinate.Y / (1 - layoutBounds.Height))
 
 XAML에서 `AbsoluteLayout`을 사용하고 `AbsoluteLayout.LayoutBounds` 및 `AbsoluteLayout.LayoutFlags` 특성 값을 사용하여 `AbsoluteLayout`의 자식에 대해 연결된 바인딩 가능 속성을 설정할 수 있습니다. 이 방법은 [**AbsoluteXamlDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteXamlDemo) 및 [**ChessboardXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardXaml) 샘플에 나와 있습니다. 후자 프로그램은 32개의 `BoxView` 요소를 포함하지만 `AbsoluteLayout.LayoutFlags` 속성을 포함하는 암시적 `Style`을 사용하여 태그를 최소한으로 유지합니다.
 
-클래스 이름, 도트 및 속성 이름으로 구성된 XAML의 특성은 항상 연결된 바인딩 가능 속성입니다. 
+클래스 이름, 도트 및 속성 이름으로 구성된 XAML의 특성은 항상 연결된 바인딩 가능 속성입니다.
 
 ## <a name="overlays"></a>오버레이
 

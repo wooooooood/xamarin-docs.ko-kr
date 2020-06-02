@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 컴파일된 바인딩
 description: 이 문서에서는 컴파일된 바인딩을 사용하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상시키는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/18/2019
-ms.openlocfilehash: 531d9719eb4bf5c23001ebe4260254e13f9989eb
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f811de95009900016bb8b442265a9a079e0f612
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72697152"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139755"
 ---
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms 컴파일된 바인딩
 

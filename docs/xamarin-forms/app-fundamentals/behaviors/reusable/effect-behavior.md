@@ -1,28 +1,31 @@
 ---
-title: 재사용 가능한 EffectBehavior
-description: 동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 는 컨트롤에 효과를 추가하는 방법을 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/06/2016
-ms.openlocfilehash: ca03dce3bd39664a07b7bf56d22d7c2e000e931f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: 동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 컨트롤에 효과를 추가하는 방법을 보여 줍니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0a105548f869eb448a990a1cc12e6feff4197d48
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771992"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135787"
 ---
 # <a name="reusable-effectbehavior"></a>재사용 가능한 EffectBehavior
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
-_동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 는 컨트롤에 효과를 추가하는 방법을 보여 줍니다._
+_동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준 효과 처리 코드를 제거하는 데 유용한 방법입니다. 이 문서에서는 Xamarin.Forms 동작을 만들고 사용하여 컨트롤에 효과를 추가하는 방법을 보여 줍니다._
 
 ## <a name="overview"></a>개요
 
-`EffectBehavior` 클래스는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다. 즉 동작이 컨트롤에 연결되면 [`Effect`](xref:Xamarin.Forms.Effect) 인스턴스를 컨트롤에 추가하고, 동작이 컨트롤에서 분리되면 `Effect` 인스턴스를 제거합니다.
+`EffectBehavior` 클래스는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다. 즉, 동작이 컨트롤에 연결되면 [`Effect`](xref:Xamarin.Forms.Effect) 인스턴스를 컨트롤에 추가하고, 동작이 컨트롤에서 분리되면 `Effect` 인스턴스를 제거합니다.
 
 동작을 사용하기 위해 설정해야 하는 동작 속성은 다음과 같습니다.
 
@@ -36,7 +39,7 @@ _동작은 컨트롤에 효과를 추가하고 코드 숨김 파일에서 표준
 
 ## <a name="creating-the-behavior"></a>동작 만들기
 
-`EffectBehavior` 클래스는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되며, 여기서 `T`는 [`View`](xref:Xamarin.Forms.View)입니다. 즉 `EffectBehavior` 클래스를 모든 Xamarin.Forms 컨트롤에 연결할 수 있습니다.
+`EffectBehavior` 클래스는 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스에서 파생되며, 여기서 `T`는 [`View`](xref:Xamarin.Forms.View)입니다. 즉, `EffectBehavior` 클래스를 모든 Xamarin.Forms 컨트롤에 연결할 수 있습니다.
 
 ### <a name="implementing-bindable-properties"></a>바인딩 가능한 속성 구현
 
@@ -67,7 +70,7 @@ public class EffectBehavior : Behavior<View>
 
 ### <a name="implementing-the-overrides"></a>재정의 구현
 
-`EffectBehavior` 클래스는 다음 코드 예제와 같이 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스의 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 및 [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 재정의합니다.
+`EffectBehavior` 클래스는 다음 코드 예제에 나온 것처럼 [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) 클래스의 [`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) and [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드를 재정의합니다.
 
 ```csharp
 public class EffectBehavior : Behavior<View>
@@ -88,7 +91,7 @@ public class EffectBehavior : Behavior<View>
 }
 ```
 
-[`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) 메서드는 `AddEffect` 메서드를 호출하여 연결된 컨트롤을 매개 변수로 전달함으로써 설치를 수행합니다. [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드는 `RemoveEffect` 메서드를 호출하여 연결된 컨트롤을 매개 변수로 전달함으로써 정리를 수행합니다.
+[`OnAttachedTo`](xref:Xamarin.Forms.Behavior`1.OnAttachedTo(Xamarin.Forms.BindableObject)) method performs setup by calling the `AddEffect` method, passing in the attached control as a parameter. The [`OnDetachingFrom`](xref:Xamarin.Forms.Behavior`1.OnDetachingFrom(Xamarin.Forms.BindableObject)) 메서드는 `RemoveEffect` 메서드를 호출해 연결된 컨트롤을 매개 변수로 전달하여 정리를 수행합니다.
 
 ### <a name="implementing-the-behavior-functionality"></a>동작 기능 구현
 
@@ -163,7 +166,7 @@ label.Behaviors.Add (new EffectBehavior {
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 동작을 사용하여 컨트롤에 효과를 추가하는 방법을 보여 주었습니다. `EffectBehavior` 클래스는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다. 즉 동작이 컨트롤에 연결되면 [`Effect`](xref:Xamarin.Forms.Effect) 인스턴스를 컨트롤에 추가하고, 동작이 컨트롤에서 분리되면 `Effect` 인스턴스를 제거합니다.
+이 문서에서는 동작을 사용하여 컨트롤에 효과를 추가하는 방법을 보여 주었습니다. `EffectBehavior` 클래스는 재사용 가능한 Xamarin.Forms 사용자 지정 동작입니다. 즉, 동작이 컨트롤에 연결되면 [`Effect`](xref:Xamarin.Forms.Effect) 인스턴스를 컨트롤에 추가하고, 동작이 컨트롤에서 분리되면 `Effect` 인스턴스를 제거합니다.
 
 ## <a name="related-links"></a>관련 링크
 

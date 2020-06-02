@@ -1,18 +1,21 @@
 ---
-title: 웹 비디오 재생
+title: ''
 description: 이 문서에서는 Xamarin.Forms를 사용하여 비디오 플레이어 애플리케이션에서 웹 비디오를 재생하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 02/12/2018
-ms.openlocfilehash: 107b2a970041c70bb021b03dd98f8c91eaea8d34
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771755"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133681"
 ---
 # <a name="playing-a-web-video"></a>웹 비디오 재생
 
@@ -54,7 +57,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-`Source` 속성은 `VideoSource` 형식입니다. 이 형식은 Xamarin.Forms [`ImageSource`](xref:Xamarin.Forms.ImageSource) 추상 클래스 및 세 개의 파생 항목([`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 및 [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource))를 따라 패턴화됩니다. 그러나 `VideoPlayer`에 사용할 수 있는 스트림 옵션이 없습니다. iOS 및 Android가 스트림에서 비디오를 재생하도록 지원하지 않기 때문입니다.
+`Source` 속성은 `VideoSource` 형식입니다. 이 형식은 Xamarin.Forms [`ImageSource`](xref:Xamarin.Forms.ImageSource) 추상 클래스 및 세 개의 파생 항목([`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) 및 [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource))을 따라 패턴화됩니다. 그러나 `VideoPlayer`에 사용할 수 있는 스트림 옵션이 없습니다. iOS 및 Android가 스트림에서 비디오를 재생하도록 지원하지 않기 때문입니다.
 
 ## <a name="video-sources"></a>비디오 원본
 

@@ -1,19 +1,22 @@
 ---
 title: Xamarin.Forms 접근성
-description: 접근성이 있는 애플리케이션을 구축하면 다양한 요구 사항과 환경으로 사용자 인터페이스에 접근하는 사람들이 애플리케이션을 사용할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: 2aaa61400d3775c4d622b805d24ff0b338017de5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: ''
+ms.openlocfilehash: 7ac8b305ae09e005013aea9f83fb4a3e4740f2b2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66354036"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84129809"
 ---
 # <a name="xamarinforms-accessibility"></a>Xamarin.Forms 접근성
 
@@ -23,7 +26,7 @@ Xamarin.Forms 애플리케이션을 접근성이 있도록 만들려면 다양�
 
 [Android 접근성](~/android/app-fundamentals/accessibility.md) 및 [iOS 접근성](~/ios/app-fundamentals/accessibility.md) 가이드에는 Xamarin에 노출된 네이티브 API에 대한 세부 정보가 포함되어 있고 [MSDN의 UWP 접근성 가이드](https://msdn.microsoft.com/windows/uwp/accessibility/basic-accessibility-information)에는 해당 플랫폼에 대한 네이티브 접근 방식이 설명되어 있습니다. 이러한 API는 각 플랫폼에서 접근이 가능한 애플리케이션을 완벽하게 구현하는 데 사용됩니다.
 
-Xamarin.Forms에는 각각의 기본 플랫폼에서 사용할 수 있는 모든 접근성 API에 대한 *기본* 지원이 포함되어 있지 않습니다. 하지만 화면 판독기와 탐색 지원 도구를 지원하는 사용자 인터페이스 요소의 자동화 속성을 설정하는 기능은 지원되며, 이것은 접근성 있는 애플리케이션을 구축하는 데 가장 중요한 부분 중 하나입니다. 자세한 내용은 [자동화 속성](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)을 참조하십시오.
+Xamarin.Forms에는 각각의 기본 플랫폼에서 사용할 수 있는 모든 접근성 API에 대한 기본 제공 지원이 포함되어 있지 않습니다. 하지만 화면 판독기와 탐색 지원 도구를 지원하는 사용자 인터페이스 요소의 자동화 속성을 설정하는 기능은 지원되며, 이것은 접근성 있는 애플리케이션을 구축하는 데 가장 중요한 부분 중 하나입니다. 자세한 내용은 [자동화 속성](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md)을 참조하십시오.
 
 Xamarin.Forms 애플리케이션에서는 지정된 컨트롤의 탭 순서를 사용하여 유용성 및 접근성을 개선할 수도 있습니다. 자세한 내용은 [키보드 접근성](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md)을 참조하세요.
 

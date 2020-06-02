@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms DataTemplateSelector 만들기
-description: 이 문서에서는 데이터 바인딩된 속성 값을 기반으로, 런타임 시 DataTemplate을 선택하는 데 사용할 수 있는 DataTemplateSelector를 만들고 사용하는 방법을 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: e9a17bff9bd0a23d59faf7602544b25c7ec05a86
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771252"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84135956"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Xamarin.Forms DataTemplateSelector 만들기
 
@@ -41,7 +44,7 @@ public class PersonDataTemplateSelector : DataTemplateSelector
 
 `OnSelectTemplate` 메서드는 `DateOfBirth` 속성 값에 따라 적절한 템플릿을 반환합니다. 반환할 템플릿은 `PersonDataTemplateSelector`를 사용할 때 설정되는 `ValidTemplate` 속성 또는 `InvalidTemplate` 속성 값입니다.
 
-그런 다음, 데이터 템플릿 선택기 클래스의 인스턴스는 Xamarin.Forms 컨트롤 속성(예: [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1))에 할당할 수 있습니다. 유효한 속성 목록은 [DataTemplate 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/creating.md)를 참조하세요.
+그런 다음 데이터 템플릿 선택기 클래스의 인스턴스는 Xamarin.Forms 컨트롤 속성(예: [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1))에 할당할 수 있습니다. 유효한 속성 목록은 [DataTemplate 만들기](~/xamarin-forms/app-fundamentals/templates/data-templates/creating.md)를 참조하세요.
 
 ### <a name="limitations"></a>제한 사항
 

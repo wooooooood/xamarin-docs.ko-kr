@@ -1,25 +1,29 @@
 ---
-title: 16장 요약 데이터 바인딩
-description: 'Xamarin.Forms로 모바일 앱 만들기: 16장 요약 데이터 바인딩'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 2d61413fb1d8c28a3957da53601d0ad682f35518
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 16. Data binding''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771100"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136736"
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>16장 요약 데이터 바인딩
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 
 > [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 프로그래머는 한 개체의 속성이 변경된 경우를 감지하고 이를 사용하여 다른 개체의 속성 값을 변경하는 이벤트 처리기를 작성하는 경우가 많습니다. 이 프로세스는 *데이터 바인딩* 기술을 사용하여 자동화할 수 있습니다. 데이터 바인딩은 일반적으로 XAML에 정의되며 사용자 인터페이스 정의의 일부가 됩니다.
 
@@ -66,9 +70,9 @@ ms.locfileid: "70771100"
 
 ## <a name="source-and-bindingcontext"></a>원본 및 BindingContext
 
-[**BindingSourceCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode) 샘플은 코드의 다른 방법을 보여줍니다. [`Source`](xref:Xamarin.Forms.Binding.Source) 속성을 `Slider` 개체로 설정하고 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성을 "Value"로 설정하여 `Binding` 개체를 만듭니다. 그러면 `BindableObject`의 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드가 `Label` 개체에서 호출됩니다.
+[**BindingSourceCode**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceCode) 샘플은 코드의 다른 방법을 보여줍니다. [`Source`](xref:Xamarin.Forms.Binding.Source) 속성을 `Slider` 개체로 설정하고 [`Path`](xref:Xamarin.Forms.Binding.Path) 속성을 "Value"로 설정하여 `Binding` 개체를 만듭니다. 그런 다음 `BindableObject`의 [`SetBinding`](xref:Xamarin.Forms.BindableObject.SetBinding(Xamarin.Forms.BindableProperty,Xamarin.Forms.BindingBase)) 메서드가 `Label` 개체에서 호출됩니다.
 
-[`Binding`생성자](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object))를 사용하여 `Binding` 개체를 정의할 수도 있습니다.
+[`Binding` constructor](xref:Xamarin.Forms.Binding.%23ctor(System.String,Xamarin.Forms.BindingMode,Xamarin.Forms.IValueConverter,System.Object,System.String,System.Object))를 사용하여 `Binding` 개체를 정의할 수도 있습니다.
 
 [**BindingSourceXaml**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/BindingSourceXaml) 샘플은 XAML의 비교 가능한 기술을 보여줍니다. `Label`의 `Opacity` 속성이 [`Path`](xref:Xamarin.Forms.Binding.Path)를 `Value` 속성으로 설정하고 [`Source`](xref:Xamarin.Forms.Binding.Source)는 포함된 `x:Reference` 태그 확장으로 설정되어 `Binding` 태그 확장이 설정됩니다.
 

@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 바인딩 대체
-description: 이 문서에서는 바인딩에 실패하는 경우 사용할 대체 값을 정의하여 바인딩을 보다 강력하게 만드는 방법에 대해 설명합니다.
-ms.prod: xamarin
-ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/16/2018
-ms.openlocfilehash: 67fd8070ae36bdc1a90b8a33b25f13369d8d995d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f3aadef1960618731c3749507233933b8bf7630e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68650204"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84133479"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.Forms 바인딩 대체
 

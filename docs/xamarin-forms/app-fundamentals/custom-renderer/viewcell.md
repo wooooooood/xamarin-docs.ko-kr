@@ -1,26 +1,18 @@
 ---
-title: ViewCell 사용자 지정
-description: Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: 61F378C9-6DEF-436B-ACC3-2324B25D404E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/07/2016
-ms.openlocfilehash: 5cd0a1ec43f0e56ec1ec72ebd614a7e0a5fa2225
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70998050"
+title: description: ‘Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="customizing-a-viewcell"></a>ViewCell 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
-_Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. 이렇게 하면 ListView를 스크롤하는 중에 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되지 않습니다._
+_Xamarin.Forms ViewCell은 ListView 또는 TableView에 추가할 수 있는 셀이며, 개발자 정의 보기를 포함하고 있습니다. 이 문서에서는 Xamarin.Forms ListView 컨트롤 내부에 호스팅되는 ViewCell에 대한 사용자 지정 렌더러를 만드는 방법을 보여 줍니다. 이렇게 하면 ListView를 스크롤하는 동안 Xamarin.Forms 레이아웃 계산이 반복적으로 호출되지 않습니다._
 
-모든 Xamarin.Forms 셀에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`ViewCell`](xref:Xamarin.Forms.ViewCell)을 렌더링하면 `ViewCellRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITableViewCell` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `ViewCellRenderer` 클래스는 네이티브 `View` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ViewCellRenderer` 클래스는 네이티브 `DataTemplate`을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 셀에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다. Xamarin.Forms 애플리케이션에서 [`ViewCell`](xref:Xamarin.Forms.ViewCell)를 렌더링하는 경우 iOS에서 `ViewCellRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITableViewCell` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `ViewCellRenderer` 클래스는 네이티브 `View` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `ViewCellRenderer` 클래스는 네이티브 `DataTemplate`을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`ViewCell`](xref:Xamarin.Forms.ViewCell) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -160,7 +152,7 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 [`ItemSourc
 
 1. 사용자 지정 셀을 렌더링하는 `ViewCellRenderer` 클래스의 서브클래스를 만듭니다.
 1. 사용자 지정 셀을 렌더링하는 플랫폼별 메서드를 재정의하고, 이 메서드를 사용자 지정하는 논리를 작성합니다.
-1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 셀을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 셀을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 대부분의 Xamarin.Forms 요소의 경우 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다. 그러나 [ViewCell](xref:Xamarin.Forms.ViewCell) 요소를 렌더링하는 경우 각 플랫폼 프로젝트에 사용자 지정 렌더러가 필요합니다.
@@ -175,7 +167,7 @@ Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) 컨트롤은 [`ItemSourc
 
 `ViewCellRenderer` 클래스는 사용자 지정 셀을 렌더링하기 위한 플랫폼별 메서드를 공개합니다. iOS 플랫폼의 `GetCell` 메서드, Android 플랫폼의 `GetCellCore` 메서드, UWP의 `GetTemplate` 메서드가 여기에 해당합니다.
 
-각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 셀의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
+각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 셀의 형식 이름과 사용자 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 플랫폼별 사용자 지정 렌더러 클래스의 구현을 설명합니다.
 
