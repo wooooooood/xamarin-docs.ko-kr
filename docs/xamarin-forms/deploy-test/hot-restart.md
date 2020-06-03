@@ -1,18 +1,21 @@
 ---
-title: Xamarin Hot Restart
-description: 이 문서에서는 Xamarin Hot Restart를 설정해 iOS 앱 디버깅에 사용하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
-ms.technology: xamarin-forms
-author: maddyleger1
-ms.author: maleger
-ms.date: 03/16/2020
-ms.openlocfilehash: cc5efffd4c3646fbff9cdb1ad1a30ec614cb4921
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79429569"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139141"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart(미리 보기)
 
@@ -21,7 +24,7 @@ ms.locfileid: "79429569"
 Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 개발 과정에서 앱의 변경 사항을 신속히 테스트하는 데 도움이 됩니다. 디버그 대상의 기존 앱 번들로 새 변경 사항을 푸시하여 빌드 및 배포 주기에 속도를 한층 더하게 됩니다.
 
 > [!IMPORTANT]
-> Xamarin Hot Restart는 현재 Visual Studio 2019의 안정적 버전 16.5에서 사용할 수 있으며 Xamarin.Forms를 이용 중인 iOS 앱을 지원합니다. Mac용 Visual Studio 및 비Xamarin.Forms 앱에 대한 지원은 현재 로드맵에 포함되어 있습니다.
+> Xamarin Hot Restart는 현재 Visual Studio 2019의 안정적 버전 16.5에서 사용할 수 있으며 Xamarin.Forms를 사용하는 iOS 앱을 지원합니다. Mac용 Visual Studio 및 비 Xamarin.Forms 앱에 대한 지원은 현재 로드맵에 포함되어 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -65,7 +68,7 @@ Xamarin Hot Restart는 다중 파일 코드 편집, 리소스 및 참조 등의 
 
 ## <a name="limitations"></a>제한 사항
 
-- 현재는 Xamarin.Forms 및 iOS 기기로 빌드된 iOS 앱만 지원됩니다.
+- 현재는 Xamarin.Forms 및 iOS 디바이스로 빌드된 iOS 앱만 지원됩니다.
 - 64비트 iOS 디바이스만 지원됩니다. iOS 11부터 Apple에서는 32비트 아키텍처(iPhone 5 이전 디바이스)에서 iOS 앱을 더 이상 실행할 수 없습니다.
 - 스토리보드 및 XIB 파일은 지원되지 않으며 런타임에 로드하려고 하면 앱이 충돌할 수도 있습니다. `HOTRESTART` 전처리기 기호를 사용하여 이 코드가 실행되지 않도록 합니다.
 - 정적 iOS 라이브러리 및 프레임워크는 지원되지 않으며 앱에서 이러한 라이브러리 및 프레임워크를 로드하려고 하면 런타임 오류가 발생하거나 충돌이 발생할 수 있습니다. `HOTRESTART` 전처리기 기호를 사용하여 이 코드가 실행되지 않도록 합니다. 동적 iOS 라이브러리가 지원됩니다.

@@ -1,18 +1,22 @@
 ---
-title: 3장 요약 텍스트 더 자세히 알아보기
-description: 'Xamarin.Forms로 모바일 앱 만들기: 3장 요약 텍스트 더 자세히 알아보기'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 69415b59bbd376330454302981e3216c236a16bb
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 3. Deeper into text''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72980932"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136905"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>3장 요약 텍스트 더 자세히 알아보기
 
@@ -119,7 +123,7 @@ Windows 플랫폼의 경우 색 테마는 일반적으로 사용자가 선택하
 
 글꼴의 대략적인 높이를 지정하려면 `Label`의 [`FontSize`](xref:Xamarin.Forms.Label.FontSize) 속성을 `double`로 설정합니다. 글꼴 크기를 지능적으로 선택하는 방법에 대한 자세한 내용은 [5장, 크기 처리](chapter05.md)를 참조하세요.
 
-또는 미리 설정된 여러 플랫폼 종속 글꼴 크기 중 하나를 가져올 수 있습니다. 정적 [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) 메서드와 [오버로드](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element))는 모두 [`NamedSize`](xref:Xamarin.Forms.NamedSize)열거형([`Default`](xref:Xamarin.Forms.NamedSize.Default), [`Micro`](xref:Xamarin.Forms.NamedSize.Micro), [`Small`](xref:Xamarin.Forms.NamedSize.Small), [`Medium`](xref:Xamarin.Forms.NamedSize.Medium) 및 [`Large`](xref:Xamarin.Forms.NamedSize.Large))의 멤버를 기반으로 하는 플랫폼에 적절한 `double` 글꼴 크기 값을 반환합니다. `Medium` 멤버에서 반환된 값은 `Default`와 동일할 필요는 없습니다. [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 샘플은 이러한 명명된 크기의 텍스트를 표시합니다.
+또는 미리 설정된 여러 플랫폼 종속 글꼴 크기 중 하나를 가져올 수 있습니다. 정적 [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) 메서드 및 [overload](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element))는 둘 다 [`NamedSize`](xref:Xamarin.Forms.NamedSize) 열거형([`Default`](xref:Xamarin.Forms.NamedSize.Default), [`Micro`](xref:Xamarin.Forms.NamedSize.Micro), [`Small`](xref:Xamarin.Forms.NamedSize.Small), [`Medium`](xref:Xamarin.Forms.NamedSize.Medium) 및 [`Large`](xref:Xamarin.Forms.NamedSize.Large))의 멤버를 기준으로 하는 플랫폼에 해당하는 `double` 글꼴 크기 값을 반환합니다. `Medium` 멤버에서 반환된 값은 `Default`와 동일할 필요는 없습니다. [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) 샘플은 이러한 명명된 크기의 텍스트를 표시합니다.
 
 `Label`의 [`FontAttributes`](xref:Xamarin.Forms.Label.FontAttributes) 속성을 이러한 [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) 열거형인 [`Bold`](xref:Xamarin.Forms.FontAttributes.Bold), [`Italic`](xref:Xamarin.Forms.FontAttributes.Italic) 또는 [`None`](xref:Xamarin.Forms.FontAttributes.None) 멤버로 설정합니다. `Bold` 및 `Italic` 멤버를 C# OR 연산자와 결합할 수 있습니다.
 

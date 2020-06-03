@@ -1,18 +1,21 @@
 ---
-title: 효과로부터 이벤트 호출
-description: 효과는 기본 네이티브 뷰의 변경을 신호로 알리는 이벤트를 정의하고 호출할 수 있습니다. 이 문서에서는 하위 수준 멀티 터치 손가락 추적을 구현하는 방법과 터치 동작을 신호로 알려주는 이벤트를 생성하는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/14/2018
-ms.openlocfilehash: cf5a97bca7c827101db951a440863839539c7e48
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725262"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136983"
 ---
 # <a name="invoking-events-from-effects"></a>효과로부터 이벤트 호출
 
@@ -115,7 +118,7 @@ public class TouchActionEventArgs : EventArgs
 
 애플리케이션에서 `Id` 속성을 사용하여 개별 손가락을 추적할 수 있습니다. `IsInContact` 속성을 확인하십시오. 이 속성은 `Pressed` 이벤트에는 항상 `true`이고 `Released` 이벤트에는 `false`입니다. iOS 및 Android의 `Moved` 이벤트에 대해서도 항상 `true`입니다. `IsInContact` 속성은 프로그램이 데스크톱에서 실행되고 마우스 단추를 누르지 않고 포인터를 이동하는 경우 유니버설 Windows 플랫폼의 `Moved` 이벤트에 대해 `false`일 수도 있습니다.
 
-솔루션의 .NET Standard 라이브러리 프로젝트에 파일을 포함시키고 원하는 Xamarin.Forms 요소의 `Effects` 컬렉션에 인스턴스를 추가하면 자체 애플리케이션에 `TouchEffect` 클래스를 사용할 수 있습니다. `TouchAction` 이벤트에 처리기를 연결하여 터치 이벤트를 가져옵니다.
+솔루션의 .NET Standard 라이브러리 프로젝트에 파일을 포함하고 원하는 Xamarin.Forms 요소의 `Effects` 컬렉션에 인스턴스를 추가하면 자체 애플리케이션에 `TouchEffect` 클래스를 사용할 수 있습니다. `TouchAction` 이벤트에 처리기를 연결하여 터치 이벤트를 가져옵니다.
 
 자체 애플리케이션에 `TouchEffect`를 사용하려면 **TouchTrackingEffectDemos** 솔루션에 포함된 플랫폼 구현도 필요합니다.
 
@@ -518,7 +521,7 @@ class DraggableBoxView : BoxView
 
 [![](touch-tracking-images/ellipsedrawing-small.png "Triple screenshot of the Ellipse Drawing page")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
 
-타원 중 하나를 터치한 다음, 다른 위치로 끌 수 있습니다. 이렇게 하려면 특정 지점에서 그래픽 개체를 검색하는 기능과 관련된 "hit-testing"(적중 테스트)이라는 기술이 필요합니다. SkiaSharp 타원은 Xamarin.Forms 요소가 아니기 때문에 자체적인 `TouchEffect` 프로세싱을 수행할 수 없습니다. `TouchEffect`가 전체 `SKCanvasView` 개체에 적용되어야 합니다.
+타원 중 하나를 터치한 다음, 다른 위치로 끌 수 있습니다. 이렇게 하려면 특정 지점에서 그래픽 개체를 검색하는 기능과 관련된 "hit-testing"(적중 테스트)이라는 기술이 필요합니다. SkiaSharp 타원은 Xamarin.Forms 요소가 아니므로 자체적인 `TouchEffect` 처리를 수행할 수 없습니다. `TouchEffect`가 전체 `SKCanvasView` 개체에 적용되어야 합니다.
 
 [EllipseDrawPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/EllipseDrawingPage.xaml) 파일은 단일 셀 `Grid`에서 `SKCanvasView`를 인스턴스화합니다. `TouchEffect` 개체는 이 `Grid`에 연결되어 있습니다.
 
@@ -748,7 +751,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ### <a name="tracking-view-to-view-touch"></a>보기 간 터치 추적
 
-앞의 모든 예제에서 `TouchEffect`가 만들어지거나 `Pressed` 이벤트가 발생하는 경우 `TouchEffect`의 `Capture` 속성을 `true`로 설정했습니다. 이렇게 하면 보기를 처음 누르는 손가락과 연결된 모든 이벤트를 동일한 요소가 수신할 수 있습니다. 최종 샘플은 `Capture`를 `true`로 설정하지 않습니다.  이로 인해 화면에 접촉하는 손가락이 한 요소에서 다른 요소로 이동할 때 다른 동작이 발생합니다. 손가락을 뗀 요소는 `Type` 속성이 `TouchActionType.Exited`로 설정된 이벤트를 수신하고 두 번째 요소는 `Type`이 `TouchActionType.Entered`로 설정된 이벤트를 수신합니다.
+앞의 모든 예제에서 `TouchEffect`가 만들어지거나 `Pressed` 이벤트가 발생하는 경우 `TouchEffect`의 `Capture` 속성을 `true`로 설정했습니다. 이렇게 하면 보기를 처음 누르는 손가락과 연결된 모든 이벤트를 동일한 요소가 수신할 수 있습니다. 최종 샘플은 `Capture`를 `true`로 설정하지 않습니다. 이로 인해 화면에 접촉하는 손가락이 한 요소에서 다른 요소로 이동할 때 다른 동작이 발생합니다. 손가락을 뗀 요소는 `Type` 속성이 `TouchActionType.Exited`로 설정된 이벤트를 수신하고 두 번째 요소는 `Type`이 `TouchActionType.Entered`로 설정된 이벤트를 수신합니다.
 
 이런 유형의 터치 처리는 음악 키보드에 매우 유용합니다. 키는 눌렸을 때는 물론 손가락이 키보드 사이를 미끄러질 때도 이를 감지할 수 있어야 합니다.
 

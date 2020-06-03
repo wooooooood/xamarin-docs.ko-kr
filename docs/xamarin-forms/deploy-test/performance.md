@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 앱 성능 향상
-description: Xamarin.Forms 애플리케이션의 성능을 높이기 위한 많은 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/27/2019
-ms.openlocfilehash: 4427d347723284a2f8897612f10857270c9631bf
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: Xamarin.Forms 애플리케이션의 성능을 높일 수 있는 많은 기법이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 96b5939fd1f8448d45d1398fd56770f9032de083
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303884"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139115"
 ---
 # <a name="improve-xamarinforms-app-performance"></a>Xamarin.Forms 앱 성능 향상
 
@@ -22,7 +25,7 @@ ms.locfileid: "79303884"
 
 낮은 애플리케이션 성능은 여러가지 방법으로 나타납니다. 이 경우에 애플리케이션이 응답하지 않는 것처럼 보이고, 스크롤 속도가 느려지고, 디바이스 배터리 수명이 줄어들 수 있습니다. 그러나 성능을 최적화하려면 효율적인 코드를 구현하는 것 이상이 필요합니다. 애플리케이션 성능에 대한 사용자 환경도 고려해야 합니다. 예를 들어 사용자가 다른 활동을 수행하지 못하도록 차단하지 않고 작업을 실행하면 사용자 환경을 향상시키는 데 도움이 될 수 있습니다.
 
-Xamarin.Forms 애플리케이션의 성능과 인식 성능을 높이는 여러 가지 기술이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
+Xamarin.Forms 애플리케이션의 성능과 인식 성능을 높일 수 있는 많은 기법이 있습니다. 이러한 기술은 전체적으로 CPU에서 수행하는 작업의 양과 애플리케이션에서 소비하는 메모리의 양을 크게 줄일 수 있습니다.
 
 > [!NOTE]
 > 이 아티클을 읽기 전에 먼저 Xamarin 플랫폼을 사용하여 빌드된 애플리케이션의 메모리 사용 및 성능을 향상시키기 위한 비플랫폼 특정 기술에 대해 설명하는 [플랫폼 간 성능](~/cross-platform/deploy-test/memory-perf-best-practices.md)을 참조해야 합니다.
@@ -39,7 +42,7 @@ XAMLC는 새 Xamarin.Forms 솔루션에서 기본적으로 사용하도록 설�
 
 ## <a name="use-compiled-bindings"></a>컴파일된 바인딩 사용
 
-컴파일된 바인딩은 리플렉션을 사용하는 런타임 대신 컴파일 시간에 바인딩 식을 확인하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상시킵니다. 바인딩 식을 컴파일하면 일반적으로 클래식 바인딩을 사용하는 것보다 8~20배 더 빠르게 해결하는 컴파일된 코드가 생성됩니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
+컴파일된 바인딩은 리플렉션을 사용하는 런타임 대신 컴파일 시간에 바인딩 식을 확인하여 Xamarin.Forms 애플리케이션에서 데이터 바인딩 성능을 향상합니다. 바인딩 식을 컴파일하면 일반적으로 클래식 바인딩을 사용하는 것보다 8~20배 더 빠르게 해결하는 컴파일된 코드가 생성됩니다. 자세한 내용은 [컴파일된 바인딩](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)을 참조하세요.
 
 ## <a name="reduce-unnecessary-bindings"></a>불필요한 바인딩 줄이기
 
@@ -47,7 +50,7 @@ XAMLC는 새 Xamarin.Forms 솔루션에서 기본적으로 사용하도록 설�
 
 ## <a name="use-fast-renderers"></a>빠른 렌더러 사용
 
-빠른 렌더러는 결과 네이티브 컨트롤 계층을 평면화하여 Android에서 Xamarin.Forms 컨트롤의 인플레이션 및 렌더링 비용을 줄여줍니다. 이는 더 적은 개체를 만들어 시각적 트리의 복잡성을 낮추고 메모리 사용량을 줄여 성능을 개선합니다.
+빠른 렌더러는 결과 네이티브 컨트롤 계층 구조를 평면화하여 Android에서 Xamarin.Forms 컨트롤의 인플레이션 및 렌더링 비용을 줄여줍니다. 이는 더 적은 개체를 만들어 시각적 트리의 복잡성을 낮추고 메모리 사용량을 줄여 성능을 개선합니다.
 
 Xamarin.Forms 4.0부터 `FormsAppCompatActivity`를 대상으로 하는 모든 애플리케이션에서는 기본적으로 빠른 렌더러를 사용합니다. 자세한 내용은 [빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)를 참조하세요.
 
@@ -55,7 +58,7 @@ Xamarin.Forms 4.0부터 `FormsAppCompatActivity`를 대상으로 하는 모든 �
 
 Android에서 AOT(Ahead of Time) 컴파일을 사용하면 JIT(Just-in-time) 애플리케이션 시작 오버헤드와 메모리 사용을 최소화하지만, 훨씬 큰 APK가 작성됩니다. 또 다른 방법은 시작 추적을 사용하는 것입니다. 이 방법은 기존 AOT 컴파일과 비교하여, Android APK 크기와 시작 시간이 서로 절충될 수 있습니다.
 
-비관리형 코드에서 가능한 한 많은 애플리케이션을 컴파일하는 대신, 시작 추적은 빈 Xamarin.Forms 애플리케이션에서 애플리케이션 시작 부분 중 가장 자원이 많이 소모되는 부분을 나타내는 관리형 메서드 집합만 컴파일합니다. 이 접근 방식을 사용하면 기존 AOT 컴파일과 비교할 때 APK 크기가 줄어들지만 시작 개선사항은 여전히 비슷합니다.
+비관리 코드에 최대한 많은 애플리케이션을 컴파일하는 대신, 시작 추적은 빈 Xamarin.Forms 애플리케이션에서 애플리케이션 시작 부분 중 가장 자원이 많이 소모되는 부분을 나타내는 관리형 메서드 집합만 컴파일합니다. 이 접근 방식을 사용하면 기존 AOT 컴파일과 비교할 때 APK 크기가 줄어들지만 시작 개선사항은 여전히 비슷합니다.
 
 ## <a name="enable-layout-compression"></a>레이아웃 압축 활성화
 
@@ -201,7 +204,7 @@ Android에서 AOT(Ahead of Time) 컴파일을 사용하면 JIT(Just-in-time) 애
 
 ## <a name="create-shell-applications"></a>셸 애플리케이션 만들기
 
-Xamarin.Form 셸 애플리케이션에서는 플라이아웃 및 탭을 기반으로 한 독자적인 탐색 환경을 제공합니다. 애플리케이션 사용자 환경을 셸로 구현할 수 있는 경우 이 작업을 수행하는 것이 좋습니다. 셸 애플리케이션을 사용하면 [‘TabbedPage’](xref:Xamarin.Forms.TabbedPage)를 사용하는 애플리케이션에서 발생하는 애플리케이션 시작 시가 아닌 탐색에 대한 응답으로 요청 시 페이지를 만들기 때문에 잘못된 시작 환경을 방지하는 데 도움이 됩니다. 자세한 내용은 [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)을 참조하세요.
+Xamarin.Forms Shell 애플리케이션에서는 플라이아웃 및 탭을 기반으로 한 독자적인 탐색 환경을 제공합니다. 애플리케이션 사용자 환경을 셸로 구현할 수 있는 경우 이 작업을 수행하는 것이 좋습니다. 셸 애플리케이션을 사용하면 [‘TabbedPage’](xref:Xamarin.Forms.TabbedPage)를 사용하는 애플리케이션에서 발생하는 애플리케이션 시작 시가 아닌 탐색에 대한 응답으로 요청 시 페이지를 만들기 때문에 잘못된 시작 환경을 방지하는 데 도움이 됩니다. 자세한 내용은 [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)을 참조하세요.
 
 ## <a name="use-collectionview-instead-of-listview"></a>ListView 대신 CollectionView 사용
 

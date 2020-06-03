@@ -1,19 +1,22 @@
 ---
 title: Xamarin.Forms의 문자열 및 이미지 지역화
 description: .NET 리소스 파일을 사용하여 Xamarin.Forms 앱을 지역화할 수 있습니다.
-zone_pivot_groups: platform
-ms.prod: xamarin
-ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 11/01/2019
-ms.openlocfilehash: bf99873d88a69a715cdf7969ad94afd66372b5e3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+zone_pivot_groups: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "74135355"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137607"
 ---
 # <a name="xamarinforms-string-and-image-localization"></a>Xamarin.Forms 문자열 및 이미지 지역화
 
@@ -29,7 +32,7 @@ ms.locfileid: "74135355"
 
 1. 번역된 텍스트가 포함된 [Resx 파일을 만듭니다](#create-resx-files).
 1. 공유 프로젝트에 [기본 문화권을 지정](#specify-the-default-culture)합니다.
-1. [Xamarin.Forms에서 텍스트를 지역화](#localize-text-in-xamarinforms)합니다.
+1. [Xamarin.Forms의 텍스트를 지역화](#localize-text-in-xamarinforms)합니다.
 1. 각 플랫폼의 문화권 설정에 따라 [이미지를 지역화](#localize-images)합니다.
 1. 각 플랫폼에서 [애플리케이션 이름을 지역화](#localize-the-application-name)합니다.
 1. 각 플랫폼에서 [지역화를 테스트](#test-localization)합니다.
@@ -146,7 +149,7 @@ using System.Resources;
 
 리소스 파일에 대한 자세한 내용은 [.NET 앱의 리소스 파일 만들기](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)를 참조하세요.
 
-## <a name="localize-text-in-xamarinforms"></a>Xamarin.Forms에서 텍스트 지역화
+## <a name="localize-text-in-xamarinforms"></a>Xamarin.Forms의 텍스트 지역화
 
 텍스트는 생성된 `AppResources` 클래스를 사용하여 Xamarin.Forms에서 지역화됩니다. 이 클래스는 기본 리소스 파일 이름을 기반으로 이름이 지정됩니다. 샘플 프로젝트 리소스 파일의 이름이 **AppResources.cs**이므로 Visual Studio는 `AppResources`라는 일치하는 클래스를 생성합니다. 정적 속성은 리소스 파일의 각 행에 대해 `AppResources` 클래스에서 생성됩니다. 다음 정적 속성은 샘플 애플리케이션의 `AppResources` 클래스에서 생성됩니다.
 

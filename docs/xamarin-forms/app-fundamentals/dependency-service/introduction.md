@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms DependencyService 소개
 description: 이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 네이티브 플랫폼 기능을 호출하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/12/2019
-ms.openlocfilehash: b27b4b0c3c5662c6cc1c2c151dd9ebe1523da3a4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f4d43a0c9c4878733d65b170c27e744b397aa4d0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71198523"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138361"
 ---
 # <a name="xamarinforms-dependencyservice-introduction"></a>Xamarin.Forms DependencyService 소개
 
@@ -152,7 +155,7 @@ DeviceOrientation orientation = service.GetOrientation();
 DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>().GetOrientation();
 ```
 
-[`DependencyService`](xref:Xamarin.Forms.DependencyService)를 사용하여 플랫폼 구현을 확인하는 방법에 대한 자세한 내용은 [Xamarin.Forms DependencyService 등록 및 확인](registration-and-resolution.md)을 참조하세요.
+[`DependencyService`](xref:Xamarin.Forms.DependencyService)에 플랫폼 구현을 확인하는 방법에 대한 자세한 내용은 [Xamarin.Forms DependencyService 등록 및 확인](registration-and-resolution.md)을 참조하세요.
 
 ## <a name="related-links"></a>관련 링크
 

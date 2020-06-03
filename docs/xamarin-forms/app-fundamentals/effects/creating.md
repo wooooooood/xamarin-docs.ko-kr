@@ -1,18 +1,21 @@
 ---
-title: 효과 만들기
-description: 효과는 컨트롤의 사용자 지정을 간소화합니다. 이 문서에서는 컨트롤에 포커스가 있을 때 Entry 컨트롤의 배경 색을 변경하는 효과를 만드는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2016
-ms.openlocfilehash: c07848b808d023439c88117924e69c336984630b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771504"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139388"
 ---
 # <a name="creating-an-effect"></a>효과 만들기
 
@@ -202,7 +205,7 @@ namespace EffectsDemo.UWP
 
 ## <a name="consuming-the-effect"></a>효과 사용
 
-Xamarin.Forms .NET 표준 라이브러리 또는 공유 라이브러리 프로젝트에서 효과를 사용하기 위한 프로세스는 다음과 같습니다.
+Xamarin.Forms .NET Standard 라이브러리 또는 공유 라이브러리 프로젝트에서 효과를 사용하는 프로세스는 다음과 같습니다.
 
 1. 효과에 의해 사용자 지정되는 컨트롤을 선언합니다.
 1. 컨트롤의 [`Effects`](xref:Xamarin.Forms.Element.Effects) 컬렉션에 추가하여 컨트롤에 효과를 연결합니다.

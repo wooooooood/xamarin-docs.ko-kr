@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms TabbedPage
 description: Xamarin.Forms TabbedPage는 탭 목록과 더 큰 세부 정보 영역으로 구성되며 각 탭은 세부 정보 영역으로 콘텐츠를 로드합니다. 이 문서에서는 페이지의 컬렉션을 검색하려면 TabbedPage를 사용하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/07/2019
-ms.openlocfilehash: 986045a4be352da0e439de87fdc70e2958b48d36
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303806"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137516"
 ---
 # <a name="xamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
@@ -56,7 +59,7 @@ UWP(유니버설 Windows 플랫폼)에서는 탭 목록이 화면 맨 위에 표
 이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체에서 지원되며, 이는 속성에 스타일을 지정할 수 있으며 속성이 데이터 바인딩의 대상이 될 수 있음을 의미합니다.
 
 > [!WARNING]
-> [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)에서 각 [`Page`](xref:Xamarin.Forms.Page) 개체는 `TabbedPage`가 생성될 때 만들어집니다. 이로 인해 특히 `TabbedPage`가 애플리케이션의 루트 페이지인 경우 사용자 환경이 저하될 수 있습니다. 그러나 Xamarin.Forms 셸l을 사용하면 탐색에 대한 응답으로 탭 표시줄을 통해 액세스되는 페이지를 요청 시 만들 수 있습니다. 자세한 내용은 [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)을 참조하세요.
+> [`TabbedPage`](xref:Xamarin.Forms.TabbedPage)에서 각 [`Page`](xref:Xamarin.Forms.Page) 개체는 `TabbedPage`가 생성될 때 만들어집니다. 이로 인해 특히 `TabbedPage`가 애플리케이션의 루트 페이지인 경우 사용자 환경이 저하될 수 있습니다. 그러나 Xamarin.Forms Shell을 사용하면 탐색에 대한 응답으로 탭 표시줄을 통해 액세스되는 페이지를 요청에 따라 만들 수 있습니다. 자세한 내용은 [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)을 참조하세요.
 
 ## <a name="populate-a-tabbedpage-with-a-page-collection"></a>페이지 컬렉션으로 TabbedPage 채우기
 

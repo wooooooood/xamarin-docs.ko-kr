@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms DependencyService 등록 및 확인
 description: 이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 네이티브 플랫폼 기능을 호출하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/05/2019
-ms.openlocfilehash: 6e666c16c9b1afc3478f524cae2f84d6704319c2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 50d77e9ba41767aa1f676bf21994431844fc4530
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70199227"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138777"
 ---
 # <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.Forms DependencyService 등록 및 확인
 
@@ -95,7 +98,7 @@ DependencyService.Register<DeviceOrientationService>();
 
 플랫폼 구현은 확인한 후 호출해야 합니다. 이 작업은 일반적으로 공유 코드에서 [`DependencyService.Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드를 사용하여 수행합니다. 그러나 [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) 메서드를 사용하여 수행할 수도 있습니다.
 
-기본적으로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)는 매개 변수가 없는 생성자가 있는 플랫폼 구현만 확인합니다. 그러나 종속성 확인 메서드는 종속성 주입 컨테이너 또는 팩터리 메서드를 사용하여 플랫폼 구현을 확인하는 Xamarin.Forms에 주입할 수 있습니다. 이 방법은 매개 변수가 있는 생성자가 있는 가진 플랫폼 구현을 확인하는 데 사용할 수 있습니다. 자세한 내용은 [Xamarin.Forms에서 종속성 확인](~/xamarin-forms/internals/dependency-resolution.md)을 참조하세요.
+기본적으로 [`DependencyService`](xref:Xamarin.Forms.DependencyService)는 매개 변수가 없는 생성자가 있는 플랫폼 구현만 확인합니다. 그러나 종속성 확인 메서드는 종속성 주입 컨테이너 또는 팩터리 메서드를 사용하여 플랫폼 구현을 확인하는 Xamarin.Forms에 주입할 수 있습니다. 이 방법은 매개 변수가 있는 생성자가 있는 가진 플랫폼 구현을 확인하는 데 사용할 수 있습니다. 자세한 내용은 [Xamarin.Forms의 종속성 확인](~/xamarin-forms/internals/dependency-resolution.md)을 참조하세요.
 
 > [!IMPORTANT]
 > [`DependencyService`](xref:Xamarin.Forms.DependencyService)에 등록되지 않은 플랫폼 구현을 호출하면 `NullReferenceException`이 throw됩니다.
@@ -122,7 +125,7 @@ DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>
 
 ### <a name="resolve-using-the-resolvelttgt-method"></a>Resolve&lt;T&gt; 메서드를 사용하여 확인
 
-[`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) 메서드는 [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) 클래스를 통해 Xamarin.Forms에 삽입된 종속성 확인 메서드를 사용하여 런타임에 인터페이스 `T`의 플랫폼 구현을 검색합니다. 종속성 확인 메서드가 Xamarin.Forms에 삽입되지 않은 경우 `Resolve<T>` 메서드는 플랫폼 구현을 검색하기 위해 [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드 호출로 대체됩니다. 종속성 확인 메서드를 Xamarin.Forms에 삽입하는 방법에 대한 자세한 내용은 [Xamarin.Forms의 종속성 확인](~/xamarin-forms/internals/dependency-resolution.md)을 참조하세요.
+[`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) 메서드는 [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) 클래스를 통해 Xamarin.Forms에 삽입된 종속성 확인 메서드를 사용하여 런타임에 인터페이스 `T`의 플랫폼 구현을 검색합니다. 종속성 확인 메서드가 Xamarin.Forms에 삽입되지 않은 경우 `Resolve<T>` 메서드는 플랫폼 구현을 검색하기 위해 [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) 메서드 호출로 대체됩니다. 종속성 확인 메서드를 Xamarin.Forms에 삽입하는 방법에 대한 자세한 내용은 [Xamarin.FormsXamarin.Forms의 종속성 확인](~/xamarin-forms/internals/dependency-resolution.md)을 참조하세요.
 
 다음 코드는 [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) 메서드를 호출하여 `IDeviceOrientationService` 인터페이스를 확인한 후 해당 `GetOrientation` 메서드를 호출하는 예제를 보여 줍니다.
 

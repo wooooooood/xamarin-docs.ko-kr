@@ -1,26 +1,21 @@
 ---
-title: 'Xamarin.Essentials: 문제 해결'
-description: 이 문서에서는 Xamarin.Essentials 라이브러리를 사용하여 개발하는 경우 발생된 문제를 해결하는 방법을 설명합니다.
-ms.assetid: 2E474FAF-F841-4E3C-B815-F7ABD8EE3361
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/06/2020
-ms.openlocfilehash: 2bd537a782b7090207b09ca02c5dfe5c4422a9ad
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77545135"
+title: ''Xamarin.Essentials: 문제 해결'' description: ‘이 문서에서는 Xamarin.Essentials 라이브러리를 사용하여 개발할 때 발생하는 문제를 해결하는 방법을 설명합니다.’
+ms.assetid: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-troubleshooting"></a>Xamarin.Essentials: 문제 해결
 
 ## <a name="error-version-conflict-detected-for-xamarinandroidsupportcompat"></a>오류: Xamarin.Android.Support.Compat에 대한 버전 충돌이 검색되었습니다.
 
-Xamarin.Essentials를 사용하는 Xamarin.Forms 프로젝트로 NuGet 패키지를 업데이트(하거나 새 패키지를 추가)하는 경우 다음 오류가 발생할 수 있습니다.
+Xamarin.Forms를 사용하는
+Xamarin.Essentials 프로젝트로 NuGet 패키지를 업데이트(또는 새 패키지를 추가)하는 경우 다음 오류가 발생할 수 있습니다.
 
 ```error
-NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue. 
- MyApp -> Xamarin.Essentials 1.3.1 -> Xamarin.Android.Support.CustomTabs 28.0.0.3 -> Xamarin.Android.Support.Compat (= 28.0.0.3) 
+NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference the package directly from the project to resolve this issue.
+ MyApp -> Xamarin.Essentials 1.3.1 -> Xamarin.Android.Support.CustomTabs 28.0.0.3 -> Xamarin.Android.Support.Compat (= 28.0.0.3)
  MyApp -> Xamarin.Forms 3.1.0.583944 -> Xamarin.Android.Support.v4 25.4.0.2 -> Xamarin.Android.Support.Compat (= 25.4.0.2).
 ```
 
@@ -30,4 +25,4 @@ NU1107: Version conflict detected for Xamarin.Android.Support.Compat. Reference 
 
 문제를 해결하는 방법에 대한 자세한 내용 및 비디오는 [이 블로그 게시물](https://redth.codes/how-to-fix-the-dreaded-version-conflict-nuget-error-in-your-xamarin-android-projects/)을 참조하세요.
 
-문제가 발생하거나 버그를 찾은 경우 [Xamarin.Essentials GitHub 리포지토리](https://github.com/xamarin/Essentials)에서 보고해주세요.
+문제가 발생하거나 버그를 찾은 경우 [Xamarin.Essentials GitHub 리포지토리](https://github.com/xamarin/Essentials)에서 보고해 주세요.

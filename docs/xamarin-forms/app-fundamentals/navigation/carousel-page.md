@@ -1,24 +1,27 @@
 ---
 title: Xamarin.Forms 회전식 페이지
 description: Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다. 이 문서에서는 페이지의 컬렉션을 탐색 하려면 CarouselPage를 사용하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 2D14FC9D-DF5F-427E-9006-2AAE61ECF8DC
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 5cfaeb8589514972dfcccd11009a02c00f95bfac
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4d0cebe98b66f3596e72624efed90e965b942bfc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72696437"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137529"
 ---
 # <a name="xamarinforms-carousel-page"></a>Xamarin.Forms 회전식 페이지
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
-_Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다. 이 문서에서는 페이지의 컬렉션을 탐색 하려면 CarouselPage를 사용하는 방법을 설명합니다._
+Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리와 같은 콘텐츠 페이지를 탐색할 수 있는 페이지입니다. 이 문서에서는 페이지의 컬렉션을 탐색 하려면 CarouselPage를 사용하는 방법을 설명합니다.
 
 > [!IMPORTANT]
 > [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)는 [`CarouselView`](xref:Xamarin.Forms.CarouselView)로 대체되었습니다. CarouselView는 사용자가 스와이프하여 항목 컬렉션 간에 이동할 수 있는 스크롤 가능 레이아웃을 제공합니다. `CarouselView`에 대한 자세한 내용은 [Xamarin.Forms CarouselView](~/xamarin-forms/user-interface/carouselview/index.md)를 참조하세요.
@@ -42,7 +45,7 @@ _Xamarin.Forms CarouselPage는 사용자가 옆으로 살짝 밀어서 갤러리
 
 [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)가 [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)의 [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) 페이지에 포함된 경우 [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) 속성을 `false`로 설정하여 `CarouselPage` 및 `MasterDetailPage` 간에 제스처 충돌을 방지해야 합니다.
 
-[`CarouselPage`](xref:Xamarin.Forms.CarouselPage)에 대한 자세한 내용은 Charles Petzold의 Xamarin.Forms 책의 [챕터 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)을 참조하세요.
+[`CarouselPage`](xref:Xamarin.Forms.CarouselPage)에 대한 자세한 내용은 Charles Petzold의 Xamarin.Forms 책의 [25장](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)을 참조하세요.
 
 ## <a name="create-a-carouselpage"></a>CarouselPage 만들기
 

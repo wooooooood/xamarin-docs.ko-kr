@@ -1,22 +1,25 @@
 ---
 title: Xamarin.Forms 효과
-description: 효과를 사용하면 사용자 지정 렌더러 구현에 의존하지 않고도 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있습니다.
-ms.prod: xamarin
-ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/01/2017
-ms.openlocfilehash: 2de1d1dd065a01bb457ebf03acdc0c01529abf7b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a6206d2c561df74a01b7d7408e8d542f1e2189d3
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73083833"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139336"
 ---
 # <a name="xamarinforms-effects"></a>Xamarin.Forms 효과
 
-_Xamarin.Forms 사용자 인터페이스는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링되기 때문에 Xamarin.Forms 애플리케이션이 각 플랫폼에 적합한 모양과 느낌을 유지할 수 있습니다. 효과를 사용하면 사용자 지정 렌더러 구현에 의존하지 않고도 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있습니다._
+Xamarin.Forms 사용자 인터페이스는 Xamarin.Forms 애플리케이션이 각 플랫폼에 적합한 모양과 느낌을 유지하도록 하는 대상 플랫폼의 네이티브 컨트롤을 사용하여 렌더링됩니다. 효과를 사용하면 사용자 지정 렌더러 구현에 의존하지 않고도 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있습니다.
 
 ## <a name="introduction-to-effects"></a>[효과 소개](introduction.md)
 

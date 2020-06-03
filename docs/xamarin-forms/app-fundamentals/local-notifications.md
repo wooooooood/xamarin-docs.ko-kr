@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 로컬 알림
-description: 이 문서에서는 Xamarin.Forms에서 로컬 알림을 보내고 받는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 10/10/2019
-ms.openlocfilehash: ef2ef004378212fac593179d7aa38b3688fa82c3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: 이 문서에서는 Xamarin.Forms에서 로컬 알림을 주고받는 방법을 설명합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 40e040f216ddda40931273f4e7f5614964862fe8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "72371540"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137596"
 ---
 # <a name="local-notifications-in-xamarinforms"></a>Xamarin.Forms의 로컬 알림
 
@@ -24,7 +27,7 @@ ms.locfileid: "72371540"
 - 미리 알림
 - 위치 기반 트리거
 
-플랫폼마다 로컬 알림의 생성, 표시, 사용량을 다르게 처리합니다. 이 문서에서는 Xamarin.Forms를 사용하여 로컬 알림을 보내고 받는 플랫폼 간 추상화를 만드는 방법을 설명합니다.
+플랫폼마다 로컬 알림의 생성, 표시, 사용량을 다르게 처리합니다. 이 문서에서는 Xamarin.Forms를 사용하여 로컬 알림을 주고받는 플랫폼 간 추상화를 만드는 방법을 설명합니다.
 
 [![iOS 및 Android의 로컬 알림 애플리케이션](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
 
@@ -115,7 +118,7 @@ Xamarin.Forms `DependencyService`에 대한 자세한 내용은 [Xamarin.Forms D
 
 ## <a name="create-the-android-interface-implementation"></a>Android 인터페이스 구현 만들기
 
-Xamarin.Forms 애플리케이션이 Android에서 알림을 보내고 받으려면 애플리케이션이 `INotificationManager` 인터페이스의 구현을 제공해야 합니다.
+Xamarin.Forms 애플리케이션이 Android에서 알림을 주고받으려면 애플리케이션이 `INotificationManager` 인터페이스의 구현을 제공해야 합니다.
 
 ### <a name="create-the-androidnotificationmanager-class"></a>AndroidNotificationManager 클래스 만들기
 
@@ -269,7 +272,7 @@ Android는 여러 고급 알림 옵션을 제공합니다. 자세한 내용은 [
 
 ## <a name="create-the-ios-interface-implementation"></a>iOS 인터페이스 구현 만들기
 
-Xamarin.Forms 애플리케이션이 iOS에서 알림을 보내고 받으려면 애플리케이션이 `INotificationManager` 인터페이스의 구현을 제공해야 합니다.
+Xamarin.Forms 애플리케이션이 iOS에서 알림을 주고받으려면 애플리케이션이 `INotificationManager`의 구현을 제공해야 합니다.
 
 ### <a name="create-the-iosnotificationmanager-class"></a>iOSNotificationManager 클래스 만들기
 

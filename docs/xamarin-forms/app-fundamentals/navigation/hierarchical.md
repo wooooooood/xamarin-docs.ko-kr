@@ -1,18 +1,21 @@
 ---
-title: 계층적 탐색
-description: 이 문서에서는 NavigationPage 클래스를 사용하여 후입선출(LIFO) 페이지 스택 탐색을 수행하는 방법을 보여 줍니다.
-ms.prod: xamarin
-ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2020
-ms.openlocfilehash: 984f54698ccdee54c0b8670a50cb1f4432327977
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 92774cffdfed7412bdb4d44993dc221993ad56c8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517273"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137888"
 ---
 # <a name="hierarchical-navigation"></a>계층적 탐색
 
