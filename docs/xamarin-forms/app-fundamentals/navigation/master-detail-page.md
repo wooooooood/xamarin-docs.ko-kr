@@ -1,24 +1,27 @@
 ---
 title: Xamarin.Forms 마스터-세부 정보 페이지
 description: Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다. 이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/01/2017
-ms.openlocfilehash: 702ec35bca051f7255c5c9d67d2dc68d4f89ca52
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 89b1dedcb6219a32332641550018405abd4b6870
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68645950"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137815"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.Forms 마스터-세부 정보 페이지
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
-_Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다. 이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다._
+Xamarin.Forms MasterDetailPage는 두 개의 관련 정보 페이지를 관리하는 페이지입니다. 이러한 페이지는 항목을 표시하는 마스터 페이지와 이 페이지의 항목에 대한 세부 정보를 표시하는 세부 정보 페이지입니다. 이 문서에서는 MasterDetailPage를 사용하는 방법과 정보 페이지 간에 이동하는 방법을 설명합니다.
 
 ## <a name="overview"></a>개요
 

@@ -1,18 +1,22 @@
 ---
-title: 요약 - 6장. 단추 클릭
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 6장. 단추 클릭'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/18/2018
-ms.openlocfilehash: 12c8cdc19f9e6765ca25ade97bcfdbffb7b60381
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 6. Button clicks''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334713"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136840"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>요약 - 6장. 단추 클릭
 

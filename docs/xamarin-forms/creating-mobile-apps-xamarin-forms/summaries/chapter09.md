@@ -1,31 +1,35 @@
 ---
-title: 요약 - 9장. 플랫폼별 API 호출
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 9장. 플랫폼별 API 호출'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 4FFA1BD4-B3ED-461C-9B00-06ABF70D471D
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 3aec84ec6598a45bb989d4bbc1705fd797382755
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 9. Platform-specific API calls''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334559"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136860"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>요약 - 9장. 플랫폼별 API 호출
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
 > [!NOTE] 
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 플랫폼에 따라 달라지는 일부 코드를 실행해야 하는 경우도 있습니다. 이 장에서는 기법에 대해 살펴봅니다.
 
 ## <a name="preprocessing-in-the-shared-asset-project"></a>공유 자산 프로젝트에서 전처리
 
-Xamarin.Forms 공유 자산 프로젝트는 C# 전처리기 지시문 `#if`, `#elif` 및 `endif`를 사용하여 각 플랫폼마다 다른 코드를 실행할 수 있습니다. 이는 [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1)에 설명되어 있습니다.
+Xamarin.Forms 공유 자산 프로젝트는 C# 전처리기 지시문 `#if`, `#elif` 및 `endif`를 사용하여 플랫폼마다 다른 코드를 실행할 수 있습니다. 이는 [**PlatInfoSap1**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09/PlatInfoSap1)에 설명되어 있습니다.
 
 [![가변 형식 단락의 삼중 스크린샷](images/ch09fg01-small.png "디바이스 모델 및 운영 체제")](images/ch09fg01-large.png#lightbox "디바이스 모델 및 운영 체제")
 

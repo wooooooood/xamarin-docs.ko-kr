@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms Shell 소개
-description: Xamarin.Forms Shell은 일반 탐색 사용자 환경, URI 기반 탐색 체계 및 통합 검색 처리기를 포함하여 대부분 애플리케이션에 필요한 기본 기능을 제공합니다.
-ms.prod: xamarin
-ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: cb2ae3afe9db86d4db603d499ef0e75e7cbbf552
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: Xamarin.Forms Shell은 일반 탐색 사용자 환경, URI 기반 탐색 체계 및 통합 검색 처리기를 포함하여 대부분의 애플리케이션에 필요한 기본 기능을 제공합니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940396"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138738"
 ---
 # <a name="xamarinforms-shell-introduction"></a>Xamarin.Forms Shell 소개
 
@@ -32,13 +35,13 @@ Xamarin.Forms Shell은 다음을 비롯한 대부분의 모바일 애플리케�
 
 ## <a name="platform-support"></a>플랫폼 지원
 
-Xamarin.Forms 셸은 iOS 및 Android에서는 완전히 지원되나 UWP(유니버설 Windows 플랫폼)에서는 부분적으로만 지원됩니다. 이에 더해, 셸은 현재 UWP에서 시험 단계에 있으며, UWP 프로젝트에서 `App` 클래스에 다음 코드 줄을 추가하고 `Forms.Init`을 호출해야만 사용 가능합니다.
+Xamarin.Forms Shell은 iOS 및 Android에서는 완전히 지원되나 UWP(유니버설 Windows 플랫폼)에서는 부분적으로만 지원됩니다. 이에 더해, 셸은 현재 UWP에서 시험 단계에 있으며, UWP 프로젝트에서 `App` 클래스에 다음 코드 줄을 추가하고 `Forms.Init`을 호출해야만 사용 가능합니다.
 
 ```csharp
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
-UWP 프로젝트를 Xamarin.Forms 솔루션에 추가 하는 방법에 대한 자세한 내용은 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
+UWP 프로젝트를 Xamarin.Forms 솔루션에 추가하는 방법에 대한 자세한 내용은 [Windows 프로젝트 설정](~/xamarin-forms/platform/windows/installation/index.md)을 참조하세요.
 
 ## <a name="shell-navigation-experience"></a>셸 탐색 환경
 

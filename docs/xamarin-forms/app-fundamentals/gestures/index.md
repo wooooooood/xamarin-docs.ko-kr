@@ -1,24 +1,27 @@
 ---
 title: Xamarin.Forms 제스처
-description: 이 가이드에서는 Xamarin.Forms 제스처 인식기를 사용하여 Xamarin.Forms 애플리케이션 보기와의 사용자 상호 작용을 감지하는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/25/2018
-ms.openlocfilehash: 33968fb935e8b69736ac338bfa0479e4f278e64a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: 이 가이드에서는 Xamarin.Forms 제스처 인식기를 사용하여 Xamarin.Forms 애플리케이션에서 사용자의 보기 상호 작용을 감지할 수 있습니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e1e93f74ab8ef6d63213a8fbdc7ec45a794cf55
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61184575"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137879"
 ---
 # <a name="xamarinforms-gestures"></a>Xamarin.Forms 제스처
 
-_제스처 인식기를 사용하여 Xamarin.Forms 애플리케이션 보기와의 사용자 상호 작용을 감지할 수 있습니다._
+제스처 인식기를 사용하여 Xamarin.Forms 애플리케이션에서 사용자의 보기 상호 작용을 감지할 수 있습니다.
 
-Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래스는 [`View`](xref:Xamarin.Forms.View) 인스턴스에서 탭하기, 손가락 모으기, 이동하기 및 살짝 밀기 제스처를 지원합니다.
+Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) 클래스는 [`View`](xref:Xamarin.Forms.View) 인스턴스에서 탭하기, 손가락 모으기, 이동하기, 살짝 밀기 등의 제스처를 지원합니다.
 
 ## <a name="adding-a-tap-gesture-recognizer"></a>[탭 제스처 인식기 추가](tap.md)
 

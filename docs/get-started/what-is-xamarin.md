@@ -1,22 +1,25 @@
 ---
-title: Xamarin이란?
-description: 이 문서에서는 Xamarin과 관련 라이브러리를 소개합니다.
-ms.prod: xamarin
-ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
-ms.custom: video
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 09/16/2019
-ms.openlocfilehash: 34763804e9833224721ea32f9c7e6200dd5faba7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.custom: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a9a25cff30b9dfbed44e60faeae2f577d07940fc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75607882"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139219"
 ---
 # <a name="what-is-xamarin"></a>Xamarin이란?
 
-[![iOS 및 Android의 Xamarin 애플리케이션 사례 스크린샷](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
+[![iOS 및 Android의 Xamarin 애플리케이션 예제 스크린샷](what-is-xamarin-images/xamarin-app-cropped.png)](what-is-xamarin-images/xamarin-app.png#lightbox)
 
 Xamarin은 .NET.으로 iOS, Android 및 Windows용 최신 고성능 애플리케이션을 빌드하기 위한 오픈 소스 플랫폼입니다. Xamarin은 일종의 추상화 계층으로서 공유 코드와 기본 플랫폼 코드의 통신을 관리합니다. Xamarin은 메모리 할당 및 가비지 수집 같은 편의를 제공하는 관리형 환경에서 실행됩니다.
 
@@ -71,9 +74,9 @@ Xamarin.iOS 애플리케이션은 C#에서 네이티브 ARM 어셈블리 코드�
 
 자세한 내용은 [Xamarin.iOS 아키텍처](~/ios/internals/architecture.md)를 참조하세요.
 
-### <a name="xamarinessentials"></a>Xamarin.Essentials
+### Xamarin.Essentials
 
-Xamarin.Essentials는 네이티브 디바이스 기능에 대해 플랫폼 간 API를 제공하는 라이브러리입니다. Xamarin와 마찬가지로 Xamarin.Essentials 또한 일종의 추상화로서 네이티브 기능 액세스 프로세스를 간소화합니다. Xamarin.Essentials에서 제공하는 기능의 예로는 다음 몇 가지를 들 수 있습니다.
+Xamarin.Essentials는 네이티브 디바이스 기능을 대상으로 플랫폼 간 API를 제공하는 라이브러리입니다. Xamarin와 마찬가지로 Xamarin.Essentials 또한 일종의 추상화로서 네이티브 기능 액세스 프로세스를 간소화합니다. Xamarin.Essentials에서 제공하는 기능의 예로는 다음 몇 가지를 들 수 있습니다.
 
 - 디바이스 정보
 - 파일 시스템
@@ -84,9 +87,9 @@ Xamarin.Essentials는 네이티브 디바이스 기능에 대해 플랫폼 간 A
 
 자세한 내용은 [Xamarin.Essentials](~/essentials/index.md)를 참조하세요.
 
-### <a name="xamarinforms"></a>Xamarin.Forms
+### Xamarin.Forms
 
-Xamarin.Forms는 오픈 소스 UI 프레임 워크입니다. 개발자는 Xamarin.Forms로 단일한 공유 코드베이스에서 iOS와 Android, Windows 애플리케이션을 빌드할 수 있습니다. 개발자는 Xamarin.Forms로 C#의 코드 숨김이 있는 XAML에서 사용자 인터페이스를 만들 수 있습니다. 이러한 사용자 인터페이스는 각 플랫폼에서 성능 네이티브 컨트롤로서 렌더링됩니다. Xamarin.Forms에서 제공하는 기능의 예로는 다음 몇 가지를 들 수 있습니다.
+Xamarin.Forms는 오픈 소스 UI 프레임워크입니다. 개발자는 Xamarin.Forms로 단일한 공유 코드베이스에서 iOS와 Android, Windows 애플리케이션을 빌드할 수 있습니다. 개발자는 Xamarin.Forms로 C#의 코드 숨김이 있는 XAML에서 사용자 인터페이스를 만들 수 있습니다. 이러한 사용자 인터페이스는 각 플랫폼에서 성능 네이티브 컨트롤로서 렌더링됩니다. Xamarin.Forms가 제공하는 기능의 예로는 다음 몇 가지를 들 수 있습니다.
 
 - XAML 사용자 인터페이스 언어
 - 데이터 바인딩
@@ -100,7 +103,7 @@ Xamarin.Forms는 오픈 소스 UI 프레임 워크입니다. 개발자는 Xamari
 
 다음 가이드는 Xamarin을 사용해 앱을 처음 빌드할 때 유용합니다.
 
-- [Xamarin.Forms 시작](~/xamarin-forms/index.yml)
+- [Xamarin.Forms 시작하기](~/xamarin-forms/index.yml)
 - [Xamarin.Android 시작](~/android/index.yml)
 - [Xamarin.iOS 시작](~/ios/index.yml)
 - [Xamarin.Mac 시작](~/mac/index.yml)

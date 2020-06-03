@@ -1,24 +1,28 @@
 ---
-title: 챕터 4 요약. 스택 스크롤
-description: 'Xamarin.Forms로 모바일 앱 만들기: 챕터 4 요약. 스택 스크롤'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 5313dd34839d6a5d21432161b9fd3a0ffce6e816
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 4. Scrolling the stack''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9890ecdf286ee33d7af28fd20847788b063df8f5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149948"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136892"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>챕터 4 요약. 스택 스크롤
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
-이 챕터에서는 Xamarin.Forms가 페이지에 있는 여러 가지 보기의 시각적 표시를 구성하는 데 사용하는 클래스와 기법을 통칭하는 용어인 *레이아웃*의 개념을 소개합니다.
+이 장에서는 Xamarin.Forms가 페이지에 있는 여러 가지 보기의 시각적 표시를 구성하는 데 사용하는 클래스와 기법을 통칭하는 용어인 ‘레이아웃’의 개념을 소개합니다.
 
 레이아웃에는 [`Layout`](xref:Xamarin.Forms.Layout)과 [`Layout<T>`](xref:Xamarin.Forms.Layout`1)에서 파생되는 몇 가지 클래스가 있습니다. 이 챕터에서는 [`StackLayout`](xref:Xamarin.Forms.StackLayout)을 주로 다룹니다.
 

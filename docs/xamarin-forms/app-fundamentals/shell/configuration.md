@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms Shell 페이지 구성
 description: Shell 클래스는 Xamarin.Forms Shell 애플리케이션에서 페이지의 모양을 구성하는 데 사용할 수 있는 연결된 속성을 정의합니다. 여기에는 페이지 색 설정, 탐색 모음을 사용하지 않도록 설정, 탭 표시줄을 사용하지 않도록 설정 및 탐색 모음에 뷰 표시가 포함됩니다.
-ms.prod: xamarin
-ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/29/2020
-ms.openlocfilehash: 411c87c25701521bf27fbb863b02a90f8e523574
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 102070fc478b42e9fbc0c7d0006197c81a49c9b8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303788"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137503"
 ---
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.Forms Shell 페이지 구성
 
@@ -30,7 +33,7 @@ ms.locfileid: "79303788"
 - 현재 페이지의 제목에 사용되는 색을 정의하는 `Color` 형식의 `TitleColor`.
 - 셸 크롬에서 선택되지 않은 텍스트 및 아이콘에 사용되는 색을 정의하는 `Color` 형식의 `UnselectedColor`.
 
-이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체가 지원합니다. 이는 속성이 데이터 바인딩의 대상이 될 수 있으며 XAML 스타일을 사용하여 스타일 지정됨을 의미합니다. CSS(CSS 스타일시트)를 사용하여 속성을 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
+이 모든 속성은 [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) 개체가 지원합니다. 이는 속성이 데이터 바인딩의 대상이 될 수 있으며 XAML 스타일을 사용하여 스타일 지정됨을 의미합니다. CSS(CSS 스타일시트)를 사용하여 속성을 설정할 수도 있습니다. 자세한 내용은 [Xamarin.Forms Shell 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)을 참조하세요.
 
 > [!NOTE]
 > 탭 색을 정의할 수 있도록 설정하는 속성도 있습니다. 자세한 내용은 [탭 모양](tabs.md#tab-appearance)을 참조하세요.
@@ -161,7 +164,7 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 ## <a name="display-views-in-the-navigation-bar"></a>탐색 모음에서 보기 표시
 
-`Shell` 클래스는 Xamarin.Forms [`View`](xref:Xamarin.Forms.View)를 탐색 모음에 표시할 수 있도록 하는 `View` 형식의 `TitleView` 연결된 속성을 정의합니다.
+`Shell` 클래스는 Xamarin.Forms [`View`](xref:Xamarin.Forms.View)를 탐색 모음에 표시할 수 있는 `View` 형식의 `TitleView` 연결된 속성을 정의합니다.
 
 이 속성은 서브클래싱된 `Shell` 개체에서 설정할 수 있지만, 탐색 모음에 보기를 표시하려는 모든 페이지에서도 설정할 수 있습니다. 예를 들어 다음 XAML은 [`ContentPage`](xref:Xamarin.Forms.ContentPage)의 탐색 모음에 [`Image`](xref:Xamarin.Forms.Image)가 표시된 것을 보여 줍니다.
 
@@ -195,4 +198,4 @@ XAML 스타일에 대한 자세한 내용은 [XAML 스타일을 사용하여 Xam
 
 - [Xaminals(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [XAML 스타일을 사용하여 Xamarin.Forms 앱 스타일 지정](~/xamarin-forms/user-interface/styles/xaml/index.md)
-- [Xamarin.Forms CSS Shell 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
+- [Xamarin.Forms CSS 셸 특정 속성](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

@@ -1,26 +1,29 @@
 ---
-title: 항목 사용자 지정
+title: ''
 description: Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
-ms.prod: xamarin
-ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 11/26/2018
-ms.openlocfilehash: 86714c2041edcd98c2bdd7b740a897dab8069752
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 61bd66fd25b7aea3e5be346f79e63d410164b002
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516470"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138985"
 ---
 # <a name="customizing-an-entry"></a>항목 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
-_Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다._
+Xamarin.Forms 항목 컨트롤을 사용하면 한 줄 텍스트를 편집할 수 있습니다. 이 문서에서는 개발자가 자체적인 플랫폼별 사용자 지정을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 항목 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다.
 
-모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤이 Xamarin.Forms 애플리케이션에 의해 렌더링되면 iOS에서 `EntryRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITextField` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `EntryRenderer` 클래스는 `EditText` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `EntryRenderer` 클래스는 `TextBox` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 컨트롤의 모양과 동작을 효과적으로 사용자 지정할 수 있습니다. [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤이 Xamarin.Forms 애플리케이션에 의해 렌더링되면 iOS에서 `EntryRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `UITextField` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `EntryRenderer` 클래스는 `EditText` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `EntryRenderer` 클래스는 `TextBox` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -104,7 +107,7 @@ public class MainPage : ContentPage
 
 1. 네이티브 컨트롤을 렌더링하는 `EntryRenderer` 클래스의 서브클래스를 만듭니다.
 1. 네이티브 컨트롤을 렌더링하고 컨트롤을 사용자 지정하기 위한 논리를 작성하는 `OnElementChanged` 메서드를 재정의합니다. 이 메서드는 해당 Xamarin.Forms 컨트롤이 생성될 때 호출됩니다.
-1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다.
@@ -117,11 +120,11 @@ public class MainPage : ContentPage
 
 ![](entry-images/screenshots.png "MyEntry Control on each Platform")
 
-`EntryRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `MyEntry` 컨트롤에 대한 참조를 포함합니다.
+`EntryRenderer` 클래스는 해당 네이티브 컨트롤을 렌더링하기 위해 Xamarin.Forms 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `ElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 ‘연결된’ Xamarin.Forms 요소와 렌더러가 ‘연결되는’ Xamarin.Forms 요소를 각각 나타냅니다.  샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `MyEntry` 컨트롤에 대한 참조를 포함합니다.
 
-`MyEntryRenderer` 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 플랫폼에서 사용되는 네이티브 컨트롤에 대한 형식화된 참조는 `Control` 속성을 통해 액세스할 수 있습니다. 또한 랜더링되는 Xamarin.Forms 컨트롤에 대한 참조는 샘플 애플리케이션에서는 사용되지 않지만 `Element` 속성을 통해 얻을 수 있습니다.
+`MyEntryRenderer` 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 플랫폼에서 사용되는 네이티브 컨트롤에 대한 형식화된 참조는 `Control` 속성을 통해 액세스할 수 있습니다. 또한 렌더링되는 Xamarin.Forms 컨트롤에 대한 참조는 샘플 애플리케이션에서는 사용되지 않지만 `Element` 속성을 통해 얻을 수 있습니다.
 
-각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
+각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 플랫폼별 `MyEntryRenderer` 사용자 지정 렌더러 클래스의 구현을 설명합니다.
 
@@ -211,7 +214,7 @@ namespace CustomRenderer.UWP
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 개발자가 자체적인 플랫폼별 렌더링을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 하는 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤에 대한 사용자 지정 렌더러를 만드는 방법을 보여줍니다. 사용자 지정 렌더러는 Xamarin.Forms 컨트롤의 모양을 사용자 지정하는 강력한 방법을 제공합니다. 작은 스타일 변경 또는 정교한 플랫폼별 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다.
+이 문서에서는 개발자가 자체적인 플랫폼별 렌더링을 통해 기본 네이티브 렌더링을 재정의할 수 있도록 하는 Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) 컨트롤의 사용자 지정 컨트롤 렌더러를 만드는 방법을 보여 줍니다. 사용자 지정 렌더러는 Xamarin.Forms 컨트롤의 모양을 사용자 지정하는 강력한 방법을 제공합니다. 작은 스타일 변경 또는 정교한 플랫폼별 레이아웃 및 동작 사용자 지정에 사용할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

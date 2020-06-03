@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 명령 인터페이스
 description: 이 문서에서는 Xamarin.Forms 데이터 바인딩을 사용하여 Command 속성을 구현하는 방법을 설명합니다. 명령 인터페이스는 MVVM 아키텍처에 훨씬 더 적합한 명령을 구현하는 또 다른 방법을 제공합니다.
-ms.prod: xamarin
-ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: 185aebf48b24a6abbdd8f56dbbfc32f6e99f6e63
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75545616"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139726"
 ---
 # <a name="the-xamarinforms-command-interface"></a>Xamarin.Forms 명령 인터페이스
 
@@ -82,7 +85,7 @@ ViewModel에서 `ICommand` 형식의 속성을 정의하는 경우 ViewModel에�
 
 이러한 클래스를 직접 작성할 수도 있고, 다른 사용자가 작성한 클래스를 사용할 수도 있습니다. `ICommand`는 Microsoft Windows의 일부이므로 Windows MVVM 애플리케이션에서 수년간 사용되어 왔습니다. `ICommand`를 구현하는 Windows 클래스를 사용하면 Windows 애플리케이션과 Xamarin.Forms 애플리케이션 간에 ViewModel을 공유할 수 있습니다.
 
-Windows와 Xamarin.Forms 간에 ViewModels를 공유하는 것이 문제가 되지 않으면 Xamarin.Forms에 포함된 [`Command`](xref:Xamarin.Forms.Command) 또는 [`Command<T>`](xref:Xamarin.Forms.Command`1) 클래스를 사용하여 `ICommand` 인터페이스를 구현할 수 있습니다. 이러한 클래스를 사용하면 클래스 생성자에서 `Execute` 및 `CanExecute` 메서드의 본문을 지정할 수 있습니다. `CommandParameter` 속성을 사용하여 동일한 `ICommand` 속성에 바인딩된 여러 보기를 구분하는 경우 `Command<T>`를 사용하고, 이처럼 구분할 필요가 없는 경우 더 간단한 `Command` 클래스를 사용합니다.
+Windows와 Xamarin.Forms 간에 ViewModel을 공유하는 것이 문제가 되지 않으면 Xamarin.Forms에 포함된 [`Command`](xref:Xamarin.Forms.Command) 또는 [`Command<T>`](xref:Xamarin.Forms.Command`1) 클래스를 사용하여 `ICommand` 인터페이스를 구현할 수 있습니다. 이러한 클래스를 사용하면 클래스 생성자에서 `Execute` 및 `CanExecute` 메서드의 본문을 지정할 수 있습니다. `CommandParameter` 속성을 사용하여 동일한 `ICommand` 속성에 바인딩된 여러 보기를 구분하는 경우 `Command<T>`를 사용하고, 이처럼 구분할 필요가 없는 경우 더 간단한 `Command` 클래스를 사용합니다.
 
 ## <a name="basic-commanding"></a>기본 명령
 
@@ -767,4 +770,4 @@ XAML 파서에서 바인딩 정의를 발견하면 바인딩의 두 구성 요�
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
+- [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

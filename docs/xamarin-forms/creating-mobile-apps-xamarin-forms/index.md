@@ -1,24 +1,27 @@
 ---
-title: ‘Creating Mobile Apps with Xamarin.Forms’ 책
-description: Charles Petzold의 ‘Creating Mobile Apps with Xamarin.Forms’ 책의 전자 버전을 사용하여 Xamarin.Forms 애플리케이션 개발 방법을 알아봅니다.
-ms.prod: xamarin
-ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: a350a3ae37b66b8701f977370fcbe79940d84f50
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Creating Mobile Apps with Xamarin.Forms 책
+description: Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 77880cd69dd7b8efae0904fa5348d056dba69c2e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70120484"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136944"
 ---
-# <a name="creating-mobile-apps-with-xamarinforms-book"></a>‘Creating Mobile Apps with Xamarin.Forms’ 책
+# <a name="creating-mobile-apps-with-xamarinforms-book"></a>Creating Mobile Apps with Xamarin.Forms 책
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples)
 
-<img src="images/cover-sml.png" title="Xamarin.Forms 책으로 모바일 앱 만들기" align="left" />Charles Petzold의 *Creating Mobile Apps with Xamarin.Forms* 책은 Xamarin.Forms 애플리케이션을 개발하는 방법을 설명하는 가이드입니다. 이 책을 읽는 데 필요한 유일한 사전 지식은 C# 프로그래밍 언어에 대한 지식입니다. 이 책에서는 Xamarin.Forms 사용자 인터페이스를 집중적으로 살펴보고 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러를 비롯한 다양한 주제를 다룹니다.
+<img src="images/cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms 책" align="left" />Charles Petzold의 *Creating Mobile Apps with Xamarin.Forms* 책은 Xamarin.Forms 애플리케이션을 개발하는 방법을 설명하는 가이드입니다. 이 책을 읽는 데 필요한 유일한 사전 지식은 C# 프로그래밍 언어에 대한 지식입니다. 이 책에서는 Xamarin.Forms 사용자 인터페이스를 집중적으로 살펴보고 애니메이션, MVVM, 트리거, 동작, 사용자 지정 레이아웃, 사용자 지정 렌더러를 비롯한 다양한 주제를 다룹니다.
 
 이 책은 2016년 봄에 출간되었으며 아직까지 개정판이 나오지 않았습니다. 이 책의 많은 내용이 지금까지도 무척 유용하나, [일부 내용은 오래되었고](#ways-in-which-the-book-is-outdated) 올바르지 않거나 완전하지 않은 주제도 있습니다.
 
@@ -53,35 +56,41 @@ Microsoft Virtual Academy에서 원하는 형식의 eBook을 다운로드하세�
 ## <a name="download-chapters-and-summaries"></a>챕터 및 요약 다운로드
 
 | 장 | 전체 텍스트 | 요약 |
-| ------- | ------------- | ------- |
-| 챕터 1 Xamarin.Forms가 왜 적합한가요? | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf) | [요약](summaries/chapter01.md) |
-| 챕터 2 앱 분석 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf) | [요약](summaries/chapter02.md) |
-| 챕터 3 텍스트 더 자세히 알아보기 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf) | [요약](summaries/chapter03.md) |
-| 챕터 4 스택 스크롤 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf) | [요약](summaries/chapter04.md) |
-| 챕터 5 크기 처리 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf) | [요약](summaries/chapter05.md) |
-| 챕터 6 단추 클릭 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf) | [요약](summaries/chapter06.md) |
-| 챕터 7 XAML 및 코드 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [요약](summaries/chapter07.md) |
-| 챕터 8 코드와 XAML의 조화 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [요약](summaries/chapter08.md) |
-| 챕터 9 플랫폼별 API 호출 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf) | [요약](summaries/chapter09.md) |
-| 챕터 10 XAML 태그 확장 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [요약](summaries/chapter10.md) |
-| 챕터 11 바인딩할 수 있는 인프라 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf) | [요약](summaries/chapter11.md) |
-| 챕터 12 스타일 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf) | [요약](summaries/chapter12.md) |
-| 챕터 13 비트맵 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf) | [요약](summaries/chapter13.md) |
-| 챕터 14 절대 레이아웃 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf) | [요약](summaries/chapter14.md) |
-| 챕터 15 대화형 인터페이스 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf) | [요약](summaries/chapter15.md) |
-| 챕터 16 데이터 바인딩 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf) | [요약](summaries/chapter16.md) |
-| 챕터 17 눈금 마스터 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf) | [요약](summaries/chapter17.md) |
-| 챕터 18 MVVM | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [요약](summaries/chapter18.md) |
-| 챕터 19 컬렉션 뷰 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf) | [요약](summaries/chapter19.md) |
-| 챕터 20 비동기 및 파일 I/O | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) | [요약](summaries/chapter20.md) |
-| 챕터 21 변환 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf) | [요약](summaries/chapter21.md) |
-| 챕터 22 애니메이션 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) | [요약](summaries/chapter22.md) |
-| 챕터 23 트리거 및 동작 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf) | [요약](summaries/chapter23.md) |
-| 챕터 24 페이지 탐색 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf) | [요약](summaries/chapter24.md) |
-| 챕터 25 페이지 종류 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf) | [요약](summaries/chapter25.md) |
-| 챕터 26 사용자 지정 레이아웃 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf) | [요약](summaries/chapter26.md) |
-| 챕터 27 사용자 지정 렌더러 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) | [요약](summaries/chapter27.md) |
-| 챕터 28 위치 및 지도 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf) | [요약](summaries/chapter28.md) |
+| ---
+title: ‘Creating Mobile Apps with Xamarin.Forms 책’description: ‘Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+---- | --- title: ‘Creating Mobile Apps with Xamarin.Forms 책’ description: ‘Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+title: ‘Creating Mobile Apps with Xamarin.Forms 책’ description: ‘Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+title: ‘Creating Mobile Apps with Xamarin.Forms 책’ description: ‘Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+-
+title: ‘Creating Mobile Apps with Xamarin.Forms 책’ description: ‘Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+------- | --- title: ‘Creating Mobile Apps with Xamarin.Forms 책’ description: ‘Charles Petzold가 집필한 전자 버전의 Creating Mobile Apps with Xamarin.Forms 책을 읽고 Xamarin.Forms 애플리케이션 개발에 대해 알아봅니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
+---- | | 1장. Xamarin.Forms가 왜 적합한가요? | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch01-Apr2016.pdf) | [요약](summaries/chapter01.md) | | 2장. 앱 분석 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf) | [요약](summaries/chapter02.md) | | 3장. 텍스트 더 자세히 알아보기 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf) | [요약](summaries/chapter03.md) | | 4장. 스택 스크롤 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf) | [요약](summaries/chapter04.md) | | 5장. 크기 처리 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf) | [요약](summaries/chapter05.md) | | 6장. 단추 클릭 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf) | [요약](summaries/chapter06.md) | | 7장. XAML 및 코드 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [요약](summaries/chapter07.md) | | 8장. 코드와 XAML의 조화 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch08-Apr2016.pdf) | [요약](summaries/chapter08.md) | | 9장. 플랫폼별 API 호출 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch09-Apr2016.pdf) | [요약](summaries/chapter09.md) | | 10장. XAML 태그 확장 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch10-Apr2016.pdf) | [요약](summaries/chapter10.md) | | 11장. 바인딩 가능 인프라 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf) | [요약](summaries/chapter11.md) | | 12장. 스타일 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch12-Apr2016.pdf) | [요약](summaries/chapter12.md) | | 13장. 비트맵 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf) | [요약](summaries/chapter13.md) | | 14장. 절대 레이아웃 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf) | [요약](summaries/chapter14.md) | | 15장. 대화형 인터페이스 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf) | [요약](summaries/chapter15.md) | | 16장. 데이터 바인딩 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf) | [요약](summaries/chapter16.md) | | 17장. Grid 마스터 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf) | [요약](summaries/chapter17.md) | | 18장. MVVM | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf) | [요약](summaries/chapter18.md) | | 19장. 컬렉션 뷰 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf) | [요약](summaries/chapter19.md) | | 20장. 비동기 및 파일 I/O | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) | [요약](summaries/chapter20.md) | | 21장. 변환 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf) | [요약](summaries/chapter21.md) | | 22장. 애니메이션 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) | [요약](summaries/chapter22.md) | | 23장. 트리거 및 동작 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf) | [요약](summaries/chapter23.md) | | 24장. 페이지 탐색 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf) | [요약](summaries/chapter24.md) | | 25장. 페이지 종류 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf) | [요약](summaries/chapter25.md) | | 26장. 사용자 지정 레이아웃 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf) | [요약](summaries/chapter26.md) | | 27장. 사용자 지정 렌더러 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) | [요약](summaries/chapter27.md) | | 28장. 위치 및 맵 | [PDF 다운로드](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf) | [요약](summaries/chapter28.md) |
 
 ## <a name="ways-in-which-the-book-is-outdated"></a>이 책의 오래된 내용에 대한 설명
 
@@ -97,13 +106,13 @@ Xamarin.Forms 애플리케이션은 일반적으로 라이브러리를 사용하
 
 책에서 이식 가능한 클래스 라이브러리의 역할과 관련하여 설명하는 모든 정보는 대부분 .NET Standard 2.0 라이브러리에 그대로 적용됩니다. 한 가지 차이점은 PCL에만 숫자형 “프로필”이 있다는 것입니다. .NET Standard 2.0 라이브러리에는 몇 가지 이점도 있습니다. 예를 들어, 챕터 20 [비동기 및 파일 I/O](summaries/chapter20.md)에서는 파일 I/O를 위해 기본 플랫폼을 사용하는 방법을 설명합니다. 이것이 더 이상 필요 합니다. .NET Standard 2.0 라이브러리는 모든 Xamarin.Forms 플랫폼에서 익숙한 [System.IO](xref:System.IO)를 지원합니다.
 
-.NET Standard 2.0 라이브러리는 또한 Xamarin.Forms 애플리케이션이 [`WebRequest`](xref:System.Net.WebRequest)나 다른 클래스가 아닌 [`HttpClient`](xref:System.Net.Http.HttpClient)를 사용하여 인터넷을 통해 파일에 액세스할 수 있도록 허용합니다.
+또한 .NET Standard 2.0 라이브러리는 Xamarin.Forms 애플리케이션이 [`WebRequest`](xref:System.Net.WebRequest)나 다른 클래스가 아닌 [`HttpClient`](xref:System.Net.Http.HttpClient)를 사용하여 인터넷을 통해 파일에 액세스할 수 있도록 허용합니다.
 
 ### <a name="the-role-of-xaml-has-been-elevated"></a>XAML의 역할이 승격되었습니다.
 
-*Creating Mobile Apps with Xamarin.Forms*는 C#을 사용하여 Xamarin.Forms 애플리케이션을 작성하는 방법을 설명하며 시작합니다. XAML(Extensible Application Markup Language)은 [챕터 7. XAML 및 코드](summaries/chapter07.md)에 가서야 비로소 소개됩니다.
+*Creating Mobile Apps with Xamarin.Forms* 는 C#을 사용하여 Xamarin.Forms 애플리케이션을 작성하는 방법을 설명하면서 시작됩니다. XAML(Extensible Application Markup Language)은 [챕터 7. XAML 및 코드](summaries/chapter07.md)에 가서야 비로소 소개됩니다.
 
-그러나 이제는 Xamarin.Forms에서 XAML의 역할이 훨씬 커졌습니다. Visual Studio와 함께 배포되는 Xamarin.Forms 솔루션 템플릿이 XAML 기반 페이지 파일을 만듭니다. Xamarin.Forms를 사용하는 개발자는 가능한 한 조기에 XAML에 익숙해져야 합니다. Xamarin.Forms 설명서의 [XAML(eXtensible Application Markup Language)](~/xamarin-forms/xaml/index.yml) 섹션에는 시작하는 데 도움이 되는 여러 XAML 관련 문서가 있습니다.
+그러나 이제는 Xamarin.Forms에서 XAML의 역할이 훨씬 커졌습니다. Visual Studio와 함께 배포되는 Xamarin.Forms 솔루션 템플릿이 XAML 기반 페이지 파일을 만듭니다. Xamarin.Forms를 사용하는 개발자는 최대한 빠르게 XAML에 익숙해져야 합니다. Xamarin.Forms 설명서의 [XAML(eXtensible Application Markup Language)](~/xamarin-forms/xaml/index.yml) 섹션에는 시작하는 데 도움이 되는 여러 XAML 관련 문서가 있습니다.
 
 ### <a name="supported-platforms"></a>지원되는 플랫폼
 
@@ -117,7 +126,7 @@ Xamarin.Forms에는 [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamari
 
 ### <a name="chapter-summaries"></a>챕터 요약
 
-챕터 요약에는 이 책이 출간된 이후 Xamarin.Forms에서 변경된 내용을 설명하는 정보가 포함되어 있습니다. 해당 정보는 보통 주석 형식으로 제공됩니다.
+장 요약에는 이 책이 출간된 이후 Xamarin.Forms에서 변경된 내용을 설명하는 정보가 포함되어 있습니다. 해당 정보는 보통 주석 형식으로 제공됩니다.
 
 > [!NOTE]
 > 각 페이지의 주석은 책에서 제시된 자료와 현재의 Xamarin.Forms가 어떻게 다른지 보여 줍니다.

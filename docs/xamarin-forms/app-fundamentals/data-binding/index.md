@@ -1,18 +1,21 @@
 ---
 title: Xamarin.Forms 데이터 바인딩
-description: 데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변경 내용이 다른 속성에 자동으로 반영되도록 하는 기술입니다. 데이터 바인딩은 MVVM(Model-View-ViewModel) 애플리케이션 아키텍처의 필수적인 부분입니다.
-ms.prod: xamarin
-ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/23/2020
-ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4b99877342ddbaf9ad5606ec5dc284818fcfeffd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80247602"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139700"
 ---
 # <a name="xamarinforms-data-binding"></a>Xamarin.Forms 데이터 바인딩
 
@@ -22,7 +25,7 @@ _데이터 바인딩은 두 개체의 속성을 연결하여 한 속성의 변�
 
 ## <a name="the-data-linking-problem"></a>데이터 연결 문제
 
-Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 각 페이지에는 *view*라는 여러 user-interface 개체가 포함됩니다. 프로그램의 주요 작업 중 하나는 이러한 뷰를 동기화된 상태로 유지하고, 여기에 나타나는 다양한 값이나 선택 내용을 추적하는 것입니다. 뷰는 기본 데이터 소스의 값을 나타내는 경우가 많으며 사용자는 이러한 뷰를 조작하여 해당 데이터를 변경합니다. 뷰가 변경되면 기본 데이터에 변경 사항이 반영되어야 하고, 마찬가지로 기본 데이터가 변경되면 뷰에 변경 사항이 반영되어야 합니다.
+Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 각 페이지에는 ‘뷰’라는 여러 사용자 인터페이스 개체가 포함됩니다. 프로그램의 주요 작업 중 하나는 이러한 뷰를 동기화된 상태로 유지하고, 여기에 나타나는 다양한 값이나 선택 내용을 추적하는 것입니다. 뷰는 기본 데이터 소스의 값을 나타내는 경우가 많으며 사용자는 이러한 뷰를 조작하여 해당 데이터를 변경합니다. 뷰가 변경되면 기본 데이터에 변경 사항이 반영되어야 하고, 마찬가지로 기본 데이터가 변경되면 뷰에 변경 사항이 반영되어야 합니다.
 
 이 작업을 성공적으로 처리하기 위해서는 이러한 뷰 또는 기본 데이터의 변경 내용을 프로그램에 알려야 합니다. 일반적인 솔루션은 변경 사항이 발생하면 신호를 보내는 이벤트를 정의하는 것입니다. 그러면 이러한 변경 사항을 알리는 이벤트 처리기를 설치할 수 있습니다. 이것은 한 개체에서 다른 개체로 데이터를 전송하여 응답합니다. 단, 뷰가 많은 경우에는 이벤트 처리기도 많아야 하고 많은 코드가 관련됩니다.
 
@@ -78,5 +81,5 @@ Xamarin.Forms 애플리케이션은 하나 이상의 페이지로 구성되며 �
 ## <a name="related-links"></a>관련 링크
 
 - [데이터 바인딩 데모(샘플)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Xamarin.Forms 서적의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Xamarin.Forms 책의 데이터 바인딩 장](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [XAML 태그 확장](~/xamarin-forms/xaml/markup-extensions/index.md)

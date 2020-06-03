@@ -1,24 +1,27 @@
 ---
 title: Xamarin.Forms 이중 화면
 description: 이 가이드에서는 이중 화면 디바이스용 Xamarin.Forms 앱을 만드는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 02/08/2020
-ms.openlocfilehash: 344b6293090ffa4281ea6351f7f176a5be37e5bd
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "78165562"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138907"
 ---
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Forms 이중 화면
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-Surface Duo(Android) 및 Surface Neo(Windows 10X)에서는 터치 애플리케이션을 위해 새로운 패턴을 도입합니다. Xamarin.Forms에는 이들 디바이스용으로 앱을 개발할 수 있는 `TwoPaneView` 클래스와 `DualScreenInfo` 클래스가 있습니다.
+Surface Duo(Android) 및 Surface Neo(Windows 10X)에서는 터치 애플리케이션을 위해 새로운 패턴을 도입합니다. Xamarin.Forms에는 `TwoPaneView` 및 `DualScreenInfo` 클래스가 포함되어 있으므로 이와 같은 디바이스의 앱을 개발할 수 있습니다.
 
 ## <a name="dual-screen-design-patterns"></a>[이중 화면 디자인 패턴](design-patterns.md)
 

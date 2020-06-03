@@ -1,26 +1,29 @@
 ---
-title: WebView 사용자 지정
+title: ''
 description: Xamarin.Forms WebView는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보기입니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 WebView를 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.
-ms.prod: xamarin
-ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/31/2020
-ms.openlocfilehash: c736c083d4a8c424d3e017dae3cc30e35ad4fa3b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c83742896af4a22bcff327df82c1b14ff983bb2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80419060"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138972"
 ---
 # <a name="customizing-a-webview"></a>WebView 사용자 지정
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
-_Xamarin.Forms`WebView`는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보기입니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 `WebView`을(를) 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다._
+Xamarin.Forms`WebView`는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보기입니다. 이 문서에서는 JavaScript에서 C# 코드를 호출할 수 있도록 `WebView`을(를) 확장하는 사용자 지정 렌더러를 만드는 방법을 설명합니다.
 
-모든 Xamarin.Forms 보기에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 대해 함께 제공되는 렌더러가 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`WebView`](xref:Xamarin.Forms.WebView)을(를) 렌더링하는 경우 `WkWebViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `WkWebView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `WebViewRenderer` 클래스는 네이티브 `WebView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `WebViewRenderer` 클래스는 네이티브 `WebView` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
+모든 Xamarin.Forms 보기의 모양과 동작을 효과적으로 사용자 지정할 수 있습니다. iOS의 Xamarin.Forms 애플리케이션에서 [`WebView`](xref:Xamarin.Forms.WebView)를 렌더링하는 경우 `WkWebViewRenderer` 클래스가 인스턴스화되며, 차례로 네이티브 `WkWebView` 컨트롤이 인스턴스화됩니다. Android 플랫폼에서 `WebViewRenderer` 클래스는 네이티브 `WebView` 컨트롤을 인스턴스화합니다. UWP(유니버설 Windows 플랫폼)에서 `WebViewRenderer` 클래스는 네이티브 `WebView` 컨트롤을 인스턴스화합니다. Xamarin.Forms 컨트롤에 매핑되는 렌더러 및 네이티브 컨트롤 클래스에 대한 자세한 내용은 [렌더러 기본 클래스 및 네이티브 컨트롤](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md)을 참조하세요.
 
 다음 다이어그램은 [`View`](xref:Xamarin.Forms.View) 및 이를 구현하는 해당 네이티브 컨트롤 간의 관계를 보여줍니다.
 
@@ -29,10 +32,10 @@ _Xamarin.Forms`WebView`는 앱에서 웹 및 HTML 콘텐츠를 표시하는 보�
 렌더링 프로세스는 각 플랫폼에서 [`WebView`](xref:Xamarin.Forms.WebView)의 사용자 지정 렌더러를 만들어 플랫폼 사용자 지정을 구현하는 데 사용할 수 있습니다. 이 작업을 수행하는 프로세스는 다음과 같습니다.
 
 1. `HybridWebView` 사용자 지정 컨트롤을 [만듭니다](#create-the-hybridwebview).
-1. Xamarin.Forms에서 `HybridWebView`를 [사용합니다](#consume-the-hybridwebview).
+1. Xamarin.Forms의 `HybridWebView`를 [사용합니다](#consume-the-hybridwebview).
 1. 각 플랫폼의 `HybridWebView`에 대한 사용자 지정 렌더러를 [만듭니다](#create-the-custom-renderer-on-each-platform).
 
-이제 각 항목을 차례로 살펴보며 JavaScript에서 C# 코드를 호출할 수 있도록 Xamarin.Forms [`WebView`](xref:Xamarin.Forms.WebView)을(를) 강화하는 `HybridWebView` 렌더러를 구현하겠습니다. `HybridWebView` 인스턴스는 사용자에게 이름 입력을 요청하는 HTML 페이지를 표시하는 데 사용됩니다. 사용자가 HTML 단추를 클릭하면 JavaScript 함수는 사용자 이름이 포함된 팝업을 표시하는 C# `Action`을 호출합니다.
+이제 각 항목을 차례로 살펴보며 JavaScript에서 C# 코드를 호출할 수 있도록 Xamarin.Forms [`WebView`](xref:Xamarin.Forms.WebView)를 강화하는 `HybridWebView` 렌더러를 구현하겠습니다. `HybridWebView` 인스턴스는 사용자에게 이름 입력을 요청하는 HTML 페이지를 표시하는 데 사용됩니다. 사용자가 HTML 단추를 클릭하면 JavaScript 함수는 사용자 이름이 포함된 팝업을 표시하는 C# `Action`을 호출합니다.
 
 JavaScript에서 C#을 호출하는 프로세스에 대한 자세한 내용은 [JavaScript에서 C# 호출](#invoke-c-from-javascript)을 참조하세요. HTML 페이지에 대한 자세한 내용은 [웹 페이지 만들기](#create-the-web-page)를 참조하세요.
 
@@ -145,7 +148,7 @@ public partial class HybridWebViewPage : ContentPage
 
 1. iOS에서 `WkWebViewRenderer` 클래스의 서브클래스를 만들고 Android 및 UWP에 `WebViewRenderer` 클래스를 만들어 사용자 지정 컨트롤을 렌더링합니다.
 1. [`WebView`](xref:Xamarin.Forms.WebView)을(를) 렌더링하고 이를 사용자 지정하기 위한 논리를 작성하는 `OnElementChanged` 메서드를 재정의합니다. 이 메서드는 `HybridWebView` 개체가 만들어질 때 호출됩니다.
-1. 사용자 지정 렌더러 클래스 또는 *AssemblyInfo.cs*에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 랜더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
+1. 사용자 지정 렌더러 클래스 또는 *AssemblyInfo.cs*에 `ExportRenderer` 특성을 추가하여 Xamarin.Forms 사용자 지정 컨트롤을 렌더링하는 데 사용하도록 지정합니다. 이 특성은 사용자 지정 렌더러를 Xamarin.Forms에 등록하는 데 사용됩니다.
 
 > [!NOTE]
 > 대부분의 Xamarin.Forms 요소의 경우 각 플랫폼 프로젝트에서 사용자 지정 렌더러를 제공하는 것은 선택 사항입니다. 사용자 지정 렌더러가 등록되지 않은 경우 컨트롤의 기본 클래스에 대한 기본 렌더러가 사용됩니다. 그러나 [보기](xref:Xamarin.Forms.View) 요소를 렌더링하는 경우에는 각 플랫폼 프로젝트에 사용자 지정 렌더러가 필요합니다.
@@ -158,11 +161,11 @@ public partial class HybridWebViewPage : ContentPage
 
 ![](hybridwebview-images/screenshots.png "HybridWebView on each Platform")
 
-`WkWebViewRenderer` 및 `WebViewRenderer` 클래스는 해당 네이티브 웹 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `VisualElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 랜더러가 연결*된* Xamarin.Forms 요소와 렌더러가 연결*되는* Xamarin.Forms 요소를 각각 나타냅니다. 샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `HybridWebView` 인스턴스에 대한 참조를 포함합니다.
+`WkWebViewRenderer` 및 `WebViewRenderer` 클래스는 해당 네이티브 웹 컨트롤을 렌더링하기 위해 Xamarin.Forms 사용자 지정 컨트롤이 생성될 때 호출되는 `OnElementChanged` 메서드를 노출합니다. 이 메서드는 `OldElement` 및 `NewElement` 속성이 포함된 `VisualElementChangedEventArgs` 매개 변수를 가져옵니다. 이러한 속성은 렌더러가 ‘연결된’ Xamarin.Forms 요소와 렌더러가 ‘연결되는’ Xamarin.Forms 요소를 각각 나타냅니다.  샘플 애플리케이션에서 `OldElement` 속성은 `null`이고, `NewElement` 속성은 `HybridWebView` 인스턴스에 대한 참조를 포함합니다.
 
-각 플랫폼 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 랜더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
+각 플랫폼 렌더러 클래스에서 `OnElementChanged` 메서드의 재정의된 버전은 네이티브 컨트롤 사용자 지정을 수행하는 위치입니다. 렌더링되는 Xamarin.Forms 컨트롤에 대한 참조는 `Element` 속성을 통해 얻을 수 있습니다.
 
-각 사용자 지정 렌더러 클래스는 랜더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 속성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
+각 사용자 지정 렌더러 클래스는 렌더러를 Xamarin.Forms에 등록하는 `ExportRenderer` 특성으로 데코레이트됩니다. 이 특성은 렌더링되는 Xamarin.Forms 사용자 지정 컨트롤의 형식 이름과 지정 렌더러의 형식 이름이라는 두 가지 매개 변수를 사용합니다. 특성의 `assembly` 접두사는 특성이 전체 어셈블리에 적용되도록 지정합니다.
 
 다음 섹션에서는 각 네이티브 웹 컨트롤에서 로드하는 웹 페이지의 구조, JavaScript에서 C#을 호출하는 프로세스, 각 플랫폼 사용자 지정 렌더러 클래스에서 이를 구현하는 방법을 설명합니다.
 

@@ -1,25 +1,29 @@
 ---
-title: 요약 - 5장. 크기 처리
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 5장. 크기 처리'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: c082bdb10732e42b37511cf050e50f46990a5b5b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 5. Dealing with sizes''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 37403cfe9f37972c20fb074db5e30cc54b60fea9
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771148"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136879"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>요약 - 5장. 크기 처리
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 지금까지 Xamarin.Forms의 여러 크기를 살펴보았습니다.
 
@@ -84,7 +88,7 @@ Windows 전화 및 모바일 디바이스도 인치당 160diu(디바이스 독�
 
 ## <a name="empirically-fitting-text"></a>경험적으로 텍스트 맞춤
 
-텍스트를 사각형에 맞게 조정하는 또 다른 방법은 렌더링된 텍스트 크기를 경험적으로 계산하고 위아래로 조정하는 것입니다. 이 책의 프로그램에서는 시각적 요소에 대한 [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double))를 호출하여 요소의 원하는 크기를 가져옵니다. 이 메서드는 더 이상 사용되지 않으며, 프로그램은 [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags))를 대신 호출해야 합니다.
+텍스트를 사각형에 맞게 조정하는 또 다른 방법은 렌더링된 텍스트 크기를 경험적으로 계산하고 위아래로 조정하는 것입니다. 이 책의 프로그램에서는 시각적 요소에 대한 [`GetSizeRequest`](xref:Xamarin.Forms.VisualElement.GetSizeRequest(System.Double,System.Double))를 호출하여 요소의 원하는 크기를 가져옵니다. 이 메서드는 더 이상 사용되지 않으며, 프로그램은 대신 [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags))를 호출해야 합니다.
 
 `Label`의 경우 첫 번째 인수는 래핑을 허용하기 위해 컨테이너의 너비여야 하고, 두 번째 인수는 높이가 제한되지 않도록 `Double.PositiveInfinity`로 설정되어야 합니다. [**EmpiricalFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) 샘플에서는 이 기법을 보여줍니다.
 

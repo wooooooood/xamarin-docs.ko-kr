@@ -1,17 +1,20 @@
 ---
 title: Xamarin.Essentials 단위 변환기
 description: Xamarin.Essentials의 UnitConverters 클래스는 Xamarin.Essentials를 사용할 때 개발자를 돕기 위한 여러 단위 변환기를 제공합니다.
-ms.assetid: 35DE2704-E730-4337-9476-66CD53376943
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 01/06/2020
-ms.openlocfilehash: 866842cbed9f97dc957e3631c037fa8d27d20076
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.assetid: ''
+author: ''
+ms.custom: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deff6997ff921e6048ccb2497a0747c770501a04
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149779"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137139"
 ---
 # <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: 단위 변환기
 

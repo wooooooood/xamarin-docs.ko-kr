@@ -1,20 +1,23 @@
 ---
-title: Xamarin.Forms 재사용 가능 able RoundEffect
-description: RoundEffect는 VisualElement에서 파생된 모든 컨트롤에 적용하여 컨트롤을 원으로 렌더링할 수 있는 재사용 가능한 효과입니다.
-ms.prod: xamarin
-ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
-ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 10/25/2019
-ms.openlocfilehash: 851ed7a2ad1c416b4d03d583b9d0aeb7f7774eea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.Forms 재사용 가능한 RoundEffect
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fc3776934a4c109b2527132b11c6c6a93b7d9f9e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73055941"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138855"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.Forms 재사용 가능 able RoundEffect
+# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.Forms 재사용 가능한 RoundEffect
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
@@ -39,7 +42,7 @@ public class RoundEffect : RoutingEffect
 
 ## <a name="implement-the-android-effect"></a>Android 효과 구현
 
-Android 플랫폼 프로젝트는 `PlatformEffect`에서 파생된 `RoundEffect` 클래스를 정의합니다. 이 클래스는 Xamarin.Forms가 효과 클래스를 확인할 수 있도록 해 주는 `assembly` 특성으로 태그가 지정되었습니다.
+Android 플랫폼 프로젝트는 `PlatformEffect`에서 파생된 `RoundEffect` 클래스를 정의합니다. 이 클래스는 Xamarin.Forms가 효과 클래스를 확인할 수 있는 `assembly` 특성으로 태그가 지정되었습니다.
 
 ```csharp
 [assembly: ResolutionGroupName("Xamarin")]
@@ -123,7 +126,7 @@ public class RoundEffect : PlatformEffect
 
 ## <a name="implement-the-ios-effect"></a>iOS 효과 구현
 
-iOS 플랫폼 프로젝트는 `PlatformEffect`에서 파생된 `RoundEffect` 클래스를 정의합니다. 이 클래스는 Xamarin.Forms가 효과 클래스를 확인할 수 있도록 해 주는 `assembly` 특성으로 태그가 지정되었습니다.
+iOS 플랫폼 프로젝트는 `PlatformEffect`에서 파생된 `RoundEffect` 클래스를 정의합니다. 이 클래스는 Xamarin.Forms가 효과 클래스를 확인할 수 있는 `assembly` 특성으로 태그가 지정되었습니다.
 
 ```csharp
 [assembly: ResolutionGroupName("Xamarin")]

@@ -1,24 +1,27 @@
 ---
 title: Xamarin.Essentials
-description: 이 문서에는 모바일 애플리케이션에 대한 플랫폼 간 API를 개발자에게 제공하는 Xamarin.Essentials를 설명하는 다양한 가이드에 대한 링크가 들어 있습니다.
-ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 02/26/2020
-ms.openlocfilehash: 1d68203e80e0bc28e7060d5873c122db8c2ff960
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: 이 문서에는 모바일 애플리케이션의 플랫폼 간 API를 개발자에게 제공하는 Xamarin.Essentials를 설명하는 다양한 가이드에 대한 링크가 들어 있습니다.
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80387208"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139466"
 ---
-# <a name="xamarinessentials"></a>Xamarin.Essentials
+# Xamarin.Essentials
 
-Xamarin.Essentials는 모바일 애플리케이션에 대한 플랫폼 간 API를 개발자에게 제공합니다.
+Xamarin.Essentials는 모바일 애플리케이션의 플랫폼 간 API를 개발자에게 제공합니다.
 
 Android, iOS 및 UWP는 개발자가 Xamarin을 활용하여 C#에서 모두 액세스할 수 있는 고유한 운영 체제 및 플랫폼 API를 제공합니다. Xamarin.Essentials는 사용자 인터페이스가 생성된 방식과 관계없이 공유 코드에서 액세스할 수 있는 모든 Xamarin.Forms, Android, iOS 또는 UWP 애플리케이션에서 작동하는 단일 플랫폼 간 API를 제공합니다.
 
-## <a name="get-started-with-xamarinessentials"></a>[Xamarin.Essentials 시작](get-started.md?context=xamarin/xamarin-forms)
+## <a name="get-started-with-xamarinessentialsget-startedmdcontextxamarinxamarin-forms"></a>[Xamarin.Essentials 시작](get-started.md?context=xamarin/xamarin-forms)
 
 기존 또는 새로운 Xamarin.Forms, Android, iOS 또는 UWP 프로젝트에 **Xamarin.Essentials** NuGet 패키지를 설치하려면 [시작 가이드](get-started.md)를 따르세요.
 

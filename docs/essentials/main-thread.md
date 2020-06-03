@@ -1,25 +1,17 @@
 ---
-title: 'Xamarin.Essentials: MainThread'
-description: MainThread 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 코드를 실행할 수 있습니다.
-ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 08/20/2019
-ms.openlocfilehash: dfef9fc5d1b8e4acaec8d9e1d653b141b04cead6
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150054"
+title: ''Xamarin.Essentials: MainThread'' description: ms.assetid: author: ms.custom: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 **MainThread** 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 코드를 실행할 수 있으며, 특정 코드 블록이 현재 주 스레드에서 실행되고 있는지 확인할 수 있습니다.
 
 ## <a name="background"></a>배경
 
-iOS, Android 및 유니버설 Windows 플랫폼을 포함한 대부분의 운영 체제는 사용자 인터페이스와 관련된 코드에 대해 단일 스레딩 모델을 사용합니다. 이 모델은 키 입력 및 터치 입력을 포함한 사용자 인터페이스 이벤트를 올바르게 직렬화하는 데 필요합니다. 이 스레드를 _주 스레드_, _사용자 인터페이스 스레드_ 또는 _UI 스레드_라고 합니다. 이 모델의 단점은 사용자 인터페이스 요소에 액세스하는 모든 코드가 애플리케이션의 주 스레드에서 실행되어야 한다는 것입니다. 
+iOS, Android 및 유니버설 Windows 플랫폼을 포함한 대부분의 운영 체제는 사용자 인터페이스와 관련된 코드에 대해 단일 스레딩 모델을 사용합니다. 이 모델은 키 입력 및 터치 입력을 포함한 사용자 인터페이스 이벤트를 올바르게 직렬화하는 데 필요합니다. 이 스레드를 _주 스레드_, _사용자 인터페이스 스레드_ 또는 _UI 스레드_라고 합니다. 이 모델의 단점은 사용자 인터페이스 요소에 액세스하는 모든 코드가 애플리케이션의 주 스레드에서 실행되어야 한다는 것입니다.
 
 애플리케이션이 보조 실행 스레드의 이벤트 처리기를 호출하는 이벤트를 사용해야 하는 경우도 있습니다. (Xamarin.Essentials 클래스 [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) 및 [`OrientationSensor`](orientation-sensor.md)는 더 빠른 속도로 사용할 경우 모두 보조 스레드에 대한 정보를 반환할 수 있습니다.) 이벤트 처리기가 사용자 인터페이스 요소에 액세스해야 하는 경우, 주 스레드에서 해당 코드를 실행해야 합니다. **MainThread** 클래스를 사용하면 애플리케이션이 주 실행 스레드에서 이 코드를 실행할 수 있습니다.
 
@@ -60,8 +52,9 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 ```
 
 > [!NOTE]
-> Xamarin.Forms에는 [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)라는 메서드가 있으며,
-> `MainThread.BeginInvokeOnMainThread(Action)`와 동일한 작업을 수행합니다. Xamarin.Forms 앱에서 두 메서드 중 하나를 사용할 수 있지만, 호출 코드에 Xamarin.Forms에 대한 다른 종속성 요구가 있는지 여부를 고려합니다. 다른 종속성 요구가 없으면 `MainThread.BeginInvokeOnMainThread(Action)`가 더 나은 옵션일 가능성이 큽니다.
+> Xamarin.Forms에는 [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)라는 메서드가 있으며 이 메서드는
+> `MainThread.BeginInvokeOnMainThread(Action)`와 동일한 작업을 수행합니다.
+> Xamarin.Forms 앱에서 두 메서드 중 하나를 사용할 수 있지만, 호출 코드에 Xamarin.Forms에 대한 다른 종속성 요구가 있는지 여부를 고려합니다. 다른 종속성 요구가 없으면 `MainThread.BeginInvokeOnMainThread(Action)`가 더 나은 옵션일 가능성이 큽니다.
 
 ## <a name="determining-if-code-is-running-on-the-main-thread"></a>코드가 주 스레드에서 실행되고 있는지 확인
 

@@ -1,27 +1,31 @@
 ---
-title: 요약 - 7장. XAML과 코드 비교
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 7장. XAML과 코드 비교'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 7. XAML vs. code''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0b92988e1e838072fca0d8a284455a62db05e757
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "61334738"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136863"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>요약 - 7장. XAML과 코드 비교
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
-Xamarin.Forms는 XAML(Extensible Application Markup Language, 또는 "자멜"로 읽음)이라고 부르는 XML 기반 마크업 언어를 지원합니다. XAML은 Xamarin.Forms 애플리케이션의 사용자 인터페이스 레이아웃을 정의하고, 사용자 인터페이스 요소와 기본 데이터 사이의 바인딩을 정의할 때 C#에 대한 대안을 제공합니다.
+Xamarin.Forms는 Extensible Application Markup Language, 즉 XAML(“자멜”로 읽음)이라고 하는 XML 기반 생성 언어를 지원합니다. XAML은 Xamarin.Forms 애플리케이션의 사용자 인터페이스 레이아웃을 정의하고, 사용자 인터페이스 요소와 기본 데이터 사이의 바인딩을 정의할 때 C#에 대한 대안을 제공합니다.
 
 ## <a name="properties-and-attributes"></a>속성 및 특성
 
@@ -39,7 +43,7 @@ XAML에서 클래스 및 클래스로부터 생성되는 개체는 XML 요소로
 
 ## <a name="adding-a-xaml-page-to-your-project"></a>프로젝트에 XAML 페이지 추가
 
-Xamarin.Forms 이식 가능한 클래스 라이브러리는 처음 생성될 때 XAML 페이지를 포함할 수 있습니다. 또는 사용자가 기존 프로젝트에 XML 페이지를 추가할 수 있습니다. 대화 상자에서 새 항목을 추가하려면 XML 페이지 또는 `ContentPage` 및 XAML을 참조하는 항목을 선택합니다. (`ContentView`가 아님).
+Xamarin.Forms 이식 가능한 클래스 라이브러리는 처음 생성될 때 XAML 페이지를 포함할 수 있습니다. 또는 사용자가 기존 프로젝트에 XAML 페이지를 추가할 수 있습니다. 대화 상자에서 새 항목을 추가하려면 XML 페이지 또는 `ContentPage` 및 XAML을 참조하는 항목을 선택합니다. (`ContentView`가 아님).
 
 > [!NOTE]
 > 이 장이 작성된 이후 Visual Studio 옵션이 변경되었습니다.

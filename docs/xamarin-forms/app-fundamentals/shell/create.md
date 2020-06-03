@@ -1,19 +1,11 @@
 ---
-title: Xamarin.Forms Shell 애플리케이션 만들기
-description: Xamarin.Forms Shell 애플리케이션을 만들기 위한 프로세스는 Shell 클래스를 서브클래싱하고 애플리케이션의 App 클래스의 MainPage 속성을 서브클래싱된 Shell 개체로 설정한 다음 서브클래싱된 Shell 클래스에서 애플리케이션의 시각적 계층 구조를 설명하는 XAML 파일을 만드는 것입니다.
-ms.prod: xamarin
-ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/24/2019
-ms.openlocfilehash: eec20ff6ceb4aee7e8fde59992576899690616c3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68739303"
+title: ‘Xamarin.Forms Shell 애플리케이션 만들기’ description: ‘Xamarin.Forms Shell 애플리케이션을 만들기 위한 프로세스는 Shell 클래스를 서브클래싱하고 애플리케이션의 App 클래스의 MainPage 속성을 서브클래싱된 Shell 개체로 설정한 다음, 서브클래싱된 Shell 클래스에서 애플리케이션의 시각적 계층 구조를 설명하는 XAML 파일을 만드는 것입니다.’
+ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
+
 # <a name="create-a-xamarinforms-shell-application"></a>Xamarin.Forms Shell 애플리케이션 만들기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
@@ -80,7 +72,7 @@ namespace Xaminals
 
 ## <a name="describe-the-visual-hierarchy-of-the-application"></a>애플리케이션의 시각적 계층 구조 설명
 
-Xamarin.Forms Shell 애플리케이션을 만드는 마지막 단계는 서브클래싱된 `Shell` 클래스에서 애플리케이션의 시각적 계층을 설명하는 것입니다. 서브클래싱된 `Shell` 클래스는 세 가지 계층적 개체로 구성됩니다.
+Xamarin.Forms Shell 애플리케이션을 만드는 마지막 단계는 서브클래싱된 `Shell` 클래스에서 애플리케이션의 시각적 계층 구조를 설명하는 것입니다. 서브클래싱된 `Shell` 클래스는 세 가지 계층적 개체로 구성됩니다.
 
 - `FlyoutItem` 또는 `TabBar` `FlyoutItem`은 플라이아웃에서 하나 이상의 항목을 나타내며, 애플리케이션에 대한 탐색 패턴이 플라이아웃을 포함하는 경우에 사용해야 합니다. `TabBar`는 아래쪽 탭 표시줄을 나타내며, 애플리케이션에 대한 탐색 패턴이 아래쪽 탭으로 시작될 때 사용해야 합니다. 모든 `FlyoutItem` 개체 또는 `TabBar` 개체는 `Shell` 개체의 자식입니다.
 - `Tab` - 아래쪽 탭으로 이동할 수 있는 그룹화된 콘텐츠를 나타냅니다. 모든 `Tab` 개체는 `FlyoutItem` 개체 또는 `TabBar` 개체의 자식입니다.

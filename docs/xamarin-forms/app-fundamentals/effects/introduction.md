@@ -1,18 +1,21 @@
 ---
-title: 효과 소개
-description: 효과를 사용하면 각 플랫폼의 네이티브 컨트롤을 사용자 지정할 수 있습니다. 효과는 일반적으로 작은 스타일 지정 변경에 사용됩니다. 이 문서에서는 효과에 대한 소개를 제공하고, 효과와 사용자 지정 렌더러 사이의 경계를 간략히 설명하고 PlatformEffect 클래스를 설명합니다.
-ms.prod: xamarin
-ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: e9325c34c645b75f28c7e2070f6bb095780ddb02
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a891ec70f6f83984ed463fe914442758bdf57a2e
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70771456"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139310"
 ---
 # <a name="introduction-to-effects"></a>효과 소개
 
@@ -22,7 +25,7 @@ Xamarin.Forms [페이지, 레이아웃 및 컨트롤](~/xamarin-forms/user-inter
 
 개발자는 컨트롤의 모양 및/또는 동작을 사용자 지정하기 위해 자신 만의 사용자 지정 `Renderer` 클래스를 구현할 수 있습니다. 그러나 간단한 컨트롤 사용자 지정을 수행하는 사용자 지정 렌더러 클래스를 구현하는 것은 종종 중량 응답입니다. 효과는 각 플랫폼에서 네이티브 컨트롤을 보다 쉽게 사용자 지정할 수 있도록 하여 이 프로세스를 간소화합니다.
 
-효과가 플랫폼별 프로젝트에 `PlatformEffect` 컨트롤을 서브클래싱하여 만들어진 다음, Xamarin.Forms .NET 표준 라이브러리 또는 공유 라이브러리 프로젝트의 적절한 컨트롤에 연결하여 사용됩니다.
+효과가 플랫폼별 프로젝트에 `PlatformEffect` 컨트롤을 서브클래싱하여 만들어진 다음, Xamarin.Forms .NET Standard 라이브러리 또는 공유 라이브러리 프로젝트의 적절한 컨트롤에 연결하여 사용됩니다.
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>사용자 지정 렌더러를 통해 효과를 사용하는 이유는 무엇인가요?
 

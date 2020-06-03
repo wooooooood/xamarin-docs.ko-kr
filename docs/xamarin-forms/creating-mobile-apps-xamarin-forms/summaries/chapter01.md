@@ -1,25 +1,29 @@
 ---
 title: 요약 - 1장. Xamarin.Forms가 왜 적합한가요?
-description: 'Xamarin.Forms로 모바일 앱 만들기: 요약 - 1장. Xamarin.Forms가 왜 적합한가요?'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 6dfa473bdfb4c1dd88ca833dbf5011a0bbdec42a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 1. How does Xamarin.Forms fit in?''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73032893"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136931"
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>요약 - 1장. Xamarin.Forms가 왜 적합한가요?
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
 프로그래밍에서 가장 달갑지 않은 작업 중 하나는 플랫폼 간에 코드베이스를 이식하는 것입니다. 해당 플랫폼에 다른 프로그래밍 언어가 필요한 경우에는 특히 그렇습니다. 코드를 이식할 때 리팩터링도 하려는 유혹이 있지만 두 플랫폼을 동시에 유지해야 하는 경우에는 두 코드베이스 간의 차이로 인해 이후 유지 관리가 어려워집니다.
 
@@ -51,7 +55,7 @@ Xamarin은 현재 C# 및 .NET을 사용하여 네이티브 Mac, iOS 및 Android 
 > [!NOTE]
 > Xamarin.Forms는 Windows 8.1, Windows Phone 8.1 또는 Windows 10 Mobile을 더 이상 지원하지 않지만 Xamarin.Forms 애플리케이션은 Windows 10 데스크톱에서 실행됩니다. [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK#](~/xamarin-forms/platform/other/gtk.md) 및 [Tizen](~/xamarin-forms/platform/other/tizen.md) 플랫폼에 대한 미리 보기 지원도 있습니다.
 
-Xamarin.Forms 프로그램은 대부분 라이브러리 또는 SAP에 상주합니다. 각 플랫폼은 이 공유 코드를 호출하는 작은 애플리케이션 스텁으로 구성됩니다.
+Xamarin.Forms 프로그램은 대부분 라이브러리 또는 SAP에 있습니다. 각 플랫폼은 이 공유 코드를 호출하는 작은 애플리케이션 스텁으로 구성됩니다.
 
 Xamarin.Forms API는 각 플랫폼의 네이티브 컨트롤에 매핑되므로 각 플랫폼은 특징적인 모양과 느낌을 유지합니다.
 

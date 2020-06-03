@@ -1,27 +1,31 @@
 ---
-title: 2장의 요약 정보입니다. 앱 분석
-description: 'Xamarin.Forms로 모바일 앱 만들기: 2장의 요약 정보입니다. 앱 분석'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/17/2018
-ms.openlocfilehash: f900cb1532ba4415127c95b07e777881e1d74994
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 2. Anatomy of an app''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 78da3ed91acea0c056074d712d368de70b251392
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724996"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136918"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>2장의 요약 정보입니다. 앱 분석
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 
 > [!NOTE]
-> 이 페이지의 정보는 Xamarin.Forms가 책에 제공된 자료와 다른 영역을 표시합니다.
+> 이 페이지의 정보는 Xamarin.Forms가 이 책에 제공된 자료와는 다르게 사용되는 경우를 설명합니다.
 
-Xamarin.Forms 애플리케이션에서 화면의 공간을 차지하는 개체는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스로 캡슐화된 *시각적 요소*라고 합니다. 시각적 요소는 다음 클래스에 해당하는 세 가지 범주로 나눌 수 있습니다.
+Xamarin.Forms 애플리케이션에서 화면 공간을 차지하는 개체는 [`VisualElement`](xref:Xamarin.Forms.VisualElement) 클래스로 캡슐화된 ‘시각적 요소’라고 합니다. 시각적 요소는 다음 클래스에 해당하는 세 가지 범주로 나눌 수 있습니다.
 
 - [페이지](xref:Xamarin.Forms.Page)
 - [레이아웃](xref:Xamarin.Forms.Layout)
@@ -77,7 +81,7 @@ Xamarin 플랫폼이 설치되어 있으면 Visual Studio 또는 Mac용 Visual S
 > [!NOTE]
 > 이러한 프로젝트의 **참조** 섹션에는 더 이상 어셈블리가 나열되지 않습니다. 대신, 프로젝트 파일에는 Xamarin.Forms NuGet 패키지를 참조하는 **PackageReference** 태그가 포함됩니다. Visual Studio의 **참조** 섹션에는 Xamarin.Forms 어셈블리가 아닌 **Xamarin.Forms** 패키지가 나열됩니다.
 
-각 애플리케이션 프로젝트에는 `Xamarin.Forms` 네임스페이스의 정적 `Forms.Init` 메서드에 대한 호출이 포함됩니다. 이는 Xamarin.Forms 라이브러리를 초기화합니다. 각 플랫폼에 대해 다른 버전의 `Forms.Init`가 정의됩니다. 이 메서드에 대한 호출은 다음 클래스에서 찾을 수 있습니다.
+각 애플리케이션 프로젝트에는 `Xamarin.Forms` 네임스페이스의 정적 `Forms.Init` 메서드에 대한 호출이 포함됩니다. 이 호출은 Xamarin.Forms 라이브러리를 초기화합니다. 각 플랫폼에 대해 다른 버전의 `Forms.Init`가 정의됩니다. 이 메서드에 대한 호출은 다음 클래스에서 찾을 수 있습니다.
 
 - iOS: [`AppDelegate`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.iOS/AppDelegate.cs)
 - Android: [`MainActivity`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter02/Hello/Hello/Hello.Droid/MainActivity.cs)
