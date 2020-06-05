@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다. 이 문서에는 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a56f05f8ff4eb8ece43a9f4f38a669cfdc85c4be
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135189"
+title: “렌더러 기본 클래스 및 네이티브 컨트롤” description: “모든 Xamarin.Forms 컨트롤의 모양과 동작을 효과적으로 사용자 지정할 수 있습니다. 이 문서에는 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.”
+ms.prod: xamarin ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93 ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 04/17/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="renderer-base-classes-and-native-controls"></a>렌더러 기본 클래스 및 네이티브 컨트롤
 
 모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다. 이 문서에는 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.
@@ -26,7 +12,10 @@ ms.locfileid: "84135189"
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
 - **Android(AppCompat)** – Xamarin.Forms.Platform.Android.AppCompat
+- **Android(FastRenderers)**  - Xamarin.Forms.Platform.Android.FastRenderers
 - **UWP(유니버설 Windows 플랫폼)** – Xamarin.Forms.Platform.UWP
+
+빠른 렌더러에 관한 자세한 내용은 [Xamarin.Forms 빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)를 참조하세요.
 
 `MapRenderer` 클래스는 다음 네임스페이스에서 찾을 수 있습니다.
 
@@ -54,18 +43,18 @@ ms.locfileid: "84135189"
 
 다음 표에서는 각 Xamarin.Forms [레이아웃](~/xamarin-forms/user-interface/controls/layouts.md) 형식을 구현하는 네이티브 컨트롤 클래스와 렌더러가 나열됩니다.
 
-|레이아웃|렌더러|iOS|Android|UWP|
+|레이아웃|렌더러|iOS|Android|Android(AppCompat)|UWP|
 |--- |--- |--- |--- |--- |
-|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|View|FrameworkElement|
-|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|View|FrameworkElement|
-|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|View|FrameworkElement|
-|[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|테두리|
-|[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollViewer|
-|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|View|FrameworkElement|
-|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|View|FrameworkElement|
-|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|View|FrameworkElement|
-|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|View|FrameworkElement|
-|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|View|FrameworkElement|
+|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|CardView|테두리|
+|[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollView|ScrollViewer|
+|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
 
 ## <a name="views"></a>뷰
 
@@ -117,6 +106,7 @@ ms.locfileid: "84135189"
 |[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UIImage를 포함한 UITableViewCell|두 개의 TextViews와 ImageView를 포함한 LinearLayout|이미지와 두 개의 TextBlock이 있는 그리드를 포함한 DataTemplate|
 |[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|View|ContentPresenter를 포함한 DataTemplate|
 
-## <a name="summary"></a>요약
+## <a name="related-links"></a>관련 링크
 
-이 문서에서는 각 Xamarin.Forms 페이지, 레이아웃, 뷰 및 셀을 구현하는 네이티브 컨트롤 클래스와 렌더러를 나열했습니다. 모든 Xamarin.Forms 컨트롤에는 네이티브 컨트롤의 인스턴스를 만드는 각 플랫폼에 함께 제공되는 렌더러가 있습니다.
+- [Xamarin.Forms 빠른 렌더러](~/xamarin-forms/internals/fast-renderers.md)
+- [Xamarin.Forms 셸 사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)

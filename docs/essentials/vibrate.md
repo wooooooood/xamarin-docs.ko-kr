@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Vibration'
-description: 이 문서에서는 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있는 Xamarin.Essentials의 Vibration 클래스를 설명합니다.
-ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: a002cd6ed183ffeafef92cb40d48b2792347714d
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149833"
+title: “Xamarin.Essentials: 진동” description: “이 문서에서는 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있는 Xamarin.Essentials의 Vibration 클래스를 설명합니다.”
+ms.assetid: 7E8B24C4-2625-4DAE-A129-383542D34F1E author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-vibration"></a>Xamarin.Essentials: Vibration
 
 **Vibration** 클래스를 사용하면 원하는 시간 동안 진동 기능을 시작 및 중지할 수 있습니다.

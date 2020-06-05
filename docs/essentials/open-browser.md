@@ -1,18 +1,8 @@
 ---
-title: Xamarin.Essentials 브라우저 열기
-description: Xamarin.Essentials의 Browser 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 04/02/2019
-ms.custom: video
-ms.openlocfilehash: 715b9872642dfa8d5426c2967c62e82643def34d
-ms.sourcegitcommit: 9ca07644710e5919c7bc684c1ce144471611d5df
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82974474"
+title: “Xamarin.Essentials 브라우저 열기” description: “Xamarin.Essentials에서 Browser 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.”
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: 브라우저
 
 **Browser** 클래스를 사용하면 애플리케이션이 최적화된 시스템 기본 브라우저 또는 외부 브라우저에서 웹 링크를 열 수 있습니다.
@@ -46,7 +36,7 @@ public class BrowserTest
 
 ## <a name="customization"></a>사용자 지정
 
-시스템 기본 브라우저를 사용할 때 iOS 및 Android에서 사용할 수 있는 몇 가지 사용자 지정 옵션이 있습니다. 여기에는 `TitleMode`(Android에만 해당), 표시되는 `Toolbar`(iOS 및 Android) 및 `Controls`(iOS만 해당)에 대한 기본 색상 옵션이 포함됩니다. 
+시스템 기본 브라우저를 사용할 때 iOS 및 Android에서 사용할 수 있는 몇 가지 사용자 지정 옵션이 있습니다. 여기에는 `TitleMode`(Android에만 해당), 표시되는 `Toolbar`(iOS 및 Android) 및 `Controls`(iOS만 해당)에 대한 기본 색상 옵션이 포함됩니다.
 
 이러한 옵션은 `OpenAsync`를 호출할 때 `BrowserLaunchOptions`를 사용하여 지정됩니다.
 

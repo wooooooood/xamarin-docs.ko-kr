@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 나침반'
-description: 이 문서에서는 디바이스의 자기 북쪽 방향을 모니터링할 수 있는 Xamarin.Essentials의 Compass 클래스를 설명합니다.
-ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 54ce725a319e0222179945ece558338c8a152653
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150121"
+title: “Xamarin.Essentials: 나침반” description: “이 문서에서는 디바이스의 자기 북쪽 방향을 모니터링할 수 있는 Xamarin.Essentials의 Compass 클래스를 설명합니다.”
+ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: 나침반
 
 **Compass** 클래스를 사용하면 디바이스의 자기 북쪽 방향을 모니터링할 수 있습니다.
@@ -85,7 +75,7 @@ Android는 나침반 방향을 검색하기 위한 API를 제공하지 않습니
 
 ## <a name="low-pass-filter"></a>저역 필터
 
-Android 나침반 값이 업데이트 및 계산되는 방법으로 인해 값을 평준화해야 할 수 있습니다. ‘저역 필터’는 각도의 사인 및 코사인 값 평균을 계산하기 위해 적용할 수 있고 `bool applyLowPassFilter` 매개 변수를 허용하는 `Start` 메서드 오버로드를 사용하여 켤 수 있습니다. 
+Android 나침반 값이 업데이트 및 계산되는 방법으로 인해 값을 평준화해야 할 수 있습니다. ‘저역 필터’는 각도의 사인 및 코사인 값 평균을 계산하기 위해 적용할 수 있고 `bool applyLowPassFilter` 매개 변수를 허용하는 `Start` 메서드 오버로드를 사용하여 켤 수 있습니다.
 
 ```csharp
 Compass.Start(SensorSpeed.UI, applyLowPassFilter: true);

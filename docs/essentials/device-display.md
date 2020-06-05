@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 디바이스 표시 정보'
-description: 이 문서에서는 애플리케이션이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.
-ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1d72458fa32db58d0c5da278dbb424aa2b1714d1
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150118"
+title: “Xamarin.Essentials: 디바이스 표시 정보” description: “이 문서에서는 애플리케이션이 실행 중인 디바이스의 화면 메트릭을 제공하는 Xamarin.Essentials의 DeviceDisplay 클래스를 설명합니다.”
+ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: 디바이스 표시 정보
 
 **DeviceDisplay** 클래스는 애플리케이션이 실행되고 있는 디바이스의 화면 메트릭에 관한 정보를 제공하고, 애플리케이션이 실행 중일 때 화면이 절전 상태가 되지 않도록 요청할 수 있습니다.

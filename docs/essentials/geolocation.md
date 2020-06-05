@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 지리적 위치'
-description: 이 문서에서는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.
-ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 99b439e70038d27ed8bffcf20b908c52a10ede82
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149738"
+title: “Xamarin.Essentials: 지리적 위치” description: “이 문서에서는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공하는 Xamarin.Essentials의 Geolocation 클래스를 설명합니다.”
+ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 03/13/2019 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: 지리적 위치
 
 **Geolocation** 클래스는 디바이스의 현재 지리적 위치 좌표를 검색하기 위한 API를 제공합니다.
@@ -112,7 +102,7 @@ catch (Exception ex)
 }
 ```
 
-고도를 항상 사용할 수는 없습니다. 사용할 수 없는 경우 `Altitude` 속성은 `null`이거나 값이 0일 수 있습니다. 고도를 사용할 수 있는 경우 값은 해발 미터 단위입니다. 
+고도를 항상 사용할 수는 없습니다. 사용할 수 없는 경우 `Altitude` 속성은 `null`이거나 값이 0일 수 있습니다. 고도를 사용할 수 있는 경우 값은 해발 미터 단위입니다.
 
 현재 디바이스의 [위치](xref:Xamarin.Essentials.Location) 좌표를 쿼리하는 데는 `GetLocationAsync`를 사용할 수 있습니다. 디바이스 위치를 가져오는 데 약간 시간이 걸릴 수 있으므로 전체 `GeolocationRequest` 및 `CancellationToken`으로 전달하는 것이 가장 좋습니다.
 
@@ -209,7 +199,7 @@ if (location != null)
 
 ## <a name="distance-between-two-locations"></a>두 위치 간 거리
 
-[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다. 
+[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 지리적 위치 간 거리를 계산할 수 있는 `CalculateDistance` 메서드를 정의합니다. 이 계산된 거리는 도로 또는 다른 경로를 고려하지 않으며, ‘대권 거리(great-circle distance)’라고도 하는 지표면에 따라 두 지점 간의 가장 짧은 거리 또는 구어로 “일직선” 거리일 뿐입니다.
 
 예를 들면 다음과 같습니다.
 

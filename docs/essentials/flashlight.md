@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 손전등'
-description: 이 문서에서는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있는 Xamarin.Essentials의 Flashlight 클래스를 설명합니다.
-ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1a8601860afaf033c9bdb62c187fe228d2e83435
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149953"
+title: “Xamarin.Essentials: 손전등” description: “이 문서에서는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있는 Xamarin.Essentials의 Flashlight 클래스를 설명합니다.”
+ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: 손전등
 
 **Flashlight** 클래스에는 디바이스의 카메라 플래시를 켜거나 꺼서 손전등으로 전환하는 기능이 있습니다.
@@ -109,7 +99,7 @@ Flashlight 클래스는 디바이스의 운영 체제에 따라 최적화되었�
 
 #### <a name="api-level-22-and-lower"></a>API 레벨 22 이하
 
-카메라 표면 텍스처는 카메라 장치의 `FlashMode`을 켜거나 끄기 위해 만들어졌습니다. 
+카메라 표면 텍스처는 카메라 장치의 `FlashMode`을 켜거나 끄기 위해 만들어졌습니다.
 
 ### <a name="ios"></a>[iOS](#tab/ios)
 

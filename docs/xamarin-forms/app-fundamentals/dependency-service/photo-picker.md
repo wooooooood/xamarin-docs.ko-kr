@@ -1,9 +1,6 @@
 ---
-title: description: ‘이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 휴대폰의 사진 라이브러리에서 사진을 선택하는 방법을 설명합니다.’
-ms.prod: ms.assetid: ms.technology: author: ms.author: ms.date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: “사진 라이브러리에서 사진 선택” description: “이 문서에서는 Xamarin.Forms DependencyService 클래스를 사용하여 휴대폰의 사진 라이브러리에서 사진을 선택하는 방법을 설명합니다.”
+ms.prod: xamarin ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 03/06/2017 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # <a name="picking-a-photo-from-the-picture-library"></a>사진 라이브러리에서 사진 선택
@@ -61,7 +58,7 @@ namespace DependencyServiceDemos.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(imagePicker, true);
+            viewController.PresentViewController(imagePicker, true, null);
 
             // Return Task object
             taskCompletionSource = new TaskCompletionSource<Stream>();
@@ -73,7 +70,7 @@ namespace DependencyServiceDemos.iOS
 
 ```
 
-`GetImageStreamAsync` 메서드는 사진 라이브러리에서 이미지를 선택하려면 `UIImagePickerController`를 만들고 초기화합니다. 두 개의 이벤트 처리기가 필요합니다. 하나는 사용자가 사진을 선택할 경우 필요하며 다른 하나는 사용자가 사진 라이브러리의 표시를 취소하는 경우 필요합니다. 그런 다음, `PresentModalViewController`는 사용자에게 사진 라이브러리를 표시합니다.
+`GetImageStreamAsync` 메서드는 사진 라이브러리에서 이미지를 선택하려면 `UIImagePickerController`를 만들고 초기화합니다. 두 개의 이벤트 처리기가 필요합니다. 하나는 사용자가 사진을 선택할 경우 필요하며 다른 하나는 사용자가 사진 라이브러리의 표시를 취소하는 경우 필요합니다. `PresentViewController` 메서드는 사용자에게 사진 라이브러리를 표시합니다.
 
 이 시점에서 `GetImageStreamAsync` 메서드는 `Task<Stream>` 개체를 호출하는 코드에 해당 개체를 반환해야 합니다. 이 태스크는 사용자가 사진 라이브러리와 상호 작용을 완료하고 이벤트 처리기 중 하나를 호출하는 경우에만 완료됩니다. 이와 같은 경우에 [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) 클래스는 필수입니다. 클래스는 `GetImageStreamAsync` 메서드에서 반환할 적절한 제네릭 형식의 `Task` 개체를 제공하며, 해당 클래스는 태스크를 완료한 경우 나중에 신호를 받을 수 있습니다.
 
@@ -152,7 +149,7 @@ public class MainActivity : FormsAppCompatActivity
 
     protected override void OnCreate(Bundle savedInstanceState)
     {
-        // ... 
+        // ...
         Instance = this;
     }
     // ...

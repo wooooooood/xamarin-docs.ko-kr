@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 지오코딩'
-description: Xamarin.Essentials의 Geocoding 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.
-ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/28/2019
-ms.custom: video
-ms.openlocfilehash: 157eb3116f09268790036f8983543114e7a58276
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "66354103"
+title: “Xamarin.Essentials: 지오코딩” description: “Xamarin.Essentials의 Geocoding 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.”
+ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90 author: jamesmontemagno ms.author: jamont ms.date: 05/28/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: 지오코딩
 
 **Geocoding** 클래스는 위치 좌표에 장소 표시를 지오코딩하고 좌표를 장소 표시로 역 지오코딩하는 API를 제공합니다.
@@ -119,7 +109,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>두 위치 간 거리
 
-[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 위치 간 거리를 계산하는 메서드를 정의합니다. 예는 [**Xamarin.Essentials: 지리적 위치**](geolocation.md#calculate-distance) 문서를 참조하세요.
+[`Location`](xref:Xamarin.Essentials.Location) 및 [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) 클래스는 두 위치 간 거리를 계산하는 메서드를 정의합니다. [ **Xamarin.Essentials: 지리적 위치**](geolocation.md#calculate-distance) 문서를 참조하세요.
 
 ## <a name="api"></a>API
 

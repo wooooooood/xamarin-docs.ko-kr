@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 기본 설정'
-description: 이 문서에서는 키/값 저장소에 애플리케이션 기본 설정을 저장하는 Xamarin.Essentials의 Preferences 클래스를 설명합니다. 또한 해당 클래스 및 저장할 수 있는 데이터 형식을 사용하는 방법을 설명합니다.
-ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/15/2019
-ms.custom: video
-ms.openlocfilehash: e812ab5b85db396ee3cb473f4a659ac188c9212f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79497045"
+title: “Xamarin.Essentials: 기본 설정” description: “이 문서에서는 키/값 저장소에 애플리케이션 기본 설정을 저장하는 Xamarin.Essentials의 Preferences 클래스를 설명합니다.” 또한 해당 클래스 및 저장할 수 있는 데이터 형식을 사용하는 방법을 설명합니다.”
+ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF author: jamesmontemagno ms.author: jamont ms.date: 01/15/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: 기본 설정
 
 **Preferences** 클래스를 사용하여 키/값 저장소에 애플리케이션 기본 설정을 저장할 수 있습니다.
@@ -29,7 +19,7 @@ ms.locfileid: "79497045"
 using Xamarin.Essentials;
 ```
 
-기본 설정에서 지정된 ‘키’의 값을 저장합니다. 
+기본 설정에서 지정된 ‘키’의 값을 저장합니다.
 
 ```csharp
 Preferences.Set("my_key", "my_value");
@@ -41,13 +31,13 @@ Preferences.Set("my_key", "my_value");
 var myValue = Preferences.Get("my_key", "default_value");
 ```
 
-지정된 ‘키’가 기본 설정에 있는지 확인하려면 다음을 수행합니다. 
+지정된 ‘키’가 기본 설정에 있는지 확인하려면 다음을 수행합니다.
 
 ```csharp
 bool hasKey = Preferences.ContainsKey("my_key");
 ```
 
-기본 설정에서 ‘키’를 제거합니다. 
+기본 설정에서 ‘키’를 제거합니다.
 
 ```csharp
 Preferences.Remove("my_key");
@@ -98,7 +88,7 @@ Preferences.Clear();
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다. 
+[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer)는 디바이스에 값을 저장하는 데 사용됩니다. `sharedName`을 지정하지 않으면 `LocalSettings`가 사용되고, 이외의 경우에는 `LocalSettings` 내부에 새 컨테이너를 만드는 데 이름이 사용됩니다.
 
 또한 `LocalSettings`에는 각 설정의 이름 길이가 최대 255자 이하로 제한하는 사항이 포함되어 있습니다. 각 설정의 크기는 최대 8K 바이트이며 각 복합 설정은 크기는 최대 64K 바이트까지 가능합니다.
 
@@ -106,7 +96,7 @@ Preferences.Clear();
 
 ## <a name="persistence"></a>지속성
 
-애플리케이션을 제거하면 모든 ‘기본 설정’이 제거됩니다.  한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
+애플리케이션을 제거하면 모든 ‘기본 설정’이 제거됩니다. 한 가지 예외는 Android 6.0(API 레벨 23) 이상을 대상으로 하고 이 레벨에서 실행되며 [__자동 백업__](https://developer.android.com/guide/topics/data/autobackup)을 사용 중인 앱의 경우입니다. 이 기능은 기본적으로 켜지고 **기본 설정** API에서 사용하는 __공유 기본 설정__을 포함한 앱 데이터를 유지합니다. 다음 Google의 [문서](https://developer.android.com/guide/topics/data/autobackup)를 사용하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="limitations"></a>제한 사항
 

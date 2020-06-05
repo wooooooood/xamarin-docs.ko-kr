@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 앱 정보'
-description: 이 문서에서는 애플리케이션에 대한 정보를 제공하는 Xamarin.Essentials의 AppInfo 클래스를 설명합니다. 예를 들어 앱 이름과 버전을 표시합니다.
-ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/29/2019
-ms.custom: video
-ms.openlocfilehash: 69d0cb503d329ccfb4c29fb6cc4a589bef97e893
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756985"
+title: “Xamarin.Essentials: 앱 정보” description: “이 문서에서는 애플리케이션에 대한 정보를 제공하는Xamarin.Essentials의 AppInfo 클래스를 설명합니다. 예를 들어 앱 이름과 버전을 표시합니다.”
+ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA author: jamesmontemagno ms.author: jamont ms.date: 01/29/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: 앱 정보
 
 **AppInfo** 클래스는 애플리케이션에 대한 정보를 제공합니다.

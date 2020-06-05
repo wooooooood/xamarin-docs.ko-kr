@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 디바이스 정보'
-description: 이 문서에서는 애플리케이션이 실행 중인 디바이스에 대한 정보를 제공하는 Xamarin.Essentials의 DeviceInfo 클래스를 설명합니다.
-ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1790e950dfccddcca84adf97bcff64f905ee59f6
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150086"
+title: “Xamarin.Essentials: 디바이스 정보” description: “이 문서에서는 애플리케이션이 실행 중인 디바이스에 대한 정보를 제공하는 Xamarin.Essentials의 DeviceInfo 클래스를 설명합니다.”
+ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522 author: jamesmontemagno ms.custom: video ms.author: jamont ms.date: 11/04/2018 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: 디바이스 정보
 
 **DeviceInfo** 클래스는 애플리케이션이 실행 중인 디바이스에 대한 정보를 제공합니다.

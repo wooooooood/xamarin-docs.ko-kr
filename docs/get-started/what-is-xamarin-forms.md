@@ -1,26 +1,14 @@
 ---
-title: Xamarin.Forms란?
-description: 이 문서에서는 Xamarin.Forms과 관련 라이브러리를 소개합니다.
-ms.prod: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b65be3cd552cf6a4fb094d59c44fa43de3deddcd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139193"
+title: “Xamarin.Forms란?”
+description: “이 문서에서는 Xamarin.Forms 및 관련 라이브러리를 소개합니다.”
+ms.prod: xamarin ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614 author: profexorgeek ms.author: jusjohns ms.date: 05/28/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="what-is-xamarinforms"></a>Xamarin.Forms란?
 
 [![iOS 및 Android의 Xamarin.Forms 애플리케이션 예제 스크린샷](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
-Xamarin.Forms는 오픈 소스 UI 프레임워크입니다. 개발자는 Xamarin.Forms로 단일한 공유 코드베이스에서 Android, iOS, Windows 애플리케이션을 빌드할 수 있습니다.
+Xamarin.Forms는 오픈 소스 UI 프레임워크입니다. 개발자는 Xamarin.Forms로 단일한 공유 코드베이스에서 Xamarin.Android, Xamarin.iOS 및 Windows 애플리케이션을 빌드할 수 있습니다.
 
 개발자는 Xamarin.Forms로 C#의 코드 숨김이 있는 XAML에서 사용자 인터페이스를 만들 수 있습니다. 이러한 인터페이스는 각 플랫폼에서 성능 네이티브 컨트롤로서 렌더링됩니다.
 
@@ -38,15 +26,15 @@ Xamarin.Forms의 사용 대상은 다음을 목표로 하는 개발자입니다.
 
 Xamarin.Forms는 플랫폼 전반에서 UI 요소를 만들기 위한 일관된 API를 제공합니다. 이 API는 XAML이나 C#으로 구현이 가능하며 MVVM(Model-View-ViewModel) 같은 패턴에 대한 데이터 바인딩을 지원합니다.
 
-런타임에서 Xamarin.Forms는 플랫폼 렌더러를 사용하여 플랫폼 간 UI 요소를 Android, iOS, UWP의 네이티브 컨트롤로 변환합니다. 따라서 개발자는 여러 플랫폼 간에 코드를 공유하면서도 네이티브한 모양과 느낌, 성능을 얻을 수 있습니다.
+런타임에서 Xamarin.Forms는 플랫폼 렌더러를 사용하여 플랫폼 간 UI 요소를 Xamarin.Android, Xamarin.iOS, UWP의 네이티브 컨트롤로 변환합니다. 따라서 개발자는 여러 플랫폼 간에 코드를 공유하면서도 네이티브한 모양과 느낌, 성능을 얻을 수 있습니다.
 
 Xamarin.Forms 애플리케이션은 일반적으로 공유된 .NET Standard 라이브러리와 개별 플랫폼 프로젝트로 구성됩니다. 공유 라이브러리에는 XAML 또는 C# 뷰와 서비스, 모델 또는 기타 코드와 같은 비즈니스 논리가 포함되어 있습니다. 플랫폼 프로젝트에는 애플리케이션에 필요한 플랫폼별 논리 또는 패키지가 포함됩니다.
 
-Xamarin.Forms는 Xamarin을 사용하여 플랫폼 전반에서 .NET 애플리케이션을 기본적으로 실행합니다. Xamarin에 대한 자세한 내용은 [Xamarin이란?](~/get-started/what-is-xamarin.md)을 참조하세요.
+Xamarin.Forms는 Xamarin 플랫폼을 사용하여 플랫폼 전반에서 .NET 애플리케이션을 기본적으로 실행합니다. Xamarin 플랫폼에 관한 자세한 내용은 [Xamarin이란?](~/get-started/what-is-xamarin.md)을 참조하세요.
 
-## <a name="additional-tools"></a>추가 도구
+## <a name="additional-functionality"></a>추가 기능
 
-Xamarin.Forms에는 애플리케이션에 다양한 기능을 추가하는 NuGet 패키지의 대규모 에코시스템이 있습니다. 이 섹션에서는 자주 사용되는 NuGet 패키지 몇 가지를 설명합니다.
+Xamarin.Forms에는 애플리케이션에 다양한 기능을 추가하는 라이브러리의 대규모 에코시스템이 있습니다. 이 섹션에서는 일부 추가 기능을 설명합니다.
 
 ### Xamarin.Essentials
 

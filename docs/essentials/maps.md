@@ -1,18 +1,8 @@
 ---
-title: Xamarin.Essentials Map
-description: Xamarin.Essentials의 Map 클래스를 사용하면 애플리케이션이 설치된 지도 애플리케이션에서 특정 위치나 placemark를 열 수 있습니다.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/26/2020
-ms.custom: video
-ms.openlocfilehash: 16f4a69e2d9216bb2e03fbcb663403d198b42c98
-ms.sourcegitcommit: 6a6cbb62bcf149f9515ee8868679a8a07ce17956
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83862718"
+title: “Xamarin.Essentials 맵” description: “Xamarin.Essentials에서 Map 클래스를 사용하면 애플리케이션이 설치된 지도 애플리케이션에서 특정 위치나 placemark를 열 수 있습니다.”
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 author: jamesmontemagno ms.author: jamont ms.date: 05/26/2020 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: 맵
 
 **Map** 클래스를 사용하면 애플리케이션이 설치된 지도 애플리케이션에서 특정 위치나 placemark를 열 수 있습니다.

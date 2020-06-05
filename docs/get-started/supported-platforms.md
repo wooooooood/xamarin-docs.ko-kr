@@ -1,19 +1,8 @@
 ---
-title: Xamarin.Forms 지원 플랫폼
-description: Xamarin.Forms에 대한 플랫폼 및 개발 시스템 요구 사항
-ms.prod: xamarin
-ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/22/2020
-ms.openlocfilehash: 5751983bf4a818e8ee91af98b0c05658efaca8b2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303620"
+title: “Xamarin.Forms 지원 플랫폼” description: “Xamarin.Forms의 플랫폼 및 개발 시스템 요구 사항.”
+ms.prod: xamarin ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf ms.technology: xamarin-forms author: davidbritch ms.author: dabritch ms.date: 01/22/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinforms-supported-platforms"></a>Xamarin.Forms 지원 플랫폼
 
 다음 운영 체제에 대한 Xamarin.Forms 애플리케이션을 작성할 수 있습니다.
@@ -22,23 +11,23 @@ ms.locfileid: "79303620"
 - Android 4.4(API 19) 이상([자세한 정보](#android-platform-support)) 그러나 최소 API로 Android 5.0(API 21)이 권장됩니다. 이렇게 하면 대부분의 Android 디바이스를 대상으로 하면서 모든 Android 지원 라이브러리와 완벽하게 호환됩니다.
 - Windows 10 유니버설 Windows 플랫폼.
 
-iOS, Android 및 유니버설 Windows 플랫폼(UWP)용 Xamarin.Forms 앱은 Visual Studio에서 빌드할 수 있습니다. 그러나 최신 버전의 Xcode와 Apple에서 지정한 macOS 최소 버전을 사용하여 iOS를 개발하려면 네트워크로 연결된 Mac이 필요합니다. 자세한 내용은 [Windows 요구 사항](~/cross-platform/get-started/requirements.md#windows-requirements)을 참조하세요.
+iOS, Android 및 UWP(유니버설 Windows 플랫폼)용 Xamarin.Forms 앱은 Visual Studio에서 빌드할 수 있습니다. 그러나 최신 버전의 Xcode와 Apple에서 지정한 macOS 최소 버전을 사용하여 iOS를 개발하려면 네트워크로 연결된 Mac이 필요합니다. 자세한 내용은 [Windows 요구 사항](~/cross-platform/get-started/requirements.md#windows-requirements)을 참조하세요.
 
 iOS 및 Android용 Xamarin.Forms 앱은 Mac용 Visual Studio에서 빌드할 수 있습니다. 자세한 내용은 [macOS 요구 사항](~/cross-platform/get-started/requirements.md#macos-requirements)을 참조하세요.
 
 > [!NOTE]
-> Xamarin.Forms를 사용하여 앱을 개발하려면 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)에 대해 잘 알고 있어야 합니다.
+> Xamarin.Forms를 사용하여 앱을 개발하려면 [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)를 잘 알고 있어야 합니다.
 
 ## <a name="additional-platform-support"></a>추가 플랫폼 지원
 
 Xamarin.Forms는 iOS, Android 및 Windows 이외의 추가 플랫폼을 지원합니다.
 
 - Samsung Tizen
-- macOS
+- macOS 10.13 이상
 - GTK#
 - WPF
 
-해당 플랫폼의 상태는 [Xamarin.Forms GitHub 플랫폼 지원 wiki](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)에서 사용할 수 있습니다.
+해당 플랫폼의 상태는 [Xamarin.Forms GitHub 플랫폼 지원 Wiki](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support)에서 사용할 수 있습니다.
 
 ## <a name="android-platform-support"></a>Android 플랫폼 지원
 
@@ -66,7 +55,7 @@ Xamarin.Forms는 iOS, Android 및 Windows 이외의 추가 플랫폼을 지원�
 
 ## <a name="deprecated-platforms"></a>사용되지 않는 플랫폼
 
-Xamarin.Forms 3.0 이상을 사용하는 경우 해당 플랫폼은 지원되지 않습니다.
+Xamarin.Forms 3.0 이상을 사용하는 경우 다음 플랫폼이 지원되지 않습니다.
 
 - *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*

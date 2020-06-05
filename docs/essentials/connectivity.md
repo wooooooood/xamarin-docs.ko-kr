@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 연결'
-description: Xamarin.Essentials의 Connectivity 클래스를 사용하면 디바이스의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.
-ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/08/2019
-ms.custom: video
-ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67855765"
+title: “Xamarin.Essentials: 연결” 설명” “Xamarin.Essentials에서 Connectivity 클래스를 사용하면 디바이스의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.”
+ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49 author: jamesmontemagno ms.author: jamont ms.date: 01/08/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: 연결
 
 **Connectivity** 클래스를 사용하면 디바이스의 네트워크 상태 변경 내용을 모니터링하고 현재 네트워크 액세스 및 현재 연결된 방식을 확인할 수 있습니다.

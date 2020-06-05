@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 사용 권한'
-description: 이 문서에서는 런타임 권한을 확인하고 요청하는 기능을 제공하는 Xamarin.Essentials의 Permissions 클래스에 대해 설명합니다.
-ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
-author: jamesmontemagno
-ms.author: jamont
-ms.custom: video
-ms.date: 01/06/2020
-ms.openlocfilehash: fbce02300363c3ec68c35c11afb25342f06f4be1
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150079"
+title: “Xamarin.Essentials: 권한” description: “이 문서에서는 런타임 권한을 확인하고 요청하는 기능을 제공하는 Xamarin.Essentials의 Permissions 클래스에 대해 설명합니다.”
+ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57 author: jamesmontemagno ms.author: jamont ms.custom: video ms.date: 01/06/2020 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: 사용 권한
 
 **Permissions** 클래스는 런타임 권한을 확인하고 요청하는 기능을 제공합니다.

@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 보안 스토리지'
-description: 이 문서에서는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 되는, Xamarin.Essentials의 SecureStorage 클래스에 관해 설명합니다. 클래스 사용 방법, 플랫폼 구현 관련 정보 및 제한 사항을 설명합니다.
-ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 04/02/2019
-ms.custom: video
-ms.openlocfilehash: 41d9efa66318f4c3f5315351d3c1f51b4e503521
-ms.sourcegitcommit: 44c44ad60c5c880a39006493aedd2d7aa834a27e
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550902"
+title: “Xamarin.Essentials: 보안 스토리지” description: “이 문서에서는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 되는, Xamarin.Essentials의 SecureStorage 클래스에 관해 설명합니다.” 클래스 사용 방법, 플랫폼 구현 관련 정보 및 제한 사항을 설명합니다.”
+ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64 author: jamesmontemagno ms.author: jamont ms.date: 04/02/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: 보안 스토리지
 
 **SecureStorage** 클래스는 간단한 키/값 쌍을 안전하게 저장하는 데 도움이 됩니다.
@@ -63,7 +53,7 @@ ms.locfileid: "83550902"
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-**iOS 시뮬레이터**에서 개발하는 경우 **키 체인** 자격을 사용하도록 설정하고 애플리케이션의 번들 식별자에 대한 키 체인 액세스 그룹을 추가합니다. 
+**iOS 시뮬레이터**에서 개발하는 경우 **키 체인** 자격을 사용하도록 설정하고 애플리케이션의 번들 식별자에 대한 키 체인 액세스 그룹을 추가합니다.
 
 iOS 프로젝트에서 **Entitlements.plist**를 열고 **키 체인** 자격을 찾아 사용하도록 설정합니다. 그러면 애플리케이션 식별자가 그룹으로 자동 추가됩니다.
 
@@ -161,7 +151,7 @@ KeyChain 데이터가 iCloud와 동기화되어 애플리케이션을 제거해�
 
 ## <a name="limitations"></a>제한 사항
 
-이 API는 소량 텍스트를 저장하기 위한 것입니다.  대량 텍스트를 저장하는 데 사용하려고 하면 성능이 느려질 수 있습니다. 
+이 API는 소량 텍스트를 저장하기 위한 것입니다.  대량 텍스트를 저장하는 데 사용하려고 하면 성능이 느려질 수 있습니다.
 
 ## <a name="api"></a>API
 

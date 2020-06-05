@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: 배터리'
-description: 이 문서에서는 디바이스의 배터리 정보를 확인하고 변경 내용을 모니터링할 수 있는 Xamarin.Essentials의 Battery 클래스를 설명합니다.
-ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/22/2019
-ms.custom: video
-ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756931"
+title: “Xamarin.Essentials: 배터리” description: “이 문서에서는 디바이스의 배터리 정보를 확인하고 변경 내용을 모니터링할 수 있는 Xamarin.Essentials의 Battery 클래스를 설명합니다.”
+ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43 author: jamesmontemagno ms.author: jamont ms.date: 01/22/2019 ms.custom: video no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
+
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: 배터리
 
 **Battery** 클래스를 사용하면 디바이스의 배터리 정보를 확인하고 변경 사항을 모니터링할 수 있으며, 디바이스가 절전 모드로 실행 중인지를 나타내는 디바이스 절전 상태 관련 정보를 확인할 수 있습니다. 디바이스의 절전 상태가 켜짐이면 애플리케이션에서 후순위 처리를 피해야 합니다.
@@ -170,7 +160,7 @@ public class EnergySaverTest
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-- API를 테스트하려면 디바이스를 사용해야 합니다. 
+- API를 테스트하려면 디바이스를 사용해야 합니다.
 - `PowerSource`의 경우 `AC` 또는 `Battery`만 반환합니다.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
