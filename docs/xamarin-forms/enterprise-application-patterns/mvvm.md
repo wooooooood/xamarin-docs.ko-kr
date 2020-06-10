@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d2e335535b508a6cd5e2f497e2c681152a7e5cda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130951"
+제목: "모델-뷰-ViewModel 패턴" 설명: "이 장은 eShopOnContainers mobile 앱이 MVVM 패턴을 사용 하 여 사용자 인터페이스에서 앱의 비즈니스 및 프레젠테이션 논리를 명확 하 게 구분 하는 방법을 설명 합니다."
+assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87: xamarin-forms author: davidbritch: dabritch:: 08/07/2017-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="the-model-view-viewmodel-pattern"></a>모델 뷰-ViewModel 패턴
 
 Xamarin.Forms일반적으로 개발자 환경에는 XAML에서 사용자 인터페이스를 만든 다음 사용자 인터페이스에서 작동 하는 코드 숨김이 추가 됩니다. 앱이 수정 되 고 크기와 범위가 증가 함에 따라 복잡 한 유지 관리 문제가 발생할 수 있습니다. 이러한 문제에는 ui 컨트롤과 비즈니스 논리를 긴밀 하 게 결합 하 여 UI를 수정 하는 비용과 이러한 코드를 단위 테스트 하는 어려움을 포함 합니다.
@@ -124,8 +110,6 @@ public LoginView()
 ### <a name="creating-a-view-defined-as-a-data-template"></a>데이터 템플릿으로 정의 된 뷰 만들기
 
 뷰를 데이터 템플릿으로 정의 하 고 뷰 모델 유형과 연결할 수 있습니다. 데이터 템플릿을 리소스로 정의 하거나 뷰 모델을 표시 하는 컨트롤 내에서 인라인으로 정의할 수 있습니다. 컨트롤의 내용은 뷰 모델 인스턴스이고 데이터 템플릿이 시각적으로 표시 하는 데 사용 됩니다. 이 기법은 뷰 모델을 먼저 인스턴스화한 후 뷰를 만든 상황의 예입니다.
-
-<a name="automatically_creating_a_view_model_with_a_view_model_locator" />
 
 ### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>뷰 모델 로케이터를 사용 하 여 자동으로 뷰 모델 만들기
 
@@ -279,13 +263,11 @@ public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 
 명령 매개 변수는 속성을 사용 하 여 선택적으로 정의할 수도 있습니다 [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) . 필요한 인수의 형식은 `Execute` 및 `CanExecute` 대상 메서드에 지정 되어 있습니다. [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)사용자가 연결 된 컨트롤과 상호 작용할 때가 대상 명령을 자동으로 호출 합니다. 명령 매개 변수 (제공 된 경우)는 명령 대리자에 인수로 전달 됩니다 `Execute` .
 
-<a name="implementing_behaviors" />
-
 ### <a name="implementing-behaviors"></a>동작 구현
 
 동작을 사용 하면 기능을 서브 클래스 하지 않고도 UI 컨트롤에 추가할 수 있습니다. 대신 기능은 동작 클래스에서 구현되고 컨트롤 자체의 일부였던 것처럼 컨트롤에 연결됩니다. 동작을 사용 하면 컨트롤의 API와 직접 상호 작용 하 고, 컨트롤에 간단 하 게 연결 하 고, 둘 이상의 뷰나 앱에서 다시 사용 하기 위해 패키지할 수 있으므로 일반적으로 코드 숨김으로 작성 해야 하는 코드를 구현할 수 있습니다. MVVM 컨텍스트에서 동작은 컨트롤을 명령에 연결 하는 데 유용한 방법입니다.
 
-연결 된 속성을 통해 컨트롤에 연결 된 동작을 *연결 된 동작*이라고 합니다. 그러면 동작에서 해당 컨트롤이 연결 된 요소의 노출 된 API를 사용 하 여 뷰의 시각적 트리에서 해당 컨트롤이 나 기타 컨트롤에 기능을 추가할 수 있습니다. EShopOnContainers 모바일 앱은 연결 된 `LineColorBehavior` 동작인 클래스를 포함 합니다. 이 동작에 대 한 자세한 내용은 [유효성 검사 오류 표시](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors)를 참조 하세요.
+연결 된 속성을 통해 컨트롤에 연결 된 동작을 *연결 된 동작*이라고 합니다. 그러면 동작에서 해당 컨트롤이 연결 된 요소의 노출 된 API를 사용 하 여 뷰의 시각적 트리에서 해당 컨트롤이 나 기타 컨트롤에 기능을 추가할 수 있습니다. EShopOnContainers 모바일 앱은 연결 된 `LineColorBehavior` 동작인 클래스를 포함 합니다. 이 동작에 대 한 자세한 내용은 [유효성 검사 오류 표시](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors)를 참조 하세요.
 
 Xamarin.Forms동작은 또는 클래스에서 파생 되는 클래스입니다 [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) `T` . 여기서은 동작을 적용할 컨트롤의 형식입니다. 이러한 클래스는 `OnAttachedTo` 및 `OnDetachingFrom` 메서드를 제공 합니다 .이 메서드는 동작을 컨트롤에 연결 하 고 분리할 때 실행 되는 논리를 제공 하도록 재정의 해야 합니다.
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이 문서에서는 datapages를 사용 하 여 간단한 데이터 기반 페이지 빌드를 시작 하는 방법을 설명 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 17cc67c7fcc89454ff8dcac9926617b4ed1f4b77
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134396"
+제목: "DataPages 시작" 설명: "이 문서는 datapages를 사용 하 여 간단한 데이터 기반 페이지 빌드를 시작 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 6416E5FA-6384-4298-BAA1-A89381E47210: xamarin-forms author: davidbritch: dabritch: ms. date: 12/01/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="getting-started-with-datapages"></a>DataPages 시작
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
@@ -54,7 +40,7 @@ Xamarin.Forms.NET Standard 라이브러리 및 응용 프로그램 프로젝트�
 ```
 
 > [!IMPORTANT]
-> 또한 iOS 및 Android에 일부 상용구 코드를 추가 하 여 [테마 어셈블리를 로드](#loadtheme) 하는 단계를 수행 해야 합니다 `AppDelegate` `MainActivity` . 이는 향후 미리 보기 릴리스에서 개선 될 예정입니다.
+> 또한 iOS 및 Android에 일부 상용구 코드를 추가 하 여 [테마 어셈블리를 로드](#troubleshooting) 하는 단계를 수행 해야 합니다 `AppDelegate` `MainActivity` . 이는 향후 미리 보기 릴리스에서 개선 될 예정입니다.
 
 ## <a name="3-add-a-xaml-page"></a>3. XAML 페이지 추가
 
@@ -181,8 +167,6 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 
 ## <a name="troubleshooting"></a>문제 해결
 
-<a name="loadtheme" />
-
 ## <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>' 파일 또는 어셈블리를 로드할 수 없습니다 Xamarin.Forms . ' Theme 또는 종속 항목 중 하나입니다.
 
 미리 보기 릴리스에서 테마는 런타임에 로드 하지 못할 수 있습니다. 아래에 표시 된 코드를 관련 프로젝트에 추가 하 여이 오류를 해결 하십시오.
@@ -197,7 +181,7 @@ x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 ```
 
-**Android**
+**OWA(Outlook Web Access)**
 
 **MainActivity.cs** 에서 다음 줄을 추가 합니다.`LoadApplication`
 

@@ -19,8 +19,6 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 
 이러한 클래스 [`Layout`](xref:Xamarin.Forms.Layout) 는 및 속성을 정의 하는에서 파생 [`Padding`](xref:Xamarin.Forms.Layout.Padding) [`IsClippedToBounds`](xref:Xamarin.Forms.Layout.IsClippedToBounds) 됩니다.
 
-<a name="contentView" />
-
 ### <a name="contentview"></a>ContentView
 
 |     |     |
@@ -28,29 +26,25 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 | [`ContentView`](xref:Xamarin.Forms.ContentView)속성을 사용 하 여 설정 된 단일 자식을 포함 [`Content`](xref:Xamarin.Forms.ContentView.Content) 합니다. `Content`속성은 다른 파생물을 포함 하 여 모든 파생으로 설정할 수 있습니다 `View` `Layout` . `ContentView`는 주로 구조 요소로 사용 되며에 대 한 기본 클래스 역할을 [`Frame`](#frame) 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ContentView)  /  [가이드](~/xamarin-forms/user-interface/layouts/contentview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/) | [![ContentView 예제](layouts-images/ContentView.png "ContentView 예제")](layouts-images/ContentView-Large.png#lightbox "ContentView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
-<a named="frame" />
-
 ### <a name="frame"></a>프레임
 
 |     |     |
 | --- | --- |
-| [`Frame`](xref:Xamarin.Forms.Frame)클래스는에서 파생 [`ContentView`](#contentView) 되 고 자식 주위에 테두리 또는 프레임을 표시 합니다. `Frame`클래스의 기본값은 [`Padding`](xref:Xamarin.Forms.Layout.Padding) 20이 고, [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) 및 속성도 정의 [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Frame)  /  [가이드](~/xamarin-forms/user-interface/layouts/frame.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![프레임 예제](layouts-images/Frame.png "프레임 예제")](layouts-images/Frame-Large.png#lightbox "프레임 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| [`Frame`](xref:Xamarin.Forms.Frame)클래스는에서 파생 [`ContentView`](#contentview) 되 고 자식 주위에 테두리 또는 프레임을 표시 합니다. `Frame`클래스의 기본값은 [`Padding`](xref:Xamarin.Forms.Layout.Padding) 20이 고, [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) 및 속성도 정의 [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.Frame)  /  [가이드](~/xamarin-forms/user-interface/layouts/frame.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) | [![프레임 예제](layouts-images/Frame.png "프레임 예제")](layouts-images/Frame-Large.png#lightbox "프레임 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
-
-<a name="scrollView" />
 
 ### <a name="scrollview"></a>ScrollView
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView)는 내용을 스크롤할 수 있습니다. 속성을 [`Content`](xref:Xamarin.Forms.ScrollView.Content) 보기 또는 레이아웃으로 너무 커서 화면에 맞게 설정 합니다. 의 내용은 `ScrollView` 매우 일반적입니다 [`StackLayout`](#stackLayout) . 스크롤을 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) 세로, 수평 또는 둘 다로 지정 하려면 속성을 설정 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ScrollView)  /  [가이드](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![ScrollView 예제](layouts-images/ScrollView.png "ScrollView 예제")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView)는 내용을 스크롤할 수 있습니다. 속성을 [`Content`](xref:Xamarin.Forms.ScrollView.Content) 보기 또는 레이아웃으로 너무 커서 화면에 맞게 설정 합니다. 의 내용은 `ScrollView` 매우 일반적입니다 [`StackLayout`](#stacklayout) . 스크롤을 [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) 세로, 수평 또는 둘 다로 지정 하려면 속성을 설정 합니다.<br /><br />[API 설명서](xref:Xamarin.Forms.ScrollView)  /  [가이드](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) | [![ScrollView 예제](layouts-images/ScrollView.png "ScrollView 예제")](layouts-images/ScrollView-Large.png#lightbox "ScrollView 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView
 
 |     |     |
 | --- | --- |
-| [`TemplatedView`](xref:Xamarin.Forms.TemplatedView)컨트롤 템플릿을 사용 하 여 콘텐츠를 표시 하 고의 기본 클래스입니다 [`ContentView`](#contentView) .<br /><br />[API 설명서](xref:Xamarin.Forms.TemplatedView)  /  [가이드](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedView 예제](layouts-images/TemplatedView.png "TemplatedView 예제")](layouts-images/TemplatedView.png#lightbox "TemplatedView 예제") |
+| [`TemplatedView`](xref:Xamarin.Forms.TemplatedView)컨트롤 템플릿을 사용 하 여 콘텐츠를 표시 하 고의 기본 클래스입니다 [`ContentView`](#contentview) .<br /><br />[API 설명서](xref:Xamarin.Forms.TemplatedView)  /  [가이드](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedView 예제](layouts-images/TemplatedView.png "TemplatedView 예제")](layouts-images/TemplatedView.png#lightbox "TemplatedView 예제") |
 |     |     |
 
 ### <a name="contentpresenter"></a>ContentPresenter
@@ -64,16 +58,12 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 
 이러한 클래스는에서 파생 [`Layout<View>`](xref:Xamarin.Forms.Layout`1) 됩니다.
 
-<a name="stackLayout" />
-
 ### <a name="stacklayout"></a>StackLayout
 
 |     |     |
 | --- | --- |
 | [`StackLayout`](xref:Xamarin.Forms.StackLayout)속성에 따라 가로 또는 세로로 스택에 자식 요소를 배치 [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) 합니다. [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing)속성은 자식 사이의 간격을 제어 하며 기본값은 6입니다.<br /><br />[API 설명서](xref:Xamarin.Forms.StackLayout)  /  [가이드](~/xamarin-forms/user-interface/layouts/stacklayout.md)  /  [샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)| [![StackLayout 예제](layouts-images/StackLayout.png "StackLayout 예제")](layouts-images/StackLayout-Large.png#lightbox "StackLayout 예제")<br />[이 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs)  /  에 대 한 c # 코드 [XAML 페이지](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
 |     |     |
-
-<a name="grid" />
 
 ### <a name="grid"></a>표
 
@@ -106,5 +96,5 @@ _Xamarin.ios 레이아웃은 사용자 인터페이스 컨트롤을 시각적 �
 ## <a name="related-links"></a>관련 링크
 
 - [Xamarin.Forms양식 갤러리 샘플](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.Forms표본의](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms 샘플](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.FormsAPI 설명서](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

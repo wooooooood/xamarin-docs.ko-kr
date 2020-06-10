@@ -6,12 +6,12 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: eee76c056d05edccd1e039bc5e4cb8107d1aceb5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b8be06b9da4561ffc0d628b53f8daf639b5e3179
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571101"
 ---
 # <a name="shared-projects-code-sharing"></a>공유 프로젝트 코드 공유
 
@@ -35,7 +35,7 @@ _공유 프로젝트를 사용 하면 다양 한 응용 프로그램 프로젝�
 
 Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 프로젝트를 참조할 수 없습니다. 예를 들어 android 단위 테스트 프로젝트는 Android 응용 프로그램 프로젝트를 참조할 수 없습니다. 이 제한 사항에 대 한 자세한 내용은이 [포럼 토론](https://forums.xamarin.com/discussion/comment/98092/)을 참조 하세요.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Mac용 Visual Studio 연습
 
@@ -69,7 +69,7 @@ Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 �
 
 ![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="visual-studio-walkthrough"></a>Visual Studio 연습
 
@@ -77,7 +77,7 @@ Android 응용 프로그램 프로젝트는 다른 Android 응용 프로그램 �
 
 ### <a name="creating-a-shared-project"></a>공유 프로젝트 만들기
 
-새 공유 프로젝트를 만들려면 **파일**  > **새**  > **프로젝트**로 이동 합니다.
+새 공유 프로젝트를 만들려면 **파일**  >  **새로 만들기**  >  **프로젝트**로 이동 합니다.
 
 Visual Studio 2019의 **새 프로젝트 만들기** 페이지에서 검색 상자에 **공유** 를 입력 합니다. **공유 프로젝트** 템플릿을 선택 하 고 **다음**을 선택 합니다. 프로젝트의 이름을 입력 하 고 **만들기**를 선택 합니다.
 
@@ -107,19 +107,19 @@ Visual Studio 2017에서 **공유 프로젝트** 템플릿을 선택 하 고 프
 
 -----
 
-<a name="Shared_Project_Example"/>
+<a name="Shared_Project_Example"></a>
 
 ## <a name="shared-project-example"></a>공유 프로젝트 예제
 
-[Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) 예제에서는 공유 프로젝트를 사용 하 여 IOS, Android 및 Windows Phone 응용 프로그램 모두에서 사용 되는 공통 코드를 포함 합니다. `SQLite.cs` 및 `TaskRepository.cs` 소스 코드 파일은 모두 컴파일러 지시문을 제품 (예: `#if __ANDROID__`)를 참조 하는 각 응용 프로그램에 대해 서로 다른 출력을 생성 합니다.
+[Tasky](https://github.com/xamarin/mobile-samples/tree/master/Tasky) 예제에서는 공유 프로젝트를 사용 하 여 IOS, Android 및 Windows Phone 응용 프로그램 모두에서 사용 되는 공통 코드를 포함 합니다. `SQLite.cs`및 `TaskRepository.cs` 소스 코드 파일 모두 컴파일러 지시문을 제품 (예: `#if __ANDROID__`)를 통해 해당 항목을 참조 하는 각 응용 프로그램에 대해 서로 다른 출력을 생성할 수 있습니다.
 
 전체 솔루션 구조는 아래에 표시 됩니다 (각각 Mac용 Visual Studio 및 Visual Studio).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 ![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
 

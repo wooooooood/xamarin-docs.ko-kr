@@ -1,22 +1,8 @@
 ---
-title: Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
-description: Azure Storage는 구조화 되지 않은 구조화 된 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는를 사용 하 여 Xamarin.Forms Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4df14ef4d3eb72b92e4201e57103780801ca2d2f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131029"
+제목: "" description: Azure Storage "에서 Azure Storage의 데이터 저장 및 액세스는 Xamarin.Forms 구조화 되지 않은 데이터와 구조화 된 데이터를 저장 하는 데 사용할 수 있는 확장 가능한 클라우드 저장소 솔루션입니다. 이 문서에서는를 사용 하 여 Xamarin.Forms Azure Storage에서 텍스트 및 이진 데이터를 저장 하는 방법과 데이터에 액세스 하는 방법을 설명 합니다. "
+assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB: xamarin-forms author: davidbritch: dabritch:: 12/28/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Azure Storage의 데이터 저장 및 액세스Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
@@ -71,10 +57,8 @@ Azure Storage 계정을 응용 프로그램에 통합 하는 프로세스는 다
 
 1. 스토리지 계정을 만듭니다. 자세한 내용은 [저장소 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account)를 참조 하세요.
 1. 응용 프로그램에 [Azure Storage 클라이언트 라이브러리](https://www.nuget.org/packages/WindowsAzure.Storage/) 를 추가 Xamarin.Forms 합니다.
-1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결](#connecting)을 참조 하세요.
+1. 저장소 연결 문자열을 구성 합니다. 자세한 내용은 [Azure Storage에 연결](#connecting-to-azure-storage)을 참조 하세요.
 1. `using` `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` Azure Storage에 액세스 하는 클래스에 및 네임 스페이스에 대 한 지시문을 추가 합니다.
-
-<a name="connecting" />
 
 ## <a name="connecting-to-azure-storage"></a>Azure Storage에 연결
 

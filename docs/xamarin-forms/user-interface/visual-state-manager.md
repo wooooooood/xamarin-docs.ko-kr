@@ -1,24 +1,9 @@
 ---
-title: Xamarin.Forms시각적 상태 관리자
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 13dd0a3f5d665e2232e7e6e12edac7cf117dd0ca
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127285"
+제목: " Xamarin.Forms 시각적 상태 관리자" 설명: "Visual State manager를 사용 하 여 코드에서 설정 된 시각적 상태에 따라 XAML 요소를 변경 합니다."
+assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 02/21/2020 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinforms-visual-state-manager"></a>Xamarin.Forms시각적 상태 관리자
+
+# <a name="xamarinforms-visual-state-manager"></a>Xamarin.Forms 시각적 개체 상태 관리자
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
@@ -409,41 +394,13 @@ VSM 태그의 나머지 부분은 이전과 동일 합니다.
 다음 표에서는에 정의 된 시각적 상태를 보여 줍니다 Xamarin.Forms .
 
 | 클래스 | 상태 | 추가 정보 |
-| ----- | ---
-제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms: custom: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
---- | ---제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms.: custom: author: ms author: ms. 날짜: 다음 loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms: custom: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms: custom: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms: custom: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms: custom: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-제목: ' Xamarin.Forms 시각적 상태 관리자 ' 설명: ms. prod: assetid: ms: ms: custom: author: ms author: ms. date: no loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--------- | | `Button` | `Pressed` |  [Button 시각적 상태](~/xamarin-forms/user-interface/button.md#button-visual-states) | | `CheckBox` | `IsChecked` |  [CheckBox 시각적 상태](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) | | `CarouselView`  |  `DefaultItem` , `CurrentItem` , `PreviousItem` , `NextItem`  |  [CarouselView 시각적 상태](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) | `ImageButton` |  |  `Pressed`  |  [ImageButton 시각적 상태](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) | | `RadioButton` | `IsChecked` |  [RadioButton 시각적 상태](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) | | `VisualElement`  |  `Normal` , `Disabled` , `Focused` , `Selected`  |  [공용 상태](#common-states) |
+| ----- | ------ | ---------------- |
+| `Button` | `Pressed` | [단추 시각적 상태](~/xamarin-forms/user-interface/button.md#button-visual-states) |
+| `CheckBox` | `IsChecked` | [CheckBox 시각적 상태](~/xamarin-forms/user-interface/checkbox.md#checkbox-visual-states) |
+| `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [CarouselView 시각적 상태](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
+| `ImageButton` | `Pressed` | [ImageButton 시각적 상태](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
+| `RadioButton` | `IsChecked` | [RadioButton 시각적 상태](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [공용 상태](#common-states) |
 
 이러한 각 상태는 이라는 시각적 상태 그룹을 통해 액세스할 수 있습니다 `CommonStates` .
 
@@ -626,7 +583,7 @@ public partial class VsmValidationPage : ContentPage
 
 상태 트리거는 [`VisualState`](xref:Xamarin.Forms.VisualState)의 [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) 컬렉션에 추가됩니다. 이 컬렉션은 단일 상태 트리거 또는 여러 상태 트리거를 포함할 수 있습니다. 컬렉션의 상태 트리거가 활성 상태인 경우 [`VisualState`](xref:Xamarin.Forms.VisualState)가 적용됩니다.
 
-상태 트리거를 사용 하 여 시각적 상태를 제어 하는 경우는 Xamarin.Forms 다음의 우선 순위 규칙을 사용 하 여 활성화 될 트리거와 해당 하는 트리거를 결정 합니다 [`VisualState`](xref:Xamarin.Forms.VisualState) .
+상태 트리거를 사용하여 시각적 개체 상태를 제어하는 경우 Xamarin.Forms는 다음과 같은 우선 순위 규칙을 사용하여 활성화될 트리거(및 해당 [`VisualState`](xref:Xamarin.Forms.VisualState))를 결정합니다.
 
 1. [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase)에서 파생되는 모든 트리거.
 1. [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) 조건을 충족하여 활성화되는 [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger).
@@ -634,9 +591,7 @@ public partial class VsmValidationPage : ContentPage
 
 여러 트리거가 동시에 활성화된 경우(예: 두 개의 사용자 지정 트리거) 태그에 선언된 첫 번째 트리거가 우선적으로 적용됩니다.
 
-상태 트리거에 대 한 자세한 내용은 [상태 트리거](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)를 참조 하세요.
-
-<a name="adaptive-layout" />
+상태 트리거에 대한 자세한 내용은 [상태 트리거](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)를 참조하세요.
 
 ## <a name="use-the-visual-state-manager-for-adaptive-layout"></a>적응 레이아웃에 대 한 시각적 상태 관리자 사용
 

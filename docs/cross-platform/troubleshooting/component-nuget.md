@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: f81df8ac253e53b16c3ab09bf80d66a7b6324854
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571521"
 ---
 # <a name="updating-component-references-to-nuget"></a>NuGet에 대 한 구성 요소 참조 업데이트
 
@@ -29,7 +29,7 @@ NuGet 패키지로 사용할 수 없는 구성 요소에 대 한 대안을 찾�
 
 Mac용 Visual Studio의 Visual Studio 및 7.4 릴리스 15.6 릴리스는 더 이상 프로젝트의 구성 요소를 지원 하지 않습니다. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동으로 구성 요소를 제거 해야 함을 설명 하는 다음과 같은 대화 상자가 표시 됩니다.
 
@@ -41,7 +41,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 2. 언로드된 프로젝트를 마우스 오른쪽 단추로 다시 클릭 하 고 **{프로젝트 이름} .Csproj 편집**을 선택 합니다.
 
-3. `XamarinComponentReference`파일에서 참조를 찾습니다. 다음 예제와 유사 하 게 표시 됩니다.
+3. 파일에서에 대 한 참조를 찾습니다 `XamarinComponentReference` . 다음 예제와 유사 하 게 표시 됩니다.
 
     ```xml
     <ItemGroup>
@@ -60,13 +60,13 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
     </ItemGroup>
     ```
 
-4. `XamarinComponentReference`에 대 한 참조를 제거 하 고 파일을 저장 합니다. 위의 예제에서는 전체 `ItemGroup`를 제거 하는 것이 안전 합니다.
+4. 에 대 한 참조를 제거 `XamarinComponentReference` 하 고 파일을 저장 합니다. 위의 예제에서는 전체를 제거 하는 것이 안전 `ItemGroup` 합니다.
 
 5. 파일이 저장 되 면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 다시 로드**를 선택 합니다.
 
 6. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 프로젝트를 Mac용 Visual Studio 로드 하는 경우 프로젝트에서 수동으로 구성 요소를 제거 해야 함을 설명 하는 다음과 같은 대화 상자가 표시 됩니다.
 
@@ -74,9 +74,9 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 
 프로젝트에서 구성 요소를 제거 하려면 다음을 수행 합니다.
 
-1. .Csproj 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **도구 > 파일 편집**을 선택 합니다.
+1. .csproj 파일을 엽니다. 이렇게 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **도구 > 파일 편집**을 선택 합니다.
 
-2. `XamarinComponentReference`파일에서 참조를 찾습니다. 다음 예제와 유사 하 게 표시 됩니다.
+2. 파일에서에 대 한 참조를 찾습니다 `XamarinComponentReference` . 다음 예제와 유사 하 게 표시 됩니다.
 
     ```xml
     <ItemGroup>
@@ -95,7 +95,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
     </ItemGroup>
     ```
 
-3. `XamarinComponentReference`에 대 한 참조를 제거 하 고 파일을 저장 합니다. 위의 예제에서 전체 `ItemGroup`를 제거 하는 것이 안전 합니다.
+3. 에 대 한 참조를 제거 `XamarinComponentReference` 하 고 파일을 저장 합니다. 위의 예제에서 전체를 제거 하는 것이 안전 합니다.`ItemGroup`
 
 4. 솔루션의 각 프로젝트에 대해 위의 단계를 반복 합니다.
 
@@ -113,7 +113,7 @@ Visual Studio에 프로젝트를 로드 하는 경우 프로젝트에서 수동�
 대부분의 구성 요소는 위의 범주 중 하나에 속합니다.
 동일한 NuGet 패키지를 포함 하지 않는 구성 요소를 사용 하는 경우 아래 [nuget 마이그레이션 경로를 사용 하지 않고 구성 요소](#require-update) 섹션을 참조 하세요.
 
-<a name="contain" />
+<a name="contain"></a>
 
 ## <a name="components-that-contain-nuget-packages"></a>NuGet 패키지를 포함 하는 구성 요소
 
@@ -141,7 +141,7 @@ NuGet 패키지는 **패키지** 노드에 나열 된 상태를 유지 하 고 �
 
 ![NuGet 패키지 업데이트](component-nuget-images/nuget-update-sml.png)
 
-<a name="replace" />
+<a name="replace"></a>
 
 ## <a name="components-with-nuget-replacements"></a>NuGet 대체를 사용 하는 구성 요소
 
@@ -159,8 +159,8 @@ _NuGet 종속성을 포함할 수 있지만 무시할 수 있습니다._
 
 예를 들어 다음을 검색 하 여 인기 있는 **sqlite-net-pcl** 패키지를 찾을 수 있습니다.
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – 제품 이름입니다.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – 작성자의 프로필입니다.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl)– 제품 이름입니다.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum)– 작성자의 프로필입니다.
 
 ### <a name="updating-the-solution"></a>솔루션 업데이트
 
@@ -174,7 +174,7 @@ NuGet에서 구성 요소를 사용할 수 있는지 확인 한 후에는 다음
 
 그러면 구성 요소와 참조가 삭제 됩니다. 이렇게 하면 해당 하는 NuGet 패키지를 추가 하 여 대체할 때까지 빌드가 중단 됩니다.
 
-#### <a name="add-the-nuget-package"></a>NuGet 패키지 추가
+#### <a name="add-the-nuget-package"></a>Nuget 패키지 추가
 
 1. **패키지** 노드를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가**...를 선택 합니다.
 2. 이름 또는 작성자에 의해 NuGet 대체를 검색 합니다.
@@ -186,7 +186,7 @@ NuGet에서 구성 요소를 사용할 수 있는지 확인 한 후에는 다음
 NuGet 패키지는 종속성과 함께 프로젝트에 추가 됩니다.
 빌드를 수정 해야 합니다. 빌드가 계속 실패할 경우 각 오류를 조사 하 여 구성 요소와 NuGet 패키지 간에 API 차이가 있는지 확인 합니다.
 
-<a name="require-update" />
+<a name="require-update"></a>
 
 ## <a name="components-without-a-nuget-migration-path"></a>NuGet 마이그레이션 경로가 없는 구성 요소
 

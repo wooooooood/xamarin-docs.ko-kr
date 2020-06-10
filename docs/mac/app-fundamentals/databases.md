@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: a22eca56dcec46e11a67633a8403b57580ed0546
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 034169b4e77dace365b36733442afe295b62fb80
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032608"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574010"
 ---
 # <a name="databases-in-xamarinmac"></a>Xamarin.ios의 데이터베이스
 
@@ -20,7 +20,7 @@ _이 문서에서는 키-값 코딩 및 키-값 관찰을 사용 하 여 SQLite 
 
 ## <a name="overview"></a>개요
 
-Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용할 때 Xamarin.ios 또는 xamarin.ios 응용 프로그램이 액세스할 수 있는 것과 동일한 SQLite 데이터베이스에 액세스할 수 있습니다.
+Xamarin.ios 응용 프로그램에서 c # 및 .NET으로 작업 하는 경우 Xamarin.ios 또는 Xamarin.ios 응용 프로그램이 액세스할 수 있는 것과 동일한 SQLite 데이터베이스에 액세스할 수 있습니다.
 
 이 문서에서는 SQLite 데이터에 액세스 하는 두 가지 방법을 설명 합니다.
 
@@ -29,17 +29,17 @@ Xamarin.ios 응용 프로그램 C# 에서 및 .net을 사용할 때 Xamarin.ios 
 
 [![실행 중인 앱의 예](databases-images/intro01.png "실행 중인 앱의 예")](databases-images/intro01-large.png#lightbox)
 
-이 문서에서는 Xamarin.ios 응용 프로그램의 SQLite 데이터베이스로 키-값 코딩 및 데이터 바인딩을 사용 하는 기본 사항을 설명 합니다. [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 사용 하는 것이 가장 좋습니다. 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하 고,에서 사용할 주요 개념 및 기술을 설명 하 고 있습니다. 이 문서를 참조 하세요.
+이 문서에서는 Xamarin.ios 응용 프로그램의 SQLite 데이터베이스로 키-값 코딩 및 데이터 바인딩을 사용 하는 기본 사항을 설명 합니다. 이 문서에서 사용할 주요 개념 및 기술에 대해 설명 하는 대로 [Hello, Mac](~/mac/get-started/hello-mac.md) 문서를 먼저 소개 하 고 특히 [Xcode 및 Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) 및 [콘센트 및 작업](~/mac/get-started/hello-mac.md#outlets-and-actions) 섹션을 소개 하는 것이 좋습니다.
 
 키-값 코딩 및 데이터 바인딩을 사용할 예정 이므로,이 설명서와 샘플 응용 프로그램에서 사용 되는 핵심 기술 및 개념을 설명 하는 대로 먼저 [데이터 바인딩과 키-값 코딩](~/mac/app-fundamentals/databinding.md) 을 통해 작업 해 보세요.
 
-[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서의 [목적에 따라 C# 클래스/메서드를](~/mac/internals/how-it-works.md) 표시 하는 방법에 대 한 자세한 내용을 확인할 수 있습니다 .이 항목에서는 C# 클래스를 목표에 연결 하는 데 사용 되는 `Register` 및 `Export` 특성에 대해 설명 합니다. 개체 및 UI 요소
+[Xamarin.ios 내부](~/mac/internals/how-it-works.md) 문서에서 c [# 클래스/메서드를 목표로](~/mac/internals/how-it-works.md) 표시 하는 방법에 대해 살펴볼 수 있습니다 `Register` . c `Export` # 클래스를 목표-c 개체 및 UI 요소에 연결 하는 데 사용 되는 및 특성에 대해서도 설명 합니다.
 
 ## <a name="direct-sqlite-access"></a>직접 SQLite 액세스
 
-Xcode의 Interface Builder에서 UI 요소에 바인딩할 SQLite 데이터의 경우, 데이터를 쓰고 읽는 방법을 완전히 제어 하 여 먼저 SQLite 데이터베이스에 직접 액세스 하는 것이 좋습니다 (예: ORM 등의 기술을 사용 하는 대신).  데이터베이스에서
+Xcode의 Interface Builder에서 UI 요소에 바인딩할 SQLite 데이터의 경우 데이터베이스에서 데이터를 쓰고 읽는 방법을 모두 제어 하므로 ORM과 같은 기술을 사용 하는 것과는 달리 SQLite 데이터베이스에 직접 액세스 하는 것이 좋습니다.
 
-[데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 설명서에서 볼 수 있듯이 xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기법을 사용 하면 작성 하 고 유지 관리 해야 하는 코드의 양을 크게 줄일 수 있습니다. UI 요소 작업 SQLite 데이터베이스에 직접 액세스 하는 것과 함께 사용 하면 해당 데이터베이스에서 데이터를 읽고 쓰는 데 필요한 코드의 양을 크게 줄일 수 있습니다.
+[데이터 바인딩 및 키-값 코딩](~/mac/app-fundamentals/databinding.md) 설명서에서 볼 수 있듯이 xamarin.ios 응용 프로그램에서 키-값 코딩 및 데이터 바인딩 기법을 사용 하 여 UI 요소를 채우고 사용 하기 위해 작성 하 고 유지 관리 해야 하는 코드의 양을 크게 줄일 수 있습니다. SQLite 데이터베이스에 직접 액세스 하는 것과 함께 사용 하면 해당 데이터베이스에서 데이터를 읽고 쓰는 데 필요한 코드의 양을 크게 줄일 수 있습니다.
 
 이 문서에서는 데이터 바인딩과 키-값 코딩 문서에서 샘플 앱을 수정 하 여 SQLite 데이터베이스를 바인딩의 지원 원본으로 사용 합니다.
 
@@ -476,7 +476,7 @@ public bool isManager {
 }
 ```
 
-이전에 데이터를 저장 한 경우 **Name**, **직업** 또는 **ismanager** 속성에 대 한 변경 내용이 데이터베이스에 전송 됩니다 (예: `_conn` 변수가 `null`되지 않은 경우). 다음으로, 데이터베이스에서 사용자를 **만들고**, **업데이트**하 고, **로드** 하 고, **삭제** 하는 메서드를 살펴보겠습니다.
+**이름**, **직업** 또는 **ismanager** 속성에 대 한 모든 변경 내용은 이전에 데이터가 저장 된 경우 (예: `_conn` 변수가이 아닌 경우) 데이터베이스에 전송 됩니다. `null` 다음으로, 데이터베이스에서 사용자를 **만들고**, **업데이트**하 고, **로드** 하 고, **삭제** 하는 메서드를 살펴보겠습니다.
 
 #### <a name="create-a-new-record"></a>새 레코드 만들기
 
@@ -526,19 +526,19 @@ public void Create(SqliteConnection conn) {
 }
 ```
 
-`SQLiteCommand`를 사용 하 여 데이터베이스에 새 레코드를 만듭니다. `CreateCommand`를 호출 하 여 메서드로 전달 된 `SQLiteConnection` (conn)에서 새 명령을 가져옵니다. 다음으로, 실제 값에 대 한 매개 변수를 제공 하 여 실제로 새 레코드를 작성 하도록 SQL 명령을 설정 합니다.
+를 사용 하 여 `SQLiteCommand` 데이터베이스에 새 레코드를 만듭니다. 을 `SQLiteConnection` 호출 하 여 메서드로 전달 된 (conn)에서 새 명령을 가져옵니다 `CreateCommand` . 다음으로, 실제 값에 대 한 매개 변수를 제공 하 여 실제로 새 레코드를 작성 하도록 SQL 명령을 설정 합니다.
 
 ```csharp
 command.CommandText = "INSERT INTO [People] (ID, Name, Occupation, isManager, ManagerID) VALUES (@COL1, @COL2, @COL3, @COL4, @COL5)";
 ```
 
-나중에 `SQLiteCommand`에서 `Parameters.AddWithValue` 메서드를 사용 하 여 매개 변수의 값을 설정 합니다. 매개 변수를 사용 하 여 값 (예: 작은따옴표)이 SQLite로 전송 되기 전에 제대로 인코딩 되는지 확인 합니다. 예제:
+나중에에서 메서드를 사용 하 여 매개 변수의 값을 설정 합니다 `Parameters.AddWithValue` `SQLiteCommand` . 매개 변수를 사용 하 여 값 (예: 작은따옴표)이 SQLite로 전송 되기 전에 제대로 인코딩 되는지 확인 합니다. 예제:
 
 ```csharp
 command.Parameters.AddWithValue ("@COL1", ID);
 ```
 
-마지막으로 사용자가 관리자이 고 해당 직원의 컬렉션을 포함할 수 있기 때문에 해당 사용자에 대 한 `Create` 메서드를 재귀적으로 호출 하 여 데이터베이스에도 저장 합니다.
+마지막으로 사용자가 관리자이 고 해당 직원의 컬렉션을 포함할 수 있으므로 `Create` 해당 사용자에 대해 메서드를 재귀적으로 호출 하 여 데이터베이스에도 저장 합니다.
 
 ```csharp
 // Save children to database as well
@@ -594,13 +594,13 @@ public void Update(SqliteConnection conn) {
 }
 ```
 
-위에서 **만들기** 와 마찬가지로, 전달 된 `SQLiteConnection`에서 `SQLiteCommand`를 가져오고 SQL에서 레코드를 업데이트 (매개 변수 제공) 하도록 설정 합니다.
+위에서 **만들기** 와 마찬가지로 전달 된에서을 가져오고 `SQLiteCommand` SQL에서 `SQLiteConnection` 레코드를 업데이트 (매개 변수 제공) 하도록 설정 합니다.
 
 ```csharp
 command.CommandText = "UPDATE [People] SET Name = @COL2, Occupation = @COL3, isManager = @COL4, ManagerID = @COL5 WHERE ID = @COL1";
 ```
 
-매개 변수 값을 입력 하 고 (예: `command.Parameters.AddWithValue ("@COL1", ID);`) 자식 레코드에 대해 업데이트를 재귀적으로 호출 합니다.
+매개 변수 값 (예:)을 입력 `command.Parameters.AddWithValue ("@COL1", ID);` 하 고 자식 레코드에 대해 업데이트를 재귀적으로 호출 합니다.
 
 ```csharp
 // Save children to database as well
@@ -711,7 +711,7 @@ command.CommandText = "SELECT ID FROM [People] WHERE ManagerID = @COL1";
 command.Parameters.AddWithValue ("@COL1", id);
 ```
 
-마지막으로 데이터 판독기를 사용 하 여 쿼리를 실행 하 고 레코드 필드를 반환 합니다 (`PersonModel` 클래스의 인스턴스로 복사).
+마지막으로 데이터 판독기를 사용 하 여 쿼리를 실행 하 고 레코드 필드를 반환 합니다 (클래스의 인스턴스로 복사 `PersonModel` ).
 
 ```csharp
 using (var reader = command.ExecuteReader ()) {
@@ -726,7 +726,7 @@ using (var reader = command.ExecuteReader ()) {
 }
 ```
 
-이 사용자가 관리자 인 경우에도 해당 `Load` 메서드를 재귀적으로 호출 하 여 모든 직원을 로드 해야 합니다.
+이 사용자가 관리자 인 경우에도 해당 메서드를 재귀적으로 호출 하 여 모든 직원을 로드 해야 합니다 `Load` .
 
 ```csharp
 // Is this a manager?
@@ -798,7 +798,7 @@ command.CommandText = "DELETE FROM [People] WHERE (ID = @COL1 OR ManagerID = @CO
 command.Parameters.AddWithValue ("@COL1", ID);
 ```
 
-레코드가 제거 된 후에는 `PersonModel` 클래스의 현재 인스턴스를 삭제 합니다.
+레코드가 제거 된 후에는 클래스의 현재 인스턴스를 삭제 합니다 `PersonModel` .
 
 ```csharp
 // Empty class
@@ -904,7 +904,7 @@ foreach (var cmd in commands) {
 conn.Close ();
 ```
 
-마지막으로, 응용 프로그램을 처음 실행할 때 또는 데이터베이스가 없는 경우 데이터 모델 (`PersonModel`)을 사용 하 여 데이터베이스에 대 한 기본 레코드 집합을 만듭니다.
+마지막으로, 데이터 모델 ()을 사용 `PersonModel` 하 여 응용 프로그램을 처음 실행할 때 또는 데이터베이스가 없는 경우 데이터베이스에 대 한 기본 레코드 집합을 만듭니다.
 
 ```csharp
 // Build list of employees
@@ -969,13 +969,13 @@ _conn.Close ();
 
 ```
 
-여기서는 `PersonModel` 클래스에 대 한 생성자의 오버 로드를 사용 하 여 사용자를 메모리로 로드 합니다.
+여기서는 클래스에 대 한 생성자의 오버 로드를 사용 하 여 `PersonModel` 사용자를 메모리로 로드 합니다.
 
 ```csharp
 var person = new PersonModel (_conn, childID);
 ```
 
-또한 `AddPerson (person)` 사용자의 컬렉션에 사용자를 추가 하기 위해 데이터 바인딩된 클래스를 호출 하는 중입니다. 이렇게 하면 UI가 변경 내용을 인식 하 고 표시 합니다.
+데이터 바인딩된 클래스를 호출 하 여 사람 컬렉션에 사람을 추가 하는 것은 `AddPerson (person)` UI가 변경 내용을 인식 하 고 표시 하도록 합니다.
 
 ```csharp
 [Export("addObject:")]
@@ -1010,15 +1010,15 @@ using (var command = _conn.CreateCommand ()) {
 _conn.Close ();
 ```
 
-의 유일한 차이점은 관리자 `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"`만 로드 하는 SQL 문의 유일한 차이점 이지만, 그렇지 않으면 위의 섹션과 동일 하 게 작동 합니다.
+유일한 차이점은 관리자만 로드 하는 SQL 문의 유일한 차이점 `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"` 이지만, 그렇지 않으면 위의 섹션과 동일 하 게 작동 합니다.
 
-<a name="Databases-and-ComboBoxes" />
+<a name="Databases-and-ComboBoxes"></a>
 
 ### <a name="databases-and-comboboxes"></a>데이터베이스 및 comboboxes
 
 MacOS에서 사용할 수 있는 메뉴 컨트롤 (예: 콤보 상자)은 내부 목록 (Interface Builder 미리 정의 되거나 코드를 통해 채워질 수 있음)에서 또는 고유한 사용자 지정 외부 데이터 원본을 제공 하 여 드롭다운 목록을 채우도록 설정할 수 있습니다. 자세한 내용은 [Menu 컨트롤 데이터 제공](~/mac/user-interface/standard-controls.md#Providing-Menu-Control-Data) 을 참조 하세요.
 
-예를 들어 Interface Builder 위의 단순 바인딩 예제를 편집 하 고 콤보 상자를 추가 하 고 `EmployeeSelector` 라는 콘센트를 사용 하 여 노출 합니다.
+예를 들어 Interface Builder 위의 단순 바인딩 예제를 편집 하 고, 콤보 상자를 추가 하 고 라는 콘센트를 사용 하 여 노출 합니다 `EmployeeSelector` .
 
 [![콤보 상자 출구 노출](databases-images/combo01.png "콤보 상자 출구 노출")](databases-images/combo01-large.png#lightbox)
 
@@ -1030,7 +1030,7 @@ MacOS에서 사용할 수 있는 메뉴 컨트롤 (예: 콤보 상자)은 내부
 
 #### <a name="providing-combobox-data"></a>Combobox 데이터 제공
 
-그런 다음 `ComboBoxDataSource` 이라는 프로젝트에 새 클래스를 추가 하 고 다음과 같이 만듭니다.
+그런 다음 라는 프로젝트에 새 클래스를 추가 하 `ComboBoxDataSource` 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -1399,11 +1399,11 @@ namespace MacDatabase
 }
 ```
 
-이 예제에서는 모든 SQLite 데이터 원본에서 콤보 상자 항목을 제공할 수 있는 새로운 `NSComboBoxDataSource`를 만듭니다. 먼저, 다음 속성을 정의 합니다.
+이 예제에서는 `NSComboBoxDataSource` 모든 SQLite 데이터 원본에서 콤보 상자 항목을 제공할 수 있는 새을 만듭니다. 먼저, 다음 속성을 정의 합니다.
 
 - `Conn`-SQLite 데이터베이스에 대 한 연결을 가져오거나 설정 합니다.
 - `TableName`-테이블 이름을 가져오거나 설정 합니다.
-- `IDField`-지정 된 테이블의 고유 ID를 제공 하는 필드를 가져오거나 설정 합니다. 기본값은 `ID`여야 합니다.
+- `IDField`-지정 된 테이블의 고유 ID를 제공 하는 필드를 가져오거나 설정 합니다. 기본값은 `ID`입니다.
 - `DisplayField`-드롭다운 목록에 표시 되는 필드를 가져오거나 설정 합니다.
 - `RecordCount`-지정 된 테이블의 레코드 수를 가져옵니다.
 
@@ -1419,7 +1419,7 @@ public ComboBoxDataSource (SqliteConnection conn, string tableName, string displ
 }
 ```
 
-`GetRecordCount` 메서드는 지정 된 테이블의 레코드 수를 반환 합니다.
+`GetRecordCount`메서드는 지정 된 테이블의 레코드 수를 반환 합니다.
 
 ```csharp
 private nint GetRecordCount ()
@@ -1463,7 +1463,7 @@ private nint GetRecordCount ()
 
 `TableName`, `IDField` 또는 `DisplayField` 속성 값이 변경 될 때마다 호출 됩니다.
 
-`IDForIndex` 메서드는 지정 된 드롭다운 목록 항목 인덱스에 있는 레코드의 고유 ID (`IDField`)를 반환 합니다. 
+`IDForIndex`메서드는 `IDField` 지정 된 드롭다운 목록 항목 인덱스에 있는 레코드의 고유 ID ()를 반환 합니다. 
 
 ```csharp
 public string IDForIndex (nint index)
@@ -1504,7 +1504,7 @@ public string IDForIndex (nint index)
 }
 ```
 
-`ValueForIndex` 메서드는 지정 된 드롭다운 목록 인덱스에 있는 항목에 대 한 값 (`DisplayField`)을 반환 합니다.
+`ValueForIndex`메서드는 `DisplayField` 지정 된 드롭다운 목록 인덱스에 있는 항목에 대 한 값 ()을 반환 합니다.
 
 ```csharp
 public string ValueForIndex (nint index)
@@ -1545,7 +1545,7 @@ public string ValueForIndex (nint index)
 }
 ```
 
-`IDForValue` 메서드는 지정 된 값에 대 한 고유 ID (`IDField`)를 반환 합니다 (`DisplayField`).
+`IDForValue`메서드는 `IDField` 지정 된 값 ()에 대해 고유 ID ()를 반환 합니다 `DisplayField` .
 
 ```csharp
 public string IDForValue (string value)
@@ -1589,7 +1589,7 @@ public string IDForValue (string value)
 }
 ```
 
-`ItemCount`는 `TableName`, `IDField` 또는 `DisplayField` 속성이 변경 될 때 계산 되는 목록에 있는 항목의 사전 계산 수를 반환 합니다.
+는 `ItemCount` `TableName` , `IDField` 또는 속성이 변경 될 때 계산 되는 목록에 있는 항목의 사전 계산 수를 반환 합니다 `DisplayField` .
 
 ```csharp
 public override nint ItemCount (NSComboBox comboBox)
@@ -1598,7 +1598,7 @@ public override nint ItemCount (NSComboBox comboBox)
 }
 ```
 
-`ObjectValueForItem` 메서드는 지정 된 드롭다운 목록 항목 인덱스의 값 (`DisplayField`)을 제공 합니다.
+`ObjectValueForItem`메서드는 `DisplayField` 지정 된 드롭다운 목록 항목 인덱스에 대해 값 ()을 제공 합니다.
 
 ```csharp
 public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
@@ -1639,9 +1639,9 @@ public override NSObject ObjectValueForItem (NSComboBox comboBox, nint index)
 }
 ```
 
-SQLite 명령의 `LIMIT` 및 `OFFSET` 문을 사용 하 여 필요한 레코드 하나를 제한 합니다.
+`LIMIT`SQLite 명령의 및 문을 사용 하 여 `OFFSET` 필요한 레코드 하나를 제한 합니다.
 
-`IndexOfItem` 메서드는 지정 된 값 (`DisplayField`)의 드롭다운 항목 인덱스를 반환 합니다.
+`IndexOfItem`메서드는 지정 된 값 ()의 드롭다운 항목 인덱스를 반환 합니다 `DisplayField` .
 
 ```csharp
 public override nint IndexOfItem (NSComboBox comboBox, string value)
@@ -1693,7 +1693,7 @@ public override nint IndexOfItem (NSComboBox comboBox, string value)
 
 값을 찾을 수 없는 경우 `NSRange.NotFound` 값이 반환 되 고 드롭다운 목록에서 모든 항목이 선택 취소 됩니다.
 
-`CompletedString` 메서드는 부분적으로 형식화 된 항목에 대해 일치 하는 첫 번째 값 (`DisplayField`)을 반환 합니다.
+`CompletedString`메서드는 `DisplayField` 부분적으로 형식화 된 항목에 대해 일치 하는 첫 번째 값 ()을 반환 합니다.
 
 ```csharp
 public override string CompletedString (NSComboBox comboBox, string uncompletedString)
@@ -1743,7 +1743,7 @@ public override string CompletedString (NSComboBox comboBox, string uncompletedS
 
 #### <a name="displaying-data-and-responding-to-events"></a>데이터를 표시 하 고 이벤트에 응답
 
-모든 부분을 함께 가져오려면 `SubviewSimpleBindingController`를 편집 하 고 다음과 같이 표시 합니다.
+모든 부분을 함께 가져오려면를 편집 하 `SubviewSimpleBindingController` 고 다음과 같이 표시 합니다.
 
 ```csharp
 using System;
@@ -1858,9 +1858,9 @@ namespace MacDatabase
 }
 ```
 
-`DataSource` 속성은 콤보 상자에 연결 된 `ComboBoxDataSource` (위에서 만든)의 바로 가기를 제공 합니다.
+`DataSource`속성은 `ComboBoxDataSource` 콤보 상자에 연결 된 (위에서 만든)의 바로 가기를 제공 합니다.
 
-`LoadSelectedPerson` 메서드는 지정 된 고유 ID에 대 한 사용자를 데이터베이스에서 로드 합니다.
+`LoadSelectedPerson`메서드는 지정 된 고유 ID에 대 한 사용자를 데이터베이스에서 로드 합니다.
 
 ```csharp
 private void LoadSelectedPerson (string id)
@@ -1874,13 +1874,13 @@ private void LoadSelectedPerson (string id)
 }
 ```
 
-`AwakeFromNib` 메서드 재정의에서 먼저 사용자 지정 콤보 상자 데이터 원본의 인스턴스를 연결 합니다.
+`AwakeFromNib`메서드 재정의에서 먼저 사용자 지정 콤보 상자 데이터 원본의 인스턴스를 연결 합니다.
 
 ```csharp
 EmployeeSelector.DataSource = new ComboBoxDataSource (Conn, "People", "Name");
 ```
 
-다음으로, 지정 된 사용자를 표시 하 고 로드 하는 데이터의 연결 된 고유 ID (`IDField`)를 검색 하 여 콤보 상자의 텍스트 값을 편집 하는 사용자에 게 응답 합니다.
+다음으로, 지정 된 사용자를 `IDField` 프레젠테이션 하 고 로드 하는 데이터의 연결 된 고유 ID ()를 찾아 사용자에 게 응답 합니다.
 
 ```csharp
 EmployeeSelector.Changed += (sender, e) => {
@@ -1923,14 +1923,14 @@ SQLite.NET는 응용 프로그램에 포함 하는 NuGet 패키지로 제공 됩
 패키지를 추가 하려면 다음을 수행 합니다.
 
 1. **Solution Pad**에서 **패키지** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **패키지 추가** ...를 선택 합니다.
-2. **검색 상자** 에 `SQLite.net`를 입력 하 고 **sqlite-net** 항목을 선택 합니다.
+2. `SQLite.net` **검색 상자** 에를 입력 하 고 **sqlite-net** 항목을 선택 합니다.
 
     [![SQLite NuGet 패키지 추가](databases-images/nuget01.png "SQLite NuGet 패키지 추가")](databases-images/nuget01-large.png#lightbox)
 3. **패키지 추가** 단추를 클릭 하 여 완료 합니다.
 
 ### <a name="creating-the-data-model"></a>데이터 모델 만들기
 
-프로젝트에 새 클래스를 추가 하 고 `OccupationModel`를 호출 해 보겠습니다. 이제 **OccupationModel.cs** 파일을 편집 하 고 다음과 같이 합니다.
+프로젝트에 새 클래스를 추가 하 고에서를 호출 해 보겠습니다 `OccupationModel` . 이제 **OccupationModel.cs** 파일을 편집 하 고 다음과 같이 합니다.
 
 ```csharp
 using System;
@@ -1966,7 +1966,7 @@ namespace MacDatabase
 }
 ```
 
-먼저 SQLite.NET (`using Sqlite`)를 포함 한 다음,이 레코드가 저장 될 때 데이터베이스에 기록 되는 여러 속성을 노출 합니다. 기본 키로 사용 하는 첫 번째 속성은 다음과 같이 자동으로 증가 하도록 설정 합니다.
+먼저 SQLite.NET ( `using Sqlite` )를 포함 한 다음,이 레코드가 저장 될 때 데이터베이스에 기록 되는 여러 속성을 노출 합니다. 기본 키로 사용 하는 첫 번째 속성은 다음과 같이 자동으로 증가 하도록 설정 합니다.
 
 ```csharp
 [PrimaryKey, AutoIncrement]
@@ -2063,7 +2063,7 @@ conn.Insert (Occupation);
 
 ### <a name="adding-a-table-view"></a>테이블 뷰 추가
 
-예제 사용법으로 Xcode의 Interface builder에서 UI에 테이블 뷰를 추가 합니다. 코드를 통해 C# 액세스할 수 있도록 콘센트 (`OccupationTable`)를 통해이 테이블 뷰를 노출 합니다.
+예제 사용법으로 Xcode의 Interface builder에서 UI에 테이블 뷰를 추가 합니다. `OccupationTable`C # 코드를 통해 액세스할 수 있도록 콘센트 ()를 통해이 테이블 뷰를 노출 합니다.
 
 [![테이블 뷰 유출 노출](databases-images/table01.png "테이블 뷰 유출 노출")](databases-images/table01-large.png#lightbox)
 
@@ -2071,7 +2071,7 @@ conn.Insert (Occupation);
 
 ### <a name="creating-the-table-data-source"></a>테이블 데이터 원본 만들기
 
-테이블에 대 한 데이터를 제공 하는 사용자 지정 데이터 원본을 만들어 보겠습니다. 먼저 `TableORMDatasource` 이라는 새 클래스를 추가 하 고 다음과 같이 만듭니다.
+테이블에 대 한 데이터를 제공 하는 사용자 지정 데이터 원본을 만들어 보겠습니다. 먼저 이라는 새 클래스를 추가 `TableORMDatasource` 하 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -2125,11 +2125,11 @@ namespace MacDatabase
 }
 ```
 
-나중에이 클래스의 인스턴스를 만들 때 open SQLite.NET 데이터베이스 연결을 전달 합니다. `LoadOccupations` 메서드는 데이터베이스를 쿼리하고 `OccupationModel` 데이터 모델을 사용 하 여 검색 된 레코드를 메모리에 복사 합니다.
+나중에이 클래스의 인스턴스를 만들 때 open SQLite.NET 데이터베이스 연결을 전달 합니다. `LoadOccupations`메서드는 데이터베이스를 쿼리하고 데이터 모델을 사용 하 여 검색 된 레코드를 메모리에 복사 합니다 `OccupationModel` .
 
 ### <a name="creating-the-table-delegate"></a>테이블 대리자 만들기
 
-SQLite.NET 데이터베이스에서 로드 한 정보를 표시 하는 사용자 지정 테이블 대리자가 필요한 최종 클래스입니다. 프로젝트에 새 `TableORMDelegate`를 추가 하 고 다음과 같이 만듭니다.
+SQLite.NET 데이터베이스에서 로드 한 정보를 표시 하는 사용자 지정 테이블 대리자가 필요한 최종 클래스입니다. 프로젝트에 새를 추가 하 `TableORMDelegate` 고 다음과 같이 만듭니다.
 
 ```csharp
 using System;
@@ -2193,11 +2193,11 @@ namespace MacDatabase
 }
 ```
 
-여기에서는 SQLite.NET 데이터베이스에서 로드 된 데이터 원본의 `Occupations` 컬렉션을 사용 하 여 `GetViewForItem` 메서드 재정의를 통해 테이블의 열을 채웁니다.
+여기서 `Occupations` 는 SQLite.NET 데이터베이스에서 로드 한 데이터 원본의 컬렉션을 사용 하 여 메서드 재정의를 통해 테이블의 열을 채웁니다 `GetViewForItem` .
 
 ### <a name="populating-the-table"></a>테이블 채우기
 
-모든 부분이 준비 되 면 `AwakeFromNib` 메서드를 재정의 하 고 다음과 같이 xib 파일에서 팽창 때 테이블을 채웁니다.
+모든 부분이 준비 되 면 메서드를 재정의 하 `AwakeFromNib` 고 다음과 같이 xib 파일에서 팽창 때 테이블을 채워야 합니다.
 
 ```csharp
 public override void AwakeFromNib ()
@@ -2220,7 +2220,7 @@ public override void AwakeFromNib ()
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 Xamarin.ios 응용 프로그램에서 SQLite 데이터베이스를 사용 하 여 데이터 바인딩 및 키-값 코딩 작업에 대해 자세히 살펴봅니다. 먼저 KVC (키-값 C# 코딩) 및 키-값 관찰 (KVO)을 사용 하 여 클래스를 목표 C로 노출 하는 방법을 살펴보았습니다. 다음으로 KVO 규격 클래스를 사용 하 고 데이터를 Xcode의 Interface Builder에 있는 UI 요소에 바인딩하는 방법을 보여 주었습니다. 또한이 문서에서는 SQLite.NET ORM을 통해 SQLite 데이터 작업을 수행 하 고 해당 데이터를 테이블 뷰에 표시 합니다.
+이 문서에서는 Xamarin.ios 응용 프로그램에서 SQLite 데이터베이스를 사용 하 여 데이터 바인딩 및 키-값 코딩 작업에 대해 자세히 살펴봅니다. 먼저 KVC (키-값 코딩) 및 키-값 관찰 (KVO)을 사용 하 여 c # 클래스를 목표 C로 노출 하는 방법을 살펴보았습니다. 다음으로 KVO 규격 클래스를 사용 하 고 데이터를 Xcode의 Interface Builder에 있는 UI 요소에 바인딩하는 방법을 보여 주었습니다. 또한이 문서에서는 SQLite.NET ORM을 통해 SQLite 데이터 작업을 수행 하 고 해당 데이터를 테이블 뷰에 표시 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

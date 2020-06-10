@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: ef1a97df5648d0f120b58f6206f18f74a6f50f92
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: a2f15c8385b7df7afc3f04e033a085cb00bc9005
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76940977"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573861"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Xamarin.ios 앱에 대 한 시작 화면
 
@@ -22,13 +22,13 @@ IOS 8 이전에는 iOS 앱에 대 한 시작 화면을 만들기 위해 개발�
 
 이 간단한 연습에서는 새 프로젝트에서 기본적으로 제공 되는 Storyboard 나 기존 프로젝트에 수동으로 추가 된 Storyboard를 사용 하 여 시작 화면을 만드는 방법을 설명 합니다. 그런 다음 iOS 디자이너를 사용 하 여 이미지 뷰 및 레이블을 스토리 보드에 추가 하 고, 해당 뷰에 대 한 제약 조건을 설정 하 고, 다양 한 장치 및 방향에 대 한 스토리 보드가 올바른지 확인 하는 방법을 보여 줍니다.
 
-<a name="storyboard" />
+<a name="storyboard"></a>
 
 ## <a name="managing-launch-screens-with-storyboards"></a>Storyboard를 사용 하 여 시작 화면 관리
 
 IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 사용 하는 대신 특정 통합 Storyboard를 만들어 시작 화면을 제공할 수 있습니다. IOS 디자이너에서 시작 Storyboard를 만들 때 크기 클래스 및 자동 레이아웃을 사용 하 여 다양 한 표시 환경에 대해 다른 레이아웃을 정의 합니다. 개발자는 크기 클래스와 자동 레이아웃을 사용 하 여 모든 장치 및 디스플레이 환경에서 잘 보이는 단일 시작 화면을 만들 수 있습니다.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
 1. Mac용 Visual Studio에서 **파일 > 새 솔루션** 을 선택한 다음 **단일 뷰 앱**을 선택 하 여 새 프로젝트를 만듭니다. 
 
@@ -95,9 +95,9 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 13. 스토리 보드에 대 한 변경 내용을 저장 합니다. 시뮬레이터 또는 장치에서 앱을 실행 하면 앱이 시작 될 때 시작 화면이 표시 됩니다.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. 새 프로젝트를 만듭니다. Visual Studio에서 **파일 > 새 > 프로젝트 > Visual C# > iPhone & IPad > IOS 앱 (Xamarin)** 을 선택 합니다.
+1. 새 프로젝트를 만듭니다. Visual Studio에서 **파일 > 새 > 프로젝트 > Visual c # > iPhone & iPad > IOS 앱 (Xamarin)** 을 선택 합니다.
 
     ![IOS 앱 (Xamarin)이 선택 된 새 프로젝트 창](launch-screens-images/launch01.w157.png)
 
@@ -187,26 +187,26 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 ## <a name="migrating-to-launch-screen-storyboards"></a>시작 화면 Storyboard로 마이그레이션
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio for Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-시작 화면에 대해 Storyboard를 사용 하도록 기존 앱을 업데이트 하는 경우 **솔루션 탐색기** 의 **프로젝트 이름을** 마우스 오른쪽 단추로 클릭 하 고 **추가** > **새 파일**...을 선택 합니다. **IOS** > **시작 화면** 을 선택 하 고 **새로 만들기** 단추를 클릭 합니다.
+시작 화면에 storyboard를 사용 하도록 기존 앱을 업데이트 하는 경우 **솔루션 탐색기** 에서 **프로젝트 이름을** 마우스 오른쪽 단추로 클릭 하 **Add**고  >  **새 파일**추가 ...를 선택 합니다. **IOS**  >  **시작 화면** 을 선택 하 고 **새로 만들기** 단추를 클릭 합니다.
 
 ![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
 
-그런 다음 **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집을 위해 엽니다. **시작 화면**에서 위에서 만든 새 스토리 보드 파일을 선택 합니다.
+그런 다음 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다. **시작 화면**에서 위에서 만든 새 스토리 보드 파일을 선택 합니다.
 
 ![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
 
 새 스토리 보드를 시작 화면으로 사용 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다.
 2. 편집기의 **유니버설 시작 이미지** 섹션으로 스크롤하고 **시작 화면** 드롭다운을 열고 위에서 만든 storyboard의 이름을 선택 합니다. 
 
     ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 > **새 파일** **추가** ...를 선택 합니다. 
+1. **솔루션 탐색기** 에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **Add**  >  **새 파일**추가 ...를 선택 합니다. 
 
     ![](launch-screens-images/image012.png "Add new file")
 2. 시작 화면에 대 한 이름을 입력 하 고 **추가** 단추를 클릭 합니다. 
@@ -216,7 +216,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 4. **Size 클래스** **를 any로 설정 하 고** 뷰를 **제네릭** **로** 설정 합니다. 
 
     ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
-5. 응용 프로그램의 번들에 포함 된 크기 클래스, 간단한 UI 요소 (예: `UIImageView`) 및 이미지에서 시작 화면을 어셈블리 합니다. 
+5. 응용 프로그램의 번들에 포함 된 크기 클래스, 간단한 UI 요소 (예:) 및 이미지에서 시작 화면을 어셈블리 합니다 `UIImageView` . 
 
     ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
 6. 스토리 보드에 대 한 변경 내용을 저장 합니다.
@@ -227,7 +227,7 @@ IOS 8 (이상)에서 개발자는 하나 이상의 정적 시작 이미지를 �
 
 - [동적 실행 화면 (샘플)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [통합 Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
-- [iOS Designer 기본 사항](~/ios/user-interface/designer/index.md)
+- [iOS 디자이너 기본 사항](~/ios/user-interface/designer/index.md)
 - [자산 카탈로그 이미지 집합에 이미지 추가](~/ios/app-fundamentals/images-icons/displaying-an-image.md#adding-images-to-an-asset-catalog-image-set)
 - [Xamarin Designer for iOS 자동 레이아웃](~/ios/user-interface/designer/designer-auto-layout.md)
 - [휴먼 인터페이스 지침: 시작 화면](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 593d6a8b30d5ed0e143d1c013849d2bef571f6dc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140298"
+제목: "SkiaSharp 비트맵에서 만들기 및 그리기" 설명: "SkiaSharp 비트맵을 만들고이 비트맵을 기반으로 캔버스를 만들어이 비트맵을 그리는 방법에 대해 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>SkiaSharp 비트맵 만들기 및 그리기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -341,8 +327,6 @@ public class PixelizedImagePage : ContentPage
 
 [![Pixelize 이미지](drawing-images/PixelizeImage.png "Pixelize 이미지")](drawing-images/PixelizeImage-Large.png#lightbox)
 
-<a name="rotating-bitmaps" />
-
 ## <a name="rotating-bitmaps"></a>비트맵 회전
 
 또 다른 일반적인 작업은 비트맵을 회전 하는 것입니다. 이 기능은 iPhone 또는 iPad 사진 라이브러리에서 비트맵을 검색할 때 특히 유용 합니다. 사진이 촬영 될 때 특정 방향으로 장치를 보유 하지 않은 경우 사진은 거꾸로 또는 옆쪽으로 진행 될 수 있습니다.
@@ -388,7 +372,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-이러한 두 가지 방법은 [**SkiaSharp 비트맵 자르기**](cropping.md#tile-division)문서에 설명 된 **사진 퍼즐** 페이지에서 사용 됩니다.
+이러한 두 가지 방법은 [**SkiaSharp 비트맵 자르기**](cropping.md#cropping-skiasharp-bitmaps)문서에 설명 된 **사진 퍼즐** 페이지에서 사용 됩니다.
 
 사용자가 90 도씩 비트맵을 회전 하는 데 사용할 수 있는 프로그램은 90 도씩 회전 하기 위한 함수 하나를 구현 해야 합니다. 그런 다음이 함수를 반복적으로 실행 하 여 90 각도의 증분을 회전할 수 있습니다.
 

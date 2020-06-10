@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: aeb3d01a3d0f7edbe92c9959073d859fc63486a6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: e166f513a75faaa082e8557dc6f610f014547a25
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574145"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Xamarin.ios의 iPad 용 멀티태스킹
 
@@ -41,7 +41,7 @@ iOS 9는 특정 iPad 하드웨어에서 두 앱을 동시에 실행 하기 위�
 
 **IPad 용 멀티태스킹 비디오**
 
-<a name="Multitasking-QuickStart" />
+<a name="Multitasking-QuickStart"></a>
 
 ## <a name="multitasking-quickstart"></a>멀티태스킹 빠른 시작
 
@@ -52,13 +52,13 @@ iOS 9는 특정 iPad 하드웨어에서 두 앱을 동시에 실행 하기 위�
 - UI에 대해 자동 레이아웃 및 크기 클래스와 함께 Storyboard를 사용 합니다.
 - 4 개 iOS 장치 방향 (세로, 세로 방향, 세로, 가로 왼쪽 & 가로)을 모두 지원 합니다.
 
-<a name="Multitasking" />
+<a name="Multitasking"></a>
 
 ## <a name="about-multitasking-for-ipad"></a>IPad 용 멀티태스킹 정보
 
 iOS 9는 _슬라이드 반복_, _분할 보기_ (ipad Air 2, iPad 미니 4 및 ipad Pro만 해당) 및 _그림 그림_의 도입으로 iPad에서 새로운 멀티태스킹 기능을 제공 합니다. 다음 섹션에서는 이러한 기능에 대해 자세히 살펴보겠습니다.
 
-<a name="Slide-Over" />
+<a name="Slide-Over"></a>
 
 ### <a name="slide-over"></a>위로 밀기
 
@@ -73,7 +73,7 @@ iOS 9는 _슬라이드 반복_, _분할 보기_ (ipad Air 2, iPad 미니 4 및 i
 
 밀기는 iPad Pro, iPad Air, iPad Air 2, iPad 미니 2, iPad 미니 3 또는 iPad 미니 4 에서만 사용할 수 있습니다. 슬라이드로 앱을 준비 하는 방법에 대 한 자세한 내용은 iPad 설명서에서 Apple의 [멀티태스킹 기능 강화](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) 를 참조 하세요.
 
-<a name="Split-View" />
+<a name="Split-View"></a>
 
 ### <a name="split-view"></a>분할된 뷰
 
@@ -88,7 +88,7 @@ iOS 9는 _슬라이드 반복_, _분할 보기_ (ipad Air 2, iPad 미니 4 및 i
 
 분할 보기를 위해 앱을 준비 하는 방법에 대 한 자세한 내용은 [iPad 설명서의 Apple의 멀티태스킹 기능 강화](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145) 를 참조 하세요.
 
-<a name="Picture-in-Picture" />
+<a name="Picture-in-Picture"></a>
 
 ### <a name="picture-in-picture"></a>그림의 그림
 
@@ -102,17 +102,17 @@ iOS 9는 _슬라이드 반복_, _분할 보기_ (ipad Air 2, iPad 미니 4 및 i
 
 그림의 그림은 iPad Pro, iPad Air, iPad Air 2, iPad 미니 2, iPad 미니 3 또는 iPad 미니 4 에서만 사용할 수 있습니다. 자세한 내용은 [그림 빠른 시작 설명서의 그림](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) [샘플 앱](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) 및 Apple의 그림을 참조 하세요.
 
-<a name="Supporting-Multitasking-in-your-App" />
+<a name="Supporting-Multitasking-in-your-App"></a>
 
 ## <a name="supporting-multitasking-in-your-app"></a>앱에서 멀티태스킹 지원
 
 기존 Xamarin.ios 앱의 경우 앱이 이미 Apple의 디자인 가이드와 iOS 8의 모범 사례를 준수 하는 한, 멀티태스킹 지원은 투명 한 작업입니다. 즉, 앱은 사용자 인터페이스 레이아웃에 대해 자동 레이아웃 및 크기 클래스와 함께 storyboard를 사용 해야 합니다 (자세한 내용은 [통합 스토리 보드 소개](~/ios/user-interface/storyboards/unified-storyboards.md) 참조).
 
-이러한 앱에 대해 멀티태스킹을 지원 하 고 it에서 효과적으로 작동 하기 위해 거의 또는 전혀 변경 하지 않아도 됩니다. 코드에서 C# ui 요소를 직접 배치 하 고 크기를 조정 하는 등의 다른 방법을 사용 하 여 앱의 ui가 생성 된 경우 또는 특정 장치 화면 크기 또는 방향에 의존 하는 경우 iOS 9 멀티태스킹을 올바르게 지원 하기 위해 상당한 수정이 필요 합니다.
+이러한 앱에 대해 멀티태스킹을 지원 하 고 it에서 효과적으로 작동 하기 위해 거의 또는 전혀 변경 하지 않아도 됩니다. C # 코드에서 UI 요소를 직접 배치 하 고 크기를 조정 하는 등의 다른 방법을 사용 하 여 앱의 UI를 만든 경우 또는 특정 장치 화면 크기 또는 방향에 의존 하는 경우에는 iOS 9 멀티태스킹을 올바르게 지원 하기 위해 상당한 수정이 필요 합니다.
 
 모든 새 Xamarin.ios 앱에서 iOS 9 멀티태스킹을 지원 하려면 모든 앱의 사용자 인터페이스 레이아웃에 대해 자동 레이아웃 및 크기 클래스를 사용 하 여 스토리 보드를 다시 사용 하 고 다음 섹션의 지침을 구현 합니다.
 
-<a name="Screen-Size-Considerations" />
+<a name="Screen-Size-Considerations"></a>
 
 ### <a name="screen-size-and-orientation-considerations"></a>화면 크기 및 방향 고려 사항
 
@@ -124,11 +124,11 @@ IPad에서 전체 화면 앱에는 일반 가로 및 세로 크기 클래스가 
 
 슬라이드 오버 및 분할 보기를 지 원하는 Ipad에서 다음과 같은 조합을 사용할 수 있습니다.
 
-| **방향** | **기본 앱** | **보조 앱** |
+| **방향인** | **기본 앱** | **보조 앱** |
 |--- |--- |--- |
 | **세로** |화면 75%<br />수평 압축<br />일반 세로|화면 25%<br />수평 압축<br />일반 세로|
-| **바꾸십시오** |화면 75%<br />일반 가로<br />일반 세로|화면 25%<br />수평 압축<br />일반 세로|
-| **바꾸십시오** |화면 50%<br />수평 압축<br />일반 세로|화면 50%<br />수평 압축<br />일반 세로|
+| **가로** |화면 75%<br />일반 가로<br />일반 세로|화면 25%<br />수평 압축<br />일반 세로|
+| **가로** |화면 50%<br />수평 압축<br />일반 세로|화면 50%<br />수평 압축<br />일반 세로|
 
 예제 [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) 앱에서 가로 모드의 iPad에서 전체 화면을 실행 하는 경우 목록 및 세부 정보 보기를 동시에 표시 합니다.
 
@@ -138,13 +138,13 @@ IPad에서 전체 화면 앱에는 일반 가로 및 세로 크기 클래스가 
 
 [![](multitasking-images/sizeclasses04.png "Only the list presented when the device is horizontal")](multitasking-images/sizeclasses04.png#lightbox)
 
-이러한 상황에서 앱이 올바르게 동작 하도록 하려면 크기 클래스와 함께 특성 컬렉션을 채택 하 고 `IUIContentContainer` 및 `IUITraitEnvironment` 인터페이스를 준수 해야 합니다. 자세한 내용은 Apple의 [Uitraitcollection 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) 및 [통합 된 스토리 보드 소개 가이드를](~/ios/user-interface/storyboards/unified-storyboards.md) 참조 하세요.
+이러한 상황에서 앱이 올바르게 동작 하도록 하려면 크기 클래스와 함께 특성 컬렉션을 채택 하 고 및 인터페이스를 준수 해야 `IUIContentContainer` 합니다 `IUITraitEnvironment` . 자세한 내용은 Apple의 [Uitraitcollection 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITraitCollection_ClassReference/index.html#//apple_ref/doc/uid/TP40014202) 및 [통합 된 스토리 보드 소개 가이드를](~/ios/user-interface/storyboards/unified-storyboards.md) 참조 하세요.
 
 또한 더 이상 장치 화면 경계를 사용 하 여 앱의 표시 영역을 정의할 수 없습니다. 대신 앱의 창 경계를 사용 해야 합니다. 창 경계는 전적으로 사용자의 제어를 받고 있으므로 프로그래밍 방식으로 조정 하거나 사용자가 이러한 범위를 변경 하지 못하도록 방지할 수 없습니다.
 
-마지막으로, 응용 프로그램은 .png 이미지 파일 집합을 사용 하는 것과는 반대로 storyboard 파일을 사용 하 여 시작 화면을 표시 하 고 네 가지 인터페이스 방향 (세로, 세로 방향 세로, 가로 왼쪽 및 가로 오른쪽)을 모두 지원 합니다 **.** 패널을 통해 슬라이드나 분할 뷰 모드에서 실행 하는 경우
+마지막으로, 응용 프로그램은 **.png** 이미지 파일을 사용 하는 것과는 반대로 storyboard 파일을 사용 하 여 시작 화면을 표시 하 고, 패널을 통해 슬라이드나 분할 보기 모드에서 실행 되는 것으로 간주 되는 네 가지 인터페이스 방향 (세로, 세로 방향 세로, 가로 왼쪽 및 가로 오른쪽)을 모두 지원 해야 합니다.
 
-<a name="Custom-Hardware-Keyboard-Shortcuts" />
+<a name="Custom-Hardware-Keyboard-Shortcuts"></a>
 
 ### <a name="custom-hardware-keyboard-shortcuts"></a>사용자 지정 하드웨어 바로 가기 키
 
@@ -188,9 +188,9 @@ public void NewEntry() {
 #endregion
 ```
 
-먼저 `CanBecomeFirstResponder` 속성을 재정의 하 고 뷰 또는 뷰 컨트롤러에서 키보드 입력을 받을 수 있도록 `true`을 반환 합니다. 
+먼저 `CanBecomeFirstResponder` `true` 뷰 또는 뷰 컨트롤러가 키보드 입력을 받을 수 있도록 속성을 재정의 하 고를 반환 합니다. 
 
-다음으로 `KeyCommands` 속성을 재정의 하 고 **명령 N** 키 입력에 대 한 새 `UIKeyCommand`을 만듭니다. 키 입력이 활성화 되 면 요청 된 작업을 수행 하기 위해 `NewEntry` 메서드 (`Export` 명령을 사용 하 여 iOS 9에 노출 됨)를 호출 합니다.
+그런 다음, 속성을 재정의 `KeyCommands` 하 고 `UIKeyCommand` **명령 N** 키 입력에 대 한 새를 만듭니다. 키 입력이 활성화 되 면 `NewEntry` 명령을 사용 하 여 iOS 9에 노출 하는 메서드를 호출 `Export` 하 여 요청 된 작업을 수행 합니다.
 
 하드웨어 키보드가 연결 된 iPad에서이 앱을 실행 하 고 사용자가 **명령-N**을 입력 하면 목록에 새 항목이 추가 됩니다. 사용자가 **명령** 키를 누르고 있는 경우 바로 가기 목록이 표시 됩니다.
 
@@ -198,7 +198,7 @@ public void NewEntry() {
 
 예제 구현은 샘플 [멀티태스킹을 앱](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) 을 참조 하세요.
 
-<a name="Resource-Management-Considerations" />
+<a name="Resource-Management-Considerations"></a>
 
 ### <a name="resource-management-considerations"></a>리소스 관리 고려 사항
 
@@ -220,7 +220,7 @@ public void NewEntry() {
 
 리소스 관리에 대 한 자세한 내용은 Apple의 [IOS 앱에 대 한 에너지 효율성 가이드](https://developer.apple.com/library/prerelease/ios/documentation/Performance/Conceptual/EnergyGuide-iOS/index.html#//apple_ref/doc/uid/TP40015243) 를 참조 하세요.
 
-<a name="Opting-Out-of-Multitasking" />
+<a name="Opting-Out-of-Multitasking"></a>
 
 ## <a name="opting-out-of-multitasking"></a>멀티태스킹 옵트아웃
 
@@ -233,7 +233,7 @@ Xamarin.ios 앱이 슬라이드 아웃 패널 또는 분할 보기 모드에서 
 > [!IMPORTANT]
 > 멀티태스킹을 옵트아웃 하면 앱이 슬라이드 아웃 또는 분할 보기에서 실행 되지 않지만, 다른 앱이 실행 되는 것을 방지 하지는 않지만, 그림 비디오의 그림은 앱과 함께 표시 됩니다.
 
-<a name="Disabling-PIP-Video-Playback" />
+<a name="Disabling-PIP-Video-Playback"></a>
 
 ### <a name="disabling-pip-video-playback"></a>PIP 비디오 재생 사용 안 함
 
@@ -241,11 +241,11 @@ Xamarin.ios 앱이 슬라이드 아웃 패널 또는 분할 보기 모드에서 
 
 PIP 비디오 재생을 옵트아웃 하려면 앱에서 다음을 수행 합니다.
 
-- `AVPlayerViewController`를 사용 하 여 비디오를 표시 하는 경우 `AllowsPictureInPicturePlayback` 속성을 `false`로 설정 합니다.
-- `AVPlayerLayer`를 사용 하 여 비디오를 표시 하는 경우 `AVPictureInPictureController`를 인스턴스화하지 마세요.
-- `WKWebView`를 사용 하 여 비디오를 표시 하는 경우 `AllowsPictureInPictureMediaPlayback` 속성을 `false`로 설정 합니다.
+- 을 사용 하 여 비디오를 표시 하는 경우 `AVPlayerViewController` `AllowsPictureInPicturePlayback` 속성을로 설정 `false` 합니다.
+- 을 사용 하 여 비디오를 표시 하는 경우를 `AVPlayerLayer` 인스턴스화하지 마세요 `AVPictureInPictureController` .
+- 을 사용 하 여 비디오를 표시 하는 경우 `WKWebView` `AllowsPictureInPictureMediaPlayback` 속성을로 설정 `false` 합니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

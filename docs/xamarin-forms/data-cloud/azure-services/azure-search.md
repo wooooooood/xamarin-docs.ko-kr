@@ -1,22 +1,8 @@
 ---
-title: Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
-description: 이 문서에서는 Microsoft Azure 검색 라이브러리를 사용 하 여 Azure Search을 응용 프로그램에 통합 하는 방법을 보여 줍니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 69962bbb51a493ba2bcaed5d3c9407c5aafe471c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133291"
+제목: "Azure Search를 사용 하 여 데이터 검색 및 Xamarin.Forms " 설명: "이 문서에서는 Microsoft Azure 검색 라이브러리를 사용 하 여 Azure Search을 응용 프로그램에 통합 하는 방법을 보여 줍니다 Xamarin.Forms ."
+assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B: xamarin-forms author: davidbritch: dabritch:: 12/05/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="search-data-with-azure-search-and-xamarinforms"></a>Azure Search 및를 사용 하 여 데이터 검색Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
@@ -39,7 +25,7 @@ Azure Search에 대 한 각 요청은 서비스 이름 및 API 키를 포함 해
 
 검색 쿼리 및 필터 쿼리를 개별적으로 또는 함께 사용할 수 있습니다. 필터 쿼리를 함께 사용 하는 경우에는 먼저 전체 인덱스에 필터 쿼리를 적용 한 다음 필터 쿼리 결과에 대해 검색 쿼리를 수행 합니다.
 
-Azure Search는 검색 입력을 기준으로 제안 검색도 지원 합니다. 자세한 내용은 [제안 쿼리](#suggestions)를 참조 하세요.
+Azure Search는 검색 입력을 기준으로 제안 검색도 지원 합니다. 자세한 내용은 [제안 쿼리](#suggestion-queries)를 참조 하세요.
 
 > [!NOTE]
 > [Azure 구독](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing)이 아직 없는 경우 시작하기 전에 [체험 계정](https://aka.ms/azfree-docs-mobileapps)을 만듭니다.
@@ -225,8 +211,6 @@ var searchResults = await indexClient.Documents.SearchAsync<Monkey>(text, parame
 ![](azure-search-images/search.png "Search Results")
 
 검색 및 필터링에 대 한 자세한 내용은 [.NET SDK를 사용 하 여 Azure Search 인덱스 쿼리](/azure/search/search-query-dotnet/)를 참조 하세요.
-
-<a name="suggestions" />
 
 ### <a name="suggestion-queries"></a>제안 쿼리
 

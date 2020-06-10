@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 323b92190dc3ea18bc78871f5c19e51d0a6ea94e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1a6391c0e626c60fe35acee61f55f2f202f077b8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73002211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573445"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>리플렉션 API를 사용 하 여 Xamarin.ios 응용 프로그램 만들기
 
@@ -20,15 +20,15 @@ MT입니다. D 리플렉션 API를 사용 하면 클래스를 MT 인 특성으�
 
 ## <a name="setting-up-mtd"></a>MT를 설정 합니다. 2
 
-휴먼. D는 Xamarin.ios를 사용 하 여 배포 됩니다. 이를 사용 하려면 Visual Studio 2017 또는 Mac용 Visual Studio에서 Xamarin.ios 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **monotouch.dialog** 어셈블리에 대 한 참조를 추가 합니다. 그런 다음 필요에 따라 소스 코드에 `using MonoTouch.Dialog` 문을 추가 합니다.
+휴먼. D는 Xamarin.ios를 사용 하 여 배포 됩니다. 이를 사용 하려면 Visual Studio 2017 또는 Mac용 Visual Studio에서 Xamarin.ios 프로젝트의 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **monotouch.dialog** 어셈블리에 대 한 참조를 추가 합니다. 그런 다음 `using MonoTouch.Dialog` 필요에 따라 소스 코드에서 문을 추가 합니다.
 
 ## <a name="getting-started-with-the-reflection-api"></a>리플렉션 API 시작
 
 리플렉션 API를 사용 하는 것은 다음과 같이 간단 합니다.
 
 1. MT로 데코레이팅된 클래스 만들기 D 특성.
-1. `BindingContext` 인스턴스를 만들고 위의 클래스의 인스턴스를 전달 합니다. 
-1. `DialogViewController`를 만들고 `BindingContext’s` `RootElement` 전달 합니다. 
+1. 인스턴스를 만들고 `BindingContext` 위의 클래스의 인스턴스를 전달 합니다. 
+1. 를 만들고를 `DialogViewController` 전달 `BindingContext’s` `RootElement` 합니다. 
 
 리플렉션 API를 사용 하는 방법을 보여 주는 예를 살펴보겠습니다. 이 예에서는 아래와 같이 간단한 데이터 입력 화면을 작성 합니다.
 
@@ -57,23 +57,23 @@ public class Expense
 }
 ```
 
-`SectionAttribute`를 사용 하면 섹션의 헤더를 채우는 데 사용 되는 문자열 인수를 사용 하 여 `UITableView` 섹션이 생성 됩니다. 섹션이 선언 되 면 다른 섹션이 선언 될 때까지 뒤에 오는 모든 필드가 해당 섹션에 포함 됩니다.
+는 `SectionAttribute` `UITableView` 섹션의 헤더를 채우는 데 사용 되는 문자열 인수를 사용 하 여가 생성 되는 섹션을 생성 합니다. 섹션이 선언 되 면 다른 섹션이 선언 될 때까지 뒤에 오는 모든 필드가 해당 섹션에 포함 됩니다.
 필드에 대해 생성 되는 사용자 인터페이스 요소의 형식은 필드의 형식과 MT에 따라 달라 집니다. D 특성 데코레이팅
 
-예를 들어 `Name` 필드는 `string` 이며 `EntryAttribute`로 데코 레이트 됩니다. 그러면 텍스트 입력 필드와 지정 된 캡션이 있는 행이 테이블에 추가 됩니다. 마찬가지로 `IsApproved` 필드는 `CheckboxAttribute``bool` 이므로 테이블 셀의 오른쪽에 확인란을 포함 하는 테이블 행이 생성 됩니다. 휴먼. D는 특성에 지정 되지 않았으므로 필드 이름을 사용 하 여 자동으로 공백을 추가 하 고이 경우에 캡션을 만듭니다.
+예를 들어 필드는 이며 `Name` `string` 로 데코 레이트 됩니다 `EntryAttribute` . 그러면 텍스트 입력 필드와 지정 된 캡션이 있는 행이 테이블에 추가 됩니다. 마찬가지로 필드는를 포함 하는 `IsApproved` 입니다. 그러면 테이블 `bool` `CheckboxAttribute` 셀의 오른쪽에 확인란을 포함 하는 테이블 행이 생성 됩니다. 휴먼. D는 특성에 지정 되지 않았으므로 필드 이름을 사용 하 여 자동으로 공백을 추가 하 고이 경우에 캡션을 만듭니다.
 
 ## <a name="adding-the-bindingcontext"></a>BindingContext 추가
 
-`Expense` 클래스를 사용 하려면 `BindingContext`를 만들어야 합니다. `BindingContext`은 특성을 사용 하는 클래스의 데이터를 바인딩하여 요소 계층 구조를 만드는 클래스입니다. 이를 만들려면 단순히 인스턴스화하고 특성 사용 클래스의 인스턴스를 생성자에 전달 합니다.
+클래스를 사용 하려면 `Expense` 을 만들어야 `BindingContext` 합니다. 는 `BindingContext` 특성을 사용 하는 클래스의 데이터를 바인딩하여 요소의 계층 구조를 만드는 클래스입니다. 이를 만들려면 단순히 인스턴스화하고 특성 사용 클래스의 인스턴스를 생성자에 전달 합니다.
 
-예를 들어 `Expense` 클래스에서 특성을 사용 하 여 선언한 UI를 추가 하려면 `AppDelegate`의 `FinishedLaunching` 메서드에 다음 코드를 포함 합니다.
+예를 들어 클래스에서 특성을 사용 하 여 선언한 UI를 추가 하려면 `Expense` 의 메서드에 다음 코드를 포함 합니다 `FinishedLaunching` `AppDelegate` .
 
 ```csharp
 var expense = new Expense ();
 var bctx = new BindingContext (null, expense, "Create a task");
 ```
 
-그런 다음 `DialogViewController`에 `BindingContext`를 추가 하 고 아래와 같이 창의 `RootViewController`으로 설정 하는 것이 UI를 만들어야 합니다.
+그런 다음 UI를 만들려면에를 추가 하 `BindingContext` `DialogViewController` 고 `RootViewController` 아래와 같이 창의로 설정 하기만 하면 됩니다.
 
 ```csharp
 UIWindow window;
@@ -97,18 +97,18 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="adding-a-uinavigationcontroller"></a>UINavigationController 추가
 
-그러나 `BindingContext` 전달 된 "작업 만들기" 제목은 표시 되지 않습니다. 이는 `DialogViewController` `UINavigatonController`의 일부가 아니기 때문입니다. 코드를 변경 하 여 창의 `RootViewController,`로 `UINavigationController`을 추가 하 고 아래와 같이 `DialogViewController`를 `UINavigationController`의 루트로 추가 해 보겠습니다.
+그러나에 전달 된 "작업 만들기" 제목은 `BindingContext` 표시 되지 않습니다. 가의 일부가 아니기 때문입니다 `DialogViewController` `UINavigatonController` . 를 창으로 추가 하는 코드를 변경 하 `UINavigationController` `RootViewController,` 고 `DialogViewController` `UINavigationController` 아래와 같이을의 루트로 추가 해 보겠습니다.
 
 ```csharp
 nav = new UINavigationController(dvc);
 window.RootViewController = nav;
 ```
 
-이제 응용 프로그램을 실행할 때 아래 스크린샷에 표시 된 대로 제목이 `UINavigationController’s` 탐색 모음에 표시 됩니다.
+이제 응용 프로그램을 실행 하면 `UINavigationController’s` 아래 스크린샷에 표시 된 대로 제목이 탐색 모음에 표시 됩니다.
 
  [![](reflection-api-walkthrough-images/02-create-task.png "Now when we run the application, the title appears in the UINavigationControllers navigation bar")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
-이제 `UINavigationController`를 포함 하 여 MT의 다른 기능을 활용할 수 있습니다. 해당 탐색이 필요한 D입니다. 예를 들어, `Expense` 클래스에 열거형을 추가 하 여 경비 및 MT의 범주를 정의할 수 있습니다. D는 자동으로 선택 화면을 만듭니다. 이를 보여 주기 위해 다음과 같이 `ExpenseCategory` 필드를 포함 하도록 `Expense` 클래스를 수정 합니다.
+이제를 포함 하 여 `UINavigationController` MT의 다른 기능을 활용할 수 있습니다. 해당 탐색이 필요한 D입니다. 예를 들어, 클래스에 열거형을 추가 `Expense` 하 여 경비 및 MT의 범주를 정의할 수 있습니다. D는 자동으로 선택 화면을 만듭니다. 이를 보여 주기 위해 다음과 `Expense` 같이 필드를 포함 하도록 클래스를 수정 합니다 `ExpenseCategory` .
 
 ```csharp
 public enum Category
@@ -135,11 +135,11 @@ public class Expense
 
  [![](reflection-api-walkthrough-images/04-set-category.png "Selecting the row results in the application navigating to a new screen with rows corresponding to the enumeration")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
- <a name="Summary" />
+ <a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 
-이 문서에서는 리플렉션 API에 대 한 연습을 제공 했습니다. 클래스에 특성을 추가 하 여 표시 되는 항목을 제어 하는 방법을 살펴보았습니다. 또한 `BindingContext`를 사용 하 여 클래스의 데이터를 만들어진 요소 계층 구조와 MT를 사용 하는 방법에 바인딩하는 방법에 대해 설명 했습니다. D `UINavigationController`를 사용 합니다.
+이 문서에서는 리플렉션 API에 대 한 연습을 제공 했습니다. 클래스에 특성을 추가 하 여 표시 되는 항목을 제어 하는 방법을 살펴보았습니다. 또한를 사용 하 여 `BindingContext` 클래스의 데이터를 만들어진 요소 계층 구조와 MT를 사용 하는 방법에 바인딩하는 방법에 대해 설명 했습니다. D가 있는 D `UINavigationController` 입니다.
 
 ## <a name="related-links"></a>관련 링크
 

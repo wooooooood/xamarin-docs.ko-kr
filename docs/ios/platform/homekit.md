@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: e0f6d9ed1028cd825d9fd8e40fe99c4ea250612f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b9b8d1dbaf7872ab629392e15d906540ae491db4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032413"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572600"
 ---
 # <a name="homekit-in-xamarinios"></a>Xamarin.ios의 HomeKit
 
@@ -30,7 +30,7 @@ HomeKit를 사용 하면 공급 업체에서 제공 하는 Api 또는 앱을 사
 
 HomeKit 사용 앱에 대 한 홈 구성 데이터베이스의 장치를 제공 하는 것 외에도 HomeKit는 Siri 음성 명령에 대 한 액세스를 제공 합니다. 적절 하 게 구성 된 HomeKit 설정에 따라 사용자는 "Siri, 거실에서 조명 켜기"와 같은 음성 명령을 실행할 수 있습니다.
 
-<a name="Home-Configuration-Database" />
+<a name="Home-Configuration-Database"></a>
 
 ## <a name="the-home-configuration-database"></a>홈 구성 데이터베이스
 
@@ -38,13 +38,13 @@ HomeKit는 지정 된 위치의 모든 자동화 장치를 홈 컬렉션으로 �
 
 홈 컬렉션은 모든 사용자의 iOS 장치에서 자동으로 백업 및 동기화 되는 홈 구성 데이터베이스에 저장 됩니다. HomeKit에서는 홈 구성 데이터베이스를 사용 하기 위한 다음 클래스를 제공 합니다.
 
-- `HMHome`-모든 홈 automation 장치에 대 한 모든 정보와 구성을 단일 물리적 위치에 저장 하는 최상위 수준 컨테이너 (예: 단일 패밀리 거주지). 사용자에 게 기본 집 및 휴가 집과 같은 둘 이상의 거주지가 있을 수 있습니다. 또는 본사와 같은 속성에 서로 다른 "집"이 있을 수 있습니다. 어느 쪽이 든 하나 이상의 `HMHome` 개체를 설정 하 고 저장 _해야_ 다른 HomeKit 정보를 입력할 수 있습니다.
-- `HMRoom`-선택 사항 이지만 `HMRoom`를 사용 하면 사용자가 부엌, 욕실, 중고품, 거실 등의 홈 (`HMHome`) 내에서 특정 방을 정의할 수 있습니다. 사용자는 자신의 집에 있는 특정 위치에 있는 모든 홈 automation 장치를 `HMRoom` 그룹화 하 고 하나의 단위로 작업을 수행할 수 있습니다. 예를 들어 Siri에 게 중고품 조명을 끄도록 요청 합니다.
-- `HMAccessory`-사용자의 거주지 (예: 스마트 자동 온도 조절기)에 설치 된 개별 물리적 HomeKit 사용 가능 자동화 장치를 나타냅니다. 각 `HMAccessory` `HMRoom`에 할당 됩니다. 사용자가 대화방을 구성 하지 않은 경우 HomeKit는 특수 한 기본 방에 액세서리를 할당 합니다.
-- `HMService`-지정 된 `HMAccessory`에서 제공 하는 서비스를 나타냅니다 (예: 조명의 설정/해제 상태, 색 변경이 지원 되는 경우). 각 `HMAccessory`에는 조명도 포함 하는 중고품 도어 열기 같은 둘 이상의 서비스가 있을 수 있습니다. 또한 지정 된 `HMAccessory`에는 사용자 제어 외부에 있는 펌웨어 업데이트와 같은 서비스가 있을 수 있습니다.
-- `HMZone`-사용자가 `HMRoom` 개체의 컬렉션을 논리 영역 (예: Upstairs, Downstairs 또는 지하실)으로 그룹화 할 수 있습니다. 선택 사항 이지만,이를 통해 Siri와 같은 상호 작용을 통해 모든 라이트 downstairs을 끌 수 있습니다.
+- `HMHome`-이 컨테이너는 모든 홈 automation 장치에 대 한 모든 정보와 구성을 단일 물리적 위치 (예: 단일 패밀리 거주지). 사용자에 게 기본 집 및 휴가 집과 같은 둘 이상의 거주지가 있을 수 있습니다. 또는 본사와 같은 속성에 서로 다른 "집"이 있을 수 있습니다. 어느 쪽이 든, 하나 이상의 `HMHome` 개체를 설정 하 고 저장 _해야_ 다른 HomeKit 정보를 입력할 수 있습니다.
+- `HMRoom`-선택적으로,를 `HMRoom` 사용 하면 사용자가 `HMHome` 부엌, 욕실, 중고품, 거실 등의 홈 () 내에서 특정 방을 정의할 수 있습니다. 사용자는 사내에 있는 특정 위치에 있는 모든 홈 automation 장치를로 그룹화 하 고 하나의 단위로 작업을 수행할 수 있습니다 `HMRoom` . 예를 들어 Siri에 게 중고품 조명을 끄도록 요청 합니다.
+- `HMAccessory`-사용자의 거주지 (예: 스마트 자동 온도 조절기)에 설치 된 개별 물리적 HomeKit 사용 가능 자동화 장치를 나타냅니다. 각 `HMAccessory` 은에 할당 됩니다 `HMRoom` . 사용자가 대화방을 구성 하지 않은 경우 HomeKit는 특수 한 기본 방에 액세서리를 할당 합니다.
+- `HMService`-지정 된에서 제공 하는 서비스를 나타냅니다 `HMAccessory` (예: 조명의 설정/해제 상태, 색 변경이 지원 되는 경우). 각에는 두 개 이상의 `HMAccessory` 서비스 (예: 열기 포함 하는 중고품 도어)가 있을 수 있습니다. 또한 지정 된에는 `HMAccessory` 사용자 제어 외부에 있는 펌웨어 업데이트와 같은 서비스가 있을 수 있습니다.
+- `HMZone`-사용자가 개체의 컬렉션을 `HMRoom` 논리 영역 (예: Upstairs, Downstairs 또는 지하실)으로 그룹화 할 수 있습니다. 선택 사항 이지만,이를 통해 Siri와 같은 상호 작용을 통해 모든 라이트 downstairs을 끌 수 있습니다.
 
-<a name="Provisioning-a-HomeKit-App" />
+<a name="Provisioning-a-HomeKit-App"></a>
 
 ## <a name="provisioning-a-homekit-app"></a>HomeKit 앱 프로 비전
 
@@ -54,12 +54,12 @@ HomeKit에 의해 적용 되는 보안 요구 사항으로 인해 HomeKit 프레
 
 1. [Apple 개발자 포털](https://developer.apple.com)에 로그인 합니다.
 2. **인증서, 식별자 & 프로필**을 클릭 합니다.
-3. 아직 수행 하지 않은 경우 **식별자** 를 클릭 하 고 앱에 대 한 id (예: `com.company.appname`)를 만든 다음 기존 id를 편집 합니다.
+3. 아직 수행 하지 않은 경우 **식별자** 를 클릭 하 고 앱에 대 한 id (예: `com.company.appname` )를 만든 다음 기존 id를 편집 합니다.
 4. 지정 된 ID에 대해 **HomeKit** 서비스를 확인 했는지 확인 합니다. 
 
     [![](homekit-images/provision01.png "Enable the HomeKit service for the given ID")](homekit-images/provision01.png#lightbox)
 5. 변경 내용을 저장합니다.
-6. 프로 **비전 프로필** > **개발** 을 클릭 하 고 앱에 대 한 새 개발 프로 비전 프로필을 만듭니다. 
+6. 프로 **비전 프로필**  >  **개발** 을 클릭 하 고 앱에 대 한 새 개발 프로 비전 프로필을 만듭니다. 
 
     [![](homekit-images/provision02.png "Create a new development provisioning profile for the app")](homekit-images/provision02.png#lightbox)
 7. 새 프로 비전 프로필을 다운로드 하 고 설치 하거나 Xcode를 사용 하 여 프로필을 다운로드 하 고 설치 합니다.
@@ -104,7 +104,7 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 액세�
 1. 응용 프로그램 폴더에서 HomeKit 액세서리 시뮬레이터를 시작 합니다. 
 
     [![](homekit-images/simulator02.png "The HomeKit Accessory Simulator")](homekit-images/simulator02.png#lightbox)
-2. **+** 단추를 클릭 하 고 **새 액세서리 ...** 를 선택 합니다. 
+2. 단추를 클릭 **+** 하 고 **새 액세서리 ...** 를 선택 합니다. 
 
     [![](homekit-images/simulator03.png "Add a new accessory")](homekit-images/simulator03.png#lightbox)
 3. 새 액세서리에 대 한 정보를 입력 하 고 **마침** 단추를 클릭 합니다. 
@@ -125,13 +125,13 @@ HomeKit 액세서리 시뮬레이터를 시작 하 고 몇 가지 가상 액세�
 
 ## <a name="configuring-the-infoplist-file"></a>Info.plist 파일 구성
 
-IOS 10 이상에 대 한 새로운 기능으로 개발자는 앱의 `Info.plist` 파일에 `NSHomeKitUsageDescription` 키를 추가 하 고 앱이 사용자의 HomeKit 데이터베이스에 액세스 하는 이유를 선언 하는 문자열을 제공 해야 합니다. 이 문자열은 앱을 처음 실행할 때 사용자에 게 표시 됩니다.
+IOS 10 이상에 대 한 새로운 기능으로 개발자는 `NSHomeKitUsageDescription` 앱의 파일에 키를 추가 하 `Info.plist` 고 앱이 사용자의 HomeKit 데이터베이스에 액세스 하는 이유를 선언 하는 문자열을 제공 해야 합니다. 이 문자열은 앱을 처음 실행할 때 사용자에 게 표시 됩니다.
 
 [![](homekit-images/info01.png "The HomeKit permission dialog")](homekit-images/info01.png#lightbox)
 
 이 키를 설정 하려면 다음을 수행 합니다.
 
-1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다.
 2. 화면 아래쪽에서 **원본** 뷰로 전환 합니다.
 3. 목록에 새 **항목** 을 추가 합니다.
 4. 드롭다운 목록에서 **개인 정보-HomeKit 사용 설명**을 선택 합니다. 
@@ -143,13 +143,13 @@ IOS 10 이상에 대 한 새로운 기능으로 개발자는 앱의 `Info.plist`
 6. 파일의 변경 내용을 저장합니다.
 
 > [!IMPORTANT]
-> `Info.plist` 파일에 `NSHomeKitUsageDescription` 키를 설정 하지 못하면 iOS 10 이상에서 실행 될 때 오류 없이 앱이 _자동으로 실패_ 하 게 됩니다 (런타임에 시스템에서 닫힘).
+> `NSHomeKitUsageDescription`파일에 키를 설정 하지 않으면 `Info.plist` iOS 10 이상에서 실행 될 때 오류 없이 앱이 _자동으로 실패_ 하 게 됩니다 (런타임에 시스템에서 닫힘).
 
 ## <a name="connecting-to-homekit"></a>HomeKit에 연결
 
-HomeKit와 통신 하려면 Xamarin.ios 앱이 먼저 `HMHomeManager` 클래스의 인스턴스를 인스턴스화해야 합니다. 홈 관리자는 HomeKit의 중앙 진입점으로, 사용 가능한 홈 목록을 제공 하 고, 해당 목록을 업데이트 하 고 유지 관리 하 고, 사용자의 _기본 홈_을 반환 합니다.
+HomeKit와 통신 하려면 Xamarin.ios 앱이 먼저 클래스의 인스턴스를 인스턴스화해야 `HMHomeManager` 합니다. 홈 관리자는 HomeKit의 중앙 진입점으로, 사용 가능한 홈 목록을 제공 하 고, 해당 목록을 업데이트 하 고 유지 관리 하 고, 사용자의 _기본 홈_을 반환 합니다.
 
-`HMHome` 개체에는 설치 된 홈 automation 액세서리와 함께 포함 될 수 있는 모든 대화방, 그룹 또는 영역을 포함 하 여 홈에 대 한 모든 정보가 포함 되어 있습니다. HomeKit에서 작업을 수행 하려면 먼저 하나 이상의 `HMHome`를 만들어 기본 홈으로 할당 해야 합니다.
+개체는 설치 된 모든 `HMHome` 홈 automation 액세서리와 함께 포함 될 수 있는 모든 대화방, 그룹 또는 영역을 포함 하 여 홈에 대 한 모든 정보를 포함 합니다. HomeKit에서 작업을 수행 하려면 먼저 하나 이상의를 `HMHome` 만들어 기본 홈으로 할당 해야 합니다.
 
 앱은 기본 홈이 있는지 확인 하 고, 기본 홈이 없는 경우 만들고 할당 하는 일을 담당 합니다.
 
@@ -199,7 +199,7 @@ public override void FinishedLaunching (UIApplication application)
 
 위에서 설명한 것 처럼 HomeKit를 사용할 수 있으려면 먼저 기본 홈을 만들고 구성 해야 하며, 사용자가 기본 홈 (있는 경우)을 만들고 할당 하는 방법을 제공 하는 것은 앱의 책임입니다.
 
-앱이 처음 시작 되거나 백그라운드에서 반환 되는 경우 `HMHomeManager` 클래스의 `DidUpdateHomes` 이벤트를 모니터링 하 여 기본 홈이 있는지 확인 해야 합니다. 존재 하지 않는 경우 사용자가 만들 수 있는 인터페이스를 제공 해야 합니다.
+앱이 처음 시작 되거나 백그라운드에서 반환 되 면 클래스의 이벤트를 모니터링 하 여 `DidUpdateHomes` `HMHomeManager` 기본 홈이 있는지 확인 해야 합니다. 존재 하지 않는 경우 사용자가 만들 수 있는 인터페이스를 제공 해야 합니다.
 
 다음 코드를 뷰 컨트롤러에 추가 하 여 기본 홈을 확인할 수 있습니다.
 
@@ -223,13 +223,13 @@ ThisApp.HomeManager.DidUpdateHomes += (sender, e) => {
 };
 ```
 
-홈 관리자가 HomeKit에 연결 하면 `DidUpdateHomes` 이벤트가 발생 하 고, 모든 기존 홈이 관리자의 홈 컬렉션에 로드 되며, 사용 가능한 경우 기본 홈이 로드 됩니다.
+홈 관리자가 HomeKit에 연결 하면 `DidUpdateHomes` 이벤트가 발생 하 고 모든 기존 홈이 관리자의 홈 컬렉션에 로드 되며, 사용 가능한 경우 기본 홈이 로드 됩니다.
 
 ### <a name="adding-a-primary-home"></a>기본 홈 추가
 
-`HMHomeManager`의 `PrimaryHome` 속성이 `DidUpdateHomes` 이벤트 후에 `null` 되는 경우 계속 하기 전에 사용자가 기본 홈을 만들고 할당 하는 방법을 제공 해야 합니다.
+`PrimaryHome`의 속성이 `HMHomeManager` 이벤트 이후 인 경우에는 `null` `DidUpdateHomes` 계속 하기 전에 사용자가 기본 홈을 만들고 할당 하는 방법을 제공 해야 합니다.
 
-일반적으로 앱은 사용자가 새 홈의 이름을 지정한 후 홈 관리자에 게 전달 되어 기본 홈으로 설정 됩니다. **HomeKitIntro** 샘플 앱의 경우, IOS 디자이너에서 모달 보기가 생성 되 고 앱의 주 인터페이스에서 `AddHomeSegue` segue에 의해 호출 됩니다.
+일반적으로 앱은 사용자가 새 홈의 이름을 지정한 후 홈 관리자에 게 전달 되어 기본 홈으로 설정 됩니다. **HomeKitIntro** 샘플 앱의 경우, IOS 디자이너에서 모달 보기가 생성 되 고 `AddHomeSegue` 앱의 주 인터페이스에서 segue에 의해 호출 됩니다.
 
 사용자가 새 홈의 이름을 입력할 수 있는 텍스트 필드와 홈을 추가 하는 단추를 제공 합니다. 사용자가 **홈 추가** 단추를 누르면 홈 관리자를 호출 하 여 홈을 추가 합니다.
 
@@ -258,33 +258,33 @@ ThisApp.HomeManager.AddHome(HomeName.Text,(home,error) =>{
 });
 ```
 
-`AddHome` 메서드는 새 홈을 만들어 지정 된 콜백 루틴으로 반환 하려고 합니다. `error` 속성이 `null`되지 않으면 오류가 발생 하 여 사용자에 게 표시 됩니다. 가장 일반적인 오류는 고유한 홈 이름이 아니거나 홈 관리자가 HomeKit와 통신할 수 없는 경우에 발생 합니다.
+`AddHome`메서드는 새 홈을 만들어 지정 된 콜백 루틴으로 반환 하려고 합니다. `error`속성이이 아니면 `null` 오류가 발생 하 여 사용자에 게 표시 되어야 합니다. 가장 일반적인 오류는 고유한 홈 이름이 아니거나 홈 관리자가 HomeKit와 통신할 수 없는 경우에 발생 합니다.
 
-홈이 성공적으로 만들어진 경우에는 `UpdatePrimaryHome` 메서드를 호출 하 여 새 홈을 기본 홈으로 설정 해야 합니다. `error` 속성이 `null`되지 않으면 오류가 발생 하 여 사용자에 게 표시 됩니다.
+Home이 성공적으로 만들어진 경우 메서드를 호출 하 여 `UpdatePrimaryHome` 새 홈을 기본 홈으로 설정 해야 합니다. `error`속성이이 아닌 경우에도 `null` 오류가 발생 하 여 사용자에 게 표시 되어야 합니다.
 
-또한 홈 관리자의 `DidAddHome` 및 `DidRemoveHome` 이벤트를 모니터링 하 고 필요에 따라 앱의 사용자 인터페이스를 업데이트 해야 합니다.
+또한 홈 관리자의 및 이벤트를 모니터링 `DidAddHome` `DidRemoveHome` 하 고 필요에 따라 앱의 사용자 인터페이스를 업데이트 해야 합니다.
 
 > [!IMPORTANT]
-> 위의 샘플 코드에서 사용 되는 `AlertView.PresentOKAlert` 메서드는 iOS 경고를 보다 쉽게 사용할 수 있도록 하는 HomeKitIntro 응용 프로그램의 도우미 클래스입니다.
+> `AlertView.PresentOKAlert`위의 샘플 코드에 사용 되는 메서드는 HomeKitIntro 응용 프로그램의 도우미 클래스로, IOS 경고를 보다 쉽게 사용할 수 있도록 합니다.
 
 ## <a name="finding-new-accessories"></a>새 액세서리 찾기
 
-Home Manager에서 기본 홈을 정의 하거나 로드 한 후에는 Xamarin.ios 앱이 `HMAccessoryBrowser`를 호출 하 여 새로운 home automation 액세서리를 찾고 홈에 추가할 수 있습니다.
+Home Manager에서 기본 홈을 정의 하거나 로드 한 후 Xamarin.ios 앱은를 호출 `HMAccessoryBrowser` 하 여 새 홈 automation 액세서리를 찾고 홈에 추가할 수 있습니다.
 
-`StartSearchingForNewAccessories` 메서드를 호출 하 여 완료 될 때 새 보조 프로그램 및 `StopSearchingForNewAccessories` 메서드를 검색 하기 시작 합니다.
+메서드를 호출 `StartSearchingForNewAccessories` 하 여 완료 될 때 새 액세서리 및 메서드를 검색 하기 시작 `StopSearchingForNewAccessories` 합니다.
 
 > [!IMPORTANT]
-> `StartSearchingForNewAccessories`은 iOS 장치에 대 한 배터리 수명 및 성능에 부정적인 영향을 주기 때문에 오랜 시간 동안 실행 되 면 안 됩니다. Apple은 1 분 후에 `StopSearchingForNewAccessories`를 호출 하거나, 사용자에 게 액세서리 UI 찾기가 제공 된 경우에만 검색 하는 것을 제안 합니다.
+> `StartSearchingForNewAccessories`배터리 수명 및 iOS 장치의 성능에 부정적인 영향을 주기 때문에 오랜 시간 동안 실행 하면 안 됩니다. Apple은 `StopSearchingForNewAccessories` 1 분 후에 호출 하거나, 사용자에 게 액세서리 UI 찾기가 표시 될 때만 검색을 제안 합니다.
 
-`DidFindNewAccessory` 이벤트는 새 액세서리를 검색 하면 호출 되며 액세서리 브라우저의 `DiscoveredAccessories` 목록에 추가 됩니다.
+이 `DidFindNewAccessory` 이벤트는 새 액세서리를 검색 하면 호출 되며 `DiscoveredAccessories` 액세서리 브라우저의 목록에 추가 됩니다.
 
-`DiscoveredAccessories` 목록에는 조명 또는 중고품 도어 제어와 같은 제공 HomeKit 사용 홈 자동화 장치 및 사용 가능한 서비스를 정의 하는 `HMAccessory` 개체의 컬렉션이 포함 됩니다.
+`DiscoveredAccessories`이 목록에는 `HMAccessory` HomeKit 사용 홈 자동화 장치와 조명 또는 중고품 도어 제어와 같은 사용 가능한 서비스를 정의 하는 개체의 컬렉션이 포함 됩니다.
 
 새 액세서리를 찾았으면 사용자에 게 표시 되 고이를 선택 하 여 홈에 추가할 수 있습니다. 예제:
 
 [![](homekit-images/accessory01.png "Finding a new accessory")](homekit-images/accessory01.png#lightbox)
 
-`AddAccessory` 메서드를 호출 하 여 선택한 액세서리를 홈의 컬렉션에 추가 합니다. 예를 들면,
+메서드를 호출 `AddAccessory` 하 여 선택한 액세서리를 홈의 컬렉션에 추가 합니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Add the requested accessory to the home
@@ -297,7 +297,7 @@ ThisApp.HomeManager.PrimaryHome.AddAccessory (_controller.AccessoryBrowser.Disco
 });
 ```
 
-`err` 속성이 `null`되지 않으면 오류가 발생 하 여 사용자에 게 표시 됩니다. 그렇지 않으면 사용자에 게 추가할 장치에 대 한 설치 코드를 입력 하 라는 메시지가 표시 됩니다.
+`err`속성이이 아니면 `null` 오류가 발생 하 여 사용자에 게 표시 되어야 합니다. 그렇지 않으면 사용자에 게 추가할 장치에 대 한 설치 코드를 입력 하 라는 메시지가 표시 됩니다.
 
 [![](homekit-images/accessory02.png "Enter the setup code for the device to add")](homekit-images/accessory02.png#lightbox)
 
@@ -307,17 +307,17 @@ HomeKit 액세서리 시뮬레이터에서이 숫자는 **설치 코드** 필드
 
 Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상자 또는 액세서리의 사용자 설명서에 있는 레이블에 인쇄 됩니다.
 
-사용자가 홈 컬렉션에 추가한 후에는 액세서리 브라우저의 `DidRemoveNewAccessory` 이벤트를 모니터링 하 고 사용자 인터페이스를 업데이트 하 여 사용 가능한 목록에서 보조 프로그램을 제거 해야 합니다.
+사용자가 홈 컬렉션에 추가한 후에는 액세서리 브라우저의 이벤트를 모니터링 하 `DidRemoveNewAccessory` 고 사용자 인터페이스를 업데이트 하 여 사용 가능한 목록에서 보조 프로그램을 제거 해야 합니다.
 
 ## <a name="working-with-accessories"></a>액세서리 작업
 
 기본 홈이 설정 되 고 보조 프로그램이 추가 되 면 사용할 사용자에 대 한 액세서리 목록 (및 필요에 따라 방)을 제공할 수 있습니다.
 
-`HMRoom` 개체에는 지정 된 대화방 및 그에 속한 모든 액세서리에 대 한 모든 정보가 포함 됩니다. 필요에 따라 대화방을 하나 이상의 영역으로 구성할 수 있습니다. `HMZone`에는 지정 된 영역에 대 한 모든 정보와 해당 영역에 속하는 모든 대화방이 포함 됩니다.
+개체에는 `HMRoom` 지정 된 대화방 및 여기에 속한 모든 액세서리에 대 한 모든 정보가 포함 됩니다. 필요에 따라 대화방을 하나 이상의 영역으로 구성할 수 있습니다. 는 `HMZone` 지정 된 영역에 대 한 모든 정보와 해당 영역에 속하는 모든 대화방을 포함 합니다.
 
 이 예에서는 작업을 간단 하 게 유지 하 고 홈의 액세서리로 직접 작업 하는 것이 좋습니다.
 
-`HMHome` 개체는 `Accessories` 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다. 예를 들면,
+`HMHome`개체는 해당 속성에서 사용자에 게 제공할 수 있는 할당 된 액세서리 목록을 포함 합니다 `Accessories` . 예를 들면 다음과 같습니다.
 
 [![](homekit-images/accessory04.png "An example accessory")](homekit-images/accessory04.png#lightbox)
 
@@ -325,15 +325,15 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 ## <a name="working-with-services"></a>서비스 작업
 
-사용자가 지정 된 HomeKit 사용 홈 자동화 장치와 상호 작용 하는 경우 일반적으로 제공 하는 서비스를 통해 제공 됩니다. `HMAccessory` 클래스의 `Services` 속성은 장치에서 제공 하는 서비스를 정의 하는 `HMService` 개체의 컬렉션을 포함 합니다.
+사용자가 지정 된 HomeKit 사용 홈 자동화 장치와 상호 작용 하는 경우 일반적으로 제공 하는 서비스를 통해 제공 됩니다. `Services`클래스의 속성은 `HMAccessory` 장치에서 제공 하는 `HMService` 서비스를 정의 하는 개체의 컬렉션을 포함 합니다.
 
 서비스는 광원, 온도 조절 장치, 중고품 도어, 스위치 또는 잠금과 같은 작업입니다. 일부 장치 (예: 중고품 도어 열기)는 두 개 이상의 서비스 (예: 조명을 열거나 닫는 기능)를 제공 합니다.
 
-지정 된 액세서리에서 제공 하는 특정 서비스 외에도 각 액세서리에는 이름, 제조업체, 모델 및 일련 번호와 같은 속성을 정의 하는 `Information Service` 포함 되어 있습니다.
+지정 된 액세서리에서 제공 하는 특정 서비스 외에도 각 액세서리에는 `Information Service` 이름, 제조업체, 모델 및 일련 번호와 같은 속성을 정의 하는가 포함 되어 있습니다.
 
 ### <a name="accessory-service-types"></a>액세서리 서비스 유형
 
-`HMServiceType` 열거형을 통해 다음 서비스 유형을 사용할 수 있습니다.
+열거를 통해 사용할 수 있는 서비스 유형은 다음과 `HMServiceType` 같습니다.
 
 - **AccessoryInformation** -지정 된 액세서리 (홈 자동화 장치)에 대 한 정보를 제공 합니다.
 - **AirQualitySensor** -공기 품질 센서를 정의 합니다.
@@ -365,23 +365,23 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 
 ### <a name="displaying-service-information"></a>서비스 정보 표시
 
-`HMAccessory` 로드 한 후에는 제공 된 개별 `HNService` 개체를 쿼리하여 해당 정보를 사용자에 게 표시할 수 있습니다.
+을 로드 한 후에는 `HMAccessory` 제공 된 개별 `HNService` 개체를 쿼리하여 해당 정보를 사용자에 게 표시할 수 있습니다.
 
 [![](homekit-images/accessory05.png "Displaying Service Information")](homekit-images/accessory05.png#lightbox)
 
-작업을 시도 하기 전에 항상 `HMAccessory`의 `Reachable` 속성을 확인 해야 합니다. 사용자가 장치 범위 내에 없거나 연결 되지 않은 경우 액세서리에 연결할 수 없습니다.
+`Reachable`에 대 한 `HMAccessory` 작업을 시도 하기 전에 항상의 속성을 확인 해야 합니다. 사용자가 장치 범위 내에 없거나 연결 되지 않은 경우 액세서리에 연결할 수 없습니다.
 
 서비스를 선택 하면 사용자가 해당 서비스의 하나 이상의 특성을 보거나 수정 하 여 지정 된 홈 automation 장치를 모니터링 하거나 제어할 수 있습니다.
 
-<a name="Working-with-Characteristics" />
+<a name="Working-with-Characteristics"></a>
 
 ## <a name="working-with-characteristics"></a>특성 작업
 
-각 `HMService` 개체에는 서비스의 상태에 대 한 정보를 제공 하거나 (예: 문 열림 또는 닫힘) 사용자가 상태를 조정할 수 있도록 허용 하는 `HMCharacteristic` 개체의 컬렉션이 포함 될 수 있습니다 (예: 광원 색 설정).
+각 `HMService` 개체에는 `HMCharacteristic` 서비스의 상태에 대 한 정보를 제공 하거나 (예: 문 열림 또는 닫힘) 사용자가 상태를 조정할 수 있도록 허용 하는 개체의 컬렉션을 포함할 수 있습니다 (예: 광원 색 설정).
 
-`HMCharacteristic` 특성 및 해당 상태에 대 한 정보를 제공할 뿐만 아니라 _특성 메타 데이터_ (`HMCharacteristisMetadata`)를 통해 상태를 사용 하는 메서드도 제공 합니다. 이 메타 데이터는 사용자에 게 정보를 표시 하거나 상태를 수정할 수 있도록 허용 하는 속성 (예: 최소 및 최대 값 범위)을 제공할 수 있습니다.
+`HMCharacteristic`는 특성 및 해당 상태에 대 한 정보를 제공할 뿐 아니라 _특성 메타 데이터_ ()를 통해 상태를 사용 하는 메서드도 제공 `HMCharacteristisMetadata` 합니다. 이 메타 데이터는 사용자에 게 정보를 표시 하거나 상태를 수정할 수 있도록 허용 하는 속성 (예: 최소 및 최대 값 범위)을 제공할 수 있습니다.
 
-`HMCharacteristicType` 열거형은 다음과 같이 정의 하거나 수정할 수 있는 특성 메타 데이터 값 집합을 제공 합니다.
+`HMCharacteristicType`열거형은 다음과 같이 정의 하거나 수정할 수 있는 특성 메타 데이터 값 집합을 제공 합니다.
 
 - Adminonly 액세스
 - AirParticulateDensity
@@ -425,7 +425,7 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 - 제조업체
 - 모델
 - MotionDetected 됨
-- name
+- Name
 - ObstructionDetected
 - OccupancyDetected
 - OutletInUse
@@ -453,13 +453,13 @@ Real HomeKit 액세서리의 경우 설정 코드는 장치 자체, 제품 상�
 - TargetTemperature
 - TargetVerticalTilt
 - TemperatureUnits
-- Version
+- 버전
 
 ### <a name="working-with-a-characteristics-value"></a>특성 값 사용
 
-앱이 지정 된 특성의 최신 상태를 갖도록 하려면 `HMCharacteristic` 클래스의 `ReadValue` 메서드를 호출 합니다. `err` 속성이 `null`되지 않으면 오류가 발생 하 여 사용자에 게 표시 되거나 표시 되지 않을 수 있습니다.
+앱이 지정 된 특성의 최신 상태를 갖도록 하려면 `ReadValue` 클래스의 메서드를 호출 합니다 `HMCharacteristic` . `err`속성이이 아니면 `null` 오류가 발생 하 여 사용자에 게 표시 되거나 표시 되지 않을 수 있습니다.
 
-특성의 `Value` 속성에는 지정 된 특성의 현재 상태가 `NSObject`포함 되어 있으므로에서 C#직접 작업할 수 없습니다.
+특성의 `Value` 속성은 지정 된 특성의 현재 상태를로 포함 `NSObject` 하며,이는 c #에서 직접로 작업할 수 없습니다.
 
 값을 읽으려면 다음 도우미 클래스가 **HomeKitIntro** 샘플 응용 프로그램에 추가 되었습니다.
 
@@ -629,15 +629,15 @@ namespace HomeKitIntro
 }
 ```
 
-응용 프로그램에서 특성의 현재 상태를 읽어야 할 때마다 `NSObjectConverter` 사용 됩니다. 예를 들면 다음과 같습니다.
+는 `NSObjectConverter` 응용 프로그램에서 특성의 현재 상태를 읽어야 할 때마다 사용 됩니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 var value = NSObjectConverter.ToFloat (characteristic.Value);
 ```
 
-위의 줄은 값을 Xamarin C# 코드에서 사용할 수 있는 `float` 변환 합니다.
+위의 줄에서는 값을 `float` Xamarin c # 코드에서 사용할 수 있는로 변환 합니다.
 
-`HMCharacteristic`를 수정 하려면 `WriteValue` 메서드를 호출 하 고 `NSObject.FromObject` 호출에서 새 값을 래핑합니다. 예를 들면 다음과 같습니다.
+를 수정 하려면 `HMCharacteristic` 해당 메서드를 호출 `WriteValue` 하 고 호출에서 새 값을 래핑합니다 `NSObject.FromObject` . 예를 들면 다음과 같습니다.
 
 ```csharp
 Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
@@ -649,11 +649,11 @@ Characteristic.WriteValue(NSObject.FromObject(value),(err) =>{
 });
 ```
 
-`err` 속성이 `null`되지 않으면 오류가 발생 하 여 사용자에 게 표시 됩니다.
+`err`속성이이 아니면 `null` 오류가 발생 하 여 사용자에 게 표시 되어야 합니다.
 
 ### <a name="testing-characteristic-value-changes"></a>특성 값 변경 테스트
 
-`HMCharacteristics` 및 시뮬레이션 된 액세서리로 작업할 때 `Value` 속성에 대 한 수정은 HomeKit 액세서리 시뮬레이터 내에서 모니터링할 수 있습니다.
+및 시뮬레이션 된 액세서리로 작업할 때 `HMCharacteristics` 속성에 대 한 수정은 `Value` HomeKit 액세서리 시뮬레이터 내에서 모니터링할 수 있습니다.
 
 실제 iOS 장치 하드웨어에서 실행 되는 **HomeKitIntro** 앱을 사용 하 여 특성 값에 대 한 변경 내용은 HomeKit 액세서리 시뮬레이터에서 거의 즉시 표시 되어야 합니다. 예를 들어 iOS 앱에서 광원의 상태를 변경 합니다.
 
@@ -686,15 +686,15 @@ ITunes 앱 스토어에서 HomeKit가 사용 하도록 설정 된 Xamarin.ios �
 
 Apple에서 iOS 9에 대해 다음과 같이 HomeKit를 변경 하 고 추가 했습니다.
 
-- **기존 개체 유지 관리** -기존 액세서리를 수정 하는 경우 홈 관리자 (`HMHomeManager`)는 수정 된 특정 항목을 사용자에 게 알려줍니다.
-- **영구 식별자** -모든 관련 HomeKit 클래스에는 HomeKit 사용 앱 (또는 동일한 앱의 인스턴스)에서 지정 된 항목을 고유 하 게 식별 하는 `UniqueIdentifier` 속성이 포함 되어 있습니다.
+- **기존 개체 유지 관리** -기존 액세서리를 수정 하면 홈 관리자 ()는 `HMHomeManager` 수정 된 특정 항목을 알려 줍니다.
+- **영구 식별자** -모든 관련 HomeKit 클래스에는 `UniqueIdentifier` HomeKit 사용 앱 (또는 동일한 앱의 인스턴스)에서 지정 된 항목을 고유 하 게 식별 하는 속성이 포함 되어 있습니다.
 - **사용자 관리** -기본 사용자의 홈에서 HomeKit 장치에 대 한 액세스 권한이 있는 사용자를 위한 사용자 관리를 제공 하는 기본 제공 뷰 컨트롤러를 추가 했습니다.
 - **사용자 기능** -HomeKit 사용자는 이제 HomeKit 및 HomeKit enabled 액세서리에서 사용할 수 있는 기능을 제어 하는 권한 집합을 갖게 됩니다. 앱은 현재 사용자 에게만 관련 기능을 표시 해야 합니다. 예를 들어 관리자만 다른 사용자를 유지 관리할 수 있습니다.
 - **미리 정의 된 장면** -평균 HomeKit 사용자에 대해 발생 하는 네 가지 일반적인 이벤트 (예: Get Up, Leave, Return, Go로 이동)에 대해 미리 정의 된 장면을 만들었습니다. 이러한 미리 정의 된 장면을 홈에서 삭제할 수 없습니다.
 - **장면 및 siri** -siri는 iOS 9의 장면을 심층적으로 지원 하 고 HomeKit에 정의 된 장면의 이름을 인식할 수 있습니다. 사용자는 자신의 이름을 Siri로 말하기만 장면을 실행할 수 있습니다.
 - **액세서리 범주** -미리 정의 된 범주 집합은 모든 액세서리에 추가 되었으며, 홈에 추가 되거나 앱 내에서 작동 하는 액세서리 유형을 식별 하는 데 도움이 됩니다. 이러한 새 범주는 액세서리를 설정 하는 동안 사용할 수 있습니다.
 - **Apple Watch 지원** -이제 watchOS에서 HomeKit를 사용할 수 있으며, Apple Watch가 감시 근처에 있는 IPhone 없이 HomeKit 사용 가능 장치를 제어할 수 있습니다. WatchOS에 대 한 HomeKit은 홈 보기, 보조 프로그램 제어 및 장면을 실행 하는 기능을 지원 합니다.
-- **새 이벤트 트리거 유형** -ios 8에서 지원 되는 타이머 유형 트리거와 더불어 이제 ios 9에서 액세서리 상태 (예: 센서 데이터) 또는 지리적 위치를 기반으로 하는 이벤트 트리거를 지원 합니다. 이벤트 트리거는 `NSPredicates`을 사용 하 여 실행 조건을 설정 합니다.
+- **새 이벤트 트리거 유형** -ios 8에서 지원 되는 타이머 유형 트리거와 더불어 이제 ios 9에서 액세서리 상태 (예: 센서 데이터) 또는 지리적 위치를 기반으로 하는 이벤트 트리거를 지원 합니다. 이벤트 트리거 `NSPredicates` 는를 사용 하 여 실행 조건을 설정 합니다.
 - 원격 **액세스** -원격 액세스를 사용 하면 사용자가 원격 위치에서 집 떨어져 있을 때 HomeKit 사용 홈 Automation 액세서리를 제어할 수 있습니다. IOS 8에서는 사용자가 집에서 3 세대 Apple TV를 사용 하는 경우에만 지원 됩니다. IOS 9에서는이 제한이 리프트 되며 원격 액세스는 iCloud 및 HAP (HomeKit 액세서리 프로토콜)를 통해 지원 됩니다.
 - **새로운 블루투스 저 에너지 (HomeKit) 기능** -이제는 더 많은 액세서리 유형을 지원 합니다 .이를 통해 더 많은 액세서리 유형을 지원 합니다. HomeKit 액세서리는 HAP 보안 터널링을 사용 하 여 Wi-fi를 통해 다른 Bluetooth 액세서리를 노출할 수 있습니다 (Bluetooth 범위를 벗어난 경우). IOS 9에서 전체 액세서리는 알림 및 메타 데이터에 대 한 완전 한 지원을 제공 합니다.
 - **새 액세서리 범주** -Apple은 iOS 9에서 창 Coverings, Motorized 도어, Windows, 경보 시스템, 센서 및 프로그래밍 가능 스위치와 같은 새 액세서리 범주를 추가 했습니다.

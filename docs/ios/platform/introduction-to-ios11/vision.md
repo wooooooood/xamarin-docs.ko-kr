@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: b58e7b1fffed3253d9765401d52f16b751db134d
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 89a21eec369691e5c6e1ec8ce2430d679b6b309d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572145"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Xamarin.ios의 비전 프레임 워크
 
@@ -31,7 +31,7 @@ ms.locfileid: "79306106"
 
 사각형 검색 및 얼굴 감지 아래에서 자세히 설명 합니다.
 
-<a name="rectangles" />
+<a name="rectangles"></a>
 
 ## <a name="rectangle-detection"></a>사각형 감지
 
@@ -39,9 +39,9 @@ ms.locfileid: "79306106"
 
 ### <a name="1-initialize-the-vision-request"></a>1. 비전 요청 초기화
 
-`ViewDidLoad`에서 각 요청이 끝날 때 호출 되는 `HandleRectangles` 메서드를 참조 하는 `VNDetectRectanglesRequest`을 만듭니다.
+에서 `ViewDidLoad` `VNDetectRectanglesRequest` `HandleRectangles` 각 요청이 끝날 때 호출 될 메서드를 참조 하는을 만듭니다.
 
-또한 `MaximumObservations` 속성을 설정 해야 합니다. 그렇지 않으면 기본값은 1이 고 단일 결과만 반환 됩니다.
+`MaximumObservations`속성도 설정 해야 합니다. 그렇지 않으면 기본값이 1로 설정 되 고 단일 결과만 반환 됩니다.
 
 ```csharp
 RectangleRequest = new VNDetectRectanglesRequest(HandleRectangles);
@@ -60,11 +60,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-이 처리기는 1 단계에서 만든 비전 프레임 워크 `VNDetectRectanglesRequest`에 `ciImage`를 전달 합니다.
+이 처리기는를 `ciImage` 1 단계에서 만든 비전 프레임 워크로 전달 합니다 `VNDetectRectanglesRequest` .
 
 ### <a name="3-handle-the-results-of-vision-processing"></a>3. 비전 처리 결과를 처리 합니다.
 
-사각형 검색이 완료 된 후 프레임 워크는 `HandleRectangles` 메서드를 실행 합니다. 요약 정보는 아래와 같습니다.
+사각형 검색이 완료 되 면 프레임 워크에서 메서드를 실행 합니다 `HandleRectangles` . 요약 정보는 아래와 같습니다.
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -88,7 +88,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ### <a name="4-display-the-results"></a>4. 결과를 표시 합니다.
 
-**VisionRectangles** 샘플의 `OverlayRectangles` 메서드에는 세 가지 함수가 있습니다.
+`OverlayRectangles` **VisionRectangles** 샘플의 메서드에는 세 가지 함수가 있습니다.
 
 - 소스 이미지 렌더링
 - 각 항목을 검색 한 위치를 나타내는 사각형 그리기
@@ -102,7 +102,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 사각형 검색은 종종 작업 체인에서 첫 번째 단계입니다. [예를 들어 사각형이 CoreML](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision)모델에 전달 되어 필기 숫자를 구문 분석 합니다.
 
-<a name="faces" />
+<a name="faces"></a>
 
 ## <a name="face-detection"></a>얼굴 감지
 
@@ -110,7 +110,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ### <a name="1-initialize-the-vision-request"></a>1. 비전 요청 초기화
 
-`ViewDidLoad`에서 각 요청이 끝날 때 호출 되는 `HandleRectangles` 메서드를 참조 하는 `VNDetectFaceRectanglesRequest`을 만듭니다.
+에서 `ViewDidLoad` `VNDetectFaceRectanglesRequest` `HandleRectangles` 각 요청이 끝날 때 호출 될 메서드를 참조 하는을 만듭니다.
 
 ```csharp
 FaceRectangleRequest = new VNDetectFaceRectanglesRequest(HandleRectangles);
@@ -128,11 +128,11 @@ DispatchQueue.DefaultGlobalQueue.DispatchAsync(()=>{
 });
 ```
 
-이 처리기는 1 단계에서 만든 비전 프레임 워크 `VNDetectFaceRectanglesRequest`에 `ciImage`를 전달 합니다.
+이 처리기는를 `ciImage` 1 단계에서 만든 비전 프레임 워크로 전달 합니다 `VNDetectFaceRectanglesRequest` .
 
 ### <a name="3-handle-the-results-of-vision-processing"></a>3. 비전 처리 결과를 처리 합니다.
 
-얼굴 검색이 완료 되 면 처리기는 오류 처리를 수행 하 고 검색 된 면의 범위를 표시 하는 `HandleRectangles` 메서드를 실행 하 고, `OverlayRectangles`를 호출 하 여 원본 그림에 경계 사각형을 그립니다.
+얼굴 검색이 완료 되 면 처리기는 `HandleRectangles` 오류 처리를 수행 하 고 검색 된 면의 범위를 표시 하는 메서드를 실행 하 고를 `OverlayRectangles` 호출 하 여 원본 그림에 경계 사각형을 그립니다.
 
 ```csharp
 private void HandleRectangles(VNRequest request, NSError error){
@@ -161,7 +161,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ### <a name="4-display-the-results"></a>4. 결과를 표시 합니다.
 
-**VisionFaces** 샘플의 `OverlayRectangles` 메서드에는 세 가지 함수가 있습니다.
+`OverlayRectangles` **VisionFaces** 샘플의 메서드에는 세 가지 함수가 있습니다.
 
 - 소스 이미지 렌더링
 - 검색 된 각 면에 대 한 사각형 그리기
@@ -173,7 +173,7 @@ private void HandleRectangles(VNRequest request, NSError error){
 
 ### <a name="5-further-processing"></a>5. 추가 처리 중
 
-시각 프레임 워크에는 눈동자 및 입 등의 얼굴 기능을 검색 하는 추가 기능이 포함 되어 있습니다. 위의 3 단계에서와 같이 `VNFaceObservation` 결과를 반환 하지만 추가 `VNFaceLandmark` 데이터를 사용 하는 `VNDetectFaceLandmarksRequest` 유형을 사용 합니다.
+시각 프레임 워크에는 눈동자 및 입 등의 얼굴 기능을 검색 하는 추가 기능이 포함 되어 있습니다. `VNDetectFaceLandmarksRequest` `VNFaceObservation` 위의 3 단계에서와 같이 결과를 반환 하 고 추가 데이터를 사용 하 여 결과를 반환 하는 형식을 사용 `VNFaceLandmark` 합니다.
 
 ## <a name="related-links"></a>관련 링크
 

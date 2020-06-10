@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: 84d235bb7c6874255ea025ff5897e150bd6f023b
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: a7534ec706633a856e5e095369e29f5fdef5f6a7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76724685"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574225"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Xamarin.ios의 앱 전송 보안
 
@@ -22,9 +22,9 @@ _ATS (app Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서
 
 ## <a name="about-app-transport-security"></a>앱 전송 보안 정보
 
-위에서 설명한 것 처럼 ATS는 iOS 9 및 OS X El Capitan의 모든 인터넷 통신이 안전한 연결 모범 사례를 준수 하 여 앱 또는 해당 앱이 있는 라이브러리를 통해 직접 중요 한 정보가 노출 되지 않도록 방지 합니다. 필요로.
+위에서 설명한 것 처럼 ATS는 iOS 9 및 OS X El Capitan의 모든 인터넷 통신이 보안 연결 모범 사례를 준수 하도록 하 여 앱 또는 사용 중인 라이브러리를 통해 직접 중요 한 정보를 실수로 공개 하지 않도록 합니다.
 
-기존 앱의 경우 가능 하면 항상 `HTTPS` 프로토콜을 구현 합니다. 새 Xamarin.ios 앱의 경우 인터넷 리소스와 통신할 때 `HTTPS` 독점적으로 사용 해야 합니다. 또한 높은 수준의 API 통신은 TLS 버전 1.2을 사용 하 여 암호화 해야 합니다.
+기존 앱의 경우 가능 하면 `HTTPS` 항상 프로토콜을 구현 합니다. 새 Xamarin.ios 앱의 경우 `HTTPS` 인터넷 리소스와 통신할 때 독점적으로를 사용 해야 합니다. 또한 높은 수준의 API 통신은 TLS 버전 1.2을 사용 하 여 암호화 해야 합니다.
 
 [NSUrlConnection](xref:Foundation.NSUrlConnection), [Cfurl](xref:CoreFoundation.CFUrl) 또는 [NSUrlSession](xref:Foundation.NSUrlSession) 를 사용 하 여 만든 모든 연결은 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 ATS을 사용 합니다.
 
@@ -42,7 +42,7 @@ ATS는 모든 인터넷 연결에 대해 다음과 같은 요구 사항을 적�
 
 ATS가 iOS 9에서 기본적으로 사용 하도록 설정 되어 있기 때문에 이러한 요구 사항을 충족 하지 않는 연결을 시도 하면 예외가 throw 됩니다.
 
-<a name="ATS-Compatible-Ciphers" />
+<a name="ATS-Compatible-Ciphers"></a>
 
 ### <a name="ats-compatible-ciphers"></a>ATS 호환 암호화
 
@@ -62,21 +62,21 @@ ATS 보안 인터넷 통신에서 다음과 같은 전달 보안 암호화 유�
 
 IOS 인터넷 통신 클래스를 사용 하는 방법에 대 한 자세한 내용은 Apple의 [NSURLConnection 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSURLConnection_Class/index.html#//apple_ref/doc/uid/TP40003755), [Cfurl 참조](https://developer.apple.com/library/prerelease/ios/documentation/CoreFoundation/Reference/CFURLRef/index.html#//apple_ref/doc/uid/20001206) 또는 [NSURLSession 클래스 참조](https://developer.apple.com/library/prerelease/ios/documentation/Foundation/Reference/NSURLSession_class/index.html#//apple_ref/doc/uid/TP40013435)를 참조 하세요.
 
-<a name="xamarinsupport" />
+<a name="xamarinsupport"></a>
 
 ## <a name="supporting-ats-in-xamarinios"></a>Xamarin.ios에서 ATS 지원
 
 ATS는 iOS 9 및 OS X El Capitan에서 기본적으로 사용 하도록 설정 되어 있기 때문에 Xamarin.ios 앱 또는 사용 중인 라이브러리나 서비스에서 인터넷에 연결 하는 경우 몇 가지 작업을 수행 해야 합니다. 그렇지 않으면 연결 시 예외가 throw 됩니다.
 
-기존 앱의 경우 Apple은 가능한 한 빨리 `HTTPS` 프로토콜을 지 원하는 것으로 제안 합니다. `HTTPS`를 지원 하지 않거나 `HTTPS`를 지원 하지 않는 타사 웹 서비스에 연결 하는 것이 불가능 한 경우 ATS에서 옵트아웃 (opt out) 할 수 있습니다. 자세한 내용은 아래의 [ATS에서 옵트아웃 (옵트아웃)](#optout) 섹션을 참조 하세요.
+기존 앱의 경우 Apple은 가능한 한 빨리 프로토콜을 지 원하는 것으로 제안 `HTTPS` 합니다. 지원 하지 않는 타사 웹 서비스에 연결 하거나 지원 하지 않는 타사 웹 서비스에 연결 하는 것이 불가능 `HTTPS` `HTTPS` 한 경우 ATS에서 옵트아웃 (opt out) 할 수 있습니다. 자세한 내용은 아래의 [ATS에서 옵트아웃 (옵트아웃)](#optout) 섹션을 참조 하세요.
 
-새 Xamarin.ios 앱의 경우 인터넷 리소스와 통신할 때 `HTTPS` 독점적으로 사용 해야 합니다. 이는 가능 하지 않으며 ATS 옵트아웃 (opt out)을 수행 해야 하는 상황이 발생할 수 있습니다 (예: 타사 웹 서비스 사용).
+새 Xamarin.ios 앱의 경우 `HTTPS` 인터넷 리소스와 통신할 때 독점적으로를 사용 해야 합니다. 이는 가능 하지 않으며 ATS 옵트아웃 (opt out)을 수행 해야 하는 상황이 발생할 수 있습니다 (예: 타사 웹 서비스 사용).
 
 또한 ATS는 TLS 버전 1.2을 사용 하 여 높은 수준의 API 통신을 전달 하는 보안을 적용 합니다. 자세한 내용은 위의 [ATS Connection 요구 사항](#ats-connection-requirements) 및 [ATS Compatible 암호](#ats-compatible-ciphers) 섹션을 참조 하세요.
 
 TLS ([전송 계층 보안](https://en.wikipedia.org/wiki/Transport_Layer_Security))에 익숙하지 않을 수 있지만 SSL ([Secure Socket layer](https://en.wikipedia.org/wiki/Transport_Layer_Security))의 후속 작업 이며 네트워크 연결을 통해 보안을 적용 하기 위한 암호화 프로토콜의 컬렉션을 제공 합니다.
 
-TLS 수준은 사용 하는 웹 서비스에 의해 제어 되므로 응용 프로그램의 컨트롤 외부에 있습니다. `HttpClient`와 `ModernHttpClient`는 모두 서버에서 지 원하는 가장 높은 수준의 TLS 암호화를 자동으로 사용 해야 합니다.
+TLS 수준은 사용 하는 웹 서비스에 의해 제어 되므로 응용 프로그램의 컨트롤 외부에 있습니다. 및는 모두 `HttpClient` `ModernHttpClient` 서버에서 지 원하는 가장 높은 수준의 TLS 암호화를 자동으로 사용 합니다.
 
 통신 하는 서버 (특히 타사 서비스인 경우)에 따라 전달 보안을 사용 하지 않도록 설정 하거나 낮은 TLS 수준을 선택 해야 할 수 있습니다. 자세한 내용은 아래의 [ATS 옵션 구성](#configuring-ats-options) 섹션을 참조 하세요.
 
@@ -103,9 +103,9 @@ IOS 앱에서 사용 하는 HTTPClient 구현을 설정 하려면 **솔루션 �
 - 일반적으로 기본 Api 보다 훨씬 느립니다.
 - 더 많은 관리 코드가 필요 하 고 더 큰 앱이 생성 됩니다.
 
-#### <a name="cfnetwork-handler"></a>CFNetwork Handler
+#### <a name="cfnetwork-handler"></a>CFNetwork 처리기
 
-CFNetwork 기반 처리기는 네이티브 `CFNetwork` 프레임 워크를 기반으로 합니다.
+CFNetwork 기반 처리기는 네이티브 프레임 워크를 기반으로 `CFNetwork` 합니다.
 
 장점:
 
@@ -120,7 +120,7 @@ CFNetwork 기반 처리기는 네이티브 `CFNetwork` 프레임 워크를 기�
 
 #### <a name="nsurlsession-handler"></a>NSUrlSession 처리기
 
-NSUrlSession 기반 처리기는 네이티브 `NSUrlSession` API를 기반으로 합니다.
+NSUrlSession 기반 처리기는 네이티브 API를 기반으로 `NSUrlSession` 합니다.
 
 장점:
 
@@ -136,15 +136,15 @@ NSUrlSession 기반 처리기는 네이티브 `NSUrlSession` API를 기반으로
 
 직접 또는 iOS 9의 웹 보기에서 인터넷에 연결 하려고 할 때 다음과 같은 형식으로 오류가 발생할 수 있습니다.
 
-> 앱 전송 보안이 안전 하지 않으므로 일반 텍스트 HTTP (`http://www.-the-blocked-domain.com`) 리소스 로드를 차단 했습니다. 임시 예외는 앱의 info.plist 파일을 통해 구성할 수 있습니다.
+> 앱 전송 보안이 안전 하지 않으므로 일반 텍스트 HTTP ( `http://www.-the-blocked-domain.com` ) 리소스 로드를 차단 했습니다. 임시 예외는 앱의 info.plist 파일을 통해 구성할 수 있습니다.
 
-IOS9에서 ATS (App Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 합니다. 또한 ATS는 TLS 버전 1.2을 사용 하 여 암호화 하기 위해 `HTTPS` 프로토콜 및 고급 API 통신을 사용 하는 통신이 필요 합니다.
+IOS9에서 ATS (App Transport Security)는 인터넷 리소스 (예: 앱의 백 엔드 서버)와 앱 간 보안 연결을 적용 합니다. 또한 ATS를 사용 하려면 `HTTPS` 프로토콜 및 높은 수준의 API 통신을 사용 하는 통신이 TLS 버전 1.2을 사용 하 여 암호화 되어야 합니다.
 
-ATS는 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되어 있으므로 `NSURLConnection`, `CFURL` 또는 `NSURLSession`를 사용 하는 모든 연결에는 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않는 경우에는 예외와 함께 실패 합니다.
+ATS는 iOS 9 및 OS X 10.11 (El Capitan) 용으로 빌드된 앱에서 기본적으로 사용 하도록 설정 되므로 또는를 사용 하는 모든 연결에 `NSURLConnection` `CFURL` `NSURLSession` 는 ATS 보안 요구 사항이 적용 됩니다. 연결이 이러한 요구 사항을 충족 하지 않는 경우에는 예외와 함께 실패 합니다.
 
-또한 Apple은 컴파일되어 ATS/TLS 문제를 진단 하는 데 사용할 수 있는 [TLSTool 샘플 앱](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) (또는 선택적으로 Xamarin 및 C#로 트랜스 코딩)을 제공 합니다. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 아래 [ATS의 옵트아웃 (옵트아웃)](#optout) 섹션을 참조 하세요.
+또한 Apple은 컴파일되어 ATS/TLS 문제를 진단 하는 데 사용할 수 있는 [TLSTool 샘플 앱](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) (또는 선택적으로 Xamarin 및 c #으로 트랜스 코딩)을 제공 합니다. 이 문제를 해결 하는 방법에 대 한 자세한 내용은 아래 [ATS의 옵트아웃 (옵트아웃)](#optout) 섹션을 참조 하세요.
 
-<a name="config" />
+<a name="config"></a>
 
 ## <a name="configuring-ats-options"></a>ATS 옵션 구성
 
@@ -168,25 +168,25 @@ NSAppTransportSecurity
 
 각 키의 형식과 의미는 다음과 같습니다.
 
-- **NsappATS security** (`Dictionary`)-모든 설정 키와에 대 한 값을 포함 합니다.
-- **NSAllowsArbitraryLoads** (`Boolean`)-`NSExceptionDomains`에 나열 **되지 않은** 모든 도메인에 대해 `YES` ATS를 사용 하지 않도록 설정 합니다. 나열 된 도메인에 대해 지정 된 보안 설정이 사용 됩니다.
-- **NSAllowsArbitraryLoadsInWebContent** (`Boolean`)-`YES`는 응용 프로그램의 나머지 부분에 대해 ATS (Apple Transport Security) 보호가 계속 사용 되는 동안 웹 페이지를 올바르게 로드할 수 있습니다.
-- **NSExceptionDomains** (`Dictionary`)-ATS에서 지정 된 도메인에 사용 해야 하는 보안 설정 및 도메인 모음입니다.
-- **\<도메인 이름-예외 >** (`Dictionary`)-지정 된 도메인에 대 한 예외 모음 (예: `www.xamarin.com`).
-- **NSExceptionMinimumTLSVersion** (`String`)-최소 TLS 버전은 `TLSv1.0`, `TLSv1.1` 또는 `TLSv1.2` (기본값)입니다.
-- **NSExceptionRequiresForwardSecrecy** (`Boolean`)-`NO` 도메인은 전달 보안이 있는 암호를 사용할 필요가 없습니다. 기본값은 `YES`입니다.
-- **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`)-`NO` (기본값) 이면이 도메인과의 모든 통신이 `HTTPS` 프로토콜에 있어야 합니다.
-- **NSRequiresCertificateTransparency** (`Boolean`)-`YES` 경우 도메인의 SSL(SECURE SOCKETS LAYER) (SSL)에 유효한 투명도 데이터가 포함 되어야 합니다. 기본값은 `NO`입니다.
-- **NSIncludesSubdomains** (`Boolean`)-`YES` 경우 이러한 설정이이 도메인의 모든 하위 도메인을 재정의 합니다. 기본값은 `NO`입니다.
-- **NSThirdPartyExceptionMinimumTLSVersion** (`String`)-도메인이 개발자의 제어를 벗어난 타사 서비스인 경우 사용 되는 TLS 버전입니다.
-- **NSThirdPartyExceptionRequiresForwardSecrecy** (`Boolean`)-`YES` 타사 도메인에는 전달 보안 기능이 필요 합니다.
-- **NSThirdPartyExceptionAllowsInsecureHTTPLoads** (`Boolean`)-`YES` 이면 ATS가 타사 도메인과의 비보안 통신을 허용 합니다.
+- **NsappATS security** ( `Dictionary` )-모든 설정 키와에 대 한 값을 포함 합니다.
+- **NSAllowsArbitraryLoads** ( `Boolean` )- `YES` 에 나열 **되지 않은** 모든 도메인에 대해 ATS를 사용 하지 않도록 설정 `NSExceptionDomains` 합니다. 나열 된 도메인에 대해 지정 된 보안 설정이 사용 됩니다.
+- **NSAllowsArbitraryLoadsInWebContent** ( `Boolean` )- `YES` 응용 프로그램의 나머지 부분에 대해 ATS (Apple Transport Security) 보호가 계속 사용 되는 동안 웹 페이지를 올바르게 로드할 수 있습니다.
+- **NSExceptionDomains** ( `Dictionary` )-ATS에서 지정 된 도메인에 사용 해야 하는 보안 설정 및 도메인의 컬렉션입니다.
+- **\<domain-name-for-exception-as-string>**( `Dictionary` )-지정 된 도메인에 대 한 예외 컬렉션입니다 (예: `www.xamarin.com`).
+- **NSExceptionMinimumTLSVersion** ( `String` )-최소 TLS 버전은 `TLSv1.0` `TLSv1.1` 또는 `TLSv1.2` (기본값)입니다.
+- **NSExceptionRequiresForwardSecrecy** ( `Boolean` )- `NO` 도메인이 전달 보안과 함께 암호를 사용할 필요가 없는 경우입니다. 기본값은 `YES`입니다.
+- **NSExceptionAllowsInsecureHTTPLoads** ( `Boolean` )- `NO` (기본값)이 도메인과의 모든 통신은 프로토콜에 있어야 합니다 `HTTPS` .
+- **NSRequiresCertificateTransparency** ( `Boolean` )- `YES` 도메인의 SSL(Secure Sockets Layer) (SSL)에 유효한 투명도 데이터가 포함 되어야 하는 경우 기본값은 `NO`입니다.
+- **NSIncludesSubdomains** ( `Boolean` )- `YES` 이러한 설정이이 도메인의 모든 하위 도메인을 재정의 하는 경우 기본값은 `NO`입니다.
+- **NSThirdPartyExceptionMinimumTLSVersion** ( `String` )-도메인이 개발자의 제어를 벗어난 타사 서비스인 경우 사용 되는 TLS 버전입니다.
+- **NSThirdPartyExceptionRequiresForwardSecrecy** ( `Boolean` )-타사 `YES` 도메인에 전달 보안이 필요한 경우
+- **NSThirdPartyExceptionAllowsInsecureHTTPLoads** ( `Boolean` )- `YES` ATS에서 타사 도메인과의 비보안 통신을 허용 하면입니다.
 
-<a name="optout" />
+<a name="optout"></a>
 
 ### <a name="opting-out-of-ats"></a>ATS의 옵트아웃
 
-Apple은 `HTTPS` 프로토콜을 사용 하 여 인터넷 기반 정보에 대 한 보안 통신을 항상 제안 하지만 이것이 항상 가능 하지는 않을 수 있습니다. 예를 들어 타사 웹 서비스와 통신 하거나 앱에서 인터넷에 배달 된 광고를 사용 하는 경우입니다.
+Apple에서는 프로토콜을 사용 하 여 `HTTPS` 인터넷 기반 정보에 대 한 안전한 통신을 제안 하지만 항상 가능 하지는 않을 수 있습니다. 예를 들어 타사 웹 서비스와 통신 하거나 앱에서 인터넷에 배달 된 광고를 사용 하는 경우입니다.
 
 Xamarin.ios 앱이 보안 되지 않은 도메인에 대 한 요청을 수행 해야 하는 경우 앱의 **info.plist** 파일을 다음과 같이 변경 하면 ATS가 지정 된 도메인에 대해 적용 하는 보안 기본값을 사용 하지 않도록 설정 됩니다.
 
@@ -210,7 +210,7 @@ Xamarin.ios 앱이 보안 되지 않은 도메인에 대 한 요청을 수행 �
 </dict>
 ```
 
-Mac용 Visual Studio 내에서 **솔루션 탐색기**에서 `Info.plist` 파일을 두 번 클릭 하 고 **원본** 뷰로 전환 하 여 위의 키를 추가 합니다.
+Mac용 Visual Studio 내에서 솔루션 탐색기 파일을 두 번 클릭 하 `Info.plist` 고 **원본** 뷰로 전환 하 여 **Solution Explorer**위의 키를 추가 합니다.
 
 [![](ats-images/ats01.png "The Source view of the Info.plist file")](ats-images/ats01.png#lightbox)
 
@@ -234,16 +234,16 @@ Mac용 Visual Studio 내에서 **솔루션 탐색기**에서 `Info.plist` 파일
 </dict>
 ```
 
-Mac용 Visual Studio 내에서 **솔루션 탐색기**에서 `Info.plist` 파일을 두 번 클릭 하 고 **원본** 뷰로 전환 하 여 위의 키를 추가 합니다.
+Mac용 Visual Studio 내에서 솔루션 탐색기 파일을 두 번 클릭 하 `Info.plist` 고 **원본** 뷰로 전환 하 여 **Solution Explorer**위의 키를 추가 합니다.
 
 [![](ats-images/ats02.png "The Source view of the Info.plist file")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
-> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 경우에는 `NSAllowsArbitraryLoads`를 사용 하 여 ATS를 완전히 켜는 대신 `NSExceptionDomains`를 사용 하 여 도메인을 **예외로 입력 해야** 합니다. `NSAllowsArbitraryLoads`은 심각한 응급 상황 에서만 사용 해야 합니다.
+> 응용 프로그램에 보안 되지 않은 웹 사이트에 대 한 연결이 필요한 **always** 경우에는를 `NSExceptionDomains` 사용 하 여 ATS off를 완전히 사용 하는 대신를 사용 하 여 도메인을 항상 예외로 입력 해야 합니다 `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`매우 긴급 한 상황 에서만 사용 해야 합니다.
 
 ATS를 사용 하지 않도록 설정 하는 것은 보안 연결로 전환 하는 것이 불가능 하거나 불가능 한 경우 마지막 수단 _으로만_ 사용 해야 합니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

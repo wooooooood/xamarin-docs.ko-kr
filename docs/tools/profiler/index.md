@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: davidortinau
 ms.author: daortin
 ms.date: 06/03/2018
-ms.openlocfilehash: cb109055b476fee6d34041940c682187074f4e7d
-ms.sourcegitcommit: 099b06e311a40c00eeea85465ff9b97867a5c5de
+ms.openlocfilehash: b8b3ca4892e849f9bf08ca2910798c4b2d0f9f6f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78295445"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573485"
 ---
 # <a name="xamarin-profiler"></a>Xamarin Profiler
 
@@ -55,15 +55,15 @@ Xamarin Profiler는 개발자에 게 Mac용 Visual Studio 또는 Visual Studio �
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-현재 Xamarin Profiler를 사용 하 여 Mac에서 Xamarin.ios, Xamarin Android 및 Xamarin.ios 응용 프로그램을 테스트할 수 있습니다 (Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며, Mac용 Visual Studio에서 시작 하는 것 외에도 독립 실행형 응용 프로그램으로 사용 하 여 [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 `.mlpd` 파일을 검사할 수 있습니다.
+현재 Xamarin Profiler를 사용 하 여 Mac에서 Xamarin.ios, Xamarin Android 및 Xamarin.ios 응용 프로그램을 테스트할 수 있습니다 (Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이므로 Mac용 Visual Studio에서 시작 하는 것 외에도 `.mlpd` [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-현재 Xamarin Profiler는 Windows에서 Xamarin Android 앱을 테스트 하는 데 사용할 수 있습니다 (Visual Studio 및 Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며, Visual Studio에서 시작 하는 것 외에도 [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 `.mlpd` 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
+현재 Xamarin Profiler는 Windows에서 Xamarin Android 앱을 테스트 하는 데 사용할 수 있습니다 (Visual Studio 및 Mac용 Visual Studio를 통해). 프로파일러는 IDE와는 별개의 프로세스 이며 Visual Studio에서 시작 하는 것 외에도 `.mlpd` [mono 로그 프로파일러에서](https://www.mono-project.com/docs/debug+profile/profile/profiler/)생성 된 .exe 및 파일을 검사 하는 독립 실행형 응용 프로그램으로 사용할 수 있습니다.
 
 -----
 
-<a name="Profiler_Support" />
+<a name="Profiler_Support"></a>
 
 ## <a name="profiler-support"></a>프로파일러 지원
 
@@ -186,11 +186,11 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-[Mac용 Visual Studio의 프로파일러 섹션 ![](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
+[![Mac용 Visual Studio의 프로파일러 섹션](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[Visual Studio의 ![Profiler 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
+[![Visual Studio의 프로파일러 섹션](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -268,13 +268,13 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 [![시간 프로파일러 계측](images/time1.png)](images/time1.png#lightbox) 
 
-[![Time Profiler 계측 – 샘플 목록](images/time3.png)](images/time3.png#lightbox) 
+[![시간 프로파일러 계측 – 샘플 목록](images/time3.png)](images/time3.png#lightbox) 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 [![시간 프로파일러 계측](images/time1-vs.png)](images/time1-vs.png#lightbox) 
 
-[![Time Profiler 계측 – 샘플 목록](images/time3-vs.png)](images/time3-vs.png#lightbox) 
+[![시간 프로파일러 계측 – 샘플 목록](images/time3-vs.png)](images/time3-vs.png#lightbox) 
 
 -----
 
@@ -282,17 +282,17 @@ Xamarin Profiler은 아래 그림과 같이 5 개의 섹션으로 구성 됩니�
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-  [![Time Profiler 계측 – 호출 트리](images/time2.png)](images/time2.png#lightbox) 
+  [![시간 프로파일러 계측 – 호출 트리](images/time2.png)](images/time2.png#lightbox) 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-  [![Time Profiler 계측 – 호출 트리](images/time2-vs.png)](images/time2-vs.png#lightbox) 
+  [![시간 프로파일러 계측 – 호출 트리](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
 ### <a name="cycles"></a>Cycles
 
-C# 및 F# 관리 코드를 사용 하면 매우 일반적 일 수 있으며, 삭제 되지 않는 개체에 대 한 참조를 만드는 것은 매우 쉽습니다. 이 계측을 통해 해당 개체를 파악 하 고 응용 프로그램에서 참조 되는 주기를 표시할 수 있습니다.
+C # 및 F # 관리 코드를 사용 하 여 매우 일반적 일 수 있으며, 삭제 되지 않는 개체에 대 한 참조를 만드는 것은 매우 쉽습니다. 이 계측을 통해 해당 개체를 파악 하 고 응용 프로그램에서 참조 되는 주기를 표시할 수 있습니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 

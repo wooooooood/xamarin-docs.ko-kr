@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms단추만
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f7309794768c01d4978aa369cd1950d4986938db
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137464"
+제목: " Xamarin.Forms 단추" 설명: "단추는 응용 프로그램이 특정 작업을 수행 하도록 지시 하는 탭 하거나 클릭에 응답 합니다."
+assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5: xamarin-forms author: davidbritch: dabritch:: 12/04/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-button"></a>Xamarin.Forms단추만
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
@@ -414,8 +400,6 @@ public partial class PressAndReleaseButtonPage : ContentPage
 
 이러한 종류의 동작에는 게임을 위한 응용 프로그램이 있습니다 .에서 손가락을 사용 하면 화면에 있는 `Button` 개체가 특정 방향으로 이동 하 게 만들 수 있습니다.
 
-<a name="button-appearance" />
-
 ## <a name="button-appearance"></a>단추 모양
 
 는 `Button` 모양에 영향을 주는 몇 가지 속성을 상속 하거나 정의 합니다.
@@ -433,7 +417,7 @@ public partial class PressAndReleaseButtonPage : ContentPage
 > [!NOTE]
 > `Button`또한 클래스에 [`Margin`](xref:Xamarin.Forms.View.Margin) [`Padding`](xref:Xamarin.Forms.Button.Padding) 는의 레이아웃 동작을 제어 하는 및 속성이 있습니다 `Button` . 자세한 내용은 [여백 및 패딩](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)을 참조하세요.
 
-이러한 속성 중 6 개 (및 제외)의 효과는 `FontFamily` `FontAttributes` **단추 모양** 페이지에서 보여 줍니다. 다른 속성인를 [`Image`](xref:Xamarin.Forms.Button.ImageSource) 사용 하는 방법에 대 한 자세한 내용은 [**단추를 사용 하 여 비트맵을 사용**](#image-button)합니다.
+이러한 속성 중 6 개 (및 제외)의 효과는 `FontFamily` `FontAttributes` **단추 모양** 페이지에서 보여 줍니다. 다른 속성인를 [`Image`](xref:Xamarin.Forms.Button.ImageSource) 사용 하는 방법에 대 한 자세한 내용은 [**단추를 사용 하 여 비트맵을 사용**](#using-bitmaps-with-buttons)합니다.
 
 **단추 모양** 페이지의 모든 뷰 및 데이터 바인딩은 XAML 파일에 정의 됩니다.
 
@@ -747,8 +731,6 @@ public partial class ToggleButtonDemoPage : ContentPage
 IOS, Android 및 UWP에서 실행 되는 프로그램은 다음과 같습니다.
 
 [![설정/해제 단추 데모](button-images/ToggleButtonDemo.png "설정/해제 단추 데모")](button-images/ToggleButtonDemo-Large.png#lightbox)
-
-<a name="image-button" />
 
 ## <a name="using-bitmaps-with-buttons"></a>단추에 비트맵 사용
 

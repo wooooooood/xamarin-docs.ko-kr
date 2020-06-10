@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2016
-ms.openlocfilehash: de9a46587a5d1de6f12dd54122b27e53694cdeb8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a97885518c0646d2d8315b5da5eb12c71d693cf6
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031397"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574082"
 ---
 # <a name="deprecated-notification-technologies-in-xamarinios"></a>Xamarin.ios에서 사용 되지 않는 알림 기술
 
@@ -23,21 +23,21 @@ ms.locfileid: "73031397"
 
 ## <a name="sections"></a>섹션
 
-<a name="Local Notifications In iOS" />
+<a name="Local Notifications In iOS"></a>
 
-## <a name="local-notifications-in-ioslocal-notifications-in-iosmd"></a>[IOS의 로컬 알림](local-notifications-in-ios.md)
+## <a name="local-notifications-in-ios"></a>[IOS의 로컬 알림](local-notifications-in-ios.md)
 
 이 섹션에서는 Xamarin.ios에서 로컬 알림을 구현 하는 방법에 대해 설명 합니다. IOS 알림의 다양 한 UI 요소에 대해 설명 하 고 알림을 만들고 표시 하는 것과 관련 된 API에 대해 설명 합니다.
 
-<a name="Local Notifications Walkthrough" />
+<a name="Local Notifications Walkthrough"></a>
 
-## <a name="walkthrough---using-local-notifications-in-xamarinioslocal-notifications-in-ios-walkthroughmd"></a>[연습 - Xamarin.iOS에서 로컬 알림 사용](local-notifications-in-ios-walkthrough.md)
+## <a name="walkthrough---using-local-notifications-in-xamarinios"></a>[연습-Xamarin.ios에서 로컬 알림 사용](local-notifications-in-ios-walkthrough.md)
 
 이 섹션에서는 Xamarin.ios 응용 프로그램에서 로컬 알림을 사용 하는 방법을 안내 합니다. 앱에서 수신 될 때 경고를 표시 하는 알림을 만들고 게시 하는 기본 사항을 설명 합니다.
 
-<a name="Remote Notifications In iOS" />
+<a name="Remote Notifications In iOS"></a>
 
-## <a name="remote-notifications-in-iosremote-notifications-in-iosmd"></a>[IOS의 원격 알림](remote-notifications-in-ios.md)
+## <a name="remote-notifications-in-ios"></a>[IOS의 원격 알림](remote-notifications-in-ios.md)
 
 이 섹션에서는 iOS의 푸시 알림을 다룹니다. APNS (Apple Push Notification Gateway Service) 및 iOS 응용 프로그램에 알림 게시에서 재생 하는 역할을 소개 합니다. 푸시 알림 및 토론을 사용 하도록 설정 하는 데 필요한 보안 인증서를 만드는 방법을 설명 합니다. 마지막으로,이 섹션에서는 응용 프로그램 서버가 클라이언트 모바일 장치를 추적 하기 위해 수행 해야 하는 몇 가지 정리 작업을 설명 합니다.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: 6b02a0f8476cf47ca6df279653095fe0845b36c9
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: e5cbbc10f189abb6d0d0b2ef99b50ae53d1103c2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79306064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572288"
 ---
 # <a name="ios-designer-basics"></a>iOS 디자이너 기본 사항
 
@@ -26,7 +26,7 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 이 가이드에서는 [시작 가이드](~/ios/get-started/index.md)에 설명 된 내용에 대해 잘 알고 있다고 가정 합니다.
 
-<a name="how-it-works" />
+<a name="how-it-works"></a>
 
 ## <a name="how-the-ios-designer-works"></a>IOS Designer 작동 방법
 
@@ -34,7 +34,7 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 개발자는 iOS Designer를 사용 하 여 응용 프로그램의 사용자 인터페이스를 시각적으로 디자인할 수 있습니다. 스토리 보드 [소개](~/ios/user-interface/storyboards/index.md) 가이드에 설명 된 대로 storyboard는 앱을 구성 하는 화면 (보기 컨트롤러), 해당 뷰 컨트롤러에 배치 되는 인터페이스 요소 (뷰) 및 앱의 전반적인 탐색 흐름을 설명 합니다. 
 
-뷰 컨트롤러에는 iOS 디자이너의 시각적 표현과 연결 된 C# 클래스의 두 부분이 있습니다.
+뷰 컨트롤러는 iOS 디자이너의 시각적 표현과 연결 된 c # 클래스의 두 부분으로 구성 됩니다.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -84,21 +84,21 @@ IOS Designer는 Windows의 Mac용 Visual Studio 및 Visual Studio 2017 이상에
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-**Solution Pad**에서 **ViewController.cs** 으로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
+**Solution Pad**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
 
 [![ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-**솔루션 탐색기**에서 **ViewController.cs** 으로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
+**솔루션 탐색기**에서 **ViewController.cs** 로 이동 하 고 노출 표시기를 클릭 하면 뷰 컨트롤러의 `ViewController` 클래스 정의가 각각 [partial 클래스](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) 정의를 포함 하는 두 개의 파일로 확장 됩니다.
 
 [![ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "ViewController 클래스를 구성 하는 두 파일: ViewController.cs 및 ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
 -----
 
-- **ViewController.cs** 는 `ViewController` 클래스와 관련 된 사용자 지정 코드로 채워야 합니다. 이 파일에서 `ViewController` 클래스는 다양 한 iOS 뷰 컨트롤러 수명 주기 방법에 응답 하 고, UI를 사용자 지정 하 고, 단추 탭과 같은 사용자 입력에 응답할 수 있습니다.
+- **ViewController.cs** 는 클래스와 관련 된 사용자 지정 코드로 채워야 합니다 `ViewController` . 이 파일에서 클래스는 `ViewController` 다양 한 iOS 뷰 컨트롤러 수명 주기 메서드에 응답 하 고, UI를 사용자 지정 하 고, 단추 탭과 같은 사용자 입력에 응답할 수 있습니다.
 
-- **ViewController.designer.cs** 는 iOS 디자이너에서 코드에 시각적으로 생성 된 인터페이스를 매핑하기 위해 만든 생성 된 파일입니다. 이 파일의 변경 내용은 덮어쓰므로 수정 하면 안 됩니다. 이 파일의 속성 선언을 사용 하면 `ViewController` 클래스의 코드가 iOS 디자이너에서 설정 된 **이름**으로 컨트롤에 액세스할 수 있습니다. **ViewController.designer.cs** 를 열면 다음 코드가 표시 됩니다.
+- **ViewController.designer.cs** 는 iOS 디자이너에서 코드에 시각적으로 생성 된 인터페이스를 매핑하기 위해 만든 생성 된 파일입니다. 이 파일의 변경 내용은 덮어쓰므로 수정 하면 안 됩니다. 이 파일의 속성 선언을 사용 하면 클래스의 코드가 `ViewController` IOS 디자이너에서 설정 된 컨트롤을 **이름**으로 사용 하 여 액세스할 수 있습니다. **ViewController.designer.cs** 를 열면 다음 코드가 표시 됩니다.
 
 ```csharp
 namespace Designer
@@ -121,9 +121,9 @@ namespace Designer
 }
 ```
 
-`SubmitButton` 속성 선언은 **ViewController.designer.cs** 파일 뿐만 아니라 전체 `ViewController` 클래스를 storyboard에 정의 된 단추에 연결 합니다. **ViewController.cs** 는 `ViewController` 클래스의 일부를 정의 하므로 `SubmitButton`에 액세스할 수 있습니다.
+`SubmitButton`속성 선언은 `ViewController` **ViewController.designer.cs** 파일 뿐만 아니라 전체 클래스를 storyboard에 정의 된 단추에 연결 합니다. **ViewController.cs** 는 클래스의 일부를 정의 하기 때문 `ViewController` 에에 액세스할 수 있습니다 `SubmitButton` .
 
-다음 스크린샷에서 IntelliSense는 이제 **ViewController.cs**에서 `SubmitButton` 참조를 인식 한다는 것을 보여 줍니다.
+다음 스크린샷에서 IntelliSense는 이제 `SubmitButton` **ViewController.cs**에서 참조를 인식 한다는 것을 보여 줍니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
@@ -159,7 +159,7 @@ Visual Studio를 사용 하 여 만든 대부분의 Xamarin.ios 프로젝트에�
 
 -----
 
-<a name="iOS_Designer_features"/>
+<a name="iOS_Designer_features"></a>
 
 ### <a name="ios-designer-features"></a>iOS Designer 기능
 
@@ -298,10 +298,10 @@ IOS 디자이너에는 다음과 같은 6 개의 주요 섹션이 있습니다.
 
 장치 및 방향 선택은 iOS 디자이너가 디자인을 미리 보는 방법에만 적용 됩니다. **특성 편집** 단추를 사용 하 여 달리 지정 하지 않는 한, 현재 선택 항목에 관계 없이 새로 추가 된 제약 조건이 모든 장치 및 방향에 적용 됩니다.
 
-[Size 클래스](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 를 [사용](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes)하는 경우 **특성 편집** 단추가 확장 된 아래쪽 도구 모음에 표시 됩니다.  **특성 편집** 단추를 클릭 하면 선택한 장치와 방향이 나타내는 size 클래스에 따라 인터페이스 변형을 만드는 옵션이 표시 됩니다. 다음 예제를 살펴보세요.
+[Size 클래스](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) 를 [사용](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes)하는 경우 **특성 편집** 단추가 확장 된 아래쪽 도구 모음에 표시 됩니다.  **특성 편집** 단추를 클릭 하면 선택한 장치와 방향이 나타내는 size 클래스에 따라 인터페이스 변형을 만드는 옵션이 표시 됩니다. 다음과 같은 예를 고려할 수 있습니다.
 
-- **IPHONE SE** / **세로**를 선택 하면 팝 오버는 컴팩트 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만들 수 있는 옵션을 제공 합니다. 
-- **IPad Pro 9.7 "**  / **가로** / **전체 화면** 을 선택 하는 경우 팝 오버는 일반 width, regular height size 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다.
+- **IPhone SE**  /  **세로**를 선택 하는 경우 팝 오버는 컴팩트 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다. 
+- **IPad Pro 9.7 "**  /  **가로**  /  **전체 화면** 을 선택 하면 팝 오버는 일반 너비, 일반 높이 크기 클래스에 대 한 인터페이스 변형을 만드는 옵션을 제공 합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
@@ -406,19 +406,19 @@ IOS 디자이너는 디자인 화면에서의 시각적 편집 외에도 **속�
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-여러 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 **Properties Pad**의 **이벤트** 탭을 사용 합니다. 예를 들어 아래 스크린샷에서는 `HandleClick` 메서드가 이벤트 내에서 단추의 **터치** 를 처리 합니다.
+여러 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 **Properties Pad**의 **이벤트** 탭을 사용 합니다. 예를 들어 아래 스크린샷에서 `HandleClick` 메서드는 이벤트 내에서 단추의 **터치** 를 처리 합니다.
 
 [![단추에 대 한 이벤트 처리기가 설정 된 Properties Pad](introduction-images/19-buttonpropertiespadevents-vsmac.png "단추에 대 한 이벤트 처리기가 설정 된 Properties Pad")](introduction-images/19-buttonpropertiespadevents-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-여러 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 **속성 창의** **이벤트** 탭을 사용 합니다. 예를 들어 아래 스크린샷에서는 `HandleClick` 메서드가 이벤트 내에서 단추의 **터치** 를 처리 합니다.
+여러 이벤트에 대 한 사용자 지정 이벤트 처리기를 지정 하려면 **속성 창의** **이벤트** 탭을 사용 합니다. 예를 들어 아래 스크린샷에서 `HandleClick` 메서드는 이벤트 내에서 단추의 **터치** 를 처리 합니다.
 
 [![단추에 대 한 이벤트 처리기가 설정 된 속성 창](introduction-images/19-buttonpropertieswindowevents-vs.png "단추에 대 한 이벤트 처리기가 설정 된 속성 창")](introduction-images/19-buttonpropertieswindowevents-vs-large.png#lightbox)
 
 -----
 
-이벤트 처리기를 지정한 후에는 동일한 이름의 메서드를 해당 뷰 컨트롤러 클래스에 추가 해야 합니다. 그렇지 않으면 단추를 탭 할 때 `unrecognized selector` 예외가 발생 합니다.
+이벤트 처리기를 지정한 후에는 동일한 이름의 메서드를 해당 뷰 컨트롤러 클래스에 추가 해야 합니다. 그렇지 않으면 `unrecognized selector` 단추를 누를 때 예외가 발생 합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 

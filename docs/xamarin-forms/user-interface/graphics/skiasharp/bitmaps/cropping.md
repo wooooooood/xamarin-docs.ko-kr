@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6c5e340818b702d79a1157f29c1ecec19bf1db76
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139947"
+제목: "SkiaSharp 비트맵 자르기" 설명: "SkiaSharp를 사용 하 여 대화형으로 자르기 사각형의 사용자 인터페이스를 디자인 하는 방법을 알아봅니다."
+ms. prod: xamarin. 기술: xamarin-skiasharp assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30 author: davidbritch: dabritch: 07/17/2018:-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="cropping-skiasharp-bitmaps"></a>SkiaSharp 비트맵 자르기
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -79,7 +65,7 @@ class CroppingRectangle
             Rect = rect;
         }
     }
-    
+
     public SKRect Rect { set; get; }
     ···
 }
@@ -108,7 +94,7 @@ class CroppingRectangle
 }
 ```
 
-이 배열은를 호출 하는 다음 메서드에서 사용 됩니다 `HitTest` . `SKPoint`매개 변수는 손가락 터치 또는 마우스 클릭에 해당 하는 지점입니다. 메서드는 매개 변수로 지정 된 거리 내에서 손가락 또는 마우스 포인터가 접촉 한 모퉁이에 해당 하는 인덱스 (0, 1, 2 또는 3)를 반환 합니다 `radius` . 
+이 배열은를 호출 하는 다음 메서드에서 사용 됩니다 `HitTest` . `SKPoint`매개 변수는 손가락 터치 또는 마우스 클릭에 해당 하는 지점입니다. 메서드는 매개 변수로 지정 된 거리 내에서 손가락 또는 마우스 포인터가 접촉 한 모퉁이에 해당 하는 인덱스 (0, 1, 2 또는 3)를 반환 합니다 `radius` .
 
 ```csharp
 class CroppingRectangle
@@ -121,7 +107,7 @@ class CroppingRectangle
         for (int index = 0; index < corners.Length; index++)
         {
             SKPoint diff = point - corners[index];
-                
+
             if ((float)Math.Sqrt(diff.X * diff.X + diff.Y * diff.Y) < radius)
             {
                 return index;
@@ -271,7 +257,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
         canvas.Clear(SKColors.Gray);
 
-        // Calculate rectangle for displaying bitmap 
+        // Calculate rectangle for displaying bitmap
         float scale = Math.Min((float)info.Width / bitmap.Width, (float)info.Height / bitmap.Height);
         float x = (info.Width - scale * bitmap.Width) / 2;
         float y = (info.Height - scale * bitmap.Height) / 2;
@@ -330,7 +316,7 @@ class PhotoCropperCanvasView : SKCanvasView
     CroppingRectangle croppingRect;
     SKMatrix inverseBitmapMatrix;
 
-    // Touch tracking 
+    // Touch tracking
     TouchEffect touchEffect = new TouchEffect();
     struct TouchPoint
     {
@@ -384,7 +370,7 @@ class PhotoCropperCanvasView : SKCanvasView
                 if (touchPoints.ContainsKey(args.Id))
                 {
                     TouchPoint touchPoint = touchPoints[args.Id];
-                    croppingRect.MoveCorner(touchPoint.CornerIndex, 
+                    croppingRect.MoveCorner(touchPoint.CornerIndex,
                                             bitmapLocation - touchPoint.Offset);
                     InvalidateSurface();
                 }
@@ -428,10 +414,10 @@ class PhotoCropperCanvasView : SKCanvasView
         get
         {
             SKRect cropRect = croppingRect.Rect;
-            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width, 
+            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width,
                                                   (int)cropRect.Height);
             SKRect dest = new SKRect(0, 0, cropRect.Width, cropRect.Height);
-            SKRect source = new SKRect(cropRect.Left, cropRect.Top, 
+            SKRect source = new SKRect(cropRect.Left, cropRect.Top,
                                        cropRect.Right, cropRect.Bottom);
 
             using (SKCanvas canvas = new SKCanvas(croppedBitmap))
@@ -533,8 +519,6 @@ photoCropper = new PhotoCropperCanvasView(bitmap, 1.78f);
 
 높은 정의 텔레비전의 16-9 가로 세로 비율 특성으로 제한 되는 자르기 사각형을 볼 수 있습니다.
 
-<a name="tile-division" />
-
 ## <a name="dividing-a-bitmap-into-tiles"></a>비트맵을 타일로 분할
 
 Xamarin.FormsXamagonXuzzle를 [_사용 하 여 Mobile Apps를 만드는_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) 책의 22 장에서 발췌 한 유명한 14-15 퍼즐의 버전은 [**XamagonXuzzle**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle)로 다운로드할 수 있습니다. 그러나 퍼즐은 사용자의 사진 라이브러리의 이미지를 기반으로 하는 경우에 더 재미 있고 자주 사용 하기가 더 어려워집니다.
@@ -548,12 +532,12 @@ Xamarin.FormsXamagonXuzzle를 [_사용 하 여 Mobile Apps를 만드는_](~/xama
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SkiaSharpFormsDemos.Bitmaps.PhotoPuzzlePage1"
              Title="Photo Puzzle">
-    
+
     <Button Text="Pick a photo from your library"
-            VerticalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand"
             Clicked="OnPickButtonClicked"/>
-    
+
 </ContentPage>
 ```
 
@@ -587,7 +571,7 @@ public partial class PhotoPuzzlePage1 : ContentPage
 
 라이브러리에서 선택 된 사진이 사진 라이브러리에 표시 되는 것과 다른 방향으로 진행 되는 것이 아니라 회전 또는 대칭 이동 될 수 있습니다. 특히 iOS 장치에 문제가 있는 것입니다. 따라서에서는 이미지를 `PhotoPuzzlePage2` 원하는 방향으로 회전할 수 있습니다. XAML 파일에는 **90&#x00B0; 오른쪽** (시계 방향), **90&#x00B0; 왼쪽** (시계 반대) 및 **완료**레이블이 지정 된 세 개의 단추가 있습니다.
 
-코드 숨김이 **[SkiaSharp 비트맵에서 만들기 및 그리기](drawing.md#rotating-bitmaps)** 문서에 표시 된 비트맵 회전 논리를 구현 합니다. 사용자는 이미지를 90도 시계 방향으로, 시계 반대 방향으로 회전할 수 있습니다. 
+코드 숨김이 **[SkiaSharp 비트맵에서 만들기 및 그리기](drawing.md#rotating-bitmaps)** 문서에 표시 된 비트맵 회전 논리를 구현 합니다. 사용자는 이미지를 90도 시계 방향으로, 시계 반대 방향으로 회전할 수 있습니다.
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -763,7 +747,7 @@ imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
 
 [![사진 퍼즐 2](cropping-images/PhotoPuzzle2.png "사진 퍼즐 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-이제 올바른 순서 대로 다시 배치할 수 있습니다. 빈 사각형으로 동일한 행 또는 열에 있는 모든 타일을 탭 하 여 빈 사각형으로 이동할 수 있습니다. 
+이제 올바른 순서 대로 다시 배치할 수 있습니다. 빈 사각형으로 동일한 행 또는 열에 있는 모든 타일을 탭 하 여 빈 사각형으로 이동할 수 있습니다.
 
 ## <a name="related-links"></a>관련 링크
 

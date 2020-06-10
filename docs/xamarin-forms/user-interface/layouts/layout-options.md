@@ -1,22 +1,8 @@
 ---
-title: 의 레이아웃 옵션Xamarin.Forms
-description: 모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및 VerticalOptions 속성이 있습니다. 이 문서에서는 각 LayoutOptions 값이 뷰의 맞춤 및 확장에 미치는 영향을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 17f4e76f9bef71352cabddfba9397e95bcdd24d3
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138036"
+title: "" description: "의 레이아웃 옵션 Xamarin.Forms Xamarin.Forms 은 Layoutoptions 형식의 HorizontalOptions 및 VerticalOptions 속성을 가집니다. 이 문서에서는 각 LayoutOptions 값이 뷰의 맞춤 및 확장에 미치는 영향을 설명 합니다. "
+assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307MS. 기술: xamarin-forms author: davidbritch: dabritch: ms. date: 02/10/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="layout-options-in-xamarinforms"></a>의 레이아웃 옵션Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
@@ -52,8 +38,6 @@ _모든 Xamarin.Forms 보기에는 LayoutOptions 형식의 HorizontalOptions 및
 
 > [!NOTE]
 > 보기 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 및 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성의 기본값은 [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)입니다.
-
-<a name="alignment" />
 
 ## <a name="alignment"></a>맞춤
 
@@ -98,9 +82,7 @@ Content = new StackLayout
 
 [![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
 
-<a name="expansion" />
-
-## <a name="expansion"></a>확장용
+## <a name="expansion"></a>확장
 
 확장은 뷰가 사용 가능한 경우 내에서 더 많은 공간을 차지 하는지 여부를 제어 [`StackLayout`](xref:Xamarin.Forms.StackLayout) 합니다. 에 `StackLayout` 사용 되지 않는 공간이 있는 경우 (즉, `StackLayout` 가 모든 자식의 전체 크기 보다 큰 경우) 해당 [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) 또는 [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) 속성을 접미사를 사용 하 [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) 는 필드로 설정 하 여 확장을 요청 하는 모든 자식 뷰에서 사용 하지 않은 공간이 동일 하 게 공유 됩니다 `AndExpand` . 의 모든 공간을 사용 하는 경우 `StackLayout` 확장 옵션은 적용 되지 않습니다.
 

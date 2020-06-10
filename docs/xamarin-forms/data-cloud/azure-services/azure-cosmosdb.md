@@ -1,23 +1,8 @@
 ---
-title: 에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms
-description: 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 47b35d394eab339a8e9a1f81880e6de4233f29b6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127090"
+제목: "" 설명: "에서 Azure Cosmos DB 문서 데이터베이스를 사용 합니다. Xamarin.Forms 이 문서에서는 Azure Cosmos DB .NET Standard 클라이언트 라이브러리를 사용 하 여 Azure Cosmos DB 문서 데이터베이스를 응용 프로그램에 통합 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: 7C0605D9-9B7F-4002-9B60-2B5DAA3EA30C: xamarin-forms ms. custom: xamu-video author: davidbritch: dabritch: ms. date: 06/16/2017 no loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-an-azure-cosmos-db-document-database-in-xamarinforms"></a>에서 Azure Cosmos DB 문서 데이터베이스 사용Xamarin.Forms
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
@@ -120,8 +105,6 @@ public async Task CreateDocumentCollection(string databaseName, string collectio
 > [!IMPORTANT]
 > 이 메서드는 `CreateDocumentCollectionIfNotExistsAsync` 가격 책정에 영향을 주는 예약 된 처리량을 사용 하 여 새 컬렉션을 만듭니다.
 
-<a name="document_query" />
-
 ### <a name="retrieving-document-collection-documents"></a>문서 컬렉션 문서 검색
 
 문서 컬렉션의 내용은 문서 쿼리를 만들고 실행 하 여 검색할 수 있습니다. 문서 쿼리는 메서드를 사용 하 여 만듭니다 `DocumentClient.CreateDocumentQuery` .
@@ -160,8 +143,6 @@ var query = client.CreateDocumentQuery<TodoItem>(collectionLink)
 
 이 쿼리는 컬렉션에서 속성이 인 모든 문서를 검색 `Done` `false` 합니다.
 
-<a name="inserting_document" />
-
 ### <a name="inserting-a-document-into-a-document-collection"></a>문서 컬렉션에 문서 삽입
 
 문서는 사용자 정의 JSON 콘텐츠 이며 메서드를 사용 하 여 문서 컬렉션에 삽입할 수 있습니다 `DocumentClient.CreateDocumentAsync` .
@@ -191,8 +172,6 @@ public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
 ```
 
 `ReplaceDocumentAsync`메서드는 `Uri` 컬렉션에서 바꾸려는 문서를 나타내는 인수와 `object` 업데이트 된 문서 데이터를 나타내는 인수를 지정 합니다.
-
-<a name="deleting_document" />
 
 ### <a name="deleting-a-document-from-a-document-collection"></a>문서 컬렉션에서 문서 삭제
 

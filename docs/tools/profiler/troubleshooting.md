@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5b4b4bdf85ec79a46a4e4c06504eb8b9b85af329
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566959"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Xamarin Profiler 문제 해결
 
@@ -25,19 +25,19 @@ Xamarin 팀은 다음을 비롯 한 정보를 제공 하는 경우 문제를 추
 
 ### <a name="getting-log-outputs"></a>로그 출력 가져오기
 
-Mac의 로그는 `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`에 저장 됩니다.
+Mac의 로그는에 저장 됩니다 `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log` .
 
-Windows에서는 문제를 제출할 때마다 최신 로그를 포함 하는 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log`에 저장 됩니다.
+Windows에서는 `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` 문제를 제출할 때마다 최신 로그를 포함 하 여에 저장 됩니다.
 
 진행 되는 동안 더 많은 로깅을 추가 하 고 있으므로이 출력이 증가 하 고 시간이 지남에 따라 더 유용 하 게 제공 됩니다.
 
-<a name="gen_mlpd" />
+<a name="gen_mlpd"></a>
 
 ### <a name="generating-mlpd-files"></a>Mlpd 파일 생성
 
 **Mlpd** 파일은 mono 런타임 프로파일러의 압축 된 출력입니다. Xamarin Profiler GUI는 **mlpd** 에서 데이터를 읽고 사용자에 게 표시 합니다. **mlpd** 파일은 엔지니어가 프로파일러에서 데이터를 사용 하는 문제를 진단 하는 데 도움이 되기 때문에 Xamarin 용 디버깅 도구를 사용 하는 것이 좋습니다.
 
-현재 세션에 대 한 **mlpd** 는 Mac의 `/tmp` 디렉터리에 자동으로 저장 되며 타임 스탬프로 식별할 수 있습니다. 로깅을 설정 하면 첫 번째 출력은 **mlpd** 파일의 경로가 됩니다. 일반적으로 **mlpd** 파일은 디렉터리에 저장 됩니다. ~/var/folders...
+현재 세션에 대 한 **mlpd** 는 Mac의 디렉터리에 자동으로 저장 `/tmp` 되며 타임 스탬프로 식별할 수 있습니다. 로깅을 설정 하면 첫 번째 출력은 **mlpd** 파일의 경로가 됩니다. 일반적으로 **mlpd** 파일은 디렉터리에 저장 됩니다. ~/var/folders...
 
 **파일 > 다른 이름으로 저장** ...을 선택 하 여 현재 세션에 대 한 **mlpd** 를 저장할 수도 있습니다. Profiler의 메뉴에서 다음을 수행 합니다.
 
@@ -79,7 +79,7 @@ Visual Studio에서 프로파일러를 사용 하는 경우이 오류 상자가 
 
 #### <a name="to-watch-a-specific-thread"></a>특정 스레드를 시청 하려면
 
-특별히 감시 하고자 하는 스레드가 있는 경우 생성이 시작 될 때 스레드 이름을 `0x0`대신 `ThreadName` 가져오도록 하는 것이 좋습니다. 예를 들어 `UI`스레드 이름을 설정 하려면 다음 코드를 사용할 수 있습니다.
+특별히 감시 하고자 하는 스레드가 있는 경우 생성이 시작 될 때 대신 스레드 이름을로 하는 것이 좋습니다 `ThreadName` `0x0` . 예를 들어 스레드 이름을로 설정 하려면 `UI` 다음 코드를 사용할 수 있습니다.
 
 ```csharp
 RunOnUiThread (() => {

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/18/2016
-ms.openlocfilehash: 31cae6d6770b4c8fc4ff722e67f4ddce8ffdd7c6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2259566fc6342a40a8c0a94bacd1c146b6509d52
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73011298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574160"
 ---
 # <a name="accessibility-on-ios"></a>IOS의 내게 필요한 옵션
 
@@ -21,9 +21,9 @@ ms.locfileid: "73011298"
 
 ## <a name="describing-ui-elements"></a>UI 요소 설명
 
-iOS는 개발자가 컨트롤을 보다 쉽게 액세스할 수 있도록 음성 화면 판독기에서 사용할 수 있는 설명 텍스트를 추가할 수 있는 `AccessibilityLabel` 및 `AccessibilityHint` 속성을 제공 합니다. 컨트롤에는 액세스 가능 모드에서 추가 컨텍스트를 제공 하는 하나 이상의 특성으로 태그를 지정할 수도 있습니다.
+iOS는 개발자가 컨트롤에 더 쉽게 액세스할 수 있도록 하는 `AccessibilityLabel` `AccessibilityHint` VoiceOver 화면 판독기에서 사용할 수 있는 설명 텍스트를 추가할 수 있는 및 속성을 제공 합니다. 컨트롤에는 액세스 가능 모드에서 추가 컨텍스트를 제공 하는 하나 이상의 특성으로 태그를 지정할 수도 있습니다.
 
-일부 컨트롤에는 액세스할 필요가 없을 수도 있습니다 (예: 텍스트 입력에 대 한 레이블 또는 순수한 장식용 이미지). 이러한 경우에는 `IsAccessibilityElement`를 제공 하 여 내게 필요한 옵션을 사용 하지 않도록 설정 합니다.
+일부 컨트롤에는 액세스할 필요가 없을 수도 있습니다 (예: 텍스트 입력에 대 한 레이블 또는 장식용 이미지) `IsAccessibilityElement` . 이러한 경우 내게 필요한 옵션을 해제 하기 위해가 제공 됩니다.
 
 **UI 디자이너**
 
@@ -44,15 +44,15 @@ displayOnlyText.AccessibilityTraits = UIAccessibilityTrait.Header | UIAccessibil
 
 ### <a name="what-is-accessibilityidentifier"></a>AccessibilityIdentifier 란?
 
-`AccessibilityIdentifier`는 UIAutomation API를 통해 사용자 인터페이스 요소를 참조 하는 데 사용할 수 있는 고유 키를 설정 하는 데 사용 됩니다.
+는 `AccessibilityIdentifier` UIAutomation API를 통해 사용자 인터페이스 요소를 참조 하는 데 사용할 수 있는 고유 키를 설정 하는 데 사용 됩니다.
 
-`AccessibilityIdentifier` 값은 사용자에 게 음성으로 표시 되거나 표시 되지 않습니다.
+의 값은 `AccessibilityIdentifier` 사용자에 게 음성으로 표시 되거나 표시 되지 않습니다.
 
-<a name="postnotification" />
+<a name="postnotification"></a>
 
 ## <a name="postnotification"></a>PostNotification
 
-`UIAccessibility.PostNotification` 메서드를 사용 하면 직접 상호 작용 (예: 특정 컨트롤과 상호 작용 하는 경우) 외부의 사용자에 게 이벤트를 발생 시킬 수 있습니다.
+`UIAccessibility.PostNotification`메서드를 사용 하면 직접 상호 작용 (예: 특정 컨트롤과 상호 작용 하는 경우) 외부의 사용자에 게 이벤트를 발생 시킬 수 있습니다.
 
 ### <a name="announcement"></a>알림
 
@@ -66,7 +66,7 @@ UIAccessibility.PostNotification (
 
 ### <a name="layoutchanged"></a>LayoutChanged
 
-화면 레이아웃을 사용 하는 경우 `LayoutChanged` 알림이 사용 됩니다.
+`LayoutChanged`알림은 화면 레이아웃을 사용할 때 사용 됩니다.
 
 ```csharp
 UIAccessibility.PostNotification (
@@ -80,7 +80,7 @@ UIAccessibility.PostNotification (
 
 **Mainstoryboard.storyboard**
 
-사용자 인터페이스가 storyboard에서 배치 되는 경우 다른 속성과 같은 방법으로 접근성 속성에 대 한 번역을 제공할 수 있습니다. 아래 예제에서 `UITextField`에는 `Pqa-aa-ury`의 **지역화 ID** 와 스페인어로 설정 되는 두 개의 액세스 가능성 속성이 있습니다.
+사용자 인터페이스가 storyboard에서 배치 되는 경우 다른 속성과 같은 방법으로 접근성 속성에 대 한 번역을 제공할 수 있습니다. 아래 예제에서에는 `UITextField` 의 **지역화 ID** `Pqa-aa-ury` 와 스페인어로 설정 되는 두 개의 액세스 가능성 속성이 있습니다.
 
 ```csharp
 /* Accessibility */
@@ -100,7 +100,7 @@ UIAccessibility.PostNotification (
 "Provide more information" = "escriba más información";
 ```
 
-이러한 번역은 `LocalizedString` 메서드를 C# 통해에서 사용할 수 있습니다.
+이러한 번역은 메서드를 통해 c #에서 사용할 수 있습니다 `LocalizedString` .
 
 ```csharp
 notesText.AccessibilityLabel = NSBundle.MainBundle.LocalizedString ("Notes", "");
@@ -109,7 +109,7 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 
 콘텐츠 지역화에 대 한 자세한 내용은 [iOS 지역화 가이드](~/ios/app-fundamentals/localization/index.md) 를 참조 하세요.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-accessibility"></a>접근성 테스트
 

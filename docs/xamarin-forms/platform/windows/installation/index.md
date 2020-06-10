@@ -1,22 +1,8 @@
 ---
-title: ''
-description: 이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 합니다 Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 87ad78e97046eef7fd6c2e062fa9f84d92c11b38
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132212"
+제목: "Windows 프로젝트 설정" 설명: "이전 Xamarin.Forms 솔루션 (또는 macOS에서 만든)은 유니버설 Windows 플랫폼 프로젝트를 포함 하지 않으므로이 문서에서는 기존 솔루션에 새 UWP 프로젝트를 추가 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320: xamarin-forms author: davidbritch: dabritch:: 04/10/2018-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="setup-windows-projects"></a>Windows 프로젝트 설정
 
 _기존 솔루션에 새 Windows 프로젝트 추가 Xamarin.Forms_
@@ -109,8 +95,6 @@ LoadApplication(new YOUR_NAMESPACE.App());
 10. 로컬 리소스를 추가 합니다 (예: 이미지 파일)을 입력 합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
-
-<a name="target-invocation-exception" />
 
 ### <a name="target-invocation-exception-when-using-compile-with-net-native-tool-chain"></a>".NET 네이티브 도구 체인으로 컴파일"을 사용 하는 경우 "대상 호출 예외"
 

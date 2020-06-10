@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2017
-ms.openlocfilehash: ca3d4dfcd773a4f236ffbfd715cb53b514f6e2a3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 07b39f87b6eeb0fc24486be83573a721abc07966
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032523"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572405"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Xamarin.ios의 예외 마샬링
 
@@ -26,13 +26,13 @@ _Xamarin.ios에는 예외에 응답 하는 데 도움이 되는 새로운 이벤
 
 또한 다양 한 시나리오 및 해당 솔루션을 테스트 하는 데 사용할 수 있는 샘플 프로젝트인 [예외 마샬링을](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)포함 합니다.
 
-## <a name="problem"></a>문제점
+## <a name="problem"></a>문제
 
 예외가 throw 되 고 스택 해제 중에 throw 된 예외 유형과 일치 하지 않는 프레임이 발견 되 면이 문제가 발생 합니다.
 
 Xamarin.ios 또는 Xamarin.ios에 대 한 일반적인 예는 네이티브 API에서 목표-C 예외를 throw 한 후 스택 해제 프로세스가 관리 되는 프레임에 도달할 때 해당 목표-C 예외를 처리 해야 하는 경우입니다.
 
-기본 작업은 아무 작업도 수행 하지 않는 것입니다. 위의 샘플에서이는 목표-C 런타임이 관리 되는 프레임을 해제 하도록 허용 하는 것을 의미 합니다. 목표-C 런타임이 관리 되는 프레임을 해제 하는 방법을 알지 못하기 때문에 문제가 발생 합니다. 예를 들어 해당 프레임에서 `catch` 또는 `finally` 절은 실행 되지 않습니다.
+기본 작업은 아무 작업도 수행 하지 않는 것입니다. 위의 샘플에서이는 목표-C 런타임이 관리 되는 프레임을 해제 하도록 허용 하는 것을 의미 합니다. 목표-C 런타임이 관리 되는 프레임을 해제 하는 방법을 알지 못하기 때문에 문제가 발생 합니다. 예를 들어 `catch` 해당 프레임에서 또는 절은 실행 되지 않습니다 `finally` .
 
 ### <a name="broken-code"></a>손상 된 코드
 
@@ -61,7 +61,7 @@ NSInvalidArgumentException *** setObjectForKey: key cannot be nil
 6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
 ```
 
-프레임 0-3은 네이티브 프레임 이며, 목표-C 런타임의 stack 해제기 이러한 프레임을 해제할 _수 있습니다_ . 특히 목표-C `@catch` 또는 `@finally` 절이 실행 됩니다.
+프레임 0-3은 네이티브 프레임 이며, 목표-C 런타임의 stack 해제기 이러한 프레임을 해제할 _수 있습니다_ . 특히 목표-C 또는 절이 실행 됩니다 `@catch` `@finally` .
 
 그러나 목표-C stack 해제기는 프레임을 해제 하지만 관리 되는 예외 논리는 실행 되지 않도록 관리 되는 프레임 (프레임 4-6)을 제대로 해제할 수 _없습니다_ .
 
@@ -78,19 +78,19 @@ try {
 }
 ```
 
-이는 해제기 stack가 관리 되는 `catch` 절을 알지 못하기 때문 이며 `finally` 절은 실행 되지 않습니다.
+이는 목표-C stack 해제기가 관리 되는 절에 대해 알지 못하기 때문 이며 `catch` , 절이 `finally` 실행 되지 않습니다.
 
-위의 코드 샘플을 적용 _하는 경우_ 목표-c에는 처리 되지 않은 목표-c 예외, [`NSSetUncaughtExceptionHandler`][2], xamarin.ios 및 xamarin.ios 사용에 대 한 알림이 포함 되어 있고 해당 지점에서 목표를 변환 하려고 시도 하기 때문입니다. c 관리 되는 예외에 대 한 예외입니다.
+위의 코드 샘플을 적용 _하는 경우_ 목표-c에는 처리 되지 않은 목표-c 예외 (Xamarin.ios 및 xamarin.ios에서 사용 됨)에 대 한 알림이 표시 되 [`NSSetUncaughtExceptionHandler`][2] 고 해당 지점에서 목표-c 예외를 관리 되는 예외로 변환 하려고 하기 때문입니다.
 
 ## <a name="scenarios"></a>시나리오
 
 ### <a name="scenario-1---catching-objective-c-exceptions-with-a-managed-catch-handler"></a>시나리오 1-관리 되는 catch 처리기를 사용 하 여 목표-C 예외 catch
 
-다음 시나리오에서는 관리 되는 `catch` 처리기를 사용 하 여 목표 C 예외를 catch 할 수 있습니다.
+다음 시나리오에서는 관리 되는 처리기를 사용 하 여 목표 C 예외를 catch 할 수 `catch` 있습니다.
 
 1. 목표-C 예외가 throw 됩니다.
-2. 목표 C 런타임은 예외를 처리할 수 있는 네이티브 `@catch` 처리기를 검색 하 여 스택을 탐색 하 고 해제 하지는 않습니다.
-3. 목표 C 런타임은 `@catch` 처리기를 찾지 않고 `NSGetUncaughtExceptionHandler`를 호출한 다음 Xamarin.ios/Xamarin.ios로 설치 된 처리기를 호출 합니다.
+2. 목표 C 런타임은 `@catch` 예외를 처리할 수 있는 네이티브 처리기를 찾기 위해 스택을 탐색 하 고 해제 하지는 않습니다.
+3. 목표 C 런타임은 처리기를 찾지 않고를 `@catch` 호출 하 `NSGetUncaughtExceptionHandler` 고 Xamarin.ios/xamarin.ios에 의해 설치 된 처리기를 호출 합니다.
 4. Xamarin.ios/Xamarin.ios의 처리기는 목표 C 예외를 관리 되는 예외로 변환 하 고 throw 합니다. 목표 C 런타임에서는 스택을 해제 하지 않았으므로 (한 번만) 현재 프레임은 목표-C 예외가 throw 된 것과 같습니다.
 
 Mono 런타임에서 목표-C 프레임을 제대로 해제 하는 방법을 알지 못하기 때문에 다른 문제가 발생 합니다.
@@ -111,7 +111,7 @@ Xamarin.ios ' catch 되지 않은 목표-C 예외 콜백이 호출 되 면 스�
 10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
 ```
 
-여기에서 관리 되는 프레임은 프레임 8-10 뿐 이지만, 관리 되는 예외는 프레임 0에서 throw 됩니다. 즉, mono 런타임은 네이티브 프레임 0-7을 해제 해야 합니다 .이로 인해 위에서 설명한 문제와 동일한 문제가 발생 합니다. Mono 런타임은 네이티브 프레임을 해제 하지만 목표-C `@catch` 또는 `@finally` 절은 실행 하지 않습니다.
+여기에서 관리 되는 프레임은 프레임 8-10 뿐 이지만, 관리 되는 예외는 프레임 0에서 throw 됩니다. 즉, mono 런타임은 네이티브 프레임 0-7을 해제 해야 합니다 .이로 인해 위에서 설명한 문제와 동일한 문제가 발생 합니다. Mono 런타임은 네이티브 프레임을 해제 하지만 목표-C 또는 절은 실행 하지 않습니다 `@catch` `@finally` .
 
 코드 예제:
 
@@ -127,9 +127,9 @@ Xamarin.ios ' catch 되지 않은 목표-C 예외 콜백이 호출 되 면 스�
 }
 ```
 
-이 프레임을 해제 하는 Mono 런타임이이를 인식 하지 못하기 때문에 `@finally` 절이 실행 되지 않습니다.
+`@finally`이 프레임을 해제 하는 Mono 런타임이 해당 절을 알지 못하기 때문에 절이 실행 되지 않습니다.
 
-이는 관리 되는 코드에서 관리 되는 예외를 throw 한 다음 네이티브 프레임을 통해 해제 하 여 첫 번째 관리 되는 `catch` 절로 가져오는 것입니다.
+이는 관리 되는 코드에서 관리 되는 예외를 throw 한 다음 네이티브 프레임을 통해 해제 하 여 첫 번째 관리 되는 절에 가져오는 것을 변형 한 것입니다 `catch` .
 
 ```csharp
 class AppDelegate : UIApplicationDelegate {
@@ -148,7 +148,7 @@ class AppDelegate : UIApplicationDelegate {
 }
 ```
 
-관리 되는 `UIApplication:Main` 메서드는 네이티브 `UIApplicationMain` 메서드를 호출 하 고, iOS는 궁극적으로 관리 되는 `AppDelegate:FinishedLaunching` 메서드를 호출 하기 전에 많은 네이티브 코드를 실행 하 고 관리 되는 예외가 throw 되는 경우에도 스택에 네이티브 프레임을 많이 사용 합니다. :
+관리 되는 `UIApplication:Main` 메서드는 네이티브 `UIApplicationMain` 메서드를 호출 하 고, iOS는 궁극적으로 관리 되는 메서드를 호출 하기 전에 많은 네이티브 코드를 실행 하 고 `AppDelegate:FinishedLaunching` 관리 되는 예외가 throw 될 때 스택에 네이티브 프레임을 많이 사용 합니다.
 
 ```
  0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
@@ -188,11 +188,11 @@ class AppDelegate : UIApplicationDelegate {
 
 ### <a name="scenario-2---not-able-to-catch-objective-c-exceptions"></a>시나리오 2-목표-C 예외를 catch 할 수 없음
 
-다음 시나리오에서는 목표 C 예외가 다른 방식으로 처리 되었기 때문에 관리 되는 `catch` 처리기를 사용 하 여 목표-C 예외를 catch 할 수 _없습니다_ .
+다음 시나리오에서는 _not_ `catch` 목표 c 예외가 다른 방식으로 처리 되기 때문에 관리 되는 처리기를 사용 하 여 객관적인 c 예외를 catch 할 수 없습니다.
 
 1. 목표-C 예외가 throw 됩니다.
-2. 목표 C 런타임은 예외를 처리할 수 있는 네이티브 `@catch` 처리기를 검색 하 여 스택을 탐색 하 고 해제 하지는 않습니다.
-3. 목표 C 런타임은 `@catch` 처리기를 찾고 스택을 해제 하 고 `@catch` 처리기를 실행 하기 시작 합니다.
+2. 목표 C 런타임은 `@catch` 예외를 처리할 수 있는 네이티브 처리기를 찾기 위해 스택을 탐색 하 고 해제 하지는 않습니다.
+3. 목표 C 런타임은 처리기를 찾고 `@catch` , 스택을 해제 하 고, 처리기 실행을 시작 합니다 `@catch` .
 
 이 시나리오는 일반적으로 Xamarin.ios 앱에서 찾을 수 있습니다. 주 스레드에는 일반적으로 다음과 같은 코드가 있습니다.
 
@@ -213,11 +213,11 @@ void UIApplicationMain ()
 
 즉, 주 스레드에서 처리 되지 않은 목표-C 예외가 발생 하지 않으므로 목표-C 예외를 관리 되는 예외로 변환 하는 콜백이 호출 되지 않습니다.
 
-이는 대부분의 UI 개체를 검사 하면 실행 중인 플랫폼에 없는 선택기에 해당 하는 속성을 페치 하기 때문에 Xamarin.ios에서 지 원하는 이전 macOS 버전에서 Xamarin.ios 앱을 디버그 하는 경우에도 매우 일반적입니다. Xamarin.ios에는 더 높은 macOS 버전에 대 한 지원이 포함 되어 있기 때문입니다. 이러한 선택기를 호출 하면 `NSInvalidArgumentException` ("인식할 수 없는 선택기 보냄 ...")이 발생 하 여 프로세스가 충돌 합니다.
+이는 일반적으로 xamarin.ios가 지 원하는 이전 macOS 버전에서 Xamarin.ios 앱을 디버그 하는 경우에도 매우 일반적입니다. 여기서는 대부분의 UI 개체를 검사 하면 실행 중인 플랫폼에 없는 선택기에 해당 하는 속성을 인출 합니다 (Xamarin.ios는 더 높은 macOS 버전에 대 한 지원을 포함 하기 때문). 이러한 선택기를 호출 하면 `NSInvalidArgumentException` ("인식할 수 없는 선택기 보냄 ...")이 throw 되어 프로세스가 충돌 합니다.
 
 요약 하자면, 목표-C 런타임 또는이를 처리 하기 위해 프로그래밍할 수 없는 Mono 런타임 해제 프레임은 크래시, 메모리 누수 및 다른 유형의 예측할 수 없는 (mis) 동작 등의 정의 되지 않은 동작이 발생할 수 있습니다.
 
-## <a name="solution"></a>솔루션
+## <a name="solution"></a>해결 방법
 
 Xamarin.ios 10 및 Xamarin.ios 2.10에서는 관리 되는 네이티브 경계에서 관리 되는 및 목표 C 예외를 모두 catch 하 고 해당 예외를 다른 형식으로 변환 하기 위한 지원이 추가 되었습니다.
 
@@ -233,7 +233,7 @@ static void DoSomething (NSObject obj)
 }
 ```
 
-Objc_msgSend에 대 한 P/Invoke가 가로채 며 대신 호출 됩니다.
+Objc_msgSend P/Invoke가 가로채 며 대신 호출 됩니다.
 
 ``` objective-c
 void
@@ -259,29 +259,29 @@ xamarin_dyn_objc_msgSend (id obj, SEL sel)
 
 ## <a name="events"></a>이벤트
 
-예외가 가로채 면 발생 하는 두 개의 새 이벤트 인 `Runtime.MarshalManagedException` 및 `Runtime.MarshalObjectiveCException`있습니다.
+예외가 가로채 면 발생 하는 두 개의 새 이벤트 인 및가 있습니다 `Runtime.MarshalManagedException` . `Runtime.MarshalObjectiveCException`
 
-두 이벤트는 throw 된 원래 예외 (`Exception` 속성)를 포함 하는 `EventArgs` 개체와 예외가 마샬링되는 방법을 정의 하는 `ExceptionMode` 속성을 전달 합니다.
+두 이벤트 모두 throw 된 `EventArgs` 원래 예외 (속성)를 포함 하는 개체 `Exception` 와 `ExceptionMode` 예외가 마샬링되는 방법을 정의 하는 속성을 전달 합니다.
 
-처리기에서 수행 되는 사용자 지정 처리에 따라 동작을 변경 하려면 이벤트 처리기에서 `ExceptionMode` 속성을 변경할 수 있습니다. 한 가지 예는 특정 예외가 발생 하는 경우 프로세스를 중단 하는 것입니다.
+`ExceptionMode`처리기에서 수행 되는 사용자 지정 처리에 따라 동작을 변경 하려면 이벤트 처리기에서 속성을 변경할 수 있습니다. 한 가지 예는 특정 예외가 발생 하는 경우 프로세스를 중단 하는 것입니다.
 
-`ExceptionMode` 속성을 변경 하는 것은 단일 이벤트에 적용 되 고 나중에 가로채는 예외에는 영향을 주지 않습니다.
+속성을 변경 하는 `ExceptionMode` 것은 단일 이벤트에 적용 되 고 나중에 가로채는 예외에는 영향을 주지 않습니다.
 
 사용할 수 있는 모드는 다음과 같습니다.
 
-- `Default`: 기본값은 플랫폼에 따라 다릅니다. GC가 협조적 모드 (watchOS)에 있는 경우에는 `ThrowObjectiveCException`이 고, 그렇지 않으면 `UnwindNativeCode` (iOS/watchOS/macOS)입니다. 기본값은 나중에 변경 될 수 있습니다.
+- `Default`: 기본값은 플랫폼에 따라 다릅니다. GC가 `ThrowObjectiveCException` 협조적 모드 (watchOS) 이면이 고, `UnwindNativeCode` 그렇지 않으면 (IOS/WatchOS/macos)입니다. 기본값은 나중에 변경 될 수 있습니다.
 - `UnwindNativeCode`: 이전 (정의 되지 않은) 동작입니다. 협조적 모드로 GC를 사용 하는 경우에는이 옵션을 사용할 수 없습니다 .이 옵션은 watchOS의 유일한 옵션 이지만 watchOS에 대 한 올바른 옵션이 아니지만 다른 모든 플랫폼의 기본 옵션입니다.
 - `ThrowObjectiveCException`: 관리 되는 예외를 목표-C 예외로 변환 하 고 목표-C 예외를 throw 합니다. WatchOS에 대 한 기본값입니다.
 - `Abort`: 프로세스를 중단 합니다.
-- `Disable`: 예외 가로채기를 사용 하지 않도록 설정 하므로 이벤트 처리기에서이 값을 설정 하는 것은 적합 하지 않지만 이벤트가 발생 한 후에는이 값을 사용 하지 않도록 설정 하는 것이 너무 지연 됩니다. 어떤 경우 든, 설정 된 경우 `UnwindNativeCode`처럼 동작 합니다.
+- `Disable`: 예외 가로채기를 사용 하지 않도록 설정 하므로 이벤트 처리기에서이 값을 설정 하는 것은 적합 하지 않지만 이벤트가 발생 한 후에는이 값을 사용 하지 않도록 설정 하는 것이 너무 지연 됩니다. 어떤 경우 든 설정 하는 경우로 동작 `UnwindNativeCode` 합니다.
 
 관리 코드에 대 한 마샬링 목표-C 예외에는 다음 모드를 사용할 수 있습니다.
 
-- `Default`: 기본값은 플랫폼에 따라 다릅니다. GC가 협조적 모드 (watchOS)에 있는 경우에는 `ThrowManagedException`이 고, 그렇지 않으면 `UnwindManagedCode` (iOS/tvOS/macOS)입니다. 기본값은 나중에 변경 될 수 있습니다.
+- `Default`: 기본값은 플랫폼에 따라 다릅니다. GC가 `ThrowManagedException` 협조적 모드 (watchOS) 이면이 고, `UnwindManagedCode` 그렇지 않으면 (IOS/TvOS/macos)입니다. 기본값은 나중에 변경 될 수 있습니다.
 - `UnwindManagedCode`: 이전 (정의 되지 않은) 동작입니다. 협조적 모드에서 GC를 사용 하는 경우에는이 옵션을 사용할 수 없습니다 .이는 watchOS에서 유일 하 게 유효한 GC 모드입니다 .이는 watchOS의 올바른 옵션이 아니지만 다른 모든 플랫폼의 기본값입니다.
 - `ThrowManagedException`: 목표-C 예외를 관리 되는 예외로 변환 하 고 관리 되는 예외를 throw 합니다. WatchOS에 대 한 기본값입니다.
 - `Abort`: 프로세스를 중단 합니다.
-- `Disable`:D isables는 예외 가로채기를 가능 하 게 하므로 이벤트 처리기에서이 값을 설정 하는 것은 적합 하지 않지만 이벤트가 발생 한 후에는이 값을 사용 하지 않도록 설정 하는 것이 너무 늦습니다. 설정 된 경우 어떤 경우 든 프로세스가 중단 됩니다.
+- `Disable`:D는 예외 가로채기를 가능 하 게 하므로 이벤트 처리기에서이 값을 설정 하는 것은 적합 하지 않지만 이벤트가 발생 한 후에는이 값을 사용 하지 않도록 설정 하는 것이 너무 늦습니다. 설정 된 경우 어떤 경우 든 프로세스가 중단 됩니다.
 
 따라서 예외가 마샬링될 때마다 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -301,7 +301,7 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 };
 ```
 
-<a name="build_time_flags" />
+<a name="build_time_flags"></a>
 
 ## <a name="build-time-flags"></a>빌드 시간 플래그
 
@@ -321,13 +321,13 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
   - `abort`
   - `disable`
 
-`disable`를 제외 하 고 이러한 값은 `MarshalManagedException` 및 `MarshalObjectiveCException` 이벤트에 전달 되는 `ExceptionMode` 값과 동일 합니다.
+을 제외 하 `disable` 고 이러한 값은 `ExceptionMode` 및 이벤트에 전달 된 값과 동일 `MarshalManagedException` `MarshalObjectiveCException` 합니다.
 
-`disable` 옵션은 _대부분_ 의 경우에는 실행 오버 헤드를 추가 하지 않을 때 예외를 가로채는 점을 제외 하면 가로채기를 사용 하지 않도록 설정 합니다. 마샬링 이벤트는 이러한 예외에 대해 계속 발생 하며 기본 모드는 실행 중인 플랫폼에 대 한 기본 모드입니다.
+옵션은 대부분의 경우에는 `disable` 실행 오버 헤드를 추가 하지 않을 때 예외를 가로채는 점을 제외 하 고는 _대부분_ 가로채기를 사용 하지 않습니다. 마샬링 이벤트는 이러한 예외에 대해 계속 발생 하며 기본 모드는 실행 중인 플랫폼에 대 한 기본 모드입니다.
 
 ## <a name="limitations"></a>제한 사항
 
-목표-C 예외를 catch 하려고 할 때 `objc_msgSend` 함수 제품군에 대 한 P/Invoke만 가로챕니다. 즉, 모든 목표-C 예외를 throw 하는 다른 C 함수에 대 한 P/Invoke는 여전히 이전 및 정의 되지 않은 동작으로 실행 됩니다 .이는 나중에 향상 될 수 있습니다.
+`objc_msgSend`목표-C 예외를 catch 하려고 할 때 함수 제품군에 대 한 P/invoke만 가로챕니다. 즉, 모든 목표-C 예외를 throw 하는 다른 C 함수에 대 한 P/Invoke는 여전히 이전 및 정의 되지 않은 동작으로 실행 됩니다 .이는 나중에 향상 될 수 있습니다.
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
 

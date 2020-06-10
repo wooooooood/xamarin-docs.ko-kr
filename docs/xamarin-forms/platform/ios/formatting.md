@@ -1,34 +1,18 @@
 ---
-title: ''
-description: 이 문서에서는 사용자 지정 렌더러를 사용 하지 않고 iOS 관련 모양을 설정 하는 방법을 설명 Xamarin.Forms 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: eb44b7d756fee4fa4f452b79292effb45ab98154
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138517"
+제목: "iOS 관련 서식 추가" 설명: "이 문서에서는 사용자 지정 렌더러를 사용 하지 않고 iOS 관련 모양을 설정 하는 방법을 설명 Xamarin.Forms 합니다."
+assetid: CE50E207-D092-4D88-8439-1B51F178E7ED: xamarin-forms author: davidbritch: dabritch:: 01/29/2016-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="adding-ios-specific-formatting"></a>IOS 특정 형식 추가
 
 IOS 관련 형식을 설정 하는 한 가지 방법은 컨트롤에 대 한 [사용자 지정 렌더러](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) 를 만들고 각 플랫폼에 대 한 플랫폼별 스타일과 색을 설정 하는 것입니다.
 
 IOS 앱의 모양을 제어 하는 다른 옵션은 Xamarin.Forms 다음과 같습니다.
 
-- Info.plist에서 표시 옵션을 구성 하는 중 [ **입니다.**](#info-plist)
-- [ `UIAppearance` API](#uiappearance) 를 통해 컨트롤 스타일 설정
+- Info.plist에서 표시 옵션을 구성 하는 중 [ **입니다.**](#customizing-infoplist)
+- [ `UIAppearance` API](#uiappearance-api) 를 통해 컨트롤 스타일 설정
 
 이러한 대안은 아래에 설명 되어 있습니다.
-
-<a name="info-plist"/>
 
 ## <a name="customizing-infoplist"></a>Info.plist 사용자 지정
 
@@ -62,8 +46,6 @@ nav.BarTextColor = Color.White;
 이제 앱이 실행 되 면 탐색 모음이 녹색으로 표시 되 고 텍스트는 흰색 (서식으로 인해 Xamarin.Forms ) 이며 *,* 상태 표시줄 텍스트도 iOS 관련 구성에 따라 흰색입니다.
 
 ![](theme-images/status-white-sml.png "iOS Theming")
-
-<a name="uiappearance"/>
 
 ## <a name="uiappearance-api"></a>UIAppearance API
 

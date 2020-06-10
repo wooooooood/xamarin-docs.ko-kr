@@ -7,12 +7,12 @@ ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: 2e19fd37270d3c96cb175d30dc786a95a01c3fcf
-ms.sourcegitcommit: 2ed3d1c933fce4ce332128f125acb2f23f9e0f1a
+ms.openlocfilehash: 556ea205e9894a2553224da0dc71c00d9bb55a9b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75753022"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564743"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Xamarin.ios의 핵심 NFC
 
@@ -63,20 +63,20 @@ CoreNFC를 사용 하도록 설정 하려면 프로젝트에서 다음 세 가�
 
 새 **앱 ID** 를 만들고 **NFC 태그 읽기** 서비스가 선택 인지 확인 합니다.
 
-[![개발자 포털 새 앱 ID 페이지와 NFC 태그 읽기가 선택 됨](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
+[![개발자 포털 NFC 태그를 선택 하 여 새 앱 ID 페이지 선택](corenfc-images/app-services-nfc-sml.png)](corenfc-images/app-services-nfc.png#lightbox)
 
 그런 다음이 앱 ID에 대 한 새 프로 비전 프로필을 만든 다음, 개발 Mac에 다운로드 하 여 설치 해야 합니다.
 
 ## <a name="reading-a-tag"></a>태그 읽기
 
-프로젝트가 구성 되 면 파일 맨 위에 `using CoreNFC;`를 추가 하 고 다음 세 단계를 수행 하 여 NFC 태그 읽기 기능을 구현 합니다.
+프로젝트가 구성 되 면 `using CoreNFC;` 파일의 맨 위에를 추가 하 고 다음 세 단계를 수행 하 여 NFC 태그 읽기 기능을 구현 합니다.
 
-### <a name="1-implement-infcndefreadersessiondelegate"></a>1. `INFCNdefReaderSessionDelegate` 구현
+### <a name="1-implement-infcndefreadersessiondelegate"></a>1. 구현`INFCNdefReaderSessionDelegate`
 
 인터페이스에는 다음과 같은 두 가지 메서드를 구현할 수 있습니다.
 
-- `DidDetect` – 태그를 성공적으로 읽으면 호출 됩니다.
-- `DidInvalidate` – 오류가 발생 하거나 60 초 제한 시간에 도달 하면 호출 됩니다.
+- `DidDetect`– 태그를 성공적으로 읽으면 호출 됩니다.
+- `DidInvalidate`– 오류가 발생 하거나 60 초 제한 시간에 도달 하면 호출 됩니다.
 
 #### <a name="diddetect"></a>DidDetect
 
@@ -96,7 +96,7 @@ public void DidDetect(NFCNdefReaderSession session, NFCNdefMessage[] messages)
 }
 ```
 
-세션에서 여러 태그 읽기를 허용 하는 경우이 메서드는 여러 번 호출 될 수 있으며 메시지 배열이 전달 될 수도 있습니다. 이는 `Start` 메서드의 세 번째 매개 변수 ( [2 단계](#step2)에서 설명)를 사용 하 여 설정 됩니다.
+세션에서 여러 태그 읽기를 허용 하는 경우이 메서드는 여러 번 호출 될 수 있으며 메시지 배열이 전달 될 수도 있습니다. 이는 메서드의 세 번째 매개 변수 `Start` ( [2 단계](#step2)에서 설명)를 사용 하 여 설정 됩니다.
 
 #### <a name="didinvalidate"></a>DidInvalidate
 
@@ -123,9 +123,9 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 
 세션이 무효화 되 면 다시 검색 하려면 새 세션 개체를 만들어야 합니다.
 
-<a name="step2" />
+<a name="step2"></a>
 
-### <a name="2-start-an-nfcndefreadersession"></a>2. `NFCNdefReaderSession` 시작
+### <a name="2-start-an-nfcndefreadersession"></a>2. 시작`NFCNdefReaderSession`
 
 검색은 단추 누름과 같은 사용자 요청으로 시작 해야 합니다.
 다음 코드는 검색 세션을 만들고 시작 합니다.
@@ -135,11 +135,11 @@ Session = new NFCNdefReaderSession(this, null, true);
 Session?.BeginSession();
 ```
 
-`NFCNdefReaderSession` 생성자에 대 한 매개 변수는 다음과 같습니다.
+생성자에 대 한 매개 변수는 다음과 같습니다 `NFCNdefReaderSession` .
 
-- `delegate` – `INFCNdefReaderSessionDelegate`의 구현입니다. 샘플 코드에서 대리자는 테이블 뷰 컨트롤러에서 구현 되므로 `this` 대리자 매개 변수로 사용 됩니다.
-- `queue` – 콜백이 처리 되는 큐입니다. `null`수 있으며,이 경우 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 때 `DispatchQueue.MainQueue`를 사용 해야 합니다.
-- `invalidateAfterFirstRead` – `true`하는 경우 첫 번째 검사가 성공한 후 검사가 중지 됩니다. 검색이 취소 되거나 60 초 시간 제한에 도달할 때까지 `false` 검색은 계속 되 고 여러 결과가 반환 됩니다.
+- `delegate`–의 구현 `INFCNdefReaderSessionDelegate` 입니다. 샘플 코드에서 대리자는 테이블 뷰 컨트롤러에서 구현 되므로 `this` 대리자 매개 변수로 사용 됩니다.
+- `queue`– 콜백이 처리 되는 큐입니다. 이 `null` 경우 `DispatchQueue.MainQueue` 예제와 같이 사용자 인터페이스 컨트롤을 업데이트할 때를 사용 해야 합니다.
+- `invalidateAfterFirstRead`– 인 경우 검색을 처음 성공한 후 검색을 중지 하 고, 검색을 `true` `false` 취소 하거나 60 초 시간 제한에 도달할 때까지 검색을 계속 하 고 여러 결과를 반환 합니다.
 
 ### <a name="3-cancel-the-scanning-session"></a>3. 검색 세션을 취소 합니다.
 
@@ -147,7 +147,7 @@ Session?.BeginSession();
 
 ![검사 하는 동안 취소 단추](corenfc-images/scan-cancel-sml.png)
 
-앱은 `InvalidateSession` 메서드를 호출 하 여 프로그래밍 방식으로 검색을 취소할 수 있습니다.
+앱은 메서드를 호출 하 여 프로그래밍 방식으로 검색을 취소할 수 있습니다 `InvalidateSession` .
 
 ```csharp
 Session.InvalidateSession();

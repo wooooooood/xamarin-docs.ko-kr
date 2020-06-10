@@ -1,24 +1,24 @@
 ---
 title: Xamarin.ios에서 네이티브 라이브러리 참조
-description: 이 문서에서는 네이티브 C 라이브러리를 Xamarin.ios 응용 프로그램에 연결 하는 방법을 설명 합니다. 유니버설 네이티브 라이브러리를 빌드하고에서 C#C 메서드에 액세스 하는 방법을 설명 합니다.
+description: '이 문서에서는 네이티브 C 라이브러리를 Xamarin.ios 응용 프로그램에 연결 하는 방법을 설명 합니다. 유니버설 네이티브 라이브러리를 빌드하고 c #에서 C 메서드에 액세스 하는 방법을 설명 합니다.'
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/28/2016
-ms.openlocfilehash: c8b882430d5d7d02e444acd00cfdacfc7b29a42b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 014c5074c6dfd9698b0a746e58da50a3f3d9ee03
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031630"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574108"
 ---
 # <a name="referencing-native-libraries-in-xamarinios"></a>Xamarin.ios에서 네이티브 라이브러리 참조
 
 Xamarin.ios는 네이티브 C 라이브러리와 목적-C 라이브러리를 모두 사용 하 여 연결을 지원 합니다. 이 문서에서는 네이티브 C 라이브러리를 Xamarin.ios 프로젝트와 연결 하는 방법을 설명 합니다. 목적-C 라이브러리에 대해 동일한 작업을 수행 하는 방법에 대 한 자세한 내용은 [바인딩 목표-c 형식](~/ios/platform/binding-objective-c/index.md) 문서를 참조 하세요.
 
-<a name="building_native" />
+<a name="building_native"></a>
 
 ## <a name="building-universal-native-libraries-i386-armv7-and-arm64"></a>유니버설 네이티브 라이브러리 빌드 (i386, ARMv7 및 ARM64)
 
@@ -30,7 +30,7 @@ IOS 개발을 위해 지원 되는 각 플랫폼에 대 한 네이티브 라이�
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphonesimulator -arch i386 -configuration Release clean build
 ```
 
-그러면 `MyProject.xcodeproj/build/Release-iphonesimulator/`에 네이티브 정적 라이브러리가 생성 됩니다. 라이브러리 보관 파일 (arm64)을 나중에 사용 하기 위해 안전한 위치에 복사 (또는 이동) 하 여 다음에 빌드할 동일한 라이브러리의 및 armv7 버전과 충돌 하지 않도록 해당 이름을 해당 이름 (예: **)에 제공 합니다.**
+그러면에서 네이티브 정적 라이브러리가 생성 됩니다 `MyProject.xcodeproj/build/Release-iphonesimulator/` . 라이브러리 보관 파일 (arm64)을 나중에 사용 하기 위해 안전한 위치에 복사 (또는 이동) 하 여 다음에 빌드할 동일한 라이브러리의 및 armv7 버전과 충돌 하지 않도록 해당 이름을 해당 이름 (예: **)에 제공 합니다.**
 
 ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을 실행 합니다.
 
@@ -38,7 +38,7 @@ ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을
 /Developer/usr/bin/xcodebuild -project MyProject.xcodeproj -target MyLibrary -sdk iphoneos -arch arm64 -configuration Release clean build
 ```
 
-이번에는 빌드된 네이티브 라이브러리가 `MyProject.xcodeproj/build/Release-iphoneos/`에 배치 됩니다. 다시 한 번이 파일을 안전한 위치로 복사 (또는 이동) 하 고 **arm64** 와 같은 이름으로 변경 하 여 충돌 하지 않도록 합니다.
+이번에는 빌드된 네이티브 라이브러리가에 배치 됩니다 `MyProject.xcodeproj/build/Release-iphoneos/` . 다시 한 번이 파일을 안전한 위치로 복사 (또는 이동) 하 고 **arm64** 와 같은 이름으로 변경 하 여 충돌 하지 않도록 합니다.
 
 이제 라이브러리의 ARMv7 버전을 빌드합니다.
 
@@ -48,17 +48,17 @@ ARM64 버전의 네이티브 라이브러리를 빌드하려면 다음 명령을
 
 라이브러리의 다른 두 버전을 이동한 동일한 위치에 결과 라이브러리 파일을 복사 하거나 이동 하 여 라이브러리의 이름을 **armv7**같은 이름으로 바꿉니다.
 
-유니버설 이진을 만들려면 다음과 같은 `lipo` 도구를 사용할 수 있습니다.
+유니버설 이진을 만들려면 다음과 같은 도구를 사용할 수 있습니다 `lipo` .
 
 ```bash
 lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a libMyLibrary-armv7.a
 ```
 
-이렇게 하면 모든 iOS 개발 대상에 사용 하기에 적합 한 유니버설 (fat) 라이브러리가 될 `libMyLibrary.a` 만들어집니다.
+이렇게 하면 `libMyLibrary.a` 모든 iOS 개발 대상에 사용 하기에 적합 한 유니버설 (fat) 라이브러리가 생성 됩니다.
 
 ### <a name="missing-required-architecture-i386"></a>필수 아키텍처 i386 누락
 
-IOS 시뮬레이터에서 목표 C 라이브러리를 사용 하려고 할 때 런타임 출력에 `does not implement methodSignatureForSelector` 또는 `does not implement doesNotRecognizeSelector` 메시지가 표시 되는 경우 라이브러리는 i386 아키텍처에 대해 컴파일되지 않았을 수 있습니다 ( [유니버설 네이티브 라이브러리 빌드](#building_native) 참조). 섹션).
+`does not implement methodSignatureForSelector` `does not implement doesNotRecognizeSelector` IOS 시뮬레이터에서 목표-C 라이브러리를 사용 하려고 할 때 런타임 출력에 또는 메시지가 표시 되는 경우 라이브러리는 i386 아키텍처용으로 컴파일되지 않은 것일 수 있습니다 (위의 [유니버설 네이티브 라이브러리 빌드](#building_native) 섹션 참조).
 
 지정 된 라이브러리에서 지 원하는 아키텍처를 확인 하려면 터미널에서 다음 명령을 사용 합니다.
 
@@ -66,7 +66,7 @@ IOS 시뮬레이터에서 목표 C 라이브러리를 사용 하려고 할 때 �
 lipo -info /full/path/to/libraryname.a
 ```
 
-여기서 `/full/path/to/`는 사용 되는 라이브러리의 전체 경로이 고 `libraryname.a`는 해당 라이브러리의 이름입니다.
+여기서 `/full/path/to/` 는 사용 되는 라이브러리의 전체 경로이 고 `libraryname.a` 은 해당 라이브러리의 이름입니다.
 
 라이브러리에 대 한 소스가 있는 경우 iOS 시뮬레이터에서 앱을 테스트 하려는 경우 i386 아키텍처에 대해서도이를 컴파일 및 번들 해야 합니다.
 
@@ -82,7 +82,7 @@ lipo -info /full/path/to/libraryname.a
 
 **라이브러리를 프로젝트로 가져오려면**솔루션 탐색기에서 프로젝트를 선택 하 고 **Command + Option + a**를 누릅니다. 라이브러리를 찾아 프로젝트에 추가 합니다. 메시지가 표시 되 면 Mac용 Visual Studio 또는 Visual Studio에 프로젝트에 복사 하도록 지시 합니다. 프로젝트를 추가한 후 프로젝트에서 파일을 찾아 마우스 오른쪽 단추로 클릭 하 고 **빌드 작업** 을 **없음**으로 설정 합니다.
 
-**라이브러리를 연결 하기 위해 xamarin.ios를 구성**하려면 **ios 빌드의**추가 인수 (프로젝트 옵션의 일부)에 추가 해야 하는 최종 실행 파일 (라이브러리 자체는 아님)에 대 한 프로젝트 옵션에 "-gcc_flags"를 추가 합니다. 다음 예제와 같이 프로그램에 필요한 모든 추가 라이브러리를 포함 하는 따옴표 붙은 문자열을 선택 합니다.
+**라이브러리를 연결 하기 위해 xamarin.ios를 구성**하려면 최종 실행 파일 (라이브러리 자체가 아니라 최종 프로그램)에 대 한 프로젝트 옵션에서 "-gcc_flags" 옵션과 프로그램에 필요한 모든 **iOS Build**추가 라이브러리를 포함 하는 따옴표 붙은 문자열을 추가 해야 합니다. 예를 들면 다음과 같습니다.
 
 ```bash
 -gcc_flags "-L${ProjectDir} -lMylibrary -force_load ${ProjectDir}/libMyLibrary.a"
@@ -96,15 +96,15 @@ lipo -info /full/path/to/libraryname.a
 -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
 ```
 
-네이티브 라이브러리가 코드를 포함 C++ 하는 경우 xamarin.ios가 올바른 컴파일러를 사용 하는 것을 알 수 있도록 "추가 인수"에-.cxx 플래그를 전달 해야 합니다. 위의 C++ 옵션은 다음과 같습니다.
+네이티브 라이브러리가 c + + 코드를 포함 하는 경우 Xamarin.ios가 올바른 컴파일러를 사용 하는 것을 알 수 있도록 "추가 인수"에-.cxx 플래그를 전달 해야 합니다. C + +의 경우 이전 옵션은 다음과 같습니다.
 
 ```bash
 -cxx -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
 ```
 
-<a name="Accessing_C_Methods_from_C#" />
+<a name="Accessing_C_Methods_from_C#"></a>
 
-## <a name="accessing-c-methods-from-c35"></a>C에서 C 메서드 액세스&#35;
+## <a name="accessing-c-methods-from-c35"></a>C&#35;에서 C 메서드 액세스
 
 IOS에서 사용할 수 있는 기본 라이브러리에는 두 가지 종류가 있습니다.
 
@@ -119,7 +119,7 @@ IOS에서 사용할 수 있는 기본 라이브러리에는 두 가지 종류가
 - 상주 하는 라이브러리 확인
 - 적절 한 P/Invoke 선언을 작성 합니다.
 
-P/Invoke를 사용 하는 경우 연결 하는 라이브러리의 경로를 지정 해야 합니다. IOS 공유 라이브러리를 사용 하는 경우 경로를 하드 코딩 하거나 `Constants`에서 정의한 편리한 상수를 사용할 수 있습니다. 이러한 상수는 iOS 공유 라이브러리를 포함 해야 합니다.
+P/Invoke를 사용 하는 경우 연결 하는 라이브러리의 경로를 지정 해야 합니다. IOS 공유 라이브러리를 사용 하는 경우 경로를 하드 코딩 하거나에서 정의한 편리한 상수를 사용할 수 있습니다 `Constants` . 이러한 상수는 ios 공유 라이브러리를 포함 해야 합니다.
 
 예를 들어 C:에이 서명이 있는 Apple의 UIKit 라이브러리에서 UIRectFrameUsingBlendMode 메서드를 호출 하려는 경우
 
@@ -134,17 +134,17 @@ P/Invoke 선언은 다음과 같습니다.
 public extern static void RectFrameUsingBlendMode (RectangleF rect, CGBlendMode blendMode);
 ```
 
-UIKitLibrary는 "/System/Library/Frameworks/UIKit.framework/UIKit"로 정의 된 상수 이며, EntryPoint를 사용 하 여 선택적으로 외부 이름 (UIRectFramUsingBlendMode)을 지정 하는 동시에 C#다른 이름을 노출할 수 있습니다. RectFrameUsingBlendMode 짧습니다.
+UIKitLibrary는 "/System/Library/Frameworks/UIKit.framework/UIKit"로 정의 된 상수 이며, EntryPoint를 사용 하 여 선택적으로 외부 이름 (UIRectFramUsingBlendMode)을 지정 하는 동시에 c #의 다른 이름을 노출할 수 있습니다.
 
-<a name="Accessing_C_Dylibs" />
+<a name="Accessing_C_Dylibs"></a>
 
 ### <a name="accessing-c-dylibs"></a>C Dylibs 액세스
 
-Xamarin.ios 응용 프로그램에서 C Dylib를 사용 해야 하는 경우에는 `DllImport` 특성을 호출 하기 전에 약간의 추가 설정이 필요 합니다.
+Xamarin.ios 응용 프로그램에서 C Dylib를 사용 해야 하는 경우 특성을 호출 하기 전에 필요한 약간의 추가 설정이 있습니다 `DllImport` .
 
-예를 들어 응용 프로그램에서 호출 하는 `Animal_Version` 메서드를 사용 하는 `Animal.dylib` 있는 경우 라이브러리를 사용 하기 전에 라이브러리의 위치에 대해 Xamarin.ios에 알려야 합니다.
+예를 들어 `Animal.dylib` `Animal_Version` 응용 프로그램에서 호출할 메서드가 포함 된가 있는 경우이를 사용 하기 전에 라이브러리의 위치에 대해 xamarin.ios에 알려야 합니다.
 
-이렇게 하려면 `Main.CS` 파일을 편집 하 여 다음과 같이 만듭니다.
+이렇게 하려면 파일을 편집 하 여 `Main.CS` 다음과 같이 만듭니다.
 
 ```csharp
 static void Main (string[] args)
@@ -157,17 +157,17 @@ static void Main (string[] args)
 }
 ```
 
-여기서 `/full/path/to/`는 사용 되는 Dylib의 전체 경로입니다. 이 코드가 준비 되 면 다음과 같이 `Animal_Version` 메서드에 연결할 수 있습니다.
+여기서 `/full/path/to/` 는 사용 되는 Dylib의 전체 경로입니다. 이 코드가 준비 되 면 다음과 같이 메서드에 연결할 수 있습니다 `Animal_Version` .
 
 ```csharp
 [DllImport("Animal.dylib", EntryPoint="Animal_Version")]
 public static extern double AnimalLibraryVersion();
 ```
 
-<a name="Static_Libraries" />
+<a name="Static_Libraries"></a>
 
 ### <a name="static-libraries"></a>정적 라이브러리
 
-IOS에서 정적 라이브러리를 사용할 수 있기 때문에 연결할 외부 공유 라이브러리가 없으므로 DllImport 특성의 path 매개 변수는 `__Internal` 특수 이름을 사용 해야 합니다 (이름 시작 부분에 있는 이중 밑줄 문자를 참조). 경로 이름입니다.
+IOS에서 정적 라이브러리를 사용할 수 있기 때문에와 연결할 외부 공유 라이브러리가 없으므로 DllImport 특성의 path 매개 변수는 `__Internal` 경로 이름이 아니라 특수 이름 (이름 시작 부분에 있는 이중 밑줄 문자)을 사용 해야 합니다.
 
 이렇게 하면 DllImport는 공유 라이브러리에서 로드 하는 대신 현재 프로그램에서 참조 하는 메서드의 기호를 조회 합니다.

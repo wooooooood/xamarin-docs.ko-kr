@@ -15,8 +15,6 @@ Xamarin.Forms코드는 여러 플랫폼에서 실행 됩니다. 각 플랫폼에
 
 이미지 파일 처리에 대한 자세한 내용은 [이미지 작업](~/xamarin-forms/user-interface/images.md) 페이지를 참조하세요.
 
-<a name="Loading_and_Saving_Files" />
-
 ## <a name="saving-and-loading-files"></a>파일 저장 및 로드
 
 `System.IO` 클래스는 각 플랫폼의 파일 시스템에 액세스하는 데 사용할 수 있습니다. `File` 클래스를 사용하여 파일을 만들고, 삭제하고, 삭제할 수 있으며, `Directory` 클래스를 사용하여 디렉터리의 콘텐츠를 만들거나, 삭제하거나, 열거할 수 있습니다. 또한 파일 작업(예: 파일 내의 압축 또는 위치 검색)을 훨씬 더 효율적으로 제어할 수 있는 `Stream` 하위 클래스를 사용할 수도 있습니다.
@@ -48,8 +46,6 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 이러한 작업은 텍스트 저장하고 로드하는 페이지가 포함된 샘플 앱에서 보여 줍니다.
 
 [![텍스트 저장 및 로드](files-images/saveandload-sml.png "앱에서 파일 저장 및 로드")](files-images/saveandload.png#lightbox "앱에서 파일 저장 및 로드")
-
-<a name="Loading_Files_Embedded_as_Resources" />
 
 ## <a name="loading-files-embedded-as-resources"></a>리소스로 포함된 파일 로드
 
@@ -97,8 +93,6 @@ listView.ItemsSource = monkeys;
 
  [![ListView에 표시 되는 .NET standard 라이브러리에 포함 된 Xml 파일](files-images/pclxml-sml.png "ListView에 표시 되는 .NET 표준 라이브러리의 포함 XML 파일")](files-images/pclxml.png#lightbox "ListView에 표시 되는 .NET 표준 라이브러리의 포함 XML 파일")
 
-<a name="Embedding_in_Shared_Projects" />
-
 ## <a name="embedding-in-shared-projects"></a>공유 프로젝트에 포함
 
 공유 프로젝트는 파일을 포함 리소스로 포함할 수도 있지만, 공유 프로젝트의 콘텐츠가 참조 프로젝트로 컴파일되므로 포함된 파일 리소스 ID에 사용되는 접두사가 변경될 수 있습니다. 즉 포함된 파일 각각에 대한 리소스 ID가 플랫폼마다 다를 수 있습니다.
@@ -125,15 +119,11 @@ Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
 
-<a name="Organizing_Resources" />
-
 ### <a name="organizing-resources"></a>리소스 구성
 
 위의 예제에서는 파일이 .NET Standard 라이브러리 프로젝트의 루트에 포함되어 있다고 가정합니다. 이 경우 리소스 ID는 **Namespace.Filename.Extension** 형식입니다(예: `WorkingWithFiles.LibTextResource.txt` 및 `WorkingWithFiles.iOS.SharedTextResource.txt`).
 
 포함 리소스는 폴더에 구성할 수 있습니다. 포함 리소스가 폴더에 배치되면 폴더 이름이 리소스 ID의 일부가 되며(마침표로 구분됨), 리소스 ID 형식은 **Namespace.Folder.Filename.Extension**이 됩니다. 샘플 앱에 사용된 파일이 **MyFolder** 폴더에 배치되면 해당 리소스 ID(`WorkingWithFiles.MyFolder.LibTextResource.txt` 및 `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`)가 됩니다.
-
-<a name="Debugging_Embedded_Resources" />
 
 ### <a name="debugging-embedded-resources"></a>포함 리소스 디버깅
 
@@ -156,5 +146,5 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 ## <a name="related-links"></a>관련 링크
 
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Xamarin.Forms표본의](https://github.com/xamarin/xamarin-forms-samples)
+- [Xamarin.Forms 샘플](https://github.com/xamarin/xamarin-forms-samples)
 - [Xamarin.iOS에서 파일 시스템 작업](~/ios/app-fundamentals/file-system.md)

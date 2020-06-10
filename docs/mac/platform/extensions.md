@@ -7,22 +7,22 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a9dbb63b78b00a9bcac9d7833530da02890afc6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1d1e40de646362e9b573ad7040ab08ba6d01d6e8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017306"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571612"
 ---
 # <a name="xamarinmac-extension-support"></a>Xamarin.Mac 확장 지원
 
-2\.10 Xamarin.ios에서 여러 macOS 확장 점에 대 한 지원이 추가 되었습니다.
+2.10 Xamarin.ios에서 여러 macOS 확장 점에 대 한 지원이 추가 되었습니다.
 
 - Finder
 - 공유
 - 오늘
 
-<a name="Limitations-and-Known-Issues" />
+<a name="Limitations-and-Known-Issues"></a>
 
 ## <a name="limitations-and-known-issues"></a>제한 사항 및 알려진 문제
 
@@ -32,21 +32,21 @@ ms.locfileid: "73017306"
 - 확장은 호스트 응용 프로그램에 포함 되어야 하며,이 응용 프로그램은 시스템에 등록 하 여 한 번 실행 될 때 사용할 수 있습니다. 그런 다음 **시스템 기본 설정**의 **확장** 섹션에서 사용 하도록 설정 해야 합니다. 
 - 일부 확장 작동이 중단 되 면 호스트 응용 프로그램이 불안정 해질 수 있으며 이상한 동작이 발생할 수 있습니다. 특히 **알림 센터** 의 **Finder** 및 **Today** 섹션은 "걸린" 상태가 되 고 응답 하지 않게 될 수 있습니다. 이는 Xcode의 확장 프로젝트 에서도 발생 했으며 현재 Xamarin.ios와 관련이 없는 것으로 나타납니다. 시스템 로그에 표시 되는 경우가 종종 있습니다. ( **콘솔**을 통해 자세한 내용을 보려면 팁 참조) 반복 된 오류 메시지를 인쇄 합니다. MacOS를 다시 시작 하면이 문제를 해결할 수 있습니다.
 
-<a name="Tips" />
+<a name="Tips"></a>
 
 ## <a name="tips"></a>팁
 
 Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 하 게 사용할 수 있습니다.
 
-- Xamarin.ios는 현재 디버깅 확장을 지원 하지 않으므로 디버깅 환경은 주로 실행 및 `printf`와 같은 문에 따라 달라 집니다. 그러나 확장은 sandbox 프로세스에서 실행 되므로 `Console.WriteLine` 다른 Xamarin.ios 응용 프로그램에서 수행 되는 것 처럼 작동 하지 않습니다. [`NSLog`를 직접](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) 호출 하면 디버깅 메시지가 시스템 로그에 출력 됩니다.
-- Catch 되지 않은 예외는 확장 프로세스를 중단 하 여 **시스템 로그**에 적은 양의 유용한 정보만 제공 합니다. 다시 throw 하기 전에 `NSLog`의 `try/catch` (예외) 블록에 문제가 있는 코드를 래핑하는 것이 유용할 수 있습니다.
-- **시스템 로그** 는 **응용 프로그램**  > **유틸리티**의 **콘솔** 앱에서 액세스할 수 있습니다.
+- Xamarin.ios는 현재 디버깅 확장을 지원 하지 않으므로 디버깅 환경은 주로 실행과 같은 문에 따라 달라 집니다 `printf` . 그러나 확장은 샌드박스 프로세스에서 실행 되므로 `Console.WriteLine` 다른 xamarin.ios 응용 프로그램에서 수행 되는 것 처럼 작동 하지 않습니다. 을 [ `NSLog` 직접](https://gist.github.com/chamons/e2e409013a449cfbe1f2fbe5547f6554) 호출 하면 디버깅 메시지가 시스템 로그에 출력 됩니다.
+- Catch 되지 않은 예외는 확장 프로세스를 중단 하 여 **시스템 로그**에 적은 양의 유용한 정보만 제공 합니다. `try/catch`다시 throw 하기 전의 (예외) 블록에 문제가 있는 코드를 래핑하는 것이 `NSLog` 유용할 수 있습니다.
+- **시스템 로그** 는 **응용 프로그램**유틸리티 아래의 **콘솔** 앱에서 액세스할 수 있습니다  >  **Utilities**.
 
     [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
 - 위에서 설명한 것 처럼 확장 호스트 응용 프로그램을 실행 하면 시스템에 등록 됩니다. 응용 프로그램 번들을 삭제 하 고 등록을 취소 합니다. 
-- 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾습니다 (삭제할 수 있음). `plugin kit -mv`
+- 앱 확장의 "흩어진" 버전을 등록 하는 경우 다음 명령을 사용 하 여 해당 버전을 찾아서 삭제할 수 있습니다.`plugin kit -mv`
 
-<a name="Walkthrough-and-Sample-App" />
+<a name="Walkthrough-and-Sample-App"></a>
 
 ## <a name="walkthrough-and-sample-app"></a>연습 및 샘플 앱
 
@@ -54,7 +54,7 @@ Xamarin.ios에서 확장을 사용 하는 경우 다음과 같은 팁을 유용 
 
 각 확장 형식의 작은 작업 샘플을 포함 하는 Xamarin.ios 프로젝트 예제는 [여기](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)에서 찾을 수 있습니다.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

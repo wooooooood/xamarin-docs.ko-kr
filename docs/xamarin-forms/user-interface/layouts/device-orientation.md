@@ -9,8 +9,6 @@ assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2: xamarin-forms author: davidbritch
 
 사용자 환경을 개선 하기 위해 응용 프로그램을 사용 하는 방법과 가로 방향을 통합 하는 방법을 고려 하는 것이 중요 합니다. 여러 방향을 수용 하 고 사용 가능한 공간을 최대한 활용 하도록 개별 레이아웃을 디자인할 수 있습니다. 응용 프로그램 수준에서 회전을 사용 하지 않거나 사용 하도록 설정할 수 있습니다.
 
-<a name="Controlling_Orientation" />
-
 ## <a name="controlling-orientation"></a>방향 제어
 
 를 사용 하는 경우 Xamarin.Forms 장치 방향을 제어 하는 지원 되는 방법은 각 개별 프로젝트에 대 한 설정을 사용 하는 것입니다.
@@ -74,8 +72,6 @@ Xamarin Android는 방향 지정을 위한 몇 가지 옵션을 지원 합니다
 
 UWP (유니버설 Windows 플랫폼)에서 지원 되는 방향은 **appxmanifest.xml** 파일에 설정 됩니다. 매니페스트를 열면 지원 되는 방향을 선택할 수 있는 구성 패널이 표시 됩니다.
 
-<a name="Reacting_to_Changes_in_Orientation" />
-
 ## <a name="reacting-to-changes-in-orientation"></a>방향 변경에 대응
 
 Xamarin.Forms는 공유 코드의 방향 변경을 응용 프로그램에 알리기 위한 네이티브 이벤트를 제공 하지 않습니다. 그러나에는 [Xamarin.Essentials](~/essentials/index.md) `DeviceDisplay` 방향 변경에 대 한 알림을 제공 하는 [] 클래스가 포함 되어 있습니다.
@@ -120,8 +116,6 @@ protected override void OnSizeAllocated(double width, double height)
 ![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 앱은 가로에서 더 많은 기능을 추가 하 여 사용 가능한 공간을 활용 합니다.
-
-<a name="Responsive_Layout" />
 
 ## <a name="responsive-layout"></a>반응 형 레이아웃
 

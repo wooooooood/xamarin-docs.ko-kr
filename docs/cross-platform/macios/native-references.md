@@ -6,12 +6,12 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: b3adfac067964e0a0f169b5d8f8860f34deffe62
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a06bc0cb91ff3d3894bb7be5bbb275aca35da07d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73015613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570962"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>IOS, Mac 및 바인딩 프로젝트의 네이티브 참조
 
@@ -22,25 +22,25 @@ IOS 8.0부터 앱 확장과 Xcode의 주 앱 간에 코드를 공유 하는 임�
 > [!IMPORTANT]
 > 모든 형식의 Xamarin.ios 또는 Xamarin.ios 프로젝트에서 포함 된 프레임 워크를 만들 수는 없습니다. 네이티브 참조는 기존 네이티브 (목적-C) 프레임 워크를 사용 하는 경우에만 사용할 수 있습니다.
 
-<a name="Terminology" />
+<a name="Terminology"></a>
 
 ## <a name="terminology"></a>용어
 
 IOS 8 (이상)에서 포함 된 **프레임 워크** 는 정적으로 연결 되 고 동적으로 연결 된 프레임 워크가 될 수 있습니다. 이를 제대로 배포 하려면 앱에서 지원 하려는 각 장치 아키텍처에 대해 모든 _조각을_ 포함 하는 "Fat" 프레임 워크로 만들어야 합니다.
 
-<a name="Static-vs-Dynamic-Frameworks" />
+<a name="Static-vs-Dynamic-Frameworks"></a>
 
 ### <a name="static-vs-dynamic-frameworks"></a>정적 프레임 워크 및 동적 프레임 워크
 
 **정적 프레임** 워크는 런타임에 **동적 프레임 워크가** 연결 되 고 줄임으로써를 다시 연결 하지 않고도 수정할 수 있는 컴파일 시간에 연결 됩니다. IOS 8 이전에 타사 프레임 워크를 사용한 경우 응용 프로그램으로 컴파일된 **정적 프레임 워크** 를 사용 했습니다. 자세한 내용은 Apple의 [동적 라이브러리 프로그래밍](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) 설명서를 참조 하세요.
 
-<a name="Embedded-vs-System-Frameworks" />
+<a name="Embedded-vs-System-Frameworks"></a>
 
 ### <a name="embedded-vs-system-frameworks"></a>Embedded 및 시스템 프레임 워크
 
 **포함 프레임 워크** 는 앱 번들에 포함 되며 해당 샌드박스를 통해 특정 앱에만 액세스할 수 있습니다. **시스템 프레임 워크** 는 운영 체제 수준에서 저장 되며 장치의 모든 앱에서 사용할 수 있습니다. 현재 Apple 에서만 운영 체제 수준 프레임 워크를 만들 수 있습니다.
 
-<a name="Thin-vs-Fat-Frameworks" />
+<a name="Thin-vs-Fat-Frameworks"></a>
 
 ### <a name="thin-vs-fat-frameworks"></a>씬 및 Fat 프레임 워크
 
@@ -48,13 +48,13 @@ IOS 8 (이상)에서 포함 된 **프레임 워크** 는 정적으로 연결 되
 
 앱을 사용 하 여이 샘플 프레임 워크를 배포 하려는 경우 시뮬레이터에서 제대로 실행 되지만 프레임 워크에 iOS 장치에 대 한 코드 별 조각이 포함 되어 있지 않으므로 장치에서 오류가 발생 합니다. 프레임 워크가 모든 인스턴스에서 작동 하도록 하려면 arm64, armv7 및 armv7s 용 thumb-2와 같은 장치 관련 조각만 포함 해야 합니다.
 
-<a name="Working-with-Embedded-Frameworks" />
+<a name="Working-with-Embedded-Frameworks"></a>
 
 ## <a name="working-with-embedded-frameworks"></a>포함 프레임 워크 사용
 
 Xamarin.ios 또는 Xamarin.ios 앱에서 포함 된 프레임 워크를 사용 하려면 두 가지 단계를 완료 해야 합니다. 즉, Fat 프레임 워크를 만들고 프레임 워크를 포함 합니다.
 
-<a name="Overview" />
+<a name="Overview"></a>
 
 ### <a name="creating-a-fat-framework"></a>Fat 프레임 워크 만들기
 
@@ -62,16 +62,16 @@ Xamarin.ios 또는 Xamarin.ios 앱에서 포함 된 프레임 워크를 사용 �
 
 프레임 워크와 사용 중인 앱이 동일한 Xcode 프로젝트에 있는 경우 Xcode는 동일한 빌드 설정을 사용 하 여 프레임 워크와 앱을 모두 빌드하기 때문에 문제가 되지 않습니다. Xamarin 앱은 포함 된 프레임 워크를 만들 수 없기 때문에이 기술을 사용할 수 없습니다.
 
-이 문제를 해결 하기 위해 `lipo` 명령줄 도구를 사용 하 여 필요한 모든 조각을 포함 하는 하나의 Fat 프레임 워크로 둘 이상의 프레임 워크를 병합할 수 있습니다. `lipo` 명령 사용에 대 한 자세한 내용은 [네이티브 라이브러리 연결](~/ios/platform/native-interop.md) 설명서를 참조 하세요.
+이 문제를 해결 하기 위해 `lipo` 명령줄 도구를 사용 하 여 필요한 모든 조각을 포함 하는 하나의 Fat 프레임 워크로 둘 이상의 프레임 워크를 병합할 수 있습니다. 명령 사용에 대 한 자세한 내용은 `lipo` [네이티브 라이브러리 연결](~/ios/platform/native-interop.md) 설명서를 참조 하세요.
 
-<a name="Embedding-a-Framework" />
+<a name="Embedding-a-Framework"></a>
 
 ### <a name="embedding-a-framework"></a>프레임 워크 포함
 
 다음 단계는 네이티브 참조를 사용 하 여 Xamarin.ios 또는 Xamarin.ios 프로젝트에 프레임 워크를 포함 하는 데 필요 합니다.
 
 1. 새를 만들거나 기존 Xamarin.ios, Xamarin.ios 또는 바인딩 프로젝트를 엽니다.
-2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 **추가** > **네이티브 참조 추가**를 선택 합니다. 
+2. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 추가 **Add**  >  **네이티브 참조**추가를 선택 합니다. 
 
     [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
 3. **열기** 대화 상자에서 포함 하려는 네이티브 프레임 워크의 이름을 선택 하 고 **열기** 단추를 클릭 합니다. 
@@ -83,17 +83,17 @@ Xamarin.ios 또는 Xamarin.ios 앱에서 포함 된 프레임 워크를 사용 �
 
 프로젝트가 컴파일될 때 네이티브 프레임 워크는 앱의 번들에 포함 됩니다.
 
-<a name="App-Extensions-and-Embedded-Frameworks" />
+<a name="App-Extensions-and-Embedded-Frameworks"></a>
 
 ## <a name="app-extensions-and-embedded-frameworks"></a>앱 확장 및 포함 프레임 워크
 
-내부적으로 Xamarin.ios는이 기능을 활용 하 여 Mono 런타임을 프레임 워크로 연결 하 여 (배포 대상이 > = iOS 8.0 인 경우) 확장이 있는 앱에 대해 앱 크기를 크게 줄일 수 있습니다 (Mono 런타임이에 대해 한 번만 포함 됨). 컨테이너 앱에 대해 한 번이 아니라 각 확장에 대해 한 번이 아니라 전체 앱 번들입니다.
+내부적으로 Xamarin.ios는이 기능을 사용 하 여 Mono 런타임을 프레임 워크로 연결 하 고 (배포 대상이 >= iOS 8.0 인 경우) 확장이 있는 앱에 대해 앱 크기를 크게 줄일 수 있습니다. 즉, Mono 런타임은 컨테이너 앱에 대해 한 번만 포함 되 고 각 확장에 대해 한 번만 포함 됩니다.
 
 모든 확장에는 iOS 8.0가 필요 하기 때문에 확장은 Mono 런타임과 프레임 워크로 연결 됩니다.
 
 IOS를 대상으로 하는 확장 및 앱이 없는 앱 
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>요약
 

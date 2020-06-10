@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: ab89d6e05b42157ededa3bb01cf22d5cdca130ce
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 729c8918230b7fe28b98357b101d935e1ec752ef
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030667"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573536"
 ---
 # <a name="supported-and-unsupported-frameworks-in-tvos"></a>TvOS에서 지원 되거나 지원 되지 않는 프레임 워크
 
-<a name="Supported-Frameworks" />
+<a name="Supported-Frameworks"></a>
 
 ## <a name="supported-frameworks"></a>지원 되는 프레임 워크
 
@@ -40,7 +40,7 @@ TvOS 앱에서 사용 하기 위해 Apple에서 제공 하는 프레임 워크�
 - CoreText
 - CoreVideo
 - Darwin
-- Mfc
+- Foundation
 - GameController
 - GameKit
 - 플레이
@@ -66,14 +66,14 @@ TvOS 앱에서 사용 하기 위해 Apple에서 제공 하는 프레임 워크�
 - TVServices (추가 됨)
 - UIKit
 
-<a name="Unsupported-Frameworks" />
+<a name="Unsupported-Frameworks"></a>
 
 ## <a name="unsupported-frameworks"></a>지원 되지 않는 프레임 워크
 
 다음은 iOS 9에서 지원 되지만 Apple의 tvOS 9 지원에서 제거 된 프레임 워크의 목록입니다. 따라서 tvOS 앱에서 사용할 수 없습니다.
 
 - 계정
-- AddressBook
+- 주소록
 - AddressBookUI
 - AssetsLibrary
 - 연락처
@@ -103,7 +103,7 @@ TvOS 앱에서 사용 하기 위해 Apple에서 제공 하는 프레임 워크�
 - QuickLook
 - ReplayKit
 - SafariServices
-- 소셜
+- 사회적
 - Twitter
 - 비디오 도구 상자
 - WatchConnectivity

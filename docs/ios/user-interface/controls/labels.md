@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0957220ace9facee590a76953de6dd52be438582
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022013"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570845"
 ---
 # <a name="labels-in-xamarinios"></a>Xamarin.ios의 레이블
 
-`UILabel` 컨트롤은 단일 및 여러 줄 읽기 전용 텍스트를 표시 하는 데 사용 됩니다.
+`UILabel`컨트롤은 단일 및 여러 줄 읽기 전용 텍스트를 표시 하는 데 사용 됩니다.
 
 ## <a name="implementing-a-label"></a>레이블 구현
 
-[`UILabel`](xref:UIKit.UILabel)를 인스턴스화하여 새 레이블을 만듭니다.
+새 레이블은를 인스턴스화하여 생성 됩니다 [`UILabel`](xref:UIKit.UILabel) .
 
 ```csharp
 UILabel label = new UILabel();
@@ -50,7 +50,7 @@ IOS Designer를 사용할 때 UI에 레이블을 추가할 수도 있습니다. 
 
 IOS에서 줄 바꿈을 사용 하는 방법에 대 한 자세한 내용은 [잘라내기 및 줄 바꿈 텍스트](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) 를 참조 하세요.
 
-<a name="Formatting_Text_and_Label"/>
+<a name="Formatting_Text_and_Label"></a>
 
 ## <a name="formatting-text-and-label"></a>텍스트 및 레이블 서식 지정
 
@@ -74,7 +74,7 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-`NSAttributedString` 사용 하 여 텍스트의 스타일을 지정 하는 방법에 대 한 자세한 내용은 [스타일 텍스트](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) 조리법을 참조 하세요.
+을 사용 하 여 텍스트 스타일 지정에 대 한 자세한 내용은 `NSAttributedString` [스타일 텍스트](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) 조리법을 참조 하세요.
 
 기본적으로 레이블은 `Enabled` true로 설정 되어 있지만 사용자에 게 특정 컨트롤을 사용할 수 없다는 힌트를 제공 하려면 사용 안 함으로 설정할 수 있습니다.
 

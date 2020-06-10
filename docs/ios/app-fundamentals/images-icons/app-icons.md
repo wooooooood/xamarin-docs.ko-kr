@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 41272e25570d9346751d7130ee8b52c6056f7f35
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565228"
 ---
 # <a name="application-icons-in-xamarinios"></a>Xamarin.ios의 응용 프로그램 아이콘
 
@@ -22,7 +22,7 @@ ms.locfileid: "79305800"
 - [자산 카탈로그를](#managing) 사용 하 여 아이콘 관리-자산 카탈로그를 사용 하 여 응용 프로그램 아이콘 관리
 - [ITunes 아트 워크](#itunes) -응용 프로그램을 제공 하는 임시 방법에 필요한 ITunes 아트 워크를 제공 합니다.
 
-<a name="icon-types" />
+<a name="icon-types"></a>
 
 ## <a name="application-spotlight-and-settings-icons"></a>응용 프로그램, 스포트라이트 및 설정 아이콘
 
@@ -44,10 +44,10 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
 - **iPhone: iOS 9 & 10 (iPhone 6 & 7 Plus)**
 
-    ||3x|
+    ||(3|
     |---|---|
     |애플리케이션 아이콘|180x180|
-    |Spotlight|120x120|
+    |스포트라이트|120x120|
     |설정|87x87|
 
 - **iPhone: iOS 7 & 8**
@@ -55,7 +55,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
     ||1x|2x|
     |---|---|---|
     |애플리케이션 아이콘|합니다<sup>1</sup>|120x120|
-    |Spotlight|40x40<sup>2</sup>|80x80|
+    |스포트라이트|40x40<sup>2</sup>|80x80|
     |설정|-|-|
 
 - **iPhone: iOS 5 & 6**
@@ -63,7 +63,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
     ||1x|2x|
     |---|---|---|
     |애플리케이션 아이콘|57x57|114x114|
-    |Spotlight|29x29|58x58|
+    |스포트라이트|29x29|58x58|
     |설정|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>iPad 아이콘 크기
@@ -73,15 +73,15 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
     ||2x (iPad Pro)|
     |---|---|
     |애플리케이션 아이콘|167x167<sup>6</sup>|
-    |Spotlight|120x120<sup>6</sup>|
+    |스포트라이트|120x120<sup>6</sup>|
     |설정|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 & 8**
 
     ||1x|2x|
     |---|---|---|
-    |애플리케이션 아이콘|76x76|152x152|
-    |Spotlight|40x40|80x80|
+    |애플리케이션 아이콘|76x76|의 경우 152x152|
+    |스포트라이트|40x40|80x80|
     |설정|-|-|
 
 - **iPad: iOS 5 & 6**
@@ -89,7 +89,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
     ||1x|2x|
     |---|---|---|
     |애플리케이션 아이콘|72x72|144x144|
-    |Spotlight|50x50|100x100|
+    |스포트라이트|50x50|100x100|
     |설정|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. Mac용 Visual Studio와 Xcode 모두 더 이상 iOS 7에 대 한 1x 이미지 설정을 지원 하지 않습니다.
@@ -101,27 +101,27 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
  아이콘에 대 한 자세한 내용은 Apple의 [아이콘 및 이미지 크기](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) 설명서를 참조 하세요.
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## <a name="managing-icons-with-asset-catalogs"></a>자산 카탈로그를 사용 하 여 아이콘 관리
 
-아이콘의 경우 앱 프로젝트의 `Assets.xcassets` 파일에 특수 `AppIcon` 이미지 집합을 추가할 수 있습니다. 모든 해상도를 지 원하는 데 필요한 모든 이미지 버전은 _xcasset_ 에 포함 되며 함께 그룹화 됩니다. 개발자는 Mac용 Visual Studio의 특수 편집기를 사용 하 여 이러한 이미지를 그래픽으로 포함 하 고 설정할 수 있습니다.
+아이콘의 경우 특수 `AppIcon` 이미지 집합을 `Assets.xcassets` 앱 프로젝트의 파일에 추가할 수 있습니다. 모든 해상도를 지 원하는 데 필요한 모든 이미지 버전은 _xcasset_ 에 포함 되며 함께 그룹화 됩니다. 개발자는 Mac용 Visual Studio의 특수 편집기를 사용 하 여 이러한 이미지를 그래픽으로 포함 하 고 설정할 수 있습니다.
 
 자산 카탈로그를 사용 하려면 다음 단계를 수행 합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다.
 2. **IPhone 아이콘** 섹션까지 아래로 스크롤합니다.
 3. **자산 카탈로그로 마이그레이션** 단추를 클릭 합니다.
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
 
-4. **솔루션 탐색기**에서 `Assets.xcassets` 파일을 두 번 클릭 하 여 편집용으로 엽니다. 
+4. **솔루션 탐색기**에서 파일을 두 번 클릭 `Assets.xcassets` 하 여 편집용으로 엽니다. 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
 
-5. 자산 목록에서 `AppIcon`을 선택 하 여 `Icon Editor`를 표시 합니다.
+5. `AppIcon`자산 목록에서를 선택 하 여 다음을 표시 합니다 `Icon Editor` .
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
 
@@ -131,7 +131,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. \* * 정보를 두 번 클릭 합니다.  \* * **솔루션 탐색기**파일:
+1. * * 정보를 두 번 클릭 합니다.  * * **솔루션 탐색기**파일:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
 
@@ -158,7 +158,7 @@ Xamarin.ios 앱이 UI 컨트롤 및 문서 아이콘에 이미지 자산을 사�
 
 이 방법은 응용 프로그램, 스포트라이트 및 앱에 대 한 설정 아이콘을 제공 하는 데 사용 되는 이미지 자산을 포함 하 고 관리 하는 데 선호 되는 방법입니다.
 
-<a name="itunes" />
+<a name="itunes"></a>
 
 ## <a name="itunes-artwork"></a>iTunes 아트워크
 
@@ -168,7 +168,7 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
 # <a name="visual-studio-for-mac"></a>[Mac용 Visual Studio](#tab/macos)
 
-1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다.
 2. 편집기의 **ITunes 아트 워크** 섹션으로 스크롤합니다. 
 
     ![](app-icons-images/itunes01.png "Scroll to the iTunes Artwork section of the editor")
@@ -177,7 +177,7 @@ iTunes 아트워크를 지정하려면 다음을 수행합니다.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. **솔루션 탐색기** 에서 `Info.plist` 파일을 두 번 클릭 하 여 편집용으로 엽니다.
+1. 솔루션 탐색기 파일을 두 번 클릭 `Info.plist` 하 **Solution Explorer** 여 편집용으로 엽니다.
 
 2. **시각적 자산** 탭을 클릭 하 고 **iTunes 아트 워크**를 확장 합니다. 
 

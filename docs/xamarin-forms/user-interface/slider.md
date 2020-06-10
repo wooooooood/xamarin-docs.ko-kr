@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Forms슬라이드
-description: Xamarin.Forms슬라이더는 연속 범위에서 double 값을 선택 하기 위해 사용자가 조작할 수 있는 가로 막대입니다. 이 문서에서는 Slider 클래스를 사용 하 여 연속 값 범위에서 값을 선택 하는 방법을 설명 합니다.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1cde999e6781f019b6abceee82caf259e1e5a710
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140155"
+제목: " Xamarin.Forms 슬라이더" 설명: " Xamarin.Forms 슬라이더는 연속 범위에서 double 값을 선택 하기 위해 사용자가 조작할 수 있는 가로 막대입니다. 이 문서에서는 슬라이더 클래스를 사용 하 여 연속 값 범위에서 값을 선택 하는 방법을 설명 합니다. "
+assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878: xamarin-forms author: davidbritch: dabritch:: 02/27/2019-loc: [ Xamarin.Forms ,]입니다. Xamarin.Essentials
 ---
+
 # <a name="xamarinforms-slider"></a>Xamarin.Forms슬라이드
 
 [![샘플 다운로드](~/media/shared/download.png) 샘플 다운로드](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
@@ -116,7 +102,7 @@ IOS 및 Android 장치에서 실행 되는 프로그램은 다음과 같습니�
 
 [![기본 슬라이더 코드](slider-images/BasicSliderCode.png "기본 슬라이더 코드")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-두 번째는 `Label` 가 조작 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 하 여 `Slider` 첫 번째 `ValueChanged` 이벤트를 발생 시킵니다. 표시 되는 소수 자릿수는 각 플랫폼 마다 다릅니다. 이러한 차이점은의 플랫폼 구현과 관련 되며 `Slider` , [플랫폼 구현 차이점](#implementations)섹션에서이 문서의 뒷부분에서 설명 합니다.
+두 번째는 `Label` 가 조작 될 때까지 "(초기화 되지 않음)" 텍스트를 표시 하 여 `Slider` 첫 번째 `ValueChanged` 이벤트를 발생 시킵니다. 표시 되는 소수 자릿수는 각 플랫폼 마다 다릅니다. 이러한 차이점은의 플랫폼 구현과 관련 되며 `Slider` , [플랫폼 구현 차이점](#platform-implementation-differences)섹션에서이 문서의 뒷부분에서 설명 합니다.
 
 ### <a name="creating-a-slider-in-xaml"></a>XAML에서 슬라이더 만들기
 
@@ -210,8 +196,6 @@ double value = slider.Value;
 
 첫 번째의 속성은 지정 된 사양의 속성에 `Rotation` `Label` `Value` 따라의 속성에 바인딩됩니다 `Slider` `Text` `Label` `StringFormat` . **기본 슬라이더 바인딩** 페이지는 이전 페이지 두 개와 약간 다르게 작동 합니다. 페이지가 처음 나타날 때 두 번째는 값이 `Label` 있는 텍스트 문자열을 표시 합니다. 이는 데이터 바인딩을 사용 하는 경우의 장점입니다. 데이터 바인딩을 사용 하지 않고 텍스트를 표시 하려면 `Text` 의 속성을 초기화 `Label` 하거나 `ValueChanged` 클래스 생성자에서 이벤트 처리기를 호출 하 여 이벤트 발생을 시뮬레이션 해야 합니다.
 
-<a name="precautions" />
-
 ## <a name="precautions"></a>조치가
 
 속성의 값은 `Minimum` 항상 속성의 값 보다 작아야 합니다 `Maximum` . 다음 코드 조각에서는에서 `Slider` 예외를 발생 시킵니다.
@@ -283,8 +267,6 @@ Slider slider = new Slider
 ```
 
 `Minimum`가 10으로 설정 되 면 `Value` 도 10으로 설정 되 고 `ValueChanged` 이벤트가 발생 합니다. 이는 페이지의 나머지 부분을 생성 하기 전에 발생할 수 있으며, 처리기가 아직 만들지 않은 페이지의 다른 요소를 참조 하려고 할 수 있습니다. `ValueChanged` `null` 페이지에서 다른 요소의 값을 확인 하는 일부 코드를 처리기에 추가 하려고 할 수 있습니다. 또는 `ValueChanged` 값이 초기화 된 후에 이벤트 처리기를 설정할 수 있습니다 `Slider` .
-
-<a name="implementations" />
 
 ## <a name="platform-implementation-differences"></a>플랫폼 구현 차이점
 
@@ -508,7 +490,7 @@ ViewModels 인터페이스에 `INotifyPropertyChanged` 대해서는 문서 [데�
 
 [![HSL 색 슬라이더](slider-images/HslColorSliders.png "HSL 색 슬라이더")](slider-images/HslColorSliders-Large.png#lightbox)
 
-`StringFormat`태그 확장의 구성 요소는 `Binding` 두 소수 자릿수를 표시 하기 위해 "F2" 형식에 대해 설정 됩니다. 데이터 바인딩의 문자열 서식 지정에 대해서는 문서 [문자열 서식 지정](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)에서 설명 합니다. 그러나 UWP 버전의 프로그램은 0, 0.1, 0.2, ...의 값으로 제한 됩니다. 0.9 및 1.0입니다. 이는 `Slider` [플랫폼 구현 차이점](#implementations)섹션에서 위에서 설명한 대로 UWP의 구현에 대 한 직접적인 결과입니다.
+`StringFormat`태그 확장의 구성 요소는 `Binding` 두 소수 자릿수를 표시 하기 위해 "F2" 형식에 대해 설정 됩니다. 데이터 바인딩의 문자열 서식 지정에 대해서는 문서 [문자열 서식 지정](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)에서 설명 합니다. 그러나 UWP 버전의 프로그램은 0, 0.1, 0.2, ...의 값으로 제한 됩니다. 0.9 및 1.0입니다. 이는 `Slider` [플랫폼 구현 차이점](#platform-implementation-differences)섹션에서 위에서 설명한 대로 UWP의 구현에 대 한 직접적인 결과입니다.
 
 ## <a name="related-links"></a>관련 링크
 
